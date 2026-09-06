@@ -33,7 +33,7 @@ fillInDefaultValues.__initData = { code: "function fillInDefaultValues_Pnpm_useP
 const map = new Map();
 let closure_6 = {};
 
-export const usePinchGesture = function usePinchGesture(gestureHandlerProps) {
+export const usePinchGesture = function usePinchGesture() {
   let tmp = gestureHandlerProps;
   if (gestureHandlerProps === undefined) {
     tmp = closure_6;

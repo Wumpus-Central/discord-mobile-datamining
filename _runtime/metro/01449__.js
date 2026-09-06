@@ -36,20 +36,20 @@ if (tmp) {
         const tmp = new global[arg0]();
         if (Symbol.toStringTag in tmp) {
           if (_mod1288) {
-            const tmp4 = tmp2(1288)(tmp);
+            const tmp4 = _mod1288(tmp);
             const _Symbol = Symbol;
-            const tmp5 = tmp2(1284)(tmp4, Symbol.toStringTag);
+            const tmp5 = _mod1284(tmp4, Symbol.toStringTag);
             let tmp6 = tmp5;
             if (!tmp5) {
               tmp6 = tmp5;
               if (tmp4) {
                 const _Symbol2 = Symbol;
-                tmp6 = tmp2(1284)(tmp2(1288)(tmp4), Symbol.toStringTag);
-                const tmp7 = tmp2(1288)(tmp4);
+                tmp6 = _mod1284(_mod1288(tmp4), Symbol.toStringTag);
+                const tmp7 = _mod1288(tmp4);
               }
             }
             const text = `$${arg0}`;
-            closure_8[`$${arg0}`] = tmp2(1454)(tmp6.get);
+            closure_8[`$${arg0}`] = callBind(tmp6.get);
           }
         }
       });
@@ -110,4 +110,14 @@ _mod1452(tmp2, (arg0) => {
     const text = `$${arg0}`;
     closure_8[`$${arg0}`] = callBind(tmp);
   }
+});
+let tmp3 = callBoundIntrinsic("Array.prototype.indexOf", true) || (function indexOf(arg0, arg1) {
+  let num = 0;
+  if (0 < arg0.length) {
+    while (arg0[num] !== arg1) {
+      num = num + 1;
+    }
+    return num;
+  }
+  return -1;
 });

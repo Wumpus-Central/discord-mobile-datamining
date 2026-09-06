@@ -72,21 +72,21 @@ export const getTruncatedJsonString = function getTruncatedJsonString(arr) {
     }
   }
 };
-export const setTokenUsageAttributes = function setTokenUsageAttributes(setAttributes, arg1, arg2, arg3, arg4) {
-  let num = arg1;
-  if (undefined !== arg1) {
+export const setTokenUsageAttributes = function setTokenUsageAttributes(setAttributes, promptTokens, completionTokens, cacheCreationInputTokens, cacheReadInputTokens) {
+  let num = promptTokens;
+  if (tmp) {
     let obj = {};
     obj[ANTHROPIC_AI_RESPONSE_TIMESTAMP_ATTRIBUTE.GEN_AI_USAGE_INPUT_TOKENS_ATTRIBUTE] = num;
     setAttributes.setAttributes(obj);
   }
-  let num2 = arg2;
-  if (undefined !== arg2) {
+  let num2 = completionTokens;
+  if (tmp5) {
     obj = {};
     obj[ANTHROPIC_AI_RESPONSE_TIMESTAMP_ATTRIBUTE.GEN_AI_USAGE_OUTPUT_TOKENS_ATTRIBUTE] = num2;
     setAttributes.setAttributes(obj);
   }
-  let num3 = arg3;
-  let num4 = arg4;
+  let num3 = cacheCreationInputTokens;
+  let num4 = cacheReadInputTokens;
   if (num == null) {
     num = 0;
   }
@@ -103,4 +103,6 @@ export const setTokenUsageAttributes = function setTokenUsageAttributes(setAttri
   }
   const sum2 = sum1 + num4;
   setAttributes.setAttributes({ [closure_1_0(closure_1_1[0]).GEN_AI_USAGE_TOTAL_TOKENS_ATTRIBUTE]: sum2 });
+  tmp = undefined !== promptTokens;
+  tmp5 = undefined !== completionTokens;
 };

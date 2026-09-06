@@ -4,10 +4,11 @@
 import _mod12803 from "module_12803" /* 12803 */;
 import _mod12804 from "module_12804" /* 12804 */;
 import _mod12808 from "module_12808" /* 12808 */;
+import _mod12842 from "module_12842" /* 12842 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 
-export const eventFromMessage = function eventFromMessage(fn, value, arg2, event_id) {
+export const eventFromMessage = function eventFromMessage(fn, value, arg2) {
   let str = arg2;
   if (arg2 === undefined) {
     str = "info";
@@ -60,14 +61,14 @@ export const eventFromUnknownInput = function eventFromUnknownInput(getOptions, 
     let items3 = items;
   } else {
     data.synthetic = true;
-    let tmp2Result = tmp2(12804);
+    let tmp2Result = _mod12804;
     if (tmp2Result.isPlainObject(name)) {
       let normalizeDepth = getOptions;
       if (getOptions) {
         normalizeDepth = getOptions.getOptions().normalizeDepth;
       }
       let obj = { __serialized__: null };
-      tmp2Result = tmp2(12842);
+      tmp2Result = _mod12842;
       obj.__serialized__ = tmp2Result.normalizeToSize(name, normalizeDepth);
       let tmp12;
       const keys = Object.keys();

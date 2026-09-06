@@ -63,9 +63,9 @@ class SequencedTransition {
         const obj2 = delayFunction(1708);
         const size = { originX: null, originY: null, width: null, height: null };
         const obj3 = delayFunction(1708);
-        let tmp3Result = tmp3(1708);
+        let tmp3Result = delayFunction(1708);
         size.originX = delayFunction(delay, obj2.withSequence(delayFunction(1708).withTiming(reversed ? originX.currentOriginX : originX.targetOriginX, obj), tmp3Result.withTiming(originX.targetOriginX, obj)));
-        tmp3Result = tmp3(1708);
+        tmp3Result = delayFunction(1708);
         const withTimingResult = delayFunction(1708).withTiming(reversed ? originX.currentOriginX : originX.targetOriginX, obj);
         const tmp3Result1 = delayFunction(1708);
         const withTimingResult1 = delayFunction(1708).withTiming(reversed ? originX.targetOriginY : originX.currentOriginY, obj);

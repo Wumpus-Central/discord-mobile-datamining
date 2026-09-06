@@ -2,10 +2,10 @@
 
 // Module 4869 (Call)
 import _mod1282 from "module_1282" /* 1282 */;
+import _mod1283 from "module_1283" /* 1283 */;
 import callBoundIntrinsic from "callBoundIntrinsic" /* 1316 */;
 import _mod4847 from "module_4847" /* 4847 */;
 
-const _mod1283 = tmp2(1283);
 let tmp = _mod1282("%Reflect.apply%", true);
 if (!tmp) {
   tmp = callBoundIntrinsic("Function.prototype.apply");

@@ -42,7 +42,7 @@ function runScrollBenchmark(arg0, arg1, arg2) {
   }
   return applyArgumentsResult;
 }
-let closure_10 = async function _runScrollBenchmark(arg0, value) {
+let closure_10 = async function _runScrollBenchmark(arg0) {
   if (c6 === 2) {
     c6 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -77,8 +77,8 @@ let closure_10 = async function _runScrollBenchmark(arg0, value) {
           closure_131_5 = undefined;
           closure_131_6 = undefined;
           if (ref.current) {
-            horizontal = tmp31.current.props.horizontal;
-            let current = tmp31.current;
+            horizontal = ref.current.props.horizontal;
+            let current = ref.current;
             if (current) {
               const size = current.getWindowSize();
               const size2 = current.getChildContainerDimensions();
@@ -101,7 +101,7 @@ let closure_10 = async function _runScrollBenchmark(arg0, value) {
               const obj5 = Cancellable;
               c5 = 1;
               c6 = 1;
-              let obj1 = { value: obj5.autoScroll(scrollNow, 0, 0, diff, diff1, tmp33, tmp32), done: false };
+              let obj1 = { value: obj5.autoScroll(scrollNow, 0, 0, diff, diff1, closure_2, closure_1), done: false };
               return obj1;
             }
           }
@@ -174,7 +174,7 @@ export const useBenchmark = function useBenchmark(arg0, arg1) {
         }
       }
       closure_4(true);
-      ref = obj(function*(arg0, value) {
+      ref = obj(function*() {
         if (c3 === 2) {
           c3 = 3;
           throw new TypeError("Generator functions may not be called on executing generators");
@@ -222,7 +222,7 @@ export const useBenchmark = function useBenchmark(arg0, arg1) {
                       current = current.current.props.data.length < 200;
                     }
                     if (current) {
-                      arr.push("Data count is low. Try to increase it to a large number (e.g 200) using the 'useDataMultiplier' hook.");
+                      arr = arr.push("Data count is low. Try to increase it to a large number (e.g 200) using the 'useDataMultiplier' hook.");
                     }
                   })(tmp2, tmp5);
                   closure_128_3 = (function generateResult(js, suggestions, isCancelled) {

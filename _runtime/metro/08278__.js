@@ -208,7 +208,7 @@ export default value.default.forwardRef(function SliderComponent(onSlidingComple
     const obj3 = { options: arr, sliderWidth: tmp17, currentValue: tmp15, renderStepNumber: null, thumbImage: null, StepMarker: null, isLTR: null };
     ({ renderStepNumber: obj8.renderStepNumber, thumbImage: obj8.thumbImage, StepMarker: obj8.StepMarker } = defaultResult);
     obj3.isLTR = tmp3;
-    let jsxResult = obj6.jsx(tmp24(8284).StepsIndicator, { options: arr, sliderWidth: tmp17, currentValue: tmp15, renderStepNumber: null, thumbImage: null, StepMarker: null, isLTR: null });
+    let jsxResult = jsxProd.jsx(tmp24(8284).StepsIndicator, { options: arr, sliderWidth: tmp17, currentValue: tmp15, renderStepNumber: null, thumbImage: null, StepMarker: null, isLTR: null });
   } else {
     jsxResult = null;
   }
@@ -218,7 +218,7 @@ export default value.default.forwardRef(function SliderComponent(onSlidingComple
     let thumbImage = defaultResult.thumbImage;
   } else if (!defaultResult.StepMarker) {
     if (defaultResult.thumbImage) {
-      const Image = tmp23.Image;
+      const Image = get_ActivityIndicator.Image;
       thumbImage = Image.resolveAssetSource(defaultResult.thumbImage);
     }
   }

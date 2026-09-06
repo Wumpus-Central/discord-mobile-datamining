@@ -39,8 +39,8 @@ export const RiveView = function RiveView(arg0) {
     const fn = function y() {
       return () => {
         if (ref.current) {
-          closure_0(ref[5]).callDispose(tmp.current);
-          tmp.current = null;
+          closure_0(ref[5]).callDispose(ref.current);
+          ref.current = null;
           const obj = closure_0(ref[5]);
         }
       };
@@ -55,18 +55,18 @@ export const RiveView = function RiveView(arg0) {
     tmp11 = cResult[5];
   }
   closure_4(tmp10, tmp11);
-  if (cResult[6] !== tmp6) {
+  if (cResult[6] !== hybridRef) {
     const fn2 = function b(current) {
       closure_1.current = current;
       let f;
       if (closure_0 != null) {
-        f = obj.f;
+        f = closure_0.f;
       }
       if (f) {
-        obj.f(current);
+        closure_0.f(current);
       }
     };
-    cResult[6] = tmp6;
+    cResult[6] = hybridRef;
     cResult[7] = fn2;
     let tmp13 = fn2;
   } else {

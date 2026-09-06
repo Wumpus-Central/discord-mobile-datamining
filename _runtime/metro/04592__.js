@@ -2,6 +2,8 @@
 
 // Module 4592
 import _mod518 from "module_518" /* 518 */;
+import _mod531 from "module_531" /* 531 */;
+import baseIteratee from "baseIteratee" /* 584 */;
 
 
 export default function createFind(arg0) {
@@ -12,9 +14,9 @@ export default function createFind(arg0) {
     let fn = arg1;
     let tmp5 = arg0;
     if (!_mod518(arg0)) {
-      const tmp6 = tmp2(584)(arg1, 3);
+      const tmp6 = baseIteratee(arg1, 3);
       closure_1 = tmp6;
-      tmp5 = tmp2(531)(arg0);
+      tmp5 = _mod531(arg0);
       fn = function u(arg0) {
         return closure_1(ObjectResult[arg0], arg0, ObjectResult);
       };

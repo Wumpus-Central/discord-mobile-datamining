@@ -6,11 +6,12 @@ import emptyPromise from "emptyPromise" /* 14414 */;
 require = arg1;
 const dependencyMap = arg6;
 
-export default () => (arg0) => {
-  const result = emptyPromise.assertHasLoggerPlugin(arg0);
-  closure_0 = arg0;
+export default () => (log) => {
+  const result = emptyPromise.assertHasLoggerPlugin(log);
+  closure_0 = log;
   return {
     onConnect() {
+      log = console.log;
       console.log = () => {
         const items = [...arguments];
         log(...items);

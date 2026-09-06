@@ -1,10 +1,10 @@
 // === Module 1169: ? ===
 
 // Module 1169
+import _possibleConstructorReturn from "_possibleConstructorReturn" /* 93 */;
 import _mod1159 from "module_1159" /* 1159 */;
 import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
-import _possibleConstructorReturn from "_possibleConstructorReturn" /* 93 */;
 import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
 
@@ -35,6 +35,7 @@ function formatToPlainString(k2UNz_, time) {
   }
   return first;
 }
+_possibleConstructorReturn;
 class StringBuilder {
   constructor() {
     self = this;

@@ -76,9 +76,8 @@ const items = [
             str4 = "next";
           }
         }
-        return tmp2(10459).createParsingComponentsAtWeekday(reference.reference, tmp4, str4);
+        return FRWeekdayParser(10459).createParsingComponentsAtWeekday(reference.reference, tmp4, str4);
       }
-      tmp2 = FRWeekdayParser;
     }
   }
 ];

@@ -42,7 +42,7 @@ if (!differenceInCalendarWeeks) {
 }
 differenceInCalendarWeeks = tmp9;
 if (!differenceInCalendarYears) {
-  let obj2 = { default: differenceInCalendarYears };
+  const obj2 = { default: differenceInCalendarYears };
   let tmp11 = obj2;
 } else {
   tmp11 = differenceInCalendarYears;
@@ -159,13 +159,13 @@ export default function intlFormatDistance(arg0, arg1, unit) {
   } else {
     const _Math6 = Math;
     const absolute1 = Math.abs(defaultResult3);
-    if (absolute1 < tmp6(3829).secondsInHour) {
+    if (absolute1 < daysInWeek.secondsInHour) {
       num2 = differenceInMinutes.default(defaultResult1, defaultResult2);
       str = "minute";
     } else {
       const _Math7 = Math;
       const absolute2 = Math.abs(defaultResult3);
-      if (absolute2 < tmp6(3829).secondsInDay) {
+      if (absolute2 < daysInWeek.secondsInDay) {
         const _Math = Math;
         if (Math.abs(differenceInCalendarDays.default(defaultResult1, defaultResult2)) < 1) {
           num2 = differenceInHours.default(defaultResult1, defaultResult2);
@@ -174,7 +174,7 @@ export default function intlFormatDistance(arg0, arg1, unit) {
       }
       const _Math2 = Math;
       const absolute3 = Math.abs(defaultResult3);
-      if (absolute3 < tmp6(3829).secondsInWeek) {
+      if (absolute3 < daysInWeek.secondsInWeek) {
         num2 = differenceInCalendarDays.default(defaultResult1, defaultResult2);
         if (num2) {
           const _Math3 = Math;
@@ -183,24 +183,23 @@ export default function intlFormatDistance(arg0, arg1, unit) {
       }
       const _Math4 = Math;
       const absolute4 = Math.abs(defaultResult3);
-      if (absolute4 < tmp6(3829).secondsInMonth) {
+      if (absolute4 < daysInWeek.secondsInMonth) {
         num2 = differenceInCalendarWeeks.default(defaultResult1, defaultResult2);
         str = "week";
       } else {
         const _Math8 = Math;
         const absolute5 = Math.abs(defaultResult3);
-        if (absolute5 < tmp6(3829).secondsInQuarter) {
+        if (absolute5 < daysInWeek.secondsInQuarter) {
           num2 = differenceInCalendarMonths.default(defaultResult1, defaultResult2);
           str = "month";
         } else {
           const _Math5 = Math;
           const absolute6 = Math.abs(defaultResult3);
-          if (absolute6 < tmp6(3829).secondsInYear) {
+          if (absolute6 < daysInWeek.secondsInYear) {
             if (differenceInCalendarQuarters.default(defaultResult1, defaultResult2) < 4) {
-              num2 = obj2.default(defaultResult1, defaultResult2);
+              num2 = differenceInCalendarQuarters.default(defaultResult1, defaultResult2);
               str = "quarter";
             }
-            obj2 = differenceInCalendarQuarters;
           }
           num2 = differenceInCalendarYears.default(defaultResult1, defaultResult2);
           str = "year";

@@ -75,7 +75,6 @@ function getFilenameToDebugIdMap(arg0) {
             }
             let tmp20 = filename;
             if (filename) {
-              let tmp21 = hasOwnProperty;
               if (hasOwnProperty) {
                 if (React2) {
                   break;
@@ -85,7 +84,7 @@ function getFilenameToDebugIdMap(arg0) {
             let diff1 = tmp15 - 1;
             tmp15 = diff1;
           }
-          tmp21[tmp20] = tmp3;
+          hasOwnProperty[tmp20] = tmp3;
           let items1 = [tmp20, tmp3];
           React2[tmp2] = items1;
         }

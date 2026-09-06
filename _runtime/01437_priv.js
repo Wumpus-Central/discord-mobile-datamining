@@ -6,11 +6,11 @@ import Yallist from "Yallist" /* 1440 */;
 import inspect from "inspect" /* 1441 */;
 
 function priv(self, lruList, max) {
-  if (closure_3[lruList]) {
-    let tmp3 = tmp[lruList];
+  if (dependencyMap[lruList]) {
+    let tmp3 = dependencyMap[lruList];
   } else {
     tmp3 = closure_2(lruList);
-    tmp[lruList] = tmp3;
+    dependencyMap[lruList] = tmp3;
   }
   if (2 === arguments.length) {
     let tmp4 = self[tmp3];
@@ -324,6 +324,7 @@ class LRUCache {
       const tmp5Result = inspect;
       const parts1 = inspect.inspect(obj, closure_0).split("\n");
       closure_1 = `${closure_1}${tmp7} => ${obj5.join("\n  ")}`;
+      const str7 = inspect.inspect(obj, closure_0);
     });
     tmp24 = c5;
     if (!c5) {
@@ -665,7 +666,7 @@ function get(self, arg1, arg2) {
       if (removeNodeResult.maxAge) {
         let tmp5 = diff > removeNodeResult.maxAge;
       } else {
-        tmp5 = tmp(self, "maxAge") && diff > tmp(self, "maxAge");
+        tmp5 = priv(self, "maxAge") && diff > priv(self, "maxAge");
       }
     }
     if (flag) {
@@ -673,16 +674,16 @@ function get(self, arg1, arg2) {
         let iter2 = removeNodeResult;
       } else {
         removeNodeResult = iter.value;
-        if (!tmp(self, "dispose")) {
+        if (!priv(self, "dispose")) {
           value2 = "length";
-          key = tmp(self, "length");
-          tmp(self, "length", key - removeNodeResult.length);
-          const tmpResult = tmp(self, str);
+          key = priv(self, "length");
+          priv(self, "length", key - removeNodeResult.length);
+          const tmpResult = priv(self, str);
           tmpResult.delete(removeNodeResult.key);
-          str = tmp(self, "lruList");
+          str = priv(self, "lruList");
           removeNodeResult = str.removeNode(iter);
         } else {
-          const tmpResult1 = tmp(self, "dispose");
+          const tmpResult1 = priv(self, "dispose");
           const call = tmpResult1.call;
           ({ key, value: value2 } = removeNodeResult);
           if (typeof call !== "unknown") {
@@ -694,9 +695,9 @@ function get(self, arg1, arg2) {
     } else {
       iter2 = removeNodeResult;
       if (arg2) {
-        tmp(self, "lruList").unshiftNode(iter);
+        priv(self, "lruList").unshiftNode(iter);
         iter2 = removeNodeResult;
-        const tmpResult2 = tmp(self, "lruList");
+        const tmpResult2 = priv(self, "lruList");
       }
     }
     value = iter2;
@@ -708,8 +709,8 @@ function get(self, arg1, arg2) {
 }
 function trim(self) {
   if (tmp2 > priv(self, "max")) {
-    let iter = tmp(self, "lruList").tail;
-    if (tmpResult > tmp(self, "max")) {
+    let iter = priv(self, "lruList").tail;
+    if (tmpResult > priv(self, "max")) {
       if (null !== iter) {
         const prev = iter.prev;
         while (!iter) {
@@ -737,8 +738,9 @@ function trim(self) {
         removeNodeResultResult2(key, removeNodeResultResult1);
       }
     }
-    tmpResult = tmp(self, "length");
+    tmpResult = priv(self, "length");
   }
+  tmp2 = priv(self, "length");
 }
 function Entry(key, value, length, now, arg4) {
   const entry = { key, value, length, now };
@@ -748,7 +750,7 @@ function Entry(key, value, length, now, arg4) {
   }
   entry.maxAge = num;
 }
-let closure_3 = {};
+let dependencyMap = {};
 let closure_2 = typeof Symbol === "function" ? ((arg0) => Symbol.for(arg0)) : ((arg0) => "_" + arg0);
 let obj = {
   set(max) {
@@ -812,9 +814,9 @@ Object.defineProperty(LRUCache.prototype, "lengthCalculator", {
     }
     let self = this;
     if (tmp !== priv(this, "lengthCalculator")) {
-      tmp2(self, "lengthCalculator", tmp);
-      tmp2(self, "length", 0);
-      const item = tmp2(self, "lruList").forEach(function(item) {
+      priv(self, "lengthCalculator", tmp);
+      priv(self, "length", 0);
+      const item = priv(self, "lruList").forEach(function(item) {
         const self = this;
         const tmp2 = priv(this, "lengthCalculator");
         const call = tmp2.call;
@@ -822,7 +824,7 @@ Object.defineProperty(LRUCache.prototype, "lengthCalculator", {
         item.length = typeof call === "unknown" ? tmp2(value, key) : call(self, value, key);
         priv(self, "length", priv(self, "length") + item.length);
       }, self);
-      const tmp2Result1 = tmp2(self, "lruList");
+      const tmp2Result1 = priv(self, "lruList");
     }
     trim(self);
   },

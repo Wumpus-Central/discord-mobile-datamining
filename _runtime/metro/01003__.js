@@ -144,6 +144,8 @@ let items = [
           });
         }
       }
+      let obj = Profiler(682);
+      tmp3 = undefined === includeRender || includeRender;
     }
   },
   {
@@ -158,7 +160,7 @@ let merged = Object.assign(_moduleResult, { defaultProps: { disabled: false, inc
 
 export const Profiler = _moduleResult;
 export const UNKNOWN_COMPONENT = "unknown";
-export const useProfiler = function useProfiler(arg0, attributes) {
+export const useProfiler = function useProfiler(arg0) {
   closure_0 = arg0;
   if (attributes === undefined) {
     attributes = { disabled: false, hasRenderSpan: true };

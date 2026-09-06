@@ -44,15 +44,15 @@ export const prepareCurvedTransition = function prepareCurvedTransition(cloneNod
     let length;
     if (typeof onFinalize === "function") {
       if (cloneNode.contains(dummy)) {
-        obj.removeChild(dummy);
+        cloneNode.removeChild(dummy);
       }
       let num = 0;
       if (0 < cloneNode.children.length) {
         do {
-          let tmp3 = obj.children[num];
-          tmp3.style.display = obj2.get(tmp3);
+          let tmp3 = cloneNode.children[num];
+          tmp3.style.display = map.get(tmp3);
           num = num + 1;
-          length = obj.children.length;
+          length = cloneNode.children.length;
         } while (num < length);
       }
       cloneNode.style.backgroundColor = backgroundColor;
@@ -65,15 +65,15 @@ export const prepareCurvedTransition = function prepareCurvedTransition(cloneNod
     let length;
     if (typeof onFinalize === "function") {
       if (cloneNode.contains(dummy)) {
-        obj.removeChild(dummy);
+        cloneNode.removeChild(dummy);
       }
       let num = 0;
       if (0 < cloneNode.children.length) {
         do {
-          let tmp3 = obj.children[num];
-          tmp3.style.display = obj2.get(tmp3);
+          let tmp3 = cloneNode.children[num];
+          tmp3.style.display = map.get(tmp3);
           num = num + 1;
-          length = obj.children.length;
+          length = cloneNode.children.length;
         } while (num < length);
       }
       cloneNode.style.backgroundColor = backgroundColor;

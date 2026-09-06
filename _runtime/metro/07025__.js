@@ -117,9 +117,9 @@ export const Card = function Card(shadowEnabled) {
     if (null != ref3.current) {
       const InteractionManager = _mod7026.InteractionManager;
       if (InteractionManager != null) {
-        const result = InteractionManager.clearInteractionHandle(tmp.current);
+        const result = InteractionManager.clearInteractionHandle(ref3.current);
       }
-      tmp.current = undefined;
+      ref3.current = undefined;
     }
   });
   let tmp7 = num(1505)((closing) => {
@@ -149,7 +149,7 @@ export const Card = function Card(shadowEnabled) {
       clearTimeout(ref5.current);
       if (undefined !== ref4.current) {
         const _cancelAnimationFrame = cancelAnimationFrame;
-        cancelAnimationFrame(tmp17.current);
+        cancelAnimationFrame(ref4.current);
       }
       if (closure_15 != null) {
         obj = { closing, gesture: undefined !== velocity };
@@ -194,7 +194,7 @@ export const Card = function Card(shadowEnabled) {
           closure_13();
         }
         let _requestAnimationFrame = requestAnimationFrame;
-        tmp17.current = requestAnimationFrame(() => {
+        ref4.current = requestAnimationFrame(() => {
           closure_1_37();
         });
       }
@@ -235,7 +235,7 @@ export const Card = function Card(shadowEnabled) {
       let tmp7 = null;
       if (ref7.current) {
         if (typeof getAnimateToValue === "function") {
-          if (tmp5.current.closing) {
+          if (ref7.current.closing) {
             let obj = _mod7019;
             let num2 = obj.getDistanceForDirection(tmp9, tmp10, "rtl" === tmp11);
           } else {
@@ -247,8 +247,8 @@ export const Card = function Card(shadowEnabled) {
         }
       }
       if (typeof getAnimateToValue === "function") {
-        if (tmp16) {
-          let num3 = _mod7019.getDistanceForDirection(tmp17, tmp18, "rtl" === tmp19);
+        if (closing) {
+          let num3 = _mod7019.getDistanceForDirection(layout, gestureDirection, "rtl" === direction);
         } else {
           num3 = 0;
         }
@@ -262,13 +262,13 @@ export const Card = function Card(shadowEnabled) {
               tmp24 = !opening;
             }
             if (tmp24) {
-              gesture.setValue(_mod7019.getDistanceForDirection(tmp17, tmp18, "rtl" === tmp19));
-              obj = { closing: tmp16 };
+              gesture.setValue(_mod7019.getDistanceForDirection(layout, gestureDirection, "rtl" === direction));
+              obj = { closing };
               closure_34(obj);
             }
           }
         }
-        obj = { closing: tmp16 };
+        obj = { closing };
         closure_34(obj);
       } else {
         throw new TypeError("Trying to call a non-function");
@@ -378,17 +378,17 @@ export const Card = function Card(shadowEnabled) {
           closure_1_16();
         }
       } else {
-        if (tmp(7005).GestureState.CANCELLED !== state) {
-          if (tmp(7005).GestureState.FAILED !== state) {
-            if (tmp(7005).GestureState.END === state) {
+        if (PanGestureHandler.GestureState.CANCELLED !== state) {
+          if (PanGestureHandler.GestureState.FAILED !== state) {
+            if (PanGestureHandler.GestureState.END === state) {
               first3.setValue(0);
               if ("vertical" !== gestureDirection) {
-                if ("vertical-inverted" !== tmp38) {
+                if ("vertical-inverted" !== gestureDirection) {
                   let height = layout.width;
                   ({ translationX: translationY, velocityX: velocityY } = nativeEvent);
                 }
                 const sum = translationY + velocityY * num;
-                if (sum * tmpResult.getInvertedMultiplier(tmp38, "rtl" === direction) > height / 2) {
+                if (sum * tmpResult.getInvertedMultiplier(gestureDirection, "rtl" === direction) > height / 2) {
                   let tmp8 = 0 !== velocityY || 0 !== translationY;
                   const tmp9 = 0 !== velocityY || 0 !== translationY;
                 } else {
@@ -408,7 +408,7 @@ export const Card = function Card(shadowEnabled) {
                 if (closure_1_18 != null) {
                   closure_1_18();
                 }
-                tmpResult = tmp(7020);
+                tmpResult = _mod7020;
               }
               height = layout.height;
               ({ translationY, velocityY } = nativeEvent);
@@ -447,17 +447,17 @@ export const Card = function Card(shadowEnabled) {
         closure_1_16();
       }
     } else {
-      if (tmp(7005).GestureState.CANCELLED !== state) {
-        if (tmp(7005).GestureState.FAILED !== state) {
-          if (tmp(7005).GestureState.END === state) {
+      if (PanGestureHandler.GestureState.CANCELLED !== state) {
+        if (PanGestureHandler.GestureState.FAILED !== state) {
+          if (PanGestureHandler.GestureState.END === state) {
             first3.setValue(0);
             if ("vertical" !== gestureDirection) {
-              if ("vertical-inverted" !== tmp38) {
+              if ("vertical-inverted" !== gestureDirection) {
                 let height = layout.width;
                 ({ translationX: translationY, velocityX: velocityY } = nativeEvent);
               }
               const sum = translationY + velocityY * num;
-              if (sum * tmpResult.getInvertedMultiplier(tmp38, "rtl" === direction) > height / 2) {
+              if (sum * tmpResult.getInvertedMultiplier(gestureDirection, "rtl" === direction) > height / 2) {
                 let tmp8 = 0 !== velocityY || 0 !== translationY;
                 const tmp9 = 0 !== velocityY || 0 !== translationY;
               } else {
@@ -477,7 +477,7 @@ export const Card = function Card(shadowEnabled) {
               if (closure_1_18 != null) {
                 closure_1_18();
               }
-              tmpResult = tmp(7020);
+              tmpResult = _mod7020;
             }
             height = layout.height;
             ({ translationY, velocityY } = nativeEvent);

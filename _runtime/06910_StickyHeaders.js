@@ -60,7 +60,7 @@ export const StickyHeaders = (stickyHeaderIndices) => {
           let rounded = Math.floor((num6 + diff) / 2);
           let tmp8 = num5;
           sum = num6;
-          if (recyclerViewManager.getLayout(tmp[rounded]).y <= tmp3) {
+          if (recyclerViewManager.getLayout(arr2[rounded]).y <= tmp3) {
             sum = rounded + 1;
             tmp8 = rounded;
             diff1 = diff;
@@ -73,11 +73,11 @@ export const StickyHeaders = (stickyHeaderIndices) => {
           num7 = tmp8;
         } while (sum <= diff1);
       }
-      let num8 = tmp[num7];
+      let num8 = arr2[num7];
       if (num8 == null) {
         num8 = -1;
       }
-      let num9 = tmp[num7 + 1];
+      let num9 = arr2[num7 + 1];
       if (num9 == null) {
         num9 = -1;
       }
@@ -111,16 +111,14 @@ export const StickyHeaders = (stickyHeaderIndices) => {
         tmp17 = diff2 === pushStartsAt;
       }
       if (!tmp17) {
-        obj = { currentStickyIndex: num8, pushStartsAt: diff2 - tmp2 };
+        obj = { currentStickyIndex: num8, pushStartsAt: diff2 - stickyHeaderOffset };
         _undefined(obj);
       }
-      if (num8 !== tmp16) {
+      if (num8 !== currentStickyIndex) {
         if (onChangeStickyIndex != null) {
           onChangeStickyIndex(num8);
         }
       }
-      tmp16 = currentStickyIndex;
-      tmp2 = stickyHeaderOffset;
     }
   }, items1);
   closure_15 = tmp5;
@@ -157,7 +155,7 @@ export const StickyHeaders = (stickyHeaderIndices) => {
     let interpolateResult;
     if (stickyHeaderOffset > 0) {
       obj = { inputRange: null, outputRange: null, extrapolate: "clamp" };
-      const items2 = [tmp2, tmp2 + num];
+      const items2 = [pushStartsAt, pushStartsAt + num];
       obj.inputRange = items2;
       obj.outputRange = [1, 0];
       interpolateResult = scrollY.interpolate(obj);
@@ -178,9 +176,9 @@ export const StickyHeaders = (stickyHeaderIndices) => {
     let tmpResult = null;
     if (-1 !== currentStickyIndex) {
       tmpResult = null;
-      if (tmp4 < data.length) {
-        obj = { index: tmp4, item: tmp6[tmp4], renderItem, layout: { x: 0, y: 0, width: 0, height: 0 }, refHolder: current, extraData, trailingItem: "accessible", target: "y", hidden: "ro", inverted };
-        tmpResult = tmp(ViewHolder.ViewHolder, obj);
+      if (currentStickyIndex < data.length) {
+        obj = { index: currentStickyIndex, item: tmp6[currentStickyIndex], renderItem, layout: { x: 0, y: 0, width: 0, height: 0 }, refHolder: current, extraData, trailingItem: "accessible", target: "y", hidden: "ro", inverted };
+        tmpResult = jsx(ViewHolder.ViewHolder, { index: currentStickyIndex, item: tmp6[currentStickyIndex], renderItem, layout: { x: 0, y: 0, width: 0, height: 0 }, refHolder: current, extraData, trailingItem: "accessible", target: "y", hidden: "ro", inverted });
       }
     }
     obj.children = tmpResult;

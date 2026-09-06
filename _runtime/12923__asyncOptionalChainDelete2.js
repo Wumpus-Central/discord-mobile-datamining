@@ -6,7 +6,8 @@ import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 let closure_3 = async function _asyncOptionalChainDelete2() {
   closure_1 = tmp2;
-  closure_129_0 = await _asyncOptionalChain2._asyncOptionalChain(closure_0);
+  await _asyncOptionalChain2._asyncOptionalChain(closure_0);
+  closure_129_0 = value;
   let tmp9 = null == closure_129_0;
   if (!tmp9) {
     tmp9 = closure_129_0;

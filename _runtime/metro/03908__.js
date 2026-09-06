@@ -76,14 +76,14 @@ export default function formatRFC3339(arg0, fractionDigits) {
             const _Math3 = Math;
             const absolute = Math.abs(timezoneOffset);
             let str7 = "-";
-            const defaultResult6 = obj.default(module_3654.default(absolute / 60), 2);
+            const defaultResult6 = module_3893.default(module_3654.default(absolute / 60), 2);
             if (timezoneOffset < 0) {
               str7 = "+";
             }
             const combined = "".concat(str7);
             const combined1 = combined.concat(defaultResult6, ":");
-            str6 = combined1.concat(obj.default(absolute % 60, 2));
-            const defaultResult7 = obj.default(absolute % 60, 2);
+            str6 = combined1.concat(module_3893.default(absolute % 60, 2));
+            const defaultResult7 = module_3893.default(absolute % 60, 2);
           }
           const concat = "".concat;
           const combined2 = "".concat(fullYear, "-");

@@ -30,7 +30,7 @@ class MetricsAggregator {
 }
 const entry = {
   key: "add",
-  value: function add(metricType, arg1, diff, none, tags) {
+  value: function add(metricType, arg1, diff) {
     let str = none;
     if (none === undefined) {
       str = "none";
@@ -58,7 +58,7 @@ const entry = {
     let num = 0;
     if (value) {
       num = 0;
-      if (metricType === tmp5(12894).SET_METRIC_TYPE) {
+      if (metricType === MetricsAggregator(12894).SET_METRIC_TYPE) {
         num = value.metric.weight;
       }
     }
@@ -72,7 +72,7 @@ const entry = {
       }
     } else {
       obj = { metric: null, timestamp: null, metricType: null, name: null, unit: null, tags: null };
-      const tmp15 = new tmp5(12899).METRIC_MAP[metricType](diff);
+      const tmp15 = new MetricsAggregator(12899).METRIC_MAP[metricType](diff);
       obj.metric = tmp15;
       obj.timestamp = rounded;
       obj.metricType = metricType;
@@ -91,6 +91,7 @@ const entry = {
     if (self._bucketsTotalWeight >= MetricsAggregator(12894).MAX_WEIGHT) {
       self.flush();
     }
+    const tmp5Result = MetricsAggregator(12802);
   }
 };
 const items = [
@@ -131,10 +132,9 @@ const items = [
         while (tmp10 !== undefined) {
           let tmp15 = _slicedToArray(tmp12, 2);
           [tmp16, tmp17] = tmp15;
-          let tmp18 = tmp17;
           if (tmp17.timestamp <= diff) {
-            let result = map.set(tmp16, tmp18);
-            self._bucketsTotalWeight = self._bucketsTotalWeight - tmp18.metric.weight;
+            let result = map.set(tmp16, tmp17);
+            self._bucketsTotalWeight = self._bucketsTotalWeight - tmp17.metric.weight;
           }
           continue;
         }
@@ -145,6 +145,7 @@ const items = [
           continue;
         }
         self._captureMetrics(map);
+        const obj = MetricsAggregator(12811);
       }
     }
   },

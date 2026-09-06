@@ -118,7 +118,7 @@ class ReactNativeClient {
       onResult2 = tmp14Result.on("afterCaptureLog", () => {
         if (_logFlushIdleTimeout._logFlushIdleTimeout) {
           const _clearTimeout = clearTimeout;
-          clearTimeout(tmp._logFlushIdleTimeout);
+          clearTimeout(_logFlushIdleTimeout._logFlushIdleTimeout);
         }
         _logFlushIdleTimeout._logFlushIdleTimeout = setTimeout(() => {
           const result = closure_0(dependencyMap[10])._INTERNAL_flushLogsBuffer(_logFlushIdleTimeout);
@@ -197,10 +197,10 @@ let items = [
             _transport.send(arg0).then(null, (arg0) => {
               if (arg0 instanceof ReactNativeClient(682).SentryError) {
                 c0 = false;
-                const debug2 = tmp(682).debug;
+                const debug2 = ReactNativeClient(682).debug;
                 debug2.error("SentryError while sending event, keeping outcomes buffer:", arg0);
               } else {
-                const debug = tmp(682).debug;
+                const debug = ReactNativeClient(682).debug;
                 debug.error("Error while sending event:", arg0);
               }
             });
@@ -214,6 +214,7 @@ let items = [
       }
       let debug = tmp2(682).debug;
       debug.error("Transport disabled");
+      const obj = ReactNativeClient(1044);
     }
   },
   {
@@ -318,6 +319,28 @@ let items = [
       }).then(undefined, (arg0) => {
         const debug = self(dependencyMap[10]).debug;
         debug.error("The OnReady callback threw an error: ", arg0);
+      });
+      const nextPromise1 = nativeSdk.then((result) => result, () => {
+        const result = self._showCannotConnectDialog();
+        return false;
+      }).then((didCallNativeInit) => {
+        let obj = self;
+        const _options = self._options;
+        const onReady = _options.onReady;
+        let tmp = null === onReady;
+        if (!tmp) {
+          tmp = undefined === onReady;
+        }
+        if (!tmp) {
+          const call = onReady.call;
+          obj = { didCallNativeInit };
+          if (typeof call === "unknown") {
+            onReady(obj);
+          } else {
+            call(_options, obj);
+          }
+        }
+        obj.emit("afterInit");
       });
     }
   },

@@ -12,16 +12,15 @@ const map1 = new Map();
 
 export const customBubblingEventTypes = obj;
 export const customDirectEventTypes = obj;
-export const register = function register(arg0, fn) {
-  _modDef38(!map.has(arg0), "Tried to register two views with the same name %s", arg0);
+export const register = function register(APNGDecorationView, fn) {
+  _modDef38(!map.has(APNGDecorationView), "Tried to register two views with the same name %s", APNGDecorationView);
   let str = "null";
-  obj = map;
   if (null !== fn) {
     str = typeof fn;
   }
-  _modDef38(typeof fn === "function", "View config getter callback for component `%s` must be a function (received `%s`)", arg0, str);
-  const result = obj.set(arg0, fn);
-  return arg0;
+  _modDef38(typeof fn === "function", "View config getter callback for component `%s` must be a function (received `%s`)", APNGDecorationView, str);
+  const result = map.set(APNGDecorationView, fn);
+  return APNGDecorationView;
 };
 export const get = function get(arg0) {
   value = map1.get(arg0);
@@ -47,7 +46,7 @@ export const get = function get(arg0) {
     ({ bubblingEventTypes, directEventTypes } = value1Result);
     if (null != bubblingEventTypes) {
       for (const key10028 in bubblingEventTypes) {
-        if (null != obj[key10028]) {
+        if (null != map1[key10028]) {
           continue;
         } else {
           tmp19[key10028] = bubblingEventTypes[key10028];
@@ -58,7 +57,7 @@ export const get = function get(arg0) {
     }
     if (null != directEventTypes) {
       for (const key10032 in directEventTypes) {
-        if (null != obj[key10032]) {
+        if (null != map1[key10032]) {
           continue;
         } else {
           tmp21[key10032] = directEventTypes[key10032];
@@ -67,7 +66,7 @@ export const get = function get(arg0) {
         continue;
       }
     }
-    const result = obj.set(arg0, value1Result);
+    const result = map1.set(arg0, value1Result);
     const result1 = map.set(arg0, null);
     value = value1Result;
   }

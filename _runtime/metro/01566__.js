@@ -65,10 +65,9 @@ export const useNavigationHelpers = function useNavigationHelpers(id) {
       if (!flag) {
         let canGoBackResult;
         if (context != null) {
-          canGoBackResult = obj2.canGoBack();
+          canGoBackResult = context.canGoBack();
         }
         flag = canGoBackResult;
-        obj2 = context;
       }
       if (!flag) {
         flag = false;

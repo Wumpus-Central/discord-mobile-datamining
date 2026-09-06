@@ -31,7 +31,6 @@ function parseTags(byteLength, size, sum, arg3) {
             let arr = items.push(byteLength.getUint8(tmp6 + num));
           }
           obj = { id: uint16, name: null, value: null, description: null };
-          let tmp8 = importDefault;
           obj3 = _modDef5245.iptc[uint16];
           if (obj3) {
             if (typeof obj3 !== "string") {
@@ -45,14 +44,14 @@ function parseTags(byteLength, size, sum, arg3) {
           }
           obj.name = combined;
           obj.value = items;
-          obj.description = getTagDescription(tmp8(5245).iptc[uint16], items, obj, encoding);
-          let tmp17 = tmp8(5245).iptc[uint16] && tmp8(5245).iptc[uint16].repeatable;
+          obj.description = getTagDescription(_modDef5245.iptc[uint16], items, obj, encoding);
+          let tmp17 = _modDef5245.iptc[uint16] && _modDef5245.iptc[uint16].repeatable;
           if (tmp17) {
             obj.repeatable = true;
           }
-          let tmp18 = tmp8(5245).iptc[uint16] && undefined !== tmp8(5245).iptc[uint16].encoding_name;
+          let tmp18 = _modDef5245.iptc[uint16] && undefined !== _modDef5245.iptc[uint16].encoding_name;
           if (tmp18) {
-            let obj4 = tmp8(5245).iptc[uint16];
+            let obj4 = _modDef5245.iptc[uint16];
             obj.encoding = obj4.encoding_name(items);
           }
           let obj1 = { tag: obj, tagSize: uint161 };

@@ -6,8 +6,7 @@ class AsyncGenerator {
     closure_0 = global;
     resume = function resume(arg0, arg1) {
       try {
-        const iter = applyArgumentsResult[arg0](arg1);
-        value = iter.value;
+        value = applyArgumentsResult[arg0](arg1).value;
         const tmp7 = value instanceof applyArgumentsResult(value[0]);
         closure_3 = tmp7;
         if (tmp7) {
@@ -53,6 +52,7 @@ class AsyncGenerator {
         }, (arg0) => {
           closure_3("throw", arg0);
         });
+        const iter = applyArgumentsResult[arg0](arg1);
       } catch (tmp10) {
         settle("throw", tmp10);
       }
@@ -124,8 +124,7 @@ export default function _wrapAsyncGenerator(arg0) {
     let obj;
     function resume(arg0, arg1) {
       try {
-        const iter = applyArgumentsResult[arg0](arg1);
-        value = iter.value;
+        value = applyArgumentsResult[arg0](arg1).value;
         const tmp7 = value instanceof applyArgumentsResult(value[0]);
         closure_3 = tmp7;
         if (tmp7) {
@@ -171,6 +170,7 @@ export default function _wrapAsyncGenerator(arg0) {
         }, (arg0) => {
           closure_3("throw", arg0);
         });
+        const iter = applyArgumentsResult[arg0](arg1);
       } catch (tmp10) {
         settle("throw", tmp10);
       }

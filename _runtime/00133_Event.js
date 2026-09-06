@@ -177,7 +177,7 @@ const items = [
     }
   }
 ];
-let tmp2 = _createClassDefault(Event, items);
+const tmp2 = _createClassDefault(Event, items);
 Object.defineProperty(tmp2, "NONE", { enumerable: true, value: 0 });
 Object.defineProperty(tmp2.prototype, "NONE", { enumerable: true, value: 0 });
 Object.defineProperty(tmp2, "CAPTURING_PHASE", { enumerable: true, value: 1 });

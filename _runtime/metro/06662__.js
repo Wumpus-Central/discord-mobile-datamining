@@ -37,10 +37,10 @@ function create(handlerTag) {
       const _globalThis = globalThis;
       const _globalThis2 = globalThis;
       if (globalThis._setGestureStateSync) {
-        _globalThis2._setGestureStateSync(tmp, BEGAN);
+        _globalThis2._setGestureStateSync(closure_0, BEGAN);
       } else if (_globalThis2._setGestureStateAsync) {
         const _globalThis3 = globalThis;
-        const result = globalThis._setGestureStateAsync(tmp, BEGAN);
+        const result = globalThis._setGestureStateAsync(closure_0, BEGAN);
       } else {
         const _Error = Error;
         const error = new Error(tagMessage.tagMessage("Failed to set gesture state"));
@@ -61,10 +61,10 @@ function create(handlerTag) {
       const _globalThis = globalThis;
       const _globalThis2 = globalThis;
       if (globalThis._setGestureStateSync) {
-        _globalThis2._setGestureStateSync(tmp, ACTIVE);
+        _globalThis2._setGestureStateSync(closure_0, ACTIVE);
       } else if (_globalThis2._setGestureStateAsync) {
         const _globalThis3 = globalThis;
-        const result = globalThis._setGestureStateAsync(tmp, ACTIVE);
+        const result = globalThis._setGestureStateAsync(closure_0, ACTIVE);
       } else {
         const _Error = Error;
         const error = new Error(tagMessage.tagMessage("Failed to set gesture state"));
@@ -121,10 +121,10 @@ function create(handlerTag) {
       const _globalThis = globalThis;
       const _globalThis2 = globalThis;
       if (globalThis._setGestureStateSync) {
-        _globalThis2._setGestureStateSync(tmp, END);
+        _globalThis2._setGestureStateSync(closure_0, END);
       } else if (_globalThis2._setGestureStateAsync) {
         const _globalThis3 = globalThis;
-        const result = globalThis._setGestureStateAsync(tmp, END);
+        const result = globalThis._setGestureStateAsync(closure_0, END);
       } else {
         const _Error = Error;
         const error = new Error(tagMessage.tagMessage("Failed to set gesture state"));

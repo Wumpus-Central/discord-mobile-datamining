@@ -314,9 +314,9 @@ export const esc = function esc(nextResult) {
 };
 export const slugify = function slugify(str) {
   str = str.toLowerCase();
-  const str2 = str.toLowerCase().trim();
-  const str3 = str.toLowerCase().trim().replace(/[^\w\s-]/g, "");
-  return str.toLowerCase().trim().replace(/[^\w\s-]/g, "").replace(/[\s_-]+/g, "-").replace(/^-+|-+$/g, "");
+  const str2 = str.trim();
+  const str3 = str.trim().replace(/[^\w\s-]/g, "");
+  return str.trim().replace(/[^\w\s-]/g, "").replace(/[\s_-]+/g, "-").replace(/^-+|-+$/g, "");
 };
 export const isObject = function isObject(obj) {
   let tmp = typeof obj === "object";
@@ -869,7 +869,7 @@ export const required = function required(arg0, _zod, arg2) {
   }
   return constr;
 };
-export const aborted = function aborted(length, length2) {
+export const aborted = function aborted(length) {
   let num = length2;
   if (length2 === undefined) {
     num = 0;
@@ -1123,7 +1123,8 @@ export const uint8ArrayToBase64 = function uint8ArrayToBase64(arg0) {
 };
 export const base64urlToUint8Array = function base64urlToUint8Array(str) {
   let length;
-  const replaced = str.replace(/-/g, "+").replace(/_/g, "/");
+  str = str.replace(/-/g, "+");
+  const replaced = str.replace(/_/g, "/");
   const atobResult = atob(replaced + "=".repeat((4 - replaced.length % 4) % 4));
   const uint8Array = new Uint8Array(atobResult.length);
   let num = 0;

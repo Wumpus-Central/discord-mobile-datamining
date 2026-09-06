@@ -8,7 +8,7 @@ import setupIntegration from "setupIntegration" /* 752 */;
 Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
 let closure_2 = { cookies: true, data: true, headers: true, query_string: true, url: true };
 
-export const requestDataIntegration = setupIntegration.defineIntegration((request) => {
+export const requestDataIntegration = setupIntegration.defineIntegration(() => {
   if (request === undefined) {
     request = {};
   }

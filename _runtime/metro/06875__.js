@@ -25,9 +25,8 @@ export const useLayoutState = function useLayoutState(arg0) {
     });
     if (!arg1) {
       if (recyclerViewContext != null) {
-        obj.layout();
+        recyclerViewContext.layout();
       }
-      obj = recyclerViewContext;
     }
   }, items1);
   return items;

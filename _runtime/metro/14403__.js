@@ -129,7 +129,7 @@ const url = {
 ({ osRelease, serverHost, forceTouch, interfaceIdiom, uiMode, serial } = defaultResult);
 const merged = Object.assign(obj11.default());
 url.client = { reactotronLibraryName: "reactotron-react-native", reactotronLibraryVersion: "REACTOTRON_REACT_NATIVE_VERSION", platform: get_ActivityIndicator.Platform.OS, platformVersion: get_ActivityIndicator.Platform.Version, osRelease, model, serverHost, forceTouch, interfaceIdiom, systemName, uiMode, serial, reactNativeVersion: obj9.default() };
-let closure_14 = asyncGeneratorStep(async (arg0, value) => {
+let closure_14 = asyncGeneratorStep(async () => {
   if (c4 === 2) {
     c4 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -217,7 +217,7 @@ url.getClientId = function getClientId() {
   }
   return applyArgumentsResult;
 };
-let closure_13 = asyncGeneratorStep(async (arg0, value) => {
+let closure_13 = asyncGeneratorStep(async (arg0) => {
   if (c1 === 2) {
     c1 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");

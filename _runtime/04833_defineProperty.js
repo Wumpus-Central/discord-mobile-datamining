@@ -11,7 +11,7 @@ if (typeof Symbol === "function") {
   tmp = typeof Symbol("foo") === "symbol";
 }
 let closure_2 = tmp;
-let tmp2 = _mod1456();
+const tmp2 = _mod1456();
 let closure_5 = tmp2;
 function defineProperty(arg0, arg1, arg2, arg3) {
 
@@ -45,6 +45,7 @@ function defineProperties(prototype, ownPropertyDescriptors) {
     const ownPropertySymbols = Object.getOwnPropertySymbols(ownPropertyDescriptors);
     typeof call === "unknown" ? concat(ownPropertySymbols) : call(arr, ownPropertySymbols);
   }
+  const tmp = arguments.length > 2 ? arguments[2] : {};
 }
 defineProperties.supportsDescriptors = tmp2;
 

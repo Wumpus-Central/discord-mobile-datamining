@@ -1,11 +1,11 @@
 // === Module 4851: ? ===
 
 // Module 4851
+import _mod1283 from "module_1283" /* 1283 */;
 import _mod4852 from "module_4852" /* 4852 */;
 import _mod4853 from "module_4853" /* 4853 */;
 import _mod4854 from "module_4854" /* 4854 */;
 
-const _mod1283 = tmp(1283);
 if (_mod4852) {
   function setProto(arg0, arg1) {
     if (_mod4852(arg0, arg1)) {

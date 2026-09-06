@@ -163,6 +163,7 @@ const items = [
       if (!self._map.size) {
         self.stopCleanup();
       }
+      tmp3 = entries[Symbol.iterator]();
     }
   },
   {

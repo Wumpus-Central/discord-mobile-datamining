@@ -40,7 +40,7 @@ export const base64StringFromByteArray = function base64StringFromByteArray(arr2
   } else if (2 === result) {
     const sum3 = (arr2[length - 2] << 8) + arr2[length - 1];
     const _HermesInternal2 = HermesInternal;
-    items.push("" + items[sum3 >> 10] + items[sum3 >> 4 & 63] + items[sum3 << 2 & 63] + "=");
+    arr2 = items.push("" + items[sum3 >> 10] + items[sum3 >> 4 & 63] + items[sum3 << 2 & 63] + "=");
   }
   return items.join("");
 };

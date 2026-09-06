@@ -14,7 +14,7 @@ export const utf8read = function utf8read(arg0) {
     let num2 = 0;
     let num4 = 0;
     let num3 = 0;
-    if (0 < arg0.length) {
+    if (0 < length) {
       while (true) {
         let sum = num4 + 1;
         let tmp2 = arg0[num4];

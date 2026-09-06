@@ -1,9 +1,9 @@
 // === Module 6884: ? ===
 
 // Module 6884
+import _modDef6885 from "module_6885" /* 6885 */;
 import _classCallCheck from "module_6866" /* 6866 */;
 import _createClass from "module_6867" /* 6867 */;
-import _possibleConstructorReturn from "module_6885" /* 6885 */;
 import _getPrototypeOf from "module_6887" /* 6887 */;
 import _get from "module_6888" /* 6888 */;
 import _inherits from "module_6890" /* 6890 */;
@@ -27,6 +27,7 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
+_modDef6885;
 class RVMasonryLayoutManagerImpl {
   constructor(arg0, arg1) {
     self = this;

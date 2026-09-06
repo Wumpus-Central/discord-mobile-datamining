@@ -25,25 +25,23 @@ export const extractTraceparentData = function extractTraceparentData(str) {
   }
 };
 export const generateSentryTraceHeader = function generateSentryTraceHeader() {
-  let traceId = arg0;
-  if (arg0 === undefined) {
+  if (traceId === undefined) {
     traceId = generatePropagationContext.generateTraceId();
   }
-  let spanId = arg1;
-  if (arg1 === undefined) {
+  if (spanId === undefined) {
     spanId = generatePropagationContext.generateSpanId();
   }
   let str = "";
-  if (undefined !== arg2) {
+  if (undefined !== sampled) {
     let str2 = "-0";
-    if (arg2) {
+    if (sampled) {
       str2 = "-1";
     }
     str = str2;
   }
   return "" + traceId + "-" + spanId + str;
 };
-export const propagationContextFromHeaders = function propagationContextFromHeaders(str, arg1) {
+export const propagationContextFromHeaders = function propagationContextFromHeaders(str, _slicedToArray) {
   let tmp;
   if (str) {
     const match = str.match(regExp);
@@ -58,12 +56,12 @@ export const propagationContextFromHeaders = function propagationContextFromHead
       tmp = obj;
     }
   }
-  let result = BAGGAGE_HEADER_NAME.baggageHeaderToDynamicSamplingContext(arg1);
+  let result = BAGGAGE_HEADER_NAME.baggageHeaderToDynamicSamplingContext(_slicedToArray);
   if (tmp) {
     if (tmp.traceId) {
       obj = { traceId: null, parentSpanId: null, spanId: null, sampled: null, dsc: null };
       ({ traceId: obj7.traceId, parentSpanId: obj7.parentSpanId, parentSampled } = tmp);
-      let tmp4Result = tmp4(12807);
+      let tmp4Result = generatePropagationContext;
       obj.spanId = tmp4Result.generateSpanId();
       obj.sampled = parentSampled;
       if (!result) {
@@ -74,7 +72,7 @@ export const propagationContextFromHeaders = function propagationContextFromHead
     }
   }
   obj = { traceId: null, spanId: null };
-  tmp4Result = tmp4(12807);
+  tmp4Result = generatePropagationContext;
   obj.traceId = tmp4Result.generateTraceId();
   obj.spanId = generatePropagationContext.generateSpanId();
   return obj;

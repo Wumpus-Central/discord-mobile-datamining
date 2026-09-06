@@ -59,7 +59,7 @@ if (module_1639.shouldBeUseWeb()) {
   fn.__closure = obj1;
   fn.__workletHash = 9641647469033;
   fn.__initData = { code: "function pnpm_updatePropsTs2(viewDescriptors,updates){const{processColorsInProps,processTransformOrigin}=this.__closure;viewDescriptors.value.forEach(function(viewDescriptor){var _global$lastUpdateByT;const prevState=(_global$lastUpdateByT=global.lastUpdateByTag[viewDescriptor.tag])!==null&&_global$lastUpdateByT!==void 0?_global$lastUpdateByT:{};global.lastUpdateByTag[viewDescriptor.tag]={...prevState,...updates};global.lastUpdateFrameTimeByTag[viewDescriptor.tag]=global.__frameTimestamp;});processColorsInProps(updates);if('transformOrigin'in updates){updates.transformOrigin=processTransformOrigin(updates.transformOrigin);}global.UpdatePropsManager.update(viewDescriptors,updates);}" };
-  const obj2 = { code: "function pnpm_updatePropsTs2(viewDescriptors,updates){const{processColorsInProps,processTransformOrigin}=this.__closure;viewDescriptors.value.forEach(function(viewDescriptor){var _global$lastUpdateByT;const prevState=(_global$lastUpdateByT=global.lastUpdateByTag[viewDescriptor.tag])!==null&&_global$lastUpdateByT!==void 0?_global$lastUpdateByT:{};global.lastUpdateByTag[viewDescriptor.tag]={...prevState,...updates};global.lastUpdateFrameTimeByTag[viewDescriptor.tag]=global.__frameTimestamp;});processColorsInProps(updates);if('transformOrigin'in updates){updates.transformOrigin=processTransformOrigin(updates.transformOrigin);}global.UpdatePropsManager.update(viewDescriptors,updates);}" };
+  let obj2 = { code: "function pnpm_updatePropsTs2(viewDescriptors,updates){const{processColorsInProps,processTransformOrigin}=this.__closure;viewDescriptors.value.forEach(function(viewDescriptor){var _global$lastUpdateByT;const prevState=(_global$lastUpdateByT=global.lastUpdateByTag[viewDescriptor.tag])!==null&&_global$lastUpdateByT!==void 0?_global$lastUpdateByT:{};global.lastUpdateByTag[viewDescriptor.tag]={...prevState,...updates};global.lastUpdateFrameTimeByTag[viewDescriptor.tag]=global.__frameTimestamp;});processColorsInProps(updates);if('transformOrigin'in updates){updates.transformOrigin=processTransformOrigin(updates.transformOrigin);}global.UpdatePropsManager.update(viewDescriptors,updates);}" };
 }
 const __initData = { code: "function checkUpdate_Pnpm_updatePropsTs4(tag){const checkUpdate_Pnpm_updatePropsTs4=this._recur;const{runOnJS,updatePropsOnReactJS,scheduledFrameIds}=this.__closure;const currentFrameTime=global.__frameTimestamp;const lastUpdateFrameTime=global.lastUpdateFrameTimeByTag[tag];if(!currentFrameTime||!lastUpdateFrameTime){return;}if(currentFrameTime-lastUpdateFrameTime>=20){runOnJS(updatePropsOnReactJS)(tag,global.lastUpdateByTag[tag]);global.lastUpdateByTag[tag]=undefined;return;}if(scheduledFrameIds[tag]){return;}scheduledFrameIds[tag]=requestAnimationFrame(function(){'worklet';scheduledFrameIds[tag]=undefined;checkUpdate_Pnpm_updatePropsTs4(tag);});}" };
 let closure_6 = { code: "function pnpm_updatePropsTs5(){const{scheduledFrameIds,tag,checkUpdate}=this.__closure;scheduledFrameIds[tag]=undefined;checkUpdate(tag);}" };
@@ -73,8 +73,8 @@ if (module_1639.isFabric()) {
       if (__frameTimestamp) {
         if (tmp2) {
           if (__frameTimestamp - tmp2 >= 20) {
-            runWorkletOnJS.runOnJS(updatePropsOnReactJS)(tag, tmp.lastUpdateByTag[tag]);
-            tmp.lastUpdateByTag[tag] = undefined;
+            runWorkletOnJS.runOnJS(updatePropsOnReactJS)(tag, global.lastUpdateByTag[tag]);
+            global.lastUpdateByTag[tag] = undefined;
           } else if (!__closure[tag]) {
             const _requestAnimationFrame = requestAnimationFrame;
             fn = function p() {
@@ -104,6 +104,7 @@ if (module_1639.isFabric()) {
             const _queueMicrotask = queueMicrotask;
             queueMicrotask(self.flush);
           }
+          obj = { shadowNodeWrapper: shadowNodeWrapper.shadowNodeWrapper, updates, tag: shadowNodeWrapper.tag };
         });
       },
       flush() {
@@ -158,11 +159,10 @@ if (module_1639.isFabric()) {
 if (module_1639.shouldBeUseWeb()) {
   function maybeThrowError() {
     if (!obj.isJest()) {
-      const reanimatedError = new tmp(1647).ReanimatedError("`UpdatePropsManager` is not available on non-native platform.");
+      const reanimatedError = new require("module_1647").ReanimatedError("`UpdatePropsManager` is not available on non-native platform.");
       throw reanimatedError;
     }
     obj = require("module_1639");
-    tmp = require;
   }
   const _Proxy = Proxy;
   const obj5 = {
@@ -172,11 +172,10 @@ if (module_1639.shouldBeUseWeb()) {
           if (obj.isJest()) {
             return false;
           } else {
-            const reanimatedError = new tmp(1647).ReanimatedError("`UpdatePropsManager` is not available on non-native platform.");
+            const reanimatedError = new require("module_1647").ReanimatedError("`UpdatePropsManager` is not available on non-native platform.");
             throw reanimatedError;
           }
           obj = require("module_1639");
-          tmp = require;
         } else {
           throw new TypeError("Trying to call a non-function");
         }
@@ -198,9 +197,9 @@ if (module_1639.shouldBeUseWeb()) {
 }
 
 export default fn;
-export const updatePropsJestWrapper = (D, keys, current, arr) => {
+export const updatePropsJestWrapper = (D, keys, current, c4) => {
   closure_0 = keys;
-  const item = arr.forEach((fn) => {
+  const item = updatePropsOnReactJS.forEach((fn) => {
     fn(closure_0);
   });
   const merged = Object.assign(current.current.value);

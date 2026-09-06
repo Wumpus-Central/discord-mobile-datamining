@@ -6,7 +6,7 @@ import _mod11228 from "module_11228" /* 11228 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
-let closure_3 = async function _pick(arg0, value) {
+let closure_3 = async function _pick(arg0) {
   if (c8 === 2) {
     c8 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -34,18 +34,17 @@ let closure_3 = async function _pick(arg0, value) {
         } else {
           closure_4 = tmp;
           closure_3 = tmp4;
-          let tmp44 = closure_0;
           closure_131_0 = undefined;
           closure_131_1 = undefined;
           closure_131_2 = undefined;
           let type;
-          if (closure_0 != null) {
-            type = tmp44.type;
+          if (_require != null) {
+            type = _require.type;
           }
           if (type) {
             let _Array = Array;
-            let fn = tmp44.type;
-            if (Array.isArray(tmp44.type)) {
+            let fn = _require.type;
+            if (Array.isArray(_require.type)) {
               let items = fn;
             } else {
               items = [fn];
@@ -56,7 +55,7 @@ let closure_3 = async function _pick(arg0, value) {
           } else {
             let items1 = [_mod11228.types.allFiles];
             let obj1 = { mode: "import", allowMultiSelection: false, allowVirtualFiles: false };
-            let merged = Object.assign(tmp44);
+            let merged = Object.assign(_require);
             obj1.type = items1;
             closure_131_0 = obj1;
             type = obj1.type;

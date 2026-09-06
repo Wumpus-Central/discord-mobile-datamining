@@ -28,7 +28,7 @@ function Suspender(children) {
   if (!freeze) {
     ref.current = null;
   }
-  return <framebus>{arg0.children}</framebus>;
+  return <framebus>{children.children}</framebus>;
 }
 ({ Suspense: closure_0, Fragment: closure_1, use: c2 } = noop);
 const jsx = jsxProd.jsx;

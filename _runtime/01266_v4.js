@@ -1,6 +1,7 @@
 // === Module 1266: v4 ===
 
 // Module 1266 (v4)
+import uint8ArrayDefault from "uint8Array" /* 1258 */;
 import unsafeStringify from "unsafeStringify" /* 1259 */;
 import _modDef1267 from "module_1267" /* 1267 */;
 
@@ -13,7 +14,7 @@ export default function v4(arg0, arg1, arg2) {
   if (_modDef1267.randomUUID) {
     if (!arg1) {
       if (!obj) {
-        return tmp(1267).randomUUID();
+        return _modDef1267.randomUUID();
       }
     }
   }
@@ -22,8 +23,8 @@ export default function v4(arg0, arg1, arg2) {
   }
   let random = obj.random;
   if (!random) {
-    random = obj.rng || tmp(1258)();
-    const tmp3 = obj.rng || tmp(1258);
+    random = obj.rng || uint8ArrayDefault();
+    const tmp3 = obj.rng || uint8ArrayDefault;
   }
   random[6] = 15 & random[6] | 64;
   random[8] = 63 & random[8] | 128;

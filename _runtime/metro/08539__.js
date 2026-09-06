@@ -68,7 +68,7 @@ const entry = {
     const size = { x, y, width, height, name: id, matrix: tmp3Result, patternTransform: tmp3Result, patternUnits: null, patternContentUnits: null };
     let num = patternUnits;
     if (patternUnits) {
-      num = tmp(8531)[patternUnits];
+      num = Pattern(8531)[patternUnits];
     }
     if (!num) {
       num = 0;
@@ -76,7 +76,7 @@ const entry = {
     size.patternUnits = num;
     let num2 = 1;
     if (patternContentUnits) {
-      num2 = tmp(8531)[patternContentUnits];
+      num2 = Pattern(8531)[patternContentUnits];
     }
     size.patternContentUnits = num2;
     const obj = {
@@ -86,7 +86,7 @@ const entry = {
     };
     const tmp3 = Pattern(8461);
     const merged = Object.assign(size);
-    const merged1 = Object.assign(tmp(8466)({ viewBox, preserveAspectRatio }));
+    const merged1 = Object.assign(Pattern(8466)({ viewBox, preserveAspectRatio }));
     obj.children = children;
     return jsx(Pattern(8540), {
       ref(arg0) {

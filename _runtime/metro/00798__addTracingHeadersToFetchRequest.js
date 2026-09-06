@@ -1,8 +1,15 @@
 // === Module 798: _addTracingHeadersToFetchRequest ===
 
 // Module 798 (_addTracingHeadersToFetchRequest)
+import spanToJSON from "spanToJSON" /* 684 */;
+import _mod692 from "module_692" /* 692 */;
+import SEMANTIC_ATTRIBUTE_CACHE_HIT from "SEMANTIC_ATTRIBUTE_CACHE_HIT" /* 704 */;
+import SPAN_STATUS_ERROR from "SPAN_STATUS_ERROR" /* 705 */;
 import _mod713 from "module_713" /* 713 */;
 import _mod720 from "module_720" /* 720 */;
+import SentryNonRecordingSpan from "SentryNonRecordingSpan" /* 721 */;
+import _mod731 from "module_731" /* 731 */;
+import _mod765 from "module_765" /* 765 */;
 import _mod769 from "module_769" /* 769 */;
 
 require = arg1;
@@ -15,7 +22,7 @@ function _addTracingHeadersToFetchRequest(headers, headers2, span, propagateTrac
   if (tmp5) {
     headers = headers2.headers;
     if (!headers) {
-      let tmp2Result = tmp2(692);
+      let tmp2Result = _mod692;
       let headers1;
       if (tmp2Result.isRequest(headers)) {
         headers1 = headers.headers;
@@ -26,7 +33,7 @@ function _addTracingHeadersToFetchRequest(headers, headers2, span, propagateTrac
       const _Headers = Headers;
       let isInstanceOfResult = typeof Headers !== "undefined";
       if (typeof Headers !== "undefined") {
-        tmp2Result = tmp2(692);
+        tmp2Result = _mod692;
         const _Headers3 = Headers;
         isInstanceOfResult = tmp2Result.isInstanceOf(headers, Headers);
       }
@@ -214,7 +221,7 @@ export const instrumentFetchRequest = function instrumentFetchRequest(fetchData,
         if (__span) {
           if (arg3[__span]) {
             if (fetchData.response) {
-              let tmp3Result = tmp3(705);
+              let tmp3Result = SPAN_STATUS_ERROR;
               tmp3Result.setHttpStatus(obj20, fetchData.response.status);
               const response = fetchData.response;
               value = undefined;
@@ -232,7 +239,7 @@ export const instrumentFetchRequest = function instrumentFetchRequest(fetchData,
                 }
               }
             } else if (fetchData.error) {
-              obj = { code: tmp3(705).SPAN_STATUS_ERROR, message: "internal_error" };
+              obj = { code: SPAN_STATUS_ERROR.SPAN_STATUS_ERROR, message: "internal_error" };
               obj20.setStatus(obj);
             }
             obj20.end();
@@ -267,45 +274,45 @@ export const instrumentFetchRequest = function instrumentFetchRequest(fetchData,
       str = spanOrigin;
     }
     const propagateTraceparent = tmp9.propagateTraceparent;
-    tmp3Result = tmp3(684);
+    tmp3Result = spanToJSON;
     const activeSpan = tmp3Result.getActiveSpan();
     if (hasSpansEnabledResult) {
       if (activeSpan) {
-        const tmp3Result1 = tmp3(731);
-        let tmp3Result2 = tmp3(765);
+        const tmp3Result1 = _mod731;
+        let tmp3Result2 = _mod765;
         if (startsWithResult) {
           const obj2 = { name: null, attributes: null };
           const _HermesInternal2 = HermesInternal;
           obj2.name = "" + method + " " + tmp3Result2.stripDataUrlContent(url);
           const obj3 = { url: null, type: "fetch", "http.method": null };
-          tmp3Result2 = tmp3(765).stripDataUrlContent(url);
+          tmp3Result2 = _mod765.stripDataUrlContent(url);
           obj3.url = tmp3Result2;
           obj3["http.method"] = method;
-          obj3[tmp3(704).SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN] = str;
-          str = tmp3(704).SEMANTIC_ATTRIBUTE_SENTRY_OP;
+          obj3[SEMANTIC_ATTRIBUTE_CACHE_HIT.SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN] = str;
+          str = SEMANTIC_ATTRIBUTE_CACHE_HIT.SEMANTIC_ATTRIBUTE_SENTRY_OP;
           method = "http.client";
           obj3[str] = "http.client";
           obj2.attributes = obj3;
           let obj4 = obj2;
-          const tmp3Result3 = tmp3(765);
+          const tmp3Result3 = _mod765;
         } else {
           const result = tmp3Result2.parseStringToURLObject(url);
           let sanitizedUrlStringFromUrlObject = url;
           if (result) {
-            sanitizedUrlStringFromUrlObject = tmp3(765).getSanitizedUrlStringFromUrlObject(result);
-            const tmp3Result4 = tmp3(765);
+            sanitizedUrlStringFromUrlObject = _mod765.getSanitizedUrlStringFromUrlObject(result);
+            const tmp3Result4 = _mod765;
           }
           obj4 = { name: null, attributes: null };
           const _HermesInternal = HermesInternal;
           obj4.name = "" + method + " " + sanitizedUrlStringFromUrlObject;
-          const obj5 = { url: tmp3(765).stripDataUrlContent(url), type: "fetch", "http.method": method };
-          obj5[tmp3(704).SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN] = str;
-          obj5[tmp3(704).SEMANTIC_ATTRIBUTE_SENTRY_OP] = "http.client";
+          const obj5 = { url: _mod765.stripDataUrlContent(url), type: "fetch", "http.method": method };
+          obj5[SEMANTIC_ATTRIBUTE_CACHE_HIT.SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN] = str;
+          obj5[SEMANTIC_ATTRIBUTE_CACHE_HIT.SEMANTIC_ATTRIBUTE_SENTRY_OP] = "http.client";
           if (result) {
             if (!tmp3Result6.isURLObjectRelative(result)) {
-              obj5["http.url"] = tmp3(765).stripDataUrlContent(result.href);
+              obj5["http.url"] = _mod765.stripDataUrlContent(result.href);
               obj5["server.address"] = result.host;
-              const tmp3Result7 = tmp3(765);
+              const tmp3Result7 = _mod765;
             }
             if (result.search) {
               obj5["http.query"] = result.search;
@@ -313,16 +320,16 @@ export const instrumentFetchRequest = function instrumentFetchRequest(fetchData,
             if (result.hash) {
               obj5["http.fragment"] = result.hash;
             }
-            tmp3Result6 = tmp3(765);
+            tmp3Result6 = _mod765;
           }
           obj4.attributes = obj5;
-          const tmp3Result5 = tmp3(765);
+          const tmp3Result5 = _mod765;
         }
         tmp3Result1.startInactiveSpan(obj4);
         startsWithResult = url.startsWith("data:");
       }
     }
-    const sentryNonRecordingSpan = new tmp3(721).SentryNonRecordingSpan();
+    const sentryNonRecordingSpan = new SentryNonRecordingSpan.SentryNonRecordingSpan();
     fetchData.fetchData.__span = sentryNonRecordingSpan.spanContext().spanId;
     arg3[sentryNonRecordingSpan.spanContext().spanId] = sentryNonRecordingSpan;
     if (fn2(fetchData.fetchData.url)) {
@@ -341,7 +348,7 @@ export const instrumentFetchRequest = function instrumentFetchRequest(fetchData,
         fetchData.args[1] = obj6;
         obj6.headers = tmp27Result;
       }
-      tmp3Result8 = tmp3(720);
+      tmp3Result8 = _mod720;
     }
     const client = _mod713.getClient();
     if (client) {

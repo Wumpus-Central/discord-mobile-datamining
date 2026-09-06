@@ -71,12 +71,12 @@ function dsnFromString(arg0) {
 const re3 = /^(?:(\w+):)\/\/(?:(\w+)(?::(\w+)?)?@)([\w.-]+)(?::(\d+))?\/(.+)/;
 
 export { dsnFromString };
-export const dsnToString = function dsnToString(arg0) {
+export const dsnToString = function dsnToString(url) {
   let flag = arg1;
   if (arg1 === undefined) {
     flag = false;
   }
-  ({ host, path, pass, port, projectId, protocol, publicKey } = arg0);
+  ({ host, path, pass, port, projectId, protocol, publicKey } = url);
   let str = "";
   if (flag) {
     str = "";

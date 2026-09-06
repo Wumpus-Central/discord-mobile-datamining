@@ -3,6 +3,7 @@
 // Module 795 (_INTERNAL_FLAG_BUFFER_SIZE)
 import spanToJSON from "spanToJSON" /* 684 */;
 import _mod688 from "module_688" /* 688 */;
+import consoleSandbox from "consoleSandbox" /* 689 */;
 import _mod713 from "module_713" /* 713 */;
 
 require = arg1;
@@ -20,22 +21,21 @@ export const _INTERNAL_addFeatureFlagToActiveSpan = function _INTERNAL_addFeatur
   if (typeof value === "boolean") {
     const activeSpan = spanToJSON.getActiveSpan();
     if (activeSpan) {
-      const data = tmp6(684).spanToJSON(activeSpan).data;
+      const data = spanToJSON.spanToJSON(activeSpan).data;
       const _HermesInternal = HermesInternal;
       if ("" + c2 + flagKey in data) {
         const _HermesInternal3 = HermesInternal;
-        const attr = activeSpan.setAttribute("" + tmp2 + flagKey, value);
+        const attr = activeSpan.setAttribute("" + c2 + flagKey, value);
       } else {
         const _Object = Object;
         const keys = Object.keys(data);
         if (keys.filter((item) => item.startsWith(closure_1_2)).length < num) {
           const _HermesInternal2 = HermesInternal;
-          const attr1 = activeSpan.setAttribute("" + tmp2 + flagKey, value);
+          const attr1 = activeSpan.setAttribute("" + c2 + flagKey, value);
         }
       }
-      const tmp6Result = tmp6(684);
+      const tmp6Result = spanToJSON;
     }
-    tmp6 = require;
   }
 };
 export const _INTERNAL_copyFlagsFromScopeToEvent = function _INTERNAL_copyFlagsFromScopeToEvent(contexts) {
@@ -71,8 +71,8 @@ export const _INTERNAL_insertFlagToScope = function _INTERNAL_insertFlagToScope(
   closure_0 = flagKey;
   if (typeof value === "boolean") {
     if (values.length > num) {
-      if (tmp(688).DEBUG_BUILD) {
-        const debug = tmp(689).debug;
+      if (_mod688.DEBUG_BUILD) {
+        const debug = consoleSandbox.debug;
         const _HermesInternal = HermesInternal;
         debug.error("[Feature Flags] insertToFlagBuffer called on a buffer larger than maxSize=" + num);
       }
@@ -94,21 +94,20 @@ export const _INTERNAL_insertToFlagBuffer = function _INTERNAL_insertToFlagBuffe
   if (typeof result === "boolean") {
     if (arr.length > arg3) {
       if (_mod688.DEBUG_BUILD) {
-        const debug = tmp5(689).debug;
+        const debug = consoleSandbox.debug;
         const _HermesInternal = HermesInternal;
         debug.error("[Feature Flags] insertToFlagBuffer called on a buffer larger than maxSize=" + arg3);
       }
-      tmp5 = require;
     } else {
       const findIndexResult = arr.findIndex((flag) => flag.flag === closure_0);
       if (-1 !== findIndexResult) {
         arr.splice(findIndexResult, 1);
       }
       if (arr.length === arg3) {
-        arr.shift();
+        arr = arr.shift();
       }
       const obj = { flag, result };
-      arr.push(obj);
+      arr = arr.push(obj);
     }
   }
 };

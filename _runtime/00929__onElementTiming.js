@@ -2,6 +2,7 @@
 
 // Module 929 (_onElementTiming)
 import _mod682 from "module_682" /* 682 */;
+import _mod899 from "module_899" /* 899 */;
 import extractNetworkProtocol from "extractNetworkProtocol" /* 924 */;
 import _slicedToArray from "module_32" /* 32 */;
 
@@ -26,16 +27,16 @@ function _onElementTiming(arg0) {
     if (identifier.identifier) {
       ({ name, renderTime, loadTime } = identifier);
       if (loadTime) {
-        let tmpResult = tmp(924);
+        let tmpResult = extractNetworkProtocol;
         const items = [tmpResult.msToSec(loadTime), "load-time"];
         let items2 = items;
       } else if (renderTime) {
-        tmpResult = tmp(924);
+        tmpResult = extractNetworkProtocol;
         const items1 = [tmpResult.msToSec(renderTime), "render-time"];
         items2 = items1;
       } else {
-        items2 = [tmp(682).timestampInSeconds(), "entry-emission"];
-        const tmpResult1 = tmp(682);
+        items2 = [_mod682.timestampInSeconds(), "entry-emission"];
+        const tmpResult1 = _mod682;
       }
       const tmp4 = _slicedToArray(items2, 2);
       const startTime = tmp4[0];
@@ -48,7 +49,7 @@ function _onElementTiming(arg0) {
         if (loadTime == null) {
           num5 = 0;
         }
-        const num3 = extractNetworkProtocol.msToSec(Math.max(0, num4 - num5));
+        extractNetworkProtocol.msToSec(Math.max(0, num4 - num5));
       }
       let obj = {};
       obj[_mod682.SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN] = "auto.ui.browser.elementtiming";
@@ -90,14 +91,15 @@ function _onElementTiming(arg0) {
       });
     }
   });
+  let obj = transactionName(682);
 }
 
 export { _onElementTiming };
 export const startTrackingElementTiming = function startTrackingElementTiming() {
   if (obj.getBrowserPerformanceAPI()) {
-    let tmpResult = tmp(682);
+    let tmpResult = _mod682;
     if (tmpResult.browserPerformanceTimeOrigin()) {
-      tmpResult = tmp(899);
+      tmpResult = _mod899;
       let fn = tmpResult.addPerformanceInstrumentationHandler("element", _onElementTiming);
     }
     return fn;
@@ -105,4 +107,5 @@ export const startTrackingElementTiming = function startTrackingElementTiming() 
   fn = () => {
 
   };
+  obj = extractNetworkProtocol;
 };

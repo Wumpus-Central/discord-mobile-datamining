@@ -55,13 +55,14 @@ export const browserProfilingIntegration = registerSpanErrorInstrumentation.defi
       getOptions.on("spanStart", (rootSpan) => {
         let result = rootSpan === uIProfiler(682).getRootSpan(rootSpan);
         if (result) {
-          let tmpResult = tmp(966);
+          let tmpResult = uIProfiler(966);
           result = tmpResult.shouldProfileSpanLegacy(rootSpan);
         }
         if (result) {
-          tmpResult = tmp(967);
+          tmpResult = uIProfiler(967);
           tmpResult.startProfileForSpan(rootSpan);
         }
+        const obj = uIProfiler(682);
       });
       getOptions.on("beforeEnvelope", (arg0) => {
         if (obj.getActiveProfilesCount()) {
@@ -100,33 +101,26 @@ export const browserProfilingIntegration = registerSpanErrorInstrumentation.defi
                   if (profile) {
                     delete tmp2[tmp];
                   }
-                  let tmp39 = uIProfiler;
                   let obj3 = uIProfiler(966);
                   let result1 = obj3.takeProfileFromGlobalCache(tmp20);
                   if (result1) {
-                    let tmp39Result = tmp39(966);
+                    let tmp39Result = uIProfiler(966);
                     let profilingEvent = tmp39Result.createProfilingEvent(tmp20, tmp22, tmp44, tmp16);
                     if (profilingEvent) {
                       let arr = items.push(tmp57);
                     }
-                  } else if (tmp39(937).DEBUG_BUILD) {
-                    let debug3 = tmp39(682).debug;
+                  } else if (uIProfiler(937).DEBUG_BUILD) {
+                    let debug3 = uIProfiler(682).debug;
                     let _HermesInternal = HermesInternal;
                     let logResult = debug3.log("[Profiling] Could not retrieve profile for span: " + tmp20);
                   }
-                } else {
-                  let tmp29 = uIProfiler;
-                  if (uIProfiler(937).DEBUG_BUILD) {
-                    let debug2 = tmp29(682).debug;
-                    let logResult1 = debug2.log("[Profiling] cannot find profile for a span without a profile context");
-                  }
+                } else if (uIProfiler(937).DEBUG_BUILD) {
+                  let debug2 = uIProfiler(682).debug;
+                  let logResult1 = debug2.log("[Profiling] cannot find profile for a span without a profile context");
                 }
-              } else {
-                let tmp66 = uIProfiler;
-                if (uIProfiler(937).DEBUG_BUILD) {
-                  let debug = tmp66(682).debug;
-                  let logResult2 = debug.log("[Profiling] cannot find profile for a span without a profile context");
-                }
+              } else if (uIProfiler(937).DEBUG_BUILD) {
+                let debug = uIProfiler(682).debug;
+                let logResult2 = debug.log("[Profiling] cannot find profile for a span without a profile context");
               }
               continue;
             }
@@ -135,6 +129,7 @@ export const browserProfilingIntegration = registerSpanErrorInstrumentation.defi
           }
           const tmp4Result = uIProfiler(966);
         }
+        obj = uIProfiler(966);
       });
     } else {
       const profileLifecycle = options.profileLifecycle;
@@ -167,6 +162,7 @@ export const browserProfilingIntegration = registerSpanErrorInstrumentation.defi
         tmp2Result7 = tmp2(682);
       }
     }
+    tmp2Result3 = uIProfiler(966);
   },
   processEvent(contexts) {
     return _mod966.attachProfiledThreadToEvent(contexts);

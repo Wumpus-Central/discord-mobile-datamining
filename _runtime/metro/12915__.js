@@ -3,6 +3,7 @@
 // Module 12915
 import stackParserFromStackParserOptions from "stackParserFromStackParserOptions" /* 12800 */;
 import _mod12803 from "module_12803" /* 12803 */;
+import _mod12913 from "module_12913" /* 12913 */;
 
 require = arg1;
 const dependencyMap = arg6;
@@ -23,8 +24,8 @@ export const callFrameToStackFrame = function callFrameToStackFrame(location, st
   const obj = { filename: replaced, module: fn(replaced), function: location.functionName || stackParserFromStackParserOptions.UNKNOWN_FUNCTION, colno: sum, lineno: sum1, in_app: null };
   let filenameIsInAppResult;
   if (replaced) {
-    filenameIsInAppResult = tmp4(12913).filenameIsInApp(replaced);
-    const tmp4Result = tmp4(12913);
+    filenameIsInAppResult = _mod12913.filenameIsInApp(replaced);
+    const tmp4Result = _mod12913;
   }
   obj.in_app = filenameIsInAppResult;
   return obj.dropUndefinedKeys(obj);

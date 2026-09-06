@@ -7,6 +7,7 @@ import _mod6677 from "module_6677" /* 6677 */;
 import RNGestureHandlerModuleDefault from "RNGestureHandlerModule" /* 6684 */;
 import transformIntoHandlerTags from "transformIntoHandlerTags" /* 6686 */;
 import ghQueueMicrotask from "ghQueueMicrotask" /* 6687 */;
+import ActionType from "ActionType" /* 6688 */;
 import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
 import hasOwnProperty from "_possibleConstructorReturn" /* 93 */;
@@ -76,15 +77,15 @@ export default function createHandler(name) {
       tmp3Result.handlerTag = -1;
       tmp3Result.onGestureHandlerEvent = (nativeEvent) => {
         if (nativeEvent.nativeEvent.handlerTag === closure_0.handlerTag) {
-          if (typeof tmp.props.onGestureEvent === "function") {
-            const props2 = tmp.props;
+          if (typeof closure_0.props.onGestureEvent === "function") {
+            const props2 = closure_0.props;
             const onGestureEvent = props2.onGestureEvent;
             if (onGestureEvent != null) {
               onGestureEvent(nativeEvent);
             }
           }
         } else {
-          const props = tmp.props;
+          const props = closure_0.props;
           if (props.onGestureHandlerEvent != null) {
             const result = onGestureHandlerEvent(nativeEvent);
           }
@@ -92,15 +93,15 @@ export default function createHandler(name) {
       };
       tmp3Result.onGestureHandlerStateChange = (nativeEvent) => {
         if (nativeEvent.nativeEvent.handlerTag === closure_0.handlerTag) {
-          if (typeof tmp.props.onHandlerStateChange === "function") {
-            const props2 = tmp.props;
+          if (typeof closure_0.props.onHandlerStateChange === "function") {
+            const props2 = closure_0.props;
             if (props2.onHandlerStateChange != null) {
               onHandlerStateChange(nativeEvent);
             }
           }
           let tmp7 = tmp6;
           if (closure_10[nativeEvent.nativeEvent.state]) {
-            tmp7 = tmp.props[tmp6];
+            tmp7 = closure_0.props[tmp6];
           }
           let tmp8 = tmp7;
           if (tmp7) {
@@ -110,7 +111,7 @@ export default function createHandler(name) {
             tmp7(nativeEvent);
           }
         } else {
-          const props = tmp.props;
+          const props = closure_0.props;
           if (props.onGestureHandlerStateChange != null) {
             const result = onGestureHandlerStateChange(nativeEvent);
           }
@@ -156,26 +157,26 @@ export default function createHandler(name) {
           }
           tmp6 = tmp7;
         }
-        const props2 = tmp.props;
+        const props2 = closure_0.props;
         if (!tmp6) {
           if (!onHandlerStateChange) {
             if (onGestureEvent) {
               if ("__isNative" in onGestureEvent) {
-                let REANIMATED_WORKLET = tmp2(6688).ActionType.NATIVE_ANIMATED_EVENT;
+                let REANIMATED_WORKLET = ActionType.ActionType.NATIVE_ANIMATED_EVENT;
               }
             }
-            REANIMATED_WORKLET = tmp2(6688).ActionType.JS_FUNCTION_OLD_API;
+            REANIMATED_WORKLET = ActionType.ActionType.JS_FUNCTION_OLD_API;
           }
-          RNGestureHandlerModuleDefault.attachGestureHandler(tmp.handlerTag, viewTag, REANIMATED_WORKLET);
-          let tmp2Result = tmp2(6686);
+          RNGestureHandlerModuleDefault.attachGestureHandler(closure_0.handlerTag, viewTag, REANIMATED_WORKLET);
+          let tmp2Result = transformIntoHandlerTags;
           const result1 = tmp2Result.scheduleFlushOperations();
-          tmp2Result = tmp2(6687);
+          tmp2Result = ghQueueMicrotask;
           tmp2Result.ghQueueMicrotask(() => {
             const MountRegistry = Handler(config[16]).MountRegistry;
             const result = MountRegistry.gestureHandlerWillMount(closure_1_0);
           });
         }
-        REANIMATED_WORKLET = tmp2(6688).ActionType.REANIMATED_WORKLET;
+        REANIMATED_WORKLET = ActionType.ActionType.REANIMATED_WORKLET;
       };
       tmp3Result.setGestureHandlerConfig = (config) => {
         closure_0.config = config;
@@ -299,11 +300,12 @@ export default function createHandler(name) {
         const obj2 = allowedProps(config[11]);
         const result1 = Handler(config[12]).scheduleFlushOperations();
         if (self.props.id) {
-          const handlerIDToTag = tmp4(tmp5[13]).handlerIDToTag;
+          const handlerIDToTag = Handler(config[13]).handlerIDToTag;
           delete tmp[tmp2];
         }
-        const MountRegistry = tmp4(tmp5[16]).MountRegistry;
+        const MountRegistry = Handler(config[16]).MountRegistry;
         const result2 = MountRegistry.gestureHandlerWillUnmount(self);
+        const obj3 = Handler(config[12]);
       }
     },
     {
@@ -339,14 +341,13 @@ export default function createHandler(name) {
             const props2 = self.props;
             const items = [];
             const obj = transformIntoHandlerTags;
-            const tmp7 = require;
             HermesBuiltin.arraySpread(customNativeProps, HermesBuiltin.arraySpread(allowedProps, 0));
             const filterConfigResult = obj.filterConfig(_classCallCheck ? _classCallCheck(props2) : props2, items, config);
             const tmp9 = _classCallCheck ? _classCallCheck(props2) : props2;
             if (!tmp7Result.deepEqual(self.config, filterConfigResult)) {
               const result = self.setGestureHandlerConfig(filterConfigResult);
             }
-            tmp7Result = tmp7(6660);
+            tmp7Result = tagMessage;
           } else {
             const waitFor = props.waitFor;
             const _Array2 = Array;

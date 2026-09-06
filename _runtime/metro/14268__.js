@@ -83,8 +83,7 @@ function parseTransformedExtension(parts) {
           if (!items1.length) {
             break;
           } else {
-            let items2 = [arr, ];
-            items2[1] = items1.join(exports.SEPARATOR);
+            let items2 = [arr, items1.join(exports.SEPARATOR)];
             let arr1 = items.push(items2);
           }
         }
@@ -225,8 +224,7 @@ export const parseUnicodeLocaleId = function parseUnicodeLocaleId(arr3) {
                 }
               }
               if (items2.length) {
-                let obj1 = { type: "x", value: null };
-                obj1.value = items2.join(exports.SEPARATOR);
+                let obj1 = { type: "x", value: items2.join(exports.SEPARATOR) };
                 arr3 = items.push(obj1);
                 tmp19 = obj1;
                 tmp20 = tmp3;

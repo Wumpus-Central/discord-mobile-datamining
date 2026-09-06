@@ -2,6 +2,8 @@
 
 // Module 14562
 import _possibleConstructorReturnDefault from "_possibleConstructorReturn" /* 93 */;
+import ReanimatedNativeStackScreenDefault from "ReanimatedNativeStackScreen" /* 14563 */;
+import ReanimatedScreenDefault from "ReanimatedScreen" /* 14566 */;
 import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
 import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
@@ -77,9 +79,9 @@ let items = [
     value: function render() {
       const self = this;
       if (this.props.isNativeStack) {
-        let tmpResult = tmp(14563);
+        let tmpResult = ReanimatedNativeStackScreenDefault;
       } else {
-        tmpResult = tmp(14566);
+        tmpResult = ReanimatedScreenDefault;
       }
       const obj = {};
       const merged = Object.assign(self.props);

@@ -93,14 +93,13 @@ const items = [
       AssetSourceResolver(38)(null != this.serverUrl, "need server to load from");
       ({ asset, fromSource, serverUrl } = this);
       const obj = AssetSourceResolver(86);
-      const tmp = AssetSourceResolver;
       const _default = AssetSourceResolver(87).default;
       let str = "";
       if (1 !== pickScaleResult) {
         str = `${"@" + tmp4}x`;
       }
       pickScaleResult = obj.pickScale(asset.scales, AssetSourceResolver(87).default.get());
-      return fromSource(serverUrl + (tmp(102).getBasePath(asset) + "/" + asset.name + str + "." + asset.type) + "?platform=android&hash=" + self.asset.hash);
+      return fromSource(serverUrl + (AssetSourceResolver(102).getBasePath(asset) + "/" + asset.name + str + "." + asset.type) + "?platform=android&hash=" + self.asset.hash);
     }
   },
   {
@@ -108,14 +107,13 @@ const items = [
     value: function scaledAssetPath() {
       const asset = this.asset;
       const obj = AssetSourceResolver(86);
-      const tmp = AssetSourceResolver;
       const _default = AssetSourceResolver(87).default;
       let str = "";
       if (1 !== pickScaleResult) {
         str = `${"@" + tmp3}x`;
       }
       pickScaleResult = obj.pickScale(asset.scales, AssetSourceResolver(87).default.get());
-      return this.fromSource(tmp(102).getBasePath(asset) + "/" + asset.name + str + "." + asset.type);
+      return this.fromSource(AssetSourceResolver(102).getBasePath(asset) + "/" + asset.name + str + "." + asset.type);
     }
   },
   {
@@ -128,13 +126,12 @@ const items = [
       }
       const asset = self.asset;
       const obj = AssetSourceResolver(86);
-      const tmp = AssetSourceResolver;
       const _default = AssetSourceResolver(87).default;
       let str2 = "";
       if (1 !== pickScaleResult) {
         str2 = `${"@" + tmp3}x`;
       }
-      tmp(102);
+      AssetSourceResolver(102);
       pickScaleResult = obj.pickScale(asset.scales, AssetSourceResolver(87).default.get());
       return self.fromSource(str + `${obj2.getBasePath(asset)}/${asset.name}` + str2 + "." + asset.type.replace(/\.\.\//g, "_"));
     }

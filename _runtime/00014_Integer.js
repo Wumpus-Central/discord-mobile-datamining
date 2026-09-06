@@ -1948,7 +1948,7 @@ function arrayToSmall(array) {
   if (array.length < 4) {
     if (array.length !== Integer.length) {
       let num3 = -1;
-      if (array.length > arr.length) {
+      if (array.length > Integer.length) {
         num3 = 1;
       }
       let num = num3;
@@ -1956,12 +1956,12 @@ function arrayToSmall(array) {
       let diff2 = array.length - 1;
       num = 0;
       if (0 <= diff2) {
-        while (array[diff2] === arr[diff2]) {
+        while (array[diff2] === Integer[diff2]) {
           diff2 = diff2 - 1;
           num = 0;
         }
         let num2 = -1;
-        if (array[diff2] > arr[diff2]) {
+        if (array[diff2] > Integer[diff2]) {
           num2 = 1;
         }
         num = num2;
@@ -2221,7 +2221,7 @@ function multiplyKaratsuba(substr, substr2) {
     const result = 2 * rounded;
     items1 = [];
     let diff1 = result - 1;
-    let tmp24Result = tmp24(tmp22, items.concat(subtract(subtract(multiplyKaratsuba(addAny(substr1, substr), addAny(substr3, substr2)), tmp22), tmp23)));
+    let tmp24Result = addAny(tmp22, items.concat(subtract(subtract(multiplyKaratsuba(addAny(substr1, substr), addAny(substr3, substr2)), tmp22), tmp23)));
     if (0 < result) {
       do {
         arr = items1.push(0);
@@ -2229,7 +2229,7 @@ function multiplyKaratsuba(substr, substr2) {
         diff1 = diff1 - 1;
       } while (0 < tmp9);
     }
-    tmp24Result = tmp24(tmp24Result, items1.concat(tmp23));
+    tmp24Result = addAny(tmp24Result, items1.concat(tmp23));
     const diff2 = tmp24Result.length - 1;
     let tmp11 = diff2;
     let tmp12 = diff2;
@@ -2245,8 +2245,8 @@ function multiplyKaratsuba(substr, substr2) {
     return tmp24Result;
   }
 }
-function multiplySmallAndArray(arg0, value, sign) {
-  if (arg0 < 10000000) {
+function multiplySmallAndArray(absolute, value, sign) {
+  if (absolute < 10000000) {
     const _Array = Array;
     const array = new Array(length);
     let num4 = 0;
@@ -2255,7 +2255,7 @@ function multiplySmallAndArray(arg0, value, sign) {
     let num7 = 0;
     if (0 < value.length) {
       do {
-        let sum = value[num5] * arg0 + num4;
+        let sum = value[num5] * absolute + num4;
         let _Math4 = Math;
         let rounded = Math.floor(sum / 10000000);
         array[num5] = sum - rounded * 10000000;
@@ -2277,20 +2277,20 @@ function multiplySmallAndArray(arg0, value, sign) {
       } while (num6 > 0);
     }
   } else {
-    if (arg0 < 10000000) {
-      const items = [arg0];
+    if (absolute < 10000000) {
+      const items = [absolute];
       let items2 = items;
-    } else if (arg0 < 100000000000000) {
-      items1 = [arg0 % 10000000, ];
+    } else if (absolute < 100000000000000) {
+      items1 = [absolute % 10000000, ];
       const _Math3 = Math;
-      items1[1] = Math.floor(arg0 / 10000000);
+      items1[1] = Math.floor(absolute / 10000000);
       items2 = items1;
     } else {
-      items2 = [arg0 % 10000000, , ];
+      items2 = [absolute % 10000000, , ];
       const _Math = Math;
-      items2[1] = Math.floor(arg0 / 10000000) % 10000000;
+      items2[1] = Math.floor(absolute / 10000000) % 10000000;
       const _Math2 = Math;
-      items2[2] = Math.floor(arg0 / 100000000000000);
+      items2[2] = Math.floor(absolute / 100000000000000);
     }
     tmp15Result = multiplyLong(value, items2);
   }
@@ -2890,21 +2890,19 @@ function bitwise(isNegative, arg1, fn) {
   let tmp4 = notResult;
   if (!notResult.isZero()) {
     while (true) {
-      let tmp6 = closure_19;
-      let tmp5 = divModAny;
       let tmp7 = divModAny(tmp4, closure_19);
       let obj4 = tmp7[1];
       let toJSNumberResult = obj4.toJSNumber();
       let diff = toJSNumberResult;
       if (isNegativeResult) {
-        diff = tmp6 - 1 - toJSNumberResult;
+        diff = closure_19 - 1 - toJSNumberResult;
       }
-      let tmp5Result = tmp5(tmp3, tmp6);
+      let tmp5Result = divModAny(tmp3, closure_19);
       let obj5 = tmp5Result[1];
       let toJSNumberResult1 = obj5.toJSNumber();
       let diff1 = toJSNumberResult1;
       if (isNegativeResult1) {
-        diff1 = tmp6 - 1 - toJSNumberResult1;
+        diff1 = closure_19 - 1 - toJSNumberResult1;
       }
       let first = tmp7[0];
       let first1 = tmp5Result[0];
@@ -3097,8 +3095,8 @@ function gcd(absResult, absResult1) {
   }
   const obj3 = parseValue(absResult1);
 }
-function toBase(self, arg1) {
-  let obj = Integer(arg1);
+function toBase(self, items) {
+  let obj = Integer(items);
   if (obj.isZero()) {
     if (self.isZero()) {
       obj = { value: [0], isNegative: false };
@@ -3153,7 +3151,7 @@ function toBase(self, arg1) {
       }
       return obj4;
     } else {
-      const items = [];
+      items = [];
       obj2 = absResult;
       if (absResult.isNegative()) {
         while (true) {
@@ -5450,10 +5448,10 @@ Integer.randBetween = function randBetween(arg0, absResult1, arg2) {
     const _Math = Math;
     random = Math.random;
   }
-  tmp(tmp2);
-  const tmpResult = tmp(tmp3);
+  parseValue(tmp2);
+  const tmpResult = parseValue(tmp3);
   const tmpResult1 = parseValue(tmp2);
-  let tmpResult2 = tmp(tmp3);
+  let tmpResult2 = parseValue(tmp3);
   if (tmpResult1.greater(tmpResult2)) {
     tmpResult2 = tmpResult1;
   }

@@ -5,7 +5,7 @@ function getValidLengthPercentageSizeOrNull(str) {
   if (null == str) {
     return null;
   } else {
-    if (str.endsWith("px")) {
+    if ("px".endsWith("px")) {
       const _parseFloat = parseFloat;
       const parsed = parseFloat(str);
       const _Number = Number;
@@ -15,7 +15,7 @@ function getValidLengthPercentageSizeOrNull(str) {
         }
       }
     }
-    if (!str.endsWith("%")) {
+    if (!"px".endsWith("%")) {
       let tmp4 = null;
       return tmp4;
     } else {

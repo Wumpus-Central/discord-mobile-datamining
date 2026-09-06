@@ -54,12 +54,11 @@ const entry = {
   value: function shouldMergeResults(str, arg1, text) {
     let match = str.match(/^\s*$/i);
     if (match) {
-      let tmp4 = null != text.text.match(/^[+-]/i);
+      let tmp4 = null != str.match(/^[+-]/i);
       if (!tmp4) {
         tmp4 = null != text.text.match(/^-/i);
       }
       match = tmp4;
-      str = text.text;
     }
     return match;
   }
@@ -72,10 +71,10 @@ const items = [
       const parseDurationResult = ENMergeRelativeAfterDateRefiner(10431).parseDuration(text.text);
       let reverseDurationResult = parseDurationResult;
       if (null != str.match(/^-/i)) {
-        reverseDurationResult = tmp(10434).reverseDuration(parseDurationResult);
+        reverseDurationResult = ENMergeRelativeAfterDateRefiner(10434).reverseDuration(parseDurationResult);
       }
-      const ParsingComponents = tmp(10435).ParsingComponents;
-      const ReferenceWithTimezone = tmp(10435).ReferenceWithTimezone;
+      const ParsingComponents = ENMergeRelativeAfterDateRefiner(10435).ParsingComponents;
+      const ReferenceWithTimezone = ENMergeRelativeAfterDateRefiner(10435).ReferenceWithTimezone;
       start = start.start;
       const relativeFromReference = ParsingComponents.createRelativeFromReference(ReferenceWithTimezone.fromDate(start.date()), reverseDurationResult);
       ({ reference, index } = start);

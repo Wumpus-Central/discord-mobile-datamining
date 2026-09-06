@@ -7,7 +7,7 @@ import noop from "module_19" /* 19 */;
 ({ useCallback: c2, useEffect: c3, useMemo: closure_4, useRef: hasOwnProperty } = noop);
 
 export const useBoundDetection = function useBoundDetection(recyclerViewManager, arg1) {
-  const isFirstLayoutComplete = recyclerViewManager;
+  closure_0 = recyclerViewManager;
   closure_1 = arg1;
   hasOwnProperty(false);
   hasOwnProperty(false);
@@ -35,7 +35,7 @@ export const useBoundDetection = function useBoundDetection(recyclerViewManager,
   const items1 = [_requestAnimationFrame, arg1, recyclerViewManager];
   const checkBounds = React2(() => {
     closure_5.current = Date.now();
-    const props = isFirstLayoutComplete.props;
+    const props = closure_0.props;
     ({ onEndReached, onStartReached, maintainVisibleContentPosition, onEndReachedThreshold, onStartReachedThreshold } = props);
     let num;
     if (maintainVisibleContentPosition != null) {
@@ -44,12 +44,12 @@ export const useBoundDetection = function useBoundDetection(recyclerViewManager,
     if (num == null) {
       num = -1;
     }
-    if (isFirstLayoutComplete.getIsFirstLayoutComplete()) {
-      const absoluteLastScrollOffset = obj.getAbsoluteLastScrollOffset();
-      const size = obj.getChildContainerDimensions();
-      const size2 = obj.getWindowSize();
+    if (closure_0.getIsFirstLayoutComplete()) {
+      const absoluteLastScrollOffset = closure_0.getAbsoluteLastScrollOffset();
+      const size = closure_0.getChildContainerDimensions();
+      const size2 = closure_0.getWindowSize();
       const tmp3 = true === props.horizontal ? size2.width : size2.height;
-      const sum = (tmp2 ? size.width : size.height) + obj.firstItemOffset;
+      const sum = (tmp2 ? size.width : size.height) + closure_0.firstItemOffset;
       if (tmp3 > 0) {
         if (onEndReached) {
           if (onEndReachedThreshold == null) {

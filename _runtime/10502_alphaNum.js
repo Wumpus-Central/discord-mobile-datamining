@@ -6,19 +6,19 @@ function alphaNum(str) {
   return String.fromCharCode(str.charCodeAt(0) - 65248);
 }
 
-export const toHankaku = function toHankaku(arg0) {
-  const str = String(arg0);
-  const str2 = String(arg0).replace(/\u2019/g, "'");
-  const str3 = String(arg0).replace(/\u2019/g, "'").replace(/\u201D/g, "\"");
-  const str4 = String(arg0).replace(/\u2019/g, "'").replace(/\u201D/g, "\"").replace(/\u3000/g, " ");
-  return String(arg0).replace(/\u2019/g, "'").replace(/\u201D/g, "\"").replace(/\u3000/g, " ").replace(/\uFFE5/g, "\u00A5").replace(/[\uFF01\uFF03-\uFF06\uFF08\uFF09\uFF0C-\uFF19\uFF1C-\uFF1F\uFF21-\uFF3B\uFF3D\uFF3F\uFF41-\uFF5B\uFF5D\uFF5E]/g, alphaNum);
+export const toHankaku = function toHankaku(match) {
+  const str = String(match);
+  const str2 = String(match).replace(/\u2019/g, "'");
+  const str3 = String(match).replace(/\u2019/g, "'").replace(/\u201D/g, "\"");
+  const str4 = String(match).replace(/\u2019/g, "'").replace(/\u201D/g, "\"").replace(/\u3000/g, " ");
+  return String(match).replace(/\u2019/g, "'").replace(/\u201D/g, "\"").replace(/\u3000/g, " ").replace(/\uFFE5/g, "\u00A5").replace(/[\uFF01\uFF03-\uFF06\uFF08\uFF09\uFF0C-\uFF19\uFF1C-\uFF1F\uFF21-\uFF3B\uFF3D\uFF3F\uFF41-\uFF5B\uFF5D\uFF5E]/g, alphaNum);
 };
-export const jaStringToNumber = function jaStringToNumber(arg0) {
+export const jaStringToNumber = function jaStringToNumber(match) {
   let num = 0;
   let num2 = 0;
   let num3 = 0;
-  if (0 < arg0.length) {
-    while ("\u5341" !== arg0[num]) {
+  if (0 < match.length) {
+    while ("\u5341" !== match[num]) {
       let sum = num2 + exports.NUMBER[tmp];
       num = num + 1;
       num2 = sum;

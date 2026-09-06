@@ -16,20 +16,18 @@ if (baseIsArguments((() => arguments)())) {
       } else {
         const call2 = React3.call;
         if (typeof call2 === "unknown") {
-          let call2Result = tmp5("callee");
+          let call2Result = React3("callee");
         } else {
           call2Result = call2(arg0, "callee");
         }
-        tmp5 = React3;
       }
     } else {
       const call = React2.call;
       if (typeof call === "unknown") {
-        let callResult = tmp2("callee");
+        let callResult = React2("callee");
       } else {
         callResult = call(arg0, "callee");
       }
-      tmp2 = React2;
     }
   };
 }

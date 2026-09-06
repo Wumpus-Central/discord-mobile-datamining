@@ -149,7 +149,7 @@ const regExp5 = new RegExp(((items2) => {
 })(combined), undefined);
 items1[2] = regExp5;
 const combined1 = "(" + items2[obj.NUMERICIDENTIFIER] + ")\\.(" + items2[obj.NUMERICIDENTIFIER] + ")\\.(" + items2[obj.NUMERICIDENTIFIER] + ")";
-let tmp10 = ((items2) => {
+const tmp10 = ((items2) => {
   let str = items2;
   while (tmp2 !== undefined) {
     let tmp5 = _slicedToArray(tmp3, 2);

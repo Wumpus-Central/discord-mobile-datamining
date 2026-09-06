@@ -12,9 +12,9 @@ if (getOwnPropertySymbols) {
       const _Object = Object;
       const ObjectResult = Object(arg0);
       _require = ObjectResult;
-      items = require("arrayFilter")(getOwnPropertySymbols(ObjectResult), (arg0) => {
+      items = require("arrayFilter")(getOwnPropertySymbols(ObjectResult), (ownPropertySymbols) => {
         const call = propertyIsEnumerable.call;
-        return typeof call === "unknown" ? propertyIsEnumerable(arg0) : call(closure_0, arg0);
+        return typeof call === "unknown" ? propertyIsEnumerable(ownPropertySymbols) : call(closure_0, ownPropertySymbols);
       });
       const tmp5 = require("arrayFilter");
     }

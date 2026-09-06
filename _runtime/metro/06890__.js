@@ -21,4 +21,5 @@ export default function _inherits(value, fn) {
   if (fn) {
     _mod6891(value, fn);
   }
+  const obj = { constructor: { value, writable: true, configurable: true } };
 };

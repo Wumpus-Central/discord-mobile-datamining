@@ -11,5 +11,5 @@ export default function _default(color) {
 export { defaultButtonStyles };
 export const defaultScreenshotButtonStyles = defaultButtonStyles;
 export const modalWrapper = { position: "absolute", top: 0, left: 0, right: 0, bottom: 0 };
-export const modalSheetContainer = (background) => ({ backgroundColor: background.background, borderTopLeftRadius: 16, borderTopRightRadius: 16, overflow: "hidden", alignSelf: "stretch", shadowColor: "#000", shadowOffset: { width: 0, height: -3 }, shadowOpacity: 0.1, shadowRadius: 4, elevation: 5, flex: 1 });
+export const modalSheetContainer = (theme) => ({ backgroundColor: theme.background, borderTopLeftRadius: 16, borderTopRightRadius: 16, overflow: "hidden", alignSelf: "stretch", shadowColor: "#000", shadowOffset: { width: 0, height: -3 }, shadowOpacity: 0.1, shadowRadius: 4, elevation: 5, flex: 1 });
 export const topSpacer = { height: 64 };

@@ -8,8 +8,8 @@ require = arg1;
 const dependencyMap = arg6;
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 
-export const getAsyncContextStrategy = function getAsyncContextStrategy(arg0) {
-  const sentryCarrier = _mod690.getSentryCarrier(arg0);
+export const getAsyncContextStrategy = function getAsyncContextStrategy(mainCarrier) {
+  const sentryCarrier = _mod690.getSentryCarrier(mainCarrier);
   if (sentryCarrier.acs) {
     let acs = sentryCarrier.acs;
   } else {

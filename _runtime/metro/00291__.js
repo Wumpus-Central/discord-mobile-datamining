@@ -119,6 +119,7 @@ let items = [
         const Commands = TouchableNativeFeedback(112).Commands;
         Commands.setPressed(result, arg0);
       }
+      const obj = TouchableNativeFeedback(114);
     }
   },
   {
@@ -139,6 +140,7 @@ let items = [
         }
         Commands.hotspotUpdate(result, locationX, locationY);
       }
+      const obj = TouchableNativeFeedback(114);
     }
   },
   {
@@ -323,6 +325,7 @@ let items = [
       } else {
         throw new TypeError("Trying to call a non-function");
       }
+      const tmp3 = _objectWithoutProperties(eventHandlers, c3);
     }
   },
   {

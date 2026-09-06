@@ -2,10 +2,10 @@
 
 // Module 4682 (arrayReduce)
 
-export default function arrayReduce(arg0, fn, arg2, arg3) {
+export default function arrayReduce(height, fn, arg2, arg3) {
   let num = 0;
-  if (null != arg0) {
-    num = arg0.length;
+  if (null != height) {
+    num = height.length;
   }
   let tmp = arg3;
   if (arg3) {
@@ -14,7 +14,7 @@ export default function arrayReduce(arg0, fn, arg2, arg3) {
   let first = arg2;
   let num2 = -1;
   if (tmp) {
-    first = arg0[0];
+    first = height[0];
     num2 = 0;
   }
   let sum = num2 + 1;
@@ -22,7 +22,7 @@ export default function arrayReduce(arg0, fn, arg2, arg3) {
   let tmp5 = first;
   if (sum < num) {
     do {
-      tmp4 = fn(tmp4, arg0[sum], sum, arg0);
+      tmp4 = fn(tmp4, height[sum], sum, height);
       sum = sum + 1;
       tmp5 = tmp4;
     } while (sum < num);

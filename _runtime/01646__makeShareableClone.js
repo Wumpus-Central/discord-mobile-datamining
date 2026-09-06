@@ -1,6 +1,7 @@
 // === Module 1646: _makeShareableClone ===
 
 // Module 1646 (_makeShareableClone)
+import _mod1640 from "module_1640" /* 1640 */;
 import _mod1647 from "module_1647" /* 1647 */;
 import _mod1648 from "module_1648" /* 1648 */;
 import _mod1649 from "module_1649" /* 1649 */;
@@ -27,12 +28,12 @@ function updatePropsDOM(arg0, arg1, arg2) {
 }
 
 export const createJSReanimatedModule = fn(1650).createJSReanimatedModule;
-export const _updatePropsJS = (arg0, getAnimatableRef, arg2) => {
+export const _updatePropsJS = (arg0, tag, arg2) => {
   dependencyMap = arg0;
-  if (getAnimatableRef) {
-    let animatableRef = getAnimatableRef;
-    if (getAnimatableRef.getAnimatableRef) {
-      animatableRef = getAnimatableRef.getAnimatableRef();
+  if (tag) {
+    let animatableRef = tag;
+    if (tag.getAnimatableRef) {
+      animatableRef = tag.getAnimatableRef();
     }
     const _Object = Object;
     const keys = Object.keys(arg0);
@@ -85,23 +86,23 @@ export const _updatePropsJS = (arg0, getAnimatableRef, arg2) => {
             const merged2 = Object.assign(tmp10);
             const merged3 = Object.assign(first);
             animatableRef.previousStyle = obj2;
-            let tmp36Result = tmp36(1648);
+            let tmp36Result = _mod1648;
             const reactDOMStyle = tmp36Result.createReactDOMStyle(obj2);
             const _Array = Array;
             if (tmp18) {
-              tmp36Result = tmp36(1648);
+              tmp36Result = _mod1648;
               reactDOMStyle.transform = tmp36Result.createTransformValue(reactDOMStyle.transform);
             }
-            let tmp19 = undefined !== tmp36(1648).createTextShadowValue;
+            let tmp19 = undefined !== _mod1648.createTextShadowValue;
             if (tmp19) {
               tmp19 = reactDOMStyle.textShadowColor || reactDOMStyle.textShadowRadius || reactDOMStyle.textShadowOffset;
               const tmp20 = reactDOMStyle.textShadowColor || reactDOMStyle.textShadowRadius || reactDOMStyle.textShadowOffset;
             }
             if (tmp19) {
               ({ textShadowColor: obj6.textShadowColor, textShadowOffset: obj6.textShadowOffset, textShadowRadius: obj6.textShadowRadius } = reactDOMStyle);
-              reactDOMStyle.textShadow = tmp36(1648).createTextShadowValue({ textShadowColor: null, textShadowOffset: null, textShadowRadius: null });
+              reactDOMStyle.textShadow = _mod1648.createTextShadowValue({ textShadowColor: null, textShadowOffset: null, textShadowRadius: null });
               const obj3 = { textShadowColor: null, textShadowOffset: null, textShadowRadius: null };
-              const tmp36Result1 = tmp36(1648);
+              const tmp36Result1 = _mod1648;
             }
             for (const key10094 in reactDOMStyle) {
               if (arg2) {
@@ -119,7 +120,7 @@ export const _updatePropsJS = (arg0, getAnimatableRef, arg2) => {
               }
               continue;
             }
-            tmp18 = Array.isArray(reactDOMStyle.transform) && undefined !== tmp36(1648).createTransformValue;
+            tmp18 = Array.isArray(reactDOMStyle.transform) && undefined !== _mod1648.createTransformValue;
           } else {
             throw new TypeError("Trying to call a non-function");
           }
@@ -144,7 +145,7 @@ export const _updatePropsJS = (arg0, getAnimatableRef, arg2) => {
           }
           str2 = className;
         }
-        const logger = tmp36(1640).logger;
+        const logger = _mod1640.logger;
         const _HermesInternal = HermesInternal;
         logger.warn("It's not possible to manipulate the component " + str2);
       }

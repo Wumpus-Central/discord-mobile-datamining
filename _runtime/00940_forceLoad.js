@@ -4,6 +4,7 @@
 import _mod682 from "module_682" /* 682 */;
 import _mod895 from "module_895" /* 895 */;
 import _mod897 from "module_897" /* 897 */;
+import extractSafariExtensionDetails from "extractSafariExtensionDetails" /* 938 */;
 import _wrapTimeFunction from "_wrapTimeFunction" /* 941 */;
 import breadcrumbsIntegration from "breadcrumbsIntegration" /* 942 */;
 import _getUnhandledRejectionError from "_getUnhandledRejectionError" /* 943 */;
@@ -64,14 +65,14 @@ export const init = function init() {
   obj.enabled = enabled;
   let defaultStackParser = obj.stackParser;
   if (!defaultStackParser) {
-    defaultStackParser = tmp7(938).defaultStackParser;
+    defaultStackParser = extractSafariExtensionDetails.defaultStackParser;
   }
   obj.stackParser = _mod682.stackParserFromStackParserOptions(defaultStackParser);
-  let tmp7Result = tmp7(682);
+  let tmp7Result = _mod682;
   obj = { integrations: obj.integrations, defaultIntegrations };
   obj.integrations = tmp7Result.getIntegrationsToSetup(obj);
   obj.transport = obj.transport || _mod897.makeFetchTransport;
-  tmp7Result = tmp7(682);
+  tmp7Result = _mod682;
   return tmp7Result.initAndBind(_mod895.BrowserClient, obj);
 };
 export const onLoad = function onLoad(fn) {

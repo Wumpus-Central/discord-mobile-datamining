@@ -3,7 +3,7 @@
 // Module 11234 (releaseLongTermAccess)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
-asyncGeneratorStep(async (arg0, value) => {
+asyncGeneratorStep(async (arg0) => {
   if (dependencyMap === 2) {
     dependencyMap = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -38,7 +38,7 @@ asyncGeneratorStep(async (arg0, value) => {
     }
   }
 });
-let closure_0 = asyncGeneratorStep(async (arg0, value) => {
+let closure_0 = asyncGeneratorStep(async (arg0) => {
   if (dependencyMap === 2) {
     dependencyMap = 3;
     throw new TypeError("Generator functions may not be called on executing generators");

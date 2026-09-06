@@ -61,7 +61,7 @@ export const getLastWeekdayOfMonth = function getLastWeekdayOfMonth(arg0, arg1, 
     diff1 = num3 - num2;
   }
 };
-export const toTimezoneOffset = function toTimezoneOffset(formatted, instant, merged) {
+export const toTimezoneOffset = function toTimezoneOffset(formatted, instant) {
   let obj = merged;
   if (merged === undefined) {
     obj = {};

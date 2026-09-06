@@ -4,7 +4,7 @@
 import _mod553 from "module_553" /* 553 */;
 
 
-export default function baseSortedIndexBy(arg0, arg1, fn, arg3) {
+export default function baseSortedIndexBy(arg0, value, fn, arg3) {
   let num = 0;
   if (null != arg0) {
     num = arg0.length;
@@ -12,7 +12,7 @@ export default function baseSortedIndexBy(arg0, arg1, fn, arg3) {
   if (0 === num) {
     return 0;
   } else {
-    const tmp27 = fn(arg1);
+    const tmp27 = fn(value);
     let tmp22 = num;
     let num2 = 0;
     let tmp23 = num;

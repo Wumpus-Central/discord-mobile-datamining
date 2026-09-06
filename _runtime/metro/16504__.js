@@ -70,7 +70,7 @@ function validateOptions(options) {
   }
   if (tmp12) {
     errors.push("option quality should be a number between 0.0 and 1.0");
-    options.quality = tmp3.quality;
+    options.quality = closure_12.quality;
   }
   if (typeof options.snapshotContentContainer !== "boolean") {
     errors.push("option snapshotContentContainer should be a boolean");
@@ -79,12 +79,12 @@ function validateOptions(options) {
     errors.push("option handleGLSurfaceViewOnAndroid should be a boolean");
   }
   if (-1 === closure_10.indexOf(options.format)) {
-    options.format = tmp3.format;
+    options.format = closure_12.format;
     const text = `option format '${size.format}`;
     errors.push(`${`option format '${size.format}`}' is not in valid formats: ${obj.join(" | ")}`);
   }
   if (-1 === closure_11.indexOf(options.result)) {
-    options.result = tmp3.result;
+    options.result = closure_12.result;
     const text1 = `option result '${size.result}`;
     errors.push(`${`option result '${size.result}`}' is not in valid formats: ${obj2.join(" | ")}`);
   }
@@ -121,13 +121,12 @@ function captureRef(current, options) {
     }
     ({ errors, options } = validateOptions(options));
     const tmp23 = validateOptions(options);
-    return tmp(16505).captureRef(tmp15, options);
+    return ViewShot(16505).captureRef(tmp15, options);
   } else {
     const _Error = Error;
     const error2 = new Error("react-native-view-shot: NativeModules.RNViewShot is undefined. Make sure the library is linked on the native side.");
     throw error2;
   }
-  tmp = ViewShot;
 }
 function releaseCapture(str) {
   if (typeof str === "string") {
@@ -197,12 +196,12 @@ class ViewShot {
     });
     tmp3Result.onCapture = (lastCapturedURI) => {
       if (closure_0.root) {
-        if (tmp.lastCapturedURI) {
+        if (closure_0.lastCapturedURI) {
           const _setTimeout = setTimeout;
-          const timerId = setTimeout(releaseCapture, 500, tmp.lastCapturedURI);
+          const timerId = setTimeout(releaseCapture, 500, closure_0.lastCapturedURI);
         }
-        tmp.lastCapturedURI = lastCapturedURI;
-        const onCapture = tmp.props.onCapture;
+        closure_0.lastCapturedURI = lastCapturedURI;
+        const onCapture = closure_0.props.onCapture;
         if (onCapture) {
           onCapture(lastCapturedURI);
         }
@@ -299,11 +298,10 @@ export const captureScreen = function captureScreen(options) {
   if (ViewShot(16505)) {
     ({ errors, options } = validateOptions(options));
     const tmp10 = validateOptions(options);
-    return tmp(16505).captureScreen(options);
+    return ViewShot(16505).captureScreen(options);
   } else {
     const _Error = Error;
     const error = new Error("react-native-view-shot: NativeModules.RNViewShot is undefined. Make sure the library is linked on the native side.");
     throw error;
   }
-  tmp = ViewShot;
 };

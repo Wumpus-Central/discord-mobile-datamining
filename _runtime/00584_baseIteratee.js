@@ -15,11 +15,10 @@ export default function baseIteratee(fn) {
     if (_mod514(tmp)) {
       tmp2 = tmp2(585);
       [tmp3, tmp] = tmp;
-      let tmp2Result = tmp2(tmp3, tmp);
+      let tmp2Result = tmp2(dependencyMap, tmp);
     } else {
       tmp2Result = tmp2(662)(tmp);
     }
-    tmp3 = dependencyMap;
   } else {
     const tmp8 = property(tmp);
   }

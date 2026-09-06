@@ -9,7 +9,7 @@ require = arg1;
 const dependencyMap = arg6;
 let closure_2 = {};
 
-export const useManualGesture = function useManualGesture(gestureHandlerProps) {
+export const useManualGesture = function useManualGesture() {
   let tmp = gestureHandlerProps;
   if (gestureHandlerProps === undefined) {
     tmp = closure_2;

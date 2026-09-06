@@ -198,3 +198,21 @@ obj = {
   week: { dow: 1, doy: 7 }
 };
 moment.defineLocale("bg", obj);
+const obj1 = {
+  sameDay: "[\u0414\u043D\u0435\u0441 \u0432] LT",
+  nextDay: "[\u0423\u0442\u0440\u0435 \u0432] LT",
+  nextWeek: "dddd [\u0432] LT",
+  lastDay: "[\u0412\u0447\u0435\u0440\u0430 \u0432] LT",
+  lastWeek() {
+    const dayResult = this.day();
+    if (0 !== dayResult) {
+      if (3 !== dayResult) {
+        if (6 !== dayResult) {
+          return "[\u041C\u0438\u043D\u0430\u043B\u0438\u044F] dddd [\u0432] LT";
+        }
+      }
+    }
+    return "[\u041C\u0438\u043D\u0430\u043B\u0430\u0442\u0430] dddd [\u0432] LT";
+  },
+  sameElse: "L"
+};

@@ -107,41 +107,41 @@ const entry = {
     obj.onPress = function onPress(arg0) {
       if (null != self._hideTimeout) {
         const _clearTimeout = clearTimeout;
-        clearTimeout(obj._hideTimeout);
+        clearTimeout(self._hideTimeout);
       }
       if (!TouchableHighlightImpl(273).isTV) {
-        obj._showUnderlay();
-        let num = obj.props.delayPressOut;
+        self._showUnderlay();
+        let num = self.props.delayPressOut;
         if (num == null) {
           num = 0;
         }
-        obj._hideTimeout = setTimeout(() => {
+        self._hideTimeout = setTimeout(() => {
           self._hideUnderlay();
         }, num);
       }
       if (null != self.props.onPress) {
-        const props = obj.props;
+        const props = self.props;
         props.onPress(arg0);
       }
     };
     obj.onPressIn = function onPressIn(arg0) {
       if (null != self._hideTimeout) {
         const _clearTimeout = clearTimeout;
-        clearTimeout(obj._hideTimeout);
-        obj._hideTimeout = null;
+        clearTimeout(self._hideTimeout);
+        self._hideTimeout = null;
       }
       self._showUnderlay();
       if (null != self.props.onPressIn) {
-        const props = obj.props;
+        const props = self.props;
         props.onPressIn(arg0);
       }
     };
     obj.onPressOut = function onPressOut(arg0) {
       if (null == self._hideTimeout) {
-        obj._hideUnderlay();
+        self._hideUnderlay();
       }
       if (null != self.props.onPressOut) {
-        const props = obj.props;
+        const props = self.props;
         props.onPressOut(arg0);
       }
     };
@@ -277,7 +277,6 @@ let items = [
       }
       obj = { accessible: false !== self.props.accessible, accessibilityLabel, accessibilityHint: self.props.accessibilityHint, accessibilityLanguage: self.props.accessibilityLanguage, accessibilityRole: self.props.accessibilityRole, accessibilityState, accessibilityValue: range, accessibilityActions: self.props.accessibilityActions, onAccessibilityAction: self.props.onAccessibilityAction, importantForAccessibility: null, accessibilityViewIsModal: null, accessibilityLiveRegion: null, accessibilityElementsHidden: null, style: null, onLayout: null, hitSlop: null, hasTVPreferredFocus: null, nextFocusDown: null, nextFocusForward: null, nextFocusLeft: null, nextFocusRight: null, nextFocusUp: null, focusable: null, nativeID: null, testID: null, ref: null };
       let str2 = "no-hide-descendants";
-      const tmp14 = closure_1_10;
       const tmp3 = _objectWithoutProperties(eventHandlers, closure_2);
       if (true !== self.props["aria-hidden"]) {
         str2 = self.props.importantForAccessibility;
@@ -294,7 +293,7 @@ let items = [
         accessibilityElementsHidden = self.props.accessibilityElementsHidden;
       }
       obj.accessibilityElementsHidden = accessibilityElementsHidden;
-      let tmp15Result = tmp15(254);
+      let tmp15Result = TouchableHighlightImpl(254);
       const extraStyles = self.state.extraStyles;
       let underlay;
       if (extraStyles != null) {
@@ -318,7 +317,7 @@ let items = [
       obj.testID = self.props.testID;
       obj.ref = self.props.hostRef;
       const merged1 = Object.assign(tmp3);
-      tmp15Result = tmp15(254);
+      tmp15Result = TouchableHighlightImpl(254);
       const extraStyles2 = self.state.extraStyles;
       let child;
       if (extraStyles2 != null) {
@@ -327,7 +326,7 @@ let items = [
       obj = { style: tmp15Result.compose(onlyResult.props.style, child) };
       const items = [cloneElement(onlyResult, obj), null];
       obj.children = items;
-      return tmp14(TouchableHighlightImpl(108), obj);
+      return closure_1_10(TouchableHighlightImpl(108), obj);
     }
   },
   {

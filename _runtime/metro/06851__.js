@@ -23,7 +23,7 @@ try {
     const items = [focusHook, scrollEventsHandlersHook, enableFooterMarginAdjustment];
     const tmp = _objectWithoutProperties(focusHook, enableFooterMarginAdjustment);
     let merged = Object.assign(tmp);
-    return <FlashList.FlashList ref={arg1} renderScrollComponent={closure_6(() => forwardRef((arg0, ref) => {
+    return <FlashList.FlashList ref={ref} renderScrollComponent={closure_6(() => forwardRef((arg0, ref) => {
       const merged = Object.assign(arg0, Object.assign({ data: 0 }));
       const obj = { ref };
       const merged1 = Object.assign(merged);

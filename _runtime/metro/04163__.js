@@ -115,7 +115,8 @@ const fn = function n(moment) {
     longDateFormat: { LT: "H:mm", LTS: "H:mm:ss", L: "YYYY.MM.DD.", LL: "YYYY. MMMM D.", LLL: "YYYY. MMMM D. H:mm", LLLL: "YYYY. MMMM D., dddd H:mm" },
     meridiemParse: /de|du/i,
     isPM(str) {
-      return "u" === str.charAt(1).toLowerCase();
+      str = str.charAt(1);
+      return "u" === str.toLowerCase();
     },
     meridiem(arg0, arg1, arg2) {
       if (arg0 < 12) {

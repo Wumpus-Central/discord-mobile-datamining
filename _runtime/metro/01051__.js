@@ -3,6 +3,8 @@
 // Module 1051
 import debugSymbolicatorIntegration from "debugSymbolicatorIntegration" /* 676 */;
 import _mod867 from "module_867" /* 867 */;
+import feedbackAsyncIntegration from "feedbackAsyncIntegration" /* 889 */;
+import reactNativeTracingIntegration from "reactNativeTracingIntegration" /* 1052 */;
 
 require = arg1;
 const dependencyMap = arg6;
@@ -15,18 +17,18 @@ export const getDefaultIntegrations = function getDefaultIntegrations(patchGloba
   if (notWebResult) {
     obj = { patchGlobalPromise: patchGlobalPromise.patchGlobalPromise };
     push(obj2.reactNativeErrorHandlersIntegration(obj));
-    let tmpResult = tmp(676);
+    let tmpResult = debugSymbolicatorIntegration;
     items.push(tmpResult.nativeLinkedErrorsIntegration());
   } else {
     push(obj2.browserApiErrorsIntegration());
-    tmpResult = tmp(676);
+    tmpResult = debugSymbolicatorIntegration;
     items.push(tmpResult.browserGlobalHandlersIntegration());
-    items.push(tmp(676).browserLinkedErrorsIntegration());
+    items.push(debugSymbolicatorIntegration.browserLinkedErrorsIntegration());
     if (patchGlobalPromise.enableAutoSessionTracking) {
-      items.push(tmp(889).browserSessionIntegration());
-      const tmpResult2 = tmp(889);
+      items.push(feedbackAsyncIntegration.browserSessionIntegration());
+      const tmpResult2 = feedbackAsyncIntegration;
     }
-    const tmpResult1 = tmp(676);
+    const tmpResult1 = debugSymbolicatorIntegration;
   }
   notWebResult = obj.notWeb();
   items.push(debugSymbolicatorIntegration.inboundFiltersIntegration());
@@ -49,32 +51,32 @@ export const getDefaultIntegrations = function getDefaultIntegrations(patchGloba
   const tmpResult11 = debugSymbolicatorIntegration;
   items.push(debugSymbolicatorIntegration.createReactNativeRewriteFrames());
   if (patchGlobalPromise.enableNative) {
-    items.push(tmp(676).deviceContextIntegration());
-    const tmpResult13 = tmp(676);
-    items.push(tmp(676).modulesLoaderIntegration());
+    items.push(debugSymbolicatorIntegration.deviceContextIntegration());
+    const tmpResult13 = debugSymbolicatorIntegration;
+    items.push(debugSymbolicatorIntegration.modulesLoaderIntegration());
     let enableLogs = patchGlobalPromise.enableLogs;
     if (enableLogs) {
       enableLogs = "native" !== patchGlobalPromise.logsOrigin;
     }
     if (enableLogs) {
-      items.push(tmp(676).logEnricherIntegration());
-      const tmpResult15 = tmp(676);
-      items.push(tmp(889).consoleLoggingIntegration());
-      const tmpResult16 = tmp(889);
+      items.push(debugSymbolicatorIntegration.logEnricherIntegration());
+      const tmpResult15 = debugSymbolicatorIntegration;
+      items.push(feedbackAsyncIntegration.consoleLoggingIntegration());
+      const tmpResult16 = feedbackAsyncIntegration;
     }
     if (patchGlobalPromise.attachScreenshot) {
-      items.push(tmp(676).screenshotIntegration());
-      const tmpResult17 = tmp(676);
+      items.push(debugSymbolicatorIntegration.screenshotIntegration());
+      const tmpResult17 = debugSymbolicatorIntegration;
     }
     if (patchGlobalPromise.attachViewHierarchy) {
-      items.push(tmp(676).viewHierarchyIntegration());
-      const tmpResult18 = tmp(676);
+      items.push(debugSymbolicatorIntegration.viewHierarchyIntegration());
+      const tmpResult18 = debugSymbolicatorIntegration;
     }
     if (typeof patchGlobalPromise.profilesSampleRate === "number") {
-      items.push(tmp(676).hermesProfilingIntegration());
-      const tmpResult19 = tmp(676);
+      items.push(debugSymbolicatorIntegration.hermesProfilingIntegration());
+      const tmpResult19 = debugSymbolicatorIntegration;
     }
-    const tmpResult14 = tmp(676);
+    const tmpResult14 = debugSymbolicatorIntegration;
   }
   const tracesSampleRate = patchGlobalPromise.tracesSampleRate;
   let tmp26 = typeof tracesSampleRate === "number";
@@ -89,8 +91,8 @@ export const getDefaultIntegrations = function getDefaultIntegrations(patchGloba
     enableNative = patchGlobalPromise.enableNative;
   }
   if (enableNative) {
-    items.push(tmp(676).appStartIntegration());
-    const tmpResult20 = tmp(676);
+    items.push(debugSymbolicatorIntegration.appStartIntegration());
+    const tmpResult20 = debugSymbolicatorIntegration;
   }
   const tmpResult12 = debugSymbolicatorIntegration;
   let enableNative2 = tmp26;
@@ -109,34 +111,34 @@ export const getDefaultIntegrations = function getDefaultIntegrations(patchGloba
     enableStallTracking = patchGlobalPromise.enableStallTracking;
   }
   if (enableStallTracking) {
-    items.push(tmp(676).stallTrackingIntegration());
-    const tmpResult22 = tmp(676);
+    items.push(debugSymbolicatorIntegration.stallTrackingIntegration());
+    const tmpResult22 = debugSymbolicatorIntegration;
   }
   let enableUserInteractionTracing = tmp26;
   if (tmp26) {
     enableUserInteractionTracing = patchGlobalPromise.enableUserInteractionTracing;
   }
   if (enableUserInteractionTracing) {
-    items.push(tmp(676).userInteractionIntegration());
-    const tmpResult23 = tmp(676);
+    items.push(debugSymbolicatorIntegration.userInteractionIntegration());
+    const tmpResult23 = debugSymbolicatorIntegration;
   }
   let enableAutoPerformanceTracing = tmp26;
   if (tmp26) {
     enableAutoPerformanceTracing = patchGlobalPromise.enableAutoPerformanceTracing;
   }
   if (enableAutoPerformanceTracing) {
-    items.push(tmp(676).appRegistryIntegration());
-    const tmpResult24 = tmp(676);
-    items.push(tmp(1052).reactNativeTracingIntegration());
-    const tmpResult25 = tmp(1052);
+    items.push(debugSymbolicatorIntegration.appRegistryIntegration());
+    const tmpResult24 = debugSymbolicatorIntegration;
+    items.push(reactNativeTracingIntegration.reactNativeTracingIntegration());
+    const tmpResult25 = reactNativeTracingIntegration;
   }
   if (tmp26) {
-    items.push(tmp(676).timeToDisplayIntegration());
-    const tmpResult26 = tmp(676);
+    items.push(debugSymbolicatorIntegration.timeToDisplayIntegration());
+    const tmpResult26 = debugSymbolicatorIntegration;
   }
   if (patchGlobalPromise.enableCaptureFailedRequests) {
-    items.push(tmp(676).httpClientIntegration());
-    const tmpResult27 = tmp(676);
+    items.push(debugSymbolicatorIntegration.httpClientIntegration());
+    const tmpResult27 = debugSymbolicatorIntegration;
   }
   const tmpResult21 = debugSymbolicatorIntegration;
   items.push(debugSymbolicatorIntegration.expoContextIntegration());
@@ -146,8 +148,8 @@ export const getDefaultIntegrations = function getDefaultIntegrations(patchGloba
       spotlight = patchGlobalPromise.spotlight;
     }
     obj = { sidecarUrl: spotlight };
-    items.push(tmp(676).spotlightIntegration(obj));
-    const tmpResult29 = tmp(676);
+    items.push(debugSymbolicatorIntegration.spotlightIntegration(obj));
+    const tmpResult29 = debugSymbolicatorIntegration;
   }
   const replaysOnErrorSampleRate = patchGlobalPromise.replaysOnErrorSampleRate;
   let notWebResult1 = typeof replaysOnErrorSampleRate === "number";
@@ -185,12 +187,12 @@ export const getDefaultIntegrations = function getDefaultIntegrations(patchGloba
     notWebResult1 = tmp40;
   }
   if (notWebResult1) {
-    notWebResult1 = tmp(867).notWeb();
-    const tmpResult30 = tmp(867);
+    notWebResult1 = _mod867.notWeb();
+    const tmpResult30 = _mod867;
   }
   if (notWebResult1) {
-    items.push(tmp(676).mobileReplayIntegration());
-    const tmpResult31 = tmp(676);
+    items.push(debugSymbolicatorIntegration.mobileReplayIntegration());
+    const tmpResult31 = debugSymbolicatorIntegration;
   }
   const tmpResult28 = debugSymbolicatorIntegration;
   items.push(debugSymbolicatorIntegration.primitiveTagIntegration());

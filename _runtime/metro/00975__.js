@@ -57,9 +57,9 @@ function processEvent(arg0, arg1, arg2) {
       c5 = 3;
     } else if (arg0 === 1) {
       c5 = 3;
-      throw arg1;
+      throw value;
     } else if (arg0 !== 2) {
-      closure_128_0 = arg1;
+      closure_128_0 = value;
       if (closure_128_0) {
         if (!closure_129_0.release) {
           const _HermesInternal = HermesInternal;
@@ -72,7 +72,7 @@ function processEvent(arg0, arg1, arg2) {
       }
       c3 = 0;
     }
-    return arg1;
+    return value;
   });
 }
 let fn = this;

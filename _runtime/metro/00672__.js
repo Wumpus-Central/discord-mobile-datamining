@@ -894,6 +894,7 @@ let fn = function n() {
             return "cmyk";
           }
         }
+        tmp6 = f107605[typeof call === "unknown" ? toString(arr2) : call(toString, arr2)] || "object";
       } else {
         throw new TypeError("Trying to call a non-function");
       }
@@ -994,11 +995,11 @@ let fn = function n() {
       if (typeof rnd === "function") {
         const _Math = Math;
         arr2[0] = Math.round(100 * tmp12) / 100;
-        if (typeof tmp11 === "function") {
+        if (typeof rnd === "function") {
           const _Math2 = Math;
           let num4 = 1;
           arr2[1] = `${Math.round(100 * tmp14) / 100}%`;
-          if (typeof tmp11 === "function") {
+          if (typeof rnd === "function") {
             const _Math3 = Math;
             arr2[2] = `${Math.round(100 * tmp15) / 100}%`;
             if ("hsla" === str) {
@@ -1076,7 +1077,8 @@ let fn = function n() {
   const re33 = /^hsla\(\s*(-?\d+(?:\.\d+)?),\s*(-?\d+(?:\.\d+)?)%\s*,\s*(-?\d+(?:\.\d+)?)%\s*,\s*([01]|[01]?\.\d+)\)$/;
   round = Math.round;
   function css2rgb$1(str) {
-    const str2 = str.toLowerCase().trim();
+    str = str.toLowerCase();
+    const str2 = str.trim();
     if (!obj.format.named) {
       const match = str2.match(re28);
       if (match) {
@@ -1459,6 +1461,7 @@ let fn = function n() {
             return "hcg";
           }
         }
+        tmp6 = f107605[typeof call === "unknown" ? toString(arr2) : call(toString, arr2)] || "object";
       } else {
         throw new TypeError("Trying to call a non-function");
       }
@@ -1730,7 +1733,7 @@ let fn = function n() {
         num11 = num10;
       }
       const items1 = [255 * num11, , , ];
-      if (typeof tmp30 === "function") {
+      if (typeof limit$2 === "function") {
         let num14 = tmp4 * diff2 * 3;
         let num15 = 0;
         if (num14 >= 0) {
@@ -1740,7 +1743,7 @@ let fn = function n() {
           num15 = num14;
         }
         items1[1] = 255 * num15;
-        if (typeof tmp30 === "function") {
+        if (typeof limit$2 === "function") {
           let num17 = tmp4 * diff3 * 3;
           let num18 = 0;
           if (num17 >= 0) {
@@ -1790,6 +1793,7 @@ let fn = function n() {
             return "hsi";
           }
         }
+        tmp6 = f107605[typeof call === "unknown" ? toString(arr2) : call(toString, arr2)] || "object";
       } else {
         throw new TypeError("Trying to call a non-function");
       }
@@ -1835,6 +1839,7 @@ let fn = function n() {
             return "hsl";
           }
         }
+        tmp6 = f107605[typeof call === "unknown" ? toString(arr2) : call(toString, arr2)] || "object";
       } else {
         throw new TypeError("Trying to call a non-function");
       }
@@ -1986,6 +1991,7 @@ let fn = function n() {
             return "hsv";
           }
         }
+        tmp6 = f107605[typeof call === "unknown" ? toString(arr2) : call(toString, arr2)] || "object";
       } else {
         throw new TypeError("Trying to call a non-function");
       }
@@ -2022,14 +2028,14 @@ let fn = function n() {
         } else {
           result1 = pow((result + 0.055) / 1.055, 2.4);
         }
-        if (typeof tmp8 === "function") {
+        if (typeof rgb_xyz === "function") {
           result2 = tmp6 / 255;
           if (result2 <= 0.04045) {
             result3 = result2 / 12.92;
           } else {
             result3 = pow((result2 + 0.055) / 1.055, 2.4);
           }
-          if (typeof tmp8 === "function") {
+          if (typeof rgb_xyz === "function") {
             const result4 = tmp7 / 255;
             if (result4 <= 0.04045) {
               let result5 = result4 / 12.92;
@@ -2038,26 +2044,26 @@ let fn = function n() {
             }
             const result6 = (0.4124564 * result1 + 0.3575761 * result3 + 0.1804375 * result5) / obj7.Xn;
             if (typeof xyz_lab === "function") {
-              if (result6 > tmp19.t3) {
+              if (result6 > obj7.t3) {
                 let sum = pow(result6, 0.3333333333333333);
               } else {
-                sum = result6 / tmp19.t2 + tmp19.t0;
+                sum = result6 / obj7.t2 + obj7.t0;
               }
               const items1 = [sum, , ];
-              const result7 = (0.2126729 * result1 + 0.7151522 * result3 + 0.072175 * result5) / tmp19.Yn;
-              if (typeof tmp18 === "function") {
-                if (result7 > tmp19.t3) {
+              const result7 = (0.2126729 * result1 + 0.7151522 * result3 + 0.072175 * result5) / obj7.Yn;
+              if (typeof xyz_lab === "function") {
+                if (result7 > obj7.t3) {
                   let sum1 = pow(result7, 0.3333333333333333);
                 } else {
-                  sum1 = result7 / tmp19.t2 + tmp19.t0;
+                  sum1 = result7 / obj7.t2 + obj7.t0;
                 }
                 items1[1] = sum1;
-                const result8 = (0.0193339 * result1 + 0.119192 * result3 + 0.9503041 * result5) / tmp19.Zn;
-                if (typeof tmp18 === "function") {
-                  if (result8 > tmp19.t3) {
+                const result8 = (0.0193339 * result1 + 0.119192 * result3 + 0.9503041 * result5) / obj7.Zn;
+                if (typeof xyz_lab === "function") {
+                  if (result8 > obj7.t3) {
                     let sum2 = pow(result8, 0.3333333333333333);
                   } else {
-                    sum2 = result8 / tmp19.t2 + tmp19.t0;
+                    sum2 = result8 / obj7.t2 + obj7.t0;
                   }
                   items1[2] = sum2;
                   const diff1 = 116 * tmp29 - 16;
@@ -2119,24 +2125,24 @@ let fn = function n() {
       diff1 = result - tmp5 / 200;
     }
     if (typeof lab_xyz === "function") {
-      if (result > tmp9.t1) {
+      if (result > obj7.t1) {
         result1 = result * result * result;
       } else {
-        result1 = tmp9.t2 * (result - tmp9.t0);
+        result1 = obj7.t2 * (result - obj7.t0);
       }
       result2 = tmp10 * result1;
-      if (typeof tmp11 === "function") {
-        if (sum > tmp9.t1) {
+      if (typeof lab_xyz === "function") {
+        if (sum > obj7.t1) {
           result3 = sum * sum * sum;
         } else {
-          result3 = tmp9.t2 * (sum - tmp9.t0);
+          result3 = obj7.t2 * (sum - obj7.t0);
         }
         const result4 = tmp14 * result3;
-        if (typeof tmp11 === "function") {
-          if (diff1 > tmp9.t1) {
+        if (typeof lab_xyz === "function") {
+          if (diff1 > obj7.t1) {
             let result5 = diff1 * diff1 * diff1;
           } else {
-            result5 = tmp9.t2 * (diff1 - tmp9.t0);
+            result5 = obj7.t2 * (diff1 - obj7.t0);
           }
           const result6 = tmp17 * result5;
           if (typeof xyz_rgb === "function") {
@@ -2147,7 +2153,7 @@ let fn = function n() {
               result7 = 1.055 * pow(diff2, 0.4166666666666667) - 0.055;
             }
             const items1 = [255 * result7, , , ];
-            if (typeof tmp20 === "function") {
+            if (typeof xyz_rgb === "function") {
               const sum1 = -0.969266 * result4 + 1.8760108 * result2 + 0.041556 * result6;
               if (sum1 <= 0.00304) {
                 let result8 = 12.92 * sum1;
@@ -2155,7 +2161,7 @@ let fn = function n() {
                 result8 = 1.055 * pow(sum1, 0.4166666666666667) - 0.055;
               }
               items1[1] = 255 * result8;
-              if (typeof tmp20 === "function") {
+              if (typeof xyz_rgb === "function") {
                 const sum2 = 0.0556434 * result4 - 0.2040259 * result2 + 1.0572252 * result6;
                 if (sum2 <= 0.00304) {
                   let result9 = 12.92 * sum2;
@@ -2228,6 +2234,7 @@ let fn = function n() {
             return "lab";
           }
         }
+        tmp6 = f107605[typeof call === "unknown" ? toString(arr2) : call(toString, arr2)] || "object";
       } else {
         throw new TypeError("Trying to call a non-function");
       }
@@ -2389,13 +2396,13 @@ let fn = function n() {
           const call = toString.call;
           if ("array" === tmp7) {
             if (3 === arr2.length) {
-              return tmp4;
+              return closure_0;
             }
           }
+          tmp7 = f107605[typeof call === "unknown" ? toString(arr2) : call(toString, arr2)] || "object";
         } else {
           throw new TypeError("Trying to call a non-function");
         }
-        tmp4 = closure_0;
       }
     };
     return autodetect.push(obj);
@@ -2584,7 +2591,7 @@ let fn = function n() {
               if (typeof tmp4 === "function") {
                 const _Object2 = Object;
                 const call2 = toString2.call;
-                const tmp9 = tmp5[typeof call2 === "unknown" ? toString2(tmp8) : call2(toString2, tmp8)] || "object";
+                const tmp9 = f107605[typeof call2 === "unknown" ? toString2(tmp8) : call2(toString2, tmp8)] || "object";
               } else {
                 throw new TypeError("Trying to call a non-function");
               }
@@ -2592,6 +2599,7 @@ let fn = function n() {
           }
           return "rgb";
         }
+        tmp7 = f107605[typeof call === "unknown" ? toString(arr2) : call(toString, arr2)] || "object";
       } else {
         throw new TypeError("Trying to call a non-function");
       }
@@ -2777,7 +2785,7 @@ let fn = function n() {
     const sum = 4.0767416621 * tmp8 - 3.3077115913 * tmp9 + 0.2309699292 * tmp10;
     const absolute = Math.abs(sum);
     if (absolute > 0.0031308) {
-      result = (sign(sum) || 1) * (1.055 * tmp7(absolute, 0.4166666666666667) - 0.055);
+      result = (sign(sum) || 1) * (1.055 * pow(absolute, 0.4166666666666667) - 0.055);
       const tmp15 = sign(sum) || 1;
     } else {
       result = 12.92 * sum;
@@ -2786,7 +2794,7 @@ let fn = function n() {
     const diff1 = -1.2684380046 * tmp8 + 2.6097574011 * tmp9 - 0.3413193965 * tmp10;
     const absolute1 = Math.abs(diff1);
     if (absolute1 > 0.0031308) {
-      result1 = (sign(diff1) || 1) * (1.055 * tmp7(absolute1, 0.4166666666666667) - 0.055);
+      result1 = (sign(diff1) || 1) * (1.055 * pow(absolute1, 0.4166666666666667) - 0.055);
       const tmp20 = sign(diff1) || 1;
     } else {
       result1 = 12.92 * diff1;
@@ -2795,7 +2803,7 @@ let fn = function n() {
     const sum1 = -0.0041960863 * tmp8 - 0.7034186147 * tmp9 + 1.707614701 * tmp10;
     const absolute2 = Math.abs(sum1);
     if (absolute2 > 0.0031308) {
-      result2 = (sign(sum1) || 1) * (1.055 * tmp7(absolute2, 0.4166666666666667) - 0.055);
+      result2 = (sign(sum1) || 1) * (1.055 * pow(absolute2, 0.4166666666666667) - 0.055);
       const tmp25 = sign(sum1) || 1;
     } else {
       result2 = 12.92 * sum1;
@@ -2848,6 +2856,7 @@ let fn = function n() {
             return "oklab";
           }
         }
+        tmp6 = f107605[typeof call === "unknown" ? toString(arr2) : call(toString, arr2)] || "object";
       } else {
         throw new TypeError("Trying to call a non-function");
       }
@@ -2931,6 +2940,7 @@ let fn = function n() {
             return "oklch";
           }
         }
+        tmp6 = f107605[typeof call === "unknown" ? toString(arr2) : call(toString, arr2)] || "object";
       } else {
         throw new TypeError("Trying to call a non-function");
       }
@@ -2947,14 +2957,14 @@ let fn = function n() {
       } else {
         result1 = pow((result + 0.055) / 1.055, 2.4);
       }
-      if (typeof tmp === "function") {
+      if (typeof luminance_x === "function") {
         result2 = arg1 / 255;
         if (result2 <= 0.03928) {
           result3 = result2 / 12.92;
         } else {
           result3 = pow((result2 + 0.055) / 1.055, 2.4);
         }
-        if (typeof tmp === "function") {
+        if (typeof luminance_x === "function") {
           const result4 = arg2 / 255;
           if (result4 <= 0.03928) {
             let result5 = result4 / 12.92;
@@ -2995,7 +3005,7 @@ let fn = function n() {
     let first = items[0] || "lrgb";
     if (!tmp6) {
       const _Object = Object;
-      first = Object.keys(tmp5)[0];
+      first = Object.keys(obj14)[0];
     }
     if (obj14[first]) {
       if (typeof type$p === "function") {
@@ -3012,8 +3022,8 @@ let fn = function n() {
           if ("object" !== tmp21) {
             obj2 = Color(arg1);
           }
-          tmp21 = tmp15[typeof call2 === "unknown" ? toString2(arg1) : call2(toString2, arg1)] || "object";
-          const obj3 = tmp5[first](obj, obj2, num);
+          tmp21 = f107605[typeof call2 === "unknown" ? toString2(arg1) : call2(toString2, arg1)] || "object";
+          const obj3 = obj14[first](obj, obj2, num);
           const alphaResult = obj.alpha();
           return obj3.alpha(alphaResult + num * (obj2.alpha() - obj.alpha()));
         } else {
@@ -3293,14 +3303,14 @@ let fn = function n() {
     function tMapDomain(arg0) {
       return arg0;
     }
-    function getColor(arg0, arg1) {
+    function getColor(sum1, arg1) {
       flag = arg1;
       if (null == arg1) {
         flag = false;
       }
-      if (!isNaN(arg0)) {
-        if (null !== arg0) {
-          result = arg0;
+      if (!isNaN(sum1)) {
+        if (null !== sum1) {
+          result = sum1;
           if (!flag) {
             if (items) {
               if (items.length > 2) {
@@ -3311,13 +3321,13 @@ let fn = function n() {
                   if (0 < diff) {
                     let num7 = 0;
                     num6 = 0;
-                    if (arg0 >= items[0]) {
+                    if (sum1 >= items[0]) {
                       const sum = num7 + 1;
                       num6 = sum;
                       while (sum < diff) {
                         num7 = sum;
                         num6 = sum;
-                        if (arg0 < items[sum]) {
+                        if (sum1 < items[sum]) {
                           break;
                         }
                       }
@@ -3330,7 +3340,7 @@ let fn = function n() {
             }
             let num2 = 1;
             if (c11 !== c10) {
-              num2 = (arg0 - c10) / (c11 - c10);
+              num2 = (sum1 - c10) / (c11 - c10);
             }
             result = num2;
           }
@@ -3367,7 +3377,7 @@ let fn = function n() {
                     }
                   }
                   if (bound > tmp35) {
-                    let sum1 = num11 + 1;
+                    sum1 = num11 + 1;
                     if (bound < closure_5[sum1]) {
                       interpolateResult = chroma$k.interpolate(substr[num11], substr[sum1], (bound - tmp35) / (closure_5[sum1] - tmp35), closure_1);
                     }
@@ -3383,7 +3393,7 @@ let fn = function n() {
               if ("function" === tmp31) {
                 interpolateResult = substr(bound);
               }
-              tmp31 = tmp28[typeof call2 === "unknown" ? toString2(tmp30) : call2(toString2, tmp30)] || "object";
+              tmp31 = f107605[typeof call2 === "unknown" ? toString2(substr) : call2(toString2, substr)] || "object";
             } else {
               throw new TypeError("Trying to call a non-function");
             }
@@ -3392,7 +3402,7 @@ let fn = function n() {
               dependencyMap[rounded] = interpolateResult;
               tmp51 = interpolateResult;
             }
-            tmp29 = f107605[typeof call === "unknown" ? toString(tmp27) : call(toString, tmp27)] || "object";
+            tmp29 = f107605[typeof call === "unknown" ? toString(substr) : call(toString, substr)] || "object";
           } else {
             throw new TypeError("Trying to call a non-function");
           }
@@ -3404,8 +3414,8 @@ let fn = function n() {
 
     }
     setColors(closure_0);
-    fn = function f(arg0) {
-      const tmp = chroma$k(getColor(arg0));
+    fn = function f(sum1) {
+      const tmp = chroma$k(getColor(sum1));
       let tmp2 = tmp;
       if (closure_9) {
         tmp2 = tmp;
@@ -3430,10 +3440,9 @@ let fn = function n() {
               ({ min: arr[0], max: arr[1] } = analyzeResult);
               let limitsResult = items1;
             } else {
-              limitsResult = obj.limits(analyzeResult, "e", arg0);
+              limitsResult = chroma$k.limits(analyzeResult, "e", arg0);
             }
             closure_7 = limitsResult;
-            obj = chroma$k;
           }
           return fn;
         } else {
@@ -3540,20 +3549,20 @@ let fn = function n() {
       if (typeof resetCache === "function") {
         closure_13 = {};
         if (flag) {
-          fn = (arg0) => {
+          fn = (sum1) => {
             const first = getColor(0, true).lab()[0];
             obj = getColor(0, true);
             const first1 = getColor(1, true).lab()[0];
             const obj2 = getColor(1, true);
             const tmp3 = first > first1;
-            const sum = first + (first1 - first) * arg0;
-            const diff = getColor(arg0, true).lab()[0] - sum;
+            const sum = first + (first1 - first) * sum1;
+            const diff = getColor(sum1, true).lab()[0] - sum;
             let num = 19;
             let num2 = 1;
             let num3 = 0;
             let tmp6 = diff;
-            let tmp7 = arg0;
-            let tmp8 = arg0;
+            let tmp7 = sum1;
+            let tmp8 = sum1;
             if (Math.abs(diff) > 0.01) {
               while (true) {
                 let tmp11 = num3;
@@ -3563,7 +3572,7 @@ let fn = function n() {
                   result = tmp6 * -1;
                 }
                 if (result < 0) {
-                  let sum1 = tmp7 + 0.5 * (num2 - tmp7);
+                  sum1 = tmp7 + 0.5 * (num2 - tmp7);
                   let tmp16 = num2;
                   tmp11 = tmp7;
                 } else {
@@ -3748,13 +3757,12 @@ let fn = function n() {
   }
   function blend(arg0, arg1, arg2) {
     if (blend[arg2]) {
-      return tmp[arg2](arg0, arg1);
+      return blend[arg2](arg0, arg1);
     } else {
       const _Error = Error;
       const error = new Error("unknown blend mode " + arg2);
       throw error;
     }
-    tmp = blend;
   }
   closure_129_0 = (arg0) => arg0;
   f107605 = (arg0, arg1) => {
@@ -3900,7 +3908,7 @@ let fn = function n() {
         }
         let tmp7 = item;
         if (tmp2) {
-          tmp7 = item[tmp];
+          tmp7 = item[c0];
         }
         let isNaNResult = null == tmp7;
         if (!isNaNResult) {
@@ -3912,10 +3920,10 @@ let fn = function n() {
           values.push(tmp7);
           range.sum = range.sum + tmp7;
           if (tmp7 < range.min) {
-            tmp10.min = tmp7;
+            range.min = tmp7;
           }
           if (tmp7 > range.max) {
-            tmp10.max = tmp7;
+            range.max = tmp7;
           }
           range.count = range.count + 1;
         }
@@ -4213,14 +4221,13 @@ let fn = function n() {
           do {
             let _isNaN = isNaN;
             if (!isNaN(value[num])) {
-              let tmp4 = mapped;
               items1[num] = items1[num] + mapped[index + 1];
               if ("h" === lrgb.charAt(num)) {
                 result = value[num] / 180 * PI;
-                closure_5 = closure_5 + cos(result) * tmp4[index + 1];
-                closure_6 = closure_6 + sin(result) * tmp4[index + 1];
+                closure_5 = closure_5 + cos(result) * mapped[index + 1];
+                closure_6 = closure_6 + sin(result) * mapped[index + 1];
               } else {
-                value[num] = value[num] + value[num] * tmp4[index + 1];
+                value[num] = value[num] + value[num] * mapped[index + 1];
               }
             }
             num = num + 1;
@@ -4532,30 +4539,31 @@ let fn = function n() {
     } else {
       result9 = (sum1 + sum2) / 2;
     }
-    const result10 = 0.17 * cos(2 * tmp26 * (result9 - 30) / 360);
-    const result11 = 0.24 * cos(2 * tmp26 * (2 * result9) / 360);
-    const result12 = 0.32 * cos(2 * tmp26 * (3 * result9 + 6) / 360);
+    const result10 = 0.17 * cos(2 * PI * (result9 - 30) / 360);
+    const result11 = 0.24 * cos(2 * PI * (2 * result9) / 360);
+    const result12 = 0.32 * cos(2 * PI * (3 * result9 + 6) / 360);
     const diff = sum2 - sum1;
-    const result13 = 0.2 * cos(2 * tmp26 * (4 * result9 - 63) / 360);
+    const result13 = 0.2 * cos(2 * PI * (4 * result9 - 63) / 360);
     if (abs(diff) <= 180) {
       const diff1 = 1 - result10 + result11 + result12 - result13;
-      const result14 = 2 * tmp10(tmp22 * tmp24);
-      const result15 = result14 * sin(2 * tmp26 * diff / 360 / 2);
+      const result14 = 2 * sqrt(tmp22 * tmp24);
+      const result15 = result14 * sin(2 * PI * diff / 360 / 2);
       const diff2 = tmp24 - tmp22;
       const diff3 = result - 50;
       const diff4 = tmp6 - tmp2;
-      const result16 = 0.015 * tmp11(diff3, 2);
+      const result16 = 0.015 * pow(diff3, 2);
       const sum3 = 1 + 0.045 * result4;
       const sum4 = 1 + 0.015 * result4 * diff1;
-      const result17 = result16 / tmp10(20 + tmp11(diff3, 2));
-      const result18 = 30 * exp(-tmp11((result9 - 275) / 25, 2));
-      tmp11(result4, 7);
-      const tmp11Result = tmp11(result4, 7);
-      const result19 = -2 * tmp10(tmp11Result / (tmp11Result + tmp11(25, 7)));
-      const result20 = result19 * sin(2 * (2 * tmp26 * result18 / 360));
-      const sum5 = tmp11(diff4 / (num * (1 + result17)), 2) + tmp11(diff2 / (num2 * sum3), 2);
-      return max(0, min(100, tmp10(sum5 + tmp11(result15 / (num3 * sum4), 2) + result20 * (diff2 / (num2 * sum3)) * (result15 / (num3 * sum4)))));
+      const result17 = result16 / sqrt(20 + pow(diff3, 2));
+      const result18 = 30 * exp(-pow((result9 - 275) / 25, 2));
+      pow(result4, 7);
+      const tmp11Result = pow(result4, 7);
+      const result19 = -2 * sqrt(tmp11Result / (tmp11Result + pow(25, 7)));
+      const result20 = result19 * sin(2 * (2 * PI * result18 / 360));
+      const sum5 = pow(diff4 / (num * (1 + result17)), 2) + pow(diff2 / (num2 * sum3), 2);
+      return max(0, min(100, sqrt(sum5 + pow(result15 / (num3 * sum4), 2) + result20 * (diff2 / (num2 * sum3)) * (result15 / (num3 * sum4)))));
     }
+    const tmp23 = pow(result3, 2);
   };
   chroma$k.distance = (arg0, arg1, arg2) => {
     let str = arg2;

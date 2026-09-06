@@ -33,12 +33,12 @@ export const startIdleSpan = function startIdleSpan(arg0) {
     let spanToJSONResult = closure_0(map[4]).spanToJSON(c12);
     if (spanToJSONResult.start_timestamp) {
       if (!tmp7[tmp3(undefined, tmp4[7]).SEMANTIC_ATTRIBUTE_SENTRY_IDLE_SPAN_FINISH_REASON]) {
-        const attr = obj3.setAttribute(tmp3(tmp4[7]).SEMANTIC_ATTRIBUTE_SENTRY_IDLE_SPAN_FINISH_REASON, heartbeatFailed);
+        const attr = c12.setAttribute(tmp3(tmp4[7]).SEMANTIC_ATTRIBUTE_SENTRY_IDLE_SPAN_FINISH_REASON, heartbeatFailed);
       }
       let logger = tmp3(tmp4[8]).logger;
       const _HermesInternal = HermesInternal;
       logger.log("[Tracing] Idle span \"" + spanToJSONResult.op + "\" finished");
-      const spanDescendants = tmp3(tmp4[4]).getSpanDescendants(obj3);
+      const spanDescendants = tmp3(tmp4[4]).getSpanDescendants(c12);
       const found = spanDescendants.filter((item) => item !== _undefined);
       const item1 = found.forEach((isRecording) => {
         if (isRecording.isRecording()) {
@@ -85,11 +85,12 @@ export const startIdleSpan = function startIdleSpan(arg0) {
         }
       });
       if (0 > 0) {
-        const attr1 = obj3.setAttribute("sentry.idle_span_discarded_spans", map);
+        const attr1 = c12.setAttribute("sentry.idle_span_discarded_spans", map);
       }
       const tmp3Result = tmp3(tmp4[4]);
       tmp7 = spanToJSONResult.data || {};
     }
+    let obj2 = closure_0(map[4]);
   }
   const map = new Map();
   c2 = false;
@@ -152,7 +153,7 @@ export const startIdleSpan = function startIdleSpan(arg0) {
                   const _Math2 = Math;
                   num2 = HermesBuiltin.apply(items, Math);
                 }
-                let num4 = spanTimeInputToSeconds.spanToJSON(tmp11).start_timestamp;
+                let num4 = spanTimeInputToSeconds.spanToJSON(c12).start_timestamp;
                 let num6 = Infinity;
                 if (num4) {
                   num6 = num4 + finalTimeout / 1000;
@@ -176,7 +177,6 @@ export const startIdleSpan = function startIdleSpan(arg0) {
                 HermesBuiltin.arraySpread(substr, 1);
                 return Reflect.apply(arg0, arg1, items2);
               }
-              tmp11 = c12;
             }
       };
       const proxy = new Proxy(startInactiveSpanResult.end, obj);
@@ -220,7 +220,7 @@ export const startIdleSpan = function startIdleSpan(arg0) {
         if (!c2) {
           const spanId = spanContext.spanContext().spanId;
           if (map.has(spanId)) {
-            obj.delete(spanId);
+            map.delete(spanId);
           }
           if (0 === map.size) {
             timeout = timeout(map[5]).timestampInSeconds() + idleTimeout / 1000;

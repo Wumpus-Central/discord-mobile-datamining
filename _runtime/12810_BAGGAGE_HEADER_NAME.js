@@ -2,6 +2,7 @@
 
 // Module 12810 (BAGGAGE_HEADER_NAME)
 import _mod12796 from "module_12796" /* 12796 */;
+import _mod12797 from "module_12797" /* 12797 */;
 import _mod12804 from "module_12804" /* 12804 */;
 
 require = arg1;
@@ -84,10 +85,10 @@ export const baggageHeaderToDynamicSamplingContext = function baggageHeaderToDyn
     return tmp10;
   }
 };
-export const dynamicSamplingContextToSentryBaggageHeader = function dynamicSamplingContextToSentryBaggageHeader(arg0) {
-  if (arg0) {
+export const dynamicSamplingContextToSentryBaggageHeader = function dynamicSamplingContextToSentryBaggageHeader(dynamicSamplingContextFromSpan) {
+  if (dynamicSamplingContextFromSpan) {
     const _Object = Object;
-    const entries = Object.entries(arg0);
+    const entries = Object.entries(dynamicSamplingContextFromSpan);
     const reduced = entries.reduce((acc, item) => {
       [tmp, tmp2] = item;
       if (tmp2) {
@@ -112,13 +113,11 @@ export const dynamicSamplingContextToSentryBaggageHeader = function dynamicSampl
         if (combined1.length > closure_1_4) {
           combined1 = acc;
           if (_mod12796.DEBUG_BUILD) {
-            const logger = tmp5(tmp6[2]).logger;
+            const logger = _mod12797.logger;
             const _HermesInternal2 = HermesInternal;
             logger.warn("Not adding key: " + tmp + " with val: " + tmp2 + " to baggage header due to exceeding baggage size limits.");
             combined1 = acc;
           }
-          tmp5 = require;
-          tmp6 = dependencyMap;
         }
         return combined1;
       }, "");

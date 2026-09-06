@@ -2,14 +2,15 @@
 
 // Module 264
 import _modAll46 from "module_46" /* 46 */;
+import nullthrowsDefault from "nullthrows" /* 70 */;
 import _mod136 from "module_136" /* 136 */;
 import NativeIntersectionObserverCxxDefault from "NativeIntersectionObserverCxx" /* 265 */;
 import IntersectionObserverEntry from "IntersectionObserverEntry" /* 266 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = arg1;
-function getTargetFromInstanceHandle(arg0) {
-  return weakMap.get(arg0);
+function getTargetFromInstanceHandle(targetInstanceHandle) {
+  return weakMap.get(targetInstanceHandle);
 }
 function notifyIntersectionObservers() {
   _modAll46.beginEvent("IntersectionObserverManager.notifyIntersectionObservers");
@@ -61,9 +62,11 @@ function notifyIntersectionObservers() {
             obj2.return();
           }
         }
+        const tmpResult = NativeIntersectionObserverCxxDefault;
       }
     })();
     _modAll46.endEvent();
+    const tmp4Result = _modAll46;
   } catch (tmp9) {
     tmp3(tmp[4]).endEvent();
     throw tmp9;
@@ -84,8 +87,8 @@ export const registerObserver = function registerObserver(observer, callback) {
   const result = map.set(closure_5, { observer, callback });
   return closure_5;
 };
-export const unregisterObserver = function unregisterObserver(arg0) {
-  let deleteResult = map.delete(arg0);
+export const unregisterObserver = function unregisterObserver(_intersectionObserverId) {
+  let deleteResult = map.delete(_intersectionObserverId);
   if (deleteResult) {
     deleteResult = 0 === map.size;
   }
@@ -115,7 +118,7 @@ export const observe = function observe(arg0) {
       if (null == nativeNodeReference) {
         return false;
       } else {
-        let tmp25Result = tmp25(136);
+        let tmp25Result = _mod136;
         const instanceHandle = tmp25Result.getInstanceHandle(target);
         if (null == instanceHandle) {
           const _console2 = console;
@@ -124,7 +127,7 @@ export const observe = function observe(arg0) {
         } else {
           let nativeNodeReference1 = null;
           if (null != root) {
-            tmp25Result = tmp25(136);
+            tmp25Result = _mod136;
             nativeNodeReference1 = tmp25Result.getNativeNodeReference(root);
           }
           if (null != root) {
@@ -136,26 +139,26 @@ export const observe = function observe(arg0) {
           }
           const result = weakMap.set(instanceHandle, target);
           if (!c6) {
-            let tmpResult = tmp(265);
+            let tmpResult = NativeIntersectionObserverCxxDefault;
             tmpResult.connect(notifyIntersectionObservers);
             c6 = true;
           }
-          tmpResult = tmp(70);
+          tmpResult = nullthrowsDefault;
           const obj = { intersectionObserverId, rootShadowNode: nativeNodeReference1, targetShadowNode: nativeNodeReference, thresholds: value.observer.thresholds, rootThresholds: value.observer.rnRootThresholds, rootMargin: value.observer.rootMargin };
-          const result1 = weakMap1.set(target, tmpResult(tmp(265).observeV2)(obj));
+          const result1 = weakMap1.set(target, tmpResult(NativeIntersectionObserverCxxDefault.observeV2)(obj));
           return true;
         }
       }
     }
   }
 };
-export const unobserve = function unobserve(arg0, arg1) {
+export const unobserve = function unobserve(_intersectionObserverId, arg1) {
   if (null != NativeIntersectionObserverCxxDefault) {
-    if (null != map.get(arg0)) {
+    if (null != map.get(_intersectionObserverId)) {
       value = weakMap1.get(arg1);
       if (null != value) {
-        tmp(70)(tmp(265).unobserveV2)(arg0, value);
-        const tmpResult = tmp(70);
+        nullthrowsDefault(NativeIntersectionObserverCxxDefault.unobserveV2)(_intersectionObserverId, value);
+        const tmpResult = nullthrowsDefault;
       } else {
         const _console2 = console;
         console.error("IntersectionObserverManager: could not find registration data for target");
@@ -163,7 +166,7 @@ export const unobserve = function unobserve(arg0, arg1) {
     } else {
       const _console = console;
       const _HermesInternal = HermesInternal;
-      console.error("IntersectionObserverManager: could not stop observing target because IntersectionObserver with ID " + arg0 + " was not registered.");
+      console.error("IntersectionObserverManager: could not stop observing target because IntersectionObserver with ID " + _intersectionObserverId + " was not registered.");
     }
   } else {
     const _Error = Error;

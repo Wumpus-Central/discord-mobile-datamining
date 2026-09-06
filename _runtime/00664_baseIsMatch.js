@@ -1,10 +1,11 @@
 // === Module 664: baseIsMatch ===
 
 // Module 664 (baseIsMatch)
+import baseIsEqual from "baseIsEqual" /* 632 */;
 import Stack from "Stack" /* 639 */;
 
 
-export default function baseIsMatch(arg0, arg1, arg2, fn) {
+export default function baseIsMatch(arg0, resizeMode, arg2, fn) {
   if (null == arg0) {
     return !length;
   } else {
@@ -52,17 +53,16 @@ export default function baseIsMatch(arg0, arg1, arg2, fn) {
           sum = sum + 1;
           tmp8 = tmp15;
         }
-        let tmp16 = require;
         let tmp18 = new.target;
         let tmp19 = new.target;
         let tmp20 = new Stack();
         let tmp21 = tmp20;
         if (fn) {
-          tmp13 = fn(tmp11, tmp12, first, ObjectResult, arg1, tmp21);
+          tmp13 = fn(tmp11, tmp12, first, ObjectResult, resizeMode, tmp21);
         }
         let tmp28 = tmp13;
         if (undefined === tmp13) {
-          tmp28 = tmp16(632)(tmp12, tmp11, 3, fn, tmp21);
+          tmp28 = baseIsEqual(tmp12, tmp11, 3, fn, tmp21);
         }
         tmp15 = tmp13;
         if (!tmp28) {

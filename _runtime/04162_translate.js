@@ -390,3 +390,4 @@ obj = {
   week: { dow: 1, doy: 7 }
 };
 moment.defineLocale("hr", obj);
+const obj3 = { format: "sije\u010Dnja_velja\u010De_o\u017Eujka_travnja_svibnja_lipnja_srpnja_kolovoza_rujna_listopada_studenoga_prosinca".split("_"), standalone: "sije\u010Danj_velja\u010Da_o\u017Eujak_travanj_svibanj_lipanj_srpanj_kolovoz_rujan_listopad_studeni_prosinac".split("_") };

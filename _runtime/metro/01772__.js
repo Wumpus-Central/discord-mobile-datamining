@@ -150,18 +150,17 @@ function createProgressTransitionRegister() {
         map.delete(arg0);
       }
     },
-    onTransitionStart(arg0, arg1) {
+    onTransitionStart(arg0, value) {
       c4 = c5;
-      const result = map1.set(arg0, arg1);
+      const result = map1.set(arg0, value);
       set.add(arg0);
       obj.frame(0);
     },
     frame(arg0) {
       for (const item10008 of set) {
-        let tmp = item10008;
         value = map.get(item10008);
         if (value) {
-          let tmp4Result = tmp4(tmp, map1.get(tmp), arg0);
+          let tmp4Result = tmp4(item10008, map1.get(item10008), arg0);
         }
         continue;
       }
@@ -212,11 +211,10 @@ let module_1639 = fn(1639);
 if (module_1639.shouldBeUseWeb()) {
   function maybeThrowError() {
     if (!obj.isJest()) {
-      const reanimatedError = new tmp(1647).ReanimatedError("`ProgressTransitionRegister` is not available on non-native platform.");
+      const reanimatedError = new require("module_1647").ReanimatedError("`ProgressTransitionRegister` is not available on non-native platform.");
       throw reanimatedError;
     }
     obj = require("module_1639");
-    tmp = require;
   }
   const _Proxy = Proxy;
   let obj = {
@@ -226,11 +224,10 @@ if (module_1639.shouldBeUseWeb()) {
           if (obj.isJest()) {
             return false;
           } else {
-            const reanimatedError = new tmp(1647).ReanimatedError("`ProgressTransitionRegister` is not available on non-native platform.");
+            const reanimatedError = new require("module_1647").ReanimatedError("`ProgressTransitionRegister` is not available on non-native platform.");
             throw reanimatedError;
           }
           obj = require("module_1639");
-          tmp = require;
         } else {
           throw new TypeError("Trying to call a non-function");
         }
@@ -273,18 +270,17 @@ if (module_1639.shouldBeUseWeb()) {
               map.delete(arg0);
             }
           },
-        onTransitionStart(arg0, arg1) {
+        onTransitionStart(arg0, value) {
             c4 = c5;
-            const result = map1.set(arg0, arg1);
+            const result = map1.set(arg0, value);
             set.add(arg0);
             obj.frame(0);
           },
         frame(arg0) {
             for (const item10008 of set) {
-              let tmp = item10008;
               value = map.get(item10008);
               if (value) {
-                let tmp4Result = tmp4(tmp, map1.get(tmp), arg0);
+                let tmp4Result = tmp4(item10008, map1.get(item10008), arg0);
               }
               continue;
             }

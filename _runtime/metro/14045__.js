@@ -184,17 +184,13 @@ let items = [
               const mapped = parts.map((item) => {
                 if (typeof replaceCaret === "function") {
                   closure_0 = item;
-                  self(14019)("caret", item, tmp);
+                  self(14019)("caret", item, options);
                   const safeRe = self(14020).safeRe;
                   const t = self(14020).t;
-                  if (tmp.loose) {
+                  if (options.loose) {
                     let tmp6 = safeRe[t.CARETLOOSE];
                   } else {
                     tmp6 = safeRe[t.CARET];
-                  }
-                  let str2 = "";
-                  if (tmp.includePrerelease) {
-                    str2 = "-0";
                   }
                   return item.replace(tmp6, (arg0, str, str2, str3, arg4) => {
                     options(14019)("caret", closure_0, arg0, str, str2, str3, arg4);
@@ -208,7 +204,7 @@ let items = [
                       }
                       str3 = "";
                       if (!tmp5) {
-                        if (typeof tmp4 === "function") {
+                        if (typeof closure_2_9 === "function") {
                           let tmp6 = !str2;
                           if (str2) {
                             tmp6 = "x" === str2.toLowerCase();
@@ -219,7 +215,7 @@ let items = [
                           if (tmp6) {
                             const _HermesInternal9 = HermesInternal;
                             str3 = ">=" + str + ".0.0" + str2 + " <" + +str + 1 + ".0.0-0";
-                          } else if (typeof tmp4 === "function") {
+                          } else if (typeof closure_2_9 === "function") {
                             let tmp7 = !str3;
                             if (str3) {
                               tmp7 = "x" === str3.toLowerCase();
@@ -237,7 +233,7 @@ let items = [
                               }
                               str3 = combined;
                             } else {
-                              const tmpResult = tmp(14019);
+                              const tmpResult = options(14019);
                               if (arg4) {
                                 tmpResult("replaceCaret pr", arg4);
                                 if ("0" === str) {
@@ -275,7 +271,7 @@ let items = [
                           throw new TypeError("Trying to call a non-function");
                         }
                       }
-                      tmp(14019)("caret return", str3);
+                      options(14019)("caret return", str3);
                       return str3;
                     } else {
                       throw new TypeError("Trying to call a non-function");
@@ -286,7 +282,7 @@ let items = [
                 }
               });
               const str4 = mapped.join(" ");
-              tmp2(14019)("caret", str4);
+              Range(14019)("caret", str4);
               if (typeof replaceTildes === "function") {
                 const parts1 = str4.trim().split(/\s+/);
                 const mapped1 = parts1.map((item) => {
@@ -311,7 +307,7 @@ let items = [
                         }
                         str3 = "";
                         if (!tmp5) {
-                          if (typeof tmp4 === "function") {
+                          if (typeof closure_2_9 === "function") {
                             let tmp6 = !str2;
                             if (str2) {
                               tmp6 = "x" === str2.toLowerCase();
@@ -322,7 +318,7 @@ let items = [
                             if (tmp6) {
                               const _HermesInternal4 = HermesInternal;
                               str3 = ">=" + str + ".0.0 <" + +str + 1 + ".0.0-0";
-                            } else if (typeof tmp4 === "function") {
+                            } else if (typeof closure_2_9 === "function") {
                               let tmp7 = !str3;
                               if (str3) {
                                 tmp7 = "x" === str3.toLowerCase();
@@ -334,7 +330,7 @@ let items = [
                                 const _HermesInternal3 = HermesInternal;
                                 str3 = ">=" + str + "." + str2 + ".0 <" + str + "." + +str2 + 1 + ".0-0";
                               } else if (arg4) {
-                                tmp(14019)("replaceTilde pr", arg4);
+                                options(14019)("replaceTilde pr", arg4);
                                 const _HermesInternal2 = HermesInternal;
                                 str3 = ">=" + str + "." + str2 + "." + str3 + "-" + arg4 + " <" + str + "." + +str2 + 1 + ".0-0";
                               } else {
@@ -348,7 +344,7 @@ let items = [
                             throw new TypeError("Trying to call a non-function");
                           }
                         }
-                        tmp(14019)("tilde return", str3);
+                        options(14019)("tilde return", str3);
                         return str3;
                       } else {
                         throw new TypeError("Trying to call a non-function");
@@ -359,17 +355,17 @@ let items = [
                   }
                 });
                 const str7 = mapped1.join(" ");
-                tmp2(14019)("tildes", str7);
+                Range(14019)("tildes", str7);
                 if (typeof replaceXRanges === "function") {
-                  tmp2(14019)("replaceXRanges", str7, options);
+                  Range(14019)("replaceXRanges", str7, options);
                   const parts2 = str7.split(/\s+/);
                   const mapped2 = parts2.map((item) => {
                     if (typeof replaceXRange === "function") {
-                      const includePrerelease = tmp;
+                      const includePrerelease = options;
                       let str = item.trim();
                       const safeRe = self(14020).safeRe;
                       const t = self(14020).t;
-                      if (tmp.loose) {
+                      if (options.loose) {
                         let tmp5 = safeRe[t.XRANGELOOSE];
                       } else {
                         tmp5 = safeRe[t.XRANGE];
@@ -388,7 +384,7 @@ let items = [
                           }
                           let tmp7 = tmp6;
                           if (!tmp6) {
-                            if (typeof tmp5 === "function") {
+                            if (typeof closure_2_9 === "function") {
                               let tmp8 = !str2;
                               if (str2) {
                                 tmp8 = "x" === str2.toLowerCase();
@@ -403,7 +399,7 @@ let items = [
                           }
                           let tmp9 = tmp7;
                           if (!tmp7) {
-                            if (typeof tmp5 === "function") {
+                            if (typeof closure_2_9 === "function") {
                               let tmp10 = !str3;
                               if (str3) {
                                 tmp10 = "x" === str3.toLowerCase();
@@ -479,23 +475,22 @@ let items = [
                               combined = ">=" + str + "." + str2 + ".0" + str10 + " <" + str + "." + +str2 + 1 + ".0-0";
                             }
                           }
-                          tmp2(14019)("xRange return", combined);
+                          options(14019)("xRange return", combined);
                           return combined;
                         } else {
                           throw new TypeError("Trying to call a non-function");
                         }
-                        tmp2 = options;
                       });
                     } else {
                       throw new TypeError("Trying to call a non-function");
                     }
                   });
                   let str10 = mapped2.join(" ");
-                  tmp2(14019)("xrange", str10);
+                  Range(14019)("xrange", str10);
                   if (typeof replaceStars === "function") {
-                    tmp2(14019)("replaceStars", str10, options);
-                    const replaced = str10.trim().replace(tmp2(14020).safeRe[tmp2(undefined, 14020).t.STAR], "");
-                    tmp2(14019)("stars", replaced);
+                    Range(14019)("replaceStars", str10, options);
+                    const replaced = str10.trim().replace(Range(14020).safeRe[Range(undefined, 14020).t.STAR], "");
+                    Range(14019)("stars", replaced);
                     return replaced;
                   } else {
                     throw new TypeError("Trying to call a non-function");
@@ -507,7 +502,7 @@ let items = [
               } else {
                 throw new TypeError("Trying to call a non-function");
               }
-              let str2 = item.trim();
+              const str2 = item.trim();
             } else {
               throw new TypeError("Trying to call a non-function");
             }
@@ -538,13 +533,12 @@ let items = [
         const map = new Map();
         let mapped2 = found.map((item) => new Range(14044)(item, self.options));
         for (const item10132 of mapped2) {
-          let iter = item10132;
           if (isNullSet(item10132)) {
-            let items = [iter];
+            let items = [item10132];
             obj3.return();
             return items;
           } else {
-            let result = map.set(iter.value, iter);
+            let result = map.set(item10132.value, item10132);
             continue;
           }
         }
@@ -708,7 +702,7 @@ function hyphenReplace(includePrerelease) {
         tmp3 = "*" === str;
       }
       if (tmp3) {
-        if (typeof tmp === "function") {
+        if (typeof isX === "function") {
           let str19 = arg8;
           let tmp22 = !arg8;
           if (arg8) {
@@ -720,7 +714,7 @@ function hyphenReplace(includePrerelease) {
           if (tmp22) {
             const _HermesInternal10 = HermesInternal;
             return "" + "" + " " + "".trim();
-          } else if (typeof tmp === "function") {
+          } else if (typeof isX === "function") {
             let tmp24 = !str4;
             if (str4) {
               tmp24 = "x" === str4.toLowerCase();
@@ -733,7 +727,7 @@ function hyphenReplace(includePrerelease) {
               str19 = "<";
               let combined = "<" + +str19 + 1 + ".0.0-0";
               const tmp39 = +str19;
-            } else if (typeof tmp === "function") {
+            } else if (typeof isX === "function") {
               let tmp26 = !str5;
               if (str5) {
                 tmp26 = "x" === str5.toLowerCase();
@@ -763,7 +757,7 @@ function hyphenReplace(includePrerelease) {
         } else {
           throw new TypeError("Trying to call a non-function");
         }
-      } else if (typeof tmp === "function") {
+      } else if (typeof isX === "function") {
         let tmp5 = !str2;
         if (str2) {
           tmp5 = "x" === str2.toLowerCase();
@@ -778,7 +772,7 @@ function hyphenReplace(includePrerelease) {
           }
           const _HermesInternal4 = HermesInternal;
           let combined1 = ">=" + str + ".0.0" + str16;
-        } else if (typeof tmp === "function") {
+        } else if (typeof isX === "function") {
           let tmp7 = !str3;
           if (str3) {
             tmp7 = "x" === str3.toLowerCase();

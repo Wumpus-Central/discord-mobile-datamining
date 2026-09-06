@@ -5,7 +5,7 @@ import Buffer from "Buffer" /* 1253 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
-let closure_3 = async function _fetchText(arg0, value) {
+let closure_3 = async function _fetchText(arg0) {
   if (c1 === 2) {
     c1 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -28,11 +28,11 @@ let closure_3 = async function _fetchText(arg0, value) {
         c1 = 3;
         obj = { value, done: true };
         return obj;
-      } else if (!closure_0) {
+      } else if (!_require) {
         c1 = 3;
         obj = { value: null, done: true };
         return obj;
-      } else if (obj4.startsWith("data:image/svg+xml;utf8")) {
+      } else if (_require.startsWith("data:image/svg+xml;utf8")) {
         let tmp4 = (function dataUriToXml(arg0) {
           try {
             const _decodeURIComponent = decodeURIComponent;
@@ -45,9 +45,9 @@ let closure_3 = async function _fetchText(arg0, value) {
             const error = new Error("Decoding " + tmp + " failed with error: " + tmp3);
             throw error;
           }
-        })(obj4);
-      } else if (obj4.startsWith("data:image/svg+xml;base64")) {
-        tmp4 = decodeBase64Image(obj4);
+        })(_require);
+      } else if (_require.startsWith("data:image/svg+xml;base64")) {
+        tmp4 = decodeBase64Image(_require);
       } else {
         tmp4 = (function fetchUriData(arg0) {
           const self = this;
@@ -58,7 +58,7 @@ let closure_3 = async function _fetchText(arg0, value) {
             applyArgumentsResult = apply(self, arguments);
           }
           return applyArgumentsResult;
-        })(obj4);
+        })(_require);
       }
     } catch (tmp7) {
       c1 = tmp;
@@ -69,7 +69,8 @@ let closure_3 = async function _fetchText(arg0, value) {
 let closure_5 = async function _fetchUriData() {
   closure_129_0 = closure_0;
   const _fetch = fetch;
-  closure_129_1 = await fetch(closure_0);
+  await fetch(closure_0);
+  closure_129_1 = value;
   if (!closure_129_1.ok) {
     const _Error = Error;
     const _HermesInternal = HermesInternal;
@@ -77,7 +78,7 @@ let closure_5 = async function _fetchUriData() {
     throw error;
   }
   await closure_129_1.text();
-  return arg1;
+  return value;
 };
 const Platform = fn(17).Platform;
 function decodeBase64Image(arg0) {

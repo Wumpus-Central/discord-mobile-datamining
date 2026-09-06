@@ -3,6 +3,7 @@
 // Module 14253 (SetNumberFormatDigitOptions)
 import _mod14206 from "module_14206" /* 14206 */;
 import GetNumberOption from "GetNumberOption" /* 14209 */;
+import DefaultNumberOption from "DefaultNumberOption" /* 14210 */;
 import GetOption from "GetOption" /* 14211 */;
 
 require = arg1;
@@ -46,8 +47,8 @@ export const SetNumberFormatDigitOptions = function SetNumberFormatDigitOptions(
   }
   if (flag2) {
     if (tmp11) {
-      internalSlots.minimumSignificantDigits = tmp2(14210).DefaultNumberOption(minimumSignificantDigits, 1, 21, 1);
-      internalSlots.maximumSignificantDigits = tmp2(14210).DefaultNumberOption(maximumSignificantDigits, internalSlots.minimumSignificantDigits, 21, 21);
+      internalSlots.minimumSignificantDigits = DefaultNumberOption.DefaultNumberOption(minimumSignificantDigits, 1, 21, 1);
+      internalSlots.maximumSignificantDigits = DefaultNumberOption.DefaultNumberOption(maximumSignificantDigits, internalSlots.minimumSignificantDigits, 21, 21);
     } else {
       internalSlots.minimumSignificantDigits = 1;
       internalSlots.maximumSignificantDigits = 21;
@@ -55,10 +56,10 @@ export const SetNumberFormatDigitOptions = function SetNumberFormatDigitOptions(
   }
   if (flag) {
     if (tmp12) {
-      const DefaultNumberOptionResult = tmp2(14210).DefaultNumberOption(minimumFractionDigits, 0, 100, undefined);
-      const DefaultNumberOptionResult1 = tmp2(14210).DefaultNumberOption(maximumFractionDigits, 0, 100, undefined);
+      const DefaultNumberOptionResult = DefaultNumberOption.DefaultNumberOption(minimumFractionDigits, 0, 100, undefined);
+      const DefaultNumberOptionResult1 = DefaultNumberOption.DefaultNumberOption(maximumFractionDigits, 0, 100, undefined);
       if (undefined === DefaultNumberOptionResult) {
-        tmp2(14206).invariant(undefined !== DefaultNumberOptionResult1, "maximumFractionDigits must be defined");
+        _mod14206.invariant(undefined !== DefaultNumberOptionResult1, "maximumFractionDigits must be defined");
         const _Math2 = Math;
         let bound = Math.min(minimumFractionDigits, DefaultNumberOptionResult1);
         let bound1 = DefaultNumberOptionResult1;
@@ -95,9 +96,9 @@ export const SetNumberFormatDigitOptions = function SetNumberFormatDigitOptions(
     }
     if (tmp10) {
       const _TypeError = TypeError;
-      tmp2(14206).invariant("fractionDigits" === internalSlots.roundingType, "Invalid roundingType", TypeError);
+      _mod14206.invariant("fractionDigits" === internalSlots.roundingType, "Invalid roundingType", TypeError);
       const _RangeError = RangeError;
-      tmp2(14206).invariant(internalSlots.maximumFractionDigits === internalSlots.minimumFractionDigits, "With roundingIncrement > 1, maximumFractionDigits and minimumFractionDigits must be equal.", RangeError);
+      _mod14206.invariant(internalSlots.maximumFractionDigits === internalSlots.minimumFractionDigits, "With roundingIncrement > 1, maximumFractionDigits and minimumFractionDigits must be equal.", RangeError);
     }
   }
   if ("morePrecision" === GetOptionResult1) {
@@ -113,4 +114,5 @@ export const SetNumberFormatDigitOptions = function SetNumberFormatDigitOptions(
     internalSlots.roundingType = "fractionDigits";
     internalSlots.roundingPriority = "auto";
   }
+  const GetOptionResult2 = GetOption.GetOption(result1, "trailingZeroDisplay", "string", ["auto", "stripIfInteger"], "auto");
 };

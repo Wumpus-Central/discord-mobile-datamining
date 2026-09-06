@@ -70,14 +70,13 @@ function findMatchingDistanceForLSR(arg0, arg1, matches) {
   if (0 < matches.length) {
     while (true) {
       tmp = matches[num];
-      let tmp2 = isMatched;
       let tmp2Result = isMatched(arg0, tmp.desired, matches.matchVariables);
       if (tmp2Result) {
-        tmp2Result = tmp2(arg1, tmp.supported, matches.matchVariables);
+        tmp2Result = isMatched(arg1, tmp.supported, matches.matchVariables);
       }
       let tmp5 = tmp.oneway || tmp2Result;
       if (!tmp5) {
-        let tmp6 = tmp2(arg0, tmp.supported, matches.matchVariables) && tmp2(arg1, tmp.desired, matches.matchVariables);
+        let tmp6 = isMatched(arg0, tmp.supported, matches.matchVariables) && isMatched(arg1, tmp.desired, matches.matchVariables);
         tmp2Result = tmp6;
       }
       if (tmp2Result) {
@@ -106,8 +105,8 @@ function findMatchingDistanceForLSR(arg0, arg1, matches) {
   const error = new Error("No matching distance found");
   throw error;
 }
-function findMatchingDistance(arg0, matchedSupportedLocale) {
-  locale = new Intl.Locale(arg0);
+function findMatchingDistance(matchedDesiredLocale, matchedSupportedLocale) {
+  locale = new Intl.Locale(matchedDesiredLocale);
   const maximizeResult = locale.maximize();
   const locale1 = new Intl.Locale(matchedSupportedLocale);
   const maximizeResult1 = locale1.maximize();
@@ -128,9 +127,9 @@ function findMatchingDistance(arg0, matchedSupportedLocale) {
         parts = paradigmLocales._locales.split(" ");
       }
     }
-    const prop = tmp4(14242).data.supplemental.languageMatching["written-new"];
+    const prop = data.data.supplemental.languageMatching["written-new"];
     let substr = prop.slice(1, 5);
-    const prop1 = tmp4(14242).data.supplemental.languageMatching["written-new"];
+    const prop1 = data.data.supplemental.languageMatching["written-new"];
     const substr1 = prop1.slice(5);
     obj1 = {
       matches: substr1.map((item) => {
@@ -145,8 +144,7 @@ function findMatchingDistance(arg0, matchedSupportedLocale) {
         }, {}),
       paradigmLocales: null
     };
-    tmp4(1162);
-    const tmp4Result = tmp4(1162);
+    const tmp4Result = e;
     obj1.paradigmLocales = tmp4Result.__spreadArray(tmp4Result.__spreadArray([], parts, true), parts.map((item) => {
       locale = new Intl.Locale(item.replace(/_/g, "-"));
       return locale.maximize().toString();
@@ -204,8 +202,8 @@ export const findBestMatch = function findBestMatch(arr, arg1, arg2) {
       obj.distances[matchedDesiredLocale][matchedSupportedLocale] = sum;
       if (sum < Infinity) {
         Infinity = sum;
-        tmp3.matchedDesiredLocale = matchedDesiredLocale;
-        tmp3.matchedSupportedLocale = matchedSupportedLocale;
+        obj.matchedDesiredLocale = matchedDesiredLocale;
+        obj.matchedSupportedLocale = matchedSupportedLocale;
       }
     });
   });

@@ -53,13 +53,12 @@
                     closure_1 = fn;
                     const tmp = closure_1_6(closure_0[closure_1_0], closure_0, closure_1_1);
                     if ("throw" !== tmp.type) {
-                      iter = tmp.arg;
-                      value = iter.value;
+                      value = tmp.arg.value;
                       if (value) {
                         if (typeof value === "object") {
                           let call = closure_1_1.call;
                           if (typeof call === "unknown") {
-                            let callResult = tmp8("__await");
+                            let callResult = closure_1_1("__await");
                           } else {
                             callResult = call(value, "__await");
                           }
@@ -67,13 +66,12 @@
                             closure_1.resolve(value.__await).then((result) => {
                               const tmp2 = closure_1_6(closure_2_0.next, closure_2_0, result);
                               if ("throw" !== tmp2.type) {
-                                iter = tmp2.arg;
-                                value = iter.value;
+                                value = tmp2.arg.value;
                                 if (value) {
                                   if (typeof value === "object") {
                                     const call = closure_1.call;
                                     if (typeof call === "unknown") {
-                                      let callResult = tmp9("__await");
+                                      let callResult = closure_1("__await");
                                     } else {
                                       callResult = call(value, "__await");
                                     }
@@ -81,10 +79,10 @@
                                       closure_2_1.resolve(value.__await).then(() => { ... }, () => { ... });
                                       const resolveResult = closure_2_1.resolve(value.__await);
                                     }
-                                    tmp9 = closure_1;
                                   }
                                 }
                                 closure_2_1.resolve(value).then(() => { ... }, () => { ... });
+                                iter = tmp2.arg;
                                 const resolveResult1 = closure_2_1.resolve(value);
                               } else {
                                 closure_1(tmp2.arg);
@@ -92,13 +90,12 @@
                             }, (arg0) => {
                               const tmp2 = closure_1_6(closure_2_0.throw, closure_2_0, arg0);
                               if ("throw" !== tmp2.type) {
-                                iter = tmp2.arg;
-                                value = iter.value;
+                                value = tmp2.arg.value;
                                 if (value) {
                                   if (typeof value === "object") {
                                     const call = closure_1.call;
                                     if (typeof call === "unknown") {
-                                      let callResult = tmp9("__await");
+                                      let callResult = closure_1("__await");
                                     } else {
                                       callResult = call(value, "__await");
                                     }
@@ -106,10 +103,10 @@
                                       closure_2_1.resolve(value.__await).then(() => { ... }, () => { ... });
                                       const resolveResult = closure_2_1.resolve(value.__await);
                                     }
-                                    tmp9 = closure_1;
                                   }
                                 }
                                 closure_2_1.resolve(value).then(() => { ... }, () => { ... });
+                                iter = tmp2.arg;
                                 const resolveResult1 = closure_2_1.resolve(value);
                               } else {
                                 closure_1(tmp2.arg);
@@ -117,7 +114,6 @@
                             });
                             let resolveResult = closure_1.resolve(value.__await);
                           }
-                          tmp8 = closure_1_1;
                         }
                       }
                       closure_1.resolve(value).then((value) => {
@@ -126,28 +122,28 @@
                       }, (arg0) => {
                         const tmp2 = closure_1_6(closure_2_0.throw, closure_2_0, arg0);
                         if ("throw" !== tmp2.type) {
-                          iter = tmp2.arg;
-                          fn = iter.value;
+                          fn = tmp2.arg.value;
                           if (fn) {
                             if (typeof fn === "object") {
                               const call = closure_1.call;
                               if (typeof call === "unknown") {
-                                let callResult = tmp9("__await");
+                                closure_1("__await");
                               } else {
-                                callResult = call(fn, "__await");
+                                call(fn, "__await");
                               }
-                              tmp9 = closure_1;
                             }
                             fn = () => { ... };
                             nextPromise = closure_2_1.resolve(fn.__await).then(() => { ... }, fn);
                             const resolveResult = closure_2_1.resolve(fn.__await);
                           }
                           nextPromise = closure_2_1.resolve(fn).then(() => { ... }, () => { ... });
+                          iter = tmp2.arg;
                           const resolveResult1 = closure_2_1.resolve(fn);
                         } else {
                           closure_1(tmp2.arg);
                         }
                       });
+                      iter = tmp.arg;
                       let resolveResult1 = closure_1.resolve(value);
                     } else {
                       fn(tmp.arg);
@@ -161,13 +157,12 @@
                   closure_1 = fn;
                   const tmp = closure_1_6(closure_0[closure_1_0], closure_0, closure_1_1);
                   if ("throw" !== tmp.type) {
-                    iter = tmp.arg;
-                    value = iter.value;
+                    value = tmp.arg.value;
                     if (value) {
                       if (typeof value === "object") {
                         let call = closure_1_1.call;
                         if (typeof call === "unknown") {
-                          let callResult = tmp8("__await");
+                          let callResult = closure_1_1("__await");
                         } else {
                           callResult = call(value, "__await");
                         }
@@ -175,13 +170,12 @@
                           closure_1.resolve(value.__await).then((result) => {
                             const tmp2 = closure_1_6(closure_2_0.next, closure_2_0, result);
                             if ("throw" !== tmp2.type) {
-                              iter = tmp2.arg;
-                              value = iter.value;
+                              value = tmp2.arg.value;
                               if (value) {
                                 if (typeof value === "object") {
                                   const call = closure_1.call;
                                   if (typeof call === "unknown") {
-                                    let callResult = tmp9("__await");
+                                    let callResult = closure_1("__await");
                                   } else {
                                     callResult = call(value, "__await");
                                   }
@@ -189,13 +183,12 @@
                                     closure_2_1.resolve(value.__await).then((result) => {
                                       const tmp2 = closure_1_6(closure_2_0.next, closure_2_0, result);
                                       if ("throw" !== tmp2.type) {
-                                        iter = tmp2.arg;
-                                        value = iter.value;
+                                        value = tmp2.arg.value;
                                         if (value) {
                                           if (typeof value === "object") {
                                             const call = closure_1.call;
                                             if (typeof call === "unknown") {
-                                              let callResult = tmp9("__await");
+                                              let callResult = closure_1("__await");
                                             } else {
                                               callResult = call(value, "__await");
                                             }
@@ -203,10 +196,10 @@
                                               closure_2_1.resolve(value.__await).then(() => { ... }, () => { ... });
                                               const resolveResult = closure_2_1.resolve(value.__await);
                                             }
-                                            tmp9 = closure_1;
                                           }
                                         }
                                         closure_2_1.resolve(value).then(() => { ... }, () => { ... });
+                                        iter = tmp2.arg;
                                         const resolveResult1 = closure_2_1.resolve(value);
                                       } else {
                                         closure_1(tmp2.arg);
@@ -214,13 +207,12 @@
                                     }, (arg0) => {
                                       const tmp2 = closure_1_6(closure_2_0.throw, closure_2_0, arg0);
                                       if ("throw" !== tmp2.type) {
-                                        iter = tmp2.arg;
-                                        value = iter.value;
+                                        value = tmp2.arg.value;
                                         if (value) {
                                           if (typeof value === "object") {
                                             const call = closure_1.call;
                                             if (typeof call === "unknown") {
-                                              let callResult = tmp9("__await");
+                                              let callResult = closure_1("__await");
                                             } else {
                                               callResult = call(value, "__await");
                                             }
@@ -228,10 +220,10 @@
                                               closure_2_1.resolve(value.__await).then(() => { ... }, () => { ... });
                                               const resolveResult = closure_2_1.resolve(value.__await);
                                             }
-                                            tmp9 = closure_1;
                                           }
                                         }
                                         closure_2_1.resolve(value).then(() => { ... }, () => { ... });
+                                        iter = tmp2.arg;
                                         const resolveResult1 = closure_2_1.resolve(value);
                                       } else {
                                         closure_1(tmp2.arg);
@@ -239,7 +231,6 @@
                                     });
                                     const resolveResult = closure_2_1.resolve(value.__await);
                                   }
-                                  tmp9 = closure_1;
                                 }
                               }
                               closure_2_1.resolve(value).then((value) => {
@@ -248,28 +239,28 @@
                               }, (arg0) => {
                                 const tmp2 = closure_1_6(closure_2_0.throw, closure_2_0, arg0);
                                 if ("throw" !== tmp2.type) {
-                                  iter = tmp2.arg;
-                                  fn = iter.value;
+                                  fn = tmp2.arg.value;
                                   if (fn) {
                                     if (typeof fn === "object") {
                                       const call = closure_1.call;
                                       if (typeof call === "unknown") {
-                                        let callResult = tmp9("__await");
+                                        closure_1("__await");
                                       } else {
-                                        callResult = call(fn, "__await");
+                                        call(fn, "__await");
                                       }
-                                      tmp9 = closure_1;
                                     }
                                     fn = () => { ... };
                                     nextPromise = closure_2_1.resolve(fn.__await).then(() => { ... }, fn);
                                     const resolveResult = closure_2_1.resolve(fn.__await);
                                   }
                                   nextPromise = closure_2_1.resolve(fn).then(() => { ... }, () => { ... });
+                                  iter = tmp2.arg;
                                   const resolveResult1 = closure_2_1.resolve(fn);
                                 } else {
                                   closure_1(tmp2.arg);
                                 }
                               });
+                              iter = tmp2.arg;
                               const resolveResult1 = closure_2_1.resolve(value);
                             } else {
                               closure_1(tmp2.arg);
@@ -277,13 +268,12 @@
                           }, (arg0) => {
                             const tmp2 = closure_1_6(closure_2_0.throw, closure_2_0, arg0);
                             if ("throw" !== tmp2.type) {
-                              iter = tmp2.arg;
-                              value = iter.value;
+                              value = tmp2.arg.value;
                               if (value) {
                                 if (typeof value === "object") {
                                   const call = closure_1.call;
                                   if (typeof call === "unknown") {
-                                    let callResult = tmp9("__await");
+                                    let callResult = closure_1("__await");
                                   } else {
                                     callResult = call(value, "__await");
                                   }
@@ -291,13 +281,12 @@
                                     closure_2_1.resolve(value.__await).then((result) => {
                                       const tmp2 = closure_1_6(closure_2_0.next, closure_2_0, result);
                                       if ("throw" !== tmp2.type) {
-                                        iter = tmp2.arg;
-                                        value = iter.value;
+                                        value = tmp2.arg.value;
                                         if (value) {
                                           if (typeof value === "object") {
                                             const call = closure_1.call;
                                             if (typeof call === "unknown") {
-                                              let callResult = tmp9("__await");
+                                              let callResult = closure_1("__await");
                                             } else {
                                               callResult = call(value, "__await");
                                             }
@@ -305,10 +294,10 @@
                                               closure_2_1.resolve(value.__await).then(() => { ... }, () => { ... });
                                               const resolveResult = closure_2_1.resolve(value.__await);
                                             }
-                                            tmp9 = closure_1;
                                           }
                                         }
                                         closure_2_1.resolve(value).then(() => { ... }, () => { ... });
+                                        iter = tmp2.arg;
                                         const resolveResult1 = closure_2_1.resolve(value);
                                       } else {
                                         closure_1(tmp2.arg);
@@ -316,13 +305,12 @@
                                     }, (arg0) => {
                                       const tmp2 = closure_1_6(closure_2_0.throw, closure_2_0, arg0);
                                       if ("throw" !== tmp2.type) {
-                                        iter = tmp2.arg;
-                                        value = iter.value;
+                                        value = tmp2.arg.value;
                                         if (value) {
                                           if (typeof value === "object") {
                                             const call = closure_1.call;
                                             if (typeof call === "unknown") {
-                                              let callResult = tmp9("__await");
+                                              let callResult = closure_1("__await");
                                             } else {
                                               callResult = call(value, "__await");
                                             }
@@ -330,10 +318,10 @@
                                               closure_2_1.resolve(value.__await).then(() => { ... }, () => { ... });
                                               const resolveResult = closure_2_1.resolve(value.__await);
                                             }
-                                            tmp9 = closure_1;
                                           }
                                         }
                                         closure_2_1.resolve(value).then(() => { ... }, () => { ... });
+                                        iter = tmp2.arg;
                                         const resolveResult1 = closure_2_1.resolve(value);
                                       } else {
                                         closure_1(tmp2.arg);
@@ -341,7 +329,6 @@
                                     });
                                     const resolveResult = closure_2_1.resolve(value.__await);
                                   }
-                                  tmp9 = closure_1;
                                 }
                               }
                               closure_2_1.resolve(value).then((value) => {
@@ -350,28 +337,28 @@
                               }, (arg0) => {
                                 const tmp2 = closure_1_6(closure_2_0.throw, closure_2_0, arg0);
                                 if ("throw" !== tmp2.type) {
-                                  iter = tmp2.arg;
-                                  fn = iter.value;
+                                  fn = tmp2.arg.value;
                                   if (fn) {
                                     if (typeof fn === "object") {
                                       const call = closure_1.call;
                                       if (typeof call === "unknown") {
-                                        let callResult = tmp9("__await");
+                                        closure_1("__await");
                                       } else {
-                                        callResult = call(fn, "__await");
+                                        call(fn, "__await");
                                       }
-                                      tmp9 = closure_1;
                                     }
                                     fn = () => { ... };
                                     nextPromise = closure_2_1.resolve(fn.__await).then(() => { ... }, fn);
                                     const resolveResult = closure_2_1.resolve(fn.__await);
                                   }
                                   nextPromise = closure_2_1.resolve(fn).then(() => { ... }, () => { ... });
+                                  iter = tmp2.arg;
                                   const resolveResult1 = closure_2_1.resolve(fn);
                                 } else {
                                   closure_1(tmp2.arg);
                                 }
                               });
+                              iter = tmp2.arg;
                               const resolveResult1 = closure_2_1.resolve(value);
                             } else {
                               closure_1(tmp2.arg);
@@ -379,7 +366,6 @@
                           });
                           let resolveResult = closure_1.resolve(value.__await);
                         }
-                        tmp8 = closure_1_1;
                       }
                     }
                     closure_1.resolve(value).then((value) => {
@@ -388,28 +374,25 @@
                     }, (arg0) => {
                       const tmp2 = closure_1_6(closure_2_0.throw, closure_2_0, arg0);
                       if ("throw" !== tmp2.type) {
-                        iter = tmp2.arg;
-                        fn = iter.value;
+                        fn = tmp2.arg.value;
                         if (fn) {
                           if (typeof fn === "object") {
                             const call = closure_1.call;
                             if (typeof call === "unknown") {
-                              let callResult = tmp9("__await");
+                              closure_1("__await");
                             } else {
-                              callResult = call(fn, "__await");
+                              call(fn, "__await");
                             }
-                            tmp9 = closure_1;
                           }
                           fn = (arg0) => {
                             const tmp2 = closure_1_6(closure_2_0.throw, closure_2_0, arg0);
                             if ("throw" !== tmp2.type) {
-                              iter = tmp2.arg;
-                              value = iter.value;
+                              value = tmp2.arg.value;
                               if (value) {
                                 if (typeof value === "object") {
                                   const call = closure_1.call;
                                   if (typeof call === "unknown") {
-                                    let callResult = tmp9("__await");
+                                    let callResult = closure_1("__await");
                                   } else {
                                     callResult = call(value, "__await");
                                   }
@@ -417,10 +400,10 @@
                                     closure_2_1.resolve(value.__await).then(() => { ... }, () => { ... });
                                     const resolveResult = closure_2_1.resolve(value.__await);
                                   }
-                                  tmp9 = closure_1;
                                 }
                               }
                               closure_2_1.resolve(value).then(() => { ... }, () => { ... });
+                              iter = tmp2.arg;
                               const resolveResult1 = closure_2_1.resolve(value);
                             } else {
                               closure_1(tmp2.arg);
@@ -429,13 +412,12 @@
                           nextPromise = closure_2_1.resolve(fn.__await).then((result) => {
                             const tmp2 = closure_1_6(closure_2_0.next, closure_2_0, result);
                             if ("throw" !== tmp2.type) {
-                              iter = tmp2.arg;
-                              value = iter.value;
+                              value = tmp2.arg.value;
                               if (value) {
                                 if (typeof value === "object") {
                                   const call = closure_1.call;
                                   if (typeof call === "unknown") {
-                                    let callResult = tmp9("__await");
+                                    let callResult = closure_1("__await");
                                   } else {
                                     callResult = call(value, "__await");
                                   }
@@ -443,10 +425,10 @@
                                     closure_2_1.resolve(value.__await).then(() => { ... }, () => { ... });
                                     const resolveResult = closure_2_1.resolve(value.__await);
                                   }
-                                  tmp9 = closure_1;
                                 }
                               }
                               closure_2_1.resolve(value).then(() => { ... }, () => { ... });
+                              iter = tmp2.arg;
                               const resolveResult1 = closure_2_1.resolve(value);
                             } else {
                               closure_1(tmp2.arg);
@@ -460,33 +442,34 @@
                         }, (arg0) => {
                           const tmp2 = closure_1_6(closure_2_0.throw, closure_2_0, arg0);
                           if ("throw" !== tmp2.type) {
-                            iter = tmp2.arg;
-                            fn = iter.value;
+                            fn = tmp2.arg.value;
                             if (fn) {
                               if (typeof fn === "object") {
                                 const call = closure_1.call;
                                 if (typeof call === "unknown") {
-                                  let callResult = tmp9("__await");
+                                  closure_1("__await");
                                 } else {
-                                  callResult = call(fn, "__await");
+                                  call(fn, "__await");
                                 }
-                                tmp9 = closure_1;
                               }
                               fn = () => { ... };
                               nextPromise = closure_2_1.resolve(fn.__await).then(() => { ... }, fn);
                               const resolveResult = closure_2_1.resolve(fn.__await);
                             }
                             nextPromise = closure_2_1.resolve(fn).then(() => { ... }, () => { ... });
+                            iter = tmp2.arg;
                             const resolveResult1 = closure_2_1.resolve(fn);
                           } else {
                             closure_1(tmp2.arg);
                           }
                         });
+                        iter = tmp2.arg;
                         const resolveResult1 = closure_2_1.resolve(fn);
                       } else {
                         closure_1(tmp2.arg);
                       }
                     });
+                    iter = tmp.arg;
                     let resolveResult1 = closure_1.resolve(value);
                   } else {
                     fn(tmp.arg);
@@ -608,22 +591,19 @@
           if (!isNaN(next.length)) {
             c1 = -1;
             next = function next() {
-              let arr;
               const sum = sum1 + 1;
               sum1 = sum;
               if (sum < next.length) {
                 while (true) {
-                  let tmp2 = hasOwnProperty;
                   let call = hasOwnProperty.call;
-                  arr = next;
                   let tmp3 = sum1;
-                  if (typeof call === "unknown" ? tmp2(tmp3) : call(arr, tmp3)) {
+                  if (typeof call === "unknown" ? hasOwnProperty(tmp3) : call(next, tmp3)) {
                     break;
                   } else {
                     sum1 = sum1 + 1;
                   }
                 }
-                next.value = arr[sum1];
+                next.value = next[sum1];
                 next.done = false;
                 return next;
               }
@@ -758,13 +738,12 @@
                         closure_1 = fn;
                         const tmp = closure_1_6(closure_0[closure_1_0], closure_0, closure_1_1);
                         if ("throw" !== tmp.type) {
-                          iter = tmp.arg;
-                          value = iter.value;
+                          value = tmp.arg.value;
                           if (value) {
                             if (typeof value === "object") {
                               let call = closure_1_1.call;
                               if (typeof call === "unknown") {
-                                let callResult = tmp8("__await");
+                                let callResult = closure_1_1("__await");
                               } else {
                                 callResult = call(value, "__await");
                               }
@@ -772,13 +751,12 @@
                                 closure_1.resolve(value.__await).then((result) => {
                                   const tmp2 = closure_1_6(closure_2_0.next, closure_2_0, result);
                                   if ("throw" !== tmp2.type) {
-                                    iter = tmp2.arg;
-                                    value = iter.value;
+                                    value = tmp2.arg.value;
                                     if (value) {
                                       if (typeof value === "object") {
                                         const call = closure_1.call;
                                         if (typeof call === "unknown") {
-                                          let callResult = tmp9("__await");
+                                          let callResult = closure_1("__await");
                                         } else {
                                           callResult = call(value, "__await");
                                         }
@@ -786,10 +764,10 @@
                                           closure_2_1.resolve(value.__await).then(() => { ... }, () => { ... });
                                           const resolveResult = closure_2_1.resolve(value.__await);
                                         }
-                                        tmp9 = closure_1;
                                       }
                                     }
                                     closure_2_1.resolve(value).then(() => { ... }, () => { ... });
+                                    iter = tmp2.arg;
                                     const resolveResult1 = closure_2_1.resolve(value);
                                   } else {
                                     closure_1(tmp2.arg);
@@ -797,13 +775,12 @@
                                 }, (arg0) => {
                                   const tmp2 = closure_1_6(closure_2_0.throw, closure_2_0, arg0);
                                   if ("throw" !== tmp2.type) {
-                                    iter = tmp2.arg;
-                                    value = iter.value;
+                                    value = tmp2.arg.value;
                                     if (value) {
                                       if (typeof value === "object") {
                                         const call = closure_1.call;
                                         if (typeof call === "unknown") {
-                                          let callResult = tmp9("__await");
+                                          let callResult = closure_1("__await");
                                         } else {
                                           callResult = call(value, "__await");
                                         }
@@ -811,10 +788,10 @@
                                           closure_2_1.resolve(value.__await).then(() => { ... }, () => { ... });
                                           const resolveResult = closure_2_1.resolve(value.__await);
                                         }
-                                        tmp9 = closure_1;
                                       }
                                     }
                                     closure_2_1.resolve(value).then(() => { ... }, () => { ... });
+                                    iter = tmp2.arg;
                                     const resolveResult1 = closure_2_1.resolve(value);
                                   } else {
                                     closure_1(tmp2.arg);
@@ -822,7 +799,6 @@
                                 });
                                 let resolveResult = closure_1.resolve(value.__await);
                               }
-                              tmp8 = closure_1_1;
                             }
                           }
                           closure_1.resolve(value).then((value) => {
@@ -831,28 +807,28 @@
                           }, (arg0) => {
                             const tmp2 = closure_1_6(closure_2_0.throw, closure_2_0, arg0);
                             if ("throw" !== tmp2.type) {
-                              iter = tmp2.arg;
-                              fn = iter.value;
+                              fn = tmp2.arg.value;
                               if (fn) {
                                 if (typeof fn === "object") {
                                   const call = closure_1.call;
                                   if (typeof call === "unknown") {
-                                    let callResult = tmp9("__await");
+                                    closure_1("__await");
                                   } else {
-                                    callResult = call(fn, "__await");
+                                    call(fn, "__await");
                                   }
-                                  tmp9 = closure_1;
                                 }
                                 fn = () => { ... };
                                 nextPromise = closure_2_1.resolve(fn.__await).then(() => { ... }, fn);
                                 const resolveResult = closure_2_1.resolve(fn.__await);
                               }
                               nextPromise = closure_2_1.resolve(fn).then(() => { ... }, () => { ... });
+                              iter = tmp2.arg;
                               const resolveResult1 = closure_2_1.resolve(fn);
                             } else {
                               closure_1(tmp2.arg);
                             }
                           });
+                          iter = tmp.arg;
                           let resolveResult1 = closure_1.resolve(value);
                         } else {
                           fn(tmp.arg);
@@ -866,13 +842,12 @@
                       closure_1 = fn;
                       const tmp = closure_1_6(closure_0[closure_1_0], closure_0, closure_1_1);
                       if ("throw" !== tmp.type) {
-                        iter = tmp.arg;
-                        value = iter.value;
+                        value = tmp.arg.value;
                         if (value) {
                           if (typeof value === "object") {
                             let call = closure_1_1.call;
                             if (typeof call === "unknown") {
-                              let callResult = tmp8("__await");
+                              let callResult = closure_1_1("__await");
                             } else {
                               callResult = call(value, "__await");
                             }
@@ -880,13 +855,12 @@
                               closure_1.resolve(value.__await).then((result) => {
                                 const tmp2 = closure_1_6(closure_2_0.next, closure_2_0, result);
                                 if ("throw" !== tmp2.type) {
-                                  iter = tmp2.arg;
-                                  value = iter.value;
+                                  value = tmp2.arg.value;
                                   if (value) {
                                     if (typeof value === "object") {
                                       const call = closure_1.call;
                                       if (typeof call === "unknown") {
-                                        let callResult = tmp9("__await");
+                                        let callResult = closure_1("__await");
                                       } else {
                                         callResult = call(value, "__await");
                                       }
@@ -894,13 +868,12 @@
                                         closure_2_1.resolve(value.__await).then((result) => {
                                           const tmp2 = closure_1_6(closure_2_0.next, closure_2_0, result);
                                           if ("throw" !== tmp2.type) {
-                                            iter = tmp2.arg;
-                                            value = iter.value;
+                                            value = tmp2.arg.value;
                                             if (value) {
                                               if (typeof value === "object") {
                                                 const call = closure_1.call;
                                                 if (typeof call === "unknown") {
-                                                  let callResult = tmp9("__await");
+                                                  let callResult = closure_1("__await");
                                                 } else {
                                                   callResult = call(value, "__await");
                                                 }
@@ -908,10 +881,10 @@
                                                   closure_2_1.resolve(value.__await).then(() => { ... }, () => { ... });
                                                   const resolveResult = closure_2_1.resolve(value.__await);
                                                 }
-                                                tmp9 = closure_1;
                                               }
                                             }
                                             closure_2_1.resolve(value).then(() => { ... }, () => { ... });
+                                            iter = tmp2.arg;
                                             const resolveResult1 = closure_2_1.resolve(value);
                                           } else {
                                             closure_1(tmp2.arg);
@@ -919,13 +892,12 @@
                                         }, (arg0) => {
                                           const tmp2 = closure_1_6(closure_2_0.throw, closure_2_0, arg0);
                                           if ("throw" !== tmp2.type) {
-                                            iter = tmp2.arg;
-                                            value = iter.value;
+                                            value = tmp2.arg.value;
                                             if (value) {
                                               if (typeof value === "object") {
                                                 const call = closure_1.call;
                                                 if (typeof call === "unknown") {
-                                                  let callResult = tmp9("__await");
+                                                  let callResult = closure_1("__await");
                                                 } else {
                                                   callResult = call(value, "__await");
                                                 }
@@ -933,10 +905,10 @@
                                                   closure_2_1.resolve(value.__await).then(() => { ... }, () => { ... });
                                                   const resolveResult = closure_2_1.resolve(value.__await);
                                                 }
-                                                tmp9 = closure_1;
                                               }
                                             }
                                             closure_2_1.resolve(value).then(() => { ... }, () => { ... });
+                                            iter = tmp2.arg;
                                             const resolveResult1 = closure_2_1.resolve(value);
                                           } else {
                                             closure_1(tmp2.arg);
@@ -944,7 +916,6 @@
                                         });
                                         const resolveResult = closure_2_1.resolve(value.__await);
                                       }
-                                      tmp9 = closure_1;
                                     }
                                   }
                                   closure_2_1.resolve(value).then((value) => {
@@ -953,28 +924,28 @@
                                   }, (arg0) => {
                                     const tmp2 = closure_1_6(closure_2_0.throw, closure_2_0, arg0);
                                     if ("throw" !== tmp2.type) {
-                                      iter = tmp2.arg;
-                                      fn = iter.value;
+                                      fn = tmp2.arg.value;
                                       if (fn) {
                                         if (typeof fn === "object") {
                                           const call = closure_1.call;
                                           if (typeof call === "unknown") {
-                                            let callResult = tmp9("__await");
+                                            closure_1("__await");
                                           } else {
-                                            callResult = call(fn, "__await");
+                                            call(fn, "__await");
                                           }
-                                          tmp9 = closure_1;
                                         }
                                         fn = () => { ... };
                                         nextPromise = closure_2_1.resolve(fn.__await).then(() => { ... }, fn);
                                         const resolveResult = closure_2_1.resolve(fn.__await);
                                       }
                                       nextPromise = closure_2_1.resolve(fn).then(() => { ... }, () => { ... });
+                                      iter = tmp2.arg;
                                       const resolveResult1 = closure_2_1.resolve(fn);
                                     } else {
                                       closure_1(tmp2.arg);
                                     }
                                   });
+                                  iter = tmp2.arg;
                                   const resolveResult1 = closure_2_1.resolve(value);
                                 } else {
                                   closure_1(tmp2.arg);
@@ -982,13 +953,12 @@
                               }, (arg0) => {
                                 const tmp2 = closure_1_6(closure_2_0.throw, closure_2_0, arg0);
                                 if ("throw" !== tmp2.type) {
-                                  iter = tmp2.arg;
-                                  value = iter.value;
+                                  value = tmp2.arg.value;
                                   if (value) {
                                     if (typeof value === "object") {
                                       const call = closure_1.call;
                                       if (typeof call === "unknown") {
-                                        let callResult = tmp9("__await");
+                                        let callResult = closure_1("__await");
                                       } else {
                                         callResult = call(value, "__await");
                                       }
@@ -996,13 +966,12 @@
                                         closure_2_1.resolve(value.__await).then((result) => {
                                           const tmp2 = closure_1_6(closure_2_0.next, closure_2_0, result);
                                           if ("throw" !== tmp2.type) {
-                                            iter = tmp2.arg;
-                                            value = iter.value;
+                                            value = tmp2.arg.value;
                                             if (value) {
                                               if (typeof value === "object") {
                                                 const call = closure_1.call;
                                                 if (typeof call === "unknown") {
-                                                  let callResult = tmp9("__await");
+                                                  let callResult = closure_1("__await");
                                                 } else {
                                                   callResult = call(value, "__await");
                                                 }
@@ -1010,10 +979,10 @@
                                                   closure_2_1.resolve(value.__await).then(() => { ... }, () => { ... });
                                                   const resolveResult = closure_2_1.resolve(value.__await);
                                                 }
-                                                tmp9 = closure_1;
                                               }
                                             }
                                             closure_2_1.resolve(value).then(() => { ... }, () => { ... });
+                                            iter = tmp2.arg;
                                             const resolveResult1 = closure_2_1.resolve(value);
                                           } else {
                                             closure_1(tmp2.arg);
@@ -1021,13 +990,12 @@
                                         }, (arg0) => {
                                           const tmp2 = closure_1_6(closure_2_0.throw, closure_2_0, arg0);
                                           if ("throw" !== tmp2.type) {
-                                            iter = tmp2.arg;
-                                            value = iter.value;
+                                            value = tmp2.arg.value;
                                             if (value) {
                                               if (typeof value === "object") {
                                                 const call = closure_1.call;
                                                 if (typeof call === "unknown") {
-                                                  let callResult = tmp9("__await");
+                                                  let callResult = closure_1("__await");
                                                 } else {
                                                   callResult = call(value, "__await");
                                                 }
@@ -1035,10 +1003,10 @@
                                                   closure_2_1.resolve(value.__await).then(() => { ... }, () => { ... });
                                                   const resolveResult = closure_2_1.resolve(value.__await);
                                                 }
-                                                tmp9 = closure_1;
                                               }
                                             }
                                             closure_2_1.resolve(value).then(() => { ... }, () => { ... });
+                                            iter = tmp2.arg;
                                             const resolveResult1 = closure_2_1.resolve(value);
                                           } else {
                                             closure_1(tmp2.arg);
@@ -1046,7 +1014,6 @@
                                         });
                                         const resolveResult = closure_2_1.resolve(value.__await);
                                       }
-                                      tmp9 = closure_1;
                                     }
                                   }
                                   closure_2_1.resolve(value).then((value) => {
@@ -1055,28 +1022,28 @@
                                   }, (arg0) => {
                                     const tmp2 = closure_1_6(closure_2_0.throw, closure_2_0, arg0);
                                     if ("throw" !== tmp2.type) {
-                                      iter = tmp2.arg;
-                                      fn = iter.value;
+                                      fn = tmp2.arg.value;
                                       if (fn) {
                                         if (typeof fn === "object") {
                                           const call = closure_1.call;
                                           if (typeof call === "unknown") {
-                                            let callResult = tmp9("__await");
+                                            closure_1("__await");
                                           } else {
-                                            callResult = call(fn, "__await");
+                                            call(fn, "__await");
                                           }
-                                          tmp9 = closure_1;
                                         }
                                         fn = () => { ... };
                                         nextPromise = closure_2_1.resolve(fn.__await).then(() => { ... }, fn);
                                         const resolveResult = closure_2_1.resolve(fn.__await);
                                       }
                                       nextPromise = closure_2_1.resolve(fn).then(() => { ... }, () => { ... });
+                                      iter = tmp2.arg;
                                       const resolveResult1 = closure_2_1.resolve(fn);
                                     } else {
                                       closure_1(tmp2.arg);
                                     }
                                   });
+                                  iter = tmp2.arg;
                                   const resolveResult1 = closure_2_1.resolve(value);
                                 } else {
                                   closure_1(tmp2.arg);
@@ -1084,7 +1051,6 @@
                               });
                               let resolveResult = closure_1.resolve(value.__await);
                             }
-                            tmp8 = closure_1_1;
                           }
                         }
                         closure_1.resolve(value).then((value) => {
@@ -1093,28 +1059,25 @@
                         }, (arg0) => {
                           const tmp2 = closure_1_6(closure_2_0.throw, closure_2_0, arg0);
                           if ("throw" !== tmp2.type) {
-                            iter = tmp2.arg;
-                            fn = iter.value;
+                            fn = tmp2.arg.value;
                             if (fn) {
                               if (typeof fn === "object") {
                                 const call = closure_1.call;
                                 if (typeof call === "unknown") {
-                                  let callResult = tmp9("__await");
+                                  closure_1("__await");
                                 } else {
-                                  callResult = call(fn, "__await");
+                                  call(fn, "__await");
                                 }
-                                tmp9 = closure_1;
                               }
                               fn = (arg0) => {
                                 const tmp2 = closure_1_6(closure_2_0.throw, closure_2_0, arg0);
                                 if ("throw" !== tmp2.type) {
-                                  iter = tmp2.arg;
-                                  value = iter.value;
+                                  value = tmp2.arg.value;
                                   if (value) {
                                     if (typeof value === "object") {
                                       const call = closure_1.call;
                                       if (typeof call === "unknown") {
-                                        let callResult = tmp9("__await");
+                                        let callResult = closure_1("__await");
                                       } else {
                                         callResult = call(value, "__await");
                                       }
@@ -1122,10 +1085,10 @@
                                         closure_2_1.resolve(value.__await).then(() => { ... }, () => { ... });
                                         const resolveResult = closure_2_1.resolve(value.__await);
                                       }
-                                      tmp9 = closure_1;
                                     }
                                   }
                                   closure_2_1.resolve(value).then(() => { ... }, () => { ... });
+                                  iter = tmp2.arg;
                                   const resolveResult1 = closure_2_1.resolve(value);
                                 } else {
                                   closure_1(tmp2.arg);
@@ -1134,13 +1097,12 @@
                               nextPromise = closure_2_1.resolve(fn.__await).then((result) => {
                                 const tmp2 = closure_1_6(closure_2_0.next, closure_2_0, result);
                                 if ("throw" !== tmp2.type) {
-                                  iter = tmp2.arg;
-                                  value = iter.value;
+                                  value = tmp2.arg.value;
                                   if (value) {
                                     if (typeof value === "object") {
                                       const call = closure_1.call;
                                       if (typeof call === "unknown") {
-                                        let callResult = tmp9("__await");
+                                        let callResult = closure_1("__await");
                                       } else {
                                         callResult = call(value, "__await");
                                       }
@@ -1148,10 +1110,10 @@
                                         closure_2_1.resolve(value.__await).then(() => { ... }, () => { ... });
                                         const resolveResult = closure_2_1.resolve(value.__await);
                                       }
-                                      tmp9 = closure_1;
                                     }
                                   }
                                   closure_2_1.resolve(value).then(() => { ... }, () => { ... });
+                                  iter = tmp2.arg;
                                   const resolveResult1 = closure_2_1.resolve(value);
                                 } else {
                                   closure_1(tmp2.arg);
@@ -1165,33 +1127,34 @@
                             }, (arg0) => {
                               const tmp2 = closure_1_6(closure_2_0.throw, closure_2_0, arg0);
                               if ("throw" !== tmp2.type) {
-                                iter = tmp2.arg;
-                                fn = iter.value;
+                                fn = tmp2.arg.value;
                                 if (fn) {
                                   if (typeof fn === "object") {
                                     const call = closure_1.call;
                                     if (typeof call === "unknown") {
-                                      let callResult = tmp9("__await");
+                                      closure_1("__await");
                                     } else {
-                                      callResult = call(fn, "__await");
+                                      call(fn, "__await");
                                     }
-                                    tmp9 = closure_1;
                                   }
                                   fn = () => { ... };
                                   nextPromise = closure_2_1.resolve(fn.__await).then(() => { ... }, fn);
                                   const resolveResult = closure_2_1.resolve(fn.__await);
                                 }
                                 nextPromise = closure_2_1.resolve(fn).then(() => { ... }, () => { ... });
+                                iter = tmp2.arg;
                                 const resolveResult1 = closure_2_1.resolve(fn);
                               } else {
                                 closure_1(tmp2.arg);
                               }
                             });
+                            iter = tmp2.arg;
                             const resolveResult1 = closure_2_1.resolve(fn);
                           } else {
                             closure_1(tmp2.arg);
                           }
                         });
+                        iter = tmp.arg;
                         let resolveResult1 = closure_1.resolve(value);
                       } else {
                         fn(tmp.arg);
@@ -1280,13 +1243,12 @@
                             closure_1 = fn;
                             const tmp = closure_1_6(closure_0[closure_1_0], closure_0, closure_1_1);
                             if ("throw" !== tmp.type) {
-                              iter = tmp.arg;
-                              value = iter.value;
+                              value = tmp.arg.value;
                               if (value) {
                                 if (typeof value === "object") {
                                   let call = closure_1_1.call;
                                   if (typeof call === "unknown") {
-                                    let callResult = tmp8("__await");
+                                    let callResult = closure_1_1("__await");
                                   } else {
                                     callResult = call(value, "__await");
                                   }
@@ -1294,13 +1256,12 @@
                                     closure_1.resolve(value.__await).then((result) => {
                                       const tmp2 = closure_1_6(closure_2_0.next, closure_2_0, result);
                                       if ("throw" !== tmp2.type) {
-                                        iter = tmp2.arg;
-                                        value = iter.value;
+                                        value = tmp2.arg.value;
                                         if (value) {
                                           if (typeof value === "object") {
                                             const call = closure_1.call;
                                             if (typeof call === "unknown") {
-                                              let callResult = tmp9("__await");
+                                              let callResult = closure_1("__await");
                                             } else {
                                               callResult = call(value, "__await");
                                             }
@@ -1308,10 +1269,10 @@
                                               closure_2_1.resolve(value.__await).then(() => { ... }, () => { ... });
                                               const resolveResult = closure_2_1.resolve(value.__await);
                                             }
-                                            tmp9 = closure_1;
                                           }
                                         }
                                         closure_2_1.resolve(value).then(() => { ... }, () => { ... });
+                                        iter = tmp2.arg;
                                         const resolveResult1 = closure_2_1.resolve(value);
                                       } else {
                                         closure_1(tmp2.arg);
@@ -1319,13 +1280,12 @@
                                     }, (arg0) => {
                                       const tmp2 = closure_1_6(closure_2_0.throw, closure_2_0, arg0);
                                       if ("throw" !== tmp2.type) {
-                                        iter = tmp2.arg;
-                                        value = iter.value;
+                                        value = tmp2.arg.value;
                                         if (value) {
                                           if (typeof value === "object") {
                                             const call = closure_1.call;
                                             if (typeof call === "unknown") {
-                                              let callResult = tmp9("__await");
+                                              let callResult = closure_1("__await");
                                             } else {
                                               callResult = call(value, "__await");
                                             }
@@ -1333,10 +1293,10 @@
                                               closure_2_1.resolve(value.__await).then(() => { ... }, () => { ... });
                                               const resolveResult = closure_2_1.resolve(value.__await);
                                             }
-                                            tmp9 = closure_1;
                                           }
                                         }
                                         closure_2_1.resolve(value).then(() => { ... }, () => { ... });
+                                        iter = tmp2.arg;
                                         const resolveResult1 = closure_2_1.resolve(value);
                                       } else {
                                         closure_1(tmp2.arg);
@@ -1344,7 +1304,6 @@
                                     });
                                     let resolveResult = closure_1.resolve(value.__await);
                                   }
-                                  tmp8 = closure_1_1;
                                 }
                               }
                               closure_1.resolve(value).then((value) => {
@@ -1353,28 +1312,28 @@
                               }, (arg0) => {
                                 const tmp2 = closure_1_6(closure_2_0.throw, closure_2_0, arg0);
                                 if ("throw" !== tmp2.type) {
-                                  iter = tmp2.arg;
-                                  fn = iter.value;
+                                  fn = tmp2.arg.value;
                                   if (fn) {
                                     if (typeof fn === "object") {
                                       const call = closure_1.call;
                                       if (typeof call === "unknown") {
-                                        let callResult = tmp9("__await");
+                                        closure_1("__await");
                                       } else {
-                                        callResult = call(fn, "__await");
+                                        call(fn, "__await");
                                       }
-                                      tmp9 = closure_1;
                                     }
                                     fn = () => { ... };
                                     nextPromise = closure_2_1.resolve(fn.__await).then(() => { ... }, fn);
                                     const resolveResult = closure_2_1.resolve(fn.__await);
                                   }
                                   nextPromise = closure_2_1.resolve(fn).then(() => { ... }, () => { ... });
+                                  iter = tmp2.arg;
                                   const resolveResult1 = closure_2_1.resolve(fn);
                                 } else {
                                   closure_1(tmp2.arg);
                                 }
                               });
+                              iter = tmp.arg;
                               let resolveResult1 = closure_1.resolve(value);
                             } else {
                               fn(tmp.arg);
@@ -1388,13 +1347,12 @@
                           closure_1 = fn;
                           const tmp = closure_1_6(closure_0[closure_1_0], closure_0, closure_1_1);
                           if ("throw" !== tmp.type) {
-                            iter = tmp.arg;
-                            value = iter.value;
+                            value = tmp.arg.value;
                             if (value) {
                               if (typeof value === "object") {
                                 let call = closure_1_1.call;
                                 if (typeof call === "unknown") {
-                                  let callResult = tmp8("__await");
+                                  let callResult = closure_1_1("__await");
                                 } else {
                                   callResult = call(value, "__await");
                                 }
@@ -1402,13 +1360,12 @@
                                   closure_1.resolve(value.__await).then((result) => {
                                     const tmp2 = closure_1_6(closure_2_0.next, closure_2_0, result);
                                     if ("throw" !== tmp2.type) {
-                                      iter = tmp2.arg;
-                                      value = iter.value;
+                                      value = tmp2.arg.value;
                                       if (value) {
                                         if (typeof value === "object") {
                                           const call = closure_1.call;
                                           if (typeof call === "unknown") {
-                                            let callResult = tmp9("__await");
+                                            let callResult = closure_1("__await");
                                           } else {
                                             callResult = call(value, "__await");
                                           }
@@ -1416,13 +1373,12 @@
                                             closure_2_1.resolve(value.__await).then((result) => {
                                               const tmp2 = closure_1_6(closure_2_0.next, closure_2_0, result);
                                               if ("throw" !== tmp2.type) {
-                                                iter = tmp2.arg;
-                                                value = iter.value;
+                                                value = tmp2.arg.value;
                                                 if (value) {
                                                   if (typeof value === "object") {
                                                     const call = closure_1.call;
                                                     if (typeof call === "unknown") {
-                                                      let callResult = tmp9("__await");
+                                                      let callResult = closure_1("__await");
                                                     } else {
                                                       callResult = call(value, "__await");
                                                     }
@@ -1430,10 +1386,10 @@
                                                       closure_2_1.resolve(value.__await).then(() => { ... }, () => { ... });
                                                       const resolveResult = closure_2_1.resolve(value.__await);
                                                     }
-                                                    tmp9 = closure_1;
                                                   }
                                                 }
                                                 closure_2_1.resolve(value).then(() => { ... }, () => { ... });
+                                                iter = tmp2.arg;
                                                 const resolveResult1 = closure_2_1.resolve(value);
                                               } else {
                                                 closure_1(tmp2.arg);
@@ -1441,13 +1397,12 @@
                                             }, (arg0) => {
                                               const tmp2 = closure_1_6(closure_2_0.throw, closure_2_0, arg0);
                                               if ("throw" !== tmp2.type) {
-                                                iter = tmp2.arg;
-                                                value = iter.value;
+                                                value = tmp2.arg.value;
                                                 if (value) {
                                                   if (typeof value === "object") {
                                                     const call = closure_1.call;
                                                     if (typeof call === "unknown") {
-                                                      let callResult = tmp9("__await");
+                                                      let callResult = closure_1("__await");
                                                     } else {
                                                       callResult = call(value, "__await");
                                                     }
@@ -1455,10 +1410,10 @@
                                                       closure_2_1.resolve(value.__await).then(() => { ... }, () => { ... });
                                                       const resolveResult = closure_2_1.resolve(value.__await);
                                                     }
-                                                    tmp9 = closure_1;
                                                   }
                                                 }
                                                 closure_2_1.resolve(value).then(() => { ... }, () => { ... });
+                                                iter = tmp2.arg;
                                                 const resolveResult1 = closure_2_1.resolve(value);
                                               } else {
                                                 closure_1(tmp2.arg);
@@ -1466,7 +1421,6 @@
                                             });
                                             const resolveResult = closure_2_1.resolve(value.__await);
                                           }
-                                          tmp9 = closure_1;
                                         }
                                       }
                                       closure_2_1.resolve(value).then((value) => {
@@ -1475,28 +1429,28 @@
                                       }, (arg0) => {
                                         const tmp2 = closure_1_6(closure_2_0.throw, closure_2_0, arg0);
                                         if ("throw" !== tmp2.type) {
-                                          iter = tmp2.arg;
-                                          fn = iter.value;
+                                          fn = tmp2.arg.value;
                                           if (fn) {
                                             if (typeof fn === "object") {
                                               const call = closure_1.call;
                                               if (typeof call === "unknown") {
-                                                let callResult = tmp9("__await");
+                                                closure_1("__await");
                                               } else {
-                                                callResult = call(fn, "__await");
+                                                call(fn, "__await");
                                               }
-                                              tmp9 = closure_1;
                                             }
                                             fn = () => { ... };
                                             nextPromise = closure_2_1.resolve(fn.__await).then(() => { ... }, fn);
                                             const resolveResult = closure_2_1.resolve(fn.__await);
                                           }
                                           nextPromise = closure_2_1.resolve(fn).then(() => { ... }, () => { ... });
+                                          iter = tmp2.arg;
                                           const resolveResult1 = closure_2_1.resolve(fn);
                                         } else {
                                           closure_1(tmp2.arg);
                                         }
                                       });
+                                      iter = tmp2.arg;
                                       const resolveResult1 = closure_2_1.resolve(value);
                                     } else {
                                       closure_1(tmp2.arg);
@@ -1504,13 +1458,12 @@
                                   }, (arg0) => {
                                     const tmp2 = closure_1_6(closure_2_0.throw, closure_2_0, arg0);
                                     if ("throw" !== tmp2.type) {
-                                      iter = tmp2.arg;
-                                      value = iter.value;
+                                      value = tmp2.arg.value;
                                       if (value) {
                                         if (typeof value === "object") {
                                           const call = closure_1.call;
                                           if (typeof call === "unknown") {
-                                            let callResult = tmp9("__await");
+                                            let callResult = closure_1("__await");
                                           } else {
                                             callResult = call(value, "__await");
                                           }
@@ -1518,13 +1471,12 @@
                                             closure_2_1.resolve(value.__await).then((result) => {
                                               const tmp2 = closure_1_6(closure_2_0.next, closure_2_0, result);
                                               if ("throw" !== tmp2.type) {
-                                                iter = tmp2.arg;
-                                                value = iter.value;
+                                                value = tmp2.arg.value;
                                                 if (value) {
                                                   if (typeof value === "object") {
                                                     const call = closure_1.call;
                                                     if (typeof call === "unknown") {
-                                                      let callResult = tmp9("__await");
+                                                      let callResult = closure_1("__await");
                                                     } else {
                                                       callResult = call(value, "__await");
                                                     }
@@ -1532,10 +1484,10 @@
                                                       closure_2_1.resolve(value.__await).then(() => { ... }, () => { ... });
                                                       const resolveResult = closure_2_1.resolve(value.__await);
                                                     }
-                                                    tmp9 = closure_1;
                                                   }
                                                 }
                                                 closure_2_1.resolve(value).then(() => { ... }, () => { ... });
+                                                iter = tmp2.arg;
                                                 const resolveResult1 = closure_2_1.resolve(value);
                                               } else {
                                                 closure_1(tmp2.arg);
@@ -1543,13 +1495,12 @@
                                             }, (arg0) => {
                                               const tmp2 = closure_1_6(closure_2_0.throw, closure_2_0, arg0);
                                               if ("throw" !== tmp2.type) {
-                                                iter = tmp2.arg;
-                                                value = iter.value;
+                                                value = tmp2.arg.value;
                                                 if (value) {
                                                   if (typeof value === "object") {
                                                     const call = closure_1.call;
                                                     if (typeof call === "unknown") {
-                                                      let callResult = tmp9("__await");
+                                                      let callResult = closure_1("__await");
                                                     } else {
                                                       callResult = call(value, "__await");
                                                     }
@@ -1557,10 +1508,10 @@
                                                       closure_2_1.resolve(value.__await).then(() => { ... }, () => { ... });
                                                       const resolveResult = closure_2_1.resolve(value.__await);
                                                     }
-                                                    tmp9 = closure_1;
                                                   }
                                                 }
                                                 closure_2_1.resolve(value).then(() => { ... }, () => { ... });
+                                                iter = tmp2.arg;
                                                 const resolveResult1 = closure_2_1.resolve(value);
                                               } else {
                                                 closure_1(tmp2.arg);
@@ -1568,7 +1519,6 @@
                                             });
                                             const resolveResult = closure_2_1.resolve(value.__await);
                                           }
-                                          tmp9 = closure_1;
                                         }
                                       }
                                       closure_2_1.resolve(value).then((value) => {
@@ -1577,28 +1527,28 @@
                                       }, (arg0) => {
                                         const tmp2 = closure_1_6(closure_2_0.throw, closure_2_0, arg0);
                                         if ("throw" !== tmp2.type) {
-                                          iter = tmp2.arg;
-                                          fn = iter.value;
+                                          fn = tmp2.arg.value;
                                           if (fn) {
                                             if (typeof fn === "object") {
                                               const call = closure_1.call;
                                               if (typeof call === "unknown") {
-                                                let callResult = tmp9("__await");
+                                                closure_1("__await");
                                               } else {
-                                                callResult = call(fn, "__await");
+                                                call(fn, "__await");
                                               }
-                                              tmp9 = closure_1;
                                             }
                                             fn = () => { ... };
                                             nextPromise = closure_2_1.resolve(fn.__await).then(() => { ... }, fn);
                                             const resolveResult = closure_2_1.resolve(fn.__await);
                                           }
                                           nextPromise = closure_2_1.resolve(fn).then(() => { ... }, () => { ... });
+                                          iter = tmp2.arg;
                                           const resolveResult1 = closure_2_1.resolve(fn);
                                         } else {
                                           closure_1(tmp2.arg);
                                         }
                                       });
+                                      iter = tmp2.arg;
                                       const resolveResult1 = closure_2_1.resolve(value);
                                     } else {
                                       closure_1(tmp2.arg);
@@ -1606,7 +1556,6 @@
                                   });
                                   let resolveResult = closure_1.resolve(value.__await);
                                 }
-                                tmp8 = closure_1_1;
                               }
                             }
                             closure_1.resolve(value).then((value) => {
@@ -1615,28 +1564,25 @@
                             }, (arg0) => {
                               const tmp2 = closure_1_6(closure_2_0.throw, closure_2_0, arg0);
                               if ("throw" !== tmp2.type) {
-                                iter = tmp2.arg;
-                                fn = iter.value;
+                                fn = tmp2.arg.value;
                                 if (fn) {
                                   if (typeof fn === "object") {
                                     const call = closure_1.call;
                                     if (typeof call === "unknown") {
-                                      let callResult = tmp9("__await");
+                                      closure_1("__await");
                                     } else {
-                                      callResult = call(fn, "__await");
+                                      call(fn, "__await");
                                     }
-                                    tmp9 = closure_1;
                                   }
                                   fn = (arg0) => {
                                     const tmp2 = closure_1_6(closure_2_0.throw, closure_2_0, arg0);
                                     if ("throw" !== tmp2.type) {
-                                      iter = tmp2.arg;
-                                      value = iter.value;
+                                      value = tmp2.arg.value;
                                       if (value) {
                                         if (typeof value === "object") {
                                           const call = closure_1.call;
                                           if (typeof call === "unknown") {
-                                            let callResult = tmp9("__await");
+                                            let callResult = closure_1("__await");
                                           } else {
                                             callResult = call(value, "__await");
                                           }
@@ -1644,10 +1590,10 @@
                                             closure_2_1.resolve(value.__await).then(() => { ... }, () => { ... });
                                             const resolveResult = closure_2_1.resolve(value.__await);
                                           }
-                                          tmp9 = closure_1;
                                         }
                                       }
                                       closure_2_1.resolve(value).then(() => { ... }, () => { ... });
+                                      iter = tmp2.arg;
                                       const resolveResult1 = closure_2_1.resolve(value);
                                     } else {
                                       closure_1(tmp2.arg);
@@ -1656,13 +1602,12 @@
                                   nextPromise = closure_2_1.resolve(fn.__await).then((result) => {
                                     const tmp2 = closure_1_6(closure_2_0.next, closure_2_0, result);
                                     if ("throw" !== tmp2.type) {
-                                      iter = tmp2.arg;
-                                      value = iter.value;
+                                      value = tmp2.arg.value;
                                       if (value) {
                                         if (typeof value === "object") {
                                           const call = closure_1.call;
                                           if (typeof call === "unknown") {
-                                            let callResult = tmp9("__await");
+                                            let callResult = closure_1("__await");
                                           } else {
                                             callResult = call(value, "__await");
                                           }
@@ -1670,10 +1615,10 @@
                                             closure_2_1.resolve(value.__await).then(() => { ... }, () => { ... });
                                             const resolveResult = closure_2_1.resolve(value.__await);
                                           }
-                                          tmp9 = closure_1;
                                         }
                                       }
                                       closure_2_1.resolve(value).then(() => { ... }, () => { ... });
+                                      iter = tmp2.arg;
                                       const resolveResult1 = closure_2_1.resolve(value);
                                     } else {
                                       closure_1(tmp2.arg);
@@ -1687,33 +1632,34 @@
                                 }, (arg0) => {
                                   const tmp2 = closure_1_6(closure_2_0.throw, closure_2_0, arg0);
                                   if ("throw" !== tmp2.type) {
-                                    iter = tmp2.arg;
-                                    fn = iter.value;
+                                    fn = tmp2.arg.value;
                                     if (fn) {
                                       if (typeof fn === "object") {
                                         const call = closure_1.call;
                                         if (typeof call === "unknown") {
-                                          let callResult = tmp9("__await");
+                                          closure_1("__await");
                                         } else {
-                                          callResult = call(fn, "__await");
+                                          call(fn, "__await");
                                         }
-                                        tmp9 = closure_1;
                                       }
                                       fn = () => { ... };
                                       nextPromise = closure_2_1.resolve(fn.__await).then(() => { ... }, fn);
                                       const resolveResult = closure_2_1.resolve(fn.__await);
                                     }
                                     nextPromise = closure_2_1.resolve(fn).then(() => { ... }, () => { ... });
+                                    iter = tmp2.arg;
                                     const resolveResult1 = closure_2_1.resolve(fn);
                                   } else {
                                     closure_1(tmp2.arg);
                                   }
                                 });
+                                iter = tmp2.arg;
                                 const resolveResult1 = closure_2_1.resolve(fn);
                               } else {
                                 closure_1(tmp2.arg);
                               }
                             });
+                            iter = tmp.arg;
                             let resolveResult1 = closure_1.resolve(value);
                           } else {
                             fn(tmp.arg);
@@ -1864,13 +1810,12 @@
                   closure_1 = fn;
                   const tmp = closure_1_6(closure_0[closure_1_0], closure_0, closure_1_1);
                   if ("throw" !== tmp.type) {
-                    iter = tmp.arg;
-                    value = iter.value;
+                    value = tmp.arg.value;
                     if (value) {
                       if (typeof value === "object") {
                         let call = closure_1_1.call;
                         if (typeof call === "unknown") {
-                          let callResult = tmp8("__await");
+                          let callResult = closure_1_1("__await");
                         } else {
                           callResult = call(value, "__await");
                         }
@@ -1878,10 +1823,10 @@
                           closure_1.resolve(value.__await).then(() => { ... }, () => { ... });
                           let resolveResult = closure_1.resolve(value.__await);
                         }
-                        tmp8 = closure_1_1;
                       }
                     }
                     closure_1.resolve(value).then(() => { ... }, () => { ... });
+                    iter = tmp.arg;
                     let resolveResult1 = closure_1.resolve(value);
                   } else {
                     fn(tmp.arg);
@@ -1895,13 +1840,12 @@
                 closure_1 = fn;
                 const tmp = closure_1_6(closure_0[closure_1_0], closure_0, closure_1_1);
                 if ("throw" !== tmp.type) {
-                  iter = tmp.arg;
-                  value = iter.value;
+                  value = tmp.arg.value;
                   if (value) {
                     if (typeof value === "object") {
                       let call = closure_1_1.call;
                       if (typeof call === "unknown") {
-                        let callResult = tmp8("__await");
+                        let callResult = closure_1_1("__await");
                       } else {
                         callResult = call(value, "__await");
                       }
@@ -1909,13 +1853,12 @@
                         closure_1.resolve(value.__await).then((result) => {
                           const tmp2 = closure_1_6(closure_2_0.next, closure_2_0, result);
                           if ("throw" !== tmp2.type) {
-                            iter = tmp2.arg;
-                            value = iter.value;
+                            value = tmp2.arg.value;
                             if (value) {
                               if (typeof value === "object") {
                                 const call = closure_1.call;
                                 if (typeof call === "unknown") {
-                                  let callResult = tmp9("__await");
+                                  let callResult = closure_1("__await");
                                 } else {
                                   callResult = call(value, "__await");
                                 }
@@ -1923,10 +1866,10 @@
                                   closure_2_1.resolve(value.__await).then(() => { ... }, () => { ... });
                                   const resolveResult = closure_2_1.resolve(value.__await);
                                 }
-                                tmp9 = closure_1;
                               }
                             }
                             closure_2_1.resolve(value).then(() => { ... }, () => { ... });
+                            iter = tmp2.arg;
                             const resolveResult1 = closure_2_1.resolve(value);
                           } else {
                             closure_1(tmp2.arg);
@@ -1934,13 +1877,12 @@
                         }, (arg0) => {
                           const tmp2 = closure_1_6(closure_2_0.throw, closure_2_0, arg0);
                           if ("throw" !== tmp2.type) {
-                            iter = tmp2.arg;
-                            value = iter.value;
+                            value = tmp2.arg.value;
                             if (value) {
                               if (typeof value === "object") {
                                 const call = closure_1.call;
                                 if (typeof call === "unknown") {
-                                  let callResult = tmp9("__await");
+                                  let callResult = closure_1("__await");
                                 } else {
                                   callResult = call(value, "__await");
                                 }
@@ -1948,10 +1890,10 @@
                                   closure_2_1.resolve(value.__await).then(() => { ... }, () => { ... });
                                   const resolveResult = closure_2_1.resolve(value.__await);
                                 }
-                                tmp9 = closure_1;
                               }
                             }
                             closure_2_1.resolve(value).then(() => { ... }, () => { ... });
+                            iter = tmp2.arg;
                             const resolveResult1 = closure_2_1.resolve(value);
                           } else {
                             closure_1(tmp2.arg);
@@ -1959,7 +1901,6 @@
                         });
                         let resolveResult = closure_1.resolve(value.__await);
                       }
-                      tmp8 = closure_1_1;
                     }
                   }
                   closure_1.resolve(value).then((value) => {
@@ -1968,28 +1909,28 @@
                   }, (arg0) => {
                     const tmp2 = closure_1_6(closure_2_0.throw, closure_2_0, arg0);
                     if ("throw" !== tmp2.type) {
-                      iter = tmp2.arg;
-                      fn = iter.value;
+                      fn = tmp2.arg.value;
                       if (fn) {
                         if (typeof fn === "object") {
                           const call = closure_1.call;
                           if (typeof call === "unknown") {
-                            let callResult = tmp9("__await");
+                            closure_1("__await");
                           } else {
-                            callResult = call(fn, "__await");
+                            call(fn, "__await");
                           }
-                          tmp9 = closure_1;
                         }
                         fn = () => { ... };
                         nextPromise = closure_2_1.resolve(fn.__await).then(() => { ... }, fn);
                         const resolveResult = closure_2_1.resolve(fn.__await);
                       }
                       nextPromise = closure_2_1.resolve(fn).then(() => { ... }, () => { ... });
+                      iter = tmp2.arg;
                       const resolveResult1 = closure_2_1.resolve(fn);
                     } else {
                       closure_1(tmp2.arg);
                     }
                   });
+                  iter = tmp.arg;
                   let resolveResult1 = closure_1.resolve(value);
                 } else {
                   fn(tmp.arg);
@@ -2063,10 +2004,9 @@
                     }
                     continue;
                   } else {
-                    let tmp4 = hasOwnProperty;
                     let call = hasOwnProperty.call;
                     if (typeof call === "unknown") {
-                      let callResult = tmp4(key10018);
+                      let callResult = hasOwnProperty(key10018);
                     } else {
                       callResult = call(obj, key10018);
                     }
@@ -2093,11 +2033,10 @@
                   const completion = tmp2.completion;
                   while ("root" !== self.tryEntries[diff].tryLoc) {
                     if (tmp2.tryLoc <= self.prev) {
-                      let tmp11 = hasOwnProperty;
                       let call2 = hasOwnProperty.call;
-                      let tmp4 = typeof call2 === "unknown" ? tmp11("catchLoc") : call2(tmp2, "catchLoc");
-                      let call = tmp11.call;
-                      let tmp5 = typeof call === "unknown" ? tmp11("finallyLoc") : call(tmp2, "finallyLoc");
+                      let tmp4 = typeof call2 === "unknown" ? hasOwnProperty("catchLoc") : call2(tmp2, "catchLoc");
+                      let call = hasOwnProperty.call;
+                      let tmp5 = typeof call === "unknown" ? hasOwnProperty("finallyLoc") : call(tmp2, "finallyLoc");
                       if (tmp4) {
                         if (tmp5) {
                           if (self.prev < tmp2.catchLoc) {
@@ -2168,9 +2107,8 @@
                 while (true) {
                   let tmp3 = self.tryEntries[diff];
                   if (tmp3.tryLoc <= self.prev) {
-                    let tmp5 = hasOwnProperty;
                     let call = hasOwnProperty.call;
-                    if (typeof call === "unknown" ? tmp5("finallyLoc") : call(tmp3, "finallyLoc")) {
+                    if (typeof call === "unknown" ? hasOwnProperty("finallyLoc") : call(tmp3, "finallyLoc")) {
                       tmp2 = tmp3;
                       if (self.prev < tmp3.finallyLoc) {
                         break;
@@ -2290,22 +2228,19 @@
                   if (!isNaN(next.length)) {
                     let sum1 = -1;
                     next = function next() {
-                      let arr;
                       const sum = sum1 + 1;
                       sum1 = sum;
                       if (sum < next.length) {
                         while (true) {
-                          let tmp2 = hasOwnProperty;
                           let call = hasOwnProperty.call;
-                          arr = next;
                           let tmp3 = sum1;
-                          if (typeof call === "unknown" ? tmp2(tmp3) : call(arr, tmp3)) {
+                          if (typeof call === "unknown" ? hasOwnProperty(tmp3) : call(next, tmp3)) {
                             break;
                           } else {
                             sum1 = sum1 + 1;
                           }
                         }
-                        next.value = arr[sum1];
+                        next.value = next[sum1];
                         next.done = false;
                         return next;
                       }

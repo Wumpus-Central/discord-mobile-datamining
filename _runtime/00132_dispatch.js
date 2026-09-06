@@ -1,6 +1,7 @@
 // === Module 132: dispatch ===
 
 // Module 132 (dispatch)
+import _modAll27 from "module_27" /* 27 */;
 import EventDefault from "Event" /* 133 */;
 import COMPOSED_PATH_KEY from "COMPOSED_PATH_KEY" /* 134 */;
 import EVENT_TARGET_GET_THE_PARENT_KEY from "EVENT_TARGET_GET_THE_PARENT_KEY" /* 135 */;
@@ -29,7 +30,6 @@ function dispatch(self, bubbles) {
     if (!tmp3Result.getStopPropagationFlag(bubbles)) {
       while (true) {
         let tmp9 = arr[diff];
-        let tmp11 = require;
         let obj3 = COMPOSED_PATH_KEY;
         if (tmp9 === self) {
           let tmp16 = importDefault;
@@ -44,7 +44,7 @@ function dispatch(self, bubbles) {
         if (0 > diff1) {
           break;
         } else {
-          let tmp11Result = tmp11(134);
+          let tmp11Result = COMPOSED_PATH_KEY;
           diff = diff1;
           if (tmp11Result.getStopPropagationFlag(bubbles)) {
             break;
@@ -55,22 +55,20 @@ function dispatch(self, bubbles) {
     tmp3Result = COMPOSED_PATH_KEY;
   }
   for (const item10062 of arr) {
-    let tmp28 = item10062;
-    let tmp30 = require;
     let obj6 = COMPOSED_PATH_KEY;
     if (obj6.getStopPropagationFlag(arg1)) {
       obj5.return();
       break;
     } else {
       if (!arg1.bubbles) {
-        if (tmp28 !== arg0) {
+        if (item10062 !== arg0) {
           obj5.return();
           break;
         }
         break;
       }
-      let tmp30Result = tmp30(134);
-      if (tmp28 === arg0) {
+      let tmp30Result = COMPOSED_PATH_KEY;
+      if (item10062 === arg0) {
         let tmp39 = importDefault;
         let BUBBLING_PHASE = EventDefault.AT_TARGET;
       } else {
@@ -78,7 +76,7 @@ function dispatch(self, bubbles) {
         BUBBLING_PHASE = EventDefault.BUBBLING_PHASE;
       }
       let setEventPhaseResult1 = tmp30Result.setEventPhase(arg1, BUBBLING_PHASE);
-      let tmp48 = invoke(tmp28, arg1, tmp39(133).BUBBLING_PHASE);
+      let tmp48 = invoke(item10062, arg1, tmp39(133).BUBBLING_PHASE);
       continue;
     }
     let obj8 = COMPOSED_PATH_KEY;
@@ -95,13 +93,13 @@ function dispatch(self, bubbles) {
     let result1 = obj12.setStopPropagationFlag(arg1, false);
   }
 }
-function invoke(arg0, type, arg2) {
+function invoke(_null, type, arg2) {
   const tmp3 = arg2 === EventDefault.CAPTURING_PHASE;
   let obj = COMPOSED_PATH_KEY;
-  obj.setCurrentTarget(type, arg0);
+  obj.setCurrentTarget(type, _null);
   if (obj2.enableNativeEventTargetEventDispatching()) {
-    const tmp14 = arg0[tmp5(undefined, 135).EVENT_TARGET_GET_DECLARATIVE_LISTENER_KEY](type.type, tmp3);
-    const obj4 = getListenersForPhase(arg0, tmp3);
+    const tmp14 = _null[EVENT_TARGET_GET_THE_PARENT_KEY.EVENT_TARGET_GET_DECLARATIVE_LISTENER_KEY](type.type, tmp3);
+    const obj4 = getListenersForPhase(_null, tmp3);
     value = undefined;
     if (obj4 != null) {
       value = obj4.get(type.type);
@@ -122,7 +120,7 @@ function invoke(arg0, type, arg2) {
     }
     arr1[Symbol.iterator]();
   } else {
-    const obj3 = getListenersForPhase(arg0, tmp3);
+    const obj3 = getListenersForPhase(_null, tmp3);
     value = undefined;
     if (obj3 != null) {
       value = obj3.get(type.type);
@@ -132,12 +130,13 @@ function invoke(arg0, type, arg2) {
       arr1 = Array.from(value.values());
     }
   }
+  obj2 = _modAll27;
 }
-function getListenersForPhase(arg0, arg1) {
+function getListenersForPhase(_null, arg1) {
   if (arg1) {
-    let tmp2 = arg0[closure_8];
+    let tmp2 = _null[closure_8];
   } else {
-    tmp2 = arg0[closure_9];
+    tmp2 = _null[closure_9];
   }
   return tmp2;
 }
@@ -153,7 +152,6 @@ class EventTarget {
 const entry = {
   key: "addEventListener",
   value: function addEventListener(arg0, callback) {
-    closure_0 = callback;
     let obj = arg2;
     if (arg2 === undefined) {
       obj = {};
@@ -216,9 +214,9 @@ const entry = {
               c2 = value;
               if (null != tmp7) {
                 const listener = tmp7.addEventListener("abort", () => {
-                  obj.removed = true;
+                  _undefined.removed = true;
                   if (_undefined.get(closure_0) === _undefined) {
-                    obj.delete(closure_0);
+                    _undefined.delete(closure_0);
                   }
                 }, { once: true });
               }

@@ -46,10 +46,10 @@ const entry = {
     const t = Comparator(14020).t;
     if (this.options.loose) {
       let tmp3 = safeRe[t.COMPARATORLOOSE];
-      let tmp5 = tmp;
+      let tmp5 = Comparator;
     } else {
       tmp3 = safeRe[t.COMPARATOR];
-      tmp5 = tmp;
+      tmp5 = Comparator;
     }
     const match = str.match(tmp3);
     if (match) {
@@ -93,12 +93,12 @@ const items = [
         if (tmp !== tmp5) {
           if (typeof tmp === "string") {
             try {
-              tmp = new tmp2(14016)(tmp, self.options);
+              tmp = new Comparator(14016)(tmp, self.options);
             } catch (err) {
               return false;
             }
           }
-          return tmp2(14042)(tmp, self.operator, self.semver, self.options);
+          return Comparator(14042)(tmp, self.operator, self.semver, self.options);
         }
       }
       return true;

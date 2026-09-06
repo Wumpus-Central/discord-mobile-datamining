@@ -48,15 +48,15 @@ export const createAttachmentEnvelopeItem = function createAttachmentEnvelopeIte
     return items;
   }
 };
-export function createEnvelope(arg0) {
-  let items = arg1;
-  if (arg1 === undefined) {
+export function createEnvelope(eventEnvelopeHeaders) {
+  let items = items1;
+  if (items1 === undefined) {
     items = [];
   }
-  const items1 = [arg0, items];
+  items1 = [eventEnvelopeHeaders, items];
   return items1;
 }
-export const createEventEnvelopeHeaders = function createEventEnvelopeHeaders(event_id, sdk, arg2, arg3) {
+export const createEventEnvelopeHeaders = function createEventEnvelopeHeaders(event_id, sdk, arg2, url) {
   const sdkProcessingMetadata = event_id.sdkProcessingMetadata;
   let prop;
   if (sdkProcessingMetadata != null) {
@@ -69,9 +69,9 @@ export const createEventEnvelopeHeaders = function createEventEnvelopeHeaders(ev
     tmp2 = obj;
   }
   const merged = Object.assign(tmp2);
-  let tmp4 = arg2 && arg3;
+  let tmp4 = arg2 && url;
   if (tmp4) {
-    obj = { dsn: _mod702.dsnToString(arg3) };
+    obj = { dsn: _mod702.dsnToString(url) };
     tmp4 = obj;
   }
   const merged1 = Object.assign(tmp4);
@@ -158,7 +158,7 @@ export const parseEnvelope = function parseEnvelope(arr) {
     const obj = require("module_690");
   }
 };
-export const serializeEnvelope = function serializeEnvelope(arg0) {
+export const serializeEnvelope = function serializeEnvelope(dependencyMap) {
   function append(json) {
     let arr = sum;
     if (typeof sum === "string") {
@@ -188,7 +188,7 @@ export const serializeEnvelope = function serializeEnvelope(arg0) {
       }
     }
   }
-  const tmp4 = _slicedToArray(arg0, 2);
+  const tmp4 = _slicedToArray(dependencyMap, 2);
   const require = JSON.stringify(tmp4[0]);
   if (tmp5 === undefined) {
     let tmp22 = require;
@@ -228,4 +228,5 @@ export const serializeEnvelope = function serializeEnvelope(arg0) {
     }
     append(tmp8[1]);
   }
+  tmp5 = tmp4[1][Symbol.iterator]();
 };

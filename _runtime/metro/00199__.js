@@ -203,8 +203,8 @@ const items1 = [
         const _HermesInternal2 = HermesInternal;
         XMLHttpRequest(38)(tmp9, "The provided value '" + _responseType + "' is unsupported in this environment.");
         if ("blob" === _responseType) {
-          tmp6(38)(tmp6(200).default.isAvailable, "Native module BlobModule is required for blob support");
-          const tmp6Result = tmp6(38);
+          XMLHttpRequest(38)(XMLHttpRequest(200).default.isAvailable, "Native module BlobModule is required for blob support");
+          const tmp6Result = XMLHttpRequest(38);
         }
         tmp._responseType = _responseType;
         const tmp8 = XMLHttpRequest(38);
@@ -422,11 +422,11 @@ const items1 = [
         const _interceptor = XMLHttpRequest._interceptor;
         if (_response) {
           if (_interceptor) {
-            const _interceptor3 = tmp6._interceptor;
+            const _interceptor3 = XMLHttpRequest._interceptor;
             _interceptor3.loadingFailed(arg0, _response);
           }
         } else if (_interceptor) {
-          const _interceptor2 = tmp6._interceptor;
+          const _interceptor2 = XMLHttpRequest._interceptor;
           _interceptor2.loadingFinished(arg0, self._response.length);
         }
       }
@@ -636,6 +636,7 @@ const items1 = [
         ({ _method, _trackingName } = self);
         ({ __didCreateRequest, _url: _url2, _headers, timeout } = self);
         _default7.sendRequest(_method, _trackingName, _url2, _headers, arg0, str7, self._incrementalEvents || self.onreadystatechange || self.onprogress, timeout, __didCreateRequest.bind(self), self.withCredentials);
+        const _default6 = XMLHttpRequest(208).default;
       }
     }
   },

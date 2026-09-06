@@ -27,10 +27,10 @@ function createWithEqualityFnImpl(arg0, arg1) {
   return useBoundStoreWithEqualityFn;
 }
 
-export const createWithEqualityFn = (arg0, arg1) => {
+export const createWithEqualityFn = (arg0, shallow) => {
   if (arg0) {
-    if (typeof tmp === "function") {
-      _require = arg1;
+    if (typeof createWithEqualityFnImpl === "function") {
+      _require = shallow;
       store = require("module_561").createStore(arg0);
       function useBoundStoreWithEqualityFn(arg0) {
         let tmp = arg1;
@@ -53,11 +53,11 @@ export const createWithEqualityFn = (arg0, arg1) => {
       throw new TypeError("Trying to call a non-function");
     }
   } else {
-    tmp2 = tmp;
+    tmp2 = createWithEqualityFnImpl;
   }
   return tmp2;
 };
-export const useStoreWithEqualityFn = function useStoreWithEqualityFn(subscribe, arg1, shallow) {
+export const useStoreWithEqualityFn = function useStoreWithEqualityFn(subscribe, arg1) {
   let tmp = arg1;
   if (arg1 === undefined) {
     tmp = identity;

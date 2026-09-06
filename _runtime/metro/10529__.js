@@ -68,9 +68,9 @@ const items = [
       const tmp4 = NLMonthNameParser(10526).MONTH_DICTIONARY[arg1[1].toLowerCase(arg1[1])];
       parsingComponents.assign("month", tmp4);
       if (arg1[2]) {
-        parsingComponents.assign("year", tmp2(10526).parseYear(arg1[2]));
+        parsingComponents.assign("year", NLMonthNameParser(10526).parseYear(arg1[2]));
       } else {
-        parsingComponents.imply("year", tmp2(10433).findYearClosestToRef(createParsingComponents.refDate, 1, tmp4));
+        parsingComponents.imply("year", NLMonthNameParser(10433).findYearClosestToRef(createParsingComponents.refDate, 1, tmp4));
       }
       return parsingComponents;
     }

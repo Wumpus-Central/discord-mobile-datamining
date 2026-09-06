@@ -7,7 +7,7 @@ const require = arg1;
 function processEvent(arg0, arg1) {
   closure_0 = arg0;
   closure_1 = arg1;
-  return fn(this, undefined, undefined, function*(arg0, value) {
+  return fn(this, undefined, undefined, function*() {
     if (v32 === 2) {
       v32 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -190,7 +190,7 @@ function processEvent(arg0, arg1) {
 }
 function symbolicate(arg0) {
   closure_0 = arg0;
-  return fn(undefined, undefined, undefined, function*(arg0, value) {
+  return fn(undefined, undefined, undefined, function*() {
     if (c5 === 2) {
       c5 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -279,7 +279,7 @@ function symbolicate(arg0) {
                 return closure_3(undefined, undefined, undefined, function() {
                   const self = this;
                   c1 = 0;
-                  return (function*(arg0, value) {
+                  return (function*(arg0) {
                     if (c1 === 2) {
                       c1 = 3;
                       throw new TypeError("Generator functions may not be called on executing generators");

@@ -45,7 +45,7 @@ module_1639.__init = fn;
 const VALID_ARRAY_VIEWS_NAMES = ["Int8Array", "Uint8Array", "Uint8ClampedArray", "Int16Array", "Uint16Array", "Int32Array", "Uint32Array", "Float32Array", "Float64Array", "BigInt64Array", "BigUint64Array", "DataView"];
 const tmp3 = module_1639 ? (function makeShareableCloneRecursiveWeb(arg0) {
   return arg0;
-}) : (function makeShareableCloneRecursiveNative(__workletContextObjectFactory, flag, shareableMappingCache12) {
+}) : (function makeShareableCloneRecursiveNative(__workletContextObjectFactory) {
   if (flag === undefined) {
     flag = false;
   }
@@ -145,12 +145,11 @@ const tmp3 = module_1639 ? (function makeShareableCloneRecursiveWeb(arg0) {
                       let tmp7 = _slicedToArray(tmp5, 2);
                       [tmp8, tmp10] = tmp7;
                       let tmp11 = "__initData" === tmp8;
-                      let tmp9 = tmp8;
                       if (tmp11) {
                         tmp11 = undefined !== obj.__initData;
                       }
                       if (!tmp11) {
-                        obj[tmp9] = closure_1_10(tmp10, flag, shareableMappingCache12 + 1);
+                        obj[tmp8] = closure_1_10(tmp10, flag, shareableMappingCache12 + 1);
                       }
                       continue;
                     }
@@ -232,10 +231,10 @@ const tmp3 = module_1639 ? (function makeShareableCloneRecursiveWeb(arg0) {
                           const obj4 = { __init: null };
                           const fn = function s() {
                             if (closure_9.includes(name)) {
-                              let tmp10 = global[tmp];
+                              let tmp10 = global[name];
                               if (undefined === tmp10) {
                                 const _HermesInternal2 = HermesInternal;
-                                const reanimatedError = new require("module_1647").ReanimatedError("[Reanimated] Constructor for `" + tmp + "` not found.");
+                                const reanimatedError = new require("module_1647").ReanimatedError("[Reanimated] Constructor for `" + name + "` not found.");
                                 throw reanimatedError;
                               } else {
                                 tmp10 = new tmp10(buffer);
@@ -243,7 +242,7 @@ const tmp3 = module_1639 ? (function makeShareableCloneRecursiveWeb(arg0) {
                               }
                             } else {
                               const _HermesInternal = HermesInternal;
-                              const reanimatedError1 = new require("module_1647").ReanimatedError("[Reanimated] Invalid array view name `" + tmp + "`.");
+                              const reanimatedError1 = new require("module_1647").ReanimatedError("[Reanimated] Invalid array view name `" + name + "`.");
                               throw reanimatedError1;
                             }
                           };
@@ -273,12 +272,11 @@ const tmp3 = module_1639 ? (function makeShareableCloneRecursiveWeb(arg0) {
                   let tmp5 = _slicedToArray(tmp3, 2);
                   [tmp6, tmp8] = tmp5;
                   let tmp9 = "__initData" === tmp6;
-                  let tmp7 = tmp6;
                   if (tmp9) {
                     tmp9 = undefined !== obj.__initData;
                   }
                   if (!tmp9) {
-                    obj[tmp7] = closure_1_10(tmp8, flag, shareableMappingCache12 + 1);
+                    obj[tmp6] = closure_1_10(tmp8, flag, shareableMappingCache12 + 1);
                   }
                   continue;
                 }

@@ -18,7 +18,7 @@ class BrowserMetricsAggregator {
 }
 const entry = {
   key: "add",
-  value: function add(metricType, arg1, diff, none, tags) {
+  value: function add(metricType, arg1, diff) {
     let str = none;
     if (none === undefined) {
       str = "none";
@@ -45,7 +45,7 @@ const entry = {
     let num = 0;
     if (value) {
       num = 0;
-      if (metricType === tmp5(12894).SET_METRIC_TYPE) {
+      if (metricType === BrowserMetricsAggregator(12894).SET_METRIC_TYPE) {
         num = value.metric.weight;
       }
     }
@@ -59,7 +59,7 @@ const entry = {
       }
     } else {
       obj = { metric: null, timestamp: null, metricType: null, name: null, unit: null, tags: null };
-      const tmp16 = new tmp5(12899).METRIC_MAP[metricType](diff);
+      const tmp16 = new BrowserMetricsAggregator(12899).METRIC_MAP[metricType](diff);
       obj.metric = tmp16;
       obj.timestamp = rounded;
       obj.metricType = metricType;
@@ -74,6 +74,7 @@ const entry = {
     }
     const obj6 = BrowserMetricsAggregator(12898);
     const result1 = BrowserMetricsAggregator(12802).updateMetricSummaryOnActiveSpan(metricType, sanitizeMetricKeyResult, diff, sanitizeUnitResult, obj, bucketKey);
+    const tmp5Result = BrowserMetricsAggregator(12802);
   }
 };
 const items = [

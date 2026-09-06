@@ -794,9 +794,9 @@ function _loop(item10136) {
       if (this.model === closure_0) {
         let tmp8Result = Color(self);
       } else if (items.length > 0) {
-        tmp8Result = Color(items, tmp);
+        tmp8Result = Color(items, closure_0);
       } else {
-        const rawResult = _mod5641[self.model][tmp].raw(self.color);
+        const rawResult = _mod5641[self.model][closure_0].raw(self.color);
         const _Array = Array;
         let tmp2 = rawResult;
         if (!Array.isArray(rawResult)) {
@@ -805,7 +805,7 @@ function _loop(item10136) {
         }
         const items2 = [];
         items2[HermesBuiltin.arraySpread(tmp2, 0)] = self.valpha;
-        tmp8Result = Color(items2, tmp);
+        tmp8Result = Color(items2, closure_0);
       }
       return tmp8Result;
     };

@@ -9,7 +9,7 @@ import supportsFetch from "supportsFetch" /* 12909 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
-let closure_4 = async function _resolveResponse(arg0, value) {
+let closure_4 = async function _resolveResponse(arg0) {
   if (c6 === 2) {
     c6 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -42,9 +42,9 @@ let closure_4 = async function _resolveResponse(arg0, value) {
           closure_130_4 = undefined;
           let timeout2;
           let done;
-          if (closure_0) {
-            if (tmp49.body) {
-              const body = tmp49.body;
+          if (_require) {
+            if (_require.body) {
+              const body = _require.body;
               closure_130_1 = body;
               reader = body.getReader();
               const _setTimeout = setTimeout;
@@ -129,7 +129,7 @@ let closure_4 = async function _resolveResponse(arg0, value) {
 function streamHandler(clone) {
   const response = clone;
   try {
-    !(function resolveResponse(arg0, arg1) {
+    !(function resolveResponse(clone, arg1) {
       const self = this;
       const apply = closure_1_4.apply;
       if (typeof apply === "unknown") {
@@ -201,8 +201,8 @@ function parseFetchArgs(arg0) {
   }
 }
 
-export const addFetchEndInstrumentationHandler = function addFetchEndInstrumentationHandler(arg0) {
-  _mod12795.addHandler("fetch-body-resolved", arg0);
+export const addFetchEndInstrumentationHandler = function addFetchEndInstrumentationHandler(errorCallback) {
+  _mod12795.addHandler("fetch-body-resolved", errorCallback);
   _mod12795.maybeInstrument("fetch-body-resolved", () => {
     closure_0 = closure_5;
     {
@@ -217,52 +217,13 @@ export const addFetchEndInstrumentationHandler = function addFetchEndInstrumenta
           if (!closure_2_0) {
             obj = {};
             let merged = Object.assign(obj);
-            tmp2(tmp3[2]).triggerHandlers("fetch", obj);
-            const tmp2Result = tmp2(tmp3[2]);
+            tmp2(dependencyMap[2]).triggerHandlers("fetch", obj);
+            const tmp2Result = tmp2(dependencyMap[2]);
           }
           const obj2 = stack(dependencyMap[6]);
-          stack = asyncGeneratorStep(async (arg0, value) => {
-            if (c1 === 2) {
-              c1 = 3;
-              throw new TypeError("Generator functions may not be called on executing generators");
-            } else if (tmp3 === 3) {
-              if (arg0 === 1) {
-                throw value;
-              } else if (arg0 === 2) {
-                obj = { value, done: true };
-                return obj;
-              } else {
-                return { value: "HermesInternal", done: null };
-              }
-            } else {
-              try {
-                c1 = 2;
-                if (arg0 === 1) {
-                  c1 = 3;
-                  throw value;
-                } else if (arg0 === 2) {
-                  c1 = 3;
-                  obj = { value, done: true };
-                  return obj;
-                } else {
-                  if (stack) {
-                    tmp17(tmp16);
-                  } else {
-                    obj = stack(12795);
-                    const obj1 = {};
-                    const merged = Object.assign(c1);
-                    obj1.endTimestamp = 1000 * stack(12811).timestampInSeconds();
-                    obj1.response = tmp16;
-                    obj.triggerHandlers("fetch", obj1);
-                    const obj3 = stack(12811);
-                  }
-                  c1 = 3;
-                }
-              } catch (tmp11) {
-                c1 = tmp;
-                throw tmp11;
-              }
-            }
+          stack = asyncGeneratorStep(async (response) => {
+            c1 = 0;
+            return (/* F125750 */ function*() { ... })();
           });
           return stack.apply(stack(dependencyMap[5]).GLOBAL_OBJ, items).then(function(result) {
             const self = this;
@@ -281,12 +242,11 @@ export const addFetchEndInstrumentationHandler = function addFetchEndInstrumenta
             obj.error = error;
             obj.triggerHandlers("fetch", obj);
             const obj3 = closure_3_0(12811);
-            const tmp = closure_3_0;
             const obj4 = closure_3_0(12804);
             if (tmp5) {
               error.stack = stack.stack;
-              const result = tmp(12803).addNonEnumerableProperty(error, "framesToPop", 1);
-              const tmpResult = tmp(12803);
+              const result = closure_3_0(12803).addNonEnumerableProperty(error, "framesToPop", 1);
+              const tmpResult = closure_3_0(12803);
             }
             throw error;
           });
@@ -296,9 +256,9 @@ export const addFetchEndInstrumentationHandler = function addFetchEndInstrumenta
     }
   });
 };
-export const addFetchInstrumentationHandler = function addFetchInstrumentationHandler(arg0, arg1) {
+export const addFetchInstrumentationHandler = function addFetchInstrumentationHandler(errorCallback, arg1) {
   _require = arg1;
-  require("module_12795").addHandler("fetch", arg0);
+  require("module_12795").addHandler("fetch", errorCallback);
   let obj = require("module_12795");
   require("module_12795").maybeInstrument("fetch", () => {
     let flag = closure_0;
@@ -320,52 +280,13 @@ export const addFetchInstrumentationHandler = function addFetchInstrumentationHa
           if (!closure_2_0) {
             obj = {};
             let merged = Object.assign(obj);
-            tmp2(tmp3[2]).triggerHandlers("fetch", obj);
-            const tmp2Result = tmp2(tmp3[2]);
+            tmp2(dependencyMap[2]).triggerHandlers("fetch", obj);
+            const tmp2Result = tmp2(dependencyMap[2]);
           }
           const obj2 = stack(dependencyMap[6]);
-          stack = asyncGeneratorStep(async (arg0, value) => {
-            if (c1 === 2) {
-              c1 = 3;
-              throw new TypeError("Generator functions may not be called on executing generators");
-            } else if (tmp3 === 3) {
-              if (arg0 === 1) {
-                throw value;
-              } else if (arg0 === 2) {
-                obj = { value, done: true };
-                return obj;
-              } else {
-                return { value: "HermesInternal", done: null };
-              }
-            } else {
-              try {
-                c1 = 2;
-                if (arg0 === 1) {
-                  c1 = 3;
-                  throw value;
-                } else if (arg0 === 2) {
-                  c1 = 3;
-                  obj = { value, done: true };
-                  return obj;
-                } else {
-                  if (stack) {
-                    tmp17(tmp16);
-                  } else {
-                    obj = stack(12795);
-                    const obj1 = {};
-                    const merged = Object.assign(c1);
-                    obj1.endTimestamp = 1000 * stack(12811).timestampInSeconds();
-                    obj1.response = tmp16;
-                    obj.triggerHandlers("fetch", obj1);
-                    const obj3 = stack(12811);
-                  }
-                  c1 = 3;
-                }
-              } catch (tmp11) {
-                c1 = tmp;
-                throw tmp11;
-              }
-            }
+          stack = asyncGeneratorStep(async (response) => {
+            c1 = 0;
+            return (/* F125750 */ function*() { ... })();
           });
           return stack.apply(stack(dependencyMap[5]).GLOBAL_OBJ, items).then(function(result) {
             const self = this;
@@ -384,12 +305,11 @@ export const addFetchInstrumentationHandler = function addFetchInstrumentationHa
             obj.error = error;
             obj.triggerHandlers("fetch", obj);
             const obj3 = closure_3_0(12811);
-            const tmp = closure_3_0;
             const obj4 = closure_3_0(12804);
             if (tmp5) {
               error.stack = stack.stack;
-              const result = tmp(12803).addNonEnumerableProperty(error, "framesToPop", 1);
-              const tmpResult = tmp(12803);
+              const result = closure_3_0(12803).addNonEnumerableProperty(error, "framesToPop", 1);
+              const tmpResult = closure_3_0(12803);
             }
             throw error;
           });

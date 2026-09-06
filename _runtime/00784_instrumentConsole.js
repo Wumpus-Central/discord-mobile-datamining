@@ -22,6 +22,8 @@ function instrumentConsole() {
             if (obj3 != null) {
               obj3.apply(level(686).GLOBAL_OBJ.console, items);
             }
+            const obj = { args: items, level };
+            const obj2 = level(715);
           };
         });
         const tmpResult = tmp(687);
@@ -31,7 +33,7 @@ function instrumentConsole() {
 }
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 
-export const addConsoleInstrumentationHandler = function addConsoleInstrumentationHandler(arg0) {
-  _mod715.addHandler("console", arg0);
+export const addConsoleInstrumentationHandler = function addConsoleInstrumentationHandler(errorCallback) {
+  _mod715.addHandler("console", errorCallback);
   _mod715.maybeInstrument("console", instrumentConsole);
 };

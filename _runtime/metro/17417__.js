@@ -321,7 +321,7 @@ asyncGeneratorStep(async function(arg0) {
   closure_2 = arg1;
   c5 = 0;
   c6 = 0;
-  const iter = (async (arg0, value) => {
+  const iter = (async (arg0) => {
     if (c6 === 2) {
       c6 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -372,7 +372,7 @@ asyncGeneratorStep(async function(arg0) {
           closure_131_0 = closure_4;
           const promise = new Promise((arg0, arg1) => {
             closure_1 = arg1;
-            closure_0 = closure_1_2(function*(arg0, value) {
+            closure_0 = closure_1_2(function*() {
               if (c5 === 2) {
                 c5 = 3;
                 throw new TypeError("Generator functions may not be called on executing generators");
@@ -525,7 +525,7 @@ _classCallCheck = asyncGeneratorStep(async function(arg0, arg1) {
           c3 = 3;
           obj = {
             value: Promise.all(closure_1.map((() => {
-                    closure_0 = closure_1_2(function*(arg0, value) {
+                    closure_0 = closure_1_2(function*(arg0) {
                       if (set === 2) {
                         set = 3;
                         throw new TypeError("Generator functions may not be called on executing generators");
@@ -620,7 +620,7 @@ const entry2 = { key: "onEmpty", value: null };
 closure_2 = asyncGeneratorStep(async function() {
   const self = this;
   c1 = 0;
-  return (async (arg0, value) => {
+  return (async (arg0) => {
     if (c1 === 2) {
       c1 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -684,7 +684,7 @@ const entry3 = { key: "onIdle", value: null };
 closure_1 = asyncGeneratorStep(async function() {
   const self = this;
   c1 = 0;
-  return (async (arg0, value) => {
+  return (async (arg0) => {
     if (c1 === 2) {
       c1 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");

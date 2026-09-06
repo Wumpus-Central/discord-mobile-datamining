@@ -12,7 +12,7 @@ defaultReactNativeTracingOptions.traceFetch = module_867.isWeb();
 
 export const INTEGRATION_NAME = "ReactNativeTracing";
 export { defaultReactNativeTracingOptions };
-export const reactNativeTracingIntegration = (state) => {
+export const reactNativeTracingIntegration = () => {
   if (state === undefined) {
     state = {};
   }

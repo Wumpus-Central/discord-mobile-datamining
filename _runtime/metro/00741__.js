@@ -41,22 +41,25 @@ function estimateMetricSizeInBytes(name) {
           }
         }
         closure_0 = closure_0 + item.length * num4;
-      } else if (obj.isPrimitive(item)) {
-        if (typeof item === "string") {
-          let num2 = 2 * item.length;
-        } else {
-          num2 = 8;
-          if (typeof item !== "number") {
-            let num6 = 0;
-            if (typeof item === "boolean") {
-              num6 = 4;
-            }
-            num2 = num6;
-          }
-        }
-        closure_0 = tmp3 + num2;
       } else {
-        closure_0 = tmp3 + 100;
+        if (obj.isPrimitive(item)) {
+          if (typeof item === "string") {
+            let num2 = 2 * item.length;
+          } else {
+            num2 = 8;
+            if (typeof item !== "number") {
+              let num6 = 0;
+              if (typeof item === "boolean") {
+                num6 = 4;
+              }
+              num2 = num6;
+            }
+          }
+          closure_0 = tmp3 + num2;
+        } else {
+          closure_0 = tmp3 + 100;
+        }
+        obj = closure_0(closure_1[13]);
       }
     });
     num3 = c0;
@@ -92,22 +95,25 @@ function estimateLogSizeInBytes(message) {
           }
         }
         closure_0 = closure_0 + item.length * num4;
-      } else if (obj.isPrimitive(item)) {
-        if (typeof item === "string") {
-          let num2 = 2 * item.length;
-        } else {
-          num2 = 8;
-          if (typeof item !== "number") {
-            let num6 = 0;
-            if (typeof item === "boolean") {
-              num6 = 4;
-            }
-            num2 = num6;
-          }
-        }
-        closure_0 = tmp3 + num2;
       } else {
-        closure_0 = tmp3 + 100;
+        if (obj.isPrimitive(item)) {
+          if (typeof item === "string") {
+            let num2 = 2 * item.length;
+          } else {
+            num2 = 8;
+            if (typeof item !== "number") {
+              let num6 = 0;
+              if (typeof item === "boolean") {
+                num6 = 4;
+              }
+              num2 = num6;
+            }
+          }
+          closure_0 = tmp3 + num2;
+        } else {
+          closure_0 = tmp3 + 100;
+        }
+        obj = closure_0(closure_1[13]);
       }
     });
     num3 = closure_0;
@@ -268,8 +274,8 @@ const entry = {
     let obj = closure_0(695);
     const uuid4Result = obj.uuid4();
     if (obj2.checkOrSetAlreadyCaught(arg0)) {
-      if (tmp(688).DEBUG_BUILD) {
-        const debug = tmp(689).debug;
+      if (closure_0(688).DEBUG_BUILD) {
+        const debug = closure_0(689).debug;
         debug.log(Client);
       }
       return uuid4Result;
@@ -295,18 +301,17 @@ let items = [
       const obj = { event_id: closure_0(695).uuid4() };
       const merged = Object.assign(arg2);
       const obj2 = closure_0(695);
-      const tmp = closure_0;
       let StringResult = arg0;
       if (!obj3.isParameterizedString(arg0)) {
         const _String = String;
         StringResult = String(arg0);
       }
       obj3 = closure_0(692);
-      const isPrimitiveResult = tmp(692).isPrimitive(arg0);
+      const isPrimitiveResult = closure_0(692).isPrimitive(arg0);
       if (isPrimitiveResult) {
-        let eventFromMessageResult = self.eventFromMessage(StringResult, arg1, obj);
+        self.eventFromMessage(StringResult, arg1, obj);
       } else {
-        eventFromMessageResult = self.eventFromException(arg0, obj);
+        self.eventFromException(arg0, obj);
       }
       let str = "error";
       if (isPrimitiveResult) {
@@ -330,13 +335,13 @@ let items = [
       }
       if (originalException) {
         if (tmpResult.checkOrSetAlreadyCaught(originalException.originalException)) {
-          if (tmp(688).DEBUG_BUILD) {
-            const debug = tmp(689).debug;
+          if (closure_0(688).DEBUG_BUILD) {
+            const debug = closure_0(689).debug;
             debug.log(Client);
           }
           return uuid4Result;
         }
-        tmpResult = tmp(695);
+        tmpResult = closure_0(695);
       }
       obj = { event_id: uuid4Result };
       const merged = Object.assign(originalException);
@@ -428,9 +433,11 @@ _classCallCheck = asyncGeneratorStep(async function(arg0) {
     if (!_transport) {
       return true;
     }
-    obj8.emit("flush");
-    closure_130_2 = await obj8._isClientDoneProcessing(tmp17);
-    closure_130_3 = await closure_130_1.flush(closure_130_0);
+    self.emit("flush");
+    await self._isClientDoneProcessing(tmp17);
+    closure_130_2 = value;
+    await closure_130_1.flush(closure_130_0);
+    closure_130_3 = value;
     let tmp7 = closure_130_2;
     if (closure_130_2) {
       tmp7 = closure_130_3;
@@ -458,7 +465,8 @@ _slicedToArray = asyncGeneratorStep(async function(arg0) {
   return (async (arg0) => {
     closure_3 = self;
     closure_2 = tmp2;
-    closure_130_0 = await self.flush(closure_1);
+    await self.flush(closure_1);
+    closure_130_0 = value;
     closure_3.getOptions().enabled = false;
     closure_3.emit("close");
     return closure_130_0;
@@ -520,6 +528,7 @@ items[14] = {
       const result = closure_0(752).afterSetupIntegrations(this, items);
       const tmpResult = closure_0(752);
     }
+    const obj = closure_0(752);
   }
 };
 items[15] = {
@@ -542,6 +551,7 @@ items[15] = {
     const obj2 = closure_0(728);
     const tmp3 = obj.attachments || [];
     self.sendEnvelope(eventEnvelope).then((result) => self.emit("afterSendEvent", closure_0, result));
+    const sendEnvelopeResult = self.sendEnvelope(eventEnvelope);
   }
 };
 items[16] = {
@@ -579,6 +589,7 @@ items[16] = {
     }
     self.emit("beforeSendSession", attrs);
     self.sendEnvelope(closure_0(728).createSessionEnvelope(attrs, self._dsn, self._options._metadata, self._options.tunnel));
+    const obj = closure_0(728);
   }
 };
 items[17] = {
@@ -593,7 +604,7 @@ items[17] = {
       const _HermesInternal = HermesInternal;
       const combined = "" + arg0 + ":" + arg1;
       if (closure_0(688).DEBUG_BUILD) {
-        const debug = tmp5(689).debug;
+        const debug = closure_0(689).debug;
         let str3 = "";
         if (num > 1) {
           const _HermesInternal2 = HermesInternal;
@@ -607,7 +618,6 @@ items[17] = {
         num3 = 0;
       }
       self._outcomes[combined] = num3 + num;
-      tmp5 = closure_0;
     }
   }
 };
@@ -646,7 +656,7 @@ dependencyMap = asyncGeneratorStep(async function(arg0) {
   c6 = 0;
   c7 = 0;
   c5 = 0;
-  return (async (arg0, value) => {
+  return (async (arg0) => {
     if (c7 === 2) {
       c7 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -675,9 +685,9 @@ dependencyMap = asyncGeneratorStep(async function(arg0) {
             closure_2 = tmp5;
             self.emit("beforeEnvelope", dependencyMap);
             if (self._isEnabled()) {
-              if (tmp33._transport) {
+              if (self._transport) {
                 c5 = 1;
-                const _transport = tmp33._transport;
+                const _transport = self._transport;
                 c6 = 2;
                 c7 = 1;
                 const obj1 = { value: _transport.send(dependencyMap), done: false };
@@ -816,7 +826,7 @@ React = asyncGeneratorStep(async function(arg0) {
   closure_1 = arg0;
   c4 = 0;
   c5 = 0;
-  return (async (arg0, value) => {
+  return (async (arg0) => {
     if (c5 === 2) {
       c5 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -962,11 +972,11 @@ items[26] = {
       const obj3 = closure_0(713);
     }
     if (tmp9) {
-      let debug = tmp7(689).debug;
-      const tmp7Result = tmp7(753);
+      let debug = closure_0(689).debug;
+      const tmp7Result = closure_0(753);
       const _HermesInternal = HermesInternal;
-      debug.log("Captured error event `" + tmp7(753).getPossibleEventMessages(type)[0] || "<unknown>" + "`");
-      const tmp10 = tmp7(753).getPossibleEventMessages(type)[0] || "<unknown>";
+      debug.log("Captured error event `" + closure_0(753).getPossibleEventMessages(type)[0] || "<unknown>" + "`");
+      const tmp10 = closure_0(753).getPossibleEventMessages(type)[0] || "<unknown>";
     }
     tmp9 = closure_0(688).DEBUG_BUILD && undefined === type.type;
     return this._processEvent(type, obj, currentScope, isolationScope).then((event_id) => event_id.event_id, (message) => {
@@ -976,14 +986,14 @@ items[26] = {
           tmp4 = closure_1_7 in message;
         }
         if (tmp4) {
-          const debug2 = tmp(tmp2[8]).debug;
+          const debug2 = closure_1_0(dependencyMap[8]).debug;
           debug2.log(message.message);
         } else {
           let tmp6 = message && typeof message === "object";
           if (tmp6) {
             tmp6 = closure_1_6 in message;
           }
-          const debug = tmp(tmp2[8]).debug;
+          const debug = closure_1_0(dependencyMap[8]).debug;
           const warn = debug.warn;
           if (tmp6) {
             warn(message.message);
@@ -1043,15 +1053,15 @@ items[27] = {
         throw obj;
       } else {
         if (data.data) {
-          if (true === tmp16.data.__sentry__) {
+          if (true === data.data.__sentry__) {
             return result;
           }
         }
-        const promise = (function processBeforeSend(self, options, sdkProcessingMetadata, arg3) {
+        const promise = (function processBeforeSend(self, options, sdkProcessingMetadata, data) {
           ({ beforeSend, beforeSendTransaction, beforeSendSpan, ignoreSpans } = options);
           if (closure_1_8(sdkProcessingMetadata)) {
             if (beforeSend) {
-              return beforeSend(sdkProcessingMetadata, arg3);
+              return beforeSend(sdkProcessingMetadata, data);
             }
           }
           let tmp = sdkProcessingMetadata;
@@ -1064,7 +1074,7 @@ items[27] = {
                 length = ignoreSpans.length;
               }
               if (length) {
-                let tmp4Result = tmp4(tmp6[28]);
+                let tmp4Result = closure_0(combined[28]);
                 if (tmp4Result.shouldIgnoreSpan(result, ignoreSpans)) {
                   return null;
                 }
@@ -1073,13 +1083,13 @@ items[27] = {
               if (beforeSendSpan) {
                 const beforeSendSpanResult = beforeSendSpan(result);
                 if (beforeSendSpanResult) {
-                  tmp4Result = tmp4(tmp6[30]);
-                  mergeResult = tmp4Result.merge(sdkProcessingMetadata, tmp4(tmp6[27]).convertSpanJsonToTransactionEvent(beforeSendSpanResult));
-                  const tmp4Result1 = tmp4(tmp6[27]);
+                  tmp4Result = closure_0(combined[30]);
+                  mergeResult = tmp4Result.merge(sdkProcessingMetadata, closure_0(combined[27]).convertSpanJsonToTransactionEvent(beforeSendSpanResult));
+                  const tmp4Result1 = closure_0(combined[27]);
                 } else {
-                  tmp4(tmp6[29]).showSpanDropWarning();
+                  closure_0(combined[29]).showSpanDropWarning();
                   mergeResult = sdkProcessingMetadata;
-                  const tmp4Result2 = tmp4(tmp6[29]);
+                  const tmp4Result2 = closure_0(combined[29]);
                 }
               }
               let tmp2 = mergeResult;
@@ -1087,32 +1097,29 @@ items[27] = {
                 const items = [];
                 const spans = mergeResult.spans;
                 for (const item10054 of spans) {
-                  let tmp19 = item10054;
                   let length1;
                   if (ignoreSpans != null) {
                     length1 = ignoreSpans.length;
                   }
                   if (length1) {
-                    let tmp22 = closure_0;
-                    let tmp24 = combined;
                     let obj6 = closure_0(combined[28]);
-                    if (obj6.shouldIgnoreSpan(tmp19, ignoreSpans)) {
-                      let tmp22Result = tmp22(tmp24[28]);
-                      let reparentChildSpansResult = tmp22Result.reparentChildSpans(spans, tmp19);
+                    if (obj6.shouldIgnoreSpan(item10054, ignoreSpans)) {
+                      let tmp22Result = closure_0(combined[28]);
+                      let reparentChildSpansResult = tmp22Result.reparentChildSpans(spans, item10054);
                       continue;
                     }
                   }
                   if (beforeSendSpan) {
-                    let beforeSendSpanResult1 = beforeSendSpan(tmp19);
+                    let beforeSendSpanResult1 = beforeSendSpan(item10054);
                     if (beforeSendSpanResult1) {
                       let arr = items.push(tmp30);
                     } else {
                       let obj7 = closure_0(combined[29]);
                       let showSpanDropWarningResult1 = obj7.showSpanDropWarning();
-                      arr = items.push(tmp19);
+                      arr = items.push(item10054);
                     }
                   } else {
-                    let arr1 = items.push(tmp19);
+                    let arr1 = items.push(item10054);
                   }
                 }
                 const diff = mergeResult.spans.length - items.length;
@@ -1133,7 +1140,7 @@ items[27] = {
                 obj.spanCountBeforeProcessing = tmp2.spans.length;
                 tmp2.sdkProcessingMetadata = obj;
               }
-              return beforeSendTransaction(tmp2, arg3);
+              return beforeSendTransaction(tmp2, data);
             }
           }
           return tmp;
@@ -1181,15 +1188,15 @@ items[27] = {
         throw obj;
       } else {
         if (data.data) {
-          if (true === tmp16.data.__sentry__) {
+          if (true === data.data.__sentry__) {
             return result;
           }
         }
-        const promise = (function processBeforeSend(self, options, sdkProcessingMetadata, arg3) {
+        const promise = (function processBeforeSend(self, options, sdkProcessingMetadata, data) {
           ({ beforeSend, beforeSendTransaction, beforeSendSpan, ignoreSpans } = options);
           if (closure_1_8(sdkProcessingMetadata)) {
             if (beforeSend) {
-              return beforeSend(sdkProcessingMetadata, arg3);
+              return beforeSend(sdkProcessingMetadata, data);
             }
           }
           let tmp = sdkProcessingMetadata;
@@ -1202,7 +1209,7 @@ items[27] = {
                 length = ignoreSpans.length;
               }
               if (length) {
-                let tmp4Result = tmp4(tmp6[28]);
+                let tmp4Result = closure_0(combined[28]);
                 if (tmp4Result.shouldIgnoreSpan(result, ignoreSpans)) {
                   return null;
                 }
@@ -1211,13 +1218,13 @@ items[27] = {
               if (beforeSendSpan) {
                 const beforeSendSpanResult = beforeSendSpan(result);
                 if (beforeSendSpanResult) {
-                  tmp4Result = tmp4(tmp6[30]);
-                  mergeResult = tmp4Result.merge(sdkProcessingMetadata, tmp4(tmp6[27]).convertSpanJsonToTransactionEvent(beforeSendSpanResult));
-                  const tmp4Result1 = tmp4(tmp6[27]);
+                  tmp4Result = closure_0(combined[30]);
+                  mergeResult = tmp4Result.merge(sdkProcessingMetadata, closure_0(combined[27]).convertSpanJsonToTransactionEvent(beforeSendSpanResult));
+                  const tmp4Result1 = closure_0(combined[27]);
                 } else {
-                  tmp4(tmp6[29]).showSpanDropWarning();
+                  closure_0(combined[29]).showSpanDropWarning();
                   mergeResult = sdkProcessingMetadata;
-                  const tmp4Result2 = tmp4(tmp6[29]);
+                  const tmp4Result2 = closure_0(combined[29]);
                 }
               }
               let tmp2 = mergeResult;
@@ -1225,32 +1232,29 @@ items[27] = {
                 const items = [];
                 const spans = mergeResult.spans;
                 for (const item10054 of spans) {
-                  let tmp19 = item10054;
                   let length1;
                   if (ignoreSpans != null) {
                     length1 = ignoreSpans.length;
                   }
                   if (length1) {
-                    let tmp22 = closure_0;
-                    let tmp24 = combined;
                     let obj6 = closure_0(combined[28]);
-                    if (obj6.shouldIgnoreSpan(tmp19, ignoreSpans)) {
-                      let tmp22Result = tmp22(tmp24[28]);
-                      let reparentChildSpansResult = tmp22Result.reparentChildSpans(spans, tmp19);
+                    if (obj6.shouldIgnoreSpan(item10054, ignoreSpans)) {
+                      let tmp22Result = closure_0(combined[28]);
+                      let reparentChildSpansResult = tmp22Result.reparentChildSpans(spans, item10054);
                       continue;
                     }
                   }
                   if (beforeSendSpan) {
-                    let beforeSendSpanResult1 = beforeSendSpan(tmp19);
+                    let beforeSendSpanResult1 = beforeSendSpan(item10054);
                     if (beforeSendSpanResult1) {
                       let arr = items.push(tmp30);
                     } else {
                       let obj7 = closure_0(combined[29]);
                       let showSpanDropWarningResult1 = obj7.showSpanDropWarning();
-                      arr = items.push(tmp19);
+                      arr = items.push(item10054);
                     }
                   } else {
-                    let arr1 = items.push(tmp19);
+                    let arr1 = items.push(item10054);
                   }
                 }
                 const diff = mergeResult.spans.length - items.length;
@@ -1271,7 +1275,7 @@ items[27] = {
                 obj.spanCountBeforeProcessing = tmp2.spans.length;
                 tmp2.sdkProcessingMetadata = obj;
               }
-              return beforeSendTransaction(tmp2, arg3);
+              return beforeSendTransaction(tmp2, data);
             }
           }
           return tmp;
@@ -1423,31 +1427,31 @@ items[30] = {
   key: "_flushOutcomes",
   value: function _flushOutcomes() {
     if (closure_0(688).DEBUG_BUILD) {
-      const debug = tmp(689).debug;
+      const debug = closure_0(689).debug;
       debug.log("Flushing outcomes...");
     }
     const self = this;
     const _clearOutcomesResult = this._clearOutcomes();
     if (0 !== _clearOutcomesResult.length) {
-      const DEBUG_BUILD = tmp(688).DEBUG_BUILD;
+      const DEBUG_BUILD = closure_0(688).DEBUG_BUILD;
       if (self._dsn) {
         if (DEBUG_BUILD) {
-          const debug4 = tmp(689).debug;
+          const debug4 = closure_0(689).debug;
           debug4.log("Sending outcomes:", _clearOutcomesResult);
         }
-        let tmpResult = tmp(754);
+        let tmpResult = closure_0(754);
         let tunnel = self._options.tunnel;
         if (tunnel) {
-          tmpResult = tmp(702);
+          tmpResult = closure_0(702);
           tunnel = tmpResult.dsnToString(self._dsn);
         }
         self.sendEnvelope(tmpResult.createClientReportEnvelope(_clearOutcomesResult, tunnel));
       } else if (DEBUG_BUILD) {
-        const debug3 = tmp(689).debug;
+        const debug3 = closure_0(689).debug;
         debug3.log("No dsn provided, will not send outcomes");
       }
-    } else if (tmp(688).DEBUG_BUILD) {
-      const debug2 = tmp(689).debug;
+    } else if (closure_0(688).DEBUG_BUILD) {
+      const debug2 = closure_0(689).debug;
       debug2.log("No outcomes to send");
     }
   }

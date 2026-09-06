@@ -1,6 +1,7 @@
 // === Module 967: startProfileForSpan ===
 
 // Module 967 (startProfileForSpan)
+import _mod682 from "module_682" /* 682 */;
 import _mod937 from "module_937" /* 937 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
@@ -18,7 +19,7 @@ export const startProfileForSpan = function startProfileForSpan(rootSpan) {
     }
     return applyArgumentsResult;
   }
-  closure_7 = async function _onProfileHandler(arg0, value) {
+  closure_7 = async function _onProfileHandler() {
     if (v3 === 2) {
       v3 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -123,9 +124,9 @@ export const startProfileForSpan = function startProfileForSpan(rootSpan) {
     let WINDOW = tmp(893).WINDOW;
     const timeout = WINDOW.setTimeout(() => {
       if (_mod937.DEBUG_BUILD) {
-        const debug = tmp(682).debug;
-        debug.log("[Profiling] max profile duration elapsed, stopping profiling for:", tmp(682).spanToJSON(closure_0).description);
-        const tmpResult = tmp(682);
+        const debug = _mod682.debug;
+        debug.log("[Profiling] max profile duration elapsed, stopping profiling for:", _mod682.spanToJSON(closure_0).description);
+        const tmpResult = _mod682;
       }
       onProfileHandler();
     }, tmp(966).MAX_PROFILE_DURATION_MS);

@@ -11,10 +11,10 @@ export default function buildMatchPatternFn(arg0) {
       }
       const match = str.match(matchPattern.matchPattern);
       if (match) {
-        const match1 = str.match(obj2.parsePattern);
+        const match1 = str.match(matchPattern.parsePattern);
         if (match1) {
-          if (obj2.valueCallback) {
-            let first = obj2.valueCallback(match1[0]);
+          if (matchPattern.valueCallback) {
+            let first = matchPattern.valueCallback(match1[0]);
           } else {
             first = match1[0];
           }

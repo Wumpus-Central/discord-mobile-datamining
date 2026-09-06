@@ -22,16 +22,14 @@ function createCompositeKeyForProps(arg0, style) {
           let tmp45 = flattenStyleDefault(arr2);
           if (null != tmp45) {
             style = undefined;
-            let tmp46 = createCompositeKeyForObject;
             if (style != null) {
               style = style.style;
             }
-            let tmp46Result = tmp46(tmp45, style);
+            let tmp46Result = createCompositeKeyForObject(tmp45, style);
           }
         } else {
           tmp46Result = arr2;
           if (!(arr2 instanceof _assertNativeAnimatedModuleDefault)) {
-            let tmp8 = require;
             tmp46Result = arr2;
             if (!(arr2 instanceof AnimatedEvent.AnimatedEvent)) {
               let _Array = Array;
@@ -116,7 +114,7 @@ function createCompositeKeyForProps(arg0, style) {
                 }
                 tmp46Result = tmp12;
               } else {
-                let tmp8Result = tmp8(382);
+                let tmp8Result = _mod382;
                 if (tmp8Result.isPlainObject(arr2)) {
                   let tmp10 = arr2;
                   if (null != style) {
@@ -353,22 +351,22 @@ function areCompositeKeysEqual(arg0, D, arg2) {
     return false;
   }
 }
-function areCompositeKeyComponentsEqual(arg0, arg1) {
-  if (arg0 === arg1) {
+function areCompositeKeyComponentsEqual(icon, icon) {
+  if (icon === icon) {
     return true;
-  } else if (arg0 instanceof _assertNativeAnimatedModuleDefault) {
+  } else if (icon instanceof _assertNativeAnimatedModuleDefault) {
     return tmp;
   } else {
     const _Array = Array;
-    if (Array.isArray(arg0)) {
+    if (Array.isArray(icon)) {
       const _Array2 = Array;
-      if (Array.isArray(arg1)) {
-        if (arg0.length !== arg1.length) {
+      if (Array.isArray(icon)) {
+        if (icon.length !== icon.length) {
           return false;
         } else {
           let num6 = 0;
           if (0 < length2) {
-            while (areCompositeKeyComponentsEqual(arg0[num6], arg1[num6])) {
+            while (areCompositeKeyComponentsEqual(icon[num6], icon[num6])) {
               num6 = num6 + 1;
             }
             return false;
@@ -379,18 +377,18 @@ function areCompositeKeyComponentsEqual(arg0, arg1) {
         return false;
       }
     } else {
-      if (obj.isPlainObject(arg0)) {
-        if (tmp5Result.isPlainObject(arg1)) {
+      if (obj.isPlainObject(icon)) {
+        if (tmp5Result.isPlainObject(icon)) {
           const _Object = Object;
-          const keys = Object.keys(arg0);
+          const keys = Object.keys(icon);
           const _Object2 = Object;
-          if (keys.length !== Object.keys(arg1).length) {
+          if (keys.length !== Object.keys(icon).length) {
             return false;
           } else {
             let num3 = 0;
             if (0 < length) {
-              while (fn(nullthrowsDefault(arg1), keys[num3])) {
-                if (!areCompositeKeyComponentsEqual(arg0[tmp6], arg1[tmp6])) {
+              while (fn(nullthrowsDefault(icon), keys[num3])) {
+                if (!areCompositeKeyComponentsEqual(icon[tmp6], icon[tmp6])) {
                   break;
                 } else {
                   num3 = num3 + 1;
@@ -403,12 +401,11 @@ function areCompositeKeyComponentsEqual(arg0, arg1) {
         } else {
           return false;
         }
-        tmp5Result = tmp5(382);
+        tmp5Result = _mod382;
       } else {
         return false;
       }
       obj = _mod382;
-      tmp5 = require;
     }
   }
 }
@@ -416,9 +413,9 @@ function areCompositeKeyComponentsEqual(arg0, arg1) {
 hasOwnProperty = Object.prototype.hasOwnProperty;
 let fn = Object.hasOwn;
 if (fn == null) {
-  fn = (arg0, arg1) => {
+  fn = (arg0, View) => {
     const call = hasOwnProperty.call;
-    return typeof call === "unknown" ? hasOwnProperty(arg1) : call(arg0, arg1);
+    return typeof call === "unknown" ? hasOwnProperty(View) : call(arg0, View);
   };
 }
 
@@ -427,7 +424,6 @@ export function createAnimatedPropsMemoHook(arg0) {
   return function useAnimatedPropsMemo(fn, arg1) {
     closure_0 = arg1;
     const items = [arg1];
-    const tmp = closure_1_4(() => createCompositeKeyForProps(closure_0, closure_0), items);
     const tmp2 = closure_1_5();
     closure_1 = tmp2;
     let current = tmp2.current;

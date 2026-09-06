@@ -2,6 +2,7 @@
 
 // Module 632 (baseIsEqual)
 import _mod535 from "module_535" /* 535 */;
+import baseIsEqualDeep from "baseIsEqualDeep" /* 633 */;
 
 function baseIsEqual(arg0, arg1, arg2, arg3, arg4) {
   if (arg0 === arg1) {
@@ -10,7 +11,7 @@ function baseIsEqual(arg0, arg1, arg2, arg3, arg4) {
     if (null != arg0) {
       if (null != arg1) {
         if (_mod535(arg0)) {
-          let tmp11 = tmp3(633)(arg0, arg1, arg2, arg3, baseIsEqual, arg4);
+          let tmp11 = baseIsEqualDeep(arg0, arg1, arg2, arg3, baseIsEqual, arg4);
         }
       }
     }

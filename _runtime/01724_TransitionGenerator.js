@@ -4,6 +4,12 @@
 import TransitionType from "TransitionType" /* 1692 */;
 import convertAnimationObjectToKeyframes from "convertAnimationObjectToKeyframes" /* 1694 */;
 import findDescendantWithExitingAnimation from "findDescendantWithExitingAnimation" /* 1723 */;
+import LinearTransition from "LinearTransition" /* 1725 */;
+import SequencedTransition from "SequencedTransition" /* 1726 */;
+import FadingTransition from "FadingTransition" /* 1727 */;
+import JumpingTransition from "JumpingTransition" /* 1728 */;
+import prepareCurvedTransition from "prepareCurvedTransition" /* 1729 */;
+import _mod1730 from "module_1730" /* 1730 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import _slicedToArray from "module_32" /* 32 */;
 
@@ -115,31 +121,31 @@ export const TransitionGenerator = function TransitionGenerator(ENTRY_EXIT, easi
   closure_6 = tmp + 1;
   const transitionKeyframeName = `REA${tmp}`;
   if (TransitionType.TransitionType.LINEAR === ENTRY_EXIT) {
-    let tmp3Result = tmp3(1725);
+    let tmp3Result = LinearTransition;
     firstKeyframeObj = tmp3Result.LinearTransition(`REA${tmp}`, easingY);
-  } else if (tmp3(1692).TransitionType.SEQUENCED === ENTRY_EXIT) {
-    tmp3Result = tmp3(1726);
+  } else if (TransitionType.TransitionType.SEQUENCED === ENTRY_EXIT) {
+    tmp3Result = SequencedTransition;
     firstKeyframeObj = tmp3Result.SequencedTransition(`REA${tmp}`, easingY);
-  } else if (tmp3(1692).TransitionType.FADING === ENTRY_EXIT) {
-    firstKeyframeObj = tmp3(1727).FadingTransition(`REA${tmp}`, easingY);
-    const tmp3Result1 = tmp3(1727);
-  } else if (tmp3(1692).TransitionType.JUMPING === ENTRY_EXIT) {
-    firstKeyframeObj = tmp3(1728).JumpingTransition(`REA${tmp}`, easingY);
-    const tmp3Result2 = tmp3(1728);
-  } else if (tmp3(1692).TransitionType.CURVED === ENTRY_EXIT) {
+  } else if (TransitionType.TransitionType.FADING === ENTRY_EXIT) {
+    firstKeyframeObj = FadingTransition.FadingTransition(`REA${tmp}`, easingY);
+    const tmp3Result1 = FadingTransition;
+  } else if (TransitionType.TransitionType.JUMPING === ENTRY_EXIT) {
+    firstKeyframeObj = JumpingTransition.JumpingTransition(`REA${tmp}`, easingY);
+    const tmp3Result2 = JumpingTransition;
+  } else if (TransitionType.TransitionType.CURVED === ENTRY_EXIT) {
     closure_6 = tmp7 + 1;
     const text1 = `REA${tmp7}`;
-    const tmp3Result3 = tmp3(1729);
-    ({ firstKeyframeObj, secondKeyframeObj } = tmp3(1729).CurvedTransition(`REA${tmp}`, `REA${+closure_6}`, easingY));
-    const CurvedTransitionResult = tmp3(1729).CurvedTransition(`REA${tmp}`, `REA${+closure_6}`, easingY);
-    const result = tmp3(1694).convertAnimationObjectToKeyframes(secondKeyframeObj);
-    const tmp3Result4 = tmp3(1694);
-    tmp3(1723).insertWebAnimation(`REA${+closure_6}`, result);
+    const tmp3Result3 = prepareCurvedTransition;
+    ({ firstKeyframeObj, secondKeyframeObj } = prepareCurvedTransition.CurvedTransition(`REA${tmp}`, `REA${+closure_6}`, easingY));
+    const CurvedTransitionResult = prepareCurvedTransition.CurvedTransition(`REA${tmp}`, `REA${+closure_6}`, easingY);
+    const result = convertAnimationObjectToKeyframes.convertAnimationObjectToKeyframes(secondKeyframeObj);
+    const tmp3Result4 = convertAnimationObjectToKeyframes;
+    findDescendantWithExitingAnimation.insertWebAnimation(`REA${+closure_6}`, result);
     const dummyTransitionKeyframeName = text1;
-    const tmp3Result5 = tmp3(1723);
-  } else if (tmp3(1692).TransitionType.ENTRY_EXIT === ENTRY_EXIT) {
-    firstKeyframeObj = tmp3(1730).EntryExitTransition(`REA${tmp}`, easingY);
-    const tmp3Result6 = tmp3(1730);
+    const tmp3Result5 = findDescendantWithExitingAnimation;
+  } else if (TransitionType.TransitionType.ENTRY_EXIT === ENTRY_EXIT) {
+    firstKeyframeObj = _mod1730.EntryExitTransition(`REA${tmp}`, easingY);
+    const tmp3Result6 = _mod1730;
   }
   const result1 = convertAnimationObjectToKeyframes.convertAnimationObjectToKeyframes(firstKeyframeObj);
   const tmp3Result7 = convertAnimationObjectToKeyframes;

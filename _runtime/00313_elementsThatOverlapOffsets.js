@@ -4,7 +4,7 @@
 import _modAll27 from "module_27" /* 27 */;
 import _slicedToArray from "module_32" /* 32 */;
 
-function elementsThatOverlapOffsets(items, getItemCount, getCellMetricsApprox, zoomScale) {
+function elementsThatOverlapOffsets(items, getItemCount, getCellMetricsApprox) {
   let num = zoomScale;
   if (zoomScale === undefined) {
     num = 1;

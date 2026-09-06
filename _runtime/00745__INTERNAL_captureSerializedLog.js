@@ -2,8 +2,16 @@
 
 // Module 745 (_INTERNAL_captureSerializedLog)
 import _mod688 from "module_688" /* 688 */;
+import consoleSandbox from "consoleSandbox" /* 689 */;
 import _mod690 from "module_690" /* 690 */;
+import _mod692 from "module_692" /* 692 */;
+import dateTimestampInSeconds from "dateTimestampInSeconds" /* 703 */;
+import _getSpanForScope from "_getSpanForScope" /* 709 */;
 import _mod713 from "module_713" /* 713 */;
+import mergeScopeData from "mergeScopeData" /* 736 */;
+import _getTraceInfoFromScope from "_getTraceInfoFromScope" /* 746 */;
+import SEVERITY_TEXT_TO_SEVERITY_NUMBER from "SEVERITY_TEXT_TO_SEVERITY_NUMBER" /* 747 */;
+import _mod748 from "module_748" /* 748 */;
 import _mod749 from "module_749" /* 749 */;
 import _slicedToArray from "module_32" /* 32 */;
 
@@ -58,7 +66,7 @@ function _INTERNAL_flushLogsBuffer(getOptions, value) {
 }
 Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
 
-export const _INTERNAL_captureLog = function _INTERNAL_captureLog(attributes, scope) {
+export const _INTERNAL_captureLog = function _INTERNAL_captureLog(attributes) {
   let currentScope = scope;
   if (scope === undefined) {
     let obj1 = _mod713;
@@ -83,12 +91,12 @@ export const _INTERNAL_captureLog = function _INTERNAL_captureLog(attributes, sc
     ({ release, environment, enableLogs } = options);
     beforeSendLog = options.beforeSendLog;
     if (tmp11) {
-      let tmp12Result = tmp12(746);
+      let tmp12Result = _getTraceInfoFromScope;
       const tmp17 = _slicedToArray(tmp12Result._getTraceInfoFromScope(client, currentScope), 2)[1];
       obj = {};
       const merged = Object.assign(attributes.attributes);
-      tmp12Result = tmp12(736);
-      const combinedScopeData = tmp12Result.getCombinedScopeData(tmp12(713).getIsolationScope(), currentScope);
+      tmp12Result = mergeScopeData;
+      const combinedScopeData = tmp12Result.getCombinedScopeData(_mod713.getIsolationScope(), currentScope);
       ({ id, email, username } = combinedScopeData.user);
       attributes = combinedScopeData.attributes;
       if (undefined === attributes) {
@@ -186,7 +194,7 @@ export const _INTERNAL_captureLog = function _INTERNAL_captureLog(attributes, sc
         tmp40 = obj["sentry._internal.replay_is_buffering"] && false;
       }
       const message = attributes.message;
-      const tmp12Result1 = tmp12(713);
+      const tmp12Result1 = _mod713;
       if (tmp12Result2.isParameterizedString(message)) {
         ({ __sentry_template_values__, __sentry_template_string__ } = message);
         if (undefined === __sentry_template_values__) {
@@ -203,8 +211,8 @@ export const _INTERNAL_captureLog = function _INTERNAL_captureLog(attributes, sc
           obj["sentry.message.parameter." + index] = item;
         });
       }
-      tmp12Result2 = tmp12(692);
-      const _getSpanForScopeResult = tmp12(709)._getSpanForScope(currentScope);
+      tmp12Result2 = _mod692;
+      const _getSpanForScopeResult = _getSpanForScope._getSpanForScope(currentScope);
       let spanId;
       if (_getSpanForScopeResult != null) {
         spanId = _getSpanForScopeResult.spanContext().spanId;
@@ -222,8 +230,8 @@ export const _INTERNAL_captureLog = function _INTERNAL_captureLog(attributes, sc
       obj.attributes = obj;
       client.emit("beforeCaptureLog", obj);
       if (beforeSendLog) {
-        obj = tmp12(689).consoleSandbox(() => beforeSendLog(obj));
-        const tmp12Result4 = tmp12(689);
+        obj = consoleSandbox.consoleSandbox(() => beforeSendLog(obj));
+        const tmp12Result4 = consoleSandbox;
       }
       if (obj) {
         ({ level, attributes, message: message2 } = obj);
@@ -231,44 +239,41 @@ export const _INTERNAL_captureLog = function _INTERNAL_captureLog(attributes, sc
           attributes = {};
         }
         let severityNumber = obj.severityNumber;
-        obj1 = { timestamp: tmp12(703).timestampInSeconds(), level, body: message2, trace_id: null, severity_number: null, attributes: null };
+        obj1 = { timestamp: dateTimestampInSeconds.timestampInSeconds(), level, body: message2, trace_id: null, severity_number: null, attributes: null };
         let trace_id;
         if (tmp17 != null) {
           trace_id = tmp17.trace_id;
         }
         obj1.trace_id = trace_id;
         if (severityNumber == null) {
-          severityNumber = tmp12(747).SEVERITY_TEXT_TO_SEVERITY_NUMBER[level];
+          severityNumber = SEVERITY_TEXT_TO_SEVERITY_NUMBER.SEVERITY_TEXT_TO_SEVERITY_NUMBER[level];
         }
         obj1.severity_number = severityNumber;
         obj2 = {};
-        const tmp12Result5 = tmp12(703);
-        const merged2 = Object.assign(tmp12(748).serializeAttributes(attributes));
-        const tmp12Result6 = tmp12(748);
-        const merged3 = Object.assign(tmp12(748).serializeAttributes(attributes, true));
+        const tmp12Result5 = dateTimestampInSeconds;
+        const merged2 = Object.assign(_mod748.serializeAttributes(attributes));
+        const tmp12Result6 = _mod748;
+        const merged3 = Object.assign(_mod748.serializeAttributes(attributes, true));
         obj1.attributes = obj2;
         tmp3(client, obj1);
         client.emit("afterCaptureLog", obj);
-        const tmp12Result7 = tmp12(748);
+        const tmp12Result7 = _mod748;
       } else {
         client.recordDroppedEvent("before_send", "log_item", 1);
-        if (tmp12(688).DEBUG_BUILD) {
-          const debug3 = tmp12(689).debug;
+        if (_mod688.DEBUG_BUILD) {
+          const debug3 = consoleSandbox.debug;
           debug3.warn("beforeSendLog returned null, log will not be captured.");
         }
       }
-      const tmp12Result3 = tmp12(709);
-    } else if (tmp12(688).DEBUG_BUILD) {
-      const debug2 = tmp12(689).debug;
+      const tmp12Result3 = _getSpanForScope;
+    } else if (_mod688.DEBUG_BUILD) {
+      const debug2 = consoleSandbox.debug;
       debug2.warn("logging option not enabled, log will not be captured.");
     }
     tmp11 = undefined !== enableLogs && enableLogs;
-  } else {
-    if (_mod688.DEBUG_BUILD) {
-      const debug = tmp7(689).debug;
-      debug.warn("No client available to capture log.");
-    }
-    tmp7 = require;
+  } else if (_mod688.DEBUG_BUILD) {
+    const debug = consoleSandbox.debug;
+    debug.warn("No client available to capture log.");
   }
 };
 export { _INTERNAL_captureSerializedLog };

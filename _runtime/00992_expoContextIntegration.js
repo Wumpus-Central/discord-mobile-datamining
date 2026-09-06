@@ -87,15 +87,16 @@ export () => {
             if (obj.isExpo()) {
               if (!tmp4Result.isExpoGo()) {
                 try {
-                  const NATIVE = tmp4(tmp5[1]).NATIVE;
+                  const NATIVE = closure_0(getExpoUpdatesContextCached[1]).NATIVE;
                   NATIVE.setContext(closure_2_2, tmp7);
                 } catch (tmp10) {
                   const debug = tmp3(tmp2[2]).debug;
                   debug.error("Error setting Expo updates context:", tmp10);
                 }
               }
-              tmp4Result = tmp4(tmp5[0]);
+              tmp4Result = closure_0(getExpoUpdatesContextCached[0]);
             }
+            obj = closure_0(getExpoUpdatesContextCached[0]);
           })();
         }
       });
@@ -103,9 +104,9 @@ export () => {
     processEvent(contexts) {
       let obj = _mod867;
       if (obj.isExpo()) {
-        let tmpResult = tmp(867);
+        let tmpResult = _mod867;
         if (tmpResult.isExpoGo()) {
-          tmpResult = tmp(868);
+          tmpResult = _mod868;
           const expoDevice = tmpResult.getExpoDevice();
           let tmp4;
           if (expoDevice) {
@@ -124,7 +125,7 @@ export () => {
             const _Object2 = Object;
             contexts.contexts.device = Object.assign(Object.assign({}, tmp4), contexts.contexts.device);
           }
-          const expoDevice1 = tmp(868).getExpoDevice();
+          const expoDevice1 = _mod868.getExpoDevice();
           let tmp9;
           if (expoDevice1) {
             obj = { build: null, version: null, name: null };
@@ -137,7 +138,7 @@ export () => {
             const _Object4 = Object;
             contexts.contexts.os = Object.assign(Object.assign({}, tmp9), contexts.contexts.os);
           }
-          const tmpResult1 = tmp(868);
+          const tmpResult1 = _mod868;
         }
         contexts.contexts = contexts.contexts || {};
         let tmp13 = closure_0;

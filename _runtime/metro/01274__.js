@@ -195,9 +195,9 @@ export const params = (str) => {
     throw tmp11;
   }
 };
-export const parseLinks = (str) => {
+export const parseLinks = (link) => {
   let done;
-  const obj2 = _createForOfIteratorHelper(str.split(/ *, */));
+  const obj2 = _createForOfIteratorHelper(link.split(/ *, */));
   try {
     const obj = {};
     try {
@@ -206,7 +206,7 @@ export const parseLinks = (str) => {
       let iter2 = iter;
       if (!iter.done) {
         do {
-          str = iter2.value;
+          let str = iter2.value;
           let parts = str.split(/ *; */);
           let first = parts[0];
           let str2 = parts[1];
@@ -254,7 +254,7 @@ export const hasOwn = Object.hasOwn || ((arg0, key10009) => {
     return typeof call === "unknown" ? hasOwnProperty(key10009) : call(object, key10009);
   }
 });
-export const mixin = (arg0, obj) => {
+export const mixin = (prototype, obj) => {
   for (const key10004 in arg1) {
     if (!exports.hasOwn(arg1, key10004)) {
       continue;

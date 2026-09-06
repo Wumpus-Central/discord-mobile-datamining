@@ -29,15 +29,13 @@ export default {
     let tiffHeaderOffset;
     if (20 < byteLength.byteLength) {
       while (true) {
-        let tmp9 = require;
         let obj = _mod5213;
         let stringFromDataView = obj.getStringFromDataView(byteLength, num, 4);
         let uint32 = byteLength.getUint32(num + 4, true);
-        let tmp13 = importDefault;
         let flag3 = flag;
         if (_modDef5216.USE_EXIF) {
           if ("EXIF" === stringFromDataView) {
-            let tmp9Result = tmp9(5213);
+            let tmp9Result = _mod5213;
             let sum = num + 8;
             let sum1 = sum;
             if (tmp9Result.getStringFromDataView(byteLength, sum, 6) === "Exif\0\0") {
@@ -69,7 +67,7 @@ export default {
             }
           }
         }
-        if (tmp13(5216).USE_XMP) {
+        if (_modDef5216.USE_XMP) {
           if ("XMP " === stringFromDataView) {
             obj = { dataOffset: num + 8, length: uint32 };
             let items = [obj];
@@ -80,7 +78,7 @@ export default {
             tmp22 = tmp4;
           }
         }
-        if (tmp13(5216).USE_ICC) {
+        if (_modDef5216.USE_ICC) {
           if ("ICCP" === stringFromDataView) {
             obj = { offset: num + 8, length: uint32, chunkNumber: 1, chunksTotal: 1 };
             let items1 = [obj];

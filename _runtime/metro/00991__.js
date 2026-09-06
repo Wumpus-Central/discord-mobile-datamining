@@ -6,7 +6,7 @@ let dependencyMap = arg6;
 function processEvent(arg0, arg1) {
   closure_0 = arg0;
   closure_1 = arg1;
-  return fn(this, undefined, undefined, function*(arg0, value) {
+  return fn(this, undefined, undefined, function*() {
     if (c6 === 2) {
       c6 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");

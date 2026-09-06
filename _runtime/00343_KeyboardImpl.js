@@ -73,7 +73,7 @@ const items = [
         obj = { duration, type: null };
         let str = null != easing;
         if (str) {
-          str = tmp2(342).Types[easing];
+          str = KeyboardImpl(342).Types[easing];
         }
         if (!str) {
           str = "keyboard";
@@ -81,7 +81,6 @@ const items = [
         obj.type = str;
         obj.update = obj;
         obj.configureNext(obj);
-        tmp2 = KeyboardImpl;
       }
     }
   }

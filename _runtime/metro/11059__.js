@@ -6,7 +6,7 @@ import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 get_ActivityIndicator = fn(17);
 const Linking = get_ActivityIndicator.Linking;
 const RNIapIos = get_ActivityIndicator.NativeModules.RNIapIos;
-asyncGeneratorStep(async (arg0, value) => {
+asyncGeneratorStep(async () => {
   if (v3 === 2) {
     v3 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -42,7 +42,7 @@ asyncGeneratorStep(async (arg0, value) => {
     }
   }
 });
-asyncGeneratorStep(async (arg0, value) => {
+asyncGeneratorStep(async (arg0) => {
   if (c5 === 2) {
     c5 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -100,7 +100,7 @@ asyncGeneratorStep(async (arg0, value) => {
     }
   }
 });
-asyncGeneratorStep(async (arg0, value) => {
+asyncGeneratorStep(async () => {
   if (v3 === 2) {
     v3 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -136,7 +136,7 @@ asyncGeneratorStep(async (arg0, value) => {
     }
   }
 });
-let closure_129_0 = asyncGeneratorStep(async (arg0, value) => {
+let closure_129_0 = asyncGeneratorStep(async (arg0, arg1) => {
   if (c4 === 2) {
     c4 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -209,7 +209,7 @@ function fetchJsonOrThrow(arg0, arg1) {
   }
   return applyArgumentsResult;
 }
-asyncGeneratorStep(async (arg0, value) => {
+asyncGeneratorStep(async (arg0) => {
   closure_1 = tmp2;
   closure_129_0 = closure_0;
   await v3("https://buy.itunes.apple.com/verifyReceipt", closure_0);
@@ -253,7 +253,7 @@ function requestAgnosticReceiptValidationIos(arg0) {
   }
   return applyArgumentsResult;
 }
-let closure_0 = asyncGeneratorStep(async (arg0, value) => {
+let closure_0 = asyncGeneratorStep(async (arg0) => {
   if (v3 === 2) {
     v3 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");

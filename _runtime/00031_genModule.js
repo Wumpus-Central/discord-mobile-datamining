@@ -30,7 +30,7 @@ function genModule(global, index) {
       const item = arr.forEach((item, index) => {
         let flag = str;
         if (str) {
-          flag = -1 !== str.indexOf(index);
+          flag = -1 !== arr.indexOf(index);
         }
         if (!flag) {
           flag = false;
@@ -57,15 +57,14 @@ function genModule(global, index) {
         }
         let tmp4 = "promise" === str ? (function promiseMethodWrapper() {
           closure_0 = [...arguments];
-          let error = new Error();
-          return new Promise((substr, arg1) => {
-            error = arg1;
+          const error = new Error();
+          return new Promise((substr, error) => {
             error(str[2]).default.enqueueNativeCall(substr, error, substr, (arg0) => substr(arg0), (arg0) => {
               obj = arg0;
               if (!arg0) {
                 obj = {};
               }
-              return closure_1(Object.assign(error, obj));
+              return error(Object.assign(error, obj));
             });
           });
         }) : (function nonPromiseMethodWrapper() {
@@ -100,6 +99,8 @@ function genModule(global, index) {
         });
         tmp4.type = str;
         obj[item] = tmp4;
+        arr = str;
+        let tmp = require("module_38");
       });
     }
     let _Object = Object;
@@ -157,7 +158,7 @@ if (global.nativeModuleProxy) {
       }
     }
   });
-  const arr = __fbBatchedBridgeConfig.remoteModuleConfig || [];
+  let arr = __fbBatchedBridgeConfig.remoteModuleConfig || [];
 }
 
 export default obj;

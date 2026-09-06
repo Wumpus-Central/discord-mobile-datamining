@@ -9,19 +9,19 @@ const dependencyMap = arg6;
 function serializeParamValue(arg0) {
 
 }
-function getActiveRoute(index, arg1, fn) {
+function getActiveRoute(index, screens, fn) {
   if (typeof index.index === "number") {
     let tmp = index.routes[index.index];
   } else {
     tmp = index.routes[index.routes.length - 1];
   }
   let tmp2;
-  if (arg1 != null) {
-    tmp2 = arg1[tmp.name];
+  if (screens != null) {
+    tmp2 = screens[tmp.name];
   }
   const tmp3 = fn(tmp, tmp2);
   if (tmp3) {
-    let screens;
+    screens = undefined;
     if (tmp2 != null) {
       screens = tmp2.screens;
     }
@@ -62,9 +62,9 @@ export const getPathFromState = function getPathFromState(state, screens) {
             if (typeof tmp2 === "string") {
               let patternParts = closure_2_0(closure_2_2[2]).getPatternParts(tmp2);
               let obj = { parts: null, ownParts: null };
-              if (tmp3) {
+              if (closure_1_0) {
                 let items = [];
-                HermesBuiltin.arraySpread(patternParts, HermesBuiltin.arraySpread(tmp3, 0));
+                HermesBuiltin.arraySpread(patternParts, HermesBuiltin.arraySpread(closure_1_0, 0));
                 obj.parts = items;
                 obj.ownParts = patternParts;
               } else {
@@ -87,8 +87,8 @@ export const getPathFromState = function getPathFromState(state, screens) {
                 patternParts1 = [];
               }
               if (true !== tmp2.exact) {
-                let items1 = tmp3;
-                if (!tmp3) {
+                let items1 = closure_1_0;
+                if (!closure_1_0) {
                   items1 = [];
                 }
                 let items2 = [];
@@ -109,9 +109,9 @@ export const getPathFromState = function getPathFromState(state, screens) {
                     if (typeof tmp2 === "string") {
                       let patternParts = closure_2_0(closure_2_2[2]).getPatternParts(tmp2);
                       let obj = { parts: null, ownParts: null };
-                      if (tmp3) {
+                      if (closure_1_0) {
                         let items = [];
-                        HermesBuiltin.arraySpread(patternParts, HermesBuiltin.arraySpread(tmp3, 0));
+                        HermesBuiltin.arraySpread(patternParts, HermesBuiltin.arraySpread(closure_1_0, 0));
                         obj.parts = items;
                         obj.ownParts = patternParts;
                       } else {
@@ -134,8 +134,8 @@ export const getPathFromState = function getPathFromState(state, screens) {
                         patternParts1 = [];
                       }
                       if (true !== tmp2.exact) {
-                        let items1 = tmp3;
-                        if (!tmp3) {
+                        let items1 = closure_1_0;
+                        if (!closure_1_0) {
                           items1 = [];
                         }
                         let items2 = [];
@@ -156,9 +156,9 @@ export const getPathFromState = function getPathFromState(state, screens) {
                             if (typeof tmp2 === "string") {
                               let patternParts = closure_2_0(closure_2_2[2]).getPatternParts(tmp2);
                               let obj = { parts: null, ownParts: null };
-                              if (tmp3) {
+                              if (closure_1_0) {
                                 let items = [];
-                                HermesBuiltin.arraySpread(patternParts, HermesBuiltin.arraySpread(tmp3, 0));
+                                HermesBuiltin.arraySpread(patternParts, HermesBuiltin.arraySpread(closure_1_0, 0));
                                 obj.parts = items;
                                 obj.ownParts = patternParts;
                               } else {
@@ -181,8 +181,8 @@ export const getPathFromState = function getPathFromState(state, screens) {
                                 patternParts1 = [];
                               }
                               if (true !== tmp2.exact) {
-                                let items1 = tmp3;
-                                if (!tmp3) {
+                                let items1 = closure_1_0;
+                                if (!closure_1_0) {
                                   items1 = [];
                                 }
                                 let items2 = [];
@@ -203,9 +203,9 @@ export const getPathFromState = function getPathFromState(state, screens) {
                                     if (typeof tmp2 === "string") {
                                       let patternParts = closure_2_0(closure_2_2[2]).getPatternParts(tmp2);
                                       let obj = { parts: null, ownParts: null };
-                                      if (tmp3) {
+                                      if (closure_1_0) {
                                         let items = [];
-                                        HermesBuiltin.arraySpread(patternParts, HermesBuiltin.arraySpread(tmp3, 0));
+                                        HermesBuiltin.arraySpread(patternParts, HermesBuiltin.arraySpread(closure_1_0, 0));
                                         obj.parts = items;
                                         obj.ownParts = patternParts;
                                       } else {
@@ -228,8 +228,8 @@ export const getPathFromState = function getPathFromState(state, screens) {
                                         patternParts1 = [];
                                       }
                                       if (true !== tmp2.exact) {
-                                        let items1 = tmp3;
-                                        if (!tmp3) {
+                                        let items1 = closure_1_0;
+                                        if (!closure_1_0) {
                                           items1 = [];
                                         }
                                         let items2 = [];
@@ -336,9 +336,9 @@ export const getPathFromState = function getPathFromState(state, screens) {
           if (screens1) {
             if (params) {
               if (!set.has(tmp15Result)) {
-                const result = obj.set(tmp15Result, _mod1538.getStateFromRouteParams(tmp15Result.params));
+                const result = set.set(tmp15Result, _mod1538.getStateFromRouteParams(tmp15Result.params));
               }
-              value = obj.get(tmp15Result);
+              value = set.get(tmp15Result);
             }
           }
         }
@@ -416,10 +416,9 @@ export const getPathFromState = function getPathFromState(state, screens) {
           }
           routeState2 = getRouteState(serializeParamValue, screens[serializeParamValue.name]);
           if (undefined !== screens[serializeParamValue.name]) {
-            let arr2 = require;
             let joined;
             if (require != null) {
-              let mapped = arr2.map((segment) => {
+              let mapped = require.map((segment) => {
                 segment = segment.segment;
                 if ("*" === segment) {
                   return user.name;

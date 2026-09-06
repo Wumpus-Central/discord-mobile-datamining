@@ -19,7 +19,7 @@ let c7 = "/Users/ananthukanive/side-proj/react-native-youtube-iframe/src/Youtube
 const StyleSheet = get_ActivityIndicator.StyleSheet;
 const styles = StyleSheet.create({ webView: { backgroundColor: "transparent" } });
 
-export default noop.forwardRef(function YoutubeIframe(videoId, ref) {
+export default noop.forwardRef(function YoutubeIframe(videoId, arg1) {
   videoId = videoId.videoId;
   const playList = videoId.playList;
   let play = videoId.play;
@@ -97,7 +97,7 @@ export default noop.forwardRef(function YoutubeIframe(videoId, ref) {
   const defaultResult = _slicedToArray.default(num.useState(false), 2);
   const first = defaultResult[0];
   closure_18 = defaultResult[1];
-  ref = num.useRef(videoId);
+  let ref = num.useRef(videoId);
   num.useRef(playList);
   if (!initialPlayerParams) {
     initialPlayerParams = {};
@@ -106,7 +106,7 @@ export default noop.forwardRef(function YoutubeIframe(videoId, ref) {
   const ref1 = obj.useRef(null);
   const eventEmitter = new videoId(playList[6]).EventEmitter();
   obj.useRef(eventEmitter);
-  const imperativeHandle = obj.useImperativeHandle(ref, () => ({
+  const imperativeHandle = obj.useImperativeHandle(arg1, () => ({
     getVideoUrl() {
       let current = ref1.current;
       current.injectJavaScript(videoId(playList[7]).PLAYER_FUNCTIONS.getVideoUrlScript);

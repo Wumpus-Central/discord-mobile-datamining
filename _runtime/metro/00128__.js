@@ -2,7 +2,7 @@
 
 // Module 128
 
-export function* createValueIterator(arg0, value) {
+export function* createValueIterator(arg0) {
   if (c3 === 2) {
     c3 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -54,7 +54,7 @@ export function* createValueIterator(arg0, value) {
     }
   }
 }
-export function* createKeyIterator(arg0, value) {
+export function* createKeyIterator(arg0) {
   if (c3 === 2) {
     c3 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -106,7 +106,7 @@ export function* createKeyIterator(arg0, value) {
     }
   }
 }
-export function* createEntriesIterator(arg0, value) {
+export function* createEntriesIterator(arg0) {
   if (c3 === 2) {
     c3 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");

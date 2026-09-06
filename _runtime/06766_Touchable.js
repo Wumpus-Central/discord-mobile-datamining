@@ -257,8 +257,8 @@ export const Touchable = (hitSlop) => {
     ref.current = closure_10.UNKNOWN;
     if (undefined !== closure_7.current) {
       const _clearTimeout = clearTimeout;
-      clearTimeout(tmp11.current);
-      tmp11.current = undefined;
+      clearTimeout(closure_7.current);
+      closure_7.current = undefined;
     }
     closure_11();
   }, items4);
@@ -270,26 +270,26 @@ export const Touchable = (hitSlop) => {
     onUpdate: ref2((pointerInside) => {
       if (!closure_9.current) {
         if (ref.current !== closure_10.UNKNOWN) {
-          const current = tmp.current;
+          const current = ref.current;
           if (pointerInside.pointerInside) {
-            if (current === tmp2.OUTSIDE) {
+            if (current === closure_10.OUTSIDE) {
               if (onPressIn != null) {
                 tmp9(pointerInside);
               }
             }
-            tmp.current = tmp2.INSIDE;
+            ref.current = closure_10.INSIDE;
           } else {
-            if (current === tmp2.INSIDE) {
+            if (current === closure_10.INSIDE) {
               if (onPressOut != null) {
                 tmp3(pointerInside);
               }
               if (undefined !== closure_7.current) {
                 const _clearTimeout = clearTimeout;
-                clearTimeout(tmp6.current);
-                tmp6.current = undefined;
+                clearTimeout(closure_7.current);
+                closure_7.current = undefined;
               }
             }
-            tmp.current = tmp2.OUTSIDE;
+            ref.current = closure_10.OUTSIDE;
           }
         }
       }
@@ -332,26 +332,26 @@ export const Touchable = (hitSlop) => {
   const tmp27 = ref2((pointerInside) => {
     if (!closure_9.current) {
       if (ref.current !== closure_10.UNKNOWN) {
-        const current = tmp.current;
+        const current = ref.current;
         if (pointerInside.pointerInside) {
-          if (current === tmp2.OUTSIDE) {
+          if (current === closure_10.OUTSIDE) {
             if (onPressIn != null) {
               tmp9(pointerInside);
             }
           }
-          tmp.current = tmp2.INSIDE;
+          ref.current = closure_10.INSIDE;
         } else {
-          if (current === tmp2.INSIDE) {
+          if (current === closure_10.INSIDE) {
             if (onPressOut != null) {
               tmp3(pointerInside);
             }
             if (undefined !== closure_7.current) {
               const _clearTimeout = clearTimeout;
-              clearTimeout(tmp6.current);
-              tmp6.current = undefined;
+              clearTimeout(closure_7.current);
+              closure_7.current = undefined;
             }
           }
-          tmp.current = tmp2.OUTSIDE;
+          ref.current = closure_10.OUTSIDE;
         }
       }
     }

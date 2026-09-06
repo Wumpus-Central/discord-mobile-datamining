@@ -30,4 +30,5 @@ export const whenIdleOrHidden = (fn) => {
     });
     const tmpResult1 = tmp(906);
   }
+  tmp3 = require("module_904").WINDOW.requestIdleCallback || require("module_904").WINDOW.setTimeout;
 };

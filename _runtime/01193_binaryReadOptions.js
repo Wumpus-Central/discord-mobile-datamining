@@ -68,14 +68,14 @@ let items = [
           } while (tmp14);
         }
       } else {
-        if (tmp(1192).WireType.Bit64 === arg0) {
+        if (BinaryReader(1192).WireType.Bit64 === arg0) {
           self.pos = self.pos + 4;
-        } else if (tmp(1192).WireType.Bit32 !== arg0) {
-          if (tmp(1192).WireType.LengthDelimited === arg0) {
+        } else if (BinaryReader(1192).WireType.Bit32 !== arg0) {
+          if (BinaryReader(1192).WireType.LengthDelimited === arg0) {
             self.pos = self.pos + self.uint32();
-          } else if (tmp(1192).WireType.StartGroup === arg0) {
+          } else if (BinaryReader(1192).WireType.StartGroup === arg0) {
             const tmp8 = self.tag()[1];
-            if (tmp8 !== tmp(1192).WireType.EndGroup) {
+            if (tmp8 !== BinaryReader(1192).WireType.EndGroup) {
               do {
                 let skipResult = self.skip(self.tag()[1]);
                 EndGroup = BinaryReader(1192).WireType.EndGroup;

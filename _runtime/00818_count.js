@@ -7,13 +7,13 @@ require = arg1;
 const dependencyMap = arg6;
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 
-export const count = function count(name, arg1, unit) {
+export const count = function count(name, arg1) {
   let num = arg1;
   if (arg1 === undefined) {
     num = 1;
   }
   const obj = { type: "counter", name, value: num, unit: null, attributes: null };
-  unit = undefined;
+  let unit;
   if (unit != null) {
     unit = unit.unit;
   }

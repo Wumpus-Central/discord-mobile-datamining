@@ -1,6 +1,8 @@
 // === Module 644: stackSet ===
 
 // Module 644 (stackSet)
+import MapCache from "MapCache" /* 596 */;
+import _mod611 from "module_611" /* 611 */;
 import ListCache from "ListCache" /* 612 */;
 
 
@@ -10,9 +12,9 @@ export default function stackSet(arg0, arg1) {
   let obj = __data__;
   if (__data__ instanceof ListCache) {
     __data__ = __data__.__data__;
-    if (tmp(611)) {
+    if (_mod611) {
       if (__data__.length >= 199) {
-        const tmp6 = new tmp(596)(__data__);
+        const tmp6 = new MapCache(__data__);
         self.__data__ = tmp6;
         obj = tmp6;
       }

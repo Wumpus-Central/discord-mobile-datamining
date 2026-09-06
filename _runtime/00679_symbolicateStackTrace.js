@@ -90,7 +90,7 @@ if (!fn) {
 
 export const fetchSourceContext = function fetchSourceContext(arg0) {
   closure_0 = arg0;
-  return fn(this, undefined, undefined, function*(arg0, value) {
+  return fn(this, undefined, undefined, function*() {
     if (c0 === 2) {
       c0 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -135,17 +135,17 @@ export const fetchSourceContext = function fetchSourceContext(arg0) {
                   stealthXhr.send(JSON.stringify(obj));
                   stealthXhr.onreadystatechange = () => {
                     if (stealthXhr.readyState === c0(closure_3_1[0]).XHR_READYSTATE_DONE) {
-                      if (200 !== tmp2.status) {
+                      if (200 !== stealthXhr.status) {
                         closure_0(stack);
                       }
                       try {
                         const _JSON = JSON;
-                        const parsed = JSON.parse(tmp2.responseText);
+                        const parsed = JSON.parse(stealthXhr.responseText);
                         const _Array = Array;
                         if (Array.isArray(parsed.stack)) {
-                          tmp9(parsed.stack);
+                          closure_0(parsed.stack);
                         } else {
-                          tmp9(stack);
+                          closure_0(stack);
                         }
                       } catch (err) {
                         closure_0(stack);

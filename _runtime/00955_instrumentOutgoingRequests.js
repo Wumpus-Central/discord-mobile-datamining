@@ -7,7 +7,7 @@ import baggageHeaderHasSentryValues from "baggageHeaderHasSentryValues" /* 956 *
 
 require = arg1;
 const dependencyMap = arg6;
-function shouldAttachHeaders(url, arg1) {
+function shouldAttachHeaders(url, dependencyMap) {
   const locationHref = _mod682.getLocationHref();
   if (locationHref) {
     try {
@@ -16,14 +16,14 @@ function shouldAttachHeaders(url, arg1) {
       const _URL2 = URL;
       const uRL1 = new URL(locationHref);
       let tmp18 = tmp17;
-      if (arg1) {
-        let tmpResult = tmp(682);
-        let result = tmpResult.stringMatchesSomePattern(str.toString(), arg1);
+      if (dependencyMap) {
+        let tmpResult = _mod682;
+        let result = tmpResult.stringMatchesSomePattern(str.toString(), dependencyMap);
         if (!result) {
           let result1 = tmp17;
           if (tmp17) {
-            tmpResult = tmp(682);
-            result1 = tmpResult.stringMatchesSomePattern(uRL.pathname, arg1);
+            tmpResult = _mod682;
+            result1 = tmpResult.stringMatchesSomePattern(uRL.pathname, dependencyMap);
           }
           result = result1;
         }
@@ -35,9 +35,9 @@ function shouldAttachHeaders(url, arg1) {
     }
   } else {
     let result2 = url.match(/^\/(?!\/)/);
-    if (arg1) {
-      result2 = tmp(682).stringMatchesSomePattern(url, arg1);
-      const tmpResult1 = tmp(682);
+    if (dependencyMap) {
+      result2 = _mod682.stringMatchesSomePattern(url, dependencyMap);
+      const tmpResult1 = _mod682;
     }
     return result2;
   }
@@ -69,9 +69,8 @@ export const instrumentOutgoingRequests = function instrumentOutgoingRequests(ge
             value = onRequestSpanEnd.get(op.span_id);
             if (value) {
               op.timestamp = value / 1000;
-              obj.delete(op.span_id);
+              onRequestSpanEnd.delete(op.span_id);
             }
-            obj = onRequestSpanEnd;
           }
         });
       }
@@ -98,26 +97,26 @@ export const instrumentOutgoingRequests = function instrumentOutgoingRequests(ge
         const result1 = weakMap.set(response.response, response.fetchData.__span);
       }
       if (result) {
-        let tmpResult = tmp(956);
+        let tmpResult = baggageHeaderHasSentryValues;
         const fullURL = tmpResult.getFullURL(response.fetchData.url);
         let host;
         if (fullURL) {
-          tmpResult = tmp(682);
+          tmpResult = _mod682;
           host = tmpResult.parseUrl(fullURL).host;
         }
         let stripDataUrlContentResult;
         if (fullURL) {
-          stripDataUrlContentResult = tmp(682).stripDataUrlContent(fullURL);
-          const tmpResult1 = tmp(682);
+          stripDataUrlContentResult = _mod682.stripDataUrlContent(fullURL);
+          const tmpResult1 = _mod682;
         }
         obj = { "http.url": stripDataUrlContentResult, "server.address": host };
         result.setAttributes(obj);
         if (closure_1_0) {
           closure_0 = result;
-          const url = tmp(682).spanToJSON(result).data.url;
+          const url = _mod682.spanToJSON(result).data.url;
           if (url) {
             if (typeof url === "string") {
-              closure_2 = tmp(898).addPerformanceInstrumentationHandler("resource", (arg0) => {
+              closure_2 = triggerHandlers.addPerformanceInstrumentationHandler("resource", (arg0) => {
                 const entries = arg0.entries;
                 const item = entries.forEach((name) => {
                   let result = startInactiveSpanResult(url2[1]).isPerformanceResourceTiming(name);
@@ -131,18 +130,20 @@ export const instrumentOutgoingRequests = function instrumentOutgoingRequests(ge
                     const timerId = setTimeout(closure_1_2);
                     const tmpResult = startInactiveSpanResult(url2[2]);
                   }
+                  const obj = startInactiveSpanResult(url2[1]);
                 });
               });
-              const tmpResult3 = tmp(898);
+              const tmpResult3 = triggerHandlers;
             }
           }
-          const tmpResult2 = tmp(682);
+          const tmpResult2 = _mod682;
         }
         if (closure_1_2 != null) {
           const obj1 = { headers: response.headers };
           tmp11(result, obj1);
         }
       }
+      tmp3 = response.response && response.fetchData.__span;
     });
   }
   if (traceXHR) {
@@ -163,18 +164,18 @@ export const instrumentOutgoingRequests = function instrumentOutgoingRequests(ge
                 const __sentry_xhr_span_id__ = xhr.__sentry_xhr_span_id__;
                 if (__sentry_xhr_span_id__) {
                   let tmp74 = obj19;
-                  if (tmp5[__sentry_xhr_span_id__]) {
+                  if (closure_6[__sentry_xhr_span_id__]) {
                     tmp74 = undefined !== tmp8.status_code;
                   }
                   if (tmp74) {
                     _mod682.setHttpStatus(obj19, tmp8.status_code);
                     obj19.end();
-                    if (tmp7 != null) {
+                    if (onRequestSpanEnd != null) {
                       obj = { headers: null, error: null };
                       const obj22 = baggageHeaderHasSentryValues;
                       obj.headers = obj22.createHeadersSafely(triggerHandlers.parseXhrResponseHeaders(xhr));
                       obj.error = xhr.error;
-                      tmp7(obj19, obj);
+                      onRequestSpanEnd(obj19, obj);
                     }
                     delete tmp2[tmp];
                   }
@@ -240,7 +241,7 @@ export const instrumentOutgoingRequests = function instrumentOutgoingRequests(ge
                 let startInactiveSpanResult = obj7.startInactiveSpan(obj);
               }
               xhr.__sentry_xhr_span_id__ = startInactiveSpanResult.spanContext().spanId;
-              tmp5[xhr.__sentry_xhr_span_id__] = startInactiveSpanResult;
+              closure_6[xhr.__sentry_xhr_span_id__] = startInactiveSpanResult;
               if (typeof shouldAttachHeadersWithTargets === "function") {
                 if (shouldAttachHeaders(url, dependencyMap)) {
                   let tmp61;
@@ -320,7 +321,7 @@ export const instrumentOutgoingRequests = function instrumentOutgoingRequests(ge
           const url2 = _mod682.spanToJSON(tmp11).data.url;
           if (url2) {
             if (typeof url2 === "string") {
-              closure_2 = tmp85(898).addPerformanceInstrumentationHandler("resource", (arg0) => {
+              closure_2 = triggerHandlers.addPerformanceInstrumentationHandler("resource", (arg0) => {
                 const entries = arg0.entries;
                 const item = entries.forEach((name) => {
                   let result = startInactiveSpanResult(url2[1]).isPerformanceResourceTiming(name);
@@ -334,12 +335,12 @@ export const instrumentOutgoingRequests = function instrumentOutgoingRequests(ge
                     const timerId = setTimeout(closure_1_2);
                     const tmpResult = startInactiveSpanResult(url2[2]);
                   }
+                  const obj = startInactiveSpanResult(url2[1]);
                 });
               });
-              const tmp85Result = tmp85(898);
+              const tmp85Result = triggerHandlers;
             }
           }
-          tmp85 = require;
         }
         if (weakMap != null) {
           let __sentry_xhr_v3__ = xhr.xhr.__sentry_xhr_v3__;
@@ -353,5 +354,6 @@ export const instrumentOutgoingRequests = function instrumentOutgoingRequests(ge
       }
     });
   }
+  let obj = {};
 };
 export { shouldAttachHeaders };

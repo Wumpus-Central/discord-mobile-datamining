@@ -2,6 +2,7 @@
 
 // Module 11061 (purchaseUpdatedListener)
 import _mod17 from "module_17" /* 17 */;
+import _mod11049 from "module_11049" /* 11049 */;
 import _mod11051 from "module_11051" /* 11051 */;
 import productSk2Map from "productSk2Map" /* 11062 */;
 
@@ -37,10 +38,10 @@ export const purchaseErrorListener = (arg0) => new NativeEventEmitter(_mod11051.
 export const promotedProductListener = (arg0) => {
   let addListenerResult = null;
   if (_mod11051.isIos) {
-    let tmpResult = tmp(11049);
+    let tmpResult = _mod11049;
     addListenerResult = null;
     if (!tmpResult.isIosStorekit2()) {
-      tmpResult = tmp(11051);
+      tmpResult = _mod11051;
       const obj3 = new NativeEventEmitter(tmpResult.getIosModule());
       addListenerResult = obj3.addListener("iap-promoted-product", arg0);
     }
@@ -50,10 +51,10 @@ export const promotedProductListener = (arg0) => {
 export const transactionListener = (arg0) => {
   let addListenerResult = null;
   if (_mod11051.isIos) {
-    let tmpResult = tmp(11049);
+    let tmpResult = _mod11049;
     addListenerResult = null;
     if (tmpResult.isIosStorekit2()) {
-      tmpResult = tmp(11051);
+      tmpResult = _mod11051;
       const obj3 = new NativeEventEmitter(tmpResult.getIosModule());
       addListenerResult = obj3.addListener("iap-transaction-updated", arg0);
     }

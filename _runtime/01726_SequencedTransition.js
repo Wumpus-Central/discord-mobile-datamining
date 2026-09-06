@@ -2,8 +2,8 @@
 
 // Module 1726 (SequencedTransition)
 
-export const SequencedTransition = function SequencedTransition(name, arg1) {
-  ({ translateX, translateY, scaleX, scaleY, reversed } = arg1);
+export const SequencedTransition = function SequencedTransition(name, translateX) {
+  ({ translateX, translateY, scaleX, scaleY, reversed } = translateX);
   let obj = { name, style: null, duration: 300 };
   obj = { 0: null, 50: null, 100: null };
   obj = { transform: null };

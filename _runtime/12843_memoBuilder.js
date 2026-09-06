@@ -26,7 +26,7 @@ export const memoBuilder = function memoBuilder() {
         if (0 < arr.length) {
           while (weakSet[num] !== arg0) {
             num = num + 1;
-            arr2 = arr3;
+            arr2 = weakSet;
           }
           return true;
         }
@@ -36,10 +36,10 @@ export const memoBuilder = function memoBuilder() {
     },
     function unmemoize(arg0) {
       if (closure_0) {
-        arr.delete(arg0);
+        weakSet.delete(arg0);
       } else {
         let num = 0;
-        if (0 < arr.length) {
+        if (0 < weakSet.length) {
           while (weakSet[num] !== arg0) {
             num = num + 1;
           }

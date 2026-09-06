@@ -31,7 +31,8 @@ export const parseNumberPattern = function parseNumberPattern(str) {
   return num2;
 };
 export const parseOrdinalNumberPattern = function parseOrdinalNumberPattern(str) {
-  return parseInt(str.toLowerCase().replace(/(?:er)$/i, ""));
+  str = str.toLowerCase();
+  return parseInt(str.replace(/(?:er)$/i, ""));
 };
 export const parseYear = function parseYear(match) {
   if (obj.test(match)) {
@@ -66,9 +67,8 @@ export const parseDuration = function parseDuration(arg0) {
   while (match) {
     let str2 = match[1];
     let str3 = str2.toLowerCase();
-    let tmp2 = exports;
     if (undefined !== exports.INTEGER_WORD_DICTIONARY[str3]) {
-      let num = tmp2.INTEGER_WORD_DICTIONARY[str3];
+      let num = exports.INTEGER_WORD_DICTIONARY[str3];
     } else {
       num = 1;
       if ("une" !== str3) {
@@ -88,7 +88,7 @@ export const parseDuration = function parseDuration(arg0) {
       }
     }
     let str4 = match[2];
-    obj[tmp2.TIME_UNIT_DICTIONARY[str4.toLowerCase(str4)]] = num;
+    obj[exports.TIME_UNIT_DICTIONARY[str4.toLowerCase(str4)]] = num;
     let substr = str.substring(match[0].length);
     match = regExp.exec(substr);
     str = substr;

@@ -15,7 +15,7 @@ import _mod10484 from "module_10484" /* 10484 */;
 import _mod10485 from "module_10485" /* 10485 */;
 import _mod10486 from "module_10486" /* 10486 */;
 
-function createConfiguration(flag, arg1) {
+function createConfiguration() {
   if (flag === undefined) {
     flag = true;
   }

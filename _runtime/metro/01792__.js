@@ -27,12 +27,12 @@ function adjustRotationToInterfaceOrientation(pitch) {
     pitch.roll = -pitch;
     const _Math2 = Math;
     pitch.yaw = yaw - Math.PI / 2;
-  } else if (interfaceOrientation === tmp(1661).InterfaceOrientation.ROTATION_270) {
+  } else if (interfaceOrientation === _mod1661.InterfaceOrientation.ROTATION_270) {
     pitch.pitch = -roll;
     pitch.roll = pitch;
     const _Math = Math;
     pitch.yaw = yaw + Math.PI / 2;
-  } else if (interfaceOrientation === tmp(1661).InterfaceOrientation.ROTATION_180) {
+  } else if (interfaceOrientation === _mod1661.InterfaceOrientation.ROTATION_180) {
     pitch.pitch = pitch.pitch * -1;
     pitch.roll = pitch.roll * -1;
     pitch.yaw = pitch.yaw * -1;
@@ -67,10 +67,10 @@ function adjustVectorToInterfaceOrientation(arg0) {
   if (interfaceOrientation === _mod1661.InterfaceOrientation.ROTATION_90) {
     arg0.x = -y;
     arg0.y = x;
-  } else if (interfaceOrientation === tmp(1661).InterfaceOrientation.ROTATION_270) {
+  } else if (interfaceOrientation === _mod1661.InterfaceOrientation.ROTATION_270) {
     arg0.x = y;
     arg0.y = -x;
-  } else if (interfaceOrientation === tmp(1661).InterfaceOrientation.ROTATION_180) {
+  } else if (interfaceOrientation === _mod1661.InterfaceOrientation.ROTATION_180) {
     arg0.x = arg0.x * -1;
     arg0.y = arg0.y * -1;
   }
@@ -184,13 +184,13 @@ export const useAnimatedSensor = function useAnimatedSensor(arg0, adjustToInterf
     const registerSensorResult = closure_0(ref[2]).registerSensor(sensor, config, fn);
     config = registerSensorResult;
     if (-1 !== registerSensorResult) {
-      tmp.current.unregister = () => runOnRuntime.unregisterSensor(registerSensorResult);
-      tmp.current.isAvailable = true;
+      ref2.current.unregister = () => runOnRuntime.unregisterSensor(registerSensorResult);
+      ref2.current.isAvailable = true;
     } else {
-      tmp.current.unregister = () => {
+      ref2.current.unregister = () => {
 
       };
-      tmp.current.isAvailable = false;
+      ref2.current.isAvailable = false;
     }
     return () => {
       const current = ref.current;

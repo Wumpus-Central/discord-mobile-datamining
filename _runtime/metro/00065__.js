@@ -15,10 +15,10 @@ export function setRuntimeConfigProvider(arg0) {
     global = arg0;
   }
 }
-export const get = function get(arg0, arg1) {
-  closure_0 = arg0;
+export const get = function get(APNGDecorationView, arg1) {
+  closure_0 = APNGDecorationView;
   closure_1 = arg1;
-  customBubblingEventTypesAll.register(arg0, () => {
+  customBubblingEventTypesAll.register(APNGDecorationView, () => {
     let tmpResult;
     if (global != null) {
       tmpResult = tmp(closure_0);
@@ -44,7 +44,7 @@ export const get = function get(arg0, arg1) {
     if (verify) {
       let tmp20 = viewConfig1;
       if (!native) {
-        tmp20 = mergeDefault(tmp18);
+        tmp20 = mergeDefault(closure_0);
       }
       if (null == tmp20) {
         return viewConfig1;
@@ -53,18 +53,17 @@ export const get = function get(arg0, arg1) {
         if (native) {
           viewConfig2 = _mod103.createViewConfig(closure_1());
         }
-        const validateResult = accumulateDifferencesAll.validate(tmp18, tmp20, viewConfig2);
+        const validateResult = accumulateDifferencesAll.validate(closure_0, tmp20, viewConfig2);
         if ("invalid" === validateResult.type) {
           const _console = console;
-          console.error(tmp24(107).stringifyValidationResult(tmp18, validateResult));
-          const tmp24Result = tmp24(107);
+          console.error(accumulateDifferencesAll.stringifyValidationResult(closure_0, validateResult));
+          const tmp24Result = accumulateDifferencesAll;
         }
-        tmp24 = importAll;
       }
     }
     return viewConfig1;
   });
-  return arg0;
+  return APNGDecorationView;
 };
 export const getWithFallback_DEPRECATED = function getWithFallback_DEPRECATED(framebus, arg1) {
   if (null == global) {
@@ -103,7 +102,7 @@ export const getWithFallback_DEPRECATED = function getWithFallback_DEPRECATED(fr
         if (verify) {
           let tmp20 = viewConfig1;
           if (!native) {
-            tmp20 = mergeDefault(tmp18);
+            tmp20 = mergeDefault(closure_0);
           }
           if (null == tmp20) {
             return viewConfig1;
@@ -112,13 +111,12 @@ export const getWithFallback_DEPRECATED = function getWithFallback_DEPRECATED(fr
             if (native) {
               viewConfig2 = _mod103.createViewConfig(closure_1());
             }
-            const validateResult = accumulateDifferencesAll.validate(tmp18, tmp20, viewConfig2);
+            const validateResult = accumulateDifferencesAll.validate(closure_0, tmp20, viewConfig2);
             if ("invalid" === validateResult.type) {
               const _console = console;
-              console.error(tmp24(107).stringifyValidationResult(tmp18, validateResult));
-              const tmp24Result = tmp24(107);
+              console.error(accumulateDifferencesAll.stringifyValidationResult(closure_0, validateResult));
+              const tmp24Result = accumulateDifferencesAll;
             }
-            tmp24 = importAll;
           }
         }
         return viewConfig1;
@@ -154,7 +152,7 @@ export const getWithFallback_DEPRECATED = function getWithFallback_DEPRECATED(fr
       if (verify) {
         let tmp20 = viewConfig1;
         if (!native) {
-          tmp20 = mergeDefault(tmp18);
+          tmp20 = mergeDefault(closure_0);
         }
         if (null == tmp20) {
           return viewConfig1;
@@ -163,13 +161,12 @@ export const getWithFallback_DEPRECATED = function getWithFallback_DEPRECATED(fr
           if (native) {
             viewConfig2 = _mod103.createViewConfig(closure_1());
           }
-          const validateResult = accumulateDifferencesAll.validate(tmp18, tmp20, viewConfig2);
+          const validateResult = accumulateDifferencesAll.validate(closure_0, tmp20, viewConfig2);
           if ("invalid" === validateResult.type) {
             const _console = console;
-            console.error(tmp24(107).stringifyValidationResult(tmp18, validateResult));
-            const tmp24Result = tmp24(107);
+            console.error(accumulateDifferencesAll.stringifyValidationResult(closure_0, validateResult));
+            const tmp24Result = accumulateDifferencesAll;
           }
-          tmp24 = importAll;
         }
       }
       return viewConfig1;

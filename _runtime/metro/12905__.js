@@ -50,12 +50,12 @@ function getCurrentHubShim() {
     endSession: _flush.endSession,
     captureSession(arg0) {
       if (arg0) {
-        let tmpResult = tmp(tmp2[1]);
+        let tmpResult = _flush;
         return tmpResult.endSession();
       } else {
-        tmpResult = tmp(tmp2[0]);
+        tmpResult = _mod12824;
         const currentScope = tmpResult.getCurrentScope();
-        const client = tmp(tmp2[0]).getClient();
+        const client = _mod12824.getClient();
         const session = currentScope.getSession();
         let tmp4 = client;
         if (client) {
@@ -64,6 +64,7 @@ function getCurrentHubShim() {
         if (tmp4) {
           client.captureSession(session);
         }
+        const tmpResult1 = _mod12824;
       }
     }
   };

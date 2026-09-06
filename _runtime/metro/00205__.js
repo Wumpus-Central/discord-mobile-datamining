@@ -49,4 +49,5 @@ export const setEventHandlerAttribute = function setEventHandlerAttribute(remove
   if (tmp18) {
     setEventHandlerAttributeMap(removeEventListener, null);
   }
+  tmp18 = null != obj && 0 === obj.size;
 };

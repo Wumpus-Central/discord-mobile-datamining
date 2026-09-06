@@ -31,20 +31,20 @@ export const useOnProgressChange = function useOnProgressChange(autoFillData) {
     if (!loop) {
       const _Math = Math;
       const _Math2 = Math;
-      const result1 = -tmp3 - 1 * tmp4;
+      const result1 = -rawDataLength - 1 * size;
       bound = Math.max(result1, Math.min(result, 0));
     }
-    const absolute = Math.abs(bound / tmp4);
+    const absolute = Math.abs(bound / size);
     let diff = absolute;
     if (bound > 0) {
-      diff = tmp3 - absolute;
+      diff = rawDataLength - absolute;
     }
     if (onProgressChange) {
       if (closure_6) {
-        cancelAnimation.runOnJS(tmp11)(bound, diff);
+        cancelAnimation.runOnJS(onProgressChange)(bound, diff);
         const tmpResult = cancelAnimation;
       } else {
-        tmp11.value = diff;
+        onProgressChange.value = diff;
       }
     }
   };

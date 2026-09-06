@@ -15,15 +15,14 @@ export const onThisSpanEnd = function onThisSpanEnd(on, arg1, arg2) {
     }
   });
 };
-export const adjustTransactionDuration = (on, activeSpan, arg2) => {
+export const adjustTransactionDuration = (client, activeSpan, finalTimeout) => {
   _require = activeSpan;
-  dependencyMap = arg2;
+  dependencyMap = finalTimeout;
   if (obj.isRootSpan(activeSpan)) {
-    on.on("spanEnd", (arg0) => {
+    client.on("spanEnd", (arg0) => {
       let obj = closure_0;
       if (arg0 === closure_0) {
         let timestamp = _mod682.spanToJSON(obj).timestamp;
-        const tmp6 = require;
         const start_timestamp = _mod682.spanToJSON(obj).start_timestamp;
         if (timestamp) {
           if (start_timestamp) {
@@ -36,7 +35,7 @@ export const adjustTransactionDuration = (on, activeSpan, arg2) => {
               timestamp = tmp3;
             }
             if (timestamp) {
-              obj = { code: tmp6(682).SPAN_STATUS_ERROR, message: "deadline_exceeded" };
+              obj = { code: _mod682.SPAN_STATUS_ERROR, message: "deadline_exceeded" };
               obj.setStatus(obj);
               const attr = obj.setAttribute("maxTransactionDurationExceeded", "true");
             }
@@ -49,7 +48,7 @@ export const adjustTransactionDuration = (on, activeSpan, arg2) => {
     debug.warn("Not sampling empty back spans only works for Sentry Transactions (Root Spans).");
   }
 };
-export const ignoreEmptyBackNavigation = (on, c4) => {
+export const ignoreEmptyBackNavigation = (client, c4) => {
   const f71977 = (arg0) => {
     const data = c4(f71977[2]).spanToJSON(arg0).data;
     let prop;
@@ -64,15 +63,15 @@ export const ignoreEmptyBackNavigation = (on, c4) => {
     const debug = c4(f71977[2]).debug;
     debug.log("Not sampling transaction as route has been seen before. Pass ignoreEmptyBackNavigationTransactions = false to disable this feature.");
   };
-  if (on) {
+  if (client) {
     if (c4) {
       let tmpResult = tmp(tmp2[1]);
       if (tmpResult.isRootSpan(c4)) {
         tmpResult = tmp(tmp2[1]);
         if (tmpResult.isSentrySpan(c4)) {
-          on.on("spanEnd", (arg0) => {
+          client.on("spanEnd", (arg0) => {
             if (arg0 === closure_0) {
-              if (dependencyMap(tmp)) {
+              if (DEFAULT_NAVIGATION_SPAN_NAME(tmp)) {
                 closure_0 = tmp;
                 const spanDescendants = _mod682.getSpanDescendants(tmp);
                 if (spanDescendants.filter((spanContext) => {
@@ -106,8 +105,7 @@ export const ignoreEmptyBackNavigation = (on, c4) => {
     debug.warn("Could not hook on spanEnd event because client is not defined.");
   }
 };
-export const ignoreEmptyRouteChangeTransactions = (on, c4, arg2, arg3) => {
-  closure_1 = arg2;
+export const ignoreEmptyRouteChangeTransactions = (client, c4, DEFAULT_NAVIGATION_SPAN_NAME, arg3) => {
   closure_2 = arg3;
   closure_129_0 = c4;
   closure_129_1 = (arg0) => {
@@ -131,19 +129,19 @@ export const ignoreEmptyRouteChangeTransactions = (on, c4, arg2, arg3) => {
   closure_129_2 = (arg0) => {
     const debug = _mod682.debug;
     debug.log("Discarding empty \"" + closure_1 + "\" transaction that never received route information.");
-    if (null != on) {
-      on.recordDroppedEvent("sample_rate", "transaction");
+    if (null != client) {
+      client.recordDroppedEvent("sample_rate", "transaction");
     }
   };
-  if (on) {
+  if (client) {
     if (c4) {
       let tmpResult = tmp(tmp2[1]);
       if (tmpResult.isRootSpan(c4)) {
         tmpResult = tmp(tmp2[1]);
         if (tmpResult.isSentrySpan(c4)) {
-          on.on("spanEnd", (arg0) => {
+          client.on("spanEnd", (arg0) => {
             if (arg0 === closure_0) {
-              if (dependencyMap(tmp)) {
+              if (DEFAULT_NAVIGATION_SPAN_NAME(tmp)) {
                 closure_0 = tmp;
                 const spanDescendants = _mod682.getSpanDescendants(tmp);
                 if (spanDescendants.filter((spanContext) => {
@@ -177,56 +175,57 @@ export const ignoreEmptyRouteChangeTransactions = (on, c4, arg2, arg3) => {
     debug.warn("Could not hook on spanEnd event because client is not defined.");
   }
 };
-export const onlySampleIfChildSpans = (on, c4) => {
-  _require = c4;
-  if (obj.isRootSpan(c4)) {
-    if (tmpResult.isSentrySpan(c4)) {
-      on.on("spanEnd", (arg0) => {
+export const onlySampleIfChildSpans = (client, startIdleSpanResult) => {
+  _require = startIdleSpanResult;
+  if (obj.isRootSpan(startIdleSpanResult)) {
+    if (tmpResult.isSentrySpan(startIdleSpanResult)) {
+      client.on("spanEnd", (arg0) => {
         if (arg0 === closure_0) {
-          if (obj2.getSpanDescendants(tmp).length <= 1) {
-            const debug = tmp4(682).debug;
+          if (obj2.getSpanDescendants(closure_0).length <= 1) {
+            const debug = _mod682.debug;
             const _HermesInternal = HermesInternal;
-            debug.log("Not sampling as " + tmp4(682).spanToJSON(tmp).op + " transaction has no child spans.");
-            tmp._sampled = false;
-            const tmp4Result = tmp4(682);
+            debug.log("Not sampling as " + _mod682.spanToJSON(closure_0).op + " transaction has no child spans.");
+            closure_0._sampled = false;
+            const tmp4Result = _mod682;
           }
           obj2 = _mod682;
         }
       });
     }
+    tmpResult = tmp(987);
   }
   let debug = tmp(682).debug;
   debug.warn("Not sampling childless spans only works for Sentry Transactions (Root Spans).");
+  obj = require("module_987");
 };
-export const cancelInBackground = (on, arg1) => {
-  closure_0 = arg1;
+export const cancelInBackground = (client, startIdleSpanResult) => {
   const listener = AppState.addEventListener("change", (event) => {
     if ("background" === event) {
       const debug = _mod682.debug;
       let obj = _mod682;
       const _HermesInternal = HermesInternal;
-      debug.log("Setting " + obj.spanToJSON(closure_0).op + " transaction to cancelled because the app is in the background.");
+      debug.log("Setting " + obj.spanToJSON(startIdleSpanResult).op + " transaction to cancelled because the app is in the background.");
       obj = { code: _mod682.SPAN_STATUS_ERROR, message: "cancelled" };
-      closure_0.setStatus(obj);
-      closure_0.end();
+      startIdleSpanResult.setStatus(obj);
+      startIdleSpanResult.end();
     }
   });
   if (listener) {
-    on.on("spanEnd", (arg0) => {
+    client.on("spanEnd", (arg0) => {
       if (arg0 === closure_0) {
         const debug = _mod682.debug;
         const _HermesInternal = HermesInternal;
         debug.log("Removing AppState listener for " + _mod682.spanToJSON(tmp).op + " transaction.");
         let remove;
         if (null != listener) {
-          remove = tmp9.remove;
+          remove = listener.remove;
         }
         if (!tmp3) {
           const call = remove.call;
           if (typeof call === "unknown") {
             remove();
           } else {
-            call(tmp9);
+            call(listener);
           }
         }
         tmp3 = null === remove || undefined === remove;

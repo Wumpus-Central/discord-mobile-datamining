@@ -131,7 +131,7 @@ fillInDefaultValues.__workletHash = 12221662243929;
 fillInDefaultValues.__initData = { code: "function fillInDefaultValues_Pnpm_usePanGestureTs2(event){event.changeX=0;event.changeY=0;}" };
 let closure_6 = {};
 
-export const usePanGesture = function usePanGesture(gestureHandlerProps) {
+export const usePanGesture = function usePanGesture() {
   let tmp = gestureHandlerProps;
   if (gestureHandlerProps === undefined) {
     tmp = closure_6;

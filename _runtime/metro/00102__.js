@@ -8,7 +8,7 @@ export default {
   getAndroidResourceFolderName(asset, arg1) {
     if (set.has(asset.type)) {
       if (arg1.toString() in closure_0) {
-        let text = tmp2[arg1.toString(arg1)];
+        let text = closure_0[arg1.toString(arg1)];
       } else {
         const _Number = Number;
         if (Number.isFinite(arg1)) {
@@ -30,7 +30,7 @@ export default {
         const _JSON2 = JSON;
         const text2 = `${`Don't know which android drawable suffix to use for scale: ${arg1}`}
     Asset: ${JSON.stringify(asset, null, "\t")}`;
-        const error1 = new Error(text2 + "\nPossible scales are:" + JSON.stringify(tmp2, null, "\t"));
+        const error1 = new Error(text2 + "\nPossible scales are:" + JSON.stringify(closure_0, null, "\t"));
         throw error1;
       }
     } else {

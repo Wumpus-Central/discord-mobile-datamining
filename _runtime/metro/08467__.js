@@ -104,6 +104,7 @@ const entry = {
     } else {
       throw new TypeError("Trying to call a non-function");
     }
+    const obj2 = G(8475);
   }
 };
 let items = [entry];

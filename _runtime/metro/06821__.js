@@ -36,12 +36,12 @@ const memoResult = memo((nativeGestureRef) => {
     if (simultaneousHandlers) {
       const _Array = Array;
       const push = items.push;
-      if (Array.isArray(tmp5)) {
+      if (Array.isArray(simultaneousHandlers)) {
         const items1 = [];
-        HermesBuiltin.arraySpread(tmp5, 0);
+        HermesBuiltin.arraySpread(simultaneousHandlers, 0);
         HermesBuiltin.apply(items1, items);
       } else {
-        push(tmp5);
+        push(simultaneousHandlers);
       }
     }
     return items;

@@ -11,12 +11,11 @@ function isEnumObject(obj) {
         const keys = Object.keys(obj);
         for (const item10014 of keys) {
           let _parseInt = parseInt;
-          let tmp5 = item10014;
           let parsed = parseInt(item10014);
           let tmp7 = parsed;
           let _Number = Number;
           if (Number.isNaN(parsed)) {
-            let tmp16 = arg0[tmp5];
+            let tmp16 = arg0[item10014];
             let tmp17 = tmp16;
             if (undefined === tmp16) {
               obj.return();
@@ -63,9 +62,7 @@ function listEnumValues(arg0) {
       let tmp12 = _slicedToArray(tmp9, 2);
       [tmp13, tmp14] = tmp12;
       if (typeof tmp14 === "number") {
-        let obj = { name: null, number: null };
-        obj.name = tmp13;
-        obj.number = tmp15;
+        let obj = { name: tmp13, number: tmp15 };
         let arr = items.push(obj);
       }
       continue;

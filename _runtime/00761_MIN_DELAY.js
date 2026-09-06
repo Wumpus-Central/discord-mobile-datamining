@@ -14,12 +14,13 @@ export function makeOfflineTransport(arg0) {
   function log() {
     const items = [...arguments];
     if (closure_0(log[1]).DEBUG_BUILD) {
-      const debug = closure_0(log[2]).debug;
+      const debug = closure_0(tmp2[2]).debug;
       log = debug.log;
       const items1 = ["[Offline]:"];
       HermesBuiltin.arraySpread(items, 1);
       HermesBuiltin.apply(items1, debug);
     }
+    tmp2 = log;
   }
   return (createStore) => {
     closure_0 = createStore;
@@ -28,7 +29,7 @@ export function makeOfflineTransport(arg0) {
         const _clearTimeout = clearTimeout;
         clearTimeout(timerId);
       }
-      timerId = setTimeout(asyncGeneratorStep(async (arg0, value) => {
+      timerId = setTimeout(asyncGeneratorStep(async () => {
         if (c3 === 2) {
           c3 = 3;
           throw new TypeError("Generator functions may not be called on executing generators");
@@ -104,7 +105,7 @@ export function makeOfflineTransport(arg0) {
           clearTimeout(timerId);
         }
         const _setTimeout = setTimeout;
-        timerId = setTimeout(asyncGeneratorStep(async (arg0, value) => {
+        timerId = setTimeout(asyncGeneratorStep(async () => {
           if (c3 === 2) {
             c3 = 3;
             throw new TypeError("Generator functions may not be called on executing generators");
@@ -186,7 +187,7 @@ export function makeOfflineTransport(arg0) {
       }
       return applyArgumentsResult;
     }
-    closure_8 = async function _send(arg0, value) {
+    closure_8 = async function _send(arg0) {
       if (1 === tmp6) {
         if (arg0 === 1) {
           c7 = 3;
@@ -256,11 +257,11 @@ export function makeOfflineTransport(arg0) {
           if (closure_130_1) {
             c6 = 8;
             c7 = 1;
-            return { value: arr.unshift(closure_130_0), done: false };
+            return { value: closure_131_3.unshift(closure_130_0), done: false };
           } else {
             c6 = 7;
             c7 = 1;
-            return { value: arr.push(closure_130_0), done: false };
+            return { value: closure_131_3.push(closure_130_0), done: false };
           }
         } else {
           throw closure_130_4;
@@ -367,7 +368,7 @@ export function makeOfflineTransport(arg0) {
             clearTimeout(timerId);
           }
           let _setTimeout = setTimeout;
-          timerId = setTimeout(asyncGeneratorStep(async (arg0, value) => {
+          timerId = setTimeout(asyncGeneratorStep(async () => {
             if (c3 === 2) {
               c3 = 3;
               throw new TypeError("Generator functions may not be called on executing generators");
@@ -449,7 +450,7 @@ export function makeOfflineTransport(arg0) {
                 clearTimeout(timerId);
               }
               const _setTimeout = setTimeout;
-              timerId = setTimeout(asyncGeneratorStep(async (arg0, value) => {
+              timerId = setTimeout(asyncGeneratorStep(async () => {
                 if (c3 === 2) {
                   c3 = 3;
                   throw new TypeError("Generator functions may not be called on executing generators");

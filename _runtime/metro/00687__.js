@@ -2,6 +2,7 @@
 
 // Module 687
 import _mod688 from "module_688" /* 688 */;
+import consoleSandbox from "consoleSandbox" /* 689 */;
 import _mod692 from "module_692" /* 692 */;
 import _htmlElementAsString from "_htmlElementAsString" /* 693 */;
 
@@ -14,11 +15,10 @@ function addNonEnumerableProperty(arg0, arg1, value) {
     Object.defineProperty(arg0, arg1, obj);
   } catch (err) {
     if (_mod688.DEBUG_BUILD) {
-      const debug = tmp6(689).debug;
+      const debug = consoleSandbox.debug;
       const _HermesInternal = HermesInternal;
       debug.log("Failed to add non-enumerable property \"" + tmp2 + "\" to object", tmp);
     }
-    tmp6 = require;
   }
 }
 function markFunctionWrapped(arg0, arg1) {
@@ -61,7 +61,7 @@ function convertToPlainObject(type) {
     }
     obj = {};
   } else {
-    let tmp2Result = tmp2(692);
+    let tmp2Result = _mod692;
     if (tmp2Result.isEvent(type)) {
       const obj1 = { type: type.type, target: serializeEventTarget(type.target), currentTarget: serializeEventTarget(type.currentTarget) };
       if (typeof type === "object") {
@@ -88,7 +88,7 @@ function convertToPlainObject(type) {
         const merged1 = Object.assign(obj3);
         let isInstanceOfResult = typeof globalThis.CustomEvent !== "undefined";
         if (typeof globalThis.CustomEvent !== "undefined") {
-          tmp2Result = tmp2(692);
+          tmp2Result = _mod692;
           isInstanceOfResult = tmp2Result.isInstanceOf(type, globalThis.CustomEvent);
         }
         if (isInstanceOfResult) {
@@ -228,14 +228,13 @@ export const dropUndefinedKeys = function dropUndefinedKeys(obj) {
                                           const _Object2 = Object;
                                           const keys = Object.keys(item);
                                           const item1 = keys.forEach((item) => {
-                                            arr = closure_1_0[item];
-                                            if (undefined !== arr) {
+                                            if (undefined !== closure_1_0[item]) {
                                               closure_1 = closure_1_1;
                                               let value = arr;
                                               if (null !== arr) {
                                                 value = arr;
                                                 if (typeof arr === "object") {
-                                                  value = obj2.get(arr);
+                                                  value = closure_1_1.get(arr);
                                                   if (undefined === value) {
                                                     let _Array = Array;
                                                     if (!Array.isArray(arr)) {
@@ -244,7 +243,7 @@ export const dropUndefinedKeys = function dropUndefinedKeys(obj) {
                                                       value = arr;
                                                       if (tmp) {
                                                         obj = {};
-                                                        let result = obj2.set(arr, obj);
+                                                        let result = closure_1_1.set(arr, obj);
                                                         let _Object2 = Object;
                                                         let keys = Object.keys(arr);
                                                         item = keys.forEach(() => { ... });
@@ -254,7 +253,7 @@ export const dropUndefinedKeys = function dropUndefinedKeys(obj) {
                                                     }
                                                   }
                                                   items = [];
-                                                  let result1 = obj2.set(arr, items);
+                                                  let result1 = closure_1_1.set(arr, items);
                                                   let item1 = arr.forEach(() => { ... });
                                                   value = items;
                                                 }
@@ -282,14 +281,13 @@ export const dropUndefinedKeys = function dropUndefinedKeys(obj) {
                                 const _Object2 = Object;
                                 const keys = Object.keys(item);
                                 const item1 = keys.forEach((item) => {
-                                  arr = closure_1_0[item];
-                                  if (undefined !== arr) {
+                                  if (undefined !== closure_1_0[item]) {
                                     closure_1 = closure_1_1;
                                     let value = arr;
                                     if (null !== arr) {
                                       value = arr;
                                       if (typeof arr === "object") {
-                                        value = obj2.get(arr);
+                                        value = closure_1_1.get(arr);
                                         if (undefined === value) {
                                           let _Array = Array;
                                           if (!Array.isArray(arr)) {
@@ -298,18 +296,17 @@ export const dropUndefinedKeys = function dropUndefinedKeys(obj) {
                                             value = arr;
                                             if (tmp) {
                                               obj = {};
-                                              let result = obj2.set(arr, obj);
+                                              let result = closure_1_1.set(arr, obj);
                                               let _Object2 = Object;
                                               let keys = Object.keys(arr);
                                               item = keys.forEach((item) => {
-                                                arr = closure_1_0[item];
-                                                if (undefined !== arr) {
+                                                if (undefined !== closure_1_0[item]) {
                                                   closure_1 = closure_1_1;
                                                   let value = arr;
                                                   if (null !== arr) {
                                                     value = arr;
                                                     if (typeof arr === "object") {
-                                                      value = obj2.get(arr);
+                                                      value = closure_1_1.get(arr);
                                                       if (undefined === value) {
                                                         let _Array = Array;
                                                         if (!Array.isArray(arr)) {
@@ -318,7 +315,7 @@ export const dropUndefinedKeys = function dropUndefinedKeys(obj) {
                                                           value = arr;
                                                           if (tmp) {
                                                             obj = {};
-                                                            let result = obj2.set(arr, obj);
+                                                            let result = closure_1_1.set(arr, obj);
                                                             let _Object2 = Object;
                                                             let keys = Object.keys(arr);
                                                             item = keys.forEach(() => { ... });
@@ -328,7 +325,7 @@ export const dropUndefinedKeys = function dropUndefinedKeys(obj) {
                                                         }
                                                       }
                                                       items = [];
-                                                      let result1 = obj2.set(arr, items);
+                                                      let result1 = closure_1_1.set(arr, items);
                                                       let item1 = arr.forEach(() => { ... });
                                                       value = items;
                                                     }
@@ -342,7 +339,7 @@ export const dropUndefinedKeys = function dropUndefinedKeys(obj) {
                                           }
                                         }
                                         items = [];
-                                        let result1 = obj2.set(arr, items);
+                                        let result1 = closure_1_1.set(arr, items);
                                         let item1 = arr.forEach((item) => {
                                           closure_0 = item;
                                           items = undefined;
@@ -404,14 +401,13 @@ export const dropUndefinedKeys = function dropUndefinedKeys(obj) {
                       const _Object2 = Object;
                       const keys = Object.keys(item);
                       const item1 = keys.forEach((item) => {
-                        arr = closure_1_0[item];
-                        if (undefined !== arr) {
+                        if (undefined !== closure_1_0[item]) {
                           closure_1 = closure_1_1;
                           let value = arr;
                           if (null !== arr) {
                             value = arr;
                             if (typeof arr === "object") {
-                              value = obj2.get(arr);
+                              value = closure_1_1.get(arr);
                               if (undefined === value) {
                                 let _Array = Array;
                                 if (!Array.isArray(arr)) {
@@ -420,18 +416,17 @@ export const dropUndefinedKeys = function dropUndefinedKeys(obj) {
                                   value = arr;
                                   if (tmp) {
                                     obj = {};
-                                    let result = obj2.set(arr, obj);
+                                    let result = closure_1_1.set(arr, obj);
                                     let _Object2 = Object;
                                     let keys = Object.keys(arr);
                                     item = keys.forEach((item) => {
-                                      arr = closure_1_0[item];
-                                      if (undefined !== arr) {
+                                      if (undefined !== closure_1_0[item]) {
                                         closure_1 = closure_1_1;
                                         let value = arr;
                                         if (null !== arr) {
                                           value = arr;
                                           if (typeof arr === "object") {
-                                            value = obj2.get(arr);
+                                            value = closure_1_1.get(arr);
                                             if (undefined === value) {
                                               let _Array = Array;
                                               if (!Array.isArray(arr)) {
@@ -440,18 +435,17 @@ export const dropUndefinedKeys = function dropUndefinedKeys(obj) {
                                                 value = arr;
                                                 if (tmp) {
                                                   obj = {};
-                                                  let result = obj2.set(arr, obj);
+                                                  let result = closure_1_1.set(arr, obj);
                                                   let _Object2 = Object;
                                                   let keys = Object.keys(arr);
                                                   item = keys.forEach((item) => {
-                                                    arr = closure_1_0[item];
-                                                    if (undefined !== arr) {
+                                                    if (undefined !== closure_1_0[item]) {
                                                       closure_1 = closure_1_1;
                                                       let value = arr;
                                                       if (null !== arr) {
                                                         value = arr;
                                                         if (typeof arr === "object") {
-                                                          value = obj2.get(arr);
+                                                          value = closure_1_1.get(arr);
                                                           if (undefined === value) {
                                                             let _Array = Array;
                                                             if (!Array.isArray(arr)) {
@@ -460,7 +454,7 @@ export const dropUndefinedKeys = function dropUndefinedKeys(obj) {
                                                               value = arr;
                                                               if (tmp) {
                                                                 obj = {};
-                                                                let result = obj2.set(arr, obj);
+                                                                let result = closure_1_1.set(arr, obj);
                                                                 let _Object2 = Object;
                                                                 let keys = Object.keys(arr);
                                                                 item = keys.forEach(() => { ... });
@@ -470,7 +464,7 @@ export const dropUndefinedKeys = function dropUndefinedKeys(obj) {
                                                             }
                                                           }
                                                           items = [];
-                                                          let result1 = obj2.set(arr, items);
+                                                          let result1 = closure_1_1.set(arr, items);
                                                           let item1 = arr.forEach(() => { ... });
                                                           value = items;
                                                         }
@@ -484,7 +478,7 @@ export const dropUndefinedKeys = function dropUndefinedKeys(obj) {
                                               }
                                             }
                                             items = [];
-                                            let result1 = obj2.set(arr, items);
+                                            let result1 = closure_1_1.set(arr, items);
                                             let item1 = arr.forEach((item) => {
                                               closure_0 = item;
                                               items = undefined;
@@ -532,7 +526,7 @@ export const dropUndefinedKeys = function dropUndefinedKeys(obj) {
                                 }
                               }
                               items = [];
-                              let result1 = obj2.set(arr, items);
+                              let result1 = closure_1_1.set(arr, items);
                               let item1 = arr.forEach((item) => {
                                 closure_0 = item;
                                 items = undefined;
@@ -593,14 +587,13 @@ export const dropUndefinedKeys = function dropUndefinedKeys(obj) {
                                           const _Object2 = Object;
                                           const keys = Object.keys(item);
                                           const item1 = keys.forEach((item) => {
-                                            arr = closure_1_0[item];
-                                            if (undefined !== arr) {
+                                            if (undefined !== closure_1_0[item]) {
                                               closure_1 = closure_1_1;
                                               let value = arr;
                                               if (null !== arr) {
                                                 value = arr;
                                                 if (typeof arr === "object") {
-                                                  value = obj2.get(arr);
+                                                  value = closure_1_1.get(arr);
                                                   if (undefined === value) {
                                                     let _Array = Array;
                                                     if (!Array.isArray(arr)) {
@@ -609,7 +602,7 @@ export const dropUndefinedKeys = function dropUndefinedKeys(obj) {
                                                       value = arr;
                                                       if (tmp) {
                                                         obj = {};
-                                                        let result = obj2.set(arr, obj);
+                                                        let result = closure_1_1.set(arr, obj);
                                                         let _Object2 = Object;
                                                         let keys = Object.keys(arr);
                                                         item = keys.forEach(() => { ... });
@@ -619,7 +612,7 @@ export const dropUndefinedKeys = function dropUndefinedKeys(obj) {
                                                     }
                                                   }
                                                   items = [];
-                                                  let result1 = obj2.set(arr, items);
+                                                  let result1 = closure_1_1.set(arr, items);
                                                   let item1 = arr.forEach(() => { ... });
                                                   value = items;
                                                 }
@@ -662,14 +655,13 @@ export const dropUndefinedKeys = function dropUndefinedKeys(obj) {
             const _Object2 = Object;
             const keys = Object.keys(obj);
             const item1 = keys.forEach((item) => {
-              arr = closure_1_0[item];
-              if (undefined !== arr) {
+              if (undefined !== closure_1_0[item]) {
                 closure_1 = closure_1_1;
                 let value = arr;
                 if (null !== arr) {
                   value = arr;
                   if (typeof arr === "object") {
-                    value = obj2.get(arr);
+                    value = closure_1_1.get(arr);
                     if (undefined === value) {
                       let _Array = Array;
                       if (!Array.isArray(arr)) {
@@ -678,18 +670,17 @@ export const dropUndefinedKeys = function dropUndefinedKeys(obj) {
                         value = arr;
                         if (tmp) {
                           obj = {};
-                          let result = obj2.set(arr, obj);
+                          let result = closure_1_1.set(arr, obj);
                           let _Object2 = Object;
                           let keys = Object.keys(arr);
                           item = keys.forEach((item) => {
-                            arr = closure_1_0[item];
-                            if (undefined !== arr) {
+                            if (undefined !== closure_1_0[item]) {
                               closure_1 = closure_1_1;
                               let value = arr;
                               if (null !== arr) {
                                 value = arr;
                                 if (typeof arr === "object") {
-                                  value = obj2.get(arr);
+                                  value = closure_1_1.get(arr);
                                   if (undefined === value) {
                                     let _Array = Array;
                                     if (!Array.isArray(arr)) {
@@ -698,18 +689,17 @@ export const dropUndefinedKeys = function dropUndefinedKeys(obj) {
                                       value = arr;
                                       if (tmp) {
                                         obj = {};
-                                        let result = obj2.set(arr, obj);
+                                        let result = closure_1_1.set(arr, obj);
                                         let _Object2 = Object;
                                         let keys = Object.keys(arr);
                                         item = keys.forEach((item) => {
-                                          arr = closure_1_0[item];
-                                          if (undefined !== arr) {
+                                          if (undefined !== closure_1_0[item]) {
                                             closure_1 = closure_1_1;
                                             let value = arr;
                                             if (null !== arr) {
                                               value = arr;
                                               if (typeof arr === "object") {
-                                                value = obj2.get(arr);
+                                                value = closure_1_1.get(arr);
                                                 if (undefined === value) {
                                                   let _Array = Array;
                                                   if (!Array.isArray(arr)) {
@@ -718,18 +708,17 @@ export const dropUndefinedKeys = function dropUndefinedKeys(obj) {
                                                     value = arr;
                                                     if (tmp) {
                                                       obj = {};
-                                                      let result = obj2.set(arr, obj);
+                                                      let result = closure_1_1.set(arr, obj);
                                                       let _Object2 = Object;
                                                       let keys = Object.keys(arr);
                                                       item = keys.forEach((item) => {
-                                                        arr = closure_1_0[item];
-                                                        if (undefined !== arr) {
+                                                        if (undefined !== closure_1_0[item]) {
                                                           closure_1 = closure_1_1;
                                                           let value = arr;
                                                           if (null !== arr) {
                                                             value = arr;
                                                             if (typeof arr === "object") {
-                                                              value = obj2.get(arr);
+                                                              value = closure_1_1.get(arr);
                                                               if (undefined === value) {
                                                                 let _Array = Array;
                                                                 if (!Array.isArray(arr)) {
@@ -738,7 +727,7 @@ export const dropUndefinedKeys = function dropUndefinedKeys(obj) {
                                                                   value = arr;
                                                                   if (tmp) {
                                                                     obj = {};
-                                                                    let result = obj2.set(arr, obj);
+                                                                    let result = closure_1_1.set(arr, obj);
                                                                     let _Object2 = Object;
                                                                     let keys = Object.keys(arr);
                                                                     item = keys.forEach(() => { ... });
@@ -748,7 +737,7 @@ export const dropUndefinedKeys = function dropUndefinedKeys(obj) {
                                                                 }
                                                               }
                                                               items = [];
-                                                              let result1 = obj2.set(arr, items);
+                                                              let result1 = closure_1_1.set(arr, items);
                                                               let item1 = arr.forEach(() => { ... });
                                                               value = items;
                                                             }
@@ -762,7 +751,7 @@ export const dropUndefinedKeys = function dropUndefinedKeys(obj) {
                                                   }
                                                 }
                                                 items = [];
-                                                let result1 = obj2.set(arr, items);
+                                                let result1 = closure_1_1.set(arr, items);
                                                 let item1 = arr.forEach((item) => {
                                                   closure_0 = item;
                                                   items = undefined;
@@ -810,7 +799,7 @@ export const dropUndefinedKeys = function dropUndefinedKeys(obj) {
                                     }
                                   }
                                   items = [];
-                                  let result1 = obj2.set(arr, items);
+                                  let result1 = closure_1_1.set(arr, items);
                                   let item1 = arr.forEach((item) => {
                                     closure_0 = item;
                                     items = undefined;
@@ -871,14 +860,13 @@ export const dropUndefinedKeys = function dropUndefinedKeys(obj) {
                                               const _Object2 = Object;
                                               const keys = Object.keys(item);
                                               const item1 = keys.forEach((item) => {
-                                                arr = closure_1_0[item];
-                                                if (undefined !== arr) {
+                                                if (undefined !== closure_1_0[item]) {
                                                   closure_1 = closure_1_1;
                                                   let value = arr;
                                                   if (null !== arr) {
                                                     value = arr;
                                                     if (typeof arr === "object") {
-                                                      value = obj2.get(arr);
+                                                      value = closure_1_1.get(arr);
                                                       if (undefined === value) {
                                                         let _Array = Array;
                                                         if (!Array.isArray(arr)) {
@@ -887,7 +875,7 @@ export const dropUndefinedKeys = function dropUndefinedKeys(obj) {
                                                           value = arr;
                                                           if (tmp) {
                                                             obj = {};
-                                                            let result = obj2.set(arr, obj);
+                                                            let result = closure_1_1.set(arr, obj);
                                                             let _Object2 = Object;
                                                             let keys = Object.keys(arr);
                                                             item = keys.forEach(() => { ... });
@@ -897,7 +885,7 @@ export const dropUndefinedKeys = function dropUndefinedKeys(obj) {
                                                         }
                                                       }
                                                       items = [];
-                                                      let result1 = obj2.set(arr, items);
+                                                      let result1 = closure_1_1.set(arr, items);
                                                       let item1 = arr.forEach(() => { ... });
                                                       value = items;
                                                     }
@@ -926,7 +914,7 @@ export const dropUndefinedKeys = function dropUndefinedKeys(obj) {
                       }
                     }
                     items = [];
-                    let result1 = obj2.set(arr, items);
+                    let result1 = closure_1_1.set(arr, items);
                     let item1 = arr.forEach((item) => {
                       closure_0 = item;
                       items = undefined;
@@ -1001,14 +989,13 @@ export const dropUndefinedKeys = function dropUndefinedKeys(obj) {
                                           const _Object2 = Object;
                                           const keys = Object.keys(item);
                                           const item1 = keys.forEach((item) => {
-                                            arr = closure_1_0[item];
-                                            if (undefined !== arr) {
+                                            if (undefined !== closure_1_0[item]) {
                                               closure_1 = closure_1_1;
                                               let value = arr;
                                               if (null !== arr) {
                                                 value = arr;
                                                 if (typeof arr === "object") {
-                                                  value = obj2.get(arr);
+                                                  value = closure_1_1.get(arr);
                                                   if (undefined === value) {
                                                     let _Array = Array;
                                                     if (!Array.isArray(arr)) {
@@ -1017,7 +1004,7 @@ export const dropUndefinedKeys = function dropUndefinedKeys(obj) {
                                                       value = arr;
                                                       if (tmp) {
                                                         obj = {};
-                                                        let result = obj2.set(arr, obj);
+                                                        let result = closure_1_1.set(arr, obj);
                                                         let _Object2 = Object;
                                                         let keys = Object.keys(arr);
                                                         item = keys.forEach(() => { ... });
@@ -1027,7 +1014,7 @@ export const dropUndefinedKeys = function dropUndefinedKeys(obj) {
                                                     }
                                                   }
                                                   items = [];
-                                                  let result1 = obj2.set(arr, items);
+                                                  let result1 = closure_1_1.set(arr, items);
                                                   let item1 = arr.forEach(() => { ... });
                                                   value = items;
                                                 }
@@ -1055,14 +1042,13 @@ export const dropUndefinedKeys = function dropUndefinedKeys(obj) {
                                 const _Object2 = Object;
                                 const keys = Object.keys(item);
                                 const item1 = keys.forEach((item) => {
-                                  arr = closure_1_0[item];
-                                  if (undefined !== arr) {
+                                  if (undefined !== closure_1_0[item]) {
                                     closure_1 = closure_1_1;
                                     let value = arr;
                                     if (null !== arr) {
                                       value = arr;
                                       if (typeof arr === "object") {
-                                        value = obj2.get(arr);
+                                        value = closure_1_1.get(arr);
                                         if (undefined === value) {
                                           let _Array = Array;
                                           if (!Array.isArray(arr)) {
@@ -1071,18 +1057,17 @@ export const dropUndefinedKeys = function dropUndefinedKeys(obj) {
                                             value = arr;
                                             if (tmp) {
                                               obj = {};
-                                              let result = obj2.set(arr, obj);
+                                              let result = closure_1_1.set(arr, obj);
                                               let _Object2 = Object;
                                               let keys = Object.keys(arr);
                                               item = keys.forEach((item) => {
-                                                arr = closure_1_0[item];
-                                                if (undefined !== arr) {
+                                                if (undefined !== closure_1_0[item]) {
                                                   closure_1 = closure_1_1;
                                                   let value = arr;
                                                   if (null !== arr) {
                                                     value = arr;
                                                     if (typeof arr === "object") {
-                                                      value = obj2.get(arr);
+                                                      value = closure_1_1.get(arr);
                                                       if (undefined === value) {
                                                         let _Array = Array;
                                                         if (!Array.isArray(arr)) {
@@ -1091,7 +1076,7 @@ export const dropUndefinedKeys = function dropUndefinedKeys(obj) {
                                                           value = arr;
                                                           if (tmp) {
                                                             obj = {};
-                                                            let result = obj2.set(arr, obj);
+                                                            let result = closure_1_1.set(arr, obj);
                                                             let _Object2 = Object;
                                                             let keys = Object.keys(arr);
                                                             item = keys.forEach(() => { ... });
@@ -1101,7 +1086,7 @@ export const dropUndefinedKeys = function dropUndefinedKeys(obj) {
                                                         }
                                                       }
                                                       items = [];
-                                                      let result1 = obj2.set(arr, items);
+                                                      let result1 = closure_1_1.set(arr, items);
                                                       let item1 = arr.forEach(() => { ... });
                                                       value = items;
                                                     }
@@ -1115,7 +1100,7 @@ export const dropUndefinedKeys = function dropUndefinedKeys(obj) {
                                           }
                                         }
                                         items = [];
-                                        let result1 = obj2.set(arr, items);
+                                        let result1 = closure_1_1.set(arr, items);
                                         let item1 = arr.forEach((item) => {
                                           closure_0 = item;
                                           items = undefined;
@@ -1181,8 +1166,8 @@ export const dropUndefinedKeys = function dropUndefinedKeys(obj) {
   }
   return value;
 };
-export const extractExceptionKeysForMessage = function extractExceptionKeysForMessage(arg0) {
-  const keys = Object.keys(convertToPlainObject(arg0));
+export const extractExceptionKeysForMessage = function extractExceptionKeysForMessage(name) {
+  const keys = Object.keys(convertToPlainObject(name));
   const sorted = keys.sort();
   let str = "[object has no keys]";
   if (keys[0]) {
@@ -1190,22 +1175,21 @@ export const extractExceptionKeysForMessage = function extractExceptionKeysForMe
   }
   return str;
 };
-export const fill = function fill(arg0, arg1, fn) {
-  if (arg1 in arg0) {
-    if (typeof arg0[arg1] === "function") {
+export const fill = function fill(prototype, fetch, fn) {
+  if (fetch in prototype) {
+    if (typeof prototype[fetch] === "function") {
       const tmp10 = fn(tmp4);
       if (typeof tmp10 === "function") {
         markFunctionWrapped(tmp10, tmp4);
       }
       try {
-        arg0[arg1] = tmp10;
+        prototype[fetch] = tmp10;
       } catch (err) {
         if (_mod688.DEBUG_BUILD) {
-          const debug = tmp5(689).debug;
+          const debug = consoleSandbox.debug;
           const _HermesInternal = HermesInternal;
           debug.log("Failed to replace method \"" + tmp3 + "\" in object", tmp2);
         }
-        tmp5 = require;
       }
     }
   }
@@ -1214,22 +1198,22 @@ export const getOriginalFunction = function getOriginalFunction(__sentry_origina
   return __sentry_original__.__sentry_original__;
 };
 export { markFunctionWrapped };
-export const objectify = function objectify(arg0) {
-  if (null == arg0 === true) {
+export const objectify = function objectify(item) {
+  if (null == item === true) {
     const _String = String;
-    let string = new String(arg0);
+    let string = new String(item);
   } else {
-    let tmp = typeof arg0 === "symbol";
-    if (typeof arg0 !== "symbol") {
-      tmp = typeof arg0 === "bigint";
+    let tmp = typeof item === "symbol";
+    if (typeof item !== "symbol") {
+      tmp = typeof item === "bigint";
     }
     if (tmp === true) {
       const _Object = Object;
-      string = Object(arg0);
+      string = Object(item);
     } else {
-      string = arg0;
-      if (obj.isPrimitive(arg0) === true) {
-        string = new arg0.constructor(arg0);
+      string = item;
+      if (obj.isPrimitive(item) === true) {
+        string = new item.constructor(item);
       }
       obj = _mod692;
     }

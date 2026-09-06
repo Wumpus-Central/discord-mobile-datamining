@@ -4,9 +4,9 @@
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 const items = ["X-Client-IP", "X-Forwarded-For", "Fly-Client-IP", "CF-Connecting-IP", "Fastly-Client-Ip", "True-Client-Ip", "X-Real-IP", "X-Cluster-Client-IP", "X-Forwarded", "Forwarded-For", "Forwarded", "X-Vercel-Forwarded-For"];
 
-export const getClientIPAddress = function getClientIPAddress(arg0) {
+export const getClientIPAddress = function getClientIPAddress(headers) {
   let obj = {};
-  const keys = Object.keys(arg0);
+  const keys = Object.keys(headers);
   for (const item10010 of keys) {
     obj[item10010.toLowerCase()] = arg0[item10010];
     continue;

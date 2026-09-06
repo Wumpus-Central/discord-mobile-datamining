@@ -2,14 +2,14 @@
 
 // Module 8433 (arrayAggregator)
 
-export default function arrayAggregator(arg0, fn, fn2, arg3) {
+export default function arrayAggregator(height, fn, fn2, value) {
   let num = 0;
-  if (null != arg0) {
-    num = arg0.length;
+  if (null != height) {
+    num = height.length;
   }
   for (let num2 = 0; num2 < num; num2 = num2 + 1) {
-    let tmp = arg0[num2];
-    let tmp5 = fn(arg3, tmp, fn2(tmp), arg0);
+    let tmp = height[num2];
+    let tmp5 = fn(value, tmp, fn2(tmp), height);
   }
-  return arg3;
+  return value;
 };

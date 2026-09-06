@@ -77,9 +77,9 @@ const items = [
         }
         let reverseDurationResult = obj;
         if (isMatch) {
-          reverseDurationResult = tmp3(10434).reverseDuration(obj);
+          reverseDurationResult = DETimeUnitAgoFormatParser(10434).reverseDuration(obj);
         }
-        const ParsingComponents = tmp3(10435).ParsingComponents;
+        const ParsingComponents = DETimeUnitAgoFormatParser(10435).ParsingComponents;
         return ParsingComponents.createRelativeFromReference(reference.reference, reverseDurationResult);
       }
       const str2 = arg1[1] || arg1[3] || "";

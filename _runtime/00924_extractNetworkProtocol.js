@@ -97,13 +97,13 @@ export const listenForWebVitalReportEvents = function listenForWebVitalReportEve
 export const msToSec = function msToSec(duration) {
   return duration / 1000;
 };
-export const startAndEndSpan = function startAndEndSpan(activeSpan, sum, sum1, arg3) {
+export const startAndEndSpan = function startAndEndSpan(activeSpan, sum, sum1, attributes) {
   _require = sum;
   dependencyMap = sum1;
-  if (arg3 == null) {
+  if (attributes == null) {
     throw new TypeError("Cannot destructure 'undefined' or 'null'.");
   } else {
-    closure_2 = Object.assign(arg3, undefined);
+    closure_2 = Object.assign(attributes, undefined);
     const start_timestamp = require("module_682").spanToJSON(activeSpan).start_timestamp;
     let tmp = start_timestamp;
     if (start_timestamp) {
@@ -138,16 +138,17 @@ export const startStandaloneWebVitalSpan = function startStandaloneWebVitalSpan(
     if (integrationByName != null) {
       const replayId = integrationByName.getReplayId();
     }
-    let tmpResult = tmp(682);
+    let tmpResult = _mod682;
     const currentScope = tmpResult.getCurrentScope();
     const user = currentScope.getUser();
     if (undefined !== user) {
+      const tmp8 = user.email || user.id || user.ip_address;
       const tmp9 = user.email || user.id || user.ip_address;
     }
     try {
       const profile_id = currentScope.getScopeData().contexts.profile.profile_id;
       obj = { release, environment, user: tmp8, profile_id, replay_id: replayId, transaction, "user_agent.original": null, "client.address": null };
-      const _navigator = tmp(904).WINDOW.navigator;
+      const _navigator = _mod904.WINDOW.navigator;
       let userAgent;
       if (_navigator != null) {
         userAgent = _navigator.userAgent;
@@ -159,7 +160,7 @@ export const startStandaloneWebVitalSpan = function startStandaloneWebVitalSpan(
       }
       obj["client.address"] = str2;
       const merged = Object.assign(attributes);
-      tmpResult = tmp(682);
+      tmpResult = _mod682;
       obj = { name, attributes: null, startTime: null, experimental: null };
       obj.attributes = obj;
       obj.startTime = startTime;

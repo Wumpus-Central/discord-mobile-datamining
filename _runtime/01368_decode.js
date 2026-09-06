@@ -66,10 +66,7 @@ function decode(arr) {
         let tmp13 = sum1;
         let tmp14 = sum;
         if (diff >= num7) {
-          let tmp17 = c2;
           let diff1 = c2 - num7;
-          let tmp15 = floor;
-          let tmp16 = c1;
           while (num9 <= floor(c1 / diff1)) {
             if (sum >= length) {
               let tmp33 = globalThis;
@@ -86,13 +83,13 @@ function decode(arr) {
               } else if (charCodeAtResult1 - 65 < 26) {
                 diff2 = charCodeAtResult1 - 65;
               } else {
-                diff2 = tmp17;
+                diff2 = c2;
                 if (charCodeAtResult1 - 97 < 26) {
                   diff2 = charCodeAtResult1 - 97;
                 }
               }
               let result = num9 * diff1;
-              let tmp25 = diff2 >= tmp17 || diff2 > tmp15((tmp16 - sum1) / result);
+              let tmp25 = diff2 >= c2 || diff2 > floor((c1 - sum1) / result);
               if (tmp25) {
                 let tmp27 = globalThis;
                 let _RangeError = RangeError;
@@ -101,7 +98,7 @@ function decode(arr) {
                 let rangeError3 = new RangeError(closure_6.overflow);
                 throw rangeError3;
               } else {
-                let sum2 = tmp2 + tmp17;
+                let sum2 = tmp2 + c2;
                 let num10 = 1;
                 if (sum2 > num5) {
                   let num11 = 26;
@@ -546,3 +543,4 @@ if (tmp) {
   }
 }
 self.punycode = punycode;
+tmp4 = tmp3.global !== tmp3 && tmp3.window !== tmp3 && tmp3.self !== tmp3;

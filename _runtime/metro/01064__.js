@@ -15,10 +15,10 @@ export const getTheme = function getTheme() {
     colorScheme = Appearance.getColorScheme();
   }
   const merged = Object.assign({}, obj);
-  let tmpResult = tmp(998);
+  let tmpResult = _getClientIntegration;
   let merged1 = Object.assign(merged, tmpResult.getFeedbackLightTheme());
   const merged2 = Object.assign({}, obj);
-  tmpResult = tmp(998);
+  tmpResult = _getClientIntegration;
   if ("dark" === colorScheme) {
     merged1 = Object.assign(merged2, tmpResult.getFeedbackDarkTheme());
   }

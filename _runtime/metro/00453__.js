@@ -2,6 +2,7 @@
 
 // Module 453
 import EventEmitterDefault from "EventEmitter" /* 89 */;
+import NativeEventEmitterDefault from "NativeEventEmitter" /* 209 */;
 import Appearance from "Appearance" /* 454 */;
 
 require = arg1;
@@ -17,14 +18,13 @@ export const getColorScheme = function getColorScheme() {
       appearance = { NativeAppearance: null, appearance: null, eventEmitter: tmp11 };
     } else {
       appearance = { NativeAppearance: _default, appearance: null, eventEmitter: tmp11 };
-      const obj2 = new tmp7(209)(_default);
+      const obj2 = new NativeEventEmitterDefault(_default);
       obj2.addListener("appearanceChanged", (colorScheme) => {
         appearance = { colorScheme: colorScheme.colorScheme };
         appearance.appearance = appearance;
         closure_0.emit("change", appearance.appearance);
       });
     }
-    tmp7 = importDefault;
   }
   const NativeAppearance = appearance.NativeAppearance;
   let colorScheme = null;
@@ -46,14 +46,13 @@ export const setColorScheme = function setColorScheme(arg0) {
       appearance = { NativeAppearance: null, appearance: null, eventEmitter: tmp14 };
     } else {
       appearance = { NativeAppearance: _default, appearance: null, eventEmitter: tmp14 };
-      const obj2 = new tmp10(209)(_default);
+      const obj2 = new NativeEventEmitterDefault(_default);
       obj2.addListener("appearanceChanged", (colorScheme) => {
         appearance = { colorScheme: colorScheme.colorScheme };
         appearance.appearance = appearance;
         closure_0.emit("change", appearance.appearance);
       });
     }
-    tmp10 = importDefault;
   }
   const NativeAppearance = appearance.NativeAppearance;
   if (null != NativeAppearance) {
@@ -79,14 +78,13 @@ export const addChangeListener = function addChangeListener(onChange) {
       appearance = { NativeAppearance: null, appearance: null, eventEmitter: tmp10 };
     } else {
       appearance = { NativeAppearance: _default, appearance: null, eventEmitter: tmp10 };
-      const obj2 = new tmp6(209)(_default);
+      const obj2 = new NativeEventEmitterDefault(_default);
       obj2.addListener("appearanceChanged", (colorScheme) => {
         appearance = { colorScheme: colorScheme.colorScheme };
         appearance.appearance = appearance;
         closure_0.emit("change", appearance.appearance);
       });
     }
-    tmp6 = importDefault;
   }
   const eventEmitter = appearance.eventEmitter;
   return eventEmitter.addListener("change", onChange);

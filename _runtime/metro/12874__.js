@@ -6,9 +6,9 @@ import _mod12806 from "module_12806" /* 12806 */;
 
 require = arg1;
 let dependencyMap = arg6;
-function aggregateExceptionsFromError(fn, arg1, arg2, errors, source, arg5, mechanism, exception_id) {
+function aggregateExceptionsFromError(fn, value, arg2, errors, source, arg5, mechanism, exception_id) {
   _require = fn;
-  dependencyMap = arg1;
+  dependencyMap = value;
   aggregateExceptionsFromError = arg2;
   closure_3 = source;
   if (arg5.length >= arg2 + 1) {
@@ -26,7 +26,7 @@ function aggregateExceptionsFromError(fn, arg1, arg2, errors, source, arg5, mech
       let merged1 = Object.assign(tmp3);
       obj.exception_id = exception_id;
       mechanism.mechanism = obj;
-      const tmp7 = fn(arg1, errors[source]);
+      const tmp7 = fn(value, errors[source]);
       length = length.length;
       tmp7.mechanism = tmp7.mechanism || { type: "generic", handled: true };
       obj = {};
@@ -38,7 +38,7 @@ function aggregateExceptionsFromError(fn, arg1, arg2, errors, source, arg5, mech
       tmp7.mechanism = obj;
       const items1 = [tmp7];
       HermesBuiltin.arraySpread(length, 1);
-      length = aggregateExceptionsFromError(fn, arg1, arg2, errors[source], source, items1, tmp7, length);
+      length = aggregateExceptionsFromError(fn, value, arg2, errors[source], source, items1, tmp7, length);
     }
     const _Array = Array;
     if (Array.isArray(errors.errors)) {
@@ -71,7 +71,7 @@ function aggregateExceptionsFromError(fn, arg1, arg2, errors, source, arg5, mech
           tmp12.mechanism = obj;
           const items = [tmp12];
           HermesBuiltin.arraySpread(length, 1);
-          length = aggregateExceptionsFromError(tmp10, tmp11, closure_2, item, closure_3, items, tmp12, length);
+          length = aggregateExceptionsFromError(closure_0, closure_1, closure_2, item, closure_3, items, tmp12, length);
         }
       });
     }
@@ -79,9 +79,9 @@ function aggregateExceptionsFromError(fn, arg1, arg2, errors, source, arg5, mech
   }
 }
 
-export const applyAggregateErrorsToEvent = function applyAggregateErrorsToEvent(arg0, arg1, arg2, arg3, arg4, exception, originalException) {
-  let num = arg2;
-  if (arg2 === undefined) {
+export const applyAggregateErrorsToEvent = function applyAggregateErrorsToEvent(exceptionFromError, stackParser) {
+  let num = maxValueLength;
+  if (maxValueLength === undefined) {
     num = 250;
   }
   if (exception.exception) {
@@ -94,13 +94,13 @@ export const applyAggregateErrorsToEvent = function applyAggregateErrorsToEvent(
             tmp5 = exception.exception.values[exception.exception.values.length - 1];
           }
           if (tmp5) {
-            exception.exception.values = aggregateExceptionsFromError(arg0, arg1, arg4, originalException.originalException, arg3, exception.exception.values, tmp5, 0).map((value) => {
+            exception.exception.values = aggregateExceptionsFromError(exceptionFromError, stackParser, arg4, originalException.originalException, arg3, exception.exception.values, tmp5, 0).map((value) => {
               if (value.value) {
                 value.value = _mod12806.truncate(value.value, num);
               }
               return value;
             });
-            const arr = aggregateExceptionsFromError(arg0, arg1, arg4, originalException.originalException, arg3, exception.exception.values, tmp5, 0);
+            const arr = aggregateExceptionsFromError(exceptionFromError, stackParser, arg4, originalException.originalException, arg3, exception.exception.values, tmp5, 0);
           }
         }
         obj = num(12804);

@@ -1,9 +1,11 @@
 // === Module 901: CLSThresholds ===
 
 // Module 901 (CLSThresholds)
+import _mod904 from "module_904" /* 904 */;
 import _mod905 from "module_905" /* 905 */;
 import _mod909 from "module_909" /* 909 */;
 import observe from "observe" /* 911 */;
+import bindReporter from "bindReporter" /* 912 */;
 import _mod914 from "module_914" /* 914 */;
 import LayoutShiftManager from "LayoutShiftManager" /* 915 */;
 
@@ -13,7 +15,7 @@ Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 const items = [0.1, 0.25];
 
 export const CLSThresholds = items;
-export const onCLS = (arg0) => {
+export const onCLS = (arg0, arg1) => {
   _require = arg0;
   let obj = arg1;
   if (arg1 === undefined) {
@@ -34,18 +36,18 @@ export const onCLS = (arg0) => {
         ({ _sessionValue: tmp7.value, _sessionEntries: tmp7.entries } = closure_2);
         bindReporterResult();
       }
+      tmp = arg0[Symbol.iterator]();
     }
-    let tmp4 = obj;
-    const observeResult = observe.observe("layout-shift", handleEntries);
+    const tmp4 = obj;
     if (observeResult) {
-      const tmpResult = tmp(912);
+      const tmpResult = bindReporter;
       const bindReporterResult = tmpResult.bindReporter(closure_0, metric, items, tmp4.reportAllChanges);
       closure_0 = bindReporterResult;
       visibilityWatcher.onHidden(() => {
         handleEntries(observeResult.takeRecords());
         bindReporterResult(true);
       });
-      const WINDOW = tmp(904).WINDOW;
+      const WINDOW = _mod904.WINDOW;
       if (WINDOW != null) {
         const _setTimeout = WINDOW.setTimeout;
         if (_setTimeout != null) {
@@ -53,5 +55,6 @@ export const onCLS = (arg0) => {
         }
       }
     }
+    observeResult = observe.observe("layout-shift", handleEntries);
   }));
 };

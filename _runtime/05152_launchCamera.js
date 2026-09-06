@@ -26,9 +26,9 @@ export const launchCamera = function launchCamera(arg0, arg1) {
     });
   });
 };
-export const launchImageLibrary = function launchImageLibrary(arg0, arg1) {
+export const launchImageLibrary = function launchImageLibrary(arg0, fn) {
   let ImagePickerManager = arg0;
-  closure_1 = arg1;
+  closure_1 = fn;
   return new Promise((arg0) => {
     ImagePickerManager = arg0;
     ImagePickerManager = ImagePickerManager.ImagePickerManager;

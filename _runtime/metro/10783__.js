@@ -50,9 +50,9 @@ export const useVisibleRanges = function useVisibleRanges(total) {
       tmp8 = items[0] < num && items[0] > items[1];
     } else {
       obj = { negativeRange: null, positiveRange: null };
-      const items2 = [sum - (tmp - 1), sum];
+      const items2 = [sum - (windowSize - 1), sum];
       obj.negativeRange = items2;
-      const items3 = [sum, sum + (tmp - 1)];
+      const items3 = [sum, sum + (windowSize - 1)];
       obj.positiveRange = items3;
     }
     const current = ref.current;
@@ -68,7 +68,7 @@ export const useVisibleRanges = function useVisibleRanges(total) {
       let positiveRange1 = negativeRange1;
       let tmp11 = negativeRange.length === negativeRange1.length && negativeRange.every((item, index) => item === positiveRange1[index]);
       if (tmp11) {
-        const current2 = tmp10.current;
+        const current2 = ref.current;
         let positiveRange;
         if (current2 != null) {
           positiveRange = current2.positiveRange;
@@ -77,7 +77,7 @@ export const useVisibleRanges = function useVisibleRanges(total) {
           positiveRange = [];
         }
         positiveRange1 = obj.positiveRange;
-        if (typeof tmp9 === "function") {
+        if (typeof isArraysEqual === "function") {
           tmp11 = positiveRange.length === positiveRange1.length && positiveRange.every((item, index) => item === positiveRange1[index]);
           const tmp12 = positiveRange.length === positiveRange1.length && positiveRange.every((item, index) => item === positiveRange1[index]);
         } else {
@@ -85,9 +85,9 @@ export const useVisibleRanges = function useVisibleRanges(total) {
         }
       }
       if (!tmp11) {
-        tmp10.current = obj;
+        ref.current = obj;
       }
-      return tmp10.current;
+      return ref.current;
     } else {
       throw new TypeError("Trying to call a non-function");
     }

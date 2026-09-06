@@ -1,14 +1,18 @@
 // === Module 12845: _flush ===
 
 // Module 12845 (_flush)
+import _mod12797 from "module_12797" /* 12797 */;
 import _mod12798 from "module_12798" /* 12798 */;
 import _mod12808 from "module_12808" /* 12808 */;
 import _mod12811 from "module_12811" /* 12811 */;
+import _mod12820 from "module_12820" /* 12820 */;
 import _mod12824 from "module_12824" /* 12824 */;
+import _mod12825 from "module_12825" /* 12825 */;
+import _mod12834 from "module_12834" /* 12834 */;
 import _mod12846 from "module_12846" /* 12846 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
-let closure_3 = async function _flush(arg0, value) {
+let closure_3 = async function _flush(arg0) {
   if (c1 === 2) {
     c1 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -34,17 +38,16 @@ let closure_3 = async function _flush(arg0, value) {
       } else {
         const client = require("module_12824").getClient();
         if (client) {
-          client.flush(tmp13);
+          client.flush(closure_0);
         } else {
-          if (tmp14(tmp15[3]).DEBUG_BUILD) {
-            const logger = tmp14(tmp15[4]).logger;
+          if (require("module_12825").DEBUG_BUILD) {
+            const logger = require("module_12797").logger;
             logger.warn("Cannot flush events. No client defined.");
           }
           const resolved = Promise.resolve(false);
         }
         c1 = 3;
         const obj3 = require("module_12824");
-        tmp13 = closure_0;
       }
     } catch (tmp8) {
       c1 = tmp;
@@ -52,7 +55,7 @@ let closure_3 = async function _flush(arg0, value) {
     }
   }
 };
-let closure_4 = async function _close(arg0, value) {
+let closure_4 = async function _close(arg0) {
   if (c1 === 2) {
     c1 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -78,17 +81,16 @@ let closure_4 = async function _close(arg0, value) {
       } else {
         const client = require("module_12824").getClient();
         if (client) {
-          client.close(tmp13);
+          client.close(closure_0);
         } else {
-          if (tmp14(tmp15[3]).DEBUG_BUILD) {
-            const logger = tmp14(tmp15[4]).logger;
+          if (require("module_12825").DEBUG_BUILD) {
+            const logger = require("module_12797").logger;
             logger.warn("Cannot flush events and disable SDK. No client defined.");
           }
           const resolved = Promise.resolve(false);
         }
         c1 = 3;
         const obj3 = require("module_12824");
-        tmp13 = closure_0;
       }
     } catch (tmp8) {
       c1 = tmp;
@@ -101,10 +103,10 @@ function endSession() {
   const currentScope = _mod12824.getCurrentScope();
   const tmp3 = currentScope.getSession() || isolationScope.getSession();
   if (tmp3) {
-    let tmpResult = tmp(12820);
+    let tmpResult = _mod12820;
     tmpResult.closeSession(tmp3);
   }
-  tmpResult = tmp(12824);
+  tmpResult = _mod12824;
   const isolationScope1 = tmpResult.getIsolationScope();
   const currentScope1 = _mod12824.getCurrentScope();
   const tmpResult1 = _mod12824;
@@ -119,6 +121,7 @@ function endSession() {
   }
   isolationScope.setSession();
   currentScope.setSession();
+  const tmpResult2 = _mod12824;
 }
 
 export const addEventProcessor = function addEventProcessor(arg0) {
@@ -131,12 +134,12 @@ export const captureCheckIn = function captureCheckIn(arg0, arg1) {
   if (client) {
     if (client.captureCheckIn) {
       return client.captureCheckIn(arg0, arg1, currentScope);
-    } else if (tmp(12825).DEBUG_BUILD) {
-      const logger2 = tmp(12797).logger;
+    } else if (_mod12825.DEBUG_BUILD) {
+      const logger2 = _mod12797.logger;
       logger2.warn("Cannot capture check-in. Client does not support sending check-ins.");
     }
-  } else if (tmp(12825).DEBUG_BUILD) {
-    const logger = tmp(12797).logger;
+  } else if (_mod12825.DEBUG_BUILD) {
+    const logger = _mod12797.logger;
     logger.warn("Cannot capture check-in. No client defined.");
   }
   return _mod12808.uuid4();
@@ -145,9 +148,9 @@ export const captureEvent = function captureEvent(arg0, arg1) {
   const currentScope = _mod12824.getCurrentScope();
   return currentScope.captureEvent(arg0, arg1);
 };
-export const captureException = function captureException(arg0, arg1) {
+export const captureException = function captureException(arg0, captureContext) {
   const currentScope = _mod12824.getCurrentScope();
-  return currentScope.captureException(arg0, _mod12846.parseEventHintOrCaptureContext(arg1));
+  return currentScope.captureException(arg0, _mod12846.parseEventHintOrCaptureContext(captureContext));
 };
 export const captureMessage = function captureMessage(arg0, captureContext) {
   let tmp;
@@ -261,10 +264,10 @@ export const startSession = function startSession(arg0) {
   }
   ({ environment, release } = options);
   if (undefined === environment) {
-    environment = tmp(12834).DEFAULT_ENVIRONMENT;
+    environment = _mod12834.DEFAULT_ENVIRONMENT;
   }
   const userAgent = _mod12798.GLOBAL_OBJ.navigator || {}.userAgent;
-  let tmpResult = tmp(12820);
+  let tmpResult = _mod12820;
   obj = { release, environment, user: null };
   const tmp3 = _mod12798.GLOBAL_OBJ.navigator || {};
   obj.user = currentScope.getUser() || isolationScope.getUser();
@@ -282,7 +285,7 @@ export const startSession = function startSession(arg0) {
     tmp10 = "ok" === session1.status;
   }
   if (tmp10) {
-    tmpResult = tmp(12820);
+    tmpResult = _mod12820;
     tmpResult.updateSession(session1, { status: "exited" });
   }
   endSession();
@@ -300,15 +303,16 @@ export const withMonitor = function withMonitor(monitorSlug, arg1, arg2) {
     if (client) {
       if (client.captureCheckIn) {
         captureCheckInResult = client.captureCheckIn(obj, undefined, currentScope);
-      } else if (tmp(12825).DEBUG_BUILD) {
-        const logger2 = tmp(12797).logger;
+      } else if (_mod12825.DEBUG_BUILD) {
+        const logger2 = _mod12797.logger;
         logger2.warn("Cannot capture check-in. Client does not support sending check-ins.");
       }
-    } else if (tmp(12825).DEBUG_BUILD) {
-      const logger = tmp(12797).logger;
+    } else if (_mod12825.DEBUG_BUILD) {
+      const logger = _mod12797.logger;
       logger.warn("Cannot capture check-in. No client defined.");
     }
     _mod12808.uuid4();
+    const tmpResult = _mod12808;
   }
   let currentScope = require("module_12824").getCurrentScope();
   let obj = { monitorSlug, status: "in_progress" };

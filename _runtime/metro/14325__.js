@@ -16,9 +16,8 @@ export default (arg0, arg1) => {
   } else {
     tmp3 = _mod14297[arg0];
     if (tmp3) {
-      tmp3 = tmp(14297)[arg0][arg1];
+      tmp3 = _mod14297[arg0][arg1];
     }
-    tmp = require;
   }
   return tmp3;
 };

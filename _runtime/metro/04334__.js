@@ -2,10 +2,10 @@
 
 // Module 4334
 import c from "c" /* 4316 */;
-import RiveColor2 from "RiveColor" /* 4324 */;
 import _mod4329 from "module_4329" /* 4329 */;
 import _slicedToArray from "module_32" /* 32 */;
 
+const RiveColor2 = tmp(4324);
 require = fn;
 fn(19).useCallback;
 const f30504 = (colorProperty, arg1) => colorProperty.colorProperty(arg1);

@@ -47,7 +47,7 @@ obj.Strikethrough = "s";
 obj.Code = "inlineCode";
 obj.Link = "link";
 obj.Paragraph = "paragraph";
-let closure_5 = {
+const dependencyMap = {
   $b(content) {
     return { type: AstBuilder.Strong, content };
   },
@@ -94,9 +94,9 @@ _inherits(AstBuilder, _mod1159.FormatBuilder);
 const entry = {
   key: "pushRichTextTag",
   value: function pushRichTextTag(formatting, arg1, arg2) {
-    if (formatting in closure_5) {
+    if (formatting in dependencyMap) {
       const self = this;
-      const tmp4 = tmp[formatting](arg1, "", arg2);
+      const tmp4 = dependencyMap[formatting](arg1, "", arg2);
       const _Array = Array;
       const result = this.result;
       const push = result.push;
@@ -111,7 +111,6 @@ const entry = {
       const _HermesInternal = HermesInternal;
       throw "" + formatting + " is not a known rich text formatting tag";
     }
-    tmp = closure_5;
   }
 };
 let items = [
@@ -126,6 +125,7 @@ let items = [
       }
       const result = this.result;
       result.push({ type: AstBuilder.Text, content });
+      const obj = { type: AstBuilder.Text, content };
     }
   },
   {

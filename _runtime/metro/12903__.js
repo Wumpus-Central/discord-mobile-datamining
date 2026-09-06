@@ -14,7 +14,7 @@ _mod12821;
 let obj = { mechanism: { handled: false, data: { function: "trpcMiddleware" } } };
 
 export const trpcMiddleware = function trpcMiddleware() {
-  closure_0 = asyncGeneratorStep(async (arg0, value) => {
+  closure_0 = asyncGeneratorStep(async (arg0) => {
     if (c6 === 2) {
       c6 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -102,7 +102,7 @@ export const trpcMiddleware = function trpcMiddleware() {
           setContext.setContext("trpc", closure_2);
           closure_1_0(dependencyMap[10]);
           obj = { name: "trpc/" + closure_0, op: "rpc.server", attributes: { [closure_1_0(closure_1_1[11]).SEMANTIC_ATTRIBUTE_SENTRY_SOURCE]: "route", [closure_1_0(closure_1_1[11]).SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN]: "auto.rpc.trpc" } };
-          closure_0 = closure_1_2(function*(arg0, value) {
+          closure_0 = closure_1_2(function*(arg0) {
             if (c6 === 2) {
               c6 = 3;
               throw new TypeError("Generator functions may not be called on executing generators");

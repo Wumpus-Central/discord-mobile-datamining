@@ -48,13 +48,12 @@ let fn = function t() {
         } else if (typeof sanitizeText === "function") {
           let _String = String;
           let str3 = String(tmp5);
-          let tmp8 = re15;
           if (typeof tmp7 === "function") {
             let _String2 = String;
             let text = `${" " + str3.replace(re15, (arg0) => closure_1_16[arg0])}="`;
             let str4 = String(tmp14);
             let _HermesInternal = HermesInternal;
-            str = tmp4 + `${" " + str3.replace(re15, (arg0) => closure_1_16[arg0])}="` + str4.replace(tmp8, (arg0) => closure_1_16[arg0]) + "\"";
+            str = tmp4 + `${" " + str3.replace(re15, (arg0) => closure_1_16[arg0])}="` + str4.replace(re15, (arg0) => closure_1_16[arg0]) + "\"";
             continue;
           } else {
             let str7 = "Trying to call a non-function";
@@ -334,7 +333,7 @@ let fn = function t() {
           key.key = key.key;
           return items;
         },
-      html(arg0, fn, arg2) {
+      html(arg0, fn, key) {
           num = 0;
           let str = "";
           let str2 = "";
@@ -369,7 +368,7 @@ let fn = function t() {
                   }
                 }
               }
-              str = str + fn(tmp4, arg2);
+              str = str + fn(tmp4, key);
               num = tmp5 + 1;
               str2 = str;
             } while (num < arg0.length);
@@ -408,8 +407,8 @@ let fn = function t() {
             throw new TypeError("Trying to call a non-function");
           }
         },
-      html(content, fn, arg2) {
-          return htmlTag(`h${content.level}`, fn(content.content, arg2));
+      html(content, fn, key) {
+          return htmlTag(`h${content.level}`, fn(content.content, key));
         }
     };
     defaultRules.heading = defaultRules;
@@ -500,7 +499,7 @@ let fn = function t() {
           if (typeof sanitizeText === "function") {
             const _String = String;
             obj = { class: text };
-            return tmp2("pre", tmp2("code", String(tmp3).replace(re15, (arg0) => closure_1_16[arg0]), obj));
+            return htmlTag("pre", htmlTag("code", String(tmp3).replace(re15, (arg0) => closure_1_16[arg0]), obj));
           } else {
             throw new TypeError("Trying to call a non-function");
           }
@@ -520,8 +519,8 @@ let fn = function t() {
     const obj6 = {
       order: 6,
       match: blockRegex(/^( *>[^\n]+(\n[^\n]+)*\n*)+\n{2,}/),
-      parse(arg0, fn, arg2) {
-          obj = { content: fn(arg0[0].replace(/^ *> ?/gm, ""), arg2) };
+      parse(arg0, fn, key) {
+          obj = { content: fn(arg0[0].replace(/^ *> ?/gm, ""), key) };
           return obj;
         },
       react(content, fn, key) {
@@ -539,8 +538,8 @@ let fn = function t() {
             throw new TypeError("Trying to call a non-function");
           }
         },
-      html(content, fn, arg2) {
-          return htmlTag("blockquote", fn(content.content, arg2));
+      html(content, fn, key) {
+          return htmlTag("blockquote", fn(content.content, key));
         }
     };
     defaultRules.blockQuote = obj6;
@@ -592,10 +591,10 @@ let fn = function t() {
               closure_1._list = true;
               ({ inline, _list } = closure_1);
               if (tmp5) {
-                tmp8.inline = false;
+                closure_1.inline = false;
                 let replaced1 = replaced.replace(re26, "\n\n");
               } else {
-                tmp8.inline = true;
+                closure_1.inline = true;
                 replaced1 = replaced.replace(re26, "");
               }
               closure_1.inline = inline;
@@ -692,29 +691,28 @@ let fn = function t() {
               props = { textAlign: tmp3.align[index] };
             }
             props = { style: props, scope: "col", children: closure_1(item, closure_2) };
-            if (typeof tmp === "function") {
+            if (typeof reactElement === "function") {
               const element = { $$typeof: num, type: "th", key: text, ref: null, props, _owner: null };
               return element;
             } else {
               throw new TypeError("Trying to call a non-function");
             }
-            tmp = reactElement;
           });
           if (typeof reactElement === "function") {
             let props = { children: null };
             let element = { $$typeof: num, type: "tr", key: undefined, ref: null, props: { children: mapped }, _owner: null };
             props.children = element;
-            if (typeof tmp3 === "function") {
-              const element1 = { $$typeof: tmp4, type: "thead", key: "thead", ref: null, props, _owner: null };
+            if (typeof reactElement === "function") {
+              const element1 = { $$typeof: num, type: "thead", key: "thead", ref: null, props, _owner: null };
               const items = [element1, ];
               props = { children: tmp2 };
-              if (typeof tmp3 === "function") {
+              if (typeof reactElement === "function") {
                 props = { children: null };
-                const element2 = { $$typeof: tmp4, type: "tbody", key: "tbody", ref: null, props, _owner: null };
+                const element2 = { $$typeof: num, type: "tbody", key: "tbody", ref: null, props, _owner: null };
                 items[1] = element2;
                 props.children = items;
-                if (typeof tmp3 === "function") {
-                  const element3 = { $$typeof: tmp4, type: "table", key: null, ref: null, props: null, _owner: null };
+                if (typeof reactElement === "function") {
+                  const element3 = { $$typeof: num, type: "table", key: null, ref: null, props: null, _owner: null };
                   let tmp6;
                   if (null != key) {
                     tmp6 = key;
@@ -795,8 +793,8 @@ let fn = function t() {
             throw new TypeError("Trying to call a non-function");
           }
         },
-      html(content, fn, arg2) {
-          return htmlTag("div", fn(content.content, arg2), { class: "paragraph" });
+      html(content, fn, key) {
+          return htmlTag("div", fn(content.content, key), { class: "paragraph" });
         }
     };
     defaultRules.paragraph = obj11;
@@ -883,8 +881,8 @@ let fn = function t() {
     const _RegExp3 = RegExp;
     const regExp5 = new RegExp("^\\[((?:\\[[^\\]]*\\]|[^\\[\\]]|\\](?=[^\\[]*\\]))*)\\]\\(\\s*<?((?:\\([^)]*\\)|[^\\s\\\\()]|\\\\.)*?)>?(?:\\s+['\"]([\\s\\S]*?)['\"])?\\s*\\)");
     obj17.match = inlineRegex(regExp5);
-    obj17.parse = function parse(arg0, fn, arg2) {
-      obj = { content: fn(arg0[1], arg2), target: null, title: null };
+    obj17.parse = function parse(arg0, fn, key) {
+      obj = { content: fn(arg0[1], key), target: null, title: null };
       if (typeof unescapeUrl === "function") {
         obj.target = str.replace(re18, "$1");
         obj.title = arg0[3];
@@ -909,8 +907,8 @@ let fn = function t() {
         throw new TypeError("Trying to call a non-function");
       }
     };
-    obj17.html = function html(target, fn, arg2) {
-      return htmlTag("a", fn(target.content, arg2), { href: sanitizeUrl(target.target), title: target.title });
+    obj17.html = function html(target, fn, key) {
+      return htmlTag("a", fn(target.content, key), { href: sanitizeUrl(target.target), title: target.title });
     };
     defaultRules.link = obj17;
     const obj18 = { order: 18, match: null, parse: null, react: null, html: null };
@@ -1069,9 +1067,9 @@ let fn = function t() {
           let mapped = prop.map((item) => {
             const charCodeAtResult = item.charCodeAt(0);
             if (!map.has(charCodeAtResult)) {
-              const result = obj.set(charCodeAtResult, []);
+              const result = map.set(charCodeAtResult, []);
             }
-            value = obj.get(charCodeAtResult);
+            value = map.get(charCodeAtResult);
             value.push(closure_6);
           });
         }
@@ -1247,12 +1245,12 @@ let fn = function t() {
             if (typeof call === "unknown") {
               let hasOwnPropertyResult = hasOwnProperty(key10006);
             } else {
-              hasOwnPropertyResult = call(tmp, key10006);
+              hasOwnPropertyResult = call(closure_1, key10006);
             }
             if (!hasOwnPropertyResult) {
               continue;
             } else {
-              obj[key10006] = tmp[key10006];
+              obj[key10006] = closure_1[key10006];
               continue;
             }
             continue;
@@ -1285,15 +1283,15 @@ let fn = function t() {
     }
     function preprocess(str) {
       str = str.replace(re7, "\n");
-      return str.replace(re7, "\n").replace(re9, "").replace(re8, "    ");
+      return str.replace(re9, "").replace(re8, "    ");
     }
     const regExp9 = new RegExp(str8 + "|^\\*(?=\\S)((?:\\*\\*|\\\\[\\s\\S]|\\s+(?:\\\\[\\s\\S]|[^\\s\\*\\\\]|\\*\\*)|[^\\s\\*\\\\])+?)\\*(?!\\*)");
     obj21.match = inlineRegex(regExp9);
     obj21.quality = function quality(arg0) {
       return arg0[0].length + 0.2;
     };
-    obj21.parse = function parse(arg0, fn, arg2) {
-      return { content: fn(arg0[2] || arg0[1], arg2) };
+    obj21.parse = function parse(arg0, fn, key) {
+      return { content: fn(arg0[2] || arg0[1], key) };
     };
     obj21.react = function react(content, fn, key) {
       const props = { children: fn(content.content, key) };
@@ -1310,8 +1308,8 @@ let fn = function t() {
         throw new TypeError("Trying to call a non-function");
       }
     };
-    obj21.html = function html(content, fn, arg2) {
-      return htmlTag("em", fn(content.content, arg2));
+    obj21.html = function html(content, fn, key) {
+      return htmlTag("em", fn(content.content, key));
     };
     defaultRules.em = obj21;
     const obj22 = {
@@ -1337,8 +1335,8 @@ let fn = function t() {
             throw new TypeError("Trying to call a non-function");
           }
         },
-      html(content, fn, arg2) {
-          return htmlTag("strong", fn(content.content, arg2));
+      html(content, fn, key) {
+          return htmlTag("strong", fn(content.content, key));
         }
     };
     defaultRules.strong = obj22;
@@ -1365,8 +1363,8 @@ let fn = function t() {
             throw new TypeError("Trying to call a non-function");
           }
         },
-      html(content, fn, arg2) {
-          return htmlTag("u", fn(content.content, arg2));
+      html(content, fn, key) {
+          return htmlTag("u", fn(content.content, key));
         }
     };
     defaultRules.u = obj23;
@@ -1390,8 +1388,8 @@ let fn = function t() {
             throw new TypeError("Trying to call a non-function");
           }
         },
-      html(content, fn, arg2) {
-          return htmlTag("del", fn(content.content, arg2));
+      html(content, fn, key) {
+          return htmlTag("del", fn(content.content, key));
         }
     };
     defaultRules.del = obj24;
@@ -1504,12 +1502,12 @@ let fn = function t() {
                 if (typeof call === "unknown") {
                   let hasOwnPropertyResult = hasOwnProperty(key10006);
                 } else {
-                  hasOwnPropertyResult = call(tmp, key10006);
+                  hasOwnPropertyResult = call(closure_2, key10006);
                 }
                 if (!hasOwnPropertyResult) {
                   continue;
                 } else {
-                  obj[key10006] = tmp[key10006];
+                  obj[key10006] = closure_2[key10006];
                   continue;
                 }
                 continue;
@@ -1518,9 +1516,9 @@ let fn = function t() {
             if (typeof nestedOutput === "function") {
               _Array = Array;
               if (Array.isArray(arg0)) {
-                let tmp11 = closure_4(arg0, tmp5, obj);
+                let tmp11 = closure_4(arg0, nestedOutput, obj);
               } else {
-                tmp11 = _Array[arg0.type][closure_1](arg0, tmp5, obj);
+                tmp11 = _Array[arg0.type][closure_1](arg0, nestedOutput, obj);
               }
               return tmp11;
             } else {

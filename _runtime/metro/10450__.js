@@ -111,7 +111,7 @@ let items = [
         const start20 = start2.start;
         if (start20.isOnlyWeekdayComponent()) {
           if (AbstractMergeDateRangeRefiner(10434).addDuration(dateResult2, { day: 7 }) > dateResult1) {
-            const addDurationResult = tmp6(10434).addDuration(dateResult2, { day: 7 });
+            const addDurationResult = AbstractMergeDateRangeRefiner(10434).addDuration(dateResult2, { day: 7 });
             const start15 = start2.start;
             start15.imply("day", addDurationResult.getDate());
             const start16 = start2.start;
@@ -121,12 +121,11 @@ let items = [
             tmp5 = start2;
             obj = start;
           }
-          tmp6 = AbstractMergeDateRangeRefiner;
         }
         const start7 = start.start;
         if (start7.isOnlyWeekdayComponent()) {
           if (AbstractMergeDateRangeRefiner(10434).addDuration(dateResult1, { day: -7 }) < dateResult2) {
-            const addDurationResult1 = tmp8(10434).addDuration(dateResult1, { day: -7 });
+            const addDurationResult1 = AbstractMergeDateRangeRefiner(10434).addDuration(dateResult1, { day: -7 });
             const start12 = start.start;
             start12.imply("day", addDurationResult1.getDate());
             const start13 = start.start;
@@ -136,29 +135,26 @@ let items = [
             tmp5 = start2;
             obj = start;
           }
-          tmp8 = AbstractMergeDateRangeRefiner;
         }
         const start8 = start2.start;
         if (start8.isDateWithUnknownYear()) {
           if (AbstractMergeDateRangeRefiner(10434).addDuration(dateResult2, { year: 1 }) > dateResult1) {
             const start11 = start2.start;
-            start11.imply("year", tmp10(10434).addDuration(dateResult2, { year: 1 }).getFullYear());
+            start11.imply("year", AbstractMergeDateRangeRefiner(10434).addDuration(dateResult2, { year: 1 }).getFullYear());
             tmp5 = start2;
             obj = start;
-            const addDurationResult2 = tmp10(10434).addDuration(dateResult2, { year: 1 });
+            const addDurationResult2 = AbstractMergeDateRangeRefiner(10434).addDuration(dateResult2, { year: 1 });
           }
-          tmp10 = AbstractMergeDateRangeRefiner;
         }
         const start9 = start.start;
         if (start9.isDateWithUnknownYear()) {
           if (AbstractMergeDateRangeRefiner(10434).addDuration(dateResult1, { year: -1 }) < dateResult2) {
             const start10 = start.start;
-            start10.imply("year", tmp12(10434).addDuration(dateResult1, { year: -1 }).getFullYear());
+            start10.imply("year", AbstractMergeDateRangeRefiner(10434).addDuration(dateResult1, { year: -1 }).getFullYear());
             tmp5 = start2;
             obj = start;
-            const addDurationResult3 = tmp12(10434).addDuration(dateResult1, { year: -1 });
+            const addDurationResult3 = AbstractMergeDateRangeRefiner(10434).addDuration(dateResult1, { year: -1 });
           }
-          tmp12 = AbstractMergeDateRangeRefiner;
         }
         const items = [start, start2];
         first = items[0];

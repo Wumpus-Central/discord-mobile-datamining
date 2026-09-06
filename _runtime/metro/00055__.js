@@ -38,6 +38,7 @@ export default function processBoxShadow(str) {
         const mapped = parts.map((item) => item.trim());
         const found = mapped.filter((item) => "" !== item);
         const iter = found[Symbol.iterator]();
+        str = iter.next();
         while (iter !== undefined) {
           let obj = { offsetX: 0, offsetY: 0 };
           let tmp2;
@@ -45,9 +46,8 @@ export default function processBoxShadow(str) {
           let num = 0;
           let parts1 = str.split(closure_1_3);
           for (const item10041 of parts1) {
-            let tmp8 = item10041;
             if (null == processColorDefault(item10041)) {
-              if ("inset" !== tmp8) {
+              if ("inset" !== item10041) {
                 if (0 === num) {
                   tmp2 = item10041;
                   num = num + 1;
@@ -58,7 +58,6 @@ export default function processBoxShadow(str) {
                     iter.return();
                     return items1;
                   } else {
-                    tmp3 = item10041;
                     num = num + 1;
                   }
                 } else if (2 === num) {
@@ -68,7 +67,7 @@ export default function processBoxShadow(str) {
                     iter.return();
                     return items2;
                   } else {
-                    obj.blurRadius = tmp8;
+                    obj.blurRadius = item10041;
                     num = num + 1;
                   }
                 } else if (3 === num) {
@@ -78,7 +77,7 @@ export default function processBoxShadow(str) {
                     iter.return();
                     return items3;
                   } else {
-                    obj.spreadDistance = tmp8;
+                    obj.spreadDistance = item10041;
                     num = num + 1;
                   }
                 } else {
@@ -107,14 +106,14 @@ export default function processBoxShadow(str) {
               if (null != tmp2) {
                 flag = true;
               }
-              obj.color = tmp8;
+              obj.color = item10041;
             }
             continue;
           }
           if (null != tmp2) {
-            if (null != tmp3) {
+            if (null != item10041) {
               obj.offsetX = tmp2;
-              obj.offsetY = tmp3;
+              obj.offsetY = item10041;
               let arr = items.push(obj);
               continue;
             }

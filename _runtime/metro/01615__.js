@@ -50,8 +50,6 @@ export const SafeAreaProvider = function SafeAreaProvider(initialMetrics) {
     let size = { x: 0, y: 0, width: React4.get("window").width, height: React4.get("window").height };
     frame = size;
   }
-  const tmp2 = context;
-  const tmp4 = context1;
   const tmp8 = _slicedToArray(noop.useState(insets), 2);
   [tmp13, c1] = _slicedToArray(obj.useState(frame), 2);
   const callback = obj.useCallback((nativeEvent) => {
@@ -95,8 +93,8 @@ export const SafeAreaProvider = function SafeAreaProvider(initialMetrics) {
   if (null != tmp9) {
     obj = { value: tmp13, children: null };
     const obj1 = { value: tmp9, children };
-    obj.children = tmp15(tmp2.Provider, obj1);
-    tmp15Result = tmp15(tmp4.Provider, obj);
+    obj.children = <tmp2.Provider value={tmp9}>{children}</tmp2.Provider>;
+    tmp15Result = <tmp4.Provider value={tmp13}>{null}</tmp4.Provider>;
   }
   obj.children = tmp15Result;
   return jsx(NativeSafeAreaProvider.NativeSafeAreaProvider, { style: null, onInsetsChange: callback });

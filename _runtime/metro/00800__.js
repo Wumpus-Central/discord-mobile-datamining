@@ -43,7 +43,7 @@ export const wrapMcpServerWithSentry = function wrapMcpServerWithSentry(arg0, re
           closure_2 = [...arguments].slice();
           c6 = 0;
           c7 = 0;
-          const iter = (async (arg0, value) => {
+          const iter = (async (arg0) => {
             if (c7 === 2) {
               c7 = 3;
               throw new TypeError("Generator functions may not be called on executing generators");

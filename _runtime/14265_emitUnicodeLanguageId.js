@@ -49,12 +49,11 @@ export const emitUnicodeLocaleId = function emitUnicodeLocaleId(parseUnicodeLoca
       let applyResult = push2.apply(items1, obj6.__spreadArray(__spreadArrayResult1, keywords.reduce((arr, item) => arr.concat(item), []), false));
     } else if ("t" === type) {
       let push = items1.push;
-      let tmp7 = require;
       let obj3 = e;
       let lang2 = iter.lang;
       let str3 = "";
       if (lang2) {
-        let tmp7Result = tmp7(1162);
+        let tmp7Result = e;
         let items2 = [, , ];
         ({ lang: arr4[0], script: arr4[1], region: arr4[2], variants: variants2 } = lang2);
         if (!variants2) {

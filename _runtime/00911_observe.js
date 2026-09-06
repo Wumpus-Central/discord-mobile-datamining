@@ -3,8 +3,8 @@
 // Module 911 (observe)
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 
-export const observe = (type, arg1) => {
-  closure_0 = arg1;
+export const observe = (type, handleEntries, arg2) => {
+  closure_0 = handleEntries;
   let obj = arg2;
   if (arg2 === undefined) {
     obj = {};

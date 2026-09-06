@@ -31,7 +31,7 @@ export default (arr, arg1, arg2) => {
   }
   if (tmp2) {
     const items2 = [tmp2, null];
-    items.push(items2);
+    arr = items.push(items2);
   }
   const items3 = [];
   while (tmp15 !== undefined) {

@@ -76,7 +76,7 @@ function createProfilePayload(event_id, arg1, resources, type) {
         stackParser = options.stackParser;
       }
       if (stackParser) {
-        let tmp22Result = tmp22(682);
+        let tmp22Result = _mod682;
         let debugImagesForResources = tmp22Result.getDebugImagesForResources(stackParser, resources.resources);
       } else {
         debugImagesForResources = [];
@@ -87,7 +87,7 @@ function createProfilePayload(event_id, arg1, resources, type) {
       const obj3 = { name: type.transaction || "", id: null, trace_id: null, active_thread_id: null, relative_start_ns: "0", relative_end_ns: null };
       event_id = type.event_id;
       if (!event_id) {
-        tmp22Result = tmp22(682);
+        tmp22Result = _mod682;
         event_id = tmp22Result.uuid4();
       }
       obj3.id = event_id;
@@ -150,7 +150,6 @@ function convertJSSelfProfileToSampledFormat(samples) {
         if (tmp10) {
           do {
             let arr = items.push(tmp10.frameId);
-            let tmp2 = samples;
             let tmp3 = samples.frames[tmp10.frameId];
             let tmp5 = tmp3;
             if (tmp3) {
@@ -160,7 +159,7 @@ function convertJSSelfProfileToSampledFormat(samples) {
               obj = { function: tmp3.name, abs_path: null, lineno: null, colno: null };
               let tmp8;
               if (typeof tmp3.resourceId === "number") {
-                tmp8 = tmp2.resources[tmp3.resourceId];
+                tmp8 = samples.resources[tmp3.resourceId];
               }
               obj.abs_path = tmp8;
               ({ line: obj.lineno, column: obj.colno } = tmp3);
@@ -168,7 +167,7 @@ function convertJSSelfProfileToSampledFormat(samples) {
             }
             tmp9 = undefined;
             if (undefined !== tmp10.parentId) {
-              tmp9 = tmp2.stacks[tmp10.parentId];
+              tmp9 = samples.stacks[tmp10.parentId];
             }
             tmp10 = tmp9;
           } while (tmp9);
@@ -207,12 +206,11 @@ function isValidSampleRate(concat) {
       if (tmp) {
         flag4 = false;
         if (_mod937.DEBUG_BUILD) {
-          const debug = tmp2(682).debug;
+          const debug = _mod682.debug;
           const _HermesInternal = HermesInternal;
           debug.warn("[Profiling] Invalid sample rate. Sample rate must be between 0 and 1. Got " + concat + ".");
           flag4 = false;
         }
-        tmp2 = require;
       }
       flag2 = flag4;
     }
@@ -353,11 +351,11 @@ export const PROFILER_THREAD_NAME = str;
 export const addProfileToGlobalCache = function addProfileToGlobalCache(arg0, result) {
   result = map.set(arg0, result);
   if (map.size > 30) {
-    value = obj.keys().next().value;
+    value = map.keys().next().value;
     if (undefined !== value) {
-      obj.delete(value);
+      map.delete(value);
     }
-    const iter = obj.keys();
+    const iter = map.keys();
   }
 };
 export const addProfilesToEnvelope = function addProfilesToEnvelope(arg0, arg1) {
@@ -490,9 +488,7 @@ export const createProfileChunkPayload = function createProfileChunkPayload(fram
         if (num6 == null) {
           num6 = 0;
         }
-        obj = { stack_id: num6, thread_id: null, timestamp: null };
-        obj.thread_id = StringResult;
-        obj.timestamp = result1;
+        obj = { stack_id: num6, thread_id: StringResult, timestamp: result1 };
         items3[num5] = obj;
       }
     }
@@ -530,7 +526,7 @@ export const createProfileChunkPayload = function createProfileChunkPayload(fram
     obj4.version = str2;
     obj3.client_sdk = obj4;
     if (!_profilerId) {
-      let tmp24Result = tmp24(682);
+      let tmp24Result = _mod682;
       uuid4Result = tmp24Result.uuid4();
     }
     obj3.profiler_id = uuid4Result;
@@ -544,7 +540,7 @@ export const createProfileChunkPayload = function createProfileChunkPayload(fram
       str4 = "production";
     }
     obj3.environment = str4;
-    tmp24Result = tmp24(682);
+    tmp24Result = _mod682;
     const client = tmp24Result.getClient();
     let options1;
     if (client != null) {
@@ -555,8 +551,8 @@ export const createProfileChunkPayload = function createProfileChunkPayload(fram
       stackParser = options1.stackParser;
     }
     if (stackParser) {
-      let debugImagesForResources = tmp24(682).getDebugImagesForResources(stackParser, frames.resources);
-      const tmp24Result1 = tmp24(682);
+      let debugImagesForResources = _mod682.getDebugImagesForResources(stackParser, frames.resources);
+      const tmp24Result1 = _mod682;
     } else {
       debugImagesForResources = [];
     }
@@ -571,21 +567,19 @@ export const createProfilingEvent = function createProfilingEvent(event_id, arg1
   if (samples.samples.length < 2) {
     let flag = false;
     if (_mod937.DEBUG_BUILD) {
-      const debug2 = tmp4(682).debug;
+      const debug2 = _mod682.debug;
       debug2.log("[Profiling] Discarding profile because it contains less than 2 samples");
       flag = false;
     }
-    tmp4 = require;
   } else {
     flag = samples.frames.length;
     if (!flag) {
       flag = false;
       if (_mod937.DEBUG_BUILD) {
-        const debug = tmp(682).debug;
+        const debug = _mod682.debug;
         debug.log("[Profiling] Discarding profile because it contains no frames");
         flag = false;
       }
-      tmp = require;
     }
   }
   let tmp7 = null;
@@ -654,11 +648,10 @@ export const shouldProfileSession = function shouldProfileSession(options) {
       } else {
         flag2 = false;
         if (_mod937.DEBUG_BUILD) {
-          const debug2 = tmp6(682).debug;
+          const debug2 = _mod682.debug;
           debug2.log("[Profiling] Discarding profile because profileSessionSampleRate is not defined or set to 0");
           flag2 = false;
         }
-        tmp6 = require;
       }
     } else {
       let flag = false;
@@ -763,8 +756,8 @@ export const startJSSelfProfile = function startJSSelfProfile() {
       }
       c14 = true;
     }
-  } else if (tmp4(937).DEBUG_BUILD) {
-    const debug = tmp4(682).debug;
+  } else if (_mod937.DEBUG_BUILD) {
+    const debug = _mod682.debug;
     debug.log("[Profiling] Profiling is not supported by this browser, Profiler interface missing on window object.");
   }
 };

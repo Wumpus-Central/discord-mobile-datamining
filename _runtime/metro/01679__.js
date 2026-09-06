@@ -88,7 +88,7 @@ function hslToRgb(arg0, arg1, arg2) {
         sum2 = sum3;
       }
     }
-    if (typeof tmp3 === "function") {
+    if (typeof hue2rgb === "function") {
       let sum4 = arg0;
       if (arg0 < 0) {
         sum4 = arg0 + 1;
@@ -110,7 +110,7 @@ function hslToRgb(arg0, arg1, arg2) {
         }
       }
       const diff3 = arg0 - 0.3333333333333333;
-      if (typeof tmp3 === "function") {
+      if (typeof hue2rgb === "function") {
         let sum7 = diff3;
         if (diff3 < 0) {
           sum7 = diff3 + 1;
@@ -172,7 +172,7 @@ function hwbToRgb(arg0, arg1, arg2) {
           }
         }
       }
-      if (typeof tmp17 === "function") {
+      if (typeof hue2rgb === "function") {
         let sum2 = arg0;
         if (arg0 < 0) {
           sum2 = arg0 + 1;
@@ -189,7 +189,7 @@ function hwbToRgb(arg0, arg1, arg2) {
           }
         }
         const diff2 = arg0 - 0.3333333333333333;
-        if (typeof tmp17 === "function") {
+        if (typeof hue2rgb === "function") {
           let sum3 = diff2;
           if (diff2 < 0) {
             sum3 = diff2 + 1;
@@ -321,7 +321,7 @@ function normalizeColor(num) {
         let tmp6 = match >>> 0;
       } else if (undefined !== shareable[num]) {
       } else {
-        const rgb = tmp94.rgb;
+        const rgb = obj.rgb;
         const match1 = rgb.exec(num);
         if (match1) {
           if (typeof parse255 === "function") {
@@ -329,12 +329,12 @@ function normalizeColor(num) {
             const parsed = Number.parseInt(tmp80, 10);
             if (parsed >= 0) {
             }
-            if (typeof tmp79 === "function") {
+            if (typeof parse255 === "function") {
               const _Number25 = Number;
               const parsed1 = Number.parseInt(tmp84, 10);
               if (parsed1 >= 0) {
               }
-              if (typeof tmp79 === "function") {
+              if (typeof parse255 === "function") {
                 const _Number26 = Number;
                 const parsed2 = Number.parseInt(tmp87, 10);
                 let num87 = 0;
@@ -356,7 +356,7 @@ function normalizeColor(num) {
             throw new TypeError("Trying to call a non-function");
           }
         } else {
-          const rgba = tmp94.rgba;
+          const rgba = obj.rgba;
           num = rgba.exec(num);
           if (num) {
             if (undefined !== num[6]) {
@@ -365,12 +365,12 @@ function normalizeColor(num) {
                 const parsed3 = Number.parseInt(tmp65, 10);
                 if (parsed3 >= 0) {
                 }
-                if (typeof tmp64 === "function") {
+                if (typeof parse255 === "function") {
                   const _Number22 = Number;
                   const parsed4 = Number.parseInt(tmp69, 10);
                   if (parsed4 >= 0) {
                   }
-                  if (typeof tmp64 === "function") {
+                  if (typeof parse255 === "function") {
                     const _Number23 = Number;
                     const parsed5 = Number.parseInt(tmp72, 10);
                     if (parsed5 >= 0) {
@@ -405,12 +405,12 @@ function normalizeColor(num) {
               const parsed7 = Number.parseInt(tmp98, 10);
               if (parsed7 >= 0) {
               }
-              if (typeof tmp97 === "function") {
+              if (typeof parse255 === "function") {
                 const _Number18 = Number;
                 const parsed8 = Number.parseInt(tmp54, 10);
                 if (parsed8 >= 0) {
                 }
-                if (typeof tmp97 === "function") {
+                if (typeof parse255 === "function") {
                   const _Number19 = Number;
                   const parsed9 = Number.parseInt(tmp57, 10);
                   if (parsed9 >= 0) {
@@ -441,25 +441,25 @@ function normalizeColor(num) {
               throw new TypeError("Trying to call a non-function");
             }
           } else {
-            const hex3 = tmp94.hex3;
+            const hex3 = obj.hex3;
             const match2 = hex3.exec(num);
             if (match2) {
               const _Number16 = Number;
               tmp6 = Number.parseInt(`${tmp[1]}${tmp[1]}${tmp[2]}${tmp[2]}${tmp[3]}${tmp[3]}ff`, 16) >>> 0;
             } else {
-              const hex8 = tmp94.hex8;
+              const hex8 = obj.hex8;
               const match3 = hex8.exec(num);
               if (match3) {
                 const _Number15 = Number;
                 tmp6 = Number.parseInt(match3[1], 16) >>> 0;
               } else {
-                const hex4 = tmp94.hex4;
+                const hex4 = obj.hex4;
                 const match4 = hex4.exec(num);
                 if (match4) {
                   const _Number14 = Number;
                   tmp6 = Number.parseInt(match4[1] + match4[1] + match4[2] + match4[2] + match4[3] + match4[3] + match4[4] + match4[4], 16) >>> 0;
                 } else {
-                  const hsl = tmp94.hsl;
+                  const hsl = obj.hsl;
                   const match5 = hsl.exec(num);
                   if (match5) {
                     if (typeof parse360 === "function") {
@@ -497,7 +497,7 @@ function normalizeColor(num) {
                       throw new TypeError("Trying to call a non-function");
                     }
                   } else {
-                    const hsla = tmp94.hsla;
+                    const hsla = obj.hsla;
                     let num2 = hsla.exec(num);
                     if (num2) {
                       if (undefined !== num2[6]) {
@@ -588,7 +588,7 @@ function normalizeColor(num) {
                         throw new TypeError("Trying to call a non-function");
                       }
                     } else {
-                      const hwb = tmp94.hwb;
+                      const hwb = obj.hwb;
                       const match6 = hwb.exec(num);
                       if (match6) {
                         if (typeof parse360 === "function") {
@@ -641,26 +641,26 @@ function normalizeColor(num) {
 normalizeColor.__closure = { MATCHERS, names: shareable, parse255, parse1, hslToRgb, parse360, parsePercentage, hwbToRgb };
 normalizeColor.__workletHash = 13656798455904;
 normalizeColor.__initData = { code: "function normalizeColor_Pnpm_ColorsTs9(color){const{MATCHERS,names,parse255,parse1,hslToRgb,parse360,parsePercentage,hwbToRgb}=this.__closure;if(typeof color==='number'){if(color>>>0===color&&color>=0&&color<=0xffffffff){return color;}return null;}if(typeof color!=='string'){return null;}let match;if(match=MATCHERS.hex6.exec(color)){return Number.parseInt(match[1]+'ff',16)>>>0;}if(names[color]!==undefined){return names[color];}if(match=MATCHERS.rgb.exec(color)){return((parse255(match[1])<<24|parse255(match[2])<<16|parse255(match[3])<<8|0x000000ff)>>>0);}if(match=MATCHERS.rgba.exec(color)){if(match[6]!==undefined){return(parse255(match[6])<<24|parse255(match[7])<<16|parse255(match[8])<<8|parse1(match[9]))>>>0;}return(parse255(match[2])<<24|parse255(match[3])<<16|parse255(match[4])<<8|parse1(match[5]))>>>0;}if(match=MATCHERS.hex3.exec(color)){return Number.parseInt(match[1]+match[1]+match[2]+match[2]+match[3]+match[3]+'ff',16)>>>0;}if(match=MATCHERS.hex8.exec(color)){return Number.parseInt(match[1],16)>>>0;}if(match=MATCHERS.hex4.exec(color)){return Number.parseInt(match[1]+match[1]+match[2]+match[2]+match[3]+match[3]+match[4]+match[4],16)>>>0;}if(match=MATCHERS.hsl.exec(color)){return(hslToRgb(parse360(match[1]),parsePercentage(match[2]),parsePercentage(match[3]))|0x000000ff)>>>0;}if(match=MATCHERS.hsla.exec(color)){if(match[6]!==undefined){return(hslToRgb(parse360(match[6]),parsePercentage(match[7]),parsePercentage(match[8]))|parse1(match[9]))>>>0;}return(hslToRgb(parse360(match[2]),parsePercentage(match[3]),parsePercentage(match[4]))|parse1(match[5]))>>>0;}if(match=MATCHERS.hwb.exec(color)){return(hwbToRgb(parse360(match[1]),parsePercentage(match[2]),parsePercentage(match[3]))|0x000000ff)>>>0;}return null;}" };
-const fn = function t(arg0) {
-  return (arg0 >> 24 & 255) / 255;
+const fn = function t(dependencyMap) {
+  return (dependencyMap >> 24 & 255) / 255;
 };
 fn.__closure = {};
 fn.__workletHash = 5651263271273;
 fn.__initData = { code: "function pnpm_ColorsTs10(c){return(c>>24&255)/255;}" };
-const fn2 = function n(arg0) {
-  return arg0 >> 16 & 255;
+const fn2 = function n(processColorResult) {
+  return processColorResult >> 16 & 255;
 };
 fn2.__closure = {};
 fn2.__workletHash = 10831766115157;
 fn2.__initData = { code: "function pnpm_ColorsTs11(c){return c>>16&255;}" };
-const fn3 = function a(arg0) {
-  return arg0 >> 8 & 255;
+const fn3 = function a(processColorResult) {
+  return processColorResult >> 8 & 255;
 };
 fn3.__closure = {};
 fn3.__workletHash = 3551227549865;
 fn3.__initData = { code: "function pnpm_ColorsTs12(c){return c>>8&255;}" };
-const fn4 = function l(arg0) {
-  return 255 & arg0;
+const fn4 = function l(processColorResult) {
+  return 255 & processColorResult;
 };
 fn4.__closure = {};
 fn4.__workletHash = 8634480727248;
@@ -770,39 +770,39 @@ class HSVtoRGB {
 HSVtoRGB.__closure = {};
 HSVtoRGB.__workletHash = 5232397720804;
 HSVtoRGB.__initData = { code: "function HSVtoRGB_Pnpm_ColorsTs16(h,s,v){let r,g,b;const i=Math.floor(h*6);const f=h*6-i;const p=v*(1-s);const q=v*(1-f*s);const t=v*(1-(1-f)*s);switch(i%6){case 0:[r,g,b]=[v,t,p];break;case 1:[r,g,b]=[q,v,p];break;case 2:[r,g,b]=[p,v,t];break;case 3:[r,g,b]=[p,q,v];break;case 4:[r,g,b]=[t,p,v];break;case 5:[r,g,b]=[v,p,q];break;}return{r:Math.round(r*255),g:Math.round(g*255),b:Math.round(b*255)};}" };
-const fn6 = function c(arg0, arg1, arg2, arg3) {
+const fn6 = function c(interpolateResult, interpolateResult1, interpolateResult2, interpolateResult3) {
   if (typeof HSVtoRGB === "function") {
     const _Math = Math;
-    const rounded = Math.floor(6 * arg0);
-    const diff = 6 * arg0 - rounded;
-    const result = arg2 * (1 - arg1);
-    const result1 = arg2 * (1 - diff * arg1);
-    const result2 = arg2 * (1 - (1 - diff) * arg1);
+    const rounded = Math.floor(6 * interpolateResult);
+    const diff = 6 * interpolateResult - rounded;
+    const result = interpolateResult2 * (1 - interpolateResult1);
+    const result1 = interpolateResult2 * (1 - diff * interpolateResult1);
+    const result2 = interpolateResult2 * (1 - (1 - diff) * interpolateResult1);
     const result3 = rounded % 6;
     if (0 === result3) {
       let tmp11 = result;
       let tmp12 = result2;
-      let tmp13 = arg2;
+      let tmp13 = interpolateResult2;
     } else if (1 === result3) {
       tmp11 = result;
-      tmp12 = arg2;
+      tmp12 = interpolateResult2;
       tmp13 = result1;
     } else if (2 === result3) {
       tmp11 = result2;
-      tmp12 = arg2;
+      tmp12 = interpolateResult2;
       tmp13 = result;
     } else if (3 === result3) {
-      tmp11 = arg2;
+      tmp11 = interpolateResult2;
       tmp12 = result1;
       tmp13 = result;
     } else if (4 === result3) {
-      tmp11 = arg2;
+      tmp11 = interpolateResult2;
       tmp12 = result;
       tmp13 = result2;
     } else if (5 === result3) {
       tmp11 = result1;
       tmp12 = result;
-      tmp13 = arg2;
+      tmp13 = interpolateResult2;
     }
     const _Math2 = Math;
     const rounded1 = Math.round(255 * tmp13);
@@ -811,8 +811,8 @@ const fn6 = function c(arg0, arg1, arg2, arg3) {
     const _Math4 = Math;
     const rounded3 = Math.round(255 * tmp11);
     if (typeof fn5 === "function") {
-      let num9 = arg3;
-      if (arg3 === undefined) {
+      let num9 = interpolateResult3;
+      if (interpolateResult3 === undefined) {
         num9 = 1;
       }
       let num11 = 0;
@@ -966,11 +966,10 @@ function processColorsInProps(obj) {
       } else {
         let tmp2 = arg0[key10007];
         for (const item10014 of tmp2) {
-          let tmp5 = item10014;
           let tmp7 = shareable2[key10007];
           let tmp8 = tmp7;
           if (undefined !== item10014[tmp7]) {
-            tmp5[tmp8] = processColor(tmp5[tmp8]);
+            item10014[tmp8] = processColor(item10014[tmp8]);
           }
           continue;
         }
@@ -1019,7 +1018,7 @@ function rgbaArrayToRGBAColor(tmp3Result8) {
 rgbaArrayToRGBAColor.__closure = {};
 rgbaArrayToRGBAColor.__workletHash = 9717764015913;
 rgbaArrayToRGBAColor.__initData = { code: "function rgbaArrayToRGBAColor_Pnpm_ColorsTs23(RGBA){const alpha=RGBA[3]<0.001?0:RGBA[3];return\"rgba(\"+Math.round(RGBA[0]*255)+\", \"+Math.round(RGBA[1]*255)+\", \"+Math.round(RGBA[2]*255)+\", \"+alpha+\")\";}" };
-function toLinearSpace(tmp3Result1, exponent) {
+function toLinearSpace(tmp3Result1) {
   let num = exponent;
   if (exponent === undefined) {
     num = 2.2;

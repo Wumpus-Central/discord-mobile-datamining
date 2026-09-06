@@ -53,6 +53,7 @@ function _sendStandaloneClsSpan(c1, startTime, sentry_pageload_span_id, sentry_r
     result.addEvent("cls", attributes);
     result.end(msToSecResult);
   }
+  const tmpResult4 = attributes(924);
 }
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 
@@ -60,7 +61,7 @@ export { _sendStandaloneClsSpan };
 export const trackClsAsStandaloneSpan = function trackClsAsStandaloneSpan(client) {
   dependencyMap = 0;
   if (obj.supportsWebVital("layout-shift")) {
-    let tmpResult = tmp(899);
+    let tmpResult = require("module_899");
     closure_2 = tmpResult.addClsInstrumentationHandler((metric) => {
       const tmp = metric.metric.entries[metric.metric.entries.length - 1];
       if (tmp) {
@@ -68,10 +69,11 @@ export const trackClsAsStandaloneSpan = function trackClsAsStandaloneSpan(client
         closure_0 = tmp;
       }
     }, true);
-    tmpResult = tmp(924);
+    tmpResult = require("extractNetworkProtocol");
     const result = tmpResult.listenForWebVitalReportEvents(client, (sentry_report_event, sentry_pageload_span_id) => {
       _sendStandaloneClsSpan(c1, closure_0, sentry_pageload_span_id, sentry_report_event);
       closure_2();
     });
   }
+  obj = require("extractNetworkProtocol");
 };

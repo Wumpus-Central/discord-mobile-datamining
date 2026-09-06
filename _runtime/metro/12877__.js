@@ -9,7 +9,7 @@ import setupIntegration from "module_12853" /* 12853 */;
 let closure_4 = ["ip", "user"];
 let obj = { include: { cookies: true, data: true, headers: true, ip: false, query_string: true, url: true, user: { id: true, username: true, email: true } }, transactionNamingScheme: "methodPath" };
 
-export const requestDataIntegration = setupIntegration.defineIntegration((include) => {
+export const requestDataIntegration = setupIntegration.defineIntegration(() => {
   if (include === undefined) {
     include = {};
   }

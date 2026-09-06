@@ -82,7 +82,6 @@ const items = [
           tmp6 = value;
         }
         match = tmp6;
-        str = text.text;
       }
       return match;
     }
@@ -93,10 +92,10 @@ const items = [
       const parseDurationResult = ENMergeRelativeFollowByDateRefiner(10431).parseDuration(text.text);
       let reverseDurationResult = parseDurationResult;
       if (null != str.match(/\s+(before|from)$/i)) {
-        reverseDurationResult = tmp(10434).reverseDuration(parseDurationResult);
+        reverseDurationResult = ENMergeRelativeFollowByDateRefiner(10434).reverseDuration(parseDurationResult);
       }
-      const ParsingComponents = tmp(10435).ParsingComponents;
-      const ReferenceWithTimezone = tmp(10435).ReferenceWithTimezone;
+      const ParsingComponents = ENMergeRelativeFollowByDateRefiner(10435).ParsingComponents;
+      const ReferenceWithTimezone = ENMergeRelativeFollowByDateRefiner(10435).ReferenceWithTimezone;
       start = start.start;
       const relativeFromReference = ParsingComponents.createRelativeFromReference(ReferenceWithTimezone.fromDate(start.date()), reverseDurationResult);
       return new ENMergeRelativeFollowByDateRefiner(10435).ParsingResult(start.reference, text.index, "" + text.text + arg0 + start.text, relativeFromReference);

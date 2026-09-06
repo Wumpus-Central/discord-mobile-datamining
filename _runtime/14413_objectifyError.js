@@ -24,22 +24,22 @@ function objectifyError(headers) {
 
 export default (arg0) => {
   closure_0 = arg0;
-  return (arg0) => {
+  return (log) => {
     function reportError(stack) {
-      logger = stack;
+      log = stack;
       try {
         if (_default) {
           if (_default2) {
             if (_default) {
               if (_default2) {
                 if (typeof tmp16 !== "function") {
-                  logger.error("parseErrorStack is not a function", []);
+                  log.error("parseErrorStack is not a function", []);
                   let obj = { parseErrorStackType: typeof _default, parseErrorStack: _default };
-                  logger.debug(obj);
+                  log.debug(obj);
                 } else if (typeof tmp18 !== "function") {
-                  logger.error("symbolicateStackTrace is not a function", []);
+                  log.error("symbolicateStackTrace is not a function", []);
                   obj = { symbolicateStackTraceType: typeof _default2, symbolicateStackTrace: _default2 };
-                  logger.debug(obj);
+                  log.debug(obj);
                 } else {
                   try {
                     const promise = _default2(_default(stack.stack));
@@ -72,18 +72,33 @@ export default (arg0) => {
                         throw new TypeError("Trying to call a non-function");
                       }
                     });
+                    const nextPromise = _default2(_default(stack.stack)).then((stack) => {
+                      stack = stack.stack;
+                      const mapped = stack.map((file) => ({ fileName: file.file, functionName: file.methodName, lineNumber: file.lineNumber }));
+                      let found = mapped;
+                      if (veto.veto) {
+                        found = mapped.filter((item) => {
+                          let vetoResult;
+                          if (veto != null) {
+                            vetoResult = veto.veto(item);
+                          }
+                          return vetoResult;
+                        });
+                      }
+                      stack.error(stack.message, found);
+                    });
                   } catch (tmp32) {
-                    logger.error("Unable to parse stack trace from error object", []);
-                    logger.debug(closure_1_6(tmp32));
+                    log.error("Unable to parse stack trace from error object", []);
+                    log.debug(closure_1_6(tmp32));
                   }
                 }
               }
             }
-            logger.error("parseErrorStack or symbolicateStackTrace is not available", []);
+            log.error("parseErrorStack or symbolicateStackTrace is not available", []);
             obj = { parseErrorStackAvailable: _default, symbolicateStackTraceAvailable: _default2 };
-            logger.debug(obj);
+            log.debug(obj);
           } else {
-            const tmp12 = logger(863);
+            const tmp12 = log(863);
             if (typeof tmp12 === "function") {
               _default2 = tmp12;
             } else {
@@ -91,7 +106,7 @@ export default (arg0) => {
             }
           }
         } else {
-          const tmp5 = logger(190);
+          const tmp5 = log(190);
           if (typeof tmp5 === "function") {
             _default = tmp5;
           } else {
@@ -99,14 +114,13 @@ export default (arg0) => {
           }
         }
       } catch (tmp47) {
-        logger.error("Unable to load \"react-native/Libraries/Core/Devtools/parseErrorStack\" or \"react-native/Libraries/Core/Devtools/symbolicateStackTrace\"", []);
-        logger.debug(closure_1_6(tmp47));
+        log.error("Unable to load \"react-native/Libraries/Core/Devtools/parseErrorStack\" or \"react-native/Libraries/Core/Devtools/symbolicateStackTrace\"", []);
+        log.debug(closure_1_6(tmp47));
       }
     }
-    const result = emptyPromise.assertHasLoggerPlugin(arg0);
-    let logger = arg0;
-    let obj = logger;
-    if (!logger) {
+    const result = emptyPromise.assertHasLoggerPlugin(log);
+    let obj = log;
+    if (!log) {
       obj = {};
     }
     dependencyMap = Object.assign({}, closure_5, obj);

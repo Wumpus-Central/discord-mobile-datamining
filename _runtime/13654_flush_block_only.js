@@ -544,9 +544,9 @@ function DeflateState() {
   obj.l_desc = null;
   obj.d_desc = null;
   obj.bl_desc = null;
-  const buf163 = new tmp(13651).Buf16(16);
+  const buf163 = new _mod13651.Buf16(16);
   obj.bl_count = buf163;
-  const buf164 = new tmp(13651).Buf16(573);
+  const buf164 = new _mod13651.Buf16(573);
   obj.heap = buf164;
   const heap = obj.heap;
   let diff3 = heap.length - 1;
@@ -558,7 +558,7 @@ function DeflateState() {
   }
   obj.heap_len = 0;
   obj.heap_max = 0;
-  const buf165 = new tmp(13651).Buf16(573);
+  const buf165 = new _mod13651.Buf16(573);
   obj.depth = buf165;
   const depth = obj.depth;
   let diff4 = depth.length - 1;

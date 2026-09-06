@@ -1,6 +1,8 @@
 // === Module 797: profiler ===
 
 // Module 797 (profiler)
+import _mod688 from "module_688" /* 688 */;
+import consoleSandbox from "consoleSandbox" /* 689 */;
 import _mod713 from "module_713" /* 713 */;
 
 require = arg1;
@@ -16,17 +18,17 @@ export const profiler = {
         if (tmp6) {
           const _profiler = integrationByName._profiler;
           _profiler.start();
-        } else if (tmp(688).DEBUG_BUILD) {
-          const debug3 = tmp(689).debug;
+        } else if (_mod688.DEBUG_BUILD) {
+          const debug3 = consoleSandbox.debug;
           debug3.warn("Profiler is not available on profiling integration.");
         }
         tmp6 = integrationByName && undefined !== integrationByName._profiler && typeof integrationByName._profiler.start === "function" && typeof integrationByName._profiler.stop === "function";
-      } else if (tmp(688).DEBUG_BUILD) {
-        const debug2 = tmp(689).debug;
+      } else if (_mod688.DEBUG_BUILD) {
+        const debug2 = consoleSandbox.debug;
         debug2.warn("ProfilingIntegration is not available");
       }
-    } else if (tmp(688).DEBUG_BUILD) {
-      const debug = tmp(689).debug;
+    } else if (_mod688.DEBUG_BUILD) {
+      const debug = consoleSandbox.debug;
       debug.warn("No Sentry client available, profiling is not started");
     }
   },
@@ -38,17 +40,17 @@ export const profiler = {
         if (tmp6) {
           const _profiler = integrationByName._profiler;
           _profiler.stop();
-        } else if (tmp(688).DEBUG_BUILD) {
-          const debug3 = tmp(689).debug;
+        } else if (_mod688.DEBUG_BUILD) {
+          const debug3 = consoleSandbox.debug;
           debug3.warn("Profiler is not available on profiling integration.");
         }
         tmp6 = integrationByName && undefined !== integrationByName._profiler && typeof integrationByName._profiler.start === "function" && typeof integrationByName._profiler.stop === "function";
-      } else if (tmp(688).DEBUG_BUILD) {
-        const debug2 = tmp(689).debug;
+      } else if (_mod688.DEBUG_BUILD) {
+        const debug2 = consoleSandbox.debug;
         debug2.warn("ProfilingIntegration is not available");
       }
-    } else if (tmp(688).DEBUG_BUILD) {
-      const debug = tmp(689).debug;
+    } else if (_mod688.DEBUG_BUILD) {
+      const debug = consoleSandbox.debug;
       debug.warn("No Sentry client available, profiling is not started");
     }
   }

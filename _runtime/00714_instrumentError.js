@@ -11,7 +11,7 @@ function instrumentError() {
   _mod686.GLOBAL_OBJ.onerror = function(msg, url, line, column, error) {
     _mod715.triggerHandlers("error", { column, error, line, msg, url });
     if (!onerror) {
-      return tmp2;
+      return onerror;
     } else {
       const self = this;
       const apply = onerror.apply;
@@ -21,13 +21,14 @@ function instrumentError() {
         applyArgumentsResult = apply(self, arguments);
       }
     }
+    const obj = { column, error, line, msg, url };
   };
   _mod686.GLOBAL_OBJ.onerror.__SENTRY_INSTRUMENTED__ = true;
 }
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 let onerror = null;
 
-export const addGlobalErrorInstrumentationHandler = function addGlobalErrorInstrumentationHandler(arg0) {
-  _mod715.addHandler("error", arg0);
+export const addGlobalErrorInstrumentationHandler = function addGlobalErrorInstrumentationHandler(errorCallback) {
+  _mod715.addHandler("error", errorCallback);
   _mod715.maybeInstrument("error", instrumentError);
 };

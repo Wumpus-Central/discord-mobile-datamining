@@ -7,7 +7,7 @@ let obj = {
       if (addSuffix.addSuffix) {
         if (!addSuffix.comparison) {
           if (obj.past) {
-            const past = tmp5.past;
+            const past = obj.past;
             if (undefined === past.one) {
               const result = arg0 % 10;
               const result1 = arg0 % 100;
@@ -28,7 +28,7 @@ let obj = {
             }
             one3 = past.one;
           } else {
-            const regular2 = tmp5.regular;
+            const regular2 = obj.regular;
             if (undefined !== regular2.one) {
               if (1 === arg0) {
                 let one2 = regular2.one;
@@ -54,7 +54,7 @@ let obj = {
           }
         }
         if (!obj.future) {
-          const regular3 = tmp17.regular;
+          const regular3 = obj.regular;
           if (undefined !== regular3.one) {
             if (1 === arg0) {
               let one4 = regular3.one;
@@ -78,7 +78,7 @@ let obj = {
           const _String9 = String;
           one4 = regular3.pluralGenitive.replace("{{count}}", String(arg0));
         }
-        const future = tmp17.future;
+        const future = obj.future;
         if (undefined === future.one) {
           const result6 = arg0 % 10;
           const result7 = arg0 % 100;
@@ -128,7 +128,7 @@ let obj = {
       if (addSuffix.addSuffix) {
         if (!addSuffix.comparison) {
           if (obj.past) {
-            const past = tmp5.past;
+            const past = obj.past;
             if (undefined === past.one) {
               const result = arg0 % 10;
               const result1 = arg0 % 100;
@@ -149,7 +149,7 @@ let obj = {
             }
             one3 = past.one;
           } else {
-            const regular2 = tmp5.regular;
+            const regular2 = obj.regular;
             if (undefined !== regular2.one) {
               if (1 === arg0) {
                 let one2 = regular2.one;
@@ -175,7 +175,7 @@ let obj = {
           }
         }
         if (!obj.future) {
-          const regular3 = tmp17.regular;
+          const regular3 = obj.regular;
           if (undefined !== regular3.one) {
             if (1 === arg0) {
               let one4 = regular3.one;
@@ -199,7 +199,7 @@ let obj = {
           const _String9 = String;
           one4 = regular3.pluralGenitive.replace("{{count}}", String(arg0));
         }
-        const future = tmp17.future;
+        const future = obj.future;
         if (undefined === future.one) {
           const result6 = arg0 % 10;
           const result7 = arg0 % 100;
@@ -266,7 +266,7 @@ let obj = {
       if (addSuffix.addSuffix) {
         if (!addSuffix.comparison) {
           if (obj.past) {
-            const past = tmp5.past;
+            const past = obj.past;
             if (undefined === past.one) {
               const result = arg0 % 10;
               const result1 = arg0 % 100;
@@ -287,7 +287,7 @@ let obj = {
             }
             one3 = past.one;
           } else {
-            const regular2 = tmp5.regular;
+            const regular2 = obj.regular;
             if (undefined !== regular2.one) {
               if (1 === arg0) {
                 let one2 = regular2.one;
@@ -313,7 +313,7 @@ let obj = {
           }
         }
         if (!obj.future) {
-          const regular3 = tmp17.regular;
+          const regular3 = obj.regular;
           if (undefined !== regular3.one) {
             if (1 === arg0) {
               let one4 = regular3.one;
@@ -337,7 +337,7 @@ let obj = {
           const _String9 = String;
           one4 = regular3.pluralGenitive.replace("{{count}}", String(arg0));
         }
-        const future = tmp17.future;
+        const future = obj.future;
         if (undefined === future.one) {
           const result6 = arg0 % 10;
           const result7 = arg0 % 100;
@@ -387,7 +387,7 @@ let obj = {
       if (addSuffix.addSuffix) {
         if (!addSuffix.comparison) {
           if (obj.past) {
-            const past = tmp5.past;
+            const past = obj.past;
             if (undefined === past.one) {
               const result = arg0 % 10;
               const result1 = arg0 % 100;
@@ -408,7 +408,7 @@ let obj = {
             }
             one3 = past.one;
           } else {
-            const regular2 = tmp5.regular;
+            const regular2 = obj.regular;
             if (undefined !== regular2.one) {
               if (1 === arg0) {
                 let one2 = regular2.one;
@@ -434,7 +434,7 @@ let obj = {
           }
         }
         if (!obj.future) {
-          const regular3 = tmp17.regular;
+          const regular3 = obj.regular;
           if (undefined !== regular3.one) {
             if (1 === arg0) {
               let one4 = regular3.one;
@@ -458,7 +458,7 @@ let obj = {
           const _String9 = String;
           one4 = regular3.pluralGenitive.replace("{{count}}", String(arg0));
         }
-        const future = tmp17.future;
+        const future = obj.future;
         if (undefined === future.one) {
           const result6 = arg0 % 10;
           const result7 = arg0 % 100;
@@ -508,7 +508,7 @@ let obj = {
       if (addSuffix.addSuffix) {
         if (!addSuffix.comparison) {
           if (obj.past) {
-            const past = tmp5.past;
+            const past = obj.past;
             if (undefined === past.one) {
               const result = arg0 % 10;
               const result1 = arg0 % 100;
@@ -529,7 +529,7 @@ let obj = {
             }
             one3 = past.one;
           } else {
-            const regular2 = tmp5.regular;
+            const regular2 = obj.regular;
             if (undefined !== regular2.one) {
               if (1 === arg0) {
                 let one2 = regular2.one;
@@ -555,7 +555,7 @@ let obj = {
           }
         }
         if (!obj.future) {
-          const regular3 = tmp17.regular;
+          const regular3 = obj.regular;
           if (undefined !== regular3.one) {
             if (1 === arg0) {
               let one4 = regular3.one;
@@ -579,7 +579,7 @@ let obj = {
           const _String9 = String;
           one4 = regular3.pluralGenitive.replace("{{count}}", String(arg0));
         }
-        const future = tmp17.future;
+        const future = obj.future;
         if (undefined === future.one) {
           const result6 = arg0 % 10;
           const result7 = arg0 % 100;
@@ -629,7 +629,7 @@ let obj = {
       if (addSuffix.addSuffix) {
         if (!addSuffix.comparison) {
           if (obj.past) {
-            const past = tmp5.past;
+            const past = obj.past;
             if (undefined === past.one) {
               const result = arg0 % 10;
               const result1 = arg0 % 100;
@@ -650,7 +650,7 @@ let obj = {
             }
             one3 = past.one;
           } else {
-            const regular2 = tmp5.regular;
+            const regular2 = obj.regular;
             if (undefined !== regular2.one) {
               if (1 === arg0) {
                 let one2 = regular2.one;
@@ -676,7 +676,7 @@ let obj = {
           }
         }
         if (!obj.future) {
-          const regular3 = tmp17.regular;
+          const regular3 = obj.regular;
           if (undefined !== regular3.one) {
             if (1 === arg0) {
               let one4 = regular3.one;
@@ -700,7 +700,7 @@ let obj = {
           const _String9 = String;
           one4 = regular3.pluralGenitive.replace("{{count}}", String(arg0));
         }
-        const future = tmp17.future;
+        const future = obj.future;
         if (undefined === future.one) {
           const result6 = arg0 % 10;
           const result7 = arg0 % 100;
@@ -750,7 +750,7 @@ let obj = {
       if (addSuffix.addSuffix) {
         if (!addSuffix.comparison) {
           if (obj.past) {
-            const past = tmp5.past;
+            const past = obj.past;
             if (undefined === past.one) {
               const result = arg0 % 10;
               const result1 = arg0 % 100;
@@ -771,7 +771,7 @@ let obj = {
             }
             one3 = past.one;
           } else {
-            const regular2 = tmp5.regular;
+            const regular2 = obj.regular;
             if (undefined !== regular2.one) {
               if (1 === arg0) {
                 let one2 = regular2.one;
@@ -797,7 +797,7 @@ let obj = {
           }
         }
         if (!obj.future) {
-          const regular3 = tmp17.regular;
+          const regular3 = obj.regular;
           if (undefined !== regular3.one) {
             if (1 === arg0) {
               let one4 = regular3.one;
@@ -821,7 +821,7 @@ let obj = {
           const _String9 = String;
           one4 = regular3.pluralGenitive.replace("{{count}}", String(arg0));
         }
-        const future = tmp17.future;
+        const future = obj.future;
         if (undefined === future.one) {
           const result6 = arg0 % 10;
           const result7 = arg0 % 100;
@@ -871,7 +871,7 @@ let obj = {
       if (addSuffix.addSuffix) {
         if (!addSuffix.comparison) {
           if (obj.past) {
-            const past = tmp5.past;
+            const past = obj.past;
             if (undefined === past.one) {
               const result = arg0 % 10;
               const result1 = arg0 % 100;
@@ -892,7 +892,7 @@ let obj = {
             }
             one3 = past.one;
           } else {
-            const regular2 = tmp5.regular;
+            const regular2 = obj.regular;
             if (undefined !== regular2.one) {
               if (1 === arg0) {
                 let one2 = regular2.one;
@@ -918,7 +918,7 @@ let obj = {
           }
         }
         if (!obj.future) {
-          const regular3 = tmp17.regular;
+          const regular3 = obj.regular;
           if (undefined !== regular3.one) {
             if (1 === arg0) {
               let one4 = regular3.one;
@@ -942,7 +942,7 @@ let obj = {
           const _String9 = String;
           one4 = regular3.pluralGenitive.replace("{{count}}", String(arg0));
         }
-        const future = tmp17.future;
+        const future = obj.future;
         if (undefined === future.one) {
           const result6 = arg0 % 10;
           const result7 = arg0 % 100;
@@ -992,7 +992,7 @@ let obj = {
       if (addSuffix.addSuffix) {
         if (!addSuffix.comparison) {
           if (obj.past) {
-            const past = tmp5.past;
+            const past = obj.past;
             if (undefined === past.one) {
               const result = arg0 % 10;
               const result1 = arg0 % 100;
@@ -1013,7 +1013,7 @@ let obj = {
             }
             one3 = past.one;
           } else {
-            const regular2 = tmp5.regular;
+            const regular2 = obj.regular;
             if (undefined !== regular2.one) {
               if (1 === arg0) {
                 let one2 = regular2.one;
@@ -1039,7 +1039,7 @@ let obj = {
           }
         }
         if (!obj.future) {
-          const regular3 = tmp17.regular;
+          const regular3 = obj.regular;
           if (undefined !== regular3.one) {
             if (1 === arg0) {
               let one4 = regular3.one;
@@ -1063,7 +1063,7 @@ let obj = {
           const _String9 = String;
           one4 = regular3.pluralGenitive.replace("{{count}}", String(arg0));
         }
-        const future = tmp17.future;
+        const future = obj.future;
         if (undefined === future.one) {
           const result6 = arg0 % 10;
           const result7 = arg0 % 100;
@@ -1113,7 +1113,7 @@ let obj = {
       if (addSuffix.addSuffix) {
         if (!addSuffix.comparison) {
           if (obj.past) {
-            const past = tmp5.past;
+            const past = obj.past;
             if (undefined === past.one) {
               const result = arg0 % 10;
               const result1 = arg0 % 100;
@@ -1134,7 +1134,7 @@ let obj = {
             }
             one3 = past.one;
           } else {
-            const regular2 = tmp5.regular;
+            const regular2 = obj.regular;
             if (undefined !== regular2.one) {
               if (1 === arg0) {
                 let one2 = regular2.one;
@@ -1160,7 +1160,7 @@ let obj = {
           }
         }
         if (!obj.future) {
-          const regular3 = tmp17.regular;
+          const regular3 = obj.regular;
           if (undefined !== regular3.one) {
             if (1 === arg0) {
               let one4 = regular3.one;
@@ -1184,7 +1184,7 @@ let obj = {
           const _String9 = String;
           one4 = regular3.pluralGenitive.replace("{{count}}", String(arg0));
         }
-        const future = tmp17.future;
+        const future = obj.future;
         if (undefined === future.one) {
           const result6 = arg0 % 10;
           const result7 = arg0 % 100;
@@ -1234,7 +1234,7 @@ let obj = {
       if (addSuffix.addSuffix) {
         if (!addSuffix.comparison) {
           if (obj.past) {
-            const past = tmp5.past;
+            const past = obj.past;
             if (undefined === past.one) {
               const result = arg0 % 10;
               const result1 = arg0 % 100;
@@ -1255,7 +1255,7 @@ let obj = {
             }
             one3 = past.one;
           } else {
-            const regular2 = tmp5.regular;
+            const regular2 = obj.regular;
             if (undefined !== regular2.one) {
               if (1 === arg0) {
                 let one2 = regular2.one;
@@ -1281,7 +1281,7 @@ let obj = {
           }
         }
         if (!obj.future) {
-          const regular3 = tmp17.regular;
+          const regular3 = obj.regular;
           if (undefined !== regular3.one) {
             if (1 === arg0) {
               let one4 = regular3.one;
@@ -1305,7 +1305,7 @@ let obj = {
           const _String9 = String;
           one4 = regular3.pluralGenitive.replace("{{count}}", String(arg0));
         }
-        const future = tmp17.future;
+        const future = obj.future;
         if (undefined === future.one) {
           const result6 = arg0 % 10;
           const result7 = arg0 % 100;
@@ -1355,7 +1355,7 @@ let obj = {
       if (addSuffix.addSuffix) {
         if (!addSuffix.comparison) {
           if (obj.past) {
-            const past = tmp5.past;
+            const past = obj.past;
             if (undefined === past.one) {
               const result = arg0 % 10;
               const result1 = arg0 % 100;
@@ -1376,7 +1376,7 @@ let obj = {
             }
             one3 = past.one;
           } else {
-            const regular2 = tmp5.regular;
+            const regular2 = obj.regular;
             if (undefined !== regular2.one) {
               if (1 === arg0) {
                 let one2 = regular2.one;
@@ -1402,7 +1402,7 @@ let obj = {
           }
         }
         if (!obj.future) {
-          const regular3 = tmp17.regular;
+          const regular3 = obj.regular;
           if (undefined !== regular3.one) {
             if (1 === arg0) {
               let one4 = regular3.one;
@@ -1426,7 +1426,7 @@ let obj = {
           const _String9 = String;
           one4 = regular3.pluralGenitive.replace("{{count}}", String(arg0));
         }
-        const future = tmp17.future;
+        const future = obj.future;
         if (undefined === future.one) {
           const result6 = arg0 % 10;
           const result7 = arg0 % 100;
@@ -1476,7 +1476,7 @@ let obj = {
       if (addSuffix.addSuffix) {
         if (!addSuffix.comparison) {
           if (obj.past) {
-            const past = tmp5.past;
+            const past = obj.past;
             if (undefined === past.one) {
               const result = arg0 % 10;
               const result1 = arg0 % 100;
@@ -1497,7 +1497,7 @@ let obj = {
             }
             one3 = past.one;
           } else {
-            const regular2 = tmp5.regular;
+            const regular2 = obj.regular;
             if (undefined !== regular2.one) {
               if (1 === arg0) {
                 let one2 = regular2.one;
@@ -1523,7 +1523,7 @@ let obj = {
           }
         }
         if (!obj.future) {
-          const regular3 = tmp17.regular;
+          const regular3 = obj.regular;
           if (undefined !== regular3.one) {
             if (1 === arg0) {
               let one4 = regular3.one;
@@ -1547,7 +1547,7 @@ let obj = {
           const _String9 = String;
           one4 = regular3.pluralGenitive.replace("{{count}}", String(arg0));
         }
-        const future = tmp17.future;
+        const future = obj.future;
         if (undefined === future.one) {
           const result6 = arg0 % 10;
           const result7 = arg0 % 100;
@@ -1597,7 +1597,7 @@ let obj = {
       if (addSuffix.addSuffix) {
         if (!addSuffix.comparison) {
           if (obj.past) {
-            const past = tmp5.past;
+            const past = obj.past;
             if (undefined === past.one) {
               const result = arg0 % 10;
               const result1 = arg0 % 100;
@@ -1618,7 +1618,7 @@ let obj = {
             }
             one3 = past.one;
           } else {
-            const regular2 = tmp5.regular;
+            const regular2 = obj.regular;
             if (undefined !== regular2.one) {
               if (1 === arg0) {
                 let one2 = regular2.one;
@@ -1644,7 +1644,7 @@ let obj = {
           }
         }
         if (!obj.future) {
-          const regular3 = tmp17.regular;
+          const regular3 = obj.regular;
           if (undefined !== regular3.one) {
             if (1 === arg0) {
               let one4 = regular3.one;
@@ -1668,7 +1668,7 @@ let obj = {
           const _String9 = String;
           one4 = regular3.pluralGenitive.replace("{{count}}", String(arg0));
         }
-        const future = tmp17.future;
+        const future = obj.future;
         if (undefined === future.one) {
           const result6 = arg0 % 10;
           const result7 = arg0 % 100;
@@ -1718,7 +1718,7 @@ let obj = {
       if (addSuffix.addSuffix) {
         if (!addSuffix.comparison) {
           if (obj.past) {
-            const past = tmp5.past;
+            const past = obj.past;
             if (undefined === past.one) {
               const result = arg0 % 10;
               const result1 = arg0 % 100;
@@ -1739,7 +1739,7 @@ let obj = {
             }
             one3 = past.one;
           } else {
-            const regular2 = tmp5.regular;
+            const regular2 = obj.regular;
             if (undefined !== regular2.one) {
               if (1 === arg0) {
                 let one2 = regular2.one;
@@ -1765,7 +1765,7 @@ let obj = {
           }
         }
         if (!obj.future) {
-          const regular3 = tmp17.regular;
+          const regular3 = obj.regular;
           if (undefined !== regular3.one) {
             if (1 === arg0) {
               let one4 = regular3.one;
@@ -1789,7 +1789,7 @@ let obj = {
           const _String9 = String;
           one4 = regular3.pluralGenitive.replace("{{count}}", String(arg0));
         }
-        const future = tmp17.future;
+        const future = obj.future;
         if (undefined === future.one) {
           const result6 = arg0 % 10;
           const result7 = arg0 % 100;

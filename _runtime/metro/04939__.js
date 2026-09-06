@@ -13,7 +13,7 @@ const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, Fragment: metroRequire, jsxs: closure_7 } = jsxProd);
 const styles = StyleSheet.create({ container: { flex: 1 }, absoluteWithNoBottom: { position: "absolute", top: 0, start: 0, end: 0 } });
 
-export default noop.forwardRef(function ScreenStackItem(unstable_sheetFooter, ref) {
+export default noop.forwardRef(function ScreenStackItem(unstable_sheetFooter, arg1) {
   ({ headerConfig, stackPresentation, sheetAllowedDetents, screenId } = unstable_sheetFooter);
   unstable_sheetFooter = unstable_sheetFooter.unstable_sheetFooter;
   ({ children, activityState, shouldFreeze, contentStyle, style, onHeaderHeightChange } = unstable_sheetFooter);
@@ -23,7 +23,7 @@ export default noop.forwardRef(function ScreenStackItem(unstable_sheetFooter, re
   let obj = flag4;
   importDefault = flag4.useRef(null);
   dependencyMap = flag4.useContext(screenId(4937).RNSScreensRefContext);
-  const imperativeHandle = flag4.useImperativeHandle(ref, () => ref.current);
+  const imperativeHandle = flag4.useImperativeHandle(arg1, () => ref.current);
   let obj1 = screenId(4928);
   let flag;
   if (headerConfig != null) {
@@ -102,7 +102,7 @@ export default noop.forwardRef(function ScreenStackItem(unstable_sheetFooter, re
   let tmp18Result = "formSheet" === stackPresentation && unstable_sheetFooter;
   if (tmp18Result) {
     obj1 = { children: unstable_sheetFooter() };
-    tmp18Result = tmp18(tmp2(4943).FooterComponent, obj1);
+    tmp18Result = closure_5(screenId(4943).FooterComponent, obj1);
   }
   items1[2] = tmp18Result;
   const obj2 = {

@@ -43,8 +43,8 @@ export default function getSideChannelList() {
     get(arg0) {
       let tmp;
       if (obj) {
-        let iter2 = iter.next;
-        let tmp3 = iter;
+        let iter2 = obj.next;
+        let tmp3 = obj;
         let tmp4;
         if (null != iter2) {
           while (iter2.key !== arg0) {
@@ -53,8 +53,8 @@ export default function getSideChannelList() {
             iter2 = next;
           }
           tmp3.next = iter2.next;
-          iter2.next = iter.next;
-          iter.next = iter2;
+          iter2.next = obj.next;
+          obj.next = iter2;
           tmp4 = iter2;
         }
         value = tmp4;
@@ -67,10 +67,10 @@ export default function getSideChannelList() {
     },
     has(arg0) {
       if (!obj) {
-        return tmp;
+        return obj;
       } else {
-        let iter2 = iter.next;
-        let tmp3 = iter;
+        let iter2 = obj.next;
+        let tmp3 = obj;
         if (null != iter2) {
           while (iter2.key !== arg0) {
             let next = iter2.next;
@@ -79,8 +79,8 @@ export default function getSideChannelList() {
           }
         }
         tmp3.next = iter2.next;
-        iter2.next = iter.next;
-        iter.next = iter2;
+        iter2.next = obj.next;
+        obj.next = iter2;
       }
     },
     set(key, value) {

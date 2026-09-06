@@ -67,14 +67,14 @@ export default function parseISO(claimedAt, arg1) {
     } else {
       obj.date = first;
       str2 = parts[1];
-      const timeZoneDelimiter = tmp4.timeZoneDelimiter;
+      const timeZoneDelimiter = dateTimeDelimiter.timeZoneDelimiter;
       if (timeZoneDelimiter.test(obj.date)) {
-        obj.date = claimedAt.split(tmp4.timeZoneDelimiter)[0];
+        obj.date = claimedAt.split(dateTimeDelimiter.timeZoneDelimiter)[0];
         str2 = claimedAt.substr(obj.date.length, claimedAt.length);
       }
     }
     if (str2) {
-      const timezone = tmp4.timezone;
+      const timezone = dateTimeDelimiter.timezone;
       const match = timezone.exec(str2);
       if (match) {
         obj.time = str2.replace(match[1], "");

@@ -1,6 +1,7 @@
 // === Module 158: _wrapNativeSuper ===
 
 // Module 158 (_wrapNativeSuper)
+import _setPrototypeOf from "_setPrototypeOf" /* 99 */;
 import _isNativeFunction from "_isNativeFunction" /* 159 */;
 
 function _wrapNativeSuper(fn) {
@@ -36,10 +37,9 @@ function _wrapNativeSuper(fn) {
           obj = { value: Wrapper, enumerable: false, writable: true, configurable: true };
           obj.constructor = obj;
           Wrapper.prototype = Object.create(fn.prototype, obj);
-          return tmp7(99)(Wrapper, fn);
+          return _setPrototypeOf(Wrapper, fn);
         }
       }
-      tmp7 = require;
     }
     return fn;
   };

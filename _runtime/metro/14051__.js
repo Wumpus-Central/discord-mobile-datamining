@@ -48,7 +48,7 @@ export default (arg0, arg1) => {
                 }
               }
               if (obj) {
-                const tmp4 = !_mod14036(obj, obj);
+                !_mod14036(obj, obj);
               }
             }
           });

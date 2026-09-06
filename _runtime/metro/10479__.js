@@ -36,7 +36,7 @@ const items = [
           const match = regex.exec(createParsingResult.text.substring(index.index + index[0].length));
           if (match) {
             const start2 = parsingResult.start;
-            parsingResult.end = obj.extractTimeComponent(start2.clone(), match);
+            parsingResult.end = DESpecificTimeExpressionParser.extractTimeComponent(start2.clone(), match);
             if (parsingResult.end) {
               parsingResult.text = parsingResult.text + match[0];
             }
@@ -46,7 +46,6 @@ const items = [
           index.index = index.index + index[0].length;
           return null;
         }
-        obj = DESpecificTimeExpressionParser;
       }
       str2 = parsingResult.text;
     }

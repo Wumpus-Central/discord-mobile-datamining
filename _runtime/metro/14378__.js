@@ -42,7 +42,7 @@ exports = {
   is(arg0) {
     if (arg0) {
       if (obj.hasOwn(arg0, _mod14372.implSymbol)) {
-        if (arg0[tmp(undefined, 14372).implSymbol] instanceof tmp(14379).implementation) {
+        if (arg0[_mod14372.implSymbol] instanceof URLSearchParamsImpl.implementation) {
           return true;
         }
       }
@@ -71,9 +71,8 @@ exports = {
             return true;
           }
         }
-        const tmpResult = tmp(14372);
+        const tmpResult = _mod14372;
       }
-      tmp = require;
     }
     return false;
   },
@@ -146,8 +145,8 @@ exports = {
     Object.defineProperty(wrapper, _mod14372.implSymbol, obj);
     wrapper[_mod14372.implSymbol][_mod14372.wrapperSymbol] = wrapper;
     if (URLSearchParamsImpl.init) {
-      tmp2(14379).init(wrapper[tmp2(undefined, 14372).implSymbol], obj);
-      const tmp2Result = tmp2(14379);
+      URLSearchParamsImpl.init(wrapper[_mod14372.implSymbol], obj);
+      const tmp2Result = URLSearchParamsImpl;
     }
     return wrapper;
   },
@@ -474,10 +473,9 @@ exports = {
           if (this) {
             const _exports = module.exports;
             if (_exports.is(self)) {
-              const _exports2 = tmp.exports;
+              const _exports2 = module.exports;
               return _exports2.createDefaultIterator(self, "key");
             }
-            tmp = module;
           }
           const typeError = new TypeError("Illegal invocation");
           throw typeError;
@@ -490,10 +488,9 @@ exports = {
           if (this) {
             const _exports = module.exports;
             if (_exports.is(self)) {
-              const _exports2 = tmp.exports;
+              const _exports2 = module.exports;
               return _exports2.createDefaultIterator(self, "value");
             }
-            tmp = module;
           }
           const typeError = new TypeError("Illegal invocation");
           throw typeError;
@@ -506,10 +503,9 @@ exports = {
           if (this) {
             const _exports = module.exports;
             if (_exports.is(self)) {
-              const _exports2 = tmp.exports;
+              const _exports2 = module.exports;
               return _exports2.createDefaultIterator(self, "key+value");
             }
-            tmp = module;
           }
           const typeError = new TypeError("Illegal invocation");
           throw typeError;
@@ -539,7 +535,6 @@ exports = {
                 if (0 < arr.length) {
                   do {
                     arr = tmp11[num2];
-                    let tmp3 = URLSearchParams;
                     let tmp6 = _slicedToArray(arr.map(URLSearchParams(14372).tryWrapperForImpl), 2);
                     [tmp7, tmp8] = tmp6;
                     call = call.call;
@@ -549,7 +544,7 @@ exports = {
                       let callResult = call(tmp23, tmp8, tmp7, self);
                     }
                     let _Array = Array;
-                    arr = Array.from(self[tmp3(undefined, 14372).implSymbol]);
+                    arr = Array.from(self[URLSearchParams(undefined, 14372).implSymbol]);
                     num2 = num2 + 1;
                     tmp11 = arr;
                   } while (num2 < arr.length);
@@ -562,7 +557,7 @@ exports = {
         }
       }
     ];
-    let tmp = _createClass(URLSearchParams, items);
+    const tmp = _createClass(URLSearchParams, items);
     obj = { append: { enumerable: true }, delete: { enumerable: true }, get: { enumerable: true }, getAll: { enumerable: true }, has: { enumerable: true }, set: { enumerable: true }, sort: { enumerable: true }, toString: { enumerable: true }, keys: { enumerable: true }, values: { enumerable: true }, entries: { enumerable: true }, forEach: { enumerable: true } };
     obj[Symbol.toStringTag] = { value: "URLSearchParams", configurable: true };
     obj[Symbol.iterator] = { value: tmp.prototype.entries, configurable: true, writable: true };

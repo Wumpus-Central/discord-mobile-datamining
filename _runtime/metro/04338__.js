@@ -107,7 +107,7 @@ export const useRiveFile = function useRiveFile(src, arg1) {
   }
   const items1 = [str2, uri];
   uri(() => {
-    closure_0 = closure_2(function*(arg0, value) {
+    closure_0 = closure_2(function*() {
       if (c5 === 2) {
         c5 = 3;
         throw new TypeError("Generator functions may not be called on executing generators");
@@ -283,17 +283,17 @@ export const useRiveFile = function useRiveFile(src, arg1) {
   riveFile = tmp2.riveFile;
   const items2 = [tmp3, riveFile];
   uri(() => {
-    let tmp3 = ref.current !== closure_2;
+    let tmp3 = ref.current !== current;
     if (tmp3) {
       tmp3 = riveFile;
     }
     if (tmp3) {
-      tmp3 = tmp2;
+      tmp3 = current;
     }
     if (tmp3) {
-      obj = { data: tmp2 };
+      obj = { data: current };
       const result = riveFile.updateReferencedAssets(obj);
-      ref.current = tmp2;
+      ref.current = current;
     }
   }, items2);
   obj = { riveFile: tmp2.riveFile, isLoading: tmp2.isLoading, error: tmp2.error };

@@ -3,6 +3,7 @@
 // Module 81 (resolveAssetSource)
 import _modDef82 from "module_82" /* 82 */;
 import _mod84 from "module_84" /* 84 */;
+import AssetSourceResolver from "AssetSourceResolver" /* 85 */;
 import pickScale from "pickScale" /* 86 */;
 
 function resolveAssetSource(source) {
@@ -10,7 +11,7 @@ function resolveAssetSource(source) {
     if (typeof source !== "object") {
       const assetByID = _mod84.getAssetByID(source);
       if (assetByID) {
-        const _default = new tmp12(85).default((function getDevServerURL() {
+        const _default = new AssetSourceResolver.default((function getDevServerURL() {
           let tmp = first;
           if (undefined === first) {
             if (null == scriptURL) {
@@ -64,7 +65,6 @@ function resolveAssetSource(source) {
       } else {
         return null;
       }
-      tmp12 = require;
     }
   }
   return source;

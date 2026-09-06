@@ -21,7 +21,7 @@ const entry = {
     if (null === timezones) {
       timezones = {};
     }
-    let item = arr.forEach((item) => {
+    const item = arr.forEach((item) => {
       let obj = option;
       const match = regExp.exec(option.text.substring(item.index + item.text.length));
       if (match) {

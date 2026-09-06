@@ -135,33 +135,33 @@ function runOnJS(__remoteFunction) {
           _scheduleRemoteFunctionOnJS = undefined;
           if (!closure_2_4) {
             if (globalThis._WORKLET) {
-              if (obj.isWorkletFunction(tmp)) {
+              if (obj.isWorkletFunction(closure_2_11)) {
                 let fn = () => {
                   let items = [...arguments];
                   __remoteFunction = closure_2_11;
                   _scheduleRemoteFunctionOnJS = undefined;
                   if (!closure_2_4) {
                     if (globalThis._WORKLET) {
-                      if (obj.isWorkletFunction(tmp)) {
+                      if (obj.isWorkletFunction(closure_2_11)) {
                         let fn = () => {
                           let items = [...arguments];
                           __remoteFunction = closure_2_11;
                           _scheduleRemoteFunctionOnJS = undefined;
                           if (!closure_2_4) {
                             if (globalThis._WORKLET) {
-                              if (obj.isWorkletFunction(tmp)) {
+                              if (obj.isWorkletFunction(closure_2_11)) {
                                 let fn = () => {
                                   let items = [...arguments];
                                   __remoteFunction = closure_2_11;
                                   _scheduleRemoteFunctionOnJS = undefined;
                                   if (!closure_2_4) {
                                     if (globalThis._WORKLET) {
-                                      if (obj.isWorkletFunction(tmp)) {
+                                      if (obj.isWorkletFunction(closure_2_11)) {
                                         let fn = () => { ... };
                                       } else {
-                                        let tmp5 = tmp;
-                                        if (tmp.__remoteFunction) {
-                                          __remoteFunction = tmp.__remoteFunction;
+                                        let tmp5 = closure_2_11;
+                                        if (closure_2_11.__remoteFunction) {
+                                          __remoteFunction = closure_2_11.__remoteFunction;
                                           tmp5 = __remoteFunction;
                                         }
                                         if (typeof tmp5 === "function") {
@@ -180,9 +180,9 @@ function runOnJS(__remoteFunction) {
                                   fn = () => { ... };
                                 };
                               } else {
-                                let tmp5 = tmp;
-                                if (tmp.__remoteFunction) {
-                                  __remoteFunction = tmp.__remoteFunction;
+                                let tmp5 = closure_2_11;
+                                if (closure_2_11.__remoteFunction) {
+                                  __remoteFunction = closure_2_11.__remoteFunction;
                                   tmp5 = __remoteFunction;
                                 }
                                 if (typeof tmp5 === "function") {
@@ -212,9 +212,9 @@ function runOnJS(__remoteFunction) {
                           };
                         };
                       } else {
-                        let tmp5 = tmp;
-                        if (tmp.__remoteFunction) {
-                          __remoteFunction = tmp.__remoteFunction;
+                        let tmp5 = closure_2_11;
+                        if (closure_2_11.__remoteFunction) {
+                          __remoteFunction = closure_2_11.__remoteFunction;
                           tmp5 = __remoteFunction;
                         }
                         if (typeof tmp5 === "function") {
@@ -244,9 +244,9 @@ function runOnJS(__remoteFunction) {
                   };
                 };
               } else {
-                let tmp5 = tmp;
-                if (tmp.__remoteFunction) {
-                  __remoteFunction = tmp.__remoteFunction;
+                let tmp5 = closure_2_11;
+                if (closure_2_11.__remoteFunction) {
+                  __remoteFunction = closure_2_11.__remoteFunction;
                   tmp5 = __remoteFunction;
                 }
                 if (typeof tmp5 === "function") {
@@ -311,12 +311,12 @@ runOnJS.__initData = { code: "function runOnJS_Pnpm_threadsTs9(fun){const runOnJ
 export { setupMicrotasks };
 export const callMicrotasks = callMicrotasksOnUIThread;
 export { runOnUI };
-export function executeOnUIRuntimeSync(arg0) {
-  closure_0 = arg0;
+export function executeOnUIRuntimeSync(fn) {
+  closure_0 = fn;
   return () => {
     const items = [...arguments];
     const ReanimatedModule = ReanimatedModule2.ReanimatedModule;
-    const fn = function u() {
+    fn = function u() {
       const tmp = items(...items);
       return freezeObjectInDev.makeShareableCloneOnUIRecursive(tmp);
     };

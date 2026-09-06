@@ -1,6 +1,8 @@
 // === Module 541: baseIsTypedArray ===
 
 // Module 541 (baseIsTypedArray)
+import _mod519 from "module_519" /* 519 */;
+import _mod522 from "module_522" /* 522 */;
 import _mod535 from "module_535" /* 535 */;
 
 const obj = {};
@@ -30,9 +32,9 @@ obj["[object Array]"] = false;
 obj["[object Arguments]"] = false;
 
 export default function baseIsTypedArray(arg0) {
-  let tmp3 = _mod535(arg0) && tmp(519)(arg0.length);
+  let tmp3 = _mod535(arg0) && _mod519(arg0.length);
   if (tmp3) {
-    tmp3 = obj[tmp(undefined, 522)(undefined, arg0)];
+    tmp3 = obj[_mod522(undefined, arg0)];
   }
   return tmp3;
 };

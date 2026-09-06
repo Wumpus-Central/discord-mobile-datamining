@@ -16,7 +16,6 @@ export const createViewConfig = function createViewConfig(uiViewClassName) {
       const merged1 = Object.assign(bubblingEventTypes);
     }
     obj.bubblingEventTypes = obj;
-    tmp(104).directEventTypes;
     let directEventTypes = uiViewClassName.directEventTypes;
     if (null != directEventTypes) {
       if (null != directEventTypes) {
@@ -25,7 +24,6 @@ export const createViewConfig = function createViewConfig(uiViewClassName) {
         const merged3 = Object.assign(directEventTypes);
       }
       obj.directEventTypes = obj;
-      tmp(104).validAttributes;
       let obj2 = uiViewClassName.validAttributes;
       if (null != obj2) {
         if (null != obj2) {

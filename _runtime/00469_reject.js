@@ -21,13 +21,13 @@ export default {
       closure_0 = arg0;
       const immediate = setImmediate(() => {
         if (typeof closure_0 === "object") {
-          if (null !== obj) {
-            if (typeof obj.gen === "function") {
-              obj.gen().then(closure_0, reject);
-              const genResult = obj.gen();
-            } else if (typeof obj.run === "function") {
+          if (null !== closure_0) {
+            if (typeof closure_0.gen === "function") {
+              closure_0.gen().then(closure_0, reject);
+              const genResult = closure_0.gen();
+            } else if (typeof closure_0.run === "function") {
               try {
-                obj.run();
+                closure_0.run();
                 closure_0();
               } catch (tmp12) {
                 reject(_mod184.default(tmp12));
@@ -35,21 +35,21 @@ export default {
             } else {
               const _TypeError2 = TypeError;
               const _HermesInternal = HermesInternal;
-              const typeError = new TypeError("Task \"" + obj.name + "\" missing gen or run.");
+              const typeError = new TypeError("Task \"" + closure_0.name + "\" missing gen or run.");
               reject(typeError);
             }
           }
         }
         if (typeof closure_0 === "function") {
           try {
-            obj();
+            closure_0();
             closure_0();
           } catch (tmp4) {
             reject(_mod184.default(tmp4));
           }
         } else {
           const _TypeError = TypeError;
-          const typeError1 = new TypeError("Invalid task of type: " + typeof obj);
+          const typeError1 = new TypeError("Invalid task of type: " + typeof closure_0);
           reject(typeError1);
         }
       });

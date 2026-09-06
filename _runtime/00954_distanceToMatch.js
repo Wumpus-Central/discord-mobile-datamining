@@ -33,8 +33,8 @@ function distanceToMatch(nodeType, fn) {
   }
   return num3;
 }
-function hookSetter(arg0, arg1, arg2, arg3) {
-  closure_0 = arg0;
+function hookSetter(headers, arg1, arg2, arg3) {
+  closure_0 = headers;
   closure_1 = arg1;
   let tmp = arg2;
   closure_2 = arg2;
@@ -43,7 +43,7 @@ function hookSetter(arg0, arg1, arg2, arg3) {
     _window = window;
   }
   const _Object = _window.Object;
-  const ownPropertyDescriptor = _Object.getOwnPropertyDescriptor(arg0, arg1);
+  const ownPropertyDescriptor = _Object.getOwnPropertyDescriptor(headers, arg1);
   const _Object2 = _window.Object;
   if (!arg3) {
     const obj = {
@@ -53,14 +53,13 @@ function hookSetter(arg0, arg1, arg2, arg3) {
           setTimeout$1(() => {
             const call = set.call;
             if (typeof call === "unknown") {
-              const result = set(tmp2);
+              const result = set(closure_0);
             } else {
-              call(self, tmp2);
+              call(self, closure_0);
             }
           }, 0);
-          let set = closure_3;
-          if (closure_3) {
-            set = tmp2.set;
+          if (set) {
+            set = set.set;
           }
           if (set) {
             let call = set2.call;
@@ -74,16 +73,16 @@ function hookSetter(arg0, arg1, arg2, arg3) {
     };
     tmp = obj;
   }
-  _Object2.defineProperty(arg0, arg1, tmp);
+  _Object2.defineProperty(headers, arg1, tmp);
   return () => {
     obj = closure_1_3;
     if (!closure_1_3) {
       obj = {};
     }
-    closure_0 = tmp;
-    closure_1 = tmp2;
+    closure_0 = closure_1_0;
+    closure_1 = closure_1_1;
     let _Object = window.Object;
-    let ownPropertyDescriptor = _Object.getOwnPropertyDescriptor(tmp, tmp2);
+    let ownPropertyDescriptor = _Object.getOwnPropertyDescriptor(closure_1_0, closure_1_1);
     let _Object2 = window.Object;
     _Object2.defineProperty(closure_1_0, closure_1_1, obj);
     return () => {
@@ -91,10 +90,10 @@ function hookSetter(arg0, arg1, arg2, arg3) {
       if (!closure_1_3) {
         obj = {};
       }
-      closure_0 = tmp;
-      closure_1 = tmp2;
+      closure_0 = closure_1_0;
+      closure_1 = closure_1_1;
       let _Object = window.Object;
-      let ownPropertyDescriptor = _Object.getOwnPropertyDescriptor(tmp, tmp2);
+      let ownPropertyDescriptor = _Object.getOwnPropertyDescriptor(closure_1_0, closure_1_1);
       let _Object2 = window.Object;
       _Object2.defineProperty(closure_1_0, closure_1_1, obj);
       return () => {
@@ -102,10 +101,10 @@ function hookSetter(arg0, arg1, arg2, arg3) {
         if (!closure_1_3) {
           obj = {};
         }
-        closure_0 = tmp;
-        closure_1 = tmp2;
+        closure_0 = closure_1_0;
+        closure_1 = closure_1_1;
         let _Object = window.Object;
-        let ownPropertyDescriptor = _Object.getOwnPropertyDescriptor(tmp, tmp2);
+        let ownPropertyDescriptor = _Object.getOwnPropertyDescriptor(closure_1_0, closure_1_1);
         let _Object2 = window.Object;
         _Object2.defineProperty(closure_1_0, closure_1_1, obj);
         return () => {
@@ -113,10 +112,10 @@ function hookSetter(arg0, arg1, arg2, arg3) {
           if (!closure_1_3) {
             obj = {};
           }
-          closure_0 = tmp;
-          closure_1 = tmp2;
+          closure_0 = closure_1_0;
+          closure_1 = closure_1_1;
           let _Object = window.Object;
-          let ownPropertyDescriptor = _Object.getOwnPropertyDescriptor(tmp, tmp2);
+          let ownPropertyDescriptor = _Object.getOwnPropertyDescriptor(closure_1_0, closure_1_1);
           let _Object2 = window.Object;
           _Object2.defineProperty(closure_1_0, closure_1_1, obj);
           return () => { ... };
@@ -185,9 +184,9 @@ function isBlocked(nodeType, arg1, arg2, arg3, arg4) {
         } else {
           try {
             if (c0) {
-              if (typeof tmp === "string") {
+              if (typeof c0 === "string") {
                 const _HermesInternal = HermesInternal;
-                if (parentNode.matches("." + tmp)) {
+                if (parentNode.matches("." + c0)) {
                   return true;
                 }
               } else if ((function elementClassMatchesRegex(classList, test) {
@@ -200,7 +199,7 @@ function isBlocked(nodeType, arg1, arg2, arg3, arg4) {
                   return true;
                 }
                 return false;
-              })(parentNode, tmp)) {
+              })(parentNode, c0)) {
                 return true;
               }
             }
@@ -259,9 +258,9 @@ function isBlocked(nodeType, arg1, arg2, arg3, arg4) {
                   } else {
                     try {
                       if (c0) {
-                        if (typeof tmp === "string") {
+                        if (typeof c0 === "string") {
                           const _HermesInternal = HermesInternal;
-                          if (parentNode.matches("." + tmp)) {
+                          if (parentNode.matches("." + c0)) {
                             return true;
                           }
                         } else if ((function elementClassMatchesRegex(classList, test) {
@@ -274,7 +273,7 @@ function isBlocked(nodeType, arg1, arg2, arg3, arg4) {
                             return true;
                           }
                           return false;
-                        })(parentNode, tmp)) {
+                        })(parentNode, c0)) {
                           return true;
                         }
                       }
@@ -788,14 +787,14 @@ let str = Date.now();
 str = str.toString();
 let closure_14 = {};
 __rrweb_original__ = {};
-((arg0) => {
-  arg0["2D"] = 0;
-  arg0[0] = "2D";
-  arg0.WebGL = 1;
-  arg0[1] = "WebGL";
-  arg0.WebGL2 = 2;
-  arg0[2] = "WebGL2";
-  return arg0;
+((__rrweb_original__) => {
+  __rrweb_original__["2D"] = 0;
+  __rrweb_original__[0] = "2D";
+  __rrweb_original__.WebGL = 1;
+  __rrweb_original__[1] = "WebGL";
+  __rrweb_original__.WebGL2 = 2;
+  __rrweb_original__[2] = "WebGL2";
+  return __rrweb_original__;
 })(__rrweb_original__);
 function callbackWrapper(arg0) {
 

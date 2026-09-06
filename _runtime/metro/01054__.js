@@ -70,7 +70,7 @@ export const getRNSentryOnDrawReporter = () => {
   } else {
     if (!obj.isExpoGo()) {
       if (closure_10) {
-        const ReactNative = tmp(862).ReactNativeLibraries.ReactNative;
+        const ReactNative = RNSentryOnDrawReporterNoop(862).ReactNativeLibraries.ReactNative;
         let prop;
         if (null !== ReactNative) {
           if (undefined !== ReactNative) {
@@ -78,7 +78,7 @@ export const getRNSentryOnDrawReporter = () => {
           }
         }
         if (prop) {
-          const ReactNative2 = tmp(862).ReactNativeLibraries.ReactNative;
+          const ReactNative2 = RNSentryOnDrawReporterNoop(862).ReactNativeLibraries.ReactNative;
           result = ReactNative2.requireNativeComponent(RNSentryOnDrawReporter);
         }
       }

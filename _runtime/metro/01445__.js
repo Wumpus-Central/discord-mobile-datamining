@@ -30,10 +30,10 @@ export default function isGeneratorFunction(fn) {
             return false;
           }
         })();
-        closure_2 = tmp6 && tmp3(1288)(tmp6);
-        const tmp7 = tmp6 && tmp3(1288)(tmp6);
+        closure_2 = tmp6 && _mod1288(tmp6);
+        const tmp7 = tmp6 && _mod1288(tmp6);
       }
-      return tmp3(1288)(fn) === closure_2;
+      return _mod1288(fn) === closure_2;
     } else {
       return false;
     }

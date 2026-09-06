@@ -4,6 +4,7 @@
 import extractOpacityDefault from "extractOpacity" /* 8459 */;
 import extractResponderDefault from "extractResponder" /* 8460 */;
 import _modDef8465 from "module_8465" /* 8465 */;
+import reducedDefault from "reduced" /* 8466 */;
 import _modDef8467 from "module_8467" /* 8467 */;
 import _modDef8477 from "module_8477" /* 8477 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
@@ -202,7 +203,7 @@ const entry = {
     obj.ref = function ref(arg0) {
       return self.refMethod(arg0);
     };
-    const merged4 = Object.assign(tmp21(8466)({ viewBox, preserveAspectRatio }));
+    const merged4 = Object.assign(reducedDefault({ viewBox, preserveAspectRatio }));
     obj.children = jsx(_modDef8467, { children, style: merged2, font, fill, fillOpacity, fillRule, stroke, strokeWidth, strokeOpacity, strokeDasharray, strokeDashoffset, strokeLinecap, strokeLinejoin, strokeMiterlimit, onLayout });
     return jsx(_modDef8465, {});
   }

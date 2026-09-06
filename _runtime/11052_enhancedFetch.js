@@ -3,7 +3,7 @@
 // Module 11052 (enhancedFetch)
 import asyncGeneratorStepDefault from "asyncGeneratorStep" /* 5 */;
 
-let closure_0 = asyncGeneratorStepDefault(function*(arg0, value) {
+let closure_0 = asyncGeneratorStepDefault(function*(arg0, arg1) {
   if (c5 === 2) {
     c5 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");

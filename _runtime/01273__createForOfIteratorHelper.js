@@ -198,7 +198,6 @@ function pushEncodedKeyValuePair(items, key10006, value) {
       } else {
         if (obj2.isObject(value)) {
           for (const key10033 in arg2) {
-            let tmp25 = key10033;
             let obj4 = str2(1274);
             if (!obj4.hasOwn(arg2, key10033)) {
               continue;
@@ -207,7 +206,7 @@ function pushEncodedKeyValuePair(items, key10006, value) {
               let str5 = "";
               let str6 = "[";
               let str7 = "]";
-              let tmp12 = pushEncodedKeyValuePair(arg0, "" + arg1 + "[" + tmp25 + "]", arg2[key10033]);
+              let tmp12 = pushEncodedKeyValuePair(arg0, "" + arg1 + "[" + key10033 + "]", arg2[key10033]);
               continue;
             }
             continue;
@@ -426,15 +425,15 @@ class Request {
         error1.parse = true;
         error1.original = tmp29;
         if (self.xhr) {
-          if (tmp2 === obj2.xhr.responseType) {
-            let response = obj2.xhr.responseText;
+          if (tmp2 === self.xhr.responseType) {
+            let response = self.xhr.responseText;
           } else {
-            response = obj2.xhr.response;
+            response = self.xhr.response;
           }
           error1.rawResponse = response;
           status = null;
-          if (obj2.xhr.status) {
-            status = obj2.xhr.status;
+          if (self.xhr.status) {
+            status = self.xhr.status;
           }
           error1.status = status;
           error1.statusCode = error1.status;
@@ -695,10 +694,10 @@ class Request {
         if (4 === readyState) {
           try {
             if (xhr.status) {
-              obj.emit("end");
-            } else if (!obj.timedout) {
-              if (!obj._aborted) {
-                return obj.crossDomainError();
+              self.emit("end");
+            } else if (!self.timedout) {
+              if (!self._aborted) {
+                return self.crossDomainError();
               }
             }
           } catch (err) {
@@ -912,6 +911,7 @@ export const getXHR = () => {
   }
 };
 export const serializeObject = function serialize(obj) {
+  obj = str2(1274);
   if (obj.isObject(obj)) {
     const items = [];
     for (const key10012 in arg0) {
@@ -928,7 +928,6 @@ export const serializeObject = function serialize(obj) {
   } else {
     return obj;
   }
-  obj = str2(1274);
 };
 export { parseString };
 export const types = { html: "text/html", json: "application/json", xml: "text/xml", urlencoded: "application/x-www-form-urlencoded", form: "application/x-www-form-urlencoded", "form-data": "application/x-www-form-urlencoded" };

@@ -47,17 +47,17 @@ const entry = {
         self.recycleKey(index);
       } else {
         if (!self.disableRecycling) {
-          const unProcessedIndices = obj.unProcessedIndices;
+          const unProcessedIndices = self.unProcessedIndices;
           unProcessedIndices.add(index);
         }
         if (closure_3.includes(index)) {
           const tmp7 = closure_1(index);
           if (!tmp9) {
-            obj.recycleKey(index);
+            self.recycleKey(index);
           }
           tmp9 = tmp === closure_1(index) && tmp2 === closure_2(index);
         } else {
-          obj.recycleKey(index);
+          self.recycleKey(index);
         }
       }
     });
@@ -97,18 +97,16 @@ const entry = {
       continue;
     }
     for (const item10072 of items) {
-      let tmp20 = item10072;
       if (self.hasOptimizedKey(arg0(item10072))) {
-        let tmp22 = arg1(tmp20);
-        let syncItemResult2 = self.syncItem(tmp20, tmp22, arg0(tmp20));
+        let tmp22 = arg1(item10072);
+        let syncItemResult2 = self.syncItem(item10072, tmp22, arg0(item10072));
       }
       continue;
     }
     for (const item10087 of items) {
-      let tmp24 = item10087;
       if (!self.hasOptimizedKey(arg0(item10087))) {
-        let tmp26 = arg1(tmp24);
-        let syncItemResult3 = self.syncItem(tmp24, tmp26, arg0(tmp24));
+        let tmp26 = arg1(item10087);
+        let syncItemResult3 = self.syncItem(item10087, tmp26, arg0(item10087));
       }
       continue;
     }
@@ -165,7 +163,7 @@ let items = [
         }
         continue;
       }
-      for (const item10080 of arr) {
+      for (const item10080 of tmp) {
         let keyMap2 = self.keyMap;
         let deleteResult1 = keyMap2.delete(item10080);
         continue;
@@ -208,6 +206,8 @@ let items = [
           }
         }
       }
+      const tmp = arr;
+      tmp3 = entries[Symbol.iterator]();
     }
   },
   {

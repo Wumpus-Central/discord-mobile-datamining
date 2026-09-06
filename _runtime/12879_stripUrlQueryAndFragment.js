@@ -43,6 +43,6 @@ export const parseUrl = function parseUrl(str) {
     return {};
   }
 };
-export const stripUrlQueryAndFragment = function stripUrlQueryAndFragment(arg0) {
-  return arg0.split(/[?#]/, 1)[0];
+export const stripUrlQueryAndFragment = function stripUrlQueryAndFragment(method) {
+  return method.split(/[?#]/, 1)[0];
 };

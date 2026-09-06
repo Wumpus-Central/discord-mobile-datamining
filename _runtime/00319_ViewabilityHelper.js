@@ -216,6 +216,7 @@ let items = [
         obj.viewabilityConfig = self._config;
         fn(obj);
       }
+      tmp8 = _viewableItems[Symbol.iterator]();
     }
   }
 ];

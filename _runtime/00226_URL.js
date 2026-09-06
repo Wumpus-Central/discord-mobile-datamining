@@ -297,7 +297,7 @@ const entry = {
       throw error;
     } else {
       const _HermesInternal = HermesInternal;
-      return "" + tmp + data.data.blobId + "?offset=" + data.data.offset + "&size=" + data.size;
+      return "" + closure_1 + data.data.blobId + "?offset=" + data.data.offset + "&size=" + data.size;
     }
   }
 };

@@ -238,9 +238,9 @@ obj.steps = (() => {
       const result = Math.min(Math.max(arg0, 0), 1) * num;
       const _Math = Math;
       if (flag) {
-        let result1 = _Math.ceil(result) / tmp;
+        let result1 = _Math.ceil(result) / num;
       } else {
-        result1 = _Math.floor(result) / tmp;
+        result1 = _Math.floor(result) / num;
       }
       return result1;
     };

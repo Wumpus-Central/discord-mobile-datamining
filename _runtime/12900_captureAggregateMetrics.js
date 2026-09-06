@@ -8,7 +8,7 @@ import _mod12898 from "module_12898" /* 12898 */;
 
 require = arg1;
 const dependencyMap = arg6;
-function createMetricEnvelope(arg0, arg1, sdk, arg3) {
+function createMetricEnvelope(arg0, url, sdk, arg3) {
   let obj = { sent_at: new Date().toISOString() };
   if (sdk) {
     sdk = sdk.sdk;
@@ -19,10 +19,10 @@ function createMetricEnvelope(arg0, arg1, sdk, arg3) {
   }
   let tmp = arg3;
   if (arg3) {
-    tmp = arg1;
+    tmp = url;
   }
   if (tmp) {
-    obj.dsn = _mod12844.dsnToString(arg1);
+    obj.dsn = _mod12844.dsnToString(url);
   }
   const date = new Date();
   const result = _mod12898.serializeMetricBuckets(arg0);

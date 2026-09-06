@@ -48,7 +48,6 @@ function parseTags(buffer) {
         let num7 = 0;
         if (0 < uint32) {
           while (buffer.length >= num6 + c8) {
-            let tmp55 = require;
             let obj17 = _mod5213;
             let stringFromDataView = obj17.getStringFromDataView(buffer, num6, 4);
             let uint321 = buffer.getUint32(num6 + 4);
@@ -56,7 +55,7 @@ function parseTags(buffer) {
             if (uint321 > buffer.length) {
               return obj;
             } else {
-              let tmp55Result = tmp55(5213);
+              let tmp55Result = _mod5213;
               let stringFromDataView1 = tmp55Result.getStringFromDataView(buffer, uint321, 4);
               if (stringFromDataView1 === desc) {
                 let uint323 = buffer.getUint32(uint321 + 8);
@@ -69,9 +68,9 @@ function parseTags(buffer) {
                   let tmp71 = new.target;
                   let uint8Array1 = new Uint8Array(buffer.slice(uint321 + 12, uint321 + uint323 + 11));
                   let applyResult = fromCharCode4.apply(null, uint8Array1);
-                  if (tmp55(5255).iccTags[stringFromDataView]) {
+                  if (iccTags.iccTags[stringFromDataView]) {
                     obj = { value: applyResult, description: applyResult };
-                    obj[tmp55(5255).iccTags[stringFromDataView].name] = obj;
+                    obj[iccTags.iccTags[stringFromDataView].name] = obj;
                   } else {
                     let obj1 = { value: applyResult, description: applyResult };
                     obj[stringFromDataView] = obj1;
@@ -82,7 +81,7 @@ function parseTags(buffer) {
                 let sum = uint321 + 16;
                 let items = [];
                 let num4 = 0;
-                let tmp25 = tmp55;
+                let tmp25 = require;
                 if (0 < uint324) {
                   do {
                     let obj5 = _mod5213;
@@ -119,10 +118,9 @@ function parseTags(buffer) {
                       length = items.length;
                     } while (num5 < length);
                   }
-                  let tmp33 = require;
                   if (iccTags.iccTags[stringFromDataView]) {
                     obj6 = { value: obj5, description: obj5 };
-                    obj[tmp33(5255).iccTags[stringFromDataView].name] = obj6;
+                    obj[iccTags.iccTags[stringFromDataView].name] = obj6;
                   } else {
                     obj7 = { value: obj5, description: obj5 };
                     obj[stringFromDataView] = obj7;
@@ -135,9 +133,9 @@ function parseTags(buffer) {
                 let tmp17 = new.target;
                 let uint8Array2 = new Uint8Array(buffer.slice(uint321 + 8, uint321 + uint322 - 7));
                 let applyResult1 = fromCharCode2.apply(null, uint8Array2);
-                if (tmp55(5255).iccTags[stringFromDataView]) {
+                if (iccTags.iccTags[stringFromDataView]) {
                   let obj8 = { value: applyResult1, description: applyResult1 };
-                  obj[tmp55(5255).iccTags[stringFromDataView].name] = obj8;
+                  obj[iccTags.iccTags[stringFromDataView].name] = obj8;
                 } else {
                   let obj9 = { value: applyResult1, description: applyResult1 };
                   obj[stringFromDataView] = obj9;
@@ -149,9 +147,9 @@ function parseTags(buffer) {
                 let tmp66 = new.target;
                 let uint8Array3 = new Uint8Array(buffer.slice(uint321 + 8, uint321 + 12));
                 let applyResult2 = fromCharCode3.apply(null, uint8Array3);
-                if (tmp55(5255).iccTags[stringFromDataView]) {
+                if (iccTags.iccTags[stringFromDataView]) {
                   let obj10 = { value: applyResult2, description: applyResult2 };
-                  obj[tmp55(5255).iccTags[stringFromDataView].name] = obj10;
+                  obj[iccTags.iccTags[stringFromDataView].name] = obj10;
                 } else {
                   let obj11 = { value: applyResult2, description: applyResult2 };
                   obj[stringFromDataView] = obj11;
@@ -180,11 +178,11 @@ export default {
   read(buffer, arr, arg2) {
     if (arg2) {
       if (arr[0].compressionMethod !== _mod5213.COMPRESSION_METHOD_NONE) {
-        if (arr[0].compressionMethod === tmp(5213).COMPRESSION_METHOD_DEFLATE) {
+        if (arr[0].compressionMethod === _mod5213.COMPRESSION_METHOD_DEFLATE) {
           let _DataView = DataView;
           buffer = buffer.buffer;
           let dataView = new DataView(buffer.slice(arr[0].offset, arr[0].offset + arr[0].length));
-          const tmpResult = tmp(5213);
+          const tmpResult = _mod5213;
           const decompressResult = tmpResult.decompress(dataView, arr[0].compressionMethod, "utf-8", "dataview");
           let catchPromise = tmpResult.decompress(dataView, arr[0].compressionMethod, "utf-8", "dataview").then(parseTags).catch(() => ({}));
           const nextPromise = tmpResult.decompress(dataView, arr[0].compressionMethod, "utf-8", "dataview").then(parseTags);

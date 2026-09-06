@@ -10,7 +10,7 @@ const noop = fn(19);
 const jsx = fn(21).jsx;
 let items = [...fn(6697).nativeViewProps, "onGestureHandlerEvent", "onGestureHandlerStateChange"];
 
-export default function createNativeWrapper(displayName, gestureHandlerProps) {
+export default function createNativeWrapper(displayName) {
   _require = displayName;
   if (gestureHandlerProps === undefined) {
     gestureHandlerProps = {};

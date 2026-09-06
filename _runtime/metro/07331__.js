@@ -47,7 +47,7 @@ function getMatchRanking(rankedValue, arg1, keepDiacritics) {
         let num4 = 0;
         let num5 = 0;
         let num6 = -1;
-        if (0 < str2.length) {
+        if (0 < length) {
           while (str2[num4] !== tmp5) {
             let sum = num4 + 1;
             num4 = sum;
@@ -65,7 +65,7 @@ function getMatchRanking(rankedValue, arg1, keepDiacritics) {
           let tmp17 = num6;
           let tmp18 = num5;
           let tmp19 = num6;
-          if (1 < formatted.length) {
+          if (1 < length3) {
             while (true) {
               let length2 = str2.length;
               let tmp11 = tmp17;
@@ -94,7 +94,9 @@ function getMatchRanking(rankedValue, arg1, keepDiacritics) {
             NO_MATCH = obj.NO_MATCH;
           }
           NO_MATCH = obj.MATCHES + tmp18 / formatted.length * (1 / (tmp19 - num6));
+          length3 = formatted.length;
         }
+        length = str2.length;
       }
     }
   }
@@ -150,7 +152,7 @@ if (_extends) {
         if (constants) {
           const items = [];
           let num4 = 0;
-          if (0 < arr.length) {
+          if (0 < length) {
             while (true) {
               let tmp6 = arr[num4];
               if (typeof tmp6 === "string") {
@@ -272,6 +274,7 @@ if (_extends) {
             }
             return { rankedValue, rank, keyIndex, keyThreshold };
           }, obj);
+          length = arr.length;
         } else {
           reduced = { rankedValue, rank: getMatchRanking(rankedValue, tmp, tmp2), keyIndex: -1, keyThreshold: tmp2.threshold };
         }

@@ -81,8 +81,8 @@ const entry = {
     const merged5 = Object.assign(self._propagationContext);
     obj._propagationContext = {};
     ({ _client: tmp._client, _lastEventId: tmp._lastEventId } = self);
-    tmp3(709);
-    const tmp3Result = tmp3(709);
+    Scope(709);
+    const tmp3Result = Scope(709);
     tmp3Result._setSpanForScope(obj, tmp3Result._getSpanForScope(self));
     return obj;
   }
@@ -526,12 +526,9 @@ let items = [
         const merged = Object.assign(event_id);
         obj.event_id = event_id;
         _client.captureEvent(arg0, obj, self);
-      } else {
-        if (Scope(688).DEBUG_BUILD) {
-          const debug = tmp4(689).debug;
-          debug.warn("No client configured on scope - will not capture event!");
-        }
-        tmp4 = Scope;
+      } else if (Scope(688).DEBUG_BUILD) {
+        const debug = Scope(689).debug;
+        debug.warn("No client configured on scope - will not capture event!");
       }
       return event_id;
     }

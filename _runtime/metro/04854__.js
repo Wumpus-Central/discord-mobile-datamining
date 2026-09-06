@@ -37,6 +37,7 @@ try {
     tmp6 = setDunder;
   }
   module.exports = tmp6;
+  const tmp3 = "toString" in obj;
 } catch (tmp2) {
   throw tmp2;
 }

@@ -22,12 +22,12 @@ class ViewabilityManager {
     };
     this.recordInteraction = () => {
       if (!self.hasInteracted) {
-        obj.hasInteracted = true;
-        const viewabilityHelpers = obj.viewabilityHelpers;
+        self.hasInteracted = true;
+        const viewabilityHelpers = self.viewabilityHelpers;
         const item = viewabilityHelpers.forEach((item) => {
           item.hasInteracted = true;
         });
-        obj.updateViewableItems();
+        self.updateViewableItems();
       }
     };
     this.updateViewableItems = (arg0) => {
@@ -75,8 +75,8 @@ class ViewabilityManager {
           let obj = {
             viewableItems: arr.map((item) => {
                 if (undefined !== closure_1_1.rvManager.props.data[item]) {
-                  if (undefined !== tmp.rvManager.props.keyExtractor) {
-                    const props = tmp.rvManager.props;
+                  if (undefined !== closure_1_1.rvManager.props.keyExtractor) {
+                    const props = closure_1_1.rvManager.props;
                     let keyExtractorResult = props.keyExtractor(tmp2, item);
                   }
                   const obj = { index: item, isViewable: true, item: tmp2, key: keyExtractorResult, timestamp: null };
@@ -91,8 +91,8 @@ class ViewabilityManager {
           const items = [];
           let arraySpreadResult = HermesBuiltin.arraySpread(arr2.map((item) => {
             if (undefined !== closure_1_1.rvManager.props.data[item]) {
-              if (undefined !== tmp.rvManager.props.keyExtractor) {
-                const props = tmp.rvManager.props;
+              if (undefined !== closure_1_1.rvManager.props.keyExtractor) {
+                const props = closure_1_1.rvManager.props;
                 let keyExtractorResult = props.keyExtractor(tmp2, item);
               }
               const obj = { index: item, isViewable: true, item: tmp2, key: keyExtractorResult, timestamp: null };
@@ -104,8 +104,8 @@ class ViewabilityManager {
           }), 0);
           arraySpreadResult = HermesBuiltin.arraySpread(arr3.map((item) => {
             if (undefined !== closure_1_1.rvManager.props.data[item]) {
-              if (undefined !== tmp.rvManager.props.keyExtractor) {
-                const props = tmp.rvManager.props;
+              if (undefined !== closure_1_1.rvManager.props.keyExtractor) {
+                const props = closure_1_1.rvManager.props;
                 let keyExtractorResult = props.keyExtractor(tmp2, item);
               }
               const obj = { index: item, isViewable: false, item: tmp2, key: keyExtractorResult, timestamp: null };

@@ -85,7 +85,7 @@ export const autoScroll = function autoScroll(scrollNow, arg1, arg2, diff, diff1
         closure_2_0(closure_1_4(closure_2_3, sum), closure_1_5(closure_2_4, closure_1_8), false);
         closure_1_6 = timestamp;
         if (closure_1_4(closure_2_3, closure_1_7) === closure_2_3) {
-          if (tmp15(tmp16, closure_1_8) === tmp16) {
+          if (closure_1_5(closure_2_4, closure_1_8) === closure_2_4) {
             closure_1_0(true);
           }
         }
@@ -104,7 +104,7 @@ export const autoScroll = function autoScroll(scrollNow, arg1, arg2, diff, diff1
               closure_2_0(closure_1_4(closure_2_3, sum), closure_1_5(closure_2_4, closure_1_8), false);
               closure_1_6 = timestamp;
               if (closure_1_4(closure_2_3, closure_1_7) === closure_2_3) {
-                if (tmp15(tmp16, closure_1_8) === tmp16) {
+                if (closure_1_5(closure_2_4, closure_1_8) === closure_2_4) {
                   closure_1_0(true);
                 }
               }
@@ -123,7 +123,7 @@ export const autoScroll = function autoScroll(scrollNow, arg1, arg2, diff, diff1
                     closure_2_0(closure_1_4(closure_2_3, sum), closure_1_5(closure_2_4, closure_1_8), false);
                     closure_1_6 = timestamp;
                     if (closure_1_4(closure_2_3, closure_1_7) === closure_2_3) {
-                      if (tmp15(tmp16, closure_1_8) === tmp16) {
+                      if (closure_1_5(closure_2_4, closure_1_8) === closure_2_4) {
                         closure_1_0(true);
                       }
                     }
@@ -134,21 +134,18 @@ export const autoScroll = function autoScroll(scrollNow, arg1, arg2, diff, diff1
                       throw new TypeError("Trying to call a non-function");
                     }
                     let tmp14 = closure_1_4(closure_2_3, sum);
-                    tmp15 = closure_1_5;
                   }
                 });
               } else {
                 throw new TypeError("Trying to call a non-function");
               }
               let tmp14 = closure_1_4(closure_2_3, sum);
-              tmp15 = closure_1_5;
             }
           });
         } else {
           throw new TypeError("Trying to call a non-function");
         }
         let tmp14 = closure_1_4(closure_2_3, sum);
-        tmp15 = closure_1_5;
       }
     });
   });

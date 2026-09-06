@@ -21,12 +21,11 @@ function simpleSubset(arg0, item10015, includePrerelease) {
       tmp9 = arg0;
       if (arg0[0].semver === Comparator.ANY) {
         if (1 === item10015.length) {
-          if (item10015[0].semver === tmp6(14044).ANY) {
+          if (item10015[0].semver === Comparator.ANY) {
             return true;
           }
         }
       }
-      tmp6 = require;
     }
     let tmp13 = item10015;
     if (1 === item10015.length) {
@@ -336,7 +335,7 @@ function lowerLT(semver, semver2, includePrerelease) {
   }
 }
 
-export default (arg0, arg1, includePrerelease) => {
+export default (arg0, arg1) => {
   let obj = includePrerelease;
   if (includePrerelease === undefined) {
     obj = {};

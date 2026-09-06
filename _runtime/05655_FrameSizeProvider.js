@@ -29,7 +29,7 @@ export const FrameSizeProvider = function FrameSizeProvider(initialFrame) {
   let size = { width: initialFrame.width, height: initialFrame.height };
   noop.useRef(size);
   noop.useRef(new Set());
-  const tmp2 = _modDef1505(() => ref.current);
+  let tmp2 = _modDef1505(() => ref.current);
   const getCurrent = tmp2;
   const tmp3 = _modDef1505((arg0) => {
     closure_0 = arg0;
@@ -78,10 +78,11 @@ export const FrameSizeProvider = function FrameSizeProvider(initialFrame) {
     if (!tmp2) {
       const size = { width: null, height: null };
       ({ width: obj.width, height: obj.height } = height);
-      tmp.current = size;
+      ref.current = size;
       const current = ref2.current;
       const item = current.forEach((fn) => fn());
     }
+    tmp2 = ref.current.height === height.height && ref.current.width === height.width;
   });
   redux = tmp6;
   const ref = noop.useRef(null);
@@ -94,6 +95,7 @@ export const FrameSizeProvider = function FrameSizeProvider(initialFrame) {
           const size = { width, height };
           closure_1_5(size);
         }
+        tmp = ref.current.width > 0 && ref.current.height > 0;
       });
     }
   }, items1);

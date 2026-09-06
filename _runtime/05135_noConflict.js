@@ -8,7 +8,7 @@ const fn = function() {
   const humanize = {};
   if (undefined !== humanize) {
     if (tmp5) {
-      tmp4.exports = humanize;
+      module.exports = humanize;
     }
     humanize.humanize = humanize;
     tmp5 = undefined !== module && module.exports;
@@ -123,9 +123,9 @@ const fn = function() {
       },
       z() {
         if (closure_5.L()) {
-          let tmp2 = dependencyMap2[obj.n(obj)];
+          let tmp2 = dependencyMap2[closure_5.n(closure_5)];
         } else {
-          tmp2 = dependencyMap[obj.n(obj)];
+          tmp2 = dependencyMap[closure_5.n(closure_5)];
         }
         return tmp2 + closure_5.j() - 1;
       },
@@ -554,9 +554,9 @@ const fn = function() {
   };
   humanize.linebreaks = (str) => {
     str = str.replace(/^([\n|\r]*)/, "");
-    const str2 = str.replace(/^([\n|\r]*)/, "").replace(/([\n|\r]*)$/, "");
-    const str3 = str.replace(/^([\n|\r]*)/, "").replace(/([\n|\r]*)$/, "").replace(/(\r\n|\n|\r)/g, "\n");
-    return "<p>" + str.replace(/^([\n|\r]*)/, "").replace(/([\n|\r]*)$/, "").replace(/(\r\n|\n|\r)/g, "\n").replace(/(\n{2,})/g, "</p><p>").replace(/\n/g, "<br />") + "</p>";
+    const str2 = str.replace(/([\n|\r]*)$/, "");
+    const str3 = str.replace(/([\n|\r]*)$/, "").replace(/(\r\n|\n|\r)/g, "\n");
+    return "<p>" + str.replace(/([\n|\r]*)$/, "").replace(/(\r\n|\n|\r)/g, "\n").replace(/(\n{2,})/g, "</p><p>").replace(/\n/g, "<br />") + "</p>";
   };
   humanize.nl2br = (str) => str.replace(/(\r\n|\n|\r)/g, "<br />");
   humanize.truncatechars = (arg0, arg1) => {

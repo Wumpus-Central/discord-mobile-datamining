@@ -39,11 +39,11 @@ function reducer(arg0, type) {
     } else {
       throw new TypeError("Trying to call a non-function");
     }
-  } else if (tmp4(4436).ACTIONS.DEREGISTER_HOST === type) {
+  } else if (ACTIONS.ACTIONS.DEREGISTER_HOST === type) {
     const hostName3 = type.hostName;
     delete tmp[tmp2];
     return obj;
-  } else if (tmp4(4436).ACTIONS.ADD_UPDATE_PORTAL === type) {
+  } else if (ACTIONS.ACTIONS.ADD_UPDATE_PORTAL === type) {
     ({ hostName: hostName2, portalName: portalName2, node } = type);
     portalName = portalName2;
     if (!(hostName2 in obj)) {
@@ -63,7 +63,7 @@ function reducer(arg0, type) {
       let arr = obj[hostName2].push(obj);
     }
     return obj;
-  } else if (tmp4(4436).ACTIONS.REMOVE_PORTAL === type) {
+  } else if (ACTIONS.ACTIONS.REMOVE_PORTAL === type) {
     ({ hostName, portalName } = type);
     if (typeof removePortal === "function") {
       if (hostName in obj) {
@@ -76,8 +76,8 @@ function reducer(arg0, type) {
         obj = { component: reducer.name, method: tmp6.name, params: null };
         const _HermesInternal = HermesInternal;
         obj.params = "Failed to remove portal '" + portalName + "', '" + hostName + "' was not registered!";
-        tmp4(4441).print(obj);
-        const tmp4Result = tmp4(4441);
+        print.print(obj);
+        const tmp4Result = print;
       }
       return obj;
     } else {

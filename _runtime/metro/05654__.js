@@ -163,7 +163,7 @@ export const Header = function Header(layout) {
       }
     }
     const obj8 = { pointerEvents: str5, style: obj1 };
-    headerBackgroundResult = tmp30(require("HeaderBackground").HeaderBackground, obj8);
+    headerBackgroundResult = closure_10(require("HeaderBackground").HeaderBackground, obj8);
     tmp32 = headerSearchBarOptions;
   }
   obj6.children = headerBackgroundResult;
@@ -177,7 +177,7 @@ export const Header = function Header(layout) {
     expand = "center" === str;
   }
   if (expand) {
-    expand = tmp36.expand;
+    expand = closure_13.expand;
   }
   items4[1] = expand;
   items4[2] = { marginStart: rect.left };
@@ -185,7 +185,7 @@ export const Header = function Header(layout) {
   const items5 = [closure_10(RN.View, { pointerEvents: "box-none", style: items4, children: headerLeftResult }), , ];
   let tmp28Result = null;
   if (!tmp7) {
-    const items6 = [tmp36.title, , , ];
+    const items6 = [closure_13.title, , , ];
     if ("center" === str) {
       let num6 = 16;
       if (headerLeftResult) {
@@ -240,10 +240,10 @@ export const Header = function Header(layout) {
         style: headerTitleStyle
       };
       obj13.children = headerTitle(obj14);
-      const items7 = [tmp30(tmp29.View, obj13), ];
+      const items7 = [closure_10(RN.View, obj13), ];
       const obj15 = { pointerEvents: "box-none", style: null, children: null };
       const items8 = [, , , ];
-      ({ end: arr9[0], expand: arr9[1] } = tmp36);
+      ({ end: arr9[0], expand: arr9[1] } = closure_13);
       const obj16 = { marginEnd: rect.right };
       items8[2] = obj16;
       items8[3] = headerRightContainerStyle;
@@ -267,18 +267,17 @@ export const Header = function Header(layout) {
           children: null
         };
         const obj18 = { source: require("module_5634"), tintColor: text };
-        obj17.children = tmp30(require("HeaderIcon").HeaderIcon, obj18);
-        tmp30Result = tmp30(require("HeaderButton").HeaderButton, obj17);
+        obj17.children = closure_10(require("HeaderIcon").HeaderIcon, obj18);
+        tmp30Result = closure_10(require("HeaderButton").HeaderButton, obj17);
       }
       const obj19 = { children: null };
       items9[1] = tmp30Result;
       obj15.children = items9;
-      items7[1] = tmp28(tmp29.View, obj15);
+      items7[1] = closure_11(RN.View, obj15);
       obj19.children = items7;
-      tmp28Result = tmp28(tmp38, obj19);
+      tmp28Result = closure_11(closure_12, obj19);
     }
     obj12 = { marginHorizontal: 16 };
-    tmp38 = closure_12;
   }
   items5[1] = tmp28Result;
   tmp30Result = null;
@@ -302,7 +301,7 @@ export const Header = function Header(layout) {
     }
     const items10 = [obj21];
     obj20.style = items10;
-    tmp30Result = tmp30(require("HeaderSearchBar").HeaderSearchBar, obj20);
+    tmp30Result = closure_10(require("HeaderSearchBar").HeaderSearchBar, obj20);
   }
   items5[2] = tmp30Result;
   obj10.children = items5;

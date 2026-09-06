@@ -13,28 +13,27 @@ function serializeAst(ast, value) {
     let tmp2 = nextResult;
     if (typeof nextResult !== "string") {
       let first = tmp2[0];
-      let tmp5 = InternalIntlMessage;
       if (InternalIntlMessage(1160).FormatJsNodeType.Argument === first) {
         value.value = `${value.value}{${tmp2[1]}}`;
-      } else if (tmp5(1160).FormatJsNodeType.Date === first) {
+      } else if (InternalIntlMessage(1160).FormatJsNodeType.Date === first) {
         value.value = `${value.value}{${tmp2[1]}, date`;
         if (null != tmp2[2]) {
           value.value = `${value.value}, ${tmp2[2]}`;
         }
         value.value = `${value.value}}`;
-      } else if (tmp5(1160).FormatJsNodeType.Time === first) {
+      } else if (InternalIntlMessage(1160).FormatJsNodeType.Time === first) {
         value.value = `${value.value}{${tmp2[1]}, time`;
         if (null != tmp2[2]) {
           value.value = `${value.value}, ${tmp2[2]}`;
         }
         value.value = `${value.value}}`;
-      } else if (tmp5(1160).FormatJsNodeType.Number === first) {
+      } else if (InternalIntlMessage(1160).FormatJsNodeType.Number === first) {
         value.value = `${value.value}{${tmp2[1]}, number`;
         if (null != tmp2[2]) {
           value.value = `${value.value}, ${tmp2[2]}`;
         }
         value.value = `${value.value}}`;
-      } else if (tmp5(1160).FormatJsNodeType.Plural === first) {
+      } else if (InternalIntlMessage(1160).FormatJsNodeType.Plural === first) {
         let str = "plural";
         if ("ordinal" == tmp2[4]) {
           str = "selectordinal";
@@ -54,9 +53,9 @@ function serializeAst(ast, value) {
           continue;
         }
         value.value = `${value.value}}`;
-      } else if (tmp5(1160).FormatJsNodeType.Pound === first) {
+      } else if (InternalIntlMessage(1160).FormatJsNodeType.Pound === first) {
         value.value = `${value.value}#`;
-      } else if (tmp5(1160).FormatJsNodeType.Select === first) {
+      } else if (InternalIntlMessage(1160).FormatJsNodeType.Select === first) {
         value.value = `${value.value}{${tmp2[1]}, select,`;
         let _Object = Object;
         let entries1 = Object.entries(tmp2[2]);
@@ -68,7 +67,7 @@ function serializeAst(ast, value) {
           continue;
         }
         value.value = `${value.value}}`;
-      } else if (tmp5(1160).FormatJsNodeType.Tag === first) {
+      } else if (InternalIntlMessage(1160).FormatJsNodeType.Tag === first) {
         let tmp36 = serializeAstTag(tmp2, value);
       }
     } else {
@@ -77,37 +76,36 @@ function serializeAst(ast, value) {
     continue;
   }
 }
-function serializeAstTag(arg0, value) {
-  if ("$b" === arg0[1]) {
+function serializeAstTag(ast, value) {
+  if ("$b" === ast[1]) {
     value.value = `${value.value}**`;
-    serializeAst(arg0[2], value);
+    serializeAst(ast[2], value);
     value.value = `${value.value}**`;
   } else if ("$i" === tmp) {
     value.value = `${value.value}*`;
-    serializeAst(arg0[2], value);
+    serializeAst(ast[2], value);
     value.value = `${value.value}*`;
   } else if ("$code" === tmp) {
     value.value = `${value.value}\``;
-    serializeAst(arg0[2], value);
+    serializeAst(ast[2], value);
     value.value = `${value.value}\``;
   } else if ("$p" === tmp) {
-    serializeAst(arg0[2], value);
+    serializeAst(ast[2], value);
     value.value = `${value.value}
 
   `;
   } else if ("$link" === tmp) {
     value.value = `${value.value}[`;
-    serializeAst(arg0[2], value);
+    serializeAst(ast[2], value);
     value.value = `${value.value}](`;
-    if (null != arg0[3]) {
-      tmp5(tmp4, value);
+    if (null != ast[3]) {
+      serializeAst(tmp4, value);
     }
     value.value = `${value.value})`;
-    tmp5 = serializeAst;
   } else {
     value.value = `${value.value}$[`;
-    serializeAst(arg0[2], value);
-    value.value = `${value.value}](${arg0[1]})`;
+    serializeAst(ast[2], value);
+    value.value = `${value.value}](${ast[1]})`;
   }
 }
 class InternalIntlMessage {

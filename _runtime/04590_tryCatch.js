@@ -49,13 +49,12 @@ class AsyncIterator {
             closure_1 = fn;
             const tmp = closure_1_10(closure_0[closure_1_0], closure_0, nextPromise);
             if ("throw" !== tmp.type) {
-              iter = tmp.arg;
-              value = iter.value;
+              value = tmp.arg.value;
               if (value) {
                 if (typeof value === "object") {
                   let call = closure_1_0.call;
                   if (typeof call === "unknown") {
-                    let callResult = tmp8("__await");
+                    let callResult = closure_1_0("__await");
                   } else {
                     callResult = call(value, "__await");
                   }
@@ -267,7 +266,6 @@ class AsyncIterator {
                       }
                     });
                   }
-                  tmp8 = closure_1_0;
                 }
               }
               let resolved1 = Promise.resolve(value);
@@ -376,6 +374,7 @@ class AsyncIterator {
                   closure_1(tmp2.arg);
                 }
               });
+              iter = tmp.arg;
             } else {
               fn(tmp.arg);
             }
@@ -388,13 +387,12 @@ class AsyncIterator {
           closure_1 = fn;
           const tmp = closure_1_10(closure_0[closure_1_0], closure_0, nextPromise);
           if ("throw" !== tmp.type) {
-            iter = tmp.arg;
-            value = iter.value;
+            value = tmp.arg.value;
             if (value) {
               if (typeof value === "object") {
                 let call = closure_1_0.call;
                 if (typeof call === "unknown") {
-                  let callResult = tmp8("__await");
+                  let callResult = closure_1_0("__await");
                 } else {
                   callResult = call(value, "__await");
                 }
@@ -1068,7 +1066,6 @@ class AsyncIterator {
                     }
                   });
                 }
-                tmp8 = closure_1_0;
               }
             }
             let resolved1 = Promise.resolve(value);
@@ -1408,6 +1405,7 @@ class AsyncIterator {
                 closure_1(tmp2.arg);
               }
             });
+            iter = tmp.arg;
           } else {
             fn(tmp.arg);
           }
@@ -1630,13 +1628,12 @@ if (regeneratorRuntime) {
               closure_1 = fn;
               const tmp = closure_1_10(closure_0[closure_1_0], closure_0, nextPromise);
               if ("throw" !== tmp.type) {
-                iter = tmp.arg;
-                value = iter.value;
+                value = tmp.arg.value;
                 if (value) {
                   if (typeof value === "object") {
                     let call = closure_1_0.call;
                     if (typeof call === "unknown") {
-                      let callResult = tmp8("__await");
+                      let callResult = closure_1_0("__await");
                     } else {
                       callResult = call(value, "__await");
                     }
@@ -1848,7 +1845,6 @@ if (regeneratorRuntime) {
                         }
                       });
                     }
-                    tmp8 = closure_1_0;
                   }
                 }
                 let resolved1 = Promise.resolve(value);
@@ -1957,6 +1953,7 @@ if (regeneratorRuntime) {
                     closure_1(tmp2.arg);
                   }
                 });
+                iter = tmp.arg;
               } else {
                 fn(tmp.arg);
               }
@@ -1969,13 +1966,12 @@ if (regeneratorRuntime) {
             closure_1 = fn;
             const tmp = closure_1_10(closure_0[closure_1_0], closure_0, nextPromise);
             if ("throw" !== tmp.type) {
-              iter = tmp.arg;
-              value = iter.value;
+              value = tmp.arg.value;
               if (value) {
                 if (typeof value === "object") {
                   let call = closure_1_0.call;
                   if (typeof call === "unknown") {
-                    let callResult = tmp8("__await");
+                    let callResult = closure_1_0("__await");
                   } else {
                     callResult = call(value, "__await");
                   }
@@ -2649,7 +2645,6 @@ if (regeneratorRuntime) {
                       }
                     });
                   }
-                  tmp8 = closure_1_0;
                 }
               }
               let resolved1 = Promise.resolve(value);
@@ -2989,6 +2984,7 @@ if (regeneratorRuntime) {
                   closure_1(tmp2.arg);
                 }
               });
+              iter = tmp.arg;
             } else {
               fn(tmp.arg);
             }
@@ -3038,22 +3034,19 @@ if (regeneratorRuntime) {
             if (!isNaN(next.length)) {
               c1 = -1;
               next = function next() {
-                let arr;
                 const sum = sum1 + 1;
                 sum1 = sum;
                 if (sum < next.length) {
                   while (true) {
-                    let tmp2 = items2;
                     let call = items2.call;
-                    arr = next;
                     let tmp3 = sum1;
-                    if (typeof call === "unknown" ? tmp2(tmp3) : call(arr, tmp3)) {
+                    if (typeof call === "unknown" ? items2(tmp3) : call(next, tmp3)) {
                       break;
                     } else {
                       sum1 = sum1 + 1;
                     }
                   }
-                  next.value = arr[sum1];
+                  next.value = next[sum1];
                   next.done = false;
                   return next;
                 }
@@ -3099,13 +3092,12 @@ if (regeneratorRuntime) {
                   closure_1 = fn;
                   const tmp = closure_1_10(closure_0[closure_1_0], closure_0, nextPromise);
                   if ("throw" !== tmp.type) {
-                    iter = tmp.arg;
-                    value = iter.value;
+                    value = tmp.arg.value;
                     if (value) {
                       if (typeof value === "object") {
                         let call = closure_1_0.call;
                         if (typeof call === "unknown") {
-                          let callResult = tmp8("__await");
+                          let callResult = closure_1_0("__await");
                         } else {
                           callResult = call(value, "__await");
                         }
@@ -3317,7 +3309,6 @@ if (regeneratorRuntime) {
                             }
                           });
                         }
-                        tmp8 = closure_1_0;
                       }
                     }
                     let resolved1 = Promise.resolve(value);
@@ -3426,6 +3417,7 @@ if (regeneratorRuntime) {
                         closure_1(tmp2.arg);
                       }
                     });
+                    iter = tmp.arg;
                   } else {
                     fn(tmp.arg);
                   }
@@ -3438,13 +3430,12 @@ if (regeneratorRuntime) {
                 closure_1 = fn;
                 const tmp = closure_1_10(closure_0[closure_1_0], closure_0, nextPromise);
                 if ("throw" !== tmp.type) {
-                  iter = tmp.arg;
-                  value = iter.value;
+                  value = tmp.arg.value;
                   if (value) {
                     if (typeof value === "object") {
                       let call = closure_1_0.call;
                       if (typeof call === "unknown") {
-                        let callResult = tmp8("__await");
+                        let callResult = closure_1_0("__await");
                       } else {
                         callResult = call(value, "__await");
                       }
@@ -4118,7 +4109,6 @@ if (regeneratorRuntime) {
                           }
                         });
                       }
-                      tmp8 = closure_1_0;
                     }
                   }
                   let resolved1 = Promise.resolve(value);
@@ -4458,6 +4448,7 @@ if (regeneratorRuntime) {
                       closure_1(tmp2.arg);
                     }
                   });
+                  iter = tmp.arg;
                 } else {
                   fn(tmp.arg);
                 }
@@ -4618,13 +4609,12 @@ if (regeneratorRuntime) {
                 closure_1 = fn;
                 const tmp = closure_1_10(closure_0[closure_1_0], closure_0, nextPromise);
                 if ("throw" !== tmp.type) {
-                  iter = tmp.arg;
-                  value = iter.value;
+                  value = tmp.arg.value;
                   if (value) {
                     if (typeof value === "object") {
                       let call = closure_1_0.call;
                       if (typeof call === "unknown") {
-                        let callResult = tmp8("__await");
+                        let callResult = closure_1_0("__await");
                       } else {
                         callResult = call(value, "__await");
                       }
@@ -4682,7 +4672,6 @@ if (regeneratorRuntime) {
                           }
                         });
                       }
-                      tmp8 = closure_1_0;
                     }
                   }
                   let resolved1 = Promise.resolve(value);
@@ -4714,6 +4703,7 @@ if (regeneratorRuntime) {
                       closure_1(tmp2.arg);
                     }
                   });
+                  iter = tmp.arg;
                 } else {
                   fn(tmp.arg);
                 }
@@ -4726,13 +4716,12 @@ if (regeneratorRuntime) {
               closure_1 = fn;
               const tmp = closure_1_10(closure_0[closure_1_0], closure_0, nextPromise);
               if ("throw" !== tmp.type) {
-                iter = tmp.arg;
-                value = iter.value;
+                value = tmp.arg.value;
                 if (value) {
                   if (typeof value === "object") {
                     let call = closure_1_0.call;
                     if (typeof call === "unknown") {
-                      let callResult = tmp8("__await");
+                      let callResult = closure_1_0("__await");
                     } else {
                       callResult = call(value, "__await");
                     }
@@ -4944,7 +4933,6 @@ if (regeneratorRuntime) {
                         }
                       });
                     }
-                    tmp8 = closure_1_0;
                   }
                 }
                 let resolved1 = Promise.resolve(value);
@@ -5053,6 +5041,7 @@ if (regeneratorRuntime) {
                     closure_1(tmp2.arg);
                   }
                 });
+                iter = tmp.arg;
               } else {
                 fn(tmp.arg);
               }
@@ -5130,10 +5119,9 @@ if (regeneratorRuntime) {
                       }
                       continue;
                     } else {
-                      let tmp4 = items2;
                       let call = items2.call;
                       if (typeof call === "unknown") {
-                        let callResult = tmp4(key10018);
+                        let callResult = items2(key10018);
                       } else {
                         callResult = call(obj, key10018);
                       }
@@ -5160,11 +5148,10 @@ if (regeneratorRuntime) {
                     const completion = tmp2.completion;
                     while ("root" !== self.tryEntries[diff].tryLoc) {
                       if (tmp2.tryLoc <= self.prev) {
-                        let tmp11 = items2;
                         let call2 = items2.call;
-                        let tmp4 = typeof call2 === "unknown" ? tmp11("catchLoc") : call2(tmp2, "catchLoc");
-                        let call = tmp11.call;
-                        let tmp5 = typeof call === "unknown" ? tmp11("finallyLoc") : call(tmp2, "finallyLoc");
+                        let tmp4 = typeof call2 === "unknown" ? items2("catchLoc") : call2(tmp2, "catchLoc");
+                        let call = items2.call;
+                        let tmp5 = typeof call === "unknown" ? items2("finallyLoc") : call(tmp2, "finallyLoc");
                         if (tmp4) {
                           if (tmp5) {
                             if (self.prev < tmp2.catchLoc) {
@@ -5235,9 +5222,8 @@ if (regeneratorRuntime) {
                   while (true) {
                     let tmp3 = self.tryEntries[diff];
                     if (tmp3.tryLoc <= self.prev) {
-                      let tmp5 = items2;
                       let call = items2.call;
-                      if (typeof call === "unknown" ? tmp5("finallyLoc") : call(tmp3, "finallyLoc")) {
+                      if (typeof call === "unknown" ? items2("finallyLoc") : call(tmp3, "finallyLoc")) {
                         tmp2 = tmp3;
                         if (self.prev < tmp3.finallyLoc) {
                           break;
@@ -5357,22 +5343,19 @@ if (regeneratorRuntime) {
                     if (!isNaN(next.length)) {
                       sum1 = -1;
                       next = function next() {
-                        let arr;
                         const sum = sum1 + 1;
                         sum1 = sum;
                         if (sum < next.length) {
                           while (true) {
-                            let tmp2 = items2;
                             let call = items2.call;
-                            arr = next;
                             let tmp3 = sum1;
-                            if (typeof call === "unknown" ? tmp2(tmp3) : call(arr, tmp3)) {
+                            if (typeof call === "unknown" ? items2(tmp3) : call(next, tmp3)) {
                               break;
                             } else {
                               sum1 = sum1 + 1;
                             }
                           }
-                          next.value = arr[sum1];
+                          next.value = next[sum1];
                           next.done = false;
                           return next;
                         }
@@ -5411,22 +5394,19 @@ if (regeneratorRuntime) {
         if (!isNaN(items2.length)) {
           c1 = -1;
           next = function next() {
-            let arr;
             const sum = sum1 + 1;
             sum1 = sum;
             if (sum < next.length) {
               while (true) {
-                let tmp2 = items2;
                 let call = items2.call;
-                arr = next;
                 let tmp3 = sum1;
-                if (typeof call === "unknown" ? tmp2(tmp3) : call(arr, tmp3)) {
+                if (typeof call === "unknown" ? items2(tmp3) : call(next, tmp3)) {
                   break;
                 } else {
                   sum1 = sum1 + 1;
                 }
               }
-              next.value = arr[sum1];
+              next.value = next[sum1];
               next.done = false;
               return next;
             }
@@ -5447,3 +5427,4 @@ if (regeneratorRuntime) {
     }
   }
 }
+tmp4 = tmp2.asyncIterator || "@@asyncIterator";

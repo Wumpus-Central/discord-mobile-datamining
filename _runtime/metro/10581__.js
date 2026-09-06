@@ -1,11 +1,11 @@
 // === Module 10581: ? ===
 
 // Module 10581
+import _possibleConstructorReturn from "_possibleConstructorReturn" /* 93 */;
 import AbstractParserWithWordBoundaryChecking from "AbstractParserWithWordBoundaryChecking" /* 10439 */;
 import now from "now" /* 10456 */;
 import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
-import _possibleConstructorReturn from "_possibleConstructorReturn" /* 93 */;
 import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
 
@@ -29,6 +29,7 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
+_possibleConstructorReturn;
 let self2 = this;
 if (this) {
   self2 = self.__createBinding;

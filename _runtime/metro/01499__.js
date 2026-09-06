@@ -14,7 +14,7 @@ function getPartialState(arg0) {
 
 }
 
-export const BaseNavigationContainer = noop.forwardRef(function BaseNavigationContainer(onReady, ref) {
+export const BaseNavigationContainer = noop.forwardRef(function BaseNavigationContainer(onReady, arg1) {
   ({ initialState: require, onStateChange } = onReady);
   onReady = onReady.onReady;
   ({ onUnhandledAction, navigationInChildEnabled } = onReady);
@@ -59,16 +59,16 @@ export const BaseNavigationContainer = noop.forwardRef(function BaseNavigationCo
       throw error;
     }
   }
-  let tmpResult = tmp(tmp2[5]);
+  let tmpResult = require("module_1503");
   const syncState = tmpResult.useSyncState(() => {
-    if (typeof tmp === "function") {
+    if (typeof getPartialState === "function") {
       let tmp3;
-      if (undefined !== tmp2) {
-        ({ key, routeNames } = tmp2);
+      if (undefined !== require) {
+        ({ key, routeNames } = require);
         let obj = {};
-        let merged = Object.assign(_objectWithoutProperties(tmp2, closure_3));
+        let merged = Object.assign(_objectWithoutProperties(require, closure_3));
         obj.stale = true;
-        let routes = tmp2.routes;
+        let routes = require.routes;
         obj.routes = routes.map((state) => {
           let tmp = state;
           if (undefined !== state.state) {
@@ -148,14 +148,13 @@ export const BaseNavigationContainer = noop.forwardRef(function BaseNavigationCo
     } else {
       throw new TypeError("Trying to call a non-function");
     }
-    tmp = getPartialState;
   });
   state = syncState.state;
   getState = syncState.getState;
   setState = syncState.setState;
   scheduleUpdate = syncState.scheduleUpdate;
   flushUpdates = syncState.flushUpdates;
-  tmpResult = tmp(tmp2[6]);
+  tmpResult = require("module_1506");
   const lazyValue = tmpResult.useLazyValue(() => {
     const weakMap = new WeakMap();
     return weakMap;
@@ -283,7 +282,7 @@ export const BaseNavigationContainer = noop.forwardRef(function BaseNavigationCo
     return obj;
   }, items);
   let items1 = [memo];
-  const imperativeHandle = obj.useImperativeHandle(ref, () => memo, items1);
+  const imperativeHandle = obj.useImperativeHandle(arg1, () => memo, items1);
   const tmp25 = onStateChange(onReady[9])((action, noop) => {
     let obj = { type: "__unsafe_action__", data: null };
     obj = { action, noop, stack: stackRef.current };
@@ -360,6 +359,8 @@ export const BaseNavigationContainer = noop.forwardRef(function BaseNavigationCo
       ref7.current(tmp);
     }
     ref.current = false;
+    const obj = { type: "state", data: { state } };
+    tmp = getRootState();
   }, items5);
   const tmpResult4 = require("module_1512");
   obj = { value: memo, children: null };

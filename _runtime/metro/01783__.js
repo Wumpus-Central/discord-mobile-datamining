@@ -6,7 +6,7 @@ import WorkletEventHandlerNative from "WorkletEventHandlerNative" /* 1741 */;
 
 const useRef = _mod19.useRef;
 
-export const useEvent = function useEvent(fn, items, doDependenciesDiffer) {
+export const useEvent = function useEvent(fn) {
   if (items === undefined) {
     items = [];
   }

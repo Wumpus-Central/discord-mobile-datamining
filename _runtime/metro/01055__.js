@@ -86,6 +86,7 @@ export const reactNativeNavigationIntegration = (enableTabsInstrumentation) => {
     const client = flag2(reactNativeTracingIntegration[2]).getClient();
     const result2 = obj7.ignoreEmptyRouteChangeTransactions(client, _undefined, flag2(reactNativeTracingIntegration[0]).DEFAULT_NAVIGATION_SPAN_NAME, () => c4 === closure_0);
     timeout = setTimeout(discardLatestNavigationSpan.bind(c3), closure_0);
+    const obj8 = flag2(reactNativeTracingIntegration[2]);
   }
   let result = navigation.events().registerCommandListener(startIdleNavigationSpan);
   if (flag) {

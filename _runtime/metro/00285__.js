@@ -1,10 +1,10 @@
 // === Module 285: ? ===
 
 // Module 285
+import _possibleConstructorReturnDefault from "_possibleConstructorReturn" /* 93 */;
 import _modDef286 from "module_286" /* 286 */;
 import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
-import _possibleConstructorReturn from "_possibleConstructorReturn" /* 93 */;
 import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
 
@@ -27,6 +27,7 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
+_possibleConstructorReturnDefault;
 class ResponderEvent {
   constructor(arg0, arg1, arg2, arg3, arg4) {
     self = this;

@@ -15,12 +15,11 @@ export const useRegisterNavigator = function useRegisterNavigator() {
     throw error;
   } else {
     const items = [context, first];
-    const effect = obj.useEffect(() => {
+    const effect = noop.useEffect(() => {
       const unregister = context.unregister;
       context.register(unregister);
       return () => unregister(first);
     }, items);
     return first;
   }
-  obj = noop;
 };

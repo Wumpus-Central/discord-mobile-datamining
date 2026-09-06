@@ -18,10 +18,9 @@ export default function isFlattenable(arg0) {
       tmp5 = arg0;
     }
     if (tmp5) {
-      tmp5 = arg0[tmp4];
+      tmp5 = arg0[isConcatSpreadable];
     }
     tmp3 = tmp5;
-    tmp4 = isConcatSpreadable;
   }
   return tmp3;
 };

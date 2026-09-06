@@ -5,6 +5,7 @@ import _mod14297 from "module_14297" /* 14297 */;
 import _mod14313 from "module_14313" /* 14313 */;
 import _mod14322 from "module_14322" /* 14322 */;
 import _mod14342 from "module_14342" /* 14342 */;
+import _mod14353 from "module_14353" /* 14353 */;
 import _mod14359 from "module_14359" /* 14359 */;
 import _mod14360 from "module_14360" /* 14360 */;
 
@@ -15,14 +16,13 @@ if (!_mod14359) {
     _mod14342[tmp] = true;
     let fn = function t(facade, arg1) {
       if (require("module_14320")(facade, closure_6)) {
-        const typeError = new tmp(14297).TypeError("Object already initialized");
+        const typeError = new _mod14297.TypeError("Object already initialized");
         throw typeError;
       } else {
         arg1.facade = facade;
-        tmp(14353)(facade, tmp3, arg1);
+        _mod14353(facade, closure_6, arg1);
         return arg1;
       }
-      tmp3 = closure_6;
     };
     let fn4 = fn;
     let fn2 = function n(arg0) {
@@ -34,7 +34,7 @@ if (!_mod14359) {
     };
     let fn6 = fn3;
   }
-  let obj = {
+  const obj = {
     set: fn,
     get: fn2,
     has: fn3,
@@ -76,10 +76,9 @@ fn4 = function t(facade, arg1) {
     throw typeError;
   } else {
     arg1.facade = facade;
-    const result = obj.set(facade, arg1);
+    const result = state.set(facade, arg1);
     return arg1;
   }
-  obj = state;
 };
 fn5 = function n(arg0) {
   return state.get(arg0) || {};

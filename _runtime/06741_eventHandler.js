@@ -5,6 +5,7 @@ import _mod6661 from "module_6661" /* 6661 */;
 import TouchEventType from "TouchEventType" /* 6663 */;
 import _mod6676 from "module_6676" /* 6676 */;
 import DEFAULT_PROPS_TRANSFORMER from "DEFAULT_PROPS_TRANSFORMER" /* 6723 */;
+import _mod6725 from "module_6725" /* 6725 */;
 
 require = fn;
 const dependencyMap = arg6;
@@ -13,37 +14,37 @@ function handleStateChangeEvent(result, arg1, lastUpdateEvent, fn) {
   let obj = DEFAULT_PROPS_TRANSFORMER;
   result = obj.flattenAndFilterEvent(result);
   if (oldState === _mod6661.State.UNDETERMINED) {
-    if (state === tmp(6661).State.BEGAN) {
-      let tmpResult = tmp(6723);
-      tmpResult.runCallback(tmp(6676).CALLBACK_TYPE.BEGAN, arg1, result);
+    if (state === _mod6661.State.BEGAN) {
+      let tmpResult = DEFAULT_PROPS_TRANSFORMER;
+      tmpResult.runCallback(_mod6676.CALLBACK_TYPE.BEGAN, arg1, result);
     }
   }
   if (oldState === _mod6661.State.BEGAN) {
-    if (state === tmp(6661).State.ACTIVE) {
+    if (state === _mod6661.State.ACTIVE) {
       if (fn != null) {
         fn(result);
       }
-      tmpResult = tmp(6723);
-      tmpResult.runCallback(tmp(6676).CALLBACK_TYPE.START, arg1, result);
+      tmpResult = DEFAULT_PROPS_TRANSFORMER;
+      tmpResult.runCallback(_mod6676.CALLBACK_TYPE.START, arg1, result);
     }
   }
   if (oldState !== state) {
     obj = {};
     const merged = Object.assign(result);
-    obj.canceled = state === tmp(6661).State.FAILED || state === tmp(6661).State.CANCELLED;
-    if (oldState === tmp(6661).State.ACTIVE) {
+    obj.canceled = state === _mod6661.State.FAILED || state === _mod6661.State.CANCELLED;
+    if (oldState === _mod6661.State.ACTIVE) {
       if (fn != null) {
         fn(obj);
       }
-      tmp(6723).runCallback(tmp(6676).CALLBACK_TYPE.END, arg1, obj);
-      const tmpResult1 = tmp(6723);
+      DEFAULT_PROPS_TRANSFORMER.runCallback(_mod6676.CALLBACK_TYPE.END, arg1, obj);
+      const tmpResult1 = DEFAULT_PROPS_TRANSFORMER;
     }
-    const tmp7 = state === tmp(6661).State.FAILED || state === tmp(6661).State.CANCELLED;
-    tmp(6723).runCallback(tmp(6676).CALLBACK_TYPE.FINALIZE, arg1, obj);
+    const tmp7 = state === _mod6661.State.FAILED || state === _mod6661.State.CANCELLED;
+    DEFAULT_PROPS_TRANSFORMER.runCallback(_mod6676.CALLBACK_TYPE.FINALIZE, arg1, obj);
     if (lastUpdateEvent) {
       lastUpdateEvent.lastUpdateEvent = undefined;
     }
-    const tmpResult2 = tmp(6723);
+    const tmpResult2 = DEFAULT_PROPS_TRANSFORMER;
   }
 }
 let obj = { flattenAndFilterEvent: fn(6723).flattenAndFilterEvent, State: fn(6661).State, runCallback: fn(6723).runCallback, CALLBACK_TYPE: fn(6676).CALLBACK_TYPE };
@@ -71,8 +72,7 @@ handleUpdateEvent.__workletHash = 13503118278355;
 handleUpdateEvent.__initData = { code: "function handleUpdateEvent_Pnpm_eventHandlerTs2(eventWithData,handlers,changeEventCalculator,context){const{flattenAndFilterEvent,runCallback,CALLBACK_TYPE}=this.__closure;const eventWithChanges=changeEventCalculator?changeEventCalculator(eventWithData,context?context.lastUpdateEvent:undefined):eventWithData;const event=flattenAndFilterEvent(eventWithChanges);runCallback(CALLBACK_TYPE.UPDATE,handlers,event);if(context){context.lastUpdateEvent=eventWithData;}}" };
 function handleTouchEvent(eventType, arg1) {
   if (eventType.eventType !== TouchEventType.TouchEventType.UNDETERMINED) {
-    tmp(6723);
-    const tmpResult = tmp(6723);
+    const tmpResult = DEFAULT_PROPS_TRANSFORMER;
     tmpResult.runCallback(tmpResult.touchEventTypeToCallbackType(eventType.eventType), arg1, eventType);
   }
 }
@@ -83,17 +83,17 @@ handleTouchEvent.__initData = { code: "function handleTouchEvent_Pnpm_eventHandl
 function eventHandler(arg0, nativeEvent, arg2, fn, lastUpdateEvent, arg5, fn) {
   const result = DEFAULT_PROPS_TRANSFORMER.maybeExtractNativeEvent(nativeEvent);
   if (obj2.isEventForHandlerWithTag(arg0, result)) {
-    let tmpResult = tmp(6725);
+    let tmpResult = _mod6725;
     if (tmpResult.isStateChangeEvent(result)) {
       handleStateChangeEvent(result, arg2, lastUpdateEvent, fn);
     } else {
-      tmpResult = tmp(6725);
+      tmpResult = _mod6725;
       if (tmpResult.isTouchEvent(result)) {
         if (typeof handleTouchEvent === "function") {
-          if (result.eventType !== tmp(6663).TouchEventType.UNDETERMINED) {
-            const tmpResult1 = tmp(6723);
-            tmpResult1.runCallback(tmp(6723).touchEventTypeToCallbackType(result.eventType), arg2, result);
-            const tmpResult2 = tmp(6723);
+          if (result.eventType !== TouchEventType.TouchEventType.UNDETERMINED) {
+            const tmpResult1 = DEFAULT_PROPS_TRANSFORMER;
+            tmpResult1.runCallback(DEFAULT_PROPS_TRANSFORMER.touchEventTypeToCallbackType(result.eventType), arg2, result);
+            const tmpResult2 = DEFAULT_PROPS_TRANSFORMER;
           }
         } else {
           throw new TypeError("Trying to call a non-function");
@@ -108,19 +108,20 @@ function eventHandler(arg0, nativeEvent, arg2, fn, lastUpdateEvent, arg5, fn) {
             }
             tmp9 = fn(result, lastUpdateEvent);
           }
-          const result1 = tmp(6723).flattenAndFilterEvent(tmp9);
-          const tmpResult3 = tmp(6723);
-          tmp(6723).runCallback(tmp(6676).CALLBACK_TYPE.UPDATE, arg2, result1);
+          const result1 = DEFAULT_PROPS_TRANSFORMER.flattenAndFilterEvent(tmp9);
+          const tmpResult3 = DEFAULT_PROPS_TRANSFORMER;
+          DEFAULT_PROPS_TRANSFORMER.runCallback(_mod6676.CALLBACK_TYPE.UPDATE, arg2, result1);
           if (lastUpdateEvent) {
             lastUpdateEvent.lastUpdateEvent = result;
           }
-          const tmpResult4 = tmp(6723);
+          const tmpResult4 = DEFAULT_PROPS_TRANSFORMER;
         } else {
           throw new TypeError("Trying to call a non-function");
         }
       }
     }
   }
+  obj2 = DEFAULT_PROPS_TRANSFORMER;
 }
 eventHandler.__closure = { maybeExtractNativeEvent: fn(6723).maybeExtractNativeEvent, isEventForHandlerWithTag: fn(6723).isEventForHandlerWithTag, isStateChangeEvent: fn(6725).isStateChangeEvent, handleStateChangeEvent, isTouchEvent: fn(6725).isTouchEvent, handleTouchEvent, handleUpdateEvent };
 eventHandler.__workletHash = 218531583134;

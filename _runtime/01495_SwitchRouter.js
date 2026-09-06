@@ -8,9 +8,9 @@ import _mod1496 from "module_1496" /* 1496 */;
 require = arg1;
 const dependencyMap = arg6;
 const route = "route";
-function getRouteHistory(mapped, bound, backBehavior, arg3) {
+function getRouteHistory(mapped, bound, backBehavior, require) {
   let diff = bound;
-  closure_0 = arg3;
+  closure_0 = require;
   let obj = { type: route, key: mapped[bound].key, params: null };
   let params;
   if ("fullHistory" === backBehavior) {
@@ -21,16 +21,14 @@ function getRouteHistory(mapped, bound, backBehavior, arg3) {
   if ("order" === backBehavior) {
     if (diff > 0) {
       do {
-        obj = { type: null, key: null };
-        obj.type = route;
-        obj.key = mapped[diff - 1].key;
+        obj = { type: route, key: mapped[diff - 1].key };
         let arr = items.unshift(obj);
         diff = diff - 1;
       } while (diff > 0);
     }
   } else if ("firstRoute" === backBehavior) {
     if (0 !== diff) {
-      obj = { type: tmp2, key: mapped[0].key };
+      obj = { type: route, key: mapped[0].key };
       items.unshift(obj);
     }
   } else if ("initialRoute" === backBehavior) {
@@ -40,20 +38,20 @@ function getRouteHistory(mapped, bound, backBehavior, arg3) {
       num = findIndexResult;
     }
     if (diff !== num) {
-      const obj1 = { type: tmp2, key: mapped[num].key };
+      const obj1 = { type: route, key: mapped[num].key };
       items.unshift(obj1);
     }
   }
   return items;
 }
-function changeIndex(history, bound, backBehavior, arg3) {
+function changeIndex(history, bound, backBehavior, require) {
   history = history.history;
   if ("history" !== backBehavior) {
     if ("fullHistory" !== backBehavior) {
       const history1 = history.history;
       const items = [];
       let arraySpreadResult = HermesBuiltin.arraySpread(history1.filter((type) => "route" !== type.type), 0);
-      arraySpreadResult = HermesBuiltin.arraySpread(getRouteHistory(history.routes, bound, backBehavior, arg3), arraySpreadResult);
+      arraySpreadResult = HermesBuiltin.arraySpread(getRouteHistory(history.routes, bound, backBehavior, require), arraySpreadResult);
       let combined = items;
     }
     let obj = { index: bound, history: combined };
@@ -106,8 +104,8 @@ export const SwitchRouter = function SwitchRouter(merged) {
     let num = 0;
     if (undefined !== closure_1_0) {
       num = 0;
-      if (routeNames.includes(tmp)) {
-        num = routeNames.indexOf(tmp);
+      if (routeNames.includes(closure_1_0)) {
+        num = routeNames.indexOf(closure_1_0);
       }
     }
     const mapped = routeNames.map((name) => {
@@ -216,7 +214,7 @@ export const SwitchRouter = function SwitchRouter(merged) {
       }
       return found;
     });
-    const set = new Set(mapped.map((key) => key.key));
+    new Set(mapped.map((key) => key.key));
     if (null == index.routes[index.index]) {
       const _Error = Error;
       let _HermesInternal = HermesInternal;

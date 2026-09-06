@@ -5,7 +5,7 @@
 export default (arg0, arg1, arg2, arg3) => {
   let obj;
   _require = arg3;
-  const tmp3 = new require("module_14016")(arg0, arg3);
+  let tmp3 = new require("module_14016")(arg0, arg3);
   const tmp4 = new require("module_14045")(arg1, arg3);
   if (">" === arg2) {
     dependencyMap = tmp(14036);
@@ -42,7 +42,7 @@ export default (arg0, arg1, arg2, arg3) => {
         let item = arr.forEach((semver) => {
           let tmp = semver;
           if (semver.semver === closure_0(semver[7]).ANY) {
-            tmp = new closure_0(semver[7])(">=0.0.0");
+            tmp = new tmp2(tmp3[7])(">=0.0.0");
           }
           let tmp6 = closure_0;
           if (!closure_0) {
@@ -59,6 +59,8 @@ export default (arg0, arg1, arg2, arg3) => {
           } else if (React2(tmp.semver, semver.semver, require)) {
             semver = tmp;
           }
+          tmp2 = closure_0;
+          tmp3 = semver;
         });
         if (_require.operator !== str) {
           if (_require.operator !== str3) {

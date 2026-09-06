@@ -7,7 +7,7 @@ function swizzle(arg0) {
   let items = [];
   let num = 0;
   let tmp = items;
-  if (0 < arg0.length) {
+  if (0 < length) {
     while (!_mod5647(arg0[num])) {
       let arr = items.push(tmp2);
       num = num + 1;
@@ -26,7 +26,6 @@ swizzle.wrap = (arg0) => {
   return () => {
     if (typeof swizzle === "function") {
       const items = [];
-      const length = arguments.length;
       let num = 0;
       let arr2 = items;
       let tmp2 = items;

@@ -4,8 +4,8 @@
 import _mod905 from "module_905" /* 905 */;
 import _mod909 from "module_909" /* 909 */;
 import observe from "observe" /* 911 */;
+import bindReporter from "bindReporter" /* 912 */;
 
-const bindReporter = tmp(912);
 require = arg1;
 const dependencyMap = arg6;
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });

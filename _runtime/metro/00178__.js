@@ -20,13 +20,13 @@ function mapAllSettled(value) {
   if (value) {
     if (typeof value === "object") {
       if (value instanceof noop) {
-        if (value.then === tmp(177).prototype.then) {
+        if (value.then === noop.prototype.then) {
           return value.then(onSettledFulfill, onSettledReject);
         }
       }
       const then = value.then;
       if (typeof then === "function") {
-        let tmpResult = tmp(177);
+        let tmpResult = noop;
         tmpResult = new tmpResult(then.bind(value));
         return tmpResult.then(onSettledFulfill, onSettledReject);
       }
@@ -115,7 +115,7 @@ noop.all = (arg0) => {
       if (_y) {
         if (typeof _y === "object") {
           if (_y instanceof closure_0(dependencyMap[0])) {
-            if (_y.then === tmp(tmp2[0]).prototype.then) {
+            if (_y.then === tmp(dependencyMap[0]).prototype.then) {
               let tmp13 = _y;
               let promise2 = _y;
               if (3 === _y._y) {
@@ -141,7 +141,7 @@ noop.all = (arg0) => {
           }
           const then = _y.then;
           if (typeof then === "function") {
-            let tmpResult = tmp(tmp2[0]);
+            let tmpResult = tmp(dependencyMap[0]);
             tmpResult = new tmpResult(then.bind(_y));
             tmpResult.then((result) => {
               res(closure_0, result);
@@ -150,10 +150,11 @@ noop.all = (arg0) => {
         }
       }
       closure_0[arg0] = _y;
-      diff = diff - 1;
+      const diff = length - 1;
       if (0 == diff) {
         closure_0(tmp3);
       }
+      length = diff;
     }
     if (0 === closure_0.length) {
       return fn([]);
@@ -209,19 +210,20 @@ noop.any = function promiseAny(arg0) {
       if (items.length === arr.length) {
         let aggregateError = globalThis;
         if (typeof globalThis.AggregateError === "function") {
-          aggregateError = new aggregateError.AggregateError(tmp, "All promises were rejected");
+          aggregateError = new aggregateError.AggregateError(items, "All promises were rejected");
           let tmp8 = aggregateError;
         } else {
           const _Error = Error;
           const error = new Error("All promises were rejected");
           tmp8 = error;
           error.name = "AggregateError";
-          error.errors = tmp;
+          error.errors = items;
         }
         closure_1(tmp8);
       }
+      arr = items.push(arg0);
     }
-    const arr = iterableToArray(closure_0);
+    let arr = iterableToArray(closure_0);
     c3 = false;
     const items = [];
     if (0 === arr.length) {

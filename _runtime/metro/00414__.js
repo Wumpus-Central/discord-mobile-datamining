@@ -46,11 +46,10 @@ const memoResult = memo(function Pressable(ref) {
   const tmp12 = _modDef415(android_ripple, tmp8);
   closure_19 = tmp12;
   const tmp11 = _modDef334(ref.ref, tmp8);
-  const tmp13 = _slicedToArray;
   [tmp15, tmp16] = _slicedToArray(React5(false), 2);
   const items = [tmp15, tmp16];
   const tmp14 = _slicedToArray(React5(false), 2);
-  [tmp18, tmp19] = tmp13(items, 2);
+  [tmp18, tmp19] = _slicedToArray(items, 2);
   c20 = tmp19;
   let tmp20 = typeof children === "function";
   if (typeof children !== "function") {
@@ -169,7 +168,7 @@ const memoResult = memo(function Pressable(ref) {
   obj.accessibilityValue = range;
   obj.hitSlop = hitSlop;
   const items1 = [android_disableSound, tmp12, blockNativeResponder, cancelable, delayHoverIn, delayHoverOut, delayLongPress, disabled, hitSlop, onBlur, onFocus, onHoverIn, onHoverOut, onLongPress, onPress, onPressIn, onPressMove, onPressOut, pressRetentionOffset, tmp19, tmp20, unstable_pressDelay];
-  const tmp13Result = tmp13(items, 2);
+  const tmp13Result = _slicedToArray(items, 2);
   const tmp41 = hasOwnProperty(() => ({
     cancelable,
     disabled,
@@ -267,7 +266,6 @@ const memoResult = memo(function Pressable(ref) {
     },
     blockNativeResponder
   }), items1));
-  const tmp43 = React6;
   const merged4 = Object.assign(obj);
   const merged5 = Object.assign(tmp42);
   obj1.ref = tmp11;
@@ -284,7 +282,7 @@ const memoResult = memo(function Pressable(ref) {
   }
   const items2 = [childrenResult, null];
   obj1.children = items2;
-  return tmp43(ViewDefault, obj1);
+  return React6(ViewDefault, obj1);
 });
 memoResult.displayName = "Pressable";
 

@@ -139,11 +139,10 @@ const exports = arg5;
           items1[num3 >> 2] = sum + tmp5 + (substr.charCodeAt(num3 + 3) << 24);
           num3 = num3 + 4;
         } while (num3 < 64);
-        let tmpResult = tmp(items, items1);
+        let tmpResult = md5cycle(items, items1);
         num = num + 64;
         num2 = num;
       } while (num <= length);
-      tmp = md5cycle;
     }
     const substr1 = hello.substring(num2 - 64);
     const items2 = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
@@ -466,11 +465,10 @@ const exports = arg5;
           items[num3 >> 2] = subarrayResult[num3] + (subarrayResult[num3 + 1] << 8) + (subarrayResult[num3 + 2] << 16) + (subarrayResult[num3 + 3] << 24);
           num3 = num3 + 4;
         } while (num3 < 64);
-        let tmp5Result = tmp5(tmp6, items);
+        let tmp5Result = md5cycle(tmp6, items);
         num = num + 64;
         num2 = num;
       } while (num <= length);
-      tmp5 = md5cycle;
     }
     const diff = num2 - 64;
     if (diff < uint8Array.length) {
@@ -575,11 +573,10 @@ const exports = arg5;
           items1[num3 >> 2] = subarrayResult[num3] + (subarrayResult[num3 + 1] << 8) + (subarrayResult[num3 + 2] << 16) + (subarrayResult[num3 + 3] << 24);
           num3 = num3 + 4;
         } while (num3 < 64);
-        let tmpResult = tmp(items, items1);
+        let tmpResult = md5cycle(items, items1);
         num = num + 64;
         num2 = num;
       } while (num <= length);
-      tmp = md5cycle;
     }
     const diff = num2 - 64;
     if (diff < uint8Array.length) {

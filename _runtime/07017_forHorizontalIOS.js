@@ -212,11 +212,10 @@ export const forFadeFromRightAndroid = function forFadeFromRightAndroid(closing)
   if (next) {
     const progress2 = next.progress;
     let obj = { inputRange: [0, 1], outputRange: [0, -96], extrapolate: "clamp" };
-    num = tmp(progress2.interpolate(obj), inverted);
+    num = React4(progress2.interpolate(obj), inverted);
   }
   obj = { cardStyle: null };
   obj = { opacity: null, transform: null };
-  tmp = React4;
   const tmp2 = React4(progress.interpolate({ inputRange: [0, 1], outputRange: [96, 0], extrapolate: "clamp" }), inverted);
   const progress3 = current.progress;
   obj.opacity = conditional.conditional(closing.closing, progress3.interpolate({ inputRange: [0, 1], outputRange: [0, 1], extrapolate: "clamp" }), current.progress);

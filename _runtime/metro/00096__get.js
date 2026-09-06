@@ -10,7 +10,7 @@ function _get() {
       const _Reflect = Reflect;
       exports = get.bind();
     }
-    tmp.exports = exports;
+    module.exports = exports;
     const apply = exports.apply;
     if (typeof apply === "unknown") {
       let applyArgumentsResult = HermesBuiltin.applyArguments(null);

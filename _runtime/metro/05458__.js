@@ -61,10 +61,9 @@ if ((function shouldUseNative() {
         let _Object = Object;
         let ObjectResult1 = Object(arguments[num2]);
         for (const key10010 in ObjectResult1) {
-          let tmp16 = hasOwnProperty;
           let call2 = hasOwnProperty.call;
           if (typeof call2 === "unknown") {
-            let call2Result = tmp16(key10010);
+            let call2Result = hasOwnProperty(key10010);
           } else {
             call2Result = call2(ObjectResult1, key10010);
           }
@@ -79,10 +78,9 @@ if ((function shouldUseNative() {
         if (getOwnPropertySymbols) {
           let arr = getOwnPropertySymbols(ObjectResult1);
           for (let num = 0; num < arr.length; num = num + 1) {
-            let tmp5 = propertyIsEnumerable;
             let call = propertyIsEnumerable.call;
             let tmp6 = arr[num];
-            if (typeof call === "unknown" ? tmp5(tmp6) : call(ObjectResult1, tmp6)) {
+            if (typeof call === "unknown" ? propertyIsEnumerable(tmp6) : call(ObjectResult1, tmp6)) {
               ObjectResult[arr[num]] = ObjectResult1[arr[num]];
             }
           }

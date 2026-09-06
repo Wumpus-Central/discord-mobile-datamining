@@ -28,9 +28,8 @@ export const useModal = (props) => {
       if (props.onConfirm) {
         const _Date = Date;
         date = new Date(date);
-        obj.onConfirm(date);
+        props.onConfirm(date);
       }
-      obj = props;
     }
   }, items);
   closure_6 = tmp3;
@@ -43,9 +42,8 @@ export const useModal = (props) => {
     if (id === id) {
       closure_4.current = true;
       if (props.onCancel) {
-        obj.onCancel();
+        props.onCancel();
       }
-      obj = props;
     }
   }, items1);
   closure_7 = tmp4;
@@ -54,17 +52,17 @@ export const useModal = (props) => {
     let flag = false;
     if (props.modal) {
       flag = false;
-      if (tmp.open) {
+      if (props.open) {
         let open;
-        if (tmp2 != null) {
-          open = tmp2.open;
+        if (current != null) {
+          open = current.open;
         }
         flag = !open;
       }
     }
     if (flag) {
       closure_4.current = false;
-      closure_4.openPicker(tmp, closure_6, closure_7);
+      closure_4.openPicker(props, closure_6, closure_7);
     }
   }, items2);
   const items3 = [current, props];
@@ -74,8 +72,8 @@ export const useModal = (props) => {
       flag = false;
       if (!props.open) {
         let open;
-        if (tmp != null) {
-          open = tmp.open;
+        if (current != null) {
+          open = current.open;
         }
         flag = open && !tmp3;
         const tmp6 = open && !tmp3;

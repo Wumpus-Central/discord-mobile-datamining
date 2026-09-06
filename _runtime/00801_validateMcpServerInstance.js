@@ -2,6 +2,7 @@
 
 // Module 801 (validateMcpServerInstance)
 import _mod688 from "module_688" /* 688 */;
+import consoleSandbox from "consoleSandbox" /* 689 */;
 
 require = arg1;
 const dependencyMap = arg6;
@@ -91,11 +92,10 @@ export const validateMcpServerInstance = function validateMcpServerInstance(obj)
   if (!flag) {
     flag = false;
     if (_mod688.DEBUG_BUILD) {
-      const debug = tmp(689).debug;
+      const debug = consoleSandbox.debug;
       debug.warn("Did not patch MCP server. Interface is incompatible.");
       flag = false;
     }
-    tmp = require;
   }
   return flag;
 };

@@ -2,6 +2,7 @@
 
 // Module 1781
 import _mod1639 from "module_1639" /* 1639 */;
+import _mod1647 from "module_1647" /* 1647 */;
 import _mod1661 from "module_1661" /* 1661 */;
 import freezeObjectInDev from "freezeObjectInDev" /* 1666 */;
 import _mod1782 from "module_1782" /* 1782 */;
@@ -23,7 +24,6 @@ export const useHandler = function useHandler(memoizedGestureCallbacks, items10)
   }, []);
   ({ context, savedDependencies } = tmp.current);
   for (const key10024 in arg0) {
-    let tmp14 = require;
     let obj8 = _mod1661;
     if (obj8.isWorkletFunction(arg0[key10024])) {
       continue;
@@ -31,7 +31,7 @@ export const useHandler = function useHandler(memoizedGestureCallbacks, items10)
       let tmp5 = new.target;
       let str = "Passed a function that is not a worklet. Please provide a worklet function.";
       let tmp6 = new.target;
-      let reanimatedError = new tmp14(1647).ReanimatedError("Passed a function that is not a worklet. Please provide a worklet function.");
+      let reanimatedError = new _mod1647.ReanimatedError("Passed a function that is not a worklet. Please provide a worklet function.");
       throw reanimatedError;
     }
   }

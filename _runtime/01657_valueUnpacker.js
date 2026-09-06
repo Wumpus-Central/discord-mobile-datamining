@@ -8,10 +8,10 @@ function valueUnpacker(__workletHash, arg1, arg2) {
   if (undefined === __workletsCache) {
     const _Map = Map;
     const map = new Map();
-    obj.__workletsCache = map;
+    global.__workletsCache = map;
     const _WeakMap = WeakMap;
     const weakMap = new WeakMap();
-    obj.__handleCache = weakMap;
+    global.__handleCache = weakMap;
     __handleCache = weakMap;
     __workletsCache = map;
   }
@@ -24,13 +24,13 @@ function valueUnpacker(__workletHash, arg1, arg2) {
       return bindResult;
     } else {
       __initData = __workletHash.__initData;
-      if (obj.evalWithSourceMap) {
-        let evalWithSourceMapResult = obj.evalWithSourceMap(`(${__initData.code}
+      if (global.evalWithSourceMap) {
+        let evalWithSourceMapResult = global.evalWithSourceMap(`(${__initData.code}
   )`, __initData.location, __initData.sourceMap);
-      } else if (obj.evalWithSourceUrl) {
+      } else if (global.evalWithSourceUrl) {
         const _HermesInternal2 = HermesInternal;
         const text = `(${__initData.code}`;
-        evalWithSourceMapResult = obj.evalWithSourceUrl(`${`(${__initData.code}`}
+        evalWithSourceMapResult = global.evalWithSourceUrl(`${`(${__initData.code}`}
   )`, "worklet_" + __workletHash);
       } else {
         const text1 = `${"(" + __initData.code}

@@ -16,7 +16,7 @@ export const convertPercentageColor = (str) => {
     if (!re0.test(replaced)) {
       return str;
     } else {
-      const match = obj2.exec(replaced);
+      const match = re0.exec(replaced);
       if (!match) {
         const _console = console;
         const _HermesInternal = HermesInternal;
@@ -27,11 +27,11 @@ export const convertPercentageColor = (str) => {
         const _Math = Math;
         const _parseFloat = parseFloat;
         const rounded = Math.round(2.55 * parseFloat(tmp4));
-        if (typeof tmp7 === "function") {
+        if (typeof percentTo255 === "function") {
           const _Math2 = Math;
           const _parseFloat2 = parseFloat;
           const rounded1 = Math.round(2.55 * parseFloat(tmp5));
-          if (typeof tmp7 === "function") {
+          if (typeof percentTo255 === "function") {
             const _Math3 = Math;
             const _parseFloat3 = parseFloat;
             const _HermesInternal3 = HermesInternal;
@@ -60,6 +60,5 @@ export const convertPercentageColor = (str) => {
         throw new TypeError("Trying to call a non-function");
       }
     }
-    obj2 = re0;
   }
 };

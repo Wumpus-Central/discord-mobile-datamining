@@ -42,8 +42,8 @@ export const useAnimatedRef = module_1639 ? (function useAnimatedRefWeb() {
         closure_3.current = map;
         if (tag.size) {
           tag = undefined;
-          if (tmp3 != null) {
-            getTag = tmp3.getTag;
+          if (closure_3 != null) {
+            const getTag = closure_3.getTag;
             if (getTag != null) {
               tag = getTag();
             }
@@ -65,8 +65,8 @@ export const useAnimatedRef = module_1639 ? (function useAnimatedRefWeb() {
     fun.observe = (fn) => {
       closure_0 = fn;
       let tag;
-      if (getTag != null) {
-        getTag = getTag.getTag;
+      if (closure_3 != null) {
+        const getTag = closure_3.getTag;
         if (getTag != null) {
           tag = getTag();
         }
@@ -133,9 +133,9 @@ export const useAnimatedRef = module_1639 ? (function useAnimatedRefWeb() {
     return first1.value;
   };
   closure_129_3 = undefined;
-  const current2 = getTag(new Map()).current;
-  closure_129_2 = getTag(-1);
-  const tmp4 = getTag(null);
+  const current2 = closure_3(new Map()).current;
+  closure_129_2 = closure_3(-1);
+  const tmp4 = closure_3(null);
   if (!tmp4.current) {
     function fun(map) {
       viewName = map;
@@ -145,8 +145,8 @@ export const useAnimatedRef = module_1639 ? (function useAnimatedRefWeb() {
         closure_3.current = map;
         if (tag.size) {
           tag = undefined;
-          if (tmp3 != null) {
-            getTag = tmp3.getTag;
+          if (closure_3 != null) {
+            const getTag = closure_3.getTag;
             if (getTag != null) {
               tag = getTag();
             }
@@ -169,8 +169,8 @@ export const useAnimatedRef = module_1639 ? (function useAnimatedRefWeb() {
     fun.observe = (fn) => {
       closure_0 = fn;
       let tag;
-      if (getTag != null) {
-        getTag = getTag.getTag;
+      if (closure_3 != null) {
+        const getTag = closure_3.getTag;
         if (getTag != null) {
           tag = getTag();
         }

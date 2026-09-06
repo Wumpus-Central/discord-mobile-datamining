@@ -214,17 +214,16 @@ let items = [
         const parentNode = require("NativeDOMCxx").getParentNode(nativeNodeReference);
         let tmp6 = null;
         if (null != parentNode) {
-          let publicInstanceFromInstanceHandle = tmp(136).getPublicInstanceFromInstanceHandle(parentNode);
+          let publicInstanceFromInstanceHandle = ReadOnlyNode(136).getPublicInstanceFromInstanceHandle(parentNode);
           if (publicInstanceFromInstanceHandle == null) {
             publicInstanceFromInstanceHandle = null;
           }
           tmp6 = publicInstanceFromInstanceHandle;
-          const tmpResult = tmp(136);
+          const tmpResult = ReadOnlyNode(136);
         }
         return tmp6;
       }
       const obj = ReadOnlyNode(136);
-      tmp = ReadOnlyNode;
     }
   },
   {

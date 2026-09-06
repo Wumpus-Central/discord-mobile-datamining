@@ -5,7 +5,7 @@ import _mod11226 from "module_11226" /* 11226 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
-let closure_3 = async function _pickDirectory(arg0, value) {
+let closure_3 = async function _pickDirectory(arg0) {
   if (c1 === 2) {
     c1 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");

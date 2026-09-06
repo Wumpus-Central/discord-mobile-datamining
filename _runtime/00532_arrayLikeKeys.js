@@ -2,6 +2,10 @@
 
 // Module 532 (arrayLikeKeys)
 import _mod514 from "module_514" /* 514 */;
+import baseIsArguments from "baseIsArguments" /* 533 */;
+import _mod536 from "module_536" /* 536 */;
+import _mod538 from "module_538" /* 538 */;
+import baseTimes from "baseTimes" /* 542 */;
 import _mod543 from "module_543" /* 543 */;
 
 
@@ -9,14 +13,14 @@ export default function arrayLikeKeys(obj, arg1) {
   const tmp3 = _mod514(obj);
   let tmp4 = !tmp3;
   if (!tmp3) {
-    tmp4 = tmp(533)(obj);
+    tmp4 = baseIsArguments(obj);
   }
   let tmp5 = !tmp3;
   if (!tmp3) {
     tmp5 = !tmp4;
   }
   if (tmp5) {
-    tmp5 = tmp(536)(obj);
+    tmp5 = _mod536(obj);
   }
   let tmp6 = !tmp3;
   if (!tmp3) {
@@ -26,7 +30,7 @@ export default function arrayLikeKeys(obj, arg1) {
     tmp6 = !tmp5;
   }
   if (tmp6) {
-    tmp6 = tmp(538)(obj);
+    tmp6 = _mod538(obj);
   }
   let tmp7 = tmp3;
   if (!tmp3) {
@@ -40,7 +44,7 @@ export default function arrayLikeKeys(obj, arg1) {
   }
   if (tmp7) {
     const _String = String;
-    let items = tmp(542)(obj.length, String);
+    let items = baseTimes(obj.length, String);
   } else {
     items = [];
   }
@@ -91,10 +95,9 @@ export default function arrayLikeKeys(obj, arg1) {
       }
       continue;
     } else {
-      let tmp10 = hasOwnProperty;
       let call = hasOwnProperty.call;
       if (typeof call === "unknown") {
-        let callResult = tmp10(key10033);
+        let callResult = hasOwnProperty(key10033);
       } else {
         callResult = call(arg0, key10033);
       }

@@ -50,7 +50,7 @@ const memoResult = memo(function BottomSheetBodyComponent(children) {
   return <View style={animatedStyle(() => {
     const items = [style, _mod6814.styles.container, animatedStyle];
     return items;
-  }, items1)} collapsable>{arg0.children}</View>;
+  }, items1)} collapsable>{children.children}</View>;
 });
 memoResult.displayName = "BottomSheetBody";
 

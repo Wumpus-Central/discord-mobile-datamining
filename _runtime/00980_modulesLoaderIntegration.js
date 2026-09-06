@@ -82,7 +82,7 @@ export () => {
     },
     processEvent: (arg0) => {
       closure_0 = arg0;
-      return fn(undefined, undefined, undefined, function*(arg0, value) {
+      return fn(undefined, undefined, undefined, function*() {
         if (c5 === 2) {
           c5 = 3;
           throw new TypeError("Generator functions may not be called on executing generators");

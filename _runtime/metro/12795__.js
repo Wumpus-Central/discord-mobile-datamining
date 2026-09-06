@@ -2,28 +2,30 @@
 
 // Module 12795
 import _mod12796 from "module_12796" /* 12796 */;
+import _mod12797 from "module_12797" /* 12797 */;
+import stackParserFromStackParserOptions from "stackParserFromStackParserOptions" /* 12800 */;
 
 require = arg1;
 const dependencyMap = {};
 let closure_3 = {};
 
-export const addHandler = function addHandler(arg0, arg1) {
-  dependencyMap[arg0] = dependencyMap[arg0] || [];
-  let arr = tmp[arg0];
-  arr = arr.push(arg1);
+export const addHandler = function addHandler(console, errorCallback) {
+  dependencyMap[console] = dependencyMap[console] || [];
+  let arr = dependencyMap[console];
+  arr = arr.push(errorCallback);
+  const tmp2 = dependencyMap[console] || [];
 };
-export const maybeInstrument = function maybeInstrument(arg0, fn) {
-  if (!closure_3[arg0]) {
-    tmp2[arg0] = true;
+export const maybeInstrument = function maybeInstrument(console, fn) {
+  if (!closure_3[console]) {
+    tmp2[console] = true;
     try {
       fn();
     } catch (tmp5) {
       if (_mod12796.DEBUG_BUILD) {
-        const logger = tmp6(12797).logger;
+        const logger = _mod12797.logger;
         const _HermesInternal = HermesInternal;
         logger.error("Error while instrumenting " + tmp, tmp5);
       }
-      tmp6 = require;
     }
   }
 };
@@ -45,9 +47,9 @@ export const triggerHandlers = function triggerHandlers(arg0, arg1) {
         tmp15(arg1);
       } catch (tmp18) {
         if (_mod12796.DEBUG_BUILD) {
-          const logger = tmp19(12797).logger;
-          logger.error(tmp2 + tmp6 + tmp3 + tmp19(12800).getFunctionName(tmp7) + tmp4, tmp18);
-          const tmp19Result = tmp19(12800);
+          const logger = _mod12797.logger;
+          logger.error(tmp2 + tmp6 + tmp3 + stackParserFromStackParserOptions.getFunctionName(tmp7) + tmp4, tmp18);
+          const tmp19Result = stackParserFromStackParserOptions;
         }
       }
     }

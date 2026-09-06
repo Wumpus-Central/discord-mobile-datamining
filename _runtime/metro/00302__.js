@@ -5,6 +5,7 @@ import nullthrowsDefault from "nullthrows" /* 70 */;
 import ViewDefault from "View" /* 108 */;
 import dismissKeyboardDefault from "dismissKeyboard" /* 303 */;
 import _modDef304 from "module_304" /* 304 */;
+import _modDef309 from "module_309" /* 309 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
@@ -62,7 +63,7 @@ class DrawerLayoutAndroid {
     tmp3Result.state = { drawerOpened: false };
     tmp3Result._onDrawerSlide = (arg0) => {
       if (closure_0.props.onDrawerSlide) {
-        const props = tmp.props;
+        const props = closure_0.props;
         props.onDrawerSlide(arg0);
       }
       if ("on-drag" === closure_0.props.keyboardDismissMode) {
@@ -117,34 +118,34 @@ const entry = {
     const items1 = [props.renderNavigationView(), ];
     let tmp8 = tmp2;
     if (tmp2) {
-      obj = { style: tmp7.drawerStatusBar };
-      tmp8 = React7(tmp4(108), obj);
+      obj = { style: drawerSubview.drawerStatusBar };
+      tmp8 = React7(ViewDefault, obj);
     }
     items1[1] = tmp8;
     obj.children = items1;
-    let tmp3Result = tmp3(ViewDefault, obj);
-    obj = { style: tmp7.mainSubview, collapsable: false, children: null };
+    let tmp3Result = closure_1_10(ViewDefault, obj);
+    obj = { style: drawerSubview.mainSubview, collapsable: false, children: null };
     let tmp12 = tmp2;
-    let tmp4Result = tmp4(108);
+    let tmp4Result = ViewDefault;
     if (tmp2) {
       const obj1 = { translucent: true, backgroundColor: self.props.statusBarBackgroundColor };
-      tmp12 = React7(tmp4(304), obj1);
+      tmp12 = React7(_modDef304, obj1);
     }
     const items2 = [tmp12, , ];
     if (tmp2) {
       const obj2 = { style: null };
-      const items3 = [tmp7.statusBar, ];
+      const items3 = [drawerSubview.statusBar, ];
       const obj3 = { backgroundColor: self.props.statusBarBackgroundColor };
       items3[1] = obj3;
       obj2.style = items3;
-      tmp2 = React7(tmp4(108), obj2);
+      tmp2 = React7(ViewDefault, obj2);
     }
     items2[1] = tmp2;
     items2[2] = self.props.children;
     obj.children = items2;
-    tmp3Result = tmp3(tmp4Result, obj);
+    tmp3Result = closure_1_10(tmp4Result, obj);
     const obj4 = {};
-    tmp4Result = tmp4(309);
+    tmp4Result = _modDef309;
     const merged = Object.assign(tmp);
     obj4.ref = self._nativeRef;
     obj4.drawerBackgroundColor = str;

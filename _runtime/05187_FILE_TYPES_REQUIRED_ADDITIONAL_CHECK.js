@@ -74,9 +74,9 @@ let items = [
           let str6 = "flv";
           if (!FileTypes(5188).isFLV(fileChunk)) {
             let str8 = "mp4";
-            if (tmp8(5188).isM4V(fileChunk)) {
+            if (FileTypes(5188).isM4V(fileChunk)) {
               str8 = "mp4";
-              if (!tmp8(5188).isHEIC(fileChunk)) {
+              if (!FileTypes(5188).isHEIC(fileChunk)) {
                 str8 = "m4v";
               }
             }
@@ -94,7 +94,7 @@ let items = [
         if ("mkv" !== result) {
           let str4;
           if ("webm" === result) {
-            if (tmp3(5188).isWEBM(fileChunk)) {
+            if (FileTypes(5188).isWEBM(fileChunk)) {
               str4 = "webm";
             }
           }
@@ -164,7 +164,7 @@ let items = [
       const call = hasOwnProperty.call;
       const formatted = avif.toUpperCase();
       if (typeof call === "unknown" ? hasOwnProperty(formatted) : call(FileTypes, formatted)) {
-        if (obj.detectSignature(fileChunk, obj.getSignaturesByName(avif.toUpperCase()))) {
+        if (FileTypes.detectSignature(fileChunk, FileTypes.getSignaturesByName(avif.toUpperCase()))) {
           return true;
         }
       }

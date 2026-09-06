@@ -1,9 +1,9 @@
 // === Module 172: ? ===
 
 // Module 172
+import _possibleConstructorReturnDefault from "_possibleConstructorReturn" /* 93 */;
 import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
-import _possibleConstructorReturn from "_possibleConstructorReturn" /* 93 */;
 import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import _get from "_get" /* 96 */;
 import _inherits from "_inherits" /* 98 */;
@@ -29,6 +29,7 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
+_possibleConstructorReturnDefault;
 let closure_6 = _classPrivateFieldKey("fetchStart");
 let closure_7 = _classPrivateFieldKey("requestStart");
 let closure_8 = _classPrivateFieldKey("connectStart");

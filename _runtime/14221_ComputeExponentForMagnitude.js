@@ -15,9 +15,9 @@ export const ComputeExponentForMagnitude = function ComputeExponentForMagnitude(
   } else if ("scientific" === notation) {
     return floorResult.toNumber();
   } else if ("engineering" === notation) {
-    const divResult = floorResult.div(3);
     floorResult = floorResult.div(3).floor();
-    return floorResult.div(3).floor().times(3).toNumber();
+    const divResult = floorResult.div(3);
+    return floorResult.times(3).toNumber();
   } else {
     _mod14206.invariant("compact" === notation, "Invalid notation");
     if ("currency" === style.style) {

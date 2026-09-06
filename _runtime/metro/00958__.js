@@ -89,10 +89,9 @@ function storePreviousTraceInSessionStorage(arg0) {
     const result = sessionStorage.setItem(sentry_previous_trace, JSON.stringify(arg0));
   } catch (tmp9) {
     if (_mod937.DEBUG_BUILD) {
-      const debug = tmp10(682).debug;
+      const debug = _mod682.debug;
       debug.warn("Could not store previous trace in sessionStorage", tmp9);
     }
-    tmp10 = require;
   }
 }
 function getPreviousTraceFromSessionStorage() {
@@ -136,6 +135,7 @@ export const linkTraces = function linkTraces(on, linkPreviousTrace) {
       }
       const tmpResult = _mod682;
     }
+    obj = _mod682;
   });
   c2 = true;
   if (linkPreviousTrace.consistentTraceSampling) {

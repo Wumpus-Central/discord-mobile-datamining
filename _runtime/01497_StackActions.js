@@ -52,16 +52,16 @@ const StackActions = {
 };
 
 export { StackActions };
-export const StackRouter = function StackRouter(arg0) {
-  _require = arg0;
+export const StackRouter = function StackRouter(initialRouteName) {
+  _require = initialRouteName;
   const actionCreators = {};
   let merged = Object.assign(require("BaseRouter").BaseRouter);
   actionCreators.type = "stack";
   actionCreators.getInitialState = function getInitialState(routeNames) {
     routeNames = routeNames.routeNames;
-    if (undefined !== closure_0.initialRouteName) {
-      if (routeNames.includes(tmp2.initialRouteName)) {
-        let initialRouteName = tmp2.initialRouteName;
+    if (undefined !== initialRouteName.initialRouteName) {
+      if (routeNames.includes(initialRouteName.initialRouteName)) {
+        initialRouteName = initialRouteName.initialRouteName;
       }
       obj = { stale: false, type: "stack", key: null, index: 0, routeNames: null, preloadedRoutes: null, routes: null };
       const _HermesInternal = HermesInternal;
@@ -147,9 +147,9 @@ export const StackRouter = function StackRouter(arg0) {
         obj.preloadedRoutes = mapped1;
         return obj;
       } else {
-        let arr = closure_0;
-        if (undefined === closure_0.initialRouteName) {
-          let initialRouteName = routeNames[0];
+        let arr = initialRouteName;
+        if (undefined === initialRouteName.initialRouteName) {
+          initialRouteName = routeNames[0];
           obj = { key: null, name: null, params: null };
           let _HermesInternal = HermesInternal;
           obj.key = "" + initialRouteName + "-" + nanoid.nanoid();
@@ -181,9 +181,9 @@ export const StackRouter = function StackRouter(arg0) {
       obj.index = Math.min(routes.index, found.length - 1);
       return obj;
     } else {
-      let arr = closure_0;
-      if (undefined === closure_0.initialRouteName) {
-        let initialRouteName = routeNames[0];
+      let arr = initialRouteName;
+      if (undefined === initialRouteName.initialRouteName) {
+        initialRouteName = routeNames[0];
         obj = { key: null, name: null, params: null };
         const _HermesInternal = HermesInternal;
         obj.key = "" + initialRouteName + "-" + nanoid.nanoid();
@@ -247,19 +247,21 @@ export const StackRouter = function StackRouter(arg0) {
               }
               return tmp;
             });
+            key = found;
             if (found) {
-              let tmp135Result = tmp135(1496);
+              let tmp135Result = _mod1496;
               obj = { action: type, routeParamList };
               const paramsFromAction = tmp135Result.createParamsFromAction(obj);
               if (found.params !== paramsFromAction) {
                 const obj1 = {};
                 let merged = Object.assign(found);
                 obj1.params = paramsFromAction;
+                key = obj1;
               }
             } else {
-              tmp135Result = tmp135(1498);
+              tmp135Result = _mod1498;
               let obj2 = { action: type, routeParamList };
-              tmp135Result.createRouteFromAction(obj2);
+              key = tmp135Result.createRouteFromAction(obj2);
             }
             let obj3 = {};
             const merged1 = Object.assign(key);
@@ -473,7 +475,7 @@ export const StackRouter = function StackRouter(arg0) {
                     });
                     let routeFromAction = found1;
                     if (found1) {
-                      let tmp43Result = tmp43(1496);
+                      let tmp43Result = _mod1496;
                       const obj14 = { action: type, routeParamList };
                       const paramsFromAction2 = tmp43Result.createParamsFromAction(obj14);
                       routeFromAction = found1;
@@ -484,7 +486,7 @@ export const StackRouter = function StackRouter(arg0) {
                         routeFromAction = obj15;
                       }
                     } else {
-                      tmp43Result = tmp43(1498);
+                      tmp43Result = _mod1498;
                       const obj16 = { action: type, routeParamList };
                       routeFromAction = tmp43Result.createRouteFromAction(obj16);
                     }

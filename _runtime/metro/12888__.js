@@ -22,8 +22,8 @@ export const generateIteratee = function generateIteratee(arg0) {
       if (fn) {
         if (root) {
           filename = root.filename;
-          if (0 === filename.indexOf(tmp13)) {
-            root.filename = filename.replace(tmp13, prefix);
+          if (0 === filename.indexOf(root)) {
+            root.filename = filename.replace(root, prefix);
           }
         }
       } else if (isMatch) {
@@ -35,13 +35,12 @@ export const generateIteratee = function generateIteratee(arg0) {
         }
         const obj2 = _mod12889;
         if (root) {
-          let relativeResult = obj2.relative(tmp7, replaced);
+          let relativeResult = obj2.relative(root, replaced);
         } else {
           relativeResult = obj2.basename(replaced);
         }
         const _HermesInternal = HermesInternal;
         root.filename = "" + prefix + relativeResult;
-        tmp7 = root;
       }
       return root;
     } else {
@@ -76,8 +75,8 @@ export const rewriteFramesIntegration = setupIntegration.defineIntegration(() =>
         if (fn) {
           if (root) {
             filename = root.filename;
-            if (0 === filename.indexOf(tmp13)) {
-              root.filename = filename.replace(tmp13, prefix);
+            if (0 === filename.indexOf(root)) {
+              root.filename = filename.replace(root, prefix);
             }
           }
         } else if (isMatch) {
@@ -89,13 +88,12 @@ export const rewriteFramesIntegration = setupIntegration.defineIntegration(() =>
           }
           const obj2 = _mod12889;
           if (root) {
-            let relativeResult = obj2.relative(tmp7, replaced);
+            let relativeResult = obj2.relative(root, replaced);
           } else {
             relativeResult = obj2.basename(replaced);
           }
           const _HermesInternal = HermesInternal;
           root.filename = "" + prefix + relativeResult;
-          tmp7 = root;
         }
         return root;
       } else {

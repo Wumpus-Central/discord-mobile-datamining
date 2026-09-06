@@ -89,28 +89,26 @@ function advanceTimers(arg0) {
       } else if (first.startTime > arg0) {
         break;
       } else {
-        let tmp12 = closure_7;
         let tmp13 = pop(closure_7);
         first.sortIndex = first.expirationTime;
-        let tmp14 = closure_6;
         let length = closure_6.length;
         closure_6.push(first);
         arr = closure_7;
         if (0 < length) {
           while (true) {
             let tmp3 = length - 1 >>> 1;
-            let tmp4 = tmp14[tmp3];
+            let tmp4 = closure_6[tmp3];
             let diff = tmp4.sortIndex - first.sortIndex;
             if (0 === diff) {
               diff = tmp4.id - first.id;
             }
-            arr = tmp12;
+            arr = closure_7;
             if (0 >= diff) {
               break;
             } else {
-              tmp14[tmp3] = first;
-              tmp14[length] = tmp4;
-              arr = tmp12;
+              closure_6[tmp3] = first;
+              closure_6[length] = tmp4;
+              arr = closure_7;
               length = tmp3;
               if (0 < tmp3) {
                 continue;
@@ -194,18 +192,16 @@ function performWorkUntilDeadline() {
                 if (typeof tmp25Result === "function") {
                   break;
                 } else {
-                  let tmp73 = closure_6;
                   if (_null === peek(closure_6)) {
-                    let tmp38 = pop(tmp73);
+                    let tmp38 = pop(closure_6);
                   }
                   let tmp41 = advanceTimers(tmp7);
-                  let tmp42 = tmp73;
+                  let tmp42 = closure_6;
                 }
               } else {
                 tmp42 = closure_6;
                 let tmp69 = pop(closure_6);
               }
-              let tmp43 = peek;
               let tmp44 = peek(tmp42);
               _null = tmp44;
               tmp21 = peek;
@@ -213,7 +209,7 @@ function performWorkUntilDeadline() {
                 if (tmp45.expirationTime <= tmp7) {
                   continue;
                 } else {
-                  tmp21 = tmp43;
+                  tmp21 = peek;
                   _null = tmp20;
                   tmp20 = tmp12;
                   priorityLevel = tmp12;
@@ -224,7 +220,7 @@ function performWorkUntilDeadline() {
             _null.callback = tmp25Result;
             advanceTimers(tmp7);
           } else {
-            tmp21 = tmp16;
+            tmp21 = peek;
           }
         }
         if (tmp20 === _null) {
@@ -234,7 +230,6 @@ function performWorkUntilDeadline() {
             tmp7 = requestHostTimeout(handleTimeout, tmp21Result.startTime - tmp7);
           }
         }
-        tmp16 = peek;
       } catch (tmp60) {
         _null = null;
         priorityLevel = tmp4;
@@ -419,7 +414,7 @@ if (typeof performance === "object") {
         if (0 < length) {
           while (true) {
             let tmp6 = length - 1 >>> 1;
-            let tmp7 = tmp30[tmp6];
+            let tmp7 = closure_6[tmp6];
             let diff2 = tmp7.sortIndex - obj.sortIndex;
             if (0 === diff2) {
               diff2 = tmp7.id - obj.id;
@@ -427,8 +422,8 @@ if (typeof performance === "object") {
             if (0 >= diff2) {
               break;
             } else {
-              tmp30[tmp6] = obj;
-              tmp30[length] = tmp7;
+              closure_6[tmp6] = obj;
+              closure_6[length] = tmp7;
               length = tmp6;
               if (0 >= tmp6) {
                 break;

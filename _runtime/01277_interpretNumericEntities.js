@@ -270,13 +270,12 @@ export default (str, allowEmptyArrays) => {
                 let str57 = "key";
                 let decoderResult1 = obj.decoder(arr11.slice(0, index1), obj.decoder, tmp10, "key");
                 let obj12 = obj(1278);
-                let tmp153 = parseArrayValue;
                 let substr = arr11.slice(index1 + 1);
                 let num11 = 0;
                 if (isArray(obj[decoderResult1])) {
                   num11 = obj[decoderResult1].length;
                 }
-                if (typeof tmp153 !== "function") {
+                if (typeof parseArrayValue !== "function") {
                   break;
                 } else {
                   if (substr) {
@@ -338,9 +337,8 @@ export default (str, allowEmptyArrays) => {
                 }
                 tmp39 = tmp41;
               }
-              let tmp42 = hasOwnProperty;
               let call = hasOwnProperty.call;
-              let tmp43 = typeof call === "unknown" ? tmp42(tmp30) : call(obj, tmp30);
+              let tmp43 = typeof call === "unknown" ? hasOwnProperty(tmp30) : call(obj, tmp30);
               if (tmp43) {
                 if ("combine" === obj.duplicates) {
                   let obj2 = obj(1278);
@@ -403,12 +401,11 @@ export default (str, allowEmptyArrays) => {
                 if (0 < obj.depth) {
                   while (true) {
                     if (!obj.plainObjects) {
-                      let tmp60 = hasOwnProperty;
                       let call3 = hasOwnProperty.call;
                       let _Object3 = Object;
                       let arr8 = tmp64[1];
                       let substr2 = arr8.slice(1, -1);
-                      if (typeof call3 === "unknown" ? tmp60(substr2) : call3(prototype2, substr2)) {
+                      if (typeof call3 === "unknown" ? hasOwnProperty(substr2) : call3(prototype2, substr2)) {
                         if (!obj.allowPrototypes) {
                           break;
                         }

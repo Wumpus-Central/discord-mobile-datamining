@@ -13,10 +13,9 @@ export const extend = function extend(arg0) {
     let tmp2 = substr[num2];
     if (tmp2) {
       for (const key10018 in tmp2) {
-        let tmp9 = hasOwnProperty;
         let call2 = hasOwnProperty.call;
         if (typeof call2 === "unknown") {
-          let call2Result = tmp9(key10018);
+          let call2Result = hasOwnProperty(key10018);
         } else {
           call2Result = call2(tmp2, key10018);
         }

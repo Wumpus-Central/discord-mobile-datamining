@@ -64,10 +64,10 @@ const items = [
     value: function innerPattern(option) {
       let _RegExp = RegExp;
       if (option.option.forwardDate) {
-        _RegExp = new _RegExp(tmp, "i");
+        _RegExp = new _RegExp(closure_6, "i");
       } else {
         const _HermesInternal = HermesInternal;
-        const combined = "(?:\u043F\u0440\u043E\u0442\u044F\u0433\u043E\u043C|\u043D\u0430 \u043F\u0440\u043E\u0442\u044F\u0437\u0456|\u043F\u0440\u043E\u0442\u044F\u0433\u043E\u043C|\u0443\u043F\u0440\u043E\u0434\u043E\u0432\u0436|\u0432\u043F\u0440\u043E\u0434\u043E\u0432\u0436)\\s*" + tmp;
+        const combined = "(?:\u043F\u0440\u043E\u0442\u044F\u0433\u043E\u043C|\u043D\u0430 \u043F\u0440\u043E\u0442\u044F\u0437\u0456|\u043F\u0440\u043E\u0442\u044F\u0433\u043E\u043C|\u0443\u043F\u0440\u043E\u0434\u043E\u0432\u0436|\u0432\u043F\u0440\u043E\u0434\u043E\u0432\u0436)\\s*" + closure_6;
         _RegExp = new _RegExp(combined, UKTimeUnitWithinFormatParser(10586).REGEX_PARTS.flags);
       }
       return _RegExp;

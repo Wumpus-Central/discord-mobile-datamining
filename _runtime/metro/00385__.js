@@ -111,12 +111,12 @@ let items = [
         self._timeout = setTimeout(function start() {
           closure_1._startTime = Date.now();
           if (!closure_1.__startAnimationIfNative(self)) {
-            if (0 === obj._duration) {
-              obj._onUpdate(obj._toValue);
-              obj.__notifyAnimationEnd({ finished: true });
+            if (0 === closure_1._duration) {
+              closure_1._onUpdate(closure_1._toValue);
+              closure_1.__notifyAnimationEnd({ finished: true });
             } else {
               const _requestAnimationFrame = requestAnimationFrame;
-              obj._animationFrame = requestAnimationFrame(() => closure_1_1.onUpdate());
+              closure_1._animationFrame = requestAnimationFrame(() => closure_1_1.onUpdate());
             }
           }
         }, self._delay);

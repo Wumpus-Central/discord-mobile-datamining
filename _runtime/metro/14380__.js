@@ -61,7 +61,7 @@ function createIntegerConversion(exponent, unsigned) {
           }
         }
         const _HermesInternal2 = HermesInternal;
-        const combined = "is outside the accepted range of " + tmp21 + " to " + closure_1 + ", inclusive";
+        const combined = "is outside the accepted range of " + closure_0 + " to " + closure_1 + ", inclusive";
         let str11 = "Value";
         if (obj) {
           str11 = "Value";
@@ -128,13 +128,13 @@ function createIntegerConversion(exponent, unsigned) {
             }
             let sum = result;
             if (num10 !== num9) {
-              sum = result + tmp9;
+              sum = result + closure_3;
             }
             let diff = sum;
             if (closure_2) {
               diff = sum;
               if (sum >= closure_4) {
-                diff = sum - tmp9;
+                diff = sum - closure_3;
               }
             }
             let tmp8 = diff;
@@ -148,20 +148,20 @@ function createIntegerConversion(exponent, unsigned) {
     }
   };
 }
-function convertCallbackFunction(fn, context) {
-  if (typeof fn !== "function") {
+function convertCallbackFunction(binder, localeData) {
+  if (typeof binder !== "function") {
     let str2 = "Value";
-    if (context) {
+    if (localeData) {
       str2 = "Value";
-      if (context.context) {
-        str2 = context.context;
+      if (localeData.context) {
+        str2 = localeData.context;
       }
     }
     const _HermesInternal = HermesInternal;
     const typeError = new TypeError("" + str2 + " " + "is not a function" + ".");
     throw typeError;
   } else {
-    return fn;
+    return binder;
   }
 }
 function isArrayBuffer(arg0) {
@@ -256,17 +256,17 @@ unsigned_long_long["unrestricted float"] = (arg0) => {
   }
   return froundResult;
 };
-unsigned_long_long.DOMString = (arg0, arg1) => {
-  let obj = arg1;
-  if (undefined === arg1) {
+unsigned_long_long.DOMString = (item10103, context) => {
+  let obj = context;
+  if (undefined === context) {
     obj = {};
   }
   if (obj.treatNullAsEmptyString) {
-    if (null === arg0) {
+    if (null === item10103) {
       return "";
     }
   }
-  if (typeof arg0 === "symbol") {
+  if (typeof item10103 === "symbol") {
     let str2 = "Value";
     if (obj) {
       str2 = "Value";
@@ -279,11 +279,11 @@ unsigned_long_long.DOMString = (arg0, arg1) => {
     throw typeError;
   } else {
     const _String = String;
-    return String(arg0);
+    return String(item10103);
   }
 };
-unsigned_long_long.ByteString = (arg0, context) => {
-  const DOMStringResult = exports.DOMString(arg0, context);
+unsigned_long_long.ByteString = (item10103, context) => {
+  const DOMStringResult = exports.DOMString(item10103, context);
   let num = 0;
   let codePointAtResult = DOMStringResult.codePointAt(0);
   if (undefined !== codePointAtResult) {
@@ -305,8 +305,8 @@ unsigned_long_long.ByteString = (arg0, context) => {
   }
   return DOMStringResult;
 };
-unsigned_long_long.USVString = (arg0, arg1) => {
-  const DOMStringResult = exports.DOMString(arg0, arg1);
+unsigned_long_long.USVString = (item10103, context) => {
+  const DOMStringResult = exports.DOMString(item10103, context);
   const items = [];
   let num = 0;
   if (0 < DOMStringResult.length) {
@@ -386,15 +386,15 @@ unsigned_long_long.object = (arg0, context) => {
   }
 };
 Object.getOwnPropertyDescriptor(ArrayBuffer.prototype, "byteLength").get;
-unsigned_long_long.ArrayBuffer = (arg0, context) => {
-  if (isArrayBuffer(arg0)) {
-    return arg0;
+unsigned_long_long.ArrayBuffer = (length, arg1) => {
+  if (isArrayBuffer(length)) {
+    return length;
   } else {
     let str2 = "Value";
-    if (context) {
+    if (arg1) {
       str2 = "Value";
-      if (context.context) {
-        str2 = context.context;
+      if (arg1.context) {
+        str2 = arg1.context;
       }
     }
     const _HermesInternal = HermesInternal;

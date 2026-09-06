@@ -36,9 +36,9 @@ const forwardRefResult = noop.forwardRef(function PlatformPressableInternal(disa
   const callback = noop.useCallback((current) => {
     closure_9.current = null;
     if (typeof closure_6 === "function") {
-      return tmp(current);
-    } else if (null != tmp) {
-      tmp.current = current;
+      return closure_6(current);
+    } else if (null != closure_6) {
+      closure_6.current = current;
     }
   }, items);
   const effect = noop.useEffect(() => {

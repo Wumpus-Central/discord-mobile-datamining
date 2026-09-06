@@ -154,11 +154,11 @@ let items = [
       this._setResult = (_state, _value) => {
         if (self._state === self.PENDING) {
           if (obj2.isThenable(_value)) {
-            _value.then(obj._resolve, obj._reject);
+            _value.then(self._resolve, self._reject);
           } else {
-            obj._state = _state;
-            obj._value = _value;
-            obj._executeHandlers();
+            self._state = _state;
+            self._value = _value;
+            self._executeHandlers();
           }
           obj2 = SyncPromise(12804);
         }
@@ -171,19 +171,18 @@ let items = [
       const self = this;
       this._executeHandlers = () => {
         if (self._state !== obj.PENDING) {
-          const _handlers = tmp._handlers;
+          const _handlers = self._handlers;
           const substr = _handlers.slice();
-          tmp._handlers = [];
+          self._handlers = [];
           const item = substr.forEach((item) => {
             if (!item[0]) {
               if (_state._state === constants.RESOLVED) {
-                item[1](tmp._value);
+                item[1](_state._value);
               }
-              if (_state._state === tmp2.REJECTED) {
-                item[2](tmp._value);
+              if (_state._state === constants.REJECTED) {
+                item[2](_state._value);
               }
               item[0] = true;
-              tmp2 = constants;
             }
           });
         }
@@ -200,8 +199,8 @@ export const rejectedSyncPromise = function rejectedSyncPromise(arg0) {
     fn(closure_0);
   });
 };
-export const resolvedSyncPromise = function resolvedSyncPromise(arg0) {
-  closure_0 = arg0;
+export const resolvedSyncPromise = function resolvedSyncPromise(item) {
+  closure_0 = item;
   return new _moduleResult((fn) => {
     fn(closure_0);
   });

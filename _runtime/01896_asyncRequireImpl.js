@@ -35,7 +35,7 @@ function asyncRequire(arg0, arg1, arg2) {
   }
   return applyArgumentsResult;
 }
-let closure_4 = async function _asyncRequire(arg0, value) {
+let closure_4 = async function _asyncRequire(arg0) {
   if (c2 === 2) {
     c2 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");

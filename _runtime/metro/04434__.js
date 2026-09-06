@@ -7,8 +7,8 @@ import noop from "module_19" /* 19 */;
 ({ useCallback: c2, useContext: c3 } = noop);
 
 export const usePortal = () => {
-  let str = arg0;
-  if (arg0 === undefined) {
+  let str = hostName;
+  if (hostName === undefined) {
     str = "root";
   }
   const tmp = closure_3(str(4435).PortalDispatchContext);

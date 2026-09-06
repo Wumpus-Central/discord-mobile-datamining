@@ -36,21 +36,21 @@ fn = function n(config, _animationToClamp) {
           logger.warn("Error inside 'withClamp' animation, the inner animation has invalid current value");
           return true;
         } else {
-          const result = _mod1676.recognizePrefixSuffix(tmp.current);
+          const result = _mod1676.recognizePrefixSuffix(previousAnimation.current);
           ({ prefix, strippedValue, suffix } = result);
           let tmp5 = strippedValue1;
           if (undefined === strippedValue1) {
             let tmp4 = strippedValue;
             if (undefined !== strippedValue) {
               tmp4 = strippedValue;
-              if (tmp3 > strippedValue) {
-                tmp4 = tmp3;
+              if (strippedValue > strippedValue) {
+                tmp4 = strippedValue;
               }
             }
             tmp5 = tmp4;
           }
           let combined = tmp5;
-          if (typeof tmp.current !== "number") {
+          if (typeof previousAnimation.current !== "number") {
             let str = "";
             if (undefined !== prefix) {
               str = prefix;
@@ -83,6 +83,7 @@ fn = function n(config, _animationToClamp) {
           current = previousAnimation.current;
         }
         previousAnimation.onStart(previousAnimation, current, arg2, previousAnimation);
+        tmp2 = undefined !== previousAnimation.max && undefined !== range.min && range.max < range.min;
       },
       current: tmpResult.current,
       callback(arg0) {

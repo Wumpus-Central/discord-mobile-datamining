@@ -18,8 +18,8 @@ export const isAAC = function isAAC(fileChunk, excludeSimilarTypes) {
     }
     checkByFileTypeResult = !excludeSimilarTypes;
     if (!excludeSimilarTypes) {
-      const fileChunk1 = tmp(5185).getFileChunk(fileChunk);
-      const FileTypes2 = tmp(5186).FileTypes;
+      const fileChunk1 = _mod5185.getFileChunk(fileChunk);
+      const FileTypes2 = _mod5186.FileTypes;
       checkByFileTypeResult = FileTypes2.checkByFileType(fileChunk1, "m4a");
     }
   }

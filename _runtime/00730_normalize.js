@@ -3,6 +3,7 @@
 // Module 730 (normalize)
 import _mod687 from "module_687" /* 687 */;
 import _mod692 from "module_692" /* 692 */;
+import _mod698 from "module_698" /* 698 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 function normalize(arg0) {
@@ -93,10 +94,10 @@ function visit(arg0, __sentry_skip_normalization__) {
               }
             }
             if (obj.isVueViewModel(_events)) {
-              let tmp4Result = tmp4(tmp5[3]);
+              let tmp4Result = _mod698;
               return tmp4Result.getVueInternalName(_events);
             } else {
-              tmp4Result = tmp4(tmp5[2]);
+              tmp4Result = _mod692;
               if (tmp4Result.isSyntheticEvent(_events)) {
                 return "[SyntheticEvent]";
               } else {
@@ -109,7 +110,7 @@ function visit(arg0, __sentry_skip_normalization__) {
                 }
                 if (typeof _events === "function") {
                   const _HermesInternal4 = HermesInternal;
-                  return "[Function: " + tmp4(tmp5[3]).getFunctionName(_events) + "]";
+                  return "[Function: " + _mod698.getFunctionName(_events) + "]";
                 } else if (typeof _events === "symbol") {
                   const _String2 = String;
                   const _HermesInternal3 = HermesInternal;

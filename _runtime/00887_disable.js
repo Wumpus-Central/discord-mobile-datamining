@@ -30,9 +30,9 @@ export const enable = function enable(arg0) {
       dependencyMap[arg0].displayId = +closure_2;
       dependencyMap[arg0].logged = true;
       if (obj.onUnhandled) {
-        obj.onUnhandled(tmp2[arg0].displayId, tmp2[arg0].error);
+        obj.onUnhandled(dependencyMap[arg0].displayId, dependencyMap[arg0].error);
       } else {
-        error = tmp2[arg0].error;
+        error = dependencyMap[arg0].error;
         const _console = console;
         console.warn(`Possible Unhandled Promise Rejection (id: ${tmp2[arg0].displayId}):`);
         let tmp7 = error;
@@ -67,10 +67,10 @@ export const enable = function enable(arg0) {
     if (tmp3) {
       if (dependencyMap[_51._51].logged) {
         const _512 = _51._51;
-        if (tmp5[_512].logged) {
+        if (dependencyMap[_512].logged) {
           if (obj.onHandled) {
-            obj.onHandled(tmp5[_512].displayId, tmp5[_512].error);
-          } else if (!tmp5[_512].onUnhandled) {
+            obj.onHandled(dependencyMap[_512].displayId, dependencyMap[_512].error);
+          } else if (!dependencyMap[_512].onUnhandled) {
             const _console = console;
             console.warn(`Promise Rejection Handled (id: ${tmp5[_512].displayId}):`);
             const _console2 = console;
@@ -79,7 +79,7 @@ export const enable = function enable(arg0) {
         }
       } else {
         const _clearTimeout = clearTimeout;
-        clearTimeout(tmp5[_51._51].timeout);
+        clearTimeout(dependencyMap[_51._51].timeout);
       }
       _51 = _51._51;
       delete tmp2[tmp];

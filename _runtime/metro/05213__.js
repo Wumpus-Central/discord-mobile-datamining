@@ -6,10 +6,10 @@ import DataViewDefault from "DataView" /* 5214 */;
 importDefault = arg2;
 const dependencyMap = arg6;
 
-export const getDataView = function getDataView(buffer, byteOffset, byteLength) {
+export const getDataView = function getDataView(buffer, sum3, longAt) {
   try {
     const _DataView = DataView;
-    const dataView = new DataView(buffer, byteOffset, byteLength);
+    const dataView = new DataView(buffer, sum3, longAt);
     return dataView;
   } catch (err) {
     const tmp19 = new DataViewDefault(tmp3, tmp2, tmp);
@@ -207,9 +207,9 @@ export const dataUriToBuffer = function dataUriToBuffer(response) {
     }
   }
 };
-export const padStart = function padStart(arg0, arg1, arg2) {
+export const padStart = function padStart(arg0, arg1, _0) {
   const array = new Array(arg1 - arg0.length + 1);
-  return array.join(arg2) + arg0;
+  return array.join(_0) + arg0;
 };
 export const parseFloatRadix = function parseFloatRadix(str, sum) {
   const parsed = parseInt(str.replace(".", ""), sum);
@@ -220,7 +220,7 @@ export const strRepeat = function strRepeat(_1, arg1) {
   return array.join(_1);
 };
 export const COMPRESSION_METHOD_DEFLATE = 0;
-export const decompress = function decompress(dataView, compressionMethod, arg2, dataview) {
+export const decompress = function decompress(dataView, compressionMethod, arg2) {
   closure_0 = arg2;
   let str = dataview;
   if (dataview === undefined) {

@@ -49,7 +49,7 @@ export default function _default(icon) {
   };
   if (children == null) {
     obj = { disabled, theme, type: "next" };
-    children = tmp9(icon, obj);
+    children = <icon disabled={disabled} theme={theme} type="next" />;
   }
   obj.children = children;
   return <button accessibilityHint="Moves focus to the next field" accessibilityLabel="Next" disabled={disabled} rippleRadius={rippleRadius} style={style} testID={onPress(1854).TEST_ID_KEYBOARD_TOOLBAR_NEXT} theme={theme} onPress={useCallback((isDefaultPrevented) => {

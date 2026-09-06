@@ -36,4 +36,5 @@ export default function extractResponder(arg0, pointerEvents, arg2) {
   if (flag2) {
     arg0.responsible = true;
   }
+  tmp6 = null != disabled || onPress || onPressIn || onPressOut || onLongPress || delayPressIn || delayPressOut || delayLongPress;
 };

@@ -3,6 +3,7 @@
 // Module 1058 (sentryTraceGesture)
 import _mod682 from "module_682" /* 682 */;
 import DEFAULT from "DEFAULT" /* 1020 */;
+import SPAN_ORIGIN_AUTO_INTERACTION from "SPAN_ORIGIN_AUTO_INTERACTION" /* 1023 */;
 import userInteractionIntegration from "userInteractionIntegration" /* 1030 */;
 
 require = arg1;
@@ -53,7 +54,7 @@ export const sentryTraceGesture = function sentryTraceGesture(elementId, handler
           let obj = { elementId, op: "" + DEFAULT.UI_ACTION + "." + formatted };
           const result = obj.startUserInteractionSpan(obj);
           if (result) {
-            const attr = result.setAttribute(tmp(682).SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN, tmp(1023).SPAN_ORIGIN_AUTO_INTERACTION);
+            const attr = result.setAttribute(_mod682.SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN, SPAN_ORIGIN_AUTO_INTERACTION.SPAN_ORIGIN_AUTO_INTERACTION);
           }
           obj = { event, name: formatted };
           addGestureBreadcrumb("Gesture " + elementId + " begin.", obj);

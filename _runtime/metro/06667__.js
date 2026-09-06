@@ -2,6 +2,8 @@
 
 // Module 6667
 import GestureDetectorType from "GestureDetectorType" /* 6668 */;
+import NativeDetector2 from "NativeDetector" /* 6710 */;
+import VirtualDetector from "VirtualDetector" /* 6734 */;
 import transformLongPressProps from "transformLongPressProps" /* 6736 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
@@ -11,13 +13,13 @@ let closure_2 = ["ref", "onGestureUpdate_CAN_CAUSE_INFINITE_RERENDER"];
 const useEffect = fn(19).useEffect;
 const jsx = fn(21).jsx;
 
-export default function createNativeWrapper(displayName, gestureHandlerProps) {
+export default function createNativeWrapper(displayName) {
   _require = displayName;
   if (gestureHandlerProps === undefined) {
     gestureHandlerProps = {};
   }
-  let Native = arg2;
-  if (arg2 === undefined) {
+  let Native = Intercepting;
+  if (Intercepting === undefined) {
     Native = require("GestureDetectorType").GestureDetectorType.Native;
   }
   let str;

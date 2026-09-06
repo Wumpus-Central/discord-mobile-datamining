@@ -70,7 +70,6 @@ export default {
     let tmp18;
     if (c5 + c6 + 5 <= byteLength.byteLength) {
       while (true) {
-        let tmp19 = importDefault;
         let tmp22 = tmp2;
         let tmp23 = tmp3;
         let tmp24 = tmp4;
@@ -84,7 +83,7 @@ export default {
             break;
           }
         }
-        if (tmp19(5216).USE_FILE) {
+        if (_modDef5216.USE_FILE) {
           if (byteLength.getUint16(tmp) === c20) {
             sum = tmp + c7;
             let uint16 = byteLength.getUint16(sum);
@@ -102,13 +101,12 @@ export default {
           sum3 = tmp7;
           tmp82 = c7;
         }
-        if (tmp19(5216).USE_JFIF) {
+        if (_modDef5216.USE_JFIF) {
           length = JFIF.length;
-          let tmp32 = JFIF;
           let tmp34 = byteLength.getUint16(tmp) === c25;
           if (tmp34) {
             let obj = _mod5213;
-            tmp34 = obj.getStringFromDataView(byteLength, tmp + c6, length) === tmp32;
+            tmp34 = obj.getStringFromDataView(byteLength, tmp + c6, length) === JFIF;
           }
           if (tmp34) {
             tmp34 = 0 === byteLength.getUint8(tmp + c6 + length);
@@ -122,13 +120,12 @@ export default {
             tmp82 = c7;
           }
         }
-        if (tmp19(5216).USE_EXIF) {
+        if (_modDef5216.USE_EXIF) {
           length2 = Exif.length;
-          let tmp38 = Exif;
           let tmp40 = byteLength.getUint16(tmp) === c26;
           if (tmp40) {
             let obj1 = _mod5213;
-            tmp40 = obj1.getStringFromDataView(byteLength, tmp + c6, length2) === tmp38;
+            tmp40 = obj1.getStringFromDataView(byteLength, tmp + c6, length2) === Exif;
           }
           if (tmp40) {
             tmp40 = 0 === byteLength.getUint8(tmp + c6 + length2);
@@ -142,7 +139,7 @@ export default {
             tmp82 = c7;
           }
         }
-        if (tmp19(5216).USE_XMP) {
+        if (_modDef5216.USE_XMP) {
           let tmp45 = byteLength.getUint16(tmp) === c26;
           if (tmp45) {
             let obj2 = _mod5213;
@@ -154,9 +151,7 @@ export default {
               items = [];
             }
             let uint161 = byteLength.getUint16(tmp + c7);
-            obj = { dataOffset: null, length: null };
-            obj.dataOffset = tmp + c11;
-            obj.length = uint161 - 31;
+            obj = { dataOffset: tmp + c11, length: uint161 - 31 };
             let arr = items.push(obj);
             sum2 = tmp2;
             sum5 = tmp5;
@@ -166,7 +161,7 @@ export default {
             tmp82 = c7;
           }
         }
-        if (tmp19(5216).USE_XMP) {
+        if (_modDef5216.USE_XMP) {
           let tmp50 = byteLength.getUint16(tmp) === c26;
           if (tmp50) {
             let obj4 = _mod5213;
@@ -178,9 +173,7 @@ export default {
               items1 = [];
             }
             let uint162 = byteLength.getUint16(tmp + c7);
-            obj = { dataOffset: null, length: null };
-            obj.dataOffset = tmp + c12;
-            obj.length = uint162 - 77;
+            obj = { dataOffset: tmp + c12, length: uint162 - 77 };
             arr = items1.push(obj);
             sum2 = tmp2;
             sum5 = tmp5;
@@ -190,13 +183,12 @@ export default {
             tmp82 = c7;
           }
         }
-        if (tmp19(5216).USE_IPTC) {
+        if (_modDef5216.USE_IPTC) {
           length3 = length5.length;
-          let tmp54 = length5;
           let tmp56 = byteLength.getUint16(tmp) === c28;
           if (tmp56) {
             let obj5 = _mod5213;
-            tmp56 = obj5.getStringFromDataView(byteLength, tmp + c6, length3) === tmp54;
+            tmp56 = obj5.getStringFromDataView(byteLength, tmp + c6, length3) === length5;
           }
           if (tmp56) {
             tmp56 = 0 === byteLength.getUint8(tmp + c6 + length3);
@@ -210,7 +202,7 @@ export default {
             tmp82 = c7;
           }
         }
-        if (tmp19(5216).USE_ICC) {
+        if (_modDef5216.USE_ICC) {
           let tmp60 = length;
           let tmp62 = byteLength.getUint16(tmp) === c27;
           if (tmp62) {
@@ -218,9 +210,7 @@ export default {
             tmp62 = obj6.getStringFromDataView(byteLength, tmp + c6, length.length) === tmp60;
           }
           if (tmp62) {
-            let tmp94 = c7;
             let uint163 = byteLength.getUint16(tmp + c7);
-            let tmp96 = c13;
             let diff = uint163 - 16;
             let uint8 = byteLength.getUint8(tmp + sum);
             let items2 = tmp3;
@@ -228,17 +218,17 @@ export default {
             if (!tmp3) {
               items2 = [];
             }
-            obj1 = { offset: tmp + tmp96, length: diff, chunkNumber: uint8, chunksTotal: uint81 };
+            obj1 = { offset: tmp + c13, length: diff, chunkNumber: uint8, chunksTotal: uint81 };
             let arr1 = items2.push(obj1);
             sum2 = tmp2;
             sum5 = tmp5;
             sum4 = tmp6;
             sum3 = tmp7;
             uint16 = uint163;
-            tmp82 = tmp94;
+            tmp82 = c7;
           }
         }
-        if (!tmp19(5216).USE_MPF) {
+        if (!_modDef5216.USE_MPF) {
           let uint164 = byteLength.getUint16(tmp);
           let tmp72 = uint164 >= c25;
           if (tmp72) {

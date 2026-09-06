@@ -54,7 +54,7 @@ export const KeyboardProvider = (enabled) => {
   Animated = require("module_1825").useEventHandlerRegistration(tmp3);
   const obj6 = require("module_1825");
   const obj7 = require("module_1825");
-  const update = closure_4(enabled(function*(arg0, value) {
+  const update = closure_4(enabled(function*() {
     if (v3 === 2) {
       v3 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");

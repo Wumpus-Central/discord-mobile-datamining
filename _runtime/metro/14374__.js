@@ -167,10 +167,9 @@ function parseHost(buffer, arg1) {
                   while (true) {
                     let sum7 = diff3;
                     if (0 >= num18) {
-                      let tmp49 = require;
                       let obj6 = _mod14376;
                       if (obj6.isASCIIDigit(decodeResult[sum7])) {
-                        let tmp49Result = tmp49(14376);
+                        let tmp49Result = _mod14376;
                         let tmp51 = null;
                         let tmp52 = sum7;
                         let tmp53 = null;
@@ -320,9 +319,9 @@ function parseHost(buffer, arg1) {
       str = closure_4;
     }
     if (str === closure_4) {
-      return tmp4;
+      return closure_4;
     } else if (-1 !== str.search(/\u0000|\u0009|\u000A|\u000D|\u0020|#|%|\/|:|\?|@|\[|\\|\]/)) {
-      return tmp4;
+      return closure_4;
     } else {
       const tmp5 = (function parseIPv4(str) {
         const parts = str.split(".");

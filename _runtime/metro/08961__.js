@@ -75,7 +75,7 @@ if (self2) {
 
         }
         const obj1 = { regex: { label: "\u05E7\u05DC\u05D8", gender: "m" }, email: { label: "\u05DB\u05EA\u05D5\u05D1\u05EA \u05D0\u05D9\u05DE\u05D9\u05D9\u05DC", gender: "f" }, url: { label: "\u05DB\u05EA\u05D5\u05D1\u05EA \u05E8\u05E9\u05EA", gender: "f" }, emoji: { label: "\u05D0\u05D9\u05DE\u05D5\u05D2'\u05D9", gender: "m" }, uuid: { label: "UUID", gender: "m" }, nanoid: { label: "nanoid", gender: "m" }, guid: { label: "GUID", gender: "m" }, cuid: { label: "cuid", gender: "m" }, cuid2: { label: "cuid2", gender: "m" }, ulid: { label: "ULID", gender: "m" }, xid: { label: "XID", gender: "m" }, ksuid: { label: "KSUID", gender: "m" }, datetime: { label: "\u05EA\u05D0\u05E8\u05D9\u05DA \u05D5\u05D6\u05DE\u05DF ISO", gender: "m" }, date: { label: "\u05EA\u05D0\u05E8\u05D9\u05DA ISO", gender: "m" }, time: { label: "\u05D6\u05DE\u05DF ISO", gender: "m" }, duration: { label: "\u05DE\u05E9\u05DA \u05D6\u05DE\u05DF ISO", gender: "m" }, ipv4: { label: "\u05DB\u05EA\u05D5\u05D1\u05EA IPv4", gender: "f" }, ipv6: { label: "\u05DB\u05EA\u05D5\u05D1\u05EA IPv6", gender: "f" }, cidrv4: { label: "\u05D8\u05D5\u05D5\u05D7 IPv4", gender: "m" }, cidrv6: { label: "\u05D8\u05D5\u05D5\u05D7 IPv6", gender: "m" }, base64: { label: "\u05DE\u05D7\u05E8\u05D5\u05D6\u05EA \u05D1\u05D1\u05E1\u05D9\u05E1 64", gender: "f" }, base64url: { label: "\u05DE\u05D7\u05E8\u05D5\u05D6\u05EA \u05D1\u05D1\u05E1\u05D9\u05E1 64 \u05DC\u05DB\u05EA\u05D5\u05D1\u05D5\u05EA \u05E8\u05E9\u05EA", gender: "f" }, json_string: { label: "\u05DE\u05D7\u05E8\u05D5\u05D6\u05EA JSON", gender: "f" }, e164: { label: "\u05DE\u05E1\u05E4\u05E8 E.164", gender: "m" }, jwt: { label: "JWT", gender: "m" }, ends_with: { label: "\u05E7\u05DC\u05D8", gender: "m" }, includes: { label: "\u05E7\u05DC\u05D8", gender: "m" }, lowercase: { label: "\u05E7\u05DC\u05D8", gender: "m" }, starts_with: { label: "\u05E7\u05DC\u05D8", gender: "m" }, uppercase: { label: "\u05E7\u05DC\u05D8", gender: "m" } };
-        closure_8 = { nan: "NaN" };
+        dependencyMap = { nan: "NaN" };
         obj.localeError = (code) => {
           switch (code.code) {
             case "invalid_type":
@@ -84,9 +84,9 @@ if (self2) {
               if (label == null) {
                 str135 = "";
               }
-              if (closure_8[str135] != null) {
+              if (dependencyMap[str135] != null) {
                 const parsedTypeResult = typeEntry.parsedType(code.input);
-                let tmp119 = tmp108[parsedTypeResult];
+                let tmp119 = dependencyMap[parsedTypeResult];
                 if (tmp119 == null) {
                   label = undefined;
                   if (obj[parsedTypeResult] != null) {
@@ -155,7 +155,7 @@ if (self2) {
                 if (str79 == null) {
                   str79 = "value";
                 }
-                if (typeof tmp70 === "function") {
+                if (typeof withDefinite === "function") {
                   if (typeof typeLabel === "function") {
                     if (typeof typeEntry === "function") {
                       let tmp73;
@@ -212,7 +212,7 @@ if (self2) {
                             if (str83 == null) {
                               str83 = "value";
                             }
-                            if (typeof tmp78 === "function") {
+                            if (typeof verbFor === "function") {
                               if (typeof tmp72 === "function") {
                                 let tmp79;
                                 if (str83) {
@@ -254,7 +254,6 @@ if (self2) {
                             } else {
                               throw new TypeError("Trying to call a non-function");
                             }
-                            tmp78 = verbFor;
                           }
                         }
                         let str101 = "\u05E6\u05E8\u05D9\u05DA";
@@ -295,7 +294,6 @@ if (self2) {
                 } else {
                   throw new TypeError("Trying to call a non-function");
                 }
-                tmp70 = withDefinite;
               } else {
                 throw new TypeError("Trying to call a non-function");
               }
@@ -315,7 +313,7 @@ if (self2) {
                 if (str25 == null) {
                   str25 = "value";
                 }
-                if (typeof tmp28 === "function") {
+                if (typeof withDefinite === "function") {
                   if (typeof typeLabel === "function") {
                     if (typeof typeEntry === "function") {
                       let tmp31;
@@ -372,7 +370,7 @@ if (self2) {
                             if (str29 == null) {
                               str29 = "value";
                             }
-                            if (typeof tmp36 === "function") {
+                            if (typeof verbFor === "function") {
                               if (typeof tmp30 === "function") {
                                 let tmp37;
                                 if (str29) {
@@ -414,7 +412,6 @@ if (self2) {
                             } else {
                               throw new TypeError("Trying to call a non-function");
                             }
-                            tmp36 = verbFor;
                           }
                         }
                         let str47 = "\u05E6\u05E8\u05D9\u05DA";
@@ -464,7 +461,6 @@ if (self2) {
                 } else {
                   throw new TypeError("Trying to call a non-function");
                 }
-                tmp28 = withDefinite;
               } else {
                 throw new TypeError("Trying to call a non-function");
               }
@@ -528,7 +524,7 @@ if (self2) {
               if (str == null) {
                 str = "array";
               }
-              if (typeof tmp === "function") {
+              if (typeof withDefinite === "function") {
                 if (typeof typeLabel === "function") {
                   if (typeof typeEntry === "function") {
                     let tmp5;
@@ -552,7 +548,6 @@ if (self2) {
               } else {
                 throw new TypeError("Trying to call a non-function");
               }
-              tmp = withDefinite;
             break;
             default:
               return "\u05E7\u05DC\u05D8 \u05DC\u05D0 \u05EA\u05E7\u05D9\u05DF";

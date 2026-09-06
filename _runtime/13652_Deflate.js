@@ -2,6 +2,8 @@
 
 // Module 13652 (Deflate)
 import _mod13651 from "module_13651" /* 13651 */;
+import ZStream from "ZStream" /* 13653 */;
+import flush_block_only from "flush_block_only" /* 13654 */;
 import _mod13655 from "module_13655" /* 13655 */;
 import _mod13659 from "module_13659" /* 13659 */;
 

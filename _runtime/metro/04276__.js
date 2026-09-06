@@ -25,7 +25,7 @@ function createImpl(arg0) {
 
 export const create = (arg0) => {
   if (arg0) {
-    if (typeof tmp === "function") {
+    if (typeof createImpl === "function") {
       store = store(4275).createStore(arg0);
       function useBoundStore(arg0) {
         let tmp = arg0;
@@ -46,7 +46,7 @@ export const create = (arg0) => {
       throw new TypeError("Trying to call a non-function");
     }
   } else {
-    tmp2 = tmp;
+    tmp2 = createImpl;
   }
   return tmp2;
 };

@@ -44,6 +44,7 @@ export const convertAnimationObjectToKeyframes = function convertAnimationObject
                   closure_0 = closure_0 + " " + tmp5[0] + "(" + tmp5[1] + ")";
                   continue;
                 }
+                tmp2 = entries[Symbol.iterator]();
               });
               _require = _require + "; ";
             } else {

@@ -5,7 +5,7 @@ import GLOBAL_OBJ from "module_12798" /* 12798 */;
 
 function consoleSandbox(fn) {
   if ("console" in console(12798).GLOBAL_OBJ) {
-    console = console(12798).GLOBAL_OBJ.console;
+    console = tmp(12798).GLOBAL_OBJ.console;
     dependencyMap = {};
     const _Object = Object;
     const keys = Object.keys(obj);
@@ -27,6 +27,7 @@ function consoleSandbox(fn) {
   } else {
     return fn();
   }
+  tmp = console;
 }
 let items = ["debug", "info", "warn", "error", "log", "assert", "trace"];
 const originalConsoleMethods = {};

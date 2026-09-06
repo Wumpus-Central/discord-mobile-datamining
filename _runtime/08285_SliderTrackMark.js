@@ -23,10 +23,10 @@ export const SliderTrackMark = function SliderTrackMark(arg0) {
   if (thumbImage) {
     jsxResult1 = null;
     if (isTrue) {
-      obj = { style: tmp2(8283).styles.thumbImageContainer, testID: "sliderTrackMark-thumbImage", children: null };
-      const obj1 = { source: thumbImage, style: tmp2(8283).styles.thumbImage };
-      obj.children = <tmp.Image source={thumbImage} style={tmp2(8283).styles.thumbImage} />;
-      jsxResult1 = <tmp.View style={tmp2(8283).styles.thumbImageContainer} testID="sliderTrackMark-thumbImage">{null}</tmp.View>;
+      obj = { style: _mod8283.styles.thumbImageContainer, testID: "sliderTrackMark-thumbImage", children: null };
+      const obj1 = { source: thumbImage, style: _mod8283.styles.thumbImage };
+      obj.children = <get ActivityIndicator.Image source={thumbImage} style={_mod8283.styles.thumbImage} />;
+      jsxResult1 = <get ActivityIndicator.View style={_mod8283.styles.thumbImageContainer} testID="sliderTrackMark-thumbImage">{null}</get ActivityIndicator.View>;
     }
   }
   items[1] = jsxResult1;

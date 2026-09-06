@@ -4,19 +4,19 @@
 import cacheHas from "cacheHas" /* 650 */;
 
 
-export default function equalArrays(arg0, arg1, arg2, fn, fn2, get) {
+export default function equalArrays(key, value, arg2, fn, fn2, get) {
   _require = arg2;
   dependencyMap = fn;
   closure_2 = fn2;
   closure_3 = get;
-  if (arg0.length != arg1.length) {
+  if (key.length != length2) {
     return false;
   }
-  get.get(arg0);
-  value = get.get(arg1);
+  value = get.get(key);
+  value = get.get(value);
   if (value) {
     if (value) {
-      return value == arg1 && value == arg0;
+      return value == value && value == key;
     }
   }
   let tmp4;
@@ -24,11 +24,11 @@ export default function equalArrays(arg0, arg1, arg2, fn, fn2, get) {
     tmp4 = new require("SetCache")();
   }
   closure_4 = tmp4;
-  const result = get.set(arg0, arg1);
-  const result1 = get.set(arg1, arg0);
+  const result = get.set(key, value);
+  const result1 = get.set(value, key);
   let num = 0;
   let flag2 = true;
-  if (0 < arg0.length) {
+  if (0 < key.length) {
     closure_5 = tmp12;
     while (!fn) {
       if (undefined !== tmp11) {
@@ -43,12 +43,12 @@ export default function equalArrays(arg0, arg1, arg2, fn, fn2, get) {
       flag2 = true;
     }
     if (tmp) {
-      let tmp22 = fn(tmp13, tmp12, tmp15, arg1, arg0, get);
+      let tmp22 = fn(tmp13, tmp12, tmp15, value, key, get);
     } else {
-      tmp22 = fn(tmp12, tmp13, tmp15, arg0, arg1, get);
+      tmp22 = fn(tmp12, tmp13, tmp15, key, value, get);
     }
   }
-  get.delete(arg0);
-  get.delete(arg1);
+  get.delete(key);
+  get.delete(value);
   return flag2;
 };

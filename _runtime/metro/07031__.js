@@ -21,7 +21,7 @@ export const getModalRouteKeys = (arr, arg1) => {
       tmp2 = "transparentModal" === presentation;
     }
     if (tmp2) {
-      arr.push(key.key);
+      arr = arr.push(key.key);
     }
     return arr;
   }, []);

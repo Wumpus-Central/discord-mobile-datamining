@@ -49,7 +49,7 @@ export default function _default(icon) {
   };
   if (children == null) {
     obj = { disabled, theme, type: "prev" };
-    children = tmp9(icon, obj);
+    children = <icon disabled={disabled} theme={theme} type="prev" />;
   }
   obj.children = children;
   return <button accessibilityHint="Moves focus to the previous field" accessibilityLabel="Previous" disabled={disabled} rippleRadius={rippleRadius} style={style} testID={onPress(1854).TEST_ID_KEYBOARD_TOOLBAR_PREVIOUS} theme={theme} onPress={useCallback((isDefaultPrevented) => {

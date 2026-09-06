@@ -25,30 +25,30 @@ export const isElement = function isElement(arg0) {
   }
   return tmp;
 };
-export const isError = function isError(arg0) {
+export const isError = function isError(originalException) {
   const call = toString.call;
-  const tmp2 = typeof call === "unknown" ? toString() : call(arg0);
+  const tmp2 = typeof call === "unknown" ? toString() : call(originalException);
   if ("[object Error]" !== tmp2) {
     if ("[object Exception]" !== tmp2) {
       if ("[object DOMException]" !== tmp2) {
         if ("[object WebAssembly.Exception]" !== tmp2) {
           const _Error = Error;
-          return isInstanceOf(arg0, Error);
+          return isInstanceOf(originalException, Error);
         }
       }
     }
   }
   return true;
 };
-export const isErrorEvent = function isErrorEvent(arg0) {
+export const isErrorEvent = function isErrorEvent(name) {
   const call = toString.call;
-  return (typeof call === "unknown" ? toString() : call(arg0)) === "[object " + "ErrorEvent" + "]";
+  return (typeof call === "unknown" ? toString() : call(name)) === "[object " + "ErrorEvent" + "]";
 };
-export const isEvent = function isEvent(arg0) {
+export const isEvent = function isEvent(type) {
   let tmp = typeof Event !== "undefined";
   if (typeof Event !== "undefined") {
     const _Event = Event;
-    tmp = isInstanceOf(arg0, Event);
+    tmp = isInstanceOf(type, Event);
   }
   return tmp;
 };
@@ -94,9 +94,9 @@ export const isPrimitive = function isPrimitive(obj) {
   }
   return tmp;
 };
-export const isRegExp = function isRegExp(arg0) {
+export const isRegExp = function isRegExp(test) {
   const call = toString.call;
-  return (typeof call === "unknown" ? toString() : call(arg0)) === "[object " + "RegExp" + "]";
+  return (typeof call === "unknown" ? toString() : call(test)) === "[object " + "RegExp" + "]";
 };
 export const isRequest = function isRequest(headers) {
   let tmp = typeof Request !== "undefined";
@@ -106,9 +106,9 @@ export const isRequest = function isRequest(headers) {
   }
   return tmp;
 };
-export const isString = function isString(arg0) {
+export const isString = function isString(className) {
   const call = toString.call;
-  return (typeof call === "unknown" ? toString() : call(arg0)) === "[object " + "String" + "]";
+  return (typeof call === "unknown" ? toString() : call(className)) === "[object " + "String" + "]";
 };
 export const isSyntheticEvent = function isSyntheticEvent(arg0) {
   const call = toString.call;
@@ -124,13 +124,13 @@ export const isSyntheticEvent = function isSyntheticEvent(arg0) {
   }
   return tmp3;
 };
-export const isThenable = function isThenable(arg0) {
+export const isThenable = function isThenable(tmpResult) {
   let then;
-  if (arg0 != null) {
-    then = arg0.then;
+  if (tmpResult != null) {
+    then = tmpResult.then;
   }
   if (then) {
-    then = typeof arg0.then === "function";
+    then = typeof tmpResult.then === "function";
   }
   return Boolean(then);
 };

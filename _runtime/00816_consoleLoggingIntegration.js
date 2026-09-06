@@ -3,6 +3,8 @@
 // Module 816 (consoleLoggingIntegration)
 import SEMANTIC_ATTRIBUTE_CACHE_HIT from "SEMANTIC_ATTRIBUTE_CACHE_HIT" /* 704 */;
 import _mod713 from "module_713" /* 713 */;
+import _INTERNAL_captureSerializedLog from "_INTERNAL_captureSerializedLog" /* 745 */;
+import safeJoinConsoleArgs from "safeJoinConsoleArgs" /* 817 */;
 import setupIntegration from "setupIntegration" /* 752 */;
 
 Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
@@ -25,7 +27,7 @@ export const consoleLoggingIntegration = setupIntegration.defineIntegration(() =
       const normalizeDepth = options.normalizeDepth;
       const normalizeMaxBreadth = options.normalizeMaxBreadth;
       if (options.enableLogs) {
-        const result = tmp2(tmp3[3]).addConsoleInstrumentationHandler((arg0) => {
+        const result = CONSOLE_LEVELS(dependencyMap[3]).addConsoleInstrumentationHandler((arg0) => {
           ({ args, level } = arg0);
           let obj = _mod713;
           if (obj.getClient() === closure_0) {
@@ -35,13 +37,13 @@ export const consoleLoggingIntegration = setupIntegration.defineIntegration(() =
               if ("assert" !== level) {
                 let tmp9 = args.length > 1 && typeof args[0] === "string";
                 if (tmp9) {
-                  let tmpResult = tmp(817);
+                  let tmpResult = safeJoinConsoleArgs;
                   tmp9 = !tmpResult.hasConsoleSubstitutions(args[0]);
                 }
                 obj = {};
                 const merged = Object.assign(attributes);
                 if (tmp9) {
-                  tmpResult = tmp(817);
+                  tmpResult = safeJoinConsoleArgs;
                   let consoleTemplateAttributes = tmpResult.createConsoleTemplateAttributes(first, substr);
                 } else {
                   consoleTemplateAttributes = {};
@@ -52,8 +54,8 @@ export const consoleLoggingIntegration = setupIntegration.defineIntegration(() =
                   str5 = level;
                 }
                 obj = { level: str5, message: null, severityNumber: null, attributes: null };
-                const tmpResult1 = tmp(745);
-                obj.message = tmp(817).formatConsoleArgs(args, num, num2);
+                const tmpResult1 = _INTERNAL_captureSerializedLog;
+                obj.message = safeJoinConsoleArgs.formatConsoleArgs(args, num, num2);
                 let num3;
                 if ("log" === level) {
                   num3 = 10;
@@ -61,23 +63,23 @@ export const consoleLoggingIntegration = setupIntegration.defineIntegration(() =
                 obj.severityNumber = num3;
                 obj.attributes = obj;
                 tmpResult1._INTERNAL_captureLog(obj);
-                const tmpResult2 = tmp(817);
+                const tmpResult2 = safeJoinConsoleArgs;
               } else if (!first) {
                 let str2 = "Assertion failed";
                 if (substr.length > 0) {
                   const _HermesInternal = HermesInternal;
-                  str2 = "Assertion failed: " + tmp(817).formatConsoleArgs(substr, num, num2);
-                  const tmpResult3 = tmp(817);
+                  str2 = "Assertion failed: " + safeJoinConsoleArgs.formatConsoleArgs(substr, num, num2);
+                  const tmpResult3 = safeJoinConsoleArgs;
                 }
                 const obj1 = { level: "error", message: str2, attributes };
-                tmp(745)._INTERNAL_captureLog(obj1);
-                const tmpResult4 = tmp(745);
+                _INTERNAL_captureSerializedLog._INTERNAL_captureLog(obj1);
+                const tmpResult4 = _INTERNAL_captureSerializedLog;
               }
             }
           }
         });
-        const tmp2Result = tmp2(tmp3[3]);
-      } else if (tmp2(tmp3[2]).DEBUG_BUILD) {
+        const tmp2Result = CONSOLE_LEVELS(dependencyMap[3]);
+      } else if (CONSOLE_LEVELS(dependencyMap[2]).DEBUG_BUILD) {
         const debug = CONSOLE_LEVELS(dependencyMap[1]).debug;
         debug.warn("`enableLogs` is not enabled, ConsoleLogs integration disabled");
       }

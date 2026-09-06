@@ -28,20 +28,20 @@ const _sentryIsolationScope = "_sentryIsolationScope";
 export const getCapturedScopesOnSpan = function getCapturedScopesOnSpan(scope) {
   return { scope: scope[_sentryScope], isolationScope: unwrapScopeFromWeakRef(scope[_sentryIsolationScope]) };
 };
-export const setCapturedScopesOnSpan = function setCapturedScopesOnSpan(arg0, arg1, arg2) {
-  if (arg0) {
-    const result = _mod687.addNonEnumerableProperty(arg0, _sentryIsolationScope, (function wrapScopeWithWeakRef(arg0) {
+export const setCapturedScopesOnSpan = function setCapturedScopesOnSpan(sentrySpan, scope, isolationScope) {
+  if (sentrySpan) {
+    const result = _mod687.addNonEnumerableProperty(sentrySpan, _sentryIsolationScope, (function wrapScopeWithWeakRef(isolationScope) {
       try {
         let _WeakRef = _mod686.GLOBAL_OBJ.WeakRef;
         if (typeof _WeakRef === "function") {
-          _WeakRef = new _WeakRef(arg0);
+          _WeakRef = new _WeakRef(isolationScope);
           return _WeakRef;
         } else {
-          return arg0;
+          return isolationScope;
         }
       } catch (err) {
       }
-    })(arg2));
-    const result1 = _mod687.addNonEnumerableProperty(arg0, _sentryScope, arg1);
+    })(isolationScope));
+    const result1 = _mod687.addNonEnumerableProperty(sentrySpan, _sentryScope, scope);
   }
 };

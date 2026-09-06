@@ -36,7 +36,7 @@ export const startIdleSpan = function startIdleSpan(arg0) {
     let spanToJSONResult = closure_0(map[5]).spanToJSON(c14);
     if (spanToJSONResult.start_timestamp) {
       if (!spanToJSONResult.data[tmp3(undefined, tmp4[9]).SEMANTIC_ATTRIBUTE_SENTRY_IDLE_SPAN_FINISH_REASON]) {
-        const attr = obj3.setAttribute(tmp3(tmp4[9]).SEMANTIC_ATTRIBUTE_SENTRY_IDLE_SPAN_FINISH_REASON, heartbeatFailed);
+        const attr = c14.setAttribute(tmp3(tmp4[9]).SEMANTIC_ATTRIBUTE_SENTRY_IDLE_SPAN_FINISH_REASON, heartbeatFailed);
       }
       const status = spanToJSONResult.status;
       let tmp9 = status;
@@ -45,12 +45,12 @@ export const startIdleSpan = function startIdleSpan(arg0) {
       }
       if (!tmp9) {
         obj = { code: tmp3(tmp4[10]).SPAN_STATUS_OK };
-        obj3.setStatus(obj);
+        c14.setStatus(obj);
       }
       let debug = tmp3(tmp4[11]).debug;
       const _HermesInternal = HermesInternal;
       debug.log("[Tracing] Idle span \"" + spanToJSONResult.op + "\" finished");
-      const spanDescendants = tmp3(tmp4[5]).getSpanDescendants(obj3);
+      const spanDescendants = tmp3(tmp4[5]).getSpanDescendants(c14);
       const found = spanDescendants.filter((item) => item !== _undefined);
       const item1 = found.forEach((isRecording) => {
         if (isRecording.isRecording()) {
@@ -97,10 +97,11 @@ export const startIdleSpan = function startIdleSpan(arg0) {
         }
       });
       if (0 > 0) {
-        const attr1 = obj3.setAttribute("sentry.idle_span_discarded_spans", map);
+        const attr1 = c14.setAttribute("sentry.idle_span_discarded_spans", map);
       }
       const tmp3Result = tmp3(tmp4[5]);
     }
+    let obj2 = closure_0(map[5]);
   }
   const map = new Map();
   c2 = false;
@@ -149,14 +150,14 @@ export const startIdleSpan = function startIdleSpan(arg0) {
                 let first = arr[0];
                 const substr = arr.slice(1);
                 if (!first) {
-                  let tmp4Result = tmp4(tmp5[6]);
+                  let tmp4Result = closure_0(map[6]);
                   first = tmp4Result.timestampInSeconds();
                 }
-                tmp4Result = tmp4(tmp5[5]);
+                tmp4Result = closure_0(map[5]);
                 const result = tmp4Result.spanTimeInputToSeconds(first);
-                const spanDescendants = tmp4(tmp5[5]).getSpanDescendants(c14);
+                const spanDescendants = closure_0(map[5]).getSpanDescendants(c14);
                 const found = spanDescendants.filter((item) => item !== _undefined);
-                tmp4(tmp5[5]);
+                closure_0(map[5]);
                 if (found.length) {
                   if (closure_10) {
                     const ignoreSpans = client.getOptions().ignoreSpans;
@@ -255,7 +256,7 @@ export const startIdleSpan = function startIdleSpan(arg0) {
         if (!c2) {
           const spanId = spanContext.spanContext().spanId;
           if (map.has(spanId)) {
-            obj.delete(spanId);
+            map.delete(spanId);
           }
           if (0 === map.size) {
             timeout = timeout(map[6]).timestampInSeconds() + idleTimeout / 1000;

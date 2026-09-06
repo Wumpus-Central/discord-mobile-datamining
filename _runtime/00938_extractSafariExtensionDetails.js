@@ -50,7 +50,7 @@ let items = [
           if (!UNKNOWN_FUNCTION) {
             UNKNOWN_FUNCTION = registerSpanErrorInstrumentation.UNKNOWN_FUNCTION;
           }
-          if (typeof tmp8 === "function") {
+          if (typeof extractSafariExtensionDetails === "function") {
             const tmp12 = -1 !== UNKNOWN_FUNCTION.indexOf("safari-extension");
             if (!tmp12) {
               if (-1 === UNKNOWN_FUNCTION.indexOf("safari-web-extension")) {
@@ -95,7 +95,6 @@ let items = [
           } else {
             throw new TypeError("Trying to call a non-function");
           }
-          tmp8 = extractSafariExtensionDetails;
         }
       }
     }

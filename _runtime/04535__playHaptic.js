@@ -4,7 +4,7 @@
 import _modDef4531 from "module_4531" /* 4531 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
-let closure_3 = async function _playHaptic(arg0, value) {
+let closure_3 = async function _playHaptic(arg0) {
   if (c2 === 2) {
     c2 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -31,16 +31,12 @@ let closure_3 = async function _playHaptic(arg0, value) {
         obj = _modDef4531;
         if (obj.isEnabled()) {
           c2 = 3;
-          const obj1 = { value: tmp6(tmp7[2]).triggerPattern(tmp4, tmp5), done: true };
+          const obj1 = { value: _modDef4531.triggerPattern(closure_0, closure_1), done: true };
           return obj1;
         } else {
           c2 = 3;
           return { value: "HermesInternal", done: null };
         }
-        tmp4 = closure_0;
-        tmp5 = closure_1;
-        tmp6 = importDefault;
-        tmp7 = dependencyMap;
       }
     } catch (tmp8) {
       c2 = tmp;

@@ -284,3 +284,81 @@ obj = {
   week: { dow: 1, doy: 4 }
 };
 moment.defineLocale("it", obj);
+const obj1 = {
+  sameDay() {
+    const self = this;
+    let str = "lle ";
+    if (this.hours() <= 1) {
+      let str2 = "ll'";
+      if (0 === self.hours()) {
+        str2 = " ";
+      }
+      str = str2;
+    }
+    return "[Oggi a" + str + "]LT";
+  },
+  nextDay() {
+    const self = this;
+    let str = "lle ";
+    if (this.hours() <= 1) {
+      let str2 = "ll'";
+      if (0 === self.hours()) {
+        str2 = " ";
+      }
+      str = str2;
+    }
+    return "[Domani a" + str + "]LT";
+  },
+  nextWeek() {
+    const self = this;
+    let str = "lle ";
+    if (this.hours() <= 1) {
+      let str2 = "ll'";
+      if (0 === self.hours()) {
+        str2 = " ";
+      }
+      str = str2;
+    }
+    return "dddd [a" + str + "]LT";
+  },
+  lastDay() {
+    const self = this;
+    let str = "lle ";
+    if (this.hours() <= 1) {
+      let str2 = "ll'";
+      if (0 === self.hours()) {
+        str2 = " ";
+      }
+      str = str2;
+    }
+    return "[Ieri a" + str + "]LT";
+  },
+  lastWeek() {
+    const self = this;
+    if (0 === this.day()) {
+      let str5 = "lle ";
+      if (self.hours() <= 1) {
+        let str6 = "ll'";
+        if (0 === self.hours()) {
+          str6 = " ";
+        }
+        str5 = str6;
+      }
+      const _HermesInternal2 = HermesInternal;
+      let combined = "[La scorsa] dddd [a" + str5 + "]LT";
+    } else {
+      let str = "lle ";
+      if (self.hours() <= 1) {
+        let str2 = "ll'";
+        if (0 === self.hours()) {
+          str2 = " ";
+        }
+        str = str2;
+      }
+      const _HermesInternal = HermesInternal;
+      combined = "[Lo scorso] dddd [a" + str + "]LT";
+    }
+    return combined;
+  },
+  sameElse: "L"
+};

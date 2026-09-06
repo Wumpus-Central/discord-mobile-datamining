@@ -8,6 +8,7 @@ import BlobManagerDefault from "BlobManager" /* 200 */;
 import BlobDefault from "Blob" /* 203 */;
 import byteLengthDefault from "byteLength" /* 206 */;
 import NativeEventEmitterDefault from "NativeEventEmitter" /* 209 */;
+import binaryToBase64Default from "binaryToBase64" /* 212 */;
 import WebSocketModuleDefault from "WebSocketModule" /* 218 */;
 import _modDef220 from "module_220" /* 220 */;
 import _modDef221 from "module_221" /* 221 */;
@@ -133,14 +134,15 @@ let items = [
       if (!tmp2) {
         _modDef38(BlobManagerDefault.isAvailable, "Native module BlobModule is required for blob support");
         if ("blob" === _binaryType) {
-          let tmp3Result = tmp3(200);
+          let tmp3Result = BlobManagerDefault;
           tmp3Result.addWebSocketHandler(self._socketId);
         } else {
-          tmp3Result = tmp3(200);
+          tmp3Result = BlobManagerDefault;
           const result = tmp3Result.removeWebSocketHandler(self._socketId);
         }
       }
       self._binaryType = _binaryType;
+      tmp2 = "blob" !== this._binaryType && "blob" !== _binaryType;
     }
   },
   {
@@ -162,9 +164,9 @@ let items = [
         const error = new Error("INVALID_STATE_ERR");
         throw error;
       } else if (str instanceof BlobDefault) {
-        let tmp16Result = tmp16(38);
-        tmp16Result(tmp16(200).isAvailable, "Native module BlobModule is required for blob support");
-        tmp16Result = tmp16(200);
+        let tmp16Result = _modDef38;
+        tmp16Result(BlobManagerDefault.isAvailable, "Native module BlobModule is required for blob support");
+        tmp16Result = BlobManagerDefault;
         tmp16Result.sendOverSocket(str, self._socketId);
       } else if (typeof str !== "string") {
         const _ArrayBuffer = ArrayBuffer;
@@ -176,11 +178,11 @@ let items = [
             throw error1;
           }
         }
-        tmp16(218).sendBinary(tmp16(212)(str), self._socketId);
-        const tmp16Result1 = tmp16(218);
+        WebSocketModuleDefault.sendBinary(binaryToBase64Default(str), self._socketId);
+        const tmp16Result1 = WebSocketModuleDefault;
       } else {
-        tmp16(218).send(str, self._socketId);
-        const tmp16Result2 = tmp16(218);
+        WebSocketModuleDefault.send(str, self._socketId);
+        const tmp16Result2 = WebSocketModuleDefault;
       }
     }
   },
@@ -249,10 +251,10 @@ let items = [
       const _eventEmitter2 = this._eventEmitter;
       items[1] = _eventEmitter2.addListener("websocketOpen", (id) => {
         if (id.id === self._socketId) {
-          obj.readyState = obj.OPEN;
-          obj.protocol = id.protocol;
+          self.readyState = self.OPEN;
+          self.protocol = id.protocol;
           const tmp5 = new EventDefault("open");
-          obj.dispatchEvent(tmp5);
+          self.dispatchEvent(tmp5);
         }
       });
       const _eventEmitter3 = this._eventEmitter;

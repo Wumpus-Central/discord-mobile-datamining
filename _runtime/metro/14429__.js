@@ -1,9 +1,9 @@
 // === Module 14429: ? ===
 
 // Module 14429
+import _possibleConstructorReturn from "_possibleConstructorReturn" /* 93 */;
 import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
-import _possibleConstructorReturn from "_possibleConstructorReturn" /* 93 */;
 import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
 import noop from "module_19" /* 19 */;
@@ -29,6 +29,7 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
+_possibleConstructorReturn;
 if (typeof WeakMap === "function") {
   const _WeakMap = WeakMap;
   const weakMap = new WeakMap();

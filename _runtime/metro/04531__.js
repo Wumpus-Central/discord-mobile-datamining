@@ -113,7 +113,7 @@ export default {
     }
   },
   getSystemHapticStatus() {
-    return (async (arg0, value) => {
+    return (async () => {
       if (c0 === 2) {
         c0 = 3;
         throw new TypeError("Generator functions may not be called on executing generators");

@@ -1,6 +1,8 @@
 // === Module 6840: ? ===
 
 // Module 6840
+import cancelAnimation from "cancelAnimation" /* 1636 */;
+import GESTURE_SOURCE from "GESTURE_SOURCE" /* 6628 */;
 import _mod6632 from "module_6632" /* 6632 */;
 import _mod6639 from "module_6639" /* 6639 */;
 import _mod6841 from "module_6841" /* 6841 */;
@@ -50,7 +52,7 @@ export const createBottomSheetScrollableComponent = function createBottomSheetSc
         throw "'Scrollable' cannot be used out of the BottomSheet!";
       }
     }
-    let tmp4Result = tmp4(1636);
+    let tmp4Result = cancelAnimation;
     class J {
       constructor() {
         if (preserveScrollMomentum) {
@@ -75,14 +77,14 @@ export const createBottomSheetScrollableComponent = function createBottomSheetSc
         return obj;
       }
     }
-    obj = { preserveScrollMomentum, SCROLLABLE_DECELERATION_RATE_MAPPER: tmp4(6628).SCROLLABLE_DECELERATION_RATE_MAPPER, animatedScrollableState, showsVerticalScrollIndicator: tmp2, SCROLLABLE_STATE: tmp4(6628).SCROLLABLE_STATE };
+    obj = { preserveScrollMomentum, SCROLLABLE_DECELERATION_RATE_MAPPER: GESTURE_SOURCE.SCROLLABLE_DECELERATION_RATE_MAPPER, animatedScrollableState, showsVerticalScrollIndicator: tmp2, SCROLLABLE_STATE: GESTURE_SOURCE.SCROLLABLE_STATE };
     J.__closure = obj;
     J.__workletHash = 1780437272380;
     J.__initData = __initData;
     const items = [animatedScrollableState, undefined === showsVerticalScrollIndicator || showsVerticalScrollIndicator, preserveScrollMomentum];
     const items1 = [tmp6];
     const animatedProps = tmp4Result.useAnimatedProps(J, items);
-    tmp4Result = tmp4(6632);
+    tmp4Result = _mod6632;
     const tmp10 = React5(() => {
       let result1;
       if (closure_3) {

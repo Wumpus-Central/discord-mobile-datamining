@@ -1,6 +1,7 @@
 // === Module 1015: ? ===
 
 // Module 1015
+import _mod682 from "module_682" /* 682 */;
 import pickSplat from "pickSplat" /* 1014 */;
 
 require = arg1;
@@ -10,7 +11,7 @@ function createAsyncHandlerProxy(arg0, item10034, item10008, processResolvedRout
   dependencyMap = item10008;
   const proxy = new Proxy(arg0, {
     apply(apply, arg1, arg2) {
-      let tmp = (function captureCurrentLocation() {
+      const tmp = (function captureCurrentLocation() {
         let obj = closure_0(1014);
         const navigationContext = obj.getNavigationContext();
         let targetPath;
@@ -21,9 +22,9 @@ function createAsyncHandlerProxy(arg0, item10034, item10008, processResolvedRout
           obj = { pathname: navigationContext.targetPath, search: "", hash: "", state: null, key: "default" };
           return obj;
         } else {
-          if (undefined !== tmp4(889).WINDOW) {
+          if (undefined !== closure_0(889).WINDOW) {
             try {
-              const _location = tmp4(889).WINDOW.location;
+              const _location = closure_0(889).WINDOW.location;
               if (_location) {
                 obj = { pathname: null, search: null, hash: null, state: null, key: "default" };
                 ({ pathname: obj2.pathname, search } = tmp8);
@@ -53,12 +54,12 @@ function createAsyncHandlerProxy(arg0, item10034, item10008, processResolvedRout
       if (navigationContext) {
         let span = navigationContext.span;
       } else {
-        let tmp2Result = tmp2(1014);
+        let tmp2Result = pickSplat;
         span = tmp2Result.getActiveRootSpan();
       }
       const applyResult = apply.apply(arg1, arg2);
       closure_3 = tmp;
-      tmp2Result = tmp2(682);
+      tmp2Result = _mod682;
       if (tmp2Result.isThenable(applyResult)) {
         applyResult.then((result) => {
           if (Array.isArray(result)) {
@@ -79,7 +80,7 @@ function createAsyncHandlerProxy(arg0, item10034, item10008, processResolvedRout
       } else {
         const _Array = Array;
         if (Array.isArray(applyResult)) {
-          processResolvedRoutes(applyResult, tmp5, tmp, span);
+          processResolvedRoutes(applyResult, closure_0, tmp, span);
         }
       }
       return applyResult;
@@ -95,7 +96,6 @@ function checkRouteForAsyncHandler(item10034, processResolvedRoutes) {
       const _Object = Object;
       const keys = Object.keys(item10034.handle);
       for (const item10008 of keys) {
-        let tmp2 = item10008;
         let tmp3 = arg0.handle[item10008];
         let tmp4 = tmp3;
         let __sentry_proxied__ = typeof tmp3 !== "function";
@@ -103,7 +103,7 @@ function checkRouteForAsyncHandler(item10034, processResolvedRoutes) {
           __sentry_proxied__ = tmp4.__sentry_proxied__;
         }
         if (!__sentry_proxied__) {
-          arg0.handle[tmp2] = createAsyncHandlerProxy(tmp4, arg0, item10008, arg1);
+          arg0.handle[item10008] = createAsyncHandlerProxy(tmp4, arg0, item10008, arg1);
         }
         continue;
       }
@@ -120,12 +120,12 @@ function checkRouteForAsyncHandler(item10034, processResolvedRoutes) {
 
 export { checkRouteForAsyncHandler };
 export { createAsyncHandlerProxy };
-export const handleAsyncHandlerResult = function handleAsyncHandlerResult(promise, arg1, arg2, fn, arg4, arg5) {
-  _require = arg1;
+export const handleAsyncHandlerResult = function handleAsyncHandlerResult(promise, key, arg2, fn, arr, height) {
+  _require = key;
   dependencyMap = arg2;
   closure_2 = fn;
-  closure_3 = arg4;
-  closure_4 = arg5;
+  closure_3 = arr;
+  closure_4 = height;
   if (obj.isThenable(promise)) {
     promise.then((result) => {
       if (Array.isArray(result)) {
@@ -146,7 +146,7 @@ export const handleAsyncHandlerResult = function handleAsyncHandlerResult(promis
   } else {
     const _Array = Array;
     if (Array.isArray(promise)) {
-      fn(promise, arg1, tmp, arg5);
+      fn(promise, key, tmp, height);
     }
   }
 };

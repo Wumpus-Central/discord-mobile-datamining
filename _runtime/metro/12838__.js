@@ -164,13 +164,13 @@ let items = [
       obj.measurements = SentrySpan(12839).timedEventsToMeasurements(this._events);
       let _isStandaloneSpan = this._isStandaloneSpan;
       if (_isStandaloneSpan) {
-        let tmpResult = tmp(12802);
+        let tmpResult = SentrySpan(12802);
         _isStandaloneSpan = tmpResult.getRootSpan(self) === self;
       }
       obj.is_segment = _isStandaloneSpan;
       let spanId;
       if (self._isStandaloneSpan) {
-        tmpResult = tmp(12802);
+        tmpResult = SentrySpan(12802);
         const rootSpan = tmpResult.getRootSpan(self);
         spanId = rootSpan.spanContext().spanId;
       }
@@ -193,7 +193,7 @@ let items = [
     key: "addEvent",
     value: function addEvent(name, num, arg2) {
       if (SentrySpan(12825).DEBUG_BUILD) {
-        const logger = tmp(12797).logger;
+        const logger = SentrySpan(12797).logger;
         logger.log("[Tracing] Adding an event to span:", name);
       }
       let isArray = num;
@@ -212,7 +212,7 @@ let items = [
       if (!isArray) {
         let timestampInSecondsResult = arg2;
         if (!arg2) {
-          let tmpResult = tmp(12811);
+          let tmpResult = SentrySpan(12811);
           timestampInSecondsResult = tmpResult.timestampInSeconds();
         }
         tmp7 = timestampInSecondsResult;
@@ -238,7 +238,7 @@ let items = [
         }
       }
       obj = { name, time: null, attributes: null };
-      tmpResult = tmp(12802);
+      tmpResult = SentrySpan(12802);
       obj.time = tmpResult.spanTimeInputToSeconds(tmp7);
       obj.attributes = obj;
       const _events = this._events;
@@ -263,10 +263,10 @@ let items = [
       if (self._isStandaloneSpan) {
         if (self._isStandaloneSpan) {
           if (self._sampled) {
-            let tmpResult = tmp(12840);
+            let tmpResult = SentrySpan(12840);
             const items = [self];
             const spanEnvelope = tmpResult.createSpanEnvelope(items, client);
-            tmpResult = tmp(12824);
+            tmpResult = SentrySpan(12824);
             const client1 = tmpResult.getClient();
             if (client1) {
               if (spanEnvelope[1]) {
@@ -277,8 +277,8 @@ let items = [
               client1.recordDroppedEvent("before_send", "span");
             }
           } else {
-            if (tmp(12825).DEBUG_BUILD) {
-              const logger = tmp(12797).logger;
+            if (SentrySpan(12825).DEBUG_BUILD) {
+              const logger = SentrySpan(12797).logger;
               logger.log("[Tracing] Discarding standalone span because its trace was not chosen to be sampled.");
             }
             if (client) {
@@ -288,18 +288,19 @@ let items = [
         } else {
           const result = self._convertSpanToTransaction();
           if (result) {
-            let scope = tmp(12826).getCapturedScopesOnSpan(self).scope;
+            let scope = SentrySpan(12826).getCapturedScopesOnSpan(self).scope;
             if (!scope) {
-              scope = tmp(12824).getCurrentScope();
-              const tmpResult2 = tmp(12824);
+              scope = SentrySpan(12824).getCurrentScope();
+              const tmpResult2 = SentrySpan(12824);
             }
             scope.captureEvent(result);
-            const tmpResult1 = tmp(12826);
+            const tmpResult1 = SentrySpan(12826);
           }
         }
       } else {
-        const tmpResult3 = tmp(12802);
+        SentrySpan(12802);
       }
+      const obj = SentrySpan(12824);
     }
   },
   {

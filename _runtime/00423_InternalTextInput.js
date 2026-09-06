@@ -36,7 +36,7 @@ function InternalTextInput(value) {
   mostRecentEventCount = tmp8;
   textAndSelection = tmp10;
   editable = undefined;
-  let tmp13 = editable(closure_13(value.value), 2);
+  const tmp13 = editable(closure_13(value.value), 2);
   const first1 = tmp13[0];
   editable = tmp15;
   const tmp16 = editable(closure_13({ mostRecentEventCount, selection: { end: -1, start: -1 } }), 2);
@@ -53,8 +53,8 @@ function InternalTextInput(value) {
   onPressIn(() => {
     obj = {};
     if (tmp) {
-      obj.text = iter.value;
-      editable(iter.value);
+      obj.text = value.value;
+      editable(value.value);
     }
     let tmp5 = obj;
     if (obj) {
@@ -91,6 +91,7 @@ function InternalTextInput(value) {
       }
       textAndSelection.setTextAndSelection(current, mostRecentEventCount, defaultValue, num, num2);
     }
+    tmp = closure_6 !== value.value && typeof value.value === "string";
   }, items);
   textAndSelection = tmp15;
   _objectWithoutProperties = tmp17;
@@ -101,13 +102,11 @@ function InternalTextInput(value) {
       return () => {
         current(first[5]).unregisterInput(current);
         obj = current(first[5]);
-        const tmp = current;
-        const tmp2 = first;
-        const tmp3 = current;
         if (obj2.currentlyFocusedInput() === current) {
-          tmp(tmp2[6])(tmp3).blur();
-          const obj3 = tmp(tmp2[6])(tmp3);
+          current(first[6])(current).blur();
+          const obj3 = current(first[6])(current);
         }
+        obj2 = current(first[5]);
       };
     }
   }, []);
@@ -138,9 +137,9 @@ function InternalTextInput(value) {
             }
             return tmp2;
           },
-        setSelection(arg0, arg1) {
+        setSelection(channel, channel2) {
             if (null != ref.current) {
-              obj.setTextAndSelection(tmp.current, mostRecentEventCount, null, arg0, arg1);
+              obj.setTextAndSelection(tmp.current, mostRecentEventCount, null, channel, channel2);
             }
           }
       };
@@ -202,9 +201,9 @@ function InternalTextInput(value) {
             }
             return tmp2;
           },
-        setSelection(arg0, arg1) {
+        setSelection(channel, channel2) {
             if (null != ref.current) {
-              obj.setTextAndSelection(tmp.current, mostRecentEventCount, null, arg0, arg1);
+              obj.setTextAndSelection(tmp.current, mostRecentEventCount, null, channel, channel2);
             }
           }
       };
@@ -364,7 +363,7 @@ function InternalTextInput(value) {
   require("module_38")(!tmp47, "Cannot specify both value and children.");
   let tmp49 = children;
   if (countResult > 1) {
-    const obj2 = { children };
+    let obj2 = { children };
     tmp49 = jsx(tmp21(tmp22[12]), { children });
   }
   let obj3 = { ref: tmp23 };
@@ -414,10 +413,10 @@ function InternalTextInput(value) {
   obj3.onChange = function onChange(nativeEvent) {
     const text = nativeEvent.nativeEvent.text;
     if (value.onChange) {
-      obj.onChange(nativeEvent);
+      value.onChange(nativeEvent);
     }
     if (value.onChangeText) {
-      obj.onChangeText(text);
+      value.onChangeText(text);
     }
     if (null != first.current) {
       textAndSelection(text);
@@ -449,7 +448,7 @@ function InternalTextInput(value) {
   obj3.style = tmp37;
   obj3.text = defaultValue;
   obj3.textBreakStrategy = value.textBreakStrategy;
-  children = tmp51(defaultValue, obj3);
+  children = <defaultValue ref={tmp23} />;
   return jsx(require("module_111"), { value: true, children });
 }
 let closure_2 = ["aria-busy", "aria-checked", "aria-disabled", "aria-expanded", "aria-selected", "accessibilityState", "id", "tabIndex", "selection", "selectionColor", "selectionHandleColor", "cursorColor"];

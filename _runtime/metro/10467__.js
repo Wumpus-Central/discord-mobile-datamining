@@ -1,10 +1,10 @@
 // === Module 10467: ? ===
 
 // Module 10467
+import _possibleConstructorReturn from "_possibleConstructorReturn" /* 93 */;
 import Filter from "Filter" /* 10451 */;
 import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
-import _possibleConstructorReturn from "_possibleConstructorReturn" /* 93 */;
 import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
 
@@ -27,6 +27,7 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
+_possibleConstructorReturn;
 class ENUnlikelyFormatFilter {
   constructor() {
     self = this;

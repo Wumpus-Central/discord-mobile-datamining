@@ -44,9 +44,8 @@ const memoResult = noop.memo((date) => {
     }
     if (!tmp) {
       if (date.onStateChange) {
-        obj.onStateChange(nativeEvent.spinnerState);
+        date.onStateChange(nativeEvent.spinnerState);
       }
-      obj = date;
     }
   }, items1);
   closure_3 = tmp2;
@@ -70,14 +69,14 @@ const memoResult = noop.memo((date) => {
     obj.date = toISOStringResult;
     obj.id = current;
     const minimumDate = date.minimumDate;
-    if (typeof tmp5 === "function") {
+    if (typeof toIsoWithTimeZoneOffset === "function") {
       let toISOStringResult1;
       if (minimumDate) {
         toISOStringResult1 = minimumDate.toISOString();
       }
       obj.minimumDate = toISOStringResult1;
       const maximumDate = date.maximumDate;
-      if (typeof tmp5 === "function") {
+      if (typeof toIsoWithTimeZoneOffset === "function") {
         let toISOStringResult2;
         if (maximumDate) {
           toISOStringResult2 = maximumDate.toISOString();

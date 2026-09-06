@@ -4,6 +4,7 @@
 import _createClassDefault from "_createClass" /* 42 */;
 import _mod46 from "module_46" /* 46 */;
 import _mod47 from "module_47" /* 47 */;
+import replacer from "replacer" /* 48 */;
 import _classCallCheck from "_classCallCheck" /* 41 */;
 
 const MessageQueue = global;
@@ -117,9 +118,9 @@ let items = [
   },
   {
     key: "callNativeSyncHook",
-    value: function callNativeSyncHook(arg0, arg1, substr, items, items2) {
-      this.processCallbacks(arg0, arg1, substr, items, items2);
-      return MessageQueue.nativeCallSyncHook(arg0, arg1, substr);
+    value: function callNativeSyncHook(arg0, index, substr, items, items2) {
+      this.processCallbacks(arg0, index, substr, items, items2);
+      return MessageQueue.nativeCallSyncHook(arg0, index, substr);
     }
   },
   {
@@ -132,10 +133,10 @@ let items = [
       const self = this;
       if (tmp) {
         if (arg3) {
-          arr.push(self._callID << 1);
+          arr = arr.push(self._callID << 1);
         }
         if (arg4) {
-          arr.push(self._callID << 1 | 1);
+          arr = arr.push(self._callID << 1 | 1);
         }
         const result = self._successCallbacks.set(self._callID, arg4);
         const result1 = self._failureCallbacks.set(self._callID, arg3);
@@ -219,6 +220,7 @@ let items = [
           const result = self._reactNativeMicrotasksCallback();
         }
         _mod46.endEvent();
+        const tmp4Result = _mod46;
       } catch (tmp10) {
         tmp3(tmp[2]).endEvent();
         throw tmp10;
@@ -234,13 +236,13 @@ let items = [
       const beginEvent = _mod46.beginEvent;
       if (this.__spy) {
         const _HermesInternal2 = HermesInternal;
-        beginEvent("" + module + "." + method + "(" + tmp4(48).default(args) + ")");
-        let tmp11 = tmp4;
-        const tmp4Result = tmp4(48);
+        beginEvent("" + module + "." + method + "(" + replacer.default(args) + ")");
+        let tmp11 = require;
+        const tmp4Result = replacer;
       } else {
         const _HermesInternal = HermesInternal;
         beginEvent("" + module + "." + method + "(...)");
-        tmp11 = tmp4;
+        tmp11 = require;
       }
       try {
         if (self.__spy) {
@@ -267,6 +269,7 @@ let items = [
         }
         callableModule[method].apply(callableModule, args);
         tmp11(46).endEvent();
+        const tmp11Result1 = tmp11(46);
       } catch (tmp35) {
         tmp2(tmp[2]).endEvent();
         throw tmp35;

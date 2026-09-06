@@ -16,8 +16,8 @@ class NativeRouter {
 const Alert = fn(17).Alert;
 const jsx = fn(21).jsx;
 NativeRouter.defaultProps = {
-  getUserConfirmation(arg0, arg1) {
-    closure_0 = arg1;
+  getUserConfirmation(captureScreenshotError, fn2) {
+    closure_0 = fn2;
     const items = [
       {
         text: "Cancel",
@@ -32,7 +32,7 @@ NativeRouter.defaultProps = {
         }
       }
     ];
-    Alert.alert("Confirm", arg0, items);
+    Alert.alert("Confirm", captureScreenshotError, items);
   }
 };
 NativeRouter.propTypes = { initialEntries: _modDef4389.array, initialIndex: _modDef4389.number, getUserConfirmation: _modDef4389.func, keyLength: _modDef4389.number, children: _modDef4389.node };

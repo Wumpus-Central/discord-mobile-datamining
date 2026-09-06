@@ -131,10 +131,10 @@ class peg$SyntaxError {
             const str7 = text.text.replace(/\\/g, "\\\\").replace(/"/g, "\\\"").replace(/\0/g, "\\0").replace(/\t/g, "\\t").replace(/\n/g, "\\n").replace(/\r/g, "\\r");
             return "\"" + text.text.replace(/\\/g, "\\\\").replace(/"/g, "\\\"").replace(/\0/g, "\\0").replace(/\t/g, "\\t").replace(/\n/g, "\\n").replace(/\r/g, "\\r").replace(/[\x00-\x0F]/g, (str) => {
               str = str.charCodeAt(0);
-              return "\\x0" + str.charCodeAt(0).toString(16).toUpperCase();
+              return "\\x0" + str.toString(16).toUpperCase();
             }).replace(/[\x10-\x1F\x7F-\x9F]/g, (str) => {
               str = str.charCodeAt(0);
-              return "\\x" + str.charCodeAt(0).toString(16).toUpperCase();
+              return "\\x" + str.toString(16).toUpperCase();
             }) + "\"";
           },
       class(parts) {
@@ -150,11 +150,11 @@ class peg$SyntaxError {
                 const str32 = item[0].replace(/\\/g, "\\\\").replace(/\]/g, "\\]").replace(/\^/g, "\\^").replace(/-/g, "\\-").replace(/\0/g, "\\0").replace(/\t/g, "\\t").replace(/\n/g, "\\n");
                 const str35 = item[0].replace(/\\/g, "\\\\").replace(/\]/g, "\\]").replace(/\^/g, "\\^").replace(/-/g, "\\-").replace(/\0/g, "\\0").replace(/\t/g, "\\t").replace(/\n/g, "\\n").replace(/\r/g, "\\r").replace(/[\x00-\x0F]/g, (str) => {
                   str = str.charCodeAt(0);
-                  return "\\x0" + str.charCodeAt(0).toString(16).toUpperCase();
+                  return "\\x0" + str.toString(16).toUpperCase();
                 });
                 const text = `${str35.replace(/[\x10-\x1F\x7F-\x9F]/g, (str) => {
                   str = str.charCodeAt(0);
-                  return "\\x" + str.charCodeAt(0).toString(16).toUpperCase();
+                  return "\\x" + str.toString(16).toUpperCase();
                 })}-`;
                 const str34 = item[0].replace(/\\/g, "\\\\").replace(/\]/g, "\\]").replace(/\^/g, "\\^").replace(/-/g, "\\-").replace(/\0/g, "\\0").replace(/\t/g, "\\t").replace(/\n/g, "\\n").replace(/\r/g, "\\r");
                 const str38 = item[1].replace(/\\/g, "\\\\");
@@ -167,17 +167,17 @@ class peg$SyntaxError {
                 const str45 = item[1].replace(/\\/g, "\\\\").replace(/\]/g, "\\]").replace(/\^/g, "\\^").replace(/-/g, "\\-").replace(/\0/g, "\\0").replace(/\t/g, "\\t").replace(/\n/g, "\\n").replace(/\r/g, "\\r");
                 let text1 = `${str35.replace(/[\x10-\x1F\x7F-\x9F]/g, (str) => {
                   str = str.charCodeAt(0);
-                  return "\\x" + str.charCodeAt(0).toString(16).toUpperCase();
+                  return "\\x" + str.toString(16).toUpperCase();
                 })}-${item[1].replace(/\\/g, "\\\\").replace(/\]/g, "\\]").replace(/\^/g, "\\^").replace(/-/g, "\\-").replace(/\0/g, "\\0").replace(/\t/g, "\\t").replace(/\n/g, "\\n").replace(/\r/g, "\\r").replace(/[\x00-\x0F]/g, (str) => {
                   str = str.charCodeAt(0);
-                  return "\\x0" + str.charCodeAt(0).toString(16).toUpperCase();
+                  return "\\x0" + str.toString(16).toUpperCase();
                 }).replace(/[\x10-\x1F\x7F-\x9F]/g, (str) => {
                   str = str.charCodeAt(0);
-                  return "\\x" + str.charCodeAt(0).toString(16).toUpperCase();
+                  return "\\x" + str.toString(16).toUpperCase();
                 })}`;
                 const str46 = item[1].replace(/\\/g, "\\\\").replace(/\]/g, "\\]").replace(/\^/g, "\\^").replace(/-/g, "\\-").replace(/\0/g, "\\0").replace(/\t/g, "\\t").replace(/\n/g, "\\n").replace(/\r/g, "\\r").replace(/[\x00-\x0F]/g, (str) => {
                   str = str.charCodeAt(0);
-                  return "\\x0" + str.charCodeAt(0).toString(16).toUpperCase();
+                  return "\\x0" + str.toString(16).toUpperCase();
                 });
               } else {
                 const str2 = item.replace(/\\/g, "\\\\");
@@ -190,14 +190,14 @@ class peg$SyntaxError {
                 const str16 = item.replace(/\\/g, "\\\\").replace(/\]/g, "\\]").replace(/\^/g, "\\^").replace(/-/g, "\\-").replace(/\0/g, "\\0").replace(/\t/g, "\\t").replace(/\n/g, "\\n").replace(/\r/g, "\\r");
                 text1 = item.replace(/\\/g, "\\\\").replace(/\]/g, "\\]").replace(/\^/g, "\\^").replace(/-/g, "\\-").replace(/\0/g, "\\0").replace(/\t/g, "\\t").replace(/\n/g, "\\n").replace(/\r/g, "\\r").replace(/[\x00-\x0F]/g, (str) => {
                   str = str.charCodeAt(0);
-                  return "\\x0" + str.charCodeAt(0).toString(16).toUpperCase();
+                  return "\\x0" + str.toString(16).toUpperCase();
                 }).replace(/[\x10-\x1F\x7F-\x9F]/g, (str) => {
                   str = str.charCodeAt(0);
-                  return "\\x" + str.charCodeAt(0).toString(16).toUpperCase();
+                  return "\\x" + str.toString(16).toUpperCase();
                 });
                 const str17 = item.replace(/\\/g, "\\\\").replace(/\]/g, "\\]").replace(/\^/g, "\\^").replace(/-/g, "\\-").replace(/\0/g, "\\0").replace(/\t/g, "\\t").replace(/\n/g, "\\n").replace(/\r/g, "\\r").replace(/[\x00-\x0F]/g, (str) => {
                   str = str.charCodeAt(0);
-                  return "\\x0" + str.charCodeAt(0).toString(16).toUpperCase();
+                  return "\\x0" + str.toString(16).toUpperCase();
                 });
               }
               return text1;
@@ -277,12 +277,12 @@ class peg$SyntaxError {
       str16 = str14.replace(/\r/g, "\\r");
       str17 = str16.replace(/[\x00-\x0F]/g, (str) => {
         str = str.charCodeAt(0);
-        return "\\x0" + str.charCodeAt(0).toString(16).toUpperCase();
+        return "\\x0" + str.toString(16).toUpperCase();
       });
       str18 = "\"";
       str4 = `${"\"" + str17.replace(/[\x10-\x1F\x7F-\x9F]/g, (str) => {
         str = str.charCodeAt(0);
-        return "\\x" + str.charCodeAt(0).toString(16).toUpperCase();
+        return "\\x" + str.toString(16).toUpperCase();
       })}"`;
     }
     return text + " but " + str4 + " found.";
@@ -325,34 +325,34 @@ obj = {
       }
       const tmp13 = obj;
       if (tmp7 !== obj) {
-        tmp2();
+        peg$parse_();
         const tmp17 = peg$parseNUM();
         if (tmp17 !== tmp13) {
           peg$parsespaceOrComma();
-          let tmp16Result = tmp16();
+          let tmp16Result = peg$parseNUM();
           if (tmp16Result !== tmp13) {
-            tmp18();
-            tmp16Result = tmp16();
+            peg$parsespaceOrComma();
+            tmp16Result = peg$parseNUM();
             if (tmp16Result !== tmp13) {
-              tmp18();
-              const tmp16Result1 = tmp16();
+              peg$parsespaceOrComma();
+              const tmp16Result1 = peg$parseNUM();
               if (tmp16Result1 !== tmp13) {
-                tmp18();
-                const tmp16Result2 = tmp16();
+                peg$parsespaceOrComma();
+                const tmp16Result2 = peg$parseNUM();
                 if (tmp16Result2 !== tmp13) {
-                  tmp18();
-                  const tmp16Result3 = tmp16();
+                  peg$parsespaceOrComma();
+                  const tmp16Result3 = peg$parseNUM();
                   if (tmp16Result3 !== tmp13) {
-                    tmp18();
-                    const tmp16Result4 = tmp16();
+                    peg$parsespaceOrComma();
+                    const tmp16Result4 = peg$parseNUM();
                     if (tmp16Result4 !== tmp13) {
-                      tmp18();
-                      const tmp16Result5 = tmp16();
+                      peg$parsespaceOrComma();
+                      const tmp16Result5 = peg$parseNUM();
                       if (tmp16Result5 !== tmp13) {
-                        tmp18();
-                        const tmp16Result6 = tmp16();
+                        peg$parsespaceOrComma();
+                        const tmp16Result6 = peg$parseNUM();
                         if (tmp16Result6 !== tmp13) {
-                          tmp2();
+                          peg$parse_();
                           if (41 === str.charCodeAt(closure_50)) {
                             let tmp38 = c4;
                             closure_50 = closure_50 + 1;
@@ -371,7 +371,7 @@ obj = {
                             }
                           }
                           if (tmp38 !== tmp13) {
-                            tmp2();
+                            peg$parse_();
                             closure_51 = tmp;
                             if (typeof peg$f1 === "function") {
                               obj = { matrix: null };
@@ -440,7 +440,7 @@ obj = {
       }
       if (tmp47) {
         diff = diff + 1;
-        tmp2();
+        peg$parse_();
         if (str.substr(closure_50, 10) === c5) {
           closure_50 = closure_50 + 10;
           let tmp58 = tmp56;
@@ -459,15 +459,15 @@ obj = {
           }
         }
         if (tmp58 !== tmp13) {
-          tmp2();
+          peg$parse_();
           const tmp67 = peg$parseNUM();
           if (tmp67 !== tmp13) {
             peg$parsespaceOrComma();
-            let tmp66Result = tmp66();
+            let tmp66Result = peg$parseNUM();
             if (tmp66Result === tmp13) {
               tmp66Result = null;
             }
-            tmp2();
+            peg$parse_();
             if (41 === str.charCodeAt(closure_50)) {
               let tmp74 = c4;
               closure_50 = closure_50 + 1;
@@ -486,7 +486,7 @@ obj = {
               }
             }
             if (tmp74 !== tmp13) {
-              tmp2();
+              peg$parse_();
               closure_51 = tmp53;
               if (typeof peg$f2 === "function") {
                 if (null == tmp66Result) {
@@ -507,7 +507,6 @@ obj = {
             closure_50 = tmp53;
             tmp64 = tmp13;
           }
-          tmp66 = peg$parseNUM;
         } else {
           closure_50 = tmp53;
           tmp64 = tmp13;
@@ -536,7 +535,7 @@ obj = {
       }
       if (tmp47) {
         diff = diff + 1;
-        tmp2();
+        peg$parse_();
         if (str.substr(closure_50, 6) === c6) {
           closure_50 = closure_50 + 6;
           let tmp97 = tmp95;
@@ -555,15 +554,15 @@ obj = {
           }
         }
         if (tmp97 !== tmp13) {
-          tmp2();
+          peg$parse_();
           const tmp106 = peg$parseNUM();
           if (tmp106 !== tmp13) {
             peg$parsespaceOrComma();
-            let tmp105Result = tmp105();
+            let tmp105Result = peg$parseNUM();
             if (tmp105Result === tmp13) {
               tmp105Result = null;
             }
-            tmp2();
+            peg$parse_();
             if (41 === str.charCodeAt(closure_50)) {
               let tmp113 = c4;
               closure_50 = closure_50 + 1;
@@ -582,7 +581,7 @@ obj = {
               }
             }
             if (tmp113 !== tmp13) {
-              tmp2();
+              peg$parse_();
               closure_51 = tmp92;
               if (typeof peg$f3 === "function") {
                 if (null == tmp105Result) {
@@ -605,7 +604,6 @@ obj = {
             closure_50 = tmp92;
             tmp103 = tmp13;
           }
-          tmp105 = peg$parseNUM;
         } else {
           closure_50 = tmp92;
           tmp103 = tmp13;
@@ -634,7 +632,7 @@ obj = {
       }
       if (tmp47) {
         diff = diff + 1;
-        tmp2();
+        peg$parse_();
         if (str.substr(closure_50, 7) === c7) {
           closure_50 = closure_50 + 7;
           let tmp136 = tmp134;
@@ -653,15 +651,15 @@ obj = {
           }
         }
         if (tmp136 !== tmp13) {
-          tmp2();
+          peg$parse_();
           const tmp145 = peg$parseNUM();
           if (tmp145 !== tmp13) {
             diff = diff + 1;
             peg$parsespaceOrComma();
-            let tmp144Result = tmp144();
+            let tmp144Result = peg$parseNUM();
             if (tmp144Result !== tmp13) {
-              tmp148();
-              tmp144Result = tmp144();
+              peg$parsespaceOrComma();
+              tmp144Result = peg$parseNUM();
               if (tmp144Result !== tmp13) {
                 closure_51 = tmp147;
                 if (typeof peg$f5 === "function") {
@@ -694,7 +692,7 @@ obj = {
             if (tmp151 === tmp13) {
               tmp151 = null;
             }
-            tmp2();
+            peg$parse_();
             if (41 === str.charCodeAt(closure_50)) {
               let tmp165 = c4;
               closure_50 = closure_50 + 1;
@@ -713,7 +711,7 @@ obj = {
               }
             }
             if (tmp165 !== tmp13) {
-              tmp2();
+              peg$parse_();
               closure_51 = tmp131;
               if (typeof peg$f4 === "function") {
                 if (null !== tmp151) {
@@ -734,7 +732,6 @@ obj = {
               closure_50 = tmp131;
               let tmp142 = tmp13;
             }
-            tmp148 = peg$parsespaceOrComma;
           } else {
             closure_50 = tmp131;
             tmp142 = tmp13;
@@ -767,7 +764,7 @@ obj = {
       }
       if (tmp47) {
         diff = diff + 1;
-        tmp2();
+        peg$parse_();
         if (str.substr(closure_50, 6) === c8) {
           closure_50 = closure_50 + 6;
           let tmp190 = tmp188;
@@ -786,10 +783,10 @@ obj = {
           }
         }
         if (tmp190 !== tmp13) {
-          tmp2();
+          peg$parse_();
           const tmp199 = peg$parseNUM();
           if (tmp199 !== tmp13) {
-            tmp2();
+            peg$parse_();
             if (41 === str.charCodeAt(closure_50)) {
               let tmp203 = c4;
               closure_50 = closure_50 + 1;
@@ -808,7 +805,7 @@ obj = {
               }
             }
             if (tmp203 !== tmp13) {
-              tmp2();
+              peg$parse_();
               closure_51 = tmp185;
               if (typeof peg$f6 === "function") {
                 const obj6 = { skewX: null };
@@ -855,7 +852,7 @@ obj = {
       }
       if (tmp47) {
         diff = diff + 1;
-        tmp2();
+        peg$parse_();
         if (str.substr(closure_50, 6) === c9) {
           closure_50 = closure_50 + 6;
           let tmp225 = tmp223;
@@ -874,10 +871,10 @@ obj = {
           }
         }
         if (tmp225 !== tmp13) {
-          tmp2();
+          peg$parse_();
           const tmp234 = peg$parseNUM();
           if (tmp234 !== tmp13) {
-            tmp2();
+            peg$parse_();
             if (41 === str.charCodeAt(closure_50)) {
               let tmp238 = c4;
               closure_50 = closure_50 + 1;
@@ -896,7 +893,7 @@ obj = {
               }
             }
             if (tmp238 !== tmp13) {
-              tmp2();
+              peg$parse_();
               closure_51 = tmp220;
               if (typeof peg$f7 === "function") {
                 const obj7 = { skewY: null };
@@ -962,14 +959,14 @@ obj = {
       } else {
         tmp4 = obj;
         if (0 === diff) {
-          tmp4 = tmp2;
+          tmp4 = obj;
           if (closure_50 >= closure_53) {
             if (tmp6 > closure_53) {
               closure_53 = tmp6;
               closure_54 = [];
             }
             closure_54.push(tmp5);
-            tmp4 = tmp2;
+            tmp4 = obj;
           }
         }
       }
@@ -982,18 +979,17 @@ obj = {
             closure_50 = closure_50 + 1;
             tmp17 = charAtResult1;
           } else {
-            let tmp15 = obj;
             tmp17 = obj;
             if (0 === diff) {
               let tmp19 = closure_50;
-              tmp17 = tmp15;
+              tmp17 = obj;
               if (closure_50 >= closure_53) {
                 if (tmp19 > closure_53) {
                   closure_53 = tmp19;
                   closure_54 = [];
                 }
                 let arr1 = closure_54.push(tmp18);
-                tmp17 = tmp15;
+                tmp17 = obj;
               }
             }
           }
@@ -1022,14 +1018,14 @@ obj = {
       } else {
         tmp4 = obj;
         if (0 === diff) {
-          tmp4 = tmp2;
+          tmp4 = obj;
           if (closure_50 >= closure_53) {
             if (tmp6 > closure_53) {
               closure_53 = tmp6;
               closure_54 = [];
             }
             closure_54.push(tmp5);
-            tmp4 = tmp2;
+            tmp4 = obj;
           }
         }
       }
@@ -1042,18 +1038,17 @@ obj = {
             closure_50 = closure_50 + 1;
             tmp17 = charAtResult1;
           } else {
-            let tmp15 = obj;
             tmp17 = obj;
             if (0 === diff) {
               let tmp19 = closure_50;
-              tmp17 = tmp15;
+              tmp17 = obj;
               if (closure_50 >= closure_53) {
                 if (tmp19 > closure_53) {
                   closure_53 = tmp19;
                   closure_54 = [];
                 }
                 let arr1 = closure_54.push(tmp18);
-                tmp17 = tmp15;
+                tmp17 = obj;
               }
             }
           }
@@ -1114,9 +1109,7 @@ obj = {
       if (tmp13 !== tmp8) {
         do {
           let arr1 = items.push(tmp13);
-          let tmp21 = str;
           let charAtResult1 = str.charAt(closure_50);
-          let tmp24 = re15;
           if (re15.test(charAtResult1)) {
             closure_50 = closure_50 + 1;
             tmp27 = charAtResult1;
@@ -1138,9 +1131,9 @@ obj = {
           }
           tmp8 = obj;
           tmp13 = tmp27;
-          tmp19 = tmp21;
-          obj = tmp24;
-          str2 = tmp21;
+          tmp19 = str;
+          obj = re15;
+          str2 = str;
         } while (tmp27 !== obj);
       }
       if (46 === str2.charCodeAt(closure_50)) {
@@ -1194,9 +1187,7 @@ obj = {
           if (tmp52) {
             do {
               let arr5 = items1.push(tmp46);
-              let tmp59 = str;
               let charAtResult3 = str.charAt(closure_50);
-              let tmp62 = re15;
               if (re15.test(charAtResult3)) {
                 closure_50 = closure_50 + 1;
                 tmp65 = charAtResult3;
@@ -1218,10 +1209,10 @@ obj = {
               }
               tmp57 = obj;
               tmp46 = tmp65;
-              tmp53 = tmp59;
+              tmp53 = str;
               tmp54 = items1;
-              tmp55 = tmp62;
-              tmp56 = tmp59;
+              tmp55 = re15;
+              tmp56 = str;
             } while (tmp65 !== obj);
           }
         }
@@ -1286,9 +1277,7 @@ obj = {
           if (tmp80) {
             do {
               let arr8 = items3.push(tmp74);
-              let tmp82 = str;
               let charAtResult5 = str.charAt(closure_50);
-              let tmp85 = re15;
               if (re15.test(charAtResult5)) {
                 closure_50 = closure_50 + 1;
                 tmp88 = charAtResult5;
@@ -1310,10 +1299,10 @@ obj = {
               }
               tmp72 = obj;
               tmp74 = tmp88;
-              tmp71 = tmp82;
+              tmp71 = str;
               tmp41 = items3;
-              obj3 = tmp85;
-              str4 = tmp82;
+              obj3 = re15;
+              str4 = str;
             } while (tmp88 !== obj);
           }
         }
@@ -1387,7 +1376,6 @@ obj = {
             if (tmp123) {
               do {
                 let arr13 = items4.push(tmp117);
-                let tmp128 = str;
                 let charAtResult8 = str.charAt(closure_50);
                 if (re15.test(charAtResult8)) {
                   closure_50 = closure_50 + 1;
@@ -1410,7 +1398,7 @@ obj = {
                 }
                 tmp126 = obj;
                 tmp117 = tmp134;
-                tmp124 = tmp128;
+                tmp124 = str;
                 tmp125 = items4;
               } while (tmp134 !== obj);
             }
@@ -1444,38 +1432,36 @@ obj = {
       peg$FAILED = {};
     }
     function peg$parsestart() {
-      let tmp19;
       let tmp20;
       diff = diff + 1 + 1;
       const tmp3 = peg$parsefunction();
       if (tmp3 !== obj) {
         const tmp2Result = peg$parsefunction();
-        if (tmp2Result !== tmp4) {
+        if (tmp2Result !== obj) {
           let items = [tmp9, tmp2Result];
           let tmp11 = items;
         } else {
           closure_50 = tmp7;
-          tmp11 = tmp4;
+          tmp11 = obj;
         }
         items1 = [];
-        let tmp12 = tmp4;
-        if (tmp11 !== tmp4) {
+        let tmp12 = obj;
+        if (tmp11 !== obj) {
           do {
             let arr = items1.push(tmp11);
             let tmp14 = closure_50;
             let tmp16 = peg$parse_();
             let tmp18 = peg$parsefunction();
-            tmp19 = obj;
             if (tmp18 !== obj) {
               let items2 = [tmp16, tmp18];
               tmp20 = items2;
             } else {
               closure_50 = tmp14;
-              tmp20 = tmp19;
+              tmp20 = obj;
             }
             tmp11 = tmp20;
-            tmp12 = tmp19;
-          } while (tmp20 !== tmp19);
+            tmp12 = obj;
+          } while (tmp20 !== obj);
         }
         closure_51 = tmp;
         if (typeof peg$f0 === "function") {
@@ -1491,7 +1477,7 @@ obj = {
             if (Array.isArray(item[1])) {
               const items = [];
               HermesBuiltin.arraySpread(tmp2, 0);
-              HermesBuiltin.apply(items, tmp);
+              HermesBuiltin.apply(items, items3);
             } else {
               push(tmp2);
             }
@@ -1505,8 +1491,8 @@ obj = {
         tmp9 = peg$parse_();
       } else {
         closure_50 = tmp;
-        tmp5 = tmp4;
-        tmp6 = tmp4;
+        tmp5 = obj;
+        tmp6 = obj;
       }
       diff = diff - 1;
       if (tmp6 === tmp5) {
@@ -1614,6 +1600,7 @@ obj = {
         peg$parsestart = peg$FAILED[peg$FAILED.startRule];
       } else {
         const _Error = Error;
+        str = "Can't start parsing from rule \"";
         const error = new Error("Can't start parsing from rule \"" + peg$FAILED.startRule + "\".");
         throw error;
       }
@@ -1649,15 +1636,15 @@ obj = {
         let tmp = items1[offset];
         let arr2 = items1;
         if (!tmp) {
-          if (offset >= arr.length) {
-            diff = arr.length - 1;
-            let tmp5 = arr;
+          if (offset >= items1.length) {
+            diff = items1.length - 1;
+            let tmp5 = items1;
           } else {
             const diff1 = offset - 1;
             let tmp3 = diff1;
             diff = diff1;
-            tmp5 = arr;
-            if (!arr[diff1]) {
+            tmp5 = items1;
+            if (!items1[diff1]) {
               const diff2 = tmp3 - 1;
               tmp3 = diff2;
               diff = diff2;
@@ -1724,7 +1711,7 @@ obj = {
       }
       const message = peg$SyntaxError.buildMessage(tmp14, charAtResult);
       const _Error2 = Error;
-      let tmp26 = typeof call === "unknown" ? _Error2(message) : call(Object.create(peg$SyntaxError.prototype), message);
+      const tmp26 = typeof call === "unknown" ? _Error2(message) : call(Object.create(peg$SyntaxError.prototype), message);
       const _Object = Object;
       if (Object.setPrototypeOf) {
         const _Object2 = Object;

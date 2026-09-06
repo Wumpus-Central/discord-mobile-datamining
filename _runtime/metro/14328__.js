@@ -2,8 +2,8 @@
 
 // Module 14328
 import _mod14323 from "module_14323" /* 14323 */;
+import _mod14329 from "module_14329" /* 14329 */;
 
-const _mod14329 = tmp(14329);
 
 export default (arg0) => {
   if (_mod14323(arg0)) {

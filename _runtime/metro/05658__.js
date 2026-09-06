@@ -59,6 +59,7 @@ export const useSyncExternalStoreWithSelector = (arg0, arg1, arg2, arg3, arg4) =
             closure_0 = tmp;
             tmp9 = tmp5;
           }
+          tmp5 = value;
         } else {
           c2 = true;
           closure_0 = tmp;
@@ -92,6 +93,7 @@ export const useSyncExternalStoreWithSelector = (arg0, arg1, arg2, arg3, arg4) =
             closure_0 = tmp;
             tmp10 = tmp6;
           }
+          tmp6 = value;
         } else {
           c2 = true;
           closure_0 = tmp;

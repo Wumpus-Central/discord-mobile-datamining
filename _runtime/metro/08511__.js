@@ -1,10 +1,10 @@
 // === Module 8511: ? ===
 
 // Module 8511
+import _possibleConstructorReturnDefault from "_possibleConstructorReturn" /* 93 */;
 import _modDef8492 from "module_8492" /* 8492 */;
 import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
-import _possibleConstructorReturn from "_possibleConstructorReturn" /* 93 */;
 import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
 
@@ -27,6 +27,7 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
+_possibleConstructorReturnDefault;
 class FeMergeNode {
   constructor() {
     self = this;

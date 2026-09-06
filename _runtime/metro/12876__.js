@@ -11,12 +11,10 @@ function getMetadataForUrl(fn, arg1) {
       const _Object = Object;
       const keys = Object.keys(_mod12798.GLOBAL_OBJ._sentryModuleMetadata);
       for (const item10026 of keys) {
-        let tmp11 = item10026;
         let tmp16 = _mod12798.GLOBAL_OBJ._sentryModuleMetadata[item10026];
-        let obj = set;
         if (!set.has(item10026)) {
-          let addResult = obj.add(tmp11);
-          let obj2 = arg0(tmp11);
+          let addResult = set.add(item10026);
+          let obj2 = arg0(item10026);
           let reversed = obj2.reverse();
           for (const item10050 of reversed) {
             if (item10050.filename) {
@@ -44,12 +42,11 @@ export const addMetadataToStackFrames = function addMetadataToStackFrames(arg0, 
       if (stacktrace.stacktrace) {
         const tmp = stacktrace.stacktrace.frames || [];
         for (const item10010 of tmp) {
-          let tmp4 = item10010;
           if (item10010.filename) {
-            if (!tmp4.module_metadata) {
-              let tmp9 = getMetadataForUrl(closure_0, tmp4.filename);
+            if (!item10010.module_metadata) {
+              let tmp9 = getMetadataForUrl(closure_0, item10010.filename);
               if (tmp9) {
-                tmp4.module_metadata = tmp10;
+                item10010.module_metadata = tmp10;
               }
             }
           }

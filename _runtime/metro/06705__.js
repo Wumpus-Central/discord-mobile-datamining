@@ -13,7 +13,7 @@ export const useViewRefHandler = function useViewRefHandler(current, detectorUpd
     if (null !== viewRef) {
       previousViewTag.viewRef = viewRef;
       if (-1 === previousViewTag.previousViewTag) {
-        tmp.previousViewTag = _modDef6690(tmp.viewRef);
+        previousViewTag.previousViewTag = _modDef6690(previousViewTag.viewRef);
       }
       if (!previousViewTag.firstRender) {
         detectorUpdater(true);

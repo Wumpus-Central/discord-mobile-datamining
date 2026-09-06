@@ -17,7 +17,7 @@ export default {
     }
     _mod38(tmp4, "Options must be a valid object");
     _mod38(typeof fn === "function", "Must provide a valid callback");
-    let tmpResult = tmp(38);
+    let tmpResult = _mod38;
     tmpResult(ActionSheetManagerDefault, "ActionSheetManager doesn't exist");
     destructiveButtonIndex = destructiveButtonIndex.destructiveButtonIndex;
     ({ tintColor, cancelButtonTintColor, disabledButtonTintColor } = destructiveButtonIndex);
@@ -29,7 +29,7 @@ export default {
         tmp11 = items;
       }
     }
-    tmpResult = tmp(50);
+    tmpResult = processColor;
     const defaultResult = tmpResult.default(tintColor);
     const tmp10 = _objectWithoutProperties(destructiveButtonIndex, closure_3);
     const defaultResult1 = processColor.default(cancelButtonTintColor);
@@ -61,6 +61,7 @@ export default {
     obj.disabledButtonTintColor = defaultResult2;
     obj.destructiveButtonIndices = tmp11;
     const result = ActionSheetManagerDefault.showActionSheetWithOptions(obj, fn);
+    const tmp8Result = ActionSheetManagerDefault;
   },
   showShareActionSheetWithOptions(tintColor, fn, fn2) {
     let tmp4 = typeof tintColor === "object";
@@ -70,11 +71,11 @@ export default {
     _mod38(tmp4, "Options must be a valid object");
     _mod38(typeof fn === "function", "Must provide a valid failureCallback");
     _mod38(typeof fn2 === "function", "Must provide a valid successCallback");
-    let tmpResult = tmp(38);
+    let tmpResult = _mod38;
     tmpResult(ActionSheetManagerDefault, "ActionSheetManager doesn't exist");
     const obj = {};
     const merged = Object.assign(tintColor);
-    tmpResult = tmp(50);
+    tmpResult = processColor;
     obj.tintColor = tmpResult.default(tintColor.tintColor);
     const result = obj.showShareActionSheetWithOptions(obj, fn, fn2);
   },

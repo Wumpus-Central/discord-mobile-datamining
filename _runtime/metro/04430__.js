@@ -63,10 +63,10 @@ function getTrackedConnectionState(arg0) {
 function findCallerName(arg0) {
 
 }
-function parseJsonThen(arg0, fn) {
+function parseJsonThen(state, fn) {
   try {
     const _JSON = JSON;
-    const parsed = JSON.parse(arg0);
+    const parsed = JSON.parse(state);
     if (undefined !== parsed) {
       fn(parsed);
     }
@@ -85,7 +85,7 @@ export function combine(arg0, arg1) {
   return () => Object.assign({}, closure_0, closure_1(...HermesBuiltin.copyRestArgs()));
 }
 export { createJSONStorage };
-export function devtools(arg0, devtools) {
+export function devtools(arg0) {
   closure_0 = arg0;
   if (devtools === undefined) {
     devtools = {};
@@ -118,12 +118,11 @@ export function devtools(arg0, devtools) {
               return obj;
             } else {
               obj = { connection: connect.connect(name), stores: {} };
-              const result = obj5.set(name.name, obj);
+              const result = store.set(name.name, obj);
               const obj1 = { type: "tracked", store };
               const merged1 = Object.assign(obj);
               return obj1;
             }
-            obj5 = store;
           }
         })(store, tmp5, tmp2);
         const connection = tmp9.connection;
@@ -179,38 +178,34 @@ export function devtools(arg0, devtools) {
             }
             if (undefined === store) {
               if (null != connection) {
-                obj6.send(tmp3, closure_1());
+                connection.send(tmp3, closure_1());
               }
-              obj6 = connection;
-            } else {
-              if (null != connection) {
-                obj1 = {};
-                const merged = Object.assign(tmp3);
-                const _HermesInternal = HermesInternal;
-                obj1.type = "" + tmp15 + "/" + tmp3.type;
-                if (typeof getTrackedConnectionState === "function") {
-                  value = map.get(tmp33);
-                  if (value) {
-                    const _Object = Object;
-                    const _Object2 = Object;
-                    const entries = Object.entries(value.stores);
-                    let fromEntriesResult = Object.fromEntries(entries.map((item) => {
-                      [tmp, obj] = item;
-                      const items = [tmp, obj.getState()];
-                      return items;
-                    }));
-                  } else {
-                    fromEntriesResult = {};
-                  }
-                  const obj2 = {};
-                  const merged1 = Object.assign(fromEntriesResult);
-                  obj2[tmp15] = setState.getState();
-                  obj8.send(obj1, obj2);
+            } else if (null != connection) {
+              obj1 = {};
+              const merged = Object.assign(tmp3);
+              const _HermesInternal = HermesInternal;
+              obj1.type = "" + store + "/" + tmp3.type;
+              if (typeof getTrackedConnectionState === "function") {
+                value = map.get(tmp33);
+                if (value) {
+                  const _Object = Object;
+                  const _Object2 = Object;
+                  const entries = Object.entries(value.stores);
+                  let fromEntriesResult = Object.fromEntries(entries.map((item) => {
+                    [tmp, obj] = item;
+                    const items = [tmp, obj.getState()];
+                    return items;
+                  }));
                 } else {
-                  throw new TypeError("Trying to call a non-function");
+                  fromEntriesResult = {};
                 }
+                const obj2 = {};
+                const merged1 = Object.assign(fromEntriesResult);
+                obj2[store] = setState.getState();
+                connection.send(obj1, obj2);
+              } else {
+                throw new TypeError("Trying to call a non-function");
               }
-              obj8 = connection;
             }
             return tmp;
           } else {
@@ -221,10 +216,10 @@ export function devtools(arg0, devtools) {
           cleanup() {
                 let tmp3 = connection;
                 if (connection) {
-                  tmp3 = typeof obj.unsubscribe === "function";
+                  tmp3 = typeof connection.unsubscribe === "function";
                 }
                 if (tmp3) {
-                  obj.unsubscribe();
+                  connection.unsubscribe();
                 }
                 name = name.name;
                 if (undefined !== store) {
@@ -234,10 +229,9 @@ export function devtools(arg0, devtools) {
                     delete tmp[tmp2];
                     const _Object = Object;
                     if (0 === Object.keys(value.stores).length) {
-                      obj2.delete(name);
+                      map.delete(name);
                     }
                   }
-                  obj2 = map;
                 }
               }
         };
@@ -289,7 +283,7 @@ export function devtools(arg0, devtools) {
               parseJsonThen(type.payload, (type) => {
                 if ("__setState" !== type.type) {
                   if (tmp10) {
-                    obj.dispatch(type);
+                    setState.dispatch(type);
                   }
                   tmp10 = setState.dispatchFromDevtools && typeof setState.dispatch === "function";
                 } else if (undefined === store) {
@@ -319,9 +313,8 @@ export function devtools(arg0, devtools) {
               if (undefined === store) {
                 let initResult;
                 if (null != connection) {
-                  initResult = obj5.init(setState.getState());
+                  initResult = connection.init(setState.getState());
                 }
-                obj5 = connection;
                 const tmp42 = initResult;
               } else if (null != connection) {
                 if (typeof getTrackedConnectionState === "function") {
@@ -348,9 +341,8 @@ export function devtools(arg0, devtools) {
             } else if ("COMMIT" === type2) {
               if (undefined === store) {
                 if (null != connection) {
-                  obj3.init(setState.getState());
+                  connection.init(setState.getState());
                 }
-                obj3 = connection;
               } else if (null != connection) {
                 if (typeof getTrackedConnectionState === "function") {
                   value = map.get(tmp18);
@@ -374,14 +366,14 @@ export function devtools(arg0, devtools) {
               }
               return tmp26;
             } else if ("ROLLBACK" === type2) {
-              parseJsonThen(type.state, (arg0) => {
+              parseJsonThen(type.state, (state) => {
                 if (undefined === closure_1_4) {
-                  setStateFromDevtools(arg0);
+                  setStateFromDevtools(state);
                   if (null != connection) {
                     connection.init(setState.getState());
                   }
                 } else {
-                  setStateFromDevtools(arg0[tmp]);
+                  setStateFromDevtools(state[tmp]);
                   if (null != connection) {
                     if (typeof closure_5 === "function") {
                       let mapped = store.get(tmp18);
@@ -432,16 +424,16 @@ export function devtools(arg0, devtools) {
                   }
                 }
               }
-              parseJsonThen(type.state, (arg0) => {
+              parseJsonThen(type.state, (state) => {
                 if (undefined !== store) {
                   const _JSON = JSON;
                   const _JSON2 = JSON;
                   const json = JSON.stringify(setState.getState());
-                  if (json !== JSON.stringify(arg0[tmp])) {
-                    setStateFromDevtools(arg0[tmp]);
+                  if (json !== JSON.stringify(state[store])) {
+                    setStateFromDevtools(state[store]);
                   }
                 } else {
-                  setStateFromDevtools(arg0);
+                  setStateFromDevtools(state);
                 }
               });
             }
@@ -455,9 +447,9 @@ export function devtools(arg0, devtools) {
     }
   };
 }
-export function persist(arg0, arg1) {
+export function persist(arg0, useReportToModChannelFiltersStore) {
   closure_0 = arg0;
-  closure_1 = arg1;
+  closure_1 = useReportToModChannelFiltersStore;
   return (arg0, arg1, setState) => {
     closure_0 = arg0;
     closure_1 = arg1;
@@ -704,12 +696,12 @@ export function persist(arg0, arg1) {
                 if (null == tmp6) {
                   tmp6 = closure_1_10;
                 }
-                mergeResult = persist.merge(tmp3, tmp6);
-                closure_0(mergeResult, true);
+                const tmp = closure_0(result, 2);
+                closure_0(persist.merge(tmp3, tmp6), true);
                 if (tmp2) {
                   if (typeof setItem === "function") {
                     let obj = {};
-                    const merged = Object.assign(tmp5());
+                    const merged = Object.assign(closure_1_1());
                     obj = { state: null, version: null };
                     obj.state = persist.partialize(obj);
                     obj.version = persist.version;
@@ -718,8 +710,7 @@ export function persist(arg0, arg1) {
                     throw new TypeError("Trying to call a non-function");
                   }
                 }
-                const tmp = closure_0(result, 2);
-                tmp5 = closure_1_1;
+                mergeResult = persist.merge(tmp3, tmp6);
               });
               return ((name) => {
                 try {
@@ -792,12 +783,12 @@ export function persist(arg0, arg1) {
                 if (null == tmp6) {
                   tmp6 = closure_1_10;
                 }
-                mergeResult = persist.merge(tmp3, tmp6);
-                closure_0(mergeResult, true);
+                const tmp = closure_0(result, 2);
+                closure_0(persist.merge(tmp3, tmp6), true);
                 if (tmp2) {
                   if (typeof setItem === "function") {
                     let obj = {};
-                    const merged = Object.assign(tmp5());
+                    const merged = Object.assign(closure_1_1());
                     obj = { state: null, version: null };
                     obj.state = persist.partialize(obj);
                     obj.version = persist.version;
@@ -806,8 +797,7 @@ export function persist(arg0, arg1) {
                     throw new TypeError("Trying to call a non-function");
                   }
                 }
-                const tmp = closure_0(result, 2);
-                tmp5 = closure_1_1;
+                mergeResult = persist.merge(tmp3, tmp6);
               }).then(() => {
                 if (null != closure_0) {
                   tmp(closure_9, undefined);
@@ -932,8 +922,8 @@ export function subscribeWithSelector(arg0) {
         if (null != equalityFn) {
           fireImmediately = equalityFn.fireImmediately;
         }
-        fn = function o(arg0) {
-          const tmp = closure_0(arg0);
+        fn = function o(state) {
+          const tmp = closure_0(state);
           if (!equalityFn(closure_3, tmp)) {
             closure_3 = tmp;
             closure_1(tmp, closure_3);

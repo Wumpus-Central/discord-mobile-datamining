@@ -357,7 +357,7 @@ function matchPath(pathname, arg1) {
       if (match) {
         const first = match[0];
         closure_0 = match.slice(1);
-        if (!tmp2) {
+        if (!end) {
           const obj1 = { path, url: null, isExact: null, params: null };
           let str2 = "/";
           if ("/" !== path) {
@@ -377,7 +377,6 @@ function matchPath(pathname, arg1) {
       } else {
         return null;
       }
-      tmp2 = end;
     }
   }, null);
 }
@@ -580,11 +579,11 @@ class e {
         invariant(false);
       }
       let obj = { location: tmp4, match: null };
-      let props = tmp3.props;
+      let props = self.props;
       if (self.props.computedMatch) {
         let match = props.computedMatch;
       } else if (props.path) {
-        props = tmp3.props;
+        props = self.props;
         const pathname = tmp4.pathname;
         let exact;
         closure_2 = undefined;
@@ -650,7 +649,7 @@ class e {
             if (match) {
               const first = match[0];
               closure_0 = match.slice(1);
-              if (!tmp2) {
+              if (!end) {
                 const obj1 = { path, url: null, isExact: null, params: null };
                 let str2 = "/";
                 if ("/" !== path) {
@@ -670,7 +669,6 @@ class e {
             } else {
               return null;
             }
-            tmp2 = end;
           }
         }, null);
       } else {
@@ -771,6 +769,7 @@ prototype3.navigateTo = function(tmp4Result, action) {
     const tmpResult = Component6(closure_1[7]);
   }
   context.url = path;
+  const obj2 = Component6(closure_1[7]);
 };
 prototype3.render = function() {
   const self = this;
@@ -958,7 +957,7 @@ class e {
                   if (match) {
                     const first = match[0];
                     closure_0 = match.slice(1);
-                    if (!tmp2) {
+                    if (!end) {
                       const obj1 = { path, url: null, isExact: null, params: null };
                       let str2 = "/";
                       if ("/" !== path) {
@@ -978,7 +977,6 @@ class e {
                   } else {
                     return null;
                   }
-                  tmp2 = end;
                 }
               }, null);
             } else {
@@ -1094,7 +1092,7 @@ export const Redirect = function Redirect(arg0) {
         }
         if ("/" === str) {
           obj = { pathname: str };
-          tmp30Result = tmp30({}, tmp7, obj);
+          tmp30Result = closure_7({}, tmp7, obj);
         } else {
           let obj1 = dependencyMap2;
           if (dependencyMap2[str]) {
@@ -1111,7 +1109,6 @@ export const Redirect = function Redirect(arg0) {
           obj1 = { pretty: true };
           tmp13(params1, obj1);
         }
-        tmp30 = closure_7;
       }
     } else {
       const tmp5Result = tmp5(tmp7);
@@ -1120,7 +1117,7 @@ export const Redirect = function Redirect(arg0) {
         tmp3(tmp5Result);
         let element = null;
       } else {
-        const obj2 = {
+        let obj2 = {
           onMount() {
                 closure_0(closure_1);
               },
@@ -1131,6 +1128,7 @@ export const Redirect = function Redirect(arg0) {
                 if (!obj2.locationsAreEqual(_location, closure_2_7({}, closure_1, obj))) {
                   closure_0(closure_1);
                 }
+                obj2 = Component6(1101);
               },
           to: tmp7
         };
@@ -1143,6 +1141,7 @@ export const Redirect = function Redirect(arg0) {
           if (!obj2.locationsAreEqual(_location, closure_2_7({}, closure_1, obj))) {
             closure_0(closure_1);
           }
+          obj2 = Component6(1101);
         }} to={tmp7} />;
       }
       return element;
@@ -1235,7 +1234,7 @@ export const useRouteMatch = function useRouteMatch(Routes) {
         if (match) {
           const first = match[0];
           closure_0 = match.slice(1);
-          if (!tmp2) {
+          if (!end) {
             const obj1 = { path, url: null, isExact: null, params: null };
             let str2 = "/";
             if ("/" !== path) {
@@ -1255,7 +1254,6 @@ export const useRouteMatch = function useRouteMatch(Routes) {
         } else {
           return null;
         }
-        tmp2 = end;
       }
     }, null);
   }

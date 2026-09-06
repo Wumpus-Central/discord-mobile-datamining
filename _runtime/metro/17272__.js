@@ -336,13 +336,12 @@ export const createDateTimeFormats = function createDateTimeFormats(formats) {
         let num = 0;
         let flag = true;
         if (0 < length2.length) {
-          let arr9 = length2;
           flag = false;
           while (!obj.hasOwnProperty(length2[num])) {
             let sum = num + 1;
             num = sum;
             flag = true;
-            if (sum >= arr9.length) {
+            if (sum >= length2.length) {
               break;
             }
           }
@@ -356,13 +355,12 @@ export const createDateTimeFormats = function createDateTimeFormats(formats) {
           let num2 = 0;
           let flag2 = true;
           if (0 < length.length) {
-            let arr10 = length;
             flag2 = false;
             while (!obj.hasOwnProperty(length[num2])) {
               let sum1 = num2 + 1;
               num2 = sum1;
               flag2 = true;
-              if (sum1 >= arr10.length) {
+              if (sum1 >= length.length) {
                 break;
               }
             }

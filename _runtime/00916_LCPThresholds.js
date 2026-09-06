@@ -11,7 +11,7 @@ Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 let items = [2500, 4000];
 
 export const LCPThresholds = items;
-export const onLCP = (arg0) => {
+export const onLCP = (arg0, arg1) => {
   _require = arg0;
   let obj = arg1;
   if (arg1 === undefined) {
@@ -45,7 +45,7 @@ export const onLCP = (arg0) => {
       }
     }
     const obj3 = closure_0(obj[3]);
-    let tmp6 = firstHiddenTime;
+    const tmp6 = firstHiddenTime;
     const observeResult = closure_0(obj[6]).observe("largest-contentful-paint", handleEntries);
     closure_5 = observeResult;
     if (observeResult) {
@@ -70,5 +70,6 @@ export const onLCP = (arg0) => {
         continue;
       }
     }
+    const obj4 = closure_0(obj[6]);
   });
 };

@@ -13,18 +13,18 @@ function offsetComparator(arg0, arg1) {
   return arg0[0] - arg1[0];
 }
 
-export default function extractGradient(arg0, parent) {
+export default function extractGradient(gradientTransform, parent) {
   importDefault = parent;
-  ({ id, children, gradientTransform, gradientUnits } = arg0);
+  ({ id, children, gradientTransform, gradientUnits } = gradientTransform);
   if (id) {
     if (children) {
-      let mapped = Children.map(children, (arg0) => noop.cloneElement(arg0, { parent }));
+      let mapped = Children.map(children, (onlyResult) => noop.cloneElement(onlyResult, { parent }));
     } else {
       mapped = [];
     }
     const items = [];
     let num7 = 0;
-    if (0 < mapped.length) {
+    if (0 < length) {
       while (true) {
         let props = mapped[num7].props;
         ({ style, offset } = props);
@@ -116,9 +116,6 @@ export default function extractGradient(arg0, parent) {
     obj.gradientUnits = num12;
     if (!gradientTransform) {
       gradientTransform = tmp;
-    }
-    if (!gradientTransform) {
-      gradientTransform = arg0;
     }
     obj.gradientTransform = appendTransformPropsDefault(gradientTransform);
     return obj;

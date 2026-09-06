@@ -2,13 +2,14 @@
 
 // Module 1035
 import _mod867 from "module_867" /* 867 */;
+import feedbackAsyncIntegration from "feedbackAsyncIntegration" /* 889 */;
 
 require = arg1;
 const dependencyMap = arg6;
 
 export const breadcrumbsIntegration = () => {
-  let obj = arg0;
-  if (arg0 === undefined) {
+  let obj = merged1;
+  if (merged1 === undefined) {
     obj = {};
   }
   let _fetch = obj.fetch;
@@ -24,7 +25,7 @@ export const breadcrumbsIntegration = () => {
     const tmp7 = null === dom || undefined === dom || dom;
   }
   obj.dom = isWebResult;
-  let tmp4Result = tmp4(867);
+  let tmp4Result = _mod867;
   let isWebResult1 = tmp4Result.isWeb();
   if (isWebResult1) {
     const history = obj.history;
@@ -32,7 +33,7 @@ export const breadcrumbsIntegration = () => {
     const tmp9 = null === history || undefined === history || history;
   }
   obj.history = isWebResult1;
-  const merged1 = Object.assign(merged, obj);
-  tmp4Result = tmp4(889);
+  merged1 = Object.assign(merged, obj);
+  tmp4Result = feedbackAsyncIntegration;
   return tmp4Result.breadcrumbsIntegration(merged1);
 };

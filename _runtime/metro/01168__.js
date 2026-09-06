@@ -1,10 +1,10 @@
 // === Module 1168: ? ===
 
 // Module 1168
+import _possibleConstructorReturn from "_possibleConstructorReturn" /* 93 */;
 import _mod1169 from "module_1169" /* 1169 */;
 import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
-import _possibleConstructorReturn from "_possibleConstructorReturn" /* 93 */;
 import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
 
@@ -39,6 +39,7 @@ function formatToMarkdownString(_1Ww0Hi, arg1) {
   }
   return first;
 }
+_possibleConstructorReturn;
 const dependencyMap = {
   $b(join) {
     return "**" + join.join("") + "**";

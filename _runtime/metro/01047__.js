@@ -4,6 +4,7 @@
 import NativeModules from "NativeModules" /* 866 */;
 import convertToNormalizedObject from "convertToNormalizedObject" /* 879 */;
 import DEFAULT_BREADCRUMB_LEVEL2 from "DEFAULT_BREADCRUMB_LEVEL" /* 880 */;
+import init from "init" /* 1000 */;
 
 require = arg1;
 let dependencyMap = arg6;
@@ -25,12 +26,12 @@ export const enableSyncToNative = function enableSyncToNative(globalScope) {
     let obj2 = require("fillTyped");
     require("fillTyped").fillTyped(globalScope, "setTag", (arg0) => {
       closure_0 = arg0;
-      return (arg0, arg1) => {
+      return (arg0, dependencyMap) => {
         const NATIVE = NativeModules.NATIVE;
         const NATIVE2 = NativeModules.NATIVE;
-        NATIVE.setTag(arg0, NATIVE2.primitiveProcessor(arg1));
+        NATIVE.setTag(arg0, NATIVE2.primitiveProcessor(dependencyMap));
         const call = closure_0.call;
-        return typeof call === "unknown" ? closure_0(arg0, arg1) : call(closure_0, arg0, arg1);
+        return typeof call === "unknown" ? closure_0(arg0, dependencyMap) : call(closure_0, arg0, dependencyMap);
       };
     });
     const obj3 = require("fillTyped");
@@ -74,7 +75,7 @@ export const enableSyncToNative = function enableSyncToNative(globalScope) {
     });
     const obj6 = require("fillTyped");
     require("fillTyped").fillTyped(globalScope, "addBreadcrumb", (arg0) => {
-      closure_0 = arg0;
+      let lastBreadcrumb = arg0;
       return (level, arg1) => {
         let DEFAULT_BREADCRUMB_LEVEL = level.level;
         const merged = Object.assign({}, level);
@@ -88,21 +89,21 @@ export const enableSyncToNative = function enableSyncToNative(globalScope) {
         }
         obj.data = result;
         const merged1 = Object.assign(merged, obj);
-        const call = closure_0.call;
+        const call = lastBreadcrumb.call;
         if (typeof call === "unknown") {
-          closure_0(merged1, arg1);
+          lastBreadcrumb(merged1, arg1);
         } else {
-          call(obj3, merged1, arg1);
+          call(lastBreadcrumb, merged1, arg1);
         }
-        const lastBreadcrumb = obj3.getLastBreadcrumb();
+        lastBreadcrumb = lastBreadcrumb.getLastBreadcrumb();
         if (lastBreadcrumb) {
-          const NATIVE = tmp11(866).NATIVE;
+          const NATIVE = NativeModules.NATIVE;
           NATIVE.addBreadcrumb(lastBreadcrumb);
         } else {
-          const logger = tmp11(1000).logger;
+          const logger = init.logger;
           logger.warn("[ScopeSync] Last created breadcrumb is undefined. Skipping sync to native.");
         }
-        return closure_0;
+        return lastBreadcrumb;
       };
     });
     const obj7 = require("fillTyped");

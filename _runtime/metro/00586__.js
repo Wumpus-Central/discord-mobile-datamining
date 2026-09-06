@@ -2,8 +2,8 @@
 
 // Module 586
 import _mod514 from "module_514" /* 514 */;
+import _mod553 from "module_553" /* 553 */;
 
-const _mod553 = tmp(553);
 const re2 = /\.|\[(?:[^[\]]*|(["'])(?:(?!\1)[^\\]|\\.)*?\1)\]/;
 const re3 = /^\w*$/;
 

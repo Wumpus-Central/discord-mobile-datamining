@@ -1,6 +1,7 @@
 // === Module 14336: ? ===
 
 // Module 14336
+import _mod14301 from "module_14301" /* 14301 */;
 import _mod14323 from "module_14323" /* 14323 */;
 
 const re2 = /#|\.prototype\./;
@@ -16,12 +17,11 @@ function isForced(arg0, arg1) {
       } else {
         let tmp11Result = dependencyMap;
         if (_mod14323(arg1)) {
-          tmp11Result = tmp11(14301);
+          tmp11Result = _mod14301;
           let tmp11ResultResult = tmp11Result(arg1);
         } else {
           tmp11ResultResult = arg1;
         }
-        tmp11 = require;
       }
     }
     return tmp7;

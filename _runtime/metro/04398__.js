@@ -38,7 +38,6 @@ function hoistNonReactStatics(arg0, headers, arg2) {
     }
     let num = 0;
     const tmp9 = getStatics(arg0);
-    const tmp10 = getStatics(headers);
     if (0 < combined.length) {
       if (!closure_3[combined[num]]) {
         if (!arg2) {
@@ -54,6 +53,7 @@ function hoistNonReactStatics(arg0, headers, arg2) {
       }
       num = num + 1;
     }
+    tmp10 = getStatics(headers);
   }
   return arg0;
 }

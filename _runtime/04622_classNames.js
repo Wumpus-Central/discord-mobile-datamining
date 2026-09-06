@@ -37,9 +37,8 @@ function classNames() {
                   str7 = str6;
                   let tmp8 = keys[tmp];
                   while (tmp8 !== undefined) {
-                    let tmp18 = hasOwnProperty;
                     let call = hasOwnProperty.call;
-                    let tmp9 = (typeof call === "unknown" ? tmp18(tmp8) : call(str3, tmp8)) && str3[tmp8];
+                    let tmp9 = (typeof call === "unknown" ? hasOwnProperty(tmp8) : call(str3, tmp8)) && str3[tmp8];
                     str6 = text;
                     if (!tmp9) {
                       continue;

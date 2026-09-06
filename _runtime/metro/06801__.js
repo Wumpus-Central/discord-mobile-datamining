@@ -37,7 +37,7 @@ export const useKeyboard = (includeBottomOffset) => {
       }
     }
     if (value !== GESTURE_SOURCE.KEYBOARD_STATE.SHOWN) {
-      value = iter.value;
+      value = height.value;
     }
     height.value = value;
     let tmp5 = arg4;
@@ -45,7 +45,7 @@ export const useKeyboard = (includeBottomOffset) => {
       tmp5 = includeBottomOffset;
     }
     if (tmp5) {
-      iter.value = iter.value + arg4;
+      height.value = height.value + arg4;
     }
     animationDuration.value = value2;
     animationEasing.value = value3;

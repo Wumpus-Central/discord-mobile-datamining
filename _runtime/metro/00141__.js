@@ -288,6 +288,7 @@ const items = [
         require("NativeDOMCxx").setPointerCapture(nativeElementReference, nativeElementReference);
         const obj2 = require("NativeDOMCxx");
       }
+      const obj = ReadOnlyElement(136);
     }
   },
   {
@@ -298,6 +299,7 @@ const items = [
         const result = require("NativeDOMCxx").releasePointerCapture(nativeElementReference, nativeElementReference);
         const obj2 = require("NativeDOMCxx");
       }
+      const obj = ReadOnlyElement(136);
     }
   }
 ];

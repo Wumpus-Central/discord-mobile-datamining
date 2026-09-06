@@ -14,7 +14,7 @@ class Share {
 }
 const entry = {
   key: "share",
-  value: function share(message, dialogTitle) {
+  value: function share(message) {
     let obj = dialogTitle;
     if (dialogTitle === undefined) {
       obj = {};
@@ -26,13 +26,13 @@ const entry = {
     Share(38)(tmp4, "Content to share must be a valid object");
     const url = message.url;
     let tmp7 = typeof url === "string";
-    let tmpResult = tmp(38);
+    let tmpResult = Share(38);
     if (typeof url !== "string") {
       tmp7 = typeof message.message === "string";
     }
     tmpResult(tmp7, "At least one of URL or message is required");
     let tmp10 = typeof obj === "object";
-    tmpResult = tmp(38);
+    tmpResult = Share(38);
     if (typeof obj === "object") {
       tmp10 = null !== obj;
     }

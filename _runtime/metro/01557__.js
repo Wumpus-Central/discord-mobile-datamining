@@ -28,12 +28,12 @@ function isNavigationState(state) {
   }
   return isArray;
 }
-function getRouteConfigsFromChildren(arg0) {
+function getRouteConfigsFromChildren(children) {
   const items = [];
   c1 = undefined;
   c2 = undefined;
   const Children = noop.Children;
-  return Children.toArray(arg0).reduce((arr, type) => {
+  return Children.toArray(children).reduce((arr, type) => {
     let obj = closure_2_6;
     if (closure_2_6.isValidElement(type)) {
       if (type.type === closure_2_0(closure_2_2[5]).Screen) {
@@ -55,7 +55,7 @@ function getRouteConfigsFromChildren(arg0) {
                 obj.options = closure_1_1;
                 obj.layout = closure_1_2;
                 obj.props = type.props;
-                arr.push(obj);
+                arr = arr.push(obj);
                 return arr;
               }
             }
@@ -72,7 +72,7 @@ function getRouteConfigsFromChildren(arg0) {
       } else {
         let tmp4 = type.type === obj.Fragment;
         if (!tmp4) {
-          tmp4 = type.type === tmp2(tmp3[6]).Group;
+          tmp4 = type.type === closure_2_0(closure_2_2[6]).Group;
         }
         if (tmp4) {
           let navigationKey = type.props.navigationKey;
@@ -91,11 +91,11 @@ function getRouteConfigsFromChildren(arg0) {
           } else {
             items4 = closure_1_0;
           }
-          if (type.type !== tmp2(tmp3[6]).Group) {
+          if (type.type !== closure_2_0(closure_2_2[6]).Group) {
             items3 = closure_1_1;
           } else if (null != closure_1_1) {
             let items2 = [];
-            items2[HermesBuiltin.arraySpread(tmp13, 0)] = type.props.screenOptions;
+            items2[HermesBuiltin.arraySpread(closure_1_1, 0)] = type.props.screenOptions;
             items3 = items2;
           } else {
             items3 = [type.props.screenOptions];
@@ -105,7 +105,7 @@ function getRouteConfigsFromChildren(arg0) {
           } else {
             screenLayout = closure_1_2;
           }
-          if (typeof tmp9 === "function") {
+          if (typeof closure_2_9 === "function") {
             if (items4 === undefined) {
               items4 = [];
             }
@@ -133,7 +133,7 @@ function getRouteConfigsFromChildren(arg0) {
                           obj.options = closure_1_1;
                           obj.layout = closure_1_2;
                           obj.props = type.props;
-                          arr.push(obj);
+                          arr = arr.push(obj);
                           return arr;
                         }
                       }
@@ -150,7 +150,7 @@ function getRouteConfigsFromChildren(arg0) {
                 } else {
                   let tmp4 = type.type === obj.Fragment;
                   if (!tmp4) {
-                    tmp4 = type.type === tmp2(tmp3[6]).Group;
+                    tmp4 = type.type === closure_2_0(closure_2_2[6]).Group;
                   }
                   if (tmp4) {
                     let navigationKey = type.props.navigationKey;
@@ -169,11 +169,11 @@ function getRouteConfigsFromChildren(arg0) {
                     } else {
                       items4 = closure_1_0;
                     }
-                    if (type.type !== tmp2(tmp3[6]).Group) {
+                    if (type.type !== closure_2_0(closure_2_2[6]).Group) {
                       items3 = closure_1_1;
                     } else if (null != closure_1_1) {
                       let items2 = [];
-                      items2[HermesBuiltin.arraySpread(tmp13, 0)] = type.props.screenOptions;
+                      items2[HermesBuiltin.arraySpread(closure_1_1, 0)] = type.props.screenOptions;
                       items3 = items2;
                     } else {
                       items3 = [type.props.screenOptions];
@@ -183,7 +183,7 @@ function getRouteConfigsFromChildren(arg0) {
                     } else {
                       screenLayout = closure_1_2;
                     }
-                    if (typeof tmp9 === "function") {
+                    if (typeof closure_2_9 === "function") {
                       if (items4 === undefined) {
                         items4 = [];
                       }
@@ -211,7 +211,7 @@ function getRouteConfigsFromChildren(arg0) {
                                     obj.options = closure_1_1;
                                     obj.layout = closure_1_2;
                                     obj.props = type.props;
-                                    arr.push(obj);
+                                    arr = arr.push(obj);
                                     return arr;
                                   }
                                 }
@@ -228,7 +228,7 @@ function getRouteConfigsFromChildren(arg0) {
                           } else {
                             let tmp4 = type.type === obj.Fragment;
                             if (!tmp4) {
-                              tmp4 = type.type === tmp2(tmp3[6]).Group;
+                              tmp4 = type.type === closure_2_0(closure_2_2[6]).Group;
                             }
                             if (tmp4) {
                               let navigationKey = type.props.navigationKey;
@@ -247,11 +247,11 @@ function getRouteConfigsFromChildren(arg0) {
                               } else {
                                 items4 = closure_1_0;
                               }
-                              if (type.type !== tmp2(tmp3[6]).Group) {
+                              if (type.type !== closure_2_0(closure_2_2[6]).Group) {
                                 items3 = closure_1_1;
                               } else if (null != closure_1_1) {
                                 let items2 = [];
-                                items2[HermesBuiltin.arraySpread(tmp13, 0)] = type.props.screenOptions;
+                                items2[HermesBuiltin.arraySpread(closure_1_1, 0)] = type.props.screenOptions;
                                 items3 = items2;
                               } else {
                                 items3 = [type.props.screenOptions];
@@ -261,7 +261,7 @@ function getRouteConfigsFromChildren(arg0) {
                               } else {
                                 screenLayout = closure_1_2;
                               }
-                              if (typeof tmp9 === "function") {
+                              if (typeof closure_2_9 === "function") {
                                 if (items4 === undefined) {
                                   items4 = [];
                                 }
@@ -289,7 +289,7 @@ function getRouteConfigsFromChildren(arg0) {
                                               obj.options = closure_1_1;
                                               obj.layout = closure_1_2;
                                               obj.props = type.props;
-                                              arr.push(obj);
+                                              arr = arr.push(obj);
                                               return arr;
                                             }
                                           }
@@ -306,7 +306,7 @@ function getRouteConfigsFromChildren(arg0) {
                                     } else {
                                       let tmp4 = type.type === obj.Fragment;
                                       if (!tmp4) {
-                                        tmp4 = type.type === tmp2(tmp3[6]).Group;
+                                        tmp4 = type.type === closure_2_0(closure_2_2[6]).Group;
                                       }
                                       if (tmp4) {
                                         let navigationKey = type.props.navigationKey;
@@ -325,11 +325,11 @@ function getRouteConfigsFromChildren(arg0) {
                                         } else {
                                           items4 = closure_1_0;
                                         }
-                                        if (type.type !== tmp2(tmp3[6]).Group) {
+                                        if (type.type !== closure_2_0(closure_2_2[6]).Group) {
                                           items3 = closure_1_1;
                                         } else if (null != closure_1_1) {
                                           let items2 = [];
-                                          items2[HermesBuiltin.arraySpread(tmp13, 0)] = type.props.screenOptions;
+                                          items2[HermesBuiltin.arraySpread(closure_1_1, 0)] = type.props.screenOptions;
                                           items3 = items2;
                                         } else {
                                           items3 = [type.props.screenOptions];
@@ -339,7 +339,7 @@ function getRouteConfigsFromChildren(arg0) {
                                         } else {
                                           screenLayout = closure_1_2;
                                         }
-                                        if (typeof tmp9 === "function") {
+                                        if (typeof closure_2_9 === "function") {
                                           if (items4 === undefined) {
                                             items4 = [];
                                           }
@@ -351,7 +351,6 @@ function getRouteConfigsFromChildren(arg0) {
                                         } else {
                                           throw new TypeError("Trying to call a non-function");
                                         }
-                                        tmp9 = closure_2_9;
                                       }
                                     }
                                   }
@@ -401,7 +400,6 @@ function getRouteConfigsFromChildren(arg0) {
                               } else {
                                 throw new TypeError("Trying to call a non-function");
                               }
-                              tmp9 = closure_2_9;
                             }
                           }
                         }
@@ -451,7 +449,6 @@ function getRouteConfigsFromChildren(arg0) {
                     } else {
                       throw new TypeError("Trying to call a non-function");
                     }
-                    tmp9 = closure_2_9;
                   }
                 }
               }
@@ -501,7 +498,6 @@ function getRouteConfigsFromChildren(arg0) {
           } else {
             throw new TypeError("Trying to call a non-function");
           }
-          tmp9 = closure_2_9;
         }
       }
     }
@@ -619,7 +615,7 @@ export const useNavigationBuilder = function useNavigationBuilder(StackRouter, U
       if (arr.every((props) => props.props.name !== initialRouteName.initialRouteName)) {
         const _Error = Error;
         const _HermesInternal = HermesInternal;
-        const error = new Error("Couldn't find a screen named '" + tmp.initialRouteName + "' to use as 'initialRouteName'.");
+        const error = new Error("Couldn't find a screen named '" + initialRouteName.initialRouteName + "' to use as 'initialRouteName'.");
         throw error;
       }
     }
@@ -710,13 +706,13 @@ export const useNavigationBuilder = function useNavigationBuilder(StackRouter, U
     const tmp37 = context1(noop.useMemo(() => {
       if (ref.current) {
         if (ref2.current) {
-          if (callback(tmp.current)) {
+          if (callback(ref2.current)) {
             const items = [undefined, , , ];
-            if (callback1(tmp.current)) {
-              current = tmp.current;
+            if (callback1(ref2.current)) {
+              current = ref2.current;
             } else {
               obj = { routeNames: mapped, routeParamList: obj1, routeGetIdList: obj2 };
-              current = lazyValue.getRehydratedState(tmp.current, obj);
+              current = lazyValue.getRehydratedState(ref2.current, obj);
             }
             items[1] = current;
             items[2] = false;
@@ -729,29 +725,29 @@ export const useNavigationBuilder = function useNavigationBuilder(StackRouter, U
         const initialParams = closure_1_13[item].props.initialParams;
         state = undefined;
         if (context != null) {
-          const params = tmp.params;
+          const params = context.params;
           if (params != null) {
             state = params.state;
           }
         }
         if (null == state) {
           let initial;
-          if (tmp != null) {
-            const params3 = tmp.params;
+          if (context != null) {
+            const params3 = context.params;
             if (params3 != null) {
               initial = params3.initial;
             }
           }
           if (false !== initial) {
             let screen;
-            if (tmp != null) {
-              const params4 = tmp.params;
+            if (context != null) {
+              const params4 = context.params;
               if (params4 != null) {
                 screen = params4.screen;
               }
             }
             if (screen === item) {
-              const params2 = tmp.params.params;
+              const params2 = context.params.params;
             }
           }
         }
@@ -767,15 +763,15 @@ export const useNavigationBuilder = function useNavigationBuilder(StackRouter, U
       if (undefined === state) {
         state = undefined;
         if (context != null) {
-          let params = tmp7.params;
+          let params = context.params;
           if (params != null) {
             state = params.state;
           }
         }
         if (null == state) {
           let screen;
-          if (tmp7 != null) {
-            let params2 = tmp7.params;
+          if (context != null) {
+            let params2 = context.params;
             if (params2 != null) {
               screen = params2.screen;
             }
@@ -783,7 +779,7 @@ export const useNavigationBuilder = function useNavigationBuilder(StackRouter, U
           if (typeof screen !== "string") {
             if (!hasItem) {
               const items1 = [undefined, , , ];
-              obj = { routeNames: tmp3, routeParamList: reduced, routeGetIdList: obj2 };
+              obj = { routeNames: mapped, routeParamList: reduced, routeGetIdList: obj2 };
               items1[1] = lazyValue.getInitialState(obj);
               items1[2] = true;
               items1[3] = undefined;
@@ -791,8 +787,8 @@ export const useNavigationBuilder = function useNavigationBuilder(StackRouter, U
             }
           } else {
             let initial;
-            if (tmp7 != null) {
-              let params3 = tmp7.params;
+            if (context != null) {
+              let params3 = context.params;
               if (params3 != null) {
                 initial = params3.initial;
               }
@@ -816,10 +812,10 @@ export const useNavigationBuilder = function useNavigationBuilder(StackRouter, U
         tmp18 = tmp5;
       }
       if (null == tmp18) {
-        obj = { routeNames: tmp3, routeParamList: reduced, routeGetIdList: obj2 };
+        obj = { routeNames: mapped, routeParamList: reduced, routeGetIdList: obj2 };
         let initialState = lazyValue.getInitialState(obj);
       } else {
-        obj1 = { routeNames: tmp3, routeParamList: reduced, routeGetIdList: obj2 };
+        obj1 = { routeNames: mapped, routeParamList: reduced, routeGetIdList: obj2 };
         initialState = lazyValue.getRehydratedState(tmp18, obj1);
       }
       if (null != tmp18) {
@@ -1241,4 +1237,5 @@ export const useNavigationBuilder = function useNavigationBuilder(StackRouter, U
     const error1 = new Error("Couldn't find any screens for the navigator. Have you defined any screens as its children?");
     throw error1;
   }
+  let tmpResult = require("module_1506");
 };

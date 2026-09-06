@@ -2,6 +2,7 @@
 
 // Module 783 (captureConsoleIntegration)
 import _mod713 from "module_713" /* 713 */;
+import severityLevelFromString from "severityLevelFromString" /* 785 */;
 import setupIntegration from "setupIntegration" /* 752 */;
 
 Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
@@ -34,16 +35,16 @@ export const captureConsoleIntegration = setupIntegration.defineIntegration(() =
           }
           if (hasItem) {
             closure_2 = flag;
-            let tmpResult = tmp(785);
+            let tmpResult = severityLevelFromString;
             closure_3 = tmpResult.severityLevelFromString(level);
             const _Error = Error;
             const error = new Error();
             extra = { level: null, extra: null };
-            tmpResult = tmp(785);
+            tmpResult = severityLevelFromString;
             extra.level = tmpResult.severityLevelFromString(level);
             extra = { arguments: args };
             extra.extra = extra;
-            tmp(713).withScope((addEventProcessor) => {
+            _mod713.withScope((addEventProcessor) => {
               addEventProcessor.addEventProcessor((arg0) => {
                 arg0.logger = "console";
                 args(level[6]);
@@ -54,29 +55,28 @@ export const captureConsoleIntegration = setupIntegration.defineIntegration(() =
               if ("assert" !== level) {
                 const found = args.find((item) => item instanceof Error);
                 if (found) {
-                  let tmp14Result = tmp14(tmp15[8]);
+                  let tmp14Result = args(flag[8]);
                   tmp14Result.captureException(found, captureContext);
                 } else {
-                  tmp14Result = tmp14(tmp15[7]);
+                  tmp14Result = args(flag[7]);
                   captureContext = { captureContext: null, syntheticException: null };
                   captureContext.captureContext = captureContext;
                   captureContext.syntheticException = error;
-                  addEventProcessor.captureMessage(tmp14Result.safeJoin(tmp12, " "), closure_3, captureContext);
+                  addEventProcessor.captureMessage(tmp14Result.safeJoin(args, " "), closure_3, captureContext);
                 }
-                tmp12 = args;
               } else if (!args[0]) {
                 captureContext = args(flag[7]);
                 const _HermesInternal = HermesInternal;
-                const combined = "Assertion failed: " + captureContext.safeJoin(arr.slice(1), " ") || "console.assert";
-                addEventProcessor.setExtra("arguments", arr.slice(1));
+                const combined = "Assertion failed: " + captureContext.safeJoin(args.slice(1), " ") || "console.assert";
+                addEventProcessor.setExtra("arguments", args.slice(1));
                 captureContext = { captureContext: null, syntheticException: null };
                 captureContext.captureContext = captureContext;
                 captureContext.syntheticException = error;
                 addEventProcessor.captureMessage(combined, closure_3, captureContext);
-                const tmp4 = captureContext.safeJoin(arr.slice(1), " ") || "console.assert";
+                const tmp4 = captureContext.safeJoin(args.slice(1), " ") || "console.assert";
               }
             });
-            const tmpResult1 = tmp(713);
+            const tmpResult1 = _mod713;
           }
         });
         let tmpResult = CONSOLE_LEVELS(flag[2]);

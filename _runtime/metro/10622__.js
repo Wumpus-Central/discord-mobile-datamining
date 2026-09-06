@@ -73,10 +73,10 @@ const items = [
           if ("passerade" !== formatted) {
             let reverseDurationResult = parseDurationResult;
           }
-          const ParsingComponents = tmp2(10435).ParsingComponents;
+          const ParsingComponents = SVTimeUnitCasualRelativeFormatParser(10435).ParsingComponents;
           return ParsingComponents.createRelativeFromReference(reference.reference, reverseDurationResult);
         }
-        reverseDurationResult = tmp2(10434).reverseDuration(parseDurationResult);
+        reverseDurationResult = SVTimeUnitCasualRelativeFormatParser(10434).reverseDuration(parseDurationResult);
       } else {
         return null;
       }

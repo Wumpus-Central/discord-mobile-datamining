@@ -1,9 +1,9 @@
 // === Module 160: _construct ===
 
 // Module 160 (_construct)
+import _setPrototypeOf from "_setPrototypeOf" /* 99 */;
 import _mod161 from "module_161" /* 161 */;
 
-const _setPrototypeOf = tmp(99);
 
 export default function _construct(bind, arg1, arg2) {
   if (_mod161()) {

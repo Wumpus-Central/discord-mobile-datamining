@@ -39,9 +39,8 @@ const items = [
             }
           }
         }
-        return tmp(10459).createParsingComponentsAtWeekday(reference.reference, tmp3, str2);
+        return JPWeekdayParser(10459).createParsingComponentsAtWeekday(reference.reference, tmp3, str2);
       }
-      tmp = JPWeekdayParser;
     }
   }
 ];

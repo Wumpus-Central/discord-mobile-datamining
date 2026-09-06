@@ -5,15 +5,15 @@ import SyncPromise from "SyncPromise" /* 738 */;
 
 require = arg1;
 let dependencyMap = arg6;
-function _notifyEventProcessors(arg0, arg1, arg2, arg3) {
+function _notifyEventProcessors(tmpResult, arg1, arg2, arg3) {
   _require = arg1;
   dependencyMap = arg2;
   _notifyEventProcessors = arg3;
-  if (arg0) {
+  if (tmpResult) {
     if (tmp) {
       const obj = {};
-      const merged = Object.assign(arg0);
-      const tmpResult = tmp(obj, arg1);
+      const merged = Object.assign(tmpResult);
+      tmpResult = tmp(obj, arg1);
       let DEBUG_BUILD = require("module_688").DEBUG_BUILD;
       if (DEBUG_BUILD) {
         DEBUG_BUILD = null === tmpResult;
@@ -39,13 +39,13 @@ function _notifyEventProcessors(arg0, arg1, arg2, arg3) {
             if (tmp4) {
               let obj = {};
               let merged = Object.assign(result);
-              let tmp4Result = tmp4(obj, tmp);
+              let tmp4Result = tmp4(obj, closure_1_0);
               let DEBUG_BUILD = closure_2_0(closure_2_1[2]).DEBUG_BUILD;
               if (DEBUG_BUILD) {
                 DEBUG_BUILD = null === tmp4Result;
               }
               if (DEBUG_BUILD) {
-                let debug = tmp9(tmp10[3]).debug;
+                let debug = closure_2_0(closure_2_1[3]).debug;
                 let str = tmp4.id;
                 if (!str) {
                   str = "?";
@@ -53,7 +53,7 @@ function _notifyEventProcessors(arg0, arg1, arg2, arg3) {
                 let _HermesInternal = HermesInternal;
                 debug.log("Event processor \"" + str + "\" dropped event");
               }
-              let tmp9Result = tmp9(tmp10[0]);
+              let tmp9Result = closure_2_0(closure_2_1[0]);
               if (tmp9Result.isThenable(tmp4Result)) {
                 let nextPromise = tmp4Result.then((result) => {
                   let sum = closure_1_2 + 1;
@@ -66,13 +66,13 @@ function _notifyEventProcessors(arg0, arg1, arg2, arg3) {
                     if (tmp4) {
                       let obj = {};
                       let merged = Object.assign(result);
-                      let tmp4Result = tmp4(obj, tmp);
+                      let tmp4Result = tmp4(obj, closure_1_0);
                       let DEBUG_BUILD = closure_2_0(closure_2_1[2]).DEBUG_BUILD;
                       if (DEBUG_BUILD) {
                         DEBUG_BUILD = null === tmp4Result;
                       }
                       if (DEBUG_BUILD) {
-                        let debug = tmp9(tmp10[3]).debug;
+                        let debug = closure_2_0(closure_2_1[3]).debug;
                         let str = tmp4.id;
                         if (!str) {
                           str = "?";
@@ -80,7 +80,7 @@ function _notifyEventProcessors(arg0, arg1, arg2, arg3) {
                         let _HermesInternal = HermesInternal;
                         debug.log("Event processor \"" + str + "\" dropped event");
                       }
-                      let tmp9Result = tmp9(tmp10[0]);
+                      let tmp9Result = closure_2_0(closure_2_1[0]);
                       if (tmp9Result.isThenable(tmp4Result)) {
                         let nextPromise = tmp4Result.then((result) => {
                           let sum = closure_1_2 + 1;
@@ -93,13 +93,13 @@ function _notifyEventProcessors(arg0, arg1, arg2, arg3) {
                             if (tmp4) {
                               let obj = {};
                               let merged = Object.assign(result);
-                              let tmp4Result = tmp4(obj, tmp);
+                              let tmp4Result = tmp4(obj, closure_1_0);
                               let DEBUG_BUILD = closure_2_0(closure_2_1[2]).DEBUG_BUILD;
                               if (DEBUG_BUILD) {
                                 DEBUG_BUILD = null === tmp4Result;
                               }
                               if (DEBUG_BUILD) {
-                                let debug = tmp9(tmp10[3]).debug;
+                                let debug = closure_2_0(closure_2_1[3]).debug;
                                 let str = tmp4.id;
                                 if (!str) {
                                   str = "?";
@@ -107,7 +107,7 @@ function _notifyEventProcessors(arg0, arg1, arg2, arg3) {
                                 let _HermesInternal = HermesInternal;
                                 debug.log("Event processor \"" + str + "\" dropped event");
                               }
-                              let tmp9Result = tmp9(tmp10[0]);
+                              let tmp9Result = closure_2_0(closure_2_1[0]);
                               if (tmp9Result.isThenable(tmp4Result)) {
                                 let nextPromise = tmp4Result.then((result) => {
                                   let sum = closure_1_2 + 1;
@@ -120,13 +120,13 @@ function _notifyEventProcessors(arg0, arg1, arg2, arg3) {
                                     if (tmp4) {
                                       let obj = {};
                                       let merged = Object.assign(result);
-                                      let tmp4Result = tmp4(obj, tmp);
+                                      let tmp4Result = tmp4(obj, closure_1_0);
                                       let DEBUG_BUILD = closure_2_0(closure_2_1[2]).DEBUG_BUILD;
                                       if (DEBUG_BUILD) {
                                         DEBUG_BUILD = null === tmp4Result;
                                       }
                                       if (DEBUG_BUILD) {
-                                        let debug = tmp9(tmp10[3]).debug;
+                                        let debug = closure_2_0(closure_2_1[3]).debug;
                                         let str = tmp4.id;
                                         if (!str) {
                                           str = "?";
@@ -134,26 +134,26 @@ function _notifyEventProcessors(arg0, arg1, arg2, arg3) {
                                         let _HermesInternal = HermesInternal;
                                         debug.log("Event processor \"" + str + "\" dropped event");
                                       }
-                                      let tmp9Result = tmp9(tmp10[0]);
+                                      let tmp9Result = closure_2_0(closure_2_1[0]);
                                       if (tmp9Result.isThenable(tmp4Result)) {
                                         let nextPromise = tmp4Result.then(() => { ... });
                                       } else {
                                         sum1 = sum + 1;
-                                        closure_0 = tmp;
-                                        closure_1 = tmp2;
+                                        closure_0 = closure_1_0;
+                                        closure_1 = closure_1_1;
                                         nextPromise = tmp4Result;
                                         if (tmp4Result) {
                                           nextPromise = tmp4Result;
                                           if (tmp15) {
                                             obj = {};
                                             let merged1 = Object.assign(tmp4Result);
-                                            let tmp15Result = tmp15(obj, tmp);
-                                            let DEBUG_BUILD2 = tmp9(tmp10[2]).DEBUG_BUILD;
+                                            let tmp15Result = tmp15(obj, closure_1_0);
+                                            let DEBUG_BUILD2 = closure_2_0(closure_2_1[2]).DEBUG_BUILD;
                                             if (DEBUG_BUILD2) {
                                               DEBUG_BUILD2 = null === tmp15Result;
                                             }
                                             if (DEBUG_BUILD2) {
-                                              let debug2 = tmp9(tmp10[3]).debug;
+                                              let debug2 = closure_2_0(closure_2_1[3]).debug;
                                               let str4 = tmp15.id;
                                               if (!str4) {
                                                 str4 = "?";
@@ -161,11 +161,11 @@ function _notifyEventProcessors(arg0, arg1, arg2, arg3) {
                                               let _HermesInternal2 = HermesInternal;
                                               debug2.log("Event processor \"" + str4 + "\" dropped event");
                                             }
-                                            tmp9Result = tmp9(tmp10[0]);
+                                            tmp9Result = closure_2_0(closure_2_1[0]);
                                             if (tmp9Result.isThenable(tmp15Result)) {
                                               let nextPromise1 = tmp15Result.then(() => { ... });
                                             } else {
-                                              nextPromise1 = closure_2_2(tmp15Result, tmp, tmp2, sum1 + 1);
+                                              nextPromise1 = closure_2_2(tmp15Result, closure_1_0, closure_1_1, sum1 + 1);
                                             }
                                           }
                                         }
@@ -176,21 +176,21 @@ function _notifyEventProcessors(arg0, arg1, arg2, arg3) {
                                 });
                               } else {
                                 sum1 = sum + 1;
-                                closure_0 = tmp;
-                                closure_1 = tmp2;
+                                closure_0 = closure_1_0;
+                                closure_1 = closure_1_1;
                                 nextPromise = tmp4Result;
                                 if (tmp4Result) {
                                   nextPromise = tmp4Result;
                                   if (tmp15) {
                                     obj = {};
                                     let merged1 = Object.assign(tmp4Result);
-                                    let tmp15Result = tmp15(obj, tmp);
-                                    let DEBUG_BUILD2 = tmp9(tmp10[2]).DEBUG_BUILD;
+                                    let tmp15Result = tmp15(obj, closure_1_0);
+                                    let DEBUG_BUILD2 = closure_2_0(closure_2_1[2]).DEBUG_BUILD;
                                     if (DEBUG_BUILD2) {
                                       DEBUG_BUILD2 = null === tmp15Result;
                                     }
                                     if (DEBUG_BUILD2) {
-                                      let debug2 = tmp9(tmp10[3]).debug;
+                                      let debug2 = closure_2_0(closure_2_1[3]).debug;
                                       let str4 = tmp15.id;
                                       if (!str4) {
                                         str4 = "?";
@@ -198,7 +198,7 @@ function _notifyEventProcessors(arg0, arg1, arg2, arg3) {
                                       let _HermesInternal2 = HermesInternal;
                                       debug2.log("Event processor \"" + str4 + "\" dropped event");
                                     }
-                                    tmp9Result = tmp9(tmp10[0]);
+                                    tmp9Result = closure_2_0(closure_2_1[0]);
                                     if (tmp9Result.isThenable(tmp15Result)) {
                                       let nextPromise1 = tmp15Result.then((result) => {
                                         let sum = closure_1_2 + 1;
@@ -211,13 +211,13 @@ function _notifyEventProcessors(arg0, arg1, arg2, arg3) {
                                           if (tmp4) {
                                             let obj = {};
                                             let merged = Object.assign(result);
-                                            let tmp4Result = tmp4(obj, tmp);
+                                            let tmp4Result = tmp4(obj, closure_1_0);
                                             let DEBUG_BUILD = closure_2_0(closure_2_1[2]).DEBUG_BUILD;
                                             if (DEBUG_BUILD) {
                                               DEBUG_BUILD = null === tmp4Result;
                                             }
                                             if (DEBUG_BUILD) {
-                                              let debug = tmp9(tmp10[3]).debug;
+                                              let debug = closure_2_0(closure_2_1[3]).debug;
                                               let str = tmp4.id;
                                               if (!str) {
                                                 str = "?";
@@ -225,26 +225,26 @@ function _notifyEventProcessors(arg0, arg1, arg2, arg3) {
                                               let _HermesInternal = HermesInternal;
                                               debug.log("Event processor \"" + str + "\" dropped event");
                                             }
-                                            let tmp9Result = tmp9(tmp10[0]);
+                                            let tmp9Result = closure_2_0(closure_2_1[0]);
                                             if (tmp9Result.isThenable(tmp4Result)) {
                                               let nextPromise = tmp4Result.then(() => { ... });
                                             } else {
                                               sum1 = sum + 1;
-                                              closure_0 = tmp;
-                                              closure_1 = tmp2;
+                                              closure_0 = closure_1_0;
+                                              closure_1 = closure_1_1;
                                               nextPromise = tmp4Result;
                                               if (tmp4Result) {
                                                 nextPromise = tmp4Result;
                                                 if (tmp15) {
                                                   obj = {};
                                                   let merged1 = Object.assign(tmp4Result);
-                                                  let tmp15Result = tmp15(obj, tmp);
-                                                  let DEBUG_BUILD2 = tmp9(tmp10[2]).DEBUG_BUILD;
+                                                  let tmp15Result = tmp15(obj, closure_1_0);
+                                                  let DEBUG_BUILD2 = closure_2_0(closure_2_1[2]).DEBUG_BUILD;
                                                   if (DEBUG_BUILD2) {
                                                     DEBUG_BUILD2 = null === tmp15Result;
                                                   }
                                                   if (DEBUG_BUILD2) {
-                                                    let debug2 = tmp9(tmp10[3]).debug;
+                                                    let debug2 = closure_2_0(closure_2_1[3]).debug;
                                                     let str4 = tmp15.id;
                                                     if (!str4) {
                                                       str4 = "?";
@@ -252,11 +252,11 @@ function _notifyEventProcessors(arg0, arg1, arg2, arg3) {
                                                     let _HermesInternal2 = HermesInternal;
                                                     debug2.log("Event processor \"" + str4 + "\" dropped event");
                                                   }
-                                                  tmp9Result = tmp9(tmp10[0]);
+                                                  tmp9Result = closure_2_0(closure_2_1[0]);
                                                   if (tmp9Result.isThenable(tmp15Result)) {
                                                     let nextPromise1 = tmp15Result.then(() => { ... });
                                                   } else {
-                                                    nextPromise1 = closure_2_2(tmp15Result, tmp, tmp2, sum1 + 1);
+                                                    nextPromise1 = closure_2_2(tmp15Result, closure_1_0, closure_1_1, sum1 + 1);
                                                   }
                                                 }
                                               }
@@ -266,7 +266,7 @@ function _notifyEventProcessors(arg0, arg1, arg2, arg3) {
                                         return tmp5;
                                       });
                                     } else {
-                                      nextPromise1 = closure_2_2(tmp15Result, tmp, tmp2, sum1 + 1);
+                                      nextPromise1 = closure_2_2(tmp15Result, closure_1_0, closure_1_1, sum1 + 1);
                                     }
                                   }
                                 }
@@ -277,21 +277,21 @@ function _notifyEventProcessors(arg0, arg1, arg2, arg3) {
                         });
                       } else {
                         sum1 = sum + 1;
-                        closure_0 = tmp;
-                        closure_1 = tmp2;
+                        closure_0 = closure_1_0;
+                        closure_1 = closure_1_1;
                         nextPromise = tmp4Result;
                         if (tmp4Result) {
                           nextPromise = tmp4Result;
                           if (tmp15) {
                             obj = {};
                             let merged1 = Object.assign(tmp4Result);
-                            let tmp15Result = tmp15(obj, tmp);
-                            let DEBUG_BUILD2 = tmp9(tmp10[2]).DEBUG_BUILD;
+                            let tmp15Result = tmp15(obj, closure_1_0);
+                            let DEBUG_BUILD2 = closure_2_0(closure_2_1[2]).DEBUG_BUILD;
                             if (DEBUG_BUILD2) {
                               DEBUG_BUILD2 = null === tmp15Result;
                             }
                             if (DEBUG_BUILD2) {
-                              let debug2 = tmp9(tmp10[3]).debug;
+                              let debug2 = closure_2_0(closure_2_1[3]).debug;
                               let str4 = tmp15.id;
                               if (!str4) {
                                 str4 = "?";
@@ -299,7 +299,7 @@ function _notifyEventProcessors(arg0, arg1, arg2, arg3) {
                               let _HermesInternal2 = HermesInternal;
                               debug2.log("Event processor \"" + str4 + "\" dropped event");
                             }
-                            tmp9Result = tmp9(tmp10[0]);
+                            tmp9Result = closure_2_0(closure_2_1[0]);
                             if (tmp9Result.isThenable(tmp15Result)) {
                               let nextPromise1 = tmp15Result.then((result) => {
                                 let sum = closure_1_2 + 1;
@@ -312,13 +312,13 @@ function _notifyEventProcessors(arg0, arg1, arg2, arg3) {
                                   if (tmp4) {
                                     let obj = {};
                                     let merged = Object.assign(result);
-                                    let tmp4Result = tmp4(obj, tmp);
+                                    let tmp4Result = tmp4(obj, closure_1_0);
                                     let DEBUG_BUILD = closure_2_0(closure_2_1[2]).DEBUG_BUILD;
                                     if (DEBUG_BUILD) {
                                       DEBUG_BUILD = null === tmp4Result;
                                     }
                                     if (DEBUG_BUILD) {
-                                      let debug = tmp9(tmp10[3]).debug;
+                                      let debug = closure_2_0(closure_2_1[3]).debug;
                                       let str = tmp4.id;
                                       if (!str) {
                                         str = "?";
@@ -326,7 +326,7 @@ function _notifyEventProcessors(arg0, arg1, arg2, arg3) {
                                       let _HermesInternal = HermesInternal;
                                       debug.log("Event processor \"" + str + "\" dropped event");
                                     }
-                                    let tmp9Result = tmp9(tmp10[0]);
+                                    let tmp9Result = closure_2_0(closure_2_1[0]);
                                     if (tmp9Result.isThenable(tmp4Result)) {
                                       let nextPromise = tmp4Result.then((result) => {
                                         let sum = closure_1_2 + 1;
@@ -339,13 +339,13 @@ function _notifyEventProcessors(arg0, arg1, arg2, arg3) {
                                           if (tmp4) {
                                             let obj = {};
                                             let merged = Object.assign(result);
-                                            let tmp4Result = tmp4(obj, tmp);
+                                            let tmp4Result = tmp4(obj, closure_1_0);
                                             let DEBUG_BUILD = closure_2_0(closure_2_1[2]).DEBUG_BUILD;
                                             if (DEBUG_BUILD) {
                                               DEBUG_BUILD = null === tmp4Result;
                                             }
                                             if (DEBUG_BUILD) {
-                                              let debug = tmp9(tmp10[3]).debug;
+                                              let debug = closure_2_0(closure_2_1[3]).debug;
                                               let str = tmp4.id;
                                               if (!str) {
                                                 str = "?";
@@ -353,26 +353,26 @@ function _notifyEventProcessors(arg0, arg1, arg2, arg3) {
                                               let _HermesInternal = HermesInternal;
                                               debug.log("Event processor \"" + str + "\" dropped event");
                                             }
-                                            let tmp9Result = tmp9(tmp10[0]);
+                                            let tmp9Result = closure_2_0(closure_2_1[0]);
                                             if (tmp9Result.isThenable(tmp4Result)) {
                                               let nextPromise = tmp4Result.then(() => { ... });
                                             } else {
                                               sum1 = sum + 1;
-                                              closure_0 = tmp;
-                                              closure_1 = tmp2;
+                                              closure_0 = closure_1_0;
+                                              closure_1 = closure_1_1;
                                               nextPromise = tmp4Result;
                                               if (tmp4Result) {
                                                 nextPromise = tmp4Result;
                                                 if (tmp15) {
                                                   obj = {};
                                                   let merged1 = Object.assign(tmp4Result);
-                                                  let tmp15Result = tmp15(obj, tmp);
-                                                  let DEBUG_BUILD2 = tmp9(tmp10[2]).DEBUG_BUILD;
+                                                  let tmp15Result = tmp15(obj, closure_1_0);
+                                                  let DEBUG_BUILD2 = closure_2_0(closure_2_1[2]).DEBUG_BUILD;
                                                   if (DEBUG_BUILD2) {
                                                     DEBUG_BUILD2 = null === tmp15Result;
                                                   }
                                                   if (DEBUG_BUILD2) {
-                                                    let debug2 = tmp9(tmp10[3]).debug;
+                                                    let debug2 = closure_2_0(closure_2_1[3]).debug;
                                                     let str4 = tmp15.id;
                                                     if (!str4) {
                                                       str4 = "?";
@@ -380,11 +380,11 @@ function _notifyEventProcessors(arg0, arg1, arg2, arg3) {
                                                     let _HermesInternal2 = HermesInternal;
                                                     debug2.log("Event processor \"" + str4 + "\" dropped event");
                                                   }
-                                                  tmp9Result = tmp9(tmp10[0]);
+                                                  tmp9Result = closure_2_0(closure_2_1[0]);
                                                   if (tmp9Result.isThenable(tmp15Result)) {
                                                     let nextPromise1 = tmp15Result.then(() => { ... });
                                                   } else {
-                                                    nextPromise1 = closure_2_2(tmp15Result, tmp, tmp2, sum1 + 1);
+                                                    nextPromise1 = closure_2_2(tmp15Result, closure_1_0, closure_1_1, sum1 + 1);
                                                   }
                                                 }
                                               }
@@ -395,21 +395,21 @@ function _notifyEventProcessors(arg0, arg1, arg2, arg3) {
                                       });
                                     } else {
                                       sum1 = sum + 1;
-                                      closure_0 = tmp;
-                                      closure_1 = tmp2;
+                                      closure_0 = closure_1_0;
+                                      closure_1 = closure_1_1;
                                       nextPromise = tmp4Result;
                                       if (tmp4Result) {
                                         nextPromise = tmp4Result;
                                         if (tmp15) {
                                           obj = {};
                                           let merged1 = Object.assign(tmp4Result);
-                                          let tmp15Result = tmp15(obj, tmp);
-                                          let DEBUG_BUILD2 = tmp9(tmp10[2]).DEBUG_BUILD;
+                                          let tmp15Result = tmp15(obj, closure_1_0);
+                                          let DEBUG_BUILD2 = closure_2_0(closure_2_1[2]).DEBUG_BUILD;
                                           if (DEBUG_BUILD2) {
                                             DEBUG_BUILD2 = null === tmp15Result;
                                           }
                                           if (DEBUG_BUILD2) {
-                                            let debug2 = tmp9(tmp10[3]).debug;
+                                            let debug2 = closure_2_0(closure_2_1[3]).debug;
                                             let str4 = tmp15.id;
                                             if (!str4) {
                                               str4 = "?";
@@ -417,7 +417,7 @@ function _notifyEventProcessors(arg0, arg1, arg2, arg3) {
                                             let _HermesInternal2 = HermesInternal;
                                             debug2.log("Event processor \"" + str4 + "\" dropped event");
                                           }
-                                          tmp9Result = tmp9(tmp10[0]);
+                                          tmp9Result = closure_2_0(closure_2_1[0]);
                                           if (tmp9Result.isThenable(tmp15Result)) {
                                             let nextPromise1 = tmp15Result.then((result) => {
                                               let sum = closure_1_2 + 1;
@@ -430,13 +430,13 @@ function _notifyEventProcessors(arg0, arg1, arg2, arg3) {
                                                 if (tmp4) {
                                                   let obj = {};
                                                   let merged = Object.assign(result);
-                                                  let tmp4Result = tmp4(obj, tmp);
+                                                  let tmp4Result = tmp4(obj, closure_1_0);
                                                   let DEBUG_BUILD = closure_2_0(closure_2_1[2]).DEBUG_BUILD;
                                                   if (DEBUG_BUILD) {
                                                     DEBUG_BUILD = null === tmp4Result;
                                                   }
                                                   if (DEBUG_BUILD) {
-                                                    let debug = tmp9(tmp10[3]).debug;
+                                                    let debug = closure_2_0(closure_2_1[3]).debug;
                                                     let str = tmp4.id;
                                                     if (!str) {
                                                       str = "?";
@@ -444,26 +444,26 @@ function _notifyEventProcessors(arg0, arg1, arg2, arg3) {
                                                     let _HermesInternal = HermesInternal;
                                                     debug.log("Event processor \"" + str + "\" dropped event");
                                                   }
-                                                  let tmp9Result = tmp9(tmp10[0]);
+                                                  let tmp9Result = closure_2_0(closure_2_1[0]);
                                                   if (tmp9Result.isThenable(tmp4Result)) {
                                                     let nextPromise = tmp4Result.then(() => { ... });
                                                   } else {
                                                     sum1 = sum + 1;
-                                                    closure_0 = tmp;
-                                                    closure_1 = tmp2;
+                                                    closure_0 = closure_1_0;
+                                                    closure_1 = closure_1_1;
                                                     nextPromise = tmp4Result;
                                                     if (tmp4Result) {
                                                       nextPromise = tmp4Result;
                                                       if (tmp15) {
                                                         obj = {};
                                                         let merged1 = Object.assign(tmp4Result);
-                                                        let tmp15Result = tmp15(obj, tmp);
-                                                        let DEBUG_BUILD2 = tmp9(tmp10[2]).DEBUG_BUILD;
+                                                        let tmp15Result = tmp15(obj, closure_1_0);
+                                                        let DEBUG_BUILD2 = closure_2_0(closure_2_1[2]).DEBUG_BUILD;
                                                         if (DEBUG_BUILD2) {
                                                           DEBUG_BUILD2 = null === tmp15Result;
                                                         }
                                                         if (DEBUG_BUILD2) {
-                                                          let debug2 = tmp9(tmp10[3]).debug;
+                                                          let debug2 = closure_2_0(closure_2_1[3]).debug;
                                                           let str4 = tmp15.id;
                                                           if (!str4) {
                                                             str4 = "?";
@@ -471,11 +471,11 @@ function _notifyEventProcessors(arg0, arg1, arg2, arg3) {
                                                           let _HermesInternal2 = HermesInternal;
                                                           debug2.log("Event processor \"" + str4 + "\" dropped event");
                                                         }
-                                                        tmp9Result = tmp9(tmp10[0]);
+                                                        tmp9Result = closure_2_0(closure_2_1[0]);
                                                         if (tmp9Result.isThenable(tmp15Result)) {
                                                           let nextPromise1 = tmp15Result.then(() => { ... });
                                                         } else {
-                                                          nextPromise1 = closure_2_2(tmp15Result, tmp, tmp2, sum1 + 1);
+                                                          nextPromise1 = closure_2_2(tmp15Result, closure_1_0, closure_1_1, sum1 + 1);
                                                         }
                                                       }
                                                     }
@@ -485,7 +485,7 @@ function _notifyEventProcessors(arg0, arg1, arg2, arg3) {
                                               return tmp5;
                                             });
                                           } else {
-                                            nextPromise1 = closure_2_2(tmp15Result, tmp, tmp2, sum1 + 1);
+                                            nextPromise1 = closure_2_2(tmp15Result, closure_1_0, closure_1_1, sum1 + 1);
                                           }
                                         }
                                       }
@@ -495,7 +495,7 @@ function _notifyEventProcessors(arg0, arg1, arg2, arg3) {
                                 return tmp5;
                               });
                             } else {
-                              nextPromise1 = closure_2_2(tmp15Result, tmp, tmp2, sum1 + 1);
+                              nextPromise1 = closure_2_2(tmp15Result, closure_1_0, closure_1_1, sum1 + 1);
                             }
                           }
                         }
@@ -506,21 +506,21 @@ function _notifyEventProcessors(arg0, arg1, arg2, arg3) {
                 });
               } else {
                 sum1 = sum + 1;
-                closure_0 = tmp;
-                closure_1 = tmp2;
+                closure_0 = closure_1_0;
+                closure_1 = closure_1_1;
                 nextPromise = tmp4Result;
                 if (tmp4Result) {
                   nextPromise = tmp4Result;
                   if (tmp15) {
                     obj = {};
                     let merged1 = Object.assign(tmp4Result);
-                    let tmp15Result = tmp15(obj, tmp);
-                    let DEBUG_BUILD2 = tmp9(tmp10[2]).DEBUG_BUILD;
+                    let tmp15Result = tmp15(obj, closure_1_0);
+                    let DEBUG_BUILD2 = closure_2_0(closure_2_1[2]).DEBUG_BUILD;
                     if (DEBUG_BUILD2) {
                       DEBUG_BUILD2 = null === tmp15Result;
                     }
                     if (DEBUG_BUILD2) {
-                      let debug2 = tmp9(tmp10[3]).debug;
+                      let debug2 = closure_2_0(closure_2_1[3]).debug;
                       let str4 = tmp15.id;
                       if (!str4) {
                         str4 = "?";
@@ -528,7 +528,7 @@ function _notifyEventProcessors(arg0, arg1, arg2, arg3) {
                       let _HermesInternal2 = HermesInternal;
                       debug2.log("Event processor \"" + str4 + "\" dropped event");
                     }
-                    tmp9Result = tmp9(tmp10[0]);
+                    tmp9Result = closure_2_0(closure_2_1[0]);
                     if (tmp9Result.isThenable(tmp15Result)) {
                       let nextPromise1 = tmp15Result.then((result) => {
                         let sum = closure_1_2 + 1;
@@ -541,13 +541,13 @@ function _notifyEventProcessors(arg0, arg1, arg2, arg3) {
                           if (tmp4) {
                             let obj = {};
                             let merged = Object.assign(result);
-                            let tmp4Result = tmp4(obj, tmp);
+                            let tmp4Result = tmp4(obj, closure_1_0);
                             let DEBUG_BUILD = closure_2_0(closure_2_1[2]).DEBUG_BUILD;
                             if (DEBUG_BUILD) {
                               DEBUG_BUILD = null === tmp4Result;
                             }
                             if (DEBUG_BUILD) {
-                              let debug = tmp9(tmp10[3]).debug;
+                              let debug = closure_2_0(closure_2_1[3]).debug;
                               let str = tmp4.id;
                               if (!str) {
                                 str = "?";
@@ -555,7 +555,7 @@ function _notifyEventProcessors(arg0, arg1, arg2, arg3) {
                               let _HermesInternal = HermesInternal;
                               debug.log("Event processor \"" + str + "\" dropped event");
                             }
-                            let tmp9Result = tmp9(tmp10[0]);
+                            let tmp9Result = closure_2_0(closure_2_1[0]);
                             if (tmp9Result.isThenable(tmp4Result)) {
                               let nextPromise = tmp4Result.then((result) => {
                                 let sum = closure_1_2 + 1;
@@ -568,13 +568,13 @@ function _notifyEventProcessors(arg0, arg1, arg2, arg3) {
                                   if (tmp4) {
                                     let obj = {};
                                     let merged = Object.assign(result);
-                                    let tmp4Result = tmp4(obj, tmp);
+                                    let tmp4Result = tmp4(obj, closure_1_0);
                                     let DEBUG_BUILD = closure_2_0(closure_2_1[2]).DEBUG_BUILD;
                                     if (DEBUG_BUILD) {
                                       DEBUG_BUILD = null === tmp4Result;
                                     }
                                     if (DEBUG_BUILD) {
-                                      let debug = tmp9(tmp10[3]).debug;
+                                      let debug = closure_2_0(closure_2_1[3]).debug;
                                       let str = tmp4.id;
                                       if (!str) {
                                         str = "?";
@@ -582,7 +582,7 @@ function _notifyEventProcessors(arg0, arg1, arg2, arg3) {
                                       let _HermesInternal = HermesInternal;
                                       debug.log("Event processor \"" + str + "\" dropped event");
                                     }
-                                    let tmp9Result = tmp9(tmp10[0]);
+                                    let tmp9Result = closure_2_0(closure_2_1[0]);
                                     if (tmp9Result.isThenable(tmp4Result)) {
                                       let nextPromise = tmp4Result.then((result) => {
                                         let sum = closure_1_2 + 1;
@@ -595,13 +595,13 @@ function _notifyEventProcessors(arg0, arg1, arg2, arg3) {
                                           if (tmp4) {
                                             let obj = {};
                                             let merged = Object.assign(result);
-                                            let tmp4Result = tmp4(obj, tmp);
+                                            let tmp4Result = tmp4(obj, closure_1_0);
                                             let DEBUG_BUILD = closure_2_0(closure_2_1[2]).DEBUG_BUILD;
                                             if (DEBUG_BUILD) {
                                               DEBUG_BUILD = null === tmp4Result;
                                             }
                                             if (DEBUG_BUILD) {
-                                              let debug = tmp9(tmp10[3]).debug;
+                                              let debug = closure_2_0(closure_2_1[3]).debug;
                                               let str = tmp4.id;
                                               if (!str) {
                                                 str = "?";
@@ -609,26 +609,26 @@ function _notifyEventProcessors(arg0, arg1, arg2, arg3) {
                                               let _HermesInternal = HermesInternal;
                                               debug.log("Event processor \"" + str + "\" dropped event");
                                             }
-                                            let tmp9Result = tmp9(tmp10[0]);
+                                            let tmp9Result = closure_2_0(closure_2_1[0]);
                                             if (tmp9Result.isThenable(tmp4Result)) {
                                               let nextPromise = tmp4Result.then(() => { ... });
                                             } else {
                                               sum1 = sum + 1;
-                                              closure_0 = tmp;
-                                              closure_1 = tmp2;
+                                              closure_0 = closure_1_0;
+                                              closure_1 = closure_1_1;
                                               nextPromise = tmp4Result;
                                               if (tmp4Result) {
                                                 nextPromise = tmp4Result;
                                                 if (tmp15) {
                                                   obj = {};
                                                   let merged1 = Object.assign(tmp4Result);
-                                                  let tmp15Result = tmp15(obj, tmp);
-                                                  let DEBUG_BUILD2 = tmp9(tmp10[2]).DEBUG_BUILD;
+                                                  let tmp15Result = tmp15(obj, closure_1_0);
+                                                  let DEBUG_BUILD2 = closure_2_0(closure_2_1[2]).DEBUG_BUILD;
                                                   if (DEBUG_BUILD2) {
                                                     DEBUG_BUILD2 = null === tmp15Result;
                                                   }
                                                   if (DEBUG_BUILD2) {
-                                                    let debug2 = tmp9(tmp10[3]).debug;
+                                                    let debug2 = closure_2_0(closure_2_1[3]).debug;
                                                     let str4 = tmp15.id;
                                                     if (!str4) {
                                                       str4 = "?";
@@ -636,11 +636,11 @@ function _notifyEventProcessors(arg0, arg1, arg2, arg3) {
                                                     let _HermesInternal2 = HermesInternal;
                                                     debug2.log("Event processor \"" + str4 + "\" dropped event");
                                                   }
-                                                  tmp9Result = tmp9(tmp10[0]);
+                                                  tmp9Result = closure_2_0(closure_2_1[0]);
                                                   if (tmp9Result.isThenable(tmp15Result)) {
                                                     let nextPromise1 = tmp15Result.then(() => { ... });
                                                   } else {
-                                                    nextPromise1 = closure_2_2(tmp15Result, tmp, tmp2, sum1 + 1);
+                                                    nextPromise1 = closure_2_2(tmp15Result, closure_1_0, closure_1_1, sum1 + 1);
                                                   }
                                                 }
                                               }
@@ -651,21 +651,21 @@ function _notifyEventProcessors(arg0, arg1, arg2, arg3) {
                                       });
                                     } else {
                                       sum1 = sum + 1;
-                                      closure_0 = tmp;
-                                      closure_1 = tmp2;
+                                      closure_0 = closure_1_0;
+                                      closure_1 = closure_1_1;
                                       nextPromise = tmp4Result;
                                       if (tmp4Result) {
                                         nextPromise = tmp4Result;
                                         if (tmp15) {
                                           obj = {};
                                           let merged1 = Object.assign(tmp4Result);
-                                          let tmp15Result = tmp15(obj, tmp);
-                                          let DEBUG_BUILD2 = tmp9(tmp10[2]).DEBUG_BUILD;
+                                          let tmp15Result = tmp15(obj, closure_1_0);
+                                          let DEBUG_BUILD2 = closure_2_0(closure_2_1[2]).DEBUG_BUILD;
                                           if (DEBUG_BUILD2) {
                                             DEBUG_BUILD2 = null === tmp15Result;
                                           }
                                           if (DEBUG_BUILD2) {
-                                            let debug2 = tmp9(tmp10[3]).debug;
+                                            let debug2 = closure_2_0(closure_2_1[3]).debug;
                                             let str4 = tmp15.id;
                                             if (!str4) {
                                               str4 = "?";
@@ -673,7 +673,7 @@ function _notifyEventProcessors(arg0, arg1, arg2, arg3) {
                                             let _HermesInternal2 = HermesInternal;
                                             debug2.log("Event processor \"" + str4 + "\" dropped event");
                                           }
-                                          tmp9Result = tmp9(tmp10[0]);
+                                          tmp9Result = closure_2_0(closure_2_1[0]);
                                           if (tmp9Result.isThenable(tmp15Result)) {
                                             let nextPromise1 = tmp15Result.then((result) => {
                                               let sum = closure_1_2 + 1;
@@ -686,13 +686,13 @@ function _notifyEventProcessors(arg0, arg1, arg2, arg3) {
                                                 if (tmp4) {
                                                   let obj = {};
                                                   let merged = Object.assign(result);
-                                                  let tmp4Result = tmp4(obj, tmp);
+                                                  let tmp4Result = tmp4(obj, closure_1_0);
                                                   let DEBUG_BUILD = closure_2_0(closure_2_1[2]).DEBUG_BUILD;
                                                   if (DEBUG_BUILD) {
                                                     DEBUG_BUILD = null === tmp4Result;
                                                   }
                                                   if (DEBUG_BUILD) {
-                                                    let debug = tmp9(tmp10[3]).debug;
+                                                    let debug = closure_2_0(closure_2_1[3]).debug;
                                                     let str = tmp4.id;
                                                     if (!str) {
                                                       str = "?";
@@ -700,26 +700,26 @@ function _notifyEventProcessors(arg0, arg1, arg2, arg3) {
                                                     let _HermesInternal = HermesInternal;
                                                     debug.log("Event processor \"" + str + "\" dropped event");
                                                   }
-                                                  let tmp9Result = tmp9(tmp10[0]);
+                                                  let tmp9Result = closure_2_0(closure_2_1[0]);
                                                   if (tmp9Result.isThenable(tmp4Result)) {
                                                     let nextPromise = tmp4Result.then(() => { ... });
                                                   } else {
                                                     sum1 = sum + 1;
-                                                    closure_0 = tmp;
-                                                    closure_1 = tmp2;
+                                                    closure_0 = closure_1_0;
+                                                    closure_1 = closure_1_1;
                                                     nextPromise = tmp4Result;
                                                     if (tmp4Result) {
                                                       nextPromise = tmp4Result;
                                                       if (tmp15) {
                                                         obj = {};
                                                         let merged1 = Object.assign(tmp4Result);
-                                                        let tmp15Result = tmp15(obj, tmp);
-                                                        let DEBUG_BUILD2 = tmp9(tmp10[2]).DEBUG_BUILD;
+                                                        let tmp15Result = tmp15(obj, closure_1_0);
+                                                        let DEBUG_BUILD2 = closure_2_0(closure_2_1[2]).DEBUG_BUILD;
                                                         if (DEBUG_BUILD2) {
                                                           DEBUG_BUILD2 = null === tmp15Result;
                                                         }
                                                         if (DEBUG_BUILD2) {
-                                                          let debug2 = tmp9(tmp10[3]).debug;
+                                                          let debug2 = closure_2_0(closure_2_1[3]).debug;
                                                           let str4 = tmp15.id;
                                                           if (!str4) {
                                                             str4 = "?";
@@ -727,11 +727,11 @@ function _notifyEventProcessors(arg0, arg1, arg2, arg3) {
                                                           let _HermesInternal2 = HermesInternal;
                                                           debug2.log("Event processor \"" + str4 + "\" dropped event");
                                                         }
-                                                        tmp9Result = tmp9(tmp10[0]);
+                                                        tmp9Result = closure_2_0(closure_2_1[0]);
                                                         if (tmp9Result.isThenable(tmp15Result)) {
                                                           let nextPromise1 = tmp15Result.then(() => { ... });
                                                         } else {
-                                                          nextPromise1 = closure_2_2(tmp15Result, tmp, tmp2, sum1 + 1);
+                                                          nextPromise1 = closure_2_2(tmp15Result, closure_1_0, closure_1_1, sum1 + 1);
                                                         }
                                                       }
                                                     }
@@ -741,7 +741,7 @@ function _notifyEventProcessors(arg0, arg1, arg2, arg3) {
                                               return tmp5;
                                             });
                                           } else {
-                                            nextPromise1 = closure_2_2(tmp15Result, tmp, tmp2, sum1 + 1);
+                                            nextPromise1 = closure_2_2(tmp15Result, closure_1_0, closure_1_1, sum1 + 1);
                                           }
                                         }
                                       }
@@ -752,21 +752,21 @@ function _notifyEventProcessors(arg0, arg1, arg2, arg3) {
                               });
                             } else {
                               sum1 = sum + 1;
-                              closure_0 = tmp;
-                              closure_1 = tmp2;
+                              closure_0 = closure_1_0;
+                              closure_1 = closure_1_1;
                               nextPromise = tmp4Result;
                               if (tmp4Result) {
                                 nextPromise = tmp4Result;
                                 if (tmp15) {
                                   obj = {};
                                   let merged1 = Object.assign(tmp4Result);
-                                  let tmp15Result = tmp15(obj, tmp);
-                                  let DEBUG_BUILD2 = tmp9(tmp10[2]).DEBUG_BUILD;
+                                  let tmp15Result = tmp15(obj, closure_1_0);
+                                  let DEBUG_BUILD2 = closure_2_0(closure_2_1[2]).DEBUG_BUILD;
                                   if (DEBUG_BUILD2) {
                                     DEBUG_BUILD2 = null === tmp15Result;
                                   }
                                   if (DEBUG_BUILD2) {
-                                    let debug2 = tmp9(tmp10[3]).debug;
+                                    let debug2 = closure_2_0(closure_2_1[3]).debug;
                                     let str4 = tmp15.id;
                                     if (!str4) {
                                       str4 = "?";
@@ -774,7 +774,7 @@ function _notifyEventProcessors(arg0, arg1, arg2, arg3) {
                                     let _HermesInternal2 = HermesInternal;
                                     debug2.log("Event processor \"" + str4 + "\" dropped event");
                                   }
-                                  tmp9Result = tmp9(tmp10[0]);
+                                  tmp9Result = closure_2_0(closure_2_1[0]);
                                   if (tmp9Result.isThenable(tmp15Result)) {
                                     let nextPromise1 = tmp15Result.then((result) => {
                                       let sum = closure_1_2 + 1;
@@ -787,13 +787,13 @@ function _notifyEventProcessors(arg0, arg1, arg2, arg3) {
                                         if (tmp4) {
                                           let obj = {};
                                           let merged = Object.assign(result);
-                                          let tmp4Result = tmp4(obj, tmp);
+                                          let tmp4Result = tmp4(obj, closure_1_0);
                                           let DEBUG_BUILD = closure_2_0(closure_2_1[2]).DEBUG_BUILD;
                                           if (DEBUG_BUILD) {
                                             DEBUG_BUILD = null === tmp4Result;
                                           }
                                           if (DEBUG_BUILD) {
-                                            let debug = tmp9(tmp10[3]).debug;
+                                            let debug = closure_2_0(closure_2_1[3]).debug;
                                             let str = tmp4.id;
                                             if (!str) {
                                               str = "?";
@@ -801,7 +801,7 @@ function _notifyEventProcessors(arg0, arg1, arg2, arg3) {
                                             let _HermesInternal = HermesInternal;
                                             debug.log("Event processor \"" + str + "\" dropped event");
                                           }
-                                          let tmp9Result = tmp9(tmp10[0]);
+                                          let tmp9Result = closure_2_0(closure_2_1[0]);
                                           if (tmp9Result.isThenable(tmp4Result)) {
                                             let nextPromise = tmp4Result.then((result) => {
                                               let sum = closure_1_2 + 1;
@@ -814,13 +814,13 @@ function _notifyEventProcessors(arg0, arg1, arg2, arg3) {
                                                 if (tmp4) {
                                                   let obj = {};
                                                   let merged = Object.assign(result);
-                                                  let tmp4Result = tmp4(obj, tmp);
+                                                  let tmp4Result = tmp4(obj, closure_1_0);
                                                   let DEBUG_BUILD = closure_2_0(closure_2_1[2]).DEBUG_BUILD;
                                                   if (DEBUG_BUILD) {
                                                     DEBUG_BUILD = null === tmp4Result;
                                                   }
                                                   if (DEBUG_BUILD) {
-                                                    let debug = tmp9(tmp10[3]).debug;
+                                                    let debug = closure_2_0(closure_2_1[3]).debug;
                                                     let str = tmp4.id;
                                                     if (!str) {
                                                       str = "?";
@@ -828,26 +828,26 @@ function _notifyEventProcessors(arg0, arg1, arg2, arg3) {
                                                     let _HermesInternal = HermesInternal;
                                                     debug.log("Event processor \"" + str + "\" dropped event");
                                                   }
-                                                  let tmp9Result = tmp9(tmp10[0]);
+                                                  let tmp9Result = closure_2_0(closure_2_1[0]);
                                                   if (tmp9Result.isThenable(tmp4Result)) {
                                                     let nextPromise = tmp4Result.then(() => { ... });
                                                   } else {
                                                     sum1 = sum + 1;
-                                                    closure_0 = tmp;
-                                                    closure_1 = tmp2;
+                                                    closure_0 = closure_1_0;
+                                                    closure_1 = closure_1_1;
                                                     nextPromise = tmp4Result;
                                                     if (tmp4Result) {
                                                       nextPromise = tmp4Result;
                                                       if (tmp15) {
                                                         obj = {};
                                                         let merged1 = Object.assign(tmp4Result);
-                                                        let tmp15Result = tmp15(obj, tmp);
-                                                        let DEBUG_BUILD2 = tmp9(tmp10[2]).DEBUG_BUILD;
+                                                        let tmp15Result = tmp15(obj, closure_1_0);
+                                                        let DEBUG_BUILD2 = closure_2_0(closure_2_1[2]).DEBUG_BUILD;
                                                         if (DEBUG_BUILD2) {
                                                           DEBUG_BUILD2 = null === tmp15Result;
                                                         }
                                                         if (DEBUG_BUILD2) {
-                                                          let debug2 = tmp9(tmp10[3]).debug;
+                                                          let debug2 = closure_2_0(closure_2_1[3]).debug;
                                                           let str4 = tmp15.id;
                                                           if (!str4) {
                                                             str4 = "?";
@@ -855,11 +855,11 @@ function _notifyEventProcessors(arg0, arg1, arg2, arg3) {
                                                           let _HermesInternal2 = HermesInternal;
                                                           debug2.log("Event processor \"" + str4 + "\" dropped event");
                                                         }
-                                                        tmp9Result = tmp9(tmp10[0]);
+                                                        tmp9Result = closure_2_0(closure_2_1[0]);
                                                         if (tmp9Result.isThenable(tmp15Result)) {
                                                           let nextPromise1 = tmp15Result.then(() => { ... });
                                                         } else {
-                                                          nextPromise1 = closure_2_2(tmp15Result, tmp, tmp2, sum1 + 1);
+                                                          nextPromise1 = closure_2_2(tmp15Result, closure_1_0, closure_1_1, sum1 + 1);
                                                         }
                                                       }
                                                     }
@@ -870,21 +870,21 @@ function _notifyEventProcessors(arg0, arg1, arg2, arg3) {
                                             });
                                           } else {
                                             sum1 = sum + 1;
-                                            closure_0 = tmp;
-                                            closure_1 = tmp2;
+                                            closure_0 = closure_1_0;
+                                            closure_1 = closure_1_1;
                                             nextPromise = tmp4Result;
                                             if (tmp4Result) {
                                               nextPromise = tmp4Result;
                                               if (tmp15) {
                                                 obj = {};
                                                 let merged1 = Object.assign(tmp4Result);
-                                                let tmp15Result = tmp15(obj, tmp);
-                                                let DEBUG_BUILD2 = tmp9(tmp10[2]).DEBUG_BUILD;
+                                                let tmp15Result = tmp15(obj, closure_1_0);
+                                                let DEBUG_BUILD2 = closure_2_0(closure_2_1[2]).DEBUG_BUILD;
                                                 if (DEBUG_BUILD2) {
                                                   DEBUG_BUILD2 = null === tmp15Result;
                                                 }
                                                 if (DEBUG_BUILD2) {
-                                                  let debug2 = tmp9(tmp10[3]).debug;
+                                                  let debug2 = closure_2_0(closure_2_1[3]).debug;
                                                   let str4 = tmp15.id;
                                                   if (!str4) {
                                                     str4 = "?";
@@ -892,7 +892,7 @@ function _notifyEventProcessors(arg0, arg1, arg2, arg3) {
                                                   let _HermesInternal2 = HermesInternal;
                                                   debug2.log("Event processor \"" + str4 + "\" dropped event");
                                                 }
-                                                tmp9Result = tmp9(tmp10[0]);
+                                                tmp9Result = closure_2_0(closure_2_1[0]);
                                                 if (tmp9Result.isThenable(tmp15Result)) {
                                                   let nextPromise1 = tmp15Result.then((result) => {
                                                     let sum = closure_1_2 + 1;
@@ -905,13 +905,13 @@ function _notifyEventProcessors(arg0, arg1, arg2, arg3) {
                                                       if (tmp4) {
                                                         let obj = {};
                                                         let merged = Object.assign(result);
-                                                        let tmp4Result = tmp4(obj, tmp);
+                                                        let tmp4Result = tmp4(obj, closure_1_0);
                                                         let DEBUG_BUILD = closure_2_0(closure_2_1[2]).DEBUG_BUILD;
                                                         if (DEBUG_BUILD) {
                                                           DEBUG_BUILD = null === tmp4Result;
                                                         }
                                                         if (DEBUG_BUILD) {
-                                                          let debug = tmp9(tmp10[3]).debug;
+                                                          let debug = closure_2_0(closure_2_1[3]).debug;
                                                           let str = tmp4.id;
                                                           if (!str) {
                                                             str = "?";
@@ -919,26 +919,26 @@ function _notifyEventProcessors(arg0, arg1, arg2, arg3) {
                                                           let _HermesInternal = HermesInternal;
                                                           debug.log("Event processor \"" + str + "\" dropped event");
                                                         }
-                                                        let tmp9Result = tmp9(tmp10[0]);
+                                                        let tmp9Result = closure_2_0(closure_2_1[0]);
                                                         if (tmp9Result.isThenable(tmp4Result)) {
                                                           let nextPromise = tmp4Result.then(() => { ... });
                                                         } else {
                                                           sum1 = sum + 1;
-                                                          closure_0 = tmp;
-                                                          closure_1 = tmp2;
+                                                          closure_0 = closure_1_0;
+                                                          closure_1 = closure_1_1;
                                                           nextPromise = tmp4Result;
                                                           if (tmp4Result) {
                                                             nextPromise = tmp4Result;
                                                             if (tmp15) {
                                                               obj = {};
                                                               let merged1 = Object.assign(tmp4Result);
-                                                              let tmp15Result = tmp15(obj, tmp);
-                                                              let DEBUG_BUILD2 = tmp9(tmp10[2]).DEBUG_BUILD;
+                                                              let tmp15Result = tmp15(obj, closure_1_0);
+                                                              let DEBUG_BUILD2 = closure_2_0(closure_2_1[2]).DEBUG_BUILD;
                                                               if (DEBUG_BUILD2) {
                                                                 DEBUG_BUILD2 = null === tmp15Result;
                                                               }
                                                               if (DEBUG_BUILD2) {
-                                                                let debug2 = tmp9(tmp10[3]).debug;
+                                                                let debug2 = closure_2_0(closure_2_1[3]).debug;
                                                                 let str4 = tmp15.id;
                                                                 if (!str4) {
                                                                   str4 = "?";
@@ -946,11 +946,11 @@ function _notifyEventProcessors(arg0, arg1, arg2, arg3) {
                                                                 let _HermesInternal2 = HermesInternal;
                                                                 debug2.log("Event processor \"" + str4 + "\" dropped event");
                                                               }
-                                                              tmp9Result = tmp9(tmp10[0]);
+                                                              tmp9Result = closure_2_0(closure_2_1[0]);
                                                               if (tmp9Result.isThenable(tmp15Result)) {
                                                                 let nextPromise1 = tmp15Result.then(() => { ... });
                                                               } else {
-                                                                nextPromise1 = closure_2_2(tmp15Result, tmp, tmp2, sum1 + 1);
+                                                                nextPromise1 = closure_2_2(tmp15Result, closure_1_0, closure_1_1, sum1 + 1);
                                                               }
                                                             }
                                                           }
@@ -960,7 +960,7 @@ function _notifyEventProcessors(arg0, arg1, arg2, arg3) {
                                                     return tmp5;
                                                   });
                                                 } else {
-                                                  nextPromise1 = closure_2_2(tmp15Result, tmp, tmp2, sum1 + 1);
+                                                  nextPromise1 = closure_2_2(tmp15Result, closure_1_0, closure_1_1, sum1 + 1);
                                                 }
                                               }
                                             }
@@ -970,7 +970,7 @@ function _notifyEventProcessors(arg0, arg1, arg2, arg3) {
                                       return tmp5;
                                     });
                                   } else {
-                                    nextPromise1 = closure_2_2(tmp15Result, tmp, tmp2, sum1 + 1);
+                                    nextPromise1 = closure_2_2(tmp15Result, closure_1_0, closure_1_1, sum1 + 1);
                                   }
                                 }
                               }
@@ -980,7 +980,7 @@ function _notifyEventProcessors(arg0, arg1, arg2, arg3) {
                         return tmp5;
                       });
                     } else {
-                      nextPromise1 = closure_2_2(tmp15Result, tmp, tmp2, sum1 + 1);
+                      nextPromise1 = closure_2_2(tmp15Result, closure_1_0, closure_1_1, sum1 + 1);
                     }
                   }
                 }
@@ -995,17 +995,17 @@ function _notifyEventProcessors(arg0, arg1, arg2, arg3) {
       return nextPromise;
     }
   }
-  return arg0;
+  return tmpResult;
 }
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 
-export const notifyEventProcessors = function notifyEventProcessors(arg0, arg1, arg2) {
+export const notifyEventProcessors = function notifyEventProcessors(arg0, tmpResult, arg2) {
   let num = arg3;
   if (arg3 === undefined) {
     num = 0;
   }
   try {
-    const tmp7 = _notifyEventProcessors(arg1, arg2, arg0, num);
+    const tmp7 = _notifyEventProcessors(tmpResult, arg2, arg0, num);
     if (obj.isThenable(tmp7)) {
       let resolvedSyncPromiseResult = tmp7;
     } else {

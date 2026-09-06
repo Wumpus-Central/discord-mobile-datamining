@@ -11,6 +11,8 @@ import dateTimestampInSeconds from "dateTimestampInSeconds" /* 703 */;
 import SEMANTIC_ATTRIBUTE_CACHE_HIT from "SEMANTIC_ATTRIBUTE_CACHE_HIT" /* 704 */;
 import SPAN_STATUS_ERROR from "SPAN_STATUS_ERROR" /* 705 */;
 import _mod706 from "module_706" /* 706 */;
+import _getSpanForScope from "_getSpanForScope" /* 709 */;
+import _mod713 from "module_713" /* 713 */;
 
 require = arg1;
 const dependencyMap = arg6;
@@ -87,13 +89,12 @@ function spanToJSON(getSpanJSON) {
       if (status) {
         if (status.code !== SPAN_STATUS_ERROR.SPAN_STATUS_UNSET) {
           let str3 = "ok";
-          if (status.code !== tmp17(705).SPAN_STATUS_OK) {
+          if (status.code !== SPAN_STATUS_ERROR.SPAN_STATUS_OK) {
             str3 = status.message || "internal_error";
             const tmp19 = status.message || "internal_error";
           }
           tmp16 = str3;
         }
-        tmp17 = require;
       }
       obj.status = tmp16;
       obj.op = attributes[SEMANTIC_ATTRIBUTE_CACHE_HIT.SEMANTIC_ATTRIBUTE_SENTRY_OP];
@@ -129,19 +130,19 @@ const _sentryRootSpan = "_sentryRootSpan";
 
 export const TRACE_FLAG_NONE = 0;
 export const TRACE_FLAG_SAMPLED = 1;
-export const addChildSpanToSpan = function addChildSpanToSpan(arg0, arg1) {
-  let tmp2 = arg0[_sentryRootSpan];
+export const addChildSpanToSpan = function addChildSpanToSpan(parentSpan, sentrySpan) {
+  let tmp2 = parentSpan[_sentryRootSpan];
   if (!tmp2) {
-    tmp2 = arg0;
+    tmp2 = parentSpan;
   }
-  const result = _mod687.addNonEnumerableProperty(arg1, _sentryRootSpan, tmp2);
-  if (arg0[_sentryChildSpans]) {
-    arg0[tmp6].add(arg1);
+  const result = _mod687.addNonEnumerableProperty(sentrySpan, _sentryRootSpan, tmp2);
+  if (parentSpan[_sentryChildSpans]) {
+    parentSpan[_sentryChildSpans].add(sentrySpan);
   } else {
     const _Set = Set;
-    const items = [arg1];
+    const items = [sentrySpan];
     const set = new Set(items);
-    const result1 = _mod687.addNonEnumerableProperty(arg0, tmp6, set);
+    const result1 = _mod687.addNonEnumerableProperty(parentSpan, _sentryChildSpans, set);
     const tmp3Result = _mod687;
   }
 };
@@ -165,14 +166,13 @@ export const getActiveSpan = function getActiveSpan() {
   if (asyncContextStrategy.getActiveSpan) {
     let activeSpan = asyncContextStrategy.getActiveSpan();
   } else {
-    tmp(709);
-    const tmpResult = tmp(713);
+    const tmpResult = _mod713;
     activeSpan = tmpResult._getSpanForScope(tmpResult.getCurrentScope());
   }
   return activeSpan;
 };
-export const getRootSpan = function getRootSpan(arg0) {
-  return arg0[_sentryRootSpan] || arg0;
+export const getRootSpan = function getRootSpan(_getSpanForScopeResult) {
+  return _getSpanForScopeResult[_sentryRootSpan] || _getSpanForScopeResult;
 };
 export const getSpanDescendants = function getSpanDescendants(arg0) {
   const set = new Set();
@@ -199,18 +199,17 @@ export const getStatusMessage = function getStatusMessage(code) {
   if (code) {
     if (code.code !== SPAN_STATUS_ERROR.SPAN_STATUS_UNSET) {
       let str = "ok";
-      if (code.code !== tmp(705).SPAN_STATUS_OK) {
+      if (code.code !== SPAN_STATUS_ERROR.SPAN_STATUS_OK) {
         str = code.message || "internal_error";
         const tmp3 = code.message || "internal_error";
       }
       return str;
     }
-    tmp = require;
   }
 };
-export const removeChildSpanFromSpan = function removeChildSpanFromSpan(arg0, arg1) {
-  if (arg0[_sentryChildSpans]) {
-    arg0[tmp].delete(arg1);
+export const removeChildSpanFromSpan = function removeChildSpanFromSpan(c14, isRecording) {
+  if (dependencyMap[_sentryChildSpans]) {
+    dependencyMap[tmp].delete(isRecording);
   }
 };
 export const showSpanDropWarning = function showSpanDropWarning() {

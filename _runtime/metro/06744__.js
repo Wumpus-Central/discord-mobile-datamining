@@ -17,7 +17,7 @@ const items = [["minDuration", "minDurationMs"], ["maxDistance", "maxDist"]];
 const map = new Map(items);
 let closure_4 = {};
 
-export const useLongPressGesture = function useLongPressGesture(gestureHandlerProps) {
+export const useLongPressGesture = function useLongPressGesture() {
   let tmp = gestureHandlerProps;
   if (gestureHandlerProps === undefined) {
     tmp = closure_4;

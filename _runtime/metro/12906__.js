@@ -14,19 +14,19 @@ export const flatten = function flatten(arr) {
                 if (Array.isArray(arr)) {
                   let item = arr.forEach(() => { ... });
                 } else {
-                  closure_1_0.push(arr);
+                  arr = closure_1_0.push(arr);
                 }
               });
             } else {
-              closure_1_0.push(arr);
+              arr = closure_1_0.push(arr);
             }
           });
         } else {
-          closure_1_0.push(arr);
+          arr = closure_1_0.push(arr);
         }
       });
     } else {
-      closure_1_0.push(arr);
+      arr = closure_1_0.push(arr);
     }
   });
   return items;

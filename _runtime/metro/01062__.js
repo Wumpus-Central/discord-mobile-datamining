@@ -205,13 +205,14 @@ export const showFeedbackWidget = () => {
 };
 export const showScreenshotButton = () => {
   if (obj.isWeb()) {
-    const debug = tmp(682).debug;
+    const debug = ScreenshotButtonManager(682).debug;
     debug.warn("ScreenshotButton is not supported on Web.");
   } else {
-    const result = tmp(1063).lazyLoadAutoInjectScreenshotButtonIntegration();
+    const result = ScreenshotButtonManager(1063).lazyLoadAutoInjectScreenshotButtonIntegration();
     importDefaultResult1Result3.show();
-    const tmpResult = tmp(1063);
+    const tmpResult = ScreenshotButtonManager(1063);
   }
+  obj = ScreenshotButtonManager(867);
 };
 export const hideScreenshotButton = () => {
   importDefaultResult1Result3.hide();

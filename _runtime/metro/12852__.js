@@ -84,8 +84,8 @@ const entry = {
     let obj = BaseClient(12808);
     const uuid4Result = obj.uuid4();
     if (obj2.checkOrSetAlreadyCaught(arg0)) {
-      if (tmp(12825).DEBUG_BUILD) {
-        const logger = tmp(12797).logger;
+      if (BaseClient(12825).DEBUG_BUILD) {
+        const logger = BaseClient(12797).logger;
         logger.log(c4);
       }
       return uuid4Result;
@@ -131,13 +131,13 @@ let items = [
       if (originalException) {
         if (originalException.originalException) {
           if (tmpResult.checkOrSetAlreadyCaught(originalException.originalException)) {
-            if (tmp(12825).DEBUG_BUILD) {
-              const logger = tmp(12797).logger;
+            if (BaseClient(12825).DEBUG_BUILD) {
+              const logger = BaseClient(12797).logger;
               logger.log(c4);
             }
             return uuid4Result;
           }
-          tmpResult = tmp(12808);
+          tmpResult = BaseClient(12808);
         }
       }
       obj = { event_id: uuid4Result };
@@ -157,10 +157,9 @@ let items = [
     value: function captureSession(release) {
       if (typeof release.release !== "string") {
         if (BaseClient(12825).DEBUG_BUILD) {
-          const logger = tmp(12797).logger;
+          const logger = BaseClient(12797).logger;
           logger.warn("Discarded session because of missing or non-string release");
         }
-        tmp = BaseClient;
       } else {
         const self = this;
         this.sendSession(release);
@@ -275,6 +274,7 @@ let items = [
         const result = BaseClient(12853).afterSetupIntegrations(this, items);
         const tmpResult = BaseClient(12853);
       }
+      const obj = BaseClient(12853);
     }
   },
   {
@@ -298,6 +298,8 @@ let items = [
       if (sendEnvelopeResult) {
         sendEnvelopeResult.then((result) => self.emit("afterSendEvent", closure_0, result), null);
       }
+      const obj2 = BaseClient(12840);
+      const tmp3 = obj.attachments || [];
     }
   },
   {
@@ -312,13 +314,13 @@ let items = [
       const self = this;
       if (this._options.sendClientReports) {
         let num2 = 1;
-        if (typeof num === "number") {
+        if (typeof 1 === "number") {
           num2 = num;
         }
         const _HermesInternal = HermesInternal;
         const combined = "" + arg0 + ":" + arg1;
         if (BaseClient(12825).DEBUG_BUILD) {
-          const logger = tmp6(12797).logger;
+          const logger = BaseClient(12797).logger;
           let str3 = "";
           if (num2 > 1) {
             const _HermesInternal2 = HermesInternal;
@@ -332,7 +334,6 @@ let items = [
           num3 = 0;
         }
         self._outcomes[combined] = num3 + num2;
-        tmp6 = BaseClient;
       }
     }
   },
@@ -383,10 +384,11 @@ let items = [
         return nextPromise;
       }
       if (BaseClient(12825).DEBUG_BUILD) {
-        let logger = tmp2(12797).logger;
+        let logger = BaseClient(12797).logger;
         logger.error("Transport disabled");
       }
       nextPromise = BaseClient(12821).resolvedSyncPromise({});
+      const tmp2Result = BaseClient(12821);
     }
   },
   {
@@ -551,13 +553,13 @@ let items = [
       }
       return this._processEvent(arg0, obj, arg2).then((event_id) => event_id.event_id, (logLevel) => {
         if (BaseClient(dependencyMap[4]).DEBUG_BUILD) {
-          if (logLevel instanceof tmp(tmp2[17]).SentryError) {
+          if (logLevel instanceof BaseClient(dependencyMap[17]).SentryError) {
             if ("log" === logLevel.logLevel) {
-              const logger2 = tmp(tmp2[5]).logger;
+              const logger2 = BaseClient(dependencyMap[5]).logger;
               logger2.log(logLevel.message);
             }
           }
-          const logger = tmp(tmp2[5]).logger;
+          const logger = BaseClient(dependencyMap[5]).logger;
           logger.warn(logLevel);
         }
       });
@@ -606,15 +608,15 @@ let items = [
           throw sentryError;
         } else {
           if (data.data) {
-            if (true === tmp30.data.__sentry__) {
+            if (true === data.data.__sentry__) {
               return result;
             }
           }
-          const promise = (function processBeforeSend(self, options, spans, arg3) {
+          const promise = (function processBeforeSend(self, options, spans, data) {
             ({ beforeSend, beforeSendTransaction, beforeSendSpan } = options);
             if (closure_1_5(spans)) {
               if (beforeSend) {
-                return beforeSend(spans, arg3);
+                return beforeSend(spans, data);
               }
             }
             if (closure_1_6(spans)) {
@@ -644,7 +646,7 @@ let items = [
                   obj.spanCountBeforeProcessing = spans.spans.length;
                   spans.sdkProcessingMetadata = obj;
                 }
-                return beforeSendTransaction(spans, arg3);
+                return beforeSendTransaction(spans, data);
               }
             }
             return spans;
@@ -686,15 +688,15 @@ let items = [
           throw sentryError;
         } else {
           if (data.data) {
-            if (true === tmp30.data.__sentry__) {
+            if (true === data.data.__sentry__) {
               return result;
             }
           }
-          const promise = (function processBeforeSend(self, options, spans, arg3) {
+          const promise = (function processBeforeSend(self, options, spans, data) {
             ({ beforeSend, beforeSendTransaction, beforeSendSpan } = options);
             if (closure_1_5(spans)) {
               if (beforeSend) {
-                return beforeSend(spans, arg3);
+                return beforeSend(spans, data);
               }
             }
             if (closure_1_6(spans)) {
@@ -724,7 +726,7 @@ let items = [
                   obj.spanCountBeforeProcessing = spans.spans.length;
                   spans.sdkProcessingMetadata = obj;
                 }
-                return beforeSendTransaction(spans, arg3);
+                return beforeSendTransaction(spans, data);
               }
             }
             return spans;
@@ -811,10 +813,9 @@ let items = [
           const obj = { data: { __sentry__: true }, originalException };
           self.captureException(originalException, obj);
           const _HermesInternal = HermesInternal;
-          const sentryError = new tmp(12854).SentryError("Event processing pipeline threw an error, original event will not be sent. Details have been sent as a new event.\nReason: " + originalException);
+          const sentryError = new BaseClient(12854).SentryError("Event processing pipeline threw an error, original event will not be sent. Details have been sent as a new event.\nReason: " + originalException);
           throw sentryError;
         }
-        tmp = BaseClient;
       });
     }
   },
@@ -848,31 +849,31 @@ let items = [
     key: "_flushOutcomes",
     value: function _flushOutcomes() {
       if (BaseClient(12825).DEBUG_BUILD) {
-        const logger = tmp(12797).logger;
+        const logger = BaseClient(12797).logger;
         logger.log("Flushing outcomes...");
       }
       const self = this;
       const _clearOutcomesResult = this._clearOutcomes();
       if (0 !== _clearOutcomesResult.length) {
-        const DEBUG_BUILD = tmp(12825).DEBUG_BUILD;
+        const DEBUG_BUILD = BaseClient(12825).DEBUG_BUILD;
         if (self._dsn) {
           if (DEBUG_BUILD) {
-            const logger4 = tmp(12797).logger;
+            const logger4 = BaseClient(12797).logger;
             logger4.log("Sending outcomes:", _clearOutcomesResult);
           }
-          let tmpResult = tmp(12855);
+          let tmpResult = BaseClient(12855);
           let tunnel = self._options.tunnel;
           if (tunnel) {
-            tmpResult = tmp(12844);
+            tmpResult = BaseClient(12844);
             tunnel = tmpResult.dsnToString(self._dsn);
           }
           self.sendEnvelope(tmpResult.createClientReportEnvelope(_clearOutcomesResult, tunnel));
         } else if (DEBUG_BUILD) {
-          const logger3 = tmp(12797).logger;
+          const logger3 = BaseClient(12797).logger;
           logger3.log("No dsn provided, will not send outcomes");
         }
-      } else if (tmp(12825).DEBUG_BUILD) {
-        const logger2 = tmp(12797).logger;
+      } else if (BaseClient(12825).DEBUG_BUILD) {
+        const logger2 = BaseClient(12797).logger;
         logger2.log("No outcomes to send");
       }
     }

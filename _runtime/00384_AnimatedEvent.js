@@ -147,15 +147,15 @@ let items = [
             if (typeof point === "number") {
               setValue.setValue(point);
             }
-          } else if (setValue instanceof tmp2(373)) {
+          } else if (setValue instanceof _modDef373) {
             if (typeof point === "object") {
               const x = setValue.x;
               const x2 = point.x;
-              if (x instanceof tmp2(356)) {
+              if (x instanceof _modDef356) {
                 if (typeof x2 === "number") {
                   x.setValue(x2);
                 }
-              } else if (x instanceof tmp2(373)) {
+              } else if (x instanceof _modDef373) {
                 if (typeof x2 === "object") {
                   traverse(x.x, x2.x);
                   traverse(x.y, x2.y);
@@ -172,7 +172,7 @@ let items = [
                 if (typeof y2 === "number") {
                   y.setValue(y2);
                 }
-              } else if (y instanceof tmp5(373)) {
+              } else if (y instanceof _modDef373) {
                 if (typeof y2 === "object") {
                   traverse(y.x, y2.x);
                   traverse(y.y, y2.y);
@@ -183,13 +183,11 @@ let items = [
                   continue;
                 }
               }
-              tmp5 = importDefault;
             }
           } else if (typeof setValue === "object") {
             for (const key10013 in arg0) {
               let point2 = arg0[key10013];
               let point3 = point[key10013];
-              let tmp9 = importDefault;
               if (point2 instanceof _modDef356) {
                 if (typeof point3 !== "number") {
                   continue;
@@ -199,7 +197,7 @@ let items = [
                 }
                 continue;
               } else {
-                if (point2 instanceof tmp9(373)) {
+                if (point2 instanceof _modDef373) {
                   if (typeof point3 !== "object") {
                     continue;
                   } else {

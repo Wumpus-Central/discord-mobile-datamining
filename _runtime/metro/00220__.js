@@ -1,10 +1,10 @@
 // === Module 220: ? ===
 
 // Module 220
+import _possibleConstructorReturnDefault from "_possibleConstructorReturn" /* 93 */;
 import EventDefault from "Event" /* 133 */;
 import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
-import _possibleConstructorReturn from "_possibleConstructorReturn" /* 93 */;
 import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
 
@@ -27,6 +27,7 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
+_possibleConstructorReturnDefault;
 class MessageEvent {
   constructor(arg0, arg1) {
     self = this;

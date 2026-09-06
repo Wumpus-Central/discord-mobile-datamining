@@ -1,6 +1,7 @@
 // === Module 12842: ? ===
 
 // Module 12842
+import stackParserFromStackParserOptions from "stackParserFromStackParserOptions" /* 12800 */;
 import _mod12803 from "module_12803" /* 12803 */;
 import _mod12804 from "module_12804" /* 12804 */;
 import memoBuilder from "memoBuilder" /* 12843 */;
@@ -80,7 +81,7 @@ function visit(arg0, __sentry_skip_normalization__) {
             if (obj.isVueViewModel(_events)) {
               return "[VueViewModel]";
             } else {
-              let tmp4Result = tmp4(tmp5[3]);
+              let tmp4Result = _mod12804;
               if (tmp4Result.isSyntheticEvent(_events)) {
                 return "[SyntheticEvent]";
               } else {
@@ -92,7 +93,7 @@ function visit(arg0, __sentry_skip_normalization__) {
                   }
                 }
                 if (typeof _events === "function") {
-                  tmp4Result = tmp4(tmp5[4]);
+                  tmp4Result = stackParserFromStackParserOptions;
                   const _HermesInternal4 = HermesInternal;
                   return "[Function: " + tmp4Result.getFunctionName(_events) + "]";
                 } else if (typeof _events === "symbol") {

@@ -2,6 +2,7 @@
 
 // Module 269 (notifyMutationObservers)
 import _modAll46 from "module_46" /* 46 */;
+import renderElement from "renderElement" /* 114 */;
 import _mod136 from "module_136" /* 136 */;
 import warnOnceDefault from "warnOnce" /* 165 */;
 import NativeMutationObserverCxxDefault from "NativeMutationObserverCxx" /* 271 */;
@@ -15,19 +16,18 @@ function notifyMutationObservers() {
       if (null == NativeMutationObserverCxxDefault) {
         warnNoNativeMutationObserver();
       } else {
-        const takeRecordsResult = tmp(tmp2[2]).takeRecords();
+        const takeRecordsResult = NativeMutationObserverCxxDefault.takeRecords();
         const _Map = Map;
         map = new Map();
         for (const item10013 of takeRecordsResult) {
-          let tmp4 = item10013;
           value = map.get(item10013.mutationObserverId);
           let arr = value;
           if (null == value) {
             let items = [];
             arr = items;
-            let result = map.set(tmp4.mutationObserverId, items);
+            let result = map.set(item10013.mutationObserverId, items);
           }
-          arr = arr.push(createMutationRecord(tmp4));
+          arr = arr.push(createMutationRecord(item10013));
           continue;
         }
         const obj = map[Symbol.iterator]();
@@ -49,11 +49,11 @@ function notifyMutationObservers() {
             obj.return();
           }
         }
+        const tmpResult = NativeMutationObserverCxxDefault;
       }
-      tmp = importDefault;
-      tmp2 = dependencyMap;
     })();
     _modAll46.endEvent();
+    const tmp4Result = _modAll46;
   } catch (tmp9) {
     tmp3(tmp[5]).endEvent();
     throw tmp9;
@@ -72,8 +72,8 @@ export const registerObserver = function registerObserver(observer, callback) {
   const result = map.set(closure_6, { observer, callback });
   return closure_6;
 };
-export const unregisterObserver = function unregisterObserver(arg0) {
-  let deleteResult = map.delete(arg0);
+export const unregisterObserver = function unregisterObserver(_mutationObserverId) {
+  let deleteResult = map.delete(_mutationObserverId);
   if (deleteResult) {
     deleteResult = 0 === map.size;
   }
@@ -94,35 +94,34 @@ export const observe = function observe(mutationObserverId) {
       const nativeNodeReference = obj.getNativeNodeReference(target);
       if (null != nativeNodeReference) {
         if (!c7) {
-          let tmpResult = tmp(271);
-          tmpResult.connect(notifyMutationObservers, tmp7(114).getPublicInstanceFromInternalInstanceHandle);
+          let tmpResult = NativeMutationObserverCxxDefault;
+          tmpResult.connect(notifyMutationObservers, renderElement.getPublicInstanceFromInternalInstanceHandle);
           c7 = true;
         }
-        tmpResult = tmp(271);
+        tmpResult = NativeMutationObserverCxxDefault;
         obj = { mutationObserverId, targetShadowNode: nativeNodeReference, subtree };
         tmpResult.observe(obj);
       }
-      tmp7 = require;
     } else {
       const _console = console;
       const _HermesInternal = HermesInternal;
       console.error("MutationObserverManager: could not start observing target because MutationObserver with ID " + mutationObserverId + " was not registered.");
     }
   } else {
-    tmp(165)("missing-native-mutation-observer", "Missing native implementation of MutationObserver");
+    warnOnceDefault("missing-native-mutation-observer", "Missing native implementation of MutationObserver");
   }
 };
 export const unobserveAll = function unobserveAll(_mutationObserverId) {
   if (null != NativeMutationObserverCxxDefault) {
     if (null != map.get(_mutationObserverId)) {
-      tmp(271).unobserveAll(_mutationObserverId);
-      const tmpResult = tmp(271);
+      NativeMutationObserverCxxDefault.unobserveAll(_mutationObserverId);
+      const tmpResult = NativeMutationObserverCxxDefault;
     } else {
       const _console = console;
       const _HermesInternal = HermesInternal;
       console.error("MutationObserverManager: could not disconnect MutationObserver with ID " + _mutationObserverId + " because it was not registered.");
     }
   } else {
-    tmp(165)("missing-native-mutation-observer", "Missing native implementation of MutationObserver");
+    warnOnceDefault("missing-native-mutation-observer", "Missing native implementation of MutationObserver");
   }
 };

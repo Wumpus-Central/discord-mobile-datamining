@@ -2,6 +2,7 @@
 
 // Module 1063 (lazyLoadFeedbackIntegration)
 import _mod682 from "module_682" /* 682 */;
+import _getClientIntegration from "_getClientIntegration" /* 998 */;
 
 require = arg1;
 const dependencyMap = arg6;
@@ -14,11 +15,11 @@ export const lazyLoadFeedbackIntegration = function lazyLoadFeedbackIntegration(
   let integrationByName;
   if (null !== client) {
     if (undefined !== client) {
-      integrationByName = client.getIntegrationByName(tmp(998).MOBILE_FEEDBACK_INTEGRATION_NAME);
+      integrationByName = client.getIntegrationByName(_getClientIntegration.MOBILE_FEEDBACK_INTEGRATION_NAME);
     }
   }
   if (!integrationByName) {
-    let tmpResult = tmp(682);
+    let tmpResult = _mod682;
     const client1 = tmpResult.getClient();
     integrationByName = null === client1;
   }
@@ -26,7 +27,7 @@ export const lazyLoadFeedbackIntegration = function lazyLoadFeedbackIntegration(
     integrationByName = undefined === obj3;
   }
   if (!integrationByName) {
-    tmpResult = tmp(998);
+    tmpResult = _getClientIntegration;
     obj3.addIntegration(tmpResult.feedbackIntegration());
   }
 };

@@ -13,7 +13,7 @@ let closure_10 = { text: "text", number: "numeric", phone: "tel", email: "email"
 let c11 = true;
 const styles = StyleSheet.create({ container: { flex: 1, flexDirection: "row", alignItems: "stretch" }, inputSearchIcon: { position: "absolute", opacity: 0.5, left: 4, top: 17 }, closeButton: { position: "absolute", opacity: 0.5, right: 8, top: 17 }, clearButton: { position: "absolute", right: 0, top: -7, bottom: 0, justifyContent: "center", padding: 8 }, clearIcon: { height: 16, width: 16, opacity: 0.5 }, cancelButton: { alignSelf: "center", top: -4 }, cancelText: { fontSize: 17, marginHorizontal: 12 }, searchbarContainer: { flex: 1 }, searchbar: { flex: 1, fontSize: 18, paddingHorizontal: 36, marginRight: 8, marginTop: 8, marginBottom: 8, borderBottomWidth: 1 } });
 
-export const HeaderSearchBar = noop.forwardRef(function HeaderSearchBarInternal(visible, ref) {
+export const HeaderSearchBar = noop.forwardRef(function HeaderSearchBarInternal(visible, arg1) {
   visible = visible.visible;
   ({ inputType, autoFocus } = visible);
   if (autoFocus === undefined) {
@@ -56,7 +56,7 @@ export const HeaderSearchBar = noop.forwardRef(function HeaderSearchBarInternal(
   }), 1)[0];
   first.useRef(visible);
   const ref2 = first.useRef(false);
-  ref = first.useRef(null);
+  const ref = first.useRef(null);
   const items = [visible, first1];
   const effect = first.useEffect(() => {
     if (visible !== ref.current) {
@@ -126,7 +126,7 @@ export const HeaderSearchBar = noop.forwardRef(function HeaderSearchBarInternal(
     return addListenerResult;
   }, items4);
   const items5 = [callback2, clearText];
-  const imperativeHandle = first.useImperativeHandle(ref, () => ({
+  const imperativeHandle = first.useImperativeHandle(arg1, () => ({
     focus() {
       const current = ref.current;
       if (current != null) {

@@ -29,13 +29,13 @@ export const DEFAULT_RETRY_AFTER = 60000;
 export const disabledUntil = function disabledUntil(all, arg1) {
   return all[arg1] || all.all || 0;
 };
-export const isRateLimited = function isRateLimited(all, arg1) {
+export const isRateLimited = function isRateLimited(all, result) {
   let timestamp = arg2;
   if (arg2 === undefined) {
     const _Date = Date;
     timestamp = Date.now();
   }
-  return (all[arg1] || all.all || 0) > timestamp;
+  return (all[result] || all.all || 0) > timestamp;
 };
 export { parseRetryAfterHeader };
 export const updateRateLimits = function updateRateLimits(arg0, headers) {
@@ -75,7 +75,6 @@ export const updateRateLimits = function updateRateLimits(arg0, headers) {
         let parts1 = str9.split(";");
         for (const item10065 of parts1) {
           let tmp23 = "metric_bucket" === item10065;
-          let tmp22 = item10065;
           if (tmp23) {
             tmp23 = str10;
           }
@@ -84,7 +83,7 @@ export const updateRateLimits = function updateRateLimits(arg0, headers) {
             tmp23 = !parts2.includes("custom");
           }
           if (!tmp23) {
-            obj[tmp22] = timestamp + result;
+            obj[item10065] = timestamp + result;
           }
           continue;
         }

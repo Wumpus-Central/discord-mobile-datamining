@@ -1,9 +1,9 @@
 // === Module 4302: ? ===
 
 // Module 4302
+import _possibleConstructorReturnDefault from "_possibleConstructorReturn" /* 93 */;
 import _createClass from "_createClass" /* 42 */;
 import _classCallCheck from "_classCallCheck" /* 41 */;
-import _possibleConstructorReturn from "_possibleConstructorReturn" /* 93 */;
 import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
 import _wrapNativeSuper from "_wrapNativeSuper" /* 158 */;
@@ -27,6 +27,7 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
+_possibleConstructorReturnDefault;
 get_ActivityIndicator = fn(17);
 ({ NativeModules: c3, Platform } = get_ActivityIndicator);
 class ModuleNotFoundError {

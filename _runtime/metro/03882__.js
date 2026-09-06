@@ -224,7 +224,7 @@ export default function format(arg0, arg1, locale) {
                     }
                     return str;
                   } else if (closure_5.default[str6]) {
-                    let tmp9 = null != closure_2 && tmp7.useAdditionalWeekYearTokens;
+                    let tmp9 = null != locale && locale.useAdditionalWeekYearTokens;
                     if (!tmp9) {
                       tmp9 = !throwProtectedError.isProtectedWeekYearToken(str);
                     }
@@ -232,7 +232,7 @@ export default function format(arg0, arg1, locale) {
                       const _String = String;
                       throwProtectedError.throwProtectedError(str, closure_1, String(closure_0));
                     }
-                    let tmp18 = null != tmp7 && tmp7.useAdditionalDayOfYearTokens;
+                    let tmp18 = null != locale && locale.useAdditionalDayOfYearTokens;
                     if (!tmp18) {
                       tmp18 = !throwProtectedError.isProtectedDayOfYearToken(str);
                     }

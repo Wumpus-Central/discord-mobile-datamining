@@ -35,7 +35,6 @@ export default {
     let length = u0089PNGrnu001An.length;
     if (length + c4 + c5 <= byteLength.byteLength) {
       while (true) {
-        let tmp = importDefault;
         if (_modDef5216.USE_PNG_FILE) {
           let obj1 = _mod5213;
           if ("IHDR" === obj1.getStringFromDataView(byteLength, length + c7, c5)) {
@@ -48,12 +47,11 @@ export default {
             }
           }
         }
-        if (tmp(5216).USE_XMP) {
-          let tmp7 = require;
+        if (_modDef5216.USE_XMP) {
           let obj3 = _mod5213;
           let tmp11 = obj3.getStringFromDataView(byteLength, length + c7, c5) === iTXt;
           if (tmp11) {
-            let tmp7Result = tmp7(5213);
+            let tmp7Result = _mod5213;
             tmp11 = tmp7Result.getStringFromDataView(byteLength, length + c8, XMLcomadobexmp0.length) === XMLcomadobexmp0;
           }
           if (tmp11) {
@@ -83,17 +81,13 @@ export default {
             }
             if (undefined !== tmp46) {
               obj.hasAppMarkers = true;
-              obj = { dataOffset: tmp46, length: null };
-              obj.length = byteLength.getUint32(length + c6) - (tmp46 - (length + c8));
+              obj = { dataOffset: tmp46, length: byteLength.getUint32(length + c6) - (tmp46 - (length + c8)) };
               let items = [obj];
               obj.xmpChunks = items;
             }
           }
         }
-        let tmp14 = require;
         let obj5 = _mod5213;
-        let tmp15 = c7;
-        let tmp16 = c5;
         let stringFromDataView = obj5.getStringFromDataView(byteLength, length + c7, c5);
         let tmp19 = stringFromDataView === tEXt;
         if (!tmp19) {
@@ -105,31 +99,28 @@ export default {
         }
         if (tmp19) {
           obj.hasAppMarkers = true;
-          let tmp14Result = tmp14(5213);
-          let stringFromDataView1 = tmp14Result.getStringFromDataView(byteLength, length + tmp15, tmp16);
+          let tmp14Result = _mod5213;
+          let stringFromDataView1 = tmp14Result.getStringFromDataView(byteLength, length + c7, c5);
           if (!obj.pngTextChunks) {
             obj.pngTextChunks = [];
           }
           let pngTextChunks = obj.pngTextChunks;
-          obj = { length: null, type: null, offset: null };
-          obj.length = byteLength.getUint32(length + c6);
-          obj.type = stringFromDataView1;
-          obj.offset = length + c8;
+          obj = { length: byteLength.getUint32(length + c6), type: stringFromDataView1, offset: length + c8 };
           let arr = pngTextChunks.push(obj);
         } else {
-          tmp14Result = tmp14(5213);
-          if (tmp14Result.getStringFromDataView(byteLength, length + tmp15, tmp16) === eXIf) {
+          tmp14Result = _mod5213;
+          if (tmp14Result.getStringFromDataView(byteLength, length + c7, c5) === eXIf) {
             obj.hasAppMarkers = true;
             obj.tiffHeaderOffset = length + c8;
           } else {
-            if (tmp(5216).USE_ICC) {
+            if (_modDef5216.USE_ICC) {
               if (flag2) {
-                let tmp14Result1 = tmp14(5213);
-                if (tmp14Result1.getStringFromDataView(byteLength, length + tmp15, tmp16) === iCCP) {
+                let tmp14Result1 = _mod5213;
+                if (tmp14Result1.getStringFromDataView(byteLength, length + c7, c5) === iCCP) {
                   obj.hasAppMarkers = true;
                   let sum4 = length + c8;
                   let uint32 = byteLength.getUint32(length + c6);
-                  let tmp14Result2 = tmp14(5213);
+                  let tmp14Result2 = _mod5213;
                   let nullTerminatedStringFromDataView = tmp14Result2.getNullTerminatedStringFromDataView(byteLength, sum4);
                   let sum5 = sum4 + (nullTerminatedStringFromDataView.length + 1);
                   let uint8 = byteLength.getUint8(sum5);
@@ -143,10 +134,9 @@ export default {
                 }
               }
             }
-            let items1 = [pHYs, ];
-            items1[1] = tIME;
-            let tmp14Result3 = tmp14(5213);
-            if (items1.includes(tmp14Result3.getStringFromDataView(byteLength, length + tmp15, tmp16))) {
+            let items1 = [pHYs, tIME];
+            let tmp14Result3 = _mod5213;
+            if (items1.includes(tmp14Result3.getStringFromDataView(byteLength, length + c7, c5))) {
               obj.hasAppMarkers = true;
               if (!obj.pngChunkOffsets) {
                 obj.pngChunkOffsets = [];

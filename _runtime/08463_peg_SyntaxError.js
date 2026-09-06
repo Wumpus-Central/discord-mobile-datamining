@@ -22,10 +22,10 @@ class peg$SyntaxError {
             const str7 = text.text.replace(/\\/g, "\\\\").replace(/"/g, "\\\"").replace(/\0/g, "\\0").replace(/\t/g, "\\t").replace(/\n/g, "\\n").replace(/\r/g, "\\r");
             return "\"" + text.text.replace(/\\/g, "\\\\").replace(/"/g, "\\\"").replace(/\0/g, "\\0").replace(/\t/g, "\\t").replace(/\n/g, "\\n").replace(/\r/g, "\\r").replace(/[\x00-\x0F]/g, (str) => {
               str = str.charCodeAt(0);
-              return "\\x0" + str.charCodeAt(0).toString(16).toUpperCase();
+              return "\\x0" + str.toString(16).toUpperCase();
             }).replace(/[\x10-\x1F\x7F-\x9F]/g, (str) => {
               str = str.charCodeAt(0);
-              return "\\x" + str.charCodeAt(0).toString(16).toUpperCase();
+              return "\\x" + str.toString(16).toUpperCase();
             }) + "\"";
           },
       class(parts) {
@@ -49,12 +49,12 @@ class peg$SyntaxError {
                   let str22 = str21.replace(/\r/g, "\\r");
                   let str23 = str22.replace(/[\x00-\x0F]/g, (str) => {
                     str = str.charCodeAt(0);
-                    return "\\x0" + str.charCodeAt(0).toString(16).toUpperCase();
+                    return "\\x0" + str.toString(16).toUpperCase();
                   });
                   let str24 = parts.parts[num][1];
                   let text = `${str23.replace(/[\x10-\x1F\x7F-\x9F]/g, (str) => {
                     str = str.charCodeAt(0);
-                    return "\\x" + str.charCodeAt(0).toString(16).toUpperCase();
+                    return "\\x" + str.toString(16).toUpperCase();
                   })}-`;
                   let str25 = str24.replace(/\\/g, "\\\\");
                   let str26 = str25.replace(/\]/g, "\\]");
@@ -66,14 +66,14 @@ class peg$SyntaxError {
                   let str32 = str31.replace(/\r/g, "\\r");
                   let str33 = str32.replace(/[\x00-\x0F]/g, (str) => {
                     str = str.charCodeAt(0);
-                    return "\\x0" + str.charCodeAt(0).toString(16).toUpperCase();
+                    return "\\x0" + str.toString(16).toUpperCase();
                   });
                   let text1 = `${str23.replace(/[\x10-\x1F\x7F-\x9F]/g, (str) => {
                     str = str.charCodeAt(0);
-                    return "\\x" + str.charCodeAt(0).toString(16).toUpperCase();
+                    return "\\x" + str.toString(16).toUpperCase();
                   })}-${str33.replace(/[\x10-\x1F\x7F-\x9F]/g, (str) => {
                     str = str.charCodeAt(0);
-                    return "\\x" + str.charCodeAt(0).toString(16).toUpperCase();
+                    return "\\x" + str.toString(16).toUpperCase();
                   })}`;
                 } else {
                   let str5 = str4.replace(/\\/g, "\\\\");
@@ -86,11 +86,11 @@ class peg$SyntaxError {
                   let str12 = str11.replace(/\r/g, "\\r");
                   let str13 = str12.replace(/[\x00-\x0F]/g, (str) => {
                     str = str.charCodeAt(0);
-                    return "\\x0" + str.charCodeAt(0).toString(16).toUpperCase();
+                    return "\\x0" + str.toString(16).toUpperCase();
                   });
                   text1 = str13.replace(/[\x10-\x1F\x7F-\x9F]/g, (str) => {
                     str = str.charCodeAt(0);
-                    return "\\x" + str.charCodeAt(0).toString(16).toUpperCase();
+                    return "\\x" + str.toString(16).toUpperCase();
                   });
                 }
                 str2 = str2 + text1;
@@ -177,12 +177,12 @@ class peg$SyntaxError {
       str16 = str14.replace(/\r/g, "\\r");
       str17 = str16.replace(/[\x00-\x0F]/g, (str) => {
         str = str.charCodeAt(0);
-        return "\\x0" + str.charCodeAt(0).toString(16).toUpperCase();
+        return "\\x0" + str.toString(16).toUpperCase();
       });
       str18 = "\"";
       str4 = `${"\"" + str17.replace(/[\x10-\x1F\x7F-\x9F]/g, (str) => {
         str = str.charCodeAt(0);
-        return "\\x" + str.charCodeAt(0).toString(16).toUpperCase();
+        return "\\x" + str.toString(16).toUpperCase();
       })}"`;
     }
     return text + " but " + str4 + " found.";
@@ -208,8 +208,8 @@ obj = {
       if (tmp2 !== obj) {
         const items = [];
         let tmp7 = peg$parsecommaWsp();
-        let tmp8 = tmp3;
-        if (tmp7 !== tmp3) {
+        let tmp8 = obj;
+        if (tmp7 !== obj) {
           do {
             let arr = items.push(tmp7);
             tmp7 = peg$parsecommaWsp();
@@ -235,8 +235,8 @@ obj = {
         tmp5 = tmp8;
       } else {
         closure_48 = tmp;
-        tmp4 = tmp3;
-        tmp5 = tmp3;
+        tmp4 = obj;
+        tmp5 = obj;
       }
       if (tmp4 === tmp5) {
         tmp4 = peg$parsetransform();
@@ -303,7 +303,6 @@ obj = {
           do {
             let arr1 = items.push(charAtResult);
             let str3 = str;
-            let tmp26 = re46;
             if (re46.test(str.charAt(closure_48))) {
               charAtResult1 = str3.charAt(closure_48);
               closure_48 = closure_48 + 1;
@@ -325,7 +324,7 @@ obj = {
             }
             tmp24 = obj;
             charAtResult = charAtResult1;
-            obj = tmp26;
+            obj = re46;
             str = str3;
           } while (charAtResult1 !== obj);
         }
@@ -372,7 +371,6 @@ obj = {
               do {
                 let arr5 = items1.push(charAtResult2);
                 let str4 = str;
-                let tmp56 = re46;
                 if (re46.test(str.charAt(closure_48))) {
                   charAtResult3 = str4.charAt(closure_48);
                   closure_48 = closure_48 + 1;
@@ -394,7 +392,7 @@ obj = {
                 }
                 tmp54 = obj;
                 charAtResult2 = charAtResult3;
-                obj2 = tmp56;
+                obj2 = re46;
                 str = str4;
               } while (charAtResult3 !== obj);
             }
@@ -402,19 +400,19 @@ obj = {
               const tmp68 = peg$parsenumber();
               if (tmp68 !== tmp54) {
                 if (peg$parsecommaWsp() !== tmp54) {
-                  let tmp67Result = tmp67();
+                  let tmp67Result = peg$parsenumber();
                   if (tmp67Result !== tmp54) {
-                    if (tmp69() !== tmp54) {
-                      tmp67Result = tmp67();
+                    if (peg$parsecommaWsp() !== tmp54) {
+                      tmp67Result = peg$parsenumber();
                       if (tmp67Result !== tmp54) {
-                        if (tmp69() !== tmp54) {
-                          const tmp67Result1 = tmp67();
+                        if (peg$parsecommaWsp() !== tmp54) {
+                          const tmp67Result1 = peg$parsenumber();
                           if (tmp67Result1 !== tmp54) {
-                            if (tmp69() !== tmp54) {
-                              const tmp67Result2 = tmp67();
+                            if (peg$parsecommaWsp() !== tmp54) {
+                              const tmp67Result2 = peg$parsenumber();
                               if (tmp67Result2 !== tmp54) {
-                                if (tmp69() !== tmp54) {
-                                  const tmp67Result3 = tmp67();
+                                if (peg$parsecommaWsp() !== tmp54) {
+                                  const tmp67Result3 = peg$parsenumber();
                                   if (tmp67Result3 !== tmp54) {
                                     if (obj2.test(str.charAt(closure_48))) {
                                       let charAtResult4 = str.charAt(closure_48);
@@ -651,7 +649,6 @@ obj = {
                     do {
                       let arr13 = items4.push(charAtResult6);
                       let str21 = str;
-                      let tmp551 = re46;
                       if (re46.test(str.charAt(closure_48))) {
                         charAtResult7 = str21.charAt(closure_48);
                         closure_48 = closure_48 + 1;
@@ -673,7 +670,7 @@ obj = {
                       }
                       tmp549 = obj;
                       charAtResult6 = charAtResult7;
-                      obj14 = tmp551;
+                      obj14 = re46;
                       items7 = str21;
                     } while (charAtResult7 !== obj);
                   }
@@ -720,7 +717,6 @@ obj = {
                         do {
                           let arr17 = items5.push(charAtResult8);
                           let str22 = str;
-                          let tmp578 = re46;
                           if (re46.test(str.charAt(closure_48))) {
                             charAtResult9 = str22.charAt(closure_48);
                             closure_48 = closure_48 + 1;
@@ -742,7 +738,7 @@ obj = {
                           }
                           tmp430 = obj;
                           charAtResult8 = charAtResult9;
-                          obj14 = tmp578;
+                          obj14 = re46;
                           items7 = str22;
                         } while (charAtResult9 !== obj);
                       }
@@ -890,7 +886,6 @@ obj = {
                   do {
                     let arr25 = items8.push(charAtResult12);
                     let str18 = str;
-                    let tmp455 = re46;
                     if (re46.test(str.charAt(closure_48))) {
                       charAtResult13 = str18.charAt(closure_48);
                       closure_48 = closure_48 + 1;
@@ -912,7 +907,7 @@ obj = {
                     }
                     tmp453 = obj;
                     charAtResult12 = charAtResult13;
-                    obj12 = tmp455;
+                    obj12 = re46;
                     str14 = str18;
                   } while (charAtResult13 !== obj);
                 }
@@ -959,7 +954,6 @@ obj = {
                       do {
                         let arr29 = items9.push(charAtResult14);
                         let str19 = str;
-                        let tmp482 = re46;
                         if (re46.test(str.charAt(closure_48))) {
                           charAtResult15 = str19.charAt(closure_48);
                           closure_48 = closure_48 + 1;
@@ -981,7 +975,7 @@ obj = {
                         }
                         tmp317 = obj;
                         charAtResult14 = charAtResult15;
-                        obj12 = tmp482;
+                        obj12 = re46;
                         str14 = str19;
                       } while (charAtResult15 !== obj);
                     }
@@ -1128,7 +1122,6 @@ obj = {
                 do {
                   let arr37 = items12.push(charAtResult18);
                   let str15 = str;
-                  let tmp343 = re46;
                   if (re46.test(str.charAt(closure_48))) {
                     charAtResult19 = str15.charAt(closure_48);
                     closure_48 = closure_48 + 1;
@@ -1150,7 +1143,7 @@ obj = {
                   }
                   tmp341 = obj;
                   charAtResult18 = charAtResult19;
-                  obj10 = tmp343;
+                  obj10 = re46;
                   str10 = str15;
                 } while (charAtResult19 !== obj);
               }
@@ -1198,7 +1191,6 @@ obj = {
                     do {
                       let arr41 = items13.push(charAtResult20);
                       let str16 = str;
-                      let tmp370 = re46;
                       if (re46.test(str.charAt(closure_48))) {
                         charAtResult21 = str16.charAt(closure_48);
                         closure_48 = closure_48 + 1;
@@ -1220,7 +1212,7 @@ obj = {
                       }
                       tmp368 = obj;
                       charAtResult20 = charAtResult21;
-                      obj10 = tmp370;
+                      obj10 = re46;
                       str10 = str16;
                     } while (charAtResult21 !== obj);
                   }
@@ -1228,10 +1220,10 @@ obj = {
                     charAtResult21 = peg$parsenumber();
                     if (charAtResult21 !== tmp368) {
                       if (peg$parsecommaWsp() !== tmp368) {
-                        let tmp380Result = tmp380();
+                        let tmp380Result = peg$parsenumber();
                         if (tmp380Result !== tmp368) {
-                          if (tmp382() !== tmp368) {
-                            tmp380Result = tmp380();
+                          if (peg$parsecommaWsp() !== tmp368) {
+                            tmp380Result = peg$parsenumber();
                             if (tmp380Result !== tmp368) {
                               if (typeof peg$c27 === "function") {
                                 const items14 = [tmp380Result, tmp380Result];
@@ -1341,7 +1333,6 @@ obj = {
                         }
                       }
                       items16 = tmp368;
-                      tmp382 = peg$parsecommaWsp;
                     } else {
                       closure_48 = tmp318;
                     }
@@ -1402,7 +1393,6 @@ obj = {
               do {
                 let arr49 = items18.push(charAtResult24);
                 let str11 = str;
-                let tmp239 = re46;
                 if (re46.test(str.charAt(closure_48))) {
                   charAtResult25 = str11.charAt(closure_48);
                   closure_48 = closure_48 + 1;
@@ -1424,7 +1414,7 @@ obj = {
                 }
                 tmp237 = obj;
                 charAtResult24 = charAtResult25;
-                obj8 = tmp239;
+                obj8 = re46;
                 str6 = str11;
               } while (charAtResult25 !== obj);
             }
@@ -1472,7 +1462,6 @@ obj = {
                   do {
                     let arr53 = items19.push(charAtResult26);
                     let str12 = str;
-                    let tmp267 = re46;
                     if (re46.test(str.charAt(closure_48))) {
                       charAtResult27 = str12.charAt(closure_48);
                       closure_48 = closure_48 + 1;
@@ -1494,7 +1483,7 @@ obj = {
                     }
                     tmp265 = obj;
                     charAtResult26 = charAtResult27;
-                    charAtResult28 = tmp267;
+                    charAtResult28 = re46;
                     str6 = str12;
                   } while (charAtResult27 !== obj);
                 }
@@ -1502,7 +1491,7 @@ obj = {
                   const tmp279 = peg$parsenumber();
                   if (tmp279 !== tmp265) {
                     if (peg$parsecommaWsp() !== tmp265) {
-                      const tmp278Result = tmp278();
+                      const tmp278Result = peg$parsenumber();
                       if (tmp278Result !== tmp265) {
                         let tmp283 = tmp278Result;
                         if (typeof peg$c26 === "function") {
@@ -1606,7 +1595,6 @@ obj = {
                   } else {
                     closure_48 = tmp214;
                   }
-                  tmp278 = peg$parsenumber;
                 } else {
                   closure_48 = tmp214;
                 }
@@ -1663,7 +1651,6 @@ obj = {
             do {
               let arr60 = items22.push(charAtResult30);
               let str7 = str;
-              let tmp132 = re46;
               if (re46.test(str.charAt(closure_48))) {
                 charAtResult31 = str7.charAt(closure_48);
                 closure_48 = closure_48 + 1;
@@ -1685,7 +1672,7 @@ obj = {
               }
               tmp130 = obj;
               charAtResult30 = charAtResult31;
-              obj5 = tmp132;
+              obj5 = re46;
               str2 = str7;
             } while (charAtResult31 !== obj);
           }
@@ -1732,7 +1719,6 @@ obj = {
                 do {
                   let arr64 = items23.push(charAtResult32);
                   let str8 = str;
-                  let tmp162 = re46;
                   if (re46.test(str.charAt(closure_48))) {
                     charAtResult33 = str8.charAt(closure_48);
                     closure_48 = closure_48 + 1;
@@ -1754,7 +1740,7 @@ obj = {
                   }
                   tmp160 = obj;
                   charAtResult32 = charAtResult33;
-                  obj6 = tmp162;
+                  obj6 = re46;
                   str2 = str8;
                 } while (charAtResult33 !== obj);
               }
@@ -1762,7 +1748,7 @@ obj = {
                 const tmp174 = peg$parsenumber();
                 if (tmp174 !== tmp160) {
                   if (peg$parsecommaWsp() !== tmp160) {
-                    const tmp173Result = tmp173();
+                    const tmp173Result = peg$parsenumber();
                     if (tmp173Result !== tmp160) {
                       let num11 = tmp173Result;
                       if (typeof peg$c26 === "function") {
@@ -1864,7 +1850,6 @@ obj = {
                 } else {
                   closure_48 = tmp107;
                 }
-                tmp173 = peg$parsenumber;
               } else {
                 closure_48 = tmp107;
               }
@@ -1884,16 +1869,16 @@ obj = {
         let charAtResult = str.charAt(closure_48);
         closure_48 = closure_48 + 1;
       } else {
-        charAtResult = obj;
+        charAtResult = re42;
         if (0 === diff) {
-          charAtResult = tmp2;
+          charAtResult = re42;
           if (closure_48 >= closure_50) {
             if (tmp6 > closure_50) {
               closure_50 = tmp6;
               closure_51 = [];
             }
             closure_51.push(tmp5);
-            charAtResult = tmp2;
+            charAtResult = re42;
           }
         }
       }
@@ -1903,30 +1888,30 @@ obj = {
       if (charAtResult !== re42) {
         diff = diff + 1;
         let tmp15 = peg$parsedigitSequence();
-        if (tmp15 === tmp11) {
+        if (tmp15 === re42) {
           tmp15 = null;
         }
-        if (tmp15 !== tmp11) {
+        if (tmp15 !== re42) {
           if (46 === str.charCodeAt(closure_48)) {
             let tmp19 = c36;
             closure_48 = closure_48 + 1;
           } else {
-            tmp19 = tmp11;
+            tmp19 = re42;
             if (0 === diff) {
-              tmp19 = tmp11;
+              tmp19 = re42;
               if (closure_48 >= closure_50) {
                 if (tmp21 > closure_50) {
                   closure_50 = tmp21;
                   closure_51 = [];
                 }
                 closure_51.push(tmp20);
-                tmp19 = tmp11;
+                tmp19 = re42;
               }
             }
           }
-          if (tmp19 !== tmp11) {
-            let tmp14Result = tmp14();
-            if (tmp14Result !== tmp11) {
+          if (tmp19 !== re42) {
+            let tmp14Result = peg$parsedigitSequence();
+            if (tmp14Result !== re42) {
               if (typeof peg$c36 === "function") {
                 let joined = null;
                 if (tmp15) {
@@ -1940,14 +1925,14 @@ obj = {
             }
           }
           closure_48 = tmp12;
-          joined1 = tmp11;
+          joined1 = re42;
         } else {
           closure_48 = tmp12;
-          joined1 = tmp11;
+          joined1 = re42;
         }
-        if (joined1 !== tmp11) {
+        if (joined1 !== re42) {
           diff = diff - 1;
-          if (joined1 === tmp11) {
+          if (joined1 === re42) {
             if (0 === diff) {
               if (closure_48 >= closure_50) {
                 if (tmp43 > closure_50) {
@@ -1958,40 +1943,40 @@ obj = {
               }
             }
           }
-          if (joined1 !== tmp11) {
+          if (joined1 !== re42) {
             let tmp47 = peg$parseexponent();
-            if (tmp47 === tmp11) {
+            if (tmp47 === re42) {
               tmp47 = null;
             }
-            if (tmp47 !== tmp11) {
+            if (tmp47 !== re42) {
               items1 = [joined1, tmp47];
               let obj4 = items1;
             } else {
               closure_48 = tmp12;
-              obj4 = tmp11;
+              obj4 = re42;
             }
           } else {
             closure_48 = tmp12;
-            obj4 = tmp11;
+            obj4 = re42;
           }
           let joined2 = obj4;
-          if (obj4 !== tmp11) {
+          if (obj4 !== re42) {
             if (typeof peg$c31 === "function") {
               joined2 = obj4.join("");
             } else {
               throw new TypeError("Trying to call a non-function");
             }
           }
-          if (joined2 === tmp11) {
-            tmp14Result = tmp14();
-            if (tmp14Result !== tmp11) {
+          if (joined2 === re42) {
+            tmp14Result = peg$parsedigitSequence();
+            if (tmp14Result !== re42) {
               const tmp53 = peg$parseexponent();
-              if (tmp53 !== tmp11) {
+              if (tmp53 !== re42) {
                 const items2 = [tmp14Result, tmp53];
                 let obj5 = items2;
               }
               let joined3 = obj5;
-              if (obj5 !== tmp11) {
+              if (obj5 !== re42) {
                 if (typeof peg$c32 === "function") {
                   joined3 = obj5.join("");
                 } else {
@@ -2000,38 +1985,38 @@ obj = {
               }
               joined2 = joined3;
             }
-            obj5 = tmp11;
+            obj5 = re42;
           }
-          if (joined2 !== tmp11) {
+          if (joined2 !== re42) {
             const items3 = [charAtResult, joined2];
             let obj2 = items3;
           } else {
             closure_48 = tmp;
-            obj2 = tmp11;
+            obj2 = re42;
           }
         } else {
-          const tmp14Result1 = tmp14();
-          if (tmp14Result1 === tmp11) {
+          const tmp14Result1 = peg$parsedigitSequence();
+          if (tmp14Result1 === re42) {
             closure_48 = tmp73;
           }
           if (46 === str.charCodeAt(closure_48)) {
             let tmp30 = c36;
             closure_48 = closure_48 + 1;
           } else {
-            tmp30 = tmp11;
+            tmp30 = re42;
             if (0 === diff) {
-              tmp30 = tmp11;
+              tmp30 = re42;
               if (closure_48 >= closure_50) {
                 if (tmp32 > closure_50) {
                   closure_50 = tmp32;
                   closure_51 = [];
                 }
                 closure_51.push(tmp31);
-                tmp30 = tmp11;
+                tmp30 = re42;
               }
             }
           }
-          if (tmp30 !== tmp11) {
+          if (tmp30 !== re42) {
             if (typeof peg$c32 === "function") {
               let joined4 = tmp14Result1.join("");
             } else {
@@ -2039,12 +2024,12 @@ obj = {
             }
           } else {
             closure_48 = tmp73;
-            joined4 = tmp11;
+            joined4 = re42;
           }
         }
       } else {
         closure_48 = tmp;
-        obj2 = tmp11;
+        obj2 = re42;
       }
       let parsed = obj2;
       if (obj2 !== re42) {
@@ -2056,49 +2041,49 @@ obj = {
         }
       }
       if (parsed === re42) {
-        if (obj.test(str.charAt(closure_48))) {
+        if (re42.test(str.charAt(closure_48))) {
           let charAtResult1 = str.charAt(closure_48);
           closure_48 = closure_48 + 1;
         } else {
-          charAtResult1 = tmp11;
+          charAtResult1 = re42;
           if (0 === diff) {
-            charAtResult1 = tmp11;
+            charAtResult1 = re42;
             if (closure_48 >= closure_50) {
               if (tmp62 > closure_50) {
                 closure_50 = tmp62;
                 closure_51 = [];
               }
               closure_51.push(tmp61);
-              charAtResult1 = tmp11;
+              charAtResult1 = re42;
             }
           }
         }
-        if (charAtResult1 === tmp11) {
+        if (charAtResult1 === re42) {
           charAtResult1 = null;
         }
-        if (charAtResult1 !== tmp11) {
+        if (charAtResult1 !== re42) {
           const obj7 = peg$parsedigitSequence();
           let joined5 = obj7;
-          if (obj7 !== tmp11) {
+          if (obj7 !== re42) {
             if (typeof peg$c30 === "function") {
               joined5 = obj7.join("");
             } else {
               throw new TypeError("Trying to call a non-function");
             }
           }
-          if (joined5 !== tmp11) {
+          if (joined5 !== re42) {
             const items4 = [charAtResult1, joined5];
             let obj6 = items4;
           } else {
             closure_48 = tmp74;
-            obj6 = tmp11;
+            obj6 = re42;
           }
         } else {
           closure_48 = tmp74;
-          obj6 = tmp11;
+          obj6 = re42;
         }
         let parsed1 = obj6;
-        if (obj6 !== tmp11) {
+        if (obj6 !== re42) {
           if (typeof peg$c25 === "function") {
             const _parseInt = parseInt;
             parsed1 = parseInt(obj6.join(""));
@@ -2134,22 +2119,20 @@ obj = {
       obj = str;
       let tmp14 = obj;
       let tmp15 = obj;
-      let tmp16 = tmp2;
+      let tmp16 = peg$parsewsp;
       let tmp17 = obj;
       if (charAtResult !== obj) {
         const items = [];
         obj = str;
         tmp14 = tmp12;
         tmp15 = items;
-        tmp16 = tmp2;
+        tmp16 = peg$parsewsp;
         tmp17 = tmp12;
         if (tmp13) {
           do {
             let arr = items.push(charAtResult);
-            let str2 = str;
-            let tmp19 = peg$parsewsp;
             if (re46.test(str.charAt(closure_48))) {
-              charAtResult1 = str2.charAt(closure_48);
+              charAtResult1 = str.charAt(closure_48);
               closure_48 = closure_48 + 1;
             } else {
               let tmp22 = obj;
@@ -2169,9 +2152,9 @@ obj = {
             }
             tmp14 = obj;
             charAtResult = charAtResult1;
-            obj = str2;
+            obj = str;
             tmp15 = items;
-            tmp16 = tmp19;
+            tmp16 = peg$parsewsp;
             tmp17 = obj;
           } while (charAtResult1 !== obj);
         }
@@ -2206,10 +2189,8 @@ obj = {
           if (tmp16Result !== tmp17) {
             do {
               let arr3 = items1.push(tmp16Result);
-              let str3 = str;
-              let tmp48 = peg$parsewsp;
               if (re46.test(str.charAt(closure_48))) {
-                charAtResult2 = str3.charAt(closure_48);
+                charAtResult2 = str.charAt(closure_48);
                 closure_48 = closure_48 + 1;
               } else {
                 let tmp51 = obj;
@@ -2229,8 +2210,8 @@ obj = {
               }
               tmp14 = obj;
               tmp16Result = charAtResult2;
-              tmp44 = str3;
-              tmp45 = tmp48;
+              tmp44 = str;
+              tmp45 = peg$parsewsp;
               tmp46 = obj;
             } while (charAtResult2 !== obj);
           }
@@ -2290,9 +2271,8 @@ obj = {
           if (tmp33Result !== tmp34) {
             do {
               let arr6 = items3.push(tmp33Result);
-              let str4 = str;
               if (re46.test(str.charAt(closure_48))) {
-                charAtResult3 = str4.charAt(closure_48);
+                charAtResult3 = str.charAt(closure_48);
                 closure_48 = closure_48 + 1;
               } else {
                 let tmp72 = obj;
@@ -2335,14 +2315,14 @@ obj = {
       } else {
         charAtResult = obj;
         if (0 === diff) {
-          charAtResult = tmp2;
+          charAtResult = obj;
           if (closure_48 >= closure_50) {
             if (tmp6 > closure_50) {
               closure_50 = tmp6;
               closure_51 = [];
             }
             closure_51.push(tmp5);
-            charAtResult = tmp2;
+            charAtResult = obj;
           }
         }
       }
@@ -2351,34 +2331,34 @@ obj = {
           let charAtResult1 = str.charAt(closure_48);
           closure_48 = closure_48 + 1;
         } else {
-          charAtResult1 = tmp11;
+          charAtResult1 = obj;
           if (0 === diff) {
-            charAtResult1 = tmp11;
+            charAtResult1 = obj;
             if (closure_48 >= closure_50) {
               if (tmp18 > closure_50) {
                 closure_50 = tmp18;
                 closure_51 = [];
               }
               closure_51.push(tmp17);
-              charAtResult1 = tmp11;
+              charAtResult1 = obj;
             }
           }
         }
-        if (charAtResult1 === tmp11) {
+        if (charAtResult1 === obj) {
           charAtResult1 = null;
         }
-        if (charAtResult1 !== tmp11) {
+        if (charAtResult1 !== obj) {
           const tmp24 = peg$parsedigitSequence();
-          if (tmp24 !== tmp11) {
+          if (tmp24 !== obj) {
             const items = [charAtResult, charAtResult1, tmp24];
             let tmp12 = items;
           }
         }
         closure_48 = tmp;
-        tmp12 = tmp11;
+        tmp12 = obj;
       } else {
         closure_48 = tmp;
-        tmp12 = tmp11;
+        tmp12 = obj;
       }
       let joined = tmp12;
       if (tmp12 !== obj) {
@@ -2401,14 +2381,14 @@ obj = {
       } else {
         charAtResult = obj;
         if (0 === diff) {
-          charAtResult = tmp;
+          charAtResult = obj;
           if (closure_48 >= closure_50) {
             if (tmp5 > closure_50) {
               closure_50 = tmp5;
               closure_51 = [];
             }
             closure_51.push(tmp4);
-            charAtResult = tmp;
+            charAtResult = obj;
           }
         }
       }
@@ -2419,23 +2399,21 @@ obj = {
         if (tmp11) {
           do {
             let arr = items.push(charAtResult);
-            let str2 = str;
             if (re44.test(str.charAt(closure_48))) {
-              charAtResult1 = str2.charAt(closure_48);
+              charAtResult1 = str.charAt(closure_48);
               closure_48 = closure_48 + 1;
             } else {
-              let tmp15 = obj;
               charAtResult1 = obj;
               if (0 === diff) {
                 let tmp19 = closure_48;
-                charAtResult1 = tmp15;
+                charAtResult1 = obj;
                 if (closure_48 >= closure_50) {
                   if (tmp19 > closure_50) {
                     closure_50 = tmp19;
                     closure_51 = [];
                   }
                   let arr1 = closure_51.push(tmp18);
-                  charAtResult1 = tmp15;
+                  charAtResult1 = obj;
                 }
               }
             }
@@ -2453,14 +2431,14 @@ obj = {
       } else {
         charAtResult = obj;
         if (0 === diff) {
-          charAtResult = tmp;
+          charAtResult = obj;
           if (closure_48 >= closure_50) {
             if (tmp5 > closure_50) {
               closure_50 = tmp5;
               closure_51 = [];
             }
             closure_51.push(tmp4);
-            charAtResult = tmp;
+            charAtResult = obj;
           }
         }
       }
@@ -2479,14 +2457,14 @@ obj = {
       } else {
         charAtResult = obj;
         if (0 === diff) {
-          charAtResult = tmp3;
+          charAtResult = obj;
           if (closure_48 >= closure_50) {
             if (tmp7 > closure_50) {
               closure_50 = tmp7;
               closure_51 = [];
             }
             closure_51.push(tmp6);
-            charAtResult = tmp3;
+            charAtResult = obj;
           }
         }
       }
@@ -2495,30 +2473,27 @@ obj = {
       if (charAtResult !== obj) {
         do {
           let arr = items.push(charAtResult);
-          let str2 = str;
-          let tmp14 = peg$parsewsp;
           if (re46.test(str.charAt(closure_48))) {
-            charAtResult1 = str2.charAt(closure_48);
+            charAtResult1 = str.charAt(closure_48);
             closure_48 = closure_48 + 1;
           } else {
-            let tmp17 = obj;
             charAtResult1 = obj;
             if (0 === diff) {
               let tmp21 = closure_48;
-              charAtResult1 = tmp17;
+              charAtResult1 = obj;
               if (closure_48 >= closure_50) {
                 if (tmp21 > closure_50) {
                   closure_50 = tmp21;
                   closure_51 = [];
                 }
                 let arr1 = closure_51.push(tmp20);
-                charAtResult1 = tmp17;
+                charAtResult1 = obj;
               }
             }
           }
           tmp12 = obj;
           charAtResult = charAtResult1;
-          tmp2 = tmp14;
+          tmp2 = peg$parsewsp;
         } while (charAtResult1 !== obj);
       }
       if (items !== tmp12) {
@@ -2533,23 +2508,21 @@ obj = {
           if (tmp2Result !== tmp12) {
             do {
               let arr2 = items1.push(tmp2Result);
-              let str3 = str;
               if (re46.test(str.charAt(closure_48))) {
-                charAtResult2 = str3.charAt(closure_48);
+                charAtResult2 = str.charAt(closure_48);
                 closure_48 = closure_48 + 1;
               } else {
-                let tmp34 = obj;
                 charAtResult2 = obj;
                 if (0 === diff) {
                   let tmp38 = closure_48;
-                  charAtResult2 = tmp34;
+                  charAtResult2 = obj;
                   if (closure_48 >= closure_50) {
                     if (tmp38 > closure_50) {
                       closure_50 = tmp38;
                       closure_51 = [];
                     }
                     let arr3 = closure_51.push(tmp37);
-                    charAtResult2 = tmp34;
+                    charAtResult2 = obj;
                   }
                 }
               }
@@ -2669,6 +2642,7 @@ obj = {
         peg$parsetransformList = obj[obj.startRule];
       } else {
         const _Error = Error;
+        str = "Can't start parsing from rule \"";
         const error = new Error("Can't start parsing from rule \"" + obj.startRule + "\".");
         throw error;
       }

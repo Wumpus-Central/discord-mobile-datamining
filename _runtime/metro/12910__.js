@@ -1,6 +1,7 @@
 // === Module 12910: ? ===
 
 // Module 12910
+import _mod12798 from "module_12798" /* 12798 */;
 import _mod12911 from "module_12911" /* 12911 */;
 
 require = arg1;
@@ -12,7 +13,7 @@ export const isBrowser = function isBrowser() {
     const isNodeEnvResult = _mod12911.isNodeEnv();
     let tmp3 = !isNodeEnvResult;
     if (isNodeEnvResult) {
-      const _process = tmp4(12798).GLOBAL_OBJ.process;
+      const _process = _mod12798.GLOBAL_OBJ.process;
       let tmp2 = _process;
       if (tmp2) {
         tmp2 = "renderer" === _process.type;
@@ -20,7 +21,6 @@ export const isBrowser = function isBrowser() {
       tmp3 = tmp2;
     }
     tmp = tmp3;
-    tmp4 = require;
   }
   return tmp;
 };

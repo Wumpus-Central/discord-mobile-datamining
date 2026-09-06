@@ -2,8 +2,8 @@
 
 // Module 520
 import _mod521 from "module_521" /* 521 */;
+import _mod522 from "module_522" /* 522 */;
 
-const _mod522 = tmp(522);
 
 export default function isFunction(arg0) {
   if (_mod521(arg0)) {

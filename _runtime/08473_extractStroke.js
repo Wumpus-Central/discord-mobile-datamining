@@ -14,11 +14,11 @@ let closure_4 = { none: 0, default: 0, nonScalingStroke: 1, "non-scaling-stroke"
 export default function extractStroke(arg0, arg1, arr) {
   ({ stroke, strokeOpacity, strokeLinecap, strokeLinejoin, strokeDasharray, strokeWidth, strokeDashoffset, strokeMiterlimit, vectorEffect } = arg1);
   if (null != stroke) {
-    arr.push("stroke");
+    arr = arr.push("stroke");
     arg0.stroke = extractBrushDefault(stroke);
   }
   if (null != strokeWidth) {
-    arr.push("strokeWidth");
+    arr = arr.push("strokeWidth");
     arg0.strokeWidth = strokeWidth;
   }
   if (null != strokeOpacity) {

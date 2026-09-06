@@ -24,7 +24,7 @@ export const makeViewDescriptorsSet = function makeViewDescriptorsSet() {
         if (-1 !== findIndexResult) {
           arr[findIndexResult] = tag;
         } else {
-          arr.push(tag);
+          arr = arr.push(tag);
         }
         if (current != null) {
           tmp5(true);

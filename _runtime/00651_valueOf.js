@@ -98,15 +98,15 @@ export default function equalByTag(byteLength, byteLength2, arg2, arg3, arg4, fn
       if (!valueOf) {
         return false;
       } else {
-        const call = tmp2.call;
+        const call = valueOf.call;
         if (typeof call === "unknown") {
-          let callResult = tmp2();
+          let callResult = valueOf();
         } else {
           callResult = call(byteLength);
         }
-        const call2 = tmp2.call;
+        const call2 = valueOf.call;
         if (typeof call2 === "unknown") {
-          let tmp2Result = tmp2();
+          let tmp2Result = valueOf();
         } else {
           tmp2Result = call2(byteLength2);
         }

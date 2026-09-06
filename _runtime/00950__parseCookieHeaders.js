@@ -1,10 +1,11 @@
 // === Module 950: _parseCookieHeaders ===
 
 // Module 950 (_parseCookieHeaders)
+import triggerHandlers from "triggerHandlers" /* 898 */;
 import _slicedToArray from "module_32" /* 32 */;
 import registerSpanErrorInstrumentation from "module_682" /* 682 */;
 
-function _parseCookieHeaders(arg0, headers) {
+function _parseCookieHeaders(Cookie, headers) {
   const tmp2 = (function _extractFetchHeaders(headers) {
     const obj = {};
     const item = headers.forEach((item, index) => {
@@ -13,9 +14,9 @@ function _parseCookieHeaders(arg0, headers) {
     return obj;
   })(headers.headers);
   try {
-    let tmp4 = tmp2[arg0];
+    let tmp4 = tmp2[Cookie];
     if (!tmp4) {
-      tmp4 = tmp2[arg0.toLowerCase(arg0)];
+      tmp4 = tmp2[Cookie.toLowerCase(Cookie)];
     }
     if (tmp4) {
       const tmp = _parseCookieString(tmp4);
@@ -145,7 +146,7 @@ export const httpClientIntegration = registerSpanErrorInstrumentation.defineInte
       closure_1 = obj;
       obj = registerSpanErrorInstrumentation;
       if (obj.supportsNativeFetch()) {
-        let tmp2Result = tmp2(682);
+        let tmp2Result = registerSpanErrorInstrumentation;
         const result = tmp2Result.addFetchInstrumentationHandler((args) => {
           obj = obj(682);
           if (obj.getClient() === closure_0) {
@@ -155,7 +156,7 @@ export const httpClientIntegration = registerSpanErrorInstrumentation.defineInte
               if (!error) {
                 error = args.virtualError;
               }
-              const failedRequestStatusCodes = tmp3.failedRequestStatusCodes;
+              const failedRequestStatusCodes = closure_1.failedRequestStatusCodes;
               const url = response.status;
               let someResult = failedRequestStatusCodes.some((item) => {
                 if (typeof item === "number") {
@@ -166,7 +167,7 @@ export const httpClientIntegration = registerSpanErrorInstrumentation.defineInte
                 return tmp;
               });
               if (someResult) {
-                const failedRequestTargets = tmp3.failedRequestTargets;
+                const failedRequestTargets = closure_1.failedRequestTargets;
                 someResult = failedRequestTargets.some((test) => {
                   if (typeof test === "string") {
                     let hasItem = url.includes(test);
@@ -201,9 +202,9 @@ export const httpClientIntegration = registerSpanErrorInstrumentation.defineInte
                   BooleanResult = Boolean(client.getOptions().sendDefaultPii);
                 }
                 if (BooleanResult) {
-                  let tmp25Result = tmp25(_parseCookieHeaders("Cookie", request), 2);
+                  let tmp25Result = _slicedToArray(_parseCookieHeaders("Cookie", request), 2);
                   [tmp17, tmp15] = tmp25Result;
-                  tmp25Result = tmp25(_parseCookieHeaders("Set-Cookie", response), 2);
+                  tmp25Result = _slicedToArray(_parseCookieHeaders("Set-Cookie", response), 2);
                   [tmp16, tmp14] = tmp25Result;
                 }
                 const request1 = { url: null, method: null, status: null, requestHeaders: null, responseHeaders: null, requestCookies: null, responseCookies: null, error: null, type: "fetch" };
@@ -227,7 +228,7 @@ export const httpClientIntegration = registerSpanErrorInstrumentation.defineInte
       closure_0 = arg0;
       closure_1 = obj;
       if ("XMLHttpRequest" in registerSpanErrorInstrumentation.GLOBAL_OBJ) {
-        tmp2Result = tmp2(898);
+        tmp2Result = triggerHandlers;
         const result1 = tmp2Result.addXhrInstrumentationHandler((arg0) => {
           obj = obj(682);
           if (obj.getClient() === closure_0) {
@@ -280,6 +281,7 @@ export const httpClientIntegration = registerSpanErrorInstrumentation.defineInte
               }
             }
           }
+          tmp4 = obj;
         });
       }
     }

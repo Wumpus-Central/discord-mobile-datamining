@@ -195,7 +195,7 @@ export const buildTransportAttributes = function buildTransportAttributes(transp
   if (version) {
     obj1["mcp.client.version"] = clientInfoForTransport.version;
   }
-  let tmp6Result = tmp6(804);
+  let tmp6Result = _mod804;
   const sessionDataForTransport = tmp6Result.getSessionDataForTransport(transport);
   let serverInfo;
   if (sessionDataForTransport != null) {
@@ -207,28 +207,28 @@ export const buildTransportAttributes = function buildTransportAttributes(transp
   }
   const obj2 = {};
   if (name2) {
-    obj2[tmp6(805).MCP_SERVER_NAME_ATTRIBUTE] = serverInfo.name;
+    obj2[CLIENT_ADDRESS_ATTRIBUTE.MCP_SERVER_NAME_ATTRIBUTE] = serverInfo.name;
   }
   let title1;
   if (serverInfo != null) {
     title1 = serverInfo.title;
   }
   if (title1) {
-    obj2[tmp6(805).MCP_SERVER_TITLE_ATTRIBUTE] = serverInfo.title;
+    obj2[CLIENT_ADDRESS_ATTRIBUTE.MCP_SERVER_TITLE_ATTRIBUTE] = serverInfo.title;
   }
   let version1;
   if (serverInfo != null) {
     version1 = serverInfo.version;
   }
   if (version1) {
-    obj2[tmp6(805).MCP_SERVER_VERSION_ATTRIBUTE] = serverInfo.version;
+    obj2[CLIENT_ADDRESS_ATTRIBUTE.MCP_SERVER_VERSION_ATTRIBUTE] = serverInfo.version;
   }
-  tmp6Result = tmp6(804);
+  tmp6Result = _mod804;
   const protocolVersionForTransport = tmp6Result.getProtocolVersionForTransport(transport);
   let tmp18 = sessionId;
   if (sessionId) {
     const obj3 = {};
-    obj3[tmp6(805).MCP_SESSION_ID_ATTRIBUTE] = sessionId;
+    obj3[CLIENT_ADDRESS_ATTRIBUTE.MCP_SESSION_ID_ATTRIBUTE] = sessionId;
     tmp18 = obj3;
   }
   obj4 = {};
@@ -236,14 +236,14 @@ export const buildTransportAttributes = function buildTransportAttributes(transp
   let address = obj.address;
   if (address) {
     const obj5 = {};
-    obj5[tmp6(805).CLIENT_ADDRESS_ATTRIBUTE] = obj.address;
+    obj5[CLIENT_ADDRESS_ATTRIBUTE.CLIENT_ADDRESS_ATTRIBUTE] = obj.address;
     address = obj5;
   }
   const merged1 = Object.assign(address);
   let port = obj.port;
   if (port) {
     const obj6 = {};
-    obj6[tmp6(805).CLIENT_PORT_ATTRIBUTE] = obj.port;
+    obj6[CLIENT_ADDRESS_ATTRIBUTE.CLIENT_PORT_ATTRIBUTE] = obj.port;
     port = obj6;
   }
   const merged2 = Object.assign(port);
@@ -253,7 +253,7 @@ export const buildTransportAttributes = function buildTransportAttributes(transp
   let tmp22 = protocolVersionForTransport;
   if (protocolVersionForTransport) {
     const obj7 = {};
-    obj7[tmp6(805).MCP_PROTOCOL_VERSION_ATTRIBUTE] = protocolVersionForTransport;
+    obj7[CLIENT_ADDRESS_ATTRIBUTE.MCP_PROTOCOL_VERSION_ATTRIBUTE] = protocolVersionForTransport;
     tmp22 = obj7;
   }
   const merged3 = Object.assign(tmp22);
@@ -354,21 +354,21 @@ export const getServerAttributes = function getServerAttributes(transport) {
   }
   obj = {};
   if (name) {
-    obj[tmp(805).MCP_SERVER_NAME_ATTRIBUTE] = serverInfo.name;
+    obj[CLIENT_ADDRESS_ATTRIBUTE.MCP_SERVER_NAME_ATTRIBUTE] = serverInfo.name;
   }
   let title;
   if (serverInfo != null) {
     title = serverInfo.title;
   }
   if (title) {
-    obj[tmp(805).MCP_SERVER_TITLE_ATTRIBUTE] = serverInfo.title;
+    obj[CLIENT_ADDRESS_ATTRIBUTE.MCP_SERVER_TITLE_ATTRIBUTE] = serverInfo.title;
   }
   let version;
   if (serverInfo != null) {
     version = serverInfo.version;
   }
   if (version) {
-    obj[tmp(805).MCP_SERVER_VERSION_ATTRIBUTE] = serverInfo.version;
+    obj[CLIENT_ADDRESS_ATTRIBUTE.MCP_SERVER_VERSION_ATTRIBUTE] = serverInfo.version;
   }
   return obj;
 };

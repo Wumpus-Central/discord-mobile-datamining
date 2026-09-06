@@ -20,7 +20,7 @@ import _mod10535 from "module_10535" /* 10535 */;
 import _mod10536 from "module_10536" /* 10536 */;
 import _mod10537 from "module_10537" /* 10537 */;
 
-function createConfiguration(flag) {
+function createConfiguration() {
   if (flag === undefined) {
     flag = true;
   }

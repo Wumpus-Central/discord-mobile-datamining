@@ -2,29 +2,31 @@
 
 // Module 715
 import _mod688 from "module_688" /* 688 */;
+import consoleSandbox from "consoleSandbox" /* 689 */;
+import _mod698 from "module_698" /* 698 */;
 
 require = arg1;
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 const dependencyMap = {};
 let closure_3 = {};
 
-export const addHandler = function addHandler(arg0, arg1) {
-  dependencyMap[arg0] = dependencyMap[arg0] || [];
-  let arr = tmp[arg0];
-  arr = arr.push(arg1);
+export const addHandler = function addHandler(console, errorCallback) {
+  dependencyMap[console] = dependencyMap[console] || [];
+  let arr = dependencyMap[console];
+  arr = arr.push(errorCallback);
+  const tmp2 = dependencyMap[console] || [];
 };
-export const maybeInstrument = function maybeInstrument(arg0, fn) {
-  if (!closure_3[arg0]) {
-    tmp2[arg0] = true;
+export const maybeInstrument = function maybeInstrument(console, fn) {
+  if (!closure_3[console]) {
+    tmp2[console] = true;
     try {
       fn();
     } catch (tmp5) {
       if (_mod688.DEBUG_BUILD) {
-        const debug = tmp6(689).debug;
+        const debug = consoleSandbox.debug;
         const _HermesInternal = HermesInternal;
         debug.error("Error while instrumenting " + tmp, tmp5);
       }
-      tmp6 = require;
     }
   }
 };
@@ -46,9 +48,9 @@ export const triggerHandlers = function triggerHandlers(arg0, arg1) {
         tmp15(arg1);
       } catch (tmp18) {
         if (_mod688.DEBUG_BUILD) {
-          const debug = tmp19(689).debug;
-          debug.error(tmp2 + tmp6 + tmp3 + tmp19(698).getFunctionName(tmp7) + tmp4, tmp18);
-          const tmp19Result = tmp19(698);
+          const debug = consoleSandbox.debug;
+          debug.error(tmp2 + tmp6 + tmp3 + _mod698.getFunctionName(tmp7) + tmp4, tmp18);
+          const tmp19Result = _mod698;
         }
       }
     }

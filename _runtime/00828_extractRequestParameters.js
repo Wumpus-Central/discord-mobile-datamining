@@ -36,19 +36,19 @@ export const addChatCompletionAttributes = function addChatCompletionAttributes(
     const total_tokens = created.usage.total_tokens;
     if (undefined !== prompt_tokens) {
       obj = {};
-      obj[tmp(823).OPENAI_USAGE_PROMPT_TOKENS_ATTRIBUTE] = prompt_tokens;
-      obj[tmp(823).GEN_AI_USAGE_INPUT_TOKENS_ATTRIBUTE] = prompt_tokens;
+      obj[ANTHROPIC_AI_RESPONSE_TIMESTAMP_ATTRIBUTE.OPENAI_USAGE_PROMPT_TOKENS_ATTRIBUTE] = prompt_tokens;
+      obj[ANTHROPIC_AI_RESPONSE_TIMESTAMP_ATTRIBUTE.GEN_AI_USAGE_INPUT_TOKENS_ATTRIBUTE] = prompt_tokens;
       setAttributes.setAttributes(obj);
     }
     if (undefined !== completion_tokens) {
       obj = {};
-      obj[tmp(823).OPENAI_USAGE_COMPLETION_TOKENS_ATTRIBUTE] = completion_tokens;
-      obj[tmp(823).GEN_AI_USAGE_OUTPUT_TOKENS_ATTRIBUTE] = completion_tokens;
+      obj[ANTHROPIC_AI_RESPONSE_TIMESTAMP_ATTRIBUTE.OPENAI_USAGE_COMPLETION_TOKENS_ATTRIBUTE] = completion_tokens;
+      obj[ANTHROPIC_AI_RESPONSE_TIMESTAMP_ATTRIBUTE.GEN_AI_USAGE_OUTPUT_TOKENS_ATTRIBUTE] = completion_tokens;
       setAttributes.setAttributes(obj);
     }
     if (undefined !== total_tokens) {
       const obj1 = {};
-      obj1[tmp(823).GEN_AI_USAGE_TOTAL_TOKENS_ATTRIBUTE] = total_tokens;
+      obj1[ANTHROPIC_AI_RESPONSE_TIMESTAMP_ATTRIBUTE.GEN_AI_USAGE_TOTAL_TOKENS_ATTRIBUTE] = total_tokens;
       setAttributes.setAttributes(obj1);
     }
   }
@@ -59,7 +59,7 @@ export const addChatCompletionAttributes = function addChatCompletionAttributes(
     if (found.length > 0) {
       const obj2 = {};
       const _JSON = JSON;
-      obj2[tmp(823).GEN_AI_RESPONSE_FINISH_REASONS_ATTRIBUTE] = JSON.stringify(found);
+      obj2[ANTHROPIC_AI_RESPONSE_TIMESTAMP_ATTRIBUTE.GEN_AI_RESPONSE_FINISH_REASONS_ATTRIBUTE] = JSON.stringify(found);
       setAttributes.setAttributes(obj2);
     }
     if (recordOutputs) {
@@ -83,11 +83,12 @@ export const addChatCompletionAttributes = function addChatCompletionAttributes(
       if (flatResult.length > 0) {
         const obj3 = {};
         const _JSON2 = JSON;
-        obj3[tmp(823).GEN_AI_RESPONSE_TOOL_CALLS_ATTRIBUTE] = JSON.stringify(flatResult);
+        obj3[ANTHROPIC_AI_RESPONSE_TIMESTAMP_ATTRIBUTE.GEN_AI_RESPONSE_TOOL_CALLS_ATTRIBUTE] = JSON.stringify(flatResult);
         setAttributes.setAttributes(obj3);
       }
     }
   }
+  const date = new Date(1000 * created.created);
 };
 export const addConversationAttributes = function addConversationAttributes(setAttributes, choices) {
   ({ id, created_at } = choices);
@@ -108,13 +109,13 @@ export const addEmbeddingsAttributes = function addEmbeddingsAttributes(setAttri
     const total_tokens = model.usage.total_tokens;
     if (undefined !== prompt_tokens) {
       obj = {};
-      obj[tmp(823).OPENAI_USAGE_PROMPT_TOKENS_ATTRIBUTE] = prompt_tokens;
-      obj[tmp(823).GEN_AI_USAGE_INPUT_TOKENS_ATTRIBUTE] = prompt_tokens;
+      obj[ANTHROPIC_AI_RESPONSE_TIMESTAMP_ATTRIBUTE.OPENAI_USAGE_PROMPT_TOKENS_ATTRIBUTE] = prompt_tokens;
+      obj[ANTHROPIC_AI_RESPONSE_TIMESTAMP_ATTRIBUTE.GEN_AI_USAGE_INPUT_TOKENS_ATTRIBUTE] = prompt_tokens;
       setAttributes.setAttributes(obj);
     }
     if (undefined !== total_tokens) {
       obj = {};
-      obj[tmp(823).GEN_AI_USAGE_TOTAL_TOKENS_ATTRIBUTE] = total_tokens;
+      obj[ANTHROPIC_AI_RESPONSE_TIMESTAMP_ATTRIBUTE.GEN_AI_USAGE_TOTAL_TOKENS_ATTRIBUTE] = total_tokens;
       setAttributes.setAttributes(obj);
     }
   }
@@ -130,7 +131,7 @@ export const addResponsesApiAttributes = function addResponsesApiAttributes(setA
     obj = {};
     const _JSON = JSON;
     const items = [created_at.status];
-    obj[tmp(823).GEN_AI_RESPONSE_FINISH_REASONS_ATTRIBUTE] = JSON.stringify(items);
+    obj[ANTHROPIC_AI_RESPONSE_TIMESTAMP_ATTRIBUTE.GEN_AI_RESPONSE_FINISH_REASONS_ATTRIBUTE] = JSON.stringify(items);
     setAttributes.setAttributes(obj);
   }
   if (created_at.usage) {
@@ -139,19 +140,19 @@ export const addResponsesApiAttributes = function addResponsesApiAttributes(setA
     const total_tokens = created_at.usage.total_tokens;
     if (undefined !== input_tokens) {
       obj = {};
-      obj[tmp(823).OPENAI_USAGE_PROMPT_TOKENS_ATTRIBUTE] = input_tokens;
-      obj[tmp(823).GEN_AI_USAGE_INPUT_TOKENS_ATTRIBUTE] = input_tokens;
+      obj[ANTHROPIC_AI_RESPONSE_TIMESTAMP_ATTRIBUTE.OPENAI_USAGE_PROMPT_TOKENS_ATTRIBUTE] = input_tokens;
+      obj[ANTHROPIC_AI_RESPONSE_TIMESTAMP_ATTRIBUTE.GEN_AI_USAGE_INPUT_TOKENS_ATTRIBUTE] = input_tokens;
       setAttributes.setAttributes(obj);
     }
     if (undefined !== output_tokens) {
       const obj1 = {};
-      obj1[tmp(823).OPENAI_USAGE_COMPLETION_TOKENS_ATTRIBUTE] = output_tokens;
-      obj1[tmp(823).GEN_AI_USAGE_OUTPUT_TOKENS_ATTRIBUTE] = output_tokens;
+      obj1[ANTHROPIC_AI_RESPONSE_TIMESTAMP_ATTRIBUTE.OPENAI_USAGE_COMPLETION_TOKENS_ATTRIBUTE] = output_tokens;
+      obj1[ANTHROPIC_AI_RESPONSE_TIMESTAMP_ATTRIBUTE.GEN_AI_USAGE_OUTPUT_TOKENS_ATTRIBUTE] = output_tokens;
       setAttributes.setAttributes(obj1);
     }
     if (undefined !== total_tokens) {
       const obj2 = {};
-      obj2[tmp(823).GEN_AI_USAGE_TOTAL_TOKENS_ATTRIBUTE] = total_tokens;
+      obj2[ANTHROPIC_AI_RESPONSE_TIMESTAMP_ATTRIBUTE.GEN_AI_USAGE_TOTAL_TOKENS_ATTRIBUTE] = total_tokens;
       setAttributes.setAttributes(obj2);
     }
   }
@@ -173,12 +174,13 @@ export const addResponsesApiAttributes = function addResponsesApiAttributes(setA
         if (found.length > 0) {
           const obj3 = {};
           const _JSON2 = JSON;
-          obj3[tmp(823).GEN_AI_RESPONSE_TOOL_CALLS_ATTRIBUTE] = JSON.stringify(found);
+          obj3[ANTHROPIC_AI_RESPONSE_TIMESTAMP_ATTRIBUTE.GEN_AI_RESPONSE_TOOL_CALLS_ATTRIBUTE] = JSON.stringify(found);
           setAttributes.setAttributes(obj3);
         }
       }
     }
   }
+  const date = new Date(1000 * created_at.created_at);
 };
 export const buildMethodPath = function buildMethodPath(arg0, arg1) {
   let combined = arg1;
@@ -196,32 +198,32 @@ export const extractRequestParameters = function extractRequestParameters(model)
   const obj = {};
   obj[ANTHROPIC_AI_RESPONSE_TIMESTAMP_ATTRIBUTE.GEN_AI_REQUEST_MODEL_ATTRIBUTE] = str;
   if ("temperature" in model) {
-    obj[tmp(823).GEN_AI_REQUEST_TEMPERATURE_ATTRIBUTE] = model.temperature;
+    obj[ANTHROPIC_AI_RESPONSE_TIMESTAMP_ATTRIBUTE.GEN_AI_REQUEST_TEMPERATURE_ATTRIBUTE] = model.temperature;
   }
   if ("top_p" in model) {
-    obj[tmp(823).GEN_AI_REQUEST_TOP_P_ATTRIBUTE] = model.top_p;
+    obj[ANTHROPIC_AI_RESPONSE_TIMESTAMP_ATTRIBUTE.GEN_AI_REQUEST_TOP_P_ATTRIBUTE] = model.top_p;
   }
   if ("frequency_penalty" in model) {
-    obj[tmp(823).GEN_AI_REQUEST_FREQUENCY_PENALTY_ATTRIBUTE] = model.frequency_penalty;
+    obj[ANTHROPIC_AI_RESPONSE_TIMESTAMP_ATTRIBUTE.GEN_AI_REQUEST_FREQUENCY_PENALTY_ATTRIBUTE] = model.frequency_penalty;
   }
   if ("presence_penalty" in model) {
-    obj[tmp(823).GEN_AI_REQUEST_PRESENCE_PENALTY_ATTRIBUTE] = model.presence_penalty;
+    obj[ANTHROPIC_AI_RESPONSE_TIMESTAMP_ATTRIBUTE.GEN_AI_REQUEST_PRESENCE_PENALTY_ATTRIBUTE] = model.presence_penalty;
   }
   if ("stream" in model) {
-    obj[tmp(823).GEN_AI_REQUEST_STREAM_ATTRIBUTE] = model.stream;
+    obj[ANTHROPIC_AI_RESPONSE_TIMESTAMP_ATTRIBUTE.GEN_AI_REQUEST_STREAM_ATTRIBUTE] = model.stream;
   }
   if ("encoding_format" in model) {
-    obj[tmp(823).GEN_AI_REQUEST_ENCODING_FORMAT_ATTRIBUTE] = model.encoding_format;
+    obj[ANTHROPIC_AI_RESPONSE_TIMESTAMP_ATTRIBUTE.GEN_AI_REQUEST_ENCODING_FORMAT_ATTRIBUTE] = model.encoding_format;
   }
   if ("dimensions" in model) {
-    obj[tmp(823).GEN_AI_REQUEST_DIMENSIONS_ATTRIBUTE] = model.dimensions;
+    obj[ANTHROPIC_AI_RESPONSE_TIMESTAMP_ATTRIBUTE.GEN_AI_REQUEST_DIMENSIONS_ATTRIBUTE] = model.dimensions;
   }
   if ("conversation" in model) {
     if (typeof model.conversation === "string") {
       let previous_response_id = model.conversation;
     }
     if (previous_response_id) {
-      obj[tmp(823).GEN_AI_CONVERSATION_ID_ATTRIBUTE] = previous_response_id;
+      obj[ANTHROPIC_AI_RESPONSE_TIMESTAMP_ATTRIBUTE.GEN_AI_CONVERSATION_ID_ATTRIBUTE] = previous_response_id;
     }
     return obj;
   }

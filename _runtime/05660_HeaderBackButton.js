@@ -3,6 +3,7 @@
 // Module 5660 (HeaderBackButton)
 import Link from "Link" /* 1484 */;
 import _modDef5632 from "module_5632" /* 5632 */;
+import HeaderIcon from "HeaderIcon" /* 5661 */;
 import HeaderButton from "HeaderButton" /* 5666 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -84,9 +85,9 @@ export const HeaderBackButton = function HeaderBackButton(accessibilityLabel) {
     let backImageResult = backImage(obj);
   } else {
     obj1 = { source: _modDef5632, tintColor, style: null };
-    const items1 = [tmp10.icon, "minimal" !== displayMode && tmp10.iconWithLabel];
+    const items1 = [container.icon, "minimal" !== displayMode && container.iconWithLabel];
     obj1.style = items1;
-    backImageResult = tmp9(tmp2(5661).HeaderIcon, obj1);
+    backImageResult = React5(HeaderIcon.HeaderIcon, obj1);
   }
   const items2 = [backImageResult, ];
   let tmp11Result = null;
@@ -96,7 +97,7 @@ export const HeaderBackButton = function HeaderBackButton(accessibilityLabel) {
       diff = null;
       if (screenLayout) {
         const result = (screenLayout.width - titleLayout.width) / 2;
-        diff = result - (c9 + tmp2(5661).ICON_MARGIN);
+        diff = result - (c9 + HeaderIcon.ICON_MARGIN);
       }
     }
     let tmp19 = truncatedLabel;
@@ -120,9 +121,9 @@ export const HeaderBackButton = function HeaderBackButton(accessibilityLabel) {
         }
       }
     }
-    const items3 = [fonts.regular, tmp10.label, labelStyle];
+    const items3 = [fonts.regular, container.label, labelStyle];
     const items4 = [items3, { position: "absolute", top: 0, left: 0, opacity: 0 }];
-    const obj2 = { style: tmp10.labelWrapper, children: null };
+    const obj2 = { style: container.labelWrapper, children: null };
     let tmp9Result = null;
     if (label) {
       tmp9Result = null;
@@ -135,7 +136,7 @@ export const HeaderBackButton = function HeaderBackButton(accessibilityLabel) {
                 },
           children: label
         };
-        tmp9Result = tmp9(RN.Text, obj3);
+        tmp9Result = React5(RN.Text, obj3);
       }
     }
     const items5 = [tmp9Result, , ];
@@ -149,7 +150,7 @@ export const HeaderBackButton = function HeaderBackButton(accessibilityLabel) {
             },
         children: truncatedLabel
       };
-      tmp9Result = tmp9(RN.Text, obj4);
+      tmp9Result = React5(RN.Text, obj4);
     }
     items5[1] = tmp9Result;
     let tmp9Result1 = null;
@@ -164,11 +165,11 @@ export const HeaderBackButton = function HeaderBackButton(accessibilityLabel) {
       obj5.style = items6;
       obj5.allowFontScaling = allowFontScaling;
       obj5.children = tmp20;
-      tmp9Result1 = tmp9(RN.Text, obj5);
+      tmp9Result1 = React5(RN.Text, obj5);
     }
     items5[2] = tmp9Result1;
     obj2.children = items5;
-    tmp11Result = tmp11(timestampProducer, obj2);
+    tmp11Result = React6(timestampProducer, obj2);
   }
   items2[1] = tmp11Result;
   obj.children = React6(noop.Fragment, { children: items2 });

@@ -60,8 +60,8 @@ export const XHRInterceptor = {
           const listener = self.addEventListener("readystatechange", () => {
             if (closure_2_8) {
               if (self.readyState === self.HEADERS_RECEIVED) {
-                const str2 = obj.getResponseHeader("Content-Type");
-                const responseHeader = obj.getResponseHeader("Content-Length");
+                const str2 = self.getResponseHeader("Content-Type");
+                const responseHeader = self.getResponseHeader("Content-Length");
                 if (str2) {
                   const first = str2.split(";")[0];
                 }
@@ -70,11 +70,11 @@ export const XHRInterceptor = {
                   const parsed = parseInt(responseHeader, 10);
                 }
                 if (closure_2_3) {
-                  tmp5(first, parsed, obj.getAllResponseHeaders(), obj);
+                  tmp5(first, parsed, self.getAllResponseHeaders(), self);
                 }
               }
               if (tmp10) {
-                closure_2_4(obj.status, obj.timeout, obj.response, obj.responseURL, obj.responseType, obj);
+                closure_2_4(self.status, self.timeout, self.response, self.responseURL, self.responseType, self);
               }
               tmp10 = self.readyState === self.DONE && closure_2_4;
             }

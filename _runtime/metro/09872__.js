@@ -113,11 +113,11 @@ const exports = {
       if (arg1 < 10) {
         if (_mod9868.MODE_NUMBER === arg0) {
           return 10;
-        } else if (tmp20(9868).MODE_ALPHA_NUM === arg0) {
+        } else if (_mod9868.MODE_ALPHA_NUM === arg0) {
           return 9;
         } else {
-          if (tmp20(9868).MODE_8BIT_BYTE !== arg0) {
-            if (tmp20(9868).MODE_KANJI !== arg0) {
+          if (_mod9868.MODE_8BIT_BYTE !== arg0) {
+            if (_mod9868.MODE_KANJI !== arg0) {
               const _Error4 = Error;
               const error = new Error("mode:" + arg0);
               throw error;
@@ -130,11 +130,11 @@ const exports = {
     if (arg1 < 27) {
       if (_mod9868.MODE_NUMBER === arg0) {
         return 12;
-      } else if (tmp13(9868).MODE_ALPHA_NUM === arg0) {
+      } else if (_mod9868.MODE_ALPHA_NUM === arg0) {
         return 11;
-      } else if (tmp13(9868).MODE_8BIT_BYTE === arg0) {
+      } else if (_mod9868.MODE_8BIT_BYTE === arg0) {
         return 16;
-      } else if (tmp13(9868).MODE_KANJI === arg0) {
+      } else if (_mod9868.MODE_KANJI === arg0) {
         return 10;
       } else {
         const _Error3 = Error;
@@ -144,11 +144,11 @@ const exports = {
     } else if (arg1 < 41) {
       if (_mod9868.MODE_NUMBER === arg0) {
         return 14;
-      } else if (tmp6(9868).MODE_ALPHA_NUM === arg0) {
+      } else if (_mod9868.MODE_ALPHA_NUM === arg0) {
         return 13;
-      } else if (tmp6(9868).MODE_8BIT_BYTE === arg0) {
+      } else if (_mod9868.MODE_8BIT_BYTE === arg0) {
         return 16;
-      } else if (tmp6(9868).MODE_KANJI === arg0) {
+      } else if (_mod9868.MODE_KANJI === arg0) {
         return 12;
       } else {
         const _Error2 = Error;

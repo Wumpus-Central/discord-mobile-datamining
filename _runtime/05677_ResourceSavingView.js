@@ -24,7 +24,7 @@ export const ResourceSavingView = function ResourceSavingView(visible) {
   if (visible) {
     str = "auto";
   }
-  obj = { collapsable: false, removeClippedSubviews: true, pointerEvents: str, style: visible ? tmp4.attached : tmp4.detached, children };
-  obj.children = <React collapsable={false} removeClippedSubviews pointerEvents={str} style={visible ? tmp4.attached : tmp4.detached}>{children}</React>;
-  return <React collapsable={false} removeClippedSubviews pointerEvents={str} style={visible ? tmp4.attached : tmp4.detached}>{children}</React>;
+  obj = { collapsable: false, removeClippedSubviews: true, pointerEvents: str, style: visible ? container.attached : container.detached, children };
+  obj.children = <React collapsable={false} removeClippedSubviews pointerEvents={str} style={visible ? container.attached : container.detached}>{children}</React>;
+  return <React collapsable={false} removeClippedSubviews pointerEvents={str} style={visible ? container.attached : container.detached}>{children}</React>;
 };

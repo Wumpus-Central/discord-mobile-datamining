@@ -26,7 +26,7 @@ function instrumentUnhandledRejection() {
 }
 let onunhandledrejection = null;
 
-export const addGlobalUnhandledRejectionInstrumentationHandler = function addGlobalUnhandledRejectionInstrumentationHandler(arg0) {
-  _mod12795.addHandler("unhandledrejection", arg0);
+export const addGlobalUnhandledRejectionInstrumentationHandler = function addGlobalUnhandledRejectionInstrumentationHandler(errorCallback) {
+  _mod12795.addHandler("unhandledrejection", errorCallback);
   _mod12795.maybeInstrument("unhandledrejection", instrumentUnhandledRejection);
 };

@@ -3,6 +3,7 @@
 // Module 810
 import SPAN_STATUS_ERROR from "SPAN_STATUS_ERROR" /* 705 */;
 import extractClientInfo from "extractClientInfo" /* 803 */;
+import CLIENT_ADDRESS_ATTRIBUTE from "CLIENT_ADDRESS_ATTRIBUTE" /* 805 */;
 import extractPromptResultAttributes from "extractPromptResultAttributes" /* 811 */;
 import _slicedToArray from "module_32" /* 32 */;
 
@@ -16,8 +17,7 @@ export const cleanupPendingSpansForTransport = function cleanupPendingSpansForTr
     while (tmp2 !== undefined) {
       let tmp7 = _slicedToArray(tmp4, 2)[1];
       let span = tmp7.span;
-      let obj = { code: null, message: "cancelled" };
-      obj.code = SPAN_STATUS_ERROR.SPAN_STATUS_ERROR;
+      let obj = { code: SPAN_STATUS_ERROR.SPAN_STATUS_ERROR, message: "cancelled" };
       let setStatusResult = span.setStatus(obj);
       let span2 = tmp7.span;
       let endResult = span2.end();
@@ -42,11 +42,10 @@ export const completeSpanWithResults = function completeSpanWithResults(arg0, id
     if ("initialize" === method) {
       const result1 = extractClientInfo.extractSessionDataFromInitializeResponse(protocolVersion);
       setAttributesResult = {};
-      const tmp10 = require;
       const merged = Object.assign(extractClientInfo.buildServerAttributesFromInfo(result1.serverInfo));
       protocolVersion = result1.protocolVersion;
       if (protocolVersion) {
-        setAttributesResult[tmp10(805).MCP_PROTOCOL_VERSION_ATTRIBUTE] = result1.protocolVersion;
+        setAttributesResult[CLIENT_ADDRESS_ATTRIBUTE.MCP_PROTOCOL_VERSION_ATTRIBUTE] = result1.protocolVersion;
       }
       setAttributesResult = span.setAttributes(setAttributesResult);
       span.end();

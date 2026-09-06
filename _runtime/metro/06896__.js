@@ -1,9 +1,9 @@
 // === Module 6896: ? ===
 
 // Module 6896
+import _modDef6885 from "module_6885" /* 6885 */;
 import _classCallCheck from "module_6866" /* 6866 */;
 import _createClass from "module_6867" /* 6867 */;
-import _possibleConstructorReturn from "module_6885" /* 6885 */;
 import _getPrototypeOf from "module_6887" /* 6887 */;
 import _get from "module_6888" /* 6888 */;
 import _inherits from "module_6890" /* 6890 */;
@@ -27,6 +27,7 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
+_modDef6885;
 class RVLinearLayoutManagerImpl {
   constructor(arg0, arg1) {
     self = this;
@@ -188,11 +189,10 @@ let items = [
           }
           const layouts = self.layouts;
           for (const item10035 of layouts) {
-            let tmp10 = item10035;
             if (num3 > 0) {
-              tmp10.height = tmp.height;
+              item10035.height = tmp.height;
             }
-            tmp10.minHeight = num3;
+            item10035.minHeight = num3;
             continue;
           }
           tmp.minHeight = 0;

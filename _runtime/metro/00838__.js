@@ -47,6 +47,7 @@ function addPrivateRequestAttributes(setAttributes, config) {
     obj[ANTHROPIC_AI_RESPONSE_TIMESTAMP_ATTRIBUTE.GEN_AI_REQUEST_MESSAGES_ATTRIBUTE] = JSON.stringify(truncateTextByBytes.truncateGenAiMessages(items));
     setAttributes.setAttributes(obj);
   }
+  tmp33 = Array.isArray(items) && items.length;
 }
 Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
 
@@ -221,7 +222,7 @@ export const instrumentGoogleGenAIClient = function instrumentGoogleGenAIClient(
                           c5 = 0;
                           c6 = 0;
                           c4 = 0;
-                          return (function*(arg0, value) {
+                          return (function*(arg0) {
                             if (c6 === 2) {
                               c6 = 3;
                               throw new TypeError("Generator functions may not be called on executing generators");
@@ -951,7 +952,7 @@ export const instrumentGoogleGenAIClient = function instrumentGoogleGenAIClient(
                           c5 = 0;
                           c6 = 0;
                           c4 = 0;
-                          return (function*(arg0, value) {
+                          return (function*(arg0) {
                             if (c6 === 2) {
                               c6 = 3;
                               throw new TypeError("Generator functions may not be called on executing generators");

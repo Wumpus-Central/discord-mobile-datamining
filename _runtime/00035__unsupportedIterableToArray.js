@@ -21,15 +21,13 @@ export default function _unsupportedIterableToArray(str, arg1) {
         if ("Set" !== name) {
           if ("Arguments" === name) {
             arr = _arrayLikeToArray(str, arg1);
-          } else {
-            const obj = /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/;
           }
         }
         return arr;
       }
       const _Array = Array;
       arr = Array.from(str);
-      tmp3 = "Object" === substr && str.constructor;
+      tmp3 = "Object" === substr && "Object".constructor;
     }
   }
 };

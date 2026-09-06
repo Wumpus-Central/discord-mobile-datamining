@@ -108,8 +108,8 @@ if (self2) {
           POSITIVE_INFINITY = Number.POSITIVE_INFINITY;
         }
         if (closure_1.value < POSITIVE_INFINITY) {
-          value = iter.value;
-          if (iter.inclusive) {
+          value = closure_1.value;
+          if (closure_1.inclusive) {
             bag.maximum = value;
           } else {
             bag.exclusiveMaximum = value;
@@ -155,8 +155,8 @@ if (self2) {
           NEGATIVE_INFINITY = Number.NEGATIVE_INFINITY;
         }
         if (closure_1.value > NEGATIVE_INFINITY) {
-          value = iter.value;
-          if (iter.inclusive) {
+          value = closure_1.value;
+          if (closure_1.inclusive) {
             bag.minimum = value;
           } else {
             bag.exclusiveMinimum = value;
@@ -207,14 +207,14 @@ if (self2) {
         } else {
           if (typeof value.value === "bigint") {
             const _BigInt = BigInt;
-            const result = value.value % iter.value;
+            const result = value.value % closure_1.value;
             let tmp3 = result === BigInt(0);
           } else {
-            tmp3 = 0 === closure_5.floatSafeRemainder(value.value, iter.value);
+            tmp3 = 0 === closure_5.floatSafeRemainder(value.value, closure_1.value);
           }
           if (!tmp3) {
             const issues = value.issues;
-            const obj = { origin: typeof value.value, code: "not_multiple_of", divisor: iter.value, input: value.value, inst, continue: !iter.abort };
+            const obj = { origin: typeof value.value, code: "not_multiple_of", divisor: closure_1.value, input: value.value, inst, continue: !closure_1.abort };
             issues.push(obj);
           }
         }
@@ -350,7 +350,7 @@ if (self2) {
         value = value.value;
         if (value.size > closure_1.maximum) {
           const issues = value.issues;
-          const obj = { origin: closure_5.getSizableOrigin(value), code: "too_big", maximum: tmp.maximum, inclusive: true, input: value, inst, continue: !tmp.abort };
+          const obj = { origin: closure_5.getSizableOrigin(value), code: "too_big", maximum: closure_1.maximum, inclusive: true, input: value, inst, continue: !closure_1.abort };
           issues.push(obj);
         }
       };
@@ -387,7 +387,7 @@ if (self2) {
         value = value.value;
         if (value.size < closure_1.minimum) {
           const issues = value.issues;
-          const obj = { origin: closure_5.getSizableOrigin(value), code: "too_small", minimum: tmp.minimum, inclusive: true, input: value, inst, continue: !tmp.abort };
+          const obj = { origin: closure_5.getSizableOrigin(value), code: "too_small", minimum: closure_1.minimum, inclusive: true, input: value, inst, continue: !closure_1.abort };
           issues.push(obj);
         }
       };
@@ -473,7 +473,7 @@ if (self2) {
         value = value.value;
         if (value.length > closure_1.maximum) {
           const issues = value.issues;
-          const obj = { origin: closure_5.getLengthableOrigin(value), code: "too_big", maximum: tmp.maximum, inclusive: true, input: value, inst, continue: !tmp.abort };
+          const obj = { origin: closure_5.getLengthableOrigin(value), code: "too_big", maximum: closure_1.maximum, inclusive: true, input: value, inst, continue: !closure_1.abort };
           issues.push(obj);
         }
       };
@@ -510,7 +510,7 @@ if (self2) {
         value = value.value;
         if (value.length < closure_1.minimum) {
           const issues = value.issues;
-          const obj = { origin: closure_5.getLengthableOrigin(value), code: "too_small", minimum: tmp.minimum, inclusive: true, input: value, inst, continue: !tmp.abort };
+          const obj = { origin: closure_5.getLengthableOrigin(value), code: "too_small", minimum: closure_1.minimum, inclusive: true, input: value, inst, continue: !closure_1.abort };
           issues.push(obj);
         }
       };
@@ -620,7 +620,7 @@ if (self2) {
         const pattern = closure_1.pattern;
         if (!pattern.test(value.value)) {
           const issues = value.issues;
-          const obj = { origin: "string", code: "invalid_format", format: "regex", input: value.value, pattern: tmp.pattern.toString(), inst, continue: !tmp.abort };
+          const obj = { origin: "string", code: "invalid_format", format: "regex", input: value.value, pattern: closure_1.pattern.toString(), inst, continue: !closure_1.abort };
           issues.push(obj);
         }
       };
@@ -666,7 +666,7 @@ if (self2) {
         value = value.value;
         if (!value.includes(position.includes, position.position)) {
           const issues = value.issues;
-          const obj = { origin: "string", code: "invalid_format", format: "includes", includes: tmp.includes, input: value.value, inst, continue: !tmp.abort };
+          const obj = { origin: "string", code: "invalid_format", format: "includes", includes: position.includes, input: value.value, inst, continue: !position.abort };
           issues.push(obj);
         }
       };
@@ -694,7 +694,7 @@ if (self2) {
         value = value.value;
         if (!value.startsWith(prefix.prefix)) {
           const issues = value.issues;
-          const obj = { origin: "string", code: "invalid_format", format: "starts_with", prefix: tmp.prefix, input: value.value, inst, continue: !tmp.abort };
+          const obj = { origin: "string", code: "invalid_format", format: "starts_with", prefix: prefix.prefix, input: value.value, inst, continue: !prefix.abort };
           issues.push(obj);
         }
       };
@@ -722,7 +722,7 @@ if (self2) {
         value = value.value;
         if (!value.endsWith(suffix.suffix)) {
           const issues = value.issues;
-          const obj = { origin: "string", code: "invalid_format", format: "ends_with", suffix: tmp.suffix, input: value.value, inst, continue: !tmp.abort };
+          const obj = { origin: "string", code: "invalid_format", format: "ends_with", suffix: suffix.suffix, input: value.value, inst, continue: !suffix.abort };
           issues.push(obj);
         }
       };

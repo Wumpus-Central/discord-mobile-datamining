@@ -69,6 +69,7 @@ class TextPath {
         const root = closure_0.root;
         root.setNativeProps(matrix);
       }
+      const obj = TextPath(8469);
     };
     return tmp3Result;
   }

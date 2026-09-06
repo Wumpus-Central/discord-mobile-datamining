@@ -274,7 +274,7 @@ export const isSharedArrayBuffer = function isSharedArrayBuffer(arg0) {
   } else {
     if (undefined === isSharedArrayBufferToString.working) {
       tmp = new tmp();
-      tmp3.working = "[object SharedArrayBuffer]" === bindResult(tmp);
+      isSharedArrayBufferToString.working = "[object SharedArrayBuffer]" === bindResult(tmp);
     }
     let tmp9 = arg0;
     if (isSharedArrayBufferToString.working) {
@@ -326,21 +326,21 @@ export const isSymbolObject = function isSymbolObject(arg0) {
 export const isBoxedPrimitive = function isBoxedPrimitive(arg0) {
   let tmpResult = checkBoxedPrimitive(arg0, closure_6);
   if (!tmpResult) {
-    tmpResult = tmp(arg0, closure_7);
+    tmpResult = checkBoxedPrimitive(arg0, closure_7);
   }
   if (!tmpResult) {
-    tmpResult = tmp(arg0, closure_8);
+    tmpResult = checkBoxedPrimitive(arg0, closure_8);
   }
   if (!tmpResult) {
     tmpResult = closure_3;
     if (closure_3) {
-      tmpResult = tmp(arg0, closure_9);
+      tmpResult = checkBoxedPrimitive(arg0, closure_9);
     }
   }
   if (!tmpResult) {
     let tmpResult1 = closure_4;
     if (closure_4) {
-      tmpResult1 = tmp(arg0, closure_10);
+      tmpResult1 = checkBoxedPrimitive(arg0, closure_10);
     }
     tmpResult = tmpResult1;
   }
@@ -360,7 +360,7 @@ export const isAnyArrayBuffer = function isAnyArrayBuffer(arg0) {
         } else {
           if (undefined === isSharedArrayBufferToString.working) {
             tmp5 = new tmp5();
-            tmp7.working = "[object SharedArrayBuffer]" === bindResult(tmp5);
+            isSharedArrayBufferToString.working = "[object SharedArrayBuffer]" === bindResult(tmp5);
           }
           if (isSharedArrayBufferToString.working) {
             tmp15 = bindResult(tmp15);

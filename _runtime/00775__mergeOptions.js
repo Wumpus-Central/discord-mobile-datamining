@@ -8,7 +8,7 @@ import _mod697 from "module_697" /* 697 */;
 import _mod753 from "module_753" /* 753 */;
 import setupIntegration from "setupIntegration" /* 752 */;
 
-function _mergeOptions(arg0, options) {
+function _mergeOptions(arg0) {
   let obj = arg0;
   if (arg0 === undefined) {
     obj = {};
@@ -96,10 +96,10 @@ function _getEventFilterUrl(exception) {
     return tmp10;
   } catch (err) {
     if (_mod688.DEBUG_BUILD) {
-      const debug = tmp12(689).debug;
+      const debug = consoleSandbox.debug;
       const _HermesInternal = HermesInternal;
-      debug.error("Cannot extract url for event " + tmp12(695).getEventDescription(tmp));
-      const tmp12Result = tmp12(695);
+      debug.error("Cannot extract url for event " + uuid4.getEventDescription(tmp));
+      const tmp12Result = uuid4;
     }
     return null;
   }

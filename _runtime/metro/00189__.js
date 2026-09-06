@@ -5,12 +5,12 @@ import replacer from "replacer" /* 48 */;
 import _possibleConstructorReturnDefault from "_possibleConstructorReturn" /* 93 */;
 import _wrapNativeSuperDefault from "_wrapNativeSuper" /* 158 */;
 import _mod190 from "module_190" /* 190 */;
+import ExceptionsManager from "ExceptionsManager" /* 193 */;
 import _createClass from "_createClass" /* 42 */;
 import _classCallCheck from "_classCallCheck" /* 41 */;
 import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
 
-const ExceptionsManager = tmp(193);
 const SyntheticError = global;
 require = arg1;
 function _isNativeReflectConstruct() {
@@ -107,16 +107,30 @@ function reportException(stack, isFatal, arg2) {
           result = RN$hasHandledFatalException();
         }
         if (!result) {
-          const RN$notifyOfFatalException = tmp17.RN$notifyOfFatalException;
+          const RN$notifyOfFatalException = SyntheticError.RN$notifyOfFatalException;
           if (RN$notifyOfFatalException != null) {
             const result1 = RN$notifyOfFatalException();
           }
         }
-        tmp17 = SyntheticError;
       }
       _default.reportException(tmp14);
     }
   }
+  tmp14 = (function preprocessException(error) {
+    if (global) {
+      if (!c9) {
+        c9 = true;
+        try {
+          c9 = false;
+          return global(error);
+        } catch (tmp3) {
+          c9 = false;
+          throw tmp3;
+        }
+      }
+    }
+    return error;
+  })(error);
 }
 function reactConsoleErrorHandler() {
   const items = [...arguments];
@@ -148,7 +162,7 @@ function reactConsoleErrorHandler() {
           tmp10.name = "console.error";
           error = tmp10;
         }
-        if (!obj.RN$handleException) {
+        if (!SyntheticError.RN$handleException) {
           const message = error.message;
           if (!message.startsWith("Warning: ")) {
             reportException(error, false, false);

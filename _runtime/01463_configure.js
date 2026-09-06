@@ -11,7 +11,7 @@ function configure(arg0) {
   const merged1 = Object.assign(arg0);
   module_1464 = {};
   if (closure_8) {
-    closure_8.tearDown();
+    obj2.tearDown();
     if (typeof createState === "function") {
       const tmp10 = new StateDefault(module_1464);
       closure_8 = tmp10;
@@ -19,6 +19,8 @@ function configure(arg0) {
       throw new TypeError("Trying to call a non-function");
     }
   }
+  const obj = {};
+  obj2 = closure_8;
 }
 function fetch(arg0) {
   let obj = closure_8;
@@ -68,8 +70,8 @@ function refresh() {
   }
   return cleanupPromise;
 }
-function addEventListener(arg0) {
-  importDefault = arg0;
+function addEventListener(notifyListeners) {
+  importDefault = notifyListeners;
   let obj = closure_8;
   if (!closure_8) {
     if (typeof createState === "function") {
@@ -80,7 +82,7 @@ function addEventListener(arg0) {
       throw new TypeError("Trying to call a non-function");
     }
   }
-  obj.add(arg0);
+  obj.add(notifyListeners);
   return () => {
     if (closure_8) {
       closure_8.remove(f73164);

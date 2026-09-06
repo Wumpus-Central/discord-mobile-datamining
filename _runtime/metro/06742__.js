@@ -39,10 +39,10 @@ export const useReanimatedEventHandler = function useReanimatedEventHandler(hand
       isWorkletFunctionResult = Reanimated.isWorkletFunction(memoizedGestureCallbacks.onUpdate);
     }
     if (isWorkletFunctionResult) {
-      let obj = tmp3;
+      let obj = memoizedGestureCallbacks;
     } else {
       obj = {};
-      const merged = Object.assign(tmp3);
+      const merged = Object.assign(memoizedGestureCallbacks);
       obj.onUpdate = onUpdate;
     }
     return obj;

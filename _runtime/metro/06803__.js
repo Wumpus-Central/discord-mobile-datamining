@@ -15,9 +15,9 @@ export const usePropsValidator = (index) => {
   let items = [index, snapPoints, topInset, bottomInset, enableDynamicSizing];
   topInset(() => {
     if (snapPoints) {
-      value = obj;
-      if ("get" in obj) {
-        value = obj.get();
+      value = snapPoints;
+      if ("get" in snapPoints) {
+        value = snapPoints.get();
       }
       let items = value;
     } else {
@@ -39,9 +39,10 @@ export const usePropsValidator = (index) => {
         tmp4 = parsed === index(enableDynamicSizing[2]).INITIAL_SNAP_POINT;
       }
       snapPoints(enableDynamicSizing[1])(tmp4, "Snap point '" + item + "' is invalid. if you want to allow user to close the sheet, Please use 'enablePanDownToClose' prop.");
+      const tmp3 = snapPoints(enableDynamicSizing[1]);
     });
     let tmp9 = "value" in items;
-    let tmp2Result = tmp2(38);
+    let tmp2Result = _modDef38;
     if (!tmp9) {
       tmp9 = items.length > 0;
     }
@@ -50,19 +51,19 @@ export const usePropsValidator = (index) => {
     }
     tmp2Result(tmp9, "'snapPoints' was provided with no points! please provide at least one snap point.");
     let tmp13 = typeof index === "number";
-    tmp2Result = tmp2(38);
+    tmp2Result = _modDef38;
     if (typeof index !== "number") {
-      tmp13 = undefined === tmp12;
+      tmp13 = undefined === index;
     }
     tmp2Result(tmp13, "'index' was provided but with wrong type ! expected type is a number.");
     let tmp16 = enableDynamicSizing;
     if (!enableDynamicSizing) {
-      tmp16 = typeof tmp12 !== "number";
+      tmp16 = typeof index !== "number";
     }
     if (!tmp16) {
-      let tmp17 = tmp12 >= -1;
+      let tmp17 = index >= -1;
       if (tmp17) {
-        tmp17 = tmp12 <= items.length - 1;
+        tmp17 = index <= items.length - 1;
       }
       tmp16 = tmp17;
     }
@@ -79,5 +80,6 @@ export const usePropsValidator = (index) => {
       tmp23 = undefined === bottomInset;
     }
     _modDef38(tmp23, "'bottomInset' was provided but with wrong type ! expected type is a number.");
+    const tmp2Result3 = _modDef38;
   }, items);
 };

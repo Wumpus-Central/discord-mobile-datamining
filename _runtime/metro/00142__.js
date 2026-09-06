@@ -2,6 +2,7 @@
 
 // Module 142
 import _mod131 from "module_131" /* 131 */;
+import _mod141 from "module_141" /* 141 */;
 
 require = arg1;
 const dependencyMap = arg6;
@@ -22,7 +23,7 @@ export const getElementSibling = function getElementSibling(parentNode, next) {
       }
       const sum = index + num;
       if (null == closure_2) {
-        closure_2 = tmp9(141).default;
+        closure_2 = _mod141.default;
       }
       let tmp3 = sum;
       if (null != childNodes[sum]) {
@@ -46,6 +47,5 @@ export const getElementSibling = function getElementSibling(parentNode, next) {
       }
       return tmp8;
     }
-    tmp9 = require;
   }
 };

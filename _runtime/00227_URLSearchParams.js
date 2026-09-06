@@ -126,7 +126,7 @@ let items = [
         c6 = 0;
         c9 = 0;
         c8 = 0;
-        return (function* generateValues(arg0, value) {
+        return (function* generateValues(arg0) {
           if (c9 === 2) {
             c9 = 3;
             throw new TypeError("Generator functions may not be called on executing generators");
@@ -212,7 +212,7 @@ let items = [
         c9 = 0;
         c10 = 0;
         c8 = 0;
-        return (function* generateEntries(arg0, value) {
+        return (function* generateEntries(arg0) {
           if (c10 === 2) {
             c10 = 3;
             throw new TypeError("Generator functions may not be called on executing generators");
@@ -311,6 +311,7 @@ let items = [
         }
         continue;
       }
+      tmp = this._searchParams[Symbol.iterator]();
     }
   },
   {

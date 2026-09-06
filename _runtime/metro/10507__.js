@@ -29,24 +29,24 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-function createTimeComponents(createParsingComponents, arg1, arg2, arg3, arg4) {
+function createTimeComponents(createParsingComponents, match, match2, match3, match4) {
   const parsingComponents = createParsingComponents.createParsingComponents();
-  let parsed = parseInt(JPTimeExpressionParser(10502).toHankaku(arg1));
+  let parsed = parseInt(JPTimeExpressionParser(10502).toHankaku(match));
   if (isNaN(parsed)) {
-    parsed = tmp(10502).jaStringToNumber(arg1);
+    parsed = JPTimeExpressionParser(10502).jaStringToNumber(match);
   }
   if (parsed > 24) {
     return null;
   } else {
-    if (arg2) {
+    if (match2) {
       let num = 30;
-      if ("\u534A" !== arg2) {
+      if ("\u534A" !== match2) {
         const _parseInt = parseInt;
-        const parsed1 = parseInt(tmp(10502).toHankaku(arg2));
+        const parsed1 = parseInt(JPTimeExpressionParser(10502).toHankaku(match2));
         const _isNaN = isNaN;
         num = parsed1;
         if (isNaN(parsed1)) {
-          num = tmp(10502).jaStringToNumber(arg2);
+          num = JPTimeExpressionParser(10502).jaStringToNumber(match2);
         }
       }
       if (num >= 60) {
@@ -55,12 +55,12 @@ function createTimeComponents(createParsingComponents, arg1, arg2, arg3, arg4) {
         parsingComponents.assign("minute", num);
       }
     }
-    if (arg3) {
+    if (match3) {
       const _parseInt2 = parseInt;
-      let parsed2 = parseInt(tmp(10502).toHankaku(arg3));
+      let parsed2 = parseInt(JPTimeExpressionParser(10502).toHankaku(match3));
       const _isNaN2 = isNaN;
       if (isNaN(parsed2)) {
-        parsed2 = tmp(10502).jaStringToNumber(arg3);
+        parsed2 = JPTimeExpressionParser(10502).jaStringToNumber(match3);
       }
       if (parsed2 >= 60) {
         return null;
@@ -70,15 +70,15 @@ function createTimeComponents(createParsingComponents, arg1, arg2, arg3, arg4) {
     }
     let num5 = -1;
     let num6 = parsed;
-    if (arg4) {
+    if (match4) {
       if (parsed > 12) {
         return null;
       } else {
-        if ("\u5348\u524D" !== arg4) {
+        if ("\u5348\u524D" !== match4) {
           if ("a" !== str2.toLowerCase()) {
-            let tmp8 = "\u5348\u5F8C" !== arg4;
+            let tmp8 = "\u5348\u5F8C" !== match4;
             if (tmp8) {
-              tmp8 = "p" !== arg4[0].toLowerCase();
+              tmp8 = "p" !== match4[0].toLowerCase();
             }
             num5 = -1;
             num6 = parsed;
@@ -88,12 +88,12 @@ function createTimeComponents(createParsingComponents, arg1, arg2, arg3, arg4) {
                 sum = parsed + 12;
               }
               num6 = sum;
-              num5 = tmp(10437).Meridiem.PM;
+              num5 = JPTimeExpressionParser(10437).Meridiem.PM;
             }
           }
-          str2 = arg4[0];
+          str2 = match4[0];
         }
-        const AM = tmp(10437).Meridiem.AM;
+        const AM = JPTimeExpressionParser(10437).Meridiem.AM;
         num5 = AM;
         num6 = parsed;
         if (12 === parsed) {
@@ -106,9 +106,9 @@ function createTimeComponents(createParsingComponents, arg1, arg2, arg3, arg4) {
     if (num5 >= 0) {
       parsingComponents.assign("meridiem", num5);
     } else if (num6 < 12) {
-      parsingComponents.imply("meridiem", tmp(10437).Meridiem.AM);
+      parsingComponents.imply("meridiem", JPTimeExpressionParser(10437).Meridiem.AM);
     } else {
-      parsingComponents.imply("meridiem", tmp(10437).Meridiem.PM);
+      parsingComponents.imply("meridiem", JPTimeExpressionParser(10437).Meridiem.PM);
     }
     return parsingComponents;
   }
@@ -178,7 +178,7 @@ const items = [
           if (null === tmp11) {
             tmp11 = match[5];
           }
-          parsingResult.end = tmp2(createParsingResult, match[2], match[3], match[4], tmp11);
+          parsingResult.end = createTimeComponents(createParsingResult, match[2], match[3], match[4], tmp11);
           let tmp17 = null;
           if (parsingResult.end) {
             const end = parsingResult.end;
@@ -199,7 +199,7 @@ const items = [
                 const diff = start5.get("hour") - 12;
                 if (diff > end10.get("hour")) {
                   const end6 = parsingResult.end;
-                  end6.imply("meridiem", tmp22(10437).Meridiem.AM);
+                  end6.imply("meridiem", JPTimeExpressionParser(10437).Meridiem.AM);
                 } else {
                   const end3 = parsingResult.end;
                   if (end3.get("hour") < 12) {
@@ -208,7 +208,6 @@ const items = [
                   }
                 }
               }
-              tmp22 = JPTimeExpressionParser;
             }
             const end7 = parsingResult.end;
             const start4 = parsingResult.start;

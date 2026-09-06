@@ -22,7 +22,7 @@ import _mod10615 from "module_10615" /* 10615 */;
 import _mod10616 from "module_10616" /* 10616 */;
 import _mod10617 from "module_10617" /* 10617 */;
 
-function createConfiguration(flag, arg1) {
+function createConfiguration() {
   if (flag === undefined) {
     flag = true;
   }

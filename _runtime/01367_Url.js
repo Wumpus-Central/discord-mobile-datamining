@@ -1009,7 +1009,7 @@ export const parse = function urlParse(obj, arg1, arg2) {
       }
     }
   }
-  Object.create(Url.prototype);
+  obj = Object.create(Url.prototype);
   const url = { protocol: null, slashes: null, auth: null, host: null, port: null, hostname: null, hash: null, search: null, query: null, pathname: null, path: null, href: null };
   const parsed = url.parse(obj, arg1, arg2);
   return url;
@@ -1021,7 +1021,7 @@ export const resolve = function urlResolve(obj, arg1) {
     }
     return obj2.resolve(arg1);
   }
-  Object.create(Url.prototype);
+  obj = Object.create(Url.prototype);
   const url = { protocol: null, slashes: null, auth: null, host: null, port: null, hostname: null, hash: null, search: null, query: null, pathname: null, path: null, href: null };
   const parsed = url.parse(obj, false, true);
   obj2 = url;

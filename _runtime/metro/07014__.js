@@ -125,7 +125,7 @@ class CardStack {
               if (undefined === headerStatusBarHeight) {
                 let num = 0;
                 if (!closure_2) {
-                  num = tmp6.top;
+                  num = scenes.top;
                 }
                 headerStatusBarHeight = num;
               }
@@ -144,7 +144,7 @@ class CardStack {
                   let num5 = 0;
                   if (0 <= diff) {
                     while (true) {
-                      let tmp11 = tmp6[diff];
+                      let tmp11 = scenes[diff];
                       let prop;
                       if (tmp11 != null) {
                         prop = tmp11.descriptor.options.cardStyleInterpolator;
@@ -275,7 +275,7 @@ const entry = {
     let items = [closure_19.floating, ];
     if (someResult) {
       const obj1 = { height: headerHeights[tmp2.key] };
-      const items1 = [obj1, tmp6.absolute];
+      const items1 = [obj1, closure_19.absolute];
       someResult = items1;
     }
     items[1] = someResult;
@@ -293,11 +293,10 @@ const entry = {
       const preloadedRoutes2 = state.preloadedRoutes;
       if (preloadedRoutes2.includes(key)) {
         if (routes.includes(key)) {
-          if (index >= arr.length) {
+          if (index >= routes.length) {
             return null;
           }
         }
-        arr = routes;
       }
       const options = tmp2.descriptor.options;
       const headerShown = options.headerShown;
@@ -313,7 +312,7 @@ const entry = {
         let num4 = 0;
         if (0 <= diff) {
           while (true) {
-            let tmp11 = tmp[diff];
+            let tmp11 = scenes[diff];
             let prop;
             if (tmp11 != null) {
               prop = tmp11.descriptor.options.cardStyleInterpolator;
@@ -349,11 +348,11 @@ const entry = {
             }
           }
           let presentation;
-          if (tmp[index + 1] != null) {
+          if (scenes[index + 1] != null) {
             presentation = tmp21.descriptor.options.presentation;
           }
           let detachPreviousScreen;
-          if (tmp[index + 1] != null) {
+          if (scenes[index + 1] != null) {
             detachPreviousScreen = tmp23.descriptor.options.detachPreviousScreen;
           }
           let num5 = 0;
@@ -425,9 +424,9 @@ const entry1 = {
       let str = options.animation;
       value = closure_1.gestures[key.key];
       if (!value) {
-        const openingRouteKeys = tmp.openingRouteKeys;
+        const openingRouteKeys = closure_0.openingRouteKeys;
         if (!openingRouteKeys.includes(key.key)) {
-          const preloadedRoutes = tmp.state.preloadedRoutes;
+          const preloadedRoutes = closure_0.state.preloadedRoutes;
           let num = 0;
           value = new Value.Value(num);
         } else if (str == null) {
@@ -437,7 +436,7 @@ const entry1 = {
         if (tmp2 != null) {
           options1 = tmp2.options;
         }
-        num = getDistanceFromOptions(tmp3.layout, options1, "rtl" === tmp.direction);
+        num = getDistanceFromOptions(tmp3.layout, options1, "rtl" === closure_0.direction);
       }
       acc[key.key] = value;
       return acc;
@@ -463,10 +462,10 @@ const entry1 = {
       __memo = tmp6;
       let descriptor = reduced[key.key];
       if (tmp3) {
-        let obj1 = tmp7[tmp3.key];
+        let obj1 = reduced[tmp3.key];
       }
       if (tmp4) {
-        let obj2 = tmp7[tmp4.key];
+        let obj2 = reduced[tmp4.key];
       }
       const tmp8 = hasItem ? __memo.preloadedDescriptors : __memo.descriptors[key.key] || closure_1.descriptors[key.key];
       if (tmp8) {
@@ -482,7 +481,7 @@ const entry1 = {
             if (tmp4 != null) {
               key1 = tmp4.key;
             }
-            tmp13 = tmp5.descriptors[key1];
+            tmp13 = closure_1.descriptors[key1];
           }
           let options;
           if (tmp13 != null) {
@@ -502,7 +501,7 @@ const entry1 = {
             if (tmp3 != null) {
               key3 = tmp3.key;
             }
-            tmp19 = tmp5.descriptors[key3];
+            tmp19 = closure_1.descriptors[key3];
           }
           let options1;
           if (tmp19 != null) {
@@ -618,7 +617,7 @@ const entry1 = {
             obj1.headerMode = str10;
             descriptor.options = obj1;
             descriptor.descriptor = descriptor;
-            const layout = tmp5.layout;
+            const layout = closure_1.layout;
             if (typeof getProgressFromGesture === "function") {
               const size = { width: null, height: null };
               const _Math = Math;
@@ -646,14 +645,14 @@ const entry1 = {
                   presentation3 = tmp10.presentation;
                 }
                 if ("transparentModal" !== presentation3) {
-                  const layout3 = tmp5.layout;
-                  if (typeof tmp54 === "function") {
+                  const layout3 = closure_1.layout;
+                  if (typeof getProgressFromGesture === "function") {
                     const size1 = { width: null, height: null };
                     const _Math3 = Math;
                     size1.width = Math.max(1, layout3.width);
                     const _Math4 = Math;
                     size1.height = Math.max(1, layout3.height);
-                    let tmp57Result = tmp57(size1, tmp10, tmp56);
+                    let tmp57Result = getDistanceFromOptions(size1, tmp10, tmp56);
                     if (tmp57Result > 0) {
                       const obj5 = { inputRange: null, outputRange: null };
                       const items2 = [0, tmp57Result];
@@ -676,7 +675,7 @@ const entry1 = {
               if (!obj1) {
                 obj4.previous = undefined;
                 descriptor.progress = obj4;
-                const items4 = [tmp5.layout, tmp8, tmp10, tmp16, descriptor, obj2, obj1];
+                const items4 = [closure_1.layout, tmp8, tmp10, tmp16, descriptor, obj2, obj1];
                 descriptor.__memo = items4;
                 let tmp69 = descriptor;
                 if (tmp6) {
@@ -688,14 +687,14 @@ const entry1 = {
                 }
                 return tmp69;
               } else {
-                const layout2 = tmp5.layout;
-                if (typeof tmp54 === "function") {
+                const layout2 = closure_1.layout;
+                if (typeof getProgressFromGesture === "function") {
                   const size2 = { width: null, height: null };
                   const _Math5 = Math;
                   size2.width = Math.max(1, layout2.width);
                   const _Math6 = Math;
                   size2.height = Math.max(1, layout2.height);
-                  tmp57Result = tmp57(size2, tmp16, tmp56);
+                  tmp57Result = getDistanceFromOptions(size2, tmp16, tmp56);
                   if (tmp57Result > 0) {
                     const obj7 = { inputRange: null, outputRange: null };
                     const items5 = [0, tmp57Result];
@@ -817,7 +816,7 @@ const entry1 = {
         if (undefined === headerStatusBarHeight) {
           let num = 0;
           if (!closure_2) {
-            num = tmp6.top;
+            num = scenes.top;
           }
           headerStatusBarHeight = num;
         }
@@ -836,7 +835,7 @@ const entry1 = {
             let num5 = 0;
             if (0 <= diff) {
               while (true) {
-                let tmp11 = tmp6[diff];
+                let tmp11 = scenes[diff];
                 let prop;
                 if (tmp11 != null) {
                   prop = tmp11.descriptor.options.cardStyleInterpolator;

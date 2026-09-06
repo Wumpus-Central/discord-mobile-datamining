@@ -59,11 +59,10 @@ function replaceLoggerImplementation(fn) {
   const merged = Object.assign(global.__reanimatedLoggerConfig);
   obj.logFunction = fn;
   if (typeof registerLoggerConfig === "function") {
-    tmp.__reanimatedLoggerConfig = obj;
+    global.__reanimatedLoggerConfig = obj;
   } else {
     throw new TypeError("Trying to call a non-function");
   }
-  tmp = global;
 }
 replaceLoggerImplementation.__closure = { registerLoggerConfig };
 replaceLoggerImplementation.__workletHash = 9450518662656;
@@ -87,13 +86,11 @@ function updateLoggerConfig(level) {
     strict = obj.strict;
   }
   obj.strict = strict;
-  if (typeof tmp === "function") {
-    tmp2.__reanimatedLoggerConfig = obj;
+  if (typeof registerLoggerConfig === "function") {
+    global.__reanimatedLoggerConfig = obj;
   } else {
     throw new TypeError("Trying to call a non-function");
   }
-  tmp = registerLoggerConfig;
-  tmp2 = global;
 }
 updateLoggerConfig.__closure = { registerLoggerConfig, DEFAULT_LOGGER_CONFIG: obj };
 updateLoggerConfig.__workletHash = 14435084623184;
@@ -114,7 +111,8 @@ function handleLog(error, arg1, strict) {
       if (typeof formatMessage === "function") {
         const _HermesInternal2 = HermesInternal;
         const combined = "[Reanimated] " + sum;
-        error = { level: error, message: null, category: null, componentStack: null, componentStackType: null, stack: null };
+        error = { level: null, message: null, category: null, componentStack: null, componentStackType: null, stack: null };
+        error.level = error;
         obj = { content: combined, substitutions: [] };
         error.message = obj;
         error.category = combined;
@@ -135,7 +133,7 @@ handleLog.__closure = { LogLevel: obj, DOCS_REFERENCE: "If you don't want to see
 handleLog.__workletHash = 5113579927044;
 handleLog.__initData = { code: "function handleLog_Pnpm_loggerTs7(level,message,options){const{LogLevel,DOCS_REFERENCE,createLog}=this.__closure;const config=global.__reanimatedLoggerConfig;if(options.strict&&!config.strict||LogLevel[level]<config.level){return;}if(options.strict){message+=\"\\n\\n\"+DOCS_REFERENCE;}config.logFunction(createLog(level,message));}" };
 obj = { warn: null, error: null };
-const fn = function v(arg0, strict) {
+const fn = function v(arg0) {
   obj = strict;
   if (strict === undefined) {
     obj = {};

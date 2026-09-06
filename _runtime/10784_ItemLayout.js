@@ -3,6 +3,7 @@
 // Module 10784 (ItemLayout)
 import cancelAnimation from "cancelAnimation" /* 1636 */;
 import _mod10767 from "module_10767" /* 10767 */;
+import _mod10785 from "module_10785" /* 10785 */;
 import noop from "module_19" /* 19 */;
 
 const cancelAnimationDefault = cancelAnimation;
@@ -35,9 +36,9 @@ export const ItemLayout = (animationStyle) => {
     obj.type = str;
     obj.viewCount = modeConfig.showLength;
   }
-  let tmpResult = tmp(10785);
+  let tmpResult = _mod10785;
   const offsetX = tmpResult.useOffsetX(obj, visibleRanges);
-  tmpResult = tmp(1636);
+  tmpResult = cancelAnimation;
   const fn = function k() {
     return offsetX.value / height;
   };

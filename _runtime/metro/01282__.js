@@ -455,11 +455,11 @@ export default function GetIntrinsic(str, flag) {
           const text = `${"%" + str}%`;
           let text1 = text;
           if (items(1315)(merged1, `${"%" + str}%`)) {
-            const tmp13 = tmp10[`${"%" + str}%`];
+            const tmp13 = merged1[`${"%" + str}%`];
             text1 = `${"%" + tmp13[0]}%`;
           }
           if (items(1315)(merged, text1)) {
-            if (tmp14[text1] !== obj) {
+            if (merged[text1] !== obj) {
               if (undefined === tmp22) {
                 if (!flag) {
                   const _HermesInternal2 = HermesInternal;
@@ -495,9 +495,8 @@ export default function GetIntrinsic(str, flag) {
                           let _HermesInternal3 = HermesInternal;
                           let combined = "%" + text2 + "%";
                           let tmp55 = items;
-                          let tmp57 = merged;
                           if (items(1315)(merged, combined)) {
-                            let tmp59 = tmp57[combined];
+                            let tmp59 = merged[combined];
                             let tmp58 = flag;
                           } else {
                             tmp58 = flag;
@@ -527,7 +526,7 @@ export default function GetIntrinsic(str, flag) {
                                 tmp58 = tmp64;
                                 tmp59 = tmp65;
                                 if (tmp70) {
-                                  tmp57[combined] = tmp65;
+                                  merged[combined] = tmp65;
                                   tmp58 = tmp64;
                                   tmp59 = tmp65;
                                 }
@@ -571,7 +570,7 @@ export default function GetIntrinsic(str, flag) {
                     if (tmp108) {
                       prototype = tmp108.prototype;
                     }
-                    tmp14["%AsyncGenerator%"] = prototype;
+                    merged["%AsyncGenerator%"] = prototype;
                     let tmp8Result1 = prototype;
                     if (prototype) {
                       tmp8Result1 = tmp8(1288);
@@ -582,12 +581,12 @@ export default function GetIntrinsic(str, flag) {
                   }
                 }
                 const tmp27 = getEvalledConstructor("async function* () {}");
-                tmp14["%AsyncGeneratorFunction%"] = tmp27;
+                merged["%AsyncGeneratorFunction%"] = tmp27;
                 if (tmp27) {
                   prototype = tmp27.prototype;
                 }
               }
-              tmp14[text1] = prototype;
+              merged[text1] = prototype;
             } else {
               throw new TypeError("Trying to call a non-function");
             }
@@ -596,7 +595,6 @@ export default function GetIntrinsic(str, flag) {
             const tmp8Result21 = new tmp8(1304)("intrinsic " + text + " does not exist!");
             throw tmp8Result21;
           }
-          tmp10 = merged1;
         } else {
           throw new TypeError("Trying to call a non-function");
         }

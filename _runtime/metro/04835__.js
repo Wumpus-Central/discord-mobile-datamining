@@ -22,11 +22,10 @@ if (Object.keys) {
 
   };
   if (typeof call2 === "unknown") {
-    let propertyIsEnumerableResult1 = propertyIsEnumerable("prototype");
+    propertyIsEnumerable("prototype");
   } else {
-    propertyIsEnumerableResult1 = call2(fn, "prototype");
+    call2(fn, "prototype");
   }
-  let length = ["toString", "toLocaleString", "valueOf", "hasOwnProperty", "isPrototypeOf", "propertyIsEnumerable", "constructor"];
   function equalsConstructorPrototype(arg0) {
     const constructor = arg0.constructor;
     let tmp = constructor;
@@ -44,11 +43,10 @@ if (Object.keys) {
       for (const key10002 in window) {
         try {
           if (!closure_7["$" + key10002]) {
-            let tmp2 = hasOwnProperty;
             let call = hasOwnProperty.call;
             let _window = window;
             if (typeof call === "unknown") {
-              let callResult = tmp2(key10002);
+              let callResult = hasOwnProperty(key10002);
             } else {
               callResult = call(_window, key10002);
             }
@@ -100,7 +98,7 @@ if (Object.keys) {
       if (tmp) {
         if (obj.length > 0) {
           const call3 = hasOwnProperty.call;
-          if (!(typeof call3 === "unknown" ? tmp13(0) : call3(obj, 0))) {
+          if (!(typeof call3 === "unknown" ? hasOwnProperty(0) : call3(obj, 0))) {
             let num3 = 0;
             if (0 < obj.length) {
               do {
@@ -111,7 +109,6 @@ if (Object.keys) {
               } while (num3 < length);
             }
           }
-          tmp13 = hasOwnProperty;
         }
       }
       if (tmp3) {
@@ -176,10 +173,9 @@ if (Object.keys) {
           }
           continue;
         } else {
-          let tmp19 = hasOwnProperty;
           let call4 = hasOwnProperty.call;
           if (typeof call4 === "unknown") {
-            let call4Result = tmp19(key10045);
+            let call4Result = hasOwnProperty(key10045);
           } else {
             call4Result = call4(arg0, key10045);
           }
@@ -191,6 +187,7 @@ if (Object.keys) {
       str = "[object String]";
       const tmp4 = typeof call2 === "unknown" ? str() : call2(obj);
     }
+    const tmp2 = typeof call === "unknown" ? str() : call(obj);
   }
   obj = { toString: null };
 }

@@ -17,13 +17,13 @@ fn = function n(toValue, userConfig, callback) {
     const merged = Object.assign(dependencyMap);
     let duration;
     if (dependencyMap != null) {
-      duration = tmp.duration;
+      duration = dependencyMap.duration;
     }
     let tmp4 = !duration;
     if (!duration) {
       let dampingRatio;
-      if (tmp != null) {
-        dampingRatio = tmp.dampingRatio;
+      if (dependencyMap != null) {
+        dampingRatio = dependencyMap.dampingRatio;
       }
       tmp4 = !dampingRatio;
     }

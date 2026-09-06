@@ -36,9 +36,9 @@ let items = [
   entry,
   {
     key: "assert",
-    value: function assert(arg0, arg1, arg2) {
+    value: function assert(arg0, arg1, PbLong) {
       if (!arg0) {
-        const typeofJsonValueResult = ReflectionJsonReader(1189).typeofJsonValue(arg2);
+        const typeofJsonValueResult = ReflectionJsonReader(1189).typeofJsonValue(PbLong);
         let str = "number";
         let tmp5 = "number" != typeofJsonValueResult;
         if (tmp5) {
@@ -46,7 +46,7 @@ let items = [
         }
         str = typeofJsonValueResult;
         if (!tmp5) {
-          str = arg2.toString();
+          str = PbLong.toString();
         }
         const self = this;
         const _Error = Error;
@@ -121,7 +121,6 @@ let items = [
                 }
                 let assertResult2 = self.assert(undefined !== internalJsonReadResult, obj.name + " map value", tmp66);
                 let first = tmp64[0];
-                let tmp82 = ReflectionJsonReader;
                 if (obj.K == ReflectionJsonReader(1201).ScalarType.BOOL) {
                   let tmp86 = "true" == first;
                   if (!tmp86) {
@@ -133,7 +132,7 @@ let items = [
                   }
                   first = tmp86;
                 }
-                let str3 = self.scalar(first, obj.K, tmp82(1201).LongType.STRING, obj.name);
+                let str3 = self.scalar(first, obj.K, ReflectionJsonReader(1201).LongType.STRING, obj.name);
                 let str = str3.toString();
                 tmp124[str] = internalJsonReadResult;
                 continue;
@@ -147,19 +146,18 @@ let items = [
               let assertResult3 = self.assert(Array.isArray(tmp9), obj.name, tmp9);
               let arr2 = tmp17[localName];
               for (const item10121 of tmp9) {
-                let tmp42 = item10121;
                 let assertResult4 = self.assert(null !== item10121, obj.name, null);
                 let internalJsonReadResult1;
                 let kind2 = obj.kind;
                 if ("message" === kind2) {
                   let TResult1 = obj.T();
-                  internalJsonReadResult1 = TResult1.internalJsonRead(tmp42, arg2);
+                  internalJsonReadResult1 = TResult1.internalJsonRead(item10121, arg2);
                 } else if ("enum" === kind2) {
-                  let enumResult1 = self.enum(obj.T(), tmp42, obj.name, arg2.ignoreUnknownFields);
+                  let enumResult1 = self.enum(obj.T(), item10121, obj.name, arg2.ignoreUnknownFields);
                   internalJsonReadResult1 = enumResult1;
                   continue;
                 } else if ("scalar" === kind2) {
-                  internalJsonReadResult1 = self.scalar(tmp42, obj.T, obj.L, obj.name);
+                  internalJsonReadResult1 = self.scalar(item10121, obj.T, obj.L, obj.name);
                 }
                 let assertResult5 = self.assert(undefined !== internalJsonReadResult1, obj.name, tmp9);
                 arr = arr2.push(internalJsonReadResult1);
@@ -201,6 +199,7 @@ let items = [
         }
         continue;
       }
+      tmp3 = entries[Symbol.iterator]();
     }
   },
   {
@@ -209,7 +208,7 @@ let items = [
       const self = this;
       if ("google.protobuf.NullValue" == arg0[0]) {
         const _HermesInternal = HermesInternal;
-        ReflectionJsonReader(1197).assert(null === str, "Unable to parse field " + self.info.typeName + "#" + arg2 + ", enum " + arg0[0] + " only accepts null.");
+        ReflectionJsonReader(1197).assert(null === " only accepts null.", "Unable to parse field " + self.info.typeName + "#" + arg2 + ", enum " + arg0[0] + " only accepts null.");
         const obj = ReflectionJsonReader(1197);
       }
       if (null === str) {
@@ -243,6 +242,7 @@ let items = [
       } else {
         const _HermesInternal2 = HermesInternal;
         ReflectionJsonReader(1197).assert(false, "Unable to parse field " + self.info.typeName + "#" + arg2 + ", cannot parse enum value from " + tmp31 + "\".");
+        const obj2 = ReflectionJsonReader(1197);
       }
     }
   },
@@ -251,24 +251,24 @@ let items = [
     value: function scalar(flag, arg1, STRING, arg3) {
       try {
         if (ReflectionJsonReader(1201).ScalarType.DOUBLE !== arg1) {
-          if (tmp3(1201).ScalarType.FLOAT !== arg1) {
-            if (tmp3(1201).ScalarType.INT32 !== arg1) {
-              if (tmp3(1201).ScalarType.FIXED32 !== arg1) {
-                if (tmp3(1201).ScalarType.SFIXED32 !== arg1) {
-                  if (tmp3(1201).ScalarType.SINT32 !== arg1) {
-                    if (tmp3(1201).ScalarType.UINT32 !== arg1) {
-                      if (tmp3(1201).ScalarType.INT64 !== arg1) {
-                        if (tmp3(1201).ScalarType.SFIXED64 !== arg1) {
-                          if (tmp3(1201).ScalarType.SINT64 !== arg1) {
-                            if (tmp3(1201).ScalarType.FIXED64 !== arg1) {
-                              if (tmp3(1201).ScalarType.UINT64 !== arg1) {
-                                if (tmp3(1201).ScalarType.BOOL === arg1) {
+          if (ReflectionJsonReader(1201).ScalarType.FLOAT !== arg1) {
+            if (ReflectionJsonReader(1201).ScalarType.INT32 !== arg1) {
+              if (ReflectionJsonReader(1201).ScalarType.FIXED32 !== arg1) {
+                if (ReflectionJsonReader(1201).ScalarType.SFIXED32 !== arg1) {
+                  if (ReflectionJsonReader(1201).ScalarType.SINT32 !== arg1) {
+                    if (ReflectionJsonReader(1201).ScalarType.UINT32 !== arg1) {
+                      if (ReflectionJsonReader(1201).ScalarType.INT64 !== arg1) {
+                        if (ReflectionJsonReader(1201).ScalarType.SFIXED64 !== arg1) {
+                          if (ReflectionJsonReader(1201).ScalarType.SINT64 !== arg1) {
+                            if (ReflectionJsonReader(1201).ScalarType.FIXED64 !== arg1) {
+                              if (ReflectionJsonReader(1201).ScalarType.UINT64 !== arg1) {
+                                if (ReflectionJsonReader(1201).ScalarType.BOOL === arg1) {
                                   if (null === flag) {
                                     return false;
                                   } else if (typeof flag === "boolean") {
                                     return flag;
                                   }
-                                } else if (tmp3(1201).ScalarType.STRING === arg1) {
+                                } else if (ReflectionJsonReader(1201).ScalarType.STRING === arg1) {
                                   if (null === flag) {
                                     return "";
                                   } else if (typeof flag !== "string") {
@@ -281,11 +281,11 @@ let items = [
                                     } catch (err) {
                                     }
                                   }
-                                } else if (tmp3(1201).ScalarType.BYTES === arg1) {
+                                } else if (ReflectionJsonReader(1201).ScalarType.BYTES === arg1) {
                                   if (null !== flag) {
                                     if ("" !== flag) {
                                       if (typeof flag === "string") {
-                                        let tmp3Result = tmp3(1190);
+                                        let tmp3Result = ReflectionJsonReader(1190);
                                         return tmp3Result.base64decode(flag);
                                       }
                                     }
@@ -297,20 +297,20 @@ let items = [
                               }
                             }
                             if (null === flag) {
-                              tmp3Result = tmp3(1206);
-                              return tmp3Result.reflectionLongConvert(tmp3(1195).PbULong.ZERO, STRING);
+                              tmp3Result = ReflectionJsonReader(1206);
+                              return tmp3Result.reflectionLongConvert(ReflectionJsonReader(1195).PbULong.ZERO, STRING);
                             } else {
-                              const PbULong = tmp3(1195).PbULong;
-                              return tmp3(1206).reflectionLongConvert(PbULong.from(flag), STRING);
+                              const PbULong = ReflectionJsonReader(1195).PbULong;
+                              return ReflectionJsonReader(1206).reflectionLongConvert(PbULong.from(flag), STRING);
                             }
                           }
                         }
                       }
                       if (null === flag) {
-                        return tmp3(1206).reflectionLongConvert(tmp3(1195).PbLong.ZERO, STRING);
+                        return ReflectionJsonReader(1206).reflectionLongConvert(ReflectionJsonReader(1195).PbLong.ZERO, STRING);
                       } else {
-                        const PbLong = tmp3(1195).PbLong;
-                        return tmp3(1206).reflectionLongConvert(PbLong.from(flag), STRING);
+                        const PbLong = ReflectionJsonReader(1195).PbLong;
+                        return ReflectionJsonReader(1206).reflectionLongConvert(PbLong.from(flag), STRING);
                       }
                     }
                   }
@@ -333,12 +333,12 @@ let items = [
                 }
               }
               if (undefined !== NumberResult) {
-                if (arg1 == tmp3(1201).ScalarType.UINT32) {
-                  tmp3(1197).assertUInt32(NumberResult);
-                  const tmp3Result4 = tmp3(1197);
+                if (arg1 == ReflectionJsonReader(1201).ScalarType.UINT32) {
+                  ReflectionJsonReader(1197).assertUInt32(NumberResult);
+                  const tmp3Result4 = ReflectionJsonReader(1197);
                 } else {
-                  tmp3(1197).assertInt32(NumberResult);
-                  const tmp3Result5 = tmp3(1197);
+                  ReflectionJsonReader(1197).assertInt32(NumberResult);
+                  const tmp3Result5 = ReflectionJsonReader(1197);
                 }
                 return NumberResult;
               }
@@ -379,9 +379,9 @@ let items = [
             } else {
               const _Number4 = Number;
               if (Number.isFinite(tmp26)) {
-                if (arg1 == tmp3(1201).ScalarType.FLOAT) {
-                  tmp3(1197).assertFloat32(tmp26);
-                  const tmp3Result6 = tmp3(1197);
+                if (arg1 == ReflectionJsonReader(1201).ScalarType.FLOAT) {
+                  ReflectionJsonReader(1197).assertFloat32(tmp26);
+                  const tmp3Result6 = ReflectionJsonReader(1197);
                 }
                 return NumberResult1;
               } else {

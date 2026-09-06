@@ -3,6 +3,8 @@
 // Module 14252 (SetNumberFormatUnitOptions)
 import _mod14206 from "module_14206" /* 14206 */;
 import GetOption from "GetOption" /* 14211 */;
+import IsWellFormedCurrencyCode from "IsWellFormedCurrencyCode" /* 14216 */;
+import IsWellFormedUnitIdentifier from "IsWellFormedUnitIdentifier" /* 14217 */;
 
 require = arg1;
 const dependencyMap = arg6;
@@ -18,7 +20,7 @@ export const SetNumberFormatUnitOptions = function SetNumberFormatUnitOptions(in
   const str = GetOption.GetOption(obj, "currency", "string", undefined, undefined);
   let result = undefined === str;
   if (!result) {
-    result = tmp4(14216).IsWellFormedCurrencyCode(str);
+    result = IsWellFormedCurrencyCode.IsWellFormedCurrencyCode(str);
   }
   _mod14206.invariant(result, "Malformed currency code", RangeError);
   let tmp10 = "currency" !== GetOptionResult;
@@ -30,7 +32,7 @@ export const SetNumberFormatUnitOptions = function SetNumberFormatUnitOptions(in
   const GetOptionResult3 = GetOption.GetOption(obj, "unit", "string", undefined, undefined);
   result1 = undefined === GetOptionResult3;
   if (!result1) {
-    result1 = tmp4(14217).IsWellFormedUnitIdentifier(GetOptionResult3);
+    result1 = IsWellFormedUnitIdentifier.IsWellFormedUnitIdentifier(GetOptionResult3);
   }
   _mod14206.invariant(result1, "Invalid unit argument for Intl.NumberFormat()", RangeError);
   let tmp17 = "unit" !== GetOptionResult;
@@ -48,4 +50,5 @@ export const SetNumberFormatUnitOptions = function SetNumberFormatUnitOptions(in
     internalSlots.unit = GetOptionResult3;
     internalSlots.unitDisplay = GetOptionResult4;
   }
+  GetOptionResult4 = GetOption.GetOption(obj, "unitDisplay", "string", ["short", "narrow", "long"], "short");
 };

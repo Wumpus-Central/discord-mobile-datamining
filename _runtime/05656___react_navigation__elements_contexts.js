@@ -11,15 +11,15 @@ if (__react_navigation__elements_contexts == null) {
 }
 globalThis.__react_navigation__elements_contexts = __react_navigation__elements_contexts;
 
-export const getNamedContext = function getNamedContext(FrameContext, arg1) {
+export const getNamedContext = function getNamedContext(FrameContext, fakeSharedValue) {
   value = globalThis[__react_navigation__elements_contexts].get(FrameContext);
   if (!value) {
-    const context = noop.createContext(arg1);
+    const context = noop.createContext(fakeSharedValue);
     context.displayName = FrameContext;
     const _globalThis = globalThis;
-    const result = globalThis[tmp].set(FrameContext, context);
+    const result = globalThis[__react_navigation__elements_contexts].set(FrameContext, context);
     value = context;
-    const obj2 = globalThis[tmp];
+    const obj2 = globalThis[__react_navigation__elements_contexts];
   }
   return value;
 };

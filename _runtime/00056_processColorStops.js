@@ -34,13 +34,11 @@ function processColorStops(nextResult) {
         if (null != positions) {
           if (positions.length > 0) {
             for (const item10036 of positions) {
-              let obj4 = item10036;
               if (typeof item10036 !== "number") {
                 obj3.return();
                 return null;
               }
-              obj = { color: defaultResult, position: null };
-              obj.position = obj4;
+              obj = { color: defaultResult, position: item10036 };
               arr = items.push(obj);
               continue;
             }
@@ -776,7 +774,7 @@ function getDirectionForKeyword(str) {
       default:
         return null;
     }
-    str2 = str.replace(re8, " ");
+    str2 = " ".replace(re8, " ");
   }
 }
 function getAngleInDegrees(str) {

@@ -8,7 +8,7 @@ require = arg1;
 const dependencyMap = arg6;
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 
-export const createCheckInEnvelope = function createCheckInEnvelope(arg0, trace, sdk, arg3, arg4) {
+export const createCheckInEnvelope = function createCheckInEnvelope(arg0, trace, sdk, arg3, url) {
   let obj = { sent_at: new Date().toISOString() };
   sdk = undefined;
   if (sdk != null) {
@@ -20,10 +20,10 @@ export const createCheckInEnvelope = function createCheckInEnvelope(arg0, trace,
   }
   let tmp2 = arg3;
   if (arg3) {
-    tmp2 = arg4;
+    tmp2 = url;
   }
   if (tmp2) {
-    obj.dsn = _mod702.dsnToString(arg4);
+    obj.dsn = _mod702.dsnToString(url);
   }
   if (trace) {
     obj.trace = trace;

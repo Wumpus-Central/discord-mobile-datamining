@@ -4,8 +4,8 @@
 const require = fn;
 const dependencyMap = arg6;
 let closure_2 = { code: "function pnpm_repeatTs2(){const{_nextAnimation,numberOfReps,reverse,callback,getReduceMotionForAnimation,reduceMotion}=this.__closure;const nextAnimation=typeof _nextAnimation==='function'?_nextAnimation():_nextAnimation;function repeat(animation,now){const finished=nextAnimation.onFrame(nextAnimation,now);animation.current=nextAnimation.current;if(finished){animation.reps+=1;if(nextAnimation.callback){nextAnimation.callback(true,animation.current);}if(animation.reduceMotion||numberOfReps>0&&animation.reps>=numberOfReps){return true;}const startValue=reverse?nextAnimation.current:animation.startValue;if(reverse){nextAnimation.toValue=animation.startValue;animation.startValue=startValue;}nextAnimation.onStart(nextAnimation,startValue,now,nextAnimation.previousAnimation);return false;}return false;}const repCallback=function(finished){if(callback){callback(finished);}if(!finished&&nextAnimation.callback){nextAnimation.callback(false);}};function onStart(animation,value,now,previousAnimation){animation.startValue=value;animation.reps=0;if(nextAnimation.reduceMotion===undefined){nextAnimation.reduceMotion=animation.reduceMotion;}if(animation.reduceMotion&&reverse&&(numberOfReps<=0||numberOfReps%2===0)){animation.current=animation.startValue;animation.onFrame=function(){return true;};}else{nextAnimation.onStart(nextAnimation,value,now,previousAnimation);}}return{isHigherOrder:true,onFrame:repeat,onStart:onStart,reps:0,current:nextAnimation.current,callback:repCallback,startValue:0,reduceMotion:getReduceMotionForAnimation(reduceMotion)};}" };
-fn = function n(_nextAnimation, arg1, arg2, callback, reduceMotion) {
-  _require = _nextAnimation;
+fn = function n(tmp5Result1, arg1, arg2) {
+  _require = tmp5Result1;
   let num = arg1;
   if (arg1 === undefined) {
     num = 2;
@@ -14,31 +14,29 @@ fn = function n(_nextAnimation, arg1, arg2, callback, reduceMotion) {
   if (arg2 === undefined) {
     flag = false;
   }
-  closure_3 = callback;
   closure_4 = reduceMotion;
   require("module_1676");
   const fn = function l() {
-    let tmpResult = _nextAnimation;
-    if (typeof _nextAnimation === "function") {
+    let tmpResult = tmp5Result1;
+    if (typeof tmp5Result1 === "function") {
       tmpResult = tmp();
     }
-    _nextAnimation = tmpResult;
     const obj = {
       isHigherOrder: true,
       onFrame: function repeat(reps, arg1) {
         reps.current = closure_0.current;
         if (closure_0.onFrame(closure_0, arg1)) {
           reps.reps = reps.reps + 1;
-          if (obj.callback) {
-            obj.callback(true, reps.current);
+          if (closure_0.callback) {
+            closure_0.callback(true, reps.current);
           }
           if (!reps.reduceMotion) {
-            const tmp3 = flag ? obj.current : reps.startValue;
+            const tmp3 = flag ? closure_0.current : reps.startValue;
             if (flag) {
-              obj.toValue = reps.startValue;
+              closure_0.toValue = reps.startValue;
               reps.startValue = tmp3;
             }
-            obj.onStart(obj, tmp3, arg1, obj.previousAnimation);
+            closure_0.onStart(closure_0, tmp3, arg1, closure_0.previousAnimation);
             return false;
           }
           return true;
@@ -50,7 +48,7 @@ fn = function n(_nextAnimation, arg1, arg2, callback, reduceMotion) {
         reduceMotion.startValue = startValue;
         reduceMotion.reps = 0;
         if (undefined === closure_0.reduceMotion) {
-          obj.reduceMotion = reduceMotion.reduceMotion;
+          closure_0.reduceMotion = reduceMotion.reduceMotion;
         }
         if (reduceMotion.reduceMotion) {
           if (flag) {
@@ -75,15 +73,15 @@ fn = function n(_nextAnimation, arg1, arg2, callback, reduceMotion) {
         }
       },
       startValue: 0,
-      reduceMotion: _nextAnimation(num[0]).getReduceMotionForAnimation(closure_4)
+      reduceMotion: tmpResult(num[0]).getReduceMotionForAnimation(closure_4)
     };
     return obj;
   };
-  let obj = { _nextAnimation, numberOfReps: num, reverse: flag, callback, getReduceMotionForAnimation: require("module_1676").getReduceMotionForAnimation, reduceMotion };
+  let obj = { _nextAnimation: tmp5Result1, numberOfReps: num, reverse: flag, callback, getReduceMotionForAnimation: require("module_1676").getReduceMotionForAnimation, reduceMotion };
   fn.__closure = obj;
   fn.__workletHash = 11413099333511;
   fn.__initData = flag;
-  return obj.defineAnimation(_nextAnimation, fn);
+  return obj.defineAnimation(tmp5Result1, fn);
 };
 fn.__closure = { defineAnimation: fn(1676).defineAnimation, getReduceMotionForAnimation: fn(1676).getReduceMotionForAnimation };
 fn.__workletHash = 13638828150427;

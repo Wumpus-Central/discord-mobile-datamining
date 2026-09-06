@@ -209,10 +209,9 @@ function subtractMatrices(arr, arr2) {
                 return isArray;
               });
             }
-            let flatResult1 = arr2;
             if (isArray2) {
               if (typeof flatten === "function") {
-                flatResult1 = arr2.flat();
+                arr2.flat();
               } else {
                 throw new TypeError("Trying to call a non-function");
               }
@@ -333,10 +332,9 @@ function addMatrices(arr, arr2) {
                 return isArray;
               });
             }
-            let flatResult1 = arr2;
             if (isArray2) {
               if (typeof flatten === "function") {
-                flatResult1 = arr2.flat();
+                arr2.flat();
               } else {
                 throw new TypeError("Trying to call a non-function");
               }
@@ -463,7 +461,7 @@ function scaleMatrix(arr, arg1) {
 scaleMatrix.__closure = { isAffineMatrixFlat, maybeFlattenMatrix, unflatten };
 scaleMatrix.__workletHash = 11907224908685;
 scaleMatrix.__initData = { code: "function scaleMatrix_Pnpm_matrixUtilsTsx9(maybeFlatA,scalar){const{isAffineMatrixFlat,maybeFlattenMatrix,unflatten}=this.__closure;const isFlatOnStart=isAffineMatrixFlat(maybeFlatA);const a=maybeFlattenMatrix(maybeFlatA);const b=a.map(function(x){return x*scalar;});return isFlatOnStart?b:unflatten(b);}" };
-function getRotationMatrix(sum, item) {
+function getRotationMatrix(sum) {
   let str = item;
   if (item === undefined) {
     str = "z";
@@ -546,11 +544,11 @@ function projection(arr, arg1) {
     if (typeof innerProduct === "function") {
       closure_0 = arr;
       closure_1 = arg1;
-      if (typeof tmp === "function") {
+      if (typeof assertVectorsHaveEqualLengths === "function") {
         if (typeof tmp2 === "function") {
           closure_0 = arr;
           closure_1 = arr;
-          if (typeof tmp === "function") {
+          if (typeof assertVectorsHaveEqualLengths === "function") {
             closure_0 = tmp5 / arr.reduce((acc, item, index) => acc + closure_0[index] * closure_1[index], 0);
             return arr.map((item) => item * closure_0);
           } else {
@@ -598,33 +596,33 @@ function gramSchmidtAlgorithm(items7) {
     arr3 = tmp5;
     if (typeof assertVectorsHaveEqualLengths === "function") {
       const mapped = arr.map((item, index) => arr11[index] - arr3[index]);
-      if (typeof tmp4 === "function") {
+      if (typeof subtractVectors === "function") {
         arr11 = arr2;
         arr3 = tmp8;
-        if (typeof tmp6 === "function") {
+        if (typeof assertVectorsHaveEqualLengths === "function") {
           const mapped1 = arr2.map((item, index) => arr11[index] - arr3[index]);
-          if (typeof tmp4 === "function") {
+          if (typeof subtractVectors === "function") {
             arr11 = mapped1;
             arr3 = tmp9;
-            if (typeof tmp6 === "function") {
+            if (typeof assertVectorsHaveEqualLengths === "function") {
               const mapped2 = mapped1.map((item, index) => arr11[index] - arr3[index]);
               const items = [tmp3, mapped, mapped2, ];
-              if (typeof tmp4 === "function") {
+              if (typeof subtractVectors === "function") {
                 arr11 = arr3;
                 arr3 = tmp11;
-                if (typeof tmp6 === "function") {
+                if (typeof assertVectorsHaveEqualLengths === "function") {
                   const mapped3 = arr3.map((item, index) => arr11[index] - arr3[index]);
-                  if (typeof tmp4 === "function") {
+                  if (typeof subtractVectors === "function") {
                     arr11 = mapped3;
                     arr3 = tmp12;
-                    if (typeof tmp6 === "function") {
+                    if (typeof assertVectorsHaveEqualLengths === "function") {
                       const mapped4 = mapped3.map((item, index) => arr11[index] - arr3[index]);
-                      if (typeof tmp4 === "function") {
+                      if (typeof subtractVectors === "function") {
                         arr11 = mapped4;
                         arr3 = tmp13;
-                        if (typeof tmp6 === "function") {
+                        if (typeof assertVectorsHaveEqualLengths === "function") {
                           items[3] = mapped4.map((item, index) => arr11[index] - arr3[index]);
-                          [arr8, arr9, arr10, arr11] = tmp(items.map((arr) => {
+                          [arr8, arr9, arr10, arr11] = _slicedToArray(items.map((arr) => {
                             if (typeof innerProduct === "function") {
                               closure_0 = arr;
                               closure_1 = arr;
@@ -653,50 +651,50 @@ function gramSchmidtAlgorithm(items7) {
                           if (typeof innerProduct === "function") {
                             arr11 = arr8;
                             arr3 = tmp3;
-                            if (typeof tmp6 === "function") {
+                            if (typeof assertVectorsHaveEqualLengths === "function") {
                               const items6 = [arr8.reduce((acc, item, index) => acc + closure_0[index] * closure_1[index], 0), , , ];
-                              if (typeof tmp15 === "function") {
+                              if (typeof innerProduct === "function") {
                                 arr11 = arr8;
                                 arr3 = arr;
-                                if (typeof tmp6 === "function") {
+                                if (typeof assertVectorsHaveEqualLengths === "function") {
                                   items6[1] = arr8.reduce((acc, item, index) => acc + closure_0[index] * closure_1[index], 0);
-                                  if (typeof tmp15 === "function") {
+                                  if (typeof innerProduct === "function") {
                                     arr11 = arr8;
                                     arr3 = arr2;
-                                    if (typeof tmp6 === "function") {
+                                    if (typeof assertVectorsHaveEqualLengths === "function") {
                                       items6[2] = arr8.reduce((acc, item, index) => acc + closure_0[index] * closure_1[index], 0);
-                                      if (typeof tmp15 === "function") {
+                                      if (typeof innerProduct === "function") {
                                         arr11 = arr8;
-                                        if (typeof tmp6 === "function") {
+                                        if (typeof assertVectorsHaveEqualLengths === "function") {
                                           items6[3] = arr8.reduce((acc, item, index) => acc + closure_0[index] * closure_1[index], 0);
                                           items7 = [items6, , , ];
-                                          if (typeof tmp15 === "function") {
+                                          if (typeof innerProduct === "function") {
                                             arr11 = arr9;
                                             arr3 = arr;
-                                            if (typeof tmp6 === "function") {
+                                            if (typeof assertVectorsHaveEqualLengths === "function") {
                                               const items8 = [0, arr9.reduce((acc, item, index) => acc + closure_0[index] * closure_1[index], 0)];
-                                              if (typeof tmp15 === "function") {
+                                              if (typeof innerProduct === "function") {
                                                 arr11 = arr9;
                                                 arr3 = arr2;
-                                                if (typeof tmp6 === "function") {
+                                                if (typeof assertVectorsHaveEqualLengths === "function") {
                                                   items8[2] = arr9.reduce((acc, item, index) => acc + closure_0[index] * closure_1[index], 0);
-                                                  if (typeof tmp15 === "function") {
+                                                  if (typeof innerProduct === "function") {
                                                     arr11 = arr9;
-                                                    if (typeof tmp6 === "function") {
+                                                    if (typeof assertVectorsHaveEqualLengths === "function") {
                                                       items8[3] = arr9.reduce((acc, item, index) => acc + closure_0[index] * closure_1[index], 0);
                                                       items7[1] = items8;
-                                                      if (typeof tmp15 === "function") {
+                                                      if (typeof innerProduct === "function") {
                                                         arr11 = arr10;
                                                         arr3 = arr2;
-                                                        if (typeof tmp6 === "function") {
+                                                        if (typeof assertVectorsHaveEqualLengths === "function") {
                                                           const items9 = [0, 0, arr10.reduce((acc, item, index) => acc + closure_0[index] * closure_1[index], 0)];
-                                                          if (typeof tmp15 === "function") {
+                                                          if (typeof innerProduct === "function") {
                                                             arr11 = arr10;
-                                                            if (typeof tmp6 === "function") {
+                                                            if (typeof assertVectorsHaveEqualLengths === "function") {
                                                               items9[3] = arr10.reduce((acc, item, index) => acc + closure_0[index] * closure_1[index], 0);
                                                               items7[2] = items9;
-                                                              if (typeof tmp15 === "function") {
-                                                                if (typeof tmp6 === "function") {
+                                                              if (typeof innerProduct === "function") {
+                                                                if (typeof assertVectorsHaveEqualLengths === "function") {
                                                                   const items10 = [0, 0, 0, arr11.reduce((acc, item, index) => acc + closure_0[index] * closure_1[index], 0)];
                                                                   items7[3] = items10;
                                                                   if (typeof transposeMatrix === "function") {
@@ -797,7 +795,7 @@ function gramSchmidtAlgorithm(items7) {
                           } else {
                             throw new TypeError("Trying to call a non-function");
                           }
-                          const tmpResult = tmp(items.map((arr) => {
+                          const tmpResult = _slicedToArray(items.map((arr) => {
                             if (typeof innerProduct === "function") {
                               closure_0 = arr;
                               closure_1 = arr;
@@ -851,7 +849,6 @@ function gramSchmidtAlgorithm(items7) {
   } else {
     throw new TypeError("Trying to call a non-function");
   }
-  tmp = _slicedToArray;
   const tmp2 = _slicedToArray(items7, 4);
 }
 gramSchmidtAlgorithm.__closure = { subtractVectors, projection, scaleVector, innerProduct, transposeMatrix };
@@ -909,10 +906,10 @@ function decomposeMatrix(arr) {
         if (typeof norm3d === "function") {
           const _Math = Math;
           let result = tmp26 * Math.sqrt(first * first + tmp29 * tmp29 + tmp30 * tmp30);
-          if (typeof tmp27 === "function") {
+          if (typeof norm3d === "function") {
             const _Math2 = Math;
             const result1 = tmp7 * Math.sqrt(tmp8 * tmp8 + tmp9 * tmp9 + tmp10 * tmp10);
-            if (typeof tmp27 === "function") {
+            if (typeof norm3d === "function") {
               const _Math3 = Math;
               const result2 = tmp12 * Math.sqrt(tmp13 * tmp13 + tmp14 * tmp14 + tmp15 * tmp15);
               const items2 = [result, 0, 0, 0];

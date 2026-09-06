@@ -80,6 +80,7 @@ let items = [
         _nativeModule.removeListeners(self.listenerCount(arg0));
       }
       NativeEventEmitter(92).removeAllListeners(arg0);
+      const tmpResult = NativeEventEmitter(92);
     }
   },
   {

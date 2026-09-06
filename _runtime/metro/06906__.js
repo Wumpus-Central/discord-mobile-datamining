@@ -124,7 +124,7 @@ export const useSecondaryProps = function useSecondaryProps(ListHeaderComponent)
   }, items3);
   obj.CompatScrollView = ListEmptyComponentStyle(() => {
     if (typeof renderScrollComponent === "function") {
-      if (!tmpResult.isComponentClass(tmp3)) {
+      if (!tmpResult.isComponentClass(renderScrollComponent)) {
         let CompatAnimatedScroller = noop.forwardRef((arg0, ref) => {
           const obj = {};
           const merged = Object.assign(arg0);
@@ -137,13 +137,13 @@ export const useSecondaryProps = function useSecondaryProps(ListHeaderComponent)
     }
     CompatAnimatedScroller = CompatScroller.CompatAnimatedScroller;
     if (renderScrollComponent) {
-      CompatAnimatedScroller = tmp3;
+      CompatAnimatedScroller = renderScrollComponent;
     }
   }, items5);
   obj.renderStickyHeaderBackdrop = ListEmptyComponentStyle(() => {
     let backdropComponent;
     if (stickyHeaderConfig != null) {
-      backdropComponent = tmp.backdropComponent;
+      backdropComponent = stickyHeaderConfig.backdropComponent;
     }
     let tmp4Result = null;
     if (backdropComponent) {
@@ -151,8 +151,8 @@ export const useSecondaryProps = function useSecondaryProps(ListHeaderComponent)
       const items = [{ position: "absolute", inset: 0, pointerEvents: "none" }, invertedTransformStyle];
       obj.style = items;
       let backdropComponent1;
-      if (tmp != null) {
-        backdropComponent1 = tmp.backdropComponent;
+      if (stickyHeaderConfig != null) {
+        backdropComponent1 = stickyHeaderConfig.backdropComponent;
       }
       obj.children = _mod6908.getValidComponent(backdropComponent1);
       tmp4Result = jsx(CompatView.CompatView, { style: null, children: null });

@@ -16,9 +16,10 @@ export const registerGesture = function registerGesture(arg0, config) {
     const result = map.set(arg0, config);
     const result1 = map3.set(config.config.testID, arg0);
   }
+  tmp = tagMessage.isTestEnv() && config.config.testID;
 };
-export const unregisterGesture = function unregisterGesture(arg0) {
-  value = map.get(arg0);
+export const unregisterGesture = function unregisterGesture(handlerTag) {
+  value = map.get(handlerTag);
   let testID = value;
   if (value) {
     testID = tagMessage.isTestEnv();
@@ -28,7 +29,7 @@ export const unregisterGesture = function unregisterGesture(arg0) {
   }
   if (testID) {
     map3.delete(value.config.testID);
-    map.delete(arg0);
+    map.delete(handlerTag);
   }
 };
 export const registerHandler = function registerHandler(handlerTag, item10022, testId) {
@@ -36,6 +37,7 @@ export const registerHandler = function registerHandler(handlerTag, item10022, t
   if (tmp2) {
     const result1 = map3.set(testId, handlerTag);
   }
+  tmp2 = tagMessage.isTestEnv() && testId;
 };
 export const registerOldGestureHandler = function registerOldGestureHandler(handlerTag, arg1) {
   const result = map2.set(handlerTag, arg1);
@@ -48,6 +50,7 @@ export const unregisterHandler = function unregisterHandler(handlerTag, testId) 
   if (tmp2) {
     map3.delete(testId);
   }
+  tmp2 = tagMessage.isTestEnv() && testId;
 };
 export const findHandler = function findHandler(handlerTag) {
   return map1.get(handlerTag);

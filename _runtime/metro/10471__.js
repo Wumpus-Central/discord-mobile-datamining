@@ -105,11 +105,11 @@ if (self2) {
                       end2 = end.isOnlyTime();
                     }
                     if (end2) {
-                      obj8.implySimilarDate(start.end, date);
+                      closure_1_6.implySimilarDate(start.end, date);
                       ({ start: start3, end: end3 } = start);
                       if (dateResult > end3.date()) {
                         date.setDate(date.getDate() + 1);
-                        obj8.implySimilarDate(start.end, date);
+                        closure_1_6.implySimilarDate(start.end, date);
                       }
                       dateResult = start3.date();
                     }
@@ -147,8 +147,8 @@ if (self2) {
                           sum1 = diff1 + 7;
                         }
                         obj = { day: sum1 };
-                        const addDurationResult1 = tmp7(tmp8[3]).addDuration(addDurationResult, obj);
-                        tmp7(tmp8[2]).implySimilarDate(start.end, addDurationResult1);
+                        const addDurationResult1 = tmp7(self[3]).addDuration(addDurationResult, obj);
+                        tmp7(self[2]).implySimilarDate(start.end, addDurationResult1);
                         obj.debug(() => {
                           console.log("" + self.constructor.name + " adjusted " + start + " weekday (" + start.end + ")");
                         });

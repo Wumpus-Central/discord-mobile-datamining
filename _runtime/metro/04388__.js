@@ -209,9 +209,9 @@ const forwardRefResult = forwardRef((component, arg1) => {
     }
     history = history.history;
     if (typeof resolveToLocation === "function") {
-      let tmp4Result = tmp4;
-      if (typeof tmp4 === "function") {
-        tmp4Result = tmp4(tmp5);
+      let tmp4Result = closure_3;
+      if (typeof closure_3 === "function") {
+        tmp4Result = closure_3(tmp5);
       }
       let _location = history.location;
       if (typeof tmp3 === "function") {
@@ -228,16 +228,16 @@ const forwardRefResult = forwardRef((component, arg1) => {
           href: str,
           navigate() {
                 if (typeof resolveToLocation === "function") {
-                  let tmpResult = tmp;
-                  if (typeof tmp === "function") {
-                    tmpResult = tmp(tmp3);
+                  let tmpResult = invariant;
+                  if (typeof invariant === "function") {
+                    tmpResult = invariant(tmp3);
                   }
                   const path = Component2(1101).createPath(tmp2.location);
                   Component2(1101);
                   if (typeof normalizeToLocation === "function") {
                     let _location = tmpResult;
                     if (typeof tmpResult === "string") {
-                      const tmp5Result = tmp5(1101);
+                      const tmp5Result = Component2(1101);
                       _location = tmp5Result.createLocation(tmpResult, null, null, undefined);
                     }
                     if (!React) {
@@ -251,7 +251,6 @@ const forwardRefResult = forwardRef((component, arg1) => {
                     throw new TypeError("Trying to call a non-function");
                   }
                   obj = Component2(1101);
-                  tmp5 = Component2;
                 } else {
                   throw new TypeError("Trying to call a non-function");
                 }
@@ -338,9 +337,9 @@ export const NavLink = forwardRef2((aria_current, arg1) => {
       _location = location.location;
     }
     if (typeof resolveToLocation === "function") {
-      let tmp4Result = tmp4;
-      if (typeof tmp4 === "function") {
-        tmp4Result = tmp4(_location);
+      let tmp4Result = closure_1_11;
+      if (typeof closure_1_11 === "function") {
+        tmp4Result = closure_1_11(_location);
       }
       if (typeof tmp3 === "function") {
         _location = tmp4Result;

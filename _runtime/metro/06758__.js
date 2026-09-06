@@ -22,13 +22,13 @@ export const useIsScreenReaderEnabled = function useIsScreenReaderEnabled() {
         c5 = 3;
       } else if (arg0 === 1) {
         c5 = 3;
-        throw arg1;
+        throw value;
       } else if (arg0 !== 2) {
-        closure_128_0 = arg1;
+        closure_128_0 = value;
         closure_0(closure_128_0);
         c3 = 0;
       }
-      return arg1;
+      return value;
     });
     (function checkStatus() {
       const self = this;

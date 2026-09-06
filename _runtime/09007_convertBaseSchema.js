@@ -48,11 +48,11 @@ function convertBaseSchema(not, refs) {
                       refs = refs.refs;
                       if (refs.has($ref)) {
                         const refs2 = tmp.refs;
-                        return refs2.get(tmp2);
+                        return refs2.get($ref);
                       } else {
                         const _Error = Error;
                         const _HermesInternal = HermesInternal;
-                        const error = new Error("Circular reference not resolved: " + tmp2);
+                        const error = new Error("Circular reference not resolved: " + $ref);
                         throw error;
                       }
                       tmp = refs;
@@ -269,7 +269,7 @@ function convertBaseSchema(not, refs) {
                             const tmp80 = convertSchema(not.propertyNames, refs);
                             if (not.additionalProperties) {
                               if (typeof not.additionalProperties === "object") {
-                                let anyResult = tmp79(not.additionalProperties, refs);
+                                let anyResult = convertSchema(not.additionalProperties, refs);
                               }
                               const _Object4 = Object;
                               if (0 === Object.keys(obj).length) {
@@ -281,7 +281,6 @@ function convertBaseSchema(not, refs) {
                               }
                             }
                             anyResult = obj.any();
-                            tmp79 = convertSchema;
                           } else if (not.patternProperties) {
                             const patternProperties = not.patternProperties;
                             const _Object2 = Object;
@@ -568,26 +567,23 @@ function convertSchema(items, version) {
     obj = {};
     items = ["$id", "id", "$comment", "$anchor", "$vocabulary", "$dynamicRef", "$dynamicAnchor"];
     for (const item10086 of items) {
-      let tmp25 = item10086;
       if (item10086 in arg0) {
-        obj[tmp25] = arg0[tmp25];
+        obj[item10086] = arg0[item10086];
       }
       continue;
     }
     const items1 = ["contentEncoding", "contentMediaType", "contentSchema"];
     for (const item10096 of items1) {
-      let tmp28 = item10096;
       if (item10096 in arg0) {
-        obj[tmp28] = arg0[tmp28];
+        obj[item10096] = arg0[item10096];
       }
       continue;
     }
     const _Object = Object;
     const keys = Object.keys(items);
     for (const item10110 of keys) {
-      let tmp34 = item10110;
       if (!set.has(item10110)) {
-        obj[tmp34] = arg0[tmp34];
+        obj[item10110] = arg0[item10110];
       }
       continue;
     }
@@ -700,6 +696,7 @@ if (self2) {
     const merged1 = Object.assign(fnResult);
     obj.iso = fn(_mod9003);
     let _Set = Set;
+    const fnResult1 = fn(_mod9003);
     let set = new Set(["$schema", "$ref", "$defs", "definitions", "$id", "id", "$comment", "$anchor", "$vocabulary", "$dynamicRef", "$dynamicAnchor", "type", "enum", "const", "anyOf", "oneOf", "allOf", "not", "properties", "required", "additionalProperties", "patternProperties", "propertyNames", "minProperties", "maxProperties", "items", "prefixItems", "additionalItems", "minItems", "maxItems", "uniqueItems", "contains", "minContains", "maxContains", "minLength", "maxLength", "pattern", "format", "minimum", "maximum", "exclusiveMinimum", "exclusiveMaximum", "multipleOf", "description", "default", "contentEncoding", "contentMediaType", "contentSchema", "unevaluatedItems", "unevaluatedProperties", "if", "then", "else", "dependentSchemas", "dependentRequired", "nullable", "readOnly"]);
   } else {
     let _Object2 = Object;

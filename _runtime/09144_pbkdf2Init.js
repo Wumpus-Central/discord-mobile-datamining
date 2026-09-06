@@ -3,6 +3,7 @@
 // Module 9144 (pbkdf2Init)
 import _asyncLoop from "_asyncLoop" /* 9141 */;
 import number from "number" /* 9142 */;
+import _mod9145 from "module_9145" /* 9145 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 function pbkdf2Init(sha256, B, B, arg3) {
@@ -17,11 +18,11 @@ function pbkdf2Init(sha256, B, B, arg3) {
     throw error;
   } else {
     const _Uint8Array = Uint8Array;
-    const toBytesResult = tmp(9141).toBytes(B);
+    const toBytesResult = _asyncLoop.toBytes(B);
     const uint8Array = new Uint8Array(dkLen);
-    const hmac = tmp(9145).hmac;
+    const hmac = _mod9145.hmac;
     hmac.create(sha256, toBytesResult);
-    const toBytesResult1 = tmp(9141).toBytes(B);
+    const toBytesResult1 = _asyncLoop.toBytes(B);
     const obj = { c, dkLen, asyncTick, DK: uint8Array, PRF: null, PRFSalt: null };
     obj.PRF = obj;
     obj.PRFSalt = obj._cloneInto().update(toBytesResult1);
@@ -38,7 +39,7 @@ function pbkdf2Output(destroy, destroy2, arg2, destroy3, arr) {
   arr.fill(0);
   return arg2;
 }
-let closure_5 = async function _pbkdf2Async(arg0, value) {
+let closure_5 = async function _pbkdf2Async(arg0) {
   if (c13 === 2) {
     c13 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -91,7 +92,7 @@ let closure_5 = async function _pbkdf2Async(arg0, value) {
           const _Uint8Array2 = Uint8Array;
           const uint8Array1 = new Uint8Array(PRF.outputLen);
           closure_136_9 = uint8Array1;
-          closure_136_10 = async function _loop(arg0, value) {
+          closure_136_10 = async function _loop() {
             if (v3 === 2) {
               v3 = 3;
               throw new TypeError("Generator functions may not be called on executing generators");
@@ -137,6 +138,7 @@ let closure_5 = async function _pbkdf2Async(arg0, value) {
                                     length = subarrayResult.length;
                                   } while (num < length);
                                 }
+                                const updateResult = outputLen._cloneInto(c0).update(closure_2_9);
                               }),
                       done: false
                     };

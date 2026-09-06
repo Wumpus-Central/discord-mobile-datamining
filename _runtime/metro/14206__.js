@@ -81,8 +81,8 @@ export const isLiteralPart = function isLiteralPart(type) {
 export const defineProperty = function defineProperty(arg0, arg1, value) {
   Object.defineProperty(arg0, arg1, { configurable: true, enumerable: false, writable: true, value: value.value });
 };
-export const createDataProperty = function createDataProperty(arg0, direction, firstDay) {
-  Object.defineProperty(arg0, direction, { configurable: true, enumerable: true, writable: true, value: firstDay });
+export const createDataProperty = function createDataProperty(module_14199, direction, firstDay) {
+  Object.defineProperty(module_14199, direction, { configurable: true, enumerable: true, writable: true, value: firstDay });
 };
 export const invariant = function invariant(arg0, arg1, arg2) {
   let _Error = arg2;

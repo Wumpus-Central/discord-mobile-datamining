@@ -57,8 +57,8 @@ const items = [
   },
   {
     key: "gestureWillMount",
-    value: function gestureWillMount(arg0) {
-      closure_0 = arg0;
+    value: function gestureWillMount(item10067) {
+      closure_0 = item10067;
       const mountListeners = this.mountListeners;
       const item = mountListeners.forEach((fn) => fn(closure_0));
     }

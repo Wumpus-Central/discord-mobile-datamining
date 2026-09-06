@@ -82,7 +82,7 @@ function variadic(apply, get, fn) {
 }
 function strategyDefault(c165, cache) {
   cache = cache.cache;
-  return 1 === c165.length ? monadic : variadic.bind(this, c165, cache.create(), cache.serializer);
+  return 1 === length.length ? monadic : variadic.bind(this, length, cache.create(), cache.serializer);
 }
 function isLiteralPart(type) {
   return "literal" === type.type;
@@ -162,7 +162,6 @@ function createPartsFromList(__INTERNAL_SLOT_MAP__, self, arg2) {
     if (0 <= diff) {
       do {
         let str = "templateStart";
-        let tmp = deconstructPattern;
         if (0 !== diff) {
           let str2 = "templateEnd";
           if (diff < length - 2) {
@@ -174,7 +173,7 @@ function createPartsFromList(__INTERNAL_SLOT_MAP__, self, arg2) {
         let obj3 = { type: "element", value: arg2[diff] };
         obj[0] = obj3;
         obj[1] = tmpResult;
-        tmpResult = tmp((function getMultiInternalSlots(__INTERNAL_SLOT_MAP__, self) {
+        tmpResult = deconstructPattern((function getMultiInternalSlots(__INTERNAL_SLOT_MAP__, self) {
           const substr = [...arguments].slice();
           value = __INTERNAL_SLOT_MAP__.get(self);
           c0 = value;
@@ -593,15 +592,15 @@ let value = (() => {
           ListFormat.localeData[locale] = data;
           let availableLocales = ListFormat.availableLocales;
           let tmp7 = str;
-          let tmp8 = ListFormat;
           let addResult = availableLocales.add(str);
           let availableLocales2 = ListFormat.availableLocales;
           let addResult1 = availableLocales2.add(locale);
           if (!ListFormat.__defaultLocale) {
-            tmp8.__defaultLocale = tmp7;
+            ListFormat.__defaultLocale = tmp7;
           }
           continue;
         }
+        nextResult = iter.next();
       }
     },
     {

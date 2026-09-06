@@ -3,6 +3,7 @@
 // Module 4806
 import _mod1282 from "module_1282" /* 1282 */;
 import requirePromise from "requirePromise" /* 4804 */;
+import PromiseResolve from "PromiseResolve" /* 4880 */;
 import callBind from "callBind" /* 1454 */;
 
 requirePromise();
@@ -22,6 +23,7 @@ export default function allSettled(arg0) {
       } catch (tmp3) {
         return closure_3(tmp, tmp3);
       }
+      promise = PromiseResolve(self, arg0);
     }));
   }
 };

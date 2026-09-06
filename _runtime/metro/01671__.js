@@ -3,8 +3,11 @@
 // Module 1671
 import _modDef38 from "module_38" /* 38 */;
 import _mod1639 from "module_1639" /* 1639 */;
+import _mod1661 from "module_1661" /* 1661 */;
 import startWebLayoutAnimation from "startWebLayoutAnimation" /* 1690 */;
+import ComponentRegistry2 from "ComponentRegistry" /* 1739 */;
 import NativeEventsManager from "NativeEventsManager" /* 1743 */;
+import unprocessProps from "unprocessProps" /* 1745 */;
 import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
 import hasOwnProperty from "_possibleConstructorReturn" /* 93 */;
@@ -12,6 +15,7 @@ import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
 import noop from "module_19" /* 19 */;
 
+const runOnRuntime = tmp25(1680);
 require = fn;
 function _isNativeReflectConstruct() {
   try {
@@ -122,19 +126,19 @@ export const createAnimatedComponent = function createAnimatedComponent(name, ar
           setLocalRef(arg0) {
                   if (arg0) {
                     if (arg0 !== closure_0._componentRef) {
-                      obj._componentRef = obj._resolveComponentRef(arg0);
-                      obj._viewInfo = undefined;
+                      closure_0._componentRef = closure_0._resolveComponentRef(arg0);
+                      closure_0._viewInfo = undefined;
                     }
-                    const props = obj.props;
+                    const props = closure_0.props;
                     ({ entering, sharedTransitionTag } = props);
                     if (!closure_2_16) {
                       const result = AnimatedComponent(1680).enableLayoutAnimations(true, false);
                       const obj2 = AnimatedComponent(1680);
                     }
                     if (sharedTransitionTag) {
-                      const result1 = obj._configureSharedTransition();
+                      const result1 = closure_0._configureSharedTransition();
                     }
-                    const context = obj.context;
+                    const context = closure_0.context;
                     if (context != null) {
                       const current = context.current;
                     }
@@ -150,7 +154,7 @@ export const createAnimatedComponent = function createAnimatedComponent(name, ar
                       isFabricResult = module_1639;
                     }
                     if (!isFabricResult) {
-                      const result2 = obj._configureLayoutAnimation(AnimatedComponent(1661).LayoutAnimationType.ENTERING, obj.props.entering);
+                      const result2 = closure_0._configureLayoutAnimation(AnimatedComponent(1661).LayoutAnimationType.ENTERING, closure_0.props.entering);
                     }
                   }
                 }
@@ -243,19 +247,19 @@ export const createAnimatedComponent = function createAnimatedComponent(name, ar
         setLocalRef(arg0) {
               if (arg0) {
                 if (arg0 !== closure_0._componentRef) {
-                  obj._componentRef = obj._resolveComponentRef(arg0);
-                  obj._viewInfo = undefined;
+                  closure_0._componentRef = closure_0._resolveComponentRef(arg0);
+                  closure_0._viewInfo = undefined;
                 }
-                const props = obj.props;
+                const props = closure_0.props;
                 ({ entering, sharedTransitionTag } = props);
                 if (!closure_2_16) {
                   const result = AnimatedComponent(1680).enableLayoutAnimations(true, false);
                   const obj2 = AnimatedComponent(1680);
                 }
                 if (sharedTransitionTag) {
-                  const result1 = obj._configureSharedTransition();
+                  const result1 = closure_0._configureSharedTransition();
                 }
-                const context = obj.context;
+                const context = closure_0.context;
                 if (context != null) {
                   const current = context.current;
                 }
@@ -271,7 +275,7 @@ export const createAnimatedComponent = function createAnimatedComponent(name, ar
                   isFabricResult = module_1639;
                 }
                 if (!isFabricResult) {
-                  const result2 = obj._configureLayoutAnimation(AnimatedComponent(1661).LayoutAnimationType.ENTERING, obj.props.entering);
+                  const result2 = closure_0._configureLayoutAnimation(AnimatedComponent(1661).LayoutAnimationType.ENTERING, closure_0.props.entering);
                 }
               }
             }
@@ -324,18 +328,16 @@ export const createAnimatedComponent = function createAnimatedComponent(name, ar
         isFabricResult = -1 !== componentViewTag;
       }
       if (isFabricResult) {
-        const PropsRegistryGarbageCollector = tmp17(1745).PropsRegistryGarbageCollector;
+        const PropsRegistryGarbageCollector = unprocessProps.PropsRegistryGarbageCollector;
         PropsRegistryGarbageCollector.registerView(componentViewTag, self);
       }
       if (-1 !== componentViewTag) {
-        const ComponentRegistry = tmp17(1739).ComponentRegistry;
+        const ComponentRegistry = ComponentRegistry2.ComponentRegistry;
         ComponentRegistry.register(componentViewTag, self);
       }
-      const result2 = self._configureLayoutAnimation(tmp17(1661).LayoutAnimationType.LAYOUT, self.props.layout);
-      const result3 = self._configureLayoutAnimation(tmp17(1661).LayoutAnimationType.EXITING, self.props.exiting);
-      let tmp25 = tmp17;
+      const result2 = self._configureLayoutAnimation(_mod1661.LayoutAnimationType.LAYOUT, self.props.layout);
+      const result3 = self._configureLayoutAnimation(_mod1661.LayoutAnimationType.EXITING, self.props.exiting);
       if (module_1639) {
-        tmp25 = tmp17;
         if (self._componentDOMRef) {
           const _componentDOMRef = self._componentDOMRef;
           const dummyClone = _componentDOMRef.dummyClone;
@@ -371,15 +373,12 @@ export const createAnimatedComponent = function createAnimatedComponent(name, ar
                 current = context.current;
               }
               if (current) {
-                tmp25 = tmp32;
                 if (_componentDOMRef.style) {
                   _componentDOMRef.style.visibility = "initial";
-                  tmp25 = tmp32;
                 }
               } else {
-                const result4 = tmp32(1690).startWebLayoutAnimation(self.props, _componentDOMRef, tmp32(1661).LayoutAnimationType.ENTERING);
-                tmp25 = tmp32;
-                const tmp32Result = tmp32(1690);
+                const result4 = startWebLayoutAnimation.startWebLayoutAnimation(self.props, _componentDOMRef, _mod1661.LayoutAnimationType.ENTERING);
+                const tmp32Result = startWebLayoutAnimation;
               }
             }
             obj3 = startWebLayoutAnimation;
@@ -390,7 +389,7 @@ export const createAnimatedComponent = function createAnimatedComponent(name, ar
       }
       let _willUnmount = !closure_16;
       if (!closure_16) {
-        let tmp25Result = tmp25(1639);
+        let tmp25Result = _mod1639;
         _willUnmount = tmp25Result.isFabric();
       }
       if (_willUnmount) {
@@ -400,7 +399,7 @@ export const createAnimatedComponent = function createAnimatedComponent(name, ar
         _willUnmount = typeof componentViewTag === "number";
       }
       if (_willUnmount) {
-        tmp25Result = tmp25(1680);
+        tmp25Result = runOnRuntime;
         const result5 = tmp25Result.unmarkNodeAsRemovable(componentViewTag);
       }
       self._isFirstRender = false;
@@ -424,7 +423,7 @@ export const createAnimatedComponent = function createAnimatedComponent(name, ar
           isFabricResult = -1 !== componentViewTag;
         }
         if (isFabricResult) {
-          const PropsRegistryGarbageCollector = tmp4(1745).PropsRegistryGarbageCollector;
+          const PropsRegistryGarbageCollector = AnimatedComponent(1745).PropsRegistryGarbageCollector;
           PropsRegistryGarbageCollector.unregisterView(componentViewTag);
         }
         self._detachStyles();
@@ -439,38 +438,38 @@ export const createAnimatedComponent = function createAnimatedComponent(name, ar
         }
         const exiting = self.props.exiting;
         if (-1 !== componentViewTag) {
-          const ComponentRegistry = tmp4(1739).ComponentRegistry;
+          const ComponentRegistry = AnimatedComponent(1739).ComponentRegistry;
           ComponentRegistry.unregister(componentViewTag);
         }
         if (module_1639) {
           if (self._componentDOMRef) {
             if (exiting) {
-              let tmp4Result = tmp4(1690);
+              let tmp4Result = AnimatedComponent(1690);
               if (tmp4Result.getReducedMotionFromConfig(exiting)) {
                 const callbackV = exiting.callbackV;
                 if (callbackV != null) {
                   callbackV(true);
                 }
               } else {
-                tmp4Result = tmp4(1723);
+                tmp4Result = AnimatedComponent(1723);
                 const result2 = tmp4Result.addHTMLMutationObserver();
                 ({ props, _componentDOMRef } = self);
-                const result3 = tmp4(1690).startWebLayoutAnimation(props, _componentDOMRef, tmp4(1661).LayoutAnimationType.EXITING);
-                const tmp4Result1 = tmp4(1690);
+                const result3 = AnimatedComponent(1690).startWebLayoutAnimation(props, _componentDOMRef, AnimatedComponent(1661).LayoutAnimationType.EXITING);
+                const tmp4Result1 = AnimatedComponent(1690);
               }
             }
             const _viewInfo = self._viewInfo;
             let isFabricResult1 = !closure_1_16;
             if (!closure_1_16) {
-              isFabricResult1 = tmp4(1639).isFabric();
-              const tmp4Result2 = tmp4(1639);
+              isFabricResult1 = AnimatedComponent(1639).isFabric();
+              const tmp4Result2 = AnimatedComponent(1639);
             }
             if (isFabricResult1) {
               isFabricResult1 = shadowNodeWrapper;
             }
             if (isFabricResult1) {
-              tmp4(1680).markNodeAsRemovable(shadowNodeWrapper);
-              const tmp4Result3 = tmp4(1680);
+              AnimatedComponent(1680).markNodeAsRemovable(shadowNodeWrapper);
+              const tmp4Result3 = AnimatedComponent(1680);
             }
             self._willUnmount = true;
           }
@@ -480,19 +479,20 @@ export const createAnimatedComponent = function createAnimatedComponent(name, ar
             if (!tmp4Result4.isFabric()) {
               if ("getReduceMotion" in exiting) {
                 if (typeof exiting.getReduceMotion === "function") {
-                  let reduceMotionFromConfig = tmp4(1676).getReduceMotionFromConfig(exiting.getReduceMotion());
-                  const tmp4Result5 = tmp4(1676);
+                  let reduceMotionFromConfig = AnimatedComponent(1676).getReduceMotionFromConfig(exiting.getReduceMotion());
+                  const tmp4Result5 = AnimatedComponent(1676);
                 }
                 if (!reduceMotionFromConfig) {
-                  const result4 = self._configureLayoutAnimation(tmp4(1661).LayoutAnimationType.EXITING, exiting);
+                  const result4 = self._configureLayoutAnimation(AnimatedComponent(1661).LayoutAnimationType.EXITING, exiting);
                 }
               }
-              reduceMotionFromConfig = tmp4(1676).getReduceMotionFromConfig();
-              const tmp4Result6 = tmp4(1676);
+              reduceMotionFromConfig = AnimatedComponent(1676).getReduceMotionFromConfig();
+              const tmp4Result6 = AnimatedComponent(1676);
             }
-            tmp4Result4 = tmp4(1639);
+            tmp4Result4 = AnimatedComponent(1639);
           }
         }
+        const obj = AnimatedComponent(1639);
       }
     },
     {
@@ -545,12 +545,12 @@ export const createAnimatedComponent = function createAnimatedComponent(name, ar
       key: "_updateFromNative",
       value: function _updateFromNative(props) {
         let setNativeProps;
-        if (closure_1 != null) {
-          setNativeProps = obj.setNativeProps;
+        if (nativeProps != null) {
+          setNativeProps = nativeProps.setNativeProps;
         }
         const self = this;
         if (setNativeProps) {
-          obj.setNativeProps(self._componentRef, props);
+          nativeProps.setNativeProps(self._componentRef, props);
         } else {
           const _componentRef = self._componentRef;
           if (_componentRef != null) {
@@ -566,8 +566,8 @@ export const createAnimatedComponent = function createAnimatedComponent(name, ar
       key: "_updateReanimatedProps",
       value: function _updateReanimatedProps(obj) {
         let disableReactSync;
-        if (closure_1 != null) {
-          disableReactSync = closure_1.disableReactSync;
+        if (nativeProps != null) {
+          disableReactSync = nativeProps.disableReactSync;
         }
         if (!disableReactSync) {
           let reanimatedProps = {};
@@ -618,18 +618,18 @@ export const createAnimatedComponent = function createAnimatedComponent(name, ar
             let obj = AnimatedComponent(1665);
             const findHostInstanceResult = obj.findHostInstance(self);
             if (findHostInstanceResult) {
-              let tmpResult = tmp(1749);
+              let tmpResult = AnimatedComponent(1749);
               const viewInfo = tmpResult.getViewInfo(findHostInstanceResult);
               ({ viewTag, viewName, viewConfig } = viewInfo);
-              tmpResult = tmp(1639);
+              tmpResult = AnimatedComponent(1639);
               shadowNodeWrapperFromRef = null;
               if (tmpResult.isFabric()) {
-                shadowNodeWrapperFromRef = tmp(1664).getShadowNodeWrapperFromRef(self, findHostInstanceResult);
-                const tmpResult1 = tmp(1664);
+                shadowNodeWrapperFromRef = AnimatedComponent(1664).getShadowNodeWrapperFromRef(self, findHostInstanceResult);
+                const tmpResult1 = AnimatedComponent(1664);
               }
               _componentDOMRef = null;
             } else {
-              const reanimatedError = new tmp(1647).ReanimatedError("Cannot find host instance for this component. Maybe it renders nothing?");
+              const reanimatedError = new AnimatedComponent(1647).ReanimatedError("Cannot find host instance for this component. Maybe it renders nothing?");
               throw reanimatedError;
             }
           }
@@ -827,13 +827,13 @@ export const createAnimatedComponent = function createAnimatedComponent(name, ar
           _componentDOMRef = self._componentDOMRef;
         }
         if (_componentDOMRef) {
-          let tmpResult = tmp(1690);
+          let tmpResult = AnimatedComponent(1690);
           tmpResult.saveSnapshot(self._componentDOMRef);
         }
         if (module_1639) {
           if (arg2) {
             if (self.props.layout) {
-              tmpResult = tmp(1690);
+              tmpResult = AnimatedComponent(1690);
               if (tmpResult.getReducedMotionFromConfig(self.props.layout)) {
                 layout = self.props.layout;
                 const callbackV = layout.callbackV;
@@ -841,12 +841,13 @@ export const createAnimatedComponent = function createAnimatedComponent(name, ar
                   callbackV(true);
                 }
               } else {
-                const result4 = tmp(1690).tryActivateLayoutTransition(self.props, self._componentDOMRef, arg2);
-                const tmpResult1 = tmp(1690);
+                const result4 = AnimatedComponent(1690).tryActivateLayoutTransition(self.props, self._componentDOMRef, arg2);
+                const tmpResult1 = AnimatedComponent(1690);
               }
             }
           }
         }
+        tmp5 = undefined === this.props.sharedTransitionTag && undefined === layout.sharedTransitionTag;
       }
     },
     {
@@ -857,13 +858,13 @@ export const createAnimatedComponent = function createAnimatedComponent(name, ar
             const self = this;
             const obj = AnimatedComponent(1750);
             if (obj2.isFabric()) {
-              if (EXITING === tmp5(1661).LayoutAnimationType.ENTERING) {
+              if (EXITING === AnimatedComponent(1661).LayoutAnimationType.ENTERING) {
                 let reanimatedID = self.reanimatedID;
               }
               let maybeBuildResult = tmp3;
               if (tmp3) {
                 let tmp8;
-                if (EXITING !== tmp5(1661).LayoutAnimationType.LAYOUT) {
+                if (EXITING !== AnimatedComponent(1661).LayoutAnimationType.LAYOUT) {
                   const props = self.props;
                   let style;
                   if (props != null) {
@@ -871,8 +872,8 @@ export const createAnimatedComponent = function createAnimatedComponent(name, ar
                   }
                   tmp8 = style;
                 }
-                maybeBuildResult = tmp5(1751).maybeBuild(tmp3, tmp8, AnimatedComponent.displayName);
-                const tmp5Result = tmp5(1751);
+                maybeBuildResult = AnimatedComponent(1751).maybeBuild(tmp3, tmp8, AnimatedComponent.displayName);
+                const tmp5Result = AnimatedComponent(1751);
               }
               const result = obj.updateLayoutAnimations(reanimatedID, EXITING, maybeBuildResult);
             }
@@ -884,7 +885,7 @@ export const createAnimatedComponent = function createAnimatedComponent(name, ar
     },
     {
       key: "_configureSharedTransition",
-      value: function _configureSharedTransition(flag) {
+      value: function _configureSharedTransition() {
         if (flag === undefined) {
           flag = false;
         }
@@ -924,6 +925,7 @@ export const createAnimatedComponent = function createAnimatedComponent(name, ar
           }
         }
         reduceMotionFromConfig = AnimatedComponent(1676).getReduceMotionFromConfig();
+        const obj = AnimatedComponent(1676);
       }
     },
     {

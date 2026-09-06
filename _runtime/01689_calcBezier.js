@@ -244,13 +244,13 @@ class Bezier {
                             if (typeof closure_5 === "function") {
                               if (typeof closure_6 === "function") {
                                 const sum2 = num4 + tmp5;
-                                const sum3 = 3 * (1 - tmp9 + tmp10) * sum2 * sum2 + 2 * (tmp12 - tmp13) * sum2 + 3 * tmp6;
+                                const sum3 = 3 * (1 - tmp9 + tmp10) * sum2 * sum2 + 2 * (tmp12 - tmp13) * sum2 + 3 * closure_0;
                                 if (sum3 >= c2) {
-                                  let tmp18 = newtonRaphsonIterate(arg0, sum2, tmp6, tmp7);
+                                  let tmp18 = newtonRaphsonIterate(arg0, sum2, closure_0, closure_2);
                                 } else {
                                   tmp18 = sum2;
                                   if (0 !== sum3) {
-                                    tmp18 = binarySubdivide(arg0, num4, num4 + c3, tmp6, tmp7);
+                                    tmp18 = binarySubdivide(arg0, num4, num4 + c3, closure_0, closure_2);
                                   }
                                 }
                                 return tmp18;

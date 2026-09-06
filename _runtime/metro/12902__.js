@@ -2,6 +2,7 @@
 
 // Module 12902
 import errorCallback from "errorCallback" /* 12793 */;
+import _mod12804 from "module_12804" /* 12804 */;
 import _mod12821 from "module_12821" /* 12821 */;
 import _mod12829 from "module_12829" /* 12829 */;
 import _mod12868 from "module_12868" /* 12868 */;
@@ -21,7 +22,7 @@ function _addTracingHeadersToFetchRequest(headers, headers2, span) {
       const _Request = Request;
       let isInstanceOfResult = typeof Request !== "undefined";
       if (typeof Request !== "undefined") {
-        let tmpResult = tmp(12804);
+        let tmpResult = _mod12804;
         const _Request2 = Request;
         isInstanceOfResult = tmpResult.isInstanceOf(headers, Request);
       }
@@ -35,7 +36,7 @@ function _addTracingHeadersToFetchRequest(headers, headers2, span) {
       const _Headers = Headers;
       let isInstanceOfResult1 = typeof Headers !== "undefined";
       if (typeof Headers !== "undefined") {
-        tmpResult = tmp(12804);
+        tmpResult = _mod12804;
         const _Headers3 = Headers;
         isInstanceOfResult1 = tmpResult.isInstanceOf(headers, Headers);
       }

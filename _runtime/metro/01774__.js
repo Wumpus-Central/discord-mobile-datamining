@@ -90,11 +90,10 @@ let items = [
       if (1 === hasOwnProperty.count(this.props.children)) {
         const findNodeHandleResult = LayoutAnimationConfig(1744).findNodeHandle(self);
         if (findNodeHandleResult) {
-          const result = tmp(1680).setShouldAnimateExitingForTag(findNodeHandleResult, !self.props.skipExiting);
-          const tmpResult = tmp(1680);
+          const result = LayoutAnimationConfig(1680).setShouldAnimateExitingForTag(findNodeHandleResult, !self.props.skipExiting);
+          const tmpResult = LayoutAnimationConfig(1680);
         }
         const obj = LayoutAnimationConfig(1744);
-        tmp = LayoutAnimationConfig;
       }
     }
   },

@@ -25,15 +25,15 @@ function getDaysToWeekday(dateWithAdjustedTimezone, sum, next) {
   } else if ("next" === next) {
     if (day == Meridiem.Weekday.SUNDAY) {
       let num12 = 7;
-      if (sum != tmp6(10437).Weekday.SUNDAY) {
+      if (sum != Meridiem.Weekday.SUNDAY) {
         num12 = sum;
       }
       let sum3 = num12;
-    } else if (day == tmp6(10437).Weekday.SATURDAY) {
+    } else if (day == Meridiem.Weekday.SATURDAY) {
       let num9 = 7;
-      if (sum != tmp6(10437).Weekday.SATURDAY) {
+      if (sum != Meridiem.Weekday.SATURDAY) {
         let num10 = 8;
-        if (sum != tmp6(10437).Weekday.SUNDAY) {
+        if (sum != Meridiem.Weekday.SUNDAY) {
           num10 = 1 + sum;
         }
         num9 = num10;
@@ -41,7 +41,7 @@ function getDaysToWeekday(dateWithAdjustedTimezone, sum, next) {
       sum3 = num9;
     } else {
       if (sum < day) {
-        if (sum != tmp6(10437).Weekday.SUNDAY) {
+        if (sum != Meridiem.Weekday.SUNDAY) {
           const diff3 = sum - dateWithAdjustedTimezone.getDay();
           let sum1 = diff3;
           if (diff3 < 0) {

@@ -15,7 +15,6 @@ export function useEventHandlerRegistration(arg0) {
       if (findNodeHandleResult) {
         if ("workletEventHandler" in workletEventHandler) {
           workletEventHandler.workletEventHandler.registerForEvents(findNodeHandleResult);
-          workletEventHandler = workletEventHandler.workletEventHandler;
         } else {
           workletEventHandler.registerForEvents(findNodeHandleResult);
         }

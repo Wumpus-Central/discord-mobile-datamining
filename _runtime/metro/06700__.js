@@ -31,8 +31,8 @@ export const useDetectorUpdater = function useDetectorUpdater(current, current2,
     obj = { preparedGesture, gestureConfig, gesturesToAttach, webEventHandlersRef, viewTag: tmp3 };
     attachHandlers.attachHandlers(obj);
     if (tmp3 !== current.previousViewTag) {
-      tmp2.previousViewTag = tmp3;
-      tmp2.forceRebuildReanimatedEvent = true;
+      current.previousViewTag = tmp3;
+      current.forceRebuildReanimatedEvent = true;
       forceRender();
     }
   }, items);

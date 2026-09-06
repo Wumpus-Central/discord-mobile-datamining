@@ -134,19 +134,19 @@ let items = [
       tag.fork();
       const K = no.K;
       if (ReflectionBinaryWriter(1201).ScalarType.INT32 !== K) {
-        if (tmp(1201).ScalarType.FIXED32 !== K) {
-          if (tmp(1201).ScalarType.UINT32 !== K) {
-            if (tmp(1201).ScalarType.SFIXED32 !== K) {
-              if (tmp(1201).ScalarType.SINT32 !== K) {
+        if (ReflectionBinaryWriter(1201).ScalarType.FIXED32 !== K) {
+          if (ReflectionBinaryWriter(1201).ScalarType.UINT32 !== K) {
+            if (ReflectionBinaryWriter(1201).ScalarType.SFIXED32 !== K) {
+              if (ReflectionBinaryWriter(1201).ScalarType.SINT32 !== K) {
                 let parsed = match;
-                if (tmp(1201).ScalarType.BOOL === K) {
+                if (ReflectionBinaryWriter(1201).ScalarType.BOOL === K) {
                   let tmp6 = "true" == match;
                   if (!tmp6) {
                     tmp6 = "false" == match;
                   }
-                  tmp(1197).assert(tmp6);
+                  ReflectionBinaryWriter(1197).assert(tmp6);
                   parsed = "true" == match;
-                  const tmpResult = tmp(1197);
+                  const tmpResult = ReflectionBinaryWriter(1197);
                 }
               }
               const self = this;
@@ -156,7 +156,7 @@ let items = [
               if ("scalar" === kind) {
                 self.scalar(tag, no.V.T, 2, arg4, true);
               } else if ("enum" === kind) {
-                self.scalar(tag, tmp(1201).ScalarType.INT32, 2, arg4, true);
+                self.scalar(tag, ReflectionBinaryWriter(1201).ScalarType.INT32, 2, arg4, true);
               } else if ("message" === kind) {
                 const V = no.V;
                 self.message(tag, arg1, V.T(), 2, arg4);
@@ -221,15 +221,15 @@ let items = [
       let tmp5 = tmp4;
       let Bit64 = Varint;
       if (ReflectionBinaryWriter(1201).ScalarType.INT32 !== arg0) {
-        if (tmp(1201).ScalarType.STRING === arg0) {
+        if (ReflectionBinaryWriter(1201).ScalarType.STRING === arg0) {
           let tmp12 = tmp3;
           if (!tmp3) {
             tmp12 = !byteLength.length;
           }
-          Bit64 = tmp(1192).WireType.LengthDelimited;
+          Bit64 = ReflectionBinaryWriter(1192).WireType.LengthDelimited;
           str = "string";
           tmp5 = tmp12;
-        } else if (tmp(1201).ScalarType.BOOL === arg0) {
+        } else if (ReflectionBinaryWriter(1201).ScalarType.BOOL === arg0) {
           tmp5 = false === byteLength;
           str = "bool";
           Bit64 = Varint;
@@ -237,82 +237,82 @@ let items = [
           str = "uint32";
           tmp5 = tmp4;
           Bit64 = Varint;
-          if (tmp(1201).ScalarType.UINT32 !== arg0) {
-            if (tmp(1201).ScalarType.DOUBLE === arg0) {
-              Bit64 = tmp(1192).WireType.Bit64;
+          if (ReflectionBinaryWriter(1201).ScalarType.UINT32 !== arg0) {
+            if (ReflectionBinaryWriter(1201).ScalarType.DOUBLE === arg0) {
+              Bit64 = ReflectionBinaryWriter(1192).WireType.Bit64;
               str = "double";
               tmp5 = tmp4;
-            } else if (tmp(1201).ScalarType.FLOAT === arg0) {
-              Bit64 = tmp(1192).WireType.Bit32;
+            } else if (ReflectionBinaryWriter(1201).ScalarType.FLOAT === arg0) {
+              Bit64 = ReflectionBinaryWriter(1192).WireType.Bit32;
               str = "float";
               tmp5 = tmp4;
-            } else if (tmp(1201).ScalarType.INT64 === arg0) {
+            } else if (ReflectionBinaryWriter(1201).ScalarType.INT64 === arg0) {
               let isZeroResult = tmp3;
               if (!tmp3) {
-                const PbLong3 = tmp(1195).PbLong;
+                const PbLong3 = ReflectionBinaryWriter(1195).PbLong;
                 isZeroResult = PbLong3.from(byteLength).isZero();
                 const fromResult = PbLong3.from(byteLength);
               }
               str = "int64";
               tmp5 = isZeroResult;
               Bit64 = Varint;
-            } else if (tmp(1201).ScalarType.UINT64 === arg0) {
+            } else if (ReflectionBinaryWriter(1201).ScalarType.UINT64 === arg0) {
               let isZeroResult1 = tmp3;
               if (!tmp3) {
-                const PbULong2 = tmp(1195).PbULong;
+                const PbULong2 = ReflectionBinaryWriter(1195).PbULong;
                 isZeroResult1 = PbULong2.from(byteLength).isZero();
                 const fromResult1 = PbULong2.from(byteLength);
               }
               str = "uint64";
               tmp5 = isZeroResult1;
               Bit64 = Varint;
-            } else if (tmp(1201).ScalarType.FIXED64 === arg0) {
+            } else if (ReflectionBinaryWriter(1201).ScalarType.FIXED64 === arg0) {
               let isZeroResult2 = tmp3;
               if (!tmp3) {
-                const PbULong = tmp(1195).PbULong;
+                const PbULong = ReflectionBinaryWriter(1195).PbULong;
                 isZeroResult2 = PbULong.from(byteLength).isZero();
                 const fromResult2 = PbULong.from(byteLength);
               }
-              Bit64 = tmp(1192).WireType.Bit64;
+              Bit64 = ReflectionBinaryWriter(1192).WireType.Bit64;
               str = "fixed64";
               tmp5 = isZeroResult2;
-            } else if (tmp(1201).ScalarType.BYTES === arg0) {
+            } else if (ReflectionBinaryWriter(1201).ScalarType.BYTES === arg0) {
               let tmp8 = tmp3;
               if (!tmp3) {
                 tmp8 = !byteLength.byteLength;
               }
-              Bit64 = tmp(1192).WireType.LengthDelimited;
+              Bit64 = ReflectionBinaryWriter(1192).WireType.LengthDelimited;
               str = "bytes";
               tmp5 = tmp8;
-            } else if (tmp(1201).ScalarType.FIXED32 === arg0) {
-              Bit64 = tmp(1192).WireType.Bit32;
+            } else if (ReflectionBinaryWriter(1201).ScalarType.FIXED32 === arg0) {
+              Bit64 = ReflectionBinaryWriter(1192).WireType.Bit32;
               str = "fixed32";
               tmp5 = tmp4;
-            } else if (tmp(1201).ScalarType.SFIXED32 === arg0) {
-              Bit64 = tmp(1192).WireType.Bit32;
+            } else if (ReflectionBinaryWriter(1201).ScalarType.SFIXED32 === arg0) {
+              Bit64 = ReflectionBinaryWriter(1192).WireType.Bit32;
               str = "sfixed32";
               tmp5 = tmp4;
-            } else if (tmp(1201).ScalarType.SFIXED64 === arg0) {
+            } else if (ReflectionBinaryWriter(1201).ScalarType.SFIXED64 === arg0) {
               let isZeroResult3 = tmp3;
               if (!tmp3) {
-                const PbLong2 = tmp(1195).PbLong;
+                const PbLong2 = ReflectionBinaryWriter(1195).PbLong;
                 isZeroResult3 = PbLong2.from(byteLength).isZero();
                 const fromResult3 = PbLong2.from(byteLength);
               }
-              Bit64 = tmp(1192).WireType.Bit64;
+              Bit64 = ReflectionBinaryWriter(1192).WireType.Bit64;
               str = "sfixed64";
               tmp5 = isZeroResult3;
             } else {
               str = "sint32";
               tmp5 = tmp4;
               Bit64 = Varint;
-              if (tmp(1201).ScalarType.SINT32 !== arg0) {
+              if (ReflectionBinaryWriter(1201).ScalarType.SINT32 !== arg0) {
                 tmp5 = tmp4;
                 Bit64 = Varint;
-                if (tmp(1201).ScalarType.SINT64 === arg0) {
+                if (ReflectionBinaryWriter(1201).ScalarType.SINT64 === arg0) {
                   let isZeroResult4 = tmp3;
                   if (!tmp3) {
-                    const PbLong = tmp(1195).PbLong;
+                    const PbLong = ReflectionBinaryWriter(1195).PbLong;
                     isZeroResult4 = PbLong.from(byteLength).isZero();
                     const fromResult4 = PbLong.from(byteLength);
                   }

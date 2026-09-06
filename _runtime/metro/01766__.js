@@ -78,17 +78,14 @@ class EntryExitTransition {
                 const keys = Object.keys(item);
                 for (const item10011 of keys) {
                   let transform = obj.transform;
-                  let tmp2 = item10011;
-                  let tmp4 = delayFunction;
-                  let tmp5 = delay;
                   let obj = closure_0(1708);
                   let obj2 = closure_0(1708);
                   let num = 0;
                   if (closure_1.initialValues.transform) {
-                    num = closure_1.initialValues.transform[arg1][tmp2];
+                    num = closure_1.initialValues.transform[arg1][item10011];
                   }
                   obj = {};
-                  obj[item10011] = tmp4(tmp5, obj.withSequence(arg0[item10011], obj2.withTiming(num, { duration: 0 })));
+                  obj[item10011] = delayFunction(delay, obj.withSequence(arg0[item10011], obj2.withTiming(num, { duration: 0 })));
                   let arr = transform.push(obj);
                   continue;
                 }
@@ -124,7 +121,6 @@ class EntryExitTransition {
         }
         const keys2 = Object.keys(tmp.animations);
         for (const item10093 of keys2) {
-          let tmp29 = item10093;
           if ("transform" === item10093) {
             let _Array2 = Array;
             if (Array.isArray(tmp.animations.transform)) {
@@ -132,20 +128,17 @@ class EntryExitTransition {
               let item1 = transform1.forEach((item, index) => {
                 const keys = Object.keys(item);
                 for (const item10011 of keys) {
-                  let tmp2 = item10011;
                   let transform = obj.transform;
-                  let tmp4 = delayFunction;
-                  let tmp6 = duration;
                   let sum = delay + duration;
                   let obj = closure_0(1708);
                   let obj2 = closure_0(1708);
                   let num = 0;
                   if (closure_0.initialValues.transform) {
-                    num = closure_0.initialValues.transform[arg1][tmp2];
+                    num = closure_0.initialValues.transform[arg1][item10011];
                   }
                   obj = {};
-                  obj = { duration: tmp6 };
-                  obj[item10011] = tmp4(sum, obj.withSequence(obj2.withTiming(num, obj), arg0[tmp2]));
+                  obj = { duration };
+                  obj[item10011] = delayFunction(sum, obj.withSequence(obj2.withTiming(num, obj), arg0[item10011]));
                   let arr = transform.push(obj);
                   continue;
                 }
@@ -153,12 +146,12 @@ class EntryExitTransition {
               continue;
             }
             continue;
-          } else if (undefined !== initialValues[tmp29]) {
+          } else if (undefined !== initialValues[item10093]) {
             continue;
           } else {
             let obj4 = delayFunction(callbackV[6]);
             let obj6 = delayFunction(callbackV[6]);
-            initialValues[tmp29] = delayFunction(initialValues, obj4.withSequence(obj6.withTiming(tmp.initialValues[tmp29], { duration: 0 }), tmp.animations[tmp29]));
+            initialValues[item10093] = delayFunction(initialValues, obj4.withSequence(obj6.withTiming(tmp.initialValues[item10093], { duration: 0 }), tmp.animations[item10093]));
           }
           continue;
         }

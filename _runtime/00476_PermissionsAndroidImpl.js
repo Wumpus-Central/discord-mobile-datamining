@@ -106,14 +106,13 @@ closure_0 = asyncGeneratorStep(async (arg0, arg1) => {
             if (dependencyMap) {
               c4 = 1;
               c5 = 1;
-              let obj1 = { value: closure_0(477).shouldShowRequestPermissionRationale(tmp27), done: false };
+              let obj1 = { value: closure_0(477).shouldShowRequestPermissionRationale(closure_0), done: false };
               return obj1;
             } else {
               obj1 = closure_0(477);
               const permission = obj1.requestPermission(closure_130_0);
               c5 = 3;
             }
-            tmp27 = closure_0;
             const tmp31 = closure_0(38);
           }
         } else if (arg0 === 1) {

@@ -330,7 +330,7 @@ function SceneView(arg0) {
     items4[2] = obj9;
     obj8.style = items4;
     obj8.children = headerBackground();
-    tmp36Result = tmp36(closure_9, obj8);
+    tmp36Result = closure_10(closure_9, obj8);
   }
   const items5 = [tmp36Result, , ];
   tmp36Result = null;
@@ -359,8 +359,8 @@ function SceneView(arg0) {
       };
       const obj13 = { back: memo1, options, route, navigation };
       obj12.children = header(obj13);
-      obj11.children = tmp36(closure_9, obj12);
-      tmp36Result = tmp36(tmp45, obj11);
+      obj11.children = closure_10(closure_9, obj12);
+      tmp36Result = closure_10(closure_9, obj11);
     }
   }
   items5[1] = tmp36Result;
@@ -369,12 +369,11 @@ function SceneView(arg0) {
     tmp47 = tmp39;
   }
   const obj14 = { value: tmp47, children: null };
-  const tmp38 = closure_11;
   const tmp8Result3 = num6(7917);
   obj14.children = closure_10(num6(5631).HeaderBackContext.Provider, { value: memo1, children: descriptor.render() });
   items5[2] = closure_10(num6(5631).HeaderShownContext.Provider, obj14);
   obj7.children = items5;
-  obj6.children = tmp38(num6(5631).HeaderHeightContext.Provider, obj7);
+  obj6.children = closure_11(num6(5631).HeaderHeightContext.Provider, obj7);
   obj4.children = closure_10(num6(7919).AnimatedHeaderHeightContext.Provider, obj6);
   obj3.children = closure_10(num6(4912).ScreenStackItem, obj4);
   return closure_10(num6(1484).NavigationProvider, obj3);
@@ -420,11 +419,11 @@ export const NativeStackView = function NativeStackView(state) {
     }
     let tmp10;
     if (key) {
-      tmp10 = tmp[key];
+      tmp10 = descriptors[key];
     }
     let tmp11;
     if (key1) {
-      tmp11 = tmp[key1];
+      tmp11 = descriptors[key1];
     }
     const hasItem = closure_5.includes(key.key);
     let flag = hasItem;

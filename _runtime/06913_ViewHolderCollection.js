@@ -34,9 +34,8 @@ export const ViewHolderCollection = (data) => {
   extraData(() => {
     if (first > 0) {
       if (closure_17 != null) {
-        obj.layout();
+        closure_17.layout();
       }
-      obj = closure_17;
     }
   }, items);
   const items1 = [first];

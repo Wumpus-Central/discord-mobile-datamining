@@ -337,16 +337,14 @@ let fn = () => {
           num2 = diff;
           str = replaced;
           str2 = replaced;
-          if (!obj2.test(replaced)) {
+          if (!re14.test(replaced)) {
             break;
           }
         }
-        obj2 = re14;
       }
-      let fn = closure_15[str2];
+      let fn = dependencyMap2[str2];
       if (!fn) {
         const match = str2.match(re13);
-        length = match.length;
         for (let num4 = 0; num4 < length; num4 = num4 + 1) {
           let str4 = match[num4];
           if (obj[match[num4]]) {
@@ -369,7 +367,6 @@ let fn = () => {
             while (true) {
               let _Function = Function;
               let tmp3 = typeof Function !== "undefined";
-              let tmp = match;
               if (typeof Function !== "undefined") {
                 let _Function2 = Function;
                 tmp3 = match[num] instanceof Function;
@@ -377,7 +374,7 @@ let fn = () => {
               if (!tmp3) {
                 break;
               } else {
-                let tmp7 = tmp[num];
+                let tmp7 = match[num];
                 if (tmp3) {
                   let call2 = tmp7.call;
                   let tmp9 = str2;
@@ -395,9 +392,10 @@ let fn = () => {
           }
           return str2;
         };
+        length = match.length;
       }
-      closure_15[str2] = fn;
-      let invalidDateResult = tmp7[str2](self);
+      dependencyMap2[str2] = fn;
+      let invalidDateResult = dependencyMap2[str2](self);
     } else {
       invalidDateResult = localeDataResult.invalidDate();
     }
@@ -568,29 +566,29 @@ let fn = () => {
       if ("MMM" === arg1) {
         const call3 = closure_1_35.call;
         const _shortMonthsParse2 = tmp._shortMonthsParse;
-        let tmp11 = typeof call3 === "unknown" ? tmp10(toLocaleLowerCaseResult) : call3(_shortMonthsParse2, toLocaleLowerCaseResult);
+        let tmp11 = typeof call3 === "unknown" ? closure_1_35(toLocaleLowerCaseResult) : call3(_shortMonthsParse2, toLocaleLowerCaseResult);
         if (-1 !== tmp11) {
           let tmp13 = tmp11;
         } else {
-          const call4 = tmp10.call;
+          const call4 = closure_1_35.call;
           const _longMonthsParse2 = tmp._longMonthsParse;
-          const tmp12 = typeof call4 === "unknown" ? tmp10(toLocaleLowerCaseResult) : call4(_longMonthsParse2, toLocaleLowerCaseResult);
-          tmp11 = tmp12;
+          tmp11 = typeof call4 === "unknown" ? closure_1_35(toLocaleLowerCaseResult) : call4(_longMonthsParse2, toLocaleLowerCaseResult);
           tmp13 = null;
+          const tmp12 = typeof call4 === "unknown" ? closure_1_35(toLocaleLowerCaseResult) : call4(_longMonthsParse2, toLocaleLowerCaseResult);
         }
         let tmp9 = tmp13;
       } else {
         const call = closure_1_35.call;
         const _longMonthsParse = tmp._longMonthsParse;
-        let tmp7 = typeof call === "unknown" ? tmp6(toLocaleLowerCaseResult) : call(_longMonthsParse, toLocaleLowerCaseResult);
+        let tmp7 = typeof call === "unknown" ? closure_1_35(toLocaleLowerCaseResult) : call(_longMonthsParse, toLocaleLowerCaseResult);
         if (-1 !== tmp7) {
           tmp9 = tmp7;
         } else {
-          const call2 = tmp6.call;
+          const call2 = closure_1_35.call;
           const _shortMonthsParse = tmp._shortMonthsParse;
-          const tmp8 = typeof call2 === "unknown" ? tmp6(toLocaleLowerCaseResult) : call2(_shortMonthsParse, toLocaleLowerCaseResult);
-          tmp7 = tmp8;
+          tmp7 = typeof call2 === "unknown" ? closure_1_35(toLocaleLowerCaseResult) : call2(_shortMonthsParse, toLocaleLowerCaseResult);
           tmp9 = null;
+          const tmp8 = typeof call2 === "unknown" ? closure_1_35(toLocaleLowerCaseResult) : call2(_shortMonthsParse, toLocaleLowerCaseResult);
         }
       }
       return tmp9;
@@ -818,15 +816,12 @@ let fn = () => {
       const diff2 = self.year() - 1;
       let week = sum + weeksInYear(diff2, dow, doy);
       let year = diff2;
+    } else if (sum > weeksInYear(self.year(), dow, doy)) {
+      week = sum - weeksInYear(self.year(), dow, doy);
+      year = self.year() + 1;
     } else {
-      if (sum > weeksInYear(self.year(), dow, doy)) {
-        week = sum - tmp4(self.year(), dow, doy);
-        year = self.year() + 1;
-      } else {
-        year = self.year();
-        week = sum;
-      }
-      tmp4 = weeksInYear;
+      year = self.year();
+      week = sum;
     }
     return { week, year };
   }
@@ -894,18 +889,18 @@ let fn = () => {
       if ("dddd" === arg1) {
         const call7 = closure_1_35.call;
         const _weekdaysParse3 = tmp._weekdaysParse;
-        let tmp16 = typeof call7 === "unknown" ? tmp15(toLocaleLowerCaseResult) : call7(_weekdaysParse3, toLocaleLowerCaseResult);
+        let tmp16 = typeof call7 === "unknown" ? closure_1_35(toLocaleLowerCaseResult) : call7(_weekdaysParse3, toLocaleLowerCaseResult);
         if (-1 === tmp16) {
-          const call8 = tmp15.call;
+          const call8 = closure_1_35.call;
           const _shortWeekdaysParse3 = tmp._shortWeekdaysParse;
-          const tmp17 = typeof call8 === "unknown" ? tmp15(toLocaleLowerCaseResult) : call8(_shortWeekdaysParse3, toLocaleLowerCaseResult);
+          const tmp17 = typeof call8 === "unknown" ? closure_1_35(toLocaleLowerCaseResult) : call8(_shortWeekdaysParse3, toLocaleLowerCaseResult);
           tmp16 = tmp17;
           if (-1 === tmp17) {
-            const call9 = tmp15.call;
+            const call9 = closure_1_35.call;
             const _minWeekdaysParse3 = tmp._minWeekdaysParse;
-            const tmp18 = typeof call9 === "unknown" ? tmp15(toLocaleLowerCaseResult) : call9(_minWeekdaysParse3, toLocaleLowerCaseResult);
-            tmp16 = tmp18;
+            tmp16 = typeof call9 === "unknown" ? closure_1_35(toLocaleLowerCaseResult) : call9(_minWeekdaysParse3, toLocaleLowerCaseResult);
             let tmp19 = null;
+            const tmp18 = typeof call9 === "unknown" ? closure_1_35(toLocaleLowerCaseResult) : call9(_minWeekdaysParse3, toLocaleLowerCaseResult);
           }
           let tmp9 = tmp19;
         }
@@ -913,18 +908,18 @@ let fn = () => {
       } else if ("ddd" === arg1) {
         const call4 = closure_1_35.call;
         const _shortWeekdaysParse2 = tmp._shortWeekdaysParse;
-        let tmp11 = typeof call4 === "unknown" ? tmp10(toLocaleLowerCaseResult) : call4(_shortWeekdaysParse2, toLocaleLowerCaseResult);
+        let tmp11 = typeof call4 === "unknown" ? closure_1_35(toLocaleLowerCaseResult) : call4(_shortWeekdaysParse2, toLocaleLowerCaseResult);
         if (-1 === tmp11) {
-          const call5 = tmp10.call;
+          const call5 = closure_1_35.call;
           const _weekdaysParse2 = tmp._weekdaysParse;
-          const tmp12 = typeof call5 === "unknown" ? tmp10(toLocaleLowerCaseResult) : call5(_weekdaysParse2, toLocaleLowerCaseResult);
+          const tmp12 = typeof call5 === "unknown" ? closure_1_35(toLocaleLowerCaseResult) : call5(_weekdaysParse2, toLocaleLowerCaseResult);
           tmp11 = tmp12;
           if (-1 === tmp12) {
-            const call6 = tmp10.call;
+            const call6 = closure_1_35.call;
             const _minWeekdaysParse2 = tmp._minWeekdaysParse;
-            const tmp13 = typeof call6 === "unknown" ? tmp10(toLocaleLowerCaseResult) : call6(_minWeekdaysParse2, toLocaleLowerCaseResult);
-            tmp11 = tmp13;
+            tmp11 = typeof call6 === "unknown" ? closure_1_35(toLocaleLowerCaseResult) : call6(_minWeekdaysParse2, toLocaleLowerCaseResult);
             let tmp14 = null;
+            const tmp13 = typeof call6 === "unknown" ? closure_1_35(toLocaleLowerCaseResult) : call6(_minWeekdaysParse2, toLocaleLowerCaseResult);
           }
           tmp9 = tmp14;
         }
@@ -932,18 +927,18 @@ let fn = () => {
       } else {
         const call = closure_1_35.call;
         const _minWeekdaysParse = tmp._minWeekdaysParse;
-        let tmp6 = typeof call === "unknown" ? tmp5(toLocaleLowerCaseResult) : call(_minWeekdaysParse, toLocaleLowerCaseResult);
+        let tmp6 = typeof call === "unknown" ? closure_1_35(toLocaleLowerCaseResult) : call(_minWeekdaysParse, toLocaleLowerCaseResult);
         if (-1 === tmp6) {
-          const call2 = tmp5.call;
+          const call2 = closure_1_35.call;
           const _weekdaysParse = tmp._weekdaysParse;
-          const tmp7 = typeof call2 === "unknown" ? tmp5(toLocaleLowerCaseResult) : call2(_weekdaysParse, toLocaleLowerCaseResult);
+          const tmp7 = typeof call2 === "unknown" ? closure_1_35(toLocaleLowerCaseResult) : call2(_weekdaysParse, toLocaleLowerCaseResult);
           tmp6 = tmp7;
           if (-1 === tmp7) {
-            const call3 = tmp5.call;
+            const call3 = closure_1_35.call;
             const _shortWeekdaysParse = tmp._shortWeekdaysParse;
-            const tmp8 = typeof call3 === "unknown" ? tmp5(toLocaleLowerCaseResult) : call3(_shortWeekdaysParse, toLocaleLowerCaseResult);
-            tmp6 = tmp8;
+            tmp6 = typeof call3 === "unknown" ? closure_1_35(toLocaleLowerCaseResult) : call3(_shortWeekdaysParse, toLocaleLowerCaseResult);
             tmp9 = null;
+            const tmp8 = typeof call3 === "unknown" ? closure_1_35(toLocaleLowerCaseResult) : call3(_shortWeekdaysParse, toLocaleLowerCaseResult);
           }
         }
         tmp9 = tmp6;
@@ -1000,8 +995,8 @@ let fn = () => {
   function loadLocale(_abbr2) {
     if (undefined === dependencyMap4[_abbr2]) {
       if (undefined !== module) {
-        if (tmp4) {
-          if (tmp4.exports) {
+        if (module) {
+          if (module.exports) {
             if ((function isLocaleNameSane(_abbr2) {
               let tmp = !_abbr2;
               if (_abbr2) {
@@ -1052,10 +1047,10 @@ let fn = () => {
       parentLocale.abbr = bg;
       if (null != dependencyMap4[bg]) {
         if (null != c2.deprecationHandler) {
-          obj2.deprecationHandler("defineLocaleOverride", "use moment.updateLocale(localeName, config) to change an existing locale. moment.defineLocale(localeName, config) should only be used for creating a new locale See http://momentjs.com/guides/#/warnings/define-locale/ for more info.");
+          c2.deprecationHandler("defineLocaleOverride", "use moment.updateLocale(localeName, config) to change an existing locale. moment.defineLocale(localeName, config) should only be used for creating a new locale See http://momentjs.com/guides/#/warnings/define-locale/ for more info.");
         }
         if (!defineLocaleOverride.defineLocaleOverride) {
-          let warn = false === obj2.suppressDeprecationWarnings;
+          let warn = false === c2.suppressDeprecationWarnings;
           if (warn) {
             const _console = console;
             warn = typeof console !== "undefined";
@@ -1070,17 +1065,17 @@ let fn = () => {
           }
           tmp10.defineLocaleOverride = true;
         }
-        _config = tmp4[bg]._config;
+        _config = dependencyMap4[bg]._config;
       } else if (null != parentLocale.parentLocale) {
-        if (null != tmp4[parentLocale.parentLocale]) {
-          _config = tmp4[parentLocale.parentLocale]._config;
+        if (null != dependencyMap4[parentLocale.parentLocale]) {
+          _config = dependencyMap4[parentLocale.parentLocale]._config;
         } else {
           const tmp6 = loadLocale(parentLocale.parentLocale);
           if (null == tmp6) {
             if (!dependencyMap5[parentLocale.parentLocale]) {
-              tmp7[parentLocale.parentLocale] = [];
+              dependencyMap5[parentLocale.parentLocale] = [];
             }
-            let arr = tmp7[parentLocale.parentLocale];
+            let arr = dependencyMap5[parentLocale.parentLocale];
             obj = { name: bg, config: parentLocale };
             arr = arr.push(obj);
             return null;
@@ -1221,8 +1216,8 @@ let fn = () => {
     if (tmp) {
       let tmp4 = c27;
       if (_a[c27] >= 0) {
-        tmp4 = tmp3;
-        if (_a[tmp3] <= 11) {
+        tmp4 = c27;
+        if (_a[c27] <= 11) {
           let tmp11 = c28;
           if (_a[c28] >= 1) {
             const _isNaN2 = isNaN;
@@ -1252,23 +1247,23 @@ let fn = () => {
                 }
               }
             }
-            tmp11 = tmp24;
-            if (_a[tmp24] <= num3) {
+            tmp11 = c28;
+            if (_a[c28] <= num3) {
               let tmp13 = c29;
               if (_a[c29] >= 0) {
-                tmp13 = tmp29;
-                if (_a[tmp29] <= 24) {
-                  if (24 !== _a[tmp29]) {
+                tmp13 = c29;
+                if (_a[c29] <= 24) {
+                  if (24 !== _a[c29]) {
                     let tmp16 = c30;
                     if (_a[c30] >= 0) {
-                      tmp16 = tmp15;
-                      if (_a[tmp15] <= 59) {
+                      tmp16 = c30;
+                      if (_a[c30] <= 59) {
                         let tmp18 = c31;
                         if (_a[c31] >= 0) {
-                          tmp18 = tmp17;
-                          if (_a[tmp17] <= 59) {
+                          tmp18 = c31;
+                          if (_a[c31] <= 59) {
                             if (_a[c32] < 0) {
-                              let num14 = tmp19;
+                              let num14 = c32;
                             } else {
                               num14 = -1;
                             }
@@ -1280,11 +1275,11 @@ let fn = () => {
                     }
                     tmp13 = tmp16;
                   } else {
-                    tmp13 = tmp29;
+                    tmp13 = c29;
                     if (0 === _a[c30]) {
-                      tmp13 = tmp29;
+                      tmp13 = c29;
                       if (0 === _a[c31]) {
-                        tmp13 = tmp29;
+                        tmp13 = c29;
                       }
                     }
                   }
@@ -1479,6 +1474,7 @@ let fn = () => {
     } else {
       _i._isValid = false;
     }
+    const str4 = _i._i.replace(/\([^()]*\)|[\n\t]/g, " ").replace(/(\s\s+)/g, " ").replace(/^\s\s*/, "");
   }
   function configFromArray(_d) {
     if (!_d._d) {
@@ -1528,7 +1524,7 @@ let fn = () => {
                 if (!tmp18) {
                   tmp18 = d > 6;
                 }
-                let tmp12 = tmp54;
+                let tmp12 = c26;
                 let num = doy;
                 let num2 = dow;
                 let tmp13 = d;
@@ -1536,7 +1532,7 @@ let fn = () => {
                 let tmp15 = gg;
                 if (tmp18) {
                   let flag = true;
-                  tmp12 = tmp54;
+                  tmp12 = c26;
                   num = doy;
                   num2 = dow;
                   tmp13 = d;
@@ -1544,7 +1540,7 @@ let fn = () => {
                   tmp15 = gg;
                 }
               } else {
-                tmp12 = tmp54;
+                tmp12 = c26;
                 num = doy;
                 num2 = dow;
                 tmp13 = dow;
@@ -1556,7 +1552,7 @@ let fn = () => {
                   if (!tmp17) {
                     tmp17 = _w2.e > 6;
                   }
-                  tmp12 = tmp54;
+                  tmp12 = c26;
                   num = doy;
                   num2 = dow;
                   tmp13 = sum;
@@ -1564,7 +1560,7 @@ let fn = () => {
                   tmp15 = gg;
                   if (tmp17) {
                     flag = true;
-                    tmp12 = tmp54;
+                    tmp12 = c26;
                     num = doy;
                     num2 = dow;
                     tmp13 = sum;
@@ -1615,7 +1611,7 @@ let fn = () => {
         if (!tmp23) {
           tmp23 = num10 > 7;
         }
-        tmp12 = tmp19;
+        tmp12 = c26;
         num = 4;
         num2 = 1;
         tmp13 = num10;
@@ -1623,7 +1619,7 @@ let fn = () => {
         tmp15 = GG;
         if (tmp23) {
           flag = true;
-          tmp12 = tmp19;
+          tmp12 = c26;
           num = 4;
           num2 = 1;
           tmp13 = num10;
@@ -1708,7 +1704,7 @@ let fn = () => {
       }
       if (tmp45) {
         _d._nextDay = true;
-        _d._a[tmp44] = 0;
+        _d._a[c29] = 0;
       }
       _d._d = _d._useUTC ? createUTCDate : createDate.apply(null, items2);
       _d = _d._d;
@@ -1722,7 +1718,7 @@ let fn = () => {
         _d2.setUTCMinutes(_d3.getUTCMinutes() - _d._tzm);
       }
       if (_d._nextDay) {
-        _d._a[tmp44] = 24;
+        _d._a[c29] = 24;
       }
       let _w3 = _d._w;
       if (_w3) {
@@ -1781,7 +1777,7 @@ let fn = () => {
         let num7 = 0;
         let num8 = 0;
         let arr1 = text;
-        if (0 < arr.length) {
+        if (0 < length) {
           while (true) {
             str7 = arr[num7];
             let tmp13 = obj;
@@ -1892,7 +1888,7 @@ let fn = () => {
           tmp39 = true === _f._pf.bigHour;
         }
         if (tmp39) {
-          tmp39 = _f._a[tmp38] > 0;
+          tmp39 = _f._a[c29] > 0;
         }
         if (tmp39) {
           if (null == _f._pf) {
@@ -1914,7 +1910,7 @@ let fn = () => {
         ({ _meridiem: _f._pf.meridiem, _locale } = _f);
         const _meridiem = _f._meridiem;
         if (null == _meridiem) {
-          _f._a[tmp38] = tmp40;
+          _f._a[c29] = tmp40;
           if (null == _f._pf) {
             const obj9 = { empty: false, unusedTokens: [], unusedInput: [], overflow: -2, charsLeftOver: 0, nullInput: false, invalidEra: null, invalidMonth: null, invalidFormat: false, userInvalidated: false, iso: false, parsedDateParts: [], era: null, meridiem: null, rfc2822: false, weekdayMismatch: false };
             _f._pf = obj9;
@@ -1949,6 +1945,7 @@ let fn = () => {
             meridiemHourResult = num10;
           }
         }
+        length = arr.length;
       } else {
         configFromRFC2822(_f);
       }
@@ -1982,7 +1979,7 @@ let fn = () => {
       }
       if (tmp7) {
         checkOverflow(tmp5);
-        obj = Object.create(tmp6.prototype);
+        obj = Object.create(Moment.prototype);
         copyConfig(obj, tmp5);
         let num17 = NaN;
         if (null != tmp5._d) {
@@ -2249,7 +2246,6 @@ let fn = () => {
           const tmp11 = typeof call === "unknown" ? str2() : call(tmp5);
         }
       }
-      tmp6 = Moment;
     }
     const utcResult = createLocalOrUTC(NaN, undefined, undefined, undefined, true).utc();
     if (null == utcResult._pf) {
@@ -2258,22 +2254,23 @@ let fn = () => {
     }
     s(utcResult._pf, { nullInput: true });
     tmp95 = utcResult;
+    const obj8 = createLocalOrUTC(NaN, undefined, undefined, undefined, true);
   }
-  function createLocalOrUTC(_d, _f, _l, arg3, _isUTC) {
-    let tmp2 = true !== _f;
+  function createLocalOrUTC(_d, arg1, arg2, arg3, _isUTC) {
+    let tmp2 = true !== arg1;
     if (tmp2) {
-      tmp2 = false !== _f;
+      tmp2 = false !== arg1;
     }
     let tmp3 = arg3;
     if (!tmp2) {
-      tmp3 = _f;
+      tmp3 = arg1;
     }
-    let tmp5 = true !== _l;
+    let tmp5 = true !== arg2;
     if (tmp5) {
-      tmp5 = false !== _l;
+      tmp5 = false !== arg2;
     }
     if (!tmp5) {
-      tmp3 = _l;
+      tmp3 = arg2;
     }
     let tmp7 = null != _d;
     if (!tmp7) {
@@ -2316,7 +2313,7 @@ let fn = () => {
           const tmp17 = typeof call2 === "unknown" ? str2() : call2(_d);
         }
       }
-      obj = { _isAMomentObject: true, _isUTC, _useUTC: _isUTC, _l, _i: _d, _f, _strict: tmp3 };
+      obj = { _isAMomentObject: true, _isUTC, _useUTC: _isUTC, _l: tmp6, _i: _d, _f: tmp4, _strict: tmp3 };
       const tmp24 = prepareConfig(obj);
       checkOverflow(tmp24);
       obj = Object.create(Moment.prototype);
@@ -2349,6 +2346,8 @@ let fn = () => {
       str = "[object Object]";
       const tmp9 = typeof call === "unknown" ? str() : call(_d);
     }
+    tmp4 = arg1;
+    tmp6 = arg2;
   }
   function createLocal(_d, arg1, arg2, arg3) {
     return createLocalOrUTC(_d, arg1, arg2, arg3, false);
@@ -2970,6 +2969,7 @@ let fn = () => {
       return diff;
     }
     diff = new Date(arg0, arg1, arg2).valueOf();
+    const date1 = new Date(arg0, arg1, arg2);
   }
   function utcStartOfDate(arg0, arg1, arg2) {
     if (arg0 < 100) {
@@ -3120,7 +3120,7 @@ let fn = () => {
     let num2 = 0;
     if (null != tmp3) {
       const result = (tmp3 + num) % 7;
-      const tmp9Result = tmp9();
+      const tmp9Result = getLocale();
       const obj3 = createLocalOrUTC(undefined, undefined, undefined, undefined, true);
       return tmp9Result[weekdays](createLocalOrUTC(undefined, undefined, undefined, undefined, true).utc().set("day", result), str2);
     } else {
@@ -3135,7 +3135,6 @@ let fn = () => {
       } while (num2 < 7);
       return items;
     }
-    tmp9 = getLocale;
   }
   function substituteTimeAgo(arg0, arg1, arg2, arg3, relativeTime) {
     let num = arg1;
@@ -3208,9 +3207,9 @@ let fn = () => {
   }
   const re13 = /(\[[^\[]*\])|(\\)?([Hh]mm(ss)?|Mo|MM?M?M?|Do|DDDo|DD?D?D?|ddd?d?|do?|w[o|w]?|W[o|W]?|Qo?|N{1,5}|YYYYYY|YYYYY|YYYY|YY|y{2,4}|yo?|gg(ggg?)?|GG(GGG?)?|e|E|a|A|hh?|HH?|kk?|mm?|ss?|S{1,9}|x|X|zz?|ZZ?|.)/g;
   const re14 = /(\[[^\[]*\])|(\\)?(LTS|LT|LL?L?L?|l{1,4})/g;
-  closure_15 = {};
+  let dependencyMap2 = {};
   let obj = {};
-  const dependencyMap2 = { D: "date", dates: "date", date: "date", d: "day", days: "day", day: "day", e: "weekday", weekdays: "weekday", weekday: "weekday", E: "isoWeekday", isoweekdays: "isoWeekday", isoweekday: "isoWeekday", DDD: "dayOfYear", dayofyears: "dayOfYear", dayofyear: "dayOfYear", h: "hour", hours: "hour", hour: "hour", ms: "millisecond", milliseconds: "millisecond", millisecond: "millisecond", m: "minute", minutes: "minute", minute: "minute", M: "month", months: "month", month: "month", Q: "quarter", quarters: "quarter", quarter: "quarter", s: "second", seconds: "second", second: "second", gg: "weekYear", weekyears: "weekYear", weekyear: "weekYear", GG: "isoWeekYear", isoweekyears: "isoWeekYear", isoweekyear: "isoWeekYear", w: "week", weeks: "week", week: "week", W: "isoWeek", isoweeks: "isoWeek", isoweek: "isoWeek", y: "year", years: "year", year: "year" };
+  dependencyMap2 = { D: "date", dates: "date", date: "date", d: "day", days: "day", day: "day", e: "weekday", weekdays: "weekday", weekday: "weekday", E: "isoWeekday", isoweekdays: "isoWeekday", isoweekday: "isoWeekday", DDD: "dayOfYear", dayofyears: "dayOfYear", dayofyear: "dayOfYear", h: "hour", hours: "hour", hour: "hour", ms: "millisecond", milliseconds: "millisecond", millisecond: "millisecond", m: "minute", minutes: "minute", minute: "minute", M: "month", months: "month", month: "month", Q: "quarter", quarters: "quarter", quarter: "quarter", s: "second", seconds: "second", second: "second", gg: "weekYear", weekyears: "weekYear", weekyear: "weekYear", GG: "isoWeekYear", isoweekyears: "isoWeekYear", isoweekyear: "isoWeekYear", w: "week", weeks: "week", week: "week", W: "isoWeek", isoweeks: "isoWeek", isoweek: "isoWeek", y: "year", years: "year", year: "year" };
   closure_19 = { date: 9, day: 11, weekday: 11, isoWeekday: 11, dayOfYear: 4, hour: 13, millisecond: 16, minute: 14, month: 8, quarter: 7, second: 15, weekYear: 1, isoWeekYear: 1, week: 5, isoWeek: 5, year: 1 };
   let tmp = /\d\d?/;
   const re21 = tmp;

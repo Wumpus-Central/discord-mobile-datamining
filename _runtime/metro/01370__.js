@@ -49,7 +49,7 @@ export const serialize = function serialize(arg0, arg1, arg2) {
   if (re3.test(arg0)) {
     const tmpResult = tmp(arg1);
     if (tmpResult) {
-      if (!obj2.test(tmpResult)) {
+      if (!re3.test(tmpResult)) {
         const _TypeError2 = TypeError;
         const typeError = new TypeError("argument val is invalid");
         throw typeError;
@@ -69,7 +69,7 @@ export const serialize = function serialize(arg0, arg1, arg2) {
       }
     }
     if (obj.domain) {
-      if (obj2.test(obj.domain)) {
+      if (re3.test(obj.domain)) {
         items.push(`Domain=${obj.domain}`);
       } else {
         const _TypeError3 = TypeError;
@@ -78,7 +78,7 @@ export const serialize = function serialize(arg0, arg1, arg2) {
       }
     }
     if (obj.path) {
-      if (obj2.test(obj.path)) {
+      if (re3.test(obj.path)) {
         items.push(`Path=${obj.path}`);
       } else {
         const _TypeError4 = TypeError;

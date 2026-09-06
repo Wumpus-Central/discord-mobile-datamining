@@ -11,7 +11,7 @@ if (tmp) {
   let _Int32Array = Int32Array;
   tmp = typeof Int32Array !== "undefined";
 }
-setTyped.assign = (arg0) => {
+setTyped.assign = (assign) => {
   let arr;
   const call = slice.call;
   if (typeof call === "unknown") {
@@ -50,16 +50,16 @@ setTyped.assign = (arg0) => {
     const typeError = new TypeError(arr + "must be non-object");
     throw typeError;
   }
-  return arg0;
+  return assign;
 };
-setTyped.shrinkBuf = (subarray, arg1) => {
-  if (subarray.length === arg1) {
-    return subarray;
-  } else if (subarray.subarray) {
-    let subarrayResult = subarray.subarray(0, arg1);
+setTyped.shrinkBuf = (array, length) => {
+  if (array.length === length) {
+    return array;
+  } else if (array.subarray) {
+    let subarrayResult = array.subarray(0, length);
   } else {
-    subarray.length = arg1;
-    subarrayResult = subarray;
+    array.length = length;
+    subarrayResult = array;
   }
 };
 let closure_1 = {

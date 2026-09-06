@@ -22,21 +22,19 @@ class FrameCallbackRegistryJS {
 const entry = {
   key: "registerFrameCallback",
   value: function registerFrameCallback(callback) {
-    closure_0 = callback;
     if (callback) {
       const self = this;
-      const nextCallbackId = this.nextCallbackId;
       this.nextCallbackId = this.nextCallbackId + 1;
       nextCallbackId(1680);
       const fn = function c() {
         const result = FrameCallbackRegistryJS._frameCallbackRegistry.registerFrameCallback(closure_0, nextCallbackId);
       };
-      const obj = { callback, callbackId: nextCallbackId };
+      const obj = { callback, callbackId: this.nextCallbackId };
       fn.__closure = obj;
       fn.__workletHash = 11361563554462;
       fn.__initData = __initData;
       obj.runOnUI(fn)();
-      return nextCallbackId;
+      return this.nextCallbackId;
     } else {
       return -1;
     }

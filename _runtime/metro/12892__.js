@@ -63,8 +63,8 @@ export const thirdPartyErrorFilterIntegration = setupIntegration.defineIntegrati
           filterKeys = filterKeys.filterKeys;
           return filterKeys.includes(item);
         }))) {
-          if ("drop-error-if-contains-third-party-frames" !== tmp2.behaviour) {
-            if ("drop-error-if-exclusively-contains-third-party-frames" !== tmp2.behaviour) {
+          if ("drop-error-if-contains-third-party-frames" !== behaviour.behaviour) {
+            if ("drop-error-if-exclusively-contains-third-party-frames" !== behaviour.behaviour) {
               obj = {};
               const merged = Object.assign(tags.tags);
               obj.third_party_code = true;

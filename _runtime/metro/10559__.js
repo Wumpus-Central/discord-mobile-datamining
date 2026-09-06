@@ -16,7 +16,7 @@ import _mod10571 from "module_10571" /* 10571 */;
 import _mod10572 from "module_10572" /* 10572 */;
 import _mod10573 from "module_10573" /* 10573 */;
 
-function createConfiguration(flag) {
+function createConfiguration() {
   if (flag === undefined) {
     flag = true;
   }

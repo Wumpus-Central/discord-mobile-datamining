@@ -73,6 +73,7 @@ class Text {
         const root = closure_0.root;
         root.setNativeProps(propsAndStylesResult);
       }
+      const obj2 = Text(8469);
     };
     return tmp3Result;
   }

@@ -7,7 +7,7 @@ function _typeof(arg0) {
     if (typeof Symbol.iterator === "symbol") {
       exports = (arg0) => typeof arg0;
     }
-    tmp.exports = exports;
+    module.exports = exports;
     return exports(arg0);
   }
   exports = (arg0) => {

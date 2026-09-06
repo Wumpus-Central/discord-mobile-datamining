@@ -1,9 +1,9 @@
 // === Module 14411: ? ===
 
 // Module 14411
+import _possibleConstructorReturn from "_possibleConstructorReturn" /* 93 */;
 import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
-import _possibleConstructorReturn from "_possibleConstructorReturn" /* 93 */;
 import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
 import noop from "module_19" /* 19 */;
@@ -29,6 +29,7 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
+_possibleConstructorReturn;
 if (typeof WeakMap === "function") {
   const _WeakMap = WeakMap;
   const weakMap = new WeakMap();
@@ -189,13 +190,13 @@ let items = [
           tmp8 = resizeMode;
         }
         obj.resizeMode = tmp8;
-        let jsxResult = <tmp4.Image uri={uri} />;
-        let tmp6 = tmp4;
-        let tmp7 = tmp3;
+        let jsxResult = <get ActivityIndicator.Image uri={uri} />;
+        let tmp6 = get_ActivityIndicator;
+        let tmp7 = jsxProd;
       } else {
-        jsxResult = <tmp4.View />;
-        tmp6 = tmp4;
-        tmp7 = tmp3;
+        jsxResult = <get ActivityIndicator.View />;
+        tmp6 = get_ActivityIndicator;
+        tmp7 = jsxProd;
       }
       const obj1 = { children: null };
       ({ jsxs, Fragment, jsx: jsx2 } = tmp7);

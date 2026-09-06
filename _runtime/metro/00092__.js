@@ -9,7 +9,7 @@ import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import _get from "_get" /* 96 */;
 import _inherits from "_inherits" /* 98 */;
 
-let RCTDeviceEventEmitterImpl = arg1;
+const RCTDeviceEventEmitterImpl = arg1;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -52,13 +52,12 @@ class RCTDeviceEventEmitterImpl {
 _inherits(RCTDeviceEventEmitterImpl, EventEmitterDefault);
 const entry = {
   key: "emit",
-  value: function emit(arg0) {
-    RCTDeviceEventEmitterImpl = arg0;
+  value: function emit(RCTDeviceEventEmitterImpl) {
     const substr = [...arguments].slice();
     RCTDeviceEventEmitterImpl(46).beginEvent(() => "RCTDeviceEventEmitter.emit#" + closure_0);
     try {
       const self = this;
-      const items = [arg0];
+      const items = [RCTDeviceEventEmitterImpl];
       HermesBuiltin.arraySpread(substr, 1);
       !(function _superPropGet(RCTDeviceEventEmitterImpl, emit, arg2, arg3) {
         closure_0 = arg2;
@@ -94,15 +93,18 @@ const entry = {
         }
         return fn;
       })(RCTDeviceEventEmitterImpl, "emit", this, 3);
-      RCTDeviceEventEmitterImpl(46).endEvent();
+      tmp5(46).endEvent();
+      const tmp5Result = tmp5(46);
     } catch (tmp15) {
       tmp3(tmp[6]).endEvent();
       throw tmp15;
     }
+    const obj = RCTDeviceEventEmitterImpl(46);
+    tmp5 = RCTDeviceEventEmitterImpl;
   }
 };
 let items = [entry];
-const tmp5 = new _createClass(RCTDeviceEventEmitterImpl, items)();
+let tmp5 = new _createClass(RCTDeviceEventEmitterImpl, items)();
 Object.defineProperty(global, "__rctDeviceEventEmitter", { configurable: true, value: tmp5 });
 
 export default tmp5;

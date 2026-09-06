@@ -330,10 +330,9 @@ export const truncateGenAiMessages = function truncateGenAiMessages(items) {
                             }
                             if (closure_1_6(tmp18)) {
                               let tmp24 = closure_1_10(tmp18);
-                            } else if (tmp23(content)) {
+                            } else if (closure_1_6(content)) {
                               tmp24 = closure_1_10(content);
                             }
-                            tmp23 = closure_1_6;
                           }
                         });
                         let tmp9 = obj;
@@ -436,20 +435,18 @@ export const truncateGenAiMessages = function truncateGenAiMessages(items) {
                             }
                             if (closure_1_6(tmp18)) {
                               let tmp24 = closure_1_10(tmp18);
-                            } else if (tmp23(content)) {
+                            } else if (closure_1_6(content)) {
                               tmp24 = closure_1_10(content);
                             }
-                            tmp23 = closure_1_6;
                           }
                         });
                         tmp18 = obj;
                       }
                       if (closure_1_6(tmp18)) {
                         let tmp24 = closure_1_10(tmp18);
-                      } else if (tmp23(content)) {
+                      } else if (closure_1_6(content)) {
                         tmp24 = closure_1_10(content);
                       }
-                      tmp23 = closure_1_6;
                     }
                   });
                   let tmp9 = obj;
@@ -576,10 +573,9 @@ export const truncateGenAiMessages = function truncateGenAiMessages(items) {
                             }
                             if (closure_1_6(tmp18)) {
                               let tmp24 = closure_1_10(tmp18);
-                            } else if (tmp23(content)) {
+                            } else if (closure_1_6(content)) {
                               tmp24 = closure_1_10(content);
                             }
-                            tmp23 = closure_1_6;
                           }
                         });
                         let tmp9 = obj;
@@ -682,30 +678,27 @@ export const truncateGenAiMessages = function truncateGenAiMessages(items) {
                             }
                             if (closure_1_6(tmp18)) {
                               let tmp24 = closure_1_10(tmp18);
-                            } else if (tmp23(content)) {
+                            } else if (closure_1_6(content)) {
                               tmp24 = closure_1_10(content);
                             }
-                            tmp23 = closure_1_6;
                           }
                         });
                         tmp18 = obj;
                       }
                       if (closure_1_6(tmp18)) {
                         let tmp24 = closure_1_10(tmp18);
-                      } else if (tmp23(content)) {
+                      } else if (closure_1_6(content)) {
                         tmp24 = closure_1_10(content);
                       }
-                      tmp23 = closure_1_6;
                     }
                   });
                   tmp18 = obj;
                 }
                 if (closure_1_6(tmp18)) {
                   let tmp24 = closure_1_10(tmp18);
-                } else if (tmp23(content)) {
+                } else if (closure_1_6(content)) {
                   tmp24 = closure_1_10(content);
                 }
-                tmp23 = closure_1_6;
               }
             });
             let tmp9 = obj;
@@ -856,10 +849,9 @@ export const truncateGenAiMessages = function truncateGenAiMessages(items) {
                             }
                             if (closure_1_6(tmp18)) {
                               let tmp24 = closure_1_10(tmp18);
-                            } else if (tmp23(content)) {
+                            } else if (closure_1_6(content)) {
                               tmp24 = closure_1_10(content);
                             }
-                            tmp23 = closure_1_6;
                           }
                         });
                         let tmp9 = obj;
@@ -962,20 +954,18 @@ export const truncateGenAiMessages = function truncateGenAiMessages(items) {
                             }
                             if (closure_1_6(tmp18)) {
                               let tmp24 = closure_1_10(tmp18);
-                            } else if (tmp23(content)) {
+                            } else if (closure_1_6(content)) {
                               tmp24 = closure_1_10(content);
                             }
-                            tmp23 = closure_1_6;
                           }
                         });
                         tmp18 = obj;
                       }
                       if (closure_1_6(tmp18)) {
                         let tmp24 = closure_1_10(tmp18);
-                      } else if (tmp23(content)) {
+                      } else if (closure_1_6(content)) {
                         tmp24 = closure_1_10(content);
                       }
-                      tmp23 = closure_1_6;
                     }
                   });
                   let tmp9 = obj;
@@ -1102,10 +1092,9 @@ export const truncateGenAiMessages = function truncateGenAiMessages(items) {
                             }
                             if (closure_1_6(tmp18)) {
                               let tmp24 = closure_1_10(tmp18);
-                            } else if (tmp23(content)) {
+                            } else if (closure_1_6(content)) {
                               tmp24 = closure_1_10(content);
                             }
-                            tmp23 = closure_1_6;
                           }
                         });
                         let tmp9 = obj;
@@ -1208,40 +1197,36 @@ export const truncateGenAiMessages = function truncateGenAiMessages(items) {
                             }
                             if (closure_1_6(tmp18)) {
                               let tmp24 = closure_1_10(tmp18);
-                            } else if (tmp23(content)) {
+                            } else if (closure_1_6(content)) {
                               tmp24 = closure_1_10(content);
                             }
-                            tmp23 = closure_1_6;
                           }
                         });
                         tmp18 = obj;
                       }
                       if (closure_1_6(tmp18)) {
                         let tmp24 = closure_1_10(tmp18);
-                      } else if (tmp23(content)) {
+                      } else if (closure_1_6(content)) {
                         tmp24 = closure_1_10(content);
                       }
-                      tmp23 = closure_1_6;
                     }
                   });
                   tmp18 = obj;
                 }
                 if (closure_1_6(tmp18)) {
                   let tmp24 = closure_1_10(tmp18);
-                } else if (tmp23(content)) {
+                } else if (closure_1_6(content)) {
                   tmp24 = closure_1_10(content);
                 }
-                tmp23 = closure_1_6;
               }
             });
             tmp18 = obj;
           }
           if (closure_1_6(tmp18)) {
             let tmp24 = closure_1_10(tmp18);
-          } else if (tmp23(content)) {
+          } else if (closure_1_6(content)) {
             tmp24 = closure_1_10(content);
           }
-          tmp23 = closure_1_6;
         }
       });
       if (typeof jsonBytes === "function") {
@@ -1250,7 +1235,7 @@ export const truncateGenAiMessages = function truncateGenAiMessages(items) {
           const _TextEncoder = TextEncoder;
           const encoder = new TextEncoder();
           tmp2 = mapped;
-          if (encoder.encode(tmp4).length > tmp) {
+          if (encoder.encode(tmp4).length > c0) {
             let length = mapped.length;
             let diff = mapped.length - 1;
             let tmp12 = length;
@@ -1273,7 +1258,7 @@ export const truncateGenAiMessages = function truncateGenAiMessages(items) {
                   }
                 } else {
                   tmp12 = length;
-                  if (num2 + tmp8 > tmp) {
+                  if (num2 + tmp8 > c0) {
                     break;
                   }
                 }
@@ -1335,19 +1320,18 @@ export const truncateGenAiMessages = function truncateGenAiMessages(items) {
                   } else {
                     const items = [];
                     for (const item10022 of parts) {
-                      let tmp6 = item10022;
                       let tmp8 = getPartText(item10022);
                       let tmp9 = tmp8;
                       let tmp11 = utf8Bytes(tmp8);
                       if (tmp11 <= diff1) {
-                        let arr = items.push(tmp6);
+                        let arr = items.push(item10022);
                         diff1 = diff1 - tmp12;
                         continue;
                       } else {
                         if (0 === items.length) {
                           let tmp18 = truncateTextByBytes(tmp9, diff1);
                           if (tmp18) {
-                            arr = items.push(withPartText(tmp6, tmp19));
+                            arr = items.push(withPartText(item10022, tmp19));
                           }
                           obj3.return();
                           break;
@@ -1368,7 +1352,7 @@ export const truncateGenAiMessages = function truncateGenAiMessages(items) {
                       return items1;
                     }
                   }
-                })(tmp15, tmp);
+                })(tmp15, c0);
               } else {
                 items1 = [];
               }
@@ -1381,7 +1365,7 @@ export const truncateGenAiMessages = function truncateGenAiMessages(items) {
               if (typeof utf8Bytes === "function") {
                 const _TextEncoder2 = TextEncoder;
                 const encoder2 = new TextEncoder();
-                let diff1 = tmp - encoder2.encode(tmp25).length;
+                let diff1 = c0 - encoder2.encode(tmp25).length;
                 if (diff1 <= 0) {
                   let items2 = [];
                 } else {

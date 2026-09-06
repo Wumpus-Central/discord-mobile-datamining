@@ -138,9 +138,9 @@ function UiPerformance(smoothingFrames) {
       if (typeof createCircularDoublesBuffer === "function") {
         const obj = { next: 0, buffer: null, size: null, count: 0, push: null, front: null, back: null };
         const _Float32Array = Float32Array;
-        const float32Array = new Float32Array(tmp2);
+        const float32Array = new Float32Array(smoothingFrames);
         obj.buffer = float32Array;
-        obj.size = tmp2;
+        obj.size = smoothingFrames;
         obj.push = function push(arg0) {
           this.buffer[this.next] = arg0;
           this.next = (this.next + 1) % this.size;
@@ -171,12 +171,12 @@ function UiPerformance(smoothingFrames) {
           }
           return tmp;
         };
-        iter.value = obj;
+        sharedValue1.value = obj;
       } else {
         throw new TypeError("Trying to call a non-function");
       }
     }
-    value = iter.value;
+    value = sharedValue1.value;
     if (typeof completeBufferRoutine === "function") {
       const _Math = Math;
       const rounded = Math.round(tmp9);

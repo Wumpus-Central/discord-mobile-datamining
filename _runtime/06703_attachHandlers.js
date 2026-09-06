@@ -45,7 +45,6 @@ export const attachHandlers = function attachHandlers(preparedGesture) {
     }
   });
   for (const item10067 of gesturesToAttach) {
-    let tmp13 = item10067;
     let tmp17 = gesturesToAttach;
     let tmp15 = preparedGesture;
     let ActionType = preparedGesture(gesturesToAttach[6]).ActionType;
@@ -55,9 +54,9 @@ export const attachHandlers = function attachHandlers(preparedGesture) {
       JS_FUNCTION_NEW_API = ActionType.JS_FUNCTION_NEW_API;
     }
     let obj7 = gestureConfig(tmp17[3]);
-    let attachGestureHandlerResult = obj7.attachGestureHandler(tmp13.handlerTag, tmp, JS_FUNCTION_NEW_API);
+    let attachGestureHandlerResult = obj7.attachGestureHandler(item10067.handlerTag, tmp, JS_FUNCTION_NEW_API);
     let MountRegistry = tmp15(tmp17[7]).MountRegistry;
-    let gestureWillMountResult = MountRegistry.gestureWillMount(tmp13);
+    let gestureWillMountResult = MountRegistry.gestureWillMount(item10067);
     continue;
   }
   preparedGesture.attachedGestures = gesturesToAttach;
@@ -65,4 +64,5 @@ export const attachHandlers = function attachHandlers(preparedGesture) {
     const found = gesturesToAttach.filter((shouldUseReanimated) => shouldUseReanimated.shouldUseReanimated);
     preparedGesture.animatedHandlers.value = found.map((handlers) => handlers.handlers);
   }
+  const obj6 = preparedGesture(gesturesToAttach[1]);
 };

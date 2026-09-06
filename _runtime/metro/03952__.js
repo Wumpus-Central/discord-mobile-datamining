@@ -131,7 +131,7 @@ function _createForOfIteratorHelper(str, arg1) {
         }
         const _Array2 = Array;
         arr = Array.from(str);
-        tmp3 = "Object" === substr && str.constructor;
+        tmp3 = "Object" === substr && "Object".constructor;
       }
     }
     closure_1 = arr;
@@ -373,21 +373,20 @@ export default function parse(arg0, arg1, arg2, locale) {
               const obj11 = _createForOfIteratorHelper(mapped.join("").match(closure_12));
               try {
                 function _loop() {
-                  let tmp2 = null != closure_1 && tmp.useAdditionalWeekYearTokens;
+                  let tmp2 = null != locale && locale.useAdditionalWeekYearTokens;
                   if (!tmp2) {
                     tmp2 = !throwProtectedError.isProtectedWeekYearToken(str);
                   }
                   if (!tmp2) {
                     throwProtectedError.throwProtectedError(str, str, closure_0);
                   }
-                  let tmp10 = null != tmp && tmp.useAdditionalDayOfYearTokens;
+                  let tmp10 = null != locale && locale.useAdditionalDayOfYearTokens;
                   if (!tmp10) {
                     tmp10 = !throwProtectedError.isProtectedDayOfYearToken(str);
                   }
                   if (!tmp10) {
                     throwProtectedError.throwProtectedError(str, str, closure_0);
                   }
-                  const str2 = str[0];
                   obj = parsers.parsers[str2];
                   if (obj) {
                     const incompatibleTokens = obj.incompatibleTokens;

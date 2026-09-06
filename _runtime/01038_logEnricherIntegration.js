@@ -78,7 +78,7 @@ export () => ({
   setup(on) {
     closure_0 = on;
     on.on("afterInit", () => {
-      fn(undefined, undefined, undefined, function*(arg0, value) {
+      fn(undefined, undefined, undefined, function*() {
         if (c5 === 2) {
           c5 = 3;
           throw new TypeError("Generator functions may not be called on executing generators");

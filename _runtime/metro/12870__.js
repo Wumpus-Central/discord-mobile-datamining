@@ -1,6 +1,8 @@
 // === Module 12870: ? ===
 
 // Module 12870
+import _mod12797 from "module_12797" /* 12797 */;
+import _mod12811 from "module_12811" /* 12811 */;
 import _mod12824 from "module_12824" /* 12824 */;
 
 require = arg1;
@@ -26,12 +28,12 @@ export const addBreadcrumb = function addBreadcrumb(arg0, arg1) {
     }
     if (num > 0) {
       consoleSandboxResult = { timestamp: null };
-      let tmpResult = tmp(12811);
+      let tmpResult = _mod12811;
       consoleSandboxResult.timestamp = tmpResult.dateTimestampInSeconds();
       const merged = Object.assign(arg0);
       closure_2 = consoleSandboxResult;
       if (tmp5) {
-        tmpResult = tmp(12797);
+        tmpResult = _mod12797;
         consoleSandboxResult = tmpResult.consoleSandbox(() => beforeBreadcrumb(consoleSandboxResult, closure_0));
       }
       if (null !== consoleSandboxResult) {

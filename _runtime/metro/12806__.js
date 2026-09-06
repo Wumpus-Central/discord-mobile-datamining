@@ -15,11 +15,11 @@ export const isMatchingPattern = function isMatchingPattern(arr, test) {
   if (!isStringResult) {
     return isStringResult;
   } else {
-    let tmpResult = tmp(12804);
+    let tmpResult = _mod12804;
     if (tmpResult.isRegExp(test)) {
       let isMatch = test.test(arr);
     } else {
-      tmpResult = tmp(12804);
+      tmpResult = _mod12804;
       isMatch = tmpResult.isString(test);
       if (isMatch) {
         if (flag) {
@@ -55,12 +55,12 @@ export const safeJoin = function safeJoin(arg0, arg1) {
     return "";
   }
 };
-export const snipLine = function snipLine(arr, arg1) {
+export const snipLine = function snipLine(arr, lineno) {
   if (arr.length <= 150) {
     return arr;
   } else {
-    let tmp = arg1;
-    if (arg1 > length) {
+    let tmp = lineno;
+    if (lineno > length) {
       tmp = length;
     }
     const _Math = Math;
@@ -90,10 +90,8 @@ export const snipLine = function snipLine(arr, arg1) {
     return text;
   }
 };
-export const stringMatchesSomePattern = function stringMatchesSomePattern(arg0) {
-  closure_0 = arg0;
-  let items = arg1;
-  if (arg1 === undefined) {
+export const stringMatchesSomePattern = function stringMatchesSomePattern(transaction) {
+  if (items === undefined) {
     items = [];
   }
   let flag = arg2;
@@ -101,24 +99,21 @@ export const stringMatchesSomePattern = function stringMatchesSomePattern(arg0) 
     flag = false;
   }
   return items.some((test) => {
-    if (flag === undefined) {
-      flag = false;
-    }
-    const isStringResult = _mod12804.isString(closure_0);
+    const isStringResult = _mod12804.isString(transaction);
     if (!isStringResult) {
       return isStringResult;
     } else {
-      let tmpResult = tmp(12804);
+      let tmpResult = _mod12804;
       if (tmpResult.isRegExp(test)) {
-        let isMatch = test.test(obj);
+        let isMatch = test.test(transaction);
       } else {
-        tmpResult = tmp(12804);
+        tmpResult = _mod12804;
         isMatch = tmpResult.isString(test);
         if (isMatch) {
           if (flag) {
-            let hasItem = obj === test;
+            let hasItem = transaction === test;
           } else {
-            hasItem = obj.includes(test);
+            hasItem = transaction.includes(test);
           }
         }
       }
@@ -126,8 +121,8 @@ export const stringMatchesSomePattern = function stringMatchesSomePattern(arg0) 
   });
 };
 export const truncate = function truncate(str) {
-  let num = arg1;
-  if (arg1 === undefined) {
+  let num = maxValueLength;
+  if (maxValueLength === undefined) {
     num = 0;
   }
   let combined = str;

@@ -35,10 +35,10 @@ function extractFont(propsAndStylesResult) {
     const _Object = Object;
     hasOwnProperty = Object.prototype.hasOwnProperty;
     const call = hasOwnProperty.call;
-    if (!(typeof call === "unknown" ? hasOwnProperty(font) : call(closure_10, font))) {
+    if (!(typeof call === "unknown" ? hasOwnProperty(font) : call(dependencyMap, font))) {
       fontFeatureSettings = re6.exec(font);
       if (!fontFeatureSettings) {
-        tmp23[font] = null;
+        dependencyMap[font] = null;
       }
     }
     const match = /bold/.exec(fontFeatureSettings[1]);
@@ -65,7 +65,7 @@ function extractFont(propsAndStylesResult) {
       const str9 = str6.split(re9)[0].replace(re7, "");
     }
     obj1.fontFamily = replaced1;
-    closure_10[font] = obj1;
+    dependencyMap[font] = obj1;
     const obj3 = /bold/;
     const obj4 = /italic/;
   }
@@ -87,19 +87,18 @@ const re6 = /^\s*((?:(?:normal|bold|italic)\s+)*)(?:(\d+(?:\.\d+)?(?:%|px|em|pt|
 const re7 = /^[\s"']*/;
 const re8 = /[\s"']*$/;
 const re9 = /\s*,\s*/g;
-let closure_10 = {};
+const dependencyMap = {};
 
 export default function extractText(children, arg1) {
   children = children.children;
   if (typeof children !== "string") {
     if (typeof children !== "number") {
       if (Children.count(children) > 1) {
-        let mapped = arr.map(children, getChild);
+        let mapped = Children.map(children, getChild);
       } else {
         const _Array = Array;
         mapped = children;
       }
-      arr = Children;
     }
     let StringResult = null;
     if (null === mapped) {

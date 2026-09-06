@@ -1,6 +1,7 @@
 // === Module 342: configureNext ===
 
 // Module 342 (configureNext)
+import measure from "measure" /* 68 */;
 import _mod71 from "module_71" /* 71 */;
 import get_VersionDefault from "get Version" /* 273 */;
 import javaScriptFlagGetter from "module_27" /* 27 */;
@@ -45,7 +46,7 @@ function configureNext(duration, arg1, arg2) {
           }
         }
       } else {
-        const _default = tmp6(68).default;
+        const _default = measure.default;
         let prop1;
         if (_default != null) {
           prop1 = _default.configureNextLayoutAnimation;
@@ -57,8 +58,8 @@ function configureNext(duration, arg1, arg2) {
 
             };
           }
-          const result1 = tmp6(68).default.configureNextLayoutAnimation(duration, onAnimationComplete, fn2);
-          const _default2 = tmp6(68).default;
+          const result1 = measure.default.configureNextLayoutAnimation(duration, onAnimationComplete, fn2);
+          const _default2 = measure.default;
         }
       }
     }

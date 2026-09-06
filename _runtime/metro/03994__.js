@@ -19,9 +19,9 @@ if (!requiredArgs) {
 }
 requiredArgs = tmp5;
 
-export default function isPast(arg0) {
+export default function isPast(date) {
   requiredArgs.default(1, arguments);
-  const time = _typeof.default(arg0).getTime();
+  const time = _typeof.default(date).getTime();
   return time < Date.now();
 };
 export default exports.default;

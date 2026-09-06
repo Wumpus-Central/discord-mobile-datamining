@@ -10,7 +10,7 @@ import _isFetchSupported from "_isFetchSupported" /* 851 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
-let closure_4 = async function _resolveResponse(arg0, value) {
+let closure_4 = async function _resolveResponse(arg0) {
   if (c6 === 2) {
     c6 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -44,14 +44,14 @@ let closure_4 = async function _resolveResponse(arg0, value) {
           let timeout2;
           let done;
           let body;
-          if (closure_0 != null) {
-            body = tmp49.body;
+          if (_require != null) {
+            body = _require.body;
           }
           if (!body) {
             c6 = 3;
             return { value: "HermesInternal", done: null };
           } else {
-            body = tmp49.body;
+            body = _require.body;
             closure_130_1 = body;
             reader = body.getReader();
             const _setTimeout = setTimeout;
@@ -133,7 +133,7 @@ let closure_4 = async function _resolveResponse(arg0, value) {
 function streamHandler(clone) {
   const response = clone;
   try {
-    !(function resolveResponse(arg0, arg1) {
+    !(function resolveResponse(clone, arg1) {
       const self = this;
       const apply = closure_1_4.apply;
       if (typeof apply === "unknown") {
@@ -215,8 +215,8 @@ function parseFetchArgs(arg0) {
     return request1;
   }
 }
-function getHeadersFromFetchArgs(arg0) {
-  [tmp2, tmp3] = _slicedToArray(arg0, 2);
+function getHeadersFromFetchArgs(items) {
+  [tmp2, tmp3] = _slicedToArray(items, 2);
   try {
     if (typeof tmp3 === "object") {
       if (null !== tmp3) {
@@ -237,11 +237,12 @@ function getHeadersFromFetchArgs(arg0) {
     obj = _mod692;
   } catch (err) {
   }
+  const tmp = _slicedToArray(items, 2);
 }
 Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
 
-export const addFetchEndInstrumentationHandler = function addFetchEndInstrumentationHandler(arg0) {
-  _mod715.addHandler("fetch-body-resolved", arg0);
+export const addFetchEndInstrumentationHandler = function addFetchEndInstrumentationHandler(errorCallback) {
+  _mod715.addHandler("fetch-body-resolved", errorCallback);
   _mod715.maybeInstrument("fetch-body-resolved", () => {
     closure_0 = closure_5;
     {
@@ -256,52 +257,13 @@ export const addFetchEndInstrumentationHandler = function addFetchEndInstrumenta
           if (!closure_2_0) {
             obj = {};
             let merged = Object.assign(obj);
-            tmp2(tmp3[2]).triggerHandlers("fetch", obj);
-            const tmp2Result = tmp2(tmp3[2]);
+            tmp2(dependencyMap[2]).triggerHandlers("fetch", obj);
+            const tmp2Result = tmp2(dependencyMap[2]);
           }
           const obj2 = stack(dependencyMap[6]);
-          stack = asyncGeneratorStep(async (arg0, value) => {
-            if (c1 === 2) {
-              c1 = 3;
-              throw new TypeError("Generator functions may not be called on executing generators");
-            } else if (tmp3 === 3) {
-              if (arg0 === 1) {
-                throw value;
-              } else if (arg0 === 2) {
-                obj = { value, done: true };
-                return obj;
-              } else {
-                return { value: "HermesInternal", done: null };
-              }
-            } else {
-              try {
-                c1 = 2;
-                if (arg0 === 1) {
-                  c1 = 3;
-                  throw value;
-                } else if (arg0 === 2) {
-                  c1 = 3;
-                  obj = { value, done: true };
-                  return obj;
-                } else {
-                  if (stack) {
-                    tmp17(tmp16);
-                  } else {
-                    obj = stack(715);
-                    const obj1 = {};
-                    const merged = Object.assign(c1);
-                    obj1.endTimestamp = 1000 * stack(703).timestampInSeconds();
-                    obj1.response = tmp16;
-                    obj.triggerHandlers("fetch", obj1);
-                    const obj3 = stack(703);
-                  }
-                  c1 = 3;
-                }
-              } catch (tmp11) {
-                c1 = tmp;
-                throw tmp11;
-              }
-            }
+          stack = asyncGeneratorStep(async (response) => {
+            c1 = 0;
+            return (/* F125488 */ function*() { ... })();
           });
           return stack.apply(stack(dependencyMap[5]).GLOBAL_OBJ, items).then(function(result) {
             const self = this;
@@ -324,10 +286,10 @@ export const addFetchEndInstrumentationHandler = function addFetchEndInstrumenta
             const obj4 = closure_3_0(692);
             if (tmp6) {
               error.stack = stack.stack;
-              let tmpResult = tmp(687);
+              let tmpResult = closure_3_0(687);
               const result = tmpResult.addNonEnumerableProperty(error, "framesToPop", 1);
             }
-            tmpResult = tmp(713);
+            tmpResult = closure_3_0(713);
             const client = tmpResult.getClient();
             let str2;
             if (client != null) {
@@ -347,8 +309,8 @@ export const addFetchEndInstrumentationHandler = function addFetchEndInstrumenta
                     const _HermesInternal = HermesInternal;
                     error.message = "" + error.message + " (" + host + ")";
                   } else {
-                    const result1 = tmp(687).addNonEnumerableProperty(error, "__sentry_fetch_url_host__", host);
-                    const tmpResult1 = tmp(687);
+                    const result1 = closure_3_0(687).addNonEnumerableProperty(error, "__sentry_fetch_url_host__", host);
+                    const tmpResult1 = closure_3_0(687);
                   }
                 } catch (err) {
                 }
@@ -362,9 +324,9 @@ export const addFetchEndInstrumentationHandler = function addFetchEndInstrumenta
     }
   });
 };
-export const addFetchInstrumentationHandler = function addFetchInstrumentationHandler(arg0, arg1) {
+export const addFetchInstrumentationHandler = function addFetchInstrumentationHandler(errorCallback, arg1) {
   _require = arg1;
-  require("module_715").addHandler("fetch", arg0);
+  require("module_715").addHandler("fetch", errorCallback);
   let obj = require("module_715");
   require("module_715").maybeInstrument("fetch", () => {
     let flag = closure_0;
@@ -386,52 +348,13 @@ export const addFetchInstrumentationHandler = function addFetchInstrumentationHa
           if (!closure_2_0) {
             obj = {};
             let merged = Object.assign(obj);
-            tmp2(tmp3[2]).triggerHandlers("fetch", obj);
-            const tmp2Result = tmp2(tmp3[2]);
+            tmp2(dependencyMap[2]).triggerHandlers("fetch", obj);
+            const tmp2Result = tmp2(dependencyMap[2]);
           }
           const obj2 = stack(dependencyMap[6]);
-          stack = asyncGeneratorStep(async (arg0, value) => {
-            if (c1 === 2) {
-              c1 = 3;
-              throw new TypeError("Generator functions may not be called on executing generators");
-            } else if (tmp3 === 3) {
-              if (arg0 === 1) {
-                throw value;
-              } else if (arg0 === 2) {
-                obj = { value, done: true };
-                return obj;
-              } else {
-                return { value: "HermesInternal", done: null };
-              }
-            } else {
-              try {
-                c1 = 2;
-                if (arg0 === 1) {
-                  c1 = 3;
-                  throw value;
-                } else if (arg0 === 2) {
-                  c1 = 3;
-                  obj = { value, done: true };
-                  return obj;
-                } else {
-                  if (stack) {
-                    tmp17(tmp16);
-                  } else {
-                    obj = stack(715);
-                    const obj1 = {};
-                    const merged = Object.assign(c1);
-                    obj1.endTimestamp = 1000 * stack(703).timestampInSeconds();
-                    obj1.response = tmp16;
-                    obj.triggerHandlers("fetch", obj1);
-                    const obj3 = stack(703);
-                  }
-                  c1 = 3;
-                }
-              } catch (tmp11) {
-                c1 = tmp;
-                throw tmp11;
-              }
-            }
+          stack = asyncGeneratorStep(async (response) => {
+            c1 = 0;
+            return (/* F125488 */ function*() { ... })();
           });
           return stack.apply(stack(dependencyMap[5]).GLOBAL_OBJ, items).then(function(result) {
             const self = this;
@@ -454,10 +377,10 @@ export const addFetchInstrumentationHandler = function addFetchInstrumentationHa
             const obj4 = closure_3_0(692);
             if (tmp6) {
               error.stack = stack.stack;
-              let tmpResult = tmp(687);
+              let tmpResult = closure_3_0(687);
               const result = tmpResult.addNonEnumerableProperty(error, "framesToPop", 1);
             }
-            tmpResult = tmp(713);
+            tmpResult = closure_3_0(713);
             const client = tmpResult.getClient();
             let str2;
             if (client != null) {
@@ -477,8 +400,8 @@ export const addFetchInstrumentationHandler = function addFetchInstrumentationHa
                     const _HermesInternal = HermesInternal;
                     error.message = "" + error.message + " (" + host + ")";
                   } else {
-                    const result1 = tmp(687).addNonEnumerableProperty(error, "__sentry_fetch_url_host__", host);
-                    const tmpResult1 = tmp(687);
+                    const result1 = closure_3_0(687).addNonEnumerableProperty(error, "__sentry_fetch_url_host__", host);
+                    const tmpResult1 = closure_3_0(687);
                   }
                 } catch (err) {
                 }

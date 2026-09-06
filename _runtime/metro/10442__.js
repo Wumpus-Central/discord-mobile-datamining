@@ -83,10 +83,10 @@ const items = [
       start3.assign("month", tmp10);
       if (index[3]) {
         const start5 = parsingResult.start;
-        start5.assign("year", tmp8(10431).parseYear(index[3]));
+        start5.assign("year", ENMonthNameParser(10431).parseYear(index[3]));
       } else {
         const start4 = parsingResult.start;
-        start4.imply("year", tmp8(10433).findYearClosestToRef(createParsingResult.refDate, 1, tmp10));
+        start4.imply("year", ENMonthNameParser(10433).findYearClosestToRef(createParsingResult.refDate, 1, tmp10));
       }
       return parsingResult;
     }

@@ -24,7 +24,7 @@ function processEvent(tags, originalException) {
   obj.expo = _mod867.isExpo();
   if (obj6.isHermesEnabled()) {
     obj.js_engine = "hermes";
-    let tmp4Result = tmp4(867);
+    let tmp4Result = _mod867;
     const hermesVersion = tmp4Result.getHermesVersion();
     if (hermesVersion) {
       obj.hermes_version = hermesVersion;
@@ -98,7 +98,7 @@ function processEvent(tags, originalException) {
   if (componentStack) {
     obj.component_stack = tmp2.componentStack;
   }
-  tmp4Result = tmp4(867);
+  tmp4Result = _mod867;
   const expoGoVersion = tmp4Result.getExpoGoVersion();
   if (expoGoVersion) {
     obj.expo_go_version = expoGoVersion;

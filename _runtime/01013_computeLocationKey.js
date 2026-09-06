@@ -17,9 +17,9 @@ function computeLocationKey(_location) {
   }
   return "" + pathname + search + _location.hash || "";
 }
-function shouldSkipNavigation(locationKey, arg1, arr, arg3) {
+function shouldSkipNavigation(locationKey, locationKey, arr, timestamp) {
   if (locationKey) {
-    if (locationKey.locationKey === arg1) {
+    if (locationKey.locationKey === locationKey) {
       let result = locationKey.routeName;
       if (result) {
         let obj = pickSplat;
@@ -80,12 +80,12 @@ function shouldSkipNavigation(locationKey, arg1, arr, arg3) {
     return { skip: false, shouldUpdate: false };
   }
 }
-function processResolvedRoutes(arr, children, arg2, activeRootSpan) {
+function processResolvedRoutes(arr, children, arg2) {
   let tmp = arg2;
   if (arg2 === undefined) {
     tmp = null;
   }
-  const item = arr.forEach((item) => {
+  let item = arr.forEach((item) => {
     set.add(item);
     if (closure_1_10) {
       const result = closure_0(dependencyMap[5]).checkRouteForAsyncHandler(item, processResolvedRoutes);
@@ -95,21 +95,18 @@ function processResolvedRoutes(arr, children, arg2, activeRootSpan) {
   if (children) {
     let tmp3 = children.children || [];
     closure_0 = tmp3;
-    const found = arr.filter((item) => {
-      closure_0 = item;
-      return !closure_0.some((path) => {
-        let tmp2 = path === closure_0;
-        if (!tmp2) {
-          tmp2 = tmp.path && path.path === tmp.path;
-          const tmp3 = tmp.path && path.path === tmp.path;
-        }
-        if (!tmp2) {
-          tmp2 = tmp.id && path.id === tmp.id;
-          const tmp4 = tmp.id && path.id === tmp.id;
-        }
-        return tmp2;
-      });
-    });
+    const found = arr.filter((item) => !item.some((path) => {
+      let tmp2 = path === item;
+      if (!tmp2) {
+        tmp2 = item.path && path.path === item.path;
+        const tmp3 = item.path && path.path === item.path;
+      }
+      if (!tmp2) {
+        tmp2 = item.id && path.id === item.id;
+        const tmp4 = item.id && path.id === item.id;
+      }
+      return tmp2;
+    }));
     if (found.length > 0) {
       const items = [];
       HermesBuiltin.arraySpread(found, HermesBuiltin.arraySpread(tmp3, 0));
@@ -124,8 +121,8 @@ function processResolvedRoutes(arr, children, arg2, activeRootSpan) {
     let obj1 = _mod682;
     const spanToJSONResult = obj1.spanToJSON(activeRootSpan);
     if (spanToJSONResult.timestamp) {
-      if (tmp12(1007).DEBUG_BUILD) {
-        const debug = tmp12(682).debug;
+      if (_mod1007.DEBUG_BUILD) {
+        const debug = _mod682.debug;
         debug.warn("[React Router] Lazy handler resolved after span ended - skipping update");
       }
     } else {
@@ -135,8 +132,8 @@ function processResolvedRoutes(arr, children, arg2, activeRootSpan) {
         tmp15 = tmp;
         if (!activeRootSpan) {
           tmp15 = tmp;
-          if (undefined !== tmp12(889).WINDOW) {
-            const _location = tmp12(889).WINDOW.location;
+          if (undefined !== feedbackAsyncIntegration.WINDOW) {
+            const _location = feedbackAsyncIntegration.WINDOW.location;
             let pathname;
             if (_location != null) {
               pathname = _location.pathname;
@@ -167,11 +164,7 @@ function processResolvedRoutes(arr, children, arg2, activeRootSpan) {
     }
   }
 }
-function updateNavigationSpan(activeRootSpan, _location, routes, arg3, fn) {
-  let flag = arg3;
-  if (arg3 === undefined) {
-    flag = false;
-  }
+function updateNavigationSpan(activeRootSpan, _location, routes) {
   const spanToJSONResult = _mod682.spanToJSON(activeRootSpan);
   const description = spanToJSONResult.description;
   let prop;
@@ -180,12 +173,12 @@ function updateNavigationSpan(activeRootSpan, _location, routes, arg3, fn) {
   }
   let result = description;
   if (description) {
-    let tmpResult = tmp(1014);
+    let tmpResult = pickSplat;
     result = tmpResult.transactionNameHasWildcard(description);
   }
   if (!spanToJSONResult.timestamp) {
     const tmp9 = fn(routes, _location);
-    tmpResult = tmp(1014);
+    tmpResult = pickSplat;
     let items = tmp9;
     if (!tmp9) {
       items = [];
@@ -193,7 +186,7 @@ function updateNavigationSpan(activeRootSpan, _location, routes, arg3, fn) {
     [tmp17, tmp18] = _slicedToArray(tmpResult.resolveRouteNameAndSource(_location, routes, routes, items, ""), 2);
     const data = spanToJSONResult.data;
     if (data != null) {
-      const tmp19 = data[tmp(undefined, 682).SEMANTIC_ATTRIBUTE_SENTRY_SOURCE];
+      const tmp19 = data[_mod682.SEMANTIC_ATTRIBUTE_SENTRY_SOURCE];
     }
     let tmp20 = tmp17;
     if (tmp17) {
@@ -218,16 +211,16 @@ function updateNavigationSpan(activeRootSpan, _location, routes, arg3, fn) {
     }
     if (tmp20) {
       activeRootSpan.updateName(tmp17);
-      const attr = activeRootSpan.setAttribute(tmp(682).SEMANTIC_ATTRIBUTE_SENTRY_SOURCE, tmp18);
-      let result1 = tmp(1014).transactionNameHasWildcard(tmp17);
+      const attr = activeRootSpan.setAttribute(_mod682.SEMANTIC_ATTRIBUTE_SENTRY_SOURCE, tmp18);
+      let result1 = pickSplat.transactionNameHasWildcard(tmp17);
       if (!result1) {
         result1 = "route" !== tmp18;
       }
       if (!result1) {
-        const result2 = tmp(682).addNonEnumerableProperty(activeRootSpan, "__sentry_navigation_name_set__", true);
-        const tmpResult2 = tmp(682);
+        const result2 = _mod682.addNonEnumerableProperty(activeRootSpan, "__sentry_navigation_name_set__", true);
+        const tmpResult2 = _mod682;
       }
-      const tmpResult1 = tmp(1014);
+      const tmpResult1 = pickSplat;
     }
     const tmp16 = _slicedToArray(tmpResult.resolveRouteNameAndSource(_location, routes, routes, items, ""), 2);
   }
@@ -357,7 +350,7 @@ function wrapPatchRoutesOnNavigation(basename, arg1) {
         patchRoutesOnNavigation = obj.patchRoutesOnNavigation;
         obj = {};
         const merged = Object.assign(obj);
-        closure_1 = patchRoutesOnNavigation(function*(arg0, value) {
+        closure_1 = patchRoutesOnNavigation(function*(arg0) {
           if (c1 === 2) {
             c1 = 3;
             throw new TypeError("Generator functions may not be called on executing generators");
@@ -383,17 +376,17 @@ function wrapPatchRoutesOnNavigation(basename, arg1) {
               } else {
                 let path;
                 if (closure_0 != null) {
-                  path = tmp18.path;
+                  path = closure_0.path;
                 }
                 obj = closure_0(c1[4]);
                 let activeRootSpan = obj.getActiveRootSpan();
                 if (!flag) {
                   let patch;
-                  if (tmp18 != null) {
-                    patch = tmp18.patch;
+                  if (closure_0 != null) {
+                    patch = closure_0.patch;
                   }
                   if (patch) {
-                    tmp18.patch = (arg0, arr) => {
+                    closure_0.patch = (arg0, arr) => {
                       let item = arr.forEach((children) => {
                         set = new Set();
                         if (!set.has(children)) {
@@ -442,7 +435,7 @@ function wrapPatchRoutesOnNavigation(basename, arg1) {
                     };
                   }
                 }
-                const tmp11 = patchRoutesOnNavigation(function*(arg0, value) {
+                const tmp11 = patchRoutesOnNavigation(function*() {
                   if (c5 === 2) {
                     c5 = 3;
                     throw new TypeError("Generator functions may not be called on executing generators");
@@ -503,10 +496,10 @@ function wrapPatchRoutesOnNavigation(basename, arg1) {
                           obj = tmp5(path[6]);
                           if ("navigation" === obj.spanToJSON(activeRootSpan2).op) {
                             if (tmp5) {
-                              let tmp14 = tmp72;
+                              let tmp14 = closure_129_1;
                             } else {
-                              tmp14 = tmp72;
-                              if (!tmp72) {
+                              tmp14 = closure_129_1;
+                              if (!closure_129_1) {
                                 const _location = tmp5(path[3]).WINDOW.location;
                                 let pathname;
                                 if (_location != null) {
@@ -600,14 +593,14 @@ function handleNavigation(arg0) {
   const client = obj1.getClient();
   if (client) {
     if (weakSet.has(client)) {
-      let tmp6Result = tmp6(1014);
+      let tmp6Result = pickSplat;
       const activeRootSpan = tmp6Result.getActiveRootSpan();
       if (activeRootSpan) {
-        tmp6Result = tmp6(682);
+        tmp6Result = _mod682;
       }
       if ("PUSH" === navigationType) {
         if (tmp4Result) {
-          const tmp6Result1 = tmp6(1014);
+          const tmp6Result1 = pickSplat;
           let tmp11 = allRoutes;
           if (!allRoutes) {
             tmp11 = routes;
@@ -625,8 +618,8 @@ function handleNavigation(arg0) {
           }
           let timestamp = !isPlaceholder;
           if (!isPlaceholder) {
-            timestamp = tmp6(682).spanToJSON(value.span).timestamp;
-            const tmp6Result2 = tmp6(682);
+            timestamp = _mod682.spanToJSON(value.span).timestamp;
+            const tmp6Result2 = _mod682;
           }
           const tmp26Result = shouldSkipNavigation(value, tmp24, tmp21, timestamp);
           if (tmp26Result.skip) {
@@ -635,8 +628,8 @@ function handleNavigation(arg0) {
                 const routeName = value.routeName;
                 if (value.isPlaceholder) {
                   value.routeName = tmp21;
-                  if (tmp6(1007).DEBUG_BUILD) {
-                    const debug3 = tmp6(682).debug;
+                  if (_mod1007.DEBUG_BUILD) {
+                    const debug3 = _mod682.debug;
                     const _HermesInternal4 = HermesInternal;
                     debug3.log("[Tracing] Updated placeholder navigation name from \"" + routeName + "\" to \"" + tmp21 + "\" (will apply to real span)");
                   }
@@ -644,20 +637,20 @@ function handleNavigation(arg0) {
                   const span = value.span;
                   span.updateName(tmp21);
                   const span2 = value.span;
-                  const attr = span2.setAttribute(tmp6(682).SEMANTIC_ATTRIBUTE_SENTRY_SOURCE, tmp22);
-                  const result = tmp6(682).addNonEnumerableProperty(value.span, "__sentry_navigation_name_set__", true);
+                  const attr = span2.setAttribute(_mod682.SEMANTIC_ATTRIBUTE_SENTRY_SOURCE, tmp22);
+                  const result = _mod682.addNonEnumerableProperty(value.span, "__sentry_navigation_name_set__", true);
                   value.routeName = tmp21;
-                  if (tmp6(1007).DEBUG_BUILD) {
-                    const debug2 = tmp6(682).debug;
+                  if (_mod1007.DEBUG_BUILD) {
+                    const debug2 = _mod682.debug;
                     const _HermesInternal3 = HermesInternal;
                     debug2.log("[Tracing] Updated navigation span name from \"" + routeName + "\" to \"" + tmp21 + "\"");
                   }
-                  const tmp6Result3 = tmp6(682);
+                  const tmp6Result3 = _mod682;
                 }
               }
             }
-            if (tmp6(1007).DEBUG_BUILD) {
-              const debug = tmp6(682).debug;
+            if (_mod1007.DEBUG_BUILD) {
+              const debug = _mod682.debug;
               const _HermesInternal2 = HermesInternal;
               debug.log("[Tracing] Skipping duplicate navigation for location: " + tmp24);
             }
@@ -672,24 +665,24 @@ function handleNavigation(arg0) {
             obj.routeName = tmp21;
             obj.pathname = _location.pathname;
             obj.locationKey = tmp24;
-            const result1 = obj6.set(client, obj);
+            const result1 = weakMap.set(client, obj);
             try {
               obj1 = { name: obj.routeName, attributes: null };
               const obj2 = {};
-              obj2[tmp6(682).SEMANTIC_ATTRIBUTE_SENTRY_SOURCE] = tmp22;
-              obj2[tmp6(682).SEMANTIC_ATTRIBUTE_SENTRY_OP] = "navigation";
+              obj2[_mod682.SEMANTIC_ATTRIBUTE_SENTRY_SOURCE] = tmp22;
+              obj2[_mod682.SEMANTIC_ATTRIBUTE_SENTRY_OP] = "navigation";
               const _HermesInternal = HermesInternal;
-              obj2[tmp6(682).SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN] = "auto.navigation.react.reactrouter_v" + tmp2;
+              obj2[_mod682.SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN] = "auto.navigation.react.reactrouter_v" + tmp2;
               obj1.attributes = obj2;
-              const result2 = tmp6(889).startBrowserTracingNavigationSpan(client, obj1);
+              const result2 = feedbackAsyncIntegration.startBrowserTracingNavigationSpan(client, obj1);
               if (result2) {
                 const obj3 = { span: result2, routeName: obj.routeName, pathname: _location.pathname, locationKey: tmp24 };
-                const result3 = obj6.set(client, obj3);
+                const result3 = weakMap.set(client, obj3);
                 patchSpanEnd(result2, _location, routes, basename, allRoutes, "navigation");
               } else {
-                obj6.delete(client);
+                weakMap.delete(client);
               }
-              const tmp6Result4 = tmp6(889);
+              const tmp6Result4 = feedbackAsyncIntegration;
             } catch (tmp45) {
               obj.delete(tmp);
               throw tmp45;
@@ -802,7 +795,6 @@ function updatePageloadTransaction(arg0) {
       activeRootSpan.updateName(tmp15);
       const attr = activeRootSpan.setAttribute(obj(result[6]).SEMANTIC_ATTRIBUTE_SENTRY_SOURCE, tmp16);
       const pageload = "pageload";
-      set = flag;
       closure_6 = flag;
       c7 = flag;
       const _HermesInternal = HermesInternal;
@@ -814,7 +806,7 @@ function updatePageloadTransaction(arg0) {
       if (!tmp22) {
         if (activeRootSpan.end) {
           if (allRoutes) {
-            set = new end.Set(allRoutes);
+            new end.Set(allRoutes);
           }
           end = activeRootSpan.end;
           closure_6 = end.bind(activeRootSpan);
@@ -834,7 +826,7 @@ function updatePageloadTransaction(arg0) {
               let spanToJSONResult = closure_0(dependencyMap[6]).spanToJSON(first);
               ({ description, data } = spanToJSONResult);
               if (data != null) {
-                const tmp8 = data[tmp3(undefined, tmp4[6]).SEMANTIC_ATTRIBUTE_SENTRY_SOURCE];
+                data[closure_0(undefined, dependencyMap[6]).SEMANTIC_ATTRIBUTE_SENTRY_SOURCE];
               }
               cleanupNavigationSpan = function cleanupNavigationSpan() {
 
@@ -843,10 +835,10 @@ function updatePageloadTransaction(arg0) {
               if (value) {
                 if (value.size > 0) {
                   if (description) {
-                    let tmp3Result = tmp3(tmp4[4]);
+                    let tmp3Result = closure_0(dependencyMap[4]);
                     if (0 === num) {
                       tryUpdateSpanNameBeforeEnd(tmp5, spanToJSONResult, description, cleanupNavigationSpan, closure_2, closure_3, closure_4, set);
-                      tmp3Result = tmp3(tmp4[6]);
+                      tmp3Result = closure_0(dependencyMap[6]);
                       let client = tmp3Result.getClient();
                       if (client) {
                         if ("navigation" === closure_4) {
@@ -856,9 +848,8 @@ function updatePageloadTransaction(arg0) {
                             tmp47 = value.span === tmp5;
                           }
                           if (tmp47) {
-                            obj6.delete(client);
+                            weakMap.delete(client);
                           }
-                          obj6 = weakMap;
                         }
                       }
                       closure_6(first);
@@ -880,24 +871,22 @@ function updatePageloadTransaction(arg0) {
                         if (typeof cleanupNavigationSpan === "function") {
                           const client = _mod682.getClient();
                           if (client) {
-                            if ("navigation" === tmp5) {
+                            if ("navigation" === closure_4) {
                               value = weakMap.get(client);
                               let tmp9 = value;
                               if (value) {
-                                tmp9 = value.span === tmp3;
+                                tmp9 = value.span === closure_0;
                               }
                               if (tmp9) {
-                                obj3.delete(client);
+                                weakMap.delete(client);
                               }
-                              obj3 = weakMap;
                             }
                           }
                           closure_6(first);
+                          const tmpResult = _mod682;
                         } else {
                           throw new TypeError("Trying to call a non-function");
                         }
-                        tmp3 = closure_0;
-                        tmp5 = closure_4;
                       }).catch(() => {
                         if (typeof cleanupNavigationSpan === "function") {
                           const client = _mod682.getClient();
@@ -909,9 +898,8 @@ function updatePageloadTransaction(arg0) {
                                 tmp6 = value.span === closure_0;
                               }
                               if (tmp6) {
-                                obj2.delete(client);
+                                weakMap.delete(client);
                               }
-                              obj2 = weakMap;
                             }
                           }
                           closure_6(first);
@@ -925,24 +913,22 @@ function updatePageloadTransaction(arg0) {
                         if (typeof cleanupNavigationSpan === "function") {
                           const client = _mod682.getClient();
                           if (client) {
-                            if ("navigation" === tmp5) {
+                            if ("navigation" === closure_4) {
                               value = weakMap.get(client);
                               let tmp9 = value;
                               if (value) {
-                                tmp9 = value.span === tmp3;
+                                tmp9 = value.span === closure_0;
                               }
                               if (tmp9) {
-                                obj3.delete(client);
+                                weakMap.delete(client);
                               }
-                              obj3 = weakMap;
                             }
                           }
                           closure_6(first);
+                          const tmpResult = _mod682;
                         } else {
                           throw new TypeError("Trying to call a non-function");
                         }
-                        tmp3 = closure_0;
-                        tmp5 = closure_4;
                       });
                     }
                   }
@@ -950,19 +936,17 @@ function updatePageloadTransaction(arg0) {
               }
               tryUpdateSpanNameBeforeEnd(first, spanToJSONResult, description, cleanupNavigationSpan, closure_2, closure_3, closure_4, set);
               let obj = closure_0(dependencyMap[6]);
-              const tmp15 = closure_4;
               const client1 = closure_0(dependencyMap[6]).getClient();
               if (client1) {
-                if ("navigation" === tmp15) {
+                if ("navigation" === closure_4) {
                   const value1 = weakMap.get(client1);
                   let tmp24 = value1;
                   if (value1) {
                     tmp24 = value1.span === tmp5;
                   }
                   if (tmp24) {
-                    obj4.delete(client1);
+                    weakMap.delete(client1);
                   }
-                  obj4 = weakMap;
                 }
               }
               closure_6(first);
@@ -986,6 +970,9 @@ function tryUpdateSpanNameBeforeEnd(updateName, spanToJSONResult, description, _
       tmp4 = data[_mod682.SEMANTIC_ATTRIBUTE_SENTRY_SOURCE];
     }
     if ("route" === tmp4) {
+      if (description) {
+        pickSplat;
+      }
     }
     let tmp15 = arg4;
     const _Array = Array;
@@ -1048,11 +1035,10 @@ function tryUpdateSpanNameBeforeEnd(updateName, spanToJSONResult, description, _
     tmp10 = tmp4;
   } catch (tmp54) {
     if (_mod1007.DEBUG_BUILD) {
-      const debug = tmp55(682).debug;
+      const debug = _mod682.debug;
       const _HermesInternal = HermesInternal;
       debug.warn("Error updating span details before ending: " + tmp54);
     }
-    tmp55 = require;
   }
 }
 function patchSpanEnd(result2, _location, routes, basename, allRoutes, navigation) {
@@ -1090,7 +1076,7 @@ function patchSpanEnd(result2, _location, routes, basename, allRoutes, navigatio
           let spanToJSONResult = closure_0(dependencyMap[6]).spanToJSON(first);
           ({ description, data } = spanToJSONResult);
           if (data != null) {
-            const tmp8 = data[tmp3(undefined, tmp4[6]).SEMANTIC_ATTRIBUTE_SENTRY_SOURCE];
+            data[closure_0(undefined, dependencyMap[6]).SEMANTIC_ATTRIBUTE_SENTRY_SOURCE];
           }
           cleanupNavigationSpan = function cleanupNavigationSpan() {
 
@@ -1099,10 +1085,10 @@ function patchSpanEnd(result2, _location, routes, basename, allRoutes, navigatio
           if (value) {
             if (value.size > 0) {
               if (description) {
-                let tmp3Result = tmp3(tmp4[4]);
+                let tmp3Result = closure_0(dependencyMap[4]);
                 if (0 === num) {
                   tryUpdateSpanNameBeforeEnd(tmp5, spanToJSONResult, description, cleanupNavigationSpan, closure_2, closure_3, closure_4, set);
-                  tmp3Result = tmp3(tmp4[6]);
+                  tmp3Result = closure_0(dependencyMap[6]);
                   let client = tmp3Result.getClient();
                   if (client) {
                     if ("navigation" === closure_4) {
@@ -1112,9 +1098,8 @@ function patchSpanEnd(result2, _location, routes, basename, allRoutes, navigatio
                         tmp47 = value.span === tmp5;
                       }
                       if (tmp47) {
-                        obj6.delete(client);
+                        weakMap.delete(client);
                       }
-                      obj6 = weakMap;
                     }
                   }
                   closure_6(first);
@@ -1136,24 +1121,22 @@ function patchSpanEnd(result2, _location, routes, basename, allRoutes, navigatio
                     if (typeof cleanupNavigationSpan === "function") {
                       const client = _mod682.getClient();
                       if (client) {
-                        if ("navigation" === tmp5) {
+                        if ("navigation" === closure_4) {
                           value = weakMap.get(client);
                           let tmp9 = value;
                           if (value) {
-                            tmp9 = value.span === tmp3;
+                            tmp9 = value.span === closure_0;
                           }
                           if (tmp9) {
-                            obj3.delete(client);
+                            weakMap.delete(client);
                           }
-                          obj3 = weakMap;
                         }
                       }
                       closure_6(first);
+                      const tmpResult = _mod682;
                     } else {
                       throw new TypeError("Trying to call a non-function");
                     }
-                    tmp3 = closure_0;
-                    tmp5 = closure_4;
                   }).catch(() => {
                     if (typeof cleanupNavigationSpan === "function") {
                       const client = _mod682.getClient();
@@ -1165,9 +1148,8 @@ function patchSpanEnd(result2, _location, routes, basename, allRoutes, navigatio
                             tmp6 = value.span === closure_0;
                           }
                           if (tmp6) {
-                            obj2.delete(client);
+                            weakMap.delete(client);
                           }
-                          obj2 = weakMap;
                         }
                       }
                       closure_6(first);
@@ -1181,24 +1163,22 @@ function patchSpanEnd(result2, _location, routes, basename, allRoutes, navigatio
                     if (typeof cleanupNavigationSpan === "function") {
                       const client = _mod682.getClient();
                       if (client) {
-                        if ("navigation" === tmp5) {
+                        if ("navigation" === closure_4) {
                           value = weakMap.get(client);
                           let tmp9 = value;
                           if (value) {
-                            tmp9 = value.span === tmp3;
+                            tmp9 = value.span === closure_0;
                           }
                           if (tmp9) {
-                            obj3.delete(client);
+                            weakMap.delete(client);
                           }
-                          obj3 = weakMap;
                         }
                       }
                       closure_6(first);
+                      const tmpResult = _mod682;
                     } else {
                       throw new TypeError("Trying to call a non-function");
                     }
-                    tmp3 = closure_0;
-                    tmp5 = closure_4;
                   });
                 }
               }
@@ -1206,19 +1186,17 @@ function patchSpanEnd(result2, _location, routes, basename, allRoutes, navigatio
           }
           tryUpdateSpanNameBeforeEnd(first, spanToJSONResult, description, cleanupNavigationSpan, closure_2, closure_3, closure_4, set);
           let obj = closure_0(dependencyMap[6]);
-          const tmp15 = closure_4;
           const client1 = closure_0(dependencyMap[6]).getClient();
           if (client1) {
-            if ("navigation" === tmp15) {
+            if ("navigation" === closure_4) {
               const value1 = weakMap.get(client1);
               let tmp24 = value1;
               if (value1) {
                 tmp24 = value1.span === tmp5;
               }
               if (tmp24) {
-                obj4.delete(client1);
+                weakMap.delete(client1);
               }
-              obj4 = weakMap;
             }
           }
           closure_6(first);
@@ -1240,21 +1218,18 @@ const weakMap1 = new WeakMap();
 export const addResolvedRoutesToParent = function addResolvedRoutesToParent(arr, children) {
   const tmp = children.children || [];
   closure_0 = tmp;
-  const found = arr.filter((item) => {
-    closure_0 = item;
-    return !closure_0.some((path) => {
-      let tmp2 = path === closure_0;
-      if (!tmp2) {
-        tmp2 = tmp.path && path.path === tmp.path;
-        const tmp3 = tmp.path && path.path === tmp.path;
-      }
-      if (!tmp2) {
-        tmp2 = tmp.id && path.id === tmp.id;
-        const tmp4 = tmp.id && path.id === tmp.id;
-      }
-      return tmp2;
-    });
-  });
+  const found = arr.filter((item) => !item.some((path) => {
+    let tmp2 = path === item;
+    if (!tmp2) {
+      tmp2 = item.path && path.path === item.path;
+      const tmp3 = item.path && path.path === item.path;
+    }
+    if (!tmp2) {
+      tmp2 = item.id && path.id === item.id;
+      const tmp4 = item.id && path.id === item.id;
+    }
+    return tmp2;
+  }));
   if (found.length > 0) {
     const items = [];
     HermesBuiltin.arraySpread(found, HermesBuiltin.arraySpread(tmp, 0));
@@ -1346,13 +1321,13 @@ export const createReactRouterV6CompatibleTracingIntegration = function createRe
     if (tmp4) {
       let obj = { name: pathname, attributes: null };
       obj = {};
-      obj[tmp2(682).SEMANTIC_ATTRIBUTE_SENTRY_SOURCE] = "url";
-      obj[tmp2(682).SEMANTIC_ATTRIBUTE_SENTRY_OP] = "pageload";
+      obj[_mod682.SEMANTIC_ATTRIBUTE_SENTRY_SOURCE] = "url";
+      obj[_mod682.SEMANTIC_ATTRIBUTE_SENTRY_OP] = "pageload";
       const _HermesInternal = HermesInternal;
-      obj[tmp2(682).SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN] = "auto.pageload.react.reactrouter_v" + closure_1;
+      obj[_mod682.SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN] = "auto.pageload.react.reactrouter_v" + closure_1;
       obj.attributes = obj;
-      result = tmp2(889).startBrowserTracingPageLoadSpan(f108154, obj);
-      const tmp2Result = tmp2(889);
+      result = feedbackAsyncIntegration.startBrowserTracingPageLoadSpan(f108154, obj);
+      const tmp2Result = feedbackAsyncIntegration;
     }
     if (closure_11) {
       weakSet.add(f108154);
@@ -1454,11 +1429,12 @@ export const createV6CompatibleWrapCreateBrowserRouter = function createV6Compat
   }
   fn = arg0;
   if (require("module_1007").DEBUG_BUILD) {
-    const debug = require("module_682").debug;
+    const debug = tmp4(682).debug;
     const _HermesInternal = HermesInternal;
     debug.warn("reactRouterV" + _6 + "Instrumentation was unable to wrap the `createRouter` function because of one or more missing parameters.");
     fn = arg0;
   }
+  tmp4 = _require;
 };
 export const createV6CompatibleWrapCreateMemoryRouter = function createV6CompatibleWrapCreateMemoryRouter(arg0, _6) {
   _require = arg0;
@@ -1526,11 +1502,12 @@ export const createV6CompatibleWrapCreateMemoryRouter = function createV6Compati
   }
   fn = arg0;
   if (require("module_1007").DEBUG_BUILD) {
-    const debug = require("module_682").debug;
+    const debug = tmp4(682).debug;
     const _HermesInternal = HermesInternal;
     debug.warn("reactRouterV" + _6 + "Instrumentation was unable to wrap the `createMemoryRouter` function because of one or more missing parameters.");
     fn = arg0;
   }
+  tmp4 = _require;
 };
 export const createV6CompatibleWrapUseRoutes = function createV6CompatibleWrapUseRoutes(arg0, _6) {
   _require = arg0;
@@ -1606,7 +1583,7 @@ export const createV6CompatibleWrapUseRoutes = function createV6CompatibleWrapUs
             }, items);
             return React.useRef(true)(routes, locationArg);
           }
-          return (routes, locationArg) => <SentryRoutes routes={arg0} locationArg={arg1} />;
+          return (routes, locationArg) => <SentryRoutes routes={routes} locationArg={locationArg} />;
         }
       }
     }

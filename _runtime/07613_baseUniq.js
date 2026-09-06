@@ -1,26 +1,31 @@
 // === Module 7613: baseUniq ===
 
 // Module 7613 (baseUniq)
+import SetCache from "SetCache" /* 646 */;
+import cacheHas from "cacheHas" /* 650 */;
+import _mod654 from "module_654" /* 654 */;
 import arrayIncludes from "arrayIncludes" /* 7614 */;
+import arrayIncludesWith from "arrayIncludesWith" /* 7618 */;
+import _mod7619 from "module_7619" /* 7619 */;
 
 
 export default function baseUniq(arg0, fn, arg2) {
   let tmpResult = arrayIncludes;
   const items = [];
   if (arg2) {
-    tmpResult = tmp(7618);
+    tmpResult = arrayIncludesWith;
     let flag = false;
     let items1 = items;
   } else if (length >= 200) {
     let tmp4 = null;
     if (!fn) {
-      tmp4 = tmp(7619)(arg0);
+      tmp4 = _mod7619(arg0);
     }
     if (tmp4) {
-      return tmp(654)(tmp4);
+      return _mod654(tmp4);
     } else {
-      tmpResult = tmp(650);
-      items1 = new tmp(646)();
+      tmpResult = cacheHas;
+      items1 = new SetCache();
       flag = false;
     }
   } else {

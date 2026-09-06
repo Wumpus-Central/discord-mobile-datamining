@@ -16,7 +16,7 @@ export const ScrollableContainer = fn(19).forwardRef(function ScrollableContaine
   let obj = { scrollableGesture: nativeGesture, children: null };
   obj = { ref };
   const merged1 = Object.assign(merged);
-  obj.children = <ScrollableComponent ref={arg1} />;
+  obj.children = <ScrollableComponent ref={ref} />;
   const tmp6 = jsx(BottomSheetDraggableScrollable.BottomSheetDraggableScrollable, { ref });
   let tmp2Result = tmp6;
   if (onRefresh) {

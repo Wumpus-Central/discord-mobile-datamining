@@ -11,9 +11,9 @@ function withScope(arg0) {
   const sentryCarrier = AsyncContextStack(12815).getSentryCarrier(mainCarrier);
   let stack = sentryCarrier.stack;
   if (!stack) {
-    let tmpResult = tmp(12823);
+    let tmpResult = AsyncContextStack(12823);
     const defaultCurrentScope = tmpResult.getDefaultCurrentScope();
-    tmpResult = tmp(12823);
+    tmpResult = AsyncContextStack(12823);
     stack = new _moduleResult(defaultCurrentScope, tmpResult.getDefaultIsolationScope());
   }
   sentryCarrier.stack = stack;
@@ -26,9 +26,9 @@ function withSetScope(scope, arg1) {
   const sentryCarrier = AsyncContextStack(12815).getSentryCarrier(mainCarrier);
   let stack = sentryCarrier.stack;
   if (!stack) {
-    let tmpResult = tmp(12823);
+    let tmpResult = AsyncContextStack(12823);
     const defaultCurrentScope = tmpResult.getDefaultCurrentScope();
-    tmpResult = tmp(12823);
+    tmpResult = AsyncContextStack(12823);
     stack = new _moduleResult(defaultCurrentScope, tmpResult.getDefaultIsolationScope());
   }
   sentryCarrier.stack = stack;
@@ -53,17 +53,16 @@ function withIsolationScope(arg0) {
   return stack.withScope(() => {
     const mainCarrier = AsyncContextStack(12815).getMainCarrier();
     const obj = AsyncContextStack(12815);
-    const tmp = closure_0;
     const sentryCarrier = AsyncContextStack(12815).getSentryCarrier(mainCarrier);
     let stack = sentryCarrier.stack;
     if (!stack) {
-      let tmp2Result = tmp2(12823);
+      let tmp2Result = AsyncContextStack(12823);
       const defaultCurrentScope = tmp2Result.getDefaultCurrentScope();
-      tmp2Result = tmp2(12823);
+      tmp2Result = AsyncContextStack(12823);
       stack = new closure_2_3(defaultCurrentScope, tmp2Result.getDefaultIsolationScope());
     }
     sentryCarrier.stack = stack;
-    return tmp(stack.getIsolationScope());
+    return closure_0(stack.getIsolationScope());
   });
 }
 class AsyncContextStack {
@@ -191,17 +190,16 @@ export function getStackAsyncContextStrategy() {
       return stack.withScope(() => {
         const mainCarrier = AsyncContextStack(12815).getMainCarrier();
         const obj = AsyncContextStack(12815);
-        const tmp = closure_0;
         const sentryCarrier = AsyncContextStack(12815).getSentryCarrier(mainCarrier);
         let stack = sentryCarrier.stack;
         if (!stack) {
-          let tmp2Result = tmp2(12823);
+          let tmp2Result = AsyncContextStack(12823);
           const defaultCurrentScope = tmp2Result.getDefaultCurrentScope();
-          tmp2Result = tmp2(12823);
+          tmp2Result = AsyncContextStack(12823);
           stack = new closure_2_3(defaultCurrentScope, tmp2Result.getDefaultIsolationScope());
         }
         sentryCarrier.stack = stack;
-        return tmp(stack.getIsolationScope());
+        return closure_0(stack.getIsolationScope());
       });
     },
     getCurrentScope() {
@@ -210,9 +208,9 @@ export function getStackAsyncContextStrategy() {
       const sentryCarrier = AsyncContextStack(12815).getSentryCarrier(mainCarrier);
       let stack = sentryCarrier.stack;
       if (!stack) {
-        let tmpResult = tmp(12823);
+        let tmpResult = AsyncContextStack(12823);
         const defaultCurrentScope = tmpResult.getDefaultCurrentScope();
-        tmpResult = tmp(12823);
+        tmpResult = AsyncContextStack(12823);
         stack = new closure_1_3(defaultCurrentScope, tmpResult.getDefaultIsolationScope());
       }
       sentryCarrier.stack = stack;
@@ -224,9 +222,9 @@ export function getStackAsyncContextStrategy() {
       const sentryCarrier = AsyncContextStack(12815).getSentryCarrier(mainCarrier);
       let stack = sentryCarrier.stack;
       if (!stack) {
-        let tmpResult = tmp(12823);
+        let tmpResult = AsyncContextStack(12823);
         const defaultCurrentScope = tmpResult.getDefaultCurrentScope();
-        tmpResult = tmp(12823);
+        tmpResult = AsyncContextStack(12823);
         stack = new closure_1_3(defaultCurrentScope, tmpResult.getDefaultIsolationScope());
       }
       sentryCarrier.stack = stack;

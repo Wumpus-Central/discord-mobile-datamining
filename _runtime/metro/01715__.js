@@ -4,17 +4,16 @@
 const require = fn;
 let dependencyMap = arg6;
 let __initData = { code: "function pnpm_delayTs2(){const{_nextAnimation,delayMs,getReduceMotionForAnimation,reduceMotion}=this.__closure;const nextAnimation=typeof _nextAnimation==='function'?_nextAnimation():_nextAnimation;function delay(animation,now){const{startTime:startTime,started:started,previousAnimation:previousAnimation}=animation;const current=animation.current;if(now-startTime>=delayMs||animation.reduceMotion){if(!started){nextAnimation.onStart(nextAnimation,current,now,previousAnimation);animation.previousAnimation=null;animation.started=true;}const finished=nextAnimation.onFrame(nextAnimation,now);animation.current=nextAnimation.current;return finished;}else if(previousAnimation){const finished=previousAnimation.finished||previousAnimation.onFrame(previousAnimation,now);animation.current=previousAnimation.current;if(finished){animation.previousAnimation=null;}}return false;}function onStart(animation,value,now,previousAnimation){animation.startTime=now;animation.started=false;animation.current=value;if(previousAnimation===animation){animation.previousAnimation=previousAnimation.previousAnimation;}else{animation.previousAnimation=previousAnimation;}if(nextAnimation.reduceMotion===undefined){nextAnimation.reduceMotion=animation.reduceMotion;}}const callback=function(finished){if(nextAnimation.callback){nextAnimation.callback(finished);}};return{isHigherOrder:true,onFrame:delay,onStart:onStart,current:nextAnimation.current,callback:callback,previousAnimation:null,startTime:0,started:false,reduceMotion:getReduceMotionForAnimation(reduceMotion)};}" };
-fn = function n(delayMs, _nextAnimation, reduceMotion) {
+fn = function n(c12, tmpResult, reduceMotion) {
   _require = delayMs;
-  dependencyMap = _nextAnimation;
+  dependencyMap = tmpResult;
   __initData = reduceMotion;
   require("module_1676");
   const fn = function s() {
-    let tmpResult = closure_1;
-    if (typeof closure_1 === "function") {
+    if (typeof tmpResult === "function") {
       tmpResult = tmp();
     }
-    delayMs = tmpResult;
+    c12 = tmpResult;
     const obj = {
       isHigherOrder: true,
       onFrame: function delay(startTime, arg1) {
@@ -60,15 +59,15 @@ fn = function n(delayMs, _nextAnimation, reduceMotion) {
       previousAnimation: null,
       startTime: 0,
       started: false,
-      reduceMotion: delayMs(closure_1[0]).getReduceMotionForAnimation(closure_2)
+      reduceMotion: c12(tmpResult[0]).getReduceMotionForAnimation(closure_2)
     };
     return obj;
   };
-  let obj = { _nextAnimation, delayMs, getReduceMotionForAnimation: require("module_1676").getReduceMotionForAnimation, reduceMotion };
+  let obj = { _nextAnimation: tmpResult, delayMs, getReduceMotionForAnimation: require("module_1676").getReduceMotionForAnimation, reduceMotion };
   fn.__closure = obj;
   fn.__workletHash = 7904568249320;
   fn.__initData = __initData;
-  return obj.defineAnimation(_nextAnimation, fn);
+  return obj.defineAnimation(tmpResult, fn);
 };
 fn.__closure = { defineAnimation: fn(1676).defineAnimation, getReduceMotionForAnimation: fn(1676).getReduceMotionForAnimation };
 fn.__workletHash = 10965419997083;

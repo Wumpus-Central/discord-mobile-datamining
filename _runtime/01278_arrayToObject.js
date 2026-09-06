@@ -229,7 +229,7 @@ function merge(arr, obj, plainObjects) {
     if (typeof obj !== "object") {
       if (typeof obj !== "function") {
         if (isArray(arr)) {
-          arr.push(obj);
+          arr = arr.push(obj);
         } else {
           if (arr) {
             if (typeof arr === "object") {
@@ -282,7 +282,7 @@ function merge(arr, obj, plainObjects) {
           }
         }
         if (isArray(arr)) {
-          if (tmp16(obj)) {
+          if (isArray(obj)) {
             const item = obj.forEach((item, index) => {
               const call = hasOwnProperty.call;
               arr = closure_0;

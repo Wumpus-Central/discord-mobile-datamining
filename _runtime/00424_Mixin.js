@@ -414,7 +414,7 @@ let obj2 = {
       if (!_isHighlightResult) {
         self._startHighlight(nativeEvent);
       }
-      if (obj[touchState]) {
+      if (tmp11[touchState]) {
         if (arg2 === RESPONDER_RELEASE) {
           let tmp20 = obj1[touchState];
           if (tmp20) {
@@ -461,6 +461,7 @@ let obj2 = {
     if (tmp15) {
       self._endHighlight(nativeEvent);
     }
+    tmp11 = obj;
   },
   _startHighlight(nativeEvent) {
     const self = this;

@@ -620,7 +620,7 @@ if (null) {
         }
         function resolver() {
           if (typeof closure_0.removeListener === "function") {
-            obj.removeListener("error", errorListener);
+            closure_0.removeListener("error", errorListener);
           }
           const slice = [].slice;
           const call = slice.call;
@@ -700,7 +700,7 @@ if (null) {
           },
       set(num) {
             if (typeof num === "number") {
-              if (num >= 0) {
+              if (0 >= 0) {
                 if (!closure_2(num)) {
                   global = num;
                 }
@@ -714,6 +714,9 @@ if (null) {
     EventEmitter.prototype.on = EventEmitter.prototype.addListener;
     EventEmitter.prototype.off = EventEmitter.prototype.removeListener;
     EventEmitter.prototype.listenerCount = listenerCount;
+    let tmp3 = Number.isNaN || (function NumberIsNaN(arg0) {
+      return arg0 != arg0;
+    });
   }
   let _Object = Object;
   tmp2 = Object.getOwnPropertySymbols ? (function ReflectOwnKeys(headers) {

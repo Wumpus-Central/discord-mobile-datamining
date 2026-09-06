@@ -2,6 +2,8 @@
 
 // Module 994 (mobileReplayIntegrationNoop)
 import NativeModules from "NativeModules" /* 866 */;
+import _mod995 from "module_995" /* 995 */;
+import enrichXhrBreadcrumbsForMobileReplay from "enrichXhrBreadcrumbsForMobileReplay" /* 996 */;
 
 require = arg1;
 const dependencyMap = arg6;
@@ -116,7 +118,7 @@ export const mobileReplayIntegration = () => {
         name: MobileReplay,
         setup(on) {
               if (obj.hasHooks(on)) {
-                let NATIVE = tmp(866).NATIVE;
+                let NATIVE = NativeModules.NATIVE;
                 currentReplayId = NATIVE.getCurrentReplayId();
                 on.on("createDsc", (replay_id) => {
                   if (!replay_id.replay_id) {
@@ -149,13 +151,14 @@ export const mobileReplayIntegration = () => {
                     attributes.attributes.replay_id = tmp;
                   }
                 });
-                on.on("beforeAddBreadcrumb", tmp(996).enrichXhrBreadcrumbsForMobileReplay);
+                on.on("beforeAddBreadcrumb", enrichXhrBreadcrumbsForMobileReplay.enrichXhrBreadcrumbsForMobileReplay);
               }
+              obj = _mod995;
             },
         processEvent(arg0, arg1) {
               closure_0 = arg0;
               closure_1 = arg1;
-              return updateCachedReplayId(this, undefined, undefined, function*(arg0, value) {
+              return updateCachedReplayId(this, undefined, undefined, function*() {
                 if (c5 === 2) {
                   c5 = 3;
                   throw new TypeError("Generator functions may not be called on executing generators");

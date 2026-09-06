@@ -143,9 +143,6 @@ let items = [
       obj = { style: { position: "absolute", top: 0, left: 0, bottom: 0, right: 0 }, colors: null, startPoint: null, endPoint: null, locations: null, useAngle: null, angleCenter: null, angle: null, borderRadii: null };
       let mapped = colors;
       const tmp = _objectWithoutProperties(props, closure_3);
-      const tmp14 = map1;
-      const tmp15 = closure_1_11;
-      const tmp17 = closure_1_12;
       if (!LinearGradient.RN$Bridgeless) {
         mapped = colors.map(React7);
       }
@@ -162,7 +159,7 @@ let items = [
           tmp23 = point;
         }
         obj.startPoint = tmp23;
-        if (typeof tmp21 === "function") {
+        if (typeof convertPoint === "function") {
           const _Array2 = Array;
           let tmp25 = end;
           if (Array.isArray(end)) {
@@ -180,7 +177,7 @@ let items = [
           }
           obj.locations = substr;
           obj.useAngle = useAngle;
-          if (typeof tmp21 === "function") {
+          if (typeof convertPoint === "function") {
             const _Array3 = Array;
             let tmp28 = angleCenter;
             if (Array.isArray(angleCenter)) {
@@ -194,9 +191,9 @@ let items = [
             obj.angleCenter = tmp28;
             obj.angle = angle;
             obj.borderRadii = items;
-            const items1 = [tmp17(tmp18, obj), children];
+            const items1 = [closure_1_12(tmp18, obj), children];
             obj.children = items1;
-            return tmp14(tmp15, obj);
+            return map1(closure_1_11, obj);
           } else {
             throw new TypeError("Trying to call a non-function");
           }

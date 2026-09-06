@@ -33,28 +33,28 @@ export const ReanimatedFlatList = module_1775.componentWithRef((skipEnteringExit
     let obj = { layout: current, onLayout: onLayout.onLayout, style: null, children: null };
     const items = [onLayout.style, ];
     let current1;
-    if (closure_1 != null) {
-      current1 = obj2.current;
+    if (ref != null) {
+      current1 = ref.current;
     }
     if (typeof current1 === "function") {
       let currentResult;
-      if (obj2 != null) {
+      if (ref != null) {
         obj = { index: null, item: null };
         ({ index: obj3.index, item: obj3.item } = onLayout);
-        currentResult = obj2.current(obj);
+        currentResult = ref.current(obj);
       }
       current = currentResult;
-    } else if (obj2 != null) {
-      current = obj2.current;
+    } else if (ref != null) {
+      current = ref.current;
     }
     items[1] = current;
     obj.style = items;
     obj.children = onLayout.children;
-    return jsx(ref(closure_1[5]).AnimatedView, { layout: current, onLayout: onLayout.onLayout, style: null, children: null });
+    return jsx(ref(ref[5]).AnimatedView, { layout: current, onLayout: onLayout.onLayout, style: null, children: null });
   }, []);
   const merged = Object.assign(tmp);
   obj.CellRendererComponent = memo;
-  const tmp7 = <closure_7 ref={arg1} />;
+  const tmp7 = <closure_7 ref={ref} />;
   let tmp5Result = tmp7;
   if (undefined !== skipEnteringExitingAnimations.skipEnteringExitingAnimations) {
     obj = { skipEntering: true, skipExiting: true, children: tmp7 };

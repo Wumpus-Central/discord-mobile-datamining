@@ -192,9 +192,8 @@ export default function TouchableWithoutFeedback(disabled) {
   }
   obj.nativeID = nativeID;
   for (const item10094 of closure_7) {
-    let tmp22 = item10094;
     if (undefined !== arg0[item10094]) {
-      obj[tmp22] = arg0[tmp22];
+      obj[item10094] = arg0[item10094];
     }
     continue;
   }

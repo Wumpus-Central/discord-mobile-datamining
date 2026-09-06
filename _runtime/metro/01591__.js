@@ -46,10 +46,10 @@ export const useLinking = function useLinking(ref, enabled) {
       return () => {
         let remove;
         if (closure_2 != null) {
-          remove = obj.remove;
+          remove = closure_2.remove;
         }
         if (remove) {
-          obj.remove();
+          closure_2.remove();
         } else if (bindResult != null) {
           tmp2("url", callback);
         }
@@ -68,7 +68,7 @@ export const useLinking = function useLinking(ref, enabled) {
   const effect = prefixes.useEffect(() => {
 
   }, items);
-  prefixes.useRef(flag);
+  ref = prefixes.useRef(flag);
   prefixes.useRef(prefixes);
   prefixes.useRef(filter);
   prefixes.useRef(config);
@@ -111,12 +111,12 @@ export const useLinking = function useLinking(ref, enabled) {
       }
       closure_0 = callback(currentResult);
     }
-    const obj = {
+    return {
       then(fn) {
         if (fn) {
-          let tmp2 = fn(tmp);
+          let tmp2 = fn(closure_0);
         } else {
-          tmp2 = tmp;
+          tmp2 = closure_0;
         }
         return Promise.resolve(tmp2);
       },
@@ -124,7 +124,6 @@ export const useLinking = function useLinking(ref, enabled) {
         return obj;
       }
     };
-    return obj;
   }, items1);
   const effect2 = prefixes.useEffect(() => fn2((arg0) => {
     if (flag) {

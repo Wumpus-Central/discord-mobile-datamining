@@ -2578,7 +2578,7 @@ function from(buffer, str, arg2) {
     }
     if (Buffer.isEncoding(str17)) {
       const tmp108 = byteLength(buffer, str17) | 0;
-      if (tmp108 > c3) {
+      if (tmp108 > v2147483647) {
         const _RangeError8 = RangeError;
         const rangeError = new RangeError("The value \"" + tmp108 + "\" is invalid for option \"size\"");
         throw rangeError;
@@ -2586,7 +2586,7 @@ function from(buffer, str, arg2) {
         const _Uint8Array8 = Uint8Array;
         const uint8Array = new Uint8Array(tmp108);
         const _Object4 = Object;
-        Object.setPrototypeOf(uint8Array, tmp101.prototype);
+        Object.setPrototypeOf(uint8Array, Buffer.prototype);
         const writeResult = uint8Array.write(buffer, str17);
         let substr = uint8Array;
         if (writeResult !== tmp108) {
@@ -2599,7 +2599,6 @@ function from(buffer, str, arg2) {
       const typeError = new TypeError("Unknown encoding: " + str17);
       throw typeError;
     }
-    tmp101 = Buffer;
   } else {
     const _ArrayBuffer = ArrayBuffer;
     if (ArrayBuffer.isView(buffer)) {
@@ -2686,11 +2685,11 @@ function from(buffer, str, arg2) {
             }
           }
           if (Buffer.isBuffer(buffer)) {
-            if (length >= c3) {
+            if (length >= v2147483647) {
               const _RangeError3 = RangeError;
-              const rangeError3 = new RangeError("Attempt to allocate Buffer larger than maximum size: 0x" + str4.toString(16) + " bytes");
+              const rangeError3 = new RangeError("Attempt to allocate Buffer larger than maximum size: 0x" + v2147483647.toString(16) + " bytes");
               throw rangeError3;
-            } else if ((length | 0 | 0) > str4) {
+            } else if ((length | 0 | 0) > v2147483647) {
               const _RangeError2 = RangeError;
               const rangeError4 = new RangeError("The value \"" + tmp126 + "\" is invalid for option \"size\"");
               throw rangeError4;
@@ -2698,7 +2697,7 @@ function from(buffer, str, arg2) {
               const _Uint8Array9 = Uint8Array;
               const uint8Array2 = new Uint8Array(tmp126);
               const _Object5 = Object;
-              Object.setPrototypeOf(uint8Array2, obj.prototype);
+              Object.setPrototypeOf(uint8Array2, Buffer.prototype);
               let tmp14 = uint8Array2;
               if (0 !== uint8Array2.length) {
                 buffer.copy(tmp130, 0, 0, tmp126);
@@ -2713,7 +2712,7 @@ function from(buffer, str, arg2) {
               }
               tmp14 = tmp17;
             }
-            if (0 > c3) {
+            if (0 > v2147483647) {
               const _RangeError = RangeError;
               const rangeError5 = new RangeError("The value \"" + "\" is invalid for option \"size\"");
               throw rangeError5;
@@ -2721,7 +2720,7 @@ function from(buffer, str, arg2) {
               const _Uint8Array = Uint8Array;
               const uint8Array3 = new Uint8Array(0);
               const _Object = Object;
-              Object.setPrototypeOf(uint8Array3, obj.prototype);
+              Object.setPrototypeOf(uint8Array3, Buffer.prototype);
               tmp17 = uint8Array3;
             }
           } else if ("Buffer" === buffer.type) {
@@ -2740,7 +2739,7 @@ function from(buffer, str, arg2) {
                 const _Symbol2 = Symbol;
                 if (typeof buffer[Symbol.toPrimitive] === "function") {
                   const _Symbol3 = Symbol;
-                  return obj.from(buffer[Symbol.toPrimitive]("string"), str, arg2);
+                  return Buffer.from(buffer[Symbol.toPrimitive]("string"), str, arg2);
                 }
               }
             }
@@ -2798,16 +2797,15 @@ function allocUnsafe(num) {
   } else {
     num = 0;
     if (num >= 0) {
-      if (num >= c3) {
+      if (num >= v2147483647) {
         const _RangeError = RangeError;
-        const rangeError1 = new RangeError("Attempt to allocate Buffer larger than maximum size: 0x" + str.toString(16) + " bytes");
+        const rangeError1 = new RangeError("Attempt to allocate Buffer larger than maximum size: 0x" + v2147483647.toString(16) + " bytes");
         throw rangeError1;
       } else {
         num = num | 0 | 0;
       }
-      str = c3;
     }
-    if (num > c3) {
+    if (num > v2147483647) {
       const _RangeError2 = RangeError;
       const rangeError2 = new RangeError("The value \"" + num + "\" is invalid for option \"size\"");
       throw rangeError2;
@@ -2823,16 +2821,15 @@ function allocUnsafe(num) {
 function fromArrayLike(data) {
   let num = 0;
   if (data.length >= 0) {
-    if (data.length >= c3) {
+    if (data.length >= v2147483647) {
       const _RangeError = RangeError;
-      const rangeError = new RangeError("Attempt to allocate Buffer larger than maximum size: 0x" + str.toString(16) + " bytes");
+      const rangeError = new RangeError("Attempt to allocate Buffer larger than maximum size: 0x" + v2147483647.toString(16) + " bytes");
       throw rangeError;
     } else {
       num = length | 0 | 0;
     }
-    str = c3;
   }
-  if (num > c3) {
+  if (num > v2147483647) {
     const _RangeError2 = RangeError;
     const rangeError1 = new RangeError("The value \"" + num + "\" is invalid for option \"size\"");
     throw rangeError1;

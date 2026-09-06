@@ -11,6 +11,8 @@ import _mod12813 from "module_12813" /* 12813 */;
 import _mod12814 from "module_12814" /* 12814 */;
 import _mod12815 from "module_12815" /* 12815 */;
 import _mod12816 from "module_12816" /* 12816 */;
+import _mod12819 from "module_12819" /* 12819 */;
+import _mod12824 from "module_12824" /* 12824 */;
 
 require = arg1;
 const dependencyMap = arg6;
@@ -55,12 +57,12 @@ function spanToJSON(getSpanJSON) {
         const attributes = getSpanJSON.attributes;
         ({ startTime, name, endTime, parentSpanId, status } = getSpanJSON);
         let obj = { span_id: spanId, trace_id: traceId, data: attributes, description: name, parent_span_id: parentSpanId, start_timestamp: spanTimeInputToSeconds(startTime), timestamp: null, status: null, op: null, origin: null, _metrics_summary: null };
-        const tmp8 = spanTimeInputToSeconds(endTime);
-        obj.timestamp = tmp8;
+        const obj2 = _mod12803;
+        obj.timestamp = spanTimeInputToSeconds(endTime);
         obj.status = getStatusMessage(status);
         obj.op = attributes[_mod12812.SEMANTIC_ATTRIBUTE_SENTRY_OP];
         obj.origin = attributes[_mod12812.SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN];
-        const obj2 = _mod12803;
+        const tmp8 = spanTimeInputToSeconds(endTime);
         obj._metrics_summary = _mod12813.getMetricSummaryJsonForSpan(getSpanJSON);
         return obj2.dropUndefinedKeys(obj);
       } else {
@@ -80,13 +82,12 @@ function getStatusMessage(code) {
   if (code) {
     if (code.code !== _mod12814.SPAN_STATUS_UNSET) {
       let str = "ok";
-      if (code.code !== tmp(12814).SPAN_STATUS_OK) {
+      if (code.code !== _mod12814.SPAN_STATUS_OK) {
         str = code.message || "unknown_error";
         const tmp3 = code.message || "unknown_error";
       }
       return str;
     }
-    tmp = require;
   }
 }
 let c2 = false;
@@ -95,19 +96,19 @@ const _sentryRootSpan = "_sentryRootSpan";
 
 export const TRACE_FLAG_NONE = 0;
 export const TRACE_FLAG_SAMPLED = 1;
-export const addChildSpanToSpan = function addChildSpanToSpan(arg0, arg1) {
-  let tmp2 = arg0[_sentryRootSpan];
+export const addChildSpanToSpan = function addChildSpanToSpan(parentSpan, sentrySpan) {
+  let tmp2 = parentSpan[_sentryRootSpan];
   if (!tmp2) {
-    tmp2 = arg0;
+    tmp2 = parentSpan;
   }
-  const result = _mod12803.addNonEnumerableProperty(arg1, _sentryRootSpan, tmp2);
-  if (arg0[_sentryChildSpans]) {
-    arg0[tmp6].add(arg1);
+  const result = _mod12803.addNonEnumerableProperty(sentrySpan, _sentryRootSpan, tmp2);
+  if (parentSpan[_sentryChildSpans]) {
+    parentSpan[_sentryChildSpans].add(sentrySpan);
   } else {
     const _Set = Set;
-    const items = [arg1];
+    const items = [sentrySpan];
     const set = new Set(items);
-    const result1 = _mod12803.addNonEnumerableProperty(arg0, tmp6, set);
+    const result1 = _mod12803.addNonEnumerableProperty(parentSpan, _sentryChildSpans, set);
     const tmp3Result = _mod12803;
   }
 };
@@ -117,25 +118,24 @@ export const getActiveSpan = function getActiveSpan() {
   if (asyncContextStrategy.getActiveSpan) {
     let activeSpan = asyncContextStrategy.getActiveSpan();
   } else {
-    tmp(12819);
-    const tmpResult = tmp(12824);
+    const tmpResult = _mod12824;
     activeSpan = tmpResult._getSpanForScope(tmpResult.getCurrentScope());
   }
   return activeSpan;
 };
-export const getRootSpan = function getRootSpan(arg0) {
-  return arg0[_sentryRootSpan] || arg0;
+export const getRootSpan = function getRootSpan(activeSpan) {
+  return activeSpan[_sentryRootSpan] || activeSpan;
 };
-export const getSpanDescendants = function getSpanDescendants(arg0) {
+export const getSpanDescendants = function getSpanDescendants(c12) {
   const set = new Set();
-  function addSpanChildren(arg0) {
-    if (!set.has(arg0)) {
-      if (spanIsSampled(arg0)) {
-        set.add(arg0);
+  function addSpanChildren(c12) {
+    if (!set.has(dependencyMap)) {
+      if (spanIsSampled(dependencyMap)) {
+        set.add(dependencyMap);
         let tmp3 = _sentryChildSpans;
-        if (arg0[_sentryChildSpans]) {
+        if (dependencyMap[_sentryChildSpans]) {
           const _Array = Array;
-          let items = Array.from(arg0[tmp3]);
+          let items = Array.from(dependencyMap[tmp3]);
         } else {
           items = [];
         }
@@ -144,13 +144,13 @@ export const getSpanDescendants = function getSpanDescendants(arg0) {
       }
     }
   }
-  addSpanChildren(arg0);
+  addSpanChildren(c12);
   return Array.from(set);
 };
 export { getStatusMessage };
-export const removeChildSpanFromSpan = function removeChildSpanFromSpan(arg0, arg1) {
-  if (arg0[_sentryChildSpans]) {
-    arg0[tmp].delete(arg1);
+export const removeChildSpanFromSpan = function removeChildSpanFromSpan(c12, isRecording) {
+  if (dependencyMap[_sentryChildSpans]) {
+    dependencyMap[tmp].delete(isRecording);
   }
 };
 export const showSpanDropWarning = function showSpanDropWarning() {
@@ -194,12 +194,11 @@ export const updateMetricSummaryOnActiveSpan = function updateMetricSummaryOnAct
   if (asyncContextStrategy.getActiveSpan) {
     let activeSpan = asyncContextStrategy.getActiveSpan();
   } else {
-    tmp(12819);
-    const tmpResult = tmp(12824);
+    const tmpResult = _mod12824;
     activeSpan = tmpResult._getSpanForScope(tmpResult.getCurrentScope());
   }
   if (activeSpan) {
-    const tmpResult1 = tmp(12813);
+    const tmpResult1 = _mod12813;
     const result = tmpResult1.updateMetricSummaryOnSpan(activeSpan, metricType, sanitizeMetricKeyResult, diff, sanitizeUnitResult, tags, bucketKey);
   }
 };

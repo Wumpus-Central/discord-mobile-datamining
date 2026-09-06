@@ -95,7 +95,7 @@ class SvgXml {
     return;
   }
 }
-function astToReact(Tag, arg1) {
+function astToReact(Tag, key) {
   if (typeof Tag === "object") {
     ({ props, children } = Tag);
     let _class;
@@ -109,7 +109,7 @@ function astToReact(Tag, arg1) {
     const obj = {};
     const merged = Object.assign(props);
     obj.children = children.map(astToReact);
-    return jsx(Tag.Tag, {}, arg1);
+    return <Tag.Tag key={key} />;
   } else {
     return Tag;
   }
@@ -145,7 +145,7 @@ function _parse($ZodRealError, fn) {
     if (!str2) {
       str2 = "";
     }
-    const match1 = /.*(\n|$)/.exec(arr.slice(tmp));
+    const match1 = /.*(\n|$)/.exec(ZodRealError.slice(sum1));
     let first = match1;
     if (match1) {
       first = match1[0];
@@ -242,7 +242,7 @@ function _parse($ZodRealError, fn) {
             let tmp27 = length;
             if (sum1 < length) {
               tmp27 = tmp26;
-              if (obj3.test(tmp23[sum1])) {
+              if (re22.test(ZodRealError[sum1])) {
                 let sum3 = sum1 + 1;
                 sum1 = sum3;
                 tmp27 = length;
@@ -392,8 +392,6 @@ function _parse($ZodRealError, fn) {
               }
             }
           }
-          obj3 = re22;
-          tmp23 = ZodRealError;
         }
         if (typeof obj.style === "string") {
           element.styles = str15;
@@ -514,7 +512,6 @@ function _parse($ZodRealError, fn) {
     }
     error("Expected closing tag </" + str + "> to match opening tag <" + parent.tag + ">");
   }
-  const length = $ZodRealError.length;
   let parent = null;
   function metadata() {
     let tmp2 = length;
@@ -528,11 +525,11 @@ function _parse($ZodRealError, fn) {
           if ("<" !== ZodRealError[sum1]) {
             continue;
           } else {
-            tmp2 = tmp9;
+            tmp2 = length;
             if (re20.test(arr[sum1 + 1])) {
               break;
             } else {
-              tmp2 = tmp9;
+              tmp2 = length;
               if (re21.test(arr.slice(sum1, sum1 + 4))) {
                 break;
               }
@@ -541,9 +538,9 @@ function _parse($ZodRealError, fn) {
           break;
         }
       } else {
-        tmp2 = tmp;
-        if (!re20.test(arr2[sum1 + 1])) {
-          tmp2 = tmp;
+        tmp2 = length;
+        if (!re20.test(ZodRealError[sum1 + 1])) {
+          tmp2 = length;
         }
       }
     }
@@ -571,7 +568,7 @@ function _parse($ZodRealError, fn) {
   closure_5 = [];
   let sum1 = 0;
   let tmp = metadata;
-  if (0 < length) {
+  if (0 < $ZodRealError.length) {
     do {
       if (!metadata) {
         let str = "Unexpected character";
@@ -586,9 +583,9 @@ function _parse($ZodRealError, fn) {
   if (tmp !== neutral) {
     error("Unexpected end of input");
   } else if (element) {
-    let tmp8 = tmp6;
+    let tmp8 = element;
     if (fn) {
-      tmp8 = fn(tmp6);
+      tmp8 = fn(element);
     }
     if (!tmp8) {
       tmp8 = element;
@@ -731,7 +728,7 @@ closure_1 = asyncGeneratorStep(async function(arg0) {
   c8 = 0;
   c9 = 0;
   c6 = 0;
-  return (async (arg0, value) => {
+  return (async (arg0) => {
     if (c9 === 2) {
       c9 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -902,7 +899,7 @@ export const SvgUri = function SvgUri(onError) {
     let tmp8 = fallback;
   } else {
     let obj = { xml: tmp2[0], override: onError, fallback };
-    tmp8 = <SvgXml xml={tmp2[0]} override={arg0} fallback={fallback} />;
+    tmp8 = <SvgXml xml={tmp2[0]} override={onError} fallback={fallback} />;
   }
   return tmp8;
 };
@@ -914,7 +911,7 @@ export const getStyle = function getStyle(str) {
   const parts = str.split(";");
   const found = parts.filter((item) => item.trim());
   let num = 0;
-  if (0 < found.length) {
+  if (0 < length) {
     while (true) {
       let arr3 = found[num];
       if (0 !== arr3.length) {

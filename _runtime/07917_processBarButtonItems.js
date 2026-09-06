@@ -116,7 +116,7 @@ export const useHeaderConfigProps = function useHeaderConfigProps(headerLargeTit
     }
     backgroundColor = str2;
   }
-  let tmpResult = tmp(7918);
+  let tmpResult = colors(7918);
   const items3 = [tmp4.fontFamily, tmp5.fontFamily, tmp6.fontFamily];
   const tmp8 = obj2.flatten(headerLargeStyle) || {};
   let fontSize;
@@ -124,7 +124,7 @@ export const useHeaderConfigProps = function useHeaderConfigProps(headerLargeTit
   if ("fontSize" in tmp4) {
     fontSize = tmp4.fontSize;
   }
-  tmpResult = tmp(5631);
+  tmpResult = colors(5631);
   headerTitle = tmpResult.getHeaderTitle({ title, headerTitle }, route.name);
   if ("color" in tmp6) {
     headerTintColor = tmp6.color;
@@ -178,10 +178,10 @@ export const useHeaderConfigProps = function useHeaderConfigProps(headerLargeTit
     obj2 = { tintColor: text, children: headerTitle };
     headerTitleResult = headerTitle(obj2);
   }
-  const isSearchBarAvailableForCurrentPlatform = tmp(4912).isSearchBarAvailableForCurrentPlatform;
+  const isSearchBarAvailableForCurrentPlatform = colors(4912).isSearchBarAvailableForCurrentPlatform;
   let isSearchBarAvailableForCurrentPlatform2 = typeof isSearchBarAvailableForCurrentPlatform === "boolean";
   if (typeof isSearchBarAvailableForCurrentPlatform === "boolean") {
-    isSearchBarAvailableForCurrentPlatform2 = tmp(4912).isSearchBarAvailableForCurrentPlatform;
+    isSearchBarAvailableForCurrentPlatform2 = colors(4912).isSearchBarAvailableForCurrentPlatform;
   }
   if (isSearchBarAvailableForCurrentPlatform2) {
     isSearchBarAvailableForCurrentPlatform2 = null != headerSearchBarOptions;
@@ -227,7 +227,7 @@ export const useHeaderConfigProps = function useHeaderConfigProps(headerLargeTit
     if ("center" === headerTitleAlign) {
       items5[1] = null;
       obj6.children = items5;
-      let tmp32Result = tmp32(tmp(4912).ScreenStackHeaderLeftView, obj6);
+      let tmp32Result = closure_12(colors(4912).ScreenStackHeaderLeftView, obj6);
     } else {
       if (typeof headerTitle === "function") {
         const obj7 = { style: { flex: 1 }, children: headerTitleResult };
@@ -235,7 +235,7 @@ export const useHeaderConfigProps = function useHeaderConfigProps(headerLargeTit
       } else {
         obj8 = { style: { flex: 1 }, children: null };
         const obj9 = { tintColor: text, style: obj, children: headerTitle };
-        obj8.children = tmp62(tmp(5631).HeaderTitle, obj9);
+        obj8.children = closure_10(colors(5631).HeaderTitle, obj9);
       }
       closure_10(closure_9, obj8);
     }
@@ -247,10 +247,10 @@ export const useHeaderConfigProps = function useHeaderConfigProps(headerLargeTit
   if ("center" === headerTitleAlign) {
     if (typeof headerTitle !== "function") {
       const obj10 = { tintColor: text, style: obj, children: headerTitle };
-      headerTitleResult = tmp38(tmp(5631).HeaderTitle, obj10);
+      headerTitleResult = closure_10(colors(5631).HeaderTitle, obj10);
     }
     const obj11 = { children: headerTitleResult };
-    tmp38Result = tmp38(tmp(4912).ScreenStackHeaderCenterView, obj11);
+    tmp38Result = closure_10(colors(4912).ScreenStackHeaderCenterView, obj11);
   }
   items6[1] = tmp38Result;
   const items7 = [closure_12(closure_11, { children: items6 }), , , ];
@@ -263,7 +263,7 @@ export const useHeaderConfigProps = function useHeaderConfigProps(headerLargeTit
       source = headerBackImageSource;
     }
     const obj12 = { source };
-    let tmp40Result = closure_10(tmp(4912).ScreenStackHeaderBackButtonImage, obj12);
+    let tmp40Result = closure_10(colors(4912).ScreenStackHeaderBackButtonImage, obj12);
   } else {
     tmp40Result = null;
   }
@@ -271,7 +271,7 @@ export const useHeaderConfigProps = function useHeaderConfigProps(headerLargeTit
   let tmp42 = null;
   if (null != headerRightResult) {
     const obj13 = { children: headerRightResult };
-    tmp42 = closure_10(tmp(4912).ScreenStackHeaderRightView, obj13);
+    tmp42 = closure_10(colors(4912).ScreenStackHeaderRightView, obj13);
   }
   items7[2] = tmp42;
   let tmp44 = null;
@@ -279,13 +279,13 @@ export const useHeaderConfigProps = function useHeaderConfigProps(headerLargeTit
     const obj14 = { children: null };
     const obj15 = {};
     let merged = Object.assign(headerSearchBarOptions);
-    obj14.children = closure_10(tmp(4912).SearchBar, obj15);
-    tmp44 = closure_10(tmp(4912).ScreenStackHeaderSearchBarView, obj14);
+    obj14.children = closure_10(colors(4912).SearchBar, obj15);
+    tmp44 = closure_10(colors(4912).ScreenStackHeaderSearchBarView, obj14);
   }
   items7[3] = tmp44;
   const obj16 = { backButtonInCustomView: tmp24, backgroundColor, backTitle: headerBackTitle, backTitleVisible: "minimal" !== headerBackButtonDisplayMode, backButtonDisplayMode: "fill", backTitleFontFamily: tmp10, backTitleFontSize: fontSize, blurEffect: headerBlurEffect, color: text, direction: obj.useLocale().direction, disableBackButtonMenu: false === headerBackButtonMenuEnabled, hidden: false === headerShown, hideBackButton: false === headerBackVisible, hideShadow: true, largeTitle: true, largeTitleBackgroundColor: true, largeTitleColor: true, largeTitleFontFamily: true, largeTitleFontSize: true, largeTitleFontWeight: true, largeTitleHideShadow: "setShouldAnimateExiting", title: null, titleColor: false, titleFontFamily: false, titleFontSize: false, titleFontWeight: false, topInsetEnabled: false, disableTopInsetApplication: false, disableLeftInsetApplication: false, disableRightInsetApplication: false, disableBottomInsetApplication: false, translucent: 1, children: "reason", headerLeftBarButtonItems: "enum", headerRightBarButtonItems: null, experimental_userInterfaceStyle: "\u{1F9C6}" };
   let tmp50 = false === headerShadowVisible;
-  tmp32Result = tmp32(tmp33, { children: items7 });
+  tmp32Result = closure_12(closure_11, { children: items7 });
   if (!tmp50) {
     tmp50 = null != headerBackground;
   }
@@ -440,7 +440,7 @@ export const useHeaderConfigProps = function useHeaderConfigProps(headerLargeTit
                   const _String = String;
                   obj3.value = String(badge.value);
                   const obj4 = { backgroundColor, color: str9 };
-                  const merged7 = Object.assign(tmp12.regular);
+                  const merged7 = Object.assign(fonts.regular);
                   const merged8 = Object.assign(badge.style);
                   obj3.style = obj4;
                   obj2.badge = obj3;
@@ -467,7 +467,6 @@ export const useHeaderConfigProps = function useHeaderConfigProps(headerLargeTit
           } else {
             throw new TypeError("Trying to call a non-function");
           }
-          tmp12 = fonts;
         }
       });
       found = mapped.filter((item) => null != item);
@@ -567,7 +566,7 @@ export const useHeaderConfigProps = function useHeaderConfigProps(headerLargeTit
                     const _String = String;
                     obj3.value = String(badge.value);
                     const obj4 = { backgroundColor, color: str9 };
-                    const merged7 = Object.assign(tmp12.regular);
+                    const merged7 = Object.assign(fonts.regular);
                     const merged8 = Object.assign(badge.style);
                     obj3.style = obj4;
                     obj2.badge = obj3;
@@ -594,7 +593,6 @@ export const useHeaderConfigProps = function useHeaderConfigProps(headerLargeTit
             } else {
               throw new TypeError("Trying to call a non-function");
             }
-            tmp12 = fonts;
           }
         });
         found1 = mapped1.filter((item) => null != item);

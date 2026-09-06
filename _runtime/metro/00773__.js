@@ -1,6 +1,8 @@
 // === Module 773: ? ===
 
 // Module 773
+import consoleSandbox from "consoleSandbox" /* 689 */;
+import dateTimestampInSeconds from "dateTimestampInSeconds" /* 703 */;
 import _mod713 from "module_713" /* 713 */;
 
 require = arg1;
@@ -27,12 +29,12 @@ export const addBreadcrumb = function addBreadcrumb(arg0, arg1) {
     }
     if (num > 0) {
       consoleSandboxResult = { timestamp: null };
-      let tmpResult = tmp(703);
+      let tmpResult = dateTimestampInSeconds;
       consoleSandboxResult.timestamp = tmpResult.dateTimestampInSeconds();
       const merged = Object.assign(arg0);
       closure_2 = consoleSandboxResult;
       if (tmp5) {
-        tmpResult = tmp(689);
+        tmpResult = consoleSandbox;
         consoleSandboxResult = tmpResult.consoleSandbox(() => beforeBreadcrumb(consoleSandboxResult, closure_0));
       }
       if (null !== consoleSandboxResult) {

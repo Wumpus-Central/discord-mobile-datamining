@@ -88,13 +88,14 @@ let data = {
     data.syntheticException = syntheticError;
     data.mechanism = { handled: true, type: "onunhandledrejection" };
     data.captureException(originalException, data);
+    obj4 = _mod678;
   },
   onHandled(displayId) {
 
   }
 };
 
-export () => {
+export (arg0) => {
   let obj = arg0;
   if (arg0 === undefined) {
     obj = {};
@@ -108,7 +109,7 @@ export () => {
           try {
             obj = c0(_undefined[0]);
             if (obj.isHermesEnabled()) {
-              let _HermesInternal = tmp3(tmp5[1]).RN_GLOBAL_OBJ.HermesInternal;
+              let _HermesInternal = c0(_undefined[1]).RN_GLOBAL_OBJ.HermesInternal;
               let prop;
               if (null !== _HermesInternal) {
                 if (undefined !== tmp8) {
@@ -117,9 +118,9 @@ export () => {
               }
               if (prop) {
                 _HermesInternal = undefined;
-                if (null !== tmp3(tmp5[1]).RN_GLOBAL_OBJ) {
-                  if (undefined !== tmp3(tmp5[1]).RN_GLOBAL_OBJ) {
-                    _HermesInternal = tmp3(tmp5[1]).RN_GLOBAL_OBJ.HermesInternal;
+                if (null !== c0(_undefined[1]).RN_GLOBAL_OBJ) {
+                  if (undefined !== c0(_undefined[1]).RN_GLOBAL_OBJ) {
+                    _HermesInternal = c0(_undefined[1]).RN_GLOBAL_OBJ.HermesInternal;
                   }
                 }
                 let hasPromise;
@@ -139,22 +140,22 @@ export () => {
                   }
                 }
                 if (undefined) {
-                  const debug3 = tmp3(tmp5[2]).debug;
+                  const debug3 = c0(_undefined[2]).debug;
                   debug3.log("Using Hermes native promise rejection tracking");
-                  const _HermesInternal2 = tmp3(tmp5[1]).RN_GLOBAL_OBJ.HermesInternal;
+                  const _HermesInternal2 = c0(_undefined[1]).RN_GLOBAL_OBJ.HermesInternal;
                   obj = { allRejections: true, onUnhandled: null, onHandled: null };
                   ({ onUnhandled: obj6.onUnhandled, onHandled: obj6.onHandled } = closure_1_3);
                   let result = _HermesInternal2.enablePromiseRejectionTracker(obj);
-                  const debug4 = tmp3(tmp5[2]).debug;
+                  const debug4 = c0(_undefined[2]).debug;
                   debug4.log("Unhandled promise rejections will be caught by Sentry.");
                 }
               }
             }
-            let tmp3Result = tmp3(tmp5[0]);
+            let tmp3Result = c0(_undefined[0]);
             if (tmp3Result.isWeb()) {
-              const debug2 = tmp3(tmp5[2]).debug;
+              const debug2 = c0(_undefined[2]).debug;
               debug2.log("Using Browser JS promise rejection tracking for React Native Web");
-              tmp3Result = tmp3(tmp5[2]);
+              tmp3Result = c0(_undefined[2]);
               const result1 = tmp3Result.addGlobalUnhandledRejectionInstrumentationHandler((originalException) => {
                 closure_1_0(682);
                 obj = { originalException, syntheticException: null, mechanism: null };
@@ -166,20 +167,21 @@ export () => {
                 obj.syntheticException = syntheticError;
                 obj.mechanism = { handled: false, type: "onunhandledrejection" };
                 obj.captureException(originalException, obj);
+                obj3 = closure_1_0(678);
               });
             } else if (patchGlobalPromise) {
-              tmp3(tmp5[4]).polyfillPromise();
+              c0(_undefined[4]).polyfillPromise();
               (function attachUnhandledRejectionHandler() {
                 obj = closure_1_0(882);
                 const result = obj.requireRejectionTracking();
                 obj = { allRejections: true, onUnhandled: closure_1_3.onUnhandled, onHandled: closure_1_3.onHandled };
                 result.enable(obj);
               })();
-              const tmp3Result1 = tmp3(tmp5[4]);
-              tmp3(tmp5[4]).checkPromiseAndWarn();
-              const tmp3Result2 = tmp3(tmp5[4]);
+              const tmp3Result1 = c0(_undefined[4]);
+              c0(_undefined[4]).checkPromiseAndWarn();
+              const tmp3Result2 = c0(_undefined[4]);
             } else {
-              const debug = tmp3(tmp5[2]).debug;
+              const debug = c0(_undefined[2]).debug;
               debug.log("Unhandled promise rejections will not be caught by Sentry.");
             }
           } catch (err) {
@@ -202,7 +204,7 @@ export () => {
           _ErrorUtils.setGlobalHandler((arg0, arg1) => {
             closure_0 = arg0;
             closure_1 = arg1;
-            return closure_1_2(undefined, undefined, undefined, function*(arg0, value) {
+            return closure_1_2(undefined, undefined, undefined, function*() {
               if (c3 === 2) {
                 c3 = 3;
                 throw new TypeError("Generator functions may not be called on executing generators");
@@ -304,10 +306,9 @@ export () => {
             });
           });
         } else {
-          let debug = tmp3(682).debug;
+          let debug = _mod682.debug;
           debug.warn("ErrorUtils not found. Can be caused by different environment for example react-native-web.");
         }
-        tmp3 = require;
       }
     }
   };

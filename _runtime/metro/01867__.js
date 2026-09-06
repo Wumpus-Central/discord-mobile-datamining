@@ -60,20 +60,16 @@ export const useExtraContentPadding = function useExtraContentPadding(scrollView
           if (0 !== diff) {
             const obj2 = _mod1866;
             const isScrollAtEndResult = obj2.isScrollAtEnd(scroll.value, layout.value.height, size.value.height, inverted);
-            if (tmp14Result.shouldShiftContent(tmp20, isScrollAtEndResult)) {
+            if (tmp14Result.shouldShiftContent(keyboardLiftBehavior, isScrollAtEndResult)) {
               const _Math = Math;
-              if (tmp16) {
-                closure_11(max(iter.value - diff, -bound1));
+              if (inverted) {
+                closure_11(max(scroll.value - diff, -bound1));
               } else {
                 const _Math2 = Math;
-                closure_11(Math.min(iter.value + diff, max(iter3.value.height - iter2.value.height + bound1, 0)));
+                closure_11(Math.min(scroll.value + diff, max(size.value.height - layout.value.height + bound1, 0)));
               }
             }
-            iter2 = layout;
-            iter3 = size;
             tmp14Result = _mod1866;
-            tmp16 = inverted;
-            tmp20 = keyboardLiftBehavior;
           }
         }
       }

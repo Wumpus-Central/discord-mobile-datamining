@@ -3,6 +3,7 @@
 // Module 14311 (withoutSetter)
 import _mod14297 from "module_14297" /* 14297 */;
 import _mod14312 from "module_14312" /* 14312 */;
+import _mod14316 from "module_14316" /* 14316 */;
 import _mod14319 from "module_14319" /* 14319 */;
 import _mod14320 from "module_14320" /* 14320 */;
 import prop from "module_14315" /* 14315 */;
@@ -25,15 +26,15 @@ if (prop) {
 export default (arg0) => {
   let _Symbol = dependencyMap;
   if (_mod14320(closure_2, arg0)) {
-    return tmp2[arg0];
+    return closure_2[arg0];
   } else {
-    if (!tmp(14316)) {
+    if (!_mod14316) {
       let tmp5 = withoutSetter(`Symbol.${arg0}`);
-      tmp2[arg0] = tmp5;
+      closure_2[arg0] = tmp5;
     } else {
-      const tmpResult = tmp(14320);
+      _mod14320;
     }
-    _Symbol = tmp(14297).Symbol;
+    _Symbol = _mod14297.Symbol;
     tmp5 = _Symbol[arg0];
   }
 };

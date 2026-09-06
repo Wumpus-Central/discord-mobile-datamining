@@ -12,14 +12,14 @@ export default {
     const shortAt = obj.getShortAt(dataView, sum);
     let tmp4;
     if (8 <= shortAt) {
-      let tmpResult = tmp(5230);
+      let tmpResult = _modDef5230;
       const byteAt = tmpResult.getByteAt(dataView, sum + 7);
       obj = { value: byteAt, description: "" + byteAt };
       tmp4 = obj;
     }
     let tmp6;
     if (3 <= shortAt) {
-      tmpResult = tmp(5230);
+      tmpResult = _modDef5230;
       const byteAt1 = tmpResult.getByteAt(dataView, sum + 2);
       obj = { value: byteAt1, description: "" + byteAt1 };
       tmp6 = obj;
@@ -27,22 +27,22 @@ export default {
     const obj1 = { "Bits Per Sample": tmp6, "Image Height": null, "Image Width": null, "Color Components": null, Subsampling: null };
     let tmp8;
     if (5 <= shortAt) {
-      const shortAt1 = tmp(5230).getShortAt(dataView, sum + 3);
+      const shortAt1 = _modDef5230.getShortAt(dataView, sum + 3);
       const obj2 = { value: shortAt1, description: null };
       const _HermesInternal = HermesInternal;
       obj2.description = "" + shortAt1 + "px";
       tmp8 = obj2;
-      const tmpResult1 = tmp(5230);
+      const tmpResult1 = _modDef5230;
     }
     obj1["Image Height"] = tmp8;
     let tmp11;
     if (7 <= shortAt) {
-      const shortAt2 = tmp(5230).getShortAt(dataView, sum + 5);
+      const shortAt2 = _modDef5230.getShortAt(dataView, sum + 5);
       const obj3 = { value: shortAt2, description: null };
       const _HermesInternal2 = HermesInternal;
       obj3.description = "" + shortAt2 + "px";
       tmp11 = obj3;
-      const tmpResult2 = tmp(5230);
+      const tmpResult2 = _modDef5230;
     }
     obj1["Image Width"] = tmp11;
     obj1["Color Components"] = tmp4;

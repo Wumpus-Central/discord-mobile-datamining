@@ -3,11 +3,12 @@
 // Module 12840
 import spanTimeInputToSeconds from "spanTimeInputToSeconds" /* 12802 */;
 import _mod12841 from "module_12841" /* 12841 */;
+import _mod12844 from "module_12844" /* 12844 */;
 import __SENTRY_DEBUG__ from "module_12796" /* 12796 */;
 import consoleSandbox from "module_12797" /* 12797 */;
 
 
-export const createEventEnvelope = function createEventEnvelope(type, arg1, sdk, arg3) {
+export const createEventEnvelope = function createEventEnvelope(type, url, sdk, arg3) {
   const sdkMetadataForEnvelopeHeader = _mod12841.getSdkMetadataForEnvelopeHeader(sdk);
   let str = "event";
   if (type.type) {
@@ -50,17 +51,17 @@ export const createEventEnvelope = function createEventEnvelope(type, arg1, sdk,
     HermesBuiltin.arraySpread(tmp17, arraySpreadResult1);
     type.sdk.packages = items1;
   }
-  let tmp3Result = tmp3(12841);
-  const eventEnvelopeHeaders = tmp3Result.createEventEnvelopeHeaders(type, sdkMetadataForEnvelopeHeader, arg3, arg1);
+  let tmp3Result = _mod12841;
+  const eventEnvelopeHeaders = tmp3Result.createEventEnvelopeHeaders(type, sdkMetadataForEnvelopeHeader, arg3, url);
   delete tmp[tmp2];
   const items2 = [{ type: str }, type];
-  tmp3Result = tmp3(12841);
+  tmp3Result = _mod12841;
   const items3 = [items2];
   return tmp3Result.createEnvelope(eventEnvelopeHeaders, items3);
 };
-export const createSessionEnvelope = function createSessionEnvelope(toJSON, arg1, arg2, arg3) {
+export const createSessionEnvelope = function createSessionEnvelope(toJSON, arg1, sdk, arg3) {
   let obj = _mod12841;
-  const sdkMetadataForEnvelopeHeader = obj.getSdkMetadataForEnvelopeHeader(arg2);
+  const sdkMetadataForEnvelopeHeader = obj.getSdkMetadataForEnvelopeHeader(sdk);
   obj = { sent_at: new Date().toISOString() };
   let tmp4 = sdkMetadataForEnvelopeHeader;
   if (sdkMetadataForEnvelopeHeader) {
@@ -71,7 +72,7 @@ export const createSessionEnvelope = function createSessionEnvelope(toJSON, arg1
   let tmp6 = arg3 && arg1;
   if (tmp6) {
     const obj1 = { dsn: null };
-    let tmpResult = tmp(12844);
+    let tmpResult = _mod12844;
     obj1.dsn = tmpResult.dsnToString(arg1);
     tmp6 = obj1;
   }
@@ -82,7 +83,7 @@ export const createSessionEnvelope = function createSessionEnvelope(toJSON, arg1
   } else {
     items1 = [{ type: "session" }, toJSON.toJSON()];
   }
-  tmpResult = tmp(12841);
+  tmpResult = _mod12841;
   const items2 = [items1];
   return tmpResult.createEnvelope(obj, items2);
 };
@@ -108,9 +109,9 @@ export const createSpanEnvelope = function createSpanEnvelope(arg0, getDsn) {
   const merged = Object.assign(tmp7);
   let tmp9 = tunnel && dsn;
   if (tmp9) {
-    const obj1 = { dsn: beforeSendSpan(12844).dsnToString(dsn) };
+    const obj1 = { dsn: tmp2(12844).dsnToString(dsn) };
     tmp9 = obj1;
-    const tmp2Result = beforeSendSpan(12844);
+    const tmp2Result = tmp2(12844);
   }
   const merged1 = Object.assign(tmp9);
   beforeSendSpan = getDsn;
@@ -130,4 +131,6 @@ export const createSpanEnvelope = function createSpanEnvelope(arg0, getDsn) {
     const fn = (arg0) => beforeSendSpan(dependencyMap[5]).spanToJSON(arg0);
   }
   arg0[Symbol.iterator]();
+  const date = new Date();
+  tmp2 = beforeSendSpan;
 };

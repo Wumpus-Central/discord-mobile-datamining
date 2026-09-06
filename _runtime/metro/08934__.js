@@ -308,6 +308,7 @@ if (self2) {
     Object.defineProperty(exports, "ZodISODuration", obj19);
     exports.iso = fn(require("module_9003"));
     exports.coerce = fn(_mod9008);
+    const fn3Result = fn3(_mod8954);
   } else {
     const _Object2 = Object;
   }

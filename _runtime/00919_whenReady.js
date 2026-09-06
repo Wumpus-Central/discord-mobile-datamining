@@ -13,7 +13,7 @@ function whenReady(arg0) {
 }
 
 export const TTFBThresholds = items;
-export const onTTFB = (arg0) => {
+export const onTTFB = (tmpResult) => {
   let obj = arg1;
   if (arg1 === undefined) {
     obj = {};
@@ -21,7 +21,7 @@ export const onTTFB = (arg0) => {
   let metric;
   metric = metric(909).initMetric("TTFB");
   const obj2 = metric(909);
-  dependencyMap = metric(912).bindReporter(arg0, metric, items, obj.reportAllChanges);
+  dependencyMap = metric(912).bindReporter(tmpResult, metric, items, obj.reportAllChanges);
   if (typeof whenReady === "function") {
     const fn = () => {
       const navigationEntry = _mod908.getNavigationEntry();
@@ -41,7 +41,8 @@ export const onTTFB = (arg0) => {
       prerendering = _document.prerendering;
     }
     if (prerendering) {
-      tmp(903).whenActivated(() => {
+      tmpResult = tmp(903);
+      tmpResult.whenActivated(() => {
         if (typeof closure_2_3 === "function") {
           closure_0 = tmp;
           const _document = closure_2_0(closure_2_1[0]).WINDOW.document;
@@ -50,7 +51,7 @@ export const onTTFB = (arg0) => {
             prerendering = _document.prerendering;
           }
           if (prerendering) {
-            tmp2(tmp3[1]).whenActivated(() => {
+            closure_2_0(closure_2_1[1]).whenActivated(() => {
               if (typeof closure_2_3 === "function") {
                 closure_0 = tmp;
                 const _document = closure_2_0(closure_2_1[0]).WINDOW.document;
@@ -59,7 +60,7 @@ export const onTTFB = (arg0) => {
                   prerendering = _document.prerendering;
                 }
                 if (prerendering) {
-                  tmp2(tmp3[1]).whenActivated(() => {
+                  closure_2_0(closure_2_1[1]).whenActivated(() => {
                     if (typeof closure_2_3 === "function") {
                       closure_0 = tmp;
                       const _document = closure_2_0(closure_2_1[0]).WINDOW.document;
@@ -68,7 +69,7 @@ export const onTTFB = (arg0) => {
                         prerendering = _document.prerendering;
                       }
                       if (prerendering) {
-                        tmp2(tmp3[1]).whenActivated(() => {
+                        closure_2_0(closure_2_1[1]).whenActivated(() => {
                           if (typeof closure_2_3 === "function") {
                             closure_0 = tmp;
                             const _document = closure_2_0(closure_2_1[0]).WINDOW.document;
@@ -77,10 +78,10 @@ export const onTTFB = (arg0) => {
                               prerendering = _document.prerendering;
                             }
                             if (prerendering) {
-                              tmp2(tmp3[1]).whenActivated(() => { ... });
-                              const tmp2Result = tmp2(tmp3[1]);
+                              closure_2_0(closure_2_1[1]).whenActivated(() => { ... });
+                              const tmp2Result = closure_2_0(closure_2_1[1]);
                             } else {
-                              const _document2 = tmp2(tmp3[0]).WINDOW.document;
+                              const _document2 = closure_2_0(closure_2_1[0]).WINDOW.document;
                               let readyState;
                               if (_document2 != null) {
                                 readyState = _document2.readyState;
@@ -96,9 +97,9 @@ export const onTTFB = (arg0) => {
                             throw new TypeError("Trying to call a non-function");
                           }
                         });
-                        const tmp2Result = tmp2(tmp3[1]);
+                        const tmp2Result = closure_2_0(closure_2_1[1]);
                       } else {
-                        const _document2 = tmp2(tmp3[0]).WINDOW.document;
+                        const _document2 = closure_2_0(closure_2_1[0]).WINDOW.document;
                         let readyState;
                         if (_document2 != null) {
                           readyState = _document2.readyState;
@@ -106,17 +107,17 @@ export const onTTFB = (arg0) => {
                         if ("complete" !== readyState) {
                           const listener = globalThis.addEventListener("load", () => {
                             if (typeof closure_2_3 === "function") {
-                              closure_0 = tmp;
+                              closure_0 = closure_1_0;
                               let _document = closure_2_0(closure_2_1[0]).WINDOW.document;
                               let prerendering;
                               if (_document != null) {
                                 prerendering = _document.prerendering;
                               }
                               if (prerendering) {
-                                tmp2(tmp3[1]).whenActivated(() => { ... });
-                                let tmp2Result = tmp2(tmp3[1]);
+                                closure_2_0(closure_2_1[1]).whenActivated(() => { ... });
+                                let tmp2Result = closure_2_0(closure_2_1[1]);
                               } else {
-                                let _document2 = tmp2(tmp3[0]).WINDOW.document;
+                                let _document2 = closure_2_0(closure_2_1[0]).WINDOW.document;
                                 let readyState;
                                 if (_document2 != null) {
                                   readyState = _document2.readyState;
@@ -125,7 +126,7 @@ export const onTTFB = (arg0) => {
                                   let listener = globalThis.addEventListener("load", () => { ... }, true);
                                 } else {
                                   let _setTimeout = setTimeout;
-                                  let timerId = setTimeout(tmp);
+                                  let timerId = setTimeout(closure_1_0);
                                 }
                               }
                             } else {
@@ -141,9 +142,9 @@ export const onTTFB = (arg0) => {
                       throw new TypeError("Trying to call a non-function");
                     }
                   });
-                  const tmp2Result = tmp2(tmp3[1]);
+                  const tmp2Result = closure_2_0(closure_2_1[1]);
                 } else {
-                  const _document2 = tmp2(tmp3[0]).WINDOW.document;
+                  const _document2 = closure_2_0(closure_2_1[0]).WINDOW.document;
                   let readyState;
                   if (_document2 != null) {
                     readyState = _document2.readyState;
@@ -151,14 +152,14 @@ export const onTTFB = (arg0) => {
                   if ("complete" !== readyState) {
                     const listener = globalThis.addEventListener("load", () => {
                       if (typeof closure_2_3 === "function") {
-                        closure_0 = tmp;
+                        closure_0 = closure_1_0;
                         let _document = closure_2_0(closure_2_1[0]).WINDOW.document;
                         let prerendering;
                         if (_document != null) {
                           prerendering = _document.prerendering;
                         }
                         if (prerendering) {
-                          tmp2(tmp3[1]).whenActivated(() => {
+                          closure_2_0(closure_2_1[1]).whenActivated(() => {
                             if (typeof closure_2_3 === "function") {
                               closure_0 = tmp;
                               const _document = closure_2_0(closure_2_1[0]).WINDOW.document;
@@ -167,10 +168,10 @@ export const onTTFB = (arg0) => {
                                 prerendering = _document.prerendering;
                               }
                               if (prerendering) {
-                                tmp2(tmp3[1]).whenActivated(() => { ... });
-                                const tmp2Result = tmp2(tmp3[1]);
+                                closure_2_0(closure_2_1[1]).whenActivated(() => { ... });
+                                const tmp2Result = closure_2_0(closure_2_1[1]);
                               } else {
-                                const _document2 = tmp2(tmp3[0]).WINDOW.document;
+                                const _document2 = closure_2_0(closure_2_1[0]).WINDOW.document;
                                 let readyState;
                                 if (_document2 != null) {
                                   readyState = _document2.readyState;
@@ -186,9 +187,9 @@ export const onTTFB = (arg0) => {
                               throw new TypeError("Trying to call a non-function");
                             }
                           });
-                          let tmp2Result = tmp2(tmp3[1]);
+                          let tmp2Result = closure_2_0(closure_2_1[1]);
                         } else {
-                          let _document2 = tmp2(tmp3[0]).WINDOW.document;
+                          let _document2 = closure_2_0(closure_2_1[0]).WINDOW.document;
                           let readyState;
                           if (_document2 != null) {
                             readyState = _document2.readyState;
@@ -196,17 +197,17 @@ export const onTTFB = (arg0) => {
                           if ("complete" !== readyState) {
                             let listener = globalThis.addEventListener("load", () => {
                               if (typeof closure_2_3 === "function") {
-                                closure_0 = tmp;
+                                closure_0 = closure_1_0;
                                 let _document = closure_2_0(closure_2_1[0]).WINDOW.document;
                                 let prerendering;
                                 if (_document != null) {
                                   prerendering = _document.prerendering;
                                 }
                                 if (prerendering) {
-                                  tmp2(tmp3[1]).whenActivated(() => { ... });
-                                  let tmp2Result = tmp2(tmp3[1]);
+                                  closure_2_0(closure_2_1[1]).whenActivated(() => { ... });
+                                  let tmp2Result = closure_2_0(closure_2_1[1]);
                                 } else {
-                                  let _document2 = tmp2(tmp3[0]).WINDOW.document;
+                                  let _document2 = closure_2_0(closure_2_1[0]).WINDOW.document;
                                   let readyState;
                                   if (_document2 != null) {
                                     readyState = _document2.readyState;
@@ -215,7 +216,7 @@ export const onTTFB = (arg0) => {
                                     let listener = globalThis.addEventListener("load", () => { ... }, true);
                                   } else {
                                     let _setTimeout = setTimeout;
-                                    let timerId = setTimeout(tmp);
+                                    let timerId = setTimeout(closure_1_0);
                                   }
                                 }
                               } else {
@@ -224,7 +225,7 @@ export const onTTFB = (arg0) => {
                             }, true);
                           } else {
                             let _setTimeout = setTimeout;
-                            let timerId = setTimeout(tmp);
+                            let timerId = setTimeout(closure_1_0);
                           }
                         }
                       } else {
@@ -240,9 +241,9 @@ export const onTTFB = (arg0) => {
                 throw new TypeError("Trying to call a non-function");
               }
             });
-            const tmp2Result = tmp2(tmp3[1]);
+            const tmp2Result = closure_2_0(closure_2_1[1]);
           } else {
-            const _document2 = tmp2(tmp3[0]).WINDOW.document;
+            const _document2 = closure_2_0(closure_2_1[0]).WINDOW.document;
             let readyState;
             if (_document2 != null) {
               readyState = _document2.readyState;
@@ -250,14 +251,14 @@ export const onTTFB = (arg0) => {
             if ("complete" !== readyState) {
               const listener = globalThis.addEventListener("load", () => {
                 if (typeof closure_2_3 === "function") {
-                  closure_0 = tmp;
+                  closure_0 = closure_1_0;
                   let _document = closure_2_0(closure_2_1[0]).WINDOW.document;
                   let prerendering;
                   if (_document != null) {
                     prerendering = _document.prerendering;
                   }
                   if (prerendering) {
-                    tmp2(tmp3[1]).whenActivated(() => {
+                    closure_2_0(closure_2_1[1]).whenActivated(() => {
                       if (typeof closure_2_3 === "function") {
                         closure_0 = tmp;
                         const _document = closure_2_0(closure_2_1[0]).WINDOW.document;
@@ -266,7 +267,7 @@ export const onTTFB = (arg0) => {
                           prerendering = _document.prerendering;
                         }
                         if (prerendering) {
-                          tmp2(tmp3[1]).whenActivated(() => {
+                          closure_2_0(closure_2_1[1]).whenActivated(() => {
                             if (typeof closure_2_3 === "function") {
                               closure_0 = tmp;
                               const _document = closure_2_0(closure_2_1[0]).WINDOW.document;
@@ -275,10 +276,10 @@ export const onTTFB = (arg0) => {
                                 prerendering = _document.prerendering;
                               }
                               if (prerendering) {
-                                tmp2(tmp3[1]).whenActivated(() => { ... });
-                                const tmp2Result = tmp2(tmp3[1]);
+                                closure_2_0(closure_2_1[1]).whenActivated(() => { ... });
+                                const tmp2Result = closure_2_0(closure_2_1[1]);
                               } else {
-                                const _document2 = tmp2(tmp3[0]).WINDOW.document;
+                                const _document2 = closure_2_0(closure_2_1[0]).WINDOW.document;
                                 let readyState;
                                 if (_document2 != null) {
                                   readyState = _document2.readyState;
@@ -294,9 +295,9 @@ export const onTTFB = (arg0) => {
                               throw new TypeError("Trying to call a non-function");
                             }
                           });
-                          const tmp2Result = tmp2(tmp3[1]);
+                          const tmp2Result = closure_2_0(closure_2_1[1]);
                         } else {
-                          const _document2 = tmp2(tmp3[0]).WINDOW.document;
+                          const _document2 = closure_2_0(closure_2_1[0]).WINDOW.document;
                           let readyState;
                           if (_document2 != null) {
                             readyState = _document2.readyState;
@@ -304,17 +305,17 @@ export const onTTFB = (arg0) => {
                           if ("complete" !== readyState) {
                             const listener = globalThis.addEventListener("load", () => {
                               if (typeof closure_2_3 === "function") {
-                                closure_0 = tmp;
+                                closure_0 = closure_1_0;
                                 let _document = closure_2_0(closure_2_1[0]).WINDOW.document;
                                 let prerendering;
                                 if (_document != null) {
                                   prerendering = _document.prerendering;
                                 }
                                 if (prerendering) {
-                                  tmp2(tmp3[1]).whenActivated(() => { ... });
-                                  let tmp2Result = tmp2(tmp3[1]);
+                                  closure_2_0(closure_2_1[1]).whenActivated(() => { ... });
+                                  let tmp2Result = closure_2_0(closure_2_1[1]);
                                 } else {
-                                  let _document2 = tmp2(tmp3[0]).WINDOW.document;
+                                  let _document2 = closure_2_0(closure_2_1[0]).WINDOW.document;
                                   let readyState;
                                   if (_document2 != null) {
                                     readyState = _document2.readyState;
@@ -323,7 +324,7 @@ export const onTTFB = (arg0) => {
                                     let listener = globalThis.addEventListener("load", () => { ... }, true);
                                   } else {
                                     let _setTimeout = setTimeout;
-                                    let timerId = setTimeout(tmp);
+                                    let timerId = setTimeout(closure_1_0);
                                   }
                                 }
                               } else {
@@ -339,9 +340,9 @@ export const onTTFB = (arg0) => {
                         throw new TypeError("Trying to call a non-function");
                       }
                     });
-                    let tmp2Result = tmp2(tmp3[1]);
+                    let tmp2Result = closure_2_0(closure_2_1[1]);
                   } else {
-                    let _document2 = tmp2(tmp3[0]).WINDOW.document;
+                    let _document2 = closure_2_0(closure_2_1[0]).WINDOW.document;
                     let readyState;
                     if (_document2 != null) {
                       readyState = _document2.readyState;
@@ -349,14 +350,14 @@ export const onTTFB = (arg0) => {
                     if ("complete" !== readyState) {
                       let listener = globalThis.addEventListener("load", () => {
                         if (typeof closure_2_3 === "function") {
-                          closure_0 = tmp;
+                          closure_0 = closure_1_0;
                           let _document = closure_2_0(closure_2_1[0]).WINDOW.document;
                           let prerendering;
                           if (_document != null) {
                             prerendering = _document.prerendering;
                           }
                           if (prerendering) {
-                            tmp2(tmp3[1]).whenActivated(() => {
+                            closure_2_0(closure_2_1[1]).whenActivated(() => {
                               if (typeof closure_2_3 === "function") {
                                 closure_0 = tmp;
                                 const _document = closure_2_0(closure_2_1[0]).WINDOW.document;
@@ -365,10 +366,10 @@ export const onTTFB = (arg0) => {
                                   prerendering = _document.prerendering;
                                 }
                                 if (prerendering) {
-                                  tmp2(tmp3[1]).whenActivated(() => { ... });
-                                  const tmp2Result = tmp2(tmp3[1]);
+                                  closure_2_0(closure_2_1[1]).whenActivated(() => { ... });
+                                  const tmp2Result = closure_2_0(closure_2_1[1]);
                                 } else {
-                                  const _document2 = tmp2(tmp3[0]).WINDOW.document;
+                                  const _document2 = closure_2_0(closure_2_1[0]).WINDOW.document;
                                   let readyState;
                                   if (_document2 != null) {
                                     readyState = _document2.readyState;
@@ -384,9 +385,9 @@ export const onTTFB = (arg0) => {
                                 throw new TypeError("Trying to call a non-function");
                               }
                             });
-                            let tmp2Result = tmp2(tmp3[1]);
+                            let tmp2Result = closure_2_0(closure_2_1[1]);
                           } else {
-                            let _document2 = tmp2(tmp3[0]).WINDOW.document;
+                            let _document2 = closure_2_0(closure_2_1[0]).WINDOW.document;
                             let readyState;
                             if (_document2 != null) {
                               readyState = _document2.readyState;
@@ -394,17 +395,17 @@ export const onTTFB = (arg0) => {
                             if ("complete" !== readyState) {
                               let listener = globalThis.addEventListener("load", () => {
                                 if (typeof closure_2_3 === "function") {
-                                  closure_0 = tmp;
+                                  closure_0 = closure_1_0;
                                   let _document = closure_2_0(closure_2_1[0]).WINDOW.document;
                                   let prerendering;
                                   if (_document != null) {
                                     prerendering = _document.prerendering;
                                   }
                                   if (prerendering) {
-                                    tmp2(tmp3[1]).whenActivated(() => { ... });
-                                    let tmp2Result = tmp2(tmp3[1]);
+                                    closure_2_0(closure_2_1[1]).whenActivated(() => { ... });
+                                    let tmp2Result = closure_2_0(closure_2_1[1]);
                                   } else {
-                                    let _document2 = tmp2(tmp3[0]).WINDOW.document;
+                                    let _document2 = closure_2_0(closure_2_1[0]).WINDOW.document;
                                     let readyState;
                                     if (_document2 != null) {
                                       readyState = _document2.readyState;
@@ -413,7 +414,7 @@ export const onTTFB = (arg0) => {
                                       let listener = globalThis.addEventListener("load", () => { ... }, true);
                                     } else {
                                       let _setTimeout = setTimeout;
-                                      let timerId = setTimeout(tmp);
+                                      let timerId = setTimeout(closure_1_0);
                                     }
                                   }
                                 } else {
@@ -422,7 +423,7 @@ export const onTTFB = (arg0) => {
                               }, true);
                             } else {
                               let _setTimeout = setTimeout;
-                              let timerId = setTimeout(tmp);
+                              let timerId = setTimeout(closure_1_0);
                             }
                           }
                         } else {
@@ -431,7 +432,7 @@ export const onTTFB = (arg0) => {
                       }, true);
                     } else {
                       let _setTimeout = setTimeout;
-                      let timerId = setTimeout(tmp);
+                      let timerId = setTimeout(closure_1_0);
                     }
                   }
                 } else {
@@ -447,7 +448,6 @@ export const onTTFB = (arg0) => {
           throw new TypeError("Trying to call a non-function");
         }
       });
-      let tmpResult = tmp(903);
     } else {
       const _document2 = tmp(904).WINDOW.document;
       let readyState;
@@ -457,14 +457,14 @@ export const onTTFB = (arg0) => {
       if ("complete" !== readyState) {
         const listener = globalThis.addEventListener("load", () => {
           if (typeof closure_2_3 === "function") {
-            closure_0 = tmp;
+            closure_0 = closure_1_0;
             let _document = closure_2_0(closure_2_1[0]).WINDOW.document;
             let prerendering;
             if (_document != null) {
               prerendering = _document.prerendering;
             }
             if (prerendering) {
-              tmp2(tmp3[1]).whenActivated(() => {
+              closure_2_0(closure_2_1[1]).whenActivated(() => {
                 if (typeof closure_2_3 === "function") {
                   closure_0 = tmp;
                   const _document = closure_2_0(closure_2_1[0]).WINDOW.document;
@@ -473,7 +473,7 @@ export const onTTFB = (arg0) => {
                     prerendering = _document.prerendering;
                   }
                   if (prerendering) {
-                    tmp2(tmp3[1]).whenActivated(() => {
+                    closure_2_0(closure_2_1[1]).whenActivated(() => {
                       if (typeof closure_2_3 === "function") {
                         closure_0 = tmp;
                         const _document = closure_2_0(closure_2_1[0]).WINDOW.document;
@@ -482,7 +482,7 @@ export const onTTFB = (arg0) => {
                           prerendering = _document.prerendering;
                         }
                         if (prerendering) {
-                          tmp2(tmp3[1]).whenActivated(() => {
+                          closure_2_0(closure_2_1[1]).whenActivated(() => {
                             if (typeof closure_2_3 === "function") {
                               closure_0 = tmp;
                               const _document = closure_2_0(closure_2_1[0]).WINDOW.document;
@@ -491,10 +491,10 @@ export const onTTFB = (arg0) => {
                                 prerendering = _document.prerendering;
                               }
                               if (prerendering) {
-                                tmp2(tmp3[1]).whenActivated(() => { ... });
-                                const tmp2Result = tmp2(tmp3[1]);
+                                closure_2_0(closure_2_1[1]).whenActivated(() => { ... });
+                                const tmp2Result = closure_2_0(closure_2_1[1]);
                               } else {
-                                const _document2 = tmp2(tmp3[0]).WINDOW.document;
+                                const _document2 = closure_2_0(closure_2_1[0]).WINDOW.document;
                                 let readyState;
                                 if (_document2 != null) {
                                   readyState = _document2.readyState;
@@ -510,9 +510,9 @@ export const onTTFB = (arg0) => {
                               throw new TypeError("Trying to call a non-function");
                             }
                           });
-                          const tmp2Result = tmp2(tmp3[1]);
+                          const tmp2Result = closure_2_0(closure_2_1[1]);
                         } else {
-                          const _document2 = tmp2(tmp3[0]).WINDOW.document;
+                          const _document2 = closure_2_0(closure_2_1[0]).WINDOW.document;
                           let readyState;
                           if (_document2 != null) {
                             readyState = _document2.readyState;
@@ -520,17 +520,17 @@ export const onTTFB = (arg0) => {
                           if ("complete" !== readyState) {
                             const listener = globalThis.addEventListener("load", () => {
                               if (typeof closure_2_3 === "function") {
-                                closure_0 = tmp;
+                                closure_0 = closure_1_0;
                                 let _document = closure_2_0(closure_2_1[0]).WINDOW.document;
                                 let prerendering;
                                 if (_document != null) {
                                   prerendering = _document.prerendering;
                                 }
                                 if (prerendering) {
-                                  tmp2(tmp3[1]).whenActivated(() => { ... });
-                                  let tmp2Result = tmp2(tmp3[1]);
+                                  closure_2_0(closure_2_1[1]).whenActivated(() => { ... });
+                                  let tmp2Result = closure_2_0(closure_2_1[1]);
                                 } else {
-                                  let _document2 = tmp2(tmp3[0]).WINDOW.document;
+                                  let _document2 = closure_2_0(closure_2_1[0]).WINDOW.document;
                                   let readyState;
                                   if (_document2 != null) {
                                     readyState = _document2.readyState;
@@ -539,7 +539,7 @@ export const onTTFB = (arg0) => {
                                     let listener = globalThis.addEventListener("load", () => { ... }, true);
                                   } else {
                                     let _setTimeout = setTimeout;
-                                    let timerId = setTimeout(tmp);
+                                    let timerId = setTimeout(closure_1_0);
                                   }
                                 }
                               } else {
@@ -555,9 +555,9 @@ export const onTTFB = (arg0) => {
                         throw new TypeError("Trying to call a non-function");
                       }
                     });
-                    const tmp2Result = tmp2(tmp3[1]);
+                    const tmp2Result = closure_2_0(closure_2_1[1]);
                   } else {
-                    const _document2 = tmp2(tmp3[0]).WINDOW.document;
+                    const _document2 = closure_2_0(closure_2_1[0]).WINDOW.document;
                     let readyState;
                     if (_document2 != null) {
                       readyState = _document2.readyState;
@@ -565,14 +565,14 @@ export const onTTFB = (arg0) => {
                     if ("complete" !== readyState) {
                       const listener = globalThis.addEventListener("load", () => {
                         if (typeof closure_2_3 === "function") {
-                          closure_0 = tmp;
+                          closure_0 = closure_1_0;
                           let _document = closure_2_0(closure_2_1[0]).WINDOW.document;
                           let prerendering;
                           if (_document != null) {
                             prerendering = _document.prerendering;
                           }
                           if (prerendering) {
-                            tmp2(tmp3[1]).whenActivated(() => {
+                            closure_2_0(closure_2_1[1]).whenActivated(() => {
                               if (typeof closure_2_3 === "function") {
                                 closure_0 = tmp;
                                 const _document = closure_2_0(closure_2_1[0]).WINDOW.document;
@@ -581,10 +581,10 @@ export const onTTFB = (arg0) => {
                                   prerendering = _document.prerendering;
                                 }
                                 if (prerendering) {
-                                  tmp2(tmp3[1]).whenActivated(() => { ... });
-                                  const tmp2Result = tmp2(tmp3[1]);
+                                  closure_2_0(closure_2_1[1]).whenActivated(() => { ... });
+                                  const tmp2Result = closure_2_0(closure_2_1[1]);
                                 } else {
-                                  const _document2 = tmp2(tmp3[0]).WINDOW.document;
+                                  const _document2 = closure_2_0(closure_2_1[0]).WINDOW.document;
                                   let readyState;
                                   if (_document2 != null) {
                                     readyState = _document2.readyState;
@@ -600,9 +600,9 @@ export const onTTFB = (arg0) => {
                                 throw new TypeError("Trying to call a non-function");
                               }
                             });
-                            let tmp2Result = tmp2(tmp3[1]);
+                            let tmp2Result = closure_2_0(closure_2_1[1]);
                           } else {
-                            let _document2 = tmp2(tmp3[0]).WINDOW.document;
+                            let _document2 = closure_2_0(closure_2_1[0]).WINDOW.document;
                             let readyState;
                             if (_document2 != null) {
                               readyState = _document2.readyState;
@@ -610,17 +610,17 @@ export const onTTFB = (arg0) => {
                             if ("complete" !== readyState) {
                               let listener = globalThis.addEventListener("load", () => {
                                 if (typeof closure_2_3 === "function") {
-                                  closure_0 = tmp;
+                                  closure_0 = closure_1_0;
                                   let _document = closure_2_0(closure_2_1[0]).WINDOW.document;
                                   let prerendering;
                                   if (_document != null) {
                                     prerendering = _document.prerendering;
                                   }
                                   if (prerendering) {
-                                    tmp2(tmp3[1]).whenActivated(() => { ... });
-                                    let tmp2Result = tmp2(tmp3[1]);
+                                    closure_2_0(closure_2_1[1]).whenActivated(() => { ... });
+                                    let tmp2Result = closure_2_0(closure_2_1[1]);
                                   } else {
-                                    let _document2 = tmp2(tmp3[0]).WINDOW.document;
+                                    let _document2 = closure_2_0(closure_2_1[0]).WINDOW.document;
                                     let readyState;
                                     if (_document2 != null) {
                                       readyState = _document2.readyState;
@@ -629,7 +629,7 @@ export const onTTFB = (arg0) => {
                                       let listener = globalThis.addEventListener("load", () => { ... }, true);
                                     } else {
                                       let _setTimeout = setTimeout;
-                                      let timerId = setTimeout(tmp);
+                                      let timerId = setTimeout(closure_1_0);
                                     }
                                   }
                                 } else {
@@ -638,7 +638,7 @@ export const onTTFB = (arg0) => {
                               }, true);
                             } else {
                               let _setTimeout = setTimeout;
-                              let timerId = setTimeout(tmp);
+                              let timerId = setTimeout(closure_1_0);
                             }
                           }
                         } else {
@@ -654,9 +654,9 @@ export const onTTFB = (arg0) => {
                   throw new TypeError("Trying to call a non-function");
                 }
               });
-              let tmp2Result = tmp2(tmp3[1]);
+              let tmp2Result = closure_2_0(closure_2_1[1]);
             } else {
-              let _document2 = tmp2(tmp3[0]).WINDOW.document;
+              let _document2 = closure_2_0(closure_2_1[0]).WINDOW.document;
               let readyState;
               if (_document2 != null) {
                 readyState = _document2.readyState;
@@ -664,14 +664,14 @@ export const onTTFB = (arg0) => {
               if ("complete" !== readyState) {
                 let listener = globalThis.addEventListener("load", () => {
                   if (typeof closure_2_3 === "function") {
-                    closure_0 = tmp;
+                    closure_0 = closure_1_0;
                     let _document = closure_2_0(closure_2_1[0]).WINDOW.document;
                     let prerendering;
                     if (_document != null) {
                       prerendering = _document.prerendering;
                     }
                     if (prerendering) {
-                      tmp2(tmp3[1]).whenActivated(() => {
+                      closure_2_0(closure_2_1[1]).whenActivated(() => {
                         if (typeof closure_2_3 === "function") {
                           closure_0 = tmp;
                           const _document = closure_2_0(closure_2_1[0]).WINDOW.document;
@@ -680,7 +680,7 @@ export const onTTFB = (arg0) => {
                             prerendering = _document.prerendering;
                           }
                           if (prerendering) {
-                            tmp2(tmp3[1]).whenActivated(() => {
+                            closure_2_0(closure_2_1[1]).whenActivated(() => {
                               if (typeof closure_2_3 === "function") {
                                 closure_0 = tmp;
                                 const _document = closure_2_0(closure_2_1[0]).WINDOW.document;
@@ -689,10 +689,10 @@ export const onTTFB = (arg0) => {
                                   prerendering = _document.prerendering;
                                 }
                                 if (prerendering) {
-                                  tmp2(tmp3[1]).whenActivated(() => { ... });
-                                  const tmp2Result = tmp2(tmp3[1]);
+                                  closure_2_0(closure_2_1[1]).whenActivated(() => { ... });
+                                  const tmp2Result = closure_2_0(closure_2_1[1]);
                                 } else {
-                                  const _document2 = tmp2(tmp3[0]).WINDOW.document;
+                                  const _document2 = closure_2_0(closure_2_1[0]).WINDOW.document;
                                   let readyState;
                                   if (_document2 != null) {
                                     readyState = _document2.readyState;
@@ -708,9 +708,9 @@ export const onTTFB = (arg0) => {
                                 throw new TypeError("Trying to call a non-function");
                               }
                             });
-                            const tmp2Result = tmp2(tmp3[1]);
+                            const tmp2Result = closure_2_0(closure_2_1[1]);
                           } else {
-                            const _document2 = tmp2(tmp3[0]).WINDOW.document;
+                            const _document2 = closure_2_0(closure_2_1[0]).WINDOW.document;
                             let readyState;
                             if (_document2 != null) {
                               readyState = _document2.readyState;
@@ -718,17 +718,17 @@ export const onTTFB = (arg0) => {
                             if ("complete" !== readyState) {
                               const listener = globalThis.addEventListener("load", () => {
                                 if (typeof closure_2_3 === "function") {
-                                  closure_0 = tmp;
+                                  closure_0 = closure_1_0;
                                   let _document = closure_2_0(closure_2_1[0]).WINDOW.document;
                                   let prerendering;
                                   if (_document != null) {
                                     prerendering = _document.prerendering;
                                   }
                                   if (prerendering) {
-                                    tmp2(tmp3[1]).whenActivated(() => { ... });
-                                    let tmp2Result = tmp2(tmp3[1]);
+                                    closure_2_0(closure_2_1[1]).whenActivated(() => { ... });
+                                    let tmp2Result = closure_2_0(closure_2_1[1]);
                                   } else {
-                                    let _document2 = tmp2(tmp3[0]).WINDOW.document;
+                                    let _document2 = closure_2_0(closure_2_1[0]).WINDOW.document;
                                     let readyState;
                                     if (_document2 != null) {
                                       readyState = _document2.readyState;
@@ -737,7 +737,7 @@ export const onTTFB = (arg0) => {
                                       let listener = globalThis.addEventListener("load", () => { ... }, true);
                                     } else {
                                       let _setTimeout = setTimeout;
-                                      let timerId = setTimeout(tmp);
+                                      let timerId = setTimeout(closure_1_0);
                                     }
                                   }
                                 } else {
@@ -753,9 +753,9 @@ export const onTTFB = (arg0) => {
                           throw new TypeError("Trying to call a non-function");
                         }
                       });
-                      let tmp2Result = tmp2(tmp3[1]);
+                      let tmp2Result = closure_2_0(closure_2_1[1]);
                     } else {
-                      let _document2 = tmp2(tmp3[0]).WINDOW.document;
+                      let _document2 = closure_2_0(closure_2_1[0]).WINDOW.document;
                       let readyState;
                       if (_document2 != null) {
                         readyState = _document2.readyState;
@@ -763,14 +763,14 @@ export const onTTFB = (arg0) => {
                       if ("complete" !== readyState) {
                         let listener = globalThis.addEventListener("load", () => {
                           if (typeof closure_2_3 === "function") {
-                            closure_0 = tmp;
+                            closure_0 = closure_1_0;
                             let _document = closure_2_0(closure_2_1[0]).WINDOW.document;
                             let prerendering;
                             if (_document != null) {
                               prerendering = _document.prerendering;
                             }
                             if (prerendering) {
-                              tmp2(tmp3[1]).whenActivated(() => {
+                              closure_2_0(closure_2_1[1]).whenActivated(() => {
                                 if (typeof closure_2_3 === "function") {
                                   closure_0 = tmp;
                                   const _document = closure_2_0(closure_2_1[0]).WINDOW.document;
@@ -779,10 +779,10 @@ export const onTTFB = (arg0) => {
                                     prerendering = _document.prerendering;
                                   }
                                   if (prerendering) {
-                                    tmp2(tmp3[1]).whenActivated(() => { ... });
-                                    const tmp2Result = tmp2(tmp3[1]);
+                                    closure_2_0(closure_2_1[1]).whenActivated(() => { ... });
+                                    const tmp2Result = closure_2_0(closure_2_1[1]);
                                   } else {
-                                    const _document2 = tmp2(tmp3[0]).WINDOW.document;
+                                    const _document2 = closure_2_0(closure_2_1[0]).WINDOW.document;
                                     let readyState;
                                     if (_document2 != null) {
                                       readyState = _document2.readyState;
@@ -798,9 +798,9 @@ export const onTTFB = (arg0) => {
                                   throw new TypeError("Trying to call a non-function");
                                 }
                               });
-                              let tmp2Result = tmp2(tmp3[1]);
+                              let tmp2Result = closure_2_0(closure_2_1[1]);
                             } else {
-                              let _document2 = tmp2(tmp3[0]).WINDOW.document;
+                              let _document2 = closure_2_0(closure_2_1[0]).WINDOW.document;
                               let readyState;
                               if (_document2 != null) {
                                 readyState = _document2.readyState;
@@ -808,17 +808,17 @@ export const onTTFB = (arg0) => {
                               if ("complete" !== readyState) {
                                 let listener = globalThis.addEventListener("load", () => {
                                   if (typeof closure_2_3 === "function") {
-                                    closure_0 = tmp;
+                                    closure_0 = closure_1_0;
                                     let _document = closure_2_0(closure_2_1[0]).WINDOW.document;
                                     let prerendering;
                                     if (_document != null) {
                                       prerendering = _document.prerendering;
                                     }
                                     if (prerendering) {
-                                      tmp2(tmp3[1]).whenActivated(() => { ... });
-                                      let tmp2Result = tmp2(tmp3[1]);
+                                      closure_2_0(closure_2_1[1]).whenActivated(() => { ... });
+                                      let tmp2Result = closure_2_0(closure_2_1[1]);
                                     } else {
-                                      let _document2 = tmp2(tmp3[0]).WINDOW.document;
+                                      let _document2 = closure_2_0(closure_2_1[0]).WINDOW.document;
                                       let readyState;
                                       if (_document2 != null) {
                                         readyState = _document2.readyState;
@@ -827,7 +827,7 @@ export const onTTFB = (arg0) => {
                                         let listener = globalThis.addEventListener("load", () => { ... }, true);
                                       } else {
                                         let _setTimeout = setTimeout;
-                                        let timerId = setTimeout(tmp);
+                                        let timerId = setTimeout(closure_1_0);
                                       }
                                     }
                                   } else {
@@ -836,7 +836,7 @@ export const onTTFB = (arg0) => {
                                 }, true);
                               } else {
                                 let _setTimeout = setTimeout;
-                                let timerId = setTimeout(tmp);
+                                let timerId = setTimeout(closure_1_0);
                               }
                             }
                           } else {
@@ -845,7 +845,7 @@ export const onTTFB = (arg0) => {
                         }, true);
                       } else {
                         let _setTimeout = setTimeout;
-                        let timerId = setTimeout(tmp);
+                        let timerId = setTimeout(closure_1_0);
                       }
                     }
                   } else {
@@ -854,7 +854,7 @@ export const onTTFB = (arg0) => {
                 }, true);
               } else {
                 let _setTimeout = setTimeout;
-                let timerId = setTimeout(tmp);
+                let timerId = setTimeout(closure_1_0);
               }
             }
           } else {

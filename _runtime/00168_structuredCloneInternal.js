@@ -134,7 +134,7 @@ function structuredCloneInternal(source) {
                                 }
                                 return obj1;
                               }
-                              tmp14Result = tmp14(126);
+                              tmp14Result = _mod126;
                             }
                             const _String = String;
                             let tmp25 = _modDef157;
@@ -143,7 +143,6 @@ function structuredCloneInternal(source) {
                             throw tmp25;
                           }
                         }
-                        tmp14 = require;
                       }
                     }
                   }

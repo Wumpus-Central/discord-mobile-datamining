@@ -4,6 +4,7 @@
 import _mod687 from "module_687" /* 687 */;
 import _mod692 from "module_692" /* 692 */;
 import uuid4 from "uuid4" /* 695 */;
+import normalize from "normalize" /* 730 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 function exceptionFromError(fn, name) {
@@ -49,12 +50,12 @@ export const _enhanceErrorWithSentryInfo = function _enhanceErrorWithSentryInfo(
   }
   return combined;
 };
-export const eventFromMessage = function eventFromMessage(fn, value, arg2, event_id) {
+export const eventFromMessage = function eventFromMessage(fn, value, arg2) {
   let str = arg2;
   if (arg2 === undefined) {
     str = "info";
   }
-  event_id = undefined;
+  let event_id;
   if (event_id != null) {
     event_id = event_id.event_id;
   }
@@ -106,14 +107,14 @@ export const eventFromUnknownInput = function eventFromUnknownInput(getOptions, 
     let items3 = items;
   } else {
     data.synthetic = true;
-    let tmp2Result = tmp2(692);
+    let tmp2Result = _mod692;
     if (tmp2Result.isPlainObject(name)) {
       let normalizeDepth;
       if (getOptions != null) {
         normalizeDepth = getOptions.getOptions().normalizeDepth;
       }
       let obj = { __serialized__: null };
-      tmp2Result = tmp2(730);
+      tmp2Result = normalize;
       obj.__serialized__ = tmp2Result.normalizeToSize(name, normalizeDepth);
       let tmp14;
       const keys = Object.keys();

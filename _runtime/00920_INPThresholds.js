@@ -3,11 +3,11 @@
 // Module 920 (INPThresholds)
 import _mod909 from "module_909" /* 909 */;
 import observe from "observe" /* 911 */;
+import bindReporter from "bindReporter" /* 912 */;
 import _mod914 from "module_914" /* 914 */;
 import _mod921 from "module_921" /* 921 */;
 import InteractionManager from "InteractionManager" /* 922 */;
 
-const bindReporter = tmp(912);
 require = arg1;
 const dependencyMap = arg6;
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
@@ -76,11 +76,13 @@ export const onINP = (arg0) => {
                 }
               });
               closure_0(true);
+              obj = closure_0(metric[6]);
             } else {
               throw new TypeError("Trying to call a non-function");
             }
           });
         }
+        const tmpResult = bindReporter;
       });
       let obj3 = require("whenActivated");
     }

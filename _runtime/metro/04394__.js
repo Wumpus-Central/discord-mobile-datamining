@@ -88,7 +88,7 @@ function parse(str, delimiter) {
 function encodeURIComponentPretty(arg0) {
   return encodeURI(arg0).replace(/[\/?#]/g, (str) => {
     str = str.charCodeAt(0);
-    return "%" + str.charCodeAt(0).toString(16).toUpperCase();
+    return "%" + str.toString(16).toUpperCase();
   });
 }
 function tokensToRegExp(arg0, items, arg2) {
@@ -336,7 +336,7 @@ module.exports.compile = function compile(arg0, arg1) {
               let str3 = encodeURI(arr);
               replaced = str3.replace(/[?#]/g, (str) => {
                 str = str.charCodeAt(0);
-                return "%" + str.charCodeAt(0).toString(16).toUpperCase();
+                return "%" + str.toString(16).toUpperCase();
               });
             } else {
               replaced = _encodeURIComponent(arr);
@@ -470,7 +470,7 @@ module.exports.tokensToFunction = function tokensToFunction(arg0) {
               let str3 = encodeURI(arr);
               replaced = str3.replace(/[?#]/g, (str) => {
                 str = str.charCodeAt(0);
-                return "%" + str.charCodeAt(0).toString(16).toUpperCase();
+                return "%" + str.toString(16).toUpperCase();
               });
             } else {
               replaced = _encodeURIComponent(arr);

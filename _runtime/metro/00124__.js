@@ -1,10 +1,10 @@
 // === Module 124: ? ===
 
 // Module 124
+import _possibleConstructorReturnDefault from "_possibleConstructorReturn" /* 93 */;
 import DOMRectReadOnlyDefault from "DOMRectReadOnly" /* 125 */;
 import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
-import _possibleConstructorReturn from "_possibleConstructorReturn" /* 93 */;
 import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
 
@@ -27,6 +27,7 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
+_possibleConstructorReturnDefault;
 class DOMRect {
   constructor() {
     self = this;
@@ -93,10 +94,10 @@ const entry = {
   value: function fromRect(arg0) {
     if (arg0) {
       ({ x, y, width, height } = arg0);
-      let tmpResult = tmp(x, y, width, height);
-      const obj = Object.create(tmp.prototype);
+      let tmpResult = _classCallCheck(x, y, width, height);
+      const obj = Object.create(_classCallCheck.prototype);
     } else {
-      tmpResult = tmp();
+      tmpResult = _classCallCheck();
     }
     return tmpResult;
   }

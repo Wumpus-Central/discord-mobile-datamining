@@ -16,7 +16,7 @@ function addListenersToPropsValue(propValue, arr) {
 
         })
     };
-    arr.push(obj);
+    arr = arr.push(obj);
   } else {
     const _Array = Array;
     if (Array.isArray(propValue)) {
@@ -61,12 +61,12 @@ export default function createAnimatedPropsHook(arg0) {
     }, closure_0, closure_4), fn);
     closure_1_7(() => {
       if (!closure_1(357).shouldSignalBatch) {
-        const API = tmp(357).API;
+        const API = closure_1(357).API;
         API.flushQueue();
       }
       closure_0 = null;
       if (obj.__isNative) {
-        const nativeEventEmitter = tmp(357).nativeEventEmitter;
+        const nativeEventEmitter = closure_1(357).nativeEventEmitter;
         closure_0 = nativeEventEmitter.addListener("onUserDrivenAnimationEnded", (arg0) => {
           obj.update();
         });
@@ -99,10 +99,10 @@ export default function createAnimatedPropsHook(arg0) {
       items.current = () => {
         let isPublicInstanceResult = _mod390.isPublicInstance(instance);
         if (!isPublicInstanceResult) {
-          let tmpResult = tmp(390);
+          let tmpResult = _mod390;
           let nativeScrollRef;
-          if (obj != null) {
-            const getNativeScrollRef = obj.getNativeScrollRef;
+          if (instance != null) {
+            const getNativeScrollRef = instance.getNativeScrollRef;
             if (getNativeScrollRef != null) {
               nativeScrollRef = getNativeScrollRef();
             }
@@ -110,10 +110,10 @@ export default function createAnimatedPropsHook(arg0) {
           isPublicInstanceResult = tmpResult.isPublicInstance(nativeScrollRef);
         }
         if (!isPublicInstanceResult) {
-          tmpResult = tmp(390);
+          tmpResult = _mod390;
           let nativeScrollRef2;
-          if (obj != null) {
-            const getScrollResponder = obj.getScrollResponder;
+          if (instance != null) {
+            const getScrollResponder = instance.getScrollResponder;
             if (getScrollResponder != null) {
               const scrollResponder = getScrollResponder();
               if (scrollResponder != null) {
@@ -135,18 +135,18 @@ export default function createAnimatedPropsHook(arg0) {
           }
           obj6 = _modAll27;
         } else {
-          if (typeof obj === "object") {
+          if (typeof instance === "object") {
             let setNativeProps;
-            if (obj != null) {
-              setNativeProps = obj.setNativeProps;
+            if (instance != null) {
+              setNativeProps = instance.setNativeProps;
             }
             if (typeof setNativeProps === "function") {
               if (isPublicInstanceResult) {
                 if (closure_2) {
-                  obj.setNativeProps(obj5.__getAnimatedValue());
+                  instance.setNativeProps(instance.__getAnimatedValue());
                   if (null != ref.current) {
                     const _clearTimeout = clearTimeout;
-                    clearTimeout(tmp13.current);
+                    clearTimeout(ref.current);
                   }
                   const _setTimeout = setTimeout;
                   ref.current = setTimeout(() => {
@@ -157,14 +157,14 @@ export default function createAnimatedPropsHook(arg0) {
                   return closure_1();
                 }
               } else {
-                return obj.setNativeProps(obj5.__getAnimatedValue());
+                return instance.setNativeProps(instance.__getAnimatedValue());
               }
             }
           }
           return closure_1();
         }
       };
-      const tmp2 = (function getEventTarget(getScrollableNode) {
+      let tmp2 = (function getEventTarget(getScrollableNode) {
         let scrollableNode = getScrollableNode;
         if (typeof getScrollableNode === "object") {
           getScrollableNode = undefined;
@@ -201,6 +201,7 @@ export default function createAnimatedPropsHook(arg0) {
           let removeListenerResult = propValue.removeListener(item10022.listenerId);
           continue;
         }
+        tmp2 = result[Symbol.iterator]();
       };
     }, items1);
     const merged = Object.assign(obj.__getValueWithStaticProps(fn));
@@ -212,10 +213,10 @@ export default function createAnimatedPropsHook(arg0) {
         items.current = () => {
           let isPublicInstanceResult = _mod390.isPublicInstance(instance);
           if (!isPublicInstanceResult) {
-            let tmpResult = tmp(390);
+            let tmpResult = _mod390;
             let nativeScrollRef;
-            if (obj != null) {
-              const getNativeScrollRef = obj.getNativeScrollRef;
+            if (instance != null) {
+              const getNativeScrollRef = instance.getNativeScrollRef;
               if (getNativeScrollRef != null) {
                 nativeScrollRef = getNativeScrollRef();
               }
@@ -223,10 +224,10 @@ export default function createAnimatedPropsHook(arg0) {
             isPublicInstanceResult = tmpResult.isPublicInstance(nativeScrollRef);
           }
           if (!isPublicInstanceResult) {
-            tmpResult = tmp(390);
+            tmpResult = _mod390;
             let nativeScrollRef2;
-            if (obj != null) {
-              const getScrollResponder = obj.getScrollResponder;
+            if (instance != null) {
+              const getScrollResponder = instance.getScrollResponder;
               if (getScrollResponder != null) {
                 const scrollResponder = getScrollResponder();
                 if (scrollResponder != null) {
@@ -248,18 +249,18 @@ export default function createAnimatedPropsHook(arg0) {
             }
             obj6 = _modAll27;
           } else {
-            if (typeof obj === "object") {
+            if (typeof instance === "object") {
               let setNativeProps;
-              if (obj != null) {
-                setNativeProps = obj.setNativeProps;
+              if (instance != null) {
+                setNativeProps = instance.setNativeProps;
               }
               if (typeof setNativeProps === "function") {
                 if (isPublicInstanceResult) {
                   if (closure_2) {
-                    obj.setNativeProps(obj5.__getAnimatedValue());
+                    instance.setNativeProps(instance.__getAnimatedValue());
                     if (null != ref.current) {
                       const _clearTimeout = clearTimeout;
-                      clearTimeout(tmp13.current);
+                      clearTimeout(ref.current);
                     }
                     const _setTimeout = setTimeout;
                     ref.current = setTimeout(() => {
@@ -270,14 +271,14 @@ export default function createAnimatedPropsHook(arg0) {
                     return closure_1();
                   }
                 } else {
-                  return obj.setNativeProps(obj5.__getAnimatedValue());
+                  return instance.setNativeProps(instance.__getAnimatedValue());
                 }
               }
             }
             return closure_1();
           }
         };
-        const tmp2 = (function getEventTarget(getScrollableNode) {
+        let tmp2 = (function getEventTarget(getScrollableNode) {
           let scrollableNode = getScrollableNode;
           if (typeof getScrollableNode === "object") {
             getScrollableNode = undefined;
@@ -314,6 +315,7 @@ export default function createAnimatedPropsHook(arg0) {
             let removeListenerResult = propValue.removeListener(item10022.listenerId);
             continue;
           }
+          tmp2 = result[Symbol.iterator]();
         };
       }, items1))
     ];

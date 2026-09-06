@@ -34,11 +34,11 @@ stopObservingProgress.__initData = { code: "function stopObservingProgress_Pnpm_
 function createLayoutAnimationManager() {
   let map = new Map();
   map1 = new Map();
-  function startActually(arg0, arg1, arg2, fn) {
+  function startActually(arg0, arg1, value, fn) {
     map = arg0;
     map1 = arg1;
     if (arg1 !== map1(startActually[1]).LayoutAnimationType.SHARED_ELEMENT_TRANSITION_PROGRESS) {
-      let tmp6 = fn(arg2);
+      const tmp6 = fn(value);
       closure_2 = tmp6;
       let animations = tmp6.animations;
       let obj = map;
@@ -53,7 +53,7 @@ function createLayoutAnimationManager() {
       value = map1.get(arg0);
       let mutableUI = value;
       if (undefined === value) {
-        let tmpResult = tmp(tmp2[2]);
+        let tmpResult = tmp(startActually[2]);
         mutableUI = tmpResult.makeMutableUI(tmp6.initialValues);
         const result1 = obj3.set(arg0, mutableUI);
         value = mutableUI;
@@ -64,21 +64,19 @@ function createLayoutAnimationManager() {
       } else {
         throw new TypeError("Trying to call a non-function");
       }
-      tmpResult = tmp(tmp2[3]);
+      tmpResult = tmp(startActually[3]);
       const withStyleAnimationResult = tmpResult.withStyleAnimation(animations);
       withStyleAnimationResult.callback = (arg0) => {
         if (arg0) {
           map.delete(closure_0);
           map1.delete(closure_0);
           if (typeof stopObservingProgress === "function") {
-            obj.removeListener(tmp2 + 1000000000);
-            global._notifyAboutEnd(tmp2, tmp6 === _mod1661.LayoutAnimationType.EXITING);
-            const tmp10 = tmp6 === _mod1661.LayoutAnimationType.EXITING;
+            mutableUI.removeListener(closure_0 + 1000000000);
+            global._notifyAboutEnd(closure_0, closure_1 === _mod1661.LayoutAnimationType.EXITING);
+            const tmp10 = closure_1 === _mod1661.LayoutAnimationType.EXITING;
           } else {
             throw new TypeError("Trying to call a non-function");
           }
-          obj = mutableUI;
-          tmp6 = closure_1;
         }
         if (closure_2.callback) {
           let tmp14 = undefined !== arg0;
@@ -91,7 +89,7 @@ function createLayoutAnimationManager() {
       if (typeof startObservingProgress === "function") {
         map = arg0;
         map1 = value;
-        closure_2 = arg1 === tmp(tmp2[1]).LayoutAnimationType.SHARED_ELEMENT_TRANSITION;
+        closure_2 = arg1 === tmp(startActually[1]).LayoutAnimationType.SHARED_ELEMENT_TRANSITION;
         value.addListener(arg0 + 1000000000, () => {
           map._notifyAboutProgress(closure_0, value.value, closure_2);
         });
@@ -102,7 +100,7 @@ function createLayoutAnimationManager() {
       obj3 = map1;
     } else {
       const ProgressTransitionRegister = map.ProgressTransitionRegister;
-      ProgressTransitionRegister.onTransitionStart(arg0, arg2);
+      ProgressTransitionRegister.onTransitionStart(arg0, value);
     }
   }
   if (module_1639) {
@@ -138,14 +136,13 @@ createLayoutAnimationManager.__initData = { code: "function createLayoutAnimatio
 const fn = function t() {
   if (typeof createLayoutAnimationManager === "function") {
     const _Map = Map;
-    const map = new Map();
     const _Map2 = Map;
-    map1 = new Map();
-    function startActually(arg0, arg1, arg2, fn) {
+    const map = new Map();
+    function startActually(arg0, arg1, value, fn) {
       map = arg0;
       map1 = arg1;
       if (arg1 !== map1(startActually[1]).LayoutAnimationType.SHARED_ELEMENT_TRANSITION_PROGRESS) {
-        let tmp6 = fn(arg2);
+        const tmp6 = fn(value);
         closure_2 = tmp6;
         let animations = tmp6.animations;
         let obj = map;
@@ -160,7 +157,7 @@ const fn = function t() {
         value = map1.get(arg0);
         let mutableUI = value;
         if (undefined === value) {
-          let tmpResult = tmp(tmp2[2]);
+          let tmpResult = tmp(startActually[2]);
           mutableUI = tmpResult.makeMutableUI(tmp6.initialValues);
           const result1 = obj3.set(arg0, mutableUI);
           value = mutableUI;
@@ -171,21 +168,19 @@ const fn = function t() {
         } else {
           throw new TypeError("Trying to call a non-function");
         }
-        tmpResult = tmp(tmp2[3]);
+        tmpResult = tmp(startActually[3]);
         const withStyleAnimationResult = tmpResult.withStyleAnimation(animations);
         withStyleAnimationResult.callback = (arg0) => {
           if (arg0) {
             map.delete(closure_0);
             map1.delete(closure_0);
             if (typeof stopObservingProgress === "function") {
-              obj.removeListener(tmp2 + 1000000000);
-              global._notifyAboutEnd(tmp2, tmp6 === _mod1661.LayoutAnimationType.EXITING);
-              const tmp10 = tmp6 === _mod1661.LayoutAnimationType.EXITING;
+              mutableUI.removeListener(closure_0 + 1000000000);
+              global._notifyAboutEnd(closure_0, closure_1 === _mod1661.LayoutAnimationType.EXITING);
+              const tmp10 = closure_1 === _mod1661.LayoutAnimationType.EXITING;
             } else {
               throw new TypeError("Trying to call a non-function");
             }
-            obj = mutableUI;
-            tmp6 = closure_1;
           }
           if (closure_2.callback) {
             let tmp14 = undefined !== arg0;
@@ -198,7 +193,7 @@ const fn = function t() {
         if (typeof startObservingProgress === "function") {
           map = arg0;
           map1 = value;
-          closure_2 = arg1 === tmp(tmp2[1]).LayoutAnimationType.SHARED_ELEMENT_TRANSITION;
+          closure_2 = arg1 === tmp(startActually[1]).LayoutAnimationType.SHARED_ELEMENT_TRANSITION;
           value.addListener(arg0 + 1000000000, () => {
             map._notifyAboutProgress(closure_0, value.value, closure_2);
           });
@@ -209,7 +204,7 @@ const fn = function t() {
         obj3 = map1;
       } else {
         const ProgressTransitionRegister = map.ProgressTransitionRegister;
-        ProgressTransitionRegister.onTransitionStart(arg0, arg2);
+        ProgressTransitionRegister.onTransitionStart(arg0, value);
       }
     }
     if (module_1639) {
@@ -238,6 +233,7 @@ const fn = function t() {
         }
     };
     tmp.LayoutAnimationsManager = obj;
+    map1 = new Map();
   } else {
     throw new TypeError("Trying to call a non-function");
   }

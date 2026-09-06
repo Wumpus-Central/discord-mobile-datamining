@@ -108,7 +108,7 @@ export default forwardRef((bottomOffset, arg1) => {
   const sharedValue13 = require("cancelAnimation").useSharedValue(0);
   const obj16 = require("cancelAnimation");
   let height = require("module_1830").useWindowDimensions().height;
-  _require = flag2(function*(arg0, value) {
+  _require = flag2(function*(arg0) {
     if (c5 === 2) {
       c5 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -139,20 +139,17 @@ export default forwardRef((bottomOffset, arg1) => {
             const findNodeHandleResult = closure_0(flag[7]).findNodeHandle(ref.current);
             sharedValue.value = findNodeHandleResult;
             if (closure_0 != null) {
-              closure_0(tmp20);
+              closure_0(closure_0);
             }
             if (null !== findNodeHandleResult) {
               c3 = 1;
-              const KeyboardControllerNative = tmp21(tmp22[8]).KeyboardControllerNative;
+              const KeyboardControllerNative = closure_0(flag[8]).KeyboardControllerNative;
               c4 = 2;
               c5 = 1;
               const obj1 = { value: KeyboardControllerNative.viewPositionInWindow(findNodeHandleResult), done: false };
               return obj1;
             }
             const obj5 = closure_0(flag[7]);
-            tmp20 = closure_0;
-            tmp21 = closure_0;
-            tmp22 = flag;
           }
         } else {
           if (1 === tmp7) {
@@ -507,7 +504,7 @@ export default forwardRef((bottomOffset, arg1) => {
   N.__workletHash = 7363285427351;
   N.__initData = sharedValue6;
   const items9 = [tmp31, tmp33, tmp30, tmp26];
-  let tmp34 = num2(N, items9);
+  const tmp34 = num2(N, items9);
   const obj17 = require("module_1830");
   const items10 = [tmp34];
   require("module_1830").useFocusedInputHandler({ onSelectionChange: tmp34 }, items10);
@@ -674,7 +671,7 @@ export default forwardRef((bottomOffset, arg1) => {
   const items11 = [str, tmp26, tmp27, flag, tmp29];
   require("module_1849").useSmoothKeyboardHandler(obj3, items11);
   const items12 = [update, tmp31];
-  const tmp37 = num2(flag2(function*(arg0, value) {
+  const tmp37 = num2(flag2(function*() {
     if (c3 === 2) {
       c3 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");

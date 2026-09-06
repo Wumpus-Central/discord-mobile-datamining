@@ -77,7 +77,7 @@ function hoistNonReactStatics(arg0, str, arg2) {
           }
           if (!tmp24) {
             if (!closure_9(arg0, tmp18)) {
-              const tmp26Result = tmp26(str, tmp18);
+              const tmp26Result = closure_9(str, tmp18);
               if (tmp26Result) {
                 try {
                   closure_6(arg0, tmp18, tmp30);
@@ -85,7 +85,6 @@ function hoistNonReactStatics(arg0, str, arg2) {
                 }
               }
             }
-            tmp26 = closure_9;
           }
         }
       }

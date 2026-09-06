@@ -39,7 +39,7 @@ const items = [["effect", "hoverEffect"]];
 const map = new Map(items);
 let closure_6 = {};
 
-export const useHoverGesture = function useHoverGesture(gestureHandlerProps) {
+export const useHoverGesture = function useHoverGesture() {
   let tmp = gestureHandlerProps;
   if (gestureHandlerProps === undefined) {
     tmp = closure_6;

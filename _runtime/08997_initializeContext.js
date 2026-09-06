@@ -216,13 +216,13 @@ function extractDefs(initializeContextResult, _idmap) {
           str = "$defs";
         }
         if (initializeContextResult.external) {
-          const registry = tmp4.external.registry;
+          const registry = initializeContextResult.external.registry;
           value = registry.get(arg0[0]);
           let id;
           if (value != null) {
             id = value.id;
           }
-          let fn = tmp4.external.uri;
+          let fn = initializeContextResult.external.uri;
           if (fn == null) {
             fn = (__shared) => __shared;
           }
@@ -234,7 +234,7 @@ function extractDefs(initializeContextResult, _idmap) {
               id2 = arg0[1].schema.id;
             }
             if (id2 == null) {
-              tmp4.counter = +tmp4.counter + 1;
+              initializeContextResult.counter = +initializeContextResult.counter + 1;
               id2 = `schema${tmp13}`;
             }
             arg0[1].defId = id2;
@@ -249,7 +249,7 @@ function extractDefs(initializeContextResult, _idmap) {
           id = arg0[1].schema.id;
           const combined = "#/" + str + "/";
           if (id == null) {
-            tmp4.counter = +tmp4.counter + 1;
+            initializeContextResult.counter = +initializeContextResult.counter + 1;
             id = `__schema${tmp9}`;
           }
           obj = { defId: id, ref: combined + id };
@@ -676,8 +676,8 @@ export { initializeContext };
 export { process };
 export { extractDefs };
 export { finalize };
-export (arg0, processors) => {
-  closure_0 = arg0;
+export (_standard) => {
+  closure_0 = _standard;
   if (processors === undefined) {
     processors = {};
   }
@@ -691,14 +691,14 @@ export (arg0, processors) => {
     return finalize(tmp2, closure_0);
   };
 }
-export (arg0, io, processors) => {
-  closure_0 = arg0;
+export (_standard, input) => {
+  closure_0 = _standard;
+  const io = input;
   if (processors === undefined) {
     processors = {};
   }
-  return (arg0) => {
-    processors = arg0;
-    if (arg0 == null) {
+  return (processors) => {
+    if (processors == null) {
       processors = {};
     }
     let libraryOptions = processors.libraryOptions;

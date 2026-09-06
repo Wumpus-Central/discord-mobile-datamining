@@ -199,36 +199,36 @@ const entry = {
     if (tmp4 == null) {
       tmp4 = closure_8;
     }
-    closure_0 = tmp4;
+    const nativeColor = tmp4;
     const result1 = self._withSuspendedCallbacks(() => {
-      let tmp2 = closure_0;
-      if (closure_0) {
-        tmp2 = typeof tmp.r === "number";
+      let tmp2 = nativeColor;
+      if (nativeColor) {
+        tmp2 = typeof nativeColor.r === "number";
       }
       if (tmp2) {
-        tmp2 = typeof tmp.g === "number";
+        tmp2 = typeof nativeColor.g === "number";
       }
       if (tmp2) {
-        tmp2 = typeof tmp.b === "number";
+        tmp2 = typeof nativeColor.b === "number";
       }
       if (tmp2) {
-        tmp2 = typeof tmp.a === "number";
+        tmp2 = typeof nativeColor.a === "number";
       }
       if (tmp2) {
-        const r = tmp3.r;
-        r.setValue(tmp.r);
-        const g = tmp3.g;
-        g.setValue(tmp.g);
-        const b = tmp3.b;
-        b.setValue(tmp.b);
-        const a = tmp3.a;
-        a.setValue(tmp.a);
-        if (null != tmp3.nativeColor) {
-          tmp3.nativeColor = null;
+        const r = self.r;
+        r.setValue(nativeColor.r);
+        const g = self.g;
+        g.setValue(nativeColor.g);
+        const b = self.b;
+        b.setValue(nativeColor.b);
+        const a = self.a;
+        a.setValue(nativeColor.a);
+        if (null != self.nativeColor) {
+          self.nativeColor = null;
           c1 = true;
         }
-      } else if (tmp3.nativeColor !== tmp) {
-        tmp3.nativeColor = tmp;
+      } else if (self.nativeColor !== nativeColor) {
+        self.nativeColor = nativeColor;
         c1 = true;
       }
     });

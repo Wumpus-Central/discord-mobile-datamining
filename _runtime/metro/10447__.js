@@ -65,8 +65,8 @@ const items = [
       const parseDurationResult = ENTimeUnitAgoFormatParser(10431).parseDuration(arg1[1]);
       let relativeFromReference = null;
       if (parseDurationResult) {
-        const ParsingComponents = tmp(10435).ParsingComponents;
-        relativeFromReference = ParsingComponents.createRelativeFromReference(reference.reference, tmp(10434).reverseDuration(parseDurationResult));
+        const ParsingComponents = ENTimeUnitAgoFormatParser(10435).ParsingComponents;
+        relativeFromReference = ParsingComponents.createRelativeFromReference(reference.reference, ENTimeUnitAgoFormatParser(10434).reverseDuration(parseDurationResult));
       }
       return relativeFromReference;
     }

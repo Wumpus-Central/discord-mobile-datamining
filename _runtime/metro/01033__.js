@@ -3,11 +3,13 @@
 // Module 1033
 import RN_GLOBAL_OBJ from "RN_GLOBAL_OBJ" /* 681 */;
 import _mod682 from "module_682" /* 682 */;
+import NativeModules from "NativeModules" /* 866 */;
 import _mod987 from "module_987" /* 987 */;
 import patchAppRegistryRunApplication from "patchAppRegistryRunApplication" /* 1018 */;
 import SEMANTIC_ATTRIBUTE_SENTRY_SOURCE from "SEMANTIC_ATTRIBUTE_SENTRY_SOURCE" /* 1022 */;
 import startIdleSpan from "startIdleSpan" /* 1025 */;
 import _mod1031 from "module_1031" /* 1031 */;
+import asyncExpiringMap from "asyncExpiringMap" /* 1034 */;
 
 require = arg1;
 const dependencyMap = arg6;
@@ -173,6 +175,7 @@ export const reactNavigationIntegration = () => {
       const obj11 = num(flag[2]);
     }
     timeout = setTimeout(_discardLatestTransaction, closure_0);
+    const obj8 = num(flag[2]);
   };
   updateLatestNavigationSpanWithCurrentRoute = function updateLatestNavigationSpanWithCurrentRoute() {
     let state1;
@@ -182,11 +185,11 @@ export const reactNavigationIntegration = () => {
       const currentRoute = obj.getCurrentRoute();
       if (currentRoute) {
         if (_undefined) {
-          const NATIVE = tmp(866).NATIVE;
-          const result = tmp(1034).addTimeToInitialDisplayFallback(_undefined.spanContext().spanId, NATIVE.getNewScreenTimeToDisplay());
+          const NATIVE = NativeModules.NATIVE;
+          const result = asyncExpiringMap.addTimeToInitialDisplayFallback(_undefined.spanContext().spanId, NATIVE.getNewScreenTimeToDisplay());
           if (tmp5) {
             if (tmp5.key === currentRoute.key) {
-              const debug4 = tmp(682).debug;
+              const debug4 = _mod682.debug;
               const _HermesInternal6 = HermesInternal;
               debug4.log("[" + ReactNavigation + "] Navigation state changed, but route is the same as previous.");
               if (typeof pushRecentRouteKey === "function") {
@@ -289,7 +292,7 @@ export const reactNavigationIntegration = () => {
             }
             const obj2 = { from: name3, to: name };
             obj1.data = obj2;
-            tmp45(682).addBreadcrumb(obj1);
+            _mod682.addBreadcrumb(obj1);
             if (null != reactNativeTracingIntegration) {
               reactNativeTracingIntegration.setCurrentRoute(name);
             }
@@ -299,7 +302,7 @@ export const reactNavigationIntegration = () => {
                 closure_13 = closure_13.slice(closure_13.length - 200);
               }
               merged = currentRoute;
-              if (tmp21) {
+              if (flag5) {
                 const _Object = Object;
                 const _Object2 = Object;
                 obj3 = { name };
@@ -309,24 +312,23 @@ export const reactNavigationIntegration = () => {
             } else {
               throw new TypeError("Trying to call a non-function");
             }
-            const tmp45Result = tmp45(682);
+            const tmp45Result = _mod682;
           } else {
             throw new TypeError("Trying to call a non-function");
           }
-          tmp21 = flag5;
-          const tmpResult = tmp(1034);
+          const tmpResult = asyncExpiringMap;
         } else {
-          const debug3 = tmp(682).debug;
+          const debug3 = _mod682.debug;
           const _HermesInternal3 = HermesInternal;
           debug3.log("[" + ReactNavigation + "] Navigation state changed, but navigation transaction was not started on dispatch.");
         }
       } else {
-        const debug2 = tmp(682).debug;
+        const debug2 = _mod682.debug;
         const _HermesInternal2 = HermesInternal;
         debug2.log("[" + ReactNavigation + "] Navigation state changed, but no route is rendered.");
       }
     } else {
-      const debug = tmp(682).debug;
+      const debug = _mod682.debug;
       const _HermesInternal = HermesInternal;
       debug.warn("" + ReactNavigation + " Missing navigation container ref. Route transactions will not be sent.");
     }
@@ -352,14 +354,14 @@ export const reactNavigationIntegration = () => {
   };
   obj = {
     name: flag2,
-    afterAllSetup(getIntegrationByName) {
+    afterAllSetup(client) {
       obj = _mod1031;
-      reactNativeTracingIntegration = obj.getReactNativeTracingIntegration(getIntegrationByName);
+      reactNativeTracingIntegration = obj.getReactNativeTracingIntegration(client);
       if (reactNativeTracingIntegration) {
         obj = { finalTimeout: reactNativeTracingIntegration.options.finalTimeoutMs, idleTimeout: reactNativeTracingIntegration.options.idleTimeoutMs };
       }
       if (!c12) {
-        const appRegistryIntegration = patchAppRegistryRunApplication.getAppRegistryIntegration(getIntegrationByName);
+        const appRegistryIntegration = patchAppRegistryRunApplication.getAppRegistryIntegration(client);
         if (!tmp6) {
           appRegistryIntegration.onRunApplication(() => {
             if (closure_1_12) {
@@ -380,7 +382,7 @@ export const reactNavigationIntegration = () => {
     },
     registerNavigationContainer(navigationContainerRef) {
       if (RN_GLOBAL_OBJ.RN_GLOBAL_OBJ.__sentry_rn_v5_registered) {
-        const debug = tmp(682).debug;
+        const debug = _mod682.debug;
         const _HermesInternal = HermesInternal;
         debug.log("" + ReactNavigation + " Instrumentation already exists, but registering again...");
       }
@@ -395,28 +397,28 @@ export const reactNavigationIntegration = () => {
         if (current) {
           current.addListener("__unsafe_action__", startIdleNavigationSpan);
           current.addListener("state", updateLatestNavigationSpanWithCurrentRoute);
-          tmp(681).RN_GLOBAL_OBJ.__sentry_rn_v5_registered = true;
+          RN_GLOBAL_OBJ.RN_GLOBAL_OBJ.__sentry_rn_v5_registered = true;
           if (!c12) {
             if (c8) {
-              tmp15();
+              updateLatestNavigationSpanWithCurrentRoute();
               c12 = true;
             } else {
-              const debug4 = tmp(682).debug;
+              const debug4 = _mod682.debug;
               const _HermesInternal4 = HermesInternal;
               debug4.log("" + ReactNavigation + " Navigation container registered, but integration has not been setup yet.");
             }
           }
-          tmp15 = updateLatestNavigationSpanWithCurrentRoute;
         } else {
-          const debug3 = tmp(682).debug;
+          const debug3 = _mod682.debug;
           const _HermesInternal3 = HermesInternal;
           debug3.warn("" + ReactNavigation + " Received invalid navigation container ref!");
         }
       } else {
-        const debug2 = tmp(682).debug;
+        const debug2 = _mod682.debug;
         const _HermesInternal2 = HermesInternal;
         debug2.log("" + ReactNavigation + " Navigation container ref is the same as the one already registered.");
       }
+      tmpResult = _mod682;
     },
     options: { routeChangeTimeoutMs: num, enableTimeToInitialDisplay: flag, ignoreEmptyBackNavigationTransactions: flag2, enableTimeToInitialDisplayForPreloadedRoutes: flag3, useDispatchedActionData: flag4, useFullPathsForNavigationRoutes: flag5 }
   };

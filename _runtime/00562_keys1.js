@@ -18,7 +18,7 @@ function createImpl(arg0) {
     const items = [store, tmp];
     const items1 = [store, tmp];
     const callback = noop.useCallback(() => closure_1(closure_0.getState()), items);
-    const syncExternalStore = noop.useSyncExternalStore(tmp2.subscribe, callback, noop.useCallback(() => closure_1(closure_0.getInitialState()), items1));
+    const syncExternalStore = noop.useSyncExternalStore(store.subscribe, callback, noop.useCallback(() => closure_1(closure_0.getInitialState()), items1));
     const debugValue = noop.useDebugValue(syncExternalStore);
     return syncExternalStore;
   }
@@ -28,7 +28,7 @@ function createImpl(arg0) {
 
 export const create = (arg0) => {
   if (arg0) {
-    if (typeof tmp === "function") {
+    if (typeof createImpl === "function") {
       store = store(561).createStore(arg0);
       function useBoundStore(arg0) {
         let tmp = arg0;
@@ -40,7 +40,7 @@ export const create = (arg0) => {
         const items = [store, tmp];
         const items1 = [store, tmp];
         const callback = noop.useCallback(() => closure_1(closure_0.getState()), items);
-        const syncExternalStore = noop.useSyncExternalStore(tmp2.subscribe, callback, noop.useCallback(() => closure_1(closure_0.getInitialState()), items1));
+        const syncExternalStore = noop.useSyncExternalStore(store.subscribe, callback, noop.useCallback(() => closure_1(closure_0.getInitialState()), items1));
         const debugValue = noop.useDebugValue(syncExternalStore);
         return syncExternalStore;
       }
@@ -52,7 +52,7 @@ export const create = (arg0) => {
       throw new TypeError("Trying to call a non-function");
     }
   } else {
-    tmp2 = tmp;
+    tmp2 = createImpl;
   }
   return tmp2;
 };

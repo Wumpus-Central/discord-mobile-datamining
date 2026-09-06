@@ -9,12 +9,11 @@ export default function _default() {
   const items = [...arguments];
   return useCallback((current) => {
     for (const item10007 of items) {
-      let tmp = item10007;
       if (item10007) {
-        if (typeof tmp === "function") {
-          let tmpResult = tmp(arg0);
+        if (typeof item10007 === "function") {
+          let tmpResult = item10007(arg0);
         } else {
-          tmp.current = arg0;
+          item10007.current = arg0;
         }
       }
       continue;

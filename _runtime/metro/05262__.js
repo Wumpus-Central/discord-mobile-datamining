@@ -34,9 +34,9 @@ export default {
     obj1.description = str;
     obj.Animation = obj1;
     sum = sum + c2;
-    let tmpResult = tmp(5230);
+    let tmpResult = _modDef5230;
     const byteAt1 = tmpResult.getByteAt(getUint8, sum);
-    tmpResult = tmp(5230);
+    tmpResult = _modDef5230;
     const sum1 = byteAt1 + 256 * tmpResult.getByteAt(getUint8, sum + 1);
     const sum2 = sum1 + 65536 * _modDef5230.getByteAt(getUint8, sum + 2) + 1;
     obj.ImageWidth = { value: sum2, description: `${tmp9}px` };

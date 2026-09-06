@@ -24,10 +24,10 @@ export default function _default(children) {
     if (1 >= sum) {
       let addListener;
       if (closure_1_4 != null) {
-        addListener = obj.addListener;
+        addListener = closure_1_4.addListener;
       }
       if (null != addListener) {
-        const metrics = obj.metrics;
+        const metrics = closure_1_4.metrics;
         let height;
         if (metrics != null) {
           const metricsResult = metrics();
@@ -53,9 +53,9 @@ export default function _default(children) {
         }
         closure_9 = tmp5;
         items = [
-          obj.addListener("keyboardDidShow", setVisible),
-          obj.addListener("keyboardWillShow", setVisible),
-          obj.addListener("keyboardDidHide", () => {
+          closure_1_4.addListener("keyboardDidShow", setVisible),
+          closure_1_4.addListener("keyboardWillShow", setVisible),
+          closure_1_4.addListener("keyboardDidHide", () => {
                 c9 = false;
               })
         ];
@@ -106,7 +106,7 @@ export default function _default(children) {
     }
     isRNGHResponderEvent.current = false;
     return current;
-  }, items1)} pointerEvents="box-none" style={logicalResponder.logicalResponder}>{arg0.children}</closure_5>;
+  }, items1)} pointerEvents="box-none" style={logicalResponder.logicalResponder}>{children.children}</closure_5>;
   return <context collapsable={false} onStartShouldSetResponderCapture={keyboardShouldPersistTaps(() => {
     closure_1.current = false;
     return false;
@@ -117,7 +117,7 @@ export default function _default(children) {
     }
     isRNGHResponderEvent.current = false;
     return current;
-  }, items1)} pointerEvents="box-none" style={logicalResponder.logicalResponder}>{arg0.children}</context>;
+  }, items1)} pointerEvents="box-none" style={logicalResponder.logicalResponder}>{children.children}</context>;
 };
 export const JSResponderContext = context;
 export const updateResponderEventValue = function updateResponderEventValue(isRNGHResponderEvent, current) {

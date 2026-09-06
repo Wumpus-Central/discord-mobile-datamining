@@ -2,6 +2,7 @@
 
 // Module 12805
 import _mod12798 from "module_12798" /* 12798 */;
+import _mod12804 from "module_12804" /* 12804 */;
 
 require = arg1;
 const dependencyMap = arg6;
@@ -21,7 +22,7 @@ function _htmlElementAsString(tagName, arr) {
           }
         }
       }
-      items.push(tagName.tagName.toLowerCase());
+      arr = items.push(tagName.tagName.toLowerCase());
       let mapped = null;
       if (arr) {
         mapped = null;
@@ -70,9 +71,8 @@ function _htmlElementAsString(tagName, arr) {
             continue;
           }
         }
-        tmpResult = tmp(12804);
+        tmpResult = _mod12804;
       }
-      tmp = require;
     }
   }
   return "";
@@ -108,8 +108,8 @@ export const getDomElement = function getDomElement(arg0) {
   let element = null;
   if (_mod12798.GLOBAL_OBJ.document) {
     element = null;
-    if (tmp(12798).GLOBAL_OBJ.document.querySelector) {
-      const _document = tmp(12798).GLOBAL_OBJ.document;
+    if (_mod12798.GLOBAL_OBJ.document.querySelector) {
+      const _document = _mod12798.GLOBAL_OBJ.document;
       element = _document.querySelector(arg0);
     }
   }
@@ -170,7 +170,7 @@ export const htmlTreeAsString = function htmlTreeAsString(arg0) {
                   } else {
                     if (sum <= 1) {
                       continue;
-                    } else if (num2 + 3 * items.length + arr2.length >= tmp5) {
+                    } else if (num2 + 3 * items.length + arr2.length >= num3) {
                       break;
                     }
                     continue;

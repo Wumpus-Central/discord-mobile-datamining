@@ -5,20 +5,20 @@ function nativeTypeMatches(arg0, arg1) {
 
 }
 
-export const safeValidate = (arr, nativeType) => {
+export const safeValidate = (type, nativeType) => {
   nativeType = nativeType.nativeType;
-  return arr.some((item) => {
+  return type.some((item) => {
     if (typeof nativeTypeMatches === "function") {
       let flag = true;
-      if (item !== obj) {
+      if (item !== nativeType) {
         flag = true;
         if ("*/*" !== item) {
           flag = false;
-          if (null !== obj) {
+          if (null !== nativeType) {
             flag = false;
             if (item.endsWith("/*")) {
               flag = false;
-              if (obj.startsWith(item.slice(0, -2))) {
+              if (nativeType.startsWith(item.slice(0, -2))) {
                 flag = true;
               }
             }

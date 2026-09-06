@@ -11,10 +11,10 @@ if (_moduleResult) {
 }
 let c2 = _moduleResult;
 
-export default (arg0) => {
+export default (div) => {
   if (_moduleResult) {
     const _document = _mod14297.document;
-    let element = _document.createElement(arg0);
+    let element = <div />;
   } else {
     element = {};
   }

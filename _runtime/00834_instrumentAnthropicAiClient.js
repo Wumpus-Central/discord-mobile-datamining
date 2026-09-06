@@ -3,10 +3,10 @@
 // Module 834 (instrumentAnthropicAiClient)
 import SPAN_STATUS_ERROR from "SPAN_STATUS_ERROR" /* 705 */;
 import captureCheckIn from "captureCheckIn" /* 734 */;
+import ANTHROPIC_AI_RESPONSE_TIMESTAMP_ATTRIBUTE from "ANTHROPIC_AI_RESPONSE_TIMESTAMP_ATTRIBUTE" /* 823 */;
 import messagesFromParams from "messagesFromParams" /* 835 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
-const ANTHROPIC_AI_RESPONSE_TIMESTAMP_ATTRIBUTE = tmp(823);
 function addPrivateRequestAttributes(setAttributes, prompt) {
   let obj = messagesFromParams;
   const messagesFromParamsResult = obj.messagesFromParams(prompt);
@@ -18,17 +18,17 @@ function addPrivateRequestAttributes(setAttributes, prompt) {
     setAttributes.setAttributes(obj);
   }
 }
-function handleStreamingError(arg0, isRecording, function) {
+function handleStreamingError(error, isRecording, function) {
   let obj = { mechanism: null };
   obj = { handled: false, type: "auto.ai.anthropic", data: { function: _function } };
   obj.mechanism = obj;
-  obj.captureException(arg0, obj);
+  obj.captureException(error, obj);
   if (isRecording.isRecording()) {
     const obj2 = { code: SPAN_STATUS_ERROR.SPAN_STATUS_ERROR, message: "internal_error" };
     isRecording.setStatus(obj2);
     isRecording.end();
   }
-  throw arg0;
+  throw error;
 }
 Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
 
@@ -54,18 +54,17 @@ export const instrumentAnthropicAiClient = function instrumentAnthropicAiClient(
           closure_3 = closure_1_1;
           let _Proxy2 = Proxy;
           obj = {
-            apply(arr, arg1, arg2) {
+            apply(arr, arg1, dependencyMap) {
                   closure_0 = arr;
-                  dependencyMap = arg2;
                   let obj = { [closure_1_0(closure_1_1[1]).GEN_AI_SYSTEM_ATTRIBUTE]: "anthropic" };
                   let tmp2 = str;
                   let startSpanManual = dependencyMap;
                   obj[str(dependencyMap[1]).GEN_AI_OPERATION_NAME_ATTRIBUTE] = str(dependencyMap[2]).getFinalOperationName(dependencyMap);
                   obj[str(dependencyMap[3]).SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN] = "auto.ai.anthropic";
-                  if (arg2.length > 0) {
-                    if (typeof arg2[0] === "object") {
-                      if (null !== arg2[0]) {
-                        const first = arg2[0];
+                  if (dependencyMap.length > 0) {
+                    if (typeof dependencyMap[0] === "object") {
+                      if (null !== dependencyMap[0]) {
+                        const first = dependencyMap[0];
                         let tools = first.tools;
                         if (tools) {
                           let _Array = Array;
@@ -106,8 +105,8 @@ export const instrumentAnthropicAiClient = function instrumentAnthropicAiClient(
                       let tmp2Result = tmp2(startSpanManual[2]);
                       const finalOperationName = tmp2Result.getFinalOperationName(tmp);
                       let first1;
-                      if (typeof arg2[0] === "object") {
-                        first1 = arg2[0];
+                      if (typeof dependencyMap[0] === "object") {
+                        first1 = dependencyMap[0];
                       }
                       _self = first1;
                       let stream;
@@ -126,15 +125,13 @@ export const instrumentAnthropicAiClient = function instrumentAnthropicAiClient(
                           return tmp2Result.startSpan(obj, (setAttributes) => {
                             if (tmp) {
                               let obj = str(_function[4]);
-                              const messagesFromParamsResult = obj.messagesFromParams(closure_2);
-                              const tmp2 = closure_2;
+                              const messagesFromParamsResult = obj.messagesFromParams(_prompt);
                               let tmp3 = str;
-                              const tmp4 = _function;
                               str(_function[4]).setMessagesAttribute(setAttributes, messagesFromParamsResult);
-                              if ("prompt" in closure_2) {
+                              if ("prompt" in _prompt) {
                                 obj = {};
                                 let _JSON = JSON;
-                                obj[tmp3(tmp4[1]).GEN_AI_PROMPT_ATTRIBUTE] = JSON.stringify(tmp2.prompt);
+                                obj[tmp3(_function[1]).GEN_AI_PROMPT_ATTRIBUTE] = JSON.stringify(_prompt.prompt);
                                 setAttributes.setAttributes(obj);
                               }
                               const obj2 = str(_function[4]);
@@ -175,18 +172,18 @@ export const instrumentAnthropicAiClient = function instrumentAnthropicAiClient(
                                     obj = {};
                                     const _Date = Date;
                                     const date = new Date(1000 * type.created);
-                                    obj[tmp4(tmp5[1]).ANTHROPIC_AI_RESPONSE_TIMESTAMP_ATTRIBUTE] = date.toISOString();
+                                    obj[closure_4_0(closure_4_1[1]).ANTHROPIC_AI_RESPONSE_TIMESTAMP_ATTRIBUTE] = date.toISOString();
                                     obj.setAttributes(obj);
                                   }
                                   if (tmp13) {
                                     let obj1 = {};
                                     const _Date2 = Date;
                                     const date1 = new Date(1000 * type.created_at);
-                                    obj1[tmp4(tmp5[1]).ANTHROPIC_AI_RESPONSE_TIMESTAMP_ATTRIBUTE] = date1.toISOString();
+                                    obj1[closure_4_0(closure_4_1[1]).ANTHROPIC_AI_RESPONSE_TIMESTAMP_ATTRIBUTE] = date1.toISOString();
                                     obj.setAttributes(obj1);
                                   }
                                   if (tmp19) {
-                                    const tmp4Result = tmp4(tmp5[2]);
+                                    const tmp4Result = closure_4_0(closure_4_1[2]);
                                     const result = tmp4Result.setTokenUsageAttributes(obj, type.usage.input_tokens, type.usage.output_tokens, type.usage.cache_creation_input_tokens, type.usage.cache_read_input_tokens);
                                   }
                                   tmp13 = "created_at" in type && typeof type.created_at === "number";
@@ -199,9 +196,8 @@ export const instrumentAnthropicAiClient = function instrumentAnthropicAiClient(
                         }
                       }
                       dependencyMap = arr;
-                      closure_3 = arg2;
                       closure_4 = tmp;
-                      let recordInputs = closure_3;
+                      let recordInputs = dependencyMap;
                       let str14 = obj[tmp2(undefined, startSpanManual[1]).GEN_AI_REQUEST_MODEL_ATTRIBUTE];
                       if (str14 == null) {
                         str14 = "unknown";
@@ -213,7 +209,7 @@ export const instrumentAnthropicAiClient = function instrumentAnthropicAiClient(
                       obj.attributes = obj;
                       if (BooleanResult) {
                         if (!tmp12) {
-                          closure_0 = _self(function*(arg0, value) {
+                          closure_0 = _self(function*(arg0) {
                             if (c7 === 2) {
                               c7 = 3;
                               throw new TypeError("Generator functions may not be called on executing generators");
@@ -312,9 +308,9 @@ export const instrumentAnthropicAiClient = function instrumentAnthropicAiClient(
                             recordInputs = first1;
                           }
                           if (recordInputs) {
-                            closure_3(arg0, first1);
+                            dependencyMap(arg0, first1);
                           }
-                          const applyResult = closure_1.apply(closure_2, closure_3);
+                          const applyResult = closure_1.apply(closure_2, dependencyMap);
                           const tmp2 = recordInputs;
                           let flag = tmp2.recordOutputs;
                           if (flag == null) {
@@ -329,7 +325,7 @@ export const instrumentAnthropicAiClient = function instrumentAnthropicAiClient(
                     }
                   }
                   if ("models.retrieve" === dependencyMap) {
-                    str = arg2[0];
+                    str = dependencyMap[0];
                   } else {
                     str = "unknown";
                   }
@@ -347,9 +343,6 @@ export const instrumentAnthropicAiClient = function instrumentAnthropicAiClient(
         if (obj) {
           proxy = obj;
           if (typeof obj === "object") {
-            if (methodPath === undefined) {
-              str = "";
-            }
             dependencyMap = closure_1_1;
             let _Proxy = Proxy;
             obj = {
@@ -363,18 +356,17 @@ export const instrumentAnthropicAiClient = function instrumentAnthropicAiClient(
                           closure_3 = closure_1_1;
                           let _Proxy2 = Proxy;
                           obj = {
-                            apply(arr, arg1, arg2) {
+                            apply(arr, arg1, dependencyMap) {
                                   closure_0 = arr;
-                                  dependencyMap = arg2;
                                   let obj = { [closure_1_0(closure_1_1[1]).GEN_AI_SYSTEM_ATTRIBUTE]: "anthropic" };
                                   let tmp2 = str;
                                   let startSpanManual = dependencyMap;
                                   obj[str(dependencyMap[1]).GEN_AI_OPERATION_NAME_ATTRIBUTE] = str(dependencyMap[2]).getFinalOperationName(dependencyMap);
                                   obj[str(dependencyMap[3]).SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN] = "auto.ai.anthropic";
-                                  if (arg2.length > 0) {
-                                    if (typeof arg2[0] === "object") {
-                                      if (null !== arg2[0]) {
-                                        const first = arg2[0];
+                                  if (dependencyMap.length > 0) {
+                                    if (typeof dependencyMap[0] === "object") {
+                                      if (null !== dependencyMap[0]) {
+                                        const first = dependencyMap[0];
                                         let tools = first.tools;
                                         if (tools) {
                                           let _Array = Array;
@@ -415,8 +407,8 @@ export const instrumentAnthropicAiClient = function instrumentAnthropicAiClient(
                                       let tmp2Result = tmp2(startSpanManual[2]);
                                       const finalOperationName = tmp2Result.getFinalOperationName(tmp);
                                       let first1;
-                                      if (typeof arg2[0] === "object") {
-                                        first1 = arg2[0];
+                                      if (typeof dependencyMap[0] === "object") {
+                                        first1 = dependencyMap[0];
                                       }
                                       _self = first1;
                                       let stream;
@@ -435,15 +427,13 @@ export const instrumentAnthropicAiClient = function instrumentAnthropicAiClient(
                                           return tmp2Result.startSpan(obj, (setAttributes) => {
                                             if (tmp) {
                                               let obj = str(_function[4]);
-                                              const messagesFromParamsResult = obj.messagesFromParams(closure_2);
-                                              const tmp2 = closure_2;
+                                              const messagesFromParamsResult = obj.messagesFromParams(_prompt);
                                               let tmp3 = str;
-                                              const tmp4 = _function;
                                               str(_function[4]).setMessagesAttribute(setAttributes, messagesFromParamsResult);
-                                              if ("prompt" in closure_2) {
+                                              if ("prompt" in _prompt) {
                                                 obj = {};
                                                 let _JSON = JSON;
-                                                obj[tmp3(tmp4[1]).GEN_AI_PROMPT_ATTRIBUTE] = JSON.stringify(tmp2.prompt);
+                                                obj[tmp3(_function[1]).GEN_AI_PROMPT_ATTRIBUTE] = JSON.stringify(_prompt.prompt);
                                                 setAttributes.setAttributes(obj);
                                               }
                                               const obj2 = str(_function[4]);
@@ -453,9 +443,8 @@ export const instrumentAnthropicAiClient = function instrumentAnthropicAiClient(
                                         }
                                       }
                                       dependencyMap = arr;
-                                      closure_3 = arg2;
                                       closure_4 = tmp;
-                                      let recordInputs = closure_3;
+                                      let recordInputs = dependencyMap;
                                       let str14 = obj[tmp2(undefined, startSpanManual[1]).GEN_AI_REQUEST_MODEL_ATTRIBUTE];
                                       if (str14 == null) {
                                         str14 = "unknown";
@@ -467,7 +456,7 @@ export const instrumentAnthropicAiClient = function instrumentAnthropicAiClient(
                                       obj.attributes = obj;
                                       if (BooleanResult) {
                                         if (!tmp12) {
-                                          closure_0 = _self(function*(arg0, value) {
+                                          closure_0 = _self(function*(arg0) {
                                             if (c7 === 2) {
                                               c7 = 3;
                                               throw new TypeError("Generator functions may not be called on executing generators");
@@ -566,9 +555,9 @@ export const instrumentAnthropicAiClient = function instrumentAnthropicAiClient(
                                             recordInputs = first1;
                                           }
                                           if (recordInputs) {
-                                            closure_3(arg0, first1);
+                                            dependencyMap(arg0, first1);
                                           }
-                                          const applyResult = closure_1.apply(closure_2, closure_3);
+                                          const applyResult = closure_1.apply(closure_2, dependencyMap);
                                           const tmp2 = recordInputs;
                                           let flag = tmp2.recordOutputs;
                                           if (flag == null) {
@@ -583,7 +572,7 @@ export const instrumentAnthropicAiClient = function instrumentAnthropicAiClient(
                                     }
                                   }
                                   if ("models.retrieve" === dependencyMap) {
-                                    str = arg2[0];
+                                    str = dependencyMap[0];
                                   } else {
                                     str = "unknown";
                                   }
@@ -601,9 +590,6 @@ export const instrumentAnthropicAiClient = function instrumentAnthropicAiClient(
                         if (obj) {
                           proxy = obj;
                           if (typeof obj === "object") {
-                            if (methodPath === undefined) {
-                              str = "";
-                            }
                             dependencyMap = closure_1_1;
                             let _Proxy = Proxy;
                             obj = {
@@ -617,18 +603,17 @@ export const instrumentAnthropicAiClient = function instrumentAnthropicAiClient(
                                           closure_3 = closure_1_1;
                                           let _Proxy2 = Proxy;
                                           obj = {
-                                            apply(arr, arg1, arg2) {
+                                            apply(arr, arg1, dependencyMap) {
                                                   closure_0 = arr;
-                                                  dependencyMap = arg2;
                                                   let obj = { [closure_1_0(closure_1_1[1]).GEN_AI_SYSTEM_ATTRIBUTE]: "anthropic" };
                                                   let tmp2 = str;
                                                   let startSpanManual = dependencyMap;
                                                   obj[str(dependencyMap[1]).GEN_AI_OPERATION_NAME_ATTRIBUTE] = str(dependencyMap[2]).getFinalOperationName(dependencyMap);
                                                   obj[str(dependencyMap[3]).SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN] = "auto.ai.anthropic";
-                                                  if (arg2.length > 0) {
-                                                    if (typeof arg2[0] === "object") {
-                                                      if (null !== arg2[0]) {
-                                                        const first = arg2[0];
+                                                  if (dependencyMap.length > 0) {
+                                                    if (typeof dependencyMap[0] === "object") {
+                                                      if (null !== dependencyMap[0]) {
+                                                        const first = dependencyMap[0];
                                                         let tools = first.tools;
                                                         if (tools) {
                                                           let _Array = Array;
@@ -669,8 +654,8 @@ export const instrumentAnthropicAiClient = function instrumentAnthropicAiClient(
                                                       let tmp2Result = tmp2(startSpanManual[2]);
                                                       const finalOperationName = tmp2Result.getFinalOperationName(tmp);
                                                       let first1;
-                                                      if (typeof arg2[0] === "object") {
-                                                        first1 = arg2[0];
+                                                      if (typeof dependencyMap[0] === "object") {
+                                                        first1 = dependencyMap[0];
                                                       }
                                                       _self = first1;
                                                       let stream;
@@ -690,9 +675,8 @@ export const instrumentAnthropicAiClient = function instrumentAnthropicAiClient(
                                                         }
                                                       }
                                                       dependencyMap = arr;
-                                                      closure_3 = arg2;
                                                       closure_4 = tmp;
-                                                      let recordInputs = closure_3;
+                                                      let recordInputs = dependencyMap;
                                                       let str14 = obj[tmp2(undefined, startSpanManual[1]).GEN_AI_REQUEST_MODEL_ATTRIBUTE];
                                                       if (str14 == null) {
                                                         str14 = "unknown";
@@ -716,7 +700,7 @@ export const instrumentAnthropicAiClient = function instrumentAnthropicAiClient(
                                                     }
                                                   }
                                                   if ("models.retrieve" === dependencyMap) {
-                                                    str = arg2[0];
+                                                    str = dependencyMap[0];
                                                   } else {
                                                     str = "unknown";
                                                   }
@@ -734,9 +718,6 @@ export const instrumentAnthropicAiClient = function instrumentAnthropicAiClient(
                                         if (obj) {
                                           proxy = obj;
                                           if (typeof obj === "object") {
-                                            if (methodPath === undefined) {
-                                              str = "";
-                                            }
                                             dependencyMap = closure_1_1;
                                             let _Proxy = Proxy;
                                             obj = {
@@ -761,9 +742,6 @@ export const instrumentAnthropicAiClient = function instrumentAnthropicAiClient(
                                                         if (obj) {
                                                           proxy = obj;
                                                           if (typeof obj === "object") {
-                                                            if (methodPath === undefined) {
-                                                              str = "";
-                                                            }
                                                             dependencyMap = closure_1_1;
                                                             let _Proxy = Proxy;
                                                             obj = { get() { ... } };
@@ -771,24 +749,28 @@ export const instrumentAnthropicAiClient = function instrumentAnthropicAiClient(
                                                           }
                                                         }
                                                       }
+                                                      let obj2 = closure_2_0(closure_2_1[2]);
                                                     }
                                             };
                                             proxy = new Proxy(obj, obj);
                                           }
                                         }
                                       }
+                                      let obj2 = closure_2_0(closure_2_1[2]);
                                     }
                             };
                             proxy = new Proxy(obj, obj);
                           }
                         }
                       }
+                      let obj2 = closure_2_0(closure_2_1[2]);
                     }
             };
             proxy = new Proxy(obj, obj);
           }
         }
       }
+      let obj2 = closure_2_0(closure_2_1[2]);
     }
   };
   const proxy = new Proxy(arg0, obj);

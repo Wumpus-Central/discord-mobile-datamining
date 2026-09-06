@@ -78,17 +78,16 @@ function findMatchingDistanceForLSR(arg0, arg1, matchVariables) {
   const nextResult = iter.next();
   while (iter !== undefined) {
     let tmp2 = nextResult;
-    let tmp3 = isMatched;
     let tmp3Result = isMatched(arg0, nextResult.desired, matchVariables.matchVariables);
     if (tmp3Result) {
-      tmp3Result = tmp3(arg1, tmp2.supported, matchVariables.matchVariables);
+      tmp3Result = isMatched(arg1, tmp2.supported, matchVariables.matchVariables);
     }
     let tmp6 = tmp3Result;
     let tmp8 = tmp2.oneway || tmp6;
     if (!tmp8) {
-      tmp3Result = tmp3(arg0, tmp2.supported, matchVariables.matchVariables);
+      tmp3Result = isMatched(arg0, tmp2.supported, matchVariables.matchVariables);
       if (tmp3Result) {
-        tmp3Result = tmp3(arg1, tmp2.desired, matchVariables.matchVariables);
+        tmp3Result = isMatched(arg1, tmp2.desired, matchVariables.matchVariables);
       }
       tmp6 = tmp3Result;
     }
@@ -246,8 +245,8 @@ function BestFitMatcher(arr2, arr, fn) {
           obj.distances[item][item[index]] = sum;
           if (sum < Infinity) {
             Infinity = sum;
-            tmp4.matchedDesiredLocale = item;
-            tmp4.matchedSupportedLocale = tmp;
+            obj.matchedDesiredLocale = item;
+            obj.matchedSupportedLocale = tmp;
           }
         });
       });
@@ -260,7 +259,6 @@ function BestFitMatcher(arr2, arr, fn) {
   })(items, arr2);
   let prop;
   if (tmp3) {
-    arr2 = reduced[tmp2.matchedDesiredLocale];
     let tmp6 = reduced[tmp2.matchedDesiredLocale].slice(tmp2.matchedDesiredLocale.length) || undefined;
     prop = tmp2.matchedSupportedLocale;
     const tmp4 = reduced[tmp2.matchedDesiredLocale].slice(tmp2.matchedDesiredLocale.length) || undefined;
@@ -509,9 +507,9 @@ let closure_9 = monadic.memoize(function findMatchingDistanceImpl(arg0, arg1) {
 const weakMap = new WeakMap();
 const weakMap1 = new WeakMap();
 
-export const LookupSupportedLocales = function LookupSupportedLocales(arg0, arg1) {
+export const LookupSupportedLocales = function LookupSupportedLocales(arg0, canonicalLocales) {
   const items = [];
-  const iter = arg1[Symbol.iterator]();
+  const iter = canonicalLocales[Symbol.iterator]();
   while (iter !== undefined) {
     let tmp3 = BestAvailableLocale(arg0, str.replace(re3, ""));
     if (tmp3) {

@@ -13,7 +13,7 @@ import _mod10508 from "module_10508" /* 10508 */;
 import _mod10509 from "module_10509" /* 10509 */;
 import _mod10510 from "module_10510" /* 10510 */;
 
-function createConfiguration(flag) {
+function createConfiguration() {
   if (flag === undefined) {
     flag = true;
   }

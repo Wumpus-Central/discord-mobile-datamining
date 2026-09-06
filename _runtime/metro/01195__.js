@@ -132,11 +132,11 @@ const items1 = [
     value: function toBigInt() {
       if (obj) {
         const self = this;
-        const V = tmp.V;
+        const V = obj.V;
         V.setInt32(0, this.lo, true);
-        const V2 = tmp.V;
+        const V2 = obj.V;
         V2.setInt32(4, this.hi, true);
-        const V3 = tmp.V;
+        const V3 = obj.V;
         return V3.getBigUint64(0, true);
       } else {
         const _Error = Error;
@@ -159,7 +159,7 @@ const entry2 = {
           const error = new Error("string is no integer");
           throw error;
         } else {
-          let CResult = obj.C(trimmed);
+          let CResult = closure_7.C(trimmed);
         }
       } else {
         CResult = trimmed;
@@ -167,18 +167,18 @@ const entry2 = {
           let CResult1 = trimmed;
         }
         if (CResult1) {
-          if (CResult1 < obj.UMIN) {
+          if (CResult1 < closure_7.UMIN) {
             const _Error6 = Error;
             const error1 = new Error("signed value for ulong");
             throw error1;
-          } else if (CResult1 > obj.UMAX) {
+          } else if (CResult1 > closure_7.UMAX) {
             const _Error5 = Error;
             const error2 = new Error("ulong too large");
             throw error2;
           } else {
-            const V = obj.V;
+            const V = closure_7.V;
             V.setBigUint64(0, CResult1, true);
-            ({ V: V2, V: V3 } = obj);
+            ({ V: V2, V: V3 } = closure_7);
             const int32 = V2.getInt32(0, true);
             const int321 = V3.getInt32(4, true);
             const tmp42 = PbLong(int32, int321);
@@ -191,7 +191,7 @@ const entry2 = {
       if (0 === CResult) {
         return self.ZERO;
       } else {
-        CResult1 = obj.C(CResult);
+        CResult1 = closure_7.C(CResult);
       }
     } else if ("string" === tmp) {
       if ("0" == trimmed) {
@@ -307,11 +307,11 @@ const items3 = [
     value: function toBigInt() {
       if (obj) {
         const self = this;
-        const V = tmp.V;
+        const V = obj.V;
         V.setInt32(0, this.lo, true);
-        const V2 = tmp.V;
+        const V2 = obj.V;
         V2.setInt32(4, this.hi, true);
-        const V3 = tmp.V;
+        const V3 = obj.V;
         return V3.getBigInt64(0, true);
       } else {
         const _Error = Error;
@@ -334,7 +334,7 @@ const entry4 = {
           const error = new Error("string is no integer");
           throw error;
         } else {
-          let CResult = obj.C(trimmed);
+          let CResult = closure_7.C(trimmed);
         }
       } else {
         CResult = trimmed;
@@ -342,18 +342,18 @@ const entry4 = {
           let CResult1 = trimmed;
         }
         if (CResult1) {
-          if (CResult1 < obj.MIN) {
+          if (CResult1 < closure_7.MIN) {
             const _Error4 = Error;
             const error1 = new Error("ulong too small");
             throw error1;
-          } else if (CResult1 > obj.MAX) {
+          } else if (CResult1 > closure_7.MAX) {
             const _Error3 = Error;
             const error2 = new Error("ulong too large");
             throw error2;
           } else {
-            const V = obj.V;
+            const V = closure_7.V;
             V.setBigInt64(0, CResult1, true);
-            ({ V: V2, V: V3 } = obj);
+            ({ V: V2, V: V3 } = closure_7);
             const int32 = V2.getInt32(0, true);
             const int321 = V3.getInt32(4, true);
             const tmp37 = PbLong(int32, int321);
@@ -366,7 +366,7 @@ const entry4 = {
       if (0 === CResult) {
         return self.ZERO;
       } else {
-        CResult1 = obj.C(CResult);
+        CResult1 = closure_7.C(CResult);
       }
     } else if ("string" === tmp) {
       if ("0" == trimmed) {

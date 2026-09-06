@@ -34,10 +34,10 @@ const items = [
               parsingComponents.assign("month", parsed);
               if (arg1[1]) {
                 const _parseInt = parseInt;
-                const parsed2 = parseInt(tmp(10502).toHankaku(arg1[1]));
-                parsingComponents.assign("year", tmp(10433).findMostLikelyADYear(parsed2));
+                const parsed2 = parseInt(JPSlashDateFormatParser(10502).toHankaku(arg1[1]));
+                parsingComponents.assign("year", JPSlashDateFormatParser(10433).findMostLikelyADYear(parsed2));
               } else {
-                parsingComponents.imply("year", tmp(10433).findYearClosestToRef(createParsingComponents.reference.instant, parsed1, parsed));
+                parsingComponents.imply("year", JPSlashDateFormatParser(10433).findYearClosestToRef(createParsingComponents.reference.instant, parsed1, parsed));
               }
               return parsingComponents;
             }

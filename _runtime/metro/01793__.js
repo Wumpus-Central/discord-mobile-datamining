@@ -17,12 +17,12 @@ export const useComposedEventHandler = function useComposedEventHandler(tmp8Resu
       const item = eventNames.forEach((item) => {
         set.add(item);
         if (obj[item]) {
-          tmp2[item].push(workletEventHandler.worklet);
+          obj[item].push(workletEventHandler.worklet);
           let tmp3 = workletEventHandler;
         } else {
           tmp3 = workletEventHandler;
           const items = [workletEventHandler.worklet];
-          tmp2[item] = items;
+          obj[item] = items;
         }
         obj[item + "" + obj[item].length] = tmp3.worklet;
       });

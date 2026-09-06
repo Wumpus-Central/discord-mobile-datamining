@@ -6,9 +6,9 @@ import _mod12844 from "module_12844" /* 12844 */;
 require = arg1;
 const dependencyMap = arg6;
 
-export const getEnvelopeEndpointWithUrlEncodedAuth = function getEnvelopeEndpointWithUrlEncodedAuth(protocol, arg1, name) {
-  let combined1 = arg1;
-  if (!arg1) {
+export const getEnvelopeEndpointWithUrlEncodedAuth = function getEnvelopeEndpointWithUrlEncodedAuth(protocol, tunnel, name) {
+  let combined1 = tunnel;
+  if (!tunnel) {
     let str2 = "";
     if (protocol.protocol) {
       const _HermesInternal = HermesInternal;
@@ -43,8 +43,8 @@ export const getEnvelopeEndpointWithUrlEncodedAuth = function getEnvelopeEndpoin
   }
   return combined1;
 };
-export const getReportDialogEndpoint = function getReportDialogEndpoint(arg0, user) {
-  const url = _mod12844.makeDsn(arg0);
+export const getReportDialogEndpoint = function getReportDialogEndpoint(protocol, user) {
+  const url = _mod12844.makeDsn(protocol);
   if (url) {
     let str = "";
     if (url.protocol) {

@@ -9,10 +9,12 @@ const dependencyMap = arg6;
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 
 export const createMetricContainerEnvelopeItem = function createMetricContainerEnvelopeItem(items) {
-  items = [{ type: "trace_metric", item_count: items.length, content_type: "application/vnd.sentry.items.trace-metric+json" }, { items }];
+  items = [, ];
+  items[0] = { type: "trace_metric", item_count: items.length, content_type: "application/vnd.sentry.items.trace-metric+json" };
+  items[1] = { items };
   return items;
 };
-export const createMetricEnvelope = function createMetricEnvelope(items, sdk, arg2, arg3) {
+export const createMetricEnvelope = function createMetricEnvelope(items, sdk, tunnel, dsn) {
   sdk = undefined;
   if (sdk != null) {
     sdk = sdk.sdk;
@@ -22,15 +24,16 @@ export const createMetricEnvelope = function createMetricEnvelope(items, sdk, ar
     obj = { name: sdk.sdk.name, version: sdk.sdk.version };
     obj.sdk = obj;
   }
-  let tmp2 = arg2;
-  if (arg2) {
-    tmp2 = arg3;
+  let tmp2 = tunnel;
+  if (tunnel) {
+    tmp2 = dsn;
   }
   if (tmp2) {
-    obj.dsn = _mod702.dsnToString(arg3);
+    obj.dsn = _mod702.dsnToString(dsn);
   }
   obj = { type: "trace_metric", item_count: items.length, content_type: "application/vnd.sentry.items.trace-metric+json" };
-  items = [obj, { items }];
+  items = [obj, ];
+  items[1] = { items };
   const items1 = [items];
   return forEachEnvelopeItem.createEnvelope(obj, items1);
 };

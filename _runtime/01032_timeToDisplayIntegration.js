@@ -136,10 +136,10 @@ export () => {
           measurements = {};
         }
         v0.measurements = measurements;
-        closure_128_5 = yield (function addTimeToInitialDisplay(arg0) {
+        yield (function addTimeToInitialDisplay(arg0) {
           ({ event: closure_0, rootSpanId: closure_1, transactionStartTimestampSeconds: closure_2, enableTimeToInitialDisplayForPreloadedRoutes: closure_3 } = arg0);
           c4 = undefined;
-          return closure_2(undefined, undefined, undefined, function*(arg0, value) {
+          return closure_2(undefined, undefined, undefined, function*() {
             if (c3 === 2) {
               c3 = 3;
               throw new TypeError("Generator functions may not be called on executing generators");
@@ -247,10 +247,11 @@ export () => {
             }
           });
         })({ event: v0, rootSpanId: span_id, transactionStartTimestampSeconds: start_timestamp, enableTimeToInitialDisplayForPreloadedRoutes: v0 });
-        closure_128_6 = yield (function addTimeToFullDisplay(arg0) {
+        closure_128_5 = value;
+        yield (function addTimeToFullDisplay(arg0) {
           ({ event: closure_0, rootSpanId: closure_1, transactionStartTimestampSeconds: closure_2, ttidSpan: closure_3 } = arg0);
           c4 = undefined;
-          return closure_2(undefined, undefined, undefined, function*(arg0, value) {
+          return closure_2(undefined, undefined, undefined, function*() {
             if (c3 === 2) {
               c3 = 3;
               throw new TypeError("Generator functions may not be called on executing generators");
@@ -367,6 +368,7 @@ export () => {
             }
           });
         })({ event: closure_129_0, rootSpanId: closure_128_3, transactionStartTimestampSeconds: closure_128_4, ttidSpan: closure_128_5 });
+        closure_128_6 = value;
         if (null != closure_128_5) {
           start_timestamp = closure_128_5.start_timestamp;
         }

@@ -2,14 +2,19 @@
 
 // Module 328 (_queryCache)
 import resolveAssetSourceDefault from "resolveAssetSource" /* 81 */;
+import flattenStyleDefault from "flattenStyle" /* 148 */;
 import ImageLoaderDefault from "ImageLoader" /* 329 */;
 import _mod331 from "module_331" /* 331 */;
+import convertObjectFitToResizeMode from "convertObjectFitToResizeMode" /* 332 */;
+import unstable_setImageComponentDecorator2 from "unstable_setImageComponentDecorator" /* 333 */;
+import _modDef336 from "module_336" /* 336 */;
+import _modDef337 from "module_337" /* 337 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 import get_hairlineWidth from "get hairlineWidth" /* 254 */;
 
 require = fn;
-let closure_7 = async function _queryCache(arg0, value) {
+let closure_7 = async function _queryCache(arg0) {
   if (c1 === 2) {
     c1 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -181,8 +186,8 @@ function _BaseImage(arg0) {
     if (true === tmp6) {
       merged.importantForAccessibility = "no-hide-descendants";
     }
-    const tmp28 = tmp12(148)(style);
-    let tmp10Result = tmp10(332);
+    const tmp28 = flattenStyleDefault(style);
+    let tmp10Result = convertObjectFitToResizeMode;
     let objectFit;
     if (tmp28 != null) {
       objectFit = tmp28.objectFit;
@@ -199,8 +204,8 @@ function _BaseImage(arg0) {
       str4 = "cover";
     }
     merged.resizeMode = str4;
-    tmp10Result = tmp10(333);
-    const tmp33 = use(tmp12(336));
+    tmp10Result = unstable_setImageComponentDecorator2;
+    const tmp33 = use(_modDef336);
     if (null !== tmp33) {
       merged.internal_analyticTag = tmp33;
     }
@@ -211,7 +216,7 @@ function _BaseImage(arg0) {
     const wrapRefWithImageAttachedCallbacks = tmp10Result.useWrapRefWithImageAttachedCallbacks(ref);
     const merged1 = Object.assign(merged);
     obj.ref = wrapRefWithImageAttachedCallbacks;
-    return jsx(tmp12(337), {});
+    return jsx(_modDef337, {});
   }
 }
 let unstable_setImageComponentDecorator = fn(333);

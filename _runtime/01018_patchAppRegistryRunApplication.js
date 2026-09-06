@@ -3,6 +3,7 @@
 // Module 1018 (patchAppRegistryRunApplication)
 import _mod682 from "module_682" /* 682 */;
 import TurboModuleRegistry from "TurboModuleRegistry" /* 862 */;
+import _mod867 from "module_867" /* 867 */;
 import fillTyped from "fillTyped" /* 1019 */;
 
 require = arg1;
@@ -32,9 +33,9 @@ export () => {
     setupOnce() {
       if (!obj.isWeb()) {
         if (typeof patchAppRegistryRunApplication === "function") {
-          AppRegistry = tmp(862).ReactNativeLibraries.AppRegistry;
+          AppRegistry = TurboModuleRegistry.ReactNativeLibraries.AppRegistry;
           if (AppRegistry) {
-            tmp(1019).fillTyped(AppRegistry, "runApplication", (arg0) => {
+            fillTyped.fillTyped(AppRegistry, "runApplication", (arg0) => {
               closure_0 = arg0;
               return () => {
                 const items = [...arguments];
@@ -42,12 +43,13 @@ export () => {
                 return closure_0(...items);
               };
             });
-            const tmpResult = tmp(1019);
+            const tmpResult = fillTyped;
           }
         } else {
           throw new TypeError("Trying to call a non-function");
         }
       }
+      obj = _mod867;
     },
     onRunApplication(onRunApplicationHook) {
       let arr = closure_0;
@@ -62,8 +64,7 @@ export () => {
 }
 export { patchAppRegistryRunApplication };
 export const getAppRegistryIntegration = () => {
-  let client = arg0;
-  if (arg0 === undefined) {
+  if (client === undefined) {
     client = _mod682.getClient();
   }
   if (client) {

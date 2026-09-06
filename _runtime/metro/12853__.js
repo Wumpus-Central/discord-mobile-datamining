@@ -1,6 +1,7 @@
 // === Module 12853: ? ===
 
 // Module 12853
+import _mod12797 from "module_12797" /* 12797 */;
 import _mod12824 from "module_12824" /* 12824 */;
 import _mod12825 from "module_12825" /* 12825 */;
 import _slicedToArray from "module_32" /* 32 */;
@@ -9,11 +10,10 @@ function setupIntegration(on, name, arg2) {
   closure_0 = on;
   if (arg2[name.name]) {
     if (_mod12825.DEBUG_BUILD) {
-      const logger2 = tmp10(12797).logger;
+      const logger2 = _mod12797.logger;
       const _HermesInternal2 = HermesInternal;
       logger2.log("Integration skipped because it was already installed: " + name.name);
     }
-    tmp10 = require;
   } else {
     arg2[name.name] = name;
     let arr = items;
@@ -37,13 +37,12 @@ function setupIntegration(on, name, arg2) {
       on.addEventProcessor(Object.assign((arg0, arg1) => closure_2(arg0, arg1, closure_0), obj));
     }
     if (_mod12825.DEBUG_BUILD) {
-      const logger = tmp6(12797).logger;
+      const logger = _mod12797.logger;
       const _HermesInternal = HermesInternal;
       logger.log("Integration installed: " + name.name);
     }
     tmp = -1 === items.indexOf(name.name) && typeof name.setupOnce === "function";
     tmp4 = name.setup && typeof name.setup === "function";
-    tmp6 = require;
   }
 }
 let items = [];
@@ -52,8 +51,8 @@ export const addIntegration = function addIntegration(name) {
   const client = _mod12824.getClient();
   if (client) {
     client.addIntegration(name);
-  } else if (tmp(12825).DEBUG_BUILD) {
-    const logger = tmp(12797).logger;
+  } else if (_mod12825.DEBUG_BUILD) {
+    const logger = _mod12797.logger;
     const _HermesInternal = HermesInternal;
     logger.warn("Cannot add integration \"" + name.name + "\" because no SDK Client is available.");
   }
@@ -98,7 +97,6 @@ export const getIntegrationsToSetup = function getIntegrationsToSetup(defaultInt
       arr2 = tmp2;
     }
   }
-  const obj = {};
   const item1 = arr2.forEach((name) => {
     name = name.name;
     let isDefaultInstance = tmp2;
@@ -112,7 +110,7 @@ export const getIntegrationsToSetup = function getIntegrationsToSetup(defaultInt
       obj[name] = name;
     }
   });
-  const values = Object.values(obj);
+  const values = Object.values({});
   const findIndexResult = values.findIndex((name) => "Debug" === name.name);
   if (findIndexResult > -1) {
     arr = values.push(_slicedToArray(values.splice(findIndexResult, 1), 1)[0]);

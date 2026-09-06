@@ -97,8 +97,8 @@ obj = {
   addAnimatedEventToView(c4, arg1, item) {
     const result = obj.addAnimatedEventToView(c4, arg1, item);
   },
-  connectAnimatedNodes(__getNativeTagResult, arg1) {
-    obj.connectAnimatedNodes(__getNativeTagResult, arg1);
+  connectAnimatedNodes(__getNativeTagResult, __makeNative) {
+    obj.connectAnimatedNodes(__getNativeTagResult, __makeNative);
   },
   connectAnimatedNodeToShadowNodeFamily(self, nodeFromPublicInstance) {
     const connectAnimatedNodeToShadowNodeFamily = obj.connectAnimatedNodeToShadowNodeFamily;
@@ -112,10 +112,10 @@ obj = {
   createAnimatedNode(newNodeTag, __getNativeConfigResult) {
     if (__getNativeConfigResult.disableBatchingForNativeCreate) {
       if (javaScriptFlagGetter != null) {
-        const animatedNode = obj.createAnimatedNode(newNodeTag, __getNativeConfigResult);
+        const animatedNode = javaScriptFlagGetter.createAnimatedNode(newNodeTag, __getNativeConfigResult);
       }
     } else {
-      const animatedNode1 = obj.createAnimatedNode(newNodeTag, __getNativeConfigResult);
+      const animatedNode1 = javaScriptFlagGetter.createAnimatedNode(newNodeTag, __getNativeConfigResult);
     }
   },
   disableQueue() {
@@ -133,8 +133,8 @@ obj = {
   disconnectAnimatedNodeFromView(self, connectedViewTag) {
     const result = obj.disconnectAnimatedNodeFromView(self, connectedViewTag);
   },
-  disconnectAnimatedNodes(__getNativeTagResult, arg1) {
-    const result = obj.disconnectAnimatedNodes(__getNativeTagResult, arg1);
+  disconnectAnimatedNodes(__getNativeTagResult, __isNative) {
+    const result = obj.disconnectAnimatedNodes(__getNativeTagResult, __isNative);
   },
   dropAnimatedNode(__nativeTag) {
     obj.dropAnimatedNode(__nativeTag);
@@ -150,14 +150,14 @@ obj = {
     c11 = null;
     if (0 !== closure_10.length) {
       if (!closure_14) {
-        let tmpResult = tmp(92);
+        let tmpResult = closure_0(92);
         closure_14 = tmpResult.addListener("onNativeAnimatedModuleGetValue", (value) => {
           if (closure_1_12[value.tag]) {
             tmp3(value.value);
             delete tmp[tmp2];
           }
         });
-        tmpResult = tmp(92);
+        tmpResult = closure_0(92);
         closure_15 = tmpResult.addListener("onNativeAnimatedModuleAnimationFinished", (arg0) => {
           let tmp3 = arg0;
           if (!Array.isArray(arg0)) {
@@ -175,21 +175,21 @@ obj = {
           }
         });
       }
-      if (tmp3 != null) {
-        const queueAndExecuteBatchedOperations = tmp3.queueAndExecuteBatchedOperations;
+      if (javaScriptFlagGetter != null) {
+        const queueAndExecuteBatchedOperations = javaScriptFlagGetter.queueAndExecuteBatchedOperations;
         if (queueAndExecuteBatchedOperations != null) {
-          const result = queueAndExecuteBatchedOperations(tmp5);
+          const result = queueAndExecuteBatchedOperations(closure_10);
         }
       }
-      tmp5.length = 0;
+      closure_10.length = 0;
     }
   }) : (() => {
     closure_0(38)(javaScriptFlagGetter, "Native animated module is not available");
     c11 = null;
     let arr = closure_9;
     if (0 !== closure_9.length) {
-      if (tmp != null) {
-        const startOperationBatch = tmp.startOperationBatch;
+      if (javaScriptFlagGetter != null) {
+        const startOperationBatch = javaScriptFlagGetter.startOperationBatch;
         if (startOperationBatch != null) {
           startOperationBatch();
         }
@@ -204,12 +204,11 @@ obj = {
       }
       arr.length = 0;
       if (javaScriptFlagGetter != null) {
-        const finishOperationBatch = tmp6.finishOperationBatch;
+        const finishOperationBatch = javaScriptFlagGetter.finishOperationBatch;
         if (finishOperationBatch != null) {
           finishOperationBatch();
         }
       }
-      tmp6 = javaScriptFlagGetter;
     }
   }),
   getValue: result ? ((arg0, arg1) => {
@@ -325,6 +324,7 @@ obj1.shouldUseNativeDriver = function shouldUseNativeDriver(useNativeDriver) {
     return flag;
   }
   flag = useNativeDriver.useNativeDriver || false;
+  const tmp7 = useNativeDriver.useNativeDriver || false;
 };
 obj1.transformDataType = function transformDataType(item) {
   if (typeof item !== "string") {

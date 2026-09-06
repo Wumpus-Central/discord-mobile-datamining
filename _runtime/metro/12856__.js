@@ -161,10 +161,10 @@ let items = [
       const release = this._options.release;
       if (release) {
         const obj = { release, environment: tmp };
-        const sessionFlusher = new tmp2(12850).SessionFlusher(self, obj);
+        const sessionFlusher = new ServerRuntimeClient(12850).SessionFlusher(self, obj);
         self._sessionFlusher = sessionFlusher;
-      } else if (tmp2(12825).DEBUG_BUILD) {
-        const logger = tmp2(12797).logger;
+      } else if (ServerRuntimeClient(12825).DEBUG_BUILD) {
+        const logger = ServerRuntimeClient(12797).logger;
         logger.warn("Cannot initialize an instance of SessionFlusher if no release is provided!");
       }
     }
@@ -223,12 +223,9 @@ let items = [
       if (this._sessionFlusher) {
         const _sessionFlusher = this._sessionFlusher;
         const result = _sessionFlusher.incrementSessionStatusCount();
-      } else {
-        if (ServerRuntimeClient(12825).DEBUG_BUILD) {
-          const logger = tmp(12797).logger;
-          logger.warn("Discarded request mode session because autoSessionTracking option was disabled");
-        }
-        tmp = ServerRuntimeClient;
+      } else if (ServerRuntimeClient(12825).DEBUG_BUILD) {
+        const logger = ServerRuntimeClient(12797).logger;
+        logger.warn("Discarded request mode session because autoSessionTracking option was disabled");
       }
     }
   },
@@ -263,10 +260,10 @@ let items = [
       if (arg0) {
         const _getSpanForScopeResult = ServerRuntimeClient(12819)._getSpanForScope(arg0);
         if (_getSpanForScopeResult) {
-          let tmpResult = tmp(12802);
+          let tmpResult = ServerRuntimeClient(12802);
           let spanToTraceContextResult = tmpResult.spanToTraceContext(_getSpanForScopeResult);
         } else {
-          tmpResult = tmp(12824);
+          tmpResult = ServerRuntimeClient(12824);
           spanToTraceContextResult = tmpResult.getTraceContextFromScope(arg0);
         }
         const tmpResult1 = ServerRuntimeClient(12833);

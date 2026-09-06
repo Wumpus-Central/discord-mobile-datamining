@@ -12,7 +12,7 @@ import _mod10581 from "module_10581" /* 10581 */;
 import _mod10582 from "module_10582" /* 10582 */;
 import _mod10583 from "module_10583" /* 10583 */;
 
-function createConfiguration(flag, arg1) {
+function createConfiguration() {
   if (flag === undefined) {
     flag = true;
   }

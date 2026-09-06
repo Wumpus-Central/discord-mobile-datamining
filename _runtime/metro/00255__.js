@@ -29,13 +29,13 @@ obj.flatten = flattenStyleDefault;
 obj.setStyleAttributePreprocessor = function setStyleAttributePreprocessor(arg0, process) {
   if (true === _modDef26[arg0]) {
     let obj = { process };
-  } else if (typeof tmp(26)[arg0] !== "object") {
+  } else if (typeof _modDef26[arg0] !== "object") {
     const _console = console;
     const _HermesInternal = HermesInternal;
     console.error("" + arg0 + " is not a valid style attribute");
   } else {
     obj = {};
-    const merged = Object.assign(tmp(26)[arg0]);
+    const merged = Object.assign(_modDef26[arg0]);
     obj.process = process;
   }
   _modDef26[arg0] = obj;

@@ -15,7 +15,7 @@ function flushWithTimeout(arg0) {
   }
   return applyArgumentsResult;
 }
-let closure_4 = async function _flushWithTimeout(arg0, arg1) {
+let closure_4 = async function _flushWithTimeout(arg0) {
   closure_2 = tmp3;
   const debug3 = consoleSandbox.debug;
   debug3.log("Flushing events...");
@@ -28,15 +28,15 @@ let closure_4 = async function _flushWithTimeout(arg0, arg1) {
     c6 = 3;
   } else if (arg0 === 1) {
     c6 = 3;
-    throw arg1;
+    throw value;
   } else if (arg0 !== 2) {
     const debug = closure_130_0(closure_130_1[1]).debug;
     debug.log("Done flushing events");
     c4 = 0;
   }
-  return arg1;
+  return value;
 };
-let closure_5 = async function _flushIfServerless(arg0, value) {
+let closure_5 = async function _flushIfServerless() {
   if (c4 === 2) {
     c4 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");

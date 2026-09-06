@@ -16,8 +16,8 @@ export const IsWellFormedUnitIdentifier = function IsWellFormedUnitIdentifier(Ge
       return false;
     } else {
       [tmp3, tmp4] = parts;
-      if (tmp(14214).IsSanctionedSimpleUnitIdentifier(tmp3)) {
-        if (tmp(14214).IsSanctionedSimpleUnitIdentifier(tmp4)) {
+      if (IsSanctionedSimpleUnitIdentifier.IsSanctionedSimpleUnitIdentifier(tmp3)) {
+        if (IsSanctionedSimpleUnitIdentifier.IsSanctionedSimpleUnitIdentifier(tmp4)) {
           return true;
         }
       }

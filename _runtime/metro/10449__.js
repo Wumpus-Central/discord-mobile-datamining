@@ -1,10 +1,10 @@
 // === Module 10449: ? ===
 
 // Module 10449
+import _possibleConstructorReturn from "_possibleConstructorReturn" /* 93 */;
 import _mod10450 from "module_10450" /* 10450 */;
 import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
-import _possibleConstructorReturn from "_possibleConstructorReturn" /* 93 */;
 import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
 
@@ -27,6 +27,7 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
+_possibleConstructorReturn;
 let fn = this;
 if (this) {
   fn = this.__importDefault;

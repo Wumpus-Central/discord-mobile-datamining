@@ -70,9 +70,8 @@ export const parseDuration = function parseDuration(arg0) {
   while (match) {
     let str2 = match[1];
     let str3 = str2.toLowerCase();
-    let tmp2 = exports;
     if (undefined !== exports.INTEGER_WORD_DICTIONARY[str3]) {
-      let num = tmp2.INTEGER_WORD_DICTIONARY[str3];
+      let num = exports.INTEGER_WORD_DICTIONARY[str3];
     } else {
       num = 2;
       if (!str3.match(/декілька/)) {
@@ -93,7 +92,7 @@ export const parseDuration = function parseDuration(arg0) {
       }
     }
     let str4 = match[2];
-    obj[tmp2.TIME_UNIT_DICTIONARY[str4.toLowerCase(str4)]] = num;
+    obj[exports.TIME_UNIT_DICTIONARY[str4.toLowerCase(str4)]] = num;
     let str5 = str.substring(match[0].length);
     let trimmed = str5.trim();
     match = regExp.exec(trimmed);

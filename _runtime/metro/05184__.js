@@ -2,8 +2,8 @@
 
 // Module 5184
 import _mod5185 from "module_5185" /* 5185 */;
-import _mod5186 from "module_5186" /* 5186 */;
 
+const _mod5186 = tmp5(5186);
 require = arg1;
 const dependencyMap = arg6;
 

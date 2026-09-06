@@ -18,6 +18,6 @@ export default function _default(children) {
   }
   let obj = { enabled: tmp, children: null };
   obj = { style: { opacity: obj.useKeyboardAnimation().progress }, children: children.children };
-  obj.children = <closure_3 style={{ opacity: obj.useKeyboardAnimation().progress }}>{arg0.children}</closure_3>;
+  obj.children = <closure_3 style={{ opacity: obj.useKeyboardAnimation().progress }}>{children.children}</closure_3>;
   return jsx(KeyboardAvoidingView.KeyboardStickyView, { style: { opacity: obj.useKeyboardAnimation().progress }, children: children.children });
 };

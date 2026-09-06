@@ -129,13 +129,13 @@ const items = [
           const bound = Math.max(0, num);
           if (bound > 0) {
             const _setTimeout = setTimeout;
-            obj._pressDelayTimeout = setTimeout(() => {
+            self._pressDelayTimeout = setTimeout(() => {
               self._receiveSignal("DELAY", closure_0);
             }, bound);
           } else {
-            obj._receiveSignal("DELAY", persist);
+            self._receiveSignal("DELAY", persist);
           }
-          let delayLongPress = obj._config.delayLongPress;
+          let delayLongPress = self._config.delayLongPress;
           if (delayLongPress == null) {
             delayLongPress = 500 - bound;
           }
@@ -149,7 +149,7 @@ const items = [
           if (null != onPressMove) {
             onPressMove(nativeEvent);
           }
-          const _responderRegion = obj._responderRegion;
+          const _responderRegion = self._responderRegion;
           if (null != _responderRegion) {
             if (typeof getTouchFromPressEvent === "function") {
               ({ changedTouches, touches } = nativeEvent.nativeEvent);
@@ -158,20 +158,20 @@ const items = [
                   nativeEvent = touches[0];
                 }
                 if (null == nativeEvent) {
-                  const result = obj._cancelLongPressDelayTimeout();
-                  obj._receiveSignal("LEAVE_PRESS_RECT", nativeEvent);
+                  const result = self._cancelLongPressDelayTimeout();
+                  self._receiveSignal("LEAVE_PRESS_RECT", nativeEvent);
                 } else {
-                  if (null != obj._touchActivatePosition) {
+                  if (null != self._touchActivatePosition) {
                     const _Math = Math;
-                    if (Math.hypot(obj._touchActivatePosition.pageX - nativeEvent.pageX, obj._touchActivatePosition.pageY - nativeEvent.pageY) > global) {
-                      const result1 = obj._cancelLongPressDelayTimeout();
+                    if (Math.hypot(self._touchActivatePosition.pageX - nativeEvent.pageX, self._touchActivatePosition.pageY - nativeEvent.pageY) > global) {
+                      const result1 = self._cancelLongPressDelayTimeout();
                     }
                   }
-                  if (obj._isTouchWithinResponderRegion(nativeEvent, _responderRegion)) {
-                    obj._receiveSignal("ENTER_PRESS_RECT", nativeEvent);
+                  if (self._isTouchWithinResponderRegion(nativeEvent, _responderRegion)) {
+                    self._receiveSignal("ENTER_PRESS_RECT", nativeEvent);
                   } else {
-                    const result2 = obj._cancelLongPressDelayTimeout();
-                    obj._receiveSignal("LEAVE_PRESS_RECT", nativeEvent);
+                    const result2 = self._cancelLongPressDelayTimeout();
+                    self._receiveSignal("LEAVE_PRESS_RECT", nativeEvent);
                   }
                 }
               }
@@ -245,7 +245,7 @@ const items = [
             self._isHovered = true;
             const result = self._cancelHoverOutDelayTimeout();
             if (null != onHoverIn) {
-              let num = tmp._config.delayHoverIn;
+              let num = self._config.delayHoverIn;
               if (num == null) {
                 num = 0;
               }
@@ -253,7 +253,7 @@ const items = [
               if (bound > 0) {
                 persist.persist();
                 const _setTimeout = setTimeout;
-                tmp._hoverInDelayTimeout = setTimeout(() => {
+                self._hoverInDelayTimeout = setTimeout(() => {
                   ({ clientX, clientY } = persist.nativeEvent);
                   const obj = {};
                   const merged = Object.assign(persist);
@@ -349,10 +349,10 @@ const items = [
   },
   {
     key: "_performTransitionSideEffects",
-    value: function _performTransitionSideEffects(_touchState, arg1, arg2, nativeEvent) {
-      let tmp = "RESPONDER_TERMINATED" === arg2;
+    value: function _performTransitionSideEffects(_touchState, arg1, signal, nativeEvent) {
+      let tmp = "RESPONDER_TERMINATED" === signal;
       if (!tmp) {
-        tmp = "RESPONDER_RELEASE" === arg2;
+        tmp = "RESPONDER_RELEASE" === signal;
       }
       const self = this;
       if (tmp) {
@@ -396,7 +396,7 @@ const items = [
             tmp12 = "RESPONDER_ACTIVE_LONG_PRESS_IN" === _touchState;
           }
           if (tmp12) {
-            if ("LONG_PRESS_DETECTED" === arg2) {
+            if ("LONG_PRESS_DETECTED" === signal) {
               const onLongPress = self._config.onLongPress;
               if (null != onLongPress) {
                 onLongPress(nativeEvent);
@@ -425,7 +425,7 @@ const items = [
                     tmp11 = "RESPONDER_ACTIVE_LONG_PRESS_IN" === _touchState;
                   }
                   if (tmp11) {
-                    if ("RESPONDER_RELEASE" === arg2) {
+                    if ("RESPONDER_RELEASE" === signal) {
                       if (!tmp19) {
                         tmp19 = tmp18;
                       }

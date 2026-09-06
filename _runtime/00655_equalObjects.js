@@ -4,9 +4,9 @@
 import _mod656 from "module_656" /* 656 */;
 
 
-export default function equalObjects(arg0, arg1, arg2, fn, fn2, get) {
-  const arr = _mod656(arg0);
-  if (arr.length != _mod656(arg1).length) {
+export default function equalObjects(key, value, arg2, fn, fn2, get) {
+  const arr = _mod656(key);
+  if (arr.length != _mod656(value).length) {
     if (!tmp) {
       return false;
     }
@@ -17,11 +17,10 @@ export default function equalObjects(arg0, arg1, arg2, fn, fn2, get) {
     while (true) {
       let tmp5 = arr[diff];
       if (tmp) {
-        let tmp8 = tmp5 in arg1;
+        let tmp8 = tmp5 in value;
       } else {
-        let tmp7 = hasOwnProperty;
         let call = hasOwnProperty.call;
-        tmp8 = typeof call === "unknown" ? tmp7(tmp5) : call(arg1, tmp5);
+        tmp8 = typeof call === "unknown" ? hasOwnProperty(tmp5) : call(value, tmp5);
       }
       if (!tmp8) {
         break;
@@ -33,15 +32,15 @@ export default function equalObjects(arg0, arg1, arg2, fn, fn2, get) {
     }
     return false;
   }
-  get.get(arg0);
-  value = get.get(arg1);
+  value = get.get(key);
+  value = get.get(value);
   if (value) {
     if (value) {
-      return value == arg1 && value == arg0;
+      return value == value && value == key;
     }
   }
-  const result = get.set(arg0, arg1);
-  const result1 = get.set(arg1, arg0);
+  const result = get.set(key, value);
+  const result1 = get.set(value, key);
   let sum = tmp4 + 1;
   let tmp16 = tmp;
   let tmp17 = tmp;
@@ -71,18 +70,18 @@ export default function equalObjects(arg0, arg1, arg2, fn, fn2, get) {
       }
     }
     if (tmp) {
-      let tmp30 = fn(tmp20, tmp19, tmp18, arg1, arg0, get);
+      let tmp30 = fn(tmp20, tmp19, tmp18, value, key, get);
     } else {
-      tmp30 = fn(tmp19, tmp20, tmp18, arg0, arg1, get);
+      tmp30 = fn(tmp19, tmp20, tmp18, key, value, get);
     }
   }
   let flag4 = flag3;
   if (flag3) {
     flag4 = flag3;
     if (!tmp17) {
-      const constructor = arg0.constructor;
-      const constructor2 = arg1.constructor;
-      let tmp47 = constructor == constructor2 || !("constructor" in arg0) || !("constructor" in arg1);
+      const constructor = key.constructor;
+      const constructor2 = value.constructor;
+      let tmp47 = constructor == constructor2 || !("constructor" in key) || !("constructor" in value);
       if (!tmp47) {
         let tmp48 = typeof constructor === "function";
         if (typeof constructor === "function") {
@@ -102,7 +101,7 @@ export default function equalObjects(arg0, arg1, arg2, fn, fn2, get) {
       }
     }
   }
-  get.delete(arg0);
-  get.delete(arg1);
+  get.delete(key);
+  get.delete(value);
   return flag4;
 };

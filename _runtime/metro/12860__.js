@@ -1,8 +1,12 @@
 // === Module 12860: ? ===
 
 // Module 12860
+import _mod12797 from "module_12797" /* 12797 */;
+import _mod12821 from "module_12821" /* 12821 */;
+import _mod12825 from "module_12825" /* 12825 */;
 import _mod12841 from "module_12841" /* 12841 */;
 import _mod12854 from "module_12854" /* 12854 */;
+import _mod12862 from "module_12862" /* 12862 */;
 
 require = arg1;
 let dependencyMap = arg6;
@@ -39,12 +43,13 @@ export const createTransport = function createTransport(bufferSize, arg1) {
         } else {
           items.push(arg0);
         }
+        obj2 = _mod12862;
       });
       if (0 === items.length) {
-        let tmpResult = tmp(tmp2[3]);
+        let tmpResult = bufferSize(tmp2[3]);
         return tmpResult.resolvedSyncPromise({});
       } else {
-        tmpResult = tmp(tmp2[1]);
+        tmpResult = bufferSize(tmp2[1]);
         dependencyMap = tmpResult.createEnvelope(arg0[0], items);
         function recordEnvelopeLoss(arg0) {
 
@@ -91,13 +96,13 @@ export const createTransport = function createTransport(bufferSize, arg1) {
           });
         }).then((result) => result, (arg0) => {
           if (arg0 instanceof _mod12854.SentryError) {
-            if (tmp(12825).DEBUG_BUILD) {
-              const logger = tmp(12797).logger;
+            if (_mod12825.DEBUG_BUILD) {
+              const logger = _mod12797.logger;
               logger.error("Skipped sending event because buffer is full.");
             }
             if (typeof recordEnvelopeLoss === "function") {
               const queue_overflow = "queue_overflow";
-              let tmpResult = tmp(12841);
+              let tmpResult = _mod12841;
               tmpResult.forEachEnvelopeItem(closure_1, (arg0, arg1) => {
                 if ("event" === arg1) {
                   const _Array = Array;
@@ -109,7 +114,7 @@ export const createTransport = function createTransport(bufferSize, arg1) {
                 }
                 closure_2_0.recordDroppedEvent(network_error, items(closure_1[1]).envelopeItemTypeToDataCategory(arg1), tmp);
               });
-              tmpResult = tmp(12821);
+              tmpResult = _mod12821;
               return tmpResult.resolvedSyncPromise({});
             } else {
               throw new TypeError("Trying to call a non-function");

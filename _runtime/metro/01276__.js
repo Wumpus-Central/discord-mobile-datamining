@@ -7,9 +7,9 @@ obj = {
   RFC1738(arg0) {
     const call = replace.call;
     if (typeof call === "unknown") {
-      let callResult = replace(tmp2, "+");
+      let callResult = replace(re1, "+");
     } else {
-      callResult = call(arg0, tmp2, "+");
+      callResult = call(arg0, re1, "+");
     }
     return callResult;
   },

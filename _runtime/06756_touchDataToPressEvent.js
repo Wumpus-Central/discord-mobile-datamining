@@ -128,7 +128,7 @@ export const gestureTouchToPressableEvent = (handlerTag) => {
   nativeEvent.timestamp = timestamp;
   return { nativeEvent };
 };
-export const isTouchWithinInset = (width, right, locationX) => {
+export const isTouchWithinInset = (current, right, locationX) => {
   let num;
   if (locationX != null) {
     num = locationX.locationX;
@@ -140,7 +140,7 @@ export const isTouchWithinInset = (width, right, locationX) => {
   if (num2 == null) {
     num2 = 0;
   }
-  let tmp = num < num2 + width.width;
+  let tmp = num < num2 + current.width;
   if (tmp) {
     let num3;
     if (locationX != null) {
@@ -153,7 +153,7 @@ export const isTouchWithinInset = (width, right, locationX) => {
     if (num4 == null) {
       num4 = 0;
     }
-    tmp = num3 < num4 + width.height;
+    tmp = num3 < num4 + current.height;
   }
   if (tmp) {
     let num5;
@@ -185,14 +185,14 @@ export const isTouchWithinInset = (width, right, locationX) => {
   }
   return tmp;
 };
-export (left) => {
-  const rect = { left, right: left, top: left, bottom: left };
+export (hitSlop) => {
+  const rect = { left: hitSlop, right: hitSlop, top: hitSlop, bottom: hitSlop };
   return rect;
 }
-export const viewCenterToPressableEvent = (width) => {
+export const viewCenterToPressableEvent = (current) => {
   const timestamp = Date.now();
-  const result = width.width / 2;
-  const result1 = width.height / 2;
+  const result = current.width / 2;
+  const result1 = current.height / 2;
   let obj = { identifier: 0, locationX: result, locationY: result1, pageX: -1, pageY: -1, target: 0, timestamp, touches: [], changedTouches: [] };
   obj = { nativeEvent: null };
   obj = { touches: null, changedTouches: null, identifier: 0, locationX: result, locationY: result1, pageX: -1, pageY: -1, target: 0, timestamp, force: "Boolean" };

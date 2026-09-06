@@ -37,12 +37,12 @@ const memoResult = memo(function BottomSheetHandleContainerComponent(simultaneou
     if (simultaneousHandlers2) {
       const _Array = Array;
       const push = items.push;
-      if (Array.isArray(tmp3)) {
+      if (Array.isArray(simultaneousHandlers2)) {
         const items1 = [];
-        HermesBuiltin.arraySpread(tmp3, 0);
+        HermesBuiltin.arraySpread(simultaneousHandlers2, 0);
         HermesBuiltin.apply(items1, items);
       } else {
-        push(tmp3);
+        push(simultaneousHandlers2);
       }
     }
     return items;

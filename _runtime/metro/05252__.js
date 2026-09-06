@@ -3,6 +3,7 @@
 // Module 5252
 import _mod5213 from "module_5213" /* 5213 */;
 import _modDef5230 from "module_5230" /* 5230 */;
+import _modDef5253 from "module_5253" /* 5253 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = arg1;
@@ -42,19 +43,18 @@ export default {
       const longAt = _modDef5230.getLongAt(dataView, sum2);
       const sum3 = sum2 + c6;
       if (stringFromDataView === c4) {
-        let tmp5Result = tmp5(5213);
+        let tmp5Result = _mod5213;
         const dataView1 = tmp5Result.getDataView(dataView.buffer, sum3, longAt);
         obj = { id: shortAt, value: null };
-        tmp5Result = tmp5(5213);
+        tmp5Result = _mod5213;
         obj.value = tmp5Result.getStringFromDataView(dataView1, 0, longAt);
-        if (tmp10(5253)[shortAt]) {
+        if (_modDef5253[shortAt]) {
           try {
-            obj.description = tmp10(5253)[shortAt].description(dataView1);
+            obj.description = _modDef5253[shortAt].description(dataView1);
             if (!name) {
-              name = tmp10(5253)[shortAt].name;
+              name = _modDef5253[shortAt].name;
             }
             obj[name] = obj;
-            const obj6 = tmp10(5253)[shortAt];
           } catch (err) {
             tmp.description = tmp2;
           }

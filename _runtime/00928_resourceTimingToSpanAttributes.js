@@ -1,6 +1,7 @@
 // === Module 928: resourceTimingToSpanAttributes ===
 
 // Module 928 (resourceTimingToSpanAttributes)
+import _mod682 from "module_682" /* 682 */;
 import extractNetworkProtocol from "extractNetworkProtocol" /* 924 */;
 
 require = arg1;
@@ -19,7 +20,7 @@ export const resourceTimingToSpanAttributes = function resourceTimingToSpanAttri
     const redirectStart = nextHopProtocol.redirectStart;
     let result1 = redirectStart;
     if (redirectStart) {
-      let tmp4Result = tmp4(682);
+      let tmp4Result = _mod682;
       let timeOrigin = tmp4Result.browserPerformanceTimeOrigin();
       if (!timeOrigin) {
         const _performance = performance;
@@ -31,7 +32,7 @@ export const resourceTimingToSpanAttributes = function resourceTimingToSpanAttri
     const redirectEnd = nextHopProtocol.redirectEnd;
     let result2 = redirectEnd;
     if (redirectEnd) {
-      tmp4Result = tmp4(682);
+      tmp4Result = _mod682;
       let timeOrigin2 = tmp4Result.browserPerformanceTimeOrigin();
       if (!timeOrigin2) {
         const _performance2 = performance;
@@ -43,121 +44,121 @@ export const resourceTimingToSpanAttributes = function resourceTimingToSpanAttri
     const workerStart = nextHopProtocol.workerStart;
     let result3 = workerStart;
     if (workerStart) {
-      let timeOrigin3 = tmp4(682).browserPerformanceTimeOrigin();
+      let timeOrigin3 = _mod682.browserPerformanceTimeOrigin();
       if (!timeOrigin3) {
         const _performance3 = performance;
         timeOrigin3 = performance.timeOrigin;
       }
       result3 = (timeOrigin3 + workerStart) / 1000;
-      const tmp4Result1 = tmp4(682);
+      const tmp4Result1 = _mod682;
     }
     obj["http.request.worker_start"] = result3;
     const fetchStart = nextHopProtocol.fetchStart;
     let result4 = fetchStart;
     if (fetchStart) {
-      let timeOrigin4 = tmp4(682).browserPerformanceTimeOrigin();
+      let timeOrigin4 = _mod682.browserPerformanceTimeOrigin();
       if (!timeOrigin4) {
         const _performance4 = performance;
         timeOrigin4 = performance.timeOrigin;
       }
       result4 = (timeOrigin4 + fetchStart) / 1000;
-      const tmp4Result2 = tmp4(682);
+      const tmp4Result2 = _mod682;
     }
     obj["http.request.fetch_start"] = result4;
     const domainLookupStart = nextHopProtocol.domainLookupStart;
     let result5 = domainLookupStart;
     if (domainLookupStart) {
-      let timeOrigin5 = tmp4(682).browserPerformanceTimeOrigin();
+      let timeOrigin5 = _mod682.browserPerformanceTimeOrigin();
       if (!timeOrigin5) {
         const _performance5 = performance;
         timeOrigin5 = performance.timeOrigin;
       }
       result5 = (timeOrigin5 + domainLookupStart) / 1000;
-      const tmp4Result3 = tmp4(682);
+      const tmp4Result3 = _mod682;
     }
     obj["http.request.domain_lookup_start"] = result5;
     const domainLookupEnd = nextHopProtocol.domainLookupEnd;
     let result6 = domainLookupEnd;
     if (domainLookupEnd) {
-      let timeOrigin6 = tmp4(682).browserPerformanceTimeOrigin();
+      let timeOrigin6 = _mod682.browserPerformanceTimeOrigin();
       if (!timeOrigin6) {
         const _performance6 = performance;
         timeOrigin6 = performance.timeOrigin;
       }
       result6 = (timeOrigin6 + domainLookupEnd) / 1000;
-      const tmp4Result4 = tmp4(682);
+      const tmp4Result4 = _mod682;
     }
     obj["http.request.domain_lookup_end"] = result6;
     const connectStart = nextHopProtocol.connectStart;
     let result7 = connectStart;
     if (connectStart) {
-      let timeOrigin7 = tmp4(682).browserPerformanceTimeOrigin();
+      let timeOrigin7 = _mod682.browserPerformanceTimeOrigin();
       if (!timeOrigin7) {
         const _performance7 = performance;
         timeOrigin7 = performance.timeOrigin;
       }
       result7 = (timeOrigin7 + connectStart) / 1000;
-      const tmp4Result5 = tmp4(682);
+      const tmp4Result5 = _mod682;
     }
     obj["http.request.connect_start"] = result7;
     const secureConnectionStart = nextHopProtocol.secureConnectionStart;
     let result8 = secureConnectionStart;
     if (secureConnectionStart) {
-      let timeOrigin8 = tmp4(682).browserPerformanceTimeOrigin();
+      let timeOrigin8 = _mod682.browserPerformanceTimeOrigin();
       if (!timeOrigin8) {
         const _performance8 = performance;
         timeOrigin8 = performance.timeOrigin;
       }
       result8 = (timeOrigin8 + secureConnectionStart) / 1000;
-      const tmp4Result6 = tmp4(682);
+      const tmp4Result6 = _mod682;
     }
     obj["http.request.secure_connection_start"] = result8;
     const connectEnd = nextHopProtocol.connectEnd;
     let result9 = connectEnd;
     if (connectEnd) {
-      let timeOrigin9 = tmp4(682).browserPerformanceTimeOrigin();
+      let timeOrigin9 = _mod682.browserPerformanceTimeOrigin();
       if (!timeOrigin9) {
         const _performance9 = performance;
         timeOrigin9 = performance.timeOrigin;
       }
       result9 = (timeOrigin9 + connectEnd) / 1000;
-      const tmp4Result7 = tmp4(682);
+      const tmp4Result7 = _mod682;
     }
     obj["http.request.connection_end"] = result9;
     const requestStart = nextHopProtocol.requestStart;
     let result10 = requestStart;
     if (requestStart) {
-      let timeOrigin10 = tmp4(682).browserPerformanceTimeOrigin();
+      let timeOrigin10 = _mod682.browserPerformanceTimeOrigin();
       if (!timeOrigin10) {
         const _performance10 = performance;
         timeOrigin10 = performance.timeOrigin;
       }
       result10 = (timeOrigin10 + requestStart) / 1000;
-      const tmp4Result8 = tmp4(682);
+      const tmp4Result8 = _mod682;
     }
     obj["http.request.request_start"] = result10;
     const responseStart = nextHopProtocol.responseStart;
     let result11 = responseStart;
     if (responseStart) {
-      let timeOrigin11 = tmp4(682).browserPerformanceTimeOrigin();
+      let timeOrigin11 = _mod682.browserPerformanceTimeOrigin();
       if (!timeOrigin11) {
         const _performance11 = performance;
         timeOrigin11 = performance.timeOrigin;
       }
       result11 = (timeOrigin11 + responseStart) / 1000;
-      const tmp4Result9 = tmp4(682);
+      const tmp4Result9 = _mod682;
     }
     obj["http.request.response_start"] = result11;
     const responseEnd = nextHopProtocol.responseEnd;
     let result12 = responseEnd;
     if (responseEnd) {
-      let timeOrigin12 = tmp4(682).browserPerformanceTimeOrigin();
+      let timeOrigin12 = _mod682.browserPerformanceTimeOrigin();
       if (!timeOrigin12) {
         const _performance12 = performance;
         timeOrigin12 = performance.timeOrigin;
       }
       result12 = (timeOrigin12 + responseEnd) / 1000;
-      const tmp4Result10 = tmp4(682);
+      const tmp4Result10 = _mod682;
     }
     obj["http.request.response_end"] = result12;
     let result13;
@@ -173,13 +174,13 @@ export const resourceTimingToSpanAttributes = function resourceTimingToSpanAttri
       return null != tmp;
     }));
   } else {
-    const browserPerformanceAPI = tmp4(924).getBrowserPerformanceAPI();
+    const browserPerformanceAPI = extractNetworkProtocol.getBrowserPerformanceAPI();
     timeOrigin = undefined;
     if (browserPerformanceAPI != null) {
       timeOrigin = browserPerformanceAPI.timeOrigin;
     }
     fromEntriesResult = obj;
-    const tmp4Result11 = tmp4(924);
+    const tmp4Result11 = extractNetworkProtocol;
   }
   return fromEntriesResult;
 };

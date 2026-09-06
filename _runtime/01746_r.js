@@ -1,8 +1,10 @@
 // === Module 1746: r ===
 
 // Module 1746 (r)
+import _mod1647 from "module_1647" /* 1647 */;
 import _mod1679 from "module_1679" /* 1679 */;
 import JEST_WORKER_ID from "JEST_WORKER_ID" /* 1747 */;
+import ValueProcessorTarget from "ValueProcessorTarget" /* 1748 */;
 
 require = fn;
 const dependencyMap = arg6;
@@ -179,9 +181,8 @@ processDynamicColorObjectIOS.__initData = { code: "function processDynamicColorO
 function unprocessDynamicColorObjectIOS(arr) {
   const dynamic = {};
   for (const item10008 of items) {
-    let tmp = item10008;
     if (undefined !== arg0.dynamic[item10008]) {
-      dynamic[tmp] = unprocessColorNumber(arg0.dynamic[tmp]);
+      dynamic[item10008] = unprocessColorNumber(arg0.dynamic[item10008]);
     }
     continue;
   }
@@ -205,7 +206,7 @@ function processColor(semantic, target) {
       if (target != null) {
         target = target.target;
       }
-      let tmp29 = target !== tmp2(1748).ValueProcessorTarget.CSS;
+      let tmp29 = target !== ValueProcessorTarget.ValueProcessorTarget.CSS;
       if (!tmp29) {
         tmp29 = "transparent" !== semantic;
       }
@@ -237,15 +238,15 @@ function processColor(semantic, target) {
         } else {
           let tmp13 = tmp6;
           if (isDynamicColorObjectIOS(semantic)) {
-            if (tmp2(1747).IS_IOS) {
+            if (JEST_WORKER_ID.IS_IOS) {
               tmp13 = processDynamicColorObjectIOS(semantic);
             } else {
-              const reanimatedError = new tmp2(1647).ReanimatedError(obj.dynamicNotAvailableOnPlatform());
+              const reanimatedError = new _mod1647.ReanimatedError(obj.dynamicNotAvailableOnPlatform());
               throw reanimatedError;
             }
           }
           if (null === tmp13) {
-            const reanimatedError1 = new tmp2(1647).ReanimatedError(obj.invalidColor(semantic));
+            const reanimatedError1 = new _mod1647.ReanimatedError(obj.invalidColor(semantic));
             throw reanimatedError1;
           } else {
             return tmp13;
@@ -295,14 +296,14 @@ function unprocessColor(arr) {
       if (tmp2) {
         return arr;
       } else if (isDynamicColorObjectIOS(arr)) {
-        if (tmp7(1747).IS_IOS) {
+        if (JEST_WORKER_ID.IS_IOS) {
           return unprocessDynamicColorObjectIOS(arr);
         } else {
-          const reanimatedError = new tmp7(1647).ReanimatedError(obj.dynamicNotAvailableOnPlatform());
+          const reanimatedError = new _mod1647.ReanimatedError(obj.dynamicNotAvailableOnPlatform());
           throw reanimatedError;
         }
       } else {
-        const reanimatedError1 = new tmp7(1647).ReanimatedError(obj.invalidProcessedColor(arr));
+        const reanimatedError1 = new _mod1647.ReanimatedError(obj.invalidProcessedColor(arr));
         throw reanimatedError1;
       }
     } else {

@@ -85,7 +85,7 @@ class TouchableHighlight {
         if (!tmp3) {
           closure_0.hideUnderlay();
         }
-        tmp3 = arg1 !== tmp(6788).TOUCHABLE_STATE.UNDETERMINED && arg1 !== tmp(6788).TOUCHABLE_STATE.MOVED_OUTSIDE;
+        tmp3 = arg1 !== TouchableHighlight(6788).TOUCHABLE_STATE.UNDETERMINED && arg1 !== TouchableHighlight(6788).TOUCHABLE_STATE.MOVED_OUTSIDE;
       }
     };
     tmp3Result.state = { extraChildStyle: null, extraUnderlayStyle: null };

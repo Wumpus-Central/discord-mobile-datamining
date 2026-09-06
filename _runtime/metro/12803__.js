@@ -2,6 +2,7 @@
 
 // Module 12803
 import _mod12796 from "module_12796" /* 12796 */;
+import _mod12797 from "module_12797" /* 12797 */;
 import _mod12804 from "module_12804" /* 12804 */;
 import _mod12805 from "module_12805" /* 12805 */;
 import _mod12806 from "module_12806" /* 12806 */;
@@ -15,11 +16,10 @@ function addNonEnumerableProperty(arg0, arg1, value) {
     Object.defineProperty(arg0, arg1, obj);
   } catch (err) {
     if (_mod12796.DEBUG_BUILD) {
-      const logger = tmp6(12797).logger;
+      const logger = _mod12797.logger;
       const _HermesInternal = HermesInternal;
       logger.log("Failed to add non-enumerable property \"" + tmp2 + "\" to object", tmp);
     }
-    tmp6 = require;
   }
 }
 function markFunctionWrapped(arg0, arg1) {
@@ -62,7 +62,7 @@ function convertToPlainObject(type) {
     }
     obj = {};
   } else {
-    let tmp2Result = tmp2(12804);
+    let tmp2Result = _mod12804;
     if (tmp2Result.isEvent(type)) {
       const obj1 = { type: type.type, target: serializeEventTarget(type.target), currentTarget: serializeEventTarget(type.currentTarget) };
       if (typeof type === "object") {
@@ -89,7 +89,7 @@ function convertToPlainObject(type) {
         const merged1 = Object.assign(obj3);
         let isInstanceOfResult = typeof globalThis.CustomEvent !== "undefined";
         if (typeof globalThis.CustomEvent !== "undefined") {
-          tmp2Result = tmp2(12804);
+          tmp2Result = _mod12804;
           isInstanceOfResult = tmp2Result.isInstanceOf(type, globalThis.CustomEvent);
         }
         if (isInstanceOfResult) {
@@ -149,9 +149,8 @@ function _dropUndefinedKeys(arr, map) {
       let _Object = Object;
       const ownPropertyNames = Object.getOwnPropertyNames(arr);
       for (const item10030 of ownPropertyNames) {
-        let tmp11 = item10030;
         if (undefined !== arg0[item10030]) {
-          obj[tmp11] = _dropUndefinedKeys(arg0[tmp11], arg1);
+          obj[item10030] = _dropUndefinedKeys(arg0[item10030], arg1);
         }
         continue;
       }
@@ -182,12 +181,12 @@ export { convertToPlainObject };
 export const dropUndefinedKeys = function dropUndefinedKeys(arr) {
   return _dropUndefinedKeys(arr, new Map());
 };
-export const extractExceptionKeysForMessage = function extractExceptionKeysForMessage(arg0) {
-  let num = arg1;
-  if (arg1 === undefined) {
+export const extractExceptionKeysForMessage = function extractExceptionKeysForMessage(name) {
+  let num = maxValueLength;
+  if (maxValueLength === undefined) {
     num = 40;
   }
-  const keys = Object.keys(convertToPlainObject(arg0));
+  const keys = Object.keys(convertToPlainObject(name));
   const sorted = keys.sort();
   const first = keys[0];
   if (first) {
@@ -213,21 +212,20 @@ export const extractExceptionKeysForMessage = function extractExceptionKeysForMe
     return "[object has no keys]";
   }
 };
-export const fill = function fill(arg0, arg1, fn) {
-  if (arg1 in arg0) {
-    const tmp6 = fn(arg0[arg1]);
+export const fill = function fill(GLOBAL_OBJ, fetch, fn) {
+  if (fetch in GLOBAL_OBJ) {
+    const tmp6 = fn(GLOBAL_OBJ[fetch]);
     if (typeof tmp6 === "function") {
       markFunctionWrapped(tmp6, tmp5);
     }
     try {
-      arg0[arg1] = tmp6;
+      GLOBAL_OBJ[fetch] = tmp6;
     } catch (err) {
       if (_mod12796.DEBUG_BUILD) {
-        const logger = tmp7(12797).logger;
+        const logger = _mod12797.logger;
         const _HermesInternal = HermesInternal;
         logger.log("Failed to replace method \"" + tmp3 + "\" in object", tmp2);
       }
-      tmp7 = require;
     }
   }
 };

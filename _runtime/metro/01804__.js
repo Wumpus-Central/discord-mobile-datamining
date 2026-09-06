@@ -8,22 +8,23 @@ import _mod1788 from "module_1788" /* 1788 */;
 import _mod1805 from "module_1805" /* 1805 */;
 import convertLrgbToOklabDefault from "convertLrgbToOklab" /* 1806 */;
 
-const interpolateColorsHSV = function o(arg0, arg1, h, useCorrectedHSVInterpolation) {
+const interpolateColorsHSV = function o(arg0, items, h, useCorrectedHSVInterpolation) {
   useCorrectedHSVInterpolation = useCorrectedHSVInterpolation.useCorrectedHSVInterpolation;
   if (undefined !== useCorrectedHSVInterpolation) {
     if (!useCorrectedHSVInterpolation) {
       const obj = _mod1805;
-      let interpolateResult = obj.interpolate(arg0, arg1, h.h, _mod1805.Extrapolation.CLAMP);
+      let interpolateResult = obj.interpolate(arg0, items, h.h, _mod1805.Extrapolation.CLAMP);
     }
     let tmpResult = _mod1805;
-    const interpolateResult1 = tmpResult.interpolate(arg0, arg1, h.s, _mod1805.Extrapolation.CLAMP);
+    const interpolateResult1 = tmpResult.interpolate(arg0, items, h.s, _mod1805.Extrapolation.CLAMP);
     tmpResult = _mod1805;
-    const interpolateResult2 = tmpResult.interpolate(arg0, arg1, h.v, _mod1805.Extrapolation.CLAMP);
+    const interpolateResult2 = tmpResult.interpolate(arg0, items, h.v, _mod1805.Extrapolation.CLAMP);
     const tmpResult1 = _mod1805;
     const tmpResult2 = _mod1679;
-    return tmpResult2.hsvToColor(interpolateResult, interpolateResult1, interpolateResult2, tmpResult1.interpolate(arg0, arg1, h.a, _mod1805.Extrapolation.CLAMP));
+    return tmpResult2.hsvToColor(interpolateResult, interpolateResult1, interpolateResult2, tmpResult1.interpolate(arg0, items, h.a, _mod1805.Extrapolation.CLAMP));
   }
-  const items = [arg1[0]];
+  items = [];
+  items[0] = items[0];
   h = h.h;
   const items1 = [h[0]];
   let num = 1;
@@ -33,8 +34,8 @@ const interpolateColorsHSV = function o(arg0, arg1, h, useCorrectedHSVInterpolat
       let diff1 = h[num] - h[diff];
       if (h[num] > h[diff]) {
         if (diff1 > 0.5) {
-          items.push(arg1[num]);
-          let arr = items.push(arg1[num] + 0.00001);
+          items.push(items[num]);
+          let arr = items.push(items[num] + 0.00001);
           let arr1 = items1.push(h[num] - 1);
           let arr2 = items1.push(h[num]);
           num = num + 1;
@@ -45,13 +46,13 @@ const interpolateColorsHSV = function o(arg0, arg1, h, useCorrectedHSVInterpolat
       }
       if (h[num] < h[diff]) {
         if (diff1 < -0.5) {
-          let arr3 = items.push(arg1[num]);
-          let arr4 = items.push(arg1[num] + 0.00001);
+          let arr3 = items.push(items[num]);
+          let arr4 = items.push(items[num] + 0.00001);
           let arr5 = items1.push(h[num] + 1);
           let arr6 = items1.push(h[num]);
         }
       }
-      let arr7 = items.push(arg1[num]);
+      let arr7 = items.push(items[num]);
       let arr8 = items1.push(h[num]);
     }
   }
@@ -74,7 +75,7 @@ const fn3 = function r(sum, arg1) {
 fn3.__closure = {};
 fn3.__workletHash = 5856560656141;
 fn3.__initData = { code: "function pnpm_interpolateColorTs3(x,gamma){return Math.round(Math.pow(x,1/gamma)*255);}" };
-const fn4 = function a(arg0, arg1, arg2, gamma) {
+const fn4 = function a(arg0, items, arg2, gamma) {
   gamma = gamma.gamma;
   let num = 2.2;
   if (undefined !== gamma) {
@@ -86,8 +87,8 @@ const fn4 = function a(arg0, arg1, arg2, gamma) {
   let tmp3 = r;
   if (1 !== num) {
     if (typeof fn2 === "function") {
-      if (typeof tmp25 === "function") {
-        if (typeof tmp25 === "function") {
+      if (typeof fn2 === "function") {
+        if (typeof fn2 === "function") {
           mapped = b.map((item) => Math.pow(item / 255, num));
           tmp2 = tmp5;
           tmp3 = tmp4;
@@ -101,24 +102,24 @@ const fn4 = function a(arg0, arg1, arg2, gamma) {
       throw new TypeError("Trying to call a non-function");
     }
   }
-  const interpolateResult = _mod1805.interpolate(arg0, arg1, tmp3, _mod1805.Extrapolation.CLAMP);
-  const interpolateResult1 = _mod1805.interpolate(arg0, arg1, tmp2, _mod1805.Extrapolation.CLAMP);
-  const interpolateResult2 = _mod1805.interpolate(arg0, arg1, mapped, _mod1805.Extrapolation.CLAMP);
-  const interpolateResult3 = _mod1805.interpolate(arg0, arg1, arg2.a, _mod1805.Extrapolation.CLAMP);
+  const interpolateResult = _mod1805.interpolate(arg0, items, tmp3, _mod1805.Extrapolation.CLAMP);
+  const interpolateResult1 = _mod1805.interpolate(arg0, items, tmp2, _mod1805.Extrapolation.CLAMP);
+  const interpolateResult2 = _mod1805.interpolate(arg0, items, mapped, _mod1805.Extrapolation.CLAMP);
+  const interpolateResult3 = _mod1805.interpolate(arg0, items, arg2.a, _mod1805.Extrapolation.CLAMP);
   if (1 === num) {
-    let tmp6Result = tmp6(1679);
+    let tmp6Result = _mod1679;
     let rgbaColorResult = tmp6Result.rgbaColor(interpolateResult, interpolateResult1, interpolateResult2, interpolateResult3);
   } else {
-    tmp6Result = tmp6(1679);
+    tmp6Result = _mod1679;
     if (typeof fn3 === "function") {
       const _Math = Math;
       const _Math2 = Math;
       const rounded = Math.round(255 * Math.pow(interpolateResult, 1 / num));
-      if (typeof tmp28 === "function") {
+      if (typeof fn3 === "function") {
         const _Math3 = Math;
         const _Math4 = Math;
         const rounded1 = Math.round(255 * Math.pow(interpolateResult1, 1 / num));
-        if (typeof tmp28 === "function") {
+        if (typeof fn3 === "function") {
           const _Math5 = Math;
           const _Math6 = Math;
           rgbaColorResult = tmp27(rounded, rounded1, Math.round(255 * Math.pow(interpolateResult2, 1 / num)), interpolateResult3);
@@ -138,14 +139,14 @@ obj = { toLinearSpace: fn2, interpolate: _mod1805.interpolate, Extrapolation: _m
 fn4.__closure = obj;
 fn4.__workletHash = 13883480600753;
 fn4.__initData = { code: "function pnpm_interpolateColorTs4(value,inputRange,colors,options){const{toLinearSpace,interpolate,Extrapolation,rgbaColor,toGammaSpace}=this.__closure;const{gamma=2.2}=options;let{r:outputR,g:outputG,b:outputB}=colors;if(gamma!==1){outputR=toLinearSpace(outputR,gamma);outputG=toLinearSpace(outputG,gamma);outputB=toLinearSpace(outputB,gamma);}const r=interpolate(value,inputRange,outputR,Extrapolation.CLAMP);const g=interpolate(value,inputRange,outputG,Extrapolation.CLAMP);const b=interpolate(value,inputRange,outputB,Extrapolation.CLAMP);const a=interpolate(value,inputRange,colors.a,Extrapolation.CLAMP);if(gamma===1){return rgbaColor(r,g,b,a);}return rgbaColor(toGammaSpace(r,gamma),toGammaSpace(g,gamma),toGammaSpace(b,gamma),a);}" };
-const fn5 = function n(arg0, arg1, l, arg3) {
-  const interpolateResult = _mod1805.interpolate(arg0, arg1, l.l, _mod1805.Extrapolation.CLAMP);
-  const interpolateResult1 = _mod1805.interpolate(arg0, arg1, l.a, _mod1805.Extrapolation.CLAMP);
-  const interpolateResult2 = _mod1805.interpolate(arg0, arg1, l.b, _mod1805.Extrapolation.CLAMP);
+const fn5 = function n(arg0, items, l, arg3) {
+  const interpolateResult = _mod1805.interpolate(arg0, items, l.l, _mod1805.Extrapolation.CLAMP);
+  const interpolateResult1 = _mod1805.interpolate(arg0, items, l.a, _mod1805.Extrapolation.CLAMP);
+  const interpolateResult2 = _mod1805.interpolate(arg0, items, l.b, _mod1805.Extrapolation.CLAMP);
   const convert = convertLrgbToOklabDefault.oklab.convert;
-  const interpolateResult3 = _mod1805.interpolate(arg0, arg1, l.alpha, _mod1805.Extrapolation.CLAMP);
-  ({ r, g, b, alpha } = convert.toRgb({ l: interpolateResult, a: interpolateResult1, b: interpolateResult2, alpha: _mod1805.interpolate(arg0, arg1, l.alpha, _mod1805.Extrapolation.CLAMP) }));
-  const toRgbResult = convert.toRgb({ l: interpolateResult, a: interpolateResult1, b: interpolateResult2, alpha: _mod1805.interpolate(arg0, arg1, l.alpha, _mod1805.Extrapolation.CLAMP) });
+  const interpolateResult3 = _mod1805.interpolate(arg0, items, l.alpha, _mod1805.Extrapolation.CLAMP);
+  ({ r, g, b, alpha } = convert.toRgb({ l: interpolateResult, a: interpolateResult1, b: interpolateResult2, alpha: _mod1805.interpolate(arg0, items, l.alpha, _mod1805.Extrapolation.CLAMP) }));
+  const toRgbResult = convert.toRgb({ l: interpolateResult, a: interpolateResult1, b: interpolateResult2, alpha: _mod1805.interpolate(arg0, items, l.alpha, _mod1805.Extrapolation.CLAMP) });
   return _mod1679.rgbaColor(r, g, b, alpha);
 };
 obj = { interpolate: _mod1805.interpolate, Extrapolation: _mod1805.Extrapolation, culori: convertLrgbToOklabDefault, rgbaColor: _mod1679.rgbaColor };
@@ -158,22 +159,21 @@ const fn6 = function l(arg0, fn) {
   const ch3 = [];
   const alpha = [];
   for (let num = 0; num < arg0.length; num = num + 1) {
-    let tmp = require;
     let obj = _mod1679;
     let processColorResult = obj.processColor(arg0[num]);
     if (typeof processColorResult === "number") {
       obj = { r: null, g: null, b: null };
-      let tmpResult = tmp(1679);
+      let tmpResult = _mod1679;
       obj.r = tmpResult.red(processColorResult);
-      tmpResult = tmp(1679);
+      tmpResult = _mod1679;
       obj.g = tmpResult.green(processColorResult);
-      let tmpResult1 = tmp(1679);
+      let tmpResult1 = _mod1679;
       obj.b = tmpResult1.blue(processColorResult);
       let tmp5 = fn(obj);
       let arr = ch1.push(tmp5.ch1);
       arr = ch2.push(tmp5.ch2);
       let arr1 = ch3.push(tmp5.ch3);
-      let tmpResult2 = tmp(1679);
+      let tmpResult2 = _mod1679;
       let arr2 = alpha.push(tmpResult2.opacity(processColorResult));
     }
   }
@@ -270,7 +270,7 @@ let obj3 = { RGB: 0, [0]: "RGB", HSV: 1, [1]: "HSV", LAB: 2, [2]: "LAB" };
 export const Extrapolate = _mod1805.Extrapolation;
 export { interpolateColor };
 export const ColorSpace = obj3;
-export const useInterpolateConfig = function useInterpolateConfig(inputRange, outputRange, arg2, UNDETERMINED) {
+export const useInterpolateConfig = function useInterpolateConfig(inputRange, outputRange, arg2) {
   let RGB = arg2;
   if (arg2 === undefined) {
     RGB = obj3.RGB;

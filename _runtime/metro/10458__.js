@@ -79,12 +79,12 @@ const items = [
       }
       const formatted1 = arg1[2].toLowerCase();
       if (undefined !== ENWeekdayParser(10431).WEEKDAY_DICTIONARY[formatted1]) {
-        let sum = tmp3(10431).WEEKDAY_DICTIONARY[formatted1];
+        let sum = ENWeekdayParser(10431).WEEKDAY_DICTIONARY[formatted1];
       } else if ("weekend" == formatted1) {
         if ("last" == str2) {
-          let SATURDAY = tmp3(10437).Weekday.SUNDAY;
+          let SATURDAY = ENWeekdayParser(10437).Weekday.SUNDAY;
         } else {
-          SATURDAY = tmp3(10437).Weekday.SATURDAY;
+          SATURDAY = ENWeekdayParser(10437).Weekday.SATURDAY;
         }
         sum = SATURDAY;
       } else if ("weekday" != formatted1) {
@@ -93,16 +93,16 @@ const items = [
         reference = reference.reference;
         const dateWithAdjustedTimezone = reference.getDateWithAdjustedTimezone();
         const day = dateWithAdjustedTimezone.getDay();
-        if (day != tmp3(10437).Weekday.SUNDAY) {
-          if (day != tmp3(10437).Weekday.SATURDAY) {
+        if (day != ENWeekdayParser(10437).Weekday.SUNDAY) {
+          if (day != ENWeekdayParser(10437).Weekday.SATURDAY) {
             const diff = day - 1;
             sum = ("last" == str2 ? diff - 1 : diff + 1) % 5 + 1;
           }
         }
         if ("last" == str2) {
-          let MONDAY = tmp3(10437).Weekday.FRIDAY;
+          let MONDAY = ENWeekdayParser(10437).Weekday.FRIDAY;
         } else {
-          MONDAY = tmp3(10437).Weekday.MONDAY;
+          MONDAY = ENWeekdayParser(10437).Weekday.MONDAY;
         }
         sum = MONDAY;
       }

@@ -167,13 +167,13 @@ class KeyboardToolbar {
           type = type.type;
           if (type === Background.Background) {
             closure_13 = type;
-          } else if (type === tmp(1857).Content) {
+          } else if (type === Background.Content) {
             closure_11 = type;
-          } else if (type === tmp(1857).Prev) {
+          } else if (type === Background.Prev) {
             closure_9 = type;
-          } else if (type === tmp(1857).Next) {
+          } else if (type === Background.Next) {
             closure_10 = type;
-          } else if (type === tmp(1857).Done) {
+          } else if (type === Background.Done) {
             closure_12 = type;
           }
         }

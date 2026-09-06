@@ -29,10 +29,10 @@ let fn = () => {
             if (closure_2_1[closure_2_0[closure_1_0][1][arg0] || arg0]) {
               tmp3 = tmp3[tmp2];
               let _exports3 = tmp3.exports;
-            } else if (tmp[tmp2]) {
+            } else if (closure_2_0[tmp2]) {
               let obj = { exports: {} };
               tmp3[tmp2] = obj;
-              let first = tmp[tmp2][0];
+              let first = closure_2_0[tmp2][0];
               let call = first.call;
               let _exports = obj.exports;
               let fn = (arg0) => {
@@ -41,10 +41,10 @@ let fn = () => {
                 if (closure_2_1[closure_2_0[closure_1_0][1][arg0] || arg0]) {
                   tmp3 = tmp3[tmp2];
                   let _exports3 = tmp3.exports;
-                } else if (tmp[tmp2]) {
+                } else if (closure_2_0[tmp2]) {
                   let obj = { exports: {} };
                   tmp3[tmp2] = obj;
-                  let first = tmp[tmp2][0];
+                  let first = closure_2_0[tmp2][0];
                   let call = first.call;
                   let _exports = obj.exports;
                   let fn = (arg0) => {
@@ -53,17 +53,17 @@ let fn = () => {
                     if (closure_2_1[closure_2_0[closure_1_0][1][arg0] || arg0]) {
                       tmp3 = tmp3[tmp2];
                       let _exports3 = tmp3.exports;
-                    } else if (tmp[tmp2]) {
+                    } else if (closure_2_0[tmp2]) {
                       let obj = { exports: {} };
                       tmp3[tmp2] = obj;
-                      let first = tmp[tmp2][0];
+                      let first = closure_2_0[tmp2][0];
                       let call = first.call;
                       let _exports = obj.exports;
                       let fn = () => { ... };
                       let _exports2 = obj.exports;
                       let firstResult = closure_2_2;
                       if (typeof call !== "unknown") {
-                        call(_exports, fn, obj, _exports2, tmp13, tmp, tmp3, firstResult);
+                        call(_exports, fn, obj, _exports2, closure_1_0, closure_2_0, tmp3, firstResult);
                       }
                     } else {
                       let tmp4 = typeof closure_2_0 === "function";
@@ -82,12 +82,12 @@ let fn = () => {
                       }
                       return tmp5Result;
                     }
-                    firstResult = first(fn, obj, _exports2, tmp13, tmp, tmp3, firstResult);
+                    firstResult = first(fn, obj, _exports2, closure_1_0, closure_2_0, tmp3, firstResult);
                   };
                   let _exports2 = obj.exports;
                   let firstResult = closure_2_2;
                   if (typeof call !== "unknown") {
-                    call(_exports, fn, obj, _exports2, tmp13, tmp, tmp3, firstResult);
+                    call(_exports, fn, obj, _exports2, closure_1_0, closure_2_0, tmp3, firstResult);
                   }
                 } else {
                   let tmp4 = typeof closure_2_0 === "function";
@@ -106,12 +106,12 @@ let fn = () => {
                   }
                   return tmp5Result;
                 }
-                firstResult = first(fn, obj, _exports2, tmp13, tmp, tmp3, firstResult);
+                firstResult = first(fn, obj, _exports2, closure_1_0, closure_2_0, tmp3, firstResult);
               };
               let _exports2 = obj.exports;
               let firstResult = closure_2_2;
               if (typeof call !== "unknown") {
-                call(_exports, fn, obj, _exports2, tmp13, tmp, tmp3, firstResult);
+                call(_exports, fn, obj, _exports2, closure_1_0, closure_2_0, tmp3, firstResult);
               }
             } else {
               let tmp4 = typeof closure_2_0 === "function";
@@ -130,7 +130,7 @@ let fn = () => {
               }
               return tmp5Result;
             }
-            firstResult = first(fn, obj, _exports2, tmp13, tmp, tmp3, firstResult);
+            firstResult = first(fn, obj, _exports2, closure_1_0, closure_2_0, tmp3, firstResult);
           };
           _exports2 = obj.exports;
           firstResult = _exports;
@@ -173,7 +173,7 @@ let fn = () => {
       if (!dependencyMap[arg0]) {
         if (closure_0[arg0]) {
           const obj = { exports: {} };
-          tmp[arg0] = obj;
+          dependencyMap[arg0] = obj;
           const first = tmp2[arg0][0];
           const call = first.call;
           _exports = obj.exports;
@@ -183,10 +183,10 @@ let fn = () => {
             if (closure_2_1[closure_2_0[closure_1_0][1][arg0] || arg0]) {
               tmp3 = tmp3[tmp2];
               let _exports3 = tmp3.exports;
-            } else if (tmp[tmp2]) {
+            } else if (closure_2_0[tmp2]) {
               let obj = { exports: {} };
               tmp3[tmp2] = obj;
-              let first = tmp[tmp2][0];
+              let first = closure_2_0[tmp2][0];
               let call = first.call;
               let _exports = obj.exports;
               let fn = (arg0) => {
@@ -195,17 +195,17 @@ let fn = () => {
                 if (closure_2_1[closure_2_0[closure_1_0][1][arg0] || arg0]) {
                   tmp3 = tmp3[tmp2];
                   let _exports3 = tmp3.exports;
-                } else if (tmp[tmp2]) {
+                } else if (closure_2_0[tmp2]) {
                   let obj = { exports: {} };
                   tmp3[tmp2] = obj;
-                  let first = tmp[tmp2][0];
+                  let first = closure_2_0[tmp2][0];
                   let call = first.call;
                   let _exports = obj.exports;
                   let fn = () => { ... };
                   let _exports2 = obj.exports;
                   let firstResult = closure_2_2;
                   if (typeof call !== "unknown") {
-                    call(_exports, fn, obj, _exports2, tmp13, tmp, tmp3, firstResult);
+                    call(_exports, fn, obj, _exports2, closure_1_0, closure_2_0, tmp3, firstResult);
                   }
                 } else {
                   let tmp4 = typeof closure_2_0 === "function";
@@ -224,12 +224,12 @@ let fn = () => {
                   }
                   return tmp5Result;
                 }
-                firstResult = first(fn, obj, _exports2, tmp13, tmp, tmp3, firstResult);
+                firstResult = first(fn, obj, _exports2, closure_1_0, closure_2_0, tmp3, firstResult);
               };
               let _exports2 = obj.exports;
               let firstResult = closure_2_2;
               if (typeof call !== "unknown") {
-                call(_exports, fn, obj, _exports2, tmp13, tmp, tmp3, firstResult);
+                call(_exports, fn, obj, _exports2, closure_1_0, closure_2_0, tmp3, firstResult);
               }
             } else {
               let tmp4 = typeof closure_2_0 === "function";
@@ -248,13 +248,13 @@ let fn = () => {
               }
               return tmp5Result;
             }
-            firstResult = first(fn, obj, _exports2, tmp13, tmp, tmp3, firstResult);
+            firstResult = first(fn, obj, _exports2, closure_1_0, closure_2_0, tmp3, firstResult);
           };
           const _exports2 = obj.exports;
           if (typeof call === "unknown") {
-            first(fn, obj, _exports2, tmp12, tmp2, tmp, tmp13);
+            first(fn, obj, _exports2, tmp12, tmp2, dependencyMap, closure_2);
           } else {
-            call(_exports, fn, obj, _exports2, tmp12, tmp2, tmp, tmp13);
+            call(_exports, fn, obj, _exports2, tmp12, tmp2, dependencyMap, closure_2);
           }
         } else {
           let tmp3 = typeof fn === "function";
@@ -2260,7 +2260,7 @@ let fn = () => {
       arg2.dispatch = function dispatch(arg0, arg1, arg2, arg3, arg4) {
         let length;
         if (closure_0.subscribers[arg0]) {
-          if (tmp.subscribers[arg0][arg1]) {
+          if (closure_0.subscribers[arg0][arg1]) {
             const items = [];
             if (arg2) {
               items.push(arg2);
@@ -2269,7 +2269,7 @@ let fn = () => {
               items.push(arg3);
             }
             let num = 0;
-            if (0 < tmp.subscribers[arg0][arg1].length) {
+            if (0 < closure_0.subscribers[arg0][arg1].length) {
               do {
                 let obj = closure_0.subscribers[arg0][arg1][num];
                 let applyResult = obj.apply(arg4, items);
@@ -2379,12 +2379,12 @@ let fn = () => {
       closure_0 = fn("./");
       arg2.onMessage = function onMessage(data) {
         if (!closure_0.isntString(data.data)) {
-          const unpackPayloadResult = obj.unpackPayload(data);
+          const unpackPayloadResult = closure_0.unpackPayload(data);
           if (unpackPayloadResult) {
             ({ eventData, reply } = unpackPayloadResult);
-            obj.dispatch("*", unpackPayloadResult.event, eventData, reply, data);
-            obj.dispatch(data.origin, unpackPayloadResult.event, eventData, reply, data);
-            const result = obj.broadcastToChildWindows(data.data, unpackPayloadResult.origin, data.source);
+            closure_0.dispatch("*", unpackPayloadResult.event, eventData, reply, data);
+            closure_0.dispatch(data.origin, unpackPayloadResult.event, eventData, reply, data);
+            const result = closure_0.broadcastToChildWindows(data.data, unpackPayloadResult.origin, data.source);
           }
         }
       };
@@ -2510,9 +2510,8 @@ let fn = () => {
                 if (closure_1_1) {
                   const packagePayloadResult = closure_0.packagePayload(reply, closure_1_0, eventData);
                   if (packagePayloadResult) {
-                    closure_1_1.postMessage(packagePayloadResult, tmp4);
+                    closure_1_1.postMessage(packagePayloadResult, closure_1_0);
                   }
-                  tmp4 = closure_1_0;
                 }
               };
             }
@@ -3121,9 +3120,8 @@ let fn = () => {
                   result.isDebug = true;
                 }
                 result.authorization = authorization.authorization;
-                obj = Object.create(Client.prototype);
                 new Client(result);
-                return obj;
+                return Object.create(Client.prototype);
               });
               tmp6 = closure_22;
               closure_22[global.authorization] = nextPromise;
@@ -3469,15 +3467,15 @@ let fn = () => {
         if (obj2) {
           requestObject.onreadystatechange = () => {
             if (4 === requestObject.readyState) {
-              if (0 === tmp4.status) {
+              if (0 === requestObject.status) {
                 if (BooleanResult) {
                   delete tmp2[tmp];
                   _requestWithRetry(closure_0, closure_1, closure_2);
                 }
               }
-              data = determineStatusResult(tmp4.responseText);
+              data = determineStatusResult(requestObject.responseText);
               closure_4 = obj2.adaptResponseBody(data);
-              determineStatusResult = obj2.determineStatus(tmp4.status, data);
+              determineStatusResult = obj2.determineStatus(requestObject.status, data);
               if (determineStatusResult < 400) {
                 if (determineStatusResult >= 200) {
                   closure_9(null, closure_4, determineStatusResult);
@@ -3773,9 +3771,9 @@ let fn = () => {
               const items = ["commercial", "debit", "durbinRegulated", "healthcare", "payroll", "prepaid"];
               const item = items.forEach((item) => {
                 if (binData[item]) {
-                  tmp[item] = closure_2[tmp[item]];
+                  binData[item] = closure_2[binData[item]];
                 } else {
-                  tmp[item] = "Unknown";
+                  binData[item] = "Unknown";
                 }
               });
               const items1 = ["issuingBank", "countryOfIssuance", "productId"];
@@ -3840,9 +3838,9 @@ let fn = () => {
               const items = ["commercial", "debit", "durbinRegulated", "healthcare", "payroll", "prepaid"];
               const item = items.forEach((item) => {
                 if (binData[item]) {
-                  tmp[item] = closure_2[tmp[item]];
+                  binData[item] = closure_2[binData[item]];
                 } else {
-                  tmp[item] = "Unknown";
+                  binData[item] = "Unknown";
                 }
               });
               const items1 = ["issuingBank", "countryOfIssuance", "productId"];
@@ -3899,17 +3897,17 @@ let fn = () => {
           });
           if (!obj) {
             obj = { field, fieldErrors: [] };
-            fieldErrors.push(obj);
+            arr = fieldErrors.push(obj);
           }
           addFieldError(arr.slice(1), message, obj.fieldErrors);
         } else {
           obj = { code: tmp, field, message: message.message };
-          fieldErrors.push(obj);
+          arr = fieldErrors.push(obj);
         }
       }
       module.exports = function errorResponseAdapter(errors) {
         let message = errors;
-        const tmp = errors.errors && message.errors[0] && message.errors[0].extensions && message.errors[0].extensions.errorClass;
+        let tmp = errors.errors && message.errors[0] && message.errors[0].extensions && message.errors[0].extensions.errorClass;
         if ("VALIDATION" === tmp) {
           errors = message.errors;
           let items = [];
@@ -3957,6 +3955,7 @@ let fn = () => {
                 arr2 = arr2.push(obj);
               }
             }
+            tmp = extensions.extensions && extensions.extensions.inputPath;
           });
           if (0 === items.length) {
             let obj = { error: null };
@@ -4323,16 +4322,16 @@ let fn = () => {
             let tmp = closure_2_2(item);
             if (typeof closure_1_0[item] === "object") {
               closure_0 = tmp6;
-              obj = {};
               let _Object = Object;
               let keys = Object.keys(tmp6);
               item = keys.forEach(() => { ... });
-              closure_1_1[tmp] = obj;
-            } else if (typeof tmp2[item] === "number") {
+              closure_1_1[tmp] = {};
+              obj = {};
+            } else if (typeof closure_1_0[item] === "number") {
               let _String = String;
-              closure_1_1[tmp] = String(tmp2[item]);
+              closure_1_1[tmp] = String(closure_1_0[item]);
             } else {
-              closure_1_1[tmp] = tmp2[item];
+              closure_1_1[tmp] = closure_1_0[item];
             }
           });
           obj = { clientSdkMetadata: this._clientSdkMetadata };
@@ -4466,6 +4465,7 @@ let fn = () => {
         method.timeout = num;
         method.data = method.data || {};
         closure_1.request(method, closure_0(prototype));
+        const tmpResult = closure_0(prototype);
       };
     },
     { "../../lib/once": 176, "./ajax-driver": 97 }
@@ -4700,7 +4700,6 @@ let fn = () => {
               }
               deviceData = {};
             });
-            const tmp = closure_2;
             closure_2._createPromise = obj.then((getConfiguration) => {
               const configuration = getConfiguration.getConfiguration();
               if (true === closure_0.kount) {
@@ -4724,10 +4723,10 @@ let fn = () => {
               const configuration = getConfiguration.getConfiguration();
               let correlationId = closure_0.riskCorrelationId;
               if (!correlationId) {
-                correlationId = tmp3.clientMetadataId;
+                correlationId = closure_0.clientMetadataId;
               }
               if (!correlationId) {
-                correlationId = tmp3.correlationId;
+                correlationId = closure_0.correlationId;
               }
               return closure_2_1.setup({ sessionId: correlationId, clientSessionId: configuration.analyticsMetadata.sessionId, environment: configuration.gatewayConfiguration.environment }).then(() => { ... });
             }).then(() => {
@@ -4755,7 +4754,7 @@ let fn = () => {
             });
             let _createPromise = closure_2;
             if (closure_2._instantiatedWithAClient) {
-              _createPromise = tmp._createPromise;
+              _createPromise = closure_2._createPromise;
             }
             return _createPromise;
           });
@@ -4873,8 +4872,8 @@ let fn = () => {
           if (null == arg0) {
             obj = {};
           }
-          obj = Object.create(obj2.prototype);
-          const cachedDeviceData = obj2.getCachedDeviceData(obj.merchantId);
+          obj = Object.create(Kount.prototype);
+          const cachedDeviceData = Kount.getCachedDeviceData(obj.merchantId);
           if (cachedDeviceData) {
             obj.deviceData = cachedDeviceData;
             obj._isCached = true;
@@ -4884,7 +4883,7 @@ let fn = () => {
             random.startCollectors();
             obj._deviceSessionId = obj._generateDeviceSessionId();
             obj.deviceData = obj._getDeviceData();
-            obj2.setCachedDeviceData(obj.merchantId, obj.deviceData);
+            Kount.setCachedDeviceData(obj.merchantId, obj.deviceData);
             obj._iframe = obj._setupIFrame();
           }
           return obj;
@@ -5504,7 +5503,7 @@ let fn = () => {
           const sum = h + bitArray2.bitLength(toBitsResult);
           this.h = sum;
           if (9007199254740991 < sum) {
-            const invalid = new tmp2.exception.invalid("Cannot hash more than 2^53 - 1 bits");
+            const invalid = new obj.exception.invalid("Cannot hash more than 2^53 - 1 bits");
             throw invalid;
           } else {
             const _Uint32Array2 = Uint32Array;
@@ -5535,7 +5534,6 @@ let fn = () => {
             }
             return self;
           }
-          tmp2 = obj;
         },
         finalize() {
           let length;
@@ -6018,42 +6016,42 @@ let fn = () => {
             a.loadTimeCollector = () => {
               const apply = closure_1.apply;
               if (typeof apply === "unknown") {
-                HermesBuiltin.applyArguments(tmp2);
+                HermesBuiltin.applyArguments(self);
               } else {
-                apply(tmp2, arguments);
+                apply(self, arguments);
               }
             };
             a.mouseCollector = () => {
               const apply = closure_1.apply;
               if (typeof apply === "unknown") {
-                HermesBuiltin.applyArguments(tmp2);
+                HermesBuiltin.applyArguments(self);
               } else {
-                apply(tmp2, arguments);
+                apply(self, arguments);
               }
             };
             a.keyboardCollector = () => {
               const apply = closure_1.apply;
               if (typeof apply === "unknown") {
-                HermesBuiltin.applyArguments(tmp2);
+                HermesBuiltin.applyArguments(self);
               } else {
-                apply(tmp2, arguments);
+                apply(self, arguments);
               }
             };
             a.accelerometerCollector = () => {
               const apply = closure_1.apply;
               if (typeof apply === "unknown") {
-                HermesBuiltin.applyArguments(tmp2);
+                HermesBuiltin.applyArguments(self);
               } else {
-                apply(tmp2, arguments);
+                apply(self, arguments);
               }
             };
             const V = self.X;
             a.touchCollector = () => {
               const apply = closure_1.apply;
               if (typeof apply === "unknown") {
-                HermesBuiltin.applyArguments(tmp2);
+                HermesBuiltin.applyArguments(self);
               } else {
-                apply(tmp2, arguments);
+                apply(self, arguments);
               }
             };
             self.a = a;
@@ -6579,7 +6577,7 @@ let fn = () => {
               let obj = { type: constants.HOSTED_FIELDS_ATTRIBUTE_VALUE_NOT_ALLOWED.type, code: constants.HOSTED_FIELDS_ATTRIBUTE_VALUE_NOT_ALLOWED.code, message: `Value "${str}" is not allowed for "${key10009}" attribute.` };
               let tmp7 = new closure_0(obj);
             }
-          } else if ("string" === tmp[key10009]) {
+          } else if ("string" === allowedAttributes[key10009]) {
             let tmp13 = typeof str === "string";
             if (typeof str !== "string") {
               tmp13 = typeof str === "number";
@@ -6587,7 +6585,7 @@ let fn = () => {
             let flag = tmp13;
           } else {
             flag = false;
-            if ("boolean" === tmp[key10009]) {
+            if ("boolean" === allowedAttributes[key10009]) {
               const _String = String;
               let tmp12 = "true" === String(str);
               if (!tmp12) {
@@ -7982,7 +7980,7 @@ let fn = () => {
                         }
                       }
                     }
-                    items.push(reduced);
+                    arr = items.push(reduced);
                   });
                   reduced = items;
                 } else {
@@ -7994,9 +7992,8 @@ let fn = () => {
                       let str = item.replace(/([a-z\d])([A-Z])/g, "$1_$2");
                       let formatted = item.replace(/([a-z\d])([A-Z])/g, "$1_$2").replace(/([A-Z]+)([A-Z][a-z\d]+)/g, "$1_$2").toLowerCase();
                       if (typeof closure_1_0[item] === "object") {
-                        arr = tmp2[item];
                         items = undefined;
-                        if (null === arr) {
+                        if (null === closure_1_0[item]) {
                           items = null;
                           let reduced = null;
                           acc[formatted] = reduced;
@@ -8016,14 +8013,15 @@ let fn = () => {
                         item = arr.forEach(() => { ... });
                         reduced = items;
                       } else {
-                        acc[formatted] = tmp2[item];
+                        acc[formatted] = closure_1_0[item];
                         return acc;
                       }
+                      let str2 = item.replace(/([a-z\d])([A-Z])/g, "$1_$2").replace(/([A-Z]+)([A-Z][a-z\d]+)/g, "$1_$2");
                     }, {});
                   }
                 }
               }
-              items.push(reduced);
+              arr = items.push(reduced);
             });
             reduced = items;
           } else {
@@ -8035,9 +8033,8 @@ let fn = () => {
                 let str = item.replace(/([a-z\d])([A-Z])/g, "$1_$2");
                 let formatted = item.replace(/([a-z\d])([A-Z])/g, "$1_$2").replace(/([A-Z]+)([A-Z][a-z\d]+)/g, "$1_$2").toLowerCase();
                 if (typeof closure_1_0[item] === "object") {
-                  arr = tmp2[item];
                   items = undefined;
-                  if (null === arr) {
+                  if (null === closure_1_0[item]) {
                     items = null;
                     let reduced = null;
                     acc[formatted] = reduced;
@@ -8052,9 +8049,8 @@ let fn = () => {
                           let str = item.replace(/([a-z\d])([A-Z])/g, "$1_$2");
                           let formatted = item.replace(/([a-z\d])([A-Z])/g, "$1_$2").replace(/([A-Z]+)([A-Z][a-z\d]+)/g, "$1_$2").toLowerCase();
                           if (typeof closure_1_0[item] === "object") {
-                            arr = tmp2[item];
                             items = undefined;
-                            if (null === arr) {
+                            if (null === closure_1_0[item]) {
                               items = null;
                               let reduced = null;
                               acc[formatted] = reduced;
@@ -8074,9 +8070,10 @@ let fn = () => {
                             item = arr.forEach(() => { ... });
                             reduced = items;
                           } else {
-                            acc[formatted] = tmp2[item];
+                            acc[formatted] = closure_1_0[item];
                             return acc;
                           }
+                          let str2 = item.replace(/([a-z\d])([A-Z])/g, "$1_$2").replace(/([A-Z]+)([A-Z][a-z\d]+)/g, "$1_$2");
                         }, {});
                       }
                       items = reduced;
@@ -8103,13 +8100,14 @@ let fn = () => {
                         }
                       }
                     }
-                    items.push(reduced);
+                    arr = items.push(reduced);
                   });
                   reduced = items;
                 } else {
-                  acc[formatted] = tmp2[item];
+                  acc[formatted] = closure_1_0[item];
                   return acc;
                 }
+                let str2 = item.replace(/([a-z\d])([A-Z])/g, "$1_$2").replace(/([A-Z]+)([A-Z][a-z\d]+)/g, "$1_$2");
               }, {});
             }
           }
@@ -8793,6 +8791,7 @@ let fn = () => {
               }
             }
             closure_0(new closure_0(_self.FRAME_SERVICE_FRAME_CLOSED));
+            const tmp5 = new closure_0(_self.FRAME_SERVICE_FRAME_CLOSED);
           };
           return;
         }
@@ -9024,7 +9023,7 @@ let fn = () => {
             const _JSON2 = JSON;
             ({ source: obj17.source, integration: obj17.integration, sessionId: obj17.sessionId, platform: obj17.platform } = gatewayConfiguration.analyticsMetadata);
             obj13["braintree:metadata"] = JSON.stringify({ source: null, integration: null, sessionId: null, version: "3.112.1", platform: null });
-            obj11.parameters = tmp3({}, obj13, obj12);
+            obj11.parameters = assign({}, obj13, obj12);
             obj6.tokenizationSpecification = obj11;
             const prop = obj.allowedPaymentMethods;
             prop.push(obj6);
@@ -9032,7 +9031,6 @@ let fn = () => {
             const obj14 = { source: null, integration: null, sessionId: null, version: "3.112.1", platform: null };
           }
           const obj4 = { source: null, integration: null, sessionId: null, version: "3.112.1", platform: null };
-          tmp3 = assign;
         } else {
           const obj15 = { environment: str, allowedPaymentMethods: ["CARD", "TOKENIZED_CARD"], paymentMethodTokenizationParameters: null, cardRequirements: null };
           const obj16 = { tokenizationType: "PAYMENT_GATEWAY", parameters: null };
@@ -9192,14 +9190,13 @@ let fn = () => {
       function stringify(obj, arg1) {
         const items = [];
         for (const key10012 in arg0) {
-          let tmp8 = key10012;
           if (!arg0.hasOwnProperty(key10012)) {
             continue;
           } else {
             let tmp = arg0[key10012];
             if (!arg1) {
               if (typeof tmp === "object") {
-                let arr = items.push(stringify(tmp, tmp8));
+                let arr = items.push(stringify(tmp, key10012));
                 continue;
               } else {
                 let _encodeURIComponent = encodeURIComponent;
@@ -10049,8 +10046,8 @@ let fn = () => {
               let rejectResult = Promise.reject(tmp12);
             } else {
               client.sendEvent(client, "local-payment.initialized");
-              const tokenizer = new closure_4(tmp);
-              if (tmp.redirectUrl) {
+              const tokenizer = new closure_4(client);
+              if (client.redirectUrl) {
                 const _window = window;
                 const tmp5 = parse(window.location.href);
                 if (tmp5.token) {
@@ -11454,7 +11451,7 @@ let fn = () => {
                   const tmp22 = new closure_1(constants.PAYPAL_TOKENIZATION_REQUEST_ACTIVE);
                   fn(tmp22);
                 } else {
-                  obj._authorizationInProgress = true;
+                  self._authorizationInProgress = true;
                   const _window = window;
                   if (!window.popupBridge) {
                     closure_8.sendEvent(_client, "paypal.tokenization.opened");
@@ -11465,10 +11462,10 @@ let fn = () => {
                   if (true === offerCredit.offerPayLater) {
                     closure_8.sendEvent(_client, "paypal.paylater.offered");
                   }
-                  obj._navigateFrameToAuth(offerCredit).catch(fn);
-                  const _frameService = obj._frameService;
-                  _frameService.open({}, obj._createFrameServiceCallback(offerCredit, arg0, fn));
-                  const _navigateFrameToAuthResult = obj._navigateFrameToAuth(offerCredit);
+                  self._navigateFrameToAuth(offerCredit).catch(fn);
+                  const _frameService = self._frameService;
+                  _frameService.open({}, self._createFrameServiceCallback(offerCredit, arg0, fn));
+                  const _navigateFrameToAuthResult = self._navigateFrameToAuth(offerCredit);
                 }
               });
               tmp13 = promise;
@@ -11526,6 +11523,7 @@ let fn = () => {
             }
             closure_8.sendEvent(_client, "paypal.tokenization.closed-popupbridge.by-user");
             closure_2(new closure_1(constants.PAYPAL_POPUP_CLOSED));
+            const tmp6 = new closure_1(constants.PAYPAL_POPUP_CLOSED);
           }) : ((code, arg1) => {
             let obj = self;
             self._authorizationInProgress = false;
@@ -11569,11 +11567,11 @@ let fn = () => {
             result = self._formatTokenizePayload(result);
             sendEvent = closure_8.sendEvent;
             if (window.popupBridge) {
-              sendEvent(tmp4, "paypal.tokenization.success-popupbridge");
-              let tmp6 = tmp4;
+              sendEvent(_client, "paypal.tokenization.success-popupbridge");
+              let tmp6 = _client;
             } else {
-              sendEvent(tmp4, "paypal.tokenization.success");
-              tmp6 = tmp4;
+              sendEvent(_client, "paypal.tokenization.success");
+              tmp6 = _client;
             }
             if (result.creditFinancingOffered) {
               closure_8.sendEvent(tmp6, "paypal.credit.accepted");
@@ -11585,9 +11583,9 @@ let fn = () => {
           return nextPromise.catch((error) => {
             sendEvent = closure_8.sendEvent;
             if (window.popupBridge) {
-              sendEvent(tmp2, "paypal.tokenization.failed-popupbridge");
+              sendEvent(_client, "paypal.tokenization.failed-popupbridge");
             } else {
-              sendEvent(tmp2, "paypal.tokenization.failed");
+              sendEvent(_client, "paypal.tokenization.failed");
             }
             const _frameService = self._frameService;
             _frameService.close();
@@ -11790,8 +11788,8 @@ let fn = () => {
               const tmp15 = new closure_4(constants.PAYPAL_NOT_ENABLED);
               let rejectResult = Promise.reject(tmp15);
             } else {
-              client.sendEvent(tmp.client, "paypal.initialized");
-              const obj = new closure_6(tmp);
+              client.sendEvent(client.client, "paypal.initialized");
+              const obj = new closure_6(client);
               rejectResult = obj._initialize();
             }
             return rejectResult;
@@ -12122,9 +12120,9 @@ let fn = () => {
           }).then((result) => {
             closure_0 = result;
             if (success.success) {
-              if ("true" === tmp.success) {
-                if (tmp.cart_id) {
-                  closure_0 = assign(closure_0, tmp);
+              if ("true" === success.success) {
+                if (success.cart_id) {
+                  closure_0 = assign(closure_0, success);
                   result = closure_7.handleApprovalForFullPageRedirect(closure_0.client, closure_0);
                   let catchPromise = result.then((tokenizePayload) => {
                     closure_0.tokenizePayload = tokenizePayload;
@@ -13329,7 +13327,7 @@ let fn = () => {
       handler = global("../../lib/methods");
       closure_1 = global("../../lib/convert-methods-to-error");
       const globalResult1 = global("@braintree/event-emitter");
-      closure_3 = global("./frameworks");
+      dependencyMap = global("./frameworks");
       const child = globalResult1.createChild(ThreeDSecure);
       module.exports = global("@braintree/wrap-promise").wrapPrototype(ThreeDSecure);
     },
@@ -13357,10 +13355,7 @@ let fn = () => {
             if ("1" !== StringResult) {
               if ("2" !== StringResult) {
                 if ("2-cardinal-modal" !== StringResult) {
-                  if ("2-bootstrap3-modal" === StringResult) {
-                    let str3 = "bootstrap3-modal";
-                  } else {
-                    str3 = "inline-iframe";
+                  if ("2-bootstrap3-modal" !== StringResult) {
                     if ("2-inline-iframe" !== StringResult) {
                       let obj = { code: constants.THREEDS_UNRECOGNIZED_VERSION.code, type: constants.THREEDS_UNRECOGNIZED_VERSION.type, message: `Version \`${version.version}\` is not a recognized version. You may need to update the version of your Braintree SDK to support this version.` };
                       let tmp7 = new closure_5(obj);
@@ -13399,14 +13394,14 @@ let fn = () => {
                       const tmp11 = gatewayConfiguration.threeDSecure && gatewayConfiguration.threeDSecure.cardinalAuthenticationJWT;
                     }
                     if (!tmp10) {
-                      closure_2_6.sendEvent(tmp3.client, "three-d-secure.initialization.failed.missing-cardinalAuthenticationJWT");
+                      closure_2_6.sendEvent(closure_0.client, "three-d-secure.initialization.failed.missing-cardinalAuthenticationJWT");
                       THREEDS_NOT_ENABLED = constants.THREEDS_NOT_ENABLED_FOR_V2;
                     }
                     if (THREEDS_NOT_ENABLED) {
                       const tmp22 = new closure_2_5(THREEDS_NOT_ENABLED);
                       rejectResult = Promise.reject(tmp22);
                     } else {
-                      closure_2_6.sendEvent(tmp3.client, "three-d-secure.initialized");
+                      closure_2_6.sendEvent(closure_0.client, "three-d-secure.initialized");
                     }
                     return rejectResult;
                   });
@@ -13419,7 +13414,6 @@ let fn = () => {
                   return nextPromise1;
                 });
               }
-              str3 = "cardinal-modal";
             }
           }
           obj = { code: constants.THREEDS_UNSUPPORTED_VERSION.code, type: constants.THREEDS_UNSUPPORTED_VERSION.type, message: constants.THREEDS_UNSUPPORTED_VERSION.message };
@@ -13468,15 +13462,16 @@ let fn = () => {
           const verifyResult = closure_1.verify({ name: "UnionPay", client: client.client, authorization: client.authorization });
           return closure_1.verify({ name: "UnionPay", client: client.client, authorization: client.authorization }).then(() => closure_3.create({ authorization: client.authorization, client: client.client, debug: client.debug, assetsUrl: closure_4.create(client.authorization), name: "UnionPay" })).then((getConfiguration) => {
             const configuration = getConfiguration.getConfiguration();
-            closure_0.client = getConfiguration;
+            client.client = getConfiguration;
             if (configuration.gatewayConfiguration.unionPay) {
               if (true === configuration.gatewayConfiguration.unionPay.enabled) {
-                closure_5.sendEvent(tmp2.client, "unionpay.initialized");
-                let rejectResult = new closure_0(tmp2);
+                closure_5.sendEvent(client.client, "unionpay.initialized");
+                let rejectResult = new client(client);
               }
               return rejectResult;
             }
             rejectResult = Promise.reject(new closure_2(constants.UNIONPAY_NOT_ENABLED));
+            const tmp3 = new closure_2(constants.UNIONPAY_NOT_ENABLED);
           });
         }),
         VERSION: "3.112.1"
@@ -14705,6 +14700,7 @@ let fn = () => {
             client = new closure_1_6(client);
             client.sendEvent(nextPromise, "venmo.initialized");
             rejectResult = nextPromise.then(() => closure_0);
+            const tmp2 = new closure_1_6(client);
           });
         }),
         isBrowserSupported(arg0) {
@@ -14830,7 +14826,7 @@ let fn = () => {
         if (useAllowDesktopWebLogin.useAllowDesktopWebLogin) {
           let VENMO_WEB_LOGIN_URL = constants.VENMO_WEB_LOGIN_URL;
         } else {
-          VENMO_WEB_LOGIN_URL = useAllowDesktopWebLogin.mobileWebFallBack ? tmp.VENMO_APP_OR_MOBILE_AUTH_URL : tmp.VENMO_MOBILE_APP_AUTH_ONLY_URL;
+          VENMO_WEB_LOGIN_URL = useAllowDesktopWebLogin.mobileWebFallBack ? constants.VENMO_APP_OR_MOBILE_AUTH_URL : constants.VENMO_MOBILE_APP_AUTH_ONLY_URL;
         }
         return VENMO_WEB_LOGIN_URL;
       };
@@ -14928,7 +14924,7 @@ let fn = () => {
       globalResult.suppressUnhandledPromiseMessage = true;
       module.exports = {
         runWebLogin(frameServiceInstance) {
-          const element = document.getElementById(c5);
+          const element = document.getElementById(id);
           if (element) {
             let classList = element.classList;
             classList.remove("hidden");
@@ -14958,7 +14954,7 @@ let fn = () => {
             const items5 = [`#${c11} {`, "font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;", "font-style: normal;", "font-weight: 400;", "font-size: 16px;", "line-height: 20px;", "text-align: center;", "color: #FFFFFF;", "margin-top: 16px;", "width: 400px;", "}"];
             const combined = items.concat(items1, items2, items3, items4, items5);
             element1.innerHTML = combined.join("\n");
-            element2.id = tmp;
+            element2.id = id;
             element3.id = id;
             element4.id = id6;
             element4.innerHTML = "<svg width=\"198\" height=\"58\" viewBox=\"0 0 198 58\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n  <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M43.0702 13.6572C44.1935 15.4585 44.6999 17.3139 44.6999 19.6576C44.6999 27.1328 38.1277 36.8436 32.7935 43.6625H20.6099L15.7236 15.2939L26.3917 14.3105L28.9751 34.4966C31.389 30.6783 34.3678 24.6779 34.3678 20.587C34.3678 18.3477 33.9727 16.8225 33.3553 15.5666L43.0702 13.6572Z\" fill=\"white\"/>\n  <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M56.8965 26.1491C58.8596 26.1491 63.8018 25.2772 63.8018 22.5499C63.8018 21.2402 62.8481 20.587 61.7242 20.587C59.7579 20.587 57.1776 22.8763 56.8965 26.1491ZM56.6715 31.5506C56.6715 34.8807 58.5787 36.1873 61.107 36.1873C63.8603 36.1873 66.4966 35.534 69.923 33.8433L68.6324 42.3523C66.2183 43.4976 62.4559 44.2617 58.8039 44.2617C49.5403 44.2617 46.2249 38.8071 46.2249 31.9879C46.2249 23.1496 51.6179 13.765 62.7365 13.765C68.858 13.765 72.2809 17.0949 72.2809 21.7317C72.2815 29.2066 62.4005 31.4965 56.6715 31.5506Z\" fill=\"white\"/>\n  <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M103.067 20.3142C103.067 21.4052 102.897 22.9875 102.727 24.0216L99.5262 43.6622H89.1385L92.0585 25.658C92.1139 25.1696 92.284 24.1865 92.284 23.6411C92.284 22.3314 91.4414 22.0047 90.4282 22.0047C89.0826 22.0047 87.7337 22.6042 86.8354 23.0418L83.5234 43.6625H73.0772L77.8495 14.257H86.8908L87.0052 16.6041C89.1382 15.2404 91.9469 13.7656 95.932 13.7656C101.212 13.765 103.067 16.3845 103.067 20.3142Z\" fill=\"white\"/>\n  <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M133.906 16.9841C136.881 14.9131 139.69 13.765 143.563 13.765C148.897 13.765 150.753 16.3845 150.753 20.3142C150.753 21.4052 150.583 22.9875 150.413 24.0216L147.216 43.6622H136.825L139.801 25.2774C139.855 24.786 139.971 24.1865 139.971 23.8063C139.971 22.3317 139.128 22.0047 138.115 22.0047C136.824 22.0047 135.535 22.5501 134.577 23.0418L131.266 43.6625H120.878L123.854 25.2777C123.908 24.7863 124.02 24.1868 124.02 23.8065C124.02 22.332 123.177 22.0049 122.167 22.0049C120.819 22.0049 119.473 22.6045 118.574 23.0421L115.26 43.6628H104.817L109.589 14.2573H118.52L118.8 16.7122C120.878 15.241 123.684 13.7662 127.446 13.7662C130.704 13.765 132.837 15.129 133.906 16.9841Z\" fill=\"white\"/>\n  <path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M171.426 25.5502C171.426 23.1496 170.808 21.513 168.956 21.513C164.857 21.513 164.015 28.55 164.015 32.1498C164.015 34.8807 164.802 36.5709 166.653 36.5709C170.528 36.5709 171.426 29.1497 171.426 25.5502ZM153.458 31.7152C153.458 22.442 158.511 13.765 170.136 13.765C178.896 13.765 182.098 18.7854 182.098 25.7148C182.098 34.8805 177.099 44.3723 165.194 44.3723C156.378 44.3723 153.458 38.7525 153.458 31.7152Z\" fill=\"white\"/>\n</svg>";

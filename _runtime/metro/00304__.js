@@ -116,9 +116,9 @@ let items1 = [
       StatusBar._defaultProps.backgroundColor.value = value;
       const tmp3 = StatusBar(50)(value);
       if (null != tmp3) {
-        tmp(38)(typeof tmp3 === "number", "Unexpected color given for StatusBar.setBackgroundColor");
-        tmp(305).setColor(tmp3, flag);
-        const tmpResult = tmp(305);
+        StatusBar(38)(typeof tmp3 === "number", "Unexpected color given for StatusBar.setBackgroundColor");
+        StatusBar(305).setColor(tmp3, flag);
+        const tmpResult = StatusBar(305);
       } else {
         const _console = console;
         const _String = String;
@@ -177,7 +177,7 @@ let items1 = [
       const _propsStack = StatusBar._propsStack;
       const index = _propsStack.indexOf(arg0);
       if (-1 !== index) {
-        const _propsStack1 = obj._propsStack;
+        const _propsStack1 = StatusBar._propsStack;
         _propsStack1.splice(index, 1);
       }
       StatusBar._updatePropsStack();
@@ -217,7 +217,7 @@ let items1 = [
       const _propsStack = StatusBar._propsStack;
       const index = _propsStack.indexOf(arg0);
       if (-1 !== index) {
-        obj5._propsStack[index] = obj;
+        StatusBar._propsStack[index] = obj;
       }
       StatusBar._updatePropsStack();
       return obj;
@@ -250,7 +250,7 @@ if (null != obj.backgroundColor) {
 let obj1 = { backgroundColor: tmp6, barStyle: null, translucent: null, hidden: null, networkActivityIndicatorVisible: null };
 let tmp7 = null;
 if (null != obj.barStyle) {
-  const obj2 = { value: obj.barStyle, animated: flag };
+  let obj2 = { value: obj.barStyle, animated: flag };
   tmp7 = obj2;
 }
 obj1.barStyle = tmp7;
@@ -290,8 +290,8 @@ importDefaultResultResult._updatePropsStack = () => {
       const _HermesInternal = HermesInternal;
       console.warn("`StatusBar._updatePropsStack`: Color " + reduced.backgroundColor.value + " parsed to null or undefined");
     } else {
-      tmp4(38)(typeof tmp7 === "number", "Unexpected color given in StatusBar._updatePropsStack");
-      let tmp4Result = tmp4(305);
+      StatusBar(38)(typeof tmp7 === "number", "Unexpected color given in StatusBar._updatePropsStack");
+      let tmp4Result = StatusBar(305);
       tmp4Result.setColor(tmp7, reduced.backgroundColor.animated);
     }
     let tmp12 = _currentValues;
@@ -303,7 +303,7 @@ importDefaultResultResult._updatePropsStack = () => {
       tmp12 = value === reduced.hidden.value;
     }
     if (!tmp12) {
-      tmp4Result = tmp4(305);
+      tmp4Result = StatusBar(305);
       tmp4Result.setHidden(reduced.hidden.value);
     }
     let tmp15 = _currentValues;
@@ -314,10 +314,12 @@ importDefaultResultResult._updatePropsStack = () => {
       tmp15 = !reduced.translucent;
     }
     if (!tmp15) {
-      tmp4(305).setTranslucent(reduced.translucent);
-      const tmp4Result1 = tmp4(305);
+      StatusBar(305).setTranslucent(reduced.translucent);
+      const tmp4Result1 = StatusBar(305);
     }
     _defaultProps._currentValues = reduced;
+    const obj = {};
+    const obj2 = StatusBar(305);
   });
 };
 

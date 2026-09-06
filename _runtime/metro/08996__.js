@@ -487,15 +487,15 @@ if (self2) {
       const rect = { type: "intersection", left, right };
       return new arg0(rect);
     };
-    exports._tuple = function _tuple(arg0, items, arg2, message) {
-      let tmp2 = arg2;
-      if (arg2 instanceof closure_4.$ZodType) {
+    exports._tuple = function _tuple(arg0, items, message, message) {
+      let tmp2 = message;
+      if (message instanceof closure_4.$ZodType) {
         tmp2 = message;
       }
       const obj = { type: "tuple", items, rest: null };
       let tmp3 = null;
-      if (arg2 instanceof closure_4.$ZodType) {
-        tmp3 = arg2;
+      if (message instanceof closure_4.$ZodType) {
+        tmp3 = message;
       }
       obj.rest = tmp3;
       const merged = Object.assign(closure_5.normalizeParams(tmp2));
@@ -557,9 +557,9 @@ if (self2) {
       Object.defineProperty(obj, "defaultValue", {
         get: () => {
           if (typeof closure_0 === "function") {
-            let shallowCloneResult = tmp();
+            let shallowCloneResult = closure_0();
           } else {
-            shallowCloneResult = closure_5.shallowClone(tmp);
+            shallowCloneResult = closure_5.shallowClone(closure_0);
           }
           return shallowCloneResult;
         },
@@ -723,8 +723,8 @@ if (self2) {
         tmp2 = mapped1;
         tmp3 = mapped;
       }
-      const set = new Set(tmp3);
-      const set1 = new Set(tmp2);
+      new Set(tmp3);
+      new Set(tmp2);
       let $ZodCodec = Codec.Codec;
       if ($ZodCodec == null) {
         $ZodCodec = closure_4.$ZodCodec;
@@ -758,7 +758,7 @@ if (self2) {
               issues = issues.issues;
               obj = { code: "invalid_value", expected: "stringbool", values: null, input: null, inst: null, continue: false };
               const items = [];
-              HermesBuiltin.arraySpread(tmp4, HermesBuiltin.arraySpread(tmp2, 0));
+              HermesBuiltin.arraySpread(set1, HermesBuiltin.arraySpread(set, 0));
               obj.values = items;
               obj.input = issues.value;
               obj.inst = ZodCodec;
@@ -783,7 +783,7 @@ if (self2) {
       const ZodCodec = new $ZodCodec(obj);
       return ZodCodec;
     };
-    exports._stringFormat = function _stringFormat(ZodCustomStringFormat, combined, hex, enc) {
+    exports._stringFormat = function _stringFormat(ZodCustomStringFormat, combined, hex) {
       let obj = enc;
       if (enc === undefined) {
         obj = {};

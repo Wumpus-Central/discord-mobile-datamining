@@ -43,10 +43,10 @@ class SafeAreaProviderCompat {
               const items = [container.container, style];
               obj.style = items;
               obj.children = children;
-              let tmp2Result = tmp2(React3, obj);
+              let tmp2Result = <React3 ref={tmp} onLayout={onLayout} style={null}>{null}</React3>;
             } else {
               obj = { initialMetrics: initialWindowMetrics, style, onLayout, children };
-              tmp2Result = tmp2(_mod1614.SafeAreaProvider, obj);
+              tmp2Result = jsx(_mod1614.SafeAreaProvider, { initialMetrics: initialWindowMetrics, style, onLayout, children });
             }
             return tmp2Result;
           }

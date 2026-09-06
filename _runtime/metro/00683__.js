@@ -2,6 +2,9 @@
 
 // Module 683
 import spanToJSON from "spanToJSON" /* 684 */;
+import _mod688 from "module_688" /* 688 */;
+import consoleSandbox from "consoleSandbox" /* 689 */;
+import SPAN_STATUS_ERROR from "SPAN_STATUS_ERROR" /* 705 */;
 import instrumentError from "instrumentError" /* 714 */;
 import instrumentUnhandledRejection from "instrumentUnhandledRejection" /* 716 */;
 
@@ -17,16 +20,16 @@ export const registerSpanErrorInstrumentation = function registerSpanErrorInstru
       const activeSpan = obj.getActiveSpan();
       let rootSpan = activeSpan;
       if (activeSpan) {
-        rootSpan = tmp(tmp2[0]).getRootSpan(activeSpan);
-        const tmpResult = tmp(tmp2[0]);
+        rootSpan = spanToJSON.getRootSpan(activeSpan);
+        const tmpResult = spanToJSON;
       }
       if (rootSpan) {
-        if (tmp(tmp2[1]).DEBUG_BUILD) {
-          const debug = tmp(tmp2[2]).debug;
+        if (_mod688.DEBUG_BUILD) {
+          const debug = consoleSandbox.debug;
           const _HermesInternal = HermesInternal;
           debug.log("[Tracing] Root span: " + "internal_error" + " -> Global error occurred");
         }
-        obj = { code: tmp(tmp2[3]).SPAN_STATUS_ERROR, message: "internal_error" };
+        obj = { code: SPAN_STATUS_ERROR.SPAN_STATUS_ERROR, message: "internal_error" };
         rootSpan.setStatus(obj);
       }
     }

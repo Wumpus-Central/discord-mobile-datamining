@@ -9,16 +9,16 @@ importDefault = arg2;
 const dependencyMap = arg6;
 __turboModuleProxy = __turboModuleProxy.__turboModuleProxy;
 
-export const get = function get(arg0) {
+export const get = function get(AccessibilityInfo) {
   if (null == __turboModuleProxy) {
-    const tmp5 = genModule.default[arg0];
+    const tmp5 = genModule.default[AccessibilityInfo];
     let tmp6 = null;
     if (null != tmp5) {
       tmp6 = tmp5;
     }
     let tmpResult = tmp6;
   } else {
-    tmpResult = tmp(arg0);
+    tmpResult = tmp(AccessibilityInfo);
   }
   return tmpResult;
 };

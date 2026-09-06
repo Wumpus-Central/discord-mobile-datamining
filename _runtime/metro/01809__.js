@@ -113,9 +113,9 @@ function checkEqual(arr2, arr3) {
   }
   return true;
 }
-function compareAndFormatDifferences(arg0, arg1) {
-  let flag = arg2;
-  if (arg2 === undefined) {
+function compareAndFormatDifferences(currentStyle, arg1) {
+  let flag = shouldMatchAllProps;
+  if (shouldMatchAllProps === undefined) {
     flag = false;
   }
   closure_0 = undefined;
@@ -128,7 +128,7 @@ function compareAndFormatDifferences(arg0, arg1) {
   if (keys !== undefined) {
     flag3 = flag2;
     while (keys[tmp] !== undefined) {
-      let arr4 = arg0[tmp4];
+      let arr4 = currentStyle[tmp4];
       let arr5 = arg1[tmp4];
       if (typeof checkEqual === "function") {
         let _Array = Array;
@@ -298,7 +298,7 @@ function compareAndFormatDifferences(arg0, arg1) {
         if (flag4) {
           continue;
         } else {
-          obj = { property: tmp4, current: arg0[tmp4], expect: arg1[tmp4] };
+          obj = { property: tmp4, current: currentStyle[tmp4], expect: arg1[tmp4] };
           let arr = items.push(obj);
           flag2 = false;
           continue;
@@ -315,7 +315,7 @@ function compareAndFormatDifferences(arg0, arg1) {
     const _Object = Object;
     const _Object2 = Object;
     flag7 = flag3;
-    if (Object.keys(arg0).length !== Object.keys(arg1).length) {
+    if (Object.keys(currentStyle).length !== Object.keys(arg1).length) {
       flag7 = false;
       const keys4 = Object.keys();
       if (keys4 !== undefined) {
@@ -325,7 +325,7 @@ function compareAndFormatDifferences(arg0, arg1) {
           if (undefined !== arg1[first]) {
             continue;
           } else {
-            obj = { property: first, current: arg0[first], expect: arg1[first] };
+            obj = { property: first, current: currentStyle[first], expect: arg1[first] };
             arr = items.push(obj);
             continue;
           }
@@ -344,7 +344,7 @@ function compareAndFormatDifferences(arg0, arg1) {
     return obj;
   } else {
     const _JSON = JSON;
-    closure_0 = JSON.stringify(arg0);
+    closure_0 = JSON.stringify(currentStyle);
     const _JSON2 = JSON;
     closure_1 = JSON.stringify(arg1);
     const mapped = items.map((expect) => {
@@ -457,5 +457,24 @@ export const setUpTests = () => {
       return obj;
     }
   });
+  const obj1 = {
+    toHaveAnimatedStyle(props, arg1) {
+      obj = arg2;
+      if (arg2 === undefined) {
+        obj = {};
+      }
+      if (props.props.style) {
+        obj = compareAndFormatDifferences(getCurrentStyle(props), arg1, obj.shouldMatchAllProps);
+      } else {
+        obj = {
+          message() {
+              return "Component doesn't have a style.";
+            },
+          pass: false
+        };
+      }
+      return obj;
+    }
+  };
 };
 export const getAnimatedStyle = (props) => getCurrentStyle(props);

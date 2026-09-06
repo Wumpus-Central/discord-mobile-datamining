@@ -3,10 +3,10 @@
 // Module 1675 (resolvePath)
 const require = fn;
 const dependencyMap = arg6;
-function resolvePath(arg0, arg1) {
-  let arr = arg1;
-  if (!Array.isArray(arg1)) {
-    const items = [arg1];
+function resolvePath(styleAnimations, path) {
+  let arr = path;
+  if (!Array.isArray(path)) {
+    const items = [path];
     arr = items;
   }
   return arr.reduce((acc, item) => {
@@ -15,19 +15,19 @@ function resolvePath(arg0, arg1) {
       return tmp2;
     }
     tmp2 = acc[item];
-  }, arg0);
+  }, styleAnimations);
 }
 resolvePath.__closure = {};
 resolvePath.__workletHash = 6511886988303;
 resolvePath.__initData = { code: "function resolvePath_Pnpm_styleAnimationTs1(obj,path){const keys=Array.isArray(path)?path:[path];return keys.reduce(function(acc,current){if(Array.isArray(acc)&&typeof current==='number'){return acc[current];}else if(acc!==null&&typeof acc==='object'&&current in acc){return acc[current];}return undefined;},obj);}" };
-function setPath(arg0, arg1, arg2) {
-  let arr = arg1;
-  if (!Array.isArray(arg1)) {
-    const items = [arg1];
+function setPath(current, path, current2) {
+  let arr = path;
+  if (!Array.isArray(path)) {
+    const items = [path];
     arr = items;
   }
-  let tmp = arg0;
-  let tmp2 = arg0;
+  let tmp = current;
+  let tmp2 = current;
   let num = 0;
   if (0 < arr.length - 1) {
     do {
@@ -43,7 +43,7 @@ function setPath(arg0, arg1, arg2) {
       tmp2 = tmp;
     } while (num < arr.length - 1);
   }
-  tmp2[arr[arr.length - 1]] = arg2;
+  tmp2[arr[arr.length - 1]] = current2;
 }
 setPath.__closure = {};
 setPath.__workletHash = 1936400546748;
@@ -106,16 +106,14 @@ function withStyleAnimation(animations) {
                 }
               }
               let tmp4 = value;
-              let tmp5 = closure_1_1;
-              let ColorProperties = value(closure_1_1[1]).ColorProperties;
-              let tmp6 = closure_1_3;
+              let ColorProperties = value(dependencyMap[1]).ColorProperties;
               if (ColorProperties.includes(iter.path[0])) {
-                let tmp4Result = tmp4(tmp5[1]);
+                let tmp4Result = tmp4(dependencyMap[1]);
                 let current = tmp4Result.processColor(value.current);
               } else {
                 current = value.current;
               }
-              let tmp6Result = tmp6(styleAnimations.current, iter.path, current);
+              let tmp6Result = closure_1_3(styleAnimations.current, iter.path, current);
               tmp2 = flag3;
             }
           }
@@ -124,7 +122,7 @@ function withStyleAnimation(animations) {
         }
         return !flag2;
       },
-      onStart(current, arg1, arg2, styleAnimations) {
+      onStart(current, styleAnimations, arg2, styleAnimations) {
         let obj = { value, path: [] };
         const items = [obj];
         if (items.length > 0) {
@@ -158,13 +156,12 @@ function withStyleAnimation(animations) {
                   }
                 }
               }
-              let tmp = resolvePath;
               styleAnimations = undefined;
               if (styleAnimations != null) {
                 styleAnimations = styleAnimations.styleAnimations;
               }
-              let tmpResult = tmp(styleAnimations, iter.path);
-              current = tmp(arg1, iter.path);
+              let tmpResult = resolvePath(styleAnimations, iter.path);
+              current = resolvePath(styleAnimations, iter.path);
               let tmp4 = tmpResult;
               if (tmpResult) {
                 tmp4 = !current;
@@ -172,7 +169,6 @@ function withStyleAnimation(animations) {
               if (tmp4) {
                 current = tmpResult.current;
               }
-              let tmp5 = setPath;
               let tmp6 = setPath(current.current, iter.path, current);
               if (typeof iter.value === "object") {
                 if (iter.value.onStart) {
@@ -182,7 +178,7 @@ function withStyleAnimation(animations) {
               }
               let obj2 = value(dependencyMap[2]);
               let withTimingResult = obj2.withTiming(iter.value, { duration: 0 });
-              let tmp5Result = tmp5(current.styleAnimations, iter.path, withTimingResult);
+              let tmp5Result = setPath(current.styleAnimations, iter.path, withTimingResult);
               value = withTimingResult;
             }
           } while (items.length > 0);

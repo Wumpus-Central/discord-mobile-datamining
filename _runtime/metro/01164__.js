@@ -21,7 +21,7 @@ export const parseNumberSkeletonFromString = function parseNumberSkeletonFromStr
     const found = parts.filter((item) => item.length > 0);
     let num2 = 0;
     if (0 < found.length) {
-      const parts1 = found[num2].split("/");
+      const parts1 = str.split("/");
       while (0 !== parts1.length) {
         let substr = parts1.slice(1);
         let num = 0;
@@ -50,9 +50,8 @@ export const parseNumberSkeletonFromString = function parseNumberSkeletonFromStr
   }
 };
 export const parseNumberSkeleton = function parseNumberSkeleton(arg0) {
-  const obj = {};
   if (0 < arg0.length) {
     const stem = arg0[num].stem;
   }
-  return obj;
+  return {};
 };

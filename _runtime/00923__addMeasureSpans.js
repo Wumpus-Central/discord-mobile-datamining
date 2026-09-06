@@ -7,6 +7,7 @@ import _mod904 from "module_904" /* 904 */;
 import _mod905 from "module_905" /* 905 */;
 import _mod908 from "module_908" /* 908 */;
 import extractNetworkProtocol from "extractNetworkProtocol" /* 924 */;
+import resourceTimingToSpanAttributes from "resourceTimingToSpanAttributes" /* 928 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 function _addMeasureSpans(activeSpan, entryType, msToSecResult, msToSecResult1, msToSecResult2, ignorePerformanceApiSpans) {
@@ -51,9 +52,9 @@ function _addMeasureSpans(activeSpan, entryType, msToSecResult, msToSecResult1, 
               if (tmp11 !== undefined) {
                 [tmp17, tmp18] = _slicedToArray(tmp13, 2);
                 if (tmp18) {
-                  if (obj.isPrimitive(tmp19)) {
+                  if (obj.isPrimitive(tmp18)) {
                     const _HermesInternal2 = HermesInternal;
-                    arg0["sentry.browser.measure.detail." + tmp17] = tmp19;
+                    arg0["sentry.browser.measure.detail." + tmp17] = tmp18;
                   }
                   obj = require("module_682");
                 }
@@ -62,7 +63,7 @@ function _addMeasureSpans(activeSpan, entryType, msToSecResult, msToSecResult1, 
                     const _HermesInternal = HermesInternal;
                     const _JSON2 = JSON;
                     const combined = "sentry.browser.measure.detail." + tmp17;
-                    arg0[combined] = JSON.stringify(tmp19);
+                    arg0[combined] = JSON.stringify(tmp18);
                   } catch (err) {
                   }
                 }
@@ -85,7 +86,7 @@ function _addMeasureSpans(activeSpan, entryType, msToSecResult, msToSecResult1, 
         }
       })(obj, entryType);
       if (sum <= sum2) {
-        const tmp4Result = tmp4(924);
+        const tmp4Result = extractNetworkProtocol;
         obj = { name: null, op: null, attributes: null };
         ({ name: obj6.name, entryType: obj6.op } = entryType);
         obj.attributes = obj;
@@ -128,7 +129,7 @@ function _addNavigationSpans(activeSpan, requestStart, msToSecResult) {
     tmp5Result.startAndEndSpan(activeSpan, sum2, sum1, obj1);
   }
 }
-function _addPerformanceNavigationTiming(activeSpan, requestStart, domainLookup, msToSecResult, DNS) {
+function _addPerformanceNavigationTiming(activeSpan, requestStart, domainLookup, msToSecResult) {
   let tmp = DNS;
   if (DNS === undefined) {
     tmp = domainLookup;
@@ -215,11 +216,11 @@ function _addResourceSpans(activeSpan, initiatorType, name, msToSecResult, msToS
         });
         attributes = {};
         const merged = Object.assign(attributes);
-        let tmp6Result = tmp6(928);
+        let tmp6Result = resourceTimingToSpanAttributes;
         const merged1 = Object.assign(tmp6Result.resourceTimingToSpanAttributes(initiatorType));
         const sum = msToSecResult2 + msToSecResult;
         const sum1 = sum + msToSecResult1;
-        tmp6Result = tmp6(924);
+        tmp6Result = extractNetworkProtocol;
         attributes = { name: name.replace(_mod904.WINDOW.location.origin, ""), op: str2, attributes: null };
         attributes.attributes = attributes;
         tmp6Result.startAndEndSpan(activeSpan, sum, sum1, attributes);
@@ -421,7 +422,6 @@ export const startTrackingInteractions = function startTrackingInteractions() {
       while (iter !== undefined) {
         let tmp7 = nextResult;
         if ("click" === nextResult.name) {
-          let tmp20 = _require;
           let obj3 = require("extractNetworkProtocol");
           let obj4 = require("module_682");
           let msToSecResult = obj3.msToSec(obj4.browserPerformanceTimeOrigin() + tmp7.startTime);
@@ -443,7 +443,7 @@ export const startTrackingInteractions = function startTrackingInteractions() {
           if (componentName) {
             tmp27.attributes["ui.component_name"] = tmp29;
           }
-          let tmp20Result = tmp20(924);
+          let tmp20Result = require("extractNetworkProtocol");
           let startAndEndSpanResult = tmp20Result.startAndEndSpan(activeSpan, msToSecResult, tmp25 + msToSecResult1, tmp27);
         }
         continue;
@@ -462,7 +462,6 @@ export const startTrackingLongAnimationFrames = function startTrackingLongAnimat
       while (iter !== undefined) {
         let tmp8 = nextResult;
         if (nextResult.scripts[0]) {
-          let tmp10 = _require;
           let obj2 = require("extractNetworkProtocol");
           let obj3 = require("module_682");
           let msToSecResult = obj2.msToSec(obj3.browserPerformanceTimeOrigin() + tmp8.startTime);
@@ -471,10 +470,10 @@ export const startTrackingLongAnimationFrames = function startTrackingLongAnimat
           let start_timestamp = spanToJSONResult.start_timestamp;
           if ("navigation" === spanToJSONResult.op) {
           }
-          let tmp10Result = tmp10(924);
+          let tmp10Result = require("extractNetworkProtocol");
           let msToSecResult1 = tmp10Result.msToSec(tmp8.duration);
           obj = {};
-          obj[tmp10(682).SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN] = "auto.ui.browser.metrics";
+          obj[require("module_682").SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN] = "auto.ui.browser.metrics";
           let tmp23 = obj;
           ({ sourceURL, sourceFunctionName, sourceCharPosition, invoker: obj6["browser.script.invoker"], invokerType: obj6["browser.script.invoker_type"] } = tmp8.scripts[0]);
           if (sourceURL) {
@@ -486,7 +485,7 @@ export const startTrackingLongAnimationFrames = function startTrackingLongAnimat
           if (-1 !== sourceCharPosition) {
             tmp23["browser.script.source_char_position"] = sourceCharPosition;
           }
-          tmp10Result = tmp10(924);
+          tmp10Result = require("extractNetworkProtocol");
           obj = { name: "Main UI thread blocked", op: "ui.long-animation-frame", attributes: null };
           obj.attributes = tmp23;
           let startAndEndSpanResult = tmp10Result.startAndEndSpan(activeSpan, msToSecResult, msToSecResult + msToSecResult1, obj);
@@ -508,7 +507,6 @@ export const startTrackingLongTasks = function startTrackingLongTasks() {
       const iter = entries[Symbol.iterator]();
       const nextResult = iter.next();
       while (iter !== undefined) {
-        let tmp15 = _require;
         let obj3 = require("extractNetworkProtocol");
         let obj4 = require("module_682");
         let msToSecResult = obj3.msToSec(obj4.browserPerformanceTimeOrigin() + nextResult.startTime);
@@ -522,11 +520,11 @@ export const startTrackingLongTasks = function startTrackingLongTasks() {
           tmp20 = msToSecResult < start_timestamp;
         }
         if (!tmp20) {
-          let tmp15Result = tmp15(924);
+          let tmp15Result = require("extractNetworkProtocol");
           obj = { name: "Main UI thread blocked", op: "ui.long-task", attributes: null };
           obj = {};
           let sum = msToSecResult + msToSecResult1;
-          obj[tmp15(682).SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN] = "auto.ui.browser.metrics";
+          obj[require("module_682").SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN] = "auto.ui.browser.metrics";
           obj.attributes = obj;
           let startAndEndSpanResult = tmp15Result.startAndEndSpan(activeSpan, msToSecResult, sum, obj);
         }

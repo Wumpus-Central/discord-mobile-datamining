@@ -88,7 +88,6 @@ export default function Switch(ref) {
   }
   obj.trackTintColor = _false;
   obj = {};
-  const tmp21 = jsx;
   const tmp9 = _modDef334(tmp6, ref.ref);
   const merged2 = Object.assign(tmp2Result);
   const merged3 = Object.assign(obj);
@@ -109,5 +108,5 @@ export default function Switch(ref) {
   obj.onResponderTerminationRequest = returnsFalse;
   obj.onStartShouldSetResponder = returnsTrue;
   obj.ref = tmp9;
-  return tmp21(_modDef421, obj);
+  return jsx(_modDef421, {});
 };

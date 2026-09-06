@@ -2,8 +2,8 @@
 
 // Module 1727 (FadingTransition)
 
-export const FadingTransition = function FadingTransition(name, arg1) {
-  ({ translateX, translateY, scaleX, scaleY } = arg1);
+export const FadingTransition = function FadingTransition(name, translateX) {
+  ({ translateX, translateY, scaleX, scaleY } = translateX);
   let obj = { name, style: null, duration: 300 };
   obj = { 0: null, 20: null, 60: null, 100: null };
   obj = { opacity: 1, transform: null };

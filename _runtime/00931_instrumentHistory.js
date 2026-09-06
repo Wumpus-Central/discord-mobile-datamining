@@ -50,11 +50,12 @@ function instrumentHistory() {
         return closure_0.apply(self, items);
       };
     }
-    let tmpResult = tmp(682);
-    tmpResult.fill(tmp(904).WINDOW.history, "pushState", historyReplacementFunction);
-    tmpResult = tmp(682);
-    tmpResult.fill(tmp(904).WINDOW.history, "replaceState", historyReplacementFunction);
+    let tmpResult = _mod682;
+    tmpResult.fill(_mod904.WINDOW.history, "pushState", historyReplacementFunction);
+    tmpResult = _mod682;
+    tmpResult.fill(_mod904.WINDOW.history, "replaceState", historyReplacementFunction);
   }
+  obj = _mod682;
 }
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 

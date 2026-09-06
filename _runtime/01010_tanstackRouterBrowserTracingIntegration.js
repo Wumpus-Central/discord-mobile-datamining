@@ -44,13 +44,13 @@ export const tanstackRouterBrowserTracingIntegration = function tanstackRouterBr
         }
         let result = { name: forEach ? forEach.routeId : _location.pathname, attributes: null };
         let obj = {};
-        obj[tmp2(tmp3[1]).SEMANTIC_ATTRIBUTE_SENTRY_OP] = "pageload";
-        obj[tmp2(tmp3[1]).SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN] = "auto.pageload.react.tanstack_router";
+        obj[tmp2(_undefined[1]).SEMANTIC_ATTRIBUTE_SENTRY_OP] = "pageload";
+        obj[tmp2(_undefined[1]).SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN] = "auto.pageload.react.tanstack_router";
         let str4 = "url";
         if (forEach) {
           str4 = "route";
         }
-        obj[tmp2(tmp3[1]).SEMANTIC_ATTRIBUTE_SENTRY_SOURCE] = str4;
+        obj[tmp2(_undefined[1]).SEMANTIC_ATTRIBUTE_SENTRY_SOURCE] = str4;
         obj1 = {};
         if (forEach) {
           let _Object = Object;
@@ -68,8 +68,8 @@ export const tanstackRouterBrowserTracingIntegration = function tanstackRouterBr
         }
         const merged = Object.assign(tmp9);
         result.attributes = obj;
-        result = tmp2(tmp3[0]).startBrowserTracingPageLoadSpan(f108154, result);
-        const tmp2Result = tmp2(tmp3[0]);
+        result = tmp2(_undefined[0]).startBrowserTracingPageLoadSpan(f108154, result);
+        const tmp2Result = tmp2(_undefined[0]);
       }
     }
     if (closure_3) {

@@ -7,7 +7,7 @@ fn(17).Image;
 const NitroModules = fn(4293).NitroModules;
 NitroModules.createHybridObject("RiveFileFactory");
 let obj = {};
-let closure_0 = async function _fromURL(arg0, value) {
+let closure_0 = async function _fromURL(arg0) {
   if (c6 === 2) {
     c6 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -70,7 +70,7 @@ let closure_0 = async function _fromURL(arg0, value) {
 };
 let asyncGeneratorStep = function _fromFileURL() {
   const self = this;
-  const tmp = asyncGeneratorStep(async (arg0, value) => {
+  const tmp = asyncGeneratorStep(async (arg0) => {
     if (c6 === 2) {
       c6 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -141,7 +141,7 @@ let asyncGeneratorStep = function _fromFileURL() {
   }
   return applyArgumentsResult;
 };
-const Image = async function _fromResource(arg0, value) {
+const Image = async function _fromResource(arg0) {
   if (c6 === 2) {
     c6 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -202,7 +202,7 @@ const Image = async function _fromResource(arg0, value) {
     }
   }
 };
-let closure_3 = async function _fromBytes(arg0, value) {
+let closure_3 = async function _fromBytes(arg0) {
   if (c6 === 2) {
     c6 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -263,7 +263,7 @@ let closure_3 = async function _fromBytes(arg0, value) {
     }
   }
 };
-let closure_4 = async function _fromSource(arg0, value) {
+let closure_4 = async function _fromSource(arg0) {
   if (c8 === 2) {
     c8 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");

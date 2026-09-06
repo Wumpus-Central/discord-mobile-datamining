@@ -5,7 +5,9 @@ import _mod13651 from "module_13651" /* 13651 */;
 import ZStream from "ZStream" /* 13653 */;
 import _mod13655 from "module_13655" /* 13655 */;
 import _mod13659 from "module_13659" /* 13659 */;
+import InflateState from "InflateState" /* 13661 */;
 import _mod13664 from "module_13664" /* 13664 */;
+import GZheader from "GZheader" /* 13665 */;
 
 require = arg1;
 const dependencyMap = arg6;
