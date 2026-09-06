@@ -1,8 +1,10 @@
 // === Module 4672: basePick ===
 
 // Module 4672 (basePick)
+import _mod629 from "module_629" /* 629 */;
+
 
 export default function basePick(arg0, arg1) {
-  const _require = arg0;
-  return _require(4673)(arg0, arg1, (arg0, arg1) => callback(closure_1_1[1])(callback, arg1));
+  _require = arg0;
+  return require("basePickBy")(arg0, arg1, (arg0, arg1) => _mod629(closure_0, arg1));
 };

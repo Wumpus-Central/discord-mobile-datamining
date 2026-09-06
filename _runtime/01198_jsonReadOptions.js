@@ -1,12 +1,10 @@
 // === Module 1198: jsonReadOptions ===
 
 // Module 1198 (jsonReadOptions)
-arg5.jsonReadOptions = undefined;
-arg5.jsonWriteOptions = undefined;
-arg5.mergeJsonOptions = undefined;
 let closure_0 = { emitDefaultValues: false, enumAsInteger: false, useProtoFieldName: false, prettySpaces: 0 };
 let closure_1 = { ignoreUnknownFields: false };
-arg5.jsonReadOptions = function jsonReadOptions(arg0) {
+
+export const jsonReadOptions = function jsonReadOptions(arg0) {
   if (arg0) {
     const _Object = Object;
     const _Object2 = Object;
@@ -16,7 +14,7 @@ arg5.jsonReadOptions = function jsonReadOptions(arg0) {
   }
   return merged;
 };
-arg5.jsonWriteOptions = function jsonWriteOptions(prettySpaces) {
+export const jsonWriteOptions = function jsonWriteOptions(prettySpaces) {
   if (prettySpaces) {
     const _Object = Object;
     const _Object2 = Object;
@@ -26,7 +24,7 @@ arg5.jsonWriteOptions = function jsonWriteOptions(prettySpaces) {
   }
   return merged;
 };
-arg5.mergeJsonOptions = function mergeJsonOptions(typeRegistry, typeRegistry2) {
+export const mergeJsonOptions = function mergeJsonOptions(typeRegistry, typeRegistry2) {
   const merged = Object.assign(Object.assign({}, typeRegistry), typeRegistry2);
   typeRegistry = undefined;
   if (null != typeRegistry) {

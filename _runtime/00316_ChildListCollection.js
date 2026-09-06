@@ -2,12 +2,12 @@
 
 // Module 316 (ChildListCollection)
 import _createClassDefault from "_createClass" /* 42 */;
-import closure_2 from "_classCallCheck" /* 41 */;
+import _classCallCheck from "_classCallCheck" /* 41 */;
 
 const ChildListCollection = importDefault;
 class ChildListCollection {
   constructor() {
-    tmp = closure_2(this, ChildListCollection);
+    tmp = c2(this, ChildListCollection);
     map = new Map();
     this._cellKeyToChildren = map;
     map1 = new Map();
@@ -15,31 +15,32 @@ class ChildListCollection {
     return;
   }
 }
-let items = [
-  {
-    key: "add",
-    value: function add(arg0, arg1) {
-      const self = this;
-      const _childrenToCellKey = this._childrenToCellKey;
-      ChildListCollection(38)(!_childrenToCellKey.has(arg0), "Trying to add already present child list");
-      const _cellKeyToChildren = this._cellKeyToChildren;
-      let set = _cellKeyToChildren.get(arg1);
-      if (set == null) {
-        const _Set = Set;
-        set = new Set();
-      }
-      set.add(arg0);
-      const _cellKeyToChildren2 = self._cellKeyToChildren;
-      const result = _cellKeyToChildren2.set(arg1, set);
-      const _childrenToCellKey2 = self._childrenToCellKey;
-      const result1 = _childrenToCellKey2.set(arg0, arg1);
+const entry = {
+  key: "add",
+  value: function add(arg0, arg1) {
+    const self = this;
+    const _childrenToCellKey = this._childrenToCellKey;
+    ChildListCollection(38)(!_childrenToCellKey.has(arg0), "Trying to add already present child list");
+    const _cellKeyToChildren = this._cellKeyToChildren;
+    let set = _cellKeyToChildren.get(arg1);
+    if (set == null) {
+      const _Set = Set;
+      set = new Set();
     }
-  },
+    set.add(arg0);
+    const _cellKeyToChildren2 = self._cellKeyToChildren;
+    const result = _cellKeyToChildren2.set(arg1, set);
+    const _childrenToCellKey2 = self._childrenToCellKey;
+    const result1 = _childrenToCellKey2.set(arg0, arg1);
+  }
+};
+let items = [
+  entry,
   {
     key: "remove",
     value: function remove(arg0) {
       const _childrenToCellKey = this._childrenToCellKey;
-      let value = _childrenToCellKey.get(arg0);
+      value = _childrenToCellKey.get(arg0);
       ChildListCollection(38)(null != value, "Trying to remove non-present child list");
       const _childrenToCellKey2 = this._childrenToCellKey;
       _childrenToCellKey2.delete(arg0);
@@ -55,12 +56,10 @@ let items = [
   },
   {
     key: "forEach",
-    value: function forEach(arg0) {
+    value: function forEach(fn) {
       const _cellKeyToChildren = this._cellKeyToChildren;
       const values = _cellKeyToChildren.values();
       for (const item10009 of values) {
-        let tmp2 = item10009;
-        let tmp3 = item10009;
         for (const item10014 of item10009) {
           let tmp4 = arg0(item10014);
           continue;
@@ -71,9 +70,9 @@ let items = [
   },
   {
     key: "forEachInCell",
-    value: function forEachInCell(closure_0, arg1) {
+    value: function forEachInCell(cellKey, fn) {
       const _cellKeyToChildren = this._cellKeyToChildren;
-      let items = _cellKeyToChildren.get(closure_0);
+      let items = _cellKeyToChildren.get(cellKey);
       if (items == null) {
         items = [];
       }
@@ -85,7 +84,7 @@ let items = [
   },
   {
     key: "anyInCell",
-    value: function anyInCell(value, arg1) {
+    value: function anyInCell(value, fn) {
       const _cellKeyToChildren = this._cellKeyToChildren;
       let items = _cellKeyToChildren.get(value);
       if (items == null) {
@@ -93,7 +92,6 @@ let items = [
       }
       for (const item10011 of items) {
         if (arg1(item10011)) {
-          let tmp = obj;
           obj.return();
           let flag = true;
           return true;

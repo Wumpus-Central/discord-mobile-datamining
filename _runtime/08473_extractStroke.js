@@ -1,16 +1,21 @@
 // === Module 8473: extractStroke ===
 
 // Module 8473 (extractStroke)
-const module = arg2;
+import extractOpacityDefault from "extractOpacity" /* 8459 */;
+import extractBrushDefault from "extractBrush" /* 8471 */;
+import extractLengthListDefault from "extractLengthList" /* 8474 */;
+
+importDefault = arg2;
 const dependencyMap = arg6;
 let closure_2 = { butt: 0, square: 2, round: 1 };
 let closure_3 = { miter: 0, bevel: 2, round: 1 };
 let closure_4 = { none: 0, default: 0, nonScalingStroke: 1, "non-scaling-stroke": 1, inherit: 2, uri: 3 };
-arg5.default = function extractStroke(arg0, arg1, arr) {
+
+export default function extractStroke(arg0, arg1, arr) {
   ({ stroke, strokeOpacity, strokeLinecap, strokeLinejoin, strokeDasharray, strokeWidth, strokeDashoffset, strokeMiterlimit, vectorEffect } = arg1);
   if (null != stroke) {
     arr.push("stroke");
-    arg0.stroke = module(8471)(stroke);
+    arg0.stroke = extractBrushDefault(stroke);
   }
   if (null != strokeWidth) {
     arr.push("strokeWidth");
@@ -18,7 +23,7 @@ arg5.default = function extractStroke(arg0, arg1, arr) {
   }
   if (null != strokeOpacity) {
     arr.push("strokeOpacity");
-    arg0.strokeOpacity = module(8459)(strokeOpacity);
+    arg0.strokeOpacity = extractOpacityDefault(strokeOpacity);
   }
   if (null != strokeDasharray) {
     arr.push("strokeDasharray");
@@ -26,7 +31,7 @@ arg5.default = function extractStroke(arg0, arg1, arr) {
     if (strokeDasharray) {
       tmp9 = null;
       if ("none" !== strokeDasharray) {
-        tmp9 = module(8474)(strokeDasharray);
+        tmp9 = extractLengthListDefault(strokeDasharray);
       }
     }
     let combined = tmp9;
@@ -54,7 +59,7 @@ arg5.default = function extractStroke(arg0, arg1, arr) {
     arr.push("strokeLinecap");
     let num3 = strokeLinecap;
     if (strokeLinecap) {
-      num3 = table[strokeLinecap];
+      num3 = closure_2[strokeLinecap];
     }
     if (!num3) {
       num3 = 0;
@@ -65,7 +70,7 @@ arg5.default = function extractStroke(arg0, arg1, arr) {
     arr.push("strokeLinejoin");
     let num4 = strokeLinejoin;
     if (strokeLinejoin) {
-      num4 = table2[strokeLinejoin];
+      num4 = closure_3[strokeLinejoin];
     }
     if (!num4) {
       num4 = 0;
@@ -90,7 +95,7 @@ arg5.default = function extractStroke(arg0, arg1, arr) {
   if (null != vectorEffect) {
     let num6 = vectorEffect;
     if (vectorEffect) {
-      num6 = table3[vectorEffect];
+      num6 = closure_4[vectorEffect];
     }
     if (!num6) {
       num6 = 0;

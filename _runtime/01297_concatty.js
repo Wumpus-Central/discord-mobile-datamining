@@ -5,7 +5,7 @@ function concatty(arg0, arg1) {
 
 }
 
-export default function bind(self, c165, cache, serializer, bindResult, closure_2, error) {
+export default function bind(self) {
   let length;
   let sum;
   self = this;
@@ -38,7 +38,6 @@ export default function bind(self, c165, cache, serializer, bindResult, closure_
           if (sum < items1.length) {
             text1 = `${arr[num4]},`;
           }
-          let str2 = text1;
           str4 = text1;
           num4 = sum;
         } while (sum < items1.length);
@@ -52,39 +51,37 @@ export default function bind(self, c165, cache, serializer, bindResult, closure_
         self = this;
         const apply = self.apply;
         if (this instanceof closure_2) {
-          if (typeof closure_2 !== "function") {
-            HermesBuiltin.throwTypeError();
+          if (typeof concatty === "function") {
+            items = [];
+            let num7 = 0;
+            if (0 < arr3.length) {
+              do {
+                items[num7] = arr3[num7];
+                num7 = num7 + 1;
+                length3 = arr3.length;
+              } while (num7 < length3);
+            }
+            let num8 = 0;
+            if (0 < arguments.length) {
+              do {
+                items[num8 + arr3.length] = arguments[num8];
+                num8 = num8 + 1;
+                length4 = arguments.length;
+              } while (num8 < length4);
+            }
+            const applyResult = apply(self, items);
+            const _Object = Object;
+            if (Object(applyResult) === applyResult) {
+              self = applyResult;
+            }
+            return self;
+          } else {
+            throw new TypeError("Trying to call a non-function");
           }
-          items = [];
-          let num7 = 0;
-          if (0 < items.length) {
-            do {
-              items[num7] = arr3[num7];
-              num7 = num7 + 1;
-              length3 = arr3.length;
-            } while (num7 < length3);
-          }
-          let num8 = 0;
-          if (0 < arguments.length) {
-            do {
-              items[num8 + arr3.length] = arguments[num8];
-              num8 = num8 + 1;
-              length4 = arguments.length;
-            } while (num8 < length4);
-          }
-          const applyResult = apply(self, items);
-          const _Object = Object;
-          if (Object(applyResult) === applyResult) {
-            self = applyResult;
-          }
-          return self;
-        } else {
-          if (typeof closure_2 !== "function") {
-            HermesBuiltin.throwTypeError();
-          }
+        } else if (typeof concatty === "function") {
           const items1 = [];
           let num3 = 0;
-          if (0 < items.length) {
+          if (0 < arr.length) {
             do {
               items1[num3] = arr[num3];
               num3 = num3 + 1;
@@ -99,7 +96,9 @@ export default function bind(self, c165, cache, serializer, bindResult, closure_
               length2 = arguments.length;
             } while (num4 < length2);
           }
-          return apply(closure_0, items1);
+          return apply(tmp2, items1);
+        } else {
+          throw new TypeError("Trying to call a non-function");
         }
       });
       closure_2 = tmp7;

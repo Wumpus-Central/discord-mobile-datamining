@@ -1,7 +1,7 @@
 // === Module 8969: default_1 ===
 
 // Module 8969 (default_1)
-import mergeDefs from "mergeDefs" /* 8970 */;
+import _mod8970 from "module_8970" /* 8970 */;
 
 let fn = this;
 if (this) {
@@ -10,8 +10,7 @@ if (this) {
 if (!fn) {
   fn = (__esModule) => {
     if (!__esModule) {
-      const obj = { default: null };
-      obj[0] = __esModule;
+      const obj = { default: __esModule };
       let tmp = obj;
     } else {
       tmp = __esModule;
@@ -19,9 +18,9 @@ if (!fn) {
     return tmp;
   };
 }
-let closure_0 = fn(mergeDefs);
+const mergeDefs = fn(_mod8970);
 
 export default function default_1() {
-  return closure_0.default();
+  return mergeDefs.default();
 };
 export default exports.default;

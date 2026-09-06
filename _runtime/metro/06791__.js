@@ -1,11 +1,10 @@
 // === Module 6791: ? ===
 
 // Module 6791
-import noopAll from "noop" /* 19 */;
-import _isNativeReflectConstructDefault from "_isNativeReflectConstruct" /* 6788 */;
-import { jsx } from "jsxProd" /* 21 */;
+import _modDef6788 from "module_6788" /* 6788 */;
+import noop from "module_19" /* 19 */;
 
-noopAll;
+const jsx = fn(21).jsx;
 
 export default function _default(delayLongPress) {
   let num = delayLongPress.delayLongPress;
@@ -16,7 +15,7 @@ export default function _default(delayLongPress) {
   if (extraButtonProps === undefined) {
     extraButtonProps = { rippleColor: "transparent", exclusive: true };
   }
-  const merged = Object.assign(delayLongPress, Object.create(null));
+  const merged = Object.assign(delayLongPress, Object.assign({ delayLongPress: 0, extraButtonProps: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(_isNativeReflectConstructDefault, { delayLongPress: num, extraButtonProps });
+  return jsx(_modDef6788, { delayLongPress: num, extraButtonProps });
 };

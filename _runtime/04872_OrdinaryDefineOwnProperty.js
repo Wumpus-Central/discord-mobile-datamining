@@ -1,11 +1,11 @@
 // === Module 4872: OrdinaryDefineOwnProperty ===
 
 // Module 4872 (OrdinaryDefineOwnProperty)
-import isObject from "isObject" /* 4809 */;
+import _mod4809 from "module_4809" /* 4809 */;
 
 
 export default function OrdinaryDefineOwnProperty(arg0, arg1, __Writable__) {
-  if (isObject(arg0)) {
+  if (_mod4809(arg0)) {
     if (tmp(4856)(arg1)) {
       if (tmp(4860)(__Writable__)) {
         if (tmp(1284)) {

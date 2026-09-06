@@ -1,7 +1,8 @@
 // === Module 8542: extractPolyPoints ===
 
 // Module 8542 (extractPolyPoints)
-arg5.default = function extractPolyPoints(join) {
+
+export default function extractPolyPoints(join) {
   let str = join;
   if (Array.isArray(join)) {
     str = join.join(",");

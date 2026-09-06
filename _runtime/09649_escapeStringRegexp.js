@@ -1,7 +1,8 @@
 // === Module 9649: escapeStringRegexp ===
 
 // Module 9649 (escapeStringRegexp)
-arg5.default = function escapeStringRegexp(str) {
+
+export default function escapeStringRegexp(str) {
   if (typeof str !== "string") {
     const _TypeError = TypeError;
     const typeError = new TypeError("Expected a string");

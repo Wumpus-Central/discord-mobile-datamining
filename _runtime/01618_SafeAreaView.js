@@ -1,51 +1,50 @@
 // === Module 1618: SafeAreaView ===
 
 // Module 1618 (SafeAreaView)
-import noopAll from "noop" /* 19 */;
-import { useMemo } from "noop" /* 19 */;
-import { jsx } from "jsxProd" /* 21 */;
+import noop from "module_19" /* 19 */;
 
+const useMemo = fn(19).useMemo;
+const jsx = fn(21).jsx;
 let closure_4 = { top: "additive", left: "additive", bottom: "additive", right: "additive" };
 
-export const SafeAreaView = noopAll.forwardRef((edges, ref) => {
+export const SafeAreaView = noop.forwardRef((edges, ref) => {
   edges = edges.edges;
-  const merged = Object.assign(edges, Object.create(null));
+  const merged = Object.assign(edges, Object.assign({ edges: 0 }));
   const items = [edges];
-  let obj = {};
+  const obj = {};
   const tmp2 = useMemo(() => {
     if (null == edges) {
-      return closure_1_4;
+      return closure_4;
     } else {
       const _Array = Array;
       let rect = arr;
       if (Array.isArray(arr)) {
-        rect = arr.reduce((arg0, arg1) => {
-          arg0[arg1] = "additive";
-          return arg0;
+        rect = arr.reduce((acc, item) => {
+          acc[item] = "additive";
+          return acc;
         }, {});
       }
       let str = rect.top;
       if (str == null) {
         str = "off";
       }
-      const obj = { top: null, right: null, bottom: null, left: null };
-      obj[0] = str;
+      rect = { top: str, right: null, bottom: null, left: null };
       let str2 = rect.right;
       if (str2 == null) {
         str2 = "off";
       }
-      obj[1] = str2;
+      rect.right = str2;
       let str3 = rect.bottom;
       if (str3 == null) {
         str3 = "off";
       }
-      obj[2] = str3;
+      rect.bottom = str3;
       let str4 = rect.left;
       if (str4 == null) {
         str4 = "off";
       }
-      obj[3] = str4;
-      return obj;
+      rect.left = str4;
+      return rect;
     }
   }, items);
   const merged1 = Object.assign(merged);

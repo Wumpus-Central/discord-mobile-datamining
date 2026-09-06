@@ -1,15 +1,16 @@
 // === Module 967: startProfileForSpan ===
 
 // Module 967 (startProfileForSpan)
-import closure_2 from "asyncGeneratorStep" /* 5 */;
+import _mod937 from "module_937" /* 937 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
 
 export const startProfileForSpan = function startProfileForSpan(rootSpan) {
-  const _require = rootSpan;
+  _require = rootSpan;
   function onProfileHandler() {
     const self = this;
-    const apply = _onProfileHandler.apply;
+    const apply = closure_7.apply;
     if (typeof apply === "unknown") {
       let applyArgumentsResult = HermesBuiltin.applyArguments(self);
     } else {
@@ -17,98 +18,87 @@ export const startProfileForSpan = function startProfileForSpan(rootSpan) {
     }
     return applyArgumentsResult;
   }
-  function _onProfileHandler() {
-    const self = this;
-    const tmp = uuid4Result(function*() {
-      if (v0 === 2) {
-        v0 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp3 === 3) {
+  closure_7 = async function _onProfileHandler(arg0, value) {
+    if (v3 === 2) {
+      v3 = 3;
+      throw new TypeError("Generator functions may not be called on executing generators");
+    } else if (tmp3 === 3) {
+      if (arg0 === 1) {
+        throw value;
+      } else if (arg0 === 2) {
+        let obj = { value, done: true };
+        return obj;
+      } else {
+        return { value: "HermesInternal", done: null };
+      }
+    } else {
+      try {
+        v3 = 2;
         if (arg0 === 1) {
-          throw arg1;
+          v3 = 3;
+          throw value;
         } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
+          v3 = 3;
+          obj = { value, done: true };
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
-        }
-      } else {
-        try {
-          v0 = 2;
-          if (arg0 === 1) {
-            v0 = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            v0 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
-          } else {
-            if (v0) {
-              obj = closure_1_1;
-              if (closure_1_1) {
-                if (closure_1_3) {
-                  if (v0(closure_1_1[3]).DEBUG_BUILD) {
-                    let debug = tmp5(tmp6[2]).debug;
-                    debug.log("[Profiling] profile for:", tmp5(tmp6[2]).spanToJSON(tmp14).description, "already exists, returning early");
-                    const tmp5Result = tmp5(tmp6[2]);
-                  }
-                } else {
-                  const stopResult = obj.stop();
-                  v0 = 3;
-                  obj1 = { value: null, done: true };
-                  obj1[0] = obj.stop().then((arg0) => {
-                    if (c4) {
-                      const WINDOW = v3(closure_1_1[4]).WINDOW;
-                      WINDOW.clearTimeout(c4);
-                      c4 = undefined;
-                    }
-                    if (v3(closure_1_1[3]).DEBUG_BUILD) {
-                      const debug = v3(closure_1_1[2]).debug;
-                      const _HermesInternal = HermesInternal;
-                      debug.log("[Profiling] stopped profiling of span: " + v3(closure_1_1[2]).spanToJSON(v3).description);
-                      const obj = v3(closure_1_1[2]);
-                    }
-                    if (arg0) {
-                      closure_3 = arg0;
-                      const result = v3(closure_1_1[1]).addProfileToGlobalCache(closure_2, arg0);
-                      const obj3 = v3(closure_1_1[1]);
-                    } else if (v3(closure_1_1[3]).DEBUG_BUILD) {
-                      const debug2 = v3(closure_1_1[2]).debug;
-                      const _HermesInternal2 = HermesInternal;
-                      debug2.log("[Profiling] profiler returned null profile for: " + v3(closure_1_1[2]).spanToJSON(v3).description, "this may indicate an overlapping span or a call to stopProfiling with a profile title that was never started");
-                      const obj2 = v3(closure_1_1[2]);
-                    }
-                  }).catch((arg0) => {
-                    if (v3(table[3]).DEBUG_BUILD) {
-                      const debug = v3(table[2]).debug;
-                      debug.log("[Profiling] error while stopping profiler:", arg0);
-                    }
-                  });
-                  return obj1;
+          if (rootSpan) {
+            obj = dependencyMap;
+            if (dependencyMap) {
+              if (React3) {
+                if (v3(937).DEBUG_BUILD) {
+                  let debug = tmp5(682).debug;
+                  debug.log("[Profiling] profile for:", tmp5(682).spanToJSON(tmp13).description, "already exists, returning early");
+                  const tmp5Result = tmp5(682);
                 }
+              } else {
+                const stopResult = obj.stop();
+                v3 = 3;
+                const obj1 = {
+                  value: obj.stop().then((result) => {
+                                if (c4) {
+                                  const WINDOW = c0(893).WINDOW;
+                                  WINDOW.clearTimeout(c4);
+                                  c4 = undefined;
+                                }
+                                if (c0(937).DEBUG_BUILD) {
+                                  const debug = c0(682).debug;
+                                  const _HermesInternal = HermesInternal;
+                                  debug.log("[Profiling] stopped profiling of span: " + c0(682).spanToJSON(v3).description);
+                                  const obj = c0(682);
+                                }
+                                if (result) {
+                                  closure_3 = result;
+                                  result = c0(966).addProfileToGlobalCache(closure_1_2, result);
+                                  const obj3 = c0(966);
+                                } else if (c0(937).DEBUG_BUILD) {
+                                  const debug2 = c0(682).debug;
+                                  const _HermesInternal2 = HermesInternal;
+                                  debug2.log("[Profiling] profiler returned null profile for: " + c0(682).spanToJSON(v3).description, "this may indicate an overlapping span or a call to stopProfiling with a profile title that was never started");
+                                  const obj2 = c0(682);
+                                }
+                              }).catch((error) => {
+                                if (v3(dependencyMap[3]).DEBUG_BUILD) {
+                                  const debug = v3(dependencyMap[2]).debug;
+                                  debug.log("[Profiling] error while stopping profiler:", error);
+                                }
+                              }),
+                  done: true
+                };
+                return obj1;
               }
             }
-            v0 = 3;
-            return { value: "HermesInternal", done: null };
           }
-        } catch (tmp8) {
-          v0 = tmp;
-          throw tmp8;
+          v3 = 3;
+          return { value: "HermesInternal", done: null };
         }
+      } catch (tmp8) {
+        v3 = tmp;
+        throw tmp8;
       }
-    });
-    closure_7 = tmp;
-    const apply = tmp.apply;
-    if (typeof apply === "unknown") {
-      let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-    } else {
-      applyArgumentsResult = apply(self, arguments);
     }
-    return applyArgumentsResult;
-  }
-  let obj = _require(966);
+  };
+  let obj = require("module_966");
   if (obj.isAutomatedPageLoadSpan(rootSpan)) {
     let tmpResult = tmp(682);
     let result = 1000 * tmpResult.timestampInSeconds();
@@ -124,20 +114,18 @@ export const startProfileForSpan = function startProfileForSpan(rootSpan) {
       const tmpResult1 = tmp(682);
     }
     const uuid4Result = tmp(682).uuid4();
-    closure_2 = uuid4Result;
+    asyncGeneratorStep = uuid4Result;
     c3 = null;
     const tmpResult2 = tmp(682);
     const currentScope = tmp(682).getCurrentScope();
-    obj = { profile_id: null, start_timestamp: null };
-    obj[0] = uuid4Result;
-    obj[1] = result;
+    obj = { profile_id: uuid4Result, start_timestamp: result };
     currentScope.setContext("profile", obj);
     let WINDOW = tmp(893).WINDOW;
     const timeout = WINDOW.setTimeout(() => {
-      if (callback(startJSSelfProfileResult[3]).DEBUG_BUILD) {
-        const debug = tmp(tmp2[2]).debug;
-        debug.log("[Profiling] max profile duration elapsed, stopping profiling for:", tmp(tmp2[2]).spanToJSON(callback).description);
-        const tmpResult = tmp(tmp2[2]);
+      if (_mod937.DEBUG_BUILD) {
+        const debug = tmp(682).debug;
+        debug.log("[Profiling] max profile duration elapsed, stopping profiling for:", tmp(682).spanToJSON(closure_0).description);
+        const tmpResult = tmp(682);
       }
       onProfileHandler();
     }, tmp(966).MAX_PROFILE_DURATION_MS);
@@ -146,14 +134,14 @@ export const startProfileForSpan = function startProfileForSpan(rootSpan) {
     rootSpan.end = function profilingWrappedSpanEnd() {
       if (closure_0) {
         onProfileHandler().then(() => {
-          callback();
+          closure_1_5();
         }, () => {
-          callback();
+          closure_1_5();
         });
         let tmp3 = tmp;
         const promise = onProfileHandler();
       } else {
-        tmp3 = callback2();
+        tmp3 = closure_5();
       }
       return tmp3;
     };

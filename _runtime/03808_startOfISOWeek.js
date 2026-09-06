@@ -5,16 +5,14 @@ import startOfWeek from "startOfWeek" /* 3809 */;
 import requiredArgs from "requiredArgs" /* 3651 */;
 
 if (!startOfWeek) {
-  let obj = { default: null };
-  obj[0] = startOfWeek;
+  let obj = { default: startOfWeek };
   let tmp3 = obj;
 } else {
   tmp3 = startOfWeek;
 }
 startOfWeek = tmp3;
 if (!requiredArgs) {
-  obj = { default: null };
-  obj[0] = requiredArgs;
+  obj = { default: requiredArgs };
   let tmp5 = obj;
 } else {
   tmp5 = requiredArgs;

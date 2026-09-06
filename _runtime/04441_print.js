@@ -3,17 +3,18 @@
 // Module 4441 (print)
 let c0 = false;
 const BooleanResult = Boolean(false);
+let closure_1 = BooleanResult;
 function print() {
 
 }
 if (BooleanResult) {
   print = function print(arg0) {
     ({ component, method, params } = arg0);
-    if (params) {
+    if (c0) {
       if (typeof params === "object") {
         const _Object = Object;
         const keys = Object.keys(params);
-        const mapped = keys.map((arg0) => "" + arg0 + ":" + params[arg0]);
+        const mapped = keys.map((item) => "" + item + ":" + params[item]);
         let joined = mapped.join(" ");
       } else {
         let str = params;
@@ -36,9 +37,10 @@ if (BooleanResult) {
   };
 }
 const frozen = Object.freeze(print);
-arg5.print = print;
-arg5.enableLogging = () => {
-  if (closure_1) {
+
+export { print };
+export const enableLogging = () => {
+  if (BooleanResult) {
     c0 = true;
   } else {
     const _console = console;

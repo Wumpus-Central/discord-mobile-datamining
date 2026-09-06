@@ -1,36 +1,37 @@
 // === Module 5232: ? ===
 
 // Module 5232
-import readTag from "readTag" /* 5233 */;
-import importDefaultResult1 from "importDefaultResult1" /* 5234 */;
+import _modDef5218 from "module_5218" /* 5218 */;
+import get0thIfdOffset from "get0thIfdOffset" /* 5233 */;
+import IFD_TYPE_0TH from "IFD_TYPE_0TH" /* 5234 */;
 
 require = arg1;
-const module = arg2;
+importDefault = arg2;
 const dependencyMap = arg6;
 let c3 = "Exif IFD Pointer";
 let c4 = "GPS Info IFD Pointer";
 let c5 = "Interoperability IFD Pointer";
-arg5.default = {
-  read(getUint16, sum) {
-    const byteOrder = module(5218).getByteOrder(getUint16, sum);
-    const obj = module(5218);
-    const obj2 = readTag;
-    const ifd = obj2.readIfd(getUint16, importDefaultResult1.IFD_TYPE_0TH, sum, readTag.get0thIfdOffset(getUint16, sum, byteOrder), byteOrder, arg2);
+
+export default {
+  read(getUint16, c5, arg2) {
+    const byteOrder = _modDef5218.getByteOrder(getUint16, c5);
+    const obj2 = get0thIfdOffset;
+    const ifd = obj2.readIfd(getUint16, IFD_TYPE_0TH.IFD_TYPE_0TH, c5, get0thIfdOffset.get0thIfdOffset(getUint16, c5, byteOrder), byteOrder, arg2);
     let objectAssignResult = ifd;
     if (undefined !== ifd[c3]) {
-      let tmp3Result = tmp3(5213);
-      tmp3Result = tmp3(5233);
-      objectAssignResult = tmp3Result.objectAssign(ifd, tmp3Result.readIfd(getUint16, tmp3(5234).IFD_TYPE_EXIF, sum, sum + ifd[tmp5].value, byteOrder, arg2));
+      tmp3(5213);
+      const tmp3Result = tmp3(5233);
+      objectAssignResult = tmp3Result.objectAssign(ifd, tmp3Result.readIfd(getUint16, tmp3(5234).IFD_TYPE_EXIF, c5, c5 + ifd[tmp5].value, byteOrder, arg2));
     }
     if (undefined !== objectAssignResult[c4]) {
       const tmp3Result2 = tmp3(5233);
-      objectAssignResult = tmp3(5213).objectAssign(objectAssignResult, tmp3Result2.readIfd(getUint16, tmp3(5234).IFD_TYPE_GPS, sum, sum + objectAssignResult[tmp12].value, byteOrder, arg2));
+      objectAssignResult = tmp3(5213).objectAssign(objectAssignResult, tmp3Result2.readIfd(getUint16, tmp3(5234).IFD_TYPE_GPS, c5, c5 + objectAssignResult[tmp12].value, byteOrder, arg2));
       const tmp3Result1 = tmp3(5213);
     }
     let objectAssignResult1 = objectAssignResult;
     if (undefined !== objectAssignResult[c5]) {
       const tmp3Result4 = tmp3(5233);
-      objectAssignResult1 = tmp3(5213).objectAssign(objectAssignResult, tmp3Result4.readIfd(getUint16, tmp3(5234).IFD_TYPE_INTEROPERABILITY, sum, sum + objectAssignResult[tmp19].value, byteOrder, arg2));
+      objectAssignResult1 = tmp3(5213).objectAssign(objectAssignResult, tmp3Result4.readIfd(getUint16, tmp3(5234).IFD_TYPE_INTEROPERABILITY, c5, c5 + objectAssignResult[tmp19].value, byteOrder, arg2));
       const tmp3Result3 = tmp3(5213);
     }
     return { tags: objectAssignResult1, byteOrder };

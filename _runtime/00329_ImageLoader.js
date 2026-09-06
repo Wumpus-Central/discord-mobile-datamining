@@ -1,12 +1,11 @@
 // === Module 329: ImageLoader ===
 
 // Module 329 (ImageLoader)
-import ImageLoaderDefault from "ImageLoader" /* 330 */;
+import _modDef330 from "module_330" /* 330 */;
 
-for (const key10016 in require("ImageLoader")) {
-  let tmp2 = key10016;
-  arg5[key10016] = require("ImageLoader")[key10016];
+for (const key10016 in require("module_330")) {
+  arg5[key10016] = require("module_330")[key10016];
   continue;
 }
 
-export default ImageLoaderDefault;
+export default _modDef330;

@@ -1,9 +1,9 @@
 // === Module 891: mergeOptions ===
 
 // Module 891 (mergeOptions)
-import registerSpanErrorInstrumentation from "registerSpanErrorInstrumentation" /* 682 */;
-import closure_2 from "_slicedToArray" /* 32 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
+import _mod682 from "module_682" /* 682 */;
+import _slicedToArray from "module_32" /* 32 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 function mergeOptions(tags, tags2) {
   closure_0 = tags;
@@ -76,7 +76,6 @@ function mergeOptions(tags, tags2) {
 }
 function v$1(__s, __s2) {
   for (const key10004 in arg1) {
-    let tmp = key10004;
     arg0[key10004] = arg1[key10004];
     continue;
   }
@@ -99,7 +98,6 @@ function y$1(span, arg1, formTitle) {
     tmp4 = tmp2;
     tmp5 = tmp3;
     while (keys[tmp] !== undefined) {
-      let tmp19 = tmp9;
       if ("key" == tmp9) {
         tmp3 = arg1[tmp9];
         continue;
@@ -134,7 +132,6 @@ function y$1(span, arg1, formTitle) {
       const keys1 = Object.keys();
       if (keys1 !== undefined) {
         while (keys1[3] !== undefined) {
-          let tmp23 = tmp16;
           if (undefined !== obj[tmp16]) {
             continue;
           } else {
@@ -146,14 +143,14 @@ function y$1(span, arg1, formTitle) {
       }
     }
   }
-  obj = { type: span, props: obj, key: tmp5, ref: tmp4, __k: null, __: null, __b: 0, __e: null, __d: "Array", __c: "Array", constructor: -1, __v: 0, __i: "5.9.4", __u: 24 };
-  const sum = c14 + 1;
-  c14 = sum;
-  obj[11] = sum;
+  const element = { type: span, props: obj, key: tmp5, ref: tmp4, __k: null, __: null, __b: 0, __e: null, __d: "Array", __c: "Array", constructor: -1, __v: 0, __i: "5.9.4", __u: 24 };
+  const sum = sum2 + 1;
+  sum2 = sum;
+  element.__v = sum;
   if (null != obj.vnode) {
-    obj.vnode(obj);
+    obj.vnode(element);
   }
-  return obj;
+  return element;
 }
 function g$1(children) {
   return children.children;
@@ -296,7 +293,6 @@ function m$1(__2, arg1) {
     if (sum < __2.__k.length) {
       while (true) {
         tmp2 = __2.__k[sum];
-        let tmp3 = sum;
         if (null != tmp2) {
           if (null != tmp2.__e) {
             break;
@@ -324,7 +320,6 @@ function k$1(__2) {
       if (0 < __.__k.length) {
         while (true) {
           tmp = __.__k[num];
-          let tmp2 = num;
           if (null != tmp) {
             if (null != tmp.__e) {
               break;
@@ -501,7 +496,7 @@ class C$1 {
         }
         tmp48 = tmp34;
       }
-      closure_0 = items;
+      __h = items;
       num3 = 0;
       if (0 < items1.length) {
         do {
@@ -515,11 +510,12 @@ class C$1 {
       }
       obj3 = closure_13;
       if (closure_13.__c) {
-        tmp42 = closure_0;
-        __cResult1 = obj3.__c(tmp8, closure_0);
+        tmp42 = __h;
+        __cResult1 = obj3.__c(tmp8, __h);
       }
-      tmp44 = closure_0;
-      someResult = closure_0.some((__h) => {
+      tmp44 = __h;
+      someResult = __h.some((__h) => {
+        closure_0 = __h;
         try {
           __h = __h.__h;
           __h.__h = [];
@@ -528,11 +524,11 @@ class C$1 {
             if (typeof call === "unknown") {
               call();
             } else {
-              call(__h);
+              call(closure_0);
             }
           });
         } catch (tmp4) {
-          closure_1_13.__e(tmp4, tmp.__v);
+          closure_2_13.__e(tmp4, tmp.__v);
         }
       });
       items.length = 0;
@@ -541,7 +537,7 @@ class C$1 {
       sorted1 = arr3.sort(H);
     }
     if (tmp4) {
-      closure_0 = items;
+      closure_129_0 = items;
       num4 = 0;
       if (0 < items1.length) {
         do {
@@ -555,11 +551,12 @@ class C$1 {
       }
       obj4 = closure_13;
       if (closure_13.__c) {
-        tmp54 = closure_0;
-        __cResult2 = obj4.__c(tmp4, closure_0);
+        tmp54 = closure_129_0;
+        __cResult2 = obj4.__c(tmp4, closure_129_0);
       }
-      tmp56 = closure_0;
-      someResult1 = closure_0.some((__h) => {
+      tmp56 = closure_129_0;
+      someResult1 = closure_129_0.some((__h) => {
+        closure_0 = __h;
         try {
           __h = __h.__h;
           __h.__h = [];
@@ -568,11 +565,11 @@ class C$1 {
             if (typeof call === "unknown") {
               call();
             } else {
-              call(__h);
+              call(closure_0);
             }
           });
         } catch (tmp4) {
-          closure_1_13.__e(tmp4, tmp.__v);
+          closure_2_13.__e(tmp4, tmp.__v);
         }
       });
     }
@@ -599,9 +596,6 @@ function P$1(insertBefore, arg1, __k, __k2, arg4, arg5, arg6, arg7, __d, arg9, a
   if (0 < length2) {
     do {
       let vnodeResult2 = arg1[num2];
-      let tmp4 = num;
-      let tmp5 = tmp;
-      let tmp6 = num2;
       let tmp7 = null;
       if (null != vnodeResult2) {
         tmp7 = null;
@@ -613,86 +607,58 @@ function P$1(insertBefore, arg1, __k, __k2, arg4, arg5, arg6, arg7, __d, arg9, a
                 if (typeof vnodeResult2 !== "bigint") {
                   let _String = String;
                   if (vnodeResult2.constructor != String) {
-                    tmp = isArray;
                     if (isArray(vnodeResult2)) {
-                      let tmp17 = g$1;
-                      obj = { children: null };
-                      obj[0] = vnodeResult2;
-                      obj = { type: null, props: null, key: null, ref: null, __k: null, __: null, __b: 0, __e: null, __d: "Array", __c: "Array", constructor: -1, __v: 0, __i: "5.9.4", __u: 24 };
-                      obj[0] = g$1;
-                      obj[1] = obj;
-                      let tmp18 = sum2;
+                      obj = { children: vnodeResult2 };
+                      let element = { type: g$1, props: obj, key: null, ref: null, __k: null, __: null, __b: 0, __e: null, __d: "Array", __c: "Array", constructor: -1, __v: 0, __i: "5.9.4", __u: 24 };
                       let sum = sum2 + 1;
                       sum2 = sum;
-                      obj[11] = sum;
+                      element.__v = sum;
                       let obj4 = obj;
-                      let tmp8 = obj;
                       if (null != obj.vnode) {
-                        let vnodeResult = obj4.vnode(obj);
-                        tmp8 = obj;
+                        let vnodeResult = obj4.vnode(element);
                       }
-                    } else {
-                      tmp8 = vnodeResult2;
-                      if (undefined === vnodeResult2.constructor) {
-                        tmp8 = vnodeResult2;
-                        if (vnodeResult2.__b > 0) {
-                          let ref = null;
-                          ({ type: type2, props, key: key2 } = vnodeResult2);
-                          if (vnodeResult2.ref) {
-                            ref = vnodeResult2.ref;
-                          }
-                          let __v = vnodeResult2.__v;
-                          obj = { type: null, props: null, key: null, ref: null, __k: null, __: null, __b: 0, __e: null, __d: "Array", __c: "Array", constructor: -1, __v: 0, __i: "5.9.4", __u: 24 };
-                          obj[0] = type2;
-                          obj[1] = props;
-                          obj[2] = key2;
-                          obj[3] = ref;
-                          let tmp10 = __v;
-                          if (null == __v) {
-                            let tmp11 = sum2;
-                            let sum1 = sum2 + 1;
-                            sum2 = sum1;
-                            tmp10 = sum1;
-                          }
-                          obj[11] = tmp10;
-                          let tmp13 = null == __v;
-                          if (tmp13) {
-                            let tmp14 = obj;
-                            tmp13 = null != obj.vnode;
-                          }
-                          tmp8 = obj;
-                          if (tmp13) {
-                            let tmp15 = obj;
-                            let vnodeResult1 = obj.vnode(obj);
-                            tmp8 = obj;
-                          }
+                    } else if (undefined === vnodeResult2.constructor) {
+                      if (vnodeResult2.__b > 0) {
+                        let ref = null;
+                        ({ type: type2, props, key: key2 } = vnodeResult2);
+                        if (vnodeResult2.ref) {
+                          ref = vnodeResult2.ref;
+                        }
+                        let __v = vnodeResult2.__v;
+                        let element1 = { type: type2, props, key: key2, ref, __k: null, __: null, __b: 0, __e: null, __d: "Array", __c: "Array", constructor: -1, __v: 0, __i: "5.9.4", __u: 24 };
+                        let tmp10 = __v;
+                        if (null == __v) {
+                          let sum1 = sum2 + 1;
+                          sum2 = sum1;
+                          tmp10 = sum1;
+                        }
+                        element1.__v = tmp10;
+                        let tmp13 = null == __v;
+                        if (tmp13) {
+                          tmp13 = null != obj.vnode;
+                        }
+                        if (tmp13) {
+                          let vnodeResult1 = obj.vnode(element1);
                         }
                       }
                     }
                   }
-                  let tmp27 = tmp8;
                 }
               }
             }
-            obj1 = { type: null, props: null, key: null, ref: null, __k: null, __: null, __b: 0, __e: null, __d: "Array", __c: "Array", constructor: -1, __v: 0, __i: "5.9.4", __u: 24 };
-            obj1[1] = vnodeResult2;
+            let element2 = { type: null, props: vnodeResult2, key: null, ref: null, __k: null, __: null, __b: 0, __e: null, __d: "Array", __c: "Array", constructor: -1, __v: 0, __i: "5.9.4", __u: 24 };
             let tmp21 = vnodeResult2;
             if (null == vnodeResult2) {
-              let tmp22 = sum2;
               sum2 = sum2 + 1;
               tmp21 = sum2;
             }
-            obj1[11] = tmp21;
+            element2.__v = tmp21;
             let tmp24 = null == vnodeResult2;
             if (tmp24) {
-              let tmp25 = obj;
               tmp24 = null != obj.vnode;
             }
-            tmp8 = obj1;
             if (tmp24) {
-              let tmp26 = obj;
-              vnodeResult2 = obj.vnode(obj1);
-              tmp8 = obj1;
+              vnodeResult2 = obj.vnode(element2);
             }
           }
         }
@@ -725,8 +691,6 @@ function P$1(insertBefore, arg1, __k, __k2, arg4, arg5, arg6, arg7, __d, arg9, a
             let tmp40 = diff;
             if (0 <= diff) {
               while (true) {
-                let tmp41 = tmp39;
-                let tmp42 = tmp40;
                 let diff1 = tmp40;
                 if (0 <= tmp40) {
                   let tmp44 = __k[tmp40];
@@ -840,28 +804,26 @@ function P$1(insertBefore, arg1, __k, __k2, arg4, arg5, arg6, arg7, __d, arg9, a
           diff4 = tmp47;
         }
       } else {
-        tmp = __k[num2];
-        let __e = tmp;
-        if (tmp) {
-          __e = null == tmp.key;
+        let tmp113 = __k[num2];
+        let __e = tmp113;
+        if (tmp113) {
+          __e = null == tmp113.key;
         }
         if (__e) {
-          __e = tmp.__e;
+          __e = tmp113.__e;
         }
         tmp28 = num;
         diff4 = tmp;
         if (__e) {
-          if (tmp.__e == __k.__d) {
-            tmp = null;
-            if (!tmp.__) {
+          if (tmp113.__e == __k.__d) {
+            if (!tmp113.__) {
               __k.__d = null;
             } else {
-              let __ = tmp.__;
-              let sum6 = tmp.__i + 1;
+              let __ = tmp113.__;
+              let sum6 = tmp113.__i + 1;
               if (sum6 < __.__k.length) {
                 while (true) {
                   __u = __.__k[sum6];
-                  let tmp31 = sum6;
                   if (null == __u) {
                     sum6 = sum6 + 1;
                     let __e2 = __u.__e;
@@ -871,15 +833,12 @@ function P$1(insertBefore, arg1, __k, __k2, arg4, arg5, arg6, arg7, __d, arg9, a
                   }
                 }
               }
-              let tmp32 = null;
               if (typeof __.type === "function") {
-                tmp = m$1;
-                tmp32 = m$1(__);
+                let tmp32 = m$1(__);
               }
             }
           }
-          let tmp33 = O;
-          let tmp34 = O(tmp, tmp, false);
+          let tmp34 = O(tmp113, tmp113, false);
           __k[num2] = null;
           diff4 = tmp - 1;
           tmp28 = num;
@@ -895,13 +854,11 @@ function P$1(insertBefore, arg1, __k, __k2, arg4, arg5, arg6, arg7, __d, arg9, a
     for (let num6 = 0; num6 < length3; num6 = num6 + 1) {
       let tmp52 = __k[num6];
       let tmp53 = null != tmp52;
-      let tmp54 = num6;
       if (tmp53) {
         tmp53 = !(131072 & tmp52.__u);
       }
       if (tmp53) {
         if (tmp52.__e == __k.__d) {
-          tmp = null;
           if (!tmp52.__) {
             __k.__d = null;
           } else {
@@ -910,7 +867,6 @@ function P$1(insertBefore, arg1, __k, __k2, arg4, arg5, arg6, arg7, __d, arg9, a
             if (sum7 < __2.__k.length) {
               while (true) {
                 length2 = __2.__k[sum7];
-                let tmp56 = sum7;
                 if (null == length2) {
                   sum7 = sum7 + 1;
                   let __e3 = length2.__e;
@@ -920,14 +876,11 @@ function P$1(insertBefore, arg1, __k, __k2, arg4, arg5, arg6, arg7, __d, arg9, a
                 }
               }
             }
-            let tmp57 = null;
             if (typeof __2.type === "function") {
-              tmp = m$1;
-              tmp57 = m$1(__2);
+              let tmp57 = m$1(__2);
             }
           }
         }
-        let tmp58 = O;
         let tmp59 = O(tmp52, tmp52);
       }
     }
@@ -941,7 +894,6 @@ function P$1(insertBefore, arg1, __k, __k2, arg4, arg5, arg6, arg7, __d, arg9, a
       tmp63 = __k.__k[num7];
       let tmp64 = null != tmp63;
       let tmp65 = tmp60;
-      let tmp66 = num7;
       let tmp67 = ___d;
       if (tmp64) {
         tmp64 = typeof tmp63 !== "boolean";
@@ -949,8 +901,6 @@ function P$1(insertBefore, arg1, __k, __k2, arg4, arg5, arg6, arg7, __d, arg9, a
       if (tmp64) {
         tmp64 = typeof tmp63 !== "function";
       }
-      let tmp68 = tmp65;
-      let tmp69 = tmp67;
       if (tmp64) {
         break;
       } else {
@@ -973,7 +923,7 @@ function P$1(insertBefore, arg1, __k, __k2, arg4, arg5, arg6, arg7, __d, arg9, a
       if (tmp70.ref) {
         N(tmp70.ref, null, tmp63);
       }
-      let __c = tmp63.__c;
+      __c = tmp63.__c;
       if (!__c) {
         __c = __e4;
       }
@@ -991,52 +941,44 @@ function P$1(insertBefore, arg1, __k, __k2, arg4, arg5, arg6, arg7, __d, arg9, a
           }
           tmp63.__d = undefined;
           tmp63.__u = tmp63.__u & -196609;
-          tmp = ___d2;
-          tmp = tmp65;
         }
         ___d2 = tmp63.__d;
       }
     }
     if (typeof tmp63.type === "function") {
       const __k1 = tmp63.__k;
-      let tmp92 = tmp67;
       if (__k1) {
         let num8 = 0;
         let tmp93 = tmp67;
-        tmp92 = tmp67;
         if (0 < __k1.length) {
           tmp67 = __k1[num8];
           let tmp95 = tmp93;
           while (!tmp67) {
-            tmp92 = tmp95;
             if (__k1) {
               num8 = num8 + 1;
               tmp93 = tmp95;
-              tmp92 = tmp95;
             }
             continue;
           }
           __k1[num8].__ = tmp63;
           if (typeof __k1[num8].type === "function") {
             __k2 = tmp97.__k;
-            tmp = tmp95;
             if (__k2) {
               let num9 = 0;
-              tmp = tmp95;
-              tmp = tmp95;
+              let tmp103 = tmp95;
               if (0 < __k2.length) {
                 while (true) {
                   tmp95 = __k2[num9];
-                  tmp = num9;
+                  let tmp106 = tmp103;
                   if (tmp95) {
                     __k2[num9].__ = tmp97;
-                    tmp = $;
-                    tmp = $(__k2[num9], tmp, insertBefore);
+                    tmp106 = $(__k2[num9], tmp103, insertBefore);
                   }
                   if (!__k2) {
                     break;
                   } else {
                     num9 = num9 + 1;
+                    tmp103 = tmp106;
                     if (num9 >= __k2.length) {
                       break;
                     }
@@ -1055,17 +997,14 @@ function P$1(insertBefore, arg1, __k, __k2, arg4, arg5, arg6, arg7, __d, arg9, a
               __e6 = tmp97.__e;
             }
             while (true) {
-              tmp = __e6;
               let nextSibling2 = __e6;
               if (__e6) {
                 nextSibling2 = __e6.nextSibling;
               }
-              tmp = nextSibling2;
               if (null == nextSibling2) {
                 break;
               } else {
                 __e6 = nextSibling2;
-                tmp = nextSibling2;
                 if (8 === nextSibling2.nodeType) {
                   continue;
                 } else {
@@ -1077,7 +1016,6 @@ function P$1(insertBefore, arg1, __k, __k2, arg4, arg5, arg6, arg7, __d, arg9, a
           }
         }
       }
-      let tmp91 = tmp92;
     } else {
       let __e5 = tmp67;
       if (tmp63.__e != tmp67) {
@@ -1089,17 +1027,14 @@ function P$1(insertBefore, arg1, __k, __k2, arg4, arg5, arg6, arg7, __d, arg9, a
         __e5 = tmp63.__e;
       }
       while (true) {
-        let tmp90 = __e5;
         let nextSibling = __e5;
         if (__e5) {
           nextSibling = __e5.nextSibling;
         }
-        tmp91 = nextSibling;
         if (null == nextSibling) {
           break;
         } else {
           __e5 = nextSibling;
-          tmp91 = nextSibling;
           if (8 === nextSibling.nodeType) {
             continue;
           } else {
@@ -1109,7 +1044,6 @@ function P$1(insertBefore, arg1, __k, __k2, arg4, arg5, arg6, arg7, __d, arg9, a
         }
       }
     }
-    tmp = tmp91;
     tmp83 = tmp63.ref && tmp70.ref != tmp63.ref;
     tmp87 = null == tmp65 && null != __e4;
   }
@@ -1127,12 +1061,9 @@ function $(type, arg1, insertBefore) {
       tmp4 = arg1;
       if (0 < __k.length) {
         while (true) {
-          let tmp6 = num;
-          let tmp7 = tmp5;
           let tmp8 = tmp5;
           if (__k[num]) {
             __k[num].__ = type;
-            let tmp9 = $;
             tmp8 = $(__k[num], tmp5, insertBefore);
           }
           tmp4 = tmp8;
@@ -1161,7 +1092,6 @@ function $(type, arg1, insertBefore) {
       __e = type.__e;
     }
     while (true) {
-      let tmp3 = __e;
       nextSibling = __e;
       if (__e) {
         nextSibling = __e.nextSibling;
@@ -1191,7 +1121,7 @@ function T$1(style, key10064, num) {
       let text = num;
       if (typeof num === "number") {
         text = num;
-        if (!regex.test(key10064)) {
+        if (!re21.test(key10064)) {
           text = `${num}px`;
         }
       }
@@ -1200,11 +1130,11 @@ function T$1(style, key10064, num) {
     style[key10064] = str;
   }
 }
-function A$1(iter, checked, str, checked2, flag) {
-  str = checked2;
+function A$1(iter, checked, cssText, checked2, flag) {
+  let str = checked2;
   if ("style" === checked) {
-    if (typeof str === "string") {
-      iter.style.cssText = str;
+    if (typeof cssText === "string") {
+      iter.style.cssText = cssText;
     } else {
       if (typeof str === "string") {
         iter.style.cssText = "";
@@ -1212,7 +1142,6 @@ function A$1(iter, checked, str, checked2, flag) {
       }
       if (str) {
         for (const key10064 in str) {
-          let tmp21 = key10064;
           let tmp13 = arg2;
           if (arg2) {
             tmp13 = key10064 in arg2;
@@ -1220,16 +1149,14 @@ function A$1(iter, checked, str, checked2, flag) {
           if (tmp13) {
             continue;
           } else {
-            let tmp14 = T$1;
             let tmp15 = T$1(arg0.style, key10064, "");
             continue;
           }
           continue;
         }
       }
-      if (str) {
+      if (cssText) {
         for (const key10072 in arg2) {
-          let tmp22 = key10072;
           let tmp17 = str;
           if (str) {
             tmp17 = arg2[key10072] === str[key10072];
@@ -1237,7 +1164,6 @@ function A$1(iter, checked, str, checked2, flag) {
           if (tmp17) {
             continue;
           } else {
-            let tmp18 = T$1;
             let tmp19 = T$1(arg0.style, key10072, arg2[key10072]);
             continue;
           }
@@ -1258,13 +1184,13 @@ function A$1(iter, checked, str, checked2, flag) {
         if (!iter.l) {
           iter.l = {};
         }
-        iter.l[substr + (checked !== str11)] = str;
-        if (str) {
+        iter.l[substr + (checked !== str11)] = cssText;
+        if (cssText) {
           if (str) {
-            str.u = str.u;
+            cssText.u = str.u;
           } else {
             const _Date = Date;
-            str.u = Date.now();
+            cssText.u = Date.now();
             const listener = iter.addEventListener(substr, tmp8 ? L : D$1, tmp8);
           }
         } else {
@@ -1300,8 +1226,8 @@ function A$1(iter, checked, str, checked2, flag) {
                           if (checked in iter) {
                             try {
                               let str5 = "";
-                              if (null != str) {
-                                str5 = str;
+                              if (null != cssText) {
+                                str5 = cssText;
                               }
                               iter[checked] = str5;
                             } catch (err) {
@@ -1319,51 +1245,50 @@ function A$1(iter, checked, str, checked2, flag) {
         }
       }
     }
-    if (typeof str !== "function") {
-      if (null == str) {
+    if (typeof cssText !== "function") {
+      if (null == cssText) {
         iter.removeAttribute(replaced);
       } else {
-        const attr = iter.setAttribute(replaced, str);
+        const attr = iter.setAttribute(replaced, cssText);
       }
     }
   }
 }
-function D$1(items) {
+function D$1(dependencyMap) {
   if (this.l) {
-    if (!items.t) {
+    if (!dependencyMap.t) {
       const _Date = Date;
-      items.t = Date.now();
+      dependencyMap.t = Date.now();
     }
-    let eventResult = items;
+    let eventResult = dependencyMap;
     if (obj.event) {
-      eventResult = obj.event(items);
+      eventResult = obj.event(dependencyMap);
     }
-    return tmp.l[items.type + false](eventResult);
+    return tmp.l[dependencyMap.type + false](eventResult);
   }
 }
-function L(items) {
+function L(dependencyMap) {
   if (this.l) {
     const l = tmp.l;
-    let eventResult = items;
+    let eventResult = dependencyMap;
     if (obj.event) {
-      eventResult = obj.event(items);
+      eventResult = obj.event(dependencyMap);
     }
-    return l[items.type + true](eventResult);
+    return l[dependencyMap.type + true](eventResult);
   }
 }
-function M(__P, type, __u, __s2, flag, arg5, arr) {
+function M(__P, type, __u, __s2, flag, items, arr, arg7, arg8, arg9) {
   let length;
   let length2;
   let sum;
-  closure_0 = type;
+  let sum1;
+  let __ = type;
   let tmp5 = __s2;
   type = type.type;
   if (undefined !== type.constructor) {
-    let componentWillMountResult = null;
     return null;
   } else {
-    componentWillMountResult = __u;
-    let tmp9 = arg5;
+    let tmp9 = items;
     let tmp8 = arg7;
     let tmp7 = arg8;
     if (128 & __u.__u) {
@@ -1374,7 +1299,7 @@ function M(__P, type, __u, __s2, flag, arg5, arr) {
       tmp8 = __e;
       tmp9 = items;
     }
-    const __b = obj.__b;
+    const __b = __s.__b;
     if (__b) {
       tmp11(type);
     }
@@ -1382,19 +1307,19 @@ function M(__P, type, __u, __s2, flag, arg5, arr) {
       try {
         const props = type.props;
         const contextType = type.contextType;
-        obj = contextType;
+        __s = contextType;
         if (contextType) {
-          if (obj) {
-            let __ = obj.props.value;
+          if (__s) {
+            __ = __s.props.value;
           } else {
             __ = tmp26.__;
           }
         } else {
           if (__u.__c) {
-            const __c = __u.__c;
+            __c = __u.__c;
             type.__c = __c;
-            obj1 = __c;
-            obj = __c;
+            let obj1 = __c;
+            __s = __c;
             const __E = __c.__E;
             __c.__ = __E;
             const tmp6 = __E;
@@ -1403,11 +1328,11 @@ function M(__P, type, __u, __s2, flag, arg5, arr) {
               if (type.prototype.render) {
                 type = new type(props, tmp35);
                 obj1 = type;
-                obj = type;
+                __s = type;
                 type.__c = type;
               }
-              if (obj) {
-                obj.sub(obj1);
+              if (__s) {
+                __s.sub(obj1);
               }
               obj1.props = props;
               if (!obj1.state) {
@@ -1420,21 +1345,21 @@ function M(__P, type, __u, __s2, flag, arg5, arr) {
               obj1.__h = [];
               obj1._sb = [];
             }
-            obj = Object.create(b$1.prototype);
+            __s = Object.create(b$1.prototype);
             new b$1(props, tmp35);
-            obj1 = obj;
-            type.__c = obj;
-            obj.constructor = type;
-            obj.render = q$1;
+            obj1 = __s;
+            type.__c = __s;
+            __s.constructor = type;
+            __s.render = q$1;
           }
           if (null == obj1.__s) {
             obj1.__s = obj1.state;
           }
           if (null != type.getDerivedStateFromProps) {
             if (obj1.__s == obj1.state) {
-              obj = {};
-              v$1(obj, obj1.__s);
-              obj1.__s = obj;
+              __s = {};
+              v$1(__s, obj1.__s);
+              obj1.__s = __s;
             }
             v$1(obj1.__s, type.getDerivedStateFromProps(props, obj1.__s));
           }
@@ -1444,18 +1369,14 @@ function M(__P, type, __u, __s2, flag, arg5, arr) {
           let tmp74 = null == type.getDerivedStateFromProps;
           if (flag) {
             if (tmp74) {
-              componentWillMountResult = obj1;
               tmp74 = null != obj1.componentWillMount;
             }
             if (tmp74) {
-              componentWillMountResult = obj1;
-              componentWillMountResult = obj1.componentWillMount();
+              obj1.componentWillMount();
             }
-            componentWillMountResult = obj1;
             if (null != obj1.componentDidMount) {
-              componentWillMountResult = obj1;
-              const __h = obj1.__h;
-              componentWillMountResult = __h.push(obj1.componentDidMount);
+              __h = obj1.__h;
+              arr = __h.push(obj1.componentDidMount);
             }
           } else {
             let tmp75 = tmp74;
@@ -1476,17 +1397,15 @@ function M(__P, type, __u, __s2, flag, arg5, arr) {
               }
               ({ __e: type.__e, __k: type.__k } = __u);
               const __k = type.__k;
-              const item = __k.forEach((arg0) => {
-                if (arg0) {
-                  arg0.__ = closure_0;
+              const item = __k.forEach((item) => {
+                if (item) {
+                  item.__ = __;
                 }
               });
               let num3 = 0;
               if (0 < obj1._sb.length) {
                 do {
-                  let tmp92 = obj1;
                   let __h1 = obj1.__h;
-                  let tmp93 = num3;
                   arr = __h1.push(obj1._sb[num3]);
                   sum = num3 + 1;
                   num3 = sum;
@@ -1495,111 +1414,73 @@ function M(__P, type, __u, __s2, flag, arg5, arr) {
               }
               obj1._sb = [];
               if (obj1.__h.length) {
-                arr = arr.push(obj1);
+                arr.push(obj1);
               }
             }
             if (null != obj1.componentWillUpdate) {
-              componentWillMountResult = obj1;
-              componentWillMountResult = props;
-              componentWillMountResult = tmp30;
-              componentWillMountResult = obj1.componentWillUpdate(props, obj1.__s, tmp35);
+              obj1.componentWillUpdate(props, obj1.__s, tmp35);
             }
-            componentWillMountResult = obj1;
             if (null != obj1.componentDidUpdate) {
-              componentWillMountResult = obj1;
               const __h2 = obj1.__h;
-              componentWillMountResult = __h2.push(() => {
+              __h2.push(() => {
                 obj.componentDidUpdate(props2, state, closure_4);
               });
             }
           }
-          componentWillMountResult = __P;
-          componentWillMountResult = obj1;
           obj1.context = tmp5;
           obj1.props = props;
           obj1.__P = __P;
           obj1.__e = false;
-          const ___r = obj.__r;
+          const ___r = __s.__r;
           let num5 = 0;
           if ("prototype" in type) {
             if (type.prototype.render) {
-              componentWillMountResult = obj1;
               obj1.state = obj1.__s;
               obj1.__d = false;
-              componentWillMountResult = ___r;
               if (___r) {
-                componentWillMountResult = ___r(type);
+                ___r(type);
               }
-              componentWillMountResult = obj1;
               let element = obj1.render(obj1.props, obj1.state, obj1.context);
               let num7 = 0;
               if (0 < obj1._sb.length) {
                 do {
-                  componentWillMountResult = obj1;
                   let __h3 = obj1.__h;
-                  componentWillMountResult = num7;
-                  componentWillMountResult = __h3.push(obj1._sb[num7]);
-                  componentWillMountResult = num7 + 1;
-                  num7 = componentWillMountResult;
+                  let arr3 = __h3.push(obj1._sb[num7]);
+                  sum1 = num7 + 1;
+                  num7 = sum1;
                   length2 = obj1._sb.length;
-                } while (componentWillMountResult < length2);
+                } while (sum1 < length2);
               }
-              componentWillMountResult = obj1;
               obj1._sb = [];
             }
-            componentWillMountResult = obj1;
             obj1.state = obj1.__s;
             if (null != obj1.getChildContext) {
-              componentWillMountResult = v$1;
               obj1 = {};
-              componentWillMountResult = tmp5;
-              componentWillMountResult = v$1(obj1, tmp5);
-              componentWillMountResult = obj1;
-              componentWillMountResult = v$1(obj1, obj1.getChildContext());
+              v$1(obj1, tmp5);
+              v$1(obj1, obj1.getChildContext());
               tmp5 = obj1;
             }
             if (!flag) {
-              componentWillMountResult = obj1;
               flag = null == obj1.getSnapshotBeforeUpdate;
             }
             if (!flag) {
-              componentWillMountResult = obj1;
               const snapshotBeforeUpdate = obj1.getSnapshotBeforeUpdate(props2, state);
             }
-            componentWillMountResult = element;
             if (null != element) {
-              componentWillMountResult = element;
-              componentWillMountResult = g$1;
               if (element.type === g$1) {
-                componentWillMountResult = element;
                 if (null == element.key) {
-                  componentWillMountResult = element;
                   let children = element.props.children;
                 }
-                componentWillMountResult = children;
-                if (componentWillMountResult(children)) {
+                if (tmp140(children)) {
                   let items1 = children;
                 } else {
                   items1 = [children];
                 }
-                componentWillMountResult = tmp5;
-                componentWillMountResult = __P;
-                componentWillMountResult = items1;
-                componentWillMountResult = type;
-                componentWillMountResult = __u;
-                componentWillMountResult = flag;
-                componentWillMountResult = tmp9;
-                componentWillMountResult = arr;
-                componentWillMountResult = tmp8;
-                componentWillMountResult = tmp7;
-                componentWillMountResult = arg9;
-                componentWillMountResult = componentWillMountResult(__P, items1, type, __u, tmp5, flag, tmp9, arr, tmp8, tmp7, arg9);
-                componentWillMountResult = obj1;
+                tmp139(__P, items1, type, __u, tmp5, flag, tmp9, arr, tmp8, tmp7, arg9);
                 obj1.base = type.__e;
                 type.__u = type.__u & -161;
                 if (obj1.__h.length) {
-                  componentWillMountResult = obj1;
-                  componentWillMountResult = arr.push(obj1);
+                  arr.push(obj1);
                 }
                 if (tmp6) {
                   obj1.__ = null;
@@ -1610,23 +1491,18 @@ function M(__P, type, __u, __s2, flag, arg5, arr) {
             children = element;
           }
           while (true) {
-            componentWillMountResult = obj1;
             obj1.__d = false;
-            componentWillMountResult = ___r;
             if (___r) {
-              componentWillMountResult = ___r;
-              componentWillMountResult = ___r(type);
+              let ___rResult1 = ___r(type);
             }
-            componentWillMountResult = obj1;
             element = obj1.render(obj1.props, obj1.state, obj1.context);
             obj1.state = obj1.__s;
             if (!obj1.__d) {
               break;
             } else {
-              componentWillMountResult = num5;
-              componentWillMountResult = num5 + 1;
-              num5 = componentWillMountResult;
-              if (componentWillMountResult < 25) {
+              sum2 = num5 + 1;
+              num5 = sum2;
+              if (sum2 < 25) {
                 continue;
               } else {
                 break;
@@ -1635,26 +1511,25 @@ function M(__P, type, __u, __s2, flag, arg5, arr) {
             }
           }
         }
-      } catch (componentWillMountResult) {
-        componentWillMountResult = null;
-        componentWillMountResult.__v = null;
+      } catch (tmp162) {
+        let tmp163 = null;
+        tmp.__v = null;
         if (!tmp4) {
-          if (componentWillMountResult == arr) {
+          if (tmp163 == arr) {
             ({ __e: tmp.__e, __k: tmp.__k } = tmp2);
           }
-          componentWillMountResult = obj;
-          componentWillMountResult = obj.__e(componentWillMountResult, componentWillMountResult, tmp2);
+          tmp163 = __s;
+          __s.__e(tmp162, tmp, tmp2);
         }
-        componentWillMountResult.__e = tmp3;
+        tmp.__e = tmp3;
         let num9 = 32;
         if (tmp4) {
           num9 = 160;
         }
-        componentWillMountResult.__u = componentWillMountResult.__u | num9;
-        arr[arr.indexOf(tmp3)] = componentWillMountResult;
+        tmp.__u = tmp.__u | num9;
+        arr[arr.indexOf(tmp3)] = tmp163;
       }
     } else {
-      componentWillMountResult = null;
       if (null == tmp9) {
         if (type.__v === __u.__v) {
           ({ __k: type.__k, __e: type.__e } = __u);
@@ -1662,15 +1537,13 @@ function M(__P, type, __u, __s2, flag, arg5, arr) {
       }
       type.__e = z$1(__u.__e, type, __u, tmp5, flag, tmp9, arr, tmp7, arg9);
     }
-    componentWillMountResult = obj;
-    const diffed = obj.diffed;
-    componentWillMountResult = diffed;
+    const diffed = __s.diffed;
     if (diffed) {
-      componentWillMountResult = diffed(type);
+      diffed(type);
     }
   }
 }
-function z$1(__e, type, props, __s2, flag, arg5, arr, arg7, arg8) {
+function z$1(__e, type, props, __s2, flag, items, arr, arg7, arg8) {
   let length;
   let tmp;
   let tmp30;
@@ -1680,14 +1553,13 @@ function z$1(__e, type, props, __s2, flag, arg5, arr, arg7, arg8) {
     flag = true;
   }
   let iter = __e;
-  if (null != arg5) {
+  if (null != items) {
     let num = 0;
     let num3 = 3;
     iter = __e;
-    if (0 < arg5.length) {
+    if (0 < items.length) {
       while (true) {
-        tmp = arg5[num];
-        let tmp2 = num;
+        tmp = items[num];
         if (tmp) {
           if ("setAttribute" in tmp === type) {
             if (type) {
@@ -1703,7 +1575,7 @@ function z$1(__e, type, props, __s2, flag, arg5, arr, arg7, arg8) {
         num = num + 1;
         iter = __e;
       }
-      arg5[num] = null;
+      items[num] = null;
       iter = tmp;
     }
   }
@@ -1720,11 +1592,11 @@ function z$1(__e, type, props, __s2, flag, arg5, arr, arg7, arg8) {
       if (!tmp91) {
         iter.data = props;
       }
-    } else if (!arg5) {
+    } else if (!items) {
       let iter2 = tmp10;
       if (!tmp4) {
         iter2 = tmp10;
-        if (null != arg5) {
+        if (null != items) {
           obj = {};
           num3 = 0;
           iter2 = obj;
@@ -1746,22 +1618,12 @@ function z$1(__e, type, props, __s2, flag, arg5, arr, arg7, arg8) {
           if ("children" == tmp16) {
             continue;
           } else {
-            let tmp17 = tmp95;
             if ("dangerouslySetInnerHTML" != tmp16) {
               let tmp18 = "key" === tmp16 || tmp16 in props;
-              tmp17 = tmp15;
               if (!tmp18) {
-                let tmp19 = A$1;
-                let tmp20 = iter;
-                let tmp21 = tmp16;
-                let tmp22 = null;
-                let tmp23 = tmp95;
-                let tmp24 = flag;
                 let tmp25 = A$1(iter, tmp94, null, tmp95, flag);
-                tmp17 = tmp15;
               }
             }
-            let tmp12 = tmp17;
             continue;
           }
           continue;
@@ -1773,27 +1635,17 @@ function z$1(__e, type, props, __s2, flag, arg5, arr, arg7, arg8) {
         tmp34 = tmp30;
         while (keys1[num3] !== undefined) {
           let tmp97 = props[tmp40];
-          let tmp29 = tmp97;
           if ("children" == tmp40) {
             continue;
           } else {
-            let tmp27 = tmp36;
-            let tmp28 = tmp37;
-            tmp29 = tmp38;
             tmp30 = tmp97;
             if ("dangerouslySetInnerHTML" == tmp40) {
               continue;
             } else {
-              tmp27 = tmp36;
-              tmp28 = tmp97;
-              tmp29 = tmp38;
               tmp30 = tmp39;
               if ("value" == tmp40) {
                 continue;
               } else {
-                tmp27 = tmp97;
-                tmp28 = tmp37;
-                tmp29 = tmp38;
                 tmp30 = tmp39;
                 if ("checked" == tmp40) {
                   continue;
@@ -1809,22 +1661,11 @@ function z$1(__e, type, props, __s2, flag, arg5, arr, arg7, arg8) {
                   if (!tmp41) {
                     tmp41 = iter2[tmp40] === tmp97;
                   }
-                  tmp27 = tmp36;
-                  tmp28 = tmp37;
-                  tmp29 = tmp38;
                   tmp30 = tmp39;
                   if (tmp41) {
                     continue;
                   } else {
-                    let tmp43 = A$1;
-                    let tmp44 = iter;
-                    let tmp45 = tmp40;
-                    let tmp46 = tmp97;
-                    let tmp47 = flag;
                     let tmp48 = A$1(iter, tmp96, tmp97, iter2[tmp40], flag);
-                    tmp27 = tmp36;
-                    tmp28 = tmp37;
-                    tmp29 = tmp38;
                     tmp30 = tmp39;
                     continue;
                   }
@@ -1867,14 +1708,13 @@ function z$1(__e, type, props, __s2, flag, arg5, arr, arg7, arg8) {
         if (flag) {
           tmp52 = "foreignObject" !== type;
         }
-        if (arg5) {
-          const first = 32;
+        if (items) {
+          const first = items[0];
         } else if (props.__k) {
           let num5 = 0;
           if (0 < props.__k.length) {
             while (true) {
               items = props.__k[num5];
-              let tmp54 = num5;
               if (null == items) {
                 num5 = num5 + 1;
                 __e = items.__e;
@@ -1885,20 +1725,18 @@ function z$1(__e, type, props, __s2, flag, arg5, arr, arg7, arg8) {
             }
           }
           if (typeof props.type === "function") {
-            let tmp57 = null;
             if (props.__) {
-              tmp57 = m$1(props.__, props.__i + 1);
+              const tmp57 = m$1(props.__, props.__i + 1);
             }
           }
         }
-        P$1(iter, tmp51, type, props, __s2, tmp52, arg5, arr, first, tmp4, arg8);
-        if (null != arg5) {
+        P$1(iter, tmp51, type, props, __s2, tmp52, items, arr, first, tmp4, arg8);
+        if (null != items) {
           let diff = tmp98 - 1;
-          if (+arg5.length) {
+          if (+items.length) {
             do {
-              let tmp70 = diff;
-              if (null != arg5[diff]) {
-                let tmp71 = arg5[diff];
+              if (null != items[diff]) {
+                let tmp71 = items[diff];
                 let parentNode = tmp71.parentNode;
                 if (parentNode) {
                   let removeChildResult = parentNode.removeChild(tmp71);
@@ -1909,7 +1747,6 @@ function z$1(__e, type, props, __s2, flag, arg5, arr, arg7, arg8) {
             } while (tmp73);
           }
         }
-        const tmp49 = P$1;
       }
       if (!tmp4) {
         let tmp78 = undefined !== tmp32;
@@ -1937,7 +1774,6 @@ function z$1(__e, type, props, __s2, flag, arg5, arr, arg7, arg8) {
       const call = slice.call;
       const childNodes = iter.childNodes;
       typeof call === "unknown" ? slice() : call(childNodes);
-      const tmp8 = slice;
     }
     return iter;
   } else if (null === type) {
@@ -1967,7 +1803,7 @@ function N(fn, current, __v) {
     obj.__e(tmp4, __v);
   }
 }
-function O(ref, __v) {
+function O(ref, __v, arg2) {
   if (obj.unmount) {
     obj.unmount(ref);
   }
@@ -1977,13 +1813,12 @@ function O(ref, __v) {
     }
     tmp2 = ref.current && ref.current !== ref.__e;
   }
-  const __c = ref.__c;
+  __c = ref.__c;
   if (null == __c) {
     let tmp9 = arg2;
     const __k = ref.__k;
     if (__k) {
       for (let num = 0; num < __k.length; num = num + 1) {
-        let tmp10 = num;
         if (__k[num]) {
           let tmp12 = tmp9;
           let tmp11 = O;
@@ -2019,36 +1854,32 @@ function O(ref, __v) {
 function q$1(arg0, arg1, arg2) {
   return this.constructor(arg0, arg2);
 }
-let fn = function y(arg0, fn) {
+let fn = function y(t, fn, fn2) {
   closure_42 = tmp + 1;
   if (obj.__h) {
     let num = c46;
     if (!c46) {
       num = 2;
     }
-    obj.__h(closure_43, tmp, num);
-    const tmp2 = closure_43;
+    obj.__h(__c, tmp, num);
   }
   c46 = 0;
-  let __H = closure_43.__H;
+  let __H = __c.__H;
   if (!__H) {
-    obj = { __: null, __h: null };
-    obj[0] = [];
-    obj[1] = [];
-    closure_43.__H = obj;
+    obj = { __: [], __h: [] };
+    __c.__H = obj;
     __H = obj;
   }
   if (+closure_42 >= __H.__.length) {
     let __ = __H.__;
-    obj = { __V: null };
-    obj[0] = closure_48;
+    obj = { __V };
     __.push(obj);
   }
   closure_0 = tmp7;
-  __H.__[+closure_42].t = arg0;
+  __H.__[+closure_42].t = t;
   if (!__H.__[+closure_42].__c) {
-    if (arg2) {
-      let tmp10 = arg2(fn);
+    if (fn2) {
+      let tmp10 = fn2(fn);
     } else {
       tmp10 = fn;
       if (typeof fn === "function") {
@@ -2067,24 +1898,24 @@ let fn = function y(arg0, fn) {
           if (first !== tResult) {
             items = [tResult, obj.__[1]];
             obj.__N = items;
-            const __c = obj.__c;
+            __c = obj.__c;
             __c.setState({});
           }
         }
     ];
     tmp7.__ = items;
-    tmp7.__c = closure_43;
-    if (!closure_43.u) {
-      fn = function f(arg0, arg1, arg2) {
-        if (c0.__c.__H) {
+    tmp7.__c = __c;
+    if (!__c.u) {
+      const shouldComponentUpdate = function f(arg0, arg1, arg2) {
+        if (closure_0.__c.__H) {
           const self = this;
           const __ = tmp.__c.__H.__;
           const found = __.filter((__c) => __c.__c);
           if (found.every((__N) => !__N.__N)) {
-            if (!shouldComponentUpdate) {
-              return !shouldComponentUpdate;
+            if (!closure_2) {
+              return !closure_2;
             } else {
-              const call2 = shouldComponentUpdate.call;
+              const call2 = closure_2.call;
               if (typeof call2 === "unknown") {
                 let call2Result = tmp14(arg0, arg1, arg2);
               } else {
@@ -2108,10 +1939,10 @@ let fn = function y(arg0, fn) {
             }
             let tmp8 = !tmp7;
             if (!tmp7) {
-              if (!shouldComponentUpdate) {
-                tmp8 = !shouldComponentUpdate;
+              if (!closure_2) {
+                tmp8 = !closure_2;
               } else {
-                const call = shouldComponentUpdate.call;
+                const call = closure_2.call;
                 if (typeof call === "unknown") {
                   let callResult = tmp10(arg0, arg1, arg2);
                 } else {
@@ -2125,25 +1956,25 @@ let fn = function y(arg0, fn) {
           return true;
         }
       };
-      closure_43.u = true;
-      const shouldComponentUpdate = closure_43.shouldComponentUpdate;
-      const componentWillUpdate = closure_43.componentWillUpdate;
-      closure_43.componentWillUpdate = function(D, __getInternalProperties) {
+      __c.u = true;
+      closure_2 = __c.shouldComponentUpdate;
+      const componentWillUpdate = __c.componentWillUpdate;
+      __c.componentWillUpdate = function(D, keys, length) {
         const self = this;
         if (this.__e) {
           closure_2 = undefined;
-          fn(D, __getInternalProperties, arg2);
+          fn(D, keys, length);
         }
         if (componentWillUpdate) {
           const call = tmp4.call;
           if (typeof call === "unknown") {
-            tmp4(D, __getInternalProperties, arg2);
+            tmp4(D, keys, length);
           } else {
-            call(self, D, __getInternalProperties, arg2);
+            call(self, D, keys, length);
           }
         }
       };
-      closure_43.shouldComponentUpdate = fn;
+      __c.shouldComponentUpdate = shouldComponentUpdate;
     }
   }
   return __H.__[+closure_42].__N || __H.__[+closure_42].__;
@@ -2155,27 +1986,27 @@ class A {
     obj = closure_49;
     if (closure_49.__h) {
       num = c46;
-      tmp2 = closure_43;
+      tmp2 = c43;
       if (!c46) {
         num = 4;
       }
       __hResult = obj.__h(tmp2, tmp, num);
     }
     c46 = 0;
-    __H = closure_43.__H;
+    __H = c43.__H;
     if (!__H) {
-      tmp4 = closure_43;
+      tmp4 = c43;
       obj = { __: null, __h: null };
-      obj[0] = [];
-      obj[1] = [];
-      closure_43.__H = obj;
+      obj.__ = [];
+      obj.__h = [];
+      c43.__H = obj;
       __H = obj;
     }
     if (tmp >= __H.__.length) {
       __ = __H.__;
       obj1 = { __V: null };
       tmp5 = closure_48;
-      obj1[0] = closure_48;
+      obj1.__V = closure_48;
       arr = __.push(obj1);
     }
     tmp7 = __H.__[tmp];
@@ -2188,7 +2019,7 @@ class A {
         someResult = __H.length !== require.length;
       }
       if (!someResult) {
-        someResult = require.some((arg0, arg1) => arg0 !== __H[arg1]);
+        someResult = require.some((item, index) => item !== __H[index]);
       }
       tmp8 = someResult;
     }
@@ -2196,50 +2027,45 @@ class A {
       tmp10 = global;
       tmp7.__ = global;
       tmp7.i = require;
-      tmp11 = closure_43;
-      __h = closure_43.__h;
+      tmp11 = c43;
+      __h = c43.__h;
       arr1 = __h.push(tmp7);
     }
     return;
   }
 }
-let closure_57 = A;
-const fn2 = function q(__h, arr) {
+const fn2 = function q(__h, i) {
   closure_42 = tmp + 1;
   if (obj.__h) {
     let num = c46;
     if (!c46) {
       num = 7;
     }
-    obj.__h(closure_43, tmp, num);
-    const tmp2 = closure_43;
+    obj.__h(__c, tmp, num);
   }
   c46 = 0;
-  let __H = closure_43.__H;
+  let __H = __c.__H;
   if (!__H) {
-    obj = { __: null, __h: null };
-    obj[0] = [];
-    obj[1] = [];
-    closure_43.__H = obj;
+    obj = { __: [], __h: [] };
+    __c.__H = obj;
     __H = obj;
   }
   if (+closure_42 >= __H.__.length) {
     let __ = __H.__;
-    obj = { __V: null };
-    obj[0] = closure_48;
+    obj = { __V };
     __.push(obj);
   }
   __H = tmp7.__H;
   let someResult = !__H;
   if (__H) {
-    someResult = __H.length !== arr.length;
+    someResult = __H.length !== i.length;
   }
   if (!someResult) {
-    someResult = arr.some((arg0, arg1) => arg0 !== __H[arg1]);
+    someResult = i.some((item, index) => item !== __H[index]);
   }
   if (someResult) {
     tmp7.__V = __h();
-    tmp7.i = arr;
+    tmp7.i = i;
     tmp7.__h = __h;
     __ = tmp7.__V;
   } else {
@@ -2248,12 +2074,12 @@ const fn2 = function q(__h, arr) {
   return __;
 };
 function j() {
-  let arr = arr2.shift();
+  let arr = closure_47.shift();
   if (arr) {
     if (arr.__P) {
       if (arr.__H) {
         try {
-          const __h = arr.__H.__h;
+          __h = arr.__H.__h;
           const item = __h.forEach(z);
           const __h1 = arr.__H.__h;
           const item1 = __h1.forEach(B);
@@ -2264,14 +2090,14 @@ function j() {
         }
       }
     }
-    arr = arr2.shift();
+    arr = closure_47.shift();
   }
 }
 function w(arg0) {
   closure_0 = arg0;
   fn = function r() {
     clearTimeout(closure_2);
-    if (closure_1_60) {
+    if (closure_60) {
       const _cancelAnimationFrame = cancelAnimationFrame;
       cancelAnimationFrame(closure_1);
     }
@@ -2279,7 +2105,7 @@ function w(arg0) {
   };
   const timeout = setTimeout(fn, 100);
   if (closure_60) {
-    const _requestAnimationFrame = requestAnimationFrame;
+    _requestAnimationFrame = requestAnimationFrame;
     closure_1 = requestAnimationFrame(fn);
   }
 }
@@ -2304,32 +2130,30 @@ function DialogHeader(options) {
   options = options.options;
   const tmp = fn2(() => {
     obj = { __html: null };
-    const elementNS = closure_4.createElementNS("http://www.w3.org/2000/svg", "svg");
-    let elementNS1 = elementNS;
+    const elementNS = document.createElementNS("http://www.w3.org/2000/svg", "svg");
     const entries = Object.entries({ width: "32", height: "30", viewBox: "0 0 72 66", fill: "inherit" });
-    const item = entries.forEach((arg0) => {
-      [tmp, tmp2] = arg0;
+    const item = entries.forEach((item) => {
+      [tmp, tmp2] = item;
       obj3.setAttributeNS(null, tmp, tmp2);
     });
-    elementNS1 = closure_4.createElementNS("http://www.w3.org/2000/svg", "path");
+    const elementNS1 = document.createElementNS("http://www.w3.org/2000/svg", "path");
     const entries1 = Object.entries({ transform: "translate(11, 11)", d: "M29,2.26a4.67,4.67,0,0,0-8,0L14.42,13.53A32.21,32.21,0,0,1,32.17,40.19H27.55A27.68,27.68,0,0,0,12.09,17.47L6,28a15.92,15.92,0,0,1,9.23,12.17H4.62A.76.76,0,0,1,4,39.06l2.94-5a10.74,10.74,0,0,0-3.36-1.9l-2.91,5a4.54,4.54,0,0,0,1.69,6.24A4.66,4.66,0,0,0,4.62,44H19.15a19.4,19.4,0,0,0-8-17.31l2.31-4A23.87,23.87,0,0,1,23.76,44H36.07a35.88,35.88,0,0,0-16.41-31.8l4.67-8a.77.77,0,0,1,1.05-.27c.53.29,20.29,34.77,20.66,35.17a.76.76,0,0,1-.68,1.13H40.6q.09,1.91,0,3.81h4.78A4.59,4.59,0,0,0,50,39.43a4.49,4.49,0,0,0-.62-2.28Z" });
-    const item1 = entries1.forEach((arg0) => {
-      [tmp, tmp2] = arg0;
+    const item1 = entries1.forEach((item) => {
+      [tmp, tmp2] = item;
       obj3.setAttributeNS(null, tmp, tmp2);
     });
     elementNS.appendChild(elementNS1);
-    obj[0] = elementNS.outerHTML;
+    obj.__html = elementNS.outerHTML;
     return obj;
   }, []);
   let tmp2Result = null;
   if (options.showBranding) {
-    obj = { class: "brand-link", target: "_blank", href: "https://sentry.io/welcome/", title: "Powered by Sentry", rel: "noopener noreferrer", dangerouslySetInnerHTML: null };
-    obj[5] = tmp;
+    obj = { class: "brand-link", target: "_blank", href: "https://sentry.io/welcome/", title: "Powered by Sentry", rel: "noopener noreferrer", dangerouslySetInnerHTML: tmp };
     tmp2Result = tmp2("a", obj);
   }
   return y$1("h2", { class: "dialog__header" }, y$1("span", { class: "dialog__title" }, options.formTitle), tmp2Result);
 }
-function retrieveStringValue(get) {
+function retrieveStringValue(get, arg1) {
   const str = get.get(arg1);
   let str2 = "";
   if (typeof str === "string") {
@@ -2343,27 +2167,19 @@ function Form(onSubmitError) {
   let screenshotInput = onSubmitError.screenshotInput;
   c4 = undefined;
   emailLabel = undefined;
-  let isEmailRequired;
-  let isNameRequired;
-  let messageLabel;
-  let nameLabel;
   c10 = undefined;
   c11 = undefined;
-  let first;
-  closure_13 = undefined;
   c14 = undefined;
   closure_15 = undefined;
   ({ tags: c4, addScreenshotButtonLabel, emailLabel } = options);
-  isEmailRequired = options.isEmailRequired;
-  isNameRequired = options.isNameRequired;
-  messageLabel = options.messageLabel;
-  nameLabel = options.nameLabel;
+  const isEmailRequired = options.isEmailRequired;
+  const isNameRequired = options.isNameRequired;
+  const messageLabel = options.messageLabel;
+  const nameLabel = options.nameLabel;
   const isRequiredLabel = options.isRequiredLabel;
-  c46 = 1;
   ({ onFormClose, showEmail, showName } = onSubmitError);
   ({ removeScreenshotButtonLabel, cancelButtonLabel, emailPlaceholder, messagePlaceholder, namePlaceholder, submitButtonLabel } = options);
   [tmp5, c10] = onSubmitError(fn(D, false), 2);
-  c46 = 1;
   const tmp = fn;
   let tmp2 = D;
   let tmp3 = onSubmitError;
@@ -2371,20 +2187,18 @@ function Form(onSubmitError) {
   [tmp7, c11] = onSubmitError(fn(D, null), 2);
   c46 = 1;
   const tmp8 = onSubmitError(fn(D, false), 2);
-  first = tmp8[0];
+  const first = tmp8[0];
   closure_13 = tmp8[1];
   let input;
   if (screenshotInput != null) {
     input = screenshotInput.input;
   }
-  c46 = 1;
   const tmp6 = onSubmitError(fn(D, null), 2);
   [tmp12, c14] = tmp3(tmp(tmp2, null), 2);
   f107815 = (arg0) => {
     _undefined2(arg0);
-    callback(false);
+    closure_13(false);
   };
-  c46 = 8;
   items = [emailLabel, isEmailRequired, isNameRequired, messageLabel, nameLabel];
   f107815 = (name) => {
     let tmp2 = isEmailRequired;
@@ -2417,159 +2231,138 @@ function Form(onSubmitError) {
   const tmp13 = fn2;
   const tmp3Result = tmp3(tmp(tmp2, null), 2);
   closure_15 = fn2(() => f71260, items);
-  f107815 = undefined;
-  f107815 = screenshotInput((arg0) => {
-    closure_0 = arg0;
-    c5 = 0;
-    c6 = 0;
-    closure_4 = 0;
-    return (function*(arg0) {
-      if (c6 === 2) {
-        c6 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp7 === 3) {
-        if (arg0 === 1) {
-          throw arg1;
-        } else if (arg0 === 2) {
-          obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
-        } else {
-          return { value: "HermesInternal", done: null };
-        }
+  f107815 = screenshotInput(function*(arg0, value) {
+    if (c6 === 2) {
+      c6 = 3;
+      throw new TypeError("Generator functions may not be called on executing generators");
+    } else if (tmp7 === 3) {
+      if (arg0 === 1) {
+        throw value;
+      } else if (arg0 === 2) {
+        obj = { value, done: true };
+        return obj;
       } else {
-        try {
-          c6 = 2;
-          if (0 === c5) {
-            if (arg0 === 1) {
-              c6 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c6 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              c2 = tmp3;
-              c1 = tmp5;
-              let formData;
-              c1 = undefined;
-              c2 = undefined;
-              closure_3 = undefined;
-              closure_1_10(true);
-              c4 = 1;
-              formData.preventDefault();
-              if (formData.target instanceof globalThis.HTMLFormElement) {
-                const _FormData = FormData;
-                formData = new FormData(tmp88.target);
-                let valueResult;
-                if (closure_1_3) {
-                  if (closure_1_12) {
-                    valueResult = closure_1_3.value();
-                  }
-                }
-                c5 = 2;
-                c6 = 1;
-                obj1 = { value: null, done: false };
-                obj1[0] = valueResult;
-                return obj1;
-              } else {
-                c4 = 0;
-                closure_1_10(false);
-                c6 = 3;
-                return { value: "HermesInternal", done: null };
-              }
-              tmp88 = formData;
-            }
-          } else if (1 === tmp8) {
-            c4 = 0;
-            closure_1_10(false);
-            throw closure_3;
-          } else if (2 === tmp8) {
-            if (arg0 === 1) {
-              c6 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c4 = 0;
-              closure_1_10(false);
-              c6 = 3;
-              const obj2 = { value: null, done: true };
-              obj2[0] = arg1;
-              return obj2;
-            } else {
-              const callback2 = arg1;
-              obj3 = { name: null, email: null, message: null, attachments: null };
-              obj3[0] = closure_2_67(callback, "name");
-              obj3[1] = closure_2_67(callback, "email");
-              obj3[2] = closure_2_67(callback, "message");
-              let tmp40;
-              if (callback2) {
-                items = [callback2];
-                tmp40 = items;
-              }
-              obj3[3] = tmp40;
-              if (closure_1_15(obj3)) {
-                c4 = 2;
-                const obj4 = { name: null, email: null, message: null, source: "widget", tags: null };
-                obj4[0] = obj3.name;
-                obj4[1] = obj3.email;
-                obj4[2] = obj3.message;
-                obj4[4] = closure_4;
-                const obj5 = { attachments: null };
-                obj5[0] = obj3.attachments;
-                c5 = 4;
-                c6 = 1;
-                const obj6 = { value: null, done: false };
-                obj6[0] = callback(obj4, obj5);
-                return obj6;
-              } else {
-                c4 = 0;
-                closure_1_10(false);
-                c6 = 3;
-                return { value: "HermesInternal", done: null };
-              }
-            }
-          } else {
-            if (3 === tmp8) {
-              c4 = 1;
-              closure_4 = closure_3;
-              if (messageLabel) {
-                const debug = f107815(onSubmitSuccess[2]).debug;
-                debug.error(closure_4);
-              }
-              closure_1_11(closure_4);
-              obj3(closure_4);
-              c4 = 0;
-              closure_1_10(false);
-              c6 = 3;
-            } else if (arg0 === 1) {
-              c6 = 3;
-              throw arg1;
-            } else if (arg0 !== 2) {
-              closure_3 = arg1;
-              callback2(c2, closure_3);
-              c4 = 1;
-            }
-            c4 = 0;
-            closure_1_10(false);
+        return { value: "HermesInternal", done: null };
+      }
+    } else {
+      try {
+        c6 = 2;
+        if (0 === c5) {
+          if (arg0 === 1) {
             c6 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
+            throw value;
+          } else if (arg0 === 2) {
+            c6 = 3;
+            obj = { value, done: true };
             return obj;
-          }
-        } catch (tmp72) {
-          closure_3 = tmp72;
-          if (tmp4 === c4) {
-            c6 = tmp2;
-            throw tmp72;
-          } else if (tmp === tmp74) {
-            c5 = tmp;
           } else {
-            c5 = tmp2;
+            closure_129_0 = undefined;
+            closure_129_1 = undefined;
+            closure_129_2 = undefined;
+            closure_129_3 = undefined;
+            _undefined(true);
+            let tags = 1;
+            closure_0.preventDefault();
+            if (closure_0.target instanceof globalThis.HTMLFormElement) {
+              const _FormData = FormData;
+              const formData = new FormData(tmp87.target);
+              closure_129_0 = formData;
+              let valueResult;
+              if (screenshotInput) {
+                if (first) {
+                  valueResult = screenshotInput.value();
+                }
+              }
+              c5 = 2;
+              c6 = 1;
+              const obj1 = { value: valueResult, done: false };
+              return obj1;
+            } else {
+              tags = 0;
+              _undefined(false);
+              c6 = 3;
+              return { value: "HermesInternal", done: null };
+            }
+            tmp87 = closure_0;
           }
+        } else if (1 === tmp8) {
+          tags = 0;
+          _undefined(false);
+          throw screenshotInput;
+        } else if (2 === tmp8) {
+          if (arg0 === 1) {
+            c6 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            tags = 0;
+            _undefined(false);
+            c6 = 3;
+            const obj2 = { value, done: true };
+            return obj2;
+          } else {
+            closure_129_1 = value;
+            const obj3 = { name: retrieveStringValue(closure_129_0, "name"), email: retrieveStringValue(closure_129_0, "email"), message: retrieveStringValue(closure_129_0, "message"), attachments: null };
+            let tmp40;
+            if (closure_129_1) {
+              items = [closure_129_1];
+              tmp40 = items;
+            }
+            obj3.attachments = tmp40;
+            closure_129_2 = obj3;
+            if (closure_1_15(closure_129_2)) {
+              tags = 2;
+              const obj4 = { name: closure_129_2.name, email: closure_129_2.email, message: closure_129_2.message, source: "widget", tags };
+              const obj5 = { attachments: closure_129_2.attachments };
+              c5 = 4;
+              c6 = 1;
+              const obj6 = { value: closure_0(obj4, obj5), done: false };
+              return obj6;
+            } else {
+              tags = 0;
+              _undefined(false);
+              c6 = 3;
+              return { value: "HermesInternal", done: null };
+            }
+          }
+        } else {
+          if (3 === tmp8) {
+            tags = 1;
+            closure_129_4 = screenshotInput;
+            if (messageLabel) {
+              const debug = f107815(onSubmitSuccess[2]).debug;
+              debug.error(closure_129_4);
+            }
+            _undefined(closure_129_4);
+            tmp3(closure_129_4);
+            tags = 0;
+            _undefined(false);
+            c6 = 3;
+          } else if (arg0 === 1) {
+            c6 = 3;
+            throw value;
+          } else if (arg0 !== 2) {
+            closure_129_3 = value;
+            tmp5(closure_129_2, closure_129_3);
+            tags = 1;
+          }
+          tags = 0;
+          _undefined(false);
+          c6 = 3;
+          obj = { value, done: true };
+          return obj;
+        }
+      } catch (tmp72) {
+        screenshotInput = tmp72;
+        if (tmp4 === tags) {
+          c6 = tmp2;
+          throw tmp72;
+        } else if (tmp === tmp74) {
+          c5 = tmp;
+        } else {
+          c5 = tmp2;
         }
       }
-    })();
+    }
   });
   if (screenshotInput) {
     screenshotInput = first;
@@ -2591,8 +2384,7 @@ function Form(onSubmitError) {
   if (input) {
     tmp15Result = null;
     if (first) {
-      obj = { onError: null };
-      obj[0] = tmp14;
+      obj = { onError: tmp14 };
       tmp15Result = tmp15(input, obj);
     }
   }
@@ -2602,46 +2394,35 @@ function Form(onSubmitError) {
     tmp15Result = tmp15("div", { class: "form__error-container" }, tmp7);
   }
   if (showName) {
-    obj1 = { label: null, isRequiredLabel: null, isRequired: null };
-    obj1[0] = nameLabel;
-    obj1[1] = isRequiredLabel;
-    obj1[2] = isNameRequired;
-    let obj2 = { class: "form__input", defaultValue: null, id: "name", name: "name", placeholder: null, required: null, type: "text" };
-    obj2[1] = defaultName;
-    obj2[4] = namePlaceholder;
-    obj2[5] = isNameRequired;
+    let obj1 = { label: nameLabel, isRequiredLabel, isRequired: isNameRequired };
+    let obj2 = { class: "form__input", defaultValue: defaultName, id: "name", name: "name", placeholder: namePlaceholder, required: isNameRequired, type: "text" };
     let tmp15Result2 = tmp15("label", { for: "name", class: "form__label" }, tmp15(LabelText, obj1), tmp15("input", obj2));
     const tmp15Result1 = tmp15(LabelText, obj1);
   } else {
-    let obj3 = { "aria-hidden": true, value: null, name: "name", type: "hidden" };
-    obj3[1] = defaultName;
+    let obj3 = { "aria-hidden": true, value: defaultName, name: "name", type: "hidden" };
     tmp15Result2 = tmp15("input", obj3);
   }
   if (showEmail) {
-    let obj4 = { label: null, isRequiredLabel: null, isRequired: null };
-    obj4[0] = emailLabel;
-    obj4[1] = isRequiredLabel;
-    obj4[2] = isEmailRequired;
-    let obj5 = { class: "form__input", defaultValue: null, id: "email", name: "email", placeholder: null, required: null, type: "email" };
-    obj5[1] = defaultEmail;
-    obj5[4] = emailPlaceholder;
-    obj5[5] = isEmailRequired;
+    let obj4 = { label: emailLabel, isRequiredLabel, isRequired: isEmailRequired };
+    let obj5 = { class: "form__input", defaultValue: defaultEmail, id: "email", name: "email", placeholder: emailPlaceholder, required: isEmailRequired, type: "email" };
     let tmp15Result4 = tmp15("label", { for: "email", class: "form__label" }, tmp15(LabelText, obj4), tmp15("input", obj5));
     const tmp15Result3 = tmp15(LabelText, obj4);
   } else {
-    let obj6 = { "aria-hidden": true, value: null, name: "email", type: "hidden" };
-    obj6[1] = defaultEmail;
+    let obj6 = { "aria-hidden": true, value: defaultEmail, name: "email", type: "hidden" };
     tmp15Result4 = tmp15("input", obj6);
   }
   tmp14 = fn2(() => f71260, []);
   const tmp15Result5 = y$1(LabelText, { label: messageLabel, isRequiredLabel, isRequired: true });
   let tmp15Result9 = null;
   if (input) {
-    const obj7 = { class: "btn btn--default", disabled: null, type: "button", onClick: null };
-    obj7[1] = disabled;
-    obj7[3] = function onClick() {
-      _undefined2(null);
-      callback((arg0) => !arg0);
+    const obj7 = {
+      class: "btn btn--default",
+      disabled,
+      type: "button",
+      onClick() {
+          _undefined2(null);
+          closure_13((arg0) => !arg0);
+        }
     };
     if (first) {
       addScreenshotButtonLabel = removeScreenshotButtonLabel;
@@ -2666,84 +2447,75 @@ function LabelText(arg0) {
 }
 function Dialog(onFormSubmitted) {
   onFormSubmitted = onFormSubmitted.onFormSubmitted;
-  let f71260 = onFormSubmitted;
-  const merged = Object.assign(onFormSubmitted, Object.create(null));
+  const merged = Object.assign(onFormSubmitted, Object.assign({ open: 0, onFormSubmitted: 0 }));
   let first;
-  closure_3 = undefined;
   const options = merged.options;
-  c46 = 1;
   const tmp3 = first(fn(D, null), 2);
   first = tmp3[0];
   closure_3 = tmp3[1];
   items = [first];
-  f71260 = () => {
+  let f71260 = () => {
     if (first) {
       const _clearTimeout = clearTimeout;
       clearTimeout(tmp);
-      callback(null);
+      closure_3(null);
     }
     f71260();
   };
-  c46 = 8;
   [][0] = onFormSubmitted;
   f71260 = (arg0, arg1) => {
     merged.onSubmitSuccess(arg0, arg1);
-    callback(setTimeout(() => {
-      callback();
-      callback2(null);
+    closure_3(setTimeout(() => {
+      closure_1_0();
+      closure_1_3(null);
     }, 5000));
   };
   c46 = 8;
   const tmp2 = fn2(() => {
     obj = { __html: null };
-    const _document = elementNS6(merged[2]).GLOBAL_OBJ.document;
+    const _document = f71260(merged[2]).GLOBAL_OBJ.document;
     const elementNS = _document.createElementNS("http://www.w3.org/2000/svg", "svg");
-    elementNS6 = elementNS;
     const entries = Object.entries({ width: "16", height: "17", viewBox: "0 0 16 17", fill: "inherit" });
-    const item = entries.forEach((arg0) => {
-      [tmp, tmp2] = arg0;
+    const item = entries.forEach((item) => {
+      [tmp, tmp2] = item;
       obj3.setAttributeNS(null, tmp, tmp2);
     });
-    const _document2 = elementNS6(merged[2]).GLOBAL_OBJ.document;
+    const _document2 = f71260(merged[2]).GLOBAL_OBJ.document;
     const elementNS1 = _document2.createElementNS("http://www.w3.org/2000/svg", "g");
-    elementNS6 = elementNS1;
     const entries1 = Object.entries({ clipPath: "url(#clip0_57_156)" });
-    const item1 = entries1.forEach((arg0) => {
-      [tmp, tmp2] = arg0;
+    const item1 = entries1.forEach((item) => {
+      [tmp, tmp2] = item;
       obj3.setAttributeNS(null, tmp, tmp2);
     });
-    const _document3 = elementNS6(merged[2]).GLOBAL_OBJ.document;
+    const _document3 = f71260(merged[2]).GLOBAL_OBJ.document;
     const elementNS2 = _document3.createElementNS("http://www.w3.org/2000/svg", "path");
-    elementNS6 = elementNS2;
     const entries2 = Object.entries({ "fill-rule": "evenodd", "clip-rule": "evenodd", d: "M3.55544 15.1518C4.87103 16.0308 6.41775 16.5 8 16.5C10.1217 16.5 12.1566 15.6571 13.6569 14.1569C15.1571 12.6566 16 10.6217 16 8.5C16 6.91775 15.5308 5.37103 14.6518 4.05544C13.7727 2.73985 12.5233 1.71447 11.0615 1.10897C9.59966 0.503466 7.99113 0.34504 6.43928 0.653721C4.88743 0.962403 3.46197 1.72433 2.34315 2.84315C1.22433 3.96197 0.462403 5.38743 0.153721 6.93928C-0.15496 8.49113 0.00346625 10.0997 0.608967 11.5615C1.21447 13.0233 2.23985 14.2727 3.55544 15.1518ZM4.40546 3.1204C5.46945 2.40946 6.72036 2.03 8 2.03C9.71595 2.03 11.3616 2.71166 12.575 3.92502C13.7883 5.13838 14.47 6.78405 14.47 8.5C14.47 9.77965 14.0905 11.0306 13.3796 12.0945C12.6687 13.1585 11.6582 13.9878 10.476 14.4775C9.29373 14.9672 7.99283 15.0953 6.73777 14.8457C5.48271 14.596 4.32987 13.9798 3.42502 13.075C2.52018 12.1701 1.90397 11.0173 1.65432 9.76224C1.40468 8.50718 1.5328 7.20628 2.0225 6.02404C2.5122 4.8418 3.34148 3.83133 4.40546 3.1204Z" });
-    const item2 = entries2.forEach((arg0) => {
-      [tmp, tmp2] = arg0;
+    const item2 = entries2.forEach((item) => {
+      [tmp, tmp2] = item;
       obj3.setAttributeNS(null, tmp, tmp2);
     });
-    const _document4 = elementNS6(merged[2]).GLOBAL_OBJ.document;
+    const _document4 = f71260(merged[2]).GLOBAL_OBJ.document;
     const elementNS3 = _document4.createElementNS("http://www.w3.org/2000/svg", "path");
-    elementNS6 = elementNS3;
     const entries3 = Object.entries({ d: "M6.68775 12.4297C6.78586 12.4745 6.89218 12.4984 7 12.5C7.11275 12.4955 7.22315 12.4664 7.32337 12.4145C7.4236 12.3627 7.51121 12.2894 7.58 12.2L12 5.63999C12.0848 5.47724 12.1071 5.28902 12.0625 5.11098C12.0178 4.93294 11.9095 4.77744 11.7579 4.67392C11.6064 4.57041 11.4221 4.52608 11.24 4.54931C11.0579 4.57254 10.8907 4.66173 10.77 4.79999L6.88 10.57L5.13 8.56999C5.06508 8.49566 4.98613 8.43488 4.89768 8.39111C4.80922 8.34735 4.713 8.32148 4.61453 8.31498C4.51605 8.30847 4.41727 8.32147 4.32382 8.35322C4.23038 8.38497 4.14413 8.43484 4.07 8.49999C3.92511 8.63217 3.83692 8.81523 3.82387 9.01092C3.81083 9.2066 3.87393 9.39976 4 9.54999L6.43 12.24C6.50187 12.3204 6.58964 12.385 6.68775 12.4297Z" });
-    const item3 = entries3.forEach((arg0) => {
-      [tmp, tmp2] = arg0;
+    const item3 = entries3.forEach((item) => {
+      [tmp, tmp2] = item;
       obj3.setAttributeNS(null, tmp, tmp2);
     });
     elementNS.appendChild(elementNS1).append(elementNS3, elementNS2);
-    const _document5 = elementNS6(merged[2]).GLOBAL_OBJ.document;
+    const _document5 = f71260(merged[2]).GLOBAL_OBJ.document;
     const elementNS4 = _document5.createElementNS("http://www.w3.org/2000/svg", "defs");
-    const _document6 = elementNS6(merged[2]).GLOBAL_OBJ.document;
+    const _document6 = f71260(merged[2]).GLOBAL_OBJ.document;
     const elementNS5 = _document6.createElementNS("http://www.w3.org/2000/svg", "clipPath");
-    elementNS6 = elementNS5;
     const entries4 = Object.entries({ id: "clip0_57_156" });
-    const item4 = entries4.forEach((arg0) => {
-      [tmp, tmp2] = arg0;
+    const item4 = entries4.forEach((item) => {
+      [tmp, tmp2] = item;
       obj3.setAttributeNS(null, tmp, tmp2);
     });
-    const _document7 = elementNS6(merged[2]).GLOBAL_OBJ.document;
-    elementNS6 = _document7.createElementNS("http://www.w3.org/2000/svg", "rect");
+    const _document7 = f71260(merged[2]).GLOBAL_OBJ.document;
+    const elementNS6 = _document7.createElementNS("http://www.w3.org/2000/svg", "rect");
     const entries5 = Object.entries({ width: "16", height: "16", fill: "white", transform: "translate(0 0.5)" });
-    const item5 = entries5.forEach((arg0) => {
-      [tmp, tmp2] = arg0;
+    const item5 = entries5.forEach((item) => {
+      [tmp, tmp2] = item;
       obj3.setAttributeNS(null, tmp, tmp2);
     });
     elementNS5.appendChild(elementNS6);
@@ -2751,25 +2523,22 @@ function Dialog(onFormSubmitted) {
     const appendChildResult = elementNS.appendChild(elementNS1);
     const appendChildResult3 = elementNS.appendChild(elementNS4);
     elementNS.appendChild(elementNS4).appendChild(elementNS5).appendChild(elementNS6);
-    obj[0] = elementNS.outerHTML;
+    obj.__html = elementNS.outerHTML;
     return obj;
   }, []);
   if (first) {
-    obj = { class: "success__position", onClick: null };
-    obj[1] = tmp5;
-    obj = { class: "success__icon", dangerouslySetInnerHTML: null };
-    obj[1] = tmp2;
+    obj = { class: "success__position", onClick: tmp5 };
+    obj = { class: "success__icon", dangerouslySetInnerHTML: tmp2 };
     let tmp7Result = tmp7("div", obj, tmp7("div", { class: "success__content" }, options.successMessageText, tmp7("span", obj)));
   } else {
-    obj = { class: "dialog", onClick: null, open: null };
-    obj[1] = options.onFormClose;
-    obj[2] = onFormSubmitted.open;
-    obj1 = { class: "dialog__content", onClick: null };
-    obj1[1] = function onClick(stopPropagation) {
-      stopPropagation.stopPropagation();
+    obj = { class: "dialog", onClick: options.onFormClose, open: onFormSubmitted.open };
+    const obj1 = {
+      class: "dialog__content",
+      onClick(stopPropagation) {
+          stopPropagation.stopPropagation();
+        }
     };
-    const obj2 = { options: null };
-    obj2[0] = options;
+    const obj2 = { options };
     const obj3 = {};
     tmp7Result = tmp7(DialogHeader, obj2);
     const merged1 = Object.assign(merged);
@@ -2779,8 +2548,8 @@ function Dialog(onFormSubmitted) {
   return y$1(g$1, null, tmp7Result);
 }
 Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
-const document = registerSpanErrorInstrumentation.GLOBAL_OBJ.document;
-const navigator = registerSpanErrorInstrumentation.GLOBAL_OBJ.navigator;
+const document = _mod682.GLOBAL_OBJ.document;
+const navigator = _mod682.GLOBAL_OBJ.navigator;
 let c6 = "Report a Bug";
 function sendFeedback(message) {
   obj = arg1;
@@ -2788,9 +2557,9 @@ function sendFeedback(message) {
     obj = { includeReplay: true };
   }
   let client;
-  dependencyMap = undefined;
+  closure_1 = undefined;
   if (message.message) {
-    client = client(682).getClient();
+    client = _mod682.getClient();
     if (client) {
       let length = message.tags;
       if (length) {
@@ -2803,19 +2572,18 @@ function sendFeedback(message) {
         currentScope.setTags(message.tags);
       }
       tmp6Result = tmp6(682);
-      obj = { source: "api", url: null };
-      obj[1] = tmp6(682).getLocationHref();
+      obj = { source: "api", url: tmp6(682).getLocationHref() };
       const merged = Object.assign(message);
-      dependencyMap = tmp6Result.captureFeedback(obj, obj);
+      closure_1 = tmp6Result.captureFeedback(obj, obj);
       const promise = new Promise((arg0, arg1) => {
         client = arg0;
         closure_1 = arg1;
-        const timeout = setTimeout(() => callback2("Unable to determine if Feedback was correctly sent."), 30000);
+        const timeout = setTimeout(() => closure_1("Unable to determine if Feedback was correctly sent."), 30000);
         closure_3 = client.on("afterSendEvent", (event_id, statusCode) => {
           if (event_id.event_id === closure_1) {
             const _clearTimeout = clearTimeout;
             clearTimeout(closure_2);
-            callback3();
+            closure_3();
             statusCode = undefined;
             if (statusCode != null) {
               statusCode = statusCode.statusCode;
@@ -2823,7 +2591,7 @@ function sendFeedback(message) {
             if (statusCode) {
               if (statusCode.statusCode >= 200) {
                 if (statusCode.statusCode < 300) {
-                  let tmp10Result = callback(tmp);
+                  let tmp10Result = closure_0(tmp);
                 }
                 return tmp10Result;
               }
@@ -2837,17 +2605,15 @@ function sendFeedback(message) {
               str = "Unable to send feedback. This could be because this domain is not in your list of allowed domains.";
             }
             tmp10Result = closure_1(str);
-            const tmp10 = closure_1;
           }
         });
       });
       return promise;
     } else {
       const _Error2 = Error;
-      error = new Error("No client setup, cannot send feedback.");
+      const error = new Error("No client setup, cannot send feedback.");
       throw error;
     }
-    const obj2 = client(682);
   } else {
     const _Error = Error;
     const error1 = new Error("Unable to submit feedback with empty message");
@@ -2865,12 +2631,12 @@ let items = [];
 const re21 = /acit|ex(?:s|g|n|p|$)|rph|grid|ows|mnc|ntw|ine[ch]|zoo|^ord|itera/i;
 const slice = items.slice;
 let obj = {
-  __e(componentWillMountResult, __v, arg2) {
+  __e(require, __v, arg2, arg3) {
     let __ = __v.__;
-    let tmp = componentWillMountResult;
-    let tmp2 = componentWillMountResult;
+    let tmp = require;
+    let tmp2 = require;
     if (__) {
-      const __c = __.__c;
+      __c = __.__c;
       let tmp5 = tmp;
       if (__c) {
         tmp5 = tmp;
@@ -2910,9 +2676,9 @@ let obj = {
     throw tmp2;
   }
 };
-let c14 = 0;
+let sum2 = 0;
 b$1.prototype.render = g$1;
-let closure_15 = [];
+const __initData = [];
 if (typeof Promise === "function") {
   let _setTimeout = then.bind(Promise.resolve());
 } else {
@@ -2924,11 +2690,11 @@ function H(__v, __v2) {
 C$1.__r = 0;
 let c46 = 0;
 let closure_47 = [];
-let closure_48 = [];
+const __V = [];
 ({ __b: closure_50, __r: closure_51, diffed: closure_52, __c: closure_53, unmount: closure_54, __: closure_55 } = obj);
 obj.__b = (arg0) => {
   c43 = null;
-  if (closure_50) {
+  if (closure_1_50) {
     tmp(arg0);
   }
 };
@@ -2936,43 +2702,44 @@ obj.__ = (arg0, __k) => {
   if (tmp) {
     arg0.__m = __k.__k.__m;
   }
-  if (closure_55) {
+  if (closure_1_55) {
     tmp2(arg0, __k);
   }
 };
 obj.__r = (__c) => {
-  if (closure_51) {
+  if (closure_1_51) {
     tmp(__c);
   }
-  c42 = 0;
+  closure_42 = 0;
   __c = __c.__c;
+  c43 = __c;
   const __H = __c.__H;
   if (__H) {
-    if (closure_44 === __c) {
+    if (c44 === c43) {
       __H.__h = [];
-      __c.__h = [];
+      c43.__h = [];
       const __ = __H.__;
       const item = __.forEach((__N) => {
         if (__N.__N) {
           __N.__ = __N.__N;
         }
-        __N.__V = closure_48;
+        __N.__V = __V;
         __N.i = undefined;
         __N.__N = undefined;
       });
     } else {
-      const __h = __H.__h;
+      __h = __H.__h;
       const item1 = __h.forEach(z);
       const __h1 = __H.__h;
       const item2 = __h1.forEach(B);
       __H.__h = [];
-      c42 = 0;
+      closure_42 = 0;
     }
   }
-  closure_44 = __c;
+  c44 = c43;
 };
 obj.diffed = (__c) => {
-  if (closure_52) {
+  if (closure_1_52) {
     tmp(__c);
   }
   __c = __c.__c;
@@ -2982,7 +2749,7 @@ obj.diffed = (__c) => {
   }
   if (__H) {
     if (__c.__H.__h.length) {
-      let tmp4 = 1 !== arr2.push(__c);
+      let tmp4 = 1 !== closure_47.push(__c);
       if (tmp4) {
         tmp4 = _requestAnimationFrame === obj.requestAnimationFrame;
       }
@@ -2995,15 +2762,15 @@ obj.diffed = (__c) => {
       }
     }
     const __ = __c.__H.__;
-    const item = __.forEach((arg0) => {
-      if (arg0.i) {
-        arg0.__H = arg0.i;
+    const item = __.forEach((item) => {
+      if (item.i) {
+        item.__H = item.i;
       }
-      if (arg0.__V !== closure_48) {
-        arg0.__ = arg0.__V;
+      if (item.__V !== __V) {
+        item.__ = item.__V;
       }
-      arg0.i = undefined;
-      arg0.__V = closure_48;
+      item.i = undefined;
+      item.__V = __V;
     });
   }
   c43 = null;
@@ -3014,23 +2781,23 @@ obj.__c = (arg0, arr) => {
   arr.some((__h) => {
     try {
       __h = __h.__h;
-      const item = __h.forEach(closure_1_62);
+      const item = __h.forEach(z);
       const __h1 = __h.__h;
-      __h.__h = __h1.filter((arg0) => {
-        const __ = arg0.__;
+      __h.__h = __h1.filter((item) => {
+        const __ = item.__;
         if (__) {
-          arg0.__c = arg0.__();
+          item.__c = item.__();
         }
         return !__;
       });
     } catch (tmp4) {
-      arr.some((__h) => {
+      closure_0.some((__h) => {
         if (__h.__h) {
           __h.__h = [];
         }
       });
-      arr = [];
-      closure_1_49.__e(tmp4, tmp.__v);
+      closure_0 = [];
+      obj.__e(tmp4, tmp.__v);
     }
   });
   if (closure_53) {
@@ -3048,9 +2815,9 @@ obj.unmount = (__c) => {
   }
   if (__H) {
     const __ = __c.__H.__;
-    const item = __.forEach((arg0) => {
+    const item = __.forEach((item) => {
       try {
-        closure_1_62(arg0);
+        z(item);
       } catch (tmp4) {
         closure_0 = tmp4;
       }
@@ -3062,87 +2829,79 @@ obj.unmount = (__c) => {
   }
 };
 let closure_60 = typeof requestAnimationFrame === "function";
-const fn3 = function p(__getInternalProperties) {
+const fn3 = function p(keys) {
   c46 = 1;
-  return fn(D, __getInternalProperties);
+  return fn(D, keys);
 };
 const fn4 = function x(arg0, arg1) {
   closure_0 = arg0;
   c46 = 8;
   return fn2(() => f71260, arg1);
 };
-obj = Object.create(null);
-obj[0] = fn4;
-obj[1] = function P(arg0) {
-  obj = closure_43.context[arg0.__c];
+let merged = Object.assign({ useCallback: null, useContext: null, useDebugValue: null, useEffect: null, useErrorBoundary: null, useId: null, useImperativeHandle: null, useLayoutEffect: null, useMemo: null, useReducer: null, useRef: null, useState: null });
+merged[0] = fn4;
+merged[1] = function P(c) {
+  obj = __c.context[c.__c];
   closure_42 = tmp + 1;
   if (obj.__h) {
     let num = c46;
     if (!c46) {
       num = 9;
     }
-    obj.__h(closure_43, tmp, num);
-    const tmp2 = closure_43;
+    obj.__h(__c, tmp, num);
   }
   c46 = 0;
-  let __H = closure_43.__H;
+  let __H = __c.__H;
   if (!__H) {
-    obj = { __: null, __h: null };
-    obj[0] = [];
-    obj[1] = [];
-    closure_43.__H = obj;
+    obj = { __: [], __h: [] };
+    __c.__H = obj;
     __H = obj;
   }
   if (+closure_42 >= __H.__.length) {
     let __ = __H.__;
-    obj = { __V: null };
-    obj[0] = closure_48;
+    obj = { __V };
     __.push(obj);
   }
-  __H.__[+closure_42].c = arg0;
+  __H.__[+closure_42].c = c;
   if (obj) {
     if (null == tmp7.__) {
       tmp7.__ = true;
-      obj.sub(closure_43);
+      obj.sub(__c);
     }
     __ = obj.props.value;
   } else {
-    __ = arg0.__;
+    __ = c.__;
   }
   return __;
 };
-obj[2] = function V(arg0, arg1) {
+merged[2] = function V(arg0, fn) {
   if (obj.useDebugValue) {
     let tmp3 = arg0;
-    if (arg1) {
-      tmp3 = arg1(arg0);
+    if (fn) {
+      tmp3 = fn(arg0);
     }
     const debugValue = obj.useDebugValue(tmp3);
   }
 };
-obj[3] = function _(arg0, arr) {
+merged[3] = function _(__, i) {
   closure_42 = tmp + 1;
   if (obj.__h) {
     let num = c46;
     if (!c46) {
       num = 3;
     }
-    obj.__h(closure_43, tmp, num);
-    const tmp2 = closure_43;
+    obj.__h(__c, tmp, num);
   }
   c46 = 0;
-  let __H = closure_43.__H;
+  let __H = __c.__H;
   if (!__H) {
-    obj = { __: null, __h: null };
-    obj[0] = [];
-    obj[1] = [];
-    closure_43.__H = obj;
+    obj = { __: [], __h: [] };
+    __c.__H = obj;
     __H = obj;
   }
   if (+closure_42 >= __H.__.length) {
-    const __ = __H.__;
-    obj = { __V: null };
-    obj[0] = closure_48;
+    __ = __H.__;
+    obj = { __V };
     __.push(obj);
   }
   const __s = obj.__s;
@@ -3151,52 +2910,48 @@ obj[3] = function _(arg0, arr) {
     __H = tmp7.__H;
     let someResult = !__H;
     if (__H) {
-      someResult = __H.length !== arr.length;
+      someResult = __H.length !== i.length;
     }
     if (!someResult) {
-      someResult = arr.some((arg0, arg1) => arg0 !== __H[arg1]);
+      someResult = i.some((item, index) => item !== __H[index]);
     }
     tmp8 = someResult;
   }
   if (tmp8) {
-    tmp7.__ = arg0;
-    tmp7.i = arr;
-    const __h = closure_43.__H.__h;
+    tmp7.__ = __;
+    tmp7.i = i;
+    __h = __c.__H.__h;
     __h.push(tmp7);
   }
 };
-obj[4] = function b(arg0) {
+merged[4] = function b(__) {
   closure_42 = tmp + 1;
   if (obj.__h) {
     let num = c46;
     if (!c46) {
       num = 10;
     }
-    obj.__h(closure_43, tmp, num);
-    const tmp2 = closure_43;
+    obj.__h(__c, tmp, num);
   }
   c46 = 0;
-  let __H = closure_43.__H;
+  let __H = __c.__H;
   if (!__H) {
-    obj = { __: null, __h: null };
-    obj[0] = [];
-    obj[1] = [];
-    closure_43.__H = obj;
+    obj = { __: [], __h: [] };
+    __c.__H = obj;
     __H = obj;
   }
   if (+closure_42 >= __H.__.length) {
-    const __ = __H.__;
-    obj = { __V: null };
-    obj[0] = closure_48;
+    __ = __H.__;
+    obj = { __V };
     __.push(obj);
   }
-  closure_0 = tmp7;
+  constants = tmp7;
   c46 = 1;
   const tmp8 = fn(D, undefined);
-  closure_1 = tmp8;
-  __H.__[+closure_42].__ = arg0;
-  if (!closure_43.componentDidCatch) {
-    closure_43.componentDidCatch = (tmpResult) => {
+  dependencyMap = tmp8;
+  __H.__[+closure_42].__ = __;
+  if (!__c.componentDidCatch) {
+    __c.componentDidCatch = (tmpResult, arg1) => {
       if (constants.__) {
         constants.__(tmpResult, arg1);
       }
@@ -3211,33 +2966,29 @@ obj[4] = function b(arg0) {
   ];
   return items;
 };
-obj[5] = function g() {
+merged[5] = function g() {
   closure_42 = tmp + 1;
   if (obj.__h) {
     let num = c46;
     if (!c46) {
       num = 11;
     }
-    obj.__h(closure_43, tmp, num);
-    const tmp2 = closure_43;
+    obj.__h(__c, tmp, num);
   }
   c46 = 0;
-  let __H = closure_43.__H;
+  let __H = __c.__H;
   if (!__H) {
-    obj = { __: null, __h: null };
-    obj[0] = [];
-    obj[1] = [];
-    closure_43.__H = obj;
+    obj = { __: [], __h: [] };
+    __c.__H = obj;
     __H = obj;
   }
   if (+closure_42 >= __H.__.length) {
     let __ = __H.__;
-    obj = { __V: null };
-    obj[0] = closure_48;
+    obj = { __V };
     __.push(obj);
   }
   if (!__H.__[+closure_42].__) {
-    const __v = closure_43.__v;
+    const __v = __c.__v;
     let tmp10 = __v;
     if (null !== __v) {
       tmp10 = __v;
@@ -3273,7 +3024,7 @@ obj[5] = function g() {
   }
   return __H.__[+closure_42].__;
 };
-obj[6] = function T(arg0, arg1, arr) {
+merged[6] = function T(arg0, arg1, arr) {
   closure_0 = arg0;
   closure_1 = arg1;
   c46 = 6;
@@ -3281,33 +3032,32 @@ obj[6] = function T(arg0, arg1, arr) {
   if (null != arr) {
     combined = arr.concat(arg0);
   }
-  closure_57(() => {
+  A(() => {
     if (typeof closure_0 === "function") {
-      tmp(callback());
-      fn = () => callback(null);
+      tmp(closure_1());
+      fn = () => closure_1_0(null);
     } else if (tmp) {
-      tmp.current = callback();
+      tmp.current = closure_1();
       fn = () => {
-        closure_0.current = null;
+        closure_1_0.current = null;
         return null;
       };
     }
     return fn;
   }, combined);
 };
-obj[7] = A;
-obj[8] = fn2;
-obj[9] = fn;
-obj[10] = function F(arg0) {
-  closure_0 = arg0;
+merged[7] = A;
+merged[8] = fn2;
+merged[9] = fn;
+merged[10] = function F(current) {
   c46 = 5;
-  return fn2(() => ({ current: closure_0 }), []);
+  return fn2(() => ({ current }), []);
 };
-obj[11] = fn3;
-let closure_65 = Object.defineProperty(obj, Symbol.toStringTag, { value: "Module" });
+merged[11] = fn3;
+let closure_65 = Object.defineProperty(merged, Symbol.toStringTag, { value: "Module" });
 
 export const buildFeedbackIntegration = (arg0) => {
-  ({ lazyLoadIntegration: require, getModalIntegration: closure_1, getScreenshotIntegration: closure_2 } = arg0);
+  ({ lazyLoadIntegration: require, getModalIntegration: dependencyMap, getScreenshotIntegration: _slicedToArray } = arg0);
   return () => {
     obj = arg0;
     if (arg0 === undefined) {
@@ -3440,9 +3190,6 @@ export const buildFeedbackIntegration = (arg0) => {
     if (str19 === undefined) {
       str19 = "Remove";
     }
-    let _loadAndRenderDialog;
-    let _attachTo;
-    let _createActor;
     closure_2 = { id: str, autoInject: flag, showBranding: flag2, isEmailRequired: flag3, isNameRequired: flag4, showEmail: flag5, showName: flag6, enableScreenshot: flag7, useSentryUser, tags, styleNonce, scriptNonce, colorScheme, themeDark, themeLight, triggerLabel, triggerAriaLabel: str16, cancelButtonLabel: str3, submitButtonLabel: str14, confirmButtonLabel: str4, formTitle: str7, emailLabel: str5, emailPlaceholder: str6, messageLabel: str9, messagePlaceholder: str10, nameLabel: str11, namePlaceholder: str12, successMessageText: str15, isRequiredLabel: str8, addScreenshotButtonLabel: str2, removeScreenshotButtonLabel: str13, highlightToolText: str17, hideToolText: str18, removeHighlightText: str19, onFormClose: obj.onFormClose, onFormOpen: obj.onFormOpen, onSubmitError: obj.onSubmitError, onSubmitSuccess: obj.onSubmitSuccess, onFormSubmitted: obj.onFormSubmitted };
     c3 = null;
     closure_4 = [];
@@ -3451,7 +3198,7 @@ export const buildFeedbackIntegration = (arg0) => {
         const element = <div />;
         const _String = String;
         element.id = String(id.id);
-        const body = closure_2_4.body;
+        const body = document.body;
         body.appendChild(element);
         const attachShadowResult = element.attachShadow({ mode: "open" });
         c3 = attachShadowResult;
@@ -3465,18 +3212,18 @@ export const buildFeedbackIntegration = (arg0) => {
         }
         if ("dark" === colorScheme) {
           obj = {};
-          const merged = Object.assign(closure_2_11);
+          const merged = Object.assign(closure_11);
           const merged1 = Object.assign(themeDark);
         } else {
           obj = {};
-          const merged2 = Object.assign(closure_2_10);
+          const merged2 = Object.assign(closure_10);
           const merged3 = Object.assign(themeLight);
         }
         const _HermesInternal2 = HermesInternal;
         const combined = "\n  --foreground: " + obj.foreground + ";\n  --background: " + obj.background + ";\n  --accent-foreground: " + obj.accentForeground + ";\n  --accent-background: " + obj.accentBackground + ";\n  --success-color: " + obj.successColor + ";\n  --error-color: " + obj.errorColor + ";\n  --border: " + obj.border + ";\n  --box-shadow: " + obj.boxShadow + ";\n  --outline: " + obj.outline + ";\n  --interactive-filter: " + obj.interactiveFilter + ";\n  ";
         if ("system" === colorScheme) {
-          obj1 = {};
-          const merged4 = Object.assign(closure_2_11);
+          const obj1 = {};
+          const merged4 = Object.assign(closure_11);
           const merged5 = Object.assign(themeDark);
           const _HermesInternal4 = HermesInternal;
           const _HermesInternal5 = HermesInternal;
@@ -3491,184 +3238,171 @@ export const buildFeedbackIntegration = (arg0) => {
       }
       return c3;
     }
-    closure_0 = undefined;
-    closure_0 = closure_1_3((arg0) => {
-      closure_0 = arg0;
-      c4 = 0;
-      c5 = 0;
-      c3 = 0;
-      return (function*(arg0) {
-        if (v02 === 2) {
-          v02 = 3;
-          HermesBuiltin.throwTypeError();
-        } else if (tmp8 === 3) {
-          if (arg0 === 1) {
-            throw arg1;
-          } else if (arg0 === 2) {
-            obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
-          } else {
-            return { value: "HermesInternal", done: null };
-          }
+    closure_0 = asyncGeneratorStep(async (arg0, value) => {
+      if (v3 === 2) {
+        v3 = 3;
+        throw new TypeError("Generator functions may not be called on executing generators");
+      } else if (tmp8 === 3) {
+        if (arg0 === 1) {
+          throw value;
+        } else if (arg0 === 2) {
+          obj = { value, done: true };
+          return obj;
         } else {
-          try {
-            v02 = 2;
-            if (0 === v0) {
-              if (arg0 === 1) {
-                v02 = 3;
-                throw arg1;
-              } else if (arg0 === 2) {
-                v02 = 3;
-                obj = { value: null, done: true };
-                obj[0] = arg1;
-                return obj;
-              } else {
-                let callback = tmp4;
-                c1 = tmp6;
-                c1 = undefined;
-                callback = undefined;
-                c3 = undefined;
-                v0 = undefined;
-                v02 = undefined;
-                let enableScreenshot = lib.enableScreenshot;
-                if (enableScreenshot) {
-                  enableScreenshot = (function isScreenshotSupported() {
-                    let isMatch = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(userAgent.userAgent);
-                    if (!isMatch) {
-                      let tmp3 = /Macintosh/i.test(tmp.userAgent) && tmp.maxTouchPoints;
-                      if (tmp3) {
-                        tmp3 = tmp.maxTouchPoints > 1;
-                      }
-                      isMatch = tmp3;
-                      const obj2 = /Macintosh/i;
+          return { value: "HermesInternal", done: null };
+        }
+      } else {
+        try {
+          v3 = 2;
+          if (0 === c4) {
+            if (arg0 === 1) {
+              v3 = 3;
+              throw value;
+            } else if (arg0 === 2) {
+              v3 = 3;
+              obj = { value, done: true };
+              return obj;
+            } else {
+              closure_1 = tmp6;
+              closure_129_0 = closure_0;
+              closure_129_1 = undefined;
+              closure_129_2 = undefined;
+              closure_129_3 = undefined;
+              closure_129_4 = undefined;
+              closure_129_5 = undefined;
+              let enableScreenshot = closure_0.enableScreenshot;
+              if (enableScreenshot) {
+                enableScreenshot = (function isScreenshotSupported() {
+                  let isMatch = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(userAgent.userAgent);
+                  if (!isMatch) {
+                    let tmp3 = /Macintosh/i.test(tmp.userAgent) && tmp.maxTouchPoints;
+                    if (tmp3) {
+                      tmp3 = tmp.maxTouchPoints > 1;
                     }
-                    if (!isMatch) {
-                      isMatch = !globalThis.isSecureContext;
-                    }
-                    return !isMatch;
-                  })();
-                }
-                c3 = enableScreenshot;
-                c3 = 1;
-                if (scriptNonce) {
-                  let tmp11 = scriptNonce();
-                  closure_1 = tmp11();
-                  let obj3 = closure_3_0(closure_1[2]);
-                  obj3.addIntegration(closure_1);
-                  c3 = 2;
-                  let tmp36;
-                  if (closure_3_3) {
-                    if (callback) {
-                      let tmp10 = callback();
-                      tmp36 = tmp10;
-                    } else {
-                      v0 = 4;
-                      v02 = 1;
-                      obj1 = { value: null, done: false };
-                      obj1[0] = lib("feedbackScreenshotIntegration", closure_1_1);
-                      return obj1;
-                    }
+                    isMatch = tmp3;
+                    const obj2 = /Macintosh/i;
                   }
-                  v0 = tmp36;
-                  if (v0) {
-                    callback = v0();
-                    let obj5 = closure_3_0(closure_1[2]);
-                    obj5.addIntegration(callback);
+                  if (!isMatch) {
+                    isMatch = !globalThis.isSecureContext;
                   }
-                  c3 = 0;
-                  let obj2 = { options: null, screenshotIntegration: null, sendFeedback: null, shadow: null };
-                  obj3 = {};
-                  const merged = Object.assign(lib);
-                  obj3.onFormClose = function onFormClose() {
-                    if (c5 != null) {
-                      c5.close();
-                    }
-                    const onFormClose = closure_0.onFormClose;
-                    if (onFormClose != null) {
-                      onFormClose();
-                    }
-                  };
-                  obj3.onFormSubmitted = function onFormSubmitted() {
-                    if (c5 != null) {
-                      c5.close();
-                    }
-                    const onFormSubmitted = closure_0.onFormSubmitted;
-                    if (onFormSubmitted != null) {
-                      onFormSubmitted();
-                    }
-                  };
-                  obj2[0] = obj3;
-                  obj2[1] = callback;
-                  obj2[2] = closure_3_7;
-                  obj2[3] = v02(lib);
-                  v02 = c1.createDialog(obj2);
-                  v02 = 3;
-                } else {
-                  v0 = 3;
-                  v02 = 1;
-                  const obj4 = { value: null, done: false };
-                  obj4[0] = lib("feedbackModalIntegration", closure_1_1);
-                  return obj4;
-                }
+                  return !isMatch;
+                })();
               }
-            } else if (1 !== tmp9) {
-              if (2 === tmp9) {
-                c3 = 0;
-                if (closure_3_8) {
-                  const debug = closure_3_0(closure_1[2]).debug;
-                  debug.error("[Feedback] Missing feedback screenshot integration. Proceeding without screenshots.");
-                }
-              } else if (3 === tmp9) {
-                if (arg0 === 1) {
-                  v02 = 3;
-                  throw arg1;
-                } else {
-                  tmp11 = arg1;
-                  if (arg0 === 2) {
-                    c3 = 0;
-                    v02 = 3;
-                    obj5 = { value: null, done: true };
-                    obj5[0] = arg1;
-                    return obj5;
+              closure_129_3 = enableScreenshot;
+              c3 = 1;
+              if (scriptNonce) {
+                let tmp11 = scriptNonce();
+                closure_129_1 = tmp11();
+                let obj3 = _mod682;
+                obj3.addIntegration(closure_129_1);
+                c3 = 2;
+                let tmp36;
+                if (closure_129_3) {
+                  if (tmp4) {
+                    let tmp10 = tmp4();
+                    tmp36 = tmp10;
+                  } else {
+                    c4 = 4;
+                    v3 = 1;
+                    const obj1 = { value: closure_0("feedbackScreenshotIntegration", closure_1), done: false };
+                    return obj1;
                   }
                 }
-              } else if (arg0 === 1) {
-                v02 = 3;
-                throw arg1;
+                closure_129_4 = tmp36;
+                if (closure_129_4) {
+                  closure_129_2 = closure_129_4();
+                  let obj5 = _mod682;
+                  obj5.addIntegration(closure_129_2);
+                }
+                c3 = 0;
+                let obj2 = { options: null, screenshotIntegration: null, sendFeedback: null, shadow: null };
+                obj3 = {};
+                const merged = Object.assign(closure_129_0);
+                obj3.onFormClose = function onFormClose() {
+                  if (userAgent != null) {
+                    userAgent.close();
+                  }
+                  const onFormClose = closure_1_0.onFormClose;
+                  if (onFormClose != null) {
+                    onFormClose();
+                  }
+                };
+                obj3.onFormSubmitted = function onFormSubmitted() {
+                  if (userAgent != null) {
+                    userAgent.close();
+                  }
+                  const onFormSubmitted = closure_1_0.onFormSubmitted;
+                  if (onFormSubmitted != null) {
+                    onFormSubmitted();
+                  }
+                };
+                obj2.options = obj3;
+                obj2.screenshotIntegration = closure_129_2;
+                obj2.sendFeedback = sendFeedback;
+                obj2.shadow = v3(closure_129_0);
+                closure_129_5 = closure_129_1.createDialog(obj2);
+                v3 = 3;
               } else {
-                tmp10 = arg1;
+                c4 = 3;
+                v3 = 1;
+                const obj4 = { value: closure_0("feedbackModalIntegration", closure_1), done: false };
+                return obj4;
+              }
+            }
+          } else if (1 !== tmp9) {
+            if (2 === tmp9) {
+              c3 = 0;
+              if (__SENTRY_DEBUG__) {
+                const debug = _mod682.debug;
+                debug.error("[Feedback] Missing feedback screenshot integration. Proceeding without screenshots.");
+              }
+            } else if (3 === tmp9) {
+              if (arg0 === 1) {
+                v3 = 3;
+                throw value;
+              } else {
+                tmp11 = value;
                 if (arg0 === 2) {
                   c3 = 0;
-                  v02 = 3;
-                  obj = { value: null, done: true };
-                  obj[0] = arg1;
-                  return obj;
+                  v3 = 3;
+                  obj5 = { value, done: true };
+                  return obj5;
                 }
               }
-            }
-            c3 = 0;
-            if (closure_3_8) {
-              const debug2 = closure_3_0(closure_1[2]).debug;
-              debug2.error("[Feedback] Error when trying to load feedback integrations. Try using `feedbackSyncIntegration` in your `Sentry.init`.");
-            }
-            const _Error = Error;
-            error = new Error("[Feedback] Missing feedback modal integration!");
-            throw error;
-          } catch (tmp59) {
-            if (tmp5 === c3) {
-              v02 = tmp3;
-              throw tmp59;
-            } else if (tmp2 === tmp60) {
-              v0 = tmp2;
+            } else if (arg0 === 1) {
+              v3 = 3;
+              throw value;
             } else {
-              v0 = tmp;
+              tmp10 = value;
+              if (arg0 === 2) {
+                c3 = 0;
+                v3 = 3;
+                obj = { value, done: true };
+                return obj;
+              }
             }
           }
+          c3 = 0;
+          if (__SENTRY_DEBUG__) {
+            const debug2 = _mod682.debug;
+            debug2.error("[Feedback] Error when trying to load feedback integrations. Try using `feedbackSyncIntegration` in your `Sentry.init`.");
+          }
+          const _Error = Error;
+          const error = new Error("[Feedback] Missing feedback modal integration!");
+          throw error;
+        } catch (tmp59) {
+          if (tmp5 === c3) {
+            v3 = tmp3;
+            throw tmp59;
+          } else if (tmp2 === tmp60) {
+            c4 = tmp2;
+          } else {
+            c4 = tmp;
+          }
         }
-      })();
+      }
     });
-    _loadAndRenderDialog = function _loadAndRenderDialog(arg0) {
+    function _loadAndRenderDialog(arg0) {
       const self = this;
       const apply = closure_0.apply;
       if (typeof apply === "unknown") {
@@ -3677,19 +3411,16 @@ export const buildFeedbackIntegration = (arg0) => {
         applyArgumentsResult = apply(self, arguments);
       }
       return applyArgumentsResult;
-    };
-    _attachTo = function _attachTo(el, arg1) {
+    }
+    function _attachTo(el, arg1) {
       obj = arg1;
       if (arg1 === undefined) {
         obj = {};
       }
-      closure_0 = undefined;
-      let element;
       c2 = undefined;
       let handleClick;
-      let arr;
-      closure_0 = c2;
-      element = obj;
+      let unsubscribe;
+      let element = obj;
       obj = {};
       let merged = Object.assign(c2);
       const merged1 = Object.assign(obj);
@@ -3755,7 +3486,7 @@ export const buildFeedbackIntegration = (arg0) => {
       obj.themeLight = {};
       closure_0 = obj;
       if (typeof el === "string") {
-        element = closure_2_4.querySelector(el);
+        element = document.querySelector(el);
       } else {
         element = null;
         if (typeof el.addEventListener === "function") {
@@ -3764,70 +3495,65 @@ export const buildFeedbackIntegration = (arg0) => {
       }
       if (element) {
         c2 = null;
-        closure_0 = undefined;
-        closure_0 = closure_2_3(function*() {
-          if (c2 === 2) {
-            c2 = 3;
-            HermesBuiltin.throwTypeError();
+        closure_0 = asyncGeneratorStep(async (arg0, value) => {
+          if (_null === 2) {
+            _null = 3;
+            throw new TypeError("Generator functions may not be called on executing generators");
           } else if (tmp4 === 3) {
             if (arg0 === 1) {
-              throw arg1;
+              throw value;
             } else if (arg0 === 2) {
-              obj = { value: null, done: true };
-              obj[0] = arg1;
+              obj = { value, done: true };
               return obj;
             } else {
               return { value: "HermesInternal", done: null };
             }
           } else {
             try {
-              c2 = 2;
+              _null = 2;
               if (0 === c1) {
                 if (arg0 === 1) {
-                  c2 = 3;
-                  throw arg1;
+                  _null = 3;
+                  throw value;
                 } else if (arg0 === 2) {
-                  c2 = 3;
-                  obj = { value: null, done: true };
-                  obj[0] = arg1;
+                  _null = 3;
+                  obj = { value, done: true };
                   return obj;
                 } else {
-                  closure_0 = tmp2;
-                  if (closure_2) {
-                    closure_2.appendToDom();
-                    closure_2.open();
-                    c2 = 3;
+                  let onFormSubmitted = tmp2;
+                  if (_null) {
+                    _null.appendToDom();
+                    _null.open();
+                    _null = 3;
                   } else {
-                    obj1 = {};
-                    const merged = Object.assign(closure_1_0);
+                    const obj1 = {};
+                    const merged = Object.assign(onFormSubmitted);
                     obj1.onFormSubmitted = function onFormSubmitted() {
-                      if (c2 != null) {
-                        c2.removeFromDom();
+                      if (closure_1_2 != null) {
+                        closure_1_2.removeFromDom();
                       }
-                      const onFormSubmitted = tmp2.onFormSubmitted;
+                      onFormSubmitted = onFormSubmitted.onFormSubmitted;
                       if (onFormSubmitted != null) {
                         onFormSubmitted();
                       }
                     };
                     c1 = 1;
-                    c2 = 1;
-                    const obj2 = { value: null, done: false };
-                    obj2[0] = closure_2_6(obj1);
+                    _null = 1;
+                    const obj2 = { value: _loadAndRenderDialog(obj1), done: false };
                     return obj2;
                   }
                 }
               } else if (arg0 === 1) {
-                c2 = 3;
-                throw arg1;
+                _null = 3;
+                throw value;
               } else if (arg0 !== 2) {
-                closure_2 = arg1;
+                _null = value;
               }
-              c2 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
+              _null = 3;
+              obj = { value, done: true };
               return obj;
             } catch (tmp15) {
-              c2 = tmp;
+              _null = tmp;
               throw tmp15;
             }
           }
@@ -3843,42 +3569,38 @@ export const buildFeedbackIntegration = (arg0) => {
           return applyArgumentsResult;
         };
         const listener = element.addEventListener("click", handleClick);
-        function unsubscribe() {
-          closure_4 = closure_4.filter((arg0) => arg0 !== closure_4);
-          if (c2 != null) {
-            c2.removeFromDom();
+        unsubscribe = function unsubscribe() {
+          unsubscribe = unsubscribe.filter((item) => item !== unsubscribe);
+          if (_null != null) {
+            _null.removeFromDom();
           }
-          c2 = null;
+          _null = null;
           const removed = element.removeEventListener("click", handleClick);
-        }
-        arr = unsubscribe;
-        arr = arr.push(unsubscribe);
+        };
+        unsubscribe.push(unsubscribe);
         return unsubscribe;
       } else {
-        if (closure_2_8) {
-          const debug = closure_2_0(scriptNonce[2]).debug;
+        if (__SENTRY_DEBUG__) {
+          const debug = _mod682.debug;
           debug.error("[Feedback] Unable to attach to target element");
         }
         const _Error = Error;
-        error = new Error("Unable to attach to target element");
+        const error = new Error("Unable to attach to target element");
         throw error;
       }
-      obj1 = {};
+      let obj1 = {};
       let obj2 = {};
-    };
-    _createActor = function _createActor(id) {
+    }
+    function _createActor(id) {
       obj = id;
       if (id === undefined) {
         obj = {};
       }
-      let obj3;
-      obj3 = element2;
-      let element = obj;
       obj = {};
-      const merged = Object.assign(element2);
+      const merged = Object.assign(closure_2);
       const merged1 = Object.assign(obj);
       obj = {};
-      const merged2 = Object.assign(element2.tags);
+      const merged2 = Object.assign(closure_2.tags);
       const merged3 = Object.assign(obj.tags);
       obj.tags = obj;
       obj.onFormOpen = function onFormOpen() {
@@ -3931,17 +3653,16 @@ export const buildFeedbackIntegration = (arg0) => {
           onFormSubmitted2();
         }
       };
-      const merged4 = Object.assign(element2.themeDark);
+      const merged4 = Object.assign(closure_2.themeDark);
       const merged5 = Object.assign(obj.themeDark);
       obj.themeDark = {};
-      const merged6 = Object.assign(element2.themeLight);
+      const merged6 = Object.assign(closure_2.themeLight);
       const merged7 = Object.assign(obj.themeLight);
       obj.themeLight = {};
       ({ triggerLabel, triggerAriaLabel } = obj);
-      obj3 = _createShadow(obj);
-      element = undefined;
-      element2 = undefined;
-      element = <button />;
+      let obj3 = _createShadow(obj);
+      let element2;
+      const element = <button />;
       element.type = "button";
       element.className = "widget__actor";
       element.ariaHidden = "false";
@@ -3949,56 +3670,52 @@ export const buildFeedbackIntegration = (arg0) => {
         triggerAriaLabel = triggerLabel;
       }
       if (!triggerAriaLabel) {
-        triggerAriaLabel = closure_2_6;
+        triggerAriaLabel = c6;
       }
       element.ariaLabel = triggerAriaLabel;
-      const _document = closure_2_0(scriptNonce[2]).GLOBAL_OBJ.document;
+      const _document = _mod682.GLOBAL_OBJ.document;
       const elementNS = _document.createElementNS("http://www.w3.org/2000/svg", "svg");
-      obj3 = elementNS;
       const entries = Object.entries({ width: "20", height: "20", viewBox: "0 0 20 20", fill: "var(--actor-color, var(--foreground))" });
-      const item = entries.forEach((arg0) => {
-        [tmp, tmp2] = arg0;
+      const item = entries.forEach((item) => {
+        [tmp, tmp2] = item;
         obj3.setAttributeNS(null, tmp, tmp2);
       });
-      const _document2 = closure_2_0(scriptNonce[2]).GLOBAL_OBJ.document;
+      const _document2 = _mod682.GLOBAL_OBJ.document;
       const elementNS1 = _document2.createElementNS("http://www.w3.org/2000/svg", "g");
-      obj3 = elementNS1;
       const entries1 = Object.entries({ clipPath: "url(#clip0_57_80)" });
-      const item1 = entries1.forEach((arg0) => {
-        [tmp, tmp2] = arg0;
+      const item1 = entries1.forEach((item) => {
+        [tmp, tmp2] = item;
         obj3.setAttributeNS(null, tmp, tmp2);
       });
-      const _document3 = closure_2_0(scriptNonce[2]).GLOBAL_OBJ.document;
+      const _document3 = _mod682.GLOBAL_OBJ.document;
       const elementNS2 = _document3.createElementNS("http://www.w3.org/2000/svg", "path");
-      obj3 = elementNS2;
       const entries2 = Object.entries({ "fill-rule": "evenodd", "clip-rule": "evenodd", d: "M15.6622 15H12.3997C12.2129 14.9959 12.031 14.9396 11.8747 14.8375L8.04965 12.2H7.49956V19.1C7.4875 19.3348 7.3888 19.5568 7.22256 19.723C7.05632 19.8892 6.83435 19.9879 6.59956 20H2.04956C1.80193 19.9968 1.56535 19.8969 1.39023 19.7218C1.21511 19.5467 1.1153 19.3101 1.11206 19.0625V12.2H0.949652C0.824431 12.2017 0.700142 12.1783 0.584123 12.1311C0.468104 12.084 0.362708 12.014 0.274155 11.9255C0.185602 11.8369 0.115689 11.7315 0.0685419 11.6155C0.0213952 11.4995 -0.00202913 11.3752 -0.00034808 11.25V3.75C-0.00900498 3.62067 0.0092504 3.49095 0.0532651 3.36904C0.0972798 3.24712 0.166097 3.13566 0.255372 3.04168C0.344646 2.94771 0.452437 2.87327 0.571937 2.82307C0.691437 2.77286 0.82005 2.74798 0.949652 2.75H8.04965L11.8747 0.1625C12.031 0.0603649 12.2129 0.00407221 12.3997 0H15.6622C15.9098 0.00323746 16.1464 0.103049 16.3215 0.278167C16.4966 0.453286 16.5964 0.689866 16.5997 0.9375V3.25269C17.3969 3.42959 18.1345 3.83026 18.7211 4.41679C19.5322 5.22788 19.9878 6.32796 19.9878 7.47502C19.9878 8.62209 19.5322 9.72217 18.7211 10.5333C18.1345 11.1198 17.3969 11.5205 16.5997 11.6974V14.0125C16.6047 14.1393 16.5842 14.2659 16.5395 14.3847C16.4948 14.5035 16.4268 14.6121 16.3394 14.7042C16.252 14.7962 16.147 14.8698 16.0307 14.9206C15.9144 14.9714 15.7891 14.9984 15.6622 15ZM1.89695 10.325H1.88715V4.625H8.33715C8.52423 4.62301 8.70666 4.56654 8.86215 4.4625L12.6872 1.875H14.7247V13.125H12.6872L8.86215 10.4875C8.70666 10.3835 8.52423 10.327 8.33715 10.325H2.20217C2.15205 10.3167 2.10102 10.3125 2.04956 10.3125C1.9981 10.3125 1.94708 10.3167 1.89695 10.325ZM2.98706 12.2V18.1625H5.66206V12.2H2.98706ZM16.5997 9.93612V5.01393C16.6536 5.02355 16.7072 5.03495 16.7605 5.04814C17.1202 5.13709 17.4556 5.30487 17.7425 5.53934C18.0293 5.77381 18.2605 6.06912 18.4192 6.40389C18.578 6.73866 18.6603 7.10452 18.6603 7.47502C18.6603 7.84552 18.578 8.21139 18.4192 8.54616C18.2605 8.88093 18.0293 9.17624 17.7425 9.41071C17.4556 9.64518 17.1202 9.81296 16.7605 9.90191C16.7072 9.91509 16.6536 9.9265 16.5997 9.93612Z" });
-      const item2 = entries2.forEach((arg0) => {
-        [tmp, tmp2] = arg0;
+      const item2 = entries2.forEach((item) => {
+        [tmp, tmp2] = item;
         obj3.setAttributeNS(null, tmp, tmp2);
       });
       elementNS.appendChild(elementNS1).appendChild(elementNS2);
-      const _document4 = closure_2_0(scriptNonce[2]).GLOBAL_OBJ.document;
+      const _document4 = _mod682.GLOBAL_OBJ.document;
       const elementNS3 = _document4.createElementNS("http://www.w3.org/2000/svg", "defs");
-      const _document5 = closure_2_0(scriptNonce[2]).GLOBAL_OBJ.document;
+      const _document5 = _mod682.GLOBAL_OBJ.document;
       const elementNS4 = _document5.createElementNS("http://www.w3.org/2000/svg", "clipPath");
-      obj3 = elementNS4;
       const entries3 = Object.entries({ id: "clip0_57_80" });
-      const item3 = entries3.forEach((arg0) => {
-        [tmp, tmp2] = arg0;
+      const item3 = entries3.forEach((item) => {
+        [tmp, tmp2] = item;
         obj3.setAttributeNS(null, tmp, tmp2);
       });
-      const _document6 = closure_2_0(scriptNonce[2]).GLOBAL_OBJ.document;
+      const _document6 = _mod682.GLOBAL_OBJ.document;
       const elementNS5 = _document6.createElementNS("http://www.w3.org/2000/svg", "rect");
       obj3 = elementNS5;
       const entries4 = Object.entries({ width: "20", height: "20", fill: "white" });
-      const item4 = entries4.forEach((arg0) => {
-        [tmp, tmp2] = arg0;
+      const item4 = entries4.forEach((item) => {
+        [tmp, tmp2] = item;
         obj3.setAttributeNS(null, tmp, tmp2);
       });
       elementNS4.appendChild(elementNS5);
       elementNS3.appendChild(elementNS4);
       const appendChildResult = elementNS.appendChild(elementNS1);
-      obj1 = {};
+      const obj1 = {};
       const obj2 = {};
       const appendChildResult4 = elementNS.appendChild(elementNS3);
       elementNS.appendChild(elementNS3).appendChild(elementNS4).appendChild(elementNS5);
@@ -4010,7 +3727,7 @@ export const buildFeedbackIntegration = (arg0) => {
       }
       element2 = <style />;
       element2.textContent = "\n.widget__actor {\n  position: fixed;\n  z-index: var(--z-index);\n  margin: var(--page-margin);\n  inset: var(--actor-inset);\n\n  display: flex;\n  align-items: center;\n  gap: 8px;\n  padding: 16px;\n\n  font-family: inherit;\n  font-size: var(--font-size);\n  font-weight: 600;\n  line-height: 1.14em;\n  text-decoration: none;\n\n  background: var(--actor-background, var(--background));\n  border-radius: var(--actor-border-radius, 1.7em/50%);\n  border: var(--actor-border, var(--border));\n  box-shadow: var(--actor-box-shadow, var(--box-shadow));\n  color: var(--actor-color, var(--foreground));\n  fill: var(--actor-color, var(--foreground));\n  cursor: pointer;\n  opacity: 1;\n  transition: transform 0.2s ease-in-out;\n  transform: translate(0, 0) scale(1);\n}\n.widget__actor[aria-hidden=\"true\"] {\n  opacity: 0;\n  pointer-events: none;\n  visibility: hidden;\n  transform: translate(0, 16px) scale(0.98);\n}\n\n.widget__actor:hover {\n  background: var(--actor-hover-background, var(--background));\n  filter: var(--interactive-filter);\n}\n\n.widget__actor svg {\n  width: 1.14em;\n  height: 1.14em;\n}\n\n@media (max-width: 600px) {\n  .widget__actor span {\n    display: none;\n  }\n}\n";
-      if (obj3) {
+      if (closure_0) {
         const attr = element2.setAttribute("nonce", tmp9);
       }
       obj3 = {
@@ -4043,39 +3760,39 @@ export const buildFeedbackIntegration = (arg0) => {
       };
       _attachTo(obj3.el, obj4);
       return obj3;
-    };
+    }
     obj = {
       name: "Feedback",
       setupOnce() {
-        let autoInject = closure_2_0(scriptNonce[2]).isBrowser();
+        let autoInject = _mod682.isBrowser();
         if (autoInject) {
           autoInject = closure_2.autoInject;
         }
         if (autoInject) {
-          if ("loading" === closure_2_4.readyState) {
-            const listener = obj2.addEventListener("DOMContentLoaded", () => callback().appendToDom());
+          if ("loading" === document.readyState) {
+            const listener = obj2.addEventListener("DOMContentLoaded", () => _createActor().appendToDom());
           } else {
             _createActor().appendToDom();
             const obj3 = _createActor();
           }
-          obj2 = closure_2_4;
+          obj2 = document;
         }
       },
       attachTo: _attachTo,
       createWidget(id) {
-        obj = id;
+        let tags = id;
         if (id === undefined) {
-          obj = {};
+          tags = {};
         }
         closure_0 = closure_2;
-        obj = {};
+        tags = {};
         const merged = Object.assign(closure_2);
-        const merged1 = Object.assign(obj);
-        obj = {};
+        const merged1 = Object.assign(tags);
+        tags = {};
         const merged2 = Object.assign(closure_2.tags);
-        const merged3 = Object.assign(obj.tags);
-        obj.tags = obj;
-        obj.onFormOpen = function onFormOpen() {
+        const merged3 = Object.assign(tags.tags);
+        tags.tags = tags;
+        tags.onFormOpen = function onFormOpen() {
           const onFormOpen = obj.onFormOpen;
           if (onFormOpen != null) {
             onFormOpen();
@@ -4085,7 +3802,7 @@ export const buildFeedbackIntegration = (arg0) => {
             onFormOpen2();
           }
         };
-        obj.onFormClose = function onFormClose() {
+        tags.onFormClose = function onFormClose() {
           const onFormClose = obj.onFormClose;
           if (onFormClose != null) {
             onFormClose();
@@ -4095,7 +3812,7 @@ export const buildFeedbackIntegration = (arg0) => {
             onFormClose2();
           }
         };
-        obj.onSubmitSuccess = function onSubmitSuccess(arg0, arg1) {
+        tags.onSubmitSuccess = function onSubmitSuccess(arg0, arg1) {
           const onSubmitSuccess = obj.onSubmitSuccess;
           if (onSubmitSuccess != null) {
             onSubmitSuccess(arg0, arg1);
@@ -4105,7 +3822,7 @@ export const buildFeedbackIntegration = (arg0) => {
             onSubmitSuccess2(arg0, arg1);
           }
         };
-        obj.onSubmitError = function onSubmitError(arg0) {
+        tags.onSubmitError = function onSubmitError(arg0) {
           const onSubmitError = obj.onSubmitError;
           if (onSubmitError != null) {
             onSubmitError(arg0);
@@ -4115,7 +3832,7 @@ export const buildFeedbackIntegration = (arg0) => {
             onSubmitError2(arg0);
           }
         };
-        obj.onFormSubmitted = function onFormSubmitted() {
+        tags.onFormSubmitted = function onFormSubmitted() {
           const onFormSubmitted = obj.onFormSubmitted;
           if (onFormSubmitted != null) {
             onFormSubmitted();
@@ -4126,30 +3843,28 @@ export const buildFeedbackIntegration = (arg0) => {
           }
         };
         const merged4 = Object.assign(closure_2.themeDark);
-        const merged5 = Object.assign(obj.themeDark);
-        obj.themeDark = {};
+        const merged5 = Object.assign(tags.themeDark);
+        tags.themeDark = {};
         const merged6 = Object.assign(closure_2.themeLight);
-        const merged7 = Object.assign(obj.themeLight);
-        obj.themeLight = {};
-        const obj6 = _createActor(obj);
+        const merged7 = Object.assign(tags.themeLight);
+        tags.themeLight = {};
+        const obj6 = _createActor(tags);
         obj6.appendToDom();
         return obj6;
       },
       createForm() {
-        obj = arg0;
         if (arg0 === undefined) {
           obj = {};
         }
-        return closure_2_3(function*() {
+        return (async (arg0, value) => {
           if (c0 === 2) {
             c0 = 3;
-            HermesBuiltin.throwTypeError();
+            throw new TypeError("Generator functions may not be called on executing generators");
           } else if (tmp3 === 3) {
             if (arg0 === 1) {
-              throw arg1;
+              throw value;
             } else if (arg0 === 2) {
-              obj = { value: null, done: true };
-              obj[0] = arg1;
+              obj = { value, done: true };
               return obj;
             } else {
               return { value: "HermesInternal", done: null };
@@ -4159,16 +3874,15 @@ export const buildFeedbackIntegration = (arg0) => {
               c0 = 2;
               if (arg0 === 1) {
                 c0 = 3;
-                throw arg1;
+                throw value;
               } else if (arg0 === 2) {
                 c0 = 3;
-                obj = { value: null, done: true };
-                obj[0] = arg1;
+                obj = { value, done: true };
                 return obj;
               } else {
                 c0 = 3;
                 obj = { value: null, done: true };
-                obj[0] = closure_1_6(closure_3_9(closure_1_2, c0));
+                obj.value = _loadAndRenderDialog(mergeOptions(closure_1_2, obj));
                 return obj;
               }
             } catch (tmp8) {
@@ -4186,7 +3900,8 @@ export const buildFeedbackIntegration = (arg0) => {
           }
           _null = null;
         }
-        const item = arr.forEach((arg0) => arg0());
+        const item = closure_4.forEach((fn) => fn());
+        closure_4 = [];
       }
     };
     return obj;
@@ -4200,18 +3915,16 @@ export () => ({
   createDialog(options) {
     options = options.options;
     ({ screenshotIntegration, sendFeedback: closure_1 } = options);
-    let useSentryUser;
-    let user;
     closure_5 = undefined;
     let element;
-    c7 = undefined;
+    let overflow;
     let input;
     let renderContent;
     const shadow = options.shadow;
-    useSentryUser = options.useSentryUser;
+    const useSentryUser = options.useSentryUser;
     obj = options(682);
     const currentScope = obj.getCurrentScope();
-    user = currentScope.getUser();
+    let user = currentScope.getUser();
     const isolationScope = options(682).getIsolationScope();
     const user1 = isolationScope.getUser();
     const obj3 = options(682);
@@ -4237,7 +3950,7 @@ export () => ({
     if (styleNonce) {
       const attr = element.setAttribute("nonce", styleNonce);
     }
-    c7 = "";
+    overflow = "";
     obj = {};
     Object.defineProperty(obj, "el", { get: () => closure_5, set: undefined });
     obj.appendToDom = function appendToDom() {
@@ -4253,7 +3966,7 @@ export () => ({
     obj.removeFromDom = function removeFromDom() {
       closure_5.remove();
       element.remove();
-      user.body.style.overflow = c7;
+      document.body.style.overflow = overflow;
     };
     obj.open = function open() {
       renderContent(true);
@@ -4261,35 +3974,33 @@ export () => ({
       if (onFormOpen != null) {
         onFormOpen();
       }
-      const client = options(closure_1_1[2]).getClient();
+      const client = _mod682.getClient();
       if (client != null) {
         client.emit("openFeedbackWidget");
       }
-      const overflow = user.body.style.overflow;
-      user.body.style.overflow = "hidden";
+      overflow = document.body.style.overflow;
+      document.body.style.overflow = "hidden";
     };
     obj.close = function close() {
       renderContent(false);
-      user.body.style.overflow = c7;
+      document.body.style.overflow = overflow;
     };
     input = undefined;
     if (screenshotIntegration != null) {
-      obj = { h: null, hooks: null, dialog: null, options: null };
-      obj[0] = closure_25;
-      obj[1] = closure_65;
-      obj[2] = obj;
-      obj[3] = options;
+      obj = { h, hooks, dialog: null, options: null };
+      obj.dialog = obj;
+      obj.options = options;
       input = screenshotIntegration.createInput(obj);
     }
-    renderContent = function renderContent(arg0) {
+    renderContent = function renderContent(open) {
       let length;
-      obj = { options: items1, screenshotInput: input, showName: null, showEmail: null, defaultName: null, defaultEmail: null, onFormClose: null, onSubmit: null, onSubmitSuccess: null, onSubmitError: null, onFormSubmitted: null, open: null };
-      let isNameRequired = items1.showName;
+      obj = { options, screenshotInput: input, showName: null, showEmail: null, defaultName: null, defaultEmail: null, onFormClose: null, onSubmit: null, onSubmitSuccess: null, onSubmitError: null, onFormSubmitted: null, open: null };
+      let isNameRequired = options.showName;
       if (!isNameRequired) {
         isNameRequired = tmp3.isNameRequired;
       }
-      obj[2] = isNameRequired;
-      obj[3] = items1.showEmail || items1.isEmailRequired;
+      obj.showName = isNameRequired;
+      obj.showEmail = options.showEmail || options.isEmailRequired;
       let str = useSentryUser;
       if (useSentryUser) {
         let tmp7;
@@ -4301,7 +4012,7 @@ export () => ({
       if (!str) {
         str = "";
       }
-      obj[4] = String(str);
+      obj.defaultName = String(str);
       let str2 = tmp4;
       if (useSentryUser) {
         let tmp10;
@@ -4313,77 +4024,77 @@ export () => ({
       if (!str2) {
         str2 = "";
       }
-      obj[5] = String(str2);
-      obj[6] = function onFormClose() {
-        callback(false);
-        const onFormClose = items1.onFormClose;
+      obj.defaultEmail = String(str2);
+      obj.onFormClose = function onFormClose() {
+        renderContent(false);
+        const onFormClose = __h.onFormClose;
         if (onFormClose != null) {
           onFormClose();
         }
       };
-      obj[7] = closure_1;
-      obj[8] = function onSubmitSuccess(arg0, arg1) {
-        callback(false);
-        const onSubmitSuccess = items1.onSubmitSuccess;
+      obj.onSubmit = onSubmit;
+      obj.onSubmitSuccess = function onSubmitSuccess(arg0, arg1) {
+        renderContent(false);
+        const onSubmitSuccess = __h.onSubmitSuccess;
         if (onSubmitSuccess != null) {
           onSubmitSuccess(arg0, arg1);
         }
       };
-      obj[9] = function onSubmitError(arg0) {
-        const onSubmitError = items1.onSubmitError;
+      obj.onSubmitError = function onSubmitError(arg0) {
+        const onSubmitError = __h.onSubmitError;
         if (onSubmitError != null) {
           onSubmitError(arg0);
         }
       };
-      obj[10] = function onFormSubmitted() {
-        const onFormSubmitted = items1.onFormSubmitted;
+      obj.onFormSubmitted = function onFormSubmitted() {
+        const onFormSubmitted = __h.onFormSubmitted;
         if (onFormSubmitted != null) {
           onFormSubmitted();
         }
       };
-      obj[11] = arg0;
-      let tmpResult = tmp(closure_1_70, obj);
-      if (closure_1_13.__) {
-        closure_1_13.__(tmpResult, tmp12);
+      obj.open = open;
+      let tmpResult = tmp(Dialog, obj);
+      if (closure_2_13.__) {
+        closure_2_13.__(tmpResult, tmp12);
       }
       const __k = tmp12.__k;
       items = [tmpResult];
-      tmpResult = tmp(closure_1_26, null, items);
+      tmpResult = tmp(g$1, null, items);
       closure_5.__k = tmpResult;
       let tmp16 = __k;
       if (!__k) {
-        tmp16 = closure_1_19;
+        tmp16 = closure_2_19;
       }
       let tmp18 = null;
       if (!__k) {
         if (!tmp12.firstChild) {
           tmp18 = null;
         } else {
-          let call = closure_1_12.call;
+          let call = slice.call;
           const childNodes = tmp12.childNodes;
-          typeof call === "unknown" ? closure_1_12() : call(childNodes);
-          const tmp20 = closure_1_12;
+          typeof call === "unknown" ? slice() : call(childNodes);
         }
       }
-      items1 = [];
+      const items1 = [];
       const items2 = [];
-      closure_1_37(closure_5, tmpResult, tmp16, closure_1_19, undefined !== closure_5.ownerSVGElement, tmp18, items1, __k ? __k.__e : closure_5.firstChild, false, items2);
+      closure_2_37(closure_5, tmpResult, tmp16, closure_2_19, undefined !== closure_5.ownerSVGElement, tmp18, items1, __k ? __k.__e : closure_5.firstChild, false, items2);
       tmpResult.__d = undefined;
+      __h = items1;
       let num = 0;
       if (0 < items2.length) {
         do {
-          let tmp24 = closure_1_39;
           let sum = num + 1;
           let sum1 = sum + 1;
-          let tmp27 = closure_1_39(items2[num], items2[sum], items2[sum1]);
+          let tmp27 = closure_2_39(items2[num], items2[sum], items2[sum1]);
           num = sum1 + 1;
           length = items2.length;
         } while (num < length);
       }
-      if (closure_1_13.__c) {
-        closure_1_13.__c(tmpResult, items1);
+      if (closure_2_13.__c) {
+        closure_2_13.__c(tmpResult, __h);
       }
-      items1.some((__h) => {
+      __h.some((__h) => {
+        closure_0 = __h;
         try {
           __h = __h.__h;
           __h.__h = [];
@@ -4392,11 +4103,11 @@ export () => ({
             if (typeof call === "unknown") {
               call();
             } else {
-              call(__h);
+              call(closure_0);
             }
           });
         } catch (tmp4) {
-          closure_1_13.__e(tmp4, tmp.__v);
+          closure_2_13.__e(tmp4, tmp.__v);
         }
       });
     };
@@ -4410,19 +4121,15 @@ export () => ({
   },
   createInput(dialog) {
     ({ h, hooks, options } = dialog);
-    closure_0 = undefined;
-    hooks = undefined;
     let element = <canvas />;
     hooks = element;
-    closure_0 = h;
     closure_7 = undefined;
     let style;
     let ScreenshotEditor;
-    closure_0 = hooks;
+    closure_129_0 = hooks;
     function useTakeScreenshot(arg0) {
 
     }
-    closure_0 = h;
     function Toolbar(action) {
       action = action.action;
       ({ setAction: hooks, options } = action);
@@ -4439,7 +4146,7 @@ export () => ({
           if ("highlight" === action) {
             str = "";
           }
-          closure_1(str);
+          hooks(str);
         }
       };
       if ("hide" === action) {
@@ -4454,16 +4161,16 @@ export () => ({
           if ("hide" === action) {
             str = "";
           }
-          closure_1(str);
+          hooks(str);
         }
       };
-      return action("div", { class: "editor__tool-container" }, action("div", obj, action("button", obj, options.highlightToolText), action("button", obj, options.hideToolText)));
+      return closure_0("div", { class: "editor__tool-container" }, closure_0("div", obj, closure_0("button", obj, options.highlightToolText), closure_0("button", obj, options.hideToolText)));
     }
     closure_0 = h;
     function IconClose() {
-      const tmp = callback("circle", { r: "7", cx: "8", cy: "8", fill: "white" });
-      const tmp2 = callback("path", { strokeWidth: "1.5", d: "M8,16a8,8,0,1,1,8-8A8,8,0,0,1,8,16ZM8,1.53A6.47,6.47,0,1,0,14.47,8,6.47,6.47,0,0,0,8,1.53Z" });
-      return callback("svg", { "data-test-id": "icon-close", viewBox: "0 0 16 16", fill: "#2B2233", height: "25px", width: "25px" }, tmp, tmp2, callback("path", { strokeWidth: "1.5", d: "M5.34,11.41a.71.71,0,0,1-.53-.22.74.74,0,0,1,0-1.06l5.32-5.32a.75.75,0,0,1,1.06,1.06L5.87,11.19A.74.74,0,0,1,5.34,11.41Z" }), callback("path", { strokeWidth: "1.5", d: "M10.66,11.41a.74.74,0,0,1-.53-.22L4.81,5.87A.75.75,0,0,1,5.87,4.81l5.32,5.32a.74.74,0,0,1,0,1.06A.71.71,0,0,1,10.66,11.41Z" }));
+      const tmp = closure_0("circle", { r: "7", cx: "8", cy: "8", fill: "white" });
+      const tmp2 = closure_0("path", { strokeWidth: "1.5", d: "M8,16a8,8,0,1,1,8-8A8,8,0,0,1,8,16ZM8,1.53A6.47,6.47,0,1,0,14.47,8,6.47,6.47,0,0,0,8,1.53Z" });
+      return closure_0("svg", { "data-test-id": "icon-close", viewBox: "0 0 16 16", fill: "#2B2233", height: "25px", width: "25px" }, tmp, tmp2, closure_0("path", { strokeWidth: "1.5", d: "M5.34,11.41a.71.71,0,0,1-.53-.22.74.74,0,0,1,0-1.06l5.32-5.32a.75.75,0,0,1,1.06,1.06L5.87,11.19A.74.74,0,0,1,5.34,11.41Z" }), closure_0("path", { strokeWidth: "1.5", d: "M10.66,11.41a.74.74,0,0,1-.53-.22L4.81,5.87A.75.75,0,0,1,5.87,4.81l5.32,5.32a.74.74,0,0,1,0,1.06A.71.71,0,0,1,10.66,11.41Z" }));
     }
     const styleNonce = options.styleNonce;
     const element1 = <style />;
@@ -4473,159 +4180,144 @@ export () => ({
     }
     obj = {
       input: function Wrapper(onError) {
-        callback = onError.onError;
         callback1 = undefined;
         [tmp2, callback1] = element(callback1.useState(), 2);
         callback = callback1.useCallback(() => {
-          closure_8.display = "none";
+          style.display = "none";
         }, []);
-        callback1 = callback1.useCallback((arg0, mapped) => {
+        callback1 = callback1.useCallback((arg0, dpi) => {
           const size = <canvas />;
           if (size) {
             const context = size.getContext("2d", { alpha: false });
             if (context) {
-              context.scale(mapped, mapped);
+              context.scale(dpi, dpi);
               ({ videoWidth: size.width, videoHeight: size.height } = arg0);
               context.drawImage(arg0, 0, 0, size.width, size.height);
-              obj = { canvas: null, dpi: null };
-              obj[0] = size;
-              obj[1] = mapped;
+              obj = { canvas: size, dpi };
               callback1(obj);
             }
           }
-          ({ videoWidth: callback2.width, videoHeight: callback2.height } = arg0);
+          ({ videoWidth: element.width, videoHeight: element.height } = arg0);
         }, []);
         const callback2 = callback1.useCallback(() => {
-          closure_8.display = "block";
+          style.display = "block";
         }, []);
-        const callback3 = callback1.useCallback((arg0) => {
-          closure_1_8.display = "block";
-          callback(arg0);
-        }, []);
-        if (typeof useTakeScreenshot !== "function") {
-          HermesBuiltin.throwTypeError();
-        }
-        obj = callback;
-        let num = callback(hooks[2]).GLOBAL_OBJ.devicePixelRatio;
-        if (num == null) {
-          num = 1;
-        }
-        const tmp = element(callback1.useState(), 2);
-        [tmp8, callback] = element(callback.useState(num), 2);
-        const effect = obj.useEffect(() => {
-          function onChange() {
-            onChange(onChange(matchMediaResult[2]).GLOBAL_OBJ.devicePixelRatio);
+        if (typeof useTakeScreenshot === "function") {
+          options = tmp6;
+          obj = callback;
+          let num = closure_0(hooks[2]).GLOBAL_OBJ.devicePixelRatio;
+          if (num == null) {
+            num = 1;
           }
-          const matchMediaResult = globalThis.matchMedia("(resolution: " + callback(callback1[2]).GLOBAL_OBJ.devicePixelRatio + "dppx)");
-          callback1 = matchMediaResult;
-          const listener = matchMediaResult.addEventListener("change", onChange);
-          return () => {
-            const removed = matchMediaResult.removeEventListener("change", onChange);
-          };
-        }, []);
-        useTakeScreenshot = tmp8;
-        const effect1 = obj.useEffect(() => {
-          closure_0 = callback3(function*() {
-            if (c3 === 2) {
-              c3 = 3;
-              HermesBuiltin.throwTypeError();
-            } else if (tmp4 === 3) {
-              if (arg0 === 1) {
-                throw arg1;
-              } else if (arg0 === 2) {
-                obj = { value: null, done: true };
-                obj[0] = arg1;
-                return obj;
-              } else {
-                return { value: "HermesInternal", done: null };
-              }
-            } else {
-              try {
-                c3 = 2;
-                if (0 === v0) {
-                  if (arg0 === 1) {
-                    c3 = 3;
-                    throw arg1;
-                  } else if (arg0 === 2) {
-                    c3 = 3;
-                    obj = { value: null, done: true };
-                    obj[0] = arg1;
-                    return obj;
-                  } else {
-                    c1 = 0;
-                    c0 = tmp2;
-                    c0 = undefined;
-                    c1 = undefined;
-                    callback();
-                    const mediaDevices = closure_2_5.mediaDevices;
-                    obj1 = { video: null, audio: false, monitorTypeSurfaces: "exclude", preferCurrentTab: true, selfBrowserSurface: "include", surfaceSwitching: "exclude" };
-                    const obj2 = { width: null, height: null };
-                    obj2[0] = callback(closure_2_1[2]).GLOBAL_OBJ.innerWidth * closure_1_4;
-                    obj2[1] = callback(closure_2_1[2]).GLOBAL_OBJ.innerHeight * closure_1_4;
-                    obj1[0] = obj2;
-                    v0 = 1;
-                    c3 = 1;
-                    const obj3 = { value: null, done: false };
-                    obj3[0] = mediaDevices.getDisplayMedia(obj1);
-                    return obj3;
-                  }
-                } else if (1 === tmp5) {
-                  if (arg0 === 1) {
-                    c3 = 3;
-                    throw arg1;
-                  } else if (arg0 === 2) {
-                    c3 = 3;
-                    const obj4 = { value: null, done: true };
-                    obj4[0] = arg1;
-                    return obj4;
-                  } else {
-                    callback = arg1;
-                    closure_1 = <video />;
-                    const promise = new Promise(() => { ... });
-                    v0 = 2;
-                    c3 = 1;
-                    const obj5 = { value: null, done: false };
-                    obj5[0] = promise;
-                    return obj5;
-                  }
-                } else if (arg0 === 1) {
-                  c3 = 3;
-                  throw arg1;
+          [tmp12, callback] = element(callback.useState(num), 2);
+          const effect = obj.useEffect(() => {
+            function onChange() {
+              onChange(callback(callback1[2]).GLOBAL_OBJ.devicePixelRatio);
+            }
+            const matchMediaResult = globalThis.matchMedia("(resolution: " + callback(callback1[2]).GLOBAL_OBJ.devicePixelRatio + "dppx)");
+            callback1 = matchMediaResult;
+            const listener = matchMediaResult.addEventListener("change", onChange);
+            return () => {
+              const removed = matchMediaResult.removeEventListener("change", onChange);
+            };
+          }, []);
+          useTakeScreenshot = tmp12;
+          const effect1 = obj.useEffect(() => {
+            closure_0 = tmp6(function*(arg0, value) {
+              if (c3 === 2) {
+                c3 = 3;
+                throw new TypeError("Generator functions may not be called on executing generators");
+              } else if (tmp4 === 3) {
+                if (arg0 === 1) {
+                  throw value;
                 } else if (arg0 === 2) {
-                  c3 = 3;
-                  obj = { value: null, done: true };
-                  obj[0] = arg1;
+                  obj = { value, done: true };
                   return obj;
                 } else {
-                  v0();
-                  c3 = 3;
                   return { value: "HermesInternal", done: null };
                 }
-              } catch (tmp17) {
-                c3 = tmp;
-                throw tmp17;
+              } else {
+                try {
+                  c3 = 2;
+                  if (0 === v2) {
+                    if (arg0 === 1) {
+                      c3 = 3;
+                      throw value;
+                    } else if (arg0 === 2) {
+                      c3 = 3;
+                      obj = { value, done: true };
+                      return obj;
+                    } else {
+                      c1 = 0;
+                      closure_128_0 = undefined;
+                      closure_128_1 = undefined;
+                      tmp2();
+                      mediaDevices = mediaDevices.mediaDevices;
+                      const obj1 = { video: null, audio: false, monitorTypeSurfaces: "exclude", preferCurrentTab: true, selfBrowserSurface: "include", surfaceSwitching: "exclude" };
+                      const size = { width: tmp2(682).GLOBAL_OBJ.innerWidth * React, height: tmp2(682).GLOBAL_OBJ.innerHeight * React };
+                      obj1.video = size;
+                      v2 = 1;
+                      c3 = 1;
+                      const obj2 = { value: mediaDevices.getDisplayMedia(obj1), done: false };
+                      return obj2;
+                    }
+                  } else if (1 === tmp5) {
+                    if (arg0 === 1) {
+                      c3 = 3;
+                      throw value;
+                    } else if (arg0 === 2) {
+                      c3 = 3;
+                      const obj3 = { value, done: true };
+                      return obj3;
+                    } else {
+                      closure_128_0 = value;
+                      closure_128_1 = <video />;
+                      const promise = new Promise(() => { ... });
+                      v2 = 2;
+                      c3 = 1;
+                      const obj4 = { value: promise, done: false };
+                      return obj4;
+                    }
+                  } else if (arg0 === 1) {
+                    c3 = 3;
+                    throw value;
+                  } else if (arg0 === 2) {
+                    c3 = 3;
+                    obj = { value, done: true };
+                    return obj;
+                  } else {
+                    v2();
+                    c3 = 3;
+                    return { value: "HermesInternal", done: null };
+                  }
+                } catch (tmp17) {
+                  c3 = tmp;
+                  throw tmp17;
+                }
               }
-            }
-          });
-          (function takeScreenshot() {
-            const self = this;
-            const apply = closure_0.apply;
-            if (typeof apply === "unknown") {
-              let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-            } else {
-              applyArgumentsResult = apply(self, arguments);
-            }
-            return applyArgumentsResult;
-          })().catch(callback3);
-        }, []);
-        if (tmp2) {
-          obj = { screenshot: null };
-          obj[0] = tmp2;
-          let tmp11Result = tmp11(ScreenshotEditor, obj);
+            });
+            (function takeScreenshot() {
+              const self = this;
+              const apply = closure_0.apply;
+              if (typeof apply === "unknown") {
+                let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+              } else {
+                applyArgumentsResult = apply(self, arguments);
+              }
+              return applyArgumentsResult;
+            })().catch(tmp6);
+          }, []);
+          if (tmp2) {
+            obj = { screenshot: tmp2 };
+            let tmp15Result = tmp15(ScreenshotEditor, obj);
+          } else {
+            tmp15Result = tmp15("div", null);
+          }
+          return tmp15Result;
         } else {
-          tmp11Result = tmp11("div", null);
+          throw new TypeError("Trying to call a non-function");
         }
-        return tmp11Result;
+        const tmp = element(callback1.useState(), 2);
       },
       value: null
     };
@@ -4633,34 +4325,22 @@ export () => ({
     style = dialog.dialog.el.style;
     ScreenshotEditor = function ScreenshotEditor(screenshot) {
       screenshot = screenshot.screenshot;
-      let first;
-      let first1;
-      options = undefined;
-      let ref;
-      let ref1;
-      let ref2;
-      let ref3;
-      let first2;
-      closure_9 = undefined;
-      let memo;
-      closure_11 = undefined;
-      closure_12 = undefined;
-      let handleStopPropagation;
-      const tmp = element(first.useState("highlight"), 2);
-      first = tmp[0];
-      const tmp3 = element(first.useState([]), 2);
-      first1 = tmp3[0];
+      let action;
+      let tmp = element(action.useState("highlight"), 2);
+      action = tmp[0];
+      const tmp3 = element(action.useState([]), 2);
+      const first1 = tmp3[0];
       options = tmp3[1];
-      ref = first.useRef(null);
-      ref1 = first.useRef(null);
-      ref2 = first.useRef(null);
-      ref3 = first.useRef(null);
-      const tmp8 = element(first.useState(1), 2);
-      first2 = tmp8[0];
+      const ref = action.useRef(null);
+      const ref1 = action.useRef(null);
+      const ref2 = action.useRef(null);
+      const ref3 = action.useRef(null);
+      const tmp8 = element(action.useState(1), 2);
+      const first2 = tmp8[0];
       closure_9 = tmp8[1];
       items = [options.id];
-      memo = first.useMemo(() => {
-        element = ref.getElementById(closure_3.id);
+      const memo = action.useMemo(() => {
+        element = useTakeScreenshot.getElementById(id.id);
         if (element) {
           const computedStyle = globalThis.getComputedStyle(element);
           let propertyValue = computedStyle.getPropertyValue("--button-primary-background");
@@ -4673,15 +4353,15 @@ export () => ({
         }
       }, items);
       const items1 = [screenshot];
-      const layoutEffect = first.useLayoutEffect(() => {
+      const layoutEffect = action.useLayoutEffect(() => {
         function handleResize() {
-          const current = closure_1_4.current;
+          const current = ref.current;
           if (current) {
-            const canvas = handleResize.canvas;
+            const canvas = screenshot.canvas;
             if (canvas) {
               if (canvas.getContext("2d", { alpha: false })) {
                 const _Math = Math;
-                closure_1_9(Math.min(current.clientWidth / canvas.width, current.clientHeight / canvas.height));
+                closure_9(Math.min(current.clientWidth / canvas.width, current.clientHeight / canvas.height));
               }
             }
             if (!tmp5) {
@@ -4697,7 +4377,7 @@ export () => ({
           if (canvas) {
             if (canvas.getContext("2d", { alpha: false })) {
               let _Math = Math;
-              callback(Math.min(current.clientWidth / canvas.width, current.clientHeight / canvas.height));
+              closure_9(Math.min(current.clientWidth / canvas.width, current.clientHeight / canvas.height));
             }
           }
           if (!tmp5) {
@@ -4709,12 +4389,12 @@ export () => ({
         let GLOBAL_OBJ = screenshot(hooks[2]).GLOBAL_OBJ;
         const listener = GLOBAL_OBJ.addEventListener("resize", handleResize);
         return () => {
-          const GLOBAL_OBJ = handleResize(hooks[2]).GLOBAL_OBJ;
+          const GLOBAL_OBJ = _mod682.GLOBAL_OBJ;
           const removed = GLOBAL_OBJ.removeEventListener("resize", handleResize);
         };
       }, items1);
       const items2 = [screenshot];
-      closure_11 = first.useCallback((getContext, mapped) => {
+      closure_11 = action.useCallback((getContext, mapped) => {
         if (getContext) {
           const context = getContext.getContext("2d", { alpha: true });
           if (context) {
@@ -4725,8 +4405,8 @@ export () => ({
         }
       }, items2);
       const items3 = [screenshot];
-      const effect = first.useEffect(() => {
-        callback2(ref1.current, screenshot.dpi);
+      const effect = action.useEffect(() => {
+        closure_11(ref1.current, screenshot.dpi);
         const current = ref1.current;
         const canvas = screenshot.canvas;
         if (current) {
@@ -4737,8 +4417,8 @@ export () => ({
         }
       }, items3);
       const items4 = [first1, memo];
-      const effect1 = first.useEffect(() => {
-        callback2(ref2.current, context1.dpi);
+      const effect1 = action.useEffect(() => {
+        closure_11(ref2.current, screenshot.dpi);
         const current = ref2.current;
         if (current) {
           const context = current.getContext("2d", { alpha: true });
@@ -4747,7 +4427,7 @@ export () => ({
           }
         }
         const current2 = ref2.current;
-        context1 = memo;
+        let context1 = memo;
         if (current2) {
           context1 = current2.getContext("2d", { alpha: true });
           if (context1) {
@@ -4772,11 +4452,11 @@ export () => ({
         }
       }, items4);
       const items5 = [first1, screenshot, memo];
-      const effect2 = first.useEffect(() => {
-        const size = first1;
-        callback2(first1, context2.dpi);
-        const canvas = context2.canvas;
-        if (first1) {
+      const effect2 = action.useEffect(() => {
+        const size = element;
+        closure_11(element, screenshot.dpi);
+        const canvas = screenshot.canvas;
+        if (element) {
           const context = size.getContext("2d", { alpha: true });
           if (context) {
             context.drawImage(canvas, 0, 0, canvas.width, canvas.height, 0, 0, size.width, size.height);
@@ -4789,7 +4469,7 @@ export () => ({
             context1.scale(tmp.dpi, tmp.dpi);
             size2.width = tmp.canvas.width;
             size2.height = tmp.canvas.height;
-            context2 = memo;
+            let context2 = memo;
             if (size2) {
               context2 = size2.getContext("2d", { alpha: true });
               if (context2) {
@@ -4821,106 +4501,122 @@ export () => ({
           }
         }
       }, items5);
-      closure_12 = first.useCallback((arg0) => {
+      closure_12 = action.useCallback((arg0) => {
         closure_0 = arg0;
         return (preventDefault) => {
           preventDefault.preventDefault();
           preventDefault.stopPropagation();
-          closure_1_3(() => { ... });
+          closure_3(() => { ... });
         };
       }, []);
-      obj = { width: `${screenshot.canvas.width * tmp9}px`, height: `${screenshot.canvas.height * tmp9}px` };
-      handleStopPropagation = function handleStopPropagation(stopPropagation) {
+      let size = { width: `${screenshot.canvas.width * tmp9}px`, height: `${screenshot.canvas.height * tmp9}px` };
+      function handleStopPropagation(stopPropagation) {
         stopPropagation.stopPropagation();
-      };
+      }
       obj = { nonce: options.styleNonce, dangerouslySetInnerHTML: ref3 };
       obj = { class: "editor__canvas-container", ref };
       const tmp15 = screenshot("style", obj);
-      obj1 = {
+      const obj1 = {
         ref: ref3,
         onMouseDown(offsetX) {
-          if (obj) {
+          if (point) {
             if (ref3.current) {
               let current = tmp2.current;
               const boundingClientRect = current.getBoundingClientRect();
-              obj = { type: null, x: null, y: null };
-              obj[0] = tmp;
-              obj[1] = offsetX.offsetX / first2;
-              obj[2] = offsetX.offsetY / first2;
+              point = { type: tmp, x: offsetX.offsetX / first2, y: offsetX.offsetY / first2 };
               function getDrawCommand(arg0, arg1) {
 
               }
-              function handleMouseMove(clientX) {
-                const current = closure_1_6.current;
+              function handleMouseMove(event) {
+                const current = ref2.current;
                 if (current) {
                   const context = current.getContext("2d", { alpha: true });
                   if (context) {
                     context.clearRect(0, 0, current.width, current.height);
                   }
                 }
-                const current2 = closure_1_6.current;
-                items = [...getDrawCommand];
-                const point = obj;
-                if (typeof getDrawCommand !== "function") {
-                  HermesBuiltin.throwTypeError();
-                }
-                const result = (clientX.clientX - context1.x) / closure_1_8;
-                const result1 = (clientX.clientY - context1.y) / closure_1_8;
-                obj = { type: point.type, x: Math.min(point.x, result), y: Math.min(point.y, result1), w: Math.abs(result - point.x), h: Math.abs(result1 - point.y) };
-                items[tmp5] = obj;
-                context1 = closure_1_10;
-                if (current2) {
-                  context1 = current2.getContext("2d", { alpha: true });
-                  if (context1) {
-                    if (items.length) {
-                      context1.fillStyle = "rgba(0, 0, 0, 0.25)";
-                      context1.fillRect(0, 0, current2.width, current2.height);
+                const current2 = ref2.current;
+                items = [];
+                if (typeof getDrawCommand === "function") {
+                  const result = (event.clientX - closure_0.x) / first2;
+                  const result1 = (event.clientY - closure_0.y) / first2;
+                  point = { type: null, x: null, y: null, w: null, h: null };
+                  point.type = point.type;
+                  const _Math = Math;
+                  point.x = Math.min(point.x, result);
+                  const _Math2 = Math;
+                  point.y = Math.min(point.y, result1);
+                  const _Math3 = Math;
+                  point.w = Math.abs(result - point.x);
+                  const _Math4 = Math;
+                  point.h = Math.abs(result1 - point.y);
+                  items[tmp5] = point;
+                  let context1 = tmp4;
+                  if (current2) {
+                    context1 = current2.getContext("2d", { alpha: true });
+                    if (context1) {
+                      if (items.length) {
+                        context1.fillStyle = "rgba(0, 0, 0, 0.25)";
+                        context1.fillRect(0, 0, current2.width, current2.height);
+                      }
+                      const item = items.forEach(() => { ... });
                     }
-                    const item = items.forEach(() => { ... });
                   }
+                } else {
+                  throw new TypeError("Trying to call a non-function");
                 }
+                tmp4 = memo;
               }
-              function handleMouseUp(clientX) {
-                const point = obj;
-                if (typeof getDrawCommand !== "function") {
-                  HermesBuiltin.throwTypeError();
+              function handleMouseUp(event) {
+                if (typeof getDrawCommand === "function") {
+                  const result = (event.clientX - closure_0.x) / first2;
+                  const result1 = (event.clientY - closure_0.y) / first2;
+                  point = { type: null, x: null, y: null, w: null, h: null };
+                  point.type = point.type;
+                  const _Math = Math;
+                  point.x = Math.min(point.x, result);
+                  const _Math2 = Math;
+                  point.y = Math.min(point.y, result1);
+                  const _Math3 = Math;
+                  point.w = Math.abs(result - point.x);
+                  const _Math4 = Math;
+                  point.h = Math.abs(result1 - point.y);
+                  if (tmp7) {
+                    handleMouseMove(() => { ... });
+                  }
+                  const removed = React.removeEventListener("mousemove", handleMouseMove);
+                  const removed1 = React.removeEventListener("mouseup", handleMouseUp);
+                } else {
+                  throw new TypeError("Trying to call a non-function");
                 }
-                const result = (clientX.clientX - obj.x) / closure_1_8;
-                const result1 = (clientX.clientY - obj.y) / closure_1_8;
-                obj = { type: point.type, x: Math.min(point.x, result), y: Math.min(point.y, result1), w: Math.abs(result - point.x), h: Math.abs(result1 - point.y) };
-                if (tmp4) {
-                  handleMouseMove(() => { ... });
-                }
-                const removed = useTakeScreenshot.removeEventListener("mousemove", handleMouseMove);
-                const removed1 = useTakeScreenshot.removeEventListener("mouseup", handleMouseUp);
               }
               const listener = useTakeScreenshot.addEventListener("mousemove", handleMouseMove);
               const listener1 = useTakeScreenshot.addEventListener("mouseup", handleMouseUp);
             }
           }
         },
-        style: obj
+        style: size
       };
-      const tmp16 = screenshot("canvas", { ref: ref1, id: "background", style: obj });
-      const obj2 = { options, action: first, setAction: tmp[1] };
-      const tmp17 = screenshot("canvas", { ref: ref2, id: "foreground", style: obj });
-      return screenshot("div", { class: "editor" }, tmp15, screenshot("div", { class: "editor__image-container" }, screenshot("div", obj, tmp16, screenshot("canvas", { ref: ref2, id: "foreground", style: obj }), screenshot("div", obj1, first1.map((arg0, key) => {
-        obj = { key, class: "editor__rect", style: obj };
-        obj = { top: `${arg0.y * first2}px`, left: `${arg0.x * first2}px`, width: `${arg0.w * first2}px`, height: `${arg0.h * first2}px` };
-        obj = { "aria-label": closure_3.removeHighlightText, onClick: callback3(key), onMouseDown: handleStopPropagation, onMouseUp: handleStopPropagation, type: "button" };
-        return screenshot("div", obj, screenshot("button", obj, screenshot(ref2, null)));
+      const tmp16 = screenshot("canvas", { ref: ref1, id: "background", style: size });
+      const obj2 = { options, action, setAction: tmp[1] };
+      const tmp17 = screenshot("canvas", { ref: ref2, id: "foreground", style: size });
+      return screenshot("div", { class: "editor" }, tmp15, screenshot("div", { class: "editor__image-container" }, screenshot("div", obj, tmp16, screenshot("canvas", { ref: ref2, id: "foreground", style: size }), screenshot("div", obj1, first1.map((item, key) => {
+        obj = { key, class: "editor__rect", style: null };
+        const size = { top: `${item.y * first2}px`, left: `${item.x * first2}px`, width: `${item.w * first2}px`, height: `${item.h * first2}px` };
+        obj.style = size;
+        obj = { "aria-label": options.removeHighlightText, onClick: closure_12(key), onMouseDown: handleStopPropagation, onMouseUp: handleStopPropagation, type: "button" };
+        return screenshot("div", obj, screenshot("button", obj, screenshot(IconClose, null)));
       })))), screenshot(ref1, obj2));
     };
-    closure_0 = options(function*() {
+    closure_0 = options(function*(arg0, value) {
       if (c4 === 2) {
         c4 = 3;
-        HermesBuiltin.throwTypeError();
+        throw new TypeError("Generator functions may not be called on executing generators");
       } else if (tmp4 === 3) {
         if (arg0 === 1) {
-          throw arg1;
+          throw value;
         } else if (arg0 === 2) {
-          obj = { value: null, done: true };
-          obj[0] = arg1;
+          obj = { value, done: true };
           return obj;
         } else {
           return { value: "HermesInternal", done: null };
@@ -4931,42 +4627,38 @@ export () => ({
           if (0 === c3) {
             if (arg0 === 1) {
               c4 = 3;
-              throw arg1;
+              throw value;
             } else if (arg0 === 2) {
               c4 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
+              obj = { value, done: true };
               return obj;
             } else {
               closure_2 = tmp2;
-              let Uint8Array;
+              closure_130_0 = undefined;
               const promise = new Promise((arg0) => {
-                closure_1.toBlob(arg0, "image/png");
+                closure_1_1.toBlob(arg0, "image/png");
               });
               c3 = 1;
               c4 = 1;
-              obj1 = { value: null, done: false };
-              obj1[0] = promise;
+              const obj1 = { value: promise, done: false };
               return obj1;
             }
           } else if (1 === tmp5) {
             if (arg0 === 1) {
               c4 = 3;
-              throw arg1;
+              throw value;
             } else if (arg0 === 2) {
               c4 = 3;
-              const obj2 = { value: null, done: true };
-              obj2[0] = arg1;
+              const obj2 = { value, done: true };
               return obj2;
             } else {
-              Uint8Array = arg1;
-              if (Uint8Array) {
-                closure_1 = {};
+              closure_130_0 = value;
+              if (closure_130_0) {
+                value = {};
                 const _Uint8Array = Uint8Array;
                 c3 = 2;
                 c4 = 1;
-                const obj3 = { value: null, done: false };
-                obj3[0] = Uint8Array.arrayBuffer();
+                const obj3 = { value: closure_130_0.arrayBuffer(), done: false };
                 return obj3;
               } else {
                 c4 = 3;
@@ -4975,20 +4667,18 @@ export () => ({
             }
           } else if (arg0 === 1) {
             c4 = 3;
-            throw arg1;
+            throw value;
           } else if (arg0 === 2) {
             c4 = 3;
-            const obj4 = { value: null, done: true };
-            obj4[0] = arg1;
+            const obj4 = { value, done: true };
             return obj4;
           } else {
-            const tmp11 = new Uint8Array(arg1);
-            closure_1.data = tmp11;
-            closure_1.filename = "screenshot.png";
-            closure_1.contentType = "application/png";
+            const tmp11 = new Uint8Array(value);
+            value.data = tmp11;
+            value.filename = "screenshot.png";
+            value.contentType = "application/png";
             c4 = 3;
-            obj = { value: null, done: true };
-            obj[0] = closure_1;
+            obj = { value, done: true };
             return obj;
           }
         } catch (tmp23) {
@@ -4997,7 +4687,7 @@ export () => ({
         }
       }
     });
-    obj[1] = function value() {
+    obj.value = function value() {
       const self = this;
       const apply = closure_0.apply;
       if (typeof apply === "unknown") {
@@ -5011,7 +4701,7 @@ export () => ({
   }
 })
 export const getFeedback = function getFeedback() {
-  const client = registerSpanErrorInstrumentation.getClient();
+  const client = _mod682.getClient();
   let integrationByName;
   if (client != null) {
     integrationByName = client.getIntegrationByName("Feedback");

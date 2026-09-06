@@ -1,10 +1,9 @@
 // === Module 4336: _temp2 ===
 
 // Module 4336 (_temp2)
-import closure_2 from "_slicedToArray" /* 32 */;
-import noop from "noop" /* 19 */;
+import _slicedToArray from "module_32" /* 32 */;
 
-const require = arg1;
+const require = fn;
 function _temp2(arg0) {
   return arg0 + 1;
 }
@@ -15,20 +14,21 @@ function _temp(dispose) {
   }
   return disposeResult;
 }
-({ useCallback, useEffect: c3, useState: c4, useMemo } = noop);
+const noop = fn(19);
+({ useCallback, useEffect: c3, useState: closure_4, useMemo } = noop);
 
 export const useRiveList = function useRiveList(arg0, arg1) {
-  const _require = arg0;
+  _require = arg0;
   dependencyMap = arg1;
-  let obj = _require(4316);
+  let obj = require("c");
   const cResult = obj.c(39);
-  [tmp5, closure_2] = callback(disposableMemo(null), 2);
+  [tmp5, _slicedToArray] = _slicedToArray(disposableMemo(null), 2);
   let tmp = _require;
-  const tmp4 = callback(disposableMemo(null), 2);
-  [r10021, closure_3] = callback(disposableMemo(0), 2);
+  const tmp4 = _slicedToArray(disposableMemo(null), 2);
+  [r10021, closure_3] = _slicedToArray(disposableMemo(0), 2);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const fn = function o() {
-      callback(null);
+      _slicedToArray(null);
     };
     cResult[0] = fn;
     let first = fn;
@@ -39,7 +39,7 @@ export const useRiveList = function useRiveList(arg0, arg1) {
     if (cResult[2] === arg1) {
       let tmp8 = cResult[3];
     }
-    callback2(first, tmp8);
+    closure_3(first, tmp8);
     if (cResult[4] === arg0) {
       if (cResult[5] === arg1) {
         let tmp11 = cResult[6];
@@ -62,12 +62,12 @@ export const useRiveList = function useRiveList(arg0, arg1) {
                   obj = closure_4;
                   if (closure_4) {
                     closure_0 = obj.addListener(() => {
-                      callback2(closure_1_5);
+                      closure_1_3(_temp2);
                     });
                     return () => {
                       try {
-                        callback();
-                        closure_1_4.removeListeners();
+                        closure_0();
+                        disposableMemo.removeListeners();
                       } catch (err) {
                       }
                     };
@@ -88,12 +88,12 @@ export const useRiveList = function useRiveList(arg0, arg1) {
                   obj = closure_4;
                   if (closure_4) {
                     closure_0 = obj.addListener(() => {
-                      callback2(closure_1_5);
+                      closure_1_3(_temp2);
                     });
                     return () => {
                       try {
-                        callback();
-                        closure_1_4.removeListeners();
+                        closure_0();
+                        disposableMemo.removeListeners();
                       } catch (err) {
                       }
                     };
@@ -111,12 +111,12 @@ export const useRiveList = function useRiveList(arg0, arg1) {
                   obj = closure_4;
                   if (closure_4) {
                     closure_0 = obj.addListener(() => {
-                      callback2(closure_1_5);
+                      closure_1_3(_temp2);
                     });
                     return () => {
                       try {
-                        callback();
-                        closure_1_4.removeListeners();
+                        closure_0();
+                        disposableMemo.removeListeners();
                       } catch (err) {
                       }
                     };
@@ -132,12 +132,12 @@ export const useRiveList = function useRiveList(arg0, arg1) {
                   obj = closure_4;
                   if (closure_4) {
                     closure_0 = obj.addListener(() => {
-                      callback2(closure_1_5);
+                      closure_1_3(_temp2);
                     });
                     return () => {
                       try {
-                        callback();
-                        closure_1_4.removeListeners();
+                        closure_0();
+                        disposableMemo.removeListeners();
                       } catch (err) {
                       }
                     };
@@ -323,15 +323,7 @@ export const useRiveList = function useRiveList(arg0, arg1) {
                 }
               }
             }
-            obj = { length: null, getInstanceAt: null, addInstance: null, addInstanceAt: null, removeInstance: null, removeInstanceAt: null, swap: null, error: null };
-            obj[0] = undefined;
-            obj[1] = tmp22;
-            obj[2] = tmp23;
-            obj[3] = tmp25;
-            obj[4] = tmp26;
-            obj[5] = tmp27;
-            obj[6] = tmp29;
-            obj[7] = tmp5;
+            obj = { length: undefined, getInstanceAt: tmp22, addInstance: tmp23, addInstanceAt: tmp25, removeInstance: tmp26, removeInstanceAt: tmp27, swap: tmp29, error: tmp5 };
             cResult[30] = tmp23;
             cResult[31] = tmp25;
             cResult[32] = tmp5;
@@ -351,8 +343,8 @@ export const useRiveList = function useRiveList(arg0, arg1) {
           if (tmp) {
             const _Error = Error;
             const _HermesInternal = HermesInternal;
-            error = new Error("List property \"" + closure_0 + "\" not found in the ViewModel instance");
-            callback(error);
+            const error = new Error("List property \"" + closure_0 + "\" not found in the ViewModel instance");
+            _slicedToArray(error);
           }
         };
         const items1 = [arg1, disposableMemo, arg0];

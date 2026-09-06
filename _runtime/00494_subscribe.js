@@ -1,15 +1,15 @@
 // === Module 494: subscribe ===
 
 // Module 494 (subscribe)
-import noop from "noop" /* 19 */;
-import getColorScheme from "getColorScheme" /* 453 */;
+import _mod19 from "module_19" /* 19 */;
+import _mod453 from "module_453" /* 453 */;
 
-const useSyncExternalStore = noop.useSyncExternalStore;
+const useSyncExternalStore = _mod19.useSyncExternalStore;
 function subscribe(onChange) {
-  _require = _require(453).addChangeListener(onChange);
+  closure_0 = _mod453.addChangeListener(onChange);
   return () => closure_0.remove();
 }
 
 export default function useColorScheme() {
-  return useSyncExternalStore(subscribe, getColorScheme.getColorScheme);
+  return useSyncExternalStore(subscribe, _mod453.getColorScheme);
 };

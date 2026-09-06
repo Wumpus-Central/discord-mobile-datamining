@@ -1,9 +1,9 @@
 // === Module 15545: _regeneratorRuntime ===
 
 // Module 15545 (_regeneratorRuntime)
-import _regeneratorRuntime from "_regeneratorRuntime" /* 15546 */;
+import _mod15546 from "module_15546" /* 15546 */;
 
-const tmp3 = _regeneratorRuntime();
+const tmp3 = _mod15546();
 try {
   globalThis.regeneratorRuntime = tmp3;
 } catch (err) {

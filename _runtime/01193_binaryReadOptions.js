@@ -1,23 +1,23 @@
 // === Module 1193: binaryReadOptions ===
 
 // Module 1193 (binaryReadOptions)
-import closure_2 from "_slicedToArray" /* 32 */;
-import closure_3 from "_classCallCheck" /* 41 */;
+import _slicedToArray from "module_32" /* 32 */;
+import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
 
 const BinaryReader = require;
 let closure_4 = {
   readUnknownField: true,
   readerFactory(arg0) {
-    return new closure_5(arg0);
+    return new _moduleResult(arg0);
   }
 };
 class BinaryReader {
   constructor(arg0, arg1) {
     textDecoder = require;
     tmp2 = closure_3(this, BinaryReader);
-    this.varint64 = require("varint64read").varint64read;
-    this.uint32 = require("varint64read").varint32read;
+    this.varint64 = closure_0(closure_1[3]).varint64read;
+    this.uint32 = closure_0(closure_1[3]).varint32read;
     this.buf = global;
     this.len = global.length;
     this.pos = 0;
@@ -34,23 +34,24 @@ class BinaryReader {
     return;
   }
 }
-let items = [
-  {
-    key: "tag",
-    value: function tag() {
-      const uint32Result = this.uint32();
-      if (uint32Result >>> 3 > 0) {
-        if (tmp3 >= 0) {
-          if (5 >= tmp3) {
-            const items = [tmp2, tmp3];
-            return items;
-          }
+const entry = {
+  key: "tag",
+  value: function tag() {
+    const uint32Result = this.uint32();
+    if (uint32Result >>> 3 > 0) {
+      if (tmp3 >= 0) {
+        if (5 >= tmp3) {
+          const items = [tmp2, tmp3];
+          return items;
         }
       }
-      error = new Error("illegal tag: field no " + tmp2 + " wire type " + tmp3);
-      throw error;
     }
-  },
+    const error = new Error("illegal tag: field no " + tmp2 + " wire type " + tmp3);
+    throw error;
+  }
+};
+let items = [
+  entry,
   {
     key: "skip",
     value: function skip(arg0) {
@@ -77,14 +78,12 @@ let items = [
             if (tmp8 !== tmp(1192).WireType.EndGroup) {
               do {
                 let skipResult = self.skip(self.tag()[1]);
-                let tmp10 = BinaryReader;
-                let tmp11 = dependencyMap;
                 EndGroup = BinaryReader(1192).WireType.EndGroup;
               } while (tmp8 !== EndGroup);
             }
           } else {
             const _Error = Error;
-            error = new Error("cant skip wire type " + arg0);
+            const error = new Error("cant skip wire type " + arg0);
             throw error;
           }
         }
@@ -133,7 +132,7 @@ let items = [
   {
     key: "sint64",
     value: function sint64() {
-      [tmp2, tmp3] = callback(this.varint64(), 2);
+      [tmp2, tmp3] = _slicedToArray(this.varint64(), 2);
       const pbLong = new BinaryReader(1195).PbLong((tmp2 >>> 1 | (1 & tmp3) << 31) ^ tmp4, tmp3 >>> 1 ^ tmp4);
       return pbLong;
     }
@@ -141,7 +140,7 @@ let items = [
   {
     key: "bool",
     value: function bool() {
-      const tmp = callback(this.varint64(), 2);
+      const tmp = _slicedToArray(this.varint64(), 2);
       return 0 !== tmp[0] || 0 !== tmp[1];
     }
   },
@@ -215,7 +214,7 @@ let items = [
   }
 ];
 const _moduleResult = _createClass(BinaryReader, items);
-let c5 = _moduleResult;
+const hasOwnProperty = _moduleResult;
 
 export const binaryReadOptions = function binaryReadOptions(BINARY_READ_OPTIONS) {
   if (BINARY_READ_OPTIONS) {

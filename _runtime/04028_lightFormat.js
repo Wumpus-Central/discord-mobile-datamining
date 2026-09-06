@@ -1,56 +1,50 @@
 // === Module 4028: lightFormat ===
 
 // Module 4028 (lightFormat)
-import _typeof from "_typeof" /* 3650 */;
+import _typeof from "module_3650" /* 3650 */;
 import M from "M" /* 3894 */;
-import getTimezoneOffsetInMilliseconds from "getTimezoneOffsetInMilliseconds" /* 3813 */;
-import isValid from "isValid" /* 3832 */;
+import module_3813 from "module_3813" /* 3813 */;
+import module_3832 from "module_3832" /* 3832 */;
 import subMilliseconds from "subMilliseconds" /* 3883 */;
 import requiredArgs from "requiredArgs" /* 3651 */;
 
 if (!_typeof) {
-  let obj = { default: null };
-  obj[0] = _typeof;
+  let obj = { default: _typeof };
   let tmp3 = obj;
 } else {
   tmp3 = _typeof;
 }
 _typeof = tmp3;
 if (!M) {
-  obj = { default: null };
-  obj[0] = M;
+  obj = { default: M };
   let tmp5 = obj;
 } else {
   tmp5 = M;
 }
 let closure_1 = tmp5;
-if (!getTimezoneOffsetInMilliseconds) {
-  obj = { default: null };
-  obj[0] = getTimezoneOffsetInMilliseconds;
+if (!module_3813) {
+  obj = { default: module_3813 };
   let tmp7 = obj;
 } else {
-  tmp7 = getTimezoneOffsetInMilliseconds;
+  tmp7 = module_3813;
 }
-getTimezoneOffsetInMilliseconds = tmp7;
-if (!isValid) {
-  const obj1 = { default: null };
-  obj1[0] = isValid;
+module_3813 = tmp7;
+if (!module_3832) {
+  const obj1 = { default: module_3832 };
   let tmp9 = obj1;
 } else {
-  tmp9 = isValid;
+  tmp9 = module_3832;
 }
-isValid = tmp9;
+module_3832 = tmp9;
 if (!subMilliseconds) {
-  const obj2 = { default: null };
-  obj2[0] = subMilliseconds;
+  const obj2 = { default: subMilliseconds };
   let tmp11 = obj2;
 } else {
   tmp11 = subMilliseconds;
 }
 subMilliseconds = tmp11;
 if (!requiredArgs) {
-  const obj3 = { default: null };
-  obj3[0] = requiredArgs;
+  const obj3 = { default: requiredArgs };
   let tmp13 = obj3;
 } else {
   tmp13 = requiredArgs;
@@ -64,25 +58,24 @@ const re9 = /[a-zA-Z]/;
 export default function lightFormat(arg0, str) {
   requiredArgs.default(2, arguments);
   const defaultResult1 = _typeof.default(arg0);
-  if (isValid.default(defaultResult1)) {
-    _typeof = subMilliseconds.default(defaultResult1, getTimezoneOffsetInMilliseconds.default(defaultResult1));
+  if (module_3832.default(defaultResult1)) {
+    _typeof = subMilliseconds.default(defaultResult1, module_3813.default(defaultResult1));
     let match = str.match(closure_6);
     let str3 = "";
     if (match) {
-      const mapped = match.map((arg0) => {
-        let str = arg0;
-        if ("''" === arg0) {
+      const mapped = match.map((item) => {
+        let str = item;
+        if ("''" === item) {
           return "'";
         } else if ("'" === str[0]) {
-          const match = str.match(closure_1_7);
+          const match = str.match(re7);
           if (match) {
-            str = match[1].replace(closure_1_8, "'");
-            const str4 = match[1];
+            str = match[1].replace(re8, "'");
           }
           return str;
-        } else if (closure_1_1.default[str6]) {
+        } else if (closure_1.default[str6]) {
           return tmp2(closure_0, str);
-        } else if (str6.match(closure_1_9)) {
+        } else if (str6.match(re9)) {
           const _RangeError = RangeError;
           const rangeError = new RangeError("Format string contains an unescaped latin alphabet character `" + str6 + "`");
           throw rangeError;

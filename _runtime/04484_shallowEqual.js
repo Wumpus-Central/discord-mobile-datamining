@@ -2,7 +2,7 @@
 
 // Module 4484 (shallowEqual)
 
-export default function shallowEqual(obj, obj2, call) {
+export default function shallowEqual(obj, obj2, call, arg3) {
   if (!call) {
     if (obj === obj2) {
       return true;
@@ -18,6 +18,7 @@ export default function shallowEqual(obj, obj2, call) {
                 return false;
               } else {
                 const _Object3 = Object;
+                hasOwnProperty = Object.prototype.hasOwnProperty;
                 if (0 < keys.length) {
                   while (tmp9(keys[num])) {
                     let tmp5 = obj[tmp3];
@@ -29,14 +30,8 @@ export default function shallowEqual(obj, obj2, call) {
                       if (typeof call2 === "unknown") {
                         let call2Result = call(tmp5, tmp6, tmp3);
                       } else {
-                        let tmp10 = call;
-                        let tmp11 = arg3;
-                        let tmp12 = tmp5;
-                        let tmp13 = tmp6;
-                        let tmp14 = tmp3;
                         call2Result = call2(arg3, tmp5, tmp6, tmp3);
                       }
-                      let tmp8 = call2Result;
                     }
                   }
                   return false;

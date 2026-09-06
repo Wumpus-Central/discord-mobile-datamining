@@ -1,14 +1,14 @@
 // === Module 14357: ? ===
 
 // Module 14357
-import call from "call" /* 14320 */;
-import getOwnPropertyDescriptor from "getOwnPropertyDescriptor" /* 14300 */;
+import _mod14320 from "module_14320" /* 14320 */;
+import getOwnPropertyDescriptor from "module_14300" /* 14300 */;
 
 if (getOwnPropertyDescriptor) {
   const _Object = Object;
   getOwnPropertyDescriptor = Object.getOwnPropertyDescriptor;
 }
-const tmp = call(prototype, "name");
+const tmp = _mod14320(prototype, "name");
 let tmp2 = tmp;
 if (tmp) {
   tmp2 = "something" === function something() {

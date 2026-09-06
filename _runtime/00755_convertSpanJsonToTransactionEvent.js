@@ -1,38 +1,39 @@
 // === Module 755: convertSpanJsonToTransactionEvent ===
 
 // Module 755 (convertSpanJsonToTransactionEvent)
-import _mod704 from "module_704" /* 704 */;
+import SEMANTIC_ATTRIBUTE_CACHE_HIT from "SEMANTIC_ATTRIBUTE_CACHE_HIT" /* 704 */;
 
 require = arg1;
 const dependencyMap = arg6;
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
-arg5.convertSpanJsonToTransactionEvent = function convertSpanJsonToTransactionEvent(beforeSendSpanResult) {
+
+export const convertSpanJsonToTransactionEvent = function convertSpanJsonToTransactionEvent(beforeSendSpanResult) {
   let obj = { type: "transaction", timestamp: beforeSendSpanResult.timestamp, start_timestamp: beforeSendSpanResult.start_timestamp, transaction: beforeSendSpanResult.description, contexts: null, measurements: null };
   obj = { trace_id: beforeSendSpanResult.trace_id, span_id: beforeSendSpanResult.span_id, parent_span_id: beforeSendSpanResult.parent_span_id, op: beforeSendSpanResult.op, status: beforeSendSpanResult.status, origin: beforeSendSpanResult.origin, data: null };
   obj = {};
   const merged = Object.assign(beforeSendSpanResult.data);
   let profile_id = beforeSendSpanResult.profile_id;
   if (profile_id) {
-    obj1 = {};
-    obj1[_mod704.SEMANTIC_ATTRIBUTE_PROFILE_ID] = beforeSendSpanResult.profile_id;
+    const obj1 = {};
+    obj1[SEMANTIC_ATTRIBUTE_CACHE_HIT.SEMANTIC_ATTRIBUTE_PROFILE_ID] = beforeSendSpanResult.profile_id;
     profile_id = obj1;
   }
   const merged1 = Object.assign(profile_id);
   let exclusive_time = beforeSendSpanResult.exclusive_time;
   if (exclusive_time) {
     const obj2 = {};
-    obj2[_mod704.SEMANTIC_ATTRIBUTE_EXCLUSIVE_TIME] = beforeSendSpanResult.exclusive_time;
+    obj2[SEMANTIC_ATTRIBUTE_CACHE_HIT.SEMANTIC_ATTRIBUTE_EXCLUSIVE_TIME] = beforeSendSpanResult.exclusive_time;
     exclusive_time = obj2;
   }
   const obj3 = { trace: null };
   const merged2 = Object.assign(exclusive_time);
-  obj[6] = obj;
-  obj3[0] = obj;
-  obj[4] = obj3;
-  obj[5] = beforeSendSpanResult.measurements;
+  obj.data = obj;
+  obj3.trace = obj;
+  obj.contexts = obj3;
+  obj.measurements = beforeSendSpanResult.measurements;
   return obj;
 };
-arg5.convertTransactionEventToSpanJson = function convertTransactionEventToSpanJson(contexts) {
+export const convertTransactionEventToSpanJson = function convertTransactionEventToSpanJson(contexts) {
   contexts = contexts.contexts;
   let trace;
   if (contexts != null) {
@@ -51,29 +52,29 @@ arg5.convertTransactionEventToSpanJson = function convertTransactionEventToSpanJ
   if (span_id == null) {
     span_id = "";
   }
-  obj[4] = span_id;
+  obj.span_id = span_id;
   let num = contexts.start_timestamp;
   if (num == null) {
     num = 0;
   }
-  obj[5] = num;
-  obj[6] = status;
-  obj[7] = contexts.timestamp;
+  obj.start_timestamp = num;
+  obj.status = status;
+  obj.timestamp = contexts.timestamp;
   if (trace_id == null) {
     trace_id = "";
   }
-  obj[8] = trace_id;
-  obj[9] = origin;
+  obj.trace_id = trace_id;
+  obj.origin = origin;
   let tmp;
   if (data != null) {
-    tmp = data[_mod704.SEMANTIC_ATTRIBUTE_PROFILE_ID];
+    tmp = data[SEMANTIC_ATTRIBUTE_CACHE_HIT.SEMANTIC_ATTRIBUTE_PROFILE_ID];
   }
-  obj[10] = tmp;
+  obj.profile_id = tmp;
   let tmp4;
   if (data != null) {
-    tmp4 = data[_mod704.SEMANTIC_ATTRIBUTE_EXCLUSIVE_TIME];
+    tmp4 = data[SEMANTIC_ATTRIBUTE_CACHE_HIT.SEMANTIC_ATTRIBUTE_EXCLUSIVE_TIME];
   }
-  obj[11] = tmp4;
-  obj[12] = contexts.measurements;
+  obj.exclusive_time = tmp4;
+  obj.measurements = contexts.measurements;
   return obj;
 };

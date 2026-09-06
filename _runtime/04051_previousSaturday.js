@@ -5,16 +5,14 @@ import requiredArgs from "requiredArgs" /* 3651 */;
 import previousDay from "previousDay" /* 4048 */;
 
 if (!requiredArgs) {
-  let obj = { default: null };
-  obj[0] = requiredArgs;
+  let obj = { default: requiredArgs };
   let tmp3 = obj;
 } else {
   tmp3 = requiredArgs;
 }
 requiredArgs = tmp3;
 if (!previousDay) {
-  obj = { default: null };
-  obj[0] = previousDay;
+  obj = { default: previousDay };
   let tmp5 = obj;
 } else {
   tmp5 = previousDay;

@@ -9,7 +9,7 @@ function nullthrows(arg0, arg1) {
     if (undefined === arg1) {
       text = `Got unexpected ${arg0}`;
     }
-    error = new Error(text);
+    const error = new Error(text);
     error.framesToPop = 1;
     throw error;
   }

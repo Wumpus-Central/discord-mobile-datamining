@@ -22,14 +22,16 @@ if (null == prop) {
 }
 const obj3 = { UI_THREAD_PROPS_WHITELIST: null, NATIVE_THREAD_PROPS_WHITELIST: null };
 const merged1 = Object.assign(obj2);
-obj3[0] = obj1;
+obj3.UI_THREAD_PROPS_WHITELIST = obj1;
 if (null != prop) {
   obj = {};
 }
+const size = { borderBottomWidth: true, borderEndWidth: true, borderLeftWidth: true, borderRightWidth: true, borderStartWidth: true, borderTopWidth: true, borderWidth: true, bottom: true, boxShadow: true, flex: true, flexGrow: true, flexShrink: true, height: true, left: true, margin: true, marginBottom: true, marginEnd: true, marginHorizontal: true, marginLeft: true, marginRight: true, marginStart: true, marginTop: true, marginVertical: true, maxHeight: true, maxWidth: true, minHeight: true, minWidth: true, padding: true, paddingBottom: true, paddingEnd: true, paddingHorizontal: true, paddingLeft: true, paddingRight: true, paddingStart: true, paddingTop: true, paddingVertical: true, right: true, start: true, top: true, width: true, zIndex: true, elevation: true, fontSize: true, lineHeight: true, textShadowRadius: true, textShadowOffset: true, letterSpacing: true, aspectRatio: true, columnGap: true, end: true, flexBasis: true, gap: true, rowGap: true, display: true, backfaceVisibility: true, overflow: true, resizeMode: true, fontStyle: true, fontWeight: true, textAlign: true, textDecorationLine: true, fontFamily: true, textAlignVertical: true, fontVariant: true, textDecorationStyle: true, textTransform: true, writingDirection: true, alignContent: true, alignItems: true, alignSelf: true, direction: true, flexDirection: true, flexWrap: true, justifyContent: true, position: true };
 const merged2 = Object.assign(obj);
 if (null != prop) {
   obj = {};
 }
 const merged3 = Object.assign(obj);
-obj3[1] = { borderBottomWidth: true, borderEndWidth: true, borderLeftWidth: true, borderRightWidth: true, borderStartWidth: true, borderTopWidth: true, borderWidth: true, bottom: true, boxShadow: true, flex: true, flexGrow: true, flexShrink: true, height: true, left: true, margin: true, marginBottom: true, marginEnd: true, marginHorizontal: true, marginLeft: true, marginRight: true, marginStart: true, marginTop: true, marginVertical: true, maxHeight: true, maxWidth: true, minHeight: true, minWidth: true, padding: true, paddingBottom: true, paddingEnd: true, paddingHorizontal: true, paddingLeft: true, paddingRight: true, paddingStart: true, paddingTop: true, paddingVertical: true, right: true, start: true, top: true, width: true, zIndex: true, elevation: true, fontSize: true, lineHeight: true, textShadowRadius: true, textShadowOffset: true, letterSpacing: true, aspectRatio: true, columnGap: true, end: true, flexBasis: true, gap: true, rowGap: true, display: true, backfaceVisibility: true, overflow: true, resizeMode: true, fontStyle: true, fontWeight: true, textAlign: true, textDecorationLine: true, fontFamily: true, textAlignVertical: true, fontVariant: true, textDecorationStyle: true, textTransform: true, writingDirection: true, alignContent: true, alignItems: true, alignSelf: true, direction: true, flexDirection: true, flexWrap: true, justifyContent: true, position: true };
-arg5.PropsAllowlists = obj3;
+obj3.NATIVE_THREAD_PROPS_WHITELIST = size;
+
+export const PropsAllowlists = obj3;

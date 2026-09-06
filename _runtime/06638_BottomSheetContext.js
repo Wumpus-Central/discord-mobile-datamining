@@ -1,19 +1,19 @@
 // === Module 6638: BottomSheetContext ===
 
 // Module 6638 (BottomSheetContext)
-import context from "context" /* 6634 */;
-import context2 from "context" /* 6636 */;
-import createContext from "createContext" /* 6639 */;
-import context3 from "context" /* 6640 */;
-import context4 from "context" /* 6641 */;
+import _mod6634 from "module_6634" /* 6634 */;
+import _mod6636 from "module_6636" /* 6636 */;
+import _mod6639 from "module_6639" /* 6639 */;
+import _mod6640 from "module_6640" /* 6640 */;
+import _mod6641 from "module_6641" /* 6641 */;
 
 
-export const BottomSheetContext = context.BottomSheetContext;
-export const BottomSheetProvider = context.BottomSheetProvider;
-export const BottomSheetInternalContext = context2.BottomSheetInternalContext;
-export const BottomSheetInternalProvider = context2.BottomSheetInternalProvider;
-export const BottomSheetGestureHandlersContext = createContext.BottomSheetGestureHandlersContext;
-export const BottomSheetModalContext = context3.BottomSheetModalContext;
-export const BottomSheetModalProvider = context3.BottomSheetModalProvider;
-export const BottomSheetModalInternalContext = context4.BottomSheetModalInternalContext;
-export const BottomSheetModalInternalProvider = context4.BottomSheetModalInternalProvider;
+export const BottomSheetContext = _mod6634.BottomSheetContext;
+export const BottomSheetProvider = _mod6634.BottomSheetProvider;
+export const BottomSheetInternalContext = _mod6636.BottomSheetInternalContext;
+export const BottomSheetInternalProvider = _mod6636.BottomSheetInternalProvider;
+export const BottomSheetGestureHandlersContext = _mod6639.BottomSheetGestureHandlersContext;
+export const BottomSheetModalContext = _mod6640.BottomSheetModalContext;
+export const BottomSheetModalProvider = _mod6640.BottomSheetModalProvider;
+export const BottomSheetModalInternalContext = _mod6641.BottomSheetModalInternalContext;
+export const BottomSheetModalInternalProvider = _mod6641.BottomSheetModalInternalProvider;

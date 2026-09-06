@@ -1,10 +1,10 @@
 // === Module 811: extractPromptResultAttributes ===
 
 // Module 811 (extractPromptResultAttributes)
-import isJsonRpcNotification from "isJsonRpcNotification" /* 801 */;
-import _mod805 from "module_805" /* 805 */;
-import closure_2 from "_slicedToArray" /* 32 */;
+import validateMcpServerInstance from "validateMcpServerInstance" /* 801 */;
+import _slicedToArray from "module_32" /* 32 */;
 
+const CLIENT_ADDRESS_ATTRIBUTE = tmp(805);
 Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
 
 export const extractPromptResultAttributes = function extractPromptResultAttributes(protocolVersion, recordOutputs) {
@@ -23,12 +23,12 @@ export const extractPromptResultAttributes = function extractPromptResultAttribu
       if (recordOutputs) {
         const messages = protocolVersion.messages;
         function _loop2() {
-          obj = obj(messages[2]);
-          if (obj.isValidContentItem(closure_3)) {
+          obj = validateMcpServerInstance;
+          if (obj.isValidContentItem(closure_1_3)) {
             let str = "mcp.prompt.result";
             if (1 !== messages.length) {
               const _HermesInternal = HermesInternal;
-              str = "mcp.prompt.result." + closure_2;
+              str = "mcp.prompt.result." + _slicedToArray;
             }
             const role = tmp3.role;
             if (typeof role !== "string") {
@@ -63,9 +63,8 @@ export const extractPromptResultAttributes = function extractPromptResultAttribu
         const entries = messages.entries();
         const tmp8 = entries[Symbol.iterator]();
         while (tmp8 !== undefined) {
-          let tmp12 = callback;
-          let tmp13 = callback(tmp10, 2);
-          [closure_2, closure_3] = tmp13;
+          let tmp13 = _slicedToArray(tmp10, 2);
+          [_slicedToArray, closure_3] = tmp13;
           let _loop2Result = _loop2();
           continue;
         }
@@ -78,27 +77,26 @@ export const extractPromptResultAttributes = function extractPromptResultAttribu
   obj2 = obj(messages[2]);
 };
 export const extractToolResultAttributes = function extractToolResultAttributes(protocolVersion, recordOutputs) {
-  let obj = isJsonRpcNotification;
+  let obj = validateMcpServerInstance;
   if (obj.isValidContentItem(protocolVersion)) {
     const _Array = Array;
     if (Array.isArray(protocolVersion.content)) {
       obj = (function buildAllContentItemAttributes(content, recordOutputs) {
-        closure_0 = content;
         closure_1 = recordOutputs;
         let obj = { [closure_0(closure_1[1]).MCP_TOOL_RESULT_CONTENT_COUNT_ATTRIBUTE]: content.length };
         function _loop() {
-          obj = content(table[2]);
-          if (obj.isValidContentItem(closure_4)) {
+          obj = validateMcpServerInstance;
+          if (obj.isValidContentItem(closure_1_4)) {
             let str = "mcp.tool.result";
-            if (1 !== content.length) {
+            if (1 !== length.length) {
               const _HermesInternal = HermesInternal;
-              str = "mcp.tool.result." + closure_3;
+              str = "mcp.tool.result." + closure_1_3;
             }
             if (typeof tmp3.type === "string") {
               const _HermesInternal2 = HermesInternal;
               obj["" + str + ".content_type"] = tmp3.type;
             }
-            if (table) {
+            if (closure_1) {
               const mimeType = tmp3.mimeType;
               if (typeof mimeType === "string") {
                 const _HermesInternal3 = HermesInternal;
@@ -140,12 +138,11 @@ export const extractToolResultAttributes = function extractToolResultAttributes(
           } else {
             return 1;
           }
-          tmp = content;
-          tmp2 = table;
+          tmp = require;
+          tmp2 = dependencyMap;
         }
         const entries = content.entries();
         while (tmp2 !== undefined) {
-          let tmp4 = obj;
           let tmp5 = obj(tmp3, 2);
           [closure_3, closure_4] = tmp5;
           let _loopResult = _loop();
@@ -157,11 +154,10 @@ export const extractToolResultAttributes = function extractToolResultAttributes(
       obj = {};
     }
     if (typeof protocolVersion.isError === "boolean") {
-      obj[_mod805.MCP_TOOL_RESULT_IS_ERROR_ATTRIBUTE] = protocolVersion.isError;
+      obj[CLIENT_ADDRESS_ATTRIBUTE.MCP_TOOL_RESULT_IS_ERROR_ATTRIBUTE] = protocolVersion.isError;
     }
     return obj;
   } else {
     return {};
   }
-  let tmp = require;
 };

@@ -1,50 +1,33 @@
 // === Module 11233: _saveDocuments ===
 
 // Module 11233 (_saveDocuments)
-import closure_2 from "asyncGeneratorStep" /* 5 */;
-import { Platform } from "get ActivityIndicator" /* 17 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
-const require = arg1;
-function _saveDocuments() {
-  const self = this;
-  const tmp = callback((arg0) => {
-    closure_0 = arg0;
-    c2 = 0;
-    c3 = 0;
-    return (function*(arg0, arr) {
-      closure_1 = tmp2;
-      yield v0(function*() {
-        closure_0 = tmp2;
-        if (closure_1_0.sourceUris.length > 1) {
-          const _console = console;
-          const _HermesInternal = HermesInternal;
-          console.warn("DocumentPicker.saveDocuments: Android only allows to save one file at a time.\n\n      You provided an array with " + length + " entries.");
-        }
-        const NativeDocumentPicker2 = closure_1_0(closure_1_1[2]).NativeDocumentPicker;
-        closure_0 = yield NativeDocumentPicker2.saveDocument(closure_1_0);
-        const NativeDocumentPicker = closure_1_0(closure_1_1[2]).NativeDocumentPicker;
-        yield NativeDocumentPicker.writeDocuments(closure_0);
-        return arg1;
-      })();
-      return arr.map(closure_4);
-    })();
-  });
-  closure_3 = tmp;
-  const apply = tmp.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
-  }
-  return applyArgumentsResult;
-}
+const require = fn;
+let closure_3 = async function _saveDocuments() {
+  closure_1 = tmp2;
+  await asyncGeneratorStep(async () => {
+    if (tmp2.sourceUris.length > 1) {
+      const _console = console;
+      const _HermesInternal = HermesInternal;
+      console.warn("DocumentPicker.saveDocuments: Android only allows to save one file at a time.\n\n      You provided an array with " + length + " entries.");
+    }
+    const NativeDocumentPicker2 = tmp2(11226).NativeDocumentPicker;
+    closure_128_0 = await NativeDocumentPicker2.saveDocument(tmp2);
+    const NativeDocumentPicker = tmp2(11226).NativeDocumentPicker;
+    await NativeDocumentPicker.writeDocuments(closure_128_0);
+    return arg1;
+  })();
+  return arg1.map(closure_129_4);
+};
 function keepOnlySpecifiedFields(uri) {
   return { uri: uri.uri, name: uri.name, error: uri.error };
 }
+const Platform = fn(17).Platform;
 
 export const saveDocuments = function saveDocuments(arg0) {
   const self = this;
-  const apply = _saveDocuments.apply;
+  const apply = closure_3.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {

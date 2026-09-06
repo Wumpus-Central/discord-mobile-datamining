@@ -1,11 +1,11 @@
 // === Module 1465: State ===
 
 // Module 1465 (State)
-import _createClassDefault from "_createClass" /* 42 */;
-import get_ActivityIndicatorDefault from "get ActivityIndicator" /* 1466 */;
+import _modDef1466 from "module_1466" /* 1466 */;
 import InternetReachabilityDefault from "InternetReachability" /* 1468 */;
-import closure_3 from "asyncGeneratorStep" /* 5 */;
-import closure_4 from "_classCallCheck" /* 41 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import _createClass from "_createClass" /* 42 */;
+import _classCallCheck from "_classCallCheck" /* 41 */;
 
 class State {
   constructor(arg0) {
@@ -23,38 +23,33 @@ class State {
       closure_0 = _convertStateResult;
       self._latestState = _convertStateResult;
       const _subscriptions = self._subscriptions;
-      const item = _subscriptions.forEach((arg0) => arg0(closure_0));
+      const item = _subscriptions.forEach((fn) => fn(_convertStateResult));
     };
     this._handleInternetReachabilityUpdate = (isInternetReachable) => {
       if (self._latestState) {
-        const obj = {};
+        const _latestState = {};
         const merged = Object.assign(tmp._latestState);
-        obj.isInternetReachable = isInternetReachable;
-        tmp._latestState = obj;
+        _latestState.isInternetReachable = isInternetReachable;
+        tmp._latestState = _latestState;
         const _subscriptions = tmp._subscriptions;
-        const item = _subscriptions.forEach((arg0) => arg0(obj));
+        const item = _subscriptions.forEach((fn) => fn(obj));
       }
     };
     closure_0 = undefined;
-    closure_0 = closure_3((arg0) => {
-      closure_0 = arg0;
-      c3 = 0;
-      c4 = 0;
-      return (function*(arg0) {
-        closure_2 = tmp5;
-        closure_1 = tmp2;
-        const obj2 = lib(closure_2_2[3]);
-        closure_1 = yield obj2.getCurrentState(lib);
-        const _internetReachability = lib._internetReachability;
-        _internetReachability.update(closure_1);
-        closure_2 = lib._convertState(closure_1);
-        if (!lib) {
-          lib._latestState = closure_2;
-          const _subscriptions = lib._subscriptions;
-          const item = _subscriptions.forEach((arg0) => arg0(closure_2));
-        }
-        return closure_2;
-      })();
+    closure_0 = closure_3(async (arg0) => {
+      closure_2 = tmp5;
+      closure_1 = tmp2;
+      closure_129_0 = closure_0;
+      closure_129_1 = await closure_0(dependencyMap[3]).getCurrentState(closure_0);
+      const _internetReachability = closure_0._internetReachability;
+      _internetReachability.update(closure_129_1);
+      closure_129_2 = closure_0._convertState(closure_129_1);
+      if (!closure_129_0) {
+        closure_0._latestState = closure_129_2;
+        const _subscriptions = closure_0._subscriptions;
+        const item = _subscriptions.forEach((fn) => fn(closure_1_2));
+      }
+      return closure_129_2;
     });
     this._fetchCurrentState = function(arg0) {
       self = this;
@@ -87,13 +82,13 @@ class State {
       }
       return _fetchCurrentStateResult;
     };
-    this.add = (arg0) => {
+    this.add = (fn) => {
       const _subscriptions = self._subscriptions;
-      _subscriptions.add(arg0);
+      _subscriptions.add(fn);
       if (self._latestState) {
-        arg0(obj._latestState);
+        fn(obj._latestState);
       } else {
-        obj.latest().then(arg0);
+        obj.latest().then(fn);
         const latestResult = obj.latest();
       }
     };
@@ -113,13 +108,13 @@ class State {
       const _subscriptions = tmp._subscriptions;
       _subscriptions.clear();
     };
-    tmp3 = new require("InternetReachability")(global, this._handleInternetReachabilityUpdate);
+    tmp3 = new closure_0(closure_2[4])(global, this._handleInternetReachabilityUpdate);
     this._internetReachability = tmp3;
-    eventEmitter = require("get ActivityIndicator").eventEmitter;
-    this._nativeEventSubscription = eventEmitter.addListener(require("module_1469").DEVICE_CONNECTIVITY_EVENT, this._handleNativeStateUpdate);
+    eventEmitter = closure_0(closure_2[3]).eventEmitter;
+    this._nativeEventSubscription = eventEmitter.addListener(self(closure_2[5]).DEVICE_CONNECTIVITY_EVENT, this._handleNativeStateUpdate);
     _fetchCurrentStateResult = this._fetchCurrentState();
     return;
   }
 }
 
-export default _createClassDefault(State);
+export default _createClass(State);

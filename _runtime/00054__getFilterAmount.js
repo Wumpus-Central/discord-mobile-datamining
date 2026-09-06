@@ -2,12 +2,12 @@
 
 // Module 54 (_getFilterAmount)
 import processColorDefault from "processColor" /* 50 */;
-import closure_2 from "_slicedToArray" /* 32 */;
+import _slicedToArray from "module_32" /* 32 */;
 
-function _getFilterAmount(arg0, str) {
-  if (typeof str === "string") {
-    regex2.lastIndex = 0;
-    const match = regex2.exec(str);
+function _getFilterAmount(arg0, match) {
+  if (typeof match === "string") {
+    re5.lastIndex = 0;
+    match = re5.exec(match);
     if (match) {
       const _isNaN = isNaN;
       const _Number = Number;
@@ -17,7 +17,7 @@ function _getFilterAmount(arg0, str) {
       }
     }
   } else {
-    NumberResult = str;
+    NumberResult = match;
   }
   if ("hueRotate" === arg0) {
     if (0 === NumberResult) {
@@ -44,67 +44,52 @@ function _getFilterAmount(arg0, str) {
     return result1;
   }
 }
-function parseDropShadow(str) {
+function parseDropShadow(match) {
   let tmp4;
-  let tmp2 = str;
-  if (typeof str === "string") {
-    tmp2 = (function parseDropShadowString(str) {
+  let tmp2 = match;
+  if (typeof match === "string") {
+    tmp2 = (function parseDropShadowString(match) {
       let tmp2;
       let tmp;
       const obj = { offsetX: 0, offsetY: 0 };
       let num = 0;
       let flag = false;
-      const parts = str.split(closure_6);
+      const parts = match.split(closure_1_6);
       const iter = parts[Symbol.iterator]();
       const nextResult = iter.next();
       while (iter !== undefined) {
         let tmp5 = nextResult;
-        let tmp6 = callback;
-        let tmp7 = table;
-        if (null == callback(table[1])(nextResult)) {
-          let tmp11 = num;
+        if (null == processColorDefault(nextResult)) {
           if (0 === num) {
             tmp = nextResult;
-            let tmp20 = num;
             num = num + 1;
           } else if (1 === num) {
-            let tmp17 = flag;
             if (flag) {
-              let tmp19 = iter;
               iter.return();
               return null;
             } else {
               tmp2 = nextResult;
-              let tmp18 = num;
               num = num + 1;
             }
           } else if (2 === num) {
-            let tmp13 = flag;
             if (flag) {
-              let tmp16 = iter;
               iter.return();
               return null;
             } else {
-              let tmp14 = nextResult;
               obj.standardDeviation = tmp5;
-              let tmp15 = num;
               num = num + 1;
             }
           } else {
-            let tmp12 = iter;
             iter.return();
             return null;
           }
         } else if (null != obj.color) {
-          let tmp10 = iter;
           iter.return();
           return null;
         } else {
-          let tmp8 = tmp;
           if (null != tmp) {
             flag = true;
           }
-          let tmp9 = nextResult;
           obj.color = tmp5;
         }
         continue;
@@ -117,7 +102,7 @@ function parseDropShadow(str) {
         }
       }
       return null;
-    })(str);
+    })(match);
   }
   let obj = { offsetX: 0, offsetY: 0 };
   let tmp6;
@@ -125,12 +110,10 @@ function parseDropShadow(str) {
   if (keys !== undefined) {
     tmp6 = tmp4;
     while (keys[tmp] !== undefined) {
-      let tmp24 = tmp10;
       if ("offsetX" === tmp10) {
         if (typeof tmp2.offsetX === "string") {
-          let tmp20 = regex3;
-          regex3.lastIndex = 0;
-          let match = regex3.exec(tmp2.offsetX);
+          re7.lastIndex = 0;
+          match = re7.exec(tmp2.offsetX);
           let NumberResult = null;
           if (match) {
             let _Number5 = Number;
@@ -161,9 +144,8 @@ function parseDropShadow(str) {
       } else {
         if ("offsetY" === tmp10) {
           if (typeof tmp2.offsetY === "string") {
-            let tmp17 = regex3;
-            regex3.lastIndex = 0;
-            let match1 = regex3.exec(tmp2.offsetY);
+            re7.lastIndex = 0;
+            let match1 = re7.exec(tmp2.offsetY);
             let NumberResult1 = null;
             if (match1) {
               let _Number3 = Number;
@@ -185,7 +167,6 @@ function parseDropShadow(str) {
           } else {
             offsetY = tmp2.offsetY;
           }
-          let tmp3 = offsetY;
           if (null != offsetY) {
             continue;
           } else {
@@ -194,9 +175,8 @@ function parseDropShadow(str) {
         } else {
           if ("standardDeviation" === tmp10) {
             if (typeof tmp2.standardDeviation === "string") {
-              let tmp14 = regex3;
-              regex3.lastIndex = 0;
-              let match2 = regex3.exec(tmp2.standardDeviation);
+              re7.lastIndex = 0;
+              let match2 = re7.exec(tmp2.standardDeviation);
               let NumberResult2 = null;
               if (match2) {
                 let _Number = Number;
@@ -226,8 +206,6 @@ function parseDropShadow(str) {
             }
             return null;
           } else if ("color" === tmp10) {
-            let tmp11 = importDefault;
-            let tmp12 = dependencyMap;
             let tmp13 = processColorDefault(tmp2.color);
             if (null == tmp13) {
               return null;
@@ -268,23 +246,20 @@ export default function processFilter(str) {
     return items;
   } else {
     if (typeof str === "string") {
-      const replaced = str.replace(closure_3, " ");
-      regex.lastIndex = 0;
-      let match = regex.exec(replaced);
+      const replaced = str.replace(re3, " ");
+      re4.lastIndex = 0;
+      let match = re4.exec(replaced);
       if (match) {
         while (true) {
           let str8 = match[1];
           let formatted = str8.toLowerCase();
           let tmp35 = "drop-shadow" === formatted;
-          let tmp36 = match;
           if (tmp35) {
-            let tmp40 = parseDropShadow;
             let tmp41 = parseDropShadow(match[2]);
             if (null == tmp41) {
               return [];
             } else {
-              let obj = { dropShadow: null };
-              obj[0] = tmp41;
+              let obj = { dropShadow: tmp41 };
               let arr = items.push(obj);
             }
           } else {
@@ -296,7 +271,6 @@ export default function processFilter(str) {
               }
               str9 = str10;
             }
-            let tmp37 = _getFilterAmount;
             let tmp38 = _getFilterAmount(str9, match[2]);
             if (null == tmp38) {
               break;
@@ -306,8 +280,7 @@ export default function processFilter(str) {
               arr = items.push(obj);
             }
           }
-          let tmp43 = regex;
-          match = regex.exec(replaced);
+          match = re4.exec(replaced);
         }
         return [];
       }
@@ -316,41 +289,30 @@ export default function processFilter(str) {
       if (Array.isArray(str)) {
         obj = str[Symbol.iterator]();
         while (obj !== undefined) {
-          let tmp9 = callback;
           let _Object = Object;
-          let tmp10 = callback(Object.entries(tmp7)[0], 2);
+          let tmp10 = _slicedToArray(Object.entries(tmp7)[0], 2);
           let first = tmp10[0];
           let tmp12 = first;
           let tmp13 = tmp10[1];
           if ("dropShadow" === first) {
-            let tmp23 = parseDropShadow;
-            let tmp24 = tmp13;
             let tmp25 = parseDropShadow(tmp13);
             if (null == tmp25) {
-              let tmp29 = obj;
               let items1 = [];
               obj.return();
               return items1;
             } else {
-              obj1 = { dropShadow: null };
-              let tmp27 = tmp25;
-              obj1[0] = tmp26;
+              let obj1 = { dropShadow: null };
+              obj1.dropShadow = tmp26;
               let arr1 = items.push(obj1);
             }
           } else {
-            let tmp14 = _getFilterAmount;
-            let tmp15 = first;
-            let tmp16 = tmp13;
             let tmp17 = _getFilterAmount(tmp12, tmp13);
             if (null == tmp17) {
-              let tmp22 = obj;
               let items2 = [];
               obj.return();
               return items2;
             } else {
               let obj2 = {};
-              let tmp19 = first;
-              let tmp20 = tmp17;
               obj2[tmp12] = tmp18;
               let arr2 = items.push(obj2);
             }

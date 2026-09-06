@@ -1,12 +1,12 @@
 // === Module 655: equalObjects ===
 
 // Module 655 (equalObjects)
-import getAllKeys from "getAllKeys" /* 656 */;
+import _mod656 from "module_656" /* 656 */;
 
 
-export default function equalObjects(arg0, arg1, arg2, arg3, arg4, get) {
-  const arr = getAllKeys(arg0);
-  if (arr.length != getAllKeys(arg1).length) {
+export default function equalObjects(arg0, arg1, arg2, fn, fn2, get) {
+  const arr = _mod656(arg0);
+  if (arr.length != _mod656(arg1).length) {
     if (!tmp) {
       return false;
     }
@@ -16,7 +16,6 @@ export default function equalObjects(arg0, arg1, arg2, arg3, arg4, get) {
   if (+arr.length) {
     while (true) {
       let tmp5 = arr[diff];
-      let tmp6 = diff;
       if (tmp) {
         let tmp8 = tmp5 in arg1;
       } else {
@@ -34,7 +33,7 @@ export default function equalObjects(arg0, arg1, arg2, arg3, arg4, get) {
     }
     return false;
   }
-  let value = get.get(arg0);
+  get.get(arg0);
   value = get.get(arg1);
   if (value) {
     if (value) {
@@ -48,17 +47,12 @@ export default function equalObjects(arg0, arg1, arg2, arg3, arg4, get) {
   let tmp17 = tmp;
   let flag3 = true;
   if (sum < arr.length) {
-    while (!arg3) {
+    while (!fn) {
       let tmp38 = tmp15;
       if (undefined === tmp15) {
         let tmp39 = tmp19 === tmp20;
         if (!tmp39) {
-          let tmp40 = tmp19;
-          let tmp41 = tmp20;
-          let tmp42 = arg2;
-          let tmp43 = arg3;
-          let tmp44 = get;
-          tmp39 = arg4(tmp19, tmp20, arg2, arg3, get);
+          tmp39 = fn2(tmp19, tmp20, arg2, fn, get);
         }
         tmp38 = tmp39;
       }
@@ -77,9 +71,9 @@ export default function equalObjects(arg0, arg1, arg2, arg3, arg4, get) {
       }
     }
     if (tmp) {
-      let tmp30 = arg3(tmp20, tmp19, tmp18, arg1, arg0, get);
+      let tmp30 = fn(tmp20, tmp19, tmp18, arg1, arg0, get);
     } else {
-      tmp30 = arg3(tmp19, tmp20, tmp18, arg0, arg1, get);
+      tmp30 = fn(tmp19, tmp20, tmp18, arg0, arg1, get);
     }
   }
   let flag4 = flag3;

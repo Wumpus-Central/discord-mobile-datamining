@@ -1,7 +1,7 @@
 // === Module 1438: PseudoMap ===
 
 // Module 1438 (PseudoMap)
-import PseudoMap from "PseudoMap" /* 1439 */;
+import _mod1439 from "module_1439" /* 1439 */;
 
 let tmp = "pseudomap" === process.env.npm_package_name;
 if (tmp) {
@@ -20,4 +20,4 @@ if (typeof Map === "function") {
   }
 }
 
-export default PseudoMap;
+export default _mod1439;

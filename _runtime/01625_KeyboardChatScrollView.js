@@ -5,43 +5,35 @@ import KeyboardAvoidingView from "KeyboardAvoidingView" /* 1841 */;
 import OverKeyboardView from "OverKeyboardView" /* 1870 */;
 
 for (const key10013 in require("nativeEventEmitter")) {
-  let tmp2 = key10013;
   arg5[key10013] = require("nativeEventEmitter")[key10013];
   continue;
 }
-for (const key10017 in require("Animated")) {
-  let tmp3 = key10017;
-  arg5[key10017] = require("Animated")[key10017];
+for (const key10017 in require("module_1634")) {
+  arg5[key10017] = require("module_1634")[key10017];
   continue;
 }
 for (const key10021 in require("NOOP")) {
-  let tmp4 = key10021;
   arg5[key10021] = require("NOOP")[key10021];
   continue;
 }
-for (const key10025 in require("useResizeMode")) {
-  let tmp5 = key10025;
-  arg5[key10025] = require("useResizeMode")[key10025];
+for (const key10025 in require("module_1830")) {
+  arg5[key10025] = require("module_1830")[key10025];
   continue;
 }
 for (const key10029 in require("AndroidSoftInputModes")) {
-  let tmp6 = key10029;
   arg5[key10029] = require("AndroidSoftInputModes")[key10029];
   continue;
 }
-for (const key10033 in require("KeyboardController")) {
-  let tmp7 = key10033;
-  arg5[key10033] = require("KeyboardController")[key10033];
+for (const key10033 in require("module_1828")) {
+  arg5[key10033] = require("module_1828")[key10033];
   continue;
 }
 for (const key10037 in require("module_1834")) {
-  let tmp8 = key10037;
   arg5[key10037] = require("module_1834")[key10037];
   continue;
 }
-for (const key10041 in require("useAnimatedKeyboard")) {
-  let tmp9 = key10041;
-  arg5[key10041] = require("useAnimatedKeyboard")[key10041];
+for (const key10041 in require("KeyboardState")) {
+  arg5[key10041] = require("KeyboardState")[key10041];
   continue;
 }
 

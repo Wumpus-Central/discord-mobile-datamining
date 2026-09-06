@@ -1,7 +1,7 @@
 // === Module 1200: MessageType ===
 
 // Module 1200 (MessageType)
-import closure_2 from "_classCallCheck" /* 41 */;
+import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
 
 const MessageType = require;
@@ -9,46 +9,47 @@ class MessageType {
   constructor(arg0, arg1, arg2) {
     self = this;
     obj = importDefault;
-    tmp = closure_2(this, MessageType);
+    tmp = c2(this, MessageType);
     this.defaultCheckDepth = 16;
     this.typeName = global;
-    tmp2 = MessageType;
+    tmp2 = closure_0;
     tmp3 = closure_1;
-    this.fields = require.map(require("RepeatType").normalizeFieldInfo);
+    this.fields = require.map(closure_0(closure_1[2]).normalizeFieldInfo);
     if (null == importDefault) {
       obj = {};
     }
     self.options = obj;
-    reflectionTypeCheck = new require("ReflectionTypeCheck").ReflectionTypeCheck(self);
+    reflectionTypeCheck = new tmp2(tmp3[3]).ReflectionTypeCheck(self);
     self.refTypeCheck = reflectionTypeCheck;
-    reflectionJsonReader = new require("ReflectionJsonReader").ReflectionJsonReader(self);
+    reflectionJsonReader = new tmp2(tmp3[4]).ReflectionJsonReader(self);
     self.refJsonReader = reflectionJsonReader;
-    reflectionJsonWriter = new require("ReflectionJsonWriter").ReflectionJsonWriter(self);
+    reflectionJsonWriter = new tmp2(tmp3[5]).ReflectionJsonWriter(self);
     self.refJsonWriter = reflectionJsonWriter;
-    reflectionBinaryReader = new require("ReflectionBinaryReader").ReflectionBinaryReader(self);
+    reflectionBinaryReader = new tmp2(tmp3[6]).ReflectionBinaryReader(self);
     self.refBinReader = reflectionBinaryReader;
-    reflectionBinaryWriter = new require("ReflectionBinaryWriter").ReflectionBinaryWriter(self);
+    reflectionBinaryWriter = new tmp2(tmp3[7]).ReflectionBinaryWriter(self);
     self.refBinWriter = reflectionBinaryWriter;
     return;
   }
 }
-const items = [
-  {
-    key: "create",
-    value: function create(arr) {
-      const reflectionCreateResult = MessageType(1211).reflectionCreate(this);
-      if (undefined !== arr) {
-        const result = MessageType(1212).reflectionMergePartial(this, reflectionCreateResult, arr);
-        const tmpResult = MessageType(1212);
-      }
-      return reflectionCreateResult;
+const entry = {
+  key: "create",
+  value: function create(arr) {
+    const reflectionCreateResult = MessageType(1211).reflectionCreate(this);
+    if (undefined !== arr) {
+      const result = MessageType(1212).reflectionMergePartial(this, reflectionCreateResult, arr);
+      const tmpResult = MessageType(1212);
     }
-  },
+    return reflectionCreateResult;
+  }
+};
+const items = [
+  entry,
   {
     key: "clone",
     value: function clone(arr) {
-      let obj = this.create();
-      obj = MessageType(1212);
+      this.create();
+      const obj = MessageType(1212);
       const result = obj.reflectionMergePartial(this, obj, arr);
       return obj;
     }
@@ -85,8 +86,8 @@ const items = [
   },
   {
     key: "mergePartial",
-    value: function mergePartial(reflectionCreateResult, arr) {
-      const result = MessageType(1212).reflectionMergePartial(this, reflectionCreateResult, arr);
+    value: function mergePartial(EmojiFrecency, arr) {
+      const result = MessageType(1212).reflectionMergePartial(this, EmojiFrecency, arr);
     }
   },
   {
@@ -133,7 +134,7 @@ const items = [
   },
   {
     key: "toBinary",
-    value: function toBinary(favoriteGifs) {
+    value: function toBinary(favoriteGifs, arg1) {
       const binaryWriteOptionsResult = MessageType(1196).binaryWriteOptions(arg1);
       const obj = MessageType(1196);
       return this.internalBinaryWrite(favoriteGifs, binaryWriteOptionsResult.writerFactory(), binaryWriteOptionsResult).finish();
@@ -141,7 +142,7 @@ const items = [
   },
   {
     key: "internalJsonRead",
-    value: function internalJsonRead(obj) {
+    value: function internalJsonRead(obj, arg1, arg2) {
       const self = this;
       if (null !== obj) {
         if (typeof obj === "object") {
@@ -158,7 +159,7 @@ const items = [
         }
       }
       obj = MessageType(1189);
-      error = new Error("Unable to parse message " + self.typeName + " from JSON " + obj.typeofJsonValue(obj) + ".");
+      const error = new Error("Unable to parse message " + self.typeName + " from JSON " + obj.typeofJsonValue(obj) + ".");
       throw error;
     }
   },

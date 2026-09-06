@@ -1,7 +1,7 @@
 // === Module 5183: detectFile ===
 
 // Module 5183 (detectFile)
-import detectFile from "detectFile" /* 5184 */;
+import _mod5184 from "module_5184" /* 5184 */;
 import _mod5188 from "module_5188" /* 5188 */;
 
 const self = this;
@@ -29,26 +29,24 @@ if (self2) {
         const obj = {};
         if (null != __esModule) {
           for (const key10009 in arg0) {
-            let tmp8 = key10009;
             let tmp9 = "default" !== key10009;
             if (!tmp9) {
               if (!tmp9) {
                 continue;
               } else {
-                let tmp5 = self2;
                 let tmp6 = self2(obj, arg0, key10009);
                 continue;
               }
               continue;
             } else {
               let _Object = Object;
+              hasOwnProperty = Object.prototype.hasOwnProperty;
               let call = hasOwnProperty.call;
               if (typeof call === "unknown") {
                 let hasOwnPropertyResult = hasOwnProperty(key10009);
               } else {
                 hasOwnPropertyResult = call(arg0, key10009);
               }
-              let tmp4 = hasOwnPropertyResult;
             }
           }
         }
@@ -58,7 +56,7 @@ if (self2) {
     }
     const _Object3 = Object;
     const _Object4 = Object;
-    const fnResult = fn(detectFile);
+    const fnResult = fn(_mod5184);
     module.exports = Object.assign(Object.assign({}, fnResult), fn(_mod5188));
   } else {
     const _Object2 = Object;

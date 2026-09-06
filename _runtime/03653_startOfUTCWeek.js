@@ -1,39 +1,36 @@
 // === Module 3653: startOfUTCWeek ===
 
 // Module 3653 (startOfUTCWeek)
-import getDefaultOptions from "getDefaultOptions" /* 3655 */;
-import _typeof from "_typeof" /* 3650 */;
+import _mod3655 from "module_3655" /* 3655 */;
+import _typeof from "module_3650" /* 3650 */;
 import requiredArgs from "requiredArgs" /* 3651 */;
-import toInteger from "toInteger" /* 3654 */;
+import module_3654 from "module_3654" /* 3654 */;
 
 if (!_typeof) {
-  let obj = { default: null };
-  obj[0] = _typeof;
+  let obj = { default: _typeof };
   let tmp3 = obj;
 } else {
   tmp3 = _typeof;
 }
 _typeof = tmp3;
 if (!requiredArgs) {
-  obj = { default: null };
-  obj[0] = requiredArgs;
+  obj = { default: requiredArgs };
   let tmp5 = obj;
 } else {
   tmp5 = requiredArgs;
 }
 requiredArgs = tmp5;
-if (!toInteger) {
-  obj = { default: null };
-  obj[0] = toInteger;
+if (!module_3654) {
+  obj = { default: module_3654 };
   let tmp7 = obj;
 } else {
-  tmp7 = toInteger;
+  tmp7 = module_3654;
 }
-toInteger = tmp7;
+module_3654 = tmp7;
 
 export default function startOfUTCWeek(arg0, weekStartsOn) {
   requiredArgs.default(1, arguments);
-  const defaultOptions = getDefaultOptions.getDefaultOptions();
+  const defaultOptions = _mod3655.getDefaultOptions();
   weekStartsOn = undefined;
   if (null != weekStartsOn) {
     weekStartsOn = weekStartsOn.weekStartsOn;
@@ -41,7 +38,7 @@ export default function startOfUTCWeek(arg0, weekStartsOn) {
   if (null === weekStartsOn) {
     let weekStartsOn1;
     if (null != weekStartsOn) {
-      const locale = weekStartsOn.locale;
+      locale = weekStartsOn.locale;
       if (null !== locale) {
         if (undefined !== locale) {
           const options = locale.options;
@@ -80,7 +77,7 @@ export default function startOfUTCWeek(arg0, weekStartsOn) {
       num = weekStartsOn;
     }
   }
-  const defaultResult1 = toInteger.default(num);
+  const defaultResult1 = module_3654.default(num);
   if (defaultResult1 >= 0) {
     if (defaultResult1 <= 6) {
       const defaultResult2 = _typeof.default(arg0);

@@ -1,7 +1,8 @@
 // === Module 14244: BestAvailableLocale ===
 
 // Module 14244 (BestAvailableLocale)
-arg5.BestAvailableLocale = function BestAvailableLocale(arr) {
+
+export const BestAvailableLocale = function BestAvailableLocale(arr, arg1) {
   let substr = arg1;
   while (arr.indexOf(substr) <= -1) {
     let lastIndexOfResult = substr.lastIndexOf("-");

@@ -1,16 +1,15 @@
 // === Module 951: applySourceContextToFrame ===
 
 // Module 951 (applySourceContextToFrame)
-import registerSpanErrorInstrumentation from "registerSpanErrorInstrumentation" /* 682 */;
+import registerSpanErrorInstrumentation from "module_682" /* 682 */;
 
 Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
 
-export const applySourceContextToFrame = function applySourceContextToFrame(filename) {
+export const applySourceContextToFrame = function applySourceContextToFrame(filename, arg1, arg2, arg3) {
   if (filename.filename === arg2) {
     if (filename.lineno) {
       if (arg1.length) {
         registerSpanErrorInstrumentation.addContextToFrame(arg1, filename, arg3);
-        const obj = registerSpanErrorInstrumentation;
       }
     }
   }
@@ -21,19 +20,15 @@ export const contextLinesIntegration = registerSpanErrorInstrumentation.defineIn
   if (arg0 === undefined) {
     obj = {};
   }
-  let num;
-  num = 7;
-  if (null != obj.frameContextLines) {
-    num = obj.frameContextLines;
-  }
   obj = {
     name: "ContextLines",
     processEvent(exception) {
-      const _document = num(closure_1_1[0]).GLOBAL_OBJ.document;
-      let _location = num(closure_1_1[0]).GLOBAL_OBJ.location;
+      closure_0 = num;
+      const _document = registerSpanErrorInstrumentation.GLOBAL_OBJ.document;
+      let _location = registerSpanErrorInstrumentation.GLOBAL_OBJ.location;
       if (_location) {
-        _location = tmp(tmp2[0]).stripUrlQueryAndFragment(tmp(tmp2[0]).GLOBAL_OBJ.location.href);
-        const tmpResult = tmp(tmp2[0]);
+        _location = tmp(682).stripUrlQueryAndFragment(tmp(682).GLOBAL_OBJ.location.href);
+        const tmpResult = tmp(682);
       }
       if (_document) {
         if (_location) {
@@ -59,11 +54,11 @@ export const contextLinesIntegration = registerSpanErrorInstrumentation.defineIn
                 if (frames) {
                   const frames1 = stacktrace.frames;
                   stacktrace.frames = frames1.map((filename) => {
-                    if (filename.filename === closure_1) {
+                    if (filename.filename === closure_1_1) {
                       if (filename.lineno) {
                         if (arr.length) {
-                          closure_1_0(closure_1_1[0]).addContextToFrame(arr, filename, tmp);
-                          const obj = closure_1_0(closure_1_1[0]);
+                          closure_0(_location[0]).addContextToFrame(arr, filename, tmp);
+                          const obj = closure_0(_location[0]);
                         }
                       }
                     }

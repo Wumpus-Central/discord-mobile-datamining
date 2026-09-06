@@ -1,12 +1,11 @@
 // === Module 471: IntentAndroid ===
 
 // Module 471 (IntentAndroid)
-import IntentAndroidDefault from "IntentAndroid" /* 472 */;
+import _modDef472 from "module_472" /* 472 */;
 
-for (const key10016 in require("IntentAndroid")) {
-  let tmp2 = key10016;
-  arg5[key10016] = require("IntentAndroid")[key10016];
+for (const key10016 in require("module_472")) {
+  arg5[key10016] = require("module_472")[key10016];
   continue;
 }
 
-export default IntentAndroidDefault;
+export default _modDef472;

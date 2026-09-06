@@ -1,7 +1,8 @@
 // === Module 943: _getUnhandledRejectionError ===
 
 // Module 943 (_getUnhandledRejectionError)
-import registerSpanErrorInstrumentation from "registerSpanErrorInstrumentation" /* 682 */;
+import _mod937 from "module_937" /* 937 */;
+import registerSpanErrorInstrumentation from "module_682" /* 682 */;
 
 function _getUnhandledRejectionError(reason) {
   if (obj.isPrimitive(reason)) {
@@ -29,8 +30,8 @@ export const _eventFromRejectionWithPrimitive = function _eventFromRejectionWith
   obj = { values: null };
   obj = { type: "UnhandledRejection", value: "Non-Error promise rejection captured with value: " + String(reason) };
   const items = [obj];
-  obj[0] = items;
-  obj[0] = obj;
+  obj.values = items;
+  obj.exception = obj;
   return obj;
 };
 export { _getUnhandledRejectionError };
@@ -39,7 +40,6 @@ export const globalHandlersIntegration = registerSpanErrorInstrumentation.define
   if (arg0 === undefined) {
     obj = {};
   }
-  obj = undefined;
   obj = { onerror: true, onunhandledrejection: true };
   const merged = Object.assign(obj);
   obj = {
@@ -49,29 +49,31 @@ export const globalHandlersIntegration = registerSpanErrorInstrumentation.define
     },
     setup(arg0) {
       if (obj.onerror) {
-        obj = arg0;
-        obj = obj(closure_1_1[0]);
+        closure_0 = arg0;
+        obj = registerSpanErrorInstrumentation;
         let result = obj.addGlobalErrorInstrumentationHandler((arg0) => {
-          obj = callback(closure_1_1[0]);
+          obj = obj(682);
           const client = obj.getClient();
           let options;
           if (client != null) {
             options = client.getOptions();
           }
           if (!options) {
-            obj = { stackParser: null, attachStacktrace: false };
-            obj[0] = function stackParser(stack, arg1, arg2) {
-              return [];
+            obj = {
+              stackParser() {
+                  return [];
+                },
+              attachStacktrace: false
             };
             options = obj;
           }
           ({ stackParser, attachStacktrace } = options);
-          let tmpResult = tmp(tmp2[0]);
-          if (tmpResult.getClient() === callback) {
-            tmpResult = tmp(tmp2[1]);
+          let tmpResult = tmp(682);
+          if (tmpResult.getClient() === closure_0) {
+            tmpResult = tmp(893);
             if (!tmpResult.shouldIgnoreOnError()) {
               ({ url, error, msg, line, column } = arg0);
-              const tmpResult1 = tmp(tmp2[2]);
+              const tmpResult1 = tmp(896);
               let tmp5 = error;
               if (!error) {
                 tmp5 = msg;
@@ -93,99 +95,90 @@ export const globalHandlersIntegration = registerSpanErrorInstrumentation.define
                   combined = url;
                   if (url.startsWith("data:")) {
                     const _HermesInternal = HermesInternal;
-                    combined = "<" + tmp(tmp2[0]).stripDataUrlContent(url, false) + ">";
-                    const tmpResult3 = tmp(tmp2[0]);
+                    combined = "<" + tmp(682).stripDataUrlContent(url, false) + ">";
+                    const tmpResult3 = tmp(682);
                   }
                 }
               }
               if (combined == null) {
-                combined = tmp(tmp2[0]).getLocationHref();
-                const tmpResult4 = tmp(tmp2[0]);
+                combined = tmp(682).getLocationHref();
+                const tmpResult4 = tmp(682);
               }
               if (0 === arr.length) {
-                obj = { colno: null, filename: null, function: null, in_app: true, lineno: null };
-                obj[0] = column;
-                obj[1] = combined;
-                obj[2] = tmp(tmp2[0]).UNKNOWN_FUNCTION;
-                obj[4] = line;
+                obj = { colno: column, filename: combined, function: tmp(682).UNKNOWN_FUNCTION, in_app: true, lineno: line };
                 arr = arr.push(obj);
               }
               result.level = "error";
-              tmpResult2 = tmp(tmp2[0]);
-              obj1 = { originalException: null, mechanism: null };
-              obj1[0] = error;
-              obj1[1] = { handled: false, type: "auto.browser.global_handlers.onerror" };
-              tmp(tmp2[0]).captureEvent(result, obj1);
-              const tmpResult5 = tmp(tmp2[0]);
+              tmpResult2 = tmp(682);
+              const obj1 = { originalException: error, mechanism: { handled: false, type: "auto.browser.global_handlers.onerror" } };
+              tmp(682).captureEvent(result, obj1);
+              const tmpResult5 = tmp(682);
             }
           }
         });
-        if (obj(closure_1_1[3]).DEBUG_BUILD) {
-          const debug = tmp5(tmp6[0]).debug;
+        if (_mod937.DEBUG_BUILD) {
+          const debug = tmp5(682).debug;
           let _HermesInternal = HermesInternal;
           debug.log("Global Handler attached: " + "onerror");
         }
-        tmp5 = obj;
-        tmp6 = closure_1_1;
+        tmp5 = require;
       }
       if (obj.onunhandledrejection) {
-        obj = arg0;
-        const result1 = obj(closure_1_1[0]).addGlobalUnhandledRejectionInstrumentationHandler((arg0) => {
-          let captureEvent = callback;
-          let captureEventResult5 = closure_1_1;
-          obj = callback(closure_1_1[0]);
+        closure_0 = arg0;
+        const result1 = registerSpanErrorInstrumentation.addGlobalUnhandledRejectionInstrumentationHandler((arg0) => {
+          let captureEvent = obj;
+          obj = obj(682);
           const client = obj.getClient();
           let options;
           if (client != null) {
             options = client.getOptions();
           }
           if (!options) {
-            obj = { stackParser: null, attachStacktrace: false };
-            obj[0] = function stackParser(stack, arg1, arg2) {
-              return [];
+            obj = {
+              stackParser() {
+                  return [];
+                },
+              attachStacktrace: false
             };
             options = obj;
           }
           ({ stackParser, attachStacktrace } = options);
-          if (captureEventResult.getClient() === callback) {
+          if (captureEventResult.getClient() === closure_0) {
             if (!captureEventResult1.shouldIgnoreOnError()) {
-              let obj4 = closure_1_2(arg0);
+              let obj4 = _getUnhandledRejectionError(arg0);
               if (captureEventResult2.isPrimitive(obj4)) {
                 obj = { exception: null };
-                obj1 = { values: null };
+                const obj1 = { values: null };
                 const obj2 = { type: "UnhandledRejection", value: null };
                 const _String = String;
                 const _HermesInternal = HermesInternal;
-                obj2[1] = "Non-Error promise rejection captured with value: " + String(obj4);
+                obj2.value = "Non-Error promise rejection captured with value: " + String(obj4);
                 const items = [obj2];
-                obj1[0] = items;
-                obj[0] = obj1;
+                obj1.values = items;
+                obj.exception = obj1;
                 let result = obj;
               } else {
-                const captureEventResult3 = captureEvent(captureEventResult5[2]);
+                const captureEventResult3 = captureEvent(896);
                 result = captureEventResult3.eventFromUnknownInput(stackParser, obj4, undefined, attachStacktrace, true);
               }
               result.level = "error";
-              captureEventResult2 = captureEvent(captureEventResult5[0]);
-              captureEvent = captureEvent(captureEventResult5[0]).captureEvent;
-              const obj3 = { originalException: null, mechanism: null };
-              obj3[0] = obj4;
+              captureEventResult2 = captureEvent(682);
+              captureEvent = captureEvent(682).captureEvent;
+              const obj3 = { originalException: obj4, mechanism: null };
               obj4 = { handled: false, type: "auto.browser.global_handlers.onunhandledrejection" };
-              obj3[1] = obj4;
-              captureEventResult5 = captureEvent(result, obj3);
-              const captureEventResult4 = captureEvent(captureEventResult5[0]);
+              obj3.mechanism = obj4;
+              captureEvent(result, obj3);
+              const captureEventResult4 = captureEvent(682);
             }
-            captureEventResult1 = captureEvent(captureEventResult5[1]);
+            captureEventResult1 = captureEvent(893);
           }
         });
-        if (obj(closure_1_1[3]).DEBUG_BUILD) {
-          const debug2 = tmp12(tmp13[0]).debug;
+        if (_mod937.DEBUG_BUILD) {
+          const debug2 = tmp12(682).debug;
           const _HermesInternal2 = HermesInternal;
           debug2.log("Global Handler attached: " + "onunhandledrejection");
         }
-        let obj2 = obj(closure_1_1[0]);
-        tmp12 = obj;
-        tmp13 = closure_1_1;
+        tmp12 = require;
       }
     }
   };

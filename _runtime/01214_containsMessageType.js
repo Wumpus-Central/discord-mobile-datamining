@@ -1,10 +1,11 @@
 // === Module 1214: containsMessageType ===
 
 // Module 1214 (containsMessageType)
-import _mod1199 from "module_1199" /* 1199 */;
+import MESSAGE_TYPE from "MESSAGE_TYPE" /* 1199 */;
 
 require = arg1;
 const dependencyMap = arg6;
-arg5.containsMessageType = function containsMessageType(arg0) {
-  return null != arg0[_mod1199.MESSAGE_TYPE];
+
+export const containsMessageType = function containsMessageType(arg0) {
+  return null != arg0[MESSAGE_TYPE.MESSAGE_TYPE];
 };

@@ -1,37 +1,34 @@
 // === Module 4085: subHours ===
 
 // Module 4085 (subHours)
-import addHours from "addHours" /* 3804 */;
+import module_3804 from "module_3804" /* 3804 */;
 import requiredArgs from "requiredArgs" /* 3651 */;
-import toInteger from "toInteger" /* 3654 */;
+import module_3654 from "module_3654" /* 3654 */;
 
-if (!addHours) {
-  let obj = { default: null };
-  obj[0] = addHours;
+if (!module_3804) {
+  let obj = { default: module_3804 };
   let tmp3 = obj;
 } else {
-  tmp3 = addHours;
+  tmp3 = module_3804;
 }
-addHours = tmp3;
+module_3804 = tmp3;
 if (!requiredArgs) {
-  obj = { default: null };
-  obj[0] = requiredArgs;
+  obj = { default: requiredArgs };
   let tmp5 = obj;
 } else {
   tmp5 = requiredArgs;
 }
 requiredArgs = tmp5;
-if (!toInteger) {
-  obj = { default: null };
-  obj[0] = toInteger;
+if (!module_3654) {
+  obj = { default: module_3654 };
   let tmp7 = obj;
 } else {
-  tmp7 = toInteger;
+  tmp7 = module_3654;
 }
-toInteger = tmp7;
+module_3654 = tmp7;
 
 export default function subHours(arg0, arg1) {
   requiredArgs.default(2, arguments);
-  return addHours.default(arg0, -toInteger.default(arg1));
+  return module_3804.default(arg0, -module_3654.default(arg1));
 };
 export default exports.default;

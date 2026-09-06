@@ -1,7 +1,7 @@
 // === Module 1502: NavigationIndependentTreeContext ===
 
 // Module 1502 (NavigationIndependentTreeContext)
-import noopAll from "noop" /* 19 */;
+import noop from "module_19" /* 19 */;
 
 
-export const NavigationIndependentTreeContext = noopAll.createContext(false);
+export const NavigationIndependentTreeContext = noop.createContext(false);

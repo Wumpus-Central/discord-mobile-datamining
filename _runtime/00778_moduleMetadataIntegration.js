@@ -1,6 +1,7 @@
 // === Module 778: moduleMetadataIntegration ===
 
 // Module 778 (moduleMetadataIntegration)
+import _mod779 from "module_779" /* 779 */;
 import setupIntegration from "setupIntegration" /* 752 */;
 
 Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
@@ -8,9 +9,9 @@ Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
 export const moduleMetadataIntegration = setupIntegration.defineIntegration(() => ({
   name: "ModuleMetadata",
   setup(on) {
-    closure_0 = on;
+    const options = on;
     on.on("beforeEnvelope", (arg0) => {
-      options(table[1]).forEachEnvelopeItem(arg0, (arg0, arg1) => {
+      options(closure_1_1[1]).forEachEnvelopeItem(arg0, (arg0, arg1) => {
         if ("event" === arg1) {
           const _Array = Array;
           let tmp3;
@@ -18,17 +19,16 @@ export const moduleMetadataIntegration = setupIntegration.defineIntegration(() =
             tmp3 = arg0[1];
           }
           if (tmp3) {
-            const result = callback(table[2]).stripMetadataFromStackFrames(tmp3);
+            const result = options(dependencyMap[2]).stripMetadataFromStackFrames(tmp3);
             arg0[1] = tmp3;
-            const obj = callback(table[2]);
+            const obj = options(dependencyMap[2]);
           }
         }
       });
     });
     on.on("applyFrameMetadata", (type) => {
       if (!type.type) {
-        const result = options(closure_1_1[2]).addMetadataToStackFrames(options.getOptions().stackParser, type);
-        const obj = options(closure_1_1[2]);
+        const result = _mod779.addMetadataToStackFrames(options.getOptions().stackParser, type);
       }
     });
   }

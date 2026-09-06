@@ -3,8 +3,7 @@
 // Module 268 (MutationObserver)
 import _createClassDefault from "_createClass" /* 42 */;
 import notifyMutationObserversAll from "notifyMutationObservers" /* 269 */;
-import closure_3 from "_classCallCheck" /* 41 */;
-import setPlatformObject from "setPlatformObject" /* 126 */;
+import _classCallCheck from "_classCallCheck" /* 41 */;
 
 const MutationObserver = importDefault;
 class MutationObserver {
@@ -34,100 +33,96 @@ class MutationObserver {
     }
   }
 }
-const items = [
-  {
-    key: "observe",
-    value: function observe(arg0, childList) {
-      if (arg0 instanceof MutationObserver(143)) {
-        childList = undefined;
-        if (childList != null) {
-          childList = childList.childList;
-        }
-        if (true !== Boolean(childList)) {
-          const _TypeError2 = TypeError;
-          const typeError = new TypeError("Failed to execute 'observe' on 'MutationObserver': The options object must set 'childList' to true.");
-          throw typeError;
-        } else {
-          let attributes;
-          if (childList != null) {
-            attributes = childList.attributes;
-          }
-          if (null != attributes) {
-            const _Error5 = Error;
-            error = new Error("Failed to execute 'observe' on 'MutationObserver': attributes is not supported");
-            throw error;
-          } else {
-            let attributeFilter;
-            if (childList != null) {
-              attributeFilter = childList.attributeFilter;
-            }
-            if (null != attributeFilter) {
-              const _Error4 = Error;
-              const error1 = new Error("Failed to execute 'observe' on 'MutationObserver': attributeFilter is not supported");
-              throw error1;
-            } else {
-              let attributeOldValue;
-              if (childList != null) {
-                attributeOldValue = childList.attributeOldValue;
-              }
-              if (null != attributeOldValue) {
-                const _Error3 = Error;
-                const error2 = new Error("Failed to execute 'observe' on 'MutationObserver': attributeOldValue is not supported");
-                throw error2;
-              } else {
-                let characterData;
-                if (childList != null) {
-                  characterData = childList.characterData;
-                }
-                if (null != characterData) {
-                  const _Error2 = Error;
-                  const error3 = new Error("Failed to execute 'observe' on 'MutationObserver': characterData is not supported");
-                  throw error3;
-                } else {
-                  let prop;
-                  if (childList != null) {
-                    prop = childList.characterDataOldValue;
-                  }
-                  if (null != prop) {
-                    const _Error = Error;
-                    const error4 = new Error("Failed to execute 'observe' on 'MutationObserver': characterDataOldValue is not supported");
-                    throw error4;
-                  } else {
-                    const self = this;
-                    const result = this._getOrCreateMutationObserverId();
-                    let obj = notifyMutationObserversAll;
-                    obj = { mutationObserverId: null, target: null, subtree: null };
-                    obj[0] = result;
-                    obj[1] = arg0;
-                    let subtree;
-                    if (childList != null) {
-                      subtree = childList.subtree;
-                    }
-                    obj[2] = Boolean(subtree);
-                    obj.observe(obj);
-                  }
-                }
-              }
-            }
-          }
-        }
-      } else {
-        const _TypeError = TypeError;
-        const typeError1 = new TypeError("Failed to execute 'observe' on 'MutationObserver': parameter 1 is not of type 'ReactNativeElement'.");
-        throw typeError1;
+const entry = {
+  key: "observe",
+  value: function observe(target, childList) {
+    if (target instanceof MutationObserver(143)) {
+      childList = undefined;
+      if (childList != null) {
+        childList = childList.childList;
       }
+      if (true !== Boolean(childList)) {
+        const _TypeError2 = TypeError;
+        const typeError = new TypeError("Failed to execute 'observe' on 'MutationObserver': The options object must set 'childList' to true.");
+        throw typeError;
+      } else {
+        let attributes;
+        if (childList != null) {
+          attributes = childList.attributes;
+        }
+        if (null != attributes) {
+          const _Error5 = Error;
+          const error = new Error("Failed to execute 'observe' on 'MutationObserver': attributes is not supported");
+          throw error;
+        } else {
+          let attributeFilter;
+          if (childList != null) {
+            attributeFilter = childList.attributeFilter;
+          }
+          if (null != attributeFilter) {
+            const _Error4 = Error;
+            const error1 = new Error("Failed to execute 'observe' on 'MutationObserver': attributeFilter is not supported");
+            throw error1;
+          } else {
+            let attributeOldValue;
+            if (childList != null) {
+              attributeOldValue = childList.attributeOldValue;
+            }
+            if (null != attributeOldValue) {
+              const _Error3 = Error;
+              const error2 = new Error("Failed to execute 'observe' on 'MutationObserver': attributeOldValue is not supported");
+              throw error2;
+            } else {
+              let characterData;
+              if (childList != null) {
+                characterData = childList.characterData;
+              }
+              if (null != characterData) {
+                const _Error2 = Error;
+                const error3 = new Error("Failed to execute 'observe' on 'MutationObserver': characterData is not supported");
+                throw error3;
+              } else {
+                let prop;
+                if (childList != null) {
+                  prop = childList.characterDataOldValue;
+                }
+                if (null != prop) {
+                  const _Error = Error;
+                  const error4 = new Error("Failed to execute 'observe' on 'MutationObserver': characterDataOldValue is not supported");
+                  throw error4;
+                } else {
+                  const self = this;
+                  const result = this._getOrCreateMutationObserverId();
+                  const obj = { mutationObserverId: result, target, subtree: null };
+                  let subtree;
+                  if (childList != null) {
+                    subtree = childList.subtree;
+                  }
+                  obj.subtree = Boolean(subtree);
+                  obj.observe(obj);
+                }
+              }
+            }
+          }
+        }
+      }
+    } else {
+      const _TypeError = TypeError;
+      const typeError1 = new TypeError("Failed to execute 'observe' on 'MutationObserver': parameter 1 is not of type 'ReactNativeElement'.");
+      throw typeError1;
     }
-  },
+  }
+};
+const items = [
+  entry,
   {
     key: "disconnect",
     value: function disconnect() {
       const _mutationObserverId = this._mutationObserverId;
       if (null != _mutationObserverId) {
         notifyMutationObserversAll.unobserveAll(_mutationObserverId);
-        const obj = notifyMutationObserversAll;
         notifyMutationObserversAll.unregisterObserver(_mutationObserverId);
         tmp._mutationObserverId = null;
-        const obj2 = notifyMutationObserversAll;
       }
     }
   },
@@ -140,7 +135,6 @@ const items = [
         const registerObserverResult = notifyMutationObserversAll.registerObserver(self, self._callback);
         self._mutationObserverId = registerObserverResult;
         _mutationObserverId = registerObserverResult;
-        const obj = notifyMutationObserversAll;
       }
       return _mutationObserverId;
     }
@@ -153,6 +147,7 @@ const items = [
   }
 ];
 const tmp2 = _createClassDefault(MutationObserver, items);
-setPlatformObject.setPlatformObject(tmp2);
+const module_126 = fn(126);
+module_126.setPlatformObject(tmp2);
 
 export default tmp2;

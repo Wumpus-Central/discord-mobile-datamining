@@ -1,11 +1,13 @@
 // === Module 14051: ? ===
 
 // Module 14051
+import _mod14016 from "module_14016" /* 14016 */;
+import _mod14036 from "module_14036" /* 14036 */;
+
 
 export default (arg0, arg1) => {
-  let _require;
-  let obj = new _require(14045)(arg0, arg1);
-  const tmp3 = new _require(14016)("0.0.0");
+  obj = new obj(14045)(arg0, arg1);
+  const tmp3 = new obj(14016)("0.0.0");
   if (obj.test(tmp3)) {
     return tmp3;
   } else {
@@ -20,9 +22,9 @@ export default (arg0, arg1) => {
       if (0 < obj.set.length) {
         do {
           let arr = obj.set[num3];
-          _require = null;
+          obj = null;
           let item = arr.forEach((semver) => {
-            const obj = new _null(closure_1_1[1])(semver.semver.version);
+            obj = new _mod14016(semver.semver.version);
             const operator = semver.operator;
             if (">" === operator) {
               if (0 === obj.prerelease.length) {
@@ -39,34 +41,28 @@ export default (arg0, arg1) => {
                     if ("<=" !== operator) {
                       const _Error = Error;
                       const _HermesInternal = HermesInternal;
-                      error = new Error("Unexpected operation: " + semver.operator);
+                      const error = new Error("Unexpected operation: " + semver.operator);
                       throw error;
                     }
                   }
                 }
               }
-              let tmp4 = obj;
               if (obj) {
-                tmp4 = !_null(closure_1_1[2])(obj, obj);
+                const tmp4 = !_mod14036(obj, obj);
               }
             }
           });
-          let tmp12 = _require;
-          let tmp13 = !_require;
+          let tmp13 = !obj;
           let tmp14 = tmp9;
-          let tmp15 = num;
-          if (_require) {
+          if (obj) {
             let tmp16 = tmp14;
             if (tmp14) {
-              let tmp17 = _require;
-              let tmp18 = dependencyMap;
-              let tmp19 = _require;
-              tmp16 = !_require(14036)(tmp14, _require);
+              tmp16 = !obj(14036)(tmp14, obj);
             }
             tmp13 = tmp16;
           }
           if (!tmp13) {
-            tmp14 = _require;
+            tmp14 = obj;
           }
           num3 = num + 1;
           tmp9 = tmp14;
@@ -84,5 +80,5 @@ export default (arg0, arg1) => {
       return tmp20;
     }
   }
-  tmp = _require;
+  tmp = obj;
 };

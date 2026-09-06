@@ -2,12 +2,12 @@
 
 // Module 8323 (merged1)
 import colorPropType from "colorPropType" /* 8314 */;
-import emptyFunction from "emptyFunction" /* 4389 */;
+import emptyFunction from "module_4389" /* 4389 */;
 
-let obj = { shadowColor: colorPropType, shadowOffset: null, shadowOpacity: null, shadowRadius: null };
-obj = { width: emptyFunction.number, height: emptyFunction.number };
-obj[1] = emptyFunction.shape(obj);
-obj[2] = emptyFunction.number;
-obj[3] = emptyFunction.number;
+const obj = { shadowColor: colorPropType, shadowOffset: null, shadowOpacity: null, shadowRadius: null };
+const size = { width: emptyFunction.number, height: emptyFunction.number };
+obj.shadowOffset = emptyFunction.shape(size);
+obj.shadowOpacity = emptyFunction.number;
+obj.shadowRadius = emptyFunction.number;
 
 export default obj;

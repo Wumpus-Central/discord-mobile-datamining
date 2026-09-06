@@ -1,7 +1,7 @@
 // === Module 8381: head ===
 
 // Module 8381 (head)
-import head from "head" /* 8382 */;
+import _mod8382 from "module_8382" /* 8382 */;
 
 
-export default head;
+export default _mod8382;

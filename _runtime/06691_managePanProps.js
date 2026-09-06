@@ -1,7 +1,7 @@
 // === Module 6691: managePanProps ===
 
 // Module 6691 (managePanProps)
-import _isNativeReflectConstructDefault from "_isNativeReflectConstruct" /* 6682 */;
+import _isNativeReflectConstruct from "module_6682" /* 6682 */;
 
 function managePanProps(activeOffsetX) {
   const obj = {};
@@ -62,11 +62,15 @@ function managePanProps(activeOffsetX) {
 }
 const items = ["activeOffsetY", "activeOffsetX", "failOffsetY", "failOffsetX", "minDist", "minVelocity", "minVelocityX", "minVelocityY", "minPointers", "maxPointers", "avgTouches", "enableTrackpadTwoFingerGesture", "activateAfterLongPress"];
 const items1 = ["activeOffsetYStart", "activeOffsetYEnd", "activeOffsetXStart", "activeOffsetXEnd", "failOffsetYStart", "failOffsetYEnd", "failOffsetXStart", "failOffsetXEnd"];
-let obj = { name: "PanGestureHandler", allowedProps: items2, config: {}, transformProps: managePanProps, customNativeProps: items1 };
-items2 = [...items];
+let obj = { name: "PanGestureHandler", allowedProps: null, config: null, transformProps: null, customNativeProps: null };
+const items2 = [...items];
+obj.allowedProps = items2;
+obj.config = {};
+obj.transformProps = managePanProps;
+obj.customNativeProps = items1;
 
 export const panGestureHandlerProps = items;
 export const panGestureHandlerCustomNativeProps = items1;
 export const panHandlerName = "PanGestureHandler";
-export const PanGestureHandler = _isNativeReflectConstructDefault(obj);
+export const PanGestureHandler = _isNativeReflectConstruct(obj);
 export { managePanProps };

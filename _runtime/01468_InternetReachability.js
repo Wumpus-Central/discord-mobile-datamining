@@ -1,13 +1,13 @@
 // === Module 1468: InternetReachability ===
 
 // Module 1468 (InternetReachability)
-import _createClassDefault from "_createClass" /* 42 */;
-import closure_0 from "_classCallCheck" /* 41 */;
+import _createClass from "_createClass" /* 42 */;
+import _classCallCheck from "_classCallCheck" /* 41 */;
 
 class InternetReachability {
   constructor(arg0, arg1) {
     self = this;
-    tmp = self(this, InternetReachability);
+    tmp = closure_0(this, InternetReachability);
     this._isInternetReachable = undefined;
     this._currentInternetReachabilityCheckHandler = null;
     this._currentTimeoutHandle = null;
@@ -41,53 +41,52 @@ class InternetReachability {
     };
     this._checkInternetReachability = () => {
       const abortController = new AbortController();
-      let obj = { headers: self._configuration.reachabilityHeaders, method: self._configuration.reachabilityMethod, cache: "no-cache", signal: abortController.signal };
-      const response = fetch(self._configuration.reachabilityUrl, obj);
-      let promise = new Promise((arg0, arg1) => {
-        let timeout = arg1;
-        timeout = setTimeout(() => callback("timedout"), closure_1_0._configuration.reachabilityRequestTimeout);
+      let obj = { headers: _self._configuration.reachabilityHeaders, method: _self._configuration.reachabilityMethod, cache: "no-cache", signal: abortController.signal };
+      const response = fetch(_self._configuration.reachabilityUrl, obj);
+      new Promise((arg0, arg1) => {
+        const timeout = setTimeout(() => closure_0("timedout"), self._configuration.reachabilityRequestTimeout);
       });
       function cancel() {
 
       }
-      promise = new Promise((arg0, arg1) => {
+      const promise = new Promise((arg0, arg1) => {
         closure_0 = arg1;
         cancel = function cancel() {
-          return callback("canceled");
+          return closure_0("canceled");
         };
       });
       obj = { promise: null, cancel: null };
       const items = [response, promise, promise];
       const racePromise = Promise.race(items);
-      const nextPromise = Promise.race(items).then((status) => {
+      const nextPromise = Promise.race(items).then((result) => {
         const _configuration = closure_0._configuration;
-        return _configuration.reachabilityTest(status);
+        return _configuration.reachabilityTest(result);
       });
-      const nextPromise1 = Promise.race(items).then((status) => {
+      const nextPromise1 = Promise.race(items).then((result) => {
         const _configuration = closure_0._configuration;
-        return _configuration.reachabilityTest(status);
-      }).then((arg0) => {
-        const result = closure_0._setIsInternetReachable(arg0);
+        return _configuration.reachabilityTest(result);
+      }).then((result) => {
+        result = closure_0._setIsInternetReachable(result);
         const _configuration = closure_0._configuration;
         closure_0._currentTimeoutHandle = setTimeout(closure_0._checkInternetReachability, closure_0._isInternetReachable ? _configuration.reachabilityLongTimeout : _configuration.reachabilityShortTimeout);
       });
-      obj[0] = Promise.race(items).then((status) => {
+      obj.promise = Promise.race(items).then((result) => {
         const _configuration = closure_0._configuration;
-        return _configuration.reachabilityTest(status);
-      }).then((arg0) => {
-        const result = closure_0._setIsInternetReachable(arg0);
+        return _configuration.reachabilityTest(result);
+      }).then((result) => {
+        result = closure_0._setIsInternetReachable(result);
         const _configuration = closure_0._configuration;
         closure_0._currentTimeoutHandle = setTimeout(closure_0._checkInternetReachability, closure_0._isInternetReachable ? _configuration.reachabilityLongTimeout : _configuration.reachabilityShortTimeout);
-      }).catch((arg0) => {
-        if ("canceled" === arg0) {
+      }).catch((error) => {
+        if ("canceled" === error) {
           abortController.abort();
         } else {
-          if ("timedout" === arg0) {
+          if ("timedout" === error) {
             abortController.abort();
           }
-          const result = closure_1_0._setIsInternetReachable(false);
+          const result = self._setIsInternetReachable(false);
           const _setTimeout = setTimeout;
-          closure_1_0._currentTimeoutHandle = setTimeout(closure_1_0._checkInternetReachability, closure_1_0._configuration.reachabilityShortTimeout);
+          self._currentTimeoutHandle = setTimeout(self._checkInternetReachability, self._configuration.reachabilityShortTimeout);
         }
       }).then(() => {
         clearTimeout(closure_0);
@@ -95,7 +94,7 @@ class InternetReachability {
         clearTimeout(closure_0);
         throw arg0;
       });
-      obj[1] = cancel;
+      obj.cancel = cancel;
       return obj;
     };
     this.update = (isInternetReachable) => {
@@ -125,4 +124,4 @@ class InternetReachability {
   }
 }
 
-export default _createClassDefault(InternetReachability);
+export default _createClass(InternetReachability);

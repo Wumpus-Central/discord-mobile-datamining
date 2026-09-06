@@ -1,12 +1,12 @@
 // === Module 160: _construct ===
 
 // Module 160 (_construct)
-import _setPrototypeOf from "_setPrototypeOf" /* 99 */;
-import _isNativeReflectConstruct from "_isNativeReflectConstruct" /* 161 */;
+import _mod161 from "module_161" /* 161 */;
 
+const _setPrototypeOf = tmp(99);
 
-export default function _construct(bind) {
-  if (_isNativeReflectConstruct()) {
+export default function _construct(bind, arg1, arg2) {
+  if (_mod161()) {
     const _Reflect = Reflect;
     const apply = construct.apply;
     if (typeof apply === "unknown") {
@@ -26,5 +26,4 @@ export default function _construct(bind) {
     }
     return tmp9;
   }
-  const tmp = require;
 };

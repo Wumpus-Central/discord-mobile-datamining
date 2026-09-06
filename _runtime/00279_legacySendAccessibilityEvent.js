@@ -1,19 +1,19 @@
 // === Module 279: legacySendAccessibilityEvent ===
 
 // Module 279 (legacySendAccessibilityEvent)
-const module = arg2;
+import measureDefault from "measure" /* 68 */;
+import nullthrowsDefault from "nullthrows" /* 70 */;
+
+importDefault = arg2;
 const dependencyMap = arg6;
-arg5.default = function legacySendAccessibilityEvent(_nativeTag, arg1) {
+
+export default function legacySendAccessibilityEvent(_nativeTag, arg1) {
   if ("focus" === arg1) {
-    const tmp3 = module(70);
-    const tmp3Result = module(70)(module(68).sendAccessibilityEvent);
-    tmp3Result(_nativeTag, module(68).getConstants().AccessibilityEventTypes.typeViewFocused);
-    const obj = module(68);
+    const tmp3Result = nullthrowsDefault(measureDefault.sendAccessibilityEvent);
+    tmp3Result(_nativeTag, measureDefault.getConstants().AccessibilityEventTypes.typeViewFocused);
   }
   if ("click" === arg1) {
-    const tmp8 = module(70);
-    const tmp8Result = module(70)(module(68).sendAccessibilityEvent);
-    tmp8Result(_nativeTag, module(68).getConstants().AccessibilityEventTypes.typeViewClicked);
-    const obj2 = module(68);
+    const tmp8Result = nullthrowsDefault(measureDefault.sendAccessibilityEvent);
+    tmp8Result(_nativeTag, measureDefault.getConstants().AccessibilityEventTypes.typeViewClicked);
   }
 };

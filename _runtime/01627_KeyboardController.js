@@ -1,8 +1,8 @@
 // === Module 1627: KeyboardController ===
 
 // Module 1627 (KeyboardController)
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import _mod17 from "module_17" /* 17 */;
 
-const TurboModuleRegistry = get_ActivityIndicator.TurboModuleRegistry;
+const TurboModuleRegistry = _mod17.TurboModuleRegistry;
 
 export default TurboModuleRegistry.get("KeyboardController");

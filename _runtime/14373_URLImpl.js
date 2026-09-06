@@ -2,19 +2,19 @@
 
 // Module 14373 (URLImpl)
 import _createClass from "_createClass" /* 42 */;
-import closure_2 from "_classCallCheck" /* 41 */;
+import _classCallCheck from "_classCallCheck" /* 41 */;
 
 const URLImpl = require;
 class URLImpl {
   constructor(arg0, arg1) {
     self = this;
-    tmp = closure_2(this, URLImpl);
+    tmp = c2(this, URLImpl);
     [tmp2, tmp3] = require;
     basicURLParseResult = null;
     if (undefined !== tmp3) {
-      tmp5 = URLImpl;
+      tmp5 = closure_0;
       tmp6 = closure_1;
-      obj = require("parseIPv4Number");
+      obj = closure_0(closure_1[2]);
       basicURLParseResult = obj.basicURLParse(tmp3);
       if (null === basicURLParseResult) {
         tmp16 = globalThis;
@@ -28,9 +28,9 @@ class URLImpl {
         throw typeError;
       }
     }
-    tmp7 = URLImpl;
+    tmp7 = closure_0;
     tmp8 = closure_1;
-    obj2 = require("parseIPv4Number");
+    obj2 = closure_0(closure_1[2]);
     basicURLParseResult1 = obj2.basicURLParse(tmp2, { baseURL: basicURLParseResult });
     if (null === basicURLParseResult1) {
       tmp11 = globalThis;
@@ -49,7 +49,7 @@ class URLImpl {
       }
       tmp10 = global;
       self._url = basicURLParseResult1;
-      tmp7Result = require("module_14378");
+      tmp7Result = tmp7(tmp8[3]);
       items = [];
       items[0] = str;
       self._query = tmp7Result.createImpl(global, items, { doNotStripQMark: true });
@@ -98,8 +98,8 @@ let items = [
       return this._url.scheme + ":";
     },
     set(arg0) {
-      let obj = URLImpl(14374);
-      obj = { url: this._url, stateOverride: "scheme start" };
+      URLImpl(14374);
+      const obj = { url: this._url, stateOverride: "scheme start" };
       obj.basicURLParse(`${arg0}:`, obj);
     }
   },
@@ -146,9 +146,8 @@ let items = [
     },
     set(arg0) {
       if (!this._url.cannotBeABaseURL) {
-        let obj = URLImpl(14374);
-        obj = { url: null, stateOverride: "host" };
-        obj[0] = tmp._url;
+        URLImpl(14374);
+        const obj = { url: tmp._url, stateOverride: "host" };
         obj.basicURLParse(arg0, obj);
       }
     }
@@ -165,9 +164,8 @@ let items = [
     },
     set(arg0) {
       if (!this._url.cannotBeABaseURL) {
-        let obj = URLImpl(14374);
-        obj = { url: null, stateOverride: "hostname" };
-        obj[0] = tmp._url;
+        URLImpl(14374);
+        const obj = { url: tmp._url, stateOverride: "hostname" };
         obj.basicURLParse(arg0, obj);
       }
     }
@@ -189,8 +187,7 @@ let items = [
         if ("" === arg0) {
           self._url.port = null;
         } else {
-          obj = { url: null, stateOverride: "port" };
-          obj[0] = self._url;
+          obj = { url: self._url, stateOverride: "port" };
           URLImpl(14374).basicURLParse(arg0, obj);
           const tmpResult = URLImpl(14374);
         }
@@ -216,9 +213,8 @@ let items = [
       const self = this;
       if (!this._url.cannotBeABaseURL) {
         self._url.path = [];
-        let obj = URLImpl(14374);
-        obj = { url: null, stateOverride: "path start" };
-        obj[0] = self._url;
+        URLImpl(14374);
+        const obj = { url: self._url, stateOverride: "path start" };
         obj.basicURLParse(arg0, obj);
       }
     }
@@ -248,9 +244,8 @@ let items = [
           substr = str.substring(1);
         }
         _url.query = "";
-        let obj = URLImpl(14374);
-        obj = { url: null, stateOverride: "query" };
-        obj[0] = _url;
+        URLImpl(14374);
+        const obj = { url: _url, stateOverride: "query" };
         obj.basicURLParse(substr, obj);
         self._query._list = URLImpl(14377).parseUrlencoded(substr);
       }
@@ -283,9 +278,8 @@ let items = [
           substr = str.substring(1);
         }
         self._url.fragment = "";
-        let obj = URLImpl(14374);
-        obj = { url: null, stateOverride: "fragment" };
-        obj[0] = self._url;
+        URLImpl(14374);
+        const obj = { url: self._url, stateOverride: "fragment" };
         obj.basicURLParse(substr, obj);
       } else {
         self._url.fragment = null;

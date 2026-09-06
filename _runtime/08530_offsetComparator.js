@@ -3,22 +3,22 @@
 // Module 8530 (offsetComparator)
 import extractOpacityDefault from "extractOpacity" /* 8459 */;
 import appendTransformPropsDefault from "appendTransformProps" /* 8461 */;
-import _modDef8531 from "module_8531" /* 8531 */;
-import closure_2 from "noop" /* 19 */;
-import { Children } from "noop" /* 19 */;
-import { processColor } from "get ActivityIndicator" /* 17 */;
+import unitsDefault from "units" /* 8531 */;
+import noop from "module_19" /* 19 */;
 
+const Children = fn(19).Children;
+const processColor = fn(17).processColor;
 const re5 = /^([+-]?\d+(?:\.\d+)?(?:[eE][+-]?\d+)?)(%?)$/;
 function offsetComparator(arg0, arg1) {
   return arg0[0] - arg1[0];
 }
 
-export default function extractGradient(arg0, arg1) {
-  importDefault = arg1;
+export default function extractGradient(arg0, parent) {
+  importDefault = parent;
   ({ id, children, gradientTransform, gradientUnits } = arg0);
   if (id) {
     if (children) {
-      let mapped = Children.map(children, (arg0) => closure_1_2.cloneElement(arg0, { parent: closure_0 }));
+      let mapped = Children.map(children, (arg0) => noop.cloneElement(arg0, { parent }));
     } else {
       mapped = [];
     }
@@ -28,7 +28,6 @@ export default function extractGradient(arg0, arg1) {
       while (true) {
         let props = mapped[num7].props;
         ({ style, offset } = props);
-        let tmp5 = num7;
         if (undefined === offset) {
           let offset2 = style;
           if (style) {
@@ -68,7 +67,6 @@ export default function extractGradient(arg0, arg1) {
           }
           let match = typeof num8 === "string";
           if (typeof num8 === "string") {
-            let tmp27 = closure_5;
             match = num8.match(closure_5);
           }
           if (match) {
@@ -77,21 +75,17 @@ export default function extractGradient(arg0, arg1) {
             let _console = console;
             let _HermesInternal = HermesInternal;
             let warnResult = console.warn("\"" + num8 + "\" is not a valid number or percentage string.");
-            let num10 = 0;
             num9 = 0;
           }
         }
         let tmp10 = stopColor;
         if (stopColor) {
-          let tmp11 = processColor;
           tmp10 = processColor(stopColor);
         }
         if (typeof tmp10 === "number") {
           let _isNaN = isNaN;
           if (!isNaN(num9)) {
             let _Math = Math;
-            let tmp12 = importDefault;
-            let tmp13 = dependencyMap;
             let items1 = [num9, 16777215 & tmp10 | Math.round(255 * extractOpacityDefault(stopOpacity)) << 24];
             let arr = items.push(items1);
           }
@@ -100,9 +94,7 @@ export default function extractGradient(arg0, arg1) {
         let _console2 = console;
         let _HermesInternal2 = HermesInternal;
         let str7 = "\"";
-        let tmp15 = stopColor;
         let str8 = "\" is not a valid color or \"";
-        let tmp16 = offset;
         let str9 = "\" is not a valid offset";
         let warnResult1 = console.warn("\"" + stopColor + "\" is not a valid color or \"" + offset + "\" is not a valid offset");
       }
@@ -113,25 +105,22 @@ export default function extractGradient(arg0, arg1) {
       let tmp20 = items[num11];
       arr = items2.push(tmp20[0], tmp20[1]);
     }
-    const obj = { name: null, gradient: null, children: null, gradientUnits: null, gradientTransform: null };
-    obj[0] = id;
-    obj[1] = items2;
-    obj[2] = mapped;
+    const obj = { name: id, gradient: items2, children: mapped, gradientUnits: null, gradientTransform: null };
     let num12 = gradientUnits;
     if (gradientUnits) {
-      num12 = _modDef8531[gradientUnits];
+      num12 = unitsDefault[gradientUnits];
     }
     if (!num12) {
       num12 = 0;
     }
-    obj[3] = num12;
+    obj.gradientUnits = num12;
     if (!gradientTransform) {
       gradientTransform = tmp;
     }
     if (!gradientTransform) {
       gradientTransform = arg0;
     }
-    obj[4] = appendTransformPropsDefault(gradientTransform);
+    obj.gradientTransform = appendTransformPropsDefault(gradientTransform);
     return obj;
   } else {
     return null;

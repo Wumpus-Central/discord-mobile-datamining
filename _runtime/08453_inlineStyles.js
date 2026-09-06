@@ -1,12 +1,11 @@
 // === Module 8453: inlineStyles ===
 
 // Module 8453 (inlineStyles)
-import inlineStylesDefault from "inlineStyles" /* 8454 */;
+import _modDef8454 from "module_8454" /* 8454 */;
 
-for (const key10013 in require("inlineStyles")) {
-  let tmp2 = key10013;
-  arg5[key10013] = require("inlineStyles")[key10013];
+for (const key10013 in require("module_8454")) {
+  arg5[key10013] = require("module_8454")[key10013];
   continue;
 }
 
-export default inlineStylesDefault;
+export default _modDef8454;

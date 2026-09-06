@@ -1,7 +1,7 @@
 // === Module 1286: _Symbol ===
 
 // Module 1286 (_Symbol)
-import hasSymbols from "hasSymbols" /* 1287 */;
+import _mod1287 from "module_1287" /* 1287 */;
 
 let _Symbol = typeof Symbol !== "undefined";
 if (typeof Symbol !== "undefined") {
@@ -21,7 +21,7 @@ export default function hasNativeSymbols() {
         const SymbolResult = Symbol("bar");
         let tmp8 = typeof SymbolResult === "symbol";
         if (typeof SymbolResult === "symbol") {
-          tmp8 = hasSymbols();
+          tmp8 = _mod1287();
         }
         tmp3 = tmp8;
       }

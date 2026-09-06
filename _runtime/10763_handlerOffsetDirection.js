@@ -20,4 +20,5 @@ function handlerOffsetDirection(defaultScrollOffsetValue, fixedDirection) {
 handlerOffsetDirection.__closure = {};
 handlerOffsetDirection.__workletHash = 4382236906699;
 handlerOffsetDirection.__initData = { code: "function handlerOffsetDirection_Pnpm_handleroffsetDirectionTs1(handlerOffset,fixedDirection){if(fixedDirection===\"negative\")return-1;if(fixedDirection===\"positive\")return 1;if(handlerOffset.value===0)return-1;return Math.sign(handlerOffset.value);}" };
-arg5.handlerOffsetDirection = handlerOffsetDirection;
+
+export { handlerOffsetDirection };

@@ -1,9 +1,9 @@
 // === Module 394: VScrollViewNativeComponent ===
 
 // Module 394 (VScrollViewNativeComponent)
-import ViewDefault from "View" /* 108 */;
-import __INTERNAL_VIEW_CONFIGDefault from "__INTERNAL_VIEW_CONFIG" /* 395 */;
+import _modDef395 from "module_395" /* 395 */;
+import View from "View" /* 108 */;
 
 
-export const VScrollViewNativeComponent = __INTERNAL_VIEW_CONFIGDefault;
-export const VScrollContentViewNativeComponent = ViewDefault;
+export const VScrollViewNativeComponent = _modDef395;
+export const VScrollContentViewNativeComponent = View;

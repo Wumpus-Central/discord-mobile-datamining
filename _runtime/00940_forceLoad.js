@@ -1,44 +1,37 @@
 // === Module 940: forceLoad ===
 
 // Module 940 (forceLoad)
-import registerSpanErrorInstrumentation from "registerSpanErrorInstrumentation" /* 682 */;
-import _isNativeReflectConstruct from "_isNativeReflectConstruct" /* 895 */;
-import makeFetchTransport from "makeFetchTransport" /* 897 */;
+import _mod682 from "module_682" /* 682 */;
+import _mod895 from "module_895" /* 895 */;
+import _mod897 from "module_897" /* 897 */;
 import _wrapTimeFunction from "_wrapTimeFunction" /* 941 */;
 import breadcrumbsIntegration from "breadcrumbsIntegration" /* 942 */;
 import _getUnhandledRejectionError from "_getUnhandledRejectionError" /* 943 */;
-import linkedErrorsIntegration from "linkedErrorsIntegration" /* 944 */;
+import _mod944 from "module_944" /* 944 */;
 import httpContextIntegration from "httpContextIntegration" /* 945 */;
 import browserSessionIntegration from "browserSessionIntegration" /* 946 */;
-import checkAndWarnIfIsEmbeddedBrowserExtension from "checkAndWarnIfIsEmbeddedBrowserExtension" /* 947 */;
+import _mod947 from "module_947" /* 947 */;
 
 require = arg1;
 const dependencyMap = arg6;
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
-arg5.forceLoad = function forceLoad() {
 
-};
-arg5.getDefaultIntegrations = function getDefaultIntegrations(arg0) {
-  const items = [registerSpanErrorInstrumentation.inboundFiltersIntegration(), , , , , , , , ];
-  const obj = registerSpanErrorInstrumentation;
-  items[1] = registerSpanErrorInstrumentation.functionToStringIntegration();
-  const obj2 = registerSpanErrorInstrumentation;
+export function forceLoad() {
+
+}
+export const getDefaultIntegrations = function getDefaultIntegrations(arg0) {
+  const items = [_mod682.inboundFiltersIntegration(), , , , , , , , ];
+  items[1] = _mod682.functionToStringIntegration();
   items[2] = _wrapTimeFunction.browserApiErrorsIntegration();
-  const obj3 = _wrapTimeFunction;
   items[3] = breadcrumbsIntegration.breadcrumbsIntegration();
-  const obj4 = breadcrumbsIntegration;
   items[4] = _getUnhandledRejectionError.globalHandlersIntegration();
-  const obj5 = _getUnhandledRejectionError;
-  items[5] = linkedErrorsIntegration.linkedErrorsIntegration();
-  const obj6 = linkedErrorsIntegration;
-  items[6] = registerSpanErrorInstrumentation.dedupeIntegration();
-  const obj7 = registerSpanErrorInstrumentation;
+  items[5] = _mod944.linkedErrorsIntegration();
+  items[6] = _mod682.dedupeIntegration();
   items[7] = httpContextIntegration.httpContextIntegration();
-  const obj8 = httpContextIntegration;
   items[8] = browserSessionIntegration.browserSessionIntegration();
   return items;
 };
-arg5.init = function init() {
+export const init = function init() {
   let obj = arg0;
   if (arg0 === undefined) {
     obj = {};
@@ -46,29 +39,19 @@ arg5.init = function init() {
   const skipBrowserExtensionCheck = obj.skipBrowserExtensionCheck;
   let result = !skipBrowserExtensionCheck;
   if (!skipBrowserExtensionCheck) {
-    result = checkAndWarnIfIsEmbeddedBrowserExtension.checkAndWarnIfIsEmbeddedBrowserExtension();
-    const obj2 = checkAndWarnIfIsEmbeddedBrowserExtension;
+    result = _mod947.checkAndWarnIfIsEmbeddedBrowserExtension();
   }
   if (null == obj.defaultIntegrations) {
-    const items = [registerSpanErrorInstrumentation.inboundFiltersIntegration(), , , , , , , , ];
-    const obj3 = registerSpanErrorInstrumentation;
-    items[1] = registerSpanErrorInstrumentation.functionToStringIntegration();
-    const obj4 = registerSpanErrorInstrumentation;
+    const items = [_mod682.inboundFiltersIntegration(), , , , , , , , ];
+    items[1] = _mod682.functionToStringIntegration();
     items[2] = _wrapTimeFunction.browserApiErrorsIntegration();
-    const obj5 = _wrapTimeFunction;
     items[3] = breadcrumbsIntegration.breadcrumbsIntegration();
-    const obj6 = breadcrumbsIntegration;
     items[4] = _getUnhandledRejectionError.globalHandlersIntegration();
-    const obj7 = _getUnhandledRejectionError;
-    items[5] = linkedErrorsIntegration.linkedErrorsIntegration();
-    const obj8 = linkedErrorsIntegration;
-    items[6] = registerSpanErrorInstrumentation.dedupeIntegration();
-    const obj9 = registerSpanErrorInstrumentation;
+    items[5] = _mod944.linkedErrorsIntegration();
+    items[6] = _mod682.dedupeIntegration();
     items[7] = httpContextIntegration.httpContextIntegration();
-    const obj10 = httpContextIntegration;
     items[8] = browserSessionIntegration.browserSessionIntegration();
     let defaultIntegrations = items;
-    const obj11 = browserSessionIntegration;
   } else {
     defaultIntegrations = obj.defaultIntegrations;
   }
@@ -83,15 +66,14 @@ arg5.init = function init() {
   if (!defaultStackParser) {
     defaultStackParser = tmp7(938).defaultStackParser;
   }
-  obj.stackParser = registerSpanErrorInstrumentation.stackParserFromStackParserOptions(defaultStackParser);
+  obj.stackParser = _mod682.stackParserFromStackParserOptions(defaultStackParser);
   let tmp7Result = tmp7(682);
   obj = { integrations: obj.integrations, defaultIntegrations };
   obj.integrations = tmp7Result.getIntegrationsToSetup(obj);
-  const obj13 = registerSpanErrorInstrumentation;
-  obj.transport = obj.transport || makeFetchTransport.makeFetchTransport;
+  obj.transport = obj.transport || _mod897.makeFetchTransport;
   tmp7Result = tmp7(682);
-  return tmp7Result.initAndBind(_isNativeReflectConstruct.BrowserClient, obj);
+  return tmp7Result.initAndBind(_mod895.BrowserClient, obj);
 };
-arg5.onLoad = function onLoad(arg0) {
-  arg0();
+export const onLoad = function onLoad(fn) {
+  fn();
 };

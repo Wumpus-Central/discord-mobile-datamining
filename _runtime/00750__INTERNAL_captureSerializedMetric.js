@@ -1,63 +1,60 @@
 // === Module 750: _INTERNAL_captureSerializedMetric ===
 
 // Module 750 (_INTERNAL_captureSerializedMetric)
-import __SENTRY_DEBUG__ from "__SENTRY_DEBUG__" /* 688 */;
-import getGlobalSingleton from "getGlobalSingleton" /* 690 */;
-import getClient from "getClient" /* 713 */;
+import _mod688 from "module_688" /* 688 */;
+import _mod690 from "module_690" /* 690 */;
+import _mod713 from "module_713" /* 713 */;
 import mergeScopeData from "mergeScopeData" /* 736 */;
-import createMetricContainerEnvelopeItem from "createMetricContainerEnvelopeItem" /* 751 */;
-import closure_2 from "_slicedToArray" /* 32 */;
+import _mod751 from "module_751" /* 751 */;
+import _slicedToArray from "module_32" /* 32 */;
 
-function _INTERNAL_captureSerializedMetric(closure_0) {
-  const globalSingleton = getGlobalSingleton.getGlobalSingleton("clientToMetricBufferMap", () => {
+function _INTERNAL_captureSerializedMetric(getOptions, arg1) {
+  const globalSingleton = _mod690.getGlobalSingleton("clientToMetricBufferMap", () => {
     const weakMap = new WeakMap();
     return weakMap;
   });
-  const obj = getGlobalSingleton;
-  const globalSingleton1 = getGlobalSingleton.getGlobalSingleton("clientToMetricBufferMap", () => {
+  const globalSingleton1 = _mod690.getGlobalSingleton("clientToMetricBufferMap", () => {
     const weakMap = new WeakMap();
     return weakMap;
   });
-  const value = globalSingleton1.get(closure_0);
+  value = globalSingleton1.get(getOptions);
   if (undefined === value) {
     const items = [arg1];
-    const result = globalSingleton.set(closure_0, items);
+    const result = globalSingleton.set(getOptions, items);
   } else if (value.length >= 1000) {
-    _INTERNAL_flushMetricsBuffer(closure_0, value);
+    _INTERNAL_flushMetricsBuffer(getOptions, value);
     const items1 = [arg1];
-    const result1 = globalSingleton.set(closure_0, items1);
+    const result1 = globalSingleton.set(getOptions, items1);
   } else {
     const items2 = [];
     items2[HermesBuiltin.arraySpread(value, 0)] = arg1;
-    const result2 = globalSingleton.set(closure_0, items2);
+    const result2 = globalSingleton.set(getOptions, items2);
   }
 }
-function _INTERNAL_flushMetricsBuffer(closure_0, value) {
+function _INTERNAL_flushMetricsBuffer(getOptions, value) {
   let items = value;
   if (value == null) {
-    const globalSingleton = getGlobalSingleton.getGlobalSingleton("clientToMetricBufferMap", () => {
+    const globalSingleton = _mod690.getGlobalSingleton("clientToMetricBufferMap", () => {
       const weakMap = new WeakMap();
       return weakMap;
     });
-    items = globalSingleton.get(closure_0);
-    const obj = getGlobalSingleton;
+    items = globalSingleton.get(getOptions);
   }
   if (items == null) {
     items = [];
   }
   if (0 !== items.length) {
-    const options = closure_0.getOptions();
-    const obj3 = createMetricContainerEnvelopeItem;
+    const options = getOptions.getOptions();
+    const obj3 = _mod751;
     ({ _metadata, tunnel } = options);
-    const metricEnvelope = obj3.createMetricEnvelope(items, _metadata, tunnel, closure_0.getDsn());
-    const globalSingleton1 = getGlobalSingleton.getGlobalSingleton("clientToMetricBufferMap", () => {
+    const metricEnvelope = obj3.createMetricEnvelope(items, _metadata, tunnel, getOptions.getDsn());
+    const globalSingleton1 = _mod690.getGlobalSingleton("clientToMetricBufferMap", () => {
       const weakMap = new WeakMap();
       return weakMap;
     });
-    const result = globalSingleton1.set(closure_0, []);
-    closure_0.emit("flushMetrics");
-    closure_0.sendEnvelope(metricEnvelope);
-    const obj4 = getGlobalSingleton;
+    const result = globalSingleton1.set(getOptions, []);
+    getOptions.emit("flushMetrics");
+    getOptions.sendEnvelope(metricEnvelope);
   }
 }
 Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
@@ -68,7 +65,7 @@ export const _INTERNAL_captureMetric = function _INTERNAL_captureMetric(attribut
     scope = scope.scope;
   }
   if (scope == null) {
-    let obj = getClient;
+    let obj = _mod713;
     scope = obj.getCurrentScope();
   }
   let prop;
@@ -83,7 +80,7 @@ export const _INTERNAL_captureMetric = function _INTERNAL_captureMetric(attribut
     client = scope.getClient();
   }
   if (client == null) {
-    obj1 = getClient;
+    let obj1 = _mod713;
     client = obj1.getClient();
   }
   if (client) {
@@ -96,7 +93,7 @@ export const _INTERNAL_captureMetric = function _INTERNAL_captureMetric(attribut
       }
       if (enableMetrics != null) {
         if (!enableMetrics) {
-          if (__SENTRY_DEBUG__.DEBUG_BUILD) {
+          if (_mod688.DEBUG_BUILD) {
             const debug2 = tmp13(689).debug;
             debug2.warn("metrics option not enabled, metric will not be captured.");
           }
@@ -105,7 +102,7 @@ export const _INTERNAL_captureMetric = function _INTERNAL_captureMetric(attribut
       }
     }
     let obj2 = mergeScopeData;
-    const combinedScopeData = obj2.getCombinedScopeData(getClient.getIsolationScope(), scope);
+    const combinedScopeData = obj2.getCombinedScopeData(_mod713.getIsolationScope(), scope);
     ({ user, attributes } = combinedScopeData);
     const options1 = client.getOptions();
     ({ release, environment } = options1);
@@ -212,7 +209,7 @@ export const _INTERNAL_captureMetric = function _INTERNAL_captureMetric(attribut
     }
     if (beforeSendMetricResult) {
       let tmp17Result = tmp17(746);
-      const tmp37 = callback(tmp17Result._getTraceInfoFromScope(client, scope), 2)[1];
+      const tmp37 = _slicedToArray(tmp17Result._getTraceInfoFromScope(client, scope), 2)[1];
       tmp17Result = tmp17(709);
       const _getSpanForScopeResult = tmp17Result._getSpanForScope(scope);
       if (_getSpanForScopeResult) {
@@ -224,20 +221,19 @@ export const _INTERNAL_captureMetric = function _INTERNAL_captureMetric(attribut
       if (_getSpanForScopeResult) {
         spanId = _getSpanForScopeResult.spanContext().spanId;
       }
-      obj1 = { timestamp: null, trace_id: null, span_id: null, name: null, type: null, unit: null, value: null, attributes: null };
-      obj1[0] = tmp17(703).timestampInSeconds();
+      obj1 = { timestamp: tmp17(703).timestampInSeconds(), trace_id: null, span_id: null, name: null, type: null, unit: null, value: null, attributes: null };
       if (str10 == null) {
         str10 = "";
       }
-      obj1[1] = str10;
-      obj1[2] = spanId;
-      ({ name: obj12[3], type: obj12[4], unit: obj12[5], value: obj12[6] } = beforeSendMetricResult);
+      obj1.trace_id = str10;
+      obj1.span_id = spanId;
+      ({ name: obj12.name, type: obj12.type, unit: obj12.unit, value: obj12.value } = beforeSendMetricResult);
       obj2 = {};
       const tmp17Result1 = tmp17(703);
       const merged2 = Object.assign(tmp17(748).serializeAttributes(attributes));
       const tmp17Result2 = tmp17(748);
       const merged3 = Object.assign(tmp17(748).serializeAttributes(beforeSendMetricResult.attributes, "skip-undefined"));
-      obj1[7] = obj2;
+      obj1.attributes = obj2;
       if (tmp17(688).DEBUG_BUILD) {
         const debug4 = tmp17(689).debug;
         debug4.log("[Metric]", obj1);
@@ -249,9 +245,8 @@ export const _INTERNAL_captureMetric = function _INTERNAL_captureMetric(attribut
       const debug3 = tmp17(689).debug;
       debug3.log("`beforeSendMetric` returned `null`, will not send metric.");
     }
-    const obj4 = getClient;
   } else {
-    if (__SENTRY_DEBUG__.DEBUG_BUILD) {
+    if (_mod688.DEBUG_BUILD) {
       const debug = tmp8(689).debug;
       debug.warn("No client available to capture metric.");
     }
@@ -261,7 +256,7 @@ export const _INTERNAL_captureMetric = function _INTERNAL_captureMetric(attribut
 export { _INTERNAL_captureSerializedMetric };
 export { _INTERNAL_flushMetricsBuffer };
 export const _INTERNAL_getMetricBuffer = function _INTERNAL_getMetricBuffer(arg0) {
-  const globalSingleton = getGlobalSingleton.getGlobalSingleton("clientToMetricBufferMap", () => {
+  const globalSingleton = _mod690.getGlobalSingleton("clientToMetricBufferMap", () => {
     const weakMap = new WeakMap();
     return weakMap;
   });

@@ -1,12 +1,12 @@
 // === Module 625: mapCacheSet ===
 
 // Module 625 (mapCacheSet)
-import getMapData from "getMapData" /* 621 */;
+import _mod621 from "module_621" /* 621 */;
 
 
 export default function mapCacheSet(arg0, arg1) {
   const self = this;
-  const obj = getMapData(this, arg0);
+  const obj = _mod621(this, arg0);
   const result = obj.set(arg0, arg1);
   let num = 1;
   if (obj.size == obj.size) {

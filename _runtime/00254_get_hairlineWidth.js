@@ -1,7 +1,7 @@
 // === Module 254: get hairlineWidth ===
 
 // Module 254 (get hairlineWidth)
-import get_hairlineWidth from "get hairlineWidth" /* 255 */;
+import _mod255 from "module_255" /* 255 */;
 
 
-export default get_hairlineWidth.default;
+export default _mod255.default;

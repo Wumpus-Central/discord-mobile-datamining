@@ -1,8 +1,8 @@
 // === Module 6952: encode ===
 
 // Module 6952 (encode)
-import encode from "encode" /* 6953 */;
+import _mod6953 from "module_6953" /* 6953 */;
 
 
-export const encode = encode.encode;
-export const decode = encode.decode;
+export const encode = _mod6953.encode;
+export const decode = _mod6953.decode;

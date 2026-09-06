@@ -2,7 +2,7 @@
 
 // Module 8389 (baseSortBy)
 
-export default function baseSortBy(arr) {
+export default function baseSortBy(arr, arg1) {
   let tmp4;
   const sorted = arr.sort(arg1);
   let diff = tmp2 - 1;

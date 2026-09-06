@@ -1,7 +1,7 @@
 // === Module 8944: Doc ===
 
 // Module 8944 (Doc)
-import Doc from "_classCallCheck" /* 41 */;
+import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
 
 class Doc {
@@ -10,7 +10,7 @@ class Doc {
     if (global === undefined) {
       items = [];
     }
-    tmp = Doc(this, Doc);
+    tmp = closure_0(this, Doc);
     this.content = [];
     this.indent = 0;
     if (this) {
@@ -19,33 +19,34 @@ class Doc {
     return;
   }
 }
+_classCallCheck = Doc;
+const entry = {
+  key: "indented",
+  value: function indented(fn) {
+    this.indent = this.indent + 1;
+    fn(this);
+    this.indent = this.indent - 1;
+  }
+};
 let items = [
-  {
-    key: "indented",
-    value: function indented(arg0) {
-      this.indent = this.indent + 1;
-      arg0(this);
-      this.indent = this.indent - 1;
-    }
-  },
+  entry,
   {
     key: "write",
     value: function write(fn) {
-      let self = this;
-      self = this;
+      const self = this;
       if (typeof fn === "function") {
         fn(self, { execution: "sync" });
         fn(self, { execution: "async" });
       } else {
         const parts = fn.split("\n");
-        const found = parts.filter((arg0) => arg0);
+        const found = parts.filter((item) => item);
         const _Math = Math;
         const items = [];
-        HermesBuiltin.arraySpread(found.map((str) => str.length - str.trimStart().length), 0);
+        HermesBuiltin.arraySpread(found.map((item) => item.length - item.trimStart().length), 0);
         const _Math2 = Math;
         closure_0 = HermesBuiltin.apply(items, Math);
         const mapped = found.map((arr) => arr.slice(closure_0));
-        const mapped1 = mapped.map((arg0) => " ".repeat(2 * self.indent) + arg0);
+        const mapped1 = mapped.map((item) => " ".repeat(2 * self.indent) + item);
         for (const item10003 of mapped1) {
           let content = self.content;
           let arr = content.push(item10003);
@@ -69,7 +70,7 @@ let items = [
       if (content == null) {
         content = [""];
       }
-      const items1 = [...content.map((arg0) => "  " + arg0)];
+      const items1 = [...content.map((item) => "  " + item)];
       items[tmp] = items1.join("\n");
       return Function(...args);
     }

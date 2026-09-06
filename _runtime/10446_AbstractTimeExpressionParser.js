@@ -1,7 +1,7 @@
 // === Module 10446: AbstractTimeExpressionParser ===
 
 // Module 10446 (AbstractTimeExpressionParser)
-import closure_2 from "_classCallCheck" /* 41 */;
+import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
 
 const AbstractTimeExpressionParser = require;
@@ -11,7 +11,7 @@ class AbstractTimeExpressionParser {
     if (global === undefined) {
       flag = false;
     }
-    tmp = closure_2(this, AbstractTimeExpressionParser);
+    tmp = c2(this, AbstractTimeExpressionParser);
     this.cachedPrimaryPrefix = null;
     this.cachedPrimarySuffix = null;
     this.cachedPrimaryTimePattern = null;
@@ -22,13 +22,14 @@ class AbstractTimeExpressionParser {
     return;
   }
 }
+const entry = {
+  key: "patternFlags",
+  value: function patternFlags() {
+    return "i";
+  }
+};
 const items = [
-  {
-    key: "patternFlags",
-    value: function patternFlags() {
-      return "i";
-    }
-  },
+  entry,
   {
     key: "primaryPatternLeftBoundary",
     value: function primaryPatternLeftBoundary() {
@@ -90,8 +91,6 @@ const items = [
           return result1;
         }
         result1 = self.checkAndReturnWithoutFollowingPattern(parsingResult);
-        const str2 = index[0];
-        const str4 = createParsingResult.text;
       } else {
         index = index.index;
         if (str.match(/^\d{4}/)) {
@@ -105,7 +104,7 @@ const items = [
   },
   {
     key: "extractPrimaryTimeComponents",
-    value: function extractPrimaryTimeComponents(createParsingComponents) {
+    value: function extractPrimaryTimeComponents(createParsingComponents, arg1) {
       const parsingComponents = createParsingComponents.createParsingComponents();
       const parsed = parseInt(arg1[2]);
       let rounded = parsed;
@@ -171,7 +170,6 @@ const items = [
                 tmp8 = sum;
                 PM = AbstractTimeExpressionParser(10437).Meridiem.PM;
               }
-              const str10 = arg1[6][0];
             }
           }
           parsingComponents.assign("hour", tmp8);
@@ -191,7 +189,6 @@ const items = [
             } else {
               parsingComponents.assign("millisecond", parsed1);
             }
-            const str7 = arg1[5];
           }
           if (null != arg1[4]) {
             const _parseInt3 = parseInt;
@@ -219,7 +216,6 @@ const items = [
         } else {
           parsingComponents.assign("millisecond", parsed);
         }
-        const str = arg1[5];
       }
       if (null != arg1[4]) {
         const _parseInt2 = parseInt;
@@ -309,7 +305,6 @@ const items = [
                   }
                 }
               }
-              const str13 = arg1[6][0];
             }
           }
           parsingComponents.assign("hour", tmp11);

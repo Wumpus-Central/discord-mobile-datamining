@@ -2,14 +2,14 @@
 
 // Module 716 (instrumentUnhandledRejection)
 import _mod686 from "module_686" /* 686 */;
-import addHandler from "addHandler" /* 715 */;
+import _mod715 from "module_715" /* 715 */;
 
 require = arg1;
 const dependencyMap = arg6;
 function instrumentUnhandledRejection() {
-  const onunhandledrejection = _mod686.GLOBAL_OBJ.onunhandledrejection;
+  onunhandledrejection = _mod686.GLOBAL_OBJ.onunhandledrejection;
   _mod686.GLOBAL_OBJ.onunhandledrejection = function(arg0) {
-    callback(table[0]).triggerHandlers("unhandledrejection", arg0);
+    _mod715.triggerHandlers("unhandledrejection", arg0);
     if (!onunhandledrejection) {
       return !onunhandledrejection;
     } else {
@@ -20,15 +20,14 @@ function instrumentUnhandledRejection() {
       } else {
         applyArgumentsResult = apply(self, arguments);
       }
-      const tmp2 = onunhandledrejection;
     }
   };
   _mod686.GLOBAL_OBJ.onunhandledrejection.__SENTRY_INSTRUMENTED__ = true;
 }
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
-let c2 = null;
-arg5.addGlobalUnhandledRejectionInstrumentationHandler = function addGlobalUnhandledRejectionInstrumentationHandler(arg0) {
-  addHandler.addHandler("unhandledrejection", arg0);
-  const obj = addHandler;
-  addHandler.maybeInstrument("unhandledrejection", instrumentUnhandledRejection);
+let onunhandledrejection = null;
+
+export const addGlobalUnhandledRejectionInstrumentationHandler = function addGlobalUnhandledRejectionInstrumentationHandler(arg0) {
+  _mod715.addHandler("unhandledrejection", arg0);
+  _mod715.maybeInstrument("unhandledrejection", instrumentUnhandledRejection);
 };

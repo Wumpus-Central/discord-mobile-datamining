@@ -1,12 +1,13 @@
 // === Module 12919: supportsHistory ===
 
 // Module 12919 (supportsHistory)
-import getGlobalSingleton from "getGlobalSingleton" /* 12798 */;
+import _mod12798 from "module_12798" /* 12798 */;
 
 require = arg1;
 const dependencyMap = arg6;
-arg5.supportsHistory = function supportsHistory() {
-  const chrome = getGlobalSingleton.GLOBAL_OBJ.chrome;
+
+export const supportsHistory = function supportsHistory() {
+  const chrome = _mod12798.GLOBAL_OBJ.chrome;
   let runtime = chrome;
   if (chrome) {
     runtime = chrome.app;

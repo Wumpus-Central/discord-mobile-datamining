@@ -6,7 +6,7 @@ import _mod1284 from "module_1284" /* 1284 */;
 import flag from "flag" /* 1306 */;
 
 
-export default function defineDataProperty(obj, str) {
+export default function defineDataProperty(obj, str, value) {
   if (obj) {
     if (typeof str !== "string") {
       if (typeof str !== "symbol") {
@@ -62,16 +62,15 @@ export default function defineDataProperty(obj, str) {
         if (tmp9) {
           let configurable = tmp9.configurable;
         }
-        obj = { configurable: null, enumerable: null, value: null, writable: null };
-        obj[0] = configurable;
+        obj = { configurable, enumerable: null, value: null, writable: null };
         if (null === tmp3) {
           if (tmp9) {
             let enumerable = tmp9.enumerable;
           }
-          obj[1] = enumerable;
-          obj[2] = arg2;
+          obj.enumerable = enumerable;
+          obj.value = value;
           if (null !== tmp4) {
-            obj[3] = !tmp4;
+            obj.writable = !tmp4;
             obj = tmp15(obj, str, obj);
           }
           const writable = tmp9.writable;
@@ -84,7 +83,7 @@ export default function defineDataProperty(obj, str) {
         const tmp13 = new tmp7(1304)("This environment does not support defining a property as non-configurable, non-writable, or non-enumerable.");
         throw tmp13;
       }
-      obj[str] = arg2;
+      obj[str] = value;
     }
     tmp6 = arguments.length > 6 && arguments[6];
   }

@@ -1,10 +1,9 @@
 // === Module 407: ? ===
 
 // Module 407
-import noopAll from "noop" /* 19 */;
-import useTextPressabilityDefault from "useTextPressability" /* 298 */;
-import createAnimatedComponentDefault from "createAnimatedComponent" /* 387 */;
+import _modDef298 from "module_298" /* 298 */;
+import noop from "module_19" /* 19 */;
+import module_387 from "unstable_createAnimatedComponentWithAllowlist" /* 387 */;
 
-noopAll;
 
-export default createAnimatedComponentDefault(useTextPressabilityDefault);
+export default module_387(_modDef298);

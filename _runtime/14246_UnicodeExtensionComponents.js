@@ -1,25 +1,24 @@
 // === Module 14246: UnicodeExtensionComponents ===
 
 // Module 14246 (UnicodeExtensionComponents)
-const require = arg1;
+import _mod14241 from "module_14241" /* 14241 */;
+
+require = arg1;
 const dependencyMap = arg6;
-arg5.UnicodeExtensionComponents = function UnicodeExtensionComponents(str) {
-  let obj;
-  obj(14241).invariant(str === str.toLowerCase(), "Expected extension to be lowercase");
+
+export const UnicodeExtensionComponents = function UnicodeExtensionComponents(str) {
+  _mod14241.invariant(str === str.toLowerCase(), "Expected extension to be lowercase");
   let num = 3;
-  obj(14241).invariant("-u-" === str.slice(0, 3), "Expected extension to be a Unicode locale extension");
+  _mod14241.invariant("-u-" === str.slice(0, 3), "Expected extension to be a Unicode locale extension");
   const attributes = [];
   const keywords = [];
   if (3 < str.length) {
     while (true) {
       let index = str.indexOf("-", num);
-      let tmp4 = num;
-      let tmp5 = iter;
       let tmp6 = -1 === index ? length - num : index - num;
       let substr = str.slice(num, num + tmp6);
-      let tmp8 = obj;
-      let tmp9 = dependencyMap;
-      let invariantResult2 = obj(14241).invariant(tmp6 >= 2, "Expected a subtag to have at least 2 characters");
+      let tmp8 = require;
+      let invariantResult2 = _mod14241.invariant(tmp6 >= 2, "Expected a subtag to have at least 2 characters");
       if (undefined === iter) {
         if (2 !== tmp6) {
           let tmp13 = iter;
@@ -35,21 +34,20 @@ arg5.UnicodeExtensionComponents = function UnicodeExtensionComponents(str) {
         }
       }
       if (2 === tmp6) {
-        obj = { key: null, value: "" };
-        obj[0] = substr;
-        tmp13 = obj;
+        let entry = { key: substr, value: "" };
+        tmp13 = entry;
         if (undefined === keywords.find((key) => {
           key = undefined;
-          if (null != obj) {
-            key = obj.key;
+          if (null != entry) {
+            key = entry.key;
           }
           return key.key === key;
         })) {
-          arr = keywords.push(obj);
-          tmp13 = obj;
+          arr = keywords.push(entry);
+          tmp13 = entry;
         }
       } else {
-        let value;
+        value = undefined;
         if (null != iter) {
           value = iter.value;
         }

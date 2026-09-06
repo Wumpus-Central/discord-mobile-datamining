@@ -4,7 +4,7 @@
 import cloneArrayBuffer from "cloneArrayBuffer" /* 4651 */;
 
 
-export default function cloneTypedArray(buffer) {
+export default function cloneTypedArray(buffer, arg1) {
   if (arg1) {
     buffer = cloneArrayBuffer(buffer.buffer);
   } else {

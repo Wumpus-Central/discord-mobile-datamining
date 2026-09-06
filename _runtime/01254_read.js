@@ -1,7 +1,8 @@
 // === Module 1254: read ===
 
 // Module 1254 (read)
-arg5.read = (arg0, arg1, arg2, exponent) => {
+
+export const read = (arg0, arg1, arg2, exponent, arg4) => {
   let num = 0;
   const diff = 8 * arg4 - exponent;
   if (arg2) {
@@ -64,7 +65,7 @@ arg5.read = (arg0, arg1, arg2, exponent) => {
   }
   return num3 * sum6 * Math.pow(2, diff3 - exponent);
 };
-arg5.write = (arg0, arg1, arg2, arg3, exponent) => {
+export const write = (arg0, arg1, arg2, arg3, exponent, arg5) => {
   let num = 0;
   const diff = 8 * arg5 - exponent;
   if (23 === exponent) {

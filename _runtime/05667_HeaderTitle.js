@@ -2,17 +2,17 @@
 
 // Module 5667 (HeaderTitle)
 import jsxProd from "jsxProd" /* 21 */;
-import createStandardNavigationFactories from "createStandardNavigationFactories" /* 1484 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import Link from "Link" /* 1484 */;
+import get_ActivityIndicator from "module_17" /* 17 */;
 
-({ Animated: obj1, Platform, StyleSheet } = get_ActivityIndicator);
+({ Animated: c2, Platform, StyleSheet } = get_ActivityIndicator);
 const jsx = jsxProd.jsx;
-const styles = StyleSheet.create({ title: { fontSize: 20 } });
+const title = StyleSheet.create({ title: { fontSize: 20 } });
 
 export const HeaderTitle = function HeaderTitle(tintColor) {
   let text = tintColor.tintColor;
-  const merged = Object.assign(tintColor, Object.create(null));
-  let obj = createStandardNavigationFactories;
+  const merged = Object.assign(tintColor, Object.assign({ tintColor: 0, style: 0 }));
+  let obj = Link;
   const theme = obj.useTheme();
   obj = { role: "heading", "aria-level": "1", numberOfLines: 1 };
   ({ colors, fonts } = theme);

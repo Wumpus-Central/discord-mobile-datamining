@@ -2,10 +2,10 @@
 
 // Module 88 (Dimensions)
 import EventEmitterDefault from "EventEmitter" /* 89 */;
-import getConstantsDefault from "getConstants" /* 100 */;
-import closure_3 from "_classCallCheck" /* 41 */;
-import importDefaultResult from "_createClass" /* 42 */;
-import importDefaultResult1 from "_isNativeReflectConstruct" /* 92 */;
+import _classCallCheck from "_classCallCheck" /* 41 */;
+import _createClass from "_createClass" /* 42 */;
+import _isNativeReflectConstruct from "module_92" /* 92 */;
+import get from "module_100" /* 100 */;
 
 const Dimensions = importDefault;
 let closure_4 = new EventEmitterDefault();
@@ -16,32 +16,29 @@ class Dimensions {
     return;
   }
 }
+const entry = {
+  key: "get",
+  value: function get(arg0) {
+    Dimensions(38)(dependencyMap[arg0], `No dimension set for key ${arg0}`);
+    return dependencyMap[arg0];
+  }
+};
 const items = [
-  {
-    key: "get",
-    value: function get(arg0) {
-      Dimensions(38)(dependencyMap[arg0], `No dimension set for key ${arg0}`);
-      return dependencyMap[arg0];
-    }
-  },
+  entry,
   {
     key: "set",
     value: function set(screenPhysicalPixels) {
       ({ screen, window: _window, windowPhysicalPixels } = screenPhysicalPixels);
       if (windowPhysicalPixels) {
-        let obj = { width: null, height: null, scale: null, fontScale: null };
-        obj[0] = windowPhysicalPixels.width / windowPhysicalPixels.scale;
-        obj[1] = windowPhysicalPixels.height / windowPhysicalPixels.scale;
-        ({ scale: obj[2], fontScale: obj[3] } = windowPhysicalPixels);
-        _window = obj;
+        const size = { width: windowPhysicalPixels.width / windowPhysicalPixels.scale, height: windowPhysicalPixels.height / windowPhysicalPixels.scale, scale: null, fontScale: null };
+        ({ scale: obj.scale, fontScale: obj.fontScale } = windowPhysicalPixels);
+        _window = size;
       }
       screenPhysicalPixels = screenPhysicalPixels.screenPhysicalPixels;
       if (screenPhysicalPixels) {
-        obj = { width: null, height: null, scale: null, fontScale: null };
-        obj[0] = screenPhysicalPixels.width / screenPhysicalPixels.scale;
-        obj[1] = screenPhysicalPixels.height / screenPhysicalPixels.scale;
-        ({ scale: obj2[2], fontScale: obj2[3] } = screenPhysicalPixels);
-        screen = obj;
+        const size1 = { width: screenPhysicalPixels.width / screenPhysicalPixels.scale, height: screenPhysicalPixels.height / screenPhysicalPixels.scale, scale: null, fontScale: null };
+        ({ scale: obj2.scale, fontScale: obj2.fontScale } = screenPhysicalPixels);
+        screen = size1;
       } else if (null == screen) {
         screen = _window;
       }
@@ -61,18 +58,11 @@ const items = [
     }
   }
 ];
-const importDefaultResultResult = importDefaultResult(Dimensions, null, items);
-let obj = {
-  key: "get",
-  value: function get(arg0) {
-    Dimensions(38)(dependencyMap[arg0], `No dimension set for key ${arg0}`);
-    return dependencyMap[arg0];
-  }
-};
-const tmp3 = new EventEmitterDefault();
-importDefaultResult1.addListener("didUpdateDimensions", (arg0) => {
+const importDefaultResultResult = _createClass(Dimensions, null, items);
+const metroRequire = importDefaultResultResult;
+_isNativeReflectConstruct.addListener("didUpdateDimensions", (arg0) => {
   const result = importDefaultResultResult.set(arg0);
 });
-let result = importDefaultResultResult.set(getConstantsDefault.getConstants().Dimensions);
+let result = importDefaultResultResult.set(get.getConstants().Dimensions);
 
 export default importDefaultResultResult;

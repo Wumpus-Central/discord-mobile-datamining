@@ -1,13 +1,14 @@
 // === Module 857: callFrameToStackFrame ===
 
 // Module 857 (callFrameToStackFrame)
-import createStackParser from "createStackParser" /* 698 */;
+import _mod698 from "module_698" /* 698 */;
 import filenameIsInApp from "filenameIsInApp" /* 856 */;
 
 require = arg1;
 const dependencyMap = arg6;
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
-arg5.callFrameToStackFrame = function callFrameToStackFrame(location, str) {
+
+export const callFrameToStackFrame = function callFrameToStackFrame(location, str, fn) {
   let replaced;
   if (str) {
     replaced = str.replace(/^file:\/\//, "");
@@ -20,29 +21,28 @@ arg5.callFrameToStackFrame = function callFrameToStackFrame(location, str) {
   if (location.location.lineNumber) {
     sum1 = location.location.lineNumber + 1;
   }
-  const obj = { filename: replaced, module: arg2(replaced), function: null, colno: null, lineno: null, in_app: null };
+  const obj = { filename: replaced, module: fn(replaced), function: null, colno: null, lineno: null, in_app: null };
   let UNKNOWN_FUNCTION = location.functionName;
   if (!UNKNOWN_FUNCTION) {
-    UNKNOWN_FUNCTION = createStackParser.UNKNOWN_FUNCTION;
+    UNKNOWN_FUNCTION = _mod698.UNKNOWN_FUNCTION;
   }
-  obj[2] = UNKNOWN_FUNCTION;
-  obj[3] = sum;
-  obj[4] = sum1;
+  obj.function = UNKNOWN_FUNCTION;
+  obj.colno = sum;
+  obj.lineno = sum1;
   let filenameIsInAppResult;
   if (replaced) {
     filenameIsInAppResult = filenameIsInApp.filenameIsInApp(replaced);
-    const obj2 = filenameIsInApp;
   }
-  obj[5] = filenameIsInAppResult;
+  obj.in_app = filenameIsInAppResult;
   return obj;
 };
-arg5.watchdogTimer = function watchdogTimer(arg0, arg1, arg2, arg3) {
+export const watchdogTimer = function watchdogTimer(fn, arg1, arg2, arg3) {
   closure_0 = arg1;
   closure_1 = arg2;
   closure_2 = arg3;
-  closure_3 = arg0();
+  const navigation = fn();
   c4 = false;
-  c5 = true;
+  closure_5 = true;
   const timerId = setInterval(() => {
     const timeMs = navigation.getTimeMs();
     let tmp2 = false === c4;
@@ -51,8 +51,8 @@ arg5.watchdogTimer = function watchdogTimer(arg0, arg1, arg2, arg3) {
     }
     if (tmp2) {
       c4 = true;
-      if (c5) {
-        callback();
+      if (closure_5) {
+        closure_2();
       }
     }
     if (timeMs < closure_0 + closure_1) {

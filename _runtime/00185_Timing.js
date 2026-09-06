@@ -1,12 +1,11 @@
 // === Module 185: Timing ===
 
 // Module 185 (Timing)
-import TimingDefault from "Timing" /* 186 */;
+import _modDef186 from "module_186" /* 186 */;
 
-for (const key10016 in require("Timing")) {
-  let tmp2 = key10016;
-  arg5[key10016] = require("Timing")[key10016];
+for (const key10016 in require("module_186")) {
+  arg5[key10016] = require("module_186")[key10016];
   continue;
 }
 
-export default TimingDefault;
+export default _modDef186;

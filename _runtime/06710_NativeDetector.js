@@ -1,14 +1,13 @@
 // === Module 6710: NativeDetector ===
 
 // Module 6710 (NativeDetector)
-import noopDefault from "noop" /* 19 */;
-import __INTERNAL_VIEW_CONFIGDefault from "__INTERNAL_VIEW_CONFIG" /* 6670 */;
-import { useMemo } from "noop" /* 19 */;
-import { Platform } from "get ActivityIndicator" /* 17 */;
-import { jsx } from "jsxProd" /* 21 */;
+import _modDef6670 from "module_6670" /* 6670 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-noopDefault;
+const require = fn;
+const useMemo = fn(19).useMemo;
+const Platform = fn(17).Platform;
+const jsx = fn(21).jsx;
 
 export const NativeDetector = function NativeDetector(gesture) {
   gesture = gesture.gesture;
@@ -19,7 +18,7 @@ export const NativeDetector = function NativeDetector(gesture) {
   } else if (gesture.config.shouldUseReanimatedDetector) {
     ReanimatedNativeDetector = tmp(6728).ReanimatedNativeDetector;
   } else {
-    ReanimatedNativeDetector = __INTERNAL_VIEW_CONFIGDefault;
+    ReanimatedNativeDetector = _modDef6670;
   }
   let tmpResult = tmp(6729);
   const result = tmpResult.ensureNativeDetectorComponent(ReanimatedNativeDetector);

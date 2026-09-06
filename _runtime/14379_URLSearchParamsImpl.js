@@ -2,7 +2,7 @@
 
 // Module 14379 (URLSearchParamsImpl)
 import _createClass from "_createClass" /* 42 */;
-import closure_2 from "_classCallCheck" /* 41 */;
+import _classCallCheck from "_classCallCheck" /* 41 */;
 
 const URLSearchParamsImpl = require;
 class URLSearchParamsImpl {
@@ -12,7 +12,7 @@ class URLSearchParamsImpl {
       flag = false;
     }
     self = this;
-    tmp = closure_2(this, URLSearchParamsImpl);
+    tmp = c2(this, URLSearchParamsImpl);
     first = require[0];
     this._list = [];
     this._url = null;
@@ -26,7 +26,7 @@ class URLSearchParamsImpl {
     substr = first;
     if (!flag) {
       num = 1;
-      substr = require("module_1");
+      substr = first.slice(1);
     }
     if (Array.isArray(substr)) {
       tmp9 = substr;
@@ -72,15 +72,15 @@ class URLSearchParamsImpl {
           }
         }
       }
-      tmp3 = URLSearchParamsImpl;
+      tmp3 = closure_0;
       tmp4 = closure_1;
-      obj = require("replaceByteInByteSequence");
+      obj = closure_0(closure_1[2]);
       self._list = obj.parseUrlencoded(substr);
     }
     return;
   }
 }
-let obj = {
+const entry = {
   key: "_updateSteps",
   value: function _updateSteps() {
     const self = this;
@@ -95,7 +95,7 @@ let obj = {
   }
 };
 let items = [
-  obj,
+  entry,
   {
     key: "append",
     value: function append(arg0, arg1) {
@@ -113,7 +113,6 @@ let items = [
       let num = 0;
       if (0 < this._list.length) {
         do {
-          let tmp = num;
           if (self._list[num][0] === arg0) {
             let _list = self._list;
             let spliceResult = _list.splice(num, 1);
@@ -131,9 +130,7 @@ let items = [
     key: "get",
     value: function get(arg0) {
       for (const item10008 of tmp) {
-        let tmp2 = item10008;
         if (item10008[0] === arg0) {
-          let tmp3 = obj;
           obj.return();
           return item10008[1];
         }
@@ -147,7 +144,6 @@ let items = [
       const items = [];
       for (const item10009 of tmp) {
         if (item10009[0] === arg0) {
-          let tmp3 = item10009;
           let arr = items.push(tmp2[1]);
         }
         continue;
@@ -160,7 +156,6 @@ let items = [
     value: function has(arg0) {
       for (const item10007 of tmp) {
         if (item10007[0] === arg0) {
-          let tmp2 = obj;
           obj.return();
           let flag = true;
           return true;
@@ -179,8 +174,6 @@ let items = [
       let flag2 = false;
       if (0 < this._list.length) {
         do {
-          let tmp = num;
-          let tmp2 = flag;
           if (self._list[num][0] === arg0) {
             let _list = self._list;
             if (flag) {
@@ -222,14 +215,14 @@ let items = [
 ,
 
 ];
-obj = {
+const entry1 = {
   key: Symbol.iterator,
   value() {
     const _list = this._list;
     return _list[Symbol.iterator]();
   }
 };
-items[8] = obj;
+items[8] = entry1;
 items[9] = {
   key: "toString",
   value: function toString() {

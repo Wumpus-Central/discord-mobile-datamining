@@ -1,21 +1,20 @@
 // === Module 931: instrumentHistory ===
 
 // Module 931 (instrumentHistory)
-import registerSpanErrorInstrumentation from "registerSpanErrorInstrumentation" /* 682 */;
-import WINDOW2 from "WINDOW" /* 904 */;
+import _mod682 from "module_682" /* 682 */;
+import _mod904 from "module_904" /* 904 */;
 
 require = arg1;
 const dependencyMap = arg6;
 function instrumentHistory() {
-  const WINDOW = WINDOW2.WINDOW;
+  const WINDOW = _mod904.WINDOW;
   const listener = WINDOW.addEventListener("popstate", () => {
-    const href = callback(table[1]).WINDOW.location.href;
-    if (href !== href) {
-      const obj = { from: null, to: null };
-      obj[0] = tmp3;
-      obj[1] = href;
-      callback(table[0]).triggerHandlers("history", obj);
-      const tmpResult = callback(table[0]);
+    const href = _mod904.WINDOW.location.href;
+    closure_2 = href;
+    if (closure_2 !== href) {
+      const obj = { from: tmp3, to: href };
+      _mod682.triggerHandlers("history", obj);
+      const tmpResult = _mod682;
     }
   });
   if (obj.supportsHistory()) {
@@ -33,7 +32,7 @@ function instrumentHistory() {
           const tmp4 = (function getAbsoluteUrl(arg0) {
             try {
               const _URL = URL;
-              const str = new URL(arg0, callback(table[1]).WINDOW.location.origin);
+              const str = new URL(arg0, closure_1_0(closure_1_1[1]).WINDOW.location.origin);
               return str.toString();
             } catch (err) {
               return tmp;
@@ -41,17 +40,14 @@ function instrumentHistory() {
           })(String(tmp));
           closure_2 = tmp4;
           if (closure_2 === tmp4) {
-            return callback.apply(self, items);
+            return closure_0.apply(self, items);
           } else {
-            const obj = { from: null, to: null };
-            obj[0] = tmp2;
-            obj[1] = tmp4;
-            callback(closure_1_1[0]).triggerHandlers("history", obj);
-            const obj2 = callback(closure_1_1[0]);
+            const obj = { from: tmp2, to: tmp4 };
+            _mod682.triggerHandlers("history", obj);
           }
           tmp2 = closure_2;
         }
-        return callback.apply(self, items);
+        return closure_0.apply(self, items);
       };
     }
     let tmpResult = tmp(682);
@@ -61,9 +57,9 @@ function instrumentHistory() {
   }
 }
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
-arg5.addHistoryInstrumentationHandler = function addHistoryInstrumentationHandler(arg0) {
-  registerSpanErrorInstrumentation.addHandler("history", arg0);
-  const obj = registerSpanErrorInstrumentation;
-  registerSpanErrorInstrumentation.maybeInstrument("history", instrumentHistory);
+
+export const addHistoryInstrumentationHandler = function addHistoryInstrumentationHandler(arg0) {
+  _mod682.addHandler("history", arg0);
+  _mod682.maybeInstrument("history", instrumentHistory);
 };
-arg5.instrumentHistory = instrumentHistory;
+export { instrumentHistory };

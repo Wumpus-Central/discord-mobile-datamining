@@ -1,4 +1,5 @@
 // === Module 4948: TabsHost ===
 
 // Module 4948 (TabsHost)
-arg5.default = { Host: require("TabsHost"), Screen: require("mapItemAppearanceToNativeProp") };
+
+export default { Host: fn(4949), Screen: fn(4956) };

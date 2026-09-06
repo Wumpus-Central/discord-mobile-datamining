@@ -1,47 +1,42 @@
 // === Module 3845: differenceInISOWeekYears ===
 
 // Module 3845 (differenceInISOWeekYears)
-import _typeof from "_typeof" /* 3650 */;
+import _typeof from "module_3650" /* 3650 */;
 import differenceInCalendarISOWeekYears from "differenceInCalendarISOWeekYears" /* 3834 */;
 import compareAsc from "compareAsc" /* 3826 */;
 import subISOWeekYears from "subISOWeekYears" /* 3846 */;
 import requiredArgs from "requiredArgs" /* 3651 */;
 
 if (!_typeof) {
-  let obj = { default: null };
-  obj[0] = _typeof;
+  let obj = { default: _typeof };
   let tmp3 = obj;
 } else {
   tmp3 = _typeof;
 }
 _typeof = tmp3;
 if (!differenceInCalendarISOWeekYears) {
-  obj = { default: null };
-  obj[0] = differenceInCalendarISOWeekYears;
+  obj = { default: differenceInCalendarISOWeekYears };
   let tmp5 = obj;
 } else {
   tmp5 = differenceInCalendarISOWeekYears;
 }
 differenceInCalendarISOWeekYears = tmp5;
 if (!compareAsc) {
-  obj = { default: null };
-  obj[0] = compareAsc;
+  obj = { default: compareAsc };
   let tmp7 = obj;
 } else {
   tmp7 = compareAsc;
 }
 compareAsc = tmp7;
 if (!subISOWeekYears) {
-  const obj1 = { default: null };
-  obj1[0] = subISOWeekYears;
+  const obj1 = { default: subISOWeekYears };
   let tmp9 = obj1;
 } else {
   tmp9 = subISOWeekYears;
 }
 subISOWeekYears = tmp9;
 if (!requiredArgs) {
-  const obj2 = { default: null };
-  obj2[0] = requiredArgs;
+  const obj2 = { default: requiredArgs };
   let tmp11 = obj2;
 } else {
   tmp11 = requiredArgs;

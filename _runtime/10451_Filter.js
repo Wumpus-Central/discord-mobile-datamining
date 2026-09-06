@@ -1,34 +1,35 @@
 // === Module 10451: Filter ===
 
 // Module 10451 (Filter)
-import MergingRefiner from "_classCallCheck" /* 41 */;
+import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
 
 class Filter {
   constructor() {
-    tmp = MergingRefiner(this, MergingRefiner);
+    tmp = closure_0(this, MergingRefiner);
     return;
   }
 }
-MergingRefiner = Filter;
-let obj = {
+_classCallCheck = Filter;
+const entry = {
   key: "refine",
   value: function refine(arg0, arr) {
     const self = this;
     closure_0 = arg0;
-    return arr.filter((arg0) => self.isValid(closure_0, arg0));
+    return arr.filter((item) => self.isValid(closure_0, item));
   }
 };
-let items = [obj];
+let items = [entry];
 class MergingRefiner {
   constructor() {
-    tmp = MergingRefiner(this, MergingRefiner);
+    tmp = closure_0(this, MergingRefiner);
     return;
   }
 }
-obj = {
+_classCallCheck = MergingRefiner;
+const entry1 = {
   key: "refine",
-  value: function refine(text) {
+  value: function refine(text, arg1) {
     const self = this;
     let first = this;
     if (arg1.length < 2) {
@@ -44,23 +45,12 @@ obj = {
           let tmp = arg1[num];
           let str = text.text;
           let substr = str.substring(first.index + first.text.length, tmp.index);
-          let tmp3 = self;
-          let tmp4 = substr;
-          let tmp5 = first;
-          let tmp6 = tmp;
-          let tmp7 = text;
-          let tmp9 = num2;
           if (self.shouldMergeResults(substr, first, tmp, text)) {
             closure_1 = tmp;
-            let tmp12 = self;
-            let tmp13 = substr;
-            let tmp14 = first;
-            let tmp15 = tmp;
-            let tmp16 = text;
             let mergeResultsResult = self.mergeResults(substr, tmp8, tmp, text);
             closure_2 = mergeResultsResult;
             let debugResult = text.debug(() => {
-              console.log("" + first.constructor.name + " merged " + first + " and " + closure_1 + " into " + closure_2);
+              console.log("" + _classCallCheck.constructor.name + " merged " + first + " and " + closure_1 + " into " + mergeResultsResult);
             });
             let tmp11 = mergeResultsResult;
           } else {
@@ -80,7 +70,7 @@ obj = {
     }
   }
 };
-const items1 = [obj];
+const items1 = [entry1];
 
 export const Filter = _createClass(Filter, items);
 export const MergingRefiner = _createClass(MergingRefiner, items1);

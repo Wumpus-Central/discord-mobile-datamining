@@ -9,4 +9,5 @@ obj = {
   }
 };
 obj[4] = obj;
-arg5.default = obj;
+
+export default obj;

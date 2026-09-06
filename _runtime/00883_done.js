@@ -1,9 +1,9 @@
 // === Module 883: done ===
 
 // Module 883 (done)
-import noop from "noop" /* 884 */;
+import _mod884 from "module_884" /* 884 */;
 
-noop.prototype.done = function(arg0, arg1) {
+_mod884.prototype.done = function(arg0, arg1) {
   const self = this;
   let self2 = this;
   if (arguments.length) {
@@ -18,4 +18,4 @@ noop.prototype.done = function(arg0, arg1) {
   });
 };
 
-export default noop;
+export default _mod884;

@@ -1,10 +1,14 @@
 // === Module 206: byteLength ===
 
 // Module 206 (byteLength)
-arg5.byteLength = function byteLength(arr) {
+const dependencyMap = [];
+const dependencyMap2 = [];
+let closure_2 = typeof Uint8Array !== "undefined" ? Uint8Array : Array;
+
+export const byteLength = function byteLength(arr) {
   if (0 < arr.length % 4) {
     const _Error = Error;
-    error = new Error("Invalid string. Length must be a multiple of 4");
+    const error = new Error("Invalid string. Length must be a multiple of 4");
     throw error;
   } else {
     let index = arr.indexOf("=");
@@ -20,10 +24,10 @@ arg5.byteLength = function byteLength(arr) {
     return 3 * (items[0] + items[1]) / 4 - items[1];
   }
 };
-arg5.toByteArray = function toByteArray(arr) {
+export const toByteArray = function toByteArray(arr) {
   if (0 < arr.length % 4) {
     const _Error = Error;
-    error = new Error("Invalid string. Length must be a multiple of 4");
+    const error = new Error("Invalid string. Length must be a multiple of 4");
     throw error;
   } else {
     let index = arr.indexOf("=");
@@ -48,7 +52,6 @@ arg5.toByteArray = function toByteArray(arr) {
     let num14 = 0;
     if (0 < diff) {
       do {
-        let tmp10 = dependencyMap2;
         let tmp11 = dependencyMap2[arr.charCodeAt(arr, num12)] << 18;
         let tmp12 = dependencyMap2[arr.charCodeAt(arr, num12 + 1)] << 12;
         let tmp13 = dependencyMap2[arr.charCodeAt(arr, num12 + 2)] << 6;
@@ -80,7 +83,7 @@ arg5.toByteArray = function toByteArray(arr) {
     return tmp7;
   }
 };
-arg5.fromByteArray = function fromByteArray(arg0) {
+export const fromByteArray = function fromByteArray(arg0) {
   let sum;
   const result = length % 3;
   const items = [];
@@ -98,7 +101,6 @@ arg5.fromByteArray = function fromByteArray(arg0) {
       if (sum2 < tmp5) {
         do {
           let sum1 = (arg0[sum2] << 16 & 16711680) + (arg0[sum2 + 1] << 8 & 65280) + (255 & arg0[sum2 + 2]);
-          let tmp7 = dependencyMap;
           let arr = items1.push(dependencyMap[sum1 >> 18 & 63] + dependencyMap[sum1 >> 12 & 63] + dependencyMap[sum1 >> 6 & 63] + dependencyMap[63 & sum1]);
           sum2 = sum2 + 3;
         } while (sum2 < tmp5);
@@ -115,6 +117,3 @@ arg5.fromByteArray = function fromByteArray(arg0) {
   }
   return items.join("");
 };
-let closure_0 = [];
-let closure_1 = [];
-let closure_2 = typeof Uint8Array !== "undefined" ? Uint8Array : Array;

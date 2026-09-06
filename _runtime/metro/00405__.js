@@ -1,10 +1,9 @@
 // === Module 405: ? ===
 
 // Module 405
-import noopAll from "noop" /* 19 */;
-import createAnimatedComponentDefault from "createAnimatedComponent" /* 387 */;
-import _isNativeReflectConstructDefault from "_isNativeReflectConstruct" /* 406 */;
+import _modDef406 from "module_406" /* 406 */;
+import noop from "module_19" /* 19 */;
+import module_387 from "unstable_createAnimatedComponentWithAllowlist" /* 387 */;
 
-noopAll;
 
-export default createAnimatedComponentDefault(_isNativeReflectConstructDefault);
+export default module_387(_modDef406);

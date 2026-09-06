@@ -2,7 +2,7 @@
 
 // Module 203 (Blob)
 import _createClassDefault from "_createClass" /* 42 */;
-import closure_2 from "_classCallCheck" /* 41 */;
+import _classCallCheck from "_classCallCheck" /* 41 */;
 
 const Blob = arg1;
 class Blob {
@@ -11,8 +11,8 @@ class Blob {
     if (global === undefined) {
       items = [];
     }
-    tmp = closure_2(this, Blob);
-    _default = require("BlobManager").default;
+    tmp = c2(this, Blob);
+    _default = closure_0(closure_1[2]).default;
     this.data = _default.createFromParts(items, arg1).data;
     return;
   }
@@ -25,7 +25,7 @@ let items = [
         return this._data;
       } else {
         const _Error = Error;
-        error = new Error("Blob has been closed and is no longer available");
+        const error = new Error("Blob has been closed and is no longer available");
         throw error;
       }
     },

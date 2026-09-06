@@ -44,18 +44,14 @@ function decode(arg0) {
     let num3 = 1;
     if (1 < match.length) {
       do {
-        let tmp3 = decodeComponents;
         let obj = decodeComponents(match, num3);
         str3 = obj.join("");
-        let tmp4 = regExp;
         match1 = str3.match(regExp);
-        let tmp5 = num3;
         if (!match1) {
           match1 = [];
         }
         num3 = num3 + 1;
         match = match1;
-        let tmp6 = str3;
       } while (num3 < match1.length);
     }
     return str3;
@@ -86,7 +82,7 @@ export default (str) => {
             obj[match[0]] = decodeURIComponent(match[0]);
             match = regex.exec(arg0);
           } catch (err) {
-            const tmp7 = callback(tmp2[0]);
+            const tmp7 = decode(tmp2[0]);
             if (tmp7 !== tmp2[0]) {
               tmp3[tmp2[0]] = tmp7;
             }
@@ -103,10 +99,8 @@ export default (str) => {
             let _RegExp = RegExp;
             let tmp11 = new.target;
             let tmp12 = new.target;
-            let tmp13 = tmp10;
             let str2 = "g";
             regExp = new RegExp(tmp10, "g");
-            let tmp15 = regExp;
             str = str.replace(regExp, obj[tmp10]);
             num = num + 1;
             tmp9 = str;

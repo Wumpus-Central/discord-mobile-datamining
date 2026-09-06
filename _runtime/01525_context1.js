@@ -1,31 +1,32 @@
 // === Module 1525: context1 ===
 
 // Module 1525 (context1)
-import importAllResult from "noop" /* 19 */;
+import _mod1526 from "module_1526" /* 1526 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-let context = importAllResult.createContext(undefined);
-const context1 = importAllResult.createContext(undefined);
+require = arg1;
+let context = noop.createContext(undefined);
+const context1 = noop.createContext(undefined);
 
 export const FocusedRouteKeyContext = context;
 export const IsFocusedContext = context1;
 export const useIsFocused = function useIsFocused() {
-  let context = importAllResult.useContext(context1);
-  navigation = navigation(1526).useNavigation();
-  dependencyMap = tmp3;
+  let context = noop.useContext(context1);
+  const navigation = _mod1526.useNavigation();
+  closure_1 = tmp3;
   const items = [undefined !== context, navigation];
   if (context == null) {
-    context = importAllResult.useSyncExternalStore(importAllResult.useCallback((arg0) => {
+    context = noop.useSyncExternalStore(noop.useCallback((arg0) => {
       if (closure_1) {
         return () => {
 
         };
       } else {
-        navigation = navigation.addListener("focus", arg0);
+        closure_0 = navigation.addListener("focus", arg0);
         closure_1 = navigation.addListener("blur", arg0);
         return () => {
-          callback();
-          callback2();
+          closure_0();
+          closure_1();
         };
       }
     }, items), navigation.isFocused, navigation.isFocused);

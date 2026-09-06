@@ -2,12 +2,12 @@
 
 // Module 14311 (withoutSetter)
 import _mod14297 from "module_14297" /* 14297 */;
-import __core_js_shared__ from "__core-js_shared__" /* 14312 */;
-import sum from "sum" /* 14319 */;
-import call from "call" /* 14320 */;
-import prop from "prop" /* 14315 */;
+import _mod14312 from "module_14312" /* 14312 */;
+import _mod14319 from "module_14319" /* 14319 */;
+import _mod14320 from "module_14320" /* 14320 */;
+import prop from "module_14315" /* 14315 */;
 
-let closure_2 = __core_js_shared__("wks");
+let closure_2 = _mod14312("wks");
 let _Symbol = _mod14297.Symbol;
 if (prop) {
   let withoutSetter = _Symbol.for || _mod14297.Symbol;
@@ -18,13 +18,13 @@ if (prop) {
     withoutSetter = _mod14297.Symbol.withoutSetter;
   }
   if (!withoutSetter) {
-    withoutSetter = sum;
+    withoutSetter = _mod14319;
   }
 }
 
 export default (arg0) => {
   let _Symbol = dependencyMap;
-  if (call(closure_2, arg0)) {
+  if (_mod14320(closure_2, arg0)) {
     return tmp2[arg0];
   } else {
     if (!tmp(14316)) {

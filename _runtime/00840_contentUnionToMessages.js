@@ -1,7 +1,7 @@
 // === Module 840: contentUnionToMessages ===
 
 // Module 840 (contentUnionToMessages)
-import _mod839 from "module_839" /* 839 */;
+import CHATS_CREATE_METHOD from "CHATS_CREATE_METHOD" /* 839 */;
 
 require = arg1;
 const dependencyMap = arg6;
@@ -12,15 +12,13 @@ function contentUnionToMessages(contents, user) {
     str = "user";
   }
   if (typeof contents === "string") {
-    let obj = { role: null, content: null };
-    obj[0] = str;
-    obj[1] = contents;
+    let obj = { role: str, content: contents };
     const items = [obj];
     let flatMapResult = items;
   } else {
     const _Array = Array;
     if (Array.isArray(contents)) {
-      flatMapResult = contents.flatMap((arg0) => closure_1_2(arg0, str));
+      flatMapResult = contents.flatMap((item) => contentUnionToMessages(item, str));
     } else {
       if (typeof contents === "object") {
         if (contents) {
@@ -32,9 +30,7 @@ function contentUnionToMessages(contents, user) {
               const items1 = [obj];
               let items2 = items1;
             } else {
-              obj = { role: null, content: null };
-              obj[0] = str;
-              obj[1] = contents;
+              obj = { role: str, content: contents };
               items2 = [obj];
             }
           }
@@ -47,18 +43,18 @@ function contentUnionToMessages(contents, user) {
   }
   return flatMapResult;
 }
-arg5.contentUnionToMessages = contentUnionToMessages;
-arg5.isStreamingMethod = function isStreamingMethod(arr) {
+
+export { contentUnionToMessages };
+export const isStreamingMethod = function isStreamingMethod(arr) {
   return arr.includes("Stream");
 };
-arg5.shouldInstrument = function shouldInstrument(str) {
-  const GOOGLE_GENAI_INSTRUMENTED_METHODS = _mod839.GOOGLE_GENAI_INSTRUMENTED_METHODS;
+export const shouldInstrument = function shouldInstrument(str) {
+  const GOOGLE_GENAI_INSTRUMENTED_METHODS = CHATS_CREATE_METHOD.GOOGLE_GENAI_INSTRUMENTED_METHODS;
   if (GOOGLE_GENAI_INSTRUMENTED_METHODS.includes(str)) {
     return true;
   } else {
     const parts = str.split(".");
-    const GOOGLE_GENAI_INSTRUMENTED_METHODS2 = _mod839.GOOGLE_GENAI_INSTRUMENTED_METHODS;
+    const GOOGLE_GENAI_INSTRUMENTED_METHODS2 = CHATS_CREATE_METHOD.GOOGLE_GENAI_INSTRUMENTED_METHODS;
     return GOOGLE_GENAI_INSTRUMENTED_METHODS2.includes(parts.pop());
   }
-  const tmp = require;
 };

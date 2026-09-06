@@ -1,7 +1,7 @@
 // === Module 397: get FlatList ===
 
 // Module 397 (get FlatList)
-import get_FlatList from "get FlatList" /* 398 */;
+import _mod398 from "module_398" /* 398 */;
 
 
-export default get_FlatList.default;
+export default _mod398.default;

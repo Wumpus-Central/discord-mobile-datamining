@@ -1,95 +1,80 @@
 // === Module 11234: releaseLongTermAccess ===
 
 // Module 11234 (releaseLongTermAccess)
-import importDefaultResult from "asyncGeneratorStep" /* 5 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
-let closure_0 = arg1;
-closure_0 = importDefaultResult((arg0) => {
-  closure_0 = arg0;
-  c1 = 0;
-  return (function*(arg0) {
-    if (table === 2) {
-      table = 3;
-      HermesBuiltin.throwTypeError();
-    } else if (tmp3 === 3) {
+asyncGeneratorStep(async (arg0, value) => {
+  if (dependencyMap === 2) {
+    dependencyMap = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp3 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      let obj = { value, done: true };
+      return obj;
+    } else {
+      return { value: "HermesInternal", done: null };
+    }
+  } else {
+    try {
+      dependencyMap = 2;
       if (arg0 === 1) {
-        throw arg1;
+        dependencyMap = 3;
+        throw value;
       } else if (arg0 === 2) {
-        let obj = { value: null, done: true };
-        obj[0] = arg1;
+        dependencyMap = 3;
+        obj = { value, done: true };
         return obj;
       } else {
-        return { value: "HermesInternal", done: null };
+        const NativeDocumentPicker = closure_0(dependencyMap[1]).NativeDocumentPicker;
+        dependencyMap = 3;
+        obj = { value: NativeDocumentPicker.releaseLongTermAccess(closure_0), done: true };
+        return obj;
       }
-    } else {
-      try {
-        table = 2;
-        if (arg0 === 1) {
-          table = 3;
-          throw arg1;
-        } else if (arg0 === 2) {
-          table = 3;
-          obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
-        } else {
-          const NativeDocumentPicker = callback(table[1]).NativeDocumentPicker;
-          table = 3;
-          obj = { value: null, done: true };
-          obj[0] = NativeDocumentPicker.releaseLongTermAccess(callback);
-          return obj;
-        }
-      } catch (tmp7) {
-        table = tmp;
-        throw tmp7;
-      }
+    } catch (tmp7) {
+      dependencyMap = tmp;
+      throw tmp7;
     }
-  })();
+  }
 });
-closure_0 = importDefaultResult((arg0) => {
-  closure_0 = arg0;
-  c1 = 0;
-  return (function*(arg0) {
-    if (table === 2) {
-      table = 3;
-      HermesBuiltin.throwTypeError();
-    } else if (tmp3 === 3) {
+let closure_0 = asyncGeneratorStep(async (arg0, value) => {
+  if (dependencyMap === 2) {
+    dependencyMap = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp3 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      let obj = { value, done: true };
+      return obj;
+    } else {
+      return { value: "HermesInternal", done: null };
+    }
+  } else {
+    try {
+      dependencyMap = 2;
       if (arg0 === 1) {
-        throw arg1;
+        dependencyMap = 3;
+        throw value;
       } else if (arg0 === 2) {
-        let obj = { value: null, done: true };
-        obj[0] = arg1;
+        dependencyMap = 3;
+        obj = { value, done: true };
         return obj;
       } else {
-        return { value: "HermesInternal", done: null };
+        const NativeDocumentPicker = closure_0(dependencyMap[1]).NativeDocumentPicker;
+        dependencyMap = 3;
+        obj = { value: NativeDocumentPicker.releaseSecureAccess(closure_0), done: true };
+        return obj;
       }
-    } else {
-      try {
-        table = 2;
-        if (arg0 === 1) {
-          table = 3;
-          throw arg1;
-        } else if (arg0 === 2) {
-          table = 3;
-          obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
-        } else {
-          const NativeDocumentPicker = callback(table[1]).NativeDocumentPicker;
-          table = 3;
-          obj = { value: null, done: true };
-          obj[0] = NativeDocumentPicker.releaseSecureAccess(callback);
-          return obj;
-        }
-      } catch (tmp7) {
-        table = tmp;
-        throw tmp7;
-      }
+    } catch (tmp7) {
+      dependencyMap = tmp;
+      throw tmp7;
     }
-  })();
+  }
 });
 
-export const releaseLongTermAccess = function releaseLongTermAccess(closure_0) {
+export const releaseLongTermAccess = function releaseLongTermAccess(arg0) {
   const self = this;
   const apply = closure_0.apply;
   if (typeof apply === "unknown") {
@@ -99,7 +84,7 @@ export const releaseLongTermAccess = function releaseLongTermAccess(closure_0) {
   }
   return applyArgumentsResult;
 };
-export const releaseSecureAccess = function releaseSecureAccess(closure_0) {
+export const releaseSecureAccess = function releaseSecureAccess(arg0) {
   const self = this;
   const apply = closure_0.apply;
   if (typeof apply === "unknown") {

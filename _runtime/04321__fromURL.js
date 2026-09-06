@@ -1,171 +1,138 @@
 // === Module 4321: _fromURL ===
 
 // Module 4321 (_fromURL)
-import _fromFileURL from "asyncGeneratorStep" /* 5 */;
-import { Image as _fromResource } from "get ActivityIndicator" /* 17 */;
-import { NitroModules } from "module_4293" /* 4293 */;
+import "asyncGeneratorStep";
 
-let _fromBytes = NitroModules.createHybridObject("RiveFileFactory");
+fn(17).Image;
+const NitroModules = fn(4293).NitroModules;
+NitroModules.createHybridObject("RiveFileFactory");
 let obj = {};
-function _fromURL() {
-  const self = this;
-  const tmp = _fromFileURL((arg0, arg1) => {
-    closure_0 = arg0;
-    closure_1 = arg1;
-    closure_2 = arg2;
-    c5 = 0;
-    c6 = 0;
-    const iter = (function*(arg0, arg1) {
-      if (c6 === 2) {
-        c6 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp4 === 3) {
-        if (arg0 === 1) {
-          throw arg1;
-        } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
-        } else {
-          return { value: "HermesInternal", done: null };
-        }
-      } else {
-        try {
-          c6 = 2;
-          if (0 === c5) {
-            if (arg0 === 1) {
-              c6 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c6 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              closure_4 = tmp5;
-              closure_3 = tmp2;
-              let flag;
-              if (flag === undefined) {
-                flag = true;
-              }
-              c5 = 1;
-              c6 = 1;
-              return { value: "PX_16", done: true };
-            }
-          } else if (arg0 === 1) {
-            c6 = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            c6 = 3;
-            obj1 = { value: null, done: true };
-            obj1[0] = arg1;
-            return obj1;
-          } else {
-            let tmp12;
-            if (closure_1) {
-              obj = { data: null };
-              obj[0] = closure_1;
-              tmp12 = obj;
-            }
-            c6 = 3;
-            const obj2 = { value: null, done: true };
-            obj2[0] = closure_1_3.fromURL(closure_0, flag, tmp12);
-            return obj2;
-          }
-        } catch (tmp17) {
-          c6 = tmp;
-          throw tmp17;
-        }
-      }
-    })();
-    iter.next();
-    return iter;
-  });
-  closure_0 = tmp;
-  const apply = tmp.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+let closure_0 = async function _fromURL(arg0, value) {
+  if (c6 === 2) {
+    c6 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp4 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      let obj = { value, done: true };
+      return obj;
+    } else {
+      return { value: "HermesInternal", done: null };
+    }
   } else {
-    applyArgumentsResult = apply(self, arguments);
-  }
-  return applyArgumentsResult;
-}
-_fromFileURL = function _fromFileURL(arg0) {
-  const self = this;
-  const tmp = _fromFileURL((arg0) => {
-    closure_0 = arg0;
-    closure_1 = arg1;
-    closure_2 = arg2;
-    c5 = 0;
-    c6 = 0;
-    const iter = (function*(arg0) {
-      if (c6 === 2) {
-        c6 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp4 === 3) {
+    try {
+      c6 = 2;
+      if (0 === c5) {
         if (arg0 === 1) {
-          throw arg1;
+          c6 = 3;
+          throw value;
         } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
+          c6 = 3;
+          obj = { value, done: true };
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          closure_4 = tmp5;
+          closure_131_2 = undefined;
+          closure_131_0 = closure_0;
+          closure_131_1 = closure_1;
+          let flag = closure_2;
+          if (closure_2 === undefined) {
+            flag = true;
+          }
+          closure_131_2 = flag;
+          c5 = 1;
+          c6 = 1;
+          return { value: "PX_16", done: true };
         }
+      } else if (arg0 === 1) {
+        c6 = 3;
+        throw value;
+      } else if (arg0 === 2) {
+        c6 = 3;
+        const obj1 = { value, done: true };
+        return obj1;
       } else {
-        try {
-          c6 = 2;
-          if (0 === c5) {
-            if (arg0 === 1) {
-              c6 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c6 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              closure_4 = tmp5;
-              closure_3 = tmp2;
-              closure_1 = undefined;
-              let flag;
-              if (flag === undefined) {
-                flag = true;
-              }
-              c5 = 1;
-              c6 = 1;
-              return { value: "PX_16", done: true };
-            }
-          } else if (arg0 === 1) {
+        let tmp12;
+        if (closure_131_1) {
+          obj = { data: closure_131_1 };
+          tmp12 = obj;
+        }
+        c6 = 3;
+        const obj2 = { value: tmp2.fromURL(closure_131_0, closure_131_2, tmp12), done: true };
+        return obj2;
+      }
+    } catch (tmp17) {
+      c6 = tmp;
+      throw tmp17;
+    }
+  }
+};
+let asyncGeneratorStep = function _fromFileURL() {
+  const self = this;
+  const tmp = asyncGeneratorStep(async (arg0, value) => {
+    if (c6 === 2) {
+      c6 = 3;
+      throw new TypeError("Generator functions may not be called on executing generators");
+    } else if (tmp4 === 3) {
+      if (arg0 === 1) {
+        throw value;
+      } else if (arg0 === 2) {
+        let obj = { value, done: true };
+        return obj;
+      } else {
+        return { value: "HermesInternal", done: null };
+      }
+    } else {
+      try {
+        c6 = 2;
+        if (0 === c5) {
+          if (arg0 === 1) {
             c6 = 3;
-            throw arg1;
+            throw value;
           } else if (arg0 === 2) {
             c6 = 3;
-            obj1 = { value: null, done: true };
-            obj1[0] = arg1;
-            return obj1;
+            obj = { value, done: true };
+            return obj;
           } else {
-            let tmp12;
-            if (closure_1) {
-              obj = { data: null };
-              obj[0] = closure_1;
-              tmp12 = obj;
+            closure_4 = tmp5;
+            closure_131_1 = undefined;
+            closure_131_2 = undefined;
+            closure_131_0 = closure_0;
+            closure_131_1 = closure_1;
+            let flag = closure_2;
+            if (closure_2 === undefined) {
+              flag = true;
             }
-            c6 = 3;
-            const obj2 = { value: null, done: true };
-            obj2[0] = closure_1_3.fromFileURL(closure_0, flag, tmp12);
-            return obj2;
+            closure_131_2 = flag;
+            c5 = 1;
+            c6 = 1;
+            return { value: "PX_16", done: true };
           }
-        } catch (tmp17) {
-          c6 = tmp;
-          throw tmp17;
+        } else if (arg0 === 1) {
+          c6 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c6 = 3;
+          const obj1 = { value, done: true };
+          return obj1;
+        } else {
+          let tmp12;
+          if (closure_131_1) {
+            obj = { data: closure_131_1 };
+            tmp12 = obj;
+          }
+          c6 = 3;
+          const obj2 = { value: tmp2.fromFileURL(closure_131_0, closure_131_2, tmp12), done: true };
+          return obj2;
         }
+      } catch (tmp17) {
+        c6 = tmp;
+        throw tmp17;
       }
-    })();
-    iter.next();
-    return iter;
+    }
   });
-  closure_1 = tmp;
+  asyncGeneratorStep = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -174,314 +141,252 @@ _fromFileURL = function _fromFileURL(arg0) {
   }
   return applyArgumentsResult;
 };
-_fromResource = function _fromResource() {
-  const self = this;
-  const tmp = _fromFileURL((arg0, arg1) => {
-    closure_0 = arg0;
-    closure_1 = arg1;
-    closure_2 = arg2;
-    c5 = 0;
-    c6 = 0;
-    const iter = (function*(arg0, arg1) {
-      if (c6 === 2) {
-        c6 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp4 === 3) {
-        if (arg0 === 1) {
-          throw arg1;
-        } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
-          return obj;
-        } else {
-          return { value: "HermesInternal", done: null };
-        }
-      } else {
-        try {
-          c6 = 2;
-          if (0 === c5) {
-            if (arg0 === 1) {
-              c6 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c6 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              closure_4 = tmp5;
-              closure_3 = tmp2;
-              let flag;
-              if (flag === undefined) {
-                flag = true;
-              }
-              c5 = 1;
-              c6 = 1;
-              return { value: "PX_16", done: true };
-            }
-          } else if (arg0 === 1) {
-            c6 = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            c6 = 3;
-            obj1 = { value: null, done: true };
-            obj1[0] = arg1;
-            return obj1;
-          } else {
-            let tmp12;
-            if (closure_1) {
-              obj = { data: null };
-              obj[0] = closure_1;
-              tmp12 = obj;
-            }
-            c6 = 3;
-            const obj2 = { value: null, done: true };
-            obj2[0] = closure_1_3.fromResource(closure_0, flag, tmp12);
-            return obj2;
-          }
-        } catch (tmp17) {
-          c6 = tmp;
-          throw tmp17;
-        }
-      }
-    })();
-    iter.next();
-    return iter;
-  });
-  closure_2 = tmp;
-  const apply = tmp.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+const Image = async function _fromResource(arg0, value) {
+  if (c6 === 2) {
+    c6 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp4 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      let obj = { value, done: true };
+      return obj;
+    } else {
+      return { value: "HermesInternal", done: null };
+    }
   } else {
-    applyArgumentsResult = apply(self, arguments);
-  }
-  return applyArgumentsResult;
-};
-_fromBytes = function _fromBytes() {
-  const self = this;
-  const tmp = _fromFileURL((arg0, arg1) => {
-    closure_0 = arg0;
-    closure_1 = arg1;
-    closure_2 = arg2;
-    c5 = 0;
-    c6 = 0;
-    const iter = (function*(arg0, arg1) {
-      if (c6 === 2) {
-        c6 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp4 === 3) {
+    try {
+      c6 = 2;
+      if (0 === c5) {
         if (arg0 === 1) {
-          throw arg1;
+          c6 = 3;
+          throw value;
         } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
+          c6 = 3;
+          obj = { value, done: true };
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
-        }
-      } else {
-        try {
-          c6 = 2;
-          if (0 === c5) {
-            if (arg0 === 1) {
-              c6 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c6 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              closure_4 = tmp5;
-              closure_3 = tmp2;
-              let flag;
-              if (flag === undefined) {
-                flag = true;
-              }
-              c5 = 1;
-              c6 = 1;
-              return { value: "PX_16", done: true };
-            }
-          } else if (arg0 === 1) {
-            c6 = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            c6 = 3;
-            obj1 = { value: null, done: true };
-            obj1[0] = arg1;
-            return obj1;
-          } else {
-            let tmp12;
-            if (closure_1) {
-              obj = { data: null };
-              obj[0] = closure_1;
-              tmp12 = obj;
-            }
-            c6 = 3;
-            const obj2 = { value: null, done: true };
-            obj2[0] = closure_1_3.fromBytes(closure_0, flag, tmp12);
-            return obj2;
+          closure_4 = tmp5;
+          closure_131_2 = undefined;
+          closure_131_0 = closure_0;
+          closure_131_1 = closure_1;
+          let flag = closure_2;
+          if (closure_2 === undefined) {
+            flag = true;
           }
-        } catch (tmp17) {
-          c6 = tmp;
-          throw tmp17;
+          closure_131_2 = flag;
+          c5 = 1;
+          c6 = 1;
+          return { value: "PX_16", done: true };
         }
+      } else if (arg0 === 1) {
+        c6 = 3;
+        throw value;
+      } else if (arg0 === 2) {
+        c6 = 3;
+        const obj1 = { value, done: true };
+        return obj1;
+      } else {
+        let tmp12;
+        if (closure_131_1) {
+          obj = { data: closure_131_1 };
+          tmp12 = obj;
+        }
+        c6 = 3;
+        const obj2 = { value: tmp2.fromResource(closure_131_0, closure_131_2, tmp12), done: true };
+        return obj2;
       }
-    })();
-    iter.next();
-    return iter;
-  });
-  closure_3 = tmp;
-  const apply = tmp.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
+    } catch (tmp17) {
+      c6 = tmp;
+      throw tmp17;
+    }
   }
-  return applyArgumentsResult;
 };
-function _fromSource() {
-  const self = this;
-  const tmp = _fromFileURL((arg0, arg1) => {
-    closure_0 = arg0;
-    closure_1 = arg1;
-    closure_2 = arg2;
-    c7 = 0;
-    c8 = 0;
-    c6 = 0;
-    const iter = (function*(arg0, arg1) {
-      if (c8 === 2) {
-        c8 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp6 === 3) {
+let closure_3 = async function _fromBytes(arg0, value) {
+  if (c6 === 2) {
+    c6 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp4 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      let obj = { value, done: true };
+      return obj;
+    } else {
+      return { value: "HermesInternal", done: null };
+    }
+  } else {
+    try {
+      c6 = 2;
+      if (0 === c5) {
         if (arg0 === 1) {
-          throw arg1;
+          c6 = 3;
+          throw value;
         } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
+          c6 = 3;
+          obj = { value, done: true };
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          closure_4 = tmp5;
+          closure_131_2 = undefined;
+          closure_131_0 = closure_0;
+          closure_131_1 = closure_1;
+          let flag = closure_2;
+          if (closure_2 === undefined) {
+            flag = true;
+          }
+          closure_131_2 = flag;
+          c5 = 1;
+          c6 = 1;
+          return { value: "PX_16", done: true };
         }
+      } else if (arg0 === 1) {
+        c6 = 3;
+        throw value;
+      } else if (arg0 === 2) {
+        c6 = 3;
+        const obj1 = { value, done: true };
+        return obj1;
       } else {
-        try {
-          c8 = 2;
-          if (0 === message) {
-            if (arg0 === 1) {
-              c8 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c8 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              let uri = tmp3;
-              closure_3 = tmp7;
-              let flag;
-              if (flag === undefined) {
-                flag = true;
-              }
-              closure_3 = undefined;
-              uri = undefined;
-              closure_5 = undefined;
-              message = undefined;
-              message = 1;
-              c8 = 1;
-              return { value: "PX_16", done: true };
+        let tmp12;
+        if (closure_131_1) {
+          obj = { data: closure_131_1 };
+          tmp12 = obj;
+        }
+        c6 = 3;
+        const obj2 = { value: tmp2.fromBytes(closure_131_0, closure_131_2, tmp12), done: true };
+        return obj2;
+      }
+    } catch (tmp17) {
+      c6 = tmp;
+      throw tmp17;
+    }
+  }
+};
+let closure_4 = async function _fromSource(arg0, value) {
+  if (c8 === 2) {
+    c8 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp6 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      let obj = { value, done: true };
+      return obj;
+    } else {
+      return { value: "HermesInternal", done: null };
+    }
+  } else {
+    try {
+      c8 = 2;
+      if (0 === c7) {
+        if (arg0 === 1) {
+          c8 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c8 = 3;
+          obj = { value, done: true };
+          return obj;
+        } else {
+          closure_4 = tmp3;
+          closure_3 = tmp7;
+          closure_131_2 = undefined;
+          closure_131_0 = closure_0;
+          closure_131_1 = closure_1;
+          let flag = closure_2;
+          if (closure_2 === undefined) {
+            flag = true;
+          }
+          closure_131_2 = flag;
+          closure_131_3 = undefined;
+          closure_131_4 = undefined;
+          closure_131_5 = undefined;
+          closure_131_6 = undefined;
+          c7 = 1;
+          c8 = 1;
+          return { value: "PX_16", done: true };
+        }
+      } else if (1 === tmp7) {
+        if (arg0 === 1) {
+          c8 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c8 = 3;
+          const obj1 = { value, done: true };
+          return obj1;
+        } else {
+          let tmp70 = null;
+          if (typeof closure_131_0 === "number") {
+            tmp70 = closure_131_0;
+          }
+          closure_131_3 = tmp70;
+          let uri = null;
+          if (typeof closure_131_0 === "object") {
+            uri = closure_131_0.uri;
+          }
+          closure_131_4 = uri;
+          if (closure_131_3) {
+            const assetSource = closure_2.resolveAssetSource(closure_131_3);
+            let uri1;
+            if (assetSource != null) {
+              uri1 = assetSource.uri;
             }
-          } else if (1 === tmp7) {
-            if (arg0 === 1) {
-              c8 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c8 = 3;
-              obj1 = { value: null, done: true };
-              obj1[0] = arg1;
-              return obj1;
+            let tmp25 = uri1;
+          } else {
+            tmp25 = closure_131_4;
+          }
+          closure_131_5 = tmp25;
+          if (closure_131_5) {
+            c6 = 1;
+            if (closure_131_5.match(/https?:\/\//)) {
+              closure_0.fromURL(closure_131_5, closure_131_1, closure_131_2);
             } else {
-              let tmp71 = null;
-              if (typeof closure_0 === "number") {
-                tmp71 = closure_0;
-              }
-              closure_3 = tmp71;
-              uri = null;
-              if (typeof closure_0 === "object") {
-                uri = closure_0.uri;
-              }
-              if (closure_3) {
-                const assetSource = closure_2.resolveAssetSource(closure_3);
-                let uri1;
-                if (assetSource != null) {
-                  uri1 = assetSource.uri;
-                }
-                let tmp25 = uri1;
+              obj = closure_0;
+              if (closure_131_5.match(/file:\/\//)) {
+                obj.fromFileURL(closure_131_5, closure_131_1, closure_131_2);
               } else {
-                tmp25 = uri;
-              }
-              closure_5 = tmp25;
-              if (closure_5) {
-                message = 1;
-                if (closure_5.match(/https?:\/\//)) {
-                  closure_0.fromURL(closure_5, closure_1, flag);
-                } else {
-                  obj = closure_0;
-                  if (closure_5.match(/file:\/\//)) {
-                    obj.fromFileURL(closure_1_5, closure_1, closure_2);
-                  } else {
-                    obj.fromResource(closure_1_5, closure_1, closure_2);
-                  }
-                }
-                message = 0;
-                c8 = 3;
-              } else {
-                const _Error3 = Error;
-                const _HermesInternal2 = HermesInternal;
-                error = new Error("Invalid source: could not resolve asset " + closure_0 + ". Ensure 'riv' is in metro.config.js assetExts.");
-                throw error;
+                obj.fromResource(closure_131_5, closure_131_1, closure_131_2);
               }
             }
+            c6 = 0;
+            c8 = 3;
           } else {
-            message = 0;
-            message = closure_5;
-            const _Error = Error;
-            if (message instanceof Error) {
-              message = message.message;
-            } else {
-              const _String = String;
-              message = String(message);
-            }
-            const _Error2 = Error;
-            const _HermesInternal = HermesInternal;
-            const error1 = new Error("Failed to load Rive file from source: " + message);
-            throw error1;
-          }
-        } catch (tmp59) {
-          closure_5 = tmp59;
-          if (tmp4 === message) {
-            c8 = tmp2;
-            throw tmp59;
-          } else {
-            message = tmp;
+            const _Error3 = Error;
+            const _HermesInternal2 = HermesInternal;
+            const error = new Error("Invalid source: could not resolve asset " + closure_131_0 + ". Ensure 'riv' is in metro.config.js assetExts.");
+            throw error;
           }
         }
+      } else {
+        c6 = 0;
+        closure_131_7 = closure_5;
+        const _Error = Error;
+        if (closure_131_7 instanceof Error) {
+          let message = closure_131_7.message;
+        } else {
+          const _String = String;
+          message = String(closure_131_7);
+        }
+        closure_131_6 = message;
+        const _Error2 = Error;
+        const _HermesInternal = HermesInternal;
+        const error1 = new Error("Failed to load Rive file from source: " + closure_131_6);
+        throw error1;
       }
-    })();
-    iter.next();
-    return iter;
-  });
-  closure_4 = tmp;
-  const apply = tmp.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
+    } catch (tmp59) {
+      closure_5 = tmp59;
+      if (tmp4 === c6) {
+        c8 = tmp2;
+        throw tmp59;
+      } else {
+        c7 = tmp;
+      }
+    }
   }
-  return applyArgumentsResult;
-}
-obj.fromURL = function fromURL(closure_5, closure_1, flag) {
+};
+obj.fromURL = function fromURL(arg0, current) {
   const self = this;
-  const apply = _fromURL.apply;
+  const apply = closure_0.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -489,9 +394,9 @@ obj.fromURL = function fromURL(closure_5, closure_1, flag) {
   }
   return applyArgumentsResult;
 };
-obj.fromFileURL = function fromFileURL(closure_1_5, closure_1, closure_2) {
+obj.fromFileURL = function fromFileURL(arg0) {
   const self = this;
-  const apply = _fromFileURL.apply;
+  const apply = asyncGeneratorStep.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -499,9 +404,9 @@ obj.fromFileURL = function fromFileURL(closure_1_5, closure_1, closure_2) {
   }
   return applyArgumentsResult;
 };
-obj.fromResource = function fromResource(closure_1_5, closure_1, closure_2) {
+obj.fromResource = function fromResource(arg0, current) {
   const self = this;
-  const apply = _fromResource.apply;
+  const apply = closure_2.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -509,9 +414,9 @@ obj.fromResource = function fromResource(closure_1_5, closure_1, closure_2) {
   }
   return applyArgumentsResult;
 };
-obj.fromBytes = function fromBytes(arg0, current, arg2) {
+obj.fromBytes = function fromBytes(arg0, current) {
   const self = this;
-  const apply = _fromBytes.apply;
+  const apply = closure_3.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -521,7 +426,7 @@ obj.fromBytes = function fromBytes(arg0, current, arg2) {
 };
 obj.fromSource = function fromSource(arg0, arg1) {
   const self = this;
-  const apply = _fromSource.apply;
+  const apply = closure_4.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {

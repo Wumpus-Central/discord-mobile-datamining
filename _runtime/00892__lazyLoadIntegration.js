@@ -1,196 +1,172 @@
 // === Module 892: _lazyLoadIntegration ===
 
 // Module 892 (_lazyLoadIntegration)
-import closure_2 from "asyncGeneratorStep" /* 5 */;
+import ignoreNextOnError from "ignoreNextOnError" /* 893 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
-function _lazyLoadIntegration() {
-  const self = this;
-  let tmp = callback((arg0, arg1) => {
-    closure_0 = arg0;
-    closure_1 = arg1;
-    c3 = 0;
-    c5 = 0;
-    c4 = 0;
-    return (function*(arg0, arg1) {
-      if (c5 === 2) {
-        c5 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp5 === 3) {
+let closure_4 = async function _lazyLoadIntegration(arg0, value) {
+  if (c5 === 2) {
+    c5 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp5 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      let obj = { value, done: true };
+      return obj;
+    } else {
+      return { value: "HermesInternal", done: null };
+    }
+  } else {
+    try {
+      c5 = 2;
+      if (0 === c3) {
         if (arg0 === 1) {
-          throw arg1;
+          c5 = 3;
+          throw value;
         } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
+          c5 = 3;
+          obj = { value, done: true };
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          closure_2 = tmp6;
+          closure_130_0 = closure_0;
+          closure_130_1 = undefined;
+          closure_130_2 = undefined;
+          closure_130_3 = undefined;
+          let Sentry = ignoreNextOnError.WINDOW.Sentry;
+          if (!Sentry) {
+            Sentry = {};
+          }
+          ignoreNextOnError.WINDOW.Sentry = Sentry;
+          closure_130_1 = Sentry;
+          if (React3[closure_0]) {
+            if (typeof Sentry[tmp49] === "function") {
+              if (!("_isShim" in tmp27)) {
+                c5 = 3;
+                const obj1 = { value: tmp27, done: true };
+                return obj1;
+              }
+            }
+            const _document = tmp53(893).WINDOW.document;
+            const element = <script />;
+            closure_130_2 = element;
+            element.src = (function getScriptURL(arg0) {
+              const client = closure_1_0(dependencyMap[2]).getClient();
+              let str;
+              if (client != null) {
+                const options = client.getOptions();
+                if (options != null) {
+                  str = options.cdnBaseUrl;
+                }
+              }
+              if (!str) {
+                str = "https://browser.sentry-cdn.com";
+              }
+              const obj = closure_1_0(dependencyMap[2]);
+              return new URL("/" + closure_1_0(dependencyMap[2]).SDK_VERSION + "/" + arg0 + ".min.js", str).toString();
+            })(tmp52);
+            element.crossOrigin = "anonymous";
+            element.referrerPolicy = "strict-origin";
+            if (tmp50) {
+              const attr = element.setAttribute("nonce", tmp50);
+            }
+            const promise = new Promise((arg0, arg1) => {
+              closure_0 = arg0;
+              const listener = closure_1_2.addEventListener("load", () => closure_0());
+              const listener1 = closure_1_2.addEventListener("error", arg1);
+            });
+            const currentScript = tmp53(893).WINDOW.document.currentScript;
+            let head = tmp53(893).WINDOW.document.body;
+            if (!head) {
+              head = tmp53(893).WINDOW.document.head;
+            }
+            if (!head) {
+              let parentElement;
+              if (currentScript != null) {
+                parentElement = currentScript.parentElement;
+              }
+              head = parentElement;
+            }
+            if (head) {
+              head.appendChild(element);
+              c4 = 1;
+              c3 = 2;
+              c5 = 1;
+              const obj2 = { value: promise, done: false };
+              return obj2;
+            } else {
+              const _Error4 = Error;
+              const _HermesInternal4 = HermesInternal;
+              const error = new Error("Could not find parent element to insert lazy-loaded " + tmp49 + " script");
+              throw error;
+            }
+            const tmp28 = (function getScriptURL(arg0) {
+              const client = closure_1_0(dependencyMap[2]).getClient();
+              let str;
+              if (client != null) {
+                const options = client.getOptions();
+                if (options != null) {
+                  str = options.cdnBaseUrl;
+                }
+              }
+              if (!str) {
+                str = "https://browser.sentry-cdn.com";
+              }
+              const obj = closure_1_0(dependencyMap[2]);
+              return new URL("/" + closure_1_0(dependencyMap[2]).SDK_VERSION + "/" + arg0 + ".min.js", str).toString();
+            })(tmp52);
+          } else {
+            const _Error3 = Error;
+            const _HermesInternal3 = HermesInternal;
+            const error1 = new Error("Cannot lazy load integration: " + tmp49);
+            throw error1;
+          }
         }
+      } else if (1 === tmp6) {
+        c4 = 0;
+        const _Error2 = Error;
+        const _HermesInternal2 = HermesInternal;
+        const error2 = new Error("Error when loading integration: " + closure_130_0);
+        throw error2;
+      } else if (arg0 === 1) {
+        c5 = 3;
+        throw value;
+      } else if (arg0 === 2) {
+        c4 = 0;
+        c5 = 3;
+        const obj3 = { value, done: true };
+        return obj3;
       } else {
-        try {
-          c5 = 2;
-          if (0 === table) {
-            if (arg0 === 1) {
-              c5 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c5 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              let element = tmp6;
-              let Sentry;
-              element = undefined;
-              table = undefined;
-              Sentry = callback(893).WINDOW.Sentry;
-              if (!Sentry) {
-                Sentry = {};
-              }
-              callback(893).WINDOW.Sentry = Sentry;
-              if (table[callback]) {
-                if (typeof Sentry[tmp50] === "function") {
-                  if (!("_isShim" in tmp27)) {
-                    c5 = 3;
-                    obj1 = { value: null, done: true };
-                    obj1[0] = tmp27;
-                    return obj1;
-                  }
-                }
-                const _document = tmp54(893).WINDOW.document;
-                element = <script />;
-                element.src = (function getScriptURL(arg0) {
-                  const client = callback(Sentry[2]).getClient();
-                  let str;
-                  if (client != null) {
-                    const options = client.getOptions();
-                    if (options != null) {
-                      str = options.cdnBaseUrl;
-                    }
-                  }
-                  if (!str) {
-                    str = "https://browser.sentry-cdn.com";
-                  }
-                  const obj = callback(Sentry[2]);
-                  const tmp = callback;
-                  const tmp2 = Sentry;
-                  return new URL("/" + callback(Sentry[2]).SDK_VERSION + "/" + arg0 + ".min.js", str).toString();
-                })(tmp53);
-                element.crossOrigin = "anonymous";
-                element.referrerPolicy = "strict-origin";
-                if (tmp51) {
-                  const attr = element.setAttribute("nonce", tmp51);
-                }
-                const promise = new Promise((arg0, arg1) => {
-                  closure_0 = arg0;
-                  const listener = element.addEventListener("load", () => callback());
-                  const listener1 = element.addEventListener("error", arg1);
-                });
-                const currentScript = tmp54(893).WINDOW.document.currentScript;
-                let head = tmp54(893).WINDOW.document.body;
-                if (!head) {
-                  head = tmp54(893).WINDOW.document.head;
-                }
-                if (!head) {
-                  let parentElement;
-                  if (currentScript != null) {
-                    parentElement = currentScript.parentElement;
-                  }
-                  head = parentElement;
-                }
-                if (head) {
-                  head.appendChild(element);
-                  c4 = 1;
-                  table = 2;
-                  c5 = 1;
-                  const obj2 = { value: null, done: false };
-                  obj2[0] = promise;
-                  return obj2;
-                } else {
-                  const _Error4 = Error;
-                  const _HermesInternal4 = HermesInternal;
-                  error = new Error("Could not find parent element to insert lazy-loaded " + tmp50 + " script");
-                  throw error;
-                }
-                const tmp28 = (function getScriptURL(arg0) {
-                  const client = callback(Sentry[2]).getClient();
-                  let str;
-                  if (client != null) {
-                    const options = client.getOptions();
-                    if (options != null) {
-                      str = options.cdnBaseUrl;
-                    }
-                  }
-                  if (!str) {
-                    str = "https://browser.sentry-cdn.com";
-                  }
-                  const obj = callback(Sentry[2]);
-                  const tmp = callback;
-                  const tmp2 = Sentry;
-                  return new URL("/" + callback(Sentry[2]).SDK_VERSION + "/" + arg0 + ".min.js", str).toString();
-                })(tmp53);
-              } else {
-                const _Error3 = Error;
-                const _HermesInternal3 = HermesInternal;
-                const error1 = new Error("Cannot lazy load integration: " + tmp50);
-                throw error1;
-              }
-            }
-          } else if (1 === tmp6) {
-            c4 = 0;
-            const _Error2 = Error;
-            const _HermesInternal2 = HermesInternal;
-            const error2 = new Error("Error when loading integration: " + callback);
-            throw error2;
-          } else if (arg0 === 1) {
-            c5 = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            c4 = 0;
-            c5 = 3;
-            const obj3 = { value: null, done: true };
-            obj3[0] = arg1;
-            return obj3;
-          } else {
-            c4 = 0;
-            table = Sentry[callback];
-            if (typeof table !== "function") {
-              const _Error = Error;
-              const _HermesInternal = HermesInternal;
-              const error3 = new Error("Could not load integration: " + callback);
-              throw error3;
-            } else {
-              c5 = 3;
-              obj = { value: null, done: true };
-              obj[0] = table;
-              return obj;
-            }
-          }
-        } catch (tmp40) {
-          if (tmp3 === c4) {
-            c5 = tmp2;
-            throw tmp40;
-          } else {
-            table = tmp;
-          }
+        c4 = 0;
+        closure_130_3 = closure_130_1[closure_130_0];
+        if (typeof closure_130_3 !== "function") {
+          const _Error = Error;
+          const _HermesInternal = HermesInternal;
+          const error3 = new Error("Could not load integration: " + closure_130_0);
+          throw error3;
+        } else {
+          c5 = 3;
+          obj = { value: closure_130_3, done: true };
+          return obj;
         }
       }
-    })();
-  });
-  closure_4 = tmp;
-  const apply = tmp.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
+    } catch (tmp40) {
+      if (tmp3 === c4) {
+        c5 = tmp2;
+        throw tmp40;
+      } else {
+        c3 = tmp;
+      }
+    }
   }
-  return applyArgumentsResult;
-}
+};
 Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
 let closure_3 = { replayIntegration: "replay", replayCanvasIntegration: "replay-canvas", feedbackIntegration: "feedback", feedbackModalIntegration: "feedback-modal", feedbackScreenshotIntegration: "feedback-screenshot", captureConsoleIntegration: "captureconsole", contextLinesIntegration: "contextlines", linkedErrorsIntegration: "linkederrors", dedupeIntegration: "dedupe", extraErrorDataIntegration: "extraerrordata", graphqlClientIntegration: "graphqlclient", httpClientIntegration: "httpclient", reportingObserverIntegration: "reportingobserver", rewriteFramesIntegration: "rewriteframes", browserProfilingIntegration: "browserprofiling", moduleMetadataIntegration: "modulemetadata", instrumentAnthropicAiClient: "instrumentanthropicaiclient", instrumentOpenAiClient: "instrumentopenaiclient", instrumentGoogleGenAIClient: "instrumentgooglegenaiclient", instrumentLangGraph: "instrumentlanggraph", createLangChainCallbackHandler: "createlangchaincallbackhandler" };
 
 export const lazyLoadIntegration = function lazyLoadIntegration(arg0, arg1) {
   const self = this;
-  const apply = _lazyLoadIntegration.apply;
+  const apply = closure_4.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {

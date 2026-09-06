@@ -21,7 +21,7 @@ class TDigest {
       num3 = importDefault;
     }
     obj.CX = num3;
-    rBTree = new require("Node").RBTree(compare_centroid_means);
+    rBTree = new closure_0(closure_1[0]).RBTree(compare_centroid_means);
     obj.centroids = rBTree;
     obj.nreset = 0;
     resetResult = obj.reset();
@@ -66,11 +66,11 @@ class TDigest {
     sum = str + self.n;
     items = [, , , , , ];
     items[0] = `${tmp} samples using ${self.size()} centroids`;
-    items[1] = `min = ${require("module_0")}`;
+    items[1] = `min = ${self.percentile(0)}`;
     items[2] = `Q1  = ${self.percentile(0.25)}`;
     items[3] = `Q2  = ${self.percentile(0.5)}`;
     items[4] = `Q3  = ${self.percentile(0.75)}`;
-    items[5] = `max = ${require("module_1")}`;
+    items[5] = `max = ${self.percentile(1)}`;
     return items.join("\n");
   }
   push(arg0, arg1) {
@@ -122,7 +122,7 @@ class TDigest {
         }
       }
       num = 0;
-      c0 = 0;
+      closure_0 = 0;
       centroids = self.centroids;
       eachResult = centroids.each((arg0) => {
         arg0.mean_cumn = c0 + arg0.n / 2;
@@ -130,9 +130,9 @@ class TDigest {
         arg0.cumn = sum;
         c0 = sum;
       });
-      tmp3 = c0;
-      self.last_cumulate = c0;
-      self.n = c0;
+      tmp3 = closure_0;
+      self.last_cumulate = closure_0;
+      self.n = closure_0;
     }
     return;
   }
@@ -145,7 +145,7 @@ class TDigest {
       tmp7 = global;
       centroids = self.centroids;
       obj = { mean: null };
-      obj[0] = global;
+      obj.mean = global;
       lowerBoundResult = centroids.lowerBound(obj);
       tmp8 = null;
       if (null === lowerBoundResult.data()) {
@@ -374,7 +374,7 @@ class TDigest {
         do {
           _Math = Math;
           _Math2 = Math;
-          push_centroidResult = require("Node");
+          push_centroidResult = self.push_centroid(toArrayResult.splice(Math.floor(Math.random() * toArrayResult.length), 1)[0]);
           length = toArrayResult.length;
         } while (length > 0);
       }
@@ -431,7 +431,7 @@ class Digest {
       tmp4 = compare_centroid_means;
       tmp5 = new.target;
       tmp6 = new.target;
-      rBTree = new require("Node").RBTree(compare_centroid_means);
+      rBTree = new closure_0(closure_1[0]).RBTree(compare_centroid_means);
       tmp8 = rBTree;
       obj.centroids = rBTree;
       num4 = 0;

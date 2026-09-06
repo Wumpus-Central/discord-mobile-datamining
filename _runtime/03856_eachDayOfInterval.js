@@ -1,20 +1,18 @@
 // === Module 3856: eachDayOfInterval ===
 
 // Module 3856 (eachDayOfInterval)
-import _typeof from "_typeof" /* 3650 */;
+import _typeof from "module_3650" /* 3650 */;
 import requiredArgs from "requiredArgs" /* 3651 */;
 
 if (!_typeof) {
-  let obj = { default: null };
-  obj[0] = _typeof;
+  let obj = { default: _typeof };
   let tmp3 = obj;
 } else {
   tmp3 = _typeof;
 }
 _typeof = tmp3;
 if (!requiredArgs) {
-  obj = { default: null };
-  obj[0] = requiredArgs;
+  obj = { default: requiredArgs };
   let tmp5 = obj;
 } else {
   tmp5 = requiredArgs;
@@ -50,14 +48,8 @@ export default function eachDayOfInterval(arg0, step) {
         const items = [];
         if (defaultResult1.getTime() <= time) {
           do {
-            let tmp15 = _typeof;
             let arr = items.push(_typeof.default(defaultResult1));
             let setDateResult = defaultResult1.setDate(defaultResult1.getDate() + NumberResult);
-            let tmp18 = defaultResult1;
-            let num6 = 0;
-            let num7 = 0;
-            let num8 = 0;
-            let num9 = 0;
             let setHoursResult1 = defaultResult1.setHours(0, 0, 0, 0);
             time1 = defaultResult1.getTime();
           } while (time1 <= time);

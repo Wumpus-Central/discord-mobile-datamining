@@ -1,15 +1,15 @@
 // === Module 235: ? ===
 
 // Module 235
-import MessageQueueDefault from "MessageQueue" /* 236 */;
+import _modDef236 from "module_236" /* 236 */;
 
 const require = arg1;
-MessageQueueDefault("Systrace", () => require(46) /* isEnabled */);
+_modDef236("Systrace", () => require("module_46"));
 if (true !== global.RN$Bridgeless) {
-  MessageQueueDefault("JSTimers", () => require(183) /* _callTimer */.default);
+  _modDef236("JSTimers", () => require("_callTimer").default);
 }
-MessageQueueDefault("RCTLog", () => require(237).default);
-MessageQueueDefault("RCTDeviceEventEmitter", () => require(92) /* _isNativeReflectConstruct */.default);
-MessageQueueDefault("RCTNativeAppEventEmitter", () => require(238) /* _isNativeReflectConstruct */.default);
-MessageQueueDefault("GlobalPerformanceLogger", () => require(239).default);
-MessageQueueDefault("HMRClient", () => require(240).default);
+_modDef236("RCTLog", () => require("module_237").default);
+_modDef236("RCTDeviceEventEmitter", () => require("module_92").default);
+_modDef236("RCTNativeAppEventEmitter", () => require("module_238").default);
+_modDef236("GlobalPerformanceLogger", () => require("module_239").default);
+_modDef236("HMRClient", () => require("module_240").default);

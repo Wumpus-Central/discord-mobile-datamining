@@ -1,11 +1,11 @@
 // === Module 4810: iterateValue ===
 
 // Module 4810 (iterateValue)
-import getIterator from "getIterator" /* 4811 */;
+import _mod4811 from "module_4811" /* 4811 */;
 
 
 export default function iterateValue(arg0) {
-  const tmp3 = getIterator(arg0);
+  const tmp3 = _mod4811(arg0);
   if (tmp3) {
     if (arguments.length > 1) {
       let tmp9 = tmp(4812)(tmp3, arguments[1]);

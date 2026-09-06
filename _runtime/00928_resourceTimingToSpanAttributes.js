@@ -6,12 +6,12 @@ import extractNetworkProtocol from "extractNetworkProtocol" /* 924 */;
 require = arg1;
 const dependencyMap = arg6;
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
-arg5.resourceTimingToSpanAttributes = function resourceTimingToSpanAttributes(nextHopProtocol) {
+
+export const resourceTimingToSpanAttributes = function resourceTimingToSpanAttributes(nextHopProtocol) {
   let obj = {};
   if (null != nextHopProtocol.nextHopProtocol) {
     const result = extractNetworkProtocol.extractNetworkProtocol(nextHopProtocol.nextHopProtocol);
     ({ version: obj["network.protocol.version"], name: obj["network.protocol.name"] } = result);
-    const obj2 = extractNetworkProtocol;
   }
   if (obj3.browserPerformanceTimeOrigin()) {
     obj = {};
@@ -168,8 +168,8 @@ arg5.resourceTimingToSpanAttributes = function resourceTimingToSpanAttributes(ne
     const _Object = Object;
     const _Object2 = Object;
     const entries = Object.entries(obj);
-    let fromEntriesResult = Object.fromEntries(entries.filter((arg0) => {
-      [, tmp] = arg0;
+    let fromEntriesResult = Object.fromEntries(entries.filter((item) => {
+      [, tmp] = item;
       return null != tmp;
     }));
   } else {

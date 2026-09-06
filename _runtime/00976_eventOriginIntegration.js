@@ -1,7 +1,8 @@
 // === Module 976: eventOriginIntegration ===
 
 // Module 976 (eventOriginIntegration)
-arg5.eventOriginIntegration = () => ({
+
+export () => ({
   name: "EventOrigin",
   setupOnce() {
 
@@ -16,4 +17,4 @@ arg5.eventOriginIntegration = () => ({
     tags.tags["event.environment"] = "javascript";
     return tags;
   }
-});
+})

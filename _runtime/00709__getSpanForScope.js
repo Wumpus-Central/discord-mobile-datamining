@@ -1,19 +1,19 @@
 // === Module 709: _getSpanForScope ===
 
 // Module 709 (_getSpanForScope)
-import addNonEnumerableProperty from "addNonEnumerableProperty" /* 687 */;
+import _mod687 from "module_687" /* 687 */;
 
 require = arg1;
 const dependencyMap = arg6;
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 const _sentrySpan = "_sentrySpan";
-arg5._getSpanForScope = function _getSpanForScope(arg0) {
+
+export const _getSpanForScope = function _getSpanForScope(arg0) {
   return arg0[_sentrySpan];
 };
-arg5._setSpanForScope = function _setSpanForScope(arg0, arg1) {
+export const _setSpanForScope = function _setSpanForScope(arg0, arg1) {
   if (arg1) {
-    const result = addNonEnumerableProperty.addNonEnumerableProperty(arg0, _sentrySpan, arg1);
-    const obj = addNonEnumerableProperty;
+    const result = _mod687.addNonEnumerableProperty(arg0, _sentrySpan, arg1);
   } else {
     delete tmp2[tmp];
   }

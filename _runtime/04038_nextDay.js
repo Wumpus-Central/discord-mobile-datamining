@@ -1,29 +1,26 @@
 // === Module 4038: nextDay ===
 
 // Module 4038 (nextDay)
-import addDays from "addDays" /* 3798 */;
-import getDay from "getDay" /* 3913 */;
+import module_3798 from "module_3798" /* 3798 */;
+import module_3913 from "module_3913" /* 3913 */;
 import requiredArgs from "requiredArgs" /* 3651 */;
 
-if (!addDays) {
-  let obj = { default: null };
-  obj[0] = addDays;
+if (!module_3798) {
+  let obj = { default: module_3798 };
   let tmp3 = obj;
 } else {
-  tmp3 = addDays;
+  tmp3 = module_3798;
 }
-addDays = tmp3;
-if (!getDay) {
-  obj = { default: null };
-  obj[0] = getDay;
+module_3798 = tmp3;
+if (!module_3913) {
+  obj = { default: module_3913 };
   let tmp5 = obj;
 } else {
-  tmp5 = getDay;
+  tmp5 = module_3913;
 }
-getDay = tmp5;
+module_3913 = tmp5;
 if (!requiredArgs) {
-  obj = { default: null };
-  obj[0] = requiredArgs;
+  obj = { default: requiredArgs };
   let tmp7 = obj;
 } else {
   tmp7 = requiredArgs;
@@ -32,11 +29,11 @@ requiredArgs = tmp7;
 
 export default function nextDay(arg0, arg1) {
   requiredArgs.default(2, arguments);
-  const diff = arg1 - getDay.default(arg0);
+  const diff = arg1 - module_3913.default(arg0);
   let sum = diff;
   if (diff <= 0) {
     sum = diff + 7;
   }
-  return addDays.default(arg0, sum);
+  return module_3798.default(arg0, sum);
 };
 export default exports.default;

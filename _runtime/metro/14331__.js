@@ -1,13 +1,13 @@
 // === Module 14331: ? ===
 
 // Module 14331
-import all from "all" /* 14323 */;
+import _mod14323 from "module_14323" /* 14323 */;
 
 
 export default (arg0, arg1) => {
   if ("string" === arg1) {
     const toString = arg0.toString;
-    if (all(toString)) {
+    if (_mod14323(toString)) {
       const tmp4 = tmp(14330)(toString, arg0);
       if (!tmpResult(tmp4)) {
         return tmp4;
@@ -16,7 +16,7 @@ export default (arg0, arg1) => {
     }
   }
   const valueOf = arg0.valueOf;
-  if (all(valueOf)) {
+  if (_mod14323(valueOf)) {
     let tmp5Result = tmp5(14322);
     const tmp8 = tmp5(14330)(valueOf, arg0);
     if (!tmp5Result(tmp8)) {

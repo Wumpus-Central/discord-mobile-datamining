@@ -1,10 +1,9 @@
 // === Module 401: ? ===
 
 // Module 401
-import noopAll from "noop" /* 19 */;
 import _queryCacheDefault from "_queryCache" /* 328 */;
-import createAnimatedComponentDefault from "createAnimatedComponent" /* 387 */;
+import noop from "module_19" /* 19 */;
+import module_387 from "unstable_createAnimatedComponentWithAllowlist" /* 387 */;
 
-noopAll;
 
-export default createAnimatedComponentDefault(_queryCacheDefault);
+export default module_387(_queryCacheDefault);

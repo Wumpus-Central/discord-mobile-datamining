@@ -1,7 +1,7 @@
 // === Module 4161: s ===
 
 // Module 4161 (s)
-import hooks from "hooks" /* 4153 */;
+import _mod4153 from "module_4153" /* 4153 */;
 
 const fn = function s(moment) {
   const tmp = /(janv\.?|févr\.?|mars|avr\.?|mai|juin|juil\.?|août|sept\.?|oct\.?|nov\.?|déc\.?|janvier|février|mars|avril|mai|juin|juillet|août|septembre|octobre|novembre|décembre)/i;
@@ -58,7 +58,7 @@ const fn = function s(moment) {
 if (typeof exports === "object") {
   if (undefined !== module) {
     if (typeof require === "function") {
-      fn(hooks);
+      fn(_mod4153);
     }
   }
 }

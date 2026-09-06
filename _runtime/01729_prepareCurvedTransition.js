@@ -1,12 +1,16 @@
 // === Module 1729: prepareCurvedTransition ===
 
 // Module 1729 (prepareCurvedTransition)
-const require = arg1;
+import _mod1661 from "module_1661" /* 1661 */;
+import WebEasings from "WebEasings" /* 1695 */;
+
+require = arg1;
 const dependencyMap = arg6;
-arg5.prepareCurvedTransition = function prepareCurvedTransition(cloneNode, duration, easingY, dummyTransitionKeyframeName) {
+
+export const prepareCurvedTransition = function prepareCurvedTransition(cloneNode, duration, easingY, dummyTransitionKeyframeName) {
   let length;
-  const dummyAnimationConfig = { animationName: dummyTransitionKeyframeName, animationType: _require(dummy[1]).LayoutAnimationType.LAYOUT, duration: duration.duration, delay: duration.delay, easing: _require(dummy[0]).getEasingByName(easingY.easingY), callback: null, reversed: false };
-  dummy = cloneNode.cloneNode(true);
+  const dummyAnimationConfig = { animationName: dummyTransitionKeyframeName, animationType: _mod1661.LayoutAnimationType.LAYOUT, duration: duration.duration, delay: duration.delay, easing: WebEasings.getEasingByName(easingY.easingY), callback: null, reversed: false };
+  const dummy = cloneNode.cloneNode(true);
   dummy.isDummy = true;
   dummy.style.animationName = "";
   dummy.style.position = "absolute";
@@ -15,15 +19,12 @@ arg5.prepareCurvedTransition = function prepareCurvedTransition(cloneNode, durat
   dummy.style.margin = "0px";
   dummy.style.width = "100%";
   dummy.style.height = "100%";
-  _require = cloneNode;
-  let map;
   let backgroundColor;
   let onFinalize;
   let animationCancelCallback;
   let animationEndCallback;
-  const obj2 = _require(dummy[0]);
-  duration.easing = _require(dummy[0]).getEasingByName(easingY.easingX);
-  map = new Map();
+  duration.easing = WebEasings.getEasingByName(easingY.easingX);
+  const map = new Map();
   let num = 0;
   if (0 < cloneNode.children.length) {
     do {
@@ -41,67 +42,69 @@ arg5.prepareCurvedTransition = function prepareCurvedTransition(cloneNode, durat
   };
   animationCancelCallback = function animationCancelCallback() {
     let length;
-    if (typeof onFinalize !== "function") {
-      HermesBuiltin.throwTypeError();
+    if (typeof onFinalize === "function") {
+      if (cloneNode.contains(dummy)) {
+        obj.removeChild(dummy);
+      }
+      let num = 0;
+      if (0 < cloneNode.children.length) {
+        do {
+          let tmp3 = obj.children[num];
+          tmp3.style.display = obj2.get(tmp3);
+          num = num + 1;
+          length = obj.children.length;
+        } while (num < length);
+      }
+      cloneNode.style.backgroundColor = backgroundColor;
+      const removed = cloneNode.removeEventListener("animationcancel", animationCancelCallback);
+    } else {
+      throw new TypeError("Trying to call a non-function");
     }
-    if (cloneNode.contains(dummy)) {
-      obj.removeChild(dummy);
-    }
-    let num = 0;
-    if (0 < cloneNode.children.length) {
-      do {
-        let tmp3 = obj.children[num];
-        tmp3.style.display = obj2.get(tmp3);
-        num = num + 1;
-        length = obj.children.length;
-      } while (num < length);
-    }
-    cloneNode.style.backgroundColor = backgroundColor;
-    const removed = cloneNode.removeEventListener("animationcancel", animationCancelCallback);
   };
   animationEndCallback = function animationEndCallback() {
     let length;
-    if (typeof onFinalize !== "function") {
-      HermesBuiltin.throwTypeError();
+    if (typeof onFinalize === "function") {
+      if (cloneNode.contains(dummy)) {
+        obj.removeChild(dummy);
+      }
+      let num = 0;
+      if (0 < cloneNode.children.length) {
+        do {
+          let tmp3 = obj.children[num];
+          tmp3.style.display = obj2.get(tmp3);
+          num = num + 1;
+          length = obj.children.length;
+        } while (num < length);
+      }
+      cloneNode.style.backgroundColor = backgroundColor;
+      const removed = cloneNode.removeEventListener("animationend", animationEndCallback);
+    } else {
+      throw new TypeError("Trying to call a non-function");
     }
-    if (cloneNode.contains(dummy)) {
-      obj.removeChild(dummy);
-    }
-    let num = 0;
-    if (0 < cloneNode.children.length) {
-      do {
-        let tmp3 = obj.children[num];
-        tmp3.style.display = obj2.get(tmp3);
-        num = num + 1;
-        length = obj.children.length;
-      } while (num < length);
-    }
-    cloneNode.style.backgroundColor = backgroundColor;
-    const removed = cloneNode.removeEventListener("animationend", animationEndCallback);
   };
   const listener = cloneNode.addEventListener("animationend", animationEndCallback);
   const listener1 = cloneNode.addEventListener("animationcancel", animationCancelCallback);
   cloneNode.appendChild(dummy);
   return { dummy, dummyAnimationConfig };
 };
-arg5.CurvedTransition = function CurvedTransition(name, name2, translateX) {
+export const CurvedTransition = function CurvedTransition(name, name2, translateX) {
   let obj = { firstKeyframeObj: null, secondKeyframeObj: null };
   obj = { name, style: null, duration: 300 };
   obj = { 0: null };
-  obj1 = { transform: null };
+  const obj1 = { transform: null };
   const items = [{ translateX: "" + translateX.translateX + "px", scale: "" + translateX.scaleX + "," + translateX.scaleY }];
-  obj1[0] = items;
+  obj1.transform = items;
   obj[0] = obj1;
-  obj[1] = obj;
-  obj[0] = obj;
+  obj.style = obj;
+  obj.firstKeyframeObj = obj;
   const obj3 = { name: name2, style: null, duration: 300 };
   const obj4 = { 0: null };
   const obj5 = { transform: null };
   const obj2 = { translateX: "" + translateX.translateX + "px", scale: "" + translateX.scaleX + "," + translateX.scaleY };
   const items1 = [{ translateY: "" + translateX.translateY + "px", scale: "" + translateX.scaleX + "," + translateX.scaleY }];
-  obj5[0] = items1;
+  obj5.transform = items1;
   obj4[0] = obj5;
-  obj3[1] = obj4;
-  obj[1] = obj3;
+  obj3.style = obj4;
+  obj.secondKeyframeObj = obj3;
   return obj;
 };

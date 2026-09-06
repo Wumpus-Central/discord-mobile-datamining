@@ -1,7 +1,7 @@
 // === Module 1324: RequestBase ===
 
 // Module 1324 (RequestBase)
-import _createForOfIteratorHelper from "_createForOfIteratorHelper" /* 1274 */;
+import _mod1274 from "module_1274" /* 1274 */;
 import _mod1318 from "module_1318" /* 1318 */;
 
 class RequestBase {
@@ -43,7 +43,7 @@ class RequestBase {
           tmp4 = key10002;
           tmp5 = closure_0;
           tmp6 = closure_1;
-          obj = require("_createForOfIteratorHelper");
+          obj = closure_0(closure_1[0]);
           if (!obj.hasOwn(arg0, key10002)) {
             continue;
           } else {
@@ -188,27 +188,27 @@ class RequestBase {
       tmp4 = new.target;
       tmp5 = new.target;
       promise = new Promise((arg0, arg1) => {
-        const _self = arg0;
+        _self = arg0;
         closure_1 = arg1;
         _self.on("abort", () => {
-          if (!lib._maxRetries) {
+          if (!self._maxRetries) {
             if (tmp.timedout) {
               if (tmp.timedoutError) {
-                lib(tmp.timedoutError);
+                closure_1(tmp.timedoutError);
               }
             }
             const _Error = Error;
-            error = new Error("Aborted");
+            const error = new Error("Aborted");
             error.code = "ABORTED";
             ({ status: tmp5.status, method: tmp5.method, url: tmp5.url } = tmp);
-            lib(error);
+            closure_1(error);
           }
         });
         _self.end((arg0, arg1) => {
           if (arg0) {
-            lib(arg0);
+            closure_1(arg0);
           } else {
-            callback(arg1);
+            closure_0(arg1);
           }
         });
       });
@@ -266,14 +266,14 @@ class RequestBase {
   }
   set(arg0, arg1) {
     self = this;
-    obj = require("_createForOfIteratorHelper");
+    obj = closure_0(closure_1[0]);
     if (obj.isObject(global)) {
       tmp2 = global;
       for (const key10016 in arg0) {
         tmp4 = key10016;
         tmp5 = closure_0;
         tmp6 = closure_1;
-        obj2 = require("_createForOfIteratorHelper");
+        obj2 = closure_0(closure_1[0]);
         if (!obj2.hasOwn(arg0, key10016)) {
           continue;
         } else {
@@ -320,14 +320,14 @@ class RequestBase {
       } else {
         tmp = closure_0;
         tmp2 = closure_1;
-        obj = require("_createForOfIteratorHelper");
+        obj = closure_0(closure_1[0]);
         if (obj.isObject(global)) {
           tmp16 = global;
           for (const key10035 in arg0) {
             tmp31 = key10035;
             tmp32 = closure_0;
             tmp33 = closure_1;
-            obj3 = require("_createForOfIteratorHelper");
+            obj3 = closure_0(closure_1[0]);
             if (!obj3.hasOwn(arg0, key10035)) {
               continue;
             } else {
@@ -347,7 +347,7 @@ class RequestBase {
               tmp28 = key10029;
               tmp29 = closure_0;
               tmp30 = closure_1;
-              obj2 = require("_createForOfIteratorHelper");
+              obj2 = closure_0(closure_1[0]);
               if (!obj2.hasOwn(arg1, key10029)) {
                 continue;
               } else {
@@ -399,12 +399,12 @@ class RequestBase {
       if (self.req) {
         tmp2 = closure_0;
         tmp3 = closure_1;
-        obj = require("module_1318");
+        obj = closure_0(closure_1[1]);
         tmp4 = globalThis;
         _process = process;
         str = "v13.0.0";
         if (obj.gte(process.version, "v13.0.0")) {
-          tmp2Result = require("module_1318");
+          tmp2Result = tmp2(tmp3[1]);
           _process2 = process;
           str2 = "v14.0.0";
           if (tmp2Result.lt(process.version, "v14.0.0")) {
@@ -486,29 +486,29 @@ class RequestBase {
     }
   }
   toJSON() {
-    obj = { method: this.method, url: this.url, data: this._data, headers: this._header };
-    return obj;
+    request = { method: this.method, url: this.url, data: this._data, headers: this._header };
+    return request;
   }
   send(arg0) {
     self = this;
     tmp2 = closure_0;
     tmp3 = closure_1;
-    obj = require("_createForOfIteratorHelper");
+    obj = closure_0(closure_1[0]);
     isObjectResult = obj.isObject(global);
-    content_type = this._header["content-type"];
+    prop = this._header["content-type"];
     if (this._formData) {
-      tmp35 = globalThis;
+      tmp36 = globalThis;
       _Error4 = Error;
-      tmp36 = new.target;
-      str11 = ".send() can't be used if .attach() or .field() is used. Please use only .send() or only .field() & .attach()";
       tmp37 = new.target;
+      str11 = ".send() can't be used if .attach() or .field() is used. Please use only .send() or only .field() & .attach()";
+      tmp38 = new.target;
       error = new Error(".send() can't be used if .attach() or .field() is used. Please use only .send() or only .field() & .attach()");
-      tmp39 = error;
+      tmp40 = error;
       throw error;
     } else {
       if (isObjectResult) {
         if (!self._data) {
-          tmp5 = globalThis;
+          tmp6 = globalThis;
           _Array = Array;
           if (Array.isArray(global)) {
             self._data = [];
@@ -517,35 +517,35 @@ class RequestBase {
           }
         }
         if (isObjectResult) {
-          tmp2Result = require("_createForOfIteratorHelper");
+          tmp2Result = tmp2(tmp3[0]);
           if (tmp2Result.isObject(self._data)) {
-            tmp18 = global;
-            tmp12 = content_type;
+            tmp19 = global;
+            tmp13 = prop;
             keys = Object.keys();
             if (keys !== undefined) {
-              tmp12 = content_type;
-              tmp20 = keys[tmp];
-              while (tmp20 !== undefined) {
-                tmp40 = tmp20;
-                if (typeof global[tmp20] === "bigint") {
-                  if (!global[tmp20].toJSON) {
-                    tmp21 = globalThis;
+              tmp13 = prop;
+              tmp21 = keys[tmp];
+              while (tmp21 !== undefined) {
+                tmp41 = tmp21;
+                if (typeof global[tmp21] === "bigint") {
+                  if (!global[tmp21].toJSON) {
+                    tmp22 = globalThis;
                     _Error2 = Error;
-                    tmp22 = new.target;
-                    str8 = "Cannot serialize BigInt value to json";
                     tmp23 = new.target;
+                    str8 = "Cannot serialize BigInt value to json";
+                    tmp24 = new.target;
                     error1 = new Error("Cannot serialize BigInt value to json");
-                    tmp25 = error1;
+                    tmp26 = error1;
                     throw error1;
                   }
                 }
-                tmp26 = closure_0;
-                tmp27 = closure_1;
-                obj3 = require("_createForOfIteratorHelper");
-                if (!obj3.hasOwn(global, tmp20)) {
+                tmp27 = closure_0;
+                tmp28 = closure_1;
+                obj3 = closure_0(closure_1[0]);
+                if (!obj3.hasOwn(global, tmp21)) {
                   continue;
                 } else {
-                  self._data[tmp20] = global[tmp20];
+                  self._data[tmp21] = global[tmp21];
                   continue;
                 }
                 continue;
@@ -557,7 +557,7 @@ class RequestBase {
             _isHostResult = self._isHost(global);
           }
           if (!_isHostResult) {
-            _isHostResult = tmp12;
+            _isHostResult = tmp13;
           }
           if (!_isHostResult) {
             str9 = "json";
@@ -566,16 +566,16 @@ class RequestBase {
           return self;
         }
         if (typeof global === "bigint") {
-          tmp13 = globalThis;
+          tmp14 = globalThis;
           _Error = Error;
-          tmp14 = new.target;
-          str7 = "Cannot send value of type BigInt";
           tmp15 = new.target;
+          str7 = "Cannot send value of type BigInt";
+          tmp16 = new.target;
           error2 = new Error("Cannot send value of type BigInt");
-          tmp17 = error2;
+          tmp18 = error2;
           throw error2;
         } else if (typeof global === "string") {
-          if (!content_type) {
+          if (!prop) {
             str = "form";
             typeResult1 = self.type("form");
           }
@@ -589,7 +589,7 @@ class RequestBase {
           if ("application/x-www-form-urlencoded" === trimmed) {
             combined = global;
             if (self._data) {
-              tmp11 = globalThis;
+              tmp12 = globalThis;
               _HermesInternal = HermesInternal;
               str5 = "&";
               str6 = "";
@@ -597,26 +597,26 @@ class RequestBase {
             }
             sum = combined;
           } else {
-            tmp8 = self._data || "";
-            sum = tmp8 + global;
+            tmp9 = self._data || "";
+            sum = tmp9 + global;
           }
           self._data = sum;
-          tmp12 = trimmed;
+          tmp13 = trimmed;
         } else {
           self._data = global;
-          tmp12 = content_type;
+          tmp13 = prop;
         }
       }
       if (global) {
         if (self._data) {
           if (self._isHost(self._data)) {
-            tmp30 = globalThis;
+            tmp31 = globalThis;
             _Error3 = Error;
-            tmp31 = new.target;
-            str10 = "Can't merge these send calls";
             tmp32 = new.target;
+            str10 = "Can't merge these send calls";
+            tmp33 = new.target;
             error3 = new Error("Can't merge these send calls");
-            tmp34 = error3;
+            tmp35 = error3;
             throw error3;
           }
         }
@@ -657,7 +657,7 @@ class RequestBase {
           sorted1 = parts.sort();
         }
         url2 = self.url;
-        str2 = require("module_0") + str2;
+        str2 = url2.slice(0, index) + str2;
         self.url = str2 + parts.join("&");
       }
     }

@@ -1,8 +1,8 @@
 // === Module 11264: SwipeDirection ===
 
 // Module 11264 (SwipeDirection)
-import str2Default from "str2" /* 11265 */;
+import leftThresholdDefault from "leftThreshold" /* 11265 */;
 
 
-export default str2Default;
-export const SwipeDirection = require("module_11266").SwipeDirection;
+export default leftThresholdDefault;
+export const SwipeDirection = fn(11266).SwipeDirection;

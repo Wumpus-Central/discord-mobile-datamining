@@ -1,11 +1,11 @@
 // === Module 1620: initialWindowMetrics ===
 
 // Module 1620 (initialWindowMetrics)
-import importDefaultResult from "RNCSafeAreaContext" /* 1621 */;
+import RNCSafeAreaContext from "RNCSafeAreaContext" /* 1621 */;
 
 let initialWindowMetrics;
-if (importDefaultResult != null) {
-  const getConstants = importDefaultResult.getConstants;
+if (RNCSafeAreaContext != null) {
+  const getConstants = RNCSafeAreaContext.getConstants;
   if (getConstants != null) {
     const constants = getConstants();
     if (constants != null) {

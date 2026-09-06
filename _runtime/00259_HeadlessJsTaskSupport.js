@@ -1,12 +1,11 @@
 // === Module 259: HeadlessJsTaskSupport ===
 
 // Module 259 (HeadlessJsTaskSupport)
-import HeadlessJsTaskSupportDefault from "HeadlessJsTaskSupport" /* 260 */;
+import _modDef260 from "module_260" /* 260 */;
 
-for (const key10016 in require("HeadlessJsTaskSupport")) {
-  let tmp2 = key10016;
-  arg5[key10016] = require("HeadlessJsTaskSupport")[key10016];
+for (const key10016 in require("module_260")) {
+  arg5[key10016] = require("module_260")[key10016];
   continue;
 }
 
-export default HeadlessJsTaskSupportDefault;
+export default _modDef260;

@@ -2,7 +2,8 @@
 
 // Module 785 (severityLevelFromString)
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
-arg5.severityLevelFromString = function severityLevelFromString(arg0) {
+
+export const severityLevelFromString = function severityLevelFromString(arg0) {
   let str = "warning";
   if ("warn" !== arg0) {
     const items = ["fatal", "error", "warning", "log", "info", "debug"];

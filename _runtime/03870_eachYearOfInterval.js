@@ -1,20 +1,18 @@
 // === Module 3870: eachYearOfInterval ===
 
 // Module 3870 (eachYearOfInterval)
-import _typeof from "_typeof" /* 3650 */;
+import _typeof from "module_3650" /* 3650 */;
 import requiredArgs from "requiredArgs" /* 3651 */;
 
 if (!_typeof) {
-  let obj = { default: null };
-  obj[0] = _typeof;
+  let obj = { default: _typeof };
   let tmp3 = obj;
 } else {
   tmp3 = _typeof;
 }
 _typeof = tmp3;
 if (!requiredArgs) {
-  obj = { default: null };
-  obj[0] = requiredArgs;
+  obj = { default: requiredArgs };
   let tmp5 = obj;
 } else {
   tmp5 = requiredArgs;
@@ -36,7 +34,6 @@ export default function eachYearOfInterval(arg0) {
     defaultResult1.setMonth(0, 1);
     if (defaultResult1.getTime() <= time) {
       do {
-        let tmp11 = _typeof;
         let arr = items.push(_typeof.default(defaultResult1));
         let setFullYearResult = defaultResult1.setFullYear(defaultResult1.getFullYear() + 1);
         time1 = defaultResult1.getTime();

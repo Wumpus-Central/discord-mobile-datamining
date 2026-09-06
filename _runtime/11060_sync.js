@@ -1,9 +1,9 @@
 // === Module 11060: sync ===
 
 // Module 11060 (sync)
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import _mod17 from "module_17" /* 17 */;
 
-const RNIapIosSk2 = get_ActivityIndicator.NativeModules.RNIapIosSk2;
+const RNIapIosSk2 = _mod17.NativeModules.RNIapIosSk2;
 
 export const sync = () => RNIapIosSk2.sync();
 export const isEligibleForIntroOffer = (arg0) => RNIapIosSk2.isEligibleForIntroOffer(arg0);

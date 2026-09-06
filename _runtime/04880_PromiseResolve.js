@@ -1,11 +1,11 @@
 // === Module 4880: PromiseResolve ===
 
 // Module 4880 (PromiseResolve)
-import getEvalledConstructor from "getEvalledConstructor" /* 1282 */;
+import _mod1282 from "module_1282" /* 1282 */;
 import _mod1304 from "module_1304" /* 1304 */;
 import callBind from "callBind" /* 1454 */;
 
-const tmp = getEvalledConstructor("%Promise.resolve%", true);
+const tmp = _mod1282("%Promise.resolve%", true);
 let tmp2 = tmp;
 if (tmp) {
   tmp2 = callBind(tmp);

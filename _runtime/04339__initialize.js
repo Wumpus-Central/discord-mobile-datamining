@@ -1,22 +1,21 @@
 // === Module 4339: _initialize ===
 
 // Module 4339 (_initialize)
-import _initialize from "asyncGeneratorStep" /* 5 */;
-import { NitroModules } from "module_4293" /* 4293 */;
+import "asyncGeneratorStep";
 
+const NitroModules = fn(4293).NitroModules;
 let closure_1 = NitroModules.createHybridObject("RiveRuntime");
-_initialize = function _initialize() {
+let asyncGeneratorStep = function _initialize() {
   const self = this;
-  const tmp = _initialize(function*() {
+  const tmp = asyncGeneratorStep(async (arg0, value) => {
     if (c3 === 2) {
       c3 = 3;
-      HermesBuiltin.throwTypeError();
+      throw new TypeError("Generator functions may not be called on executing generators");
     } else if (tmp3 === 3) {
       if (arg0 === 1) {
-        throw arg1;
+        throw value;
       } else if (arg0 === 2) {
-        let obj = { value: null, done: true };
-        obj[0] = arg1;
+        let obj = { value, done: true };
         return obj;
       } else {
         return { value: "HermesInternal", done: null };
@@ -27,39 +26,35 @@ _initialize = function _initialize() {
         if (0 === c2) {
           if (arg0 === 1) {
             c3 = 3;
-            throw arg1;
+            throw value;
           } else if (arg0 === 2) {
             c3 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
+            obj = { value, done: true };
             return obj;
           } else {
-            closure_1 = tmp4;
             c2 = 1;
             c3 = 1;
-            obj1 = { value: null, done: false };
-            obj1[0] = closure_1_1.initialize();
+            const obj1 = { value: tmp4.initialize(), done: false };
             return obj1;
           }
         } else if (arg0 === 1) {
           c3 = 3;
-          throw arg1;
+          throw value;
         } else if (arg0 === 2) {
           c3 = 3;
-          obj = { value: null, done: true };
-          obj[0] = arg1;
+          obj = { value, done: true };
           return obj;
-        } else if (closure_1_1.isInitialized) {
+        } else if (tmp4.isInitialized) {
           c3 = 3;
           return { value: "HermesInternal", done: null };
         } else {
-          const initError = closure_1_1.initError;
+          const initError = tmp4.initError;
           c0 = initError;
           if (initError == null) {
             c0 = "Unknown error";
           }
           const _HermesInternal = HermesInternal;
-          error = new Error("Rive initialization failed: " + c0);
+          const error = new Error("Rive initialization failed: " + c0);
           throw error;
         }
       } catch (tmp15) {
@@ -68,7 +63,7 @@ _initialize = function _initialize() {
       }
     }
   });
-  closure_0 = tmp;
+  asyncGeneratorStep = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -81,7 +76,7 @@ _initialize = function _initialize() {
 export const RiveRuntime = {
   initialize() {
     const self = this;
-    const apply = _initialize.apply;
+    const apply = asyncGeneratorStep.apply;
     if (typeof apply === "unknown") {
       let applyArgumentsResult = HermesBuiltin.applyArguments(self);
     } else {
@@ -90,8 +85,9 @@ export const RiveRuntime = {
     return applyArgumentsResult;
   },
   getStatus() {
-    const obj = { isInitialized: closure_1.isInitialized, error: initError };
-    initError = closure_1.initError;
+    const obj = { isInitialized: closure_1.isInitialized, error: null };
+    const initError = closure_1.initError;
+    obj.error = initError;
     return obj;
   }
 };

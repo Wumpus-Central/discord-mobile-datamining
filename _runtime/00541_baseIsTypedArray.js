@@ -1,7 +1,7 @@
 // === Module 541: baseIsTypedArray ===
 
 // Module 541 (baseIsTypedArray)
-import isObjectLike from "isObjectLike" /* 535 */;
+import _mod535 from "module_535" /* 535 */;
 
 const obj = {};
 obj["[object Uint32Array]"] = true;
@@ -30,7 +30,7 @@ obj["[object Array]"] = false;
 obj["[object Arguments]"] = false;
 
 export default function baseIsTypedArray(arg0) {
-  let tmp3 = isObjectLike(arg0) && tmp(519)(arg0.length);
+  let tmp3 = _mod535(arg0) && tmp(519)(arg0.length);
   if (tmp3) {
     tmp3 = obj[tmp(undefined, 522)(undefined, arg0)];
   }

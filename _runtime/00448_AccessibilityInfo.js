@@ -1,12 +1,11 @@
 // === Module 448: AccessibilityInfo ===
 
 // Module 448 (AccessibilityInfo)
-import AccessibilityInfoDefault from "AccessibilityInfo" /* 449 */;
+import _modDef449 from "module_449" /* 449 */;
 
-for (const key10013 in require("AccessibilityInfo")) {
-  let tmp2 = key10013;
-  arg5[key10013] = require("AccessibilityInfo")[key10013];
+for (const key10013 in require("module_449")) {
+  arg5[key10013] = require("module_449")[key10013];
   continue;
 }
 
-export default AccessibilityInfoDefault;
+export default _modDef449;

@@ -1,21 +1,18 @@
 // === Module 1160: hydrateSingle ===
 
 // Module 1160 (hydrateSingle)
-import closure_2 from "_slicedToArray" /* 32 */;
+import _slicedToArray from "module_32" /* 32 */;
 
-function hydrateSingle(str) {
+function hydrateSingle(arr) {
   let length;
   let length2;
-  if (typeof str === "string") {
-    obj = { type: 0, value: null };
-    obj[1] = str;
+  if (typeof arr === "string") {
+    let obj = { type: 0, value: arr };
     return obj;
   } else {
-    const first = callback(str, 1)[0];
+    const first = _slicedToArray(arr, 1)[0];
     if (obj.Argument === first) {
-      obj = { type: null, value: null };
-      obj[0] = first;
-      obj[1] = str[1];
+      obj = { type: first, value: arr[1] };
       return obj;
     } else {
       if (tmp23.Number !== first) {
@@ -26,12 +23,11 @@ function hydrateSingle(str) {
                 if (tmp23.Pound === first) {
                   return exports.FORMAT_JS_POUND;
                 } else if (tmp23.Tag === first) {
-                  let tmp21Result = tmp21(str, 4);
+                  let tmp21Result = tmp21(arr, 4);
                   let num3 = 0;
                   [tmp7, tmp8] = tmp21Result;
                   if (0 < tmp21Result[2].length) {
                     do {
-                      let tmp9 = hydrateSingle;
                       arr[num3] = hydrateSingle(arr[num3]);
                       num3 = num3 + 1;
                       length = arr.length;
@@ -41,76 +37,56 @@ function hydrateSingle(str) {
                     let num4 = 0;
                     if (0 < arr2.length) {
                       do {
-                        let tmp11 = hydrateSingle;
                         arr2[num4] = hydrateSingle(arr2[num4]);
                         num4 = num4 + 1;
                         length2 = arr2.length;
                       } while (num4 < length2);
                     }
                   }
-                  obj = { type: null, value: null, children: null, control: null };
-                  obj[0] = tmp7;
-                  obj[1] = tmp8;
-                  obj[2] = tmp21Result[2];
-                  obj[3] = tmp21Result[3];
-                  return obj;
+                  const element = { type: tmp7, value: tmp8, children: tmp21Result[2], control: tmp21Result[3] };
+                  return element;
                 } else {
                   const _Error = Error;
                   const _HermesInternal = HermesInternal;
-                  error = new Error("FormatJS keyless JSON encountered an unknown type: " + first);
+                  const error = new Error("FormatJS keyless JSON encountered an unknown type: " + first);
                   throw error;
                 }
               }
             }
-            tmp21Result = tmp21(str, 5);
+            tmp21Result = tmp21(arr, 5);
             [tmp14, tmp15, tmp16, tmp17] = tmp21Result;
             for (const key10046 in tmp16) {
-              let tmp24 = key10046;
               let arr3 = tmp16[key10046];
               let num7 = 0;
               if (0 < arr3.length) {
                 do {
-                  let tmp19 = hydrateSingle;
                   arr3[num7] = hydrateSingle(arr3[num7]);
                   num7 = num7 + 1;
                   let length3 = arr3.length;
                 } while (num7 < length3);
               }
-              obj1 = { value: null };
-              obj1[0] = tmp16[key10046];
+              let obj1 = { value: tmp16[key10046] };
               tmp16[key10046] = obj1;
               continue;
             }
             if (tmp14 === obj.Plural) {
-              const obj2 = { type: null, value: null, options: null, offset: null, pluralType: null };
-              obj2[0] = tmp14;
-              obj2[1] = tmp15;
-              obj2[2] = tmp16;
-              obj2[3] = tmp17;
-              obj2[4] = tmp21Result[4];
+              const obj2 = { type: tmp14, value: tmp15, options: tmp16, offset: tmp17, pluralType: tmp21Result[4] };
               let obj3 = obj2;
             } else {
-              obj3 = { type: null, value: null, options: null, offset: null };
-              obj3[0] = tmp14;
-              obj3[1] = tmp15;
-              obj3[2] = tmp16;
-              obj3[3] = tmp17;
+              obj3 = { type: tmp14, value: tmp15, options: tmp16, offset: tmp17 };
             }
             return obj3;
           }
         }
       }
-      const obj4 = { type: null, value: null, style: null };
-      obj4[0] = first;
-      obj4[1] = str[1];
-      obj4[2] = str[2];
+      const obj4 = { type: first, value: arr[1], style: arr[2] };
       return obj4;
     }
   }
 }
 function compressFormatJsToAst(value) {
   if (Array.isArray(value)) {
-    return value.map((arg0) => callback(arg0));
+    return value.map((item) => compressFormatJsToAst(item));
   } else {
     const type = value.type;
     if (obj.Literal === type) {
@@ -129,9 +105,7 @@ function compressFormatJsToAst(value) {
               const entries = Object.entries(value.options);
               const tmp14 = entries[Symbol.iterator]();
               while (tmp14 !== undefined) {
-                let tmp18 = callback;
-                let tmp19 = callback(tmp16, 2);
-                let tmp20 = compressFormatJsToAst;
+                let tmp19 = _slicedToArray(tmp16, 2);
                 obj[tmp19[0]] = compressFormatJsToAst(tmp19[1].value);
                 continue;
               }
@@ -145,9 +119,7 @@ function compressFormatJsToAst(value) {
               const entries1 = Object.entries(value.options);
               const tmp5 = entries1[Symbol.iterator]();
               while (tmp5 !== undefined) {
-                let tmp9 = callback;
-                let tmp10 = callback(tmp7, 2);
-                let tmp11 = compressFormatJsToAst;
+                let tmp10 = _slicedToArray(tmp7, 2);
                 obj[tmp10[0]] = compressFormatJsToAst(tmp10[1].value);
                 continue;
               }
@@ -175,76 +147,74 @@ function compressFormatJsToAst(value) {
     }
   }
 }
-let obj = {};
-obj.Literal = 0;
-obj[0] = "Literal";
-obj.Argument = 1;
-obj[1] = "Argument";
-obj.Number = 2;
-obj[2] = "Number";
-obj.Date = 3;
-obj[3] = "Date";
-obj.Time = 4;
-obj[4] = "Time";
-obj.Select = 5;
-obj[5] = "Select";
-obj.Plural = 6;
-obj[6] = "Plural";
-obj.Pound = 7;
-obj[7] = "Pound";
-obj.Tag = 8;
-obj[8] = "Tag";
+const FormatJsNodeType = {};
+FormatJsNodeType.Literal = 0;
+FormatJsNodeType[0] = "Literal";
+FormatJsNodeType.Argument = 1;
+FormatJsNodeType[1] = "Argument";
+FormatJsNodeType.Number = 2;
+FormatJsNodeType[2] = "Number";
+FormatJsNodeType.Date = 3;
+FormatJsNodeType[3] = "Date";
+FormatJsNodeType.Time = 4;
+FormatJsNodeType[4] = "Time";
+FormatJsNodeType.Select = 5;
+FormatJsNodeType[5] = "Select";
+FormatJsNodeType.Plural = 6;
+FormatJsNodeType[6] = "Plural";
+FormatJsNodeType.Pound = 7;
+FormatJsNodeType[7] = "Pound";
+FormatJsNodeType.Tag = 8;
+FormatJsNodeType[8] = "Tag";
 
-export const hydrateFormatJsAst = function hydrateFormatJsAst(str) {
+export const hydrateFormatJsAst = function hydrateFormatJsAst(arr) {
   let length;
   let length2;
-  if (typeof str === "string") {
-    return hydrateSingle(str);
-  } else if (typeof str[0] === "string") {
+  if (typeof arr === "string") {
+    return hydrateSingle(arr);
+  } else if (typeof arr[0] === "string") {
     let num5 = 0;
-    if (0 < str.length) {
+    if (0 < arr.length) {
       do {
-        let tmp4 = hydrateSingle;
-        str[num5] = hydrateSingle(str[num5]);
+        arr[num5] = hydrateSingle(arr[num5]);
         num5 = num5 + 1;
-        length2 = str.length;
+        length2 = arr.length;
       } while (num5 < length2);
     }
-    return str;
-  } else if (0 === str.length) {
-    return str;
+    return arr;
+  } else if (0 === arr.length) {
+    return arr;
   } else {
     const _Array = Array;
-    if (Array.isArray(str[0])) {
+    if (Array.isArray(arr[0])) {
       let num2 = 0;
-      if (0 < str.length) {
+      if (0 < arr.length) {
         do {
-          let tmp3 = hydrateSingle;
-          str[num2] = hydrateSingle(str[num2]);
+          arr[num2] = hydrateSingle(arr[num2]);
           num2 = num2 + 1;
-          length = str.length;
+          length = arr.length;
         } while (num2 < length);
       }
-      return str;
+      return arr;
     } else {
-      return hydrateSingle(str);
+      return hydrateSingle(arr);
     }
   }
 };
 export { compressFormatJsToAst };
-export const isCompressedAst = function isCompressedAst(value) {
-  let tmp = typeof value === "string";
-  if (typeof value !== "string") {
+export const isCompressedAst = function isCompressedAst(dependencyMap) {
+  let tmp = typeof dependencyMap === "string";
+  if (typeof dependencyMap !== "string") {
     const _Array2 = Array;
-    let isArray = Array.isArray(value);
+    let isArray = Array.isArray(dependencyMap);
     if (isArray) {
       const _Array = Array;
-      isArray = Array.isArray(value[0]) || typeof value[0] === "string";
-      const tmp2 = Array.isArray(value[0]) || typeof value[0] === "string";
+      isArray = Array.isArray(dependencyMap[0]) || typeof dependencyMap[0] === "string";
+      const tmp2 = Array.isArray(dependencyMap[0]) || typeof dependencyMap[0] === "string";
     }
     tmp = isArray;
   }
   return tmp;
 };
-export const FormatJsNodeType = obj;
+export { FormatJsNodeType };
 export const FORMAT_JS_POUND = Object.freeze({ type: 7 });

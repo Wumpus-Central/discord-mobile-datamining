@@ -1,25 +1,26 @@
 // === Module 11062: productSk2Map ===
 
 // Module 11062 (productSk2Map)
-import _mod11050 from "module_11050" /* 11050 */;
+import ReplacementModesAndroid from "ReplacementModesAndroid" /* 11050 */;
 
 require = arg1;
 const dependencyMap = arg6;
-arg5.productSk2Map = (displayName) => {
+
+export const productSk2Map = (displayName) => {
   ({ description, price, currency, displayPrice } = displayName);
   return { title: displayName.displayName, productId: String(displayName.id), description, type: "iap", price: String(price), localizedPrice: displayPrice, currency };
 };
-arg5.subscriptionSk2Map = (subscription) => {
+export const subscriptionSk2Map = (subscription) => {
   subscription = subscription.subscription;
-  const obj = { platform: _mod11050.SubscriptionPlatform.ios, title: displayName, productId: String(id), description, type: "subs", price: String(price), localizedPrice: displayPrice, currency, subscriptionPeriodNumberIOS: null, subscriptionPeriodUnitIOS: null, introductoryPriceAsAmountIOS: null, introductoryPricePaymentModeIOS: null, introductoryPriceNumberOfPeriodsIOS: null, introductoryPriceSubscriptionPeriodIOS: null };
+  const obj = { platform: ReplacementModesAndroid.SubscriptionPlatform.ios, title: displayName, productId: String(id), description, type: "subs", price: String(price), localizedPrice: displayPrice, currency, subscriptionPeriodNumberIOS: null, subscriptionPeriodUnitIOS: null, introductoryPriceAsAmountIOS: null, introductoryPricePaymentModeIOS: null, introductoryPriceNumberOfPeriodsIOS: null, introductoryPriceSubscriptionPeriodIOS: null };
   ({ id, description, displayName, price, currency, displayPrice } = subscription);
-  let value;
+  value = undefined;
   if (subscription != null) {
     if (subscription.subscriptionPeriod != null) {
       value = iter.value;
     }
   }
-  obj[8] = "" + value;
+  obj.subscriptionPeriodNumberIOS = "" + value;
   let formatted;
   if (subscription != null) {
     const subscriptionPeriod = subscription.subscriptionPeriod;
@@ -28,7 +29,7 @@ arg5.subscriptionSk2Map = (subscription) => {
       formatted = str.toUpperCase();
     }
   }
-  obj[9] = formatted;
+  obj.subscriptionPeriodUnitIOS = formatted;
   displayPrice = undefined;
   if (subscription != null) {
     const introductoryOffer = subscription.introductoryOffer;
@@ -36,16 +37,15 @@ arg5.subscriptionSk2Map = (subscription) => {
       displayPrice = introductoryOffer.displayPrice;
     }
   }
-  obj[10] = displayPrice;
+  obj.introductoryPriceAsAmountIOS = displayPrice;
   let formatted1;
   if (subscription != null) {
     const introductoryOffer2 = subscription.introductoryOffer;
     if (introductoryOffer2 != null) {
       formatted1 = introductoryOffer2.paymentMode.toUpperCase();
-      const str2 = introductoryOffer2.paymentMode;
     }
   }
-  obj[11] = formatted1;
+  obj.introductoryPricePaymentModeIOS = formatted1;
   str = undefined;
   if (subscription != null) {
     const introductoryOffer3 = subscription.introductoryOffer;
@@ -57,7 +57,7 @@ arg5.subscriptionSk2Map = (subscription) => {
       }
     }
   }
-  obj[12] = str;
+  obj.introductoryPriceNumberOfPeriodsIOS = str;
   let unit;
   if (subscription != null) {
     const introductoryOffer4 = subscription.introductoryOffer;
@@ -68,42 +68,41 @@ arg5.subscriptionSk2Map = (subscription) => {
       }
     }
   }
-  obj[13] = unit;
+  obj.introductoryPriceSubscriptionPeriodIOS = unit;
   return obj;
 };
-arg5.transactionSk2ToPurchaseMap = (arg0) => {
+export const transactionSk2ToPurchaseMap = (arg0) => {
   ({ verificationResult, appAccountToken } = arg0);
   try {
     const _JSON = JSON;
     let str = JSON.parse(tmp7).transactionReason;
-    const obj = { productId: null, transactionId: null, transactionDate: null, transactionReceipt: "", purchaseToken: "", quantityIOS: null, originalTransactionDateIOS: null, originalTransactionIdentifierIOS: null, verificationResultIOS: null, appAccountToken: null, transactionReasonIOS: null };
-    obj[0] = tmp3;
+    const obj = { productId: tmp3, transactionId: null, transactionDate: null, transactionReceipt: "", purchaseToken: "", quantityIOS: null, originalTransactionDateIOS: null, originalTransactionIdentifierIOS: null, verificationResultIOS: null, appAccountToken: null, transactionReasonIOS: null };
     const _String = String;
-    obj[1] = String(tmp);
-    obj[2] = tmp4;
-    obj[5] = tmp5;
-    obj[6] = tmp2;
-    obj[7] = tmp6;
-    obj[8] = verificationResult;
+    obj.transactionId = String(tmp);
+    obj.transactionDate = tmp4;
+    obj.quantityIOS = tmp5;
+    obj.originalTransactionDateIOS = tmp2;
+    obj.originalTransactionIdentifierIOS = tmp6;
+    obj.verificationResultIOS = verificationResult;
     if (appAccountToken == null) {
       appAccountToken = "";
     }
-    obj[9] = appAccountToken;
+    obj.appAccountToken = appAccountToken;
     if (str == null) {
       str = "";
     }
-    obj[10] = str;
+    obj.transactionReasonIOS = str;
     return obj;
   } catch (tmp9) {
     const _console = console;
     console.log("AppleSK2.ts react-native-iap: Error parsing jsonRepresentation", tmp9);
   }
 };
-arg5.offerSk2Map = (arg0) => {
+export const offerSk2Map = (arg0) => {
   if (arg0) {
     const obj = { offerID: null, keyID: null, nonce: null, signature: null, timestamp: null };
-    ({ identifier: obj[0], keyIdentifier: obj[1], nonce: obj[2], signature: obj[3], timestamp } = arg0);
-    obj[4] = timestamp.toString();
+    ({ identifier: obj.offerID, keyIdentifier: obj.keyID, nonce: obj.nonce, signature: obj.signature, timestamp } = arg0);
+    obj.timestamp = timestamp.toString();
     return obj;
   }
 };

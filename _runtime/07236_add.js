@@ -1,8 +1,6 @@
 // === Module 7236: add ===
 
 // Module 7236 (add)
-import Decimal from "module_1" /* 1 */;
-
 function add(s, s2) {
   let diff2;
   let tmp17;
@@ -67,7 +65,6 @@ function add(s, s2) {
           diff2 = length3 - 1;
           let sum1 = arr5[diff2] + tmp19[diff2] + num7;
           arr5[diff2] = sum1;
-          let tmp22 = c9;
           num7 = sum1 / c9 | 0;
           arr5[diff2] = arr5[diff2] % c9;
           num8 = num7;
@@ -114,13 +111,10 @@ function digitsToString(arg0) {
     let text = `${tmp2}`;
     let num2 = 1;
     let tmp5 = text;
-    let num3 = 1;
     if (1 < diff) {
       do {
         let text1 = `${arg0[num2]}`;
         let diff1 = 7 - `${arg0[num2]}`.length;
-        let tmp8 = text;
-        let tmp9 = num2;
         let sum = text;
         if (diff1) {
           let diff2 = diff1 - 1;
@@ -139,7 +133,6 @@ function digitsToString(arg0) {
         text = sum + text1;
         num2 = num2 + 1;
         tmp5 = text;
-        num3 = num2;
       } while (num2 < diff);
     }
     const diff3 = 7 - "" + tmp13.length;
@@ -179,7 +172,7 @@ function digitsToString(arg0) {
   }
   return str + tmp18;
 }
-function exp(constructor) {
+function exp(constructor, arg1) {
   let gteResult;
   let substr;
   let substr1;
@@ -247,8 +240,6 @@ function exp(constructor) {
       let tmp27 = round(timesResult1, sum);
       let sum1 = num8 + 1;
       let timesResult2 = obj7.times(sum1);
-      let tmp30 = digitsToString;
-      let tmp31 = f111132;
       let plusResult = obj5.plus(f111132(timesResult1, timesResult2, sum));
       let arr = digitsToString(plusResult.d);
       substr = arr.slice(0, sum);
@@ -265,7 +256,6 @@ function exp(constructor) {
     let tmp37 = tmp35;
     if (num6) {
       do {
-        let tmp38 = round;
         let timesResult3 = obj8.times(obj8);
         let tmp40 = round(timesResult3, sum);
         tmp41 = diff;
@@ -287,7 +277,7 @@ function exp(constructor) {
     return constructor2;
   }
 }
-function ln(s) {
+function ln(s, arg1) {
   let constructor = s.constructor;
   const precision = constructor.precision;
   let num = 1;
@@ -376,7 +366,6 @@ function ln(s) {
           tmp13 = num;
         }
         while (true) {
-          let tmp18 = digitsToString;
           let timesResult = obj.times(s);
           let str3 = digitsToString(timesResult.d);
           let charAtResult1 = str3.charAt(0);
@@ -386,17 +375,14 @@ function ln(s) {
             tmp13 = sum2;
           }
           tmp14 = timesResult;
-          let tmp22 = sum2;
           tmp16 = charAtResult1;
           times = str3;
           if (num != charAtResult1) {
             break;
           } else {
-            let num7 = 3;
             obj = timesResult;
             tmp13 = sum2;
             tmp14 = timesResult;
-            let tmp23 = sum2;
             tmp16 = charAtResult1;
             times = str3;
             if (str3.charAt(num) <= 3) {
@@ -538,7 +524,7 @@ function parseDecimal(d, arr) {
   }
   return d;
 }
-function round(d) {
+function round(d, arg1, arg2) {
   let tmp32;
   d = d.d;
   let first = d[0];
@@ -601,7 +587,6 @@ function round(d) {
         if (undefined) {
           while (0 != diff1) {
             d[diff1] = d[diff1] + num14;
-            let tmp25 = c9;
             if (d[diff1] == c9) {
               let tmp26 = +diff1;
               diff1 = tmp26 - 1;
@@ -685,25 +670,20 @@ function round(d) {
         }
         tmp17 = tmp18;
       }
-      let tmp16 = tmp17;
     } else {
-      tmp16 = tmp17 > 5;
+      const tmp16 = tmp17 > 5;
       if (5 >= tmp17) {
-        let tmp10 = 5 === tmp17;
+        const tmp10 = 5 === tmp17;
         if (5 === tmp17) {
           let tmp11 = 4 == arg2 || tmp9;
           if (!tmp11) {
             if (6 != arg2) {
               tmp11 = tmp12;
             } else if (0 < sum) {
-              let num10 = 0;
               if (sum1 > 0) {
                 tmp14 = tmp14(10, num5 - sum1);
-                num10 = first1 / tmp14;
+                const num10 = first1 / tmp14;
               }
-              let tmp13 = num10;
-            } else {
-              tmp13 = d[num6 - 1];
             }
           }
           if (!tmp11) {
@@ -713,9 +693,7 @@ function round(d) {
             }
             tmp11 = arg2 == num11;
           }
-          tmp10 = tmp11;
         }
-        tmp16 = tmp10;
       }
     }
   }
@@ -813,7 +791,6 @@ function subtract(s, s2) {
               tmp27 = diff4;
               if (0 === arr5[diff4]) {
                 arr5[tmp29] = 9999999;
-                let tmp30 = tmp29;
                 tmp27 = tmp29;
                 while (tmp29) {
                   let diff5 = tmp29 - 1;
@@ -826,7 +803,6 @@ function subtract(s, s2) {
               }
             }
             arr5[tmp27] = arr5[tmp27] - 1;
-            let tmp32 = c9;
             arr5[diff3] = arr5[diff3] + c9;
           }
           arr5[diff3] = arr5[diff3] - arr4[diff3];
@@ -877,7 +853,7 @@ function subtract(s, s2) {
   }
   return constructor1;
 }
-function toString(arg0) {
+function toString(arg0, arg1, arg2) {
   let tmp13;
   let tmp16;
   let tmp23;
@@ -1037,11 +1013,11 @@ function toString(arg0) {
   }
   return text6;
 }
-function config(obj) {
+function config(LN10) {
   let tmp;
   let tmp2;
-  if (obj) {
-    if (typeof obj === "object") {
+  if (LN10) {
+    if (typeof LN10 === "object") {
       const self = this;
       const items = ["precision", 1, 1000000000, "rounding"];
       let num = 0;
@@ -1056,10 +1032,8 @@ function config(obj) {
       if (0 < items.length) {
         while (true) {
           tmp = items[num];
-          tmp2 = obj[tmp];
-          let tmp3 = num;
+          tmp2 = LN10[tmp];
           if (undefined !== tmp2) {
-            let tmp4 = floor;
             if (floor(tmp2) !== tmp2) {
               break;
             } else if (tmp2 < items[num + 1]) {
@@ -1075,7 +1049,7 @@ function config(obj) {
         const _Error = Error;
         throw Error(c4 + tmp + ": " + tmp2);
       }
-      const LN10 = obj.LN10;
+      LN10 = LN10.LN10;
       if (undefined !== LN10) {
         const _Math = Math;
         if (LN10 != Math.LN10) {
@@ -1273,7 +1247,6 @@ const fn14 = function(arg0) {
     if (self.eq(Decimal)) {
       let constructor2 = new constructor(0);
     } else {
-      c2 = false;
       constructor2 = f111132(ln(self, sum), ln(constructor, sum), sum);
       c2 = true;
       round(constructor2, precision);
@@ -1303,7 +1276,6 @@ const fn16 = function(arg0) {
   constructor = new constructor(arg0);
   if (constructor.s) {
     if (self.s) {
-      c2 = false;
       c2 = true;
       let minusResult = self.minus(f111132(self, tmp2, 0, 1).times(constructor));
       obj = f111132(self, tmp2, 0, 1);
@@ -1504,7 +1476,6 @@ const fn23 = function(arg0) {
       if (diff1 >= 0) {
         do {
           let sum2 = tmp7 + diff1;
-          let tmp16 = diff1;
           let num3 = 0;
           let num4 = 0;
           let tmp17 = sum2;
@@ -1513,14 +1484,12 @@ const fn23 = function(arg0) {
               let sum3 = items[sum2] + tmp4[diff1] * tmp5[sum2 - diff1 - 1] + num3;
               let tmp19 = +sum2;
               sum2 = tmp19 - 1;
-              let tmp20 = c9;
               items[tmp19] = sum3 % c9 | 0;
               num3 = sum3 / c9 | 0;
               num4 = num3;
               tmp17 = sum2;
             } while (sum2 > diff1);
           }
-          let tmp21 = c9;
           items[tmp17] = (items[tmp17] + num4) % c9 | 0;
           diff1 = diff1 - 1;
           tmp14 = num4;
@@ -1583,7 +1552,6 @@ const fn24 = function(arg0, arg1) {
             } while (10 <= first);
           }
           round(constructor, arg0 + tmp7 + 1, rounding);
-          const tmp4 = round;
         }
       }
     }
@@ -1676,8 +1644,6 @@ obj.toFixed = function(arg0, arg1) {
             }
           }
           const absResult = constructor.abs();
-          const tmp3 = toString;
-          const tmp4 = round;
         }
       }
     }
@@ -1754,8 +1720,6 @@ const fn26 = function(arg0) {
                 do {
                   let timesResult1 = obj5.times(obj5);
                   let d1 = timesResult1.d;
-                  let tmp32 = obj4;
-                  let tmp33 = tmp29;
                   if (d1.length > rounded) {
                     d1.length = rounded;
                   }
@@ -1769,7 +1733,6 @@ const fn26 = function(arg0) {
                       tmp34 = timesResult2;
                     }
                   }
-                  let tmp36 = floor;
                   tmp29 = floor(tmp29 / 2);
                   obj4 = tmp34;
                   obj5 = timesResult1;
@@ -1799,7 +1762,6 @@ const fn26 = function(arg0) {
             }
           }
           constructor1.s = 1;
-          c2 = false;
           c2 = true;
           const tmp19 = exp(constructor.times(ln(constructor1, precision + 12)));
           tmp19.s = num5;
@@ -1834,7 +1796,6 @@ obj.toPrecision = function(arg0, arg1) {
       } while (10 <= first);
     }
     let tmp3Result = toString(self, tmp21 <= constructor.toExpNeg || tmp21 >= constructor.toExpPos);
-    const tmp18 = toString;
     const tmp22 = tmp21 <= constructor.toExpNeg || tmp21 >= constructor.toExpPos;
   } else {
     if (arg0 === ~~arg0) {
@@ -1865,7 +1826,6 @@ obj.toPrecision = function(arg0, arg1) {
           }
           tmp3Result = toString(constructor, arg0 <= tmp13 || tmp13 <= constructor.toExpNeg, arg0);
           const tmp14 = arg0 <= tmp13 || tmp13 <= constructor.toExpNeg;
-          const tmp3 = toString;
         }
       }
     }
@@ -1931,7 +1891,7 @@ obj.toJSON = fn28;
 obj.val = fn28;
 obj.valueOf = fn28;
 obj.toString = fn28;
-const f111132 = (s, s2) => {
+const f111132 = (s, s2, arg2, arg3) => {
   let num7;
   let sum;
   let tmp26;
@@ -2004,40 +1964,36 @@ const f111132 = (s, s2) => {
         }
       }
       if (precision < 0) {
-        let constructor1 = new.target;
-        constructor1 = new.target;
-        constructor1 = new constructor(0);
+        const constructor1 = new constructor(0);
         return constructor1;
       } else {
-        constructor1 = precision / 7 + 2 | 0;
         if (1 == length) {
-          constructor1 = d1[0];
+          const first2 = d1[0];
           if (0 < length2) {
-            constructor1 = constructor1 + 1;
-            constructor1 = constructor1 - 1;
+            const sum1 = tmp122 + 1;
+            let diff2 = sum1 - 1;
             let num39 = 0;
             let num40 = 0;
-            if (constructor1) {
+            if (sum1) {
               while (true) {
                 let num41 = d[num40];
-                constructor1 = num39;
-                constructor1 = num40;
-                constructor1 = c9;
+                let tmp104 = c9;
+                let tmp105 = diff2;
                 if (!num41) {
                   num41 = 0;
                 }
-                constructor1 = num39 * constructor1 + num41;
-                items[num40] = constructor1 / constructor1 | 0;
-                constructor1 = constructor1 % constructor1 | 0;
-                constructor1 = num40 + 1;
-                if (constructor1 < length2) {
-                  constructor1 = constructor1 - 1;
-                  num39 = constructor1;
-                  num40 = constructor1;
-                  if (!constructor1) {
+                let sum2 = num39 * tmp104 + num41;
+                items[num40] = sum2 / first2 | 0;
+                let tmp109 = sum2 % first2 | 0;
+                let sum3 = num40 + 1;
+                if (sum3 < length2) {
+                  diff2 = diff2 - 1;
+                  num39 = tmp109;
+                  num40 = sum3;
+                  if (!tmp105) {
                     break;
                   }
-                } else if (!constructor1) {
+                } else if (!tmp109) {
                   break;
                 }
                 break;
@@ -2045,25 +2001,21 @@ const f111132 = (s, s2) => {
             }
           }
         } else {
-          constructor1 = c9;
-          constructor1 = c9 / (d1[0] + 1) | 0;
           let arr4 = d1;
           let arr5 = d;
           let length3 = length2;
-          if (1 < constructor1) {
+          if (1 < (c9 / (d1[0] + 1) | 0)) {
             const substr = d1.slice();
-            constructor1 = +d1.length;
-            let diff2 = constructor1 - 1;
+            let diff3 = tmp125 - 1;
             let num11 = 0;
             let num12 = 0;
-            if (constructor1) {
+            if (+d1.length) {
               do {
-                let sum1 = substr[diff2] * constructor1 + num11;
-                let tmp25 = c9;
-                substr[diff2] = sum1 % c9 | 0;
-                num11 = sum1 / c9 | 0;
-                tmp26 = +diff2;
-                diff2 = tmp26 - 1;
+                let sum4 = substr[diff3] * tmp124 + num11;
+                substr[diff3] = sum4 % c9 | 0;
+                num11 = sum4 / c9 | 0;
+                tmp26 = +diff3;
+                diff3 = tmp26 - 1;
                 num12 = num11;
               } while (tmp26);
             }
@@ -2071,17 +2023,16 @@ const f111132 = (s, s2) => {
               substr.unshift(num12);
             }
             const substr1 = d.slice();
-            let diff3 = tmp29 - 1;
+            let diff4 = tmp29 - 1;
             let num13 = 0;
             let num14 = 0;
             if (+d.length) {
               do {
-                let sum2 = substr1[diff3] * constructor1 + num13;
-                let tmp32 = c9;
-                substr1[diff3] = sum2 % c9 | 0;
-                num13 = sum2 / c9 | 0;
-                tmp33 = +diff3;
-                diff3 = tmp33 - 1;
+                let sum5 = substr1[diff4] * tmp124 + num13;
+                substr1[diff4] = sum5 % c9 | 0;
+                num13 = sum5 / c9 | 0;
+                tmp33 = +diff4;
+                diff4 = tmp33 - 1;
                 num14 = num13;
               } while (tmp33);
             }
@@ -2094,40 +2045,35 @@ const f111132 = (s, s2) => {
             arr5 = substr1;
           }
           const substr2 = arr5.slice(0, length);
-          let sum3 = length4;
+          let sum6 = length4;
           let tmp38 = length4;
           if (substr2.length < length) {
             do {
-              let tmp39 = +sum3;
-              sum3 = tmp39 + 1;
+              let tmp39 = +sum6;
+              sum6 = tmp39 + 1;
               substr2[tmp39] = 0;
-              tmp38 = sum3;
-            } while (sum3 < length);
+              tmp38 = sum6;
+            } while (sum6 < length);
           }
           const substr3 = arr4.slice();
           substr3.unshift(0);
-          const first2 = arr4[0];
-          let sum4 = first2;
-          let sum10 = length;
-          let diff9 = constructor1;
+          const first3 = arr4[0];
+          let sum7 = first3;
+          let sum13 = length;
+          let diff10 = tmp122;
           let tmp45 = tmp38;
           let arr9 = substr2;
           let num17 = 0;
           if (arr4[1] >= 5000000) {
-            sum4 = first2 + 1;
-            sum10 = length;
-            diff9 = constructor1;
+            sum7 = first3 + 1;
+            sum13 = length;
+            diff10 = tmp122;
             tmp45 = tmp38;
             arr9 = substr2;
             num17 = 0;
           }
           while (true) {
-            let tmp46 = sum4;
-            let tmp47 = sum10;
             let tmp49 = tmp45;
-            let tmp50 = arr9;
-            let tmp51 = num17;
-            let tmp48 = diff9;
             if (length != tmp45) {
               let num21 = -1;
               if (length > tmp49) {
@@ -2138,10 +2084,9 @@ const f111132 = (s, s2) => {
               let num18 = 0;
               num19 = 0;
               if (0 < length) {
-                let tmp52 = num18;
                 while (arr4[num18] == arr9[num18]) {
-                  let sum5 = num18 + 1;
-                  num18 = sum5;
+                  let sum8 = num18 + 1;
+                  num18 = sum8;
                   num19 = 0;
                 }
                 let num20 = -1;
@@ -2152,36 +2097,33 @@ const f111132 = (s, s2) => {
               }
             }
             if (num19 < 0) {
-              let first3 = arr9[0];
-              let sum6 = first3;
+              let first4 = arr9[0];
+              let sum9 = first4;
               if (length != tmp49) {
-                let tmp57 = c9;
                 let num23 = arr9[1];
-                let result2 = first3 * c9;
+                let result2 = first4 * c9;
                 if (!num23) {
                   num23 = 0;
                 }
-                sum6 = result2 + num23;
+                sum9 = result2 + num23;
               }
-              let num24 = sum6 / sum4 | 0;
+              let num24 = sum9 / sum7 | 0;
               if (1 < num24) {
-                let tmp59 = c9;
                 if (num24 >= c9) {
                   num24 = 9999999;
                 }
                 let substr4 = arr4.slice();
                 let tmp60 = +arr4.length;
-                let diff4 = tmp60 - 1;
+                let diff5 = tmp60 - 1;
                 let num26 = 0;
                 let num27 = 0;
                 if (tmp60) {
                   do {
-                    let sum7 = substr4[diff4] * num24 + num26;
-                    let tmp63 = c9;
-                    substr4[diff4] = sum7 % c9 | 0;
-                    num26 = sum7 / c9 | 0;
-                    tmp64 = +diff4;
-                    diff4 = tmp64 - 1;
+                    let sum10 = substr4[diff5] * num24 + num26;
+                    substr4[diff5] = sum10 % c9 | 0;
+                    num26 = sum10 / c9 | 0;
+                    tmp64 = +diff5;
+                    diff5 = tmp64 - 1;
                     num27 = num26;
                   } while (tmp64);
                 }
@@ -2200,10 +2142,9 @@ const f111132 = (s, s2) => {
                   let num28 = 0;
                   num29 = 0;
                   if (0 < length6) {
-                    let tmp66 = num28;
                     while (substr4[num28] == arr9[num28]) {
-                      let sum8 = num28 + 1;
-                      num28 = sum8;
+                      let sum11 = num28 + 1;
+                      num28 = sum11;
                       num29 = 0;
                     }
                     let num30 = -1;
@@ -2223,43 +2164,41 @@ const f111132 = (s, s2) => {
                     tmp68 = substr3;
                   }
                   let tmp69 = +length6;
-                  let diff5 = tmp69 - 1;
+                  let diff6 = tmp69 - 1;
                   let num32 = 0;
                   if (tmp69) {
                     do {
-                      substr4[diff5] = substr4[diff5] - num32;
-                      let tmp71 = diff5;
+                      substr4[diff6] = substr4[diff6] - num32;
                       let num33 = 0;
-                      if (substr4[diff5] < tmp68[diff5]) {
+                      if (substr4[diff6] < tmp68[diff6]) {
                         num33 = 1;
                       }
-                      let tmp72 = c9;
-                      substr4[diff5] = num33 * c9 + substr4[diff5] - tmp68[diff5];
-                      tmp73 = +diff5;
-                      diff5 = tmp73 - 1;
+                      substr4[diff6] = num33 * c9 + substr4[diff6] - tmp68[diff6];
+                      tmp73 = +diff6;
+                      diff6 = tmp73 - 1;
                       num32 = num33;
                     } while (tmp73);
                   }
-                  let diff6 = num24 - 1;
+                  let diff7 = num24 - 1;
                   tmp49 = length7;
                   substr5 = substr4;
-                  num25 = diff6;
+                  num25 = diff7;
                   num19 = num29;
                   if (!substr4[0]) {
                     tmp49 = length7;
                     substr5 = substr4;
-                    num25 = diff6;
+                    num25 = diff7;
                     num19 = num29;
                     if (substr4.length > 1) {
                       let arr3 = substr4.shift();
                       tmp49 = length7;
                       substr5 = substr4;
-                      num25 = diff6;
+                      num25 = diff7;
                       num19 = num29;
                       while (!substr4[0]) {
                         tmp49 = length7;
                         substr5 = substr4;
-                        num25 = diff6;
+                        num25 = diff7;
                         num19 = num29;
                         if (substr4.length <= 1) {
                           break;
@@ -2280,20 +2219,18 @@ const f111132 = (s, s2) => {
                 arr4 = substr5.unshift(0);
               }
               let tmp77 = +tmp49;
-              let diff7 = tmp77 - 1;
+              let diff8 = tmp77 - 1;
               let num34 = 0;
               if (tmp77) {
                 do {
-                  arr9[diff7] = arr9[diff7] - num34;
-                  let tmp79 = diff7;
+                  arr9[diff8] = arr9[diff8] - num34;
                   num29 = 0;
-                  if (arr9[diff7] < substr5[diff7]) {
+                  if (arr9[diff8] < substr5[diff8]) {
                     num29 = 1;
                   }
-                  let tmp80 = c9;
-                  arr9[diff7] = num29 * c9 + arr9[diff7] - substr5[diff7];
-                  tmp81 = +diff7;
-                  diff7 = tmp81 - 1;
+                  arr9[diff8] = num29 * c9 + arr9[diff8] - substr5[diff8];
+                  tmp81 = +diff8;
+                  diff8 = tmp81 - 1;
                   num34 = num29;
                 } while (tmp81);
               }
@@ -2317,32 +2254,30 @@ const f111132 = (s, s2) => {
                     tmp90 = substr3;
                   }
                   let tmp91 = +tmp49;
-                  let diff8 = tmp91 - 1;
+                  let diff9 = tmp91 - 1;
                   num29 = 0;
                   if (tmp91) {
                     do {
-                      arr9[diff8] = arr9[diff8] - num29;
-                      let tmp93 = diff8;
+                      arr9[diff9] = arr9[diff9] - num29;
                       let num37 = 0;
-                      if (arr9[diff8] < tmp90[diff8]) {
+                      if (arr9[diff9] < tmp90[diff9]) {
                         num37 = 1;
                       }
-                      let tmp94 = c9;
-                      arr9[diff8] = num37 * c9 + arr9[diff8] - tmp90[diff8];
-                      tmp95 = +diff8;
-                      diff8 = tmp95 - 1;
+                      arr9[diff9] = num37 * c9 + arr9[diff9] - tmp90[diff9];
+                      tmp95 = +diff9;
+                      diff9 = tmp95 - 1;
                       num29 = num37;
                     } while (tmp95);
                   }
-                  let sum9 = num25 + 1;
-                  tmp89 = sum9;
+                  let sum12 = num25 + 1;
+                  tmp89 = sum12;
                   if (!arr9[0]) {
-                    tmp89 = sum9;
+                    tmp89 = sum12;
                     if (arr9.length > 1) {
                       let arr6 = arr9.shift();
-                      tmp89 = sum9;
+                      tmp89 = sum12;
                       while (!arr9[0]) {
-                        tmp89 = sum9;
+                        tmp89 = sum12;
                         if (arr9.length <= 1) {
                           break;
                         }
@@ -2371,21 +2306,21 @@ const f111132 = (s, s2) => {
             if (tmp54) {
               if (items1[0]) {
                 let tmp98 = +length5;
-                let tmp99 = arr5[sum10] || 0;
+                let tmp99 = arr5[sum13] || 0;
                 let num38 = tmp98 + 1;
                 items1[tmp98] = tmp99;
                 let items2 = items1;
-                constructor1 = +sum10;
-                if (constructor1 < length3) {
+                let tmp100 = +sum13;
+                if (tmp100 < length3) {
                   num17 = num17 + 1;
-                  sum10 = constructor1 + 1;
-                  diff9 = diff9 - 1;
+                  sum13 = tmp100 + 1;
+                  diff10 = diff10 - 1;
                   tmp45 = num38;
                   arr9 = items2;
                 }
               }
             }
-            items2 = [arr5[sum10]];
+            items2 = [arr5[sum13]];
             num38 = 1;
           }
           if (length != arr9.length) {
@@ -2393,44 +2328,41 @@ const f111132 = (s, s2) => {
             if (length > length8) {
               num29 = 1;
             }
-            let num36 = num29;
           } else {
             let num35 = 0;
-            num36 = 0;
             if (0 < length) {
               num29 = num35;
               while (arr4[num35] == arr9[num35]) {
-                let sum11 = num29 + 1;
-                num35 = sum11;
-                num36 = 0;
+                let sum14 = num29 + 1;
+                num35 = sum14;
               }
             }
             num29 = -1;
             if (tmp85) {
               num29 = 1;
             }
-            num36 = num29;
             tmp85 = arr4[num29] > arr9[num29];
           }
         }
         if (!items[0]) {
-          constructor1 = items.shift();
+          items.shift();
         }
         constructor.e = diff1;
-        constructor1 = tmp15;
-        constructor1 = round;
+        let sum15 = tmp15;
         if (arg3) {
-          constructor1 = 7 * constructor.e;
-          constructor1 = constructor.d[0];
-          if (constructor1 >= 10) {
+          let result3 = 7 * constructor.e;
+          let first5 = constructor.d[0];
+          let tmp116 = result3;
+          if (first5 >= 10) {
             do {
-              constructor1 = constructor1 + 1;
-              constructor1 = constructor1 / 10;
-            } while (10 <= constructor1);
+              result3 = result3 + 1;
+              first5 = first5 / 10;
+              tmp116 = result3;
+            } while (10 <= first5);
           }
-          constructor1 = tmp15 + constructor1 + 1;
+          sum15 = tmp15 + tmp116 + 1;
         }
-        constructor1 = constructor1(constructor, constructor1);
+        round(constructor, sum15);
         return constructor;
       }
     } else {
@@ -2438,7 +2370,6 @@ const f111132 = (s, s2) => {
       throw Error("[DecimalError] Division by zero");
     }
   } else {
-    constructor1 = new.target;
     const constructor2 = new constructor(s);
     return constructor2;
   }
@@ -2486,15 +2417,15 @@ function clone(arg0) {
               }
               return tmp14;
             }
-            tmp12 = closure_1_17;
-            tmp13 = closure_1_17(self, str.toString());
+            tmp12 = parseDecimal;
+            tmp13 = parseDecimal(self, str.toString());
             tmp14 = self;
           }
         } else if (typeof arg0 !== "string") {
           tmp10 = globalThis;
           _Error2 = Error;
-          tmp11 = closure_1_4;
-          throw Error(closure_1_4 + arg0);
+          tmp11 = c4;
+          throw Error(c4 + arg0);
         } else {
           num8 = 0;
           num9 = 45;
@@ -2508,16 +2439,16 @@ function clone(arg0) {
             self.s = 1;
             substr1 = arg0;
           }
-          tmp5 = closure_1_8;
-          if (closure_1_8.test(substr1)) {
-            tmp8 = closure_1_17;
-            tmp9 = closure_1_17(self, substr1);
+          tmp5 = re8;
+          if (re8.test(substr1)) {
+            tmp8 = parseDecimal;
+            tmp9 = parseDecimal(self, substr1);
             return;
           } else {
             tmp6 = globalThis;
             _Error = Error;
-            tmp7 = closure_1_4;
-            throw Error(closure_1_4 + substr1);
+            tmp7 = c4;
+            throw Error(c4 + substr1);
           }
         }
       } else {
@@ -2587,15 +2518,15 @@ function clone(arg0) {
                 }
                 return tmp14;
               }
-              tmp12 = closure_1_17;
-              tmp13 = closure_1_17(self, str.toString());
+              tmp12 = parseDecimal;
+              tmp13 = parseDecimal(self, str.toString());
               tmp14 = self;
             }
           } else if (typeof arg0 !== "string") {
             tmp10 = globalThis;
             _Error2 = Error;
-            tmp11 = closure_1_4;
-            throw Error(closure_1_4 + arg0);
+            tmp11 = c4;
+            throw Error(c4 + arg0);
           } else {
             num8 = 0;
             num9 = 45;
@@ -2609,16 +2540,16 @@ function clone(arg0) {
               self.s = 1;
               substr1 = arg0;
             }
-            tmp5 = closure_1_8;
-            if (closure_1_8.test(substr1)) {
-              tmp8 = closure_1_17;
-              tmp9 = closure_1_17(self, substr1);
+            tmp5 = re8;
+            if (re8.test(substr1)) {
+              tmp8 = parseDecimal;
+              tmp9 = parseDecimal(self, substr1);
               return;
             } else {
               tmp6 = globalThis;
               _Error = Error;
-              tmp7 = closure_1_4;
-              throw Error(closure_1_4 + substr1);
+              tmp7 = c4;
+              throw Error(c4 + substr1);
             }
           }
         } else {
@@ -2671,15 +2602,15 @@ function clone(arg0) {
                   }
                   return tmp14;
                 }
-                tmp12 = closure_1_17;
-                tmp13 = closure_1_17(self, str.toString());
+                tmp12 = parseDecimal;
+                tmp13 = parseDecimal(self, str.toString());
                 tmp14 = self;
               }
             } else if (typeof arg0 !== "string") {
               tmp10 = globalThis;
               _Error2 = Error;
-              tmp11 = closure_1_4;
-              throw Error(closure_1_4 + arg0);
+              tmp11 = c4;
+              throw Error(c4 + arg0);
             } else {
               num8 = 0;
               num9 = 45;
@@ -2693,16 +2624,16 @@ function clone(arg0) {
                 self.s = 1;
                 substr1 = arg0;
               }
-              tmp5 = closure_1_8;
-              if (closure_1_8.test(substr1)) {
-                tmp8 = closure_1_17;
-                tmp9 = closure_1_17(self, substr1);
+              tmp5 = re8;
+              if (re8.test(substr1)) {
+                tmp8 = parseDecimal;
+                tmp9 = parseDecimal(self, substr1);
                 return;
               } else {
                 tmp6 = globalThis;
                 _Error = Error;
-                tmp7 = closure_1_4;
-                throw Error(closure_1_4 + substr1);
+                tmp7 = c4;
+                throw Error(c4 + substr1);
               }
             }
           } else {
@@ -2759,21 +2690,21 @@ class Decimal {
             }
             return tmp14;
           }
-          tmp12 = closure_1_17;
-          tmp13 = closure_1_17(self, str.toString());
+          tmp12 = parseDecimal;
+          tmp13 = parseDecimal(self, str.toString());
           tmp14 = self;
         }
       } else if (typeof global !== "string") {
         tmp10 = globalThis;
         _Error2 = Error;
-        tmp11 = closure_1_4;
-        throw Error(closure_1_4 + global);
+        tmp11 = c4;
+        throw Error(c4 + global);
       } else {
         num8 = 0;
         num9 = 45;
-        if (45 === require("module_0")) {
+        if (45 === global.charCodeAt(0)) {
           num2 = 1;
-          substr1 = require("module_1");
+          substr1 = global.slice(1);
           num3 = -1;
           self.s = -1;
         } else {
@@ -2781,16 +2712,16 @@ class Decimal {
           self.s = 1;
           substr1 = global;
         }
-        tmp5 = closure_1_8;
-        if (closure_1_8.test(substr1)) {
-          tmp8 = closure_1_17;
-          tmp9 = closure_1_17(self, substr1);
+        tmp5 = re8;
+        if (re8.test(substr1)) {
+          tmp8 = parseDecimal;
+          tmp9 = parseDecimal(self, substr1);
           return;
         } else {
           tmp6 = globalThis;
           _Error = Error;
-          tmp7 = closure_1_4;
-          throw Error(closure_1_4 + substr1);
+          tmp7 = c4;
+          throw Error(c4 + substr1);
         }
       }
     } else {
@@ -2819,7 +2750,6 @@ let items = ["precision", "rounding", "toExpNeg", "toExpPos", "LN10"];
 if (0 < items.length) {
   do {
     let tmp = items[num];
-    let tmp2 = num;
     if (!obj.hasOwnProperty(tmp)) {
       obj[tmp] = undefined[tmp];
     }
@@ -2829,6 +2759,7 @@ if (0 < items.length) {
 Decimal.config(obj);
 Decimal.Decimal = Decimal;
 Decimal.default = Decimal;
+Decimal = Decimal(1);
 if (typeof globalThis.define === "function") {
   if (globalThis.define.amd) {
     globalThis.define(() => Decimal);

@@ -2,7 +2,7 @@
 
 // Module 6628 (GESTURE_SOURCE)
 import cancelAnimation from "cancelAnimation" /* 1636 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import get_ActivityIndicator from "module_17" /* 17 */;
 
 ({ Dimensions, Platform } = get_ActivityIndicator);
 let value = Dimensions.get("window");

@@ -1,7 +1,7 @@
 // === Module 7007: GestureHandlerRefContext ===
 
 // Module 7007 (GestureHandlerRefContext)
-import noopAll from "noop" /* 19 */;
+import noop from "module_19" /* 19 */;
 
 
-export const GestureHandlerRefContext = noopAll.createContext(null);
+export const GestureHandlerRefContext = noop.createContext(null);

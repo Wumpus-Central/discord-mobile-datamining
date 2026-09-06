@@ -1,7 +1,7 @@
 // === Module 9724: colorToHex ===
 
 // Module 9724 (colorToHex)
-import closure_0 from "_slicedToArray" /* 32 */;
+import _slicedToArray from "module_32" /* 32 */;
 
 
 export const colorToHex = function colorToHex(arr) {
@@ -43,7 +43,7 @@ export const colorToHex = function colorToHex(arr) {
       let str11 = "";
       let str5 = "";
       if (3 === items.length) {
-        [tmp30, tmp31, tmp32] = callback(items, 3);
+        [tmp30, tmp31, tmp32] = _slicedToArray(items, 3);
         if (0 === tmp31) {
           const _Math = Math;
           const items1 = [Math.round(255 * tmp34), , ];
@@ -136,7 +136,7 @@ export const colorToHex = function colorToHex(arr) {
             }
           }
         }
-        const tmp29 = callback(items, 3);
+        const tmp29 = _slicedToArray(items, 3);
       }
       return str5;
     }

@@ -2,16 +2,16 @@
 
 // Module 1810 (dispatchCommand)
 import dispatchCommandFabric from "dispatchCommandFabric" /* 1811 */;
-import getRelativeCoords from "getRelativeCoords" /* 1812 */;
-import measureFabric from "measureFabric" /* 1813 */;
+import measureFabric from "measureFabric" /* 1812 */;
+import _mod1813 from "module_1813" /* 1813 */;
 import scrollToFabric from "scrollToFabric" /* 1814 */;
-import setGestureStateNative from "setGestureStateNative" /* 1815 */;
-import setNativePropsFabric from "setNativePropsFabric" /* 1816 */;
+import _mod1815 from "module_1815" /* 1815 */;
+import _mod1816 from "module_1816" /* 1816 */;
 
 
 export const dispatchCommand = dispatchCommandFabric.dispatchCommand;
-export const getRelativeCoords = getRelativeCoords.getRelativeCoords;
-export const measure = measureFabric.measure;
+export const getRelativeCoords = measureFabric.getRelativeCoords;
+export const measure = _mod1813.measure;
 export const scrollTo = scrollToFabric.scrollTo;
-export const setGestureState = setGestureStateNative.setGestureState;
-export const setNativeProps = setNativePropsFabric.setNativeProps;
+export const setGestureState = _mod1815.setGestureState;
+export const setNativeProps = _mod1816.setNativeProps;

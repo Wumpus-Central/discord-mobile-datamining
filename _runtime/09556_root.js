@@ -3,21 +3,19 @@
 // Module 9556 (root)
 let fn = () => {
   let items = [
-    (arg0, arg1, arg2) => {
-      module.exports = arg2(1);
+    (arg0, arg1, fn) => {
+      module.exports = fn(1);
     },
-    (arg0, arg1, arg2) => {
-      closure_0 = arg2;
-      let fn = Object.assign;
+    (arg0, arg1, fn) => {
+      closure_0 = fn;
+      fn = Object.assign;
       if (!fn) {
         fn = (arg0) => {
           for (let num = 1; num < arguments.length; num = num + 1) {
             let tmp = arguments[num];
-            let tmp2 = tmp;
-            let tmp3 = num;
             for (const key10012 in tmp) {
-              let tmp5 = key10012;
               let _Object = Object;
+              hasOwnProperty = Object.prototype.hasOwnProperty;
               let call = hasOwnProperty.call;
               if (typeof call === "unknown") {
                 let hasOwnPropertyResult = hasOwnProperty(key10012);
@@ -36,23 +34,22 @@ let fn = () => {
           return arg0;
         };
       }
-      closure_2 = arg2(2);
-      closure_3 = arg2(14);
-      closure_4 = arg2(19);
-      closure_5 = arg2(16);
-      closure_6 = arg2(32);
-      closure_7 = arg2(15);
-      obj = { alternatives: arg2(28), array: arg2(33), boolean: arg2(27), binary: arg2(34), date: arg2(20), number: arg2(26), object: arg2(29), string: arg2(21) };
+      closure_2 = fn(2);
+      closure_3 = fn(14);
+      closure_4 = fn(19);
+      closure_5 = fn(16);
+      closure_6 = fn(32);
+      closure_7 = fn(15);
+      obj = { alternatives: fn(28), array: fn(33), boolean: fn(27), binary: fn(34), date: fn(20), number: fn(26), object: fn(29), string: fn(21) };
       obj.root = () => {
         obj = new closure_3();
         let cloneResult = obj.clone();
-        fn = cloneResult;
         cloneResult.any = () => {
-          closure_1_2.assert(0 === arguments.length, "Joi.any() does not allow arguments.");
+          closure_2.assert(0 === arguments.length, "Joi.any() does not allow arguments.");
           return obj;
         };
         fn = () => {
-          const alternatives = closure_8.alternatives;
+          const alternatives = obj.alternatives;
           if (arguments.length) {
             const _try = alternatives.try;
             let applyResult = _try(...arguments);
@@ -64,34 +61,34 @@ let fn = () => {
         cloneResult.alt = fn;
         cloneResult.alternatives = fn;
         cloneResult.array = () => {
-          closure_2.assert(0 === arguments.length, "Joi.array() does not allow arguments.");
-          return closure_8.array;
+          closure_1_2.assert(0 === arguments.length, "Joi.array() does not allow arguments.");
+          return obj.array;
         };
         const fn2 = () => {
-          closure_2.assert(0 === arguments.length, "Joi.boolean() does not allow arguments.");
-          return closure_8.boolean;
+          closure_1_2.assert(0 === arguments.length, "Joi.boolean() does not allow arguments.");
+          return obj.boolean;
         };
         cloneResult.bool = fn2;
         cloneResult.boolean = fn2;
         cloneResult.binary = () => {
-          closure_2.assert(0 === arguments.length, "Joi.binary() does not allow arguments.");
-          return closure_8.binary;
+          closure_1_2.assert(0 === arguments.length, "Joi.binary() does not allow arguments.");
+          return obj.binary;
         };
         cloneResult.date = () => {
-          closure_2.assert(0 === arguments.length, "Joi.date() does not allow arguments.");
-          return closure_8.date;
+          closure_1_2.assert(0 === arguments.length, "Joi.date() does not allow arguments.");
+          return obj.date;
         };
         cloneResult.func = () => {
-          closure_2.assert(0 === arguments.length, "Joi.func() does not allow arguments.");
-          const object = closure_8.object;
+          closure_1_2.assert(0 === arguments.length, "Joi.func() does not allow arguments.");
+          const object = obj.object;
           return object._func();
         };
         cloneResult.number = () => {
-          closure_2.assert(0 === arguments.length, "Joi.number() does not allow arguments.");
-          return closure_8.number;
+          closure_1_2.assert(0 === arguments.length, "Joi.number() does not allow arguments.");
+          return obj.number;
         };
         cloneResult.object = () => {
-          const object = closure_8.object;
+          const object = obj.object;
           if (arguments.length) {
             const keys = object.keys;
             let applyResult = keys(...arguments);
@@ -101,11 +98,11 @@ let fn = () => {
           return applyResult;
         };
         cloneResult.string = () => {
-          closure_2.assert(0 === arguments.length, "Joi.string() does not allow arguments.");
-          return closure_8.string;
+          closure_1_2.assert(0 === arguments.length, "Joi.string() does not allow arguments.");
+          return obj.string;
         };
         cloneResult.ref = () => {
-          const create = ref.create;
+          const create = closure_1_7.create;
           const apply = create.apply;
           if (typeof apply === "unknown") {
             let applyArgumentsResult = HermesBuiltin.applyArguments(null);
@@ -114,7 +111,7 @@ let fn = () => {
           }
           return applyArgumentsResult;
         };
-        cloneResult.isRef = (arg0) => ref.isRef(arg0);
+        cloneResult.isRef = (arg0) => closure_1_7.isRef(arg0);
         cloneResult.validate = (arg0) => {
           const tmp = arguments[arguments.length - 1];
           let tmp2 = null;
@@ -147,7 +144,7 @@ let fn = () => {
         };
         cloneResult.compile = (otherwise) => {
           try {
-            return closure_4.schema(otherwise);
+            return closure_1_4.schema(otherwise);
           } catch (obj) {
             if (obj.hasOwnProperty("path")) {
               obj.message = obj.message + "(" + obj.path + ")";
@@ -160,7 +157,7 @@ let fn = () => {
         };
         cloneResult.attempt = (arg0, arg1, arg2) => {
           const iter = cloneResult.validate(arg0, arg1);
-          error = iter.error;
+          const error = iter.error;
           if (error) {
             if (arg2) {
               const _Error = Error;
@@ -182,10 +179,10 @@ let fn = () => {
         cloneResult.reach = function(_inner, str) {
           let tmp = _inner;
           if (_inner) {
-            tmp = _inner instanceof closure_3;
+            tmp = _inner instanceof closure_1_3;
           }
-          closure_2.assert(tmp, "you must provide a joi schema");
-          closure_2.assert(typeof str === "string", "path must be a string");
+          closure_1_2.assert(tmp, "you must provide a joi schema");
+          closure_1_2.assert(typeof str === "string", "path must be a string");
           if ("" === str) {
             return _inner;
           } else {
@@ -202,12 +199,10 @@ let fn = () => {
               }
             }
           }
-          obj = closure_2;
         };
-        cloneResult.lazy = (arg0) => closure_6.set(arg0);
+        cloneResult.lazy = (arg0) => closure_1_6.set(arg0);
         cloneResult.extend = function() {
-          let type;
-          obj = closure_1_2;
+          obj = closure_2;
           let call = slice.call;
           if (typeof call === "unknown") {
             let substr = slice();
@@ -215,25 +210,24 @@ let fn = () => {
             substr = call(arguments);
           }
           let self = this;
-          const flattenResult = closure_1_2.flatten(substr);
+          const flattenResult = closure_2.flatten(substr);
           obj.assert(flattenResult.length > 0, "You need to provide at least one extension");
-          this.assert(flattenResult, type.extensionsSchema);
+          this.assert(flattenResult, cloneResult.extensionsSchema);
           obj = Object.create(this);
-          let f112509 = obj;
+          closure_0 = obj;
           let num = 0;
           if (0 < flattenResult.length) {
             while (true) {
               let tmp6 = flattenResult[num];
-              f112509 = tmp6;
+              closure_0 = tmp6;
               let base = tmp6.base;
-              let tmp7 = num;
               if (!base) {
                 base = self.any();
               }
               cloneResult = base.clone();
-              type = cloneResult;
+              let type = cloneResult;
               let constructor = cloneResult.constructor;
-              f112509 = constructor;
+              closure_0 = constructor;
               class type {
                 constructor() {
                   self = this;
@@ -252,9 +246,9 @@ let fn = () => {
                       }
                       tmp14 = closure_0;
                       if (closure_0.base) {
-                        tmp15 = f112509;
+                        tmp15 = closure_1;
                         tmp16 = closure_1;
-                        tmp17 = f112509(tmp13, closure_1);
+                        tmp17 = closure_1(tmp13, closure_1);
                       }
                       tmp13._type = tmp14.name;
                       if (!tmp14.language) {
@@ -263,23 +257,23 @@ let fn = () => {
                         _settings = tmp13._settings;
                         if (!_settings) {
                           obj = { language: null };
-                          obj[0] = {};
+                          obj.language = {};
                           _settings = obj;
                         }
                         tmp13._settings = _settings;
                         obj = {};
                         ({ name, language } = tmp14);
-                        tmp18 = closure_2;
+                        tmp18 = __webpack_require__;
                         if (name in obj) {
                           tmp19 = globalThis;
                           _Object = Object;
                           obj1 = { value: null, enumerable: true, configurable: true, writable: true };
-                          obj1[0] = language;
+                          obj1.value = language;
                           definePropertyResult = Object.defineProperty(obj, name, obj1);
                         } else {
                           obj[name] = language;
                         }
-                        obj = closure_2.applyToDefaults(tmp13._settings.language, obj);
+                        obj = __webpack_require__.applyToDefaults(tmp13._settings.language, obj);
                         tmp13._settings.language = obj;
                       }
                     } else {
@@ -312,7 +306,6 @@ let fn = () => {
                   let str = "Super expression must either be null or a function, not ";
                   let tmp24 = new.target;
                   let typeError = new TypeError("Super expression must either be null or a function, not " + typeof constructor);
-                  let tmp26 = typeError;
                   throw typeError;
                 }
               }
@@ -321,9 +314,8 @@ let fn = () => {
                 prototype = constructor.prototype;
               }
               obj = { constructor: null };
-              obj1 = { value: null, enumerable: false, writable: true, configurable: true };
-              obj1[0] = type;
-              obj[0] = obj1;
+              let obj1 = { value: type, enumerable: false, writable: true, configurable: true };
+              obj.constructor = obj1;
               type.prototype = Object.create(prototype, obj);
               if (constructor) {
                 let _Object = Object;
@@ -336,7 +328,6 @@ let fn = () => {
                     let tmp9 = ownPropertyNames[num2];
                     let _Object3 = Object;
                     let ownPropertyDescriptor = Object.getOwnPropertyDescriptor(constructor, tmp9);
-                    let tmp11 = num2;
                     let configurable = ownPropertyDescriptor;
                     if (ownPropertyDescriptor) {
                       configurable = ownPropertyDescriptor.configurable;
@@ -370,9 +361,9 @@ let fn = () => {
                         }
                         tmp14 = closure_0;
                         if (closure_0.base) {
-                          tmp15 = f112509;
+                          tmp15 = closure_1;
                           tmp16 = closure_1;
-                          tmp17 = f112509(tmp13, closure_1);
+                          tmp17 = closure_1(tmp13, closure_1);
                         }
                         tmp13._type = tmp14.name;
                         if (!tmp14.language) {
@@ -381,23 +372,23 @@ let fn = () => {
                           _settings = tmp13._settings;
                           if (!_settings) {
                             obj = { language: null };
-                            obj[0] = {};
+                            obj.language = {};
                             _settings = obj;
                           }
                           tmp13._settings = _settings;
                           obj = {};
                           ({ name, language } = tmp14);
-                          tmp18 = closure_2;
+                          tmp18 = __webpack_require__;
                           if (name in obj) {
                             tmp19 = globalThis;
                             _Object = Object;
                             obj1 = { value: null, enumerable: true, configurable: true, writable: true };
-                            obj1[0] = language;
+                            obj1.value = language;
                             definePropertyResult = Object.defineProperty(obj, name, obj1);
                           } else {
                             obj[name] = language;
                           }
-                          obj = closure_2.applyToDefaults(tmp13._settings.language, obj);
+                          obj = __webpack_require__.applyToDefaults(tmp13._settings.language, obj);
                           tmp13._settings.language = obj;
                         }
                       } else {
@@ -456,13 +447,13 @@ let fn = () => {
                       tmp11 = arg2;
                       coerceResult = call2(self, value, arg1, arg2);
                     }
-                    if (coerceResult instanceof closure_2_5.Err) {
+                    if (coerceResult instanceof closure_5.Err) {
                       obj = { value: null, errors: null };
-                      obj[0] = value;
-                      obj[1] = coerceResult;
+                      obj.value = value;
+                      obj.errors = coerceResult;
                     } else {
                       obj = { value: null };
-                      obj[0] = coerceResult;
+                      obj.value = coerceResult;
                     }
                     return obj;
                   }
@@ -487,9 +478,9 @@ let fn = () => {
                         }
                         tmp14 = closure_0;
                         if (closure_0.base) {
-                          tmp15 = f112509;
+                          tmp15 = closure_1;
                           tmp16 = closure_1;
-                          tmp17 = f112509(tmp13, closure_1);
+                          tmp17 = closure_1(tmp13, closure_1);
                         }
                         tmp13._type = tmp14.name;
                         if (!tmp14.language) {
@@ -498,23 +489,23 @@ let fn = () => {
                           _settings = tmp13._settings;
                           if (!_settings) {
                             obj = { language: null };
-                            obj[0] = {};
+                            obj.language = {};
                             _settings = obj;
                           }
                           tmp13._settings = _settings;
                           obj = {};
                           ({ name, language } = tmp14);
-                          tmp18 = closure_2;
+                          tmp18 = __webpack_require__;
                           if (name in obj) {
                             tmp19 = globalThis;
                             _Object = Object;
                             obj1 = { value: null, enumerable: true, configurable: true, writable: true };
-                            obj1[0] = language;
+                            obj1.value = language;
                             definePropertyResult = Object.defineProperty(obj, name, obj1);
                           } else {
                             obj[name] = language;
                           }
-                          obj = closure_2.applyToDefaults(tmp13._settings.language, obj);
+                          obj = __webpack_require__.applyToDefaults(tmp13._settings.language, obj);
                           tmp13._settings.language = obj;
                         }
                       } else {
@@ -573,13 +564,13 @@ let fn = () => {
                       tmp11 = arg2;
                       coerceResult = call2(self, value, arg1, arg2);
                     }
-                    if (coerceResult instanceof closure_2_5.Err) {
+                    if (coerceResult instanceof closure_5.Err) {
                       obj = { value: null, errors: null };
-                      obj[0] = value;
-                      obj[1] = coerceResult;
+                      obj.value = value;
+                      obj.errors = coerceResult;
                     } else {
                       obj = { value: null };
-                      obj[0] = coerceResult;
+                      obj.value = coerceResult;
                     }
                     return obj;
                   }
@@ -617,13 +608,13 @@ let fn = () => {
                       tmp11 = arg2;
                       preResult = call2(self, value, arg1, arg2);
                     }
-                    if (preResult instanceof closure_2_5.Err) {
+                    if (preResult instanceof closure_5.Err) {
                       obj = { value: null, errors: null };
-                      obj[0] = value;
-                      obj[1] = preResult;
+                      obj.value = value;
+                      obj.errors = preResult;
                     } else {
                       obj = { value: null };
-                      obj[0] = preResult;
+                      obj.value = preResult;
                     }
                     return obj;
                   }
@@ -648,9 +639,9 @@ let fn = () => {
                         }
                         tmp14 = closure_0;
                         if (closure_0.base) {
-                          tmp15 = f112509;
+                          tmp15 = closure_1;
                           tmp16 = closure_1;
-                          tmp17 = f112509(tmp13, closure_1);
+                          tmp17 = closure_1(tmp13, closure_1);
                         }
                         tmp13._type = tmp14.name;
                         if (!tmp14.language) {
@@ -659,23 +650,23 @@ let fn = () => {
                           _settings = tmp13._settings;
                           if (!_settings) {
                             obj = { language: null };
-                            obj[0] = {};
+                            obj.language = {};
                             _settings = obj;
                           }
                           tmp13._settings = _settings;
                           obj = {};
                           ({ name, language } = tmp14);
-                          tmp18 = closure_2;
+                          tmp18 = __webpack_require__;
                           if (name in obj) {
                             tmp19 = globalThis;
                             _Object = Object;
                             obj1 = { value: null, enumerable: true, configurable: true, writable: true };
-                            obj1[0] = language;
+                            obj1.value = language;
                             definePropertyResult = Object.defineProperty(obj, name, obj1);
                           } else {
                             obj[name] = language;
                           }
-                          obj = closure_2.applyToDefaults(tmp13._settings.language, obj);
+                          obj = __webpack_require__.applyToDefaults(tmp13._settings.language, obj);
                           tmp13._settings.language = obj;
                         }
                       } else {
@@ -734,13 +725,13 @@ let fn = () => {
                       tmp11 = arg2;
                       coerceResult = call2(self, value, arg1, arg2);
                     }
-                    if (coerceResult instanceof closure_2_5.Err) {
+                    if (coerceResult instanceof closure_5.Err) {
                       obj = { value: null, errors: null };
-                      obj[0] = value;
-                      obj[1] = coerceResult;
+                      obj.value = value;
+                      obj.errors = coerceResult;
                     } else {
                       obj = { value: null };
-                      obj[0] = coerceResult;
+                      obj.value = coerceResult;
                     }
                     return obj;
                   }
@@ -778,13 +769,13 @@ let fn = () => {
                       tmp11 = arg2;
                       preResult = call2(self, value, arg1, arg2);
                     }
-                    if (preResult instanceof closure_2_5.Err) {
+                    if (preResult instanceof closure_5.Err) {
                       obj = { value: null, errors: null };
-                      obj[0] = value;
-                      obj[1] = preResult;
+                      obj.value = value;
+                      obj.errors = preResult;
                     } else {
                       obj = { value: null };
-                      obj[0] = preResult;
+                      obj.value = preResult;
                     }
                     return obj;
                   }
@@ -808,9 +799,9 @@ let fn = () => {
                           }
                           tmp14 = closure_0;
                           if (closure_0.base) {
-                            tmp15 = f112509;
+                            tmp15 = closure_1;
                             tmp16 = closure_1;
-                            tmp17 = f112509(tmp13, closure_1);
+                            tmp17 = closure_1(tmp13, closure_1);
                           }
                           tmp13._type = tmp14.name;
                           if (!tmp14.language) {
@@ -819,23 +810,23 @@ let fn = () => {
                             _settings = tmp13._settings;
                             if (!_settings) {
                               obj = { language: null };
-                              obj[0] = {};
+                              obj.language = {};
                               _settings = obj;
                             }
                             tmp13._settings = _settings;
                             obj = {};
                             ({ name, language } = tmp14);
-                            tmp18 = closure_2;
+                            tmp18 = __webpack_require__;
                             if (name in obj) {
                               tmp19 = globalThis;
                               _Object = Object;
                               obj1 = { value: null, enumerable: true, configurable: true, writable: true };
-                              obj1[0] = language;
+                              obj1.value = language;
                               definePropertyResult = Object.defineProperty(obj, name, obj1);
                             } else {
                               obj[name] = language;
                             }
-                            obj = closure_2.applyToDefaults(tmp13._settings.language, obj);
+                            obj = __webpack_require__.applyToDefaults(tmp13._settings.language, obj);
                             tmp13._settings.language = obj;
                           }
                         } else {
@@ -894,13 +885,13 @@ let fn = () => {
                         tmp11 = arg2;
                         coerceResult = call2(self, value, arg1, arg2);
                       }
-                      if (coerceResult instanceof closure_2_5.Err) {
+                      if (coerceResult instanceof closure_5.Err) {
                         obj = { value: null, errors: null };
-                        obj[0] = value;
-                        obj[1] = coerceResult;
+                        obj.value = value;
+                        obj.errors = coerceResult;
                       } else {
                         obj = { value: null };
-                        obj[0] = coerceResult;
+                        obj.value = coerceResult;
                       }
                       return obj;
                     }
@@ -938,19 +929,18 @@ let fn = () => {
                         tmp11 = arg2;
                         preResult = call2(self, value, arg1, arg2);
                       }
-                      if (preResult instanceof closure_2_5.Err) {
+                      if (preResult instanceof closure_5.Err) {
                         obj = { value: null, errors: null };
-                        obj[0] = value;
-                        obj[1] = preResult;
+                        obj.value = value;
+                        obj.errors = preResult;
                       } else {
                         obj = { value: null };
-                        obj[0] = preResult;
+                        obj.value = preResult;
                       }
                       return obj;
                     }
                   }
-                  f112509 = tmp15;
-                  let tmp16 = sum;
+                  closure_0 = tmp15;
                   while (!tmp15.params) {
                     class type {
                       constructor() {
@@ -970,9 +960,9 @@ let fn = () => {
                             }
                             tmp14 = closure_0;
                             if (closure_0.base) {
-                              tmp15 = f112509;
+                              tmp15 = closure_1;
                               tmp16 = closure_1;
-                              tmp17 = f112509(tmp13, closure_1);
+                              tmp17 = closure_1(tmp13, closure_1);
                             }
                             tmp13._type = tmp14.name;
                             if (!tmp14.language) {
@@ -981,23 +971,23 @@ let fn = () => {
                               _settings = tmp13._settings;
                               if (!_settings) {
                                 obj = { language: null };
-                                obj[0] = {};
+                                obj.language = {};
                                 _settings = obj;
                               }
                               tmp13._settings = _settings;
                               obj = {};
                               ({ name, language } = tmp14);
-                              tmp18 = closure_2;
+                              tmp18 = __webpack_require__;
                               if (name in obj) {
                                 tmp19 = globalThis;
                                 _Object = Object;
                                 obj1 = { value: null, enumerable: true, configurable: true, writable: true };
-                                obj1[0] = language;
+                                obj1.value = language;
                                 definePropertyResult = Object.defineProperty(obj, name, obj1);
                               } else {
                                 obj[name] = language;
                               }
-                              obj = closure_2.applyToDefaults(tmp13._settings.language, obj);
+                              obj = __webpack_require__.applyToDefaults(tmp13._settings.language, obj);
                               tmp13._settings.language = obj;
                             }
                           } else {
@@ -1056,13 +1046,13 @@ let fn = () => {
                           tmp11 = arg2;
                           coerceResult = call2(self, value, arg1, arg2);
                         }
-                        if (coerceResult instanceof closure_2_5.Err) {
+                        if (coerceResult instanceof closure_5.Err) {
                           obj = { value: null, errors: null };
-                          obj[0] = value;
-                          obj[1] = coerceResult;
+                          obj.value = value;
+                          obj.errors = coerceResult;
                         } else {
                           obj = { value: null };
-                          obj[0] = coerceResult;
+                          obj.value = coerceResult;
                         }
                         return obj;
                       }
@@ -1100,13 +1090,13 @@ let fn = () => {
                           tmp11 = arg2;
                           preResult = call2(self, value, arg1, arg2);
                         }
-                        if (preResult instanceof closure_2_5.Err) {
+                        if (preResult instanceof closure_5.Err) {
                           obj = { value: null, errors: null };
-                          obj[0] = value;
-                          obj[1] = preResult;
+                          obj.value = value;
+                          obj.errors = preResult;
                         } else {
                           obj = { value: null };
-                          obj[0] = preResult;
+                          obj.value = preResult;
                         }
                         return obj;
                       }
@@ -1131,9 +1121,9 @@ let fn = () => {
                               }
                               tmp14 = closure_0;
                               if (closure_0.base) {
-                                tmp15 = f112509;
+                                tmp15 = closure_1;
                                 tmp16 = closure_1;
-                                tmp17 = f112509(tmp13, closure_1);
+                                tmp17 = closure_1(tmp13, closure_1);
                               }
                               tmp13._type = tmp14.name;
                               if (!tmp14.language) {
@@ -1142,23 +1132,23 @@ let fn = () => {
                                 _settings = tmp13._settings;
                                 if (!_settings) {
                                   obj = { language: null };
-                                  obj[0] = {};
+                                  obj.language = {};
                                   _settings = obj;
                                 }
                                 tmp13._settings = _settings;
                                 obj = {};
                                 ({ name, language } = tmp14);
-                                tmp18 = closure_2;
+                                tmp18 = __webpack_require__;
                                 if (name in obj) {
                                   tmp19 = globalThis;
                                   _Object = Object;
                                   obj1 = { value: null, enumerable: true, configurable: true, writable: true };
-                                  obj1[0] = language;
+                                  obj1.value = language;
                                   definePropertyResult = Object.defineProperty(obj, name, obj1);
                                 } else {
                                   obj[name] = language;
                                 }
-                                obj = closure_2.applyToDefaults(tmp13._settings.language, obj);
+                                obj = __webpack_require__.applyToDefaults(tmp13._settings.language, obj);
                                 tmp13._settings.language = obj;
                               }
                             } else {
@@ -1217,13 +1207,13 @@ let fn = () => {
                             tmp11 = arg2;
                             coerceResult = call2(self, value, arg1, arg2);
                           }
-                          if (coerceResult instanceof closure_2_5.Err) {
+                          if (coerceResult instanceof closure_5.Err) {
                             obj = { value: null, errors: null };
-                            obj[0] = value;
-                            obj[1] = coerceResult;
+                            obj.value = value;
+                            obj.errors = coerceResult;
                           } else {
                             obj = { value: null };
-                            obj[0] = coerceResult;
+                            obj.value = coerceResult;
                           }
                           return obj;
                         }
@@ -1261,25 +1251,25 @@ let fn = () => {
                             tmp11 = arg2;
                             preResult = call2(self, value, arg1, arg2);
                           }
-                          if (preResult instanceof closure_2_5.Err) {
+                          if (preResult instanceof closure_5.Err) {
                             obj = { value: null, errors: null };
-                            obj[0] = value;
-                            obj[1] = preResult;
+                            obj.value = value;
+                            obj.errors = preResult;
                           } else {
                             obj = { value: null };
-                            obj[0] = preResult;
+                            obj.value = preResult;
                           }
                           return obj;
                         }
                       }
-                      schemaResult = closure_1_4.schema(tmp15.params);
+                      schemaResult = closure_4.schema(tmp15.params);
                     }
                     constructor = schemaResult;
                     type.prototype[tmp15.name] = function() {
                       let arr2;
                       if (arguments.length > type.length) {
                         const _Error = Error;
-                        error = new Error("Unexpected number of arguments");
+                        const error = new Error("Unexpected number of arguments");
                         throw error;
                       } else {
                         const _Array = Array;
@@ -1297,11 +1287,9 @@ let fn = () => {
                           do {
                             obj[type[num]] = substr[num];
                             let isRefResult = !flag;
-                            let tmp4 = num;
                             let flag3 = flag;
                             arr2 = type;
                             if (!flag) {
-                              let tmp5 = closure_2_7;
                               isRefResult = closure_2_7.isRef(substr[num]);
                             }
                             if (isRefResult) {
@@ -1313,13 +1301,11 @@ let fn = () => {
                           } while (num < arr2.length);
                         }
                         if (constructor) {
-                          f112509.assert(obj, tmp6);
+                          closure_0.assert(obj, tmp6);
                         }
                         let self = this;
                         if (obj.validate) {
-                          obj = { description: null, hasRef: null };
-                          obj[0] = tmp9.description;
-                          obj[1] = flag2;
+                          obj = { description: tmp9.description, hasRef: flag2 };
                           let _testResult = self._test(tmp9.name, obj, function validate() { ... }, obj);
                         } else {
                           _testResult = self.clone();
@@ -1356,9 +1342,9 @@ let fn = () => {
                               }
                               tmp14 = closure_0;
                               if (closure_0.base) {
-                                tmp15 = f112509;
+                                tmp15 = closure_1;
                                 tmp16 = closure_1;
-                                tmp17 = f112509(tmp13, closure_1);
+                                tmp17 = closure_1(tmp13, closure_1);
                               }
                               tmp13._type = tmp14.name;
                               if (!tmp14.language) {
@@ -1367,23 +1353,23 @@ let fn = () => {
                                 _settings = tmp13._settings;
                                 if (!_settings) {
                                   obj = { language: null };
-                                  obj[0] = {};
+                                  obj.language = {};
                                   _settings = obj;
                                 }
                                 tmp13._settings = _settings;
                                 obj = {};
                                 ({ name, language } = tmp14);
-                                tmp18 = closure_2;
+                                tmp18 = __webpack_require__;
                                 if (name in obj) {
                                   tmp19 = globalThis;
                                   _Object = Object;
                                   obj1 = { value: null, enumerable: true, configurable: true, writable: true };
-                                  obj1[0] = language;
+                                  obj1.value = language;
                                   definePropertyResult = Object.defineProperty(obj, name, obj1);
                                 } else {
                                   obj[name] = language;
                                 }
-                                obj = closure_2.applyToDefaults(tmp13._settings.language, obj);
+                                obj = __webpack_require__.applyToDefaults(tmp13._settings.language, obj);
                                 tmp13._settings.language = obj;
                               }
                             } else {
@@ -1442,13 +1428,13 @@ let fn = () => {
                             tmp11 = arg2;
                             coerceResult = call2(self, value, arg1, arg2);
                           }
-                          if (coerceResult instanceof closure_2_5.Err) {
+                          if (coerceResult instanceof closure_5.Err) {
                             obj = { value: null, errors: null };
-                            obj[0] = value;
-                            obj[1] = coerceResult;
+                            obj.value = value;
+                            obj.errors = coerceResult;
                           } else {
                             obj = { value: null };
-                            obj[0] = coerceResult;
+                            obj.value = coerceResult;
                           }
                           return obj;
                         }
@@ -1486,13 +1472,13 @@ let fn = () => {
                             tmp11 = arg2;
                             preResult = call2(self, value, arg1, arg2);
                           }
-                          if (preResult instanceof closure_2_5.Err) {
+                          if (preResult instanceof closure_5.Err) {
                             obj = { value: null, errors: null };
-                            obj[0] = value;
-                            obj[1] = preResult;
+                            obj.value = value;
+                            obj.errors = preResult;
                           } else {
                             obj = { value: null };
-                            obj[0] = preResult;
+                            obj.value = preResult;
                           }
                           return obj;
                         }
@@ -1500,8 +1486,7 @@ let fn = () => {
                     }
                     continue;
                   }
-                  let tmp17 = closure_1_3;
-                  if (tmp15.params instanceof closure_1_3) {
+                  if (tmp15.params instanceof closure_3) {
                     class type {
                       constructor() {
                         self = this;
@@ -1520,9 +1505,9 @@ let fn = () => {
                             }
                             tmp14 = closure_0;
                             if (closure_0.base) {
-                              tmp15 = f112509;
+                              tmp15 = closure_1;
                               tmp16 = closure_1;
-                              tmp17 = f112509(tmp13, closure_1);
+                              tmp17 = closure_1(tmp13, closure_1);
                             }
                             tmp13._type = tmp14.name;
                             if (!tmp14.language) {
@@ -1531,23 +1516,23 @@ let fn = () => {
                               _settings = tmp13._settings;
                               if (!_settings) {
                                 obj = { language: null };
-                                obj[0] = {};
+                                obj.language = {};
                                 _settings = obj;
                               }
                               tmp13._settings = _settings;
                               obj = {};
                               ({ name, language } = tmp14);
-                              tmp18 = closure_2;
+                              tmp18 = __webpack_require__;
                               if (name in obj) {
                                 tmp19 = globalThis;
                                 _Object = Object;
                                 obj1 = { value: null, enumerable: true, configurable: true, writable: true };
-                                obj1[0] = language;
+                                obj1.value = language;
                                 definePropertyResult = Object.defineProperty(obj, name, obj1);
                               } else {
                                 obj[name] = language;
                               }
-                              obj = closure_2.applyToDefaults(tmp13._settings.language, obj);
+                              obj = __webpack_require__.applyToDefaults(tmp13._settings.language, obj);
                               tmp13._settings.language = obj;
                             }
                           } else {
@@ -1606,13 +1591,13 @@ let fn = () => {
                           tmp11 = arg2;
                           coerceResult = call2(self, value, arg1, arg2);
                         }
-                        if (coerceResult instanceof closure_2_5.Err) {
+                        if (coerceResult instanceof closure_5.Err) {
                           obj = { value: null, errors: null };
-                          obj[0] = value;
-                          obj[1] = coerceResult;
+                          obj.value = value;
+                          obj.errors = coerceResult;
                         } else {
                           obj = { value: null };
-                          obj[0] = coerceResult;
+                          obj.value = coerceResult;
                         }
                         return obj;
                       }
@@ -1650,13 +1635,13 @@ let fn = () => {
                           tmp11 = arg2;
                           preResult = call2(self, value, arg1, arg2);
                         }
-                        if (preResult instanceof closure_2_5.Err) {
+                        if (preResult instanceof closure_5.Err) {
                           obj = { value: null, errors: null };
-                          obj[0] = value;
-                          obj[1] = preResult;
+                          obj.value = value;
+                          obj.errors = preResult;
                         } else {
                           obj = { value: null };
-                          obj[0] = preResult;
+                          obj.value = preResult;
                         }
                         return obj;
                       }
@@ -1681,9 +1666,9 @@ let fn = () => {
                             }
                             tmp14 = closure_0;
                             if (closure_0.base) {
-                              tmp15 = f112509;
+                              tmp15 = closure_1;
                               tmp16 = closure_1;
-                              tmp17 = f112509(tmp13, closure_1);
+                              tmp17 = closure_1(tmp13, closure_1);
                             }
                             tmp13._type = tmp14.name;
                             if (!tmp14.language) {
@@ -1692,23 +1677,23 @@ let fn = () => {
                               _settings = tmp13._settings;
                               if (!_settings) {
                                 obj = { language: null };
-                                obj[0] = {};
+                                obj.language = {};
                                 _settings = obj;
                               }
                               tmp13._settings = _settings;
                               obj = {};
                               ({ name, language } = tmp14);
-                              tmp18 = closure_2;
+                              tmp18 = __webpack_require__;
                               if (name in obj) {
                                 tmp19 = globalThis;
                                 _Object = Object;
                                 obj1 = { value: null, enumerable: true, configurable: true, writable: true };
-                                obj1[0] = language;
+                                obj1.value = language;
                                 definePropertyResult = Object.defineProperty(obj, name, obj1);
                               } else {
                                 obj[name] = language;
                               }
-                              obj = closure_2.applyToDefaults(tmp13._settings.language, obj);
+                              obj = __webpack_require__.applyToDefaults(tmp13._settings.language, obj);
                               tmp13._settings.language = obj;
                             }
                           } else {
@@ -1767,13 +1752,13 @@ let fn = () => {
                           tmp11 = arg2;
                           coerceResult = call2(self, value, arg1, arg2);
                         }
-                        if (coerceResult instanceof closure_2_5.Err) {
+                        if (coerceResult instanceof closure_5.Err) {
                           obj = { value: null, errors: null };
-                          obj[0] = value;
-                          obj[1] = coerceResult;
+                          obj.value = value;
+                          obj.errors = coerceResult;
                         } else {
                           obj = { value: null };
-                          obj[0] = coerceResult;
+                          obj.value = coerceResult;
                         }
                         return obj;
                       }
@@ -1811,20 +1796,19 @@ let fn = () => {
                           tmp11 = arg2;
                           preResult = call2(self, value, arg1, arg2);
                         }
-                        if (preResult instanceof closure_2_5.Err) {
+                        if (preResult instanceof closure_5.Err) {
                           obj = { value: null, errors: null };
-                          obj[0] = value;
-                          obj[1] = preResult;
+                          obj.value = value;
+                          obj.errors = preResult;
                         } else {
                           obj = { value: null };
-                          obj[0] = preResult;
+                          obj.value = preResult;
                         }
                         return obj;
                       }
                     }
                     mapped = Object.keys(tmp15.params);
                   }
-                  let tmp19 = mapped;
                 }
               }
               if (tmp6.describe) {
@@ -1846,9 +1830,9 @@ let fn = () => {
                         }
                         tmp14 = closure_0;
                         if (closure_0.base) {
-                          tmp15 = f112509;
+                          tmp15 = closure_1;
                           tmp16 = closure_1;
-                          tmp17 = f112509(tmp13, closure_1);
+                          tmp17 = closure_1(tmp13, closure_1);
                         }
                         tmp13._type = tmp14.name;
                         if (!tmp14.language) {
@@ -1857,23 +1841,23 @@ let fn = () => {
                           _settings = tmp13._settings;
                           if (!_settings) {
                             obj = { language: null };
-                            obj[0] = {};
+                            obj.language = {};
                             _settings = obj;
                           }
                           tmp13._settings = _settings;
                           obj = {};
                           ({ name, language } = tmp14);
-                          tmp18 = closure_2;
+                          tmp18 = __webpack_require__;
                           if (name in obj) {
                             tmp19 = globalThis;
                             _Object = Object;
                             obj1 = { value: null, enumerable: true, configurable: true, writable: true };
-                            obj1[0] = language;
+                            obj1.value = language;
                             definePropertyResult = Object.defineProperty(obj, name, obj1);
                           } else {
                             obj[name] = language;
                           }
-                          obj = closure_2.applyToDefaults(tmp13._settings.language, obj);
+                          obj = __webpack_require__.applyToDefaults(tmp13._settings.language, obj);
                           tmp13._settings.language = obj;
                         }
                       } else {
@@ -1932,13 +1916,13 @@ let fn = () => {
                       tmp11 = arg2;
                       coerceResult = call2(self, value, arg1, arg2);
                     }
-                    if (coerceResult instanceof closure_2_5.Err) {
+                    if (coerceResult instanceof closure_5.Err) {
                       obj = { value: null, errors: null };
-                      obj[0] = value;
-                      obj[1] = coerceResult;
+                      obj.value = value;
+                      obj.errors = coerceResult;
                     } else {
                       obj = { value: null };
-                      obj[0] = coerceResult;
+                      obj.value = coerceResult;
                     }
                     return obj;
                   }
@@ -1976,13 +1960,13 @@ let fn = () => {
                       tmp11 = arg2;
                       preResult = call2(self, value, arg1, arg2);
                     }
-                    if (preResult instanceof closure_2_5.Err) {
+                    if (preResult instanceof closure_5.Err) {
                       obj = { value: null, errors: null };
-                      obj[0] = value;
-                      obj[1] = preResult;
+                      obj.value = value;
+                      obj.errors = preResult;
                     } else {
                       obj = { value: null };
-                      obj[0] = preResult;
+                      obj.value = preResult;
                     }
                     return obj;
                   }
@@ -1998,9 +1982,8 @@ let fn = () => {
                 }
               }
               let typeResult = type();
-              let tmp22 = typeResult;
               closure_3 = typeResult;
-              obj[tmp6.name] = () => closure_3;
+              obj[tmp6.name] = () => typeResult;
               num = num + 1;
               if (num < flattenResult.length) {
                 class type {
@@ -2021,9 +2004,9 @@ let fn = () => {
                         }
                         tmp14 = closure_0;
                         if (closure_0.base) {
-                          tmp15 = f112509;
+                          tmp15 = closure_1;
                           tmp16 = closure_1;
-                          tmp17 = f112509(tmp13, closure_1);
+                          tmp17 = closure_1(tmp13, closure_1);
                         }
                         tmp13._type = tmp14.name;
                         if (!tmp14.language) {
@@ -2032,23 +2015,23 @@ let fn = () => {
                           _settings = tmp13._settings;
                           if (!_settings) {
                             obj = { language: null };
-                            obj[0] = {};
+                            obj.language = {};
                             _settings = obj;
                           }
                           tmp13._settings = _settings;
                           obj = {};
                           ({ name, language } = tmp14);
-                          tmp18 = closure_2;
+                          tmp18 = __webpack_require__;
                           if (name in obj) {
                             tmp19 = globalThis;
                             _Object = Object;
                             obj1 = { value: null, enumerable: true, configurable: true, writable: true };
-                            obj1[0] = language;
+                            obj1.value = language;
                             definePropertyResult = Object.defineProperty(obj, name, obj1);
                           } else {
                             obj[name] = language;
                           }
-                          obj = closure_2.applyToDefaults(tmp13._settings.language, obj);
+                          obj = __webpack_require__.applyToDefaults(tmp13._settings.language, obj);
                           tmp13._settings.language = obj;
                         }
                       } else {
@@ -2107,13 +2090,13 @@ let fn = () => {
                       tmp11 = arg2;
                       coerceResult = call2(self, value, arg1, arg2);
                     }
-                    if (coerceResult instanceof closure_2_5.Err) {
+                    if (coerceResult instanceof closure_5.Err) {
                       obj = { value: null, errors: null };
-                      obj[0] = value;
-                      obj[1] = coerceResult;
+                      obj.value = value;
+                      obj.errors = coerceResult;
                     } else {
                       obj = { value: null };
-                      obj[0] = coerceResult;
+                      obj.value = coerceResult;
                     }
                     return obj;
                   }
@@ -2151,13 +2134,13 @@ let fn = () => {
                       tmp11 = arg2;
                       preResult = call2(self, value, arg1, arg2);
                     }
-                    if (preResult instanceof closure_2_5.Err) {
+                    if (preResult instanceof closure_5.Err) {
                       obj = { value: null, errors: null };
-                      obj[0] = value;
-                      obj[1] = preResult;
+                      obj.value = value;
+                      obj.errors = preResult;
                     } else {
                       obj = { value: null };
-                      obj[0] = preResult;
+                      obj.value = preResult;
                     }
                     return obj;
                   }
@@ -2177,37 +2160,41 @@ let fn = () => {
           return obj;
         };
         ({ array, object } = obj);
-        obj = { base: object.type(closure_3, "Joi object"), name: string.required(), coerce: null, pre: null, language: null, describe: null, rules: null };
+        obj = { base: null, name: null, coerce: null, pre: null, language: null, describe: null, rules: null };
         object = obj.object;
-        ({ string, object: object3 } = obj);
-        obj[2] = object2._func().arity(3);
+        obj.base = object.type(closure_3, "Joi object");
+        const string = obj.string;
+        obj.name = string.required();
         object = obj.object;
-        const _funcResult = object2._func();
-        obj[3] = object._func().arity(3);
-        ({ object: obj2[4], object: object5 } = obj);
-        const _funcResult1 = object._func();
-        obj[5] = object5._func().arity(1);
-        ({ array: array2, object: object6 } = obj);
-        obj = { name: string2.required(), setup: null, validate: null, params: null, description: null };
-        string2 = obj.string;
+        obj.coerce = object._func().arity(3);
         const object1 = obj.object;
-        const _funcResult2 = object5._func();
-        obj[1] = object1._func().arity(1);
-        object2 = obj.object;
-        const _funcResult3 = object1._func();
-        obj[2] = object2._func().arity(4);
+        const _funcResult = object._func();
+        obj.pre = object1._func().arity(3);
+        ({ object: obj2.language, object: object5 } = obj);
+        const _funcResult1 = object1._func();
+        obj.describe = object4._func().arity(1);
+        ({ array: array2, object: object6 } = obj);
+        obj = { name: null, setup: null, validate: null, params: null, description: null };
+        const string2 = obj.string;
+        obj.name = string2.required();
+        const object2 = obj.object;
+        const _funcResult2 = object4._func();
+        obj.setup = object2._func().arity(1);
+        const object3 = obj.object;
+        const _funcResult3 = object2._func();
+        obj.validate = object3._func().arity(4);
         ({ object: object9, object: object10 } = obj);
         items = [object9.pattern(/.*/, object10.type(closure_3, "Joi object")), ];
-        object3 = obj.object;
-        items[1] = object3.type(obj.object.constructor, "Joi object");
-        obj[3] = items;
+        object4 = obj.object;
+        items[1] = object4.type(obj.object.constructor, "Joi object");
+        obj.params = items;
         const items1 = [, ];
         ({ string: arr2[0], object: object12 } = obj);
-        const _funcResult4 = object2._func();
+        const _funcResult4 = object3._func();
         items1[1] = object12._func().arity(1);
-        obj[4] = items1;
+        obj.description = items1;
         let keys = object6.keys(obj);
-        obj[6] = array2.items(keys.or("setup", "validate"));
+        obj.rules = array2.items(keys.or("setup", "validate"));
         const _funcResult5 = object12._func();
         cloneResult.extensionsSchema = array.items(object.keys(obj)).strict();
         cloneResult.version = obj(35).version;
@@ -2215,22 +2202,21 @@ let fn = () => {
       };
       module.exports = obj.root();
     },
-    (arg0, arg1, arg2) => {
+    (arg0, arg1, fn) => {
       closure_0 = arg1;
-      closure_1 = arg2;
-      let fn = (_Buffer, arg1) => {
-        closure_0 = _Buffer;
-        const callback = arg1;
+      closure_1 = fn;
+      fn = (_Buffer, arg1) => {
+        closure_1 = arg1;
         if (typeof Symbol === "function") {
           let _Symbol = Symbol;
           if (typeof Symbol.iterator === "symbol") {
-            let fn = (arg0) => typeof arg0;
+            fn = (arg0) => typeof arg0;
           }
-          closure_3 = callback(8);
-          closure_4 = callback(9);
-          closure_5 = callback(13);
-          obj = {};
-          closure_0.clone = (getTime) => {
+          closure_3 = closure_1(8);
+          closure_4 = closure_1(9);
+          closure_5 = closure_1(13);
+          let separator = {};
+          _Buffer.clone = (getTime, arg1) => {
             let str = "undefined";
             if (undefined !== getTime) {
               str = fn(getTime);
@@ -2242,7 +2228,7 @@ let fn = () => {
                   const _Map = Map;
                   map = new Map();
                 }
-                const value = map.get(getTime);
+                value = map.get(getTime);
                 if (value) {
                   return value;
                 } else {
@@ -2290,9 +2276,7 @@ let fn = () => {
                       let tmp19 = ownPropertyNames[num];
                       let _Object4 = Object;
                       let ownPropertyDescriptor = Object.getOwnPropertyDescriptor(getTime, tmp19);
-                      let tmp21 = num;
                       if (!ownPropertyDescriptor) {
-                        let tmp22 = _Buffer;
                         items[tmp19] = _Buffer.clone(getTime[tmp19], map);
                       } else {
                         let _Object5 = Object;
@@ -2306,7 +2290,7 @@ let fn = () => {
             }
             return getTime;
           };
-          closure_0.merge = (arr, D) => {
+          _Buffer.merge = (arr, D, arg2, arg3) => {
             let length;
             let tmp = arr;
             if (arr) {
@@ -2337,7 +2321,6 @@ let fn = () => {
                 let num4 = 0;
                 if (0 < D.length) {
                   do {
-                    let tmp26 = _Buffer;
                     arr = arr.push(_Buffer.clone(D[num4]));
                     num4 = num4 + 1;
                     length = D.length;
@@ -2352,16 +2335,13 @@ let fn = () => {
                   while (true) {
                     let tmp10 = keys[num];
                     let tmp11 = D[tmp10];
-                    let tmp12 = num;
                     if (tmp11) {
                       let str7 = "undefined";
                       if (undefined !== tmp11) {
-                        let tmp13 = fn;
                         str7 = fn(tmp11);
                       }
                       if ("object" === str7) {
                         if (arr[tmp10]) {
-                          let tmp15 = fn;
                           if ("object" === fn(arr[tmp10])) {
                             let _Array2 = Array;
                             let _Array3 = Array;
@@ -2369,15 +2349,9 @@ let fn = () => {
                             if (isArray === Array.isArray(tmp11)) {
                               let _Date = Date;
                               if (!(tmp11 instanceof Date)) {
-                                let tmp17 = _Buffer;
                                 if (!_Buffer.isBuffer(tmp11)) {
                                   let _RegExp = RegExp;
                                   if (!(tmp11 instanceof RegExp)) {
-                                    let tmp18 = _Buffer;
-                                    let tmp19 = _Buffer;
-                                    let tmp20 = tmp11;
-                                    let tmp21 = arg2;
-                                    let tmp22 = arg3;
                                     let mergeResult = _Buffer.merge(arr[tmp10], tmp11, arg2, arg3);
                                   }
                                   num = num + 1;
@@ -2389,7 +2363,6 @@ let fn = () => {
                             }
                           }
                         }
-                        let tmp24 = _Buffer;
                         arr[tmp10] = _Buffer.clone(tmp11);
                       }
                     }
@@ -2405,7 +2378,7 @@ let fn = () => {
               return arr;
             }
           };
-          closure_0.applyToDefaults = (D, D) => {
+          _Buffer.applyToDefaults = (D, D, arg2) => {
             let tmp = D;
             if (D) {
               let str = "undefined";
@@ -2438,7 +2411,7 @@ let fn = () => {
               return null;
             }
           };
-          closure_0.cloneWithShallow = (D) => {
+          _Buffer.cloneWithShallow = (D, arg1) => {
             if (D) {
               let str = "undefined";
               if (undefined !== D) {
@@ -2452,29 +2425,25 @@ let fn = () => {
             }
             return D;
           };
-          obj.store = (arg0, arg1) => {
+          separator.store = (arg0, arg1) => {
             obj = {};
             for (let num = 0; num < arg1.length; num = num + 1) {
               let tmp = arg1[num];
-              let tmp2 = _Buffer;
               let reachResult = _Buffer.reach(arg0, tmp);
-              let tmp4 = num;
               if (undefined !== reachResult) {
                 obj[tmp] = reachResult;
-                let tmp5 = obj;
                 let reachSetResult = obj.reachSet(arg0, tmp, undefined);
               }
             }
             return obj;
           };
-          obj.restore = (arg0, arg1, arg2) => {
+          separator.restore = (arg0, arg1, arg2) => {
             let length;
             const keys = Object.keys(arg2);
             let num = 0;
             if (0 < keys.length) {
               do {
                 let tmp = keys[num];
-                let tmp2 = obj;
                 let reachSetResult = obj.reachSet(arg0, tmp, arg2[tmp]);
                 let reachSetResult1 = obj.reachSet(arg1, tmp, arg2[tmp]);
                 num = num + 1;
@@ -2482,7 +2451,7 @@ let fn = () => {
               } while (num < length);
             }
           };
-          obj.reachSet = (arg0, str) => {
+          separator.reachSet = (arg0, str, arg2) => {
             let sum;
             let tmp = arg0;
             const parts = str.split(".");
@@ -2491,7 +2460,6 @@ let fn = () => {
               do {
                 let tmp2 = parts[num];
                 sum = num + 1;
-                let tmp4 = tmp;
                 if (sum === parts.length) {
                   tmp[tmp2] = arg2;
                 }
@@ -2500,7 +2468,7 @@ let fn = () => {
               } while (sum < parts.length);
             }
           };
-          closure_0.applyToDefaultsWithShallow = (D, D) => {
+          _Buffer.applyToDefaultsWithShallow = (D, D, arg2) => {
             let tmp = D;
             if (D) {
               let str = "undefined";
@@ -2541,7 +2509,7 @@ let fn = () => {
               return null;
             }
           };
-          closure_0.deepEqual = (getTime, getTime2) => {
+          _Buffer.deepEqual = (getTime, getTime2, arg2, arg3) => {
             obj = arg2;
             if (!arg2) {
               obj = { prototype: true };
@@ -2580,7 +2548,6 @@ let fn = () => {
                           let num8 = 0;
                           if (0 < getTime.length) {
                             while (!obj.part) {
-                              let tmp22 = _Buffer;
                               if (_Buffer.deepEqual(getTime[num8], getTime2[num8], obj)) {
                                 num8 = num8 + 1;
                               } else {
@@ -2668,26 +2635,15 @@ let fn = () => {
                                   let tmp5 = ownPropertyNames[num2];
                                   let _Object5 = Object;
                                   let ownPropertyDescriptor = Object.getOwnPropertyDescriptor(getTime, tmp5);
-                                  let tmp7 = _Buffer;
                                   let deepEqual = _Buffer.deepEqual;
-                                  let tmp8 = num2;
                                   if (ownPropertyDescriptor.get) {
                                     let _Object6 = Object;
-                                    let tmp12 = tmp7;
-                                    let tmp13 = ownPropertyDescriptor;
-                                    let tmp14 = obj;
-                                    let tmp15 = items;
                                     if (!deepEqual(ownPropertyDescriptor, Object.getOwnPropertyDescriptor(getTime2, tmp5), obj, tmp3)) {
                                       let flag3 = false;
                                       return false;
                                     }
-                                  } else {
-                                    let tmp9 = tmp7;
-                                    let tmp10 = obj;
-                                    let tmp11 = items;
-                                    if (!deepEqual(getTime[tmp5], getTime2[tmp5], obj, tmp3)) {
-                                      break;
-                                    }
+                                  } else if (!deepEqual(getTime[tmp5], getTime2[tmp5], obj, tmp3)) {
+                                    break;
                                   }
                                   num2 = num2 + 1;
                                 }
@@ -2715,17 +2671,17 @@ let fn = () => {
               return tmp26;
             }
           };
-          closure_0.unique = (arr) => {
+          _Buffer.unique = (arr, arg1) => {
             let set = arg1;
             if (arg1) {
               items = [];
               arr = items;
               const _Set2 = Set;
               set = new Set();
-              const item = arr.forEach((arg0) => {
-                if (!set.has(arg0[set])) {
+              const item = arr.forEach((item) => {
+                if (!set.has(item[closure_0])) {
                   set.add(tmp);
-                  arr = arr.push(arg0);
+                  closure_1.push(item);
                 }
               });
               arr = items;
@@ -2737,12 +2693,11 @@ let fn = () => {
             }
             return arr;
           };
-          closure_0.mapToObject = (arg0, arg1) => {
+          _Buffer.mapToObject = (arg0, arg1) => {
             if (arg0) {
               obj = {};
               for (let num = 0; num < arg0.length; num = num + 1) {
                 let tmp2 = arg0[num];
-                let tmp3 = num;
                 if (arg1) {
                   if (tmp2[arg1]) {
                     obj[arg0[num][arg1]] = true;
@@ -2756,7 +2711,7 @@ let fn = () => {
               return null;
             }
           };
-          closure_0.intersect = (arg0, arg1, arg2) => {
+          _Buffer.intersect = (arg0, arg1, arg2) => {
             if (arg0) {
               if (arg1) {
                 const _Array = Array;
@@ -2769,7 +2724,6 @@ let fn = () => {
                 let num = 0;
                 if (0 < arg1.length) {
                   while (true) {
-                    let tmp6 = num;
                     if (mapToObjectResult[arg1[num]]) {
                       if (!obj[arg1[num]]) {
                         if (arg2) {
@@ -2793,7 +2747,7 @@ let fn = () => {
             }
             return [];
           };
-          closure_0.contain = (D, D) => {
+          _Buffer.contain = (D, D, arg2) => {
             let length;
             let combined = D;
             let str = "undefined";
@@ -2839,8 +2793,7 @@ let fn = () => {
                     } else {
                       only = hasOwnPropertyResult1 && !obj.part;
                     }
-                    obj = { prototype: null, part: null };
-                    obj[0] = only;
+                    obj = { prototype: only, part: null };
                     if (hasOwnPropertyResult) {
                       let part = !obj.only;
                     } else {
@@ -2849,11 +2802,11 @@ let fn = () => {
                         part = obj.part;
                       }
                     }
-                    obj[1] = part;
+                    obj.part = part;
                     const deepEqual = obj2.deepEqual;
                   } else {
-                    function compare(arg0, arg1, arg2) {
-                      return arg0 === arg1;
+                    function compare(arr, arg1) {
+                      return arr === arg1;
                     }
                     const _Array3 = Array;
                     const array = new Array(arr.length);
@@ -2874,8 +2827,6 @@ let fn = () => {
                           let tmp30 = arr[num9];
                           let obj4 = _Buffer;
                           let assertResult3 = _Buffer.assert(typeof tmp30 === "string", "Cannot compare string reference to non-string value");
-                          let tmp32 = num9;
-                          let tmp33 = str8;
                           let str13 = "";
                           if (num9) {
                             str13 = "|";
@@ -2900,14 +2851,11 @@ let fn = () => {
                         flag3 = false;
                         if (0 < D.length) {
                           do {
-                            let tmp25 = num7;
-                            let tmp26 = flag6;
                             let num8 = 0;
                             let flag7 = false;
                             if (0 < arr.length) {
                               while (true) {
                                 let compareResult = compare(arr[num8], D[num7], undefined);
-                                let tmp28 = num8;
                                 if (compareResult) {
                                   compareResult = num8;
                                 }
@@ -2944,8 +2892,6 @@ let fn = () => {
                           while (true) {
                             let tmp21 = ownPropertyNames[num6];
                             let index = arr.indexOf(tmp21);
-                            let tmp23 = num6;
-                            let tmp24 = flag2;
                             let flag4 = true;
                             if (-1 !== index) {
                               if (tmp7) {
@@ -2969,7 +2915,6 @@ let fn = () => {
                     let flag11 = false;
                     if (0 < array.length) {
                       while (true) {
-                        let tmp38 = num10;
                         let tmp39 = flag10;
                         if (!flag10) {
                           tmp39 = array[num10];
@@ -3007,16 +2952,14 @@ let fn = () => {
             tmp7 = null;
             arr = combined;
           };
-          closure_0.flatten = (arg0, arg1) => {
+          _Buffer.flatten = (arg0, arg1) => {
             items = arg1;
             if (!arg1) {
               items = [];
             }
             for (let num = 0; num < arg0.length; num = num + 1) {
               let _Array = Array;
-              let tmp = num;
               if (Array.isArray(arg0[num])) {
-                let tmp3 = _Buffer;
                 let flattenResult = _Buffer.flatten(arg0[num], items);
               } else {
                 let arr = items.push(arg0[num]);
@@ -3024,18 +2967,18 @@ let fn = () => {
             }
             return items;
           };
-          closure_0.reach = (D, str) => {
+          _Buffer.reach = (D, str, arg2) => {
             if (false !== str) {
               if (null != str) {
-                obj = arg2;
+                separator = arg2;
                 if (!arg2) {
-                  obj = {};
+                  separator = {};
                 }
-                let tmp = obj;
-                if (typeof obj === "string") {
-                  obj = { separator: null };
-                  obj[0] = obj;
-                  tmp = obj;
+                let tmp = separator;
+                if (typeof separator === "string") {
+                  separator = { separator: null };
+                  separator.separator = separator;
+                  tmp = separator;
                 }
                 str = tmp.separator;
                 if (!str) {
@@ -3050,8 +2993,6 @@ let fn = () => {
                   while (true) {
                     let arr3 = parts[num];
                     let isArray = "-" === arr3[0];
-                    let tmp4 = num;
-                    let tmp5 = arr2;
                     if (isArray) {
                       let _Array = Array;
                       isArray = Array.isArray(arr2);
@@ -3066,7 +3007,6 @@ let fn = () => {
                       let tmp7 = undefined === arr2;
                       let tmp8 = str3;
                       if (!tmp7) {
-                        let tmp9 = fn;
                         tmp8 = fn(arr2);
                       }
                       if ("object" === tmp8) {
@@ -3075,7 +3015,6 @@ let fn = () => {
                         } else {
                           let tmp10 = str3;
                           if (!tmp7) {
-                            let tmp11 = fn;
                             tmp10 = fn(arr2);
                           }
                           if ("object" === tmp10) {
@@ -3098,14 +3037,9 @@ let fn = () => {
                       }
                       let str5 = "in reach path ";
                       let str6 = "Missing segment";
-                      let tmp13 = obj2;
-                      let tmp14 = tmp12;
-                      let tmp15 = diff;
                       let str7 = "in reach path ";
-                      let tmp16 = str;
                       let assertResult = _Buffer.assert(tmp12, "Missing segment", diff, "in reach path ", str);
                       if (undefined !== arr2) {
-                        let tmp18 = fn;
                         str3 = fn(arr2);
                       }
                       let tmp19 = "object" === str3;
@@ -3117,11 +3051,7 @@ let fn = () => {
                         tmp19 = typeof arr2 !== "function";
                       }
                       let str8 = "Invalid segment";
-                      let tmp20 = obj2;
-                      let tmp21 = tmp19;
-                      let tmp22 = diff;
                       let str9 = "in reach path ";
-                      let tmp23 = str;
                       let assertResult1 = obj2.assert(tmp19, "Invalid segment", diff, "in reach path ", str);
                       _default = tmp.default;
                     }
@@ -3132,7 +3062,7 @@ let fn = () => {
             }
             return D;
           };
-          closure_0.reachTemplate = (arg0, str) => {
+          _Buffer.reachTemplate = (arg0, str, arg2) => {
             closure_0 = arg0;
             closure_1 = arg2;
             return str.replace(/{([^}]+)}/g, (arg0, arg1) => {
@@ -3144,7 +3074,7 @@ let fn = () => {
               return str;
             });
           };
-          closure_0.formatStack = (arg0) => {
+          _Buffer.formatStack = (arg0) => {
             let length;
             items = [];
             let num = 0;
@@ -3159,11 +3089,10 @@ let fn = () => {
             }
             return items;
           };
-          closure_0.formatTrace = (arg0) => {
+          _Buffer.formatTrace = (arg0) => {
             items = [];
             for (let num = 0; num < arg0.length; num = num + 1) {
               let tmp = arg0[num];
-              let tmp2 = num;
               let str = "";
               if (tmp[4]) {
                 str = "new ";
@@ -3172,22 +3101,22 @@ let fn = () => {
             }
             return items;
           };
-          closure_0.callStack = function(arg0) {
+          _Buffer.callStack = function(arg0) {
             Error.prepareStackTrace = (arg0, arg1) => arg1;
             obj = {};
             Error.captureStackTrace(obj, this);
             Error.prepareStackTrace = Error.prepareStackTrace;
             return _Buffer.formatStack(obj.stack).slice(1 + arg0);
           };
-          closure_0.displayStack = (arg0) => {
+          _Buffer.displayStack = (arg0) => {
             let num = 1;
             if (undefined !== arg0) {
               num = arg0 + 1;
             }
             return _Buffer.formatTrace(_Buffer.callStack(num));
           };
-          closure_0.abortThrow = false;
-          closure_0.abort = (arg0, arg1) => {
+          _Buffer.abortThrow = false;
+          _Buffer.abort = (arg0, arg1) => {
             let str = arg0;
             if ("test" !== closure_1.env.NODE_ENV) {
               if (true !== _Buffer.abortThrow) {
@@ -3206,10 +3135,10 @@ let fn = () => {
             if (!str) {
               str = "Unknown error";
             }
-            error = new Error(str);
+            const error = new Error(str);
             throw error;
           };
-          closure_0.assert = (arg0) => {
+          _Buffer.assert = (arg0) => {
             if (!arg0) {
               if (2 === arguments.length) {
                 let _Error = Error;
@@ -3219,56 +3148,55 @@ let fn = () => {
               }
               items = [];
               for (let num4 = 1; num4 < arguments.length; num4 = num4 + 1) {
-                let tmp2 = num4;
                 if ("" !== arguments[num4]) {
                   let arr = items.push(arguments[num4]);
                 }
               }
-              const mapped = items.map((str) => {
-                if (typeof str === "string") {
-                  return str;
+              const mapped = items.map((message) => {
+                if (typeof message === "string") {
+                  return message;
                 } else {
                   const _Error = Error;
-                  if (str instanceof Error) {
-                    let message = str.message;
+                  if (message instanceof Error) {
+                    message = message.message;
                   } else {
-                    message = closure_0.stringify(str);
+                    message = _Buffer.stringify(message);
                   }
                 }
               });
               const tmp5 = mapped.join(" ") || "Unknown error";
-              error = new Error(tmp5);
+              const error = new Error(tmp5);
               throw error;
             }
           };
-          closure_0.Timer = function() {
+          _Buffer.Timer = function() {
             this.ts = 0;
             this.reset();
           };
-          closure_0.Timer.prototype.reset = function() {
+          _Buffer.Timer.prototype.reset = function() {
             this.ts = Date.now();
           };
-          closure_0.Timer.prototype.elapsed = function() {
+          _Buffer.Timer.prototype.elapsed = function() {
             return Date.now() - this.ts;
           };
-          closure_0.Bench = function() {
+          _Buffer.Bench = function() {
             this.ts = 0;
             this.reset();
           };
-          closure_0.Bench.prototype.reset = function() {
+          _Buffer.Bench.prototype.reset = function() {
             const Bench = _Buffer.Bench;
             this.ts = Bench.now();
           };
-          closure_0.Bench.prototype.elapsed = function() {
+          _Buffer.Bench.prototype.elapsed = function() {
             const Bench = _Buffer.Bench;
             return Bench.now() - this.ts;
           };
-          closure_0.Bench.now = () => {
+          _Buffer.Bench.now = () => {
             const hrtimeResult = closure_1.hrtime();
             return 1000 * hrtimeResult[0] + hrtimeResult[1] / 1000000;
           };
-          closure_0.escapeRegex = (str) => str.replace(/[\^\$\.\*\+\-\?\=\!\:\|\\\/\(\)\[\]\{\}\,]/g, "\\$&");
-          closure_0.base64urlEncode = (str) => {
+          _Buffer.escapeRegex = (str) => str.replace(/[\^\$\.\*\+\-\?\=\!\:\|\\\/\(\)\[\]\{\}\,]/g, "\\$&");
+          _Buffer.base64urlEncode = (str, arg1) => {
             let isBufferResult = typeof str === "string";
             if (typeof str !== "string") {
               isBufferResult = _Buffer.isBuffer(str);
@@ -3286,10 +3214,10 @@ let fn = () => {
             const str4 = str.toString("base64").replace(/\+/g, "-");
             return str.toString("base64").replace(/\+/g, "-").replace(/\//g, "_").replace(/\=/g, "");
           };
-          closure_0.base64urlDecode = (str) => {
+          _Buffer.base64urlDecode = (str, arg1) => {
             if (typeof str !== "string") {
               const _Error2 = Error;
-              error = new Error("Value not a string");
+              const error = new Error("Value not a string");
               return error;
             } else {
               if (obj.test(str)) {
@@ -3312,20 +3240,20 @@ let fn = () => {
               obj = /^[\w\-]*$/;
             }
           };
-          closure_0.escapeHeaderAttribute = (str) => {
+          _Buffer.escapeHeaderAttribute = (str) => {
             _Buffer.assert(/^[ \w\!#\$%&'\(\)\*\+,\-\.\/\:;<\=>\?@\[\]\^`\{\|\}~\"\\]*$/.test(str), `Bad attribute value (${str})`);
             return str.replace(/\\/g, "\\\\").replace(/\"/g, "\\\"");
           };
-          closure_0.escapeHtml = (arg0) => closure_5.escapeHtml(arg0);
-          closure_0.escapeJavaScript = (arg0) => closure_5.escapeJavaScript(arg0);
-          closure_0.nextTick = (arg0) => {
+          _Buffer.escapeHtml = (arg0) => closure_5.escapeHtml(arg0);
+          _Buffer.escapeJavaScript = (arg0) => closure_5.escapeJavaScript(arg0);
+          _Buffer.nextTick = (arg0) => {
             closure_0 = arg0;
             return () => {
               closure_0 = arguments;
               closure_1_1.nextTick(() => { ... });
             };
           };
-          closure_0.once = (_hoekOnce) => {
+          _Buffer.once = (_hoekOnce) => {
             closure_0 = _hoekOnce;
             if (_hoekOnce._hoekOnce) {
               return _hoekOnce;
@@ -3340,32 +3268,31 @@ let fn = () => {
                   } else {
                     apply(null, arguments);
                   }
-                  const tmp = closure_0;
                 }
               }
               wrapped._hoekOnce = true;
               return wrapped;
             }
           };
-          closure_0.isInteger = (joined) => {
-            let tmp = typeof joined === "number";
-            if (typeof joined === "number") {
+          _Buffer.isInteger = (match) => {
+            let tmp = typeof match === "number";
+            if (typeof match === "number") {
               const _parseFloat = parseFloat;
               const _parseInt = parseInt;
-              const parsed = parseFloat(joined);
-              tmp = parsed === parseInt(joined, 10);
+              const parsed = parseFloat(match);
+              tmp = parsed === parseInt(match, 10);
             }
             if (tmp) {
               const _isNaN = isNaN;
-              tmp = !isNaN(joined);
+              tmp = !isNaN(match);
             }
             return tmp;
           };
-          closure_0.ignore = () => {
+          _Buffer.ignore = () => {
 
           };
-          ({ inherits: closure_0.inherits, format: closure_0.format } = callback(10));
-          closure_0.transform = (D, arg1, separator) => {
+          ({ inherits: closure_0.inherits, format: closure_0.format } = closure_1(10));
+          _Buffer.transform = (D, arg1, separator) => {
             let length;
             let isArray = null == D;
             if (!isArray) {
@@ -3389,7 +3316,6 @@ let fn = () => {
               let num3 = 0;
               if (0 < D.length) {
                 do {
-                  let tmp18 = _Buffer;
                   let arr = items.push(_Buffer.transform(D[num3], arg1, separator));
                   num3 = num3 + 1;
                   length = D.length;
@@ -3404,15 +3330,12 @@ let fn = () => {
                 let str5 = keys[num];
                 let parts = str5.split(tmp7);
                 let tmp8 = arg1[str5];
-                let tmp9 = _Buffer;
                 let assertResult1 = _Buffer.assert(typeof tmp8 === "string", "All mappings must be \".\" delineated strings");
-                let tmp11 = num;
                 let tmp12 = obj;
                 let tmp13 = obj;
                 if (parts.length > 1) {
                   do {
                     arr = parts.shift();
-                    let tmp15 = tmp12;
                     if (!tmp12[arr]) {
                       tmp12[arr] = {};
                     }
@@ -3420,7 +3343,6 @@ let fn = () => {
                     tmp13 = tmp12;
                   } while (parts.length > 1);
                 }
-                let tmp17 = _Buffer;
                 let arr1 = parts.shift();
                 tmp13[arr1] = _Buffer.reach(D, tmp8, separator);
               }
@@ -3428,7 +3350,7 @@ let fn = () => {
             }
             tmp7 = "object" === str3 && null !== separator && separator.separator || ".";
           };
-          closure_0.uniqueFilename = (arg0, arg1) => {
+          _Buffer.uniqueFilename = (arg0, arg1) => {
             let str = "";
             if (arg1) {
               let text = arg1;
@@ -3442,7 +3364,7 @@ let fn = () => {
             items[2] = closure_3.randomBytes(8).toString("hex");
             return closure_4.join(resolveResult, items.join("-") + str);
           };
-          closure_0.stringify = () => {
+          _Buffer.stringify = () => {
             try {
               const _JSON = JSON;
               const apply = stringify.apply;
@@ -3456,7 +3378,7 @@ let fn = () => {
               return "[Cannot display object: " + tmp5.message + "]";
             }
           };
-          closure_0.shallow = (arg0) => {
+          _Buffer.shallow = (arg0) => {
             let length;
             obj = {};
             const keys = Object.keys(arg0);
@@ -3488,8 +3410,8 @@ let fn = () => {
         };
       };
       const call = fn.call;
-      const _Buffer = arg2(3).Buffer;
-      let tmp = arg2(7);
+      let _Buffer = fn(3).Buffer;
+      let tmp = fn(7);
       if (typeof call === "unknown") {
         fn(_Buffer, tmp);
       } else {
@@ -3497,7 +3419,7 @@ let fn = () => {
       }
     },
     (arg0, arg1, arg2) => {
-      closure_0 = arg1;
+      constants = arg1;
       closure_1 = arg2;
       const fn = (TYPED_ARRAY_SUPPORT) => {
         function createBuffer(arg0, num) {
@@ -3528,7 +3450,6 @@ let fn = () => {
                       if (!(obj instanceof tmp)) {
                         let tmpResult = tmp(num, undefined, undefined);
                       }
-                      let tmp6 = tmpResult;
                     }
                     if (typeof num === "number") {
                       if (typeof undefined !== "string") {
@@ -3539,7 +3460,7 @@ let fn = () => {
                     }
                   }
                   const _Error = Error;
-                  error = new Error("If encoding is specified then the first argument must be a string");
+                  const error = new Error("If encoding is specified then the first argument must be a string");
                   throw error;
                 }
                 if (typeof num === "number") {
@@ -3548,7 +3469,7 @@ let fn = () => {
                     const error1 = new Error("If encoding is specified then the first argument must be a string");
                     throw error1;
                   } else {
-                    tmp6 = allocUnsafe(obj, num);
+                    let tmp6 = allocUnsafe(obj, num);
                   }
                 } else {
                   tmp6 = from(obj, num, undefined, undefined);
@@ -3708,7 +3629,46 @@ let fn = () => {
             throw typeError;
           }
           static isEncoding(arg0) {
-            return true;
+            str = String(TYPED_ARRAY_SUPPORT);
+            switch (str.toLowerCase()) {
+              case "hex":
+                flag = true;
+                return true;
+              case "utf8":
+                flag = true;
+                return true;
+              case "utf-8":
+                flag = true;
+                return true;
+              case "ascii":
+                flag = true;
+                return true;
+              case "latin1":
+                flag = true;
+                return true;
+              case "binary":
+                flag = true;
+                return true;
+              case "base64":
+                flag = true;
+                return true;
+              case "ucs2":
+                flag = true;
+                return true;
+              case "ucs-2":
+                flag = true;
+                return true;
+              case "utf16le":
+                flag = true;
+                return true;
+              case "utf-16le":
+                flag = true;
+                return true;
+              default:
+                flag2 = false;
+                return false;
+            }
+            return;
           }
           static concat(arg0, arg1) {
             if (closure_2(TYPED_ARRAY_SUPPORT)) {
@@ -4032,7 +3992,7 @@ let fn = () => {
               str2 = "utf8";
               num = 0;
             } else {
-              tmp21 = arg2;
+              tmp12 = arg2;
               if (undefined === arg2) {
                 if (typeof arg1 === "string") {
                   length = self.length;
@@ -4080,57 +4040,6 @@ let fn = () => {
                 }
                 flag = false;
                 tmp10 = str2;
-                items = [];
-                if (0 < TYPED_ARRAY_SUPPORT.length) {
-                  num2 = 2;
-                  diff1 = tmp11 - 2;
-                  num3 = 8;
-                  num4 = 256;
-                  num5 = 1;
-                  num6 = 0;
-                  if (diff1 >= 0) {
-                    charCodeAtResult = TYPED_ARRAY_SUPPORT.charCodeAt(num6);
-                    tmp14 = charCodeAtResult >> 8;
-                    arr = items.push(charCodeAtResult % 256);
-                    arr1 = items.push(tmp14);
-                    sum = num6 + 1;
-                    tmp18 = diff1;
-                    while (sum < TYPED_ARRAY_SUPPORT.length) {
-                      diff1 = diff1 - 2;
-                      num6 = sum;
-                      if (diff1 < 0) {
-                        break;
-                      }
-                    }
-                  }
-                }
-                num7 = 0;
-                if (0 < length) {
-                  num7 = 0;
-                  if (num < self.length) {
-                    num8 = 1;
-                    num9 = 0;
-                    num7 = 0;
-                    if (0 < items.length) {
-                      self[num9 + num] = items[num9];
-                      sum1 = num9 + 1;
-                      num7 = sum1;
-                      while (sum1 < length) {
-                        num7 = sum1;
-                        if (sum1 + num >= self.length) {
-                          break;
-                        } else {
-                          num9 = sum1;
-                          num7 = sum1;
-                          if (sum1 >= items.length) {
-                            break;
-                          }
-                        }
-                      }
-                    }
-                  }
-                }
-                return num7;
               }
             } else if (length >= 0) {
             }
@@ -6339,8 +6248,8 @@ let fn = () => {
             throw rangeError;
           }
         }
-        function from(arg0, num, str) {
-          if (typeof num === "number") {
+        function from(arg0, byteLength, str, arg3) {
+          if (typeof byteLength === "number") {
             const _TypeError3 = TypeError;
             const typeError = new TypeError("\"value\" argument must not be a number");
             throw typeError;
@@ -6348,15 +6257,15 @@ let fn = () => {
             const _ArrayBuffer2 = ArrayBuffer;
             if (typeof ArrayBuffer !== "undefined") {
               const _ArrayBuffer3 = ArrayBuffer;
-              if (num instanceof ArrayBuffer) {
-                byteLength = num.byteLength;
+              if (byteLength instanceof ArrayBuffer) {
+                byteLength = byteLength.byteLength;
                 if (str >= 0) {
-                  if (num.byteLength >= str) {
+                  if (byteLength.byteLength >= str) {
                     let num25 = arg3;
                     if (!arg3) {
                       num25 = 0;
                     }
-                    if (num.byteLength < str + num25) {
+                    if (byteLength.byteLength < str + num25) {
                       const _RangeError = RangeError;
                       const rangeError = new RangeError("'length' is out of bounds");
                       throw rangeError;
@@ -6364,13 +6273,12 @@ let fn = () => {
                       if (undefined === str) {
                         if (undefined === arg3) {
                           const _Uint8Array3 = Uint8Array;
-                          let uint8Array = new Uint8Array(num);
+                          let uint8Array = new Uint8Array(byteLength);
                         }
                         let prototype = Buffer;
                         if (Buffer.TYPED_ARRAY_SUPPORT) {
                           prototype = prototype.prototype;
                           uint8Array.__proto__ = prototype;
-                          let tmp60 = uint8Array;
                         } else {
                           let num26 = 0;
                           if (uint8Array.length >= 0) {
@@ -6390,23 +6298,21 @@ let fn = () => {
                             }
                           }
                           const tmp59 = createBuffer(arg0, num26);
-                          tmp60 = tmp59;
                           let num32 = 0;
                           if (0 < num26) {
                             do {
                               tmp59[num32] = 255 & uint8Array[num32];
                               num32 = num32 + 1;
-                              tmp60 = tmp59;
                             } while (num32 < num26);
                           }
                         }
                       }
                       if (undefined === arg3) {
                         const _Uint8Array2 = Uint8Array;
-                        uint8Array = new Uint8Array(num, str);
+                        uint8Array = new Uint8Array(byteLength, str);
                       } else {
                         const _Uint8Array = Uint8Array;
-                        uint8Array = new Uint8Array(num, str, arg3);
+                        uint8Array = new Uint8Array(byteLength, str, arg3);
                       }
                     }
                   }
@@ -6416,7 +6322,7 @@ let fn = () => {
                 throw rangeError2;
               }
             }
-            if (typeof num === "string") {
+            if (typeof byteLength === "string") {
               let tmp31 = typeof str === "string";
               if (typeof str === "string") {
                 tmp31 = "" !== str;
@@ -6426,9 +6332,9 @@ let fn = () => {
                 str10 = "utf8";
               }
               if (Buffer.isEncoding(str10)) {
-                const tmp38 = byteLength(num, str10) | 0;
+                const tmp38 = byteLength(byteLength, str10) | 0;
                 const arr3 = createBuffer(arg0, tmp38);
-                const writeResult = arr3.write(num, str10);
+                const writeResult = arr3.write(byteLength, str10);
                 let substr = arr3;
                 if (writeResult !== tmp38) {
                   substr = arr3.slice(0, writeResult);
@@ -6439,13 +6345,13 @@ let fn = () => {
                 const typeError1 = new TypeError("\"encoding\" must be a valid string encoding");
                 throw typeError1;
               }
-            } else if (Buffer.isBuffer(num)) {
+            } else if (Buffer.isBuffer(byteLength)) {
               let num17 = 1073741823;
               let num18 = 1073741823;
               if (tmp78.TYPED_ARRAY_SUPPORT) {
                 num18 = 2147483647;
               }
-              if (num.length >= num18) {
+              if (byteLength.length >= num18) {
                 if (tmp78.TYPED_ARRAY_SUPPORT) {
                   num17 = 2147483647;
                 }
@@ -6455,18 +6361,18 @@ let fn = () => {
                 const arr2 = createBuffer(arg0, length3 | 0 | 0);
                 tmp12 = arr2;
                 if (0 !== arr2.length) {
-                  num.copy(arr2, 0, 0, tmp21);
+                  byteLength.copy(arr2, 0, 0, tmp21);
                   tmp12 = arr2;
                 }
               }
             } else {
-              if (num) {
+              if (byteLength) {
                 const _ArrayBuffer = ArrayBuffer;
                 if (typeof ArrayBuffer === "undefined") {
-                  if (!("length" in num)) {
-                    if ("Buffer" === num.type) {
-                      if (callback(num.data)) {
-                        const data = num.data;
+                  if (!("length" in byteLength)) {
+                    if ("Buffer" === byteLength.type) {
+                      if (closure_2(byteLength.data)) {
+                        const data = byteLength.data;
                         let num2 = 0;
                         if (data.length >= 0) {
                           let num3 = 1073741823;
@@ -6500,16 +6406,16 @@ let fn = () => {
                 } else {
                   const _ArrayBuffer4 = ArrayBuffer;
                 }
-                if (typeof num.length === "number") {
-                  if (num.length == num.length) {
+                if (typeof byteLength.length === "number") {
+                  if (byteLength.length == byteLength.length) {
                     let num11 = 0;
-                    if (num.length >= 0) {
+                    if (byteLength.length >= 0) {
                       let num9 = 1073741823;
                       let num10 = 1073741823;
                       if (tmp78.TYPED_ARRAY_SUPPORT) {
                         num10 = 2147483647;
                       }
-                      if (num.length >= num10) {
+                      if (byteLength.length >= num10) {
                         if (tmp78.TYPED_ARRAY_SUPPORT) {
                           num9 = 2147483647;
                         }
@@ -6524,7 +6430,7 @@ let fn = () => {
                     let num15 = 0;
                     if (0 < num11) {
                       do {
-                        tmp18[num15] = 255 & num[num15];
+                        tmp18[num15] = 255 & byteLength[num15];
                         num15 = num15 + 1;
                         tmp19 = tmp18;
                       } while (num15 < num11);
@@ -6578,7 +6484,7 @@ let fn = () => {
             return tmp20Result;
           }
         }
-        function byteLength(byteLength) {
+        function byteLength(byteLength, arg1) {
           if (Buffer.isBuffer(byteLength)) {
             return byteLength.length;
           } else {
@@ -6616,22 +6522,17 @@ let fn = () => {
                             if ("utf16le" !== formatted) {
                               if ("utf-16le" !== formatted) {
                                 if ("hex" === formatted) {
-                                  let num4 = 1;
                                   return length >>> 1;
                                 } else if ("base64" === formatted) {
-                                  let tmp7 = closure_0;
                                   if (text.trim) {
                                     let str13 = text.trim();
                                   } else {
                                     let str12 = "";
                                     str13 = text.replace(/^\s+|\s+$/g, "");
                                   }
-                                  let tmp8 = closure_13;
                                   let str14 = "";
-                                  let replaced = str13.replace(closure_13, "");
-                                  let num2 = 2;
+                                  let replaced = str13.replace(re13, "");
                                   if (replaced.length >= 2) {
-                                    let num3 = 4;
                                     let str15 = "=";
                                     let tmp9 = replaced;
                                     let tmp10 = replaced;
@@ -6647,7 +6548,6 @@ let fn = () => {
                                   }
                                   return closure_0.toByteArray(str14).length;
                                 } else if (flag) {
-                                  let tmp6 = utf8ToBytes;
                                   return utf8ToBytes(text).length;
                                 } else {
                                   let text2 = `${tmp2}`;
@@ -6659,12 +6559,10 @@ let fn = () => {
                             }
                           }
                         }
-                        let num5 = 2;
                         return 2 * length;
                       }
                     }
                   }
-                  let tmp13 = utf8ToBytes;
                   return utf8ToBytes(text).length;
                 }
               }
@@ -6694,33 +6592,16 @@ let fn = () => {
             } else if (length >>> 0 <= num >>> 0) {
               return "";
             } else {
-              while (true) {
-                let substr = self.slice(tmp5, tmp4);
-                let str2 = "";
-                let tmp3 = globalThis;
-                let num4 = 1;
-                let num5 = 256;
-                let num6 = 2;
-                let num7 = 0;
-                let str3 = "";
-                if (0 >= substr.length) {
-                  break;
-                } else {
-                  do {
-                    let _String = String;
-                    str2 = `${String.fromCharCode(arr[num7] + 256 * arr[num7 + 1])}`;
-                    num7 = num7 + 2;
-                    str3 = str2;
-                    length2 = substr.length;
-                  } while (num7 < length2);
-                }
-                return str3;
+              let flag = false;
+              if (!arg0) {
+                const str = "utf8";
+                flag = false;
               }
             }
             tmp2 = undefined === arg2 || length > self.length;
           }
         }
-        function bidirectionalIndexOf(arg0, str, str2) {
+        function bidirectionalIndexOf(arg0, str, str2, arg3, arg4) {
           if (0 === arg0.length) {
             return -1;
           } else {
@@ -6798,7 +6679,7 @@ let fn = () => {
             tmp6 = Buffer;
           }
         }
-        function arrayIndexOf(readUInt16BE, readUInt16BE2) {
+        function arrayIndexOf(readUInt16BE, readUInt16BE2, arg2, arg3, arg4) {
           let tmp13;
           let num = 1;
           let result1 = length2;
@@ -6835,7 +6716,6 @@ let fn = () => {
             if (result2 < result) {
               while (true) {
                 tmp13 = num7;
-                let tmp14 = result2;
                 if (1 === num) {
                   let uInt16BE = readUInt16BE[result2];
                 } else {
@@ -6879,13 +6759,11 @@ let fn = () => {
             }
             if (diff1 >= 0) {
               while (true) {
-                let tmp7 = diff1;
                 let num5 = 0;
                 let flag = true;
                 if (0 < result1) {
                   while (true) {
                     let sum = diff1 + num5;
-                    let tmp9 = num5;
                     if (1 === num) {
                       let uInt16BE2 = readUInt16BE[sum];
                     } else {
@@ -6928,8 +6806,6 @@ let fn = () => {
           if (arg1 < bound) {
             do {
               let tmp4 = arg0[sum];
-              let tmp5 = tmp3;
-              let tmp6 = sum;
               let num = 4;
               if (tmp4 <= 239) {
                 let num2 = 3;
@@ -7054,7 +6930,6 @@ let fn = () => {
               do {
                 let _String = String;
                 let _String2 = String;
-                let tmp28 = c12;
                 sum1 = num6 + c12;
                 str = `${tmp27(String, arr.slice(num6, tmp29))}`;
                 str2 = str;
@@ -7064,7 +6939,7 @@ let fn = () => {
           }
           return str2;
         }
-        function utf8ToBytes(str) {
+        function utf8ToBytes(str, arg1) {
           let num = arg1;
           if (!arg1) {
             num = Infinity;
@@ -7075,9 +6950,6 @@ let fn = () => {
           if (0 < str.length) {
             while (true) {
               let charCodeAtResult = str.charCodeAt(num2);
-              let tmp3 = num2;
-              let tmp4 = tmp;
-              let tmp5 = num;
               if (charCodeAtResult > 55295) {
                 if (charCodeAtResult < 57344) {
                   if (tmp) {
@@ -7120,7 +6992,6 @@ let fn = () => {
                     } else {
                       let diff4 = tmp10 - 4;
                       if (diff4 >= 0) {
-                        let tmp31 = items;
                         let arr3 = items.push(sum >> 18 | 240, sum >> 12 & 63 | 128, sum >> 6 & 63 | 128, 63 & sum | 128);
                         tmp12 = null;
                         tmp13 = diff4;
@@ -7170,23 +7041,23 @@ let fn = () => {
               }
             }
             const _Error = Error;
-            error = new Error("Invalid code point");
+            const error = new Error("Invalid code point");
             throw error;
           }
           return items;
         }
-        closure_0 = callback(4);
-        callback = callback(5);
-        closure_2 = callback(6);
-        closure_0.Buffer = Buffer;
-        closure_0.SlowBuffer = function SlowBuffer(arg0) {
+        constants = closure_1(4);
+        closure_1 = closure_1(5);
+        closure_2 = closure_1(6);
+        constants.Buffer = Buffer;
+        constants.SlowBuffer = function SlowBuffer(arg0) {
           let num = arg0;
           if (+arg0 != arg0) {
             num = 0;
           }
           return Buffer.alloc(+num);
         };
-        closure_0.INSPECT_MAX_BYTES = 50;
+        constants.INSPECT_MAX_BYTES = 50;
         if (undefined !== TYPED_ARRAY_SUPPORT.TYPED_ARRAY_SUPPORT) {
           TYPED_ARRAY_SUPPORT = TYPED_ARRAY_SUPPORT.TYPED_ARRAY_SUPPORT;
         } else {
@@ -7195,11 +7066,11 @@ let fn = () => {
               const _Uint8Array = Uint8Array;
               const uint8Array = new Uint8Array(1);
               const _Uint8Array2 = Uint8Array;
-              obj = Object.create(Uint8Array.prototype);
-              obj[0] = function foo() {
+              const merged = Object.assign({ foo: null });
+              merged[0] = function foo() {
                 return 42;
               };
-              uint8Array.__proto__ = obj;
+              uint8Array.__proto__ = merged;
               let tmp6 = 42 === uint8Array.foo();
               if (tmp6) {
                 tmp6 = typeof obj2.subarray === "function";
@@ -7218,7 +7089,7 @@ let fn = () => {
         if (Buffer.TYPED_ARRAY_SUPPORT) {
           num2 = 2147483647;
         }
-        closure_0.kMaxLength = num2;
+        constants.kMaxLength = num2;
         Buffer.poolSize = 8192;
         if (Buffer.TYPED_ARRAY_SUPPORT) {
           let _Uint8Array = Uint8Array;
@@ -7372,7 +7243,46 @@ let fn = () => {
               throw typeError;
             }
             static isEncoding(arg0) {
-              return true;
+              str = String(TYPED_ARRAY_SUPPORT);
+              switch (str.toLowerCase()) {
+                case "hex":
+                  flag = true;
+                  return true;
+                case "utf8":
+                  flag = true;
+                  return true;
+                case "utf-8":
+                  flag = true;
+                  return true;
+                case "ascii":
+                  flag = true;
+                  return true;
+                case "latin1":
+                  flag = true;
+                  return true;
+                case "binary":
+                  flag = true;
+                  return true;
+                case "base64":
+                  flag = true;
+                  return true;
+                case "ucs2":
+                  flag = true;
+                  return true;
+                case "ucs-2":
+                  flag = true;
+                  return true;
+                case "utf16le":
+                  flag = true;
+                  return true;
+                case "utf-16le":
+                  flag = true;
+                  return true;
+                default:
+                  flag2 = false;
+                  return false;
+              }
+              return;
             }
             static concat(arg0, arg1) {
               if (closure_2(TYPED_ARRAY_SUPPORT)) {
@@ -7696,7 +7606,7 @@ let fn = () => {
                 str2 = "utf8";
                 num = 0;
               } else {
-                tmp21 = arg2;
+                tmp12 = arg2;
                 if (undefined === arg2) {
                   if (typeof arg1 === "string") {
                     length = self.length;
@@ -7744,57 +7654,6 @@ let fn = () => {
                   }
                   flag = false;
                   tmp10 = str2;
-                  items = [];
-                  if (0 < TYPED_ARRAY_SUPPORT.length) {
-                    num2 = 2;
-                    diff1 = tmp11 - 2;
-                    num3 = 8;
-                    num4 = 256;
-                    num5 = 1;
-                    num6 = 0;
-                    if (diff1 >= 0) {
-                      charCodeAtResult = TYPED_ARRAY_SUPPORT.charCodeAt(num6);
-                      tmp14 = charCodeAtResult >> 8;
-                      arr = items.push(charCodeAtResult % 256);
-                      arr1 = items.push(tmp14);
-                      sum = num6 + 1;
-                      tmp18 = diff1;
-                      while (sum < TYPED_ARRAY_SUPPORT.length) {
-                        diff1 = diff1 - 2;
-                        num6 = sum;
-                        if (diff1 < 0) {
-                          break;
-                        }
-                      }
-                    }
-                  }
-                  num7 = 0;
-                  if (0 < length) {
-                    num7 = 0;
-                    if (num < self.length) {
-                      num8 = 1;
-                      num9 = 0;
-                      num7 = 0;
-                      if (0 < items.length) {
-                        self[num9 + num] = items[num9];
-                        sum1 = num9 + 1;
-                        num7 = sum1;
-                        while (sum1 < length) {
-                          num7 = sum1;
-                          if (sum1 + num >= self.length) {
-                            break;
-                          } else {
-                            num9 = sum1;
-                            num7 = sum1;
-                            if (sum1 >= items.length) {
-                              break;
-                            }
-                          }
-                        }
-                      }
-                    }
-                  }
-                  return num7;
                 }
               } else if (length >= 0) {
               }
@@ -10168,7 +10027,46 @@ let fn = () => {
                 throw typeError;
               }
               static isEncoding(arg0) {
-                return true;
+                str = String(TYPED_ARRAY_SUPPORT);
+                switch (str.toLowerCase()) {
+                  case "hex":
+                    flag = true;
+                    return true;
+                  case "utf8":
+                    flag = true;
+                    return true;
+                  case "utf-8":
+                    flag = true;
+                    return true;
+                  case "ascii":
+                    flag = true;
+                    return true;
+                  case "latin1":
+                    flag = true;
+                    return true;
+                  case "binary":
+                    flag = true;
+                    return true;
+                  case "base64":
+                    flag = true;
+                    return true;
+                  case "ucs2":
+                    flag = true;
+                    return true;
+                  case "ucs-2":
+                    flag = true;
+                    return true;
+                  case "utf16le":
+                    flag = true;
+                    return true;
+                  case "utf-16le":
+                    flag = true;
+                    return true;
+                  default:
+                    flag2 = false;
+                    return false;
+                }
+                return;
               }
               static concat(arg0, arg1) {
                 if (closure_2(TYPED_ARRAY_SUPPORT)) {
@@ -10492,7 +10390,7 @@ let fn = () => {
                   str2 = "utf8";
                   num = 0;
                 } else {
-                  tmp21 = arg2;
+                  tmp12 = arg2;
                   if (undefined === arg2) {
                     if (typeof arg1 === "string") {
                       length = self.length;
@@ -10540,57 +10438,6 @@ let fn = () => {
                     }
                     flag = false;
                     tmp10 = str2;
-                    items = [];
-                    if (0 < TYPED_ARRAY_SUPPORT.length) {
-                      num2 = 2;
-                      diff1 = tmp11 - 2;
-                      num3 = 8;
-                      num4 = 256;
-                      num5 = 1;
-                      num6 = 0;
-                      if (diff1 >= 0) {
-                        charCodeAtResult = TYPED_ARRAY_SUPPORT.charCodeAt(num6);
-                        tmp14 = charCodeAtResult >> 8;
-                        arr = items.push(charCodeAtResult % 256);
-                        arr1 = items.push(tmp14);
-                        sum = num6 + 1;
-                        tmp18 = diff1;
-                        while (sum < TYPED_ARRAY_SUPPORT.length) {
-                          diff1 = diff1 - 2;
-                          num6 = sum;
-                          if (diff1 < 0) {
-                            break;
-                          }
-                        }
-                      }
-                    }
-                    num7 = 0;
-                    if (0 < length) {
-                      num7 = 0;
-                      if (num < self.length) {
-                        num8 = 1;
-                        num9 = 0;
-                        num7 = 0;
-                        if (0 < items.length) {
-                          self[num9 + num] = items[num9];
-                          sum1 = num9 + 1;
-                          num7 = sum1;
-                          while (sum1 < length) {
-                            num7 = sum1;
-                            if (sum1 + num >= self.length) {
-                              break;
-                            } else {
-                              num9 = sum1;
-                              num7 = sum1;
-                              if (sum1 >= items.length) {
-                                break;
-                              }
-                            }
-                          }
-                        }
-                      }
-                    }
-                    return num7;
                   }
                 } else if (length >= 0) {
                 }
@@ -12817,7 +12664,7 @@ let fn = () => {
       arg1.byteLength = function byteLength(arg0) {
         if (0 < arg0.length % 4) {
           const _Error = Error;
-          error = new Error("Invalid string. Length must be a multiple of 4");
+          const error = new Error("Invalid string. Length must be a multiple of 4");
           throw error;
         } else {
           let num = 2;
@@ -12835,7 +12682,7 @@ let fn = () => {
         ({ length, length: length2 } = arg0);
         if (0 < length2 % 4) {
           const _Error = Error;
-          error = new Error("Invalid string. Length must be a multiple of 4");
+          const error = new Error("Invalid string. Length must be a multiple of 4");
           throw error;
         } else {
           let num3 = 2;
@@ -12858,7 +12705,6 @@ let fn = () => {
           let num16 = 0;
           if (0 < diff) {
             do {
-              let tmp7 = dependencyMap2;
               let tmp8 = dependencyMap2[arg0.charCodeAt(arg0, num14)] << 18;
               let tmp9 = dependencyMap2[arg0.charCodeAt(arg0, num14 + 1)] << 12;
               let tmp10 = dependencyMap2[arg0.charCodeAt(arg0, num14 + 2)] << 6;
@@ -12906,7 +12752,6 @@ let fn = () => {
             if (sum2 < tmp5) {
               do {
                 let sum1 = (arg0[sum2] << 16) + (arg0[sum2 + 1] << 8) + arg0[sum2 + 2];
-                let tmp7 = dependencyMap;
                 let arr = items1.push(dependencyMap[sum1 >> 18 & 63] + dependencyMap[sum1 >> 12 & 63] + dependencyMap[sum1 >> 6 & 63] + dependencyMap[63 & sum1]);
                 sum2 = sum2 + 3;
               } while (sum2 < tmp5);
@@ -12927,12 +12772,12 @@ let fn = () => {
         items.push(str);
         return items.join("");
       };
-      closure_0 = [];
-      closure_1 = [];
+      dependencyMap = [];
+      const dependencyMap2 = [];
       closure_2 = typeof Uint8Array !== "undefined" ? Uint8Array : Array;
     },
     (arg0, arg1) => {
-      arg1.read = (arg0, arg1, arg2, exponent) => {
+      arg1.read = (arg0, arg1, arg2, exponent, arg4) => {
         let num = 0;
         const diff = 8 * arg4 - exponent;
         if (arg2) {
@@ -12995,7 +12840,7 @@ let fn = () => {
         }
         return num3 * sum6 * Math.pow(2, diff3 - exponent);
       };
-      arg1.write = (arg0, arg1, arg2, arg3, exponent) => {
+      arg1.write = (arg0, arg1, arg2, arg3, exponent, arg5) => {
         let num = 0;
         const diff = 8 * arg5 - exponent;
         if (23 === exponent) {
@@ -13117,43 +12962,44 @@ let fn = () => {
     },
     (arg0, arg1) => {
       function defaultSetTimout() {
-        error = new Error("setTimeout has not been defined");
+        const error = new Error("setTimeout has not been defined");
         throw error;
       }
       function defaultClearTimeout() {
-        error = new Error("clearTimeout has not been defined");
+        const error = new Error("clearTimeout has not been defined");
         throw error;
       }
       function runTimeout(cleanUpNextTick) {
-        if (setTimeout === setTimeout) {
+        if (_setTimeout6 === setTimeout) {
           const _setTimeout5 = setTimeout;
           return setTimeout(cleanUpNextTick, 0);
         } else {
-          if (setTimeout === defaultSetTimout) {
+          if (_setTimeout6 === defaultSetTimout) {
             const _setTimeout = setTimeout;
             if (setTimeout) {
               const _setTimeout2 = setTimeout;
               const _setTimeout3 = setTimeout;
+              _setTimeout6 = setTimeout;
               const _setTimeout4 = setTimeout;
               return setTimeout(cleanUpNextTick, 0);
             }
           }
           try {
-            return setTimeout(cleanUpNextTick, 0);
+            return _setTimeout6(cleanUpNextTick, 0);
           } catch (err) {
             try {
-              const call = setTimeout.call;
+              const call = _setTimeout6.call;
               if (typeof call === "unknown") {
-                let callResult = setTimeout(tmp, 0);
+                let callResult = _setTimeout6(tmp, 0);
               } else {
                 callResult = call(null, tmp, 0);
               }
               return callResult;
             } catch (err) {
               const self = this;
-              const call2 = setTimeout.call;
+              const call2 = _setTimeout6.call;
               if (typeof call2 === "unknown") {
-                let call2Result = setTimeout(tmp, 0);
+                let call2Result = _setTimeout6(tmp, 0);
               } else {
                 call2Result = call2(self, tmp, 0);
               }
@@ -13165,51 +13011,45 @@ let fn = () => {
       function cleanUpNextTick() {
         let tmp = c7;
         if (c7) {
-          tmp = c5;
+          tmp = _null;
         }
         if (tmp) {
           c7 = false;
-          if (c5.length) {
-            arr = c5.concat(arr);
+          if (_null.length) {
+            closure_6 = _null.concat(closure_6);
           } else {
             c8 = -1;
           }
-          if (arr.length) {
+          if (closure_6.length) {
             if (!c7) {
               c7 = true;
-              let length = arr.length;
+              let length = closure_6.length;
               while (length) {
-                let tmp11 = arr;
-                c5 = arr;
-                arr = [];
-                let tmp12 = c8;
+                _null = closure_6;
+                closure_6 = [];
                 let sum = c8 + 1;
                 c8 = sum;
-                let tmp14 = length;
                 if (sum < length) {
                   do {
-                    if (c5) {
-                      let tmp16 = c8;
+                    if (_null) {
                       obj = tmp15[c8];
                       let runResult = obj.run();
                     }
-                    let tmp18 = c8;
                     sum1 = c8 + 1;
                     c8 = sum1;
                   } while (sum1 < length);
                 }
                 c8 = -1;
-                let tmp20 = arr;
-                length = arr.length;
+                length = closure_6.length;
               }
-              c5 = null;
+              _null = null;
               c7 = false;
               (function runClearTimeout(arg0) {
                 if (clearTimeout === clearTimeout) {
                   const _clearTimeout5 = clearTimeout;
                   return clearTimeout(arg0);
                 } else {
-                  if (clearTimeout === closure_3) {
+                  if (clearTimeout === defaultClearTimeout) {
                     const _clearTimeout = clearTimeout;
                     if (clearTimeout) {
                       const _clearTimeout2 = clearTimeout;
@@ -13248,33 +13088,26 @@ let fn = () => {
         }
       }
       function drainQueue() {
-        let arr;
         if (!c7) {
           c7 = true;
-          let length = arr.length;
+          let length = closure_6.length;
           while (length) {
-            let tmp5 = arr;
-            c5 = arr;
-            arr = [];
-            let tmp6 = c8;
+            c5 = closure_6;
+            closure_6 = [];
             let sum = c8 + 1;
             c8 = sum;
-            let tmp8 = length;
             if (sum < length) {
               do {
                 if (c5) {
-                  let tmp10 = c8;
                   obj = tmp9[c8];
                   let runResult = obj.run();
                 }
-                let tmp12 = c8;
                 sum1 = c8 + 1;
                 c8 = sum1;
               } while (sum1 < length);
             }
             c8 = -1;
-            let tmp14 = arr;
-            length = arr.length;
+            length = closure_6.length;
           }
           c5 = null;
           c7 = false;
@@ -13283,7 +13116,7 @@ let fn = () => {
               const _clearTimeout5 = clearTimeout;
               return clearTimeout(arg0);
             } else {
-              if (clearTimeout === closure_3) {
+              if (clearTimeout === defaultClearTimeout) {
                 const _clearTimeout = clearTimeout;
                 if (clearTimeout) {
                   const _clearTimeout2 = clearTimeout;
@@ -13332,8 +13165,8 @@ let fn = () => {
       function noop() {
 
       }
-      obj = {};
-      arg0.exports = obj;
+      const exports = {};
+      arg0.exports = exports;
       (() => {
         try {
           const _setTimeout = setTimeout;
@@ -13361,7 +13194,7 @@ let fn = () => {
       closure_6 = [];
       c7 = false;
       c8 = -1;
-      obj.nextTick = (fun) => {
+      exports.nextTick = (fun) => {
         let length;
         const array = new Array(arguments.length - 1);
         if (arguments.length > 1) {
@@ -13374,43 +13207,43 @@ let fn = () => {
             } while (num < length);
           }
         }
-        obj = Object.create(Item.prototype);
+        Object.create(Item.prototype);
         obj = { fun, array };
-        arr = arr.push(obj);
+        closure_6.push(obj);
         if (!tmp4) {
           runTimeout(drainQueue);
         }
       };
-      obj.title = "browser";
-      obj.browser = true;
-      obj.env = {};
-      obj.argv = [];
-      obj.version = "";
-      obj.versions = {};
-      obj.on = noop;
-      obj.addListener = noop;
-      obj.once = noop;
-      obj.off = noop;
-      obj.removeListener = noop;
-      obj.removeAllListeners = noop;
-      obj.emit = noop;
-      obj.binding = (arg0) => {
-        error = new Error("process.binding is not supported");
+      exports.title = "browser";
+      exports.browser = true;
+      exports.env = {};
+      exports.argv = [];
+      exports.version = "";
+      exports.versions = {};
+      exports.on = noop;
+      exports.addListener = noop;
+      exports.once = noop;
+      exports.off = noop;
+      exports.removeListener = noop;
+      exports.removeAllListeners = noop;
+      exports.emit = noop;
+      exports.binding = (arg0) => {
+        const error = new Error("process.binding is not supported");
         throw error;
       };
-      obj.cwd = () => "/";
-      obj.chdir = (arg0) => {
-        error = new Error("process.chdir is not supported");
+      exports.cwd = () => "/";
+      exports.chdir = (arg0) => {
+        const error = new Error("process.chdir is not supported");
         throw error;
       };
-      obj.umask = () => 0;
+      exports.umask = () => 0;
     },
     (arg0, arg1) => {
 
     },
-    (arg0, arg1, arg2) => {
+    (arg0, arg1, fn) => {
       closure_0 = arg1;
-      const fn = (arg0) => {
+      fn = (arg0) => {
         closure_0 = arg0;
         re1 = /^(\/?|)([\s\S]*?)((?:\.{1,2}|[^\/]+?|)(\.[^.\/]*|))(?:[\/]*)$/;
         closure_0.resolve = () => {
@@ -13423,13 +13256,10 @@ let fn = () => {
           let str3 = "";
           if (-1 <= diff) {
             while (true) {
-              let tmp2 = diff;
               let tmp3 = flag;
-              let tmp4 = str2;
               if (0 <= diff) {
                 let str4 = arguments[diff];
               } else {
-                let tmp5 = closure_0;
                 str4 = closure_0.cwd();
               }
               if (typeof str4 !== "string") {
@@ -13461,14 +13291,13 @@ let fn = () => {
           }
           const parts = str3.split("/");
           if (parts.filter) {
-            let found = parts.filter((arg0) => arg0);
+            let found = parts.filter((item) => item);
           } else {
             items = [];
             let num = 0;
             found = items;
             if (0 < parts.length) {
               do {
-                let tmp8 = num;
                 if (parts[num]) {
                   let arr = items.push(parts[num]);
                 }
@@ -13483,8 +13312,6 @@ let fn = () => {
           if (0 <= diff2) {
             do {
               let tmp11 = found[diff2];
-              let tmp12 = diff2;
-              let tmp13 = num2;
               if ("." === tmp11) {
                 let spliceResult = found.splice(diff2, 1);
                 let sum = num2;
@@ -13520,14 +13347,13 @@ let fn = () => {
           const isAbsoluteResult = closure_0.isAbsolute(str);
           const parts = str.split("/");
           if (parts.filter) {
-            let found = parts.filter((arg0) => arg0);
+            let found = parts.filter((item) => item);
           } else {
             items = [];
             let num = 0;
             found = items;
             if (0 < parts.length) {
               do {
-                let tmp3 = num;
                 if (parts[num]) {
                   let arr = items.push(parts[num]);
                 }
@@ -13542,8 +13368,6 @@ let fn = () => {
           if (0 <= diff) {
             do {
               let tmp6 = found[diff];
-              let tmp7 = diff;
-              let tmp8 = num3;
               if ("." === tmp6) {
                 let spliceResult = found.splice(diff, 1);
                 let sum = num3;
@@ -13603,13 +13427,13 @@ let fn = () => {
             substr = call(arguments, 0);
           }
           if (substr.filter) {
-            let found = substr.filter((str) => {
-              if (typeof str !== "string") {
+            let found = substr.filter((item, index) => {
+              if (typeof item !== "string") {
                 const _TypeError = TypeError;
                 const typeError = new TypeError("Arguments to path.join must be strings");
                 throw typeError;
               } else {
-                return str;
+                return item;
               }
             });
           } else {
@@ -13742,7 +13566,7 @@ let fn = () => {
         closure_0.sep = "/";
         closure_0.delimiter = ":";
         closure_0.dirname = (arg0) => {
-          const match = regex.exec(arg0);
+          const match = re1.exec(arg0);
           const substr = match.slice(1);
           [tmp2, str] = substr;
           if (tmp2) {
@@ -13757,7 +13581,7 @@ let fn = () => {
           return str2;
         };
         closure_0.basename = (arg0, arg1) => {
-          const match = regex.exec(arg0);
+          const match = re1.exec(arg0);
           const str = match.slice(1)[2];
           let tmp = arg1;
           if (arg1) {
@@ -13770,10 +13594,10 @@ let fn = () => {
           return substr;
         };
         closure_0.extname = (arg0) => {
-          const match = regex.exec(arg0);
+          const match = re1.exec(arg0);
           return match.slice(1)[3];
         };
-        closure_2 = "b" === "ab".substr(-1) ? ((str) => str.substr(arg1, arg2)) : ((str) => {
+        closure_2 = "b" === "ab".substr(-1) ? ((str, arg1, arg2) => str.substr(arg1, arg2)) : ((str, arg1, arg2) => {
           let sum = arg1;
           if (arg1 < 0) {
             sum = str.length + arg1;
@@ -13782,7 +13606,7 @@ let fn = () => {
         });
       };
       let call = fn.call;
-      let tmp = arg2(7);
+      let tmp = fn(7);
       if (typeof call === "unknown") {
         closure_0 = tmp;
         let re1 = /^(\/?|)([\s\S]*?)((?:\.{1,2}|[^\/]+?|)(\.[^.\/]*|))(?:[\/]*)$/;
@@ -13796,13 +13620,10 @@ let fn = () => {
           let str3 = "";
           if (-1 <= diff) {
             while (true) {
-              let tmp2 = diff;
               let tmp3 = flag;
-              let tmp4 = str2;
               if (0 <= diff) {
                 let str4 = arguments[diff];
               } else {
-                let tmp5 = closure_0;
                 str4 = closure_0.cwd();
               }
               if (typeof str4 !== "string") {
@@ -13834,14 +13655,13 @@ let fn = () => {
           }
           const parts = str3.split("/");
           if (parts.filter) {
-            let found = parts.filter((arg0) => arg0);
+            let found = parts.filter((item) => item);
           } else {
             items = [];
             let num = 0;
             found = items;
             if (0 < parts.length) {
               do {
-                let tmp8 = num;
                 if (parts[num]) {
                   let arr = items.push(parts[num]);
                 }
@@ -13856,8 +13676,6 @@ let fn = () => {
           if (0 <= diff2) {
             do {
               let tmp11 = found[diff2];
-              let tmp12 = diff2;
-              let tmp13 = num2;
               if ("." === tmp11) {
                 let spliceResult = found.splice(diff2, 1);
                 let sum = num2;
@@ -13893,14 +13711,13 @@ let fn = () => {
           const isAbsoluteResult = closure_0.isAbsolute(str);
           const parts = str.split("/");
           if (parts.filter) {
-            let found = parts.filter((arg0) => arg0);
+            let found = parts.filter((item) => item);
           } else {
             items = [];
             let num = 0;
             found = items;
             if (0 < parts.length) {
               do {
-                let tmp3 = num;
                 if (parts[num]) {
                   let arr = items.push(parts[num]);
                 }
@@ -13915,8 +13732,6 @@ let fn = () => {
           if (0 <= diff) {
             do {
               let tmp6 = found[diff];
-              let tmp7 = diff;
-              let tmp8 = num3;
               if ("." === tmp6) {
                 let spliceResult = found.splice(diff, 1);
                 let sum = num3;
@@ -13976,13 +13791,13 @@ let fn = () => {
             substr = call(arguments, 0);
           }
           if (substr.filter) {
-            let found = substr.filter((str) => {
-              if (typeof str !== "string") {
+            let found = substr.filter((item, index) => {
+              if (typeof item !== "string") {
                 const _TypeError = TypeError;
                 const typeError = new TypeError("Arguments to path.join must be strings");
                 throw typeError;
               } else {
-                return str;
+                return item;
               }
             });
           } else {
@@ -14115,7 +13930,7 @@ let fn = () => {
         arg1.sep = "/";
         arg1.delimiter = ":";
         arg1.dirname = (arg0) => {
-          const match = regex.exec(arg0);
+          const match = re1.exec(arg0);
           const substr = match.slice(1);
           [tmp2, str] = substr;
           if (tmp2) {
@@ -14130,7 +13945,7 @@ let fn = () => {
           return str2;
         };
         arg1.basename = (arg0, arg1) => {
-          const match = regex.exec(arg0);
+          const match = re1.exec(arg0);
           const str = match.slice(1)[2];
           let tmp = arg1;
           if (arg1) {
@@ -14143,11 +13958,11 @@ let fn = () => {
           return substr;
         };
         arg1.extname = (arg0) => {
-          const match = regex.exec(arg0);
+          const match = re1.exec(arg0);
           return match.slice(1)[3];
         };
         let substr = "ab".substr;
-        closure_2 = "b" === "ab".substr(-1) ? ((str) => str.substr(arg1, arg2)) : ((str) => {
+        closure_2 = "b" === "ab".substr(-1) ? ((str, arg1, arg2) => str.substr(arg1, arg2)) : ((str, arg1, arg2) => {
           let sum = arg1;
           if (arg1 < 0) {
             sum = str.length + arg1;
@@ -14158,13 +13973,13 @@ let fn = () => {
         call(arg1, tmp);
       }
     },
-    (arg0, arg1, arg2) => {
+    (arg0, arg1, fn) => {
       closure_0 = arg1;
-      closure_1 = arg2;
-      const fn = (arg0, arg1) => {
+      closure_1 = fn;
+      fn = (arg0, arg1) => {
         closure_0 = arg0;
-        const callback = arg1;
-        function inspect(arg0, flag) {
+        closure_1 = arg1;
+        function inspect(arg0, showHidden) {
           obj = { seen: [], stylize: stylizeNoColor };
           if (arguments.length >= 3) {
             obj.depth = arguments[2];
@@ -14172,10 +13987,10 @@ let fn = () => {
           if (arguments.length >= 4) {
             obj.colors = arguments[3];
           }
-          if (typeof flag === "boolean") {
-            obj.showHidden = flag;
-          } else if (flag) {
-            closure_0._extend(obj, flag);
+          if (typeof showHidden === "boolean") {
+            obj.showHidden = showHidden;
+          } else if (showHidden) {
+            closure_0._extend(obj, showHidden);
           }
           if (undefined === obj.showHidden) {
             obj.showHidden = false;
@@ -14204,8 +14019,8 @@ let fn = () => {
         function stylizeNoColor(arg0, arg1) {
           return arg0;
         }
-        function formatValue(customInspect, inspect) {
-          closure_0 = customInspect;
+        function formatValue(customInspect, inspect, arg2) {
+          obj = customInspect;
           closure_1 = inspect;
           closure_2 = arg2;
           if (customInspect.customInspect) {
@@ -14243,9 +14058,8 @@ let fn = () => {
             const _Object = Object;
             const keys = Object.keys(inspect);
             obj = {};
-            closure_0 = obj;
-            const item = keys.forEach((arg0, arg1) => {
-              closure_0[arg0] = true;
+            const item = keys.forEach((item, index) => {
+              obj[item] = true;
             });
             let ownPropertyNames = keys;
             if (customInspect.showHidden) {
@@ -14339,11 +14153,11 @@ let fn = () => {
               }
             }
             let flag = false;
-            let items1 = false;
+            c4 = false;
             items = ["{", "}"];
             const _Array = Array;
             if (Array.isArray(inspect)) {
-              items1 = true;
+              c4 = true;
               items = ["[", "]"];
               flag = true;
             }
@@ -14391,45 +14205,42 @@ let fn = () => {
                         const seen = customInspect.seen;
                         seen.push(inspect);
                         if (flag) {
-                          closure_0 = customInspect;
-                          closure_1 = inspect;
-                          closure_2 = arg2;
-                          items1 = [];
+                          closure_129_0 = customInspect;
+                          closure_129_1 = inspect;
+                          closure_129_2 = arg2;
+                          closure_129_3 = obj;
+                          const items1 = [];
+                          closure_129_4 = items1;
                           for (let num4 = 0; num4 < length; num4 = num4 + 1) {
                             let _String = String;
                             let StringResult = String(num4);
                             let _Object10 = Object;
+                            hasOwnProperty = Object.prototype.hasOwnProperty;
                             let call11 = hasOwnProperty.call;
-                            let tmp31 = num4;
                             let push = items1.push;
                             if (typeof call11 === "unknown" ? hasOwnProperty(StringResult) : call11(inspect, StringResult)) {
-                              let tmp33 = formatProperty;
                               let _String2 = String;
-                              let tmp34 = customInspect;
-                              let tmp35 = inspect;
-                              let tmp36 = arg2;
-                              let tmp37 = obj;
                               let flag3 = true;
                               let arr = push(formatProperty(customInspect, inspect, arg2, obj, String(num4), true));
                             } else {
                               let arr1 = push(str17);
                             }
                           }
-                          const item1 = ownPropertyNames.forEach((str) => {
-                            if (!str.match(/^\d+$/)) {
-                              items1.push(closure_1_9(closure_0, closure_1, closure_2, obj, str, true));
+                          const item1 = ownPropertyNames.forEach((item) => {
+                            if (!item.match(/^\d+$/)) {
+                              _true.push(formatProperty(obj, closure_1, closure_2, obj, item, true));
                             }
                           });
                           let mapped = items1;
                           length = inspect.length;
                         } else {
-                          mapped = ownPropertyNames.map((arg0) => closure_1_9(closure_0, closure_1, closure_2, obj, arg0, items1));
+                          mapped = ownPropertyNames.map((item) => formatProperty(obj, closure_1, closure_2, obj, item, c4));
                         }
                         const seen1 = customInspect.seen;
                         seen1.pop();
-                        if (mapped.reduce((arg0, arr) => {
+                        if (mapped.reduce((acc, arr) => {
                           arr.indexOf("\n") >= 0;
-                          return arg0 + arr.replace(/\u001b\[\d\d?m/g, "").length + 1;
+                          return acc + arr.replace(/\u001b\[\d\d?m/g, "").length + 1;
                         }, 0) > 60) {
                           if (str17 !== str18) {
                             str17 = `${str18}
@@ -14504,11 +14315,10 @@ let fn = () => {
             }
           }
         }
-        function formatProperty(stylize, arg1, arg2, arg3, key10009) {
+        function formatProperty(stylize, arg1, arg2, arg3, key10009, arg5) {
           let iter = Object.getOwnPropertyDescriptor(arg1, key10009);
           if (!iter) {
-            obj = { value: null };
-            obj[0] = arg1[key10009];
+            obj = { value: arg1[key10009] };
             iter = obj;
           }
           if (iter.get) {
@@ -14524,6 +14334,7 @@ let fn = () => {
               stylizeResult1 = stylize.stylize("[Setter]", "special");
             }
             const _Object = Object;
+            hasOwnProperty = Object.prototype.hasOwnProperty;
             const call = hasOwnProperty.call;
             if (!(typeof call === "unknown" ? hasOwnProperty(key10009) : call(arg3, key10009))) {
               let text = `${"[" + key10009}]`;
@@ -14579,12 +14390,13 @@ let fn = () => {
         const re2 = /%[sdj%]/g;
         closure_0.format = (str) => {
           let length;
+          let sum1;
           if (typeof str === "string") {
-            let sum1 = 1;
-            closure_1 = arguments;
+            closure_0 = 1;
+            dependencyMap = arguments;
             const length2 = arguments.length;
             let _String = String;
-            let replaced = String(str).replace(length2, (arg0) => {
+            let replaced = String(str).replace(re2, (arg0) => {
               if ("%%" === arg0) {
                 return "%";
               } else if (closure_0 >= length2) {
@@ -14609,29 +14421,24 @@ let fn = () => {
                 return arg0;
               }
             });
-            let tmp13 = arguments[sum1];
+            let tmp13 = arguments[closure_0];
             let tmp16 = replaced;
-            if (sum1 < length2) {
+            if (closure_0 < length2) {
               while (true) {
-                let tmp17 = tmp13;
-                let tmp18 = replaced;
                 if (null !== tmp13) {
                   let tmp19 = typeof tmp13 === "object";
                   if (typeof tmp13 === "object") {
                     tmp19 = null !== tmp13;
                   }
                   if (tmp19) {
-                    let tmp20 = inspect;
                     let text = `${tmp11} ${inspect(tmp13)}`;
                   }
-                  let tmp22 = sum1;
-                  let sum = sum1 + 1;
-                  sum1 = sum;
+                  let sum = closure_0 + 1;
+                  closure_0 = sum;
                   tmp13 = arguments[sum];
-                  let tmp24 = sum1;
                   replaced = text;
                   tmp16 = text;
-                  if (sum1 >= length2) {
+                  if (closure_0 >= length2) {
                     break;
                   }
                 }
@@ -14641,14 +14448,12 @@ let fn = () => {
             return tmp16;
           } else {
             items = [];
-            sum1 = 0;
+            closure_0 = 0;
             if (0 < arguments.length) {
               do {
-                let tmp = inspect;
-                let tmp2 = sum1;
-                let arr = items.push(inspect(arguments[sum1]));
-                let tmp4 = sum1;
-                sum1 = sum1 + 1;
+                let arr = items.push(inspect(arguments[closure_0]));
+                sum1 = closure_0 + 1;
+                closure_0 = sum1;
                 length = arguments.length;
               } while (sum1 < length);
             }
@@ -14657,7 +14462,7 @@ let fn = () => {
         };
         closure_0.deprecate = (arg0, arg1) => {
           closure_0 = arg0;
-          const noDeprecation = arg1;
+          const throwDeprecation = arg1;
           if (undefined === closure_0.process) {
             return function() {
               const self = this;
@@ -14670,7 +14475,7 @@ let fn = () => {
               }
               return applyArgumentsResult;
             };
-          } else if (true === noDeprecation.noDeprecation) {
+          } else if (true === throwDeprecation.noDeprecation) {
             return arg0;
           } else {
             c2 = false;
@@ -14678,7 +14483,7 @@ let fn = () => {
               if (!c2) {
                 if (throwDeprecation.throwDeprecation) {
                   const _Error = Error;
-                  error = new Error(throwDeprecation);
+                  const error = new Error(throwDeprecation);
                   throw error;
                 } else {
                   const _console = console;
@@ -14701,20 +14506,20 @@ let fn = () => {
             };
           }
         };
-        closure_4 = {};
+        dependencyMap = {};
         closure_0.debuglog = (str) => {
           let formatted = str;
           if (undefined === closure_3) {
-            closure_3 = pid.env.NODE_DEBUG || "";
+            closure_3 = closure_1.env.NODE_DEBUG || "";
           }
           formatted = str.toUpperCase();
-          if (!table[formatted]) {
+          if (!dependencyMap[formatted]) {
             const _RegExp = RegExp;
             const regExp = new RegExp("\\b" + formatted + "\\b", "i");
             if (regExp.test(closure_3)) {
-              pid = pid.pid;
+              const pid = closure_1.pid;
               tmp3[formatted] = () => {
-                const format = formatted.format;
+                format = format.format;
                 const apply = format.apply;
                 if (typeof apply === "unknown") {
                   let applyArgumentsResult = HermesBuiltin.applyArguments(tmp);
@@ -14729,7 +14534,7 @@ let fn = () => {
               };
             }
           }
-          return table[formatted];
+          return dependencyMap[formatted];
         };
         closure_0.inspect = inspect;
         inspect.colors = { bold: [1, 22], italic: [3, 23], underline: [4, 24], inverse: [7, 27], white: [37, 39], grey: [90, 39], black: [30, 39], blue: [34, 39], cyan: [36, 39], green: [32, 39], magenta: [35, 39], red: [31, 39], yellow: [33, 39] };
@@ -14822,7 +14627,7 @@ let fn = () => {
           }
           return tmp;
         };
-        closure_0.isBuffer = callback(11);
+        closure_0.isBuffer = closure_1(11);
         closure_10 = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
         closure_0.log = () => {
           const date = new Date();
@@ -14848,7 +14653,7 @@ let fn = () => {
           }
           items[2] = text2;
           const joined = items.join(":");
-          const items1 = [date.getDate(), table2[date.getMonth(date)], joined];
+          const items1 = [date.getDate(), closure_10[date.getMonth(date)], joined];
           const format = closure_0.format;
           const apply = format.apply;
           const joined1 = items1.join(" ");
@@ -14859,7 +14664,7 @@ let fn = () => {
           }
           console.log("%s - %s", joined1, applyArgumentsResult);
         };
-        closure_0.inherits = callback(12);
+        closure_0.inherits = closure_1(12);
         closure_0._extend = (arg0, obj) => {
           let tmp5;
           if (obj) {
@@ -14885,7 +14690,7 @@ let fn = () => {
         };
       };
       let call = fn.call;
-      let tmp = arg2(7);
+      let tmp = fn(7);
       if (typeof call === "unknown") {
         fn(globalThis, tmp);
       } else {
@@ -14893,19 +14698,19 @@ let fn = () => {
       }
     },
     (arg0, arg1) => {
-      arg0.exports = function isBuffer(obj) {
-        let tmp = obj;
-        if (obj) {
-          tmp = typeof obj === "object";
+      arg0.exports = function isBuffer(copy) {
+        let tmp = copy;
+        if (copy) {
+          tmp = typeof copy === "object";
         }
         if (tmp) {
-          tmp = typeof obj.copy === "function";
+          tmp = typeof copy.copy === "function";
         }
         if (tmp) {
-          tmp = typeof obj.fill === "function";
+          tmp = typeof copy.fill === "function";
         }
         if (tmp) {
-          tmp = typeof obj.readUInt8 === "function";
+          tmp = typeof copy.readUInt8 === "function";
         }
         return tmp;
       };
@@ -14930,11 +14735,11 @@ let fn = () => {
         };
       }
     },
-    (arg0, arg1, arg2) => {
+    (arg0, arg1, fn) => {
       closure_0 = arg1;
-      const fn = (_Buffer) => {
+      fn = (_Buffer) => {
         closure_0 = _Buffer;
-        obj = {};
+        let safeCharCodes = {};
         closure_0.escapeJavaScript = (str) => {
           if (str) {
             let num = 0;
@@ -14943,8 +14748,6 @@ let fn = () => {
             if (0 < str.length) {
               do {
                 let charCodeAtResult = str.charCodeAt(num);
-                let tmp2 = num;
-                let tmp3 = str;
                 if (obj.isSafe(charCodeAtResult)) {
                   let text = `${str[num]}`;
                 } else {
@@ -14968,8 +14771,6 @@ let fn = () => {
             if (0 < str.length) {
               do {
                 let charCodeAtResult = str.charCodeAt(num);
-                let tmp2 = num;
-                let tmp3 = str;
                 if (obj.isSafe(charCodeAtResult)) {
                   let text = `${str[num]}`;
                 } else {
@@ -14985,7 +14786,7 @@ let fn = () => {
             return "";
           }
         };
-        obj.escapeJavaScriptChar = (arg0) => {
+        safeCharCodes.escapeJavaScriptChar = (arg0) => {
           if (arg0 >= 256) {
             return "\\u" + obj.padLeft("" + arg0, 4);
           } else {
@@ -14994,7 +14795,7 @@ let fn = () => {
             return "\\x" + obj.padLeft(str2.toString("hex"), 2);
           }
         };
-        obj.escapeHtmlChar = (arg0) => {
+        safeCharCodes.escapeHtmlChar = (arg0) => {
           if (undefined !== obj.namedHtml[arg0]) {
             return tmp;
           } else if (arg0 >= 256) {
@@ -15005,7 +14806,7 @@ let fn = () => {
             return "&#x" + obj.padLeft(str2.toString("hex"), 2) + ";";
           }
         };
-        obj.padLeft = (arg0, arg1) => {
+        safeCharCodes.padLeft = (arg0, arg1) => {
           let length;
           let tmp = arg0;
           let tmp2 = arg0;
@@ -15019,13 +14820,12 @@ let fn = () => {
           }
           return tmp2;
         };
-        obj.isSafe = (arg0) => undefined !== obj.safeCharCodes[arg0];
-        obj.namedHtml = { 38: "&amp;", 60: "&lt;", 62: "&gt;", 34: "&quot;", 160: "&nbsp;", 162: "&cent;", 163: "&pound;", 164: "&curren;", 169: "&copy;", 174: "&reg;" };
-        obj = {};
+        safeCharCodes.isSafe = (arg0) => undefined !== obj.safeCharCodes[arg0];
+        safeCharCodes.namedHtml = { 38: "&amp;", 60: "&lt;", 62: "&gt;", 34: "&quot;", 160: "&nbsp;", 162: "&cent;", 163: "&pound;", 164: "&curren;", 169: "&copy;", 174: "&reg;" };
+        safeCharCodes = {};
         let num = 32;
         do {
           let tmp = num >= 97;
-          let tmp2 = num;
           if (97 > num) {
             let tmp3 = num >= 65;
             if (65 <= num) {
@@ -15059,32 +14859,30 @@ let fn = () => {
             tmp = 95 === num;
           }
           if (tmp) {
-            obj[num] = null;
+            safeCharCodes[num] = null;
           }
           num = num + 1;
         } while (num < 123);
-        obj.safeCharCodes = obj;
+        safeCharCodes.safeCharCodes = safeCharCodes;
       };
       const call = fn.call;
-      const _Buffer = arg2(3).Buffer;
+      const _Buffer = fn(3).Buffer;
       if (typeof call === "unknown") {
         fn(_Buffer);
       } else {
         call(arg1, _Buffer);
       }
     },
-    (arg0, arg1, arg2) => {
-      const _class = arg2;
-      let fn = Object.assign;
+    (arg0, arg1, fn) => {
+      const _class = fn;
+      fn = Object.assign;
       if (!fn) {
         fn = (arg0) => {
           for (let num = 1; num < arguments.length; num = num + 1) {
             let tmp = arguments[num];
-            let tmp2 = tmp;
-            let tmp3 = num;
             for (const key10012 in tmp) {
-              let tmp5 = key10012;
               let _Object = Object;
+              hasOwnProperty = Object.prototype.hasOwnProperty;
               let call = hasOwnProperty.call;
               if (typeof call === "unknown") {
                 let hasOwnPropertyResult = hasOwnProperty(key10012);
@@ -15108,25 +14906,22 @@ let fn = () => {
         if (typeof Symbol.iterator === "symbol") {
           let fn2 = (arg0) => typeof arg0;
         }
-        closure_3 = arg2(2);
-        closure_4 = arg2(15);
-        closure_5 = arg2(16);
-        c6 = null;
-        closure_7 = null;
-        obj = { Set: null, defaults: null };
-        obj[0] = arg2(18);
-        obj = { abortEarly: true, convert: true, allowUnknown: false, skipFunctions: false, stripUnknown: false, language: null, presence: "optional", strip: false, noDefaults: false };
-        obj[5] = {};
-        obj[1] = obj;
+        closure_3 = fn(2);
+        closure_4 = fn(15);
+        closure_5 = fn(16);
+        c7 = null;
+        let defaults = { Set: fn(18), defaults: null };
+        defaults = { abortEarly: true, convert: true, allowUnknown: false, skipFunctions: false, stripUnknown: false, language: {}, presence: "optional", strip: false, noDefaults: false };
+        defaults.defaults = defaults;
         class _class {
           constructor() {
             self = this;
             if (this instanceof _class) {
               tmp6 = closure_7;
               if (!closure_7) {
-                tmp7 = _class;
+                tmp7 = closure_0;
                 num = 19;
-                tmp6 = _class(19);
+                tmp6 = closure_0(19);
               }
               closure_7 = tmp6;
               flag = true;
@@ -15135,15 +14930,15 @@ let fn = () => {
               self._type = "any";
               tmp8 = null;
               self._settings = null;
-              tmp9 = closure_8;
+              tmp9 = closure_2_8;
               tmp10 = new.target;
               tmp11 = new.target;
-              set = new closure_8.Set();
+              set = new closure_2_8.Set();
               tmp13 = set;
               self._valids = set;
               tmp14 = new.target;
               tmp15 = new.target;
-              set1 = new closure_8.Set();
+              set1 = new closure_2_8.Set();
               tmp17 = set1;
               self._invalids = set1;
               self._tests = [];
@@ -15169,7 +14964,7 @@ let fn = () => {
             }
           }
           createError(arg0, arg1, arg2, arg3) {
-            return closure_5.create(module, exports, arg2, arg3, this._flags);
+            return closure_5.create(module, exports, fn, arg3, this._flags);
           }
           checkOptions(arg0) {
             options = _class(31).options;
@@ -15303,9 +15098,9 @@ let fn = () => {
                         tmp15 = num5;
                         if (obj[key] >= 0) {
                           obj1 = { key: null, schema: null };
-                          obj1[0] = key;
+                          obj1.key = key;
                           schema = arr4[obj[key]].schema;
-                          obj1[1] = schema.concat(arr3[num5].schema);
+                          obj1.schema = schema.concat(arr3[num5].schema);
                           arr4[obj[key]] = obj1;
                         } else {
                           arr = arr4.push(arr3[num5]);
@@ -15325,7 +15120,7 @@ let fn = () => {
           _test(arg0, arg1, arg2, arg3) {
             cloneResult = this.clone();
             _tests = cloneResult._tests;
-            obj = { func: arg2, name: module, arg: exports, options: arg3 };
+            obj = { func: fn, name: module, arg: exports, options: arg3 };
             arr = _tests.push(obj);
             return cloneResult;
           }
@@ -15473,9 +15268,9 @@ let fn = () => {
               if ("" === combined[0]) {
                 self = this;
                 tmp = exports;
-                tmp2 = arg2;
+                tmp2 = fn;
                 obj = this[exports];
-                return obj.apply(this, arg2);
+                return obj.apply(this, fn);
               }
             }
             str2 = "";
@@ -15488,7 +15283,7 @@ let fn = () => {
             if ("" === combined[0]) {
               substr = combined.slice(1);
             }
-            mapped = substr.map((arg0) => str2 + arg0);
+            mapped = substr.map((item) => str2 + item);
             error = new Error("unknown key(s) " + mapped.join(", "));
             throw error;
           }
@@ -15530,8 +15325,8 @@ let fn = () => {
             cloneResult = this.clone();
             schemaResult = undefined;
             if (undefined !== module) {
-              tmp3 = closure_7;
-              schemaResult = closure_7.schema(module);
+              tmp3 = c7;
+              schemaResult = c7.schema(module);
             }
             cloneResult._flags.empty = schemaResult;
             return cloneResult;
@@ -15557,13 +15352,13 @@ let fn = () => {
             assertResult1 = obj.assert(tmp4, "options must have at least one of \"then\" or \"otherwise\"");
             combined = undefined;
             if (exports.hasOwnProperty("then")) {
-              tmp7 = closure_7;
-              combined = self.concat(closure_7.schema(exports.then));
+              tmp7 = c7;
+              combined = self.concat(c7.schema(exports.then));
             }
             combined1 = undefined;
             if (exports.hasOwnProperty("otherwise")) {
-              tmp9 = closure_7;
-              combined1 = self.concat(closure_7.schema(exports.otherwise));
+              tmp9 = c7;
+              combined1 = self.concat(c7.schema(exports.otherwise));
             }
             obj2 = closure_6;
             if (!closure_6) {
@@ -15676,20 +15471,20 @@ let fn = () => {
             closure_0 = module;
             tmp = exports;
             closure_1 = exports;
-            closure_2 = arg2;
+            closure_2 = fn;
             self = this;
             closure_4 = module;
             if (!exports) {
               tmp2 = arg3;
               obj = { key: "", path: "", parent: null, reference: null };
-              obj[3] = arg3;
+              obj.reference = arg3;
               tmp = obj;
             }
             closure_1 = tmp;
-            tmp3 = arg2;
+            tmp3 = fn;
             if (self._settings) {
               tmp4 = closure_8;
-              concatSettingsResult = closure_8.concatSettings(arg2, self._settings);
+              concatSettingsResult = closure_8.concatSettings(fn, self._settings);
               closure_2 = concatSettingsResult;
               tmp3 = concatSettingsResult;
             }
@@ -15702,14 +15497,14 @@ let fn = () => {
                 let tmp2 = obj;
                 if (undefined !== obj) {
                   if (obj._flags.raw) {
-                    tmp2 = ref;
+                    tmp2 = value;
                   }
                   _defaultResult = tmp2;
                 } else if (noDefaults.noDefaults) {
-                  _defaultResult = ref;
+                  _defaultResult = value;
                 } else {
                   const _flags = obj._flags;
-                  if (ref.isRef(obj._flags.default)) {
+                  if (value.isRef(obj._flags.default)) {
                     _defaultResult = _default(obj.parent, tmp18);
                   } else {
                     if (typeof _default === "function") {
@@ -15719,27 +15514,27 @@ let fn = () => {
                       }
                       let tmp7;
                       if (tmp6) {
-                        items = [self.clone(tmp4.parent), tmp18];
+                        items = [_self.clone(tmp4.parent), tmp18];
                         tmp7 = items;
                       }
-                      const iter = closure_1_8._try(obj._flags.default, tmp7);
-                      const value = iter.value;
+                      const iter = obj._try(obj._flags.default, tmp7);
+                      value = iter.value;
                       _defaultResult = value;
                       if (iter.error) {
-                        arr = arr.push(obj.createError("any.default", iter.error, tmp4, tmp18));
+                        closure_5.push(obj.createError("any.default", iter.error, tmp4, tmp18));
                         _defaultResult = value;
                       }
                     }
-                    _defaultResult = self.clone(obj._flags.default);
+                    _defaultResult = _self.clone(obj._flags.default);
                   }
                 }
               }
               obj = { value: _defaultResult, errors: null };
               let tmp17 = null;
-              if (arr.length) {
-                tmp17 = arr;
+              if (closure_5.length) {
+                tmp17 = closure_5;
               }
-              obj[1] = tmp17;
+              obj.errors = tmp17;
               return obj;
             };
             tmp6 = module;
@@ -15917,7 +15712,7 @@ let fn = () => {
               if (self._flags.allowOnly) {
                 obj1 = { valids: null };
                 _valids2 = self._valids;
-                obj1[0] = _valids2.values({ stripUndefined: true });
+                obj1.valids = _valids2.values({ stripUndefined: true });
                 str9 = "any.allowOnly";
                 tmp43 = self;
                 tmp44 = obj1;
@@ -15973,12 +15768,12 @@ let fn = () => {
             }
             iter = self._validate(module, null, closure_8.concatSettings(closure_8.defaults, exports));
             processResult = closure_5.process(iter.errors, module);
-            if (arg2) {
-              obj = arg2(processResult, iter.value);
+            if (fn) {
+              obj = fn(processResult, iter.value);
             } else {
               obj = { error: null, value: null };
-              obj[0] = processResult;
-              obj[1] = iter.value;
+              obj.error = processResult;
+              obj.value = iter.value;
             }
             return obj;
           }
@@ -15988,8 +15783,8 @@ let fn = () => {
               tmp = null;
               _validateWithOptionsResult = self._validateWithOptions(module, null, exports);
             } else {
-              tmp3 = arg2;
-              _validateWithOptionsResult = self._validateWithOptions(module, exports, arg2);
+              tmp3 = fn;
+              _validateWithOptionsResult = self._validateWithOptions(module, exports, fn);
             }
             return _validateWithOptionsResult;
           }
@@ -16000,9 +15795,9 @@ let fn = () => {
             keys = Object.keys(this._flags);
             if (keys.length) {
               items = ["empty", "default", "lazy", "label"];
-              if (items.some((key10009) => {
+              if (items.some((item) => {
                 const _flags = self._flags;
-                return _flags.hasOwnProperty(key10009);
+                return _flags.hasOwnProperty(item);
               })) {
                 obj.flags = {};
                 num = 0;
@@ -16062,10 +15857,10 @@ let fn = () => {
             _valids = self._valids;
             values = _valids.values();
             if (values.length) {
-              obj.valids = values.map((arg0) => {
-                let str = arg0;
-                if (closure_4.isRef(arg0)) {
-                  str = arg0.toString();
+              obj.valids = values.map((item) => {
+                let str = item;
+                if (closure_1_4.isRef(item)) {
+                  str = item.toString();
                 }
                 return str;
               });
@@ -16073,10 +15868,10 @@ let fn = () => {
             _invalids = self._invalids;
             values1 = _invalids.values();
             if (values1.length) {
-              obj.invalids = values1.map((arg0) => {
-                let str = arg0;
-                if (closure_4.isRef(arg0)) {
-                  str = arg0.toString();
+              obj.invalids = values1.map((item) => {
+                let str = item;
+                if (closure_1_4.isRef(item)) {
+                  str = item.toString();
                 }
                 return str;
               });
@@ -16086,7 +15881,7 @@ let fn = () => {
             if (0 < self._tests.length) {
               tmp7 = self._tests[num3];
               obj = { name: null };
-              obj[0] = tmp7.name;
+              obj.name = tmp7.name;
               tmp8 = num3;
               while (undefined === tmp7.arg) {
                 options = tmp7.options;
@@ -16152,46 +15947,42 @@ let fn = () => {
             return tmp;
           }
         }
-        obj.Any = _class;
+        defaults.Any = _class;
         module.exports = _class;
-        obj.Any.prototype.isImmutable = true;
-        const valid = obj.Any.prototype.valid;
-        obj.Any.prototype.equal = valid;
-        obj.Any.prototype.only = valid;
-        const invalid = obj.Any.prototype.invalid;
-        obj.Any.prototype.not = invalid;
-        obj.Any.prototype.disallow = invalid;
-        obj.Any.prototype.exist = obj.Any.prototype.required;
-        obj._try = (apply) => {
+        defaults.Any.prototype.isImmutable = true;
+        const valid = defaults.Any.prototype.valid;
+        defaults.Any.prototype.equal = valid;
+        defaults.Any.prototype.only = valid;
+        const invalid = defaults.Any.prototype.invalid;
+        defaults.Any.prototype.not = invalid;
+        defaults.Any.prototype.disallow = invalid;
+        defaults.Any.prototype.exist = defaults.Any.prototype.required;
+        defaults._try = (apply, arg1) => {
           try {
-            obj = { value: null, error: null };
-            obj[0] = apply.apply(null, arg1);
-            obj[1] = undefined;
+            obj = { value: apply.apply(null, arg1), error: undefined };
             return obj;
           } catch (err) {
           }
         };
-        obj.concatSettings = (__getInternalProperties) => {
-          if (!__getInternalProperties) {
+        defaults.concatSettings = (keys, arg1) => {
+          if (!keys) {
             if (!arg1) {
               return null;
             }
           }
           obj = {};
-          if (__getInternalProperties) {
-            fn(obj, __getInternalProperties);
+          if (keys) {
+            fn(obj, keys);
           }
           if (arg1) {
             const _Object = Object;
-            const keys = Object.keys(arg1);
+            keys = Object.keys(arg1);
             let num = 0;
             if (0 < keys.length) {
               while (true) {
                 let tmp5 = keys[num];
-                let tmp6 = num;
                 if ("language" === tmp5) {
                   if (obj.hasOwnProperty(tmp5)) {
-                    let tmp7 = closure_3;
                     obj[tmp5] = closure_3.applyToDefaults(obj[tmp5], arg1[tmp5]);
                     num = num + 1;
                     if (num >= keys.length) {
@@ -16221,10 +16012,9 @@ let fn = () => {
         str = typeof arg0;
       };
     },
-    (arg0, arg1, arg2) => {
-      closure_0 = arg1;
-      closure_1 = arg2(2);
-      arg1.create = (str) => {
+    (arg0, arg1, fn) => {
+      closure_1 = fn(2);
+      arg1.create = (str, arg1) => {
         ref.assert(typeof str === "string", "Invalid reference key:", str);
         const cloneResult = ref.clone(arg1);
         closure_0 = cloneResult;
@@ -16233,7 +16023,7 @@ let fn = () => {
           if (ref.isContext) {
             context = context.context;
           }
-          return ref.reach(context, ref.key, closure_0);
+          return closure_1.reach(context, ref.key, cloneResult);
         };
         str = cloneResult;
         if (cloneResult) {
@@ -16268,10 +16058,10 @@ let fn = () => {
         };
         return ref;
       };
-      arg1.isRef = (fn) => {
-        let isJoi = typeof fn === "function";
-        if (typeof fn === "function") {
-          isJoi = fn.isJoi;
+      arg1.isRef = (isJoi) => {
+        isJoi = typeof isJoi === "function";
+        if (typeof isJoi === "function") {
+          isJoi = isJoi.isJoi;
         }
         return isJoi;
       };
@@ -16281,65 +16071,63 @@ let fn = () => {
         }
       };
     },
-    (arg0, arg1, arg2) => {
+    (arg0, arg1, fn) => {
       const _class = arg1;
       if (typeof Symbol === "function") {
         let _Symbol = Symbol;
         if (typeof Symbol.iterator === "symbol") {
-          let fn = (arg0) => typeof arg0;
+          fn = (arg0) => typeof arg0;
         }
-        closure_2 = arg2(2);
-        closure_3 = arg2(17);
-        obj = { stringify: null };
-        obj[0] = function stringify(D) {
-          let str = "undefined";
-          if (undefined !== D) {
-            str = fn(D);
-          }
-          if (null === D) {
-            return "null";
-          } else if ("string" === str) {
-            return D;
-          } else {
-            if (!(D instanceof _class.Err)) {
-              if ("function" !== str) {
-                if ("object" === str) {
-                  const _Array = Array;
-                  if (Array.isArray(D)) {
-                    let num = 0;
-                    let str5 = "";
-                    let str6 = "";
-                    if (0 < D.length) {
-                      do {
-                        let tmp5 = num;
-                        let tmp6 = str5;
-                        let str7 = "";
-                        if (``.length) {
-                          str7 = ", ";
+        closure_2 = fn(2);
+        closure_3 = fn(17);
+        let context = {
+          stringify(D, arg1) {
+              let str = "undefined";
+              if (undefined !== D) {
+                str = fn(D);
+              }
+              if (null === D) {
+                return "null";
+              } else if ("string" === str) {
+                return D;
+              } else {
+                if (!(D instanceof _class.Err)) {
+                  if ("function" !== str) {
+                    if ("object" === str) {
+                      const _Array = Array;
+                      if (Array.isArray(D)) {
+                        let num = 0;
+                        let str5 = "";
+                        let str6 = "";
+                        if (0 < D.length) {
+                          do {
+                            let str7 = "";
+                            if (``.length) {
+                              str7 = ", ";
+                            }
+                            str5 = str5 + str7 + obj.stringify(D[num], arg1);
+                            num = num + 1;
+                            str6 = str5;
+                          } while (num < D.length);
                         }
-                        let tmp7 = obj;
-                        str5 = str5 + str7 + obj.stringify(D[num], arg1);
-                        num = num + 1;
-                        str6 = str5;
-                      } while (num < D.length);
+                        let combined = str6;
+                        if (arg1) {
+                          const _HermesInternal = HermesInternal;
+                          combined = "[" + str6 + "]";
+                        }
+                        return combined;
+                      } else {
+                        return D.toString();
+                      }
+                    } else {
+                      const _JSON = JSON;
+                      return JSON.stringify(D);
                     }
-                    let combined = str6;
-                    if (arg1) {
-                      const _HermesInternal = HermesInternal;
-                      combined = "[" + str6 + "]";
-                    }
-                    return combined;
-                  } else {
-                    return D.toString();
                   }
-                } else {
-                  const _JSON = JSON;
-                  return JSON.stringify(D);
                 }
+                return D.toString();
               }
             }
-            return D.toString();
-          }
         };
         class _class {
           constructor(arg0, arg1, arg2, arg3, arg4) {
@@ -16353,11 +16141,11 @@ let fn = () => {
               if (!arg1) {
                 obj = {};
               }
-              tmp7 = arg2;
+              tmp7 = fn;
               tmp8 = arg3;
               tmp9 = arg4;
               self.context = obj;
-              ({ key: self.context.key, path: self.path } = arg2);
+              ({ key: self.context.key, path: self.path } = fn);
               self.options = arg3;
               self.flags = arg4;
               return;
@@ -16436,10 +16224,10 @@ let fn = () => {
               wrapArrays = closure_3.errors.messages.wrapArrays;
             }
             return str4.replace(/\{\{(\!?)([^}]+)\}\}/g, (arg0, arg1, arg2) => {
-              const json = closure_1_4.stringify(closure_1_2.reach(self.context, arg2), wrapArrays);
+              const json = obj.stringify(closure_2.reach(self.context, arg2), wrapArrays);
               let escapeHtmlResult = json;
               if (arg1) {
-                escapeHtmlResult = closure_1_2.escapeHtml(json);
+                escapeHtmlResult = obj.escapeHtml(json);
               }
               return escapeHtmlResult;
             });
@@ -16450,7 +16238,7 @@ let fn = () => {
         arg1.process = (reason, _object) => {
           if (reason) {
             if (reason.length) {
-              c0 = "";
+              closure_0 = "";
               items = [];
               function processErrors(reason, path) {
                 let num = 0;
@@ -16470,7 +16258,6 @@ let fn = () => {
                     }
                     if (str.context.reason) {
                       if (str.context.reason.length) {
-                        let tmp8 = processErrors;
                         let tmp9 = processErrors(str.context.reason, str.path);
                         if (tmp9) {
                           return tmp9;
@@ -16479,15 +16266,12 @@ let fn = () => {
                         }
                       }
                     }
-                    let tmp5 = items;
                     if (!str1) {
                       str1 = str.toString();
                     }
-                    obj = { message: null, path: null, type: null, context: null };
-                    obj[0] = str1;
-                    let tmp6 = closure_1_4;
-                    obj[1] = closure_1_4.getPath(str);
-                    ({ type: obj[2], context: obj[3] } = str);
+                    obj = { message: str1, path: null, type: null, context: null };
+                    obj.path = obj.getPath(str);
+                    ({ type: obj.type, context: obj.context } = str);
                     let arr = items.push(obj);
                   }
                   return str.flags.error;
@@ -16498,7 +16282,7 @@ let fn = () => {
                 return processErrorsResult;
               } else {
                 const _Error = Error;
-                error = new Error(c0);
+                const error = new Error(closure_0);
                 error.isJoi = true;
                 error.name = "ValidationError";
                 error.details = items;
@@ -16510,34 +16294,33 @@ let fn = () => {
           }
           return null;
         };
-        obj.getPath = (path) => path.path || path.context.key;
-        obj.safeStringify = (arg0, arg1) => JSON.stringify(arg0, obj.serializer(), arg1);
-        obj.serializer = () => {
+        context.getPath = (path) => path.path || path.context.key;
+        context.safeStringify = (arg0, arg1) => JSON.stringify(arg0, obj.serializer(), arg1);
+        context.serializer = () => {
           closure_0 = [];
-          closure_1 = [];
           function cycleReplacer(arg0, arg1) {
             let str = "[Circular ~]";
-            if (lib[0] !== arg1) {
-              const substr = arr.slice(0, arr.indexOf(arg1));
+            if (length[0] !== arg1) {
+              const substr = closure_0.slice(0, length.indexOf(arg1));
               str = `${"[Circular ~." + obj.join(".")}]`;
             }
             return str;
           }
           return function(arg0, arg1) {
             let arr3;
-            let arr = lib;
-            if (lib.length > 0) {
+            let arr = length;
+            if (length.length > 0) {
               const self = this;
               const index = arr.indexOf(this);
               if (~index) {
                 arr.length = index + 1;
-                arr.length = index + 1;
-                arr[index] = arg0;
-                let substr = arr;
+                closure_0.length = index + 1;
+                closure_0[index] = arg0;
+                let substr = closure_0;
               } else {
-                arr = arr.push(self);
-                arr = arr.push(arg0);
-                substr = arr;
+                arr.push(self);
+                arr = closure_0.push(arg0);
+                substr = closure_0;
               }
               let arr1 = arg1;
               if (~arr.indexOf(arg1)) {
@@ -16554,7 +16337,7 @@ let fn = () => {
                 }
               }
             } else {
-              arr1 = arr.push(arg1);
+              arr.push(arg1);
               arr1 = arg1;
             }
             let str5 = arr1;
@@ -16567,7 +16350,6 @@ let fn = () => {
                 str5 = items;
                 if (0 < arr1.length) {
                   do {
-                    let tmp11 = num3;
                     if (placeholders[num3]) {
                       let arr2 = items.push(placeholders[num3]);
                     }
@@ -16585,7 +16367,7 @@ let fn = () => {
                   if (typeof str5 !== "function") {
                     let str6 = "undefined";
                     if (undefined !== str5) {
-                      str6 = lib(str5);
+                      str6 = fn(str5);
                     }
                     let text = str5;
                   }
@@ -16596,7 +16378,7 @@ let fn = () => {
             text = `${"[" + str5.toString()}]`;
           };
         };
-        obj.annotate = function(arg0) {
+        context.annotate = function(arg0) {
           let length;
           let sum2;
           let str = "\u001B[31m";
@@ -16612,14 +16394,14 @@ let fn = () => {
             str3 = "";
           }
           const self = this;
-          if ("object" !== str2(this._object)) {
+          if ("object" !== fn(this._object)) {
             return self.details[0].message;
           } else {
             let _object = self._object;
             if (!_object) {
               _object = {};
             }
-            const cloneResult = str3.clone(_object);
+            const cloneResult = closure_2.clone(_object);
             obj = {};
             let diff = self.details.length - 1;
             if (0 <= diff) {
@@ -16628,7 +16410,6 @@ let fn = () => {
                 let tmp8 = self.details[diff];
                 let str12 = tmp8.path;
                 let parts = str12.split(".");
-                let tmp9 = diff;
                 if (0 < parts.length) {
                   let text = `, ${tmp7}`;
                   let num3 = 0;
@@ -16637,7 +16418,6 @@ let fn = () => {
                     while (true) {
                       let tmp10 = parts[num3];
                       let sum1 = num3 + 1;
-                      let tmp12 = tmp16;
                       if (sum1 < parts.length) {
                         let tmp13 = tmp16[tmp10];
                       } else {
@@ -16725,20 +16505,22 @@ let fn = () => {
       };
     },
     (arg0, arg1) => {
-      arg1.errors = { root: "value", key: "\"{{!key}}\" ", messages: { wrapArrays: true }, any: { unknown: "is not allowed", invalid: "contains an invalid value", empty: "is not allowed to be empty", required: "is required", allowOnly: "must be one of {{valids}}", default: "threw an error when running default method" }, alternatives: { base: "not matching any of the allowed alternatives" }, array: { base: "must be an array", includes: "at position {{pos}} does not match any of the allowed types", includesSingle: "single value of \"{{!key}}\" does not match any of the allowed types", includesOne: "at position {{pos}} fails because {{reason}}", includesOneSingle: "single value of \"{{!key}}\" fails because {{reason}}", includesRequiredUnknowns: "does not contain {{unknownMisses}} required value(s)", includesRequiredKnowns: "does not contain {{knownMisses}}", includesRequiredBoth: "does not contain {{knownMisses}} and {{unknownMisses}} other required value(s)", excludes: "at position {{pos}} contains an excluded value", excludesSingle: "single value of \"{{!key}}\" contains an excluded value", min: "must contain at least {{limit}} items", max: "must contain less than or equal to {{limit}} items", length: "must contain {{limit}} items", ordered: "at position {{pos}} fails because {{reason}}", orderedLength: "at position {{pos}} fails because array must contain at most {{limit}} items", sparse: "must not be a sparse array", unique: "position {{pos}} contains a duplicate value" }, boolean: { base: "must be a boolean" }, binary: { base: "must be a buffer or a string", min: "must be at least {{limit}} bytes", max: "must be less than or equal to {{limit}} bytes", length: "must be {{limit}} bytes" }, date: { base: "must be a number of milliseconds or valid date string", format: "must be a string with one of the following formats {{format}}", strict: "must be a valid date", min: "must be larger than or equal to \"{{limit}}\"", max: "must be less than or equal to \"{{limit}}\"", isoDate: "must be a valid ISO 8601 date", timestamp: { javascript: "must be a valid timestamp or number of milliseconds", unix: "must be a valid timestamp or number of seconds" }, ref: "references \"{{ref}}\" which is not a date" }, function: { base: "must be a Function", arity: "must have an arity of {{n}}", minArity: "must have an arity greater or equal to {{n}}", maxArity: "must have an arity lesser or equal to {{n}}", ref: "must be a Joi reference" }, lazy: { base: "!!schema error: lazy schema must be set", schema: "!!schema error: lazy schema function must return a schema" }, object: { base: "must be an object", child: "!!child \"{{!child}}\" fails because {{reason}}", min: "must have at least {{limit}} children", max: "must have less than or equal to {{limit}} children", length: "must have {{limit}} children", allowUnknown: "!!\"{{!child}}\" is not allowed", with: "missing required peer \"{{peer}}\"", without: "conflict with forbidden peer \"{{peer}}\"", missing: "must contain at least one of {{peers}}", xor: "contains a conflict between exclusive peers {{peers}}", or: "must contain at least one of {{peers}}", and: "contains {{present}} without its required peers {{missing}}", nand: "!!\"{{main}}\" must not exist simultaneously with {{peers}}", assert: "!!\"{{ref}}\" validation failed because \"{{ref}}\" failed to {{message}}", rename: { multiple: "cannot rename child \"{{from}}\" because multiple renames are disabled and another key was already renamed to \"{{to}}\"", override: "cannot rename child \"{{from}}\" because override is disabled and target \"{{to}}\" exists" }, type: "must be an instance of \"{{type}}\"", schema: "must be a Joi instance" }, number: { base: "must be a number", min: "must be larger than or equal to {{limit}}", max: "must be less than or equal to {{limit}}", less: "must be less than {{limit}}", greater: "must be greater than {{limit}}", float: "must be a float or double", integer: "must be an integer", negative: "must be a negative number", positive: "must be a positive number", precision: "must have no more than {{limit}} decimal places", ref: "references \"{{ref}}\" which is not a number", multiple: "must be a multiple of {{multiple}}" }, string: { base: "must be a string", min: "length must be at least {{limit}} characters long", max: "length must be less than or equal to {{limit}} characters long", length: "length must be {{limit}} characters long", alphanum: "must only contain alpha-numeric characters", token: "must only contain alpha-numeric and underscore characters", regex: { base: "with value \"{{!value}}\" fails to match the required pattern: {{pattern}}", name: "with value \"{{!value}}\" fails to match the {{name}} pattern", invert: { base: "with value \"{{!value}}\" matches the inverted pattern: {{pattern}}", name: "with value \"{{!value}}\" matches the inverted {{name}} pattern" } }, email: "must be a valid email", uri: "must be a valid uri", uriRelativeOnly: "must be a valid relative uri", uriCustomScheme: "must be a valid uri with a scheme matching the {{scheme}} pattern", isoDate: "must be a valid ISO 8601 date", guid: "must be a valid GUID", hex: "must only contain hexadecimal characters", base64: "must be a valid base64 string", hostname: "must be a valid hostname", lowercase: "must only contain lowercase characters", uppercase: "must only contain uppercase characters", trim: "must not have leading or trailing whitespace", creditCard: "must be a credit card", ref: "references \"{{ref}}\" which is not a number", ip: "must be a valid ip address with a {{cidr}} CIDR", ipVersion: "must be a valid ip address of one of the following versions {{version}} with a {{cidr}} CIDR" } };
+      const errors = { root: "value", key: "\"{{!key}}\" ", messages: { wrapArrays: true }, any: { unknown: "is not allowed", invalid: "contains an invalid value", empty: "is not allowed to be empty", required: "is required", allowOnly: "must be one of {{valids}}", default: "threw an error when running default method" }, alternatives: { base: "not matching any of the allowed alternatives" }, array: { base: "must be an array", includes: "at position {{pos}} does not match any of the allowed types", includesSingle: "single value of \"{{!key}}\" does not match any of the allowed types", includesOne: "at position {{pos}} fails because {{reason}}", includesOneSingle: "single value of \"{{!key}}\" fails because {{reason}}", includesRequiredUnknowns: "does not contain {{unknownMisses}} required value(s)", includesRequiredKnowns: "does not contain {{knownMisses}}", includesRequiredBoth: "does not contain {{knownMisses}} and {{unknownMisses}} other required value(s)", excludes: "at position {{pos}} contains an excluded value", excludesSingle: "single value of \"{{!key}}\" contains an excluded value", min: "must contain at least {{limit}} items", max: "must contain less than or equal to {{limit}} items", length: "must contain {{limit}} items", ordered: "at position {{pos}} fails because {{reason}}", orderedLength: "at position {{pos}} fails because array must contain at most {{limit}} items", sparse: "must not be a sparse array", unique: "position {{pos}} contains a duplicate value" }, boolean: { base: "must be a boolean" }, binary: { base: "must be a buffer or a string", min: "must be at least {{limit}} bytes", max: "must be less than or equal to {{limit}} bytes", length: "must be {{limit}} bytes" }, date: { base: "must be a number of milliseconds or valid date string", format: "must be a string with one of the following formats {{format}}", strict: "must be a valid date", min: "must be larger than or equal to \"{{limit}}\"", max: "must be less than or equal to \"{{limit}}\"", isoDate: "must be a valid ISO 8601 date", timestamp: { javascript: "must be a valid timestamp or number of milliseconds", unix: "must be a valid timestamp or number of seconds" }, ref: "references \"{{ref}}\" which is not a date" }, function: { base: "must be a Function", arity: "must have an arity of {{n}}", minArity: "must have an arity greater or equal to {{n}}", maxArity: "must have an arity lesser or equal to {{n}}", ref: "must be a Joi reference" }, lazy: { base: "!!schema error: lazy schema must be set", schema: "!!schema error: lazy schema function must return a schema" }, object: { base: "must be an object", child: "!!child \"{{!child}}\" fails because {{reason}}", min: "must have at least {{limit}} children", max: "must have less than or equal to {{limit}} children", length: "must have {{limit}} children", allowUnknown: "!!\"{{!child}}\" is not allowed", with: "missing required peer \"{{peer}}\"", without: "conflict with forbidden peer \"{{peer}}\"", missing: "must contain at least one of {{peers}}", xor: "contains a conflict between exclusive peers {{peers}}", or: "must contain at least one of {{peers}}", and: "contains {{present}} without its required peers {{missing}}", nand: "!!\"{{main}}\" must not exist simultaneously with {{peers}}", assert: "!!\"{{ref}}\" validation failed because \"{{ref}}\" failed to {{message}}", rename: { multiple: "cannot rename child \"{{from}}\" because multiple renames are disabled and another key was already renamed to \"{{to}}\"", override: "cannot rename child \"{{from}}\" because override is disabled and target \"{{to}}\" exists" }, type: "must be an instance of \"{{type}}\"", schema: "must be a Joi instance" }, number: { base: "must be a number", min: "must be larger than or equal to {{limit}}", max: "must be less than or equal to {{limit}}", less: "must be less than {{limit}}", greater: "must be greater than {{limit}}", float: "must be a float or double", integer: "must be an integer", negative: "must be a negative number", positive: "must be a positive number", precision: "must have no more than {{limit}} decimal places", ref: "references \"{{ref}}\" which is not a number", multiple: "must be a multiple of {{multiple}}" }, string: null };
+      const range = { base: "must be a string", min: "length must be at least {{limit}} characters long", max: "length must be less than or equal to {{limit}} characters long", length: "length must be {{limit}} characters long", alphanum: "must only contain alpha-numeric characters", token: "must only contain alpha-numeric and underscore characters", regex: { base: "with value \"{{!value}}\" fails to match the required pattern: {{pattern}}", name: "with value \"{{!value}}\" fails to match the {{name}} pattern", invert: { base: "with value \"{{!value}}\" matches the inverted pattern: {{pattern}}", name: "with value \"{{!value}}\" matches the inverted {{name}} pattern" } }, email: "must be a valid email", uri: "must be a valid uri", uriRelativeOnly: "must be a valid relative uri", uriCustomScheme: "must be a valid uri with a scheme matching the {{scheme}} pattern", isoDate: "must be a valid ISO 8601 date", guid: "must be a valid GUID", hex: "must only contain hexadecimal characters", base64: "must be a valid base64 string", hostname: "must be a valid hostname", lowercase: "must only contain lowercase characters", uppercase: "must only contain uppercase characters", trim: "must not have leading or trailing whitespace", creditCard: "must be a credit card", ref: "references \"{{ref}}\" which is not a number", ip: "must be a valid ip address with a {{cidr}} CIDR", ipVersion: "must be a valid ip address of one of the following versions {{version}} with a {{cidr}} CIDR" };
+      errors.string = range;
+      arg1.errors = errors;
     },
-    (arg0, arg1, arg2) => {
-      let Set = module;
-      Set = arg2;
-      let f122222 = arg2;
-      let fn = (arg0) => {
+    (arg0, arg1, fn) => {
+      let Set = fn;
+      closure_1 = fn;
+      fn = (arg0) => {
         Set = arg0;
         if (typeof Symbol === "function") {
           let _Symbol = Symbol;
           if (typeof Symbol.iterator === "symbol") {
-            let fn = (arg0) => typeof arg0;
+            fn = (arg0) => typeof arg0;
           }
-          closure_2 = fn(15);
+          const ref = closure_1(15);
           class Set {
             constructor() {
               if (this instanceof Set) {
@@ -16798,7 +16580,7 @@ let fn = () => {
             remove(arg0) {
               closure_0 = arg0;
               _set = this._set;
-              this._set = _set.filter((arg0) => closure_0 !== arg0);
+              this._set = _set.filter((item) => closure_0 !== item);
               return this;
             }
             has(arg0, arg1, arg2, arg3) {
@@ -16970,12 +16752,12 @@ let fn = () => {
         };
       };
       const call = fn.call;
-      const _Buffer = arg2(3).Buffer;
+      const _Buffer = fn(3).Buffer;
       if (typeof call === "unknown") {
-        Set = _Buffer;
+        closure_129_0 = _Buffer;
         let _Symbol = Symbol;
         if (typeof Symbol !== "function") {
-          f122222 = (arg0) => {
+          closure_129_1 = (arg0) => {
             if (arg0) {
               const _Symbol = Symbol;
               if (typeof Symbol === "function") {
@@ -16989,7 +16771,7 @@ let fn = () => {
             }
             str = typeof arg0;
           };
-          closure_2 = Set(15);
+          closure_129_2 = Set(15);
           class Set {
             constructor() {
               if (this instanceof Set) {
@@ -17049,7 +16831,7 @@ let fn = () => {
             remove(arg0) {
               closure_0 = module;
               _set = this._set;
-              this._set = _set.filter((arg0) => closure_0 !== arg0);
+              this._set = _set.filter((item) => closure_0 !== item);
               return this;
             }
             has(arg0, arg1, arg2, arg3) {
@@ -17067,7 +16849,7 @@ let fn = () => {
                   tmpResult = tmp;
                   if (isRefResult) {
                     tmp6 = exports.reference || exports.parent;
-                    tmpResult = tmp(tmp6, arg2);
+                    tmpResult = tmp(tmp6, fn);
                   }
                   _Array = Array;
                   tmp7 = tmpResult;
@@ -17211,35 +16993,31 @@ let fn = () => {
         call(exports, _Buffer);
       }
     },
-    (arg0, arg1, arg2) => {
-      closure_0 = arg2;
+    (arg0, arg1, fn) => {
+      closure_0 = fn;
       if (typeof Symbol === "function") {
         let _Symbol = Symbol;
         if (typeof Symbol.iterator === "symbol") {
-          let fn = (arg0) => typeof arg0;
+          fn = (arg0) => typeof arg0;
         }
-        closure_2 = arg2(2);
-        closure_3 = arg2(15);
-        obj = { any: null, date: null, string: null, number: null, boolean: null, alt: null, object: null };
-        obj[1] = arg2(20);
-        obj[2] = arg2(21);
-        obj[3] = arg2(26);
-        obj[4] = arg2(27);
+        closure_2 = fn(2);
+        closure_3 = fn(15);
+        obj = { any: null, date: fn(20), string: fn(21), number: fn(26), boolean: fn(27), alt: null, object: null };
         arg1.schema = (isJoi) => {
           let _try = obj;
           let any = obj.any;
           if (!any) {
-            any = new callback(14)();
+            any = new closure_0(14)();
           }
           _try.any = any;
           let alt = _try.alt;
           if (!alt) {
-            alt = callback(28);
+            alt = closure_0(28);
           }
           _try.alt = alt;
           let object = _try.object;
           if (!object) {
-            object = callback(29);
+            object = closure_0(29);
           }
           _try.object = object;
           if (null != isJoi) {
@@ -17295,7 +17073,6 @@ let fn = () => {
           }
         };
         arg1.ref = (arg0) => {
-          obj = closure_3;
           obj = arg0;
           if (!closure_3.isRef(arg0)) {
             obj = obj.create(arg0);
@@ -17318,12 +17095,12 @@ let fn = () => {
         str = typeof arg0;
       };
     },
-    (arg0, arg1, arg2) => {
-      let tmp = arg2(14);
-      const _class = arg2(15);
-      closure_2 = arg2(2);
+    (arg0, arg1, fn) => {
+      let tmp = fn(14);
+      const _class = fn(15);
+      closure_2 = fn(2);
       obj = { isoDate: /^(?:\d{4}(?!\d{2}\b))(?:(-?)(?:(?:0[1-9]|1[0-2])(?:\1(?:[12]\d|0[1-9]|3[01]))?|W(?:[0-4]\d|5[0-2])(?:-?[1-7])?|(?:00[1-9]|0[1-9]\d|[12]\d{2}|3(?:[0-5]\d|6[1-6])))(?![T]$|[T][\d]+Z$)(?:[T\s](?:(?:(?:[01]\d|2[0-3])(?:(:?)[0-5]\d)?|24\:?00)(?:[.,]\d+(?!:))?)(?:\2[0-5]\d(?:[.,]\d+)?)?(?:[Z]|(?:[+-])(?:[01]\d|2[0-3])(?::?[0-5]\d)?)?)?)?$/, invalidDate: new Date("") };
-      closure_0 = obj.isoDate.toString();
+      obj.isoDate.toString();
       obj.isIsoDate = (arg0) => {
         let tmp = arg0;
         if (arg0) {
@@ -17374,7 +17151,7 @@ let fn = () => {
         }
         _base(arg0, arg1, arg2) {
           self = this;
-          convert = arg2.convert;
+          convert = fn.convert;
           if (convert) {
             tmp = closure_3;
             _Date = closure_3.Date;
@@ -17395,7 +17172,7 @@ let fn = () => {
             }
             return obj;
           }
-          if (arg2.convert) {
+          if (fn.convert) {
             tmp9 = closure_3;
             str2 = "isoDate";
             if (!closure_3.isIsoDate(self._flags.format)) {
@@ -17410,15 +17187,15 @@ let fn = () => {
             str5 = "date.";
             tmp11 = self;
             tmp12 = exports;
-            tmp13 = arg2;
-            obj.errors = self.createError(`date.${str2}`, null, exports, arg2);
+            tmp13 = fn;
+            obj.errors = self.createError(`date.${str2}`, null, exports, fn);
           } else {
             tmp5 = null;
             str = "date.strict";
             tmp6 = self;
             tmp7 = exports;
-            tmp8 = arg2;
-            obj.errors = self.createError("date.strict", null, exports, arg2);
+            tmp8 = fn;
+            obj.errors = self.createError("date.strict", null, exports, fn);
           }
           return;
         }
@@ -17453,8 +17230,8 @@ let fn = () => {
                   tmp15 = invalidDate;
                 }
               }
-              tmp5 = arg2;
-              if (arg2) {
+              tmp5 = fn;
+              if (fn) {
                 tmp6 = arg3;
                 if (arg3) {
                   _Date2 = Date;
@@ -17520,8 +17297,8 @@ let fn = () => {
       if (tmp) {
         prototype = tmp.prototype;
       }
-      obj = { value: _class, enumerable: false, writable: true, configurable: true };
-      _class.prototype = Object.create(prototype, { constructor: obj });
+      obj = { constructor: { value: _class, enumerable: false, writable: true, configurable: true } };
+      _class.prototype = Object.create(prototype, obj);
       if (tmp) {
         const _Object = Object;
         const _Object2 = Object;
@@ -17533,7 +17310,6 @@ let fn = () => {
             let tmp3 = ownPropertyNames[num];
             let _Object3 = Object;
             let ownPropertyDescriptor = Object.getOwnPropertyDescriptor(tmp, tmp3);
-            let tmp5 = num;
             let configurable = ownPropertyDescriptor;
             if (ownPropertyDescriptor) {
               configurable = ownPropertyDescriptor.configurable;
@@ -17551,52 +17327,50 @@ let fn = () => {
       obj.Date = _class;
       obj.compare = (arg0, arg1) => {
         closure_0 = arg0;
-        closure_1 = arg1;
-        return function(closure_0) {
-          let tmp = "now" === closure_0;
-          const isRefResult = tmp.isRef(closure_0);
+        return function(length) {
+          let tmp = "now" === length;
+          const isRefResult = tmp.isRef(length);
           closure_2 = isRefResult;
           if (!tmp) {
             tmp = isRefResult;
           }
-          let tmp3 = closure_0;
+          let tmp3 = length;
           if (!tmp) {
-            let _Date = closure_1_3.Date;
-            let toDateResult = _Date.toDate(closure_0);
-            closure_0 = toDateResult;
+            _Date = _Date.Date;
+            let toDateResult = _Date.toDate(length);
+            length = toDateResult;
             tmp3 = toDateResult;
           }
           closure_1_2.assert(tmp3, "Invalid date format");
-          return this._test(closure_0, tmp3, function(getTime, reference, convert) {
+          return this._test(length, tmp3, function(getTime, reference, concatSettingsResult) {
             const self = this;
-            if (callback) {
+            if (closure_1) {
               const _Date2 = Date;
               let timestamp = Date.now();
-            } else if (closure_2) {
-              const _Date = closure_2_3.Date;
+            } else if (isRefResult) {
+              _Date = obj.Date;
               let parent = reference.reference;
               if (!parent) {
                 parent = reference.parent;
               }
-              const toDateResult = _Date.toDate(time(parent, convert));
+              const toDateResult = _Date.toDate(length(parent, concatSettingsResult));
               if (toDateResult) {
                 timestamp = toDateResult.getTime();
               } else {
-                obj = { ref: null };
-                obj[0] = tmp5.key;
-                return self.createError("date.ref", obj, reference, convert);
+                obj = { ref: tmp5.key };
+                return self.createError("date.ref", obj, reference, concatSettingsResult);
               }
             } else {
-              timestamp = time.getTime();
+              timestamp = length.getTime();
             }
-            error = getTime;
-            if (!callback(getTime.getTime(), timestamp)) {
+            let error = getTime;
+            if (!closure_1(getTime.getTime(), timestamp)) {
               const text = `date.${closure_0}`;
               obj = { limit: null };
               const _Date3 = Date;
               const date = new Date(tmp12);
-              obj[0] = date;
-              error = self.createError(`date.${closure_0}`, obj, reference, convert);
+              obj.limit = date;
+              error = self.createError(`date.${closure_0}`, obj, reference, concatSettingsResult);
             }
             return error;
           });
@@ -17605,31 +17379,30 @@ let fn = () => {
       obj.Date.prototype.min = obj.compare("min", (arg0, arg1) => arg0 >= arg1);
       obj.Date.prototype.max = obj.compare("max", (arg0, arg1) => arg0 <= arg1);
       let date = new Date("");
-      let str = obj.isoDate;
       module.exports = new obj.Date();
     },
-    (arg0, arg1, arg2) => {
+    (arg0, arg1, fn) => {
       closure_0 = arg0;
-      closure_1 = arg2;
-      let fn = (_Buffer) => {
+      closure_1 = fn;
+      fn = (_Buffer) => {
         closure_0 = _Buffer;
         if (typeof Symbol === "function") {
           let _Symbol = Symbol;
           if (typeof Symbol.iterator === "symbol") {
-            let fn = (arg0) => typeof arg0;
+            fn = (arg0) => typeof arg0;
           }
-          let _class = fn;
-          closure_2 = _class(8);
-          closure_3 = _class(2);
-          closure_4 = _class(22);
-          let tmp2 = _class(14);
-          closure_5 = _class(15);
-          closure_6 = _class(20);
-          obj = _class(23);
-          obj1 = _class(25);
+          const _class = fn;
+          closure_2 = closure_1(8);
+          closure_3 = closure_1(2);
+          closure_4 = closure_1(22);
+          let tmp2 = closure_1(14);
+          closure_5 = closure_1(15);
+          closure_6 = closure_1(20);
+          closure_1(23);
+          let obj1 = closure_1(25);
           obj = { uriRegex: null, ipRegex: null };
-          obj[0] = obj.createUriRegex();
-          obj[1] = obj1.createIpRegex(["ipv4", "ipv6", "ipvfuture"], "optional");
+          obj.uriRegex = obj.createUriRegex();
+          obj.ipRegex = obj1.createIpRegex(["ipv4", "ipv6", "ipvfuture"], "optional");
           closure_0 = tmp2;
           class _class {
             constructor() {
@@ -17735,14 +17508,14 @@ let fn = () => {
               if (typeof substr !== "string") {
                 tmp10 = arg1;
                 obj = { value: null };
-                obj[0] = substr;
+                obj.value = substr;
                 str4 = "string.base";
                 tmp11 = self;
                 tmp12 = obj;
                 tmp13 = arg2;
                 error = self.createError("string.base", obj, arg1, arg2);
               }
-              obj[1] = error;
+              obj.errors = error;
               return obj;
             }
             insensitive() {
@@ -17751,15 +17524,15 @@ let fn = () => {
               return cloneResult;
             }
             creditCard() {
-              return this._test("creditCard", undefined, function(str, mergeResult, convert) {
+              return this._test("creditCard", undefined, function(value, mergeResult, concatSettingsResult) {
                 let tmp4;
                 let diff = tmp - 1;
                 let num = 1;
                 let num2 = 0;
                 let num3 = 0;
-                if (+str.length) {
+                if (+value.length) {
                   do {
-                    let result = str.charAt(diff) * num;
+                    let result = value.charAt(diff) * num;
                     num2 = num2 + (result - 9 * (result > 9));
                     num = num ^ 3;
                     tmp4 = +diff;
@@ -17769,12 +17542,11 @@ let fn = () => {
                 }
                 if (num3 % 10 !== 0) {
                   const self = this;
-                  obj = { value: null };
-                  obj[0] = str;
+                  obj = { value };
                   const self2 = this;
-                  error = this.createError("string.creditCard", obj, mergeResult, convert);
+                  let error = this.createError("string.creditCard", obj, mergeResult, concatSettingsResult);
                 } else {
-                  error = str;
+                  error = value;
                 }
                 return error;
               });
@@ -17787,15 +17559,15 @@ let fn = () => {
               }
               obj = { pattern: null };
               regExp = new RegExp(_Buffer.source, str);
-              obj[0] = regExp;
+              obj.pattern = regExp;
               closure_0 = obj;
               if (typeof arg1 === "string") {
                 obj.name = arg1;
               } else {
                 str2 = "undefined";
                 if (undefined !== arg1) {
-                  tmp3 = closure_1;
-                  str2 = closure_1(arg1);
+                  tmp3 = _class;
+                  str2 = _class(arg1);
                 }
                 str3 = "object";
                 if ("object" === str2) {
@@ -17817,44 +17589,42 @@ let fn = () => {
               }
               items[2] = str5;
               closure_1 = items.join("");
-              return this._test("regex", obj, function(arg0, mergeResult, convert) {
+              return this._test("regex", obj, function(value, mergeResult, concatSettingsResult) {
                 const pattern = obj.pattern;
-                error = arg0;
-                if (!(pattern.test(arg0) ^ obj.invert)) {
+                let error = value;
+                if (!(pattern.test(value) ^ obj.invert)) {
                   const self = this;
                   obj = { name: null, pattern: null, value: null };
-                  ({ name: obj[0], pattern: obj[1] } = obj);
-                  obj[2] = arg0;
+                  ({ name: obj.name, pattern: obj.pattern } = obj);
+                  obj.value = value;
                   const self2 = this;
-                  error = this.createError(closure_1, obj, mergeResult, convert);
+                  error = this.createError(closure_1, obj, mergeResult, concatSettingsResult);
                 }
                 return error;
               });
             }
             alphanum() {
-              return this._test("alphanum", undefined, function(arg0, mergeResult, convert) {
+              return this._test("alphanum", undefined, function(value, mergeResult, concatSettingsResult) {
                 obj = /^[a-zA-Z0-9]+$/;
-                error = arg0;
-                if (!obj.test(arg0)) {
+                let error = value;
+                if (!obj.test(value)) {
                   const self = this;
-                  obj = { value: null };
-                  obj[0] = arg0;
+                  obj = { value };
                   const self2 = this;
-                  error = this.createError("string.alphanum", obj, mergeResult, convert);
+                  error = this.createError("string.alphanum", obj, mergeResult, concatSettingsResult);
                 }
                 return error;
               });
             }
             token() {
-              return this._test("token", undefined, function(arg0, mergeResult, convert) {
+              return this._test("token", undefined, function(value, mergeResult, concatSettingsResult) {
                 obj = /^\w+$/;
-                error = arg0;
-                if (!obj.test(arg0)) {
+                let error = value;
+                if (!obj.test(value)) {
                   const self = this;
-                  obj = { value: null };
-                  obj[0] = arg0;
+                  obj = { value };
                   const self2 = this;
-                  error = this.createError("string.token", obj, mergeResult, convert);
+                  error = this.createError("string.token", obj, mergeResult, concatSettingsResult);
                 }
                 return error;
               });
@@ -17906,19 +17676,18 @@ let fn = () => {
                 str7 = "errorLevel must be a non-negative integer or boolean";
                 assertResult4 = obj.assert(tmp10, "errorLevel must be a non-negative integer or boolean");
               }
-              return this._test("email", _Buffer, function(arg0, mergeResult, convert) {
+              return this._test("email", _Buffer, function(value, mergeResult, concatSettingsResult) {
                 try {
-                  const validateResult = closure_1_4.validate(arg0, closure_0);
+                  const validateResult = closure_4.validate(value, closure_0);
                   if (true !== validateResult) {
                     if (0 !== tmp4) {
                       const self = this;
-                      obj = { value: null };
-                      obj[0] = arg0;
+                      obj = { value };
                       const self2 = this;
-                      return this.createError("string.email", obj, mergeResult, convert);
+                      return this.createError("string.email", obj, mergeResult, concatSettingsResult);
                     }
                   }
-                  return arg0;
+                  return value;
                 } catch (err) {
                 }
               });
@@ -17934,8 +17703,8 @@ let fn = () => {
               obj2 = closure_3;
               str = "undefined";
               if (undefined !== obj) {
-                tmp = closure_1;
-                str = closure_1(obj);
+                tmp = _class;
+                str = _class(obj);
               }
               assertResult = closure_3.assert("object" === str, "options must be an object");
               if (obj.cidr) {
@@ -18005,23 +17774,21 @@ let fn = () => {
                 tmp17 = closure_8;
                 closure_1 = closure_8.createIpRegex(uniqueResult, obj.cidr);
               }
-              return this._test("ip", obj, function(arg0, mergeResult, convert) {
-                if (regex.test(arg0)) {
-                  return arg0;
+              return this._test("ip", obj, function(value, mergeResult, concatSettingsResult) {
+                if (regex.test(value)) {
+                  return value;
                 } else {
                   const self = this;
                   const createError = this.createError;
                   if (items1) {
-                    obj = { value: null, cidr: null, version: null };
-                    obj[0] = arg0;
-                    obj[1] = obj.cidr;
-                    obj[2] = tmp3;
-                    error = createError("string.ipVersion", obj, mergeResult, convert);
+                    obj = { value, cidr: null, version: null };
+                    obj.cidr = obj.cidr;
+                    obj.version = tmp3;
+                    let error = createError("string.ipVersion", obj, mergeResult, concatSettingsResult);
                   } else {
-                    obj = { value: null, cidr: null };
-                    obj[0] = arg0;
-                    obj[1] = obj.cidr;
-                    error = createError("string.ip", obj, mergeResult, convert);
+                    obj = { value, cidr: null };
+                    obj.cidr = obj.cidr;
+                    error = createError("string.ip", obj, mergeResult, concatSettingsResult);
                   }
                 }
               });
@@ -18037,8 +17804,8 @@ let fn = () => {
                 obj = closure_3;
                 str2 = "undefined";
                 if (undefined !== _Buffer) {
-                  tmp = c1;
-                  str2 = c1(_Buffer);
+                  tmp = _class;
+                  str2 = _class(_Buffer);
                 }
                 str3 = "options must be an object";
                 str4 = "object";
@@ -18135,40 +17902,35 @@ let fn = () => {
                 tmp18 = closure_7;
                 closure_2 = closure_7.createUriRegex(str, flag2, flag);
               }
-              return this._test("uri", _Buffer, function(arg0, mergeResult, convert) {
-                if (regex.test(arg0)) {
-                  return arg0;
+              return this._test("uri", _Buffer, function(value, mergeResult, concatSettingsResult) {
+                if (regex.test(value)) {
+                  return value;
                 } else {
                   const self = this;
                   if (c1) {
-                    obj = { value: null };
-                    obj[0] = arg0;
-                    error = self.createError("string.uriRelativeOnly", obj, mergeResult, convert);
+                    obj = { value };
+                    let error = self.createError("string.uriRelativeOnly", obj, mergeResult, concatSettingsResult);
                   } else {
                     const createError = self.createError;
                     if (sum2) {
-                      obj = { scheme: null, value: null };
-                      obj[0] = tmp4;
-                      obj[1] = arg0;
-                      error = createError("string.uriCustomScheme", obj, mergeResult, convert);
+                      obj = { scheme: tmp4, value };
+                      error = createError("string.uriCustomScheme", obj, mergeResult, concatSettingsResult);
                     } else {
-                      obj = { value: null };
-                      obj[0] = arg0;
-                      error = createError("string.uri", obj, mergeResult, convert);
+                      obj = { value };
+                      error = createError("string.uri", obj, mergeResult, concatSettingsResult);
                     }
                   }
                 }
               });
             }
             isoDate() {
-              return this._test("isoDate", undefined, function(arg0, mergeResult, convert) {
-                error = arg0;
-                if (!closure_6._isIsoDate(arg0)) {
+              return this._test("isoDate", undefined, function(value, mergeResult, concatSettingsResult) {
+                let error = value;
+                if (!closure_1_6._isIsoDate(value)) {
                   const self = this;
-                  obj = { value: null };
-                  obj[0] = arg0;
+                  obj = { value };
                   const self2 = this;
-                  error = this.createError("string.isoDate", obj, mergeResult, convert);
+                  error = this.createError("string.isoDate", obj, mergeResult, concatSettingsResult);
                 }
                 return error;
               });
@@ -18188,10 +17950,10 @@ let fn = () => {
                     items1[0] = _Buffer.version;
                     _Buffer.version = items1;
                   }
-                  tmp2 = re3;
+                  tmp2 = closure_3;
                   num = 1;
                   str = "version must have at least 1 valid version specified";
-                  assertResult = re3.assert(_Buffer.version.length >= 1, "version must have at least 1 valid version specified");
+                  assertResult = closure_3.assert(_Buffer.version.length >= 1, "version must have at least 1 valid version specified");
                   num2 = 0;
                   str2 = "version at position ";
                   str3 = " must be a string";
@@ -18202,14 +17964,14 @@ let fn = () => {
                   if (0 < _Buffer.version.length) {
                     do {
                       str7 = _Buffer.version[num2];
-                      tmp4 = re3;
+                      tmp4 = closure_3;
                       text = `version at position ${num2}`;
-                      assertResult1 = re3.assert(typeof str7 === "string", `version at position ${num2}` + " must be a string");
+                      assertResult1 = closure_3.assert(typeof str7 === "string", `version at position ${num2}` + " must be a string");
                       formatted = str7.toLowerCase();
                       _Object = Object;
                       keys = Object.keys(obj);
-                      assertResult2 = re3.assert(obj[formatted], `version at position ${num2}` + " must be one of " + keys.join(", "));
-                      assertResult3 = re3.assert(-1 === items.indexOf(formatted), `version at position ${num2}` + " must not be a duplicate.");
+                      assertResult2 = closure_3.assert(obj[formatted], `version at position ${num2}` + " must be one of " + keys.join(", "));
+                      assertResult3 = closure_3.assert(-1 === items.indexOf(formatted), `version at position ${num2}` + " must not be a duplicate.");
                       arr = items.push(formatted);
                       num2 = num2 + 1;
                       length = _Buffer.version.length;
@@ -18218,53 +17980,48 @@ let fn = () => {
                 }
               }
               re3 = /^([\[{\(]?)([0-9A-F]{8})([:-]?)([0-9A-F]{4})([:-]?)([0-9A-F]{4})([:-]?)([0-9A-F]{4})([:-]?)([0-9A-F]{12})([\]}\)]?)$/i;
-              return this._test("guid", _Buffer, function(arg0, mergeResult, convert) {
+              return this._test("guid", _Buffer, function(value, mergeResult, concatSettingsResult) {
                 const self = this;
-                const match = regex.exec(arg0);
+                const match = regex.exec(value);
                 if (match) {
                   if (match[match[1]] !== match[11]) {
-                    obj = { value: null };
-                    obj[0] = arg0;
-                    return self.createError("string.guid", obj, mergeResult, convert);
+                    obj = { value };
+                    return self.createError("string.guid", obj, mergeResult, concatSettingsResult);
                   } else {
                     if (match[3] === match[5]) {
                       if (match[3] === match[7]) {
                         if (match[3] === match[9]) {
                           obj1 = items;
                           if (items.length) {
-                            if (obj1.some((arg0) => match[6][0] === closure_1_1[arg0])) {
+                            if (obj1.some((item) => match[6][0] === obj[item])) {
                               const obj3 = /[89AB]/i;
                             }
-                            obj = { value: null };
-                            obj[0] = arg0;
-                            return self.createError("string.guid", obj, mergeResult, convert);
+                            obj = { value };
+                            return self.createError("string.guid", obj, mergeResult, concatSettingsResult);
                           }
-                          return arg0;
+                          return value;
                         }
                       }
                     }
-                    obj1 = { value: null };
-                    obj1[0] = arg0;
-                    return self.createError("string.guid", obj1, mergeResult, convert);
+                    obj1 = { value };
+                    return self.createError("string.guid", obj1, mergeResult, concatSettingsResult);
                   }
                 } else {
-                  obj = { value: null };
-                  obj[0] = arg0;
-                  return self.createError("string.guid", obj, mergeResult, convert);
+                  obj = { value };
+                  return self.createError("string.guid", obj, mergeResult, concatSettingsResult);
                 }
               });
             }
             hex() {
               tmp = /^[a-f0-9]+$/i;
               re0 = tmp;
-              return this._test("hex", tmp, function(arg0, mergeResult, convert) {
-                error = arg0;
-                if (!regex.test(arg0)) {
+              return this._test("hex", tmp, function(value, mergeResult, concatSettingsResult) {
+                let error = value;
+                if (!re0.test(value)) {
                   const self = this;
-                  obj = { value: null };
-                  obj[0] = arg0;
+                  obj = { value };
                   const self2 = this;
-                  error = this.createError("string.hex", obj, mergeResult, convert);
+                  error = this.createError("string.hex", obj, mergeResult, concatSettingsResult);
                 }
                 return error;
               });
@@ -18272,45 +18029,42 @@ let fn = () => {
             base64() {
               tmp = /^(?:[A-Za-z0-9+\/]{4})*(?:[A-Za-z0-9+\/]{2}==|[A-Za-z0-9+\/]{3}=)?$/;
               re0 = tmp;
-              return this._test("base64", tmp, function(arg0, mergeResult, convert) {
-                error = arg0;
-                if (!regex.test(arg0)) {
+              return this._test("base64", tmp, function(value, mergeResult, concatSettingsResult) {
+                let error = value;
+                if (!re0.test(value)) {
                   const self = this;
-                  obj = { value: null };
-                  obj[0] = arg0;
+                  obj = { value };
                   const self2 = this;
-                  error = this.createError("string.base64", obj, mergeResult, convert);
+                  error = this.createError("string.base64", obj, mergeResult, concatSettingsResult);
                 }
                 return error;
               });
             }
             hostname() {
               re0 = /^(([a-zA-Z0-9]|[a-zA-Z0-9][a-zA-Z0-9\-]*[a-zA-Z0-9])\.)*([A-Za-z0-9]|[A-Za-z0-9][A-Za-z0-9\-]*[A-Za-z0-9])$/;
-              return this._test("hostname", undefined, function(arg0, mergeResult, convert) {
-                if (arg0.length > 255) {
-                  error = arg0;
-                  if (!closure_1_2.isIPv6(arg0)) {
+              return this._test("hostname", undefined, function(value, mergeResult, concatSettingsResult) {
+                if (value.length > 255) {
+                  let error = value;
+                  if (!iPv6.isIPv6(value)) {
                     const self = this;
-                    obj = { value: null };
-                    obj[0] = arg0;
+                    obj = { value };
                     const self2 = this;
-                    error = this.createError("string.hostname", obj, mergeResult, convert);
+                    error = this.createError("string.hostname", obj, mergeResult, concatSettingsResult);
                   }
                 } else {
-                  error = arg0;
+                  error = value;
                 }
                 return error;
               });
             }
             lowercase() {
               _testResult = this._test("lowercase", undefined, function(toLocaleLowerCase, mergeResult, convert) {
-                error = toLocaleLowerCase;
+                let error = toLocaleLowerCase;
                 if (!convert.convert) {
                   error = toLocaleLowerCase;
                   if (toLocaleLowerCase !== toLocaleLowerCase.toLocaleLowerCase()) {
                     const self = this;
-                    obj = { value: null };
-                    obj[0] = toLocaleLowerCase;
+                    obj = { value: toLocaleLowerCase };
                     const self2 = this;
                     error = this.createError("string.lowercase", obj, mergeResult, convert);
                   }
@@ -18322,13 +18076,12 @@ let fn = () => {
             }
             uppercase() {
               _testResult = this._test("uppercase", undefined, function(toLocaleUpperCase, mergeResult, convert) {
-                error = toLocaleUpperCase;
+                let error = toLocaleUpperCase;
                 if (!convert.convert) {
                   error = toLocaleUpperCase;
                   if (toLocaleUpperCase !== toLocaleUpperCase.toLocaleUpperCase()) {
                     const self = this;
-                    obj = { value: null };
-                    obj[0] = toLocaleUpperCase;
+                    obj = { value: toLocaleUpperCase };
                     const self2 = this;
                     error = this.createError("string.uppercase", obj, mergeResult, convert);
                   }
@@ -18339,14 +18092,13 @@ let fn = () => {
               return _testResult;
             }
             trim() {
-              _testResult = this._test("trim", undefined, function(str, mergeResult, convert) {
-                error = str;
+              _testResult = this._test("trim", undefined, function(value, mergeResult, convert) {
+                let error = value;
                 if (!convert.convert) {
-                  error = str;
-                  if (str !== str.trim()) {
+                  error = value;
+                  if (value !== value.trim()) {
                     const self = this;
-                    obj = { value: null };
-                    obj[0] = str;
+                    obj = { value };
                     const self2 = this;
                     error = this.createError("string.trim", obj, mergeResult, convert);
                   }
@@ -18400,9 +18152,8 @@ let fn = () => {
             prototype = tmp2.prototype;
           }
           obj = { constructor: null };
-          obj1 = { value: null, enumerable: false, writable: true, configurable: true };
-          obj1[0] = _class;
-          obj[0] = obj1;
+          obj1 = { value: _class, enumerable: false, writable: true, configurable: true };
+          obj.constructor = obj1;
           _class.prototype = Object.create(prototype, obj);
           if (tmp2) {
             let _Object = Object;
@@ -18415,7 +18166,6 @@ let fn = () => {
                 let tmp3 = ownPropertyNames[num9];
                 let _Object3 = Object;
                 let ownPropertyDescriptor = Object.getOwnPropertyDescriptor(tmp2, tmp3);
-                let tmp5 = num9;
                 let configurable = ownPropertyDescriptor;
                 if (ownPropertyDescriptor) {
                   configurable = ownPropertyDescriptor.configurable;
@@ -18432,27 +18182,26 @@ let fn = () => {
           }
           obj.String = _class;
           obj.compare = (arg0, arg1) => {
-            closure_0 = arg0;
+            let encoding = arg0;
             closure_1 = arg1;
-            return function(closure_0) {
-              const encoding = closure_0;
-              closure_1 = arg1;
-              const isRefResult = closure_1_5.isRef(closure_0);
+            return function(length, encoding) {
+              encoding = length;
+              const isRefResult = ref.isRef(length);
               closure_2 = isRefResult;
-              let isIntegerResult = closure_1_3.isInteger(closure_0);
+              let isIntegerResult = closure_1_3.isInteger(length);
               if (isIntegerResult) {
-                isIntegerResult = closure_0 >= 0;
+                isIntegerResult = length >= 0;
               }
               if (!isIntegerResult) {
                 isIntegerResult = isRefResult;
               }
               closure_1_3.assert(isIntegerResult, "limit must be a positive integer or reference");
-              let isEncodingResult = !arg1;
-              if (arg1) {
-                isEncodingResult = encoding.isEncoding(arg1);
+              let isEncodingResult = !encoding;
+              if (encoding) {
+                isEncodingResult = encoding.isEncoding(encoding);
               }
-              closure_1_3.assert(isEncodingResult, "Invalid encoding:", arg1);
-              return this._test(encoding, closure_0, () => { ... });
+              closure_1_3.assert(isEncodingResult, "Invalid encoding:", encoding);
+              return this._test(encoding, length, () => { ... });
             };
           };
           obj.String.prototype.min = obj.compare("min", (arg0, arg1, arg2) => {
@@ -18499,36 +18248,35 @@ let fn = () => {
         };
       };
       let call = fn.call;
-      const _Buffer = arg2(3).Buffer;
+      const _Buffer = fn(3).Buffer;
       if (typeof call === "unknown") {
         fn(_Buffer);
       } else {
         call(arg1, _Buffer);
       }
     },
-    (arg0, arg1, arg2) => {
+    (arg0, arg1, fn) => {
       closure_0 = arg1;
-      closure_1 = arg2;
-      let fn = (nextTick) => {
+      closure_1 = fn;
+      fn = (nextTick) => {
         if (typeof Symbol === "function") {
           let _Symbol = Symbol;
           if (typeof Symbol.iterator === "symbol") {
-            let fn = (arg0) => typeof arg0;
+            fn = (arg0) => typeof arg0;
           }
           let array = fn;
-          callback = callback(8);
+          closure_1 = closure_1(8);
           obj = { hasOwn: null, indexOf: null, defaultThreshold: 16, maxIPv6Groups: 8, categories: null, diagnoses: null, components: null };
           const _Object = Object;
-          obj[0] = Object.prototype.hasOwnProperty;
+          obj.hasOwn = Object.prototype.hasOwnProperty;
           const _Array = Array;
-          obj[1] = Array.prototype.indexOf;
-          obj[4] = { valid: 1, dnsWarn: 7, rfc5321: 15, cfws: 31, deprecated: 63, rfc5322: 127, error: 255 };
-          obj[5] = { valid: 0, dnsWarnNoMXRecord: 5, dnsWarnNoRecord: 6, rfc5321TLD: 9, rfc5321TLDNumeric: 10, rfc5321QuotedString: 11, rfc5321AddressLiteral: 12, cfwsComment: 17, cfwsFWS: 18, deprecatedLocalPart: 33, deprecatedFWS: 34, deprecatedQTEXT: 35, deprecatedQP: 36, deprecatedComment: 37, deprecatedCTEXT: 38, deprecatedIPv6: 39, deprecatedCFWSNearAt: 49, rfc5322Domain: 65, rfc5322TooLong: 66, rfc5322LocalTooLong: 67, rfc5322DomainTooLong: 68, rfc5322LabelTooLong: 69, rfc5322DomainLiteral: 70, rfc5322DomainLiteralOBSDText: 71, rfc5322IPv6GroupCount: 72, rfc5322IPv62x2xColon: 73, rfc5322IPv6BadCharacter: 74, rfc5322IPv6MaxGroups: 75, rfc5322IPv6ColonStart: 76, rfc5322IPv6ColonEnd: 77, errExpectingDTEXT: 129, errNoLocalPart: 130, errNoDomain: 131, errConsecutiveDots: 132, errATEXTAfterCFWS: 133, errATEXTAfterQS: 134, errATEXTAfterDomainLiteral: 135, errExpectingQPair: 136, errExpectingATEXT: 137, errExpectingQTEXT: 138, errExpectingCTEXT: 139, errBackslashEnd: 140, errDotStart: 141, errDotEnd: 142, errDomainHyphenStart: 143, errDomainHyphenEnd: 144, errUnclosedQuotedString: 145, errUnclosedComment: 146, errUnclosedDomainLiteral: 147, errFWSCRLFx2: 148, errFWSCRLFEnd: 149, errCRNoLF: 150, errUnknownTLD: 160, errDomainTooShort: 161 };
-          obj[6] = { localpart: 0, domain: 1, literal: 2, contextComment: 3, contextFWS: 4, contextQuotedString: 5, contextQuotedPair: 6 };
+          obj.indexOf = Array.prototype.indexOf;
+          obj.categories = { valid: 1, dnsWarn: 7, rfc5321: 15, cfws: 31, deprecated: 63, rfc5322: 127, error: 255 };
+          obj.diagnoses = { valid: 0, dnsWarnNoMXRecord: 5, dnsWarnNoRecord: 6, rfc5321TLD: 9, rfc5321TLDNumeric: 10, rfc5321QuotedString: 11, rfc5321AddressLiteral: 12, cfwsComment: 17, cfwsFWS: 18, deprecatedLocalPart: 33, deprecatedFWS: 34, deprecatedQTEXT: 35, deprecatedQP: 36, deprecatedComment: 37, deprecatedCTEXT: 38, deprecatedIPv6: 39, deprecatedCFWSNearAt: 49, rfc5322Domain: 65, rfc5322TooLong: 66, rfc5322LocalTooLong: 67, rfc5322DomainTooLong: 68, rfc5322LabelTooLong: 69, rfc5322DomainLiteral: 70, rfc5322DomainLiteralOBSDText: 71, rfc5322IPv6GroupCount: 72, rfc5322IPv62x2xColon: 73, rfc5322IPv6BadCharacter: 74, rfc5322IPv6MaxGroups: 75, rfc5322IPv6ColonStart: 76, rfc5322IPv6ColonEnd: 77, errExpectingDTEXT: 129, errNoLocalPart: 130, errNoDomain: 131, errConsecutiveDots: 132, errATEXTAfterCFWS: 133, errATEXTAfterQS: 134, errATEXTAfterDomainLiteral: 135, errExpectingQPair: 136, errExpectingATEXT: 137, errExpectingQTEXT: 138, errExpectingCTEXT: 139, errBackslashEnd: 140, errDotStart: 141, errDotEnd: 142, errDomainHyphenStart: 143, errDomainHyphenEnd: 144, errUnclosedQuotedString: 145, errUnclosedComment: 146, errUnclosedDomainLiteral: 147, errFWSCRLFx2: 148, errFWSCRLFEnd: 149, errCRNoLF: 150, errUnknownTLD: 160, errDomainTooShort: 161 };
+          obj.components = { localpart: 0, domain: 1, literal: 2, contextComment: 3, contextFWS: 4, contextQuotedString: 5, contextQuotedPair: 6 };
           if (undefined !== nextTick) {
             if (nextTick) {
               obj.defer = fn2;
-              array = undefined;
               const _Array2 = Array;
               array = new Array(256);
             }
@@ -18553,16 +18301,16 @@ let fn = () => {
         };
       };
       const call = fn.call;
-      const tmp = arg2(7);
+      const tmp = fn(7);
       if (typeof call === "unknown") {
         fn(tmp);
       } else {
         call(arg1, tmp);
       }
     },
-    (arg0, arg1, arg2) => {
-      closure_0 = arg2(24);
-      module.exports = {
+    (arg0, arg1, fn) => {
+      let scheme = fn(24);
+      const exports = {
         createUriRegex(arg0, flag2, flag) {
           scheme = scheme.scheme;
           if (flag) {
@@ -18582,6 +18330,7 @@ let fn = () => {
           return regExp;
         }
       };
+      module.exports = exports;
     },
     (arg0, arg1) => {
       obj = {
@@ -18603,24 +18352,23 @@ let fn = () => {
       obj.generate();
       arg0.exports = obj.rfc3986;
     },
-    (arg0, arg1, arg2) => {
-      const tmp = arg2(24);
-      obj = { Ip: { cidrs: obj, versions: obj } };
-      obj = { required: `\\/(?:${tmp.cidr})`, optional: `(?:\\/(?:${tmp.cidr}))?`, forbidden: "" };
-      obj = { ipv4: tmp.IPv4address, ipv6: tmp.IPv6address, ipvfuture: tmp.IPvFuture };
-      obj.Ip.createIpRegex = (arg0, arg1) => {
+    (arg0, arg1, fn) => {
+      const tmp = fn(24);
+      let Ip = { Ip: null };
+      Ip = { cidrs: null, versions: { ipv4: tmp.IPv4address, ipv6: tmp.IPv6address, ipvfuture: tmp.IPvFuture } };
+      Ip = { required: `\\/(?:${tmp.cidr})`, optional: `(?:\\/(?:${tmp.cidr}))?`, forbidden: "" };
+      Ip.cidrs = Ip;
+      Ip.Ip = Ip;
+      Ip.Ip.createIpRegex = (arg0, arg1) => {
         let num = 0;
         let tmp2;
         if (0 < arg0.length) {
           do {
             let tmp3 = arg0[num];
-            let tmp4 = num;
             let text = text1;
             if (!text1) {
-              let tmp6 = obj;
               text = `^(?:${obj.Ip.versions[tmp3]}`;
             }
-            let tmp7 = obj;
             text1 = `${tmp5}|${obj.Ip.versions[tmp3]}`;
             num = num + 1;
             tmp2 = text1;
@@ -18629,14 +18377,14 @@ let fn = () => {
         const regExp = new RegExp(tmp2 + ")" + obj.Ip.cidrs[arg1] + "$");
         return regExp;
       };
-      module.exports = obj.Ip;
+      module.exports = Ip.Ip;
     },
-    (arg0, arg1, arg2) => {
-      const tmp = arg2(14);
-      closure_0 = arg2(15);
-      let _class = arg2(2);
+    (arg0, arg1, fn) => {
+      const tmp = fn(14);
+      fn(15);
+      let _class = fn(2);
       obj = { precisionRx: /(?:\.(\d+))?(?:[eE]([+-]?\d+))?$/ };
-      closure_0 = tmp;
+      items = tmp;
       class _class {
         constructor() {
           self = this;
@@ -18686,7 +18434,7 @@ let fn = () => {
         _base(arg0, arg1, arg2) {
           obj = { errors: null, value: module };
           if (typeof module === "string") {
-            if (arg2.convert) {
+            if (fn.convert) {
               tmp = globalThis;
               _parseFloat = parseFloat;
               parsed = parseFloat(module);
@@ -18711,7 +18459,7 @@ let fn = () => {
             tmp3 = !isNaN(obj.value);
           }
           self = this;
-          if (arg2.convert) {
+          if (fn.convert) {
             str = "precision";
             if ("precision" in self._flags) {
               if (tmp3) {
@@ -18730,8 +18478,8 @@ let fn = () => {
             str2 = "number.base";
             tmp8 = self;
             tmp9 = null;
-            tmp10 = arg2;
-            error = self.createError("number.base", null, exports, arg2);
+            tmp10 = fn;
+            error = self.createError("number.base", null, exports, fn);
           }
           obj.errors = error;
           return obj;
@@ -18741,7 +18489,7 @@ let fn = () => {
           isRefResult = closure_0.isRef(module);
           closure_1 = isRefResult;
           if (!isRefResult) {
-            obj = closure_1;
+            obj = _class;
             isFiniteResult = typeof module === "number";
             if (typeof module === "number") {
               tmp5 = globalThis;
@@ -18749,14 +18497,14 @@ let fn = () => {
               isFiniteResult = isFinite(module);
             }
             str = "multiple must be a number";
-            assertResult = closure_1.assert(isFiniteResult, "multiple must be a number");
+            assertResult = _class.assert(isFiniteResult, "multiple must be a number");
             num = 0;
             str2 = "multiple must be greater than 0";
             assertResult1 = obj.assert(module > 0, "multiple must be greater than 0");
           }
-          return this._test("multiple", module, function(arg0, reference, convert) {
-            if (closure_1) {
-              let tmp2Result = tmp2(reference.reference || reference.parent, convert);
+          return this._test("multiple", module, function(value, reference, concatSettingsResult) {
+            if (isRefResult) {
+              let tmp2Result = tmp2(reference.reference || reference.parent, concatSettingsResult);
               let tmp3 = tmp2;
               const tmp5 = reference.reference || reference.parent;
             } else {
@@ -18764,61 +18512,55 @@ let fn = () => {
               tmp2Result = tmp2;
             }
             const self = this;
-            if (!closure_1) {
-              error = arg0;
-              if (arg0 % tmp2Result != 0) {
-                obj = { multiple: null, value: null };
-                obj[0] = tmp3;
-                obj[1] = arg0;
-                error = self.createError("number.multiple", obj, reference, convert);
+            if (!isRefResult) {
+              let error = value;
+              if (value % tmp2Result != 0) {
+                obj = { multiple: tmp3, value };
+                error = self.createError("number.multiple", obj, reference, concatSettingsResult);
               }
               let error1 = error;
             } else {
               if (typeof tmp2Result === "number") {
                 const _isFinite = isFinite;
               }
-              obj = { ref: null };
-              obj[0] = tmp3.key;
-              error1 = self.createError("number.ref", obj, reference, convert);
+              obj = { ref: tmp3.key };
+              error1 = self.createError("number.ref", obj, reference, concatSettingsResult);
             }
             return error1;
           });
         }
         integer() {
-          return this._test("integer", undefined, function(arg0, mergeResult, convert) {
-            error = arg0;
-            if (!integer.isInteger(arg0)) {
+          return this._test("integer", undefined, function(value, mergeResult, concatSettingsResult) {
+            let error = value;
+            if (!integer.isInteger(value)) {
               const self = this;
-              obj = { value: null };
-              obj[0] = arg0;
+              obj = { value };
               const self2 = this;
-              error = this.createError("number.integer", obj, mergeResult, convert);
+              error = this.createError("number.integer", obj, mergeResult, concatSettingsResult);
             }
             return error;
           });
         }
         negative() {
-          return this._test("negative", undefined, function(arg0, mergeResult, convert) {
-            error = arg0;
-            if (arg0 >= 0) {
+          return this._test("negative", undefined, function(value, mergeResult, concatSettingsResult) {
+            let error = value;
+            if (value >= 0) {
               const self = this;
-              obj = { value: null };
-              obj[0] = arg0;
+              obj = { value };
               const self2 = this;
-              error = this.createError("number.negative", obj, mergeResult, convert);
+              error = this.createError("number.negative", obj, mergeResult, concatSettingsResult);
             }
             return error;
           });
         }
         positive() {
-          return this._test("positive", undefined, function(arg0, mergeResult, convert) {
-            error = arg0;
-            if (arg0 <= 0) {
+          return this._test("positive", undefined, function(value, mergeResult, concatSettingsResult) {
+            let error = value;
+            if (value <= 0) {
               const self = this;
-              obj = { value: null };
-              obj[0] = arg0;
+              obj = { value };
               const self2 = this;
-              error = this.createError("number.positive", obj, mergeResult, convert);
+              error = this.createError("number.positive", obj, mergeResult, concatSettingsResult);
             }
             return error;
           });
@@ -18827,8 +18569,8 @@ let fn = () => {
           closure_0 = module;
           assertResult = _class.assert(_class.isInteger(module), "limit must be an integer");
           assertResult1 = _class.assert(!("precision" in this._flags), "precision already set");
-          _testResult = this._test("precision", module, function(arg0, mergeResult, convert) {
-            const match = arg0.toString().match(closure_1_2.precisionRx);
+          _testResult = this._test("precision", module, function(value, mergeResult, concatSettingsResult) {
+            const match = value.toString().match(obj.precisionRx);
             let num = 0;
             if (match[1]) {
               num = match[1].length;
@@ -18838,14 +18580,12 @@ let fn = () => {
               const _parseInt = parseInt;
               num2 = parseInt(match[2], 10);
             }
-            error = arg0;
+            let error = value;
             if (Math.max(num - num2, 0) > closure_0) {
               const self = this;
-              obj = { limit: null, value: null };
-              obj[0] = tmp2;
-              obj[1] = arg0;
+              obj = { limit: tmp2, value };
               const self2 = this;
-              error = this.createError("number.precision", obj, mergeResult, convert);
+              error = this.createError("number.precision", obj, mergeResult, concatSettingsResult);
             }
             return error;
           });
@@ -18864,8 +18604,8 @@ let fn = () => {
       if (tmp) {
         prototype = tmp.prototype;
       }
-      obj = { value: _class, enumerable: false, writable: true, configurable: true };
-      _class.prototype = Object.create(prototype, { constructor: obj });
+      obj = { constructor: { value: _class, enumerable: false, writable: true, configurable: true } };
+      _class.prototype = Object.create(prototype, obj);
       if (tmp) {
         const _Object = Object;
         const _Object2 = Object;
@@ -18877,7 +18617,6 @@ let fn = () => {
             let tmp2 = ownPropertyNames[num];
             let _Object3 = Object;
             let ownPropertyDescriptor = Object.getOwnPropertyDescriptor(tmp, tmp2);
-            let tmp4 = num;
             let configurable = ownPropertyDescriptor;
             if (ownPropertyDescriptor) {
               configurable = ownPropertyDescriptor.configurable;
@@ -18894,40 +18633,35 @@ let fn = () => {
       }
       obj.Number = _class;
       obj.compare = (arg0, arg1) => {
-        closure_0 = arg0;
         closure_1 = arg1;
-        return function(closure_0) {
-          const isRefResult = closure_0.isRef(closure_0);
-          closure_1 = isRefResult;
-          let tmp2 = typeof closure_0 === "number";
-          if (typeof closure_0 === "number") {
+        return function(length) {
+          const isRefResult = ref.isRef(length);
+          let tmp2 = typeof length === "number";
+          if (typeof length === "number") {
             let _isNaN = isNaN;
-            tmp2 = !isNaN(closure_0);
+            tmp2 = !isNaN(length);
           }
           if (!tmp2) {
             tmp2 = isRefResult;
           }
-          closure_1.assert(tmp2, "limit must be a number or reference");
-          return this._test(closure_0, closure_0, function(arg0, reference, convert) {
+          isRefResult.assert(tmp2, "limit must be a number or reference");
+          return this._test(length, length, function(value, reference, concatSettingsResult) {
             const self = this;
-            if (closure_1) {
-              const tmpResult = tmp(reference.reference || reference.parent, convert);
+            if (isRefResult) {
+              const tmpResult = tmp(reference.reference || reference.parent, concatSettingsResult);
               if (typeof tmpResult === "number") {
                 const _isNaN = isNaN;
                 let tmp2 = tmpResult;
               }
-              obj = { ref: null };
-              obj[0] = tmp.key;
-              return self.createError("number.ref", obj, reference, convert);
+              obj = { ref: tmp.key };
+              return self.createError("number.ref", obj, reference, concatSettingsResult);
             } else {
               tmp2 = tmp;
             }
-            error = arg0;
-            if (!isRefResult(arg0, tmp2)) {
-              obj = { limit: null, value: null };
-              obj[0] = tmp2;
-              obj[1] = arg0;
-              error = self.createError(`number.${closure_0}`, obj, reference, convert);
+            let error = value;
+            if (!isRefResult(value, tmp2)) {
+              obj = { limit: tmp2, value };
+              error = self.createError(`number.${closure_0}`, obj, reference, concatSettingsResult);
             }
             return error;
           });
@@ -18940,12 +18674,11 @@ let fn = () => {
       const number = new obj.Number();
       module.exports = number;
     },
-    (arg0, arg1, arg2) => {
-      let tmp = arg2(14);
-      closure_0 = tmp;
-      const _class = arg2(2);
-      obj = { Set: arg2(18) };
-      closure_0 = tmp;
+    (arg0, arg1, fn) => {
+      let tmp = fn(14);
+      const _class = fn(2);
+      obj = { Set: fn(18) };
+      items = tmp;
       class _class {
         constructor() {
           self = this;
@@ -18966,15 +18699,15 @@ let fn = () => {
               tmp13._type = "boolean";
               flag = true;
               tmp13._flags.insensitive = true;
-              tmp14 = closure_2;
+              tmp14 = __webpack_require__;
               tmp15 = new.target;
               tmp16 = new.target;
-              set = new closure_2.Set();
+              set = new __webpack_require__.Set();
               tmp18 = set;
               tmp13._inner.truthySet = set;
               tmp19 = new.target;
               tmp20 = new.target;
-              set1 = new closure_2.Set();
+              set1 = new __webpack_require__.Set();
               tmp22 = set1;
               tmp13._inner.falsySet = set1;
               return tmp13;
@@ -19021,11 +18754,11 @@ let fn = () => {
           error = null;
           if (typeof obj.value !== "boolean") {
             tmp9 = exports;
-            tmp10 = arg2;
+            tmp10 = fn;
             str = "boolean.base";
             tmp11 = self;
             tmp12 = null;
-            error = self.createError("boolean.base", null, exports, arg2);
+            error = self.createError("boolean.base", null, exports, fn);
           }
           obj.errors = error;
           return obj;
@@ -19124,8 +18857,8 @@ let fn = () => {
       if (tmp) {
         prototype = tmp.prototype;
       }
-      obj = { value: _class, enumerable: false, writable: true, configurable: true };
-      _class.prototype = Object.create(prototype, { constructor: obj });
+      obj = { constructor: { value: _class, enumerable: false, writable: true, configurable: true } };
+      _class.prototype = Object.create(prototype, obj);
       if (tmp) {
         const _Object = Object;
         const _Object2 = Object;
@@ -19137,7 +18870,6 @@ let fn = () => {
             let tmp2 = ownPropertyNames[num];
             let _Object3 = Object;
             let ownPropertyDescriptor = Object.getOwnPropertyDescriptor(tmp, tmp2);
-            let tmp4 = num;
             let configurable = ownPropertyDescriptor;
             if (ownPropertyDescriptor) {
               configurable = ownPropertyDescriptor.configurable;
@@ -19156,19 +18888,18 @@ let fn = () => {
       const boolean = new obj.Boolean();
       module.exports = boolean;
     },
-    (arg0, arg1, arg2) => {
+    (arg0, arg1, fn) => {
       if (typeof Symbol === "function") {
         let _Symbol = Symbol;
         if (typeof Symbol.iterator === "symbol") {
-          let fn = (arg0) => typeof arg0;
+          fn = (arg0) => typeof arg0;
         }
-        closure_0 = fn;
-        const _class = arg2(2);
-        let tmp2 = arg2(14);
+        const _class = fn(2);
+        let tmp2 = fn(14);
         closure_2 = tmp2;
-        closure_3 = arg2(19);
-        closure_4 = arg2(15);
-        closure_0 = tmp2;
+        closure_3 = fn(19);
+        fn(15);
+        items = tmp2;
         class _class {
           constructor() {
             self = this;
@@ -19227,7 +18958,7 @@ let fn = () => {
                 tmp = num;
                 tmp2 = items;
                 if (schema) {
-                  _validateResult = schema._validate(module, exports, arg2);
+                  _validateResult = schema._validate(module, exports, fn);
                   if (_validateResult.errors) {
                     combined = items.concat(_validateResult.errors);
                   } else {
@@ -19241,17 +18972,17 @@ let fn = () => {
                   }
                   tmp3 = is;
                   tmp4 = null;
-                  tmp5 = arg2;
-                  if (is._validate(promise.ref(parent, arg2), null, arg2, exports.parent).errors) {
+                  tmp5 = fn;
+                  if (is._validate(promise.ref(parent, fn), null, fn, exports.parent).errors) {
                     if (promise.otherwise) {
                       otherwise = promise.otherwise;
-                      return otherwise._validate(module, exports, arg2);
+                      return otherwise._validate(module, exports, fn);
                     } else {
                       combined = items;
                       if (obj) {
                         combined = items;
                         if (num === length - 1) {
-                          return obj._validate(module, exports, arg2);
+                          return obj._validate(module, exports, fn);
                         }
                       }
                     }
@@ -19269,15 +19000,15 @@ let fn = () => {
                 error = combined;
               }
               obj2 = promise.then || obj;
-              return obj2._validate(module, exports, arg2);
+              return obj2._validate(module, exports, fn);
             }
             if (!error.length) {
               str = "alternatives.base";
               tmp8 = self;
               tmp9 = null;
               tmp10 = exports;
-              tmp11 = arg2;
-              error = self.createError("alternatives.base", null, exports, arg2);
+              tmp11 = fn;
+              error = self.createError("alternatives.base", null, exports, fn);
             }
             return { errors: error };
           }
@@ -19306,7 +19037,7 @@ let fn = () => {
               }
               matches = cloneResult._inner.matches;
               obj = { schema: null };
-              obj[0] = schemaResult;
+              obj.schema = schemaResult;
               arr = matches.push(obj);
             }
             return cloneResult;
@@ -19350,12 +19081,12 @@ let fn = () => {
             if (undefined !== exports.then) {
               schemaResult1 = obj2.schema(exports.then);
             }
-            obj[2] = schemaResult1;
+            obj.then = schemaResult1;
             schemaResult2 = undefined;
             if (undefined !== exports.otherwise) {
               schemaResult2 = obj2.schema(exports.otherwise);
             }
-            obj[3] = schemaResult2;
+            obj.otherwise = schemaResult2;
             tmp16 = cloneResult._settings && cloneResult._settings.baseType;
             if (tmp16) {
               then = obj.then;
@@ -19403,9 +19134,9 @@ let fn = () => {
               } else {
                 obj = { ref: null, is: null };
                 str = promise.ref;
-                obj[0] = str.toString();
+                obj.ref = str.toString();
                 is = promise.is;
-                obj[1] = is.describe();
+                obj.is = is.describe();
                 if (promise.then) {
                   then = promise.then;
                   obj.then = then.describe();
@@ -19433,9 +19164,8 @@ let fn = () => {
           prototype = tmp2.prototype;
         }
         obj = { constructor: null };
-        obj = { value: null, enumerable: false, writable: true, configurable: true };
-        obj[0] = _class;
-        obj[0] = obj;
+        obj = { value: _class, enumerable: false, writable: true, configurable: true };
+        obj.constructor = obj;
         _class.prototype = Object.create(prototype, obj);
         if (tmp2) {
           const _Object = Object;
@@ -19448,7 +19178,6 @@ let fn = () => {
               let tmp3 = ownPropertyNames[num5];
               let _Object3 = Object;
               let ownPropertyDescriptor = Object.getOwnPropertyDescriptor(tmp2, tmp3);
-              let tmp5 = num5;
               let configurable = ownPropertyDescriptor;
               if (ownPropertyDescriptor) {
                 configurable = ownPropertyDescriptor.configurable;
@@ -19482,22 +19211,21 @@ let fn = () => {
         str = typeof arg0;
       };
     },
-    (arg0, arg1, arg2) => {
+    (arg0, arg1, fn) => {
       if (typeof Symbol === "function") {
         let _Symbol = Symbol;
         if (typeof Symbol.iterator === "symbol") {
-          let fn = (arg0) => typeof arg0;
+          fn = (arg0) => typeof arg0;
         }
-        closure_0 = fn;
-        let _class = arg2(2);
-        closure_2 = arg2(30);
-        let tmp2 = arg2(14);
+        let _class = fn(2);
+        closure_2 = fn(30);
+        let tmp2 = fn(14);
         closure_3 = tmp2;
-        closure_4 = arg2(16);
-        closure_5 = arg2(19);
-        closure_6 = arg2(15);
-        obj = {};
-        closure_0 = tmp2;
+        const Err = fn(16);
+        closure_5 = fn(19);
+        closure_6 = fn(15);
+        let arg = {};
+        items = tmp2;
         class _class {
           constructor() {
             self = this;
@@ -19547,7 +19275,7 @@ let fn = () => {
             closure_0 = module;
             convert = typeof module === "string";
             if (typeof module === "string") {
-              convert = arg2.convert;
+              convert = fn.convert;
             }
             tmp5 = module;
             if (convert) {
@@ -19577,12 +19305,12 @@ let fn = () => {
                       if (!self._inner.children) {
                         if (!self._inner.patterns.length) {
                           obj = { value: null, errors: null };
-                          obj[0] = tmp5;
+                          obj.value = tmp5;
                           tmp9 = null;
                           if (items.length) {
                             tmp9 = items;
                           }
-                          obj[1] = tmp9;
+                          obj.errors = tmp9;
                           return obj;
                         }
                       }
@@ -19819,7 +19547,7 @@ let fn = () => {
                       }
                     }
                     obj2 = { value: null, errors: null };
-                    obj2[0] = tmp10;
+                    obj2.value = tmp10;
                     tmp17 = null;
                     if (items.length) {
                       class target {
@@ -19839,7 +19567,7 @@ let fn = () => {
                         }
                       }
                     }
-                    obj2[1] = tmp17;
+                    obj2.errors = tmp17;
                     return obj2;
                   }
                   if (!self._inner.children) {
@@ -19920,7 +19648,7 @@ let fn = () => {
                         key = tmp20.key;
                         delete tmp2[tmp];
                         obj3 = { key: null, path: null, parent: null, reference: null };
-                        obj3[0] = key;
+                        obj3.key = key;
                         path = exports.path;
                         tmp21 = num6;
                         if (!path) {
@@ -19978,11 +19706,11 @@ let fn = () => {
                             }
                           }
                         }
-                        obj3[1] = path + str7 + key;
-                        obj3[2] = tmp11;
-                        obj3[3] = exports.reference;
+                        obj3.path = path + str7 + key;
+                        obj3.parent = tmp11;
+                        obj3.reference = exports.reference;
                         schema = tmp20.schema;
-                        _validateResult = schema._validate(tmp11[key], obj3, arg2);
+                        _validateResult = schema._validate(tmp11[key], obj3, fn);
                         if (_validateResult.errors) {
                           class target {
                             constructor() {
@@ -20008,9 +19736,9 @@ let fn = () => {
                           str8 = "object.child";
                           tmp25 = tmp23;
                           tmp26 = obj3;
-                          tmp27 = arg2;
-                          arr = items.push(self.createError("object.child", tmp23, obj3, arg2));
-                          if (arg2.abortEarly) {
+                          tmp27 = fn;
+                          arr = items.push(self.createError("object.child", tmp23, obj3, fn));
+                          if (fn.abortEarly) {
                             class target {
                               constructor() {
                                 self = this;
@@ -20085,7 +19813,7 @@ let fn = () => {
                         }
                       }
                       obj4 = { value: null, errors: null };
-                      obj4[0] = tmp10;
+                      obj4.value = tmp10;
                       tmp58 = null;
                       if (items.length) {
                         class target {
@@ -20105,7 +19833,7 @@ let fn = () => {
                           }
                         }
                       }
-                      obj4[1] = tmp58;
+                      obj4.errors = tmp58;
                       return obj4;
                     }
                   }
@@ -20184,7 +19912,7 @@ let fn = () => {
                             }
                           }
                           obj5 = { key: null, path: null, parent: null, reference: null };
-                          obj5[0] = tmp30;
+                          obj5.key = tmp30;
                           tmp31 = num7;
                           str11 = "";
                           if (exports.path) {
@@ -20205,9 +19933,9 @@ let fn = () => {
                               }
                             }
                           }
-                          obj5[1] = str11 + tmp30;
-                          obj5[2] = tmp11;
-                          obj5[3] = exports.reference;
+                          obj5.path = str11 + tmp30;
+                          obj5.parent = tmp11;
+                          obj5.reference = exports.reference;
                           num8 = 0;
                           if (0 < self._inner.patterns.length) {
                             class target {
@@ -20263,7 +19991,7 @@ let fn = () => {
                                   }
                                 }
                                 rule = tmp33.rule;
-                                iter = rule._validate(tmp32, obj5, arg2);
+                                iter = rule._validate(tmp32, obj5, fn);
                                 if (iter.errors) {
                                   class target {
                                     constructor() {
@@ -20289,9 +20017,9 @@ let fn = () => {
                                   str12 = "object.child";
                                   tmp37 = tmp35;
                                   tmp38 = obj5;
-                                  tmp39 = arg2;
-                                  arr1 = items.push(self.createError("object.child", tmp35, obj5, arg2));
-                                  if (arg2.abortEarly) {
+                                  tmp39 = fn;
+                                  arr1 = items.push(self.createError("object.child", tmp35, obj5, fn));
+                                  if (fn.abortEarly) {
                                     class target {
                                       constructor() {
                                         self = this;
@@ -20351,7 +20079,7 @@ let fn = () => {
                               continue;
                             }
                             obj6 = { value: null, errors: null };
-                            obj6[0] = tmp10;
+                            obj6.value = tmp10;
                             tmp57 = null;
                             if (items.length) {
                               class target {
@@ -20371,7 +20099,7 @@ let fn = () => {
                                 }
                               }
                             }
-                            obj6[1] = tmp57;
+                            obj6.errors = tmp57;
                             return obj6;
                           }
                           num7 = num7 + 1;
@@ -20497,7 +20225,7 @@ let fn = () => {
                       }
                       peers = tmp42.peers;
                       obj7 = { key: null, path: null };
-                      obj7[0] = tmp42.key;
+                      obj7.key = tmp42.key;
                       tmp47 = exports.path || "";
                       str15 = "";
                       if (tmp42.key) {
@@ -20518,7 +20246,7 @@ let fn = () => {
                           }
                         }
                       }
-                      obj7[1] = tmp47 + str15;
+                      obj7.path = tmp47 + str15;
                       if (typeof call2 === "unknown") {
                         class target {
                           constructor() {
@@ -20540,8 +20268,8 @@ let fn = () => {
                         tmp49 = peers;
                         tmp50 = tmp11;
                         tmp51 = obj7;
-                        tmp52 = arg2;
-                        tmp44Result = tmp44(tmp45, peers, tmp11, obj7, arg2);
+                        tmp52 = fn;
+                        tmp44Result = tmp44(tmp45, peers, tmp11, obj7, fn);
                       } else {
                         class target {
                           constructor() {
@@ -20564,8 +20292,8 @@ let fn = () => {
                         tmp63 = peers;
                         tmp64 = tmp11;
                         tmp65 = obj7;
-                        tmp66 = arg2;
-                        tmp44Result = call2(self, tmp45, peers, tmp11, obj7, arg2);
+                        tmp66 = fn;
+                        tmp44Result = call2(self, tmp45, peers, tmp11, obj7, fn);
                       }
                       tmp54 = closure_4;
                       if (tmp44Result instanceof closure_4.Err) {
@@ -20585,7 +20313,7 @@ let fn = () => {
                             return applyArgumentsResult;
                           }
                         }
-                        if (arg2.abortEarly) {
+                        if (fn.abortEarly) {
                           class target {
                             constructor() {
                               self = this;
@@ -20625,7 +20353,7 @@ let fn = () => {
                       }
                     }
                     obj8 = { value: null, errors: null };
-                    obj8[0] = tmp10;
+                    obj8.value = tmp10;
                     tmp56 = null;
                     if (items.length) {
                       class target {
@@ -20645,11 +20373,11 @@ let fn = () => {
                         }
                       }
                     }
-                    obj8[1] = tmp56;
+                    obj8.errors = tmp56;
                     return obj8;
                   }
                   obj9 = { value: null, errors: null };
-                  obj9[0] = tmp10;
+                  obj9.value = tmp10;
                   tmp55 = null;
                   if (items.length) {
                     class target {
@@ -20669,12 +20397,12 @@ let fn = () => {
                       }
                     }
                   }
-                  obj9[1] = tmp55;
+                  obj9.errors = tmp55;
                   return obj9;
                 }
               }
             }
-            arr2 = items.push(self.createError(`${str}.base`, null, exports, arg2));
+            arr2 = items.push(self.createError(`${str}.base`, null, exports, fn));
             obj10 = { value: module, errors: null };
             if (items.length) {
               class target {
@@ -20694,7 +20422,7 @@ let fn = () => {
                 }
               }
             }
-            obj10[1] = null;
+            obj10.errors = null;
             return obj10;
           }
           _func() {
@@ -20742,7 +20470,7 @@ let fn = () => {
                       tmp15 = num;
                       if (-1 === keys.indexOf(tmp14.key)) {
                         obj = { after: null, group: null };
-                        ({ _refs: obj3[0], key: obj3[1] } = tmp14);
+                        ({ _refs: obj3.after, key: obj3.group } = tmp14);
                         addResult = obj2.add(tmp14, obj);
                       }
                       num = num + 1;
@@ -20759,11 +20487,11 @@ let fn = () => {
                       tmp20 = closure_5;
                       schemaResult = closure_5.schema(tmp18);
                       obj1 = { key: null, schema: null };
-                      obj1[0] = tmp17;
-                      obj1[1] = schemaResult;
+                      obj1.key = tmp17;
+                      obj1.schema = schemaResult;
                       obj2 = { after: null, group: null };
-                      obj2[0] = schemaResult._refs;
-                      obj2[1] = tmp17;
+                      obj2.after = schemaResult._refs;
+                      obj2.group = tmp17;
                       addResult1 = obj2.add(obj1, obj2);
                       num4 = num4 + 1;
                       if (num4 >= keys.length) {
@@ -20806,14 +20534,13 @@ let fn = () => {
               isIntegerResult = module >= 0;
             }
             assertResult = _class.assert(isIntegerResult, "limit must be a positive integer");
-            return this._test("length", module, function(arg0, mergeResult, convert) {
-              error = arg0;
+            return this._test("length", module, function(arg0, mergeResult, concatSettingsResult) {
+              let error = arg0;
               if (Object.keys(arg0).length !== closure_0) {
                 const self = this;
-                obj = { limit: null };
-                obj[0] = tmp2;
+                obj = { limit: tmp2 };
                 const self2 = this;
-                error = this.createError("object.length", obj, mergeResult, convert);
+                error = this.createError("object.length", obj, mergeResult, concatSettingsResult);
               }
               return error;
             });
@@ -20827,14 +20554,13 @@ let fn = () => {
               isIntegerResult = module >= 0;
             }
             assertResult = _class.assert(isIntegerResult, "n must be a positive integer");
-            return this._test("arity", module, function(arg0, mergeResult, convert) {
-              error = arg0;
+            return this._test("arity", module, function(arg0, mergeResult, concatSettingsResult) {
+              let error = arg0;
               if (arg0.length !== closure_0) {
                 const self = this;
-                obj = { n: null };
-                obj[0] = tmp2;
+                obj = { n: tmp2 };
                 const self2 = this;
-                error = this.createError("function.arity", obj, mergeResult, convert);
+                error = this.createError("function.arity", obj, mergeResult, concatSettingsResult);
               }
               return error;
             });
@@ -20848,14 +20574,13 @@ let fn = () => {
               isIntegerResult = module > 0;
             }
             assertResult = _class.assert(isIntegerResult, "n must be a strict positive integer");
-            return this._test("minArity", module, function(arg0, mergeResult, convert) {
-              error = arg0;
+            return this._test("minArity", module, function(arg0, mergeResult, concatSettingsResult) {
+              let error = arg0;
               if (arg0.length < closure_0) {
                 const self = this;
-                obj = { n: null };
-                obj[0] = tmp2;
+                obj = { n: tmp2 };
                 const self2 = this;
-                error = this.createError("function.minArity", obj, mergeResult, convert);
+                error = this.createError("function.minArity", obj, mergeResult, concatSettingsResult);
               }
               return error;
             });
@@ -20869,14 +20594,13 @@ let fn = () => {
               isIntegerResult = module >= 0;
             }
             assertResult = _class.assert(isIntegerResult, "n must be a positive integer");
-            return this._test("maxArity", module, function(arg0, mergeResult, convert) {
-              error = arg0;
+            return this._test("maxArity", module, function(arg0, mergeResult, concatSettingsResult) {
+              let error = arg0;
               if (arg0.length > closure_0) {
                 const self = this;
-                obj = { n: null };
-                obj[0] = tmp2;
+                obj = { n: tmp2 };
                 const self2 = this;
-                error = this.createError("function.maxArity", obj, mergeResult, convert);
+                error = this.createError("function.maxArity", obj, mergeResult, concatSettingsResult);
               }
               return error;
             });
@@ -20890,14 +20614,13 @@ let fn = () => {
               isIntegerResult = module >= 0;
             }
             assertResult = _class.assert(isIntegerResult, "limit must be a positive integer");
-            return this._test("min", module, function(arg0, mergeResult, convert) {
-              error = arg0;
+            return this._test("min", module, function(arg0, mergeResult, concatSettingsResult) {
+              let error = arg0;
               if (Object.keys(arg0).length < closure_0) {
                 const self = this;
-                obj = { limit: null };
-                obj[0] = tmp2;
+                obj = { limit: tmp2 };
                 const self2 = this;
-                error = this.createError("object.min", obj, mergeResult, convert);
+                error = this.createError("object.min", obj, mergeResult, concatSettingsResult);
               }
               return error;
             });
@@ -20911,14 +20634,13 @@ let fn = () => {
               isIntegerResult = module >= 0;
             }
             assertResult = _class.assert(isIntegerResult, "limit must be a positive integer");
-            return this._test("max", module, function(arg0, mergeResult, convert) {
-              error = arg0;
+            return this._test("max", module, function(arg0, mergeResult, concatSettingsResult) {
+              let error = arg0;
               if (Object.keys(arg0).length > closure_0) {
                 const self = this;
-                obj = { limit: null };
-                obj[0] = tmp2;
+                obj = { limit: tmp2 };
                 const self2 = this;
-                error = this.createError("object.max", obj, mergeResult, convert);
+                error = this.createError("object.max", obj, mergeResult, concatSettingsResult);
               }
               return error;
             });
@@ -20940,8 +20662,8 @@ let fn = () => {
               cloneResult = this.clone();
               patterns = cloneResult._inner.patterns;
               obj = { regex: null, rule: null };
-              obj[0] = regExp;
-              obj[1] = schemaResult;
+              obj.regex = regExp;
+              obj.rule = schemaResult;
               arr = patterns.push(obj);
               return cloneResult;
             } catch (obj2) {
@@ -20957,12 +20679,12 @@ let fn = () => {
             return;
           }
           schema() {
-            return this._test("schema", null, function(arg0, mergeResult, convert) {
-              error = arg0;
-              if (!(arg0 instanceof closure_3)) {
+            return this._test("schema", null, function(arg0, mergeResult, concatSettingsResult) {
+              let error = arg0;
+              if (!(arg0 instanceof closure_1_3)) {
                 const self = this;
                 const self2 = this;
-                error = this.createError("object.schema", null, mergeResult, convert);
+                error = this.createError("object.schema", null, mergeResult, concatSettingsResult);
               }
               return error;
             });
@@ -21073,14 +20795,14 @@ let fn = () => {
                 length = self._inner.renames.length;
               } while (num < length);
             }
-            obj1 = arg2;
+            obj1 = fn;
             cloneResult = self.clone();
             renames = cloneResult._inner.renames;
             obj = { from: module, to: exports, options: null };
-            if (!arg2) {
+            if (!fn) {
               obj1 = {};
             }
-            obj[2] = obj.applyToDefaults(closure_7.renameDefaults, obj1);
+            obj.options = obj.applyToDefaults(closure_7.renameDefaults, obj1);
             arr = renames.push(obj);
             return cloneResult;
           }
@@ -21093,7 +20815,7 @@ let fn = () => {
             str = "";
             if ("" in groupChildrenResult) {
               obj = self[exports];
-              applyResult = obj.apply(self, arg2);
+              applyResult = obj.apply(self, fn);
               delete tmp3[tmp2];
             } else {
               applyResult = self.clone();
@@ -21111,12 +20833,12 @@ let fn = () => {
                 tmp10 = num2;
                 if (tmp9) {
                   obj = { key: null, _refs: null, schema: null };
-                  ({ key: obj2[0], _refs: obj2[1], schema } = tmp8);
+                  ({ key: obj2.key, _refs: obj2._refs, schema } = tmp8);
                   tmp11 = schema;
                   tmp12 = tmp9;
                   tmp13 = exports;
-                  tmp14 = arg2;
-                  obj[2] = schema.applyFunctionToChildren(tmp9, exports, arg2, str + tmp8.key);
+                  tmp14 = fn;
+                  obj.schema = schema.applyFunctionToChildren(tmp9, exports, fn, str + tmp8.key);
                   applyResult._inner.children[num2] = obj;
                   key = tmp8.key;
                   delete tmp3[tmp];
@@ -21129,7 +20851,7 @@ let fn = () => {
           }
           _dependency(arg0, arg1, arg2) {
             items = [];
-            combined = items.concat(arg2);
+            combined = items.concat(fn);
             num = 0;
             if (0 < combined.length) {
               do {
@@ -21172,9 +20894,9 @@ let fn = () => {
                   if (ref) {
                     obj = { schema: null, ref: null };
                     schema = tmp2.arg.schema;
-                    obj[0] = schema.describe();
+                    obj.schema = schema.describe();
                     str2 = tmp2.arg.ref;
-                    obj[1] = str2.toString();
+                    obj.ref = str2.toString();
                     tmp2.arg = obj;
                   }
                   num = num + 1;
@@ -21212,9 +20934,9 @@ let fn = () => {
                   patterns = tmp.patterns;
                   obj = { regex: null, rule: null };
                   str3 = tmp8.regex;
-                  obj[0] = str3.toString();
+                  obj.regex = str3.toString();
                   rule = tmp8.rule;
-                  obj[1] = rule.describe();
+                  obj.rule = rule.describe();
                   arr = patterns.push(obj);
                   num5 = num5 + 1;
                   length2 = self._inner.patterns.length;
@@ -21230,8 +20952,8 @@ let fn = () => {
           assert(arg0, arg1, arg2) {
             closure_0 = module;
             closure_1 = exports;
-            str = arg2;
-            c2 = arg2;
+            str = fn;
+            c2 = fn;
             obj = closure_5;
             refResult = closure_5.ref(module);
             closure_0 = refResult;
@@ -21258,20 +20980,18 @@ let fn = () => {
               str2 = ".";
               closure_4 = path.join(".");
               obj = { schema: null, ref: null };
-              obj[0] = schemaResult;
-              obj[1] = refResult;
+              obj.schema = schemaResult;
+              obj.ref = refResult;
               str3 = "assert";
-              return this._test("assert", obj, function(arg0, arg1, convert) {
-                if (otherwise._validate(callback(arg0), null, convert, arg0).errors) {
+              return this._test("assert", obj, function(arg0, arg1, concatSettingsResult) {
+                if (otherwise._validate(closure_0(arg0), null, concatSettingsResult, arg0).errors) {
                   const self = this;
-                  const mergeResult = otherwise.merge({}, arg1);
-                  mergeResult.key = closure_3;
-                  mergeResult.path = closure_4;
-                  obj = { ref: null, message: null };
-                  obj[0] = mergeResult.path;
-                  obj[1] = str;
+                  const mergeResult = _class.merge({}, arg1);
+                  mergeResult.key = key;
+                  mergeResult.path = path;
+                  obj = { ref: mergeResult.path, message: str };
                   const self2 = this;
-                  return this.createError("object.assert", obj, mergeResult, convert);
+                  return this.createError("object.assert", obj, mergeResult, concatSettingsResult);
                 } else {
                   return arg0;
                 }
@@ -21291,31 +21011,31 @@ let fn = () => {
           type(arg0, arg1) {
             closure_0 = module;
             name = exports;
-            assertResult = closure_1.assert(typeof module === "function", "type must be a constructor function");
+            assertResult = _class.assert(typeof module === "function", "type must be a constructor function");
             if (!exports) {
               name = module.name;
             }
             obj = { name, ctor: module };
             closure_1 = obj;
-            return this._test("type", obj, function(arg0, mergeResult, convert) {
-              error = arg0;
+            return this._test("type", obj, function(arg0, mergeResult, concatSettingsResult) {
+              let error = arg0;
               if (!(arg0 instanceof closure_0)) {
                 const self = this;
                 obj = { type: null };
-                obj[0] = obj.name;
+                obj.type = obj.name;
                 const self2 = this;
-                error = this.createError("object.type", obj, mergeResult, convert);
+                error = this.createError("object.type", obj, mergeResult, concatSettingsResult);
               }
               return error;
             });
           }
           ref() {
-            return this._test("ref", null, function(arg0, mergeResult, convert) {
-              error = arg0;
+            return this._test("ref", null, function(arg0, mergeResult, concatSettingsResult) {
+              let error = arg0;
               if (!ref.isRef(arg0)) {
                 const self = this;
                 const self2 = this;
-                error = this.createError("function.ref", null, mergeResult, convert);
+                error = this.createError("function.ref", null, mergeResult, concatSettingsResult);
               }
               return error;
             });
@@ -21332,11 +21052,10 @@ let fn = () => {
         if (tmp2) {
           prototype = tmp2.prototype;
         }
-        obj = { constructor: null };
-        obj = { value: null, enumerable: false, writable: true, configurable: true };
-        obj[0] = _class;
-        obj[0] = obj;
-        _class.prototype = Object.create(prototype, obj);
+        arg = { constructor: null };
+        arg = { value: _class, enumerable: false, writable: true, configurable: true };
+        arg.constructor = arg;
+        _class.prototype = Object.create(prototype, arg);
         if (tmp2) {
           let _Object = Object;
           let _Object2 = Object;
@@ -21348,7 +21067,6 @@ let fn = () => {
               let tmp3 = ownPropertyNames[num7];
               let _Object3 = Object;
               let ownPropertyDescriptor = Object.getOwnPropertyDescriptor(tmp2, tmp3);
-              let tmp5 = num7;
               let configurable = ownPropertyDescriptor;
               if (ownPropertyDescriptor) {
                 configurable = ownPropertyDescriptor.configurable;
@@ -21363,8 +21081,8 @@ let fn = () => {
             }
           }
         }
-        obj.Object = _class;
-        obj.safeParse = (arg0) => {
+        arg.Object = _class;
+        arg.safeParse = (arg0) => {
           try {
             const _JSON = JSON;
             return JSON.parse(arg0);
@@ -21372,17 +21090,15 @@ let fn = () => {
             return tmp;
           }
         };
-        obj.renameDefaults = { alias: false, multiple: false, override: false };
-        obj.groupChildren = (arr) => {
+        arg.renameDefaults = { alias: false, multiple: false, override: false };
+        arg.groupChildren = (arr) => {
           const sorted = arr.sort();
           obj = {};
           for (let num = 0; num < arr.length; num = num + 1) {
             let str = arr[num];
-            let tmp2 = _class;
             let assertResult = _class.assert(typeof str === "string", "children must be strings");
             let first = str.split(".")[0];
             items = obj[first];
-            let tmp4 = num;
             if (!items) {
               items = [];
             }
@@ -21391,7 +21107,7 @@ let fn = () => {
           }
           return obj;
         };
-        obj.with = function(arg0, arg1, arg2, mergeResult, convert) {
+        arg.with = function(arg0, arg1, arg2, mergeResult, concatSettingsResult) {
           let tmp;
           if (undefined === arg0) {
             return arg0;
@@ -21401,8 +21117,8 @@ let fn = () => {
               while (true) {
                 tmp = arg1[num];
                 let _Object = Object;
+                hasOwnProperty = Object.prototype.hasOwnProperty;
                 let call = hasOwnProperty.call;
-                let tmp2 = num;
                 if (!(typeof call === "unknown" ? hasOwnProperty(tmp) : call(arg2, tmp))) {
                   break;
                 } else if (undefined === arg2[tmp]) {
@@ -21412,15 +21128,14 @@ let fn = () => {
                 }
               }
               const self = this;
-              obj = { peer: null };
-              obj[0] = tmp;
+              obj = { peer: tmp };
               const self2 = this;
-              return this.createError("object.with", obj, mergeResult, convert);
+              return this.createError("object.with", obj, mergeResult, concatSettingsResult);
             }
             return arg0;
           }
         };
-        obj.without = function(arg0, arg1, arg2, mergeResult, convert) {
+        arg.without = function(arg0, arg1, arg2, mergeResult, concatSettingsResult) {
           let tmp;
           if (undefined === arg0) {
             return arg0;
@@ -21430,8 +21145,8 @@ let fn = () => {
               while (true) {
                 tmp = arg1[num];
                 let _Object = Object;
+                hasOwnProperty = Object.prototype.hasOwnProperty;
                 let call = hasOwnProperty.call;
-                let tmp2 = num;
                 if (typeof call === "unknown" ? hasOwnProperty(tmp) : call(arg2, tmp)) {
                   if (undefined !== arg2[tmp]) {
                     break;
@@ -21440,21 +21155,20 @@ let fn = () => {
                 num = num + 1;
               }
               const self = this;
-              obj = { peer: null };
-              obj[0] = tmp;
+              obj = { peer: tmp };
               const self2 = this;
-              return this.createError("object.without", obj, mergeResult, convert);
+              return this.createError("object.without", obj, mergeResult, concatSettingsResult);
             }
             return arg0;
           }
         };
-        obj.xor = function(arg0, arg1, arg2, mergeResult, convert) {
+        arg.xor = function(arg0, peers, arg2, mergeResult, concatSettingsResult) {
           items = [];
-          for (let num = 0; num < arg1.length; num = num + 1) {
-            let tmp = arg1[num];
+          for (let num = 0; num < peers.length; num = num + 1) {
+            let tmp = peers[num];
             let _Object = Object;
+            hasOwnProperty = Object.prototype.hasOwnProperty;
             let call = hasOwnProperty.call;
-            let tmp2 = num;
             let tmp3 = (typeof call === "unknown" ? hasOwnProperty(tmp) : call(arg2, tmp)) && undefined !== arg2[tmp];
             if (tmp3) {
               let arr = items.push(tmp);
@@ -21465,24 +21179,22 @@ let fn = () => {
           } else {
             const self = this;
             if (0 === items.length) {
-              obj = { peers: null };
-              obj[0] = arg1;
-              error = self.createError("object.missing", obj, mergeResult, convert);
+              obj = { peers };
+              let error = self.createError("object.missing", obj, mergeResult, concatSettingsResult);
             } else {
-              obj = { peers: null };
-              obj[0] = arg1;
-              error = self.createError("object.xor", obj, mergeResult, convert);
+              obj = { peers };
+              error = self.createError("object.xor", obj, mergeResult, concatSettingsResult);
             }
           }
         };
-        obj.or = function(arg0, peers, arg2, mergeResult, convert) {
+        arg.or = function(arg0, peers, arg2, mergeResult, concatSettingsResult) {
           let num = 0;
           if (0 < peers.length) {
             while (true) {
               let tmp = peers[num];
               let _Object = Object;
+              hasOwnProperty = Object.prototype.hasOwnProperty;
               let call = hasOwnProperty.call;
-              let tmp2 = num;
               if (typeof call === "unknown" ? hasOwnProperty(tmp) : call(arg2, tmp)) {
                 if (undefined !== arg2[tmp]) {
                   break;
@@ -21492,9 +21204,9 @@ let fn = () => {
             }
             return arg0;
           }
-          return this.createError("object.missing", { peers }, mergeResult, convert);
+          return this.createError("object.missing", { peers }, mergeResult, concatSettingsResult);
         };
-        obj.and = function(arg0, arg1, arg2, mergeResult, convert) {
+        arg.and = function(arg0, arg1, arg2, mergeResult, concatSettingsResult) {
           items = [];
           const items1 = [];
           let num = 0;
@@ -21502,8 +21214,8 @@ let fn = () => {
             while (true) {
               let tmp = arg1[num];
               let _Object = Object;
+              hasOwnProperty = Object.prototype.hasOwnProperty;
               let call = hasOwnProperty.call;
-              let tmp2 = num;
               if (typeof call === "unknown" ? hasOwnProperty(tmp) : call(arg2, tmp)) {
                 if (undefined !== arg2[tmp]) {
                   let arr = items1.push(tmp);
@@ -21516,44 +21228,40 @@ let fn = () => {
               arr = items.push(tmp);
             }
           }
-          error = null;
+          let error = null;
           if (items.length !== arg1.length) {
             error = null;
             if (items1.length !== length) {
               const self = this;
-              obj = { present: null, missing: null };
-              obj[0] = items1;
-              obj[1] = items;
+              obj = { present: items1, missing: items };
               const self2 = this;
-              error = this.createError("object.and", obj, mergeResult, convert);
+              error = this.createError("object.and", obj, mergeResult, concatSettingsResult);
             }
           }
           return error;
         };
-        obj.nand = function(arg0, arg1, arg2, mergeResult, convert) {
+        arg.nand = function(arg0, arg1, arg2, mergeResult, concatSettingsResult) {
           items = [];
           for (let num = 0; num < arg1.length; num = num + 1) {
             let tmp = arg1[num];
             let _Object = Object;
+            hasOwnProperty = Object.prototype.hasOwnProperty;
             let call = hasOwnProperty.call;
-            let tmp2 = num;
             let tmp3 = (typeof call === "unknown" ? hasOwnProperty(tmp) : call(arg2, tmp)) && undefined !== arg2[tmp];
             if (tmp3) {
               let arr = items.push(tmp);
             }
           }
-          error = null;
+          let error = null;
           if (items.length === arg1.length) {
             const self = this;
-            obj = { main: null, peers: null };
-            obj[0] = tmp6;
-            obj[1] = cloneResult;
+            obj = { main: tmp6, peers: cloneResult };
             const self2 = this;
-            error = this.createError("object.nand", obj, mergeResult, convert);
+            error = this.createError("object.nand", obj, mergeResult, concatSettingsResult);
           }
           return error;
         };
-        const object = new obj.Object();
+        const object = new arg.Object();
         module.exports = object;
       }
       fn = (arg0) => {
@@ -21571,18 +21279,17 @@ let fn = () => {
         str = typeof arg0;
       };
     },
-    (arg0, arg1, arg2) => {
-      closure_0 = arg2(2);
+    (arg0, arg1, fn) => {
+      closure_0 = fn(2);
       obj = {};
-      const fn = () => {
+      fn = () => {
 
       };
       obj.Topo = fn;
       module.exports = fn;
       obj.Topo.prototype.add = function(arg0, arg1) {
-        let self = this;
         obj = arg1;
-        self = this;
+        const self = this;
         items = [];
         if (!arg1) {
           obj = {};
@@ -21594,23 +21301,23 @@ let fn = () => {
           after = [];
         }
         const combined1 = items1.concat(after);
-        closure_3 = tmp2;
-        closure_4 = obj.sort || 0;
-        self.assert(-1 === combined.indexOf(obj.group || "?"), "Item cannot come before itself:", obj.group || "?");
-        self.assert(-1 === combined.indexOf("?"), "Item cannot come before unassociated items");
-        self.assert(-1 === combined1.indexOf(obj.group || "?"), "Item cannot come after itself:", obj.group || "?");
-        self.assert(-1 === combined1.indexOf("?"), "Item cannot come after unassociated items");
+        const group = tmp2;
+        const sort = obj.sort || 0;
+        closure_0.assert(-1 === combined.indexOf(obj.group || "?"), "Item cannot come before itself:", obj.group || "?");
+        closure_0.assert(-1 === combined.indexOf("?"), "Item cannot come before unassociated items");
+        closure_0.assert(-1 === combined1.indexOf(obj.group || "?"), "Item cannot come after itself:", obj.group || "?");
+        closure_0.assert(-1 === combined1.indexOf("?"), "Item cannot come after unassociated items");
         const items2 = [];
         const combined2 = items2.concat(arg0);
-        const item = combined2.forEach((node) => {
+        const item = combined2.forEach((node, index) => {
           const _items = self._items;
-          _items.push({ seq: self._items.length, sort: closure_4, before: combined, after: combined1, group: closure_3, node });
+          _items.push({ seq: self._items.length, sort, before: combined, after: combined1, group, node });
         });
         let str = "";
         if ("?" !== (obj.group || "?")) {
           str = `added into group ${tmp2}`;
         }
-        self.assert(!self._sort(), "item", str, "created a dependencies error");
+        closure_0.assert(!self._sort(), "item", str, "created a dependencies error");
         return self.nodes;
       };
       obj.Topo.prototype.merge = function(arg0) {
@@ -21620,12 +21327,10 @@ let fn = () => {
         const combined = items.concat(arg0);
         for (let num = 0; num < combined.length; num = num + 1) {
           let tmp = combined[num];
-          let tmp2 = num;
           if (tmp) {
             let num2 = 0;
             if (0 < tmp._items.length) {
               do {
-                let tmp3 = closure_0;
                 let _items = self._items;
                 let arr = _items.push(closure_0.shallow(tmp._items[num2]));
                 num2 = num2 + 1;
@@ -21662,7 +21367,7 @@ let fn = () => {
         let length4;
         const self = this;
         obj = {};
-        obj = Object.create(null);
+        Object.create(null);
         obj = Object.create(null);
         let num = 0;
         if (0 < this._items.length) {
@@ -21670,7 +21375,6 @@ let fn = () => {
             let tmp3 = self._items[num];
             ({ seq, group } = tmp3);
             items = obj[group];
-            let tmp4 = num;
             if (!items) {
               items = [];
             }
@@ -21680,7 +21384,6 @@ let fn = () => {
             ({ before: obj[seq], after } = tmp3);
             for (let num2 = 0; num2 < after.length; num2 = num2 + 1) {
               let items1 = obj[after[num2]];
-              let tmp6 = num2;
               if (!items1) {
                 items1 = [];
               }
@@ -21695,11 +21398,9 @@ let fn = () => {
           let items2 = [];
           let _Object = Object;
           let keys1 = Object.keys(obj[tmp7]);
-          let tmp8 = num3;
           for (let num4 = 0; num4 < keys1.length; num4 = num4 + 1) {
             let tmp9 = obj[tmp7][keys1[num4]];
             let items3 = obj[tmp9];
-            let tmp10 = num4;
             if (!items3) {
               items3 = [];
             }
@@ -21718,13 +21419,12 @@ let fn = () => {
         const keys2 = Object.keys(obj);
         for (let num6 = 0; num6 < keys2.length; num6 = num6 + 1) {
           let tmp12 = keys2[num6];
-          let tmp13 = num6;
           if (obj[tmp12]) {
             let num7 = 0;
             if (0 < obj[tmp12].length) {
               do {
                 let tmp14 = obj[tmp12][num7];
-                obj1 = obj[tmp14];
+                let obj1 = obj[tmp14];
                 obj[tmp14] = obj1.concat(obj[tmp12]);
                 num7 = num7 + 1;
                 length2 = obj[tmp12].length;
@@ -21737,10 +21437,8 @@ let fn = () => {
         for (let num8 = 0; num8 < keys3.length; num8 = num8 + 1) {
           let tmp15 = keys3[num8];
           let arr10 = obj[tmp15];
-          let tmp16 = num8;
           for (let num9 = 0; num9 < arr10.length; num9 = num9 + 1) {
             let items4 = obj1[arr10[num9]];
-            let tmp17 = num9;
             if (!items4) {
               items4 = [];
             }
@@ -21750,14 +21448,12 @@ let fn = () => {
         const obj2 = {};
         const items5 = [];
         for (let num10 = 0; num10 < self._items.length; num10 = num10 + 1) {
-          let tmp18 = num10;
           let tmp19 = num10;
           if (obj1[num10]) {
             let num11 = 0;
             tmp19 = null;
             if (0 < self._items.length) {
               while (true) {
-                let tmp20 = num11;
                 if (true === obj2[num11]) {
                   let sum = num11 + 1;
                   num11 = sum;
@@ -21775,8 +21471,6 @@ let fn = () => {
                   let num14 = 0;
                   if (0 < length3) {
                     do {
-                      let tmp21 = num12;
-                      let tmp22 = num13;
                       let sum1 = num13;
                       if (items5.indexOf(obj1[num11][num12]) >= 0) {
                         sum1 = num13 + 1;
@@ -21804,7 +21498,7 @@ let fn = () => {
         if (items5.length !== self._items.length) {
           const _Error = Error;
           str = "Invalid dependencies";
-          error = new Error("Invalid dependencies");
+          const error = new Error("Invalid dependencies");
           return error;
         } else {
           const obj3 = {};
@@ -21818,35 +21512,34 @@ let fn = () => {
             } while (num15 < length4);
           }
           const items6 = [];
-          self._items = items5.map((arg0) => {
-            items6.push(obj3[arg0].node);
-            return obj3[arg0];
+          self._items = items5.map((item) => {
+            items6.push(obj3[item].node);
+            return obj3[item];
           });
           self.nodes = items6;
         }
       };
     },
-    (arg0, arg1, arg2) => {
-      obj = arg2(1);
+    (arg0, arg1, fn) => {
+      obj = fn(1);
       obj = { abortEarly: obj.boolean(), convert: obj.boolean(), allowUnknown: obj.boolean(), skipFunctions: obj.boolean(), stripUnknown: null, language: null, presence: null, raw: null, context: null, strip: null, noDefaults: null };
       items = [obj.boolean(), ];
       obj = { arrays: obj.boolean(), objects: obj.boolean() };
       let objectResult = obj.object(obj);
       items[1] = objectResult.or("arrays", "objects");
-      obj[4] = items;
-      obj[5] = obj.object();
-      obj[6] = obj.string().only("required", "optional", "forbidden", "ignore");
-      obj[7] = obj.boolean();
-      obj[8] = obj.object();
-      obj[9] = obj.boolean();
-      obj[10] = obj.boolean();
+      obj.stripUnknown = items;
+      obj.language = obj.object();
+      obj.presence = obj.string().only("required", "optional", "forbidden", "ignore");
+      obj.raw = obj.boolean();
+      obj.context = obj.object();
+      obj.strip = obj.boolean();
+      obj.noDefaults = obj.boolean();
       objectResult = obj.object(obj);
       arg1.options = objectResult.strict();
     },
-    (arg0, arg1, arg2) => {
-      const tmp = arg2(14);
-      closure_0 = tmp;
-      const _class = arg2(2);
+    (arg0, arg1, fn) => {
+      const tmp = fn(14);
+      const _class = fn(2);
       closure_0 = tmp;
       class _class {
         constructor() {
@@ -21896,14 +21589,14 @@ let fn = () => {
             lazyResult = lazy();
             tmp5 = closure_0;
             if (lazyResult instanceof closure_0) {
-              _validateResult = lazyResult._validate(module, exports, arg2);
+              _validateResult = lazyResult._validate(module, exports, fn);
             } else {
               tmp6 = null;
               str2 = "lazy.schema";
               tmp7 = self;
               tmp8 = exports;
-              tmp9 = arg2;
-              _validateResult.errors = self.createError("lazy.schema", null, exports, arg2);
+              tmp9 = fn;
+              _validateResult.errors = self.createError("lazy.schema", null, exports, fn);
             }
             return _validateResult;
           } else {
@@ -21911,8 +21604,8 @@ let fn = () => {
             str = "lazy.base";
             tmp2 = self;
             tmp3 = exports;
-            tmp4 = arg2;
-            _validateResult.errors = self.createError("lazy.base", null, exports, arg2);
+            tmp4 = fn;
+            _validateResult.errors = self.createError("lazy.base", null, exports, fn);
             return _validateResult;
           }
         }
@@ -21934,8 +21627,8 @@ let fn = () => {
       if (tmp) {
         prototype = tmp.prototype;
       }
-      obj = { value: _class, enumerable: false, writable: true, configurable: true };
-      _class.prototype = Object.create(prototype, { constructor: obj });
+      obj = { constructor: { value: _class, enumerable: false, writable: true, configurable: true } };
+      _class.prototype = Object.create(prototype, obj);
       if (tmp) {
         const _Object = Object;
         const _Object2 = Object;
@@ -21948,7 +21641,6 @@ let fn = () => {
               let tmp2 = ownPropertyNames[num];
               let _Object3 = Object;
               let ownPropertyDescriptor = Object.getOwnPropertyDescriptor(tmp, tmp2);
-              let tmp4 = num;
               let configurable = ownPropertyDescriptor;
               if (ownPropertyDescriptor) {
                 configurable = ownPropertyDescriptor.configurable;
@@ -22008,14 +21700,14 @@ let fn = () => {
                     lazyResult = lazy();
                     tmp5 = closure_0;
                     if (lazyResult instanceof closure_0) {
-                      _validateResult = lazyResult._validate(module, exports, arg2);
+                      _validateResult = lazyResult._validate(module, exports, fn);
                     } else {
                       tmp6 = null;
                       str2 = "lazy.schema";
                       tmp7 = self;
                       tmp8 = exports;
-                      tmp9 = arg2;
-                      _validateResult.errors = self.createError("lazy.schema", null, exports, arg2);
+                      tmp9 = fn;
+                      _validateResult.errors = self.createError("lazy.schema", null, exports, fn);
                     }
                     return _validateResult;
                   } else {
@@ -22023,8 +21715,8 @@ let fn = () => {
                     str = "lazy.base";
                     tmp2 = self;
                     tmp3 = exports;
-                    tmp4 = arg2;
-                    _validateResult.errors = self.createError("lazy.base", null, exports, arg2);
+                    tmp4 = fn;
+                    _validateResult.errors = self.createError("lazy.base", null, exports, fn);
                     return _validateResult;
                   }
                 }
@@ -22043,32 +21735,32 @@ let fn = () => {
       let lazy = new obj.Lazy();
       module.exports = lazy;
     },
-    (arg0, arg1, arg2) => {
+    (arg0, arg1, fn) => {
       if (typeof Symbol === "function") {
         let _Symbol = Symbol;
         if (typeof Symbol.iterator === "symbol") {
-          let fn = (arg0) => typeof arg0;
+          fn = (arg0) => typeof arg0;
         }
-        closure_0 = fn;
-        let tmp2 = arg2(14);
+        let tmp2 = fn(14);
         const _class = tmp2;
-        closure_2 = arg2(19);
-        closure_3 = arg2(2);
-        obj = { fastSplice: null };
-        obj[0] = function fastSplice(substr, diff5) {
-          let length;
-          let sum;
-          let tmp = diff5;
-          if (diff5 < substr.length) {
-            do {
-              let tmp2 = +tmp;
-              sum = tmp2 + 1;
-              substr[tmp2] = substr[sum];
-              tmp = sum;
-              length = substr.length;
-            } while (sum < length);
-          }
-          substr.length = substr.length - 1;
+        closure_2 = fn(19);
+        closure_3 = fn(2);
+        obj = {
+          fastSplice(substr, diff5) {
+              let length;
+              let sum;
+              let tmp = diff5;
+              if (diff5 < substr.length) {
+                do {
+                  let tmp2 = +tmp;
+                  sum = tmp2 + 1;
+                  substr[tmp2] = substr[sum];
+                  tmp = sum;
+                  length = substr.length;
+                } while (sum < length);
+              }
+              substr.length = substr.length - 1;
+            }
         };
         closure_0 = tmp2;
         class _class {
@@ -22122,7 +21814,7 @@ let fn = () => {
             obj = { value: module };
             convert = typeof module === "string";
             if (typeof module === "string") {
-              convert = arg2.convert;
+              convert = fn.convert;
             }
             if (convert) {
               tmp = closure_4;
@@ -22130,7 +21822,7 @@ let fn = () => {
             }
             self = this;
             isArray = Array.isArray(obj.value);
-            tmp4 = arg2.convert && self._flags.single && !isArray;
+            tmp4 = fn.convert && self._flags.single && !isArray;
             flag = isArray;
             if (tmp4) {
               items = [];
@@ -22161,21 +21853,21 @@ let fn = () => {
                 tmp10 = value;
                 tmp11 = isArray;
                 tmp12 = exports;
-                tmp13 = arg2;
-                _checkItemsResult = _checkItems(value, isArray, exports, arg2);
+                tmp13 = fn;
+                _checkItemsResult = _checkItems(value, isArray, exports, fn);
               } else {
                 tmp21 = _checkItems;
                 tmp22 = self;
                 tmp23 = value;
                 tmp24 = isArray;
                 tmp25 = exports;
-                tmp26 = arg2;
-                _checkItemsResult = call(self, value, isArray, exports, arg2);
+                tmp26 = fn;
+                _checkItemsResult = call(self, value, isArray, exports, fn);
               }
               obj.errors = _checkItemsResult;
               if (obj.errors) {
                 if (isArray) {
-                  if (arg2.convert) {
+                  if (fn.convert) {
                     if (self._flags.single) {
                       items1 = [];
                       items1[0] = obj.value;
@@ -22188,16 +21880,16 @@ let fn = () => {
                         tmp16 = value2;
                         tmp17 = isArray;
                         tmp18 = exports;
-                        tmp19 = arg2;
-                        _checkItems2Result = _checkItems2(value2, isArray, exports, arg2);
+                        tmp19 = fn;
+                        _checkItems2Result = _checkItems2(value2, isArray, exports, fn);
                       } else {
                         tmp27 = _checkItems2;
                         tmp28 = self;
                         tmp29 = value2;
                         tmp30 = isArray;
                         tmp31 = exports;
-                        tmp32 = arg2;
-                        _checkItems2Result = call2(self, value2, isArray, exports, arg2);
+                        tmp32 = fn;
+                        _checkItems2Result = call2(self, value2, isArray, exports, fn);
                       }
                       obj.errors = _checkItems2Result;
                       if (obj.errors) {
@@ -22213,8 +21905,8 @@ let fn = () => {
               str = "array.base";
               tmp6 = self;
               tmp7 = exports;
-              tmp8 = arg2;
-              obj.errors = self.createError("array.base", null, exports, arg2);
+              tmp8 = fn;
+              obj.errors = self.createError("array.base", null, exports, fn);
               return obj;
             }
             return;
@@ -22232,33 +21924,33 @@ let fn = () => {
             num = 0;
             if (0 < length) {
               while (true) {
-                call2Result = module[num];
+                tmp = module[num];
                 tmp2 = num;
                 tmp3 = length;
                 key = num;
                 if (!exports) {
-                  key = arg2.key;
+                  key = fn.key;
                 }
                 obj = { key: null, path: null, parent: null, reference: null };
-                obj[0] = key;
-                path = arg2.path;
+                obj.key = key;
+                path = fn.path;
                 if (exports) {
                   str = "";
                   if (path) {
-                    str = `${arg2.path}.`;
+                    str = `${fn.path}.`;
                   }
                   sum = str + num;
                 } else {
                   sum = path;
                 }
-                obj[1] = sum;
-                ({ parent: obj[2], reference: obj[3] } = arg2);
+                obj.path = sum;
+                ({ parent: obj.parent, reference: obj.reference } = fn);
                 if (!self._flags.sparse) {
-                  if (undefined === call2Result) {
+                  if (undefined === tmp) {
                     obj = { key: null, path: null, pos: null };
-                    obj[0] = arg2.key;
-                    obj[1] = obj.path;
-                    obj[2] = num;
+                    obj.key = fn.key;
+                    obj.path = obj.path;
+                    obj.pos = num;
                     tmp5 = self;
                     str2 = "array.sparse";
                     tmp6 = null;
@@ -22279,7 +21971,7 @@ let fn = () => {
                 if (0 < self._inner.exclusions.length) {
                   obj3 = self._inner.exclusions[num2];
                   tmp12 = num2;
-                  while (obj3._validate(call2Result, obj, {}).errors) {
+                  while (obj3._validate(tmp, obj, {}).errors) {
                     sum1 = num2 + 1;
                     num2 = sum1;
                     flag = false;
@@ -22289,11 +21981,11 @@ let fn = () => {
                     str3 = "array.excludes";
                   }
                   obj1 = { pos: null, value: null };
-                  obj1[0] = num;
-                  obj1[1] = call2Result;
+                  obj1.pos = num;
+                  obj1.value = tmp;
                   obj2 = { key: null, path: null };
-                  obj2[0] = arg2.key;
-                  obj2[1] = obj.path;
+                  obj2.key = fn.key;
+                  obj2.path = obj.path;
                   tmp13 = self;
                   tmp14 = str3;
                   tmp15 = obj1;
@@ -22311,15 +22003,15 @@ let fn = () => {
                   if (self._inner.ordereds.length) {
                     if (substr1.length > 0) {
                       arr2 = substr1.shift();
-                      iter2 = arr2._validate(call2Result, obj, arg3);
+                      iter2 = arr2._validate(tmp, obj, arg3);
                       if (iter2.errors) {
                         obj3 = { pos: null, reason: null, value: null };
-                        obj3[0] = num;
-                        obj3[1] = iter2.errors;
-                        obj3[2] = call2Result;
+                        obj3.pos = num;
+                        obj3.reason = iter2.errors;
+                        obj3.value = tmp;
                         obj4 = { key: null, path: null };
-                        obj4[0] = arg2.key;
-                        obj4[1] = obj.path;
+                        obj4.key = fn.key;
+                        obj4.path = obj.path;
                         tmp74 = self;
                         str10 = "array.ordered";
                         tmp75 = obj3;
@@ -22340,9 +22032,9 @@ let fn = () => {
                         if (!self._flags.sparse) {
                           if (undefined === iter2.value) {
                             obj5 = { key: null, path: null, pos: null };
-                            obj5[0] = arg2.key;
-                            obj5[1] = obj.path;
-                            obj5[2] = num;
+                            obj5.key = fn.key;
+                            obj5.path = obj.path;
+                            obj5.pos = num;
                             tmp67 = self;
                             str9 = "array.sparse";
                             tmp68 = null;
@@ -22362,11 +22054,11 @@ let fn = () => {
                       }
                     } else if (!self._inner.items.length) {
                       obj6 = { pos: null, limit: null };
-                      obj6[0] = num;
-                      obj6[1] = self._inner.ordereds.length;
+                      obj6.pos = num;
+                      obj6.limit = self._inner.ordereds.length;
                       obj7 = { key: null, path: null };
-                      obj7[0] = arg2.key;
-                      obj7[1] = obj.path;
+                      obj7.key = fn.key;
+                      obj7.path = obj.path;
                       tmp20 = self;
                       str4 = "array.orderedLength";
                       tmp21 = obj6;
@@ -22386,7 +22078,7 @@ let fn = () => {
                   flag2 = false;
                   if (0 < length2) {
                     obj8 = substr[num3];
-                    iter = obj8._validate(call2Result, obj, arg3);
+                    iter = obj8._validate(tmp, obj, arg3);
                     items1[num3] = iter;
                     tmp25 = num3;
                     while (iter.errors) {
@@ -22403,9 +22095,9 @@ let fn = () => {
                       flag2 = true;
                       if (undefined === iter.value) {
                         obj8 = { key: null, path: null, pos: null };
-                        obj8[0] = arg2.key;
-                        obj8[1] = obj.path;
-                        obj8[2] = num;
+                        obj8.key = fn.key;
+                        obj8.path = obj.path;
+                        obj8.pos = num;
                         tmp29 = self;
                         str5 = "array.sparse";
                         tmp30 = null;
@@ -22441,7 +22133,7 @@ let fn = () => {
                         if (-1 !== index) {
                           tmp50 = items1[index];
                         } else {
-                          iter3 = obj10._validate(call2Result, obj, arg3);
+                          iter3 = obj10._validate(tmp, obj, arg3);
                           tmp50 = iter3;
                           if (!iter3.errors) {
                             if (obj10._flags.strip) {
@@ -22454,9 +22146,9 @@ let fn = () => {
                               if (!self._flags.sparse) {
                                 if (undefined === iter3.value) {
                                   obj9 = { key: null, path: null, pos: null };
-                                  obj9[0] = arg2.key;
-                                  obj9[1] = obj.path;
-                                  obj9[2] = num;
+                                  obj9.key = fn.key;
+                                  obj9.path = obj.path;
+                                  obj9.pos = num;
                                   tmp41 = self;
                                   str6 = "array.sparse";
                                   tmp42 = null;
@@ -22502,12 +22194,12 @@ let fn = () => {
                           str7 = "array.includesOne";
                         }
                         obj10 = { pos: null, reason: null, value: null };
-                        obj10[0] = num;
-                        obj10[1] = tmp50.errors;
-                        obj10[2] = call2Result;
+                        obj10.pos = num;
+                        obj10.reason = tmp50.errors;
+                        obj10.value = tmp;
                         obj11 = { key: null, path: null };
-                        obj11[0] = arg2.key;
-                        obj11[1] = obj.path;
+                        obj11.key = fn.key;
+                        obj11.path = obj.path;
                         tmp51 = self;
                         tmp52 = str7;
                         tmp53 = obj10;
@@ -22543,11 +22235,11 @@ let fn = () => {
                               str8 = "array.includes";
                             }
                             obj12 = { pos: null, value: null };
-                            obj12[0] = diff5;
-                            obj12[1] = call2Result;
+                            obj12.pos = diff5;
+                            obj12.value = tmp;
                             obj13 = { key: null, path: null };
-                            obj13[0] = arg2.key;
-                            obj13[1] = obj.path;
+                            obj13.key = fn.key;
+                            obj13.path = obj.path;
                             tmp59 = self;
                             tmp60 = str8;
                             tmp61 = obj12;
@@ -22575,17 +22267,17 @@ let fn = () => {
                 tmp79 = self;
                 tmp80 = items;
                 tmp81 = substr;
-                tmp82 = arg2;
+                tmp82 = fn;
                 tmp83 = arg3;
-                _fillMissedErrorsResult = _fillMissedErrors(items, substr, arg2, arg3);
+                _fillMissedErrorsResult = _fillMissedErrors(items, substr, fn, arg3);
               } else {
                 tmp92 = _fillMissedErrors;
                 tmp93 = self;
                 tmp94 = items;
                 tmp95 = substr;
-                tmp96 = arg2;
+                tmp96 = fn;
                 tmp97 = arg3;
-                callResult = call(self, items, substr, arg2, arg3);
+                callResult = call(self, items, substr, fn, arg3);
               }
             }
             if (substr1.length) {
@@ -22595,17 +22287,17 @@ let fn = () => {
                 tmp85 = self;
                 tmp86 = items;
                 tmp87 = substr1;
-                tmp88 = arg2;
+                tmp88 = fn;
                 tmp89 = arg3;
-                _fillOrderedErrorsResult = _fillOrderedErrors(items, substr1, arg2, arg3);
+                _fillOrderedErrorsResult = _fillOrderedErrors(items, substr1, fn, arg3);
               } else {
                 tmp99 = _fillOrderedErrors;
-                call2Result = self;
-                call2Result = items;
-                call2Result = substr1;
-                call2Result = arg2;
-                call2Result = arg3;
-                call2Result = call2(self, items, substr1, arg2, arg3);
+                tmp100 = self;
+                tmp101 = items;
+                tmp102 = substr1;
+                tmp103 = fn;
+                tmp104 = arg3;
+                call2Result = call2(self, items, substr1, fn, arg3);
               }
             }
             tmp91 = null;
@@ -22664,10 +22356,10 @@ let fn = () => {
               substr = call(arguments);
             }
             flattenResult = closure_3.flatten(substr);
-            item = flattenResult.forEach((otherwise, path) => {
+            item = flattenResult.forEach((item, path) => {
               try {
-                const schemaResult = closure_1_2.schema(otherwise);
-                items = _inner._inner.items;
+                const schemaResult = closure_2.schema(item);
+                items = cloneResult._inner.items;
                 items.push(schemaResult);
                 if ("required" === schemaResult._flags.presence) {
                   const requireds = tmp3._inner.requireds;
@@ -22706,10 +22398,10 @@ let fn = () => {
               substr = call(arguments);
             }
             flattenResult = closure_3.flatten(substr);
-            item = flattenResult.forEach((otherwise, path) => {
+            item = flattenResult.forEach((item, path) => {
               try {
-                const ordereds = _inner._inner.ordereds;
-                ordereds.push(closure_1_2.schema(otherwise));
+                const ordereds = cloneResult._inner.ordereds;
+                ordereds.push(closure_2.schema(item));
               } catch (obj) {
                 if (obj.hasOwnProperty("path")) {
                   obj.path = path + "." + obj.path;
@@ -22731,15 +22423,13 @@ let fn = () => {
               isIntegerResult = module >= 0;
             }
             assertResult = closure_3.assert(isIntegerResult, "limit must be a positive integer");
-            return this._test("min", module, function(arg0, mergeResult, convert) {
-              error = arg0;
-              if (arg0.length < closure_0) {
+            return this._test("min", module, function(value, mergeResult, concatSettingsResult) {
+              let error = value;
+              if (value.length < closure_0) {
                 const self = this;
-                obj = { limit: null, value: null };
-                obj[0] = tmp;
-                obj[1] = arg0;
+                obj = { limit: tmp, value };
                 const self2 = this;
-                error = this.createError("array.min", obj, mergeResult, convert);
+                error = this.createError("array.min", obj, mergeResult, concatSettingsResult);
               }
               return error;
             });
@@ -22753,15 +22443,13 @@ let fn = () => {
               isIntegerResult = module >= 0;
             }
             assertResult = closure_3.assert(isIntegerResult, "limit must be a positive integer");
-            return this._test("max", module, function(arg0, mergeResult, convert) {
-              error = arg0;
-              if (arg0.length > closure_0) {
+            return this._test("max", module, function(value, mergeResult, concatSettingsResult) {
+              let error = value;
+              if (value.length > closure_0) {
                 const self = this;
-                obj = { limit: null, value: null };
-                obj[0] = tmp;
-                obj[1] = arg0;
+                obj = { limit: tmp, value };
                 const self2 = this;
-                error = this.createError("array.max", obj, mergeResult, convert);
+                error = this.createError("array.max", obj, mergeResult, concatSettingsResult);
               }
               return error;
             });
@@ -22775,15 +22463,13 @@ let fn = () => {
               isIntegerResult = module >= 0;
             }
             assertResult = closure_3.assert(isIntegerResult, "limit must be a positive integer");
-            return this._test("length", module, function(arg0, mergeResult, convert) {
-              error = arg0;
-              if (arg0.length !== closure_0) {
+            return this._test("length", module, function(value, mergeResult, concatSettingsResult) {
+              let error = value;
+              if (value.length !== closure_0) {
                 const self = this;
-                obj = { limit: null, value: null };
-                obj[0] = tmp;
-                obj[1] = arg0;
+                obj = { limit: tmp, value };
                 const self2 = this;
-                error = this.createError("array.length", obj, mergeResult, convert);
+                error = this.createError("array.length", obj, mergeResult, concatSettingsResult);
               }
               return error;
             });
@@ -22797,7 +22483,7 @@ let fn = () => {
               deepEqual = closure_3.deepEqual;
             }
             assertResult = closure_3.assert(typeof deepEqual === "function", "comparator must be a function");
-            return this._test("unique", undefined, function(arg0, mergeResult, convert) {
+            return this._test("unique", undefined, function(arg0, mergeResult, concatSettingsResult) {
               let tmp;
               const self = this;
               obj = { string: {}, number: {}, undefined: {}, boolean: {}, object: [], function: [], custom: [] };
@@ -22805,34 +22491,23 @@ let fn = () => {
               if (0 < arg0.length) {
                 while (true) {
                   tmp = arg0[num];
-                  let tmp2 = num;
                   let str = "undefined";
                   if (undefined !== tmp) {
-                    let tmp3 = deepEqual;
                     str = deepEqual(tmp);
                   }
-                  let tmp4 = closure_1;
                   let arr = closure_1 ? obj.custom : obj[str];
                   if (arr) {
                     let _Array = Array;
                     if (Array.isArray(arr)) {
                       let num2 = 0;
                       if (0 < arr.length) {
-                        let tmp9 = deepEqual;
-                        let tmp10 = num2;
                         while (!deepEqual(arr[num2], tmp)) {
                           num2 = num2 + 1;
                           continue;
                         }
-                        obj = { pos: null, value: null };
-                        obj[0] = num;
-                        obj[1] = tmp;
+                        obj = { pos: num, value: tmp };
                         let str3 = "array.unique";
-                        let tmp12 = self;
-                        let tmp13 = obj;
-                        let tmp14 = mergeResult;
-                        let tmp15 = convert;
-                        return self.createError("array.unique", obj, mergeResult, convert);
+                        return self.createError("array.unique", obj, mergeResult, concatSettingsResult);
                       }
                       arr = arr.push(tmp);
                     } else if (arr[tmp]) {
@@ -22843,10 +22518,8 @@ let fn = () => {
                   }
                   num = num + 1;
                 }
-                obj = { pos: null, value: null };
-                obj[0] = num;
-                obj[1] = tmp;
-                return self.createError("array.unique", obj, mergeResult, convert);
+                obj = { pos: num, value: tmp };
+                return self.createError("array.unique", obj, mergeResult, concatSettingsResult);
               }
               return arg0;
             });
@@ -22897,10 +22570,10 @@ let fn = () => {
             if (items.length) {
               if (num) {
                 obj = { knownMisses: null, unknownMisses: null };
-                obj[0] = items;
-                obj[1] = num;
+                obj.knownMisses = items;
+                obj.unknownMisses = num;
                 obj1 = { key: null, path: null };
-                ({ key: obj7[0], path: obj7[1] } = arg2);
+                ({ key: obj7.key, path: obj7.path } = fn);
                 str3 = "array.includesRequiredBoth";
                 tmp16 = self;
                 tmp17 = obj;
@@ -22909,9 +22582,9 @@ let fn = () => {
                 arr1 = push(createError("array.includesRequiredBoth", obj, obj1, arg3));
               } else {
                 obj2 = { knownMisses: null };
-                obj2[0] = items;
+                obj2.knownMisses = items;
                 obj3 = { key: null, path: null };
-                ({ key: obj5[0], path: obj5[1] } = arg2);
+                ({ key: obj5.key, path: obj5.path } = fn);
                 str2 = "array.includesRequiredKnowns";
                 tmp11 = self;
                 tmp12 = obj2;
@@ -22921,9 +22594,9 @@ let fn = () => {
               }
             } else {
               obj4 = { unknownMisses: null };
-              obj4[0] = num;
+              obj4.unknownMisses = num;
               obj5 = { key: null, path: null };
-              ({ key: obj3[0], path: obj3[1] } = arg2);
+              ({ key: obj3.key, path: obj3.path } = fn);
               str = "array.includesRequiredUnknowns";
               tmp6 = self;
               tmp7 = obj4;
@@ -22945,7 +22618,7 @@ let fn = () => {
             if (items.length) {
               self = this;
               tmp4 = module;
-              tmp5 = arg2;
+              tmp5 = fn;
               tmp6 = arg3;
               _fillMissedErrors = this._fillMissedErrors;
               call = _fillMissedErrors.call;
@@ -22953,17 +22626,17 @@ let fn = () => {
                 tmp7 = self;
                 tmp8 = module;
                 tmp9 = items;
-                tmp10 = arg2;
+                tmp10 = fn;
                 tmp11 = arg3;
-                _fillMissedErrorsResult = _fillMissedErrors(module, items, arg2, arg3);
+                _fillMissedErrorsResult = _fillMissedErrors(module, items, fn, arg3);
               } else {
                 tmp13 = _fillMissedErrors;
                 tmp14 = self;
                 tmp15 = module;
                 tmp16 = items;
-                tmp17 = arg2;
+                tmp17 = fn;
                 tmp18 = arg3;
-                callResult = call(self, module, items, arg2, arg3);
+                callResult = call(self, module, items, fn, arg3);
               }
             }
             return;
@@ -22981,9 +22654,8 @@ let fn = () => {
           prototype = tmp2.prototype;
         }
         obj = { constructor: null };
-        obj = { value: null, enumerable: false, writable: true, configurable: true };
-        obj[0] = _class;
-        obj[0] = obj;
+        obj = { value: _class, enumerable: false, writable: true, configurable: true };
+        obj.constructor = obj;
         _class.prototype = Object.create(prototype, obj);
         if (tmp2) {
           const _Object = Object;
@@ -22996,7 +22668,6 @@ let fn = () => {
               let tmp3 = ownPropertyNames[num4];
               let _Object3 = Object;
               let ownPropertyDescriptor = Object.getOwnPropertyDescriptor(tmp2, tmp3);
-              let tmp5 = num4;
               let configurable = ownPropertyDescriptor;
               if (ownPropertyDescriptor) {
                 configurable = ownPropertyDescriptor.configurable;
@@ -23041,13 +22712,12 @@ let fn = () => {
         str = typeof arg0;
       };
     },
-    (arg0, arg1, arg2) => {
+    (arg0, arg1, fn) => {
       closure_0 = arg0;
-      closure_1 = arg2;
-      const fn = (_Buffer) => {
-        closure_0 = _Buffer;
-        const tmp = _class(14);
-        _class = _class(2);
+      closure_1 = fn;
+      fn = (_Buffer) => {
+        const tmp = closure_1(14);
+        const _class = closure_1(2);
         closure_0 = tmp;
         class _class {
           constructor() {
@@ -23169,8 +22839,8 @@ let fn = () => {
         if (tmp) {
           prototype = tmp.prototype;
         }
-        obj = { value: _class, enumerable: false, writable: true, configurable: true };
-        _class.prototype = Object.create(prototype, { constructor: obj });
+        obj = { constructor: { value: _class, enumerable: false, writable: true, configurable: true } };
+        _class.prototype = Object.create(prototype, obj);
         if (tmp) {
           const _Object = Object;
           const _Object2 = Object;
@@ -23184,7 +22854,6 @@ let fn = () => {
                 let tmp2 = ownPropertyNames[num];
                 let _Object3 = Object;
                 let ownPropertyDescriptor = Object.getOwnPropertyDescriptor(tmp, tmp2);
-                let tmp4 = num;
                 let configurable = ownPropertyDescriptor;
                 if (ownPropertyDescriptor) {
                   configurable = ownPropertyDescriptor.configurable;
@@ -23315,7 +22984,7 @@ let fn = () => {
         closure_0.exports = binary;
       };
       let call = fn.call;
-      const _Buffer = arg2(3).Buffer;
+      const _Buffer = fn(3).Buffer;
       if (typeof call === "unknown") {
         fn(_Buffer);
       } else {
@@ -23323,20 +22992,21 @@ let fn = () => {
       }
     },
     (arg0, arg1) => {
+      const exports = { _args: null, _from: "joi@10.0.5", _id: "joi@10.0.5", _inCache: true, _location: "/joi", _nodeVersion: "6.9.1", _npmOperationalInternal: { host: "packages-12-west.internal.npmjs.com", tmp: "tmp/joi-10.0.5.tgz_1480956525182_0.0934728232678026" }, _npmUser: { name: "marsup", email: "nicolas@morel.io" }, _npmVersion: "3.10.10", _phantomChildren: {}, _requested: { raw: "joi@10.0.5", scope: null, escapedName: "joi", name: "joi", rawSpec: "10.0.5", spec: "10.0.5", type: "version" }, _requiredBy: ["#DEV:/"], _resolved: "https://registry.npmjs.org/joi/-/joi-10.0.5.tgz", _shasum: "2e43af9bf24d2d5745852e9ab968c85be357bd6a", _shrinkwrap: null, _spec: "joi@10.0.5", _where: "/Users/jeff/projects/joi-browser", bugs: { url: "https://github.com/hapijs/joi/issues" }, dependencies: { hoek: "4.x.x", isemail: "2.x.x", items: "2.x.x", topo: "2.x.x" }, description: "Object schema validation", devDependencies: { code: "4.x.x", lab: "11.x.x", "markdown-toc": "0.13.x" }, directories: {}, dist: { shasum: "2e43af9bf24d2d5745852e9ab968c85be357bd6a", tarball: "https://registry.npmjs.org/joi/-/joi-10.0.5.tgz" }, engines: { node: ">=4.0.0" }, gitHead: "abfe727885af779a676e6a205ee15cdc8b435691", homepage: "https://github.com/hapijs/joi", keywords: ["hapi", "schema", "validation"], license: "BSD-3-Clause", main: "lib/index.js", maintainers: null, name: "joi", optionalDependencies: {}, readme: "ERROR: No README data found!", repository: { type: "git", url: "git://github.com/hapijs/joi.git" }, scripts: { test: "lab -t 100 -a code -L", "test-cov-html": "lab -r html -o coverage.html -a code", "test-debug": "node $NODE_DEBUG_OPTION ./node_modules/.bin/lab -a code", toc: "node generate-readme-toc.js", version: "npm run toc && git add API.md README.md" }, version: "10.0.5" };
       items = [{ raw: "joi@10.0.5", scope: null, escapedName: "joi", name: "joi", rawSpec: "10.0.5", spec: "10.0.5", type: "version" }, "/Users/jeff/projects/joi-browser"];
       const items1 = [items];
+      exports._args = items1;
       const items2 = [{ name: "hueniverse", email: "eran@hueniverse.com" }, { name: "marsup", email: "marsup@gmail.com" }];
-      arg0.exports = { _args: items1, _from: "joi@10.0.5", _id: "joi@10.0.5", _inCache: true, _location: "/joi", _nodeVersion: "6.9.1", _npmOperationalInternal: { host: "packages-12-west.internal.npmjs.com", tmp: "tmp/joi-10.0.5.tgz_1480956525182_0.0934728232678026" }, _npmUser: { name: "marsup", email: "nicolas@morel.io" }, _npmVersion: "3.10.10", _phantomChildren: {}, _requested: { raw: "joi@10.0.5", scope: null, escapedName: "joi", name: "joi", rawSpec: "10.0.5", spec: "10.0.5", type: "version" }, _requiredBy: ["#DEV:/"], _resolved: "https://registry.npmjs.org/joi/-/joi-10.0.5.tgz", _shasum: "2e43af9bf24d2d5745852e9ab968c85be357bd6a", _shrinkwrap: null, _spec: "joi@10.0.5", _where: "/Users/jeff/projects/joi-browser", bugs: { url: "https://github.com/hapijs/joi/issues" }, dependencies: { hoek: "4.x.x", isemail: "2.x.x", items: "2.x.x", topo: "2.x.x" }, description: "Object schema validation", devDependencies: { code: "4.x.x", lab: "11.x.x", "markdown-toc": "0.13.x" }, directories: {}, dist: { shasum: "2e43af9bf24d2d5745852e9ab968c85be357bd6a", tarball: "https://registry.npmjs.org/joi/-/joi-10.0.5.tgz" }, engines: { node: ">=4.0.0" }, gitHead: "abfe727885af779a676e6a205ee15cdc8b435691", homepage: "https://github.com/hapijs/joi", keywords: ["hapi", "schema", "validation"], license: "BSD-3-Clause", main: "lib/index.js", maintainers: items2, name: "joi", optionalDependencies: {}, readme: "ERROR: No README data found!", repository: { type: "git", url: "git://github.com/hapijs/joi.git" }, scripts: { test: "lab -t 100 -a code -L", "test-cov-html": "lab -r html -o coverage.html -a code", "test-debug": "node $NODE_DEBUG_OPTION ./node_modules/.bin/lab -a code", toc: "node generate-readme-toc.js", version: "npm run toc && git add API.md README.md" }, version: "10.0.5" };
+      exports.maintainers = items2;
+      arg0.exports = exports;
     }
   ];
-  function __webpack_require__(arg0) {
-    if (obj[arg0]) {
-      return tmp[arg0].exports;
+  function __webpack_require__(id) {
+    if (obj[id]) {
+      return tmp[id].exports;
     } else {
-      obj = { exports: null, id: null, loaded: false };
-      obj[0] = {};
-      obj[1] = arg0;
-      tmp[arg0] = obj;
+      obj = { exports: {}, id, loaded: false };
+      tmp[id] = obj;
       const call = tmp3.call;
       ({ exports: _exports, exports: _exports2 } = obj);
       if (typeof call === "unknown") {
@@ -23348,26 +23018,25 @@ let fn = () => {
       return obj.exports;
     }
   }
-  let obj = {};
+  let exports = {};
   __webpack_require__.m = items;
-  __webpack_require__.c = obj;
+  __webpack_require__.c = exports;
   __webpack_require__.p = "";
-  if (obj[0]) {
-    let _exports3 = obj[0].exports;
+  if (exports[0]) {
+    let _exports3 = exports[0].exports;
   } else {
-    obj = { exports: null, id: 0, loaded: false };
-    obj[0] = {};
-    obj[0] = obj;
+    exports = { exports: {}, id: 0, loaded: false };
+    exports.exports = exports;
     let first = items[0];
     let call = first.call;
-    ({ exports: _exports, exports: _exports2 } = obj);
+    ({ exports: _exports, exports: _exports2 } = exports);
     if (typeof call === "unknown") {
-      first(obj, _exports2, __webpack_require__);
+      first(exports, _exports2, __webpack_require__);
     } else {
-      call(_exports, obj, _exports2, __webpack_require__);
+      call(_exports, exports, _exports2, __webpack_require__);
     }
-    obj.loaded = true;
-    _exports3 = obj.exports;
+    exports.loaded = true;
+    _exports3 = exports.exports;
   }
   return _exports3;
 };
@@ -23383,7 +23052,6 @@ if (typeof globalThis.define === "function") {
 }
 const fnResult = fn();
 for (const key10009 in fnResult) {
-  let tmp4 = key10009;
   let self = this;
   if (typeof arg5 === "object") {
     self = arg5;

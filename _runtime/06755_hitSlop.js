@@ -1,25 +1,27 @@
 // === Module 6755: hitSlop ===
 
 // Module 6755 (hitSlop)
-import noopDefault from "noop" /* 19 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "_objectWithoutProperties" /* 109 */;
-import noop from "noop" /* 19 */;
-import { Platform } from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
-import tagMessage from "tagMessage" /* 6660 */;
+import _mod6727 from "module_6727" /* 6727 */;
+import touchDataToPressEvent from "touchDataToPressEvent" /* 6756 */;
+import StateMachineEvent2 from "StateMachineEvent" /* 6759 */;
+import _slicedToArray from "module_32" /* 32 */;
+import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
+require = fn;
 let closure_2 = ["testOnly_pressed", "hitSlop", "pressRetentionOffset", "delayHoverIn", "delayHoverOut", "delayLongPress", "unstable_pressDelay", "onHoverIn", "onHoverOut", "onPress", "onPressIn", "onPressOut", "onLongPress", "onLayout", "style", "children", "android_disableSound", "android_ripple", "disabled", "accessible", "simultaneousWith", "requireToFail", "block"];
-({ use: c5, useCallback: closure_6, useEffect: error, useMemo: closure_8, useRef: c9, useState: c10 } = noop);
-noopDefault;
+let noop = fn(19);
+({ use: hasOwnProperty, useCallback: metroRequire, useEffect: closure_7, useMemo: closure_8, useRef: closure_9, useState: c10 } = noop);
+const Platform = fn(17).Platform;
+const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
+const tagMessage = fn(6660);
 let closure_14 = tagMessage.isTestEnv();
 
 export default function _default(pressRetentionOffset) {
   ({ testOnly_pressed, hitSlop } = pressRetentionOffset);
   pressRetentionOffset = pressRetentionOffset.pressRetentionOffset;
-  ({ delayHoverIn: closure_2, delayHoverOut: closure_3, delayLongPress } = pressRetentionOffset);
+  ({ delayHoverIn: closure_2, delayHoverOut: _slicedToArray, delayLongPress } = pressRetentionOffset);
   const unstable_pressDelay = pressRetentionOffset.unstable_pressDelay;
   ({ onHoverIn: closure_6, onHoverOut: closure_7, onPress } = pressRetentionOffset);
   const onPressIn = pressRetentionOffset.onPressIn;
@@ -33,39 +35,35 @@ export default function _default(pressRetentionOffset) {
   if (testOnly_pressed == null) {
     testOnly_pressed = false;
   }
-  [tmp4, closure_14] = callback(onPressOut(testOnly_pressed), 2);
-  closure_15 = onPressIn(null);
-  closure_16 = onPressIn(null);
-  closure_17 = onPressIn(true);
+  [tmp4, closure_14] = _slicedToArray(onPressOut(testOnly_pressed), 2);
+  onPressIn(null);
+  onPressIn(null);
+  onPressIn(true);
   const tmp7 = unstable_pressDelay(hitSlop(pressRetentionOffset[6]).JSResponderContext);
   closure_18 = tmp7;
-  closure_19 = onPressIn(false);
+  onPressIn(false);
   closure_20 = onPressIn({ width: 0, height: 0 });
-  closure_21 = onPressIn(null);
+  onPressIn(null);
   const items = [hitSlop];
   let tmp9 = onPress(() => {
     if (typeof hitSlop === "number") {
-      let numberAsInsetResult = hitSlop(pressRetentionOffset[7]).numberAsInset(tmp);
-      const obj2 = hitSlop(pressRetentionOffset[7]);
+      let numberAsInsetResult = touchDataToPressEvent.numberAsInset(tmp);
     } else {
       numberAsInsetResult = tmp;
       if (tmp == null) {
-        numberAsInsetResult = hitSlop(pressRetentionOffset[7]).numberAsInset(0);
-        const obj = hitSlop(pressRetentionOffset[7]);
+        numberAsInsetResult = touchDataToPressEvent.numberAsInset(0);
       }
     }
     return numberAsInsetResult;
   }, items);
   closure_22 = tmp9;
   const items1 = [pressRetentionOffset];
-  const tmp2 = onPressOut;
-  let tmp3 = callback(onPressOut(testOnly_pressed), 2);
+  let tmp3 = _slicedToArray(onPressOut(testOnly_pressed), 2);
   const tmp8 = onPress;
   let obj = hitSlop(pressRetentionOffset[7]);
   const addInsetsResult = obj.addInsets(tmp9, onPress(() => {
     if (typeof pressRetentionOffset === "number") {
-      let numberAsInsetResult = hitSlop(pressRetentionOffset[7]).numberAsInset(tmp);
-      const obj2 = hitSlop(pressRetentionOffset[7]);
+      let numberAsInsetResult = touchDataToPressEvent.numberAsInset(tmp);
     } else {
       numberAsInsetResult = tmp;
       if (tmp == null) {
@@ -74,7 +72,7 @@ export default function _default(pressRetentionOffset) {
     }
     return numberAsInsetResult;
   }, items1));
-  const tmp13 = callback2(() => {
+  const tmp13 = closure_6(() => {
     if (ref.current) {
       const _clearTimeout = clearTimeout;
       clearTimeout(tmp.current);
@@ -83,7 +81,7 @@ export default function _default(pressRetentionOffset) {
     }
   }, []);
   closure_23 = tmp13;
-  const tmp14 = callback2(() => {
+  const tmp14 = closure_6(() => {
     if (ref2.current) {
       const _clearTimeout = clearTimeout;
       clearTimeout(tmp.current);
@@ -92,29 +90,28 @@ export default function _default(pressRetentionOffset) {
   }, []);
   closure_24 = tmp14;
   const items2 = [onLongPress, tmp13, delayLongPress];
-  const tmp15 = callback2((arg0) => {
+  const tmp15 = closure_6((arg0) => {
     closure_0 = arg0;
     if (onLongPress) {
-      callback2();
+      closure_23();
       let num = delayLongPress;
       if (delayLongPress == null) {
         num = 500;
       }
       closure_15.current = setTimeout(() => {
-        closure_1_17.current = false;
-        closure_1_11(closure_0);
+        closure_17.current = false;
+        onLongPress(closure_0);
       }, num);
-      const tmp3 = closure_15;
     }
   }, items2);
   closure_25 = tmp15;
   const items3 = [onPressIn, tmp15];
-  const tmp16 = callback2((arg0) => {
+  const tmp16 = closure_6((arg0) => {
     if (onPressIn != null) {
       tmp(arg0);
     }
-    callback4(arg0);
-    callback(true);
+    closure_25(arg0);
+    closure_1_14(true);
     if (ref2.current) {
       const _clearTimeout = clearTimeout;
       clearTimeout(tmp5.current);
@@ -123,23 +120,22 @@ export default function _default(pressRetentionOffset) {
   }, items3);
   closure_26 = tmp16;
   const items4 = [tmp14, tmp13];
-  const tmp17 = callback2(() => {
+  const tmp17 = closure_6(() => {
     closure_19.current = false;
     closure_21.current = null;
-    callback2();
-    callback3();
-    callback(false);
+    closure_23();
+    closure_24();
+    closure_1_14(false);
   }, items4);
   closure_27 = tmp17;
   const items5 = [tmp7];
-  closure_28 = callback2(() => {
+  closure_28 = closure_6(() => {
     if (ref5.current == null) {
-      tmp.current = hitSlop(pressRetentionOffset[6]).isKeyboardDismissingTap(closure_18);
-      const obj = hitSlop(pressRetentionOffset[6]);
+      tmp.current = _mod6727.isKeyboardDismissingTap(closure_18);
     }
   }, items5);
   const items6 = [tmp16, tmp9, unstable_pressDelay];
-  const tmp18 = callback2((nativeEvent) => {
+  const tmp18 = closure_6((nativeEvent) => {
     closure_0 = nativeEvent;
     let flag = arg1;
     if (arg1 === undefined) {
@@ -155,16 +151,16 @@ export default function _default(pressRetentionOffset) {
       if (unstable_pressDelay) {
         const _setTimeout = setTimeout;
         closure_16.current = setTimeout(() => {
-          closure_1_26(closure_0);
+          closure_26(closure_0);
         }, tmp6);
       } else {
-        callback5(nativeEvent);
+        closure_26(nativeEvent);
       }
     }
   }, items6);
   closure_29 = tmp18;
   const items7 = [tmp17, tmp16, onPress, onPressOut];
-  const tmp19 = callback2((arg0) => {
+  const tmp19 = closure_6((arg0) => {
     let flag = arg1;
     if (arg1 === undefined) {
       flag = true;
@@ -172,7 +168,7 @@ export default function _default(pressRetentionOffset) {
     if (ref4.current) {
       tmp.current = false;
       if (ref2.current) {
-        callback5(arg0);
+        closure_26(arg0);
       }
       if (onPressOut != null) {
         onPressOut(arg0);
@@ -182,7 +178,7 @@ export default function _default(pressRetentionOffset) {
           onPress(arg0);
         }
       }
-      callback6();
+      closure_27();
       tmp9 = ref3.current && flag;
     }
   }, items7);
@@ -191,15 +187,15 @@ export default function _default(pressRetentionOffset) {
     const pressableStateMachine = new hitSlop(pressRetentionOffset[8]).PressableStateMachine();
     return pressableStateMachine;
   }, []);
-  closure_31 = tmp20;
-  obj1 = hitSlop(pressRetentionOffset[9]);
+  const navigation = tmp20;
+  let obj1 = hitSlop(pressRetentionOffset[9]);
   const isScreenReaderEnabled = obj1.useIsScreenReaderEnabled();
   const items8 = [tmp18, tmp19, tmp20, isScreenReaderEnabled];
-  callback3(() => {
-    navigation.setStates(hitSlop(pressRetentionOffset[10]).getStatesConfig(closure_29, closure_30, isScreenReaderEnabled));
+  closure_7(() => {
+    navigation.setStates(StateMachineEvent2.getStatesConfig(closure_29, closure_30, isScreenReaderEnabled));
   }, items8);
-  closure_33 = onPressIn(null);
-  closure_34 = onPressIn(null);
+  onPressIn(null);
+  onPressIn(null);
   let obj2 = hitSlop(pressRetentionOffset[11]);
   obj = {
     manualActivation: true,
@@ -214,9 +210,8 @@ export default function _default(pressRetentionOffset) {
         const _setTimeout = setTimeout;
         closure_33.current = setTimeout(() => {
           let tmpResult;
-          if (closure_1_6 != null) {
-            tmpResult = tmp(hitSlop(pressRetentionOffset[7]).gestureToPressableEvent(closure_0));
-            const obj = hitSlop(pressRetentionOffset[7]);
+          if (closure_2_6 != null) {
+            tmpResult = tmp(touchDataToPressEvent.gestureToPressableEvent(closure_0));
           }
           return tmpResult;
         }, tmp4);
@@ -235,9 +230,8 @@ export default function _default(pressRetentionOffset) {
         const _setTimeout = setTimeout;
         closure_34.current = setTimeout(() => {
           let tmpResult;
-          if (closure_1_7 != null) {
-            tmpResult = tmp(hitSlop(pressRetentionOffset[7]).gestureToPressableEvent(closure_0));
-            const obj = hitSlop(pressRetentionOffset[7]);
+          if (closure_2_7 != null) {
+            tmpResult = tmp(touchDataToPressEvent.gestureToPressableEvent(closure_0));
           }
           return tmpResult;
         }, tmp4);
@@ -246,7 +240,7 @@ export default function _default(pressRetentionOffset) {
         let obj = hitSlop(pressRetentionOffset[7]);
       }
     },
-    enabled: tmp23,
+    enabled: true !== disabled,
     disableReanimated: true,
     simultaneousWith,
     block,
@@ -260,23 +254,22 @@ export default function _default(pressRetentionOffset) {
     maxDistance: hitSlop(pressRetentionOffset[5]).INT32_MAX,
     cancelsTouchesInView: false,
     onTouchesDown(arg0) {
-      callback7();
+      closure_28();
       if (!ref5.current) {
-        const result = hitSlop(pressRetentionOffset[7]).gestureTouchToPressableEvent(arg0);
-        navigation.handleEvent(hitSlop(pressRetentionOffset[10]).StateMachineEvent.LONG_PRESS_TOUCHES_DOWN, result);
-        const obj = hitSlop(pressRetentionOffset[7]);
+        const result = touchDataToPressEvent.gestureTouchToPressableEvent(arg0);
+        navigation.handleEvent(StateMachineEvent2.StateMachineEvent.LONG_PRESS_TOUCHES_DOWN, result);
       }
     },
     onTouchesUp() {
       if (!isScreenReaderEnabled) {
         navigation.reset();
-        callback6();
+        closure_27();
       }
     },
     onTouchesCancel(arg0) {
-      const result = hitSlop(pressRetentionOffset[7]).gestureTouchToPressableEvent(arg0);
+      const result = touchDataToPressEvent.gestureTouchToPressableEvent(arg0);
       navigation.reset();
-      callback9(result, false);
+      closure_30(result, false);
     },
     onFinalize(arg0) {
 
@@ -291,8 +284,7 @@ export default function _default(pressRetentionOffset) {
   const longPressGesture = obj4.useLongPressGesture(obj);
   const tmp10 = onPress(() => {
     if (typeof pressRetentionOffset === "number") {
-      let numberAsInsetResult = hitSlop(pressRetentionOffset[7]).numberAsInset(tmp);
-      const obj2 = hitSlop(pressRetentionOffset[7]);
+      let numberAsInsetResult = touchDataToPressEvent.numberAsInset(tmp);
     } else {
       numberAsInsetResult = tmp;
       if (tmp == null) {
@@ -301,30 +293,28 @@ export default function _default(pressRetentionOffset) {
     }
     return numberAsInsetResult;
   }, items1);
-  const tmp12 = callback2;
+  const tmp12 = closure_6;
   obj1 = {
     onTouchesCancel(arg0) {
-      const result = hitSlop(pressRetentionOffset[7]).gestureTouchToPressableEvent(arg0);
+      const result = touchDataToPressEvent.gestureTouchToPressableEvent(arg0);
       navigation.reset();
-      callback9(result, false);
+      closure_30(result, false);
     },
     onBegin() {
-      callback7();
+      closure_28();
       if (!ref5.current) {
-        if (onLongPress.isTV) {
-          callback8(hitSlop(pressRetentionOffset[7]).viewCenterToPressableEvent(closure_20.current), true);
-          const obj2 = hitSlop(pressRetentionOffset[7]);
+        if (Platform.isTV) {
+          closure_29(touchDataToPressEvent.viewCenterToPressableEvent(closure_20.current), true);
         } else {
           const handleEvent = navigation.handleEvent;
-          const NATIVE_BEGIN = hitSlop(pressRetentionOffset[10]).StateMachineEvent.NATIVE_BEGIN;
+          const NATIVE_BEGIN = StateMachineEvent2.StateMachineEvent.NATIVE_BEGIN;
           if (isScreenReaderEnabled) {
-            handleEvent(NATIVE_BEGIN, tmp5(tmp6[7]).viewCenterToPressableEvent(closure_20.current));
-            const tmp5Result = tmp5(tmp6[7]);
+            handleEvent(NATIVE_BEGIN, tmp5(6756).viewCenterToPressableEvent(closure_20.current));
+            const tmp5Result = tmp5(6756);
           } else {
             handleEvent(NATIVE_BEGIN);
           }
-          tmp5 = hitSlop;
-          tmp6 = pressRetentionOffset;
+          tmp5 = require;
         }
       }
     },
@@ -332,13 +322,13 @@ export default function _default(pressRetentionOffset) {
 
     },
     onFinalize(canceled) {
-      if (onLongPress.isTV) {
-        callback9(hitSlop(pressRetentionOffset[7]).viewCenterToPressableEvent(closure_20.current), !canceled.canceled);
-        callback6();
+      if (Platform.isTV) {
+        closure_30(touchDataToPressEvent.viewCenterToPressableEvent(closure_20.current), !canceled.canceled);
+        closure_27();
       } else {
-        const StateMachineEvent = hitSlop(pressRetentionOffset[10]).StateMachineEvent;
+        const StateMachineEvent = StateMachineEvent2.StateMachineEvent;
         navigation.handleEvent(canceled.canceled ? StateMachineEvent.CANCEL : StateMachineEvent.FINALIZE);
-        callback6();
+        closure_27();
       }
     },
     enabled: tmp23,
@@ -353,14 +343,12 @@ export default function _default(pressRetentionOffset) {
   const obj7 = hitSlop(pressRetentionOffset[11]);
   const simultaneousGestures = hitSlop(pressRetentionOffset[11]).useSimultaneousGestures(nativeGesture, longPressGesture, hoverGesture);
   if (typeof style === "function") {
-    obj2 = { pressed: null };
-    obj2[0] = tmp4;
+    obj2 = { pressed: tmp4 };
     style = style(obj2);
   }
   let childrenResult = children;
   if (typeof children === "function") {
-    const obj3 = { pressed: null };
-    obj3[0] = tmp4;
+    const obj3 = { pressed: tmp4 };
     childrenResult = children(obj3);
   }
   const items9 = [android_ripple];
@@ -422,6 +410,6 @@ export default function _default(pressRetentionOffset) {
   obj5.testOnly_onLongPress = tmp42;
   const items12 = [childrenResult, null];
   obj5.children = items12;
-  obj4[1] = android_ripple(hitSlop(pressRetentionOffset[14]).PureNativeButton, obj5);
+  obj4.children = android_ripple(hitSlop(pressRetentionOffset[14]).PureNativeButton, obj5);
   return onLayout(hitSlop(pressRetentionOffset[13]).GestureDetector, obj4);
 };

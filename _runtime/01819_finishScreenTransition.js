@@ -2,9 +2,9 @@
 
 // Module 1819 (finishScreenTransition)
 import startScreenTransition from "startScreenTransition" /* 1820 */;
-import n from "n" /* 1824 */;
+import _mod1824 from "module_1824" /* 1824 */;
 
 
 export const finishScreenTransition = startScreenTransition.finishScreenTransition;
 export const startScreenTransition = startScreenTransition.startScreenTransition;
-export const ScreenTransition = n.ScreenTransition;
+export const ScreenTransition = _mod1824.ScreenTransition;

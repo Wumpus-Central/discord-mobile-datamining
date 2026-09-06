@@ -2,13 +2,15 @@
 
 // Module 1266 (v4)
 import unsafeStringify from "unsafeStringify" /* 1259 */;
+import _modDef1267 from "module_1267" /* 1267 */;
 
 require = arg1;
-const module = arg2;
+importDefault = arg2;
 const dependencyMap = arg6;
-arg5.default = function v4(arg0, arg1, arg2) {
+
+export default function v4(arg0, arg1, arg2) {
   let obj = arg0;
-  if (module(1267).randomUUID) {
+  if (_modDef1267.randomUUID) {
     if (!arg1) {
       if (!obj) {
         return tmp(1267).randomUUID();

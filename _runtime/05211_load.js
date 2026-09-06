@@ -1,17 +1,19 @@
 // === Module 5211: load ===
 
 // Module 5211 (load)
-import errorDefault from "error" /* 5212 */;
+import _modDef5212 from "module_5212" /* 5212 */;
+import _mod5213 from "module_5213" /* 5213 */;
 
-const require = arg1;
-function load(response, then) {
-  if (then === undefined) {
+require = arg1;
+function load(response, response) {
+  let then = response;
+  if (response === undefined) {
     then = {};
   }
   response = then;
   if (typeof response === "string") {
     then.async = true;
-    obj1 = /^\w+:\/\//;
+    let obj1 = /^\w+:\/\//;
     if (obj1.test(response)) {
       let fn = globalThis;
       const _fetch = fetch;
@@ -27,8 +29,7 @@ function load(response, then) {
         }
         let obj = { method: "GET" };
         if (isIntegerResult) {
-          obj = { range: null };
-          obj[0] = `bytes=0-${length - 1}`;
+          obj = { range: `bytes=0-${length - 1}` };
           obj.headers = obj;
         }
         response = fn.fetch(response, obj);
@@ -44,34 +45,33 @@ function load(response, then) {
         nextPromise = new Promise((arg0, arg1) => {
           closure_0 = arg0;
           closure_1 = arg1;
-          let isIntegerResult = Number.isInteger(closure_1);
+          let isIntegerResult = Number.isInteger(length);
           if (isIntegerResult) {
             isIntegerResult = tmp >= 0;
           }
           let obj = {};
           if (isIntegerResult) {
-            obj = { range: null };
-            obj[0] = `bytes=0-${tmp - 1}`;
+            obj = { range: `bytes=0-${tmp - 1}` };
             obj.headers = obj;
           }
-          if (obj3.test(closure_0)) {
+          if (obj3.test(response)) {
             let get = __non_webpack_require__("https").get;
           } else {
             get = __non_webpack_require__("http").get;
           }
-          const value = get(closure_0, obj, (statusCode) => {
+          value = get(response, obj, (statusCode) => {
             if (statusCode.statusCode >= 200) {
               if (statusCode.statusCode <= 299) {
                 closure_0 = [];
-                statusCode.on("data", (arg0) => arr.push(Buffer.from(arg0)));
-                statusCode.on("error", (arg0) => callback(arg0));
-                statusCode.on("end", () => arr(Buffer.concat(arr)));
+                statusCode.on("data", (arg0) => closure_0.push(Buffer.from(arg0)));
+                statusCode.on("error", (arg0) => closure_1_1(arg0));
+                statusCode.on("end", () => closure_0(Buffer.concat(closure_0)));
               }
             }
-            callback("Could not fetch file: " + statusCode.statusCode + " " + statusCode.statusMessage);
+            closure_1("Could not fetch file: " + statusCode.statusCode + " " + statusCode.statusMessage);
             statusCode.resume();
           });
-          value.on("error", (arg0) => callback(arg0));
+          value.on("error", (arg0) => closure_1(arg0));
         });
       }
     } else {
@@ -97,7 +97,7 @@ function load(response, then) {
           obj.open(closure_0, (arg0, arg1) => {
             closure_0 = arg1;
             if (arg0) {
-              callback(arg0);
+              closure_1(arg0);
             } else {
               obj.stat(closure_0, (arg0, size) => {
                 if (arg0) {
@@ -107,14 +107,12 @@ function load(response, then) {
                   const _Buffer = Buffer;
                   const allocResult = Buffer.alloc(bound);
                   closure_0 = allocResult;
-                  obj = { buffer: null, length: null };
-                  obj[0] = allocResult;
-                  obj[1] = bound;
+                  obj = { buffer: allocResult, length: bound };
                   closure_1_2.read(closure_0, obj, (arg0) => {
                     if (arg0) {
-                      closure_2_1(arg0);
+                      closure_1(arg0);
                     } else {
-                      closure_2_2.close(allocResult, () => { ... });
+                      obj.close(closure_0, () => { ... });
                     }
                   });
                 }
@@ -123,8 +121,8 @@ function load(response, then) {
           });
         });
       }
-      nextPromise = resolved.then((response) => {
-        let buffer = response;
+      nextPromise = resolved.then((result) => {
+        let buffer = result;
         if ((function isNodeBuffer(response) {
           try {
             const _Buffer = Buffer;
@@ -132,18 +130,18 @@ function load(response, then) {
           } catch (err) {
             return false;
           }
-        })(response)) {
+        })(result)) {
           const _Uint8Array = Uint8Array;
-          const uint8Array = new Uint8Array(response);
+          const uint8Array = new Uint8Array(result);
           buffer = uint8Array.buffer;
         }
-        return closure_1_3((function getDataView(buffer) {
+        return loadView((function getDataView(buffer) {
           try {
             const _DataView = DataView;
             const dataView = new DataView(buffer);
             return dataView;
           } catch (err) {
-            const tmp13 = new callback(table[2])(tmp);
+            const tmp13 = new length(closure_1_2[2])(tmp);
             return tmp13;
           }
         })(buffer), response);
@@ -158,15 +156,16 @@ function load(response, then) {
     }
     if (tmp24) {
       then.async = true;
-      const promise = new Promise((closure_0) => {
+      const promise = new Promise((arg0, arg1) => {
+        closure_0 = arg0;
         closure_1 = arg1;
         const fileReader = new FileReader();
-        fileReader.onload = (target) => callback(target.target.result);
-        fileReader.onerror = () => callback2(fileReader.error);
-        const asArrayBuffer = fileReader.readAsArrayBuffer(closure_0);
+        fileReader.onload = (target) => closure_0(target.target.result);
+        fileReader.onerror = () => closure_1(fileReader.error);
+        const asArrayBuffer = fileReader.readAsArrayBuffer(response);
       });
-      let nextPromise1 = promise.then((response) => {
-        let buffer = response;
+      let nextPromise1 = promise.then((result) => {
+        let buffer = result;
         if ((function isNodeBuffer(response) {
           try {
             const _Buffer = Buffer;
@@ -174,18 +173,18 @@ function load(response, then) {
           } catch (err) {
             return false;
           }
-        })(response)) {
+        })(result)) {
           const _Uint8Array = Uint8Array;
-          const uint8Array = new Uint8Array(response);
+          const uint8Array = new Uint8Array(result);
           buffer = uint8Array.buffer;
         }
-        return closure_1_3((function getDataView(buffer) {
+        return loadView((function getDataView(buffer) {
           try {
             const _DataView = DataView;
             const dataView = new DataView(buffer);
             return dataView;
           } catch (err) {
-            const tmp13 = new callback(table[2])(tmp);
+            const tmp13 = new length(closure_1_2[2])(tmp);
             return tmp13;
           }
         })(buffer), response);
@@ -210,7 +209,7 @@ function load(response, then) {
           const dataView = new DataView(buffer);
           return dataView;
         } catch (err) {
-          const tmp13 = new callback(table[2])(tmp);
+          const tmp13 = new length(closure_1_2[2])(tmp);
           return tmp13;
         }
       })(buffer), then);
@@ -218,9 +217,9 @@ function load(response, then) {
     return nextPromise1;
   }
 }
-function loadView(byteLength, then) {
-  let obj = then;
-  if (then === undefined) {
+function loadView(byteLength, response) {
+  let obj = response;
+  if (response === undefined) {
     obj = { expanded: false, async: false, includeUnknown: false, domParser: "call" };
   }
   let flag = obj.expanded;
@@ -249,40 +248,29 @@ function loadView(byteLength, then) {
         if (!readTags[combined]) {
           continue;
         } else {
-          let tmp24 = nextResult;
           let tmp23 = closure_1;
           if (closure_1[tmp20]) {
-            let tmp27 = flag;
-            let tmp28 = addPngTextTags;
-            let obj2 = flag(addPngTextTags[1]);
-            let tmp29 = closure_1;
-            let tmp30 = combined;
+            let obj2 = _mod5213;
             let objectAssignResult = obj2.objectAssign({}, closure_1.exif, readTags[tmp22]);
           } else {
-            let tmp25 = combined;
             objectAssignResult = readTags[tmp22];
           }
           tmp23[tmp20] = objectAssignResult;
-          let tmp31 = combined;
           delete tmp3[tmp4];
         }
       }
       objectAssignResult = readTags;
       if (closure_1.png) {
-        objectAssignResult = flag(addPngTextTags[1]).objectAssign({}, closure_1.png, readTags);
-        const obj3 = flag(addPngTextTags[1]);
+        objectAssignResult = _mod5213.objectAssign({}, closure_1.png, readTags);
       }
       closure_1.png = objectAssignResult;
       let objectAssignResult1 = readTags;
       if (closure_1.pngText) {
-        objectAssignResult1 = flag(addPngTextTags[1]).objectAssign({}, closure_1.png, readTags);
-        const obj4 = flag(addPngTextTags[1]);
+        objectAssignResult1 = _mod5213.objectAssign({}, closure_1.png, readTags);
       }
       closure_1.pngText = objectAssignResult1;
-      const tmp32 = closure_1;
-      const tmp37 = closure_1;
     } else {
-      const obj = flag(addPngTextTags[1]);
+      const obj = _mod5213;
       const tmp8 = readTags.__exif || {};
       const tmp9 = readTags.__iptc || {};
       closure_1 = obj.objectAssign({}, tmp7, tmp8, tmp9, readTags);
@@ -293,10 +281,10 @@ function loadView(byteLength, then) {
   importDefault = {};
   const tmp6 = importDefault;
   const tmp7 = addPngTextTags;
-  let obj2 = importDefault(addPngTextTags[3]);
-  ({ fileType, fileDataOffset, jfifDataOffset, tiffHeaderOffset, iptcDataOffset, xmpChunks, iccChunks, mpfDataOffset, pngHeaderOffset, pngTextChunks, pngChunkOffsets, vp8xChunkOffset, gifHeaderOffset } = importDefault(addPngTextTags[3]).parseAppMarkers(byteLength, flag2));
+  let obj2 = require("module_5215");
+  ({ fileType, fileDataOffset, jfifDataOffset, tiffHeaderOffset, iptcDataOffset, xmpChunks, iccChunks, mpfDataOffset, pngHeaderOffset, pngTextChunks, pngChunkOffsets, vp8xChunkOffset, gifHeaderOffset } = require("module_5215").parseAppMarkers(byteLength, flag2));
   let flag4 = false;
-  if (importDefault(addPngTextTags[4]).USE_JPEG) {
+  if (require("module_5216").USE_JPEG) {
     flag4 = false;
     if (tmp6(tmp7[4]).USE_FILE) {
       flag4 = false;
@@ -337,63 +325,63 @@ function loadView(byteLength, then) {
   if (tmp6(tmp7[4]).USE_EXIF) {
     flag6 = flag5;
     if (undefined !== tiffHeaderOffset) {
-      let readResult2 = tmp6(tmp7[7]).read(byteLength, tiffHeaderOffset, flag3);
-      ({ tags, byteOrder } = readResult2);
+      const tmp6Result1 = tmp6(tmp7[7]);
+      ({ tags, byteOrder } = tmp6(tmp7[7]).read(byteLength, tiffHeaderOffset, flag3));
       if (tags.Thumbnail) {
         importDefault.Thumbnail = tags.Thumbnail;
         delete tmp[tmp3];
       }
       if (flag) {
         importDefault.exif = tags;
-        (function addGpsGroup(closure_1) {
-          if (closure_1.exif) {
-            if (closure_1.exif.GPSLatitude) {
-              if (closure_1.exif.GPSLatitudeRef) {
+        (function addGpsGroup(exif) {
+          if (exif.exif) {
+            if (exif.exif.GPSLatitude) {
+              if (exif.exif.GPSLatitudeRef) {
                 try {
-                  let gps = closure_1.gps;
+                  let gps = exif.gps;
                   if (!gps) {
                     gps = {};
                   }
-                  closure_1.gps = gps;
-                  closure_1.gps.Latitude = flag(addPngTextTags[22]).getCalculatedGpsValue(closure_1.exif.GPSLatitude.value);
-                  let value = closure_1.exif.GPSLatitudeRef.value;
+                  exif.gps = gps;
+                  exif.gps.Latitude = flag(addPngTextTags[22]).getCalculatedGpsValue(exif.exif.GPSLatitude.value);
+                  value = exif.exif.GPSLatitudeRef.value;
                   if ("S" === value.join("")) {
-                    closure_1.gps.Latitude = -closure_1.gps.Latitude;
+                    exif.gps.Latitude = -exif.gps.Latitude;
                   }
                   const obj2 = flag(addPngTextTags[22]);
                 } catch (err) {
                 }
               }
             }
-            if (closure_1.exif.GPSLongitude) {
-              if (closure_1.exif.GPSLongitudeRef) {
+            if (exif.exif.GPSLongitude) {
+              if (exif.exif.GPSLongitudeRef) {
                 try {
-                  let gps1 = closure_1.gps;
+                  let gps1 = exif.gps;
                   if (!gps1) {
                     gps1 = {};
                   }
-                  closure_1.gps = gps1;
-                  closure_1.gps.Longitude = flag(addPngTextTags[22]).getCalculatedGpsValue(closure_1.exif.GPSLongitude.value);
-                  value = closure_1.exif.GPSLongitudeRef.value;
+                  exif.gps = gps1;
+                  exif.gps.Longitude = flag(addPngTextTags[22]).getCalculatedGpsValue(exif.exif.GPSLongitude.value);
+                  value = exif.exif.GPSLongitudeRef.value;
                   if ("W" === value.join("")) {
-                    closure_1.gps.Longitude = -closure_1.gps.Longitude;
+                    exif.gps.Longitude = -exif.gps.Longitude;
                   }
                   const obj4 = flag(addPngTextTags[22]);
                 } catch (err) {
                 }
               }
             }
-            if (closure_1.exif.GPSAltitude) {
-              if (closure_1.exif.GPSAltitudeRef) {
+            if (exif.exif.GPSAltitude) {
+              if (exif.exif.GPSAltitudeRef) {
                 try {
-                  let gps2 = closure_1.gps;
+                  let gps2 = exif.gps;
                   if (!gps2) {
                     gps2 = {};
                   }
-                  closure_1.gps = gps2;
-                  closure_1.gps.Altitude = closure_1.exif.GPSAltitude.value[0] / closure_1.exif.GPSAltitude.value[1];
-                  if (1 === closure_1.exif.GPSAltitudeRef.value) {
-                    closure_1.gps.Altitude = -closure_1.gps.Altitude;
+                  exif.gps = gps2;
+                  exif.gps.Altitude = exif.exif.GPSAltitude.value[0] / exif.exif.GPSAltitude.value[1];
+                  if (1 === exif.exif.GPSAltitudeRef.value) {
+                    exif.gps.Altitude = -exif.gps.Altitude;
                   }
                 } catch (err) {
                 }
@@ -468,8 +456,7 @@ function loadView(byteLength, then) {
               isArray1 = iccChunks.length > 0;
             }
             if (!isArray1) {
-              obj = { offset: 0, length: null, chunkNumber: 1, chunksTotal: 1 };
-              obj[1] = tags.ICC_Profile.value.length;
+              obj = { offset: 0, length: tags.ICC_Profile.value.length, chunkNumber: 1, chunksTotal: 1 };
               let items = [obj];
               const readResult6 = tmp6(tmp7[11]).read(tags.ICC_Profile.value, items);
               if (flag) {
@@ -511,7 +498,7 @@ function loadView(byteLength, then) {
           } else {
             let __offset2 = tags.MakerNote.value.length > "PENTAX ".length;
             if (__offset2) {
-              let value = tags.MakerNote.value;
+              value = tags.MakerNote.value;
               __offset2 = flag(tmp7[1]).getStringValueFromArray(value.slice(0, "PENTAX ".length)) === "PENTAX ";
               const obj18 = flag(tmp7[1]);
             }
@@ -537,7 +524,7 @@ function loadView(byteLength, then) {
         delete tmp3[tmp];
         flag6 = true;
       }
-      const tmp6Result1 = tmp6(tmp7[7]);
+      const readResult2 = tmp6(tmp7[7]).read(byteLength, tiffHeaderOffset, flag3);
     }
   }
   let flag7 = flag6;
@@ -598,8 +585,7 @@ function loadView(byteLength, then) {
             if (flag) {
               closure_1.icc = icc;
             } else {
-              closure_1 = flag(addPngTextTags[1]).objectAssign({}, closure_1, icc);
-              const obj = flag(addPngTextTags[1]);
+              closure_1 = _mod5213.objectAssign({}, closure_1, icc);
             }
           }));
           flag9 = true;
@@ -639,19 +625,18 @@ function loadView(byteLength, then) {
     if (tmp6(tmp7[4]).USE_PNG_FILE) {
       flag11 = flag10;
       if (undefined !== pngHeaderOffset) {
-        readResult2 = tmp6(tmp7[15]).read(byteLength, pngHeaderOffset);
+        const readResult13 = tmp6(tmp7[15]).read(byteLength, pngHeaderOffset);
         if (flag) {
-          let objectAssignResult = readResult2;
+          let objectAssignResult = readResult13;
           if (importDefault.png) {
-            objectAssignResult = flag(tmp7[1]).objectAssign({}, importDefault.png, readResult2);
+            objectAssignResult = flag(tmp7[1]).objectAssign({}, importDefault.png, readResult13);
             const obj32 = flag(tmp7[1]);
           }
           importDefault.png = objectAssignResult;
-          importDefault.pngFile = readResult2;
+          importDefault.pngFile = readResult13;
           flag11 = true;
-          const tmp84 = importDefault;
         } else {
-          importDefault = flag(tmp7[1]).objectAssign({}, importDefault, readResult2);
+          importDefault = flag(tmp7[1]).objectAssign({}, importDefault, readResult13);
           flag11 = true;
           const obj31 = flag(tmp7[1]);
         }
@@ -664,10 +649,10 @@ function loadView(byteLength, then) {
     flag12 = flag11;
     if (undefined !== pngTextChunks) {
       const tmp6Result13 = tmp6(tmp7[16]);
-      const readResult13 = tmp6Result13.read(byteLength, pngTextChunks, flag2, flag3);
-      addPngTextTags(readResult13.readTags);
+      const readResult14 = tmp6Result13.read(byteLength, pngTextChunks, flag2, flag3);
+      addPngTextTags(readResult14.readTags);
       flag12 = true;
-      if (readResult13.readTagsPromise) {
+      if (readResult14.readTagsPromise) {
         items1.push(readTagsPromise.then((arr) => arr.forEach(addPngTextTags)));
         flag12 = true;
       }
@@ -677,19 +662,17 @@ function loadView(byteLength, then) {
   if (tmp6(tmp7[4]).USE_PNG) {
     flag13 = flag12;
     if (undefined !== pngChunkOffsets) {
-      readResult2 = tmp6(tmp7[17]).read(byteLength, pngChunkOffsets);
+      const readResult15 = tmp6(tmp7[17]).read(byteLength, pngChunkOffsets);
       if (flag) {
+        objectAssignResult = readResult15;
         if (importDefault.png) {
-          readResult2 = flag;
-          readResult2 = importDefault;
-          readResult2 = flag(tmp7[1]).objectAssign({}, importDefault.png, readResult2);
+          objectAssignResult = flag(tmp7[1]).objectAssign({}, importDefault.png, readResult15);
           const obj35 = flag(tmp7[1]);
         }
-        importDefault.png = readResult2;
+        importDefault.png = objectAssignResult;
         flag13 = true;
-        const tmp99 = importDefault;
       } else {
-        importDefault = flag(tmp7[1]).objectAssign({}, importDefault, readResult2);
+        importDefault = flag(tmp7[1]).objectAssign({}, importDefault, readResult15);
         flag13 = true;
         const obj34 = flag(tmp7[1]);
       }
@@ -700,21 +683,17 @@ function loadView(byteLength, then) {
   if (tmp6(tmp7[4]).USE_WEBP) {
     flag14 = flag13;
     if (undefined !== vp8xChunkOffset) {
-      readResult2 = tmp6(tmp7[18]).read(byteLength, vp8xChunkOffset);
+      const readResult16 = tmp6(tmp7[18]).read(byteLength, vp8xChunkOffset);
       if (flag) {
-        readResult2 = importDefault;
+        let objectAssignResult1 = readResult16;
         if (importDefault.riff) {
-          readResult2 = flag;
-          readResult2 = importDefault;
-          readResult2 = flag(tmp7[1]).objectAssign({}, importDefault.riff, readResult2);
+          objectAssignResult1 = flag(tmp7[1]).objectAssign({}, importDefault.riff, readResult16);
           const obj37 = flag(tmp7[1]);
         }
-        readResult2.riff = readResult2;
+        importDefault.riff = objectAssignResult1;
         flag14 = true;
       } else {
-        readResult2 = flag;
-        readResult2 = importDefault;
-        importDefault = flag(tmp7[1]).objectAssign({}, importDefault, readResult2);
+        importDefault = flag(tmp7[1]).objectAssign({}, importDefault, readResult16);
         flag14 = true;
         const obj36 = flag(tmp7[1]);
       }
@@ -725,86 +704,72 @@ function loadView(byteLength, then) {
   if (tmp6(tmp7[4]).USE_GIF) {
     flag15 = flag14;
     if (undefined !== gifHeaderOffset) {
-      readResult2 = tmp6(tmp7[19]).read(byteLength, gifHeaderOffset);
+      const readResult17 = tmp6(tmp7[19]).read(byteLength, gifHeaderOffset);
       if (flag) {
-        readResult2 = importDefault;
+        let objectAssignResult2 = readResult17;
         if (importDefault.gif) {
-          readResult2 = flag;
-          readResult2 = importDefault;
-          readResult2 = flag(tmp7[1]).objectAssign({}, importDefault.gif, readResult2);
+          objectAssignResult2 = flag(tmp7[1]).objectAssign({}, importDefault.gif, readResult17);
           const obj39 = flag(tmp7[1]);
         }
-        readResult2.gif = readResult2;
+        importDefault.gif = objectAssignResult2;
         flag15 = true;
       } else {
-        readResult2 = flag;
-        readResult2 = importDefault;
-        importDefault = flag(tmp7[1]).objectAssign({}, importDefault, readResult2);
+        importDefault = flag(tmp7[1]).objectAssign({}, importDefault, readResult17);
         flag15 = true;
         const obj38 = flag(tmp7[1]);
       }
       const tmp6Result16 = tmp6(tmp7[19]);
     }
   }
-  const parseAppMarkersResult = importDefault(addPngTextTags[3]).parseAppMarkers(byteLength, flag2);
-  readResult2 = tmp6(tmp7[20]).get(importDefault, flag);
-  if (readResult2) {
+  const parseAppMarkersResult = require("module_5215").parseAppMarkers(byteLength, flag2);
+  value = tmp6(tmp7[20]).get(importDefault, flag);
+  if (value) {
     if (flag) {
-      readResult2 = importDefault;
-      importDefault.composite = readResult2;
+      importDefault.composite = value;
     } else {
-      readResult2 = flag;
-      readResult2 = importDefault;
-      importDefault = flag(tmp7[1]).objectAssign({}, importDefault, readResult2);
+      importDefault = flag(tmp7[1]).objectAssign({}, importDefault, value);
       const obj41 = flag(tmp7[1]);
     }
   }
-  readResult2 = (tmp6(tmp7[4]).USE_JPEG || tmp6(tmp7[4]).USE_WEBP) && tmp6(tmp7[4]).USE_EXIF && tmp6(tmp7[4]).USE_THUMBNAIL;
-  if (readResult2) {
-    readResult2 = importDefault;
-    readResult2 = tmp6(tmp7[21]).get(byteLength, importDefault.Thumbnail, tiffHeaderOffset);
+  let value1 = (tmp6(tmp7[4]).USE_JPEG || tmp6(tmp7[4]).USE_WEBP) && tmp6(tmp7[4]).USE_EXIF && tmp6(tmp7[4]).USE_THUMBNAIL;
+  if (value1) {
+    value1 = tmp6(tmp7[21]).get(byteLength, importDefault.Thumbnail, tiffHeaderOffset);
     const tmp6Result18 = tmp6(tmp7[21]);
   }
-  if (readResult2) {
-    importDefault.Thumbnail = readResult2;
+  if (value1) {
+    importDefault.Thumbnail = value1;
     flag15 = true;
   } else {
     delete tmp2[tmp4];
   }
   if (fileType) {
-    readResult2 = importDefault;
     if (flag) {
-      if (!readResult2.file) {
-        readResult2 = importDefault;
+      if (!tmp121.file) {
         importDefault.file = {};
       }
-      readResult2 = importDefault;
       importDefault.file.FileType = fileType;
       flag15 = true;
     } else {
-      readResult2.FileType = fileType;
+      tmp121.FileType = fileType;
       flag15 = true;
     }
   }
   if (flag15) {
     if (flag2) {
-      readResult2 = globalThis;
-      readResult2 = Promise.all(items1).then(() => closure_1);
+      let nextPromise = Promise.all(items1).then(() => closure_1);
       const allPromises = Promise.all(items1);
     } else {
-      readResult2 = importDefault;
+      nextPromise = importDefault;
     }
-    return readResult2;
+    return nextPromise;
   } else {
-    readResult2 = new.target;
-    readResult2 = new.target;
-    readResult2 = new tmp6(tmp7[0]).MetadataMissingError();
-    throw readResult2;
+    const metadataMissingError = new tmp6(tmp7[0]).MetadataMissingError();
+    throw metadataMissingError;
   }
   const tmp6Result17 = tmp6(tmp7[20]);
 }
 
-export default { load, loadView, errors: errorDefault };
-export const errors = errorDefault;
+export default { load, loadView, errors: _modDef5212 };
+export const errors = _modDef5212;
 export { load };
 export { loadView };

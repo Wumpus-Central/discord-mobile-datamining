@@ -1,8 +1,8 @@
 // === Module 12793: errorCallback ===
 
 // Module 12793 (errorCallback)
-import instrumentError from "instrumentError" /* 12794 */;
-import instrumentUnhandledRejection from "instrumentUnhandledRejection" /* 12801 */;
+import _mod12794 from "module_12794" /* 12794 */;
+import _mod12801 from "module_12801" /* 12801 */;
 import spanTimeInputToSeconds from "spanTimeInputToSeconds" /* 12802 */;
 
 require = arg1;
@@ -21,19 +21,17 @@ function errorCallback() {
       const _HermesInternal = HermesInternal;
       logger.log("[Tracing] Root span: " + "internal_error" + " -> Global error occurred");
     }
-    obj = { code: null, message: "internal_error" };
-    obj[0] = tmp(12814).SPAN_STATUS_ERROR;
+    obj = { code: tmp(12814).SPAN_STATUS_ERROR, message: "internal_error" };
     rootSpan.setStatus(obj);
   }
 }
 let c2 = false;
 errorCallback.tag = "sentry_tracingErrorCallback";
-arg5.registerSpanErrorInstrumentation = function registerSpanErrorInstrumentation() {
+
+export const registerSpanErrorInstrumentation = function registerSpanErrorInstrumentation() {
   if (!c2) {
     c2 = true;
-    const result = instrumentError.addGlobalErrorInstrumentationHandler(errorCallback);
-    const obj = instrumentError;
-    const result1 = instrumentUnhandledRejection.addGlobalUnhandledRejectionInstrumentationHandler(errorCallback);
-    const obj2 = instrumentUnhandledRejection;
+    const result = _mod12794.addGlobalErrorInstrumentationHandler(errorCallback);
+    const result1 = _mod12801.addGlobalUnhandledRejectionInstrumentationHandler(errorCallback);
   }
 };

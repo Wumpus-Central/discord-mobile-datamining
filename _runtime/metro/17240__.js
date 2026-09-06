@@ -1,7 +1,8 @@
 // === Module 17240: ? ===
 
 // Module 17240
-arg5.default = {
+
+export default {
   locale: "en",
   pluralRuleFunction(arg0, arg1) {
     const parts = String(arg0).split(".");

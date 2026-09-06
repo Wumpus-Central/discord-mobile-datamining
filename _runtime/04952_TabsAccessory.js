@@ -1,12 +1,11 @@
 // === Module 4952: TabsAccessory ===
 
 // Module 4952 (TabsAccessory)
-import noopDefault from "noop" /* 19 */;
-import __INTERNAL_VIEW_CONFIGDefault from "__INTERNAL_VIEW_CONFIG" /* 4953 */;
-import { StyleSheet } from "get ActivityIndicator" /* 17 */;
-import { jsx } from "jsxProd" /* 21 */;
+import _modDef4953 from "module_4953" /* 4953 */;
+import noop from "module_19" /* 19 */;
 
-noopDefault;
+const StyleSheet = fn(17).StyleSheet;
+const jsx = fn(21).jsx;
 
 export default function TabsAccessory(style) {
   const obj = {};
@@ -14,5 +13,5 @@ export default function TabsAccessory(style) {
   obj.collapsable = false;
   const items = [style.style, StyleSheet.absoluteFill];
   obj.style = items;
-  return jsx(__INTERNAL_VIEW_CONFIGDefault, {});
+  return jsx(_modDef4953, {});
 };

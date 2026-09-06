@@ -1,7 +1,7 @@
 // === Module 21: jsxProd ===
 
 // Module 21 (jsxProd)
-import jsxProd from "jsxProd" /* 22 */;
+import _mod22 from "module_22" /* 22 */;
 
 
-export default jsxProd;
+export default _mod22;

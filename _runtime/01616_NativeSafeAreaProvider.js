@@ -1,7 +1,7 @@
 // === Module 1616: NativeSafeAreaProvider ===
 
 // Module 1616 (NativeSafeAreaProvider)
-import __INTERNAL_VIEW_CONFIGDefault from "__INTERNAL_VIEW_CONFIG" /* 1617 */;
+import _modDef1617 from "module_1617" /* 1617 */;
 
 
-export const NativeSafeAreaProvider = __INTERNAL_VIEW_CONFIGDefault;
+export const NativeSafeAreaProvider = _modDef1617;

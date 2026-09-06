@@ -2,44 +2,45 @@
 
 // Module 1683 (Sensor)
 import _createClassDefault from "_createClass" /* 42 */;
-import closure_2 from "_classCallCheck" /* 41 */;
+import _classCallCheck from "_classCallCheck" /* 41 */;
 
 const Sensor = arg1;
 class Sensor {
   constructor(arg0, arg1) {
-    tmp = closure_2(this, Sensor);
+    tmp = c2(this, Sensor);
     this.listenersNumber = 0;
     this.sensorId = null;
     this.sensorType = global;
     this.config = arg1;
-    tmp2 = Sensor;
+    tmp2 = closure_0;
     tmp3 = closure_1;
-    if (global === require("isWorkletFunction").SensorType.ROTATION) {
-      tmp2Result = require("addCompilerSafeGetAndSet");
+    if (global === closure_0(closure_1[2]).SensorType.ROTATION) {
+      tmp2Result = tmp2(tmp3[3]);
       mutable = tmp2Result.makeMutable({ qw: 0, qx: 0, qy: 0, qz: 0, yaw: 0, pitch: 0, roll: 0, interfaceOrientation: 0 });
     } else {
-      tmp2Result1 = require("addCompilerSafeGetAndSet");
+      tmp2Result1 = tmp2(tmp3[3]);
       mutable = tmp2Result1.makeMutable({ x: 0, y: 0, z: 0, interfaceOrientation: 0 });
     }
     this.data = mutable;
     return;
   }
 }
-const items = [
-  {
-    key: "register",
-    value: function register(arg0) {
-      const self = this;
-      ({ config, sensorType } = this);
-      const ReanimatedModule = Sensor(1644).ReanimatedModule;
-      let num = -1;
-      if ("auto" !== config.interval) {
-        num = config.interval;
-      }
-      self.sensorId = ReanimatedModule.registerSensor(sensorType, num, config.iosReferenceFrame, arg0);
-      return -1 !== self.sensorId;
+const entry = {
+  key: "register",
+  value: function register(arg0) {
+    const self = this;
+    ({ config, sensorType } = this);
+    const ReanimatedModule = Sensor(1644).ReanimatedModule;
+    let num = -1;
+    if ("auto" !== config.interval) {
+      num = config.interval;
     }
-  },
+    self.sensorId = ReanimatedModule.registerSensor(sensorType, num, config.iosReferenceFrame, arg0);
+    return -1 !== self.sensorId;
+  }
+};
+const items = [
+  entry,
   {
     key: "isRunning",
     value: function isRunning() {

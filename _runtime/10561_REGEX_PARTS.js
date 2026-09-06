@@ -32,8 +32,8 @@ export const parseNumberPattern = function parseNumberPattern(str) {
   }
   return num4;
 };
-export const parseOrdinalNumberPattern = function parseOrdinalNumberPattern(joined) {
-  const formatted = joined.toLowerCase();
+export const parseOrdinalNumberPattern = function parseOrdinalNumberPattern(match) {
+  const formatted = match.toLowerCase();
   if (undefined !== exports.ORDINAL_WORD_DICTIONARY[formatted]) {
     return exports.ORDINAL_WORD_DICTIONARY[formatted];
   } else {
@@ -41,10 +41,10 @@ export const parseOrdinalNumberPattern = function parseOrdinalNumberPattern(join
     return parseInt(formatted);
   }
 };
-export const parseYear = function parseYear(joined) {
-  let str = joined;
-  if (obj.test(joined)) {
-    str = joined.replace(/(год|года|г|г.)/i, "");
+export const parseYear = function parseYear(match) {
+  let str = match;
+  if (obj.test(match)) {
+    str = match.replace(/(год|года|г|г.)/i, "");
   }
   if (obj2.test(str)) {
     const _parseInt3 = parseInt;
@@ -71,8 +71,6 @@ export const parseDuration = function parseDuration(arg0) {
     let str2 = match[1];
     let str3 = str2.toLowerCase();
     let tmp2 = exports;
-    let tmp3 = match;
-    let tmp4 = str;
     if (undefined !== exports.INTEGER_WORD_DICTIONARY[str3]) {
       let num = tmp2.INTEGER_WORD_DICTIONARY[str3];
     } else {
@@ -98,7 +96,6 @@ export const parseDuration = function parseDuration(arg0) {
     obj[tmp2.TIME_UNIT_DICTIONARY[str4.toLowerCase(str4)]] = num;
     let str5 = str.substring(match[0].length);
     let trimmed = str5.trim();
-    let tmp6 = regExp;
     match = regExp.exec(trimmed);
     str = trimmed;
   }

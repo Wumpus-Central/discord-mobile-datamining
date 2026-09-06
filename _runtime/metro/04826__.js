@@ -15,13 +15,13 @@ if (_Symbol()) {
     } else {
       if (obj) {
         if (typeof obj === "object") {
-          if ("[object Symbol]" === callback(obj)) {
+          if ("[object Symbol]" === closure_0(obj)) {
             try {
               return (function isRealSymbolObject(arg0) {
                 const valueOfResult = arg0.valueOf();
                 let tmp2 = typeof valueOfResult === "symbol";
                 if (typeof valueOfResult === "symbol") {
-                  tmp2 = callback2(callback(arg0));
+                  tmp2 = closure_1_2(closure_1_1(arg0));
                 }
                 return tmp2;
               })(obj);

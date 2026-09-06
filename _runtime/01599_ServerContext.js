@@ -1,7 +1,7 @@
 // === Module 1599: ServerContext ===
 
 // Module 1599 (ServerContext)
-import noopAll from "noop" /* 19 */;
+import noop from "module_19" /* 19 */;
 
 
-export const ServerContext = noopAll.createContext(undefined);
+export const ServerContext = noop.createContext(undefined);

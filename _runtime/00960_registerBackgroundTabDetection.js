@@ -1,16 +1,18 @@
 // === Module 960: registerBackgroundTabDetection ===
 
 // Module 960 (registerBackgroundTabDetection)
+import _mod682 from "module_682" /* 682 */;
 import ignoreNextOnError from "ignoreNextOnError" /* 893 */;
 
 require = arg1;
 const dependencyMap = arg6;
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
-arg5.registerBackgroundTabDetection = function registerBackgroundTabDetection() {
+
+export const registerBackgroundTabDetection = function registerBackgroundTabDetection() {
   if (ignoreNextOnError.WINDOW.document) {
     const _document = tmp(893).WINDOW.document;
     const listener = _document.addEventListener("visibilitychange", () => {
-      let obj = callback(table[1]);
+      let obj = _mod682;
       const activeSpan = obj.getActiveSpan();
       if (activeSpan) {
         let tmpResult = tmp(tmp2[1]);
@@ -25,8 +27,7 @@ arg5.registerBackgroundTabDetection = function registerBackgroundTabDetection() 
               debug.log("[Tracing] Transaction: " + "cancelled" + " -> since tab moved to the background, op: " + op);
             }
             if (!status) {
-              obj = { code: null, message: "cancelled" };
-              obj[0] = tmp(tmp2[1]).SPAN_STATUS_ERROR;
+              obj = { code: tmp(tmp2[1]).SPAN_STATUS_ERROR, message: "cancelled" };
               rootSpan.setStatus(obj);
             }
             const attr = rootSpan.setAttribute("sentry.cancellation_reason", "document.hidden");

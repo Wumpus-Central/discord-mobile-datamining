@@ -2,14 +2,15 @@
 
 // Module 106 (weakSet)
 const weakSet = new WeakSet();
-arg5.DynamicallyInjectedByGestureHandler = function DynamicallyInjectedByGestureHandler(arg0) {
+
+export const DynamicallyInjectedByGestureHandler = function DynamicallyInjectedByGestureHandler(arg0) {
   weakSet.add(arg0);
   return arg0;
 };
-arg5.ConditionallyIgnoredEventHandlers = function ConditionallyIgnoredEventHandlers(arg0) {
+export function ConditionallyIgnoredEventHandlers(arg0) {
 
-};
-arg5.isIgnored = function isIgnored(obj) {
+}
+export const isIgnored = function isIgnored(obj) {
   let hasItem = typeof obj === "object";
   if (typeof obj === "object") {
     hasItem = null != obj;

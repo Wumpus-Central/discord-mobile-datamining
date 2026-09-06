@@ -1,21 +1,21 @@
 // === Module 4922: DelayedFreeze ===
 
 // Module 4922 (DelayedFreeze)
-import closure_2 from "_slicedToArray" /* 32 */;
-import closure_3 from "noop" /* 19 */;
-import { jsx } from "jsxProd" /* 21 */;
+import Suspender from "Suspender" /* 4923 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
+require = fn;
+const jsx = fn(21).jsx;
 
 export default function DelayedFreeze(children) {
   let freeze = children.freeze;
-  dependencyMap = undefined;
-  const tmp = callback(React.useState(false), 2);
-  dependencyMap = tmp[1];
+  const tmp = _slicedToArray(noop.useState(false), 2);
+  closure_1 = tmp[1];
   const items = [freeze];
-  const effect = React.useEffect(() => {
+  const effect = noop.useEffect(() => {
     const timeout = setTimeout(() => {
-      callback(closure_0);
+      closure_1_1(closure_0);
     }, 0);
     return () => {
       clearTimeout(closure_0);
@@ -24,5 +24,5 @@ export default function DelayedFreeze(children) {
   if (freeze) {
     freeze = tmp[0];
   }
-  return jsx(freeze(4923).Freeze, { freeze, children: children.children });
+  return jsx(Suspender.Freeze, { freeze, children: children.children });
 };

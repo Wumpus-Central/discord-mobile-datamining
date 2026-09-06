@@ -1,11 +1,12 @@
 // === Module 996: enrichXhrBreadcrumbsForMobileReplay ===
 
 // Module 996 (enrichXhrBreadcrumbsForMobileReplay)
-import parseContentLengthHeader from "parseContentLengthHeader" /* 997 */;
+import _mod997 from "module_997" /* 997 */;
 
 require = arg1;
 const dependencyMap = arg6;
-arg5.enrichXhrBreadcrumbsForMobileReplay = function enrichXhrBreadcrumbsForMobileReplay(category, xhr) {
+
+export const enrichXhrBreadcrumbsForMobileReplay = function enrichXhrBreadcrumbsForMobileReplay(category, xhr) {
   if ("xhr" === category.category) {
     if (xhr) {
       if (xhr.xhr) {
@@ -23,7 +24,7 @@ arg5.enrichXhrBreadcrumbsForMobileReplay = function enrichXhrBreadcrumbsForMobil
         xhr = xhr.xhr;
         let tmp2 = require;
         let dropUndefinedKeys = dependencyMap;
-        const bodySize = parseContentLengthHeader.getBodySize(xhr.input);
+        const bodySize = _mod997.getBodySize(xhr.input);
         if (xhr.getResponseHeader("content-length")) {
           let result = tmp2(997).parseContentLengthHeader(xhr.getResponseHeader("content-length"));
           const tmp2Result = tmp2(997);
@@ -41,7 +42,7 @@ arg5.enrichXhrBreadcrumbsForMobileReplay = function enrichXhrBreadcrumbsForMobil
                   }
                 }
               }
-              return callback(table[0]).getBodySize(json);
+              return _mod997.getBodySize(json);
             } catch (err) {
             }
           })(xhr.response, xhr.responseType);
@@ -49,13 +50,8 @@ arg5.enrichXhrBreadcrumbsForMobileReplay = function enrichXhrBreadcrumbsForMobil
         tmp2 = tmp2(682);
         dropUndefinedKeys = tmp2.dropUndefinedKeys;
         const _Object = obj.Object;
-        obj = { start_timestamp: null, end_timestamp: null, request_body_size: null, response_body_size: null };
-        obj[0] = startTimestamp;
-        obj[1] = endTimestamp;
-        obj[2] = bodySize;
-        obj[3] = result;
+        obj = { start_timestamp: startTimestamp, end_timestamp: endTimestamp, request_body_size: bodySize, response_body_size: result };
         category.data = dropUndefinedKeys(_Object.assign(obj, category.data));
-        const obj2 = parseContentLengthHeader;
       }
     }
   }

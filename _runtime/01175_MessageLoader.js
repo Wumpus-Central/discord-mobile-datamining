@@ -1,8 +1,8 @@
 // === Module 1175: MessageLoader ===
 
 // Module 1175 (MessageLoader)
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "_classCallCheck" /* 41 */;
+import _slicedToArray from "module_32" /* 32 */;
+import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
 
 const MessageLoader = require;
@@ -19,33 +19,33 @@ if (!fn) {
     if (!arg2) {
       _Promise = Promise;
     }
-    _Promise = new _Promise((arg0, arg1) => {
-      closure_0 = arg0;
+    _Promise = new _Promise((fn, arg1) => {
+      closure_0 = fn;
       closure_1 = arg1;
-      function fulfilled(arg0) {
+      function fulfilled(result) {
         try {
-          step(iter.next(arg0));
+          step(iter.next(result));
         } catch (tmp5) {
-          callback2(tmp5);
+          closure_1(tmp5);
         }
       }
       function rejected(arg0) {
         try {
           step(iter.throw(arg0));
         } catch (tmp5) {
-          callback2(tmp5);
+          closure_1(tmp5);
         }
       }
       let iter = rejected;
       function step(done) {
         if (done.done) {
-          callback(done.value);
+          closure_0(done.value);
         } else {
           let tmp = done.value;
-          callback = tmp;
-          if (!(tmp instanceof fulfilled)) {
-            tmp = new tmp((arg0) => {
-              arg0(closure_0);
+          closure_0 = tmp;
+          if (!(tmp instanceof Promise)) {
+            tmp = new tmp((fn) => {
+              fn(value);
             });
           }
           tmp.then(fulfilled, iter);
@@ -57,15 +57,15 @@ if (!fn) {
       }
       iter = iter.apply(closure_0, items);
       const iter2 = iter.next();
-      const value = iter2.value;
+      value = iter2.value;
       if (iter2.done) {
-        arg0(value);
+        fn(value);
       } else {
         closure_0 = value;
         let tmp3 = value;
         if (!(value instanceof fulfilled)) {
-          tmp3 = new tmp3((arg0) => {
-            arg0(closure_0);
+          tmp3 = new tmp3((fn) => {
+            fn(value);
           });
         }
         tmp3.then(fulfilled, rejected);
@@ -77,7 +77,7 @@ if (!fn) {
 class MessageLoader {
   constructor(arg0, arg1) {
     self = this;
-    tmp = closure_4(this, self);
+    tmp = closure_4(this, MessageLoader);
     this.messages = {};
     this.localeImportMap = global;
     this.supportedLocales = Object.keys(global);
@@ -86,27 +86,26 @@ class MessageLoader {
     this._parseCache = {};
     set = new Set();
     this._subscribers = set;
-    internalIntlMessage = new require("serializeAst").InternalIntlMessage([], this.defaultLocale);
+    internalIntlMessage = new closure_0(c2[3]).InternalIntlMessage([], this.defaultLocale);
     this.fallbackMessage = internalIntlMessage;
     if (closure_1.hot) {
       _Object = Object;
       _loop = function _loop(arg0) {
         closure_0 = arg0;
         hot = hot.hot;
-        hot.accept(hot, () => closure_2_5(closure_0, undefined, undefined, function() {
+        hot.accept(hot, () => fn(self, undefined, undefined, function() {
           self = this;
           c2 = 0;
           c3 = 0;
-          return (function*() {
+          return (function*(arg0, value) {
             if (c3 === 2) {
               c3 = 3;
-              HermesBuiltin.throwTypeError();
+              throw new TypeError("Generator functions may not be called on executing generators");
             } else if (tmp3 === 3) {
               if (arg0 === 1) {
-                throw arg1;
+                throw value;
               } else if (arg0 === 2) {
-                let obj = { value: null, done: true };
-                obj[0] = arg1;
+                let obj = { value, done: true };
                 return obj;
               } else {
                 return { value: "HermesInternal", done: null };
@@ -117,27 +116,24 @@ class MessageLoader {
                 if (0 === c2) {
                   if (arg0 === 1) {
                     c3 = 3;
-                    throw arg1;
+                    throw value;
                   } else if (arg0 === 2) {
                     c3 = 3;
-                    obj = { value: null, done: true };
-                    obj[0] = arg1;
+                    obj = { value, done: true };
                     return obj;
                   } else {
                     closure_1 = self;
                     c2 = 1;
                     c3 = 1;
-                    obj1 = { value: null, done: false };
-                    obj1[0] = self._loadLocale(self);
+                    const obj1 = { value: self._loadLocale(closure_2_0), done: false };
                     return obj1;
                   }
                 } else if (arg0 === 1) {
                   c3 = 3;
-                  throw arg1;
+                  throw value;
                 } else if (arg0 === 2) {
                   c3 = 3;
-                  obj = { value: null, done: true };
-                  obj[0] = arg1;
+                  obj = { value, done: true };
                   return obj;
                 } else {
                   closure_1._parseCache = {};
@@ -163,20 +159,21 @@ class MessageLoader {
         tmp10 = closure_3;
         tmp11 = closure_3(tmp8, 2);
         closure_1 = tmp11[1];
-        _loopResult = require("_slicedToArray");
+        _loopResult = _loop(tmp11[0]);
         continue;
       }
     }
     return;
   }
 }
-let items = [
-  {
-    key: "withDebugValues",
-    value: function withDebugValues(arg0, arg1) {
+const entry = {
+  key: "withDebugValues",
+  value: function withDebugValues(arg0, arg1) {
 
-    }
-  },
+  }
+};
+let items = [
+  entry,
   {
     key: "fallbackWith",
     value: function fallbackWith($$loader) {
@@ -188,7 +185,7 @@ let items = [
           self2 = _parentLoader;
         }
         const _Error = Error;
-        error = new Error("Setting `fallbackWith` on MessageLoader created a circular chain that would never resolve");
+        const error = new Error("Setting `fallbackWith` on MessageLoader created a circular chain that would never resolve");
         throw error;
       }
       self.fallbackLoader = $$loader;
@@ -213,7 +210,7 @@ let items = [
           return messageValue1;
         } else {
           const fallbackLoader = self.fallbackLoader;
-          let value;
+          value = undefined;
           if (null !== fallbackLoader) {
             if (undefined !== fallbackLoader) {
               value = fallbackLoader.get(arg0, defaultLocale);
@@ -282,22 +279,21 @@ let items = [
   },
   {
     key: "_loadLocale",
-    value: function _loadLocale(c0) {
-      closure_0 = c0;
+    value: function _loadLocale(defaultLocale) {
+      closure_0 = defaultLocale;
       return fn(this, undefined, undefined, function() {
         const self = this;
         c5 = 0;
         c6 = 0;
-        return (function*() {
+        return (function*(arg0, value) {
           if (c6 === 2) {
             c6 = 3;
-            HermesBuiltin.throwTypeError();
+            throw new TypeError("Generator functions may not be called on executing generators");
           } else if (tmp4 === 3) {
             if (arg0 === 1) {
-              throw arg1;
+              throw value;
             } else if (arg0 === 2) {
-              let obj = { value: null, done: true };
-              obj[0] = arg1;
+              let obj = { value, done: true };
               return obj;
             } else {
               return { value: "HermesInternal", done: null };
@@ -308,28 +304,27 @@ let items = [
               if (0 === c5) {
                 if (arg0 === 1) {
                   c6 = 3;
-                  throw arg1;
+                  throw value;
                 } else if (arg0 === 2) {
                   c6 = 3;
-                  obj = { value: null, done: true };
-                  obj[0] = arg1;
+                  obj = { value, done: true };
                   return obj;
                 } else {
                   closure_3 = self;
                   closure_4 = tmp2;
-                  if (null == self.messages[self]) {
+                  if (null == self.messages[closure_0]) {
                     let current;
-                    if (null !== tmp38._localeLoadingPromises[self]) {
-                      if (undefined !== tmp42) {
-                        current = tmp42.current;
+                    if (null !== tmp37._localeLoadingPromises[closure_0]) {
+                      if (undefined !== tmp41) {
+                        current = tmp41.current;
                       }
                     }
                     if (null == current) {
-                      if (null != tmp38.localeImportMap[self]) {
-                        const localeImportMap = tmp38.localeImportMap;
-                        const tmp25 = localeImportMap[self]();
+                      if (null != tmp37.localeImportMap[closure_0]) {
+                        const localeImportMap = tmp37.localeImportMap;
+                        const tmp25 = localeImportMap[closure_0]();
                         let initialized;
-                        if (null !== tmp38._localeLoadingPromises[self]) {
+                        if (null !== tmp37._localeLoadingPromises[closure_0]) {
                           if (undefined !== tmp27) {
                             initialized = tmp27.initialized;
                           }
@@ -341,37 +336,33 @@ let items = [
                         if (tmp29) {
                           tmp29 = initialized;
                         }
-                        obj1 = { initialized: null, current: null };
-                        obj1[0] = tmp29;
-                        obj1[1] = tmp25;
-                        tmp38._localeLoadingPromises[self] = obj1;
-                        const messages = tmp38.messages;
-                        closure_1 = self;
+                        const obj1 = { initialized: tmp29, current: tmp25 };
+                        tmp37._localeLoadingPromises[closure_0] = obj1;
+                        messages = tmp37.messages;
+                        closure_1 = closure_0;
                         c5 = 1;
                         c6 = 1;
-                        const obj2 = { value: null, done: false };
-                        obj2[0] = tmp25;
+                        const obj2 = { value: tmp25, done: false };
                         return obj2;
                       } else {
-                        const supportedLocales = tmp38.supportedLocales;
-                        if (supportedLocales.includes(self)) {
+                        const supportedLocales = tmp37.supportedLocales;
+                        if (supportedLocales.includes(closure_0)) {
                           const _Error = Error;
                           const _HermesInternal = HermesInternal;
-                          error = new Error("Requested to load locale " + self + ", which should be supported, but no source for translation data was provided.");
+                          const error = new Error("Requested to load locale " + closure_0 + ", which should be supported, but no source for translation data was provided.");
                           throw error;
                         }
                       }
                     } else {
                       let current1;
-                      if (null !== tmp38._localeLoadingPromises[self]) {
+                      if (null !== tmp37._localeLoadingPromises[closure_0]) {
                         if (undefined !== tmp14) {
                           current1 = tmp14.current;
                         }
                       }
                       c5 = 2;
                       c6 = 1;
-                      const obj3 = { value: null, done: false };
-                      obj3[0] = current1;
+                      const obj3 = { value: current1, done: false };
                       return obj3;
                     }
                   }
@@ -380,24 +371,22 @@ let items = [
               } else if (1 === tmp5) {
                 if (arg0 === 1) {
                   c6 = 3;
-                  throw arg1;
+                  throw value;
                 } else if (arg0 !== 2) {
-                  messages[closure_1] = arg1.default;
-                  closure_3._localeLoadingPromises[self] = { initialized: true, current: "a" };
+                  messages[closure_1] = value.default;
+                  closure_3._localeLoadingPromises[closure_132_0] = { initialized: true, current: "a" };
                   closure_3.emitChange();
                 }
               } else if (arg0 === 1) {
                 c6 = 3;
-                throw arg1;
+                throw value;
               } else if (arg0 === 2) {
                 c6 = 3;
-                obj = { value: null, done: true };
-                obj[0] = arg1;
+                obj = { value, done: true };
                 return obj;
               }
               c6 = 3;
-              const obj4 = { value: null, done: true };
-              obj4[0] = arg1;
+              const obj4 = { value, done: true };
               return obj4;
             } catch (tmp32) {
               c6 = tmp;
@@ -467,101 +456,55 @@ let items = [
   },
   {
     key: "waitForLocaleLoaded",
-    value: function waitForLocaleLoaded(defaultLocale, flag) {
-      return fn(this, arguments, undefined, function(arg0) {
+    value: function waitForLocaleLoaded(defaultLocale) {
+      return hasOwnProperty(this, arguments, undefined, function(arg0) {
         const self = this;
         closure_1 = arg0;
         closure_2 = arg1;
         c5 = 0;
         c6 = 0;
-        const iter = (function*(arg0) {
-          if (c6 === 2) {
-            c6 = 3;
-            HermesBuiltin.throwTypeError();
-          } else if (tmp4 === 3) {
+        const iter = (function*(arg0, value) {
+          if (1 === tmp5) {
             if (arg0 === 1) {
-              throw arg1;
+              c6 = 3;
+              throw value;
             } else if (arg0 === 2) {
-              let obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
+              c6 = 3;
+              return { value, done: true };
             } else {
-              return { value: "HermesInternal", done: null };
-            }
-          } else {
-            try {
-              c6 = 2;
-              if (0 === c5) {
-                if (arg0 === 1) {
-                  c6 = 3;
-                  throw arg1;
-                } else if (arg0 === 2) {
-                  c6 = 3;
-                  obj = { value: null, done: true };
-                  obj[0] = arg1;
-                  return obj;
-                } else {
-                  closure_4 = closure_0;
-                  closure_3 = tmp2;
-                  let flag;
-                  closure_0 = flag;
-                  flag = ref;
-                  if (ref === undefined) {
-                    flag = false;
-                  }
-                  ref = undefined;
-                  c5 = 1;
-                  c6 = 1;
-                  return { value: "PX_16", done: true };
-                }
-              } else {
-                if (1 === tmp5) {
-                  if (arg0 === 1) {
-                    c6 = 3;
-                    throw arg1;
-                  } else if (arg0 === 2) {
-                    c6 = 3;
-                    obj1 = { value: null, done: true };
-                    obj1[0] = arg1;
-                    return obj1;
-                  } else {
-                    ref = closure_4._localeLoadingPromises[closure_0];
-                    if (null == ref) {
-                      c6 = 3;
-                      const obj2 = { value: null, done: true };
-                      obj2[0] = closure_4._loadLocale(closure_0);
-                      return obj2;
-                    } else {
-                      let initialized = ref.initialized;
-                      if (initialized) {
-                        initialized = !flag;
-                      }
-                      if (!initialized) {
-                        c5 = 2;
-                        c6 = 1;
-                        const obj3 = { value: null, done: false };
-                        obj3[0] = ref.current;
-                        return obj3;
-                      }
-                    }
-                  }
-                } else if (arg0 === 1) {
-                  c6 = 3;
-                  throw arg1;
-                } else if (arg0 === 2) {
-                  c6 = 3;
-                  obj = { value: null, done: true };
-                  obj[0] = arg1;
-                  return obj;
-                }
+              closure_131_2 = closure_4._localeLoadingPromises[closure_131_0];
+              if (null == closure_131_2) {
                 c6 = 3;
-                return { value: "HermesInternal", done: null };
+                return { value: closure_4._loadLocale(closure_131_0), done: true };
+              } else {
+                let initialized = closure_131_2.initialized;
+                if (initialized) {
+                  initialized = !closure_131_1;
+                }
+                if (!initialized) {
+                  c5 = 2;
+                  c6 = 1;
+                  return { value: closure_131_2.current, done: false };
+                }
               }
-            } catch (tmp17) {
-              c6 = tmp;
-              throw tmp17;
             }
+          } else if (arg0 === 1) {
+            c6 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c6 = 3;
+            return { value, done: true };
           }
+          yield "HermesInternal";
+          closure_4 = self;
+          closure_3 = tmp2;
+          closure_131_0 = closure_1;
+          let flag = closure_2;
+          if (closure_2 === undefined) {
+            flag = false;
+          }
+          closure_131_1 = flag;
+          return "PX_16";
         })();
         iter.next();
         return iter;
@@ -571,21 +514,20 @@ let items = [
   {
     key: "waitForDefaultLocale",
     value: function waitForDefaultLocale() {
-      return fn(this, arguments, undefined, function() {
+      return hasOwnProperty(this, arguments, undefined, function() {
         const self = this;
         closure_1 = arg0;
         c4 = 0;
         c5 = 0;
-        const iter = (function*() {
+        const iter = (function*(arg0, value) {
           if (c5 === 2) {
             c5 = 3;
-            HermesBuiltin.throwTypeError();
+            throw new TypeError("Generator functions may not be called on executing generators");
           } else if (tmp4 === 3) {
             if (arg0 === 1) {
-              throw arg1;
+              throw value;
             } else if (arg0 === 2) {
-              let obj = { value: null, done: true };
-              obj[0] = arg1;
+              let obj = { value, done: true };
               return obj;
             } else {
               return { value: "HermesInternal", done: null };
@@ -596,36 +538,34 @@ let items = [
               if (0 === c4) {
                 if (arg0 === 1) {
                   c5 = 3;
-                  throw arg1;
+                  throw value;
                 } else if (arg0 === 2) {
                   c5 = 3;
-                  obj = { value: null, done: true };
-                  obj[0] = arg1;
+                  obj = { value, done: true };
                   return obj;
                 } else {
-                  closure_3 = flag;
+                  closure_3 = self;
                   closure_2 = tmp2;
-                  flag = undefined;
-                  flag = closure_1;
+                  closure_130_0 = undefined;
+                  let flag = closure_1;
                   if (closure_1 === undefined) {
                     flag = false;
                   }
+                  closure_130_0 = flag;
                   c4 = 1;
                   c5 = 1;
                   return { value: "PX_16", done: true };
                 }
               } else if (arg0 === 1) {
                 c5 = 3;
-                throw arg1;
+                throw value;
               } else if (arg0 === 2) {
                 c5 = 3;
-                obj1 = { value: null, done: true };
-                obj1[0] = arg1;
+                const obj1 = { value, done: true };
                 return obj1;
               } else {
                 c5 = 3;
-                obj = { value: null, done: true };
-                obj[0] = closure_3.waitForLocaleLoaded(closure_3.defaultLocale, flag);
+                obj = { value: closure_3.waitForLocaleLoaded(closure_3.defaultLocale, closure_130_0), done: true };
                 return obj;
               }
             } catch (tmp10) {
@@ -641,19 +581,20 @@ let items = [
   }
 ];
 const _moduleResult = _createClass(MessageLoader, items);
+const metroRequire = _moduleResult;
 let closure_7 = [];
 
-export const loadAllMessagesInLocale = function loadAllMessagesInLocale(closure_0) {
-  return fn(this, undefined, undefined, function*() {
+export const loadAllMessagesInLocale = function loadAllMessagesInLocale(arg0) {
+  closure_0 = arg0;
+  return fn(this, undefined, undefined, function*(arg0, value) {
     if (c0 === 2) {
       c0 = 3;
-      HermesBuiltin.throwTypeError();
+      throw new TypeError("Generator functions may not be called on executing generators");
     } else if (tmp3 === 3) {
       if (arg0 === 1) {
-        throw arg1;
+        throw value;
       } else if (arg0 === 2) {
-        let obj = { value: null, done: true };
-        obj[0] = arg1;
+        let obj = { value, done: true };
         return obj;
       } else {
         return { value: "HermesInternal", done: null };
@@ -664,26 +605,23 @@ export const loadAllMessagesInLocale = function loadAllMessagesInLocale(closure_
         if (0 === c1) {
           if (arg0 === 1) {
             c0 = 3;
-            throw arg1;
+            throw value;
           } else if (arg0 === 2) {
             c0 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
+            obj = { value, done: true };
             return obj;
           } else {
             c1 = 1;
             c0 = 1;
-            obj1 = { value: null, done: false };
-            obj1[0] = Promise.all(closure_1_7.map((_loadLocale) => _loadLocale._loadLocale(c0)));
+            const obj1 = { value: Promise.all(closure_1_7.map((_loadLocale) => _loadLocale._loadLocale(closure_1_0))), done: false };
             return obj1;
           }
         } else if (arg0 === 1) {
           c0 = 3;
-          throw arg1;
+          throw value;
         } else if (arg0 === 2) {
           c0 = 3;
-          obj = { value: null, done: true };
-          obj[0] = arg1;
+          obj = { value, done: true };
           return obj;
         } else {
           c0 = 3;
@@ -697,16 +635,15 @@ export const loadAllMessagesInLocale = function loadAllMessagesInLocale(closure_
   });
 };
 export const waitForAllDefaultIntlMessagesLoaded = function waitForAllDefaultIntlMessagesLoaded() {
-  return fn(this, undefined, undefined, function*() {
+  return fn(this, undefined, undefined, function*(arg0, value) {
     if (c0 === 2) {
       c0 = 3;
-      HermesBuiltin.throwTypeError();
+      throw new TypeError("Generator functions may not be called on executing generators");
     } else if (tmp3 === 3) {
       if (arg0 === 1) {
-        throw arg1;
+        throw value;
       } else if (arg0 === 2) {
-        let obj = { value: null, done: true };
-        obj[0] = arg1;
+        let obj = { value, done: true };
         return obj;
       } else {
         return { value: "HermesInternal", done: null };
@@ -717,26 +654,23 @@ export const waitForAllDefaultIntlMessagesLoaded = function waitForAllDefaultInt
         if (0 === c1) {
           if (arg0 === 1) {
             c0 = 3;
-            throw arg1;
+            throw value;
           } else if (arg0 === 2) {
             c0 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
+            obj = { value, done: true };
             return obj;
           } else {
             c1 = 1;
             c0 = 1;
-            obj1 = { value: null, done: false };
-            obj1[0] = Promise.all(closure_1_7.map((waitForDefaultLocale) => waitForDefaultLocale.waitForDefaultLocale()));
+            const obj1 = { value: Promise.all(closure_2_7.map((waitForDefaultLocale) => waitForDefaultLocale.waitForDefaultLocale())), done: false };
             return obj1;
           }
         } else if (arg0 === 1) {
           c0 = 3;
-          throw arg1;
+          throw value;
         } else if (arg0 === 2) {
           c0 = 3;
-          obj = { value: null, done: true };
-          obj[0] = arg1;
+          obj = { value, done: true };
           return obj;
         } else {
           c0 = 3;
@@ -750,7 +684,8 @@ export const waitForAllDefaultIntlMessagesLoaded = function waitForAllDefaultInt
   });
 };
 export const createLoader = function createLoader(arg0, arg1) {
-  const tmp = new closure_6(arg0, arg1);
+  const tmp = new _moduleResult(arg0, arg1);
+  closure_7.push(tmp);
   return tmp;
 };
 export const MessageLoader = _moduleResult;

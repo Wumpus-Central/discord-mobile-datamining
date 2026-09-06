@@ -1,11 +1,11 @@
 // === Module 6848: BottomSheetFlatList ===
 
 // Module 6848 (BottomSheetFlatList)
-import cancelAnimationDefault from "cancelAnimation" /* 1636 */;
-import createBottomSheetScrollableComponent from "createBottomSheetScrollableComponent" /* 6840 */;
+import cancelAnimation from "cancelAnimation" /* 1636 */;
 
-const animatedComponent = cancelAnimationDefault.createAnimatedComponent(require("get ActivityIndicator").FlatList);
-const memoResult = require("noop").memo(createBottomSheetScrollableComponent.createBottomSheetScrollableComponent(require("GESTURE_SOURCE").SCROLLABLE_TYPE.FLATLIST, animatedComponent));
+const animatedComponent = cancelAnimation.createAnimatedComponent(fn(17).FlatList);
+const module_6840 = fn(6840);
+const memoResult = fn(19).memo(module_6840.createBottomSheetScrollableComponent(fn(6628).SCROLLABLE_TYPE.FLATLIST, animatedComponent));
 memoResult.displayName = "BottomSheetFlatList";
 
 export default memoResult;

@@ -2,15 +2,15 @@
 
 // Module 1449
 import _mod1284 from "module_1284" /* 1284 */;
-import getProto from "getProto" /* 1288 */;
+import _mod1288 from "module_1288" /* 1288 */;
 import callBoundIntrinsic from "callBoundIntrinsic" /* 1316 */;
-import hasToStringTagShams from "hasToStringTagShams" /* 1444 */;
+import _mod1444 from "module_1444" /* 1444 */;
 import availableTypedArrays from "availableTypedArrays" /* 1450 */;
-import forEach from "forEach" /* 1452 */;
+import _mod1452 from "module_1452" /* 1452 */;
 import callBind from "callBind" /* 1454 */;
 
 let closure_2 = callBoundIntrinsic("Object.prototype.toString");
-let tmp = hasToStringTagShams();
+let tmp = _mod1444();
 let closure_3 = tmp;
 if (typeof globalThis !== "undefined") {
   const global = globalThis;
@@ -31,11 +31,11 @@ let closure_7 = callBoundIntrinsic("Array.prototype.indexOf", true) || (function
 let closure_8 = Object.create(null);
 if (tmp) {
   if (_mod1284) {
-    if (getProto) {
-      forEach(tmp2, (arg0) => {
+    if (_mod1288) {
+      _mod1452(tmp2, (arg0) => {
         const tmp = new global[arg0]();
         if (Symbol.toStringTag in tmp) {
-          if (getProto) {
+          if (_mod1288) {
             const tmp4 = tmp2(1288)(tmp);
             const _Symbol = Symbol;
             const tmp5 = tmp2(1284)(tmp4, Symbol.toStringTag);
@@ -59,35 +59,35 @@ if (tmp) {
         if (typeof obj === "object") {
           if (closure_3) {
             let tmp14 = null;
-            if (_require(1284)) {
-              _require = obj;
-              dependencyMap = false;
-              _require(1452)(closure_8, (arg0, arg1) => {
+            if (require("module_1284")) {
+              closure_129_0 = obj;
+              closure_129_1 = false;
+              require("module_1452")(closure_8, (fn, arg1) => {
                 if (!closure_1) {
                   try {
-                    if ("$" + arg0(closure_0) === arg1) {
-                      closure_1 = closure_1_6(arg1, 1);
+                    if ("$" + fn(closure_0) === arg1) {
+                      closure_1 = closure_6(arg1, 1);
                     }
                   } catch (err) {
                   }
                 }
               });
-              tmp14 = dependencyMap;
+              tmp14 = closure_129_1;
             }
             return tmp14;
           } else {
-            const tmp3 = callback2(callback(obj), 8, -1);
+            const tmp3 = closure_6(closure_2(obj), 8, -1);
             let tmp6 = tmp3;
-            if (callback3(closure_5, tmp3) <= -1) {
+            if (closure_7(closure_5, tmp3) <= -1) {
               let tmp7 = "Object" === tmp3;
               if (tmp7) {
                 _require = obj;
                 dependencyMap = false;
-                _require(1452)(closure_8, (arg0, arg1) => {
+                require("module_1452")(closure_8, (fn, arg1) => {
                   if (!closure_1) {
                     try {
-                      arg0(closure_0);
-                      closure_1 = closure_1_6(arg1, 1);
+                      fn(closure_0);
+                      closure_1 = closure_6(arg1, 1);
                     } catch (err) {
                     }
                   }
@@ -104,7 +104,7 @@ if (tmp) {
     };
   }
 }
-forEach(tmp2, (arg0) => {
+_mod1452(tmp2, (arg0) => {
   const arr = new global[arg0]();
   if (arr.slice || arr.set) {
     const text = `$${arg0}`;

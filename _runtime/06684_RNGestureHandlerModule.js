@@ -1,7 +1,7 @@
 // === Module 6684: RNGestureHandlerModule ===
 
 // Module 6684 (RNGestureHandlerModule)
-import RNGestureHandlerModuleDefault from "RNGestureHandlerModule" /* 6685 */;
+import _modDef6685 from "module_6685" /* 6685 */;
 
 
-export default RNGestureHandlerModuleDefault;
+export default _modDef6685;

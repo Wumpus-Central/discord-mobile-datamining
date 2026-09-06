@@ -1,41 +1,39 @@
 // === Module 11061: purchaseUpdatedListener ===
 
 // Module 11061 (purchaseUpdatedListener)
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import _mod17 from "module_17" /* 17 */;
 import _mod11051 from "module_11051" /* 11051 */;
+import productSk2Map from "productSk2Map" /* 11062 */;
 
-const NativeEventEmitter = get_ActivityIndicator.NativeEventEmitter;
+const NativeEventEmitter = _mod17.NativeEventEmitter;
 
 export const purchaseUpdatedListener = (arg0, arg1) => {
   let fn = arg0;
-  const _require = arg0;
+  _require = arg0;
   dependencyMap = arg1;
-  const obj = _require(11051);
-  const obj2 = new NativeEventEmitter(_require(11051).getNativeModule());
+  const obj = require("module_11051");
+  const obj2 = new NativeEventEmitter(require("module_11051").getNativeModule());
   if (obj3.isIosStorekit2()) {
     fn = (arg0) => {
-      callback(callback(table[3]).transactionSk2ToPurchaseMap(arg0));
+      closure_0(productSk2Map.transactionSk2ToPurchaseMap(arg0));
     };
   }
-  obj3 = _require(11049);
-  if (_require(11051).isAndroid) {
+  obj3 = require("module_11049");
+  if (require("module_11051").isAndroid) {
     const androidModule = tmp(11051).getAndroidModule();
     const tmpResult = tmp(11051);
-    androidModule.startListening().catch((arg0) => {
+    androidModule.startListening().catch((error) => {
       if (closure_1) {
-        tmp(arg0);
+        tmp(error);
       } else {
-        throw arg0;
+        throw error;
       }
     });
     const startListeningResult = androidModule.startListening();
   }
   return obj2.addListener("purchase-updated", fn);
 };
-export const purchaseErrorListener = (arg0) => {
-  const obj = _mod11051;
-  return new NativeEventEmitter(_mod11051.getNativeModule()).addListener("purchase-error", arg0);
-};
+export const purchaseErrorListener = (arg0) => new NativeEventEmitter(_mod11051.getNativeModule()).addListener("purchase-error", arg0);
 export const promotedProductListener = (arg0) => {
   let addListenerResult = null;
   if (_mod11051.isIos) {

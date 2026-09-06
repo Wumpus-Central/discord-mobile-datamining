@@ -7,10 +7,8 @@ class AsyncGenerator {
     resume = function resume(arg0, arg1) {
       try {
         const iter = applyArgumentsResult[arg0](arg1);
-        let next = iter;
-        let value = iter.value;
-        c2 = value;
-        const tmp7 = value instanceof applyArgumentsResult(_undefined[0]);
+        value = iter.value;
+        const tmp7 = value instanceof applyArgumentsResult(value[0]);
         closure_3 = tmp7;
         if (tmp7) {
           let v = value.v;
@@ -19,77 +17,72 @@ class AsyncGenerator {
         }
         const resolved = Promise.resolve(v);
         resolved.then((done) => {
-          let value = done;
-          if (callback) {
+          value = done;
+          if (closure_3) {
             let str = "next";
-            if ("return" === dependencyMap) {
+            if ("return" === closure_0) {
               str = "return";
             }
-            if (_null.k) {
+            if (value.k) {
               if (!done.done) {
-                value = dependencyMap[str](done).value;
+                value = applyArgumentsResult[str](done).value;
               }
             }
-            callback(str, done);
+            resume(str, done);
           }
           let str3 = "normal";
-          if (next.done) {
+          if (iter.done) {
             str3 = "return";
           }
           if ("return" === str3) {
-            let obj = { value: null, done: true };
-            obj[0] = value;
-            next.resolve(obj);
+            obj = { value, done: true };
+            obj.resolve(obj);
           } else if ("throw" === str3) {
-            next.reject(value);
+            obj.reject(value);
           } else {
-            obj = { value: null, done: false };
-            obj[0] = value;
-            next.resolve(obj);
+            obj = { value, done: false };
+            obj.resolve(obj);
           }
-          next = next.next;
+          const next = obj.next;
+          obj = next;
           if (next) {
-            callback(next.key, next.arg);
+            resume(next.key, obj.arg);
           } else {
-            _null = null;
+            obj = null;
           }
         }, (arg0) => {
-          callback("throw", arg0);
+          closure_3("throw", arg0);
         });
       } catch (tmp10) {
         settle("throw", tmp10);
       }
     };
-    settle = function settle(arg0, arg1) {
+    settle = function settle(arg0, value) {
       if ("return" === arg0) {
-        let obj = { value: null, done: true };
-        obj[0] = arg1;
-        next.resolve(obj);
+        obj = { value, done: true };
+        obj.resolve(obj);
       } else if ("throw" === arg0) {
-        next.reject(arg1);
+        obj.reject(value);
       } else {
-        obj = { value: null, done: false };
-        obj[0] = arg1;
-        next.resolve(obj);
+        obj = { value, done: false };
+        obj.resolve(obj);
       }
-      next = next.next;
+      const next = obj.next;
+      obj = next;
       if (next) {
-        resume(next.key, next.arg);
+        resume(next.key, obj.arg);
       } else {
-        c2 = null;
+        obj = null;
       }
     };
-    this._invoke = (arg0, arg1) => {
-      closure_0 = arg0;
-      return new Promise((resolve, reject) => {
-        obj = { key: closure_0, arg: obj, resolve, reject, next: null };
-        if (obj) {
-          obj.next = obj;
-        } else {
-          closure_1_3(tmp, tmp2);
-        }
-      });
-    };
+    this._invoke = (key, arg) => new Promise((resolve, reject) => {
+      obj = { key, arg, resolve, reject, next: null };
+      if (obj) {
+        obj.next = obj;
+      } else {
+        resume(tmp, tmp2);
+      }
+    });
     if (typeof global.return !== "function") {
       tmp.return = undefined;
     }
@@ -121,23 +114,19 @@ export default function _wrapAsyncGenerator(arg0) {
   closure_0 = arg0;
   return function() {
     const self = this;
-    const apply = closure_0.apply;
+    const apply = applyArgumentsResult.apply;
     if (typeof apply === "unknown") {
-      let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+      applyArgumentsResult = HermesBuiltin.applyArguments(self);
     } else {
       applyArgumentsResult = apply(self, arguments);
     }
-    let obj = Object.create(closure_1_2.prototype);
-    closure_0 = applyArgumentsResult;
-    c1 = undefined;
-    c2 = undefined;
+    Object.create(AsyncGenerator.prototype);
+    let obj;
     function resume(arg0, arg1) {
       try {
         const iter = applyArgumentsResult[arg0](arg1);
-        let next = iter;
-        let value = iter.value;
-        c2 = value;
-        const tmp7 = value instanceof applyArgumentsResult(_undefined[0]);
+        value = iter.value;
+        const tmp7 = value instanceof applyArgumentsResult(value[0]);
         closure_3 = tmp7;
         if (tmp7) {
           let v = value.v;
@@ -146,77 +135,72 @@ export default function _wrapAsyncGenerator(arg0) {
         }
         const resolved = Promise.resolve(v);
         resolved.then((done) => {
-          let value = done;
-          if (callback) {
+          value = done;
+          if (closure_3) {
             let str = "next";
-            if ("return" === dependencyMap) {
+            if ("return" === closure_0) {
               str = "return";
             }
-            if (_null.k) {
+            if (value.k) {
               if (!done.done) {
-                value = dependencyMap[str](done).value;
+                value = applyArgumentsResult[str](done).value;
               }
             }
-            callback(str, done);
+            resume(str, done);
           }
           let str3 = "normal";
-          if (next.done) {
+          if (iter.done) {
             str3 = "return";
           }
           if ("return" === str3) {
-            let obj = { value: null, done: true };
-            obj[0] = value;
-            next.resolve(obj);
+            obj = { value, done: true };
+            obj.resolve(obj);
           } else if ("throw" === str3) {
-            next.reject(value);
+            obj.reject(value);
           } else {
-            obj = { value: null, done: false };
-            obj[0] = value;
-            next.resolve(obj);
+            obj = { value, done: false };
+            obj.resolve(obj);
           }
-          next = next.next;
+          const next = obj.next;
+          obj = next;
           if (next) {
-            callback(next.key, next.arg);
+            resume(next.key, obj.arg);
           } else {
-            _null = null;
+            obj = null;
           }
         }, (arg0) => {
-          callback("throw", arg0);
+          closure_3("throw", arg0);
         });
       } catch (tmp10) {
         settle("throw", tmp10);
       }
     }
-    function settle(arg0, arg1) {
+    function settle(arg0, value) {
       if ("return" === arg0) {
-        let obj = { value: null, done: true };
-        obj[0] = arg1;
-        next.resolve(obj);
+        obj = { value, done: true };
+        obj.resolve(obj);
       } else if ("throw" === arg0) {
-        next.reject(arg1);
+        obj.reject(value);
       } else {
-        obj = { value: null, done: false };
-        obj[0] = arg1;
-        next.resolve(obj);
+        obj = { value, done: false };
+        obj.resolve(obj);
       }
-      next = next.next;
+      const next = obj.next;
+      obj = next;
       if (next) {
-        resume(next.key, next.arg);
+        resume(next.key, obj.arg);
       } else {
-        c2 = null;
+        obj = null;
       }
     }
-    obj._invoke = (arg0, arg1) => {
-      closure_0 = arg0;
-      return new Promise((resolve, reject) => {
-        obj = { key: closure_0, arg: obj, resolve, reject, next: null };
-        if (obj) {
-          obj.next = obj;
-        } else {
-          closure_1_3(tmp, tmp2);
-        }
-      });
-    };
+    obj._invoke = (key, arg) => new Promise((resolve, reject) => {
+      obj = { key, arg, resolve, reject, next: null };
+      if (obj) {
+        obj.next = obj;
+      } else {
+        resume(tmp, tmp2);
+      }
+    });
     if (typeof applyArgumentsResult.return !== "function") {
       obj.return = undefined;
     }

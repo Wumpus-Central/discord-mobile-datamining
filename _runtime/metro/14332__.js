@@ -3,7 +3,7 @@
 // Module 14332
 import _mod14301 from "module_14301" /* 14301 */;
 import element from "element" /* 14333 */;
-import getOwnPropertyDescriptor from "getOwnPropertyDescriptor" /* 14300 */;
+import getOwnPropertyDescriptor from "module_14300" /* 14300 */;
 
 let tmp2 = !getOwnPropertyDescriptor;
 if (!getOwnPropertyDescriptor) {

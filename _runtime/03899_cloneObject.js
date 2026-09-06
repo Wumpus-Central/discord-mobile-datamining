@@ -4,8 +4,7 @@
 import assign from "assign" /* 3900 */;
 
 if (!assign) {
-  const obj = { default: null };
-  obj[0] = assign;
+  const obj = { default: assign };
   let tmp3 = obj;
 } else {
   tmp3 = assign;

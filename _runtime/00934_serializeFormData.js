@@ -1,22 +1,22 @@
 // === Module 934: serializeFormData ===
 
 // Module 934 (serializeFormData)
-import registerSpanErrorInstrumentation from "registerSpanErrorInstrumentation" /* 682 */;
-import __SENTRY_DEBUG__ from "__SENTRY_DEBUG__" /* 900 */;
-import closure_2 from "_slicedToArray" /* 32 */;
+import _mod682 from "module_682" /* 682 */;
+import _mod900 from "module_900" /* 900 */;
+import _slicedToArray from "module_32" /* 32 */;
 
-function serializeFormData(fetchRequestArgBody) {
-  return new URLSearchParams(fetchRequestArgBody).toString();
+function serializeFormData(size) {
+  return new URLSearchParams(size).toString();
 }
 Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
 const forResult = Symbol.for("sentry__originalRequestBody");
 let c3 = forResult;
 
 export const ORIGINAL_REQ_BODY = forResult;
-export const getBodyString = function getBodyString(fetchRequestArgBody, closure_133) {
-  let debug = closure_133;
-  if (closure_133 === undefined) {
-    debug = registerSpanErrorInstrumentation.debug;
+export const getBodyString = function getBodyString(fetchRequestArgBody, arg1) {
+  let debug = arg1;
+  if (arg1 === undefined) {
+    debug = _mod682.debug;
   }
   try {
     if (typeof fetchRequestArgBody === "string") {
@@ -33,7 +33,7 @@ export const getBodyString = function getBodyString(fetchRequestArgBody, closure
           const items2 = [serializeFormData(fetchRequestArgBody)];
           return items2;
         } else if (fetchRequestArgBody) {
-          if (__SENTRY_DEBUG__.DEBUG_BUILD) {
+          if (_mod900.DEBUG_BUILD) {
             debug.log("Skipping network body because of body type", fetchRequestArgBody);
           }
           const items3 = [undefined, "UNPARSEABLE_BODY_TYPE"];
@@ -45,7 +45,7 @@ export const getBodyString = function getBodyString(fetchRequestArgBody, closure
       }
     }
   } catch (tmp9) {
-    if (__SENTRY_DEBUG__.DEBUG_BUILD) {
+    if (_mod900.DEBUG_BUILD) {
       obj.error(tmp9, "Failed to serialize body", tmp2);
     }
     const items5 = [tmp, "BODY_PARSE_ERROR"];
@@ -70,7 +70,7 @@ export const getFetchRequestArgBody = function getFetchRequestArgBody(input) {
     const _Request = Request;
     if (items[0] instanceof Request) {
       let tmp4;
-      if (undefined !== items[0][closure_3]) {
+      if (undefined !== items[0][forResult]) {
         tmp4 = tmp3;
       }
       return tmp4;
@@ -82,20 +82,20 @@ export const parseXhrResponseHeaders = function parseXhrResponseHeaders(xhr) {
     const str = xhr.getAllResponseHeaders();
     if (str) {
       const parts = str.split("\r\n");
-      let reduced = parts.reduce((arg0, str) => {
-        [str, tmp2] = callback(str.split(": "), 2);
+      let reduced = parts.reduce((acc, item) => {
+        [str, tmp2] = _slicedToArray(item.split(": "), 2);
         if (tmp2) {
-          arg0[str.toLowerCase()] = tmp2;
+          acc[str.toLowerCase()] = tmp2;
         }
-        return arg0;
+        return acc;
       }, {});
     } else {
       reduced = {};
     }
     return reduced;
   } catch (tmp5) {
-    if (__SENTRY_DEBUG__.DEBUG_BUILD) {
-      const debug = registerSpanErrorInstrumentation.debug;
+    if (_mod900.DEBUG_BUILD) {
+      const debug = _mod682.debug;
       debug.error(tmp5, "Failed to get xhr response headers", tmp2);
     }
     return {};

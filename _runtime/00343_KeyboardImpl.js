@@ -2,14 +2,14 @@
 
 // Module 343 (KeyboardImpl)
 import _createClassDefault from "_createClass" /* 42 */;
-import closure_2 from "_classCallCheck" /* 41 */;
+import _classCallCheck from "_classCallCheck" /* 41 */;
 
 const KeyboardImpl = importDefault;
 class KeyboardImpl {
   constructor() {
     self = this;
-    tmp = closure_2(this, self);
-    tmp2 = new require("NativeEventEmitter")(null);
+    tmp = c2(this, KeyboardImpl);
+    tmp2 = new closure_0(closure_1[2])(null);
     this._emitter = tmp2;
     addListenerResult = this.addListener("keyboardDidShow", (_currentlyShowing) => {
       self._currentlyShowing = _currentlyShowing;
@@ -20,14 +20,15 @@ class KeyboardImpl {
     return;
   }
 }
+const entry = {
+  key: "addListener",
+  value: function addListener(arg0, arg1, arg2) {
+    const _emitter = this._emitter;
+    return _emitter.addListener(arg0, arg1);
+  }
+};
 const items = [
-  {
-    key: "addListener",
-    value: function addListener(arg0, arg1, arg2) {
-      const _emitter = this._emitter;
-      return _emitter.addListener(arg0, arg1);
-    }
-  },
+  entry,
   {
     key: "removeAllListeners",
     value: function removeAllListeners(arg0) {
@@ -67,11 +68,9 @@ const items = [
         tmp = 0 !== duration;
       }
       if (tmp) {
-        let obj = KeyboardImpl(342);
-        obj = { duration: null, update: null };
-        obj[0] = duration;
-        obj = { duration: null, type: null };
-        obj[0] = duration;
+        KeyboardImpl(342);
+        let obj = { duration, update: null };
+        obj = { duration, type: null };
         let str = null != easing;
         if (str) {
           str = tmp2(342).Types[easing];
@@ -79,8 +78,8 @@ const items = [
         if (!str) {
           str = "keyboard";
         }
-        obj[1] = str;
-        obj[1] = obj;
+        obj.type = str;
+        obj.update = obj;
         obj.configureNext(obj);
         tmp2 = KeyboardImpl;
       }

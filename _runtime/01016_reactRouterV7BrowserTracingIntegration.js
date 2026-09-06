@@ -2,7 +2,7 @@
 
 // Module 1016 (reactRouterV7BrowserTracingIntegration)
 import computeLocationKey from "computeLocationKey" /* 1013 */;
-import registerSpanErrorInstrumentation from "registerSpanErrorInstrumentation" /* 682 */;
+import registerSpanErrorInstrumentation from "module_682" /* 682 */;
 import feedbackAsyncIntegration from "feedbackAsyncIntegration" /* 889 */;
 
 Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });

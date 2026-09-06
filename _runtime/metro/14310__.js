@@ -2,12 +2,12 @@
 
 // Module 14310
 import withoutSetter from "withoutSetter" /* 14311 */;
-import all from "all" /* 14322 */;
+import _mod14322 from "module_14322" /* 14322 */;
 
 let closure_3 = withoutSetter("toPrimitive");
 
 export default (arg0, arg1) => {
-  if (all(arg0)) {
+  if (_mod14322(arg0)) {
     if (!tmp(14324)(arg0)) {
       let str = arg1;
       const tmp4 = tmp(14327)(arg0, closure_3);

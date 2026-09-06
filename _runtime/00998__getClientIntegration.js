@@ -1,7 +1,7 @@
 // === Module 998: _getClientIntegration ===
 
 // Module 998 (_getClientIntegration)
-import registerSpanErrorInstrumentation from "registerSpanErrorInstrumentation" /* 682 */;
+import _mod682 from "module_682" /* 682 */;
 
 require = arg1;
 const dependencyMap = arg6;
@@ -13,8 +13,8 @@ if (!fn) {
   fn = (obj, arr) => {
     obj = {};
     for (const key10007 in arg0) {
-      let tmp6 = key10007;
       let _Object2 = Object;
+      hasOwnProperty = Object.prototype.hasOwnProperty;
       let call2 = hasOwnProperty.call;
       if (typeof call2 === "unknown") {
         let hasOwnPropertyResult = hasOwnProperty(key10007);
@@ -59,8 +59,9 @@ const MobileFeedback = "MobileFeedback";
 function _getClientIntegration() {
 
 }
-arg5.MOBILE_FEEDBACK_INTEGRATION_NAME = "MobileFeedback";
-arg5.feedbackIntegration = (D) => {
+
+export const MOBILE_FEEDBACK_INTEGRATION_NAME = "MobileFeedback";
+export const feedbackIntegration = (D) => {
   let obj = D;
   if (D === undefined) {
     obj = {};
@@ -70,108 +71,114 @@ arg5.feedbackIntegration = (D) => {
   if (!buttonOptions) {
     buttonOptions = {};
   }
-  obj[2] = buttonOptions;
+  obj.buttonOptions = buttonOptions;
   if (!screenshotButtonOptions) {
     screenshotButtonOptions = {};
   }
-  obj[3] = screenshotButtonOptions;
+  obj.screenshotButtonOptions = screenshotButtonOptions;
   if (!colorScheme) {
     colorScheme = "system";
   }
-  obj[4] = colorScheme;
+  obj.colorScheme = colorScheme;
   if (!themeLight) {
     themeLight = {};
   }
-  obj[5] = themeLight;
+  obj.themeLight = themeLight;
   if (!themeDark) {
     themeDark = {};
   }
-  obj[6] = themeDark;
+  obj.themeDark = themeDark;
   return obj;
 };
-arg5.getFeedbackOptions = () => {
-  if (typeof _getClientIntegration !== "function") {
-    HermesBuiltin.throwTypeError();
-  }
-  const client = registerSpanErrorInstrumentation.getClient();
-  let integrationByName;
-  if (null !== client) {
-    if (undefined !== client) {
-      integrationByName = client.getIntegrationByName(MobileFeedback);
+export const getFeedbackOptions = () => {
+  if (typeof _getClientIntegration === "function") {
+    const client = _mod682.getClient();
+    let integrationByName;
+    if (null !== client) {
+      if (undefined !== client) {
+        integrationByName = client.getIntegrationByName(MobileFeedback);
+      }
     }
+    return integrationByName ? integrationByName.options : {};
+  } else {
+    throw new TypeError("Trying to call a non-function");
   }
-  return integrationByName ? integrationByName.options : {};
 };
-arg5.getFeedbackButtonOptions = () => {
-  if (typeof _getClientIntegration !== "function") {
-    HermesBuiltin.throwTypeError();
-  }
-  const client = registerSpanErrorInstrumentation.getClient();
-  let integrationByName;
-  if (null !== client) {
-    if (undefined !== client) {
-      integrationByName = client.getIntegrationByName(MobileFeedback);
+export const getFeedbackButtonOptions = () => {
+  if (typeof _getClientIntegration === "function") {
+    const client = _mod682.getClient();
+    let integrationByName;
+    if (null !== client) {
+      if (undefined !== client) {
+        integrationByName = client.getIntegrationByName(MobileFeedback);
+      }
     }
+    return integrationByName ? integrationByName.buttonOptions : {};
+  } else {
+    throw new TypeError("Trying to call a non-function");
   }
-  return integrationByName ? integrationByName.buttonOptions : {};
 };
-arg5.getScreenshotButtonOptions = () => {
-  if (typeof _getClientIntegration !== "function") {
-    HermesBuiltin.throwTypeError();
-  }
-  const client = registerSpanErrorInstrumentation.getClient();
-  let integrationByName;
-  if (null !== client) {
-    if (undefined !== client) {
-      integrationByName = client.getIntegrationByName(MobileFeedback);
+export const getScreenshotButtonOptions = () => {
+  if (typeof _getClientIntegration === "function") {
+    const client = _mod682.getClient();
+    let integrationByName;
+    if (null !== client) {
+      if (undefined !== client) {
+        integrationByName = client.getIntegrationByName(MobileFeedback);
+      }
     }
+    return integrationByName ? integrationByName.screenshotButtonOptions : {};
+  } else {
+    throw new TypeError("Trying to call a non-function");
   }
-  return integrationByName ? integrationByName.screenshotButtonOptions : {};
 };
-arg5.getColorScheme = () => {
-  if (typeof _getClientIntegration !== "function") {
-    HermesBuiltin.throwTypeError();
-  }
-  const client = registerSpanErrorInstrumentation.getClient();
-  let integrationByName;
-  if (null !== client) {
-    if (undefined !== client) {
-      integrationByName = client.getIntegrationByName(MobileFeedback);
+export const getColorScheme = () => {
+  if (typeof _getClientIntegration === "function") {
+    const client = _mod682.getClient();
+    let integrationByName;
+    if (null !== client) {
+      if (undefined !== client) {
+        integrationByName = client.getIntegrationByName(MobileFeedback);
+      }
     }
+    let colorScheme;
+    if (null != integrationByName) {
+      colorScheme = integrationByName.colorScheme;
+    }
+    let str = "system";
+    if (colorScheme) {
+      str = integrationByName.colorScheme;
+    }
+    return str;
+  } else {
+    throw new TypeError("Trying to call a non-function");
   }
-  let colorScheme;
-  if (null != integrationByName) {
-    colorScheme = integrationByName.colorScheme;
-  }
-  let str = "system";
-  if (colorScheme) {
-    str = integrationByName.colorScheme;
-  }
-  return str;
 };
-arg5.getFeedbackLightTheme = () => {
-  if (typeof _getClientIntegration !== "function") {
-    HermesBuiltin.throwTypeError();
-  }
-  const client = registerSpanErrorInstrumentation.getClient();
-  let integrationByName;
-  if (null !== client) {
-    if (undefined !== client) {
-      integrationByName = client.getIntegrationByName(MobileFeedback);
+export const getFeedbackLightTheme = () => {
+  if (typeof _getClientIntegration === "function") {
+    const client = _mod682.getClient();
+    let integrationByName;
+    if (null !== client) {
+      if (undefined !== client) {
+        integrationByName = client.getIntegrationByName(MobileFeedback);
+      }
     }
+    return integrationByName ? integrationByName.themeLight : {};
+  } else {
+    throw new TypeError("Trying to call a non-function");
   }
-  return integrationByName ? integrationByName.themeLight : {};
 };
-arg5.getFeedbackDarkTheme = () => {
-  if (typeof _getClientIntegration !== "function") {
-    HermesBuiltin.throwTypeError();
-  }
-  const client = registerSpanErrorInstrumentation.getClient();
-  let integrationByName;
-  if (null !== client) {
-    if (undefined !== client) {
-      integrationByName = client.getIntegrationByName(MobileFeedback);
+export const getFeedbackDarkTheme = () => {
+  if (typeof _getClientIntegration === "function") {
+    const client = _mod682.getClient();
+    let integrationByName;
+    if (null !== client) {
+      if (undefined !== client) {
+        integrationByName = client.getIntegrationByName(MobileFeedback);
+      }
     }
+    return integrationByName ? integrationByName.themeDark : {};
+  } else {
+    throw new TypeError("Trying to call a non-function");
   }
-  return integrationByName ? integrationByName.themeDark : {};
 };

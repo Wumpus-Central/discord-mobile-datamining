@@ -1,12 +1,13 @@
 // === Module 4538: TouchableHaptic ===
 
 // Module 4538 (TouchableHaptic)
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import noop from "noop" /* 19 */;
+import _mod17 from "module_17" /* 17 */;
+import _mod19 from "module_19" /* 19 */;
 import jsxProd from "jsxProd" /* 21 */;
+import _modDef4531 from "module_4531" /* 4531 */;
 
-noop.useCallback;
-const Pressable = get_ActivityIndicator.Pressable;
+_mod19.useCallback;
+const Pressable = _mod17.Pressable;
 const jsx = jsxProd.jsx;
 
 export const TouchableHaptic = function TouchableHaptic(hapticType) {
@@ -22,11 +23,10 @@ export const TouchableHaptic = function TouchableHaptic(hapticType) {
   const onPressIn = hapticType.onPressIn;
   const onPress = hapticType.onPress;
   const onLongPress = hapticType.onLongPress;
-  const merged = Object.assign(hapticType, Object.create(null));
-  closure_6 = undefined;
+  const merged = Object.assign(hapticType, Object.assign({ hapticType: 0, hapticTrigger: 0, hapticOptions: 0, onPressIn: 0, onPress: 0, onLongPress: 0 }));
   const items = [impactMedium, hapticOptions];
   const tmp4 = onPressIn(() => {
-    str(hapticOptions[4]).trigger(impactMedium, hapticOptions);
+    _modDef4531.trigger(impactMedium, hapticOptions);
   }, items);
   closure_6 = tmp4;
   const items1 = [str, tmp4, onPressIn];
@@ -34,7 +34,7 @@ export const TouchableHaptic = function TouchableHaptic(hapticType) {
   const items3 = [str, tmp4, onLongPress];
   const tmp5 = onPressIn((arg0) => {
     if ("onPressIn" === str) {
-      callback();
+      closure_6();
     }
     if (onPressIn != null) {
       tmp3(arg0);
@@ -42,7 +42,7 @@ export const TouchableHaptic = function TouchableHaptic(hapticType) {
   }, items1);
   const tmp6 = onPressIn((arg0) => {
     if ("onPress" === str) {
-      callback();
+      closure_6();
     }
     if (onPress != null) {
       tmp3(arg0);
@@ -53,7 +53,7 @@ export const TouchableHaptic = function TouchableHaptic(hapticType) {
     onPressIn: tmp5,
     onPress: onPressIn((arg0) => {
       if ("onPress" === str) {
-        callback();
+        closure_6();
       }
       if (onPress != null) {
         tmp3(arg0);
@@ -61,7 +61,7 @@ export const TouchableHaptic = function TouchableHaptic(hapticType) {
     }, items2),
     onLongPress: onPressIn((arg0) => {
       if ("onLongPress" === str) {
-        callback();
+        closure_6();
       }
       if (onLongPress != null) {
         tmp3(arg0);

@@ -2,37 +2,33 @@
 
 // Module 3864 (eachWeekendOfInterval)
 import eachDayOfInterval from "eachDayOfInterval" /* 3856 */;
-import isSunday from "isSunday" /* 3802 */;
-import isWeekend from "isWeekend" /* 3801 */;
+import module_3802 from "module_3802" /* 3802 */;
+import module_3801 from "module_3801" /* 3801 */;
 import requiredArgs from "requiredArgs" /* 3651 */;
 
 if (!eachDayOfInterval) {
-  let obj = { default: null };
-  obj[0] = eachDayOfInterval;
+  let obj = { default: eachDayOfInterval };
   let tmp3 = obj;
 } else {
   tmp3 = eachDayOfInterval;
 }
 eachDayOfInterval = tmp3;
-if (!isSunday) {
-  obj = { default: null };
-  obj[0] = isSunday;
+if (!module_3802) {
+  obj = { default: module_3802 };
   let tmp5 = obj;
 } else {
-  tmp5 = isSunday;
+  tmp5 = module_3802;
 }
-isSunday = tmp5;
-if (!isWeekend) {
-  obj = { default: null };
-  obj[0] = isWeekend;
+module_3802 = tmp5;
+if (!module_3801) {
+  obj = { default: module_3801 };
   let tmp7 = obj;
 } else {
-  tmp7 = isWeekend;
+  tmp7 = module_3801;
 }
-isWeekend = tmp7;
+module_3801 = tmp7;
 if (!requiredArgs) {
-  const obj1 = { default: null };
-  obj1[0] = requiredArgs;
+  const obj1 = { default: requiredArgs };
   let tmp9 = obj1;
 } else {
   tmp9 = requiredArgs;
@@ -49,13 +45,11 @@ export default function eachWeekendOfInterval(arg0) {
     do {
       let sum = num + 1;
       let tmp3 = defaultResult1[num];
-      let tmp4 = isWeekend;
       tmp5 = sum;
-      if (isWeekend.default(tmp3)) {
+      if (module_3801.default(tmp3)) {
         let arr = items.push(tmp3);
-        let tmp7 = isSunday;
         let sum1 = sum;
-        if (isSunday.default(tmp3)) {
+        if (module_3802.default(tmp3)) {
           sum1 = sum + 5;
         }
         tmp5 = sum1;

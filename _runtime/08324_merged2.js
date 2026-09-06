@@ -1,7 +1,8 @@
 // === Module 8324: merged2 ===
 
 // Module 8324 (merged2)
-import emptyFunction from "emptyFunction" /* 4389 */;
+import "module_4389";
+import emptyFunction from "module_4389" /* 4389 */;
 
 let obj = { transform: null, transformMatrix: null, decomposedMatrix: null, scaleX: null, scaleY: null, rotation: null, translateX: null, translateY: null };
 obj = { perspective: emptyFunction.number };
@@ -27,23 +28,23 @@ const obj8 = { translateY: emptyFunction.number };
 items[10] = emptyFunction.shape({ skewX: emptyFunction.string });
 const obj9 = { skewX: emptyFunction.string };
 items[11] = emptyFunction.shape({ skewY: emptyFunction.string });
-obj[0] = emptyFunction.arrayOf(emptyFunction.oneOfType(items));
-obj[1] = function transformMatrix(arg0, arg1, arg2) {
+obj.transform = emptyFunction.arrayOf(emptyFunction.oneOfType(items));
+obj.transformMatrix = function transformMatrix(arg0, arg1, arg2) {
   if (arg0[arg1]) {
     const _Error = Error;
-    error = new Error("The transformMatrix style property is deprecated. Use `transform: [{ matrix: ... }]` instead.");
+    const error = new Error("The transformMatrix style property is deprecated. Use `transform: [{ matrix: ... }]` instead.");
     return error;
   }
 };
-obj[2] = function decomposedMatrix(arg0, arg1, arg2) {
+obj.decomposedMatrix = function decomposedMatrix(arg0, arg1, arg2) {
   if (arg0[arg1]) {
     const _Error = Error;
-    error = new Error("The decomposedMatrix style property is deprecated. Use `transform: [...]` instead.");
+    const error = new Error("The decomposedMatrix style property is deprecated. Use `transform: [...]` instead.");
     return error;
   }
 };
-let number = emptyFunction.number;
-obj[3] = function validate(arg0, arg1, arg2) {
+const number = emptyFunction.number;
+obj.scaleX = function validate(arg0, arg1, arg2) {
   const substr = [...arguments].slice();
   if (undefined !== arg0[arg1]) {
     const _console = console;
@@ -52,8 +53,8 @@ obj[3] = function validate(arg0, arg1, arg2) {
   }
   return number(arg1, arg2, ...substr);
 };
-number = emptyFunction.number;
-obj[4] = function validate(arg0, arg1, arg2) {
+const number2 = emptyFunction.number;
+obj.scaleY = function validate(arg0, arg1, arg2) {
   const substr = [...arguments].slice();
   if (undefined !== arg0[arg1]) {
     const _console = console;
@@ -62,8 +63,8 @@ obj[4] = function validate(arg0, arg1, arg2) {
   }
   return number(arg1, arg2, ...substr);
 };
-number = emptyFunction.number;
-obj[5] = function validate(arg0, arg1, arg2) {
+const number3 = emptyFunction.number;
+obj.rotation = function validate(arg0, arg1, arg2) {
   const substr = [...arguments].slice();
   if (undefined !== arg0[arg1]) {
     const _console = console;
@@ -72,8 +73,8 @@ obj[5] = function validate(arg0, arg1, arg2) {
   }
   return number(arg1, arg2, ...substr);
 };
-number = emptyFunction.number;
-obj[6] = function validate(arg0, arg1, arg2) {
+const number4 = emptyFunction.number;
+obj.translateX = function validate(arg0, arg1, arg2) {
   const substr = [...arguments].slice();
   if (undefined !== arg0[arg1]) {
     const _console = console;
@@ -82,8 +83,8 @@ obj[6] = function validate(arg0, arg1, arg2) {
   }
   return number(arg1, arg2, ...substr);
 };
-number = emptyFunction.number;
-obj[7] = function validate(arg0, arg1, arg2) {
+const number5 = emptyFunction.number;
+obj.translateY = function validate(arg0, arg1, arg2) {
   const substr = [...arguments].slice();
   if (undefined !== arg0[arg1]) {
     const _console = console;

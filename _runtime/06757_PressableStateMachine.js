@@ -2,24 +2,26 @@
 
 // Module 6757 (PressableStateMachine)
 import _createClassDefault from "_createClass" /* 42 */;
-import PressableStateMachine from "_classCallCheck" /* 41 */;
+import _classCallCheck from "_classCallCheck" /* 41 */;
 
 class PressableStateMachine {
   constructor() {
-    tmp = PressableStateMachine(this, PressableStateMachine);
+    tmp = closure_0(this, PressableStateMachine);
     this.states = null;
     this.currentStepIndex = 0;
     this.eventPayload = null;
     return;
   }
 }
+_classCallCheck = PressableStateMachine;
+const entry = {
+  key: "setStates",
+  value: function setStates(statesConfig) {
+    this.states = statesConfig;
+  }
+};
 const items = [
-  {
-    key: "setStates",
-    value: function setStates(statesConfig) {
-      this.states = statesConfig;
-    }
-  },
+  entry,
   {
     key: "reset",
     value: function reset() {

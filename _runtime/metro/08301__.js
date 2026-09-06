@@ -9,6 +9,6 @@ export default (str) => {
     const typeError = new TypeError("Expected a string");
     throw typeError;
   } else {
-    return str.replace(closure_0, "\\$&");
+    return str.replace(re0, "\\$&");
   }
 };

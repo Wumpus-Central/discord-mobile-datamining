@@ -1,9 +1,9 @@
 // === Module 6873: reactNativeVersion ===
 
 // Module 6873 (reactNativeVersion)
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import _mod17 from "module_17" /* 17 */;
 
-const constants = get_ActivityIndicator.Platform.constants;
+const constants = _mod17.Platform.constants;
 let reactNativeVersion;
 if (constants != null) {
   reactNativeVersion = constants.reactNativeVersion;

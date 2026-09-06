@@ -1,21 +1,20 @@
 // === Module 12787: NativeRouter ===
 
 // Module 12787 (NativeRouter)
-import noopDefault from "noop" /* 19 */;
-import emptyFunctionDefault from "emptyFunction" /* 4389 */;
-import _extends from "_extends" /* 4392 */;
-import { Alert } from "get ActivityIndicator" /* 17 */;
-import { jsx } from "jsxProd" /* 21 */;
+import _modDef4389 from "module_4389" /* 4389 */;
+import _mod4392 from "module_4392" /* 4392 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
+require = fn;
 class NativeRouter {
   constructor(arg0) {
     obj = {};
     merged = Object.assign(global);
-    return jsx(require("_extends").MemoryRouter, obj);
+    return jsx(closure_0(closure_1[3]).MemoryRouter, obj);
   }
 }
-noopDefault;
+const Alert = fn(17).Alert;
+const jsx = fn(21).jsx;
 NativeRouter.defaultProps = {
   getUserConfirmation(arg0, arg1) {
     closure_0 = arg1;
@@ -23,19 +22,19 @@ NativeRouter.defaultProps = {
       {
         text: "Cancel",
         onPress() {
-          return callback(false);
+          return closure_0(false);
         }
       },
       {
         text: "OK",
         onPress() {
-          return callback(true);
+          return closure_0(true);
         }
       }
     ];
     Alert.alert("Confirm", arg0, items);
   }
 };
-NativeRouter.propTypes = { initialEntries: emptyFunctionDefault.array, initialIndex: emptyFunctionDefault.number, getUserConfirmation: emptyFunctionDefault.func, keyLength: emptyFunctionDefault.number, children: emptyFunctionDefault.node };
+NativeRouter.propTypes = { initialEntries: _modDef4389.array, initialIndex: _modDef4389.number, getUserConfirmation: _modDef4389.func, keyLength: _modDef4389.number, children: _modDef4389.node };
 
 export default NativeRouter;

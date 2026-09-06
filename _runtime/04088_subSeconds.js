@@ -1,29 +1,26 @@
 // === Module 4088: subSeconds ===
 
 // Module 4088 (subSeconds)
-import toInteger from "toInteger" /* 3654 */;
-import addSeconds from "addSeconds" /* 3817 */;
+import module_3654 from "module_3654" /* 3654 */;
+import module_3817 from "module_3817" /* 3817 */;
 import requiredArgs from "requiredArgs" /* 3651 */;
 
-if (!toInteger) {
-  let obj = { default: null };
-  obj[0] = toInteger;
+if (!module_3654) {
+  let obj = { default: module_3654 };
   let tmp3 = obj;
 } else {
-  tmp3 = toInteger;
+  tmp3 = module_3654;
 }
-toInteger = tmp3;
-if (!addSeconds) {
-  obj = { default: null };
-  obj[0] = addSeconds;
+module_3654 = tmp3;
+if (!module_3817) {
+  obj = { default: module_3817 };
   let tmp5 = obj;
 } else {
-  tmp5 = addSeconds;
+  tmp5 = module_3817;
 }
-addSeconds = tmp5;
+module_3817 = tmp5;
 if (!requiredArgs) {
-  obj = { default: null };
-  obj[0] = requiredArgs;
+  obj = { default: requiredArgs };
   let tmp7 = obj;
 } else {
   tmp7 = requiredArgs;
@@ -32,6 +29,6 @@ requiredArgs = tmp7;
 
 export default function subSeconds(arg0, arg1) {
   requiredArgs.default(2, arguments);
-  return addSeconds.default(arg0, -toInteger.default(arg1));
+  return module_3817.default(arg0, -module_3654.default(arg1));
 };
 export default exports.default;

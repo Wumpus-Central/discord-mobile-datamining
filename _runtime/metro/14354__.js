@@ -1,10 +1,10 @@
 // === Module 14354: ? ===
 
 // Module 14354
-import all from "all" /* 14323 */;
+import _mod14323 from "module_14323" /* 14323 */;
 
 
-export default (arg0, arg1, arg2, arg3) => {
+export default (arg0, arg1, value, arg3) => {
   let obj = arg3;
   if (!arg3) {
     obj = {};
@@ -14,14 +14,14 @@ export default (arg0, arg1, arg2, arg3) => {
   if (undefined !== obj.name) {
     name = obj.name;
   }
-  if (all(arg2)) {
-    tmp3(14355)(arg2, name, obj);
+  if (_mod14323(value)) {
+    tmp3(14355)(value, name, obj);
   }
   if (obj.global) {
     if (flag) {
-      arg0[arg1] = arg2;
+      arg0[arg1] = value;
     } else {
-      tmp3(14298)(arg1, arg2);
+      tmp3(14298)(arg1, value);
     }
   } else {
     try {
@@ -33,12 +33,11 @@ export default (arg0, arg1, arg2, arg3) => {
         delete tmp[tmp2];
       }
       if (flag) {
-        arg0[arg1] = arg2;
+        arg0[arg1] = value;
       } else {
-        obj = { value: null, enumerable: false, configurable: null, writable: null };
-        obj[0] = arg2;
-        obj[2] = !obj.nonConfigurable;
-        obj[3] = !obj.nonWritable;
+        obj = { value, enumerable: false, configurable: null, writable: null };
+        obj.configurable = !obj.nonConfigurable;
+        obj.writable = !obj.nonWritable;
         tmp3(14351).f(arg0, arg1, obj);
         const tmp3Result = tmp3(14351);
       }

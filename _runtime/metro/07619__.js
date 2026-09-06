@@ -1,16 +1,16 @@
 // === Module 7619: ? ===
 
 // Module 7619
-import getNative from "getNative" /* 637 */;
-import setToArray from "setToArray" /* 654 */;
-import noop from "noop" /* 7620 */;
+import _mod637 from "module_637" /* 637 */;
+import _mod654 from "module_654" /* 654 */;
+import noop from "module_7620" /* 7620 */;
 
-if (getNative) {
-  const _module = setToArray;
+if (_mod637) {
+  const _module = _mod654;
   const items = [, -0];
-  const tmp5 = new getNative(items);
+  const tmp5 = new _mod637(items);
   if (1 / _module(tmp5)[1] === Infinity) {
-    let noop = (arg0) => new getNative(arg0);
+    let noop = (arg0) => new _mod637(arg0);
   }
   module.exports = noop;
 }

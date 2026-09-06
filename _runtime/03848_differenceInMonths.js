@@ -1,52 +1,47 @@
 // === Module 3848: differenceInMonths ===
 
 // Module 3848 (differenceInMonths)
-import _typeof from "_typeof" /* 3650 */;
+import _typeof from "module_3650" /* 3650 */;
 import differenceInCalendarMonths from "differenceInCalendarMonths" /* 3836 */;
 import compareAsc from "compareAsc" /* 3826 */;
 import requiredArgs from "requiredArgs" /* 3651 */;
-import isLastDayOfMonth from "isLastDayOfMonth" /* 3849 */;
+import module_3849 from "module_3849" /* 3849 */;
 
 if (!_typeof) {
-  let obj = { default: null };
-  obj[0] = _typeof;
+  let obj = { default: _typeof };
   let tmp3 = obj;
 } else {
   tmp3 = _typeof;
 }
 _typeof = tmp3;
 if (!differenceInCalendarMonths) {
-  obj = { default: null };
-  obj[0] = differenceInCalendarMonths;
+  obj = { default: differenceInCalendarMonths };
   let tmp5 = obj;
 } else {
   tmp5 = differenceInCalendarMonths;
 }
 differenceInCalendarMonths = tmp5;
 if (!compareAsc) {
-  obj = { default: null };
-  obj[0] = compareAsc;
+  obj = { default: compareAsc };
   let tmp7 = obj;
 } else {
   tmp7 = compareAsc;
 }
 compareAsc = tmp7;
 if (!requiredArgs) {
-  const obj1 = { default: null };
-  obj1[0] = requiredArgs;
+  const obj1 = { default: requiredArgs };
   let tmp9 = obj1;
 } else {
   tmp9 = requiredArgs;
 }
 requiredArgs = tmp9;
-if (!isLastDayOfMonth) {
-  const obj2 = { default: null };
-  obj2[0] = isLastDayOfMonth;
+if (!module_3849) {
+  const obj2 = { default: module_3849 };
   let tmp11 = obj2;
 } else {
-  tmp11 = isLastDayOfMonth;
+  tmp11 = module_3849;
 }
-isLastDayOfMonth = tmp11;
+module_3849 = tmp11;
 
 export default function differenceInMonths(date, friendsSince) {
   requiredArgs.default(2, arguments);
@@ -72,7 +67,7 @@ export default function differenceInMonths(date, friendsSince) {
     }
     const _Number = Number;
     num = defaultResult3 * (absolute - Number(flag));
-    tmp11 = isLastDayOfMonth.default(_typeof.default(date)) && 1 === absolute && 1 === obj3.default(date, defaultResult2);
+    tmp11 = module_3849.default(_typeof.default(date)) && 1 === absolute && 1 === obj3.default(date, defaultResult2);
   }
   let num4 = 0;
   if (0 !== num) {

@@ -1,8 +1,9 @@
 // === Module 379: Animation ===
 
 // Module 379 (Animation)
+import _modAll27 from "module_27" /* 27 */;
 import _createClassDefault from "_createClass" /* 42 */;
-import closure_3 from "_classCallCheck" /* 41 */;
+import _classCallCheck from "_classCallCheck" /* 41 */;
 
 let Animation = importDefault;
 let c4 = 1;
@@ -10,7 +11,7 @@ class Animation {
   constructor(arg0) {
     self = this;
     tmp = closure_3(this, Animation);
-    obj = require("set");
+    obj = closure_0(c2[2]);
     this._useNativeDriver = obj.shouldUseNativeDriver(global);
     this.__active = false;
     isInteraction = global.isInteraction;
@@ -26,22 +27,23 @@ class Animation {
     return;
   }
 }
-let items = [
-  {
-    key: "start",
-    value: function start(arg0, arg1, _onEnd, arg3, __isNative) {
-      const self = this;
-      if (!this._useNativeDriver) {
-        if (true === __isNative.__isNative) {
-          const _Error = Error;
-          error = new Error("Attempting to run JS driven animation on animated node that has been moved to \"native\" earlier by starting an animation with `useNativeDriver: true`");
-          throw error;
-        }
+const entry = {
+  key: "start",
+  value: function start(arg0, arg1, _onEnd, arg3, __isNative) {
+    const self = this;
+    if (!this._useNativeDriver) {
+      if (true === __isNative.__isNative) {
+        const _Error = Error;
+        const error = new Error("Attempting to run JS driven animation on animated node that has been moved to \"native\" earlier by starting an animation with `useNativeDriver: true`");
+        throw error;
       }
-      self._onEnd = _onEnd;
-      self.__active = true;
     }
-  },
+    self._onEnd = _onEnd;
+    self.__active = true;
+  }
+};
+let items = [
+  entry,
   {
     key: "stop",
     value: function stop() {
@@ -57,9 +59,6 @@ let items = [
           API2.stopAnimation(_nativeID);
           const API3 = Animation(357).API;
           const result1 = API3.unsetWaitingForIdentifier(combined);
-          const tmp2 = Animation;
-          const tmp3 = Animation;
-          const tmp4 = dependencyMap;
         } catch (tmp11) {
           const API4 = Animation(357).API;
           const result2 = API4.unsetWaitingForIdentifier(tmp);
@@ -72,7 +71,7 @@ let items = [
   {
     key: "__getNativeAnimationConfig",
     value: function __getNativeAnimationConfig() {
-      error = new Error("This animation type cannot be offloaded to native");
+      const error = new Error("This animation type cannot be offloaded to native");
       throw error;
     }
   },
@@ -89,12 +88,7 @@ let items = [
         for (const item10014 of __getChildrenResult) {
           let push = items.push;
           let items1 = [];
-          let tmp4 = items1;
-          let num = 0;
           let arraySpreadResult = HermesBuiltin.arraySpread(self.__findAnimatedPropsNodes(item10014), 0);
-          let tmp6 = push;
-          let tmp7 = items1;
-          let tmp8 = items;
           let applyResult = HermesBuiltin.apply(items1, items);
           continue;
         }
@@ -105,7 +99,6 @@ let items = [
   {
     key: "__startAnimationIfNative",
     value: function __startAnimationIfNative(self) {
-      self = this;
       self = this;
       Animation = self;
       if (this._useNativeDriver) {
@@ -126,8 +119,6 @@ let items = [
               const result = _self.__onAnimatedValueUpdateReceived(value, tmp2);
               const result1 = obj.__findAnimatedPropsNodes(_self);
               const item = result1.forEach((update) => update.update());
-              const obj2 = self(closure_1_2[4]);
-              const tmp3 = _self;
             }
           });
           const API3 = tmp9(357).API;

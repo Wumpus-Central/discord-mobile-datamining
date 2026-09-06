@@ -1,29 +1,28 @@
 // === Module 5660: HeaderBackButton ===
 
 // Module 5660 (HeaderBackButton)
-import createStandardNavigationFactories from "createStandardNavigationFactories" /* 1484 */;
-import registerAssetDefault from "registerAsset" /* 5632 */;
+import Link from "Link" /* 1484 */;
+import _modDef5632 from "module_5632" /* 5632 */;
 import HeaderButton from "HeaderButton" /* 5666 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import closure_4 from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-({ Animated: c5, Image, Platform, StyleSheet, View: closure_6 } = get_ActivityIndicator);
-({ jsx: error, jsxs: closure_8 } = jsxProd);
+require = fn;
+get_ActivityIndicator = fn(17);
+({ Animated: hasOwnProperty, Image, Platform, StyleSheet, View: metroRequire } = get_ActivityIndicator);
+const jsxProd = fn(21);
+({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
 let c9 = 24;
-obj = { container: obj, label: { fontSize: 17, letterSpacing: 0.35 }, labelWrapper: null, icon: null, iconWithLabel: null, iconMaskContainer: null, iconMaskFillerRect: null, iconMask: null, flip: null };
-obj = { paddingHorizontal: 0, minWidth: StyleSheet.hairlineWidth, marginVertical: 3, marginHorizontal: 11 };
-obj = { flexDirection: "row", alignItems: "flex-start", marginEnd: require("HeaderIcon").ICON_MARGIN };
-obj[2] = obj;
-obj[3] = { width: 24, marginEnd: 3 };
-obj[4] = {};
-obj[5] = { flex: 1, flexDirection: "row", justifyContent: "center" };
-obj[6] = { flex: 1, backgroundColor: "#000" };
-obj[7] = { height: 21, width: 13, marginStart: -14.5, marginVertical: 12, alignSelf: "center" };
-obj[8] = { transform: "scaleX(-1)" };
-const styles = StyleSheet.create(obj);
+let obj = { container: { paddingHorizontal: 0, minWidth: StyleSheet.hairlineWidth, marginVertical: 3, marginHorizontal: 11 }, label: { fontSize: 17, letterSpacing: 0.35 }, labelWrapper: null, icon: null, iconWithLabel: null, iconMaskContainer: null, iconMaskFillerRect: null, iconMask: null, flip: null };
+obj = { flexDirection: "row", alignItems: "flex-start", marginEnd: fn(5661).ICON_MARGIN };
+obj.labelWrapper = obj;
+obj.icon = { width: 24, marginEnd: 3 };
+obj.iconWithLabel = {};
+obj.iconMaskContainer = { flex: 1, flexDirection: "row", justifyContent: "center" };
+obj.iconMaskFillerRect = { flex: 1, backgroundColor: "#000" };
+obj.iconMask = { height: 21, width: 13, marginStart: -14.5, marginVertical: 12, alignSelf: "center" };
+obj.flip = { transform: "scaleX(-1)" };
+const container = StyleSheet.create(obj);
 
 export const HeaderBackButton = function HeaderBackButton(accessibilityLabel) {
   ({ backImage, label, displayMode } = accessibilityLabel);
@@ -47,48 +46,46 @@ export const HeaderBackButton = function HeaderBackButton(accessibilityLabel) {
     }
     accessibilityLabel = str2;
   }
-  importDefault = undefined;
-  dependencyMap = undefined;
+  c1 = undefined;
+  c2 = undefined;
   ({ testID, style, href } = accessibilityLabel);
-  let obj = createStandardNavigationFactories;
+  let obj = Link;
   const theme = obj.useTheme();
   ({ colors, fonts } = theme);
-  obj1 = createStandardNavigationFactories;
+  let obj1 = Link;
   const direction = obj1.useLocale().direction;
-  [tmp6, c1] = callback(React.useState(null), 2);
-  const tmp5 = callback(React.useState(null), 2);
-  [tmp8, c2] = callback(React.useState(null), 2);
+  [tmp6, c1] = _slicedToArray(noop.useState(null), 2);
+  const tmp5 = _slicedToArray(noop.useState(null), 2);
+  [tmp8, c2] = _slicedToArray(noop.useState(null), 2);
   obj = {
     disabled,
     href,
     accessibilityLabel,
     testID,
     onPress() {
-      if (closure_0) {
+      if (require) {
         const _requestAnimationFrame = requestAnimationFrame;
-        const animationFrame = requestAnimationFrame(() => callback());
+        const animationFrame = requestAnimationFrame(() => closure_1_0());
       }
     },
     pressColor,
     pressOpacity,
-    style: items,
+    style: null,
     children: null
   };
-  items = [container.container, style];
+  const items = [container.container, style];
+  obj.style = items;
   if (backImage) {
     let text = tintColor;
     if (tintColor == null) {
       text = colors.text;
     }
-    obj = { tintColor: null };
-    obj[0] = text;
+    obj = { tintColor: text };
     let backImageResult = backImage(obj);
   } else {
-    obj1 = { source: null, tintColor: null, style: null };
-    obj1[0] = registerAssetDefault;
-    obj1[1] = tintColor;
+    obj1 = { source: _modDef5632, tintColor, style: null };
     const items1 = [tmp10.icon, "minimal" !== displayMode && tmp10.iconWithLabel];
-    obj1[2] = items1;
+    obj1.style = items1;
     backImageResult = tmp9(tmp2(5661).HeaderIcon, obj1);
   }
   const items2 = [backImageResult, ];
@@ -125,55 +122,55 @@ export const HeaderBackButton = function HeaderBackButton(accessibilityLabel) {
     }
     const items3 = [fonts.regular, tmp10.label, labelStyle];
     const items4 = [items3, { position: "absolute", top: 0, left: 0, opacity: 0 }];
-    const obj2 = { style: null, children: null };
-    obj2[0] = tmp10.labelWrapper;
+    const obj2 = { style: tmp10.labelWrapper, children: null };
     let tmp9Result = null;
     if (label) {
       tmp9Result = null;
       if (tmp18) {
-        const obj3 = { style: null, numberOfLines: 1, onLayout: null, children: null };
-        obj3[0] = items4;
-        obj3[2] = function onLayout(nativeEvent) {
-          return _undefined(nativeEvent.nativeEvent.layout.width);
+        const obj3 = {
+          style: items4,
+          numberOfLines: 1,
+          onLayout(nativeEvent) {
+                  return _undefined(nativeEvent.nativeEvent.layout.width);
+                },
+          children: label
         };
-        obj3[3] = label;
         tmp9Result = tmp9(RN.Text, obj3);
       }
     }
     const items5 = [tmp9Result, , ];
     tmp9Result = null;
     if (truncatedLabel) {
-      const obj4 = { style: null, numberOfLines: 1, onLayout: null, children: null };
-      obj4[0] = items4;
-      obj4[2] = function onLayout(nativeEvent) {
-        return _undefined2(nativeEvent.nativeEvent.layout.width);
+      const obj4 = {
+        style: items4,
+        numberOfLines: 1,
+        onLayout(nativeEvent) {
+              return _undefined2(nativeEvent.nativeEvent.layout.width);
+            },
+        children: truncatedLabel
       };
-      obj4[3] = truncatedLabel;
       tmp9Result = tmp9(RN.Text, obj4);
     }
     items5[1] = tmp9Result;
     let tmp9Result1 = null;
     if (tmp20) {
-      const obj5 = { accessible: false, onLayout: null, style: null, numberOfLines: 1, allowFontScaling: null, children: null };
-      obj5[1] = onLabelLayout;
+      const obj5 = { accessible: false, onLayout: onLabelLayout, style: null, numberOfLines: 1, allowFontScaling: null, children: null };
       let tmp29 = null;
       if (tintColor) {
-        const obj6 = { color: null };
-        obj6[0] = tintColor;
+        const obj6 = { color: tintColor };
         tmp29 = obj6;
       }
       const items6 = [tmp29, items3];
-      obj5[2] = items6;
-      obj5[4] = allowFontScaling;
-      obj5[5] = tmp20;
+      obj5.style = items6;
+      obj5.allowFontScaling = allowFontScaling;
+      obj5.children = tmp20;
       tmp9Result1 = tmp9(RN.Text, obj5);
     }
     items5[2] = tmp9Result1;
-    obj2[1] = items5;
-    tmp11Result = tmp11(closure_6, obj2);
-    const tmp22 = closure_6;
+    obj2.children = items5;
+    tmp11Result = tmp11(timestampProducer, obj2);
   }
   items2[1] = tmp11Result;
-  obj[8] = closure_8(React.Fragment, { children: items2 });
-  return closure_7(HeaderButton.HeaderButton, obj);
+  obj.children = React6(noop.Fragment, { children: items2 });
+  return React5(HeaderButton.HeaderButton, obj);
 };

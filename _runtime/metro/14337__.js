@@ -1,7 +1,7 @@
 // === Module 14337: ? ===
 
 // Module 14337
-import call from "call" /* 14320 */;
+import _mod14320 from "module_14320" /* 14320 */;
 import _mod14338 from "module_14338" /* 14338 */;
 
 
@@ -10,9 +10,7 @@ export default (arg0, arg1, arg2) => {
   for (let num = 0; num < arr.length; num = num + 1) {
     let tmp3 = arr[num];
     let tmp4 = require;
-    let tmp5 = dependencyMap;
-    let tmp6 = call(arg0, tmp3);
-    let tmp7 = num;
+    let tmp6 = _mod14320(arg0, tmp3);
     if (!tmp6) {
       let tmp8 = arg2;
       if (arg2) {

@@ -1,8 +1,8 @@
 // === Module 318: Info ===
 
 // Module 318 (Info)
-import importDefaultResult from "_createClass" /* 42 */;
-import closure_1 from "_classCallCheck" /* 41 */;
+import _createClass from "_createClass" /* 42 */;
+import _classCallCheck from "_classCallCheck" /* 41 */;
 
 const FillRateHelper = global;
 class Info {
@@ -21,23 +21,22 @@ class Info {
     return;
   }
 }
-let closure_2 = importDefaultResult(Info);
+let closure_2 = _createClass(Info);
 let closure_3 = [];
-let c4 = 10;
-let c5 = null;
+global = null;
 class FillRateHelper {
   constructor(arg0) {
     self = this;
     tmp = closure_1(this, FillRateHelper);
     this._anyBlankStartTime = null;
     this._enabled = false;
-    tmp2 = new closure_2();
+    tmp2 = new c2();
     this._info = tmp2;
     this._mostlyBlankStartTime = null;
     this._samplesStartTime = null;
     this._listMetrics = global;
-    num = c5;
-    if (!c5) {
+    num = hasOwnProperty;
+    if (!hasOwnProperty) {
       num = 0;
     }
     self._enabled = num > Math.random();
@@ -45,7 +44,7 @@ class FillRateHelper {
     return;
   }
 }
-let obj = {
+const entry = {
   key: "activate",
   value: function activate() {
     const self = this;
@@ -60,7 +59,7 @@ let obj = {
   }
 };
 const items = [
-  obj,
+  entry,
   {
     key: "deactivateAndFlush",
     value: function deactivateAndFlush() {
@@ -68,15 +67,15 @@ const items = [
       if (this._enabled) {
         const _samplesStartTime = self._samplesStartTime;
         if (null != _samplesStartTime) {
-          if (self._info.sample_count < c4) {
+          if (self._info.sample_count < global) {
             self._resetData();
           } else {
-            const _performance = obj.performance;
-            obj = {};
+            const _performance = FillRateHelper.performance;
+            const obj = {};
             const diff = _performance.now() - _samplesStartTime;
             const merged = Object.assign(self._info);
             obj.total_time_spent = diff;
-            const item = arr.forEach((arg0) => arg0(obj));
+            const item = closure_3.forEach((fn) => fn(obj));
             self._resetData();
           }
         }
@@ -248,35 +247,36 @@ const items = [
     }
   }
 ];
-obj = {
+const entry1 = {
   key: "addListener",
   value: function addListener(arg0) {
     closure_0 = arg0;
-    if (null === c5) {
+    if (null === global) {
       const _console = console;
       console.warn("Call `FillRateHelper.setSampleRate` before `addListener`.");
     }
+    closure_3.push(arg0);
     return {
       remove() {
-        closure_3 = closure_3.filter((arg0) => closure_0 !== arg0);
+        closure_3 = closure_3.filter((item) => closure_1_0 !== item);
       }
     };
   }
 };
 const items1 = [
-  obj,
+  entry1,
   {
     key: "setSampleRate",
     value: function setSampleRate(arg0) {
-      closure_5 = arg0;
+      global = arg0;
     }
   },
   {
     key: "setMinSampleCount",
     value: function setMinSampleCount(arg0) {
-      closure_4 = arg0;
+      global = arg0;
     }
   }
 ];
 
-export default importDefaultResult(FillRateHelper, items, items1);
+export default _createClass(FillRateHelper, items, items1);

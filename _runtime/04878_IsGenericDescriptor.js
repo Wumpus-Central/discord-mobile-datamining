@@ -1,13 +1,13 @@
 // === Module 4878: IsGenericDescriptor ===
 
 // Module 4878 (IsGenericDescriptor)
-import isPropertyDescriptor from "isPropertyDescriptor" /* 4860 */;
+import _mod4860 from "module_4860" /* 4860 */;
 
 
 export default function IsGenericDescriptor(arg0) {
   if (undefined === arg0) {
     return false;
-  } else if (isPropertyDescriptor(arg0)) {
+  } else if (_mod4860(arg0)) {
     const tmp7 = tmp(4873)(arg0);
     let tmp8 = !tmp7;
     if (!tmp7) {

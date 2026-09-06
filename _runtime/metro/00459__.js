@@ -1,7 +1,8 @@
 // === Module 459: ? ===
 
 // Module 459
-arg5.default = function _default() {
+
+export default function _default() {
   const items = [...arguments];
   if (1 === items.length) {
     const _Error = Error;
@@ -12,6 +13,5 @@ arg5.default = function _default() {
   ${error2.stack}`);
     }
   }
-  error = console.error;
   error.apply(console, items);
 };

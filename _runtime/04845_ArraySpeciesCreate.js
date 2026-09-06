@@ -1,14 +1,14 @@
 // === Module 4845: ArraySpeciesCreate ===
 
 // Module 4845 (ArraySpeciesCreate)
-import getEvalledConstructor from "getEvalledConstructor" /* 1282 */;
+import _mod1282 from "module_1282" /* 1282 */;
 import _mod1283 from "module_1283" /* 1283 */;
-import isInteger from "isInteger" /* 4846 */;
+import _mod4846 from "module_4846" /* 4846 */;
 
-let closure_2 = getEvalledConstructor("%Symbol.species%", true);
+let closure_2 = _mod1282("%Symbol.species%", true);
 
 export default function ArraySpeciesCreate(arg0, arg1) {
-  if (isInteger(arg1)) {
+  if (_mod4846(arg1)) {
     if (arg1 >= 0) {
       if (tmp(4847)(arg0)) {
         const tmp3 = tmp(4855)(arg0, "constructor");

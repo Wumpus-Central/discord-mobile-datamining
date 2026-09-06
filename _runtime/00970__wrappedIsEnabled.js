@@ -1,25 +1,24 @@
 // === Module 970: _wrappedIsEnabled ===
 
 // Module 970 (_wrappedIsEnabled)
-import registerSpanErrorInstrumentation from "registerSpanErrorInstrumentation" /* 682 */;
+import _mod937 from "module_937" /* 937 */;
+import registerSpanErrorInstrumentation from "module_682" /* 682 */;
 
 function _wrappedIsEnabled(arg0) {
   closure_0 = arg0;
   return function() {
     const items = [...arguments];
     const first = items[0];
-    const applyResult = callback.apply(this, items);
+    const applyResult = closure_0.apply(this, items);
     if (typeof first === "string") {
       if (typeof applyResult === "boolean") {
-        const result = callback(closure_1_1[0])._INTERNAL_insertFlagToScope(first, applyResult);
-        const obj = callback(closure_1_1[0]);
-        const result1 = callback(closure_1_1[0])._INTERNAL_addFeatureFlagToActiveSpan(first, applyResult);
-        const obj2 = callback(closure_1_1[0]);
+        const result = registerSpanErrorInstrumentation._INTERNAL_insertFlagToScope(first, applyResult);
+        const result1 = registerSpanErrorInstrumentation._INTERNAL_addFeatureFlagToActiveSpan(first, applyResult);
       }
       return applyResult;
     }
-    if (callback(closure_1_1[1]).DEBUG_BUILD) {
-      const debug = callback(closure_1_1[0]).debug;
+    if (_mod937.DEBUG_BUILD) {
+      const debug = registerSpanErrorInstrumentation.debug;
       const _HermesInternal = HermesInternal;
       debug.error("[Feature Flags] UnleashClient.isEnabled does not match expected signature. arg0: " + first + " (" + typeof first + "), result: " + applyResult + " (" + typeof applyResult + ")");
     }
@@ -32,10 +31,10 @@ export const unleashIntegration = registerSpanErrorInstrumentation.defineIntegra
   return {
     name: "Unleash",
     setupOnce() {
-      featureFlagClientClass(closure_1_1[0]).fill(featureFlagClientClass.prototype, "isEnabled", closure_1_2);
+      registerSpanErrorInstrumentation.fill(featureFlagClientClass.prototype, "isEnabled", _wrappedIsEnabled);
     },
-    processEvent(contexts) {
-      return featureFlagClientClass(table[0])._INTERNAL_copyFlagsFromScopeToEvent(contexts);
+    processEvent(contexts, arg1, arg2) {
+      return featureFlagClientClass(dependencyMap[0])._INTERNAL_copyFlagsFromScopeToEvent(contexts);
     }
   };
 });

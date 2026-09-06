@@ -1,13 +1,13 @@
 // === Module 5243: ? ===
 
 // Module 5243
-arg5.default = {
-  0: {
-    name: "PentaxVersion",
-    description(join) {
-      return join.join(".");
-    }
-  },
-  5: "PentaxModelID",
-  555: "LevelInfo"
+let obj = { 0: null, 5: "PentaxModelID", 555: "LevelInfo" };
+obj = {
+  name: "PentaxVersion",
+  description(join) {
+    return join.join(".");
+  }
 };
+obj.name = obj;
+
+export default obj;

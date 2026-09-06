@@ -4,7 +4,7 @@
 import compareAscending from "compareAscending" /* 8391 */;
 
 
-export default function compareMultiple(criteria, index) {
+export default function compareMultiple(criteria, index, arg2) {
   criteria = criteria.criteria;
   let num = 0;
   let num2 = 1;

@@ -1,7 +1,7 @@
 // === Module 6683: customDirectEventTypes ===
 
 // Module 6683 (customDirectEventTypes)
-import map from "map" /* 66 */;
+import customBubblingEventTypes from "customBubblingEventTypes" /* 66 */;
 
 
-export const customDirectEventTypes = map.customDirectEventTypes;
+export const customDirectEventTypes = customBubblingEventTypes.customDirectEventTypes;

@@ -5,8 +5,8 @@ const re0 = /^[0-9]+$/;
 
 export default {
   compareIdentifiers(major, major2) {
-    const isMatch = regex.test(major);
-    const isMatch1 = regex.test(major2);
+    const isMatch = re0.test(major);
+    const isMatch1 = re0.test(major2);
     let tmp3 = isMatch;
     if (isMatch) {
       tmp3 = isMatch1;
@@ -38,8 +38,8 @@ export default {
     return num;
   },
   rcompareIdentifiers(arg0, arg1) {
-    const isMatch = regex.test(arg1);
-    const isMatch1 = regex.test(arg0);
+    const isMatch = re0.test(arg1);
+    const isMatch1 = re0.test(arg0);
     let tmp3 = isMatch;
     if (isMatch) {
       tmp3 = isMatch1;

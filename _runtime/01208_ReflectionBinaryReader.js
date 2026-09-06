@@ -1,8 +1,8 @@
 // === Module 1208: ReflectionBinaryReader ===
 
 // Module 1208 (ReflectionBinaryReader)
-import closure_2 from "_slicedToArray" /* 32 */;
-import closure_3 from "_classCallCheck" /* 41 */;
+import _slicedToArray from "module_32" /* 32 */;
+import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
 
 const ReflectionBinaryReader = require;
@@ -13,28 +13,29 @@ class ReflectionBinaryReader {
     return;
   }
 }
-let items = [
-  {
-    key: "prepare",
-    value: function prepare() {
-      const self = this;
-      if (!this.fieldNoToField) {
-        let fields = self.info.fields;
-        if (null === fields) {
-          fields = [];
-        }
-        const _Map = Map;
-        const map = new Map(fields.map((no) => {
-          const items = [no.no, no];
-          return items;
-        }));
-        self.fieldNoToField = map;
+const entry = {
+  key: "prepare",
+  value: function prepare() {
+    const self = this;
+    if (!this.fieldNoToField) {
+      let fields = self.info.fields;
+      if (null === fields) {
+        fields = [];
       }
+      const _Map = Map;
+      const map = new Map(fields.map((no) => {
+        const items = [no.no, no];
+        return items;
+      }));
+      self.fieldNoToField = map;
     }
-  },
+  }
+};
+let items = [
+  entry,
   {
     key: "read",
-    value: function read(len, arg1, readUnknownField) {
+    value: function read(len, arg1, readUnknownField, arg3) {
       const self = this;
       this.prepare();
       if (undefined === arg3) {
@@ -44,11 +45,11 @@ let items = [
       }
       if (len.pos < len) {
         while (true) {
-          let tmp2 = callback;
-          let tmp3 = callback(len.tag(), 2);
+          let tmp2 = _slicedToArray;
+          let tmp3 = _slicedToArray(len.tag(), 2);
           [tmp4, tmp5] = tmp3;
           let fieldNoToField = self.fieldNoToField;
-          let value = fieldNoToField.get(tmp4);
+          value = fieldNoToField.get(tmp4);
           if (value) {
             ({ repeat, localName, oneof } = value);
             let tmp21 = arg1;
@@ -58,8 +59,7 @@ let items = [
               tmp21 = tmp22;
             }
             if (oneof) {
-              let obj = { oneofKind: null };
-              obj[0] = localName;
+              let obj = { oneofKind: localName };
               arg1[value.oneof] = obj;
               tmp21 = obj;
             }
@@ -73,9 +73,6 @@ let items = [
                     arr = arr.push(TResult.internalBinaryRead(len, len.uint32(), readUnknownField));
                   } else {
                     let TResult1 = value.T();
-                    let tmp23 = TResult1;
-                    let tmp24 = len;
-                    let tmp25 = readUnknownField;
                     tmp21[localName] = TResult1.internalBinaryRead(len, len.uint32(), readUnknownField, tmp21[localName]);
                   }
                 } else if ("map" === kind) {
@@ -85,8 +82,6 @@ let items = [
               }
             }
             if ("enum" == value.kind) {
-              let tmp27 = ReflectionBinaryReader;
-              let tmp28 = dependencyMap;
               let T = ReflectionBinaryReader(1201).ScalarType.INT32;
             } else {
               T = value.T;
@@ -97,7 +92,6 @@ let items = [
             if (repeat) {
               let arr1 = tmp21[localName];
               let tmp29 = ReflectionBinaryReader;
-              let tmp30 = dependencyMap;
               if (tmp5 == ReflectionBinaryReader(1192).WireType.LengthDelimited) {
                 if (T != tmp29(1201).ScalarType.STRING) {
                   if (T != tmp29(1201).ScalarType.BYTES) {
@@ -123,14 +117,8 @@ let items = [
               let skipResult = len.skip(tmp5);
               if (false !== onRead) {
                 if (true === onRead) {
-                  let tmp7 = ReflectionBinaryReader;
-                  let tmp8 = dependencyMap;
                   onRead = ReflectionBinaryReader(1192).UnknownFieldHandler.onRead;
                 }
-                let tmp9 = arg1;
-                let tmp10 = tmp4;
-                let tmp11 = tmp5;
-                let tmp12 = skipResult;
                 let onReadResult = onRead(self.info.typeName, arg1, tmp4, tmp5, skipResult);
               }
             }
@@ -138,20 +126,20 @@ let items = [
         }
         const _Error = Error;
         const _HermesInternal = HermesInternal;
-        error = new Error("Unknown field " + tmp4 + " (wire type " + tmp5 + ") for " + self.info.typeName);
+        const error = new Error("Unknown field " + tmp4 + " (wire type " + tmp5 + ") for " + self.info.typeName);
         throw error;
       }
     }
   },
   {
     key: "mapEntry",
-    value: function mapEntry(V, pos) {
+    value: function mapEntry(V, pos, arg2) {
       const self = this;
       const sum = pos.pos + pos.uint32();
       let tmp4;
       let tmp5;
       if (pos.pos < sum) {
-        [tmp8, tmp9] = callback(pos.tag(), 2);
+        [tmp8, tmp9] = _slicedToArray(pos.tag(), 2);
         while (1 !== tmp8) {
           if (2 === tmp8) {
             let kind = V.V.kind;
@@ -183,12 +171,9 @@ let items = [
             let str2 = ") in map entry for ";
             let str3 = " (wire type ";
             let str4 = "Unknown field ";
-            let tmp13 = tmp8;
-            let tmp14 = tmp9;
             let tmp15 = new.target;
             let tmp16 = new.target;
-            error = new Error("Unknown field " + tmp8 + " (wire type " + tmp9 + ") in map entry for " + self.info.typeName + "#" + V.name);
-            let tmp18 = error;
+            let error = new Error("Unknown field " + tmp8 + " (wire type " + tmp9 + ") in map entry for " + self.info.typeName + "#" + V.name);
             throw error;
           }
         }
@@ -199,7 +184,7 @@ let items = [
           str = self.scalar(pos, V.K, tmp21(1201).LongType.STRING);
         }
         tmp21 = ReflectionBinaryReader;
-        const tmp7 = callback(pos.tag(), 2);
+        const tmp7 = _slicedToArray(pos.tag(), 2);
       }
       if (undefined === tmp5) {
         const str6 = ReflectionBinaryReader(1209).reflectionScalarDefault(V.K);

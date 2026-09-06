@@ -1,7 +1,8 @@
 // === Module 1510: findFocusedRoute ===
 
 // Module 1510 (findFocusedRoute)
-arg5.findFocusedRoute = function findFocusedRoute(stateForPath) {
+
+export const findFocusedRoute = function findFocusedRoute(stateForPath) {
   let state2;
   let state;
   if (stateForPath != null) {
@@ -18,7 +19,6 @@ arg5.findFocusedRoute = function findFocusedRoute(stateForPath) {
   if (null != state) {
     do {
       let index2 = tmp3.index;
-      let tmp5 = tmp3;
       if (index2 == null) {
         index2 = tmp3.routes.length - 1;
       }

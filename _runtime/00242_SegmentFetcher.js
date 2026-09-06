@@ -1,12 +1,11 @@
 // === Module 242: SegmentFetcher ===
 
 // Module 242 (SegmentFetcher)
-import SegmentFetcherDefault from "SegmentFetcher" /* 243 */;
+import _modDef243 from "module_243" /* 243 */;
 
-for (const key10016 in require("SegmentFetcher")) {
-  let tmp2 = key10016;
-  arg5[key10016] = require("SegmentFetcher")[key10016];
+for (const key10016 in require("module_243")) {
+  arg5[key10016] = require("module_243")[key10016];
   continue;
 }
 
-export default SegmentFetcherDefault;
+export default _modDef243;

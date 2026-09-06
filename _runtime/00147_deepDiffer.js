@@ -1,7 +1,7 @@
 // === Module 147: deepDiffer ===
 
 // Module 147 (deepDiffer)
-function deepDiffer(fn, fn2, arg2, arg3) {
+function deepDiffer(name, name2, arg2, arg3) {
   let num = arg2;
   if (arg2 === undefined) {
     num = -1;
@@ -16,19 +16,19 @@ function deepDiffer(fn, fn2, arg2, arg3) {
   }
   if (0 === num2) {
     return true;
-  } else if (fn === fn2) {
+  } else if (name === name2) {
     return false;
   } else {
-    if (typeof fn === "function") {
-      if (typeof fn2 === "function") {
+    if (typeof name === "function") {
+      if (typeof name2 === "function") {
         let flag8;
         if (tmp != null) {
           flag8 = tmp.unsafelyIgnoreFunctions;
         }
         if (null == flag8) {
-          let tmp9 = !closure_0;
-          if (closure_0) {
-            tmp9 = !closure_0.onDifferentFunctionsIgnored;
+          let tmp9 = !global;
+          if (global) {
+            tmp9 = !global.onDifferentFunctionsIgnored;
           }
           if (!tmp9) {
             let tmp11 = tmp;
@@ -39,28 +39,28 @@ function deepDiffer(fn, fn2, arg2, arg3) {
           }
           flag8 = true;
           if (!tmp9) {
-            const result = closure_0.onDifferentFunctionsIgnored(fn.name, fn2.name);
+            const result = global.onDifferentFunctionsIgnored(name.name, name2.name);
             flag8 = true;
           }
         }
         return !flag8;
       }
     }
-    if (typeof fn === "object") {
-      if (null !== fn) {
-        if (typeof fn2 === "object") {
-          if (null !== fn2) {
-            if (fn.constructor !== fn2.constructor) {
+    if (typeof name === "object") {
+      if (null !== name) {
+        if (typeof name2 === "object") {
+          if (null !== name2) {
+            if (name.constructor !== name2.constructor) {
               return true;
             } else {
               const _Array = Array;
-              if (Array.isArray(fn)) {
-                if (fn2.length !== fn.length) {
+              if (Array.isArray(name)) {
+                if (name2.length !== name.length) {
                   return true;
                 } else {
                   let num5 = 0;
                   if (0 < length) {
-                    while (!deepDiffer(fn[num5], fn2[num5], num2 - 1, tmp)) {
+                    while (!deepDiffer(name[num5], name2[num5], num2 - 1, tmp)) {
                       num5 = num5 + 1;
                     }
                     return true;
@@ -68,9 +68,6 @@ function deepDiffer(fn, fn2, arg2, arg3) {
                 }
               } else {
                 for (const key10008 in arg0) {
-                  let tmp18 = key10008;
-                  let tmp19 = deepDiffer;
-                  let tmp20 = tmp;
                   if (!deepDiffer(arg0[key10008], arg1[key10008], num2 - 1, tmp)) {
                     continue;
                   } else {
@@ -79,7 +76,6 @@ function deepDiffer(fn, fn2, arg2, arg3) {
                   }
                 }
                 for (const key10012 in arg1) {
-                  let tmp21 = key10012;
                   if (undefined !== arg0[key10012]) {
                     continue;
                   } else if (undefined === arg1[key10012]) {
@@ -98,10 +94,11 @@ function deepDiffer(fn, fn2, arg2, arg3) {
         return true;
       }
     }
-    return fn !== fn2;
+    return name !== name2;
   }
 }
 deepDiffer.unstable_setLogListeners = function unstable_setLogListeners(arg0) {
-  closure_0 = arg0;
+  global = arg0;
 };
-arg5.default = deepDiffer;
+
+export default deepDiffer;

@@ -1,28 +1,28 @@
 // === Module 6734: VirtualDetector ===
 
 // Module 6734 (VirtualDetector)
-import closure_2 from "_slicedToArray" /* 32 */;
-import noop from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import { jsx } from "jsxProd" /* 21 */;
+import _slicedToArray from "module_32" /* 32 */;
 
-const require = arg1;
-({ useCallback: c3, useEffect: c4, useMemo: c5, useRef: closure_6, useState: error } = noop);
+const require = fn;
+const noop = fn(19);
+({ useCallback: c3, useEffect: closure_4, useMemo: hasOwnProperty, useRef: metroRequire, useState: closure_7 } = noop);
+get_ActivityIndicator = fn(17);
 ({ findNodeHandle: closure_8, Platform } = get_ActivityIndicator);
+const jsx = fn(21).jsx;
 
 export const VirtualDetector = function VirtualDetector(children) {
-  const _require = children;
-  let obj = _require(register[4]);
+  _require = children;
+  let obj = require("module_6733");
   const interceptingDetectorContext = obj.useInterceptingDetectorContext();
   if (interceptingDetectorContext) {
     register = interceptingDetectorContext.register;
     const unregister = interceptingDetectorContext.unregister;
     const setMode = interceptingDetectorContext.setMode;
-    const tmp11 = callback2(null);
-    const callback = tmp11;
-    const tmp14 = unregister(callback3(-1), 2);
+    const tmp11 = closure_6(null);
+    closure_4 = tmp11;
+    const tmp14 = unregister(handlerTags(-1), 2);
     const first = tmp14[0];
-    callback2 = tmp14[1];
+    closure_6 = tmp14[1];
     const items = [children.children];
     let tmpResult = tmp(tmp2[6]);
     const nativeGestureRole = tmpResult.useNativeGestureRole(tmp11, children.children);
@@ -30,13 +30,13 @@ export const VirtualDetector = function VirtualDetector(children) {
     const tmp20 = first(() => {
       const gesture = children.gesture;
       if (obj.isComposedGesture(children.gesture)) {
-        let handlerTags = gesture.handlerTags;
+        handlerTags = gesture.handlerTags;
       } else {
         handlerTags = [gesture.handlerTag];
       }
       return handlerTags;
     }, items1);
-    callback3 = tmp20;
+    handlerTags = tmp20;
     tmpResult = tmp(tmp2[8]);
     const detectorAttachmentGuard = tmpResult.useDetectorAttachmentGuard(tmp20);
     const items2 = [first, children.gesture, tmp20, , , , , , ];
@@ -44,24 +44,21 @@ export const VirtualDetector = function VirtualDetector(children) {
     items2[6] = register;
     items2[7] = unregister;
     items2[8] = setMode;
-    callback(() => {
+    closure_4(() => {
       if (-1 !== first) {
         if (obj.gesture.config.dispatchesAnimatedEvents) {
           const _Error = Error;
-          error = new Error(children(register[5]).tagMessage("VirtualGestureDetector cannot handle Animated events with native driver when used inside InterceptingGestureDetector. Use Reanimated or Animated events without native driver instead."));
+          const error = new Error(children(register[5]).tagMessage("VirtualGestureDetector cannot handle Animated events with native driver when used inside InterceptingGestureDetector. Use Reanimated or Animated events without native driver instead."));
           throw error;
         } else {
           if (tmp2.gesture.config.shouldUseReanimatedDetector) {
             setMode(children(register[4]).InterceptingDetectorMode.REANIMATED);
           }
-          obj = { viewTag: null, handlerTags: null, methods: null, viewRef: "a", userSelect: false, touchAction: false, enableContextMenu: false };
-          obj[0] = tmp;
-          obj[1] = closure_7;
-          obj[2] = tmp2.gesture.detectorCallbacks;
-          ({ userSelect: obj[4], touchAction: obj[5], enableContextMenu: obj[6] } = tmp2);
+          obj = { viewTag: tmp, handlerTags, methods: tmp2.gesture.detectorCallbacks, viewRef: "a", userSelect: false, touchAction: false, enableContextMenu: false };
+          ({ userSelect: obj.userSelect, touchAction: obj.touchAction, enableContextMenu: obj.enableContextMenu } = tmp2);
           register(obj);
           return () => {
-            closure_1_2(obj);
+            unregister(obj);
           };
         }
       }
@@ -69,24 +66,21 @@ export const VirtualDetector = function VirtualDetector(children) {
     const tmp17 = setMode((current) => {
       closure_4.current = current;
       if (current) {
-        let num2 = closure_1_8(current);
+        let num2 = React6(current);
         if (num2 == null) {
           num2 = -1;
         }
-        callback(num2);
-        const tmp4 = callback;
+        closure_6(num2);
       } else {
-        callback(-1);
+        closure_6(-1);
       }
     }, items);
     const gestureRelationsUpdater = tmp(tmp2[9]).useGestureRelationsUpdater(children.gesture);
-    obj = { ref: null, children: null };
-    obj[0] = tmp17;
-    obj[1] = children.children;
-    return jsx(tmp(tmp2[10]).Wrap, { ref: null, children: null });
+    obj = { ref: tmp17, children: children.children };
+    return jsx(tmp(tmp2[10]).Wrap, { ref: tmp17, children: children.children });
   } else {
     let _Error = Error;
-    error = new Error(tmp(tmp2[5]).tagMessage("VirtualGestureDetector must be a descendant of an InterceptingGestureDetector"));
+    let error = new Error(tmp(tmp2[5]).tagMessage("VirtualGestureDetector must be a descendant of an InterceptingGestureDetector"));
     throw error;
   }
 };

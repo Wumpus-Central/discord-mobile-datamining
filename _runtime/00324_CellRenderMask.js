@@ -2,21 +2,21 @@
 
 // Module 324 (CellRenderMask)
 import _createClassDefault from "_createClass" /* 42 */;
-import closure_2 from "_slicedToArray" /* 32 */;
-import closure_3 from "_classCallCheck" /* 41 */;
+import _slicedToArray from "module_32" /* 32 */;
+import _classCallCheck from "_classCallCheck" /* 41 */;
 
 const CellRenderMask = importDefault;
 class CellRenderMask {
   constructor(arg0) {
     tmp = closure_3(this, CellRenderMask);
-    tmp2 = require("module_38")(global >= 0, "CellRenderMask must contain a non-negative number os cells");
+    tmp2 = closure_0(closure_1[3])(global >= 0, "CellRenderMask must contain a non-negative number os cells");
     this._numCells = global;
     if (0 === global) {
       items = [];
     } else {
       obj = { first: 0, last: null, isSpacer: true };
       num = 1;
-      obj[1] = global - 1;
+      obj.last = global - 1;
       items = [];
       items[0] = obj;
     }
@@ -24,13 +24,14 @@ class CellRenderMask {
     return;
   }
 }
+const entry = {
+  key: "enumerateRegions",
+  value: function enumerateRegions() {
+    return this._regions;
+  }
+};
 let items = [
-  {
-    key: "enumerateRegions",
-    value: function enumerateRegions() {
-      return this._regions;
-    }
-  },
+  entry,
   {
     key: "addCells",
     value: function addCells(VirtualizedList) {
@@ -51,18 +52,17 @@ let items = [
       CellRenderMask(38)(tmp2, "CellRenderMask.addCells called with invalid cell range");
       if (VirtualizedList.last >= VirtualizedList.first) {
         let num7 = 2;
-        [tmp24, tmp25] = callback(self._findRegion(VirtualizedList.first), 2);
-        const tmp23 = callback(self._findRegion(VirtualizedList.first), 2);
-        [last, splice] = callback(self._findRegion(VirtualizedList.last), 2);
+        [tmp24, tmp25] = _slicedToArray(self._findRegion(VirtualizedList.first), 2);
+        const tmp23 = _slicedToArray(self._findRegion(VirtualizedList.first), 2);
+        [last, splice] = _slicedToArray(self._findRegion(VirtualizedList.last), 2);
         const items = [];
         let obj = {};
         const merged = Object.assign(VirtualizedList);
         obj.isSpacer = false;
         if (tmp24.first < obj.first) {
           if (tmp24.isSpacer) {
-            obj = { first: null, last: null, isSpacer: true };
-            obj[0] = tmp24.first;
-            obj[1] = obj.first - 1;
+            obj = { first: tmp24.first, last: null, isSpacer: true };
+            obj.last = obj.first - 1;
             items.push(obj);
           } else {
             obj.first = tmp24.first;
@@ -84,11 +84,11 @@ let items = [
           obj.last = last.last;
         }
         obj = { first: null, last: null, isSpacer: true };
-        obj[0] = obj.last + 1;
+        obj.first = obj.last + 1;
         last = last.last;
-        obj[1] = last;
+        obj.last = last;
         items1.push(obj);
-        const tmp26 = callback(self._findRegion(VirtualizedList.last), 2);
+        const tmp26 = _slicedToArray(self._findRegion(VirtualizedList.last), 2);
       }
     }
   },
@@ -102,18 +102,18 @@ let items = [
     key: "equals",
     value: function equals(_numCells) {
       const self = this;
-      closure_0 = _numCells;
+      let _regions = _numCells;
       let everyResult = this._numCells === _numCells._numCells && self._regions.length === _numCells._regions.length;
       if (everyResult) {
-        const _regions = self._regions;
-        everyResult = _regions.every((first) => first.first === _regions._regions[arg1].first && first.last === _regions._regions[arg1].last && first.isSpacer === _regions._regions[arg1].isSpacer);
+        _regions = self._regions;
+        everyResult = _regions.every((item, index) => item.first === _regions._regions[index].first && item.last === _regions._regions[index].last && item.isSpacer === _regions._regions[index].isSpacer);
       }
       return everyResult;
     }
   },
   {
     key: "_findRegion",
-    value: function _findRegion(first) {
+    value: function _findRegion(arg0) {
       let rounded;
       let tmp4;
       let diff = this._regions.length - 1;
@@ -123,20 +123,18 @@ let items = [
           let _Math = Math;
           rounded = Math.floor((num + diff) / 2);
           tmp4 = tmp._regions[rounded];
-          let tmp5 = diff;
-          let tmp6 = num;
-          if (first >= tmp4.first) {
-            if (first <= tmp4.last) {
+          if (arg0 >= tmp4.first) {
+            if (arg0 <= tmp4.last) {
               break;
             }
           }
-          if (first < tmp4.first) {
+          if (arg0 < tmp4.first) {
             let diff1 = rounded - 1;
             let sum = num;
           } else {
             diff1 = diff;
             sum = num;
-            if (first > tmp4.last) {
+            if (arg0 > tmp4.last) {
               sum = rounded + 1;
               diff1 = diff;
             }
@@ -147,7 +145,7 @@ let items = [
         const items = [tmp4, rounded];
         return items;
       }
-      CellRenderMask(38)(false, "A region was not found containing cellIdx " + first);
+      CellRenderMask(38)(false, "A region was not found containing cellIdx " + arg0);
     }
   }
 ];

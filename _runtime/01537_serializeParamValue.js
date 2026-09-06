@@ -1,13 +1,15 @@
 // === Module 1537: serializeParamValue ===
 
 // Module 1537 (serializeParamValue)
-const require = arg1;
-const exports = arg3;
+import _mod1538 from "module_1538" /* 1538 */;
+
+require = arg1;
+let importAll = arg3;
 const dependencyMap = arg6;
 function serializeParamValue(arg0) {
 
 }
-function getActiveRoute(index) {
+function getActiveRoute(index, arg1, fn) {
   if (typeof index.index === "number") {
     let tmp = index.routes[index.index];
   } else {
@@ -17,14 +19,13 @@ function getActiveRoute(index) {
   if (arg1 != null) {
     tmp2 = arg1[tmp.name];
   }
-  const tmp3 = arg2(tmp, tmp2);
+  const tmp3 = fn(tmp, tmp2);
   if (tmp3) {
     let screens;
     if (tmp2 != null) {
       screens = tmp2.screens;
     }
-    tmp = getActiveRoute(tmp3, screens, arg2);
-    const tmp4 = getActiveRoute;
+    tmp = getActiveRoute(tmp3, screens, fn);
   }
   return tmp;
 }
@@ -32,13 +33,14 @@ const weakMap = new WeakMap();
 function createNormalizedConfigs(arg0, arg1) {
 
 }
-arg5.getPathFromState = function getPathFromState(index, screens) {
+
+export const getPathFromState = function getPathFromState(state, screens) {
   let routeState2;
-  if (null == index) {
+  if (null == state) {
     const _Error = Error;
     let _String = String;
     const _HermesInternal4 = HermesInternal;
-    throw Error("Got '" + String(index) + "' for the navigation state. You must pass a valid state object.");
+    throw Error("Got '" + String(state) + "' for the navigation state. You must pass a valid state object.");
   } else {
     screens = undefined;
     if (screens != null) {
@@ -49,184 +51,121 @@ arg5.getPathFromState = function getPathFromState(index, screens) {
       if (screens != null) {
         screens1 = screens.screens;
       }
-      obj = obj.get(screens1);
+      let obj = screens.get(screens1);
       if (!obj) {
-        if (typeof closure_6 !== "function") {
-          HermesBuiltin.throwTypeError();
-        }
-        let _Object = Object;
-        let _Object2 = Object;
-        let entries = Object.entries(screens.screens);
-        let fromEntriesResult = Object.fromEntries(entries.map((arg0) => {
-          [tmp, tmp2] = arg0;
-          if (typeof tmp2 === "string") {
-            let patternParts = closure_1_0(closure_1_2[2]).getPatternParts(tmp2);
-            let obj = { parts: null, ownParts: null };
-            if (tmp3) {
-              let items = [];
-              HermesBuiltin.arraySpread(patternParts, HermesBuiltin.arraySpread(tmp3, 0));
-              obj[0] = items;
-              obj[1] = patternParts;
-              let tmp23 = obj;
+        if (typeof closure_6 === "function") {
+          let _Object = Object;
+          let _Object2 = Object;
+          let entries = Object.entries(tmp6);
+          let fromEntriesResult = Object.fromEntries(entries.map((item) => {
+            [tmp, tmp2] = item;
+            if (typeof tmp2 === "string") {
+              let patternParts = closure_2_0(closure_2_2[2]).getPatternParts(tmp2);
+              let obj = { parts: null, ownParts: null };
+              if (tmp3) {
+                let items = [];
+                HermesBuiltin.arraySpread(patternParts, HermesBuiltin.arraySpread(tmp3, 0));
+                obj.parts = items;
+                obj.ownParts = patternParts;
+              } else {
+                obj.parts = patternParts;
+                obj.ownParts = patternParts;
+              }
+              let obj3 = closure_2_0(closure_2_2[2]);
             } else {
-              obj[0] = patternParts;
-              obj[1] = patternParts;
-              tmp23 = obj;
-            }
-            let obj3 = closure_1_0(closure_1_2[2]);
-          } else {
-            if (tmp2.exact) {
-              if (undefined === tmp2.path) {
-                let _Error = Error;
-                let error = new Error("A 'path' needs to be specified when specifying 'exact: true'. If you don't want this screen in the URL, specify it as empty string, e.g. `path: ''`.");
-                throw error;
+              if (tmp2.exact) {
+                if (undefined === tmp2.path) {
+                  let _Error = Error;
+                  let error = new Error("A 'path' needs to be specified when specifying 'exact: true'. If you don't want this screen in the URL, specify it as empty string, e.g. `path: ''`.");
+                  throw error;
+                }
               }
-            }
-            if (tmp2.path) {
-              obj = closure_1_0(closure_1_2[2]);
-              patternParts1 = obj.getPatternParts(tmp2.path);
-            } else {
-              patternParts1 = [];
-            }
-            if (true !== tmp2.exact) {
-              let items1 = tmp3;
-              if (!tmp3) {
-                items1 = [];
+              if (tmp2.path) {
+                obj = closure_2_0(closure_2_2[2]);
+                patternParts1 = obj.getPatternParts(tmp2.path);
+              } else {
+                patternParts1 = [];
               }
-              let items2 = [];
-              HermesBuiltin.arraySpread(patternParts1, HermesBuiltin.arraySpread(items1, 0));
-              let tmp6 = items2;
-            } else if (patternParts1.length) {
-              tmp6 = patternParts1;
-            }
-            let fromEntriesResult;
-            if (tmp2.screens) {
-              if (typeof closure_1_6 !== "function") {
-                HermesBuiltin.throwTypeError();
+              if (true !== tmp2.exact) {
+                let items1 = tmp3;
+                if (!tmp3) {
+                  items1 = [];
+                }
+                let items2 = [];
+                HermesBuiltin.arraySpread(patternParts1, HermesBuiltin.arraySpread(items1, 0));
+                let tmp6 = items2;
+              } else if (patternParts1.length) {
+                tmp6 = patternParts1;
               }
-              patternParts1 = tmp6;
-              let _Object = Object;
-              let _Object2 = Object;
-              let entries = Object.entries(tmp2.screens);
-              fromEntriesResult = Object.fromEntries(entries.map((arg0) => {
-                [tmp, tmp2] = arg0;
-                if (typeof tmp2 === "string") {
-                  let patternParts = closure_1_0(closure_1_2[2]).getPatternParts(tmp2);
-                  let obj = { parts: null, ownParts: null };
-                  if (tmp3) {
-                    let items = [];
-                    HermesBuiltin.arraySpread(patternParts, HermesBuiltin.arraySpread(tmp3, 0));
-                    obj[0] = items;
-                    obj[1] = patternParts;
-                    let tmp23 = obj;
-                  } else {
-                    obj[0] = patternParts;
-                    obj[1] = patternParts;
-                    tmp23 = obj;
-                  }
-                  let obj3 = closure_1_0(closure_1_2[2]);
-                } else {
-                  if (tmp2.exact) {
-                    if (undefined === tmp2.path) {
-                      let _Error = Error;
-                      let error = new Error("A 'path' needs to be specified when specifying 'exact: true'. If you don't want this screen in the URL, specify it as empty string, e.g. `path: ''`.");
-                      throw error;
-                    }
-                  }
-                  if (tmp2.path) {
-                    obj = closure_1_0(closure_1_2[2]);
-                    patternParts1 = obj.getPatternParts(tmp2.path);
-                  } else {
-                    patternParts1 = [];
-                  }
-                  if (true !== tmp2.exact) {
-                    let items1 = tmp3;
-                    if (!tmp3) {
-                      items1 = [];
-                    }
-                    let items2 = [];
-                    HermesBuiltin.arraySpread(patternParts1, HermesBuiltin.arraySpread(items1, 0));
-                    let tmp6 = items2;
-                  } else if (patternParts1.length) {
-                    tmp6 = patternParts1;
-                  }
-                  let fromEntriesResult;
-                  if (tmp2.screens) {
-                    if (typeof closure_1_6 !== "function") {
-                      HermesBuiltin.throwTypeError();
-                    }
-                    patternParts1 = tmp6;
-                    let _Object = Object;
-                    let _Object2 = Object;
-                    let entries = Object.entries(tmp2.screens);
-                    fromEntriesResult = Object.fromEntries(entries.map((arg0) => {
-                      [tmp, tmp2] = arg0;
-                      if (typeof tmp2 === "string") {
-                        let patternParts = closure_1_0(closure_1_2[2]).getPatternParts(tmp2);
-                        let obj = { parts: null, ownParts: null };
-                        if (tmp3) {
-                          let items = [];
-                          HermesBuiltin.arraySpread(patternParts, HermesBuiltin.arraySpread(tmp3, 0));
-                          obj[0] = items;
-                          obj[1] = patternParts;
-                          let tmp23 = obj;
-                        } else {
-                          obj[0] = patternParts;
-                          obj[1] = patternParts;
-                          tmp23 = obj;
-                        }
-                        let obj3 = closure_1_0(closure_1_2[2]);
+              let fromEntriesResult;
+              if (tmp2.screens) {
+                if (typeof closure_2_6 === "function") {
+                  patternParts1 = tmp6;
+                  let _Object = Object;
+                  let _Object2 = Object;
+                  let entries = Object.entries(tmp14);
+                  fromEntriesResult = Object.fromEntries(entries.map((item) => {
+                    [tmp, tmp2] = item;
+                    if (typeof tmp2 === "string") {
+                      let patternParts = closure_2_0(closure_2_2[2]).getPatternParts(tmp2);
+                      let obj = { parts: null, ownParts: null };
+                      if (tmp3) {
+                        let items = [];
+                        HermesBuiltin.arraySpread(patternParts, HermesBuiltin.arraySpread(tmp3, 0));
+                        obj.parts = items;
+                        obj.ownParts = patternParts;
                       } else {
-                        if (tmp2.exact) {
-                          if (undefined === tmp2.path) {
-                            let _Error = Error;
-                            let error = new Error("A 'path' needs to be specified when specifying 'exact: true'. If you don't want this screen in the URL, specify it as empty string, e.g. `path: ''`.");
-                            throw error;
-                          }
+                        obj.parts = patternParts;
+                        obj.ownParts = patternParts;
+                      }
+                      let obj3 = closure_2_0(closure_2_2[2]);
+                    } else {
+                      if (tmp2.exact) {
+                        if (undefined === tmp2.path) {
+                          let _Error = Error;
+                          let error = new Error("A 'path' needs to be specified when specifying 'exact: true'. If you don't want this screen in the URL, specify it as empty string, e.g. `path: ''`.");
+                          throw error;
                         }
-                        if (tmp2.path) {
-                          obj = closure_1_0(closure_1_2[2]);
-                          patternParts1 = obj.getPatternParts(tmp2.path);
-                        } else {
-                          patternParts1 = [];
+                      }
+                      if (tmp2.path) {
+                        obj = closure_2_0(closure_2_2[2]);
+                        patternParts1 = obj.getPatternParts(tmp2.path);
+                      } else {
+                        patternParts1 = [];
+                      }
+                      if (true !== tmp2.exact) {
+                        let items1 = tmp3;
+                        if (!tmp3) {
+                          items1 = [];
                         }
-                        if (true !== tmp2.exact) {
-                          let items1 = tmp3;
-                          if (!tmp3) {
-                            items1 = [];
-                          }
-                          let items2 = [];
-                          HermesBuiltin.arraySpread(patternParts1, HermesBuiltin.arraySpread(items1, 0));
-                          let tmp6 = items2;
-                        } else if (patternParts1.length) {
-                          tmp6 = patternParts1;
-                        }
-                        let fromEntriesResult;
-                        if (tmp2.screens) {
-                          if (typeof closure_1_6 !== "function") {
-                            HermesBuiltin.throwTypeError();
-                          }
+                        let items2 = [];
+                        HermesBuiltin.arraySpread(patternParts1, HermesBuiltin.arraySpread(items1, 0));
+                        let tmp6 = items2;
+                      } else if (patternParts1.length) {
+                        tmp6 = patternParts1;
+                      }
+                      let fromEntriesResult;
+                      if (tmp2.screens) {
+                        if (typeof closure_2_6 === "function") {
                           patternParts1 = tmp6;
                           let _Object = Object;
                           let _Object2 = Object;
-                          let entries = Object.entries(tmp2.screens);
-                          fromEntriesResult = Object.fromEntries(entries.map((arg0) => {
-                            [tmp, tmp2] = arg0;
+                          let entries = Object.entries(tmp14);
+                          fromEntriesResult = Object.fromEntries(entries.map((item) => {
+                            [tmp, tmp2] = item;
                             if (typeof tmp2 === "string") {
-                              let patternParts = closure_1_0(closure_1_2[2]).getPatternParts(tmp2);
+                              let patternParts = closure_2_0(closure_2_2[2]).getPatternParts(tmp2);
                               let obj = { parts: null, ownParts: null };
                               if (tmp3) {
                                 let items = [];
                                 HermesBuiltin.arraySpread(patternParts, HermesBuiltin.arraySpread(tmp3, 0));
-                                obj[0] = items;
-                                obj[1] = patternParts;
-                                let tmp23 = obj;
+                                obj.parts = items;
+                                obj.ownParts = patternParts;
                               } else {
-                                obj[0] = patternParts;
-                                obj[1] = patternParts;
-                                tmp23 = obj;
+                                obj.parts = patternParts;
+                                obj.ownParts = patternParts;
                               }
-                              let obj3 = closure_1_0(closure_1_2[2]);
+                              let obj3 = closure_2_0(closure_2_2[2]);
                             } else {
                               if (tmp2.exact) {
                                 if (undefined === tmp2.path) {
@@ -236,7 +175,7 @@ arg5.getPathFromState = function getPathFromState(index, screens) {
                                 }
                               }
                               if (tmp2.path) {
-                                obj = closure_1_0(closure_1_2[2]);
+                                obj = closure_2_0(closure_2_2[2]);
                                 patternParts1 = obj.getPatternParts(tmp2.path);
                               } else {
                                 patternParts1 = [];
@@ -254,87 +193,132 @@ arg5.getPathFromState = function getPathFromState(index, screens) {
                               }
                               let fromEntriesResult;
                               if (tmp2.screens) {
-                                if (typeof closure_1_6 !== "function") {
-                                  HermesBuiltin.throwTypeError();
+                                if (typeof closure_2_6 === "function") {
+                                  patternParts1 = tmp6;
+                                  let _Object = Object;
+                                  let _Object2 = Object;
+                                  let entries = Object.entries(tmp14);
+                                  fromEntriesResult = Object.fromEntries(entries.map((item) => {
+                                    [tmp, tmp2] = item;
+                                    if (typeof tmp2 === "string") {
+                                      let patternParts = closure_2_0(closure_2_2[2]).getPatternParts(tmp2);
+                                      let obj = { parts: null, ownParts: null };
+                                      if (tmp3) {
+                                        let items = [];
+                                        HermesBuiltin.arraySpread(patternParts, HermesBuiltin.arraySpread(tmp3, 0));
+                                        obj.parts = items;
+                                        obj.ownParts = patternParts;
+                                      } else {
+                                        obj.parts = patternParts;
+                                        obj.ownParts = patternParts;
+                                      }
+                                      let obj3 = closure_2_0(closure_2_2[2]);
+                                    } else {
+                                      if (tmp2.exact) {
+                                        if (undefined === tmp2.path) {
+                                          let _Error = Error;
+                                          let error = new Error("A 'path' needs to be specified when specifying 'exact: true'. If you don't want this screen in the URL, specify it as empty string, e.g. `path: ''`.");
+                                          throw error;
+                                        }
+                                      }
+                                      if (tmp2.path) {
+                                        obj = closure_2_0(closure_2_2[2]);
+                                        patternParts1 = obj.getPatternParts(tmp2.path);
+                                      } else {
+                                        patternParts1 = [];
+                                      }
+                                      if (true !== tmp2.exact) {
+                                        let items1 = tmp3;
+                                        if (!tmp3) {
+                                          items1 = [];
+                                        }
+                                        let items2 = [];
+                                        HermesBuiltin.arraySpread(patternParts1, HermesBuiltin.arraySpread(items1, 0));
+                                        let tmp6 = items2;
+                                      } else if (patternParts1.length) {
+                                        tmp6 = patternParts1;
+                                      }
+                                      let fromEntriesResult;
+                                      if (tmp2.screens) {
+                                        if (typeof closure_2_6 === "function") {
+                                          patternParts1 = tmp6;
+                                          let _Object = Object;
+                                          let _Object2 = Object;
+                                          let entries = Object.entries(tmp14);
+                                          fromEntriesResult = Object.fromEntries(entries.map(() => { ... }));
+                                        } else {
+                                          throw new TypeError("Trying to call a non-function");
+                                        }
+                                      }
+                                      obj = { parts: tmp6, ownParts: patternParts1, stringify: tmp2.stringify, screens: fromEntriesResult };
+                                      let items3 = [tmp, obj];
+                                      return items3;
+                                    }
+                                  }));
+                                } else {
+                                  throw new TypeError("Trying to call a non-function");
                                 }
-                                patternParts1 = tmp6;
-                                let _Object = Object;
-                                let _Object2 = Object;
-                                let entries = Object.entries(tmp2.screens);
-                                fromEntriesResult = Object.fromEntries(entries.map(() => { ... }));
                               }
-                              obj = { parts: null, ownParts: null, stringify: null, screens: null };
-                              obj[0] = tmp6;
-                              obj[1] = patternParts1;
-                              obj[2] = tmp2.stringify;
-                              obj[3] = fromEntriesResult;
+                              obj = { parts: tmp6, ownParts: patternParts1, stringify: tmp2.stringify, screens: fromEntriesResult };
                               let items3 = [tmp, obj];
                               return items3;
                             }
                           }));
+                        } else {
+                          throw new TypeError("Trying to call a non-function");
                         }
-                        obj = { parts: null, ownParts: null, stringify: null, screens: null };
-                        obj[0] = tmp6;
-                        obj[1] = patternParts1;
-                        obj[2] = tmp2.stringify;
-                        obj[3] = fromEntriesResult;
-                        let items3 = [tmp, obj];
-                        return items3;
                       }
-                    }));
-                  }
-                  obj = { parts: null, ownParts: null, stringify: null, screens: null };
-                  obj[0] = tmp6;
-                  obj[1] = patternParts1;
-                  obj[2] = tmp2.stringify;
-                  obj[3] = fromEntriesResult;
-                  let items3 = [tmp, obj];
-                  return items3;
+                      obj = { parts: tmp6, ownParts: patternParts1, stringify: tmp2.stringify, screens: fromEntriesResult };
+                      let items3 = [tmp, obj];
+                      return items3;
+                    }
+                  }));
+                } else {
+                  throw new TypeError("Trying to call a non-function");
                 }
-              }));
+              }
+              obj = { parts: tmp6, ownParts: patternParts1, stringify: tmp2.stringify, screens: fromEntriesResult };
+              let items3 = [tmp, obj];
+              return items3;
             }
-            obj = { parts: null, ownParts: null, stringify: null, screens: null };
-            obj[0] = tmp6;
-            obj[1] = patternParts1;
-            obj[2] = tmp2.stringify;
-            obj[3] = fromEntriesResult;
-            let items3 = [tmp, obj];
-            return items3;
-          }
-        }));
-        let result = obj2.set(screens.screens, fromEntriesResult);
-        obj = fromEntriesResult;
+          }));
+          let result = obj2.set(screens.screens, fromEntriesResult);
+          obj = fromEntriesResult;
+        } else {
+          throw new TypeError("Trying to call a non-function");
+        }
       }
-      obj2 = obj;
+      obj2 = screens;
     } else {
       obj = {};
     }
     const _Map = Map;
     const map = new Map();
-    function getRouteState(closure_3, screens) {
-      if (closure_3.state) {
-        return closure_3.state;
+    closure_129_0 = map;
+    function getRouteState(tmp15Result, screens) {
+      if (tmp15Result.state) {
+        return tmp15Result.state;
       } else {
-        let params = closure_3.params;
+        let params = tmp15Result.params;
         if (params) {
-          params = "screen" in closure_3.params;
+          params = "screen" in tmp15Result.params;
         }
         if (params) {
-          params = typeof closure_3.params.screen === "string";
+          params = typeof tmp15Result.params.screen === "string";
         }
         if (params) {
           let tmp3;
           if (screens != null) {
             screens = screens.screens;
             if (screens != null) {
-              tmp3 = screens[closure_3.params.screen];
+              tmp3 = screens[tmp15Result.params.screen];
             }
           }
           params = tmp3;
         }
-        let params2 = closure_3.params;
+        let params2 = tmp15Result.params;
         if (params2) {
-          params2 = "state" in closure_3.params;
+          params2 = "state" in tmp15Result.params;
         }
         if (params2) {
           screens = undefined;
@@ -343,235 +327,215 @@ arg5.getPathFromState = function getPathFromState(index, screens) {
           }
           params2 = screens;
         }
-        let value;
-        if (closure_3.params) {
+        value = undefined;
+        if (tmp15Result.params) {
           let screens1;
           if (screens != null) {
             screens1 = screens.screens;
           }
           if (screens1) {
             if (params) {
-              if (!map.has(closure_3)) {
-                const result = obj.set(closure_3, map(num3[0]).getStateFromRouteParams(closure_3.params));
-                const obj2 = map(num3[0]);
+              if (!set.has(tmp15Result)) {
+                const result = obj.set(tmp15Result, _mod1538.getStateFromRouteParams(tmp15Result.params));
               }
-              value = obj.get(closure_3);
+              value = obj.get(tmp15Result);
             }
           }
         }
         return value;
       }
     }
-    let _exports = getRouteState;
-    if (typeof map1 !== "function") {
-      HermesBuiltin.throwTypeError();
-    }
-    if (typeof index.index === "number") {
-      let tmp15 = index.routes[index.index];
-    } else {
-      tmp15 = index.routes[index.routes.length - 1];
-    }
-    let tmp16;
-    if (obj != null) {
-      tmp16 = obj[tmp15.name];
-    }
-    const routeState = getRouteState(tmp15, tmp16);
-    let tmp18 = tmp15;
-    if (routeState) {
-      let screens2;
-      if (tmp16 != null) {
-        screens2 = tmp16.screens;
-      }
-      if (typeof tmp14 !== "function") {
-        HermesBuiltin.throwTypeError();
-      }
-      if (typeof routeState.index === "number") {
-        let tmp14Result = routeState.routes[routeState.index];
+    closure_129_1 = getRouteState;
+    if (typeof map1 === "function") {
+      if (typeof state.index === "number") {
+        let tmp16 = state.routes[state.index];
       } else {
-        tmp14Result = routeState.routes[routeState.routes.length - 1];
+        tmp16 = state.routes[state.routes.length - 1];
       }
-      let tmp21;
-      if (screens2 != null) {
-        tmp21 = screens2[tmp14Result.name];
+      let tmp17;
+      if (obj != null) {
+        tmp17 = obj[tmp16.name];
       }
-      const routeState1 = getRouteState(tmp14Result, tmp21);
-      if (routeState1) {
-        let screens3;
-        if (tmp21 != null) {
-          screens3 = tmp21.screens;
+      const routeState = getRouteState(tmp16, tmp17);
+      let tmp19 = tmp16;
+      if (routeState) {
+        if (tmp17 != null) {
+          screens = tmp17.screens;
         }
-        tmp14Result = tmp14(routeState1, screens3, getRouteState);
-      }
-      tmp18 = tmp14Result;
-    }
-    let num3 = tmp18;
-    let str4 = "/";
-    let str5 = "/";
-    let tmp25 = index;
-    if (index) {
-      do {
-        let tmp26 = tmp25;
-        let tmp27 = str4;
-        num3 = 0;
-        if (typeof tmp25.index === "number") {
-          num3 = tmp25.index;
-        }
-        let tmp28 = num3;
-        serializeParamValue = tmp25.routes[num3];
-        let _Map2 = Map;
-        let tmp29 = new.target;
-        let tmp30 = new.target;
-        map1 = new Map();
-        let tmp32 = map1;
-        closure_6 = [];
-        c7 = true;
-        let tmp34 = serializeParamValue;
-        let tmp35 = obj;
-        if (serializeParamValue.name in obj) {
-          let tmp36 = c7;
-          if (c7) {
-            let tmp33Result = tmp33();
-            let tmp38 = serializeParamValue;
-            let tmp39 = obj;
-            while (serializeParamValue.name in obj) {
-              let tmp40 = c7;
-              if (!c7) {
-                break;
-              }
-            }
+        if (typeof tmp15 === "function") {
+          if (typeof routeState.index === "number") {
+            let tmp15Result = routeState.routes[routeState.index];
+          } else {
+            tmp15Result = routeState.routes[routeState.routes.length - 1];
           }
+          let tmp21;
+          if (screens != null) {
+            tmp21 = screens[tmp15Result.name];
+          }
+          const routeState1 = getRouteState(tmp15Result, tmp21);
+          if (routeState1) {
+            let screens2;
+            if (tmp21 != null) {
+              screens2 = tmp21.screens;
+            }
+            tmp15Result = tmp15(routeState1, screens2, getRouteState);
+          }
+          tmp19 = tmp15Result;
+        } else {
+          throw new TypeError("Trying to call a non-function");
         }
-        let tmp41 = serializeParamValue;
-        let tmp42 = obj;
-        routeState2 = getRouteState(serializeParamValue, obj[serializeParamValue.name]);
-        let tmp44 = obj;
-        let tmp45 = serializeParamValue;
-        if (undefined !== obj[serializeParamValue.name]) {
-          let arr2 = map;
-          let joined;
-          if (map != null) {
-            let mapped = arr2.map((segment) => {
-              segment = segment.segment;
-              if ("*" === segment) {
-                return user.name;
-              } else if (tmp) {
-                const value = map1.get(segment);
-                if (undefined !== value) {
-                  const _Array = Array;
-                  const _String = String;
-                  const mapped = Array.from(String(value)).map((arg0) => {
-                    let encodeURIComponentResult = arg0;
-                    if (obj.test(arg0)) {
-                      const _encodeURIComponent = encodeURIComponent;
-                      encodeURIComponentResult = encodeURIComponent(arg0);
-                    }
-                    return encodeURIComponentResult;
-                  });
-                  let str = mapped.join("");
-                  const arr = Array.from(String(value));
-                } else {
-                  str = "";
+      }
+      closure_129_2 = tmp19;
+      let str4 = "/";
+      let str5 = "/";
+      let tmp25 = state;
+      if (state) {
+        do {
+          let num3 = 0;
+          if (typeof tmp25.index === "number") {
+            num3 = tmp25.index;
+          }
+          let index = num3;
+          serializeParamValue = tmp25.routes[index];
+          let _Map2 = Map;
+          let tmp29 = new.target;
+          let tmp30 = new.target;
+          map1 = new Map();
+          screens = obj;
+          closure_6 = [];
+          c7 = true;
+          if (serializeParamValue.name in screens) {
+            if (c7) {
+              let tmp33Result = tmp33();
+              while (serializeParamValue.name in screens) {
+                if (!c7) {
+                  break;
                 }
-                return str;
-              } else {
-                let _encodeURIComponent = encodeURIComponent;
-                return encodeURIComponent(segment);
               }
-            });
-            joined = mapped.join("/");
+            }
           }
-          let sum = str4 + joined;
-        } else {
-          let _encodeURIComponent = encodeURIComponent;
-          let tmp46 = serializeParamValue;
-          sum = str4 + encodeURIComponent(serializeParamValue.name);
-        }
-        let tmp49 = _exports;
-        let params = !_exports;
-        if (!_exports) {
-          params = tmp18.params;
-        }
-        if (params) {
-          let _Object3 = Object;
-          let _Object4 = Object;
-          let entries1 = Object.entries(tmp18.params);
-          _exports = Object.fromEntries(entries1.map((arg0) => {
-            [tmp, arr] = arg0;
-            const items = [tmp, ];
-            if (typeof closure_3 !== "function") {
-              HermesBuiltin.throwTypeError();
+          routeState2 = getRouteState(serializeParamValue, screens[serializeParamValue.name]);
+          if (undefined !== screens[serializeParamValue.name]) {
+            let arr2 = require;
+            let joined;
+            if (require != null) {
+              let mapped = arr2.map((segment) => {
+                segment = segment.segment;
+                if ("*" === segment) {
+                  return user.name;
+                } else if (tmp) {
+                  value = map1.get(segment);
+                  if (undefined !== value) {
+                    const _Array = Array;
+                    const _String = String;
+                    const mapped = Array.from(String(value)).map((item) => {
+                      let encodeURIComponentResult = item;
+                      if (obj.test(item)) {
+                        const _encodeURIComponent = encodeURIComponent;
+                        encodeURIComponentResult = encodeURIComponent(item);
+                      }
+                      return encodeURIComponentResult;
+                    });
+                    let str = mapped.join("");
+                    const arr = Array.from(String(value));
+                  } else {
+                    str = "";
+                  }
+                  return str;
+                } else {
+                  let _encodeURIComponent = encodeURIComponent;
+                  return encodeURIComponent(segment);
+                }
+              });
+              joined = mapped.join("/");
             }
-            if (null === arr) {
-              items[1] = null;
-              return items;
-            } else {
-              let _String = globalThis;
-              const _Array = Array;
-              if (Array.isArray(arr)) {
-                _String = _String.String;
-                let mapped = arr.map(_String);
+            let sum = str4 + joined;
+          } else {
+            let _encodeURIComponent = encodeURIComponent;
+            sum = str4 + encodeURIComponent(serializeParamValue.name);
+          }
+          let params = !importAll;
+          if (!importAll) {
+            params = tmp19.params;
+          }
+          if (params) {
+            let _Object3 = Object;
+            let _Object4 = Object;
+            let entries1 = Object.entries(tmp19.params);
+            importAll = Object.fromEntries(entries1.map((item) => {
+              [tmp, arr] = item;
+              const items = [tmp, ];
+              if (typeof closure_3 === "function") {
+                if (null === arr) {
+                  items[1] = null;
+                  return items;
+                } else {
+                  let _String = globalThis;
+                  const _Array = Array;
+                  if (Array.isArray(arr)) {
+                    _String = _String.String;
+                    let mapped = arr.map(_String);
+                  } else {
+                    const _String2 = String;
+                    mapped = String(arr);
+                  }
+                }
               } else {
-                const _String2 = String;
-                mapped = String(arr);
+                throw new TypeError("Trying to call a non-function");
               }
-            }
-          }));
-        }
-        if (routeState2) {
-          let text = `${tmp47}/`;
-        } else {
-          let tmp50 = _exports;
-          text = sum;
-          if (_exports) {
-            let tmp52 = tmp50;
-            for (const key10124 in tmp50) {
-              let tmp66 = key10124;
-              let tmp67 = _exports;
-              if ("undefined" !== _exports[key10124]) {
-                continue;
-              } else {
-                let tmp53 = _exports;
-                delete tmp[tmp2];
-                continue;
-              }
-              continue;
-            }
-            let tmp54 = _exports;
-            let tmp55 = num3;
-            let obj4 = _exports(num3[1]);
-            let tmp56 = _exports;
-            let json = obj4.stringify(_exports, { sort: false });
+            }));
+          }
+          if (routeState2) {
+            let text = `${tmp47}/`;
+          } else {
+            let tmp50 = importAll;
             text = sum;
-            if (json) {
-              let _HermesInternal = HermesInternal;
-              text = sum + "?" + json;
+            if (importAll) {
+              for (const key10124 in tmp50) {
+                if ("undefined" !== importAll[key10124]) {
+                  continue;
+                } else {
+                  delete tmp[tmp2];
+                  continue;
+                }
+                continue;
+              }
+              let obj4 = require("validateArrayFormatSeparator");
+              let json = obj4.stringify(importAll, { sort: false });
+              text = sum;
+              if (json) {
+                let _HermesInternal = HermesInternal;
+                text = sum + "?" + json;
+              }
             }
           }
-        }
-        str4 = text;
-        str5 = text;
-        tmp25 = routeState2;
-      } while (routeState2);
+          str4 = text;
+          str5 = text;
+          tmp25 = routeState2;
+        } while (routeState2);
+      }
+      let path;
+      if (screens != null) {
+        path = screens.path;
+      }
+      let str6 = str5;
+      if (path) {
+        const _HermesInternal2 = HermesInternal;
+        str6 = "" + screens.path + "/" + str5;
+      }
+      const replaced = str6.replace(/\/+/g, "/");
+      let replaced1 = replaced;
+      if (replaced.length > 1) {
+        replaced1 = replaced.replace(/\/$/, "");
+      }
+      let combined = replaced1;
+      if (!replaced1.startsWith("/")) {
+        const _HermesInternal3 = HermesInternal;
+        combined = "/" + replaced1;
+      }
+      return combined;
+    } else {
+      throw new TypeError("Trying to call a non-function");
     }
-    let path;
-    if (screens != null) {
-      path = screens.path;
-    }
-    let str6 = str5;
-    if (path) {
-      const _HermesInternal2 = HermesInternal;
-      str6 = "" + screens.path + "/" + str5;
-    }
-    const replaced = str6.replace(/\/+/g, "/");
-    let replaced1 = replaced;
-    if (replaced.length > 1) {
-      replaced1 = replaced.replace(/\/$/, "");
-    }
-    let combined = replaced1;
-    if (!replaced1.startsWith("/")) {
-      const _HermesInternal3 = HermesInternal;
-      combined = "/" + replaced1;
-    }
-    return combined;
   }
 };

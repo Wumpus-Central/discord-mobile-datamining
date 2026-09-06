@@ -3,11 +3,15 @@
 // Module 6872 (PlatformConfig)
 import reactNativeVersion from "reactNativeVersion" /* 6873 */;
 
-const obj = { defaultDrawDistance: 250, supportsOffsetCorrection: true, trackAverageRenderTimeForOffsetProjection: true, isRN083OrAbove: null, invertedTransformStyle: null, invertedTransformStyleHorizontal: null };
-obj[3] = reactNativeVersion.isRN083OrAbove();
+let obj = { defaultDrawDistance: 250, supportsOffsetCorrection: true, trackAverageRenderTimeForOffsetProjection: true, isRN083OrAbove: null, invertedTransformStyle: null, invertedTransformStyleHorizontal: null };
+obj.isRN083OrAbove = reactNativeVersion.isRN083OrAbove();
+obj = { transform: null };
 const items = [{ rotate: "180deg" }];
-obj[4] = { transform: items };
+obj.transform = items;
+obj.invertedTransformStyle = obj;
+obj = { transform: null };
 const items1 = [{ rotate: "180deg" }];
-obj[5] = { transform: items1 };
+obj.transform = items1;
+obj.invertedTransformStyleHorizontal = obj;
 
 export const PlatformConfig = obj;

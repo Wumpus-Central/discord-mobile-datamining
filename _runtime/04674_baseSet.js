@@ -1,19 +1,19 @@
 // === Module 4674: baseSet ===
 
 // Module 4674 (baseSet)
-import isObject from "isObject" /* 521 */;
-import toKey from "toKey" /* 589 */;
-import castPath from "castPath" /* 592 */;
+import _mod521 from "module_521" /* 521 */;
+import _mod589 from "module_589" /* 589 */;
 
+const castPath = tmp(592);
 
-export default function baseSet(arg0, arg1, arg2, arg3) {
-  if (isObject(arg0)) {
+export default function baseSet(arg0, arg1, arg2, fn) {
+  if (_mod521(arg0)) {
     const arr = castPath(arg1, arg0);
     if (null != arg0) {
       let num2 = 0;
       let tmp17 = arg0;
       if (0 < length) {
-        const tmp8 = toKey(arr[num2]);
+        const tmp8 = _mod589(arr[num2]);
         while ("__proto__" !== tmp8) {
           if ("constructor" === tmp8) {
             break;
@@ -24,8 +24,8 @@ export default function baseSet(arg0, arg1, arg2, arg3) {
             if (num2 !== tmp4) {
               let tmp11 = tmp17[tmp8];
               let tmp12;
-              if (arg3) {
-                tmp12 = arg3(tmp11, tmp8, tmp17);
+              if (fn) {
+                tmp12 = fn(tmp11, tmp8, tmp17);
               }
               tmp13 = tmp12;
               if (undefined === tmp12) {
@@ -51,5 +51,4 @@ export default function baseSet(arg0, arg1, arg2, arg3) {
   } else {
     return arg0;
   }
-  const tmp = require;
 };

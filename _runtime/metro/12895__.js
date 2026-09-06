@@ -1,13 +1,14 @@
 // === Module 12895: ? ===
 
 // Module 12895
-import getClient from "getClient" /* 12824 */;
+import _mod12824 from "module_12824" /* 12824 */;
 
 require = arg1;
 const dependencyMap = arg6;
-arg5.profiler = {
+
+export const profiler = {
   startProfiler() {
-    const client = getClient.getClient();
+    const client = _mod12824.getClient();
     if (client) {
       const integrationByName = client.getIntegrationByName("ProfilingIntegration");
       if (integrationByName) {
@@ -29,7 +30,7 @@ arg5.profiler = {
     }
   },
   stopProfiler() {
-    const client = getClient.getClient();
+    const client = _mod12824.getClient();
     if (client) {
       const integrationByName = client.getIntegrationByName("ProfilingIntegration");
       if (integrationByName) {

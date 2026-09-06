@@ -1,0 +1,7 @@
+// === Module 1401: ? ===
+
+// Module 1401
+import registerAsset from "module_1122" /* 1122 */;
+
+
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/avatars", width: 256, height: 256, scales: [1], hash: "c09a43a372ba81e3018c3151d4ed4773", name: "default_avatar_1", type: "png" });

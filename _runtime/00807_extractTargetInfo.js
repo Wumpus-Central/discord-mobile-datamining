@@ -1,20 +1,20 @@
 // === Module 807: extractTargetInfo ===
 
 // Module 807 (extractTargetInfo)
-import _mod805 from "module_805" /* 805 */;
-import closure_2 from "_slicedToArray" /* 32 */;
+import CLIENT_ADDRESS_ATTRIBUTE from "CLIENT_ADDRESS_ATTRIBUTE" /* 805 */;
+import _slicedToArray from "module_32" /* 32 */;
 
 Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
 let obj = { "tools/call": null, "resources/read": null, "resources/subscribe": null, "resources/unsubscribe": null, "prompts/get": null };
-obj = { targetField: "name", targetAttribute: _mod805.MCP_TOOL_NAME_ATTRIBUTE, captureArguments: true, argumentsField: "arguments" };
-obj[0] = obj;
-obj = { targetField: "uri", targetAttribute: _mod805.MCP_RESOURCE_URI_ATTRIBUTE, captureUri: true };
-obj[1] = obj;
-obj[2] = { targetField: "uri", targetAttribute: _mod805.MCP_RESOURCE_URI_ATTRIBUTE };
-let obj1 = { targetField: "uri", targetAttribute: _mod805.MCP_RESOURCE_URI_ATTRIBUTE };
-obj[3] = { targetField: "uri", targetAttribute: _mod805.MCP_RESOURCE_URI_ATTRIBUTE };
-const obj2 = { targetField: "uri", targetAttribute: _mod805.MCP_RESOURCE_URI_ATTRIBUTE };
-obj[4] = { targetField: "name", targetAttribute: _mod805.MCP_PROMPT_NAME_ATTRIBUTE, captureName: true, captureArguments: true, argumentsField: "arguments" };
+obj = { targetField: "name", targetAttribute: CLIENT_ADDRESS_ATTRIBUTE.MCP_TOOL_NAME_ATTRIBUTE, captureArguments: true, argumentsField: "arguments" };
+obj["tools/call"] = obj;
+obj = { targetField: "uri", targetAttribute: CLIENT_ADDRESS_ATTRIBUTE.MCP_RESOURCE_URI_ATTRIBUTE, captureUri: true };
+obj["resources/read"] = obj;
+obj["resources/subscribe"] = { targetField: "uri", targetAttribute: CLIENT_ADDRESS_ATTRIBUTE.MCP_RESOURCE_URI_ATTRIBUTE };
+let obj1 = { targetField: "uri", targetAttribute: CLIENT_ADDRESS_ATTRIBUTE.MCP_RESOURCE_URI_ATTRIBUTE };
+obj["resources/unsubscribe"] = { targetField: "uri", targetAttribute: CLIENT_ADDRESS_ATTRIBUTE.MCP_RESOURCE_URI_ATTRIBUTE };
+const obj2 = { targetField: "uri", targetAttribute: CLIENT_ADDRESS_ATTRIBUTE.MCP_RESOURCE_URI_ATTRIBUTE };
+obj["prompts/get"] = { targetField: "name", targetAttribute: CLIENT_ADDRESS_ATTRIBUTE.MCP_PROMPT_NAME_ATTRIBUTE, captureName: true, captureArguments: true, argumentsField: "arguments" };
 
 export const extractTargetInfo = function extractTargetInfo(method, params) {
   if (obj[method]) {
@@ -28,21 +28,19 @@ export const extractTargetInfo = function extractTargetInfo(method, params) {
         tmp2 = params[tmp.targetField];
       }
     }
-    obj = { target: null, attributes: null };
-    obj[0] = tmp2;
+    obj = { target: tmp2, attributes: null };
     if (tmp2) {
       if (tmp.targetAttribute) {
         obj = {};
         obj[tmp.targetAttribute] = tmp2;
-        obj1 = obj;
+        let obj1 = obj;
       }
-      obj[1] = obj1;
+      obj.attributes = obj1;
       return obj;
     }
     obj1 = {};
   } else {
-    obj = { attributes: null };
-    obj[0] = {};
+    obj = { attributes: {} };
     return obj;
   }
 };
@@ -62,14 +60,11 @@ export const getRequestArguments = function getRequestArguments(method, uri) {
               const entries = Object.entries(tmp5);
               const tmp29 = entries[Symbol.iterator]();
               while (tmp29 !== undefined) {
-                let tmp9 = callback;
-                let tmp10 = callback(tmp7, 2);
+                let tmp10 = _slicedToArray(tmp7, 2);
                 let str = tmp10[0];
-                let tmp11 = require;
-                let tmp12 = dependencyMap;
                 let _HermesInternal = HermesInternal;
                 let _JSON = JSON;
-                let combined = "" + _mod805.MCP_REQUEST_ARGUMENT + "." + str.toLowerCase();
+                let combined = "" + CLIENT_ADDRESS_ATTRIBUTE.MCP_REQUEST_ARGUMENT + "." + str.toLowerCase();
                 obj[combined] = JSON.stringify(tmp10[1]);
                 continue;
               }
@@ -89,7 +84,7 @@ export const getRequestArguments = function getRequestArguments(method, uri) {
     if (captureUri) {
       const _HermesInternal2 = HermesInternal;
       const _JSON2 = JSON;
-      const combined1 = "" + _mod805.MCP_REQUEST_ARGUMENT + ".uri";
+      const combined1 = "" + CLIENT_ADDRESS_ATTRIBUTE.MCP_REQUEST_ARGUMENT + ".uri";
       obj[combined1] = JSON.stringify(uri.uri);
     }
     let captureName = tmp.captureName;
@@ -103,7 +98,7 @@ export const getRequestArguments = function getRequestArguments(method, uri) {
     if (captureName) {
       const _HermesInternal3 = HermesInternal;
       const _JSON3 = JSON;
-      const combined2 = "" + _mod805.MCP_REQUEST_ARGUMENT + ".name";
+      const combined2 = "" + CLIENT_ADDRESS_ATTRIBUTE.MCP_REQUEST_ARGUMENT + ".name";
       obj[combined2] = JSON.stringify(uri.name);
     }
     return obj;

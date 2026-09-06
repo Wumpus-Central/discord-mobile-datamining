@@ -4,8 +4,7 @@
 import requiredArgs from "requiredArgs" /* 3651 */;
 
 if (!requiredArgs) {
-  const obj = { default: null };
-  obj[0] = requiredArgs;
+  const obj = { default: requiredArgs };
   let tmp3 = obj;
 } else {
   tmp3 = requiredArgs;
@@ -24,7 +23,7 @@ export default function intlFormat(arg0, arg1, arg2) {
     tmp4 = arg2;
     tmp3 = arg1;
   }
-  let locale;
+  locale = undefined;
   if (null !== tmp4) {
     if (undefined !== tmp4) {
       locale = tmp4.locale;

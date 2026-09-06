@@ -1,16 +1,22 @@
 // === Module 444: ? ===
 
 // Module 444
-import _isNativeReflectConstructDefault from "_isNativeReflectConstruct" /* 143 */;
-import DEFAULT_INITIAL_NUM_TO_RENDER from "DEFAULT_INITIAL_NUM_TO_RENDER" /* 442 */;
+import _modDef143 from "module_143" /* 143 */;
+import DEFAULT_INITIAL_NUM_TO_RENDER from "module_442" /* 442 */;
 
 const FALLBACK_ESTIMATED_WIDTH = DEFAULT_INITIAL_NUM_TO_RENDER.FALLBACK_ESTIMATED_WIDTH;
-obj = {
-  initial: obj,
+
+export default {
+  initial: {
+    itemCount: DEFAULT_INITIAL_NUM_TO_RENDER.INITIAL_NUM_TO_RENDER,
+    spacerStyle(arg0) {
+      return { width: arg0 * FALLBACK_ESTIMATED_WIDTH };
+    }
+  },
   next(arg0) {
     ({ target, targetRect, thresholdRect } = arg0);
-    importDefault = undefined;
-    if (target instanceof _isNativeReflectConstructDefault) {
+    c0 = undefined;
+    if (target instanceof _modDef143) {
       const _Math = Math;
       const _Math2 = Math;
       const bound = Math.min(targetRect.x + targetRect.width, thresholdRect.x + thresholdRect.width);
@@ -51,25 +57,18 @@ obj = {
       } else {
         result = FALLBACK_ESTIMATED_WIDTH;
       }
-      importDefault = result;
-      obj = { itemCount: null, spacerStyle: null };
-      obj[0] = diff / result;
-      obj[1] = function spacerStyle(arg0) {
-        return { width: arg0 * c0 };
+      c0 = result;
+      obj = {
+        itemCount: diff / result,
+        spacerStyle(arg0) {
+            return { width: arg0 * c0 };
+          }
       };
       return obj;
     } else {
       const _Error = Error;
-      error = new Error("Expected target to be a ReactNativeElement. VirtualRow requires DOM APIs to be enabled in React Native.");
+      const error = new Error("Expected target to be a ReactNativeElement. VirtualRow requires DOM APIs to be enabled in React Native.");
       throw error;
     }
   }
 };
-obj = {
-  itemCount: DEFAULT_INITIAL_NUM_TO_RENDER.INITIAL_NUM_TO_RENDER,
-  spacerStyle(arg0) {
-    return { width: arg0 * FALLBACK_ESTIMATED_WIDTH };
-  }
-};
-
-export default obj;

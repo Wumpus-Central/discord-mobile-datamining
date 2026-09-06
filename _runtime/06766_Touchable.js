@@ -1,18 +1,18 @@
 // === Module 6766: Touchable ===
 
 // Module 6766 (Touchable)
-import noopDefault from "noop" /* 19 */;
-import closure_4 from "_objectWithoutProperties" /* 109 */;
-import noop from "noop" /* 19 */;
-import { Platform } from "get ActivityIndicator" /* 17 */;
-import { jsx } from "jsxProd" /* 21 */;
+import _mod6727 from "module_6727" /* 6727 */;
+import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
+require = fn;
 let closure_3 = ["underlayColor", "defaultUnderlayOpacity", "activeUnderlayOpacity", "defaultOpacity", "animationDuration", "androidRipple", "delayLongPress", "onLongPress", "onPress", "onPressIn", "onPressOut", "children", "disabled", "cancelOnLeave", "ref"];
-({ use: c5, useCallback: closure_6, useRef: error } = noop);
-noopDefault;
+let noop = fn(19);
+({ use: hasOwnProperty, useCallback: metroRequire, useRef: closure_7 } = noop);
+const Platform = fn(17).Platform;
+let jsx = fn(21).jsx;
 let closure_9 = { rippleColor: "transparent" };
-let closure_10 = { UNKNOWN: 0, [0]: "UNKNOWN", INSIDE: 1, [1]: "INSIDE", OUTSIDE: 2, [2]: "OUTSIDE" };
+let constants = { UNKNOWN: 0, [0]: "UNKNOWN", INSIDE: 1, [1]: "INSIDE", OUTSIDE: 2, [2]: "OUTSIDE" };
 
 export const Touchable = (hitSlop) => {
   const underlayColor = hitSlop.underlayColor;
@@ -63,12 +63,7 @@ export const Touchable = (hitSlop) => {
         num12 = animationDuration;
       }
     }
-    obj = { tapAnimationInDuration: null, tapAnimationOutDuration: null, longPressAnimationOutDuration: null, hoverAnimationInDuration: null, hoverAnimationOutDuration: null };
-    obj[0] = num12;
-    obj[1] = num12;
-    obj[2] = num12;
-    obj[3] = num12;
-    obj[4] = num12;
+    obj = { tapAnimationInDuration: num12, tapAnimationOutDuration: num12, longPressAnimationOutDuration: num12, hoverAnimationInDuration: num12, hoverAnimationOutDuration: num12 };
   } else {
     let num5 = 0;
     if ("in" in animationDuration) {
@@ -102,8 +97,7 @@ export const Touchable = (hitSlop) => {
         num7 = _in;
       }
     }
-    obj = { tapAnimationInDuration: null, tapAnimationOutDuration: null, longPressAnimationOutDuration: null, hoverAnimationInDuration: null, hoverAnimationOutDuration: null };
-    obj[0] = num7;
+    obj = { tapAnimationInDuration: num7, tapAnimationOutDuration: null, longPressAnimationOutDuration: null, hoverAnimationInDuration: null, hoverAnimationOutDuration: null };
     const _Number2 = Number;
     let num8 = 0;
     if (Number.isFinite(out)) {
@@ -112,7 +106,7 @@ export const Touchable = (hitSlop) => {
         num8 = out;
       }
     }
-    obj[1] = num8;
+    obj.tapAnimationOutDuration = num8;
     const longPress = animationDuration.longPress;
     let out1;
     if (longPress != null) {
@@ -129,7 +123,7 @@ export const Touchable = (hitSlop) => {
         num9 = out1;
       }
     }
-    obj[2] = num9;
+    obj.longPressAnimationOutDuration = num9;
     const hover = animationDuration.hover;
     let _in1;
     if (hover != null) {
@@ -146,7 +140,7 @@ export const Touchable = (hitSlop) => {
         num10 = _in1;
       }
     }
-    obj[3] = num10;
+    obj.hoverAnimationInDuration = num10;
     const hover2 = animationDuration.hover;
     let out2;
     if (hover2 != null) {
@@ -163,7 +157,7 @@ export const Touchable = (hitSlop) => {
         num11 = out2;
       }
     }
-    obj[4] = num11;
+    obj.hoverAnimationOutDuration = num11;
   }
   num13 = 0;
   if (Number.isFinite(num4)) {
@@ -172,26 +166,25 @@ export const Touchable = (hitSlop) => {
       num13 = num4;
     }
   }
-  const callback = callback3(constants.UNKNOWN);
-  const callback2 = callback3(false);
-  callback3 = callback3(undefined);
-  const tmp19 = callback(onLongPress(onPressIn[4]).JSResponderContext);
-  closure_8 = tmp19;
-  closure_9 = callback3(null);
+  ref = closure_7(constants.UNKNOWN);
+  const ref2 = closure_7(false);
+  closure_7 = closure_7(undefined);
+  const tmp19 = ref(onLongPress(onPressIn[4]).JSResponderContext);
+  jsx = tmp19;
+  closure_9 = closure_7(null);
   const items = [tmp19];
-  const tmp20 = callback2(() => {
+  const tmp20 = ref2(() => {
     if (closure_9.current == null) {
-      tmp.current = onLongPress(onPressIn[4]).isKeyboardDismissingTap(closure_8);
-      const obj = onLongPress(onPressIn[4]);
+      tmp.current = _mod6727.isKeyboardDismissingTap(closure_8);
     }
   }, items);
   constants = tmp20;
-  const tmp21 = callback2(() => {
+  const tmp21 = ref2(() => {
     closure_9.current = null;
   }, []);
   closure_11 = tmp21;
   const items1 = [onLongPress];
-  const tmp22 = callback2(() => {
+  const tmp22 = ref2(() => {
     closure_6.current = true;
     if (onLongPress != null) {
       tmp();
@@ -199,7 +192,7 @@ export const Touchable = (hitSlop) => {
   }, items1);
   closure_12 = tmp22;
   const items2 = [onLongPress, num13, tmp22];
-  const tmp23 = callback2(() => {
+  const tmp23 = ref2(() => {
     closure_6.current = false;
     let tmp = onLongPress;
     if (onLongPress) {
@@ -214,21 +207,21 @@ export const Touchable = (hitSlop) => {
   const items3 = [tmp20, tmp23, onPressIn];
   const items4 = [tmp21, onPressOut, onPress];
   const tmp2 = undefined === cancelOnLeave || cancelOnLeave;
-  const tmp24 = callback2((pointerInside) => {
-    lib();
+  const tmp24 = ref2((pointerInside) => {
+    closure_10();
     if (pointerInside.pointerInside) {
       if (!closure_9.current) {
         if (onPressIn != null) {
           onPressIn(pointerInside);
         }
-        callback2();
-        closure_5.current = lib.INSIDE;
+        closure_13();
+        closure_5.current = closure_10.INSIDE;
       }
     }
-    closure_5.current = lib.OUTSIDE;
+    closure_5.current = closure_10.OUTSIDE;
   }, items3);
   const items5 = [onPressIn, onPressOut];
-  const tmp25 = callback2((pointerInside) => {
+  const tmp25 = ref2((pointerInside) => {
     pointerInside = pointerInside.pointerInside;
     if (!pointerInside) {
       pointerInside = undefined === closure_7.current;
@@ -239,10 +232,10 @@ export const Touchable = (hitSlop) => {
       closure_7.current = undefined;
     }
   }, []);
-  const tmp26 = callback2((canceled) => {
+  const tmp26 = ref2((canceled) => {
     let current = closure_9.current;
     if (!current) {
-      current = ref.current !== lib.INSIDE;
+      current = ref.current !== closure_10.INSIDE;
     }
     if (!current) {
       if (onPressOut != null) {
@@ -261,22 +254,22 @@ export const Touchable = (hitSlop) => {
         tmp8(canceled);
       }
     }
-    ref.current = lib.UNKNOWN;
+    ref.current = closure_10.UNKNOWN;
     if (undefined !== closure_7.current) {
       const _clearTimeout = clearTimeout;
       clearTimeout(tmp11.current);
       tmp11.current = undefined;
     }
-    callback();
+    closure_11();
   }, items4);
   let obj2 = onLongPress(onPressIn[5]);
   obj = {
     onBegin: tmp24,
     onActivate: tmp25,
     onFinalize: tmp26,
-    onUpdate: callback2((pointerInside) => {
+    onUpdate: ref2((pointerInside) => {
       if (!closure_9.current) {
-        if (ref.current !== lib.UNKNOWN) {
+        if (ref.current !== closure_10.UNKNOWN) {
           const current = tmp.current;
           if (pointerInside.pointerInside) {
             if (current === tmp2.OUTSIDE) {
@@ -316,30 +309,29 @@ export const Touchable = (hitSlop) => {
     if (androidRipple != null) {
       color = androidRipple.color;
     }
-    obj1 = { rippleColor: null, rippleRadius: null, borderless: null, foreground: null };
-    obj1[0] = color;
+    const obj1 = { rippleColor: color, rippleRadius: null, borderless: null, foreground: null };
     let radius;
     if (androidRipple != null) {
       radius = androidRipple.radius;
     }
-    obj1[1] = radius;
+    obj1.rippleRadius = radius;
     let borderless;
     if (androidRipple != null) {
       borderless = androidRipple.borderless;
     }
-    obj1[2] = borderless;
+    obj1.borderless = borderless;
     let foreground;
     if (androidRipple != null) {
       foreground = androidRipple.foreground;
     }
-    obj1[3] = foreground;
+    obj1.foreground = foreground;
     let tmp29 = obj1;
   } else {
     tmp29 = closure_9;
   }
-  const tmp27 = callback2((pointerInside) => {
+  const tmp27 = ref2((pointerInside) => {
     if (!closure_9.current) {
-      if (ref.current !== lib.UNKNOWN) {
+      if (ref.current !== closure_10.UNKNOWN) {
         const current = tmp.current;
         if (pointerInside.pointerInside) {
           if (current === tmp2.OUTSIDE) {
@@ -383,6 +375,6 @@ export const Touchable = (hitSlop) => {
   obj3.underlayColor = str;
   obj3.longPressDuration = num13;
   obj3.children = hitSlop.children;
-  obj2[1] = closure_8(onPress(onPressIn[8]), obj3);
-  return closure_8(onLongPress(onPressIn[7]).NativeDetector, obj2);
+  obj2.children = jsx(onPress(onPressIn[8]), obj3);
+  return jsx(onLongPress(onPressIn[7]).NativeDetector, obj2);
 };

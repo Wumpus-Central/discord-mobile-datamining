@@ -2,22 +2,21 @@
 
 // Module 1488 (CommonActions)
 import goBackAll from "goBack" /* 1490 */;
-import nanoid from "nanoid" /* 1491 */;
+import BaseRouter from "BaseRouter" /* 1491 */;
 import openDrawer from "openDrawer" /* 1493 */;
-import TabRouter from "TabRouter" /* 1494 */;
-import StackRouter from "StackRouter" /* 1497 */;
+import TabActions from "TabActions" /* 1494 */;
+import StackActions from "StackActions" /* 1497 */;
 
 for (const key10013 in require("module_1489")) {
-  let tmp2 = key10013;
   arg5[key10013] = require("module_1489")[key10013];
   continue;
 }
 
 export const CommonActions = goBackAll;
-export const BaseRouter = nanoid.BaseRouter;
+export const BaseRouter = BaseRouter.BaseRouter;
 export const DrawerActions = openDrawer.DrawerActions;
 export const DrawerRouter = openDrawer.DrawerRouter;
-export const StackActions = StackRouter.StackActions;
-export const StackRouter = StackRouter.StackRouter;
-export const TabActions = TabRouter.TabActions;
-export const TabRouter = TabRouter.TabRouter;
+export const StackActions = StackActions.StackActions;
+export const StackRouter = StackActions.StackRouter;
+export const TabActions = TabActions.TabActions;
+export const TabRouter = TabActions.TabRouter;

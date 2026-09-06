@@ -1,17 +1,16 @@
 // === Module 5663: ? ===
 
 // Module 5663
-import noopAll from "noop" /* 19 */;
-import { UIManager } from "get ActivityIndicator" /* 17 */;
-import { jsx } from "jsxProd" /* 21 */;
+import noop from "module_19" /* 19 */;
 
-noopAll;
+const UIManager = fn(17).UIManager;
+const jsx = fn(21).jsx;
 try {
-  let closure_0 = require("_isNativeReflectConstruct").default;
+  let closure_0 = fn(5664).default;
   let closure_2 = null != UIManager.getViewManagerConfig("RNCMaskedView");
   exports.MaskedView = function MaskedView(children) {
     children = children.children;
-    const merged = Object.assign(children, Object.create(null));
+    const merged = Object.assign(children, Object.assign({ children: 0 }));
     let tmp2 = children;
     if (closure_2) {
       tmp2 = children;

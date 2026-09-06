@@ -1,0 +1,7 @@
+// === Module 2439: ? ===
+
+// Module 2439
+import registerAsset from "module_1122" /* 1122 */;
+
+
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/.cache/intl/bW9kdWxlcy9wcmVtaXVtL3Bvd2VydXBz", scales: [1], hash: "a34bda9b58e12b5348b6e627da8ebace", name: "hi.messages.a34bda9b58e12b5348b6e627da8ebace.compiled.messages", type: "jsona" });

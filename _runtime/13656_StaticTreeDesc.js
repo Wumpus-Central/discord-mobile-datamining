@@ -1,10 +1,9 @@
 // === Module 13656: StaticTreeDesc ===
 
 // Module 13656 (StaticTreeDesc)
-import assign from "assign" /* 13651 */;
+import _mod13651 from "module_13651" /* 13651 */;
 
 require = arg1;
-const dependencyMap = arg6;
 function StaticTreeDesc(static_tree, extra_bits, extra_base, elems, max_length) {
   let length = static_tree;
   if (static_tree) {
@@ -108,19 +107,14 @@ function compress_block(last_lit, arr, array) {
       let result = 2 * num;
       let tmp2 = last_lit.pending_buf[last_lit.d_buf + result] << 8 | last_lit.pending_buf[last_lit.d_buf + result + 1];
       let tmp3 = last_lit.pending_buf[last_lit.l_buf + num];
-      let tmp4 = num;
       if (0 === tmp2) {
-        let tmp17 = send_code;
         let tmp18 = send_code(last_lit, tmp3, arr);
       } else {
-        let tmp21 = array1;
         let tmp22 = array1[tmp3];
         let tmp20 = send_code;
         let tmp23 = send_code(last_lit, tmp22 + 256 + 1, arr);
-        let tmp24 = dependencyMap;
         let tmp25 = dependencyMap[tmp22];
         if (0 !== tmp25) {
-          let tmp26 = array2;
           let diff = tmp3 - array2[tmp22];
           if (last_lit.bi_valid > 16 - tmp25) {
             last_lit.bi_buf = last_lit.bi_buf | diff << last_lit.bi_valid & 65535;
@@ -140,18 +134,13 @@ function compress_block(last_lit, arr, array) {
         }
         let diff1 = tmp2 - 1;
         if (diff1 < 256) {
-          let tmp10 = array;
           let tmp9 = array[diff1];
         } else {
-          let tmp8 = array;
           tmp9 = array[256 + (diff1 >>> 7)];
         }
         let tmp20Result = tmp20(last_lit, tmp9, array);
-        let tmp12 = dependencyMap2;
         let tmp13 = dependencyMap2[tmp9];
-        let tmp14 = tmp9;
         if (0 !== tmp13) {
-          let tmp28 = array3;
           let diff2 = diff1 - array3[tmp9];
           if (last_lit.bi_valid > 16 - tmp13) {
             last_lit.bi_buf = last_lit.bi_buf | diff2 << last_lit.bi_valid & 65535;
@@ -187,7 +176,6 @@ function build_tree(heap_len, bl_desc) {
     do {
       let result = 2 * num2;
       let tmp4 = num;
-      let tmp5 = num2;
       if (0 !== dyn_tree[result]) {
         let sum = heap_len.heap_len + 1;
         heap_len.heap_len = sum;
@@ -208,7 +196,6 @@ function build_tree(heap_len, bl_desc) {
     do {
       let sum1 = heap_len.heap_len + 1;
       heap_len.heap_len = sum1;
-      let tmp10 = tmp7;
       let num4 = 0;
       let sum2 = tmp7;
       if (tmp7 < 2) {
@@ -232,7 +219,6 @@ function build_tree(heap_len, bl_desc) {
   let sum3 = elems;
   if (1 <= diff) {
     do {
-      let tmp15 = pqdownheap;
       let tmp16 = pqdownheap(heap_len, dyn_tree, diff);
       diff = diff - 1;
       sum3 = elems;
@@ -253,7 +239,6 @@ function build_tree(heap_len, bl_desc) {
     heap_len.heap_max = diff2;
     heap_len.heap[diff2] = tmp21;
     dyn_tree[2 * sum3] = dyn_tree[2 * tmp17] + dyn_tree[2 * tmp21];
-    let tmp24 = sum3;
     if (heap_len.depth[tmp17] >= heap_len.depth[tmp21]) {
       let tmp25 = heap_len.depth[tmp17];
     } else {
@@ -287,8 +272,6 @@ function build_tree(heap_len, bl_desc) {
     do {
       let tmp30 = heap_len.heap[sum4];
       let sum5 = dyn_tree2[2 * dyn_tree2[2 * tmp30 + 1] + 1] + 1;
-      let tmp32 = num6;
-      let tmp33 = sum4;
       let sum6 = num6;
       if (sum5 > max_length) {
         sum6 = num6 + 1;
@@ -317,7 +300,6 @@ function build_tree(heap_len, bl_desc) {
   if (0 !== num7) {
     do {
       let diff4 = max_length - 1;
-      let tmp37 = num7;
       let tmp38 = diff4;
       let tmp39 = diff4;
       if (0 === heap_len.bl_count[diff4]) {
@@ -340,14 +322,12 @@ function build_tree(heap_len, bl_desc) {
     if (0 !== max_length) {
       do {
         let tmp43 = heap_len.bl_count[max_length];
-        let tmp44 = max_length;
         let tmp45 = tmp29;
         let tmp46 = tmp29;
         if (0 !== tmp43) {
           do {
             let diff6 = tmp45 - 1;
             let tmp48 = heap_len.heap[diff6];
-            let tmp49 = tmp43;
             diff7 = tmp43;
             if (tmp48 <= max_code) {
               if (dyn_tree2[2 * tmp48 + 1] !== max_length) {
@@ -380,7 +360,6 @@ function build_tree(heap_len, bl_desc) {
     do {
       let result2 = 2 * num11;
       let diff8 = dyn_tree[result2 + 1];
-      let tmp56 = num11;
       if (0 !== diff8) {
         let tmp57 = +array[diff8];
         array[diff8] = tmp57 + 1;
@@ -417,10 +396,7 @@ function scan_tree(bl_tree, dyn_dtree, max_code) {
       let tmp3 = dyn_dtree[2 * sum + 1];
       let sum1 = num4 + 1;
       let tmp5 = sum1 < num2;
-      let tmp6 = num;
       let tmp7 = num2;
-      let tmp8 = tmp;
-      let tmp9 = num3;
       if (sum1 < num2) {
         tmp5 = tmp === tmp3;
       }
@@ -490,26 +466,20 @@ function send_tree(bl_tree, dyn_dtree, diff2) {
       sum = num5 + 1;
       let tmp3 = dyn_dtree[2 * sum + 1];
       let sum1 = num4 + 1;
-      let tmp5 = num;
       let num6 = num2;
-      let tmp6 = tmp;
-      let tmp7 = num3;
       if (sum1 >= num2) {
         let diff = sum1;
         if (sum1 < num) {
           do {
-            let tmp25 = send_code;
             let tmp26 = send_code(bl_tree, tmp, bl_tree.bl_tree);
             diff = diff - 1;
           } while (0 !== diff);
         } else if (0 !== tmp) {
           let diff1 = sum1;
           if (tmp !== num3) {
-            let tmp18 = send_code;
             let tmp19 = send_code(bl_tree, tmp, bl_tree.bl_tree);
             diff1 = sum1 - 1;
           }
-          let tmp20 = send_code;
           let tmp21 = send_code(bl_tree, 16, bl_tree.bl_tree);
           diff2 = diff1 - 3;
           if (bl_tree.bi_valid > 14) {
@@ -528,7 +498,6 @@ function send_tree(bl_tree, dyn_dtree, diff2) {
             bl_tree.bi_valid = bl_tree.bi_valid + 2;
           }
         } else if (sum1 <= 10) {
-          let tmp12 = send_code;
           let tmp13 = send_code(bl_tree, 17, bl_tree.bl_tree);
           let diff3 = sum1 - 3;
           if (bl_tree.bi_valid > 13) {
@@ -547,7 +516,6 @@ function send_tree(bl_tree, dyn_dtree, diff2) {
             bl_tree.bi_valid = bl_tree.bi_valid + 3;
           }
         } else {
-          let tmp27 = send_code;
           let tmp28 = send_code(bl_tree, 18, bl_tree.bl_tree);
           let diff4 = sum1 - 11;
           if (bl_tree.bi_valid > 9) {
@@ -596,11 +564,7 @@ function send_tree(bl_tree, dyn_dtree, diff2) {
     } while (sum <= diff2);
   }
 }
-function _tr_stored_block(state8, state8, arg2, arg3) {
-  let num = 0;
-  if (arg3) {
-    num = 1;
-  }
+function _tr_stored_block(state8, block_start, arg2, arg3) {
   if (state8.bi_valid > 13) {
     state8.bi_buf = state8.bi_buf | tmp << state8.bi_valid & 65535;
     const bi_buf = state8.bi_buf;
@@ -634,13 +598,13 @@ function _tr_stored_block(state8, state8, arg2, arg3) {
   state8.pending_buf[+state8.pending] = 255 & ~arg2;
   state8.pending = +state8.pending + 1;
   state8.pending_buf[+state8.pending] = ~arg2 >>> 8 & 255;
-  assign.arraySet(state8.pending_buf, state8.window, state8, arg2, state8.pending);
+  _mod13651.arraySet(state8.pending_buf, state8.window, block_start, arg2, state8.pending);
   state8.pending = state8.pending + arg2;
 }
-let closure_2 = [0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 2, 2, 2, 2, 3, 3, 3, 3, 4, 4, 4, 4, 5, 5, 5, 5, 0];
-let closure_3 = [0, 0, 0, 0, 1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6, 7, 7, 8, 8, 9, 9, 10, 10, 11, 11, 12, 12, 13, 13];
+const dependencyMap = [0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 2, 2, 2, 2, 3, 3, 3, 3, 4, 4, 4, 4, 5, 5, 5, 5, 0];
+const dependencyMap2 = [0, 0, 0, 0, 1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6, 7, 7, 8, 8, 9, 9, 10, 10, 11, 11, 12, 12, 13, 13];
 let closure_4 = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 3, 7];
-let closure_5 = [16, 17, 18, 0, 8, 7, 9, 6, 10, 5, 11, 4, 12, 3, 13, 2, 14, 1, 15];
+const dependencyMap3 = [16, 17, 18, 0, 8, 7, 9, 6, 10, 5, 11, 4, 12, 3, 13, 2, 14, 1, 15];
 const arr = new Array(576);
 let diff = arr.length - 1;
 if (diff >= 0) {
@@ -690,7 +654,8 @@ if (diff5 >= 0) {
   } while (diff5 >= 0);
 }
 let c23 = false;
-arg5._tr_init = function _tr_init(state) {
+
+export const _tr_init = function _tr_init(state) {
   let num30;
   let num32;
   let num36;
@@ -705,20 +670,15 @@ arg5._tr_init = function _tr_init(state) {
     let num6 = 0;
     let num7 = 0;
     do {
-      let tmp6 = array2;
       array2[num6] = num7;
-      let tmp7 = dependencyMap;
-      let tmp8 = num6;
       let tmp9 = num7;
       let num8 = 0;
       let tmp10 = num7;
       if (0 < 1 << dependencyMap[num6]) {
         do {
-          let tmp11 = array1;
           let sum = tmp9 + 1;
           array1[tmp9] = num6;
           num8 = num8 + 1;
-          let tmp13 = dependencyMap;
           tmp9 = sum;
           tmp10 = sum;
           tmp14 = 1 << dependencyMap[num6];
@@ -732,20 +692,15 @@ arg5._tr_init = function _tr_init(state) {
     let num9 = 0;
     let num10 = 0;
     do {
-      let tmp17 = array3;
       array3[num10] = num9;
-      let tmp18 = dependencyMap2;
       let tmp19 = num9;
-      let tmp20 = num10;
       let num11 = 0;
       tmp21 = num9;
       if (0 < 1 << dependencyMap2[num10]) {
         do {
-          let tmp22 = array;
           let sum2 = tmp19 + 1;
           array[tmp19] = num10;
           num11 = num11 + 1;
-          let tmp24 = dependencyMap2;
           tmp19 = sum2;
           tmp21 = sum2;
           tmp25 = 1 << dependencyMap2[num10];
@@ -759,20 +714,15 @@ arg5._tr_init = function _tr_init(state) {
     let num19 = 0;
     if (sum3 < 30) {
       do {
-        let tmp28 = array3;
         array3[sum3] = tmp27 << 7;
-        let tmp29 = dependencyMap2;
         let tmp30 = tmp27;
-        let tmp31 = sum3;
         let num20 = 0;
         let tmp32 = tmp27;
         if (0 < 1 << dependencyMap2[sum3] - 7) {
           do {
-            let tmp33 = array;
             let sum4 = tmp30 + 1;
             array[256 + tmp30] = sum3;
             num20 = num20 + 1;
-            let tmp35 = dependencyMap2;
             tmp30 = sum4;
             tmp32 = sum4;
             tmp36 = 1 << dependencyMap2[sum3] - 7;
@@ -799,7 +749,6 @@ arg5._tr_init = function _tr_init(state) {
     let tmp40 = sum5;
     if (sum5 <= 255) {
       do {
-        let tmp41 = arr;
         arr[2 * sum6 + 1] = 9;
         sum6 = sum6 + 1;
         array[9] = array[9] + 1;
@@ -811,7 +760,6 @@ arg5._tr_init = function _tr_init(state) {
     let sum8 = tmp40;
     if (tmp40 <= 279) {
       do {
-        let tmp44 = arr;
         arr[2 * sum7 + 1] = 7;
         sum7 = sum7 + 1;
         array[7] = array[7] + 1;
@@ -821,7 +769,6 @@ arg5._tr_init = function _tr_init(state) {
     }
     if (sum8 <= 287) {
       do {
-        let tmp45 = arr;
         arr[2 * sum8 + 1] = 8;
         sum8 = sum8 + 1;
         array[8] = array[8] + 1;
@@ -842,7 +789,6 @@ arg5._tr_init = function _tr_init(state) {
     do {
       let result = 2 * num30;
       let diff = tmp37[result + 1];
-      let tmp53 = num30;
       if (0 !== diff) {
         let tmp54 = +array[diff];
         array[diff] = tmp54 + 1;
@@ -875,13 +821,13 @@ arg5._tr_init = function _tr_init(state) {
       num32 = num32 + 1;
     } while (num32 < 30);
   }
-  let obj = Object.create(TreeDesc.prototype);
-  obj = { dyn_tree: state.dyn_ltree, max_code: 0, stat_desc: closure_11 };
+  Object.create(TreeDesc.prototype);
+  let obj = { dyn_tree: state.dyn_ltree, max_code: 0, stat_desc };
   state.l_desc = obj;
   obj = Object.create(TreeDesc.prototype);
-  state.d_desc = { dyn_tree: state.dyn_dtree, max_code: 0, stat_desc: closure_12 };
+  state.d_desc = { dyn_tree: state.dyn_dtree, max_code: 0, stat_desc: stat_desc2 };
   Object.create(TreeDesc.prototype);
-  state.bl_desc = { dyn_tree: state.bl_tree, max_code: 0, stat_desc: closure_13 };
+  state.bl_desc = { dyn_tree: state.bl_tree, max_code: 0, stat_desc: stat_desc3 };
   state.bi_buf = 0;
   state.bi_valid = 0;
   let num35 = 0;
@@ -905,8 +851,8 @@ arg5._tr_init = function _tr_init(state) {
   state.matches = 0;
   state.last_lit = 0;
 };
-arg5._tr_stored_block = _tr_stored_block;
-arg5._tr_flush_block = function _tr_flush_block(level, state8, arg2, arg3) {
+export { _tr_stored_block };
+export const _tr_flush_block = function _tr_flush_block(level, block_start, arg2, arg3) {
   let num72;
   let num73;
   if (level.level > 0) {
@@ -914,8 +860,6 @@ arg5._tr_flush_block = function _tr_flush_block(level, state8, arg2, arg3) {
       let num6 = 4093624447;
       let num5 = 0;
       while (true) {
-        let tmp3 = num6;
-        let tmp4 = num5;
         if (!(1 & num6)) {
           num5 = num5 + 1;
           num6 = num6 >>> 1;
@@ -931,12 +875,10 @@ arg5._tr_flush_block = function _tr_flush_block(level, state8, arg2, arg3) {
                 break;
               } else {
                 let num7 = 32;
-                let num8 = 256;
                 num4 = 1;
                 if (0 !== level.dyn_ltree[26]) {
                   break;
                 } else {
-                  let tmp5 = num7;
                   num4 = 1;
                   while (0 === level.dyn_ltree[2 * num7]) {
                     num7 = num7 + 1;
@@ -970,7 +912,6 @@ arg5._tr_flush_block = function _tr_flush_block(level, state8, arg2, arg3) {
       const diff = num10 - 1;
       num12 = diff;
       while (3 <= diff) {
-        let tmp15 = dependencyMap3;
         num10 = diff;
         num12 = diff;
         if (0 !== level.bl_tree[2 * dependencyMap3[diff] + 1]) {
@@ -993,18 +934,13 @@ arg5._tr_flush_block = function _tr_flush_block(level, state8, arg2, arg3) {
     tmp2 = sum;
   }
   if (arg2 + 4 <= tmp2) {
-    if (-1 !== state8) {
-      _tr_stored_block(level, state8, arg2, arg3);
+    if (-1 !== block_start) {
+      _tr_stored_block(level, block_start, arg2, arg3);
       let num58 = 0;
     }
     do {
-      let num67 = 2;
       level.dyn_ltree[2 * num58] = 0;
-      let num68 = 1;
       num58 = num58 + 1;
-      let num69 = 286;
-      let num70 = 30;
-      let num71 = 19;
       num72 = 0;
     } while (num58 < 286);
     do {
@@ -1106,9 +1042,7 @@ arg5._tr_flush_block = function _tr_flush_block(level, state8, arg2, arg3) {
       let num57 = 0;
       if (0 < sum4) {
         do {
-          let tmp33 = dependencyMap3;
           let tmp34 = level.bl_tree[2 * dependencyMap3[num57] + 1];
-          let tmp35 = num57;
           if (level.bi_valid > 13) {
             level.bi_buf = level.bi_buf | tmp34 << level.bi_valid & 65535;
             let bi_buf5 = level.bi_buf;
@@ -1154,7 +1088,7 @@ arg5._tr_flush_block = function _tr_flush_block(level, state8, arg2, arg3) {
   compress_block(level, arr, array);
   num58 = 0;
 };
-arg5._tr_tally = function _tr_tally(state8, arg1, arg2) {
+export const _tr_tally = function _tr_tally(state8, arg1, arg2) {
   state8.pending_buf[state8.d_buf + 2 * state8.last_lit] = arg1 >>> 8 & 255;
   state8.pending_buf[state8.d_buf + 2 * state8.last_lit + 1] = 255 & arg1;
   state8.pending_buf[state8.l_buf + state8.last_lit] = 255 & arg2;
@@ -1180,7 +1114,7 @@ arg5._tr_tally = function _tr_tally(state8, arg1, arg2) {
   }
   return state8.last_lit === state8.lit_bufsize - 1;
 };
-arg5._tr_align = function _tr_align(state8) {
+export const _tr_align = function _tr_align(state8) {
   if (state8.bi_valid > 13) {
     state8.bi_buf = state8.bi_buf | 2 << state8.bi_valid & 65535;
     const bi_buf = state8.bi_buf;

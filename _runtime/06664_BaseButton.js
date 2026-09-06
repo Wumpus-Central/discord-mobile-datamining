@@ -1,37 +1,37 @@
 // === Module 6664: BaseButton ===
 
 // Module 6664 (BaseButton)
-import BaseButton from "BaseButton" /* 6665 */;
+import _mod6665 from "module_6665" /* 6665 */;
 import GestureDetectorType from "GestureDetectorType" /* 6668 */;
-import useCompetingGestures from "useCompetingGestures" /* 6760 */;
-import t from "t" /* 6767 */;
+import _mod6760 from "module_6760" /* 6760 */;
+import _mod6767 from "module_6767" /* 6767 */;
 
 
-export const BaseButton = BaseButton.BaseButton;
-export const BorderlessButton = BaseButton.BorderlessButton;
-export const FlatList = BaseButton.FlatList;
-export const Pressable = BaseButton.Pressable;
-export const RawButton = BaseButton.RawButton;
-export const RectButton = BaseButton.RectButton;
-export const RefreshControl = BaseButton.RefreshControl;
-export const ScrollView = BaseButton.ScrollView;
-export const Switch = BaseButton.Switch;
-export const TextInput = BaseButton.TextInput;
-export const Touchable = BaseButton.Touchable;
+export const BaseButton = _mod6665.BaseButton;
+export const BorderlessButton = _mod6665.BorderlessButton;
+export const FlatList = _mod6665.FlatList;
+export const Pressable = _mod6665.Pressable;
+export const RawButton = _mod6665.RawButton;
+export const RectButton = _mod6665.RectButton;
+export const RefreshControl = _mod6665.RefreshControl;
+export const ScrollView = _mod6665.ScrollView;
+export const Switch = _mod6665.Switch;
+export const TextInput = _mod6665.TextInput;
+export const Touchable = _mod6665.Touchable;
 export const GestureDetector = GestureDetectorType.GestureDetector;
 export const GestureDetectorType = GestureDetectorType.GestureDetectorType;
 export const InterceptingGestureDetector = GestureDetectorType.InterceptingGestureDetector;
 export const VirtualGestureDetector = GestureDetectorType.VirtualGestureDetector;
-export const GestureStateManager = t.GestureStateManager;
-export const useCompetingGestures = useCompetingGestures.useCompetingGestures;
-export const useExclusiveGestures = useCompetingGestures.useExclusiveGestures;
-export const useFlingGesture = useCompetingGestures.useFlingGesture;
-export const useHoverGesture = useCompetingGestures.useHoverGesture;
-export const useLongPressGesture = useCompetingGestures.useLongPressGesture;
-export const useManualGesture = useCompetingGestures.useManualGesture;
-export const useNativeGesture = useCompetingGestures.useNativeGesture;
-export const usePanGesture = useCompetingGestures.usePanGesture;
-export const usePinchGesture = useCompetingGestures.usePinchGesture;
-export const useRotationGesture = useCompetingGestures.useRotationGesture;
-export const useSimultaneousGestures = useCompetingGestures.useSimultaneousGestures;
-export const useTapGesture = useCompetingGestures.useTapGesture;
+export const GestureStateManager = _mod6767.GestureStateManager;
+export const useCompetingGestures = _mod6760.useCompetingGestures;
+export const useExclusiveGestures = _mod6760.useExclusiveGestures;
+export const useFlingGesture = _mod6760.useFlingGesture;
+export const useHoverGesture = _mod6760.useHoverGesture;
+export const useLongPressGesture = _mod6760.useLongPressGesture;
+export const useManualGesture = _mod6760.useManualGesture;
+export const useNativeGesture = _mod6760.useNativeGesture;
+export const usePanGesture = _mod6760.usePanGesture;
+export const usePinchGesture = _mod6760.usePinchGesture;
+export const useRotationGesture = _mod6760.useRotationGesture;
+export const useSimultaneousGestures = _mod6760.useSimultaneousGestures;
+export const useTapGesture = _mod6760.useTapGesture;

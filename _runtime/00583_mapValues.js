@@ -1,13 +1,15 @@
 // === Module 583: mapValues ===
 
 // Module 583 (mapValues)
+import baseAssignValue from "baseAssignValue" /* 668 */;
+
 
 export default function mapValues(arg0, arg1) {
-  let _require = arg1;
+  _require = arg1;
   const obj = {};
-  _require = _require(obj[0])(arg1, 3);
-  _require(obj[1])(arg0, (arg0, arg1, arg2) => {
-    callback(obj[2])(obj, arg1, callback(arg0, arg1, arg2));
+  _require = require("baseIteratee")(arg1, 3);
+  require("module_528")(arg0, (arg0, arg1, arg2) => {
+    baseAssignValue(obj, arg1, closure_0(arg0, arg1, arg2));
   });
   return obj;
 };

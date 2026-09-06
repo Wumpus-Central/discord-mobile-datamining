@@ -1,38 +1,31 @@
 // === Module 11048: ? ===
 
 // Module 11048
-for (const key10013 in require("NativeModules")) {
-  let tmp2 = key10013;
-  arg5[key10013] = require("NativeModules")[key10013];
+for (const key10013 in require("module_11049")) {
+  arg5[key10013] = require("module_11049")[key10013];
   continue;
 }
-for (const key10017 in require("module_11050")) {
-  let tmp3 = key10017;
-  arg5[key10017] = require("module_11050")[key10017];
+for (const key10017 in require("ReplacementModesAndroid")) {
+  arg5[key10017] = require("ReplacementModesAndroid")[key10017];
   continue;
 }
 for (const key10021 in require("purchaseUpdatedListener")) {
-  let tmp4 = key10021;
   arg5[key10021] = require("purchaseUpdatedListener")[key10021];
   continue;
 }
-for (const key10025 in require("useIAP")) {
-  let tmp5 = key10025;
-  arg5[key10025] = require("useIAP")[key10025];
+for (const key10025 in require("module_11063")) {
+  arg5[key10025] = require("module_11063")[key10025];
   continue;
 }
-for (const key10029 in require("useIAPContext")) {
-  let tmp6 = key10029;
-  arg5[key10029] = require("useIAPContext")[key10029];
+for (const key10029 in require("module_11064")) {
+  arg5[key10029] = require("module_11064")[key10029];
   continue;
 }
 for (const key10033 in require("PurchaseError")) {
-  let tmp7 = key10033;
   arg5[key10033] = require("PurchaseError")[key10033];
   continue;
 }
 for (const key10037 in require("module_11065")) {
-  let tmp8 = key10037;
   arg5[key10037] = require("module_11065")[key10037];
   continue;
 }

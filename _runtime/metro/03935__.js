@@ -1,0 +1,42 @@
+// === Module 3935: ? ===
+
+// Module 3935
+import differenceInCalendarWeeks from "differenceInCalendarWeeks" /* 3839 */;
+import lastDayOfMonth from "lastDayOfMonth" /* 3936 */;
+import startOfMonth from "startOfMonth" /* 3866 */;
+import requiredArgs from "requiredArgs" /* 3651 */;
+
+if (!differenceInCalendarWeeks) {
+  let obj = { default: differenceInCalendarWeeks };
+  let tmp3 = obj;
+} else {
+  tmp3 = differenceInCalendarWeeks;
+}
+differenceInCalendarWeeks = tmp3;
+if (!lastDayOfMonth) {
+  obj = { default: lastDayOfMonth };
+  let tmp5 = obj;
+} else {
+  tmp5 = lastDayOfMonth;
+}
+lastDayOfMonth = tmp5;
+if (!startOfMonth) {
+  obj = { default: startOfMonth };
+  let tmp7 = obj;
+} else {
+  tmp7 = startOfMonth;
+}
+startOfMonth = tmp7;
+if (!requiredArgs) {
+  const obj1 = { default: requiredArgs };
+  let tmp9 = obj1;
+} else {
+  tmp9 = requiredArgs;
+}
+requiredArgs = tmp9;
+
+export default function getWeeksInMonth(arg0, arg1) {
+  requiredArgs.default(1, arguments);
+  return differenceInCalendarWeeks.default(lastDayOfMonth.default(arg0), startOfMonth.default(arg0), arg1) + 1;
+};
+export default exports.default;

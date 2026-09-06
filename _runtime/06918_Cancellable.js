@@ -1,23 +1,25 @@
 // === Module 6918: Cancellable ===
 
 // Module 6918 (Cancellable)
-import _createClassDefault from "_createClass" /* 6867 */;
-import Cancellable from "_classCallCheck" /* 6866 */;
+import _modDef6867 from "module_6867" /* 6867 */;
+import _classCallCheck from "module_6866" /* 6866 */;
 
 class Cancellable {
   constructor() {
-    tmp = Cancellable(this, Cancellable);
+    tmp = closure_0(this, Cancellable);
     this._isCancelled = false;
     return;
   }
 }
+_classCallCheck = Cancellable;
+const entry = {
+  key: "cancel",
+  value: function cancel() {
+    this._isCancelled = true;
+  }
+};
 const items = [
-  {
-    key: "cancel",
-    value: function cancel() {
-      this._isCancelled = true;
-    }
-  },
+  entry,
   {
     key: "isCancelled",
     value: function isCancelled() {
@@ -25,27 +27,22 @@ const items = [
     }
   }
 ];
-const tmp2 = _createClassDefault(Cancellable, items);
+const tmp2 = _modDef6867(Cancellable, items);
 let closure_1 = tmp2;
 
-export const autoScroll = function autoScroll(c6, c4, c5, diff, diff1, closure_2, closure_1) {
-  closure_0 = c6;
-  closure_1 = c4;
-  closure_2 = c5;
+export const autoScroll = function autoScroll(scrollNow, arg1, arg2, diff, diff1, arg5, arg6) {
+  closure_1 = arg1;
+  closure_2 = arg2;
   closure_3 = diff;
   closure_4 = diff1;
-  let num = closure_2;
-  if (closure_2 === undefined) {
-    num = 1;
-  }
-  let tmp = closure_1;
-  if (closure_1 === undefined) {
+  let tmp = arg6;
+  if (arg6 === undefined) {
     tmp = new closure_1();
   }
   closure_6 = tmp;
   return new Promise((arg0) => {
-    c6 = arg0;
-    c6(closure_1, num2, false);
+    scrollNow = arg0;
+    scrollNow(closure_1, num2, false);
     closure_1 = 7 * max2;
     num = -1;
     num2 = -1;
@@ -76,67 +73,82 @@ export const autoScroll = function autoScroll(c6, c4, c5, diff, diff1, closure_2
 
     }
     const animationFrame = requestAnimationFrame(() => {
-      if (closure_1_6.isCancelled()) {
-        callback(false);
+      if (closure_2_6.isCancelled()) {
+        closure_1_0(false);
       } else {
         let _Date = Date;
-        timestamp = Date.now();
-        let result = closure_1 * (timestamp - timestamp);
-        closure_8 = closure_8 + result * closure_3;
-        sum = sum + result * closure_2;
-        closure_1_0(callback2(closure_1_3, sum), callback3(closure_1_4, closure_8), false);
-        if (callback2(closure_1_3, sum) === closure_1_3) {
-          if (callback3(tmp16, closure_8) === tmp16) {
-            callback(true);
+        let timestamp = Date.now();
+        let result = closure_1_1 * (timestamp - closure_1_6);
+        closure_1_8 = closure_1_8 + result * closure_1_3;
+        let sum = closure_1_7 + result * closure_1_2;
+        closure_1_7 = sum;
+        closure_2_0(closure_1_4(closure_2_3, sum), closure_1_5(closure_2_4, closure_1_8), false);
+        closure_1_6 = timestamp;
+        if (closure_1_4(closure_2_3, closure_1_7) === closure_2_3) {
+          if (tmp15(tmp16, closure_1_8) === tmp16) {
+            closure_1_0(true);
           }
         }
-        if (typeof closure_9 !== "function") {
-          HermesBuiltin.throwTypeError();
-        }
-        let _requestAnimationFrame = requestAnimationFrame;
-        let animationFrame = requestAnimationFrame(() => {
-          if (closure_1_6.isCancelled()) {
-            callback(false);
-          } else {
-            let _Date = Date;
-            timestamp = Date.now();
-            let result = closure_1 * (timestamp - timestamp);
-            closure_8 = closure_8 + result * closure_3;
-            sum = sum + result * closure_2;
-            closure_1_0(callback2(closure_1_3, sum), callback3(closure_1_4, closure_8), false);
-            if (callback2(closure_1_3, sum) === closure_1_3) {
-              if (callback3(tmp16, closure_8) === tmp16) {
-                callback(true);
+        if (typeof closure_1_9 === "function") {
+          let _requestAnimationFrame = requestAnimationFrame;
+          let animationFrame = requestAnimationFrame(() => {
+            if (closure_2_6.isCancelled()) {
+              closure_1_0(false);
+            } else {
+              let _Date = Date;
+              let timestamp = Date.now();
+              let result = closure_1_1 * (timestamp - closure_1_6);
+              closure_1_8 = closure_1_8 + result * closure_1_3;
+              let sum = closure_1_7 + result * closure_1_2;
+              closure_1_7 = sum;
+              closure_2_0(closure_1_4(closure_2_3, sum), closure_1_5(closure_2_4, closure_1_8), false);
+              closure_1_6 = timestamp;
+              if (closure_1_4(closure_2_3, closure_1_7) === closure_2_3) {
+                if (tmp15(tmp16, closure_1_8) === tmp16) {
+                  closure_1_0(true);
+                }
               }
-            }
-            if (typeof closure_9 !== "function") {
-              HermesBuiltin.throwTypeError();
-            }
-            let _requestAnimationFrame = requestAnimationFrame;
-            let animationFrame = requestAnimationFrame(() => {
-              if (closure_1_6.isCancelled()) {
-                callback(false);
-              } else {
-                let _Date = Date;
-                timestamp = Date.now();
-                let result = closure_1 * (timestamp - timestamp);
-                closure_8 = closure_8 + result * closure_3;
-                sum = sum + result * closure_2;
-                closure_1_0(callback2(closure_1_3, sum), callback3(closure_1_4, closure_8), false);
-                if (callback2(closure_1_3, sum) === closure_1_3) {
-                  if (callback3(tmp16, closure_8) === tmp16) {
-                    callback(true);
-                  }
-                }
-                if (typeof closure_9 !== "function") {
-                  HermesBuiltin.throwTypeError();
-                }
+              if (typeof closure_1_9 === "function") {
                 let _requestAnimationFrame = requestAnimationFrame;
-                let animationFrame = requestAnimationFrame(() => { ... });
+                let animationFrame = requestAnimationFrame(() => {
+                  if (closure_2_6.isCancelled()) {
+                    closure_1_0(false);
+                  } else {
+                    let _Date = Date;
+                    let timestamp = Date.now();
+                    let result = closure_1_1 * (timestamp - closure_1_6);
+                    closure_1_8 = closure_1_8 + result * closure_1_3;
+                    let sum = closure_1_7 + result * closure_1_2;
+                    closure_1_7 = sum;
+                    closure_2_0(closure_1_4(closure_2_3, sum), closure_1_5(closure_2_4, closure_1_8), false);
+                    closure_1_6 = timestamp;
+                    if (closure_1_4(closure_2_3, closure_1_7) === closure_2_3) {
+                      if (tmp15(tmp16, closure_1_8) === tmp16) {
+                        closure_1_0(true);
+                      }
+                    }
+                    if (typeof closure_1_9 === "function") {
+                      let _requestAnimationFrame = requestAnimationFrame;
+                      let animationFrame = requestAnimationFrame(() => { ... });
+                    } else {
+                      throw new TypeError("Trying to call a non-function");
+                    }
+                    let tmp14 = closure_1_4(closure_2_3, sum);
+                    tmp15 = closure_1_5;
+                  }
+                });
+              } else {
+                throw new TypeError("Trying to call a non-function");
               }
-            });
-          }
-        });
+              let tmp14 = closure_1_4(closure_2_3, sum);
+              tmp15 = closure_1_5;
+            }
+          });
+        } else {
+          throw new TypeError("Trying to call a non-function");
+        }
+        let tmp14 = closure_1_4(closure_2_3, sum);
+        tmp15 = closure_1_5;
       }
     });
   });

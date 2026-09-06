@@ -1,20 +1,21 @@
 // === Module 6913: ViewHolderCollection ===
 
 // Module 6913 (ViewHolderCollection)
-import closure_2 from "_slicedToArray" /* 6857 */;
-import noop from "noop" /* 19 */;
-import closure_6 from "noop" /* 19 */;
-import { jsx } from "jsxProd" /* 21 */;
+import ViewHolder from "ViewHolder" /* 6911 */;
+import _slicedToArray from "module_6857" /* 6857 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-({ useEffect: c3, useImperativeHandle: c4, useLayoutEffect: c5 } = noop);
+require = fn;
+let noop = fn(19);
+({ useEffect: c3, useImperativeHandle: closure_4, useLayoutEffect: hasOwnProperty } = noop);
+const jsx = fn(21).jsx;
 
 export const ViewHolderCollection = (data) => {
   data = data.data;
-  ({ renderStack, getLayout: dependencyMap, refHolder: closure_2, onSizeChanged: closure_3, renderItem: closure_4, extraData: closure_5, onCommitLayoutEffect: closure_6, CellRendererComponent: jsx, ItemSeparatorComponent: closure_8, onCommitEffect: closure_9, horizontal } = data);
+  ({ renderStack, getLayout: dependencyMap, refHolder: _slicedToArray, onSizeChanged: closure_3, renderItem: closure_4, extraData: closure_5, onCommitLayoutEffect: noop, CellRendererComponent: jsx, ItemSeparatorComponent: closure_8, onCommitEffect: closure_9, horizontal } = data);
   ({ getAdjustmentMargin, currentStickyIndex: closure_11, hideStickyHeaderRelatedCell: closure_12, isInLastRow: closure_13, inverted: closure_14 } = data);
   ({ viewHolderCollectionRef, getChildContainerLayout } = data);
-  const tmp = callback(React.useState(0), 2);
+  const tmp = _slicedToArray(noop.useState(0), 2);
   const first = tmp[0];
   closure_16 = tmp3;
   let size = getChildContainerLayout();
@@ -30,7 +31,7 @@ export const ViewHolderCollection = (data) => {
   let obj = data(6876);
   closure_17 = obj.useRecyclerViewContext();
   const items = [width];
-  callback4(() => {
+  extraData(() => {
     if (first > 0) {
       if (closure_17 != null) {
         obj.layout();
@@ -39,25 +40,25 @@ export const ViewHolderCollection = (data) => {
     }
   }, items);
   const items1 = [first];
-  callback4(() => {
+  extraData(() => {
     if (first > 0) {
-      if (closure_6 != null) {
+      if (noop != null) {
         tmp();
       }
     }
   }, items1);
   const items2 = [first];
-  callback2(() => {
+  onSizeChanged(() => {
     if (first > 0) {
-      if (closure_9 != null) {
+      if (closure_1_9 != null) {
         tmp();
       }
     }
   }, items2);
   const items3 = [tmp[1]];
-  callback3(viewHolderCollectionRef, () => ({
+  renderItem(viewHolderCollectionRef, () => ({
     commitLayout() {
-      callback((arg0) => arg0 + 1);
+      closure_1_16((arg0) => arg0 + 1);
     }
   }), items3);
   let tmp12 = data;
@@ -72,30 +73,30 @@ export const ViewHolderCollection = (data) => {
     }
     tmp13 = width;
   }
-  obj = { width: tmp13, height: null, marginTop: null, marginLeft: null, opacity: null };
+  size = { width: tmp13, height: null, marginTop: null, marginLeft: null, opacity: null };
   let height1;
   if (size != null) {
     height1 = size.height;
   }
-  obj[1] = height1;
+  size.height = height1;
   let adjustmentMargin;
   if (!horizontal) {
     adjustmentMargin = getAdjustmentMargin();
   }
-  obj[2] = adjustmentMargin;
+  size.marginTop = adjustmentMargin;
   let adjustmentMargin1;
   if (horizontal) {
     adjustmentMargin1 = getAdjustmentMargin();
   }
-  obj[3] = adjustmentMargin1;
+  size.marginLeft = adjustmentMargin1;
   let num = 0;
   if (first > 0) {
     num = 1;
   }
-  obj[4] = num;
+  size.opacity = num;
   let tmp19 = tmp12;
   if (tmp12) {
-    tmp19 = obj;
+    tmp19 = size;
   }
   obj = { style: tmp19, children: null };
   if (size) {
@@ -106,31 +107,31 @@ export const ViewHolderCollection = (data) => {
     size = Array.from(renderStack.entries(), (arg0) => {
       [tmp, ] = arg0;
       let tmp5;
-      if (closure_8) {
-        if (!callback2(tmp2)) {
+      if (ItemSeparatorComponent) {
+        if (!closure_1_13(tmp2)) {
           tmp5 = tmp3[tmp2 + 1];
         }
       }
       let obj = { index: tmp2, item: data[tmp2], trailingItem: tmp5, layout: null, refHolder: null, onSizeChanged: null, target: "Cell", renderItem: null, extraData: null, CellRendererComponent: null, ItemSeparatorComponent: null, horizontal: null, hidden: null, inverted: null };
       obj = {};
-      const merged = Object.assign(callback(tmp2));
-      obj[3] = obj;
-      obj[4] = closure_2;
-      obj[5] = closure_3;
-      obj[7] = closure_4;
-      obj[8] = closure_5;
-      obj[9] = closure_7;
-      obj[10] = closure_8;
-      obj[11] = horizontal;
-      let tmp11 = closure_12;
-      if (closure_12) {
-        tmp11 = closure_11 === tmp2;
+      const merged = Object.assign(dependencyMap(tmp2));
+      obj.layout = obj;
+      obj.refHolder = refHolder;
+      obj.onSizeChanged = onSizeChanged;
+      obj.renderItem = renderItem;
+      obj.extraData = extraData;
+      obj.CellRendererComponent = CellRendererComponent;
+      obj.ItemSeparatorComponent = ItemSeparatorComponent;
+      obj.horizontal = horizontal;
+      let tmp11 = closure_1_12;
+      if (closure_1_12) {
+        tmp11 = closure_1_11 === tmp2;
       }
-      obj[12] = tmp11;
-      obj[13] = closure_14;
-      return closure_1_7(data(closure_1_1[5]).ViewHolder, obj, tmp);
+      obj.hidden = tmp11;
+      obj.inverted = inverted;
+      return jsx(ViewHolder.ViewHolder, {}, tmp);
     });
   }
-  obj[1] = size;
+  obj.children = size;
   return jsx(data(6907).CompatView, { style: tmp19, children: null });
 };

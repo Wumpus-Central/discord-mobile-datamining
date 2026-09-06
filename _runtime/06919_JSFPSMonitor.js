@@ -1,14 +1,14 @@
 // === Module 6919: JSFPSMonitor ===
 
 // Module 6919 (JSFPSMonitor)
-import _createClassDefault from "_createClass" /* 6867 */;
-import closure_2 from "_classCallCheck" /* 6866 */;
+import _modDef6867 from "module_6867" /* 6867 */;
+import _classCallCheck from "module_6866" /* 6866 */;
 
 const JSFPSMonitor = arg1;
 class JSFPSMonitor {
   constructor() {
     self = this;
-    tmp = closure_2(this, self);
+    tmp = c2(this, JSFPSMonitor);
     this.startTime = 0;
     this.frameCount = 0;
     this.timeWindow = { frameCount: 0, startTime: 0 };
@@ -42,20 +42,21 @@ class JSFPSMonitor {
     return;
   }
 }
+const entry = {
+  key: "measureLoop",
+  value: function measureLoop() {
+    this.clearAnimationNumber = requestAnimationFrame(this.updateLoopCompute);
+  }
+};
 const items = [
-  {
-    key: "measureLoop",
-    value: function measureLoop() {
-      this.clearAnimationNumber = requestAnimationFrame(this.updateLoopCompute);
-    }
-  },
+  entry,
   {
     key: "startTracking",
     value: function startTracking() {
       const self = this;
       if (0 !== this.startTime) {
         const _Error = Error;
-        error = new Error(JSFPSMonitor(6854).ErrorMessages.fpsMonitorAlreadyRunning);
+        const error = new Error(JSFPSMonitor(6854).ErrorMessages.fpsMonitorAlreadyRunning);
         throw error;
       } else {
         const _Date = Date;
@@ -76,12 +77,12 @@ const items = [
       }
       const obj = { minFPS: JSFPSMonitor(6920).roundToDecimalPlaces(self.minFPS, 1), maxFPS: null, averageFPS: null };
       const obj2 = JSFPSMonitor(6920);
-      obj[1] = JSFPSMonitor(6920).roundToDecimalPlaces(self.maxFPS, 1);
+      obj.maxFPS = JSFPSMonitor(6920).roundToDecimalPlaces(self.maxFPS, 1);
       const obj3 = JSFPSMonitor(6920);
-      obj[2] = JSFPSMonitor(6920).roundToDecimalPlaces(self.averageFPS, 1);
+      obj.averageFPS = JSFPSMonitor(6920).roundToDecimalPlaces(self.averageFPS, 1);
       return obj;
     }
   }
 ];
 
-export const JSFPSMonitor = _createClassDefault(JSFPSMonitor, items);
+export const JSFPSMonitor = _modDef6867(JSFPSMonitor, items);

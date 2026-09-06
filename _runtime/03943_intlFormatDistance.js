@@ -1,7 +1,7 @@
 // === Module 3943: intlFormatDistance ===
 
 // Module 3943 (intlFormatDistance)
-import keys from "keys" /* 3829 */;
+import daysInWeek from "daysInWeek" /* 3829 */;
 import differenceInCalendarDays from "differenceInCalendarDays" /* 3812 */;
 import differenceInCalendarMonths from "differenceInCalendarMonths" /* 3836 */;
 import differenceInCalendarQuarters from "differenceInCalendarQuarters" /* 3837 */;
@@ -10,84 +10,74 @@ import differenceInCalendarYears from "differenceInCalendarYears" /* 3840 */;
 import differenceInHours from "differenceInHours" /* 3842 */;
 import differenceInMinutes from "differenceInMinutes" /* 3847 */;
 import differenceInSeconds from "differenceInSeconds" /* 3853 */;
-import _typeof from "_typeof" /* 3650 */;
+import _typeof from "module_3650" /* 3650 */;
 import requiredArgs from "requiredArgs" /* 3651 */;
 
 if (!differenceInCalendarDays) {
-  let obj = { default: null };
-  obj[0] = differenceInCalendarDays;
+  let obj = { default: differenceInCalendarDays };
   let tmp3 = obj;
 } else {
   tmp3 = differenceInCalendarDays;
 }
 differenceInCalendarDays = tmp3;
 if (!differenceInCalendarMonths) {
-  obj = { default: null };
-  obj[0] = differenceInCalendarMonths;
+  obj = { default: differenceInCalendarMonths };
   let tmp5 = obj;
 } else {
   tmp5 = differenceInCalendarMonths;
 }
 differenceInCalendarMonths = tmp5;
 if (!differenceInCalendarQuarters) {
-  obj = { default: null };
-  obj[0] = differenceInCalendarQuarters;
+  obj = { default: differenceInCalendarQuarters };
   let tmp7 = obj;
 } else {
   tmp7 = differenceInCalendarQuarters;
 }
 differenceInCalendarQuarters = tmp7;
 if (!differenceInCalendarWeeks) {
-  const obj1 = { default: null };
-  obj1[0] = differenceInCalendarWeeks;
+  const obj1 = { default: differenceInCalendarWeeks };
   let tmp9 = obj1;
 } else {
   tmp9 = differenceInCalendarWeeks;
 }
 differenceInCalendarWeeks = tmp9;
 if (!differenceInCalendarYears) {
-  let obj2 = { default: null };
-  obj2[0] = differenceInCalendarYears;
+  let obj2 = { default: differenceInCalendarYears };
   let tmp11 = obj2;
 } else {
   tmp11 = differenceInCalendarYears;
 }
 differenceInCalendarYears = tmp11;
 if (!differenceInHours) {
-  const obj3 = { default: null };
-  obj3[0] = differenceInHours;
+  const obj3 = { default: differenceInHours };
   let tmp13 = obj3;
 } else {
   tmp13 = differenceInHours;
 }
 differenceInHours = tmp13;
 if (!differenceInMinutes) {
-  const obj4 = { default: null };
-  obj4[0] = differenceInMinutes;
+  const obj4 = { default: differenceInMinutes };
   let tmp15 = obj4;
 } else {
   tmp15 = differenceInMinutes;
 }
 differenceInMinutes = tmp15;
 if (!differenceInSeconds) {
-  const obj5 = { default: null };
-  obj5[0] = differenceInSeconds;
+  const obj5 = { default: differenceInSeconds };
   let tmp17 = obj5;
 } else {
   tmp17 = differenceInSeconds;
 }
 differenceInSeconds = tmp17;
 if (!_typeof) {
-  const obj6 = { default: null };
-  obj6[0] = _typeof;
+  const obj6 = { default: _typeof };
   let tmp19 = obj6;
 } else {
   tmp19 = _typeof;
 }
 _typeof = tmp19;
 if (!requiredArgs) {
-  const obj7 = { default: null };
-  obj7[0] = requiredArgs;
+  const obj7 = { default: requiredArgs };
   let tmp21 = obj7;
 } else {
   tmp21 = requiredArgs;
@@ -135,7 +125,7 @@ export default function intlFormatDistance(arg0, arg1, unit) {
       }
     }
     const _Intl = Intl;
-    let locale;
+    locale = undefined;
     if (null != unit) {
       locale = unit.locale;
     }
@@ -143,8 +133,7 @@ export default function intlFormatDistance(arg0, arg1, unit) {
     if (null != unit) {
       localeMatcher = unit.localeMatcher;
     }
-    let obj = { localeMatcher: null, numeric: null, style: null };
-    obj[0] = localeMatcher;
+    let obj = { localeMatcher, numeric: null, style: null };
     let str6;
     if (null != unit) {
       str6 = unit.numeric;
@@ -152,19 +141,19 @@ export default function intlFormatDistance(arg0, arg1, unit) {
     if (!str6) {
       str6 = "auto";
     }
-    obj[1] = str6;
+    obj.numeric = str6;
     let style;
     if (null != unit) {
       style = unit.style;
     }
-    obj[2] = style;
+    obj.style = style;
     const relativeTimeFormat = new Intl.RelativeTimeFormat(locale, obj);
     return relativeTimeFormat.format(num2, str);
   }
   obj = differenceInSeconds;
   const defaultResult3 = differenceInSeconds.default(defaultResult1, defaultResult2);
   const absolute = Math.abs(defaultResult3);
-  if (absolute < keys.secondsInMinute) {
+  if (absolute < daysInWeek.secondsInMinute) {
     num2 = obj.default(defaultResult1, defaultResult2);
     str = "second";
   } else {

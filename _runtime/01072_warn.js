@@ -1,11 +1,9 @@
 // === Module 1072: warn ===
 
 // Module 1072 (warn)
-import closure_0 from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import isHermesEnabled from "isHermesEnabled" /* 867 */;
-import { debug } from "registerSpanErrorInstrumentation" /* 682 */;
+import noop from "module_19" /* 19 */;
 
+get_ActivityIndicator = fn(17);
 ({ UIManager, View: closure_1 } = get_ActivityIndicator);
 const RNSentryReplayMask = "RNSentryReplayMask";
 const RNSentryReplayUnmask = "RNSentryReplayUnmask";
@@ -14,18 +12,28 @@ function warn(arg0) {
 }
 class MaskFallback {
   constructor(arg0) {
-    if (typeof warn !== "function") {
-      str = "Trying to call a non-function";
-      throwTypeErrorResult = HermesBuiltin.throwTypeError();
+    if (typeof warn === "function") {
+      tmp = global;
+      str = "Mask";
+      Mask = "Mask";
+      tmp2 = globalThis;
+      _setTimeout = setTimeout;
+      num = 0;
+      timerId = setTimeout(() => {
+        console.warn("[SentrySessionReplay] " + Unmask + " component is not supported on the current platform. If " + Unmask + " should be supported, please ensure that the application build is up to date.");
+      }, 0);
+      tmp4 = closure_0;
+      tmp5 = View;
+      _Object = Object;
+      return closure_0.createElement(View, Object.assign({}, global));
+    } else {
+      str2 = "Trying to call a non-function";
+      throw new TypeError("Trying to call a non-function");
     }
-    Mask = "Mask";
-    timerId = setTimeout(() => {
-      console.warn("[SentrySessionReplay] " + Unmask + " component is not supported on the current platform. If " + Unmask + " should be supported, please ensure that the application build is up to date.");
-    }, 0);
-    return Mask.createElement(View, Object.assign({}, global));
   }
 }
-if (!isHermesEnabled.isExpoGo()) {
+const module_867 = fn(867);
+if (!module_867.isExpoGo()) {
   const hasViewManagerConfig = UIManager.hasViewManagerConfig;
   if (null !== hasViewManagerConfig) {
     if (undefined !== hasViewManagerConfig) {
@@ -34,20 +42,29 @@ if (!isHermesEnabled.isExpoGo()) {
     }
   }
   if (undefined) {
-    let value = require("setRuntimeConfigProvider").get("RNSentryReplayMask", () => ({ uiViewClassName: RNSentryReplayMask }));
-    const obj2 = require("setRuntimeConfigProvider");
+    let value = fn(65).get("RNSentryReplayMask", () => ({ uiViewClassName: RNSentryReplayMask }));
+    const obj2 = fn(65);
   }
   class UnmaskFallback {
     constructor(arg0) {
-      if (typeof warn !== "function") {
-        str = "Trying to call a non-function";
-        throwTypeErrorResult = HermesBuiltin.throwTypeError();
+      if (typeof warn === "function") {
+        tmp = global;
+        str = "Unmask";
+        Unmask = "Unmask";
+        tmp2 = globalThis;
+        _setTimeout = setTimeout;
+        num = 0;
+        timerId = setTimeout(() => {
+          console.warn("[SentrySessionReplay] " + Unmask + " component is not supported on the current platform. If " + Unmask + " should be supported, please ensure that the application build is up to date.");
+        }, 0);
+        tmp4 = closure_0;
+        tmp5 = View;
+        _Object = Object;
+        return closure_0.createElement(View, Object.assign({}, global));
+      } else {
+        str2 = "Trying to call a non-function";
+        throw new TypeError("Trying to call a non-function");
       }
-      Unmask = "Unmask";
-      timerId = setTimeout(() => {
-        console.warn("[SentrySessionReplay] " + Unmask + " component is not supported on the current platform. If " + Unmask + " should be supported, please ensure that the application build is up to date.");
-      }, 0);
-      return Unmask.createElement(View, Object.assign({}, global));
     }
   }
   if (!obj3.isExpoGo()) {
@@ -59,30 +76,40 @@ if (!isHermesEnabled.isExpoGo()) {
       }
     }
     if (undefined) {
-      value = require("setRuntimeConfigProvider").get("RNSentryReplayUnmask", () => ({ uiViewClassName: RNSentryReplayUnmask }));
-      const obj4 = require("setRuntimeConfigProvider");
+      value = fn(65).get("RNSentryReplayUnmask", () => ({ uiViewClassName: RNSentryReplayUnmask }));
+      const obj4 = fn(65);
     }
     class UnmaskFallback {
       constructor(arg0) {
-        if (typeof warn !== "function") {
-          str = "Trying to call a non-function";
-          throwTypeErrorResult = HermesBuiltin.throwTypeError();
+        if (typeof warn === "function") {
+          tmp = global;
+          str = "Unmask";
+          Unmask = "Unmask";
+          tmp2 = globalThis;
+          _setTimeout = setTimeout;
+          num = 0;
+          timerId = setTimeout(() => {
+            console.warn("[SentrySessionReplay] " + Unmask + " component is not supported on the current platform. If " + Unmask + " should be supported, please ensure that the application build is up to date.");
+          }, 0);
+          tmp4 = closure_0;
+          tmp5 = View;
+          _Object = Object;
+          return closure_0.createElement(View, Object.assign({}, global));
+        } else {
+          str2 = "Trying to call a non-function";
+          throw new TypeError("Trying to call a non-function");
         }
-        Unmask = "Unmask";
-        timerId = setTimeout(() => {
-          console.warn("[SentrySessionReplay] " + Unmask + " component is not supported on the current platform. If " + Unmask + " should be supported, please ensure that the application build is up to date.");
-        }, 0);
-        return Unmask.createElement(View, Object.assign({}, global));
       }
     }
     exports.Unmask = value;
     exports.MaskFallback = MaskFallback;
     exports.UnmaskFallback = UnmaskFallback;
   }
-  const debug2 = require("registerSpanErrorInstrumentation").debug;
+  const debug2 = fn(682).debug;
   const _HermesInternal = HermesInternal;
   debug2.warn("[SentrySessionReplay] Can't load " + "RNSentryReplayUnmask" + ".");
   value = UnmaskFallback;
-  obj3 = require("isHermesEnabled");
+  obj3 = fn(867);
 }
+const debug = fn(682).debug;
 debug.warn("[SentrySessionReplay] Can't load " + "RNSentryReplayMask" + ".");

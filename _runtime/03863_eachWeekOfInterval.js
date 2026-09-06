@@ -1,38 +1,34 @@
 // === Module 3863: eachWeekOfInterval ===
 
 // Module 3863 (eachWeekOfInterval)
-import addWeeks from "addWeeks" /* 3818 */;
+import module_3818 from "module_3818" /* 3818 */;
 import startOfWeek from "startOfWeek" /* 3809 */;
-import _typeof from "_typeof" /* 3650 */;
+import _typeof from "module_3650" /* 3650 */;
 import requiredArgs from "requiredArgs" /* 3651 */;
 
-if (!addWeeks) {
-  let obj = { default: null };
-  obj[0] = addWeeks;
+if (!module_3818) {
+  let obj = { default: module_3818 };
   let tmp3 = obj;
 } else {
-  tmp3 = addWeeks;
+  tmp3 = module_3818;
 }
-addWeeks = tmp3;
+module_3818 = tmp3;
 if (!startOfWeek) {
-  obj = { default: null };
-  obj[0] = startOfWeek;
+  obj = { default: startOfWeek };
   let tmp5 = obj;
 } else {
   tmp5 = startOfWeek;
 }
 startOfWeek = tmp5;
 if (!_typeof) {
-  obj = { default: null };
-  obj[0] = _typeof;
+  obj = { default: _typeof };
   let tmp7 = obj;
 } else {
   tmp7 = _typeof;
 }
 _typeof = tmp7;
 if (!requiredArgs) {
-  const obj1 = { default: null };
-  obj1[0] = requiredArgs;
+  const obj1 = { default: requiredArgs };
   let tmp9 = obj1;
 } else {
   tmp9 = requiredArgs;
@@ -59,10 +55,8 @@ export default function eachWeekOfInterval(arg0, arg1) {
     if (defaultResult3.getTime() <= time1) {
       do {
         let setHoursResult2 = defaultResult3.setHours(0);
-        let tmp14 = _typeof;
         let arr = items.push(_typeof.default(defaultResult3));
-        let tmp16 = addWeeks;
-        let defaultResult5 = addWeeks.default(defaultResult3, 1);
+        let defaultResult5 = module_3818.default(defaultResult3, 1);
         let setHoursResult3 = defaultResult5.setHours(15);
         defaultResult3 = defaultResult5;
         time2 = defaultResult5.getTime();

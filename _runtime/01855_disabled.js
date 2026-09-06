@@ -1,14 +1,13 @@
 // === Module 1855: disabled ===
 
 // Module 1855 (disabled)
-import noopDefault from "noop" /* 19 */;
-import { useMemo } from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import { jsx } from "jsxProd" /* 21 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-noopDefault;
-({ Platform, TouchableNativeFeedback: c3, TouchableOpacity, View: c4 } = get_ActivityIndicator);
+const require = fn;
+const useMemo = fn(19).useMemo;
+get_ActivityIndicator = fn(17);
+({ Platform, TouchableNativeFeedback: c3, TouchableOpacity, View: closure_4 } = get_ActivityIndicator);
+const jsx = fn(21).jsx;
 
 export default function _default(disabled) {
   disabled = disabled.disabled;
@@ -18,11 +17,10 @@ export default function _default(disabled) {
     num = 18;
   }
   ({ style, theme } = disabled);
-  let keyboardState;
   let obj = disabled(num[3]);
-  keyboardState = obj.useKeyboardState((appearance) => appearance.appearance);
+  const keyboardState = obj.useKeyboardState((appearance) => appearance.appearance);
   const items = [disabled];
   const items1 = [keyboardState, num, theme];
-  obj = { accessibilityHint, accessibilityLabel, accessibilityRole: "button", accessibilityState: theme(() => ({ disabled }), items), background: theme(() => keyboardState.Ripple(theme[keyboardState].ripple, true, num), items1), style, testID, onPress, children: <closure_4 style={style}>{children}</closure_4> };
-  return <keyboardState accessibilityHint={accessibilityHint} accessibilityLabel={accessibilityLabel} accessibilityRole="button" accessibilityState={theme(() => ({ disabled }), items)} background={theme(() => keyboardState.Ripple(theme[keyboardState].ripple, true, num), items1)} style={style} testID={testID} onPress={onPress}><closure_4 style={style}>{children}</closure_4></keyboardState>;
+  obj = { accessibilityHint, accessibilityLabel, accessibilityRole: "button", accessibilityState: theme(() => ({ disabled }), items), background: theme(() => React3.Ripple(theme[keyboardState].ripple, true, num), items1), style, testID, onPress, children: <closure_4 style={style}>{children}</closure_4> };
+  return <keyboardState accessibilityHint={accessibilityHint} accessibilityLabel={accessibilityLabel} accessibilityRole="button" accessibilityState={theme(() => ({ disabled }), items)} background={theme(() => React3.Ripple(theme[keyboardState].ripple, true, num), items1)} style={style} testID={testID} onPress={onPress}><closure_4 style={style}>{children}</closure_4></keyboardState>;
 };

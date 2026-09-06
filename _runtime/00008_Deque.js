@@ -13,7 +13,7 @@ class Deque {
       num2 = 1073741824;
       num3 = 0;
       num4 = 1;
-      diff = (Math.min(require("module_16"), 1073741824) >>> 0) - 1;
+      diff = (Math.min(Math.max(16, length), 1073741824) >>> 0) - 1;
       tmp3 = diff | diff >> 1;
       num5 = 2;
       tmp4 = tmp3 | tmp3 >> 2;
@@ -247,7 +247,7 @@ class Deque {
         num = 1073741824;
         num2 = 0;
         num3 = 1;
-        diff = (Math.min(require("module_16"), 1073741824) >>> 0) - 1;
+        diff = (Math.min(Math.max(16, length), 1073741824) >>> 0) - 1;
         tmp3 = diff | diff >> 1;
         num4 = 2;
         tmp4 = tmp3 | tmp3 >> 2;

@@ -6,14 +6,15 @@ import ignoreNextOnError from "ignoreNextOnError" /* 893 */;
 require = arg1;
 const dependencyMap = arg6;
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
-arg5.baggageHeaderHasSentryValues = function baggageHeaderHasSentryValues(baggage) {
+
+export const baggageHeaderHasSentryValues = function baggageHeaderHasSentryValues(baggage) {
   const parts = baggage.split(",");
-  return parts.some((str) => {
-    const trimmed = str.trim();
+  return parts.some((item) => {
+    const trimmed = item.trim();
     return trimmed.startsWith("sentry-");
   });
 };
-arg5.createHeadersSafely = function createHeadersSafely(request_headers) {
+export const createHeadersSafely = function createHeadersSafely(request_headers) {
   try {
     const _Headers = Headers;
     const headers = new Headers(request_headers);
@@ -21,7 +22,7 @@ arg5.createHeadersSafely = function createHeadersSafely(request_headers) {
   } catch (err) {
   }
 };
-arg5.getFullURL = function getFullURL(arg0) {
+export const getFullURL = function getFullURL(arg0) {
   try {
     const _URL = URL;
     const uRL = new URL(arg0, ignoreNextOnError.WINDOW.location.origin);
@@ -29,7 +30,7 @@ arg5.getFullURL = function getFullURL(arg0) {
   } catch (err) {
   }
 };
-arg5.isPerformanceResourceTiming = function isPerformanceResourceTiming(entryType) {
+export const isPerformanceResourceTiming = function isPerformanceResourceTiming(entryType) {
   let tmp = "resource" === entryType.entryType;
   if (tmp) {
     tmp = "initiatorType" in entryType;

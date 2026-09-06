@@ -1,12 +1,14 @@
 // === Module 733: sampleSpan ===
 
 // Module 733 (sampleSpan)
-const require = arg1;
+import _mod720 from "module_720" /* 720 */;
+
+require = arg1;
 const dependencyMap = arg6;
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
-arg5.sampleSpan = function sampleSpan(tracesSampler, parentSampled) {
-  const _require = parentSampled;
-  let obj = _require(720);
+
+export const sampleSpan = function sampleSpan(tracesSampler, parentSampled, arg2) {
+  let obj = _mod720;
   if (obj.hasSpansEnabled(tracesSampler)) {
     if (typeof tracesSampler.tracesSampler === "function") {
       obj = {};

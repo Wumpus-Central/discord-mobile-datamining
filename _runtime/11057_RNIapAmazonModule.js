@@ -1,113 +1,98 @@
 // === Module 11057: RNIapAmazonModule ===
 
 // Module 11057 (RNIapAmazonModule)
-import importDefaultResult from "asyncGeneratorStep" /* 5 */;
+import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
-let closure_0 = arg1;
-const RNIapAmazonModule = require("get ActivityIndicator").NativeModules.RNIapAmazonModule;
-closure_0 = importDefaultResult((arg0) => {
-  closure_0 = arg0;
-  c3 = 0;
-  c4 = 0;
-  const iter = (function*(arg0) {
-    if (c4 === 2) {
-      c4 = 3;
-      HermesBuiltin.throwTypeError();
-    } else if (tmp4 === 3) {
-      if (arg0 === 1) {
-        throw arg1;
-      } else if (arg0 === 2) {
-        let obj = { value: null, done: true };
-        obj[0] = arg1;
-        return obj;
-      } else {
-        return { value: "HermesInternal", done: null };
-      }
+const RNIapAmazonModule = fn(17).NativeModules.RNIapAmazonModule;
+asyncGeneratorStep(async (arg0, value) => {
+  if (c4 === 2) {
+    c4 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp4 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      let obj = { value, done: true };
+      return obj;
     } else {
-      try {
-        c4 = 2;
-        if (0 === c3) {
-          if (arg0 === 1) {
-            c4 = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            c4 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
-          } else {
-            c2 = tmp5;
-            c1 = tmp2;
-            c0 = undefined;
-            c1 = undefined;
-            c2 = undefined;
-            c3 = undefined;
-            ({ developerSecret: c0, userId: c1, receiptId: c2, useSandbox } = c0);
-            if (useSandbox === undefined) {
-              useSandbox = true;
-            }
-            c3 = useSandbox;
-            c4 = undefined;
-            c3 = 1;
-            c4 = 1;
-            return { value: "PX_16", done: true };
-          }
-        } else if (1 === tmp5) {
-          if (arg0 === 1) {
-            c4 = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            c4 = 3;
-            obj1 = { value: null, done: true };
-            obj1[0] = arg1;
-            return obj1;
-          } else {
-            let str = "";
-            if (c3) {
-              str = "sandbox/";
-            }
-            const _HermesInternal = HermesInternal;
-            c4 = "https://appstore-sdk.amazon.com/" + str + "version/1.0/verifyReceiptId/developer/" + c0 + "/user/" + c1 + "/receiptId/" + c2;
-            let obj2 = callback(closure_1_1[2]);
-            c3 = 2;
-            c4 = 1;
-            obj2 = { value: null, done: false };
-            obj2[0] = obj2.enhancedFetch(c4);
-            return obj2;
-          }
-        } else if (arg0 === 1) {
+      return { value: "HermesInternal", done: null };
+    }
+  } else {
+    try {
+      c4 = 2;
+      if (0 === c3) {
+        if (arg0 === 1) {
           c4 = 3;
-          throw arg1;
+          throw value;
         } else if (arg0 === 2) {
           c4 = 3;
-          const obj3 = { value: null, done: true };
-          obj3[0] = arg1;
-          return obj3;
-        } else {
-          c4 = 3;
-          obj = { value: null, done: true };
-          obj[0] = arg1;
+          obj = { value, done: true };
           return obj;
+        } else {
+          closure_2 = tmp5;
+          closure_129_0 = undefined;
+          closure_129_1 = undefined;
+          closure_129_2 = undefined;
+          closure_129_3 = undefined;
+          ({ developerSecret: closure_129_0, userId: closure_129_1, receiptId: closure_129_2, useSandbox } = closure_0);
+          if (useSandbox === undefined) {
+            useSandbox = true;
+          }
+          closure_129_3 = useSandbox;
+          closure_129_4 = undefined;
+          c3 = 1;
+          c4 = 1;
+          return { value: "PX_16", done: true };
         }
-      } catch (tmp16) {
-        c4 = tmp;
-        throw tmp16;
+      } else if (1 === tmp5) {
+        if (arg0 === 1) {
+          c4 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c4 = 3;
+          const obj1 = { value, done: true };
+          return obj1;
+        } else {
+          let str = "";
+          if (closure_129_3) {
+            str = "sandbox/";
+          }
+          const _HermesInternal = HermesInternal;
+          closure_129_4 = "https://appstore-sdk.amazon.com/" + str + "version/1.0/verifyReceiptId/developer/" + closure_129_0 + "/user/" + closure_129_1 + "/receiptId/" + closure_129_2;
+          let obj2 = closure_0(tmp2[2]);
+          c3 = 2;
+          c4 = 1;
+          obj2 = { value: null, done: false };
+          obj2.value = obj2.enhancedFetch(closure_129_4);
+          return obj2;
+        }
+      } else if (arg0 === 1) {
+        c4 = 3;
+        throw value;
+      } else if (arg0 === 2) {
+        c4 = 3;
+        const obj3 = { value, done: true };
+        return obj3;
+      } else {
+        c4 = 3;
+        obj = { value, done: true };
+        return obj;
       }
+    } catch (tmp16) {
+      c4 = tmp;
+      throw tmp16;
     }
-  })();
-  iter.next();
-  return iter;
+  }
 });
-closure_0 = importDefaultResult(function*() {
+asyncGeneratorStep(async (arg0, value) => {
   if (c0 === 2) {
     c0 = 3;
-    HermesBuiltin.throwTypeError();
+    throw new TypeError("Generator functions may not be called on executing generators");
   } else if (tmp3 === 3) {
     if (arg0 === 1) {
-      throw arg1;
+      throw value;
     } else if (arg0 === 2) {
-      let obj = { value: null, done: true };
-      obj[0] = arg1;
+      let obj = { value, done: true };
       return obj;
     } else {
       return { value: "HermesInternal", done: null };
@@ -117,16 +102,14 @@ closure_0 = importDefaultResult(function*() {
       c0 = 2;
       if (arg0 === 1) {
         c0 = 3;
-        throw arg1;
+        throw value;
       } else if (arg0 === 2) {
         c0 = 3;
-        obj = { value: null, done: true };
-        obj[0] = arg1;
+        obj = { value, done: true };
         return obj;
       } else {
         c0 = 3;
-        obj = { value: null, done: true };
-        obj[0] = closure_1_2.verifyLicense();
+        obj = { value: RNIapAmazonModule.verifyLicense(), done: true };
         return obj;
       }
     } catch (tmp5) {
@@ -135,20 +118,19 @@ closure_0 = importDefaultResult(function*() {
     }
   }
 });
-closure_0 = importDefaultResult((arg0) => {
-  closure_0 = arg0;
+let closure_0 = asyncGeneratorStep(async (arg0) => {
+  const isAmazonDevice = arg0;
   c3 = 0;
   c4 = 0;
-  const iter = (function*(arg0) {
+  const iter = (async (arg0, value) => {
     if (c4 === 2) {
       c4 = 3;
-      HermesBuiltin.throwTypeError();
+      throw new TypeError("Generator functions may not be called on executing generators");
     } else if (tmp4 === 3) {
       if (arg0 === 1) {
-        throw arg1;
+        throw value;
       } else if (arg0 === 2) {
-        let obj = { value: null, done: true };
-        obj[0] = arg1;
+        let obj = { value, done: true };
         return obj;
       } else {
         return { value: "HermesInternal", done: null };
@@ -159,33 +141,29 @@ closure_0 = importDefaultResult((arg0) => {
         if (0 === c3) {
           if (arg0 === 1) {
             c4 = 3;
-            throw arg1;
+            throw value;
           } else if (arg0 === 2) {
             c4 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
+            obj = { value, done: true };
             return obj;
           } else {
-            closure_2 = tmp5;
             closure_1 = tmp2;
-            let isAmazonDevice;
-            isAmazonDevice = isAmazonDevice.isAmazonDevice;
+            let isAmazonDevice2;
+            isAmazonDevice2 = isAmazonDevice.isAmazonDevice;
             c3 = 1;
             c4 = 1;
             return { value: "PX_16", done: true };
           }
         } else if (arg0 === 1) {
           c4 = 3;
-          throw arg1;
+          throw value;
         } else if (arg0 === 2) {
           c4 = 3;
-          obj1 = { value: null, done: true };
-          obj1[0] = arg1;
+          const obj1 = { value, done: true };
           return obj1;
         } else {
           c4 = 3;
-          obj = { value: null, done: true };
-          obj[0] = closure_1_2.deepLinkToSubscriptions(isAmazonDevice);
+          obj = { value: tmp5.deepLinkToSubscriptions(isAmazonDevice2), done: true };
           return obj;
         }
       } catch (tmp11) {

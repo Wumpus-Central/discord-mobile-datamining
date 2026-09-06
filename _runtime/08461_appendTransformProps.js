@@ -3,7 +3,7 @@
 // Module 8461 (appendTransformProps)
 import append from "append" /* 8462 */;
 import peg$SyntaxError from "peg$SyntaxError" /* 8463 */;
-import peg$SyntaxError2 from "peg$SyntaxError" /* 8464 */;
+import _mod8464 from "module_8464" /* 8464 */;
 
 require = arg1;
 const dependencyMap = arg6;
@@ -12,7 +12,7 @@ function appendTransformProps(arg0) {
   ({ x, y, scaleX, scaleY, rotation, skewX, skewY } = arg0);
   append.appendTransform(x + originX, y + originY, scaleX, scaleY, rotation, skewX, skewY, originX, originY);
 }
-function universal2axis(num) {
+function universal2axis(num, arg1, arg2, arg3) {
   let num2 = num;
   if (typeof num !== "number") {
     if (typeof num === "string") {
@@ -64,21 +64,21 @@ function universal2axis(num) {
 function transformsArrayToProps(arr) {
   const obj = {};
   if (arr != null) {
-    const item = arr.forEach((arg0) => {
-      const keys = Object.keys(arg0);
+    const item = arr.forEach((item) => {
+      const keys = Object.keys(item);
       if (1 !== keys.length) {
         const _console = console;
         console.error("You must specify exactly one property per transform object.");
       }
       const first = keys[0];
-      obj[first] = arg0[first];
+      obj[first] = item[first];
     });
   }
   return obj;
 }
-function props2transform(arr) {
-  if (arr) {
-    ({ rotation, translate, translateX, translateY, origin, originX, originY, scale, scaleX, scaleY, skew, skewX, skewY, x, y } = arr);
+function props2transform(transform) {
+  if (transform) {
+    ({ rotation, translate, translateX, translateY, origin, originX, originY, scale, scaleX, scaleY, skew, skewX, skewY, x, y } = transform);
     if (null == rotation) {
       if (null == translate) {
         if (null == translateX) {
@@ -136,21 +136,20 @@ function props2transform(arr) {
       }
       translateY = first1;
     }
-    let tmp6Result = tmp6(translate, translateX, translateY);
-    tmp6Result = tmp6(origin, originX, originY);
+    tmp6(translate, translateX, translateY);
+    const tmp6Result = tmp6(origin, originX, originY);
     const tmp6Result1 = universal2axis(scale, scaleX, scaleY, 1);
     let num4 = 0;
     if (null != rotation) {
       num4 = +rotation || 0;
       const tmp16 = +rotation || 0;
     }
-    const obj = { rotation: null, originX: null, originY: null, scaleX: null, scaleY: null, skewX: null, skewY: null, x: null, y: null };
-    obj[0] = num4;
-    [obj[1], obj[2]] = tmp6Result;
-    [obj[3], obj[4]] = tmp6Result1;
-    [obj[5], obj[6]] = universal2axis(skew, skewX, skewY);
-    [obj[7], obj[8]] = tmp6Result;
-    return obj;
+    const point = { rotation: num4, originX: null, originY: null, scaleX: null, scaleY: null, skewX: null, skewY: null, x: null, y: null };
+    [obj.originX, obj.originY] = tmp6Result;
+    [obj.scaleX, obj.scaleY] = tmp6Result1;
+    [obj.skewX, obj.skewY] = universal2axis(skew, skewX, skewY);
+    [obj.x, obj.y] = tmp6Result;
+    return point;
   } else {
     return null;
   }
@@ -194,18 +193,18 @@ function transformToMatrix(arg0, arr) {
       }
     }
   }
-  const obj = append;
   return append.toArray();
 }
-arg5.default = function extractTransform(arr) {
-  if (Array.isArray(arr)) {
-    if (typeof arr[0] === "number") {
-      return arr;
+
+export default function extractTransform(transform) {
+  if (Array.isArray(transform)) {
+    if (typeof transform[0] === "number") {
+      return transform;
     }
   }
-  if (typeof arr === "string") {
+  if (typeof transform === "string") {
     try {
-      const parsed = peg$SyntaxError.parse(arr);
+      const parsed = peg$SyntaxError.parse(transform);
       const items = [, , , , , ];
       [arr[0], arr[2], arr[4], arr[1], arr[3], arr[5]] = parsed;
       return items;
@@ -215,20 +214,19 @@ arg5.default = function extractTransform(arr) {
       return append.identity;
     }
   } else {
-    let transform;
-    if (arr != null) {
-      transform = arr.transform;
+    transform = undefined;
+    if (transform != null) {
+      transform = transform.transform;
     }
-    return transformToMatrix(props2transform(arr), transform);
+    return transformToMatrix(props2transform(transform), transform);
   }
 };
-arg5.transformsArrayToProps = transformsArrayToProps;
-arg5.props2transform = props2transform;
-arg5.transformToMatrix = transformToMatrix;
-arg5.extractTransformSvgView = function extractTransformSvgView(transform) {
+export { transformsArrayToProps };
+export { props2transform };
+export { transformToMatrix };
+export const extractTransformSvgView = function extractTransformSvgView(transform) {
   if (typeof transform.transform === "string") {
-    transform = peg$SyntaxError2.parse(transform.transform);
-    const obj = peg$SyntaxError2;
+    transform = _mod8464.parse(transform.transform);
   } else {
     transform = transform.transform;
   }

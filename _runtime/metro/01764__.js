@@ -1,33 +1,27 @@
 // === Module 1764: ? ===
 
 // Module 1764
-for (const key10013 in require("_isNativeReflectConstruct")) {
-  let tmp2 = key10013;
-  arg5[key10013] = require("_isNativeReflectConstruct")[key10013];
+for (const key10013 in require("module_1765")) {
+  arg5[key10013] = require("module_1765")[key10013];
   continue;
 }
-for (const key10017 in require("_isNativeReflectConstruct")) {
-  let tmp3 = key10017;
-  arg5[key10017] = require("_isNativeReflectConstruct")[key10017];
+for (const key10017 in require("module_1766")) {
+  arg5[key10017] = require("module_1766")[key10017];
   continue;
 }
-for (const key10021 in require("_isNativeReflectConstruct")) {
-  let tmp4 = key10021;
-  arg5[key10021] = require("_isNativeReflectConstruct")[key10021];
+for (const key10021 in require("module_1767")) {
+  arg5[key10021] = require("module_1767")[key10021];
   continue;
 }
-for (const key10025 in require("_isNativeReflectConstruct")) {
-  let tmp5 = key10025;
-  arg5[key10025] = require("_isNativeReflectConstruct")[key10025];
+for (const key10025 in require("module_1768")) {
+  arg5[key10025] = require("module_1768")[key10025];
   continue;
 }
-for (const key10029 in require("_isNativeReflectConstruct")) {
-  let tmp6 = key10029;
-  arg5[key10029] = require("_isNativeReflectConstruct")[key10029];
+for (const key10029 in require("module_1769")) {
+  arg5[key10029] = require("module_1769")[key10029];
   continue;
 }
-for (const key10033 in require("_isNativeReflectConstruct")) {
-  let tmp7 = key10033;
-  arg5[key10033] = require("_isNativeReflectConstruct")[key10033];
+for (const key10033 in require("module_1770")) {
+  arg5[key10033] = require("module_1770")[key10033];
   continue;
 }

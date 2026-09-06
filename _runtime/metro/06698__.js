@@ -2,15 +2,15 @@
 
 // Module 6698
 import cancelAnimation from "cancelAnimation" /* 1636 */;
-import _mod4295 from "module_4295" /* 4295 */;
+import reactNativeWorkletsCompat from "reactNativeWorkletsCompat" /* 4295 */;
 import tagMessage from "tagMessage" /* 6660 */;
-import _mod6687 from "module_6687" /* 6687 */;
-import n from "n" /* 6699 */;
+import ghQueueMicrotask from "ghQueueMicrotask" /* 6687 */;
+import _mod6699 from "module_6699" /* 6699 */;
 
 try {
   const _module = cancelAnimation;
   try {
-    const _module1 = _mod4295;
+    const _module1 = reactNativeWorkletsCompat;
     if (_module1 != null) {
       const fn = function t() {
 
@@ -20,9 +20,9 @@ try {
       fn.__initData = { code: "function pnpm_reanimatedWrapperTs1(){}" };
       _module1.scheduleOnUI(fn);
     }
-    const _module2 = _mod6687;
+    const _module2 = ghQueueMicrotask;
     _module2.ghQueueMicrotask(() => {
-      const NativeProxy = n.NativeProxy;
+      const NativeProxy = _mod6699.NativeProxy;
       if (!NativeProxy.installUIRuntimeBindings()) {
         const _console = console;
         console.warn(tagMessage.tagMessage("Failed to install UI runtime bindings. Please report this at https://github.com/software-mansion/react-native-gesture-handler/issues."));
@@ -42,8 +42,7 @@ try {
         console.warn(tagMessage.tagMessage("Please use newer version of react-native-reanimated in order to control state of the gestures."));
       };
       let obj = { tagMessage: null };
-      obj = { code: "function pnpm_reanimatedWrapperTs2(){const{tagMessage}=this.__closure;console.warn(tagMessage('Please use newer version of react-native-reanimated in order to control state of the gestures.'));}" };
-      obj[0] = tagMessage.tagMessage;
+      obj = { code: "function pnpm_reanimatedWrapperTs2(){const{tagMessage}=this.__closure;console.warn(tagMessage('Please use newer version of react-native-reanimated in order to control state of the gestures.'));}", tagMessage: tagMessage.tagMessage };
       fn2.__closure = obj;
       fn2.__workletHash = 3596069664305;
       fn2.__initData = obj;

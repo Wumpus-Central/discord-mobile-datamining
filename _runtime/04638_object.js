@@ -1,10 +1,9 @@
 // === Module 4638: object ===
 
 // Module 4638 (object)
-let object = require;
-object = function object() {
+function object() {
 
-};
+}
 
 export default (arg0) => {
   if (object(521)(arg0)) {

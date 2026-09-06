@@ -1,16 +1,17 @@
 // === Module 440: ? ===
 
 // Module 440
-import noopAll from "noop" /* 19 */;
-import _modDef441 from "module_441" /* 441 */;
-import jsxProd from "jsxProd" /* 21 */;
-import defaultItemToKey from "defaultItemToKey" /* 438 */;
+import DEFAULT_INITIAL_NUM_TO_RENDERDefault from "DEFAULT_INITIAL_NUM_TO_RENDER" /* 441 */;
+import noop from "module_19" /* 19 */;
 
-noopAll;
-({ Fragment: c0, jsxs: closure_1 } = jsxProd);
+const jsxProd = fn(21);
+({ Fragment: closure_0, jsxs: closure_1 } = jsxProd);
+const defaultItemToKey = fn(438);
 
 export default defaultItemToKey.createVirtualCollectionView(function VirtualColumnLayout(arg0) {
-  const children = [, ];
+  const obj = { children: null };
+  const items = [, ];
   ({ children: arr[0], spacer: arr[1] } = arg0);
-  return callback(closure_0, { children });
-}, _modDef441);
+  obj.children = items;
+  return framebus(React, obj);
+}, DEFAULT_INITIAL_NUM_TO_RENDERDefault);

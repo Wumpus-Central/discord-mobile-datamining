@@ -1,29 +1,27 @@
 // === Module 247: ? ===
 
 // Module 247
-import _isNativeReflectConstructDefault from "_isNativeReflectConstruct" /* 92 */;
-import SymbolResult1 from "SymbolResult1" /* 134 */;
-import _isNativeReflectConstruct from "_isNativeReflectConstruct" /* 248 */;
+import COMPOSED_PATH_KEY from "COMPOSED_PATH_KEY" /* 134 */;
+import _mod248 from "module_248" /* 248 */;
 import DeviceEventManagerDefault from "DeviceEventManager" /* 249 */;
+import _isNativeReflectConstruct from "module_92" /* 92 */;
 
 require = arg1;
 let closure_3 = [];
-_isNativeReflectConstructDefault.addListener("hardwareBackPress", (timeStamp) => {
+_isNativeReflectConstruct.addListener("hardwareBackPress", (timeStamp) => {
   timeStamp = undefined;
   if (timeStamp != null) {
     timeStamp = timeStamp.timeStamp;
   }
   obj = {};
   if (null != timeStamp) {
-    const result = SymbolResult1.setEventInitTimeStamp(obj, timeStamp);
-    const obj2 = SymbolResult1;
+    const result = COMPOSED_PATH_KEY.setEventInitTimeStamp(obj, timeStamp);
   }
-  const hardwareBackPressEvent = new _isNativeReflectConstruct.HardwareBackPressEvent(obj);
+  const hardwareBackPressEvent = new _mod248.HardwareBackPressEvent(obj);
   let diff = closure_3.length - 1;
   if (0 <= diff) {
     while (true) {
       let tmp7 = closure_3[diff];
-      let tmp8 = diff;
       let tmp7Result;
       if (tmp7 != null) {
         tmp7Result = tmp7(hardwareBackPressEvent);
@@ -52,9 +50,9 @@ let obj = {
     }
     return {
       remove() {
-        const index = closure_1_3.indexOf(closure_0);
+        const index = closure_3.indexOf(closure_0);
         if (-1 !== index) {
-          closure_1_3.splice(index, 1);
+          closure_3.splice(index, 1);
         }
       }
     };

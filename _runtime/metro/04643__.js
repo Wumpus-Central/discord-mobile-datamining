@@ -2,9 +2,9 @@
 
 // Module 4643
 import arrayPush from "arrayPush" /* 658 */;
-import getOwnPropertySymbols from "getOwnPropertySymbols" /* 659 */;
-import stubArray from "stubArray" /* 660 */;
-import overArg from "overArg" /* 4639 */;
+import stubArray from "stubArray" /* 659 */;
+import _mod660 from "module_660" /* 660 */;
+import _mod4639 from "module_4639" /* 4639 */;
 
 if (Object.getOwnPropertySymbols) {
   let fn = (arg0) => {
@@ -12,17 +12,15 @@ if (Object.getOwnPropertySymbols) {
     const items = [];
     if (arg0) {
       do {
-        let tmp2 = require;
-        let tmp3 = dependencyMap;
         let tmp4 = arrayPush;
-        let tmp4Result = tmp4(items, getOwnPropertySymbols(tmp));
-        tmp = overArg(tmp);
+        let tmp4Result = tmp4(items, stubArray(tmp));
+        tmp = _mod4639(tmp);
       } while (tmp);
     }
     return items;
   };
 } else {
-  fn = stubArray;
+  fn = _mod660;
 }
 
 export default fn;

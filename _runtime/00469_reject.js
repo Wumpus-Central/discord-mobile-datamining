@@ -2,6 +2,7 @@
 
 // Module 469 (reject)
 import _mod38 from "module_38" /* 38 */;
+import _mod184 from "module_184" /* 184 */;
 
 require = arg1;
 const dependencyMap = arg6;
@@ -11,56 +12,57 @@ function reject(arg0) {
     throw closure_0;
   }, 0);
 }
-arg5.default = {
+
+export default {
   Events: { interactionStart: "interactionStart", interactionComplete: "interactionComplete" },
   runAfterInteractions(arg0) {
     closure_0 = arg0;
     const promise = new Promise((arg0) => {
       closure_0 = arg0;
       const immediate = setImmediate(() => {
-        if (typeof callback === "object") {
+        if (typeof closure_0 === "object") {
           if (null !== obj) {
             if (typeof obj.gen === "function") {
-              obj.gen().then(callback, closure_2_2);
+              obj.gen().then(closure_0, reject);
               const genResult = obj.gen();
             } else if (typeof obj.run === "function") {
               try {
                 obj.run();
-                callback();
+                closure_0();
               } catch (tmp12) {
-                closure_2_2(callback(closure_2_1[0]).default(tmp12));
-                const obj3 = callback(closure_2_1[0]);
+                reject(_mod184.default(tmp12));
               }
             } else {
               const _TypeError2 = TypeError;
               const _HermesInternal = HermesInternal;
               const typeError = new TypeError("Task \"" + obj.name + "\" missing gen or run.");
-              closure_2_2(typeError);
+              reject(typeError);
             }
           }
         }
-        if (typeof callback === "function") {
+        if (typeof closure_0 === "function") {
           try {
             obj();
-            callback();
+            closure_0();
           } catch (tmp4) {
-            closure_2_2(callback(closure_2_1[0]).default(tmp4));
-            const obj2 = callback(closure_2_1[0]);
+            reject(_mod184.default(tmp4));
           }
         } else {
           const _TypeError = TypeError;
           const typeError1 = new TypeError("Invalid task of type: " + typeof obj);
-          closure_2_2(typeError1);
+          reject(typeError1);
         }
       });
     });
-    const then = promise.then;
-    return {
-      then: then.bind(promise),
+    const obj = {
+      then: null,
       cancel() {
-        clearImmediate(closure_1);
+        clearImmediate(dependencyMap);
       }
     };
+    const then = promise.then;
+    obj.then = then.bind(promise);
+    return obj;
   },
   createInteractionHandle() {
     return -1;

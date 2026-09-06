@@ -2,7 +2,8 @@
 
 // Module 239
 let c0 = false;
-arg5.default = {
+
+export default {
   addTimespan() {
     if (!c0) {
       c0 = true;
@@ -122,14 +123,14 @@ arg5.default = {
       console.warn("The default `IPerformanceLogger` provided by `react-native` (the `'GlobalPerformanceLogger'` callable native module and the `scopedPerformanceLogger` argument passed to the hook registered with `AppRegistry.setComponentProviderInstrumentationHook`) is deprecated and will be removed in a future release. The instance supplied today is a no-op stub. Embedders that need a per-app performance logger should attach their own implementation.");
     }
   },
-  startTimespan(_perfKey) {
+  startTimespan() {
     if (!c0) {
       c0 = true;
       const _console = console;
       console.warn("The default `IPerformanceLogger` provided by `react-native` (the `'GlobalPerformanceLogger'` callable native module and the `scopedPerformanceLogger` argument passed to the hook registered with `AppRegistry.setComponentProviderInstrumentationHook`) is deprecated and will be removed in a future release. The instance supplied today is a no-op stub. Embedders that need a per-app performance logger should attach their own implementation.");
     }
   },
-  stopTimespan(_perfKey) {
+  stopTimespan() {
     if (!c0) {
       c0 = true;
       const _console = console;

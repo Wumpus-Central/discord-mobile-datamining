@@ -1,7 +1,8 @@
 // === Module 187: queueMicrotask ===
 
 // Module 187 (queueMicrotask)
-arg5.default = function queueMicrotask(flush) {
+
+export default function queueMicrotask(flush) {
   if (arguments.length < 1) {
     const _TypeError2 = TypeError;
     const typeError = new TypeError("queueMicrotask must be called with at least one argument (a function to call)");
@@ -16,8 +17,8 @@ arg5.default = function queueMicrotask(flush) {
       resolved = Promise.resolve();
       promise = resolved;
     }
-    promise.then(flush).catch((arg0) => {
-      closure_0 = arg0;
+    promise.then(flush).catch((error) => {
+      closure_0 = error;
       return setTimeout(() => {
         throw closure_0;
       }, 0);

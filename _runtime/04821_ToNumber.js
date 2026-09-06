@@ -1,14 +1,14 @@
 // === Module 4821: ToNumber ===
 
 // Module 4821 (ToNumber)
-import getEvalledConstructor from "getEvalledConstructor" /* 1282 */;
-import isPrimitive from "isPrimitive" /* 4822 */;
+import _mod1282 from "module_1282" /* 1282 */;
+import _mod4822 from "module_4822" /* 4822 */;
 
-let closure_2 = getEvalledConstructor("%Number%");
+let closure_2 = _mod1282("%Number%");
 
 export default function ToNumber(arg0) {
   let tmp3 = arg0;
-  if (!isPrimitive(arg0)) {
+  if (!_mod4822(arg0)) {
     tmp3 = tmp(4823)(arg0, closure_2);
   }
   if (typeof tmp3 === "symbol") {

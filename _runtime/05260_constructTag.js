@@ -1,21 +1,23 @@
 // === Module 5260: constructTag ===
 
 // Module 5260 (constructTag)
-import getDataView from "getDataView" /* 5213 */;
-import _mod5220 from "module_5220" /* 5220 */;
+import _mod5213 from "module_5213" /* 5213 */;
+import _modDef5216 from "module_5216" /* 5216 */;
+import PNG_CHUNK_TYPE_SIZE from "PNG_CHUNK_TYPE_SIZE" /* 5220 */;
+import _modDef5246 from "module_5246" /* 5246 */;
 
 require = arg1;
-const module = arg2;
+importDefault = arg2;
 const dependencyMap = arg6;
 function constructTag(decompressResult, type, items2, items1) {
   let stringFromDataView = decompressResult;
   if (decompressResult instanceof DataView) {
-    let obj = getDataView;
+    let obj = _mod5213;
     stringFromDataView = obj.getStringFromDataView(decompressResult, 0, decompressResult.byteLength);
   }
-  const stringValueFromArray = getDataView.getStringValueFromArray(items1);
+  const stringValueFromArray = _mod5213.getStringValueFromArray(items1);
   let combined = stringValueFromArray;
-  if (type !== _mod5220.TYPE_TEXT) {
+  if (type !== PNG_CHUNK_TYPE_SIZE.TYPE_TEXT) {
     combined = stringValueFromArray;
     if (0 !== items2.length) {
       const _HermesInternal = HermesInternal;
@@ -24,31 +26,31 @@ function constructTag(decompressResult, type, items2, items1) {
     }
   }
   obj = { name: combined, value: stringFromDataView, description: null };
-  if (type === _mod5220.TYPE_ITXT) {
-    stringFromDataView = module(5246).decode("UTF-8", decompressResult);
-    const obj5 = module(5246);
+  if (type === PNG_CHUNK_TYPE_SIZE.TYPE_ITXT) {
+    const decoder = _modDef5246;
+    stringFromDataView = decoder.decode("UTF-8", decompressResult);
   }
-  obj[2] = stringFromDataView;
+  obj.description = stringFromDataView;
   return obj;
 }
-function isExifGroupTag(str, str2) {
-  let tmp = "raw profile type exif" === str.toLowerCase();
+function isExifGroupTag(name, value) {
+  let tmp = "raw profile type exif" === name.toLowerCase();
   if (tmp) {
-    tmp = "exif" === str2.substring(1, 5);
+    tmp = "exif" === value.substring(1, 5);
   }
   return tmp;
 }
-function isIptcGroupTag(str, str2) {
-  let tmp = "raw profile type iptc" === str.toLowerCase();
+function isIptcGroupTag(name, value) {
+  let tmp = "raw profile type iptc" === name.toLowerCase();
   if (tmp) {
-    tmp = "iptc" === str2.substring(1, 5);
+    tmp = "iptc" === value.substring(1, 5);
   }
   return tmp;
 }
-function decodeRawData(arg0) {
+function decodeRawData(value) {
   let length;
   let sum;
-  const replaced = arg0.match(/\n(exif|iptc)\n\s*\d+\n([\s\S]*)$/)[2].replace(/\n/g, "");
+  const replaced = value.match(/\n(exif|iptc)\n\s*\d+\n([\s\S]*)$/)[2].replace(/\n/g, "");
   const arrayBuffer = new ArrayBuffer(replaced.length / 2);
   const dataView = new DataView(arrayBuffer);
   let num = 0;
@@ -71,22 +73,24 @@ const STATE_TEXT = "STATE_TEXT";
 let c8 = 1;
 let c9 = 1;
 let c10 = 6;
-arg5.default = {
-  read(byteLength, arg1, arg2, type) {
+
+export default {
+  read(byteLength, arg1, arg2, arg3) {
+    _require = arg3;
     let obj = {};
     const items = [];
     let num = 0;
     if (0 < arg1.length) {
       while (true) {
         ({ offset, length, type } = arg1[num]);
+        closure_129_0 = type;
         let items1 = [];
+        closure_129_1 = items1;
         let items2 = [];
+        closure_129_2 = items2;
         let items3 = [];
         let tmp = STATE_KEYWORD;
-        let tmp2 = type;
-        let tmp3 = items2;
-        let COMPRESSION_METHOD_NONE = type(items2[3]).COMPRESSION_METHOD_NONE;
-        let tmp4 = num;
+        let COMPRESSION_METHOD_NONE = require("module_5213").COMPRESSION_METHOD_NONE;
         let tmp5 = COMPRESSION_METHOD_NONE;
         let dataView;
         if (0 < length) {
@@ -96,9 +100,6 @@ arg5.default = {
           if (offset < byteLength.byteLength) {
             while (true) {
               let tmp8 = STATE_COMPRESSION;
-              let tmp9 = num2;
-              let tmp10 = tmp7;
-              let tmp11 = tmp;
               if (tmp !== STATE_COMPRESSION) {
                 let tmp20 = STATE_TEXT;
                 if (tmp === STATE_TEXT) {
@@ -111,12 +112,8 @@ arg5.default = {
                 } else {
                   let uint8 = byteLength.getUint8(offset + num2);
                   if (0 === uint8) {
-                    let tmp26 = STATE_KEYWORD;
                     if (tmp === STATE_KEYWORD) {
-                      let tmp27 = type;
-                      let tmp28 = items2;
-                      let items4 = [type(items2[4]).TYPE_ITXT, type(items2[4]).TYPE_ZTXT];
-                      let tmp29 = tmp8;
+                      let items4 = [require("PNG_CHUNK_TYPE_SIZE").TYPE_ITXT, require("PNG_CHUNK_TYPE_SIZE").TYPE_ZTXT];
                       if (items4.includes(type)) {
                         let tmp16 = tmp8;
                         let sum1 = num2;
@@ -124,77 +121,56 @@ arg5.default = {
                       }
                     }
                     if (tmp === tmp8) {
-                      let tmp32 = type;
-                      let tmp33 = items2;
-                      if (type === type(items2[4]).TYPE_ITXT) {
+                      if (type === require("PNG_CHUNK_TYPE_SIZE").TYPE_ITXT) {
                         tmp20 = STATE_LANG;
                       }
-                      let tmp31 = tmp20;
-                    } else {
-                      let tmp30 = STATE_LANG;
-                      tmp31 = tmp20;
-                      if (tmp === STATE_LANG) {
-                        tmp31 = STATE_TRANSLATED_KEYWORD;
-                      }
                     }
-                    let tmp34 = tmp31;
+                  } else if (tmp === STATE_KEYWORD) {
+                    let arr = items1.push(uint8);
+                    sum1 = num2;
+                    COMPRESSION_METHOD_NONE2 = tmp7;
+                    tmp16 = tmp;
+                  } else if (tmp === STATE_LANG) {
+                    arr = items2.push(uint8);
+                    sum1 = num2;
+                    COMPRESSION_METHOD_NONE2 = tmp7;
+                    tmp16 = tmp;
                   } else {
-                    let tmp21 = STATE_KEYWORD;
-                    if (tmp === STATE_KEYWORD) {
-                      let arr = items1.push(uint8);
+                    sum1 = num2;
+                    COMPRESSION_METHOD_NONE2 = tmp7;
+                    tmp16 = tmp;
+                    if (tmp === STATE_TRANSLATED_KEYWORD) {
+                      let arr1 = items3.push(uint8);
                       sum1 = num2;
                       COMPRESSION_METHOD_NONE2 = tmp7;
                       tmp16 = tmp;
-                    } else {
-                      let tmp22 = STATE_LANG;
-                      if (tmp === STATE_LANG) {
-                        arr = items2.push(uint8);
-                        sum1 = num2;
-                        COMPRESSION_METHOD_NONE2 = tmp7;
-                        tmp16 = tmp;
-                      } else {
-                        let tmp23 = STATE_TRANSLATED_KEYWORD;
-                        sum1 = num2;
-                        COMPRESSION_METHOD_NONE2 = tmp7;
-                        tmp16 = tmp;
-                        if (tmp === STATE_TRANSLATED_KEYWORD) {
-                          let arr1 = items3.push(uint8);
-                          sum1 = num2;
-                          COMPRESSION_METHOD_NONE2 = tmp7;
-                          tmp16 = tmp;
-                        }
-                      }
                     }
                   }
                 }
               } else {
                 let sum = offset + num2;
-                let tmp52 = type;
-                let tmp53 = items2;
-                if (type === type(items2[4]).TYPE_ITXT) {
-                  let tmp12 = c9;
+                let tmp52 = _require;
+                if (type === require("PNG_CHUNK_TYPE_SIZE").TYPE_ITXT) {
                   if (byteLength.getUint8(sum) === c9) {
                     COMPRESSION_METHOD_NONE2 = byteLength.getUint8(sum + 1);
                     sum1 = num2;
-                    if (type === tmp52(tmp53[4]).TYPE_ITXT) {
-                      let tmp14 = c8;
+                    if (type === tmp52(5220).TYPE_ITXT) {
                       sum1 = num2 + c8;
                     }
-                    let tmp15 = STATE_KEYWORD;
                     if (tmp !== STATE_KEYWORD) {
                       break;
                     } else {
-                      let items5 = [tmp52(tmp53[4]).TYPE_ITXT, tmp52(tmp53[4]).TYPE_ZTXT];
+                      let items5 = [tmp52(5220).TYPE_ITXT, tmp52(5220).TYPE_ZTXT];
                       tmp16 = tmp8;
                       if (!items5.includes(type)) {
                         break;
                       }
                     }
                   }
-                } else if (type === tmp52(tmp53[4]).TYPE_ZTXT) {
+                } else if (type === tmp52(5220).TYPE_ZTXT) {
                   COMPRESSION_METHOD_NONE2 = byteLength.getUint8(sum);
                 }
-                COMPRESSION_METHOD_NONE2 = tmp52(tmp53[3]).COMPRESSION_METHOD_NONE;
+                COMPRESSION_METHOD_NONE2 = tmp52(5213).COMPRESSION_METHOD_NONE;
               }
               let sum2 = sum1 + 1;
               tmp5 = COMPRESSION_METHOD_NONE2;
@@ -207,45 +183,41 @@ arg5.default = {
               continue;
             }
             if (tmp !== tmp8) {
-              let tmp17 = STATE_LANG;
               let tmp19 = tmp === STATE_LANG ? STATE_TRANSLATED_KEYWORD : STATE_TEXT;
             }
-            let tmp18 = type === tmp52(tmp53[4]).TYPE_ITXT ? STATE_LANG : STATE_TEXT;
+            let tmp18 = type === tmp52(5220).TYPE_ITXT ? STATE_LANG : STATE_TEXT;
           }
         }
-        let tmp38 = type;
-        let tmp39 = items2;
-        if (tmp5 !== type(items2[3]).COMPRESSION_METHOD_NONE) {
+        let tmp38 = _require;
+        if (tmp5 !== require("module_5213").COMPRESSION_METHOD_NONE) {
           if (!arg2) {
             obj = {};
             let _Promise2 = Promise;
             if (obj instanceof Promise) {
-              let arr2 = items.push(obj.then((arg0) => {
-                ({ name, value } = arg0);
+              let arr2 = items.push(obj.then((result) => {
+                ({ name, value } = result);
                 try {
-                  if (items1(items2[0]).USE_EXIF) {
-                    if (closure_1_12(name, value)) {
+                  if (_modDef5216.USE_EXIF) {
+                    if (isExifGroupTag(name, value)) {
                       let obj = { __exif: null };
-                      let tmp2Result = tmp2(tmp3[1]);
-                      obj[0] = tmp2Result.read(closure_1_14(value), closure_1_10, type).tags;
+                      let tmp2Result = tmp2(5232);
+                      obj.__exif = tmp2Result.read(decodeRawData(value), c10, closure_0).tags;
                       return obj;
                     }
                   }
-                  if (items1(items2[0]).USE_IPTC) {
-                    if (closure_1_13(name, value)) {
+                  if (_modDef5216.USE_IPTC) {
+                    if (isIptcGroupTag(name, value)) {
                       obj = { __iptc: null };
-                      tmp2Result = tmp2(tmp3[2]);
-                      obj[0] = tmp2Result.read(closure_1_14(value), 0, type);
+                      tmp2Result = tmp2(5244);
+                      obj.__iptc = tmp2Result.read(decodeRawData(value), 0, closure_0);
                       return obj;
                     }
                   }
                   if (name) {
-                    if (!closure_1_12(name, value)) {
-                      if (!closure_1_13(name, value)) {
+                    if (!isExifGroupTag(name, value)) {
+                      if (!isIptcGroupTag(name, value)) {
                         obj = {};
-                        obj1 = { value: null, description: null };
-                        obj1[0] = value;
-                        obj1[1] = tmp;
+                        const obj1 = { value, description: tmp };
                         obj[name] = obj1;
                         return obj;
                       }
@@ -258,17 +230,15 @@ arg5.default = {
             } else {
               let name = obj.name;
               if (name) {
-                obj = { value: null, description: null };
-                obj[0] = tmp47;
-                obj[1] = tmp48;
+                obj = { value: tmp47, description: tmp48 };
                 obj[name] = obj;
               }
             }
             num = num + 1;
           }
         }
-        let tmp38Result = tmp38(tmp39[3]);
-        if (type === tmp38(tmp39[4]).TYPE_TEXT) {
+        let tmp38Result = tmp38(5213);
+        if (type === tmp38(5220).TYPE_TEXT) {
           let str = "latin1";
         } else {
           str = "utf-8";
@@ -276,26 +246,19 @@ arg5.default = {
         let decompressResult = tmp38Result.decompress(dataView, tmp5, str);
         let _Promise = Promise;
         if (decompressResult instanceof Promise) {
-          let nextPromise = decompressResult.then((arg0) => closure_1_11(arg0, type, items2, items1));
-          let catchPromise = nextPromise.catch(() => closure_1_11("<text using unknown compression>".split(""), type, items2, items1));
+          let nextPromise = decompressResult.then((result) => constructTag(result, closure_0, dependencyMap, importDefault));
+          let catchPromise = nextPromise.catch(() => constructTag("<text using unknown compression>".split(""), closure_0, dependencyMap, importDefault));
         } else {
-          let tmp40 = constructTag;
-          let num3 = 0;
-          let tmp41 = decompressResult;
-          let tmp42 = type;
-          let tmp43 = items2;
-          let tmp44 = items1;
           catchPromise = constructTag(decompressResult, type, items2, items1);
         }
-        let tmp46 = catchPromise;
       }
     }
-    obj1 = { readTags: obj, readTagsPromise: null };
+    let obj1 = { readTags: obj, readTagsPromise: null };
     let allPromises;
     if (items.length > 0) {
       allPromises = Promise.all(items);
     }
-    obj1[1] = allPromises;
+    obj1.readTagsPromise = allPromises;
     return obj1;
   }
 };

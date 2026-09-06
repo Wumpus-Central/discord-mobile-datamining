@@ -2,12 +2,13 @@
 
 // Module 10456 (now)
 import ReferenceWithTimezone from "ReferenceWithTimezone" /* 10435 */;
-import _mod10437 from "module_10437" /* 10437 */;
+import Meridiem from "Meridiem" /* 10437 */;
 import assignSimilarDate from "assignSimilarDate" /* 10438 */;
 
 require = arg1;
 const dependencyMap = arg6;
-arg5.now = function now(getDateWithAdjustedTimezone) {
+
+export const now = function now(getDateWithAdjustedTimezone) {
   const dateWithAdjustedTimezone = getDateWithAdjustedTimezone.getDateWithAdjustedTimezone();
   const parsingComponents = new ReferenceWithTimezone.ParsingComponents(getDateWithAdjustedTimezone, {});
   assignSimilarDate.assignSimilarDate(parsingComponents, dateWithAdjustedTimezone);
@@ -16,7 +17,7 @@ arg5.now = function now(getDateWithAdjustedTimezone) {
   parsingComponents.addTag("casualReference/now");
   return parsingComponents;
 };
-arg5.today = function today(reference) {
+export const today = function today(reference) {
   const dateWithAdjustedTimezone = reference.getDateWithAdjustedTimezone();
   const parsingComponents = new ReferenceWithTimezone.ParsingComponents(reference, {});
   assignSimilarDate.assignSimilarDate(parsingComponents, dateWithAdjustedTimezone);
@@ -25,7 +26,7 @@ arg5.today = function today(reference) {
   parsingComponents.addTag("casualReference/today");
   return parsingComponents;
 };
-arg5.yesterday = function yesterday(reference) {
+export const yesterday = function yesterday(reference) {
   const dateWithAdjustedTimezone = reference.getDateWithAdjustedTimezone();
   const parsingComponents = new ReferenceWithTimezone.ParsingComponents(reference, {});
   const date = new Date(dateWithAdjustedTimezone.getTime());
@@ -35,7 +36,7 @@ arg5.yesterday = function yesterday(reference) {
   parsingComponents.delete("meridiem");
   return parsingComponents.addTag("casualReference/yesterday");
 };
-arg5.tomorrow = function tomorrow(reference) {
+export const tomorrow = function tomorrow(reference) {
   const dateWithAdjustedTimezone = reference.getDateWithAdjustedTimezone();
   const parsingComponents = new ReferenceWithTimezone.ParsingComponents(reference, {});
   const date = new Date(dateWithAdjustedTimezone.getTime());
@@ -45,7 +46,7 @@ arg5.tomorrow = function tomorrow(reference) {
   parsingComponents.delete("meridiem");
   return parsingComponents.addTag("casualReference/tomorrow");
 };
-arg5.theDayBefore = function theDayBefore(reference, arg1) {
+export const theDayBefore = function theDayBefore(reference, arg1) {
   const dateWithAdjustedTimezone = reference.getDateWithAdjustedTimezone();
   const parsingComponents = new ReferenceWithTimezone.ParsingComponents(reference, {});
   const date = new Date(dateWithAdjustedTimezone.getTime());
@@ -55,7 +56,7 @@ arg5.theDayBefore = function theDayBefore(reference, arg1) {
   parsingComponents.delete("meridiem");
   return parsingComponents;
 };
-arg5.theDayAfter = function theDayAfter(reference, arg1) {
+export const theDayAfter = function theDayAfter(reference, arg1) {
   const dateWithAdjustedTimezone = reference.getDateWithAdjustedTimezone();
   const parsingComponents = new ReferenceWithTimezone.ParsingComponents(reference, {});
   const date = new Date(dateWithAdjustedTimezone.getTime());
@@ -65,7 +66,7 @@ arg5.theDayAfter = function theDayAfter(reference, arg1) {
   parsingComponents.delete("meridiem");
   return parsingComponents;
 };
-arg5.tonight = function tonight(reference, date) {
+export const tonight = function tonight(reference, date) {
   let num = date;
   if (date === undefined) {
     num = 22;
@@ -74,11 +75,11 @@ arg5.tonight = function tonight(reference, date) {
   const parsingComponents = new ReferenceWithTimezone.ParsingComponents(reference, {});
   assignSimilarDate.assignSimilarDate(parsingComponents, dateWithAdjustedTimezone);
   parsingComponents.imply("hour", num);
-  parsingComponents.imply("meridiem", _mod10437.Meridiem.PM);
+  parsingComponents.imply("meridiem", Meridiem.Meridiem.PM);
   parsingComponents.addTag("casualReference/tonight");
   return parsingComponents;
 };
-arg5.lastNight = function lastNight(reference, date) {
+export const lastNight = function lastNight(reference, date) {
   let num = date;
   if (date === undefined) {
     num = 0;
@@ -94,18 +95,18 @@ arg5.lastNight = function lastNight(reference, date) {
   parsingComponents.imply("hour", num);
   return parsingComponents;
 };
-arg5.evening = function evening(reference, date) {
+export const evening = function evening(reference, date) {
   let num = date;
   if (date === undefined) {
     num = 20;
   }
   const parsingComponents = new ReferenceWithTimezone.ParsingComponents(reference, {});
-  parsingComponents.imply("meridiem", _mod10437.Meridiem.PM);
+  parsingComponents.imply("meridiem", Meridiem.Meridiem.PM);
   parsingComponents.imply("hour", num);
   parsingComponents.addTag("casualReference/evening");
   return parsingComponents;
 };
-arg5.yesterdayEvening = function yesterdayEvening(reference, date) {
+export const yesterdayEvening = function yesterdayEvening(reference, date) {
   let num = date;
   if (date === undefined) {
     num = 20;
@@ -114,12 +115,12 @@ arg5.yesterdayEvening = function yesterdayEvening(reference, date) {
   const parsingComponents = new ReferenceWithTimezone.ParsingComponents(reference, {});
   assignSimilarDate.assignSimilarDate(parsingComponents, new Date(dateWithAdjustedTimezone.getTime() - 86400000));
   parsingComponents.imply("hour", num);
-  parsingComponents.imply("meridiem", _mod10437.Meridiem.PM);
+  parsingComponents.imply("meridiem", Meridiem.Meridiem.PM);
   parsingComponents.addTag("casualReference/yesterday");
   parsingComponents.addTag("casualReference/evening");
   return parsingComponents;
 };
-arg5.midnight = function midnight(reference) {
+export const midnight = function midnight(reference) {
   const parsingComponents = new ReferenceWithTimezone.ParsingComponents(reference, {});
   const dateWithAdjustedTimezone = reference.getDateWithAdjustedTimezone();
   if (dateWithAdjustedTimezone.getHours() > 2) {
@@ -132,13 +133,13 @@ arg5.midnight = function midnight(reference) {
   parsingComponents.addTag("casualReference/midnight");
   return parsingComponents;
 };
-arg5.morning = function morning(reference, date) {
+export const morning = function morning(reference, date) {
   let num = date;
   if (date === undefined) {
     num = 6;
   }
   const parsingComponents = new ReferenceWithTimezone.ParsingComponents(reference, {});
-  parsingComponents.imply("meridiem", _mod10437.Meridiem.AM);
+  parsingComponents.imply("meridiem", Meridiem.Meridiem.AM);
   parsingComponents.imply("hour", num);
   parsingComponents.imply("minute", 0);
   parsingComponents.imply("second", 0);
@@ -146,13 +147,13 @@ arg5.morning = function morning(reference, date) {
   parsingComponents.addTag("casualReference/morning");
   return parsingComponents;
 };
-arg5.afternoon = function afternoon(reference, date) {
+export const afternoon = function afternoon(reference, date) {
   let num = date;
   if (date === undefined) {
     num = 15;
   }
   const parsingComponents = new ReferenceWithTimezone.ParsingComponents(reference, {});
-  parsingComponents.imply("meridiem", _mod10437.Meridiem.PM);
+  parsingComponents.imply("meridiem", Meridiem.Meridiem.PM);
   parsingComponents.imply("hour", num);
   parsingComponents.imply("minute", 0);
   parsingComponents.imply("second", 0);
@@ -160,9 +161,9 @@ arg5.afternoon = function afternoon(reference, date) {
   parsingComponents.addTag("casualReference/afternoon");
   return parsingComponents;
 };
-arg5.noon = function noon(reference) {
+export const noon = function noon(reference) {
   const parsingComponents = new ReferenceWithTimezone.ParsingComponents(reference, {});
-  parsingComponents.imply("meridiem", _mod10437.Meridiem.AM);
+  parsingComponents.imply("meridiem", Meridiem.Meridiem.AM);
   parsingComponents.assign("hour", 12);
   parsingComponents.imply("minute", 0);
   parsingComponents.imply("second", 0);

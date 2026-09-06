@@ -1,11 +1,11 @@
 // === Module 4855: Get ===
 
 // Module 4855 (Get)
-import isObject from "isObject" /* 4809 */;
+import _mod4809 from "module_4809" /* 4809 */;
 
 
 export default function Get(arg0, arg1) {
-  if (isObject(arg0)) {
+  if (_mod4809(arg0)) {
     if (tmp(4856)(arg1)) {
       return arg0[arg1];
     } else {

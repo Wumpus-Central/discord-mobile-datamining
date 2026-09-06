@@ -1,16 +1,17 @@
 // === Module 1209: reflectionScalarDefault ===
 
 // Module 1209 (reflectionScalarDefault)
-import RepeatType from "RepeatType" /* 1201 */;
+import ScalarType from "ScalarType" /* 1201 */;
 
 require = arg1;
 const dependencyMap = arg6;
-arg5.reflectionScalarDefault = function reflectionScalarDefault(T, L) {
+
+export const reflectionScalarDefault = function reflectionScalarDefault(T, L) {
   let STRING = L;
   if (L === undefined) {
-    STRING = RepeatType.LongType.STRING;
+    STRING = ScalarType.LongType.STRING;
   }
-  if (RepeatType.ScalarType.BOOL === T) {
+  if (ScalarType.ScalarType.BOOL === T) {
     return false;
   } else {
     if (tmp3(1201).ScalarType.UINT64 !== T) {

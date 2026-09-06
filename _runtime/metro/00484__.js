@@ -1,7 +1,8 @@
 // === Module 484: ? ===
 
 // Module 484
-arg5.default = {
+
+export default {
   get(arg0) {
     console.warn("Settings is not yet supported on this platform.");
     return null;

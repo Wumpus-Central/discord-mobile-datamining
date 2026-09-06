@@ -8,8 +8,7 @@ export default function _objectWithoutPropertiesLoose(obj, arr) {
   } else {
     obj = {};
     for (const key10007 in arg0) {
-      let tmp3 = key10007;
-      let hasOwnProperty = {}.hasOwnProperty;
+      hasOwnProperty = {}.hasOwnProperty;
       let call = hasOwnProperty.call;
       if (typeof call === "unknown") {
         let hasOwnPropertyResult = hasOwnProperty(key10007);

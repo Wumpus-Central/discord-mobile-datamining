@@ -1,20 +1,20 @@
 // === Module 952: _getGraphQLOperation ===
 
 // Module 952 (_getGraphQLOperation)
-import addClsInstrumentationHandler from "addClsInstrumentationHandler" /* 898 */;
-import registerSpanErrorInstrumentation from "registerSpanErrorInstrumentation" /* 682 */;
+import triggerHandlers from "triggerHandlers" /* 898 */;
+import registerSpanErrorInstrumentation from "module_682" /* 682 */;
 
-function _getGraphQLOperation(obj) {
-  let tmp = typeof obj === "object";
+function _getGraphQLOperation(operationName) {
+  let tmp = typeof operationName === "object";
   let tmp2 = tmp;
-  if (typeof obj === "object") {
-    tmp2 = null !== obj;
+  if (typeof operationName === "object") {
+    tmp2 = null !== operationName;
   }
   if (tmp2) {
-    tmp2 = typeof obj.operationName === "string";
+    tmp2 = typeof operationName.operationName === "string";
   }
   if (tmp2) {
-    const extensions = obj.extensions;
+    const extensions = operationName.extensions;
     let tmp3 = typeof extensions === "object";
     if (typeof extensions === "object") {
       tmp3 = null !== extensions;
@@ -22,7 +22,7 @@ function _getGraphQLOperation(obj) {
     tmp2 = tmp3;
   }
   if (tmp2) {
-    const persistedQuery = obj.extensions.persistedQuery;
+    const persistedQuery = operationName.extensions.persistedQuery;
     let tmp4 = typeof persistedQuery === "object";
     if (typeof persistedQuery === "object") {
       tmp4 = null !== persistedQuery;
@@ -30,33 +30,30 @@ function _getGraphQLOperation(obj) {
     tmp2 = tmp4;
   }
   if (tmp2) {
-    tmp2 = typeof obj.extensions.persistedQuery.sha256Hash === "string";
+    tmp2 = typeof operationName.extensions.persistedQuery.sha256Hash === "string";
   }
   if (tmp2) {
-    tmp2 = typeof obj.extensions.persistedQuery.version === "number";
+    tmp2 = typeof operationName.extensions.persistedQuery.version === "number";
   }
   if (tmp2) {
     const _HermesInternal2 = HermesInternal;
-    return "persisted " + obj.operationName;
+    return "persisted " + operationName.operationName;
   } else {
-    if (typeof obj === "object") {
-      tmp = null !== obj;
+    if (typeof operationName === "object") {
+      tmp = null !== operationName;
     }
     if (tmp) {
-      tmp = typeof obj.query === "string";
+      tmp = typeof operationName.query === "string";
     }
     if (tmp) {
-      ({ query, operationName } = obj);
+      ({ query, operationName } = operationName);
       const match = query.match(/^(?:\s*)(query|mutation|subscription)(?:\s*)(\w+)(?:\s*)[{(]/);
       if (match) {
-        obj = { operationType: null, operationName: null };
-        obj[0] = match[1];
-        obj[1] = match[2];
+        let obj = { operationType: match[1], operationName: match[2] };
       } else {
         const match1 = query.match(/^(?:\s*)(query|mutation|subscription)(?:\s*)[{(]/);
         if (match1) {
-          obj = { operationType: null, operationName: "a" };
-          obj[0] = match1[1];
+          obj = { operationType: match1[1], operationName: "a" };
         } else {
           obj = { operationType: "hash", operationName: "call" };
         }
@@ -88,16 +85,16 @@ function isStandardRequest(parsed) {
   }
   return tmp;
 }
-function isPersistedRequest(obj) {
-  let tmp = typeof obj === "object";
-  if (typeof obj === "object") {
-    tmp = null !== obj;
+function isPersistedRequest(operationName) {
+  let tmp = typeof operationName === "object";
+  if (typeof operationName === "object") {
+    tmp = null !== operationName;
   }
   if (tmp) {
-    tmp = typeof obj.operationName === "string";
+    tmp = typeof operationName.operationName === "string";
   }
   if (tmp) {
-    const extensions = obj.extensions;
+    const extensions = operationName.extensions;
     let tmp2 = typeof extensions === "object";
     if (typeof extensions === "object") {
       tmp2 = null !== extensions;
@@ -105,7 +102,7 @@ function isPersistedRequest(obj) {
     tmp = tmp2;
   }
   if (tmp) {
-    const persistedQuery = obj.extensions.persistedQuery;
+    const persistedQuery = operationName.extensions.persistedQuery;
     let tmp3 = typeof persistedQuery === "object";
     if (typeof persistedQuery === "object") {
       tmp3 = null !== persistedQuery;
@@ -113,10 +110,10 @@ function isPersistedRequest(obj) {
     tmp = tmp3;
   }
   if (tmp) {
-    tmp = typeof obj.extensions.persistedQuery.sha256Hash === "string";
+    tmp = typeof operationName.extensions.persistedQuery.sha256Hash === "string";
   }
   if (tmp) {
-    tmp = typeof obj.extensions.persistedQuery.version === "number";
+    tmp = typeof operationName.extensions.persistedQuery.version === "number";
   }
   return tmp;
 }
@@ -138,7 +135,7 @@ export { _getGraphQLOperation };
 export { getGraphQLRequestPayload };
 export const getRequestPayloadXhrOrFetch = function getRequestPayloadXhrOrFetch(input) {
   if ("xhr" in input) {
-    const tmp7 = input.xhr[addClsInstrumentationHandler.SENTRY_XHR_DATA_KEY];
+    const tmp7 = input.xhr[triggerHandlers.SENTRY_XHR_DATA_KEY];
     let first = tmp7;
     if (tmp7) {
       first = tmp5(898).getBodyString(tmp7.body)[0];
@@ -147,10 +144,8 @@ export const getRequestPayloadXhrOrFetch = function getRequestPayloadXhrOrFetch(
     let first1 = first;
     tmp5 = require;
   } else {
-    const fetchRequestArgBody = addClsInstrumentationHandler.getFetchRequestArgBody(input.input);
-    const obj = addClsInstrumentationHandler;
-    first1 = addClsInstrumentationHandler.getBodyString(fetchRequestArgBody)[0];
-    const obj2 = addClsInstrumentationHandler;
+    const fetchRequestArgBody = triggerHandlers.getFetchRequestArgBody(input.input);
+    first1 = triggerHandlers.getBodyString(fetchRequestArgBody)[0];
   }
   return first1;
 };
@@ -160,35 +155,35 @@ export const graphqlClientIntegration = registerSpanErrorInstrumentation.defineI
     name: "GraphQLClient",
     setup(on) {
       on.on("beforeOutgoingRequestSpan", (updateName, input) => {
-        const tmp3 = lib(closure_1_1[0]).spanToJSON(updateName).data || {};
-        if ("http.client" === tmp3[lib(undefined, closure_1_1[0]).SEMANTIC_ATTRIBUTE_SENTRY_OP]) {
-          const tmp4 = tmp3[tmp(undefined, tmp2[0]).SEMANTIC_ATTRIBUTE_URL_FULL] || tmp3["http.url"];
-          const tmp5 = tmp3[tmp(undefined, tmp2[0]).SEMANTIC_ATTRIBUTE_HTTP_REQUEST_METHOD] || tmp3["http.method"];
-          let tmpResult = tmp(tmp2[0]);
+        const tmp3 = closure_0(682).spanToJSON(updateName).data || {};
+        if ("http.client" === tmp3[closure_0(undefined, 682).SEMANTIC_ATTRIBUTE_SENTRY_OP]) {
+          const tmp4 = tmp3[tmp(undefined, 682).SEMANTIC_ATTRIBUTE_URL_FULL] || tmp3["http.url"];
+          const tmp5 = tmp3[tmp(undefined, 682).SEMANTIC_ATTRIBUTE_HTTP_REQUEST_METHOD] || tmp3["http.method"];
+          let tmpResult = tmp(682);
           if (tmpResult.isString(tmp4)) {
-            tmpResult = tmp(tmp2[0]);
+            tmpResult = tmp(682);
             if (tmpResult.isString(tmp5)) {
-              const result = tmp(tmp2[0]).stringMatchesSomePattern(tmp4, lib.endpoints);
+              const result = tmp(682).stringMatchesSomePattern(tmp4, closure_0.endpoints);
               if ("xhr" in input) {
-                const tmp11 = input.xhr[tmp(undefined, tmp2[1]).SENTRY_XHR_DATA_KEY];
+                const tmp11 = input.xhr[tmp(undefined, 898).SENTRY_XHR_DATA_KEY];
                 let first = tmp11;
                 if (tmp11) {
-                  first = tmp(tmp2[1]).getBodyString(tmp11.body)[0];
-                  const tmpResult2 = tmp(tmp2[1]);
+                  first = tmp(898).getBodyString(tmp11.body)[0];
+                  const tmpResult2 = tmp(898);
                 }
                 let first1 = first;
               } else {
-                const fetchRequestArgBody = tmp(tmp2[1]).getFetchRequestArgBody(input.input);
-                const tmpResult3 = tmp(tmp2[1]);
-                first1 = tmp(tmp2[1]).getBodyString(fetchRequestArgBody)[0];
-                const tmpResult4 = tmp(tmp2[1]);
+                const fetchRequestArgBody = tmp(898).getFetchRequestArgBody(input.input);
+                const tmpResult3 = tmp(898);
+                first1 = tmp(898).getBodyString(fetchRequestArgBody)[0];
+                const tmpResult4 = tmp(898);
               }
               if (result) {
                 if (first1) {
-                  const tmp14 = closure_1_5(first1);
+                  const tmp14 = getGraphQLRequestPayload(first1);
                   if (tmp14) {
                     const _HermesInternal = HermesInternal;
-                    updateName.updateName("" + tmp5 + " " + tmp4 + " (" + closure_1_2(tmp14) + ")");
+                    updateName.updateName("" + tmp5 + " " + tmp4 + " (" + _getGraphQLOperation(tmp14) + ")");
                     let tmp20 = typeof tmp14 === "object";
                     let tmp21 = tmp20;
                     if (typeof tmp14 === "object") {
@@ -235,7 +230,7 @@ export const graphqlClientIntegration = registerSpanErrorInstrumentation.defineI
                   }
                 }
               }
-              const tmpResult1 = tmp(tmp2[0]);
+              const tmpResult1 = tmp(682);
             }
           }
         }
@@ -248,28 +243,28 @@ export const graphqlClientIntegration = registerSpanErrorInstrumentation.defineI
             if (data != null) {
               url = data.url;
             }
-            const result = lib(closure_1_1[0]).stringMatchesSomePattern(url, lib.endpoints);
+            const result = closure_0(682).stringMatchesSomePattern(url, closure_0.endpoints);
             if ("xhr" in input) {
-              const tmp10 = input.xhr[tmp5(undefined, tmp6[1]).SENTRY_XHR_DATA_KEY];
+              const tmp10 = input.xhr[tmp5(undefined, 898).SENTRY_XHR_DATA_KEY];
               let first = tmp10;
               if (tmp10) {
-                let tmp5Result = tmp5(tmp6[1]);
+                let tmp5Result = tmp5(898);
                 first = tmp5Result.getBodyString(tmp10.body)[0];
               }
               let first1 = first;
             } else {
-              tmp5Result = tmp5(tmp6[1]);
+              tmp5Result = tmp5(898);
               const fetchRequestArgBody = tmp5Result.getFetchRequestArgBody(input.input);
-              first1 = tmp5(tmp6[1]).getBodyString(fetchRequestArgBody)[0];
-              const tmp5Result1 = tmp5(tmp6[1]);
+              first1 = tmp5(898).getBodyString(fetchRequestArgBody)[0];
+              const tmp5Result1 = tmp5(898);
             }
             if (result) {
               if (data) {
                 if (first1) {
-                  const tmp13 = closure_1_5(first1);
+                  const tmp13 = getGraphQLRequestPayload(first1);
                   if (!data.graphql) {
                     if (tmp13) {
-                      data["graphql.operation"] = closure_1_2(tmp13);
+                      data["graphql.operation"] = _getGraphQLOperation(tmp13);
                       let tmp15 = typeof tmp13 === "object";
                       let tmp16 = tmp15;
                       if (typeof tmp13 === "object") {
@@ -318,7 +313,7 @@ export const graphqlClientIntegration = registerSpanErrorInstrumentation.defineI
                 }
               }
             }
-            const obj = lib(closure_1_1[0]);
+            const obj = closure_0(682);
           }
         }
       });
@@ -328,15 +323,12 @@ export const graphqlClientIntegration = registerSpanErrorInstrumentation.defineI
 export const parseGraphQLQuery = function parseGraphQLQuery(str) {
   const match = str.match(/^(?:\s*)(query|mutation|subscription)(?:\s*)(\w+)(?:\s*)[{(]/);
   if (match) {
-    let obj = { operationType: null, operationName: null };
-    obj[0] = match[1];
-    obj[1] = match[2];
+    let obj = { operationType: match[1], operationName: match[2] };
     return obj;
   } else {
     const match1 = str.match(/^(?:\s*)(query|mutation|subscription)(?:\s*)[{(]/);
     if (match1) {
-      obj = { operationType: null, operationName: "a" };
-      obj[0] = match1[1];
+      obj = { operationType: match1[1], operationName: "a" };
     } else {
       obj = { operationType: "hash", operationName: "call" };
     }

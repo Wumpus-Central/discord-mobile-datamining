@@ -7,32 +7,28 @@ import startOfYear from "startOfYear" /* 3869 */;
 import requiredArgs from "requiredArgs" /* 3651 */;
 
 if (!eachWeekendOfInterval) {
-  let obj = { default: null };
-  obj[0] = eachWeekendOfInterval;
+  let obj = { default: eachWeekendOfInterval };
   let tmp3 = obj;
 } else {
   tmp3 = eachWeekendOfInterval;
 }
 eachWeekendOfInterval = tmp3;
 if (!endOfYear) {
-  obj = { default: null };
-  obj[0] = endOfYear;
+  obj = { default: endOfYear };
   let tmp5 = obj;
 } else {
   tmp5 = endOfYear;
 }
 endOfYear = tmp5;
 if (!startOfYear) {
-  obj = { default: null };
-  obj[0] = startOfYear;
+  obj = { default: startOfYear };
   let tmp7 = obj;
 } else {
   tmp7 = startOfYear;
 }
 startOfYear = tmp7;
 if (!requiredArgs) {
-  const obj1 = { default: null };
-  obj1[0] = requiredArgs;
+  const obj1 = { default: requiredArgs };
   let tmp9 = obj1;
 } else {
   tmp9 = requiredArgs;

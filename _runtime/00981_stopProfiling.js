@@ -1,8 +1,10 @@
 // === Module 981: stopProfiling ===
 
 // Module 981 (stopProfiling)
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import _mod17 from "module_17" /* 17 */;
+import _mod682 from "module_682" /* 682 */;
 import NativeModules from "NativeModules" /* 866 */;
+import _mod867 from "module_867" /* 867 */;
 
 function stopProfiling(arg0) {
   const NATIVE = NativeModules.NATIVE;
@@ -19,11 +21,10 @@ function stopProfiling(arg0) {
         if (stopProfilingResult.androidProfile) {
           const _Object3 = Object;
           const _Object4 = Object;
-          let obj = { platform: "android", js_profile: null, duration_ns: null, active_thread_id: null };
-          obj[1] = hermesProfilingEvent.profile;
+          let obj = { platform: "android", js_profile: hermesProfilingEvent.profile, duration_ns: null, active_thread_id: null };
           const merged = Object.assign({}, stopProfilingResult.androidProfile);
-          obj[2] = result - arg0.toString(10);
-          obj[3] = hermesProfilingEvent.transaction.active_thread_id;
+          obj.duration_ns = result - arg0.toString(10);
+          obj.active_thread_id = hermesProfilingEvent.transaction.active_thread_id;
           return Object.assign(merged, obj);
         } else if (!stopProfilingResult.nativeProfile) {
           return hermesProfilingEvent;
@@ -35,7 +36,7 @@ function stopProfiling(arg0) {
           const profile = hermesProfilingEvent.profile;
           const merged1 = Object.assign({}, hermesProfilingEvent);
           addNativeThreadCpuProfileToHermes(profile, measurements.profile, hermesProfilingEvent.transaction.active_thread_id);
-          obj[0] = profile;
+          obj.profile = profile;
           let merged2 = Object.assign(merged1, obj);
           const debug_meta = measurements.debug_meta;
           let images;
@@ -45,10 +46,9 @@ function stopProfiling(arg0) {
             }
           }
           if (images) {
-            obj1 = { debug_meta: null };
-            const obj2 = { images: null };
-            obj2[0] = measurements.debug_meta.images;
-            obj1[0] = obj2;
+            const obj1 = { debug_meta: null };
+            const obj2 = { images: measurements.debug_meta.images };
+            obj1.debug_meta = obj2;
             let obj3 = obj1;
           } else {
             obj3 = {};
@@ -56,7 +56,7 @@ function stopProfiling(arg0) {
           merged2 = Object.assign(merged2, obj3);
           const obj4 = { measurements: null };
           measurements = measurements.measurements;
-          obj4[0] = measurements;
+          obj4.measurements = measurements;
           const merged3 = Object.assign(merged2, obj4);
         }
       } else {
@@ -78,12 +78,12 @@ function addNativeThreadCpuProfileToHermes(profile, profile2, active_thread_id) 
     for (const item10032 of frames) {
       frames = arg0.frames;
       let obj = { function: null, instruction_addr: null, platform: "Array" };
-      ({ function: obj[0], instruction_addr: obj[1] } = item10032);
+      ({ function: obj.function, instruction_addr: obj.instruction_addr } = item10032);
       let arr = frames.push(obj);
       continue;
     }
   }
-  const items = [...profile.stacks || [], ...arr3.map((arr) => arr.map((arg0) => arg0 + closure_1))];
+  const items = [...profile.stacks || [], ...arr3.map((arr) => arr.map((item) => item + length))];
   profile.stacks = items;
   const items1 = [...profile.samples || []];
   const found = profile2.samples || [].filter((thread_id) => thread_id.thread_id !== closure_0);
@@ -91,7 +91,7 @@ function addNativeThreadCpuProfileToHermes(profile, profile2, active_thread_id) 
   profile.samples = items1;
   return profile;
 }
-const Platform = get_ActivityIndicator.Platform;
+const Platform = _mod17.Platform;
 let c2 = 1000000;
 let closure_3 = { platformProfilers: true };
 
@@ -102,76 +102,67 @@ export const hermesProfilingIntegration = () => {
   }
   c0 = undefined;
   c1 = undefined;
-  closure_2 = undefined;
-  c3 = undefined;
-  let _startCurrentProfileForActiveTransaction;
-  let _startCurrentProfile;
-  let _shouldStartProfiling;
-  let _startNewProfile;
-  let _finishCurrentProfileForSpan;
-  let _finishCurrentProfile;
-  let _createProfileEventFor;
-  let _clearCurrentProfileTimeout;
   const platformProfilers = tmp.platformProfilers;
   closure_2 = null === platformProfilers || undefined === platformProfilers || platformProfilers;
   c3 = false;
-  _startCurrentProfileForActiveTransaction = function _startCurrentProfileForActiveTransaction(startTimestampNs) {
+  function _startCurrentProfileForActiveTransaction() {
 
-  };
-  _startCurrentProfile = function _startCurrentProfile(activeSpan) {
+  }
+  function _startCurrentProfile(activeSpan) {
     if (obj.isRootSpan(activeSpan)) {
       _finishCurrentProfile();
-      if (typeof _shouldStartProfiling !== "function") {
-        HermesBuiltin.throwTypeError();
-      }
-      let tmpResult = tmp(tmp2[2]);
-      tmpResult = tmp(tmp2[2]);
-      if (spanIsSampledResult) {
-        const client = tmpResult.getClient();
-        let getOptions;
-        if (null != client) {
-          getOptions = client.getOptions;
-        }
-        if (null !== getOptions) {
-          if (undefined !== getOptions) {
-            const call = getOptions.call;
-            typeof call === "unknown" ? getOptions() : call(client);
+      if (typeof _shouldStartProfiling === "function") {
+        tmp(682);
+        const tmpResult = tmp(682);
+        if (spanIsSampledResult) {
+          const client = tmpResult.getClient();
+          let getOptions;
+          if (null != client) {
+            getOptions = client.getOptions;
           }
-        }
-        let profilesSampleRate;
-        if (undefined) {
-          if (typeof tmp11.profilesSampleRate === "number") {
-            profilesSampleRate = tmp11.profilesSampleRate;
+          if (null !== getOptions) {
+            if (undefined !== getOptions) {
+              const call = getOptions.call;
+              typeof call === "unknown" ? getOptions() : call(client);
+            }
           }
-        }
-        if (undefined === profilesSampleRate) {
-          const debug3 = tmp(tmp2[2]).debug;
-          debug3.log("[Profiling] Profiling disabled, enable it by setting `profilesSampleRate` option to SDK init call.");
-          let flag2 = false;
+          let profilesSampleRate;
+          if (undefined) {
+            if (typeof tmp11.profilesSampleRate === "number") {
+              profilesSampleRate = tmp11.profilesSampleRate;
+            }
+          }
+          if (undefined === profilesSampleRate) {
+            const debug3 = tmp(682).debug;
+            debug3.log("[Profiling] Profiling disabled, enable it by setting `profilesSampleRate` option to SDK init call.");
+            let flag2 = false;
+          } else {
+            const _Math = Math;
+            flag2 = Math.random() <= profilesSampleRate;
+            if (!flag2) {
+              const debug2 = tmp(682).debug;
+              debug2.log("[Profiling] Skip profiling transaction due to sampling.");
+              flag2 = false;
+            }
+          }
         } else {
-          const _Math = Math;
-          flag2 = Math.random() <= profilesSampleRate;
-          if (!flag2) {
-            const debug2 = tmp(tmp2[2]).debug;
-            debug2.log("[Profiling] Skip profiling transaction due to sampling.");
-            flag2 = false;
-          }
+          const debug = tmpResult.debug;
+          debug.log("[Profiling] Transaction is not sampled, skipping profiling");
+          // // eliminated: always false
         }
+        spanIsSampledResult = tmpResult.spanIsSampled(activeSpan);
       } else {
-        const debug = tmpResult.debug;
-        debug.log("[Profiling] Transaction is not sampled, skipping profiling");
-        // // eliminated: always false
+        throw new TypeError("Trying to call a non-function");
       }
-      spanIsSampledResult = tmpResult.spanIsSampled(activeSpan);
     }
-  };
-  _shouldStartProfiling = function _shouldStartProfiling(arg0) {
+  }
+  function _shouldStartProfiling(arg0) {
 
-  };
-  _startNewProfile = function _startNewProfile(arg0) {
+  }
+  function _startNewProfile(arg0) {
 
-  };
-  _finishCurrentProfileForSpan = function _finishCurrentProfileForSpan(spanContext) {
+  }
+  function _finishCurrentProfileForSpan(spanContext) {
     if (obj.isRootSpan(spanContext)) {
       let span_id;
       if (null != _undefined) {
@@ -180,7 +171,7 @@ export const hermesProfilingIntegration = () => {
       if (spanContext.spanContext().spanId === span_id) {
         _finishCurrentProfile();
       } else {
-        const debug = _undefined(_undefined2[2]).debug;
+        const debug = _mod682.debug;
         const spanId = spanContext.spanContext().spanId;
         let span_id1;
         if (null != _undefined) {
@@ -190,32 +181,33 @@ export const hermesProfilingIntegration = () => {
         debug.log("[Profiling] Span (" + spanId + ") ended is not the currently profiled span (" + span_id1 + "). Not stopping profiling.");
       }
     }
-  };
-  _finishCurrentProfile = function _finishCurrentProfile() {
-    if (typeof _clearCurrentProfileTimeout !== "function") {
-      HermesBuiltin.throwTypeError();
-    }
-    if (undefined !== c1) {
-      const _clearTimeout = clearTimeout;
-      clearTimeout(c1);
-    }
-    c1 = undefined;
-    if (undefined !== _undefined) {
-      const tmp12 = _startCurrentProfileForActiveTransaction(tmp4.startTimestampNs);
-      if (tmp12) {
-        const PROFILE_QUEUE = tmp13(tmp14[3]).PROFILE_QUEUE;
-        PROFILE_QUEUE.add(_undefined.profile_id, tmp12);
-        const debug2 = tmp13(tmp14[2]).debug;
-        debug2.log("[Profiling] finished profiling: ", _undefined.profile_id);
-        _undefined = undefined;
-      } else {
-        const debug = tmp13(tmp14[2]).debug;
-        debug.warn("[Profiling] Stop failed. Cleaning up...");
-        _undefined = undefined;
+  }
+  function _finishCurrentProfile() {
+    if (typeof _clearCurrentProfileTimeout === "function") {
+      if (undefined !== c1) {
+        const _clearTimeout = clearTimeout;
+        clearTimeout(c1);
       }
+      c1 = undefined;
+      if (undefined !== _undefined) {
+        const tmp12 = stopProfiling(tmp5.startTimestampNs);
+        if (tmp12) {
+          const PROFILE_QUEUE = tmp13(982).PROFILE_QUEUE;
+          PROFILE_QUEUE.add(_undefined.profile_id, tmp12);
+          const debug2 = tmp13(682).debug;
+          debug2.log("[Profiling] finished profiling: ", _undefined.profile_id);
+          _undefined = undefined;
+        } else {
+          const debug = tmp13(682).debug;
+          debug.warn("[Profiling] Stop failed. Cleaning up...");
+          _undefined = undefined;
+        }
+      }
+    } else {
+      throw new TypeError("Trying to call a non-function");
     }
-  };
-  _createProfileEventFor = function _createProfileEventFor(contexts) {
+  }
+  function _createProfileEventFor(contexts) {
     contexts = undefined;
     if (null != contexts) {
       contexts = contexts.contexts;
@@ -270,7 +262,7 @@ export const hermesProfilingIntegration = () => {
         delete tmp2[tmp];
       }
       const PROFILE_QUEUE = _undefined(_undefined2[3]).PROFILE_QUEUE;
-      const value = PROFILE_QUEUE.get(profile_id);
+      value = PROFILE_QUEUE.get(profile_id);
       const PROFILE_QUEUE2 = _undefined(_undefined2[3]).PROFILE_QUEUE;
       PROFILE_QUEUE2.delete(profile_id);
       if (value) {
@@ -286,19 +278,17 @@ export const hermesProfilingIntegration = () => {
         return null;
       }
     }
-  };
-  _clearCurrentProfileTimeout = function _clearCurrentProfileTimeout() {
+  }
+  function _clearCurrentProfileTimeout() {
 
-  };
+  }
   return {
     name: "HermesProfiling",
     setupOnce() {
       if (!c3) {
         c3 = true;
-        const obj = _undefined(_undefined2[1]);
-        const tmp = _undefined;
-        const tmp2 = _undefined2;
-        let obj2 = _undefined(_undefined2[2]);
+        const tmp = require;
+        let obj2 = _mod682;
         if (isHermesEnabledResult) {
           const client = obj2.getClient();
           let tmp5 = client;
@@ -306,49 +296,48 @@ export const hermesProfilingIntegration = () => {
             tmp5 = typeof client.on === "function";
           }
           if (tmp5) {
-            if (typeof _startCurrentProfileForActiveTransaction !== "function") {
-              HermesBuiltin.throwTypeError();
-            }
-            if (!_undefined) {
-              const activeSpan = tmp(tmp2[2]).getActiveSpan();
-              if (activeSpan) {
-                _startCurrentProfile(activeSpan);
-              }
-              let tmpResult = tmp(tmp2[2]);
-            }
-            client.on("spanStart", _startCurrentProfile);
-            client.on("spanEnd", _finishCurrentProfileForSpan);
-            client.on("beforeEnvelope", (arg0) => {
-              const PROFILE_QUEUE = closure_1_0(closure_1_1[3]).PROFILE_QUEUE;
-              if (PROFILE_QUEUE.size()) {
-                const result = tmp(tmp2[4]).findProfiledTransactionsFromEnvelope(arg0);
-                if (result.length) {
-                  const items = [];
-                  const tmp6 = result[Symbol.iterator]();
-                  while (tmp6 !== undefined) {
-                    let tmp10 = callback;
-                    let tmp11 = callback(tmp8);
-                    if (tmp11) {
-                      let tmp13 = tmp11;
-                      let arr = items.push(tmp12);
-                    }
-                    continue;
-                  }
-                  const result1 = closure_1_0(closure_1_1[4]).addProfilesToEnvelope(arg0, items);
-                  const obj2 = closure_1_0(closure_1_1[4]);
-                } else {
-                  const debug = tmp(tmp2[2]).debug;
-                  debug.log("[Profiling] no profiled transactions found in envelope");
+            if (typeof _startCurrentProfileForActiveTransaction === "function") {
+              if (!c0) {
+                const activeSpan = tmp(682).getActiveSpan();
+                if (activeSpan) {
+                  _startCurrentProfile(activeSpan);
                 }
-                const tmpResult = tmp(tmp2[4]);
+                let tmpResult = tmp(682);
               }
-            });
+              client.on("spanStart", _startCurrentProfile);
+              client.on("spanEnd", _finishCurrentProfileForSpan);
+              client.on("beforeEnvelope", (arg0) => {
+                const PROFILE_QUEUE = c0(982).PROFILE_QUEUE;
+                if (PROFILE_QUEUE.size()) {
+                  const result = tmp(983).findProfiledTransactionsFromEnvelope(arg0);
+                  if (result.length) {
+                    const items = [];
+                    const tmp6 = result[Symbol.iterator]();
+                    while (tmp6 !== undefined) {
+                      let tmp11 = _createProfileEventFor(tmp8);
+                      if (tmp11) {
+                        let arr = items.push(tmp12);
+                      }
+                      continue;
+                    }
+                    const result1 = c0(983).addProfilesToEnvelope(arg0, items);
+                    const obj2 = c0(983);
+                  } else {
+                    const debug = tmp(682).debug;
+                    debug.log("[Profiling] no profiled transactions found in envelope");
+                  }
+                  const tmpResult = tmp(983);
+                }
+              });
+            } else {
+              throw new TypeError("Trying to call a non-function");
+            }
           }
         } else {
           let debug = obj2.debug;
           debug.log("[Profiling] Hermes is not enabled, not adding profiling integration.");
         }
-        isHermesEnabledResult = _undefined(_undefined2[1]).isHermesEnabled();
+        isHermesEnabledResult = _mod867.isHermesEnabled();
       }
     }
   };
@@ -363,11 +352,11 @@ export const startProfiling = function startProfiling(arg0) {
   return result;
 };
 export { stopProfiling };
-export const createAndroidWithHermesProfile = function createAndroidWithHermesProfile(js_profile) {
+export const createAndroidWithHermesProfile = function createAndroidWithHermesProfile(js_profile, arg1, arg2) {
   const obj = { platform: "android", js_profile: js_profile.profile, duration_ns: null, active_thread_id: null };
   const merged = Object.assign({}, arg1);
-  obj[2] = arg2.toString(10);
-  obj[3] = js_profile.transaction.active_thread_id;
+  obj.duration_ns = require("AppStartPerformance");
+  obj.active_thread_id = js_profile.transaction.active_thread_id;
   return Object.assign(merged, obj);
 };
 export const addNativeProfileToHermesProfile = function addNativeProfileToHermesProfile(profile, measurements) {
@@ -375,7 +364,7 @@ export const addNativeProfileToHermesProfile = function addNativeProfileToHermes
   profile = profile.profile;
   const merged = Object.assign({}, profile);
   addNativeThreadCpuProfileToHermes(profile, measurements.profile, profile.transaction.active_thread_id);
-  obj[0] = profile;
+  obj.profile = profile;
   const debug_meta = measurements.debug_meta;
   let images;
   const merged1 = Object.assign(merged, obj);
@@ -386,10 +375,9 @@ export const addNativeProfileToHermesProfile = function addNativeProfileToHermes
   }
   if (images) {
     obj = { debug_meta: null };
-    obj = { images: null };
-    obj[0] = measurements.debug_meta.images;
-    obj[0] = obj;
-    obj1 = obj;
+    obj = { images: measurements.debug_meta.images };
+    obj.debug_meta = obj;
+    let obj1 = obj;
   } else {
     obj1 = {};
   }

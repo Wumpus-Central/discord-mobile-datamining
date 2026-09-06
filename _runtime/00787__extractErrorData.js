@@ -1,12 +1,12 @@
 // === Module 787: _extractErrorData ===
 
 // Module 787 (_extractErrorData)
-import __SENTRY_DEBUG__ from "__SENTRY_DEBUG__" /* 688 */;
+import _mod688 from "module_688" /* 688 */;
 import consoleSandbox from "consoleSandbox" /* 689 */;
-import isInstanceOf from "isInstanceOf" /* 692 */;
+import _mod692 from "module_692" /* 692 */;
 import setupIntegration from "setupIntegration" /* 752 */;
 
-function _extractErrorData(cause) {
+function _extractErrorData(cause, arg1, arg2) {
   try {
     const items = ["name", "message", "stack", "line", "column", "fileName", "lineNumber", "columnNumber", "toJSON"];
     let obj = {};
@@ -17,39 +17,26 @@ function _extractErrorData(cause) {
     const nextResult = iter.next();
     while (iter !== undefined) {
       let tmp9 = nextResult;
-      let tmp10 = items;
       if (-1 !== items.indexOf(nextResult)) {
         continue;
       } else {
-        let tmp39 = nextResult;
         let tmp40 = cause[tmp9];
         let tmp41 = tmp40;
-        let tmp42 = obj;
-        let tmp43 = require;
         let tmp44 = require;
-        let tmp45 = dependencyMap;
-        let tmp46 = dependencyMap;
-        let obj5 = isInstanceOf;
+        let obj5 = _mod692;
         if (!obj5.isError(tmp40)) {
-          let tmp11 = tmp40;
           if (typeof tmp41 !== "string") {
-            let tmp47 = tmp40;
             obj[tmp9] = tmp41;
           }
         }
         if (arg2) {
-          let tmp14 = tmp43;
-          let tmp15 = tmp45;
           let tmp44Result = tmp44(697);
-          let tmp16 = tmp40;
           let _HermesInternal2 = HermesInternal;
           let truncateResult = tmp44Result.truncate("" + tmp41, arg2);
         } else {
-          let tmp12 = tmp40;
           let _HermesInternal = HermesInternal;
           truncateResult = "" + tmp41;
         }
-        let tmp17 = truncateResult;
       }
     }
     if (arg1) {
@@ -65,7 +52,7 @@ function _extractErrorData(cause) {
         } else {
           obj.cause = cause.cause;
         }
-        obj6 = isInstanceOf;
+        obj6 = _mod692;
       }
     }
     if (typeof cause.toJSON === "function") {
@@ -73,16 +60,9 @@ function _extractErrorData(cause) {
       const _Object2 = Object;
       const keys1 = Object.keys(toJSONResult);
       for (const item10058 of keys1) {
-        let tmp23 = toJSONResult;
         let tmp24 = tmp53[item10058];
         let str2 = tmp24;
-        let tmp25 = obj;
-        let tmp26 = require;
-        let tmp27 = require;
-        let tmp28 = dependencyMap;
-        let tmp29 = dependencyMap;
-        let obj4 = isInstanceOf;
-        let tmp30 = tmp24;
+        let obj4 = _mod692;
         if (obj4.isError(tmp24)) {
           str = str2.toString();
         } else {
@@ -95,7 +75,7 @@ function _extractErrorData(cause) {
     }
     return obj;
   } catch (tmp32) {
-    if (__SENTRY_DEBUG__.DEBUG_BUILD) {
+    if (_mod688.DEBUG_BUILD) {
       const debug = consoleSandbox.debug;
       debug.error("Unable to extract extra data from the Error object:", tmp32);
     }
@@ -109,13 +89,8 @@ export const extraErrorDataIntegration = setupIntegration.defineIntegration(() =
   if (arg0 === undefined) {
     obj = {};
   }
-  let num;
   closure_1 = undefined;
   const depth = obj.depth;
-  num = 3;
-  if (undefined !== depth) {
-    num = depth;
-  }
   const captureErrorCause = obj.captureErrorCause;
   closure_1 = undefined === captureErrorCause || captureErrorCause;
   obj = {
@@ -129,18 +104,18 @@ export const extraErrorDataIntegration = setupIntegration.defineIntegration(() =
       if (obj.originalException) {
         tmp3 = contexts;
         if (obj2.isError(obj.originalException)) {
-          const tmp8 = closure_1_2(obj.originalException, table, getOptions.getOptions().maxValueLength);
+          const tmp8 = _extractErrorData(obj.originalException, closure_1, getOptions.getOptions().maxValueLength);
           tmp3 = contexts;
           if (tmp8) {
             obj = {};
             const merged = Object.assign(contexts.contexts);
-            let tmp4Result = tmp4(tmp5[2]);
-            const normalizeResult = tmp4Result.normalize(tmp8, num);
-            tmp4Result = tmp4(tmp5[1]);
+            const normalizer = tmp4(730);
+            const normalizeResult = normalizer.normalize(tmp8, num);
+            let tmp4Result = tmp4(692);
             if (tmp4Result.isPlainObject(normalizeResult)) {
-              const result = tmp4(tmp5[3]).addNonEnumerableProperty(normalizeResult, "__sentry_skip_normalization__", true);
+              tmp4Result = tmp4(687);
+              const result = tmp4Result.addNonEnumerableProperty(normalizeResult, "__sentry_skip_normalization__", true);
               obj[tmp6] = normalizeResult;
-              const tmp4Result1 = tmp4(tmp5[3]);
             }
             obj = {};
             const merged1 = Object.assign(contexts);
@@ -149,7 +124,7 @@ export const extraErrorDataIntegration = setupIntegration.defineIntegration(() =
           }
           tmp6 = obj.originalException.name || obj.originalException.constructor.name;
         }
-        obj2 = num(table[1]);
+        obj2 = _mod692;
       }
       return tmp3;
     }

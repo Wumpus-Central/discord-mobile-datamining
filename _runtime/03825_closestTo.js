@@ -1,20 +1,18 @@
 // === Module 3825: closestTo ===
 
 // Module 3825 (closestTo)
-import _typeof from "_typeof" /* 3650 */;
+import _typeof from "module_3650" /* 3650 */;
 import requiredArgs from "requiredArgs" /* 3651 */;
 
 if (!_typeof) {
-  let obj = { default: null };
-  obj[0] = _typeof;
+  let obj = { default: _typeof };
   let tmp3 = obj;
 } else {
   tmp3 = _typeof;
 }
 _typeof = tmp3;
 if (!requiredArgs) {
-  obj = { default: null };
-  obj[0] = requiredArgs;
+  obj = { default: requiredArgs };
   let tmp5 = obj;
 } else {
   tmp5 = requiredArgs;
@@ -22,11 +20,11 @@ if (!requiredArgs) {
 requiredArgs = tmp5;
 
 export default function closestTo(arg0, arg1) {
-  requiredArgs.default(2, arguments);
-  const defaultResult1 = _typeof.default(arg0);
+  absolute.default(2, arguments);
+  const defaultResult1 = date.default(arg0);
   if (isNaN(Number(defaultResult1))) {
     let _Date = Date;
-    let date = new Date(NaN);
+    date = new Date(NaN);
     return date;
   } else {
     const time = defaultResult1.getTime();
@@ -40,12 +38,12 @@ export default function closestTo(arg0, arg1) {
         typeof call === "unknown" ? slice() : call(arg1);
       }
     }
-    const item = items.forEach((arg0) => {
-      const defaultResult = closure_1_0.default(arg0);
+    const item = items.forEach((item) => {
+      const defaultResult = _typeof.default(item);
       if (isNaN(Number(defaultResult))) {
         const _Date = Date;
-        let date = new Date(NaN);
-        let absolute = NaN;
+        date = new Date(NaN);
+        absolute = NaN;
       } else {
         const _Math = Math;
         absolute = Math.abs(closure_2 - defaultResult.getTime());
@@ -59,7 +57,7 @@ export default function closestTo(arg0, arg1) {
         }
       }
     });
-    return _typeof;
+    return date;
   }
 };
 export default exports.default;

@@ -2,10 +2,11 @@
 
 // Module 912 (bindReporter)
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
-arg5.bindReporter = (arg0, arg1, arg2, arg3) => {
+
+export (arg0, arg1, arg2, arg3) => {
   closure_0 = arg0;
-  closure_1 = arg1;
-  closure_2 = arg2;
+  value = arg1;
+  dependencyMap = arg2;
   closure_3 = arg3;
   return (arg0) => {
     let tmp = value.value >= 0;
@@ -17,20 +18,18 @@ arg5.bindReporter = (arg0, arg1, arg2, arg3) => {
       tmp = tmp2;
     }
     if (tmp) {
-      let num = value2;
-      if (value2 == null) {
+      let num = value;
+      if (value == null) {
         num = 0;
       }
-      let diff = iter.value - num;
-      closure_5 = diff;
+      diff = iter.value - num;
       if (!diff) {
-        diff = undefined === value2;
+        diff = undefined === value;
       }
       tmp = diff;
     }
     if (tmp) {
-      value2 = iter.value;
-      iter.delta = closure_5;
+      iter.delta = diff;
       value = iter.value;
       let str = "poor";
       if (value <= dependencyMap[1]) {
@@ -41,7 +40,7 @@ arg5.bindReporter = (arg0, arg1, arg2, arg3) => {
         str = str2;
       }
       iter.rating = str;
-      callback(iter);
+      closure_0(iter);
     }
   };
-};
+}

@@ -1,23 +1,23 @@
 // === Module 5256: ? ===
 
 // Module 5256
-import getDataView from "getDataView" /* 5213 */;
-import readTag from "readTag" /* 5233 */;
-import importDefaultResult1 from "importDefaultResult1" /* 5234 */;
+import _mod5213 from "module_5213" /* 5213 */;
+import get0thIfdOffset from "get0thIfdOffset" /* 5233 */;
+import IFD_TYPE_0TH from "IFD_TYPE_0TH" /* 5234 */;
 
 require = arg1;
 const dependencyMap = arg6;
-arg5.default = {
-  read(byteLength, sum, arg2, byteOrder) {
-    let obj = readTag;
-    const ifd = obj.readIfd(byteLength, importDefaultResult1.IFD_TYPE_CANON, sum, sum + arg2, byteOrder, arg4);
+
+export default {
+  read(byteLength, sum, arg2, byteOrder, arg4) {
+    let obj = get0thIfdOffset;
+    const ifd = obj.readIfd(byteLength, IFD_TYPE_0TH.IFD_TYPE_CANON, sum, sum + arg2, byteOrder, arg4);
     let tmp6 = ifd;
     if (ifd.ShotInfo) {
-      const value = ifd.ShotInfo.value;
+      value = ifd.ShotInfo.value;
       obj = {};
       if (undefined !== value[27]) {
-        obj = { value: null, description: null };
-        obj[0] = value[27];
+        obj = { value: value[27], description: null };
         let str = "None";
         if (0 !== value[27]) {
           let str2 = "Rotate 90 CW";
@@ -34,13 +34,13 @@ arg5.default = {
           }
           str = str2;
         }
-        obj[1] = str;
+        obj.description = str;
         obj.AutoRotate = obj;
       }
-      const tmp3Result = getDataView;
+      const tmp3Result = _mod5213;
       delete tmp[tmp2];
-      tmp6 = getDataView.objectAssign({}, ifd, obj);
-      const objectAssignResult = getDataView.objectAssign({}, ifd, obj);
+      tmp6 = _mod5213.objectAssign({}, ifd, obj);
+      const objectAssignResult = _mod5213.objectAssign({}, ifd, obj);
     }
     return tmp6;
   },

@@ -1,9 +1,9 @@
 // === Module 1042: ignoreRequireCycleLogs ===
 
 // Module 1042 (ignoreRequireCycleLogs)
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import _mod17 from "module_17" /* 17 */;
 
-const LogBox = get_ActivityIndicator.LogBox;
+const LogBox = _mod17.LogBox;
 
 export const ignoreRequireCycleLogs = function ignoreRequireCycleLogs(version) {
   let tmp = version;

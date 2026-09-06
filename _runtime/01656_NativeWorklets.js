@@ -1,29 +1,26 @@
 // === Module 1656: NativeWorklets ===
 
 // Module 1656 (NativeWorklets)
-import _createClassDefault from "_createClass" /* 42 */;
 import _classPrivateFieldKeyDefault from "_classPrivateFieldKey" /* 91 */;
-import t from "t" /* 1647 */;
-import valueUnpacker from "valueUnpacker" /* 1657 */;
-import ReanimatedTurboModule from "ReanimatedTurboModule" /* 1658 */;
-import closure_3 from "_classCallCheck" /* 41 */;
-import closure_4 from "_classPrivateFieldBase" /* 90 */;
+import _classCallCheck from "_classCallCheck" /* 41 */;
+import _createClass from "_createClass" /* 42 */;
+import _classPrivateFieldBase from "_classPrivateFieldBase" /* 90 */;
 
 const NativeWorklets = global;
-require = arg1;
+const require = arg1;
 let closure_5 = _classPrivateFieldKeyDefault("workletsModuleProxy");
 class NativeWorklets {
   constructor() {
     tmp = closure_3(this, NativeWorklets);
-    tmp2 = closure_5;
-    definePropertyResult = Object.defineProperty(this, closure_5, { writable: true, value: "a" });
-    tmp4 = NativeWorklets;
-    if (undefined === NativeWorklets.__workletsModuleProxy) {
+    tmp2 = hasOwnProperty;
+    definePropertyResult = Object.defineProperty(this, hasOwnProperty, { writable: true, value: "a" });
+    tmp4 = closure_0;
+    if (undefined === closure_0.__workletsModuleProxy) {
       tmp5 = closure_1;
-      tmp6 = closure_2;
-      obj = require("valueUnpacker");
+      tmp6 = c2;
+      obj = closure_1(c2[4]);
       valueUnpackerCode = obj.getValueUnpackerCode();
-      WorkletsTurboModule = require("ReanimatedTurboModule").WorkletsTurboModule;
+      WorkletsTurboModule = closure_1(c2[5]).WorkletsTurboModule;
       tmp8 = null;
       if (WorkletsTurboModule != null) {
         installTurboModuleResult = WorkletsTurboModule.installTurboModule(valueUnpackerCode);
@@ -31,11 +28,11 @@ class NativeWorklets {
     }
     if (undefined === tmp4.__workletsModuleProxy) {
       tmp11 = closure_1;
-      tmp12 = closure_2;
+      tmp12 = c2;
       tmp13 = new.target;
       str = "Native part of Reanimated doesn't seem to be initialized (Worklets).\nSee https://docs.swmansion.com/react-native-reanimated/docs/guides/troubleshooting#native-part-of-reanimated-doesnt-seem-to-be-initialized for more details.";
       tmp14 = new.target;
-      reanimatedError = new require("t").ReanimatedError("Native part of Reanimated doesn't seem to be initialized (Worklets).\nSee https://docs.swmansion.com/react-native-reanimated/docs/guides/troubleshooting#native-part-of-reanimated-doesnt-seem-to-be-initialized for more details.");
+      reanimatedError = new closure_1(c2[6]).ReanimatedError("Native part of Reanimated doesn't seem to be initialized (Worklets).\nSee https://docs.swmansion.com/react-native-reanimated/docs/guides/troubleshooting#native-part-of-reanimated-doesnt-seem-to-be-initialized for more details.");
       tmp16 = reanimatedError;
       throw reanimatedError;
     } else {
@@ -45,15 +42,14 @@ class NativeWorklets {
     }
   }
 }
-const items = [
-  {
-    key: "makeShareableClone",
-    value: function makeShareableClone(arg0, arg1, arg2) {
-      return callback2(this, closure_5)[closure_5].makeShareableClone(arg0, arg1, arg2);
-    }
+const entry = {
+  key: "makeShareableClone",
+  value: function makeShareableClone(arg0, arg1, arg2) {
+    return _classPrivateFieldBase(this, closure_5)[closure_5].makeShareableClone(arg0, arg1, arg2);
   }
-];
-let closure_6 = _createClassDefault(NativeWorklets, items);
+};
+const items = [entry];
+let closure_6 = _createClass(NativeWorklets, items);
 
 export const createNativeWorkletsModule = function createNativeWorkletsModule() {
   return new closure_6();

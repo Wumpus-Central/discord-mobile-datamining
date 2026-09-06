@@ -1,20 +1,21 @@
 // === Module 1850: ? ===
 
 // Module 1850
-import noopDefault from "noop" /* 19 */;
-import cancelAnimationDefault from "cancelAnimation" /* 1636 */;
-import { Platform } from "get ActivityIndicator" /* 17 */;
-import { jsx } from "jsxProd" /* 21 */;
+import cancelAnimation2 from "cancelAnimation" /* 1636 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-noopDefault;
-let closure_4 = cancelAnimationDefault.createAnimatedComponent(require("nativeEventEmitter").ClippingScrollView);
+const cancelAnimation = cancelAnimation2;
+
+require = fn;
+const Platform = fn(17).Platform;
+const jsx = fn(21).jsx;
+let closure_4 = cancelAnimation.createAnimatedComponent(fn(1626).ClippingScrollView);
 let closure_5 = { code: "function pnpm_indexTsx1(){const{inverted,bottomPadding,contentInset}=this.__closure;var _contentInset,_contentInset2,_contentInset3,_contentInset4;const dynamicTop=inverted?bottomPadding.value:0;const dynamicBottom=!inverted?bottomPadding.value:0;return{dynamic:{top:dynamicTop,bottom:dynamicBottom},effective:{top:dynamicTop+(((_contentInset=contentInset)===null||_contentInset===void 0?void 0:_contentInset.top)||0),bottom:dynamicBottom+(((_contentInset2=contentInset)===null||_contentInset2===void 0?void 0:_contentInset2.bottom)||0),left:((_contentInset3=contentInset)===null||_contentInset3===void 0?void 0:_contentInset3.left)||0,right:((_contentInset4=contentInset)===null||_contentInset4===void 0?void 0:_contentInset4.right)||0}};}" };
 let closure_6 = { code: "function pnpm_indexTsx2(){const{insets}=this.__closure;return insets.value.effective;}" };
 let closure_7 = { code: "function pnpm_indexTsx3(current,previous){const{onContentInsetChange,runOnJS}=this.__closure;if(!onContentInsetChange){return;}if(previous&&current.top===previous.top&&current.bottom===previous.bottom&&current.left===previous.left&&current.right===previous.right){return;}runOnJS(onContentInsetChange)(current);}" };
-let closure_8 = { code: "function pnpm_indexTsx4(){const{insets,scrollIndicatorPadding,bottomPadding,inverted,scrollIndicatorInsets,contentOffsetY,prevContentOffsetY}=this.__closure;var _scrollIndicatorPaddi,_scrollIndicatorInset,_scrollIndicatorInset2,_scrollIndicatorInset3,_scrollIndicatorInset4;const{dynamic:dynamic,effective:effective}=insets.value;const indicatorPadding=(_scrollIndicatorPaddi=scrollIndicatorPadding)!==null&&_scrollIndicatorPaddi!==void 0?_scrollIndicatorPaddi:bottomPadding;const indicatorTop=(inverted?indicatorPadding.value:0)+(((_scrollIndicatorInset=scrollIndicatorInsets)===null||_scrollIndicatorInset===void 0?void 0:_scrollIndicatorInset.top)||0);const indicatorBottom=(!inverted?indicatorPadding.value:0)+(((_scrollIndicatorInset2=scrollIndicatorInsets)===null||_scrollIndicatorInset2===void 0?void 0:_scrollIndicatorInset2.bottom)||0);const result={contentInset:effective,scrollIndicatorInsets:{bottom:indicatorBottom,top:indicatorTop,right:(_scrollIndicatorInset3=scrollIndicatorInsets)===null||_scrollIndicatorInset3===void 0?void 0:_scrollIndicatorInset3.right,left:(_scrollIndicatorInset4=scrollIndicatorInsets)===null||_scrollIndicatorInset4===void 0?void 0:_scrollIndicatorInset4.left},contentInsetBottom:dynamic.bottom,contentInsetTop:dynamic.top};if(contentOffsetY){const curr=contentOffsetY.value;if(curr!==prevContentOffsetY.value){prevContentOffsetY.value=curr;result.contentOffset={x:0,y:curr};}}return result;}" };
+let value = { code: "function pnpm_indexTsx4(){const{insets,scrollIndicatorPadding,bottomPadding,inverted,scrollIndicatorInsets,contentOffsetY,prevContentOffsetY}=this.__closure;var _scrollIndicatorPaddi,_scrollIndicatorInset,_scrollIndicatorInset2,_scrollIndicatorInset3,_scrollIndicatorInset4;const{dynamic:dynamic,effective:effective}=insets.value;const indicatorPadding=(_scrollIndicatorPaddi=scrollIndicatorPadding)!==null&&_scrollIndicatorPaddi!==void 0?_scrollIndicatorPaddi:bottomPadding;const indicatorTop=(inverted?indicatorPadding.value:0)+(((_scrollIndicatorInset=scrollIndicatorInsets)===null||_scrollIndicatorInset===void 0?void 0:_scrollIndicatorInset.top)||0);const indicatorBottom=(!inverted?indicatorPadding.value:0)+(((_scrollIndicatorInset2=scrollIndicatorInsets)===null||_scrollIndicatorInset2===void 0?void 0:_scrollIndicatorInset2.bottom)||0);const result={contentInset:effective,scrollIndicatorInsets:{bottom:indicatorBottom,top:indicatorTop,right:(_scrollIndicatorInset3=scrollIndicatorInsets)===null||_scrollIndicatorInset3===void 0?void 0:_scrollIndicatorInset3.right,left:(_scrollIndicatorInset4=scrollIndicatorInsets)===null||_scrollIndicatorInset4===void 0?void 0:_scrollIndicatorInset4.left},contentInsetBottom:dynamic.bottom,contentInsetTop:dynamic.top};if(contentOffsetY){const curr=contentOffsetY.value;if(curr!==prevContentOffsetY.value){prevContentOffsetY.value=curr;result.contentOffset={x:0,y:curr};}}return result;}" };
 
-export default require("noop").forwardRef((bottomPadding, ref) => {
+export default fn(19).forwardRef((bottomPadding, ref) => {
   bottomPadding = bottomPadding.bottomPadding;
   const scrollIndicatorPadding = bottomPadding.scrollIndicatorPadding;
   const contentInset = bottomPadding.contentInset;
@@ -23,12 +24,11 @@ export default require("noop").forwardRef((bottomPadding, ref) => {
   const contentOffsetY = bottomPadding.contentOffsetY;
   const onContentInsetChange = bottomPadding.onContentInsetChange;
   ({ ScrollViewComponent, applyWorkaroundForContentInsetHitTestBug, children } = bottomPadding);
-  const merged = Object.assign(bottomPadding, Object.create(null));
-  let sharedValue;
+  const merged = Object.assign(bottomPadding, Object.assign({ ScrollViewComponent: 0, bottomPadding: 0, scrollIndicatorPadding: 0, contentInset: 0, scrollIndicatorInsets: 0, inverted: 0, contentOffsetY: 0, applyWorkaroundForContentInsetHitTestBug: 0, onContentInsetChange: 0, children: 0 }));
   let derivedValue;
   let obj = bottomPadding(contentInset[3]);
-  sharedValue = obj.useSharedValue(null);
-  obj1 = bottomPadding(contentInset[3]);
+  const sharedValue = obj.useSharedValue(null);
+  let obj1 = bottomPadding(contentInset[3]);
   class T {
     constructor() {
       num = 0;
@@ -51,7 +51,7 @@ export default require("noop").forwardRef((bottomPadding, ref) => {
       if (!num3) {
         num3 = 0;
       }
-      obj = { top: num + num3, bottom: null, left: null, right: null };
+      rect = { top: num + num3, bottom: null, left: null, right: null };
       num4 = undefined;
       if (rect != null) {
         num4 = rect.bottom;
@@ -59,7 +59,7 @@ export default require("noop").forwardRef((bottomPadding, ref) => {
       if (!num4) {
         num4 = 0;
       }
-      obj[1] = num2 + num4;
+      rect.bottom = num2 + num4;
       num5 = undefined;
       if (rect != null) {
         num5 = rect.left;
@@ -67,7 +67,7 @@ export default require("noop").forwardRef((bottomPadding, ref) => {
       if (!num5) {
         num5 = 0;
       }
-      obj[2] = num5;
+      rect.left = num5;
       num6 = undefined;
       if (rect != null) {
         num6 = rect.right;
@@ -75,8 +75,8 @@ export default require("noop").forwardRef((bottomPadding, ref) => {
       if (!num6) {
         num6 = 0;
       }
-      obj[3] = num6;
-      obj[1] = obj;
+      rect.right = num6;
+      obj.effective = rect;
       return obj;
     }
   }
@@ -130,8 +130,7 @@ export default require("noop").forwardRef((bottomPadding, ref) => {
         tmp4 = top.right === top2.right;
       }
       if (!tmp4) {
-        bottomPadding(contentInset[3]).runOnJS(tmp)(top);
-        const obj = bottomPadding(contentInset[3]);
+        cancelAnimation2.runOnJS(tmp)(top);
       }
     }
   };
@@ -143,7 +142,7 @@ export default require("noop").forwardRef((bottomPadding, ref) => {
   const animatedReaction = tmp2Result.useAnimatedReaction(B, fn, items1);
   tmp2Result = tmp2(tmp3[3]);
   const fn2 = function w() {
-    let value = derivedValue.value;
+    value = derivedValue.value;
     let iter = scrollIndicatorPadding;
     if (scrollIndicatorPadding == null) {
       iter = bottomPadding;
@@ -152,7 +151,7 @@ export default require("noop").forwardRef((bottomPadding, ref) => {
     if (inverted) {
       num = iter.value;
     }
-    const rect = scrollIndicatorInsets;
+    let rect = scrollIndicatorInsets;
     let num2;
     if (scrollIndicatorInsets != null) {
       num2 = rect.top;
@@ -160,7 +159,7 @@ export default require("noop").forwardRef((bottomPadding, ref) => {
     if (!num2) {
       num2 = 0;
     }
-    let obj = { contentInset: value.effective, scrollIndicatorInsets: null, contentInsetBottom: null, contentInsetTop: null };
+    const obj = { contentInset: value.effective, scrollIndicatorInsets: null, contentInsetBottom: null, contentInsetTop: null };
     let num3 = 0;
     const sum = num + num2;
     if (!inverted) {
@@ -173,26 +172,25 @@ export default require("noop").forwardRef((bottomPadding, ref) => {
     if (!num4) {
       num4 = 0;
     }
-    obj = { bottom: num3 + num4, top: sum, right: null, left: null };
+    rect = { bottom: num3 + num4, top: sum, right: null, left: null };
     let right;
     if (rect != null) {
       right = rect.right;
     }
-    obj[2] = right;
+    rect.right = right;
     let left;
     if (rect != null) {
       left = rect.left;
     }
-    obj[3] = left;
-    obj[1] = obj;
-    ({ bottom: obj[2], top: obj[3] } = value.dynamic);
+    rect.left = left;
+    obj.scrollIndicatorInsets = rect;
+    ({ bottom: obj.contentInsetBottom, top: obj.contentInsetTop } = value.dynamic);
     if (contentOffsetY) {
       value = contentOffsetY.value;
       if (value !== sharedValue.value) {
         sharedValue.value = value;
-        obj = { x: 0, y: null };
-        obj[1] = value;
-        obj.contentOffset = obj;
+        const point = { x: 0, y: value };
+        obj.contentOffset = point;
       }
     }
     return obj;
@@ -227,6 +225,6 @@ export default require("noop").forwardRef((bottomPadding, ref) => {
   obj1 = { ref, animatedProps };
   const merged1 = Object.assign(merged);
   obj1.children = children;
-  obj[3] = scrollIndicatorInsets(ScrollViewComponent, obj1);
+  obj.children = scrollIndicatorInsets(ScrollViewComponent, obj1);
   return scrollIndicatorInsets(inverted, obj);
 });

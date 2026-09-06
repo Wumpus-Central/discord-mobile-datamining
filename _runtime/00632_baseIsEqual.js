@@ -1,7 +1,7 @@
 // === Module 632: baseIsEqual ===
 
 // Module 632 (baseIsEqual)
-import isObjectLike from "isObjectLike" /* 535 */;
+import _mod535 from "module_535" /* 535 */;
 
 function baseIsEqual(arg0, arg1, arg2, arg3, arg4) {
   if (arg0 === arg1) {
@@ -9,7 +9,7 @@ function baseIsEqual(arg0, arg1, arg2, arg3, arg4) {
   } else {
     if (null != arg0) {
       if (null != arg1) {
-        if (isObjectLike(arg0)) {
+        if (_mod535(arg0)) {
           let tmp11 = tmp3(633)(arg0, arg1, arg2, arg3, baseIsEqual, arg4);
         }
       }

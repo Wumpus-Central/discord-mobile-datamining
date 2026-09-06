@@ -1,14 +1,15 @@
 // === Module 14248: InsertUnicodeExtensionAndCanonicalize ===
 
 // Module 14248 (InsertUnicodeExtensionAndCanonicalize)
-import isMatched from "isMatched" /* 14241 */;
+import _mod14241 from "module_14241" /* 14241 */;
 import CanonicalizeUnicodeLocaleId from "CanonicalizeUnicodeLocaleId" /* 14249 */;
 
 require = arg1;
 const dependencyMap = arg6;
-arg5.InsertUnicodeExtensionAndCanonicalize = function InsertUnicodeExtensionAndCanonicalize(arr) {
+
+export const InsertUnicodeExtensionAndCanonicalize = function InsertUnicodeExtensionAndCanonicalize(arr, arg1, arg2) {
   let length;
-  isMatched.invariant(-1 === arr.indexOf("-u-"), "Expected locale to not have a Unicode locale extension");
+  _mod14241.invariant(-1 === arr.indexOf("-u-"), "Expected locale to not have a Unicode locale extension");
   let num = 0;
   let str = "-u";
   let str2 = "-u";
@@ -27,10 +28,9 @@ arg5.InsertUnicodeExtensionAndCanonicalize = function InsertUnicodeExtensionAndC
   if (0 < arg2.length) {
     do {
       let iter = arg2[num2];
-      let value = iter.value;
+      value = iter.value;
       let concat2 = "-".concat;
       let sum = tmp2 + "-".concat(iter.key);
-      let tmp5 = num2;
       let sum1 = sum;
       if ("" !== value) {
         let concat3 = "-".concat;

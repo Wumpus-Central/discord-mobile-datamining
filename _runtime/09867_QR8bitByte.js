@@ -5,7 +5,7 @@ import _mod9868 from "module_9868" /* 9868 */;
 
 class QR8bitByte {
   constructor(arg0) {
-    obj = { mode: require("module_9868").MODE_8BIT_BYTE, data: global };
+    obj = { mode: closure_0(closure_1[0]).MODE_8BIT_BYTE, data: global };
     return;
   }
 }

@@ -1,33 +1,30 @@
 // === Module 8475: extractFont ===
 
 // Module 8475 (extractFont)
-import noopAll from "noop" /* 19 */;
 import pickNotNil from "pickNotNil" /* 8469 */;
 import extractLengthListDefault from "extractLengthList" /* 8474 */;
-import { Children } from "noop" /* 19 */;
-import { jsx } from "jsxProd" /* 21 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
+require = fn;
 function extractFont(propsAndStylesResult) {
   ({ fontFamily, fontFeatureSettings, font } = propsAndStylesResult);
   ({ fontData, fontStyle, fontVariant, fontWeight, fontStretch, fontSize, textAnchor, textDecoration, letterSpacing, wordSpacing, kerning, fontVariantLigatures, fontVariationSettings } = propsAndStylesResult);
-  let obj = pickNotNil;
-  obj = { fontData, fontStyle, fontVariant, fontWeight, fontStretch, fontSize, fontFamily: null, textAnchor: null, textDecoration: null, letterSpacing: null, wordSpacing: null, kerning: null, fontFeatureSettings: null, fontVariantLigatures: null, fontVariationSettings: null };
+  let obj = { fontData, fontStyle, fontVariant, fontWeight, fontStretch, fontSize, fontFamily: null, textAnchor: null, textDecoration: null, letterSpacing: null, wordSpacing: null, kerning: null, fontFeatureSettings: null, fontVariantLigatures: null, fontVariationSettings: null };
   let replaced = null;
   if (fontFamily) {
-    const str = fontFamily.split(closure_9)[0];
-    replaced = fontFamily.split(closure_9)[0].replace(closure_7, "").replace(closure_8, "");
-    const str3 = fontFamily.split(closure_9)[0].replace(closure_7, "");
+    const str = fontFamily.split(re9)[0];
+    replaced = fontFamily.split(re9)[0].replace(re7, "").replace(re8, "");
+    const str3 = fontFamily.split(re9)[0].replace(re7, "");
   }
-  obj[6] = replaced;
-  obj[7] = textAnchor;
-  obj[8] = textDecoration;
-  obj[9] = letterSpacing;
-  obj[10] = wordSpacing;
-  obj[11] = kerning;
-  obj[12] = fontFeatureSettings;
-  obj[13] = fontVariantLigatures;
-  obj[14] = fontVariationSettings;
+  obj.fontFamily = replaced;
+  obj.textAnchor = textAnchor;
+  obj.textDecoration = textDecoration;
+  obj.letterSpacing = letterSpacing;
+  obj.wordSpacing = wordSpacing;
+  obj.kerning = kerning;
+  obj.fontFeatureSettings = fontFeatureSettings;
+  obj.fontVariantLigatures = fontVariantLigatures;
+  obj.fontVariationSettings = fontVariationSettings;
   const pickNotNilResult = obj.pickNotNil(obj);
   if (typeof font !== "string") {
     obj = {};
@@ -36,9 +33,10 @@ function extractFont(propsAndStylesResult) {
     return obj;
   } else {
     const _Object = Object;
+    hasOwnProperty = Object.prototype.hasOwnProperty;
     const call = hasOwnProperty.call;
     if (!(typeof call === "unknown" ? hasOwnProperty(font) : call(closure_10, font))) {
-      fontFeatureSettings = regex.exec(font);
+      fontFeatureSettings = re6.exec(font);
       if (!fontFeatureSettings) {
         tmp23[font] = null;
       }
@@ -49,25 +47,24 @@ function extractFont(propsAndStylesResult) {
     if (!num) {
       num = 12;
     }
-    obj1 = { fontSize: null, fontWeight: null, fontStyle: null, fontFamily: null };
-    obj1[0] = num;
+    const obj1 = { fontSize: num, fontWeight: null, fontStyle: null, fontFamily: null };
     let str4 = "normal";
     let str5 = "normal";
     if (match) {
       str5 = "bold";
     }
-    obj1[1] = str5;
+    obj1.fontWeight = str5;
     if (match1) {
       str4 = "italic";
     }
-    obj1[2] = str4;
+    obj1.fontStyle = str4;
     let replaced1 = null;
     if (fontFeatureSettings[3]) {
-      const str7 = str6.split(closure_9)[0];
-      replaced1 = str6.split(closure_9)[0].replace(closure_7, "").replace(closure_8, "");
-      const str9 = str6.split(closure_9)[0].replace(closure_7, "");
+      const str7 = str6.split(re9)[0];
+      replaced1 = str6.split(re9)[0].replace(re7, "").replace(re8, "");
+      const str9 = str6.split(re9)[0].replace(re7, "");
     }
-    obj1[3] = replaced1;
+    obj1.fontFamily = replaced1;
     closure_10[font] = obj1;
     const obj3 = /bold/;
     const obj4 = /italic/;
@@ -77,21 +74,22 @@ function getChild(str) {
   if (typeof str === "string") {
     const obj = { children: null };
     const _String = String;
-    obj[0] = String(str);
-    let tmp4 = <closure_3>{null}</closure_3>;
+    obj.children = String(str);
+    let tmp4 = <global>{null}</global>;
   } else {
     tmp4 = str;
   }
   return tmp4;
 }
-noopAll;
+const Children = fn(19).Children;
+const jsx = fn(21).jsx;
 const re6 = /^\s*((?:(?:normal|bold|italic)\s+)*)(?:(\d+(?:\.\d+)?(?:%|px|em|pt|pc|mm|cm|in]))*(?:\s*\/.*?)?\s+)?\s*"?([^"]*)/i;
 const re7 = /^[\s"']*/;
 const re8 = /[\s"']*$/;
 const re9 = /\s*,\s*/g;
 let closure_10 = {};
 
-export default function extractText(children) {
+export default function extractText(children, arg1) {
   children = children.children;
   if (typeof children !== "string") {
     if (typeof children !== "number") {
@@ -108,31 +106,19 @@ export default function extractText(children) {
       const _String2 = String;
       StringResult = String(children);
     }
-    let obj = { content: null, children: null, inlineSize: null, baselineShift: null, verticalAlign: null, alignmentBaseline: null, font: null, x: null, y: null, dx: null, dy: null, rotate: null };
-    obj[0] = StringResult;
-    obj[1] = mapped;
-    obj[2] = tmp6;
-    obj[3] = tmp7;
-    obj[4] = tmp8;
-    obj[5] = tmp9;
-    obj[6] = extractFont(children);
-    obj[7] = extractLengthListDefault(tmp);
-    obj[8] = extractLengthListDefault(tmp2);
-    obj[9] = extractLengthListDefault(tmp3);
-    obj[10] = extractLengthListDefault(tmp4);
-    obj[11] = extractLengthListDefault(tmp5);
-    return obj;
+    const point = { content: StringResult, children: mapped, inlineSize: tmp6, baselineShift: tmp7, verticalAlign: tmp8, alignmentBaseline: tmp9, font: extractFont(children), x: extractLengthListDefault(tmp), y: extractLengthListDefault(tmp2), dx: extractLengthListDefault(tmp3), dy: extractLengthListDefault(tmp4), rotate: extractLengthListDefault(tmp5) };
+    return point;
   }
   let tmp13 = null;
   if (arg1) {
-    obj = { children: null };
+    const obj = { children: null };
     const _String = String;
-    obj[0] = String(children);
-    tmp13 = <closure_3>{null}</closure_3>;
+    obj.children = String(children);
+    tmp13 = <global>{null}</global>;
   }
   mapped = tmp13;
 };
 export { extractFont };
 export function setTSpan(importDefaultResultResult) {
-  closure_3 = importDefaultResultResult;
+  global = importDefaultResultResult;
 }

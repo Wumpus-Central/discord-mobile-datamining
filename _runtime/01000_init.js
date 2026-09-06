@@ -1,11 +1,11 @@
 // === Module 1000: init ===
 
 // Module 1000 (init)
-import init from "init" /* 1001 */;
+import _mod1001 from "module_1001" /* 1001 */;
 import captureReactException from "captureReactException" /* 1002 */;
-import _isNativeReflectConstruct from "_isNativeReflectConstruct" /* 1003 */;
-import _isNativeReflectConstruct2 from "_isNativeReflectConstruct" /* 1006 */;
-import createReduxEnhancer from "createReduxEnhancer" /* 1008 */;
+import _mod1003 from "module_1003" /* 1003 */;
+import _mod1006 from "module_1006" /* 1006 */;
+import _mod1008 from "module_1008" /* 1008 */;
 import reactRouterV3BrowserTracingIntegration from "reactRouterV3BrowserTracingIntegration" /* 1009 */;
 import tanstackRouterBrowserTracingIntegration from "tanstackRouterBrowserTracingIntegration" /* 1010 */;
 import instrumentReactRouter from "instrumentReactRouter" /* 1011 */;
@@ -23,22 +23,21 @@ if (typeof call === "unknown") {
 if (!hasOwnPropertyResult) {
   if (hasOwnPropertyResult) {
     const _Object2 = Object;
-    const obj = { enumerable: true, value: null };
-    obj[1] = feedbackAsyncIntegration.__proto__;
+    const obj = { enumerable: true, value: feedbackAsyncIntegration.__proto__ };
     Object.defineProperty(exports, "__proto__", obj);
   }
   const _Object3 = Object;
   const keys = Object.keys(feedbackAsyncIntegration);
-  const item = keys.forEach((key10009) => {
-    if ("default" === key10009) {
+  const item = keys.forEach((item) => {
+    if ("default" === item) {
       if (!tmp) {
-        exports[key10009] = feedbackAsyncIntegration[key10009];
+        exports[item] = feedbackAsyncIntegration[item];
       }
     } else {
       const _Object = Object;
+      hasOwnProperty = Object.prototype.hasOwnProperty;
       const call = hasOwnProperty.call;
-      typeof call === "unknown" ? hasOwnProperty(key10009) : call(exports, key10009);
-      const tmp3 = exports;
+      typeof call === "unknown" ? hasOwnProperty(item) : call(exports, item);
     }
   });
 } else {
@@ -51,15 +50,15 @@ if (!hasOwnPropertyResult) {
   }
 }
 
-export const init = init.init;
+export const init = _mod1001.init;
 export const captureReactException = captureReactException.captureReactException;
 export const reactErrorHandler = captureReactException.reactErrorHandler;
-export const Profiler = _isNativeReflectConstruct.Profiler;
-export const useProfiler = _isNativeReflectConstruct.useProfiler;
-export const withProfiler = _isNativeReflectConstruct.withProfiler;
-export const ErrorBoundary = _isNativeReflectConstruct2.ErrorBoundary;
-export const withErrorBoundary = _isNativeReflectConstruct2.withErrorBoundary;
-export const createReduxEnhancer = createReduxEnhancer.createReduxEnhancer;
+export const Profiler = _mod1003.Profiler;
+export const useProfiler = _mod1003.useProfiler;
+export const withProfiler = _mod1003.withProfiler;
+export const ErrorBoundary = _mod1006.ErrorBoundary;
+export const withErrorBoundary = _mod1006.withErrorBoundary;
+export const createReduxEnhancer = _mod1008.createReduxEnhancer;
 export const reactRouterV3BrowserTracingIntegration = reactRouterV3BrowserTracingIntegration.reactRouterV3BrowserTracingIntegration;
 export const tanstackRouterBrowserTracingIntegration = tanstackRouterBrowserTracingIntegration.tanstackRouterBrowserTracingIntegration;
 export const reactRouterV4BrowserTracingIntegration = instrumentReactRouter.reactRouterV4BrowserTracingIntegration;

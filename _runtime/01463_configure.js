@@ -2,65 +2,68 @@
 
 // Module 1463 (configure)
 import StateDefault from "State" /* 1465 */;
-import _modAll1470 from "module_1470" /* 1470 */;
-import closure_3 from "_slicedToArray" /* 32 */;
-import noop from "noop" /* 19 */;
-import { Platform } from "get ActivityIndicator" /* 17 */;
-import closure_7 from "module_1464" /* 1464 */;
+import NetInfoStateTypeAll from "NetInfoStateType" /* 1470 */;
+import _slicedToArray from "module_32" /* 32 */;
+import module_1464 from "module_1464" /* 1464 */;
 
 function configure(arg0) {
-  const obj = {};
-  const merged = Object.assign(closure_7);
+  const merged = Object.assign(module_1464);
   const merged1 = Object.assign(arg0);
+  module_1464 = {};
   if (closure_8) {
     closure_8.tearDown();
-    if (typeof createState !== "function") {
-      HermesBuiltin.throwTypeError();
+    if (typeof createState === "function") {
+      const tmp10 = new StateDefault(module_1464);
+      closure_8 = tmp10;
+    } else {
+      throw new TypeError("Trying to call a non-function");
     }
-    const tmp10 = new StateDefault(obj);
-    closure_8 = tmp10;
   }
 }
 function fetch(arg0) {
   let obj = closure_8;
   if (!closure_8) {
-    if (typeof createState !== "function") {
-      HermesBuiltin.throwTypeError();
+    if (typeof createState === "function") {
+      const tmp7 = new StateDefault(module_1464);
+      closure_8 = tmp7;
+      obj = tmp7;
+    } else {
+      throw new TypeError("Trying to call a non-function");
     }
-    const tmp7 = new StateDefault(closure_7);
-    closure_8 = tmp7;
-    obj = tmp7;
   }
   return obj.latest(arg0);
 }
 function refresh() {
   let obj = closure_8;
   if (!closure_8) {
-    if (typeof createState !== "function") {
-      HermesBuiltin.throwTypeError();
+    if (typeof createState === "function") {
+      const tmp7 = new StateDefault(module_1464);
+      closure_8 = tmp7;
+      obj = tmp7;
+    } else {
+      throw new TypeError("Trying to call a non-function");
     }
-    const tmp7 = new StateDefault(closure_7);
-    closure_8 = tmp7;
-    obj = tmp7;
   }
   if (c10) {
     let cleanupPromise = new Promise((arg0) => {
-
+      closure_11.push(arg0);
     });
   } else {
     c10 = true;
     const _fetchCurrentStateResult = obj._fetchCurrentState();
-    cleanupPromise = obj._fetchCurrentState().then((arg0) => {
-      closure_0 = arg0;
-      const item = arr.forEach((arg0) => arg0(closure_0));
-      return arg0;
+    cleanupPromise = obj._fetchCurrentState().then((result) => {
+      closure_0 = result;
+      const item = closure_11.forEach((fn) => fn(closure_0));
+      closure_11 = [];
+      return result;
     }).finally(() => {
       c10 = false;
     });
-    const nextPromise = obj._fetchCurrentState().then((arg0) => {
-      closure_0 = arg0;
-      const item = arr.forEach((arg0) => arg0(closure_0));
-      return arg0;
+    const nextPromise = obj._fetchCurrentState().then((result) => {
+      closure_0 = result;
+      const item = closure_11.forEach((fn) => fn(closure_0));
+      closure_11 = [];
+      return result;
     });
   }
   return cleanupPromise;
@@ -69,61 +72,66 @@ function addEventListener(arg0) {
   importDefault = arg0;
   let obj = closure_8;
   if (!closure_8) {
-    if (typeof createState !== "function") {
-      HermesBuiltin.throwTypeError();
+    if (typeof createState === "function") {
+      const tmp7 = new StateDefault(module_1464);
+      closure_8 = tmp7;
+      obj = tmp7;
+    } else {
+      throw new TypeError("Trying to call a non-function");
     }
-    const tmp7 = new StateDefault(closure_7);
-    closure_8 = tmp7;
-    obj = tmp7;
   }
   obj.add(arg0);
   return () => {
-    if (closure_1_8) {
-      closure_1_8.remove(f73164);
+    if (closure_8) {
+      closure_8.remove(f73164);
     }
   };
 }
 function useNetInfo(arg0) {
   if (arg0) {
     let obj = {};
-    const merged = Object.assign(closure_7);
+    const merged = Object.assign(module_1464);
     const merged1 = Object.assign(arg0);
     if (closure_8) {
       obj2.tearDown();
-      if (typeof createState !== "function") {
-        HermesBuiltin.throwTypeError();
+      if (typeof createState === "function") {
+        const tmp13 = new tmp(1465)(obj);
+        closure_8 = tmp13;
+      } else {
+        throw new TypeError("Trying to call a non-function");
       }
-      const tmp13 = new tmp(1465)(obj);
-      closure_8 = tmp13;
     }
     obj2 = closure_8;
     tmp = importDefault;
   }
-  obj = { type: _modAll1470.NetInfoStateType.unknown, isConnected: null, isInternetReachable: null, details: null };
-  const tmp15 = callback(callback2(obj), 2);
+  obj = { type: NetInfoStateTypeAll.NetInfoStateType.unknown, isConnected: null, isInternetReachable: null, details: null };
+  const tmp15 = _slicedToArray(closure_4(obj), 2);
   importDefault = tmp15[1];
-  callback3(() => {
+  closure_5(() => {
+    let f73164 = closure_0;
     obj = closure_8;
     if (!closure_8) {
-      if (typeof closure_1_9 !== "function") {
-        HermesBuiltin.throwTypeError();
+      if (typeof createState === "function") {
+        const tmp8 = new StateDefault(module_1464);
+        closure_8 = tmp8;
+        obj = tmp8;
+      } else {
+        throw new TypeError("Trying to call a non-function");
       }
-      const tmp8 = new callback(closure_1_2[4])(obj);
-      closure_8 = tmp8;
-      obj = tmp8;
     }
-    obj.add(f73164);
+    obj.add(closure_0);
     f73164 = () => {
-      if (closure_1_8) {
-        closure_1_8.remove(f73164);
+      if (closure_8) {
+        closure_8.remove(f73164);
       }
     };
     return () => {
-      if (typeof f73164 !== "function") {
-        HermesBuiltin.throwTypeError();
-      }
-      if (closure_1_8) {
-        closure_1_8.remove(f73164);
+      if (typeof f73164 === "function") {
+        if (closure_1_8) {
+          closure_1_8.remove(closure_128_0);
+        }
+      } else {
+        throw new TypeError("Trying to call a non-function");
       }
     };
   }, []);
@@ -135,56 +143,54 @@ function useNetInfoInstance() {
     flag = false;
   }
   importAll = arg1;
-  let first;
-  let callback;
-  let callback2;
-  let tmp = callback(callback2(), 2);
-  first = tmp[0];
-  callback = tmp[1];
-  let obj = { type: importAll(first[5]).NetInfoStateType.unknown, isConnected: null, isInternetReachable: null, details: null };
-  const tmp3 = callback(callback2(obj), 2);
-  callback2 = tmp3[1];
+  _slicedToArray = undefined;
+  closure_4 = undefined;
+  let tmp = _slicedToArray(closure_4(), 2);
+  const first = tmp[0];
+  _slicedToArray = tmp[1];
+  let obj = { type: require("NetInfoStateType").NetInfoStateType.unknown, isConnected: null, isInternetReachable: null, details: null };
+  const tmp3 = _slicedToArray(closure_4(obj), 2);
+  closure_4 = tmp3[1];
   const items = [flag, arg1];
-  callback3(() => {
+  closure_5(() => {
     if (!flag) {
       const obj = {};
-      const merged = Object.assign(flag(first[3]));
+      const merged = Object.assign(module_1464);
       const merged1 = Object.assign(closure_1);
-      const obj2 = new flag(first[4])(obj);
-      callback(obj2);
+      const obj2 = new StateDefault(obj);
+      closure_3(obj2);
       obj2.add(closure_4);
       return obj2.tearDown;
     }
   }, items);
-  obj = {
-    netInfo: tmp3[0],
-    refresh: callback4(() => {
-      let tmp = first;
-      if (first) {
-        tmp = !c10;
-      }
-      if (tmp) {
-        c10 = true;
-        first._fetchCurrentState().finally(() => {
-          c10 = false;
-        });
-        const _fetchCurrentStateResult = first._fetchCurrentState();
-      }
-    }, items1)
-  };
-  items1 = [first];
+  obj = { netInfo: tmp3[0], refresh: null };
+  const items1 = [first];
+  obj.refresh = closure_6(() => {
+    let tmp = first;
+    if (first) {
+      tmp = !c10;
+    }
+    if (tmp) {
+      c10 = true;
+      first._fetchCurrentState().finally(() => {
+        c10 = false;
+      });
+      const _fetchCurrentStateResult = first._fetchCurrentState();
+    }
+  }, items1);
   return obj;
 }
-({ useState: c4, useEffect: c5, useCallback: closure_6 } = noop);
-let c8 = null;
+const noop = fn(19);
+({ useState: closure_4, useEffect: hasOwnProperty, useCallback: metroRequire } = noop);
+const Platform = fn(17).Platform;
+let closure_8 = null;
 function createState() {
 
 }
 let c10 = false;
 let closure_11 = [];
-for (const key10038 in require("module_1470")) {
-  let tmp3 = key10038;
-  arg5[key10038] = require("module_1470")[key10038];
+for (const key10038 in require("NetInfoStateType")) {
+  arg5[key10038] = require("NetInfoStateType")[key10038];
   continue;
 }
 

@@ -1,12 +1,12 @@
 // === Module 4987: LinearGradient ===
 
 // Module 4987 (LinearGradient)
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import LinearGradientDefault from "LinearGradient" /* 4989 */;
-import importDefaultResult from "_isNativeReflectConstruct" /* 4988 */;
+import _mod17 from "module_17" /* 17 */;
+import _modDef4989 from "module_4989" /* 4989 */;
+import _isNativeReflectConstruct from "module_4988" /* 4988 */;
 
-const Platform = get_ActivityIndicator.Platform;
+const Platform = _mod17.Platform;
 
-export default importDefaultResult;
-export const LinearGradient = importDefaultResult;
-export const LinearGradientNativeComponent = LinearGradientDefault;
+export default _isNativeReflectConstruct;
+export const LinearGradient = _isNativeReflectConstruct;
+export const LinearGradientNativeComponent = _modDef4989;

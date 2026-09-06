@@ -1,13 +1,12 @@
 // === Module 4956: mapItemAppearanceToNativeProp ===
 
 // Module 4956 (mapItemAppearanceToNativeProp)
-import closure_4 from "_objectWithoutProperties" /* 109 */;
-import closure_5 from "_slicedToArray" /* 32 */;
-import closure_6 from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import { jsx } from "jsxProd" /* 21 */;
+import bottomTabsDebugLog from "bottomTabsDebugLog" /* 4950 */;
+import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
+require = fn;
 function mapItemAppearanceToNativeProp(compactInline) {
   if (compactInline) {
     ({ normal, selected, focused, disabled } = compactInline);
@@ -19,9 +18,9 @@ function mapItemAppearanceToNativeProp(compactInline) {
       obj = {};
       ({ tabBarItemTitleFontColor, tabBarItemIconColor, tabBarItemBadgeBackgroundColor } = normal);
       const merged1 = Object.assign(normal);
-      obj.tabBarItemTitleFontColor = callback(tabBarItemTitleFontColor);
-      obj.tabBarItemIconColor = callback(tabBarItemIconColor);
-      obj.tabBarItemBadgeBackgroundColor = callback(tabBarItemBadgeBackgroundColor);
+      obj.tabBarItemTitleFontColor = React7(tabBarItemTitleFontColor);
+      obj.tabBarItemIconColor = React7(tabBarItemIconColor);
+      obj.tabBarItemBadgeBackgroundColor = React7(tabBarItemBadgeBackgroundColor);
       let StringResult;
       if (undefined !== tabBarItemTitleFontWeight) {
         const _String = String;
@@ -37,9 +36,9 @@ function mapItemAppearanceToNativeProp(compactInline) {
       obj = {};
       ({ tabBarItemTitleFontColor: tabBarItemTitleFontColor2, tabBarItemIconColor: tabBarItemIconColor2, tabBarItemBadgeBackgroundColor: tabBarItemBadgeBackgroundColor2 } = selected);
       const merged2 = Object.assign(selected);
-      obj.tabBarItemTitleFontColor = callback(tabBarItemTitleFontColor2);
-      obj.tabBarItemIconColor = callback(tabBarItemIconColor2);
-      obj.tabBarItemBadgeBackgroundColor = callback(tabBarItemBadgeBackgroundColor2);
+      obj.tabBarItemTitleFontColor = React7(tabBarItemTitleFontColor2);
+      obj.tabBarItemIconColor = React7(tabBarItemIconColor2);
+      obj.tabBarItemBadgeBackgroundColor = React7(tabBarItemBadgeBackgroundColor2);
       let StringResult1;
       if (undefined !== tabBarItemTitleFontWeight2) {
         const _String2 = String;
@@ -52,12 +51,12 @@ function mapItemAppearanceToNativeProp(compactInline) {
     let tmp18;
     if (focused) {
       const tabBarItemTitleFontWeight3 = focused.tabBarItemTitleFontWeight;
-      obj1 = {};
+      const obj1 = {};
       ({ tabBarItemTitleFontColor: tabBarItemTitleFontColor3, tabBarItemIconColor: tabBarItemIconColor3, tabBarItemBadgeBackgroundColor: tabBarItemBadgeBackgroundColor3 } = focused);
       const merged3 = Object.assign(focused);
-      obj1.tabBarItemTitleFontColor = callback(tabBarItemTitleFontColor3);
-      obj1.tabBarItemIconColor = callback(tabBarItemIconColor3);
-      obj1.tabBarItemBadgeBackgroundColor = callback(tabBarItemBadgeBackgroundColor3);
+      obj1.tabBarItemTitleFontColor = React7(tabBarItemTitleFontColor3);
+      obj1.tabBarItemIconColor = React7(tabBarItemIconColor3);
+      obj1.tabBarItemBadgeBackgroundColor = React7(tabBarItemBadgeBackgroundColor3);
       let StringResult2;
       if (undefined !== tabBarItemTitleFontWeight3) {
         const _String3 = String;
@@ -73,9 +72,9 @@ function mapItemAppearanceToNativeProp(compactInline) {
       const obj2 = {};
       ({ tabBarItemTitleFontColor: tabBarItemTitleFontColor4, tabBarItemIconColor: tabBarItemIconColor4, tabBarItemBadgeBackgroundColor: tabBarItemBadgeBackgroundColor4 } = disabled);
       const merged4 = Object.assign(disabled);
-      obj2.tabBarItemTitleFontColor = callback(tabBarItemTitleFontColor4);
-      obj2.tabBarItemIconColor = callback(tabBarItemIconColor4);
-      obj2.tabBarItemBadgeBackgroundColor = callback(tabBarItemBadgeBackgroundColor4);
+      obj2.tabBarItemTitleFontColor = React7(tabBarItemTitleFontColor4);
+      obj2.tabBarItemIconColor = React7(tabBarItemIconColor4);
+      obj2.tabBarItemBadgeBackgroundColor = React7(tabBarItemBadgeBackgroundColor4);
       let StringResult3;
       if (undefined !== tabBarItemTitleFontWeight4) {
         const _String4 = String;
@@ -89,8 +88,10 @@ function mapItemAppearanceToNativeProp(compactInline) {
   }
 }
 let closure_3 = ["onWillAppear", "onDidAppear", "onWillDisappear", "onDidDisappear", "isFocused", "freezeContents", "icon", "selectedIcon", "standardAppearance", "scrollEdgeAppearance", "scrollEdgeEffects", "experimental_userInterfaceStyle", "style"];
-({ Image: error, Platform, StyleSheet, findNodeHandle: closure_8, processColor: c9 } = get_ActivityIndicator);
-const styles = StyleSheet.create({ fillParent: { position: "absolute", flex: 1, width: "100%", height: "100%" } });
+get_ActivityIndicator = fn(17);
+({ Image: closure_7, Platform, StyleSheet, findNodeHandle: closure_8, processColor: closure_9 } = get_ActivityIndicator);
+const jsx = fn(21).jsx;
+const fillParent = StyleSheet.create({ fillParent: { position: "absolute", flex: 1, width: "100%", height: "100%" } });
 
 export default function TabsScreen(onWillAppear) {
   let obj = onDidDisappear;
@@ -98,12 +99,11 @@ export default function TabsScreen(onWillAppear) {
   const ref1 = onDidDisappear.useRef(-1);
   const effect = onDidDisappear.useEffect(() => {
     if (null != ref.current) {
-      let num2 = closure_1_8(tmp.current);
+      let num2 = React6(tmp.current);
       if (num2 == null) {
         num2 = -1;
       }
       ref1.current = num2;
-      const tmp3 = ref1;
     } else {
       ref1.current = -1;
     }
@@ -117,7 +117,7 @@ export default function TabsScreen(onWillAppear) {
   ({ freezeContents, icon, selectedIcon, standardAppearance, scrollEdgeAppearance, scrollEdgeEffects } = onWillAppear);
   ({ experimental_userInterfaceStyle, style } = onWillAppear);
   const tmp7 = onDidAppear(onWillAppear, onWillAppear);
-  obj1 = ref(4915);
+  let obj1 = ref(4915);
   let flag = false;
   if (obj1.freezeEnabled()) {
     flag = freezeContents;
@@ -136,29 +136,29 @@ export default function TabsScreen(onWillAppear) {
   const items = [onWillAppear];
   const items1 = [onDidAppear];
   const callback = obj.useCallback((arg0) => {
-    ref(closure_1_2[5]).bottomTabsDebugLog("TabsScreen [" + ref1.current + "] onWillAppear received");
-    callback(true);
+    bottomTabsDebugLog.bottomTabsDebugLog("TabsScreen [" + ref1.current + "] onWillAppear received");
+    dependencyMap(true);
     if (onWillAppear != null) {
       tmp3(arg0);
     }
   }, items);
   const items2 = [onWillDisappear];
   const callback1 = obj.useCallback((arg0) => {
-    ref(closure_1_2[5]).bottomTabsDebugLog("TabsScreen [" + ref1.current + "] onDidAppear received");
+    bottomTabsDebugLog.bottomTabsDebugLog("TabsScreen [" + ref1.current + "] onDidAppear received");
     if (onDidAppear != null) {
       tmp2(arg0);
     }
   }, items1);
   const items3 = [onDidDisappear];
   const callback2 = obj.useCallback((arg0) => {
-    ref(closure_1_2[5]).bottomTabsDebugLog("TabsScreen [" + ref1.current + "] onWillDisappear received");
+    bottomTabsDebugLog.bottomTabsDebugLog("TabsScreen [" + ref1.current + "] onWillDisappear received");
     if (onWillDisappear != null) {
       tmp2(arg0);
     }
   }, items2);
   const callback3 = obj.useCallback((arg0) => {
-    ref(closure_1_2[5]).bottomTabsDebugLog("TabsScreen [" + ref1.current + "] onDidDisappear received");
-    callback(false);
+    bottomTabsDebugLog.bottomTabsDebugLog("TabsScreen [" + ref1.current + "] onDidDisappear received");
+    dependencyMap(false);
     if (onDidDisappear != null) {
       tmp3(arg0);
     }
@@ -187,25 +187,23 @@ export default function TabsScreen(onWillAppear) {
         const _console = console;
         console.error("[RNScreens] failed to resolve an asset for bottom tab icon");
       }
-      obj = { imageIconResource: null };
-      obj[0] = assetSource;
+      obj = { imageIconResource: assetSource };
       obj1 = obj;
-      const tmp25 = assetSource;
     } else if ("drawableResource" === android.type) {
-      obj = { drawableIconResourceName: null };
-      obj[0] = android.name;
+      obj = { drawableIconResourceName: android.name };
       obj1 = obj;
     } else {
       const _Error = Error;
-      error = new Error("[RNScreens] Incorrect icon format for Android. You must provide `imageSource` or `drawableResource`.");
+      const error = new Error("[RNScreens] Incorrect icon format for Android. You must provide `imageSource` or `drawableResource`.");
       throw error;
     }
   } else {
     obj1 = {};
   }
   const merged = Object.assign(obj1);
-  const obj3 = { collapsable: false, style: items4, onWillAppear: callback, onDidAppear: callback1, onWillDisappear: callback2, onDidDisappear: callback3, isFocused: undefined !== isFocused && isFocused };
-  items4 = [style, fillParent.fillParent];
+  const obj3 = { collapsable: false, style: null, onWillAppear: callback, onDidAppear: callback1, onWillDisappear: callback2, onDidDisappear: callback3, isFocused: undefined !== isFocused && isFocused };
+  const items4 = [style, fillParent.fillParent];
+  obj3.style = items4;
   const obj2 = {};
   const tmp8Result = ref(4950);
   const merged1 = Object.assign(obj2);
@@ -217,8 +215,8 @@ export default function TabsScreen(onWillAppear) {
     obj4.stacked = mapItemAppearanceToNativeProp(stacked);
     obj4.inline = mapItemAppearanceToNativeProp(inline);
     obj4.compactInline = mapItemAppearanceToNativeProp(compactInline);
-    obj4.tabBarBackgroundColor = callback(tabBarBackgroundColor);
-    obj4.tabBarShadowColor = callback(tabBarShadowColor);
+    obj4.tabBarBackgroundColor = closure_9(tabBarBackgroundColor);
+    obj4.tabBarShadowColor = closure_9(tabBarShadowColor);
     tmp30 = obj4;
   }
   obj3.standardAppearance = tmp30;
@@ -230,8 +228,8 @@ export default function TabsScreen(onWillAppear) {
     obj5.stacked = mapItemAppearanceToNativeProp(stacked2);
     obj5.inline = mapItemAppearanceToNativeProp(inline2);
     obj5.compactInline = mapItemAppearanceToNativeProp(compactInline2);
-    obj5.tabBarBackgroundColor = callback(tabBarBackgroundColor2);
-    obj5.tabBarShadowColor = callback(tabBarShadowColor2);
+    obj5.tabBarBackgroundColor = closure_9(tabBarBackgroundColor2);
+    obj5.tabBarShadowColor = closure_9(tabBarShadowColor2);
     tmp36 = obj5;
   }
   obj3.scrollEdgeAppearance = tmp36;
@@ -260,5 +258,5 @@ export default function TabsScreen(onWillAppear) {
   obj3.userInterfaceStyle = experimental_userInterfaceStyle;
   const merged4 = Object.assign(tmp7);
   obj3.children = jsx(ref(4923).Freeze, { freeze: flag, placeholder: tmp7.placeholder, children: tmp7.children });
-  return jsx(ref1(4957), { collapsable: false, style: items4, onWillAppear: callback, onDidAppear: callback1, onWillDisappear: callback2, onDidDisappear: callback3, isFocused: undefined !== isFocused && isFocused });
+  return jsx(ref1(4957), { collapsable: false, style: null, onWillAppear: callback, onDidAppear: callback1, onWillDisappear: callback2, onDidDisappear: callback3, isFocused: undefined !== isFocused && isFocused });
 };

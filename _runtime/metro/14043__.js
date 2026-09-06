@@ -1,12 +1,12 @@
 // === Module 14043: ? ===
 
 // Module 14043
-import SemVer from "SemVer" /* 14015 */;
-import SemVer2 from "SemVer" /* 14016 */;
+import _mod14015 from "module_14015" /* 14015 */;
+import _mod14016 from "module_14016" /* 14016 */;
 
 
-export default (num) => {
-  if (num instanceof SemVer2) {
+export default (num, arg1) => {
+  if (num instanceof _mod14016) {
     return num;
   } else {
     let StringResult = num;
@@ -34,7 +34,6 @@ export default (num) => {
         let tmp8 = null;
         if (match) {
           while (true) {
-            let tmp9 = match;
             let tmp10 = tmp6;
             let tmp11 = tmp6;
             if (tmp6) {
@@ -97,7 +96,7 @@ export default (num) => {
           }
         }
         const _HermesInternal3 = HermesInternal;
-        return SemVer("" + match2[2] + "." + match2[3] || "0" + "." + match2[4] || "0" + str2 + str4, obj);
+        return _mod14015("" + match2[2] + "." + match2[3] || "0" + "." + match2[4] || "0" + str2 + str4, obj);
       }
     }
   }

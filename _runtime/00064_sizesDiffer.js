@@ -2,7 +2,8 @@
 
 // Module 64 (sizesDiffer)
 let closure_0 = { width: "hash", height: "call" };
-arg5.default = function sizesDiffer(arg0, arg1) {
+
+export default function sizesDiffer(arg0, arg1) {
   let size = arg0;
   if (!arg0) {
     size = closure_0;

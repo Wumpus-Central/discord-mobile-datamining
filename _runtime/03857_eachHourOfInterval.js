@@ -1,29 +1,26 @@
 // === Module 3857: eachHourOfInterval ===
 
 // Module 3857 (eachHourOfInterval)
-import addHours from "addHours" /* 3804 */;
-import _typeof from "_typeof" /* 3650 */;
+import module_3804 from "module_3804" /* 3804 */;
+import _typeof from "module_3650" /* 3650 */;
 import requiredArgs from "requiredArgs" /* 3651 */;
 
-if (!addHours) {
-  let obj = { default: null };
-  obj[0] = addHours;
+if (!module_3804) {
+  let obj = { default: module_3804 };
   let tmp3 = obj;
 } else {
-  tmp3 = addHours;
+  tmp3 = module_3804;
 }
-addHours = tmp3;
+module_3804 = tmp3;
 if (!_typeof) {
-  obj = { default: null };
-  obj[0] = _typeof;
+  obj = { default: _typeof };
   let tmp5 = obj;
 } else {
   tmp5 = _typeof;
 }
 _typeof = tmp5;
 if (!requiredArgs) {
-  obj = { default: null };
-  obj[0] = requiredArgs;
+  obj = { default: requiredArgs };
   let tmp7 = obj;
 } else {
   tmp7 = requiredArgs;
@@ -60,10 +57,8 @@ export default function eachHourOfInterval(arg0, step) {
         const items = [];
         if (defaultResult1.getTime() <= time1) {
           do {
-            let tmp15 = _typeof;
             let arr = items.push(_typeof.default(defaultResult1));
-            let tmp17 = addHours;
-            let defaultResult3 = addHours.default(defaultResult1, NumberResult);
+            let defaultResult3 = module_3804.default(defaultResult1, NumberResult);
             defaultResult1 = defaultResult3;
             time2 = defaultResult3.getTime();
           } while (time2 <= time1);

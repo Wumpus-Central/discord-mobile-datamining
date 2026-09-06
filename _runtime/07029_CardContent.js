@@ -1,35 +1,34 @@
 // === Module 7029: CardContent ===
 
 // Module 7029 (CardContent)
-import closure_0 from "_slicedToArray" /* 32 */;
-import closure_1 from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import { jsx } from "jsxProd" /* 21 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
 
-({ StyleSheet, View: obj1 } = get_ActivityIndicator);
+get_ActivityIndicator = fn(17);
+({ StyleSheet, View: c2 } = get_ActivityIndicator);
+const jsx = fn(21).jsx;
 const styles = StyleSheet.create({ page: { minHeight: "100%" }, card: { flex: 1, overflow: "hidden" } });
 
 export const CardContent = function CardContent(layout) {
   layout = layout.layout;
   ({ enabled, style } = layout);
-  const merged = Object.assign(layout, Object.create(null));
-  let React;
-  const tmp2 = layout(React.useState(false), 2);
-  React = tmp2[1];
+  const merged = Object.assign(layout, Object.assign({ enabled: 0, layout: 0, style: 0 }));
+  const tmp2 = _slicedToArray(noop.useState(false), 2);
+  closure_1 = tmp2[1];
   let items = [, ];
   ({ height: arr[0], width: arr[1] } = layout);
-  const effect = React.useEffect(() => {
+  const effect = noop.useEffect(() => {
     if (typeof document !== "undefined") {
       const _document8 = document;
       if (document.body) {
         const _document = document;
         const _document2 = document;
-        const size = element;
-        if (clientHeight === element.height) {
+        const size = layout;
+        if (clientHeight === layout.height) {
           const _navigator = navigator;
           if (navigator.maxTouchPoints > 0) {
             const _document4 = document;
-            element = document.getElementById("__react-navigation-stack-mobile-chrome-viewport-fix");
+            let element = document.getElementById("__react-navigation-stack-mobile-chrome-viewport-fix");
             if (element == null) {
               const _document5 = document;
               element = <style />;
@@ -58,7 +57,7 @@ export const CardContent = function CardContent(layout) {
           if (tmp10) {
             tmp10 = clientHeight === size.height;
           }
-          updateStyle(tmp10);
+          closure_1(tmp10);
           return fn;
         }
         const _document3 = document;
@@ -78,7 +77,7 @@ export const CardContent = function CardContent(layout) {
     }
     const items1 = [card, style];
     obj.style = items1;
-    return <closure_2 {...obj} />;
+    return <React2 {...obj} />;
   }
   card = closure_4.card;
 };

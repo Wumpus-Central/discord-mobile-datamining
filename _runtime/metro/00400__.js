@@ -1,10 +1,9 @@
 // === Module 400: ? ===
 
 // Module 400
-import noopAll from "noop" /* 19 */;
-import _isNativeReflectConstructDefault from "_isNativeReflectConstruct" /* 311 */;
-import createAnimatedComponentDefault from "createAnimatedComponent" /* 387 */;
+import _modDef311 from "module_311" /* 311 */;
+import noop from "module_19" /* 19 */;
+import module_387 from "unstable_createAnimatedComponentWithAllowlist" /* 387 */;
 
-noopAll;
 
-export default createAnimatedComponentDefault(_isNativeReflectConstructDefault);
+export default module_387(_modDef311);

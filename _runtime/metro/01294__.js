@@ -4,7 +4,7 @@
 import bind from "bind" /* 1296 */;
 import _mod1298 from "module_1298" /* 1298 */;
 import _mod1299 from "module_1299" /* 1299 */;
-import apply from "apply" /* 1295 */;
+import apply from "module_1295" /* 1295 */;
 
 if (apply) {
   module.exports = apply;

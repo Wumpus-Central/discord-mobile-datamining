@@ -49,7 +49,7 @@ class Emitter {
     }
     if (arr) {
       num2 = 0;
-      substr = require("module_0");
+      substr = arr.slice(0);
       length2 = substr.length;
       if (0 < length2) {
         do {

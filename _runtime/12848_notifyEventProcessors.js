@@ -3,17 +3,14 @@
 // Module 12848 (notifyEventProcessors)
 const require = arg1;
 let dependencyMap = arg6;
-arg5.notifyEventProcessors = function notifyEventProcessors(arg0, arg1, arg2) {
-  const _require = arg0;
+
+export const notifyEventProcessors = function notifyEventProcessors(arg0, arg1, arg2) {
+  _require = arg0;
   dependencyMap = arg1;
   closure_2 = arg2;
-  let num = arg3;
-  if (arg3 === undefined) {
-    num = 0;
-  }
-  return new _require(12821).SyncPromise((arg0, arg1) => {
-    let dependencyMap = arg0;
-    if (null !== table) {
+  return new require("module_12821").SyncPromise((fn, arg1) => {
+    dependencyMap = fn;
+    if (null !== dependencyMap) {
       if (typeof tmp3 === "function") {
         let obj = {};
         let merged = Object.assign(tmp4);
@@ -24,14 +21,15 @@ arg5.notifyEventProcessors = function notifyEventProcessors(arg0, arg1, arg2) {
           logger.log("Event processor \"" + tmp3.id + "\" dropped event");
         }
         let tmp18 = closure_2;
-        tmp5 = dependencyMap(table[1]).DEBUG_BUILD && tmp3.id && null === tmp3Result;
+        tmp5 = dependencyMap(dependencyMap[1]).DEBUG_BUILD && tmp3.id && null === tmp3Result;
         if (tmp19Result.isThenable(tmp3Result)) {
-          tmp3Result.then((arg0) => {
-            closure_1 = arg0;
-            closure_3 = closure_3 + 1;
-            return new closure_2_0(closure_2_1[0]).SyncPromise((arg0, arg1) => {
-              let dependencyMap = arg0;
-              if (null !== table) {
+          tmp3Result.then((result) => {
+            let dependencyMap = result;
+            closure_2 = closure_2_2;
+            closure_3 = closure_2_3 + 1;
+            return new closure_3_0(closure_3_1[0]).SyncPromise((fn, arg1) => {
+              dependencyMap = fn;
+              if (null !== dependencyMap) {
                 if (typeof tmp3 === "function") {
                   let obj = {};
                   let merged = Object.assign(tmp4);
@@ -42,26 +40,27 @@ arg5.notifyEventProcessors = function notifyEventProcessors(arg0, arg1, arg2) {
                     logger.log("Event processor \"" + tmp3.id + "\" dropped event");
                   }
                   let tmp18 = closure_2;
-                  tmp5 = dependencyMap(table[1]).DEBUG_BUILD && tmp3.id && null === tmp3Result;
+                  tmp5 = dependencyMap(dependencyMap[1]).DEBUG_BUILD && tmp3.id && null === tmp3Result;
                   if (tmp19Result.isThenable(tmp3Result)) {
-                    tmp3Result.then((arg0) => {
-                      closure_1 = arg0;
-                      closure_3 = closure_3 + 1;
-                      return new closure_2_0(closure_2_1[0]).SyncPromise(() => { ... }).then(closure_0);
+                    tmp3Result.then((result) => {
+                      let dependencyMap = result;
+                      closure_2 = closure_2_2;
+                      closure_3 = closure_2_3 + 1;
+                      return new closure_3_0(closure_3_1[0]).SyncPromise(() => { ... }).then(dependencyMap);
                     }).then(null, arg1);
-                    let nextPromise = tmp3Result.then((arg0) => {
-                      closure_1 = arg0;
-                      closure_3 = closure_3 + 1;
-                      return new closure_2_0(closure_2_1[0]).SyncPromise(() => { ... }).then(closure_0);
+                    let nextPromise = tmp3Result.then((result) => {
+                      let dependencyMap = result;
+                      closure_2 = closure_2_2;
+                      closure_3 = closure_2_3 + 1;
+                      return new closure_3_0(closure_3_1[0]).SyncPromise(() => { ... }).then(dependencyMap);
                     });
                   } else {
-                    dependencyMap = tmp;
-                    table = tmp3Result;
+                    dependencyMap = tmp3Result;
                     closure_2 = tmp18;
                     closure_3 = tmp2 + 1;
-                    let syncPromise = new tmp19(tmp20[0]).SyncPromise((arg0, arg1) => {
-                      let dependencyMap = arg0;
-                      if (null !== table) {
+                    let syncPromise = new tmp19(tmp20[0]).SyncPromise((fn, arg1) => {
+                      dependencyMap = fn;
+                      if (null !== dependencyMap) {
                         if (typeof tmp3 === "function") {
                           let obj = {};
                           let merged = Object.assign(tmp4);
@@ -72,39 +71,39 @@ arg5.notifyEventProcessors = function notifyEventProcessors(arg0, arg1, arg2) {
                             logger.log("Event processor \"" + tmp3.id + "\" dropped event");
                           }
                           let tmp18 = closure_2;
-                          tmp5 = dependencyMap(table[1]).DEBUG_BUILD && tmp3.id && null === tmp3Result;
+                          tmp5 = dependencyMap(dependencyMap[1]).DEBUG_BUILD && tmp3.id && null === tmp3Result;
                           if (tmp19Result.isThenable(tmp3Result)) {
                             tmp3Result.then(() => { ... }).then(null, arg1);
                             let nextPromise = tmp3Result.then(() => { ... });
                           } else {
-                            dependencyMap = tmp;
-                            table = tmp3Result;
+                            dependencyMap = tmp3Result;
                             closure_2 = tmp18;
                             closure_3 = tmp2 + 1;
                             let syncPromise = new tmp19(tmp20[0]).SyncPromise(() => { ... });
-                            syncPromise.then(arg0).then(null, arg1);
-                            let nextPromise2 = syncPromise.then(arg0);
+                            syncPromise.then(fn).then(null, arg1);
+                            let nextPromise2 = syncPromise.then(fn);
                           }
-                          tmp19Result = dependencyMap(table[3]);
+                          tmp19Result = dependencyMap(dependencyMap[3]);
                         }
                       }
-                      arg0(table);
+                      fn(dependencyMap);
                     });
-                    syncPromise.then(arg0).then(null, arg1);
-                    let nextPromise2 = syncPromise.then(arg0);
+                    syncPromise.then(fn).then(null, arg1);
+                    let nextPromise2 = syncPromise.then(fn);
                   }
-                  tmp19Result = dependencyMap(table[3]);
+                  tmp19Result = dependencyMap(dependencyMap[3]);
                 }
               }
-              arg0(table);
-            }).then(closure_0);
+              fn(dependencyMap);
+            }).then(dependencyMap);
           }).then(null, arg1);
-          let nextPromise = tmp3Result.then((arg0) => {
-            closure_1 = arg0;
-            closure_3 = closure_3 + 1;
-            return new closure_2_0(closure_2_1[0]).SyncPromise((arg0, arg1) => {
-              let dependencyMap = arg0;
-              if (null !== table) {
+          let nextPromise = tmp3Result.then((result) => {
+            let dependencyMap = result;
+            closure_2 = closure_2_2;
+            closure_3 = closure_2_3 + 1;
+            return new closure_3_0(closure_3_1[0]).SyncPromise((fn, arg1) => {
+              dependencyMap = fn;
+              if (null !== dependencyMap) {
                 if (typeof tmp3 === "function") {
                   let obj = {};
                   let merged = Object.assign(tmp4);
@@ -115,26 +114,27 @@ arg5.notifyEventProcessors = function notifyEventProcessors(arg0, arg1, arg2) {
                     logger.log("Event processor \"" + tmp3.id + "\" dropped event");
                   }
                   let tmp18 = closure_2;
-                  tmp5 = dependencyMap(table[1]).DEBUG_BUILD && tmp3.id && null === tmp3Result;
+                  tmp5 = dependencyMap(dependencyMap[1]).DEBUG_BUILD && tmp3.id && null === tmp3Result;
                   if (tmp19Result.isThenable(tmp3Result)) {
-                    tmp3Result.then((arg0) => {
-                      closure_1 = arg0;
-                      closure_3 = closure_3 + 1;
-                      return new closure_2_0(closure_2_1[0]).SyncPromise(() => { ... }).then(closure_0);
+                    tmp3Result.then((result) => {
+                      let dependencyMap = result;
+                      closure_2 = closure_2_2;
+                      closure_3 = closure_2_3 + 1;
+                      return new closure_3_0(closure_3_1[0]).SyncPromise(() => { ... }).then(dependencyMap);
                     }).then(null, arg1);
-                    let nextPromise = tmp3Result.then((arg0) => {
-                      closure_1 = arg0;
-                      closure_3 = closure_3 + 1;
-                      return new closure_2_0(closure_2_1[0]).SyncPromise(() => { ... }).then(closure_0);
+                    let nextPromise = tmp3Result.then((result) => {
+                      let dependencyMap = result;
+                      closure_2 = closure_2_2;
+                      closure_3 = closure_2_3 + 1;
+                      return new closure_3_0(closure_3_1[0]).SyncPromise(() => { ... }).then(dependencyMap);
                     });
                   } else {
-                    dependencyMap = tmp;
-                    table = tmp3Result;
+                    dependencyMap = tmp3Result;
                     closure_2 = tmp18;
                     closure_3 = tmp2 + 1;
-                    let syncPromise = new tmp19(tmp20[0]).SyncPromise((arg0, arg1) => {
-                      let dependencyMap = arg0;
-                      if (null !== table) {
+                    let syncPromise = new tmp19(tmp20[0]).SyncPromise((fn, arg1) => {
+                      dependencyMap = fn;
+                      if (null !== dependencyMap) {
                         if (typeof tmp3 === "function") {
                           let obj = {};
                           let merged = Object.assign(tmp4);
@@ -145,41 +145,39 @@ arg5.notifyEventProcessors = function notifyEventProcessors(arg0, arg1, arg2) {
                             logger.log("Event processor \"" + tmp3.id + "\" dropped event");
                           }
                           let tmp18 = closure_2;
-                          tmp5 = dependencyMap(table[1]).DEBUG_BUILD && tmp3.id && null === tmp3Result;
+                          tmp5 = dependencyMap(dependencyMap[1]).DEBUG_BUILD && tmp3.id && null === tmp3Result;
                           if (tmp19Result.isThenable(tmp3Result)) {
                             tmp3Result.then(() => { ... }).then(null, arg1);
                             let nextPromise = tmp3Result.then(() => { ... });
                           } else {
-                            dependencyMap = tmp;
-                            table = tmp3Result;
+                            dependencyMap = tmp3Result;
                             closure_2 = tmp18;
                             closure_3 = tmp2 + 1;
                             let syncPromise = new tmp19(tmp20[0]).SyncPromise(() => { ... });
-                            syncPromise.then(arg0).then(null, arg1);
-                            let nextPromise2 = syncPromise.then(arg0);
+                            syncPromise.then(fn).then(null, arg1);
+                            let nextPromise2 = syncPromise.then(fn);
                           }
-                          tmp19Result = dependencyMap(table[3]);
+                          tmp19Result = dependencyMap(dependencyMap[3]);
                         }
                       }
-                      arg0(table);
+                      fn(dependencyMap);
                     });
-                    syncPromise.then(arg0).then(null, arg1);
-                    let nextPromise2 = syncPromise.then(arg0);
+                    syncPromise.then(fn).then(null, arg1);
+                    let nextPromise2 = syncPromise.then(fn);
                   }
-                  tmp19Result = dependencyMap(table[3]);
+                  tmp19Result = dependencyMap(dependencyMap[3]);
                 }
               }
-              arg0(table);
-            }).then(closure_0);
+              fn(dependencyMap);
+            }).then(dependencyMap);
           });
         } else {
-          dependencyMap = tmp;
-          table = tmp3Result;
+          dependencyMap = tmp3Result;
           closure_2 = tmp18;
           closure_3 = tmp2 + 1;
-          let syncPromise = new tmp19(tmp20[0]).SyncPromise((arg0, arg1) => {
-            let dependencyMap = arg0;
-            if (null !== table) {
+          let syncPromise = new tmp19(tmp20[0]).SyncPromise((fn, arg1) => {
+            dependencyMap = fn;
+            if (null !== dependencyMap) {
               if (typeof tmp3 === "function") {
                 let obj = {};
                 let merged = Object.assign(tmp4);
@@ -190,14 +188,15 @@ arg5.notifyEventProcessors = function notifyEventProcessors(arg0, arg1, arg2) {
                   logger.log("Event processor \"" + tmp3.id + "\" dropped event");
                 }
                 let tmp18 = closure_2;
-                tmp5 = dependencyMap(table[1]).DEBUG_BUILD && tmp3.id && null === tmp3Result;
+                tmp5 = dependencyMap(dependencyMap[1]).DEBUG_BUILD && tmp3.id && null === tmp3Result;
                 if (tmp19Result.isThenable(tmp3Result)) {
-                  tmp3Result.then((arg0) => {
-                    closure_1 = arg0;
-                    closure_3 = closure_3 + 1;
-                    return new closure_2_0(closure_2_1[0]).SyncPromise((arg0, arg1) => {
-                      let dependencyMap = arg0;
-                      if (null !== table) {
+                  tmp3Result.then((result) => {
+                    let dependencyMap = result;
+                    closure_2 = closure_2_2;
+                    closure_3 = closure_2_3 + 1;
+                    return new closure_3_0(closure_3_1[0]).SyncPromise((fn, arg1) => {
+                      dependencyMap = fn;
+                      if (null !== dependencyMap) {
                         if (typeof tmp3 === "function") {
                           let obj = {};
                           let merged = Object.assign(tmp4);
@@ -208,31 +207,31 @@ arg5.notifyEventProcessors = function notifyEventProcessors(arg0, arg1, arg2) {
                             logger.log("Event processor \"" + tmp3.id + "\" dropped event");
                           }
                           let tmp18 = closure_2;
-                          tmp5 = dependencyMap(table[1]).DEBUG_BUILD && tmp3.id && null === tmp3Result;
+                          tmp5 = dependencyMap(dependencyMap[1]).DEBUG_BUILD && tmp3.id && null === tmp3Result;
                           if (tmp19Result.isThenable(tmp3Result)) {
                             tmp3Result.then(() => { ... }).then(null, arg1);
                             let nextPromise = tmp3Result.then(() => { ... });
                           } else {
-                            dependencyMap = tmp;
-                            table = tmp3Result;
+                            dependencyMap = tmp3Result;
                             closure_2 = tmp18;
                             closure_3 = tmp2 + 1;
                             let syncPromise = new tmp19(tmp20[0]).SyncPromise(() => { ... });
-                            syncPromise.then(arg0).then(null, arg1);
-                            let nextPromise2 = syncPromise.then(arg0);
+                            syncPromise.then(fn).then(null, arg1);
+                            let nextPromise2 = syncPromise.then(fn);
                           }
-                          tmp19Result = dependencyMap(table[3]);
+                          tmp19Result = dependencyMap(dependencyMap[3]);
                         }
                       }
-                      arg0(table);
-                    }).then(closure_0);
+                      fn(dependencyMap);
+                    }).then(dependencyMap);
                   }).then(null, arg1);
-                  let nextPromise = tmp3Result.then((arg0) => {
-                    closure_1 = arg0;
-                    closure_3 = closure_3 + 1;
-                    return new closure_2_0(closure_2_1[0]).SyncPromise((arg0, arg1) => {
-                      let dependencyMap = arg0;
-                      if (null !== table) {
+                  let nextPromise = tmp3Result.then((result) => {
+                    let dependencyMap = result;
+                    closure_2 = closure_2_2;
+                    closure_3 = closure_2_3 + 1;
+                    return new closure_3_0(closure_3_1[0]).SyncPromise((fn, arg1) => {
+                      dependencyMap = fn;
+                      if (null !== dependencyMap) {
                         if (typeof tmp3 === "function") {
                           let obj = {};
                           let merged = Object.assign(tmp4);
@@ -243,33 +242,31 @@ arg5.notifyEventProcessors = function notifyEventProcessors(arg0, arg1, arg2) {
                             logger.log("Event processor \"" + tmp3.id + "\" dropped event");
                           }
                           let tmp18 = closure_2;
-                          tmp5 = dependencyMap(table[1]).DEBUG_BUILD && tmp3.id && null === tmp3Result;
+                          tmp5 = dependencyMap(dependencyMap[1]).DEBUG_BUILD && tmp3.id && null === tmp3Result;
                           if (tmp19Result.isThenable(tmp3Result)) {
                             tmp3Result.then(() => { ... }).then(null, arg1);
                             let nextPromise = tmp3Result.then(() => { ... });
                           } else {
-                            dependencyMap = tmp;
-                            table = tmp3Result;
+                            dependencyMap = tmp3Result;
                             closure_2 = tmp18;
                             closure_3 = tmp2 + 1;
                             let syncPromise = new tmp19(tmp20[0]).SyncPromise(() => { ... });
-                            syncPromise.then(arg0).then(null, arg1);
-                            let nextPromise2 = syncPromise.then(arg0);
+                            syncPromise.then(fn).then(null, arg1);
+                            let nextPromise2 = syncPromise.then(fn);
                           }
-                          tmp19Result = dependencyMap(table[3]);
+                          tmp19Result = dependencyMap(dependencyMap[3]);
                         }
                       }
-                      arg0(table);
-                    }).then(closure_0);
+                      fn(dependencyMap);
+                    }).then(dependencyMap);
                   });
                 } else {
-                  dependencyMap = tmp;
-                  table = tmp3Result;
+                  dependencyMap = tmp3Result;
                   closure_2 = tmp18;
                   closure_3 = tmp2 + 1;
-                  let syncPromise = new tmp19(tmp20[0]).SyncPromise((arg0, arg1) => {
-                    let dependencyMap = arg0;
-                    if (null !== table) {
+                  let syncPromise = new tmp19(tmp20[0]).SyncPromise((fn, arg1) => {
+                    dependencyMap = fn;
+                    if (null !== dependencyMap) {
                       if (typeof tmp3 === "function") {
                         let obj = {};
                         let merged = Object.assign(tmp4);
@@ -280,26 +277,27 @@ arg5.notifyEventProcessors = function notifyEventProcessors(arg0, arg1, arg2) {
                           logger.log("Event processor \"" + tmp3.id + "\" dropped event");
                         }
                         let tmp18 = closure_2;
-                        tmp5 = dependencyMap(table[1]).DEBUG_BUILD && tmp3.id && null === tmp3Result;
+                        tmp5 = dependencyMap(dependencyMap[1]).DEBUG_BUILD && tmp3.id && null === tmp3Result;
                         if (tmp19Result.isThenable(tmp3Result)) {
-                          tmp3Result.then((arg0) => {
-                            closure_1 = arg0;
-                            closure_3 = closure_3 + 1;
-                            return new closure_2_0(closure_2_1[0]).SyncPromise(() => { ... }).then(closure_0);
+                          tmp3Result.then((result) => {
+                            let dependencyMap = result;
+                            closure_2 = closure_2_2;
+                            closure_3 = closure_2_3 + 1;
+                            return new closure_3_0(closure_3_1[0]).SyncPromise(() => { ... }).then(dependencyMap);
                           }).then(null, arg1);
-                          let nextPromise = tmp3Result.then((arg0) => {
-                            closure_1 = arg0;
-                            closure_3 = closure_3 + 1;
-                            return new closure_2_0(closure_2_1[0]).SyncPromise(() => { ... }).then(closure_0);
+                          let nextPromise = tmp3Result.then((result) => {
+                            let dependencyMap = result;
+                            closure_2 = closure_2_2;
+                            closure_3 = closure_2_3 + 1;
+                            return new closure_3_0(closure_3_1[0]).SyncPromise(() => { ... }).then(dependencyMap);
                           });
                         } else {
-                          dependencyMap = tmp;
-                          table = tmp3Result;
+                          dependencyMap = tmp3Result;
                           closure_2 = tmp18;
                           closure_3 = tmp2 + 1;
-                          let syncPromise = new tmp19(tmp20[0]).SyncPromise((arg0, arg1) => {
-                            let dependencyMap = arg0;
-                            if (null !== table) {
+                          let syncPromise = new tmp19(tmp20[0]).SyncPromise((fn, arg1) => {
+                            dependencyMap = fn;
+                            if (null !== dependencyMap) {
                               if (typeof tmp3 === "function") {
                                 let obj = {};
                                 let merged = Object.assign(tmp4);
@@ -310,46 +308,45 @@ arg5.notifyEventProcessors = function notifyEventProcessors(arg0, arg1, arg2) {
                                   logger.log("Event processor \"" + tmp3.id + "\" dropped event");
                                 }
                                 let tmp18 = closure_2;
-                                tmp5 = dependencyMap(table[1]).DEBUG_BUILD && tmp3.id && null === tmp3Result;
+                                tmp5 = dependencyMap(dependencyMap[1]).DEBUG_BUILD && tmp3.id && null === tmp3Result;
                                 if (tmp19Result.isThenable(tmp3Result)) {
                                   tmp3Result.then(() => { ... }).then(null, arg1);
                                   let nextPromise = tmp3Result.then(() => { ... });
                                 } else {
-                                  dependencyMap = tmp;
-                                  table = tmp3Result;
+                                  dependencyMap = tmp3Result;
                                   closure_2 = tmp18;
                                   closure_3 = tmp2 + 1;
                                   let syncPromise = new tmp19(tmp20[0]).SyncPromise(() => { ... });
-                                  syncPromise.then(arg0).then(null, arg1);
-                                  let nextPromise2 = syncPromise.then(arg0);
+                                  syncPromise.then(fn).then(null, arg1);
+                                  let nextPromise2 = syncPromise.then(fn);
                                 }
-                                tmp19Result = dependencyMap(table[3]);
+                                tmp19Result = dependencyMap(dependencyMap[3]);
                               }
                             }
-                            arg0(table);
+                            fn(dependencyMap);
                           });
-                          syncPromise.then(arg0).then(null, arg1);
-                          let nextPromise2 = syncPromise.then(arg0);
+                          syncPromise.then(fn).then(null, arg1);
+                          let nextPromise2 = syncPromise.then(fn);
                         }
-                        tmp19Result = dependencyMap(table[3]);
+                        tmp19Result = dependencyMap(dependencyMap[3]);
                       }
                     }
-                    arg0(table);
+                    fn(dependencyMap);
                   });
-                  syncPromise.then(arg0).then(null, arg1);
-                  let nextPromise2 = syncPromise.then(arg0);
+                  syncPromise.then(fn).then(null, arg1);
+                  let nextPromise2 = syncPromise.then(fn);
                 }
-                tmp19Result = dependencyMap(table[3]);
+                tmp19Result = dependencyMap(dependencyMap[3]);
               }
             }
-            arg0(table);
+            fn(dependencyMap);
           });
-          syncPromise.then(arg0).then(null, arg1);
-          let nextPromise2 = syncPromise.then(arg0);
+          syncPromise.then(fn).then(null, arg1);
+          let nextPromise2 = syncPromise.then(fn);
         }
-        tmp19Result = dependencyMap(table[3]);
+        tmp19Result = dependencyMap(dependencyMap[3]);
       }
     }
-    arg0(table);
+    fn(dependencyMap);
   });
 };

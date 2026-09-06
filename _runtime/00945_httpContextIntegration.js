@@ -1,14 +1,15 @@
 // === Module 945: httpContextIntegration ===
 
 // Module 945 (httpContextIntegration)
-import registerSpanErrorInstrumentation from "registerSpanErrorInstrumentation" /* 682 */;
+import ignoreNextOnError from "ignoreNextOnError" /* 893 */;
+import registerSpanErrorInstrumentation from "module_682" /* 682 */;
 
 Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
 
 export const httpContextIntegration = registerSpanErrorInstrumentation.defineIntegration(() => ({
   name: "HttpContext",
   preprocessEvent(request) {
-    const httpRequestData = callback(table[1]).getHttpRequestData();
+    const httpRequestData = ignoreNextOnError.getHttpRequestData();
     let obj = {};
     const merged = Object.assign(httpRequestData.headers);
     request = request.request;

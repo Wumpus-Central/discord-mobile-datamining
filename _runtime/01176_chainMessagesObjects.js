@@ -1,39 +1,40 @@
 // === Module 1176: chainMessagesObjects ===
 
 // Module 1176 (chainMessagesObjects)
-arg5.chainMessagesObjects = function chainMessagesObjects(importDefaultResult, $$loader2) {
+
+export const chainMessagesObjects = function chainMessagesObjects(messagesProxy, $$loader2) {
   let tmp2 = "IntlMessagesProxy" === $$loader2[Symbol.toStringTag];
-  if ("IntlMessagesProxy" === importDefaultResult[Symbol.toStringTag]) {
+  if ("IntlMessagesProxy" === messagesProxy[Symbol.toStringTag]) {
     if (tmp2) {
-      const $$loader = importDefaultResult.$$loader;
+      const $$loader = messagesProxy.$$loader;
       $$loader.fallbackWith($$loader2.$$loader);
-      let merged = importDefaultResult;
+      let merged = messagesProxy;
     }
     return merged;
   }
-  if ("IntlMessagesProxy" !== importDefaultResult[Symbol.toStringTag]) {
+  if ("IntlMessagesProxy" !== messagesProxy[Symbol.toStringTag]) {
     if (!tmp2) {
       const _Object = Object;
       const _Object2 = Object;
-      merged = Object.assign(Object.assign({}, $$loader2), importDefaultResult);
+      merged = Object.assign(Object.assign({}, $$loader2), messagesProxy);
     }
   }
-  if ("IntlMessagesProxy" === importDefaultResult[Symbol.toStringTag]) {
+  if ("IntlMessagesProxy" === messagesProxy[Symbol.toStringTag]) {
     if (!tmp2) {
       const _Object3 = Object;
-      merged = Object.assign(importDefaultResult.$$baseObject, $$loader2);
+      merged = Object.assign(messagesProxy.$$baseObject, $$loader2);
     }
   }
   if (tmp2) {
     tmp2 = !tmp;
   }
-  merged = importDefaultResult;
+  merged = messagesProxy;
   if (tmp2) {
     const _Object4 = Object;
-    merged = Object.assign($$loader2.$$baseObject, importDefaultResult);
+    merged = Object.assign($$loader2.$$baseObject, messagesProxy);
   }
 };
-arg5.makeMessagesProxy = function makeMessagesProxy(loader) {
+export const makeMessagesProxy = function makeMessagesProxy(loader) {
   closure_0 = loader;
   let obj = {};
   obj = {

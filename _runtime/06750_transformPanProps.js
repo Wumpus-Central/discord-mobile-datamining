@@ -2,8 +2,8 @@
 
 // Module 6750 (transformPanProps)
 import ComposedGestureName from "ComposedGestureName" /* 6714 */;
-import isGestureEnabled from "isGestureEnabled" /* 6723 */;
-import useGesture from "useGesture" /* 6738 */;
+import DEFAULT_PROPS_TRANSFORMER from "DEFAULT_PROPS_TRANSFORMER" /* 6723 */;
+import _mod6738 from "module_6738" /* 6738 */;
 
 require = arg1;
 const dependencyMap = arg6;
@@ -16,7 +16,7 @@ function transformPanProps(activeOffsetY) {
       if (undefined === str23) {
         let str34 = activeOffsetY.activeOffsetX;
         if (undefined === str34) {
-          activeOffsetY.changeEventCalculator = isGestureEnabled.getChangeEventCalculator(diffCalculator);
+          activeOffsetY.changeEventCalculator = DEFAULT_PROPS_TRANSFORMER.getChangeEventCalculator(diffCalculator);
           activeOffsetY.fillInDefaultValues = fillInDefaultValues;
           return activeOffsetY;
         } else {
@@ -35,7 +35,7 @@ function transformPanProps(activeOffsetY) {
               const _HermesInternal10 = HermesInternal;
               activeOffsetY["" + "activeOffsetX" + "End"] = str34;
             }
-            obj4 = isGestureEnabled;
+            obj4 = DEFAULT_PROPS_TRANSFORMER;
           }
           activeOffsetY["" + "activeOffsetX" + "Start"] = str34;
         }
@@ -55,7 +55,7 @@ function transformPanProps(activeOffsetY) {
             const _HermesInternal7 = HermesInternal;
             activeOffsetY["" + "failOffsetY" + "End"] = str23;
           }
-          obj3 = isGestureEnabled;
+          obj3 = DEFAULT_PROPS_TRANSFORMER;
         }
         activeOffsetY["" + "failOffsetY" + "Start"] = str23;
       }
@@ -75,7 +75,7 @@ function transformPanProps(activeOffsetY) {
           const _HermesInternal4 = HermesInternal;
           activeOffsetY["" + "failOffsetX" + "End"] = str12;
         }
-        obj2 = isGestureEnabled;
+        obj2 = DEFAULT_PROPS_TRANSFORMER;
       }
       activeOffsetY["" + "failOffsetX" + "Start"] = str12;
     }
@@ -95,7 +95,7 @@ function transformPanProps(activeOffsetY) {
         const _HermesInternal = HermesInternal;
         activeOffsetY["" + "activeOffsetY" + "End"] = str;
       }
-      obj = isGestureEnabled;
+      obj = DEFAULT_PROPS_TRANSFORMER;
     }
     activeOffsetY["" + "activeOffsetY" + "Start"] = str;
   }
@@ -116,7 +116,7 @@ function diffCalculator(translationX, translationX2) {
   } else {
     diff1 = translationY;
   }
-  obj[1] = diff1;
+  obj.changeY = diff1;
   return obj;
 }
 diffCalculator.__closure = {};
@@ -130,12 +130,12 @@ fillInDefaultValues.__closure = {};
 fillInDefaultValues.__workletHash = 12221662243929;
 fillInDefaultValues.__initData = { code: "function fillInDefaultValues_Pnpm_usePanGestureTs2(event){event.changeX=0;event.changeY=0;}" };
 let closure_6 = {};
-arg5.usePanGesture = function usePanGesture(gestureHandlerProps) {
+
+export const usePanGesture = function usePanGesture(gestureHandlerProps) {
   let tmp = gestureHandlerProps;
   if (gestureHandlerProps === undefined) {
     tmp = closure_6;
   }
-  const clonedAndRemappedConfig = isGestureEnabled.useClonedAndRemappedConfig(tmp, map, transformPanProps);
-  const obj = isGestureEnabled;
-  return useGesture.useGesture(ComposedGestureName.SingleGestureName.Pan, clonedAndRemappedConfig);
+  const clonedAndRemappedConfig = DEFAULT_PROPS_TRANSFORMER.useClonedAndRemappedConfig(tmp, map, transformPanProps);
+  return _mod6738.useGesture(ComposedGestureName.SingleGestureName.Pan, clonedAndRemappedConfig);
 };

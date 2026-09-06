@@ -1,18 +1,17 @@
 // === Module 290: Button ===
 
 // Module 290 (Button)
-import noopAll from "noop" /* 19 */;
 import _modDef38 from "module_38" /* 38 */;
 import ViewDefault from "View" /* 108 */;
-import get_hairlineWidthDefault from "get hairlineWidth" /* 254 */;
-import useTextPressabilityDefault from "useTextPressability" /* 298 */;
-import { jsx } from "jsxProd" /* 21 */;
-import closure_3 from "_isNativeReflectConstruct" /* 291 */;
+import _modDef298 from "module_298" /* 298 */;
+import noop from "module_19" /* 19 */;
+import _isNativeReflectConstruct from "module_291" /* 291 */;
+import get_hairlineWidth from "get hairlineWidth" /* 254 */;
 
-noopAll;
+const jsx = fn(21).jsx;
 class Button {
   constructor(arg0) {
-    merged = Object.assign(global, Object.create(null));
+    merged = Object.assign(global, Object.assign({ ref: 0 }));
     ({ accessibilityState, aria-busy: tmp2, aria-checked: tmp3, aria-disabled: tmp4, aria-expanded: tmp5, aria-label: tmp6, aria-selected: tmp7, importantForAccessibility, color, title } = merged);
     tmp8 = closure_4;
     items = [];
@@ -22,7 +21,7 @@ class Button {
     ({ accessibilityLabel, onPress, touchSoundDisabled, hasTVPreferredFocus, nextFocusDown, nextFocusForward, nextFocusLeft, nextFocusRight, nextFocusUp, testID, accessible, accessibilityActions, accessibilityHint, accessibilityLanguage, onAccessibilityAction } = merged);
     if (color) {
       obj = { backgroundColor: null };
-      obj[0] = color;
+      obj.backgroundColor = color;
       arr = items.push(obj);
     }
     if (tmp2 == null) {
@@ -40,7 +39,7 @@ class Button {
       }
       tmp3 = checked;
     }
-    obj[1] = tmp3;
+    obj.checked = tmp3;
     if (tmp4 == null) {
       disabled = undefined;
       if (accessibilityState != null) {
@@ -48,7 +47,7 @@ class Button {
       }
       tmp4 = disabled;
     }
-    obj[2] = tmp4;
+    obj.disabled = tmp4;
     if (tmp5 == null) {
       expanded = undefined;
       if (accessibilityState != null) {
@@ -56,7 +55,7 @@ class Button {
       }
       tmp5 = expanded;
     }
-    obj[3] = tmp5;
+    obj.expanded = tmp5;
     if (tmp7 == null) {
       selected = undefined;
       if (accessibilityState != null) {
@@ -64,7 +63,7 @@ class Button {
       }
       tmp7 = selected;
     }
-    obj[4] = tmp7;
+    obj.selected = tmp7;
     tmp15 = null != merged.disabled ? merged.disabled : obj.disabled;
     tmp16 = obj;
     if (tmp15 !== obj.disabled) {
@@ -81,7 +80,7 @@ class Button {
     }
     tmp22 = closure_0;
     tmp23 = closure_1;
-    tmp24 = require("module_38")(typeof title === "string", "The title prop of a Button must be a string");
+    tmp24 = closure_0(closure_1[3])(typeof title === "string", "The title prop of a Button must be a string");
     tmp26 = jsx;
     obj2 = { accessible, accessibilityActions, onAccessibilityAction, accessibilityLabel: null, accessibilityHint: null, accessibilityLanguage: null, accessibilityRole: "button", accessibilityState: null, importantForAccessibility: null, hasTVPreferredFocus: null, nextFocusDown: null, nextFocusForward: null, nextFocusLeft: null, nextFocusRight: null, nextFocusUp: null, testID: null, disabled: null, onPress: null, touchSoundDisabled: null, ref: null, children: null };
     formatted = title.toUpperCase();
@@ -89,34 +88,34 @@ class Button {
     if (!tmp6) {
       tmp6 = accessibilityLabel;
     }
-    obj2[3] = tmp6;
-    obj2[4] = accessibilityHint;
-    obj2[5] = accessibilityLanguage;
-    obj2[7] = tmp16;
+    obj2.accessibilityLabel = tmp6;
+    obj2.accessibilityHint = accessibilityHint;
+    obj2.accessibilityLanguage = accessibilityLanguage;
+    obj2.accessibilityState = tmp16;
     str = "no-hide-descendants";
     if ("no" !== importantForAccessibility) {
       str = importantForAccessibility;
     }
-    obj2[8] = str;
-    obj2[9] = hasTVPreferredFocus;
-    obj2[10] = nextFocusDown;
-    obj2[11] = nextFocusForward;
-    obj2[12] = nextFocusLeft;
-    obj2[13] = nextFocusRight;
-    obj2[14] = nextFocusUp;
-    obj2[15] = testID;
-    obj2[16] = tmp15;
-    obj2[17] = onPress;
-    obj2[18] = touchSoundDisabled;
-    obj2[19] = global.ref;
+    obj2.importantForAccessibility = str;
+    obj2.hasTVPreferredFocus = hasTVPreferredFocus;
+    obj2.nextFocusDown = nextFocusDown;
+    obj2.nextFocusForward = nextFocusForward;
+    obj2.nextFocusLeft = nextFocusLeft;
+    obj2.nextFocusRight = nextFocusRight;
+    obj2.nextFocusUp = nextFocusUp;
+    obj2.testID = testID;
+    obj2.disabled = tmp15;
+    obj2.onPress = onPress;
+    obj2.touchSoundDisabled = touchSoundDisabled;
+    obj2.ref = global.ref;
     obj3 = { style: items, children: null };
-    tmp22Result = require("View");
-    obj3[1] = tmp26(require("useTextPressability"), { style: items1, disabled: tmp15, children: formatted });
-    obj2[20] = tmp26(tmp22Result, obj3);
+    tmp22Result = tmp22(tmp23[4]);
+    obj3.children = tmp26(tmp22(tmp23[5]), { style: items1, disabled: tmp15, children: formatted });
+    obj2.children = tmp26(tmp22Result, obj3);
     return tmp26(tmp27, obj2);
   }
 }
 Button.displayName = "Button";
-let closure_4 = get_hairlineWidthDefault.create({ button: { elevation: 4, backgroundColor: "#2196F3", borderRadius: 2 }, text: { textAlign: "center", margin: 8, color: "white", fontWeight: "500" }, buttonDisabled: { elevation: 0, backgroundColor: "#dfdfdf" }, textDisabled: { color: "#a1a1a1" } });
+const React4 = get_hairlineWidth.create({ button: { elevation: 4, backgroundColor: "#2196F3", borderRadius: 2 }, text: { textAlign: "center", margin: 8, color: "white", fontWeight: "500" }, buttonDisabled: { elevation: 0, backgroundColor: "#dfdfdf" }, textDisabled: { color: "#a1a1a1" } });
 
 export default Button;

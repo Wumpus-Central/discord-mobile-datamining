@@ -1,38 +1,34 @@
 // === Module 3861: eachQuarterOfInterval ===
 
 // Module 3861 (eachQuarterOfInterval)
-import addQuarters from "addQuarters" /* 3816 */;
+import module_3816 from "module_3816" /* 3816 */;
 import startOfQuarter from "startOfQuarter" /* 3862 */;
-import _typeof from "_typeof" /* 3650 */;
+import _typeof from "module_3650" /* 3650 */;
 import requiredArgs from "requiredArgs" /* 3651 */;
 
-if (!addQuarters) {
-  let obj = { default: null };
-  obj[0] = addQuarters;
+if (!module_3816) {
+  let obj = { default: module_3816 };
   let tmp3 = obj;
 } else {
-  tmp3 = addQuarters;
+  tmp3 = module_3816;
 }
-addQuarters = tmp3;
+module_3816 = tmp3;
 if (!startOfQuarter) {
-  obj = { default: null };
-  obj[0] = startOfQuarter;
+  obj = { default: startOfQuarter };
   let tmp5 = obj;
 } else {
   tmp5 = startOfQuarter;
 }
 startOfQuarter = tmp5;
 if (!_typeof) {
-  obj = { default: null };
-  obj[0] = _typeof;
+  obj = { default: _typeof };
   let tmp7 = obj;
 } else {
   tmp7 = _typeof;
 }
 _typeof = tmp7;
 if (!requiredArgs) {
-  const obj1 = { default: null };
-  obj1[0] = requiredArgs;
+  const obj1 = { default: requiredArgs };
   let tmp9 = obj1;
 } else {
   tmp9 = requiredArgs;
@@ -55,10 +51,8 @@ export default function eachQuarterOfInterval(arg0) {
     const items = [];
     if (defaultResult3.getTime() <= time1) {
       do {
-        let tmp10 = _typeof;
         let arr = items.push(_typeof.default(defaultResult3));
-        let tmp12 = addQuarters;
-        let defaultResult5 = addQuarters.default(defaultResult3, 1);
+        let defaultResult5 = module_3816.default(defaultResult3, 1);
         defaultResult3 = defaultResult5;
         time2 = defaultResult5.getTime();
       } while (time2 <= time1);

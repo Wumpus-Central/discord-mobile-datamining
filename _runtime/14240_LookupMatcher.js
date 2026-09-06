@@ -1,16 +1,17 @@
 // === Module 14240: LookupMatcher ===
 
 // Module 14240 (LookupMatcher)
-import isMatched from "isMatched" /* 14241 */;
+import _mod14241 from "module_14241" /* 14241 */;
 import BestAvailableLocale from "BestAvailableLocale" /* 14244 */;
 
 require = arg1;
 const dependencyMap = arg6;
-arg5.LookupMatcher = function LookupMatcher(arg0, arg1, arg2) {
+
+export const LookupMatcher = function LookupMatcher(arg0, arg1, fn) {
   const obj = { locale: "" };
   let num = 0;
   if (0 < arg1.length) {
-    const replaced = str.replace(isMatched.UNICODE_EXTENSION_SEQUENCE_REGEX, "");
+    const replaced = str.replace(_mod14241.UNICODE_EXTENSION_SEQUENCE_REGEX, "");
     const BestAvailableLocaleResult = BestAvailableLocale.BestAvailableLocale(arg0, replaced);
     while (!BestAvailableLocaleResult) {
       num = num + 1;
@@ -21,6 +22,6 @@ arg5.LookupMatcher = function LookupMatcher(arg0, arg1, arg2) {
     }
     return obj;
   }
-  obj.locale = arg2();
+  obj.locale = fn();
   return obj;
 };

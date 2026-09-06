@@ -1,20 +1,18 @@
 // === Module 3860: eachMonthOfInterval ===
 
 // Module 3860 (eachMonthOfInterval)
-import _typeof from "_typeof" /* 3650 */;
+import _typeof from "module_3650" /* 3650 */;
 import requiredArgs from "requiredArgs" /* 3651 */;
 
 if (!_typeof) {
-  let obj = { default: null };
-  obj[0] = _typeof;
+  let obj = { default: _typeof };
   let tmp3 = obj;
 } else {
   tmp3 = _typeof;
 }
 _typeof = tmp3;
 if (!requiredArgs) {
-  obj = { default: null };
-  obj[0] = requiredArgs;
+  obj = { default: requiredArgs };
   let tmp5 = obj;
 } else {
   tmp5 = requiredArgs;
@@ -36,7 +34,6 @@ export default function eachMonthOfInterval(arg0) {
     defaultResult1.setDate(1);
     if (defaultResult1.getTime() <= time) {
       do {
-        let tmp11 = _typeof;
         let arr = items.push(_typeof.default(defaultResult1));
         let setMonthResult = defaultResult1.setMonth(defaultResult1.getMonth() + 1);
         time1 = defaultResult1.getTime();

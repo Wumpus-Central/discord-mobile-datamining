@@ -1,12 +1,12 @@
 // === Module 8314: colorPropType ===
 
 // Module 8314 (colorPropType)
-import hslToRgb from "hslToRgb" /* 8315 */;
+import _mod8315 from "module_8315" /* 8315 */;
 
 function colorPropType(arg0, arg1, arg2, arg3, arg4, arg5) {
   let tmp = arg5;
   if (null == arg1[arg2]) {
-    error = undefined;
+    let error;
     if (arg0) {
       const text = `Required ${arg4}`;
       if (!tmp) {
@@ -17,7 +17,7 @@ function colorPropType(arg0, arg1, arg2, arg3, arg4, arg5) {
     let error1 = error;
   } else if (typeof tmp2 !== "number") {
     if (typeof tmp2 === "string") {
-      if (null === hslToRgb(tmp2)) {
+      if (null === _mod8315(tmp2)) {
         let tmp5 = tmp;
         const text1 = `Invalid ${arg4}`;
         if (!tmp) {

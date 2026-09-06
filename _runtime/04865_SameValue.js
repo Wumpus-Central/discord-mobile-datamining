@@ -1,7 +1,7 @@
 // === Module 4865: SameValue ===
 
 // Module 4865 (SameValue)
-import isNaN from "isNaN" /* 1314 */;
+import _mod1314 from "module_1314" /* 1314 */;
 
 
 export default function SameValue(arg0, arg1) {
@@ -12,8 +12,7 @@ export default function SameValue(arg0, arg1) {
     }
     let tmp3 = tmp4;
   } else {
-    tmp3 = isNaN(arg0) && isNaN(arg1);
-    const tmp = require;
+    tmp3 = _mod1314(arg0) && _mod1314(arg1);
   }
   return tmp3;
 };

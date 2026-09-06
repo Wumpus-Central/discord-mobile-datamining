@@ -1,7 +1,7 @@
 // === Module 893: ignoreNextOnError ===
 
 // Module 893 (ignoreNextOnError)
-import registerSpanErrorInstrumentation from "registerSpanErrorInstrumentation" /* 682 */;
+import _mod682 from "module_682" /* 682 */;
 
 function ignoreNextOnError() {
   closure_2 = closure_2 + 1;
@@ -10,13 +10,12 @@ function ignoreNextOnError() {
   });
 }
 Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
-let c2 = 0;
-function wrap(__sentry_wrapped__) {
-  const _require = __sentry_wrapped__;
-  let obj = arg1;
+let closure_2 = 0;
+function wrap(__sentry_wrapped__, extra) {
+  _require = __sentry_wrapped__;
   let tmp2;
-  if (arg1 === undefined) {
-    obj = {};
+  if (extra === undefined) {
+    extra = {};
   }
   if ((function isFunction(fn) {
     return typeof fn === "function";
@@ -37,27 +36,26 @@ function wrap(__sentry_wrapped__) {
             const items = [...arguments];
             try {
               const self = this;
-              return items.apply(this, items.map((arg0) => closure_1_4(arg0, closure_1)));
+              return items.apply(this, items.map((item) => wrap(item, closure_1)));
             } catch (tmp2) {
-              obj = tmp2;
-              closure_1_3();
+              let obj = tmp2;
+              ignoreNextOnError();
               obj = __sentry_wrapped__(obj[0]);
               obj.withScope((addEventProcessor) => {
                 addEventProcessor.addEventProcessor((extra) => {
-                  if (closure_1_1.mechanism) {
-                    obj = items(682);
-                    const result = obj.addExceptionTypeValue(extra, undefined, undefined);
-                    const result1 = items(682).addExceptionMechanism(extra, tmp.mechanism);
-                    const obj2 = items(682);
+                  if (mechanism.mechanism) {
+                    extra = _arguments(extra[0]);
+                    const result = extra.addExceptionTypeValue(extra, undefined, undefined);
+                    const result1 = _arguments(extra[0]).addExceptionMechanism(extra, tmp.mechanism);
+                    const obj2 = _arguments(extra[0]);
                   }
-                  obj = {};
+                  extra = {};
                   const merged = Object.assign(extra.extra);
-                  obj.arguments = closure_0;
-                  extra.extra = obj;
+                  extra.arguments = _arguments;
+                  extra.extra = extra;
                   return extra;
                 });
-                obj = items(obj[0]);
-                obj.captureException(closure_1);
+                _mod682.captureException(mechanism);
               });
               throw tmp2;
             }
@@ -66,8 +64,8 @@ function wrap(__sentry_wrapped__) {
             for (const key10019 in arg0) {
               let tmp17 = key10019;
               let _Object = Object;
+              hasOwnProperty = Object.prototype.hasOwnProperty;
               let call = hasOwnProperty.call;
-              let tmp16 = key10019;
               if (typeof call === "unknown") {
                 let hasOwnPropertyResult = hasOwnProperty(key10019);
               } else {
@@ -76,20 +74,19 @@ function wrap(__sentry_wrapped__) {
               if (!hasOwnPropertyResult) {
                 continue;
               } else {
-                let tmp9 = tmp16;
                 sentryWrapped[tmp17] = arg0[tmp17];
                 continue;
               }
               continue;
             }
-            _require(obj[0]).markFunctionWrapped(sentryWrapped, __sentry_wrapped__);
-            tmp2 = _require(obj[0]);
+            require("module_682").markFunctionWrapped(sentryWrapped, __sentry_wrapped__);
+            tmp2 = require("module_682");
             let result = tmp2.addNonEnumerableProperty(__sentry_wrapped__, "__sentry_wrapped__", sentryWrapped);
-            const obj3 = _require(obj[0]);
+            const obj3 = require("module_682");
           } catch (err) {
           }
         }
-        obj2 = _require(obj[0]);
+        obj2 = require("module_682");
       }
     } catch (err) {
       return tmp;
@@ -99,34 +96,31 @@ function wrap(__sentry_wrapped__) {
   }
 }
 
-export const WINDOW = registerSpanErrorInstrumentation.GLOBAL_OBJ;
+export const WINDOW = _mod682.GLOBAL_OBJ;
 export const getHttpRequestData = function getHttpRequestData() {
-  let obj = registerSpanErrorInstrumentation;
+  let obj = _mod682;
   const locationHref = obj.getLocationHref();
-  const referrer = registerSpanErrorInstrumentation.GLOBAL_OBJ.document || {}.referrer;
-  const tmp = require;
-  const tmp4 = registerSpanErrorInstrumentation.GLOBAL_OBJ.document || {};
-  const userAgent = registerSpanErrorInstrumentation.GLOBAL_OBJ.navigator || {}.userAgent;
+  const referrer = _mod682.GLOBAL_OBJ.document || {}.referrer;
+  const tmp4 = _mod682.GLOBAL_OBJ.document || {};
+  const userAgent = _mod682.GLOBAL_OBJ.navigator || {}.userAgent;
   obj = { url: locationHref, headers: null };
   let tmp6 = referrer;
   if (referrer) {
-    obj = { Referer: null };
-    obj[0] = referrer;
+    obj = { Referer: referrer };
     tmp6 = obj;
   }
   const merged = Object.assign(tmp6);
   let tmp8 = userAgent;
   if (userAgent) {
-    const obj2 = { "User-Agent": null };
-    obj2[0] = userAgent;
+    const obj2 = { "User-Agent": userAgent };
     tmp8 = obj2;
   }
   const merged1 = Object.assign(tmp8);
-  obj[1] = {};
+  obj.headers = {};
   return obj;
 };
 export { ignoreNextOnError };
 export function shouldIgnoreOnError() {
-  return c2 > 0;
+  return closure_2 > 0;
 }
 export { wrap };

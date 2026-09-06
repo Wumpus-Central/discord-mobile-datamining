@@ -1,8 +1,8 @@
 // === Module 6751: ButtonComponent ===
 
 // Module 6751 (ButtonComponent)
-import __INTERNAL_VIEW_CONFIGDefault from "__INTERNAL_VIEW_CONFIG" /* 6752 */;
+import _modDef6752 from "module_6752" /* 6752 */;
 
 
-export default __INTERNAL_VIEW_CONFIGDefault;
-export const ButtonComponent = __INTERNAL_VIEW_CONFIGDefault;
+export default _modDef6752;
+export const ButtonComponent = _modDef6752;

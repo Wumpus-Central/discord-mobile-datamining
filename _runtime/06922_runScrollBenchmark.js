@@ -1,14 +1,14 @@
 // === Module 6922: runScrollBenchmark ===
 
 // Module 6922 (runScrollBenchmark)
-import closure_2 from "asyncGeneratorStep" /* 6900 */;
-import closure_3 from "_slicedToArray" /* 6857 */;
-import noop from "noop" /* 19 */;
+import Cancellable from "Cancellable" /* 6918 */;
+import asyncGeneratorStep from "module_6900" /* 6900 */;
+import _slicedToArray from "module_6857" /* 6857 */;
 
-const require = arg1;
+require = fn;
 function runScrollBenchmark(arg0, arg1, arg2, arg3) {
   const self = this;
-  const apply = _runScrollBenchmark.apply;
+  const apply = closure_9.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -16,146 +16,123 @@ function runScrollBenchmark(arg0, arg1, arg2, arg3) {
   }
   return applyArgumentsResult;
 }
-function _runScrollBenchmark() {
-  const self = this;
-  let tmp = callback((arg0, arg1, arg2, arg3) => {
-    closure_0 = arg0;
-    closure_1 = arg1;
-    closure_2 = arg2;
-    closure_3 = arg3;
-    c6 = 0;
-    c7 = 0;
-    return (function*(arg0, arg1, arg2, arg3) {
-      if (c7 === 2) {
-        c7 = 3;
-        HermesBuiltin.throwTypeError();
-      } else if (tmp4 === 3) {
+let closure_9 = async function _runScrollBenchmark(arg0, value) {
+  if (c7 === 2) {
+    c7 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp4 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      let obj = { value, done: true };
+      return obj;
+    } else {
+      return { value: "HermesInternal", done: null };
+    }
+  } else {
+    try {
+      c7 = 2;
+      if (0 === c6) {
         if (arg0 === 1) {
-          throw arg1;
+          c7 = 3;
+          throw value;
         } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
-          obj[0] = arg1;
+          c7 = 3;
+          obj = { value, done: true };
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
-        }
-      } else {
-        try {
-          c7 = 2;
-          if (0 === c6) {
-            if (arg0 === 1) {
-              c7 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c7 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            } else {
-              let num12 = tmp5;
-              let num11 = tmp2;
-              num12 = dependencyMap;
-              dependencyMap = closure_2;
-              closure_2 = c3;
-              c3 = undefined;
-              num11 = undefined;
-              num12 = undefined;
-              c6 = undefined;
-              if (ref.current) {
-                const props = tmp34.current.props;
-                let horizontal;
-                if (props != null) {
-                  horizontal = props.horizontal;
+          closure_5 = tmp5;
+          closure_4 = tmp2;
+          closure_132_0 = ref;
+          let num12 = closure_1;
+          closure_132_1 = closure_2;
+          closure_132_2 = closure_3;
+          closure_132_3 = undefined;
+          closure_132_4 = undefined;
+          closure_132_5 = undefined;
+          closure_132_6 = undefined;
+          if (ref.current) {
+            const props = tmp33.current.props;
+            let horizontal;
+            if (props != null) {
+              horizontal = props.horizontal;
+            }
+            const BooleanResult = Boolean(horizontal);
+            closure_132_3 = BooleanResult;
+            let num11 = 0;
+            if (BooleanResult) {
+              num11 = num12;
+            }
+            closure_132_4 = num11;
+            if (BooleanResult) {
+              num12 = 0;
+            }
+            closure_132_5 = num12;
+            function scrollNow(arg0, arg1) {
+              const current = ref.current;
+              if (current != null) {
+                let tmp = arg1;
+                if (closure_1_3) {
+                  tmp = arg0;
                 }
-                const BooleanResult = Boolean(horizontal);
-                c3 = BooleanResult;
-                num11 = 0;
-                if (BooleanResult) {
-                  num11 = num12;
-                }
-                if (BooleanResult) {
-                  num12 = 0;
-                }
-                function scrollNow(arg0, arg1) {
-                  const current = ref.current;
-                  if (current != null) {
-                    let tmp = arg1;
-                    if (c3) {
-                      tmp = arg0;
-                    }
-                    const obj = { offset: null, animated: false };
-                    obj[0] = tmp;
-                    current.scrollToOffset(obj);
-                  }
-                }
-                c6 = scrollNow;
-                const obj5 = ref(6918);
-                c6 = 1;
-                c7 = 1;
-                obj1 = { value: null, done: false };
-                obj1[0] = obj5.autoScroll(scrollNow, 0, 0, num11, num12, tmp36, tmp35);
-                return obj1;
+                const obj = { offset: tmp, animated: false };
+                current.scrollToOffset(obj);
               }
             }
-          } else if (1 === tmp5) {
-            if (arg0 === 1) {
-              c7 = 3;
-              throw arg1;
-            } else if (arg0 === 2) {
-              c7 = 3;
-              const obj2 = { value: null, done: true };
-              obj2[0] = arg1;
-              return obj2;
-            } else {
-              obj1 = ref(6918);
-              c6 = 2;
-              c7 = 1;
-              const obj3 = { value: null, done: false };
-              obj3[0] = obj1.autoScroll(c6, num11, num12, 0, 0, closure_2, dependencyMap);
-              return obj3;
-            }
-          } else if (arg0 === 1) {
-            c7 = 3;
-            throw arg1;
-          } else if (arg0 === 2) {
-            c7 = 3;
-            obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
+            closure_132_6 = scrollNow;
+            const obj5 = Cancellable;
+            c6 = 1;
+            c7 = 1;
+            let obj1 = { value: obj5.autoScroll(scrollNow, 0, 0, num11, num12, tmp35, tmp34), done: false };
+            return obj1;
           }
-          c7 = 3;
-          return { value: "HermesInternal", done: null };
-        } catch (tmp28) {
-          c7 = tmp;
-          throw tmp28;
         }
+      } else if (1 === tmp5) {
+        if (arg0 === 1) {
+          c7 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c7 = 3;
+          const obj2 = { value, done: true };
+          return obj2;
+        } else {
+          obj1 = closure_133_0(closure_133_1[3]);
+          c6 = 2;
+          c7 = 1;
+          const obj3 = { value: obj1.autoScroll(closure_132_6, closure_132_4, closure_132_5, 0, 0, closure_132_2, closure_132_1), done: false };
+          return obj3;
+        }
+      } else if (arg0 === 1) {
+        c7 = 3;
+        throw value;
+      } else if (arg0 === 2) {
+        c7 = 3;
+        obj = { value, done: true };
+        return obj;
       }
-    })();
-  });
-  closure_9 = tmp;
-  const apply = tmp.apply;
-  if (typeof apply === "unknown") {
-    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-  } else {
-    applyArgumentsResult = apply(self, arguments);
+      c7 = 3;
+      return { value: "HermesInternal", done: null };
+    } catch (tmp28) {
+      c7 = tmp;
+      throw tmp28;
+    }
   }
-  return applyArgumentsResult;
-}
-({ useCallback: c4, useEffect: c5, useRef: closure_6, useState: error } = noop);
+};
+const noop = fn(19);
+({ useCallback: closure_4, useEffect: hasOwnProperty, useRef: metroRequire, useState: closure_7 } = noop);
 
 export const useFlatListBenchmark = function useFlatListBenchmark(arg0, arg1, arg2) {
-  closure_0 = arg0;
-  closure_1 = arg1;
+  dependencyMap = arg1;
   closure_2 = arg2;
-  let tmp = isBenchmarkRunning(callback4(false), 2);
+  let tmp = isBenchmarkRunning(closure_7(false), 2);
   isBenchmarkRunning = tmp[0];
-  const callback2 = tmp[1];
-  const callback3 = startBenchmark(null);
+  closure_4 = tmp[1];
+  closure_5 = startBenchmark(null);
   const items = [arg1, arg0, isBenchmarkRunning, , , ];
   ({ repeatCount: arr[3], speedMultiplier: arr[4], targetOffset: arr[5] } = arg2);
-  startBenchmark = callback2(() => {
+  startBenchmark = closure_4(() => {
     if (!isBenchmarkRunning) {
-      const cancellable = new ref(table[3]).Cancellable();
+      const cancellable = new ref(dependencyMap[3]).Cancellable();
       ref = cancellable;
       closure_5.current = cancellable;
       if (ref.current) {
@@ -167,23 +144,21 @@ export const useFlatListBenchmark = function useFlatListBenchmark(arg0, arg1, ar
           }
           if (Number(length) <= 0) {
             const _Error = Error;
-            error = new Error(tmp(tmp2[4]).ErrorMessages.dataEmptyCannotRunBenchmark);
+            const error = new Error(tmp(tmp2[4]).ErrorMessages.dataEmptyCannotRunBenchmark);
             throw error;
           }
         }
       }
-      callback(true);
-      ref = undefined;
-      ref = lib(function*() {
+      closure_4(true);
+      ref = closure_2(function*(arg0, value) {
         if (c3 === 2) {
           c3 = 3;
-          HermesBuiltin.throwTypeError();
+          throw new TypeError("Generator functions may not be called on executing generators");
         } else if (tmp4 === 3) {
           if (arg0 === 1) {
-            throw arg1;
+            throw value;
           } else if (arg0 === 2) {
-            let obj = { value: null, done: true };
-            obj[0] = arg1;
+            let obj = { value, done: true };
             return obj;
           } else {
             return { value: "HermesInternal", done: null };
@@ -194,57 +169,50 @@ export const useFlatListBenchmark = function useFlatListBenchmark(arg0, arg1, ar
             if (0 === c2) {
               if (arg0 === 1) {
                 c3 = 3;
-                throw arg1;
+                throw value;
               } else if (arg0 === 2) {
                 c3 = 3;
-                obj = { value: null, done: true };
-                obj[0] = arg1;
+                obj = { value, done: true };
                 return obj;
               } else {
-                dependencyMap = tmp5;
-                let jSFPSMonitor = tmp2;
-                jSFPSMonitor = undefined;
-                dependencyMap = undefined;
-                c2 = undefined;
-                jSFPSMonitor = new callback(6919).JSFPSMonitor();
+                closure_128_0 = undefined;
+                closure_128_1 = undefined;
+                closure_128_2 = undefined;
+                const jSFPSMonitor = new tmp2(tmp5[5]).JSFPSMonitor();
+                closure_128_0 = jSFPSMonitor;
                 jSFPSMonitor.startTracking();
-                dependencyMap = 0;
+                closure_128_1 = 0;
                 let num8 = closure_2_2.repeatCount;
                 if (!num8) {
                   num8 = 1;
                 }
-                if (tmp51 >= num8) {
-                  obj1 = { js: null, suggestions: null, interrupted: null };
-                  obj1[0] = jSFPSMonitor.stopAndGetData();
-                  obj1[1] = [];
-                  obj1[2] = closure_1_0.isCancelled();
-                  c2 = obj1;
-                  if (!closure_1_0.isCancelled()) {
-                    let obj2 = callback(6917);
-                    c2.formattedString = obj2.getFormattedString(c2);
+                if (tmp50 >= num8) {
+                  const obj1 = { js: closure_128_0.stopAndGetData(), suggestions: [], interrupted: tmp2.isCancelled() };
+                  closure_128_2 = obj1;
+                  if (!tmp2.isCancelled()) {
+                    let obj2 = tmp2(tmp5[6]);
+                    closure_128_2.formattedString = obj2.getFormattedString(closure_128_2);
                   }
-                  closure_2_1(c2);
+                  dependencyMap(closure_128_2);
                   closure_2_4(false);
                   c3 = 3;
                   return { value: "HermesInternal", done: null };
                 }
-                tmp51 = dependencyMap;
+                tmp50 = closure_128_1;
               }
             } else if (arg0 === 1) {
               c3 = 3;
-              throw arg1;
+              throw value;
             } else if (arg0 === 2) {
               c3 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
+              obj = { value, done: true };
               return obj;
             } else {
-              dependencyMap = dependencyMap + 1;
+              closure_128_1 = closure_128_1 + 1;
               let num4 = closure_2_2.repeatCount;
               if (!num4) {
                 num4 = 1;
               }
-              const tmp9 = dependencyMap;
             }
             const targetOffset = closure_2_2.targetOffset;
             let num10 = closure_2_2.speedMultiplier;
@@ -253,8 +221,7 @@ export const useFlatListBenchmark = function useFlatListBenchmark(arg0, arg1, ar
             }
             c2 = 1;
             c3 = 1;
-            obj2 = { value: null, done: false };
-            obj2[0] = closure_3_8(callback, targetOffset, closure_1_0, num10);
+            obj2 = { value: runScrollBenchmark(tmp2, targetOffset, tmp2, num10), done: false };
             return obj2;
           } catch (tmp39) {
             c3 = tmp;
@@ -273,22 +240,22 @@ export const useFlatListBenchmark = function useFlatListBenchmark(arg0, arg1, ar
         return applyArgumentsResult;
       })();
       tmp = ref;
-      tmp2 = table;
+      tmp2 = dependencyMap;
     }
   }, items);
-  callback3(() => {
-    if (!lib.startManually) {
+  closure_5(() => {
+    if (!closure_2.startManually) {
       let num = tmp.startDelayInMs;
       if (!num) {
         num = 3000;
       }
       const timeout = setTimeout(() => {
-        callback();
+        startBenchmark();
       }, num);
       return () => {
         clearTimeout(closure_0);
-        if (closure_1_5.current) {
-          const current = closure_1_5.current;
+        if (ref.current) {
+          const current = ref.current;
           current.cancel();
         }
       };

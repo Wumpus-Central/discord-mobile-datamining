@@ -1,0 +1,28 @@
+// === Module 3844: ? ===
+
+// Module 3844
+const obj = {
+  ceil: Math.ceil,
+  round: Math.round,
+  floor: Math.floor,
+  trunc(endImportTime) {
+    if (endImportTime < 0) {
+      const _Math2 = Math;
+      let rounded = Math.ceil(endImportTime);
+    } else {
+      const _Math = Math;
+      rounded = Math.floor(endImportTime);
+    }
+    return rounded;
+  }
+};
+const trunc = "trunc";
+
+export const getRoundingMethod = function getRoundingMethod(roundingMethod) {
+  if (roundingMethod) {
+    let tmp3 = tmp[roundingMethod];
+  } else {
+    tmp3 = tmp[trunc];
+  }
+  return tmp3;
+};

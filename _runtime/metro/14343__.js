@@ -1,23 +1,21 @@
 // === Module 14343: ? ===
 
 // Module 14343
-let c0 = require;
-c0 = true;
-c0 = false;
+let c0 = false;
 
 export default {
   includes: (arg0, arg1, arg2) => {
-    const tmp3 = callback(14302)(arg0);
-    const tmp4 = callback(14344)(tmp3);
+    const tmp3 = closure_0(14302)(arg0);
+    const tmp4 = closure_0(14344)(tmp3);
     if (0 === tmp4) {
-      let num3 = !callback;
-      if (!callback) {
+      let num3 = !c0;
+      if (!c0) {
         num3 = -1;
       }
       return num3;
     } else {
-      let sum = callback(14348)(arg2, tmp4);
-      if (callback) {
+      let sum = closure_0(14348)(arg2, tmp4);
+      if (c0) {
         if (arg1 != arg1) {
           if (tmp4 > sum) {
             while (tmp3[+sum] == tmp3[+sum]) {
@@ -26,8 +24,8 @@ export default {
             return true;
           }
         }
-        let num2 = !callback;
-        if (!callback) {
+        let num2 = !c0;
+        if (!c0) {
           num2 = -1;
         }
         return num2;
@@ -35,9 +33,8 @@ export default {
       let sum1 = sum;
       if (tmp4 > sum) {
         while (true) {
-          let num = callback;
-          let tmp6 = sum1;
-          if (callback) {
+          let num = c0;
+          if (c0) {
             if (tmp3[sum1] === arg1) {
               break;
             }
@@ -55,17 +52,17 @@ export default {
     }
   },
   indexOf: (arg0, arg1, arg2) => {
-    const tmp3 = callback(14302)(arg0);
-    const tmp4 = callback(14344)(tmp3);
+    const tmp3 = closure_0(14302)(arg0);
+    const tmp4 = closure_0(14344)(tmp3);
     if (0 === tmp4) {
-      let num3 = !callback;
-      if (!callback) {
+      let num3 = !c0;
+      if (!c0) {
         num3 = -1;
       }
       return num3;
     } else {
-      let sum = callback(14348)(arg2, tmp4);
-      if (callback) {
+      let sum = closure_0(14348)(arg2, tmp4);
+      if (c0) {
         if (arg1 != arg1) {
           if (tmp4 > sum) {
             while (tmp3[+sum] == tmp3[+sum]) {
@@ -74,8 +71,8 @@ export default {
             return true;
           }
         }
-        let num2 = !callback;
-        if (!callback) {
+        let num2 = !c0;
+        if (!c0) {
           num2 = -1;
         }
         return num2;
@@ -83,9 +80,8 @@ export default {
       let sum1 = sum;
       if (tmp4 > sum) {
         while (true) {
-          let num = callback;
-          let tmp6 = sum1;
-          if (callback) {
+          let num = c0;
+          if (c0) {
             if (tmp3[sum1] === arg1) {
               break;
             }

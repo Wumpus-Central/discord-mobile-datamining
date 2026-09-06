@@ -1,23 +1,23 @@
 // === Module 6892: RVLayoutManager ===
 
 // Module 6892 (RVLayoutManager)
-import _createClassDefault from "_createClass" /* 6867 */;
-import closure_2 from "_classCallCheck" /* 6866 */;
+import _modDef6867 from "module_6867" /* 6867 */;
+import _classCallCheck from "module_6866" /* 6866 */;
 
 const RVLayoutManager = arg1;
 class RVLayoutManager {
   constructor(arg0, arg1) {
     self = this;
-    tmp = closure_2(this, RVLayoutManager);
+    tmp = c2(this, RVLayoutManager);
     this.requiresRepaint = false;
     this.maxItemsToProcess = 250;
     this.spanSizeInfo = {};
     this.spanTracker = [];
     this.currentMaxIndexWithChangedLayout = -1;
     this.lastSkippedLayoutIndex = Number.MAX_VALUE;
-    multiTypeAverageWindow = new require("AverageWindow").MultiTypeAverageWindow(5, 200);
+    multiTypeAverageWindow = new closure_0(closure_1[2]).MultiTypeAverageWindow(5, 200);
     this.heightAverageWindow = multiTypeAverageWindow;
-    multiTypeAverageWindow1 = new require("AverageWindow").MultiTypeAverageWindow(5, 200);
+    multiTypeAverageWindow1 = new closure_0(closure_1[2]).MultiTypeAverageWindow(5, 200);
     this.widthAverageWindow = multiTypeAverageWindow1;
     ({ getItemType: this.getItemType, overrideItemLayout: this.overrideItemLayout } = global);
     layouts = undefined;
@@ -42,14 +42,15 @@ class RVLayoutManager {
     return;
   }
 }
+const entry = {
+  key: "getEstimatedWidth",
+  value: function getEstimatedWidth(arg0) {
+    const widthAverageWindow = this.widthAverageWindow;
+    return widthAverageWindow.getCurrentValue(this.getItemType(arg0));
+  }
+};
 let items = [
-  {
-    key: "getEstimatedWidth",
-    value: function getEstimatedWidth(arg0) {
-      const widthAverageWindow = this.widthAverageWindow;
-      return widthAverageWindow.getCurrentValue(this.getItemType(arg0));
-    }
-  },
+  entry,
   {
     key: "getEstimatedHeight",
     value: function getEstimatedHeight(arg0) {
@@ -111,7 +112,7 @@ let items = [
         self.layouts.length = arg1;
         self.spanTracker.length = arg1;
         MAX_VALUE = arg1 - 1;
-        found = arr.filter((index) => index.index < closure_0);
+        found = arr.filter((item) => item.index < closure_0);
       }
       const bound = Math.min(MAX_VALUE, self.computeEstimatesAndMinMaxChangedLayout(found));
       if (self.layouts.length < arg1) {
@@ -149,14 +150,14 @@ let items = [
       const self = this;
       if (arg0 >= this.layouts.length) {
         const _Error = Error;
-        error = new Error(RVLayoutManager(6854).ErrorMessages.indexOutOfBounds);
+        const error = new Error(RVLayoutManager(6854).ErrorMessages.indexOutOfBounds);
         throw error;
       } else {
         let tmp = self.layouts[arg0];
         if (!tmp) {
-          const obj = { x: 0, y: 0, width: 0, height: 0 };
-          self.layouts[arg0] = obj;
-          tmp = obj;
+          const size = { x: 0, y: 0, width: 0, height: 0 };
+          self.layouts[arg0] = size;
+          tmp = size;
         }
         if (!tmp2) {
           self.estimateLayout(arg0);
@@ -271,44 +272,29 @@ let items = [
         let size = self.layouts[index];
         let result = index >= self.lastSkippedLayoutIndex;
         if (!result) {
-          let tmp4 = size;
           result = !size;
         }
         if (!result) {
-          let tmp5 = size;
           result = !size.isHeightMeasured;
         }
         if (!result) {
-          let tmp6 = size;
           result = !size.isWidthMeasured;
         }
         if (!result) {
-          let tmp7 = RVLayoutManager;
-          let tmp8 = dependencyMap;
           let obj = RVLayoutManager(6894);
-          let tmp9 = size;
-          let tmp10 = dimensions;
           result = obj.areDimensionsNotEqual(size.height, dimensions.height);
         }
         if (!result) {
-          let tmp11 = RVLayoutManager;
-          let tmp12 = dependencyMap;
           let obj2 = RVLayoutManager(6894);
-          let tmp13 = size;
-          let tmp14 = dimensions;
           result = obj2.areDimensionsNotEqual(size.width, dimensions.width);
         }
         if (result) {
           let _Math = Math;
-          let tmp15 = MAX_VALUE;
-          let tmp16 = index;
           MAX_VALUE = Math.min(MAX_VALUE, tmp2);
           let _Math2 = Math;
           self.currentMaxIndexWithChangedLayout = Math.max(self.currentMaxIndexWithChangedLayout, tmp2);
         }
         let heightAverageWindow = self.heightAverageWindow;
-        let tmp17 = dimensions;
-        let tmp18 = index;
         let addValueResult = heightAverageWindow.addValue(dimensions.height, self.getItemType(tmp2));
         let widthAverageWindow = self.widthAverageWindow;
         let addValueResult1 = widthAverageWindow.addValue(dimensions.width, self.getItemType(tmp2));
@@ -327,12 +313,9 @@ let items = [
         let tmp = index;
         let span = self.getSpan(index, true);
         if (span !== self.spanTracker[index]) {
-          let tmp4 = index;
-          let tmp5 = span;
           self.spanTracker[tmp] = tmp3;
           let handleSpanChangeResult = self.handleSpanChange(tmp);
           let _Math = Math;
-          let tmp7 = MAX_VALUE;
           MAX_VALUE = Math.min(MAX_VALUE, tmp);
         }
         continue;
@@ -342,4 +325,4 @@ let items = [
   }
 ];
 
-export const RVLayoutManager = _createClassDefault(RVLayoutManager, items);
+export const RVLayoutManager = _modDef6867(RVLayoutManager, items);

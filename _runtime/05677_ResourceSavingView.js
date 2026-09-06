@@ -1,30 +1,30 @@
 // === Module 5677: ResourceSavingView ===
 
 // Module 5677 (ResourceSavingView)
-import noopAll from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import { jsx } from "jsxProd" /* 21 */;
+import noop from "module_19" /* 19 */;
 
-noopAll;
-({ Platform, StyleSheet, View: c0 } = get_ActivityIndicator);
-const styles = StyleSheet.create({ container: { flex: 1, overflow: "hidden" }, attached: { flex: 1 }, detached: { flex: 1, top: 30000 } });
+get_ActivityIndicator = fn(17);
+({ Platform, StyleSheet, View: closure_0 } = get_ActivityIndicator);
+const jsx = fn(21).jsx;
+const container = StyleSheet.create({ container: { flex: 1, overflow: "hidden" }, attached: { flex: 1 }, detached: { flex: 1, top: 30000 } });
 
 export const ResourceSavingView = function ResourceSavingView(visible) {
   visible = visible.visible;
   ({ children, style } = visible);
-  const merged = Object.assign(visible, Object.create(null));
-  let obj = { style: items, pointerEvents: null, children: null };
-  items = [container.container, style];
+  const merged = Object.assign(visible, Object.assign({ visible: 0, children: 0, style: 0 }));
+  let obj = { style: null, pointerEvents: null, children: null };
+  const items = [container.container, style];
+  obj.style = items;
   let str = "none";
   let str2 = "none";
   if (visible) {
     str2 = "auto";
   }
-  obj[1] = str2;
+  obj.pointerEvents = str2;
   if (visible) {
     str = "auto";
   }
   obj = { collapsable: false, removeClippedSubviews: true, pointerEvents: str, style: visible ? tmp4.attached : tmp4.detached, children };
-  obj[2] = <closure_0 collapsable={false} removeClippedSubviews pointerEvents={str} style={visible ? tmp4.attached : tmp4.detached}>{children}</closure_0>;
-  return <closure_0 collapsable={false} removeClippedSubviews pointerEvents={str} style={visible ? tmp4.attached : tmp4.detached}>{children}</closure_0>;
+  obj.children = <React collapsable={false} removeClippedSubviews pointerEvents={str} style={visible ? tmp4.attached : tmp4.detached}>{children}</React>;
+  return <React collapsable={false} removeClippedSubviews pointerEvents={str} style={visible ? tmp4.attached : tmp4.detached}>{children}</React>;
 };

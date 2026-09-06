@@ -1,16 +1,16 @@
 // === Module 5237: ? ===
 
 // Module 5237
-import getStringValue from "getStringValue" /* 5238 */;
+import _mod5238 from "module_5238" /* 5238 */;
 
-require = arg1;
+require = fn;
 const dependencyMap = arg6;
 let obj = { 33434: null, 33437: null, 34850: null, 34852: "SpectralSensitivity", 34855: "ISOSpeedRatings", 34856: null, 34858: "TimeZoneOffset", 34859: "SelfTimerMode", 34864: null, 34865: "StandardOutputSensitivity", 34866: "RecommendedExposureIndex", 34867: "ISOSpeed", 34868: "ISOSpeedLatitudeyyy", 34869: "ISOSpeedLatitudezzz", 36864: null, 36867: "DateTimeOriginal", 36868: "DateTimeDigitized", 36873: "GooglePlusUploadCode", 36880: "OffsetTime", 36881: "OffsetTimeOriginal", 36882: "OffsetTimeDigitized", 37121: null, 37122: "CompressedBitsPerPixel", 37377: null, 37378: null, 37379: "BrightnessValue", 37380: "ExposureBiasValue", 37381: null, 37382: null, 37383: null, 37384: null, 37385: null, 37386: null, 37393: "ImageNumber", 37394: null, 37395: "ImageHistory", 37396: null, 37500: null, 37510: null, 37520: "SubSecTime", 37521: "SubSecTimeOriginal", 37522: "SubSecTimeDigitized", 37724: "ImageSourceData", 37888: null, 37889: null, 37890: null, 37891: null, 37892: null, 37893: null, 40960: null, 40961: null, 40962: "PixelXDimension", 40963: "PixelYDimension", 40964: "RelatedSoundFile", 40965: "Interoperability IFD Pointer", 41483: "FlashEnergy", 41484: null, 41486: "FocalPlaneXResolution", 41487: "FocalPlaneYResolution", 41488: null, 41492: null, 41493: "ExposureIndex", 41495: null, 41728: null, 41729: null, 41730: null, 41985: null, 41986: null, 41987: null, 41988: null, 41989: null, 41990: null, 41991: null, 41992: null, 41993: null, 41994: null, 41995: null, 41996: null, 42016: "ImageUniqueID", 42032: "CameraOwnerName", 42033: "BodySerialNumber", 42034: null, 42035: "LensMake", 42036: "LensModel", 42037: "LensSerialNumber", 42080: null, 42081: "SourceImageNumberOfCompositeImage", 42082: "SourceExposureTimesOfCompositeImage", 42240: "Gamma", 59932: "Padding", 59933: "OffsetSchema", 65000: "OwnerName", 65001: "SerialNumber", 65002: "Lens", 65100: "RawFile", 65101: "Converter", 65102: "WhiteBalance", 65105: "Exposure", 65106: "Shadows", 65107: "Brightness", 65108: "Contrast", 65109: "Saturation", 65110: "Sharpness", 65111: "Smoothness", 65112: "MoireFilter" };
-obj = { name: "ExposureTime", description: require("module_5236").ExposureTime };
+obj = { name: "ExposureTime", description: fn2(5236).ExposureTime };
 obj[33434] = obj;
-obj = { name: "FNumber", description: require("module_5236").FNumber };
+obj = { name: "FNumber", description: fn2(5236).FNumber };
 obj[33437] = obj;
-obj[34850] = { name: "ExposureProgram", description: require("module_5236").ExposureProgram };
+obj[34850] = { name: "ExposureProgram", description: fn2(5236).ExposureProgram };
 obj[34856] = {
   name: "OECF",
   description() {
@@ -26,15 +26,15 @@ obj[34864] = {
 obj[36864] = {
   name: "ExifVersion",
   description(value) {
-    return getStringValue.getStringValue(value);
+    return _mod5238.getStringValue(value);
   }
 };
-const obj1 = { name: "ExposureProgram", description: require("module_5236").ExposureProgram };
-obj[37121] = { name: "ComponentsConfiguration", description: require("module_5236").ComponentsConfiguration };
-const obj2 = { name: "ComponentsConfiguration", description: require("module_5236").ComponentsConfiguration };
-obj[37377] = { name: "ShutterSpeedValue", description: require("module_5236").ShutterSpeedValue };
-const obj3 = { name: "ShutterSpeedValue", description: require("module_5236").ShutterSpeedValue };
-obj[37378] = { name: "ApertureValue", description: require("module_5236").ApertureValue };
+const obj1 = { name: "ExposureProgram", description: fn2(5236).ExposureProgram };
+obj[37121] = { name: "ComponentsConfiguration", description: fn2(5236).ComponentsConfiguration };
+const obj2 = { name: "ComponentsConfiguration", description: fn2(5236).ComponentsConfiguration };
+obj[37377] = { name: "ShutterSpeedValue", description: fn2(5236).ShutterSpeedValue };
+const obj3 = { name: "ShutterSpeedValue", description: fn2(5236).ShutterSpeedValue };
+obj[37378] = { name: "ApertureValue", description: fn2(5236).ApertureValue };
 obj[37381] = {
   name: "MaxApertureValue",
   description(arg0) {
@@ -47,10 +47,10 @@ obj[37382] = {
     return arg0[0] / arg0[1] + " m";
   }
 };
-const obj4 = { name: "ApertureValue", description: require("module_5236").ApertureValue };
-obj[37383] = { name: "MeteringMode", description: require("module_5236").MeteringMode };
-const obj5 = { name: "MeteringMode", description: require("module_5236").MeteringMode };
-obj[37384] = { name: "LightSource", description: require("module_5236").LightSource };
+const obj4 = { name: "ApertureValue", description: fn2(5236).ApertureValue };
+obj[37383] = { name: "MeteringMode", description: fn2(5236).MeteringMode };
+const obj5 = { name: "MeteringMode", description: fn2(5236).MeteringMode };
+obj[37384] = { name: "LightSource", description: fn2(5236).LightSource };
 obj[37385] = {
   name: "Flash",
   description(arg0) {
@@ -145,8 +145,8 @@ obj[37385] = {
     return str;
   }
 };
-const obj6 = { name: "LightSource", description: require("module_5236").LightSource };
-obj[37386] = { name: "FocalLength", description: require("module_5236").FocalLength };
+const obj6 = { name: "LightSource", description: fn2(5236).LightSource };
+obj[37386] = { name: "FocalLength", description: fn2(5236).FocalLength };
 obj[37394] = {
   name: "SecurityClassification",
   description(arg0) {
@@ -178,8 +178,8 @@ obj[37500] = {
     return "[Raw maker note data]";
   }
 };
-const obj7 = { name: "FocalLength", description: require("module_5236").FocalLength };
-obj[37510] = { name: "UserComment", description: require("getStringValue").getEncodedString };
+const obj7 = { name: "FocalLength", description: fn2(5236).FocalLength };
+obj[37510] = { name: "UserComment", description: fn(5238).getEncodedString };
 obj[37888] = {
   name: "AmbientTemperature",
   description(arg0) {
@@ -219,20 +219,20 @@ obj[37893] = {
 obj[40960] = {
   name: "FlashpixVersion",
   description(arr) {
-    const mapped = arr.map((arg0) => String.fromCharCode(arg0));
+    const mapped = arr.map((item) => String.fromCharCode(item));
     return mapped.join("");
   }
 };
-const obj8 = { name: "UserComment", description: require("getStringValue").getEncodedString };
-obj[40961] = { name: "ColorSpace", description: require("module_5236").ColorSpace };
+const obj8 = { name: "UserComment", description: fn(5238).getEncodedString };
+obj[40961] = { name: "ColorSpace", description: fn2(5236).ColorSpace };
 obj[41484] = {
   name: "SpatialFrequencyResponse",
   description() {
     return "[Raw SFR table data]";
   }
 };
-const obj9 = { name: "ColorSpace", description: require("module_5236").ColorSpace };
-obj[41488] = { name: "FocalPlaneResolutionUnit", description: require("module_5236").FocalPlaneResolutionUnit };
+const obj9 = { name: "ColorSpace", description: fn2(5236).ColorSpace };
+obj[41488] = { name: "FocalPlaneResolutionUnit", description: fn2(5236).FocalPlaneResolutionUnit };
 obj[41492] = {
   name: "SubjectLocation",
   description(arg0) {
@@ -300,12 +300,12 @@ obj[41730] = {
     return "[Raw CFA pattern table data]";
   }
 };
-const obj10 = { name: "FocalPlaneResolutionUnit", description: require("module_5236").FocalPlaneResolutionUnit };
-obj[41985] = { name: "CustomRendered", description: require("module_5236").CustomRendered };
-const obj11 = { name: "CustomRendered", description: require("module_5236").CustomRendered };
-obj[41986] = { name: "ExposureMode", description: require("module_5236").ExposureMode };
-const obj12 = { name: "ExposureMode", description: require("module_5236").ExposureMode };
-obj[41987] = { name: "WhiteBalance", description: require("module_5236").WhiteBalance };
+const obj10 = { name: "FocalPlaneResolutionUnit", description: fn2(5236).FocalPlaneResolutionUnit };
+obj[41985] = { name: "CustomRendered", description: fn2(5236).CustomRendered };
+const obj11 = { name: "CustomRendered", description: fn2(5236).CustomRendered };
+obj[41986] = { name: "ExposureMode", description: fn2(5236).ExposureMode };
+const obj12 = { name: "ExposureMode", description: fn2(5236).ExposureMode };
+obj[41987] = { name: "WhiteBalance", description: fn2(5236).WhiteBalance };
 obj[41988] = {
   name: "DigitalZoomRatio",
   description(arg0) {
@@ -316,10 +316,10 @@ obj[41988] = {
     return str;
   }
 };
-const obj13 = { name: "WhiteBalance", description: require("module_5236").WhiteBalance };
-obj[41989] = { name: "FocalLengthIn35mmFilm", description: require("module_5236").FocalLengthIn35mmFilm };
-const obj14 = { name: "FocalLengthIn35mmFilm", description: require("module_5236").FocalLengthIn35mmFilm };
-obj[41990] = { name: "SceneCaptureType", description: require("module_5236").SceneCaptureType };
+const obj13 = { name: "WhiteBalance", description: fn2(5236).WhiteBalance };
+obj[41989] = { name: "FocalLengthIn35mmFilm", description: fn2(5236).FocalLengthIn35mmFilm };
+const obj14 = { name: "FocalLengthIn35mmFilm", description: fn2(5236).FocalLengthIn35mmFilm };
+obj[41990] = { name: "SceneCaptureType", description: fn2(5236).SceneCaptureType };
 obj[41991] = {
   name: "GainControl",
   description(arg0) {
@@ -346,12 +346,12 @@ obj[41991] = {
     return str;
   }
 };
-const obj15 = { name: "SceneCaptureType", description: require("module_5236").SceneCaptureType };
-obj[41992] = { name: "Contrast", description: require("module_5236").Contrast };
-const obj16 = { name: "Contrast", description: require("module_5236").Contrast };
-obj[41993] = { name: "Saturation", description: require("module_5236").Saturation };
-const obj17 = { name: "Saturation", description: require("module_5236").Saturation };
-obj[41994] = { name: "Sharpness", description: require("module_5236").Sharpness };
+const obj15 = { name: "SceneCaptureType", description: fn2(5236).SceneCaptureType };
+obj[41992] = { name: "Contrast", description: fn2(5236).Contrast };
+const obj16 = { name: "Contrast", description: fn2(5236).Contrast };
+obj[41993] = { name: "Saturation", description: fn2(5236).Saturation };
+const obj17 = { name: "Saturation", description: fn2(5236).Saturation };
+obj[41994] = { name: "Sharpness", description: fn2(5236).Sharpness };
 obj[41995] = {
   name: "DeviceSettingDescription",
   description() {
@@ -400,4 +400,5 @@ obj[42080] = {
     return { 1: "Not a Composite Image", 2: "General Composite Image", 3: "Composite Image Captured While Shooting" }[arg0] || "Unknown";
   }
 };
-arg5.default = obj;
+
+export default obj;

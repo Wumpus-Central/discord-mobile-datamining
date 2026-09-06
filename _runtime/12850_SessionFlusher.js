@@ -1,7 +1,7 @@
 // === Module 12850: SessionFlusher ===
 
 // Module 12850 (SessionFlusher)
-import closure_2 from "_classCallCheck" /* 41 */;
+import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
 
 const SessionFlusher = require;
@@ -9,7 +9,7 @@ class SessionFlusher {
   constructor(arg0, arg1) {
     self = this;
     self = this;
-    tmp = closure_2(this, self);
+    tmp = c2(this, SessionFlusher);
     this._client = global;
     this.flushTimeout = 60;
     map = new Map();
@@ -24,21 +24,22 @@ class SessionFlusher {
     return;
   }
 }
-const items = [
-  {
-    key: "flush",
-    value: function flush() {
-      const self = this;
-      const sessionAggregates = this.getSessionAggregates();
-      if (0 !== sessionAggregates.aggregates.length) {
-        const _Map = Map;
-        const map = new Map();
-        self._pendingAggregates = map;
-        const _client = self._client;
-        _client.sendSession(sessionAggregates);
-      }
+const entry = {
+  key: "flush",
+  value: function flush() {
+    const self = this;
+    const sessionAggregates = this.getSessionAggregates();
+    if (0 !== sessionAggregates.aggregates.length) {
+      const _Map = Map;
+      const map = new Map();
+      self._pendingAggregates = map;
+      const _client = self._client;
+      _client.sendSession(sessionAggregates);
     }
-  },
+  }
+};
+const items = [
+  entry,
   {
     key: "getSessionAggregates",
     value: function getSessionAggregates() {
@@ -81,12 +82,12 @@ const items = [
     value: function _incrementSessionStatusCount(status, date) {
       const setSecondsResult = new Date(date).setSeconds(0, 0);
       const _pendingAggregates = this._pendingAggregates;
-      let value = _pendingAggregates.get(setSecondsResult);
+      value = _pendingAggregates.get(setSecondsResult);
       if (!value) {
         const obj = { started: null };
         const _Date = Date;
         const date1 = new Date(setSecondsResult);
-        obj[0] = date1.toISOString();
+        obj.started = date1.toISOString();
         const _pendingAggregates2 = this._pendingAggregates;
         const result = _pendingAggregates2.set(setSecondsResult, obj);
         value = obj;

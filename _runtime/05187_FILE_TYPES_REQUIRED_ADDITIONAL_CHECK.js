@@ -6,23 +6,24 @@ import ImageTypes from "ImageTypes" /* 5195 */;
 import VideoTypes from "VideoTypes" /* 5196 */;
 import CompressedTypes from "CompressedTypes" /* 5197 */;
 import OtherTypes from "OtherTypes" /* 5198 */;
-import closure_2 from "_classCallCheck" /* 41 */;
+import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
 
 const FileTypes = require;
 class FileTypes {
   constructor() {
-    tmp = closure_2(this, FileTypes);
+    tmp = c2(this, FileTypes);
     return;
   }
 }
+const entry = {
+  key: "getInfoByName",
+  value: function getInfoByName(key10027) {
+    return FileTypes(5185).fetchFromObject(FileTypes, key10027.toUpperCase());
+  }
+};
 let items = [
-  {
-    key: "getInfoByName",
-    value: function getInfoByName(key10027) {
-      return FileTypes(5185).fetchFromObject(FileTypes, key10027.toUpperCase());
-    }
-  },
+  entry,
   {
     key: "getSignaturesByName",
     value: function getSignaturesByName(item10079) {
@@ -40,33 +41,20 @@ let items = [
         let tmp3 = nextResult.offset || 0;
         let num = 0;
         let num2 = 0;
-        let tmp5 = nextResult;
         if (0 < tmp2.sequence.length) {
           do {
-            let tmp6 = nextResult;
             if (tmp2.skippedBytes) {
-              let tmp7 = nextResult;
               let skippedBytes = tmp2.skippedBytes;
-              let tmp8 = num2;
               if (skippedBytes.includes(num2)) {
-                let tmp13 = num;
                 num = num + 1;
-                let tmp14 = num2;
                 let sum = num2 + 1;
                 num2 = sum;
-                let tmp16 = nextResult;
               }
             }
-            let tmp9 = tmp3;
-            let tmp10 = num2;
-            let tmp11 = nextResult;
-            let tmp12 = num;
           } while (fileChunk[tmp4 + num2] === tmp2.sequence[num2 - num]);
           flag = false;
         }
-        let tmp17 = flag;
         if (flag) {
-          let tmp18 = iter;
           iter.return();
           return nextResult;
         }
@@ -77,9 +65,9 @@ let items = [
     key: "detectTypeByAdditionalCheck",
     value: function detectTypeByAdditionalCheck(fileChunk, found) {
       const mapped = found.map((extension) => extension.extension);
-      if (mapped.some((arg0) => {
+      if (mapped.some((item) => {
         const items = ["m4v", "flv", "mp4", "heic"];
-        return items.includes(arg0);
+        return items.includes(item);
       })) {
         let str5 = "heic";
         if (!mapped.includes("heic")) {
@@ -97,9 +85,9 @@ let items = [
           str5 = str6;
         }
         return str5;
-      } else if (mapped.some((arg0) => {
+      } else if (mapped.some((item) => {
         const items = ["mkv", "webm"];
-        return items.includes(arg0);
+        return items.includes(item);
       })) {
         const result = FileTypes(5185).findMatroskaDocTypeElements(fileChunk);
         let str2 = "mkv";
@@ -115,9 +103,9 @@ let items = [
         return str2;
       } else {
         let str;
-        if (mapped.some((arg0) => {
+        if (mapped.some((item) => {
           const items = ["avif"];
-          return items.includes(arg0);
+          return items.includes(item);
         })) {
           if (FileTypes(5185).isAvifStringIncluded(fileChunk)) {
             str = "avif";
@@ -137,14 +125,11 @@ let items = [
         let num = 0;
         let flag = true;
         let tmp3 = nextResult.offset || 0;
-        let tmp5 = nextResult;
         let skippedBytes;
         let tmp4 = tmp3;
         if (null != tmp2) {
-          let tmp7 = nextResult;
           skippedBytes = tmp2.skippedBytes;
         }
-        let tmp8 = nextResult;
         let length = tmp2.sequence.length;
         if (skippedBytes) {
           let sum = length + tmp2.skippedBytes.length;
@@ -154,30 +139,18 @@ let items = [
         let num2 = 0;
         if (0 < sum) {
           do {
-            let tmp11 = nextResult;
             if (tmp2.skippedBytes) {
-              let tmp12 = nextResult;
               skippedBytes = tmp2.skippedBytes;
-              let tmp13 = num2;
               if (skippedBytes.includes(num2)) {
-                let tmp18 = num;
                 num = num + 1;
-                let tmp19 = num2;
                 let sum1 = num2 + 1;
                 num2 = sum1;
-                let tmp21 = sum;
               }
             }
-            let tmp14 = tmp3;
-            let tmp15 = num2;
-            let tmp16 = nextResult;
-            let tmp17 = num;
           } while (fileChunk[tmp4 + num2] === tmp2.sequence[num2 - num]);
           flag = false;
         }
-        let tmp22 = flag;
         if (flag) {
-          let tmp23 = iter;
           iter.return();
           return nextResult;
         }
@@ -187,6 +160,7 @@ let items = [
   {
     key: "checkByFileType",
     value: function checkByFileType(fileChunk, avif) {
+      hasOwnProperty = Object.prototype.hasOwnProperty;
       const call = hasOwnProperty.call;
       const formatted = avif.toUpperCase();
       if (typeof call === "unknown" ? hasOwnProperty(formatted) : call(FileTypes, formatted)) {

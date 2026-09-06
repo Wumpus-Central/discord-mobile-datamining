@@ -1,18 +1,17 @@
 // === Module 10787: Basic ===
 
 // Module 10787 (Basic)
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import noopDefault from "noop" /* 19 */;
+import _mod17 from "module_17" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
+import noop from "module_19" /* 19 */;
 
-const View = get_ActivityIndicator.View;
-noopDefault;
-const jsx = jsxProd.jsx;
+const View = _mod17.View;
+let jsx = jsxProd.jsx;
 
 export const Basic = (data) => {
   ({ activeDotStyle: require, dotStyle } = data);
   ({ progress: View, horizontal } = data);
-  closure_3 = tmp;
+  jsx = tmp;
   data = data.data;
   const size = data.size;
   ({ renderItem: closure_6, onPress: closure_7, carouselName: closure_8 } = data);
@@ -31,20 +30,20 @@ export const Basic = (data) => {
         let obj = { style: null, children: null };
         items[1] = tmp ? { flexDirection: "row" } : { flexDirection: "column" };
         items[2] = tmp2;
-        obj[0] = items;
-        obj[1] = data.map((arg0, index) => {
-          closure_0 = index;
+        obj.style = items;
+        obj.children = data.map((item, index) => {
+          activeDotStyle = index;
           const obj = {
             index,
             size,
             count: data.length,
             dotStyle,
-            animValue: closure_2,
+            animValue,
             horizontal: !closure_3,
-            activeDotStyle: closure_0,
+            activeDotStyle,
             onPress() {
               let tmpResult;
-              if (closure_1_7 != null) {
+              if (closure_2_7 != null) {
                 tmpResult = tmp(closure_0);
               }
               return tmpResult;
@@ -54,15 +53,15 @@ export const Basic = (data) => {
           };
           let tmp2Result;
           if (closure_6 != null) {
-            tmp2Result = tmp2(arg0, index);
+            tmp2Result = tmp2(item, index);
           }
-          obj[9] = tmp2Result;
-          return closure_3(closure_1_0(dotStyle[3]).PaginationItem, obj, index);
+          obj.children = tmp2Result;
+          return closure_3(activeDotStyle(dotStyle[3]).PaginationItem, obj, index);
         });
-        return closure_3(View, obj);
+        return jsx(View, obj);
       }
     }
   }
-  error = new Error("size/width/height must be a number");
+  const error = new Error("size/width/height must be a number");
   throw error;
 };

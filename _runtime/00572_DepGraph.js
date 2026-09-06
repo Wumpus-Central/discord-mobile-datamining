@@ -11,7 +11,6 @@ class DepGraph {
     return;
   }
 }
-arg5.DepGraph = DepGraph;
 DepGraph.prototype = {
   size() {
     return Object.keys(this.nodes).length;
@@ -40,14 +39,12 @@ DepGraph.prototype = {
       delete tmp[tmp2];
       const items = [, ];
       ({ incomingEdges: arr[0], outgoingEdges: arr[1] } = self);
-      let item = items.forEach(function(arg0) {
-        closure_0 = arg0;
-        const keys = Object.keys(arg0);
-        const item = keys.forEach((arg0) => {
-          const index = table[arg0].indexOf(table);
+      let item = items.forEach(function(item) {
+        const keys = Object.keys(item);
+        item = keys.forEach((item) => {
+          const index = item[item].indexOf(item);
           if (index >= 0) {
-            table[arg0].splice(index, 1);
-            const arr2 = table[arg0];
+            item[item].splice(index, 1);
           }
         }, this);
       });
@@ -57,12 +54,12 @@ DepGraph.prototype = {
     const nodes = this.nodes;
     return nodes.hasOwnProperty(key10009);
   },
-  getNodeData(arg0) {
-    if (this.hasNode(arg0)) {
-      return this.nodes[arg0];
+  getNodeData(prop) {
+    if (this.hasNode(prop)) {
+      return this.nodes[prop];
     } else {
       const _Error = Error;
-      error = new Error("Node does not exist: " + arg0);
+      const error = new Error("Node does not exist: " + prop);
       throw error;
     }
   },
@@ -71,7 +68,7 @@ DepGraph.prototype = {
       this.nodes[arg0] = arg1;
     } else {
       const _Error = Error;
-      error = new Error("Node does not exist: " + arg0);
+      const error = new Error("Node does not exist: " + arg0);
       throw error;
     }
   },
@@ -82,16 +79,14 @@ DepGraph.prototype = {
         let arr = self.outgoingEdges[arg0];
         if (-1 === arr.indexOf(arg1)) {
           arr = self.outgoingEdges[arg0].push(arg1);
-          const arr2 = self.outgoingEdges[arg0];
         }
         if (-1 === arr3.indexOf(arg0)) {
           arr = self.incomingEdges[arg1].push(arg0);
-          const arr4 = self.incomingEdges[arg1];
         }
         return true;
       } else {
         const _Error2 = Error;
-        error = new Error("Node does not exist: " + arg1);
+        const error = new Error("Node does not exist: " + arg1);
         throw error;
       }
     } else {
@@ -107,60 +102,58 @@ DepGraph.prototype = {
       const index = self.outgoingEdges[arg0].indexOf(arg1);
       hasNodeResult = index >= 0;
       let tmp2 = index;
-      const arr = self.outgoingEdges[arg0];
     }
     if (hasNodeResult) {
       self.outgoingEdges[arg0].splice(tmp2, 1);
-      const arr2 = self.outgoingEdges[arg0];
     }
     let hasNodeResult1 = self.hasNode(arg1);
     if (hasNodeResult1) {
       const index1 = self.incomingEdges[arg1].indexOf(arg0);
       hasNodeResult1 = index1 >= 0;
       tmp2 = index1;
-      const arr3 = self.incomingEdges[arg1];
     }
     if (hasNodeResult1) {
       self.incomingEdges[arg1].splice(tmp2, 1);
-      const arr4 = self.incomingEdges[arg1];
     }
   },
   clone() {
     const self = this;
-    if (typeof self !== "function") {
-      HermesBuiltin.throwTypeError();
+    if (typeof DepGraph === "function") {
+      const obj = { nodes: {}, outgoingEdges: {}, incomingEdges: {}, circular: undefined };
+      const _Object = Object;
+      const keys = Object.keys(tmp.nodes);
+      const item = keys.forEach((item) => {
+        obj.nodes[item] = self.nodes[item];
+        obj.outgoingEdges[item] = self.outgoingEdges[item].slice(0);
+        obj.incomingEdges[item] = self.incomingEdges[item].slice(0);
+      });
+      return obj;
+    } else {
+      throw new TypeError("Trying to call a non-function");
     }
-    const obj = { nodes: {}, outgoingEdges: {}, incomingEdges: {}, circular: undefined };
-    const keys = Object.keys(this.nodes);
-    const item = keys.forEach((arg0) => {
-      obj.nodes[arg0] = self.nodes[arg0];
-      obj.outgoingEdges[arg0] = self.outgoingEdges[arg0].slice(0);
-      obj.incomingEdges[arg0] = self.incomingEdges[arg0].slice(0);
-    });
-    return obj;
   },
-  dependenciesOf(arg0, arg1) {
+  dependenciesOf(item, arg1) {
     const self = this;
-    if (this.hasNode(arg0)) {
+    if (this.hasNode(item)) {
       const items = [];
       const outgoingEdges = self.outgoingEdges;
       closure_1 = arg1;
       circular = self.circular;
       closure_4 = [];
-      closure_5 = {};
-      closure_6 = {};
-      closure_7 = {};
+      dependencyMap = {};
+      dependencyMap2 = {};
+      dependencyMap3 = {};
       class DFS {
         constructor(arg0) {
-          closure_5[arg0] = true;
-          arr = closure_4.push(arg0);
-          closure_7[arg0] = true;
+          closure_5[item] = true;
+          arr = closure_4.push(item);
+          closure_7[item] = true;
           tmp4 = outgoingEdges;
           num = 0;
-          if (0 < outgoingEdges[arg0].length) {
+          if (0 < outgoingEdges[item].length) {
             while (true) {
               tmp5 = outgoingEdges;
-              tmp6 = outgoingEdges[arg0][num];
+              tmp6 = outgoingEdges[item][num];
               tmp7 = closure_5;
               tmp8 = num;
               if (closure_5[tmp6]) {
@@ -180,84 +173,83 @@ DepGraph.prototype = {
               num = num + 1;
               tmp4 = tmp5;
             }
-            tmp14 = closure_1;
-            tmp15 = new.target;
-            if (typeof closure_1 !== "function") {
+            if (typeof f19858 === "function") {
+              str = " -> ";
+              str2 = "Dependency Cycle Found: ";
+              tmp16 = globalThis;
+              _Error = Error;
+              tmp17 = new.target;
+              tmp18 = new.target;
+              error = new Error("Dependency Cycle Found: " + obj.join(" -> "));
+              tmp20 = error;
+              error.cyclePath = obj;
+              _Object = Object;
+              _Object2 = Object;
+              setPrototypeOfResult = Object.setPrototypeOf(error, Object.getPrototypeOf(tmp15));
+              _Error2 = Error;
+              if (Error.captureStackTrace) {
+                _Error3 = Error;
+                captureStackTraceResult = Error.captureStackTrace(error, tmp14);
+              }
+              throw error;
+            } else {
               str3 = "Trying to call a non-function";
-              throwTypeErrorResult = HermesBuiltin.throwTypeError();
+              throw new TypeError("Trying to call a non-function");
             }
-            str = " -> ";
-            str2 = "Dependency Cycle Found: ";
-            tmp16 = globalThis;
-            _Error = Error;
-            tmp17 = new.target;
-            tmp18 = new.target;
-            error = new Error("Dependency Cycle Found: " + obj.join(" -> "));
-            tmp20 = error;
-            error.cyclePath = obj;
-            _Object = Object;
-            _Object2 = Object;
-            setPrototypeOfResult = Object.setPrototypeOf(error, Object.getPrototypeOf(tmp15));
-            _Error2 = Error;
-            if (Error.captureStackTrace) {
-              _Error3 = Error;
-              captureStackTraceResult = Error.captureStackTrace(error, tmp14);
-            }
-            throw error;
           }
           arr2 = closure_4.pop();
           delete tmp2[tmp];
-          tmp24 = closure_1;
-          if (closure_1) {
-            tmp24 = 0 !== tmp4[arg0].length;
+          tmp24 = DFS;
+          if (DFS) {
+            tmp24 = 0 !== tmp4[item].length;
           }
           if (!tmp24) {
             tmp25 = closure_6;
-            tmp24 = closure_6[arg0];
+            tmp24 = closure_6[item];
           }
           if (!tmp24) {
             tmp26 = DFS;
-            arr3 = DFS.push(arg0);
+            arr3 = DFS.push(item);
             tmp28 = closure_6;
-            closure_6[arg0] = true;
+            closure_6[item] = true;
           }
           return;
         }
       }
-      DFS(arg0);
-      const index = items.indexOf(arg0);
+      DFS(item);
+      const index = items.indexOf(item);
       if (index >= 0) {
         items.splice(index, 1);
       }
       return items;
     } else {
       const _Error = Error;
-      error = new Error("Node does not exist: " + arg0);
+      const error = new Error("Node does not exist: " + item);
       throw error;
     }
   },
-  dependantsOf(arg0, arg1) {
+  dependantsOf(item, arg1) {
     const self = this;
-    if (this.hasNode(arg0)) {
+    if (this.hasNode(item)) {
       const items = [];
       const incomingEdges = self.incomingEdges;
       closure_1 = arg1;
       circular = self.circular;
       closure_4 = [];
-      closure_5 = {};
-      closure_6 = {};
-      closure_7 = {};
+      dependencyMap = {};
+      dependencyMap2 = {};
+      dependencyMap3 = {};
       class DFS {
         constructor(arg0) {
-          closure_5[arg0] = true;
-          arr = closure_4.push(arg0);
-          closure_7[arg0] = true;
+          closure_5[item] = true;
+          arr = closure_4.push(item);
+          closure_7[item] = true;
           tmp4 = outgoingEdges;
           num = 0;
-          if (0 < outgoingEdges[arg0].length) {
+          if (0 < outgoingEdges[item].length) {
             while (true) {
               tmp5 = outgoingEdges;
-              tmp6 = outgoingEdges[arg0][num];
+              tmp6 = outgoingEdges[item][num];
               tmp7 = closure_5;
               tmp8 = num;
               if (closure_5[tmp6]) {
@@ -277,59 +269,58 @@ DepGraph.prototype = {
               num = num + 1;
               tmp4 = tmp5;
             }
-            tmp14 = closure_1;
-            tmp15 = new.target;
-            if (typeof closure_1 !== "function") {
+            if (typeof f19858 === "function") {
+              str = " -> ";
+              str2 = "Dependency Cycle Found: ";
+              tmp16 = globalThis;
+              _Error = Error;
+              tmp17 = new.target;
+              tmp18 = new.target;
+              error = new Error("Dependency Cycle Found: " + obj.join(" -> "));
+              tmp20 = error;
+              error.cyclePath = obj;
+              _Object = Object;
+              _Object2 = Object;
+              setPrototypeOfResult = Object.setPrototypeOf(error, Object.getPrototypeOf(tmp15));
+              _Error2 = Error;
+              if (Error.captureStackTrace) {
+                _Error3 = Error;
+                captureStackTraceResult = Error.captureStackTrace(error, tmp14);
+              }
+              throw error;
+            } else {
               str3 = "Trying to call a non-function";
-              throwTypeErrorResult = HermesBuiltin.throwTypeError();
+              throw new TypeError("Trying to call a non-function");
             }
-            str = " -> ";
-            str2 = "Dependency Cycle Found: ";
-            tmp16 = globalThis;
-            _Error = Error;
-            tmp17 = new.target;
-            tmp18 = new.target;
-            error = new Error("Dependency Cycle Found: " + obj.join(" -> "));
-            tmp20 = error;
-            error.cyclePath = obj;
-            _Object = Object;
-            _Object2 = Object;
-            setPrototypeOfResult = Object.setPrototypeOf(error, Object.getPrototypeOf(tmp15));
-            _Error2 = Error;
-            if (Error.captureStackTrace) {
-              _Error3 = Error;
-              captureStackTraceResult = Error.captureStackTrace(error, tmp14);
-            }
-            throw error;
           }
           arr2 = closure_4.pop();
           delete tmp2[tmp];
-          tmp24 = closure_1;
-          if (closure_1) {
-            tmp24 = 0 !== tmp4[arg0].length;
+          tmp24 = DFS;
+          if (DFS) {
+            tmp24 = 0 !== tmp4[item].length;
           }
           if (!tmp24) {
             tmp25 = closure_6;
-            tmp24 = closure_6[arg0];
+            tmp24 = closure_6[item];
           }
           if (!tmp24) {
             tmp26 = DFS;
-            arr3 = DFS.push(arg0);
+            arr3 = DFS.push(item);
             tmp28 = closure_6;
-            closure_6[arg0] = true;
+            closure_6[item] = true;
           }
           return;
         }
       }
-      DFS(arg0);
-      const index = items.indexOf(arg0);
+      DFS(item);
+      const index = items.indexOf(item);
       if (index >= 0) {
         items.splice(index, 1);
       }
       return items;
     } else {
       const _Error = Error;
-      error = new Error("Node does not exist: " + arg0);
+      const error = new Error("Node does not exist: " + item);
       throw error;
     }
   },
@@ -342,13 +333,12 @@ DepGraph.prototype = {
       return items;
     } else {
       outgoingEdges = self.outgoingEdges;
-      closure_1 = false;
-      let DFS = [];
+      const DFS = [];
       circular = self.circular;
       closure_4 = [];
-      closure_5 = {};
-      closure_6 = {};
-      closure_7 = {};
+      dependencyMap = {};
+      dependencyMap2 = {};
+      dependencyMap3 = {};
       class DFS {
         constructor(arg0) {
           closure_5[arg0] = true;
@@ -379,35 +369,34 @@ DepGraph.prototype = {
               num = num + 1;
               tmp4 = tmp5;
             }
-            tmp14 = closure_1;
-            tmp15 = new.target;
-            if (typeof closure_1 !== "function") {
+            if (typeof f19858 === "function") {
+              str = " -> ";
+              str2 = "Dependency Cycle Found: ";
+              tmp16 = globalThis;
+              _Error = Error;
+              tmp17 = new.target;
+              tmp18 = new.target;
+              error = new Error("Dependency Cycle Found: " + obj.join(" -> "));
+              tmp20 = error;
+              error.cyclePath = obj;
+              _Object = Object;
+              _Object2 = Object;
+              setPrototypeOfResult = Object.setPrototypeOf(error, Object.getPrototypeOf(tmp15));
+              _Error2 = Error;
+              if (Error.captureStackTrace) {
+                _Error3 = Error;
+                captureStackTraceResult = Error.captureStackTrace(error, tmp14);
+              }
+              throw error;
+            } else {
               str3 = "Trying to call a non-function";
-              throwTypeErrorResult = HermesBuiltin.throwTypeError();
+              throw new TypeError("Trying to call a non-function");
             }
-            str = " -> ";
-            str2 = "Dependency Cycle Found: ";
-            tmp16 = globalThis;
-            _Error = Error;
-            tmp17 = new.target;
-            tmp18 = new.target;
-            error = new Error("Dependency Cycle Found: " + obj.join(" -> "));
-            tmp20 = error;
-            error.cyclePath = obj;
-            _Object = Object;
-            _Object2 = Object;
-            setPrototypeOfResult = Object.setPrototypeOf(error, Object.getPrototypeOf(tmp15));
-            _Error2 = Error;
-            if (Error.captureStackTrace) {
-              _Error3 = Error;
-              captureStackTraceResult = Error.captureStackTrace(error, tmp14);
-            }
-            throw error;
           }
           arr2 = closure_4.pop();
           delete tmp2[tmp];
-          tmp24 = closure_1;
-          if (closure_1) {
+          tmp24 = DFS;
+          if (DFS) {
             tmp24 = 0 !== tmp4[arg0].length;
           }
           if (!tmp24) {
@@ -423,18 +412,17 @@ DepGraph.prototype = {
           return;
         }
       }
-      closure_1 = DFS;
-      const item = keys.forEach((arg0) => {
-        callback(arg0);
+      const item = keys.forEach((item) => {
+        DFS(item);
       });
-      outgoingEdges = self.outgoingEdges;
-      closure_1 = arg0;
-      DFS = items;
-      circular = self.circular;
-      closure_4 = [];
-      closure_5 = {};
-      closure_6 = {};
-      closure_7 = {};
+      const outgoingEdges2 = self.outgoingEdges;
+      closure_129_1 = arg0;
+      closure_129_2 = items;
+      const circular2 = self.circular;
+      closure_129_4 = [];
+      closure_129_5 = {};
+      closure_129_6 = {};
+      closure_129_7 = {};
       class DFS {
         constructor(arg0) {
           closure_5[arg0] = true;
@@ -465,35 +453,34 @@ DepGraph.prototype = {
               num = num + 1;
               tmp4 = tmp5;
             }
-            tmp14 = closure_1;
-            tmp15 = new.target;
-            if (typeof closure_1 !== "function") {
+            if (typeof f19858 === "function") {
+              str = " -> ";
+              str2 = "Dependency Cycle Found: ";
+              tmp16 = globalThis;
+              _Error = Error;
+              tmp17 = new.target;
+              tmp18 = new.target;
+              error = new Error("Dependency Cycle Found: " + obj.join(" -> "));
+              tmp20 = error;
+              error.cyclePath = obj;
+              _Object = Object;
+              _Object2 = Object;
+              setPrototypeOfResult = Object.setPrototypeOf(error, Object.getPrototypeOf(tmp15));
+              _Error2 = Error;
+              if (Error.captureStackTrace) {
+                _Error3 = Error;
+                captureStackTraceResult = Error.captureStackTrace(error, tmp14);
+              }
+              throw error;
+            } else {
               str3 = "Trying to call a non-function";
-              throwTypeErrorResult = HermesBuiltin.throwTypeError();
+              throw new TypeError("Trying to call a non-function");
             }
-            str = " -> ";
-            str2 = "Dependency Cycle Found: ";
-            tmp16 = globalThis;
-            _Error = Error;
-            tmp17 = new.target;
-            tmp18 = new.target;
-            error = new Error("Dependency Cycle Found: " + obj.join(" -> "));
-            tmp20 = error;
-            error.cyclePath = obj;
-            _Object = Object;
-            _Object2 = Object;
-            setPrototypeOfResult = Object.setPrototypeOf(error, Object.getPrototypeOf(tmp15));
-            _Error2 = Error;
-            if (Error.captureStackTrace) {
-              _Error3 = Error;
-              captureStackTraceResult = Error.captureStackTrace(error, tmp14);
-            }
-            throw error;
           }
           arr2 = closure_4.pop();
           delete tmp2[tmp];
-          tmp24 = closure_1;
-          if (closure_1) {
+          tmp24 = DFS;
+          if (DFS) {
             tmp24 = 0 !== tmp4[arg0].length;
           }
           if (!tmp24) {
@@ -509,9 +496,10 @@ DepGraph.prototype = {
           return;
         }
       }
-      const found = keys.filter((arg0) => 0 === outgoingEdges.incomingEdges[arg0].length);
-      const item1 = found.forEach((arg0) => {
-        DFS(arg0);
+      closure_129_8 = DFS;
+      const found = keys.filter((item) => 0 === outgoingEdges.incomingEdges[item].length);
+      const item1 = found.forEach((item) => {
+        DFS(item);
       });
       return items;
     }
@@ -530,7 +518,12 @@ class tmp {
     return error;
   }
 }
-arg5.DepGraphCycleError = tmp;
 let circular = tmp;
-tmp.prototype = Object.create(Error.prototype, { constructor: { value: Error, enumerable: false, writable: true, configurable: true } });
+let obj = { constructor: null };
+obj = { value: Error, enumerable: false, writable: true, configurable: true };
+obj.constructor = obj;
+tmp.prototype = Object.create(Error.prototype, obj);
 Object.setPrototypeOf(tmp, Error);
+
+export { DepGraph };
+export const DepGraphCycleError = tmp;

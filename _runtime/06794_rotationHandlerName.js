@@ -1,9 +1,11 @@
 // === Module 6794: rotationHandlerName ===
 
 // Module 6794 (rotationHandlerName)
-import _isNativeReflectConstructDefault from "_isNativeReflectConstruct" /* 6682 */;
+import _isNativeReflectConstruct from "module_6682" /* 6682 */;
 
-const obj = { name: "RotationGestureHandler", allowedProps: require("items1").baseGestureHandlerProps, config: {} };
+const obj = { name: "RotationGestureHandler", allowedProps: null, config: null };
+obj.allowedProps = fn(6680).baseGestureHandlerProps;
+obj.config = {};
 
 export const rotationHandlerName = "RotationGestureHandler";
-export const RotationGestureHandler = _isNativeReflectConstructDefault(obj);
+export const RotationGestureHandler = _isNativeReflectConstruct(obj);

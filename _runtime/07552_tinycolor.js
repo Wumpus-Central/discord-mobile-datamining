@@ -5,9 +5,8 @@ let round;
 let min;
 let max;
 let random;
+let color;
 let obj;
-obj = undefined;
-obj = undefined;
 class tinycolor {
   constructor(arg0, arg1) {
     obj = require;
@@ -44,16 +43,16 @@ class tinycolor {
                   tmp66 = bound01;
                   num33 = 255;
                   ({ g, b } = str);
-                  obj1[0] = 255 * bound01(str.r, 255);
-                  obj1[1] = 255 * bound01(g, 255);
-                  obj1[2] = 255 * bound01(b, 255);
+                  obj1.r = 255 * bound01(str.r, 255);
+                  obj1.g = 255 * bound01(g, 255);
+                  obj1.b = 255 * bound01(b, 255);
                   tmp67 = globalThis;
                   _String = String;
                   str12 = String(str.r);
                   num34 = -1;
                   str13 = "rgb";
                   str14 = "%";
-                  if ("%" === require("module_4294967295")) {
+                  if ("%" === str12.substr(-1)) {
                     str13 = "prgb";
                   }
                   flag5 = true;
@@ -128,9 +127,9 @@ class tinycolor {
                   items2[5] = result2;
                   obj2 = { r: null, g: null, b: null };
                   num32 = 255;
-                  obj2[0] = 255 * items[result4];
-                  obj2[1] = 255 * items1[result4];
-                  obj2[2] = 255 * items2[result4];
+                  obj2.r = 255 * items[result4];
+                  obj2.g = 255 * items1[result4];
+                  obj2.b = 255 * items2[result4];
                   str7 = "hsv";
                   flag5 = true;
                   obj = obj2;
@@ -175,9 +174,9 @@ class tinycolor {
               if (0 === tmp29) {
                 obj3 = { r: null, g: null, b: null };
                 num26 = 255;
-                obj3[0] = 255 * tmp32;
-                obj3[1] = 255 * tmp31;
-                obj3[2] = 255 * tmp30;
+                obj3.r = 255 * tmp32;
+                obj3.g = 255 * tmp31;
+                obj3.b = 255 * tmp30;
                 str7 = "hsl";
                 flag5 = true;
                 obj = obj3;
@@ -289,12 +288,12 @@ class tinycolor {
           tmp72 = max;
           num38 = 0;
           num39 = 255;
-          tmp73 = require("module_255");
-          tmp74 = require("module_255");
+          tmp73 = min(255, max(tmp23.r, 0));
+          tmp74 = min(255, max(tmp23.g, 0));
           self._originalInput = str;
           self._r = tmp73;
           self._g = tmp74;
-          self._b = require("module_255");
+          self._b = min(255, max(tmp23.b, 0));
           self._a = num36;
           tmp75 = round;
           num40 = 100;
@@ -316,11 +315,11 @@ class tinycolor {
           self._tc_id = closure_3;
           return;
         } else {
-          tmp77 = closure_1;
+          tmp77 = re1;
           str16 = "";
-          str17 = str.replace(closure_1, "");
-          tmp78 = closure_2;
-          str18 = str17.replace(closure_2, "");
+          str17 = str.replace(re1, "");
+          tmp78 = re2;
+          str18 = str17.replace(re2, "");
           formatted = str18.toLowerCase();
           obj4 = closure_25;
           if (closure_25[formatted]) {
@@ -341,58 +340,58 @@ class tinycolor {
           tmp8 = tmp5;
           if (formatted) {
             obj4 = { r: null, g: null, b: null };
-            obj4[0] = formatted[1];
-            obj4[1] = formatted[2];
+            obj4.r = formatted[1];
+            obj4.g = formatted[2];
             formatted = formatted[3];
-            obj4[2] = formatted;
+            obj4.b = formatted;
             flag2 = obj4;
           } else {
             rgba = tmp6.rgba;
             match = rgba.exec(tmp5);
             if (match) {
               obj4 = { r: null, g: null, b: null, a: null };
-              obj4[0] = match[1];
-              obj4[1] = match[2];
-              obj4[2] = match[3];
-              obj4[3] = match[4];
+              obj4.r = match[1];
+              obj4.g = match[2];
+              obj4.b = match[3];
+              obj4.a = match[4];
               flag2 = obj4;
             } else {
               hsl = tmp6.hsl;
               match1 = hsl.exec(tmp5);
               if (match1) {
                 obj4 = { h: null, s: null, l: null };
-                obj4[0] = match1[1];
-                obj4[1] = match1[2];
-                obj4[2] = match1[3];
+                obj4.h = match1[1];
+                obj4.s = match1[2];
+                obj4.l = match1[3];
                 flag2 = obj4;
               } else {
                 hsla = tmp6.hsla;
                 match2 = hsla.exec(tmp5);
                 if (match2) {
                   obj4 = { h: null, s: null, l: null, a: null };
-                  obj4[0] = match2[1];
-                  obj4[1] = match2[2];
-                  obj4[2] = match2[3];
-                  obj4[3] = match2[4];
+                  obj4.h = match2[1];
+                  obj4.s = match2[2];
+                  obj4.l = match2[3];
+                  obj4.a = match2[4];
                   flag2 = obj4;
                 } else {
                   hsv = tmp6.hsv;
                   match3 = hsv.exec(tmp5);
                   if (match3) {
                     obj4 = { h: null, s: null, v: null };
-                    obj4[0] = match3[1];
-                    obj4[1] = match3[2];
-                    obj4[2] = match3[3];
+                    obj4.h = match3[1];
+                    obj4.s = match3[2];
+                    obj4.v = match3[3];
                     flag2 = obj4;
                   } else {
                     hsva = tmp6.hsva;
                     match4 = hsva.exec(tmp5);
                     if (match4) {
                       obj4 = { h: null, s: null, v: null, a: null };
-                      obj4[0] = match4[1];
-                      obj4[1] = match4[2];
-                      obj4[2] = match4[3];
-                      obj4[3] = match4[4];
+                      obj4.h = match4[1];
+                      obj4.s = match4[2];
+                      obj4.v = match4[3];
+                      obj4.a = match4[4];
                       flag2 = obj4;
                     } else {
                       hex8 = tmp6.hex8;
@@ -402,19 +401,19 @@ class tinycolor {
                         tmp21 = globalThis;
                         _parseInt11 = parseInt;
                         num5 = 16;
-                        obj4[0] = parseInt(match5[1], 16);
+                        obj4.r = parseInt(match5[1], 16);
                         _parseInt12 = parseInt;
-                        obj4[1] = parseInt(match5[2], 16);
+                        obj4.g = parseInt(match5[2], 16);
                         _parseInt13 = parseInt;
-                        obj4[2] = parseInt(match5[3], 16);
+                        obj4.b = parseInt(match5[3], 16);
                         _parseInt14 = parseInt;
                         num6 = 255;
-                        obj4[3] = parseInt(match5[4], 16) / 255;
+                        obj4.a = parseInt(match5[4], 16) / 255;
                         str6 = "hex8";
                         if (flag) {
                           str6 = "name";
                         }
-                        obj4[4] = str6;
+                        obj4.format = str6;
                         flag2 = obj4;
                       } else {
                         hex6 = tmp6.hex6;
@@ -424,16 +423,16 @@ class tinycolor {
                           tmp20 = globalThis;
                           _parseInt8 = parseInt;
                           num4 = 16;
-                          obj4[0] = parseInt(match6[1], 16);
+                          obj4.r = parseInt(match6[1], 16);
                           _parseInt9 = parseInt;
-                          obj4[1] = parseInt(match6[2], 16);
+                          obj4.g = parseInt(match6[2], 16);
                           _parseInt10 = parseInt;
-                          obj4[2] = parseInt(match6[3], 16);
+                          obj4.b = parseInt(match6[3], 16);
                           str5 = "hex";
                           if (flag) {
                             str5 = "name";
                           }
-                          obj4[3] = str5;
+                          obj4.format = str5;
                           flag2 = obj4;
                         } else {
                           hex4 = tmp6.hex4;
@@ -443,19 +442,19 @@ class tinycolor {
                             tmp19 = globalThis;
                             _parseInt4 = parseInt;
                             num2 = 16;
-                            obj4[0] = parseInt("" + match7[1] + match7[1], 16);
+                            obj4.r = parseInt("" + match7[1] + match7[1], 16);
                             _parseInt5 = parseInt;
-                            obj4[1] = parseInt("" + match7[2] + match7[2], 16);
+                            obj4.g = parseInt("" + match7[2] + match7[2], 16);
                             _parseInt6 = parseInt;
-                            obj4[2] = parseInt("" + match7[3] + match7[3], 16);
+                            obj4.b = parseInt("" + match7[3] + match7[3], 16);
                             _parseInt7 = parseInt;
                             num3 = 255;
-                            obj4[3] = parseInt("" + match7[4] + match7[4], 16) / 255;
+                            obj4.a = parseInt("" + match7[4] + match7[4], 16) / 255;
                             str4 = "hex8";
                             if (flag) {
                               str4 = "name";
                             }
-                            obj4[4] = str4;
+                            obj4.format = str4;
                             flag2 = obj4;
                           } else {
                             hex3 = tmp6.hex3;
@@ -467,16 +466,16 @@ class tinycolor {
                               tmp18 = globalThis;
                               _parseInt = parseInt;
                               num = 16;
-                              obj4[0] = parseInt("" + obj2Result[1] + obj2Result[1], 16);
+                              obj4.r = parseInt("" + obj2Result[1] + obj2Result[1], 16);
                               _parseInt2 = parseInt;
-                              obj4[1] = parseInt("" + obj2Result[2] + obj2Result[2], 16);
+                              obj4.g = parseInt("" + obj2Result[2] + obj2Result[2], 16);
                               _parseInt3 = parseInt;
-                              obj4[2] = parseInt("" + obj2Result[3] + obj2Result[3], 16);
+                              obj4.b = parseInt("" + obj2Result[3] + obj2Result[3], 16);
                               str3 = "hex";
                               if (flag) {
                                 str3 = "name";
                               }
-                              obj4[3] = str3;
+                              obj4.format = str3;
                               flag2 = obj4;
                             }
                           }
@@ -674,10 +673,7 @@ function rgbToHsl(_r, _r, _r) {
   const tmp5 = min(result2, tmp2, tmp3);
   const result = (tmp4 + tmp5) / 2;
   if (tmp4 == tmp5) {
-    obj = { h: null, s: null, l: null };
-    obj[0] = 0;
-    obj[1] = 0;
-    obj[2] = result;
+    obj = { h: 0, s: 0, l: result };
     return obj;
   } else {
     const diff = tmp4 - tmp5;
@@ -736,16 +732,13 @@ function rgbToHex(arg0, arg1, arg2, arg3) {
           const sum = str13.charAt(0) + str14.charAt(0);
           let sum1 = sum + items[2].charAt(0);
           const charAtResult3 = str13.charAt(0);
-          const str15 = items[2];
         }
         return sum1;
       }
       charAtResult1 = items[1].charAt(0);
       str10 = items[1];
-      const str9 = items[1];
     }
     charAtResult = items[0].charAt(0);
-    const str7 = items[0];
     str8 = items[0];
   }
   sum1 = items.join("");
@@ -785,7 +778,7 @@ function rgbaToArgbHex(_r, _g, _b, _a) {
   items[3] = text3;
   return items.join("");
 }
-function desaturate(toHslResult) {
+function desaturate(toHslResult, arg1) {
   let num = arg1;
   let num2 = 0;
   if (0 !== arg1) {
@@ -799,7 +792,7 @@ function desaturate(toHslResult) {
   toHslResult.s = min(1, max(0, toHslResult.s));
   return tinycolor(toHslResult);
 }
-function saturate(toHslResult) {
+function saturate(toHslResult, arg1) {
   let num = arg1;
   let num2 = 0;
   if (0 !== arg1) {
@@ -816,7 +809,7 @@ function saturate(toHslResult) {
 function greyscale(toHslResult) {
   return tinycolor(toHslResult).desaturate(100);
 }
-function lighten(toHslResult) {
+function lighten(toHslResult, arg1) {
   let num = arg1;
   let num2 = 0;
   if (0 !== arg1) {
@@ -830,7 +823,7 @@ function lighten(toHslResult) {
   toHslResult.l = min(1, max(0, toHslResult.l));
   return tinycolor(toHslResult);
 }
-function brighten(toHslResult) {
+function brighten(toHslResult, arg1) {
   let num = arg1;
   let num2 = 0;
   if (0 !== arg1) {
@@ -845,7 +838,7 @@ function brighten(toHslResult) {
   toRgbResult.b = max(0, min(255, toRgbResult.b - round(-num2 / 100 * 255)));
   return tinycolor(toRgbResult);
 }
-function darken(toHslResult) {
+function darken(toHslResult, arg1) {
   let num = arg1;
   let num2 = 0;
   if (0 !== arg1) {
@@ -859,7 +852,7 @@ function darken(toHslResult) {
   toHslResult.l = min(1, max(0, toHslResult.l));
   return tinycolor(toHslResult);
 }
-function spin(toHslResult) {
+function spin(toHslResult, arg1) {
   toHslResult = tinycolor(toHslResult).toHsl();
   const result = (toHslResult.h + arg1) % 360;
   let sum = result;
@@ -908,7 +901,7 @@ function splitcomplement(toHslResult) {
   items[2] = tinycolor(obj);
   return items;
 }
-function analogous(toHslResult) {
+function analogous(toHslResult, arg1, arg2) {
   let num = arg1;
   if (!arg1) {
     num = 6;
@@ -924,13 +917,12 @@ function analogous(toHslResult) {
   let diff = num - 1;
   while (diff) {
     toHslResult.h = (toHslResult.h + result) % 360;
-    let tmp4 = tinycolor;
     let arr = items.push(tinycolor(toHslResult));
     diff = diff - 1;
   }
   return items;
 }
-function monochromatic(toHslResult) {
+function monochromatic(toHslResult, arg1) {
   let tmp9;
   let num = arg1;
   if (!arg1) {
@@ -942,11 +934,7 @@ function monochromatic(toHslResult) {
   let diff = tmp5 - 1;
   if (+num) {
     do {
-      let tmp7 = tinycolor;
-      obj = { h: null, s: null, v: null };
-      obj[0] = tmp2;
-      obj[1] = tmp3;
-      obj[2] = v;
+      obj = { h: tmp2, s: tmp3, v };
       let arr = items.push(tinycolor(obj));
       v = (v + tmp4) % 1;
       tmp9 = +diff;
@@ -988,7 +976,7 @@ function bound01(_r, arg1) {
 }
 const re1 = /^\s+/;
 const re2 = /\s+$/;
-let c3 = 0;
+const React3 = 0;
 round = Math.round;
 min = Math.min;
 max = Math.max;
@@ -1070,11 +1058,7 @@ tinycolor.prototype = {
       num = diff / tmp4;
     }
     if (tmp4 == tmp5) {
-      obj = { h: null, s: null, v: null, a: null };
-      obj[0] = 0;
-      obj[1] = num;
-      obj[2] = tmp4;
-      obj[3] = this._a;
+      obj = { h: 0, s: num, v: tmp4, a: this._a };
       return obj;
     } else {
       if (result === tmp4) {
@@ -1201,29 +1185,24 @@ tinycolor.prototype = {
               const sum1 = sum + items[2].charAt(0);
               let sum2 = sum1 + items[3].charAt(0);
               const charAtResult4 = str17.charAt(0);
-              const str19 = items[2];
-              const str20 = items[3];
             }
             return sum2;
           }
           charAtResult2 = items[2].charAt(0);
-          const str13 = items[2];
           str14 = items[2];
         }
         charAtResult1 = items[1].charAt(0);
-        const str11 = items[1];
         str12 = items[1];
       }
       charAtResult = items[0].charAt(0);
       str10 = items[0];
-      const str9 = items[0];
     }
     sum2 = items.join("");
   },
   toHex8String(arg0) {
     return "#" + this.toHex8(arg0);
   },
-  toRgb(arg0) {
+  toRgb() {
     return { r: round(this._r), g: round(this._g), b: round(this._b), a: this._a };
   },
   toRgbString() {
@@ -1398,15 +1377,14 @@ tinycolor.prototype = {
     return this._applyCombination(tetrad, arguments);
   }
 };
-obj = { aliceblue: "f0f8ff", antiquewhite: "faebd7", aqua: "0ff", aquamarine: "7fffd4", azure: "f0ffff", beige: "f5f5dc", bisque: "ffe4c4", black: "000", blanchedalmond: "ffebcd", blue: "00f", blueviolet: "8a2be2", brown: "a52a2a", burlywood: "deb887", burntsienna: "ea7e5d", cadetblue: "5f9ea0", chartreuse: "7fff00", chocolate: "d2691e", coral: "ff7f50", cornflowerblue: "6495ed", cornsilk: "fff8dc", crimson: "dc143c", cyan: "0ff", darkblue: "00008b", darkcyan: "008b8b", darkgoldenrod: "b8860b", darkgray: "a9a9a9", darkgreen: "006400", darkgrey: "a9a9a9", darkkhaki: "bdb76b", darkmagenta: "8b008b", darkolivegreen: "556b2f", darkorange: "ff8c00", darkorchid: "9932cc", darkred: "8b0000", darksalmon: "e9967a", darkseagreen: "8fbc8f", darkslateblue: "483d8b", darkslategray: "2f4f4f", darkslategrey: "2f4f4f", darkturquoise: "00ced1", darkviolet: "9400d3", deeppink: "ff1493", deepskyblue: "00bfff", dimgray: "696969", dimgrey: "696969", dodgerblue: "1e90ff", firebrick: "b22222", floralwhite: "fffaf0", forestgreen: "228b22", fuchsia: "f0f", gainsboro: "dcdcdc", ghostwhite: "f8f8ff", gold: "ffd700", goldenrod: "daa520", gray: "808080", green: "008000", greenyellow: "adff2f", grey: "808080", honeydew: "f0fff0", hotpink: "ff69b4", indianred: "cd5c5c", indigo: "4b0082", ivory: "fffff0", khaki: "f0e68c", lavender: "e6e6fa", lavenderblush: "fff0f5", lawngreen: "7cfc00", lemonchiffon: "fffacd", lightblue: "add8e6", lightcoral: "f08080", lightcyan: "e0ffff", lightgoldenrodyellow: "fafad2", lightgray: "d3d3d3", lightgreen: "90ee90", lightgrey: "d3d3d3", lightpink: "ffb6c1", lightsalmon: "ffa07a", lightseagreen: "20b2aa", lightskyblue: "87cefa", lightslategray: "789", lightslategrey: "789", lightsteelblue: "b0c4de", lightyellow: "ffffe0", lime: "0f0", limegreen: "32cd32", linen: "faf0e6", magenta: "f0f", maroon: "800000", mediumaquamarine: "66cdaa", mediumblue: "0000cd", mediumorchid: "ba55d3", mediumpurple: "9370db", mediumseagreen: "3cb371", mediumslateblue: "7b68ee", mediumspringgreen: "00fa9a", mediumturquoise: "48d1cc", mediumvioletred: "c71585", midnightblue: "191970", mintcream: "f5fffa", mistyrose: "ffe4e1", moccasin: "ffe4b5", navajowhite: "ffdead", navy: "000080", oldlace: "fdf5e6", olive: "808000", olivedrab: "6b8e23", orange: "ffa500", orangered: "ff4500", orchid: "da70d6", palegoldenrod: "eee8aa", palegreen: "98fb98", paleturquoise: "afeeee", palevioletred: "db7093", papayawhip: "ffefd5", peachpuff: "ffdab9", peru: "cd853f", pink: "ffc0cb", plum: "dda0dd", powderblue: "b0e0e6", purple: "800080", rebeccapurple: "663399", red: "f00", rosybrown: "bc8f8f", royalblue: "4169e1", saddlebrown: "8b4513", salmon: "fa8072", sandybrown: "f4a460", seagreen: "2e8b57", seashell: "fff5ee", sienna: "a0522d", silver: "c0c0c0", skyblue: "87ceeb", slateblue: "6a5acd", slategray: "708090", slategrey: "708090", snow: "fffafa", springgreen: "00ff7f", steelblue: "4682b4", tan: "d2b48c", teal: "008080", thistle: "d8bfd8", tomato: "ff6347", turquoise: "40e0d0", violet: "ee82ee", wheat: "f5deb3", white: "fff", whitesmoke: "f5f5f5", yellow: "ff0", yellowgreen: "9acd32" };
-tinycolor.names = obj;
+color = { aliceblue: "f0f8ff", antiquewhite: "faebd7", aqua: "0ff", aquamarine: "7fffd4", azure: "f0ffff", beige: "f5f5dc", bisque: "ffe4c4", black: "000", blanchedalmond: "ffebcd", blue: "00f", blueviolet: "8a2be2", brown: "a52a2a", burlywood: "deb887", burntsienna: "ea7e5d", cadetblue: "5f9ea0", chartreuse: "7fff00", chocolate: "d2691e", coral: "ff7f50", cornflowerblue: "6495ed", cornsilk: "fff8dc", crimson: "dc143c", cyan: "0ff", darkblue: "00008b", darkcyan: "008b8b", darkgoldenrod: "b8860b", darkgray: "a9a9a9", darkgreen: "006400", darkgrey: "a9a9a9", darkkhaki: "bdb76b", darkmagenta: "8b008b", darkolivegreen: "556b2f", darkorange: "ff8c00", darkorchid: "9932cc", darkred: "8b0000", darksalmon: "e9967a", darkseagreen: "8fbc8f", darkslateblue: "483d8b", darkslategray: "2f4f4f", darkslategrey: "2f4f4f", darkturquoise: "00ced1", darkviolet: "9400d3", deeppink: "ff1493", deepskyblue: "00bfff", dimgray: "696969", dimgrey: "696969", dodgerblue: "1e90ff", firebrick: "b22222", floralwhite: "fffaf0", forestgreen: "228b22", fuchsia: "f0f", gainsboro: "dcdcdc", ghostwhite: "f8f8ff", gold: "ffd700", goldenrod: "daa520", gray: "808080", green: "008000", greenyellow: "adff2f", grey: "808080", honeydew: "f0fff0", hotpink: "ff69b4", indianred: "cd5c5c", indigo: "4b0082", ivory: "fffff0", khaki: "f0e68c", lavender: "e6e6fa", lavenderblush: "fff0f5", lawngreen: "7cfc00", lemonchiffon: "fffacd", lightblue: "add8e6", lightcoral: "f08080", lightcyan: "e0ffff", lightgoldenrodyellow: "fafad2", lightgray: "d3d3d3", lightgreen: "90ee90", lightgrey: "d3d3d3", lightpink: "ffb6c1", lightsalmon: "ffa07a", lightseagreen: "20b2aa", lightskyblue: "87cefa", lightslategray: "789", lightslategrey: "789", lightsteelblue: "b0c4de", lightyellow: "ffffe0", lime: "0f0", limegreen: "32cd32", linen: "faf0e6", magenta: "f0f", maroon: "800000", mediumaquamarine: "66cdaa", mediumblue: "0000cd", mediumorchid: "ba55d3", mediumpurple: "9370db", mediumseagreen: "3cb371", mediumslateblue: "7b68ee", mediumspringgreen: "00fa9a", mediumturquoise: "48d1cc", mediumvioletred: "c71585", midnightblue: "191970", mintcream: "f5fffa", mistyrose: "ffe4e1", moccasin: "ffe4b5", navajowhite: "ffdead", navy: "000080", oldlace: "fdf5e6", olive: "808000", olivedrab: "6b8e23", orange: "ffa500", orangered: "ff4500", orchid: "da70d6", palegoldenrod: "eee8aa", palegreen: "98fb98", paleturquoise: "afeeee", palevioletred: "db7093", papayawhip: "ffefd5", peachpuff: "ffdab9", peru: "cd853f", pink: "ffc0cb", plum: "dda0dd", powderblue: "b0e0e6", purple: "800080", rebeccapurple: "663399", red: "f00", rosybrown: "bc8f8f", royalblue: "4169e1", saddlebrown: "8b4513", salmon: "fa8072", sandybrown: "f4a460", seagreen: "2e8b57", seashell: "fff5ee", sienna: "a0522d", silver: "c0c0c0", skyblue: "87ceeb", slateblue: "6a5acd", slategray: "708090", slategrey: "708090", snow: "fffafa", springgreen: "00ff7f", steelblue: "4682b4", tan: "d2b48c", teal: "008080", thistle: "d8bfd8", tomato: "ff6347", turquoise: "40e0d0", violet: "ee82ee", wheat: "f5deb3", white: "fff", whitesmoke: "f5f5f5", yellow: "ff0", yellowgreen: "9acd32" };
+tinycolor.names = color;
 obj = {};
-for (const key10080 in obj) {
-  let tmp9 = key10080;
-  if (!obj.hasOwnProperty(key10080)) {
+for (const key10080 in color) {
+  if (!color.hasOwnProperty(key10080)) {
     continue;
   } else {
-    obj[obj[key10080]] = key10080;
+    obj[color[key10080]] = key10080;
     continue;
   }
   continue;
@@ -1414,23 +1392,23 @@ for (const key10080 in obj) {
 tinycolor.hexNames = obj;
 obj = { CSS_UNIT: null, rgb: null, rgba: null, hsl: null, hsla: null, hsv: null, hsva: null, hex3: null, hex6: null, hex4: null, hex8: null };
 const regExp = new RegExp("(?:[-\\+]?\\d*\\.\\d+%?)|(?:[-\\+]?\\d+%?)");
-obj[0] = regExp;
+obj.CSS_UNIT = regExp;
 const regExp1 = new RegExp("rgb[\\s|\\(]+((?:[-\\+]?\\d*\\.\\d+%?)|(?:[-\\+]?\\d+%?))[,|\\s]+((?:[-\\+]?\\d*\\.\\d+%?)|(?:[-\\+]?\\d+%?))[,|\\s]+((?:[-\\+]?\\d*\\.\\d+%?)|(?:[-\\+]?\\d+%?))\\s*\\)?");
-obj[1] = regExp1;
+obj.rgb = regExp1;
 const regExp2 = new RegExp("rgba[\\s|\\(]+((?:[-\\+]?\\d*\\.\\d+%?)|(?:[-\\+]?\\d+%?))[,|\\s]+((?:[-\\+]?\\d*\\.\\d+%?)|(?:[-\\+]?\\d+%?))[,|\\s]+((?:[-\\+]?\\d*\\.\\d+%?)|(?:[-\\+]?\\d+%?))[,|\\s]+((?:[-\\+]?\\d*\\.\\d+%?)|(?:[-\\+]?\\d+%?))\\s*\\)?");
-obj[2] = regExp2;
+obj.rgba = regExp2;
 const regExp3 = new RegExp("hsl[\\s|\\(]+((?:[-\\+]?\\d*\\.\\d+%?)|(?:[-\\+]?\\d+%?))[,|\\s]+((?:[-\\+]?\\d*\\.\\d+%?)|(?:[-\\+]?\\d+%?))[,|\\s]+((?:[-\\+]?\\d*\\.\\d+%?)|(?:[-\\+]?\\d+%?))\\s*\\)?");
-obj[3] = regExp3;
+obj.hsl = regExp3;
 const regExp4 = new RegExp("hsla[\\s|\\(]+((?:[-\\+]?\\d*\\.\\d+%?)|(?:[-\\+]?\\d+%?))[,|\\s]+((?:[-\\+]?\\d*\\.\\d+%?)|(?:[-\\+]?\\d+%?))[,|\\s]+((?:[-\\+]?\\d*\\.\\d+%?)|(?:[-\\+]?\\d+%?))[,|\\s]+((?:[-\\+]?\\d*\\.\\d+%?)|(?:[-\\+]?\\d+%?))\\s*\\)?");
-obj[4] = regExp4;
+obj.hsla = regExp4;
 const regExp5 = new RegExp("hsv[\\s|\\(]+((?:[-\\+]?\\d*\\.\\d+%?)|(?:[-\\+]?\\d+%?))[,|\\s]+((?:[-\\+]?\\d*\\.\\d+%?)|(?:[-\\+]?\\d+%?))[,|\\s]+((?:[-\\+]?\\d*\\.\\d+%?)|(?:[-\\+]?\\d+%?))\\s*\\)?");
-obj[5] = regExp5;
+obj.hsv = regExp5;
 const regExp6 = new RegExp("hsva[\\s|\\(]+((?:[-\\+]?\\d*\\.\\d+%?)|(?:[-\\+]?\\d+%?))[,|\\s]+((?:[-\\+]?\\d*\\.\\d+%?)|(?:[-\\+]?\\d+%?))[,|\\s]+((?:[-\\+]?\\d*\\.\\d+%?)|(?:[-\\+]?\\d+%?))[,|\\s]+((?:[-\\+]?\\d*\\.\\d+%?)|(?:[-\\+]?\\d+%?))\\s*\\)?");
-obj[6] = regExp6;
-obj[7] = /^#?([0-9a-fA-F]{1})([0-9a-fA-F]{1})([0-9a-fA-F]{1})$/;
-obj[8] = /^#?([0-9a-fA-F]{2})([0-9a-fA-F]{2})([0-9a-fA-F]{2})$/;
-obj[9] = /^#?([0-9a-fA-F]{1})([0-9a-fA-F]{1})([0-9a-fA-F]{1})([0-9a-fA-F]{1})$/;
-obj[10] = /^#?([0-9a-fA-F]{2})([0-9a-fA-F]{2})([0-9a-fA-F]{2})([0-9a-fA-F]{2})$/;
+obj.hsva = regExp6;
+obj.hex3 = /^#?([0-9a-fA-F]{1})([0-9a-fA-F]{1})([0-9a-fA-F]{1})$/;
+obj.hex6 = /^#?([0-9a-fA-F]{2})([0-9a-fA-F]{2})([0-9a-fA-F]{2})$/;
+obj.hex4 = /^#?([0-9a-fA-F]{1})([0-9a-fA-F]{1})([0-9a-fA-F]{1})([0-9a-fA-F]{1})$/;
+obj.hex8 = /^#?([0-9a-fA-F]{2})([0-9a-fA-F]{2})([0-9a-fA-F]{2})([0-9a-fA-F]{2})$/;
 if (undefined !== module) {
   if (module.exports) {
     module.exports = tinycolor;

@@ -1,32 +1,33 @@
 // === Module 153: NativePerformanceCxx ===
 
 // Module 153 (NativePerformanceCxx)
-import NativePerformanceCxxDefault from "NativePerformanceCxx" /* 154 */;
-import setUpPerformanceModernDefault from "setUpPerformanceModern" /* 155 */;
+import _modDef154 from "module_154" /* 154 */;
+import _modDef155 from "module_155" /* 155 */;
 
-if (NativePerformanceCxxDefault) {
-  setUpPerformanceModernDefault();
+if (_modDef154) {
+  _modDef155();
 } else if (!global.performance) {
-  const obj = { mark: null, clearMarks: null, measure: null, clearMeasures: null, now: null };
-  obj[0] = function mark() {
+  const obj = {
+    mark() {
 
-  };
-  obj[1] = function clearMarks() {
+      },
+    clearMarks() {
 
-  };
-  obj[2] = function measure() {
+      },
+    measure() {
 
-  };
-  obj[3] = function clearMeasures() {
+      },
+    clearMeasures() {
 
-  };
-  obj[4] = function now() {
-    let now = global.nativePerformanceNow;
-    if (!now) {
-      const _Date = Date;
-      now = Date.now;
-    }
-    return now();
+      },
+    now() {
+        let now = global.nativePerformanceNow;
+        if (!now) {
+          const _Date = Date;
+          now = Date.now;
+        }
+        return now();
+      }
   };
   global.performance = obj;
 }

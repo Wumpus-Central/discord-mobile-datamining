@@ -1,7 +1,8 @@
 // === Module 12843: memoBuilder ===
 
 // Module 12843 (memoBuilder)
-arg5.memoBuilder = function memoBuilder() {
+
+export const memoBuilder = function memoBuilder() {
   closure_0 = typeof WeakSet === "function";
   if (typeof WeakSet === "function") {
     const _WeakSet = WeakSet;

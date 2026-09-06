@@ -31,8 +31,9 @@ function isNativeFunction(arg0) {
   return isMatch;
 }
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
-arg5.isNativeFunction = isNativeFunction;
-arg5.supportsDOMError = function supportsDOMError() {
+
+export { isNativeFunction };
+export const supportsDOMError = function supportsDOMError() {
   try {
     const dOMError = new globalThis.DOMError("");
     return true;
@@ -40,7 +41,7 @@ arg5.supportsDOMError = function supportsDOMError() {
     return false;
   }
 };
-arg5.supportsDOMException = function supportsDOMException() {
+export const supportsDOMException = function supportsDOMException() {
   try {
     const dOMException = new globalThis.DOMException("");
     return true;
@@ -48,7 +49,7 @@ arg5.supportsDOMException = function supportsDOMException() {
     return false;
   }
 };
-arg5.supportsErrorEvent = function supportsErrorEvent() {
+export const supportsErrorEvent = function supportsErrorEvent() {
   try {
     const errorEvent = new globalThis.ErrorEvent("");
     return true;
@@ -56,11 +57,11 @@ arg5.supportsErrorEvent = function supportsErrorEvent() {
     return false;
   }
 };
-arg5.supportsFetch = _isFetchSupported;
-arg5.supportsHistory = function supportsHistory() {
+export const supportsFetch = _isFetchSupported;
+export const supportsHistory = function supportsHistory() {
   return "history" in _mod686.GLOBAL_OBJ && _mod686.GLOBAL_OBJ.history;
 };
-arg5.supportsNativeFetch = function supportsNativeFetch() {
+export const supportsNativeFetch = function supportsNativeFetch() {
   if (typeof globalThis.EdgeRuntime === "string") {
     return true;
   } else if (_isFetchSupported()) {
@@ -103,7 +104,7 @@ arg5.supportsNativeFetch = function supportsNativeFetch() {
     return false;
   }
 };
-arg5.supportsReferrerPolicy = function supportsReferrerPolicy() {
+export const supportsReferrerPolicy = function supportsReferrerPolicy() {
   if (_isFetchSupported()) {
     try {
       const _Request = Request;
@@ -116,6 +117,6 @@ arg5.supportsReferrerPolicy = function supportsReferrerPolicy() {
     return false;
   }
 };
-arg5.supportsReportingObserver = function supportsReportingObserver() {
+export const supportsReportingObserver = function supportsReportingObserver() {
   return "ReportingObserver" in _mod686.GLOBAL_OBJ;
 };

@@ -1,30 +1,29 @@
 // === Module 6912: ScrollAnchor ===
 
 // Module 6912 (ScrollAnchor)
-import noopDefault from "noop" /* 19 */;
-import closure_2 from "_slicedToArray" /* 6857 */;
-import noop from "noop" /* 19 */;
-import { jsx } from "jsxProd" /* 21 */;
+import CompatView from "CompatView" /* 6907 */;
+import _slicedToArray from "module_6857" /* 6857 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
-({ useImperativeHandle: c3, useMemo: c4, useState: c5 } = noop);
-noopDefault;
+require = fn;
+let noop = fn(19);
+({ useImperativeHandle: c3, useMemo: closure_4, useState: hasOwnProperty } = noop);
+const jsx = fn(21).jsx;
 
 export const ScrollAnchor = function ScrollAnchor(horizontal) {
   horizontal = horizontal.horizontal;
-  let first;
-  let callback;
-  const tmp = callback(callback4(1000000), 2);
-  first = tmp[0];
-  callback = tmp[1];
-  callback2(horizontal.scrollAnchorRef, () => ({
+  _slicedToArray = undefined;
+  const tmp = _slicedToArray(closure_5(1000000), 2);
+  const first = tmp[0];
+  _slicedToArray = tmp[1];
+  closure_3(horizontal.scrollAnchorRef, () => ({
     scrollBy(diff) {
       closure_0 = diff;
-      callback((arg0) => arg0 + closure_0);
+      closure_1_2((arg0) => arg0 + closure_0);
     }
   }), []);
   const items = [first, horizontal];
-  return callback3(() => {
+  return closure_4(() => {
     let num = 0;
     if (!horizontal) {
       num = first;
@@ -34,7 +33,7 @@ export const ScrollAnchor = function ScrollAnchor(horizontal) {
     if (horizontal) {
       num2 = first;
     }
-    style[3] = num2;
-    return closure_1_6(horizontal(first[3]).CompatView, { style });
+    style.left = num2;
+    return jsx(CompatView.CompatView, { style });
   }, items);
 };

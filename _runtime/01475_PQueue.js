@@ -7,38 +7,39 @@ function PQueue(arg0) {
   c2 = false;
   return {
     push(arg0) {
-      c2 = false;
+      closure_1.push(arg0);
+      closure_2 = false;
     },
     peek(arg0) {
-      if (!c2) {
-        const sorted = arr.sort(f108464);
-        c2 = true;
+      if (!closure_2) {
+        const sorted = closure_1.sort(closure_0);
+        closure_2 = true;
       }
       let diff = arg0;
       if (undefined === arg0) {
-        diff = arr.length - 1;
+        diff = closure_1.length - 1;
       }
-      return arr[diff];
+      return closure_1[diff];
     },
     pop() {
-      if (!c2) {
-        const sorted = arr.sort(f108464);
-        c2 = true;
+      if (!closure_2) {
+        const sorted = closure_1.sort(closure_0);
+        closure_2 = true;
       }
-      return arr.pop();
+      return closure_1.pop();
     },
     size() {
-      return arr.length;
+      return closure_1.length;
     },
     map(arg0) {
-      return arr.map(arg0);
+      return closure_1.map(arg0);
     },
     debug() {
-      if (!c2) {
-        const sorted = arr.sort(f108464);
-        c2 = true;
+      if (!closure_2) {
+        const sorted = closure_1.sort(closure_0);
+        closure_2 = true;
       }
-      return arr;
+      return closure_1;
     }
   };
 }
@@ -63,44 +64,45 @@ class CMap {
       const result = vbox.count() * vbox2.volume();
       const vbox4 = vbox2.vbox;
       const countResult = vbox.count();
-      return f108464.naturalOrder(result, vbox3.count() * vbox4.volume());
+      return closure_0.naturalOrder(result, vbox3.count() * vbox4.volume());
     };
     closure_1 = [];
     c2 = false;
     obj = {
       push(arg0) {
-            c2 = false;
+            closure_1.push(arg0);
+            closure_2 = false;
           },
       peek(arg0) {
-            if (!c2) {
-              const sorted = arr.sort(f108464);
-              c2 = true;
+            if (!closure_2) {
+              const sorted = closure_1.sort(closure_0);
+              closure_2 = true;
             }
             let diff = arg0;
             if (undefined === arg0) {
-              diff = arr.length - 1;
+              diff = closure_1.length - 1;
             }
-            return arr[diff];
+            return closure_1[diff];
           },
       pop() {
-            if (!c2) {
-              const sorted = arr.sort(f108464);
-              c2 = true;
+            if (!closure_2) {
+              const sorted = closure_1.sort(closure_0);
+              closure_2 = true;
             }
-            return arr.pop();
+            return closure_1.pop();
           },
       size() {
-            return arr.length;
+            return closure_1.length;
           },
       map(arg0) {
-            return arr.map(arg0);
+            return closure_1.map(arg0);
           },
       debug() {
-            if (!c2) {
-              const sorted = arr.sort(f108464);
-              c2 = true;
+            if (!closure_2) {
+              const sorted = closure_1.sort(closure_0);
+              closure_2 = true;
             }
-            return arr;
+            return closure_1;
           }
     };
     this.vboxes = obj;
@@ -126,21 +128,17 @@ VBox.prototype = {
       let num3 = 0;
       let num4 = 0;
       while (sum1 <= self.r2) {
-        let g1 = self.g1;
+        g1 = self.g1;
         let tmp3 = num3;
-        let tmp4 = sum1;
         let tmp5 = num3;
         if (g1 <= self.g2) {
           do {
-            let b1 = self.b1;
+            b1 = self.b1;
             let sum = tmp3;
-            let tmp7 = g1;
             let tmp8 = tmp3;
             if (b1 <= self.b2) {
               do {
                 let num5 = tmp[(sum1 << 10) + (g1 << 5) + b1];
-                let tmp9 = sum;
-                let tmp10 = b1;
                 if (!num5) {
                   num5 = 0;
                 }
@@ -192,24 +190,22 @@ VBox.prototype = {
     let num7 = 0;
     let num8 = 0;
     while (sum4 <= self.r2) {
-      let g1 = self.g1;
+      g1 = self.g1;
       let tmp3 = num;
       let tmp4 = num2;
       let tmp5 = num3;
       let tmp6 = num4;
-      let tmp7 = sum4;
       let tmp8 = num;
       let tmp9 = num2;
       let tmp10 = num3;
       let tmp11 = num4;
       if (g1 <= self.g2) {
         do {
-          let b1 = self.b1;
+          b1 = self.b1;
           let sum3 = tmp3;
           let sum2 = tmp4;
           let sum1 = tmp5;
           let sum = tmp6;
-          let tmp16 = g1;
           let tmp17 = tmp3;
           let tmp18 = tmp4;
           let tmp19 = tmp5;
@@ -217,11 +213,6 @@ VBox.prototype = {
           if (b1 <= self.b2) {
             do {
               let num9 = tmp[(sum4 << 10) + (g1 << 5) + b1];
-              let tmp21 = sum3;
-              let tmp22 = sum2;
-              let tmp23 = sum1;
-              let tmp24 = sum;
-              let tmp25 = b1;
               if (!num9) {
                 num9 = 0;
               }
@@ -292,9 +283,9 @@ VBox.prototype = {
   }
 };
 CMap.prototype = {
-  push(avg) {
+  push(vbox) {
     const vboxes = this.vboxes;
-    vboxes.push({ vbox: avg, color: avg.avg() });
+    vboxes.push({ vbox, color: vbox.avg() });
   },
   palette() {
     const vboxes = this.vboxes;
@@ -331,7 +322,6 @@ CMap.prototype = {
         let sum = powResult + Math.pow(arg0[1] - vboxes.peek(num).color[1], 2);
         let sqrtResult = Math.sqrt(sum + Math.pow(arg0[2] - vboxes.peek(num).color[2], 2));
         let tmp7 = sqrtResult < tmp2;
-        let tmp8 = num;
         let color = tmp;
         let tmp9 = tmp2;
         if (!tmp7) {
@@ -351,7 +341,7 @@ CMap.prototype = {
   },
   forcebw() {
     const vboxes = this.vboxes;
-    const sorted = vboxes.sort((color, color2) => closure_0.naturalOrder(closure_0.sum(color.color), closure_0.sum(color2.color)));
+    const sorted = vboxes.sort((color, color2) => PQueue.naturalOrder(PQueue.sum(color.color), PQueue.sum(color2.color)));
     const color = vboxes[0].color;
     if (tmp2) {
       vboxes[0].color = [0, 0, 0];
@@ -364,55 +354,46 @@ CMap.prototype = {
   }
 };
 
-export default function quantize(arr) {
+export default function quantize(arr, arg1) {
   let sizeResult;
   let sizeResult1;
   if (arr.length) {
     if (arg1 >= 2) {
       if (arg1 <= 256) {
-        function iter(BottomSheetDraggableContext, arg1, closure_0, closure_1) {
+        function iter(activeDotStyle, arg1) {
           let num = 0;
           let num2 = 1;
           while (true) {
-            let arr = BottomSheetDraggableContext.pop();
-            let tmp = num;
-            let tmp2 = num2;
+            let arr = activeDotStyle.pop();
             if (arr.count()) {
-              let tmp6 = sum8;
+              let tmp6 = closure_0;
               let tmp7;
               if (arr.count()) {
                 let sum = arr.r2 - arr.r1 + 1;
                 let sum1 = arr.g2 - arr.g1 + 1;
-                let tmp10 = f108464;
                 let items = [sum, sum1, arr.b2 - arr.b1 + 1];
-                let maxResult = f108464.max(items);
+                let maxResult = closure_0.max(items);
                 if (1 == arr.count()) {
                   let items1 = [arr.copy()];
                   tmp7 = items1;
                 } else {
-                  sum8 = 0;
+                  let sum8 = 0;
                   let items2 = [];
                   let items3 = [];
                   if (maxResult == sum) {
                     sum = arr.r1;
                     let num12 = 0;
-                    let num7 = 0;
                     while (sum <= arr.r2) {
                       let g13 = arr.g1;
-                      let tmp28 = sum;
-                      let tmp29 = num12;
                       let num13 = 0;
                       let num14 = 0;
                       while (g13 <= arr.g2) {
                         let b13 = arr.b1;
                         let sum2 = num13;
-                        let tmp31 = g13;
                         let tmp32 = num13;
                         if (b13 <= arr.b2) {
                           do {
                             let num15 = tmp6[(sum << 10) + (g13 << 5) + b13];
-                            let tmp33 = sum2;
-                            let tmp34 = b13;
                             if (!num15) {
                               num15 = 0;
                             }
@@ -430,28 +411,21 @@ export default function quantize(arr) {
                       items2[sum] = sum3;
                       sum = sum + 1;
                       num12 = sum3;
-                      num7 = sum3;
                     }
                   } else if (maxResult == sum1) {
                     let g12 = arr.g1;
                     let num8 = 0;
-                    num7 = 0;
                     while (g12 <= arr.g2) {
                       let r1 = arr.r1;
-                      let tmp20 = g12;
-                      let tmp21 = num8;
                       let num9 = 0;
                       let num10 = 0;
                       while (r1 <= arr.r2) {
                         let b12 = arr.b1;
                         let sum4 = num9;
-                        let tmp23 = r1;
                         let tmp24 = num9;
                         if (b12 <= arr.b2) {
                           do {
                             let num11 = tmp6[(r1 << 10) + (g12 << 5) + b12];
-                            let tmp25 = sum4;
-                            let tmp26 = b12;
                             if (!num11) {
                               num11 = 0;
                             }
@@ -469,28 +443,21 @@ export default function quantize(arr) {
                       items2[g12] = sum5;
                       g12 = g12 + 1;
                       num8 = sum5;
-                      num7 = sum5;
                     }
                   } else {
-                    let b1 = arr.b1;
+                    b1 = arr.b1;
                     let num6 = 0;
-                    num7 = 0;
                     while (b1 <= arr.b2) {
                       let sum7 = arr.r1;
-                      let tmp12 = b1;
-                      let tmp13 = num6;
                       let num3 = 0;
                       let num4 = 0;
                       while (sum7 <= arr.r2) {
-                        let g1 = arr.g1;
+                        g1 = arr.g1;
                         let sum6 = num3;
-                        let tmp15 = sum7;
                         let tmp16 = num3;
                         if (g1 <= arr.g2) {
                           do {
                             let num5 = tmp6[(sum7 << 10) + (g1 << 5) + b1];
-                            let tmp17 = sum6;
-                            let tmp18 = g1;
                             if (!num5) {
                               num5 = 0;
                             }
@@ -507,11 +474,10 @@ export default function quantize(arr) {
                       items2[b1] = sum8;
                       b1 = b1 + 1;
                       num6 = sum8;
-                      num7 = sum8;
                     }
                   }
-                  let item = items2.forEach((arg0, arg1) => {
-                    items3[arg1] = sum8 - arg0;
+                  let item = items2.forEach((item, index) => {
+                    items3[index] = sum8 - item;
                   });
                   let str = "r";
                   if (maxResult != sum) {
@@ -526,7 +492,6 @@ export default function quantize(arr) {
                   let tmp39 = arr[`${str}1`];
                   let tmp41;
                   if (tmp39 <= arr[`${str}2`]) {
-                    let tmp42 = tmp39;
                     while (items2[tmp39] <= tmp40) {
                       let sum9 = tmp39 + 1;
                       tmp39 = sum9;
@@ -580,10 +545,10 @@ export default function quantize(arr) {
               if (!tmp56) {
                 break;
               } else {
-                arr = BottomSheetDraggableContext.push(tmp56);
+                arr = activeDotStyle.push(tmp56);
                 let sum11 = num2;
                 if (tmp57) {
-                  let arr1 = BottomSheetDraggableContext.push(tmp57);
+                  let arr1 = activeDotStyle.push(tmp57);
                   sum11 = num2 + 1;
                 }
                 if (sum11 < arg1) {
@@ -592,7 +557,7 @@ export default function quantize(arr) {
                 }
               }
             } else {
-              let arr2 = BottomSheetDraggableContext.push(arr);
+              let arr2 = activeDotStyle.push(arr);
               sum12 = num + 1;
               tmp5 = num2;
             }
@@ -602,33 +567,28 @@ export default function quantize(arr) {
         }
         const _Array = Array;
         const array = new Array(32768);
-        CMap = array;
-        let item = arr.forEach((arg0) => {
-          closure_0 = arg0[0] >> 3;
-          closure_1 = arg0[1] >> 3;
-          const sum = (closure_0 << 10) + (closure_1 << 5) + (arg0[2] >> 3);
-          let num = table[sum];
+        let item = arr.forEach((item) => {
+          closure_0 = item[0] >> 3;
+          closure_1 = item[1] >> 3;
+          const sum = (closure_0 << 10) + (closure_1 << 5) + (item[2] >> 3);
+          let num = closure_2[sum];
           if (!num) {
             num = 0;
           }
-          table[sum] = num + 1;
+          closure_2[sum] = num + 1;
         });
-        let f108464 = array;
         const item1 = array.forEach(() => {
 
         });
-        f108464 = undefined;
+        PQueue = undefined;
         VBox = undefined;
-        CMap = undefined;
-        c3 = 1000000;
-        c4 = 0;
-        c5 = 1000000;
-        c6 = 0;
-        c7 = 1000000;
-        c8 = 0;
-        const item2 = arr.forEach((arg0) => {
-          closure_0 = arg0[0] >> 3;
-          closure_1 = arg0[1] >> 3;
+        g1 = 1000000;
+        g2 = 0;
+        b1 = 1000000;
+        b2 = 0;
+        const item2 = arr.forEach((item) => {
+          closure_0 = item[0] >> 3;
+          closure_1 = item[1] >> 3;
           closure_2 = tmp;
           if (closure_0 < closure_3) {
             closure_3 = tmp2;
@@ -640,103 +600,106 @@ export default function quantize(arr) {
           } else if (tmp4 > closure_6) {
             closure_6 = tmp4;
           }
-          if (arg0[2] >> 3 < closure_7) {
+          if (item[2] >> 3 < closure_7) {
             closure_7 = tmp;
           } else if (closure_8 < tmp) {
             closure_8 = tmp;
           }
         });
         let obj = Object.create(VBox.prototype);
-        obj.r1 = c3;
-        obj.r2 = c4;
-        obj.g1 = c5;
-        obj.g2 = c6;
-        obj.b1 = c7;
-        obj.b2 = c8;
+        obj.r1 = 1000000;
+        obj.r2 = 0;
+        obj.g1 = g1;
+        obj.g2 = g2;
+        obj.b1 = b1;
+        obj.b2 = b2;
         obj.histo = array;
-        const prototype2 = f108464.prototype;
-        f108464 = (count, count2) => f108464.naturalOrder(count.count(), count2.count());
+        const prototype2 = PQueue.prototype;
+        PQueue = (count, count2) => closure_0.naturalOrder(count.count(), count2.count());
         VBox = [];
-        CMap = false;
-        obj = { push: null, peek: null, pop: null, size: null, map: null, debug: null };
-        obj[0] = function push(arg0) {
-          c2 = false;
-        };
-        obj[1] = function peek(arg0) {
-          if (!c2) {
-            const sorted = arr.sort(f108464);
-            c2 = true;
-          }
-          let diff = arg0;
-          if (undefined === arg0) {
-            diff = arr.length - 1;
-          }
-          return arr[diff];
-        };
-        obj[2] = function pop() {
-          if (!c2) {
-            const sorted = arr.sort(f108464);
-            c2 = true;
-          }
-          return arr.pop();
-        };
-        obj[3] = function size() {
-          return arr.length;
-        };
-        obj[4] = function map(arg0) {
-          return arr.map(arg0);
-        };
-        obj[5] = function debug() {
-          if (!c2) {
-            const sorted = arr.sort(f108464);
-            c2 = true;
-          }
-          return arr;
+        obj = {
+          push(arg0) {
+                  closure_1.push(arg0);
+                  closure_2 = false;
+                },
+          peek(arg0) {
+                  if (!closure_2) {
+                    const sorted = closure_1.sort(closure_0);
+                    closure_2 = true;
+                  }
+                  let diff = arg0;
+                  if (undefined === arg0) {
+                    diff = closure_1.length - 1;
+                  }
+                  return closure_1[diff];
+                },
+          pop() {
+                  if (!closure_2) {
+                    const sorted = closure_1.sort(closure_0);
+                    closure_2 = true;
+                  }
+                  return closure_1.pop();
+                },
+          size() {
+                  return closure_1.length;
+                },
+          map(arg0) {
+                  return closure_1.map(arg0);
+                },
+          debug() {
+                  if (!closure_2) {
+                    const sorted = closure_1.sort(closure_0);
+                    closure_2 = true;
+                  }
+                  return closure_1;
+                }
         };
         obj.push(obj);
         iter(obj, 0.75 * arg1);
-        const prototype3 = f108464.prototype;
-        f108464 = (count, count2) => {
+        const prototype3 = PQueue.prototype;
+        PQueue = (count, count2) => {
           const result = count.count() * count.volume();
           const countResult = count.count();
-          return f108464.naturalOrder(result, count2.count() * count2.volume());
+          return closure_0.naturalOrder(result, count2.count() * count2.volume());
         };
         VBox = [];
         CMap = false;
-        obj1 = { push: null, peek: null, pop: null, size: null, map: null, debug: null };
-        obj1[0] = function push(arg0) {
-          c2 = false;
-        };
-        obj1[1] = function peek(arg0) {
-          if (!c2) {
-            const sorted = arr.sort(f108464);
-            c2 = true;
-          }
-          let diff = arg0;
-          if (undefined === arg0) {
-            diff = arr.length - 1;
-          }
-          return arr[diff];
-        };
-        obj1[2] = function pop() {
-          if (!c2) {
-            const sorted = arr.sort(f108464);
-            c2 = true;
-          }
-          return arr.pop();
-        };
-        obj1[3] = function size() {
-          return arr.length;
-        };
-        obj1[4] = function map(arg0) {
-          return arr.map(arg0);
-        };
-        obj1[5] = function debug() {
-          if (!c2) {
-            const sorted = arr.sort(f108464);
-            c2 = true;
-          }
-          return arr;
+        const obj1 = {
+          push(arg0) {
+                  closure_1.push(arg0);
+                  closure_2 = false;
+                },
+          peek(arg0) {
+                  if (!closure_2) {
+                    const sorted = closure_1.sort(closure_0);
+                    closure_2 = true;
+                  }
+                  let diff = arg0;
+                  if (undefined === arg0) {
+                    diff = closure_1.length - 1;
+                  }
+                  return closure_1[diff];
+                },
+          pop() {
+                  if (!closure_2) {
+                    const sorted = closure_1.sort(closure_0);
+                    closure_2 = true;
+                  }
+                  return closure_1.pop();
+                },
+          size() {
+                  return closure_1.length;
+                },
+          map(arg0) {
+                  return closure_1.map(arg0);
+                },
+          debug() {
+                  if (!closure_2) {
+                    const sorted = closure_1.sort(closure_0);
+                    closure_2 = true;
+                  }
+                  return closure_1;
+                }
         };
         if (obj.size()) {
           do {
@@ -746,52 +709,54 @@ export default function quantize(arr) {
         }
         iter(obj1, arg1 - obj1.size());
         const obj2 = Object.create(CMap.prototype);
-        const prototype = f108464.prototype;
-        f108464 = (vbox, vbox2) => {
+        const prototype = PQueue.prototype;
+        PQueue = (vbox, vbox2) => {
           vbox = vbox.vbox;
           vbox2 = vbox.vbox;
           const vbox3 = vbox2.vbox;
           const result = vbox.count() * vbox2.volume();
           const vbox4 = vbox2.vbox;
           const countResult = vbox.count();
-          return f108464.naturalOrder(result, vbox3.count() * vbox4.volume());
+          return closure_0.naturalOrder(result, vbox3.count() * vbox4.volume());
         };
         VBox = [];
         CMap = false;
-        obj = { push: null, peek: null, pop: null, size: null, map: null, debug: null };
-        obj[0] = function push(arg0) {
-          c2 = false;
-        };
-        obj[1] = function peek(arg0) {
-          if (!c2) {
-            const sorted = arr.sort(f108464);
-            c2 = true;
-          }
-          let diff = arg0;
-          if (undefined === arg0) {
-            diff = arr.length - 1;
-          }
-          return arr[diff];
-        };
-        obj[2] = function pop() {
-          if (!c2) {
-            const sorted = arr.sort(f108464);
-            c2 = true;
-          }
-          return arr.pop();
-        };
-        obj[3] = function size() {
-          return arr.length;
-        };
-        obj[4] = function map(arg0) {
-          return arr.map(arg0);
-        };
-        obj[5] = function debug() {
-          if (!c2) {
-            const sorted = arr.sort(f108464);
-            c2 = true;
-          }
-          return arr;
+        obj = {
+          push(arg0) {
+                  closure_1.push(arg0);
+                  closure_2 = false;
+                },
+          peek(arg0) {
+                  if (!closure_2) {
+                    const sorted = closure_1.sort(closure_0);
+                    closure_2 = true;
+                  }
+                  let diff = arg0;
+                  if (undefined === arg0) {
+                    diff = closure_1.length - 1;
+                  }
+                  return closure_1[diff];
+                },
+          pop() {
+                  if (!closure_2) {
+                    const sorted = closure_1.sort(closure_0);
+                    closure_2 = true;
+                  }
+                  return closure_1.pop();
+                },
+          size() {
+                  return closure_1.length;
+                },
+          map(arg0) {
+                  return closure_1.map(arg0);
+                },
+          debug() {
+                  if (!closure_2) {
+                    const sorted = closure_1.sort(closure_0);
+                    closure_2 = true;
+                  }
+                  return closure_1;
+                }
         };
         obj2.vboxes = obj;
         if (obj1.size()) {

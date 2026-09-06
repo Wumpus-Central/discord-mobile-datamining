@@ -5,7 +5,7 @@ import _mod1540 from "module_1540" /* 1540 */;
 import decodeComponents from "decodeComponents" /* 1541 */;
 import _mod1542 from "module_1542" /* 1542 */;
 import _mod1543 from "module_1543" /* 1543 */;
-import closure_3 from "_slicedToArray" /* 32 */;
+import _slicedToArray from "module_32" /* 32 */;
 
 function validateArrayFormatSeparator(arrayFormatSeparator) {
   const typeError = new TypeError("arrayFormatSeparator must be single character string");
@@ -27,7 +27,7 @@ function keysSorter(arr) {
     if (typeof arr === "object") {
       const _Object = Object;
       const sorted1 = keysSorter(Object.keys(arr)).sort((arg0, arg1) => Number(arg0) - Number(arg1));
-      sorted = sorted1.map((arg0) => keys[arg0]);
+      sorted = sorted1.map((item) => keys[item]);
       const obj = keysSorter(Object.keys(arr));
     }
   }
@@ -64,9 +64,9 @@ function parseValue(str, parseNumbers) {
     NumberResult = "true" === str.toLowerCase();
   }
 }
-function parse(str) {
+function parse(str, arg1) {
   let obj = globalThis;
-  const merged = Object.assign({ decode: true, sort: true, arrayFormat: "none", arrayFormatSeparator: ",", parseNumbers: false, parseBooleans: false }, arg1);
+  let merged = Object.assign({ decode: true, sort: true, arrayFormat: "none", arrayFormatSeparator: ",", parseNumbers: false, parseBooleans: false }, arg1);
   validateArrayFormatSeparator(merged.arrayFormatSeparator);
   obj = Object.create(null);
   if (typeof str !== "string") {
@@ -80,34 +80,22 @@ function parse(str) {
       while (iter !== undefined) {
         let str4 = nextResult;
         if ("" !== nextResult) {
-          let tmp43 = obj;
-          let tmp44 = dependencyMap;
-          let tmp46 = nextResult;
           let tmp45 = obj(1542);
           if (merged.decode) {
             let replaced = str4.replace(/\+/g, " ");
           } else {
             replaced = str4;
           }
-          let tmp12 = callback;
-          let tmp13 = callback(tmp45(replaced, "="), 2);
+          let tmp13 = _slicedToArray(tmp45(replaced, "="), 2);
           [tmp14, tmp15] = tmp13;
-          let tmp17 = null;
           if (undefined === tmp15) {
-            let tmp22 = null;
-            let tmp23 = decode;
-            let tmp24 = tmp14;
             let tmp4Result = tmp4(decode(tmp14, merged), null, obj);
           } else {
             let items = ["comma", "separator", "bracket-separator"];
             if (items.includes(merged.arrayFormat)) {
-              let tmp20 = tmp15;
             } else {
-              let tmp18 = decode;
-              let tmp19 = tmp15;
-              tmp20 = decode(tmp16, merged);
+              let tmp20 = decode(tmp16, merged);
             }
-            let tmp21 = tmp20;
           }
         }
         continue;
@@ -119,25 +107,16 @@ function parse(str) {
         let tmp31 = tmp30;
         let tmp29 = item10065;
         if (typeof tmp30 === "object") {
-          let tmp47 = tmp30;
           if (null !== tmp31) {
             let _Object2 = Object;
-            let tmp35 = tmp30;
             let keys1 = Object.keys(tmp31);
-            let tmp37 = keys1;
-            let tmp38 = keys1;
             for (const item10081 of keys1) {
-              let tmp39 = tmp30;
-              let tmp40 = parseValue;
               tmp31[item10081] = parseValue(tmp31[item10081], merged);
               continue;
             }
             continue;
           }
         }
-        let tmp32 = item10065;
-        let tmp33 = parseValue;
-        let tmp34 = tmp30;
         obj[tmp29] = parseValue(tmp31, merged);
       }
       if (false === merged.sort) {
@@ -154,12 +133,12 @@ function parse(str) {
         }
         const _Object5 = obj.Object;
         obj = _Object5.create(null);
-        const reduced = sorted.reduce((arg0, arg1) => {
-          if (Boolean(keys[arg1])) {
+        const reduced = sorted.reduce((acc, item) => {
+          if (Boolean(obj[item])) {
             if (typeof obj === "object") {
               const _Array2 = Array;
               if (!Array.isArray(obj)) {
-                keys = obj;
+                let keys = obj;
                 const _Array = Array;
                 if (Array.isArray(obj)) {
                   let sorted = obj.sort();
@@ -175,21 +154,21 @@ function parse(str) {
                       sorted1 = keys;
                       if (typeof keys === "object") {
                         const _Object2 = Object;
-                        const sorted2 = closure_1_7(Object.keys(keys)).sort((arg0, arg1) => Number(arg0) - Number(arg1));
-                        sorted1 = sorted2.map((arg0) => keys[arg0]);
-                        const obj3 = closure_1_7(Object.keys(keys));
+                        const sorted2 = keysSorter(Object.keys(keys)).sort((arg0, arg1) => Number(arg0) - Number(arg1));
+                        sorted1 = sorted2.map((item) => keys[item]);
+                        const obj3 = keysSorter(Object.keys(keys));
                       }
                     }
                     keys = sorted1.sort((arg0, arg1) => Number(arg0) - Number(arg1));
-                    const mapped = keys.map((arg0) => keys[arg0]);
+                    const mapped = keys.map((item) => keys[item]);
                   }
                 }
-                arg0[arg1] = sorted;
+                acc[item] = sorted;
               }
-              return arg0;
+              return acc;
             }
           }
-          arg0[arg1] = keys[arg1];
+          acc[item] = obj[item];
         }, obj);
       }
     } else {
@@ -215,7 +194,7 @@ export const extract = function extract(arr) {
 };
 export { parse };
 export const stringify = (arg0, merged) => {
-  closure_0 = arg0;
+  dependencyMap = arg0;
   if (arg0) {
     const _Object = Object;
     merged = Object.assign({ encode: true, strict: true, arrayFormat: "none", arrayFormatSeparator: "," }, merged);
@@ -245,8 +224,8 @@ export const stringify = (arg0, merged) => {
             let length = arg0.length;
             let tmp = arg0;
             if (undefined !== arg1) {
-              let items1 = lib;
-              if (!lib.skipNull) {
+              let items1 = closure_0;
+              if (!closure_0.skipNull) {
                 if (items1.skipEmptyString) {
                   tmp = encode;
                 }
@@ -259,7 +238,7 @@ export const stringify = (arg0, merged) => {
                     items[arraySpreadResult] = length;
                     let items2 = items;
                   } else if (items1.strict) {
-                    let encodeURIComponentResult = lib(closure_2_2[1])(tmp24);
+                    let encodeURIComponentResult = closure_0(1540)(tmp24);
                   } else {
                     const _encodeURIComponent4 = encodeURIComponent;
                     encodeURIComponentResult = encodeURIComponent(tmp24);
@@ -276,19 +255,19 @@ export const stringify = (arg0, merged) => {
                         items3[4] = arg1;
                         items2[tmp34] = items3.join("");
                       } else if (items1.strict) {
-                        let encodeURIComponentResult1 = lib(closure_2_2[1])(arg1);
+                        let encodeURIComponentResult1 = closure_0(1540)(arg1);
                       } else {
                         const _encodeURIComponent3 = encodeURIComponent;
                         encodeURIComponentResult1 = encodeURIComponent(arg1);
                       }
                     } else if (items1.strict) {
-                      let encodeURIComponentResult2 = lib(closure_2_2[1])(length);
+                      let encodeURIComponentResult2 = closure_0(1540)(length);
                     } else {
                       const _encodeURIComponent2 = encodeURIComponent;
                       encodeURIComponentResult2 = encodeURIComponent(length);
                     }
                   } else if (items1.strict) {
-                    let encodeURIComponentResult3 = lib(closure_2_2[1])(tmp35);
+                    let encodeURIComponentResult3 = closure_0(1540)(tmp35);
                   } else {
                     const _encodeURIComponent = encodeURIComponent;
                     encodeURIComponentResult3 = encodeURIComponent(tmp35);
@@ -308,7 +287,7 @@ export const stringify = (arg0, merged) => {
             let items1 = arg0;
             let tmp = arg0;
             if (undefined !== arg1) {
-              if (!lib.skipNull) {
+              if (!closure_0.skipNull) {
                 if (tmp25.skipEmptyString) {
                   tmp = items1;
                 }
@@ -319,7 +298,7 @@ export const stringify = (arg0, merged) => {
                     items[tmp17] = items1.join("");
                     let items2 = items;
                   } else if (tmp25.strict) {
-                    let encodeURIComponentResult = lib(closure_2_2[1])(tmp18);
+                    let encodeURIComponentResult = closure_0(1540)(tmp18);
                   } else {
                     const _encodeURIComponent3 = encodeURIComponent;
                     encodeURIComponentResult = encodeURIComponent(tmp18);
@@ -332,13 +311,13 @@ export const stringify = (arg0, merged) => {
                       items3[2] = arg1;
                       items2[tmp29] = items3.join("");
                     } else if (tmp25.strict) {
-                      let encodeURIComponentResult1 = lib(closure_2_2[1])(arg1);
+                      let encodeURIComponentResult1 = closure_0(1540)(arg1);
                     } else {
                       const _encodeURIComponent2 = encodeURIComponent;
                       encodeURIComponentResult1 = encodeURIComponent(arg1);
                     }
                   } else if (tmp25.strict) {
-                    let encodeURIComponentResult2 = lib(closure_2_2[1])(tmp30);
+                    let encodeURIComponentResult2 = closure_0(1540)(tmp30);
                   } else {
                     const _encodeURIComponent = encodeURIComponent;
                     encodeURIComponentResult2 = encodeURIComponent(tmp30);
@@ -358,7 +337,7 @@ export const stringify = (arg0, merged) => {
             let items1 = arg0;
             let tmp = arg0;
             if (undefined !== arg1) {
-              if (!lib.skipNull) {
+              if (!closure_0.skipNull) {
                 if (tmp25.skipEmptyString) {
                   tmp = items1;
                 }
@@ -369,7 +348,7 @@ export const stringify = (arg0, merged) => {
                     items[tmp17] = items1.join("");
                     let items2 = items;
                   } else if (tmp25.strict) {
-                    let encodeURIComponentResult = lib(closure_2_2[1])(tmp18);
+                    let encodeURIComponentResult = closure_0(1540)(tmp18);
                   } else {
                     const _encodeURIComponent3 = encodeURIComponent;
                     encodeURIComponentResult = encodeURIComponent(tmp18);
@@ -382,13 +361,13 @@ export const stringify = (arg0, merged) => {
                       items3[2] = arg1;
                       items2[tmp29] = items3.join("");
                     } else if (tmp25.strict) {
-                      let encodeURIComponentResult1 = lib(closure_2_2[1])(arg1);
+                      let encodeURIComponentResult1 = closure_0(1540)(arg1);
                     } else {
                       const _encodeURIComponent2 = encodeURIComponent;
                       encodeURIComponentResult1 = encodeURIComponent(arg1);
                     }
                   } else if (tmp25.strict) {
-                    let encodeURIComponentResult2 = lib(closure_2_2[1])(tmp30);
+                    let encodeURIComponentResult2 = closure_0(1540)(tmp30);
                   } else {
                     const _encodeURIComponent = encodeURIComponent;
                     encodeURIComponentResult2 = encodeURIComponent(tmp30);
@@ -411,7 +390,7 @@ export const stringify = (arg0, merged) => {
                   let encode = arg0;
                   let tmp = arg0;
                   if (undefined !== arg1) {
-                    if (!lib.skipNull) {
+                    if (!closure_0.skipNull) {
                       if (tmp26.skipEmptyString) {
                         tmp = encode;
                       }
@@ -422,7 +401,7 @@ export const stringify = (arg0, merged) => {
                           items[arraySpreadResult] = tmp18;
                           let items1 = items;
                         } else if (tmp26.strict) {
-                          let encodeURIComponentResult = lib(closure_2_2[1])(tmp18);
+                          let encodeURIComponentResult = closure_0(1540)(tmp18);
                         } else {
                           const _encodeURIComponent3 = encodeURIComponent;
                           encodeURIComponentResult = encodeURIComponent(tmp18);
@@ -436,13 +415,13 @@ export const stringify = (arg0, merged) => {
                             items2[2] = arg1;
                             items1[tmp29] = items2.join("");
                           } else if (tmp26.strict) {
-                            let encodeURIComponentResult1 = lib(closure_2_2[1])(arg1);
+                            let encodeURIComponentResult1 = closure_0(1540)(arg1);
                           } else {
                             const _encodeURIComponent2 = encodeURIComponent;
                             encodeURIComponentResult1 = encodeURIComponent(arg1);
                           }
                         } else if (tmp26.strict) {
-                          let encodeURIComponentResult2 = lib(closure_2_2[1])(tmp30);
+                          let encodeURIComponentResult2 = closure_0(1540)(tmp30);
                         } else {
                           const _encodeURIComponent = encodeURIComponent;
                           encodeURIComponentResult2 = encodeURIComponent(tmp30);
@@ -467,7 +446,7 @@ export const stringify = (arg0, merged) => {
           return (arg0, arg1) => {
             let tmp = arg0;
             if (undefined !== arg1) {
-              if (!lib.skipNull) {
+              if (!closure_0.skipNull) {
                 if (tmp25.skipEmptyString) {
                   tmp = arg0;
                 }
@@ -477,19 +456,19 @@ export const stringify = (arg0, merged) => {
                 }
                 if (0 === arg0.length) {
                   if (!tmp25.encode) {
-                    const items = [tmp10, closure_1_1, ];
+                    const items = [tmp10, str6, ];
                     if (!tmp25.encode) {
                       items[2] = str3;
                       const items1 = [items.join("")];
                       let items3 = items1;
                     } else if (tmp25.strict) {
-                      let encodeURIComponentResult = lib(closure_2_2[1])(str3);
+                      let encodeURIComponentResult = closure_0(1540)(str3);
                     } else {
                       const _encodeURIComponent3 = encodeURIComponent;
                       encodeURIComponentResult = encodeURIComponent(str3);
                     }
                   } else if (tmp25.strict) {
-                    let encodeURIComponentResult1 = lib(closure_2_2[1])(tmp10);
+                    let encodeURIComponentResult1 = closure_0(1540)(tmp10);
                   } else {
                     const _encodeURIComponent2 = encodeURIComponent;
                     encodeURIComponentResult1 = encodeURIComponent(tmp10);
@@ -500,7 +479,7 @@ export const stringify = (arg0, merged) => {
                     items2[1] = str3;
                     items3 = [items2.join(tmp25.arrayFormatSeparator)];
                   } else if (tmp25.strict) {
-                    let encodeURIComponentResult2 = lib(closure_2_2[1])(str3);
+                    let encodeURIComponentResult2 = closure_0(1540)(str3);
                   } else {
                     const _encodeURIComponent = encodeURIComponent;
                     encodeURIComponentResult2 = encodeURIComponent(str3);
@@ -521,7 +500,6 @@ export const stringify = (arg0, merged) => {
     for (const item10024 of keys) {
       let tmp8 = item10024;
       if (!shouldFilter(item10024)) {
-        let tmp9 = item10024;
         obj[tmp8] = arg0[tmp8];
       }
       continue;
@@ -531,61 +509,60 @@ export const stringify = (arg0, merged) => {
     if (false !== merged.sort) {
       const sorted = keys1.sort(merged.sort);
     }
-    const mapped = keys1.map((arg0) => {
-      if (undefined === dependencyMap[arg0]) {
+    const mapped = keys1.map((item) => {
+      if (undefined === dependencyMap[item]) {
         return "";
       } else if (null === arr) {
         if (!merged.encode) {
-          let text = arg0;
+          let text = item;
         } else if (tmp22.strict) {
-          let encodeURIComponentResult = dependencyMap(1540)(arg0);
+          let encodeURIComponentResult = _mod1540(item);
         } else {
           const _encodeURIComponent3 = encodeURIComponent;
-          encodeURIComponentResult = encodeURIComponent(arg0);
+          encodeURIComponentResult = encodeURIComponent(item);
         }
       } else {
         const _Array = Array;
         if (Array.isArray(arr)) {
           if (0 !== arr.length) {
-            const reduced = arr.reduce(dependencyMap2(arg0), []);
+            const reduced = arr.reduce(closure_2(item), []);
             let joined = reduced.join("&");
           }
           if (!tmp13.encode) {
-            joined = `${arg0}[]`;
+            joined = `${item}[]`;
           } else if (tmp13.strict) {
-            let encodeURIComponentResult1 = dependencyMap(1540)(arg0);
+            let encodeURIComponentResult1 = _mod1540(item);
           } else {
-            encodeURIComponentResult1 = `[]`.encodeURIComponent(arg0);
+            encodeURIComponentResult1 = `[]`.encodeURIComponent(item);
           }
         } else if (!merged.encode) {
           if (!tmp.encode) {
-            text = `${arg0}=${arr}`;
+            text = `${item}=${arr}`;
           } else if (tmp.strict) {
-            let encodeURIComponentResult2 = dependencyMap(1540)(arr);
+            let encodeURIComponentResult2 = _mod1540(arr);
           } else {
             const _encodeURIComponent2 = encodeURIComponent;
             encodeURIComponentResult2 = encodeURIComponent(arr);
           }
         } else if (tmp.strict) {
-          let encodeURIComponentResult3 = dependencyMap(1540)(arg0);
+          let encodeURIComponentResult3 = _mod1540(item);
         } else {
           const _encodeURIComponent = encodeURIComponent;
-          encodeURIComponentResult3 = encodeURIComponent(arg0);
+          encodeURIComponentResult3 = encodeURIComponent(item);
         }
       }
     });
-    const found = mapped.filter((arg0) => arg0.length > 0);
+    const found = mapped.filter((item) => item.length > 0);
     return found.join("&");
   } else {
     return "";
   }
 };
-export const parseUrl = (arr) => {
+export const parseUrl = (arr, arg1) => {
   const merged = Object.assign({ decode: true }, arg1);
-  [str, tmp5] = callback(_mod1542(arr, "#"), 2);
-  const tmp2 = require;
-  const tmp4 = callback(_mod1542(arr, "#"), 2);
-  let obj = { url: str.split("?")[0] || "", query: null };
+  [str, tmp5] = _slicedToArray(_mod1542(arr, "#"), 2);
+  const tmp4 = _slicedToArray(_mod1542(arr, "#"), 2);
+  const request = { url: str.split("?")[0] || "", query: null };
   const index = arr.indexOf("#");
   let substr = arr;
   if (-1 !== index) {
@@ -596,7 +573,7 @@ export const parseUrl = (arr) => {
   if (-1 !== index1) {
     str2 = substr.slice(index1 + 1);
   }
-  obj[1] = parse(str2, merged);
+  request.query = parse(str2, merged);
   if (merged) {
     if (merged.parseFragmentIdentifier) {
       if (tmp5) {
@@ -604,22 +581,20 @@ export const parseUrl = (arr) => {
         if (merged.decode) {
           tmp11 = decodeComponents(tmp5);
         }
-        obj = { fragmentIdentifier: null };
-        obj[0] = tmp11;
+        const obj = { fragmentIdentifier: tmp11 };
       }
-      return Object.assign(obj, {});
+      return Object.assign(request, {});
     }
   }
 };
-export const stringifyUrl = (url) => {
+export const stringifyUrl = (url, arg1) => {
   const obj = { encode: true, strict: true };
   obj[closure_4] = true;
   const merged = Object.assign(obj, arg1);
   url = url.url;
   const index = url.indexOf("#");
-  let str = url;
   if (-1 !== index) {
-    str = url.slice(0, index);
+    const str = url.slice(0, index);
   }
   const json = exports.stringify(Object.assign(exports.parse(exports.extract(url.url), { sort: false }), url.query), merged);
   let combined = json;
@@ -655,15 +630,15 @@ export const stringifyUrl = (url) => {
   }
 };
 export const pick = (arg0, arg1, arg2) => {
-  let obj = { parseFragmentIdentifier: true };
+  const obj = { parseFragmentIdentifier: true };
   obj[closure_4] = false;
   const merged = Object.assign(obj, arg2);
   const parseUrlResult = exports.parseUrl(arg0, merged);
-  obj = { url: parseUrlResult.url, query: _mod1543(query, arg1), fragmentIdentifier };
+  const request = { url: parseUrlResult.url, query: _mod1543(query, arg1), fragmentIdentifier };
   ({ query, fragmentIdentifier } = parseUrlResult);
-  return exports.stringifyUrl(obj, merged);
+  return exports.stringifyUrl(request, merged);
 };
 export const exclude = (arg0, arg1, arg2) => {
   closure_0 = arg1;
-  return exports.pick(arg0, Array.isArray(arg1) ? ((arg0) => !lib.includes(arg0)) : ((arg0, arg1) => !lib(arg0, arg1)), arg2);
+  return exports.pick(arg0, Array.isArray(arg1) ? ((arg0) => !closure_0.includes(arg0)) : ((arg0, arg1) => !closure_0(arg0, arg1)), arg2);
 };

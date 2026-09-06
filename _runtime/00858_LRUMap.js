@@ -2,19 +2,20 @@
 
 // Module 858 (LRUMap)
 import _readOnlyError from "_readOnlyError" /* 377 */;
-import LRUMap from "_classCallCheck" /* 41 */;
+import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
 
 Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
 class LRUMap {
   constructor(arg0) {
-    tmp = LRUMap(this, LRUMap);
+    tmp = closure_0(this, LRUMap);
     this._maxSize = global;
     map = new Map();
     this._cache = map;
     return;
   }
 }
+_classCallCheck = LRUMap;
 let items = [
   {
     key: "size",
@@ -27,7 +28,7 @@ let items = [
     value: function get(arg0) {
       const self = this;
       const _cache = this._cache;
-      const value = _cache.get(arg0);
+      value = _cache.get(arg0);
       if (undefined !== value) {
         const _cache2 = self._cache;
         _cache2.delete(arg0);
@@ -55,7 +56,7 @@ let items = [
     key: "remove",
     value: function remove(arg0) {
       const _cache = this._cache;
-      const value = _cache.get(arg0);
+      value = _cache.get(arg0);
       if (value) {
         const _cache2 = this._cache;
         _cache2.delete(arg0);
@@ -82,7 +83,7 @@ let items = [
     value: function values() {
       const items = [];
       const _cache = this._cache;
-      const item = _cache.forEach((arg0) => items.push(arg0));
+      const item = _cache.forEach((item) => items.push(item));
       return items;
     }
   }

@@ -1,18 +1,20 @@
 // === Module 241: __fetchSegment ===
 
 // Module 241 (__fetchSegment)
-const require = arg1;
+import SegmentFetcher from "SegmentFetcher" /* 242 */;
+
+require = arg1;
 const dependencyMap = arg6;
 arg0.__fetchSegment = function __fetchSegment(arg0, arg1, arg2) {
-  const _require = arg2;
-  const segment = _require(242).default.fetchSegment(arg0, arg1, (message) => {
+  closure_0 = arg2;
+  const segment = SegmentFetcher.default.fetchSegment(arg0, arg1, (message) => {
     if (message) {
       const _Error = Error;
-      error = new Error(message.message);
+      const error = new Error(message.message);
       error.code = message.code;
-      callback(error);
+      closure_0(error);
     } else {
-      callback(null);
+      closure_0(null);
     }
   });
 };

@@ -4,8 +4,8 @@
 import MapCache from "MapCache" /* 596 */;
 
 function memoize(fn, fn2) {
-  const _require = fn;
-  dependencyMap = fn2;
+  closure_0 = fn;
+  closure_1 = fn2;
   if (typeof fn === "function") {
     function memoized() {
       const self = this;
@@ -18,16 +18,16 @@ function memoize(fn, fn2) {
       if (cache.has(applyResult)) {
         return cache.get(applyResult);
       } else {
-        const applyResult1 = callback(...arguments);
+        const applyResult1 = closure_0(...arguments);
         tmp4.cache = cache.set(applyResult, applyResult1) || cache;
         return applyResult1;
       }
       obj = closure_1;
       tmp4 = memoized;
     }
-    let Cache = memoized.Cache;
+    let Cache = memoize.Cache;
     if (!Cache) {
-      Cache = _require(596);
+      Cache = MapCache;
     }
     let cache = new Cache();
     memoized.cache = cache;

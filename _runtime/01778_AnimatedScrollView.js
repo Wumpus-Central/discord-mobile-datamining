@@ -1,29 +1,27 @@
 // === Module 1778: AnimatedScrollView ===
 
 // Module 1778 (AnimatedScrollView)
-import noopDefault from "noop" /* 19 */;
-import useAnimatedGestureHandler from "useAnimatedGestureHandler" /* 1779 */;
-import closure_3 from "_objectWithoutProperties" /* 109 */;
-import { jsx } from "jsxProd" /* 21 */;
-import createAnimatedComponent from "createAnimatedComponent" /* 1670 */;
-import isReactRendering from "isReactRendering" /* 1775 */;
+import eulerToQuaternion from "eulerToQuaternion" /* 1779 */;
+import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
+require = fn;
 let closure_2 = ["scrollViewOffset"];
-noopDefault;
-let closure_5 = createAnimatedComponent.createAnimatedComponent(require("get ActivityIndicator").ScrollView);
+const jsx = fn(21).jsx;
+const _isNativeReflectConstruct = fn(1670);
+let closure_5 = _isNativeReflectConstruct.createAnimatedComponent(fn(17).ScrollView);
+const module_1775 = fn(1775);
 
-export const AnimatedScrollView = isReactRendering.componentWithRef((scrollViewOffset) => {
+export const AnimatedScrollView = module_1775.componentWithRef((scrollViewOffset, arg1) => {
   let animatedRef = arg1;
   scrollViewOffset = scrollViewOffset.scrollViewOffset;
-  const tmp2 = callback(scrollViewOffset, closure_2);
+  const tmp2 = _objectWithoutProperties(scrollViewOffset, closure_2);
   if (null === arg1) {
-    let obj = useAnimatedGestureHandler;
+    let obj = eulerToQuaternion;
     animatedRef = obj.useAnimatedRef();
   }
   if (scrollViewOffset) {
-    scrollViewOffset = useAnimatedGestureHandler.useScrollViewOffset(animatedRef, scrollViewOffset);
-    const obj2 = useAnimatedGestureHandler;
+    scrollViewOffset = eulerToQuaternion.useScrollViewOffset(animatedRef, scrollViewOffset);
   }
   if (!("scrollEventThrottle" in tmp2)) {
     tmp2.scrollEventThrottle = 1;

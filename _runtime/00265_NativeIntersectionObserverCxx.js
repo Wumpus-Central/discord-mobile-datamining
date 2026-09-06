@@ -1,7 +1,7 @@
 // === Module 265: NativeIntersectionObserverCxx ===
 
 // Module 265 (NativeIntersectionObserverCxx)
-import getAll from "get" /* 30 */;
+import get from "module_30" /* 30 */;
 
 
-export default getAll.get("NativeIntersectionObserverCxx");
+export default get.get("NativeIntersectionObserverCxx");

@@ -1,13 +1,13 @@
 // === Module 1203: ReflectionTypeCheck ===
 
 // Module 1203 (ReflectionTypeCheck)
-import closure_2 from "_classCallCheck" /* 41 */;
+import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
 
 const ReflectionTypeCheck = require;
 class ReflectionTypeCheck {
   constructor(arg0) {
-    tmp = closure_2(this, ReflectionTypeCheck);
+    tmp = c2(this, ReflectionTypeCheck);
     fields = global.fields;
     if (null === fields) {
       fields = [];
@@ -16,82 +16,71 @@ class ReflectionTypeCheck {
     return;
   }
 }
-let items = [
-  {
-    key: "prepare",
-    value: function prepare() {
-      const self = this;
-      if (!this.data) {
-        const items = [];
-        const items1 = [];
-        const items2 = [];
-        const fields = self.fields;
-        const iter = fields[Symbol.iterator]();
-        const nextResult = iter.next();
-        while (iter !== undefined) {
-          let tmp5 = nextResult;
-          if (nextResult.oneof) {
-            let tmp15 = nextResult;
-            if (!items2.includes(tmp5.oneof)) {
-              let tmp16 = nextResult;
-              let arr = items2.push(tmp5.oneof);
-              arr = items.push(tmp5.oneof);
-              let arr1 = items1.push(tmp5.oneof);
-            }
-          } else {
-            let tmp6 = nextResult;
-            let arr2 = items1.push(tmp5.localName);
-            let kind = tmp5.kind;
-            if ("scalar" !== kind) {
-              if ("enum" !== kind) {
-                if ("message" === kind) {
-                  let tmp8 = nextResult;
-                  if (tmp5.repeat) {
-                    let tmp9 = nextResult;
-                    let arr3 = items.push(tmp5.localName);
-                  }
-                } else if ("map" === kind) {
-                  let tmp21 = nextResult;
-                  let arr4 = items.push(tmp5.localName);
+const entry = {
+  key: "prepare",
+  value: function prepare() {
+    const self = this;
+    if (!this.data) {
+      const items = [];
+      const items1 = [];
+      const items2 = [];
+      const fields = self.fields;
+      const iter = fields[Symbol.iterator]();
+      const nextResult = iter.next();
+      while (iter !== undefined) {
+        let tmp5 = nextResult;
+        if (nextResult.oneof) {
+          if (!items2.includes(tmp5.oneof)) {
+            items2.push(tmp5.oneof);
+            let arr = items.push(tmp5.oneof);
+            let arr1 = items1.push(tmp5.oneof);
+          }
+        } else {
+          let arr2 = items1.push(tmp5.localName);
+          let kind = tmp5.kind;
+          if ("scalar" !== kind) {
+            if ("enum" !== kind) {
+              if ("message" === kind) {
+                if (tmp5.repeat) {
+                  let arr3 = items.push(tmp5.localName);
                 }
+              } else if ("map" === kind) {
+                let arr4 = items.push(tmp5.localName);
               }
             }
-            let tmp11 = nextResult;
-            let opt = tmp5.opt;
-            if (opt) {
-              let tmp12 = nextResult;
-              opt = !tmp5.repeat;
-            }
-            if (!opt) {
-              let tmp13 = nextResult;
-              let arr5 = items.push(tmp5.localName);
-            }
           }
-          continue;
+          let opt = tmp5.opt;
+          if (opt) {
+            opt = !tmp5.repeat;
+          }
+          if (!opt) {
+            let arr5 = items.push(tmp5.localName);
+          }
         }
-        const obj = { req: null, known: null, oneofs: null };
-        obj[0] = items;
-        obj[1] = items1;
-        const _Object = Object;
-        obj[2] = Object.values(items2);
-        self.data = obj;
+        continue;
       }
+      const obj = { req: items, known: items1, oneofs: null };
+      const _Object = Object;
+      obj.oneofs = Object.values(items2);
+      self.data = obj;
     }
-  },
+  }
+};
+let items = [
+  entry,
   {
     key: "is",
-    value: function is(obj) {
+    value: function is(obj, arg1) {
       closure_0 = obj;
       closure_1 = arg1;
       let flag = arg2;
       if (arg2 === undefined) {
         flag = false;
       }
-      let self = this;
       let keys;
       let data;
       let item10014;
-      self = this;
+      const self = this;
       if (arg1 < 0) {
         return true;
       } else {
@@ -103,11 +92,11 @@ let items = [
             data = self.data;
             if (keys.length >= data.req.length) {
               const req = data.req;
-              if (!req.some((arg0) => !keys.includes(arg0))) {
+              if (!req.some((item) => !keys.includes(item))) {
                 if (!flag) {
-                  if (keys.some((arg0) => {
+                  if (keys.some((item) => {
                     const known = data.known;
-                    return !known.includes(arg0);
+                    return !known.includes(item);
                   })) {
                     return false;
                   }
@@ -119,9 +108,7 @@ let items = [
                   for (const item10014 of oneofs) {
                     let tmp18Result = tmp18();
                     if (0 !== tmp18Result) {
-                      let tmp4 = tmp18Result;
                       if (tmp3) {
-                        let tmp5 = obj2;
                         obj2.return();
                         return tmp18Result.v;
                       }
@@ -132,13 +119,7 @@ let items = [
                   for (const item10026 of fields) {
                     let tmp8 = item10026;
                     if (undefined === item10026.oneof) {
-                      let tmp9 = item10026;
-                      let tmp10 = self;
-                      let tmp11 = tmp8;
-                      let tmp12 = flag;
-                      let tmp13 = arg1;
                       if (!self.field(arg0[tmp8.localName], item10026, flag, arg1)) {
-                        let tmp14 = obj;
                         obj.return();
                         let flag3 = false;
                         return false;
@@ -159,7 +140,7 @@ let items = [
   },
   {
     key: "field",
-    value: function field(keys, opt) {
+    value: function field(keys, opt, arg2, arg3) {
       ({ repeat, kind } = opt);
       const self = this;
       if ("scalar" === kind) {
@@ -222,7 +203,7 @@ let items = [
   },
   {
     key: "message",
-    value: function message(arg0, isAssignable) {
+    value: function message(arg0, isAssignable, arg2, arg3) {
       if (arg2) {
         let isAssignableResult = isAssignable.isAssignable(arg0, arg3);
       } else {
@@ -233,7 +214,7 @@ let items = [
   },
   {
     key: "messages",
-    value: function messages(arg0, isAssignable) {
+    value: function messages(arg0, isAssignable, arg2, arg3) {
       if (Array.isArray(arg0)) {
         if (arg3 < 2) {
           return true;
@@ -272,7 +253,7 @@ let items = [
   },
   {
     key: "scalar",
-    value: function scalar(flag) {
+    value: function scalar(flag, arg1, arg2) {
       if (ReflectionTypeCheck(1201).ScalarType.UINT64 !== arg1) {
         if (tmp(1201).ScalarType.FIXED64 !== arg1) {
           if (tmp(1201).ScalarType.INT64 !== arg1) {
@@ -354,7 +335,7 @@ let items = [
   },
   {
     key: "mapKeys",
-    value: function mapKeys(arg0, INT32) {
+    value: function mapKeys(arg0, INT32, arg2) {
       const self = this;
       const keys = Object.keys(arg0);
       if (ReflectionTypeCheck(1201).ScalarType.INT32 !== INT32) {
@@ -364,11 +345,11 @@ let items = [
               if (tmp(1201).ScalarType.UINT32 !== INT32) {
                 if (tmp(1201).ScalarType.BOOL === INT32) {
                   const substr = keys.slice(0, arg2);
-                  return self.scalars(substr.map((arg0) => {
-                    let tmp = "true" == arg0;
+                  return self.scalars(substr.map((item) => {
+                    let tmp = "true" == item;
                     if (!tmp) {
-                      tmp = "false" != arg0 && arg0;
-                      const tmp2 = "false" != arg0 && arg0;
+                      tmp = "false" != item && item;
+                      const tmp2 = "false" != item && item;
                     }
                     return tmp;
                   }), INT32, arg2);
@@ -381,7 +362,7 @@ let items = [
         }
       }
       const substr1 = keys.slice(0, arg2);
-      return self.scalars(substr1.map((joined) => parseInt(joined)), INT32, arg2);
+      return self.scalars(substr1.map((item) => parseInt(item)), INT32, arg2);
     }
   }
 ];

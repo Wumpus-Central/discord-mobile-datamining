@@ -5,8 +5,8 @@ class Yallist {
   constructor(arg0) {
     self = this;
     closure_0 = this;
-    tmp = closure_0;
-    if (!(this instanceof closure_0)) {
+    tmp = Yallist;
+    if (!(this instanceof Yallist)) {
       tmpResult = tmp();
       closure_0 = tmpResult;
       self = tmpResult;
@@ -16,8 +16,8 @@ class Yallist {
     self.length = 0;
     if (global) {
       if (typeof global.forEach === "function") {
-        item = global.forEach((arg0) => {
-
+        item = global.forEach((item) => {
+          closure_0.push(item);
         });
       }
       return self;

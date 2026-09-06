@@ -1,8 +1,6 @@
 // === Module 15140: U ===
 
 // Module 15140 (U)
-import "module_0";
-
 let f98876 = global;
 function U(arg0, arg1) {
   if (typeof Symbol !== "undefined") {
@@ -15,7 +13,7 @@ function U(arg0, arg1) {
   }
   tmp = U(arg0, arg1);
 }
-function Pe(str) {
+function Pe(str, arg1) {
   if (str) {
     let length = arg1;
     if (typeof str === "string") {
@@ -94,10 +92,10 @@ function V(iterable) {
     throw typeError;
   }
 }
-function X(arg0) {
+let fn = function X(arg0) {
   if (Object.setPrototypeOf) {
     let _Object = Object;
-    let fn = Object.getPrototypeOf;
+    fn = Object.getPrototypeOf;
   } else {
     fn = (arg0) => {
       let __proto__ = arg0.__proto__;
@@ -109,13 +107,13 @@ function X(arg0) {
     };
   }
   return fn(arg0);
-}
-function De(arg0, key10009) {
+};
+fn = function De(arg0, key10009, arg2) {
   if (typeof Reflect !== "undefined") {
     const _Reflect2 = Reflect;
     if (Reflect.get) {
       const _Reflect = Reflect;
-      let fn = Reflect.get;
+      fn = Reflect.get;
     }
     let tmp2 = arg2;
     if (!arg2) {
@@ -128,19 +126,17 @@ function De(arg0, key10009) {
     const call = hasOwnProperty.call;
     let tmp = arg0;
     if (!(typeof call === "unknown" ? hasOwnProperty(key10009) : call(arg0, key10009))) {
-      let tmp3 = callback(arg0);
+      let tmp3 = fn(arg0);
       tmp = tmp3;
       if (null !== tmp3) {
         while (true) {
           let _Object = Object;
           let call2 = hasOwnProperty2.call;
-          let tmp5 = tmp3;
           tmp = tmp3;
           if (typeof call2 === "unknown" ? hasOwnProperty2(key10009) : call2(tmp3, key10009)) {
             break;
           } else {
-            let tmp6 = callback;
-            tmp3 = callback(tmp3);
+            tmp3 = fn(tmp3);
             tmp = tmp3;
             if (null === tmp3) {
               break;
@@ -165,9 +161,9 @@ function De(arg0, key10009) {
       }
     }
   };
-}
-function Le(arg0, fn2) {
-  let fn = Object.setPrototypeOf;
+};
+fn = function Le(arg0, fn2) {
+  fn = Object.setPrototypeOf;
   if (!fn) {
     fn = (arg0, fn2) => {
       arg0.__proto__ = fn2;
@@ -175,7 +171,7 @@ function Le(arg0, fn2) {
     };
   }
   return fn(arg0, fn2);
-}
+};
 function qt(arg0, arr) {
   if (null == arg0) {
     return {};
@@ -188,7 +184,6 @@ function qt(arg0, arr) {
       const keys = Object.keys(arg0);
       for (let num3 = 0; num3 < keys.length; num3 = num3 + 1) {
         let tmp2 = keys[num3];
-        let tmp3 = num3;
         if (arr.indexOf(tmp2) < 0) {
           obj[tmp2] = arg0[tmp2];
         }
@@ -218,27 +213,24 @@ function qt(arg0, arr) {
 function ue(arg0) {
   closure_0 = arg0;
   for (let num = 1; num < arguments.length; num = num + 1) {
-    let tmp = num;
     let tmp2 = null != arguments[num] ? arguments[num] : {};
     closure_1 = tmp2;
     let _Object = Object;
     let keys = Object.keys(tmp2);
     let _Object2 = Object;
-    let tmp3 = tmp2;
     let combined = keys;
     if (typeof Object.getOwnPropertySymbols === "function") {
       let _Object3 = Object;
       let ownPropertySymbols = Object.getOwnPropertySymbols(tmp2);
-      combined = keys.concat(ownPropertySymbols.filter((arg0) => Object.getOwnPropertyDescriptor(closure_1, arg0).enumerable));
+      combined = keys.concat(ownPropertySymbols.filter((item) => Object.getOwnPropertyDescriptor(closure_1, item).enumerable));
     }
-    let item = combined.forEach((arg0) => {
-      if (arg0 in closure_0) {
+    let item = combined.forEach((item) => {
+      if (item in closure_0) {
         const _Object = Object;
-        const obj = { value: null, enumerable: true, configurable: true, writable: true };
-        obj[0] = tmp2;
-        Object.defineProperty(tmp, arg0, obj);
+        const obj = { value: tmp2, enumerable: true, configurable: true, writable: true };
+        Object.defineProperty(tmp, item, obj);
       } else {
-        tmp[arg0] = tmp2;
+        tmp[item] = tmp2;
       }
     });
   }
@@ -247,28 +239,29 @@ function ue(arg0) {
 function pt(arg0, arg1, arg2, arg3) {
 
 }
-f98876 = () => {
-  if (typeof f98883 !== "function") {
-    HermesBuiltin.throwTypeError();
-  }
-  if (c0) {
-    c0 = 0;
-    closure_1 = tmp(0);
+let closure_129_0 = () => {
+  if (typeof f98883 === "function") {
+    if (c0) {
+      c0 = 0;
+      closure_1 = tmp(0);
+    }
+  } else {
+    throw new TypeError("Trying to call a non-function");
   }
 };
-create = undefined;
+let closure_129_1;
 let f98883 = () => {
 
 };
-f98876 = () => {
+let closure_130_0 = () => {
 
 };
-create = undefined;
+let closure_130_1;
 f98883 = () => {
 
 };
-f98876 = (arg0, arg1) => {
-  arg1.exports = function Ca(arg0, arg1) {
+let closure_131_0 = (arg0, arg1) => {
+  arg1.exports = function Ca(arg0, fn) {
     let tmp = arg0;
     if (!("length" in arg0)) {
       items = [arg0];
@@ -278,10 +271,9 @@ f98876 = (arg0, arg1) => {
     let arr2 = typeof call === "unknown" ? slice() : call(tmp);
     if (arr2.length) {
       const arr = arr2.shift();
-      const tmp4 = arg1(arr);
+      const tmp4 = fn(arr);
       while (!tmp4) {
         let tmp5 = arr.childNodes && arr.childNodes.length;
-        let tmp6 = arr2;
         if (!tmp5) {
           arr2 = arr3;
         } else {
@@ -297,244 +289,110 @@ f98876 = (arg0, arg1) => {
     }
   };
 };
-create = undefined;
+let closure_131_1;
 let f98884 = () => {
 
 };
-f98876 = (arg0, arg1) => {
-  class ve {
-    constructor(arg0, arg1) {
-      self = this;
-      tmp = c0;
-      if (typeof Symbol !== "undefined") {
-        _Symbol3 = Symbol;
-        if (tmp[Symbol.hasInstance]) {
-          _Symbol2 = Symbol;
-          tmp2 = tmp[Symbol.hasInstance](self);
-        }
-        tmp3 = arg0;
-        tmp4 = arg1;
-        if (tmp2) {
-          self.data = arg0;
-          self.nodeValue = arg0;
-          self.length = arg0.length;
-          if (!tmp4) {
-            tmp4 = null;
-          }
-          self.ownerDocument = tmp4;
-          return;
-        } else {
-          tmpResult = tmp(arg0, tmp4);
-          tmp6 = tmpResult;
-          return tmpResult;
-        }
+let closure_132_0 = (arg0, arg1) => {
+  function ve(data, arg1) {
+    const self = this;
+    if (typeof Symbol !== "undefined") {
+      const _Symbol3 = Symbol;
+      if (tmp[Symbol.hasInstance]) {
+        const _Symbol2 = Symbol;
+        let tmp2 = tmp[Symbol.hasInstance](self);
       }
-      if (typeof Symbol !== "undefined") {
-        _Symbol4 = Symbol;
-        if (tmp[Symbol.hasInstance]) {
-          _Symbol = Symbol;
-          tmp2 = tmp[Symbol.hasInstance](self);
+      let tmp4 = arg1;
+      if (tmp2) {
+        self.data = data;
+        self.nodeValue = data;
+        self.length = data.length;
+        if (!tmp4) {
+          tmp4 = null;
         }
+        self.ownerDocument = tmp4;
+      } else {
+        const tmpResult = tmp(data, tmp4);
+        return tmpResult;
       }
-      tmp2 = closure_1_8(self, tmp);
-      return;
     }
-    toString() {
-      return "[object Comment]";
+    if (typeof Symbol !== "undefined") {
+      const _Symbol4 = Symbol;
+      if (tmp[Symbol.hasInstance]) {
+        const _Symbol = Symbol;
+        tmp2 = tmp[Symbol.hasInstance](self);
+      }
     }
+    tmp2 = U(self, tmp);
   }
   c0 = ve;
-  if (typeof f98883 !== "function") {
+  if (typeof f98883 === "function") {
+    if (c0) {
+      c0 = 0;
+      closure_1 = tmp(0);
+    }
+    arg1.exports = ve;
+    ve.prototype.nodeType = 8;
+    ve.prototype.nodeName = "#comment";
     class ve {
-      constructor(arg0, arg1) {
-        self = this;
-        tmp = c0;
-        if (typeof Symbol !== "undefined") {
-          _Symbol3 = Symbol;
-          if (tmp[Symbol.hasInstance]) {
-            _Symbol2 = Symbol;
-            tmp2 = tmp[Symbol.hasInstance](self);
-          }
-          tmp3 = arg0;
-          tmp4 = arg1;
-          if (tmp2) {
-            self.data = arg0;
-            self.nodeValue = arg0;
-            self.length = arg0.length;
-            if (!tmp4) {
-              tmp4 = null;
-            }
-            self.ownerDocument = tmp4;
-            return;
-          } else {
-            tmpResult = tmp(arg0, tmp4);
-            tmp6 = tmpResult;
-            return tmpResult;
-          }
-        }
-        if (typeof Symbol !== "undefined") {
-          _Symbol4 = Symbol;
-          if (tmp[Symbol.hasInstance]) {
-            _Symbol = Symbol;
-            tmp2 = tmp[Symbol.hasInstance](self);
-          }
-        }
-        tmp2 = closure_1_8(self, tmp);
-        return;
-      }
       toString() {
         return "[object Comment]";
       }
     }
-    HermesBuiltin.throwTypeError();
+  } else {
+    throw new TypeError("Trying to call a non-function");
   }
-  if (c0) {
-    class ve {
-      constructor(arg0, arg1) {
-        self = this;
-        tmp = c0;
-        if (typeof Symbol !== "undefined") {
-          _Symbol3 = Symbol;
-          if (tmp[Symbol.hasInstance]) {
-            _Symbol2 = Symbol;
-            tmp2 = tmp[Symbol.hasInstance](self);
-          }
-          tmp3 = arg0;
-          tmp4 = arg1;
-          if (tmp2) {
-            self.data = arg0;
-            self.nodeValue = arg0;
-            self.length = arg0.length;
-            if (!tmp4) {
-              tmp4 = null;
-            }
-            self.ownerDocument = tmp4;
-            return;
-          } else {
-            tmpResult = tmp(arg0, tmp4);
-            tmp6 = tmpResult;
-            return tmpResult;
-          }
-        }
-        if (typeof Symbol !== "undefined") {
-          _Symbol4 = Symbol;
-          if (tmp[Symbol.hasInstance]) {
-            _Symbol = Symbol;
-            tmp2 = tmp[Symbol.hasInstance](self);
-          }
-        }
-        tmp2 = closure_1_8(self, tmp);
-        return;
-      }
-      toString() {
-        return "[object Comment]";
-      }
-    }
-    c0 = 0;
-    closure_1 = tmp(0);
-  }
-  arg1.exports = ve;
-  ve.prototype.nodeType = 8;
-  ve.prototype.nodeName = "#comment";
 };
-create = undefined;
+let closure_132_1;
 f98884 = () => {
 
 };
-f98876 = (arg0, arg1) => {
-  class ae {
-    constructor(arg0, arg1) {
-      self = this;
-      tmp = c0;
-      if (typeof Symbol !== "undefined") {
-        _Symbol3 = Symbol;
-        if (tmp[Symbol.hasInstance]) {
-          _Symbol2 = Symbol;
-          tmp2 = tmp[Symbol.hasInstance](self);
-        }
-        tmp3 = arg0;
-        if (tmp2) {
-          str = arg0;
-          if (!arg0) {
-            str = "";
-          }
-          tmp6 = arg1;
-          self.data = str;
-          self.length = self.data.length;
-          if (!arg1) {
-            tmp6 = null;
-          }
-          self.ownerDocument = tmp6;
-          return;
-        } else {
-          tmpResult = tmp(arg0);
-          tmp5 = tmpResult;
-          return tmpResult;
-        }
+let closure_133_0 = (arg0, arg1) => {
+  function ae(arg0, arg1) {
+    const self = this;
+    if (typeof Symbol !== "undefined") {
+      const _Symbol3 = Symbol;
+      if (tmp[Symbol.hasInstance]) {
+        const _Symbol2 = Symbol;
+        let tmp2 = tmp[Symbol.hasInstance](self);
       }
-      if (typeof Symbol !== "undefined") {
-        _Symbol4 = Symbol;
-        if (tmp[Symbol.hasInstance]) {
-          _Symbol = Symbol;
-          tmp2 = tmp[Symbol.hasInstance](self);
+      if (tmp2) {
+        let str = arg0;
+        if (!arg0) {
+          str = "";
         }
+        let tmp6 = arg1;
+        self.data = str;
+        self.length = self.data.length;
+        if (!arg1) {
+          tmp6 = null;
+        }
+        self.ownerDocument = tmp6;
+      } else {
+        const tmpResult = tmp(arg0);
+        return tmpResult;
       }
-      tmp2 = closure_1_8(self, tmp);
-      return;
     }
-    toString() {
-      return this.data;
+    if (typeof Symbol !== "undefined") {
+      const _Symbol4 = Symbol;
+      if (tmp[Symbol.hasInstance]) {
+        const _Symbol = Symbol;
+        tmp2 = tmp[Symbol.hasInstance](self);
+      }
     }
-    replaceData(arg0, arg1, arg2) {
-      str = this.data;
-      substr = str.substring(0, arg0);
-      this.data = substr + arg2 + str.substring(arg0 + arg1, str.length);
-      this.length = this.data.length;
-      return;
-    }
+    tmp2 = U(self, tmp);
   }
   c0 = ae;
-  if (typeof f98883 !== "function") {
+  if (typeof f98883 === "function") {
+    if (c0) {
+      c0 = 0;
+      closure_1 = tmp(0);
+    }
+    arg1.exports = ae;
+    ae.prototype.type = "DOMTextNode";
+    ae.prototype.nodeType = 3;
+    ae.prototype.nodeName = "#text";
     class ae {
-      constructor(arg0, arg1) {
-        self = this;
-        tmp = c0;
-        if (typeof Symbol !== "undefined") {
-          _Symbol3 = Symbol;
-          if (tmp[Symbol.hasInstance]) {
-            _Symbol2 = Symbol;
-            tmp2 = tmp[Symbol.hasInstance](self);
-          }
-          tmp3 = arg0;
-          if (tmp2) {
-            str = arg0;
-            if (!arg0) {
-              str = "";
-            }
-            tmp6 = arg1;
-            self.data = str;
-            self.length = self.data.length;
-            if (!arg1) {
-              tmp6 = null;
-            }
-            self.ownerDocument = tmp6;
-            return;
-          } else {
-            tmpResult = tmp(arg0);
-            tmp5 = tmpResult;
-            return tmpResult;
-          }
-        }
-        if (typeof Symbol !== "undefined") {
-          _Symbol4 = Symbol;
-          if (tmp[Symbol.hasInstance]) {
-            _Symbol = Symbol;
-            tmp2 = tmp[Symbol.hasInstance](self);
-          }
-        }
-        tmp2 = closure_1_8(self, tmp);
-        return;
-      }
       toString() {
         return this.data;
       }
@@ -546,77 +404,18 @@ f98876 = (arg0, arg1) => {
         return;
       }
     }
-    HermesBuiltin.throwTypeError();
+  } else {
+    throw new TypeError("Trying to call a non-function");
   }
-  if (c0) {
-    class ae {
-      constructor(arg0, arg1) {
-        self = this;
-        tmp = c0;
-        if (typeof Symbol !== "undefined") {
-          _Symbol3 = Symbol;
-          if (tmp[Symbol.hasInstance]) {
-            _Symbol2 = Symbol;
-            tmp2 = tmp[Symbol.hasInstance](self);
-          }
-          tmp3 = arg0;
-          if (tmp2) {
-            str = arg0;
-            if (!arg0) {
-              str = "";
-            }
-            tmp6 = arg1;
-            self.data = str;
-            self.length = self.data.length;
-            if (!arg1) {
-              tmp6 = null;
-            }
-            self.ownerDocument = tmp6;
-            return;
-          } else {
-            tmpResult = tmp(arg0);
-            tmp5 = tmpResult;
-            return tmpResult;
-          }
-        }
-        if (typeof Symbol !== "undefined") {
-          _Symbol4 = Symbol;
-          if (tmp[Symbol.hasInstance]) {
-            _Symbol = Symbol;
-            tmp2 = tmp[Symbol.hasInstance](self);
-          }
-        }
-        tmp2 = closure_1_8(self, tmp);
-        return;
-      }
-      toString() {
-        return this.data;
-      }
-      replaceData(arg0, arg1, arg2) {
-        str = this.data;
-        substr = str.substring(0, arg0);
-        this.data = substr + arg2 + str.substring(arg0 + arg1, str.length);
-        this.length = this.data.length;
-        return;
-      }
-    }
-    c0 = 0;
-    closure_1 = tmp(0);
-  }
-  arg1.exports = ae;
-  ae.prototype.type = "DOMTextNode";
-  ae.prototype.nodeType = 3;
-  ae.prototype.nodeName = "#text";
 };
-create = undefined;
+let closure_133_1;
 f98884 = () => {
 
 };
-f98876 = (arg0, arg1) => {
+let closure_134_0 = (arg0, arg1) => {
   arg1.exports = function Ma(target) {
-    let self = this;
     closure_0 = target;
-    self = this;
+    const self = this;
     if (!target.target) {
       target.target = self;
     }
@@ -624,12 +423,12 @@ f98876 = (arg0, arg1) => {
       self.listeners = {};
     }
     if (self.listeners[target.type]) {
-      return arr.forEach((fn) => {
+      return arr.forEach((handleEvent) => {
         closure_0.currentTarget = self;
-        if (typeof fn === "function") {
-          fn(tmp);
+        if (typeof handleEvent === "function") {
+          handleEvent(tmp);
         } else {
-          fn.handleEvent(tmp);
+          handleEvent.handleEvent(tmp);
         }
       });
     } else if (self.parentNode) {
@@ -638,11 +437,11 @@ f98876 = (arg0, arg1) => {
     }
   };
 };
-create = undefined;
+let closure_134_1;
 f98884 = () => {
 
 };
-f98876 = (arg0, arg1) => {
+let closure_135_0 = (arg0, arg1) => {
   arg1.exports = function Ha(arg0, arg1) {
     const self = this;
     if (!this.listeners) {
@@ -654,15 +453,14 @@ f98876 = (arg0, arg1) => {
     let arr = self.listeners[arg0];
     if (-1 === arr.indexOf(arg1)) {
       arr = self.listeners[arg0].push(arg1);
-      const arr2 = self.listeners[arg0];
     }
   };
 };
-create = undefined;
+let closure_135_1;
 f98884 = () => {
 
 };
-f98876 = (arg0, arg1) => {
+let closure_136_0 = (arg0, arg1) => {
   arg1.exports = function Ba(arg0, arg1) {
     const self = this;
     if (this.listeners) {
@@ -675,11 +473,11 @@ f98876 = (arg0, arg1) => {
     }
   };
 };
-create = undefined;
+let closure_136_1;
 f98884 = () => {
 
 };
-f98876 = (arg0, arg1) => {
+let closure_137_0 = (arg0, arg1) => {
   function br(nodeType) {
     nodeType = nodeType.nodeType;
     if (3 === nodeType) {
@@ -703,7 +501,6 @@ f98876 = (arg0, arg1) => {
       const items1 = [];
       let text = `<${tmp2}`;
       for (const key10026 in arg0) {
-        let tmp24 = key10026;
         let tmp25 = arg0[key10026];
         if (tmp25) {
           let _Symbol = Symbol;
@@ -754,9 +551,7 @@ f98876 = (arg0, arg1) => {
           if (!tmp6) {
             continue;
           } else {
-            let obj = { name: null, value: null };
-            obj[0] = key10026;
-            obj[1] = arg0[key10026];
+            let obj = { name: key10026, value: arg0[key10026] };
             let arr = items1.push(obj);
             continue;
           }
@@ -765,22 +560,18 @@ f98876 = (arg0, arg1) => {
         str14 = typeof tmp25;
       }
       for (const key10046 in arg0._attributes) {
-        let tmp26 = key10046;
         let keys = Object.keys();
         if (keys === undefined) {
           continue;
         } else {
           let tmp10 = keys[tmp];
           while (tmp10 !== undefined) {
-            let tmp28 = tmp10;
             let iter = arg0._attributes[key10046][tmp10];
             let str17 = "";
             if (iter.prefix) {
               str17 = `${iter.prefix}:`;
             }
-            obj = { name: null, value: null };
-            obj[0] = str17 + tmp10;
-            obj[1] = iter.value;
+            obj = { name: str17 + tmp10, value: iter.value };
             arr = items1.push(obj);
             continue;
           }
@@ -788,28 +579,27 @@ f98876 = (arg0, arg1) => {
         continue;
       }
       if (nodeType.className) {
-        obj = { name: "class", value: null };
-        obj[1] = nodeType.className;
+        obj = { name: "class", value: nodeType.className };
         items1.push(obj);
       }
-      let str18 = "";
+      const str18 = "";
       if (items1.length) {
         const items2 = [];
         let items4 = items2;
-        let item = items1.forEach((arg0) => {
-          ({ name, value } = arg0);
+        let item = items1.forEach((item) => {
+          ({ name, value } = item);
           let str = value;
           if ("style" === name) {
             items4 = value;
             let tmp = value;
             if (typeof value !== "string") {
-              c1 = "";
+              closure_1 = "";
               const _Object = Object;
               const keys = Object.keys(value);
-              const item = keys.forEach((arg0) => {
-                closure_1 = `${closure_1}${arg0.replace(/[A-Z]/g, (str) => "-" + str.toLowerCase())}:${tmp};`;
+              item = keys.forEach((item) => {
+                closure_1 = `${closure_1}${item.replace(/[A-Z]/g, (str) => "-" + str.toLowerCase())}:${tmp};`;
               });
-              tmp = c1;
+              tmp = closure_1;
             }
             str = tmp;
           }
@@ -829,35 +619,31 @@ f98876 = (arg0, arg1) => {
         if (items2.length) {
           str19 = ` ${arr3.join(" ")}`;
         }
-        str18 = str19;
       }
       const dataset = nodeType.dataset;
       const items3 = [];
       for (const key10076 in dataset) {
-        let tmp29 = key10076;
-        obj1 = { name: null, value: null };
-        obj1[0] = "data-" + key10076;
-        obj1[1] = dataset[key10076];
+        let obj1 = { name: "data-" + key10076, value: dataset[key10076] };
         let arr2 = items3.push(obj1);
         continue;
       }
-      let str22 = "";
+      const str22 = "";
       if (items3.length) {
         items4 = [];
-        const item1 = items3.forEach((arg0) => {
-          ({ name, value } = arg0);
+        const item1 = items3.forEach((item) => {
+          ({ name, value } = item);
           let str = value;
           if ("style" === name) {
             items4 = value;
             let tmp = value;
             if (typeof value !== "string") {
-              c1 = "";
+              closure_1 = "";
               const _Object = Object;
               const keys = Object.keys(value);
-              const item = keys.forEach((arg0) => {
-                closure_1 = `${closure_1}${arg0.replace(/[A-Z]/g, (str) => "-" + str.toLowerCase())}:${tmp};`;
+              item = keys.forEach((item) => {
+                closure_1 = `${closure_1}${item.replace(/[A-Z]/g, (str) => "-" + str.toLowerCase())}:${tmp};`;
               });
-              tmp = c1;
+              tmp = closure_1;
             }
             str = tmp;
           }
@@ -877,10 +663,9 @@ f98876 = (arg0, arg1) => {
         if (items4.length) {
           str23 = ` ${arr5.join(" ")}`;
         }
-        str22 = str23;
       }
       const _HermesInternal = HermesInternal;
-      if (items4.indexOf(formatted) > -1) {
+      if (closure_0.indexOf(formatted) > -1) {
         items.push(" />");
       } else {
         if (nodeType.childNodes.length) {
@@ -917,21 +702,22 @@ f98876 = (arg0, arg1) => {
     }
   }
   closure_1 = br;
-  if (typeof f98883 !== "function") {
-    HermesBuiltin.throwTypeError();
+  if (typeof f98883 === "function") {
+    if (closure_0) {
+      closure_0 = 0;
+      closure_1 = tmp(0);
+    }
+    arg1.exports = br;
+    closure_0 = ["area", "base", "br", "col", "embed", "hr", "img", "input", "keygen", "link", "menuitem", "meta", "param", "source", "track", "wbr"];
+  } else {
+    throw new TypeError("Trying to call a non-function");
   }
-  if (closure_0) {
-    closure_0 = 0;
-    closure_1 = tmp(0);
-  }
-  arg1.exports = br;
-  closure_0 = ["area", "base", "br", "col", "embed", "hr", "img", "input", "keygen", "link", "menuitem", "meta", "param", "source", "track", "wbr"];
 };
-create = undefined;
+let closure_137_1;
 f98884 = () => {
 
 };
-f98876 = (arg0, arg1) => {
+let closure_138_0 = (arg0, arg1) => {
   class I {
     constructor(arg0, arg1, arg2) {
       self = this;
@@ -992,164 +778,12 @@ f98876 = (arg0, arg1) => {
           tmp2 = tmp[Symbol.hasInstance](self);
         }
       }
-      tmp2 = closure_1_8(self, tmp);
+      tmp2 = U(self, tmp);
       return;
-    }
-    appendChild(arg0) {
-      if (arg0.parentNode) {
-        parentNode = arg0.parentNode;
-        removeChildResult = parentNode.removeChild(arg0);
-      }
-      childNodes = this.childNodes;
-      arr = childNodes.push(arg0);
-      arg0.parentNode = this;
-      return arg0;
-    }
-    replaceChild(arg0, arg1) {
-      if (arg0.parentNode) {
-        parentNode = arg0.parentNode;
-        removeChildResult = parentNode.removeChild(arg0);
-      }
-      childNodes = this.childNodes;
-      arg1.parentNode = null;
-      this.childNodes[childNodes.indexOf(arg1)] = arg0;
-      arg0.parentNode = this;
-      return arg1;
-    }
-    removeChild(arg0) {
-      ({ childNodes, childNodes: childNodes2 } = this);
-      spliceResult = childNodes2.splice(childNodes.indexOf(arg0), 1);
-      arg0.parentNode = null;
-      return arg0;
-    }
-    insertBefore(arg0, arg1) {
-      if (arg0.parentNode) {
-        parentNode = arg0.parentNode;
-        removeChildResult = parentNode.removeChild(arg0);
-      }
-      self = this;
-      num = -1;
-      if (null != arg1) {
-        childNodes = self.childNodes;
-        num = childNodes.indexOf(arg1);
-      }
-      if (num > -1) {
-        childNodes1 = self.childNodes;
-        num2 = 0;
-        spliceResult = childNodes1.splice(num, 0, arg0);
-      } else {
-        childNodes2 = self.childNodes;
-        arr = childNodes2.push(arg0);
-      }
-      arg0.parentNode = self;
-      return arg0;
-    }
-    setAttributeNS(arg0, arg1, arg2) {
-      index = arg1.indexOf(":");
-      substr1 = arg1;
-      substr = null;
-      if (index > -1) {
-        num = 0;
-        substr = arg1.substr(0, index);
-        num2 = 1;
-        substr1 = arg1.substr(index + 1);
-      }
-      self = this;
-      if ("INPUT" === this.tagName) {
-        str = "type";
-        if ("type" === arg1) {
-          self.type = arg2;
-        }
-        return;
-      }
-      tmp4 = self._attributes[arg0];
-      if (!tmp4) {
-        obj = {};
-        self._attributes[arg0] = obj;
-        tmp4 = obj;
-      }
-      tmp4[substr1] = { value: arg2, prefix: substr };
-      return;
-    }
-    getAttributeNS(arg0, arg1) {
-      self = this;
-      tmp = this._attributes[arg0];
-      value = tmp;
-      if (tmp) {
-        value = tmp[arg1];
-      }
-      if (value) {
-        value = tmp[arg1].value;
-      }
-      if ("INPUT" === self.tagName) {
-        str = "type";
-        if ("type" === arg1) {
-          type = self.type;
-        }
-        return type;
-      }
-      type = null;
-      if (typeof value === "string") {
-        type = value;
-      }
-      return;
-    }
-    removeAttributeNS(arg0, arg1) {
-      if (this._attributes[arg0]) {
-        tmp3 = arg1;
-        delete tmp2[tmp];
-      }
-      return;
-    }
-    hasAttributeNS(arg0, arg1) {
-      tmp = this._attributes[arg0];
-      tmp2 = tmp;
-      if (tmp2) {
-        tmp3 = arg1;
-        tmp2 = arg1 in tmp;
-      }
-      return tmp2;
-    }
-    setAttribute(arg0, arg1) {
-      return this.setAttributeNS(null, arg0, arg1);
-    }
-    getAttribute(arg0) {
-      return this.getAttributeNS(null, arg0);
-    }
-    removeAttribute(arg0) {
-      return this.removeAttributeNS(null, arg0);
-    }
-    hasAttribute(arg0) {
-      return this.hasAttributeNS(null, arg0);
-    }
-    focus() {
-      return;
-    }
-    toString() {
-      return closure_1(this);
-    }
-    getElementsByClassName(arg0) {
-      closure_0 = arg0.split(" ");
-      items = [];
-      closure_1 = items;
-      tmp = closure_0(this, () => { ... });
-      return items;
-    }
-    getElementsByTagName(arg0) {
-      closure_0 = arg0.toLowerCase();
-      items = [];
-      closure_1 = items;
-      tmp = closure_0(this.childNodes, () => { ... });
-      return items;
-    }
-    contains(arg0) {
-      closure_0 = arg0;
-      tmp = closure_0(this, /* F116316 */ function() { ... }) || false;
-      return tmp;
     }
   }
   closure_3 = I;
-  if (typeof f98883 !== "function") {
+  if (typeof f98883 === "function") {
     class I {
       constructor(arg0, arg1, arg2) {
         self = this;
@@ -1210,7 +844,2150 @@ f98876 = (arg0, arg1) => {
             tmp2 = tmp[Symbol.hasInstance](self);
           }
         }
-        tmp2 = closure_1_8(self, tmp);
+        tmp2 = U(self, tmp);
+        return;
+      }
+    }
+    if (typeof f98884 === "function") {
+      class I {
+        constructor(arg0, arg1, arg2) {
+          self = this;
+          tmp = I;
+          if (typeof Symbol !== "undefined") {
+            _Symbol3 = Symbol;
+            if (tmp[Symbol.hasInstance]) {
+              _Symbol2 = Symbol;
+              tmp2 = tmp[Symbol.hasInstance](self);
+            }
+            tmp3 = arg0;
+            if (tmp2) {
+              tmp6 = arg2;
+              if (undefined === arg2) {
+                tmp6 = c2;
+              } else if (!tmp6) {
+                tmp6 = null;
+              }
+              tmp7 = c2;
+              formatted = arg0;
+              if (tmp6 === c2) {
+                _String = String;
+                str = String(arg0);
+                formatted = str.toUpperCase();
+              }
+              tmp9 = arg1;
+              self.tagName = formatted;
+              self.nodeName = self.tagName;
+              str2 = "";
+              self.className = "";
+              self.dataset = {};
+              self.childNodes = [];
+              tmp10 = null;
+              self.parentNode = null;
+              self.style = {};
+              if (!arg1) {
+                tmp9 = null;
+              }
+              self.ownerDocument = tmp9;
+              self.namespaceURI = tmp6;
+              self._attributes = {};
+              str3 = "INPUT";
+              if ("INPUT" === self.tagName) {
+                str4 = "text";
+                self.type = "text";
+              }
+              return;
+            } else {
+              tmpResult = tmp(arg0);
+              tmp5 = tmpResult;
+              return tmpResult;
+            }
+          }
+          if (typeof Symbol !== "undefined") {
+            _Symbol4 = Symbol;
+            if (tmp[Symbol.hasInstance]) {
+              _Symbol = Symbol;
+              tmp2 = tmp[Symbol.hasInstance](self);
+            }
+          }
+          tmp2 = U(self, tmp);
+          return;
+        }
+      }
+      if (!closure_139_1) {
+        class I {
+          constructor(arg0, arg1, arg2) {
+            self = this;
+            tmp = I;
+            if (typeof Symbol !== "undefined") {
+              _Symbol3 = Symbol;
+              if (tmp[Symbol.hasInstance]) {
+                _Symbol2 = Symbol;
+                tmp2 = tmp[Symbol.hasInstance](self);
+              }
+              tmp3 = arg0;
+              if (tmp2) {
+                tmp6 = arg2;
+                if (undefined === arg2) {
+                  tmp6 = c2;
+                } else if (!tmp6) {
+                  tmp6 = null;
+                }
+                tmp7 = c2;
+                formatted = arg0;
+                if (tmp6 === c2) {
+                  _String = String;
+                  str = String(arg0);
+                  formatted = str.toUpperCase();
+                }
+                tmp9 = arg1;
+                self.tagName = formatted;
+                self.nodeName = self.tagName;
+                str2 = "";
+                self.className = "";
+                self.dataset = {};
+                self.childNodes = [];
+                tmp10 = null;
+                self.parentNode = null;
+                self.style = {};
+                if (!arg1) {
+                  tmp9 = null;
+                }
+                self.ownerDocument = tmp9;
+                self.namespaceURI = tmp6;
+                self._attributes = {};
+                str3 = "INPUT";
+                if ("INPUT" === self.tagName) {
+                  str4 = "text";
+                  self.type = "text";
+                }
+                return;
+              } else {
+                tmpResult = tmp(arg0);
+                tmp5 = tmpResult;
+                return tmpResult;
+              }
+            }
+            if (typeof Symbol !== "undefined") {
+              _Symbol4 = Symbol;
+              if (tmp[Symbol.hasInstance]) {
+                _Symbol = Symbol;
+                tmp2 = tmp[Symbol.hasInstance](self);
+              }
+            }
+            tmp2 = U(self, tmp);
+            return;
+          }
+        }
+        let obj = { exports: {} };
+        closure_139_1 = obj;
+        closure_139_0(obj.exports, closure_139_1);
+      }
+      closure_0 = closure_139_1.exports;
+      if (typeof f98884 === "function") {
+        class I {
+          constructor(arg0, arg1, arg2) {
+            self = this;
+            tmp = I;
+            if (typeof Symbol !== "undefined") {
+              _Symbol3 = Symbol;
+              if (tmp[Symbol.hasInstance]) {
+                _Symbol2 = Symbol;
+                tmp2 = tmp[Symbol.hasInstance](self);
+              }
+              tmp3 = arg0;
+              if (tmp2) {
+                tmp6 = arg2;
+                if (undefined === arg2) {
+                  tmp6 = c2;
+                } else if (!tmp6) {
+                  tmp6 = null;
+                }
+                tmp7 = c2;
+                formatted = arg0;
+                if (tmp6 === c2) {
+                  _String = String;
+                  str = String(arg0);
+                  formatted = str.toUpperCase();
+                }
+                tmp9 = arg1;
+                self.tagName = formatted;
+                self.nodeName = self.tagName;
+                str2 = "";
+                self.className = "";
+                self.dataset = {};
+                self.childNodes = [];
+                tmp10 = null;
+                self.parentNode = null;
+                self.style = {};
+                if (!arg1) {
+                  tmp9 = null;
+                }
+                self.ownerDocument = tmp9;
+                self.namespaceURI = tmp6;
+                self._attributes = {};
+                str3 = "INPUT";
+                if ("INPUT" === self.tagName) {
+                  str4 = "text";
+                  self.type = "text";
+                }
+                return;
+              } else {
+                tmpResult = tmp(arg0);
+                tmp5 = tmpResult;
+                return tmpResult;
+              }
+            }
+            if (typeof Symbol !== "undefined") {
+              _Symbol4 = Symbol;
+              if (tmp[Symbol.hasInstance]) {
+                _Symbol = Symbol;
+                tmp2 = tmp[Symbol.hasInstance](self);
+              }
+            }
+            tmp2 = U(self, tmp);
+            return;
+          }
+        }
+        if (!closure_142_1) {
+          class I {
+            constructor(arg0, arg1, arg2) {
+              self = this;
+              tmp = I;
+              if (typeof Symbol !== "undefined") {
+                _Symbol3 = Symbol;
+                if (tmp[Symbol.hasInstance]) {
+                  _Symbol2 = Symbol;
+                  tmp2 = tmp[Symbol.hasInstance](self);
+                }
+                tmp3 = arg0;
+                if (tmp2) {
+                  tmp6 = arg2;
+                  if (undefined === arg2) {
+                    tmp6 = c2;
+                  } else if (!tmp6) {
+                    tmp6 = null;
+                  }
+                  tmp7 = c2;
+                  formatted = arg0;
+                  if (tmp6 === c2) {
+                    _String = String;
+                    str = String(arg0);
+                    formatted = str.toUpperCase();
+                  }
+                  tmp9 = arg1;
+                  self.tagName = formatted;
+                  self.nodeName = self.tagName;
+                  str2 = "";
+                  self.className = "";
+                  self.dataset = {};
+                  self.childNodes = [];
+                  tmp10 = null;
+                  self.parentNode = null;
+                  self.style = {};
+                  if (!arg1) {
+                    tmp9 = null;
+                  }
+                  self.ownerDocument = tmp9;
+                  self.namespaceURI = tmp6;
+                  self._attributes = {};
+                  str3 = "INPUT";
+                  if ("INPUT" === self.tagName) {
+                    str4 = "text";
+                    self.type = "text";
+                  }
+                  return;
+                } else {
+                  tmpResult = tmp(arg0);
+                  tmp5 = tmpResult;
+                  return tmpResult;
+                }
+              }
+              if (typeof Symbol !== "undefined") {
+                _Symbol4 = Symbol;
+                if (tmp[Symbol.hasInstance]) {
+                  _Symbol = Symbol;
+                  tmp2 = tmp[Symbol.hasInstance](self);
+                }
+              }
+              tmp2 = U(self, tmp);
+              return;
+            }
+          }
+          obj = { exports: {} };
+          closure_142_1 = obj;
+          closure_142_0(obj.exports, closure_142_1);
+        }
+        if (typeof f98884 === "function") {
+          class I {
+            constructor(arg0, arg1, arg2) {
+              self = this;
+              tmp = I;
+              if (typeof Symbol !== "undefined") {
+                _Symbol3 = Symbol;
+                if (tmp[Symbol.hasInstance]) {
+                  _Symbol2 = Symbol;
+                  tmp2 = tmp[Symbol.hasInstance](self);
+                }
+                tmp3 = arg0;
+                if (tmp2) {
+                  tmp6 = arg2;
+                  if (undefined === arg2) {
+                    tmp6 = c2;
+                  } else if (!tmp6) {
+                    tmp6 = null;
+                  }
+                  tmp7 = c2;
+                  formatted = arg0;
+                  if (tmp6 === c2) {
+                    _String = String;
+                    str = String(arg0);
+                    formatted = str.toUpperCase();
+                  }
+                  tmp9 = arg1;
+                  self.tagName = formatted;
+                  self.nodeName = self.tagName;
+                  str2 = "";
+                  self.className = "";
+                  self.dataset = {};
+                  self.childNodes = [];
+                  tmp10 = null;
+                  self.parentNode = null;
+                  self.style = {};
+                  if (!arg1) {
+                    tmp9 = null;
+                  }
+                  self.ownerDocument = tmp9;
+                  self.namespaceURI = tmp6;
+                  self._attributes = {};
+                  str3 = "INPUT";
+                  if ("INPUT" === self.tagName) {
+                    str4 = "text";
+                    self.type = "text";
+                  }
+                  return;
+                } else {
+                  tmpResult = tmp(arg0);
+                  tmp5 = tmpResult;
+                  return tmpResult;
+                }
+              }
+              if (typeof Symbol !== "undefined") {
+                _Symbol4 = Symbol;
+                if (tmp[Symbol.hasInstance]) {
+                  _Symbol = Symbol;
+                  tmp2 = tmp[Symbol.hasInstance](self);
+                }
+              }
+              tmp2 = U(self, tmp);
+              return;
+            }
+          }
+          if (!closure_143_1) {
+            class I {
+              constructor(arg0, arg1, arg2) {
+                self = this;
+                tmp = I;
+                if (typeof Symbol !== "undefined") {
+                  _Symbol3 = Symbol;
+                  if (tmp[Symbol.hasInstance]) {
+                    _Symbol2 = Symbol;
+                    tmp2 = tmp[Symbol.hasInstance](self);
+                  }
+                  tmp3 = arg0;
+                  if (tmp2) {
+                    tmp6 = arg2;
+                    if (undefined === arg2) {
+                      tmp6 = c2;
+                    } else if (!tmp6) {
+                      tmp6 = null;
+                    }
+                    tmp7 = c2;
+                    formatted = arg0;
+                    if (tmp6 === c2) {
+                      _String = String;
+                      str = String(arg0);
+                      formatted = str.toUpperCase();
+                    }
+                    tmp9 = arg1;
+                    self.tagName = formatted;
+                    self.nodeName = self.tagName;
+                    str2 = "";
+                    self.className = "";
+                    self.dataset = {};
+                    self.childNodes = [];
+                    tmp10 = null;
+                    self.parentNode = null;
+                    self.style = {};
+                    if (!arg1) {
+                      tmp9 = null;
+                    }
+                    self.ownerDocument = tmp9;
+                    self.namespaceURI = tmp6;
+                    self._attributes = {};
+                    str3 = "INPUT";
+                    if ("INPUT" === self.tagName) {
+                      str4 = "text";
+                      self.type = "text";
+                    }
+                    return;
+                  } else {
+                    tmpResult = tmp(arg0);
+                    tmp5 = tmpResult;
+                    return tmpResult;
+                  }
+                }
+                if (typeof Symbol !== "undefined") {
+                  _Symbol4 = Symbol;
+                  if (tmp[Symbol.hasInstance]) {
+                    _Symbol = Symbol;
+                    tmp2 = tmp[Symbol.hasInstance](self);
+                  }
+                }
+                tmp2 = U(self, tmp);
+                return;
+              }
+            }
+            obj = { exports: {} };
+            closure_143_1 = obj;
+            closure_143_0(obj.exports, closure_143_1);
+          }
+          if (typeof f98884 === "function") {
+            class I {
+              constructor(arg0, arg1, arg2) {
+                self = this;
+                tmp = I;
+                if (typeof Symbol !== "undefined") {
+                  _Symbol3 = Symbol;
+                  if (tmp[Symbol.hasInstance]) {
+                    _Symbol2 = Symbol;
+                    tmp2 = tmp[Symbol.hasInstance](self);
+                  }
+                  tmp3 = arg0;
+                  if (tmp2) {
+                    tmp6 = arg2;
+                    if (undefined === arg2) {
+                      tmp6 = c2;
+                    } else if (!tmp6) {
+                      tmp6 = null;
+                    }
+                    tmp7 = c2;
+                    formatted = arg0;
+                    if (tmp6 === c2) {
+                      _String = String;
+                      str = String(arg0);
+                      formatted = str.toUpperCase();
+                    }
+                    tmp9 = arg1;
+                    self.tagName = formatted;
+                    self.nodeName = self.tagName;
+                    str2 = "";
+                    self.className = "";
+                    self.dataset = {};
+                    self.childNodes = [];
+                    tmp10 = null;
+                    self.parentNode = null;
+                    self.style = {};
+                    if (!arg1) {
+                      tmp9 = null;
+                    }
+                    self.ownerDocument = tmp9;
+                    self.namespaceURI = tmp6;
+                    self._attributes = {};
+                    str3 = "INPUT";
+                    if ("INPUT" === self.tagName) {
+                      str4 = "text";
+                      self.type = "text";
+                    }
+                    return;
+                  } else {
+                    tmpResult = tmp(arg0);
+                    tmp5 = tmpResult;
+                    return tmpResult;
+                  }
+                }
+                if (typeof Symbol !== "undefined") {
+                  _Symbol4 = Symbol;
+                  if (tmp[Symbol.hasInstance]) {
+                    _Symbol = Symbol;
+                    tmp2 = tmp[Symbol.hasInstance](self);
+                  }
+                }
+                tmp2 = U(self, tmp);
+                return;
+              }
+            }
+            if (!closure_144_1) {
+              class I {
+                constructor(arg0, arg1, arg2) {
+                  self = this;
+                  tmp = I;
+                  if (typeof Symbol !== "undefined") {
+                    _Symbol3 = Symbol;
+                    if (tmp[Symbol.hasInstance]) {
+                      _Symbol2 = Symbol;
+                      tmp2 = tmp[Symbol.hasInstance](self);
+                    }
+                    tmp3 = arg0;
+                    if (tmp2) {
+                      tmp6 = arg2;
+                      if (undefined === arg2) {
+                        tmp6 = c2;
+                      } else if (!tmp6) {
+                        tmp6 = null;
+                      }
+                      tmp7 = c2;
+                      formatted = arg0;
+                      if (tmp6 === c2) {
+                        _String = String;
+                        str = String(arg0);
+                        formatted = str.toUpperCase();
+                      }
+                      tmp9 = arg1;
+                      self.tagName = formatted;
+                      self.nodeName = self.tagName;
+                      str2 = "";
+                      self.className = "";
+                      self.dataset = {};
+                      self.childNodes = [];
+                      tmp10 = null;
+                      self.parentNode = null;
+                      self.style = {};
+                      if (!arg1) {
+                        tmp9 = null;
+                      }
+                      self.ownerDocument = tmp9;
+                      self.namespaceURI = tmp6;
+                      self._attributes = {};
+                      str3 = "INPUT";
+                      if ("INPUT" === self.tagName) {
+                        str4 = "text";
+                        self.type = "text";
+                      }
+                      return;
+                    } else {
+                      tmpResult = tmp(arg0);
+                      tmp5 = tmpResult;
+                      return tmpResult;
+                    }
+                  }
+                  if (typeof Symbol !== "undefined") {
+                    _Symbol4 = Symbol;
+                    if (tmp[Symbol.hasInstance]) {
+                      _Symbol = Symbol;
+                      tmp2 = tmp[Symbol.hasInstance](self);
+                    }
+                  }
+                  tmp2 = U(self, tmp);
+                  return;
+                }
+              }
+              const obj1 = { exports: {} };
+              closure_144_1 = obj1;
+              closure_144_0(obj1.exports, closure_144_1);
+            }
+            if (typeof f98884 === "function") {
+              class I {
+                constructor(arg0, arg1, arg2) {
+                  self = this;
+                  tmp = I;
+                  if (typeof Symbol !== "undefined") {
+                    _Symbol3 = Symbol;
+                    if (tmp[Symbol.hasInstance]) {
+                      _Symbol2 = Symbol;
+                      tmp2 = tmp[Symbol.hasInstance](self);
+                    }
+                    tmp3 = arg0;
+                    if (tmp2) {
+                      tmp6 = arg2;
+                      if (undefined === arg2) {
+                        tmp6 = c2;
+                      } else if (!tmp6) {
+                        tmp6 = null;
+                      }
+                      tmp7 = c2;
+                      formatted = arg0;
+                      if (tmp6 === c2) {
+                        _String = String;
+                        str = String(arg0);
+                        formatted = str.toUpperCase();
+                      }
+                      tmp9 = arg1;
+                      self.tagName = formatted;
+                      self.nodeName = self.tagName;
+                      str2 = "";
+                      self.className = "";
+                      self.dataset = {};
+                      self.childNodes = [];
+                      tmp10 = null;
+                      self.parentNode = null;
+                      self.style = {};
+                      if (!arg1) {
+                        tmp9 = null;
+                      }
+                      self.ownerDocument = tmp9;
+                      self.namespaceURI = tmp6;
+                      self._attributes = {};
+                      str3 = "INPUT";
+                      if ("INPUT" === self.tagName) {
+                        str4 = "text";
+                        self.type = "text";
+                      }
+                      return;
+                    } else {
+                      tmpResult = tmp(arg0);
+                      tmp5 = tmpResult;
+                      return tmpResult;
+                    }
+                  }
+                  if (typeof Symbol !== "undefined") {
+                    _Symbol4 = Symbol;
+                    if (tmp[Symbol.hasInstance]) {
+                      _Symbol = Symbol;
+                      tmp2 = tmp[Symbol.hasInstance](self);
+                    }
+                  }
+                  tmp2 = U(self, tmp);
+                  return;
+                }
+                appendChild(arg0) {
+                  if (arg0.parentNode) {
+                    parentNode = arg0.parentNode;
+                    removeChildResult = parentNode.removeChild(arg0);
+                  }
+                  childNodes = this.childNodes;
+                  arr = childNodes.push(arg0);
+                  arg0.parentNode = this;
+                  return arg0;
+                }
+                replaceChild(arg0, arg1) {
+                  if (arg0.parentNode) {
+                    parentNode = arg0.parentNode;
+                    removeChildResult = parentNode.removeChild(arg0);
+                  }
+                  childNodes = this.childNodes;
+                  arg1.parentNode = null;
+                  this.childNodes[childNodes.indexOf(arg1)] = arg0;
+                  arg0.parentNode = this;
+                  return arg1;
+                }
+                removeChild(arg0) {
+                  ({ childNodes, childNodes: childNodes2 } = this);
+                  spliceResult = childNodes2.splice(childNodes.indexOf(arg0), 1);
+                  arg0.parentNode = null;
+                  return arg0;
+                }
+                insertBefore(arg0, arg1) {
+                  if (arg0.parentNode) {
+                    parentNode = arg0.parentNode;
+                    removeChildResult = parentNode.removeChild(arg0);
+                  }
+                  self = this;
+                  num = -1;
+                  if (null != arg1) {
+                    childNodes = self.childNodes;
+                    num = childNodes.indexOf(arg1);
+                  }
+                  if (num > -1) {
+                    childNodes1 = self.childNodes;
+                    num2 = 0;
+                    spliceResult = childNodes1.splice(num, 0, arg0);
+                  } else {
+                    childNodes2 = self.childNodes;
+                    arr = childNodes2.push(arg0);
+                  }
+                  arg0.parentNode = self;
+                  return arg0;
+                }
+                setAttributeNS(arg0, arg1, arg2) {
+                  index = arg1.indexOf(":");
+                  substr1 = arg1;
+                  substr = null;
+                  if (index > -1) {
+                    num = 0;
+                    substr = require("Discord");
+                    num2 = 1;
+                    substr1 = arg1.substr(index + 1);
+                  }
+                  self = this;
+                  if ("INPUT" === this.tagName) {
+                    str = "type";
+                    if ("type" === arg1) {
+                      self.type = arg2;
+                    }
+                    return;
+                  }
+                  tmp4 = self._attributes[arg0];
+                  if (!tmp4) {
+                    obj = {};
+                    self._attributes[arg0] = obj;
+                    tmp4 = obj;
+                  }
+                  tmp4[substr1] = { value: arg2, prefix: substr };
+                  return;
+                }
+                getAttributeNS(arg0, arg1) {
+                  self = this;
+                  tmp = this._attributes[arg0];
+                  value = tmp;
+                  if (tmp) {
+                    value = tmp[arg1];
+                  }
+                  if (value) {
+                    value = tmp[arg1].value;
+                  }
+                  if ("INPUT" === self.tagName) {
+                    str = "type";
+                    if ("type" === arg1) {
+                      type = self.type;
+                    }
+                    return type;
+                  }
+                  type = null;
+                  if (typeof value === "string") {
+                    type = value;
+                  }
+                  return;
+                }
+                removeAttributeNS(arg0, arg1) {
+                  if (this._attributes[arg0]) {
+                    tmp3 = arg1;
+                    delete tmp2[tmp];
+                  }
+                  return;
+                }
+                hasAttributeNS(arg0, arg1) {
+                  tmp = this._attributes[arg0];
+                  tmp2 = tmp;
+                  if (tmp2) {
+                    tmp3 = arg1;
+                    tmp2 = arg1 in tmp;
+                  }
+                  return tmp2;
+                }
+                setAttribute(arg0, arg1) {
+                  return this.setAttributeNS(null, arg0, arg1);
+                }
+                getAttribute(arg0) {
+                  return this.getAttributeNS(null, arg0);
+                }
+                removeAttribute(arg0) {
+                  return this.removeAttributeNS(null, arg0);
+                }
+                hasAttribute(arg0) {
+                  return this.hasAttributeNS(null, arg0);
+                }
+                focus() {
+                  return;
+                }
+                toString() {
+                  return closure_1(this);
+                }
+                getElementsByClassName(arg0) {
+                  closure_0 = arg0.split(" ");
+                  items = [];
+                  closure_1 = items;
+                  tmp = closure_0(this, () => { ... });
+                  return items;
+                }
+                getElementsByTagName(arg0) {
+                  closure_0 = arg0.toLowerCase();
+                  items = [];
+                  closure_1 = items;
+                  tmp = closure_0(this.childNodes, () => { ... });
+                  return items;
+                }
+                contains(arg0) {
+                  closure_0 = arg0;
+                  tmp = closure_0(this, /* F116316 */ function() { ... }) || false;
+                  return tmp;
+                }
+              }
+              if (!closure_1) {
+                class I {
+                  constructor(arg0, arg1, arg2) {
+                    self = this;
+                    tmp = I;
+                    if (typeof Symbol !== "undefined") {
+                      _Symbol3 = Symbol;
+                      if (tmp[Symbol.hasInstance]) {
+                        _Symbol2 = Symbol;
+                        tmp2 = tmp[Symbol.hasInstance](self);
+                      }
+                      tmp3 = arg0;
+                      if (tmp2) {
+                        tmp6 = arg2;
+                        if (undefined === arg2) {
+                          tmp6 = c2;
+                        } else if (!tmp6) {
+                          tmp6 = null;
+                        }
+                        tmp7 = c2;
+                        formatted = arg0;
+                        if (tmp6 === c2) {
+                          _String = String;
+                          str = String(arg0);
+                          formatted = str.toUpperCase();
+                        }
+                        tmp9 = arg1;
+                        self.tagName = formatted;
+                        self.nodeName = self.tagName;
+                        str2 = "";
+                        self.className = "";
+                        self.dataset = {};
+                        self.childNodes = [];
+                        tmp10 = null;
+                        self.parentNode = null;
+                        self.style = {};
+                        if (!arg1) {
+                          tmp9 = null;
+                        }
+                        self.ownerDocument = tmp9;
+                        self.namespaceURI = tmp6;
+                        self._attributes = {};
+                        str3 = "INPUT";
+                        if ("INPUT" === self.tagName) {
+                          str4 = "text";
+                          self.type = "text";
+                        }
+                        return;
+                      } else {
+                        tmpResult = tmp(arg0);
+                        tmp5 = tmpResult;
+                        return tmpResult;
+                      }
+                    }
+                    if (typeof Symbol !== "undefined") {
+                      _Symbol4 = Symbol;
+                      if (tmp[Symbol.hasInstance]) {
+                        _Symbol = Symbol;
+                        tmp2 = tmp[Symbol.hasInstance](self);
+                      }
+                    }
+                    tmp2 = U(self, tmp);
+                    return;
+                  }
+                  appendChild(arg0) {
+                    if (arg0.parentNode) {
+                      parentNode = arg0.parentNode;
+                      removeChildResult = parentNode.removeChild(arg0);
+                    }
+                    childNodes = this.childNodes;
+                    arr = childNodes.push(arg0);
+                    arg0.parentNode = this;
+                    return arg0;
+                  }
+                  replaceChild(arg0, arg1) {
+                    if (arg0.parentNode) {
+                      parentNode = arg0.parentNode;
+                      removeChildResult = parentNode.removeChild(arg0);
+                    }
+                    childNodes = this.childNodes;
+                    arg1.parentNode = null;
+                    this.childNodes[childNodes.indexOf(arg1)] = arg0;
+                    arg0.parentNode = this;
+                    return arg1;
+                  }
+                  removeChild(arg0) {
+                    ({ childNodes, childNodes: childNodes2 } = this);
+                    spliceResult = childNodes2.splice(childNodes.indexOf(arg0), 1);
+                    arg0.parentNode = null;
+                    return arg0;
+                  }
+                  insertBefore(arg0, arg1) {
+                    if (arg0.parentNode) {
+                      parentNode = arg0.parentNode;
+                      removeChildResult = parentNode.removeChild(arg0);
+                    }
+                    self = this;
+                    num = -1;
+                    if (null != arg1) {
+                      childNodes = self.childNodes;
+                      num = childNodes.indexOf(arg1);
+                    }
+                    if (num > -1) {
+                      childNodes1 = self.childNodes;
+                      num2 = 0;
+                      spliceResult = childNodes1.splice(num, 0, arg0);
+                    } else {
+                      childNodes2 = self.childNodes;
+                      arr = childNodes2.push(arg0);
+                    }
+                    arg0.parentNode = self;
+                    return arg0;
+                  }
+                  setAttributeNS(arg0, arg1, arg2) {
+                    index = arg1.indexOf(":");
+                    substr1 = arg1;
+                    substr = null;
+                    if (index > -1) {
+                      num = 0;
+                      substr = require("Discord");
+                      num2 = 1;
+                      substr1 = arg1.substr(index + 1);
+                    }
+                    self = this;
+                    if ("INPUT" === this.tagName) {
+                      str = "type";
+                      if ("type" === arg1) {
+                        self.type = arg2;
+                      }
+                      return;
+                    }
+                    tmp4 = self._attributes[arg0];
+                    if (!tmp4) {
+                      obj = {};
+                      self._attributes[arg0] = obj;
+                      tmp4 = obj;
+                    }
+                    tmp4[substr1] = { value: arg2, prefix: substr };
+                    return;
+                  }
+                  getAttributeNS(arg0, arg1) {
+                    self = this;
+                    tmp = this._attributes[arg0];
+                    value = tmp;
+                    if (tmp) {
+                      value = tmp[arg1];
+                    }
+                    if (value) {
+                      value = tmp[arg1].value;
+                    }
+                    if ("INPUT" === self.tagName) {
+                      str = "type";
+                      if ("type" === arg1) {
+                        type = self.type;
+                      }
+                      return type;
+                    }
+                    type = null;
+                    if (typeof value === "string") {
+                      type = value;
+                    }
+                    return;
+                  }
+                  removeAttributeNS(arg0, arg1) {
+                    if (this._attributes[arg0]) {
+                      tmp3 = arg1;
+                      delete tmp2[tmp];
+                    }
+                    return;
+                  }
+                  hasAttributeNS(arg0, arg1) {
+                    tmp = this._attributes[arg0];
+                    tmp2 = tmp;
+                    if (tmp2) {
+                      tmp3 = arg1;
+                      tmp2 = arg1 in tmp;
+                    }
+                    return tmp2;
+                  }
+                  setAttribute(arg0, arg1) {
+                    return this.setAttributeNS(null, arg0, arg1);
+                  }
+                  getAttribute(arg0) {
+                    return this.getAttributeNS(null, arg0);
+                  }
+                  removeAttribute(arg0) {
+                    return this.removeAttributeNS(null, arg0);
+                  }
+                  hasAttribute(arg0) {
+                    return this.hasAttributeNS(null, arg0);
+                  }
+                  focus() {
+                    return;
+                  }
+                  toString() {
+                    return closure_1(this);
+                  }
+                  getElementsByClassName(arg0) {
+                    closure_0 = arg0.split(" ");
+                    items = [];
+                    closure_1 = items;
+                    tmp = closure_0(this, () => { ... });
+                    return items;
+                  }
+                  getElementsByTagName(arg0) {
+                    closure_0 = arg0.toLowerCase();
+                    items = [];
+                    closure_1 = items;
+                    tmp = closure_0(this.childNodes, () => { ... });
+                    return items;
+                  }
+                  contains(arg0) {
+                    closure_0 = arg0;
+                    tmp = closure_0(this, /* F116316 */ function() { ... }) || false;
+                    return tmp;
+                  }
+                }
+                const obj2 = { exports: {} };
+                closure_1 = obj2;
+                closure_0(obj2.exports, closure_1);
+              }
+              closure_1 = closure_1.exports;
+              c2 = "http://www.w3.org/1999/xhtml";
+              arg1.exports = I;
+              I.prototype.type = "DOMElement";
+              I.prototype.nodeType = 1;
+              I.prototype.removeEventListener = tmp19;
+              I.prototype.addEventListener = tmp14;
+              I.prototype.dispatchEvent = tmp9;
+            } else {
+              class I {
+                constructor(arg0, arg1, arg2) {
+                  self = this;
+                  tmp = I;
+                  if (typeof Symbol !== "undefined") {
+                    _Symbol3 = Symbol;
+                    if (tmp[Symbol.hasInstance]) {
+                      _Symbol2 = Symbol;
+                      tmp2 = tmp[Symbol.hasInstance](self);
+                    }
+                    tmp3 = arg0;
+                    if (tmp2) {
+                      tmp6 = arg2;
+                      if (undefined === arg2) {
+                        tmp6 = c2;
+                      } else if (!tmp6) {
+                        tmp6 = null;
+                      }
+                      tmp7 = c2;
+                      formatted = arg0;
+                      if (tmp6 === c2) {
+                        _String = String;
+                        str = String(arg0);
+                        formatted = str.toUpperCase();
+                      }
+                      tmp9 = arg1;
+                      self.tagName = formatted;
+                      self.nodeName = self.tagName;
+                      str2 = "";
+                      self.className = "";
+                      self.dataset = {};
+                      self.childNodes = [];
+                      tmp10 = null;
+                      self.parentNode = null;
+                      self.style = {};
+                      if (!arg1) {
+                        tmp9 = null;
+                      }
+                      self.ownerDocument = tmp9;
+                      self.namespaceURI = tmp6;
+                      self._attributes = {};
+                      str3 = "INPUT";
+                      if ("INPUT" === self.tagName) {
+                        str4 = "text";
+                        self.type = "text";
+                      }
+                      return;
+                    } else {
+                      tmpResult = tmp(arg0);
+                      tmp5 = tmpResult;
+                      return tmpResult;
+                    }
+                  }
+                  if (typeof Symbol !== "undefined") {
+                    _Symbol4 = Symbol;
+                    if (tmp[Symbol.hasInstance]) {
+                      _Symbol = Symbol;
+                      tmp2 = tmp[Symbol.hasInstance](self);
+                    }
+                  }
+                  tmp2 = U(self, tmp);
+                  return;
+                }
+                appendChild(arg0) {
+                  if (arg0.parentNode) {
+                    parentNode = arg0.parentNode;
+                    removeChildResult = parentNode.removeChild(arg0);
+                  }
+                  childNodes = this.childNodes;
+                  arr = childNodes.push(arg0);
+                  arg0.parentNode = this;
+                  return arg0;
+                }
+                replaceChild(arg0, arg1) {
+                  if (arg0.parentNode) {
+                    parentNode = arg0.parentNode;
+                    removeChildResult = parentNode.removeChild(arg0);
+                  }
+                  childNodes = this.childNodes;
+                  arg1.parentNode = null;
+                  this.childNodes[childNodes.indexOf(arg1)] = arg0;
+                  arg0.parentNode = this;
+                  return arg1;
+                }
+                removeChild(arg0) {
+                  ({ childNodes, childNodes: childNodes2 } = this);
+                  spliceResult = childNodes2.splice(childNodes.indexOf(arg0), 1);
+                  arg0.parentNode = null;
+                  return arg0;
+                }
+                insertBefore(arg0, arg1) {
+                  if (arg0.parentNode) {
+                    parentNode = arg0.parentNode;
+                    removeChildResult = parentNode.removeChild(arg0);
+                  }
+                  self = this;
+                  num = -1;
+                  if (null != arg1) {
+                    childNodes = self.childNodes;
+                    num = childNodes.indexOf(arg1);
+                  }
+                  if (num > -1) {
+                    childNodes1 = self.childNodes;
+                    num2 = 0;
+                    spliceResult = childNodes1.splice(num, 0, arg0);
+                  } else {
+                    childNodes2 = self.childNodes;
+                    arr = childNodes2.push(arg0);
+                  }
+                  arg0.parentNode = self;
+                  return arg0;
+                }
+                setAttributeNS(arg0, arg1, arg2) {
+                  index = arg1.indexOf(":");
+                  substr1 = arg1;
+                  substr = null;
+                  if (index > -1) {
+                    num = 0;
+                    substr = require("Discord");
+                    num2 = 1;
+                    substr1 = arg1.substr(index + 1);
+                  }
+                  self = this;
+                  if ("INPUT" === this.tagName) {
+                    str = "type";
+                    if ("type" === arg1) {
+                      self.type = arg2;
+                    }
+                    return;
+                  }
+                  tmp4 = self._attributes[arg0];
+                  if (!tmp4) {
+                    obj = {};
+                    self._attributes[arg0] = obj;
+                    tmp4 = obj;
+                  }
+                  tmp4[substr1] = { value: arg2, prefix: substr };
+                  return;
+                }
+                getAttributeNS(arg0, arg1) {
+                  self = this;
+                  tmp = this._attributes[arg0];
+                  value = tmp;
+                  if (tmp) {
+                    value = tmp[arg1];
+                  }
+                  if (value) {
+                    value = tmp[arg1].value;
+                  }
+                  if ("INPUT" === self.tagName) {
+                    str = "type";
+                    if ("type" === arg1) {
+                      type = self.type;
+                    }
+                    return type;
+                  }
+                  type = null;
+                  if (typeof value === "string") {
+                    type = value;
+                  }
+                  return;
+                }
+                removeAttributeNS(arg0, arg1) {
+                  if (this._attributes[arg0]) {
+                    tmp3 = arg1;
+                    delete tmp2[tmp];
+                  }
+                  return;
+                }
+                hasAttributeNS(arg0, arg1) {
+                  tmp = this._attributes[arg0];
+                  tmp2 = tmp;
+                  if (tmp2) {
+                    tmp3 = arg1;
+                    tmp2 = arg1 in tmp;
+                  }
+                  return tmp2;
+                }
+                setAttribute(arg0, arg1) {
+                  return this.setAttributeNS(null, arg0, arg1);
+                }
+                getAttribute(arg0) {
+                  return this.getAttributeNS(null, arg0);
+                }
+                removeAttribute(arg0) {
+                  return this.removeAttributeNS(null, arg0);
+                }
+                hasAttribute(arg0) {
+                  return this.hasAttributeNS(null, arg0);
+                }
+                focus() {
+                  return;
+                }
+                toString() {
+                  return closure_1(this);
+                }
+                getElementsByClassName(arg0) {
+                  closure_0 = arg0.split(" ");
+                  items = [];
+                  closure_1 = items;
+                  tmp = closure_0(this, () => { ... });
+                  return items;
+                }
+                getElementsByTagName(arg0) {
+                  closure_0 = arg0.toLowerCase();
+                  items = [];
+                  closure_1 = items;
+                  tmp = closure_0(this.childNodes, () => { ... });
+                  return items;
+                }
+                contains(arg0) {
+                  closure_0 = arg0;
+                  tmp = closure_0(this, /* F116316 */ function() { ... }) || false;
+                  return tmp;
+                }
+              }
+              throw new TypeError("Trying to call a non-function");
+            }
+          } else {
+            class I {
+              constructor(arg0, arg1, arg2) {
+                self = this;
+                tmp = I;
+                if (typeof Symbol !== "undefined") {
+                  _Symbol3 = Symbol;
+                  if (tmp[Symbol.hasInstance]) {
+                    _Symbol2 = Symbol;
+                    tmp2 = tmp[Symbol.hasInstance](self);
+                  }
+                  tmp3 = arg0;
+                  if (tmp2) {
+                    tmp6 = arg2;
+                    if (undefined === arg2) {
+                      tmp6 = c2;
+                    } else if (!tmp6) {
+                      tmp6 = null;
+                    }
+                    tmp7 = c2;
+                    formatted = arg0;
+                    if (tmp6 === c2) {
+                      _String = String;
+                      str = String(arg0);
+                      formatted = str.toUpperCase();
+                    }
+                    tmp9 = arg1;
+                    self.tagName = formatted;
+                    self.nodeName = self.tagName;
+                    str2 = "";
+                    self.className = "";
+                    self.dataset = {};
+                    self.childNodes = [];
+                    tmp10 = null;
+                    self.parentNode = null;
+                    self.style = {};
+                    if (!arg1) {
+                      tmp9 = null;
+                    }
+                    self.ownerDocument = tmp9;
+                    self.namespaceURI = tmp6;
+                    self._attributes = {};
+                    str3 = "INPUT";
+                    if ("INPUT" === self.tagName) {
+                      str4 = "text";
+                      self.type = "text";
+                    }
+                    return;
+                  } else {
+                    tmpResult = tmp(arg0);
+                    tmp5 = tmpResult;
+                    return tmpResult;
+                  }
+                }
+                if (typeof Symbol !== "undefined") {
+                  _Symbol4 = Symbol;
+                  if (tmp[Symbol.hasInstance]) {
+                    _Symbol = Symbol;
+                    tmp2 = tmp[Symbol.hasInstance](self);
+                  }
+                }
+                tmp2 = U(self, tmp);
+                return;
+              }
+              appendChild(arg0) {
+                if (arg0.parentNode) {
+                  parentNode = arg0.parentNode;
+                  removeChildResult = parentNode.removeChild(arg0);
+                }
+                childNodes = this.childNodes;
+                arr = childNodes.push(arg0);
+                arg0.parentNode = this;
+                return arg0;
+              }
+              replaceChild(arg0, arg1) {
+                if (arg0.parentNode) {
+                  parentNode = arg0.parentNode;
+                  removeChildResult = parentNode.removeChild(arg0);
+                }
+                childNodes = this.childNodes;
+                arg1.parentNode = null;
+                this.childNodes[childNodes.indexOf(arg1)] = arg0;
+                arg0.parentNode = this;
+                return arg1;
+              }
+              removeChild(arg0) {
+                ({ childNodes, childNodes: childNodes2 } = this);
+                spliceResult = childNodes2.splice(childNodes.indexOf(arg0), 1);
+                arg0.parentNode = null;
+                return arg0;
+              }
+              insertBefore(arg0, arg1) {
+                if (arg0.parentNode) {
+                  parentNode = arg0.parentNode;
+                  removeChildResult = parentNode.removeChild(arg0);
+                }
+                self = this;
+                num = -1;
+                if (null != arg1) {
+                  childNodes = self.childNodes;
+                  num = childNodes.indexOf(arg1);
+                }
+                if (num > -1) {
+                  childNodes1 = self.childNodes;
+                  num2 = 0;
+                  spliceResult = childNodes1.splice(num, 0, arg0);
+                } else {
+                  childNodes2 = self.childNodes;
+                  arr = childNodes2.push(arg0);
+                }
+                arg0.parentNode = self;
+                return arg0;
+              }
+              setAttributeNS(arg0, arg1, arg2) {
+                index = arg1.indexOf(":");
+                substr1 = arg1;
+                substr = null;
+                if (index > -1) {
+                  num = 0;
+                  substr = require("Discord");
+                  num2 = 1;
+                  substr1 = arg1.substr(index + 1);
+                }
+                self = this;
+                if ("INPUT" === this.tagName) {
+                  str = "type";
+                  if ("type" === arg1) {
+                    self.type = arg2;
+                  }
+                  return;
+                }
+                tmp4 = self._attributes[arg0];
+                if (!tmp4) {
+                  obj = {};
+                  self._attributes[arg0] = obj;
+                  tmp4 = obj;
+                }
+                tmp4[substr1] = { value: arg2, prefix: substr };
+                return;
+              }
+              getAttributeNS(arg0, arg1) {
+                self = this;
+                tmp = this._attributes[arg0];
+                value = tmp;
+                if (tmp) {
+                  value = tmp[arg1];
+                }
+                if (value) {
+                  value = tmp[arg1].value;
+                }
+                if ("INPUT" === self.tagName) {
+                  str = "type";
+                  if ("type" === arg1) {
+                    type = self.type;
+                  }
+                  return type;
+                }
+                type = null;
+                if (typeof value === "string") {
+                  type = value;
+                }
+                return;
+              }
+              removeAttributeNS(arg0, arg1) {
+                if (this._attributes[arg0]) {
+                  tmp3 = arg1;
+                  delete tmp2[tmp];
+                }
+                return;
+              }
+              hasAttributeNS(arg0, arg1) {
+                tmp = this._attributes[arg0];
+                tmp2 = tmp;
+                if (tmp2) {
+                  tmp3 = arg1;
+                  tmp2 = arg1 in tmp;
+                }
+                return tmp2;
+              }
+              setAttribute(arg0, arg1) {
+                return this.setAttributeNS(null, arg0, arg1);
+              }
+              getAttribute(arg0) {
+                return this.getAttributeNS(null, arg0);
+              }
+              removeAttribute(arg0) {
+                return this.removeAttributeNS(null, arg0);
+              }
+              hasAttribute(arg0) {
+                return this.hasAttributeNS(null, arg0);
+              }
+              focus() {
+                return;
+              }
+              toString() {
+                return closure_1(this);
+              }
+              getElementsByClassName(arg0) {
+                closure_0 = arg0.split(" ");
+                items = [];
+                closure_1 = items;
+                tmp = closure_0(this, () => { ... });
+                return items;
+              }
+              getElementsByTagName(arg0) {
+                closure_0 = arg0.toLowerCase();
+                items = [];
+                closure_1 = items;
+                tmp = closure_0(this.childNodes, () => { ... });
+                return items;
+              }
+              contains(arg0) {
+                closure_0 = arg0;
+                tmp = closure_0(this, /* F116316 */ function() { ... }) || false;
+                return tmp;
+              }
+            }
+            throw new TypeError("Trying to call a non-function");
+          }
+        } else {
+          class I {
+            constructor(arg0, arg1, arg2) {
+              self = this;
+              tmp = I;
+              if (typeof Symbol !== "undefined") {
+                _Symbol3 = Symbol;
+                if (tmp[Symbol.hasInstance]) {
+                  _Symbol2 = Symbol;
+                  tmp2 = tmp[Symbol.hasInstance](self);
+                }
+                tmp3 = arg0;
+                if (tmp2) {
+                  tmp6 = arg2;
+                  if (undefined === arg2) {
+                    tmp6 = c2;
+                  } else if (!tmp6) {
+                    tmp6 = null;
+                  }
+                  tmp7 = c2;
+                  formatted = arg0;
+                  if (tmp6 === c2) {
+                    _String = String;
+                    str = String(arg0);
+                    formatted = str.toUpperCase();
+                  }
+                  tmp9 = arg1;
+                  self.tagName = formatted;
+                  self.nodeName = self.tagName;
+                  str2 = "";
+                  self.className = "";
+                  self.dataset = {};
+                  self.childNodes = [];
+                  tmp10 = null;
+                  self.parentNode = null;
+                  self.style = {};
+                  if (!arg1) {
+                    tmp9 = null;
+                  }
+                  self.ownerDocument = tmp9;
+                  self.namespaceURI = tmp6;
+                  self._attributes = {};
+                  str3 = "INPUT";
+                  if ("INPUT" === self.tagName) {
+                    str4 = "text";
+                    self.type = "text";
+                  }
+                  return;
+                } else {
+                  tmpResult = tmp(arg0);
+                  tmp5 = tmpResult;
+                  return tmpResult;
+                }
+              }
+              if (typeof Symbol !== "undefined") {
+                _Symbol4 = Symbol;
+                if (tmp[Symbol.hasInstance]) {
+                  _Symbol = Symbol;
+                  tmp2 = tmp[Symbol.hasInstance](self);
+                }
+              }
+              tmp2 = U(self, tmp);
+              return;
+            }
+            appendChild(arg0) {
+              if (arg0.parentNode) {
+                parentNode = arg0.parentNode;
+                removeChildResult = parentNode.removeChild(arg0);
+              }
+              childNodes = this.childNodes;
+              arr = childNodes.push(arg0);
+              arg0.parentNode = this;
+              return arg0;
+            }
+            replaceChild(arg0, arg1) {
+              if (arg0.parentNode) {
+                parentNode = arg0.parentNode;
+                removeChildResult = parentNode.removeChild(arg0);
+              }
+              childNodes = this.childNodes;
+              arg1.parentNode = null;
+              this.childNodes[childNodes.indexOf(arg1)] = arg0;
+              arg0.parentNode = this;
+              return arg1;
+            }
+            removeChild(arg0) {
+              ({ childNodes, childNodes: childNodes2 } = this);
+              spliceResult = childNodes2.splice(childNodes.indexOf(arg0), 1);
+              arg0.parentNode = null;
+              return arg0;
+            }
+            insertBefore(arg0, arg1) {
+              if (arg0.parentNode) {
+                parentNode = arg0.parentNode;
+                removeChildResult = parentNode.removeChild(arg0);
+              }
+              self = this;
+              num = -1;
+              if (null != arg1) {
+                childNodes = self.childNodes;
+                num = childNodes.indexOf(arg1);
+              }
+              if (num > -1) {
+                childNodes1 = self.childNodes;
+                num2 = 0;
+                spliceResult = childNodes1.splice(num, 0, arg0);
+              } else {
+                childNodes2 = self.childNodes;
+                arr = childNodes2.push(arg0);
+              }
+              arg0.parentNode = self;
+              return arg0;
+            }
+            setAttributeNS(arg0, arg1, arg2) {
+              index = arg1.indexOf(":");
+              substr1 = arg1;
+              substr = null;
+              if (index > -1) {
+                num = 0;
+                substr = require("Discord");
+                num2 = 1;
+                substr1 = arg1.substr(index + 1);
+              }
+              self = this;
+              if ("INPUT" === this.tagName) {
+                str = "type";
+                if ("type" === arg1) {
+                  self.type = arg2;
+                }
+                return;
+              }
+              tmp4 = self._attributes[arg0];
+              if (!tmp4) {
+                obj = {};
+                self._attributes[arg0] = obj;
+                tmp4 = obj;
+              }
+              tmp4[substr1] = { value: arg2, prefix: substr };
+              return;
+            }
+            getAttributeNS(arg0, arg1) {
+              self = this;
+              tmp = this._attributes[arg0];
+              value = tmp;
+              if (tmp) {
+                value = tmp[arg1];
+              }
+              if (value) {
+                value = tmp[arg1].value;
+              }
+              if ("INPUT" === self.tagName) {
+                str = "type";
+                if ("type" === arg1) {
+                  type = self.type;
+                }
+                return type;
+              }
+              type = null;
+              if (typeof value === "string") {
+                type = value;
+              }
+              return;
+            }
+            removeAttributeNS(arg0, arg1) {
+              if (this._attributes[arg0]) {
+                tmp3 = arg1;
+                delete tmp2[tmp];
+              }
+              return;
+            }
+            hasAttributeNS(arg0, arg1) {
+              tmp = this._attributes[arg0];
+              tmp2 = tmp;
+              if (tmp2) {
+                tmp3 = arg1;
+                tmp2 = arg1 in tmp;
+              }
+              return tmp2;
+            }
+            setAttribute(arg0, arg1) {
+              return this.setAttributeNS(null, arg0, arg1);
+            }
+            getAttribute(arg0) {
+              return this.getAttributeNS(null, arg0);
+            }
+            removeAttribute(arg0) {
+              return this.removeAttributeNS(null, arg0);
+            }
+            hasAttribute(arg0) {
+              return this.hasAttributeNS(null, arg0);
+            }
+            focus() {
+              return;
+            }
+            toString() {
+              return closure_1(this);
+            }
+            getElementsByClassName(arg0) {
+              closure_0 = arg0.split(" ");
+              items = [];
+              closure_1 = items;
+              tmp = closure_0(this, () => { ... });
+              return items;
+            }
+            getElementsByTagName(arg0) {
+              closure_0 = arg0.toLowerCase();
+              items = [];
+              closure_1 = items;
+              tmp = closure_0(this.childNodes, () => { ... });
+              return items;
+            }
+            contains(arg0) {
+              closure_0 = arg0;
+              tmp = closure_0(this, /* F116316 */ function() { ... }) || false;
+              return tmp;
+            }
+          }
+          throw new TypeError("Trying to call a non-function");
+        }
+      } else {
+        class I {
+          constructor(arg0, arg1, arg2) {
+            self = this;
+            tmp = I;
+            if (typeof Symbol !== "undefined") {
+              _Symbol3 = Symbol;
+              if (tmp[Symbol.hasInstance]) {
+                _Symbol2 = Symbol;
+                tmp2 = tmp[Symbol.hasInstance](self);
+              }
+              tmp3 = arg0;
+              if (tmp2) {
+                tmp6 = arg2;
+                if (undefined === arg2) {
+                  tmp6 = c2;
+                } else if (!tmp6) {
+                  tmp6 = null;
+                }
+                tmp7 = c2;
+                formatted = arg0;
+                if (tmp6 === c2) {
+                  _String = String;
+                  str = String(arg0);
+                  formatted = str.toUpperCase();
+                }
+                tmp9 = arg1;
+                self.tagName = formatted;
+                self.nodeName = self.tagName;
+                str2 = "";
+                self.className = "";
+                self.dataset = {};
+                self.childNodes = [];
+                tmp10 = null;
+                self.parentNode = null;
+                self.style = {};
+                if (!arg1) {
+                  tmp9 = null;
+                }
+                self.ownerDocument = tmp9;
+                self.namespaceURI = tmp6;
+                self._attributes = {};
+                str3 = "INPUT";
+                if ("INPUT" === self.tagName) {
+                  str4 = "text";
+                  self.type = "text";
+                }
+                return;
+              } else {
+                tmpResult = tmp(arg0);
+                tmp5 = tmpResult;
+                return tmpResult;
+              }
+            }
+            if (typeof Symbol !== "undefined") {
+              _Symbol4 = Symbol;
+              if (tmp[Symbol.hasInstance]) {
+                _Symbol = Symbol;
+                tmp2 = tmp[Symbol.hasInstance](self);
+              }
+            }
+            tmp2 = U(self, tmp);
+            return;
+          }
+          appendChild(arg0) {
+            if (arg0.parentNode) {
+              parentNode = arg0.parentNode;
+              removeChildResult = parentNode.removeChild(arg0);
+            }
+            childNodes = this.childNodes;
+            arr = childNodes.push(arg0);
+            arg0.parentNode = this;
+            return arg0;
+          }
+          replaceChild(arg0, arg1) {
+            if (arg0.parentNode) {
+              parentNode = arg0.parentNode;
+              removeChildResult = parentNode.removeChild(arg0);
+            }
+            childNodes = this.childNodes;
+            arg1.parentNode = null;
+            this.childNodes[childNodes.indexOf(arg1)] = arg0;
+            arg0.parentNode = this;
+            return arg1;
+          }
+          removeChild(arg0) {
+            ({ childNodes, childNodes: childNodes2 } = this);
+            spliceResult = childNodes2.splice(childNodes.indexOf(arg0), 1);
+            arg0.parentNode = null;
+            return arg0;
+          }
+          insertBefore(arg0, arg1) {
+            if (arg0.parentNode) {
+              parentNode = arg0.parentNode;
+              removeChildResult = parentNode.removeChild(arg0);
+            }
+            self = this;
+            num = -1;
+            if (null != arg1) {
+              childNodes = self.childNodes;
+              num = childNodes.indexOf(arg1);
+            }
+            if (num > -1) {
+              childNodes1 = self.childNodes;
+              num2 = 0;
+              spliceResult = childNodes1.splice(num, 0, arg0);
+            } else {
+              childNodes2 = self.childNodes;
+              arr = childNodes2.push(arg0);
+            }
+            arg0.parentNode = self;
+            return arg0;
+          }
+          setAttributeNS(arg0, arg1, arg2) {
+            index = arg1.indexOf(":");
+            substr1 = arg1;
+            substr = null;
+            if (index > -1) {
+              num = 0;
+              substr = require("Discord");
+              num2 = 1;
+              substr1 = arg1.substr(index + 1);
+            }
+            self = this;
+            if ("INPUT" === this.tagName) {
+              str = "type";
+              if ("type" === arg1) {
+                self.type = arg2;
+              }
+              return;
+            }
+            tmp4 = self._attributes[arg0];
+            if (!tmp4) {
+              obj = {};
+              self._attributes[arg0] = obj;
+              tmp4 = obj;
+            }
+            tmp4[substr1] = { value: arg2, prefix: substr };
+            return;
+          }
+          getAttributeNS(arg0, arg1) {
+            self = this;
+            tmp = this._attributes[arg0];
+            value = tmp;
+            if (tmp) {
+              value = tmp[arg1];
+            }
+            if (value) {
+              value = tmp[arg1].value;
+            }
+            if ("INPUT" === self.tagName) {
+              str = "type";
+              if ("type" === arg1) {
+                type = self.type;
+              }
+              return type;
+            }
+            type = null;
+            if (typeof value === "string") {
+              type = value;
+            }
+            return;
+          }
+          removeAttributeNS(arg0, arg1) {
+            if (this._attributes[arg0]) {
+              tmp3 = arg1;
+              delete tmp2[tmp];
+            }
+            return;
+          }
+          hasAttributeNS(arg0, arg1) {
+            tmp = this._attributes[arg0];
+            tmp2 = tmp;
+            if (tmp2) {
+              tmp3 = arg1;
+              tmp2 = arg1 in tmp;
+            }
+            return tmp2;
+          }
+          setAttribute(arg0, arg1) {
+            return this.setAttributeNS(null, arg0, arg1);
+          }
+          getAttribute(arg0) {
+            return this.getAttributeNS(null, arg0);
+          }
+          removeAttribute(arg0) {
+            return this.removeAttributeNS(null, arg0);
+          }
+          hasAttribute(arg0) {
+            return this.hasAttributeNS(null, arg0);
+          }
+          focus() {
+            return;
+          }
+          toString() {
+            return closure_1(this);
+          }
+          getElementsByClassName(arg0) {
+            closure_0 = arg0.split(" ");
+            items = [];
+            closure_1 = items;
+            tmp = closure_0(this, () => { ... });
+            return items;
+          }
+          getElementsByTagName(arg0) {
+            closure_0 = arg0.toLowerCase();
+            items = [];
+            closure_1 = items;
+            tmp = closure_0(this.childNodes, () => { ... });
+            return items;
+          }
+          contains(arg0) {
+            closure_0 = arg0;
+            tmp = closure_0(this, /* F116316 */ function() { ... }) || false;
+            return tmp;
+          }
+        }
+        throw new TypeError("Trying to call a non-function");
+      }
+    } else {
+      class I {
+        constructor(arg0, arg1, arg2) {
+          self = this;
+          tmp = I;
+          if (typeof Symbol !== "undefined") {
+            _Symbol3 = Symbol;
+            if (tmp[Symbol.hasInstance]) {
+              _Symbol2 = Symbol;
+              tmp2 = tmp[Symbol.hasInstance](self);
+            }
+            tmp3 = arg0;
+            if (tmp2) {
+              tmp6 = arg2;
+              if (undefined === arg2) {
+                tmp6 = c2;
+              } else if (!tmp6) {
+                tmp6 = null;
+              }
+              tmp7 = c2;
+              formatted = arg0;
+              if (tmp6 === c2) {
+                _String = String;
+                str = String(arg0);
+                formatted = str.toUpperCase();
+              }
+              tmp9 = arg1;
+              self.tagName = formatted;
+              self.nodeName = self.tagName;
+              str2 = "";
+              self.className = "";
+              self.dataset = {};
+              self.childNodes = [];
+              tmp10 = null;
+              self.parentNode = null;
+              self.style = {};
+              if (!arg1) {
+                tmp9 = null;
+              }
+              self.ownerDocument = tmp9;
+              self.namespaceURI = tmp6;
+              self._attributes = {};
+              str3 = "INPUT";
+              if ("INPUT" === self.tagName) {
+                str4 = "text";
+                self.type = "text";
+              }
+              return;
+            } else {
+              tmpResult = tmp(arg0);
+              tmp5 = tmpResult;
+              return tmpResult;
+            }
+          }
+          if (typeof Symbol !== "undefined") {
+            _Symbol4 = Symbol;
+            if (tmp[Symbol.hasInstance]) {
+              _Symbol = Symbol;
+              tmp2 = tmp[Symbol.hasInstance](self);
+            }
+          }
+          tmp2 = U(self, tmp);
+          return;
+        }
+        appendChild(arg0) {
+          if (arg0.parentNode) {
+            parentNode = arg0.parentNode;
+            removeChildResult = parentNode.removeChild(arg0);
+          }
+          childNodes = this.childNodes;
+          arr = childNodes.push(arg0);
+          arg0.parentNode = this;
+          return arg0;
+        }
+        replaceChild(arg0, arg1) {
+          if (arg0.parentNode) {
+            parentNode = arg0.parentNode;
+            removeChildResult = parentNode.removeChild(arg0);
+          }
+          childNodes = this.childNodes;
+          arg1.parentNode = null;
+          this.childNodes[childNodes.indexOf(arg1)] = arg0;
+          arg0.parentNode = this;
+          return arg1;
+        }
+        removeChild(arg0) {
+          ({ childNodes, childNodes: childNodes2 } = this);
+          spliceResult = childNodes2.splice(childNodes.indexOf(arg0), 1);
+          arg0.parentNode = null;
+          return arg0;
+        }
+        insertBefore(arg0, arg1) {
+          if (arg0.parentNode) {
+            parentNode = arg0.parentNode;
+            removeChildResult = parentNode.removeChild(arg0);
+          }
+          self = this;
+          num = -1;
+          if (null != arg1) {
+            childNodes = self.childNodes;
+            num = childNodes.indexOf(arg1);
+          }
+          if (num > -1) {
+            childNodes1 = self.childNodes;
+            num2 = 0;
+            spliceResult = childNodes1.splice(num, 0, arg0);
+          } else {
+            childNodes2 = self.childNodes;
+            arr = childNodes2.push(arg0);
+          }
+          arg0.parentNode = self;
+          return arg0;
+        }
+        setAttributeNS(arg0, arg1, arg2) {
+          index = arg1.indexOf(":");
+          substr1 = arg1;
+          substr = null;
+          if (index > -1) {
+            num = 0;
+            substr = require("Discord");
+            num2 = 1;
+            substr1 = arg1.substr(index + 1);
+          }
+          self = this;
+          if ("INPUT" === this.tagName) {
+            str = "type";
+            if ("type" === arg1) {
+              self.type = arg2;
+            }
+            return;
+          }
+          tmp4 = self._attributes[arg0];
+          if (!tmp4) {
+            obj = {};
+            self._attributes[arg0] = obj;
+            tmp4 = obj;
+          }
+          tmp4[substr1] = { value: arg2, prefix: substr };
+          return;
+        }
+        getAttributeNS(arg0, arg1) {
+          self = this;
+          tmp = this._attributes[arg0];
+          value = tmp;
+          if (tmp) {
+            value = tmp[arg1];
+          }
+          if (value) {
+            value = tmp[arg1].value;
+          }
+          if ("INPUT" === self.tagName) {
+            str = "type";
+            if ("type" === arg1) {
+              type = self.type;
+            }
+            return type;
+          }
+          type = null;
+          if (typeof value === "string") {
+            type = value;
+          }
+          return;
+        }
+        removeAttributeNS(arg0, arg1) {
+          if (this._attributes[arg0]) {
+            tmp3 = arg1;
+            delete tmp2[tmp];
+          }
+          return;
+        }
+        hasAttributeNS(arg0, arg1) {
+          tmp = this._attributes[arg0];
+          tmp2 = tmp;
+          if (tmp2) {
+            tmp3 = arg1;
+            tmp2 = arg1 in tmp;
+          }
+          return tmp2;
+        }
+        setAttribute(arg0, arg1) {
+          return this.setAttributeNS(null, arg0, arg1);
+        }
+        getAttribute(arg0) {
+          return this.getAttributeNS(null, arg0);
+        }
+        removeAttribute(arg0) {
+          return this.removeAttributeNS(null, arg0);
+        }
+        hasAttribute(arg0) {
+          return this.hasAttributeNS(null, arg0);
+        }
+        focus() {
+          return;
+        }
+        toString() {
+          return closure_1(this);
+        }
+        getElementsByClassName(arg0) {
+          closure_0 = arg0.split(" ");
+          items = [];
+          closure_1 = items;
+          tmp = closure_0(this, () => { ... });
+          return items;
+        }
+        getElementsByTagName(arg0) {
+          closure_0 = arg0.toLowerCase();
+          items = [];
+          closure_1 = items;
+          tmp = closure_0(this.childNodes, () => { ... });
+          return items;
+        }
+        contains(arg0) {
+          closure_0 = arg0;
+          tmp = closure_0(this, /* F116316 */ function() { ... }) || false;
+          return tmp;
+        }
+      }
+      throw new TypeError("Trying to call a non-function");
+    }
+  } else {
+    class I {
+      constructor(arg0, arg1, arg2) {
+        self = this;
+        tmp = I;
+        if (typeof Symbol !== "undefined") {
+          _Symbol3 = Symbol;
+          if (tmp[Symbol.hasInstance]) {
+            _Symbol2 = Symbol;
+            tmp2 = tmp[Symbol.hasInstance](self);
+          }
+          tmp3 = arg0;
+          if (tmp2) {
+            tmp6 = arg2;
+            if (undefined === arg2) {
+              tmp6 = c2;
+            } else if (!tmp6) {
+              tmp6 = null;
+            }
+            tmp7 = c2;
+            formatted = arg0;
+            if (tmp6 === c2) {
+              _String = String;
+              str = String(arg0);
+              formatted = str.toUpperCase();
+            }
+            tmp9 = arg1;
+            self.tagName = formatted;
+            self.nodeName = self.tagName;
+            str2 = "";
+            self.className = "";
+            self.dataset = {};
+            self.childNodes = [];
+            tmp10 = null;
+            self.parentNode = null;
+            self.style = {};
+            if (!arg1) {
+              tmp9 = null;
+            }
+            self.ownerDocument = tmp9;
+            self.namespaceURI = tmp6;
+            self._attributes = {};
+            str3 = "INPUT";
+            if ("INPUT" === self.tagName) {
+              str4 = "text";
+              self.type = "text";
+            }
+            return;
+          } else {
+            tmpResult = tmp(arg0);
+            tmp5 = tmpResult;
+            return tmpResult;
+          }
+        }
+        if (typeof Symbol !== "undefined") {
+          _Symbol4 = Symbol;
+          if (tmp[Symbol.hasInstance]) {
+            _Symbol = Symbol;
+            tmp2 = tmp[Symbol.hasInstance](self);
+          }
+        }
+        tmp2 = U(self, tmp);
         return;
       }
       appendChild(arg0) {
@@ -1268,7 +3045,7 @@ f98876 = (arg0, arg1) => {
         substr = null;
         if (index > -1) {
           num = 0;
-          substr = arg1.substr(0, index);
+          substr = require("Discord");
           num2 = 1;
           substr1 = arg1.substr(index + 1);
         }
@@ -1366,2448 +3143,14 @@ f98876 = (arg0, arg1) => {
         return tmp;
       }
     }
-    HermesBuiltin.throwTypeError();
+    throw new TypeError("Trying to call a non-function");
   }
-  if (callback) {
-    class I {
-      constructor(arg0, arg1, arg2) {
-        self = this;
-        tmp = I;
-        if (typeof Symbol !== "undefined") {
-          _Symbol3 = Symbol;
-          if (tmp[Symbol.hasInstance]) {
-            _Symbol2 = Symbol;
-            tmp2 = tmp[Symbol.hasInstance](self);
-          }
-          tmp3 = arg0;
-          if (tmp2) {
-            tmp6 = arg2;
-            if (undefined === arg2) {
-              tmp6 = c2;
-            } else if (!tmp6) {
-              tmp6 = null;
-            }
-            tmp7 = c2;
-            formatted = arg0;
-            if (tmp6 === c2) {
-              _String = String;
-              str = String(arg0);
-              formatted = str.toUpperCase();
-            }
-            tmp9 = arg1;
-            self.tagName = formatted;
-            self.nodeName = self.tagName;
-            str2 = "";
-            self.className = "";
-            self.dataset = {};
-            self.childNodes = [];
-            tmp10 = null;
-            self.parentNode = null;
-            self.style = {};
-            if (!arg1) {
-              tmp9 = null;
-            }
-            self.ownerDocument = tmp9;
-            self.namespaceURI = tmp6;
-            self._attributes = {};
-            str3 = "INPUT";
-            if ("INPUT" === self.tagName) {
-              str4 = "text";
-              self.type = "text";
-            }
-            return;
-          } else {
-            tmpResult = tmp(arg0);
-            tmp5 = tmpResult;
-            return tmpResult;
-          }
-        }
-        if (typeof Symbol !== "undefined") {
-          _Symbol4 = Symbol;
-          if (tmp[Symbol.hasInstance]) {
-            _Symbol = Symbol;
-            tmp2 = tmp[Symbol.hasInstance](self);
-          }
-        }
-        tmp2 = closure_1_8(self, tmp);
-        return;
-      }
-      appendChild(arg0) {
-        if (arg0.parentNode) {
-          parentNode = arg0.parentNode;
-          removeChildResult = parentNode.removeChild(arg0);
-        }
-        childNodes = this.childNodes;
-        arr = childNodes.push(arg0);
-        arg0.parentNode = this;
-        return arg0;
-      }
-      replaceChild(arg0, arg1) {
-        if (arg0.parentNode) {
-          parentNode = arg0.parentNode;
-          removeChildResult = parentNode.removeChild(arg0);
-        }
-        childNodes = this.childNodes;
-        arg1.parentNode = null;
-        this.childNodes[childNodes.indexOf(arg1)] = arg0;
-        arg0.parentNode = this;
-        return arg1;
-      }
-      removeChild(arg0) {
-        ({ childNodes, childNodes: childNodes2 } = this);
-        spliceResult = childNodes2.splice(childNodes.indexOf(arg0), 1);
-        arg0.parentNode = null;
-        return arg0;
-      }
-      insertBefore(arg0, arg1) {
-        if (arg0.parentNode) {
-          parentNode = arg0.parentNode;
-          removeChildResult = parentNode.removeChild(arg0);
-        }
-        self = this;
-        num = -1;
-        if (null != arg1) {
-          childNodes = self.childNodes;
-          num = childNodes.indexOf(arg1);
-        }
-        if (num > -1) {
-          childNodes1 = self.childNodes;
-          num2 = 0;
-          spliceResult = childNodes1.splice(num, 0, arg0);
-        } else {
-          childNodes2 = self.childNodes;
-          arr = childNodes2.push(arg0);
-        }
-        arg0.parentNode = self;
-        return arg0;
-      }
-      setAttributeNS(arg0, arg1, arg2) {
-        index = arg1.indexOf(":");
-        substr1 = arg1;
-        substr = null;
-        if (index > -1) {
-          num = 0;
-          substr = arg1.substr(0, index);
-          num2 = 1;
-          substr1 = arg1.substr(index + 1);
-        }
-        self = this;
-        if ("INPUT" === this.tagName) {
-          str = "type";
-          if ("type" === arg1) {
-            self.type = arg2;
-          }
-          return;
-        }
-        tmp4 = self._attributes[arg0];
-        if (!tmp4) {
-          obj = {};
-          self._attributes[arg0] = obj;
-          tmp4 = obj;
-        }
-        tmp4[substr1] = { value: arg2, prefix: substr };
-        return;
-      }
-      getAttributeNS(arg0, arg1) {
-        self = this;
-        tmp = this._attributes[arg0];
-        value = tmp;
-        if (tmp) {
-          value = tmp[arg1];
-        }
-        if (value) {
-          value = tmp[arg1].value;
-        }
-        if ("INPUT" === self.tagName) {
-          str = "type";
-          if ("type" === arg1) {
-            type = self.type;
-          }
-          return type;
-        }
-        type = null;
-        if (typeof value === "string") {
-          type = value;
-        }
-        return;
-      }
-      removeAttributeNS(arg0, arg1) {
-        if (this._attributes[arg0]) {
-          tmp3 = arg1;
-          delete tmp2[tmp];
-        }
-        return;
-      }
-      hasAttributeNS(arg0, arg1) {
-        tmp = this._attributes[arg0];
-        tmp2 = tmp;
-        if (tmp2) {
-          tmp3 = arg1;
-          tmp2 = arg1 in tmp;
-        }
-        return tmp2;
-      }
-      setAttribute(arg0, arg1) {
-        return this.setAttributeNS(null, arg0, arg1);
-      }
-      getAttribute(arg0) {
-        return this.getAttributeNS(null, arg0);
-      }
-      removeAttribute(arg0) {
-        return this.removeAttributeNS(null, arg0);
-      }
-      hasAttribute(arg0) {
-        return this.hasAttributeNS(null, arg0);
-      }
-      focus() {
-        return;
-      }
-      toString() {
-        return closure_1(this);
-      }
-      getElementsByClassName(arg0) {
-        closure_0 = arg0.split(" ");
-        items = [];
-        closure_1 = items;
-        tmp = closure_0(this, () => { ... });
-        return items;
-      }
-      getElementsByTagName(arg0) {
-        closure_0 = arg0.toLowerCase();
-        items = [];
-        closure_1 = items;
-        tmp = closure_0(this.childNodes, () => { ... });
-        return items;
-      }
-      contains(arg0) {
-        closure_0 = arg0;
-        tmp = closure_0(this, /* F116316 */ function() { ... }) || false;
-        return tmp;
-      }
-    }
-    callback = 0;
-    let lib = tmp(0);
-  }
-  if (typeof f98884 !== "function") {
-    class I {
-      constructor(arg0, arg1, arg2) {
-        self = this;
-        tmp = I;
-        if (typeof Symbol !== "undefined") {
-          _Symbol3 = Symbol;
-          if (tmp[Symbol.hasInstance]) {
-            _Symbol2 = Symbol;
-            tmp2 = tmp[Symbol.hasInstance](self);
-          }
-          tmp3 = arg0;
-          if (tmp2) {
-            tmp6 = arg2;
-            if (undefined === arg2) {
-              tmp6 = c2;
-            } else if (!tmp6) {
-              tmp6 = null;
-            }
-            tmp7 = c2;
-            formatted = arg0;
-            if (tmp6 === c2) {
-              _String = String;
-              str = String(arg0);
-              formatted = str.toUpperCase();
-            }
-            tmp9 = arg1;
-            self.tagName = formatted;
-            self.nodeName = self.tagName;
-            str2 = "";
-            self.className = "";
-            self.dataset = {};
-            self.childNodes = [];
-            tmp10 = null;
-            self.parentNode = null;
-            self.style = {};
-            if (!arg1) {
-              tmp9 = null;
-            }
-            self.ownerDocument = tmp9;
-            self.namespaceURI = tmp6;
-            self._attributes = {};
-            str3 = "INPUT";
-            if ("INPUT" === self.tagName) {
-              str4 = "text";
-              self.type = "text";
-            }
-            return;
-          } else {
-            tmpResult = tmp(arg0);
-            tmp5 = tmpResult;
-            return tmpResult;
-          }
-        }
-        if (typeof Symbol !== "undefined") {
-          _Symbol4 = Symbol;
-          if (tmp[Symbol.hasInstance]) {
-            _Symbol = Symbol;
-            tmp2 = tmp[Symbol.hasInstance](self);
-          }
-        }
-        tmp2 = closure_1_8(self, tmp);
-        return;
-      }
-      appendChild(arg0) {
-        if (arg0.parentNode) {
-          parentNode = arg0.parentNode;
-          removeChildResult = parentNode.removeChild(arg0);
-        }
-        childNodes = this.childNodes;
-        arr = childNodes.push(arg0);
-        arg0.parentNode = this;
-        return arg0;
-      }
-      replaceChild(arg0, arg1) {
-        if (arg0.parentNode) {
-          parentNode = arg0.parentNode;
-          removeChildResult = parentNode.removeChild(arg0);
-        }
-        childNodes = this.childNodes;
-        arg1.parentNode = null;
-        this.childNodes[childNodes.indexOf(arg1)] = arg0;
-        arg0.parentNode = this;
-        return arg1;
-      }
-      removeChild(arg0) {
-        ({ childNodes, childNodes: childNodes2 } = this);
-        spliceResult = childNodes2.splice(childNodes.indexOf(arg0), 1);
-        arg0.parentNode = null;
-        return arg0;
-      }
-      insertBefore(arg0, arg1) {
-        if (arg0.parentNode) {
-          parentNode = arg0.parentNode;
-          removeChildResult = parentNode.removeChild(arg0);
-        }
-        self = this;
-        num = -1;
-        if (null != arg1) {
-          childNodes = self.childNodes;
-          num = childNodes.indexOf(arg1);
-        }
-        if (num > -1) {
-          childNodes1 = self.childNodes;
-          num2 = 0;
-          spliceResult = childNodes1.splice(num, 0, arg0);
-        } else {
-          childNodes2 = self.childNodes;
-          arr = childNodes2.push(arg0);
-        }
-        arg0.parentNode = self;
-        return arg0;
-      }
-      setAttributeNS(arg0, arg1, arg2) {
-        index = arg1.indexOf(":");
-        substr1 = arg1;
-        substr = null;
-        if (index > -1) {
-          num = 0;
-          substr = arg1.substr(0, index);
-          num2 = 1;
-          substr1 = arg1.substr(index + 1);
-        }
-        self = this;
-        if ("INPUT" === this.tagName) {
-          str = "type";
-          if ("type" === arg1) {
-            self.type = arg2;
-          }
-          return;
-        }
-        tmp4 = self._attributes[arg0];
-        if (!tmp4) {
-          obj = {};
-          self._attributes[arg0] = obj;
-          tmp4 = obj;
-        }
-        tmp4[substr1] = { value: arg2, prefix: substr };
-        return;
-      }
-      getAttributeNS(arg0, arg1) {
-        self = this;
-        tmp = this._attributes[arg0];
-        value = tmp;
-        if (tmp) {
-          value = tmp[arg1];
-        }
-        if (value) {
-          value = tmp[arg1].value;
-        }
-        if ("INPUT" === self.tagName) {
-          str = "type";
-          if ("type" === arg1) {
-            type = self.type;
-          }
-          return type;
-        }
-        type = null;
-        if (typeof value === "string") {
-          type = value;
-        }
-        return;
-      }
-      removeAttributeNS(arg0, arg1) {
-        if (this._attributes[arg0]) {
-          tmp3 = arg1;
-          delete tmp2[tmp];
-        }
-        return;
-      }
-      hasAttributeNS(arg0, arg1) {
-        tmp = this._attributes[arg0];
-        tmp2 = tmp;
-        if (tmp2) {
-          tmp3 = arg1;
-          tmp2 = arg1 in tmp;
-        }
-        return tmp2;
-      }
-      setAttribute(arg0, arg1) {
-        return this.setAttributeNS(null, arg0, arg1);
-      }
-      getAttribute(arg0) {
-        return this.getAttributeNS(null, arg0);
-      }
-      removeAttribute(arg0) {
-        return this.removeAttributeNS(null, arg0);
-      }
-      hasAttribute(arg0) {
-        return this.hasAttributeNS(null, arg0);
-      }
-      focus() {
-        return;
-      }
-      toString() {
-        return closure_1(this);
-      }
-      getElementsByClassName(arg0) {
-        closure_0 = arg0.split(" ");
-        items = [];
-        closure_1 = items;
-        tmp = closure_0(this, () => { ... });
-        return items;
-      }
-      getElementsByTagName(arg0) {
-        closure_0 = arg0.toLowerCase();
-        items = [];
-        closure_1 = items;
-        tmp = closure_0(this.childNodes, () => { ... });
-        return items;
-      }
-      contains(arg0) {
-        closure_0 = arg0;
-        tmp = closure_0(this, /* F116316 */ function() { ... }) || false;
-        return tmp;
-      }
-    }
-    HermesBuiltin.throwTypeError();
-  }
-  if (!lib) {
-    class I {
-      constructor(arg0, arg1, arg2) {
-        self = this;
-        tmp = I;
-        if (typeof Symbol !== "undefined") {
-          _Symbol3 = Symbol;
-          if (tmp[Symbol.hasInstance]) {
-            _Symbol2 = Symbol;
-            tmp2 = tmp[Symbol.hasInstance](self);
-          }
-          tmp3 = arg0;
-          if (tmp2) {
-            tmp6 = arg2;
-            if (undefined === arg2) {
-              tmp6 = c2;
-            } else if (!tmp6) {
-              tmp6 = null;
-            }
-            tmp7 = c2;
-            formatted = arg0;
-            if (tmp6 === c2) {
-              _String = String;
-              str = String(arg0);
-              formatted = str.toUpperCase();
-            }
-            tmp9 = arg1;
-            self.tagName = formatted;
-            self.nodeName = self.tagName;
-            str2 = "";
-            self.className = "";
-            self.dataset = {};
-            self.childNodes = [];
-            tmp10 = null;
-            self.parentNode = null;
-            self.style = {};
-            if (!arg1) {
-              tmp9 = null;
-            }
-            self.ownerDocument = tmp9;
-            self.namespaceURI = tmp6;
-            self._attributes = {};
-            str3 = "INPUT";
-            if ("INPUT" === self.tagName) {
-              str4 = "text";
-              self.type = "text";
-            }
-            return;
-          } else {
-            tmpResult = tmp(arg0);
-            tmp5 = tmpResult;
-            return tmpResult;
-          }
-        }
-        if (typeof Symbol !== "undefined") {
-          _Symbol4 = Symbol;
-          if (tmp[Symbol.hasInstance]) {
-            _Symbol = Symbol;
-            tmp2 = tmp[Symbol.hasInstance](self);
-          }
-        }
-        tmp2 = closure_1_8(self, tmp);
-        return;
-      }
-      appendChild(arg0) {
-        if (arg0.parentNode) {
-          parentNode = arg0.parentNode;
-          removeChildResult = parentNode.removeChild(arg0);
-        }
-        childNodes = this.childNodes;
-        arr = childNodes.push(arg0);
-        arg0.parentNode = this;
-        return arg0;
-      }
-      replaceChild(arg0, arg1) {
-        if (arg0.parentNode) {
-          parentNode = arg0.parentNode;
-          removeChildResult = parentNode.removeChild(arg0);
-        }
-        childNodes = this.childNodes;
-        arg1.parentNode = null;
-        this.childNodes[childNodes.indexOf(arg1)] = arg0;
-        arg0.parentNode = this;
-        return arg1;
-      }
-      removeChild(arg0) {
-        ({ childNodes, childNodes: childNodes2 } = this);
-        spliceResult = childNodes2.splice(childNodes.indexOf(arg0), 1);
-        arg0.parentNode = null;
-        return arg0;
-      }
-      insertBefore(arg0, arg1) {
-        if (arg0.parentNode) {
-          parentNode = arg0.parentNode;
-          removeChildResult = parentNode.removeChild(arg0);
-        }
-        self = this;
-        num = -1;
-        if (null != arg1) {
-          childNodes = self.childNodes;
-          num = childNodes.indexOf(arg1);
-        }
-        if (num > -1) {
-          childNodes1 = self.childNodes;
-          num2 = 0;
-          spliceResult = childNodes1.splice(num, 0, arg0);
-        } else {
-          childNodes2 = self.childNodes;
-          arr = childNodes2.push(arg0);
-        }
-        arg0.parentNode = self;
-        return arg0;
-      }
-      setAttributeNS(arg0, arg1, arg2) {
-        index = arg1.indexOf(":");
-        substr1 = arg1;
-        substr = null;
-        if (index > -1) {
-          num = 0;
-          substr = arg1.substr(0, index);
-          num2 = 1;
-          substr1 = arg1.substr(index + 1);
-        }
-        self = this;
-        if ("INPUT" === this.tagName) {
-          str = "type";
-          if ("type" === arg1) {
-            self.type = arg2;
-          }
-          return;
-        }
-        tmp4 = self._attributes[arg0];
-        if (!tmp4) {
-          obj = {};
-          self._attributes[arg0] = obj;
-          tmp4 = obj;
-        }
-        tmp4[substr1] = { value: arg2, prefix: substr };
-        return;
-      }
-      getAttributeNS(arg0, arg1) {
-        self = this;
-        tmp = this._attributes[arg0];
-        value = tmp;
-        if (tmp) {
-          value = tmp[arg1];
-        }
-        if (value) {
-          value = tmp[arg1].value;
-        }
-        if ("INPUT" === self.tagName) {
-          str = "type";
-          if ("type" === arg1) {
-            type = self.type;
-          }
-          return type;
-        }
-        type = null;
-        if (typeof value === "string") {
-          type = value;
-        }
-        return;
-      }
-      removeAttributeNS(arg0, arg1) {
-        if (this._attributes[arg0]) {
-          tmp3 = arg1;
-          delete tmp2[tmp];
-        }
-        return;
-      }
-      hasAttributeNS(arg0, arg1) {
-        tmp = this._attributes[arg0];
-        tmp2 = tmp;
-        if (tmp2) {
-          tmp3 = arg1;
-          tmp2 = arg1 in tmp;
-        }
-        return tmp2;
-      }
-      setAttribute(arg0, arg1) {
-        return this.setAttributeNS(null, arg0, arg1);
-      }
-      getAttribute(arg0) {
-        return this.getAttributeNS(null, arg0);
-      }
-      removeAttribute(arg0) {
-        return this.removeAttributeNS(null, arg0);
-      }
-      hasAttribute(arg0) {
-        return this.hasAttributeNS(null, arg0);
-      }
-      focus() {
-        return;
-      }
-      toString() {
-        return closure_1(this);
-      }
-      getElementsByClassName(arg0) {
-        closure_0 = arg0.split(" ");
-        items = [];
-        closure_1 = items;
-        tmp = closure_0(this, () => { ... });
-        return items;
-      }
-      getElementsByTagName(arg0) {
-        closure_0 = arg0.toLowerCase();
-        items = [];
-        closure_1 = items;
-        tmp = closure_0(this.childNodes, () => { ... });
-        return items;
-      }
-      contains(arg0) {
-        closure_0 = arg0;
-        tmp = closure_0(this, /* F116316 */ function() { ... }) || false;
-        return tmp;
-      }
-    }
-    let obj = { exports: null };
-    obj[0] = {};
-    lib = obj;
-    callback(obj.exports, lib);
-  }
-  callback = lib.exports;
-  if (typeof f98884 !== "function") {
-    class I {
-      constructor(arg0, arg1, arg2) {
-        self = this;
-        tmp = I;
-        if (typeof Symbol !== "undefined") {
-          _Symbol3 = Symbol;
-          if (tmp[Symbol.hasInstance]) {
-            _Symbol2 = Symbol;
-            tmp2 = tmp[Symbol.hasInstance](self);
-          }
-          tmp3 = arg0;
-          if (tmp2) {
-            tmp6 = arg2;
-            if (undefined === arg2) {
-              tmp6 = c2;
-            } else if (!tmp6) {
-              tmp6 = null;
-            }
-            tmp7 = c2;
-            formatted = arg0;
-            if (tmp6 === c2) {
-              _String = String;
-              str = String(arg0);
-              formatted = str.toUpperCase();
-            }
-            tmp9 = arg1;
-            self.tagName = formatted;
-            self.nodeName = self.tagName;
-            str2 = "";
-            self.className = "";
-            self.dataset = {};
-            self.childNodes = [];
-            tmp10 = null;
-            self.parentNode = null;
-            self.style = {};
-            if (!arg1) {
-              tmp9 = null;
-            }
-            self.ownerDocument = tmp9;
-            self.namespaceURI = tmp6;
-            self._attributes = {};
-            str3 = "INPUT";
-            if ("INPUT" === self.tagName) {
-              str4 = "text";
-              self.type = "text";
-            }
-            return;
-          } else {
-            tmpResult = tmp(arg0);
-            tmp5 = tmpResult;
-            return tmpResult;
-          }
-        }
-        if (typeof Symbol !== "undefined") {
-          _Symbol4 = Symbol;
-          if (tmp[Symbol.hasInstance]) {
-            _Symbol = Symbol;
-            tmp2 = tmp[Symbol.hasInstance](self);
-          }
-        }
-        tmp2 = closure_1_8(self, tmp);
-        return;
-      }
-      appendChild(arg0) {
-        if (arg0.parentNode) {
-          parentNode = arg0.parentNode;
-          removeChildResult = parentNode.removeChild(arg0);
-        }
-        childNodes = this.childNodes;
-        arr = childNodes.push(arg0);
-        arg0.parentNode = this;
-        return arg0;
-      }
-      replaceChild(arg0, arg1) {
-        if (arg0.parentNode) {
-          parentNode = arg0.parentNode;
-          removeChildResult = parentNode.removeChild(arg0);
-        }
-        childNodes = this.childNodes;
-        arg1.parentNode = null;
-        this.childNodes[childNodes.indexOf(arg1)] = arg0;
-        arg0.parentNode = this;
-        return arg1;
-      }
-      removeChild(arg0) {
-        ({ childNodes, childNodes: childNodes2 } = this);
-        spliceResult = childNodes2.splice(childNodes.indexOf(arg0), 1);
-        arg0.parentNode = null;
-        return arg0;
-      }
-      insertBefore(arg0, arg1) {
-        if (arg0.parentNode) {
-          parentNode = arg0.parentNode;
-          removeChildResult = parentNode.removeChild(arg0);
-        }
-        self = this;
-        num = -1;
-        if (null != arg1) {
-          childNodes = self.childNodes;
-          num = childNodes.indexOf(arg1);
-        }
-        if (num > -1) {
-          childNodes1 = self.childNodes;
-          num2 = 0;
-          spliceResult = childNodes1.splice(num, 0, arg0);
-        } else {
-          childNodes2 = self.childNodes;
-          arr = childNodes2.push(arg0);
-        }
-        arg0.parentNode = self;
-        return arg0;
-      }
-      setAttributeNS(arg0, arg1, arg2) {
-        index = arg1.indexOf(":");
-        substr1 = arg1;
-        substr = null;
-        if (index > -1) {
-          num = 0;
-          substr = arg1.substr(0, index);
-          num2 = 1;
-          substr1 = arg1.substr(index + 1);
-        }
-        self = this;
-        if ("INPUT" === this.tagName) {
-          str = "type";
-          if ("type" === arg1) {
-            self.type = arg2;
-          }
-          return;
-        }
-        tmp4 = self._attributes[arg0];
-        if (!tmp4) {
-          obj = {};
-          self._attributes[arg0] = obj;
-          tmp4 = obj;
-        }
-        tmp4[substr1] = { value: arg2, prefix: substr };
-        return;
-      }
-      getAttributeNS(arg0, arg1) {
-        self = this;
-        tmp = this._attributes[arg0];
-        value = tmp;
-        if (tmp) {
-          value = tmp[arg1];
-        }
-        if (value) {
-          value = tmp[arg1].value;
-        }
-        if ("INPUT" === self.tagName) {
-          str = "type";
-          if ("type" === arg1) {
-            type = self.type;
-          }
-          return type;
-        }
-        type = null;
-        if (typeof value === "string") {
-          type = value;
-        }
-        return;
-      }
-      removeAttributeNS(arg0, arg1) {
-        if (this._attributes[arg0]) {
-          tmp3 = arg1;
-          delete tmp2[tmp];
-        }
-        return;
-      }
-      hasAttributeNS(arg0, arg1) {
-        tmp = this._attributes[arg0];
-        tmp2 = tmp;
-        if (tmp2) {
-          tmp3 = arg1;
-          tmp2 = arg1 in tmp;
-        }
-        return tmp2;
-      }
-      setAttribute(arg0, arg1) {
-        return this.setAttributeNS(null, arg0, arg1);
-      }
-      getAttribute(arg0) {
-        return this.getAttributeNS(null, arg0);
-      }
-      removeAttribute(arg0) {
-        return this.removeAttributeNS(null, arg0);
-      }
-      hasAttribute(arg0) {
-        return this.hasAttributeNS(null, arg0);
-      }
-      focus() {
-        return;
-      }
-      toString() {
-        return closure_1(this);
-      }
-      getElementsByClassName(arg0) {
-        closure_0 = arg0.split(" ");
-        items = [];
-        closure_1 = items;
-        tmp = closure_0(this, () => { ... });
-        return items;
-      }
-      getElementsByTagName(arg0) {
-        closure_0 = arg0.toLowerCase();
-        items = [];
-        closure_1 = items;
-        tmp = closure_0(this.childNodes, () => { ... });
-        return items;
-      }
-      contains(arg0) {
-        closure_0 = arg0;
-        tmp = closure_0(this, /* F116316 */ function() { ... }) || false;
-        return tmp;
-      }
-    }
-    HermesBuiltin.throwTypeError();
-  }
-  if (!lib) {
-    class I {
-      constructor(arg0, arg1, arg2) {
-        self = this;
-        tmp = I;
-        if (typeof Symbol !== "undefined") {
-          _Symbol3 = Symbol;
-          if (tmp[Symbol.hasInstance]) {
-            _Symbol2 = Symbol;
-            tmp2 = tmp[Symbol.hasInstance](self);
-          }
-          tmp3 = arg0;
-          if (tmp2) {
-            tmp6 = arg2;
-            if (undefined === arg2) {
-              tmp6 = c2;
-            } else if (!tmp6) {
-              tmp6 = null;
-            }
-            tmp7 = c2;
-            formatted = arg0;
-            if (tmp6 === c2) {
-              _String = String;
-              str = String(arg0);
-              formatted = str.toUpperCase();
-            }
-            tmp9 = arg1;
-            self.tagName = formatted;
-            self.nodeName = self.tagName;
-            str2 = "";
-            self.className = "";
-            self.dataset = {};
-            self.childNodes = [];
-            tmp10 = null;
-            self.parentNode = null;
-            self.style = {};
-            if (!arg1) {
-              tmp9 = null;
-            }
-            self.ownerDocument = tmp9;
-            self.namespaceURI = tmp6;
-            self._attributes = {};
-            str3 = "INPUT";
-            if ("INPUT" === self.tagName) {
-              str4 = "text";
-              self.type = "text";
-            }
-            return;
-          } else {
-            tmpResult = tmp(arg0);
-            tmp5 = tmpResult;
-            return tmpResult;
-          }
-        }
-        if (typeof Symbol !== "undefined") {
-          _Symbol4 = Symbol;
-          if (tmp[Symbol.hasInstance]) {
-            _Symbol = Symbol;
-            tmp2 = tmp[Symbol.hasInstance](self);
-          }
-        }
-        tmp2 = closure_1_8(self, tmp);
-        return;
-      }
-      appendChild(arg0) {
-        if (arg0.parentNode) {
-          parentNode = arg0.parentNode;
-          removeChildResult = parentNode.removeChild(arg0);
-        }
-        childNodes = this.childNodes;
-        arr = childNodes.push(arg0);
-        arg0.parentNode = this;
-        return arg0;
-      }
-      replaceChild(arg0, arg1) {
-        if (arg0.parentNode) {
-          parentNode = arg0.parentNode;
-          removeChildResult = parentNode.removeChild(arg0);
-        }
-        childNodes = this.childNodes;
-        arg1.parentNode = null;
-        this.childNodes[childNodes.indexOf(arg1)] = arg0;
-        arg0.parentNode = this;
-        return arg1;
-      }
-      removeChild(arg0) {
-        ({ childNodes, childNodes: childNodes2 } = this);
-        spliceResult = childNodes2.splice(childNodes.indexOf(arg0), 1);
-        arg0.parentNode = null;
-        return arg0;
-      }
-      insertBefore(arg0, arg1) {
-        if (arg0.parentNode) {
-          parentNode = arg0.parentNode;
-          removeChildResult = parentNode.removeChild(arg0);
-        }
-        self = this;
-        num = -1;
-        if (null != arg1) {
-          childNodes = self.childNodes;
-          num = childNodes.indexOf(arg1);
-        }
-        if (num > -1) {
-          childNodes1 = self.childNodes;
-          num2 = 0;
-          spliceResult = childNodes1.splice(num, 0, arg0);
-        } else {
-          childNodes2 = self.childNodes;
-          arr = childNodes2.push(arg0);
-        }
-        arg0.parentNode = self;
-        return arg0;
-      }
-      setAttributeNS(arg0, arg1, arg2) {
-        index = arg1.indexOf(":");
-        substr1 = arg1;
-        substr = null;
-        if (index > -1) {
-          num = 0;
-          substr = arg1.substr(0, index);
-          num2 = 1;
-          substr1 = arg1.substr(index + 1);
-        }
-        self = this;
-        if ("INPUT" === this.tagName) {
-          str = "type";
-          if ("type" === arg1) {
-            self.type = arg2;
-          }
-          return;
-        }
-        tmp4 = self._attributes[arg0];
-        if (!tmp4) {
-          obj = {};
-          self._attributes[arg0] = obj;
-          tmp4 = obj;
-        }
-        tmp4[substr1] = { value: arg2, prefix: substr };
-        return;
-      }
-      getAttributeNS(arg0, arg1) {
-        self = this;
-        tmp = this._attributes[arg0];
-        value = tmp;
-        if (tmp) {
-          value = tmp[arg1];
-        }
-        if (value) {
-          value = tmp[arg1].value;
-        }
-        if ("INPUT" === self.tagName) {
-          str = "type";
-          if ("type" === arg1) {
-            type = self.type;
-          }
-          return type;
-        }
-        type = null;
-        if (typeof value === "string") {
-          type = value;
-        }
-        return;
-      }
-      removeAttributeNS(arg0, arg1) {
-        if (this._attributes[arg0]) {
-          tmp3 = arg1;
-          delete tmp2[tmp];
-        }
-        return;
-      }
-      hasAttributeNS(arg0, arg1) {
-        tmp = this._attributes[arg0];
-        tmp2 = tmp;
-        if (tmp2) {
-          tmp3 = arg1;
-          tmp2 = arg1 in tmp;
-        }
-        return tmp2;
-      }
-      setAttribute(arg0, arg1) {
-        return this.setAttributeNS(null, arg0, arg1);
-      }
-      getAttribute(arg0) {
-        return this.getAttributeNS(null, arg0);
-      }
-      removeAttribute(arg0) {
-        return this.removeAttributeNS(null, arg0);
-      }
-      hasAttribute(arg0) {
-        return this.hasAttributeNS(null, arg0);
-      }
-      focus() {
-        return;
-      }
-      toString() {
-        return closure_1(this);
-      }
-      getElementsByClassName(arg0) {
-        closure_0 = arg0.split(" ");
-        items = [];
-        closure_1 = items;
-        tmp = closure_0(this, () => { ... });
-        return items;
-      }
-      getElementsByTagName(arg0) {
-        closure_0 = arg0.toLowerCase();
-        items = [];
-        closure_1 = items;
-        tmp = closure_0(this.childNodes, () => { ... });
-        return items;
-      }
-      contains(arg0) {
-        closure_0 = arg0;
-        tmp = closure_0(this, /* F116316 */ function() { ... }) || false;
-        return tmp;
-      }
-    }
-    obj = { exports: null };
-    obj[0] = {};
-    lib = obj;
-    callback(obj.exports, lib);
-  }
-  if (typeof f98884 !== "function") {
-    class I {
-      constructor(arg0, arg1, arg2) {
-        self = this;
-        tmp = I;
-        if (typeof Symbol !== "undefined") {
-          _Symbol3 = Symbol;
-          if (tmp[Symbol.hasInstance]) {
-            _Symbol2 = Symbol;
-            tmp2 = tmp[Symbol.hasInstance](self);
-          }
-          tmp3 = arg0;
-          if (tmp2) {
-            tmp6 = arg2;
-            if (undefined === arg2) {
-              tmp6 = c2;
-            } else if (!tmp6) {
-              tmp6 = null;
-            }
-            tmp7 = c2;
-            formatted = arg0;
-            if (tmp6 === c2) {
-              _String = String;
-              str = String(arg0);
-              formatted = str.toUpperCase();
-            }
-            tmp9 = arg1;
-            self.tagName = formatted;
-            self.nodeName = self.tagName;
-            str2 = "";
-            self.className = "";
-            self.dataset = {};
-            self.childNodes = [];
-            tmp10 = null;
-            self.parentNode = null;
-            self.style = {};
-            if (!arg1) {
-              tmp9 = null;
-            }
-            self.ownerDocument = tmp9;
-            self.namespaceURI = tmp6;
-            self._attributes = {};
-            str3 = "INPUT";
-            if ("INPUT" === self.tagName) {
-              str4 = "text";
-              self.type = "text";
-            }
-            return;
-          } else {
-            tmpResult = tmp(arg0);
-            tmp5 = tmpResult;
-            return tmpResult;
-          }
-        }
-        if (typeof Symbol !== "undefined") {
-          _Symbol4 = Symbol;
-          if (tmp[Symbol.hasInstance]) {
-            _Symbol = Symbol;
-            tmp2 = tmp[Symbol.hasInstance](self);
-          }
-        }
-        tmp2 = closure_1_8(self, tmp);
-        return;
-      }
-      appendChild(arg0) {
-        if (arg0.parentNode) {
-          parentNode = arg0.parentNode;
-          removeChildResult = parentNode.removeChild(arg0);
-        }
-        childNodes = this.childNodes;
-        arr = childNodes.push(arg0);
-        arg0.parentNode = this;
-        return arg0;
-      }
-      replaceChild(arg0, arg1) {
-        if (arg0.parentNode) {
-          parentNode = arg0.parentNode;
-          removeChildResult = parentNode.removeChild(arg0);
-        }
-        childNodes = this.childNodes;
-        arg1.parentNode = null;
-        this.childNodes[childNodes.indexOf(arg1)] = arg0;
-        arg0.parentNode = this;
-        return arg1;
-      }
-      removeChild(arg0) {
-        ({ childNodes, childNodes: childNodes2 } = this);
-        spliceResult = childNodes2.splice(childNodes.indexOf(arg0), 1);
-        arg0.parentNode = null;
-        return arg0;
-      }
-      insertBefore(arg0, arg1) {
-        if (arg0.parentNode) {
-          parentNode = arg0.parentNode;
-          removeChildResult = parentNode.removeChild(arg0);
-        }
-        self = this;
-        num = -1;
-        if (null != arg1) {
-          childNodes = self.childNodes;
-          num = childNodes.indexOf(arg1);
-        }
-        if (num > -1) {
-          childNodes1 = self.childNodes;
-          num2 = 0;
-          spliceResult = childNodes1.splice(num, 0, arg0);
-        } else {
-          childNodes2 = self.childNodes;
-          arr = childNodes2.push(arg0);
-        }
-        arg0.parentNode = self;
-        return arg0;
-      }
-      setAttributeNS(arg0, arg1, arg2) {
-        index = arg1.indexOf(":");
-        substr1 = arg1;
-        substr = null;
-        if (index > -1) {
-          num = 0;
-          substr = arg1.substr(0, index);
-          num2 = 1;
-          substr1 = arg1.substr(index + 1);
-        }
-        self = this;
-        if ("INPUT" === this.tagName) {
-          str = "type";
-          if ("type" === arg1) {
-            self.type = arg2;
-          }
-          return;
-        }
-        tmp4 = self._attributes[arg0];
-        if (!tmp4) {
-          obj = {};
-          self._attributes[arg0] = obj;
-          tmp4 = obj;
-        }
-        tmp4[substr1] = { value: arg2, prefix: substr };
-        return;
-      }
-      getAttributeNS(arg0, arg1) {
-        self = this;
-        tmp = this._attributes[arg0];
-        value = tmp;
-        if (tmp) {
-          value = tmp[arg1];
-        }
-        if (value) {
-          value = tmp[arg1].value;
-        }
-        if ("INPUT" === self.tagName) {
-          str = "type";
-          if ("type" === arg1) {
-            type = self.type;
-          }
-          return type;
-        }
-        type = null;
-        if (typeof value === "string") {
-          type = value;
-        }
-        return;
-      }
-      removeAttributeNS(arg0, arg1) {
-        if (this._attributes[arg0]) {
-          tmp3 = arg1;
-          delete tmp2[tmp];
-        }
-        return;
-      }
-      hasAttributeNS(arg0, arg1) {
-        tmp = this._attributes[arg0];
-        tmp2 = tmp;
-        if (tmp2) {
-          tmp3 = arg1;
-          tmp2 = arg1 in tmp;
-        }
-        return tmp2;
-      }
-      setAttribute(arg0, arg1) {
-        return this.setAttributeNS(null, arg0, arg1);
-      }
-      getAttribute(arg0) {
-        return this.getAttributeNS(null, arg0);
-      }
-      removeAttribute(arg0) {
-        return this.removeAttributeNS(null, arg0);
-      }
-      hasAttribute(arg0) {
-        return this.hasAttributeNS(null, arg0);
-      }
-      focus() {
-        return;
-      }
-      toString() {
-        return closure_1(this);
-      }
-      getElementsByClassName(arg0) {
-        closure_0 = arg0.split(" ");
-        items = [];
-        closure_1 = items;
-        tmp = closure_0(this, () => { ... });
-        return items;
-      }
-      getElementsByTagName(arg0) {
-        closure_0 = arg0.toLowerCase();
-        items = [];
-        closure_1 = items;
-        tmp = closure_0(this.childNodes, () => { ... });
-        return items;
-      }
-      contains(arg0) {
-        closure_0 = arg0;
-        tmp = closure_0(this, /* F116316 */ function() { ... }) || false;
-        return tmp;
-      }
-    }
-    HermesBuiltin.throwTypeError();
-  }
-  if (!lib) {
-    class I {
-      constructor(arg0, arg1, arg2) {
-        self = this;
-        tmp = I;
-        if (typeof Symbol !== "undefined") {
-          _Symbol3 = Symbol;
-          if (tmp[Symbol.hasInstance]) {
-            _Symbol2 = Symbol;
-            tmp2 = tmp[Symbol.hasInstance](self);
-          }
-          tmp3 = arg0;
-          if (tmp2) {
-            tmp6 = arg2;
-            if (undefined === arg2) {
-              tmp6 = c2;
-            } else if (!tmp6) {
-              tmp6 = null;
-            }
-            tmp7 = c2;
-            formatted = arg0;
-            if (tmp6 === c2) {
-              _String = String;
-              str = String(arg0);
-              formatted = str.toUpperCase();
-            }
-            tmp9 = arg1;
-            self.tagName = formatted;
-            self.nodeName = self.tagName;
-            str2 = "";
-            self.className = "";
-            self.dataset = {};
-            self.childNodes = [];
-            tmp10 = null;
-            self.parentNode = null;
-            self.style = {};
-            if (!arg1) {
-              tmp9 = null;
-            }
-            self.ownerDocument = tmp9;
-            self.namespaceURI = tmp6;
-            self._attributes = {};
-            str3 = "INPUT";
-            if ("INPUT" === self.tagName) {
-              str4 = "text";
-              self.type = "text";
-            }
-            return;
-          } else {
-            tmpResult = tmp(arg0);
-            tmp5 = tmpResult;
-            return tmpResult;
-          }
-        }
-        if (typeof Symbol !== "undefined") {
-          _Symbol4 = Symbol;
-          if (tmp[Symbol.hasInstance]) {
-            _Symbol = Symbol;
-            tmp2 = tmp[Symbol.hasInstance](self);
-          }
-        }
-        tmp2 = closure_1_8(self, tmp);
-        return;
-      }
-      appendChild(arg0) {
-        if (arg0.parentNode) {
-          parentNode = arg0.parentNode;
-          removeChildResult = parentNode.removeChild(arg0);
-        }
-        childNodes = this.childNodes;
-        arr = childNodes.push(arg0);
-        arg0.parentNode = this;
-        return arg0;
-      }
-      replaceChild(arg0, arg1) {
-        if (arg0.parentNode) {
-          parentNode = arg0.parentNode;
-          removeChildResult = parentNode.removeChild(arg0);
-        }
-        childNodes = this.childNodes;
-        arg1.parentNode = null;
-        this.childNodes[childNodes.indexOf(arg1)] = arg0;
-        arg0.parentNode = this;
-        return arg1;
-      }
-      removeChild(arg0) {
-        ({ childNodes, childNodes: childNodes2 } = this);
-        spliceResult = childNodes2.splice(childNodes.indexOf(arg0), 1);
-        arg0.parentNode = null;
-        return arg0;
-      }
-      insertBefore(arg0, arg1) {
-        if (arg0.parentNode) {
-          parentNode = arg0.parentNode;
-          removeChildResult = parentNode.removeChild(arg0);
-        }
-        self = this;
-        num = -1;
-        if (null != arg1) {
-          childNodes = self.childNodes;
-          num = childNodes.indexOf(arg1);
-        }
-        if (num > -1) {
-          childNodes1 = self.childNodes;
-          num2 = 0;
-          spliceResult = childNodes1.splice(num, 0, arg0);
-        } else {
-          childNodes2 = self.childNodes;
-          arr = childNodes2.push(arg0);
-        }
-        arg0.parentNode = self;
-        return arg0;
-      }
-      setAttributeNS(arg0, arg1, arg2) {
-        index = arg1.indexOf(":");
-        substr1 = arg1;
-        substr = null;
-        if (index > -1) {
-          num = 0;
-          substr = arg1.substr(0, index);
-          num2 = 1;
-          substr1 = arg1.substr(index + 1);
-        }
-        self = this;
-        if ("INPUT" === this.tagName) {
-          str = "type";
-          if ("type" === arg1) {
-            self.type = arg2;
-          }
-          return;
-        }
-        tmp4 = self._attributes[arg0];
-        if (!tmp4) {
-          obj = {};
-          self._attributes[arg0] = obj;
-          tmp4 = obj;
-        }
-        tmp4[substr1] = { value: arg2, prefix: substr };
-        return;
-      }
-      getAttributeNS(arg0, arg1) {
-        self = this;
-        tmp = this._attributes[arg0];
-        value = tmp;
-        if (tmp) {
-          value = tmp[arg1];
-        }
-        if (value) {
-          value = tmp[arg1].value;
-        }
-        if ("INPUT" === self.tagName) {
-          str = "type";
-          if ("type" === arg1) {
-            type = self.type;
-          }
-          return type;
-        }
-        type = null;
-        if (typeof value === "string") {
-          type = value;
-        }
-        return;
-      }
-      removeAttributeNS(arg0, arg1) {
-        if (this._attributes[arg0]) {
-          tmp3 = arg1;
-          delete tmp2[tmp];
-        }
-        return;
-      }
-      hasAttributeNS(arg0, arg1) {
-        tmp = this._attributes[arg0];
-        tmp2 = tmp;
-        if (tmp2) {
-          tmp3 = arg1;
-          tmp2 = arg1 in tmp;
-        }
-        return tmp2;
-      }
-      setAttribute(arg0, arg1) {
-        return this.setAttributeNS(null, arg0, arg1);
-      }
-      getAttribute(arg0) {
-        return this.getAttributeNS(null, arg0);
-      }
-      removeAttribute(arg0) {
-        return this.removeAttributeNS(null, arg0);
-      }
-      hasAttribute(arg0) {
-        return this.hasAttributeNS(null, arg0);
-      }
-      focus() {
-        return;
-      }
-      toString() {
-        return closure_1(this);
-      }
-      getElementsByClassName(arg0) {
-        closure_0 = arg0.split(" ");
-        items = [];
-        closure_1 = items;
-        tmp = closure_0(this, () => { ... });
-        return items;
-      }
-      getElementsByTagName(arg0) {
-        closure_0 = arg0.toLowerCase();
-        items = [];
-        closure_1 = items;
-        tmp = closure_0(this.childNodes, () => { ... });
-        return items;
-      }
-      contains(arg0) {
-        closure_0 = arg0;
-        tmp = closure_0(this, /* F116316 */ function() { ... }) || false;
-        return tmp;
-      }
-    }
-    obj = { exports: null };
-    obj[0] = {};
-    lib = obj;
-    callback(obj.exports, lib);
-  }
-  if (typeof f98884 !== "function") {
-    class I {
-      constructor(arg0, arg1, arg2) {
-        self = this;
-        tmp = I;
-        if (typeof Symbol !== "undefined") {
-          _Symbol3 = Symbol;
-          if (tmp[Symbol.hasInstance]) {
-            _Symbol2 = Symbol;
-            tmp2 = tmp[Symbol.hasInstance](self);
-          }
-          tmp3 = arg0;
-          if (tmp2) {
-            tmp6 = arg2;
-            if (undefined === arg2) {
-              tmp6 = c2;
-            } else if (!tmp6) {
-              tmp6 = null;
-            }
-            tmp7 = c2;
-            formatted = arg0;
-            if (tmp6 === c2) {
-              _String = String;
-              str = String(arg0);
-              formatted = str.toUpperCase();
-            }
-            tmp9 = arg1;
-            self.tagName = formatted;
-            self.nodeName = self.tagName;
-            str2 = "";
-            self.className = "";
-            self.dataset = {};
-            self.childNodes = [];
-            tmp10 = null;
-            self.parentNode = null;
-            self.style = {};
-            if (!arg1) {
-              tmp9 = null;
-            }
-            self.ownerDocument = tmp9;
-            self.namespaceURI = tmp6;
-            self._attributes = {};
-            str3 = "INPUT";
-            if ("INPUT" === self.tagName) {
-              str4 = "text";
-              self.type = "text";
-            }
-            return;
-          } else {
-            tmpResult = tmp(arg0);
-            tmp5 = tmpResult;
-            return tmpResult;
-          }
-        }
-        if (typeof Symbol !== "undefined") {
-          _Symbol4 = Symbol;
-          if (tmp[Symbol.hasInstance]) {
-            _Symbol = Symbol;
-            tmp2 = tmp[Symbol.hasInstance](self);
-          }
-        }
-        tmp2 = closure_1_8(self, tmp);
-        return;
-      }
-      appendChild(arg0) {
-        if (arg0.parentNode) {
-          parentNode = arg0.parentNode;
-          removeChildResult = parentNode.removeChild(arg0);
-        }
-        childNodes = this.childNodes;
-        arr = childNodes.push(arg0);
-        arg0.parentNode = this;
-        return arg0;
-      }
-      replaceChild(arg0, arg1) {
-        if (arg0.parentNode) {
-          parentNode = arg0.parentNode;
-          removeChildResult = parentNode.removeChild(arg0);
-        }
-        childNodes = this.childNodes;
-        arg1.parentNode = null;
-        this.childNodes[childNodes.indexOf(arg1)] = arg0;
-        arg0.parentNode = this;
-        return arg1;
-      }
-      removeChild(arg0) {
-        ({ childNodes, childNodes: childNodes2 } = this);
-        spliceResult = childNodes2.splice(childNodes.indexOf(arg0), 1);
-        arg0.parentNode = null;
-        return arg0;
-      }
-      insertBefore(arg0, arg1) {
-        if (arg0.parentNode) {
-          parentNode = arg0.parentNode;
-          removeChildResult = parentNode.removeChild(arg0);
-        }
-        self = this;
-        num = -1;
-        if (null != arg1) {
-          childNodes = self.childNodes;
-          num = childNodes.indexOf(arg1);
-        }
-        if (num > -1) {
-          childNodes1 = self.childNodes;
-          num2 = 0;
-          spliceResult = childNodes1.splice(num, 0, arg0);
-        } else {
-          childNodes2 = self.childNodes;
-          arr = childNodes2.push(arg0);
-        }
-        arg0.parentNode = self;
-        return arg0;
-      }
-      setAttributeNS(arg0, arg1, arg2) {
-        index = arg1.indexOf(":");
-        substr1 = arg1;
-        substr = null;
-        if (index > -1) {
-          num = 0;
-          substr = arg1.substr(0, index);
-          num2 = 1;
-          substr1 = arg1.substr(index + 1);
-        }
-        self = this;
-        if ("INPUT" === this.tagName) {
-          str = "type";
-          if ("type" === arg1) {
-            self.type = arg2;
-          }
-          return;
-        }
-        tmp4 = self._attributes[arg0];
-        if (!tmp4) {
-          obj = {};
-          self._attributes[arg0] = obj;
-          tmp4 = obj;
-        }
-        tmp4[substr1] = { value: arg2, prefix: substr };
-        return;
-      }
-      getAttributeNS(arg0, arg1) {
-        self = this;
-        tmp = this._attributes[arg0];
-        value = tmp;
-        if (tmp) {
-          value = tmp[arg1];
-        }
-        if (value) {
-          value = tmp[arg1].value;
-        }
-        if ("INPUT" === self.tagName) {
-          str = "type";
-          if ("type" === arg1) {
-            type = self.type;
-          }
-          return type;
-        }
-        type = null;
-        if (typeof value === "string") {
-          type = value;
-        }
-        return;
-      }
-      removeAttributeNS(arg0, arg1) {
-        if (this._attributes[arg0]) {
-          tmp3 = arg1;
-          delete tmp2[tmp];
-        }
-        return;
-      }
-      hasAttributeNS(arg0, arg1) {
-        tmp = this._attributes[arg0];
-        tmp2 = tmp;
-        if (tmp2) {
-          tmp3 = arg1;
-          tmp2 = arg1 in tmp;
-        }
-        return tmp2;
-      }
-      setAttribute(arg0, arg1) {
-        return this.setAttributeNS(null, arg0, arg1);
-      }
-      getAttribute(arg0) {
-        return this.getAttributeNS(null, arg0);
-      }
-      removeAttribute(arg0) {
-        return this.removeAttributeNS(null, arg0);
-      }
-      hasAttribute(arg0) {
-        return this.hasAttributeNS(null, arg0);
-      }
-      focus() {
-        return;
-      }
-      toString() {
-        return closure_1(this);
-      }
-      getElementsByClassName(arg0) {
-        closure_0 = arg0.split(" ");
-        items = [];
-        closure_1 = items;
-        tmp = closure_0(this, () => { ... });
-        return items;
-      }
-      getElementsByTagName(arg0) {
-        closure_0 = arg0.toLowerCase();
-        items = [];
-        closure_1 = items;
-        tmp = closure_0(this.childNodes, () => { ... });
-        return items;
-      }
-      contains(arg0) {
-        closure_0 = arg0;
-        tmp = closure_0(this, /* F116316 */ function() { ... }) || false;
-        return tmp;
-      }
-    }
-    HermesBuiltin.throwTypeError();
-  }
-  if (!lib) {
-    class I {
-      constructor(arg0, arg1, arg2) {
-        self = this;
-        tmp = I;
-        if (typeof Symbol !== "undefined") {
-          _Symbol3 = Symbol;
-          if (tmp[Symbol.hasInstance]) {
-            _Symbol2 = Symbol;
-            tmp2 = tmp[Symbol.hasInstance](self);
-          }
-          tmp3 = arg0;
-          if (tmp2) {
-            tmp6 = arg2;
-            if (undefined === arg2) {
-              tmp6 = c2;
-            } else if (!tmp6) {
-              tmp6 = null;
-            }
-            tmp7 = c2;
-            formatted = arg0;
-            if (tmp6 === c2) {
-              _String = String;
-              str = String(arg0);
-              formatted = str.toUpperCase();
-            }
-            tmp9 = arg1;
-            self.tagName = formatted;
-            self.nodeName = self.tagName;
-            str2 = "";
-            self.className = "";
-            self.dataset = {};
-            self.childNodes = [];
-            tmp10 = null;
-            self.parentNode = null;
-            self.style = {};
-            if (!arg1) {
-              tmp9 = null;
-            }
-            self.ownerDocument = tmp9;
-            self.namespaceURI = tmp6;
-            self._attributes = {};
-            str3 = "INPUT";
-            if ("INPUT" === self.tagName) {
-              str4 = "text";
-              self.type = "text";
-            }
-            return;
-          } else {
-            tmpResult = tmp(arg0);
-            tmp5 = tmpResult;
-            return tmpResult;
-          }
-        }
-        if (typeof Symbol !== "undefined") {
-          _Symbol4 = Symbol;
-          if (tmp[Symbol.hasInstance]) {
-            _Symbol = Symbol;
-            tmp2 = tmp[Symbol.hasInstance](self);
-          }
-        }
-        tmp2 = closure_1_8(self, tmp);
-        return;
-      }
-      appendChild(arg0) {
-        if (arg0.parentNode) {
-          parentNode = arg0.parentNode;
-          removeChildResult = parentNode.removeChild(arg0);
-        }
-        childNodes = this.childNodes;
-        arr = childNodes.push(arg0);
-        arg0.parentNode = this;
-        return arg0;
-      }
-      replaceChild(arg0, arg1) {
-        if (arg0.parentNode) {
-          parentNode = arg0.parentNode;
-          removeChildResult = parentNode.removeChild(arg0);
-        }
-        childNodes = this.childNodes;
-        arg1.parentNode = null;
-        this.childNodes[childNodes.indexOf(arg1)] = arg0;
-        arg0.parentNode = this;
-        return arg1;
-      }
-      removeChild(arg0) {
-        ({ childNodes, childNodes: childNodes2 } = this);
-        spliceResult = childNodes2.splice(childNodes.indexOf(arg0), 1);
-        arg0.parentNode = null;
-        return arg0;
-      }
-      insertBefore(arg0, arg1) {
-        if (arg0.parentNode) {
-          parentNode = arg0.parentNode;
-          removeChildResult = parentNode.removeChild(arg0);
-        }
-        self = this;
-        num = -1;
-        if (null != arg1) {
-          childNodes = self.childNodes;
-          num = childNodes.indexOf(arg1);
-        }
-        if (num > -1) {
-          childNodes1 = self.childNodes;
-          num2 = 0;
-          spliceResult = childNodes1.splice(num, 0, arg0);
-        } else {
-          childNodes2 = self.childNodes;
-          arr = childNodes2.push(arg0);
-        }
-        arg0.parentNode = self;
-        return arg0;
-      }
-      setAttributeNS(arg0, arg1, arg2) {
-        index = arg1.indexOf(":");
-        substr1 = arg1;
-        substr = null;
-        if (index > -1) {
-          num = 0;
-          substr = arg1.substr(0, index);
-          num2 = 1;
-          substr1 = arg1.substr(index + 1);
-        }
-        self = this;
-        if ("INPUT" === this.tagName) {
-          str = "type";
-          if ("type" === arg1) {
-            self.type = arg2;
-          }
-          return;
-        }
-        tmp4 = self._attributes[arg0];
-        if (!tmp4) {
-          obj = {};
-          self._attributes[arg0] = obj;
-          tmp4 = obj;
-        }
-        tmp4[substr1] = { value: arg2, prefix: substr };
-        return;
-      }
-      getAttributeNS(arg0, arg1) {
-        self = this;
-        tmp = this._attributes[arg0];
-        value = tmp;
-        if (tmp) {
-          value = tmp[arg1];
-        }
-        if (value) {
-          value = tmp[arg1].value;
-        }
-        if ("INPUT" === self.tagName) {
-          str = "type";
-          if ("type" === arg1) {
-            type = self.type;
-          }
-          return type;
-        }
-        type = null;
-        if (typeof value === "string") {
-          type = value;
-        }
-        return;
-      }
-      removeAttributeNS(arg0, arg1) {
-        if (this._attributes[arg0]) {
-          tmp3 = arg1;
-          delete tmp2[tmp];
-        }
-        return;
-      }
-      hasAttributeNS(arg0, arg1) {
-        tmp = this._attributes[arg0];
-        tmp2 = tmp;
-        if (tmp2) {
-          tmp3 = arg1;
-          tmp2 = arg1 in tmp;
-        }
-        return tmp2;
-      }
-      setAttribute(arg0, arg1) {
-        return this.setAttributeNS(null, arg0, arg1);
-      }
-      getAttribute(arg0) {
-        return this.getAttributeNS(null, arg0);
-      }
-      removeAttribute(arg0) {
-        return this.removeAttributeNS(null, arg0);
-      }
-      hasAttribute(arg0) {
-        return this.hasAttributeNS(null, arg0);
-      }
-      focus() {
-        return;
-      }
-      toString() {
-        return closure_1(this);
-      }
-      getElementsByClassName(arg0) {
-        closure_0 = arg0.split(" ");
-        items = [];
-        closure_1 = items;
-        tmp = closure_0(this, () => { ... });
-        return items;
-      }
-      getElementsByTagName(arg0) {
-        closure_0 = arg0.toLowerCase();
-        items = [];
-        closure_1 = items;
-        tmp = closure_0(this.childNodes, () => { ... });
-        return items;
-      }
-      contains(arg0) {
-        closure_0 = arg0;
-        tmp = closure_0(this, /* F116316 */ function() { ... }) || false;
-        return tmp;
-      }
-    }
-    obj1 = { exports: null };
-    obj1[0] = {};
-    lib = obj1;
-    callback(obj1.exports, lib);
-  }
-  if (typeof f98884 !== "function") {
-    class I {
-      constructor(arg0, arg1, arg2) {
-        self = this;
-        tmp = I;
-        if (typeof Symbol !== "undefined") {
-          _Symbol3 = Symbol;
-          if (tmp[Symbol.hasInstance]) {
-            _Symbol2 = Symbol;
-            tmp2 = tmp[Symbol.hasInstance](self);
-          }
-          tmp3 = arg0;
-          if (tmp2) {
-            tmp6 = arg2;
-            if (undefined === arg2) {
-              tmp6 = c2;
-            } else if (!tmp6) {
-              tmp6 = null;
-            }
-            tmp7 = c2;
-            formatted = arg0;
-            if (tmp6 === c2) {
-              _String = String;
-              str = String(arg0);
-              formatted = str.toUpperCase();
-            }
-            tmp9 = arg1;
-            self.tagName = formatted;
-            self.nodeName = self.tagName;
-            str2 = "";
-            self.className = "";
-            self.dataset = {};
-            self.childNodes = [];
-            tmp10 = null;
-            self.parentNode = null;
-            self.style = {};
-            if (!arg1) {
-              tmp9 = null;
-            }
-            self.ownerDocument = tmp9;
-            self.namespaceURI = tmp6;
-            self._attributes = {};
-            str3 = "INPUT";
-            if ("INPUT" === self.tagName) {
-              str4 = "text";
-              self.type = "text";
-            }
-            return;
-          } else {
-            tmpResult = tmp(arg0);
-            tmp5 = tmpResult;
-            return tmpResult;
-          }
-        }
-        if (typeof Symbol !== "undefined") {
-          _Symbol4 = Symbol;
-          if (tmp[Symbol.hasInstance]) {
-            _Symbol = Symbol;
-            tmp2 = tmp[Symbol.hasInstance](self);
-          }
-        }
-        tmp2 = closure_1_8(self, tmp);
-        return;
-      }
-      appendChild(arg0) {
-        if (arg0.parentNode) {
-          parentNode = arg0.parentNode;
-          removeChildResult = parentNode.removeChild(arg0);
-        }
-        childNodes = this.childNodes;
-        arr = childNodes.push(arg0);
-        arg0.parentNode = this;
-        return arg0;
-      }
-      replaceChild(arg0, arg1) {
-        if (arg0.parentNode) {
-          parentNode = arg0.parentNode;
-          removeChildResult = parentNode.removeChild(arg0);
-        }
-        childNodes = this.childNodes;
-        arg1.parentNode = null;
-        this.childNodes[childNodes.indexOf(arg1)] = arg0;
-        arg0.parentNode = this;
-        return arg1;
-      }
-      removeChild(arg0) {
-        ({ childNodes, childNodes: childNodes2 } = this);
-        spliceResult = childNodes2.splice(childNodes.indexOf(arg0), 1);
-        arg0.parentNode = null;
-        return arg0;
-      }
-      insertBefore(arg0, arg1) {
-        if (arg0.parentNode) {
-          parentNode = arg0.parentNode;
-          removeChildResult = parentNode.removeChild(arg0);
-        }
-        self = this;
-        num = -1;
-        if (null != arg1) {
-          childNodes = self.childNodes;
-          num = childNodes.indexOf(arg1);
-        }
-        if (num > -1) {
-          childNodes1 = self.childNodes;
-          num2 = 0;
-          spliceResult = childNodes1.splice(num, 0, arg0);
-        } else {
-          childNodes2 = self.childNodes;
-          arr = childNodes2.push(arg0);
-        }
-        arg0.parentNode = self;
-        return arg0;
-      }
-      setAttributeNS(arg0, arg1, arg2) {
-        index = arg1.indexOf(":");
-        substr1 = arg1;
-        substr = null;
-        if (index > -1) {
-          num = 0;
-          substr = arg1.substr(0, index);
-          num2 = 1;
-          substr1 = arg1.substr(index + 1);
-        }
-        self = this;
-        if ("INPUT" === this.tagName) {
-          str = "type";
-          if ("type" === arg1) {
-            self.type = arg2;
-          }
-          return;
-        }
-        tmp4 = self._attributes[arg0];
-        if (!tmp4) {
-          obj = {};
-          self._attributes[arg0] = obj;
-          tmp4 = obj;
-        }
-        tmp4[substr1] = { value: arg2, prefix: substr };
-        return;
-      }
-      getAttributeNS(arg0, arg1) {
-        self = this;
-        tmp = this._attributes[arg0];
-        value = tmp;
-        if (tmp) {
-          value = tmp[arg1];
-        }
-        if (value) {
-          value = tmp[arg1].value;
-        }
-        if ("INPUT" === self.tagName) {
-          str = "type";
-          if ("type" === arg1) {
-            type = self.type;
-          }
-          return type;
-        }
-        type = null;
-        if (typeof value === "string") {
-          type = value;
-        }
-        return;
-      }
-      removeAttributeNS(arg0, arg1) {
-        if (this._attributes[arg0]) {
-          tmp3 = arg1;
-          delete tmp2[tmp];
-        }
-        return;
-      }
-      hasAttributeNS(arg0, arg1) {
-        tmp = this._attributes[arg0];
-        tmp2 = tmp;
-        if (tmp2) {
-          tmp3 = arg1;
-          tmp2 = arg1 in tmp;
-        }
-        return tmp2;
-      }
-      setAttribute(arg0, arg1) {
-        return this.setAttributeNS(null, arg0, arg1);
-      }
-      getAttribute(arg0) {
-        return this.getAttributeNS(null, arg0);
-      }
-      removeAttribute(arg0) {
-        return this.removeAttributeNS(null, arg0);
-      }
-      hasAttribute(arg0) {
-        return this.hasAttributeNS(null, arg0);
-      }
-      focus() {
-        return;
-      }
-      toString() {
-        return closure_1(this);
-      }
-      getElementsByClassName(arg0) {
-        closure_0 = arg0.split(" ");
-        items = [];
-        closure_1 = items;
-        tmp = closure_0(this, () => { ... });
-        return items;
-      }
-      getElementsByTagName(arg0) {
-        closure_0 = arg0.toLowerCase();
-        items = [];
-        closure_1 = items;
-        tmp = closure_0(this.childNodes, () => { ... });
-        return items;
-      }
-      contains(arg0) {
-        closure_0 = arg0;
-        tmp = closure_0(this, /* F116316 */ function() { ... }) || false;
-        return tmp;
-      }
-    }
-    HermesBuiltin.throwTypeError();
-  }
-  if (!lib) {
-    class I {
-      constructor(arg0, arg1, arg2) {
-        self = this;
-        tmp = I;
-        if (typeof Symbol !== "undefined") {
-          _Symbol3 = Symbol;
-          if (tmp[Symbol.hasInstance]) {
-            _Symbol2 = Symbol;
-            tmp2 = tmp[Symbol.hasInstance](self);
-          }
-          tmp3 = arg0;
-          if (tmp2) {
-            tmp6 = arg2;
-            if (undefined === arg2) {
-              tmp6 = c2;
-            } else if (!tmp6) {
-              tmp6 = null;
-            }
-            tmp7 = c2;
-            formatted = arg0;
-            if (tmp6 === c2) {
-              _String = String;
-              str = String(arg0);
-              formatted = str.toUpperCase();
-            }
-            tmp9 = arg1;
-            self.tagName = formatted;
-            self.nodeName = self.tagName;
-            str2 = "";
-            self.className = "";
-            self.dataset = {};
-            self.childNodes = [];
-            tmp10 = null;
-            self.parentNode = null;
-            self.style = {};
-            if (!arg1) {
-              tmp9 = null;
-            }
-            self.ownerDocument = tmp9;
-            self.namespaceURI = tmp6;
-            self._attributes = {};
-            str3 = "INPUT";
-            if ("INPUT" === self.tagName) {
-              str4 = "text";
-              self.type = "text";
-            }
-            return;
-          } else {
-            tmpResult = tmp(arg0);
-            tmp5 = tmpResult;
-            return tmpResult;
-          }
-        }
-        if (typeof Symbol !== "undefined") {
-          _Symbol4 = Symbol;
-          if (tmp[Symbol.hasInstance]) {
-            _Symbol = Symbol;
-            tmp2 = tmp[Symbol.hasInstance](self);
-          }
-        }
-        tmp2 = closure_1_8(self, tmp);
-        return;
-      }
-      appendChild(arg0) {
-        if (arg0.parentNode) {
-          parentNode = arg0.parentNode;
-          removeChildResult = parentNode.removeChild(arg0);
-        }
-        childNodes = this.childNodes;
-        arr = childNodes.push(arg0);
-        arg0.parentNode = this;
-        return arg0;
-      }
-      replaceChild(arg0, arg1) {
-        if (arg0.parentNode) {
-          parentNode = arg0.parentNode;
-          removeChildResult = parentNode.removeChild(arg0);
-        }
-        childNodes = this.childNodes;
-        arg1.parentNode = null;
-        this.childNodes[childNodes.indexOf(arg1)] = arg0;
-        arg0.parentNode = this;
-        return arg1;
-      }
-      removeChild(arg0) {
-        ({ childNodes, childNodes: childNodes2 } = this);
-        spliceResult = childNodes2.splice(childNodes.indexOf(arg0), 1);
-        arg0.parentNode = null;
-        return arg0;
-      }
-      insertBefore(arg0, arg1) {
-        if (arg0.parentNode) {
-          parentNode = arg0.parentNode;
-          removeChildResult = parentNode.removeChild(arg0);
-        }
-        self = this;
-        num = -1;
-        if (null != arg1) {
-          childNodes = self.childNodes;
-          num = childNodes.indexOf(arg1);
-        }
-        if (num > -1) {
-          childNodes1 = self.childNodes;
-          num2 = 0;
-          spliceResult = childNodes1.splice(num, 0, arg0);
-        } else {
-          childNodes2 = self.childNodes;
-          arr = childNodes2.push(arg0);
-        }
-        arg0.parentNode = self;
-        return arg0;
-      }
-      setAttributeNS(arg0, arg1, arg2) {
-        index = arg1.indexOf(":");
-        substr1 = arg1;
-        substr = null;
-        if (index > -1) {
-          num = 0;
-          substr = arg1.substr(0, index);
-          num2 = 1;
-          substr1 = arg1.substr(index + 1);
-        }
-        self = this;
-        if ("INPUT" === this.tagName) {
-          str = "type";
-          if ("type" === arg1) {
-            self.type = arg2;
-          }
-          return;
-        }
-        tmp4 = self._attributes[arg0];
-        if (!tmp4) {
-          obj = {};
-          self._attributes[arg0] = obj;
-          tmp4 = obj;
-        }
-        tmp4[substr1] = { value: arg2, prefix: substr };
-        return;
-      }
-      getAttributeNS(arg0, arg1) {
-        self = this;
-        tmp = this._attributes[arg0];
-        value = tmp;
-        if (tmp) {
-          value = tmp[arg1];
-        }
-        if (value) {
-          value = tmp[arg1].value;
-        }
-        if ("INPUT" === self.tagName) {
-          str = "type";
-          if ("type" === arg1) {
-            type = self.type;
-          }
-          return type;
-        }
-        type = null;
-        if (typeof value === "string") {
-          type = value;
-        }
-        return;
-      }
-      removeAttributeNS(arg0, arg1) {
-        if (this._attributes[arg0]) {
-          tmp3 = arg1;
-          delete tmp2[tmp];
-        }
-        return;
-      }
-      hasAttributeNS(arg0, arg1) {
-        tmp = this._attributes[arg0];
-        tmp2 = tmp;
-        if (tmp2) {
-          tmp3 = arg1;
-          tmp2 = arg1 in tmp;
-        }
-        return tmp2;
-      }
-      setAttribute(arg0, arg1) {
-        return this.setAttributeNS(null, arg0, arg1);
-      }
-      getAttribute(arg0) {
-        return this.getAttributeNS(null, arg0);
-      }
-      removeAttribute(arg0) {
-        return this.removeAttributeNS(null, arg0);
-      }
-      hasAttribute(arg0) {
-        return this.hasAttributeNS(null, arg0);
-      }
-      focus() {
-        return;
-      }
-      toString() {
-        return closure_1(this);
-      }
-      getElementsByClassName(arg0) {
-        closure_0 = arg0.split(" ");
-        items = [];
-        closure_1 = items;
-        tmp = closure_0(this, () => { ... });
-        return items;
-      }
-      getElementsByTagName(arg0) {
-        closure_0 = arg0.toLowerCase();
-        items = [];
-        closure_1 = items;
-        tmp = closure_0(this.childNodes, () => { ... });
-        return items;
-      }
-      contains(arg0) {
-        closure_0 = arg0;
-        tmp = closure_0(this, /* F116316 */ function() { ... }) || false;
-        return tmp;
-      }
-    }
-    const obj2 = { exports: null };
-    obj2[0] = {};
-    lib = obj2;
-    callback(obj2.exports, lib);
-  }
-  lib = lib.exports;
-  c2 = "http://www.w3.org/1999/xhtml";
-  arg1.exports = I;
-  I.prototype.type = "DOMElement";
-  I.prototype.nodeType = 1;
-  I.prototype.removeEventListener = lib.exports;
-  I.prototype.addEventListener = lib.exports;
-  I.prototype.dispatchEvent = lib.exports;
 };
-create = undefined;
+let closure_138_1;
 f98884 = () => {
 
 };
-f98876 = (arg0, arg1) => {
+let closure_139_0 = (arg0, arg1) => {
   class K {
     constructor(arg0) {
       self = this;
@@ -3841,17 +3184,12 @@ f98876 = (arg0, arg1) => {
           tmp2 = tmp[Symbol.hasInstance](self);
         }
       }
-      tmp2 = closure_1_8(self, tmp);
+      tmp2 = U(self, tmp);
       return;
     }
-    toString() {
-      childNodes = this.childNodes;
-      mapped = childNodes.map(() => { ... });
-      return mapped.join("");
-    }
   }
-  let callback = K;
-  if (typeof f98883 !== "function") {
+  closure_0 = K;
+  if (typeof f98883 === "function") {
     class K {
       constructor(arg0) {
         self = this;
@@ -3885,18 +3223,154 @@ f98876 = (arg0, arg1) => {
             tmp2 = tmp[Symbol.hasInstance](self);
           }
         }
-        tmp2 = closure_1_8(self, tmp);
+        tmp2 = U(self, tmp);
         return;
       }
-      toString() {
-        childNodes = this.childNodes;
-        mapped = childNodes.map(() => { ... });
-        return mapped.join("");
-      }
     }
-    HermesBuiltin.throwTypeError();
-  }
-  if (callback) {
+    if (typeof f98884 === "function") {
+      class K {
+        constructor(arg0) {
+          self = this;
+          tmp = c0;
+          if (typeof Symbol !== "undefined") {
+            _Symbol3 = Symbol;
+            if (tmp[Symbol.hasInstance]) {
+              _Symbol2 = Symbol;
+              tmp2 = tmp[Symbol.hasInstance](self);
+            }
+            if (tmp2) {
+              tmp5 = arg0;
+              self.childNodes = [];
+              tmp6 = null;
+              self.parentNode = null;
+              if (!arg0) {
+                tmp5 = null;
+              }
+              self.ownerDocument = tmp5;
+              return;
+            } else {
+              tmpResult = tmp();
+              tmp4 = tmpResult;
+              return tmpResult;
+            }
+          }
+          if (typeof Symbol !== "undefined") {
+            _Symbol4 = Symbol;
+            if (tmp[Symbol.hasInstance]) {
+              _Symbol = Symbol;
+              tmp2 = tmp[Symbol.hasInstance](self);
+            }
+          }
+          tmp2 = U(self, tmp);
+          return;
+        }
+        toString() {
+          childNodes = this.childNodes;
+          mapped = childNodes.map(() => { ... });
+          return mapped.join("");
+        }
+      }
+      if (!closure_146_1) {
+        class K {
+          constructor(arg0) {
+            self = this;
+            tmp = c0;
+            if (typeof Symbol !== "undefined") {
+              _Symbol3 = Symbol;
+              if (tmp[Symbol.hasInstance]) {
+                _Symbol2 = Symbol;
+                tmp2 = tmp[Symbol.hasInstance](self);
+              }
+              if (tmp2) {
+                tmp5 = arg0;
+                self.childNodes = [];
+                tmp6 = null;
+                self.parentNode = null;
+                if (!arg0) {
+                  tmp5 = null;
+                }
+                self.ownerDocument = tmp5;
+                return;
+              } else {
+                tmpResult = tmp();
+                tmp4 = tmpResult;
+                return tmpResult;
+              }
+            }
+            if (typeof Symbol !== "undefined") {
+              _Symbol4 = Symbol;
+              if (tmp[Symbol.hasInstance]) {
+                _Symbol = Symbol;
+                tmp2 = tmp[Symbol.hasInstance](self);
+              }
+            }
+            tmp2 = U(self, tmp);
+            return;
+          }
+          toString() {
+            childNodes = this.childNodes;
+            mapped = childNodes.map(() => { ... });
+            return mapped.join("");
+          }
+        }
+        const obj = { exports: {} };
+        closure_146_1 = obj;
+        closure_146_0(obj.exports, closure_146_1);
+      }
+      const _exports = closure_146_1.exports;
+      arg1.exports = K;
+      K.prototype.type = "DocumentFragment";
+      K.prototype.nodeType = 11;
+      K.prototype.nodeName = "#document-fragment";
+      K.prototype.appendChild = _exports.prototype.appendChild;
+      K.prototype.replaceChild = _exports.prototype.replaceChild;
+      K.prototype.removeChild = _exports.prototype.removeChild;
+    } else {
+      class K {
+        constructor(arg0) {
+          self = this;
+          tmp = c0;
+          if (typeof Symbol !== "undefined") {
+            _Symbol3 = Symbol;
+            if (tmp[Symbol.hasInstance]) {
+              _Symbol2 = Symbol;
+              tmp2 = tmp[Symbol.hasInstance](self);
+            }
+            if (tmp2) {
+              tmp5 = arg0;
+              self.childNodes = [];
+              tmp6 = null;
+              self.parentNode = null;
+              if (!arg0) {
+                tmp5 = null;
+              }
+              self.ownerDocument = tmp5;
+              return;
+            } else {
+              tmpResult = tmp();
+              tmp4 = tmpResult;
+              return tmpResult;
+            }
+          }
+          if (typeof Symbol !== "undefined") {
+            _Symbol4 = Symbol;
+            if (tmp[Symbol.hasInstance]) {
+              _Symbol = Symbol;
+              tmp2 = tmp[Symbol.hasInstance](self);
+            }
+          }
+          tmp2 = U(self, tmp);
+          return;
+        }
+        toString() {
+          childNodes = this.childNodes;
+          mapped = childNodes.map(() => { ... });
+          return mapped.join("");
+        }
+      }
+      throw new TypeError("Trying to call a non-function");
+    }
+  } else {
     class K {
       constructor(arg0) {
         self = this;
@@ -3930,7 +3404,7 @@ f98876 = (arg0, arg1) => {
             tmp2 = tmp[Symbol.hasInstance](self);
           }
         }
-        tmp2 = closure_1_8(self, tmp);
+        tmp2 = U(self, tmp);
         return;
       }
       toString() {
@@ -3939,115 +3413,14 @@ f98876 = (arg0, arg1) => {
         return mapped.join("");
       }
     }
-    callback = 0;
-    let obj = tmp(0);
+    throw new TypeError("Trying to call a non-function");
   }
-  if (typeof f98884 !== "function") {
-    class K {
-      constructor(arg0) {
-        self = this;
-        tmp = c0;
-        if (typeof Symbol !== "undefined") {
-          _Symbol3 = Symbol;
-          if (tmp[Symbol.hasInstance]) {
-            _Symbol2 = Symbol;
-            tmp2 = tmp[Symbol.hasInstance](self);
-          }
-          if (tmp2) {
-            tmp5 = arg0;
-            self.childNodes = [];
-            tmp6 = null;
-            self.parentNode = null;
-            if (!arg0) {
-              tmp5 = null;
-            }
-            self.ownerDocument = tmp5;
-            return;
-          } else {
-            tmpResult = tmp();
-            tmp4 = tmpResult;
-            return tmpResult;
-          }
-        }
-        if (typeof Symbol !== "undefined") {
-          _Symbol4 = Symbol;
-          if (tmp[Symbol.hasInstance]) {
-            _Symbol = Symbol;
-            tmp2 = tmp[Symbol.hasInstance](self);
-          }
-        }
-        tmp2 = closure_1_8(self, tmp);
-        return;
-      }
-      toString() {
-        childNodes = this.childNodes;
-        mapped = childNodes.map(() => { ... });
-        return mapped.join("");
-      }
-    }
-    HermesBuiltin.throwTypeError();
-  }
-  if (!obj) {
-    class K {
-      constructor(arg0) {
-        self = this;
-        tmp = c0;
-        if (typeof Symbol !== "undefined") {
-          _Symbol3 = Symbol;
-          if (tmp[Symbol.hasInstance]) {
-            _Symbol2 = Symbol;
-            tmp2 = tmp[Symbol.hasInstance](self);
-          }
-          if (tmp2) {
-            tmp5 = arg0;
-            self.childNodes = [];
-            tmp6 = null;
-            self.parentNode = null;
-            if (!arg0) {
-              tmp5 = null;
-            }
-            self.ownerDocument = tmp5;
-            return;
-          } else {
-            tmpResult = tmp();
-            tmp4 = tmpResult;
-            return tmpResult;
-          }
-        }
-        if (typeof Symbol !== "undefined") {
-          _Symbol4 = Symbol;
-          if (tmp[Symbol.hasInstance]) {
-            _Symbol = Symbol;
-            tmp2 = tmp[Symbol.hasInstance](self);
-          }
-        }
-        tmp2 = closure_1_8(self, tmp);
-        return;
-      }
-      toString() {
-        childNodes = this.childNodes;
-        mapped = childNodes.map(() => { ... });
-        return mapped.join("");
-      }
-    }
-    obj = { exports: null };
-    obj[0] = {};
-    callback(obj.exports, obj);
-  }
-  const _exports = obj.exports;
-  arg1.exports = K;
-  K.prototype.type = "DocumentFragment";
-  K.prototype.nodeType = 11;
-  K.prototype.nodeName = "#document-fragment";
-  K.prototype.appendChild = _exports.prototype.appendChild;
-  K.prototype.replaceChild = _exports.prototype.replaceChild;
-  K.prototype.removeChild = _exports.prototype.removeChild;
 };
-create = undefined;
+let closure_139_1;
 f98884 = () => {
 
 };
-f98876 = (arg0, arg1) => {
+let closure_140_0 = (arg0, arg1) => {
   class it {
     constructor(arg0) {
       return;
@@ -4061,11 +3434,11 @@ f98876 = (arg0, arg1) => {
   }
   arg1.exports = it;
 };
-create = undefined;
+let closure_140_1;
 f98884 = () => {
 
 };
-f98876 = (arg0, arg1) => {
+let closure_141_0 = (arg0, arg1) => {
   class Ue {
     constructor() {
       self = this;
@@ -4106,11 +3479,11 @@ f98876 = (arg0, arg1) => {
           tmp2 = tmp[Symbol.hasInstance](self);
         }
       }
-      tmp2 = closure_1_8(self, tmp);
+      tmp2 = U(self, tmp);
       return;
     }
   }
-  if (typeof f98883 !== "function") {
+  if (typeof f98883 === "function") {
     class Ue {
       constructor() {
         self = this;
@@ -4151,13 +3524,1323 @@ f98876 = (arg0, arg1) => {
             tmp2 = tmp[Symbol.hasInstance](self);
           }
         }
-        tmp2 = closure_1_8(self, tmp);
+        tmp2 = U(self, tmp);
         return;
       }
     }
-    HermesBuiltin.throwTypeError();
-  }
-  if (callback) {
+    if (typeof f98884 === "function") {
+      class Ue {
+        constructor() {
+          self = this;
+          tmp = Ue;
+          if (typeof Symbol !== "undefined") {
+            _Symbol3 = Symbol;
+            if (tmp[Symbol.hasInstance]) {
+              _Symbol2 = Symbol;
+              tmp2 = tmp[Symbol.hasInstance](self);
+            }
+            if (tmp2) {
+              str = "head";
+              self.head = self.createElement("head");
+              str2 = "body";
+              self.body = self.createElement("body");
+              str3 = "html";
+              self.documentElement = self.createElement("html");
+              documentElement = self.documentElement;
+              appendChildResult = documentElement.appendChild(self.head);
+              documentElement2 = self.documentElement;
+              appendChildResult1 = documentElement2.appendChild(self.body);
+              items = [];
+              items[0] = self.documentElement;
+              self.childNodes = items;
+              num = 9;
+              self.nodeType = 9;
+              return;
+            } else {
+              tmpResult = tmp();
+              tmp4 = tmpResult;
+              return tmpResult;
+            }
+          }
+          if (typeof Symbol !== "undefined") {
+            _Symbol4 = Symbol;
+            if (tmp[Symbol.hasInstance]) {
+              _Symbol = Symbol;
+              tmp2 = tmp[Symbol.hasInstance](self);
+            }
+          }
+          tmp2 = U(self, tmp);
+          return;
+        }
+      }
+      if (!closure_139_1) {
+        class Ue {
+          constructor() {
+            self = this;
+            tmp = Ue;
+            if (typeof Symbol !== "undefined") {
+              _Symbol3 = Symbol;
+              if (tmp[Symbol.hasInstance]) {
+                _Symbol2 = Symbol;
+                tmp2 = tmp[Symbol.hasInstance](self);
+              }
+              if (tmp2) {
+                str = "head";
+                self.head = self.createElement("head");
+                str2 = "body";
+                self.body = self.createElement("body");
+                str3 = "html";
+                self.documentElement = self.createElement("html");
+                documentElement = self.documentElement;
+                appendChildResult = documentElement.appendChild(self.head);
+                documentElement2 = self.documentElement;
+                appendChildResult1 = documentElement2.appendChild(self.body);
+                items = [];
+                items[0] = self.documentElement;
+                self.childNodes = items;
+                num = 9;
+                self.nodeType = 9;
+                return;
+              } else {
+                tmpResult = tmp();
+                tmp4 = tmpResult;
+                return tmpResult;
+              }
+            }
+            if (typeof Symbol !== "undefined") {
+              _Symbol4 = Symbol;
+              if (tmp[Symbol.hasInstance]) {
+                _Symbol = Symbol;
+                tmp2 = tmp[Symbol.hasInstance](self);
+              }
+            }
+            tmp2 = U(self, tmp);
+            return;
+          }
+        }
+        let obj = { exports: {} };
+        closure_139_1 = obj;
+        closure_139_0(obj.exports, closure_139_1);
+      }
+      closure_0 = closure_139_1.exports;
+      if (typeof f98884 === "function") {
+        class Ue {
+          constructor() {
+            self = this;
+            tmp = Ue;
+            if (typeof Symbol !== "undefined") {
+              _Symbol3 = Symbol;
+              if (tmp[Symbol.hasInstance]) {
+                _Symbol2 = Symbol;
+                tmp2 = tmp[Symbol.hasInstance](self);
+              }
+              if (tmp2) {
+                str = "head";
+                self.head = self.createElement("head");
+                str2 = "body";
+                self.body = self.createElement("body");
+                str3 = "html";
+                self.documentElement = self.createElement("html");
+                documentElement = self.documentElement;
+                appendChildResult = documentElement.appendChild(self.head);
+                documentElement2 = self.documentElement;
+                appendChildResult1 = documentElement2.appendChild(self.body);
+                items = [];
+                items[0] = self.documentElement;
+                self.childNodes = items;
+                num = 9;
+                self.nodeType = 9;
+                return;
+              } else {
+                tmpResult = tmp();
+                tmp4 = tmpResult;
+                return tmpResult;
+              }
+            }
+            if (typeof Symbol !== "undefined") {
+              _Symbol4 = Symbol;
+              if (tmp[Symbol.hasInstance]) {
+                _Symbol = Symbol;
+                tmp2 = tmp[Symbol.hasInstance](self);
+              }
+            }
+            tmp2 = U(self, tmp);
+            return;
+          }
+        }
+        if (!closure_140_1) {
+          class Ue {
+            constructor() {
+              self = this;
+              tmp = Ue;
+              if (typeof Symbol !== "undefined") {
+                _Symbol3 = Symbol;
+                if (tmp[Symbol.hasInstance]) {
+                  _Symbol2 = Symbol;
+                  tmp2 = tmp[Symbol.hasInstance](self);
+                }
+                if (tmp2) {
+                  str = "head";
+                  self.head = self.createElement("head");
+                  str2 = "body";
+                  self.body = self.createElement("body");
+                  str3 = "html";
+                  self.documentElement = self.createElement("html");
+                  documentElement = self.documentElement;
+                  appendChildResult = documentElement.appendChild(self.head);
+                  documentElement2 = self.documentElement;
+                  appendChildResult1 = documentElement2.appendChild(self.body);
+                  items = [];
+                  items[0] = self.documentElement;
+                  self.childNodes = items;
+                  num = 9;
+                  self.nodeType = 9;
+                  return;
+                } else {
+                  tmpResult = tmp();
+                  tmp4 = tmpResult;
+                  return tmpResult;
+                }
+              }
+              if (typeof Symbol !== "undefined") {
+                _Symbol4 = Symbol;
+                if (tmp[Symbol.hasInstance]) {
+                  _Symbol = Symbol;
+                  tmp2 = tmp[Symbol.hasInstance](self);
+                }
+              }
+              tmp2 = U(self, tmp);
+              return;
+            }
+          }
+          obj = { exports: {} };
+          closure_140_1 = obj;
+          closure_140_0(obj.exports, closure_140_1);
+        }
+        closure_1 = closure_140_1.exports;
+        if (typeof f98884 === "function") {
+          class Ue {
+            constructor() {
+              self = this;
+              tmp = Ue;
+              if (typeof Symbol !== "undefined") {
+                _Symbol3 = Symbol;
+                if (tmp[Symbol.hasInstance]) {
+                  _Symbol2 = Symbol;
+                  tmp2 = tmp[Symbol.hasInstance](self);
+                }
+                if (tmp2) {
+                  str = "head";
+                  self.head = self.createElement("head");
+                  str2 = "body";
+                  self.body = self.createElement("body");
+                  str3 = "html";
+                  self.documentElement = self.createElement("html");
+                  documentElement = self.documentElement;
+                  appendChildResult = documentElement.appendChild(self.head);
+                  documentElement2 = self.documentElement;
+                  appendChildResult1 = documentElement2.appendChild(self.body);
+                  items = [];
+                  items[0] = self.documentElement;
+                  self.childNodes = items;
+                  num = 9;
+                  self.nodeType = 9;
+                  return;
+                } else {
+                  tmpResult = tmp();
+                  tmp4 = tmpResult;
+                  return tmpResult;
+                }
+              }
+              if (typeof Symbol !== "undefined") {
+                _Symbol4 = Symbol;
+                if (tmp[Symbol.hasInstance]) {
+                  _Symbol = Symbol;
+                  tmp2 = tmp[Symbol.hasInstance](self);
+                }
+              }
+              tmp2 = U(self, tmp);
+              return;
+            }
+          }
+          if (!closure_141_1) {
+            class Ue {
+              constructor() {
+                self = this;
+                tmp = Ue;
+                if (typeof Symbol !== "undefined") {
+                  _Symbol3 = Symbol;
+                  if (tmp[Symbol.hasInstance]) {
+                    _Symbol2 = Symbol;
+                    tmp2 = tmp[Symbol.hasInstance](self);
+                  }
+                  if (tmp2) {
+                    str = "head";
+                    self.head = self.createElement("head");
+                    str2 = "body";
+                    self.body = self.createElement("body");
+                    str3 = "html";
+                    self.documentElement = self.createElement("html");
+                    documentElement = self.documentElement;
+                    appendChildResult = documentElement.appendChild(self.head);
+                    documentElement2 = self.documentElement;
+                    appendChildResult1 = documentElement2.appendChild(self.body);
+                    items = [];
+                    items[0] = self.documentElement;
+                    self.childNodes = items;
+                    num = 9;
+                    self.nodeType = 9;
+                    return;
+                  } else {
+                    tmpResult = tmp();
+                    tmp4 = tmpResult;
+                    return tmpResult;
+                  }
+                }
+                if (typeof Symbol !== "undefined") {
+                  _Symbol4 = Symbol;
+                  if (tmp[Symbol.hasInstance]) {
+                    _Symbol = Symbol;
+                    tmp2 = tmp[Symbol.hasInstance](self);
+                  }
+                }
+                tmp2 = U(self, tmp);
+                return;
+              }
+            }
+            obj = { exports: {} };
+            closure_141_1 = obj;
+            closure_141_0(obj.exports, closure_141_1);
+          }
+          closure_2 = closure_141_1.exports;
+          if (typeof f98884 === "function") {
+            class Ue {
+              constructor() {
+                self = this;
+                tmp = Ue;
+                if (typeof Symbol !== "undefined") {
+                  _Symbol3 = Symbol;
+                  if (tmp[Symbol.hasInstance]) {
+                    _Symbol2 = Symbol;
+                    tmp2 = tmp[Symbol.hasInstance](self);
+                  }
+                  if (tmp2) {
+                    str = "head";
+                    self.head = self.createElement("head");
+                    str2 = "body";
+                    self.body = self.createElement("body");
+                    str3 = "html";
+                    self.documentElement = self.createElement("html");
+                    documentElement = self.documentElement;
+                    appendChildResult = documentElement.appendChild(self.head);
+                    documentElement2 = self.documentElement;
+                    appendChildResult1 = documentElement2.appendChild(self.body);
+                    items = [];
+                    items[0] = self.documentElement;
+                    self.childNodes = items;
+                    num = 9;
+                    self.nodeType = 9;
+                    return;
+                  } else {
+                    tmpResult = tmp();
+                    tmp4 = tmpResult;
+                    return tmpResult;
+                  }
+                }
+                if (typeof Symbol !== "undefined") {
+                  _Symbol4 = Symbol;
+                  if (tmp[Symbol.hasInstance]) {
+                    _Symbol = Symbol;
+                    tmp2 = tmp[Symbol.hasInstance](self);
+                  }
+                }
+                tmp2 = U(self, tmp);
+                return;
+              }
+            }
+            if (!closure_146_1) {
+              class Ue {
+                constructor() {
+                  self = this;
+                  tmp = Ue;
+                  if (typeof Symbol !== "undefined") {
+                    _Symbol3 = Symbol;
+                    if (tmp[Symbol.hasInstance]) {
+                      _Symbol2 = Symbol;
+                      tmp2 = tmp[Symbol.hasInstance](self);
+                    }
+                    if (tmp2) {
+                      str = "head";
+                      self.head = self.createElement("head");
+                      str2 = "body";
+                      self.body = self.createElement("body");
+                      str3 = "html";
+                      self.documentElement = self.createElement("html");
+                      documentElement = self.documentElement;
+                      appendChildResult = documentElement.appendChild(self.head);
+                      documentElement2 = self.documentElement;
+                      appendChildResult1 = documentElement2.appendChild(self.body);
+                      items = [];
+                      items[0] = self.documentElement;
+                      self.childNodes = items;
+                      num = 9;
+                      self.nodeType = 9;
+                      return;
+                    } else {
+                      tmpResult = tmp();
+                      tmp4 = tmpResult;
+                      return tmpResult;
+                    }
+                  }
+                  if (typeof Symbol !== "undefined") {
+                    _Symbol4 = Symbol;
+                    if (tmp[Symbol.hasInstance]) {
+                      _Symbol = Symbol;
+                      tmp2 = tmp[Symbol.hasInstance](self);
+                    }
+                  }
+                  tmp2 = U(self, tmp);
+                  return;
+                }
+              }
+              const obj1 = { exports: {} };
+              closure_146_1 = obj1;
+              closure_146_0(obj1.exports, closure_146_1);
+            }
+            const _exports = closure_146_1.exports;
+            if (typeof f98884 === "function") {
+              class Ue {
+                constructor() {
+                  self = this;
+                  tmp = Ue;
+                  if (typeof Symbol !== "undefined") {
+                    _Symbol3 = Symbol;
+                    if (tmp[Symbol.hasInstance]) {
+                      _Symbol2 = Symbol;
+                      tmp2 = tmp[Symbol.hasInstance](self);
+                    }
+                    if (tmp2) {
+                      str = "head";
+                      self.head = self.createElement("head");
+                      str2 = "body";
+                      self.body = self.createElement("body");
+                      str3 = "html";
+                      self.documentElement = self.createElement("html");
+                      documentElement = self.documentElement;
+                      appendChildResult = documentElement.appendChild(self.head);
+                      documentElement2 = self.documentElement;
+                      appendChildResult1 = documentElement2.appendChild(self.body);
+                      items = [];
+                      items[0] = self.documentElement;
+                      self.childNodes = items;
+                      num = 9;
+                      self.nodeType = 9;
+                      return;
+                    } else {
+                      tmpResult = tmp();
+                      tmp4 = tmpResult;
+                      return tmpResult;
+                    }
+                  }
+                  if (typeof Symbol !== "undefined") {
+                    _Symbol4 = Symbol;
+                    if (tmp[Symbol.hasInstance]) {
+                      _Symbol = Symbol;
+                      tmp2 = tmp[Symbol.hasInstance](self);
+                    }
+                  }
+                  tmp2 = U(self, tmp);
+                  return;
+                }
+              }
+              if (!closure_147_1) {
+                class Ue {
+                  constructor() {
+                    self = this;
+                    tmp = Ue;
+                    if (typeof Symbol !== "undefined") {
+                      _Symbol3 = Symbol;
+                      if (tmp[Symbol.hasInstance]) {
+                        _Symbol2 = Symbol;
+                        tmp2 = tmp[Symbol.hasInstance](self);
+                      }
+                      if (tmp2) {
+                        str = "head";
+                        self.head = self.createElement("head");
+                        str2 = "body";
+                        self.body = self.createElement("body");
+                        str3 = "html";
+                        self.documentElement = self.createElement("html");
+                        documentElement = self.documentElement;
+                        appendChildResult = documentElement.appendChild(self.head);
+                        documentElement2 = self.documentElement;
+                        appendChildResult1 = documentElement2.appendChild(self.body);
+                        items = [];
+                        items[0] = self.documentElement;
+                        self.childNodes = items;
+                        num = 9;
+                        self.nodeType = 9;
+                        return;
+                      } else {
+                        tmpResult = tmp();
+                        tmp4 = tmpResult;
+                        return tmpResult;
+                      }
+                    }
+                    if (typeof Symbol !== "undefined") {
+                      _Symbol4 = Symbol;
+                      if (tmp[Symbol.hasInstance]) {
+                        _Symbol = Symbol;
+                        tmp2 = tmp[Symbol.hasInstance](self);
+                      }
+                    }
+                    tmp2 = U(self, tmp);
+                    return;
+                  }
+                }
+                const obj2 = { exports: {} };
+                closure_147_1 = obj2;
+                closure_147_0(obj2.exports, closure_147_1);
+              }
+              closure_4 = closure_147_1.exports;
+              if (typeof f98884 === "function") {
+                class Ue {
+                  constructor() {
+                    self = this;
+                    tmp = Ue;
+                    if (typeof Symbol !== "undefined") {
+                      _Symbol3 = Symbol;
+                      if (tmp[Symbol.hasInstance]) {
+                        _Symbol2 = Symbol;
+                        tmp2 = tmp[Symbol.hasInstance](self);
+                      }
+                      if (tmp2) {
+                        str = "head";
+                        self.head = self.createElement("head");
+                        str2 = "body";
+                        self.body = self.createElement("body");
+                        str3 = "html";
+                        self.documentElement = self.createElement("html");
+                        documentElement = self.documentElement;
+                        appendChildResult = documentElement.appendChild(self.head);
+                        documentElement2 = self.documentElement;
+                        appendChildResult1 = documentElement2.appendChild(self.body);
+                        items = [];
+                        items[0] = self.documentElement;
+                        self.childNodes = items;
+                        num = 9;
+                        self.nodeType = 9;
+                        return;
+                      } else {
+                        tmpResult = tmp();
+                        tmp4 = tmpResult;
+                        return tmpResult;
+                      }
+                    }
+                    if (typeof Symbol !== "undefined") {
+                      _Symbol4 = Symbol;
+                      if (tmp[Symbol.hasInstance]) {
+                        _Symbol = Symbol;
+                        tmp2 = tmp[Symbol.hasInstance](self);
+                      }
+                    }
+                    tmp2 = U(self, tmp);
+                    return;
+                  }
+                }
+                if (!closure_148_1) {
+                  class Ue {
+                    constructor() {
+                      self = this;
+                      tmp = Ue;
+                      if (typeof Symbol !== "undefined") {
+                        _Symbol3 = Symbol;
+                        if (tmp[Symbol.hasInstance]) {
+                          _Symbol2 = Symbol;
+                          tmp2 = tmp[Symbol.hasInstance](self);
+                        }
+                        if (tmp2) {
+                          str = "head";
+                          self.head = self.createElement("head");
+                          str2 = "body";
+                          self.body = self.createElement("body");
+                          str3 = "html";
+                          self.documentElement = self.createElement("html");
+                          documentElement = self.documentElement;
+                          appendChildResult = documentElement.appendChild(self.head);
+                          documentElement2 = self.documentElement;
+                          appendChildResult1 = documentElement2.appendChild(self.body);
+                          items = [];
+                          items[0] = self.documentElement;
+                          self.childNodes = items;
+                          num = 9;
+                          self.nodeType = 9;
+                          return;
+                        } else {
+                          tmpResult = tmp();
+                          tmp4 = tmpResult;
+                          return tmpResult;
+                        }
+                      }
+                      if (typeof Symbol !== "undefined") {
+                        _Symbol4 = Symbol;
+                        if (tmp[Symbol.hasInstance]) {
+                          _Symbol = Symbol;
+                          tmp2 = tmp[Symbol.hasInstance](self);
+                        }
+                      }
+                      tmp2 = U(self, tmp);
+                      return;
+                    }
+                  }
+                  obj3 = { exports: {} };
+                  closure_148_1 = obj3;
+                  closure_148_0(obj3.exports, closure_148_1);
+                }
+                closure_5 = closure_148_1.exports;
+                if (typeof f98884 === "function") {
+                  class Ue {
+                    constructor() {
+                      self = this;
+                      tmp = Ue;
+                      if (typeof Symbol !== "undefined") {
+                        _Symbol3 = Symbol;
+                        if (tmp[Symbol.hasInstance]) {
+                          _Symbol2 = Symbol;
+                          tmp2 = tmp[Symbol.hasInstance](self);
+                        }
+                        if (tmp2) {
+                          str = "head";
+                          self.head = self.createElement("head");
+                          str2 = "body";
+                          self.body = self.createElement("body");
+                          str3 = "html";
+                          self.documentElement = self.createElement("html");
+                          documentElement = self.documentElement;
+                          appendChildResult = documentElement.appendChild(self.head);
+                          documentElement2 = self.documentElement;
+                          appendChildResult1 = documentElement2.appendChild(self.body);
+                          items = [];
+                          items[0] = self.documentElement;
+                          self.childNodes = items;
+                          num = 9;
+                          self.nodeType = 9;
+                          return;
+                        } else {
+                          tmpResult = tmp();
+                          tmp4 = tmpResult;
+                          return tmpResult;
+                        }
+                      }
+                      if (typeof Symbol !== "undefined") {
+                        _Symbol4 = Symbol;
+                        if (tmp[Symbol.hasInstance]) {
+                          _Symbol = Symbol;
+                          tmp2 = tmp[Symbol.hasInstance](self);
+                        }
+                      }
+                      tmp2 = U(self, tmp);
+                      return;
+                    }
+                  }
+                  if (!closure_142_1) {
+                    class Ue {
+                      constructor() {
+                        self = this;
+                        tmp = Ue;
+                        if (typeof Symbol !== "undefined") {
+                          _Symbol3 = Symbol;
+                          if (tmp[Symbol.hasInstance]) {
+                            _Symbol2 = Symbol;
+                            tmp2 = tmp[Symbol.hasInstance](self);
+                          }
+                          if (tmp2) {
+                            str = "head";
+                            self.head = self.createElement("head");
+                            str2 = "body";
+                            self.body = self.createElement("body");
+                            str3 = "html";
+                            self.documentElement = self.createElement("html");
+                            documentElement = self.documentElement;
+                            appendChildResult = documentElement.appendChild(self.head);
+                            documentElement2 = self.documentElement;
+                            appendChildResult1 = documentElement2.appendChild(self.body);
+                            items = [];
+                            items[0] = self.documentElement;
+                            self.childNodes = items;
+                            num = 9;
+                            self.nodeType = 9;
+                            return;
+                          } else {
+                            tmpResult = tmp();
+                            tmp4 = tmpResult;
+                            return tmpResult;
+                          }
+                        }
+                        if (typeof Symbol !== "undefined") {
+                          _Symbol4 = Symbol;
+                          if (tmp[Symbol.hasInstance]) {
+                            _Symbol = Symbol;
+                            tmp2 = tmp[Symbol.hasInstance](self);
+                          }
+                        }
+                        tmp2 = U(self, tmp);
+                        return;
+                      }
+                    }
+                    obj4 = { exports: {} };
+                    closure_142_1 = obj4;
+                    closure_142_0(obj4.exports, closure_142_1);
+                  }
+                  if (typeof f98884 === "function") {
+                    class Ue {
+                      constructor() {
+                        self = this;
+                        tmp = Ue;
+                        if (typeof Symbol !== "undefined") {
+                          _Symbol3 = Symbol;
+                          if (tmp[Symbol.hasInstance]) {
+                            _Symbol2 = Symbol;
+                            tmp2 = tmp[Symbol.hasInstance](self);
+                          }
+                          if (tmp2) {
+                            str = "head";
+                            self.head = self.createElement("head");
+                            str2 = "body";
+                            self.body = self.createElement("body");
+                            str3 = "html";
+                            self.documentElement = self.createElement("html");
+                            documentElement = self.documentElement;
+                            appendChildResult = documentElement.appendChild(self.head);
+                            documentElement2 = self.documentElement;
+                            appendChildResult1 = documentElement2.appendChild(self.body);
+                            items = [];
+                            items[0] = self.documentElement;
+                            self.childNodes = items;
+                            num = 9;
+                            self.nodeType = 9;
+                            return;
+                          } else {
+                            tmpResult = tmp();
+                            tmp4 = tmpResult;
+                            return tmpResult;
+                          }
+                        }
+                        if (typeof Symbol !== "undefined") {
+                          _Symbol4 = Symbol;
+                          if (tmp[Symbol.hasInstance]) {
+                            _Symbol = Symbol;
+                            tmp2 = tmp[Symbol.hasInstance](self);
+                          }
+                        }
+                        tmp2 = U(self, tmp);
+                        return;
+                      }
+                    }
+                    if (!closure_143_1) {
+                      class Ue {
+                        constructor() {
+                          self = this;
+                          tmp = Ue;
+                          if (typeof Symbol !== "undefined") {
+                            _Symbol3 = Symbol;
+                            if (tmp[Symbol.hasInstance]) {
+                              _Symbol2 = Symbol;
+                              tmp2 = tmp[Symbol.hasInstance](self);
+                            }
+                            if (tmp2) {
+                              str = "head";
+                              self.head = self.createElement("head");
+                              str2 = "body";
+                              self.body = self.createElement("body");
+                              str3 = "html";
+                              self.documentElement = self.createElement("html");
+                              documentElement = self.documentElement;
+                              appendChildResult = documentElement.appendChild(self.head);
+                              documentElement2 = self.documentElement;
+                              appendChildResult1 = documentElement2.appendChild(self.body);
+                              items = [];
+                              items[0] = self.documentElement;
+                              self.childNodes = items;
+                              num = 9;
+                              self.nodeType = 9;
+                              return;
+                            } else {
+                              tmpResult = tmp();
+                              tmp4 = tmpResult;
+                              return tmpResult;
+                            }
+                          }
+                          if (typeof Symbol !== "undefined") {
+                            _Symbol4 = Symbol;
+                            if (tmp[Symbol.hasInstance]) {
+                              _Symbol = Symbol;
+                              tmp2 = tmp[Symbol.hasInstance](self);
+                            }
+                          }
+                          tmp2 = U(self, tmp);
+                          return;
+                        }
+                      }
+                      const obj5 = { exports: {} };
+                      closure_143_1 = obj5;
+                      closure_143_0(obj5.exports, closure_143_1);
+                    }
+                    if (typeof f98884 === "function") {
+                      class Ue {
+                        constructor() {
+                          self = this;
+                          tmp = Ue;
+                          if (typeof Symbol !== "undefined") {
+                            _Symbol3 = Symbol;
+                            if (tmp[Symbol.hasInstance]) {
+                              _Symbol2 = Symbol;
+                              tmp2 = tmp[Symbol.hasInstance](self);
+                            }
+                            if (tmp2) {
+                              str = "head";
+                              self.head = self.createElement("head");
+                              str2 = "body";
+                              self.body = self.createElement("body");
+                              str3 = "html";
+                              self.documentElement = self.createElement("html");
+                              documentElement = self.documentElement;
+                              appendChildResult = documentElement.appendChild(self.head);
+                              documentElement2 = self.documentElement;
+                              appendChildResult1 = documentElement2.appendChild(self.body);
+                              items = [];
+                              items[0] = self.documentElement;
+                              self.childNodes = items;
+                              num = 9;
+                              self.nodeType = 9;
+                              return;
+                            } else {
+                              tmpResult = tmp();
+                              tmp4 = tmpResult;
+                              return tmpResult;
+                            }
+                          }
+                          if (typeof Symbol !== "undefined") {
+                            _Symbol4 = Symbol;
+                            if (tmp[Symbol.hasInstance]) {
+                              _Symbol = Symbol;
+                              tmp2 = tmp[Symbol.hasInstance](self);
+                            }
+                          }
+                          tmp2 = U(self, tmp);
+                          return;
+                        }
+                      }
+                      if (!closure_144_1) {
+                        class Ue {
+                          constructor() {
+                            self = this;
+                            tmp = Ue;
+                            if (typeof Symbol !== "undefined") {
+                              _Symbol3 = Symbol;
+                              if (tmp[Symbol.hasInstance]) {
+                                _Symbol2 = Symbol;
+                                tmp2 = tmp[Symbol.hasInstance](self);
+                              }
+                              if (tmp2) {
+                                str = "head";
+                                self.head = self.createElement("head");
+                                str2 = "body";
+                                self.body = self.createElement("body");
+                                str3 = "html";
+                                self.documentElement = self.createElement("html");
+                                documentElement = self.documentElement;
+                                appendChildResult = documentElement.appendChild(self.head);
+                                documentElement2 = self.documentElement;
+                                appendChildResult1 = documentElement2.appendChild(self.body);
+                                items = [];
+                                items[0] = self.documentElement;
+                                self.childNodes = items;
+                                num = 9;
+                                self.nodeType = 9;
+                                return;
+                              } else {
+                                tmpResult = tmp();
+                                tmp4 = tmpResult;
+                                return tmpResult;
+                              }
+                            }
+                            if (typeof Symbol !== "undefined") {
+                              _Symbol4 = Symbol;
+                              if (tmp[Symbol.hasInstance]) {
+                                _Symbol = Symbol;
+                                tmp2 = tmp[Symbol.hasInstance](self);
+                              }
+                            }
+                            tmp2 = U(self, tmp);
+                            return;
+                          }
+                        }
+                        obj6 = { exports: {} };
+                        closure_144_1 = obj6;
+                        closure_144_0(obj6.exports, closure_144_1);
+                      }
+                      arg1.exports = Ue;
+                      const prototype = Ue.prototype;
+                      prototype.createTextNode = function(arg0) {
+                        return new closure_2(arg0, this);
+                      };
+                      prototype.createElementNS = function(arg0, arg1) {
+                        let StringResult = null;
+                        if (null !== arg0) {
+                          const _String = String;
+                          StringResult = String(arg0);
+                        }
+                        return new _exports(arg1, this, StringResult);
+                      };
+                      prototype.createElement = function(arg0) {
+                        return new _exports(arg0, this);
+                      };
+                      prototype.createDocumentFragment = function() {
+                        return new closure_4(this);
+                      };
+                      prototype.createEvent = (arg0) => new closure_5(arg0);
+                      prototype.createComment = function(arg0) {
+                        return new closure_1(arg0, this);
+                      };
+                      prototype.getElementById = function(arg0) {
+                        closure_0 = String(arg0);
+                        return closure_0(this.childNodes, (id) => {
+                          if (String(id.id) === closure_0) {
+                            return id;
+                          }
+                        }) || null;
+                      };
+                      prototype.getElementsByClassName = _exports.prototype.getElementsByClassName;
+                      prototype.getElementsByTagName = _exports.prototype.getElementsByTagName;
+                      prototype.contains = _exports.prototype.contains;
+                      prototype.removeEventListener = closure_144_1.exports;
+                      prototype.addEventListener = tmp34;
+                      prototype.dispatchEvent = tmp29;
+                    } else {
+                      class Ue {
+                        constructor() {
+                          self = this;
+                          tmp = Ue;
+                          if (typeof Symbol !== "undefined") {
+                            _Symbol3 = Symbol;
+                            if (tmp[Symbol.hasInstance]) {
+                              _Symbol2 = Symbol;
+                              tmp2 = tmp[Symbol.hasInstance](self);
+                            }
+                            if (tmp2) {
+                              str = "head";
+                              self.head = self.createElement("head");
+                              str2 = "body";
+                              self.body = self.createElement("body");
+                              str3 = "html";
+                              self.documentElement = self.createElement("html");
+                              documentElement = self.documentElement;
+                              appendChildResult = documentElement.appendChild(self.head);
+                              documentElement2 = self.documentElement;
+                              appendChildResult1 = documentElement2.appendChild(self.body);
+                              items = [];
+                              items[0] = self.documentElement;
+                              self.childNodes = items;
+                              num = 9;
+                              self.nodeType = 9;
+                              return;
+                            } else {
+                              tmpResult = tmp();
+                              tmp4 = tmpResult;
+                              return tmpResult;
+                            }
+                          }
+                          if (typeof Symbol !== "undefined") {
+                            _Symbol4 = Symbol;
+                            if (tmp[Symbol.hasInstance]) {
+                              _Symbol = Symbol;
+                              tmp2 = tmp[Symbol.hasInstance](self);
+                            }
+                          }
+                          tmp2 = U(self, tmp);
+                          return;
+                        }
+                      }
+                      throw new TypeError("Trying to call a non-function");
+                    }
+                  } else {
+                    class Ue {
+                      constructor() {
+                        self = this;
+                        tmp = Ue;
+                        if (typeof Symbol !== "undefined") {
+                          _Symbol3 = Symbol;
+                          if (tmp[Symbol.hasInstance]) {
+                            _Symbol2 = Symbol;
+                            tmp2 = tmp[Symbol.hasInstance](self);
+                          }
+                          if (tmp2) {
+                            str = "head";
+                            self.head = self.createElement("head");
+                            str2 = "body";
+                            self.body = self.createElement("body");
+                            str3 = "html";
+                            self.documentElement = self.createElement("html");
+                            documentElement = self.documentElement;
+                            appendChildResult = documentElement.appendChild(self.head);
+                            documentElement2 = self.documentElement;
+                            appendChildResult1 = documentElement2.appendChild(self.body);
+                            items = [];
+                            items[0] = self.documentElement;
+                            self.childNodes = items;
+                            num = 9;
+                            self.nodeType = 9;
+                            return;
+                          } else {
+                            tmpResult = tmp();
+                            tmp4 = tmpResult;
+                            return tmpResult;
+                          }
+                        }
+                        if (typeof Symbol !== "undefined") {
+                          _Symbol4 = Symbol;
+                          if (tmp[Symbol.hasInstance]) {
+                            _Symbol = Symbol;
+                            tmp2 = tmp[Symbol.hasInstance](self);
+                          }
+                        }
+                        tmp2 = U(self, tmp);
+                        return;
+                      }
+                    }
+                    throw new TypeError("Trying to call a non-function");
+                  }
+                } else {
+                  class Ue {
+                    constructor() {
+                      self = this;
+                      tmp = Ue;
+                      if (typeof Symbol !== "undefined") {
+                        _Symbol3 = Symbol;
+                        if (tmp[Symbol.hasInstance]) {
+                          _Symbol2 = Symbol;
+                          tmp2 = tmp[Symbol.hasInstance](self);
+                        }
+                        if (tmp2) {
+                          str = "head";
+                          self.head = self.createElement("head");
+                          str2 = "body";
+                          self.body = self.createElement("body");
+                          str3 = "html";
+                          self.documentElement = self.createElement("html");
+                          documentElement = self.documentElement;
+                          appendChildResult = documentElement.appendChild(self.head);
+                          documentElement2 = self.documentElement;
+                          appendChildResult1 = documentElement2.appendChild(self.body);
+                          items = [];
+                          items[0] = self.documentElement;
+                          self.childNodes = items;
+                          num = 9;
+                          self.nodeType = 9;
+                          return;
+                        } else {
+                          tmpResult = tmp();
+                          tmp4 = tmpResult;
+                          return tmpResult;
+                        }
+                      }
+                      if (typeof Symbol !== "undefined") {
+                        _Symbol4 = Symbol;
+                        if (tmp[Symbol.hasInstance]) {
+                          _Symbol = Symbol;
+                          tmp2 = tmp[Symbol.hasInstance](self);
+                        }
+                      }
+                      tmp2 = U(self, tmp);
+                      return;
+                    }
+                  }
+                  throw new TypeError("Trying to call a non-function");
+                }
+              } else {
+                class Ue {
+                  constructor() {
+                    self = this;
+                    tmp = Ue;
+                    if (typeof Symbol !== "undefined") {
+                      _Symbol3 = Symbol;
+                      if (tmp[Symbol.hasInstance]) {
+                        _Symbol2 = Symbol;
+                        tmp2 = tmp[Symbol.hasInstance](self);
+                      }
+                      if (tmp2) {
+                        str = "head";
+                        self.head = self.createElement("head");
+                        str2 = "body";
+                        self.body = self.createElement("body");
+                        str3 = "html";
+                        self.documentElement = self.createElement("html");
+                        documentElement = self.documentElement;
+                        appendChildResult = documentElement.appendChild(self.head);
+                        documentElement2 = self.documentElement;
+                        appendChildResult1 = documentElement2.appendChild(self.body);
+                        items = [];
+                        items[0] = self.documentElement;
+                        self.childNodes = items;
+                        num = 9;
+                        self.nodeType = 9;
+                        return;
+                      } else {
+                        tmpResult = tmp();
+                        tmp4 = tmpResult;
+                        return tmpResult;
+                      }
+                    }
+                    if (typeof Symbol !== "undefined") {
+                      _Symbol4 = Symbol;
+                      if (tmp[Symbol.hasInstance]) {
+                        _Symbol = Symbol;
+                        tmp2 = tmp[Symbol.hasInstance](self);
+                      }
+                    }
+                    tmp2 = U(self, tmp);
+                    return;
+                  }
+                }
+                throw new TypeError("Trying to call a non-function");
+              }
+            } else {
+              class Ue {
+                constructor() {
+                  self = this;
+                  tmp = Ue;
+                  if (typeof Symbol !== "undefined") {
+                    _Symbol3 = Symbol;
+                    if (tmp[Symbol.hasInstance]) {
+                      _Symbol2 = Symbol;
+                      tmp2 = tmp[Symbol.hasInstance](self);
+                    }
+                    if (tmp2) {
+                      str = "head";
+                      self.head = self.createElement("head");
+                      str2 = "body";
+                      self.body = self.createElement("body");
+                      str3 = "html";
+                      self.documentElement = self.createElement("html");
+                      documentElement = self.documentElement;
+                      appendChildResult = documentElement.appendChild(self.head);
+                      documentElement2 = self.documentElement;
+                      appendChildResult1 = documentElement2.appendChild(self.body);
+                      items = [];
+                      items[0] = self.documentElement;
+                      self.childNodes = items;
+                      num = 9;
+                      self.nodeType = 9;
+                      return;
+                    } else {
+                      tmpResult = tmp();
+                      tmp4 = tmpResult;
+                      return tmpResult;
+                    }
+                  }
+                  if (typeof Symbol !== "undefined") {
+                    _Symbol4 = Symbol;
+                    if (tmp[Symbol.hasInstance]) {
+                      _Symbol = Symbol;
+                      tmp2 = tmp[Symbol.hasInstance](self);
+                    }
+                  }
+                  tmp2 = U(self, tmp);
+                  return;
+                }
+              }
+              throw new TypeError("Trying to call a non-function");
+            }
+          } else {
+            class Ue {
+              constructor() {
+                self = this;
+                tmp = Ue;
+                if (typeof Symbol !== "undefined") {
+                  _Symbol3 = Symbol;
+                  if (tmp[Symbol.hasInstance]) {
+                    _Symbol2 = Symbol;
+                    tmp2 = tmp[Symbol.hasInstance](self);
+                  }
+                  if (tmp2) {
+                    str = "head";
+                    self.head = self.createElement("head");
+                    str2 = "body";
+                    self.body = self.createElement("body");
+                    str3 = "html";
+                    self.documentElement = self.createElement("html");
+                    documentElement = self.documentElement;
+                    appendChildResult = documentElement.appendChild(self.head);
+                    documentElement2 = self.documentElement;
+                    appendChildResult1 = documentElement2.appendChild(self.body);
+                    items = [];
+                    items[0] = self.documentElement;
+                    self.childNodes = items;
+                    num = 9;
+                    self.nodeType = 9;
+                    return;
+                  } else {
+                    tmpResult = tmp();
+                    tmp4 = tmpResult;
+                    return tmpResult;
+                  }
+                }
+                if (typeof Symbol !== "undefined") {
+                  _Symbol4 = Symbol;
+                  if (tmp[Symbol.hasInstance]) {
+                    _Symbol = Symbol;
+                    tmp2 = tmp[Symbol.hasInstance](self);
+                  }
+                }
+                tmp2 = U(self, tmp);
+                return;
+              }
+            }
+            throw new TypeError("Trying to call a non-function");
+          }
+        } else {
+          class Ue {
+            constructor() {
+              self = this;
+              tmp = Ue;
+              if (typeof Symbol !== "undefined") {
+                _Symbol3 = Symbol;
+                if (tmp[Symbol.hasInstance]) {
+                  _Symbol2 = Symbol;
+                  tmp2 = tmp[Symbol.hasInstance](self);
+                }
+                if (tmp2) {
+                  str = "head";
+                  self.head = self.createElement("head");
+                  str2 = "body";
+                  self.body = self.createElement("body");
+                  str3 = "html";
+                  self.documentElement = self.createElement("html");
+                  documentElement = self.documentElement;
+                  appendChildResult = documentElement.appendChild(self.head);
+                  documentElement2 = self.documentElement;
+                  appendChildResult1 = documentElement2.appendChild(self.body);
+                  items = [];
+                  items[0] = self.documentElement;
+                  self.childNodes = items;
+                  num = 9;
+                  self.nodeType = 9;
+                  return;
+                } else {
+                  tmpResult = tmp();
+                  tmp4 = tmpResult;
+                  return tmpResult;
+                }
+              }
+              if (typeof Symbol !== "undefined") {
+                _Symbol4 = Symbol;
+                if (tmp[Symbol.hasInstance]) {
+                  _Symbol = Symbol;
+                  tmp2 = tmp[Symbol.hasInstance](self);
+                }
+              }
+              tmp2 = U(self, tmp);
+              return;
+            }
+          }
+          throw new TypeError("Trying to call a non-function");
+        }
+      } else {
+        class Ue {
+          constructor() {
+            self = this;
+            tmp = Ue;
+            if (typeof Symbol !== "undefined") {
+              _Symbol3 = Symbol;
+              if (tmp[Symbol.hasInstance]) {
+                _Symbol2 = Symbol;
+                tmp2 = tmp[Symbol.hasInstance](self);
+              }
+              if (tmp2) {
+                str = "head";
+                self.head = self.createElement("head");
+                str2 = "body";
+                self.body = self.createElement("body");
+                str3 = "html";
+                self.documentElement = self.createElement("html");
+                documentElement = self.documentElement;
+                appendChildResult = documentElement.appendChild(self.head);
+                documentElement2 = self.documentElement;
+                appendChildResult1 = documentElement2.appendChild(self.body);
+                items = [];
+                items[0] = self.documentElement;
+                self.childNodes = items;
+                num = 9;
+                self.nodeType = 9;
+                return;
+              } else {
+                tmpResult = tmp();
+                tmp4 = tmpResult;
+                return tmpResult;
+              }
+            }
+            if (typeof Symbol !== "undefined") {
+              _Symbol4 = Symbol;
+              if (tmp[Symbol.hasInstance]) {
+                _Symbol = Symbol;
+                tmp2 = tmp[Symbol.hasInstance](self);
+              }
+            }
+            tmp2 = U(self, tmp);
+            return;
+          }
+        }
+        throw new TypeError("Trying to call a non-function");
+      }
+    } else {
+      class Ue {
+        constructor() {
+          self = this;
+          tmp = Ue;
+          if (typeof Symbol !== "undefined") {
+            _Symbol3 = Symbol;
+            if (tmp[Symbol.hasInstance]) {
+              _Symbol2 = Symbol;
+              tmp2 = tmp[Symbol.hasInstance](self);
+            }
+            if (tmp2) {
+              str = "head";
+              self.head = self.createElement("head");
+              str2 = "body";
+              self.body = self.createElement("body");
+              str3 = "html";
+              self.documentElement = self.createElement("html");
+              documentElement = self.documentElement;
+              appendChildResult = documentElement.appendChild(self.head);
+              documentElement2 = self.documentElement;
+              appendChildResult1 = documentElement2.appendChild(self.body);
+              items = [];
+              items[0] = self.documentElement;
+              self.childNodes = items;
+              num = 9;
+              self.nodeType = 9;
+              return;
+            } else {
+              tmpResult = tmp();
+              tmp4 = tmpResult;
+              return tmpResult;
+            }
+          }
+          if (typeof Symbol !== "undefined") {
+            _Symbol4 = Symbol;
+            if (tmp[Symbol.hasInstance]) {
+              _Symbol = Symbol;
+              tmp2 = tmp[Symbol.hasInstance](self);
+            }
+          }
+          tmp2 = U(self, tmp);
+          return;
+        }
+      }
+      throw new TypeError("Trying to call a non-function");
+    }
+  } else {
     class Ue {
       constructor() {
         self = this;
@@ -4198,947 +4881,31 @@ f98876 = (arg0, arg1) => {
             tmp2 = tmp[Symbol.hasInstance](self);
           }
         }
-        tmp2 = closure_1_8(self, tmp);
+        tmp2 = U(self, tmp);
         return;
       }
     }
-    callback = 0;
-    let obj6 = tmp(0);
+    throw new TypeError("Trying to call a non-function");
   }
-  if (typeof f98884 !== "function") {
-    class Ue {
-      constructor() {
-        self = this;
-        tmp = Ue;
-        if (typeof Symbol !== "undefined") {
-          _Symbol3 = Symbol;
-          if (tmp[Symbol.hasInstance]) {
-            _Symbol2 = Symbol;
-            tmp2 = tmp[Symbol.hasInstance](self);
-          }
-          if (tmp2) {
-            str = "head";
-            self.head = self.createElement("head");
-            str2 = "body";
-            self.body = self.createElement("body");
-            str3 = "html";
-            self.documentElement = self.createElement("html");
-            documentElement = self.documentElement;
-            appendChildResult = documentElement.appendChild(self.head);
-            documentElement2 = self.documentElement;
-            appendChildResult1 = documentElement2.appendChild(self.body);
-            items = [];
-            items[0] = self.documentElement;
-            self.childNodes = items;
-            num = 9;
-            self.nodeType = 9;
-            return;
-          } else {
-            tmpResult = tmp();
-            tmp4 = tmpResult;
-            return tmpResult;
-          }
-        }
-        if (typeof Symbol !== "undefined") {
-          _Symbol4 = Symbol;
-          if (tmp[Symbol.hasInstance]) {
-            _Symbol = Symbol;
-            tmp2 = tmp[Symbol.hasInstance](self);
-          }
-        }
-        tmp2 = closure_1_8(self, tmp);
-        return;
-      }
-    }
-    HermesBuiltin.throwTypeError();
-  }
-  if (!obj6) {
-    class Ue {
-      constructor() {
-        self = this;
-        tmp = Ue;
-        if (typeof Symbol !== "undefined") {
-          _Symbol3 = Symbol;
-          if (tmp[Symbol.hasInstance]) {
-            _Symbol2 = Symbol;
-            tmp2 = tmp[Symbol.hasInstance](self);
-          }
-          if (tmp2) {
-            str = "head";
-            self.head = self.createElement("head");
-            str2 = "body";
-            self.body = self.createElement("body");
-            str3 = "html";
-            self.documentElement = self.createElement("html");
-            documentElement = self.documentElement;
-            appendChildResult = documentElement.appendChild(self.head);
-            documentElement2 = self.documentElement;
-            appendChildResult1 = documentElement2.appendChild(self.body);
-            items = [];
-            items[0] = self.documentElement;
-            self.childNodes = items;
-            num = 9;
-            self.nodeType = 9;
-            return;
-          } else {
-            tmpResult = tmp();
-            tmp4 = tmpResult;
-            return tmpResult;
-          }
-        }
-        if (typeof Symbol !== "undefined") {
-          _Symbol4 = Symbol;
-          if (tmp[Symbol.hasInstance]) {
-            _Symbol = Symbol;
-            tmp2 = tmp[Symbol.hasInstance](self);
-          }
-        }
-        tmp2 = closure_1_8(self, tmp);
-        return;
-      }
-    }
-    let obj = { exports: null };
-    obj[0] = {};
-    obj6 = obj;
-    callback(obj.exports, obj6);
-  }
-  callback = obj6.exports;
-  if (typeof f98884 !== "function") {
-    class Ue {
-      constructor() {
-        self = this;
-        tmp = Ue;
-        if (typeof Symbol !== "undefined") {
-          _Symbol3 = Symbol;
-          if (tmp[Symbol.hasInstance]) {
-            _Symbol2 = Symbol;
-            tmp2 = tmp[Symbol.hasInstance](self);
-          }
-          if (tmp2) {
-            str = "head";
-            self.head = self.createElement("head");
-            str2 = "body";
-            self.body = self.createElement("body");
-            str3 = "html";
-            self.documentElement = self.createElement("html");
-            documentElement = self.documentElement;
-            appendChildResult = documentElement.appendChild(self.head);
-            documentElement2 = self.documentElement;
-            appendChildResult1 = documentElement2.appendChild(self.body);
-            items = [];
-            items[0] = self.documentElement;
-            self.childNodes = items;
-            num = 9;
-            self.nodeType = 9;
-            return;
-          } else {
-            tmpResult = tmp();
-            tmp4 = tmpResult;
-            return tmpResult;
-          }
-        }
-        if (typeof Symbol !== "undefined") {
-          _Symbol4 = Symbol;
-          if (tmp[Symbol.hasInstance]) {
-            _Symbol = Symbol;
-            tmp2 = tmp[Symbol.hasInstance](self);
-          }
-        }
-        tmp2 = closure_1_8(self, tmp);
-        return;
-      }
-    }
-    HermesBuiltin.throwTypeError();
-  }
-  if (!obj6) {
-    class Ue {
-      constructor() {
-        self = this;
-        tmp = Ue;
-        if (typeof Symbol !== "undefined") {
-          _Symbol3 = Symbol;
-          if (tmp[Symbol.hasInstance]) {
-            _Symbol2 = Symbol;
-            tmp2 = tmp[Symbol.hasInstance](self);
-          }
-          if (tmp2) {
-            str = "head";
-            self.head = self.createElement("head");
-            str2 = "body";
-            self.body = self.createElement("body");
-            str3 = "html";
-            self.documentElement = self.createElement("html");
-            documentElement = self.documentElement;
-            appendChildResult = documentElement.appendChild(self.head);
-            documentElement2 = self.documentElement;
-            appendChildResult1 = documentElement2.appendChild(self.body);
-            items = [];
-            items[0] = self.documentElement;
-            self.childNodes = items;
-            num = 9;
-            self.nodeType = 9;
-            return;
-          } else {
-            tmpResult = tmp();
-            tmp4 = tmpResult;
-            return tmpResult;
-          }
-        }
-        if (typeof Symbol !== "undefined") {
-          _Symbol4 = Symbol;
-          if (tmp[Symbol.hasInstance]) {
-            _Symbol = Symbol;
-            tmp2 = tmp[Symbol.hasInstance](self);
-          }
-        }
-        tmp2 = closure_1_8(self, tmp);
-        return;
-      }
-    }
-    obj = { exports: null };
-    obj[0] = {};
-    obj6 = obj;
-    callback(obj.exports, obj6);
-  }
-  obj6 = obj6.exports;
-  if (typeof f98884 !== "function") {
-    class Ue {
-      constructor() {
-        self = this;
-        tmp = Ue;
-        if (typeof Symbol !== "undefined") {
-          _Symbol3 = Symbol;
-          if (tmp[Symbol.hasInstance]) {
-            _Symbol2 = Symbol;
-            tmp2 = tmp[Symbol.hasInstance](self);
-          }
-          if (tmp2) {
-            str = "head";
-            self.head = self.createElement("head");
-            str2 = "body";
-            self.body = self.createElement("body");
-            str3 = "html";
-            self.documentElement = self.createElement("html");
-            documentElement = self.documentElement;
-            appendChildResult = documentElement.appendChild(self.head);
-            documentElement2 = self.documentElement;
-            appendChildResult1 = documentElement2.appendChild(self.body);
-            items = [];
-            items[0] = self.documentElement;
-            self.childNodes = items;
-            num = 9;
-            self.nodeType = 9;
-            return;
-          } else {
-            tmpResult = tmp();
-            tmp4 = tmpResult;
-            return tmpResult;
-          }
-        }
-        if (typeof Symbol !== "undefined") {
-          _Symbol4 = Symbol;
-          if (tmp[Symbol.hasInstance]) {
-            _Symbol = Symbol;
-            tmp2 = tmp[Symbol.hasInstance](self);
-          }
-        }
-        tmp2 = closure_1_8(self, tmp);
-        return;
-      }
-    }
-    HermesBuiltin.throwTypeError();
-  }
-  if (!obj6) {
-    class Ue {
-      constructor() {
-        self = this;
-        tmp = Ue;
-        if (typeof Symbol !== "undefined") {
-          _Symbol3 = Symbol;
-          if (tmp[Symbol.hasInstance]) {
-            _Symbol2 = Symbol;
-            tmp2 = tmp[Symbol.hasInstance](self);
-          }
-          if (tmp2) {
-            str = "head";
-            self.head = self.createElement("head");
-            str2 = "body";
-            self.body = self.createElement("body");
-            str3 = "html";
-            self.documentElement = self.createElement("html");
-            documentElement = self.documentElement;
-            appendChildResult = documentElement.appendChild(self.head);
-            documentElement2 = self.documentElement;
-            appendChildResult1 = documentElement2.appendChild(self.body);
-            items = [];
-            items[0] = self.documentElement;
-            self.childNodes = items;
-            num = 9;
-            self.nodeType = 9;
-            return;
-          } else {
-            tmpResult = tmp();
-            tmp4 = tmpResult;
-            return tmpResult;
-          }
-        }
-        if (typeof Symbol !== "undefined") {
-          _Symbol4 = Symbol;
-          if (tmp[Symbol.hasInstance]) {
-            _Symbol = Symbol;
-            tmp2 = tmp[Symbol.hasInstance](self);
-          }
-        }
-        tmp2 = closure_1_8(self, tmp);
-        return;
-      }
-    }
-    obj = { exports: null };
-    obj[0] = {};
-    obj6 = obj;
-    callback(obj.exports, obj6);
-  }
-  closure_2 = obj6.exports;
-  if (typeof f98884 !== "function") {
-    class Ue {
-      constructor() {
-        self = this;
-        tmp = Ue;
-        if (typeof Symbol !== "undefined") {
-          _Symbol3 = Symbol;
-          if (tmp[Symbol.hasInstance]) {
-            _Symbol2 = Symbol;
-            tmp2 = tmp[Symbol.hasInstance](self);
-          }
-          if (tmp2) {
-            str = "head";
-            self.head = self.createElement("head");
-            str2 = "body";
-            self.body = self.createElement("body");
-            str3 = "html";
-            self.documentElement = self.createElement("html");
-            documentElement = self.documentElement;
-            appendChildResult = documentElement.appendChild(self.head);
-            documentElement2 = self.documentElement;
-            appendChildResult1 = documentElement2.appendChild(self.body);
-            items = [];
-            items[0] = self.documentElement;
-            self.childNodes = items;
-            num = 9;
-            self.nodeType = 9;
-            return;
-          } else {
-            tmpResult = tmp();
-            tmp4 = tmpResult;
-            return tmpResult;
-          }
-        }
-        if (typeof Symbol !== "undefined") {
-          _Symbol4 = Symbol;
-          if (tmp[Symbol.hasInstance]) {
-            _Symbol = Symbol;
-            tmp2 = tmp[Symbol.hasInstance](self);
-          }
-        }
-        tmp2 = closure_1_8(self, tmp);
-        return;
-      }
-    }
-    HermesBuiltin.throwTypeError();
-  }
-  if (!obj6) {
-    class Ue {
-      constructor() {
-        self = this;
-        tmp = Ue;
-        if (typeof Symbol !== "undefined") {
-          _Symbol3 = Symbol;
-          if (tmp[Symbol.hasInstance]) {
-            _Symbol2 = Symbol;
-            tmp2 = tmp[Symbol.hasInstance](self);
-          }
-          if (tmp2) {
-            str = "head";
-            self.head = self.createElement("head");
-            str2 = "body";
-            self.body = self.createElement("body");
-            str3 = "html";
-            self.documentElement = self.createElement("html");
-            documentElement = self.documentElement;
-            appendChildResult = documentElement.appendChild(self.head);
-            documentElement2 = self.documentElement;
-            appendChildResult1 = documentElement2.appendChild(self.body);
-            items = [];
-            items[0] = self.documentElement;
-            self.childNodes = items;
-            num = 9;
-            self.nodeType = 9;
-            return;
-          } else {
-            tmpResult = tmp();
-            tmp4 = tmpResult;
-            return tmpResult;
-          }
-        }
-        if (typeof Symbol !== "undefined") {
-          _Symbol4 = Symbol;
-          if (tmp[Symbol.hasInstance]) {
-            _Symbol = Symbol;
-            tmp2 = tmp[Symbol.hasInstance](self);
-          }
-        }
-        tmp2 = closure_1_8(self, tmp);
-        return;
-      }
-    }
-    obj1 = { exports: null };
-    obj1[0] = {};
-    obj6 = obj1;
-    callback(obj1.exports, obj6);
-  }
-  const _exports = obj6.exports;
-  if (typeof f98884 !== "function") {
-    class Ue {
-      constructor() {
-        self = this;
-        tmp = Ue;
-        if (typeof Symbol !== "undefined") {
-          _Symbol3 = Symbol;
-          if (tmp[Symbol.hasInstance]) {
-            _Symbol2 = Symbol;
-            tmp2 = tmp[Symbol.hasInstance](self);
-          }
-          if (tmp2) {
-            str = "head";
-            self.head = self.createElement("head");
-            str2 = "body";
-            self.body = self.createElement("body");
-            str3 = "html";
-            self.documentElement = self.createElement("html");
-            documentElement = self.documentElement;
-            appendChildResult = documentElement.appendChild(self.head);
-            documentElement2 = self.documentElement;
-            appendChildResult1 = documentElement2.appendChild(self.body);
-            items = [];
-            items[0] = self.documentElement;
-            self.childNodes = items;
-            num = 9;
-            self.nodeType = 9;
-            return;
-          } else {
-            tmpResult = tmp();
-            tmp4 = tmpResult;
-            return tmpResult;
-          }
-        }
-        if (typeof Symbol !== "undefined") {
-          _Symbol4 = Symbol;
-          if (tmp[Symbol.hasInstance]) {
-            _Symbol = Symbol;
-            tmp2 = tmp[Symbol.hasInstance](self);
-          }
-        }
-        tmp2 = closure_1_8(self, tmp);
-        return;
-      }
-    }
-    HermesBuiltin.throwTypeError();
-  }
-  if (!obj6) {
-    class Ue {
-      constructor() {
-        self = this;
-        tmp = Ue;
-        if (typeof Symbol !== "undefined") {
-          _Symbol3 = Symbol;
-          if (tmp[Symbol.hasInstance]) {
-            _Symbol2 = Symbol;
-            tmp2 = tmp[Symbol.hasInstance](self);
-          }
-          if (tmp2) {
-            str = "head";
-            self.head = self.createElement("head");
-            str2 = "body";
-            self.body = self.createElement("body");
-            str3 = "html";
-            self.documentElement = self.createElement("html");
-            documentElement = self.documentElement;
-            appendChildResult = documentElement.appendChild(self.head);
-            documentElement2 = self.documentElement;
-            appendChildResult1 = documentElement2.appendChild(self.body);
-            items = [];
-            items[0] = self.documentElement;
-            self.childNodes = items;
-            num = 9;
-            self.nodeType = 9;
-            return;
-          } else {
-            tmpResult = tmp();
-            tmp4 = tmpResult;
-            return tmpResult;
-          }
-        }
-        if (typeof Symbol !== "undefined") {
-          _Symbol4 = Symbol;
-          if (tmp[Symbol.hasInstance]) {
-            _Symbol = Symbol;
-            tmp2 = tmp[Symbol.hasInstance](self);
-          }
-        }
-        tmp2 = closure_1_8(self, tmp);
-        return;
-      }
-    }
-    const obj2 = { exports: null };
-    obj2[0] = {};
-    obj6 = obj2;
-    callback(obj2.exports, obj6);
-  }
-  closure_4 = obj6.exports;
-  if (typeof f98884 !== "function") {
-    class Ue {
-      constructor() {
-        self = this;
-        tmp = Ue;
-        if (typeof Symbol !== "undefined") {
-          _Symbol3 = Symbol;
-          if (tmp[Symbol.hasInstance]) {
-            _Symbol2 = Symbol;
-            tmp2 = tmp[Symbol.hasInstance](self);
-          }
-          if (tmp2) {
-            str = "head";
-            self.head = self.createElement("head");
-            str2 = "body";
-            self.body = self.createElement("body");
-            str3 = "html";
-            self.documentElement = self.createElement("html");
-            documentElement = self.documentElement;
-            appendChildResult = documentElement.appendChild(self.head);
-            documentElement2 = self.documentElement;
-            appendChildResult1 = documentElement2.appendChild(self.body);
-            items = [];
-            items[0] = self.documentElement;
-            self.childNodes = items;
-            num = 9;
-            self.nodeType = 9;
-            return;
-          } else {
-            tmpResult = tmp();
-            tmp4 = tmpResult;
-            return tmpResult;
-          }
-        }
-        if (typeof Symbol !== "undefined") {
-          _Symbol4 = Symbol;
-          if (tmp[Symbol.hasInstance]) {
-            _Symbol = Symbol;
-            tmp2 = tmp[Symbol.hasInstance](self);
-          }
-        }
-        tmp2 = closure_1_8(self, tmp);
-        return;
-      }
-    }
-    HermesBuiltin.throwTypeError();
-  }
-  if (!obj6) {
-    class Ue {
-      constructor() {
-        self = this;
-        tmp = Ue;
-        if (typeof Symbol !== "undefined") {
-          _Symbol3 = Symbol;
-          if (tmp[Symbol.hasInstance]) {
-            _Symbol2 = Symbol;
-            tmp2 = tmp[Symbol.hasInstance](self);
-          }
-          if (tmp2) {
-            str = "head";
-            self.head = self.createElement("head");
-            str2 = "body";
-            self.body = self.createElement("body");
-            str3 = "html";
-            self.documentElement = self.createElement("html");
-            documentElement = self.documentElement;
-            appendChildResult = documentElement.appendChild(self.head);
-            documentElement2 = self.documentElement;
-            appendChildResult1 = documentElement2.appendChild(self.body);
-            items = [];
-            items[0] = self.documentElement;
-            self.childNodes = items;
-            num = 9;
-            self.nodeType = 9;
-            return;
-          } else {
-            tmpResult = tmp();
-            tmp4 = tmpResult;
-            return tmpResult;
-          }
-        }
-        if (typeof Symbol !== "undefined") {
-          _Symbol4 = Symbol;
-          if (tmp[Symbol.hasInstance]) {
-            _Symbol = Symbol;
-            tmp2 = tmp[Symbol.hasInstance](self);
-          }
-        }
-        tmp2 = closure_1_8(self, tmp);
-        return;
-      }
-    }
-    obj3 = { exports: null };
-    obj3[0] = {};
-    obj6 = obj3;
-    callback(obj3.exports, obj6);
-  }
-  closure_5 = obj6.exports;
-  if (typeof f98884 !== "function") {
-    class Ue {
-      constructor() {
-        self = this;
-        tmp = Ue;
-        if (typeof Symbol !== "undefined") {
-          _Symbol3 = Symbol;
-          if (tmp[Symbol.hasInstance]) {
-            _Symbol2 = Symbol;
-            tmp2 = tmp[Symbol.hasInstance](self);
-          }
-          if (tmp2) {
-            str = "head";
-            self.head = self.createElement("head");
-            str2 = "body";
-            self.body = self.createElement("body");
-            str3 = "html";
-            self.documentElement = self.createElement("html");
-            documentElement = self.documentElement;
-            appendChildResult = documentElement.appendChild(self.head);
-            documentElement2 = self.documentElement;
-            appendChildResult1 = documentElement2.appendChild(self.body);
-            items = [];
-            items[0] = self.documentElement;
-            self.childNodes = items;
-            num = 9;
-            self.nodeType = 9;
-            return;
-          } else {
-            tmpResult = tmp();
-            tmp4 = tmpResult;
-            return tmpResult;
-          }
-        }
-        if (typeof Symbol !== "undefined") {
-          _Symbol4 = Symbol;
-          if (tmp[Symbol.hasInstance]) {
-            _Symbol = Symbol;
-            tmp2 = tmp[Symbol.hasInstance](self);
-          }
-        }
-        tmp2 = closure_1_8(self, tmp);
-        return;
-      }
-    }
-    HermesBuiltin.throwTypeError();
-  }
-  if (!obj6) {
-    class Ue {
-      constructor() {
-        self = this;
-        tmp = Ue;
-        if (typeof Symbol !== "undefined") {
-          _Symbol3 = Symbol;
-          if (tmp[Symbol.hasInstance]) {
-            _Symbol2 = Symbol;
-            tmp2 = tmp[Symbol.hasInstance](self);
-          }
-          if (tmp2) {
-            str = "head";
-            self.head = self.createElement("head");
-            str2 = "body";
-            self.body = self.createElement("body");
-            str3 = "html";
-            self.documentElement = self.createElement("html");
-            documentElement = self.documentElement;
-            appendChildResult = documentElement.appendChild(self.head);
-            documentElement2 = self.documentElement;
-            appendChildResult1 = documentElement2.appendChild(self.body);
-            items = [];
-            items[0] = self.documentElement;
-            self.childNodes = items;
-            num = 9;
-            self.nodeType = 9;
-            return;
-          } else {
-            tmpResult = tmp();
-            tmp4 = tmpResult;
-            return tmpResult;
-          }
-        }
-        if (typeof Symbol !== "undefined") {
-          _Symbol4 = Symbol;
-          if (tmp[Symbol.hasInstance]) {
-            _Symbol = Symbol;
-            tmp2 = tmp[Symbol.hasInstance](self);
-          }
-        }
-        tmp2 = closure_1_8(self, tmp);
-        return;
-      }
-    }
-    const obj4 = { exports: null };
-    obj4[0] = {};
-    obj6 = obj4;
-    callback(obj4.exports, obj6);
-  }
-  if (typeof f98884 !== "function") {
-    class Ue {
-      constructor() {
-        self = this;
-        tmp = Ue;
-        if (typeof Symbol !== "undefined") {
-          _Symbol3 = Symbol;
-          if (tmp[Symbol.hasInstance]) {
-            _Symbol2 = Symbol;
-            tmp2 = tmp[Symbol.hasInstance](self);
-          }
-          if (tmp2) {
-            str = "head";
-            self.head = self.createElement("head");
-            str2 = "body";
-            self.body = self.createElement("body");
-            str3 = "html";
-            self.documentElement = self.createElement("html");
-            documentElement = self.documentElement;
-            appendChildResult = documentElement.appendChild(self.head);
-            documentElement2 = self.documentElement;
-            appendChildResult1 = documentElement2.appendChild(self.body);
-            items = [];
-            items[0] = self.documentElement;
-            self.childNodes = items;
-            num = 9;
-            self.nodeType = 9;
-            return;
-          } else {
-            tmpResult = tmp();
-            tmp4 = tmpResult;
-            return tmpResult;
-          }
-        }
-        if (typeof Symbol !== "undefined") {
-          _Symbol4 = Symbol;
-          if (tmp[Symbol.hasInstance]) {
-            _Symbol = Symbol;
-            tmp2 = tmp[Symbol.hasInstance](self);
-          }
-        }
-        tmp2 = closure_1_8(self, tmp);
-        return;
-      }
-    }
-    HermesBuiltin.throwTypeError();
-  }
-  if (!obj6) {
-    class Ue {
-      constructor() {
-        self = this;
-        tmp = Ue;
-        if (typeof Symbol !== "undefined") {
-          _Symbol3 = Symbol;
-          if (tmp[Symbol.hasInstance]) {
-            _Symbol2 = Symbol;
-            tmp2 = tmp[Symbol.hasInstance](self);
-          }
-          if (tmp2) {
-            str = "head";
-            self.head = self.createElement("head");
-            str2 = "body";
-            self.body = self.createElement("body");
-            str3 = "html";
-            self.documentElement = self.createElement("html");
-            documentElement = self.documentElement;
-            appendChildResult = documentElement.appendChild(self.head);
-            documentElement2 = self.documentElement;
-            appendChildResult1 = documentElement2.appendChild(self.body);
-            items = [];
-            items[0] = self.documentElement;
-            self.childNodes = items;
-            num = 9;
-            self.nodeType = 9;
-            return;
-          } else {
-            tmpResult = tmp();
-            tmp4 = tmpResult;
-            return tmpResult;
-          }
-        }
-        if (typeof Symbol !== "undefined") {
-          _Symbol4 = Symbol;
-          if (tmp[Symbol.hasInstance]) {
-            _Symbol = Symbol;
-            tmp2 = tmp[Symbol.hasInstance](self);
-          }
-        }
-        tmp2 = closure_1_8(self, tmp);
-        return;
-      }
-    }
-    const obj5 = { exports: null };
-    obj5[0] = {};
-    obj6 = obj5;
-    callback(obj5.exports, obj6);
-  }
-  if (typeof f98884 !== "function") {
-    class Ue {
-      constructor() {
-        self = this;
-        tmp = Ue;
-        if (typeof Symbol !== "undefined") {
-          _Symbol3 = Symbol;
-          if (tmp[Symbol.hasInstance]) {
-            _Symbol2 = Symbol;
-            tmp2 = tmp[Symbol.hasInstance](self);
-          }
-          if (tmp2) {
-            str = "head";
-            self.head = self.createElement("head");
-            str2 = "body";
-            self.body = self.createElement("body");
-            str3 = "html";
-            self.documentElement = self.createElement("html");
-            documentElement = self.documentElement;
-            appendChildResult = documentElement.appendChild(self.head);
-            documentElement2 = self.documentElement;
-            appendChildResult1 = documentElement2.appendChild(self.body);
-            items = [];
-            items[0] = self.documentElement;
-            self.childNodes = items;
-            num = 9;
-            self.nodeType = 9;
-            return;
-          } else {
-            tmpResult = tmp();
-            tmp4 = tmpResult;
-            return tmpResult;
-          }
-        }
-        if (typeof Symbol !== "undefined") {
-          _Symbol4 = Symbol;
-          if (tmp[Symbol.hasInstance]) {
-            _Symbol = Symbol;
-            tmp2 = tmp[Symbol.hasInstance](self);
-          }
-        }
-        tmp2 = closure_1_8(self, tmp);
-        return;
-      }
-    }
-    HermesBuiltin.throwTypeError();
-  }
-  if (!obj6) {
-    class Ue {
-      constructor() {
-        self = this;
-        tmp = Ue;
-        if (typeof Symbol !== "undefined") {
-          _Symbol3 = Symbol;
-          if (tmp[Symbol.hasInstance]) {
-            _Symbol2 = Symbol;
-            tmp2 = tmp[Symbol.hasInstance](self);
-          }
-          if (tmp2) {
-            str = "head";
-            self.head = self.createElement("head");
-            str2 = "body";
-            self.body = self.createElement("body");
-            str3 = "html";
-            self.documentElement = self.createElement("html");
-            documentElement = self.documentElement;
-            appendChildResult = documentElement.appendChild(self.head);
-            documentElement2 = self.documentElement;
-            appendChildResult1 = documentElement2.appendChild(self.body);
-            items = [];
-            items[0] = self.documentElement;
-            self.childNodes = items;
-            num = 9;
-            self.nodeType = 9;
-            return;
-          } else {
-            tmpResult = tmp();
-            tmp4 = tmpResult;
-            return tmpResult;
-          }
-        }
-        if (typeof Symbol !== "undefined") {
-          _Symbol4 = Symbol;
-          if (tmp[Symbol.hasInstance]) {
-            _Symbol = Symbol;
-            tmp2 = tmp[Symbol.hasInstance](self);
-          }
-        }
-        tmp2 = closure_1_8(self, tmp);
-        return;
-      }
-    }
-    obj6 = { exports: null };
-    obj6[0] = {};
-    callback(obj6.exports, obj6);
-  }
-  arg1.exports = Ue;
-  const prototype = Ue.prototype;
-  prototype.createTextNode = function(arg0) {
-    return new closure_2(arg0, this);
-  };
-  prototype.createElementNS = function(arg0, arg1) {
-    let StringResult = null;
-    if (null !== arg0) {
-      const _String = String;
-      StringResult = String(arg0);
-    }
-    return new _exports(arg1, this, StringResult);
-  };
-  prototype.createElement = function(arg0) {
-    return new _exports(arg0, this);
-  };
-  prototype.createDocumentFragment = function() {
-    return new closure_4(this);
-  };
-  prototype.createEvent = (arg0) => new closure_5(arg0);
-  prototype.createComment = function(arg0) {
-    return new obj6(arg0, this);
-  };
-  prototype.getElementById = function(arg0) {
-    let callback = arg0;
-    callback = String(arg0);
-    return callback(this.childNodes, (id) => {
-      if (String(id.id) === closure_0) {
-        return id;
-      }
-    }) || null;
-  };
-  prototype.getElementsByClassName = _exports.prototype.getElementsByClassName;
-  prototype.getElementsByTagName = _exports.prototype.getElementsByTagName;
-  prototype.contains = _exports.prototype.contains;
-  prototype.removeEventListener = obj6.exports;
-  prototype.addEventListener = obj6.exports;
-  prototype.dispatchEvent = obj6.exports;
 };
-create = undefined;
+let closure_141_1;
 f98884 = () => {
 
 };
-f98876 = (arg0, arg1) => {
-  if (typeof f98884 !== "function") {
-    HermesBuiltin.throwTypeError();
+let closure_142_0 = (arg0, arg1) => {
+  if (typeof f98884 === "function") {
+    if (!closure_149_1) {
+      const obj = { exports: {} };
+      closure_149_1 = obj;
+      closure_149_0(obj.exports, closure_149_1);
+    }
+    const _exports = new closure_149_1.exports();
+    arg1.exports = _exports;
+  } else {
+    throw new TypeError("Trying to call a non-function");
   }
-  if (!obj) {
-    obj = { exports: null };
-    obj[0] = {};
-    f98876(obj.exports, obj);
-  }
-  const _exports = new obj.exports();
-  arg1.exports = _exports;
 };
-create = undefined;
+let closure_142_1;
 f98884 = () => {
 
 };
@@ -5149,13 +4916,12 @@ obj = {
   }
 };
 for (const key10058 in obj) {
-  let tmp36 = key10058;
   obj = { get: null, enumerable: true };
-  obj[0] = obj[key10058];
+  obj.get = obj[key10058];
   let definePropertyResult = defineProperty(obj, key10058, obj);
   continue;
 }
-f98876 = obj;
+let closure_143_0 = obj;
 if (typeof obj === "object") {
   const ownPropertyNames = getOwnPropertyNames(obj);
   let num = 0;
@@ -5163,7 +4929,6 @@ if (typeof obj === "object") {
     do {
       let tmp3 = ownPropertyNames[num];
       let call = hasOwnProperty.call;
-      let tmp4 = num;
       let tmp5 = typeof call === "unknown" ? hasOwnProperty(tmp3) : call(definePropertyResult1, tmp3);
       let tmp6 = !tmp5;
       if (!tmp5) {
@@ -5171,14 +4936,14 @@ if (typeof obj === "object") {
       }
       if (tmp6) {
         let obj1 = { get: null, enumerable: null };
-        let fn = (arg0) => table[arg0];
-        obj1[0] = fn.bind(null, tmp3);
+        fn = (arg0) => value[arg0];
+        obj1.get = fn.bind(null, tmp3);
         let ownPropertyDescriptor = getOwnPropertyDescriptor(obj, tmp3);
         let enumerable = !ownPropertyDescriptor;
         if (ownPropertyDescriptor) {
           enumerable = ownPropertyDescriptor.enumerable;
         }
-        obj1[1] = enumerable;
+        obj1.enumerable = enumerable;
         let definePropertyResult2 = defineProperty(definePropertyResult1, tmp3, obj1);
       }
       num = num + 1;
@@ -5198,57 +4963,75 @@ class G {
     if (!global) {
       tmp5 = defineProperty;
       obj = { value: null, enumerable: true };
-      obj[0] = global;
+      obj.value = global;
       str = "default";
       tmp4 = defineProperty(obj, "default", obj);
     } else {
       tmp4 = obj;
     }
-    if (typeof tmp3 !== "function") {
+    if (typeof tmp3 === "function") {
+      closure_0 = global;
+      if (!global) {
+        return tmp4;
+      }
+      tmp6 = getOwnPropertyNames;
+      arr = getOwnPropertyNames(global);
+      length = arr.length;
+      num = 0;
+      num2 = 1;
+      if (0 < length) {
+        do {
+          tmp7 = arr[num];
+          tmp8 = hasOwnProperty;
+          call = hasOwnProperty.call;
+          tmp9 = num;
+          tmp10 = typeof call === "unknown" ? tmp8(tmp7) : call(tmp4, tmp7);
+          tmp11 = !tmp10;
+          if (!tmp10) {
+            tmp11 = tmp7 !== undefined;
+          }
+          if (tmp11) {
+            obj1 = { get: null, enumerable: null };
+            fn = (arg0) => value[arg0];
+            tmp12 = defineProperty;
+            obj1.get = fn.bind(null, tmp7);
+            tmp13 = getOwnPropertyDescriptor;
+            tmp14 = getOwnPropertyDescriptor(global, tmp7);
+            enumerable = !tmp14;
+            if (tmp14) {
+              enumerable = tmp14.enumerable;
+            }
+            obj1.enumerable = enumerable;
+            tmp12Result = tmp12(tmp4, tmp7, obj1);
+          }
+          num = num + 1;
+        } while (num < length);
+      }
+    } else {
       str2 = "Trying to call a non-function";
-      throwTypeErrorResult = HermesBuiltin.throwTypeError();
-    }
-    closure_0 = global;
-    if (!global) {
-      return tmp4;
-    }
-    arr = getOwnPropertyNames(global);
-    length = arr.length;
-    for (let num = 0; num < length; num = num + 1) {
-      tmp6 = arr[num];
-      tmp7 = hasOwnProperty;
-      call = hasOwnProperty.call;
-      tmp8 = num;
-      tmp9 = typeof call === "unknown" ? tmp7(tmp6) : call(tmp4, tmp6);
-      tmp10 = !tmp9;
-      if (!tmp9) {
-        tmp10 = tmp6 !== undefined;
-      }
-      if (tmp10) {
-        obj1 = { get: null, enumerable: null };
-        fn = (arg0) => table[arg0];
-        tmp11 = defineProperty;
-        obj1[0] = fn.bind(null, tmp6);
-        tmp12 = getOwnPropertyDescriptor;
-        tmp13 = getOwnPropertyDescriptor(global, tmp6);
-        enumerable = !tmp13;
-        if (tmp13) {
-          enumerable = tmp13.enumerable;
-        }
-        obj1[1] = enumerable;
-        tmp11Result = tmp11(tmp4, tmp6, obj1);
-      }
+      throw new TypeError("Trying to call a non-function");
     }
     return;
   }
 }
 let obj2 = { exports: {} };
+((arg0, arg1) => {
+  if (typeof window !== "undefined") {
+    let _window = window;
+  } else {
+    _window = f98876;
+    if (undefined === f98876) {
+      const _self = self;
+    }
+  }
+  arg1.exports = _window;
+})(0, obj2);
 const GResult = G(obj2.exports);
 let closure_25 = G(obj2.exports);
 let closure_26 = G(obj2.exports);
 let obj3 = {
   now() {
-    const _performance = mod2.default.performance;
+    const _performance = closure_26.default.performance;
     let timing = _performance;
     if (_performance) {
       timing = _performance.timing;
@@ -5268,7 +5051,7 @@ let obj3 = {
   }
 };
 function ee() {
-  const _crypto = mod.default.crypto;
+  const _crypto = closure_25.default.crypto;
   let getRandomValues;
   if (null !== _crypto) {
     if (undefined !== _crypto) {
@@ -5279,7 +5062,7 @@ function ee() {
     const _Uint8Array = Uint8Array;
     const uint8Array = new Uint8Array(32);
     items = uint8Array;
-    const _crypto2 = mod.default.crypto;
+    const _crypto2 = closure_25.default.crypto;
     const randomValues = _crypto2.getRandomValues(uint8Array);
     let num6 = 0;
     do {
@@ -5295,7 +5078,7 @@ function ee() {
       num = num + 1;
     } while (num < 32);
   }
-  c1 = 0;
+  closure_1 = 0;
   let str = "xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".replace(/[xy]/g, (arg0) => {
     if ("x" === arg0) {
       let str = items[closure_1];
@@ -5320,9 +5103,9 @@ function ee() {
 class Oe {
   constructor() {
     random = Math.random();
-    str = random * require("module_36") | 0;
-    text = `000000${require("module_36")}`;
-    return require("module_4294967290");
+    str = random * Math.pow(36, 6) | 0;
+    text = `000000${str.toString(36)}`;
+    return `000000${str.toString(36)}`.slice(-6);
   }
 }
 function J(nodeName) {
@@ -5366,7 +5149,6 @@ function se(nodeName) {
       str2 = "";
       if (element.nodeName) {
         str2 = element.nodeName.toLowerCase();
-        const str3 = element.nodeName;
       }
     }
     items = [element, tmp2, str2];
@@ -5403,9 +5185,9 @@ let tmp11 = ((arg0) => {
   closure_3 = bind3.apply(debug, V(items1));
   const bind4 = warn.bind;
   closure_4 = bind4.apply(warn, V(items1));
-  error = console.error;
   const bind5 = error.bind;
   closure_5 = bind5.apply(error, V(items1));
+  closure_6 = num;
   const obj = {
     trace() {
       const length = arguments.length;
@@ -5413,8 +5195,8 @@ let tmp11 = ((arg0) => {
       for (let num = 0; num < length; num = num + 1) {
         array[num] = arguments[num];
       }
-      if (num <= closure_1_33) {
-        return callback.apply(undefined, closure_1_32(array));
+      if (closure_6 <= c33) {
+        return closure_1.apply(undefined, V(array));
       }
     },
     debug() {
@@ -5423,8 +5205,8 @@ let tmp11 = ((arg0) => {
       for (let num = 0; num < length; num = num + 1) {
         array[num] = arguments[num];
       }
-      if (num <= closure_1_34) {
-        return callback3.apply(undefined, closure_1_32(array));
+      if (closure_6 <= c34) {
+        return closure_3.apply(undefined, V(array));
       }
     },
     info() {
@@ -5433,8 +5215,8 @@ let tmp11 = ((arg0) => {
       for (let num = 0; num < length; num = num + 1) {
         array[num] = arguments[num];
       }
-      if (num <= closure_1_35) {
-        return callback2.apply(undefined, closure_1_32(array));
+      if (closure_6 <= c35) {
+        return closure_2.apply(undefined, V(array));
       }
     },
     warn() {
@@ -5443,8 +5225,8 @@ let tmp11 = ((arg0) => {
       for (let num = 0; num < length; num = num + 1) {
         array[num] = arguments[num];
       }
-      if (num <= closure_1_36) {
-        return callback4.apply(undefined, closure_1_32(array));
+      if (closure_6 <= c36) {
+        return closure_4.apply(undefined, V(array));
       }
     },
     error() {
@@ -5453,13 +5235,13 @@ let tmp11 = ((arg0) => {
       for (let num = 0; num < length; num = num + 1) {
         array[num] = arguments[num];
       }
-      if (num <= closure_1_37) {
-        return callback5.apply(undefined, closure_1_32(array));
+      if (closure_6 <= c37) {
+        return closure_5.apply(undefined, V(array));
       }
     }
   };
   Object.defineProperty(obj, "level", {
-    get: () => num,
+    get: () => closure_6,
     set: function(arg0) {
       let tmp = arg0;
       if (arg0 !== this.level) {
@@ -5472,15 +5254,15 @@ let tmp11 = ((arg0) => {
   });
   return obj;
 })("[mux]");
-let closure_38 = tmp11;
+const __initData16 = tmp11;
 let closure_39 = G(obj2.exports);
-if (f98876) {
-  f98876 = 0;
-  create = require("module_0");
+if (closure_129_0) {
+  closure_129_0 = 0;
+  closure_129_1 = tmp12(0);
 }
-if (f98876) {
-  f98876 = 0;
-  create = require("module_0");
+if (closure_130_0) {
+  closure_130_0 = 0;
+  closure_130_1 = tmp13(0);
 }
 class N {
   constructor(arg0, arg1, arg2) {
@@ -5504,27 +5286,29 @@ class N {
 }
 class F {
   constructor(arg0) {
-    if (typeof re !== "function") {
-      str2 = "Trying to call a non-function";
-      throwTypeErrorResult = HermesBuiltin.throwTypeError();
-    }
-    if (typeof global === "string") {
-      str3 = "";
-      if ("" !== global) {
-        tmp = global.match(/^(([^:\/?#]+):)?(\/\/([^\/?#]*))?([^?#]*)(\?([^#]*))?(#(.*))?/) || [];
-        str = tmp[4];
-        first = undefined;
-        if (str) {
-          tmp3 = str.match(/[^\.]+\.[^\.]+$/) || [];
-          first = tmp3[0];
+    if (typeof re === "function") {
+      tmp = global;
+      if (typeof global === "string") {
+        str3 = "";
+        if ("" !== global) {
+          tmp2 = global.match(/^(([^:\/?#]+):)?(\/\/([^\/?#]*))?([^?#]*)(\?([^#]*))?(#(.*))?/) || [];
+          str = tmp2[4];
+          first = undefined;
+          if (str) {
+            tmp4 = str.match(/[^\.]+\.[^\.]+$/) || [];
+            first = tmp4[0];
+          }
+          items = [, ];
+          items[0] = str;
+          items[1] = first;
         }
-        items = [, ];
-        items[0] = str;
-        items[1] = first;
+        return items[0];
       }
-      return items[0];
+      items = ["localhost"];
+    } else {
+      str2 = "Trying to call a non-function";
+      throw new TypeError("Trying to call a non-function");
     }
-    items = ["localhost"];
     return;
   }
 }
@@ -5547,7 +5331,7 @@ function re(str) {
 let closure_46 = G(obj2.exports);
 let closure_47 = {
   exists() {
-    const _performance = mod4.default.performance;
+    const _performance = closure_46.default.performance;
     let timing = _performance;
     if (_performance) {
       timing = _performance.timing;
@@ -5555,7 +5339,7 @@ let closure_47 = {
     return undefined !== timing;
   },
   domContentLoadedEventEnd() {
-    const _performance = mod4.default.performance;
+    const _performance = closure_46.default.performance;
     let timing = _performance;
     if (_performance) {
       timing = _performance.timing;
@@ -5567,7 +5351,7 @@ let closure_47 = {
     return domContentLoadedEventEnd;
   },
   navigationStart() {
-    const _performance = mod4.default.performance;
+    const _performance = closure_46.default.performance;
     let timing = _performance;
     if (_performance) {
       timing = _performance.timing;
@@ -5591,103 +5375,97 @@ function He(arg0) {
 function Se(arg0) {
 
 }
-function Nt(requestEndDate, getMetricsFor) {
-  if (requestEndDate) {
-    if (requestEndDate.requestEndDate) {
-      if (typeof closure_44 !== "function") {
-        HermesBuiltin.throwTypeError();
-      }
-      if (typeof re !== "function") {
-        HermesBuiltin.throwTypeError();
-      }
-      if (typeof requestEndDate.url === "string") {
-        if ("" !== str) {
-          const str2 = str.match(/^(([^:\/?#]+):)?(\/\/([^\/?#]*))?([^?#]*)(\?([^#]*))?(#(.*))?/) || [][4];
-          let first;
-          if (str2) {
-            first = str2.match(/[^\.]+\.[^\.]+$/) || [][0];
-            const tmp5 = str2.match(/[^\.]+\.[^\.]+$/) || [];
-          }
-          items = [str2, first];
-          const tmp3 = str.match(/^(([^:\/?#]+):)?(\/\/([^\/?#]*))?([^?#]*)(\?([^#]*))?(#(.*))?/) || [];
-        }
-        const _Date = Date;
-        ({ url, bytesLoaded } = requestEndDate);
-        const date = new Date(requestEndDate.requestStartDate);
-        const _Date2 = Date;
-        const time = date.getTime();
-        const date1 = new Date(requestEndDate.firstByteDate);
-        const _Date3 = Date;
-        const time1 = date1.getTime();
-        const date2 = new Date(requestEndDate.requestEndDate);
-        const _isNaN = isNaN;
-        const time2 = date2.getTime();
-        let num2 = 0;
-        if (!isNaN(requestEndDate.duration)) {
-          num2 = requestEndDate.duration;
-        }
-        if (typeof getMetricsFor.getMetricsFor === "function") {
-          let HttpList = getMetricsFor.getMetricsFor(requestEndDate.mediaType).HttpList;
-        } else {
-          const dashMetrics = getMetricsFor.getDashMetrics();
-          HttpList = dashMetrics.getHttpRequests(requestEndDate.mediaType);
-        }
-        let tmp20;
-        if (HttpList.length > 0) {
-          let str3 = HttpList[HttpList.length - 1]._responseHeaders || "";
-          let obj = {};
-          if (!str3) {
-            str3 = "";
-          }
-          const parts = str3.trim().split(/[\r\n]+/);
-          const item = parts.forEach((str) => {
-            if (str) {
-              const parts = str.split(": ");
-              const str2 = parts.shift();
-              let tmp = str2;
+function Nt(request, dashjs) {
+  if (request) {
+    if (request.requestEndDate) {
+      if (typeof closure_44 === "function") {
+        if (typeof re === "function") {
+          if (typeof str === "string") {
+            if ("" !== str) {
+              const str2 = str.match(/^(([^:\/?#]+):)?(\/\/([^\/?#]*))?([^?#]*)(\?([^#]*))?(#(.*))?/) || [][4];
+              let first;
               if (str2) {
-                let tmp3 = closure_1_50.indexOf(str2.toLowerCase()) >= 0;
-                if (!tmp3) {
-                  const formatted = str2.toLowerCase();
-                  tmp3 = 0 === formatted.indexOf("x-litix-");
+                first = str2.match(/[^\.]+\.[^\.]+$/) || [][0];
+                const tmp5 = str2.match(/[^\.]+\.[^\.]+$/) || [];
+              }
+              items = [str2, first];
+              const tmp3 = str.match(/^(([^:\/?#]+):)?(\/\/([^\/?#]*))?([^?#]*)(\?([^#]*))?(#(.*))?/) || [];
+            }
+            const _Date = Date;
+            ({ url, bytesLoaded } = request);
+            const date = new Date(request.requestStartDate);
+            const _Date2 = Date;
+            const time = date.getTime();
+            const date1 = new Date(request.firstByteDate);
+            const _Date3 = Date;
+            const time1 = date1.getTime();
+            const date2 = new Date(request.requestEndDate);
+            const _isNaN = isNaN;
+            const time2 = date2.getTime();
+            let num2 = 0;
+            if (!isNaN(request.duration)) {
+              num2 = request.duration;
+            }
+            if (typeof dashjs.getMetricsFor === "function") {
+              let HttpList = dashjs.getMetricsFor(request.mediaType).HttpList;
+            } else {
+              const dashMetrics = dashjs.getDashMetrics();
+              HttpList = dashMetrics.getHttpRequests(request.mediaType);
+            }
+            let tmp20;
+            if (HttpList.length > 0) {
+              let str3 = HttpList[HttpList.length - 1]._responseHeaders || "";
+              let obj = {};
+              if (!str3) {
+                str3 = "";
+              }
+              const parts = str3.trim().split(/[\r\n]+/);
+              const item = parts.forEach((item) => {
+                if (item) {
+                  const parts = item.split(": ");
+                  const str2 = parts.shift();
+                  let tmp = str2;
+                  if (str2) {
+                    let tmp3 = closure_2_50.indexOf(str2.toLowerCase()) >= 0;
+                    if (!tmp3) {
+                      const formatted = str2.toLowerCase();
+                      tmp3 = 0 === formatted.indexOf("x-litix-");
+                    }
+                    tmp = tmp3;
+                  }
+                  if (tmp) {
+                    obj[str2] = parts.join(": ");
+                  }
                 }
-                tmp = tmp3;
-              }
-              if (tmp) {
-                obj[str2] = parts.join(": ");
-              }
+              });
+              tmp20 = obj;
+              const str4 = str3.trim();
             }
-          });
-          tmp20 = obj;
-          const str4 = str3.trim();
-        }
-        obj = { requestStart: null, requestResponseStart: null, requestResponseEnd: null, requestBytesLoaded: null, requestResponseHeaders: null, requestMediaDuration: null, requestHostname: null, requestUrl: null, requestId: null };
-        obj[0] = time;
-        obj[1] = time1;
-        obj[2] = time2;
-        obj[3] = bytesLoaded;
-        obj[4] = tmp20;
-        obj[5] = num2;
-        obj[6] = items[0];
-        obj[7] = url;
-        let tmp22;
-        if (tmp20) {
-          obj = tmp20;
-          let tmp23;
-          if (tmp20) {
-            const found = items.find((arg0) => undefined !== obj[arg0]);
-            let tmp26;
-            if (found) {
-              tmp26 = tmp20[found];
+            obj = { requestStart: time, requestResponseStart: time1, requestResponseEnd: time2, requestBytesLoaded: bytesLoaded, requestResponseHeaders: tmp20, requestMediaDuration: num2, requestHostname: items[0], requestUrl: url, requestId: null };
+            let tmp22;
+            if (tmp20) {
+              obj = tmp20;
+              let tmp23;
+              if (tmp20) {
+                const found = items.find((item) => undefined !== obj[item]);
+                let tmp26;
+                if (found) {
+                  tmp26 = tmp20[found];
+                }
+                tmp23 = tmp26;
+              }
+              tmp22 = tmp23;
             }
-            tmp23 = tmp26;
+            obj.requestId = tmp22;
+            return obj;
           }
-          tmp22 = tmp23;
+          items = ["localhost"];
+        } else {
+          throw new TypeError("Trying to call a non-function");
         }
-        obj[8] = tmp22;
-        return obj;
+      } else {
+        throw new TypeError("Trying to call a non-function");
       }
-      items = ["localhost"];
     }
   }
   return {};
@@ -5729,45 +5507,45 @@ let fn2 = function r() {
   }
   tmp2 = U(self, tmp);
 };
-f98876 = fn2;
-let items2 = [
-  {
-    key: "on",
-    value(arg0, _eventEmitterGuid, self) {
-      _eventEmitterGuid = _eventEmitterGuid._eventEmitterGuid;
-      if (!_eventEmitterGuid) {
-        const sum = c57 + 1;
-        c57 = sum;
-        _eventEmitterGuid = sum;
-      }
-      self = this;
-      _eventEmitterGuid._eventEmitterGuid = _eventEmitterGuid;
-      self._listeners = this._listeners || {};
-      items = self._listeners[arg0];
-      if (!items) {
-        items = [];
-      }
-      self._listeners[arg0] = items;
-      let bindResult = _eventEmitterGuid;
-      if (self) {
-        bindResult = _eventEmitterGuid.bind(self);
-      }
-      self._listeners[arg0].push(bindResult);
-      return bindResult;
+const entry = {
+  key: "on",
+  value(arg0, _eventEmitterGuid, self) {
+    _eventEmitterGuid = _eventEmitterGuid._eventEmitterGuid;
+    if (!_eventEmitterGuid) {
+      const sum = c57 + 1;
+      c57 = sum;
+      _eventEmitterGuid = sum;
     }
-  },
+    self = this;
+    _eventEmitterGuid._eventEmitterGuid = _eventEmitterGuid;
+    self._listeners = this._listeners || {};
+    items = self._listeners[arg0];
+    if (!items) {
+      items = [];
+    }
+    self._listeners[arg0] = items;
+    let bindResult = _eventEmitterGuid;
+    if (self) {
+      bindResult = _eventEmitterGuid.bind(self);
+    }
+    self._listeners[arg0].push(bindResult);
+    return bindResult;
+  }
+};
+let items2 = [
+  entry,
   {
     key: "off",
     value(arg0, arg1) {
-      closure_0 = arg1;
+      const _eventEmitterGuid = arg1;
       let _listeners = this._listeners;
       if (_listeners) {
         _listeners = tmp._listeners[arg0];
       }
       if (_listeners) {
-        const item = _listeners.forEach((_eventEmitterGuid) => {
+        const item = _listeners.forEach((_eventEmitterGuid, index) => {
           if (_eventEmitterGuid._eventEmitterGuid === _eventEmitterGuid._eventEmitterGuid) {
-            _listeners.splice(arg1, 1);
+            _listeners.splice(index, 1);
           }
         });
       }
@@ -5775,12 +5553,11 @@ let items2 = [
   },
   {
     key: "one",
-    value(arg0, _eventEmitterGuid) {
-      let self = this;
+    value(arg0, _eventEmitterGuid, arg2) {
       closure_0 = arg0;
       closure_1 = _eventEmitterGuid;
       closure_2 = arg2;
-      self = this;
+      let self = this;
       _eventEmitterGuid = _eventEmitterGuid._eventEmitterGuid;
       if (!_eventEmitterGuid) {
         const sum = c57 + 1;
@@ -5788,7 +5565,7 @@ let items2 = [
         _eventEmitterGuid = sum;
       }
       _eventEmitterGuid._eventEmitterGuid = _eventEmitterGuid;
-      const fn = function o() {
+      fn = function o() {
         self.off(closure_0, fn);
         const apply = closure_1.apply;
         self = closure_2;
@@ -5808,52 +5585,49 @@ let items2 = [
   {
     key: "emit",
     value(arg0, arg1) {
-      let self = this;
-      let obj = arg0;
-      self = this;
+      const self = this;
       if (this._listeners) {
-        obj = arg1;
         if (!arg1) {
-          obj = {};
+          let obj = {};
         }
         const substr = self._listeners["before" + arg0] || [].slice();
         const item = substr.forEach((call) => {
           call = call.call;
-          obj = { type: obj };
+          obj = { type: f98876 };
           if (typeof call === "unknown") {
             call(obj, tmp2);
           } else {
-            call(self, obj, tmp2);
+            call(closure_1, obj, tmp2);
           }
         });
         const substr1 = self._listeners["before*"] || [].slice();
         const item1 = substr1.forEach((call) => {
           call = call.call;
-          obj = { type: obj };
+          obj = { type: f98876 };
           if (typeof call === "unknown") {
             call(obj, tmp2);
           } else {
-            call(self, obj, tmp2);
+            call(closure_1, obj, tmp2);
           }
         });
         const substr2 = self._listeners[arg0] || [].slice();
         const item2 = substr2.forEach((call) => {
           call = call.call;
-          obj = { type: obj };
+          obj = { type: f98876 };
           if (typeof call === "unknown") {
             call(obj, tmp2);
           } else {
-            call(self, obj, tmp2);
+            call(closure_1, obj, tmp2);
           }
         });
         const substr3 = self._listeners["after" + arg0] || [].slice();
         const item3 = substr3.forEach((call) => {
           call = call.call;
-          obj = { type: obj };
+          obj = { type: f98876 };
           if (typeof call === "unknown") {
             call(obj, tmp2);
           } else {
-            call(self, obj, tmp2);
+            call(closure_1, obj, tmp2);
           }
         });
         const arr = self._listeners["before" + arg0] || [];
@@ -5867,9 +5641,7 @@ let items2 = [
 N(fn2, items2);
 let closure_58 = G(obj2.exports);
 let fn3 = function r(pm) {
-  let self = this;
-  closure_0 = pm;
-  self = this;
+  const self = this;
   if (typeof Symbol !== "undefined") {
     const _Symbol3 = Symbol;
     if (tmp[Symbol.hasInstance]) {
@@ -5947,12 +5719,11 @@ let fn3 = function r(pm) {
       });
       pm.on("devicesleep", (arg0, viewer_time) => {
         if (null !== self._playbackHeartbeatInterval) {
-          closure_1_58.default.clearInterval(tmp._playbackHeartbeatInterval);
-          const obj = { viewer_time: null };
-          obj[0] = viewer_time.viewer_time;
+          closure_58.default.clearInterval(tmp._playbackHeartbeatInterval);
+          const obj = { viewer_time: viewer_time.viewer_time };
           pm.emit("playbackheartbeatend", obj);
           tmp._playbackHeartbeatInterval = null;
-          const _default = closure_1_58.default;
+          const _default = closure_58.default;
         }
       });
     } else {
@@ -5970,44 +5741,41 @@ let fn3 = function r(pm) {
   }
   tmp2 = U(self, tmp);
 };
-f98876 = fn3;
-let items3 = [
-  {
-    key: "_startPlaybackHeartbeatInterval",
-    value() {
-      let self = this;
-      self = this;
-      if (null === this._playbackHeartbeatInterval) {
-        let pm = self.pm;
+const entry1 = {
+  key: "_startPlaybackHeartbeatInterval",
+  value() {
+    const self = this;
+    if (null === this._playbackHeartbeatInterval) {
+      let pm = self.pm;
+      pm.emit("playbackheartbeat");
+      self._playbackHeartbeatInterval = closure_58.default.setInterval(() => {
+        const pm = self.pm;
         pm.emit("playbackheartbeat");
-        self._playbackHeartbeatInterval = mod5.default.setInterval(() => {
-          const pm = self.pm;
-          pm.emit("playbackheartbeat");
-        }, self.pm.playbackHeartbeatTime);
-        const _default = mod5.default;
-      }
+      }, self.pm.playbackHeartbeatTime);
+      const _default = closure_58.default;
     }
-  },
+  }
+};
+let items3 = [
+  entry1,
   {
     key: "_stopPlaybackHeartbeatInterval",
     value() {
       const self = this;
       this._playheadShouldBeProgressing = false;
       if (null !== this._playbackHeartbeatInterval) {
-        mod5.default.clearInterval(self._playbackHeartbeatInterval);
+        closure_58.default.clearInterval(self._playbackHeartbeatInterval);
         const pm = self.pm;
         pm.emit("playbackheartbeatend");
         self._playbackHeartbeatInterval = null;
-        const _default = mod5.default;
+        const _default = closure_58.default;
       }
     }
   }
 ];
 N(fn3, items3);
 let fn4 = function r(on) {
-  let self = this;
-  closure_0 = on;
-  self = this;
+  const self = this;
   if (typeof Symbol !== "undefined") {
     const _Symbol3 = Symbol;
     if (tmp[Symbol.hasInstance]) {
@@ -6027,7 +5795,7 @@ let fn4 = function r(on) {
       on.on("error", (arg0, player_error_code) => {
         try {
           const obj = { player_error_code: null, player_error_message: null, player_error_context: null, player_error_severity: null, player_error_business_exception: null };
-          ({ player_error_code: obj[0], player_error_message: obj[1], player_error_context: obj[2], player_error_severity: obj[3], player_error_business_exception: obj[4] } = player_error_code);
+          ({ player_error_code: obj.player_error_code, player_error_message: obj.player_error_message, player_error_context: obj.player_error_context, player_error_severity: obj.player_error_severity, player_error_business_exception: obj.player_error_business_exception } = player_error_code);
           const errorTranslatorResult = on.errorTranslator(obj);
           if (errorTranslatorResult) {
             player_error_code = tmp5.player_error_code;
@@ -6162,26 +5930,26 @@ let fn5 = function r(pm) {
   }
   tmp2 = U(self, tmp);
 };
-f98876 = fn5;
-let items4 = [
-  {
-    key: "_updateWatchTime",
-    value(arg0, viewer_time) {
-      const self = this;
-      viewer_time = viewer_time.viewer_time;
-      if (null === this._watchTimeTrackerLastCheckedTime) {
-        self._watchTimeTrackerLastCheckedTime = viewer_time;
-      }
-      const data = self.pm.data;
-      let num = data.view_watch_time;
-      const diff = viewer_time - self._watchTimeTrackerLastCheckedTime;
-      if (!num) {
-        num = 0;
-      }
-      data.view_watch_time = data.view_watch_time + diff;
+const entry2 = {
+  key: "_updateWatchTime",
+  value(arg0, viewer_time) {
+    const self = this;
+    viewer_time = viewer_time.viewer_time;
+    if (null === this._watchTimeTrackerLastCheckedTime) {
       self._watchTimeTrackerLastCheckedTime = viewer_time;
     }
-  },
+    const data = self.pm.data;
+    let num = data.view_watch_time;
+    const diff = viewer_time - self._watchTimeTrackerLastCheckedTime;
+    if (!num) {
+      num = 0;
+    }
+    data.view_watch_time = data.view_watch_time + diff;
+    self._watchTimeTrackerLastCheckedTime = viewer_time;
+  }
+};
+let items4 = [
+  entry2,
   {
     key: "_clearWatchTimeState",
     value(arg0, arg1) {
@@ -6192,8 +5960,7 @@ let items4 = [
 ];
 N(fn5, items4);
 let fn6 = function r(pm) {
-  let self = this;
-  self = this;
+  const self = this;
   if (typeof Symbol !== "undefined") {
     const _Symbol3 = Symbol;
     if (tmp[Symbol.hasInstance]) {
@@ -6233,7 +6000,7 @@ let fn6 = function r(pm) {
       }
       self.pm = pm;
       self._playbackTimeTrackerLastPlayheadPosition = -1;
-      self._lastTime = obj3.now();
+      self._lastTime = __initData5.now();
       self._isAdPlaying = false;
       self._callbackUpdatePlaybackTime = null;
       pm.on("viewinit", () => {
@@ -6270,7 +6037,7 @@ let fn6 = function r(pm) {
       });
       pm.on("viewinit", () => {
         self._playbackTimeTrackerLastPlayheadPosition = -1;
-        self._lastTime = closure_1_27.now();
+        self._lastTime = obj3.now();
         self._isAdPlaying = false;
         self._callbackUpdatePlaybackTime = null;
       });
@@ -6289,22 +6056,22 @@ let fn6 = function r(pm) {
   }
   tmp2 = U(self, tmp);
 };
-f98876 = fn6;
-const items5 = [
-  {
-    key: "_startPlaybackTimeTracking",
-    value() {
-      const self = this;
-      if (null === this._callbackUpdatePlaybackTime) {
-        const _updatePlaybackTime = self._updatePlaybackTime;
-        self._callbackUpdatePlaybackTime = _updatePlaybackTime.bind(self);
-        self._playbackTimeTrackerLastPlayheadPosition = self.pm.data.player_playhead_time;
-        self._lastTime = obj3.now();
-        const pm = self.pm;
-        pm.on("playbackheartbeat", self._callbackUpdatePlaybackTime);
-      }
+const entry3 = {
+  key: "_startPlaybackTimeTracking",
+  value() {
+    const self = this;
+    if (null === this._callbackUpdatePlaybackTime) {
+      const _updatePlaybackTime = self._updatePlaybackTime;
+      self._callbackUpdatePlaybackTime = _updatePlaybackTime.bind(self);
+      self._playbackTimeTrackerLastPlayheadPosition = self.pm.data.player_playhead_time;
+      self._lastTime = obj3.now();
+      const pm = self.pm;
+      pm.on("playbackheartbeat", self._callbackUpdatePlaybackTime);
     }
-  },
+  }
+};
+const items5 = [
+  entry3,
   {
     key: "_stopPlaybackTimeTracking",
     value() {
@@ -6364,7 +6131,6 @@ const items5 = [
 N(fn6, items5);
 let fn7 = function r(pm) {
   const self = this;
-  closure_0 = pm;
   if (typeof Symbol !== "undefined") {
     const _Symbol3 = Symbol;
     if (tmp[Symbol.hasInstance]) {
@@ -6381,11 +6147,12 @@ let fn7 = function r(pm) {
       self.pm = pm;
       const _updatePlayheadTime = self._updatePlayheadTime;
       const bindResult = _updatePlayheadTime.bind(self);
+      closure_1 = bindResult;
       pm.on("playbackheartbeat", bindResult);
       pm.on("playbackheartbeatend", bindResult);
       pm.on("timeupdate", bindResult);
       pm.on("destroy", () => {
-        pm.off("timeupdate", closure_1);
+        pm.off("timeupdate", bindResult);
       });
     } else {
       const _TypeError = TypeError;
@@ -6402,21 +6169,21 @@ let fn7 = function r(pm) {
   }
   tmp2 = U(self, tmp);
 };
-f98876 = fn7;
-const items6 = [
-  {
-    key: "_updateMaxPlayheadPosition",
-    value() {
-      const self = this;
-      if (undefined === this.pm.data.view_max_playhead_position) {
-        let player_playhead_time = self.pm.data.player_playhead_time;
-      } else {
-        const _Math = Math;
-        player_playhead_time = Math.max(self.pm.data.view_max_playhead_position, self.pm.data.player_playhead_time);
-      }
-      this.pm.data.view_max_playhead_position = player_playhead_time;
+const entry4 = {
+  key: "_updateMaxPlayheadPosition",
+  value() {
+    const self = this;
+    if (undefined === this.pm.data.view_max_playhead_position) {
+      let player_playhead_time = self.pm.data.player_playhead_time;
+    } else {
+      const _Math = Math;
+      player_playhead_time = Math.max(self.pm.data.view_max_playhead_position, self.pm.data.player_playhead_time);
     }
-  },
+    this.pm.data.view_max_playhead_position = player_playhead_time;
+  }
+};
+const items6 = [
+  entry4,
   {
     key: "_updatePlayheadTime",
     value(arg0, player_playhead_time) {
@@ -6450,7 +6217,6 @@ N(fn7, items6);
 let c64 = 300000;
 let fn8 = function r(disableRebufferTracking) {
   const self = this;
-  closure_0 = disableRebufferTracking;
   if (typeof Symbol !== "undefined") {
     const _Symbol3 = Symbol;
     if (tmp[Symbol.hasInstance]) {
@@ -6474,7 +6240,7 @@ let fn8 = function r(disableRebufferTracking) {
             data.view_rebuffer_duration = num;
             data.view_rebuffer_duration = data.view_rebuffer_duration + diff;
             viewer_time = viewer_time.viewer_time;
-            if (disableRebufferTracking.data.view_rebuffer_duration > closure_1_64) {
+            if (disableRebufferTracking.data.view_rebuffer_duration > c64) {
               obj.emit("viewend");
               obj.send("viewend");
               const log = obj.mux.log;
@@ -6497,7 +6263,6 @@ let fn8 = function r(disableRebufferTracking) {
             data.view_rebuffer_count = data.view_rebuffer_count + 1;
             viewer_time = viewer_time.viewer_time;
             disableRebufferTracking.one("rebufferend", i);
-            const obj = disableRebufferTracking;
             const tmp = data.view_rebuffer_count || 0;
           }
         });
@@ -6522,8 +6287,7 @@ let fn8 = function r(disableRebufferTracking) {
   tmp2 = U(self, tmp);
 };
 const fn9 = function r(pm) {
-  let self = this;
-  self = this;
+  const self = this;
   if (typeof Symbol !== "undefined") {
     const _Symbol3 = Symbol;
     if (tmp[Symbol.hasInstance]) {
@@ -6576,7 +6340,7 @@ const fn9 = function r(pm) {
         const _cleanupRebufferTracker = self._cleanupRebufferTracker;
         pm.on("playbackheartbeatend", _cleanupRebufferTracker.bind(self));
         pm.on("seeking", () => {
-          const result = self._cleanupRebufferTracker(null, { viewer_time: closure_1_27.now() });
+          const result = self._cleanupRebufferTracker(null, { viewer_time: obj3.now() });
         });
       }
     } else {
@@ -6594,44 +6358,43 @@ const fn9 = function r(pm) {
   }
   tmp2 = U(self, tmp);
 };
-f98876 = fn9;
-const items7 = [
-  {
-    key: "_checkIfRebuffering",
-    value(arg0, viewer_time) {
-      const self = this;
-      if (!this.pm.seekingTracker.isSeeking) {
-        if (!self.pm.adTracker.isAdBreak) {
-          if (self.pm.playbackHeartbeat._playheadShouldBeProgressing) {
-            if (null !== self._lastCheckedTime) {
-              if (self._lastPlayheadTime === self.pm.data.player_playhead_time) {
-                const sustainedRebufferThreshold = self.pm.sustainedRebufferThreshold;
-                let tmp5 = typeof sustainedRebufferThreshold === "number";
-                if (typeof sustainedRebufferThreshold === "number") {
-                  tmp5 = tmp4 >= self.pm.sustainedRebufferThreshold;
-                }
-                if (tmp5) {
-                  if (!self._rebuffering) {
-                    self._rebuffering = true;
-                    const pm = self.pm;
-                    const obj = { viewer_time: null };
-                    obj[0] = self._lastPlayheadTimeUpdatedTime;
-                    pm.emit("rebufferstart", obj);
-                  }
-                }
-                self._lastCheckedTime = viewer_time.viewer_time;
-              } else {
-                const result = self._cleanupRebufferTracker(arg0, viewer_time, true);
+const entry5 = {
+  key: "_checkIfRebuffering",
+  value(arg0, viewer_time) {
+    const self = this;
+    if (!this.pm.seekingTracker.isSeeking) {
+      if (!self.pm.adTracker.isAdBreak) {
+        if (self.pm.playbackHeartbeat._playheadShouldBeProgressing) {
+          if (null !== self._lastCheckedTime) {
+            if (self._lastPlayheadTime === self.pm.data.player_playhead_time) {
+              const sustainedRebufferThreshold = self.pm.sustainedRebufferThreshold;
+              let tmp5 = typeof sustainedRebufferThreshold === "number";
+              if (typeof sustainedRebufferThreshold === "number") {
+                tmp5 = tmp4 >= self.pm.sustainedRebufferThreshold;
               }
+              if (tmp5) {
+                if (!self._rebuffering) {
+                  self._rebuffering = true;
+                  const pm = self.pm;
+                  const obj = { viewer_time: self._lastPlayheadTimeUpdatedTime };
+                  pm.emit("rebufferstart", obj);
+                }
+              }
+              self._lastCheckedTime = viewer_time.viewer_time;
             } else {
-              const result1 = self._prepareRebufferTrackerState(viewer_time.viewer_time);
+              const result = self._cleanupRebufferTracker(arg0, viewer_time, true);
             }
+          } else {
+            const result1 = self._prepareRebufferTrackerState(viewer_time.viewer_time);
           }
         }
       }
-      const result2 = self._cleanupRebufferTracker(arg0, viewer_time);
     }
-  },
+    const result2 = self._cleanupRebufferTracker(arg0, viewer_time);
+  }
+};
+const items7 = [
+  entry5,
   {
     key: "_clearRebufferTrackerState",
     value() {
@@ -6653,8 +6416,7 @@ const items7 = [
       if (this._rebuffering) {
         self._rebuffering = false;
         const pm3 = self.pm;
-        let obj = { viewer_time: null };
-        obj[0] = viewer_time.viewer_time;
+        let obj = { viewer_time: viewer_time.viewer_time };
         pm3.emit("rebufferend", obj);
       } else if (null !== self._lastCheckedTime) {
         const diff = self.pm.data.player_playhead_time - self._lastPlayheadTime;
@@ -6670,12 +6432,10 @@ const items7 = [
         if (tmp3) {
           self._lastCheckedTime = null;
           const pm = self.pm;
-          obj = { viewer_time: null };
-          obj[0] = self._lastPlayheadTimeUpdatedTime;
+          obj = { viewer_time: self._lastPlayheadTimeUpdatedTime };
           pm.emit("rebufferstart", obj);
           const pm2 = self.pm;
-          obj = { viewer_time: null };
-          obj[0] = self._lastPlayheadTimeUpdatedTime + diff1 - diff;
+          obj = { viewer_time: self._lastPlayheadTimeUpdatedTime + diff1 - diff };
           pm2.emit("rebufferend", obj);
         }
       }
@@ -6689,9 +6449,8 @@ const items7 = [
 ];
 N(fn9, items7);
 const fn10 = function r(pm) {
-  let self = this;
   closure_0 = pm;
-  self = this;
+  const self = this;
   if (typeof Symbol !== "undefined") {
     const _Symbol3 = Symbol;
     if (tmp[Symbol.hasInstance]) {
@@ -6710,7 +6469,7 @@ const fn10 = function r(pm) {
         const data = view_id.data;
         view_id = data.view_id;
         if (!data.view_program_changed) {
-          const fn = function n(type, viewer_time) {
+          fn = function n(type, viewer_time) {
             viewer_time = viewer_time.viewer_time;
             let tmp = "playing" === type.type;
             if (tmp) {
@@ -6721,7 +6480,7 @@ const fn10 = function r(pm) {
               if (tmp3) {
                 let _inPrerollPositionResult = undefined === view_id.data.view_time_to_first_frame;
                 if (!_inPrerollPositionResult) {
-                  _inPrerollPositionResult = fn._inPrerollPosition();
+                  _inPrerollPositionResult = self._inPrerollPosition();
                 }
                 tmp3 = _inPrerollPositionResult;
               }
@@ -6729,9 +6488,9 @@ const fn10 = function r(pm) {
             }
             if (tmp) {
               if (!viewer_time) {
-                viewer_time = closure_2_27.now();
+                viewer_time = obj3.now();
               }
-              const result = fn.calculateTimeToFirstFrame(viewer_time, view_id);
+              const result = self.calculateTimeToFirstFrame(viewer_time, view_id);
             }
           };
           obj.one("playing", fn);
@@ -6757,26 +6516,25 @@ const fn10 = function r(pm) {
   }
   tmp2 = U(self, tmp);
 };
-f98876 = fn10;
-const items8 = [
-  {
-    key: "_inPrerollPosition",
-    value() {
-      let tmp = undefined === this.pm.data.view_content_playback_time;
-      if (!tmp) {
-        tmp = this.pm.data.view_content_playback_time <= 1000;
-      }
-      return tmp;
+const entry6 = {
+  key: "_inPrerollPosition",
+  value() {
+    let tmp = undefined === this.pm.data.view_content_playback_time;
+    if (!tmp) {
+      tmp = this.pm.data.view_content_playback_time <= 1000;
     }
-  },
+    return tmp;
+  }
+};
+const items8 = [
+  entry6,
   {
     key: "calculateTimeToFirstFrame",
-    value(arg0, arg1) {
+    value(viewer_time, arg1) {
       const self = this;
       if (arg1 === this.pm.data.view_id) {
         const watchTimeTracker = self.pm.watchTimeTracker;
-        const obj = { viewer_time: null };
-        obj[0] = arg0;
+        const obj = { viewer_time };
         watchTimeTracker._updateWatchTime(null, obj);
         self.pm.data.view_time_to_first_frame = self.pm.data.view_watch_time;
         if (tmp) {
@@ -6789,9 +6547,7 @@ const items8 = [
 ];
 N(fn10, items8);
 const fn11 = function r(on) {
-  let self = this;
-  closure_0 = on;
-  self = this;
+  const self = this;
   if (typeof Symbol !== "undefined") {
     const _Symbol3 = Symbol;
     if (tmp[Symbol.hasInstance]) {
@@ -6833,9 +6589,9 @@ const fn11 = function r(on) {
         self._lastPlayheadPosition = -1;
       });
       items = ["pause", "rebufferstart", "seeking", "error", "adbreakstart", "hb", "renditionchange", "orientationchange", "viewend", "playbackmodechange"];
-      const item = items.forEach((arg0) => {
-        on.on(arg0, () => {
-          if (obj._lastPlayheadPosition >= 0) {
+      const item = items.forEach((item) => {
+        on.on(item, () => {
+          if (self._lastPlayheadPosition >= 0) {
             if (data.data.player_playhead_time >= 0) {
               if (tmp._lastPlayerWidth >= 0) {
                 if (tmp._lastSourceWidth > 0) {
@@ -6887,17 +6643,17 @@ const fn11 = function r(on) {
               }
             }
           }
-          obj._lastPlayheadPosition = -1;
+          self._lastPlayheadPosition = -1;
         });
       });
       const items1 = ["playing", "hb", "renditionchange", "orientationchange", "playbackmodechange"];
-      const item1 = items1.forEach((arg0) => {
-        on.on(arg0, () => {
-          closure_1._lastPlayheadPosition = closure_0.data.player_playhead_time;
-          closure_1._lastPlayerWidth = closure_0.data.player_width;
-          closure_1._lastPlayerHeight = closure_0.data.player_height;
-          closure_1._lastSourceWidth = closure_0.data.video_source_width;
-          closure_1._lastSourceHeight = closure_0.data.video_source_height;
+      const item1 = items1.forEach((item) => {
+        on.on(item, () => {
+          self._lastPlayheadPosition = on.data.player_playhead_time;
+          self._lastPlayerWidth = on.data.player_width;
+          self._lastPlayerHeight = on.data.player_height;
+          self._lastSourceWidth = on.data.video_source_width;
+          self._lastSourceHeight = on.data.video_source_height;
         });
       });
     } else {
@@ -6916,9 +6672,7 @@ const fn11 = function r(on) {
   tmp2 = U(self, tmp);
 };
 const fn12 = function r(on) {
-  let self = this;
-  closure_0 = on;
-  self = this;
+  const self = this;
   if (typeof Symbol !== "undefined") {
     const _Symbol3 = Symbol;
     if (tmp[Symbol.hasInstance]) {
@@ -6945,26 +6699,27 @@ const fn12 = function r(on) {
           }
         }
         if (self.isSeeking) {
-          if (typeof a !== "function") {
-            HermesBuiltin.throwTypeError();
+          if (typeof a === "function") {
+            const nowResult = obj3.now();
+            let tmp8 = viewer_time;
+            if (!viewer_time) {
+              tmp8 = nowResult;
+            }
+            const diff = (obj.data.viewer_time || nowResult) - tmp8;
+            const data = obj.data;
+            data.view_seek_duration = data.view_seek_duration || 0;
+            data.view_seek_duration = data.view_seek_duration + diff;
+            let num2 = obj.data.view_max_seek_time;
+            if (!num2) {
+              num2 = 0;
+            }
+            obj.data.view_max_seek_time = Math.max(num2, diff);
+            tmp2.isSeeking = false;
+            viewer_time = -1;
+            const tmp7 = obj.data.viewer_time || nowResult;
+          } else {
+            throw new TypeError("Trying to call a non-function");
           }
-          const nowResult = closure_1_27.now();
-          let tmp8 = viewer_time;
-          if (!viewer_time) {
-            tmp8 = nowResult;
-          }
-          const diff = (obj.data.viewer_time || nowResult) - tmp8;
-          const data = obj.data;
-          data.view_seek_duration = data.view_seek_duration || 0;
-          data.view_seek_duration = data.view_seek_duration + diff;
-          let num2 = obj.data.view_max_seek_time;
-          if (!num2) {
-            num2 = 0;
-          }
-          obj.data.view_max_seek_time = Math.max(num2, diff);
-          tmp2.isSeeking = false;
-          viewer_time = -1;
-          const tmp7 = obj.data.viewer_time || nowResult;
         }
         self.isSeeking = true;
         viewer_time = viewer_time.viewer_time;
@@ -6974,48 +6729,51 @@ const fn12 = function r(on) {
         on.send("seeking");
       });
       on.on("seeked", () => {
-        if (typeof a !== "function") {
-          HermesBuiltin.throwTypeError();
-        }
-        const nowResult = closure_1_27.now();
-        let tmp4 = c2;
-        if (!c2) {
-          tmp4 = nowResult;
-        }
-        const diff = (on.data.viewer_time || nowResult) - tmp4;
-        const data = tmp2.data;
-        data.view_seek_duration = data.view_seek_duration + diff;
-        let num = tmp2.data.view_max_seek_time;
-        if (!num) {
-          num = 0;
-        }
-        on.data.view_max_seek_time = Math.max(num, diff);
-        self.isSeeking = false;
-        c2 = -1;
-      });
-      on.on("viewend", () => {
-        if (self.isSeeking) {
-          if (typeof a !== "function") {
-            HermesBuiltin.throwTypeError();
-          }
-          const nowResult = closure_1_27.now();
-          let tmp6 = c2;
+        if (typeof a === "function") {
+          const nowResult = obj3.now();
+          let tmp5 = c2;
           if (!c2) {
-            tmp6 = nowResult;
+            tmp5 = nowResult;
           }
-          const diff = (on.data.viewer_time || nowResult) - tmp6;
-          const data = obj.data;
+          const diff = (on.data.viewer_time || nowResult) - tmp5;
+          const data = tmp3.data;
           data.view_seek_duration = data.view_seek_duration || 0;
           data.view_seek_duration = data.view_seek_duration + diff;
-          let num = obj.data.view_max_seek_time;
+          let num = tmp3.data.view_max_seek_time;
           if (!num) {
             num = 0;
           }
           on.data.view_max_seek_time = Math.max(num, diff);
-          tmp.isSeeking = false;
+          self.isSeeking = false;
           c2 = -1;
-          on.send("seeked");
-          const tmp5 = on.data.viewer_time || nowResult;
+        } else {
+          throw new TypeError("Trying to call a non-function");
+        }
+      });
+      on.on("viewend", () => {
+        if (self.isSeeking) {
+          if (typeof a === "function") {
+            const nowResult = obj3.now();
+            let tmp6 = c2;
+            if (!c2) {
+              tmp6 = nowResult;
+            }
+            const diff = (on.data.viewer_time || nowResult) - tmp6;
+            const data = obj.data;
+            data.view_seek_duration = data.view_seek_duration || 0;
+            data.view_seek_duration = data.view_seek_duration + diff;
+            let num = obj.data.view_max_seek_time;
+            if (!num) {
+              num = 0;
+            }
+            on.data.view_max_seek_time = Math.max(num, diff);
+            tmp.isSeeking = false;
+            c2 = -1;
+            on.send("seeked");
+            const tmp5 = on.data.viewer_time || nowResult;
+          } else {
+            throw new TypeError("Trying to call a non-function");
+          }
         }
         self.isSeeking = false;
         c2 = -1;
@@ -7040,9 +6798,7 @@ function Xt(arg0, arg1) {
 }
 let closure_71 = ["adbreakstart", "adrequest", "adresponse", "adplay", "adplaying", "adpause", "adended", "adbreakend", "aderror", "adclicked", "adskipped"];
 const fn13 = function r(pm) {
-  let self = this;
-  closure_0 = pm;
-  self = this;
+  const self = this;
   if (typeof Symbol !== "undefined") {
     const _Symbol3 = Symbol;
     if (tmp[Symbol.hasInstance]) {
@@ -7115,11 +6871,11 @@ const fn13 = function r(pm) {
         self._wouldBeNewAdPlay = true;
         self._prerollPlayTime = undefined;
       });
-      const item = closure_71.forEach((arg0) => {
+      const item = closure_2_71.forEach((item) => {
         const _updateAdData = self._updateAdData;
-        return pm.on(arg0, _updateAdData.bind(self));
+        return pm.on(item, _updateAdData.bind(self));
       });
-      const fn = function i() {
+      fn = function i() {
         self.isAdBreak = false;
       };
       pm.on("adbreakstart", () => {
@@ -7130,46 +6886,50 @@ const fn13 = function r(pm) {
       pm.on("viewend", fn);
       pm.on("adrequest", (arg0, arg1) => {
         self._currentAdRequestNumber = +self._currentAdRequestNumber + 1;
+        { ad_request_id: null }.ad_request_id = `generatedAdRequestId${+self._currentAdRequestNumber}`;
         const _adRequests = self._adRequests;
-        const merged = Object.assign({ ad_request_id: `generatedAdRequestId${tmp}` }, arg1);
-        if (typeof closure_1_70 !== "function") {
-          HermesBuiltin.throwTypeError();
-        }
-        _adRequests.push(merged);
-        const sorted = _adRequests.sort((viewer_time, viewer_time2) => viewer_time.viewer_time - viewer_time2.viewer_time);
-        const data = pm.data;
-        data.view_ad_request_count = data.view_ad_request_count || 0;
-        data.view_ad_request_count = data.view_ad_request_count + 1;
-        if (self.inPrerollPosition()) {
-          tmp5.data.view_preroll_requested = true;
-          if (!obj2._adHasPlayed) {
-            const data2 = tmp5.data;
-            data2.view_preroll_request_count = data2.view_preroll_request_count || 0;
-            data2.view_preroll_request_count = data2.view_preroll_request_count + 1;
+        if (typeof Xt === "function") {
+          _adRequests.push(tmp2);
+          const sorted = _adRequests.sort((viewer_time, viewer_time2) => viewer_time.viewer_time - viewer_time2.viewer_time);
+          const data = pm.data;
+          data.view_ad_request_count = data.view_ad_request_count || 0;
+          data.view_ad_request_count = data.view_ad_request_count + 1;
+          if (obj.inPrerollPosition()) {
+            tmp5.data.view_preroll_requested = true;
+            if (!obj._adHasPlayed) {
+              const data2 = tmp5.data;
+              data2.view_preroll_request_count = data2.view_preroll_request_count || 0;
+              data2.view_preroll_request_count = data2.view_preroll_request_count + 1;
+            }
           }
+        } else {
+          throw new TypeError("Trying to call a non-function");
         }
       });
       pm.on("adresponse", (arg0, arg1) => {
+        const obj = { ad_request_id: `generatedAdRequestId${+self._currentAdResponseNumber}` };
         self._currentAdResponseNumber = +self._currentAdResponseNumber + 1;
-        const merged = Object.assign({ ad_request_id: `generatedAdRequestId${tmp}` }, arg1);
+        const merged = Object.assign(obj, arg1);
         const _adResponses = self._adResponses;
-        if (typeof closure_1_70 !== "function") {
-          HermesBuiltin.throwTypeError();
-        }
-        _adResponses.push(merged);
-        const sorted = _adResponses.sort((viewer_time, viewer_time2) => viewer_time.viewer_time - viewer_time2.viewer_time);
-        const findAdRequestResult = self.findAdRequest(merged.ad_request_id);
-        if (findAdRequestResult) {
-          const data = pm.data;
-          const _Math = Math;
-          const bound = Math.max(0, merged.viewer_time - findAdRequestResult.viewer_time);
-          let num2 = 1;
-          if (undefined !== bound) {
-            num2 = bound;
+        if (typeof Xt === "function") {
+          _adResponses.push(merged);
+          const sorted = _adResponses.sort((viewer_time, viewer_time2) => viewer_time.viewer_time - viewer_time2.viewer_time);
+          const findAdRequestResult = obj2.findAdRequest(merged.ad_request_id);
+          if (findAdRequestResult) {
+            const data = pm.data;
+            const _Math = Math;
+            const bound = Math.max(0, merged.viewer_time - findAdRequestResult.viewer_time);
+            let num2 = 1;
+            if (undefined !== bound) {
+              num2 = bound;
+            }
+            data.view_ad_request_time = data.view_ad_request_time || 0;
+            data.view_ad_request_time = data.view_ad_request_time + num2;
           }
-          data.view_ad_request_time = data.view_ad_request_time || 0;
-          data.view_ad_request_time = data.view_ad_request_time + num2;
+        } else {
+          throw new TypeError("Trying to call a non-function");
         }
+        obj2 = self;
       });
       pm.on("adplay", (arg0, viewer_time) => {
         self._adHasPlayed = true;
@@ -7244,18 +7004,18 @@ const fn13 = function r(pm) {
   }
   tmp2 = U(self, tmp);
 };
-f98876 = fn13;
-const items9 = [
-  {
-    key: "inPrerollPosition",
-    value() {
-      let tmp = undefined === this.pm.data.view_content_playback_time;
-      if (!tmp) {
-        tmp = this.pm.data.view_content_playback_time <= 1000;
-      }
-      return tmp;
+const entry7 = {
+  key: "inPrerollPosition",
+  value() {
+    let tmp = undefined === this.pm.data.view_content_playback_time;
+    if (!tmp) {
+      tmp = this.pm.data.view_content_playback_time <= 1000;
     }
-  },
+    return tmp;
+  }
+};
+const items9 = [
+  entry7,
   {
     key: "findAdRequest",
     value(arg0) {
@@ -7276,262 +7036,262 @@ const items9 = [
       if (this.inPrerollPosition()) {
         if (!self.pm.data.view_preroll_ad_tag_hostname) {
           if (ad_tag_url.ad_tag_url) {
-            if (typeof re !== "function") {
-              HermesBuiltin.throwTypeError();
-            }
-            if (typeof ad_tag_url.ad_tag_url === "string") {
-              if ("" !== str) {
-                const str2 = str.match(/^(([^:\/?#]+):)?(\/\/([^\/?#]*))?([^?#]*)(\?([^#]*))?(#(.*))?/) || [][4];
-                let first;
-                if (str2) {
-                  first = str2.match(/[^\.]+\.[^\.]+$/) || [][0];
-                  const tmp4 = str2.match(/[^\.]+\.[^\.]+$/) || [];
-                }
-                items = [str2, first];
-                const tmp2 = str.match(/^(([^:\/?#]+):)?(\/\/([^\/?#]*))?([^?#]*)(\?([^#]*))?(#(.*))?/) || [];
-              }
-              const _Array = Array;
-              let tmp7;
-              if (Array.isArray(items)) {
-                tmp7 = items;
-              }
-              if (!tmp7) {
-                tmp7 = (function vt(items, arg1) {
-                  let tmp6 = null;
-                  if (null != items) {
-                    const _Symbol = Symbol;
-                    iterable = typeof Symbol !== "undefined";
-                    if (typeof Symbol !== "undefined") {
-                      const _Symbol2 = Symbol;
-                      iterable = items[Symbol.iterator];
-                    }
-                    if (!iterable) {
-                      iterable = items[Symbol.iterator];
-                    }
-                    tmp6 = iterable;
+            if (typeof re === "function") {
+              if (typeof str === "string") {
+                if ("" !== str) {
+                  const str2 = str.match(/^(([^:\/?#]+):)?(\/\/([^\/?#]*))?([^?#]*)(\?([^#]*))?(#(.*))?/) || [][4];
+                  let first;
+                  if (str2) {
+                    first = str2.match(/[^\.]+\.[^\.]+$/) || [][0];
+                    const tmp4 = str2.match(/[^\.]+\.[^\.]+$/) || [];
                   }
-                  if (null != tmp6) {
-                    let flag2 = false;
-                    try {
-                      items = [];
+                  items = [str2, first];
+                  const tmp2 = str.match(/^(([^:\/?#]+):)?(\/\/([^\/?#]*))?([^?#]*)(\?([^#]*))?(#(.*))?/) || [];
+                }
+                const _Array = Array;
+                let tmp7;
+                if (Array.isArray(items)) {
+                  tmp7 = items;
+                }
+                if (!tmp7) {
+                  tmp7 = (function vt(items, arg1) {
+                    let tmp6 = null;
+                    if (null != items) {
+                      const _Symbol = Symbol;
+                      let prop = typeof Symbol !== "undefined";
+                      if (typeof Symbol !== "undefined") {
+                        const _Symbol2 = Symbol;
+                        prop = items[Symbol.iterator];
+                      }
+                      if (!prop) {
+                        prop = items[Symbol.iterator];
+                      }
+                      tmp6 = prop;
+                    }
+                    if (null != tmp6) {
+                      let flag2 = false;
                       try {
-                        const call = tmp8.call;
-                        if (typeof call === "unknown") {
-                          let iter = tmp8();
-                        } else {
-                          iter = call(items);
-                        }
-                        const iter3 = iter.next();
-                        const done = iter3.done;
-                        let tmp10 = done;
-                        if (!done) {
-                          items.push(iter4.value);
-                          if (!arg1) {
-                            const iter5 = iter2.next();
-                            const done2 = iter5.done;
-                            tmp10 = done2;
-                            while (!done2) {
-                              let tmp15 = iter5;
-                              let arr = items.push(iter6.value);
-                              if (!arg1) {
+                        items = [];
+                        try {
+                          const call = tmp9.call;
+                          if (typeof call === "unknown") {
+                            let iter = tmp9();
+                          } else {
+                            iter = call(items);
+                          }
+                          const iter3 = iter.next();
+                          const done = iter3.done;
+                          let tmp11 = done;
+                          if (!done) {
+                            items.push(iter4.value);
+                            if (!arg1) {
+                              const iter5 = iter2.next();
+                              const done2 = iter5.done;
+                              tmp11 = done2;
+                              while (!done2) {
+                                let arr = items.push(iter6.value);
+                                if (!arg1) {
+                                  continue;
+                                } else if (items.length === arg1) {
+                                  break;
+                                }
                                 continue;
-                              } else if (items.length === arg1) {
-                                break;
                               }
-                              continue;
                             }
                           }
+                          try {
+                            let tmp19 = !tmp11;
+                            if (!tmp11) {
+                              tmp19 = null != iter2.return;
+                            }
+                            if (tmp19) {
+                              iter2.return();
+                            }
+                            if (flag2) {
+                              throw tmp5;
+                            } else {
+                              return items;
+                            }
+                          } catch (tmp25) {
+                            if (tmp2) {
+                              throw tmp;
+                            } else {
+                              throw tmp25;
+                            }
+                          }
+                        } catch (tmp5) {
+                          flag2 = true;
                         }
+                      } catch (tmp28) {
                         try {
-                          let tmp18 = !tmp10;
-                          if (!tmp10) {
-                            tmp18 = null != iter2.return;
+                          let tmp30 = !tmp3;
+                          if (!tmp3) {
+                            tmp30 = tmp4 != obj.return;
                           }
-                          if (tmp18) {
-                            iter2.return();
+                          if (tmp30) {
+                            obj.return();
                           }
-                          if (flag2) {
-                            throw tmp5;
-                          } else {
-                            return items;
-                          }
-                        } catch (tmp24) {
                           if (tmp2) {
                             throw tmp;
                           } else {
-                            throw tmp24;
+                            throw tmp28;
                           }
-                        }
-                      } catch (tmp5) {
-                        flag2 = true;
-                      }
-                    } catch (tmp27) {
-                      try {
-                        let tmp29 = !tmp3;
-                        if (!tmp3) {
-                          tmp29 = tmp4 != obj.return;
-                        }
-                        if (tmp29) {
-                          obj.return();
-                        }
-                        if (tmp2) {
-                          throw tmp;
-                        } else {
-                          throw tmp27;
-                        }
-                      } catch (tmp35) {
-                        if (tmp2) {
-                          throw tmp;
-                        } else {
-                          throw tmp35;
+                        } catch (tmp36) {
+                          if (tmp2) {
+                            throw tmp;
+                          } else {
+                            throw tmp36;
+                          }
                         }
                       }
                     }
-                  }
-                })(items, 2);
+                  })(items, 2);
+                }
+                if (!tmp7) {
+                  tmp7 = Pe(items, 2);
+                }
+                if (tmp7) {
+                  [self.pm.data.view_preroll_ad_tag_hostname, self.pm.data.view_preroll_ad_tag_domain] = tmp7;
+                } else {
+                  const _TypeError = TypeError;
+                  const typeError = new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");
+                  throw typeError;
+                }
               }
-              if (!tmp7) {
-                tmp7 = Pe(items, 2);
-              }
-              if (tmp7) {
-                [self.pm.data.view_preroll_ad_tag_hostname, self.pm.data.view_preroll_ad_tag_domain] = tmp7;
-              } else {
-                const _TypeError = TypeError;
-                const typeError = new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");
-                throw typeError;
-              }
+              items = ["localhost"];
+            } else {
+              throw new TypeError("Trying to call a non-function");
             }
-            items = ["localhost"];
           }
         }
         if (!self.pm.data.view_preroll_ad_asset_hostname) {
           if (ad_tag_url.ad_asset_url) {
-            if (typeof re !== "function") {
-              HermesBuiltin.throwTypeError();
-            }
-            if (typeof ad_tag_url.ad_asset_url === "string") {
-              if ("" !== str4) {
-                const str5 = str4.match(/^(([^:\/?#]+):)?(\/\/([^\/?#]*))?([^?#]*)(\?([^#]*))?(#(.*))?/) || [][4];
-                let first1;
-                if (str5) {
-                  first1 = str5.match(/[^\.]+\.[^\.]+$/) || [][0];
-                  const tmp16 = str5.match(/[^\.]+\.[^\.]+$/) || [];
-                }
-                let items1 = [str5, first1];
-                const tmp14 = str4.match(/^(([^:\/?#]+):)?(\/\/([^\/?#]*))?([^?#]*)(\?([^#]*))?(#(.*))?/) || [];
-              }
-              const _Array2 = Array;
-              let tmp19;
-              if (Array.isArray(items1)) {
-                tmp19 = items1;
-              }
-              if (!tmp19) {
-                tmp19 = (function vt(items, arg1) {
-                  let tmp6 = null;
-                  if (null != items) {
-                    const _Symbol = Symbol;
-                    iterable = typeof Symbol !== "undefined";
-                    if (typeof Symbol !== "undefined") {
-                      const _Symbol2 = Symbol;
-                      iterable = items[Symbol.iterator];
-                    }
-                    if (!iterable) {
-                      iterable = items[Symbol.iterator];
-                    }
-                    tmp6 = iterable;
+            if (typeof re === "function") {
+              if (typeof str4 === "string") {
+                if ("" !== str4) {
+                  const str5 = str4.match(/^(([^:\/?#]+):)?(\/\/([^\/?#]*))?([^?#]*)(\?([^#]*))?(#(.*))?/) || [][4];
+                  let first1;
+                  if (str5) {
+                    first1 = str5.match(/[^\.]+\.[^\.]+$/) || [][0];
+                    const tmp16 = str5.match(/[^\.]+\.[^\.]+$/) || [];
                   }
-                  if (null != tmp6) {
-                    let flag2 = false;
-                    try {
-                      items = [];
+                  let items1 = [str5, first1];
+                  const tmp14 = str4.match(/^(([^:\/?#]+):)?(\/\/([^\/?#]*))?([^?#]*)(\?([^#]*))?(#(.*))?/) || [];
+                }
+                const _Array2 = Array;
+                let tmp19;
+                if (Array.isArray(items1)) {
+                  tmp19 = items1;
+                }
+                if (!tmp19) {
+                  tmp19 = (function vt(items, arg1) {
+                    let tmp6 = null;
+                    if (null != items) {
+                      const _Symbol = Symbol;
+                      let prop = typeof Symbol !== "undefined";
+                      if (typeof Symbol !== "undefined") {
+                        const _Symbol2 = Symbol;
+                        prop = items[Symbol.iterator];
+                      }
+                      if (!prop) {
+                        prop = items[Symbol.iterator];
+                      }
+                      tmp6 = prop;
+                    }
+                    if (null != tmp6) {
+                      let flag2 = false;
                       try {
-                        const call = tmp8.call;
-                        if (typeof call === "unknown") {
-                          let iter = tmp8();
-                        } else {
-                          iter = call(items);
-                        }
-                        const iter3 = iter.next();
-                        const done = iter3.done;
-                        let tmp10 = done;
-                        if (!done) {
-                          items.push(iter4.value);
-                          if (!arg1) {
-                            const iter5 = iter2.next();
-                            const done2 = iter5.done;
-                            tmp10 = done2;
-                            while (!done2) {
-                              let tmp15 = iter5;
-                              let arr = items.push(iter6.value);
-                              if (!arg1) {
+                        items = [];
+                        try {
+                          const call = tmp9.call;
+                          if (typeof call === "unknown") {
+                            let iter = tmp9();
+                          } else {
+                            iter = call(items);
+                          }
+                          const iter3 = iter.next();
+                          const done = iter3.done;
+                          let tmp11 = done;
+                          if (!done) {
+                            items.push(iter4.value);
+                            if (!arg1) {
+                              const iter5 = iter2.next();
+                              const done2 = iter5.done;
+                              tmp11 = done2;
+                              while (!done2) {
+                                let arr = items.push(iter6.value);
+                                if (!arg1) {
+                                  continue;
+                                } else if (items.length === arg1) {
+                                  break;
+                                }
                                 continue;
-                              } else if (items.length === arg1) {
-                                break;
                               }
-                              continue;
                             }
                           }
+                          try {
+                            let tmp19 = !tmp11;
+                            if (!tmp11) {
+                              tmp19 = null != iter2.return;
+                            }
+                            if (tmp19) {
+                              iter2.return();
+                            }
+                            if (flag2) {
+                              throw tmp5;
+                            } else {
+                              return items;
+                            }
+                          } catch (tmp25) {
+                            if (tmp2) {
+                              throw tmp;
+                            } else {
+                              throw tmp25;
+                            }
+                          }
+                        } catch (tmp5) {
+                          flag2 = true;
                         }
+                      } catch (tmp28) {
                         try {
-                          let tmp18 = !tmp10;
-                          if (!tmp10) {
-                            tmp18 = null != iter2.return;
+                          let tmp30 = !tmp3;
+                          if (!tmp3) {
+                            tmp30 = tmp4 != obj.return;
                           }
-                          if (tmp18) {
-                            iter2.return();
+                          if (tmp30) {
+                            obj.return();
                           }
-                          if (flag2) {
-                            throw tmp5;
-                          } else {
-                            return items;
-                          }
-                        } catch (tmp24) {
                           if (tmp2) {
                             throw tmp;
                           } else {
-                            throw tmp24;
+                            throw tmp28;
                           }
-                        }
-                      } catch (tmp5) {
-                        flag2 = true;
-                      }
-                    } catch (tmp27) {
-                      try {
-                        let tmp29 = !tmp3;
-                        if (!tmp3) {
-                          tmp29 = tmp4 != obj.return;
-                        }
-                        if (tmp29) {
-                          obj.return();
-                        }
-                        if (tmp2) {
-                          throw tmp;
-                        } else {
-                          throw tmp27;
-                        }
-                      } catch (tmp35) {
-                        if (tmp2) {
-                          throw tmp;
-                        } else {
-                          throw tmp35;
+                        } catch (tmp36) {
+                          if (tmp2) {
+                            throw tmp;
+                          } else {
+                            throw tmp36;
+                          }
                         }
                       }
                     }
-                  }
-                })(items1, 2);
+                  })(items1, 2);
+                }
+                if (!tmp19) {
+                  tmp19 = Pe(items1, 2);
+                }
+                if (tmp19) {
+                  [self.pm.data.view_preroll_ad_asset_hostname, self.pm.data.view_preroll_ad_asset_domain] = tmp19;
+                } else {
+                  const _TypeError2 = TypeError;
+                  const typeError1 = new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");
+                  throw typeError1;
+                }
               }
-              if (!tmp19) {
-                tmp19 = Pe(items1, 2);
-              }
-              if (tmp19) {
-                [self.pm.data.view_preroll_ad_asset_hostname, self.pm.data.view_preroll_ad_asset_domain] = tmp19;
-              } else {
-                const _TypeError2 = TypeError;
-                const typeError1 = new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");
-                throw typeError1;
-              }
+              items1 = ["localhost"];
+            } else {
+              throw new TypeError("Trying to call a non-function");
             }
-            items1 = ["localhost"];
           }
         }
         self.pm.data.ad_type = "preroll";
@@ -7573,9 +7333,7 @@ const items9 = [
 ];
 N(fn13, items9);
 const fn14 = function r(one) {
-  let self = this;
-  closure_0 = one;
-  self = this;
+  const self = this;
   if (typeof Symbol !== "undefined") {
     const _Symbol3 = Symbol;
     if (tmp[Symbol.hasInstance]) {
@@ -7589,29 +7347,25 @@ const fn14 = function r(one) {
       } else {
         self.lastWallClockTime = undefined;
       }
-      const fn = function i() {
-        self.lastWallClockTime = closure_1_27.now();
+      fn = function i() {
+        self.lastWallClockTime = obj3.now();
         one.on("before*", a);
       };
       function a(arg0) {
-        const nowResult = closure_1_27.now();
+        const nowResult = obj3.now();
         const lastWallClockTime = self.lastWallClockTime;
         self.lastWallClockTime = nowResult;
         if (nowResult - lastWallClockTime > 30000) {
-          let obj = { viewer_time: null };
-          obj[0] = lastWallClockTime;
+          let obj = { viewer_time: lastWallClockTime };
           one.emit("devicesleep", obj);
           const _Object = Object;
-          obj = { viewer_time: null };
-          obj[0] = lastWallClockTime;
+          obj = { viewer_time: lastWallClockTime };
           const merged = Object.assign(one.data, obj);
           one.send("devicesleep");
-          obj = { viewer_time: null };
-          obj[0] = nowResult;
+          obj = { viewer_time: nowResult };
           one.emit("devicewake", obj);
           const _Object2 = Object;
-          obj1 = { viewer_time: null };
-          obj1[0] = nowResult;
+          const obj1 = { viewer_time: nowResult };
           const merged1 = Object.assign(one.data, obj1);
           one.send("devicewake");
         }
@@ -7639,11 +7393,11 @@ const fn14 = function r(one) {
 let closure_74 = G(obj2.exports);
 const fn15 = function e(arg0) {
   closure_0 = arg0;
-  const fn = function i(arg0, arg1, arg2) {
+  const withConverter = function i(arg0, arg1, arg2) {
     let tmp2 = arg1;
     if (typeof document !== "undefined") {
       if (arguments.length > 1) {
-        const tmp26 = lib({ path: "/" }, fn.defaults, arg2);
+        const tmp26 = f98876({ path: "/" }, fn.defaults, arg2);
         if (typeof tmp26.expires === "number") {
           const _Date = Date;
           const date = new Date();
@@ -7656,7 +7410,7 @@ const fn15 = function e(arg0) {
           if (obj4.test(json)) {
             tmp2 = json;
           }
-          if (lib.write) {
+          if (closure_0.write) {
             let writeResult = obj5.write(tmp2, arg0);
           } else {
             const _encodeURIComponent = encodeURIComponent;
@@ -7669,7 +7423,7 @@ const fn15 = function e(arg0) {
           const _String2 = String;
           const _decodeURIComponent4 = decodeURIComponent;
           obj4 = /^[\{\[]/;
-          obj5 = lib;
+          obj5 = closure_0;
           const str9 = encodeURIComponent(String(arg0));
           const _escape = escape;
           items = [encodeURIComponent(String(arg0)).replace(/%(23|24|26|2B|5E|60|7C)/g, decodeURIComponent).replace(/[\(\)]/g, escape), "=", writeResult, , , , ];
@@ -7724,7 +7478,7 @@ const fn15 = function e(arg0) {
           try {
             const _decodeURIComponent = decodeURIComponent;
             const replaced = parts1[0].replace(tmp4, decodeURIComponent);
-            if (lib.read) {
+            if (closure_0.read) {
               let readResult = obj3.read(substr1, replaced);
             } else {
               readResult = obj3(substr1, replaced);
@@ -7749,21 +7503,19 @@ const fn15 = function e(arg0) {
               }
               num4 = num4 + 1;
             }
-            const str7 = parts1[0];
           } catch (err) {
           }
-          const str5 = parts[num4];
         }
         return obj;
       }
     }
   };
-  fn.set = fn;
-  fn.get = (arg0) => {
+  withConverter.set = withConverter;
+  withConverter.get = (arg0) => {
     const call = fn.call;
     return typeof call === "unknown" ? fn(arg0) : call(fn, arg0);
   };
-  fn.getJSON = () => {
+  withConverter.getJSON = () => {
     const slice = [].slice;
     const call = slice.call;
     if (typeof call === "unknown") {
@@ -7773,14 +7525,25 @@ const fn15 = function e(arg0) {
     }
     return fn.apply({ json: true }, substr);
   };
-  fn.defaults = {};
-  fn.remove = (D) => {
-    fn(D, "", lib(arg1, { expires: -1 }));
+  withConverter.defaults = {};
+  withConverter.remove = (D, arg1) => {
+    fn(D, "", f98876(arg1, { expires: -1 }));
   };
-  fn.withConverter = fn;
-  return fn;
+  withConverter.withConverter = withConverter;
+  return withConverter;
 };
-create = fn15;
+let closure_144_1 = fn15;
+let closure_144_0 = function r() {
+  const obj = {};
+  for (let num = 0; num < arguments.length; num = num + 1) {
+    let tmp = arguments[num];
+    for (const key10011 in tmp) {
+      obj[key10011] = tmp[key10011];
+      continue;
+    }
+  }
+  return obj;
+};
 f98876 = () => {
 
 };
@@ -7788,7 +7551,7 @@ const fn16 = function i(arg0, arg1, arg2) {
   let tmp2 = arg1;
   if (typeof document !== "undefined") {
     if (arguments.length > 1) {
-      const tmp26 = lib({ path: "/" }, fn.defaults, arg2);
+      const tmp26 = f98876({ path: "/" }, fn.defaults, arg2);
       if (typeof tmp26.expires === "number") {
         const _Date = Date;
         const date = new Date();
@@ -7801,7 +7564,7 @@ const fn16 = function i(arg0, arg1, arg2) {
         if (obj4.test(json)) {
           tmp2 = json;
         }
-        if (lib.write) {
+        if (closure_0.write) {
           let writeResult = obj5.write(tmp2, arg0);
         } else {
           const _encodeURIComponent = encodeURIComponent;
@@ -7814,7 +7577,7 @@ const fn16 = function i(arg0, arg1, arg2) {
         const _String2 = String;
         const _decodeURIComponent4 = decodeURIComponent;
         obj4 = /^[\{\[]/;
-        obj5 = lib;
+        obj5 = closure_0;
         const str9 = encodeURIComponent(String(arg0));
         const _escape = escape;
         items = [encodeURIComponent(String(arg0)).replace(/%(23|24|26|2B|5E|60|7C)/g, decodeURIComponent).replace(/[\(\)]/g, escape), "=", writeResult, , , , ];
@@ -7869,7 +7632,7 @@ const fn16 = function i(arg0, arg1, arg2) {
         try {
           const _decodeURIComponent = decodeURIComponent;
           const replaced = parts1[0].replace(tmp4, decodeURIComponent);
-          if (lib.read) {
+          if (closure_0.read) {
             let readResult = obj3.read(substr1, replaced);
           } else {
             readResult = obj3(substr1, replaced);
@@ -7894,10 +7657,8 @@ const fn16 = function i(arg0, arg1, arg2) {
             }
             num4 = num4 + 1;
           }
-          const str7 = parts1[0];
         } catch (err) {
         }
-        const str5 = parts[num4];
       }
       return obj;
     }
@@ -7920,8 +7681,8 @@ fn16.getJSON = () => {
   return fn.apply({ json: true }, substr);
 };
 fn16.defaults = {};
-fn16.remove = (D) => {
-  fn(D, "", lib(arg1, { expires: -1 }));
+fn16.remove = (D, arg1) => {
+  fn(D, "", f98876(arg1, { expires: -1 }));
 };
 fn16.withConverter = fn15;
 const muxData = "muxData";
@@ -7933,8 +7694,8 @@ function tr() {
     }
     let obj = ((str) => {
       let parts = str.split("&");
-      return parts.reduce((arg0, str) => {
-        const parts = str.split("=");
+      return parts.reduce((acc, item) => {
+        const parts = item.split("=");
         let tmp2;
         if (Array.isArray(parts)) {
           tmp2 = parts;
@@ -7944,38 +7705,37 @@ function tr() {
             let tmp6 = null;
             if (null != items) {
               const _Symbol = Symbol;
-              iterable = typeof Symbol !== "undefined";
+              let prop = typeof Symbol !== "undefined";
               if (typeof Symbol !== "undefined") {
                 const _Symbol2 = Symbol;
-                iterable = items[Symbol.iterator];
+                prop = items[Symbol.iterator];
               }
-              if (!iterable) {
-                iterable = items[Symbol.iterator];
+              if (!prop) {
+                prop = items[Symbol.iterator];
               }
-              tmp6 = iterable;
+              tmp6 = prop;
             }
             if (null != tmp6) {
               let flag2 = false;
               try {
                 items = [];
                 try {
-                  const call = tmp8.call;
+                  const call = tmp9.call;
                   if (typeof call === "unknown") {
-                    let iter = tmp8();
+                    let iter = tmp9();
                   } else {
                     iter = call(items);
                   }
                   const iter3 = iter.next();
                   const done = iter3.done;
-                  let tmp10 = done;
+                  let tmp11 = done;
                   if (!done) {
                     items.push(iter4.value);
                     if (!arg1) {
                       const iter5 = iter2.next();
                       const done2 = iter5.done;
-                      tmp10 = done2;
+                      tmp11 = done2;
                       while (!done2) {
-                        let tmp15 = iter5;
                         let arr = items.push(iter6.value);
                         if (!arg1) {
                           continue;
@@ -7987,11 +7747,11 @@ function tr() {
                     }
                   }
                   try {
-                    let tmp18 = !tmp10;
-                    if (!tmp10) {
-                      tmp18 = null != iter2.return;
+                    let tmp19 = !tmp11;
+                    if (!tmp11) {
+                      tmp19 = null != iter2.return;
                     }
-                    if (tmp18) {
+                    if (tmp19) {
                       iter2.return();
                     }
                     if (flag2) {
@@ -7999,35 +7759,35 @@ function tr() {
                     } else {
                       return items;
                     }
-                  } catch (tmp24) {
+                  } catch (tmp25) {
                     if (tmp2) {
                       throw tmp;
                     } else {
-                      throw tmp24;
+                      throw tmp25;
                     }
                   }
                 } catch (tmp5) {
                   flag2 = true;
                 }
-              } catch (tmp27) {
+              } catch (tmp28) {
                 try {
-                  let tmp29 = !tmp3;
+                  let tmp30 = !tmp3;
                   if (!tmp3) {
-                    tmp29 = tmp4 != obj.return;
+                    tmp30 = tmp4 != obj.return;
                   }
-                  if (tmp29) {
+                  if (tmp30) {
                     obj.return();
                   }
                   if (tmp2) {
                     throw tmp;
                   } else {
-                    throw tmp27;
+                    throw tmp28;
                   }
-                } catch (tmp35) {
+                } catch (tmp36) {
                   if (tmp2) {
                     throw tmp;
                   } else {
-                    throw tmp35;
+                    throw tmp36;
                   }
                 }
               }
@@ -8035,7 +7795,7 @@ function tr() {
           })(parts, 2);
         }
         if (!tmp2) {
-          tmp2 = callback(parts, 2);
+          tmp2 = closure_1_23(parts, 2);
         }
         if (tmp2) {
           let tmp10 = tmp8;
@@ -8045,8 +7805,8 @@ function tr() {
               tmp10 = tmp9;
             }
           }
-          arg0[tmp2[0]] = tmp10;
-          return arg0;
+          acc[tmp2[0]] = tmp10;
+          return acc;
         } else {
           const _TypeError = TypeError;
           const typeError = new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");
@@ -8063,48 +7823,47 @@ function rr(arg0) {
   try {
     const result = fn16.set(muxData, ((arg0) => {
       const entries = Object.entries(arg0);
-      const mapped = entries.map((items) => {
+      const mapped = entries.map((item) => {
         let tmp;
-        if (Array.isArray(items)) {
-          tmp = items;
+        if (Array.isArray(item)) {
+          tmp = item;
         }
         if (!tmp) {
           tmp = (function vt(items, arg1) {
             let tmp6 = null;
             if (null != items) {
               const _Symbol = Symbol;
-              iterable = typeof Symbol !== "undefined";
+              let prop = typeof Symbol !== "undefined";
               if (typeof Symbol !== "undefined") {
                 const _Symbol2 = Symbol;
-                iterable = items[Symbol.iterator];
+                prop = items[Symbol.iterator];
               }
-              if (!iterable) {
-                iterable = items[Symbol.iterator];
+              if (!prop) {
+                prop = items[Symbol.iterator];
               }
-              tmp6 = iterable;
+              tmp6 = prop;
             }
             if (null != tmp6) {
               let flag2 = false;
               try {
                 items = [];
                 try {
-                  const call = tmp8.call;
+                  const call = tmp9.call;
                   if (typeof call === "unknown") {
-                    let iter = tmp8();
+                    let iter = tmp9();
                   } else {
                     iter = call(items);
                   }
                   const iter3 = iter.next();
                   const done = iter3.done;
-                  let tmp10 = done;
+                  let tmp11 = done;
                   if (!done) {
                     items.push(iter4.value);
                     if (!arg1) {
                       const iter5 = iter2.next();
                       const done2 = iter5.done;
-                      tmp10 = done2;
+                      tmp11 = done2;
                       while (!done2) {
-                        let tmp15 = iter5;
                         let arr = items.push(iter6.value);
                         if (!arg1) {
                           continue;
@@ -8116,11 +7875,11 @@ function rr(arg0) {
                     }
                   }
                   try {
-                    let tmp18 = !tmp10;
-                    if (!tmp10) {
-                      tmp18 = null != iter2.return;
+                    let tmp19 = !tmp11;
+                    if (!tmp11) {
+                      tmp19 = null != iter2.return;
                     }
-                    if (tmp18) {
+                    if (tmp19) {
                       iter2.return();
                     }
                     if (flag2) {
@@ -8128,43 +7887,43 @@ function rr(arg0) {
                     } else {
                       return items;
                     }
-                  } catch (tmp24) {
+                  } catch (tmp25) {
                     if (tmp2) {
                       throw tmp;
                     } else {
-                      throw tmp24;
+                      throw tmp25;
                     }
                   }
                 } catch (tmp5) {
                   flag2 = true;
                 }
-              } catch (tmp27) {
+              } catch (tmp28) {
                 try {
-                  let tmp29 = !tmp3;
+                  let tmp30 = !tmp3;
                   if (!tmp3) {
-                    tmp29 = tmp4 != obj.return;
+                    tmp30 = tmp4 != obj.return;
                   }
-                  if (tmp29) {
+                  if (tmp30) {
                     obj.return();
                   }
                   if (tmp2) {
                     throw tmp;
                   } else {
-                    throw tmp27;
+                    throw tmp28;
                   }
-                } catch (tmp35) {
+                } catch (tmp36) {
                   if (tmp2) {
                     throw tmp;
                   } else {
-                    throw tmp35;
+                    throw tmp36;
                   }
                 }
               }
             }
-          })(items, 2);
+          })(item, 2);
         }
         if (!tmp) {
-          tmp = callback(items, 2);
+          tmp = closure_1_23(item, 2);
         }
         if (tmp) {
           const concat = "".concat;
@@ -8183,35 +7942,36 @@ function rr(arg0) {
 }
 let closure_79 = G(obj2.exports);
 function or() {
-  if (typeof sr !== "function") {
-    HermesBuiltin.throwTypeError();
-  }
-  const _navigator = mod7.default.navigator;
-  let tmp = _navigator;
-  if (_navigator) {
-    tmp = _navigator.connection || _navigator.mozConnection || _navigator.webkitConnection;
-    const tmp2 = _navigator.connection || _navigator.mozConnection || _navigator.webkitConnection;
-  }
-  let type = tmp;
-  if (tmp) {
-    type = tmp.type;
-  }
-  let str = "cellular";
-  if ("cellular" !== type) {
-    str = "wired";
-    if ("ethernet" !== type) {
-      str = "wifi";
-      if ("wifi" !== type) {
-        if (undefined !== type) {
-          str = "other";
+  if (typeof sr === "function") {
+    const _navigator = closure_79.default.navigator;
+    let tmp2 = _navigator;
+    if (_navigator) {
+      tmp2 = _navigator.connection || _navigator.mozConnection || _navigator.webkitConnection;
+      const tmp3 = _navigator.connection || _navigator.mozConnection || _navigator.webkitConnection;
+    }
+    let type = tmp2;
+    if (tmp2) {
+      type = tmp2.type;
+    }
+    let str = "cellular";
+    if ("cellular" !== type) {
+      str = "wired";
+      if ("ethernet" !== type) {
+        str = "wifi";
+        if ("wifi" !== type) {
+          if (undefined !== type) {
+            str = "other";
+          }
         }
       }
     }
+    return str;
+  } else {
+    throw new TypeError("Trying to call a non-function");
   }
-  return str;
 }
 function sr() {
-  const _navigator = mod7.default.navigator;
+  const _navigator = closure_79.default.navigator;
   let tmp = _navigator;
   if (_navigator) {
     tmp = _navigator.connection || _navigator.mozConnection || _navigator.webkitConnection;
@@ -8224,58 +7984,58 @@ function sr() {
   return type;
 }
 or.getConnectionFromAPI = sr;
-const obj12 = { a: "env", b: "beacon", c: "custom", d: "ad", e: "event", f: "experiment", i: "internal", m: "mux", n: "response", p: "player", q: "request", r: "retry", s: "session", t: "timestamp", u: "viewer", v: "video", w: "page", x: "view", y: "sub" };
-const obj13 = {};
-for (const key10232 in obj12) {
-  let tmp38 = key10232;
-  if (!obj12.hasOwnProperty(key10232)) {
+const point = { a: "env", b: "beacon", c: "custom", d: "ad", e: "event", f: "experiment", i: "internal", m: "mux", n: "response", p: "player", q: "request", r: "retry", s: "session", t: "timestamp", u: "viewer", v: "video", w: "page", x: "view", y: "sub" };
+let obj4 = {};
+for (const key10232 in point) {
+  if (!point.hasOwnProperty(key10232)) {
     continue;
   } else {
-    obj13[obj12[key10232]] = key10232;
+    obj4[point[key10232]] = key10232;
     continue;
   }
   continue;
 }
-const obj14 = { ad: "ad", af: "affiliate", ag: "aggregate", ap: "api", al: "application", ao: "audio", ar: "architecture", as: "asset", au: "autoplay", av: "average", bi: "bitrate", bn: "brand", br: "break", bw: "browser", by: "bytes", bz: "business", ca: "cached", cb: "cancel", cc: "codec", cd: "code", cg: "category", ch: "changed", ci: "client", ck: "clicked", cl: "canceled", cm: "cmcd", cn: "config", co: "count", ce: "counter", cp: "complete", cq: "creator", cr: "creative", cs: "captions", ct: "content", cu: "current", cv: "cumulative", cx: "connection", cz: "context", da: "data", dg: "downscaling", dm: "domain", dn: "cdn", do: "downscale", dr: "drm", dp: "dropped", du: "duration", dv: "device", dy: "dynamic", eb: "enabled", ec: "encoding", ed: "edge", en: "end", eg: "engine", em: "embed", er: "error", ep: "experiments", es: "errorcode", et: "errortext", ee: "event", ev: "events", ex: "expires", ez: "exception", fa: "failed", fi: "first", fm: "family", ft: "format", fp: "fps", fq: "frequency", fr: "frame", fs: "fullscreen", ha: "has", hb: "holdback", he: "headers", ho: "host", hn: "hostname", ht: "height", id: "id", ii: "init", in: "instance", ip: "ip", is: "is", ke: "key", la: "language", lb: "labeled", le: "level", li: "live", ld: "loaded", lo: "load", ls: "lists", lt: "latency", ma: "max", md: "media", me: "message", mf: "manifest", mi: "mime", ml: "midroll", mm: "min", mn: "manufacturer", mo: "model", mp: "mode", ms: "ms", mx: "mux", ne: "newest", nm: "name", no: "number", on: "on", or: "origin", os: "os", pa: "paused", pb: "playback", pd: "producer", pe: "percentage", pf: "played", pg: "program", ph: "playhead", pi: "plugin", pl: "preroll", pn: "playing", po: "poster", pp: "pip", pr: "preload", ps: "position", pt: "part", pv: "previous", py: "property", px: "pop", pz: "plan", ra: "rate", rd: "requested", re: "rebuffer", rf: "rendition", rg: "range", rm: "remote", ro: "ratio", rp: "response", rq: "request", rs: "requests", sa: "sample", sd: "skipped", se: "session", sh: "shift", sk: "seek", sm: "stream", so: "source", sq: "sequence", sr: "series", ss: "status", st: "start", su: "startup", sv: "server", sw: "software", sy: "severity", ta: "tag", tc: "tech", te: "text", tg: "target", th: "throughput", ti: "time", tl: "total", to: "to", tt: "title", ty: "type", ug: "upscaling", un: "universal", up: "upscale", ur: "url", us: "user", va: "variant", vd: "viewed", vi: "video", ve: "version", vw: "view", vr: "viewer", wd: "width", wa: "watch", wt: "waiting" };
-const obj15 = {};
-for (const key10238 in obj14) {
-  let tmp39 = key10238;
-  if (!obj14.hasOwnProperty(key10238)) {
+let obj5 = { ad: "ad", af: "affiliate", ag: "aggregate", ap: "api", al: "application", ao: "audio", ar: "architecture", as: "asset", au: "autoplay", av: "average", bi: "bitrate", bn: "brand", br: "break", bw: "browser", by: "bytes", bz: "business", ca: "cached", cb: "cancel", cc: "codec", cd: "code", cg: "category", ch: "changed", ci: "client", ck: "clicked", cl: "canceled", cm: "cmcd", cn: "config", co: "count", ce: "counter", cp: "complete", cq: "creator", cr: "creative", cs: "captions", ct: "content", cu: "current", cv: "cumulative", cx: "connection", cz: "context", da: "data", dg: "downscaling", dm: "domain", dn: "cdn", do: "downscale", dr: "drm", dp: "dropped", du: "duration", dv: "device", dy: "dynamic", eb: "enabled", ec: "encoding", ed: "edge", en: "end", eg: "engine", em: "embed", er: "error", ep: "experiments", es: "errorcode", et: "errortext", ee: "event", ev: "events", ex: "expires", ez: "exception", fa: "failed", fi: "first", fm: "family", ft: "format", fp: "fps", fq: "frequency", fr: "frame", fs: "fullscreen", ha: "has", hb: "holdback", he: "headers", ho: "host", hn: "hostname", ht: "height", id: "id", ii: "init", in: "instance", ip: "ip", is: "is", ke: "key", la: "language", lb: "labeled", le: "level", li: "live", ld: "loaded", lo: "load", ls: "lists", lt: "latency", ma: "max", md: "media", me: "message", mf: "manifest", mi: "mime", ml: "midroll", mm: "min", mn: "manufacturer", mo: "model", mp: "mode", ms: "ms", mx: "mux", ne: "newest", nm: "name", no: "number", on: "on", or: "origin", os: "os", pa: "paused", pb: "playback", pd: "producer", pe: "percentage", pf: "played", pg: "program", ph: "playhead", pi: "plugin", pl: "preroll", pn: "playing", po: "poster", pp: "pip", pr: "preload", ps: "position", pt: "part", pv: "previous", py: "property", px: "pop", pz: "plan", ra: "rate", rd: "requested", re: "rebuffer", rf: "rendition", rg: "range", rm: "remote", ro: "ratio", rp: "response", rq: "request", rs: "requests", sa: "sample", sd: "skipped", se: "session", sh: "shift", sk: "seek", sm: "stream", so: "source", sq: "sequence", sr: "series", ss: "status", st: "start", su: "startup", sv: "server", sw: "software", sy: "severity", ta: "tag", tc: "tech", te: "text", tg: "target", th: "throughput", ti: "time", tl: "total", to: "to", tt: "title", ty: "type", ug: "upscaling", un: "universal", up: "upscale", ur: "url", us: "user", va: "variant", vd: "viewed", vi: "video", ve: "version", vw: "view", vr: "viewer", wd: "width", wa: "watch", wt: "waiting" };
+let obj6 = {};
+for (const key10238 in obj5) {
+  if (!obj5.hasOwnProperty(key10238)) {
     continue;
   } else {
-    obj15[obj14[key10238]] = key10238;
+    obj6[obj5[key10238]] = key10238;
     continue;
   }
   continue;
 }
 const fn17 = (arg0, arg1) => {
   if (undefined !== f98876) {
-    if (typeof f98884 !== "function") {
-      HermesBuiltin.throwTypeError();
-    }
-    if (!obj) {
-      obj = { exports: null };
-      obj[0] = {};
-      f98876(obj.exports, obj);
-    }
-    const _exports = obj.exports;
-    const _document = document;
-    if (typeof document !== "undefined") {
-      __GLOBAL_DOCUMENT_CACHE_4 = document;
-    } else {
-      __GLOBAL_DOCUMENT_CACHE_4 = tmp["__GLOBAL_DOCUMENT_CACHE@4"];
-      if (!__GLOBAL_DOCUMENT_CACHE_4) {
-        tmp["__GLOBAL_DOCUMENT_CACHE@4"] = _exports;
-        __GLOBAL_DOCUMENT_CACHE_4 = _exports;
+    if (typeof f98884 === "function") {
+      if (!closure_150_1) {
+        const obj = { exports: {} };
+        closure_150_1 = obj;
+        closure_150_0(obj.exports, closure_150_1);
       }
+      const _exports = closure_150_1.exports;
+      let _document = document;
+      if (typeof document !== "undefined") {
+        _document = document;
+      } else {
+        _document = tmp["__GLOBAL_DOCUMENT_CACHE@4"];
+        if (!_document) {
+          tmp["__GLOBAL_DOCUMENT_CACHE@4"] = _exports;
+          _document = _exports;
+        }
+      }
+      arg1.exports = _document;
+    } else {
+      throw new TypeError("Trying to call a non-function");
     }
-    arg1.exports = __GLOBAL_DOCUMENT_CACHE_4;
   } else {
     const _window = window;
   }
 };
 let closure_84 = G(obj2.exports);
-const obj16 = { exports: {} };
+const obj7 = { exports: {} };
+fn17(0, obj7);
 let closure_85 = { maxBeaconSize: 300, maxQueueLength: 3600, baseTimeBetweenBeacons: 10000, maxPayloadKBSize: 500 };
 let closure_86 = ["hb", "requestcompleted", "requestfailed", "requestcanceled"];
 class $ {
@@ -8377,38 +8137,39 @@ class $ {
       closure_2 = obj1;
       _Object2 = Object;
       keys = Object.keys(obj);
-      item = keys.forEach((key10009) => {
+      item = keys.forEach((item) => {
+        closure_0 = item;
         c1 = false;
-        if (key10009.hasOwnProperty(key10009)) {
-          if (undefined !== tmp[key10009]) {
-            const parts = key10009.split("_");
+        if (obj.hasOwnProperty(item)) {
+          if (undefined !== tmp[item]) {
+            const parts = item.split("_");
             const first = parts[0];
             closure_2 = tmp12;
-            if (!closure_1_82[first]) {
-              closure_1_38.info(`Data key word \`${arr2[0]}\` not expected in ${key10009}`);
+            if (!obj4[first]) {
+              logger.info(`Data key word \`${arr2[0]}\` not expected in ${item}`);
               closure_2 = `${tmp10}_`;
             }
-            const item = parts.splice(1).forEach((arg0) => {
-              if ("url" === arg0) {
+            item = parts.splice(1).forEach((item) => {
+              if ("url" === item) {
                 c1 = true;
               }
-              if (closure_1_83[arg0]) {
-                closure_2 = closure_2 + tmp[arg0];
+              if (obj6[item]) {
+                closure_2 = closure_2 + tmp[item];
               } else {
                 const _Number = Number;
                 const _Number2 = Number;
-                if (Number.isInteger(Number(arg0))) {
-                  closure_2 = closure_2 + arg0;
+                if (Number.isInteger(Number(item))) {
+                  closure_2 = closure_2 + item;
                 } else {
-                  closure_1_38.info(`Data key word \`${arg0}\` not expected in ${closure_0}`);
-                  closure_2 = `${closure_2}_${arg0}_`;
+                  logger.info(`Data key word \`${item}\` not expected in ${closure_0}`);
+                  closure_2 = `${closure_2}_${item}_`;
                 }
               }
             });
             if (c1) {
-              closure_2[closure_2] = tmp[key10009];
+              obj2[closure_2] = tmp[item];
             } else {
-              c1[closure_2] = tmp[key10009];
+              obj1[closure_2] = tmp[item];
             }
             const spliceResult = parts.splice(1);
           }
@@ -8431,7 +8192,7 @@ class $ {
     } else {
       _eventQueue = self._eventQueue;
       num = 0;
-      substr = require("module_0");
+      substr = _eventQueue.slice(0, self._options.maxBeaconSize);
       closure_1 = substr;
       _eventQueue1 = self._eventQueue;
       self._eventQueue = _eventQueue1.slice(self._options.maxBeaconSize);
@@ -8447,13 +8208,13 @@ class $ {
         if (arg1) {
           tmp._eventQueue = substr.concat(tmp._eventQueue);
           tmp._failureCount = tmp._failureCount + 1;
-          closure_1_38.info(`Error sending beacon: ${arg1}`);
+          logger.info(`Error sending beacon: ${arg1}`);
           let obj = tmp;
         } else {
           tmp._failureCount = 0;
           obj = tmp;
         }
-        obj._roundTripTime = closure_1_27.now() - closure_2;
+        obj._roundTripTime = obj3.now() - closure_2;
         obj._postInFlight = false;
         if (obj._resendAfterPost) {
           obj._resendAfterPost = false;
@@ -8473,7 +8234,7 @@ class $ {
       num = 1;
       num2 = 2;
       _Math2 = Math;
-      powResult = require("module_2");
+      powResult = Math.pow(2, self._failureCount - 1);
       return (1 + powResult * Math.random()) * self._options.baseTimeBetweenBeacons;
     } else {
       return self._options.baseTimeBetweenBeacons;
@@ -8512,14 +8273,14 @@ class $ {
       str = " kb). Removing unnecessary events.";
       str2 = "Payload size is too big (";
       infoResult = closure_38.info(`Payload size is too big (${tmp} kb). Removing unnecessary events.`);
-      found = global.filter((arg0) => -1 === closure_86.indexOf(arg0.e));
+      found = global.filter((item) => -1 === closure_1_86.indexOf(item.e));
       obj1 = { metadata: null, events: null };
-      obj1[0] = obj;
+      obj1.metadata = obj;
       tmp7 = found;
       if (!found) {
         tmp7 = global;
       }
-      obj1[1] = tmp7;
+      obj1.events = tmp7;
       json1 = JSON.stringify(obj1);
       result1 = json1.length / 1024;
       tmp3 = found;
@@ -8531,9 +8292,8 @@ class $ {
       str3 = " kb). Cropping fields..";
       str4 = "Payload size still too big (";
       infoResult1 = closure_38.info(`Payload size still too big (${tmp2} kb). Cropping fields..`);
-      item = arr2.forEach((obj) => {
+      item = arr2.forEach((item) => {
         for (const key10005 in arg0) {
-          let tmp = key10005;
           let arr = arg0[key10005];
           let tmp2 = typeof arr === "string";
           if (typeof arr === "string") {
@@ -8549,11 +8309,11 @@ class $ {
         }
       });
       obj2 = { metadata: null, events: null };
-      obj2[0] = obj;
+      obj2.metadata = obj;
       if (!tmp3) {
         tmp3 = global;
       }
-      obj2[1] = tmp3;
+      obj2.events = tmp3;
       json2 = JSON.stringify(obj2);
       result2 = json2.length / 1024;
       json = json2;
@@ -8561,9 +8321,9 @@ class $ {
     return json;
   }
 }
-let closure_87 = typeof G(obj16.exports).default.exitPictureInPicture === "function" ? ((arg0) => arg0.length <= 57344) : ((arg0) => false);
-function Mr(_beaconUrl, _createPayloadResult, arg2, arg3) {
-  closure_0 = arg3;
+let closure_87 = typeof G(obj7.exports).default.exitPictureInPicture === "function" ? ((arg0) => arg0.length <= 57344) : ((arg0) => false);
+function Mr(_beaconUrl, _createPayloadResult, arg2, fn) {
+  closure_0 = fn;
   if (arg2) {
     const _navigator = navigator;
     if (navigator) {
@@ -8571,24 +8331,21 @@ function Mr(_beaconUrl, _createPayloadResult, arg2, arg3) {
       if (navigator.sendBeacon) {
         const _navigator3 = navigator;
         if (navigator.sendBeacon(_beaconUrl, _createPayloadResult)) {
-          arg3();
+          fn();
         }
       }
     }
   }
-  if (mod8.default.fetch) {
-    const obj = { method: "POST", body: null, headers: null, keepalive: null };
-    obj[1] = _createPayloadResult;
-    obj[2] = { "Content-Type": "text/plain" };
-    obj[3] = callback2(_createPayloadResult);
-    const response = _default.fetch(_beaconUrl, obj);
+  if (closure_84.default.fetch) {
+    const request = { method: "POST", body: _createPayloadResult, headers: { "Content-Type": "text/plain" }, keepalive: closure_87(_createPayloadResult) };
+    const response = _default.fetch(_beaconUrl, request);
     response.then((ok) => {
       let tmp2 = "Error";
       if (ok.ok) {
         tmp2 = null;
       }
       return closure_0(null, tmp2);
-    }).catch((arg0) => callback(null, arg0));
+    }).catch((error) => closure_0(null, error));
     const nextPromise = response.then((ok) => {
       let tmp2 = "Error";
       if (ok.ok) {
@@ -8611,7 +8368,7 @@ function Mr(_beaconUrl, _createPayloadResult, arg2, arg3) {
     xMLHttpRequest.setRequestHeader("Content-Type", "text/plain");
     xMLHttpRequest.send(_createPayloadResult);
   } else {
-    arg3();
+    fn();
   }
 }
 let closure_89 = $;
@@ -8710,7 +8467,7 @@ const fn18 = function r(mux, envKey) {
         self.rateLimited = false;
         ({ envKey, options } = self);
         ({ beaconCollectionDomain, beaconDomain } = options);
-        let tmp25 = closure_89;
+        let tmp25 = closure_2_89;
         if (beaconCollectionDomain) {
           let str14 = `https://${beaconCollectionDomain}`;
         } else {
@@ -8743,10 +8500,7 @@ const fn18 = function r(mux, envKey) {
         self.previousBeaconData = null;
         self.lastEventTime = 0;
         self.rateLimited = false;
-        let obj = { mux_api_version: null, mux_embed: null, mux_embed_version: null, viewer_application_name: null, viewer_application_version: null, viewer_application_engine: null, viewer_device_name: null, viewer_device_category: "", viewer_device_manufacturer: null, viewer_os_family: null, viewer_os_architecture: null, viewer_os_version: null, viewer_connection_type: null, page_url: null };
-        obj[0] = self.mux.API_VERSION;
-        obj[1] = self.mux.NAME;
-        obj[2] = self.mux.VERSION;
+        let obj = { mux_api_version: self.mux.API_VERSION, mux_embed: self.mux.NAME, mux_embed_version: self.mux.VERSION, viewer_application_name: null, viewer_application_version: null, viewer_application_engine: null, viewer_device_name: null, viewer_device_category: "", viewer_device_manufacturer: null, viewer_os_family: null, viewer_os_architecture: null, viewer_os_version: null, viewer_connection_type: null, page_url: null };
         const platform = self.options.platform;
         let name;
         if (null !== platform) {
@@ -8754,7 +8508,7 @@ const fn18 = function r(mux, envKey) {
             name = platform.name;
           }
         }
-        obj[3] = name;
+        obj.viewer_application_name = name;
         const platform2 = self.options.platform;
         let version;
         if (null !== platform2) {
@@ -8762,7 +8516,7 @@ const fn18 = function r(mux, envKey) {
             version = platform2.version;
           }
         }
-        obj[4] = version;
+        obj.viewer_application_version = version;
         const platform3 = self.options.platform;
         let layout;
         if (null !== platform3) {
@@ -8770,7 +8524,7 @@ const fn18 = function r(mux, envKey) {
             layout = platform3.layout;
           }
         }
-        obj[5] = layout;
+        obj.viewer_application_engine = layout;
         const platform4 = self.options.platform;
         let product;
         if (null !== platform4) {
@@ -8778,7 +8532,7 @@ const fn18 = function r(mux, envKey) {
             product = platform4.product;
           }
         }
-        obj[6] = product;
+        obj.viewer_device_name = product;
         const platform5 = self.options.platform;
         let manufacturer;
         if (null !== platform5) {
@@ -8786,7 +8540,7 @@ const fn18 = function r(mux, envKey) {
             manufacturer = platform5.manufacturer;
           }
         }
-        obj[8] = manufacturer;
+        obj.viewer_device_manufacturer = manufacturer;
         const platform6 = self.options.platform;
         let family;
         if (null !== platform6) {
@@ -8799,7 +8553,7 @@ const fn18 = function r(mux, envKey) {
             }
           }
         }
-        obj[9] = family;
+        obj.viewer_os_family = family;
         const platform7 = self.options.platform;
         let architecture;
         if (null !== platform7) {
@@ -8812,7 +8566,7 @@ const fn18 = function r(mux, envKey) {
             }
           }
         }
-        obj[10] = architecture;
+        obj.viewer_os_architecture = architecture;
         const platform8 = self.options.platform;
         let version1;
         if (null !== platform8) {
@@ -8825,69 +8579,71 @@ const fn18 = function r(mux, envKey) {
             }
           }
         }
-        obj[11] = version1;
-        if (typeof or !== "function") {
-          HermesBuiltin.throwTypeError();
-        }
-        if (typeof sr !== "function") {
-          HermesBuiltin.throwTypeError();
-        }
-        const _navigator = mod7.default.navigator;
-        let tmp41 = _navigator;
-        if (_navigator) {
-          tmp41 = _navigator.connection || _navigator.mozConnection || _navigator.webkitConnection;
-          const tmp42 = _navigator.connection || _navigator.mozConnection || _navigator.webkitConnection;
-        }
-        let type = tmp41;
-        if (tmp41) {
-          type = tmp41.type;
-        }
-        let str18 = "cellular";
-        if ("cellular" !== type) {
-          str18 = "wired";
-          if ("ethernet" !== type) {
-            str18 = "wifi";
-            if ("wifi" !== type) {
-              if (undefined !== type) {
-                str18 = "other";
+        obj.viewer_os_version = version1;
+        if (typeof closure_2_81 === "function") {
+          if (typeof closure_2_80 === "function") {
+            const _navigator = closure_2_79.default.navigator;
+            let tmp41 = _navigator;
+            if (_navigator) {
+              tmp41 = _navigator.connection || _navigator.mozConnection || _navigator.webkitConnection;
+              const tmp42 = _navigator.connection || _navigator.mozConnection || _navigator.webkitConnection;
+            }
+            let type = tmp41;
+            if (tmp41) {
+              type = tmp41.type;
+            }
+            let str18 = "cellular";
+            if ("cellular" !== type) {
+              str18 = "wired";
+              if ("ethernet" !== type) {
+                str18 = "wifi";
+                if ("wifi" !== type) {
+                  if (undefined !== type) {
+                    str18 = "other";
+                  }
+                }
               }
             }
-          }
-        }
-        obj[12] = str18;
-        let href;
-        if (null !== mod6.default) {
-          if (undefined !== tmp43.default) {
-            const _location = tmp43.default.location;
-            if (null !== _location) {
-              if (undefined !== _location) {
-                href = _location.href;
+            obj.viewer_connection_type = str18;
+            let href;
+            if (null !== closure_2_74.default) {
+              if (undefined !== tmp43.default) {
+                const _location = tmp43.default.location;
+                if (null !== _location) {
+                  if (undefined !== _location) {
+                    href = _location.href;
+                  }
+                }
               }
             }
+            obj.page_url = href;
+            self.pageLevelData = obj;
+            if (self.disableCookies) {
+              obj = {};
+            } else {
+              const tmp46 = closure_2_77();
+              let mux_viewer_id = tmp46.mux_viewer_id;
+              if (!mux_viewer_id) {
+                mux_viewer_id = __initData6();
+              }
+              tmp46.mux_viewer_id = mux_viewer_id;
+              let msn = tmp46.msn;
+              if (!msn) {
+                const _Math = Math;
+                msn = Math.random();
+              }
+              tmp46.msn = msn;
+              closure_2_78(tmp46);
+              obj = { mux_viewer_id: null, mux_sample_number: null };
+              ({ mux_viewer_id: obj2.mux_viewer_id, msn: obj2.mux_sample_number } = tmp46);
+            }
+            self.viewerData = obj;
+          } else {
+            throw new TypeError("Trying to call a non-function");
           }
-        }
-        obj[13] = href;
-        self.pageLevelData = obj;
-        if (self.disableCookies) {
-          obj = {};
         } else {
-          const tmp46 = tr();
-          let mux_viewer_id = tmp46.mux_viewer_id;
-          if (!mux_viewer_id) {
-            mux_viewer_id = ee();
-          }
-          tmp46.mux_viewer_id = mux_viewer_id;
-          let msn = tmp46.msn;
-          if (!msn) {
-            const _Math = Math;
-            msn = Math.random();
-          }
-          tmp46.msn = msn;
-          rr(tmp46);
-          obj = { mux_viewer_id: null, mux_sample_number: null };
-          ({ mux_viewer_id: obj2[0], msn: obj2[1] } = tmp46);
+          throw new TypeError("Trying to call a non-function");
         }
-        self.viewerData = obj;
       } else {
         const _TypeError = TypeError;
         const typeError = new TypeError("Cannot call a class as a function");
@@ -8905,231 +8661,232 @@ const fn18 = function r(mux, envKey) {
     tmp5 = U(self, tmp2);
   }
 };
-f98876 = fn18;
-const items10 = [
-  {
-    key: "send",
-    value(arg0, view_id) {
-      if (arg0) {
-        if (null != view_id) {
-          if (view_id.view_id) {
-            const self = this;
-            if (this.respectDoNotTrack) {
-              let doNotTrack = mod3.default.doNotTrack;
-              if (!doNotTrack) {
-                doNotTrack = tmp6.default.navigator && tmp6.default.navigator.doNotTrack;
-                const tmp7 = tmp6.default.navigator && tmp6.default.navigator.doNotTrack;
-              }
-              if ("1" === doNotTrack) {
-                return logger.info("Not sending `" + arg0 + "` because Do Not Track is enabled");
-              }
+const entry8 = {
+  key: "send",
+  value(event, view_id) {
+    if (event) {
+      if (null != view_id) {
+        if (view_id.view_id) {
+          const self = this;
+          if (this.respectDoNotTrack) {
+            let doNotTrack = closure_39.default.doNotTrack;
+            if (!doNotTrack) {
+              doNotTrack = tmp6.default.navigator && tmp6.default.navigator.doNotTrack;
+              const tmp7 = tmp6.default.navigator && tmp6.default.navigator.doNotTrack;
             }
-            if (view_id) {
-              if (typeof view_id === "object") {
-                if (self.disableCookies) {
-                  let obj = {};
-                } else {
-                  const tmp9 = tr();
-                  const nowResult = obj3.now();
-                  if (tmp9.session_start) {
-                    tmp9.sst = tmp9.session_start;
-                    delete tmp[tmp3];
-                  }
-                  if (tmp9.session_id) {
-                    tmp9.sid = tmp9.session_id;
-                    delete tmp[tmp3];
-                  }
-                  if (tmp9.session_expires) {
-                    tmp9.sex = tmp9.session_expires;
-                    delete tmp[tmp3];
-                  }
-                  const sex = tmp9.sex;
-                  let tmp12 = !sex;
-                  if (sex) {
-                    tmp12 = tmp9.sex < nowResult;
-                  }
-                  if (tmp12) {
-                    tmp9.sid = ee();
-                    tmp9.sst = nowResult;
-                  }
-                  tmp9.sex = nowResult + 1500000;
-                  rr(tmp9);
-                  obj = { session_id: null, session_start: null, session_expires: null };
-                  ({ sid: obj[0], sst: obj[1], sex: obj[2] } = tmp9);
+            if ("1" === doNotTrack) {
+              return logger.info("Not sending `" + event + "` because Do Not Track is enabled");
+            }
+          }
+          if (view_id) {
+            if (typeof view_id === "object") {
+              if (self.disableCookies) {
+                let obj = {};
+              } else {
+                const tmp9 = tr();
+                const nowResult = obj3.now();
+                if (tmp9.session_start) {
+                  tmp9.sst = tmp9.session_start;
+                  delete tmp[tmp3];
                 }
-                obj = {};
-                ue(obj, self.pageLevelData, view_id, obj, self.viewerData);
-                obj = { event: null, env_key: null };
-                obj[0] = arg0;
-                obj[1] = self.envKey;
-                obj3 = obj;
-                const _Object = Object;
-                const _Object2 = Object;
-                if (Object.getOwnPropertyDescriptors) {
-                  const _Object6 = Object;
-                  _Object2.defineProperties(obj, Object.getOwnPropertyDescriptors(obj));
-                } else {
-                  const _Object2Result = _Object2(obj);
-                  obj = _Object2Result;
-                  const _Object3 = Object;
-                  const keys = Object.keys(_Object2Result);
-                  const _Object4 = Object;
-                  if (Object.getOwnPropertySymbols) {
-                    const _Object5 = Object;
-                    const push = keys.push;
-                    push.apply(keys, Object.getOwnPropertySymbols(_Object2Result));
-                  }
-                  let item = keys.forEach((arg0) => {
-                    Object.defineProperty(obj2, arg0, Object.getOwnPropertyDescriptor(obj3, arg0));
-                  });
+                if (tmp9.session_id) {
+                  tmp9.sid = tmp9.session_id;
+                  delete tmp[tmp3];
                 }
-                if (obj.user_id) {
-                  obj.viewer_user_id = obj.user_id;
-                  delete tmp3[tmp2];
+                if (tmp9.session_expires) {
+                  tmp9.sex = tmp9.session_expires;
+                  delete tmp[tmp3];
                 }
-                const mux_sample_number = obj.mux_sample_number;
-                let num4 = 0;
-                if (null !== mux_sample_number) {
-                  num4 = 0;
-                  if (undefined !== mux_sample_number) {
-                    num4 = mux_sample_number;
-                  }
+                const sex = tmp9.sex;
+                let tmp12 = !sex;
+                if (sex) {
+                  tmp12 = tmp9.sex < nowResult;
                 }
-                const result = self._deduplicateBeaconData(arg0, obj);
-                obj = result;
-                obj1 = {};
-                obj3 = obj1;
-                const obj2 = {};
-                let obj4 = obj2;
-                const _Object7 = Object;
-                const keys1 = Object.keys(result);
-                const item1 = keys1.forEach((key10009) => {
-                  c1 = false;
-                  if (key10009.hasOwnProperty(key10009)) {
-                    if (undefined !== tmp[key10009]) {
-                      const parts = key10009.split("_");
-                      const first = parts[0];
-                      closure_2 = tmp12;
-                      if (!closure_1_82[first]) {
-                        closure_1_38.info(`Data key word \`${arr2[0]}\` not expected in ${key10009}`);
-                        closure_2 = `${tmp10}_`;
+                if (tmp12) {
+                  tmp9.sid = ee();
+                  tmp9.sst = nowResult;
+                }
+                tmp9.sex = nowResult + 1500000;
+                rr(tmp9);
+                obj = { session_id: null, session_start: null, session_expires: null };
+                ({ sid: obj.session_id, sst: obj.session_start, sex: obj.session_expires } = tmp9);
+              }
+              obj = {};
+              ue(obj, self.pageLevelData, view_id, obj, self.viewerData);
+              obj = { event, env_key: self.envKey };
+              let obj1 = obj;
+              const _Object = Object;
+              const _Object2 = Object;
+              if (Object.getOwnPropertyDescriptors) {
+                const _Object6 = Object;
+                _Object2.defineProperties(obj, Object.getOwnPropertyDescriptors(obj));
+              } else {
+                const _Object2Result = _Object2(obj);
+                obj = _Object2Result;
+                const _Object3 = Object;
+                const keys = Object.keys(_Object2Result);
+                const _Object4 = Object;
+                if (Object.getOwnPropertySymbols) {
+                  const _Object5 = Object;
+                  const push = keys.push;
+                  push.apply(keys, Object.getOwnPropertySymbols(_Object2Result));
+                }
+                let item = keys.forEach((item) => {
+                  Object.defineProperty(obj2, item, Object.getOwnPropertyDescriptor(obj3, item));
+                });
+              }
+              if (obj.user_id) {
+                obj.viewer_user_id = obj.user_id;
+                delete tmp3[tmp2];
+              }
+              const mux_sample_number = obj.mux_sample_number;
+              let num4 = 0;
+              if (null !== mux_sample_number) {
+                num4 = 0;
+                if (undefined !== mux_sample_number) {
+                  num4 = mux_sample_number;
+                }
+              }
+              const result = self._deduplicateBeaconData(event, obj);
+              obj = result;
+              obj1 = {};
+              const obj2 = {};
+              const _Object7 = Object;
+              const keys1 = Object.keys(result);
+              const item1 = keys1.forEach((item) => {
+                closure_0 = item;
+                c1 = false;
+                if (obj.hasOwnProperty(item)) {
+                  if (undefined !== tmp[item]) {
+                    const parts = item.split("_");
+                    const first = parts[0];
+                    closure_2 = tmp12;
+                    if (!obj4[first]) {
+                      logger.info(`Data key word \`${arr2[0]}\` not expected in ${item}`);
+                      closure_2 = `${tmp10}_`;
+                    }
+                    item = parts.splice(1).forEach((item) => {
+                      if ("url" === item) {
+                        c1 = true;
                       }
-                      const item = parts.splice(1).forEach((arg0) => {
-                        if ("url" === arg0) {
-                          c1 = true;
-                        }
-                        if (closure_1_83[arg0]) {
-                          closure_2 = closure_2 + tmp[arg0];
+                      if (obj6[item]) {
+                        closure_2 = closure_2 + tmp[item];
+                      } else {
+                        const _Number = Number;
+                        const _Number2 = Number;
+                        if (Number.isInteger(Number(item))) {
+                          closure_2 = closure_2 + item;
                         } else {
-                          const _Number = Number;
-                          const _Number2 = Number;
-                          if (Number.isInteger(Number(arg0))) {
-                            closure_2 = closure_2 + arg0;
-                          } else {
-                            closure_1_38.info(`Data key word \`${arg0}\` not expected in ${closure_0}`);
-                            closure_2 = `${closure_2}_${arg0}_`;
+                          logger.info(`Data key word \`${item}\` not expected in ${closure_0}`);
+                          closure_2 = `${closure_2}_${item}_`;
+                        }
+                      }
+                    });
+                    if (c1) {
+                      obj2[closure_2] = tmp[item];
+                    } else {
+                      obj1[closure_2] = tmp[item];
+                    }
+                    const spliceResult = parts.splice(1);
+                  }
+                }
+              });
+              const _Object8 = Object;
+              const merged = Object.assign(obj1, obj2);
+              const utils = self.mux.utils;
+              self.lastEventTime = utils.now();
+              if (tmp26) {
+                return logger.info("Not sending event due to sample rate restriction", event, obj, merged);
+              } else {
+                if (!self.envKey) {
+                  logger.info("Missing environment key (envKey) - beacons will be dropped if the video source is not a valid mux video URL", event, obj, merged);
+                }
+                if (!self.rateLimited) {
+                  logger.info("Sending event", event, obj, merged);
+                  const eventQueue = self.eventQueue;
+                  self.rateLimited = !eventQueue.queueEvent(event, merged);
+                  if (self.mux.WINDOW_UNLOADING) {
+                    if ("viewend" === event) {
+                      const eventQueue5 = self.eventQueue;
+                      eventQueue5.destroy(true);
+                    }
+                  }
+                  if (self.mux.WINDOW_HIDDEN) {
+                    if ("hb" === event) {
+                      const eventQueue3 = self.eventQueue;
+                      eventQueue3.flushEvents(true);
+                    }
+                    if (self.rateLimited) {
+                      obj.event = "eventrateexceeded";
+                      closure_129_0 = obj;
+                      obj3 = {};
+                      closure_129_1 = obj3;
+                      obj4 = {};
+                      closure_129_2 = obj4;
+                      const _Object9 = Object;
+                      const keys2 = Object.keys(obj);
+                      const item2 = keys2.forEach((item) => {
+                        closure_0 = item;
+                        c1 = false;
+                        if (obj.hasOwnProperty(item)) {
+                          if (undefined !== tmp[item]) {
+                            const parts = item.split("_");
+                            const first = parts[0];
+                            closure_2 = tmp12;
+                            if (!obj4[first]) {
+                              logger.info(`Data key word \`${arr2[0]}\` not expected in ${item}`);
+                              closure_2 = `${tmp10}_`;
+                            }
+                            item = parts.splice(1).forEach((item) => {
+                              if ("url" === item) {
+                                c1 = true;
+                              }
+                              if (obj6[item]) {
+                                closure_2 = closure_2 + tmp[item];
+                              } else {
+                                const _Number = Number;
+                                const _Number2 = Number;
+                                if (Number.isInteger(Number(item))) {
+                                  closure_2 = closure_2 + item;
+                                } else {
+                                  logger.info(`Data key word \`${item}\` not expected in ${closure_0}`);
+                                  closure_2 = `${closure_2}_${item}_`;
+                                }
+                              }
+                            });
+                            if (c1) {
+                              obj2[closure_2] = tmp[item];
+                            } else {
+                              obj1[closure_2] = tmp[item];
+                            }
+                            const spliceResult = parts.splice(1);
                           }
                         }
                       });
-                      if (c1) {
-                        closure_2[closure_2] = tmp[key10009];
-                      } else {
-                        c1[closure_2] = tmp[key10009];
-                      }
-                      const spliceResult = parts.splice(1);
+                      const _Object10 = Object;
+                      const eventQueue4 = self.eventQueue;
+                      eventQueue4.queueEvent(obj.event, Object.assign(obj3, obj4));
+                      return obj6.error("Beaconing disabled due to rate limit.");
                     }
                   }
-                });
-                const _Object8 = Object;
-                const merged = Object.assign(obj1, obj2);
-                const utils = self.mux.utils;
-                self.lastEventTime = utils.now();
-                if (tmp26) {
-                  return logger.info("Not sending event due to sample rate restriction", arg0, obj, merged);
-                } else {
-                  if (!self.envKey) {
-                    logger.info("Missing environment key (envKey) - beacons will be dropped if the video source is not a valid mux video URL", arg0, obj, merged);
+                  if (closure_93.indexOf(event) >= 0) {
+                    const eventQueue2 = self.eventQueue;
+                    eventQueue2.flushEvents();
                   }
-                  if (!self.rateLimited) {
-                    logger.info("Sending event", arg0, obj, merged);
-                    const eventQueue = self.eventQueue;
-                    self.rateLimited = !eventQueue.queueEvent(arg0, merged);
-                    if (self.mux.WINDOW_UNLOADING) {
-                      if ("viewend" === arg0) {
-                        const eventQueue5 = self.eventQueue;
-                        eventQueue5.destroy(true);
-                      }
-                    }
-                    if (self.mux.WINDOW_HIDDEN) {
-                      if ("hb" === arg0) {
-                        const eventQueue3 = self.eventQueue;
-                        eventQueue3.flushEvents(true);
-                      }
-                      if (self.rateLimited) {
-                        obj.event = "eventrateexceeded";
-                        obj3 = {};
-                        obj4 = {};
-                        const _Object9 = Object;
-                        const keys2 = Object.keys(obj);
-                        const item2 = keys2.forEach((key10009) => {
-                          c1 = false;
-                          if (key10009.hasOwnProperty(key10009)) {
-                            if (undefined !== tmp[key10009]) {
-                              const parts = key10009.split("_");
-                              const first = parts[0];
-                              closure_2 = tmp12;
-                              if (!closure_1_82[first]) {
-                                closure_1_38.info(`Data key word \`${arr2[0]}\` not expected in ${key10009}`);
-                                closure_2 = `${tmp10}_`;
-                              }
-                              const item = parts.splice(1).forEach((arg0) => {
-                                if ("url" === arg0) {
-                                  c1 = true;
-                                }
-                                if (closure_1_83[arg0]) {
-                                  closure_2 = closure_2 + tmp[arg0];
-                                } else {
-                                  const _Number = Number;
-                                  const _Number2 = Number;
-                                  if (Number.isInteger(Number(arg0))) {
-                                    closure_2 = closure_2 + arg0;
-                                  } else {
-                                    closure_1_38.info(`Data key word \`${arg0}\` not expected in ${closure_0}`);
-                                    closure_2 = `${closure_2}_${arg0}_`;
-                                  }
-                                }
-                              });
-                              if (c1) {
-                                closure_2[closure_2] = tmp[key10009];
-                              } else {
-                                c1[closure_2] = tmp[key10009];
-                              }
-                              const spliceResult = parts.splice(1);
-                            }
-                          }
-                        });
-                        const _Object10 = Object;
-                        const eventQueue4 = self.eventQueue;
-                        eventQueue4.queueEvent(obj.event, Object.assign(obj3, obj4));
-                        return obj6.error("Beaconing disabled due to rate limit.");
-                      }
-                    }
-                    if (closure_93.indexOf(arg0) >= 0) {
-                      const eventQueue2 = self.eventQueue;
-                      eventQueue2.flushEvents();
-                    }
-                    obj6 = logger;
-                  }
+                  obj6 = logger;
                 }
-                tmp26 = num4 >= self.sampleRate;
               }
+              tmp26 = num4 >= self.sampleRate;
             }
-            return logger.error("A data object was expected in send() but was not provided");
           }
+          return logger.error("A data object was expected in send() but was not provided");
         }
       }
     }
-  },
+  }
+};
+const items10 = [
+  entry8,
   {
     key: "destroy",
     value() {
@@ -9140,10 +8897,9 @@ const items10 = [
   {
     key: "_deduplicateBeaconData",
     value(arr, view_id) {
-      let self = this;
       closure_0 = arr;
-      self = this;
-      let obj = {};
+      const self = this;
+      let previousBeaconData = {};
       view_id = view_id.view_id;
       if ("-1" !== view_id) {
         if ("viewstart" !== arr) {
@@ -9154,48 +8910,47 @@ const items10 = [
                 closure_3 = 0 === arr.indexOf("request");
                 const _Object = Object;
                 const entries = Object.entries(view_id);
-                const item = entries.forEach((items) => {
+                const item = entries.forEach((item) => {
                   let tmp;
-                  if (Array.isArray(items)) {
-                    tmp = items;
+                  if (Array.isArray(item)) {
+                    tmp = item;
                   }
                   if (!tmp) {
                     tmp = (function vt(items, arg1) {
                       let tmp6 = null;
                       if (null != items) {
                         const _Symbol = Symbol;
-                        iterable = typeof Symbol !== "undefined";
+                        let prop = typeof Symbol !== "undefined";
                         if (typeof Symbol !== "undefined") {
                           const _Symbol2 = Symbol;
-                          iterable = items[Symbol.iterator];
+                          prop = items[Symbol.iterator];
                         }
-                        if (!iterable) {
-                          iterable = items[Symbol.iterator];
+                        if (!prop) {
+                          prop = items[Symbol.iterator];
                         }
-                        tmp6 = iterable;
+                        tmp6 = prop;
                       }
                       if (null != tmp6) {
                         let flag2 = false;
                         try {
                           items = [];
                           try {
-                            const call = tmp8.call;
+                            const call = tmp9.call;
                             if (typeof call === "unknown") {
-                              let iter = tmp8();
+                              let iter = tmp9();
                             } else {
                               iter = call(items);
                             }
                             const iter3 = iter.next();
                             const done = iter3.done;
-                            let tmp10 = done;
+                            let tmp11 = done;
                             if (!done) {
                               items.push(iter4.value);
                               if (!arg1) {
                                 const iter5 = iter2.next();
                                 const done2 = iter5.done;
-                                tmp10 = done2;
+                                tmp11 = done2;
                                 while (!done2) {
-                                  let tmp15 = iter5;
                                   let arr = items.push(iter6.value);
                                   if (!arg1) {
                                     continue;
@@ -9207,11 +8962,11 @@ const items10 = [
                               }
                             }
                             try {
-                              let tmp18 = !tmp10;
-                              if (!tmp10) {
-                                tmp18 = null != iter2.return;
+                              let tmp19 = !tmp11;
+                              if (!tmp11) {
+                                tmp19 = null != iter2.return;
                               }
-                              if (tmp18) {
+                              if (tmp19) {
                                 iter2.return();
                               }
                               if (flag2) {
@@ -9219,51 +8974,51 @@ const items10 = [
                               } else {
                                 return items;
                               }
-                            } catch (tmp24) {
+                            } catch (tmp25) {
                               if (tmp2) {
                                 throw tmp;
                               } else {
-                                throw tmp24;
+                                throw tmp25;
                               }
                             }
                           } catch (tmp5) {
                             flag2 = true;
                           }
-                        } catch (tmp27) {
+                        } catch (tmp28) {
                           try {
-                            let tmp29 = !tmp3;
+                            let tmp30 = !tmp3;
                             if (!tmp3) {
-                              tmp29 = tmp4 != obj.return;
+                              tmp30 = tmp4 != obj.return;
                             }
-                            if (tmp29) {
+                            if (tmp30) {
                               obj.return();
                             }
                             if (tmp2) {
                               throw tmp;
                             } else {
-                              throw tmp27;
+                              throw tmp28;
                             }
-                          } catch (tmp35) {
+                          } catch (tmp36) {
                             if (tmp2) {
                               throw tmp;
                             } else {
-                              throw tmp35;
+                              throw tmp36;
                             }
                           }
                         }
                       }
-                    })(items, 2);
+                    })(item, 2);
                   }
                   if (!tmp) {
-                    tmp = closure_1_23(items, 2);
+                    tmp = Pe(item, 2);
                   }
                   if (tmp) {
                     [tmp7, tmp8] = tmp;
-                    let previousBeaconData = self.previousBeaconData;
+                    previousBeaconData = self.previousBeaconData;
                     if (previousBeaconData) {
                       let eventRequiresKeyResult = tmp8 !== obj.previousBeaconData[tmp7];
                       if (!eventRequiresKeyResult) {
-                        eventRequiresKeyResult = closure_1_90.indexOf(tmp7) > -1;
+                        eventRequiresKeyResult = closure_90.indexOf(tmp7) > -1;
                       }
                       if (!eventRequiresKeyResult) {
                         eventRequiresKeyResult = obj.objectHasChanged(closure_3, tmp7, tmp8, obj.previousBeaconData[tmp7]);
@@ -9284,15 +9039,15 @@ const items10 = [
                   }
                 });
               }
-              return obj;
+              return previousBeaconData;
             }
           }
         }
       }
-      obj = {};
-      ue(obj, view_id);
+      previousBeaconData = {};
+      ue(previousBeaconData, view_id);
       if (view_id) {
-        self.previousBeaconData = obj;
+        self.previousBeaconData = previousBeaconData;
       }
       if (view_id) {
         view_id = "viewend" === arr;
@@ -9304,7 +9059,7 @@ const items10 = [
   },
   {
     key: "objectHasChanged",
-    value(arg0, arr) {
+    value(arg0, arr, arg2, arg3) {
       let tmp = !arg0;
       if (arg0) {
         tmp = 0 !== arr.indexOf("request_");
@@ -9352,7 +9107,6 @@ const items10 = [
 N(fn18, items10);
 const fn19 = function r(on) {
   const self = this;
-  closure_0 = on;
   if (typeof Symbol !== "undefined") {
     const _Symbol3 = Symbol;
     if (tmp[Symbol.hasInstance]) {
@@ -9360,16 +9114,16 @@ const fn19 = function r(on) {
       let tmp2 = tmp[Symbol.hasInstance](self);
     }
     if (tmp2) {
-      c1 = 0;
-      c2 = 0;
-      c3 = 0;
-      c4 = 0;
-      c5 = 0;
-      c6 = 0;
-      c7 = 0;
+      closure_1 = 0;
+      closure_2 = 0;
+      closure_3 = 0;
+      let view_request_count = 0;
+      closure_5 = 0;
+      let view_request_failed_count = 0;
+      let view_request_canceled_count = 0;
       on.on("requestcompleted", (arg0, arg1) => {
         ({ request_start, request_response_start, request_response_end, request_bytes_loaded } = arg1);
-        closure_4 = closure_4 + 1;
+        view_request_count = view_request_count + 1;
         if (request_response_start) {
           let num3 = 0;
           if (null != request_start) {
@@ -9405,7 +9159,7 @@ const fn19 = function r(on) {
               }
               on.data.view_min_request_throughput = Math.min(num5, result);
               on.data.view_average_request_throughput = closure_2 / closure_3 * 8000;
-              on.data.view_request_count = closure_4;
+              on.data.view_request_count = view_request_count;
               if (tmp2 > 0) {
                 closure_1 = closure_1 + tmp2;
                 let num6 = tmp14.data.view_max_request_latency;
@@ -9420,16 +9174,16 @@ const fn19 = function r(on) {
         }
       });
       on.on("requestfailed", (arg0, arg1) => {
-        closure_4 = closure_4 + 1;
-        closure_6 = closure_6 + 1;
-        on.data.view_request_count = closure_4;
-        on.data.view_request_failed_count = closure_6;
+        view_request_count = view_request_count + 1;
+        view_request_failed_count = view_request_failed_count + 1;
+        on.data.view_request_count = view_request_count;
+        on.data.view_request_failed_count = view_request_failed_count;
       });
       on.on("requestcanceled", (arg0, arg1) => {
-        closure_4 = closure_4 + 1;
-        closure_7 = closure_7 + 1;
-        on.data.view_request_count = closure_4;
-        on.data.view_request_canceled_count = closure_7;
+        view_request_count = view_request_count + 1;
+        view_request_canceled_count = view_request_canceled_count + 1;
+        on.data.view_request_count = view_request_count;
+        on.data.view_request_canceled_count = view_request_canceled_count;
       });
     } else {
       const _TypeError = TypeError;
@@ -9447,9 +9201,7 @@ const fn19 = function r(on) {
   tmp2 = U(self, tmp);
 };
 const fn20 = function r(on) {
-  let self = this;
-  closure_0 = on;
-  self = this;
+  const self = this;
   if (typeof Symbol !== "undefined") {
     const _Symbol3 = Symbol;
     if (tmp[Symbol.hasInstance]) {
@@ -9465,7 +9217,7 @@ const fn20 = function r(on) {
       }
       on.on("before*", (type, viewer_time) => {
         viewer_time = viewer_time.viewer_time;
-        const nowResult = closure_1_27.now();
+        const nowResult = obj3.now();
         const _lastEventTime = self._lastEventTime;
         self._lastEventTime = nowResult;
         if (_lastEventTime) {
@@ -9473,27 +9225,25 @@ const fn20 = function r(on) {
             let _Object = Object;
             const keys = Object.keys(on.data);
             const log = on.mux.log;
-            const reduced = keys.reduce((arg0, arr) => {
+            const reduced = keys.reduce((acc, arr) => {
               if (0 !== arr.indexOf("video_")) {
-                return arg0;
+                return acc;
               } else {
                 let definePropertyResult = globalThis;
                 let obj = {};
                 if (arr in obj) {
                   const _Object = definePropertyResult.Object;
-                  obj = { value: null, enumerable: true, configurable: true, writable: true };
-                  obj[0] = tmp3;
+                  obj = { value: tmp3, enumerable: true, configurable: true, writable: true };
                   definePropertyResult = _Object.defineProperty(obj, arr, obj);
                 } else {
                   obj[arr] = tmp3;
                 }
-                const merged = Object.assign(arg0, obj);
+                const merged = Object.assign(acc, obj);
               }
             }, {});
             log.info("Received event after at least an hour inactivity, creating a new view");
             const _Object2 = Object;
-            let obj = { viewer_time: null };
-            obj[0] = viewer_time;
+            let obj = { viewer_time };
             on._resetView(Object.assign(obj, reduced));
             on.playbackHeartbeat._playheadShouldBeProgressing = on.playbackHeartbeat._playheadShouldBeProgressing;
             let _playheadShouldBeProgressing = on.playbackHeartbeat._playheadShouldBeProgressing;
@@ -9504,12 +9254,10 @@ const fn20 = function r(on) {
               _playheadShouldBeProgressing = "adbreakstart" !== type.type;
             }
             if (_playheadShouldBeProgressing) {
-              obj = { viewer_time: null };
-              obj[0] = viewer_time;
+              obj = { viewer_time };
               obj3.emit("play", obj);
               if ("playing" !== type.type) {
-                obj = { viewer_time: null };
-                obj[0] = viewer_time;
+                obj = { viewer_time };
                 obj3.emit("playing", obj);
               }
             }
@@ -9533,7 +9281,6 @@ const fn20 = function r(on) {
 };
 const fn21 = function r(on) {
   const self = this;
-  closure_0 = on;
   if (typeof Symbol !== "undefined") {
     const _Symbol3 = Symbol;
     if (tmp[Symbol.hasInstance]) {
@@ -9544,15 +9291,15 @@ const fn21 = function r(on) {
       function t(arg0) {
 
       }
-      c2 = null;
-      c3 = null;
-      c4 = null;
-      c5 = 0;
+      closure_2 = null;
+      let video_cdn = null;
+      let prop = null;
+      let viewer_time = 0;
       on.on("viewinit", () => {
-        c2 = null;
-        c3 = null;
-        c4 = null;
-        c5 = 0;
+        closure_2 = null;
+        video_cdn = null;
+        prop = null;
+        viewer_time = 0;
       });
       on.on("beforecdnchange", (arg0, video_cdn) => {
         video_cdn = undefined;
@@ -9590,58 +9337,58 @@ const fn21 = function r(on) {
         }
       });
       on.on("requestcompleted", (arg0, request_type) => {
-        if (typeof t !== "function") {
-          HermesBuiltin.throwTypeError();
-        }
-        if (null != request_type) {
-          if (request_type.request_type) {
-            if ("media" === request_type.request_type) {
-              const request_response_headers = request_type.request_response_headers;
-              if (null !== request_response_headers) {
-                if (undefined !== request_response_headers) {
-                  if (request_response_headers["x-cdn"]) {
-                    let prop = request_type.request_response_headers["x-cdn"];
-                  }
-                  if (null != request_type) {
-                    if (request_type.request_start) {
-                      let viewer_time = request_type.request_start;
+        if (typeof t === "function") {
+          if (null != request_type) {
+            if (request_type.request_type) {
+              if ("media" === request_type.request_type) {
+                const request_response_headers = request_type.request_response_headers;
+                if (null !== request_response_headers) {
+                  if (undefined !== request_response_headers) {
+                    if (request_response_headers["x-cdn"]) {
+                      prop = request_type.request_response_headers["x-cdn"];
                     }
-                    if (null != prop) {
-                      let formatted;
-                      if (null != prop) {
-                        formatted = prop.toLowerCase();
+                    if (null != request_type) {
+                      if (request_type.request_start) {
+                        viewer_time = request_type.request_start;
                       }
-                      let formatted1;
                       if (null != prop) {
-                        formatted1 = str3.toLowerCase();
-                      }
-                      if (formatted !== formatted1) {
-                        if (viewer_time <= viewer_time) {
-                          const obj = { video_cdn: null };
-                          obj[0] = prop;
-                          on.emit("cdnchange", obj);
+                        let formatted;
+                        if (null != prop) {
+                          formatted = prop.toLowerCase();
+                        }
+                        let formatted1;
+                        if (null != prop) {
+                          formatted1 = str3.toLowerCase();
+                        }
+                        if (formatted !== formatted1) {
+                          if (viewer_time <= viewer_time) {
+                            const obj = { video_cdn: prop };
+                            on.emit("cdnchange", obj);
+                          }
                         }
                       }
                     }
-                  }
-                  if (null != request_type) {
-                    if (request_type.viewer_time) {
-                      viewer_time = request_type.viewer_time;
+                    if (null != request_type) {
+                      if (request_type.viewer_time) {
+                        viewer_time = request_type.viewer_time;
+                      }
                     }
+                    const _Date = Date;
+                    viewer_time = Date.now();
                   }
-                  const _Date = Date;
-                  viewer_time = Date.now();
                 }
               }
             }
           }
-        }
-        prop = null;
-        if (null != request_type) {
           prop = null;
-          if (request_type.video_cdn) {
-            prop = request_type.video_cdn;
+          if (null != request_type) {
+            prop = null;
+            if (request_type.video_cdn) {
+              prop = request_type.video_cdn;
+            }
           }
+        } else {
+          throw new TypeError("Trying to call a non-function");
         }
       });
     } else {
@@ -9660,9 +9407,7 @@ const fn21 = function r(on) {
   tmp2 = U(self, tmp);
 };
 const fn22 = function r(on) {
-  let self = this;
-  closure_0 = on;
-  self = this;
+  const self = this;
   if (typeof Symbol !== "undefined") {
     const _Symbol3 = Symbol;
     if (tmp[Symbol.hasInstance]) {
@@ -9746,17 +9491,18 @@ class t {
         tmp4 = tmp3[Symbol.hasInstance](self);
       }
       if (tmp4) {
-        tmp9 = closure_0;
-        call = closure_0.call;
+        tmp9 = f98876;
+        call = f98876.call;
         obj = typeof call === "unknown" ? tmp9() : call(self);
         closure_0 = obj;
         tmp10 = undefined === obj;
         if (tmp10) {
           _ReferenceError47 = ReferenceError;
-          referenceError = new.target;
+          tmp300 = new.target;
           str88 = "this hasn't been initialised - super() hasn't been called";
-          referenceError = new.target;
+          tmp301 = new.target;
           referenceError = new ReferenceError("this hasn't been initialised - super() hasn't been called");
+          tmp303 = referenceError;
           throw referenceError;
         } else {
           str2 = "pageLoadEndTime";
@@ -9768,11 +9514,12 @@ class t {
           }
           if (tmp10) {
             _ReferenceError46 = ReferenceError;
-            referenceError = new.target;
+            tmp296 = new.target;
             str87 = "this hasn't been initialised - super() hasn't been called";
-            referenceError = new.target;
-            referenceError = new ReferenceError("this hasn't been initialised - super() hasn't been called");
-            throw referenceError;
+            tmp297 = new.target;
+            referenceError1 = new ReferenceError("this hasn't been initialised - super() hasn't been called");
+            tmp299 = referenceError1;
+            throw referenceError1;
           } else {
             str3 = "pageLoadInitTime";
             if ("pageLoadInitTime" in obj) {
@@ -9783,11 +9530,12 @@ class t {
             }
             if (tmp10) {
               _ReferenceError45 = ReferenceError;
-              referenceError = new.target;
+              tmp292 = new.target;
               str86 = "this hasn't been initialised - super() hasn't been called";
-              referenceError = new.target;
-              referenceError = new ReferenceError("this hasn't been initialised - super() hasn't been called");
-              throw referenceError;
+              tmp293 = new.target;
+              referenceError2 = new ReferenceError("this hasn't been initialised - super() hasn't been called");
+              tmp295 = referenceError2;
+              throw referenceError2;
             } else {
               str4 = "_destroyed";
               if ("_destroyed" in obj) {
@@ -9798,11 +9546,12 @@ class t {
               }
               if (tmp10) {
                 _ReferenceError44 = ReferenceError;
-                referenceError = new.target;
+                tmp288 = new.target;
                 str85 = "this hasn't been initialised - super() hasn't been called";
-                referenceError = new.target;
-                referenceError = new ReferenceError("this hasn't been initialised - super() hasn't been called");
-                throw referenceError;
+                tmp289 = new.target;
+                referenceError3 = new ReferenceError("this hasn't been initialised - super() hasn't been called");
+                tmp291 = referenceError3;
+                throw referenceError3;
               } else {
                 str5 = "_heartBeatTimeout";
                 if ("_heartBeatTimeout" in obj) {
@@ -9813,11 +9562,12 @@ class t {
                 }
                 if (tmp10) {
                   _ReferenceError43 = ReferenceError;
-                  referenceError = new.target;
+                  tmp284 = new.target;
                   str84 = "this hasn't been initialised - super() hasn't been called";
-                  referenceError = new.target;
-                  referenceError = new ReferenceError("this hasn't been initialised - super() hasn't been called");
-                  throw referenceError;
+                  tmp285 = new.target;
+                  referenceError4 = new ReferenceError("this hasn't been initialised - super() hasn't been called");
+                  tmp287 = referenceError4;
+                  throw referenceError4;
                 } else {
                   str6 = "adTracker";
                   if ("adTracker" in obj) {
@@ -9828,11 +9578,12 @@ class t {
                   }
                   if (tmp10) {
                     _ReferenceError42 = ReferenceError;
-                    referenceError = new.target;
+                    tmp280 = new.target;
                     str83 = "this hasn't been initialised - super() hasn't been called";
-                    referenceError = new.target;
-                    referenceError = new ReferenceError("this hasn't been initialised - super() hasn't been called");
-                    throw referenceError;
+                    tmp281 = new.target;
+                    referenceError5 = new ReferenceError("this hasn't been initialised - super() hasn't been called");
+                    tmp283 = referenceError5;
+                    throw referenceError5;
                   } else {
                     str7 = "dashjs";
                     if ("dashjs" in obj) {
@@ -9843,11 +9594,12 @@ class t {
                     }
                     if (tmp10) {
                       _ReferenceError41 = ReferenceError;
-                      referenceError = new.target;
+                      tmp276 = new.target;
                       str82 = "this hasn't been initialised - super() hasn't been called";
-                      referenceError = new.target;
-                      referenceError = new ReferenceError("this hasn't been initialised - super() hasn't been called");
-                      throw referenceError;
+                      tmp277 = new.target;
+                      referenceError6 = new ReferenceError("this hasn't been initialised - super() hasn't been called");
+                      tmp279 = referenceError6;
+                      throw referenceError6;
                     } else {
                       str8 = "data";
                       if ("data" in obj) {
@@ -9858,11 +9610,12 @@ class t {
                       }
                       if (tmp10) {
                         _ReferenceError40 = ReferenceError;
-                        referenceError = new.target;
+                        tmp272 = new.target;
                         str81 = "this hasn't been initialised - super() hasn't been called";
-                        referenceError = new.target;
-                        referenceError = new ReferenceError("this hasn't been initialised - super() hasn't been called");
-                        throw referenceError;
+                        tmp273 = new.target;
+                        referenceError7 = new ReferenceError("this hasn't been initialised - super() hasn't been called");
+                        tmp275 = referenceError7;
+                        throw referenceError7;
                       } else {
                         str9 = "disablePlayheadRebufferTracking";
                         if ("disablePlayheadRebufferTracking" in obj) {
@@ -9873,11 +9626,12 @@ class t {
                         }
                         if (tmp10) {
                           _ReferenceError39 = ReferenceError;
-                          referenceError = new.target;
+                          tmp268 = new.target;
                           str80 = "this hasn't been initialised - super() hasn't been called";
-                          referenceError = new.target;
-                          referenceError = new ReferenceError("this hasn't been initialised - super() hasn't been called");
-                          throw referenceError;
+                          tmp269 = new.target;
+                          referenceError8 = new ReferenceError("this hasn't been initialised - super() hasn't been called");
+                          tmp271 = referenceError8;
+                          throw referenceError8;
                         } else {
                           str10 = "disableRebufferTracking";
                           if ("disableRebufferTracking" in obj) {
@@ -9888,11 +9642,12 @@ class t {
                           }
                           if (tmp10) {
                             _ReferenceError38 = ReferenceError;
-                            referenceError = new.target;
+                            tmp264 = new.target;
                             str79 = "this hasn't been initialised - super() hasn't been called";
-                            referenceError = new.target;
-                            referenceError = new ReferenceError("this hasn't been initialised - super() hasn't been called");
-                            throw referenceError;
+                            tmp265 = new.target;
+                            referenceError9 = new ReferenceError("this hasn't been initialised - super() hasn't been called");
+                            tmp267 = referenceError9;
+                            throw referenceError9;
                           } else {
                             str11 = "errorTracker";
                             if ("errorTracker" in obj) {
@@ -9903,11 +9658,12 @@ class t {
                             }
                             if (tmp10) {
                               _ReferenceError37 = ReferenceError;
-                              referenceError = new.target;
+                              tmp260 = new.target;
                               str78 = "this hasn't been initialised - super() hasn't been called";
-                              referenceError = new.target;
-                              referenceError = new ReferenceError("this hasn't been initialised - super() hasn't been called");
-                              throw referenceError;
+                              tmp261 = new.target;
+                              referenceError10 = new ReferenceError("this hasn't been initialised - super() hasn't been called");
+                              tmp263 = referenceError10;
+                              throw referenceError10;
                             } else {
                               str12 = "errorTranslator";
                               if ("errorTranslator" in obj) {
@@ -9918,11 +9674,12 @@ class t {
                               }
                               if (tmp10) {
                                 _ReferenceError36 = ReferenceError;
-                                referenceError = new.target;
+                                tmp256 = new.target;
                                 str77 = "this hasn't been initialised - super() hasn't been called";
-                                referenceError = new.target;
-                                referenceError = new ReferenceError("this hasn't been initialised - super() hasn't been called");
-                                throw referenceError;
+                                tmp257 = new.target;
+                                referenceError11 = new ReferenceError("this hasn't been initialised - super() hasn't been called");
+                                tmp259 = referenceError11;
+                                throw referenceError11;
                               } else {
                                 str13 = "emitTranslator";
                                 if ("emitTranslator" in obj) {
@@ -9933,11 +9690,12 @@ class t {
                                 }
                                 if (tmp10) {
                                   _ReferenceError35 = ReferenceError;
-                                  referenceError = new.target;
+                                  tmp252 = new.target;
                                   str76 = "this hasn't been initialised - super() hasn't been called";
-                                  referenceError = new.target;
-                                  referenceError = new ReferenceError("this hasn't been initialised - super() hasn't been called");
-                                  throw referenceError;
+                                  tmp253 = new.target;
+                                  referenceError12 = new ReferenceError("this hasn't been initialised - super() hasn't been called");
+                                  tmp255 = referenceError12;
+                                  throw referenceError12;
                                 } else {
                                   str14 = "getAdData";
                                   if ("getAdData" in obj) {
@@ -9948,11 +9706,12 @@ class t {
                                   }
                                   if (tmp10) {
                                     _ReferenceError34 = ReferenceError;
-                                    referenceError = new.target;
+                                    tmp248 = new.target;
                                     str75 = "this hasn't been initialised - super() hasn't been called";
-                                    referenceError = new.target;
-                                    referenceError = new ReferenceError("this hasn't been initialised - super() hasn't been called");
-                                    throw referenceError;
+                                    tmp249 = new.target;
+                                    referenceError13 = new ReferenceError("this hasn't been initialised - super() hasn't been called");
+                                    tmp251 = referenceError13;
+                                    throw referenceError13;
                                   } else {
                                     str15 = "getPlayheadTime";
                                     if ("getPlayheadTime" in obj) {
@@ -9963,11 +9722,12 @@ class t {
                                     }
                                     if (tmp10) {
                                       _ReferenceError33 = ReferenceError;
-                                      referenceError = new.target;
+                                      tmp244 = new.target;
                                       str74 = "this hasn't been initialised - super() hasn't been called";
-                                      referenceError = new.target;
-                                      referenceError = new ReferenceError("this hasn't been initialised - super() hasn't been called");
-                                      throw referenceError;
+                                      tmp245 = new.target;
+                                      referenceError14 = new ReferenceError("this hasn't been initialised - super() hasn't been called");
+                                      tmp247 = referenceError14;
+                                      throw referenceError14;
                                     } else {
                                       str16 = "getStateData";
                                       if ("getStateData" in obj) {
@@ -9978,11 +9738,12 @@ class t {
                                       }
                                       if (tmp10) {
                                         _ReferenceError32 = ReferenceError;
-                                        referenceError = new.target;
+                                        tmp240 = new.target;
                                         str73 = "this hasn't been initialised - super() hasn't been called";
-                                        referenceError = new.target;
-                                        referenceError = new ReferenceError("this hasn't been initialised - super() hasn't been called");
-                                        throw referenceError;
+                                        tmp241 = new.target;
+                                        referenceError15 = new ReferenceError("this hasn't been initialised - super() hasn't been called");
+                                        tmp243 = referenceError15;
+                                        throw referenceError15;
                                       } else {
                                         str17 = "stateDataTranslator";
                                         if ("stateDataTranslator" in obj) {
@@ -9993,11 +9754,12 @@ class t {
                                         }
                                         if (tmp10) {
                                           _ReferenceError31 = ReferenceError;
-                                          referenceError = new.target;
+                                          tmp236 = new.target;
                                           str72 = "this hasn't been initialised - super() hasn't been called";
-                                          referenceError = new.target;
-                                          referenceError = new ReferenceError("this hasn't been initialised - super() hasn't been called");
-                                          throw referenceError;
+                                          tmp237 = new.target;
+                                          referenceError16 = new ReferenceError("this hasn't been initialised - super() hasn't been called");
+                                          tmp239 = referenceError16;
+                                          throw referenceError16;
                                         } else {
                                           str18 = "hlsjs";
                                           if ("hlsjs" in obj) {
@@ -10008,11 +9770,12 @@ class t {
                                           }
                                           if (tmp10) {
                                             _ReferenceError30 = ReferenceError;
-                                            referenceError = new.target;
+                                            tmp232 = new.target;
                                             str71 = "this hasn't been initialised - super() hasn't been called";
-                                            referenceError = new.target;
-                                            referenceError = new ReferenceError("this hasn't been initialised - super() hasn't been called");
-                                            throw referenceError;
+                                            tmp233 = new.target;
+                                            referenceError17 = new ReferenceError("this hasn't been initialised - super() hasn't been called");
+                                            tmp235 = referenceError17;
+                                            throw referenceError17;
                                           } else {
                                             str19 = "id";
                                             if ("id" in obj) {
@@ -10023,11 +9786,12 @@ class t {
                                             }
                                             if (tmp10) {
                                               _ReferenceError29 = ReferenceError;
-                                              referenceError = new.target;
+                                              tmp228 = new.target;
                                               str70 = "this hasn't been initialised - super() hasn't been called";
-                                              referenceError = new.target;
-                                              referenceError = new ReferenceError("this hasn't been initialised - super() hasn't been called");
-                                              throw referenceError;
+                                              tmp229 = new.target;
+                                              referenceError18 = new ReferenceError("this hasn't been initialised - super() hasn't been called");
+                                              tmp231 = referenceError18;
+                                              throw referenceError18;
                                             } else {
                                               str20 = "longResumeTracker";
                                               if ("longResumeTracker" in obj) {
@@ -10038,11 +9802,12 @@ class t {
                                               }
                                               if (tmp10) {
                                                 _ReferenceError28 = ReferenceError;
-                                                referenceError = new.target;
+                                                tmp224 = new.target;
                                                 str69 = "this hasn't been initialised - super() hasn't been called";
-                                                referenceError = new.target;
-                                                referenceError = new ReferenceError("this hasn't been initialised - super() hasn't been called");
-                                                throw referenceError;
+                                                tmp225 = new.target;
+                                                referenceError19 = new ReferenceError("this hasn't been initialised - super() hasn't been called");
+                                                tmp227 = referenceError19;
+                                                throw referenceError19;
                                               } else {
                                                 str21 = "minimumRebufferDuration";
                                                 if ("minimumRebufferDuration" in obj) {
@@ -10053,11 +9818,12 @@ class t {
                                                 }
                                                 if (tmp10) {
                                                   _ReferenceError27 = ReferenceError;
-                                                  referenceError = new.target;
+                                                  tmp220 = new.target;
                                                   str68 = "this hasn't been initialised - super() hasn't been called";
-                                                  referenceError = new.target;
-                                                  referenceError = new ReferenceError("this hasn't been initialised - super() hasn't been called");
-                                                  throw referenceError;
+                                                  tmp221 = new.target;
+                                                  referenceError20 = new ReferenceError("this hasn't been initialised - super() hasn't been called");
+                                                  tmp223 = referenceError20;
+                                                  throw referenceError20;
                                                 } else {
                                                   str22 = "mux";
                                                   if ("mux" in obj) {
@@ -10068,11 +9834,12 @@ class t {
                                                   }
                                                   if (tmp10) {
                                                     _ReferenceError26 = ReferenceError;
-                                                    referenceError = new.target;
+                                                    tmp216 = new.target;
                                                     str67 = "this hasn't been initialised - super() hasn't been called";
-                                                    referenceError = new.target;
-                                                    referenceError = new ReferenceError("this hasn't been initialised - super() hasn't been called");
-                                                    throw referenceError;
+                                                    tmp217 = new.target;
+                                                    referenceError21 = new ReferenceError("this hasn't been initialised - super() hasn't been called");
+                                                    tmp219 = referenceError21;
+                                                    throw referenceError21;
                                                   } else {
                                                     str23 = "playbackEventDispatcher";
                                                     if ("playbackEventDispatcher" in obj) {
@@ -10083,11 +9850,12 @@ class t {
                                                     }
                                                     if (tmp10) {
                                                       _ReferenceError25 = ReferenceError;
-                                                      referenceError = new.target;
+                                                      tmp212 = new.target;
                                                       str66 = "this hasn't been initialised - super() hasn't been called";
-                                                      referenceError = new.target;
-                                                      referenceError = new ReferenceError("this hasn't been initialised - super() hasn't been called");
-                                                      throw referenceError;
+                                                      tmp213 = new.target;
+                                                      referenceError22 = new ReferenceError("this hasn't been initialised - super() hasn't been called");
+                                                      tmp215 = referenceError22;
+                                                      throw referenceError22;
                                                     } else {
                                                       str24 = "playbackHeartbeat";
                                                       if ("playbackHeartbeat" in obj) {
@@ -10098,11 +9866,12 @@ class t {
                                                       }
                                                       if (tmp10) {
                                                         _ReferenceError24 = ReferenceError;
-                                                        referenceError = new.target;
+                                                        tmp208 = new.target;
                                                         str65 = "this hasn't been initialised - super() hasn't been called";
-                                                        referenceError = new.target;
-                                                        referenceError = new ReferenceError("this hasn't been initialised - super() hasn't been called");
-                                                        throw referenceError;
+                                                        tmp209 = new.target;
+                                                        referenceError23 = new ReferenceError("this hasn't been initialised - super() hasn't been called");
+                                                        tmp211 = referenceError23;
+                                                        throw referenceError23;
                                                       } else {
                                                         str25 = "playbackHeartbeatTime";
                                                         if ("playbackHeartbeatTime" in obj) {
@@ -10113,11 +9882,12 @@ class t {
                                                         }
                                                         if (tmp10) {
                                                           _ReferenceError23 = ReferenceError;
-                                                          referenceError = new.target;
+                                                          tmp204 = new.target;
                                                           str64 = "this hasn't been initialised - super() hasn't been called";
-                                                          referenceError = new.target;
-                                                          referenceError = new ReferenceError("this hasn't been initialised - super() hasn't been called");
-                                                          throw referenceError;
+                                                          tmp205 = new.target;
+                                                          referenceError24 = new ReferenceError("this hasn't been initialised - super() hasn't been called");
+                                                          tmp207 = referenceError24;
+                                                          throw referenceError24;
                                                         } else {
                                                           str26 = "playheadTime";
                                                           if ("playheadTime" in obj) {
@@ -10128,11 +9898,12 @@ class t {
                                                           }
                                                           if (tmp10) {
                                                             _ReferenceError22 = ReferenceError;
-                                                            referenceError = new.target;
+                                                            tmp200 = new.target;
                                                             str63 = "this hasn't been initialised - super() hasn't been called";
-                                                            referenceError = new.target;
-                                                            referenceError = new ReferenceError("this hasn't been initialised - super() hasn't been called");
-                                                            throw referenceError;
+                                                            tmp201 = new.target;
+                                                            referenceError25 = new ReferenceError("this hasn't been initialised - super() hasn't been called");
+                                                            tmp203 = referenceError25;
+                                                            throw referenceError25;
                                                           } else {
                                                             str27 = "seekingTracker";
                                                             if ("seekingTracker" in obj) {
@@ -10143,11 +9914,12 @@ class t {
                                                             }
                                                             if (tmp10) {
                                                               _ReferenceError21 = ReferenceError;
-                                                              referenceError = new.target;
+                                                              tmp196 = new.target;
                                                               str62 = "this hasn't been initialised - super() hasn't been called";
-                                                              referenceError = new.target;
-                                                              referenceError = new ReferenceError("this hasn't been initialised - super() hasn't been called");
-                                                              throw referenceError;
+                                                              tmp197 = new.target;
+                                                              referenceError26 = new ReferenceError("this hasn't been initialised - super() hasn't been called");
+                                                              tmp199 = referenceError26;
+                                                              throw referenceError26;
                                                             } else {
                                                               str28 = "sustainedRebufferThreshold";
                                                               if ("sustainedRebufferThreshold" in obj) {
@@ -10158,11 +9930,12 @@ class t {
                                                               }
                                                               if (tmp10) {
                                                                 _ReferenceError20 = ReferenceError;
-                                                                referenceError = new.target;
+                                                                tmp192 = new.target;
                                                                 str61 = "this hasn't been initialised - super() hasn't been called";
-                                                                referenceError = new.target;
-                                                                referenceError = new ReferenceError("this hasn't been initialised - super() hasn't been called");
-                                                                throw referenceError;
+                                                                tmp193 = new.target;
+                                                                referenceError27 = new ReferenceError("this hasn't been initialised - super() hasn't been called");
+                                                                tmp195 = referenceError27;
+                                                                throw referenceError27;
                                                               } else {
                                                                 str29 = "watchTimeTracker";
                                                                 if ("watchTimeTracker" in obj) {
@@ -10173,11 +9946,12 @@ class t {
                                                                 }
                                                                 if (tmp10) {
                                                                   _ReferenceError19 = ReferenceError;
-                                                                  referenceError = new.target;
+                                                                  tmp188 = new.target;
                                                                   str60 = "this hasn't been initialised - super() hasn't been called";
-                                                                  referenceError = new.target;
-                                                                  referenceError = new ReferenceError("this hasn't been initialised - super() hasn't been called");
-                                                                  throw referenceError;
+                                                                  tmp189 = new.target;
+                                                                  referenceError28 = new ReferenceError("this hasn't been initialised - super() hasn't been called");
+                                                                  tmp191 = referenceError28;
+                                                                  throw referenceError28;
                                                                 } else {
                                                                   str30 = "currentFragmentPDT";
                                                                   if ("currentFragmentPDT" in obj) {
@@ -10188,11 +9962,12 @@ class t {
                                                                   }
                                                                   if (tmp10) {
                                                                     _ReferenceError18 = ReferenceError;
-                                                                    referenceError = new.target;
+                                                                    tmp184 = new.target;
                                                                     str59 = "this hasn't been initialised - super() hasn't been called";
-                                                                    referenceError = new.target;
-                                                                    referenceError = new ReferenceError("this hasn't been initialised - super() hasn't been called");
-                                                                    throw referenceError;
+                                                                    tmp185 = new.target;
+                                                                    referenceError29 = new ReferenceError("this hasn't been initialised - super() hasn't been called");
+                                                                    tmp187 = referenceError29;
+                                                                    throw referenceError29;
                                                                   } else {
                                                                     str31 = "currentFragmentStart";
                                                                     if ("currentFragmentStart" in obj) {
@@ -10204,14 +9979,14 @@ class t {
                                                                     tmp41 = global;
                                                                     tmp42 = require;
                                                                     tmp43 = importDefault;
-                                                                    tmp44 = closure_47;
-                                                                    obj.pageLoadInitTime = closure_47.navigationStart();
-                                                                    obj.pageLoadEndTime = closure_47.domContentLoadedEventEnd();
+                                                                    tmp44 = closure_2_47;
+                                                                    obj.pageLoadInitTime = closure_2_47.navigationStart();
+                                                                    obj.pageLoadEndTime = closure_2_47.domContentLoadedEventEnd();
                                                                     obj = { debug: false, minimumRebufferDuration: 250, sustainedRebufferThreshold: 1000, playbackHeartbeatTime: 25, beaconDomain: "litix.io", sampleRate: 1, disableCookies: false, respectDoNotTrack: false, disableRebufferTracking: false, disablePlayheadRebufferTracking: false, errorTranslator: null, emitTranslator: null, stateDataTranslator: null };
-                                                                    obj[10] = function errorTranslator(arg0) {
+                                                                    obj.errorTranslator = function errorTranslator(arg0) {
                                                                       return arg0;
                                                                     };
-                                                                    obj[11] = function emitTranslator(arg0, merged) {
+                                                                    obj.emitTranslator = function emitTranslator() {
                                                                       const length = arguments.length;
                                                                       const array = new Array(length);
                                                                       for (let num = 0; num < length; num = num + 1) {
@@ -10219,7 +9994,7 @@ class t {
                                                                       }
                                                                       return array;
                                                                     };
-                                                                    obj[12] = function stateDataTranslator(stateData) {
+                                                                    obj.stateDataTranslator = function stateDataTranslator(stateData) {
                                                                       return stateData;
                                                                     };
                                                                     obj.mux = global;
@@ -10240,7 +10015,7 @@ class t {
                                                                       str33 = "property_key";
                                                                       delete tmp2[tmp];
                                                                     }
-                                                                    closure_38.level = merged.debug ? c34 : c36;
+                                                                    closure_2_38.level = merged.debug ? closure_2_34 : closure_2_36;
                                                                     obj.getPlayheadTime = merged.getPlayheadTime;
                                                                     obj.getStateData = merged.getStateData || (() => ({}));
                                                                     obj.getAdData = merged.getAdData || (() => {
@@ -10253,15 +10028,15 @@ class t {
                                                                       warnResult1 = log2.warn("Disabling rebuffer tracking. This should only be used in specific circumstances as a last resort when your player is known to unreliably track rebuffering.");
                                                                     }
                                                                     ({ disablePlayheadRebufferTracking: obj.disablePlayheadRebufferTracking, errorTranslator: obj.errorTranslator, emitTranslator: obj.emitTranslator, stateDataTranslator: obj.stateDataTranslator } = merged);
-                                                                    tmp50 = r;
+                                                                    tmp50 = closure_2_94;
                                                                     tmp51 = new.target;
-                                                                    tmp52 = r(global, merged.data.env_key, merged);
+                                                                    tmp52 = closure_2_94(global, merged.data.env_key, merged);
                                                                     obj.playbackEventDispatcher = new.target;
                                                                     obj1 = { player_instance_id: null, mux_sample_rate: null, beacon_domain: null };
-                                                                    tmp53 = ee;
-                                                                    obj1[0] = ee();
-                                                                    obj1[1] = merged.sampleRate;
-                                                                    obj1[2] = merged.beaconCollectionDomain || merged.beaconDomain;
+                                                                    tmp53 = closure_2_28;
+                                                                    obj1.player_instance_id = closure_2_28();
+                                                                    obj1.mux_sample_rate = merged.sampleRate;
+                                                                    obj1.beacon_domain = merged.beaconCollectionDomain || merged.beaconDomain;
                                                                     obj.data = obj1;
                                                                     num = 1;
                                                                     obj.data.view_sequence_number = 1;
@@ -10276,11 +10051,12 @@ class t {
                                                                     };
                                                                     if (tmp10) {
                                                                       _ReferenceError17 = ReferenceError;
-                                                                      referenceError = new.target;
+                                                                      tmp180 = new.target;
                                                                       str58 = "this hasn't been initialised - super() hasn't been called";
-                                                                      referenceError = new.target;
-                                                                      referenceError = new ReferenceError("this hasn't been initialised - super() hasn't been called");
-                                                                      throw referenceError;
+                                                                      tmp181 = new.target;
+                                                                      referenceError30 = new ReferenceError("this hasn't been initialised - super() hasn't been called");
+                                                                      tmp183 = referenceError30;
+                                                                      throw referenceError30;
                                                                     } else {
                                                                       closure_1 = tmp54(obj);
                                                                       str35 = "viewinit";
@@ -10306,7 +10082,7 @@ class t {
                                                                           log.warn("The `programchange` event is intended to be used when the content changes mid playback without the video source changing, however the video is not currently playing. If the video source is changing please use the videochange event otherwise you will lose startup time information.");
                                                                         }
                                                                         self._resetView(Object.assign(arg1, { view_program_changed: true }));
-                                                                        callback();
+                                                                        closure_1();
                                                                         self.emit("play");
                                                                         self.emit("playing");
                                                                       });
@@ -10338,17 +10114,17 @@ class t {
                                                                             _window4 = window;
                                                                             flag = false;
                                                                             str89 = "visibilitychange";
-                                                                            referenceError = window.addEventListener("visibilitychange", fn2, false);
-                                                                            fn3 = function g(persisted) {
-                                                                              if (!persisted.persisted) {
+                                                                            listener = window.addEventListener("visibilitychange", fn2, false);
+                                                                            fn3 = function g(event) {
+                                                                              if (!event.persisted) {
                                                                                 obj.destroy();
                                                                               }
                                                                             };
                                                                             g = fn3;
                                                                             _window5 = window;
                                                                             str90 = "pagehide";
-                                                                            referenceError = window.addEventListener("pagehide", fn3, false);
-                                                                            referenceError = obj.on("destroy", () => {
+                                                                            listener1 = window.addEventListener("pagehide", fn3, false);
+                                                                            onResult5 = obj.on("destroy", () => {
                                                                               const removed = window.removeEventListener("visibilitychange", fn2);
                                                                               const removed1 = window.removeEventListener("pagehide", fn3);
                                                                             });
@@ -10356,20 +10132,20 @@ class t {
                                                                         }
                                                                       }
                                                                       str40 = "playerready";
-                                                                      onResult5 = obj.on("playerready", function(arg0, arg1) {
+                                                                      onResult6 = obj.on("playerready", function(arg0, arg1) {
                                                                         const merged = Object.assign(this.data, arg1);
                                                                       });
-                                                                      tmp61 = closure_99;
-                                                                      item = closure_99.forEach((arg0) => {
-                                                                        arg0.on(arg0, function(arg0, arg1) {
+                                                                      tmp61 = closure_2_99;
+                                                                      item = closure_2_99.forEach((item) => {
+                                                                        obj.on(item, function(arg0, arg1) {
                                                                           const self = this;
-                                                                          if (0 !== closure_0.indexOf("ad")) {
+                                                                          if (0 !== item.indexOf("ad")) {
                                                                             self._updateStateData();
                                                                           }
                                                                           const merged = Object.assign(self.data, arg1);
                                                                           self._sanitizeData();
                                                                         });
-                                                                        arg0.on(`after${arg0}`, function() {
+                                                                        obj.on(`after${item}`, function() {
                                                                           const self = this;
                                                                           let viewErrored = "error" !== closure_0;
                                                                           if (!viewErrored) {
@@ -10381,7 +10157,7 @@ class t {
                                                                         });
                                                                       });
                                                                       str41 = "viewend";
-                                                                      onResult6 = obj.on("viewend", (arg0, arg1) => {
+                                                                      onResult7 = obj.on("viewend", (arg0, arg1) => {
                                                                         const merged = Object.assign(obj.data, arg1);
                                                                       });
                                                                       oneResult = obj.one("playerready", function(arg0) {
@@ -10414,178 +10190,194 @@ class t {
                                                                       });
                                                                       if (tmp10) {
                                                                         _ReferenceError16 = ReferenceError;
-                                                                        referenceError = new.target;
+                                                                        tmp176 = new.target;
                                                                         str57 = "this hasn't been initialised - super() hasn't been called";
-                                                                        referenceError = new.target;
-                                                                        referenceError = new ReferenceError("this hasn't been initialised - super() hasn't been called");
-                                                                        throw referenceError;
+                                                                        tmp177 = new.target;
+                                                                        referenceError31 = new ReferenceError("this hasn't been initialised - super() hasn't been called");
+                                                                        tmp179 = referenceError31;
+                                                                        throw referenceError31;
                                                                       } else {
                                                                         tmp66 = new.target;
                                                                         tmp65Result = tmp65(obj);
                                                                         obj.longResumeTracker = new.target;
                                                                         if (tmp10) {
                                                                           _ReferenceError15 = ReferenceError;
-                                                                          referenceError = new.target;
+                                                                          tmp172 = new.target;
                                                                           str56 = "this hasn't been initialised - super() hasn't been called";
-                                                                          referenceError = new.target;
-                                                                          referenceError = new ReferenceError("this hasn't been initialised - super() hasn't been called");
-                                                                          throw referenceError;
+                                                                          tmp173 = new.target;
+                                                                          referenceError32 = new ReferenceError("this hasn't been initialised - super() hasn't been called");
+                                                                          tmp175 = referenceError32;
+                                                                          throw referenceError32;
                                                                         } else {
                                                                           tmp69 = new.target;
                                                                           tmp68Result = tmp68(obj);
                                                                           obj.errorTracker = new.target;
                                                                           if (tmp10) {
                                                                             _ReferenceError14 = ReferenceError;
-                                                                            referenceError = new.target;
+                                                                            tmp168 = new.target;
                                                                             str55 = "this hasn't been initialised - super() hasn't been called";
-                                                                            referenceError = new.target;
-                                                                            referenceError = new ReferenceError("this hasn't been initialised - super() hasn't been called");
-                                                                            throw referenceError;
+                                                                            tmp169 = new.target;
+                                                                            referenceError33 = new ReferenceError("this hasn't been initialised - super() hasn't been called");
+                                                                            tmp171 = referenceError33;
+                                                                            throw referenceError33;
                                                                           } else {
                                                                             tmp72 = new.target;
                                                                             tmp71Result = tmp71(obj);
                                                                             if (tmp10) {
                                                                               _ReferenceError13 = ReferenceError;
-                                                                              referenceError = new.target;
+                                                                              tmp164 = new.target;
                                                                               str54 = "this hasn't been initialised - super() hasn't been called";
-                                                                              referenceError = new.target;
-                                                                              referenceError = new ReferenceError("this hasn't been initialised - super() hasn't been called");
-                                                                              throw referenceError;
+                                                                              tmp165 = new.target;
+                                                                              referenceError34 = new ReferenceError("this hasn't been initialised - super() hasn't been called");
+                                                                              tmp167 = referenceError34;
+                                                                              throw referenceError34;
                                                                             } else {
                                                                               tmp75 = new.target;
                                                                               tmp74Result = tmp74(obj);
                                                                               obj.seekingTracker = new.target;
                                                                               if (tmp10) {
                                                                                 _ReferenceError12 = ReferenceError;
-                                                                                referenceError = new.target;
+                                                                                tmp160 = new.target;
                                                                                 str53 = "this hasn't been initialised - super() hasn't been called";
-                                                                                referenceError = new.target;
-                                                                                referenceError = new ReferenceError("this hasn't been initialised - super() hasn't been called");
-                                                                                throw referenceError;
+                                                                                tmp161 = new.target;
+                                                                                referenceError35 = new ReferenceError("this hasn't been initialised - super() hasn't been called");
+                                                                                tmp163 = referenceError35;
+                                                                                throw referenceError35;
                                                                               } else {
                                                                                 tmp78 = new.target;
                                                                                 tmp77Result = tmp77(obj);
                                                                                 obj.playheadTime = new.target;
                                                                                 if (tmp10) {
                                                                                   _ReferenceError11 = ReferenceError;
-                                                                                  referenceError = new.target;
+                                                                                  tmp156 = new.target;
                                                                                   str52 = "this hasn't been initialised - super() hasn't been called";
-                                                                                  referenceError = new.target;
-                                                                                  referenceError = new ReferenceError("this hasn't been initialised - super() hasn't been called");
-                                                                                  throw referenceError;
+                                                                                  tmp157 = new.target;
+                                                                                  referenceError36 = new ReferenceError("this hasn't been initialised - super() hasn't been called");
+                                                                                  tmp159 = referenceError36;
+                                                                                  throw referenceError36;
                                                                                 } else {
                                                                                   tmp81 = new.target;
                                                                                   tmp80Result = tmp80(obj);
                                                                                   obj.playbackHeartbeat = new.target;
                                                                                   if (tmp10) {
                                                                                     _ReferenceError10 = ReferenceError;
-                                                                                    referenceError = new.target;
+                                                                                    tmp152 = new.target;
                                                                                     str51 = "this hasn't been initialised - super() hasn't been called";
-                                                                                    referenceError = new.target;
-                                                                                    referenceError = new ReferenceError("this hasn't been initialised - super() hasn't been called");
-                                                                                    throw referenceError;
+                                                                                    tmp153 = new.target;
+                                                                                    referenceError37 = new ReferenceError("this hasn't been initialised - super() hasn't been called");
+                                                                                    tmp155 = referenceError37;
+                                                                                    throw referenceError37;
                                                                                   } else {
                                                                                     tmp84 = new.target;
                                                                                     tmp83Result = tmp83(obj);
                                                                                     if (tmp10) {
                                                                                       _ReferenceError9 = ReferenceError;
-                                                                                      referenceError = new.target;
+                                                                                      tmp148 = new.target;
                                                                                       str50 = "this hasn't been initialised - super() hasn't been called";
-                                                                                      referenceError = new.target;
-                                                                                      referenceError = new ReferenceError("this hasn't been initialised - super() hasn't been called");
-                                                                                      throw referenceError;
+                                                                                      tmp149 = new.target;
+                                                                                      referenceError38 = new ReferenceError("this hasn't been initialised - super() hasn't been called");
+                                                                                      tmp151 = referenceError38;
+                                                                                      throw referenceError38;
                                                                                     } else {
                                                                                       tmp87 = new.target;
                                                                                       tmp86Result = tmp86(obj);
                                                                                       obj.watchTimeTracker = new.target;
                                                                                       if (tmp10) {
                                                                                         _ReferenceError8 = ReferenceError;
-                                                                                        referenceError = new.target;
+                                                                                        tmp144 = new.target;
                                                                                         str49 = "this hasn't been initialised - super() hasn't been called";
-                                                                                        referenceError = new.target;
-                                                                                        referenceError = new ReferenceError("this hasn't been initialised - super() hasn't been called");
-                                                                                        throw referenceError;
+                                                                                        tmp145 = new.target;
+                                                                                        referenceError39 = new ReferenceError("this hasn't been initialised - super() hasn't been called");
+                                                                                        tmp147 = referenceError39;
+                                                                                        throw referenceError39;
                                                                                       } else {
                                                                                         tmp90 = new.target;
                                                                                         tmp89Result = tmp89(obj);
                                                                                         if (tmp10) {
                                                                                           _ReferenceError7 = ReferenceError;
-                                                                                          referenceError = new.target;
+                                                                                          tmp140 = new.target;
                                                                                           str48 = "this hasn't been initialised - super() hasn't been called";
-                                                                                          referenceError = new.target;
-                                                                                          referenceError = new ReferenceError("this hasn't been initialised - super() hasn't been called");
-                                                                                          throw referenceError;
+                                                                                          tmp141 = new.target;
+                                                                                          referenceError40 = new ReferenceError("this hasn't been initialised - super() hasn't been called");
+                                                                                          tmp143 = referenceError40;
+                                                                                          throw referenceError40;
                                                                                         } else {
                                                                                           tmp93 = new.target;
                                                                                           tmp92Result = tmp92(obj);
                                                                                           obj.adTracker = new.target;
                                                                                           if (tmp10) {
                                                                                             _ReferenceError6 = ReferenceError;
-                                                                                            referenceError = new.target;
+                                                                                            tmp136 = new.target;
                                                                                             str47 = "this hasn't been initialised - super() hasn't been called";
-                                                                                            referenceError = new.target;
-                                                                                            referenceError = new ReferenceError("this hasn't been initialised - super() hasn't been called");
-                                                                                            throw referenceError;
+                                                                                            tmp137 = new.target;
+                                                                                            referenceError41 = new ReferenceError("this hasn't been initialised - super() hasn't been called");
+                                                                                            tmp139 = referenceError41;
+                                                                                            throw referenceError41;
                                                                                           } else {
                                                                                             tmp96 = new.target;
                                                                                             tmp95Result = tmp95(obj);
                                                                                             if (tmp10) {
                                                                                               _ReferenceError5 = ReferenceError;
-                                                                                              referenceError = new.target;
+                                                                                              tmp132 = new.target;
                                                                                               str46 = "this hasn't been initialised - super() hasn't been called";
-                                                                                              referenceError = new.target;
-                                                                                              referenceError = new ReferenceError("this hasn't been initialised - super() hasn't been called");
-                                                                                              throw referenceError;
+                                                                                              tmp133 = new.target;
+                                                                                              referenceError42 = new ReferenceError("this hasn't been initialised - super() hasn't been called");
+                                                                                              tmp135 = referenceError42;
+                                                                                              throw referenceError42;
                                                                                             } else {
                                                                                               tmp99 = new.target;
-                                                                                              referenceError = tmp98(obj);
+                                                                                              tmp98Result = tmp98(obj);
                                                                                               if (tmp10) {
                                                                                                 _ReferenceError4 = ReferenceError;
-                                                                                                referenceError = new.target;
+                                                                                                tmp128 = new.target;
                                                                                                 str45 = "this hasn't been initialised - super() hasn't been called";
-                                                                                                referenceError = new.target;
-                                                                                                referenceError = new ReferenceError("this hasn't been initialised - super() hasn't been called");
-                                                                                                throw referenceError;
+                                                                                                tmp129 = new.target;
+                                                                                                referenceError43 = new ReferenceError("this hasn't been initialised - super() hasn't been called");
+                                                                                                tmp131 = referenceError43;
+                                                                                                throw referenceError43;
                                                                                               } else {
-                                                                                                referenceError = new.target;
-                                                                                                referenceError = referenceError(obj);
+                                                                                                tmp102 = new.target;
+                                                                                                tmp101Result = tmp101(obj);
                                                                                                 if (tmp10) {
                                                                                                   _ReferenceError3 = ReferenceError;
-                                                                                                  referenceError = new.target;
+                                                                                                  tmp124 = new.target;
                                                                                                   str44 = "this hasn't been initialised - super() hasn't been called";
-                                                                                                  referenceError = new.target;
-                                                                                                  referenceError = new ReferenceError("this hasn't been initialised - super() hasn't been called");
-                                                                                                  throw referenceError;
+                                                                                                  tmp125 = new.target;
+                                                                                                  referenceError44 = new ReferenceError("this hasn't been initialised - super() hasn't been called");
+                                                                                                  tmp127 = referenceError44;
+                                                                                                  throw referenceError44;
                                                                                                 } else {
-                                                                                                  referenceError = new.target;
-                                                                                                  referenceError = referenceError(obj);
+                                                                                                  tmp105 = new.target;
+                                                                                                  tmp104Result = tmp104(obj);
                                                                                                   if (tmp10) {
                                                                                                     _ReferenceError2 = ReferenceError;
-                                                                                                    referenceError = new.target;
+                                                                                                    tmp120 = new.target;
                                                                                                     str43 = "this hasn't been initialised - super() hasn't been called";
-                                                                                                    referenceError = new.target;
-                                                                                                    referenceError = new ReferenceError("this hasn't been initialised - super() hasn't been called");
-                                                                                                    throw referenceError;
+                                                                                                    tmp121 = new.target;
+                                                                                                    referenceError45 = new ReferenceError("this hasn't been initialised - super() hasn't been called");
+                                                                                                    tmp123 = referenceError45;
+                                                                                                    throw referenceError45;
                                                                                                   } else {
-                                                                                                    referenceError = new.target;
-                                                                                                    referenceError = referenceError(obj);
+                                                                                                    tmp108 = new.target;
+                                                                                                    tmp107Result = tmp107(obj);
                                                                                                     if (tmp10) {
                                                                                                       _ReferenceError = ReferenceError;
-                                                                                                      referenceError = new.target;
+                                                                                                      tmp116 = new.target;
                                                                                                       str42 = "this hasn't been initialised - super() hasn't been called";
-                                                                                                      referenceError = new.target;
-                                                                                                      referenceError = new ReferenceError("this hasn't been initialised - super() hasn't been called");
-                                                                                                      throw referenceError;
+                                                                                                      tmp117 = new.target;
+                                                                                                      referenceError46 = new ReferenceError("this hasn't been initialised - super() hasn't been called");
+                                                                                                      tmp119 = referenceError46;
+                                                                                                      throw referenceError46;
                                                                                                     } else {
-                                                                                                      referenceError = new.target;
-                                                                                                      referenceError = referenceError(obj);
+                                                                                                      tmp111 = new.target;
+                                                                                                      tmp110Result = tmp110(obj);
                                                                                                       if (merged.hlsjs) {
-                                                                                                        referenceError = obj.addHLSJS(merged);
+                                                                                                        addHLSJSResult = obj.addHLSJS(merged);
                                                                                                       }
                                                                                                       if (merged.dashjs) {
-                                                                                                        referenceError = obj.addDashJS(merged);
+                                                                                                        addDashJSResult = obj.addDashJS(merged);
                                                                                                       }
-                                                                                                      referenceError = obj.emit("viewinit", merged.data);
+                                                                                                      emitResult = obj.emit("viewinit", merged.data);
                                                                                                       return obj;
                                                                                                     }
                                                                                                   }
@@ -10651,14 +10443,12 @@ class t {
         tmp4 = tmp3[Symbol.hasInstance](self);
       }
     }
-    tmp4 = U(self, tmp3);
+    tmp4 = closure_8(self, tmp3);
     return;
   }
 }
-create = t;
 t.prototype = Object.create(fn2.prototype, { constructor: { value: t, writable: true, configurable: true } });
-Le(t, fn2);
-f98876 = t;
+fn(t, fn2);
 create = (function Rt() {
   if (typeof Reflect !== "undefined") {
     const _Reflect3 = Reflect;
@@ -10691,10 +10481,10 @@ create = (function Rt() {
 })();
 f98876 = function() {
   const self = this;
-  const obj = X(f98876);
+  const obj = BottomSheet(f98876);
   if (closure_1) {
     const _Reflect = Reflect;
-    let constructResult = Reflect.construct(obj, arguments, X(self).constructor);
+    let constructResult = Reflect.construct(obj, arguments, BottomSheet(self).constructor);
   } else {
     constructResult = obj(...arguments);
   }
@@ -10721,35 +10511,38 @@ f98876 = function() {
   }
   return tmp8;
 };
-const items11 = [
-  {
-    key: "emit",
-    value(arg0, arg1) {
-      const self = this;
-      const utils = this.mux.utils;
-      const merged = Object.assign({ viewer_time: utils.now() }, arg1);
-      items = [arg0, merged];
-      let emitTranslatorResult = items;
-      if (this.emitTranslator) {
-        try {
-          emitTranslatorResult = self.emitTranslator(arg0, merged);
-        } catch (tmp3) {
-          const log = tmp.mux.log;
-          log.warn("Exception in emit translator callback.", tmp3);
-        }
-      }
-      let length = null != emitTranslatorResult;
-      if (length) {
-        length = emitTranslatorResult.length;
-      }
-      if (length) {
-        const tmp9 = De(X(lib.prototype), "emit", self);
-        const call = tmp9.call;
-        const items1 = [self];
-        call.apply(tmp9, items1.concat(V(emitTranslatorResult)));
+const entry9 = {
+  key: "emit",
+  value(arg0, arg1) {
+    const self = this;
+    const obj = { viewer_time: null };
+    const utils = this.mux.utils;
+    obj.viewer_time = utils.now();
+    const merged = Object.assign(obj, arg1);
+    items = [arg0, merged];
+    let emitTranslatorResult = items;
+    if (this.emitTranslator) {
+      try {
+        emitTranslatorResult = self.emitTranslator(arg0, merged);
+      } catch (tmp3) {
+        const log = tmp.mux.log;
+        log.warn("Exception in emit translator callback.", tmp3);
       }
     }
-  },
+    let length = null != emitTranslatorResult;
+    if (length) {
+      length = emitTranslatorResult.length;
+    }
+    if (length) {
+      const tmp9 = closure_2_41(BottomSheet(closure_1.prototype), "emit", self);
+      const call = tmp9.call;
+      const items1 = [self];
+      call.apply(tmp9, items1.concat(__initData10(emitTranslatorResult)));
+    }
+  }
+};
+const items11 = [
+  entry9,
   {
     key: "destroy",
     value() {
@@ -10789,138 +10582,138 @@ const items11 = [
         }
         if (!merged.video_source_is_live) {
           items = ["player_program_time", "player_manifest_newest_program_time", "player_live_edge_program_time", "player_program_time", "video_holdback", "video_part_holdback", "video_target_duration", "video_part_target_duration"];
-          const item = items.forEach((arg0) => {
-            merged[arg0] = undefined;
+          const item = items.forEach((item) => {
+            merged[item] = undefined;
           });
         }
         merged.video_source_url = merged.video_source_url || merged.player_source_url;
         if (merged.video_source_url) {
-          if (typeof re !== "function") {
-            HermesBuiltin.throwTypeError();
-          }
-          if (typeof merged.video_source_url === "string") {
-            if ("" !== str) {
-              const str2 = str.match(/^(([^:\/?#]+):)?(\/\/([^\/?#]*))?([^?#]*)(\?([^#]*))?(#(.*))?/) || [][4];
-              let first;
-              if (str2) {
-                first = str2.match(/[^\.]+\.[^\.]+$/) || [][0];
-                const tmp12 = str2.match(/[^\.]+\.[^\.]+$/) || [];
-              }
-              let items1 = [str2, first];
-              const tmp10 = str.match(/^(([^:\/?#]+):)?(\/\/([^\/?#]*))?([^?#]*)(\?([^#]*))?(#(.*))?/) || [];
-            }
-            const _Array = Array;
-            let tmp14;
-            if (Array.isArray(items1)) {
-              tmp14 = items1;
-            }
-            if (!tmp14) {
-              tmp14 = (function vt(items, arg1) {
-                let tmp6 = null;
-                if (null != items) {
-                  const _Symbol = Symbol;
-                  iterable = typeof Symbol !== "undefined";
-                  if (typeof Symbol !== "undefined") {
-                    const _Symbol2 = Symbol;
-                    iterable = items[Symbol.iterator];
-                  }
-                  if (!iterable) {
-                    iterable = items[Symbol.iterator];
-                  }
-                  tmp6 = iterable;
+          if (typeof re === "function") {
+            if (typeof str === "string") {
+              if ("" !== str) {
+                const str2 = str.match(/^(([^:\/?#]+):)?(\/\/([^\/?#]*))?([^?#]*)(\?([^#]*))?(#(.*))?/) || [][4];
+                let first;
+                if (str2) {
+                  first = str2.match(/[^\.]+\.[^\.]+$/) || [][0];
+                  const tmp12 = str2.match(/[^\.]+\.[^\.]+$/) || [];
                 }
-                if (null != tmp6) {
-                  let flag2 = false;
-                  try {
-                    items = [];
+                let items1 = [str2, first];
+                const tmp10 = str.match(/^(([^:\/?#]+):)?(\/\/([^\/?#]*))?([^?#]*)(\?([^#]*))?(#(.*))?/) || [];
+              }
+              const _Array = Array;
+              let tmp14;
+              if (Array.isArray(items1)) {
+                tmp14 = items1;
+              }
+              if (!tmp14) {
+                tmp14 = (function vt(items, arg1) {
+                  let tmp6 = null;
+                  if (null != items) {
+                    const _Symbol = Symbol;
+                    let prop = typeof Symbol !== "undefined";
+                    if (typeof Symbol !== "undefined") {
+                      const _Symbol2 = Symbol;
+                      prop = items[Symbol.iterator];
+                    }
+                    if (!prop) {
+                      prop = items[Symbol.iterator];
+                    }
+                    tmp6 = prop;
+                  }
+                  if (null != tmp6) {
+                    let flag2 = false;
                     try {
-                      const call = tmp8.call;
-                      if (typeof call === "unknown") {
-                        let iter = tmp8();
-                      } else {
-                        iter = call(items);
-                      }
-                      const iter3 = iter.next();
-                      const done = iter3.done;
-                      let tmp10 = done;
-                      if (!done) {
-                        items.push(iter4.value);
-                        if (!arg1) {
-                          const iter5 = iter2.next();
-                          const done2 = iter5.done;
-                          tmp10 = done2;
-                          while (!done2) {
-                            let tmp15 = iter5;
-                            let arr = items.push(iter6.value);
-                            if (!arg1) {
+                      items = [];
+                      try {
+                        const call = tmp9.call;
+                        if (typeof call === "unknown") {
+                          let iter = tmp9();
+                        } else {
+                          iter = call(items);
+                        }
+                        const iter3 = iter.next();
+                        const done = iter3.done;
+                        let tmp11 = done;
+                        if (!done) {
+                          items.push(iter4.value);
+                          if (!arg1) {
+                            const iter5 = iter2.next();
+                            const done2 = iter5.done;
+                            tmp11 = done2;
+                            while (!done2) {
+                              let arr = items.push(iter6.value);
+                              if (!arg1) {
+                                continue;
+                              } else if (items.length === arg1) {
+                                break;
+                              }
                               continue;
-                            } else if (items.length === arg1) {
-                              break;
                             }
-                            continue;
                           }
                         }
+                        try {
+                          let tmp19 = !tmp11;
+                          if (!tmp11) {
+                            tmp19 = null != iter2.return;
+                          }
+                          if (tmp19) {
+                            iter2.return();
+                          }
+                          if (flag2) {
+                            throw tmp5;
+                          } else {
+                            return items;
+                          }
+                        } catch (tmp25) {
+                          if (tmp2) {
+                            throw tmp;
+                          } else {
+                            throw tmp25;
+                          }
+                        }
+                      } catch (tmp5) {
+                        flag2 = true;
                       }
+                    } catch (tmp28) {
                       try {
-                        let tmp18 = !tmp10;
-                        if (!tmp10) {
-                          tmp18 = null != iter2.return;
+                        let tmp30 = !tmp3;
+                        if (!tmp3) {
+                          tmp30 = tmp4 != obj.return;
                         }
-                        if (tmp18) {
-                          iter2.return();
+                        if (tmp30) {
+                          obj.return();
                         }
-                        if (flag2) {
-                          throw tmp5;
-                        } else {
-                          return items;
-                        }
-                      } catch (tmp24) {
                         if (tmp2) {
                           throw tmp;
                         } else {
-                          throw tmp24;
+                          throw tmp28;
                         }
-                      }
-                    } catch (tmp5) {
-                      flag2 = true;
-                    }
-                  } catch (tmp27) {
-                    try {
-                      let tmp29 = !tmp3;
-                      if (!tmp3) {
-                        tmp29 = tmp4 != obj.return;
-                      }
-                      if (tmp29) {
-                        obj.return();
-                      }
-                      if (tmp2) {
-                        throw tmp;
-                      } else {
-                        throw tmp27;
-                      }
-                    } catch (tmp35) {
-                      if (tmp2) {
-                        throw tmp;
-                      } else {
-                        throw tmp35;
+                      } catch (tmp36) {
+                        if (tmp2) {
+                          throw tmp;
+                        } else {
+                          throw tmp36;
+                        }
                       }
                     }
                   }
-                }
-              })(items1, 2);
+                })(items1, 2);
+              }
+              if (!tmp14) {
+                tmp14 = Pe(items1, 2);
+              }
+              if (tmp14) {
+                [tmp6.video_source_hostname, tmp6.video_source_domain] = tmp14;
+              } else {
+                const _TypeError = TypeError;
+                const typeError = new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");
+                throw typeError;
+              }
             }
-            if (!tmp14) {
-              tmp14 = Pe(items1, 2);
-            }
-            if (tmp14) {
-              [tmp6.video_source_hostname, tmp6.video_source_domain] = tmp14;
-            } else {
-              const _TypeError = TypeError;
-              const typeError = new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");
-              throw typeError;
-            }
+            items1 = ["localhost"];
+          } else {
+            throw new TypeError("Trying to call a non-function");
           }
-          items1 = ["localhost"];
         }
         delete tmp4[tmp3];
         const playbackEventDispatcher = self.playbackEventDispatcher;
@@ -10984,26 +10777,25 @@ const items11 = [
     value() {
       const self = this;
       items = ["player_width", "player_height", "video_source_width", "video_source_height", "player_playhead_time", "video_source_bitrate"];
-      const item = items.forEach((arg0) => {
-        const parsed = parseInt(self.data[arg0], 10);
+      const item = items.forEach((item) => {
+        const parsed = parseInt(self.data[item], 10);
         let tmp2;
         if (!isNaN(parsed)) {
           tmp2 = parsed;
         }
-        self.data[arg0] = tmp2;
+        self.data[item] = tmp2;
       });
       const items1 = ["player_source_url", "video_source_url"];
-      const item1 = items1.forEach((arg0) => {
-        if (self.data[arg0]) {
-          const formatted = tmp.data[arg0].toLowerCase();
+      const item1 = items1.forEach((item) => {
+        if (self.data[item]) {
+          const formatted = tmp.data[item].toLowerCase();
           let tmp2 = 0 === formatted.indexOf("data:");
           if (!tmp2) {
             tmp2 = 0 === formatted.indexOf("blob:");
           }
           if (tmp2) {
-            tmp.data[arg0] = "MSE style URL";
+            tmp.data[item] = "MSE style URL";
           }
-          const str = tmp.data[arg0];
         }
       });
     }
@@ -11048,8 +10840,7 @@ const items11 = [
   {
     key: "_initializeViewData",
     value() {
-      let self = this;
-      self = this;
+      const self = this;
       const tmp = ee();
       this.data.view_id = tmp;
       closure_1 = tmp;
@@ -11096,10 +10887,8 @@ const items11 = [
             const _window = window;
             Hls = window.Hls;
           }
-          ((mux, id, hlsjs, arg3, Hls) => {
-            closure_0 = mux;
+          ((mux, id, hlsjs) => {
             closure_1 = id;
-            closure_2 = hlsjs;
             let tmp;
             if (arguments.length > 4) {
               tmp = arguments[4];
@@ -11114,531 +10903,524 @@ const items11 = [
               function u(arg0, arg1) {
 
               }
-              const fn = function f(arg0, arg1) {
+              fn = function f(request_event_type, arg1) {
                 ({ levels, audioTracks, url, stats, networkDetails, sessionData } = arg1);
                 let obj = {};
                 let obj2 = obj;
                 obj = {};
                 obj3 = obj;
-                const item = levels.forEach((width) => {
-                  obj2[arg1] = { width: width.width, height: width.height, bitrate: width.bitrate, attrs: width.attrs };
+                const item = levels.forEach((width, index) => {
+                  const size = { width: width.width, height: width.height, bitrate: width.bitrate, attrs: width.attrs };
+                  obj2[index] = size;
                 });
-                const item1 = audioTracks.forEach((name) => {
-                  obj3[arg1] = { name: name.name, language: name.lang, bitrate: name.bitrate };
+                const item1 = audioTracks.forEach((name, index) => {
+                  obj3[index] = { name: name.name, language: name.lang, bitrate: name.bitrate };
                 });
-                if (typeof closure_1_52 !== "function") {
-                  HermesBuiltin.throwTypeError();
-                }
-                if (stats) {
-                  const navigationStartResult = closure_1_47.navigationStart();
-                  let loading = stats.loading;
-                  let round = loading ? loading.start : stats.trequest;
-                  let _Math = loading ? loading.first : stats.tfirst;
-                  loading = { bytesLoaded: null, requestStart: null, responseStart: null, responseEnd: null };
-                  loading[0] = stats.total;
-                  const _Math2 = Math;
-                  loading[1] = Math.round(navigationStartResult + round);
-                  const _Math3 = Math;
-                  round = Math.round;
-                  loading[2] = round(navigationStartResult + _Math);
-                  _Math = Math;
-                  stats = Math.round;
-                  loading[3] = stats(navigationStartResult + (loading ? loading.end : stats.tload));
-                  const tmp5 = loading ? loading.end : stats.tload;
-                } else {
-                  obj = {};
-                  ({ bytesLoaded, requestStart, responseStart, responseEnd } = obj);
-                  if (typeof closure_1_51 !== "function") {
-                    HermesBuiltin.throwTypeError();
-                  }
-                  for (const key10049 in sessionData) {
-                    let tmp32 = key10049;
-                    let tmp33 = sessionData[key10049];
-                    DATA_ID = tmp33["DATA-ID"];
-                    if (-1 === DATA_ID.search("io.litix.data.")) {
-                      continue;
-                    } else {
-                      ({ DATA-ID: str3, VALUE: obj5[str3.replace(str3, "io.litix.data.", "")] } = tmp33);
-                      continue;
-                    }
-                    continue;
-                  }
-                  obj2 = {};
-                  closure_1_48(obj2, {});
-                  obj3 = { request_event_type: null, request_bytes_loaded: null, request_start: null, request_response_start: null, request_response_end: null, request_type: "manifest", request_hostname: null, request_response_headers: null, request_rendition_lists: null };
-                  obj3[0] = arg0;
-                  obj3[1] = bytesLoaded;
-                  obj3[2] = requestStart;
-                  obj3[3] = responseStart;
-                  obj3[4] = responseEnd;
-                  if (typeof closure_1_44 !== "function") {
-                    HermesBuiltin.throwTypeError();
-                  }
-                  if (typeof closure_1_45 !== "function") {
-                    HermesBuiltin.throwTypeError();
-                  }
-                  if (typeof url === "string") {
-                    if ("" !== url) {
-                      const str4 = url.match(/^(([^:\/?#]+):)?(\/\/([^\/?#]*))?([^?#]*)(\?([^#]*))?(#(.*))?/) || [][4];
-                      let first;
-                      if (str4) {
-                        first = str4.match(/[^\.]+\.[^\.]+$/) || [][0];
-                        const tmp18 = str4.match(/[^\.]+\.[^\.]+$/) || [];
-                      }
-                      items = [str4, first];
-                      const tmp16 = url.match(/^(([^:\/?#]+):)?(\/\/([^\/?#]*))?([^?#]*)(\?([^#]*))?(#(.*))?/) || [];
-                    }
-                    obj3[6] = items[0];
-                    if (typeof closure_1_53 !== "function") {
-                      HermesBuiltin.throwTypeError();
-                    }
-                    let tmp20;
-                    if (networkDetails) {
-                      if (typeof networkDetails.getAllResponseHeaders === "function") {
-                        let str5 = networkDetails.getAllResponseHeaders();
-                        const obj4 = {};
-                        obj2 = obj4;
-                        if (!str5) {
-                          str5 = "";
+                if (typeof He === "function") {
+                  if (stats) {
+                    const navigationStartResult = closure_2_47.navigationStart();
+                    let loading = stats.loading;
+                    let round = loading ? loading.start : stats.trequest;
+                    let _Math = loading ? loading.first : stats.tfirst;
+                    loading = { bytesLoaded: stats.total, requestStart: null, responseStart: null, responseEnd: null };
+                    const _Math2 = Math;
+                    loading.requestStart = Math.round(navigationStartResult + round);
+                    const _Math3 = Math;
+                    round = Math.round;
+                    loading.responseStart = round(navigationStartResult + _Math);
+                    _Math = Math;
+                    stats = Math.round;
+                    loading.responseEnd = stats(navigationStartResult + (loading ? loading.end : stats.tload));
+                    const tmp5 = loading ? loading.end : stats.tload;
+                  } else {
+                    obj = {};
+                    if (typeof Me === "function") {
+                      for (const key10049 in sessionData) {
+                        let tmp35 = sessionData[key10049];
+                        let prop = tmp35["DATA-ID"];
+                        if (-1 === prop.search("io.litix.data.")) {
+                          continue;
+                        } else {
+                          ({ DATA-ID: str3, VALUE: obj5[str3.replace(str3, "io.litix.data.", "")] } = tmp35);
+                          continue;
                         }
-                        const parts = str5.trim().split(/[\r\n]+/);
-                        const item2 = parts.forEach((str) => {
-                          if (str) {
-                            const parts = str.split(": ");
-                            const str2 = parts.shift();
-                            let tmp = str2;
-                            if (str2) {
-                              let tmp3 = closure_1_50.indexOf(str2.toLowerCase()) >= 0;
-                              if (!tmp3) {
-                                const formatted = str2.toLowerCase();
-                                tmp3 = 0 === formatted.indexOf("x-litix-");
+                        continue;
+                      }
+                      obj2 = {};
+                      tmp13(obj2, {});
+                      obj3 = { request_event_type, request_bytes_loaded: tmp8, request_start: tmp9, request_response_start: tmp10, request_response_end: tmp11, request_type: "manifest", request_hostname: null, request_response_headers: null, request_rendition_lists: null };
+                      if (typeof closure_2_44 === "function") {
+                        if (typeof re === "function") {
+                          if (typeof url === "string") {
+                            if ("" !== url) {
+                              const str4 = url.match(/^(([^:\/?#]+):)?(\/\/([^\/?#]*))?([^?#]*)(\?([^#]*))?(#(.*))?/) || [][4];
+                              let first;
+                              if (str4) {
+                                first = str4.match(/[^\.]+\.[^\.]+$/) || [][0];
+                                const tmp22 = str4.match(/[^\.]+\.[^\.]+$/) || [];
                               }
-                              tmp = tmp3;
+                              items = [str4, first];
+                              const tmp20 = url.match(/^(([^:\/?#]+):)?(\/\/([^\/?#]*))?([^?#]*)(\?([^#]*))?(#(.*))?/) || [];
                             }
-                            if (tmp) {
-                              obj[str2] = parts.join(": ");
+                            obj3.request_hostname = items[0];
+                            if (typeof Se === "function") {
+                              let tmp24;
+                              if (networkDetails) {
+                                if (typeof networkDetails.getAllResponseHeaders === "function") {
+                                  let str5 = networkDetails.getAllResponseHeaders();
+                                  obj4 = {};
+                                  obj2 = obj4;
+                                  if (!str5) {
+                                    str5 = "";
+                                  }
+                                  const parts = str5.trim().split(/[\r\n]+/);
+                                  const item2 = parts.forEach((item) => {
+                                    if (item) {
+                                      const parts = item.split(": ");
+                                      const str2 = parts.shift();
+                                      let tmp = str2;
+                                      if (str2) {
+                                        let tmp3 = closure_2_50.indexOf(str2.toLowerCase()) >= 0;
+                                        if (!tmp3) {
+                                          const formatted = str2.toLowerCase();
+                                          tmp3 = 0 === formatted.indexOf("x-litix-");
+                                        }
+                                        tmp = tmp3;
+                                      }
+                                      if (tmp) {
+                                        obj[str2] = parts.join(": ");
+                                      }
+                                    }
+                                  });
+                                  tmp24 = obj4;
+                                  const str6 = str5.trim();
+                                }
+                              }
+                              obj3.request_response_headers = tmp24;
+                              const obj5 = { media: obj, audio: obj, video: {} };
+                              obj3.request_rendition_lists = obj5;
+                              const _Object = Object;
+                              const _Object2 = Object;
+                              if (Object.getOwnPropertyDescriptors) {
+                                const _Object6 = Object;
+                                _Object2.defineProperties(obj2, Object.getOwnPropertyDescriptors(obj3));
+                              } else {
+                                const _Object2Result = _Object2(obj3);
+                                obj2 = _Object2Result;
+                                const _Object3 = Object;
+                                const keys = Object.keys(_Object2Result);
+                                const _Object4 = Object;
+                                if (Object.getOwnPropertySymbols) {
+                                  const _Object5 = Object;
+                                  const push = keys.push;
+                                  push.apply(keys, Object.getOwnPropertySymbols(_Object2Result));
+                                }
+                                const item3 = keys.forEach((item) => {
+                                  Object.defineProperty(obj2, item, Object.getOwnPropertyDescriptor(obj3, item));
+                                });
+                              }
+                              if (typeof tmp12 === "function") {
+                                mux.emit(closure_1, "requestcompleted", obj2);
+                              } else {
+                                throw new TypeError("Trying to call a non-function");
+                              }
+                            } else {
+                              throw new TypeError("Trying to call a non-function");
                             }
                           }
-                        });
-                        tmp20 = obj4;
-                        const str6 = str5.trim();
+                          items = ["localhost"];
+                        } else {
+                          throw new TypeError("Trying to call a non-function");
+                        }
+                      } else {
+                        throw new TypeError("Trying to call a non-function");
                       }
-                    }
-                    obj3[7] = tmp20;
-                    const obj5 = { media: null, audio: null, video: null };
-                    obj5[0] = obj;
-                    obj5[1] = obj;
-                    obj5[2] = {};
-                    obj3[8] = obj5;
-                    const _Object = Object;
-                    const _Object2 = Object;
-                    if (Object.getOwnPropertyDescriptors) {
-                      const _Object6 = Object;
-                      _Object2.defineProperties(obj2, Object.getOwnPropertyDescriptors(obj3));
+                      const obj1 = {};
                     } else {
-                      const _Object2Result = _Object2(obj3);
-                      obj2 = _Object2Result;
-                      const _Object3 = Object;
-                      const keys = Object.keys(_Object2Result);
-                      const _Object4 = Object;
-                      if (Object.getOwnPropertySymbols) {
-                        const _Object5 = Object;
-                        const push = keys.push;
-                        push.apply(keys, Object.getOwnPropertySymbols(_Object2Result));
-                      }
-                      const item3 = keys.forEach((arg0) => {
-                        Object.defineProperty(obj2, arg0, Object.getOwnPropertyDescriptor(obj3, arg0));
-                      });
+                      throw new TypeError("Trying to call a non-function");
                     }
-                    if (typeof tmp8 !== "function") {
-                      HermesBuiltin.throwTypeError();
-                    }
-                    obj2.emit(obj3, "requestcompleted", obj2);
                   }
-                  items = ["localhost"];
-                  obj1 = {};
-                  tmp8 = u;
-                  const tmp9 = closure_1_48;
+                } else {
+                  throw new TypeError("Trying to call a non-function");
                 }
               };
               hlsjs.on(tmp.Events.MANIFEST_LOADED, fn);
-              const fn2 = function g(arg0, level) {
-                ({ details, networkDetails, stats } = level);
-                if (typeof closure_1_52 !== "function") {
-                  HermesBuiltin.throwTypeError();
-                }
-                if (stats) {
-                  const navigationStartResult = closure_1_47.navigationStart();
-                  let loading = stats.loading;
-                  let round = loading ? loading.start : stats.trequest;
-                  let _Math = loading ? loading.first : stats.tfirst;
-                  loading = { bytesLoaded: null, requestStart: null, responseStart: null, responseEnd: null };
-                  loading[0] = stats.total;
-                  const _Math2 = Math;
-                  loading[1] = Math.round(navigationStartResult + round);
-                  const _Math3 = Math;
-                  round = Math.round;
-                  loading[2] = round(navigationStartResult + _Math);
-                  _Math = Math;
-                  stats = Math.round;
-                  loading[3] = stats(navigationStartResult + (loading ? loading.end : stats.tload));
-                  const tmp3 = loading ? loading.end : stats.tload;
-                } else {
-                  let obj = {};
-                  ({ bytesLoaded, requestStart, responseStart, responseEnd } = obj);
-                  if (typeof s !== "function") {
-                    HermesBuiltin.throwTypeError();
-                  }
-                  const _parseInt = parseInt;
-                  const parsed = parseInt(closure_3.version);
-                  let tmp11 = 1 === parsed;
-                  if (tmp11) {
-                    tmp11 = null !== tmp6.programDateTime;
-                  }
-                  let programDateTime;
-                  if (tmp11) {
-                    programDateTime = tmp6.programDateTime;
-                  }
-                  let tmp14 = 0 === parsed;
-                  if (tmp14) {
-                    tmp14 = null !== tmp6.pdt;
-                  }
-                  if (tmp14) {
-                    programDateTime = tmp6.pdt;
-                  }
-                  const sum = programDateTime + secondsToMs(tmp6.duration);
-                  obj = { request_event_type: null, request_bytes_loaded: null, request_start: null, request_response_start: null, request_response_end: null, request_current_level: null, request_type: "manifest", request_hostname: null, request_response_headers: null, video_holdback: null, video_part_holdback: null, video_part_target_duration: null, video_target_duration: null, video_source_is_live: null, player_manifest_newest_program_time: null };
-                  obj[0] = arg0;
-                  obj[1] = bytesLoaded;
-                  obj[2] = requestStart;
-                  obj[3] = responseStart;
-                  obj[4] = responseEnd;
-                  obj[5] = level.level;
-                  if (typeof closure_1_44 !== "function") {
-                    HermesBuiltin.throwTypeError();
-                  }
-                  if (typeof closure_1_45 !== "function") {
-                    HermesBuiltin.throwTypeError();
-                  }
-                  if (typeof details.url === "string") {
-                    if ("" !== str) {
-                      const str2 = str.match(/^(([^:\/?#]+):)?(\/\/([^\/?#]*))?([^?#]*)(\?([^#]*))?(#(.*))?/) || [][4];
-                      let first;
-                      if (str2) {
-                        first = str2.match(/[^\.]+\.[^\.]+$/) || [][0];
-                        const tmp24 = str2.match(/[^\.]+\.[^\.]+$/) || [];
+              const fn2 = function g(request_event_type, arg1) {
+                ({ details, networkDetails, stats } = arg1);
+                if (typeof He === "function") {
+                  if (stats) {
+                    const navigationStartResult = closure_2_47.navigationStart();
+                    let loading = stats.loading;
+                    let round = loading ? loading.start : stats.trequest;
+                    let _Math = loading ? loading.first : stats.tfirst;
+                    loading = { bytesLoaded: stats.total, requestStart: null, responseStart: null, responseEnd: null };
+                    const _Math2 = Math;
+                    loading.requestStart = Math.round(navigationStartResult + round);
+                    const _Math3 = Math;
+                    round = Math.round;
+                    loading.responseStart = round(navigationStartResult + _Math);
+                    _Math = Math;
+                    stats = Math.round;
+                    loading.responseEnd = stats(navigationStartResult + (loading ? loading.end : stats.tload));
+                    const tmp4 = loading ? loading.end : stats.tload;
+                  } else {
+                    let obj = {};
+                    if (typeof s === "function") {
+                      const _parseInt = parseInt;
+                      const parsed = parseInt(closure_3.version);
+                      let tmp16 = 1 === parsed;
+                      if (tmp16) {
+                        tmp16 = null !== tmp11.programDateTime;
                       }
-                      items = [str2, first];
-                      const tmp22 = str.match(/^(([^:\/?#]+):)?(\/\/([^\/?#]*))?([^?#]*)(\?([^#]*))?(#(.*))?/) || [];
-                    }
-                    obj[7] = items[0];
-                    if (typeof closure_1_53 !== "function") {
-                      HermesBuiltin.throwTypeError();
-                    }
-                    let tmp26;
-                    if (networkDetails) {
-                      if (typeof networkDetails.getAllResponseHeaders === "function") {
-                        let str3 = networkDetails.getAllResponseHeaders();
-                        obj = {};
-                        if (!str3) {
-                          str3 = "";
-                        }
-                        const parts = str3.trim().split(/[\r\n]+/);
-                        const item = parts.forEach((str) => {
-                          if (str) {
-                            const parts = str.split(": ");
-                            const str2 = parts.shift();
-                            let tmp = str2;
-                            if (str2) {
-                              let tmp3 = closure_1_50.indexOf(str2.toLowerCase()) >= 0;
-                              if (!tmp3) {
-                                const formatted = str2.toLowerCase();
-                                tmp3 = 0 === formatted.indexOf("x-litix-");
+                      let programDateTime;
+                      if (tmp16) {
+                        programDateTime = tmp11.programDateTime;
+                      }
+                      let tmp19 = 0 === parsed;
+                      if (tmp19) {
+                        tmp19 = null !== tmp11.pdt;
+                      }
+                      if (tmp19) {
+                        programDateTime = tmp11.pdt;
+                      }
+                      const sum = programDateTime + secondsToMs(tmp11.duration);
+                      obj = { request_event_type, request_bytes_loaded: tmp7, request_start: tmp8, request_response_start: tmp9, request_response_end: tmp10, request_current_level: tmp, request_type: "manifest", request_hostname: null, request_response_headers: null, video_holdback: null, video_part_holdback: null, video_part_target_duration: null, video_target_duration: null, video_source_is_live: null, player_manifest_newest_program_time: null };
+                      if (typeof closure_2_44 === "function") {
+                        if (typeof re === "function") {
+                          if (typeof str === "string") {
+                            if ("" !== str) {
+                              const str2 = str.match(/^(([^:\/?#]+):)?(\/\/([^\/?#]*))?([^?#]*)(\?([^#]*))?(#(.*))?/) || [][4];
+                              let first;
+                              if (str2) {
+                                first = str2.match(/[^\.]+\.[^\.]+$/) || [][0];
+                                const tmp29 = str2.match(/[^\.]+\.[^\.]+$/) || [];
                               }
-                              tmp = tmp3;
+                              items = [str2, first];
+                              const tmp27 = str.match(/^(([^:\/?#]+):)?(\/\/([^\/?#]*))?([^?#]*)(\?([^#]*))?(#(.*))?/) || [];
                             }
-                            if (tmp) {
-                              obj[str2] = parts.join(": ");
+                            obj.request_hostname = items[0];
+                            if (typeof Se === "function") {
+                              let tmp31;
+                              if (networkDetails) {
+                                if (typeof networkDetails.getAllResponseHeaders === "function") {
+                                  let str3 = networkDetails.getAllResponseHeaders();
+                                  obj = {};
+                                  if (!str3) {
+                                    str3 = "";
+                                  }
+                                  const parts = str3.trim().split(/[\r\n]+/);
+                                  const item = parts.forEach((item) => {
+                                    if (item) {
+                                      const parts = item.split(": ");
+                                      const str2 = parts.shift();
+                                      let tmp = str2;
+                                      if (str2) {
+                                        let tmp3 = closure_2_50.indexOf(str2.toLowerCase()) >= 0;
+                                        if (!tmp3) {
+                                          const formatted = str2.toLowerCase();
+                                          tmp3 = 0 === formatted.indexOf("x-litix-");
+                                        }
+                                        tmp = tmp3;
+                                      }
+                                      if (tmp) {
+                                        obj[str2] = parts.join(": ");
+                                      }
+                                    }
+                                  });
+                                  tmp31 = obj;
+                                  const str4 = str3.trim();
+                                }
+                              }
+                              obj.request_response_headers = tmp31;
+                              obj.video_holdback = details.holdBack && tmp22(details.holdBack);
+                              const tmp33 = details.holdBack && tmp22(details.holdBack);
+                              obj.video_part_holdback = details.partHoldBack && tmp22(details.partHoldBack);
+                              const tmp34 = details.partHoldBack && tmp22(details.partHoldBack);
+                              obj.video_part_target_duration = details.partTarget && tmp22(details.partTarget);
+                              const tmp35 = details.partTarget && tmp22(details.partTarget);
+                              obj.video_target_duration = details.targetduration && tmp22(details.targetduration);
+                              obj.video_source_is_live = details.live;
+                              const _isNaN = isNaN;
+                              let tmp37;
+                              if (!isNaN(sum)) {
+                                tmp37 = sum;
+                              }
+                              obj.player_manifest_newest_program_time = tmp37;
+                              if (typeof tmp24 === "function") {
+                                mux.emit(closure_1, "requestcompleted", obj);
+                              } else {
+                                throw new TypeError("Trying to call a non-function");
+                              }
+                              const tmp36 = details.targetduration && tmp22(details.targetduration);
+                            } else {
+                              throw new TypeError("Trying to call a non-function");
                             }
                           }
-                        });
-                        tmp26 = obj;
-                        const str4 = str3.trim();
+                          items = ["localhost"];
+                        } else {
+                          throw new TypeError("Trying to call a non-function");
+                        }
+                      } else {
+                        throw new TypeError("Trying to call a non-function");
                       }
+                    } else {
+                      throw new TypeError("Trying to call a non-function");
                     }
-                    obj[8] = tmp26;
-                    obj[9] = details.holdBack && tmp17(details.holdBack);
-                    const tmp28 = details.holdBack && tmp17(details.holdBack);
-                    obj[10] = details.partHoldBack && tmp17(details.partHoldBack);
-                    const tmp29 = details.partHoldBack && tmp17(details.partHoldBack);
-                    obj[11] = details.partTarget && tmp17(details.partTarget);
-                    const tmp30 = details.partTarget && tmp17(details.partTarget);
-                    obj[12] = details.targetduration && tmp17(details.targetduration);
-                    obj[13] = details.live;
-                    const _isNaN = isNaN;
-                    let tmp32;
-                    if (!isNaN(sum)) {
-                      tmp32 = sum;
-                    }
-                    obj[14] = tmp32;
-                    if (typeof tmp19 !== "function") {
-                      HermesBuiltin.throwTypeError();
-                    }
-                    obj.emit(closure_1, "requestcompleted", obj);
                   }
-                  items = ["localhost"];
-                  tmp19 = u;
+                } else {
+                  throw new TypeError("Trying to call a non-function");
                 }
               };
               hlsjs.on(tmp.Events.LEVEL_LOADED, fn2);
-              fn3 = function k(arg0, details) {
-                ({ networkDetails, stats } = details);
-                if (typeof closure_1_52 !== "function") {
-                  HermesBuiltin.throwTypeError();
-                }
-                if (stats) {
-                  const navigationStartResult = closure_1_47.navigationStart();
-                  let loading = stats.loading;
-                  let round = loading ? loading.start : stats.trequest;
-                  let _Math = loading ? loading.first : stats.tfirst;
-                  loading = { bytesLoaded: null, requestStart: null, responseStart: null, responseEnd: null };
-                  loading[0] = stats.total;
-                  const _Math2 = Math;
-                  loading[1] = Math.round(navigationStartResult + round);
-                  const _Math3 = Math;
-                  round = Math.round;
-                  loading[2] = round(navigationStartResult + _Math);
-                  _Math = Math;
-                  stats = Math.round;
-                  loading[3] = stats(navigationStartResult + (loading ? loading.end : stats.tload));
-                  const tmp3 = loading ? loading.end : stats.tload;
-                } else {
-                  let obj = {};
-                  obj = { request_event_type: null, request_bytes_loaded: null, request_start: null, request_response_start: null, request_response_end: null, request_type: "manifest", request_hostname: null, request_response_headers: null };
-                  obj[0] = arg0;
-                  ({ bytesLoaded: obj3[1], requestStart: obj3[2], responseStart: obj3[3], responseEnd: obj3[4] } = obj);
-                  if (typeof closure_1_44 !== "function") {
-                    HermesBuiltin.throwTypeError();
-                  }
-                  if (typeof closure_1_45 !== "function") {
-                    HermesBuiltin.throwTypeError();
-                  }
-                  if (typeof details.details.url === "string") {
-                    if ("" !== str) {
-                      const str2 = str.match(/^(([^:\/?#]+):)?(\/\/([^\/?#]*))?([^?#]*)(\?([^#]*))?(#(.*))?/) || [][4];
-                      let first;
-                      if (str2) {
-                        first = str2.match(/[^\.]+\.[^\.]+$/) || [][0];
-                        const tmp12 = str2.match(/[^\.]+\.[^\.]+$/) || [];
-                      }
-                      items = [str2, first];
-                      const tmp10 = str.match(/^(([^:\/?#]+):)?(\/\/([^\/?#]*))?([^?#]*)(\?([^#]*))?(#(.*))?/) || [];
-                    }
-                    obj[6] = items[0];
-                    if (typeof closure_1_53 !== "function") {
-                      HermesBuiltin.throwTypeError();
-                    }
-                    let tmp14;
-                    if (networkDetails) {
-                      if (typeof networkDetails.getAllResponseHeaders === "function") {
-                        let str3 = networkDetails.getAllResponseHeaders();
-                        obj = {};
-                        if (!str3) {
-                          str3 = "";
-                        }
-                        const parts = str3.trim().split(/[\r\n]+/);
-                        const item = parts.forEach((str) => {
-                          if (str) {
-                            const parts = str.split(": ");
-                            const str2 = parts.shift();
-                            let tmp = str2;
+              fn3 = function k(request_event_type, arg1) {
+                ({ networkDetails, stats } = arg1);
+                if (typeof He === "function") {
+                  if (stats) {
+                    const navigationStartResult = closure_2_47.navigationStart();
+                    let loading = stats.loading;
+                    let round = loading ? loading.start : stats.trequest;
+                    let _Math = loading ? loading.first : stats.tfirst;
+                    loading = { bytesLoaded: stats.total, requestStart: null, responseStart: null, responseEnd: null };
+                    const _Math2 = Math;
+                    loading.requestStart = Math.round(navigationStartResult + round);
+                    const _Math3 = Math;
+                    round = Math.round;
+                    loading.responseStart = round(navigationStartResult + _Math);
+                    _Math = Math;
+                    stats = Math.round;
+                    loading.responseEnd = stats(navigationStartResult + (loading ? loading.end : stats.tload));
+                    const tmp4 = loading ? loading.end : stats.tload;
+                  } else {
+                    let obj = {};
+                    obj = { request_event_type, request_bytes_loaded: null, request_start: null, request_response_start: null, request_response_end: null, request_type: "manifest", request_hostname: null, request_response_headers: null };
+                    ({ bytesLoaded: obj3.request_bytes_loaded, requestStart: obj3.request_start, responseStart: obj3.request_response_start, responseEnd: obj3.request_response_end } = obj);
+                    if (typeof closure_2_44 === "function") {
+                      if (typeof re === "function") {
+                        if (typeof str === "string") {
+                          if ("" !== str) {
+                            const str2 = str.match(/^(([^:\/?#]+):)?(\/\/([^\/?#]*))?([^?#]*)(\?([^#]*))?(#(.*))?/) || [][4];
+                            let first;
                             if (str2) {
-                              let tmp3 = closure_1_50.indexOf(str2.toLowerCase()) >= 0;
-                              if (!tmp3) {
-                                const formatted = str2.toLowerCase();
-                                tmp3 = 0 === formatted.indexOf("x-litix-");
-                              }
-                              tmp = tmp3;
+                              first = str2.match(/[^\.]+\.[^\.]+$/) || [][0];
+                              const tmp13 = str2.match(/[^\.]+\.[^\.]+$/) || [];
                             }
-                            if (tmp) {
-                              obj[str2] = parts.join(": ");
-                            }
+                            items = [str2, first];
+                            const tmp11 = str.match(/^(([^:\/?#]+):)?(\/\/([^\/?#]*))?([^?#]*)(\?([^#]*))?(#(.*))?/) || [];
                           }
-                        });
-                        tmp14 = obj;
-                        const str4 = str3.trim();
+                          obj.request_hostname = items[0];
+                          if (typeof Se === "function") {
+                            let tmp15;
+                            if (networkDetails) {
+                              if (typeof networkDetails.getAllResponseHeaders === "function") {
+                                let str3 = networkDetails.getAllResponseHeaders();
+                                obj = {};
+                                if (!str3) {
+                                  str3 = "";
+                                }
+                                const parts = str3.trim().split(/[\r\n]+/);
+                                const item = parts.forEach((item) => {
+                                  if (item) {
+                                    const parts = item.split(": ");
+                                    const str2 = parts.shift();
+                                    let tmp = str2;
+                                    if (str2) {
+                                      let tmp3 = closure_2_50.indexOf(str2.toLowerCase()) >= 0;
+                                      if (!tmp3) {
+                                        const formatted = str2.toLowerCase();
+                                        tmp3 = 0 === formatted.indexOf("x-litix-");
+                                      }
+                                      tmp = tmp3;
+                                    }
+                                    if (tmp) {
+                                      obj[str2] = parts.join(": ");
+                                    }
+                                  }
+                                });
+                                tmp15 = obj;
+                                const str4 = str3.trim();
+                              }
+                            }
+                            obj.request_response_headers = tmp15;
+                            if (typeof tmp8 === "function") {
+                              mux.emit(closure_1, "requestcompleted", obj);
+                            } else {
+                              throw new TypeError("Trying to call a non-function");
+                            }
+                          } else {
+                            throw new TypeError("Trying to call a non-function");
+                          }
+                        }
+                        items = ["localhost"];
+                      } else {
+                        throw new TypeError("Trying to call a non-function");
                       }
+                    } else {
+                      throw new TypeError("Trying to call a non-function");
                     }
-                    obj[7] = tmp14;
-                    if (typeof tmp7 !== "function") {
-                      HermesBuiltin.throwTypeError();
-                    }
-                    obj.emit(closure_1, "requestcompleted", obj);
                   }
-                  items = ["localhost"];
-                  tmp7 = u;
+                } else {
+                  throw new TypeError("Trying to call a non-function");
                 }
               };
               hlsjs.on(tmp.Events.AUDIO_TRACK_LOADED, fn3);
-              fn4 = function h(arg0, arg1) {
+              fn4 = function h(request_event_type, arg1) {
                 ({ stats, networkDetails, frag } = arg1);
                 if (!stats) {
                   stats = frag.stats;
                 }
-                if (typeof closure_1_52 !== "function") {
-                  HermesBuiltin.throwTypeError();
-                }
-                if (stats) {
-                  const navigationStartResult = closure_1_47.navigationStart();
-                  let loading = stats.loading;
-                  let round = loading ? loading.start : stats.trequest;
-                  let _Math = loading ? loading.first : stats.tfirst;
-                  loading = { bytesLoaded: null, requestStart: null, responseStart: null, responseEnd: null };
-                  loading[0] = stats.total;
-                  const _Math2 = Math;
-                  loading[1] = Math.round(navigationStartResult + round);
-                  const _Math3 = Math;
-                  round = Math.round;
-                  loading[2] = round(navigationStartResult + _Math);
-                  _Math = Math;
-                  stats = Math.round;
-                  loading[3] = stats(navigationStartResult + (loading ? loading.end : stats.tload));
-                  const tmp3 = loading ? loading.end : stats.tload;
-                } else {
-                  let obj = {};
-                  ({ bytesLoaded, requestStart, responseStart, responseEnd } = obj);
-                  if (networkDetails) {
-                    if (typeof closure_1_53 !== "function") {
-                      HermesBuiltin.throwTypeError();
-                    }
-                    let tmp8;
-                    if (networkDetails) {
-                      if (typeof networkDetails.getAllResponseHeaders === "function") {
-                        let str = networkDetails.getAllResponseHeaders();
-                        obj = {};
-                        if (!str) {
-                          str = "";
-                        }
-                        const parts = str.trim().split(/[\r\n]+/);
-                        const item = parts.forEach((str) => {
-                          if (str) {
-                            const parts = str.split(": ");
-                            const str2 = parts.shift();
-                            let tmp = str2;
-                            if (str2) {
-                              let tmp3 = closure_1_50.indexOf(str2.toLowerCase()) >= 0;
-                              if (!tmp3) {
-                                const formatted = str2.toLowerCase();
-                                tmp3 = 0 === formatted.indexOf("x-litix-");
-                              }
-                              tmp = tmp3;
-                            }
-                            if (tmp) {
-                              obj[str2] = parts.join(": ");
-                            }
-                          }
-                        });
-                        tmp8 = obj;
-                        const str2 = str.trim();
-                      }
-                    }
-                  }
-                  obj = { request_event_type: null, request_bytes_loaded: null, request_start: null, request_response_start: null, request_response_end: null, request_hostname: null, request_id: null, request_response_headers: null, request_media_duration: null, request_url: null };
-                  obj[0] = arg0;
-                  obj[1] = bytesLoaded;
-                  obj[2] = requestStart;
-                  obj[3] = responseStart;
-                  obj[4] = responseEnd;
-                  if (!networkDetails) {
-                    obj[5] = undefined;
-                    let tmp17;
-                    if (tmp6) {
-                      obj = tmp6;
-                      let tmp18;
-                      if (tmp6) {
-                        const found = closure_1_49.find((arg0) => undefined !== obj[arg0]);
-                        let tmp21;
-                        if (found) {
-                          tmp21 = tmp6[found];
-                        }
-                        tmp18 = tmp21;
-                      }
-                      tmp17 = tmp18;
-                    }
-                    obj[6] = tmp17;
-                    obj[7] = tmp6;
-                    obj[8] = frag.duration;
-                    let responseURL;
-                    if (null != networkDetails) {
-                      responseURL = networkDetails.responseURL;
-                    }
-                    obj[9] = responseURL;
-                    if ("main" === frag.type) {
-                      obj.request_type = "media";
-                      obj.request_current_level = frag.level;
-                      obj.request_video_width = hlsjs.levels[frag.level] || {}.width;
-                      obj.request_video_height = hlsjs.levels[frag.level] || {}.height;
-                      obj.request_labeled_bitrate = hlsjs.levels[frag.level] || {}.bitrate;
-                      const tmp25 = hlsjs.levels[frag.level] || {};
-                      const tmp26 = hlsjs.levels[frag.level] || {};
-                      const tmp27 = hlsjs.levels[frag.level] || {};
-                    } else {
-                      obj.request_type = frag.type;
-                    }
-                    if (typeof u !== "function") {
-                      HermesBuiltin.throwTypeError();
-                    }
-                    obj.emit(closure_1, "requestcompleted", obj);
+                if (typeof He === "function") {
+                  if (stats) {
+                    const navigationStartResult = closure_2_47.navigationStart();
+                    let loading = stats.loading;
+                    let round = loading ? loading.start : stats.trequest;
+                    let _Math = loading ? loading.first : stats.tfirst;
+                    loading = { bytesLoaded: stats.total, requestStart: null, responseStart: null, responseEnd: null };
+                    const _Math2 = Math;
+                    loading.requestStart = Math.round(navigationStartResult + round);
+                    const _Math3 = Math;
+                    round = Math.round;
+                    loading.responseStart = round(navigationStartResult + _Math);
+                    _Math = Math;
+                    stats = Math.round;
+                    loading.responseEnd = stats(navigationStartResult + (loading ? loading.end : stats.tload));
+                    const tmp3 = loading ? loading.end : stats.tload;
                   } else {
-                    if (typeof closure_1_44 !== "function") {
-                      HermesBuiltin.throwTypeError();
-                    }
-                    if (typeof closure_1_45 !== "function") {
-                      HermesBuiltin.throwTypeError();
-                    }
-                    if (typeof networkDetails.responseURL === "string") {
-                      if ("" !== str3) {
-                        const str4 = str3.match(/^(([^:\/?#]+):)?(\/\/([^\/?#]*))?([^?#]*)(\?([^#]*))?(#(.*))?/) || [][4];
-                        let first;
-                        if (str4) {
-                          first = str4.match(/[^\.]+\.[^\.]+$/) || [][0];
-                          const tmp15 = str4.match(/[^\.]+\.[^\.]+$/) || [];
+                    let obj = {};
+                    ({ bytesLoaded, requestStart, responseStart, responseEnd } = obj);
+                    if (networkDetails) {
+                      if (typeof Se === "function") {
+                        if (networkDetails) {
+                          if (typeof networkDetails.getAllResponseHeaders === "function") {
+                            let str = networkDetails.getAllResponseHeaders();
+                            obj = {};
+                            if (!str) {
+                              str = "";
+                            }
+                            const parts = str.trim().split(/[\r\n]+/);
+                            const item = parts.forEach((item) => {
+                              if (item) {
+                                const parts = item.split(": ");
+                                const str2 = parts.shift();
+                                let tmp = str2;
+                                if (str2) {
+                                  let tmp3 = closure_2_50.indexOf(str2.toLowerCase()) >= 0;
+                                  if (!tmp3) {
+                                    const formatted = str2.toLowerCase();
+                                    tmp3 = 0 === formatted.indexOf("x-litix-");
+                                  }
+                                  tmp = tmp3;
+                                }
+                                if (tmp) {
+                                  obj[str2] = parts.join(": ");
+                                }
+                              }
+                            });
+                            const str2 = str.trim();
+                          }
                         }
-                        items = [str4, first];
-                        const tmp13 = str3.match(/^(([^:\/?#]+):)?(\/\/([^\/?#]*))?([^?#]*)(\?([^#]*))?(#(.*))?/) || [];
+                      } else {
+                        throw new TypeError("Trying to call a non-function");
                       }
-                      const first1 = items[0];
                     }
-                    items = ["localhost"];
+                    obj = { request_event_type, request_bytes_loaded: bytesLoaded, request_start: requestStart, request_response_start: responseStart, request_response_end: responseEnd, request_hostname: null, request_id: null, request_response_headers: null, request_media_duration: null, request_url: null };
+                    if (!networkDetails) {
+                      obj.request_hostname = undefined;
+                      let tmp17;
+                      if (tmp6) {
+                        obj = tmp6;
+                        let tmp18;
+                        if (tmp6) {
+                          const found = closure_2_49.find((item) => undefined !== obj[item]);
+                          let tmp21;
+                          if (found) {
+                            tmp21 = tmp6[found];
+                          }
+                          tmp18 = tmp21;
+                        }
+                        tmp17 = tmp18;
+                      }
+                      obj.request_id = tmp17;
+                      obj.request_response_headers = tmp6;
+                      obj.request_media_duration = frag.duration;
+                      let responseURL;
+                      if (null != networkDetails) {
+                        responseURL = networkDetails.responseURL;
+                      }
+                      obj.request_url = responseURL;
+                      if ("main" === frag.type) {
+                        obj.request_type = "media";
+                        obj.request_current_level = frag.level;
+                        obj.request_video_width = hlsjs.levels[frag.level] || {}.width;
+                        obj.request_video_height = hlsjs.levels[frag.level] || {}.height;
+                        obj.request_labeled_bitrate = hlsjs.levels[frag.level] || {}.bitrate;
+                        const tmp25 = hlsjs.levels[frag.level] || {};
+                        const tmp26 = hlsjs.levels[frag.level] || {};
+                        const tmp27 = hlsjs.levels[frag.level] || {};
+                      } else {
+                        obj.request_type = frag.type;
+                      }
+                      if (typeof u === "function") {
+                        mux.emit(closure_1, "requestcompleted", obj);
+                      } else {
+                        throw new TypeError("Trying to call a non-function");
+                      }
+                    } else if (typeof closure_2_44 === "function") {
+                      if (typeof re === "function") {
+                        if (typeof str3 === "string") {
+                          if ("" !== str3) {
+                            const str4 = str3.match(/^(([^:\/?#]+):)?(\/\/([^\/?#]*))?([^?#]*)(\?([^#]*))?(#(.*))?/) || [][4];
+                            let first;
+                            if (str4) {
+                              first = str4.match(/[^\.]+\.[^\.]+$/) || [][0];
+                              const tmp15 = str4.match(/[^\.]+\.[^\.]+$/) || [];
+                            }
+                            items = [str4, first];
+                            const tmp13 = str3.match(/^(([^:\/?#]+):)?(\/\/([^\/?#]*))?([^?#]*)(\?([^#]*))?(#(.*))?/) || [];
+                          }
+                          const first1 = items[0];
+                        }
+                        items = ["localhost"];
+                      } else {
+                        throw new TypeError("Trying to call a non-function");
+                      }
+                    } else {
+                      throw new TypeError("Trying to call a non-function");
+                    }
                   }
+                } else {
+                  throw new TypeError("Trying to call a non-function");
                 }
               };
               hlsjs.on(tmp.Events.FRAG_LOADED, fn4);
               fn5 = function c(arg0, frag) {
                 frag = frag.frag;
-                if (typeof s !== "function") {
-                  HermesBuiltin.throwTypeError();
+                if (typeof s === "function") {
+                  const _parseInt = parseInt;
+                  const parsed = parseInt(closure_3.version);
+                  let tmp5 = 1 === parsed;
+                  if (tmp5) {
+                    tmp5 = null !== frag.programDateTime;
+                  }
+                  let programDateTime;
+                  if (tmp5) {
+                    programDateTime = frag.programDateTime;
+                  }
+                  let tmp8 = 0 === parsed;
+                  if (tmp8) {
+                    tmp8 = null !== frag.pdt;
+                  }
+                  if (tmp8) {
+                    programDateTime = frag.pdt;
+                  }
+                  const obj = { currentFragmentPDT: programDateTime, currentFragmentStart: secondsToMs(tmp) };
+                  if (typeof u === "function") {
+                    mux.emit(closure_1, "fragmentchange", obj);
+                  } else {
+                    throw new TypeError("Trying to call a non-function");
+                  }
+                } else {
+                  throw new TypeError("Trying to call a non-function");
                 }
-                const parsed = parseInt(closure_3.version);
-                let tmp2 = 1 === parsed;
-                if (tmp2) {
-                  tmp2 = null !== frag.programDateTime;
-                }
-                let programDateTime;
-                if (tmp2) {
-                  programDateTime = frag.programDateTime;
-                }
-                let tmp5 = 0 === parsed;
-                if (tmp5) {
-                  tmp5 = null !== frag.pdt;
-                }
-                if (tmp5) {
-                  programDateTime = frag.pdt;
-                }
-                if (typeof u !== "function") {
-                  HermesBuiltin.throwTypeError();
-                }
-                mux.emit(closure_1, "fragmentchange", { currentFragmentPDT: programDateTime, currentFragmentStart: secondsToMs(frag.start) });
               };
               hlsjs.on(tmp.Events.FRAG_CHANGED, fn5);
               fn6 = function m(arg0, url) {
@@ -11655,122 +11437,121 @@ const items11 = [
                   str = "";
                 }
                 if (networkDetails) {
-                  if (typeof closure_1_53 !== "function") {
-                    HermesBuiltin.throwTypeError();
-                  }
-                  let tmp3;
-                  if (networkDetails) {
-                    if (typeof networkDetails.getAllResponseHeaders === "function") {
-                      let str2 = networkDetails.getAllResponseHeaders();
-                      let obj = {};
-                      if (!str2) {
-                        str2 = "";
-                      }
-                      let parts = str2.trim().split(/[\r\n]+/);
-                      const item = parts.forEach((str) => {
-                        if (str) {
-                          const parts = str.split(": ");
-                          const str2 = parts.shift();
-                          let tmp = str2;
-                          if (str2) {
-                            let tmp3 = closure_1_50.indexOf(str2.toLowerCase()) >= 0;
-                            if (!tmp3) {
-                              const formatted = str2.toLowerCase();
-                              tmp3 = 0 === formatted.indexOf("x-litix-");
-                            }
-                            tmp = tmp3;
-                          }
-                          if (tmp) {
-                            obj[str2] = parts.join(": ");
-                          }
+                  if (typeof Se === "function") {
+                    if (networkDetails) {
+                      if (typeof networkDetails.getAllResponseHeaders === "function") {
+                        let str2 = networkDetails.getAllResponseHeaders();
+                        let obj = {};
+                        if (!str2) {
+                          str2 = "";
                         }
-                      });
-                      tmp3 = obj;
-                      const str3 = str2.trim();
+                        let parts = str2.trim().split(/[\r\n]+/);
+                        const item = parts.forEach((item) => {
+                          if (item) {
+                            const parts = item.split(": ");
+                            const str2 = parts.shift();
+                            let tmp = str2;
+                            if (str2) {
+                              let tmp3 = closure_2_50.indexOf(str2.toLowerCase()) >= 0;
+                              if (!tmp3) {
+                                const formatted = str2.toLowerCase();
+                                tmp3 = 0 === formatted.indexOf("x-litix-");
+                              }
+                              tmp = tmp3;
+                            }
+                            if (tmp) {
+                              obj[str2] = parts.join(": ");
+                            }
+                          }
+                        });
+                        const str3 = str2.trim();
+                      }
                     }
+                  } else {
+                    throw new TypeError("Trying to call a non-function");
                   }
                 }
                 if (tmp6) {
-                  obj = { request_error: null, request_url: null, request_hostname: null, request_id: null, request_type: null, request_error_code: null, request_error_text: null };
-                  obj[0] = details;
-                  obj[1] = str;
-                  if (typeof closure_1_44 !== "function") {
-                    HermesBuiltin.throwTypeError();
-                  }
-                  if (typeof closure_1_45 !== "function") {
-                    HermesBuiltin.throwTypeError();
-                  }
-                  if (typeof str === "string") {
-                    if ("" !== str) {
-                      const str4 = str.match(/^(([^:\/?#]+):)?(\/\/([^\/?#]*))?([^?#]*)(\?([^#]*))?(#(.*))?/) || [][4];
-                      let first;
-                      if (str4) {
-                        first = str4.match(/[^\.]+\.[^\.]+$/) || [][0];
-                        const tmp12 = str4.match(/[^\.]+\.[^\.]+$/) || [];
-                      }
-                      items = [str4, first];
-                      const tmp10 = str.match(/^(([^:\/?#]+):)?(\/\/([^\/?#]*))?([^?#]*)(\?([^#]*))?(#(.*))?/) || [];
-                    }
-                    obj[2] = items[0];
-                    let tmp13;
-                    if (tmp) {
-                      obj = tmp;
-                      let tmp14;
-                      if (tmp) {
-                        const found = closure_1_49.find((arg0) => undefined !== obj[arg0]);
-                        let tmp17;
-                        if (found) {
-                          tmp17 = tmp[found];
+                  obj = { request_error: details, request_url: str, request_hostname: null, request_id: null, request_type: null, request_error_code: null, request_error_text: null };
+                  if (typeof closure_2_44 === "function") {
+                    if (typeof re === "function") {
+                      if (typeof str === "string") {
+                        if ("" !== str) {
+                          const str4 = str.match(/^(([^:\/?#]+):)?(\/\/([^\/?#]*))?([^?#]*)(\?([^#]*))?(#(.*))?/) || [][4];
+                          let first;
+                          if (str4) {
+                            first = str4.match(/[^\.]+\.[^\.]+$/) || [][0];
+                            const tmp12 = str4.match(/[^\.]+\.[^\.]+$/) || [];
+                          }
+                          items = [str4, first];
+                          const tmp10 = str.match(/^(([^:\/?#]+):)?(\/\/([^\/?#]*))?([^?#]*)(\?([^#]*))?(#(.*))?/) || [];
                         }
-                        tmp14 = tmp17;
-                      }
-                      tmp13 = tmp14;
-                    }
-                    obj[3] = tmp13;
-                    let str6 = "media";
-                    if (details !== tmp5.ErrorDetails.FRAG_LOAD_ERROR) {
-                      str6 = "media";
-                      if (details !== tmp5.ErrorDetails.FRAG_LOAD_TIMEOUT) {
-                        let str7 = "audio";
-                        if (details !== tmp5.ErrorDetails.AUDIO_TRACK_LOAD_ERROR) {
-                          str7 = "audio";
-                          if (details !== tmp5.ErrorDetails.AUDIO_TRACK_LOAD_TIMEOUT) {
-                            let str9 = "subtitle";
-                            if (details !== tmp5.ErrorDetails.SUBTITLE_LOAD_ERROR) {
-                              str9 = "subtitle";
-                              if (details !== tmp5.ErrorDetails.SUBTITLE_LOAD_TIMEOUT) {
-                                if (details === tmp5.ErrorDetails.KEY_LOAD_ERROR) {
-                                  let str10 = "encryption";
-                                } else {
-                                  str10 = "manifest";
+                        obj.request_hostname = items[0];
+                        let tmp13;
+                        if (tmp) {
+                          obj = tmp;
+                          let tmp14;
+                          if (tmp) {
+                            const found = closure_2_49.find((item) => undefined !== obj[item]);
+                            let tmp17;
+                            if (found) {
+                              tmp17 = tmp[found];
+                            }
+                            tmp14 = tmp17;
+                          }
+                          tmp13 = tmp14;
+                        }
+                        obj.request_id = tmp13;
+                        let str6 = "media";
+                        if (details !== tmp5.ErrorDetails.FRAG_LOAD_ERROR) {
+                          str6 = "media";
+                          if (details !== tmp5.ErrorDetails.FRAG_LOAD_TIMEOUT) {
+                            let str7 = "audio";
+                            if (details !== tmp5.ErrorDetails.AUDIO_TRACK_LOAD_ERROR) {
+                              str7 = "audio";
+                              if (details !== tmp5.ErrorDetails.AUDIO_TRACK_LOAD_TIMEOUT) {
+                                let str9 = "subtitle";
+                                if (details !== tmp5.ErrorDetails.SUBTITLE_LOAD_ERROR) {
+                                  str9 = "subtitle";
+                                  if (details !== tmp5.ErrorDetails.SUBTITLE_LOAD_TIMEOUT) {
+                                    if (details === tmp5.ErrorDetails.KEY_LOAD_ERROR) {
+                                      let str10 = "encryption";
+                                    } else {
+                                      str10 = "manifest";
+                                    }
+                                    str9 = str10;
+                                  }
                                 }
-                                str9 = str10;
+                                str7 = str9;
                               }
                             }
-                            str7 = str9;
+                            str6 = str7;
                           }
                         }
-                        str6 = str7;
+                        obj.request_type = str6;
+                        let code;
+                        if (null != response) {
+                          code = response.code;
+                        }
+                        obj.request_error_code = code;
+                        let text;
+                        if (null != response) {
+                          text = response.text;
+                        }
+                        obj.request_error_text = text;
+                        if (typeof tmp7 === "function") {
+                          mux.emit(closure_1, "requestfailed", obj);
+                        } else {
+                          throw new TypeError("Trying to call a non-function");
+                        }
                       }
+                      items = ["localhost"];
+                    } else {
+                      throw new TypeError("Trying to call a non-function");
                     }
-                    obj[4] = str6;
-                    let code;
-                    if (null != response) {
-                      code = response.code;
-                    }
-                    obj[5] = code;
-                    let text;
-                    if (null != response) {
-                      text = response.text;
-                    }
-                    obj[6] = text;
-                    if (typeof tmp7 !== "function") {
-                      HermesBuiltin.throwTypeError();
-                    }
-                    obj.emit(closure_1, "requestfailed", obj);
+                  } else {
+                    throw new TypeError("Trying to call a non-function");
                   }
-                  items = ["localhost"];
-                  tmp7 = u;
                 }
                 if (fatal) {
                   let str13 = "";
@@ -11836,14 +11617,12 @@ const items11 = [
                     }
                     str38 = "error message: ".concat(message, "\n");
                   }
-                  obj = { player_error_code: null, player_error_message: null, player_error_context: null };
-                  obj[0] = type;
-                  obj[1] = details;
-                  obj[2] = sum6 + "".concat(str38);
-                  if (typeof u !== "function") {
-                    HermesBuiltin.throwTypeError();
+                  obj = { player_error_code: type, player_error_message: details, player_error_context: sum6 + "".concat(str38) };
+                  if (typeof u === "function") {
+                    mux.emit(closure_1, "error", obj);
+                  } else {
+                    throw new TypeError("Trying to call a non-function");
                   }
-                  obj.emit(closure_1, "error", obj);
                 }
               };
               hlsjs.on(tmp.Events.ERROR, fn6);
@@ -11857,30 +11636,33 @@ const items11 = [
                   str = "";
                 }
                 const obj = { request_event_type, request_url: str, request_type: "media", request_hostname: null };
-                if (typeof closure_1_44 !== "function") {
-                  HermesBuiltin.throwTypeError();
-                }
-                if (typeof closure_1_45 !== "function") {
-                  HermesBuiltin.throwTypeError();
-                }
-                if (typeof str === "string") {
-                  if ("" !== str) {
-                    const str2 = str.match(/^(([^:\/?#]+):)?(\/\/([^\/?#]*))?([^?#]*)(\?([^#]*))?(#(.*))?/) || [][4];
-                    let first;
-                    if (str2) {
-                      first = str2.match(/[^\.]+\.[^\.]+$/) || [][0];
-                      const tmp4 = str2.match(/[^\.]+\.[^\.]+$/) || [];
+                if (typeof closure_2_44 === "function") {
+                  if (typeof re === "function") {
+                    if (typeof str === "string") {
+                      if ("" !== str) {
+                        const str2 = str.match(/^(([^:\/?#]+):)?(\/\/([^\/?#]*))?([^?#]*)(\?([^#]*))?(#(.*))?/) || [][4];
+                        let first;
+                        if (str2) {
+                          first = str2.match(/[^\.]+\.[^\.]+$/) || [][0];
+                          const tmp5 = str2.match(/[^\.]+\.[^\.]+$/) || [];
+                        }
+                        items = [str2, first];
+                        const tmp3 = str.match(/^(([^:\/?#]+):)?(\/\/([^\/?#]*))?([^?#]*)(\?([^#]*))?(#(.*))?/) || [];
+                      }
+                      obj.request_hostname = items[0];
+                      if (typeof tmp === "function") {
+                        mux.emit(closure_1, "requestcanceled", obj);
+                      } else {
+                        throw new TypeError("Trying to call a non-function");
+                      }
                     }
-                    items = [str2, first];
-                    const tmp2 = str.match(/^(([^:\/?#]+):)?(\/\/([^\/?#]*))?([^?#]*)(\?([^#]*))?(#(.*))?/) || [];
+                    items = ["localhost"];
+                  } else {
+                    throw new TypeError("Trying to call a non-function");
                   }
-                  obj[3] = items[0];
-                  if (typeof u !== "function") {
-                    HermesBuiltin.throwTypeError();
-                  }
-                  mux.emit(closure_1, "requestcanceled", obj);
+                } else {
+                  throw new TypeError("Trying to call a non-function");
                 }
-                items = ["localhost"];
               };
               hlsjs.on(tmp.Events.FRAG_LOAD_EMERGENCY_ABORTED, fn7);
               fn8 = function x(arg0, arg1) {
@@ -11895,19 +11677,18 @@ const items11 = [
                         const tmp4 = parsed;
                       }
                       if (BANDWIDTH) {
-                        const obj = { video_source_fps: null, video_source_bitrate: null, video_source_width: null, video_source_height: null, video_source_rendition_name: null, video_source_codec: null };
-                        obj[0] = tmp4;
-                        obj[1] = BANDWIDTH;
-                        ({ width: obj[2], height: obj[3], name: obj[4] } = tmp);
+                        const obj = { video_source_fps: tmp4, video_source_bitrate: BANDWIDTH, video_source_width: null, video_source_height: null, video_source_rendition_name: null, video_source_codec: null };
+                        ({ width: obj.video_source_width, height: obj.video_source_height, name: obj.video_source_rendition_name } = tmp);
                         let videoCodec;
                         if (null != tmp) {
                           videoCodec = tmp.videoCodec;
                         }
-                        obj[5] = videoCodec;
-                        if (typeof tmp7 !== "function") {
-                          HermesBuiltin.throwTypeError();
+                        obj.video_source_codec = videoCodec;
+                        if (typeof tmp7 === "function") {
+                          mux.emit(closure_1, "renditionchange", obj);
+                        } else {
+                          throw new TypeError("Trying to call a non-function");
                         }
-                        mux.emit(closure_1, "renditionchange", obj);
                         tmp7 = u;
                       } else {
                         log.warn("missing BANDWIDTH from HLS manifest parsed by HLS.js");
@@ -11970,415 +11751,423 @@ const items11 = [
           self.dashjs = dashjs.dashjs;
           const mux = self.mux;
           dashjs = dashjs.dashjs;
-          if (typeof Ct !== "function") {
-            HermesBuiltin.throwTypeError();
-          }
-          const id = self.id;
-          const log2 = mux.log;
-          if (dashjs) {
-            if (dashjs.on) {
-              let tmp4 = ((dashjs) => {
-                try {
-                  const getVersion = dashjs.getVersion;
-                  let first;
-                  if (null !== getVersion) {
-                    if (undefined !== tmp2) {
-                      const call = tmp2.call;
-                      if (typeof call === "unknown") {
-                        let callResult = tmp2();
-                      } else {
-                        callResult = call(dashjs);
-                      }
-                      if (null !== callResult) {
-                        if (undefined !== str) {
-                          const parts = str.split(".");
-                          first = parts.map((joined) => parseInt(joined))[0];
-                        }
-                      }
-                    }
-                  }
-                  return first;
-                } catch (err) {
-                  return false;
-                }
-              })(dashjs);
-              function o(arg0, arg1) {
-
-              }
-              const fn = function s(arg0) {
-                ({ data, type } = arg0);
-                if (!data) {
-                  data = {};
-                }
-                const obj = { request_event_type: type, request_start: 0, request_response_start: 0, request_response_end: 0, request_bytes_loaded: -1, request_type: "manifest", request_hostname: null, request_url: null };
-                if (typeof closure_1_44 !== "function") {
-                  HermesBuiltin.throwTypeError();
-                }
-                if (typeof closure_1_45 !== "function") {
-                  HermesBuiltin.throwTypeError();
-                }
-                if (typeof data.url === "string") {
-                  if ("" !== str) {
-                    const str2 = str.match(/^(([^:\/?#]+):)?(\/\/([^\/?#]*))?([^?#]*)(\?([^#]*))?(#(.*))?/) || [][4];
+          if (typeof Ct === "function") {
+            closure_1 = tmp3;
+            const log2 = mux.log;
+            if (dashjs) {
+              if (dashjs.on) {
+                let tmp5 = ((dashjs) => {
+                  try {
+                    const getVersion = dashjs.getVersion;
                     let first;
-                    if (str2) {
-                      first = str2.match(/[^\.]+\.[^\.]+$/) || [][0];
-                      const tmp4 = str2.match(/[^\.]+\.[^\.]+$/) || [];
-                    }
-                    items = [str2, first];
-                    const tmp2 = str.match(/^(([^:\/?#]+):)?(\/\/([^\/?#]*))?([^?#]*)(\?([^#]*))?(#(.*))?/) || [];
-                  }
-                  obj[6] = items[0];
-                  obj[7] = str;
-                  if (typeof o !== "function") {
-                    HermesBuiltin.throwTypeError();
-                  }
-                  mux.emit(id, "requestcompleted", obj);
-                }
-                items = ["localhost"];
-              };
-              dashjs.on("manifestLoaded", fn);
-              closure_6 = {};
-              function f(arg0) {
-
-              }
-              const fn2 = function k(arg0) {
-                ({ chunk, type, request } = arg0);
-                if (!chunk) {
-                  chunk = {};
-                }
-                ({ type: type2, bitrateList } = chunk.mediaInfo || {});
-                let obj = {};
-                if (!bitrateList) {
-                  bitrateList = [];
-                }
-                const item = bitrateList.forEach((arg0, arg1) => {
-                  obj[arg1] = {};
-                  ({ width: obj[arg1].width, height: obj[arg1].height, bandwidth: obj[arg1].bitrate } = arg0);
-                  obj[arg1].attrs = {};
-                });
-                if ("video" === type2) {
-                  closure_6.video = obj;
-                  let tmp2 = closure_6;
-                } else if ("audio" === type2) {
-                  closure_6.audio = obj;
-                  tmp2 = closure_6;
-                } else {
-                  tmp2 = closure_6;
-                  closure_6.media = obj;
-                }
-                const tmp5 = closure_1_54(request, dashjs);
-                obj = { request_event_type: type, request_start: tmp5.requestStart, request_response_start: tmp5.requestResponseStart, request_response_end: tmp5.requestResponseEnd, request_bytes_loaded: -1, request_type: `${type2}_init`, request_response_headers: tmp5.requestResponseHeaders, request_hostname: tmp5.requestHostname, request_id: tmp5.requestId, request_url: tmp5.requestUrl, request_media_duration: tmp5.requestMediaDuration, request_rendition_lists: tmp2 };
-                if (typeof o !== "function") {
-                  HermesBuiltin.throwTypeError();
-                }
-                obj.emit(id, "requestcompleted", obj);
-              };
-              if (tmp4 >= 4) {
-                dashjs.on("initFragmentLoaded", fn2);
-              } else {
-                dashjs.on("initFragmentLoaded", (fragmentModel) => {
-                  fragmentModel = fragmentModel.fragmentModel;
-                  ({ type, chunk } = fragmentModel);
-                  if (typeof f !== "function") {
-                    HermesBuiltin.throwTypeError();
-                  }
-                  let tmp = null;
-                  if (typeof fragmentModel.getRequests === "function") {
-                    const requests = fragmentModel.getRequests({ state: "executed" });
-                    let tmp2 = null;
-                    if (0 !== requests.length) {
-                      tmp2 = requests[requests.length - 1];
-                    }
-                    tmp = tmp2;
-                  }
-                  fn2({ type, request: tmp, chunk });
-                });
-              }
-              fn3 = function c(arg0) {
-                ({ chunk, type, request } = arg0);
-                if (!chunk) {
-                  chunk = {};
-                }
-                ({ mediaInfo, start } = chunk);
-                if (!mediaInfo) {
-                  mediaInfo = {};
-                }
-                const type2 = mediaInfo.type;
-                ({ requestStart, requestResponseStart, requestResponseEnd, requestBytesLoaded, requestResponseHeaders, requestMediaDuration, requestHostname, requestUrl, requestId } = closure_1_54(request, dashjs));
-                const qualityFor = dashjs.getQualityFor(type2);
-                const bitrateList = dashjs.getCurrentTrackFor(type2).bitrateList;
-                if (bitrateList) {
-                  let obj = { currentLevel: null, renditionWidth: null, renditionHeight: null, renditionBitrate: null };
-                  obj[0] = qualityFor;
-                  obj[1] = bitrateList[qualityFor].width || null;
-                  obj[2] = bitrateList[qualityFor].height || null;
-                  obj[3] = bitrateList[qualityFor].bandwidth;
-                } else {
-                  obj = {};
-                }
-                obj = { request_event_type: type, request_start: requestStart, request_response_start: requestResponseStart, request_response_end: requestResponseEnd, request_bytes_loaded: requestBytesLoaded, request_type: type2, request_response_headers: requestResponseHeaders, request_hostname: requestHostname, request_id: requestId, request_url: requestUrl, request_media_start_time: start, request_media_duration: requestMediaDuration, request_current_level: obj.currentLevel, request_labeled_bitrate: obj.renditionBitrate, request_video_width: obj.renditionWidth, request_video_height: obj.renditionHeight };
-                if (typeof o !== "function") {
-                  HermesBuiltin.throwTypeError();
-                }
-                mux.emit(id, "requestcompleted", obj);
-              };
-              if (tmp4 >= 4) {
-                dashjs.on("mediaFragmentLoaded", fn3);
-              } else {
-                dashjs.on("mediaFragmentLoaded", (fragmentModel) => {
-                  fragmentModel = fragmentModel.fragmentModel;
-                  ({ type, chunk } = fragmentModel);
-                  if (typeof f !== "function") {
-                    HermesBuiltin.throwTypeError();
-                  }
-                  let tmp = null;
-                  if (typeof fragmentModel.getRequests === "function") {
-                    const requests = fragmentModel.getRequests({ state: "executed" });
-                    let tmp2 = null;
-                    if (0 !== requests.length) {
-                      tmp2 = requests[requests.length - 1];
-                    }
-                    tmp = tmp2;
-                  }
-                  fn3({ type, request: tmp, chunk });
-                });
-              }
-              closure_10 = { video: "Array", audio: "call", totalBitrate: "o" };
-              fn4 = function x(newQuality) {
-                let obj = newQuality;
-                if (typeof newQuality.newQuality === "number") {
-                  const mediaType = newQuality.mediaType;
-                  if ("audio" === mediaType) {
-                    obj = dashjs;
-                    const bitrateInfoListFor = dashjs.getBitrateInfoListFor(mediaType);
-                    const found = bitrateInfoListFor.find((qualityIndex) => qualityIndex.qualityIndex === obj.newQuality);
-                    if (found) {
-                      if (typeof found.bitrate === "number") {
-                        obj = {};
-                        closure_1_48(obj, found);
-                        obj = { codec: null };
-                        obj[0] = obj.getCurrentTrackFor(mediaType).codec;
-                        const _Object5 = Object;
-                        const _Object6 = Object;
-                        if (Object.getOwnPropertyDescriptors) {
-                          const _Object4 = Object;
-                          _Object6.defineProperties(obj, Object.getOwnPropertyDescriptors(obj));
+                    if (null !== getVersion) {
+                      if (undefined !== tmp2) {
+                        const call = tmp2.call;
+                        if (typeof call === "unknown") {
+                          let callResult = tmp2();
                         } else {
-                          const _Object6Result = _Object6(obj);
-                          obj = _Object6Result;
-                          const _Object = Object;
-                          const keys = Object.keys(_Object6Result);
-                          const _Object2 = Object;
-                          if (Object.getOwnPropertySymbols) {
-                            const _Object3 = Object;
-                            const push = keys.push;
-                            push.apply(keys, Object.getOwnPropertySymbols(_Object6Result));
-                          }
-                          const item = keys.forEach((arg0) => {
-                            Object.defineProperty(obj2, arg0, Object.getOwnPropertyDescriptor(obj3, arg0));
-                          });
+                          callResult = call(dashjs);
                         }
-                        closure_10[mediaType] = obj;
-                        let tmp6;
-                        if (closure_10.video) {
-                          if (typeof tmp22.video.bitrate === "number") {
-                            if (tmp22.video.width) {
-                              if (tmp22.video.height) {
-                                const bitrate = tmp22.video.bitrate;
-                                let sum = bitrate;
-                                if (tmp9) {
-                                  sum = bitrate + tmp22.audio.bitrate;
-                                }
-                                if (sum !== tmp22.totalBitrate) {
-                                  tmp22.totalBitrate = sum;
-                                  obj1 = { video_source_bitrate: null, video_source_height: null, video_source_width: null, video_source_codec: null };
-                                  obj1[0] = sum;
-                                  obj1[1] = tmp22.video.height;
-                                  obj1[2] = tmp22.video.width;
-                                  if (typeof closure_1_55 !== "function") {
-                                    HermesBuiltin.throwTypeError();
-                                  }
-                                  const match = tmp22.video.codec.match(/.*codecs\*?="(.*)"/);
-                                  let tmp13;
-                                  if (null !== match) {
-                                    if (undefined !== match) {
-                                      tmp13 = match[1];
-                                    }
-                                  }
-                                  obj1[3] = tmp13;
-                                  tmp6 = obj1;
-                                  const str7 = tmp22.video.codec;
-                                }
-                                tmp9 = tmp22.audio && typeof tmp22.audio.bitrate === "number";
-                              }
-                            }
-                            log2.warn("have bitrate info for video but missing width/height");
+                        if (null !== callResult) {
+                          if (undefined !== str) {
+                            const parts = str.split(".");
+                            first = parts.map((item) => parseInt(item))[0];
                           }
-                        }
-                        if (tmp6) {
-                          if (typeof o !== "function") {
-                            HermesBuiltin.throwTypeError();
-                          }
-                          obj.emit(obj, "renditionchange", tmp6);
                         }
                       }
                     }
-                    const concat = "missing bitrate info for ".concat;
-                    log2.warn("missing bitrate info for ".concat(mediaType));
+                    return first;
+                  } catch (err) {
+                    return false;
                   }
+                })(dashjs);
+                function o(arg0, arg1) {
+
+                }
+                fn = function s(arg0) {
+                  ({ data, type } = arg0);
+                  if (!data) {
+                    data = {};
+                  }
+                  const obj = { request_event_type: type, request_start: 0, request_response_start: 0, request_response_end: 0, request_bytes_loaded: -1, request_type: "manifest", request_hostname: null, request_url: null };
+                  if (typeof closure_44 === "function") {
+                    if (typeof re === "function") {
+                      if (typeof str === "string") {
+                        if ("" !== str) {
+                          const str2 = str.match(/^(([^:\/?#]+):)?(\/\/([^\/?#]*))?([^?#]*)(\?([^#]*))?(#(.*))?/) || [][4];
+                          let first;
+                          if (str2) {
+                            first = str2.match(/[^\.]+\.[^\.]+$/) || [][0];
+                            const tmp5 = str2.match(/[^\.]+\.[^\.]+$/) || [];
+                          }
+                          items = [str2, first];
+                          const tmp3 = str.match(/^(([^:\/?#]+):)?(\/\/([^\/?#]*))?([^?#]*)(\?([^#]*))?(#(.*))?/) || [];
+                        }
+                        obj.request_hostname = items[0];
+                        obj.request_url = str;
+                        if (typeof tmp === "function") {
+                          mux.emit(closure_1, "requestcompleted", obj);
+                        } else {
+                          throw new TypeError("Trying to call a non-function");
+                        }
+                      }
+                      items = ["localhost"];
+                    } else {
+                      throw new TypeError("Trying to call a non-function");
+                    }
+                  } else {
+                    throw new TypeError("Trying to call a non-function");
+                  }
+                };
+                dashjs.on("manifestLoaded", fn);
+                closure_6 = {};
+                function f(arg0) {
+
+                }
+                const fn2 = function k(arg0) {
+                  ({ chunk, type, request } = arg0);
+                  if (!chunk) {
+                    chunk = {};
+                  }
+                  ({ type: type2, bitrateList } = chunk.mediaInfo || {});
+                  let media = {};
+                  if (!bitrateList) {
+                    bitrateList = [];
+                  }
+                  const item = bitrateList.forEach((item, index) => {
+                    obj[index] = {};
+                    ({ width: obj[index].width, height: obj[index].height, bandwidth: obj[index].bitrate } = item);
+                    obj[index].attrs = {};
+                  });
+                  if ("video" === type2) {
+                    closure_6.video = media;
+                    let tmp2 = closure_6;
+                  } else if ("audio" === type2) {
+                    closure_6.audio = media;
+                    tmp2 = closure_6;
+                  } else {
+                    tmp2 = closure_6;
+                    closure_6.media = media;
+                  }
+                  const tmp5 = Nt(request, dashjs);
+                  media = { request_event_type: type, request_start: tmp5.requestStart, request_response_start: tmp5.requestResponseStart, request_response_end: tmp5.requestResponseEnd, request_bytes_loaded: -1, request_type: `${type2}_init`, request_response_headers: tmp5.requestResponseHeaders, request_hostname: tmp5.requestHostname, request_id: tmp5.requestId, request_url: tmp5.requestUrl, request_media_duration: tmp5.requestMediaDuration, request_rendition_lists: tmp2 };
+                  if (typeof o === "function") {
+                    mux.emit(closure_1, "requestcompleted", media);
+                  } else {
+                    throw new TypeError("Trying to call a non-function");
+                  }
+                };
+                if (tmp5 >= 4) {
+                  dashjs.on("initFragmentLoaded", fn2);
                 } else {
-                  log2.warn("missing evt.newQuality in qualityChangeRendered event", newQuality);
-                }
-              };
-              dashjs.on("qualityChangeRendered", fn4);
-              fn5 = function v(arg0) {
-                ({ request, mediaType } = arg0);
-                if (!request) {
-                  request = {};
-                }
-                const obj = { request_event_type: `${request.type}_${request.action}`, request_url: request.url, request_type: mediaType, request_hostname: null };
-                if (typeof closure_1_44 !== "function") {
-                  HermesBuiltin.throwTypeError();
-                }
-                if (typeof closure_1_45 !== "function") {
-                  HermesBuiltin.throwTypeError();
-                }
-                if (typeof request.url === "string") {
-                  if ("" !== str) {
-                    const str2 = str.match(/^(([^:\/?#]+):)?(\/\/([^\/?#]*))?([^?#]*)(\?([^#]*))?(#(.*))?/) || [][4];
-                    let first;
-                    if (str2) {
-                      first = str2.match(/[^\.]+\.[^\.]+$/) || [][0];
-                      const tmp4 = str2.match(/[^\.]+\.[^\.]+$/) || [];
-                    }
-                    items = [str2, first];
-                    const tmp2 = str.match(/^(([^:\/?#]+):)?(\/\/([^\/?#]*))?([^?#]*)(\?([^#]*))?(#(.*))?/) || [];
-                  }
-                  obj[3] = items[0];
-                  if (typeof o !== "function") {
-                    HermesBuiltin.throwTypeError();
-                  }
-                  mux.emit(id, "requestcanceled", obj);
-                }
-                items = ["localhost"];
-              };
-              dashjs.on("fragmentLoadingAbandoned", fn5);
-              fn6 = function p(error) {
-                error = error.error;
-                let request;
-                if (null != error) {
-                  const data = error.data;
-                  if (null !== data) {
-                    if (undefined !== data) {
-                      request = data.request;
-                    }
-                  }
-                }
-                if (!request) {
-                  request = {};
-                }
-                let response;
-                if (null != error) {
-                  const data2 = error.data;
-                  if (null !== data2) {
-                    if (undefined !== data2) {
-                      response = data2.response;
-                    }
-                  }
-                }
-                if (!response) {
-                  response = {};
-                }
-                let code;
-                if (null != error) {
-                  code = error.code;
-                }
-                if (27 === code) {
-                  let obj = { request_error: null, request_url: null, request_hostname: null, request_type: null, request_error_code: null, request_error_text: null };
-                  obj[0] = `${obj.type}_${obj.action}`;
-                  obj[1] = request.url;
-                  if (typeof closure_1_44 !== "function") {
-                    HermesBuiltin.throwTypeError();
-                  }
-                  if (typeof closure_1_45 !== "function") {
-                    HermesBuiltin.throwTypeError();
-                  }
-                  if (typeof request.url === "string") {
-                    if ("" !== str9) {
-                      const str = str9.match(/^(([^:\/?#]+):)?(\/\/([^\/?#]*))?([^?#]*)(\?([^#]*))?(#(.*))?/) || [][4];
-                      let first;
-                      if (str) {
-                        first = str.match(/[^\.]+\.[^\.]+$/) || [][0];
-                        const tmp5 = str.match(/[^\.]+\.[^\.]+$/) || [];
+                  dashjs.on("initFragmentLoaded", (fragmentModel) => {
+                    fragmentModel = fragmentModel.fragmentModel;
+                    if (typeof f === "function") {
+                      let tmp3 = null;
+                      if (typeof fragmentModel.getRequests === "function") {
+                        const requests = fragmentModel.getRequests({ state: "executed" });
+                        let tmp4 = null;
+                        if (0 !== requests.length) {
+                          tmp4 = requests[requests.length - 1];
+                        }
+                        tmp3 = tmp4;
                       }
-                      items = [str, first];
-                      const tmp3 = str9.match(/^(([^:\/?#]+):)?(\/\/([^\/?#]*))?([^?#]*)(\?([^#]*))?(#(.*))?/) || [];
+                      const obj = { type: tmp, request: tmp3, chunk: tmp2 };
+                      fn2(obj);
+                    } else {
+                      throw new TypeError("Trying to call a non-function");
                     }
-                    obj[2] = items[0];
-                    obj[3] = request.mediaType;
-                    ({ status: obj5[4], statusText: obj5[5] } = response);
-                    if (typeof tmp20 !== "function") {
-                      HermesBuiltin.throwTypeError();
+                  });
+                }
+                fn3 = function c(arg0) {
+                  ({ chunk, type, request } = arg0);
+                  if (!chunk) {
+                    chunk = {};
+                  }
+                  ({ mediaInfo, start } = chunk);
+                  if (!mediaInfo) {
+                    mediaInfo = {};
+                  }
+                  const type2 = mediaInfo.type;
+                  ({ requestStart, requestResponseStart, requestResponseEnd, requestBytesLoaded, requestResponseHeaders, requestMediaDuration, requestHostname, requestUrl, requestId } = Nt(request, dashjs));
+                  const qualityFor = dashjs.getQualityFor(type2);
+                  const bitrateList = dashjs.getCurrentTrackFor(type2).bitrateList;
+                  if (bitrateList) {
+                    let obj = { currentLevel: qualityFor, renditionWidth: bitrateList[qualityFor].width || null, renditionHeight: bitrateList[qualityFor].height || null, renditionBitrate: bitrateList[qualityFor].bandwidth };
+                  } else {
+                    obj = {};
+                  }
+                  obj = { request_event_type: type, request_start: requestStart, request_response_start: requestResponseStart, request_response_end: requestResponseEnd, request_bytes_loaded: requestBytesLoaded, request_type: type2, request_response_headers: requestResponseHeaders, request_hostname: requestHostname, request_id: requestId, request_url: requestUrl, request_media_start_time: start, request_media_duration: requestMediaDuration, request_current_level: obj.currentLevel, request_labeled_bitrate: obj.renditionBitrate, request_video_width: obj.renditionWidth, request_video_height: obj.renditionHeight };
+                  if (typeof o === "function") {
+                    mux.emit(closure_1, "requestcompleted", obj);
+                  } else {
+                    throw new TypeError("Trying to call a non-function");
+                  }
+                  const tmp = Nt(request, dashjs);
+                };
+                if (tmp5 >= 4) {
+                  dashjs.on("mediaFragmentLoaded", fn3);
+                } else {
+                  dashjs.on("mediaFragmentLoaded", (fragmentModel) => {
+                    fragmentModel = fragmentModel.fragmentModel;
+                    if (typeof f === "function") {
+                      let tmp3 = null;
+                      if (typeof fragmentModel.getRequests === "function") {
+                        const requests = fragmentModel.getRequests({ state: "executed" });
+                        let tmp4 = null;
+                        if (0 !== requests.length) {
+                          tmp4 = requests[requests.length - 1];
+                        }
+                        tmp3 = tmp4;
+                      }
+                      const obj = { type: tmp, request: tmp3, chunk: tmp2 };
+                      fn3(obj);
+                    } else {
+                      throw new TypeError("Trying to call a non-function");
                     }
-                    mux.emit(id, "requestfailed", obj);
-                  }
-                  items = ["localhost"];
-                  tmp20 = o;
+                  });
                 }
-                if (null != request) {
-                  if (request.url) {
-                    const concat = "url: ".concat;
-                    "url: ".concat(request.url, "\n");
+                const video = { video: "Array", audio: "call", totalBitrate: "o" };
+                fn4 = function x(newQuality, arg1, arg2) {
+                  let obj = newQuality;
+                  if (typeof newQuality.newQuality === "number") {
+                    const mediaType = newQuality.mediaType;
+                    if ("audio" === mediaType) {
+                      obj = dashjs;
+                      const bitrateInfoListFor = dashjs.getBitrateInfoListFor(mediaType);
+                      const found = bitrateInfoListFor.find((qualityIndex) => qualityIndex.qualityIndex === obj.newQuality);
+                      if (found) {
+                        if (typeof found.bitrate === "number") {
+                          obj = {};
+                          ue(obj, found);
+                          obj = { codec: null };
+                          obj.codec = obj.getCurrentTrackFor(mediaType).codec;
+                          const _Object5 = Object;
+                          const _Object6 = Object;
+                          if (Object.getOwnPropertyDescriptors) {
+                            const _Object4 = Object;
+                            _Object6.defineProperties(obj, Object.getOwnPropertyDescriptors(obj));
+                          } else {
+                            const _Object6Result = _Object6(obj);
+                            obj = _Object6Result;
+                            const _Object = Object;
+                            const keys = Object.keys(_Object6Result);
+                            const _Object2 = Object;
+                            if (Object.getOwnPropertySymbols) {
+                              const _Object3 = Object;
+                              const push = keys.push;
+                              push.apply(keys, Object.getOwnPropertySymbols(_Object6Result));
+                            }
+                            const item = keys.forEach((item) => {
+                              Object.defineProperty(obj2, item, Object.getOwnPropertyDescriptor(obj3, item));
+                            });
+                          }
+                          video[mediaType] = obj;
+                          let tmp6;
+                          if (video.video) {
+                            if (typeof tmp22.video.bitrate === "number") {
+                              if (tmp22.video.width) {
+                                if (tmp22.video.height) {
+                                  const bitrate = tmp22.video.bitrate;
+                                  let sum = bitrate;
+                                  if (tmp9) {
+                                    sum = bitrate + tmp22.audio.bitrate;
+                                  }
+                                  if (sum !== tmp22.totalBitrate) {
+                                    tmp22.totalBitrate = sum;
+                                    const obj1 = { video_source_bitrate: sum, video_source_height: tmp22.video.height, video_source_width: tmp22.video.width, video_source_codec: null };
+                                    if (typeof pa === "function") {
+                                      const match = str7.match(/.*codecs\*?="(.*)"/);
+                                      let tmp13;
+                                      if (null !== match) {
+                                        if (undefined !== match) {
+                                          tmp13 = match[1];
+                                        }
+                                      }
+                                      obj1.video_source_codec = tmp13;
+                                      tmp6 = obj1;
+                                    } else {
+                                      throw new TypeError("Trying to call a non-function");
+                                    }
+                                    str7 = tmp22.video.codec;
+                                  }
+                                  tmp9 = tmp22.audio && typeof tmp22.audio.bitrate === "number";
+                                }
+                              }
+                              log2.warn("have bitrate info for video but missing width/height");
+                            }
+                          }
+                          if (tmp6) {
+                            if (typeof o === "function") {
+                              mux.emit(closure_1, "renditionchange", tmp6);
+                            } else {
+                              throw new TypeError("Trying to call a non-function");
+                            }
+                          }
+                        }
+                      }
+                      const concat = "missing bitrate info for ".concat;
+                      log2.warn("missing bitrate info for ".concat(mediaType));
+                    }
+                  } else {
+                    log2.warn("missing evt.newQuality in qualityChangeRendered event", newQuality);
                   }
-                }
-                if (null == response) {
-                  let str6 = "";
+                };
+                dashjs.on("qualityChangeRendered", fn4);
+                fn5 = function v(arg0) {
+                  ({ request, mediaType } = arg0);
+                  if (!request) {
+                    request = {};
+                  }
+                  const obj = { request_event_type: `${request.type}_${request.action}`, request_url: request.url, request_type: mediaType, request_hostname: null };
+                  if (typeof closure_44 === "function") {
+                    if (typeof re === "function") {
+                      if (typeof str === "string") {
+                        if ("" !== str) {
+                          const str2 = str.match(/^(([^:\/?#]+):)?(\/\/([^\/?#]*))?([^?#]*)(\?([^#]*))?(#(.*))?/) || [][4];
+                          let first;
+                          if (str2) {
+                            first = str2.match(/[^\.]+\.[^\.]+$/) || [][0];
+                            const tmp5 = str2.match(/[^\.]+\.[^\.]+$/) || [];
+                          }
+                          items = [str2, first];
+                          const tmp3 = str.match(/^(([^:\/?#]+):)?(\/\/([^\/?#]*))?([^?#]*)(\?([^#]*))?(#(.*))?/) || [];
+                        }
+                        obj.request_hostname = items[0];
+                        if (typeof o === "function") {
+                          mux.emit(closure_1, "requestcanceled", obj);
+                        } else {
+                          throw new TypeError("Trying to call a non-function");
+                        }
+                      }
+                      items = ["localhost"];
+                    } else {
+                      throw new TypeError("Trying to call a non-function");
+                    }
+                  } else {
+                    throw new TypeError("Trying to call a non-function");
+                  }
+                };
+                dashjs.on("fragmentLoadingAbandoned", fn5);
+                fn6 = function p(error) {
+                  error = error.error;
+                  let request;
+                  if (null != error) {
+                    const data = error.data;
+                    if (null !== data) {
+                      if (undefined !== data) {
+                        request = data.request;
+                      }
+                    }
+                  }
+                  if (!request) {
+                    request = {};
+                  }
+                  let response;
+                  if (null != error) {
+                    const data2 = error.data;
+                    if (null !== data2) {
+                      if (undefined !== data2) {
+                        response = data2.response;
+                      }
+                    }
+                  }
+                  if (!response) {
+                    response = {};
+                  }
+                  let code;
+                  if (null != error) {
+                    code = error.code;
+                  }
+                  if (27 === code) {
+                    obj = { request_error: `${obj.type}_${obj.action}`, request_url: request.url, request_hostname: null, request_type: null, request_error_code: null, request_error_text: null };
+                    if (typeof closure_44 === "function") {
+                      if (typeof re === "function") {
+                        if (typeof str9 === "string") {
+                          if ("" !== str9) {
+                            const str = str9.match(/^(([^:\/?#]+):)?(\/\/([^\/?#]*))?([^?#]*)(\?([^#]*))?(#(.*))?/) || [][4];
+                            let first;
+                            if (str) {
+                              first = str.match(/[^\.]+\.[^\.]+$/) || [][0];
+                              const tmp5 = str.match(/[^\.]+\.[^\.]+$/) || [];
+                            }
+                            items = [str, first];
+                            const tmp3 = str9.match(/^(([^:\/?#]+):)?(\/\/([^\/?#]*))?([^?#]*)(\?([^#]*))?(#(.*))?/) || [];
+                          }
+                          obj.request_hostname = items[0];
+                          obj.request_type = request.mediaType;
+                          ({ status: obj5.request_error_code, statusText: obj5.request_error_text } = response);
+                          if (typeof tmp20 === "function") {
+                            mux.emit(closure_1, "requestfailed", obj);
+                          } else {
+                            throw new TypeError("Trying to call a non-function");
+                          }
+                        }
+                        items = ["localhost"];
+                      } else {
+                        throw new TypeError("Trying to call a non-function");
+                      }
+                    } else {
+                      throw new TypeError("Trying to call a non-function");
+                    }
+                  }
+                  if (null != request) {
+                    if (request.url) {
+                      const concat = "url: ".concat;
+                      "url: ".concat(request.url, "\n");
+                    }
+                  }
+                  if (null == response) {
+                    let str6 = "";
+                    if (null != response) {
+                      str6 = "";
+                    }
+                    let code1;
+                    const sum = tmp9 + tmp10(str6);
+                    if (null != error) {
+                      code1 = error.code;
+                    }
+                    obj = { player_error_code: code1, player_error_message: null, player_error_context: null };
+                    let message;
+                    if (null != error) {
+                      message = error.message;
+                    }
+                    obj.player_error_message = message;
+                    obj.player_error_context = sum;
+                    if (typeof tmp14 === "function") {
+                      mux.emit(closure_1, "error", obj);
+                    } else {
+                      throw new TypeError("Trying to call a non-function");
+                    }
+                    tmp14 = o;
+                  }
+                  let status;
                   if (null != response) {
-                    str6 = "";
+                    status = response.status;
                   }
-                  let code1;
-                  const sum = tmp9 + tmp10(str6);
-                  if (null != error) {
-                    code1 = error.code;
+                  const combined = "response: ".concat(status, ", ");
+                  let statusText;
+                  if (null != response) {
+                    statusText = response.statusText;
                   }
-                  obj = { player_error_code: null, player_error_message: null, player_error_context: null };
-                  obj[0] = code1;
-                  let message;
-                  if (null != error) {
-                    message = error.message;
-                  }
-                  obj[1] = message;
-                  obj[2] = sum;
-                  if (typeof o !== "function") {
-                    HermesBuiltin.throwTypeError();
-                  }
-                  mux.emit(id, "error", obj);
-                }
-                let status;
-                if (null != response) {
-                  status = response.status;
-                }
-                const combined = "response: ".concat(status, ", ");
-                let statusText;
-                if (null != response) {
-                  statusText = response.statusText;
-                }
-                str6 = combined.concat(statusText, "\n");
-              };
-              dashjs.on("error", fn6);
-              dashjs._stopMuxMonitor = () => {
-                dashjs.off("manifestLoaded", fn);
-                dashjs.off("initFragmentLoaded", fn2);
-                dashjs.off("mediaFragmentLoaded", fn3);
-                dashjs.off("qualityChangeRendered", fn4);
-                dashjs.off("error", fn6);
-                dashjs.off("fragmentLoadingAbandoned", fn5);
-                delete tmp2[tmp];
-              };
+                  str6 = combined.concat(statusText, "\n");
+                };
+                dashjs.on("error", fn6);
+                dashjs._stopMuxMonitor = () => {
+                  dashjs.off("manifestLoaded", fn);
+                  dashjs.off("initFragmentLoaded", fn2);
+                  dashjs.off("mediaFragmentLoaded", fn3);
+                  dashjs.off("qualityChangeRendered", fn4);
+                  dashjs.off("error", fn6);
+                  dashjs.off("fragmentLoadingAbandoned", fn5);
+                  delete tmp2[tmp];
+                };
+              }
             }
+            log2.warn("Invalid dash.js player reference. Monitoring blocked.");
+          } else {
+            throw new TypeError("Trying to call a non-function");
           }
-          log2.warn("Invalid dash.js player reference. Monitoring blocked.");
         }
       } else {
         const log = self.mux.log;
@@ -12405,8 +12194,7 @@ const items11 = [
   }
 ];
 N(t, items11);
-let closure_101 = t;
-let closure_102 = G(obj16.exports);
+let closure_102 = G(obj7.exports);
 let closure_103 = ["loadstart", "pause", "play", "playing", "seeking", "seeked", "timeupdate", "ratechange", "stalled", "waiting", "error", "ended"];
 let closure_104 = { 1: "MEDIA_ERR_ABORTED", 2: "MEDIA_ERR_NETWORK", 3: "MEDIA_ERR_DECODE", 4: "MEDIA_ERR_SRC_NOT_SUPPORTED" };
 const GResult1 = G(obj2.exports);
@@ -12435,7 +12223,7 @@ class Ve {
     if (index > -1) {
       do {
         str = self.buffer;
-        processLineResult = self.processLine(require("module_0"));
+        processLineResult = self.processLine(str.substring(0, index));
         str2 = self.buffer;
         self.buffer = str2.substring(index + 1);
         buffer1 = self.buffer;
@@ -12446,161 +12234,159 @@ class Ve {
   }
   processLine(arg0) {
     index = global.indexOf(":");
-    if (typeof Ii !== "function") {
-      str9 = "Trying to call a non-function";
-      throwTypeErrorResult = HermesBuiltin.throwTypeError();
-    }
-    if (-1 === index) {
-      items = [];
-      items[0] = global;
-      items1 = items;
-    } else {
-      num = 0;
-      items1 = [, ];
-      items1[0] = require("module_0");
-      num2 = 1;
-      items1[1] = global.substring(index + 1);
-    }
-    first = items1[0];
-    if (2 !== items1.length) {
-      self = this;
-      str3 = "#";
-      if ("#" !== first[0]) {
-        self.currentUri.uri = first;
-        segments = self.manifest.segments;
-        arr = segments.push(self.currentUri);
-        targetDuration = self.manifest.targetDuration;
-        if (targetDuration) {
-          str8 = "duration";
-          targetDuration = !("duration" in self.currentUri);
-        }
-        if (targetDuration) {
-          self.currentUri.duration = self.manifest.targetDuration;
-        }
-        self.currentUri = {};
+    if (typeof Ii === "function") {
+      num = -1;
+      if (-1 === index) {
+        items = [];
+        items[0] = global;
+        items1 = items;
       } else {
-        tmp33 = c107;
-        if (c107 === first) {
-          tmp27 = globalThis;
-          _isFinite = isFinite;
-          if (isFinite(undefined)) {
-            num10 = 0;
-            if (undefined >= 0) {
-              self.manifest.targetDuration = undefined;
-              setHoldBackResult = self.setHoldBack();
-            }
+        num2 = 0;
+        items1 = [, ];
+        items1[0] = global.substring(0, index);
+        num3 = 1;
+        items1[1] = global.substring(index + 1);
+      }
+      first = items1[0];
+      num4 = 2;
+      if (2 !== items1.length) {
+        self = this;
+        str3 = "#";
+        if ("#" !== first[0]) {
+          self.currentUri.uri = first;
+          segments = self.manifest.segments;
+          arr = segments.push(self.currentUri);
+          targetDuration = self.manifest.targetDuration;
+          if (targetDuration) {
+            str8 = "duration";
+            targetDuration = !("duration" in self.currentUri);
           }
-          return;
+          if (targetDuration) {
+            self.currentUri.duration = self.manifest.targetDuration;
+          }
+          self.currentUri = {};
         } else {
-          tmp34 = c108;
-          if (c108 === first) {
-            tmp24 = ct;
-            num9 = 0;
-            tmp25 = ct(self.manifest, items1);
-            if (self.manifest.partInf.partTarget) {
-              self.manifest.partTargetDuration = self.manifest.partInf.partTarget;
+          tmp31 = c107;
+          if (c107 === first) {
+            tmp27 = globalThis;
+            _isFinite = isFinite;
+            if (isFinite(undefined)) {
+              num12 = 0;
+              if (undefined >= 0) {
+                self.manifest.targetDuration = undefined;
+                setHoldBackResult = self.setHoldBack();
+              }
             }
-            setHoldBackResult1 = self.setHoldBack();
+            return;
           } else {
-            tmp35 = c109;
-            if (c109 === first) {
-              tmp21 = ct;
-              num8 = 0;
-              tmp22 = ct(self.manifest, items1);
-              setHoldBackResult2 = self.setHoldBack();
+            tmp32 = c108;
+            if (c108 === first) {
+              tmp24 = ct;
+              num11 = 0;
+              tmp25 = ct(self.manifest, items1);
+              if (self.manifest.partInf.partTarget) {
+                self.manifest.partTargetDuration = self.manifest.partInf.partTarget;
+              }
+              setHoldBackResult1 = self.setHoldBack();
             } else {
-              tmp36 = c110;
-              if (c110 === first) {
-                num6 = 0;
-                if (0 === undefined) {
-                  num7 = 0.01;
-                  self.currentUri.duration = 0.01;
-                } else if (undefined > 0) {
-                  self.currentUri.duration = undefined;
-                }
+              tmp33 = c109;
+              if (c109 === first) {
+                tmp21 = ct;
+                num10 = 0;
+                tmp22 = ct(self.manifest, items1);
+                setHoldBackResult2 = self.setHoldBack();
               } else {
-                tmp37 = c111;
-                if (c111 === first) {
-                  tmp16 = globalThis;
-                  _Date = Date;
-                  tmp17 = new.target;
-                  tmp18 = new.target;
-                  date = new Date(undefined);
-                  tmp20 = date;
-                  if (!self.manifest.dateTimeString) {
-                    self.manifest.dateTimeString = undefined;
-                    self.manifest.dateTimeObject = date;
+                tmp34 = c110;
+                if (c110 === first) {
+                  num8 = 0;
+                  if (0 === undefined) {
+                    num9 = 0.01;
+                    self.currentUri.duration = 0.01;
+                  } else if (undefined > 0) {
+                    self.currentUri.duration = undefined;
                   }
-                  self.currentUri.dateTimeString = undefined;
-                  self.currentUri.dateTimeObject = date;
                 } else {
-                  tmp38 = c112;
-                  if (c112 === first) {
-                    tmp14 = ct;
-                    num5 = 0;
-                    tmp15 = ct(self.manifest, items1);
+                  tmp35 = c111;
+                  if (c111 === first) {
+                    tmp16 = globalThis;
+                    _Date = Date;
+                    tmp17 = new.target;
+                    tmp18 = new.target;
+                    date = new Date(undefined);
+                    tmp20 = date;
+                    if (!self.manifest.dateTimeString) {
+                      self.manifest.dateTimeString = undefined;
+                      self.manifest.dateTimeObject = date;
+                    }
+                    self.currentUri.dateTimeString = undefined;
+                    self.currentUri.dateTimeObject = date;
                   } else {
-                    tmp39 = c113;
-                    if (c113 === first) {
-                      tmp40 = Li;
-                      arr5 = items1[1];
-                      if (typeof Li !== "function") {
-                        str12 = "Trying to call a non-function";
-                        throwTypeErrorResult1 = HermesBuiltin.throwTypeError();
-                      }
-                      obj = {};
-                      closure_0 = obj;
-                      tmp7 = undefined;
-                      if (arr5) {
-                        str4 = ",";
-                        searchResult = arr5.search(",");
-                        num3 = 0;
-                        items2 = [, ];
-                        items2[0] = require("module_0");
-                        num4 = 1;
-                        items2[1] = arr5.slice(searchResult + 1);
-                        item = items2.forEach((str) => {
-                          const parts = str.replace(/['"]+/g, "").split("=");
-                          for (let num = 0; num < parts.length; num = num + 1) {
-                            let tmp = num;
-                            if ("DATA-ID" === parts[num]) {
-                              let tmp2 = obj;
-                              obj["DATA-ID"] = parts[1 - num];
-                            }
-                            if ("VALUE" === parts[num]) {
-                              let tmp3 = obj;
-                              obj.VALUE = parts[1 - num];
-                            }
+                    tmp36 = c112;
+                    if (c112 === first) {
+                      tmp14 = ct;
+                      num7 = 0;
+                      tmp15 = ct(self.manifest, items1);
+                    } else {
+                      tmp37 = c113;
+                      if (c113 === first) {
+                        tmp38 = Li;
+                        arr5 = items1[1];
+                        if (typeof Li === "function") {
+                          obj = {};
+                          closure_0 = obj;
+                          if (arr5) {
+                            str4 = ",";
+                            searchResult = arr5.search(",");
+                            num5 = 0;
+                            items2 = [, ];
+                            items2[0] = arr5.slice(0, searchResult);
+                            num6 = 1;
+                            items2[1] = arr5.slice(searchResult + 1);
+                            item = items2.forEach((item, index) => {
+                              const parts = item.replace(/['"]+/g, "").split("=");
+                              for (let num = 0; num < parts.length; num = num + 1) {
+                                if ("DATA-ID" === parts[num]) {
+                                  obj["DATA-ID"] = parts[1 - num];
+                                }
+                                if ("VALUE" === parts[num]) {
+                                  obj.VALUE = parts[1 - num];
+                                }
+                              }
+                            });
+                            obj = { data: null };
+                            obj.data = obj;
+                            tmp7 = obj;
                           }
-                        });
-                        obj = { data: null };
-                        obj[0] = obj;
-                        tmp7 = obj;
-                      }
-                      tmp10 = Me;
-                      if (typeof Me !== "function") {
-                        str13 = "Trying to call a non-function";
-                        throwTypeErrorResult2 = HermesBuiltin.throwTypeError();
-                      }
-                      obj1 = {};
-                      tmp11 = tmp7;
-                      str5 = "";
-                      str6 = "io.litix.data.";
-                      for (const key10063 in tmp7) {
-                        tmp43 = key10063;
-                        tmp44 = tmp7[key10063];
-                        DATA_ID = tmp44["DATA-ID"];
-                        if (-1 === DATA_ID.search("io.litix.data.")) {
-                          continue;
+                          tmp10 = Me;
+                          if (typeof Me === "function") {
+                            obj1 = {};
+                            tmp11 = tmp7;
+                            str5 = "";
+                            str6 = "io.litix.data.";
+                            for (const key10063 in tmp7) {
+                              tmp39 = key10063;
+                              tmp40 = tmp7[key10063];
+                              prop = tmp40["DATA-ID"];
+                              if (-1 === prop.search("io.litix.data.")) {
+                                continue;
+                              } else {
+                                ({ DATA-ID: str7, VALUE: obj3[str7.replace(str7, "io.litix.data.", "")] } = tmp40);
+                                continue;
+                              }
+                              continue;
+                            }
+                            tmp12 = globalThis;
+                            _Object = Object;
+                            merged = Object.assign(self.manifest.sessionData, obj1);
+                          } else {
+                            str13 = "Trying to call a non-function";
+                            throw new TypeError("Trying to call a non-function");
+                          }
                         } else {
-                          ({ DATA-ID: str7, VALUE: obj3[str7.replace(str7, "io.litix.data.", "")] } = tmp44);
-                          continue;
+                          str12 = "Trying to call a non-function";
+                          throw new TypeError("Trying to call a non-function");
                         }
-                        continue;
                       }
-                      tmp12 = globalThis;
-                      _Object = Object;
-                      merged = Object.assign(self.manifest.sessionData, obj1);
                     }
                   }
                 }
@@ -12608,34 +12394,38 @@ class Ve {
             }
           }
         }
-      }
-      return;
-    } else {
-      tmp31 = _t;
-      str10 = items1[1];
-      if (typeof _t !== "function") {
-        str11 = "Trying to call a non-function";
-        throwTypeErrorResult3 = HermesBuiltin.throwTypeError();
-      }
-      str = "yes";
-      if ("yes" !== str10.toLowerCase()) {
-        str2 = "no";
-        if ("no" !== str10.toLowerCase()) {
-          parsed = str10;
-          if (-1 === str10.indexOf(":")) {
-            tmp4 = globalThis;
-            _parseFloat = parseFloat;
-            parsed = parseFloat(str10);
+        return;
+      } else {
+        tmp30 = _t;
+        str10 = items1[1];
+        if (typeof _t === "function") {
+          str = "yes";
+          if ("yes" !== str10.toLowerCase()) {
+            str2 = "no";
+            if ("no" !== str10.toLowerCase()) {
+              parsed = str10;
+              if (-1 === str10.indexOf(":")) {
+                tmp4 = globalThis;
+                _parseFloat = parseFloat;
+                parsed = parseFloat(str10);
+              }
+              tmp5 = globalThis;
+              _isNaN = isNaN;
+              if (isNaN(parsed)) {
+                parsed = str10;
+              }
+            }
+            tmp6 = parsed;
           }
-          tmp5 = globalThis;
-          _isNaN = isNaN;
-          if (isNaN(parsed)) {
-            parsed = str10;
-          }
+          parsed = "yes" === str10.toLowerCase();
+        } else {
+          str11 = "Trying to call a non-function";
+          throw new TypeError("Trying to call a non-function");
         }
-        tmp6 = parsed;
       }
-      parsed = "yes" === str10.toLowerCase();
+    } else {
+      str9 = "Trying to call a non-function";
+      throw new TypeError("Trying to call a non-function");
     }
     return;
   }
@@ -12686,92 +12476,89 @@ class Ve {
   }
 }
 function ct(arg0, arg1) {
-  let parts1;
-  if (typeof Jr !== "function") {
-    HermesBuiltin.throwTypeError();
-  }
-  const str = arg1[0];
-  const str2 = arg1[0].replace("#EXT-X-", "");
-  const replaced = arg1[0].replace("#EXT-X-", "").toLowerCase().replace(/-(\w)/g, (arg0) => arg0[1].toUpperCase());
-  if (typeof Oi !== "function") {
-    HermesBuiltin.throwTypeError();
-  }
-  if (arr.indexOf("=") > -1) {
-    if (typeof Pi !== "function") {
-      HermesBuiltin.throwTypeError();
-    }
-    const parts = arg1[1].split(",");
-    let merged = {};
-    let num = 0;
-    let tmp7 = merged;
-    if (parts.length > 0) {
-      while (true) {
-        let str12 = parts[num];
-        let tmp8 = Ai;
-        let tmp9 = num;
-        let tmp10 = merged;
-        if (typeof Ai !== "function") {
-          let str20 = "Trying to call a non-function";
-          let throwTypeErrorResult3 = HermesBuiltin.throwTypeError();
-        }
-        let obj = {};
-        parts1 = str12.split("=");
-        if (parts1.length > 1) {
-          break;
+  if (typeof Jr === "function") {
+    const formatted = str2.toLowerCase();
+    if (typeof Oi === "function") {
+      if (arr.indexOf("=") > -1) {
+        if (typeof Pi === "function") {
+          const parts = str7.split(",");
+          let merged = {};
+          let num2 = 0;
+          let tmp11 = merged;
+          if (parts.length > 0) {
+            while (typeof Ai === "function") {
+              let obj = {};
+              let parts1 = str12.split("=");
+              if (parts1.length <= 1) {
+                let _Object = Object;
+                merged = Object.assign(obj, merged);
+                num2 = num2 + 1;
+                tmp11 = merged;
+              } else {
+                let str20 = parts1[0];
+                if (typeof Jr === "function") {
+                  let formatted1 = str20.toLowerCase();
+                  let str13 = parts1[1];
+                  if (typeof _t === "function") {
+                    if ("yes" !== str13.toLowerCase()) {
+                      if ("no" !== str13.toLowerCase()) {
+                        let parsed = str13;
+                        if (-1 === str13.indexOf(":")) {
+                          let _parseFloat2 = parseFloat;
+                          parsed = parseFloat(str13);
+                        }
+                        let _isNaN2 = isNaN;
+                        if (isNaN(parsed)) {
+                          parsed = str13;
+                        }
+                      }
+                      obj[tmp16] = parsed;
+                    }
+                    parsed = "yes" === str13.toLowerCase();
+                  } else {
+                    let str22 = "Trying to call a non-function";
+                    throw new TypeError("Trying to call a non-function");
+                  }
+                } else {
+                  let str21 = "Trying to call a non-function";
+                  throw new TypeError("Trying to call a non-function");
+                }
+              }
+            }
+            throw new TypeError("Trying to call a non-function");
+          }
+          parsed = tmp9(tmp11, {});
         } else {
-          let _Object = Object;
-          merged = Object.assign(obj, merged);
-          num = num + 1;
-          tmp7 = merged;
+          throw new TypeError("Trying to call a non-function");
         }
-      }
-      if (typeof Jr !== "function") {
-        HermesBuiltin.throwTypeError();
-      }
-      const replaced1 = parts1[0].toLowerCase().replace(/-(\w)/g, (arg0) => arg0[1].toUpperCase());
-      if (typeof _t !== "function") {
-        HermesBuiltin.throwTypeError();
-      }
-      if ("yes" !== parts1[1].toLowerCase()) {
-        if ("no" !== str14.toLowerCase()) {
-          let parsed = str14;
-          if (-1 === str14.indexOf(":")) {
-            const _parseFloat2 = parseFloat;
-            parsed = parseFloat(str14);
-          }
-          const _isNaN2 = isNaN;
-          if (isNaN(parsed)) {
-            parsed = str14;
+        str7 = arg1[1];
+      } else if (typeof _t === "function") {
+        if ("yes" !== str16.toLowerCase()) {
+          if ("no" !== str16.toLowerCase()) {
+            parsed = str16;
+            if (-1 === str16.indexOf(":")) {
+              const _parseFloat = parseFloat;
+              parsed = parseFloat(str16);
+            }
+            const _isNaN = isNaN;
+            if (isNaN(parsed)) {
+              parsed = str16;
+            }
           }
         }
-        obj[replaced1] = parsed;
+        parsed = "yes" === str16.toLowerCase();
+      } else {
+        throw new TypeError("Trying to call a non-function");
       }
-      parsed = "yes" === str14.toLowerCase();
-      const str13 = parts1[0].toLowerCase();
-      const str21 = parts1[0];
+      arg0[tmp2] = parsed;
+    } else {
+      throw new TypeError("Trying to call a non-function");
     }
-    let merged1 = Object.assign(tmp7, {});
-    const str7 = arg1[1];
+    arr = arg1[1];
   } else {
-    if (typeof _t !== "function") {
-      HermesBuiltin.throwTypeError();
-    }
-    if ("yes" !== arg1[1].toLowerCase()) {
-      if ("no" !== str17.toLowerCase()) {
-        merged1 = str17;
-        if (-1 === str17.indexOf(":")) {
-          const _parseFloat = parseFloat;
-          merged1 = parseFloat(str17);
-        }
-        const _isNaN = isNaN;
-        if (isNaN(merged1)) {
-          merged1 = str17;
-        }
-      }
-    }
-    merged1 = "yes" === str17.toLowerCase();
+    throw new TypeError("Trying to call a non-function");
   }
-  arg0[replaced] = merged1;
+  str2 = arg1[0].replace("#EXT-X-", "");
 }
 function Jr(arg0) {
 
@@ -12794,20 +12581,19 @@ function Ii(arg0, arg1) {
 function Li(arg0) {
 
 }
-let closure_122 = {};
+const dependencyMap = {};
 function ne(key10009) {
-  closure_0 = key10009;
   closure_1 = arguments;
   if (typeof key10009 === "string") {
     if (ne.hasOwnProperty(key10009)) {
       const timerId = GResult.default.setTimeout(() => {
         const call = splice.call;
         if (typeof call === "unknown") {
-          let spliceResult = splice(1);
+          spliceResult = splice(1);
         } else {
           spliceResult = call(spliceResult, 1);
         }
-        closure_1_123[closure_0].apply(null, spliceResult);
+        ne[closure_0].apply(null, spliceResult);
       }, 0);
       const _default2 = GResult.default;
     } else {
@@ -12815,20 +12601,12 @@ function ne(key10009) {
     }
   } else if (typeof key10009 === "function") {
     const timerId1 = GResult.default.setTimeout(() => {
-      key10009(closure_1_123);
+      key10009(ne);
     }, 0);
     const _default = GResult.default;
   } else {
     logger.warn(`\`${key10009}\` is invalid.`);
   }
-}
-function ce() {
-  let doNotTrack = mod3.default.doNotTrack;
-  if (!doNotTrack) {
-    doNotTrack = tmp.default.navigator && tmp.default.navigator.doNotTrack;
-    const tmp2 = tmp.default.navigator && tmp.default.navigator.doNotTrack;
-  }
-  return "1" === doNotTrack;
 }
 let merged = Object.assign(ne, {
   loaded: obj3.now(),
@@ -12840,669 +12618,663 @@ let merged = Object.assign(ne, {
     let obj = ne;
     closure_0 = ne;
     let merged = arg1;
-    if (typeof se !== "function") {
-      HermesBuiltin.throwTypeError();
-    }
-    if (videoElement) {
-      if (undefined !== videoElement.nodeName) {
-        let tmp4 = J(videoElement);
-        let element = videoElement;
-      }
-      let str2 = "";
-      if (element) {
-        str2 = "";
-        if (element.nodeName) {
-          str2 = element.nodeName.toLowerCase();
-          let str3 = element.nodeName;
+    if (typeof se === "function") {
+      if (videoElement) {
+        if (undefined !== videoElement.nodeName) {
+          let tmp6 = J(videoElement);
+          let element = videoElement;
         }
-      }
-      items = [element, tmp4, str2];
-      let _Array = Array;
-      let tmp7;
-      if (Array.isArray(items)) {
-        tmp7 = items;
-      }
-      if (!tmp7) {
-        tmp7 = (function vt(items, arg1) {
-          let tmp6 = null;
-          if (null != items) {
-            const _Symbol = Symbol;
-            iterable = typeof Symbol !== "undefined";
-            if (typeof Symbol !== "undefined") {
-              const _Symbol2 = Symbol;
-              iterable = items[Symbol.iterator];
-            }
-            if (!iterable) {
-              iterable = items[Symbol.iterator];
-            }
-            tmp6 = iterable;
+        let str2 = "";
+        if (element) {
+          str2 = "";
+          if (element.nodeName) {
+            str2 = element.nodeName.toLowerCase();
           }
-          if (null != tmp6) {
-            let flag2 = false;
-            try {
-              items = [];
+        }
+        items = [element, tmp6, str2];
+        let _Array = Array;
+        let tmp9;
+        if (Array.isArray(items)) {
+          tmp9 = items;
+        }
+        if (!tmp9) {
+          tmp9 = (function vt(items, arg1) {
+            let tmp6 = null;
+            if (null != items) {
+              const _Symbol = Symbol;
+              let prop = typeof Symbol !== "undefined";
+              if (typeof Symbol !== "undefined") {
+                const _Symbol2 = Symbol;
+                prop = items[Symbol.iterator];
+              }
+              if (!prop) {
+                prop = items[Symbol.iterator];
+              }
+              tmp6 = prop;
+            }
+            if (null != tmp6) {
+              let flag2 = false;
               try {
-                const call = tmp8.call;
-                if (typeof call === "unknown") {
-                  let iter = tmp8();
-                } else {
-                  iter = call(items);
-                }
-                const iter3 = iter.next();
-                const done = iter3.done;
-                let tmp10 = done;
-                if (!done) {
-                  items.push(iter4.value);
-                  if (!arg1) {
-                    const iter5 = iter2.next();
-                    const done2 = iter5.done;
-                    tmp10 = done2;
-                    while (!done2) {
-                      let tmp15 = iter5;
-                      let arr = items.push(iter6.value);
-                      if (!arg1) {
+                items = [];
+                try {
+                  const call = tmp9.call;
+                  if (typeof call === "unknown") {
+                    let iter = tmp9();
+                  } else {
+                    iter = call(items);
+                  }
+                  const iter3 = iter.next();
+                  const done = iter3.done;
+                  let tmp11 = done;
+                  if (!done) {
+                    items.push(iter4.value);
+                    if (!arg1) {
+                      const iter5 = iter2.next();
+                      const done2 = iter5.done;
+                      tmp11 = done2;
+                      while (!done2) {
+                        let arr = items.push(iter6.value);
+                        if (!arg1) {
+                          continue;
+                        } else if (items.length === arg1) {
+                          break;
+                        }
                         continue;
-                      } else if (items.length === arg1) {
-                        break;
                       }
-                      continue;
                     }
                   }
+                  try {
+                    let tmp19 = !tmp11;
+                    if (!tmp11) {
+                      tmp19 = null != iter2.return;
+                    }
+                    if (tmp19) {
+                      iter2.return();
+                    }
+                    if (flag2) {
+                      throw tmp5;
+                    } else {
+                      return items;
+                    }
+                  } catch (tmp25) {
+                    if (tmp2) {
+                      throw tmp;
+                    } else {
+                      throw tmp25;
+                    }
+                  }
+                } catch (tmp5) {
+                  flag2 = true;
                 }
+              } catch (tmp28) {
                 try {
-                  let tmp18 = !tmp10;
-                  if (!tmp10) {
-                    tmp18 = null != iter2.return;
+                  let tmp30 = !tmp3;
+                  if (!tmp3) {
+                    tmp30 = tmp4 != obj.return;
                   }
-                  if (tmp18) {
-                    iter2.return();
+                  if (tmp30) {
+                    obj.return();
                   }
-                  if (flag2) {
-                    throw tmp5;
-                  } else {
-                    return items;
-                  }
-                } catch (tmp24) {
                   if (tmp2) {
                     throw tmp;
                   } else {
-                    throw tmp24;
+                    throw tmp28;
                   }
-                }
-              } catch (tmp5) {
-                flag2 = true;
-              }
-            } catch (tmp27) {
-              try {
-                let tmp29 = !tmp3;
-                if (!tmp3) {
-                  tmp29 = tmp4 != obj.return;
-                }
-                if (tmp29) {
-                  obj.return();
-                }
-                if (tmp2) {
-                  throw tmp;
-                } else {
-                  throw tmp27;
-                }
-              } catch (tmp35) {
-                if (tmp2) {
-                  throw tmp;
-                } else {
-                  throw tmp35;
-                }
-              }
-            }
-          }
-        })(items, 3);
-      }
-      if (!tmp7) {
-        tmp7 = Pe(items, 3);
-      }
-      if (tmp7) {
-        [defineProperty, tmp13] = tmp7;
-        getOwnPropertyDescriptor = tmp13;
-        let log = obj.log;
-        const getComputedStyle = obj.utils.getComputedStyle;
-        const secondsToMs = obj.utils.secondsToMs;
-        if (defineProperty) {
-          if ("video" !== tmp14) {
-            if ("audio" !== tmp14) {
-              let errorResult = log.error(`The element of \`${tmp13}\` was not a media element.`);
-            }
-          }
-          if (tmp15.mux) {
-            let mux = defineProperty.mux;
-            mux.destroy();
-            delete tmp2[tmp];
-            log.warn("Already monitoring this video element, replacing existing event listeners");
-          }
-          obj = { getPlayheadTime: null, getStateData: null };
-          obj[0] = function getPlayheadTime() {
-            return secondsToMs(closure_2.currentTime);
-          };
-          obj[1] = function getStateData() {
-            const self = this;
-            const getPlayheadTime = this.getPlayheadTime;
-            let tmp;
-            if (null !== getPlayheadTime) {
-              if (undefined !== getPlayheadTime) {
-                const call = getPlayheadTime.call;
-                typeof call === "unknown" ? getPlayheadTime() : call(self);
-              }
-            }
-            if (!tmp) {
-              tmp = secondsToMs(closure_2.currentTime);
-            }
-            let currentSrc = self.hlsjs && self.hlsjs.url;
-            let source = self.dashjs && typeof self.dashjs.getSource === "function";
-            if (source) {
-              const dashjs = self.dashjs;
-              source = dashjs.getSource();
-            }
-            const obj = { player_is_paused: closure_2.paused, player_width: parseInt(getComputedStyle(closure_2, "width")), player_height: parseInt(getComputedStyle(closure_2, "height")), player_autoplay_on: closure_2.autoplay, player_preload_on: closure_2.preload, player_language_code: closure_2.lang, player_is_fullscreen: null, video_poster_url: null, video_source_url: null, video_source_duration: null, video_source_height: null, video_source_width: null, view_dropped_frame_count: null };
-            let _default = closure_1_102.default;
-            if (_default) {
-              _default = tmp6.default.fullscreenElement || tmp6.default.webkitFullscreenElement || tmp6.default.mozFullScreenElement || tmp6.default.msFullscreenElement;
-              const tmp7 = tmp6.default.fullscreenElement || tmp6.default.webkitFullscreenElement || tmp6.default.mozFullScreenElement || tmp6.default.msFullscreenElement;
-            }
-            obj[6] = _default;
-            obj[7] = closure_2.poster;
-            if (!currentSrc) {
-              currentSrc = source;
-            }
-            if (!currentSrc) {
-              currentSrc = closure_2.currentSrc;
-            }
-            obj[8] = currentSrc;
-            obj[9] = secondsToMs(closure_2.duration);
-            obj[10] = closure_2.videoHeight;
-            obj[11] = closure_2.videoWidth;
-            if (null != closure_2) {
-              const getVideoPlaybackQuality = closure_2.getVideoPlaybackQuality;
-              if (null !== getVideoPlaybackQuality) {
-                if (undefined !== getVideoPlaybackQuality) {
-                  const call2 = getVideoPlaybackQuality.call;
-                  const droppedVideoFrames = typeof call2 === "unknown" ? getVideoPlaybackQuality() : call2(closure_2).droppedVideoFrames;
-                  const tmp11 = closure_2;
-                }
-              }
-            }
-            obj[12] = undefined;
-            if (closure_2.getStartDate) {
-              if (tmp > 0) {
-                const startDate = closure_2.getStartDate();
-                if (startDate) {
-                  if (typeof startDate.getTime === "function") {
-                    if (startDate.getTime()) {
-                      const time = startDate.getTime();
-                      obj.player_program_time = time + tmp;
-                      if (closure_2.seekable.length > 0) {
-                        const seekable = closure_2.seekable;
-                        obj.player_live_edge_program_time = time + seekable.end(closure_2.seekable.length - 1);
-                      }
-                    }
+                } catch (tmp36) {
+                  if (tmp2) {
+                    throw tmp;
+                  } else {
+                    throw tmp36;
                   }
                 }
               }
             }
-            return obj;
-          };
-          let _Object = Object;
-          merged = Object.assign({ automaticErrorTracking: true }, arg1, obj);
-          let _Object2 = Object;
-          obj = { player_software: "HTML5 Video Element", player_mux_plugin_name: "VideoElementMonitor", player_mux_plugin_version: null };
-          obj[2] = obj.VERSION;
-          merged.data = Object.assign(obj, merged.data);
-          mux = defineProperty.mux;
-          if (!mux) {
-            mux = {};
-          }
-          defineProperty.mux = mux;
-          defineProperty.mux.deleted = false;
-          defineProperty.mux.emit = (arg0, arg1) => {
-            store.emit(closure_3, arg0, arg1);
-          };
-          defineProperty.mux.updateData = (arg0) => {
-            const mux = closure_2.mux;
-            mux.emit("hb", arg0);
-          };
-          function h() {
-            log.error("The monitor for this video element has already been destroyed.");
-          }
-          defineProperty.mux.destroy = () => {
-            const keys = Object.keys(closure_2.mux.listeners);
-            const item = keys.forEach((arg0) => {
-              const removed = closure_2.removeEventListener(arg0, closure_2.mux.listeners[arg0], false);
-            });
-            delete tmp2[tmp];
-            closure_2.mux.destroy = h;
-            closure_2.mux.swapElement = h;
-            closure_2.mux.emit = h;
-            closure_2.mux.addHLSJS = h;
-            closure_2.mux.addDashJS = h;
-            closure_2.mux.removeHLSJS = h;
-            closure_2.mux.removeDashJS = h;
-            closure_2.mux.updateData = h;
-            closure_2.mux.setEmitTranslator = h;
-            closure_2.mux.setStateDataTranslator = h;
-            closure_2.mux.setGetPlayheadTime = h;
-            closure_2.mux.deleted = true;
-            store.emit(closure_3, "destroy");
-          };
-          defineProperty.mux.swapElement = (nodeName) => {
-            if (typeof closure_1_31 !== "function") {
-              HermesBuiltin.throwTypeError();
+          })(items, 3);
+        }
+        if (!tmp9) {
+          tmp9 = Pe(items, 3);
+        }
+        if (tmp9) {
+          [defineProperty, tmp15] = tmp9;
+          getOwnPropertyDescriptor = tmp15;
+          let log = obj.log;
+          const getComputedStyle = obj.utils.getComputedStyle;
+          const secondsToMs = obj.utils.secondsToMs;
+          if (defineProperty) {
+            if ("video" !== tmp16) {
+              if ("audio" !== tmp16) {
+                let errorResult = log.error(`The element of \`${tmp15}\` was not a media element.`);
+              }
             }
-            if (nodeName) {
-              if (undefined !== nodeName.nodeName) {
-                let tmp6 = closure_1_30(nodeName);
-                let element = nodeName;
-              }
-              let str2 = "";
-              if (element) {
-                str2 = "";
-                if (element.nodeName) {
-                  str2 = element.nodeName.toLowerCase();
-                  const str3 = element.nodeName;
-                }
-              }
-              items = [element, tmp6, str2];
-              const _Array = Array;
-              let tmp9;
-              if (Array.isArray(items)) {
-                tmp9 = items;
-              }
-              if (!tmp9) {
-                tmp9 = (function vt(items, arg1) {
-                  let tmp6 = null;
-                  if (null != items) {
-                    const _Symbol = Symbol;
-                    iterable = typeof Symbol !== "undefined";
-                    if (typeof Symbol !== "undefined") {
-                      const _Symbol2 = Symbol;
-                      iterable = items[Symbol.iterator];
-                    }
-                    if (!iterable) {
-                      iterable = items[Symbol.iterator];
-                    }
-                    tmp6 = iterable;
-                  }
-                  if (null != tmp6) {
-                    let flag2 = false;
-                    try {
-                      items = [];
-                      try {
-                        const call = tmp8.call;
-                        if (typeof call === "unknown") {
-                          let iter = tmp8();
-                        } else {
-                          iter = call(items);
+            if (tmp17.mux) {
+              let mux = defineProperty.mux;
+              mux.destroy();
+              delete tmp2[tmp];
+              log.warn("Already monitoring this video element, replacing existing event listeners");
+            }
+            obj = {
+              getPlayheadTime() {
+                        return secondsToMs(defineProperty.currentTime);
+                      },
+              getStateData() {
+                        const self = this;
+                        const getPlayheadTime = this.getPlayheadTime;
+                        let tmp;
+                        if (null !== getPlayheadTime) {
+                          if (undefined !== getPlayheadTime) {
+                            const call = getPlayheadTime.call;
+                            typeof call === "unknown" ? getPlayheadTime() : call(self);
+                          }
                         }
-                        const iter3 = iter.next();
-                        const done = iter3.done;
-                        let tmp10 = done;
-                        if (!done) {
-                          items.push(iter4.value);
-                          if (!arg1) {
-                            const iter5 = iter2.next();
-                            const done2 = iter5.done;
-                            tmp10 = done2;
-                            while (!done2) {
-                              let tmp15 = iter5;
-                              let arr = items.push(iter6.value);
-                              if (!arg1) {
-                                continue;
-                              } else if (items.length === arg1) {
-                                break;
-                              }
-                              continue;
+                        if (!tmp) {
+                          tmp = secondsToMs(defineProperty.currentTime);
+                        }
+                        let currentSrc = self.hlsjs && self.hlsjs.url;
+                        let source = self.dashjs && typeof self.dashjs.getSource === "function";
+                        if (source) {
+                          const dashjs = self.dashjs;
+                          source = dashjs.getSource();
+                        }
+                        const obj = { player_is_paused: defineProperty.paused, player_width: parseInt(getComputedStyle(defineProperty, "width")), player_height: parseInt(getComputedStyle(defineProperty, "height")), player_autoplay_on: defineProperty.autoplay, player_preload_on: defineProperty.preload, player_language_code: defineProperty.lang, player_is_fullscreen: null, video_poster_url: null, video_source_url: null, video_source_duration: null, video_source_height: null, video_source_width: null, view_dropped_frame_count: null };
+                        let _default = closure_102.default;
+                        if (_default) {
+                          _default = tmp6.default.fullscreenElement || tmp6.default.webkitFullscreenElement || tmp6.default.mozFullScreenElement || tmp6.default.msFullscreenElement;
+                          const tmp7 = tmp6.default.fullscreenElement || tmp6.default.webkitFullscreenElement || tmp6.default.mozFullScreenElement || tmp6.default.msFullscreenElement;
+                        }
+                        obj.player_is_fullscreen = _default;
+                        obj.video_poster_url = defineProperty.poster;
+                        if (!currentSrc) {
+                          currentSrc = source;
+                        }
+                        if (!currentSrc) {
+                          currentSrc = defineProperty.currentSrc;
+                        }
+                        obj.video_source_url = currentSrc;
+                        obj.video_source_duration = secondsToMs(defineProperty.duration);
+                        obj.video_source_height = defineProperty.videoHeight;
+                        obj.video_source_width = defineProperty.videoWidth;
+                        if (null != defineProperty) {
+                          const getVideoPlaybackQuality = defineProperty.getVideoPlaybackQuality;
+                          if (null !== getVideoPlaybackQuality) {
+                            if (undefined !== getVideoPlaybackQuality) {
+                              const call2 = getVideoPlaybackQuality.call;
+                              const droppedVideoFrames = typeof call2 === "unknown" ? getVideoPlaybackQuality() : call2(defineProperty).droppedVideoFrames;
                             }
                           }
                         }
+                        obj.view_dropped_frame_count = undefined;
+                        if (defineProperty.getStartDate) {
+                          if (tmp > 0) {
+                            const startDate = defineProperty.getStartDate();
+                            if (startDate) {
+                              if (typeof startDate.getTime === "function") {
+                                if (startDate.getTime()) {
+                                  const time = startDate.getTime();
+                                  obj.player_program_time = time + tmp;
+                                  if (defineProperty.seekable.length > 0) {
+                                    const seekable = defineProperty.seekable;
+                                    obj.player_live_edge_program_time = time + seekable.end(defineProperty.seekable.length - 1);
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                        return obj;
+                      }
+            };
+            let _Object = Object;
+            merged = Object.assign({ automaticErrorTracking: true }, arg1, obj);
+            let _Object2 = Object;
+            obj = { player_software: "HTML5 Video Element", player_mux_plugin_name: "VideoElementMonitor", player_mux_plugin_version: null };
+            obj.player_mux_plugin_version = obj.VERSION;
+            merged.data = Object.assign(obj, merged.data);
+            mux = defineProperty.mux;
+            if (!mux) {
+              mux = {};
+            }
+            defineProperty.mux = mux;
+            defineProperty.mux.deleted = false;
+            defineProperty.mux.emit = (arg0, arg1) => {
+              closure_0.emit(closure_3, arg0, arg1);
+            };
+            defineProperty.mux.updateData = (arg0) => {
+              const mux = defineProperty.mux;
+              mux.emit("hb", arg0);
+            };
+            function h() {
+              log.error("The monitor for this video element has already been destroyed.");
+            }
+            defineProperty.mux.destroy = () => {
+              const keys = Object.keys(defineProperty.mux.listeners);
+              const item = keys.forEach((item) => {
+                const removed = closure_1_2.removeEventListener(item, closure_1_2.mux.listeners[item], false);
+              });
+              delete tmp2[tmp];
+              defineProperty.mux.destroy = h;
+              defineProperty.mux.swapElement = h;
+              defineProperty.mux.emit = h;
+              defineProperty.mux.addHLSJS = h;
+              defineProperty.mux.addDashJS = h;
+              defineProperty.mux.removeHLSJS = h;
+              defineProperty.mux.removeDashJS = h;
+              defineProperty.mux.updateData = h;
+              defineProperty.mux.setEmitTranslator = h;
+              defineProperty.mux.setStateDataTranslator = h;
+              defineProperty.mux.setGetPlayheadTime = h;
+              defineProperty.mux.deleted = true;
+              closure_0.emit(closure_3, "destroy");
+            };
+            defineProperty.mux.swapElement = (nodeName) => {
+              if (typeof se === "function") {
+                if (nodeName) {
+                  if (undefined !== nodeName.nodeName) {
+                    let tmp8 = closure_1_30(nodeName);
+                    let element = nodeName;
+                  }
+                  let str2 = "";
+                  if (element) {
+                    str2 = "";
+                    if (element.nodeName) {
+                      str2 = element.nodeName.toLowerCase();
+                    }
+                  }
+                  items = [element, tmp8, str2];
+                  const _Array = Array;
+                  let tmp11;
+                  if (Array.isArray(items)) {
+                    tmp11 = items;
+                  }
+                  if (!tmp11) {
+                    tmp11 = (function vt(items, arg1) {
+                      let tmp6 = null;
+                      if (null != items) {
+                        const _Symbol = Symbol;
+                        let prop = typeof Symbol !== "undefined";
+                        if (typeof Symbol !== "undefined") {
+                          const _Symbol2 = Symbol;
+                          prop = items[Symbol.iterator];
+                        }
+                        if (!prop) {
+                          prop = items[Symbol.iterator];
+                        }
+                        tmp6 = prop;
+                      }
+                      if (null != tmp6) {
+                        let flag2 = false;
                         try {
-                          let tmp18 = !tmp10;
-                          if (!tmp10) {
-                            tmp18 = null != iter2.return;
+                          items = [];
+                          try {
+                            const call = tmp9.call;
+                            if (typeof call === "unknown") {
+                              let iter = tmp9();
+                            } else {
+                              iter = call(items);
+                            }
+                            const iter3 = iter.next();
+                            const done = iter3.done;
+                            let tmp11 = done;
+                            if (!done) {
+                              items.push(iter4.value);
+                              if (!arg1) {
+                                const iter5 = iter2.next();
+                                const done2 = iter5.done;
+                                tmp11 = done2;
+                                while (!done2) {
+                                  let arr = items.push(iter6.value);
+                                  if (!arg1) {
+                                    continue;
+                                  } else if (items.length === arg1) {
+                                    break;
+                                  }
+                                  continue;
+                                }
+                              }
+                            }
+                            try {
+                              let tmp19 = !tmp11;
+                              if (!tmp11) {
+                                tmp19 = null != iter2.return;
+                              }
+                              if (tmp19) {
+                                iter2.return();
+                              }
+                              if (flag2) {
+                                throw tmp5;
+                              } else {
+                                return items;
+                              }
+                            } catch (tmp25) {
+                              if (tmp2) {
+                                throw tmp;
+                              } else {
+                                throw tmp25;
+                              }
+                            }
+                          } catch (tmp5) {
+                            flag2 = true;
                           }
-                          if (tmp18) {
-                            iter2.return();
-                          }
-                          if (flag2) {
-                            throw tmp5;
-                          } else {
-                            return items;
-                          }
-                        } catch (tmp24) {
-                          if (tmp2) {
-                            throw tmp;
-                          } else {
-                            throw tmp24;
+                        } catch (tmp28) {
+                          try {
+                            let tmp30 = !tmp3;
+                            if (!tmp3) {
+                              tmp30 = tmp4 != obj.return;
+                            }
+                            if (tmp30) {
+                              obj.return();
+                            }
+                            if (tmp2) {
+                              throw tmp;
+                            } else {
+                              throw tmp28;
+                            }
+                          } catch (tmp36) {
+                            if (tmp2) {
+                              throw tmp;
+                            } else {
+                              throw tmp36;
+                            }
                           }
                         }
-                      } catch (tmp5) {
-                        flag2 = true;
                       }
-                    } catch (tmp27) {
-                      try {
-                        let tmp29 = !tmp3;
-                        if (!tmp3) {
-                          tmp29 = tmp4 != obj.return;
-                        }
-                        if (tmp29) {
-                          obj.return();
-                        }
-                        if (tmp2) {
-                          throw tmp;
-                        } else {
-                          throw tmp27;
-                        }
-                      } catch (tmp35) {
-                        if (tmp2) {
-                          throw tmp;
-                        } else {
-                          throw tmp35;
-                        }
+                    })(items, 3);
+                  }
+                  if (!tmp11) {
+                    tmp11 = Pe(items, 3);
+                  }
+                  if (tmp11) {
+                    const first = tmp11[0];
+                    let text = tmp11[1];
+                    if (first) {
+                      if ("video" === tmp19) {
+                        first.muxId = first.muxId;
+                        delete tmp4[tmp3];
+                        first.mux = first.mux || {};
+                        const _Object = Object;
+                        first.mux.listeners = Object.assign({}, first.mux.listeners);
+                        const mux = first.mux;
+                        delete tmp4[tmp3];
+                        const _Object2 = Object;
+                        const keys = Object.keys(first.mux.listeners);
+                        const item = keys.forEach((item) => {
+                          const removed = defineProperty.removeEventListener(item, first.mux.listeners[item], false);
+                          const listener = first.addEventListener(item, first.mux.listeners[item], false);
+                        });
+                        first.mux.swapElement = first.mux.swapElement;
+                        first.mux.destroy = first.mux.destroy;
+                        delete tmp2[tmp];
+                        let errorResult;
                       }
+                      const log2 = first.log;
+                      text = `The element of \`${tmp18}`;
+                      errorResult = log2.error(`${`The element of \`${tmp18}`}\` was not a media element.`);
+                    } else {
+                      log = first.log;
+                      return log.error("No element was found with the `" + `The element of \`${tmp18}` + "` query selector.");
                     }
+                  } else {
+                    const _TypeError = TypeError;
+                    const typeError = new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");
+                    throw typeError;
                   }
-                })(items, 3);
-              }
-              if (!tmp9) {
-                tmp9 = closure_1_23(items, 3);
-              }
-              if (tmp9) {
-                const first = tmp9[0];
-                let text = tmp9[1];
-                if (first) {
-                  if ("video" === tmp17) {
-                    first.muxId = first.muxId;
-                    delete tmp4[tmp3];
-                    first.mux = first.mux || {};
-                    const _Object = Object;
-                    first.mux.listeners = Object.assign({}, first.mux.listeners);
-                    const mux = first.mux;
-                    delete tmp4[tmp3];
-                    const _Object2 = Object;
-                    const keys = Object.keys(first.mux.listeners);
-                    const item = keys.forEach((arg0) => {
-                      const removed = first.removeEventListener(arg0, first.mux.listeners[arg0], false);
-                      const listener = first.addEventListener(arg0, first.mux.listeners[arg0], false);
-                    });
-                    first.mux.swapElement = first.mux.swapElement;
-                    first.mux.destroy = first.mux.destroy;
-                    delete tmp2[tmp];
-                    let errorResult;
-                  }
-                  const log2 = first.log;
-                  text = `The element of \`${tmp16}`;
-                  errorResult = log2.error(`${`The element of \`${tmp16}`}\` was not a media element.`);
-                } else {
-                  log = first.log;
-                  return log.error("No element was found with the `" + `The element of \`${tmp16}` + "` query selector.");
                 }
+                const _document = document;
+                element = document.querySelector(nodeName);
+                tmp8 = nodeName;
               } else {
-                const _TypeError = TypeError;
-                const typeError = new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");
-                throw typeError;
+                throw new TypeError("Trying to call a non-function");
+              }
+            };
+            defineProperty.mux.addHLSJS = (merged) => {
+              closure_0.addHLSJS(closure_3, merged);
+            };
+            defineProperty.mux.addDashJS = (merged) => {
+              closure_0.addDashJS(closure_3, merged);
+            };
+            defineProperty.mux.removeHLSJS = () => {
+              closure_0.removeHLSJS(closure_3);
+            };
+            defineProperty.mux.removeDashJS = () => {
+              closure_0.removeDashJS(closure_3);
+            };
+            defineProperty.mux.setEmitTranslator = (emitTranslator) => {
+              closure_0.setEmitTranslator(closure_3, emitTranslator);
+            };
+            defineProperty.mux.setStateDataTranslator = (stateDataTranslator) => {
+              const result = closure_0.setStateDataTranslator(closure_3, stateDataTranslator);
+            };
+            defineProperty.mux.setGetPlayheadTime = (getPlayheadTime) => {
+              if (!getPlayheadTime) {
+                getPlayheadTime = merged.getPlayheadTime;
+              }
+              closure_0.setGetPlayheadTime(closure_3, getPlayheadTime);
+            };
+            obj.init(tmp15, merged);
+            obj.emit(tmp15, "playerready");
+            if (!defineProperty.paused) {
+              obj.emit(tmp15, "play");
+              if (defineProperty.readyState > 2) {
+                obj.emit(tmp15, "playing");
               }
             }
-            element = document.querySelector(nodeName);
-            tmp6 = nodeName;
-          };
-          defineProperty.mux.addHLSJS = (closure_3) => {
-            store.addHLSJS(closure_3, closure_3);
-          };
-          defineProperty.mux.addDashJS = (closure_3) => {
-            store.addDashJS(closure_3, closure_3);
-          };
-          defineProperty.mux.removeHLSJS = () => {
-            store.removeHLSJS(closure_3);
-          };
-          defineProperty.mux.removeDashJS = () => {
-            store.removeDashJS(closure_3);
-          };
-          defineProperty.mux.setEmitTranslator = (emitTranslator) => {
-            store.setEmitTranslator(closure_3, emitTranslator);
-          };
-          defineProperty.mux.setStateDataTranslator = (stateDataTranslator) => {
-            const result = store.setStateDataTranslator(closure_3, stateDataTranslator);
-          };
-          defineProperty.mux.setGetPlayheadTime = (getPlayheadTime) => {
-            if (!getPlayheadTime) {
-              getPlayheadTime = merged.getPlayheadTime;
-            }
-            store.setGetPlayheadTime(closure_3, getPlayheadTime);
-          };
-          obj.init(tmp13, merged);
-          obj.emit(tmp13, "playerready");
-          if (!defineProperty.paused) {
-            obj.emit(tmp13, "play");
-            if (defineProperty.readyState > 2) {
-              obj.emit(tmp13, "playing");
-            }
-          }
-          defineProperty.mux.listeners = {};
-          let item = closure_103.forEach((arg0) => {
-            closure_0 = arg0;
-            let tmp = "error" === arg0;
-            if (tmp) {
-              tmp = !merged.automaticErrorTracking;
-            }
-            if (!tmp) {
-              closure_2.mux.listeners[arg0] = () => {
-                const obj = {};
-                if ("error" === closure_0) {
-                  if (closure_1_2.error) {
-                    if (1 !== closure_1_2.error.code) {
-                      obj.player_error_code = closure_1_2.error.code;
-                      let message = closure_2_104[closure_1_2.error.code];
-                      if (!message) {
-                        message = closure_1_2.error.message;
+            defineProperty.mux.listeners = {};
+            let item = closure_103.forEach((item) => {
+              let tmp = "error" === item;
+              if (tmp) {
+                tmp = !merged.automaticErrorTracking;
+              }
+              if (!tmp) {
+                closure_2.mux.listeners[item] = () => {
+                  const obj = {};
+                  if ("error" === item) {
+                    if (defineProperty.error) {
+                      if (1 !== defineProperty.error.code) {
+                        obj.player_error_code = defineProperty.error.code;
+                        let message = closure_104[defineProperty.error.code];
+                        if (!message) {
+                          message = defineProperty.error.message;
+                        }
+                        obj.player_error_message = message;
                       }
-                      obj.player_error_message = message;
                     }
                   }
-                }
-                closure_0.emit(closure_1_3, closure_0, obj);
-              };
-              const listener = closure_2.addEventListener(arg0, closure_2.mux.listeners[arg0], false);
-            }
-          });
-          const tmp22 = defineProperty;
+                  item.emit(closure_3, item, obj);
+                };
+                const listener = closure_2.addEventListener(item, closure_2.mux.listeners[item], false);
+              }
+            });
+          } else {
+            errorResult = log.error(`No element was found with the \`${tmp15}\` query selector.`);
+          }
+          return errorResult;
         } else {
-          errorResult = log.error(`No element was found with the \`${tmp13}\` query selector.`);
+          let _TypeError = TypeError;
+          let typeError = new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");
+          throw typeError;
         }
-        return errorResult;
-      } else {
-        let _TypeError = TypeError;
-        let typeError = new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");
-        throw typeError;
       }
+      let _document = document;
+      element = document.querySelector(videoElement);
+      tmp6 = videoElement;
+    } else {
+      throw new TypeError("Trying to call a non-function");
     }
-    element = document.querySelector(videoElement);
-    tmp4 = videoElement;
   },
   destroyMonitor(videoElement) {
-    if (typeof se !== "function") {
-      HermesBuiltin.throwTypeError();
-    }
-    if (videoElement) {
-      if (undefined !== videoElement.nodeName) {
-        let tmp2 = J(videoElement);
-        let element = videoElement;
-      }
-      let str2 = "";
-      if (element) {
-        str2 = "";
-        if (element.nodeName) {
-          str2 = element.nodeName.toLowerCase();
-          const str3 = element.nodeName;
+    if (typeof se === "function") {
+      if (videoElement) {
+        if (undefined !== videoElement.nodeName) {
+          let tmp4 = J(videoElement);
+          let element = videoElement;
         }
-      }
-      items = [element, tmp2, str2];
-      const _Array = Array;
-      let tmp5;
-      if (Array.isArray(items)) {
-        tmp5 = items;
-      }
-      if (!tmp5) {
-        tmp5 = (function vt(items, arg1) {
-          let tmp6 = null;
-          if (null != items) {
-            const _Symbol = Symbol;
-            iterable = typeof Symbol !== "undefined";
-            if (typeof Symbol !== "undefined") {
-              const _Symbol2 = Symbol;
-              iterable = items[Symbol.iterator];
-            }
-            if (!iterable) {
-              iterable = items[Symbol.iterator];
-            }
-            tmp6 = iterable;
+        let str2 = "";
+        if (element) {
+          str2 = "";
+          if (element.nodeName) {
+            str2 = element.nodeName.toLowerCase();
           }
-          if (null != tmp6) {
-            let flag2 = false;
-            try {
-              items = [];
+        }
+        items = [element, tmp4, str2];
+        const _Array = Array;
+        let tmp7;
+        if (Array.isArray(items)) {
+          tmp7 = items;
+        }
+        if (!tmp7) {
+          tmp7 = (function vt(items, arg1) {
+            let tmp6 = null;
+            if (null != items) {
+              const _Symbol = Symbol;
+              let prop = typeof Symbol !== "undefined";
+              if (typeof Symbol !== "undefined") {
+                const _Symbol2 = Symbol;
+                prop = items[Symbol.iterator];
+              }
+              if (!prop) {
+                prop = items[Symbol.iterator];
+              }
+              tmp6 = prop;
+            }
+            if (null != tmp6) {
+              let flag2 = false;
               try {
-                const call = tmp8.call;
-                if (typeof call === "unknown") {
-                  let iter = tmp8();
-                } else {
-                  iter = call(items);
-                }
-                const iter3 = iter.next();
-                const done = iter3.done;
-                let tmp10 = done;
-                if (!done) {
-                  items.push(iter4.value);
-                  if (!arg1) {
-                    const iter5 = iter2.next();
-                    const done2 = iter5.done;
-                    tmp10 = done2;
-                    while (!done2) {
-                      let tmp15 = iter5;
-                      let arr = items.push(iter6.value);
-                      if (!arg1) {
+                items = [];
+                try {
+                  const call = tmp9.call;
+                  if (typeof call === "unknown") {
+                    let iter = tmp9();
+                  } else {
+                    iter = call(items);
+                  }
+                  const iter3 = iter.next();
+                  const done = iter3.done;
+                  let tmp11 = done;
+                  if (!done) {
+                    items.push(iter4.value);
+                    if (!arg1) {
+                      const iter5 = iter2.next();
+                      const done2 = iter5.done;
+                      tmp11 = done2;
+                      while (!done2) {
+                        let arr = items.push(iter6.value);
+                        if (!arg1) {
+                          continue;
+                        } else if (items.length === arg1) {
+                          break;
+                        }
                         continue;
-                      } else if (items.length === arg1) {
-                        break;
                       }
-                      continue;
                     }
                   }
+                  try {
+                    let tmp19 = !tmp11;
+                    if (!tmp11) {
+                      tmp19 = null != iter2.return;
+                    }
+                    if (tmp19) {
+                      iter2.return();
+                    }
+                    if (flag2) {
+                      throw tmp5;
+                    } else {
+                      return items;
+                    }
+                  } catch (tmp25) {
+                    if (tmp2) {
+                      throw tmp;
+                    } else {
+                      throw tmp25;
+                    }
+                  }
+                } catch (tmp5) {
+                  flag2 = true;
                 }
+              } catch (tmp28) {
                 try {
-                  let tmp18 = !tmp10;
-                  if (!tmp10) {
-                    tmp18 = null != iter2.return;
+                  let tmp30 = !tmp3;
+                  if (!tmp3) {
+                    tmp30 = tmp4 != obj.return;
                   }
-                  if (tmp18) {
-                    iter2.return();
+                  if (tmp30) {
+                    obj.return();
                   }
-                  if (flag2) {
-                    throw tmp5;
-                  } else {
-                    return items;
-                  }
-                } catch (tmp24) {
                   if (tmp2) {
                     throw tmp;
                   } else {
-                    throw tmp24;
+                    throw tmp28;
+                  }
+                } catch (tmp36) {
+                  if (tmp2) {
+                    throw tmp;
+                  } else {
+                    throw tmp36;
                   }
                 }
-              } catch (tmp5) {
-                flag2 = true;
-              }
-            } catch (tmp27) {
-              try {
-                let tmp29 = !tmp3;
-                if (!tmp3) {
-                  tmp29 = tmp4 != obj.return;
-                }
-                if (tmp29) {
-                  obj.return();
-                }
-                if (tmp2) {
-                  throw tmp;
-                } else {
-                  throw tmp27;
-                }
-              } catch (tmp35) {
-                if (tmp2) {
-                  throw tmp;
-                } else {
-                  throw tmp35;
-                }
               }
             }
-          }
-        })(items, 1);
-      }
-      if (!tmp5) {
-        tmp5 = Pe(items, 1);
-      }
-      if (tmp5) {
-        const first = tmp5[0];
-        if (first) {
-          if (first.mux) {
-            if (typeof first.mux.destroy === "function") {
-              const mux = first.mux;
-              mux.destroy();
-            }
-          }
+          })(items, 1);
         }
-        logger.error(`A video element monitor for \`${videoElement}\` has not been initialized via \`mux.monitor\`.`);
-      } else {
-        const _TypeError = TypeError;
-        const typeError = new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");
-        throw typeError;
+        if (!tmp7) {
+          tmp7 = Pe(items, 1);
+        }
+        if (tmp7) {
+          const first = tmp7[0];
+          if (first) {
+            if (first.mux) {
+              if (typeof first.mux.destroy === "function") {
+                const mux = first.mux;
+                mux.destroy();
+              }
+            }
+          }
+          logger.error(`A video element monitor for \`${videoElement}\` has not been initialized via \`mux.monitor\`.`);
+        } else {
+          const _TypeError = TypeError;
+          const typeError = new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");
+          throw typeError;
+        }
       }
+      const _document = document;
+      element = document.querySelector(videoElement);
+      tmp4 = videoElement;
+    } else {
+      throw new TypeError("Trying to call a non-function");
     }
-    element = document.querySelector(videoElement);
-    tmp2 = videoElement;
   },
-  addHLSJS(closure_3, closure_3) {
-    const tmp = J(closure_3);
+  addHLSJS(merged, merged) {
+    const tmp = J(merged);
     if (dependencyMap[tmp]) {
-      tmp2[tmp].addHLSJS(closure_3);
-      const obj = tmp2[tmp];
+      tmp2[tmp].addHLSJS(merged);
     } else {
       logger.error(`A monitor for \`${tmp}\` has not been initialized.`);
     }
   },
-  addDashJS(closure_3, closure_3) {
-    const tmp = J(closure_3);
+  addDashJS(merged, merged) {
+    const tmp = J(merged);
     if (dependencyMap[tmp]) {
-      tmp2[tmp].addDashJS(closure_3);
-      const obj = tmp2[tmp];
+      tmp2[tmp].addDashJS(merged);
     } else {
       logger.error(`A monitor for \`${tmp}\` has not been initialized.`);
     }
   },
-  removeHLSJS(closure_3) {
-    const tmp = J(closure_3);
+  removeHLSJS(arg0) {
+    const tmp = J(arg0);
     if (dependencyMap[tmp]) {
       dependencyMap[tmp].removeHLSJS();
-      const obj = dependencyMap[tmp];
     } else {
       logger.error(`A monitor for \`${tmp}\` has not been initialized.`);
     }
   },
-  removeDashJS(closure_3) {
-    const tmp = J(closure_3);
+  removeDashJS(arg0) {
+    const tmp = J(arg0);
     if (dependencyMap[tmp]) {
       dependencyMap[tmp].removeDashJS();
-      const obj = dependencyMap[tmp];
     } else {
       logger.error(`A monitor for \`${tmp}\` has not been initialized.`);
     }
   },
   init(arg0, respectDoNotTrack) {
-    let doNotTrack = mod3.default.doNotTrack;
+    let doNotTrack = closure_39.default.doNotTrack;
     if (!doNotTrack) {
       doNotTrack = tmp.default.navigator && tmp.default.navigator.doNotTrack;
       const tmp2 = tmp.default.navigator && tmp.default.navigator.doNotTrack;
@@ -13520,7 +13292,6 @@ let merged = Object.assign(ne, {
       if ("destroy" === arg1) {
         delete tmp[tmp2];
       }
-      const obj = tmp4[tmp3];
     } else {
       logger.error(`A monitor for \`${tmp3}\` has not been initialized.`);
     }
@@ -13529,36 +13300,42 @@ let merged = Object.assign(ne, {
     const tmp = J(arg0);
     if (dependencyMap[tmp]) {
       tmp2[tmp].emit("hb", arg1);
-      const obj = tmp2[tmp];
     } else {
       logger.error(`A monitor for \`${tmp}\` has not been initialized.`);
     }
   },
-  setEmitTranslator(closure_3, emitTranslator) {
-    const tmp = J(closure_3);
+  setEmitTranslator(arg0, emitTranslator) {
+    const tmp = J(arg0);
     if (dependencyMap[tmp]) {
       tmp2[tmp].emitTranslator = emitTranslator;
     } else {
       logger.error(`A monitor for \`${tmp}\` has not been initialized.`);
     }
   },
-  setStateDataTranslator(closure_3, stateDataTranslator) {
-    const tmp = J(closure_3);
+  setStateDataTranslator(arg0, stateDataTranslator) {
+    const tmp = J(arg0);
     if (dependencyMap[tmp]) {
       tmp2[tmp].stateDataTranslator = stateDataTranslator;
     } else {
       logger.error(`A monitor for \`${tmp}\` has not been initialized.`);
     }
   },
-  setGetPlayheadTime(closure_3, getPlayheadTime) {
-    const tmp = J(closure_3);
+  setGetPlayheadTime(arg0, getPlayheadTime) {
+    const tmp = J(arg0);
     if (dependencyMap[tmp]) {
       tmp2[tmp].getPlayheadTime = getPlayheadTime;
     } else {
       logger.error(`A monitor for \`${tmp}\` has not been initialized.`);
     }
   },
-  checkDoNotTrack: ce,
+  checkDoNotTrack: function ce() {
+    let doNotTrack = closure_39.default.doNotTrack;
+    if (!doNotTrack) {
+      doNotTrack = tmp.default.navigator && tmp.default.navigator.doNotTrack;
+      const tmp2 = tmp.default.navigator && tmp.default.navigator.doNotTrack;
+    }
+    return "1" === doNotTrack;
+  },
   log: tmp11,
   utils: {
     safeCall: function ut(arg0, arg1, arg2, arg3) {
@@ -13567,7 +13344,6 @@ let merged = Object.assign(ne, {
         if (typeof arg0[arg1] === "function") {
           try {
             applyResult = arg0[arg1].apply(arg0, arg2);
-            const obj = arg0[arg1];
           } catch (tmp4) {
             logger.info("safeCall error", tmp4);
           }
@@ -13595,7 +13371,7 @@ let merged = Object.assign(ne, {
               if (weakMap) {
                 hasItem = obj.has(arg0);
               }
-              let value;
+              value = undefined;
               if (hasItem) {
                 value = obj.get(arg0);
               }
@@ -13626,13 +13402,13 @@ let merged = Object.assign(ne, {
         str = "";
       }
       const parts = str.trim().split(/[\r\n]+/);
-      const item = parts.forEach((str) => {
-        if (str) {
-          const parts = str.split(": ");
+      const item = parts.forEach((item) => {
+        if (item) {
+          const parts = item.split(": ");
           const str2 = parts.shift();
           let tmp = str2;
           if (str2) {
-            let tmp3 = closure_1_50.indexOf(str2.toLowerCase()) >= 0;
+            let tmp3 = closure_2_50.indexOf(str2.toLowerCase()) >= 0;
             if (!tmp3) {
               const formatted = str2.toLowerCase();
               tmp3 = 0 === formatted.indexOf("x-litix-");
@@ -13649,7 +13425,7 @@ let merged = Object.assign(ne, {
     cdnHeadersToRequestId: function de(arg0) {
       closure_0 = arg0;
       if (arg0) {
-        const found = items.find((arg0) => undefined !== obj[arg0]);
+        const found = items.find((item) => undefined !== obj[item]);
         let tmp3;
         if (found) {
           tmp3 = arg0[found];
@@ -13670,8 +13446,8 @@ let merged = Object.assign(ne, {
   WINDOW_UNLOADING: false
 });
 if (tmp34) {
-  let listener = GResult.default.addEventListener("pagehide", (persisted) => {
-    if (!persisted.persisted) {
+  let listener = GResult.default.addEventListener("pagehide", (event) => {
+    if (!event.persisted) {
       ne.WINDOW_UNLOADING = true;
     }
   }, false);

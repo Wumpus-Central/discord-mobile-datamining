@@ -1,11 +1,11 @@
 // === Module 6849: BottomSheetScrollView ===
 
 // Module 6849 (BottomSheetScrollView)
-import cancelAnimationDefault from "cancelAnimation" /* 1636 */;
-import createBottomSheetScrollableComponent from "createBottomSheetScrollableComponent" /* 6840 */;
+import cancelAnimation from "cancelAnimation" /* 1636 */;
 
-const animatedComponent = cancelAnimationDefault.createAnimatedComponent(require("get ActivityIndicator").ScrollView);
-const memoResult = require("noop").memo(createBottomSheetScrollableComponent.createBottomSheetScrollableComponent(require("GESTURE_SOURCE").SCROLLABLE_TYPE.SCROLLVIEW, animatedComponent));
+const animatedComponent = cancelAnimation.createAnimatedComponent(fn(17).ScrollView);
+const module_6840 = fn(6840);
+const memoResult = fn(19).memo(module_6840.createBottomSheetScrollableComponent(fn(6628).SCROLLABLE_TYPE.SCROLLVIEW, animatedComponent));
 memoResult.displayName = "BottomSheetScrollView";
 
 export default memoResult;

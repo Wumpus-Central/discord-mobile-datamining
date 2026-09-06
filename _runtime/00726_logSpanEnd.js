@@ -1,13 +1,14 @@
 // === Module 726: logSpanEnd ===
 
 // Module 726 (logSpanEnd)
-import __SENTRY_DEBUG__ from "__SENTRY_DEBUG__" /* 688 */;
+import _mod688 from "module_688" /* 688 */;
 
 require = arg1;
 const dependencyMap = arg6;
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
-arg5.logSpanEnd = function logSpanEnd(spanContext) {
-  if (__SENTRY_DEBUG__.DEBUG_BUILD) {
+
+export const logSpanEnd = function logSpanEnd(spanContext) {
+  if (_mod688.DEBUG_BUILD) {
     let tmpResult = tmp(684);
     const spanToJSONResult = tmpResult.spanToJSON(spanContext);
     const description = spanToJSONResult.description;
@@ -32,8 +33,8 @@ arg5.logSpanEnd = function logSpanEnd(spanContext) {
     debug.log(combined);
   }
 };
-arg5.logSpanStart = function logSpanStart(spanContext) {
-  if (__SENTRY_DEBUG__.DEBUG_BUILD) {
+export const logSpanStart = function logSpanStart(spanContext) {
+  if (_mod688.DEBUG_BUILD) {
     let tmpResult = tmp(684);
     const spanToJSONResult = tmpResult.spanToJSON(spanContext);
     const description = spanToJSONResult.description;

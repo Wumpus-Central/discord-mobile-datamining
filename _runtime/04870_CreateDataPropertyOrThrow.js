@@ -1,11 +1,11 @@
 // === Module 4870: CreateDataPropertyOrThrow ===
 
 // Module 4870 (CreateDataPropertyOrThrow)
-import isObject from "isObject" /* 4809 */;
+import _mod4809 from "module_4809" /* 4809 */;
 
 
 export default function CreateDataPropertyOrThrow(arg0, arg1, arg2) {
-  if (isObject(arg0)) {
+  if (_mod4809(arg0)) {
     if (tmp(4856)(arg1)) {
       if (!tmp(4871)(arg0, arg1, arg2)) {
         const tmp15 = new tmp(1283)("unable to create data property");

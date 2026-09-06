@@ -2,11 +2,11 @@
 
 // Module 164 (warnNoNativePerformance)
 import warnOnceDefault from "warnOnce" /* 165 */;
-import importDefaultResult from "NativePerformanceCxx" /* 154 */;
+import NativePerformanceCxx from "module_154" /* 154 */;
 
 let fn;
-if (importDefaultResult != null) {
-  fn = importDefaultResult.now;
+if (NativePerformanceCxx != null) {
+  fn = NativePerformanceCxx.now;
 }
 if (fn == null) {
   fn = global.nativePerformanceNow;

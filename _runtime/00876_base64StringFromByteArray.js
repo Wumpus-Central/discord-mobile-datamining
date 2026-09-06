@@ -1,7 +1,7 @@
 // === Module 876: base64StringFromByteArray ===
 
 // Module 876 (base64StringFromByteArray)
-import items from "items" /* 877 */;
+import _mod877 from "module_877" /* 877 */;
 
 
-export const base64StringFromByteArray = items.base64StringFromByteArray;
+export const base64StringFromByteArray = _mod877.base64StringFromByteArray;

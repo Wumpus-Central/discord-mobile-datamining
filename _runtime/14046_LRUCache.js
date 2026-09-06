@@ -2,34 +2,36 @@
 
 // Module 14046 (LRUCache)
 import _createClass from "_createClass" /* 42 */;
-import LRUCache from "_classCallCheck" /* 41 */;
+import _classCallCheck from "_classCallCheck" /* 41 */;
 
 class LRUCache {
   constructor() {
-    tmp = LRUCache(this, LRUCache);
+    tmp = closure_0(this, LRUCache);
     this.max = 1000;
     map = new Map();
     this.map = map;
     return;
   }
 }
-const items = [
-  {
-    key: "get",
-    value: function get(arg0) {
-      const self = this;
-      const value = this.map.get(arg0);
-      let tmp2;
-      if (undefined !== value) {
-        self.map.delete(arg0);
-        const result = self.map.set(arg0, value);
-        tmp2 = value;
-        const map2 = self.map;
-        const map3 = self.map;
-      }
-      return tmp2;
+_classCallCheck = LRUCache;
+const entry = {
+  key: "get",
+  value: function get(arg0) {
+    const self = this;
+    value = this.map.get(arg0);
+    let tmp2;
+    if (undefined !== value) {
+      self.map.delete(arg0);
+      const result = self.map.set(arg0, value);
+      tmp2 = value;
+      const map2 = self.map;
+      const map3 = self.map;
     }
-  },
+    return tmp2;
+  }
+};
+const items = [
+  entry,
   {
     key: "delete",
     value: function _delete(arg0) {

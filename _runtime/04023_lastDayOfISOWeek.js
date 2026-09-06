@@ -5,16 +5,14 @@ import lastDayOfWeek from "lastDayOfWeek" /* 4024 */;
 import requiredArgs from "requiredArgs" /* 3651 */;
 
 if (!lastDayOfWeek) {
-  let obj = { default: null };
-  obj[0] = lastDayOfWeek;
+  let obj = { default: lastDayOfWeek };
   let tmp3 = obj;
 } else {
   tmp3 = lastDayOfWeek;
 }
 lastDayOfWeek = tmp3;
 if (!requiredArgs) {
-  obj = { default: null };
-  obj[0] = requiredArgs;
+  obj = { default: requiredArgs };
   let tmp5 = obj;
 } else {
   tmp5 = requiredArgs;

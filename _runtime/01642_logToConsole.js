@@ -1,7 +1,7 @@
 // === Module 1642: logToConsole ===
 
 // Module 1642 (logToConsole)
-import addLogBoxLog from "addLogBoxLog" /* 1641 */;
+import _mod1641 from "module_1641" /* 1641 */;
 
 const global = arg0;
 require = arg1;
@@ -28,15 +28,22 @@ function formatMessage(arg0) {
 formatMessage.__closure = {};
 formatMessage.__workletHash = 4586683970876;
 formatMessage.__initData = { code: "function formatMessage_Pnpm_loggerTs2(message){return\"[Reanimated] \"+message;}" };
-function createLog(level) {
-  if (typeof formatMessage !== "function") {
-    HermesBuiltin.throwTypeError();
+function createLog(level, arg1) {
+  if (typeof formatMessage === "function") {
+    const _HermesInternal = HermesInternal;
+    const combined = "[Reanimated] " + arg1;
+    const error = { level, message: null, category: null, componentStack: null, componentStackType: null, stack: null };
+    obj = { content: combined, substitutions: [] };
+    error.message = obj;
+    error.category = combined;
+    error.componentStack = [];
+    const _Error = Error;
+    const error1 = new Error();
+    error.stack = error1.stack;
+    return error;
+  } else {
+    throw new TypeError("Trying to call a non-function");
   }
-  const combined = "[Reanimated] " + arg1;
-  obj = { level, message: { content: combined, substitutions: [] }, category: combined, componentStack: [], componentStackType: null, stack: null };
-  error = new Error();
-  obj[5] = error.stack;
-  return obj;
 }
 createLog.__closure = { formatMessage };
 createLog.__workletHash = 5107313473751;
@@ -51,10 +58,12 @@ function replaceLoggerImplementation(fn) {
   obj = {};
   const merged = Object.assign(global.__reanimatedLoggerConfig);
   obj.logFunction = fn;
-  if (typeof registerLoggerConfig !== "function") {
-    HermesBuiltin.throwTypeError();
+  if (typeof registerLoggerConfig === "function") {
+    tmp.__reanimatedLoggerConfig = obj;
+  } else {
+    throw new TypeError("Trying to call a non-function");
   }
-  global.__reanimatedLoggerConfig = obj;
+  tmp = global;
 }
 replaceLoggerImplementation.__closure = { registerLoggerConfig };
 replaceLoggerImplementation.__workletHash = 9450518662656;
@@ -78,10 +87,13 @@ function updateLoggerConfig(level) {
     strict = obj.strict;
   }
   obj.strict = strict;
-  if (typeof registerLoggerConfig !== "function") {
-    HermesBuiltin.throwTypeError();
+  if (typeof tmp === "function") {
+    tmp2.__reanimatedLoggerConfig = obj;
+  } else {
+    throw new TypeError("Trying to call a non-function");
   }
-  global.__reanimatedLoggerConfig = obj;
+  tmp = registerLoggerConfig;
+  tmp2 = global;
 }
 updateLoggerConfig.__closure = { registerLoggerConfig, DEFAULT_LOGGER_CONFIG: obj };
 updateLoggerConfig.__workletHash = 14435084623184;
@@ -98,33 +110,32 @@ function handleLog(error, arg1, strict) {
       const _HermesInternal = HermesInternal;
       sum = arg1 + "\n\n" + c3;
     }
-    if (typeof createLog !== "function") {
-      HermesBuiltin.throwTypeError();
+    if (typeof createLog === "function") {
+      if (typeof formatMessage === "function") {
+        const _HermesInternal2 = HermesInternal;
+        const combined = "[Reanimated] " + sum;
+        error = { level: error, message: null, category: null, componentStack: null, componentStackType: null, stack: null };
+        obj = { content: combined, substitutions: [] };
+        error.message = obj;
+        error.category = combined;
+        error.componentStack = [];
+        const _Error = Error;
+        const error1 = new Error();
+        error.stack = error1.stack;
+        tmp7(error);
+      } else {
+        throw new TypeError("Trying to call a non-function");
+      }
+    } else {
+      throw new TypeError("Trying to call a non-function");
     }
-    if (typeof formatMessage !== "function") {
-      HermesBuiltin.throwTypeError();
-    }
-    const _HermesInternal2 = HermesInternal;
-    const combined = "[Reanimated] " + sum;
-    obj = { level: null, message: null, category: null, componentStack: null, componentStackType: null, stack: null };
-    obj[0] = error;
-    obj = { content: null, substitutions: null };
-    obj[0] = combined;
-    obj[1] = [];
-    obj[1] = obj;
-    obj[2] = combined;
-    obj[3] = [];
-    const _Error = Error;
-    error = new Error();
-    obj[5] = error.stack;
-    __reanimatedLoggerConfig.logFunction(obj);
   }
 }
 handleLog.__closure = { LogLevel: obj, DOCS_REFERENCE: "If you don't want to see this message, you can disable the `strict` mode. Refer to:\nhttps://docs.swmansion.com/react-native-reanimated/docs/debugging/logger-configuration for more details.", createLog };
 handleLog.__workletHash = 5113579927044;
 handleLog.__initData = { code: "function handleLog_Pnpm_loggerTs7(level,message,options){const{LogLevel,DOCS_REFERENCE,createLog}=this.__closure;const config=global.__reanimatedLoggerConfig;if(options.strict&&!config.strict||LogLevel[level]<config.level){return;}if(options.strict){message+=\"\\n\\n\"+DOCS_REFERENCE;}config.logFunction(createLog(level,message));}" };
-obj = { warn: fn, error: null };
-fn = function v(arg0, strict) {
+obj = { warn: null, error: null };
+const fn = function v(arg0, strict) {
   obj = strict;
   if (strict === undefined) {
     obj = {};
@@ -134,6 +145,7 @@ fn = function v(arg0, strict) {
 fn.__closure = { handleLog };
 fn.__workletHash = 13521870617115;
 fn.__initData = { code: "function warn_Pnpm_loggerTs8(message,options={}){const{handleLog}=this.__closure;handleLog('warn',message,options);}" };
+obj.warn = fn;
 class L {
   constructor(arg0) {
     obj = arg1;
@@ -147,24 +159,26 @@ class L {
 L.__closure = { handleLog };
 L.__workletHash = 10275432056698;
 L.__initData = { code: "function error_Pnpm_loggerTs9(message,options={}){const{handleLog}=this.__closure;handleLog('error',message,options);}" };
-obj[1] = L;
-arg5.LogLevel = obj;
-arg5.DEFAULT_LOGGER_CONFIG = obj;
-arg5.logToLogBoxAndConsole = function logToLogBoxAndConsole(level) {
-  addLogBoxLog.addLogBoxLog(level);
-  if (typeof logToConsole !== "function") {
-    HermesBuiltin.throwTypeError();
-  }
-  level = level.level;
-  if ("warn" === level) {
-    const _console2 = console;
-    console.warn(level.message.content);
+obj.error = L;
+
+export const LogLevel = obj;
+export const DEFAULT_LOGGER_CONFIG = obj;
+export const logToLogBoxAndConsole = function logToLogBoxAndConsole(level) {
+  _mod1641.addLogBoxLog(level);
+  if (typeof logToConsole === "function") {
+    level = level.level;
+    if ("warn" === level) {
+      const _console2 = console;
+      console.warn(level.message.content);
+    } else {
+      const _console = console;
+      console.error(level.message.content);
+    }
   } else {
-    const _console = console;
-    console.error(level.message.content);
+    throw new TypeError("Trying to call a non-function");
   }
 };
-arg5.registerLoggerConfig = registerLoggerConfig;
-arg5.replaceLoggerImplementation = replaceLoggerImplementation;
-arg5.updateLoggerConfig = updateLoggerConfig;
-arg5.logger = obj;
+export { registerLoggerConfig };
+export { replaceLoggerImplementation };
+export { updateLoggerConfig };
+export const logger = obj;

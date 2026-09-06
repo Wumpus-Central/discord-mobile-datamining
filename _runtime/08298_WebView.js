@@ -1,10 +1,10 @@
 // === Module 8298: WebView ===
 
 // Module 8298 (WebView)
-import NativeModulesDefault from "NativeModules" /* 8299 */;
-import getWebViewProxyDefault from "getWebViewProxy" /* 8304 */;
+import _modDef8299 from "module_8299" /* 8299 */;
+import _modDef8304 from "module_8304" /* 8304 */;
 
 
-export default NativeModulesDefault;
-export const WebView = NativeModulesDefault;
-export const getWebViewProxy = getWebViewProxyDefault;
+export default _modDef8299;
+export const WebView = _modDef8299;
+export const getWebViewProxy = _modDef8304;

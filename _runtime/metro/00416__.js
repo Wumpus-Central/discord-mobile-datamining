@@ -1,0 +1,108 @@
+// === Module 416: ? ===
+
+// Module 416
+import _modDef417 from "module_417" /* 417 */;
+import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
+import _classCallCheck from "_classCallCheck" /* 41 */;
+import _createClass from "_createClass" /* 42 */;
+import metroRequire from "_possibleConstructorReturn" /* 93 */;
+import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
+import _inherits from "_inherits" /* 98 */;
+import noop from "module_19" /* 19 */;
+
+const RefreshControl = fn;
+function _isNativeReflectConstruct() {
+  try {
+    const _Boolean = Boolean;
+    const call = valueOf.call;
+    const _Reflect = Reflect;
+    const _Boolean2 = Boolean;
+    if (typeof call === "unknown") {
+      let callResult = valueOf();
+    } else {
+      callResult = call(constructResult);
+    }
+    closure_0 = !callResult;
+    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
+      return closure_0;
+    };
+    return _isNativeReflectConstruct();
+  } catch (err) {
+  }
+}
+let closure_3 = ["tintColor", "titleColor", "title"];
+const jsx = fn(21).jsx;
+class RefreshControl {
+  constructor() {
+    self = this;
+    items = [...arguments];
+    closure_0 = undefined;
+    tmp = hasOwnProperty(this, RefreshControl);
+    items1 = [...items];
+    tmp2 = closure_7;
+    obj = closure_7(RefreshControl);
+    tmp3 = metroRequire;
+    if (closure_9()) {
+      tmp5 = globalThis;
+      _Reflect = Reflect;
+      constructResult = Reflect.construct(obj, items1, tmp2(self).constructor);
+    } else {
+      constructResult = obj.apply(self, items1);
+    }
+    tmp3Result = tmp3(self, constructResult);
+    closure_0 = tmp3Result;
+    tmp3Result._lastNativeRefreshing = false;
+    tmp3Result._onRefresh = () => {
+      props._lastNativeRefreshing = true;
+      if (props.props.onRefresh) {
+        props = obj.props;
+        props.onRefresh();
+      }
+      props.forceUpdate();
+    };
+    tmp3Result._setNativeRef = (_nativeRef) => {
+      closure_0._nativeRef = _nativeRef;
+    };
+    return tmp3Result;
+  }
+}
+_inherits(RefreshControl, noop.Component);
+const entry = {
+  key: "componentDidMount",
+  value: function componentDidMount() {
+    this._lastNativeRefreshing = this.props.refreshing;
+  }
+};
+let items = [
+  entry,
+  {
+    key: "componentDidUpdate",
+    value: function componentDidUpdate(refreshing) {
+      const self = this;
+      if (this.props.refreshing !== refreshing.refreshing) {
+        self._lastNativeRefreshing = self.props.refreshing;
+      } else {
+        if (tmp) {
+          const Commands = RefreshControl(417).Commands;
+          Commands.setNativeRefreshing(self._nativeRef, self.props.refreshing);
+          self._lastNativeRefreshing = self.props.refreshing;
+        }
+        tmp = self.props.refreshing !== self._lastNativeRefreshing && self._nativeRef;
+      }
+    }
+  },
+  {
+    key: "render",
+    value: function render() {
+      const props = this.props;
+      ({ tintColor, titleColor, title } = props);
+      const obj = {};
+      const tmp = _objectWithoutProperties(props, closure_3);
+      const merged = Object.assign(tmp);
+      ({ _setNativeRef: obj.ref, _onRefresh: obj.onRefresh } = this);
+      return jsx(_modDef417, {});
+    }
+  }
+];
+
+export default _createClass(RefreshControl, items);

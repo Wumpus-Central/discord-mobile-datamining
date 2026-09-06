@@ -1,25 +1,25 @@
 // === Module 4314: defaultOnError ===
 
 // Module 4314 (defaultOnError)
-import _mod4315 from "module_4315" /* 4315 */;
-import closure_3 from "_objectWithoutProperties" /* 109 */;
-import noop from "noop" /* 19 */;
-import { jsx } from "jsxProd" /* 21 */;
+import RiveErrorType from "RiveErrorType" /* 4315 */;
+import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 
-require = arg1;
+require = fn;
 let closure_2 = ["onError", "hybridRef"];
-({ useEffect: c4, useRef: c5 } = noop);
+const noop = fn(19);
+({ useEffect: closure_4, useRef: hasOwnProperty } = noop);
+const jsx = fn(21).jsx;
 function defaultOnError(message) {
-  return console.error("[" + _mod4315.RiveErrorType[message.type] + "] " + message.message);
+  return console.error("[" + RiveErrorType.RiveErrorType[message.type] + "] " + message.message);
 }
 
 export const RiveView = function RiveView(arg0) {
-  let obj = _require(4316);
+  let obj = require("c");
   const cResult = obj.c(16);
   if (cResult[0] !== arg0) {
     ({ onError, hybridRef } = arg0);
     _require = hybridRef;
-    const tmp9 = callback(arg0, closure_2);
+    const tmp9 = _objectWithoutProperties(arg0, closure_2);
     cResult[0] = arg0;
     cResult[1] = onError;
     cResult[2] = tmp9;
@@ -34,14 +34,14 @@ export const RiveView = function RiveView(arg0) {
   if (tmp4 == null) {
     tmp4 = defaultOnError;
   }
-  dependencyMap = callback3(null);
+  dependencyMap = closure_5(null);
   if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
     const fn = function y() {
       return () => {
         if (ref.current) {
-          closure_1_0(closure_1_1[5]).callDispose(tmp.current);
+          closure_0(ref[5]).callDispose(tmp.current);
           tmp.current = null;
-          const obj = closure_1_0(closure_1_1[5]);
+          const obj = closure_0(ref[5]);
         }
       };
     };
@@ -54,7 +54,7 @@ export const RiveView = function RiveView(arg0) {
     tmp10 = cResult[4];
     tmp11 = cResult[5];
   }
-  callback2(tmp10, tmp11);
+  closure_4(tmp10, tmp11);
   if (cResult[6] !== tmp6) {
     const fn2 = function b(current) {
       closure_1.current = current;
@@ -73,8 +73,7 @@ export const RiveView = function RiveView(arg0) {
     tmp13 = cResult[7];
   }
   if (cResult[8] !== tmp4) {
-    obj = { f: null };
-    obj[0] = tmp4;
+    obj = { f: tmp4 };
     cResult[8] = tmp4;
     cResult[9] = obj;
     let tmp14 = obj;
@@ -82,8 +81,7 @@ export const RiveView = function RiveView(arg0) {
     tmp14 = cResult[9];
   }
   if (cResult[10] !== tmp13) {
-    obj = { f: null };
-    obj[0] = tmp13;
+    obj = { f: tmp13 };
     cResult[10] = tmp13;
     cResult[11] = obj;
     let tmp15 = obj;
@@ -98,11 +96,11 @@ export const RiveView = function RiveView(arg0) {
       return tmp16;
     }
   }
-  obj1 = {};
+  const obj1 = {};
   const merged = Object.assign(tmp5);
   obj1.onError = tmp14;
   obj1.hybridRef = tmp15;
-  const tmp18 = jsx(_require(4292).NitroRiveView, {});
+  const tmp18 = jsx(require("NitroRiveView").NitroRiveView, {});
   cResult[12] = tmp5;
   cResult[13] = tmp14;
   cResult[14] = tmp15;

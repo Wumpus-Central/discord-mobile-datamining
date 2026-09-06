@@ -3,11 +3,9 @@
 // Module 237
 import _mod38 from "module_38" /* 38 */;
 
-const global = arg0;
 require = arg1;
-const dependencyMap = arg6;
-let closure_3 = { log: "log", info: "info", warn: "warn", error: "error", fatal: "error" };
-let c4 = null;
+const dependencyMap = { log: "log", info: "info", warn: "warn", error: "error", fatal: "error" };
+let global = null;
 const obj = {
   logIfNoNativeHook(arg0) {
     const substr = [...arguments].slice();
@@ -17,8 +15,8 @@ const obj = {
       HermesBuiltin.arraySpread(substr, 1);
       HermesBuiltin.apply(items, obj);
     } else {
-      let tmp3 = c4;
-      if (c4) {
+      let tmp3 = global;
+      if (global) {
         tmp3 = "warn" === arg0;
       }
       if (tmp3) {
@@ -26,18 +24,18 @@ const obj = {
         HermesBuiltin.arraySpread(substr, 0);
         HermesBuiltin.apply(items1, undefined);
       }
-      const tmp2 = c4;
     }
   },
   logToConsole(arg0) {
     const substr = [...arguments].slice();
     const tmp3 = _mod38;
-    tmp3(table[arg0], `${`Level "${arg0}`}" not one of ${Object.keys(table).toString()}`);
+    tmp3(dependencyMap[arg0], `${`Level "${arg0}`}" not one of ${Object.keys(closure_3).toString()}`);
     const items = [...substr];
-    console[table[arg0]].apply(items);
+    console[dependencyMap[arg0]].apply(items);
   },
   setWarningHandler(arg0) {
-    closure_4 = arg0;
+    global = arg0;
   }
 };
-arg5.default = obj;
+
+export default obj;

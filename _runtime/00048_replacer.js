@@ -1,14 +1,14 @@
 // === Module 48: replacer ===
 
 // Module 48 (replacer)
-let c0 = arg2;
-let c1 = arg6;
-function replacer(arg0, props) {
-  if (arr.length) {
+function replacer(arg0, _default) {
+  let arr = closure_4;
+  if (closure_4.length) {
     arr = tmp;
     if (this !== tmp[0]) {
-      arr = arr.shift();
-      while (arr.length) {
+      closure_4.shift();
+      arr = closure_4;
+      while (closure_4.length) {
         arr = tmp3;
         if (tmp2 === tmp3[0]) {
           break;
@@ -16,38 +16,38 @@ function replacer(arg0, props) {
       }
     }
   }
-  if (typeof props === "string") {
-    let text = props;
-    if (props.length > POSITIVE_INFINITY2 + 17) {
-      text = `${props.substring(0, tmp17)}...(truncated)...`;
+  if (typeof _default === "string") {
+    let text = _default;
+    if (_default.length > POSITIVE_INFINITY2 + 17) {
+      text = `${_default.substring(0, tmp17)}...(truncated)...`;
     }
     return text;
   } else {
-    if (typeof props === "object") {
-      if (null !== props) {
+    if (typeof _default === "object") {
+      if (null !== _default) {
         const _Array = Array;
-        if (Array.isArray(props)) {
+        if (Array.isArray(_default)) {
           if (arr.length >= POSITIVE_INFINITY) {
             const _HermesInternal3 = HermesInternal;
-            let combined = "[ ... array with " + props.length + " values ... ]";
+            let combined = "[ ... array with " + _default.length + " values ... ]";
           } else {
-            combined = props;
-            if (props.length > POSITIVE_INFINITY3) {
-              const substr = props.slice(0, tmp14);
+            combined = _default;
+            if (_default.length > POSITIVE_INFINITY3) {
+              const substr = _default.slice(0, tmp14);
               const _HermesInternal2 = HermesInternal;
-              const items = ["... extra " + props.length - tmp14 + " values truncated ..."];
+              const items = ["... extra " + _default.length - tmp14 + " values truncated ..."];
               combined = substr.concat(items);
             }
           }
         } else {
-          POSITIVE_INFINITY(POSITIVE_INFINITY2[0])(typeof props === "object", "This was already found earlier");
+          POSITIVE_INFINITY(POSITIVE_INFINITY2[0])(typeof _default === "object", "This was already found earlier");
           const _Object = Object;
-          const keys = Object.keys(props);
+          const keys = Object.keys(_default);
           if (arr.length >= POSITIVE_INFINITY) {
             const _HermesInternal = HermesInternal;
             combined = "{ ... object with " + keys.length + " keys ... }";
           } else {
-            combined = props;
+            combined = _default;
             if (keys.length > POSITIVE_INFINITY4) {
               const obj = {};
               const substr1 = keys.slice(0, tmp9);
@@ -60,41 +60,42 @@ function replacer(arg0, props) {
             }
           }
         }
-        arr = arr.unshift(combined);
+        arr = closure_4.unshift(combined);
         return combined;
       }
     }
-    return props;
+    return _default;
   }
 }
-c0 = 10;
-c1 = 100;
+let c0 = 10;
+let c1 = 100;
 let c2 = 50;
 let c3 = 50;
 let closure_4 = [];
-arg5.default = function stringifySafe(fn) {
-  if (undefined === fn) {
+
+export default function stringifySafe(name) {
+  if (undefined === name) {
     return "undefined";
-  } else if (null === fn) {
+  } else if (null === name) {
     return "null";
-  } else if (typeof fn === "function") {
+  } else if (typeof name === "function") {
     try {
-      return fn.toString();
+      return name.toString();
     } catch (err) {
       return "[function unknown]";
     }
   } else {
     const _Error = Error;
-    if (fn instanceof Error) {
-      return fn.name + ": " + fn.message;
+    if (name instanceof Error) {
+      return name.name + ": " + name.message;
     } else {
       try {
         const _JSON = JSON;
-        const json = JSON.stringify(fn, replacer);
+        const json = JSON.stringify(name, replacer);
         let combined = json;
         if (undefined === json) {
           const _HermesInternal = HermesInternal;
-          combined = "[\"" + typeof fn + "\" failed to stringify]";
+          combined = "[\"" + typeof name + "\" failed to stringify]";
         }
         return combined;
       } catch (err) {
@@ -110,13 +111,15 @@ arg5.default = function stringifySafe(fn) {
     }
   }
 };
-arg5.createStringifySafeWithLimits = function createStringifySafeWithLimits(maxDepth) {
-  replacer = function replacer(arg0, props) {
-    if (arr.length) {
+export const createStringifySafeWithLimits = function createStringifySafeWithLimits(maxDepth) {
+  replacer = function replacer(arg0, _default) {
+    let arr = closure_4;
+    if (closure_4.length) {
       arr = tmp;
       if (this !== tmp[0]) {
-        arr = arr.shift();
-        while (arr.length) {
+        closure_4.shift();
+        arr = closure_4;
+        while (closure_4.length) {
           arr = tmp3;
           if (tmp2 === tmp3[0]) {
             break;
@@ -124,38 +127,38 @@ arg5.createStringifySafeWithLimits = function createStringifySafeWithLimits(maxD
         }
       }
     }
-    if (typeof props === "string") {
-      let text = props;
-      if (props.length > POSITIVE_INFINITY2 + 17) {
-        text = `${props.substring(0, tmp17)}...(truncated)...`;
+    if (typeof _default === "string") {
+      let text = _default;
+      if (_default.length > POSITIVE_INFINITY2 + 17) {
+        text = `${_default.substring(0, tmp17)}...(truncated)...`;
       }
       return text;
     } else {
-      if (typeof props === "object") {
-        if (null !== props) {
+      if (typeof _default === "object") {
+        if (null !== _default) {
           const _Array = Array;
-          if (Array.isArray(props)) {
+          if (Array.isArray(_default)) {
             if (arr.length >= POSITIVE_INFINITY) {
               const _HermesInternal3 = HermesInternal;
-              let combined = "[ ... array with " + props.length + " values ... ]";
+              let combined = "[ ... array with " + _default.length + " values ... ]";
             } else {
-              combined = props;
-              if (props.length > POSITIVE_INFINITY3) {
-                const substr = props.slice(0, tmp14);
+              combined = _default;
+              if (_default.length > POSITIVE_INFINITY3) {
+                const substr = _default.slice(0, tmp14);
                 const _HermesInternal2 = HermesInternal;
-                const items = ["... extra " + props.length - tmp14 + " values truncated ..."];
+                const items = ["... extra " + _default.length - tmp14 + " values truncated ..."];
                 combined = substr.concat(items);
               }
             }
           } else {
-            POSITIVE_INFINITY(POSITIVE_INFINITY2[0])(typeof props === "object", "This was already found earlier");
+            POSITIVE_INFINITY(POSITIVE_INFINITY2[0])(typeof _default === "object", "This was already found earlier");
             const _Object = Object;
-            const keys = Object.keys(props);
+            const keys = Object.keys(_default);
             if (arr.length >= POSITIVE_INFINITY) {
               const _HermesInternal = HermesInternal;
               combined = "{ ... object with " + keys.length + " keys ... }";
             } else {
-              combined = props;
+              combined = _default;
               if (keys.length > POSITIVE_INFINITY4) {
                 const obj = {};
                 const substr1 = keys.slice(0, tmp9);
@@ -168,11 +171,11 @@ arg5.createStringifySafeWithLimits = function createStringifySafeWithLimits(maxD
               }
             }
           }
-          arr = arr.unshift(combined);
+          arr = closure_4.unshift(combined);
           return combined;
         }
       }
-      return props;
+      return _default;
     }
   };
   let POSITIVE_INFINITY = maxDepth.maxDepth;
@@ -196,29 +199,29 @@ arg5.createStringifySafeWithLimits = function createStringifySafeWithLimits(maxD
     POSITIVE_INFINITY4 = Number.POSITIVE_INFINITY;
   }
   closure_4 = [];
-  return function stringifySafe(fn) {
-    if (undefined === fn) {
+  return function stringifySafe(name) {
+    if (undefined === name) {
       return "undefined";
-    } else if (null === fn) {
+    } else if (null === name) {
       return "null";
-    } else if (typeof fn === "function") {
+    } else if (typeof name === "function") {
       try {
-        return fn.toString();
+        return name.toString();
       } catch (err) {
         return "[function unknown]";
       }
     } else {
       const _Error = Error;
-      if (fn instanceof Error) {
-        return fn.name + ": " + fn.message;
+      if (name instanceof Error) {
+        return name.name + ": " + name.message;
       } else {
         try {
           const _JSON = JSON;
-          const json = JSON.stringify(fn, replacer);
+          const json = JSON.stringify(name, replacer);
           let combined = json;
           if (undefined === json) {
             const _HermesInternal = HermesInternal;
-            combined = "[\"" + typeof fn + "\" failed to stringify]";
+            combined = "[\"" + typeof name + "\" failed to stringify]";
           }
           return combined;
         } catch (err) {

@@ -1,11 +1,11 @@
 // === Module 4861: ToPropertyDescriptor ===
 
 // Module 4861 (ToPropertyDescriptor)
-import isObject from "isObject" /* 4809 */;
+import _mod4809 from "module_4809" /* 4809 */;
 
 
 export default function ToPropertyDescriptor(enumerable) {
-  if (isObject(enumerable)) {
+  if (_mod4809(enumerable)) {
     const obj = {};
     if (tmp(1315)(enumerable, "enumerable")) {
       obj["[[Enumerable]]"] = tmp(4862)(enumerable.enumerable);

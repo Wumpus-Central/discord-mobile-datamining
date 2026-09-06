@@ -1,11 +1,11 @@
 // === Module 550: throttle ===
 
 // Module 550 (throttle)
-import isObject from "isObject" /* 521 */;
+import _mod521 from "module_521" /* 521 */;
 import debounce from "debounce" /* 551 */;
 
 
-export default function throttle(fn, arg1, leading) {
+export default function throttle(fn, maxWait, leading) {
   if (typeof fn !== "function") {
     const _TypeError = TypeError;
     const typeError = new TypeError("Expected a function");
@@ -13,7 +13,7 @@ export default function throttle(fn, arg1, leading) {
   } else {
     let flag3 = true;
     let flag4 = true;
-    if (isObject(leading)) {
+    if (_mod521(leading)) {
       let flag = true;
       if ("leading" in leading) {
         flag = leading.leading;
@@ -25,10 +25,7 @@ export default function throttle(fn, arg1, leading) {
       flag3 = flag2;
       flag4 = flag;
     }
-    const obj = { leading: null, maxWait: null, trailing: null };
-    obj[0] = flag4;
-    obj[1] = arg1;
-    obj[2] = flag3;
-    return debounce(fn, arg1, obj);
+    const obj = { leading: flag4, maxWait, trailing: flag3 };
+    return debounce(fn, maxWait, obj);
   }
 };

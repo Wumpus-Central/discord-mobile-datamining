@@ -1,7 +1,8 @@
 // === Module 8459: extractOpacity ===
 
 // Module 8459 (extractOpacity)
-arg5.default = function extractOpacity(str) {
+
+export default function extractOpacity(str) {
   if (typeof str === "string") {
     const trimmed = str.trim();
     if (trimmed.endsWith("%")) {

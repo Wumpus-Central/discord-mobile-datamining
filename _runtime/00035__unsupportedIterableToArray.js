@@ -4,7 +4,7 @@
 import _arrayLikeToArray from "_arrayLikeToArray" /* 36 */;
 
 
-export default function _unsupportedIterableToArray(str) {
+export default function _unsupportedIterableToArray(str, arg1) {
   if (str) {
     if (typeof str === "string") {
       return _arrayLikeToArray(str, arg1);

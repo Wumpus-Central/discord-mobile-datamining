@@ -1,7 +1,7 @@
 // === Module 4483: ref ===
 
 // Module 4483 (ref)
-import closure_0 from "noop" /* 19 */;
+import noop from "module_19" /* 19 */;
 import shallowEqual from "shallowEqual" /* 4484 */;
 
 if (shallowEqual) {
@@ -13,20 +13,11 @@ if (shallowEqual) {
 }
 let closure_2 = {};
 
-export default (arg0, arg1) => {
-  let tmp = arg1;
-  if (undefined === arg1) {
-    tmp = closure_1;
-  }
-  ref = ref.useRef(closure_2);
-  let current = ref.current;
-  closure_1 = current;
-  const effect = ref.useEffect(() => {
-    ref.current = closure_1;
+export default (current, arg1) => {
+  const ref = noop.useRef(closure_2);
+  current = ref.current;
+  const effect = noop.useEffect(() => {
+    ref.current = current;
   });
-  if (!tmp4) {
-    closure_1 = arg0;
-    current = arg0;
-  }
   return current;
 };

@@ -1,24 +1,23 @@
 // === Module 5674: Label ===
 
 // Module 5674 (Label)
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import _mod17 from "module_17" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 import Text from "Text" /* 5650 */;
 
-const StyleSheet = get_ActivityIndicator.StyleSheet;
+const StyleSheet = _mod17.StyleSheet;
 const jsx = jsxProd.jsx;
-const styles = StyleSheet.create({ label: { textAlign: "center", backgroundColor: "transparent" } });
+const label = StyleSheet.create({ label: { textAlign: "center", backgroundColor: "transparent" } });
 
 export const Label = function Label(tintColor) {
   tintColor = tintColor.tintColor;
-  const merged = Object.assign(tintColor, Object.create(null));
+  const merged = Object.assign(tintColor, Object.assign({ tintColor: 0, style: 0 }));
   let obj = { numberOfLines: 1 };
   const merged1 = Object.assign(merged);
   const items = [label.label, , ];
   let tmp4 = null != tintColor;
   if (tmp4) {
-    obj = { color: null };
-    obj[0] = tintColor;
+    obj = { color: tintColor };
     tmp4 = obj;
   }
   items[1] = tmp4;

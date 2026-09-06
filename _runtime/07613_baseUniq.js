@@ -4,7 +4,7 @@
 import arrayIncludes from "arrayIncludes" /* 7614 */;
 
 
-export default function baseUniq(arg0, arg1, arg2) {
+export default function baseUniq(arg0, fn, arg2) {
   let tmpResult = arrayIncludes;
   const items = [];
   if (arg2) {
@@ -13,7 +13,7 @@ export default function baseUniq(arg0, arg1, arg2) {
     let items1 = items;
   } else if (length >= 200) {
     let tmp4 = null;
-    if (!arg1) {
+    if (!fn) {
       tmp4 = tmp(7619)(arg0);
     }
     if (tmp4) {
@@ -25,7 +25,7 @@ export default function baseUniq(arg0, arg1, arg2) {
     }
   } else {
     items1 = items;
-    if (arg1) {
+    if (fn) {
       items1 = [];
     }
     flag = true;
@@ -34,10 +34,9 @@ export default function baseUniq(arg0, arg1, arg2) {
   if (0 < arg0.length) {
     while (true) {
       let tmp7 = arg0[num2];
-      let tmp8 = num2;
       let tmp9 = tmp7;
-      if (arg1) {
-        tmp9 = arg1(tmp7);
+      if (fn) {
+        tmp9 = fn(tmp7);
       }
       if (arg2) {
         let num3 = tmp7;
@@ -49,12 +48,11 @@ export default function baseUniq(arg0, arg1, arg2) {
           let tmp12 = +items1.length;
           let diff = tmp12 - 1;
           if (!tmp12) {
-            if (arg1) {
+            if (fn) {
               let arr = items1.push(tmp9);
             }
             arr = items.push(num3);
           } else {
-            let tmp14 = diff;
             while (items1[diff] !== tmp9) {
               let tmp15 = +diff;
               diff = tmp15 - 1;

@@ -1,23 +1,24 @@
 // === Module 1010: tanstackRouterBrowserTracingIntegration ===
 
 // Module 1010 (tanstackRouterBrowserTracingIntegration)
-const require = arg1;
+import _mod682 from "module_682" /* 682 */;
+import feedbackAsyncIntegration from "feedbackAsyncIntegration" /* 889 */;
+
+require = arg1;
 let dependencyMap = arg6;
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
-arg5.tanstackRouterBrowserTracingIntegration = function tanstackRouterBrowserTracingIntegration(arg0) {
+
+export const tanstackRouterBrowserTracingIntegration = function tanstackRouterBrowserTracingIntegration(arg0) {
   let obj = arg1;
   if (arg1 === undefined) {
     obj = {};
   }
-  dependencyMap = undefined;
-  closure_2 = undefined;
-  closure_3 = undefined;
-  const _require = arg0;
+  _require = arg0;
   obj = {};
   let merged = Object.assign(obj);
   obj.instrumentNavigation = false;
   obj.instrumentPageLoad = false;
-  let result = _require(889).browserTracingIntegration(obj);
+  let result = require("feedbackAsyncIntegration").browserTracingIntegration(obj);
   dependencyMap = result;
   const instrumentPageLoad = obj.instrumentPageLoad;
   closure_2 = undefined === instrumentPageLoad || instrumentPageLoad;
@@ -26,9 +27,9 @@ arg5.tanstackRouterBrowserTracingIntegration = function tanstackRouterBrowserTra
   obj = {};
   const merged1 = Object.assign(result);
   obj.afterAllSetup = function afterAllSetup(f108154) {
-    obj1 = f108154;
+    let obj1 = f108154;
     _undefined.afterAllSetup(f108154);
-    const _location = callback(_undefined[0]).WINDOW.location;
+    const _location = obj1(_undefined[0]).WINDOW.location;
     if (closure_2) {
       if (_location) {
         ({ options, matchRoutes } = obj1);
@@ -41,8 +42,7 @@ arg5.tanstackRouterBrowserTracingIntegration = function tanstackRouterBrowserTra
         if ("__root__" !== routeId) {
           forEach = tmp5;
         }
-        let result = { name: null, attributes: null };
-        result[0] = forEach ? forEach.routeId : _location.pathname;
+        let result = { name: forEach ? forEach.routeId : _location.pathname, attributes: null };
         let obj = {};
         obj[tmp2(tmp3[1]).SEMANTIC_ATTRIBUTE_SENTRY_OP] = "pageload";
         obj[tmp2(tmp3[1]).SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN] = "auto.pageload.react.tanstack_router";
@@ -51,7 +51,6 @@ arg5.tanstackRouterBrowserTracingIntegration = function tanstackRouterBrowserTra
           str4 = "route";
         }
         obj[tmp2(tmp3[1]).SEMANTIC_ATTRIBUTE_SENTRY_SOURCE] = str4;
-        obj1 = undefined;
         obj1 = {};
         if (forEach) {
           let _Object = Object;
@@ -68,7 +67,7 @@ arg5.tanstackRouterBrowserTracingIntegration = function tanstackRouterBrowserTra
           tmp9 = obj1;
         }
         const merged = Object.assign(tmp9);
-        result[1] = obj;
+        result.attributes = obj;
         result = tmp2(tmp3[0]).startBrowserTracingPageLoadSpan(f108154, result);
         const tmp2Result = tmp2(tmp3[0]);
       }
@@ -86,23 +85,22 @@ arg5.tanstackRouterBrowserTracingIntegration = function tanstackRouterBrowserTra
             if ("__root__" !== routeId) {
               tmp2 = tmp6;
             }
-            let obj = obj1(889);
-            obj = { name: null, attributes: null };
-            obj[0] = tmp2 ? tmp2.routeId : obj1(889).WINDOW.location.pathname;
+            let obj = { name: tmp2 ? tmp2.routeId : feedbackAsyncIntegration.WINDOW.location.pathname, attributes: null };
             obj = {};
-            obj[obj1(682).SEMANTIC_ATTRIBUTE_SENTRY_OP] = "navigation";
-            obj[obj1(682).SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN] = "auto.navigation.react.tanstack_router";
+            obj[_mod682.SEMANTIC_ATTRIBUTE_SENTRY_OP] = "navigation";
+            obj[_mod682.SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN] = "auto.navigation.react.tanstack_router";
             let str4 = "url";
             if (tmp2) {
               str4 = "route";
             }
-            obj[obj1(682).SEMANTIC_ATTRIBUTE_SENTRY_SOURCE] = str4;
-            obj[1] = obj;
+            obj[_mod682.SEMANTIC_ATTRIBUTE_SENTRY_SOURCE] = str4;
+            obj.attributes = obj;
             obj1 = obj.startBrowserTracingNavigationSpan(obj1, obj);
-            closure_1 = obj1.subscribe("onResolved", (toLocation) => {
-              callback();
-              if (obj) {
-                const matchRoutesResult = closure_0.matchRoutes(toLocation.toLocation.pathname, toLocation.toLocation.search, { preload: false, throwOnError: false });
+            dependencyMap = obj1.subscribe("onResolved", (toLocation) => {
+              dependencyMap();
+              let obj = closure_0;
+              if (closure_0) {
+                const matchRoutesResult = obj1.matchRoutes(toLocation.toLocation.pathname, toLocation.toLocation.search, { preload: false, throwOnError: false });
                 let routeId;
                 if (matchRoutesResult[matchRoutesResult.length - 1] != null) {
                   routeId = tmp4.routeId;
@@ -113,8 +111,7 @@ arg5.tanstackRouterBrowserTracingIntegration = function tanstackRouterBrowserTra
                 }
                 if (forEach) {
                   obj.updateName(forEach.routeId);
-                  const attr = obj.setAttribute(obj1(closure_2_1[1]).SEMANTIC_ATTRIBUTE_SENTRY_SOURCE, "route");
-                  obj = undefined;
+                  const attr = obj.setAttribute(closure_0(682).SEMANTIC_ATTRIBUTE_SENTRY_SOURCE, "route");
                   obj = {};
                   if (forEach) {
                     const _Object = Object;
@@ -134,8 +131,6 @@ arg5.tanstackRouterBrowserTracingIntegration = function tanstackRouterBrowserTra
                 }
               }
             });
-            const obj4 = obj1;
-            const tmp5 = obj1;
           }
         }
       });

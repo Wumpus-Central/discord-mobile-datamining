@@ -5,10 +5,10 @@ import colorPropType from "colorPropType" /* 8314 */;
 import _mod8322 from "module_8322" /* 8322 */;
 import merged12 from "merged1" /* 8323 */;
 import merged22 from "merged2" /* 8324 */;
-import emptyFunction from "emptyFunction" /* 4389 */;
+import emptyFunction from "module_4389" /* 4389 */;
 
 const obj = {};
-const module_8322 = Object.assign(_mod8322);
+const size = Object.assign(_mod8322);
 const merged1 = Object.assign(merged12);
 const merged2 = Object.assign(merged22);
 obj.backfaceVisibility = emptyFunction.oneOf(["visible", "hidden"]);

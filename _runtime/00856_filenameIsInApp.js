@@ -1,10 +1,13 @@
 // === Module 856: filenameIsInApp ===
 
 // Module 856 (filenameIsInApp)
-const require = arg1;
+import _mod698 from "module_698" /* 698 */;
+
+require = arg1;
 const dependencyMap = arg6;
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
-arg5.filenameIsInApp = function filenameIsInApp(str) {
+
+export const filenameIsInApp = function filenameIsInApp(str) {
   let flag = arg1;
   if (arg1 === undefined) {
     flag = false;
@@ -34,21 +37,21 @@ arg5.filenameIsInApp = function filenameIsInApp(str) {
   }
   return tmp2;
 };
-arg5.node = function node(arg0) {
+export function node(arg0) {
   closure_0 = arg0;
   const re1 = /^\s*[-]{4,}$/;
   const re2 = /at (?:async )?(?:(.+?)\s+\()?(?:(.+):(\d+):(\d+)?|([^)]+))\)?/;
   const re3 = /at (?:async )?(.+?) \(data:(.*?),/;
-  return (str) => {
-    const match = str.match(closure_3);
+  return (filename) => {
+    const match = filename.match(re3);
     if (match) {
       let obj = { filename: null, function: null };
       const _HermesInternal2 = HermesInternal;
-      obj[0] = "<data:" + match[2] + ">";
-      obj[1] = match[1];
+      obj.filename = "<data:" + match[2] + ">";
+      obj.function = match[1];
       return obj;
     } else {
-      const match1 = str.match(closure_2);
+      const match1 = filename.match(re2);
       if (match1) {
         let tmp6;
         let tmp7;
@@ -76,14 +79,13 @@ arg5.node = function node(arg0) {
           }
           tmp6 = substr2;
           tmp7 = tmp12;
-          const tmp8 = substr3;
         }
         if (tmp7) {
           let UNKNOWN_FUNCTION = tmp7;
         }
         if (undefined === tmp6) {
           if (!UNKNOWN_FUNCTION) {
-            UNKNOWN_FUNCTION = callback(re1[0]).UNKNOWN_FUNCTION;
+            UNKNOWN_FUNCTION = _mod698.UNKNOWN_FUNCTION;
           }
           let combined = UNKNOWN_FUNCTION;
           if (tmp16) {
@@ -92,7 +94,7 @@ arg5.node = function node(arg0) {
           }
           tmp6 = combined;
         }
-        let result = callback(re1[0]).normalizeStackTracePath(match1[2]);
+        let result = _mod698.normalizeStackTracePath(match1[2]);
         let tmp24 = result;
         if (!result) {
           tmp24 = !match1[5];
@@ -109,26 +111,24 @@ arg5.node = function node(arg0) {
           const _decodeURI = decodeURI;
           decodeURIResult = decodeURI(result);
         }
-        obj = { filename: null, module: null, function: null, lineno: null, colno: null, in_app: null };
-        obj[0] = decodeURIResult;
+        obj = { filename: decodeURIResult, module: null, function: null, lineno: null, colno: null, in_app: null };
         let tmp28;
-        if (callback) {
-          tmp28 = callback(result);
+        if (closure_0) {
+          tmp28 = closure_0(result);
         }
-        obj[1] = tmp28;
-        obj[2] = tmp6;
+        obj.module = tmp28;
+        obj.function = tmp6;
         let str7 = match1[3];
         if (!str7) {
           str7 = "";
         }
-        const obj2 = callback(re1[0]);
-        obj[3] = parseInt(str7, 10) || undefined;
+        obj.lineno = parseInt(str7, 10) || undefined;
         let str8 = match1[4];
         if (!str8) {
           str8 = "";
         }
         const tmp30 = parseInt(str7, 10) || undefined;
-        obj[4] = parseInt(str8, 10) || undefined;
+        obj.colno = parseInt(str8, 10) || undefined;
         let str9 = result;
         if (!result) {
           str9 = "";
@@ -156,37 +156,36 @@ arg5.node = function node(arg0) {
         if (tmp33) {
           tmp33 = !str9.includes("node_modules/");
         }
-        obj[5] = tmp33;
+        obj.in_app = tmp33;
         return obj;
       } else {
         let tmp5;
-        if (str.match(closure_1)) {
-          obj = { filename: null };
-          obj[0] = str;
+        if (filename.match(re1)) {
+          obj = { filename };
           tmp5 = obj;
         }
         return tmp5;
       }
     }
   };
-};
-arg5.nodeStackLineParser = function nodeStackLineParser(arg0) {
+}
+export function nodeStackLineParser(arg0) {
   closure_0 = arg0;
   const re1 = /^\s*[-]{4,}$/;
   const re2 = /at (?:async )?(?:(.+?)\s+\()?(?:(.+):(\d+):(\d+)?|([^)]+))\)?/;
   const re3 = /at (?:async )?(.+?) \(data:(.*?),/;
   const items = [
     90,
-    (str) => {
-      const match = str.match(closure_3);
+    (filename) => {
+      const match = filename.match(re3);
       if (match) {
         let obj = { filename: null, function: null };
         const _HermesInternal2 = HermesInternal;
-        obj[0] = "<data:" + match[2] + ">";
-        obj[1] = match[1];
+        obj.filename = "<data:" + match[2] + ">";
+        obj.function = match[1];
         return obj;
       } else {
-        const match1 = str.match(closure_2);
+        const match1 = filename.match(re2);
         if (match1) {
           let tmp6;
           let tmp7;
@@ -214,14 +213,13 @@ arg5.nodeStackLineParser = function nodeStackLineParser(arg0) {
             }
             tmp6 = substr2;
             tmp7 = tmp12;
-            const tmp8 = substr3;
           }
           if (tmp7) {
             let UNKNOWN_FUNCTION = tmp7;
           }
           if (undefined === tmp6) {
             if (!UNKNOWN_FUNCTION) {
-              UNKNOWN_FUNCTION = callback(re1[0]).UNKNOWN_FUNCTION;
+              UNKNOWN_FUNCTION = _mod698.UNKNOWN_FUNCTION;
             }
             let combined = UNKNOWN_FUNCTION;
             if (tmp16) {
@@ -230,7 +228,7 @@ arg5.nodeStackLineParser = function nodeStackLineParser(arg0) {
             }
             tmp6 = combined;
           }
-          let result = callback(re1[0]).normalizeStackTracePath(match1[2]);
+          let result = _mod698.normalizeStackTracePath(match1[2]);
           let tmp24 = result;
           if (!result) {
             tmp24 = !match1[5];
@@ -247,26 +245,24 @@ arg5.nodeStackLineParser = function nodeStackLineParser(arg0) {
             const _decodeURI = decodeURI;
             decodeURIResult = decodeURI(result);
           }
-          obj = { filename: null, module: null, function: null, lineno: null, colno: null, in_app: null };
-          obj[0] = decodeURIResult;
+          obj = { filename: decodeURIResult, module: null, function: null, lineno: null, colno: null, in_app: null };
           let tmp28;
-          if (callback) {
-            tmp28 = callback(result);
+          if (closure_0) {
+            tmp28 = closure_0(result);
           }
-          obj[1] = tmp28;
-          obj[2] = tmp6;
+          obj.module = tmp28;
+          obj.function = tmp6;
           let str7 = match1[3];
           if (!str7) {
             str7 = "";
           }
-          const obj2 = callback(re1[0]);
-          obj[3] = parseInt(str7, 10) || undefined;
+          obj.lineno = parseInt(str7, 10) || undefined;
           let str8 = match1[4];
           if (!str8) {
             str8 = "";
           }
           const tmp30 = parseInt(str7, 10) || undefined;
-          obj[4] = parseInt(str8, 10) || undefined;
+          obj.colno = parseInt(str8, 10) || undefined;
           let str9 = result;
           if (!result) {
             str9 = "";
@@ -294,13 +290,12 @@ arg5.nodeStackLineParser = function nodeStackLineParser(arg0) {
           if (tmp33) {
             tmp33 = !str9.includes("node_modules/");
           }
-          obj[5] = tmp33;
+          obj.in_app = tmp33;
           return obj;
         } else {
           let tmp5;
-          if (str.match(closure_1)) {
-            obj = { filename: null };
-            obj[0] = str;
+          if (filename.match(re1)) {
+            obj = { filename };
             tmp5 = obj;
           }
           return tmp5;
@@ -309,4 +304,4 @@ arg5.nodeStackLineParser = function nodeStackLineParser(arg0) {
     }
   ];
   return items;
-};
+}

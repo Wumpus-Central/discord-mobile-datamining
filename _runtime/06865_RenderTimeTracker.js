@@ -1,14 +1,14 @@
 // === Module 6865: RenderTimeTracker ===
 
 // Module 6865 (RenderTimeTracker)
-import _createClassDefault from "_createClass" /* 6867 */;
-import closure_2 from "_classCallCheck" /* 6866 */;
+import _modDef6867 from "module_6867" /* 6867 */;
+import _classCallCheck from "module_6866" /* 6866 */;
 
 const RenderTimeTracker = arg1;
 class RenderTimeTracker {
   constructor() {
-    tmp = closure_2(this, RenderTimeTracker);
-    averageWindow = new require("AverageWindow").AverageWindow(5);
+    tmp = c2(this, RenderTimeTracker);
+    averageWindow = new closure_0(closure_1[2]).AverageWindow(5);
     this.renderTimeAvgWindow = averageWindow;
     this.lastTimerStartedAt = -1;
     this.maxRenderTime = 32;
@@ -18,22 +18,23 @@ class RenderTimeTracker {
     return;
   }
 }
-const items = [
-  {
-    key: "startTracking",
-    value: function startTracking() {
-      const self = this;
-      this.rendersWithoutCommit = this.rendersWithoutCommit + 1;
-      let trackAverageRenderTimeForOffsetProjection = RenderTimeTracker(6872).PlatformConfig.trackAverageRenderTimeForOffsetProjection;
-      if (trackAverageRenderTimeForOffsetProjection) {
-        trackAverageRenderTimeForOffsetProjection = -1 === self.lastTimerStartedAt;
-      }
-      if (trackAverageRenderTimeForOffsetProjection) {
-        const _Date = Date;
-        self.lastTimerStartedAt = Date.now();
-      }
+const entry = {
+  key: "startTracking",
+  value: function startTracking() {
+    const self = this;
+    this.rendersWithoutCommit = this.rendersWithoutCommit + 1;
+    let trackAverageRenderTimeForOffsetProjection = RenderTimeTracker(6872).PlatformConfig.trackAverageRenderTimeForOffsetProjection;
+    if (trackAverageRenderTimeForOffsetProjection) {
+      trackAverageRenderTimeForOffsetProjection = -1 === self.lastTimerStartedAt;
     }
-  },
+    if (trackAverageRenderTimeForOffsetProjection) {
+      const _Date = Date;
+      self.lastTimerStartedAt = Date.now();
+    }
+  }
+};
+const items = [
+  entry,
   {
     key: "markRenderComplete",
     value: function markRenderComplete() {
@@ -80,4 +81,4 @@ const items = [
   }
 ];
 
-export const RenderTimeTracker = _createClassDefault(RenderTimeTracker, items);
+export const RenderTimeTracker = _modDef6867(RenderTimeTracker, items);

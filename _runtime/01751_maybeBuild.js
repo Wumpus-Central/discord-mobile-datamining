@@ -1,7 +1,8 @@
 // === Module 1751: maybeBuild ===
 
 // Module 1751 (maybeBuild)
-arg5.maybeBuild = function maybeBuild(build, arg1, displayName) {
+
+export const maybeBuild = function maybeBuild(build, style, displayName) {
   let buildResult = build;
   if ("build" in build) {
     buildResult = build;

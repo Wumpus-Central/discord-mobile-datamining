@@ -2,13 +2,13 @@
 
 // Module 6746 (transformRotationProps)
 import ComposedGestureName from "ComposedGestureName" /* 6714 */;
-import isGestureEnabled from "isGestureEnabled" /* 6723 */;
-import useGesture from "useGesture" /* 6738 */;
+import DEFAULT_PROPS_TRANSFORMER from "DEFAULT_PROPS_TRANSFORMER" /* 6723 */;
+import _mod6738 from "module_6738" /* 6738 */;
 
 require = arg1;
 const dependencyMap = arg6;
 function transformRotationProps(arg0) {
-  arg0.changeEventCalculator = isGestureEnabled.getChangeEventCalculator(diffCalculator);
+  arg0.changeEventCalculator = DEFAULT_PROPS_TRANSFORMER.getChangeEventCalculator(diffCalculator);
   arg0.fillInDefaultValues = fillInDefaultValues;
   return arg0;
 }
@@ -32,12 +32,12 @@ fillInDefaultValues.__workletHash = 2470118803733;
 fillInDefaultValues.__initData = { code: "function fillInDefaultValues_Pnpm_useRotationGestureTs2(event){event.rotationChange=0;}" };
 const map = new Map();
 let closure_6 = {};
-arg5.useRotationGesture = function useRotationGesture(gestureHandlerProps) {
+
+export const useRotationGesture = function useRotationGesture(gestureHandlerProps) {
   let tmp = gestureHandlerProps;
   if (gestureHandlerProps === undefined) {
     tmp = closure_6;
   }
-  const clonedAndRemappedConfig = isGestureEnabled.useClonedAndRemappedConfig(tmp, map, transformRotationProps);
-  const obj = isGestureEnabled;
-  return useGesture.useGesture(ComposedGestureName.SingleGestureName.Rotation, clonedAndRemappedConfig);
+  const clonedAndRemappedConfig = DEFAULT_PROPS_TRANSFORMER.useClonedAndRemappedConfig(tmp, map, transformRotationProps);
+  return _mod6738.useGesture(ComposedGestureName.SingleGestureName.Rotation, clonedAndRemappedConfig);
 };

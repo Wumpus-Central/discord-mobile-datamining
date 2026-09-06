@@ -1,7 +1,8 @@
 // === Module 5249: ? ===
 
 // Module 5249
-arg5.default = {
+
+export default {
   get(arg0) {
     if (arg0) {
       return arg0;
@@ -12,8 +13,7 @@ arg5.default = {
       } else {
         try {
           const result = globalThis.__non_webpack_require__("@xmldom/xmldom");
-          const obj = { onError: null };
-          obj[0] = result.onErrorStopParsing;
+          const obj = { onError: result.onErrorStopParsing };
           const dOMParser1 = new result.DOMParser(obj);
           return dOMParser1;
         } catch (err) {

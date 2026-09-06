@@ -1,7 +1,7 @@
 // === Module 5239: ? ===
 
 // Module 5239
-obj = { 0: obj, 1: obj, 2: null, 3: null, 4: null, 5: null, 6: null, 7: null, 8: "GPSSatellites", 9: null, 10: null, 11: "GPSDOP", 12: null, 13: "GPSSpeed", 14: null, 15: "GPSTrack", 16: null, 17: "GPSImgDirection", 18: "GPSMapDatum", 19: null, 20: null, 21: null, 22: null, 23: null, 24: "GPSDestBearing", 25: null, 26: "GPSDestDistance", 27: null, 28: null, 29: "GPSDateStamp", 30: null, 31: "GPSHPositioningError" };
+let obj = { 0: null, 1: null, 2: null, 3: null, 4: null, 5: null, 6: null, 7: null, 8: "GPSSatellites", 9: null, 10: null, 11: "GPSDOP", 12: null, 13: "GPSSpeed", 14: null, 15: "GPSTrack", 16: null, 17: "GPSImgDirection", 18: "GPSMapDatum", 19: null, 20: null, 21: null, 22: null, 23: null, 24: "GPSDestBearing", 25: null, 26: "GPSDestDistance", 27: null, 28: null, 29: "GPSDateStamp", 30: null, 31: "GPSHPositioningError" };
 obj = {
   name: "GPSVersionID",
   description(arg0) {
@@ -21,7 +21,8 @@ obj = {
     return str;
   }
 };
-obj = {
+obj.name = obj;
+obj.description = {
   name: "GPSLatitudeRef",
   description(join) {
     const joined = join.join("");
@@ -36,7 +37,8 @@ obj = {
     return str;
   }
 };
-obj[2] = { name: "GPSLatitude", description: require("getStringValue").getCalculatedGpsValue };
+obj = { name: "GPSLatitude", description: fn(5238).getCalculatedGpsValue };
+obj[2] = obj;
 obj[3] = {
   name: "GPSLongitudeRef",
   description(join) {
@@ -52,8 +54,7 @@ obj[3] = {
     return str;
   }
 };
-const obj1 = { name: "GPSLatitude", description: require("getStringValue").getCalculatedGpsValue };
-obj[4] = { name: "GPSLongitude", description: require("getStringValue").getCalculatedGpsValue };
+obj[4] = { name: "GPSLongitude", description: fn(5238).getCalculatedGpsValue };
 obj[5] = {
   name: "GPSAltitudeRef",
   description(arg0) {
@@ -77,8 +78,8 @@ obj[6] = {
 obj[7] = {
   name: "GPSTimeStamp",
   description(arr) {
-    const mapped = arr.map((arg0) => {
-      [tmp, tmp2] = arg0;
+    const mapped = arr.map((item) => {
+      [tmp, tmp2] = item;
       const result = tmp / tmp2;
       let combined = result;
       if (obj.test("" + result)) {
@@ -245,10 +246,10 @@ obj[25] = {
     return str;
   }
 };
-const obj2 = { name: "GPSLongitude", description: require("getStringValue").getCalculatedGpsValue };
-obj[27] = { name: "GPSProcessingMethod", description: require("getStringValue").getEncodedString };
-const obj3 = { name: "GPSProcessingMethod", description: require("getStringValue").getEncodedString };
-obj[28] = { name: "GPSAreaInformation", description: require("getStringValue").getEncodedString };
+const obj1 = { name: "GPSLongitude", description: fn(5238).getCalculatedGpsValue };
+obj[27] = { name: "GPSProcessingMethod", description: fn(5238).getEncodedString };
+const obj2 = { name: "GPSProcessingMethod", description: fn(5238).getEncodedString };
+obj[28] = { name: "GPSAreaInformation", description: fn(5238).getEncodedString };
 obj[30] = {
   name: "GPSDifferential",
   description(arg0) {
@@ -263,4 +264,5 @@ obj[30] = {
     return str;
   }
 };
-arg5.default = obj;
+
+export default obj;

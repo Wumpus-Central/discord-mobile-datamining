@@ -2,12 +2,12 @@
 
 // Module 5214 (DataView)
 import _createClassDefault from "_createClass" /* 42 */;
-import DataView from "_classCallCheck" /* 41 */;
+import _classCallCheck from "_classCallCheck" /* 41 */;
 
 class DataView {
   constructor(arg0) {
     self = this;
-    tmp = DataView(this, DataView);
+    tmp = closure_0(this, DataView);
     tmp2 = typeof global !== "object";
     if (typeof global === "object") {
       tmp2 = undefined === global.length;
@@ -49,22 +49,24 @@ class DataView {
     }
   }
 }
+_classCallCheck = DataView;
+const entry = {
+  key: "getUint8",
+  value: function getUint8(sum) {
+    const buffer = this.buffer;
+    return buffer.readUInt8(sum);
+  }
+};
 const items = [
-  {
-    key: "getUint8",
-    value: function getUint8(sum) {
-      const buffer = this.buffer;
-      return buffer.readUInt8(sum);
-    }
-  },
+  entry,
   {
     key: "getUint16",
-    value: function getUint16(sum, arg1) {
+    value: function getUint16(c5, arg1) {
       const buffer = this.buffer;
       if (arg1) {
-        let uInt16LE = buffer.readUInt16LE(sum);
+        let uInt16LE = buffer.readUInt16LE(c5);
       } else {
-        uInt16LE = buffer.readUInt16BE(sum);
+        uInt16LE = buffer.readUInt16BE(c5);
       }
       return uInt16LE;
     }

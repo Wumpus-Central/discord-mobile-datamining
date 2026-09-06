@@ -1,15 +1,14 @@
 // === Module 4646: baseKeysIn ===
 
 // Module 4646 (baseKeysIn)
-import isObject from "isObject" /* 521 */;
+import _mod521 from "module_521" /* 521 */;
 
 
 export default function baseKeysIn(obj) {
-  if (isObject(obj)) {
+  if (_mod521(obj)) {
     const tmp3 = tmp(545)(obj);
     const items = [];
     for (const key10017 in arg0) {
-      let tmp10 = key10017;
       let tmp8 = "constructor" != key10017;
       if (!tmp8) {
         if (tmp3) {
@@ -22,7 +21,6 @@ export default function baseKeysIn(obj) {
           } else {
             callResult = call(arg0, key10017);
           }
-          let tmp7 = callResult;
         }
       }
       if (!tmp8) {

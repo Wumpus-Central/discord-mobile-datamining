@@ -2,17 +2,17 @@
 
 // Module 163 (PerformanceEntry)
 import _createClassDefault from "_createClass" /* 42 */;
-import PerformanceEntry from "_classCallCheck" /* 41 */;
-import setPlatformObject from "setPlatformObject" /* 126 */;
+import _classCallCheck from "_classCallCheck" /* 41 */;
 
 class PerformanceEntry {
   constructor(arg0, arg1) {
-    tmp = PerformanceEntry(this, PerformanceEntry);
+    tmp = closure_0(this, PerformanceEntry);
     this.__entryType = global;
-    ({ name: this.__name, startTime: this.__startTime, duration: this.__duration } = arg1);
+    ({ name: this.__name, startTime: this.__startTime, duration: this.__duration } = fn);
     return;
   }
 }
+_classCallCheck = PerformanceEntry;
 const items = [
   {
     key: "name",
@@ -53,7 +53,8 @@ class PerformanceEntry {
   }
 }
 PerformanceEntry.prototype = tmp2.prototype;
-setPlatformObject.setPlatformObject(tmp2);
+const module_126 = fn(126);
+module_126.setPlatformObject(tmp2);
 
 export const PerformanceEntry = tmp2;
 export const PerformanceEntry_public = PerformanceEntry;

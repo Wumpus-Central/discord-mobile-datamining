@@ -1,15 +1,16 @@
 // === Module 342: configureNext ===
 
 // Module 342 (configureNext)
-import javaScriptFlagGetterAll from "javaScriptFlagGetter" /* 27 */;
+import _mod71 from "module_71" /* 71 */;
 import get_VersionDefault from "get Version" /* 273 */;
+import javaScriptFlagGetter from "module_27" /* 27 */;
 
-const require = arg1;
-function configureNext(duration) {
-  const _global = arg1;
+require = arg1;
+function configureNext(duration, arg1, arg2) {
+  closure_0 = arg1;
   if (!get_VersionDefault.isDisableAnimations) {
     if (closure_4) {
-      const _require = false;
+      c1 = false;
       let num = duration.duration;
       if (num == null) {
         num = 0;
@@ -19,21 +20,21 @@ function configureNext(duration) {
           c1 = true;
           const _clearTimeout = clearTimeout;
           clearTimeout(closure_2);
-          if (callback != null) {
-            callback();
+          if (closure_0 != null) {
+            closure_0();
           }
         }
       }
-      importDefault = setTimeout(onAnimationComplete, num + 17);
-      const fabricUIManager = _require(71).getFabricUIManager();
+      const timeout = setTimeout(onAnimationComplete, num + 17);
+      const fabricUIManager = _mod71.getFabricUIManager();
       let prop;
       if (fabricUIManager != null) {
         prop = fabricUIManager.configureNextLayoutAnimation;
       }
       let fn = arg2;
       if (prop) {
-        if (_global != null) {
-          const nativeFabricUIManager = _global.nativeFabricUIManager;
+        if (global != null) {
+          const nativeFabricUIManager = global.nativeFabricUIManager;
           if (nativeFabricUIManager != null) {
             if (fn == null) {
               fn = () => {
@@ -60,19 +61,15 @@ function configureNext(duration) {
           const _default2 = tmp6(68).default;
         }
       }
-      const obj = _require(71);
     }
   }
 }
-let closure_4 = javaScriptFlagGetterAll.isLayoutAnimationEnabled();
+let closure_4 = javaScriptFlagGetter.isLayoutAnimationEnabled();
 let obj = { easeInEaseOut: { duration: 300, create: { type: "easeInEaseOut", property: "opacity" }, update: { type: "easeInEaseOut" }, delete: { type: "easeInEaseOut", property: "opacity" } }, linear: { duration: 500, create: { type: "linear", property: "opacity" }, update: { type: "linear" }, delete: { type: "linear", property: "opacity" } }, spring: { duration: 700, create: { type: "linear", property: "opacity" }, update: { type: "spring", springDamping: 0.4 }, delete: { type: "linear", property: "opacity" } } };
 obj = {
   configureNext,
   create: function createLayoutAnimation(duration, type, property) {
-    obj = { duration, create: obj, update: obj, delete: obj1 };
-    obj = { type, property };
-    obj = { type };
-    return obj;
+    return { duration, create: { type, property }, update: { type }, delete: { type, property } };
   },
   Types: Object.freeze({ spring: "spring", linear: "linear", easeInEaseOut: "easeInEaseOut", easeIn: "easeIn", easeOut: "easeOut", keyboard: "keyboard" }),
   Properties: Object.freeze({ opacity: "opacity", scaleX: "scaleX", scaleY: "scaleY", scaleXY: "scaleXY" }),

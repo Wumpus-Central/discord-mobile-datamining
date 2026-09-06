@@ -1,16 +1,16 @@
 // === Module 6871: AverageWindow ===
 
 // Module 6871 (AverageWindow)
-import MultiTypeAverageWindow from "_classCallCheck" /* 6866 */;
-import importDefaultResult from "_createClass" /* 6867 */;
+import _classCallCheck from "module_6866" /* 6866 */;
+import _createClass from "module_6867" /* 6867 */;
 
 class AverageWindow {
   constructor(arg0, arg1) {
     self = this;
-    tmp = MultiTypeAverageWindow(this, MultiTypeAverageWindow);
+    tmp = closure_0(this, MultiTypeAverageWindow);
     this.nextIndex = 0;
     num = 1;
-    array = new Array(require("module_1"));
+    array = new Array(Math.max(1, global));
     this.inputValues = array;
     num2 = arg1;
     if (arg1 == null) {
@@ -26,15 +26,14 @@ class AverageWindow {
     return;
   }
 }
-MultiTypeAverageWindow = AverageWindow;
-let obj = {
-  key: "currentValue",
-  get() {
-    return this.currentAverage;
-  }
-};
+_classCallCheck = AverageWindow;
 const items = [
-  obj,
+  {
+    key: "currentValue",
+    get() {
+      return this.currentAverage;
+    }
+  },
   {
     key: "addValue",
     value: function addValue(arg0) {
@@ -63,10 +62,11 @@ const items = [
     }
   }
 ];
-const importDefaultResultResult = importDefaultResult(AverageWindow, items);
+const importDefaultResultResult = _createClass(AverageWindow, items);
+let closure_1 = importDefaultResultResult;
 class MultiTypeAverageWindow {
   constructor(arg0, arg1) {
-    tmp = MultiTypeAverageWindow(this, MultiTypeAverageWindow);
+    tmp = closure_0(this, MultiTypeAverageWindow);
     map = new Map();
     this.averageWindows = map;
     this.windowSize = global;
@@ -74,14 +74,15 @@ class MultiTypeAverageWindow {
     return;
   }
 }
-obj = {
+_classCallCheck = MultiTypeAverageWindow;
+const entry = {
   key: "addValue",
   value: function addValue(arg0, arg1) {
     const self = this;
     const averageWindows = this.averageWindows;
-    let value = averageWindows.get(arg1);
+    value = averageWindows.get(arg1);
     if (!value) {
-      const tmp4 = new closure_1(self.windowSize);
+      const tmp4 = new importDefaultResultResult(self.windowSize);
       const averageWindows2 = self.averageWindows;
       const result = averageWindows2.set(arg1, tmp4);
       value = tmp4;
@@ -90,12 +91,12 @@ obj = {
   }
 };
 const items1 = [
-  obj,
+  entry,
   {
     key: "getCurrentValue",
     value: function getCurrentValue(arg0) {
       const averageWindows = this.averageWindows;
-      const value = averageWindows.get(arg0);
+      value = averageWindows.get(arg0);
       let num;
       if (value != null) {
         num = value.currentValue;
@@ -119,4 +120,4 @@ const items1 = [
 ];
 
 export const AverageWindow = importDefaultResultResult;
-export const MultiTypeAverageWindow = importDefaultResult(MultiTypeAverageWindow, items1);
+export const MultiTypeAverageWindow = _createClass(MultiTypeAverageWindow, items1);

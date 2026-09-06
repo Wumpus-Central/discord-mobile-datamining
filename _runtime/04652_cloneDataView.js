@@ -4,7 +4,7 @@
 import cloneArrayBuffer from "cloneArrayBuffer" /* 4651 */;
 
 
-export default function cloneDataView(buffer) {
+export default function cloneDataView(buffer, arg1) {
   if (arg1) {
     buffer = cloneArrayBuffer(buffer.buffer);
   } else {

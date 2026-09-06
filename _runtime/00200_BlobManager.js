@@ -5,8 +5,8 @@ import _modDef38 from "module_38" /* 38 */;
 import _createClassDefault from "_createClass" /* 42 */;
 import BlobModuleDefault from "BlobModule" /* 201 */;
 import Blob from "Blob" /* 203 */;
-import map from "map" /* 204 */;
-import closure_4 from "_classCallCheck" /* 41 */;
+import register from "register" /* 204 */;
+import _classCallCheck from "_classCallCheck" /* 41 */;
 
 const BlobManager = global;
 require = arg1;
@@ -16,68 +16,68 @@ class BlobManager {
     return;
   }
 }
-const items = [
-  {
-    key: "createFromParts",
-    value: function createFromParts(arr, type) {
-      _modDef38(BlobModuleDefault, "NativeBlobModule is available.");
-      const replaced = "xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".replace(/[xy]/g, (arg0) => {
-        const tmp = 16 * Math.random() | 0;
-        let str = tmp;
-        if ("x" != arg0) {
-          str = 3 & tmp | 8;
-        }
-        return str.toString(16);
-      });
-      const mapped = arr.map((data) => {
-        if (!(data instanceof ArrayBuffer)) {
-          const _ArrayBuffer = ArrayBuffer;
-          if (!ArrayBuffer.isView(data)) {
-            if (data instanceof callback(table[4]).default) {
-              let obj = { data: null, type: "blob" };
-              obj[0] = data.data;
-            } else {
-              obj = { data: null, type: "string" };
-              const _String = String;
-              obj[0] = String(data);
-            }
-            return obj;
+const entry = {
+  key: "createFromParts",
+  value: function createFromParts(arr, type) {
+    _modDef38(BlobModuleDefault, "NativeBlobModule is available.");
+    const replaced = "xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".replace(/[xy]/g, (arg0) => {
+      const tmp = 16 * Math.random() | 0;
+      let str = tmp;
+      if ("x" != arg0) {
+        str = 3 & tmp | 8;
+      }
+      return str.toString(16);
+    });
+    const mapped = arr.map((data) => {
+      if (!(data instanceof ArrayBuffer)) {
+        const _ArrayBuffer = ArrayBuffer;
+        if (!ArrayBuffer.isView(data)) {
+          if (data instanceof Blob.default) {
+            let obj = { data: data.data, type: "blob" };
+          } else {
+            obj = { data: null, type: "string" };
+            const _String = String;
+            obj.data = String(data);
           }
+          return obj;
         }
-        error = new Error("Creating blobs from 'ArrayBuffer' and 'ArrayBufferView' are not supported");
-        throw error;
-      });
-      const reduced = mapped.reduce((arg0, type) => {
-        if ("string" === type.type) {
-          const _encodeURI = encodeURI;
-          let sum = arg0 + closure_0.unescape(encodeURI(type.data)).length;
-        } else {
-          sum = arg0 + type.data.size;
-        }
-        return sum;
-      }, 0);
-      let obj = BlobModuleDefault;
-      const fromParts = obj.createFromParts(mapped, replaced);
-      obj = { blobId: replaced, offset: 0, size: reduced, type: null, lastModified: null };
-      let str = "";
-      if (type) {
-        str = type.type;
       }
-      obj[3] = str;
-      if (type) {
-        let lastModified = type.lastModified;
+      const error = new Error("Creating blobs from 'ArrayBuffer' and 'ArrayBufferView' are not supported");
+      throw error;
+    });
+    const reduced = mapped.reduce((acc, type) => {
+      if ("string" === type.type) {
+        const _encodeURI = encodeURI;
+        let sum = acc + BlobManager.unescape(encodeURI(type.data)).length;
       } else {
-        const _Date = Date;
-        lastModified = Date.now();
+        sum = acc + type.data.size;
       }
-      obj[4] = lastModified;
-      return BlobManager.createFromOptions(obj);
+      return sum;
+    }, 0);
+    let obj = BlobModuleDefault;
+    const fromParts = obj.createFromParts(mapped, replaced);
+    obj = { blobId: replaced, offset: 0, size: reduced, type: null, lastModified: null };
+    let str = "";
+    if (type) {
+      str = type.type;
     }
-  },
+    obj.type = str;
+    if (type) {
+      let lastModified = type.lastModified;
+    } else {
+      const _Date = Date;
+      lastModified = Date.now();
+    }
+    obj.lastModified = lastModified;
+    return BlobManager.createFromOptions(obj);
+  }
+};
+const items = [
+  entry,
   {
     key: "createFromOptions",
     value: function createFromOptions(_response) {
-      let obj = map;
+      let obj = register;
       obj.register(_response.blobId);
       let data = _response;
       obj = Object.create(Blob.default.prototype);
@@ -99,10 +99,7 @@ const items = [
     key: "release",
     value: function release(arg0) {
       _modDef38(BlobModuleDefault, "NativeBlobModule is available.");
-      const tmp = importDefault;
-      const tmp3 = _modDef38;
-      map.unregister(arg0);
-      const obj = map;
+      register.unregister(arg0);
       if (!obj2.has(arg0)) {
         BlobModuleDefault.release(arg0);
         const tmpResult = BlobModuleDefault;
@@ -113,7 +110,6 @@ const items = [
     key: "addNetworkingHandler",
     value: function addNetworkingHandler() {
       _modDef38(BlobModuleDefault, "NativeBlobModule is available.");
-      const tmp = _modDef38;
       BlobModuleDefault.addNetworkingHandler();
     }
   },
@@ -121,7 +117,6 @@ const items = [
     key: "addWebSocketHandler",
     value: function addWebSocketHandler(arg0) {
       _modDef38(BlobModuleDefault, "NativeBlobModule is available.");
-      const tmp = _modDef38;
       BlobModuleDefault.addWebSocketHandler(arg0);
     }
   },
@@ -129,15 +124,13 @@ const items = [
     key: "removeWebSocketHandler",
     value: function removeWebSocketHandler(arg0) {
       _modDef38(BlobModuleDefault, "NativeBlobModule is available.");
-      const tmp = _modDef38;
       const result = BlobModuleDefault.removeWebSocketHandler(arg0);
     }
   },
   {
     key: "sendOverSocket",
-    value: function sendOverSocket(data) {
+    value: function sendOverSocket(data, arg1) {
       _modDef38(BlobModuleDefault, "NativeBlobModule is available.");
-      const tmp = _modDef38;
       BlobModuleDefault.sendOverSocket(data.data, arg1);
     }
   }

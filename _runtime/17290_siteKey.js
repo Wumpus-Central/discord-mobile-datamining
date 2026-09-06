@@ -1,16 +1,14 @@
 // === Module 17290: siteKey ===
 
 // Module 17290 (siteKey)
-import noopDefault from "noop" /* 19 */;
 import jsxProd from "jsxProd" /* 21 */;
-import noop from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import noop from "module_19" /* 19 */;
+import get_ActivityIndicator from "module_17" /* 17 */;
 
-({ useMemo: obj1, useCallback: c3 } = noop);
-noopDefault;
-({ Linking: c4, StyleSheet, View: c5, ActivityIndicator: closure_6 } = get_ActivityIndicator);
+({ useMemo: c2, useCallback: c3 } = noop);
+({ Linking: closure_4, StyleSheet, View: hasOwnProperty, ActivityIndicator: metroRequire } = get_ActivityIndicator);
 const jsx = jsxProd.jsx;
-let closure_8 = "(" + String(() => {
+const injectedJavaScript = "(" + String(() => {
   function patchedPostMessage(arg0, arg1, arg2) {
     postMessage(arg0, arg1, arg2);
   }
@@ -83,24 +81,27 @@ export default function _default(siteKey) {
     mixedContentMode: "always",
     onMessage,
     javaScriptEnabled: true,
-    injectedJavaScript: closure_8,
+    injectedJavaScript,
     automaticallyAdjustContentInsets: true,
-    style: items2,
+    style: null,
     source: null,
     renderLoading: null,
     startInLoadingState: null
   };
-  items2 = [{ backgroundColor: "transparent", width: "100%" }, style];
+  const items2 = [{ backgroundColor: "transparent", width: "100%" }, style];
+  obj.style = items2;
   obj = { html: tmp8, baseUrl: null };
   const tmp9 = combined(() => {
-    obj = { style: items, children: closure_1_7(closure_1_6, obj) };
-    items = [closure_1_9.loadingOverlay];
+    let obj = { style: null, children: null };
+    const items = [loadingOverlay.loadingOverlay];
+    obj.style = items;
     obj = { size: "large", color: loadingIndicatorColor };
-    return closure_1_7(text2, obj);
+    obj.children = <timestampProducer size="large" color={loadingIndicatorColor} />;
+    return <hasOwnProperty size="large" color={loadingIndicatorColor} />;
   }, items1);
-  obj[1] = "" + url;
-  obj[8] = obj;
-  obj[9] = tmp9;
-  obj[10] = showLoading;
+  obj.baseUrl = "" + url;
+  obj.source = obj;
+  obj.renderLoading = tmp9;
+  obj.startInLoadingState = showLoading;
   return jsx(siteKey(loadingIndicatorColor[3]), { html: tmp8, baseUrl: null });
 };

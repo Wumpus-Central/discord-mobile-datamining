@@ -1,30 +1,31 @@
 // === Module 1723: findDescendantWithExitingAnimation ===
 
 // Module 1723 (findDescendantWithExitingAnimation)
-import isJest from "isJest" /* 1639 */;
-import addLogBoxLog from "addLogBoxLog" /* 1640 */;
-import t from "t" /* 1647 */;
+import _mod1639 from "module_1639" /* 1639 */;
+import _mod1640 from "module_1640" /* 1640 */;
+import _mod1647 from "module_1647" /* 1647 */;
+import TransitionType from "TransitionType" /* 1692 */;
+import _mod1722 from "module_1722" /* 1722 */;
 
 require = arg1;
-let dependencyMap = arg6;
-function findDescendantWithExitingAnimation(isDummy, appendChild) {
+const dependencyMap = arg6;
+function findDescendantWithExitingAnimation(arr, appendChild) {
   let length;
-  if (isDummy instanceof globalThis.HTMLElement) {
-    isDummy = isDummy.isDummy;
+  if (arr instanceof globalThis.HTMLElement) {
+    let isDummy = arr.isDummy;
     if (isDummy) {
-      isDummy = undefined === isDummy.removedAfterAnimation;
+      isDummy = undefined === arr.removedAfterAnimation;
     }
     if (isDummy) {
-      const _require = isDummy;
-      dependencyMap = appendChild;
-      const snapshots = _require(1722).snapshots;
-      const value = snapshots.get(isDummy);
+      closure_0 = arr;
+      const snapshots = _mod1722.snapshots;
+      value = snapshots.get(arr);
       if (value) {
-        isDummy.removedAfterAnimation = true;
-        appendChild.appendChild(isDummy);
-        tmp2(1722).setElementPosition(isDummy, value);
-        const onanimationend = isDummy.onanimationend;
-        isDummy.onanimationend = function(arg0) {
+        arr.removedAfterAnimation = true;
+        appendChild.appendChild(arr);
+        tmp2(1722).setElementPosition(arr, value);
+        const onanimationend = arr.onanimationend;
+        arr.onanimationend = function(arg0) {
           appendChild.removeChild(closure_0);
           if (onanimationend != null) {
             const self = this;
@@ -43,11 +44,10 @@ function findDescendantWithExitingAnimation(isDummy, appendChild) {
       }
     }
     const _Array = Array;
-    const arr = Array.from(isDummy.children);
+    arr = Array.from(arr.children);
     let num3 = 0;
     if (0 < arr.length) {
       do {
-        let tmp8 = findDescendantWithExitingAnimation;
         let tmp9 = findDescendantWithExitingAnimation(arr[num3], appendChild);
         num3 = num3 + 1;
         length = arr.length;
@@ -60,7 +60,8 @@ const ReanimatedCustomWebAnimationsStyle = "ReanimatedCustomWebAnimationsStyle";
 const map = new Map();
 let closure_5 = [];
 let c6 = false;
-arg5.configureWebLayoutAnimations = function configureWebLayoutAnimations() {
+
+export const configureWebLayoutAnimations = function configureWebLayoutAnimations() {
   if (obj.isWindowAvailable()) {
     const _document = document;
     if (null === document.getElementById(ReanimatedPredefinedWebAnimationsStyle)) {
@@ -69,17 +70,13 @@ arg5.configureWebLayoutAnimations = function configureWebLayoutAnimations() {
       element.id = tmp2;
       element.onload = () => {
         if (element.sheet) {
-          for (const key10016 in tmp(tmp2[2]).Animations) {
-            let tmp4 = key10016;
-            let tmp5 = element;
+          for (const key10016 in tmp(1692).Animations) {
             let sheet = element.sheet;
-            let tmp6 = element;
-            let tmp7 = closure_1_1;
-            let insertRuleResult = sheet.insertRule(element(closure_1_1[2]).Animations[key10016].style);
+            let insertRuleResult = sheet.insertRule(TransitionType.Animations[key10016].style);
             continue;
           }
         } else {
-          const logger = tmp(tmp2[1]).logger;
+          const logger = tmp(1640).logger;
           logger.error("Failed to create layout animations stylesheet.");
         }
       };
@@ -94,69 +91,69 @@ arg5.configureWebLayoutAnimations = function configureWebLayoutAnimations() {
     tmp2 = ReanimatedPredefinedWebAnimationsStyle;
   }
 };
-arg5.insertWebAnimation = function insertWebAnimation(name, result) {
+export const insertWebAnimation = function insertWebAnimation(name, result1) {
   if (obj.isWindowAvailable()) {
     const _document = document;
     const element = document.getElementById(ReanimatedCustomWebAnimationsStyle);
     if (element.sheet) {
       const sheet = element.sheet;
-      sheet.insertRule(result, 0);
-      arr = arr.unshift(name);
-      result = map.set(name, 0);
+      sheet.insertRule(result1, 0);
+      let arr = closure_5.unshift(name);
+      const result = map.set(name, 0);
       let num3 = 1;
-      if (1 < arr.length) {
-        const value = map.get(arr[num3]);
+      if (1 < closure_5.length) {
+        arr = closure_5;
+        value = map.get(closure_5[num3]);
         while (undefined !== value) {
-          let result1 = map.set(arr[num3], value + 1);
+          result1 = map.set(arr[num3], value + 1);
           num3 = num3 + 1;
         }
-        const reanimatedError = new t.ReanimatedError("Failed to obtain animation index.");
+        const reanimatedError = new _mod1647.ReanimatedError("Failed to obtain animation index.");
         throw reanimatedError;
       }
     } else {
-      const logger = addLogBoxLog.logger;
+      const logger = _mod1640.logger;
       logger.error("Failed to create layout animations stylesheet.");
     }
   }
 };
-arg5.scheduleAnimationCleanup = function scheduleAnimationCleanup(animationName, arg1, arg2) {
+export const scheduleAnimationCleanup = function scheduleAnimationCleanup(animationName, arg1, arg2) {
   closure_0 = animationName;
   closure_1 = arg2;
   const timerId = setTimeout(() => {
     if (obj.isWindowAvailable()) {
       const _document = document;
-      const element = document.getElementById(closure_1_3);
-      let sum = closure_1_4.get(tmp);
+      const element = document.getElementById(ReanimatedCustomWebAnimationsStyle);
+      let sum = map.get(tmp);
       if (undefined === sum) {
-        const reanimatedError = new animationName(1647).ReanimatedError("Failed to obtain animation index.");
+        const reanimatedError = new _mod1647.ReanimatedError("Failed to obtain animation index.");
         throw reanimatedError;
       } else {
-        dependencyMap();
+        closure_1();
         const sheet = element.sheet;
         if (sheet != null) {
           sheet.deleteRule(sum);
         }
-        closure_1_5.splice(sum, 1);
+        closure_5.splice(sum, 1);
         obj2.delete(tmp);
-        if (sum < closure_1_5.length) {
-          const value = closure_1_4.get(closure_1_5[sum]);
+        if (sum < closure_5.length) {
+          value = map.get(closure_5[sum]);
           while (undefined !== value) {
-            let result = closure_1_4.set(arr[sum], value - 1);
+            let result = map.set(arr[sum], value - 1);
             sum = sum + 1;
           }
-          const reanimatedError1 = new animationName(1647).ReanimatedError("Failed to obtain animation index.");
+          const reanimatedError1 = new _mod1647.ReanimatedError("Failed to obtain animation index.");
           throw reanimatedError1;
         }
       }
-      obj2 = closure_1_4;
+      obj2 = map;
     }
   }, Math.max(5 * arg1 * 1000, arg1 + 160));
 };
-arg5.addHTMLMutationObserver = function addHTMLMutationObserver() {
+export const addHTMLMutationObserver = function addHTMLMutationObserver() {
   let isWindowAvailableResult = !c6;
   if (!c6) {
-    isWindowAvailableResult = isJest.isWindowAvailable();
-    const obj = isJest;
+    isWindowAvailableResult = _mod1639.isWindowAvailable();
   }
   if (isWindowAvailableResult) {
     c6 = true;
@@ -166,15 +163,12 @@ arg5.addHTMLMutationObserver = function addHTMLMutationObserver() {
         let str = "__reactFiber";
         const keys = Object.keys(target);
         for (const item10012 of keys) {
-          let tmp2 = item10012;
           if (item10012.startsWith("__reactFiber")) {
             str = item10012;
-            let tmp3 = obj;
             obj.return();
             break;
           }
           let tmp4 = arg0[str];
-          let tmp5 = null;
           let navigation;
           if (tmp4 != null) {
             let child = tmp4.child;
@@ -191,8 +185,7 @@ arg5.addHTMLMutationObserver = function addHTMLMutationObserver() {
         let num = 0;
         if (0 < tmp.removedNodes.length) {
           do {
-            let tmp2 = callback;
-            let tmp3 = callback(tmp.removedNodes[num], tmp.target);
+            let tmp3 = findDescendantWithExitingAnimation(tmp.removedNodes[num], tmp.target);
             num = num + 1;
             length = tmp.removedNodes.length;
           } while (num < length);
@@ -203,6 +196,6 @@ arg5.addHTMLMutationObserver = function addHTMLMutationObserver() {
     mutationObserver.observe(document.body, { childList: true, subtree: true });
   }
 };
-arg5.areDOMRectsEqual = function areDOMRectsEqual(size, arg1) {
+export const areDOMRectsEqual = function areDOMRectsEqual(size, arg1) {
   return size.x === arg1.x && size.y === arg1.y && size.width === arg1.width && size.height === arg1.height;
 };

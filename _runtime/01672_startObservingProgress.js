@@ -1,22 +1,22 @@
 // === Module 1672: startObservingProgress ===
 
 // Module 1672 (startObservingProgress)
-import isWorkletFunction from "isWorkletFunction" /* 1661 */;
-import addCompilerSafeGetAndSet from "addCompilerSafeGetAndSet" /* 1673 */;
+import _mod1661 from "module_1661" /* 1661 */;
+import _mod1673 from "module_1673" /* 1673 */;
 import resolvePath from "resolvePath" /* 1675 */;
-import isJest from "isJest" /* 1639 */;
+import module_1639 from "module_1639" /* 1639 */;
 import runWorkletOnJS from "runWorkletOnJS" /* 1643 */;
 
-isJest = isJest.isAndroid();
-function startObservingProgress(arg0, addListener) {
+module_1639 = module_1639.isAndroid();
+function startObservingProgress(arg0, addListener, arg2) {
   closure_0 = arg0;
-  const _require = addListener;
-  dependencyMap = arg2 === _require(1661).LayoutAnimationType.SHARED_ELEMENT_TRANSITION;
+  _require = addListener;
+  dependencyMap = arg2 === require("module_1661").LayoutAnimationType.SHARED_ELEMENT_TRANSITION;
   addListener.addListener(arg0 + 1000000000, () => {
-    set._notifyAboutProgress(set, set2.value, closure_2);
+    map._notifyAboutProgress(closure_0, value.value, closure_2);
   });
 }
-let obj = { LayoutAnimationType: isWorkletFunction.LayoutAnimationType, TAG_OFFSET: 1000000000 };
+let obj = { LayoutAnimationType: _mod1661.LayoutAnimationType, TAG_OFFSET: 1000000000 };
 startObservingProgress.__closure = obj;
 startObservingProgress.__workletHash = 15816248532180;
 startObservingProgress.__initData = { code: "function startObservingProgress_Pnpm_animationsManagerTs1(tag,sharedValue,animationType){const{LayoutAnimationType,TAG_OFFSET}=this.__closure;const isSharedTransition=animationType===LayoutAnimationType.SHARED_ELEMENT_TRANSITION;sharedValue.addListener(tag+TAG_OFFSET,function(){global._notifyAboutProgress(tag,sharedValue.value,isSharedTransition);});}" };
@@ -34,15 +34,15 @@ stopObservingProgress.__initData = { code: "function stopObservingProgress_Pnpm_
 function createLayoutAnimationManager() {
   let map = new Map();
   map1 = new Map();
-  function startActually(arg0, arg1, arg2, arg3) {
+  function startActually(arg0, arg1, arg2, fn) {
     map = arg0;
     map1 = arg1;
     if (arg1 !== map1(startActually[1]).LayoutAnimationType.SHARED_ELEMENT_TRANSITION_PROGRESS) {
-      let tmp6 = arg3(arg2);
+      let tmp6 = fn(arg2);
       closure_2 = tmp6;
       let animations = tmp6.animations;
       let obj = map;
-      let value = map.get(arg0);
+      value = map.get(arg0);
       if (value) {
         obj = {};
         const merged = Object.assign(value);
@@ -57,182 +57,190 @@ function createLayoutAnimationManager() {
         mutableUI = tmpResult.makeMutableUI(tmp6.initialValues);
         const result1 = obj3.set(arg0, mutableUI);
         value = mutableUI;
-      } else {
-        if (typeof closure_1_5 !== "function") {
-          HermesBuiltin.throwTypeError();
-        }
+      } else if (typeof stopObservingProgress === "function") {
         value.removeListener(arg0 + 1000000000);
         map._notifyAboutEnd(arg0, false);
         value._value = tmp6.initialValues;
+      } else {
+        throw new TypeError("Trying to call a non-function");
       }
       tmpResult = tmp(tmp2[3]);
       const withStyleAnimationResult = tmpResult.withStyleAnimation(animations);
       withStyleAnimationResult.callback = (arg0) => {
         if (arg0) {
-          set.delete(set);
-          set2.delete(set);
-          if (typeof closure_2_5 !== "function") {
-            HermesBuiltin.throwTypeError();
+          map.delete(closure_0);
+          map1.delete(closure_0);
+          if (typeof stopObservingProgress === "function") {
+            obj.removeListener(tmp2 + 1000000000);
+            global._notifyAboutEnd(tmp2, tmp6 === _mod1661.LayoutAnimationType.EXITING);
+            const tmp10 = tmp6 === _mod1661.LayoutAnimationType.EXITING;
+          } else {
+            throw new TypeError("Trying to call a non-function");
           }
-          mutableUI.removeListener(set + 1000000000);
-          map._notifyAboutEnd(set, set2 === map1(startActually[1]).LayoutAnimationType.EXITING);
-          const obj = mutableUI;
-          const tmp10 = set2 === map1(startActually[1]).LayoutAnimationType.EXITING;
-          const tmp6 = set2;
+          obj = mutableUI;
+          tmp6 = closure_1;
         }
-        if (callback.callback) {
+        if (closure_2.callback) {
           let tmp14 = undefined !== arg0;
           if (tmp14) {
             tmp14 = arg0;
           }
-          callback.callback(tmp14);
+          closure_2.callback(tmp14);
         }
       };
-      if (typeof closure_1_4 !== "function") {
-        HermesBuiltin.throwTypeError();
+      if (typeof startObservingProgress === "function") {
+        map = arg0;
+        map1 = value;
+        closure_2 = arg1 === tmp(tmp2[1]).LayoutAnimationType.SHARED_ELEMENT_TRANSITION;
+        value.addListener(arg0 + 1000000000, () => {
+          map._notifyAboutProgress(closure_0, value.value, closure_2);
+        });
+        value.value = withStyleAnimationResult;
+      } else {
+        throw new TypeError("Trying to call a non-function");
       }
-      map = arg0;
-      map1 = value;
-      closure_2 = arg1 === tmp(tmp2[1]).LayoutAnimationType.SHARED_ELEMENT_TRANSITION;
-      value.addListener(arg0 + 1000000000, () => {
-        set._notifyAboutProgress(set, set2.value, closure_2);
-      });
-      value.value = withStyleAnimationResult;
       obj3 = map1;
     } else {
       const ProgressTransitionRegister = map.ProgressTransitionRegister;
       ProgressTransitionRegister.onTransitionStart(arg0, arg2);
     }
   }
-  if (isJest) {
+  if (module_1639) {
     startActually = (arg0, arg1, arg2, arg3) => {
       closure_0 = arg0;
       closure_1 = arg1;
       closure_2 = arg2;
       closure_3 = arg3;
       return requestAnimationFrame(() => {
-        callback(closure_0, closure_1, callback, closure_3);
+        startActually(closure_0, closure_1, closure_2, closure_3);
       });
     };
   }
   return {
     start: startActually,
     stop(arg0) {
-      const value = map1.get(arg0);
+      value = map1.get(arg0);
       if (value) {
-        if (typeof closure_1_5 !== "function") {
-          HermesBuiltin.throwTypeError();
+        if (typeof stopObservingProgress === "function") {
+          value.removeListener(arg0 + 1000000000);
+          global._notifyAboutEnd(arg0, false);
+        } else {
+          throw new TypeError("Trying to call a non-function");
         }
-        value.removeListener(arg0 + 1000000000);
-        map._notifyAboutEnd(arg0, false);
       }
     }
   };
 }
-obj = { LayoutAnimationType: isWorkletFunction.LayoutAnimationType, makeMutableUI: addCompilerSafeGetAndSet.makeMutableUI, stopObservingProgress, withStyleAnimation: resolvePath.withStyleAnimation, startObservingProgress, IS_ANDROID: isJest };
+obj = { LayoutAnimationType: _mod1661.LayoutAnimationType, makeMutableUI: _mod1673.makeMutableUI, stopObservingProgress, withStyleAnimation: resolvePath.withStyleAnimation, startObservingProgress, IS_ANDROID: module_1639 };
 createLayoutAnimationManager.__closure = obj;
 createLayoutAnimationManager.__workletHash = 8526874600063;
 createLayoutAnimationManager.__initData = { code: "function createLayoutAnimationManager_Pnpm_animationsManagerTs3(){const{LayoutAnimationType,makeMutableUI,stopObservingProgress,withStyleAnimation,startObservingProgress,IS_ANDROID}=this.__closure;const currentAnimationForTag=new Map();const mutableValuesForTag=new Map();const startActually=function(tag,type,yogaValues,config){if(type===LayoutAnimationType.SHARED_ELEMENT_TRANSITION_PROGRESS){global.ProgressTransitionRegister.onTransitionStart(tag,yogaValues);return;}const style=config(yogaValues);let currentAnimation=style.animations;const previousAnimation=currentAnimationForTag.get(tag);if(previousAnimation){currentAnimation={...previousAnimation,...style.animations};}currentAnimationForTag.set(tag,currentAnimation);let value=mutableValuesForTag.get(tag);if(value===undefined){value=makeMutableUI(style.initialValues);mutableValuesForTag.set(tag,value);}else{stopObservingProgress(tag,value);value._value=style.initialValues;}const animation=withStyleAnimation(currentAnimation);animation.callback=function(finished){if(finished){currentAnimationForTag.delete(tag);mutableValuesForTag.delete(tag);const shouldRemoveView=type===LayoutAnimationType.EXITING;stopObservingProgress(tag,value,shouldRemoveView);}style.callback&&style.callback(finished===undefined?false:finished);};startObservingProgress(tag,value,type);value.value=animation;};let start;if(IS_ANDROID){start=function(tag,type,yogaValues,config){return requestAnimationFrame(function(){startActually(tag,type,yogaValues,config);});};}else{start=startActually;}return{start:start,stop:function(tag){const value=mutableValuesForTag.get(tag);if(!value){return;}stopObservingProgress(tag,value);}};}" };
 const fn = function t() {
-  if (typeof createLayoutAnimationManager !== "function") {
-    HermesBuiltin.throwTypeError();
-  }
-  const map = new Map();
-  map1 = new Map();
-  function startActually(arg0, arg1, arg2, arg3) {
-    map = arg0;
-    map1 = arg1;
-    if (arg1 !== map1(startActually[1]).LayoutAnimationType.SHARED_ELEMENT_TRANSITION_PROGRESS) {
-      let tmp6 = arg3(arg2);
-      closure_2 = tmp6;
-      let animations = tmp6.animations;
-      let obj = map;
-      let value = map.get(arg0);
-      if (value) {
-        obj = {};
-        const merged = Object.assign(value);
-        const merged1 = Object.assign(tmp6.animations);
-        animations = obj;
-      }
-      const result = obj.set(arg0, animations);
-      value = map1.get(arg0);
-      let mutableUI = value;
-      if (undefined === value) {
-        let tmpResult = tmp(tmp2[2]);
-        mutableUI = tmpResult.makeMutableUI(tmp6.initialValues);
-        const result1 = obj3.set(arg0, mutableUI);
-        value = mutableUI;
-      } else {
-        if (typeof closure_1_5 !== "function") {
-          HermesBuiltin.throwTypeError();
-        }
-        value.removeListener(arg0 + 1000000000);
-        map._notifyAboutEnd(arg0, false);
-        value._value = tmp6.initialValues;
-      }
-      tmpResult = tmp(tmp2[3]);
-      const withStyleAnimationResult = tmpResult.withStyleAnimation(animations);
-      withStyleAnimationResult.callback = (arg0) => {
-        if (arg0) {
-          set.delete(set);
-          set2.delete(set);
-          if (typeof closure_2_5 !== "function") {
-            HermesBuiltin.throwTypeError();
-          }
-          mutableUI.removeListener(set + 1000000000);
-          map._notifyAboutEnd(set, set2 === map1(startActually[1]).LayoutAnimationType.EXITING);
-          const obj = mutableUI;
-          const tmp10 = set2 === map1(startActually[1]).LayoutAnimationType.EXITING;
-          const tmp6 = set2;
-        }
-        if (callback.callback) {
-          let tmp14 = undefined !== arg0;
-          if (tmp14) {
-            tmp14 = arg0;
-          }
-          callback.callback(tmp14);
-        }
-      };
-      if (typeof closure_1_4 !== "function") {
-        HermesBuiltin.throwTypeError();
-      }
+  if (typeof createLayoutAnimationManager === "function") {
+    const _Map = Map;
+    const map = new Map();
+    const _Map2 = Map;
+    map1 = new Map();
+    function startActually(arg0, arg1, arg2, fn) {
       map = arg0;
-      map1 = value;
-      closure_2 = arg1 === tmp(tmp2[1]).LayoutAnimationType.SHARED_ELEMENT_TRANSITION;
-      value.addListener(arg0 + 1000000000, () => {
-        set._notifyAboutProgress(set, set2.value, closure_2);
-      });
-      value.value = withStyleAnimationResult;
-      obj3 = map1;
-    } else {
-      const ProgressTransitionRegister = map.ProgressTransitionRegister;
-      ProgressTransitionRegister.onTransitionStart(arg0, arg2);
-    }
-  }
-  if (isJest) {
-    startActually = (arg0, arg1, arg2, arg3) => {
-      closure_0 = arg0;
-      closure_1 = arg1;
-      closure_2 = arg2;
-      closure_3 = arg3;
-      return requestAnimationFrame(() => {
-        callback(closure_0, closure_1, callback, closure_3);
-      });
-    };
-  }
-  map.LayoutAnimationsManager = {
-    start: startActually,
-    stop(arg0) {
-      const value = map1.get(arg0);
-      if (value) {
-        if (typeof closure_1_5 !== "function") {
-          HermesBuiltin.throwTypeError();
+      map1 = arg1;
+      if (arg1 !== map1(startActually[1]).LayoutAnimationType.SHARED_ELEMENT_TRANSITION_PROGRESS) {
+        let tmp6 = fn(arg2);
+        closure_2 = tmp6;
+        let animations = tmp6.animations;
+        let obj = map;
+        value = map.get(arg0);
+        if (value) {
+          obj = {};
+          const merged = Object.assign(value);
+          const merged1 = Object.assign(tmp6.animations);
+          animations = obj;
         }
-        value.removeListener(arg0 + 1000000000);
-        map._notifyAboutEnd(arg0, false);
+        const result = obj.set(arg0, animations);
+        value = map1.get(arg0);
+        let mutableUI = value;
+        if (undefined === value) {
+          let tmpResult = tmp(tmp2[2]);
+          mutableUI = tmpResult.makeMutableUI(tmp6.initialValues);
+          const result1 = obj3.set(arg0, mutableUI);
+          value = mutableUI;
+        } else if (typeof stopObservingProgress === "function") {
+          value.removeListener(arg0 + 1000000000);
+          map._notifyAboutEnd(arg0, false);
+          value._value = tmp6.initialValues;
+        } else {
+          throw new TypeError("Trying to call a non-function");
+        }
+        tmpResult = tmp(tmp2[3]);
+        const withStyleAnimationResult = tmpResult.withStyleAnimation(animations);
+        withStyleAnimationResult.callback = (arg0) => {
+          if (arg0) {
+            map.delete(closure_0);
+            map1.delete(closure_0);
+            if (typeof stopObservingProgress === "function") {
+              obj.removeListener(tmp2 + 1000000000);
+              global._notifyAboutEnd(tmp2, tmp6 === _mod1661.LayoutAnimationType.EXITING);
+              const tmp10 = tmp6 === _mod1661.LayoutAnimationType.EXITING;
+            } else {
+              throw new TypeError("Trying to call a non-function");
+            }
+            obj = mutableUI;
+            tmp6 = closure_1;
+          }
+          if (closure_2.callback) {
+            let tmp14 = undefined !== arg0;
+            if (tmp14) {
+              tmp14 = arg0;
+            }
+            closure_2.callback(tmp14);
+          }
+        };
+        if (typeof startObservingProgress === "function") {
+          map = arg0;
+          map1 = value;
+          closure_2 = arg1 === tmp(tmp2[1]).LayoutAnimationType.SHARED_ELEMENT_TRANSITION;
+          value.addListener(arg0 + 1000000000, () => {
+            map._notifyAboutProgress(closure_0, value.value, closure_2);
+          });
+          value.value = withStyleAnimationResult;
+        } else {
+          throw new TypeError("Trying to call a non-function");
+        }
+        obj3 = map1;
+      } else {
+        const ProgressTransitionRegister = map.ProgressTransitionRegister;
+        ProgressTransitionRegister.onTransitionStart(arg0, arg2);
       }
     }
-  };
+    if (module_1639) {
+      startActually = (arg0, arg1, arg2, arg3) => {
+        closure_0 = arg0;
+        closure_1 = arg1;
+        closure_2 = arg2;
+        closure_3 = arg3;
+        return requestAnimationFrame(() => {
+          startActually(closure_0, closure_1, closure_2, closure_3);
+        });
+      };
+    }
+    const obj = {
+      start: startActually,
+      stop(arg0) {
+          value = map1.get(arg0);
+          if (value) {
+            if (typeof stopObservingProgress === "function") {
+              value.removeListener(arg0 + 1000000000);
+              global._notifyAboutEnd(arg0, false);
+            } else {
+              throw new TypeError("Trying to call a non-function");
+            }
+          }
+        }
+    };
+    tmp.LayoutAnimationsManager = obj;
+  } else {
+    throw new TypeError("Trying to call a non-function");
+  }
 };
 fn.__closure = { createLayoutAnimationManager };
 fn.__workletHash = 11408639565737;

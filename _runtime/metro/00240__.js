@@ -1,7 +1,8 @@
 // === Module 240: ? ===
 
 // Module 240
-arg5.default = {
+
+export default {
   setup() {
 
   },

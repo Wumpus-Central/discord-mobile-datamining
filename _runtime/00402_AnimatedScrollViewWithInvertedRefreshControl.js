@@ -1,46 +1,45 @@
 // === Module 402: AnimatedScrollViewWithInvertedRefreshControl ===
 
 // Module 402 (AnimatedScrollViewWithInvertedRefreshControl)
-import noopAll from "noop" /* 19 */;
-import _isNativeReflectConstructDefault from "_isNativeReflectConstruct" /* 349 */;
-import createAnimatedComponentDefault from "createAnimatedComponent" /* 387 */;
-import closure_2 from "_slicedToArray" /* 32 */;
-import noop from "noop" /* 19 */;
-import { jsx } from "jsxProd" /* 21 */;
+import flattenStyleDefault from "flattenStyle" /* 148 */;
+import _modDef349 from "module_349" /* 349 */;
+import splitLayoutPropsDefault from "splitLayoutProps" /* 403 */;
+import _slicedToArray from "module_32" /* 32 */;
+import "module_19";
+import module_387 from "unstable_createAnimatedComponentWithAllowlist" /* 387 */;
 
-noopAll;
-({ cloneElement: c3, useMemo: c4 } = noop);
+const noop = fn(19);
+({ cloneElement: c3, useMemo: closure_4 } = noop);
+const jsx = fn(21).jsx;
 function AnimatedScrollViewWithInvertedRefreshControl(ref) {
-  let merged = Object.assign(ref, Object.create(null));
+  let merged = Object.assign(ref, Object.assign({ ref: 0 }));
   const items = [merged];
-  ({ intermediatePropsForRefreshControl, intermediatePropsForScrollView } = callback3(() => {
-    const tmpResult = merged(closure_1_1[3])(merged(closure_1_1[4])(merged.style));
-    obj = { intermediatePropsForRefreshControl: obj, intermediatePropsForScrollView: null };
-    obj = { style: tmpResult.outer };
+  ({ intermediatePropsForRefreshControl, intermediatePropsForScrollView } = closure_4(() => {
+    const tmpResult = splitLayoutPropsDefault(flattenStyleDefault(merged.style));
+    let obj = { intermediatePropsForRefreshControl: { style: tmpResult.outer }, intermediatePropsForScrollView: null };
     obj = {};
     merged = Object.assign(merged);
     obj.style = tmpResult.inner;
-    obj[1] = obj;
+    obj.intermediatePropsForScrollView = obj;
     return obj;
   }, items));
-  const tmp3 = callback(merged(404)(intermediatePropsForRefreshControl), 2);
+  const tmp3 = _slicedToArray(merged(404)(intermediatePropsForRefreshControl), 2);
   const first = tmp3[0];
   let obj = {};
   const merged1 = Object.assign(first);
   obj.ref = tmp3[1];
-  const tmp2 = callback3(() => {
-    const tmpResult = merged(closure_1_1[3])(merged(closure_1_1[4])(merged.style));
-    obj = { intermediatePropsForRefreshControl: obj, intermediatePropsForScrollView: null };
-    obj = { style: tmpResult.outer };
+  const tmp2 = closure_4(() => {
+    const tmpResult = splitLayoutPropsDefault(flattenStyleDefault(merged.style));
+    let obj = { intermediatePropsForRefreshControl: { style: tmpResult.outer }, intermediatePropsForScrollView: null };
     obj = {};
     merged = Object.assign(merged);
     obj.style = tmpResult.inner;
-    obj[1] = obj;
+    obj.intermediatePropsForScrollView = obj;
     return obj;
   }, items);
-  const tmp6 = callback2(merged.refreshControl, obj);
-  [tmp8, tmp9] = callback(merged(404)(intermediatePropsForScrollView), 2);
-  const tmp7 = callback(merged(404)(intermediatePropsForScrollView), 2);
+  const tmp6 = closure_3(merged.refreshControl, obj);
+  [tmp8, tmp9] = _slicedToArray(merged(404)(intermediatePropsForScrollView), 2);
+  const tmp7 = _slicedToArray(merged(404)(intermediatePropsForScrollView), 2);
   obj = {};
   const tmp10 = merged(334)(tmp9, ref.ref);
   const merged2 = Object.assign(tmp8);
@@ -50,10 +49,10 @@ function AnimatedScrollViewWithInvertedRefreshControl(ref) {
   obj.style = merged(254).compose(tmp8.style, first.style);
   return <tmp11 />;
 }
-let closure_7 = createAnimatedComponentDefault(_isNativeReflectConstructDefault);
+const _isNativeReflectConstruct = module_387(_modDef349);
 
 export default function AnimatedScrollViewWithOrWithoutInvertedRefreshControl(ref) {
-  const merged = Object.assign(ref, Object.create(null));
+  const merged = Object.assign(ref, Object.assign({ ref: 0 }));
   if (null != merged.refreshControl) {
     if (null != merged.style) {
       let obj = { scrollEventThrottle: 0.0001 };
@@ -67,5 +66,5 @@ export default function AnimatedScrollViewWithOrWithoutInvertedRefreshControl(re
   obj = { scrollEventThrottle: 0.0001 };
   const merged2 = Object.assign(merged);
   obj.ref = ref.ref;
-  tmp3 = <closure_7 scrollEventThrottle={0.0001} />;
+  tmp3 = <_isNativeReflectConstruct scrollEventThrottle={0.0001} />;
 };

@@ -2,23 +2,22 @@
 
 // Module 17419
 
-export default (promise) => {
+export default (promise, arg1) => {
   let fn = arg1;
-  fn = arg1;
   if (!arg1) {
     fn = () => {
 
     };
   }
-  return promise.then((arg0) => {
-    closure_0 = arg0;
-    return new Promise((arg0) => {
-      arg0(callback());
+  return promise.then((result) => {
+    closure_0 = result;
+    return new Promise((fn) => {
+      fn(closure_0());
     }).then(() => closure_0);
   }, (arg0) => {
     closure_0 = arg0;
-    return new Promise((arg0) => {
-      arg0(callback());
+    return new Promise((fn) => {
+      fn(closure_0());
     }).then(() => {
       throw closure_0;
     });

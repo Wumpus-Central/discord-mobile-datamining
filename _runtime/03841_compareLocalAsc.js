@@ -1,7 +1,7 @@
 // === Module 3841: compareLocalAsc ===
 
 // Module 3841 (compareLocalAsc)
-import _typeof from "_typeof" /* 3650 */;
+import _typeof from "module_3650" /* 3650 */;
 import differenceInCalendarDays from "differenceInCalendarDays" /* 3812 */;
 import requiredArgs from "requiredArgs" /* 3651 */;
 
@@ -43,24 +43,21 @@ function compareLocalAsc(defaultResult1, defaultResult2) {
   return num;
 }
 if (!_typeof) {
-  let obj = { default: null };
-  obj[0] = _typeof;
+  let obj = { default: _typeof };
   let tmp3 = obj;
 } else {
   tmp3 = _typeof;
 }
 _typeof = tmp3;
 if (!differenceInCalendarDays) {
-  obj = { default: null };
-  obj[0] = differenceInCalendarDays;
+  obj = { default: differenceInCalendarDays };
   let tmp5 = obj;
 } else {
   tmp5 = differenceInCalendarDays;
 }
 differenceInCalendarDays = tmp5;
 if (!requiredArgs) {
-  obj = { default: null };
-  obj[0] = requiredArgs;
+  obj = { default: requiredArgs };
   let tmp7 = obj;
 } else {
   tmp7 = requiredArgs;

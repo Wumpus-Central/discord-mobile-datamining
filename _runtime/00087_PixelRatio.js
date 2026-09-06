@@ -2,22 +2,23 @@
 
 // Module 87 (PixelRatio)
 import _createClassDefault from "_createClass" /* 42 */;
-import closure_2 from "_classCallCheck" /* 41 */;
+import _classCallCheck from "_classCallCheck" /* 41 */;
 
 const PixelRatio = arg1;
 class PixelRatio {
   constructor() {
-    tmp = closure_2(this, PixelRatio);
+    tmp = c2(this, PixelRatio);
     return;
   }
 }
+const entry = {
+  key: "get",
+  value: function get() {
+    return PixelRatio(88).default.get("window").scale;
+  }
+};
 const items = [
-  {
-    key: "get",
-    value: function get() {
-      return PixelRatio(88).default.get("window").scale;
-    }
-  },
+  entry,
   {
     key: "getFontScale",
     value: function getFontScale() {
@@ -37,7 +38,7 @@ const items = [
   {
     key: "roundToNearestPixel",
     value: function roundToNearestPixel(arg0) {
-      const value = PixelRatio.get();
+      value = PixelRatio.get();
       return Math.round(arg0 * value) / value;
     }
   },

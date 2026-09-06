@@ -1,37 +1,33 @@
 // === Module 8300: originWhitelistToRegex ===
 
 // Module 8300 (originWhitelistToRegex)
-import noopDefault from "noop" /* 19 */;
 import _modDef8301 from "module_8301" /* 8301 */;
-import get_ActivityIndicatorDefault from "get ActivityIndicator" /* 8302 */;
-import noop from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import _modDef8302 from "module_8302" /* 8302 */;
+import noop from "module_19" /* 19 */;
+import get_ActivityIndicator from "module_17" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 
-({ useCallback: obj1, useMemo: c3, useRef: c4, useState: c5 } = noop);
-noopDefault;
-({ Linking: closure_6, View: error, ActivityIndicator: closure_8, Text: c9, Platform } = get_ActivityIndicator);
-({ jsx: c10, jsxs: unpackModuleId } = jsxProd);
+({ useCallback: c2, useMemo: c3, useRef: closure_4, useState: hasOwnProperty } = noop);
+({ Linking: metroRequire, View: closure_7, ActivityIndicator: closure_8, Text: closure_9, Platform } = get_ActivityIndicator);
+({ jsx: c10, jsxs: closure_11 } = jsxProd);
 let fn = this;
 if (this) {
   fn = this.__spreadArray;
 }
 if (!fn) {
-  fn = (arr) => {
+  fn = (arr, arg1, arg2) => {
     let tmp;
     if (arg2) {
       let num4 = 0;
       if (0 < arg1.length) {
         while (true) {
           let tmp4 = !tmp3;
-          let tmp5 = num4;
           let tmp6 = tmp3;
           if (!tmp3) {
             tmp4 = num4 in arg1;
           }
           let tmp7 = tmp3;
           if (!tmp4) {
-            let tmp8 = tmp3;
             if (!tmp3) {
               break;
             } else {
@@ -67,43 +63,38 @@ function createOnShouldStartLoadWithRequest(arg0, arg1, arg2) {
   return (nativeEvent) => {
     nativeEvent = nativeEvent.nativeEvent;
     const url = nativeEvent.url;
-    let str = url;
     let items = closure_1;
     if (!closure_1) {
       items = [];
     }
-    const mapped = closure_1_12(["about:blank"], items, true).map(closure_1_13);
-    str = undefined;
+    const mapped = onShouldStartLoadWithRequestCallback(["about:blank"], items, true).map(closure_13);
     const match = /^[A-Za-z][A-Za-z0-9+\-.]+:(\/\/)?[^/]*/.exec(url);
-    str = "";
-    if (null !== match) {
-      str = match[0];
-    }
-    if (mapped.some((arg0) => {
-      const regExp = new RegExp(arg0);
+    const str = "";
+    if (mapped.some((item) => {
+      const regExp = new RegExp(item);
       return regExp.test(str);
     })) {
       let flag = true;
-      if (callback) {
-        flag = callback(nativeEvent);
+      if (tmp2) {
+        flag = tmp2(nativeEvent);
       }
     } else {
-      const canOpenURLResult = closure_1_6.canOpenURL(url);
-      closure_1_6.canOpenURL(url).then((arg0) => {
-        if (arg0) {
-          return closure_1_6.openURL(str);
+      const canOpenURLResult = onHttpErrorProp.canOpenURL(url);
+      onHttpErrorProp.canOpenURL(url).then((result) => {
+        if (result) {
+          return onHttpErrorProp.openURL(str);
         } else {
           const _console = console;
           const concat = "Can't open url: ".concat;
           console.warn("Can't open url: ".concat("Can't open url: "));
         }
-      }).catch((arg0) => {
-        console.warn("Error opening URL: ", arg0);
+      }).catch((error) => {
+        console.warn("Error opening URL: ", error);
       });
       flag = false;
-      const nextPromise = closure_1_6.canOpenURL(url).then((arg0) => {
-        if (arg0) {
-          return closure_1_6.openURL(str);
+      const nextPromise = onHttpErrorProp.canOpenURL(url).then((result) => {
+        if (result) {
+          return onHttpErrorProp.openURL(str);
         } else {
           const _console = console;
           const concat = "Can't open url: ".concat;
@@ -111,29 +102,29 @@ function createOnShouldStartLoadWithRequest(arg0, arg1, arg2) {
         }
       });
     }
-    str(flag, url, nativeEvent.lockIdentifier);
+    closure_0(flag, url, nativeEvent.lockIdentifier);
   };
 }
 
 export const defaultOriginWhitelist = ["http://*", "https://*"];
 export { createOnShouldStartLoadWithRequest };
-export const defaultRenderLoading = () => callback(closure_7, { style: get_ActivityIndicatorDefault.loadingOrErrorView, children: callback(closure_8, {}) });
+export const defaultRenderLoading = () => closure_1_10(React5, { style: _modDef8302.loadingOrErrorView, children: closure_1_10(React6, {}) });
 export const defaultRenderError = (arg0, arg1, arg2) => {
-  let obj = { style: get_ActivityIndicatorDefault.loadingOrErrorView, children: null };
-  obj = { style: get_ActivityIndicatorDefault.errorTextTitle, children: "Error loading page" };
-  const items = [callback(closure_9, obj), , , ];
-  obj = { style: get_ActivityIndicatorDefault.errorText, children: "Domain: ".concat(arg0) };
-  items[1] = callback(closure_9, obj);
-  items[2] = callback(closure_9, { style: get_ActivityIndicatorDefault.errorText, children: "Error Code: ".concat(arg1) });
-  obj1 = { style: get_ActivityIndicatorDefault.errorText, children: "Error Code: ".concat(arg1) };
-  items[3] = callback(closure_9, { style: get_ActivityIndicatorDefault.errorText, children: "Description: ".concat(arg2) });
-  obj[1] = items;
-  return callback2(closure_7, obj);
+  let obj = { style: _modDef8302.loadingOrErrorView, children: null };
+  obj = { style: _modDef8302.errorTextTitle, children: "Error loading page" };
+  const items = [closure_1_10(React7, obj), , , ];
+  obj = { style: _modDef8302.errorText, children: "Domain: ".concat(arg0) };
+  items[1] = closure_1_10(React7, obj);
+  items[2] = closure_1_10(React7, { style: _modDef8302.errorText, children: "Error Code: ".concat(arg1) });
+  const obj1 = { style: _modDef8302.errorText, children: "Error Code: ".concat(arg1) };
+  items[3] = closure_1_10(React7, { style: _modDef8302.errorText, children: "Description: ".concat(arg2) });
+  obj.children = items;
+  return closure_1_11(React5, obj);
 };
 export const useWebWiewLogic = (onNavigationStateChange) => {
   onNavigationStateChange = onNavigationStateChange.onNavigationStateChange;
-  const onLoadStart = onNavigationStateChange.onLoadStart;
-  const onLoad = onNavigationStateChange.onLoad;
+  let onLoadStart = onNavigationStateChange.onLoadStart;
+  let onLoad = onNavigationStateChange.onLoad;
   const onLoadProgress = onNavigationStateChange.onLoadProgress;
   const onLoadEnd = onNavigationStateChange.onLoadEnd;
   const onError = onNavigationStateChange.onError;
@@ -148,11 +139,11 @@ export const useWebWiewLogic = (onNavigationStateChange) => {
   if (onNavigationStateChange.startInLoadingState) {
     str = "LOADING";
   }
-  let tmpResult = tmp(str);
+  tmp(str);
   closure_13 = tmp3;
-  tmpResult = tmp(null);
+  const tmpResult = tmp(null);
   closure_14 = tmpResult[1];
-  closure_15 = onLoadEnd(null);
+  onLoadEnd(null);
   let items = [onNavigationStateChange];
   const tmp5 = onLoad((nativeEvent) => {
     if (null != onNavigationStateChange) {
@@ -168,7 +159,7 @@ export const useWebWiewLogic = (onNavigationStateChange) => {
     if (null != onLoadStart) {
       tmp(nativeEvent);
     }
-    callback3(nativeEvent);
+    closure_16(nativeEvent);
   }, items1);
   const items4 = [onRenderProcessGoneProp];
   const tmp7 = onLoad((persist) => {
@@ -183,8 +174,8 @@ export const useWebWiewLogic = (onNavigationStateChange) => {
       tmp6(persist);
     }
     if (!persist.isDefaultPrevented()) {
-      callback("ERROR");
-      callback2(persist.nativeEvent);
+      closure_13("ERROR");
+      closure_14(persist.nativeEvent);
     }
   }, items2);
   const items5 = [onContentProcessDidTerminateProp];
@@ -214,9 +205,9 @@ export const useWebWiewLogic = (onNavigationStateChange) => {
       tmp3(nativeEvent);
     }
     if (nativeEvent.nativeEvent.url === ref.current) {
-      callback("IDLE");
+      closure_13("IDLE");
     }
-    callback3(nativeEvent);
+    closure_16(nativeEvent);
   }, items6);
   const obj = { onShouldStartLoadWithRequest: null, onLoadingStart: null, onLoadingProgress: null, onLoadingError: null, onLoadingFinish: null, onHttpError: null, onRenderProcessGone: null, onContentProcessDidTerminate: null, onMessage: null, viewState: null, setViewState: null, lastErrorEvent: null };
   const items9 = [originWhitelist, onShouldStartLoadWithRequestProp, onShouldStartLoadWithRequestCallback];
@@ -225,67 +216,63 @@ export const useWebWiewLogic = (onNavigationStateChange) => {
       tmp(arg0);
     }
   }, items7);
-  obj[0] = onLoadProgress(() => {
-    if (typeof closure_14 !== "function") {
-      HermesBuiltin.throwTypeError();
-    }
-    closure_0 = onShouldStartLoadWithRequestCallback;
-    closure_1 = originWhitelist;
-    closure_2 = onShouldStartLoadWithRequestProp;
-    return (nativeEvent) => {
-      nativeEvent = nativeEvent.nativeEvent;
-      const url = nativeEvent.url;
-      let str = url;
-      let items = closure_1;
-      if (!closure_1) {
-        items = [];
-      }
-      const mapped = closure_1_12(["about:blank"], items, true).map(closure_1_13);
-      str = undefined;
-      const match = /^[A-Za-z][A-Za-z0-9+\-.]+:(\/\/)?[^/]*/.exec(url);
-      str = "";
-      if (null !== match) {
-        str = match[0];
-      }
-      if (mapped.some((arg0) => {
-        const regExp = new RegExp(arg0);
-        return regExp.test(str);
-      })) {
-        let flag = true;
-        if (callback) {
-          flag = callback(nativeEvent);
+  obj.onShouldStartLoadWithRequest = onLoadProgress(() => {
+    if (typeof createOnShouldStartLoadWithRequest === "function") {
+      closure_0 = onShouldStartLoadWithRequestCallback;
+      onLoadStart = tmp;
+      onLoad = tmp2;
+      return (nativeEvent) => {
+        nativeEvent = nativeEvent.nativeEvent;
+        const url = nativeEvent.url;
+        let items = closure_1;
+        if (!closure_1) {
+          items = [];
         }
-      } else {
-        const canOpenURLResult = closure_1_6.canOpenURL(url);
-        closure_1_6.canOpenURL(url).then((arg0) => {
-          if (arg0) {
-            return closure_1_6.openURL(str);
-          } else {
-            const _console = console;
-            const concat = "Can't open url: ".concat;
-            console.warn("Can't open url: ".concat("Can't open url: "));
+        const mapped = onShouldStartLoadWithRequestCallback(["about:blank"], items, true).map(closure_13);
+        const match = /^[A-Za-z][A-Za-z0-9+\-.]+:(\/\/)?[^/]*/.exec(url);
+        const str = "";
+        if (mapped.some((item) => {
+          const regExp = new RegExp(item);
+          return regExp.test(str);
+        })) {
+          let flag = true;
+          if (tmp2) {
+            flag = tmp2(nativeEvent);
           }
-        }).catch((arg0) => {
-          console.warn("Error opening URL: ", arg0);
-        });
-        flag = false;
-        const nextPromise = closure_1_6.canOpenURL(url).then((arg0) => {
-          if (arg0) {
-            return closure_1_6.openURL(str);
-          } else {
-            const _console = console;
-            const concat = "Can't open url: ".concat;
-            console.warn("Can't open url: ".concat("Can't open url: "));
-          }
-        });
-      }
-      str(flag, url, nativeEvent.lockIdentifier);
-    };
+        } else {
+          const canOpenURLResult = onHttpErrorProp.canOpenURL(url);
+          onHttpErrorProp.canOpenURL(url).then((result) => {
+            if (result) {
+              return onHttpErrorProp.openURL(str);
+            } else {
+              const _console = console;
+              const concat = "Can't open url: ".concat;
+              console.warn("Can't open url: ".concat("Can't open url: "));
+            }
+          }).catch((error) => {
+            console.warn("Error opening URL: ", error);
+          });
+          flag = false;
+          const nextPromise = onHttpErrorProp.canOpenURL(url).then((result) => {
+            if (result) {
+              return onHttpErrorProp.openURL(str);
+            } else {
+              const _console = console;
+              const concat = "Can't open url: ".concat;
+              console.warn("Can't open url: ".concat("Can't open url: "));
+            }
+          });
+        }
+        closure_0(flag, url, nativeEvent.lockIdentifier);
+      };
+    } else {
+      throw new TypeError("Trying to call a non-function");
+    }
   }, items9);
-  obj[1] = tmp6;
-  obj[2] = onLoad((nativeEvent) => {
+  obj.onLoadingStart = tmp6;
+  obj.onLoadingProgress = onLoad((nativeEvent) => {
     if (1 === nativeEvent.nativeEvent.progress) {
-      callback((arg0) => {
+      closure_13((arg0) => {
         let str = "IDLE";
         if ("LOADING" !== arg0) {
           str = arg0;
@@ -297,14 +284,14 @@ export const useWebWiewLogic = (onNavigationStateChange) => {
       tmp3(nativeEvent);
     }
   }, items8);
-  obj[3] = tmp7;
-  obj[4] = tmp11;
-  obj[5] = tmp8;
-  obj[6] = tmp9;
-  obj[7] = tmp10;
-  obj[8] = tmp12;
-  obj[9] = tmpResult[0];
-  obj[10] = tmpResult[1];
-  obj[11] = tmpResult[0];
+  obj.onLoadingError = tmp7;
+  obj.onLoadingFinish = tmp11;
+  obj.onHttpError = tmp8;
+  obj.onRenderProcessGone = tmp9;
+  obj.onContentProcessDidTerminate = tmp10;
+  obj.onMessage = tmp12;
+  obj.viewState = tmpResult[0];
+  obj.setViewState = tmpResult[1];
+  obj.lastErrorEvent = tmpResult[0];
   return obj;
 };

@@ -1,16 +1,17 @@
 // === Module 443: ? ===
 
 // Module 443
-import noopAll from "noop" /* 19 */;
 import _modDef444 from "module_444" /* 444 */;
-import jsxProd from "jsxProd" /* 21 */;
-import defaultItemToKey from "defaultItemToKey" /* 438 */;
+import noop from "module_19" /* 19 */;
 
-noopAll;
-({ Fragment: c0, jsxs: closure_1 } = jsxProd);
+const jsxProd = fn(21);
+({ Fragment: closure_0, jsxs: closure_1 } = jsxProd);
+const defaultItemToKey = fn(438);
 
 export default defaultItemToKey.createVirtualCollectionView(function VirtualRowLayout(arg0) {
-  const children = [, ];
+  const obj = { children: null };
+  const items = [, ];
   ({ children: arr[0], spacer: arr[1] } = arg0);
-  return callback(closure_0, { children });
+  obj.children = items;
+  return framebus(React, obj);
 }, _modDef444);

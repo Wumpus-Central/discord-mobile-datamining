@@ -1,8 +1,8 @@
 // === Module 1801: AnimatedText ===
 
 // Module 1801 (AnimatedText)
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import createAnimatedComponent from "createAnimatedComponent" /* 1670 */;
+import _mod17 from "module_17" /* 17 */;
+import _isNativeReflectConstruct from "module_1670" /* 1670 */;
 
 
-export const AnimatedText = createAnimatedComponent.createAnimatedComponent(get_ActivityIndicator.Text);
+export const AnimatedText = _isNativeReflectConstruct.createAnimatedComponent(_mod17.Text);

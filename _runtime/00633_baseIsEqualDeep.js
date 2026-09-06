@@ -4,7 +4,7 @@
 import _mod514 from "module_514" /* 514 */;
 
 
-export default function baseIsEqualDeep(value, value2) {
+export default function baseIsEqualDeep(value, value2, arg2, arg3, fn, arg5) {
   const tmp3 = _mod514(value);
   let str = "[object Array]";
   let str2 = "[object Array]";
@@ -42,11 +42,11 @@ export default function baseIsEqualDeep(value, value2) {
       }
       if (!flag2) {
         if (!tmp(538)(value)) {
-          let tmp19 = tmp(651)(value, value2, str2, arg2, arg3, arg4, tmp9);
+          let tmp19 = tmp(651)(value, value2, str2, arg2, arg3, fn, tmp9);
         }
         return tmp19;
       }
-      tmp19 = tmp(645)(value, value2, arg2, arg3, arg4, tmp9);
+      tmp19 = tmp(645)(value, value2, arg2, arg3, fn, tmp9);
     }
   }
   if (!(1 & arg2)) {
@@ -64,7 +64,7 @@ export default function baseIsEqualDeep(value, value2) {
         if (!tmp8) {
           tmp34 = new tmp(639)();
         }
-        return arg4(valueResult, valueResult, arg2, arg3, tmp34);
+        return fn(valueResult, valueResult, arg2, arg3, tmp34);
       } else {
         const call2 = hasOwnProperty.call;
         if (typeof call2 === "unknown") {
@@ -89,7 +89,7 @@ export default function baseIsEqualDeep(value, value2) {
     if (!tmp8) {
       tmp8 = new tmp(639)();
     }
-    tmp42 = tmp(655)(value, value2, arg2, arg3, arg4, tmp8);
+    tmp42 = tmp(655)(value, value2, arg2, arg3, fn, tmp8);
   }
   return tmp42;
 };

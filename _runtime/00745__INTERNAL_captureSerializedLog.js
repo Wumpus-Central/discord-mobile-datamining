@@ -1,60 +1,59 @@
 // === Module 745: _INTERNAL_captureSerializedLog ===
 
 // Module 745 (_INTERNAL_captureSerializedLog)
-import getGlobalSingleton from "getGlobalSingleton" /* 690 */;
-import createLogContainerEnvelopeItem from "createLogContainerEnvelopeItem" /* 749 */;
-import closure_2 from "_slicedToArray" /* 32 */;
+import _mod688 from "module_688" /* 688 */;
+import _mod690 from "module_690" /* 690 */;
+import _mod713 from "module_713" /* 713 */;
+import _mod749 from "module_749" /* 749 */;
+import _slicedToArray from "module_32" /* 32 */;
 
-function _INTERNAL_captureSerializedLog(closure_0) {
-  const globalSingleton = getGlobalSingleton.getGlobalSingleton("clientToLogBufferMap", () => {
+function _INTERNAL_captureSerializedLog(getOptions, arg1) {
+  const globalSingleton = _mod690.getGlobalSingleton("clientToLogBufferMap", () => {
     const weakMap = new WeakMap();
     return weakMap;
   });
-  const obj = getGlobalSingleton;
-  const globalSingleton1 = getGlobalSingleton.getGlobalSingleton("clientToLogBufferMap", () => {
+  const globalSingleton1 = _mod690.getGlobalSingleton("clientToLogBufferMap", () => {
     const weakMap = new WeakMap();
     return weakMap;
   });
-  const value = globalSingleton1.get(closure_0);
+  value = globalSingleton1.get(getOptions);
   if (undefined === value) {
     const items = [arg1];
-    const result = globalSingleton.set(closure_0, items);
+    const result = globalSingleton.set(getOptions, items);
   } else if (value.length >= 100) {
-    _INTERNAL_flushLogsBuffer(closure_0, value);
+    _INTERNAL_flushLogsBuffer(getOptions, value);
     const items1 = [arg1];
-    const result1 = globalSingleton.set(closure_0, items1);
+    const result1 = globalSingleton.set(getOptions, items1);
   } else {
     const items2 = [];
     items2[HermesBuiltin.arraySpread(value, 0)] = arg1;
-    const result2 = globalSingleton.set(closure_0, items2);
+    const result2 = globalSingleton.set(getOptions, items2);
   }
 }
-function _INTERNAL_flushLogsBuffer(closure_0, value) {
+function _INTERNAL_flushLogsBuffer(getOptions, value) {
   let items = value;
   if (value == null) {
-    const globalSingleton = getGlobalSingleton.getGlobalSingleton("clientToLogBufferMap", () => {
+    const globalSingleton = _mod690.getGlobalSingleton("clientToLogBufferMap", () => {
       const weakMap = new WeakMap();
       return weakMap;
     });
-    items = globalSingleton.get(closure_0);
-    const obj = getGlobalSingleton;
+    items = globalSingleton.get(getOptions);
   }
   if (items == null) {
     items = [];
   }
   if (0 !== items.length) {
-    const options = closure_0.getOptions();
-    const obj3 = createLogContainerEnvelopeItem;
+    const options = getOptions.getOptions();
+    const obj3 = _mod749;
     ({ _metadata, tunnel } = options);
-    const logEnvelope = obj3.createLogEnvelope(items, _metadata, tunnel, closure_0.getDsn());
-    const globalSingleton1 = getGlobalSingleton.getGlobalSingleton("clientToLogBufferMap", () => {
+    const logEnvelope = obj3.createLogEnvelope(items, _metadata, tunnel, getOptions.getDsn());
+    const globalSingleton1 = _mod690.getGlobalSingleton("clientToLogBufferMap", () => {
       const weakMap = new WeakMap();
       return weakMap;
     });
-    const result = globalSingleton1.set(closure_0, []);
-    closure_0.emit("flushLogs");
-    closure_0.sendEnvelope(logEnvelope);
-    const obj4 = getGlobalSingleton;
+    const result = globalSingleton1.set(getOptions, []);
+    getOptions.emit("flushLogs");
+    getOptions.sendEnvelope(logEnvelope);
   }
 }
 Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
@@ -62,22 +61,21 @@ Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
 export const _INTERNAL_captureLog = function _INTERNAL_captureLog(attributes, scope) {
   let currentScope = scope;
   if (scope === undefined) {
-    obj1 = beforeSendLog(obj[1]);
+    let obj1 = _mod713;
     currentScope = obj1.getCurrentScope();
   }
   let tmp3 = arg2;
   if (arg2 === undefined) {
     tmp3 = _INTERNAL_captureSerializedLog;
   }
-  beforeSendLog = undefined;
-  obj = undefined;
-  obj = undefined;
+  let beforeSendLog;
+  let obj;
   let client;
   if (currentScope != null) {
     client = currentScope.getClient();
   }
   if (client == null) {
-    let obj2 = beforeSendLog(obj[1]);
+    let obj2 = _mod713;
     client = obj2.getClient();
   }
   if (client) {
@@ -85,12 +83,12 @@ export const _INTERNAL_captureLog = function _INTERNAL_captureLog(attributes, sc
     ({ release, environment, enableLogs } = options);
     beforeSendLog = options.beforeSendLog;
     if (tmp11) {
-      let tmp12Result = tmp12(tmp13[4]);
-      const tmp17 = obj(tmp12Result._getTraceInfoFromScope(client, currentScope), 2)[1];
+      let tmp12Result = tmp12(746);
+      const tmp17 = _slicedToArray(tmp12Result._getTraceInfoFromScope(client, currentScope), 2)[1];
       obj = {};
       const merged = Object.assign(attributes.attributes);
-      tmp12Result = tmp12(tmp13[5]);
-      const combinedScopeData = tmp12Result.getCombinedScopeData(tmp12(tmp13[1]).getIsolationScope(), currentScope);
+      tmp12Result = tmp12(736);
+      const combinedScopeData = tmp12Result.getCombinedScopeData(tmp12(713).getIsolationScope(), currentScope);
       ({ id, email, username } = combinedScopeData.user);
       attributes = combinedScopeData.attributes;
       if (undefined === attributes) {
@@ -188,7 +186,7 @@ export const _INTERNAL_captureLog = function _INTERNAL_captureLog(attributes, sc
         tmp40 = obj["sentry._internal.replay_is_buffering"] && false;
       }
       const message = attributes.message;
-      const tmp12Result1 = tmp12(tmp13[1]);
+      const tmp12Result1 = tmp12(713);
       if (tmp12Result2.isParameterizedString(message)) {
         ({ __sentry_template_values__, __sentry_template_string__ } = message);
         if (undefined === __sentry_template_values__) {
@@ -201,12 +199,12 @@ export const _INTERNAL_captureLog = function _INTERNAL_captureLog(attributes, sc
         if (length) {
           obj["sentry.message.template"] = __sentry_template_string__;
         }
-        const item = __sentry_template_values__.forEach((arg0, arg1) => {
-          obj["sentry.message.parameter." + arg1] = arg0;
+        const item = __sentry_template_values__.forEach((item, index) => {
+          obj["sentry.message.parameter." + index] = item;
         });
       }
-      tmp12Result2 = tmp12(tmp13[6]);
-      const _getSpanForScopeResult = tmp12(tmp13[7])._getSpanForScope(currentScope);
+      tmp12Result2 = tmp12(692);
+      const _getSpanForScopeResult = tmp12(709)._getSpanForScope(currentScope);
       let spanId;
       if (_getSpanForScopeResult != null) {
         spanId = _getSpanForScopeResult.spanContext().spanId;
@@ -224,8 +222,8 @@ export const _INTERNAL_captureLog = function _INTERNAL_captureLog(attributes, sc
       obj.attributes = obj;
       client.emit("beforeCaptureLog", obj);
       if (beforeSendLog) {
-        obj = tmp12(tmp13[3]).consoleSandbox(() => beforeSendLog(obj));
-        const tmp12Result4 = tmp12(tmp13[3]);
+        obj = tmp12(689).consoleSandbox(() => beforeSendLog(obj));
+        const tmp12Result4 = tmp12(689);
       }
       if (obj) {
         ({ level, attributes, message: message2 } = obj);
@@ -233,54 +231,50 @@ export const _INTERNAL_captureLog = function _INTERNAL_captureLog(attributes, sc
           attributes = {};
         }
         let severityNumber = obj.severityNumber;
-        obj1 = { timestamp: null, level: null, body: null, trace_id: null, severity_number: null, attributes: null };
-        obj1[0] = tmp12(tmp13[8]).timestampInSeconds();
-        obj1[1] = level;
-        obj1[2] = message2;
+        obj1 = { timestamp: tmp12(703).timestampInSeconds(), level, body: message2, trace_id: null, severity_number: null, attributes: null };
         let trace_id;
         if (tmp17 != null) {
           trace_id = tmp17.trace_id;
         }
-        obj1[3] = trace_id;
+        obj1.trace_id = trace_id;
         if (severityNumber == null) {
-          severityNumber = tmp12(tmp13[9]).SEVERITY_TEXT_TO_SEVERITY_NUMBER[level];
+          severityNumber = tmp12(747).SEVERITY_TEXT_TO_SEVERITY_NUMBER[level];
         }
-        obj1[4] = severityNumber;
+        obj1.severity_number = severityNumber;
         obj2 = {};
-        const tmp12Result5 = tmp12(tmp13[8]);
-        const merged2 = Object.assign(tmp12(tmp13[10]).serializeAttributes(attributes));
-        const tmp12Result6 = tmp12(tmp13[10]);
-        const merged3 = Object.assign(tmp12(tmp13[10]).serializeAttributes(attributes, true));
-        obj1[5] = obj2;
+        const tmp12Result5 = tmp12(703);
+        const merged2 = Object.assign(tmp12(748).serializeAttributes(attributes));
+        const tmp12Result6 = tmp12(748);
+        const merged3 = Object.assign(tmp12(748).serializeAttributes(attributes, true));
+        obj1.attributes = obj2;
         tmp3(client, obj1);
         client.emit("afterCaptureLog", obj);
-        const tmp12Result7 = tmp12(tmp13[10]);
+        const tmp12Result7 = tmp12(748);
       } else {
         client.recordDroppedEvent("before_send", "log_item", 1);
-        if (tmp12(tmp13[2]).DEBUG_BUILD) {
-          const debug3 = tmp12(tmp13[3]).debug;
+        if (tmp12(688).DEBUG_BUILD) {
+          const debug3 = tmp12(689).debug;
           debug3.warn("beforeSendLog returned null, log will not be captured.");
         }
       }
-      const tmp12Result3 = tmp12(tmp13[7]);
-    } else if (tmp12(tmp13[2]).DEBUG_BUILD) {
-      const debug2 = tmp12(tmp13[3]).debug;
+      const tmp12Result3 = tmp12(709);
+    } else if (tmp12(688).DEBUG_BUILD) {
+      const debug2 = tmp12(689).debug;
       debug2.warn("logging option not enabled, log will not be captured.");
     }
     tmp11 = undefined !== enableLogs && enableLogs;
   } else {
-    if (beforeSendLog(obj[2]).DEBUG_BUILD) {
-      const debug = tmp7(tmp8[3]).debug;
+    if (_mod688.DEBUG_BUILD) {
+      const debug = tmp7(689).debug;
       debug.warn("No client available to capture log.");
     }
-    tmp7 = beforeSendLog;
-    tmp8 = obj;
+    tmp7 = require;
   }
 };
 export { _INTERNAL_captureSerializedLog };
 export { _INTERNAL_flushLogsBuffer };
 export const _INTERNAL_getLogBuffer = function _INTERNAL_getLogBuffer(arg0) {
-  const globalSingleton = getGlobalSingleton.getGlobalSingleton("clientToLogBufferMap", () => {
+  const globalSingleton = _mod690.getGlobalSingleton("clientToLogBufferMap", () => {
     const weakMap = new WeakMap();
     return weakMap;
   });

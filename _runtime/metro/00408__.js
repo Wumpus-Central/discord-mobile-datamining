@@ -1,10 +1,9 @@
 // === Module 408: ? ===
 
 // Module 408
-import noopAll from "noop" /* 19 */;
 import ViewDefault from "View" /* 108 */;
-import createAnimatedComponentDefault from "createAnimatedComponent" /* 387 */;
+import noop from "module_19" /* 19 */;
+import module_387 from "unstable_createAnimatedComponentWithAllowlist" /* 387 */;
 
-noopAll;
 
-export default createAnimatedComponentDefault(ViewDefault);
+export default module_387(ViewDefault);

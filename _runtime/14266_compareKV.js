@@ -3,7 +3,7 @@
 // Module 14266 (compareKV)
 import e from "e" /* 1162 */;
 import emitUnicodeLanguageId from "emitUnicodeLanguageId" /* 14265 */;
-import _mod14267 from "module_14267" /* 14267 */;
+import languageAlias from "languageAlias" /* 14267 */;
 
 require = arg1;
 const dependencyMap = arg6;
@@ -36,31 +36,29 @@ function canonicalizeUnicodeLanguageId(lang) {
     let num3 = 0;
     tmp = lang;
     if (0 < variants.length) {
-      let obj = { lang: null, variants: null };
-      obj[0] = lang.lang;
+      let obj = { lang: lang.lang, variants: null };
       const items = [variants[num3]];
-      obj[1] = items;
-      const str = _mod14267.languageAlias[emitUnicodeLanguageId.emitUnicodeLanguageId(undefined, obj)];
+      obj.variants = items;
+      const str = languageAlias.languageAlias[emitUnicodeLanguageId.emitUnicodeLanguageId(undefined, obj)];
       while (!str) {
         num3 = num3 + 1;
         tmp = lang;
       }
       obj = { lang: null, script: null, region: null, variants: null };
       const result = tmp2(14268).parseUnicodeLanguageId(str.split(tmp2(14268).SEPARATOR));
-      obj[0] = result.lang;
-      obj[1] = lang.script || result.script;
-      obj[2] = lang.region || result.region;
+      obj.lang = result.lang;
+      obj.script = lang.script || result.script;
+      obj.region = lang.region || result.region;
       const variants1 = lang.variants;
       const variants2 = result.variants;
       const __spreadArrayResult = e.__spreadArray([], variants1, true);
       for (let num4 = 0; num4 < variants2.length; num4 = num4 + 1) {
         let tmp6 = variants2[num4];
-        let tmp7 = num4;
         if (variants1.indexOf(tmp6) < 0) {
           let arr = __spreadArrayResult.push(tmp6);
         }
       }
-      obj[3] = __spreadArrayResult;
+      obj.variants = __spreadArrayResult;
       tmp = obj;
       const tmp2Result = e;
     }
@@ -70,15 +68,15 @@ function canonicalizeUnicodeLanguageId(lang) {
     tmp9 = tmp;
     if (tmp.region) {
       obj = { lang: null, script: null, region: null, variants: null };
-      ({ lang: obj4[0], script: obj4[1], region: obj4[2] } = tmp);
-      obj[3] = [];
-      const str2 = _mod14267.languageAlias[emitUnicodeLanguageId.emitUnicodeLanguageId(undefined, obj)];
+      ({ lang: obj4.lang, script: obj4.script, region: obj4.region } = tmp);
+      obj.variants = [];
+      const str2 = languageAlias.languageAlias[emitUnicodeLanguageId.emitUnicodeLanguageId(undefined, obj)];
       tmp9 = tmp;
       if (str2) {
-        obj1 = { lang: null, script: null, region: null, variants: null };
+        const obj1 = { lang: null, script: null, region: null, variants: null };
         const result1 = tmp10(14268).parseUnicodeLanguageId(str2.split(tmp10(14268).SEPARATOR));
-        ({ lang: obj5[0], script: obj5[1], region: obj5[2] } = result1);
-        obj1[3] = tmp.variants;
+        ({ lang: obj5.lang, script: obj5.script, region: obj5.region } = result1);
+        obj1.variants = tmp.variants;
         tmp9 = obj1;
       }
     }
@@ -86,30 +84,30 @@ function canonicalizeUnicodeLanguageId(lang) {
   let tmp13 = tmp9;
   if (tmp9.region) {
     const obj2 = { lang: null, region: null, variants: null };
-    ({ lang: obj6[0], region: obj6[1] } = tmp9);
-    obj2[2] = [];
-    const str3 = _mod14267.languageAlias[emitUnicodeLanguageId.emitUnicodeLanguageId(undefined, obj2)];
+    ({ lang: obj6.lang, region: obj6.region } = tmp9);
+    obj2.variants = [];
+    const str3 = languageAlias.languageAlias[emitUnicodeLanguageId.emitUnicodeLanguageId(undefined, obj2)];
     tmp13 = tmp9;
     if (str3) {
       const obj3 = { lang: null, script: null, region: null, variants: null };
       const result2 = tmp14(14268).parseUnicodeLanguageId(str3.split(tmp14(14268).SEPARATOR));
-      obj3[0] = result2.lang;
-      obj3[1] = tmp9.script || result2.script;
-      obj3[2] = result2.region;
-      obj3[3] = tmp9.variants;
+      obj3.lang = result2.lang;
+      obj3.script = tmp9.script || result2.script;
+      obj3.region = result2.region;
+      obj3.variants = tmp9.variants;
       tmp13 = obj3;
     }
   }
   const obj4 = { lang: tmp13.lang, variants: [] };
-  const str4 = _mod14267.languageAlias[emitUnicodeLanguageId.emitUnicodeLanguageId(undefined, obj4)];
+  const str4 = languageAlias.languageAlias[emitUnicodeLanguageId.emitUnicodeLanguageId(undefined, obj4)];
   let tmp19 = tmp13;
   if (str4) {
     const obj5 = { lang: null, script: null, region: null, variants: null };
     const result3 = tmp17(14268).parseUnicodeLanguageId(str4.split(tmp17(14268).SEPARATOR));
-    obj5[0] = result3.lang;
-    obj5[1] = tmp13.script || result3.script;
-    obj5[2] = tmp13.region || result3.region;
-    obj5[3] = tmp13.variants;
+    obj5.lang = result3.lang;
+    obj5.script = tmp13.script || result3.script;
+    obj5.region = tmp13.region || result3.region;
+    obj5.variants = tmp13.variants;
     tmp19 = obj5;
   }
   if (tmp19.region) {
@@ -120,8 +118,8 @@ function canonicalizeUnicodeLanguageId(lang) {
       const parts = str6.split(" ");
       const first = parts[0];
       const obj6 = { lang: null, script: null, variants: null };
-      ({ lang: obj10[0], script: obj10[1] } = tmp19);
-      obj6[2] = [];
+      ({ lang: obj10.lang, script: obj10.script } = tmp19);
+      obj6.variants = [];
       const str8 = tmp17(14269).likelySubtags[tmp17(undefined, 14265).emitUnicodeLanguageId(undefined, obj6)];
       tmp22 = first;
       if (str8) {
@@ -140,8 +138,6 @@ function canonicalizeUnicodeLanguageId(lang) {
       tmp19.region = tmp22;
     }
     tmp19.region = tmp19.region.toUpperCase();
-    const str5 = tmp19.region;
-    const str9 = tmp19.region;
   }
   if (tmp19.script) {
     const script = tmp19.script;
@@ -150,7 +146,6 @@ function canonicalizeUnicodeLanguageId(lang) {
     if (tmp17(14267).scriptAlias[tmp19.script]) {
       tmp19.script = tmp17(14267).scriptAlias[tmp19.script];
     }
-    const str10 = tmp19.script[0];
     const str11 = script.slice(1);
   }
   if (tmp19.variants.length) {
@@ -158,9 +153,7 @@ function canonicalizeUnicodeLanguageId(lang) {
       let str12 = tmp19.variants[num7];
       let formatted2 = str12.toLowerCase();
       let tmp27 = require;
-      let tmp28 = dependencyMap;
-      let tmp29 = num7;
-      if (_mod14267.variantAlias[formatted2]) {
+      if (languageAlias.variantAlias[formatted2]) {
         let tmp30 = tmp27(14267).variantAlias[formatted2];
         if (tmp27(14268).isUnicodeVariantSubtag(tmp30)) {
           tmp19.variants[num7] = tmp30;
@@ -174,22 +167,21 @@ function canonicalizeUnicodeLanguageId(lang) {
   }
   return tmp19;
 }
-arg5.canonicalizeUnicodeLanguageId = canonicalizeUnicodeLanguageId;
-arg5.CanonicalizeUnicodeLocaleId = function CanonicalizeUnicodeLocaleId(lang) {
+
+export { canonicalizeUnicodeLanguageId };
+export const CanonicalizeUnicodeLocaleId = function CanonicalizeUnicodeLocaleId(lang) {
   lang.lang = canonicalizeUnicodeLanguageId(lang.lang);
   if (lang.extensions) {
     let extensions = lang.extensions;
     for (let num3 = 0; num3 < extensions.length; num3 = num3 + 1) {
       let iter = extensions[num3];
       let type = iter.type;
-      let tmp2 = num3;
       if ("u" === type) {
         let keywords = iter.keywords;
         let obj = {};
         let items = [];
         for (let num5 = 0; num5 < keywords.length; num5 = num5 + 1) {
           let tmp9 = keywords[num5];
-          let tmp10 = num5;
           if (!(tmp9[0] in obj)) {
             obj[tmp9[0]] = 1;
             if (tmp9[1]) {
@@ -206,20 +198,18 @@ arg5.CanonicalizeUnicodeLocaleId = function CanonicalizeUnicodeLocaleId(lang) {
             arr = items.push(items2);
           }
         }
-        let tmp13 = compareKV;
         iter.keywords = items.sort(compareKV);
         if (iter.attributes) {
           let attributes = iter.attributes;
           let _Object = Object;
-          let keys = Object.keys(attributes.reduce((arg0, str) => {
-            arg0[str.toLowerCase()] = 1;
-            return arg0;
+          let keys = Object.keys(attributes.reduce((acc, item) => {
+            acc[item.toLowerCase()] = 1;
+            return acc;
           }, {}));
           iter.attributes = keys.sort();
         }
       } else if ("t" === type) {
         if (iter.lang) {
-          let tmp3 = canonicalizeUnicodeLanguageId;
           iter.lang = canonicalizeUnicodeLanguageId(iter.lang);
         }
         let fields = iter.fields;
@@ -227,7 +217,6 @@ arg5.CanonicalizeUnicodeLocaleId = function CanonicalizeUnicodeLocaleId(lang) {
         let items3 = [];
         for (let num4 = 0; num4 < fields.length; num4 = num4 + 1) {
           let tmp4 = fields[num4];
-          let tmp5 = num4;
           if (!(tmp4[0] in obj)) {
             obj[tmp4[0]] = 1;
             if (tmp4[1]) {
@@ -244,7 +233,6 @@ arg5.CanonicalizeUnicodeLocaleId = function CanonicalizeUnicodeLocaleId(lang) {
             let arr2 = items3.push(items5);
           }
         }
-        let tmp8 = compareKV;
         iter.fields = items3.sort(compareKV);
       } else {
         let str4 = iter.value;

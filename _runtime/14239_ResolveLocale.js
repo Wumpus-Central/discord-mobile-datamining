@@ -1,27 +1,30 @@
 // === Module 14239: ResolveLocale ===
 
 // Module 14239 (ResolveLocale)
-const require = arg1;
+import LookupMatcher from "LookupMatcher" /* 14240 */;
+import _mod14241 from "module_14241" /* 14241 */;
+import BestFitMatcher from "BestFitMatcher" /* 14245 */;
+
+require = arg1;
 const dependencyMap = arg6;
-arg5.ResolveLocale = function ResolveLocale(arg0, arg1, localeMatcher) {
-  let str;
+
+export const ResolveLocale = function ResolveLocale(arg0, arg1, localeMatcher, arg3, arg4, fn) {
   if ("lookup" === localeMatcher.localeMatcher) {
     const _Array2 = Array;
-    let LookupMatcherResult = str(14240).LookupMatcher(Array.from(arg0), arg1, arg5);
-    let tmp5 = str;
-    let tmp7 = str;
+    let LookupMatcherResult = LookupMatcher.LookupMatcher(Array.from(arg0), arg1, fn);
+    let tmp5 = require;
+    let tmp7 = require;
   } else {
     const _Array = Array;
-    tmp5 = str;
-    tmp7 = str;
-    LookupMatcherResult = str(14245).BestFitMatcher(Array.from(arg0), arg1, arg5);
+    tmp5 = require;
+    tmp7 = require;
+    LookupMatcherResult = BestFitMatcher.BestFitMatcher(Array.from(arg0), arg1, fn);
   }
   if (null == LookupMatcherResult) {
-    let obj = { locale: null, extension: "" };
-    obj[0] = arg5();
+    let obj = { locale: fn(), extension: "" };
     LookupMatcherResult = obj;
   }
-  const locale = LookupMatcherResult.locale;
+  locale = LookupMatcherResult.locale;
   obj = { locale: "en", dataLocale: locale };
   if (LookupMatcherResult.extension) {
     let keywords = tmp7(14246).UnicodeExtensionComponents(LookupMatcherResult.extension).keywords;
@@ -32,8 +35,7 @@ arg5.ResolveLocale = function ResolveLocale(arg0, arg1, localeMatcher) {
   let num = 0;
   if (0 < arg3.length) {
     do {
-      str = arg3[num];
-      let tmp13 = num;
+      let str = arg3[num];
       let items1;
       if (null != tmp12) {
         items1 = tmp12[str];
@@ -41,39 +43,34 @@ arg5.ResolveLocale = function ResolveLocale(arg0, arg1, localeMatcher) {
       if (null === items1) {
         items1 = [];
       }
-      let tmp14 = str;
-      let tmp15 = dependencyMap;
+      let tmp14 = require;
       let _Array3 = Array;
       let concat = "keyLocaleData for ".concat;
       let isArray = Array.isArray(items1);
-      let invariantResult = str(14241).invariant(isArray, "keyLocaleData for ".concat(str, " must be an array"));
+      let invariantResult = _mod14241.invariant(isArray, "keyLocaleData for ".concat(str, " must be an array"));
       let first = items1[0];
       let tmp19 = undefined === first;
-      let tmp20 = items1;
       if (!tmp19) {
         tmp19 = typeof first === "string";
       }
-      let invariantResult1 = str(14241).invariant(tmp19, "value must be a string or undefined");
+      let invariantResult1 = _mod14241.invariant(tmp19, "value must be a string or undefined");
       let iter = keywords.find((key) => key.key === str);
       let tmp22;
       let str2 = first;
       if (iter) {
-        let value = iter.value;
+        value = iter.value;
         if ("" !== value) {
           str2 = first;
           if (items1.indexOf(value) > -1) {
-            obj = { key: null, value: null };
-            obj[0] = str;
-            obj[1] = value;
-            tmp22 = obj;
+            let entry = { key: str, value };
+            tmp22 = entry;
             str2 = value;
           }
         } else {
           str2 = first;
           if (items1.indexOf("true") > -1) {
-            obj1 = { key: null, value: "true" };
-            obj1[0] = str;
-            tmp22 = obj1;
+            let entry1 = { key: str, value: "true" };
+            tmp22 = entry1;
             str2 = "true";
           }
         }
@@ -101,7 +98,6 @@ arg5.ResolveLocale = function ResolveLocale(arg0, arg1, localeMatcher) {
       }
       obj[str] = str2;
       num = num + 1;
-      let tmp4 = tmp15;
       tmp5 = tmp14;
     } while (num < arg3.length);
   }

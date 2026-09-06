@@ -1,24 +1,26 @@
 // === Module 10439: AbstractParserWithWordBoundaryChecking ===
 
 // Module 10439 (AbstractParserWithWordBoundaryChecking)
-import AbstractParserWithWordBoundaryChecking from "_classCallCheck" /* 41 */;
+import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
 
 class AbstractParserWithWordBoundaryChecking {
   constructor() {
-    tmp = AbstractParserWithWordBoundaryChecking(this, AbstractParserWithWordBoundaryChecking);
+    tmp = closure_0(this, AbstractParserWithWordBoundaryChecking);
     this.cachedInnerPattern = null;
     this.cachedPattern = null;
     return;
   }
 }
+_classCallCheck = AbstractParserWithWordBoundaryChecking;
+const entry = {
+  key: "innerPatternHasChange",
+  value: function innerPatternHasChange(arg0, arg1) {
+    return this.innerPattern(arg0) !== arg1;
+  }
+};
 const items = [
-  {
-    key: "innerPatternHasChange",
-    value: function innerPatternHasChange(arg0, arg1) {
-      return this.innerPattern(arg0) !== arg1;
-    }
-  },
+  entry,
   {
     key: "patternLeftBoundary",
     value: function patternLeftBoundary() {

@@ -1,22 +1,24 @@
 // === Module 5257: ? ===
 
 // Module 5257
-import getDataView from "getDataView" /* 5213 */;
-import readTag from "readTag" /* 5233 */;
-import importDefaultResult1 from "importDefaultResult1" /* 5234 */;
+import _mod5213 from "module_5213" /* 5213 */;
+import _modDef5218 from "module_5218" /* 5218 */;
+import get0thIfdOffset from "get0thIfdOffset" /* 5233 */;
+import IFD_TYPE_0TH from "IFD_TYPE_0TH" /* 5234 */;
 
 require = arg1;
-const module = arg2;
+importDefault = arg2;
 const dependencyMap = arg6;
 let obj = { K3_III: 78420 };
 obj = { CAMERA_ORIENTATION: 1, ROLL_ANGLE: 3, PITCH_ANGLE: 5 };
-arg5.default = {
-  read(byteLength) {
-    obj = module(5218);
+
+export default {
+  read(byteLength, arg1, arg2, arg3) {
+    obj = _modDef5218;
     const byteOrder = obj.getByteOrder(byteLength, arg1 + arg2 + 8);
     const sum = arg1 + arg2;
-    obj1 = readTag;
-    const ifd = obj1.readIfd(byteLength, importDefaultResult1.IFD_TYPE_PENTAX, sum, sum + 10, byteOrder, arg3, true);
+    let obj1 = get0thIfdOffset;
+    const ifd = obj1.readIfd(byteLength, IFD_TYPE_0TH.IFD_TYPE_PENTAX, sum, sum + 10, byteOrder, arg3, true);
     let LevelInfo = ifd.PentaxModelID;
     if (LevelInfo) {
       LevelInfo = ifd.PentaxModelID.value === obj.K3_III;
@@ -30,8 +32,7 @@ arg5.default = {
       obj = {};
       if (sum1 + 7 <= byteLength.byteLength) {
         const int8 = byteLength.getInt8(sum1 + obj.CAMERA_ORIENTATION);
-        obj = { value: null, description: null };
-        obj[0] = int8;
+        obj = { value: int8, description: null };
         let str6 = "Horizontal (normal)";
         if (0 !== int8) {
           let str = "Rotate 270 CW";
@@ -56,25 +57,21 @@ arg5.default = {
           }
           str6 = str;
         }
-        obj[1] = str6;
+        obj.description = str6;
         obj.CameraOrientation = obj;
         const sum2 = sum1 + tmp17.ROLL_ANGLE;
         const int16 = byteLength.getInt16(sum2, byteOrder === tmp3(5218).LITTLE_ENDIAN);
-        obj1 = { value: null, description: null };
-        obj1[0] = int16;
-        obj1[1] = "" + -0.5 * int16;
+        obj1 = { value: int16, description: "" + -0.5 * int16 };
         obj.RollAngle = obj1;
         const sum3 = sum1 + tmp17.PITCH_ANGLE;
         const int161 = byteLength.getInt16(sum3, byteOrder === tmp3(5218).LITTLE_ENDIAN);
-        const obj2 = { value: null, description: null };
-        obj2[0] = int161;
-        obj2[1] = "" + -0.5 * int161;
+        const obj2 = { value: int161, description: "" + -0.5 * int161 };
         obj.PitchAngle = obj2;
       }
-      const tmp7Result = getDataView;
+      const tmp7Result = _mod5213;
       delete tmp[tmp2];
-      tmp10 = getDataView.objectAssign({}, ifd, obj);
-      const objectAssignResult = getDataView.objectAssign({}, ifd, obj);
+      tmp10 = _mod5213.objectAssign({}, ifd, obj);
+      const objectAssignResult = _mod5213.objectAssign({}, ifd, obj);
     }
     return tmp10;
   },

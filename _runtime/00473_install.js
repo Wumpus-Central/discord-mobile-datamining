@@ -1,9 +1,8 @@
 // === Module 473: install ===
 
 // Module 473 (install)
-import noopAll from "noop" /* 19 */;
+import noop from "module_19" /* 19 */;
 
-noopAll;
 
 export default {
   install() {

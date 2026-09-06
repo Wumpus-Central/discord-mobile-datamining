@@ -1,38 +1,34 @@
 // === Module 3855: differenceInYears ===
 
 // Module 3855 (differenceInYears)
-import _typeof from "_typeof" /* 3650 */;
+import _typeof from "module_3650" /* 3650 */;
 import differenceInCalendarYears from "differenceInCalendarYears" /* 3840 */;
 import compareAsc from "compareAsc" /* 3826 */;
 import requiredArgs from "requiredArgs" /* 3651 */;
 
 if (!_typeof) {
-  let obj = { default: null };
-  obj[0] = _typeof;
+  let obj = { default: _typeof };
   let tmp3 = obj;
 } else {
   tmp3 = _typeof;
 }
 _typeof = tmp3;
 if (!differenceInCalendarYears) {
-  obj = { default: null };
-  obj[0] = differenceInCalendarYears;
+  obj = { default: differenceInCalendarYears };
   let tmp5 = obj;
 } else {
   tmp5 = differenceInCalendarYears;
 }
 differenceInCalendarYears = tmp5;
 if (!compareAsc) {
-  obj = { default: null };
-  obj[0] = compareAsc;
+  obj = { default: compareAsc };
   let tmp7 = obj;
 } else {
   tmp7 = compareAsc;
 }
 compareAsc = tmp7;
 if (!requiredArgs) {
-  const obj1 = { default: null };
-  obj1[0] = requiredArgs;
+  const obj1 = { default: requiredArgs };
   let tmp9 = obj1;
 } else {
   tmp9 = requiredArgs;

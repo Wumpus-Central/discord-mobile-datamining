@@ -5,8 +5,8 @@ import feedbackAsyncIntegration from "feedbackAsyncIntegration" /* 889 */;
 
 require = arg1;
 const dependencyMap = arg6;
-arg5.graphqlIntegration = function graphqlIntegration(endpoints) {
-  let obj = feedbackAsyncIntegration;
-  obj = { endpoints: endpoints.endpoints };
+
+export const graphqlIntegration = function graphqlIntegration(endpoints) {
+  const obj = { endpoints: endpoints.endpoints };
   return obj.graphqlClientIntegration(obj);
 };

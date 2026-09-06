@@ -1,8 +1,8 @@
 // === Module 1487: PrivateValueStore ===
 
 // Module 1487 (PrivateValueStore)
-import _createClassDefault from "_createClass" /* 42 */;
-import closure_0 from "_classCallCheck" /* 41 */;
+import _createClass from "_createClass" /* 42 */;
+import _classCallCheck from "_classCallCheck" /* 41 */;
 
 class PrivateValueStore {
   constructor() {
@@ -11,4 +11,4 @@ class PrivateValueStore {
   }
 }
 
-export const PrivateValueStore = _createClassDefault(PrivateValueStore);
+export const PrivateValueStore = _createClass(PrivateValueStore);

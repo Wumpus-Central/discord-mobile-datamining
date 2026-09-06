@@ -1,7 +1,9 @@
 // === Module 786: _shouldDropEvent ===
 
 // Module 786 (_shouldDropEvent)
-import createStackParser from "createStackParser" /* 698 */;
+import _mod688 from "module_688" /* 688 */;
+import consoleSandbox from "consoleSandbox" /* 689 */;
+import _mod698 from "module_698" /* 698 */;
 import setupIntegration from "setupIntegration" /* 752 */;
 
 function _shouldDropEvent(message, message2) {
@@ -16,9 +18,8 @@ function _shouldDropEvent(message, message2) {
           if (message === message2) {
             flag = false;
             if (_isSameFingerprint(message, message2)) {
-              const framesFromEvent = createStackParser.getFramesFromEvent(message);
-              const obj = createStackParser;
-              const framesFromEvent1 = createStackParser.getFramesFromEvent(message2);
+              const framesFromEvent = _mod698.getFramesFromEvent(message);
+              const framesFromEvent1 = _mod698.getFramesFromEvent(message2);
               if (framesFromEvent) {
                 if (!framesFromEvent) {
                   if (framesFromEvent) {
@@ -66,7 +67,6 @@ function _shouldDropEvent(message, message2) {
               if (flag2) {
                 flag = true;
               }
-              const obj2 = createStackParser;
             }
           }
         } else {
@@ -102,9 +102,8 @@ function _shouldDropEvent(message, message2) {
             if (first.value === iter.value) {
               flag3 = false;
               if (_isSameFingerprint(message, message2)) {
-                const framesFromEvent2 = createStackParser.getFramesFromEvent(message);
-                const obj3 = createStackParser;
-                const framesFromEvent3 = createStackParser.getFramesFromEvent(message2);
+                const framesFromEvent2 = _mod698.getFramesFromEvent(message);
+                const framesFromEvent3 = _mod698.getFramesFromEvent(message2);
                 if (framesFromEvent2) {
                   if (!framesFromEvent2) {
                     if (framesFromEvent2) {
@@ -152,7 +151,6 @@ function _shouldDropEvent(message, message2) {
                 if (flag4) {
                   flag3 = true;
                 }
-                const obj4 = createStackParser;
               }
             }
           }
@@ -192,9 +190,9 @@ export const dedupeIntegration = setupIntegration.defineIntegration(() => ({
       return type;
     } else {
       try {
-        if (closure_1_2(type, closure_0)) {
-          if (closure_1_0(closure_1_1[0]).DEBUG_BUILD) {
-            const debug = closure_1_0(closure_1_1[1]).debug;
+        if (_shouldDropEvent(type, closure_0)) {
+          if (_mod688.DEBUG_BUILD) {
+            const debug = consoleSandbox.debug;
             debug.warn("Event dropped due to being a duplicate of previously captured event.");
           }
           return null;

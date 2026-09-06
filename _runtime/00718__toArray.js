@@ -7,6 +7,6 @@ import _nonIterableRest from "_nonIterableRest" /* 37 */;
 import _iterableToArray from "_iterableToArray" /* 719 */;
 
 
-export default function _toArray(arg0) {
-  return _arrayWithHoles(arg0) || _iterableToArray(arg0) || _unsupportedIterableToArray(arg0) || _nonIterableRest();
+export default function _toArray(current) {
+  return _arrayWithHoles(current) || _iterableToArray(current) || _unsupportedIterableToArray(current) || _nonIterableRest();
 };

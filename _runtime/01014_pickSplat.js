@@ -1,9 +1,9 @@
 // === Module 1014: pickSplat ===
 
 // Module 1014 (pickSplat)
-import registerSpanErrorInstrumentation from "registerSpanErrorInstrumentation" /* 682 */;
-import __SENTRY_DEBUG__ from "__SENTRY_DEBUG__" /* 1007 */;
-import closure_3 from "_slicedToArray" /* 32 */;
+import _mod682 from "module_682" /* 682 */;
+import _mod1007 from "module_1007" /* 1007 */;
+import _slicedToArray from "module_32" /* 32 */;
 
 function pickSplat(params) {
   return params.params["*"] || "";
@@ -19,7 +19,7 @@ function pathEndsWithWildcard(str) {
   return str.endsWith("*");
 }
 function pathIsWildcardAndHasChildren(str, route) {
-  let flag = str.endsWith("*");
+  flag = str.endsWith("*");
   if (flag) {
     const children = route.route.children;
     let length;
@@ -49,7 +49,7 @@ function sendIndexPath(arg0, pathname, basename) {
   let arr = arg0;
   if (!arg0) {
     let tmp3 = pathname;
-    if (c4) {
+    if (flag) {
       let tmp5 = pathname;
       if (basename) {
         tmp5 = pathname;
@@ -94,10 +94,10 @@ function sendIndexPath(arg0, pathname, basename) {
 }
 function getNumberOfUrlSegments(str) {
   const parts = str.split(/\\?\//);
-  return parts.filter((arg0) => {
-    let tmp = arg0.length > 0;
+  return parts.filter((item) => {
+    let tmp = item.length > 0;
     if (tmp) {
-      tmp = "," !== arg0;
+      tmp = "," !== item;
     }
     return tmp;
   }).length;
@@ -134,15 +134,14 @@ function prefixWithSlash(combined) {
   }
   return combined;
 }
-function rebuildRoutePathFromAllRoutes(arg0, _location) {
-  closure_0 = arg0;
-  closure_1 = _location;
-  const arr = callback(arg0, _location);
+function rebuildRoutePathFromAllRoutes(routes2, _location) {
+  closure_0 = routes2;
+  const pathname = _location;
+  const arr = global(routes2, _location);
   if (arr) {
     if (0 !== arr.length) {
       for (const item10012 of arr) {
         let tmp3 = (function _loop(item10012) {
-          closure_0 = item10012;
           if (item10012.route.path) {
             if ("*" !== item10012.route.path) {
               let str2 = arr;
@@ -179,9 +178,8 @@ function rebuildRoutePathFromAllRoutes(arg0, _location) {
                 if ("/" === arr2[arr2.length - 1]) {
                   substr = arr2.slice(0, -1);
                 }
-                let obj = { v: null };
-                obj[0] = substr;
-                obj1 = obj;
+                let obj = { v: substr };
+                let obj1 = obj;
               } else {
                 if (!str2) {
                   str2 = "";
@@ -190,9 +188,8 @@ function rebuildRoutePathFromAllRoutes(arg0, _location) {
                 if ("/" === str2[str2.length - 1]) {
                   substr1 = str2.slice(0, -1);
                 }
-                obj = { pathname: null };
-                obj[0] = arr2;
-                const tmp11 = closure_1_15(closure_0.filter((arg0) => arg0 !== item10012.route), obj);
+                obj = { pathname: arr2 };
+                const tmp11 = rebuildRoutePathFromAllRoutes(item10012.filter((item) => item !== item10012.route), obj);
                 let combined = tmp11;
                 if ("/" !== tmp11[0]) {
                   const _HermesInternal2 = HermesInternal;
@@ -203,16 +200,13 @@ function rebuildRoutePathFromAllRoutes(arg0, _location) {
                 if ("/" === sum[sum.length - 1]) {
                   substr2 = sum.slice(0, -1);
                 }
-                obj1 = { v: null };
-                obj1[0] = substr2;
+                obj1 = { v: substr2 };
               }
               return obj1;
             }
           }
         })(item10012);
-        let tmp4 = tmp3;
         if (tmp3) {
-          let tmp5 = obj;
           obj.return();
           return tmp3.v;
         }
@@ -222,19 +216,15 @@ function rebuildRoutePathFromAllRoutes(arg0, _location) {
   }
   return "";
 }
-function locationIsInsideDescendantRoute(_location, arg1) {
-  const tmp = callback(arg1, _location);
+function locationIsInsideDescendantRoute(_location, routes2) {
+  const tmp = global(routes2, _location);
   if (tmp) {
     for (const item10009 of tmp) {
-      let tmp5 = routeIsDescendant;
       let tmp4 = item10009;
       if (routeIsDescendant(item10009.route)) {
-        let tmp6 = pickSplat;
-        let tmp7 = item10009;
         if (pickSplat(tmp4)) {
-          let tmp8 = obj;
           obj.return();
-          let flag = true;
+          flag = true;
           return true;
         }
       }
@@ -244,7 +234,7 @@ function locationIsInsideDescendantRoute(_location, arg1) {
   return false;
 }
 function getFallbackTransactionName(pathname, basename) {
-  if (c4) {
+  if (flag) {
     let tmp2 = str;
     if (basename) {
       tmp2 = str;
@@ -277,13 +267,13 @@ function getFallbackTransactionName(pathname, basename) {
   }
   return str2;
 }
-function getNormalizedName(arg0, pathname, items, basename) {
+function getNormalizedName(routes, pathname, items, basename) {
   let str = basename;
   if (basename === undefined) {
     str = "";
   }
-  if (arg0) {
-    if (0 !== arg0.length) {
+  if (routes) {
+    if (0 !== routes.length) {
       if (items) {
         let str4 = "";
         const iter = items[Symbol.iterator]();
@@ -293,74 +283,47 @@ function getNormalizedName(arg0, pathname, items, basename) {
           let route = nextResult.route;
           let tmp8 = route;
           if (route) {
-            let tmp9 = route;
             if (tmp8.index) {
-              let tmp36 = sendIndexPath;
-              let tmp38 = iter;
               let tmp37 = sendIndexPath(``, nextResult.pathname, str);
               iter.return();
               return tmp37;
             } else {
-              let tmp10 = route;
               let path = tmp8.path;
               let tmp11 = path;
               if (path) {
-                let tmp13 = path;
-                let tmp14 = nextResult;
                 let tmp12 = pathIsWildcardAndHasChildren;
                 if (!pathIsWildcardAndHasChildren(tmp11, tmp7)) {
-                  let tmp15 = path;
                   if ("/" !== tmp11[0]) {
-                    let tmp16 = str4;
                     if ("/" !== ``[``.length - 1]) {
-                      let tmp17 = path;
                       let _HermesInternal = HermesInternal;
                       let combined = "/" + tmp11;
                     }
-                    let tmp20 = trimSlash;
-                    let tmp21 = str4;
                     let tmp19 = combined;
-                    let tmp23 = prefixWithSlash;
                     let tmp22 = trimSlash(str4);
                     str4 = tmp22 + prefixWithSlash(combined);
-                    let tmp25 = nextResult;
                     let tmp24 = trimSlash(pathname.pathname);
                     if (tmp24 === trimSlash(str + tmp7.pathname)) {
-                      let tmp42 = getNumberOfUrlSegments;
-                      let tmp43 = str4;
-                      let tmp45 = nextResult;
                       let tmp44 = getNumberOfUrlSegments(str4);
                       if (tmp44 !== getNumberOfUrlSegments(tmp7.pathname)) {
-                        let tmp26 = pathEndsWithWildcard;
-                        let tmp27 = str4;
                         if (!pathEndsWithWildcard(str4)) {
-                          let tmp28 = c4;
                           let str6 = "";
-                          if (!c4) {
+                          if (!flag) {
                             str6 = str;
                           }
-                          let tmp29 = combined;
                           items = [str6 + tmp19, ];
                           let str7 = "route";
                           items[1] = "route";
                         }
-                        let tmp35 = iter;
                         iter.return();
                         return items;
                       }
-                      let tmp30 = str4;
-                      let tmp31 = nextResult;
                       if (tmp12(str4, tmp7)) {
-                        let tmp32 = str4;
-                        let num3 = -1;
                         str4 = str4.slice(0, -1);
                       }
-                      let tmp33 = c4;
                       let str8 = "";
-                      if (!c4) {
+                      if (!flag) {
                         str8 = str;
                       }
-                      let tmp34 = str4;
                       let items1 = [str8 + str4, ];
                       let str9 = "route";
                       items1[1] = "route";
@@ -382,7 +345,7 @@ function getNormalizedName(arg0, pathname, items, basename) {
       }
     }
   }
-  if (c4) {
+  if (flag) {
     pathname = stripBasenameFromPathname(pathname.pathname, str);
   } else {
     pathname = pathname.pathname;
@@ -391,21 +354,20 @@ function getNormalizedName(arg0, pathname, items, basename) {
   return items4;
 }
 Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
-let c4 = false;
 let closure_5 = [];
 
-export const clearNavigationContext = function clearNavigationContext(c1) {
+export const clearNavigationContext = function clearNavigationContext(arg0) {
   let arr = closure_5;
   let token;
   if (closure_5[closure_5.length - 1] != null) {
     token = tmp.token;
   }
-  if (token === c1) {
+  if (token === arg0) {
     arr = arr.pop();
   }
 };
 export const getActiveRootSpan = function getActiveRootSpan() {
-  const activeSpan = registerSpanErrorInstrumentation.getActiveSpan();
+  const activeSpan = _mod682.getActiveSpan();
   let rootSpan;
   if (activeSpan) {
     let tmpResult = tmp(682);
@@ -419,7 +381,6 @@ export const getActiveRootSpan = function getActiveRootSpan() {
     }
     return tmp5;
   }
-  const obj = registerSpanErrorInstrumentation;
 };
 export const getNavigationContext = function getNavigationContext() {
   let tmp2 = null;
@@ -438,23 +399,23 @@ export function initializeRouterUtils(arg0, flag) {
   if (flag === undefined) {
     flag = false;
   }
-  closure_2 = arg0;
+  global = arg0;
 }
 export { locationIsInsideDescendantRoute };
 export { pathEndsWithWildcard };
 export { pathIsWildcardAndHasChildren };
 export { prefixWithSlash };
 export { rebuildRoutePathFromAllRoutes };
-export const resolveRouteNameAndSource = function resolveRouteNameAndSource(_location, arg1, arg2, items, basename) {
+export const resolveRouteNameAndSource = function resolveRouteNameAndSource(_location, routes, routes2, items, basename) {
   let str = basename;
   if (basename === undefined) {
     str = "";
   }
-  const tmp = locationIsInsideDescendantRoute(_location, arg2);
+  const tmp = locationIsInsideDescendantRoute(_location, routes2);
   str2 = "url";
   let pathname;
   if (tmp) {
-    const tmp4 = rebuildRoutePathFromAllRoutes(arg2, _location);
+    const tmp4 = rebuildRoutePathFromAllRoutes(routes2, _location);
     let combined = tmp4;
     if ("/" !== tmp4[0]) {
       const _HermesInternal = HermesInternal;
@@ -464,8 +425,8 @@ export const resolveRouteNameAndSource = function resolveRouteNameAndSource(_loc
     pathname = combined;
   }
   if (!tmp) {
-    [tmp2, str2] = callback2(getNormalizedName(arg1, _location, items, str), 2);
-    const tmp13 = callback2(getNormalizedName(arg1, _location, items, str), 2);
+    [tmp2, str2] = _slicedToArray(getNormalizedName(routes, _location, items, str), 2);
+    const tmp13 = _slicedToArray(getNormalizedName(routes, _location, items, str), 2);
   }
   if (!pathname) {
     pathname = _location.pathname;
@@ -474,10 +435,10 @@ export const resolveRouteNameAndSource = function resolveRouteNameAndSource(_loc
   return items;
 };
 export { routeIsDescendant };
-export const setNavigationContext = function setNavigationContext(closure_1_1, closure_1_2) {
+export const setNavigationContext = function setNavigationContext(path, activeRootSpan) {
   let arr = closure_5;
   if (closure_5.length >= 10) {
-    if (__SENTRY_DEBUG__.DEBUG_BUILD) {
+    if (_mod1007.DEBUG_BUILD) {
       const debug = tmp(682).debug;
       debug.warn("[React Router] Navigation context stack overflow - removing oldest context");
     }
@@ -485,7 +446,7 @@ export const setNavigationContext = function setNavigationContext(closure_1_1, c
     tmp = require;
   }
   let obj = {};
-  obj = { token: obj, targetPath: closure_1_1, span: closure_1_2 };
+  obj = { token: obj, targetPath: path, span: activeRootSpan };
   arr = arr.push(obj);
   return obj;
 };

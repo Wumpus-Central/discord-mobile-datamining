@@ -1,19 +1,17 @@
 // === Module 6771: GestureHandlerRootView ===
 
 // Module 6771 (GestureHandlerRootView)
-import noopAll from "noop" /* 19 */;
-import noopDefault from "noop" /* 6674 */;
-import __INTERNAL_VIEW_CONFIGDefault from "__INTERNAL_VIEW_CONFIG" /* 6772 */;
-import { StyleSheet } from "get ActivityIndicator" /* 17 */;
-import { jsx } from "jsxProd" /* 21 */;
+import _modDef6674 from "module_6674" /* 6674 */;
+import _modDef6772 from "module_6772" /* 6772 */;
+import noop from "module_19" /* 19 */;
 
-noopAll;
-const styles = StyleSheet.create({ container: { flex: 1 } });
+const StyleSheet = fn(17).StyleSheet;
+const jsx = fn(21).jsx;
+let container = StyleSheet.create({ container: { flex: 1 } });
 
 export default function GestureHandlerRootView(style) {
-  let container = style.style;
-  const merged = Object.assign(style, Object.create(null));
-  const tmp3 = noopDefault;
+  container = style.style;
+  const merged = Object.assign(style, Object.assign({ style: 0 }));
   if (container == null) {
     container = container.container;
   }
@@ -21,6 +19,6 @@ export default function GestureHandlerRootView(style) {
   obj = { style: container };
   const merged1 = Object.assign(merged);
   obj.moduleId = globalThis._RNGH_MODULE_ID;
-  obj[1] = jsx(__INTERNAL_VIEW_CONFIGDefault, { style: container });
+  obj.children = jsx(_modDef6772, { style: container });
   return <tmp3 style={container} />;
 };

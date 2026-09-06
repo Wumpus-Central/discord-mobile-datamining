@@ -1,21 +1,21 @@
 // === Module 10344: chunk ===
 
 // Module 10344 (chunk)
-import toInteger from "toInteger" /* 4594 */;
-import isIterateeCall from "isIterateeCall" /* 8386 */;
+import _mod4594 from "module_4594" /* 4594 */;
+import _mod8386 from "module_8386" /* 8386 */;
 import baseSlice from "baseSlice" /* 10345 */;
 
 
 export default function chunk(arg0, arg1, arg2) {
   let sum1;
   if (arg2) {
-    let tmp = isIterateeCall(arg0, arg1, arg2);
+    let tmp = _mod8386(arg0, arg1, arg2);
   } else {
     tmp = undefined === arg1;
   }
   let num = 1;
   if (!tmp) {
-    num = max(toInteger(arg1), 0);
+    num = max(_mod4594(arg1), 0);
   }
   let num3 = 0;
   if (null != arg0) {
@@ -29,8 +29,6 @@ export default function chunk(arg0, arg1, arg2) {
       let num5 = 0;
       if (0 < num3) {
         do {
-          let tmp11 = require;
-          let tmp12 = dependencyMap;
           let sum = num4 + 1;
           sum1 = num5 + num;
           ArrayResult[num4] = baseSlice(arg0, num5, sum1);

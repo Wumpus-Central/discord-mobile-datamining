@@ -1,10 +1,13 @@
 // === Module 1271: version ===
 
 // Module 1271 (version)
-const module = arg2;
+import validateDefault from "validate" /* 1260 */;
+
+importDefault = arg2;
 const dependencyMap = arg6;
-arg5.default = function version(arr) {
-  if (module(1260)(arr)) {
+
+export default function version(arr) {
+  if (validateDefault(arr)) {
     const _parseInt = parseInt;
     return parseInt(arr.slice(14, 15), 16);
   } else {

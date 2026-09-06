@@ -1,78 +1,72 @@
 // === Module 5229: ? ===
 
 // Module 5229
-const module = arg2;
+import _modDef5230 from "module_5230" /* 5230 */;
+
+importDefault = arg2;
 const dependencyMap = arg6;
-arg5.default = {
+
+export default {
   read(dataView, sum) {
-    let obj = _module(5230);
+    let obj = _modDef5230;
     const shortAt = obj.getShortAt(dataView, sum);
     let tmp4;
     if (8 <= shortAt) {
       let tmpResult = tmp(5230);
       const byteAt = tmpResult.getByteAt(dataView, sum + 7);
-      obj = { value: null, description: null };
-      obj[0] = byteAt;
-      obj[1] = "" + byteAt;
+      obj = { value: byteAt, description: "" + byteAt };
       tmp4 = obj;
     }
     let tmp6;
     if (3 <= shortAt) {
       tmpResult = tmp(5230);
       const byteAt1 = tmpResult.getByteAt(dataView, sum + 2);
-      obj = { value: null, description: null };
-      obj[0] = byteAt1;
-      obj[1] = "" + byteAt1;
+      obj = { value: byteAt1, description: "" + byteAt1 };
       tmp6 = obj;
     }
-    obj1 = { "Bits Per Sample": tmp6, "Image Height": null, "Image Width": null, "Color Components": null, Subsampling: null };
+    const obj1 = { "Bits Per Sample": tmp6, "Image Height": null, "Image Width": null, "Color Components": null, Subsampling: null };
     let tmp8;
     if (5 <= shortAt) {
       const shortAt1 = tmp(5230).getShortAt(dataView, sum + 3);
-      const obj2 = { value: null, description: null };
-      obj2[0] = shortAt1;
+      const obj2 = { value: shortAt1, description: null };
       const _HermesInternal = HermesInternal;
-      obj2[1] = "" + shortAt1 + "px";
+      obj2.description = "" + shortAt1 + "px";
       tmp8 = obj2;
       const tmpResult1 = tmp(5230);
     }
-    obj1[1] = tmp8;
+    obj1["Image Height"] = tmp8;
     let tmp11;
     if (7 <= shortAt) {
       const shortAt2 = tmp(5230).getShortAt(dataView, sum + 5);
-      const obj3 = { value: null, description: null };
-      obj3[0] = shortAt2;
+      const obj3 = { value: shortAt2, description: null };
       const _HermesInternal2 = HermesInternal;
-      obj3[1] = "" + shortAt2 + "px";
+      obj3.description = "" + shortAt2 + "px";
       tmp11 = obj3;
       const tmpResult2 = tmp(5230);
     }
-    obj1[2] = tmp11;
-    obj1[3] = tmp4;
+    obj1["Image Width"] = tmp11;
+    obj1["Color Components"] = tmp4;
     let tmp14 = tmp4;
     if (tmp4) {
-      const value = tmp4.value;
+      value = tmp4.value;
       let tmp15;
       if (8 + 3 * value <= shortAt) {
         const items = [];
         for (let num6 = 0; num6 < value; num6 = num6 + 1) {
           sum = sum + 8 + 3 * num6;
-          let tmp17 = _module;
-          let tmp18 = dependencyMap;
-          let obj11 = _module(5230);
+          let obj11 = _modDef5230;
           let items1 = [obj11.getByteAt(dataView, sum), , ];
-          let obj12 = _module(5230);
+          let obj12 = _modDef5230;
           items1[1] = obj12.getByteAt(dataView, sum + 1);
-          let obj13 = _module(5230);
+          let obj13 = _modDef5230;
           items1[2] = obj13.getByteAt(dataView, sum + 2);
           let arr = items.push(items1);
         }
-        const obj4 = { value: null, description: null };
-        obj4[0] = items;
+        const obj4 = { value: items, description: null };
         let str6 = "";
         if (items.length > 1) {
-          _module = { 1: "Y", 2: "Cb", 3: "Cr", 4: "I", 5: "Q" };
-          const mapped = items.map((arg0) => table[arg0[0]]);
+          closure_0 = { 1: "Y", 2: "Cb", 3: "Cr", 4: "I", 5: "Q" };
+          const mapped = items.map((item) => closure_0[item[0]]);
           let str7 = "";
           const joined = mapped.join("");
           if (0 !== items.length) {
@@ -87,12 +81,12 @@ arg5.default = {
           }
           str6 = joined + str7;
         }
-        obj4[1] = str6;
+        obj4.description = str6;
         tmp15 = obj4;
       }
       tmp14 = tmp15;
     }
-    obj1[4] = tmp14;
+    obj1.Subsampling = tmp14;
     return obj1;
   }
 };

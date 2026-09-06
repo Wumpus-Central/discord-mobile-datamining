@@ -1,16 +1,16 @@
 // === Module 5639: StyleSheet ===
 
 // Module 5639 (StyleSheet)
-import closure_4 from "_objectWithoutProperties" /* 109 */;
-import closure_5 from "_slicedToArray" /* 32 */;
-import closure_6 from "noop" /* 19 */;
-import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
-import { jsx } from "jsxProd" /* 21 */;
+import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
+import _slicedToArray from "module_32" /* 32 */;
+import noop from "module_19" /* 19 */;
 
-const require = arg1;
+const require = fn;
 let closure_3 = ["backgroundColor"];
-({ Animated: error, Platform, StyleSheet } = get_ActivityIndicator);
-const styles = StyleSheet.create({ container: { alignSelf: "flex-end", textAlign: "center", paddingHorizontal: 4, overflow: "hidden" } });
+get_ActivityIndicator = fn(17);
+({ Animated: closure_7, Platform, StyleSheet } = get_ActivityIndicator);
+const jsx = fn(21).jsx;
+const container = StyleSheet.create({ container: { alignSelf: "flex-end", textAlign: "center", paddingHorizontal: 4, overflow: "hidden" } });
 
 export const Badge = function Badge(visible) {
   let flag = visible.visible;
@@ -22,43 +22,39 @@ export const Badge = function Badge(visible) {
   if (num === undefined) {
     num = 18;
   }
-  const merged = Object.assign(visible, Object.create(null));
-  let first;
-  let first1;
-  closure_3 = undefined;
-  first = callback2(React.useState(() => {
+  const merged = Object.assign(visible, Object.assign({ children: 0, style: 0, visible: 0, size: 0 }));
+  const opacity = _slicedToArray(noop.useState(() => {
     let num = 0;
     if (flag) {
       num = 1;
     }
-    const value = new closure_1_7.Value(num);
+    value = new RN.Value(num);
     return value;
   }), 1)[0];
-  const tmp2 = callback2(React.useState(flag), 2);
-  first1 = tmp2[0];
+  const tmp2 = _slicedToArray(noop.useState(flag), 2);
+  const first1 = tmp2[0];
   closure_3 = tmp4;
-  obj1 = flag(first1[5]);
+  let obj1 = flag(first1[5]);
   const theme = obj1.useTheme();
-  const items = [first, first1, flag];
+  const items = [opacity, first1, flag];
   ({ colors, fonts } = theme);
-  const effect = React.useEffect(() => {
+  const effect = noop.useEffect(() => {
     if (first1) {
       let num = 0;
       if (flag) {
         num = 1;
       }
-      const obj = { toValue: null, duration: 150, useNativeDriver: true };
-      obj[0] = num;
-      closure_1_7.timing(first, obj).start((finished) => {
+      const obj = { toValue: num, duration: 150, useNativeDriver: true };
+      RN.timing(first, obj).start((finished) => {
         finished = finished.finished;
         if (finished) {
-          finished = !closure_0;
+          finished = !flag;
         }
         if (finished) {
-          callback(false);
+          closure_1_3(false);
         }
       });
-      return () => closure_1.stopAnimation();
+      return () => opacity.stopAnimation();
     }
   }, items);
   if (!first1) {
@@ -73,8 +69,7 @@ export const Badge = function Badge(visible) {
   if (undefined === notification) {
     notification = colors.notification;
   }
-  const tmp10 = callback(tmp9, closure_3);
-  const tmp5 = first1;
+  const tmp10 = _objectWithoutProperties(tmp9, closure_3);
   let str = "white";
   if (obj3.isLight()) {
     str = "black";
@@ -84,19 +79,19 @@ export const Badge = function Badge(visible) {
   obj = { transform: null, color: null, lineHeight: null, height: null, minWidth: null, opacity: null, backgroundColor: null, fontSize: null, borderRadius: null, borderCurve: "continuous" };
   obj1 = { scale: null };
   const rounded = Math.floor(3 * num / 4);
-  obj1[0] = first.interpolate({ inputRange: [0, 1], outputRange: [0.5, 1] });
+  obj1.scale = opacity.interpolate({ inputRange: [0, 1], outputRange: [0.5, 1] });
   const items1 = [obj1];
-  obj[0] = items1;
-  obj[1] = str;
-  obj[2] = num - 1;
-  obj[3] = num;
-  obj[4] = num;
-  obj[5] = first;
-  obj[6] = notification;
-  obj[7] = rounded;
-  obj[8] = result;
+  obj.transform = items1;
+  obj.color = str;
+  obj.lineHeight = num - 1;
+  obj.height = num;
+  obj.minWidth = num;
+  obj.opacity = opacity;
+  obj.backgroundColor = notification;
+  obj.fontSize = rounded;
+  obj.borderRadius = result;
   const items2 = [obj, fonts.regular, container.container, tmp10];
-  obj[1] = items2;
+  obj.style = items2;
   const merged1 = Object.assign(merged);
   obj.children = children;
   return <RN.Text transform={null} color={null} lineHeight={null} height={null} minWidth={null} opacity={null} backgroundColor={null} fontSize={null} borderRadius={null} borderCurve="continuous" />;
