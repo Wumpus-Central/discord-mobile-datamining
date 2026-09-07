@@ -1,34 +1,60 @@
 // === Module 12858: ? ===
 
 // Module 12858
-import _mod12803 from "module_12803" /* 12803 */;
-import _mod12841 from "module_12841" /* 12841 */;
-import _mod12844 from "module_12844" /* 12844 */;
+import _possibleConstructorReturn from "_possibleConstructorReturn" /* 93 */;
+import _createClass from "_createClass" /* 42 */;
+import _classCallCheck from "_classCallCheck" /* 41 */;
+import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
+import _inherits from "_inherits" /* 98 */;
+import _wrapNativeSuper from "_wrapNativeSuper" /* 158 */;
 
-require = arg1;
-const dependencyMap = arg6;
+function _isNativeReflectConstruct() {
+  try {
+    const _Boolean = Boolean;
+    const call = valueOf.call;
+    const _Reflect = Reflect;
+    const _Boolean2 = Boolean;
+    if (typeof call === "unknown") {
+      let callResult = valueOf();
+    } else {
+      callResult = call(constructResult);
+    }
+    closure_0 = !callResult;
+    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
+      return closure_0;
+    };
+    return _isNativeReflectConstruct();
+  } catch (err) {
+  }
+}
+_possibleConstructorReturn;
+class SentryError {
+  constructor(arg0) {
+    str = require;
+    if (require === undefined) {
+      str = "warn";
+    }
+    self = this;
+    tmp = closure_0(this, SentryError);
+    items = [];
+    items[0] = global;
+    tmp2 = c2;
+    obj = c2(SentryError);
+    tmp3 = closure_1;
+    if (closure_3()) {
+      tmp5 = globalThis;
+      _Reflect = Reflect;
+      constructResult = Reflect.construct(obj, items, tmp2(self).constructor);
+    } else {
+      constructResult = obj.apply(self, items);
+    }
+    tmp3Result = tmp3(self, constructResult);
+    tmp3Result.message = global;
+    tmp3Result.logLevel = str;
+    return tmp3Result;
+  }
+}
+_classCallCheck = SentryError;
+_inherits(SentryError, _wrapNativeSuper(Error));
 
-export const createCheckInEnvelope = function createCheckInEnvelope(arg0, contexts, sdk, arg3, url) {
-  let obj = { sent_at: new Date().toISOString() };
-  if (sdk) {
-    sdk = sdk.sdk;
-  }
-  if (sdk) {
-    obj = { name: sdk.sdk.name, version: sdk.sdk.version };
-    obj.sdk = obj;
-  }
-  let tmp = arg3;
-  if (arg3) {
-    tmp = url;
-  }
-  if (tmp) {
-    obj.dsn = _mod12844.dsnToString(url);
-  }
-  if (contexts) {
-    obj.trace = _mod12803.dropUndefinedKeys(contexts);
-  }
-  const items = [{ type: "check_in" }, arg0];
-  const date = new Date();
-  const items1 = [items];
-  return _mod12841.createEnvelope(obj, items1);
-};
+export const SentryError = _createClass(SentryError);

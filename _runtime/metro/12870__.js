@@ -1,47 +1,13 @@
 // === Module 12870: ? ===
 
 // Module 12870
-import _mod12797 from "module_12797" /* 12797 */;
-import _mod12811 from "module_12811" /* 12811 */;
-import _mod12824 from "module_12824" /* 12824 */;
 
-require = arg1;
-const dependencyMap = arg6;
-
-export const addBreadcrumb = function addBreadcrumb(arg0, arg1) {
-  closure_0 = arg1;
-  let consoleSandboxResult = _mod12824;
-  const client = consoleSandboxResult.getClient();
-  const isolationScope = _mod12824.getIsolationScope();
-  if (client) {
-    const options = client.getOptions();
-    let beforeBreadcrumb = options.beforeBreadcrumb;
-    let tmp5 = null;
-    if (undefined !== beforeBreadcrumb) {
-      tmp5 = beforeBreadcrumb;
-    }
-    beforeBreadcrumb = tmp5;
-    const maxBreadcrumbs = options.maxBreadcrumbs;
-    let num = 100;
-    if (undefined !== maxBreadcrumbs) {
-      num = maxBreadcrumbs;
-    }
-    if (num > 0) {
-      consoleSandboxResult = { timestamp: null };
-      let tmpResult = _mod12811;
-      consoleSandboxResult.timestamp = tmpResult.dateTimestampInSeconds();
-      const merged = Object.assign(arg0);
-      closure_2 = consoleSandboxResult;
-      if (tmp5) {
-        tmpResult = _mod12797;
-        consoleSandboxResult = tmpResult.consoleSandbox(() => beforeBreadcrumb(consoleSandboxResult, closure_0));
-      }
-      if (null !== consoleSandboxResult) {
-        if (client.emit) {
-          client.emit("beforeAddBreadcrumb", consoleSandboxResult, arg1);
-        }
-        isolationScope.addBreadcrumb(consoleSandboxResult, num);
-      }
-    }
-  }
+export const parameterize = function parameterize(join) {
+  const substr = [...arguments].slice();
+  const items = [join, ...substr];
+  const string = new String(String.raw.apply(items));
+  const str = join.join("\0");
+  string.__sentry_template_string__ = join.join("\0").replace(/%/g, "%%").replace(/\0/g, "%s");
+  string.__sentry_template_values__ = substr;
+  return string;
 };

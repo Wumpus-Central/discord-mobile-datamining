@@ -1,15 +1,19 @@
 // === Module 14315: ? ===
 
 // Module 14315
-import prop from "module_14316" /* 14316 */;
+import _mod14316 from "module_14316" /* 14316 */;
 
-if (prop) {
-  const _Symbol = Symbol;
-  prop = !Symbol.sham;
-}
-if (prop) {
-  const _Symbol2 = Symbol;
-  prop = typeof Symbol.iterator === "symbol";
-}
 
-export default prop;
+export default (arg0, arg1) => {
+  let tmp3 = _mod14316[arg0];
+  if (!tmp3) {
+    let obj = arg1;
+    if (!arg1) {
+      obj = {};
+    }
+    _mod14316[arg0] = obj;
+    tmp3 = obj;
+    const tmpResult = _mod14316;
+  }
+  return tmp3;
+};

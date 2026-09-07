@@ -1,11 +1,7 @@
 // === Module 14329: ? ===
 
 // Module 14329
+import _mod14307 from "module_14307" /* 14307 */;
 
-export default (arg0) => {
-  try {
-    return String(arg0);
-  } catch (err) {
-    return "Object";
-  }
-};
+
+export default _mod14307({}.isPrototypeOf);

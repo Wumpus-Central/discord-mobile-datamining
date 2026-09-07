@@ -1,7 +1,7 @@
 // === Module 8959: ? ===
 
 // Module 8959
-import _mod8939 from "module_8939" /* 8939 */;
+import _mod8944 from "module_8944" /* 8944 */;
 
 const self = this;
 let self2 = this;
@@ -57,9 +57,9 @@ if (self2) {
     exports.default = function default_1() {
       if (typeof error === "function") {
         let obj = { localeError: null };
-        obj = { string: { unit: "caract\u00E8res", verb: "avoir" }, file: { unit: "octets", verb: "avoir" }, array: { unit: "\u00E9l\u00E9ments", verb: "avoir" }, set: { unit: "\u00E9l\u00E9ments", verb: "avoir" } };
-        closure_1 = { regex: "entr\u00E9e", email: "adresse e-mail", url: "URL", emoji: "emoji", uuid: "UUID", uuidv4: "UUIDv4", uuidv6: "UUIDv6", nanoid: "nanoid", guid: "GUID", cuid: "cuid", cuid2: "cuid2", ulid: "ULID", xid: "XID", ksuid: "KSUID", datetime: "date et heure ISO", date: "date ISO", time: "heure ISO", duration: "dur\u00E9e ISO", ipv4: "adresse IPv4", ipv6: "adresse IPv6", cidrv4: "plage IPv4", cidrv6: "plage IPv6", base64: "cha\u00EEne encod\u00E9e en base64", base64url: "cha\u00EEne encod\u00E9e en base64url", json_string: "cha\u00EEne JSON", e164: "num\u00E9ro E.164", jwt: "JWT", template_literal: "entr\u00E9e" };
-        closure_2 = { nan: "NaN", number: "nombre", array: "tableau" };
+        obj = { string: { unit: "characters", verb: "to have" }, file: { unit: "bytes", verb: "to have" }, array: { unit: "items", verb: "to have" }, set: { unit: "items", verb: "to have" }, map: { unit: "entries", verb: "to have" } };
+        closure_1 = { regex: "input", email: "email address", url: "URL", emoji: "emoji", uuid: "UUID", uuidv4: "UUIDv4", uuidv6: "UUIDv6", nanoid: "nanoid", guid: "GUID", cuid: "cuid", cuid2: "cuid2", ulid: "ULID", xid: "XID", ksuid: "KSUID", datetime: "ISO datetime", date: "ISO date", time: "ISO time", duration: "ISO duration", ipv4: "IPv4 address", ipv6: "IPv6 address", mac: "MAC address", cidrv4: "IPv4 range", cidrv6: "IPv6 range", base64: "base64-encoded string", base64url: "base64url-encoded string", json_string: "JSON string", e164: "E.164 number", jwt: "JWT", template_literal: "input" };
+        closure_2 = { nan: "NaN" };
         obj.localeError = (code) => {
           switch (code.code) {
             case "invalid_type":
@@ -68,124 +68,113 @@ if (self2) {
                 expected = code.expected;
               }
               const parsedTypeResult = closure_2.parsedType(code.input);
-              let tmp49 = closure_2[parsedTypeResult];
-              if (tmp49 == null) {
-                tmp49 = parsedTypeResult;
+              let tmp48 = closure_2[parsedTypeResult];
+              if (tmp48 == null) {
+                tmp48 = parsedTypeResult;
               }
-              obj = /^[A-Z]/;
-              if (obj.test(code.expected)) {
-                const _HermesInternal17 = HermesInternal;
-                let combined = "Entr\u00E9e invalide : instanceof " + code.expected + " attendu, " + tmp49 + " re\u00E7u";
-              } else {
-                const _HermesInternal16 = HermesInternal;
-                combined = "Entr\u00E9e invalide : " + expected + " attendu, " + tmp49 + " re\u00E7u";
-              }
-              return combined;
+              const _HermesInternal16 = HermesInternal;
+              return "Invalid input: expected " + expected + ", received " + tmp48;
             case "invalid_value":
               if (1 === code.values.length) {
                 const _HermesInternal15 = HermesInternal;
-                let combined1 = "Entr\u00E9e invalide : " + closure_2.stringifyPrimitive(code.values[0]) + " attendu";
+                let combined = "Invalid input: expected " + closure_2.stringifyPrimitive(code.values[0]);
               } else {
                 const _HermesInternal14 = HermesInternal;
-                combined1 = "Option invalide : une valeur parmi " + closure_2.joinValues(code.values, "|") + " attendue";
+                combined = "Invalid option: expected one of " + closure_2.joinValues(code.values, "|");
               }
-              return combined1;
+              return combined;
             case "too_big":
-              let str31 = "<";
+              let str24 = "<";
               if (code.inclusive) {
-                str31 = "<=";
+                str24 = "<=";
               }
               let tmp27 = obj[code.origin];
               if (tmp27 == null) {
                 tmp27 = null;
               }
-              let str32 = code.origin;
+              let str25 = code.origin;
               if (tmp27) {
-                if (str32 == null) {
-                  str32 = "valeur";
+                if (str25 == null) {
+                  str25 = "value";
                 }
-                const verb = tmp27.verb;
                 let str = code.maximum.toString();
-                let str38 = tmp27.unit;
-                if (str38 == null) {
-                  str38 = "\u00E9l\u00E9ment(s)";
+                let str31 = tmp27.unit;
+                if (str31 == null) {
+                  str31 = "elements";
                 }
                 const _HermesInternal13 = HermesInternal;
-                let combined2 = "Trop grand : " + str32 + " doit " + verb + " " + str31 + str + " " + str38;
+                let combined1 = "Too big: expected " + str25 + " to have " + str24 + str + " " + str31;
               } else {
-                let str33 = str32;
-                if (str32 == null) {
-                  str33 = "valeur";
+                let str26 = str25;
+                if (str25 == null) {
+                  str26 = "value";
                 }
                 const _HermesInternal12 = HermesInternal;
-                combined2 = "Trop grand : " + str33 + " doit \u00EAtre " + str31 + code.maximum.toString();
+                combined1 = "Too big: expected " + str26 + " to be " + str24 + code.maximum.toString();
               }
-              return combined2;
+              return combined1;
             case "too_small":
-              let str21 = ">";
+              let str18 = ">";
               if (code.inclusive) {
-                str21 = ">=";
+                str18 = ">=";
               }
-              let tmp17 = obj[code.origin];
-              if (tmp17 == null) {
-                tmp17 = null;
+              let tmp15 = obj[code.origin];
+              if (tmp15 == null) {
+                tmp15 = null;
               }
-              const origin = code.origin;
-              if (tmp17) {
+              ({ origin, minimum } = code);
+              const str1 = minimum.toString();
+              if (tmp15) {
                 const _HermesInternal11 = HermesInternal;
-                let combined3 = "Trop petit : " + origin + " doit " + tmp17.verb + " " + str21 + code.minimum.toString() + " " + tmp17.unit;
+                let combined2 = "Too small: expected " + origin + " to have " + str18 + str1 + " " + tmp15.unit;
               } else {
                 const _HermesInternal10 = HermesInternal;
-                combined3 = "Trop petit : " + origin + " doit \u00EAtre " + str21 + code.minimum.toString();
+                combined2 = "Too small: expected " + origin + " to be " + str18 + str1;
               }
-              return combined3;
+              return combined2;
             case "invalid_format":
               if ("starts_with" === code.format) {
                 const _HermesInternal9 = HermesInternal;
-                let combined4 = "Cha\u00EEne invalide : doit commencer par \"" + code.prefix + "\"";
+                let combined3 = "Invalid string: must start with \"" + code.prefix + "\"";
               } else if ("ends_with" === code.format) {
                 const _HermesInternal8 = HermesInternal;
-                combined4 = "Cha\u00EEne invalide : doit se terminer par \"" + code.suffix + "\"";
+                combined3 = "Invalid string: must end with \"" + code.suffix + "\"";
               } else if ("includes" === code.format) {
                 const _HermesInternal7 = HermesInternal;
-                combined4 = "Cha\u00EEne invalide : doit inclure \"" + code.includes + "\"";
+                combined3 = "Invalid string: must include \"" + code.includes + "\"";
               } else if ("regex" === code.format) {
                 const _HermesInternal6 = HermesInternal;
-                combined4 = "Cha\u00EEne invalide : doit correspondre au mod\u00E8le " + code.pattern;
+                combined3 = "Invalid string: must match pattern " + code.pattern;
               } else {
                 let format = closure_1[code.format];
                 if (format == null) {
                   format = code.format;
                 }
                 const _HermesInternal5 = HermesInternal;
-                combined4 = "" + format + " invalide";
+                combined3 = "Invalid " + format;
               }
-              return combined4;
+              return combined3;
             case "not_multiple_of":
               const _HermesInternal4 = HermesInternal;
-              return "Nombre invalide : doit \u00EAtre un multiple de " + code.divisor;
+              return "Invalid number: must be a multiple of " + code.divisor;
             case "unrecognized_keys":
               let str3 = "";
-              let str4 = "";
-              if (code.keys.length > 1) {
-                str4 = "s";
-              }
               if (code.keys.length > 1) {
                 str3 = "s";
               }
               const _HermesInternal3 = HermesInternal;
-              return "Cl\u00E9" + str4 + " non reconnue" + str3 + " : " + closure_2.joinValues(code.keys, ", ");
+              return "Unrecognized key" + str3 + ": " + closure_2.joinValues(code.keys, ", ");
             case "invalid_key":
               const _HermesInternal2 = HermesInternal;
-              return "Cl\u00E9 invalide dans " + code.origin;
+              return "Invalid key in " + code.origin;
             case "invalid_union":
-              return "Entr\u00E9e invalide";
+              return "Invalid input";
             case "invalid_element":
               const _HermesInternal = HermesInternal;
-              str = "Valeur invalide dans ";
-              return "Valeur invalide dans " + code.origin;
+              str = "Invalid value in ";
+              return "Invalid value in " + code.origin;
             default:
-              return "Entr\u00E9e invalide";
+              return "Invalid input";
           }
         };
         return obj;
@@ -193,7 +182,7 @@ if (self2) {
         throw new TypeError("Trying to call a non-function");
       }
     };
-    let closure_2 = fn(_mod8939);
+    let closure_2 = fn(_mod8944);
     function error() {
 
     }

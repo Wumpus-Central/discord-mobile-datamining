@@ -1,92 +1,32 @@
 // === Module 14053: ? ===
 
 // Module 14053
+import _mod14019 from "module_14019" /* 14019 */;
 
-export default (arg0, arg1, arg2, arg3) => {
-  let obj;
-  _require = arg3;
-  let tmp3 = new require("module_14016")(arg0, arg3);
-  const tmp4 = new require("module_14045")(arg1, arg3);
-  if (">" === arg2) {
-    dependencyMap = tmp(14036);
-    tmp(14041);
-    let tmpResult = tmp(14037);
-    closure_2 = tmpResult;
-    let str3 = ">=";
-    let str = ">";
-    let tmpResult1 = tmpResult;
-  } else {
-    str = "<";
-    if ("<" === arg2) {
-      dependencyMap = tmp(14037);
-      tmpResult = tmp(14040);
-      tmpResult1 = tmp(14036);
-      closure_2 = tmpResult1;
-      str3 = "<=";
-    } else {
-      const _TypeError = TypeError;
-      const typeError = new TypeError("Must provide a hilo val of \"<\" or \">\"");
-      throw typeError;
-    }
-  }
-  if (require("module_14047")(tmp3, tmp4, arg3)) {
-    return false;
-  } else {
-    let num = 0;
-    let num3 = 0;
-    if (0 < tmp4.set.length) {
-      while (true) {
-        let arr = tmp4.set[num3];
-        _require = null;
-        dependencyMap = null;
-        let item = arr.forEach((semver) => {
-          let tmp = semver;
-          if (semver.semver === closure_0(semver[7]).ANY) {
-            tmp = new tmp2(tmp3[7])(">=0.0.0");
-          }
-          let tmp6 = closure_0;
-          if (!closure_0) {
-            tmp6 = tmp;
-          }
-          closure_0 = tmp6;
-          let tmp7 = semver;
-          if (!semver) {
-            tmp7 = tmp;
-          }
-          semver = tmp7;
-          if (dependencyMap(tmp.semver, closure_0.semver, require)) {
-            closure_0 = tmp;
-          } else if (React2(tmp.semver, semver.semver, require)) {
-            semver = tmp;
-          }
-          tmp2 = closure_0;
-          tmp3 = semver;
-        });
-        if (_require.operator !== str) {
-          if (_require.operator !== str3) {
-            if (!dependencyMap.operator) {
-              if (tmpResult(tmp3, dependencyMap.semver)) {
-                obj = { v: false };
-              }
-            }
-            obj = undefined;
-            if (dependencyMap.operator === str3) {
-              if (tmpResult1(tmp3, dependencyMap.semver)) {
-                obj = { v: false };
-              }
-            }
-          }
-          if (obj) {
-            break;
-          } else {
-            num3 = num + 1;
-            num = num3;
-          }
+
+export default (arr, arg1, arg2) => {
+  _require = arg2;
+  dependencyMap = null;
+  closure_2 = null;
+  let regex = null;
+  try {
+    let tmp9 = new require("module_14048")(arg1, arg2);
+    regex = tmp9;
+    const item = arr.forEach((item) => {
+      if (regex.test(item)) {
+        let tmp = closure_1;
+        if (closure_1) {
+          tmp = 1 !== closure_2.compare(item);
         }
-        obj = { v: false };
+        if (!tmp) {
+          closure_1 = item;
+          const tmp9 = new _mod14019(closure_1, closure_0);
+          closure_2 = tmp9;
+        }
       }
-      return obj.v;
-    }
-    return true;
+    });
+    return dependencyMap;
+  } catch (err) {
+    return tmp;
   }
 };

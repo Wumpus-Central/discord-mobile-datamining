@@ -1,19 +1,46 @@
 // === Module 12826: ? ===
 
 // Module 12826
-import _mod12803 from "module_12803" /* 12803 */;
-
-require = arg1;
-const dependencyMap = arg6;
-const _sentryScope = "_sentryScope";
-const _sentryIsolationScope = "_sentryIsolationScope";
-
-export const getCapturedScopesOnSpan = function getCapturedScopesOnSpan(scope) {
-  return { scope: scope[_sentryScope], isolationScope: scope[_sentryIsolationScope] };
-};
-export const setCapturedScopesOnSpan = function setCapturedScopesOnSpan(sentrySpan, scope, isolationScope) {
-  if (sentrySpan) {
-    const result = _mod12803.addNonEnumerableProperty(sentrySpan, _sentryIsolationScope, isolationScope);
-    const result1 = _mod12803.addNonEnumerableProperty(sentrySpan, _sentryScope, scope);
+function merge(arg0, obj) {
+  let num = arg2;
+  if (arg2 === undefined) {
+    num = 2;
   }
-};
+  if (obj) {
+    if (typeof obj === "object") {
+      if (num > 0) {
+        if (arg0) {
+          if (obj) {
+            const _Object = Object;
+            if (0 === Object.keys(obj).length) {
+              return arg0;
+            }
+          }
+        }
+        obj = {};
+        const merged = Object.assign(arg0);
+        for (const key10016 in arg1) {
+          let _Object2 = Object;
+          hasOwnProperty = Object.prototype.hasOwnProperty;
+          let call = hasOwnProperty.call;
+          if (typeof call === "unknown") {
+            let hasOwnPropertyResult = hasOwnProperty(key10016);
+          } else {
+            hasOwnPropertyResult = call(arg1, key10016);
+          }
+          if (!hasOwnPropertyResult) {
+            continue;
+          } else {
+            obj[key10016] = merge(obj[key10016], arg1[key10016], num - 1);
+            continue;
+          }
+          continue;
+        }
+        return obj;
+      }
+    }
+  }
+  return obj;
+}
+
+export { merge };

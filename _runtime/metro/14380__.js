@@ -1,481 +1,192 @@
 // === Module 14380: ? ===
 
 // Module 14380
-const exports = unsigned_long_long;
-function _(arg0, context) {
-  let str = "Value";
-  if (context) {
-    str = "Value";
-    if (context.context) {
-      str = context.context;
-    }
-  }
-  return "" + str + " " + "is not a view on an DataView object" + ".";
-}
-function createIntegerConversion(exponent, unsigned) {
-  unsigned = unsigned.unsigned;
-  closure_2 = !unsigned;
-  if (64 === exponent) {
-    let _Math4 = Math;
-    closure_1 = Math.pow(2, 53) - 1;
-    let num9 = 0;
-    if (!unsigned) {
-      let _Math5 = Math;
-      num9 = 1 - Math.pow(2, 53);
-    }
-    closure_0 = num9;
-  } else if (unsigned) {
-    closure_0 = 0;
-    let _Math3 = Math;
-    closure_1 = Math.pow(2, exponent) - 1;
-  } else {
-    let _Math = Math;
-    let diff = exponent - 1;
-    closure_0 = -Math.pow(2, diff);
-    let _Math2 = Math;
-    closure_1 = Math.pow(2, diff) - 1;
-  }
-  closure_3 = Math.pow(2, exponent);
-  closure_4 = Math.pow(2, exponent - 1);
-  return (arg0, arg1) => {
-    let obj = arg1;
-    if (undefined === arg1) {
-      obj = {};
-    }
-    let num = 0;
-    if (0 !== +arg0) {
-      num = tmp;
-    }
-    const _Number = Number;
-    if (obj.enforceRange) {
-      if (_Number.isFinite(num)) {
-        const _Math5 = Math;
-        const truncResult = Math.trunc(num);
-        let num11 = 0;
-        if (0 !== truncResult) {
-          num11 = truncResult;
-        }
-        if (num11 >= closure_0) {
-          if (num11 <= closure_1) {
-            return num11;
-          }
-        }
-        const _HermesInternal2 = HermesInternal;
-        const combined = "is outside the accepted range of " + closure_0 + " to " + closure_1 + ", inclusive";
-        let str11 = "Value";
-        if (obj) {
-          str11 = "Value";
-          if (obj.context) {
-            str11 = obj.context;
-          }
-        }
-        const _HermesInternal3 = HermesInternal;
-        const typeError = new TypeError("" + str11 + " " + combined + ".");
-        throw typeError;
-      } else {
-        let str2 = "Value";
-        if (obj) {
-          str2 = "Value";
-          if (obj.context) {
-            str2 = obj.context;
-          }
-        }
-        const _HermesInternal = HermesInternal;
-        const typeError1 = new TypeError("" + str2 + " " + "is not a finite number" + ".");
-        throw typeError1;
-      }
-    } else {
-      if (!_Number.isNaN(num)) {
-        if (obj.clamp) {
-          const _Math = Math;
-          const _Math2 = Math;
-          const bound = Math.min(Math.max(num, closure_0), closure_1);
-          if (bound > 0) {
-            if (bound % 1 === 0.5) {
-              let num6 = 0;
-              if (0 !== rounded) {
-                num6 = rounded;
-              }
-            }
-            const _Math3 = Math;
-            rounded = Math.floor(bound);
-          }
-          const _Math4 = Math;
-          rounded = Math.round(bound);
-        }
-        return num6;
-      }
-      const _Number2 = Number;
-      let num7 = 0;
-      if (Number.isFinite(num)) {
-        num7 = 0;
-        if (0 !== num) {
-          const _Math6 = Math;
-          const truncResult1 = Math.trunc(num);
-          let num8 = 0;
-          if (0 !== truncResult1) {
-            num8 = truncResult1;
-          }
-          if (num8 < closure_0) {
-            const result = num8 % closure_3;
-            let num9 = 1;
-            let num10 = 1;
-            if (closure_3 < 0) {
-              num10 = -1;
-            }
-            if (result < 0) {
-              num9 = -1;
-            }
-            let sum = result;
-            if (num10 !== num9) {
-              sum = result + closure_3;
-            }
-            let diff = sum;
-            if (closure_2) {
-              diff = sum;
-              if (sum >= closure_4) {
-                diff = sum - closure_3;
-              }
-            }
-            let tmp8 = diff;
-          } else {
-            tmp8 = num8;
-          }
-          num7 = tmp8;
-        }
-      }
-      num6 = num7;
-    }
-  };
-}
-function convertCallbackFunction(binder, localeData) {
-  if (typeof binder !== "function") {
-    let str2 = "Value";
-    if (localeData) {
-      str2 = "Value";
-      if (localeData.context) {
-        str2 = localeData.context;
-      }
-    }
-    const _HermesInternal = HermesInternal;
-    const typeError = new TypeError("" + str2 + " " + "is not a function" + ".");
-    throw typeError;
-  } else {
-    return binder;
-  }
-}
-function isArrayBuffer(arg0) {
-  try {
-    const call = get.call;
-    if (typeof call === "unknown") {
-      get();
-    } else {
-      call(arg0);
-    }
-    return true;
-  } catch (err) {
-    return false;
-  }
-}
-unsigned_long_long.any = (arg0) => arg0;
-unsigned_long_long.void = () => {
+import Buffer from "Buffer" /* 1253 */;
+import _mod14379 from "module_14379" /* 14379 */;
+import _slicedToArray from "module_32" /* 32 */;
 
-};
-unsigned_long_long.boolean = (arg0) => arg0;
-unsigned_long_long.byte = createIntegerConversion(8, { unsigned: false });
-unsigned_long_long.octet = createIntegerConversion(8, { unsigned: true });
-unsigned_long_long.short = createIntegerConversion(16, { unsigned: false });
-unsigned_long_long["unsigned short"] = createIntegerConversion(16, { unsigned: true });
-unsigned_long_long.long = createIntegerConversion(32, { unsigned: false });
-unsigned_long_long["unsigned long"] = createIntegerConversion(32, { unsigned: true });
-unsigned_long_long["long long"] = createIntegerConversion(64, { unsigned: false });
-unsigned_long_long["unsigned long long"] = createIntegerConversion(64, { unsigned: true });
-unsigned_long_long.double = (arg0, context) => {
-  if (Number.isFinite(+arg0)) {
-    return tmp;
-  } else {
-    let str2 = "Value";
-    if (context) {
-      str2 = "Value";
-      if (context.context) {
-        str2 = context.context;
-      }
-    }
-    const _HermesInternal = HermesInternal;
-    const typeError = new TypeError("" + str2 + " " + "is not a finite floating-point value" + ".");
-    throw typeError;
+function replaceByteInByteSequence(arr, arg1, arg2) {
+  let index = arr.indexOf(43);
+  if (index >= 0) {
+    do {
+      arr[index] = 32;
+      index = arr.indexOf(43, index + 1);
+    } while (index >= 0);
   }
-};
-unsigned_long_long["unrestricted double"] = (arg0) => +arg0;
-unsigned_long_long.float = (arg0, context) => {
-  if (Number.isFinite(+arg0)) {
-    const _Object = Object;
-    if (Object.is(tmp, -0)) {
-      return tmp;
-    } else {
-      const _Math = Math;
-      const froundResult = Math.fround(tmp);
-      const _Number = Number;
-      if (Number.isFinite(froundResult)) {
-        return froundResult;
-      } else {
-        let str8 = "Value";
-        if (context) {
-          str8 = "Value";
-          if (context.context) {
-            str8 = context.context;
-          }
-        }
-        const _HermesInternal2 = HermesInternal;
-        const typeError = new TypeError("" + str8 + " " + "is outside the range of a single-precision floating-point value" + ".");
-        throw typeError;
-      }
-    }
-  } else {
-    let str2 = "Value";
-    if (context) {
-      str2 = "Value";
-      if (context.context) {
-        str2 = context.context;
-      }
-    }
-    const _HermesInternal = HermesInternal;
-    const typeError1 = new TypeError("" + str2 + " " + "is not a finite floating-point value" + ".");
-    throw typeError1;
+  return arr;
+}
+function percentEncode(arr) {
+  const formatted = arr.toString(16).toUpperCase();
+  let text = formatted;
+  if (1 === formatted.length) {
+    text = `0${arr}`;
   }
-};
-unsigned_long_long["unrestricted float"] = (arg0) => {
-  let froundResult = tmp;
-  if (!isNaN(+arg0)) {
-    const _Object = Object;
-    froundResult = tmp;
-    if (!Object.is(tmp, -0)) {
-      const _Math = Math;
-      froundResult = Math.fround(tmp);
-    }
-  }
-  return froundResult;
-};
-unsigned_long_long.DOMString = (item10103, context) => {
-  let obj = context;
-  if (undefined === context) {
-    obj = {};
-  }
-  if (obj.treatNullAsEmptyString) {
-    if (null === item10103) {
-      return "";
-    }
-  }
-  if (typeof item10103 === "symbol") {
-    let str2 = "Value";
-    if (obj) {
-      str2 = "Value";
-      if (obj.context) {
-        str2 = obj.context;
-      }
-    }
-    const _HermesInternal = HermesInternal;
-    const typeError = new TypeError("" + str2 + " " + "is a symbol, which cannot be converted to a string" + ".");
-    throw typeError;
-  } else {
-    const _String = String;
-    return String(item10103);
-  }
-};
-unsigned_long_long.ByteString = (item10103, context) => {
-  const DOMStringResult = exports.DOMString(item10103, context);
+  return "%" + text;
+}
+function percentDecode(_Buffer) {
+  _Buffer = Buffer.Buffer;
+  const allocResult = _Buffer.alloc(_Buffer.byteLength);
   let num = 0;
-  let codePointAtResult = DOMStringResult.codePointAt(0);
-  if (undefined !== codePointAtResult) {
-    while (codePointAtResult <= 255) {
-      let sum = num + 1;
-      codePointAtResult = DOMStringResult.codePointAt(sum);
-      num = sum;
-    }
-    let str2 = "Value";
-    if (context) {
-      str2 = "Value";
-      if (context.context) {
-        str2 = context.context;
-      }
-    }
-    const _HermesInternal = HermesInternal;
-    const typeError = new TypeError("" + str2 + " " + "is not a valid ByteString" + ".");
-    throw typeError;
-  }
-  return DOMStringResult;
-};
-unsigned_long_long.USVString = (item10103, context) => {
-  const DOMStringResult = exports.DOMString(item10103, context);
-  const items = [];
-  let num = 0;
-  if (0 < DOMStringResult.length) {
+  let num2 = 0;
+  let num3 = 0;
+  if (0 < _Buffer.length) {
     while (true) {
-      let charCodeAtResult = DOMStringResult.charCodeAt(num);
-      if (charCodeAtResult >= 55296) {
-        if (charCodeAtResult <= 57343) {
-          if (56320 <= charCodeAtResult) {
-            if (charCodeAtResult <= 57343) {
-              let _String4 = String;
-              let arr = items.push(String.fromCodePoint(65533));
-              let tmp6 = num;
+      if (37 === _Buffer[num]) {
+        let obj = _mod14379;
+        let sum = num + 1;
+        if (obj.isASCIIHex(_Buffer[sum])) {
+          let tmp3Result = _mod14379;
+          let sum1 = num + 2;
+          if (tmp3Result.isASCIIHex(_Buffer[sum1])) {
+            let sum2 = num2 + 1;
+            let _parseInt = parseInt;
+            let str = _Buffer.slice(sum, num + 3);
+            allocResult[num2] = parseInt(str.toString(), 16);
+            let tmp8 = sum1;
+            num = tmp8 + 1;
+            num2 = sum2;
+            num3 = sum2;
+            if (num >= _Buffer.length) {
+              break;
             }
           }
-          if (num === length - 1) {
-            let _String3 = String;
-            arr = items.push(String.fromCodePoint(65533));
-            tmp6 = num;
-          } else {
-            let sum = num + 1;
-            let charCodeAtResult1 = DOMStringResult.charCodeAt(sum);
-            if (56320 <= charCodeAtResult1) {
-              if (charCodeAtResult1 <= 57343) {
-                let _String2 = String;
-                let arr1 = items.push(String.fromCodePoint(65536 + 1024 * (1023 & charCodeAtResult) + (1023 & charCodeAtResult1)));
-                tmp6 = sum;
+        }
+      }
+      sum2 = num2 + 1;
+      allocResult[num2] = _Buffer[num];
+      tmp8 = num;
+    }
+  }
+  return allocResult.slice(0, num3);
+}
+function serializeUrlencodedByte(_Buffer) {
+  let str = "";
+  const iter = _Buffer[Symbol.iterator]();
+  const nextResult = iter.next();
+  while (iter !== undefined) {
+    let tmp2 = nextResult;
+    let str2 = "+";
+    if (32 === nextResult) {
+      str = `+`;
+      continue;
+    } else {
+      if (42 !== tmp2) {
+        if (45 !== tmp2) {
+          if (46 !== tmp2) {
+            if (tmp2 < 48) {
+              if (tmp2 < 65) {
+                if (95 !== tmp2) {
+                  if (tmp2 < 97) {
+                    let fromCodePointResult = percentEncode(tmp2);
+                  }
+                }
               }
             }
-            let _String = String;
-            let arr2 = items.push(String.fromCodePoint(65533));
-            tmp6 = num;
           }
         }
-        num = tmp6 + 1;
-        if (num >= length) {
-          break;
+      }
+      let _String = String;
+      fromCodePointResult = String.fromCodePoint(tmp2);
+    }
+  }
+  return str;
+}
+
+export default {
+  percentEncode,
+  percentDecode,
+  parseUrlencoded(arg0) {
+    let _Buffer = Buffer.Buffer;
+    return (function parseUrlencoded(_Buffer) {
+      let items = [];
+      const iter = (function strictlySplitByteSequence(arr, arg1) {
+        const items = [];
+        const index = arr.indexOf(38);
+        let index1 = index;
+        let num = 0;
+        let num2 = 0;
+        if (index >= 0) {
+          do {
+            arr = items.push(arr.slice(num, index1));
+            let sum = index1 + 1;
+            index1 = arr.indexOf(38, sum);
+            num = sum;
+            num2 = sum;
+          } while (index1 >= 0);
+        }
+        if (num2 !== arr.length) {
+          arr = items.push(arr.slice(num2));
+        }
+        return items;
+      })(_Buffer, 38)[Symbol.iterator]();
+      const nextResult = iter.next();
+      while (iter !== undefined) {
+        let arr3 = nextResult;
+        if (0 === nextResult.length) {
+          continue;
+        } else {
+          let index = arr3.indexOf(61);
+          let tmp23 = index;
+          if (index >= 0) {
+            let substr = arr3.slice(0, tmp23);
+            let substr1 = arr3.slice(tmp23 + 1);
+          } else {
+            substr = nextResult;
+            _Buffer = Buffer.Buffer;
+            substr1 = _Buffer.alloc(0);
+          }
+          let _Buffer2 = Buffer.Buffer;
+          let fromResult = _Buffer2.from(substr);
+          let tmp13 = replaceByteInByteSequence(fromResult, 43, 32);
+          let _Buffer3 = Buffer.Buffer;
+          let fromResult1 = _Buffer3.from(substr1);
+          let tmp17 = replaceByteInByteSequence(fromResult1, 43, 32);
+          let str = percentDecode(fromResult);
+          let items1 = [str.toString(), ];
+          let str2 = percentDecode(fromResult1);
+          items1[1] = str2.toString();
+          let arr = items.push(items1);
         }
       }
-      let _String5 = String;
-      let arr3 = items.push(String.fromCodePoint(charCodeAtResult));
-      tmp6 = num;
+      return items;
+    })(_Buffer.from(arg0));
+  },
+  serializeUrlencoded(_list) {
+    let str = "utf-8";
+    if (undefined !== arg1) {
+      str = tmp;
     }
-  }
-  return items.join("");
-};
-unsigned_long_long.object = (arg0, context) => {
-  let str = "Null";
-  if (null !== arg0) {
-    if ("undefined" === typeof arg0) {
-      str = "Undefined";
-    } else if ("boolean" === tmp) {
-      str = "Boolean";
-    } else if ("number" === tmp) {
-      str = "Number";
-    } else if ("string" === tmp) {
-      str = "String";
-    } else {
-      str = "Symbol";
-      if ("symbol" !== tmp) {
-        str = "Object";
+    let str2 = "";
+    const entries = _list.entries();
+    while (tmp3 !== undefined) {
+      let tmp6 = _slicedToArray(tmp4, 2);
+      [tmp7, arr] = tmp6;
+      let _Buffer = Buffer.Buffer;
+      let tmp12 = serializeUrlencodedByte(_Buffer.from(arr[0]));
+      let name = arr[1];
+      let tmp13 = arr.length > 2;
+      if (tmp13) {
+        tmp13 = undefined !== arr[2];
       }
-    }
-  }
-  if ("Object" !== str) {
-    let str8 = "Value";
-    if (context) {
-      str8 = "Value";
-      if (context.context) {
-        str8 = context.context;
-      }
-    }
-    const _HermesInternal = HermesInternal;
-    const typeError = new TypeError("" + str8 + " " + "is not an object" + ".");
-    throw typeError;
-  } else {
-    return arg0;
-  }
-};
-Object.getOwnPropertyDescriptor(ArrayBuffer.prototype, "byteLength").get;
-unsigned_long_long.ArrayBuffer = (length, arg1) => {
-  if (isArrayBuffer(length)) {
-    return length;
-  } else {
-    let str2 = "Value";
-    if (arg1) {
-      str2 = "Value";
-      if (arg1.context) {
-        str2 = arg1.context;
-      }
-    }
-    const _HermesInternal = HermesInternal;
-    const typeError = new TypeError("" + str2 + " " + "is not a view on an ArrayBuffer object" + ".");
-    throw typeError;
-  }
-};
-const get = Object.getOwnPropertyDescriptor(DataView.prototype, "byteLength").get;
-unsigned_long_long.DataView = (arg0, arg1) => {
-  try {
-    const call = get.call;
-    if (typeof call === "unknown") {
-      get();
-    } else {
-      call(arg0);
-    }
-    return arg0;
-  } catch (err) {
-    const _TypeError = TypeError;
-    const typeError = new TypeError(_("is not a view on an DataView object", arg1));
-    throw typeError;
-  }
-};
-let items = [Int8Array, Int16Array, Int32Array, Uint8Array, Uint16Array, Uint32Array, Uint8ClampedArray, Float32Array, Float64Array];
-const item = items.forEach((name) => {
-  name = name.name;
-  let str = "a";
-  if (obj.test(name)) {
-    str = "an";
-  }
-  exports[name] = (arg0, context) => {
-    if (ArrayBuffer.isView(arg0)) {
-      if (arg0.constructor.name === name) {
-        return arg0;
-      }
-    }
-    const combined = "is not " + str + " " + name + " object";
-    str = "Value";
-    if (context) {
-      str = "Value";
-      if (context.context) {
-        str = context.context;
-      }
-    }
-    const typeError = new TypeError("" + str + " " + combined + ".");
-    throw typeError;
-  };
-});
-unsigned_long_long.ArrayBufferView = (arg0, context) => {
-  if (ArrayBuffer.isView(arg0)) {
-    return arg0;
-  } else {
-    let str2 = "Value";
-    if (context) {
-      str2 = "Value";
-      if (context.context) {
-        str2 = context.context;
-      }
-    }
-    const _HermesInternal = HermesInternal;
-    const typeError = new TypeError("" + str2 + " " + "is not a view on an ArrayBuffer object" + ".");
-    throw typeError;
-  }
-};
-unsigned_long_long.BufferSource = (arg0, context) => {
-  if (!ArrayBuffer.isView(arg0)) {
-    if (!isArrayBuffer(arg0)) {
-      let str2 = "Value";
-      if (context) {
-        str2 = "Value";
-        if (context.context) {
-          str2 = context.context;
+      if (tmp13) {
+        if ("hidden" === arr[2]) {
+          if ("_charset_" === tmp12) {
+            name = str;
+          }
+        }
+        if ("file" === arr[2]) {
+          name = name.name;
         }
       }
-      const _HermesInternal = HermesInternal;
-      const typeError = new TypeError("" + str2 + " " + "is not an ArrayBuffer object or a view on one" + ".");
-      throw typeError;
+      if (0 !== tmp7) {
+        str2 = `${str2}&`;
+      }
+      let _Buffer2 = Buffer.Buffer;
+      let tmp9Result = serializeUrlencodedByte(_Buffer2.from(name));
+      let _HermesInternal = HermesInternal;
+      str2 = str2 + "" + tmp12 + "=" + tmp9Result;
+      continue;
     }
+    return str2;
   }
-  return arg0;
 };
-unsigned_long_long.DOMTimeStamp = unsigned_long_long["unsigned long long"];
-unsigned_long_long.Function = convertCallbackFunction;
-unsigned_long_long.VoidFunction = convertCallbackFunction;

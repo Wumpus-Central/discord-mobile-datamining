@@ -1,14 +1,18 @@
 // === Module 14327: ? ===
 
 // Module 14327
-import _mod14308 from "module_14308" /* 14308 */;
+import _mod14318 from "module_14318" /* 14318 */;
+import _mod14326 from "module_14326" /* 14326 */;
 import _mod14328 from "module_14328" /* 14328 */;
+import _mod14329 from "module_14329" /* 14329 */;
 
 
-export default (arg0, arg1) => {
-  let tmp4;
-  if (!_mod14308(arg0[arg1])) {
-    tmp4 = _mod14328(tmp);
+export default _mod14318 ? ((arg0) => typeof arg0 === "symbol") : ((arg0) => {
+  const tmp3 = _mod14328("Symbol");
+  let tmpResultResult = _mod14326(tmp3);
+  if (tmpResultResult) {
+    tmpResultResult = _mod14329(tmp3.prototype, Object(arg0));
+    const tmpResult = _mod14329;
   }
-  return tmp4;
-};
+  return tmpResultResult;
+});

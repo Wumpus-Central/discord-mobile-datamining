@@ -1,7 +1,7 @@
 // === Module 14031: ? ===
 
 // Module 14031
-import _mod14030 from "module_14030" /* 14030 */;
+import _mod14019 from "module_14019" /* 14019 */;
 
 
-export default (arg0, arg1, arg2) => _mod14030(arg1, arg0, arg2);
+export default (arg0, arg1) => new _mod14019(arg0, arg1).patch;

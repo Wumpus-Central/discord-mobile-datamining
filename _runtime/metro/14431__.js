@@ -1,33 +1,51 @@
 // === Module 14431: ? ===
 
 // Module 14431
-import emptyPromise from "emptyPromise" /* 14414 */;
+import noop from "module_19" /* 19 */;
+import module_14413 from "module_14413" /* 14413 */;
+import _isNativeReflectConstruct from "module_14432" /* 14432 */;
+import jsxProd from "jsxProd" /* 21 */;
 
-require = arg1;
-const dependencyMap = arg6;
+if (noop) {
+  const __esModule = noop.__esModule;
+}
+if (!module_14413) {
+  let obj = { default: module_14413 };
+  let tmp4 = obj;
+} else {
+  tmp4 = module_14413;
+}
+module_14413 = tmp4;
+if (!_isNativeReflectConstruct) {
+  obj = { default: _isNativeReflectConstruct };
+  let tmp6 = obj;
+} else {
+  tmp6 = _isNativeReflectConstruct;
+}
+_isNativeReflectConstruct = tmp6;
 
-export default () => (log) => {
-  const result = emptyPromise.assertHasLoggerPlugin(log);
-  closure_0 = log;
+export default () => () => {
+  closure_0 = closure_0.default();
   return {
-    onConnect() {
-      log = console.log;
-      console.log = () => {
-        const items = [...arguments];
-        log(...items);
-        const items1 = [...items];
-        log.log.apply(items1);
-      };
-      console.warn = () => {
-        const items = [...arguments];
-        warn(...items);
-        log.warn(items[0]);
-      };
-      console.debug = () => {
-        const items = [...arguments];
-        debug(...items);
-        log.debug(items[0]);
-      };
+    onCommand(type) {
+      if ("storybook" === type.type) {
+        closure_0.emit("storybook", type.payload);
+      }
+    },
+    features: {
+      storybookSwitcher(arg0) {
+        closure_0 = arg0;
+        return (arg0) => {
+          closure_0 = arg0;
+          return function StorybookSwitcherContainer(arg0) {
+            let obj = { storybookUi: emitter, emitter, children: null };
+            obj = {};
+            const merged = Object.assign(arg0);
+            obj.children = <emitter />;
+            return <_isNativeReflectConstruct.default />;
+          };
+        };
+      }
     }
   };
 };

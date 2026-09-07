@@ -1,5 +1,39 @@
 // === Module 14334: ? ===
 
 // Module 14334
+import _mod14325 from "module_14325" /* 14325 */;
+import _mod14326 from "module_14326" /* 14326 */;
+import _mod14333 from "module_14333" /* 14333 */;
 
-export default (arg0, value) => ({ enumerable: !(1 & arg0), configurable: !(2 & arg0), writable: !(4 & arg0), value });
+
+export default (arg0, arg1) => {
+  if ("string" === arg1) {
+    const toString = arg0.toString;
+    if (_mod14326(toString)) {
+      const tmp4 = _mod14333(toString, arg0);
+      if (!tmpResult(tmp4)) {
+        return tmp4;
+      }
+      tmpResult = _mod14325;
+    }
+  }
+  const valueOf = arg0.valueOf;
+  if (_mod14326(valueOf)) {
+    let tmp5Result = _mod14325;
+    const tmp8 = _mod14333(valueOf, arg0);
+    if (!tmp5Result(tmp8)) {
+      return tmp8;
+    }
+  }
+  if ("string" !== arg1) {
+    const toString2 = arg0.toString;
+    if (_mod14326(toString2)) {
+      tmp5Result = _mod14325;
+      const tmp10 = _mod14333(toString2, arg0);
+      if (!tmp5Result(tmp10)) {
+        return tmp10;
+      }
+    }
+  }
+  throw new TypeError("Can't convert object to primitive value");
+};

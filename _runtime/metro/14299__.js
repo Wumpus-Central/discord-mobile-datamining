@@ -2,30 +2,79 @@
 
 // Module 14299
 import _mod14300 from "module_14300" /* 14300 */;
+import _mod14301 from "module_14301" /* 14301 */;
 import _mod14302 from "module_14302" /* 14302 */;
-import text from "text" /* 14309 */;
-import _mod14320 from "module_14320" /* 14320 */;
-import _mod14330 from "module_14330" /* 14330 */;
-import _mod14332 from "module_14332" /* 14332 */;
-import _mod14334 from "module_14334" /* 14334 */;
-import _mod14335 from "module_14335" /* 14335 */;
+import _mod14339 from "module_14339" /* 14339 */;
+import _mod14340 from "module_14340" /* 14340 */;
+import _mod14356 from "module_14356" /* 14356 */;
+import _mod14357 from "module_14357" /* 14357 */;
 
-if (!_mod14300) {
-  getOwnPropertyDescriptor = function getOwnPropertyDescriptor(arg0, arg1) {
-    const tmp3 = _mod14302(arg0);
-    const tmp4 = text(arg1);
-    if (!_mod14332) {
-      if (_mod14320(tmp3, tmp4)) {
-        const tmpResult = _mod14330;
-        return tmpResult(!tmpResult(_mod14335.f, tmp3, tmp4), tmp3[tmp4]);
+
+export default (dontCallGetSet, obj) => {
+  ({ target, global: _global, stat } = dontCallGetSet);
+  const tmp3 = _mod14300;
+  if (_global) {
+    let prototype = tmp3;
+  } else {
+    let tmp4 = tmp3[target];
+    if (stat) {
+      if (!tmp4) {
+        tmp4 = _mod14301(target, {});
       }
+      prototype = tmp4;
     } else {
-      try {
-        return getOwnPropertyDescriptor(tmp3, tmp4);
-      } catch (err) {
+      prototype = tmp4;
+      if (tmp4) {
+        prototype = _mod14300[target].prototype;
       }
     }
-  };
-}
-
-export const f = getOwnPropertyDescriptor;
+  }
+  if (prototype) {
+    for (const key10024 in arg1) {
+      let tmp21 = arg1[key10024];
+      if (arg0.dontCallGetSet) {
+        obj = _mod14302;
+        let iter = obj.f(prototype, key10024);
+        value = iter;
+        if (iter) {
+          value = iter.value;
+        }
+        let tmp7 = value;
+      } else {
+        tmp7 = prototype[key10024];
+      }
+      let sum = key10024;
+      let tmp12 = _mod14339;
+      if (!_global) {
+        let str4 = "#";
+        if (stat) {
+          str4 = ".";
+        }
+        sum = target + str4 + key10024;
+      }
+      if (!tmp12(sum, arg0.forced)) {
+        if (undefined !== tmp7) {
+          if (typeof tmp21 === typeof tmp7) {
+            continue;
+          } else {
+            let tmp22 = _mod14340(tmp21, tmp7);
+          }
+        }
+        continue;
+      }
+      let sham = arg0.sham;
+      if (!sham) {
+        let sham2 = tmp7;
+        if (tmp7) {
+          sham2 = tmp7.sham;
+        }
+        sham = sham2;
+      }
+      if (sham) {
+        let tmp14 = _mod14356(tmp21, "sham", true);
+      }
+      let tmp19 = _mod14357(prototype, key10024, tmp21, arg0);
+      continue;
+    }
+  }
+};

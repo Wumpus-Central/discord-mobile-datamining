@@ -2,199 +2,105 @@
 
 // Module 10790
 import cancelAnimation from "cancelAnimation" /* 1636 */;
-import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
-import noop from "module_19" /* 19 */;
 
-require = fn;
-let closure_3 = ["width", "height", "borderRadius", "backgroundColor"];
-let closure_4 = ["width", "height", "borderRadius", "backgroundColor"];
-const Pressable = fn(17).Pressable;
-const jsx = fn(21).jsx;
-let closure_8 = { code: "function pnpm_PaginationItemTsx1(){const{runOnJS,handleCustomAnimation,animValue}=this.__closure;var _animValue;runOnJS(handleCustomAnimation)((_animValue=animValue)===null||_animValue===void 0?void 0:_animValue.value);}" };
-const __initData = { code: "function pnpm_PaginationItemTsx2(){const{size,defaultDotSize,dotStyle,activeDotStyle,animValue,index,count,interpolate,Extrapolation,interpolateColor,customReanimatedStyleRef}=this.__closure;var _dotStyle,_activeDotStyle,_animValue,_animValue2,_animValue3,_ref,_ref2,_customReanimatedStyl,_restStyle$transform,_customReanimatedStyl2,_customReanimatedStyl3;const{width=size||defaultDotSize,height=size||defaultDotSize,borderRadius:borderRadius,backgroundColor=\"#FFF\",...restDotStyle}=(_dotStyle=dotStyle)!==null&&_dotStyle!==void 0?_dotStyle:{};const{width:activeWidth=width,height:activeHeight=height,borderRadius:activeBorderRadius,backgroundColor:activeBackgroundColor=\"#000\",...restActiveDotStyle}=(_activeDotStyle=activeDotStyle)!==null&&_activeDotStyle!==void 0?_activeDotStyle:{};let val=Math.abs(((_animValue=animValue)===null||_animValue===void 0?void 0:_animValue.value)-index);if(index===0&&((_animValue2=animValue)===null||_animValue2===void 0?void 0:_animValue2.value)>count-1)val=Math.abs(((_animValue3=animValue)===null||_animValue3===void 0?void 0:_animValue3.value)-count);const inputRange=[0,1,2];const restStyle=(_ref=val===0?restActiveDotStyle:restDotStyle)!==null&&_ref!==void 0?_ref:{};return{width:interpolate(val,inputRange,[activeWidth,width,width],Extrapolation.CLAMP),height:interpolate(val,inputRange,[activeHeight,height,height],Extrapolation.CLAMP),borderRadius:interpolate(val,inputRange,[(_ref2=activeBorderRadius!==null&&activeBorderRadius!==void 0?activeBorderRadius:borderRadius)!==null&&_ref2!==void 0?_ref2:0,borderRadius!==null&&borderRadius!==void 0?borderRadius:0,borderRadius!==null&&borderRadius!==void 0?borderRadius:0],Extrapolation.CLAMP),backgroundColor:interpolateColor(val,inputRange,[activeBackgroundColor,backgroundColor,backgroundColor]),...restStyle,...((_customReanimatedStyl=customReanimatedStyleRef.value)!==null&&_customReanimatedStyl!==void 0?_customReanimatedStyl:{}),transform:[...((_restStyle$transform=restStyle===null||restStyle===void 0?void 0:restStyle.transform)!==null&&_restStyle$transform!==void 0?_restStyle$transform:[]),...((_customReanimatedStyl2=(_customReanimatedStyl3=customReanimatedStyleRef.value)===null||_customReanimatedStyl3===void 0?void 0:_customReanimatedStyl3.transform)!==null&&_customReanimatedStyl2!==void 0?_customReanimatedStyl2:[])]};}" };
+require = arg1;
+const dependencyMap = arg6;
+let closure_2 = { code: "function pnpm_useOffsetXTs1(){const{visibleRanges,index,loop,TOTAL_WIDTH,MIN,HALF_WIDTH,startPos,MAX,interpolate,handlerOffset,Extrapolation,size}=this.__closure;const{negativeRange:negativeRange,positiveRange:positiveRange}=visibleRanges.value;if(index>=negativeRange[0]&&index<=negativeRange[1]||index>=positiveRange[0]&&index<=positiveRange[1]){if(loop){const inputRange=[-TOTAL_WIDTH,MIN-HALF_WIDTH-startPos-Number.MIN_VALUE,MIN-HALF_WIDTH-startPos,0,MAX+HALF_WIDTH-startPos,MAX+HALF_WIDTH-startPos+Number.MIN_VALUE,TOTAL_WIDTH];const outputRange=[startPos,MAX+HALF_WIDTH-Number.MIN_VALUE,MIN-HALF_WIDTH,startPos,MAX+HALF_WIDTH,MIN-HALF_WIDTH+Number.MIN_VALUE,startPos];return interpolate(handlerOffset.value,inputRange,outputRange,Extrapolation.CLAMP);}return handlerOffset.value+size*index;}return Number.MAX_SAFE_INTEGER;}" };
 
-export const PaginationItem = (animValue) => {
-  const iter = animValue.animValue;
-  const dotStyle = animValue.dotStyle;
-  const activeDotStyle = animValue.activeDotStyle;
-  const index = animValue.index;
-  const count = animValue.count;
-  let size = animValue.size;
-  ({ horizontal, customReanimatedStyle } = animValue);
-  const accessibilityLabel = animValue.accessibilityLabel;
-  ({ children, onPress } = animValue);
-  let obj = iter(activeDotStyle[4]);
-  const sharedValue = obj.useSharedValue({});
-  function handleCustomAnimation(arg0) {
-    let obj;
-    if (customReanimatedStyle != null) {
-      obj = tmp2(arg0, index, count);
-    }
-    if (obj == null) {
-      obj = {};
-    }
-    sharedValue.value = obj;
+export const useOffsetX = (handlerOffset, visibleRanges) => {
+  _require = visibleRanges;
+  handlerOffset = handlerOffset.handlerOffset;
+  const index = handlerOffset.index;
+  const size = handlerOffset.size;
+  const loop = handlerOffset.loop;
+  ({ dataLength, type } = handlerOffset);
+  let str = "positive";
+  if (undefined !== type) {
+    str = type;
   }
-  let obj1 = iter(activeDotStyle[4]);
-  const fn = function _() {
-    value = undefined;
-    if (iter != null) {
-      value = iter.value;
-    }
-    cancelAnimation.runOnJS(handleCustomAnimation)(value);
-  };
-  obj = { runOnJS: iter(activeDotStyle[4]).runOnJS, handleCustomAnimation, animValue: iter };
-  fn.__closure = obj;
-  fn.__workletHash = 10388501491479;
-  fn.__initData = handleCustomAnimation;
-  const derivedValue = obj1.useDerivedValue(fn);
-  let obj3 = iter(activeDotStyle[4]);
-  const fn2 = function k() {
-    size = dotStyle;
-    if (dotStyle == null) {
-      size = {};
-    }
-    let width = size.width;
-    if (undefined === width) {
-      let num = size;
-      if (!size) {
-        num = 10;
-      }
-      width = num;
-    }
-    let height = size.height;
-    if (undefined === height) {
-      let num2 = size;
-      if (!size) {
-        num2 = 10;
-      }
-      height = num2;
-    }
-    ({ borderRadius, backgroundColor } = size);
-    let str = "#FFF";
-    if (undefined !== backgroundColor) {
-      str = backgroundColor;
-    }
-    let obj = _objectWithoutProperties(size, closure_3);
-    let size2 = activeDotStyle;
-    if (activeDotStyle == null) {
-      size2 = {};
-    }
-    let width2 = size2.width;
-    if (undefined === width2) {
-      width2 = width;
-    }
-    let height2 = size2.height;
-    if (undefined === height2) {
-      height2 = height;
-    }
-    ({ borderRadius: borderRadius2, backgroundColor: backgroundColor2 } = size2);
-    let str2 = "#000";
-    if (undefined !== backgroundColor2) {
-      str2 = backgroundColor2;
-    }
-    value = undefined;
-    if (iter != null) {
-      value = iter.value;
-    }
-    let absolute = Math.abs(value - index);
-    let tmp5 = 0 === index;
-    if (tmp5) {
-      value = undefined;
-      if (iter != null) {
-        value = iter.value;
-      }
-      tmp5 = value > count - 1;
-    }
-    if (tmp5) {
-      let value1;
-      if (iter != null) {
-        value1 = iter.value;
-      }
-      absolute = Math.abs(value1 - count);
-    }
-    if (0 === absolute) {
-      obj = tmpResult;
-    }
-    if (obj == null) {
-      obj = {};
-    }
-    const items = [0, 1, 2];
-    size = { width: null, height: null, borderRadius: null, backgroundColor: null };
-    tmpResult = _objectWithoutProperties(size2, closure_4);
-    const items1 = [width2, width, width];
-    size.width = cancelAnimation.interpolate(absolute, items, items1, cancelAnimation.Extrapolation.CLAMP);
-    const items2 = [height2, height, height];
-    size.height = cancelAnimation.interpolate(absolute, items, items2, cancelAnimation.Extrapolation.CLAMP);
-    if (borderRadius2 == null) {
-      borderRadius2 = borderRadius;
-    }
-    if (borderRadius2 == null) {
-      borderRadius2 = 0;
-    }
-    const items3 = [borderRadius2, , ];
-    let num4 = borderRadius;
-    if (borderRadius == null) {
-      num4 = 0;
-    }
-    items3[1] = num4;
-    if (borderRadius == null) {
-      borderRadius = 0;
-    }
-    items3[2] = borderRadius;
-    size.borderRadius = cancelAnimation.interpolate(absolute, items, items3, cancelAnimation.Extrapolation.CLAMP);
-    const items4 = [str2, str, str];
-    size.backgroundColor = cancelAnimation.interpolateColor(absolute, items, items4);
-    const merged = Object.assign(obj);
-    value2 = sharedValue.value;
-    if (value2 == null) {
-      value2 = {};
-    }
-    const merged1 = Object.assign(value2);
-    let transform;
-    if (obj != null) {
-      transform = obj.transform;
-    }
-    if (transform == null) {
-      transform = [];
-    }
-    const items5 = [...transform];
-    value = sharedValue.value;
-    let transform1;
-    if (value != null) {
-      transform1 = value.transform;
-    }
-    if (transform1 == null) {
-      transform1 = [];
-    }
-    HermesBuiltin.arraySpread(transform1, tmp14);
-    size.transform = items5;
-    return size;
-  };
-  obj = { size, defaultDotSize: 10, dotStyle, activeDotStyle, animValue: iter, index, count, interpolate: iter(activeDotStyle[4]).interpolate, Extrapolation: iter(activeDotStyle[4]).Extrapolation, interpolateColor: iter(activeDotStyle[4]).interpolateColor, customReanimatedStyleRef: sharedValue };
-  fn2.__closure = obj;
-  fn2.__workletHash = 8302907289230;
-  fn2.__initData = __initData;
-  let items = [iter, index, count, horizontal, dotStyle, activeDotStyle, customReanimatedStyle];
-  obj1 = { onPress, accessibilityLabel, accessibilityRole: "button", accessibilityHint: null, accessibilityState: null, children: null };
-  let str = "";
-  const animatedStyle = obj3.useAnimatedStyle(fn2, items);
-  if (iter.value !== index) {
-    const _HermesInternal = HermesInternal;
-    str = "Go to " + accessibilityLabel;
+  let viewCount = handlerOffset.viewCount;
+  let diff = dataLength - 1;
+  const result = size * dataLength;
+  closure_5 = result;
+  const result1 = 0.5 * size;
+  if (viewCount == null) {
+    const _Math = Math;
+    viewCount = Math.round((dataLength - 1) / 2);
   }
-  obj1.accessibilityHint = str;
-  obj1.accessibilityState = { selected: iter.value === index };
-  let str3 = "0deg";
-  if (horizontal) {
-    str3 = "90deg";
+  let diff1 = viewCount;
+  if ("positive" !== str) {
+    diff1 = diff - viewCount;
   }
-  const obj2 = { style: null, children };
-  obj3 = { overflow: "hidden", transform: null };
-  let items1 = [{ rotateZ: str3 }];
-  obj3.transform = items1;
-  let items2 = [obj3, dotStyle, animatedStyle];
-  obj2.style = items2;
-  obj1.children = sharedValue(dotStyle(activeDotStyle[4]).View, obj2);
-  return sharedValue(customReanimatedStyle, obj1);
+  let result2 = size * index;
+  let result3 = result2;
+  if (index > diff1) {
+    result3 = (index - dataLength) * size;
+    result2 = result3;
+  }
+  const result4 = diff1 * size;
+  const result5 = -diff - diff1 * size;
+  let obj = require("cancelAnimation");
+  class R {
+    constructor() {
+      ({ negativeRange, positiveRange } = closure_0.value);
+      tmp = index;
+      if (index < negativeRange[0]) {
+        if (tmp >= positiveRange[0]) {
+        }
+        tmp2 = globalThis;
+        _Number = Number;
+        return Number.MAX_SAFE_INTEGER;
+      }
+      if (loop) {
+        tmp5 = closure_5;
+        items = [, , , , , , ];
+        items[0] = -closure_5;
+        tmp6 = closure_9;
+        tmp7 = closure_6;
+        diff = closure_9 - closure_6;
+        tmp9 = closure_7;
+        tmp10 = globalThis;
+        _Number2 = Number;
+        items[1] = diff - closure_7 - Number.MIN_VALUE;
+        items[2] = diff - closure_7;
+        num = 0;
+        items[3] = 0;
+        tmp11 = closure_8;
+        items[4] = closure_8 + closure_6 - closure_7;
+        _Number3 = Number;
+        items[5] = closure_8 + closure_6 - closure_7 + Number.MIN_VALUE;
+        items[6] = closure_5;
+        items1 = [, , , , , , ];
+        items1[0] = closure_7;
+        _Number4 = Number;
+        items1[1] = closure_8 + closure_6 - Number.MIN_VALUE;
+        items1[2] = diff;
+        items1[3] = closure_7;
+        items1[4] = closure_8 + closure_6;
+        _Number5 = Number;
+        items1[5] = diff + Number.MIN_VALUE;
+        items1[6] = closure_7;
+        tmp12 = closure_0;
+        tmp13 = closure_1;
+        obj = closure_0(closure_1[0]);
+        tmp14 = handlerOffset;
+        value = handlerOffset.value;
+        tmp15 = obj;
+        tmp16 = value;
+        tmp17 = items;
+        tmp18 = items1;
+        return obj.interpolate(value, items, items1, closure_0(closure_1[0]).Extrapolation.CLAMP);
+      } else {
+        tmp3 = handlerOffset;
+        tmp4 = size;
+        return handlerOffset.value + size * tmp;
+      }
+    }
+  }
+  obj = { visibleRanges, index, loop, TOTAL_WIDTH: result, MIN: result5, HALF_WIDTH: result1, startPos: result2, MAX: result4, interpolate: require("cancelAnimation").interpolate, handlerOffset, Extrapolation: require("cancelAnimation").Extrapolation, size };
+  R.__closure = obj;
+  R.__workletHash = 6313251538875;
+  R.__initData = index;
+  let items = [loop, dataLength, viewCount, str, size, visibleRanges, handlerOffset];
+  return obj.useDerivedValue(R, items);
 };

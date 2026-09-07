@@ -81,8 +81,8 @@ fn = function n(userConfig, fn) {
       initialVelocity: 0,
       current: "disabled",
       lastTimestamp: null,
-      startTimestamp: "ex",
-      reduceMotion: "is"
+      startTimestamp: "M10 5H9v1h1V5ZM11 4h-1v1h1V4Z",
+      reduceMotion: null
     };
     let num = obj.velocity;
     if (num == null) {

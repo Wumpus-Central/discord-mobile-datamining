@@ -1,5 +1,22 @@
 // === Module 14018: ? ===
 
 // Module 14018
+import _mod14019 from "module_14019" /* 14019 */;
 
-export default { MAX_LENGTH: 256, MAX_SAFE_COMPONENT_LENGTH: 16, MAX_SAFE_BUILD_LENGTH: 250, MAX_SAFE_INTEGER: Number.MAX_SAFE_INTEGER || 9007199254740991, RELEASE_TYPES: ["major", "premajor", "minor", "preminor", "patch", "prepatch", "prerelease"], SEMVER_SPEC_VERSION: "2.0.0", FLAG_INCLUDE_PRERELEASE: 1, FLAG_LOOSE: 2 };
+
+export default (arg0, arg1) => {
+  if (arg0 instanceof _mod14019) {
+    return arg0;
+  } else {
+    try {
+      const tmp8 = new _mod14019(arg0, arg1);
+      return tmp8;
+    } catch (tmp10) {
+      if (tmp) {
+        throw tmp10;
+      } else {
+        return null;
+      }
+    }
+  }
+};

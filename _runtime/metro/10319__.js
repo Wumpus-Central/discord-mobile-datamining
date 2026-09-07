@@ -4,4 +4,4 @@
 import registerAsset from "module_1122" /* 1122 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Illustration/native/redesign/generated/images", width: 120, height: 96, scales: [2, 3], hash: "f9c127df442a3e2592e404fc380b1a52", name: "img_search_empty_darker", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/premium/nitro_icons", width: 16, height: 16, scales: [2, 3], hash: "e31ee2ef368806b54cff2e8c81e8cd97", name: "img_nitro_icon_filled", type: "png" });

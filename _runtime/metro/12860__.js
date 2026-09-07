@@ -1,134 +1,286 @@
 // === Module 12860: ? ===
 
 // Module 12860
-import _mod12797 from "module_12797" /* 12797 */;
-import _mod12821 from "module_12821" /* 12821 */;
-import _mod12825 from "module_12825" /* 12825 */;
-import _mod12841 from "module_12841" /* 12841 */;
-import _mod12854 from "module_12854" /* 12854 */;
-import _mod12862 from "module_12862" /* 12862 */;
+import _possibleConstructorReturn from "_possibleConstructorReturn" /* 93 */;
+import _mod12856 from "module_12856" /* 12856 */;
+import _slicedToArray from "module_32" /* 32 */;
+import _classCallCheck from "_classCallCheck" /* 41 */;
+import _createClass from "_createClass" /* 42 */;
+import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
+import _get from "_get" /* 96 */;
+import _inherits from "_inherits" /* 98 */;
+import __SENTRY_DEBUG__ from "module_12800" /* 12800 */;
+import dateTimestampInSeconds from "module_12815" /* 12815 */;
 
-require = arg1;
-let dependencyMap = arg6;
-
-export const DEFAULT_TRANSPORT_BUFFER_SIZE = 64;
-export const createTransport = function createTransport(bufferSize, arg1) {
-  _require = bufferSize;
-  dependencyMap = arg1;
-  let promiseBuffer = arg2;
-  if (arg2 === undefined) {
-    let obj = require("module_12861");
-    let num = bufferSize.bufferSize;
-    if (!num) {
-      num = 64;
+const ServerRuntimeClient = require;
+function _isNativeReflectConstruct() {
+  try {
+    const _Boolean = Boolean;
+    const call = valueOf.call;
+    const _Reflect = Reflect;
+    const _Boolean2 = Boolean;
+    if (typeof call === "unknown") {
+      let callResult = valueOf();
+    } else {
+      callResult = call(constructResult);
     }
-    promiseBuffer = obj.makePromiseBuffer(num);
+    closure_0 = !callResult;
+    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
+      return closure_0;
+    };
+    return _isNativeReflectConstruct();
+  } catch (err) {
   }
-  closure_3 = {};
-  obj = {
-    send(arg0) {
-      const items = [];
-      bufferSize(dependencyMap[1]).forEachEnvelopeItem(arg0, (arg0, arg1) => {
-        const result = _mod12841.envelopeItemTypeToDataCategory(arg1);
-        if (obj2.isRateLimited(closure_3, result)) {
-          if ("event" === arg1) {
-            const _Array = Array;
-            let tmp6;
-            if (Array.isArray(arg0)) {
-              tmp6 = arg0[1];
-            }
-            const tmp4 = tmp6;
-          }
-          items.recordDroppedEvent("ratelimit_backoff", result, tmp4);
-        } else {
-          items.push(arg0);
-        }
-        obj2 = _mod12862;
-      });
-      if (0 === items.length) {
-        let tmpResult = bufferSize(tmp2[3]);
-        return tmpResult.resolvedSyncPromise({});
-      } else {
-        tmpResult = bufferSize(tmp2[1]);
-        dependencyMap = tmpResult.createEnvelope(arg0[0], items);
-        function recordEnvelopeLoss(arg0) {
-
-        }
-        return recordEnvelopeLoss.add(() => {
-          const obj = { body: _mod12841.serializeEnvelope(dependencyMap) };
-          return dependencyMap(obj).then((statusCode) => {
-            let DEBUG_BUILD = undefined !== statusCode.statusCode;
-            if (DEBUG_BUILD) {
-              let tmp = statusCode.statusCode < 200;
-              if (!tmp) {
-                tmp = statusCode.statusCode >= 300;
-              }
-              DEBUG_BUILD = tmp;
-            }
-            if (DEBUG_BUILD) {
-              DEBUG_BUILD = items(12825).DEBUG_BUILD;
-            }
-            if (DEBUG_BUILD) {
-              const logger = items(12797).logger;
-              const _HermesInternal = HermesInternal;
-              logger.warn("Sentry responded with status code " + statusCode.statusCode + " to sent event.");
-            }
-            closure_3 = items(12862).updateRateLimits(closure_3, statusCode);
-            return statusCode;
-          }, (arg0) => {
-            if (typeof recordEnvelopeLoss === "function") {
-              const network_error = "network_error";
-              closure_0(12841).forEachEnvelopeItem(dependencyMap, (arg0, arg1) => {
-                if ("event" === arg1) {
-                  const _Array = Array;
-                  let tmp4;
-                  if (Array.isArray(arg0)) {
-                    tmp4 = arg0[1];
-                  }
-                  const tmp = tmp4;
-                }
-                closure_2_0.recordDroppedEvent(network_error, items(closure_1[1]).envelopeItemTypeToDataCategory(arg1), tmp);
-              });
-              throw arg0;
-            } else {
-              throw new TypeError("Trying to call a non-function");
-            }
-          });
-        }).then((result) => result, (arg0) => {
-          if (arg0 instanceof _mod12854.SentryError) {
-            if (_mod12825.DEBUG_BUILD) {
-              const logger = _mod12797.logger;
-              logger.error("Skipped sending event because buffer is full.");
-            }
-            if (typeof recordEnvelopeLoss === "function") {
-              const queue_overflow = "queue_overflow";
-              let tmpResult = _mod12841;
-              tmpResult.forEachEnvelopeItem(closure_1, (arg0, arg1) => {
-                if ("event" === arg1) {
-                  const _Array = Array;
-                  let tmp4;
-                  if (Array.isArray(arg0)) {
-                    tmp4 = arg0[1];
-                  }
-                  const tmp = tmp4;
-                }
-                closure_2_0.recordDroppedEvent(network_error, items(closure_1[1]).envelopeItemTypeToDataCategory(arg1), tmp);
-              });
-              tmpResult = _mod12821;
-              return tmpResult.resolvedSyncPromise({});
-            } else {
-              throw new TypeError("Trying to call a non-function");
-            }
-          } else {
-            throw arg0;
-          }
-        });
-      }
-      let obj = bufferSize(dependencyMap[1]);
-    },
-    flush(arg0) {
-      return promiseBuffer.drain(arg0);
+}
+_possibleConstructorReturn;
+class ServerRuntimeClient {
+  constructor(arg0) {
+    self = this;
+    tmp = closure_3(this, ServerRuntimeClient);
+    obj = closure_0(closure_1[9]);
+    result = obj.registerSpanErrorInstrumentation();
+    items = [];
+    items[0] = global;
+    tmp3 = hasOwnProperty;
+    obj2 = hasOwnProperty(ServerRuntimeClient);
+    tmp4 = closure_4;
+    if (closure_7()) {
+      tmp6 = globalThis;
+      _Reflect = Reflect;
+      constructResult = Reflect.construct(obj2, items, tmp3(self).constructor);
+    } else {
+      constructResult = obj2.apply(self, items);
     }
-  };
-  return obj;
+    return tmp4(self, constructResult);
+  }
+}
+_inherits(ServerRuntimeClient, _mod12856.BaseClient);
+const entry = {
+  key: "eventFromException",
+  value: function eventFromException(arg0, arg1) {
+    const result = ServerRuntimeClient(12861).eventFromUnknownInput(this, this._options.stackParser, arg0, arg1);
+    result.level = "error";
+    const obj = ServerRuntimeClient(12861);
+    return ServerRuntimeClient(12825).resolvedSyncPromise(result);
+  }
 };
+let items = [
+  entry,
+  {
+    key: "eventFromMessage",
+    value: function eventFromMessage(arg0) {
+      let str = arg1;
+      if (arg1 === undefined) {
+        str = "info";
+      }
+      const obj = ServerRuntimeClient(12825);
+      return obj.resolvedSyncPromise(ServerRuntimeClient(12861).eventFromMessage(this._options.stackParser, arg0, str, arg2, this._options.attachStacktrace));
+    }
+  },
+  {
+    key: "captureException",
+    value: function captureException(arg0, arg1, arg2) {
+      const self = this;
+      if (this._options.autoSessionTracking) {
+        if (self._sessionFlusher) {
+          const isolationScope = ServerRuntimeClient(12828).getIsolationScope();
+          const requestSession = isolationScope.getRequestSession();
+          let tmp4 = requestSession;
+          if (requestSession) {
+            tmp4 = "ok" === requestSession.status;
+          }
+          if (tmp4) {
+            requestSession.status = "errored";
+          }
+          const obj = ServerRuntimeClient(12828);
+        }
+      }
+      let fn = metroRequire(hasOwnProperty(ServerRuntimeClient.prototype), "captureException", self);
+      if (typeof fn === "function") {
+        fn = (items) => fn.apply(self, items);
+      }
+      const items = [arg0, arg1, arg2];
+      return fn(items);
+    }
+  },
+  {
+    key: "captureEvent",
+    value: function captureEvent(type, arg1, arg2) {
+      const self = this;
+      if (this._options.autoSessionTracking) {
+        if (self._sessionFlusher) {
+          if ("exception" === tmp) {
+            if (type.exception) {
+              if (type.exception.values) {
+                if (type.exception.values.length > 0) {
+                  const isolationScope = ServerRuntimeClient(12828).getIsolationScope();
+                  const requestSession = isolationScope.getRequestSession();
+                  let tmp5 = requestSession;
+                  if (requestSession) {
+                    tmp5 = "ok" === requestSession.status;
+                  }
+                  if (tmp5) {
+                    requestSession.status = "errored";
+                  }
+                  const obj = ServerRuntimeClient(12828);
+                }
+              }
+            }
+          }
+          tmp = type.type || "exception";
+        }
+      }
+      let fn = metroRequire(hasOwnProperty(ServerRuntimeClient.prototype), "captureEvent", self);
+      if (typeof fn === "function") {
+        fn = (items) => fn.apply(self, items);
+      }
+      const items = [type, arg1, arg2];
+      return fn(items);
+    }
+  },
+  {
+    key: "close",
+    value: function close(arg0) {
+      const self = this;
+      if (this._sessionFlusher) {
+        const _sessionFlusher = self._sessionFlusher;
+        _sessionFlusher.close();
+      }
+      let fn = metroRequire(hasOwnProperty(ServerRuntimeClient.prototype), "close", self);
+      if (typeof fn === "function") {
+        fn = (items) => fn.apply(self, items);
+      }
+      const items = [arg0];
+      return fn(items);
+    }
+  },
+  {
+    key: "initSessionFlusher",
+    value: function initSessionFlusher() {
+      const self = this;
+      const release = this._options.release;
+      if (release) {
+        const obj = { release, environment: tmp };
+        const sessionFlusher = new ServerRuntimeClient(12854).SessionFlusher(self, obj);
+        self._sessionFlusher = sessionFlusher;
+      } else if (ServerRuntimeClient(12829).DEBUG_BUILD) {
+        const logger = ServerRuntimeClient(12801).logger;
+        logger.warn("Cannot initialize an instance of SessionFlusher if no release is provided!");
+      }
+    }
+  },
+  {
+    key: "captureCheckIn",
+    value: function captureCheckIn(checkInId, arg1, arg2) {
+      if ("checkInId" in checkInId) {
+        if (checkInId.checkInId) {
+          checkInId = checkInId.checkInId;
+        }
+        const self = this;
+        if (this._isEnabled()) {
+          const options = self.getOptions();
+          const tunnel = options.tunnel;
+          let obj = { check_in_id: checkInId, monitor_slug: null, status: null, release: null, environment: null };
+          ({ monitorSlug: obj2.monitor_slug, status: obj2.status } = checkInId);
+          ({ release: obj2.release, environment: obj2.environment } = options);
+          if ("duration" in checkInId) {
+            obj.duration = checkInId.duration;
+          }
+          if (arg1) {
+            obj = { schedule: null, checkin_margin: null, max_runtime: null, timezone: null, failure_issue_threshold: null, recovery_threshold: null };
+            ({ schedule: obj3.schedule, checkinMargin: obj3.checkin_margin, maxRuntime: obj3.max_runtime, timezone: obj3.timezone, failureIssueThreshold: obj3.failure_issue_threshold, recoveryThreshold: obj3.recovery_threshold } = arg1);
+            obj.monitor_config = obj;
+          }
+          [tmp9, tmp10] = _slicedToArray(self._getTraceInfoFromScope(arg2), 2);
+          if (tmp10) {
+            const obj1 = { trace: tmp10 };
+            obj.contexts = obj1;
+          }
+          const obj5 = ServerRuntimeClient(12862);
+          const sdkMetadata = self.getSdkMetadata();
+          const checkInEnvelope = obj5.createCheckInEnvelope(obj, tmp9, sdkMetadata, tunnel, self.getDsn());
+          if (ServerRuntimeClient(12829).DEBUG_BUILD) {
+            const logger2 = ServerRuntimeClient(12801).logger;
+            logger2.info("Sending checkin:", checkInId.monitorSlug, checkInId.status);
+          }
+          self.sendEnvelope(checkInEnvelope);
+          return checkInId;
+        } else {
+          if (ServerRuntimeClient(12829).DEBUG_BUILD) {
+            const logger = ServerRuntimeClient(12801).logger;
+            logger.warn("SDK not enabled, will not capture checkin.");
+          }
+          return checkInId;
+        }
+      }
+      obj = ServerRuntimeClient(12812);
+      checkInId = obj.uuid4();
+    }
+  },
+  {
+    key: "_captureRequestSession",
+    value: function _captureRequestSession() {
+      if (this._sessionFlusher) {
+        const _sessionFlusher = this._sessionFlusher;
+        const result = _sessionFlusher.incrementSessionStatusCount();
+      } else if (ServerRuntimeClient(12829).DEBUG_BUILD) {
+        const logger = ServerRuntimeClient(12801).logger;
+        logger.warn("Discarded request mode session because autoSessionTracking option was disabled");
+      }
+    }
+  },
+  {
+    key: "_prepareEvent",
+    value: function _prepareEvent(platform, arg1, arg2, arg3) {
+      const self = this;
+      if (this._options.platform) {
+        platform.platform = platform.platform || self._options.platform;
+      }
+      if (self._options.runtime) {
+        const obj = {};
+        const merged = Object.assign(platform.contexts);
+        obj.runtime = platform.contexts || {}.runtime || self._options.runtime;
+        platform.contexts = obj;
+        const tmp3 = platform.contexts || {};
+      }
+      if (self._options.serverName) {
+        platform.server_name = platform.server_name || self._options.serverName;
+      }
+      let fn = metroRequire(hasOwnProperty(ServerRuntimeClient.prototype), "_prepareEvent", self);
+      if (typeof fn === "function") {
+        fn = (items) => fn.apply(self, items);
+      }
+      const items = [platform, arg1, arg2, arg3];
+      return fn(items);
+    }
+  },
+  {
+    key: "_getTraceInfoFromScope",
+    value: function _getTraceInfoFromScope(arg0) {
+      if (arg0) {
+        const _getSpanForScopeResult = ServerRuntimeClient(12823)._getSpanForScope(arg0);
+        if (_getSpanForScopeResult) {
+          let tmpResult = ServerRuntimeClient(12806);
+          let spanToTraceContextResult = tmpResult.spanToTraceContext(_getSpanForScopeResult);
+        } else {
+          tmpResult = ServerRuntimeClient(12828);
+          spanToTraceContextResult = tmpResult.getTraceContextFromScope(arg0);
+        }
+        const tmpResult1 = ServerRuntimeClient(12837);
+        if (_getSpanForScopeResult) {
+          let dynamicSamplingContextFromSpan = tmpResult1.getDynamicSamplingContextFromSpan(_getSpanForScopeResult);
+        } else {
+          const self = this;
+          dynamicSamplingContextFromSpan = tmpResult1.getDynamicSamplingContextFromScope(this, arg0);
+        }
+        const items = [dynamicSamplingContextFromSpan, spanToTraceContextResult];
+        return items;
+      } else {
+        const items1 = [undefined, undefined];
+        return items1;
+      }
+    }
+  }
+];
+
+export const ServerRuntimeClient = _createClass(ServerRuntimeClient, items);

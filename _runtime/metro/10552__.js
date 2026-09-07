@@ -1,76 +1,41 @@
 // === Module 10552: ? ===
 
 // Module 10552
-import _possibleConstructorReturn from "_possibleConstructorReturn" /* 93 */;
-import _mod10450 from "module_10450" /* 10450 */;
-import _classCallCheck from "_classCallCheck" /* 41 */;
-import _createClass from "_createClass" /* 42 */;
-import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
-import _inherits from "_inherits" /* 98 */;
+const exports = arg5;
 
-function _isNativeReflectConstruct() {
-  try {
-    const _Boolean = Boolean;
-    const call = valueOf.call;
-    const _Reflect = Reflect;
-    const _Boolean2 = Boolean;
-    if (typeof call === "unknown") {
-      let callResult = valueOf();
-    } else {
-      callResult = call(constructResult);
+export const zhStringToNumber = function zhStringToNumber(arg0) {
+  let num = 0;
+  let num2 = 0;
+  let num3 = 0;
+  if (0 < arg0.length) {
+    while ("\u5341" !== arg0[num]) {
+      let sum = num2 + exports.NUMBER[tmp];
+      num = num + 1;
+      num2 = sum;
+      num3 = sum;
     }
-    closure_0 = !callResult;
-    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
-      return closure_0;
-    };
-    return _isNativeReflectConstruct();
-  } catch (err) {
-  }
-}
-_possibleConstructorReturn;
-let fn = this;
-if (this) {
-  fn = this.__importDefault;
-}
-if (!fn) {
-  fn = (__esModule) => {
-    if (!__esModule) {
-      const obj = { default: __esModule };
-      let tmp = obj;
+    if (0 === num2) {
+      let result = exports.NUMBER[tmp];
     } else {
-      tmp = __esModule;
+      result = num2 * exports.NUMBER[tmp];
     }
-    return tmp;
-  };
-}
-class ZHHantMergeDateRangeRefiner {
-  constructor() {
-    self = this;
-    tmp = closure_0(this, ZHHantMergeDateRangeRefiner);
-    tmp2 = c2;
-    obj = c2(ZHHantMergeDateRangeRefiner);
-    tmp3 = closure_1;
-    if (closure_3()) {
-      tmp7 = globalThis;
-      _Reflect = Reflect;
-      tmp8 = arguments;
-      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
-    } else {
-      tmp4 = arguments;
-      tmp5 = arguments;
-      constructResult = obj(...arguments);
-    }
-    return tmp3(self, constructResult);
   }
-}
-_classCallCheck = ZHHantMergeDateRangeRefiner;
-_inherits(ZHHantMergeDateRangeRefiner, fn(_mod10450).default);
-const entry = {
-  key: "patternBetween",
-  value: function patternBetween() {
-    return /^\s*(至|到|\-|\~|～|－|ー)\s*$/i;
-  }
+  return num3;
 };
-const items = [entry];
-
-export default _createClass(ZHHantMergeDateRangeRefiner, items);
+export const zhStringToYear = function zhStringToYear(arg0) {
+  let length;
+  let num = 0;
+  let str = "";
+  let str2 = "";
+  if (0 < arg0.length) {
+    do {
+      str = `${exports.NUMBER[arg0[num]]}`;
+      num = num + 1;
+      str2 = str;
+      length = arg0.length;
+    } while (num < length);
+  }
+  return parseInt(str2);
+};
+export const NUMBER = { "零": 0, "一": 1, "二": 2, "兩": 2, "三": 3, "四": 4, "五": 5, "六": 6, "七": 7, "八": 8, "九": 9, "十": 10, "廿": 20, "卅": 30 };
+export const WEEKDAY_OFFSET = { "天": 0, "日": 0, "一": 1, "二": 2, "三": 3, "四": 4, "五": 5, "六": 6 };

@@ -1,7 +1,7 @@
 // === Module 8544: ? ===
 
 // Module 8544
-import _modDef8477 from "module_8477" /* 8477 */;
+import _modDef8480 from "module_8480" /* 8480 */;
 import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
 import c3 from "_possibleConstructorReturn" /* 93 */;
@@ -9,7 +9,7 @@ import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
 import noop from "module_19" /* 19 */;
 
-const RadialGradient = importDefault;
+const Polygon = importDefault;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -30,69 +30,59 @@ function _isNativeReflectConstruct() {
   }
 }
 const jsx = fn(21).jsx;
-class RadialGradient {
+class Polygon {
   constructor() {
     self = this;
-    tmp = c2(this, RadialGradient);
+    items = [...arguments];
+    closure_0 = undefined;
+    tmp = c2(this, Polygon);
+    items1 = [...items];
     tmp2 = closure_4;
-    obj = closure_4(RadialGradient);
+    obj = closure_4(Polygon);
     tmp3 = closure_3;
     if (metroRequire()) {
-      tmp7 = globalThis;
+      tmp5 = globalThis;
       _Reflect = Reflect;
-      tmp8 = arguments;
-      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
+      constructResult = Reflect.construct(obj, items1, tmp2(self).constructor);
     } else {
-      tmp4 = arguments;
-      tmp5 = arguments;
-      constructResult = obj(...arguments);
+      constructResult = obj.apply(self, items1);
     }
-    return tmp3(self, constructResult);
+    tmp3Result = tmp3(self, constructResult);
+    closure_0 = tmp3Result;
+    tmp3Result.setNativeProps = (points) => {
+      points = points.points;
+      if (points) {
+        const _HermesInternal = HermesInternal;
+        points.d = "M" + Polygon(8545)(points) + "z";
+      }
+      if (closure_0.root) {
+        const root = closure_0.root;
+        root.setNativeProps(points);
+      }
+    };
+    return tmp3Result;
   }
 }
-_inherits(RadialGradient, _modDef8477);
+_inherits(Polygon, _modDef8480);
 const entry = {
   key: "render",
   value: function render() {
-    const self = this;
     const props = this.props;
-    ({ rx, ry, r, cx, cy, fx } = props);
-    if (undefined === fx) {
-      fx = cx;
+    const points = props.points;
+    const obj = { ref: this.refMethod, d: null };
+    let combined = points;
+    if (points) {
+      const _HermesInternal = HermesInternal;
+      combined = "M" + Polygon(8545)(points) + "z";
     }
-    let fy = props.fy;
-    let obj = { fx, fy: null, rx: null, ry: null, cx: null, cy: null };
-    if (undefined === fy) {
-      fy = cy;
-    }
-    obj.fy = fy;
-    if (!rx) {
-      rx = r;
-    }
-    obj.rx = rx;
-    if (!ry) {
-      ry = r;
-    }
-    obj.ry = ry;
-    obj.cx = cx;
-    obj.cy = cy;
-    obj = {
-      ref(arg0) {
-        return self.refMethod(arg0);
-      }
-    };
-    const merged = Object.assign(obj);
-    const merged1 = Object.assign(RadialGradient(8530)(props, this));
-    return jsx(RadialGradient(8545), {
-      ref(arg0) {
-        return self.refMethod(arg0);
-      }
-    });
+    obj.d = combined;
+    const merged = Object.assign(props);
+    return jsx(Polygon(8540), { ref: this.refMethod, d: null });
   }
 };
-const items = [entry];
-const importDefaultResultResult = _createClass(RadialGradient, items);
-importDefaultResultResult.displayName = "RadialGradient";
-importDefaultResultResult.defaultProps = { cx: "50%", cy: "50%", r: "50%" };
+let items = [entry];
+const importDefaultResultResult = _createClass(Polygon, items);
+importDefaultResultResult.displayName = "Polygon";
+importDefaultResultResult.defaultProps = { points: "" };
 
 export default importDefaultResultResult;

@@ -1,133 +1,135 @@
 // === Module 14429: ? ===
 
 // Module 14429
-import _possibleConstructorReturn from "_possibleConstructorReturn" /* 93 */;
-import _classCallCheck from "_classCallCheck" /* 41 */;
-import _createClass from "_createClass" /* 42 */;
-import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
-import _inherits from "_inherits" /* 98 */;
-import noop from "module_19" /* 19 */;
-import get_ActivityIndicator from "module_17" /* 17 */;
-import jsxProd from "jsxProd" /* 21 */;
+import _slicedToArray from "module_32" /* 32 */;
 
-function _isNativeReflectConstruct() {
-  try {
-    const _Boolean = Boolean;
-    const call = valueOf.call;
-    const _Reflect = Reflect;
-    const _Boolean2 = Boolean;
-    if (typeof call === "unknown") {
-      let callResult = valueOf();
-    } else {
-      callResult = call(constructResult);
-    }
-    closure_0 = !callResult;
-    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
-      return closure_0;
-    };
-    return _isNativeReflectConstruct();
-  } catch (err) {
+const re3 = /^(image)\/.*$/i;
+let closure_4 = {};
+
+export default () => {
+  if (arg0 === undefined) {
+    let obj = {};
   }
-}
-_possibleConstructorReturn;
-if (typeof WeakMap === "function") {
-  const _WeakMap = WeakMap;
-  const weakMap = new WeakMap();
-  const _WeakMap2 = WeakMap;
-  const weakMap1 = new WeakMap();
-}
-if (!noop) {
-  const merged = Object.assign({ default: null });
-  merged[0] = noop;
-  let value = merged;
-  if (null !== noop) {
-    if (typeof noop === "object") {
-      if (!weakMap) {
-        value = merged;
-        const keys = Object.keys();
-        if (keys !== undefined) {
-          value = merged;
-          while (keys[tmp] !== undefined) {
-            let tmp22 = "default" !== tmp12;
-            if (!tmp22) {
-              if (!tmp22) {
-                continue;
-              } else {
-                let _Object = Object;
-                let ownPropertyDescriptor = defineProperty;
-                if (defineProperty) {
-                  let _Object2 = Object;
-                  ownPropertyDescriptor = Object.getOwnPropertyDescriptor(noop, tmp12);
-                }
-                if (!ownPropertyDescriptor) {
-                  merged[tmp12] = noop[tmp12];
-                  continue;
-                } else {
-                  let definePropertyResult1 = defineProperty(merged, tmp12, ownPropertyDescriptor);
-                  continue;
-                }
-                continue;
-              }
-              continue;
-            } else {
-              let hasOwnProperty = {}.hasOwnProperty;
-              let call = hasOwnProperty.call;
-              let tmp13 = typeof call === "unknown" ? hasOwnProperty(tmp12) : call(noop, tmp12);
+  return (arg0) => {
+    closure_0 = arg0;
+    function onSend(data, _url) {
+      if (merged.ignoreUrls) {
+        const ignoreUrls = merged.ignoreUrls;
+        if (ignoreUrls.test(_url._url)) {
+          _url._skipReactotron = true;
+        }
+      }
+      const sum = c3 + 1;
+      c3 = sum;
+      _url._trackingName = sum;
+      closure_4[c3] = { data, xhr: _url, stopTimer: closure_0.startTimer() };
+    }
+    function onResponse(status, arg1, _bodyBlob, arg3, arg4, _skipReactotron) {
+      closure_1 = _bodyBlob;
+      regex = _skipReactotron;
+      if (!_skipReactotron._skipReactotron) {
+        let _url = arg3;
+        obj = null;
+        let num2 = -1;
+        if (arg3) {
+          num2 = _url.indexOf("?");
+        }
+        let tmp2 = null;
+        if (num2 > -1) {
+          obj = {};
+          const parts = _url.substr(num2 + 1).split("&");
+          const item = parts.forEach((item) => {
+            [tmp2, str] = _slicedToArray(item.split("="), 2);
+            let tmp3 = tmp2;
+            if (tmp2) {
+              tmp3 = undefined !== str;
+            }
+            if (tmp3) {
+              const _decodeURIComponent = decodeURIComponent;
+              obj[tmp2] = decodeURIComponent(str.replace(/\+/g, " "));
+            }
+            const tmp = _slicedToArray(item.split("="), 2);
+          });
+          tmp2 = obj;
+          const str2 = _url.substr(num2 + 1);
+        }
+        const _trackingName = _skipReactotron._trackingName;
+        let tmp5 = closure_4[_trackingName];
+        if (!tmp5) {
+          obj = { xhr: _skipReactotron };
+          tmp5 = obj;
+        }
+        closure_4[_trackingName] = null;
+        ({ stopTimer: closure_4, data } = tmp5);
+        if (!_url) {
+          _url = tmp5.xhr._url;
+        }
+        const request = { url: _url, method: _skipReactotron._method || null, data, headers: _skipReactotron._headers || null, params: tmp2 };
+        let str4 = _skipReactotron.responseHeaders && _skipReactotron.responseHeaders["content-type"];
+        if (!str4) {
+          str4 = _skipReactotron.responseHeaders && _skipReactotron.responseHeaders["Content-Type"];
+          const tmp6 = _skipReactotron.responseHeaders && _skipReactotron.responseHeaders["Content-Type"];
+        }
+        if (!str4) {
+          str4 = "";
+        }
+        function sendResponse(result) {
+          let str = "~~~ skipped ~~~";
+          if (result) {
+            try {
+              const _JSON = JSON;
+              str = JSON.parse(result);
+            } catch (err) {
+              str = closure_1;
             }
           }
+          const response = { body: str, status, headers: responseHeaders.responseHeaders || null };
+          let tmp4Result = null;
+          if (closure_1_4) {
+            tmp4Result = tmp4();
+          }
+          status.apiResponse(request, response, tmp4Result);
         }
-      } else if (weakMap.has(noop)) {
-        value = weakMap.get(noop);
-      } else {
-        const result = weakMap.set(noop, merged);
+        if (typeof _bodyBlob === "string") {
+          if (!str4) {
+            str4 = "";
+          }
+          if (!regex.test(str4)) {
+            if ("blob" === arg4) {
+              const _FileReader = FileReader;
+              if (typeof FileReader !== "undefined") {
+                if (_bodyBlob) {
+                  const _FileReader2 = FileReader;
+                  const fileReader = new FileReader();
+                  function brListener() {
+                    sendResponse(fileReader.result);
+                    const removed = fileReader.removeEventListener("loadend", brListener);
+                  }
+                  const listener = fileReader.addEventListener("loadend", brListener);
+                  const asText = fileReader.readAsText(_bodyBlob);
+                }
+              }
+            }
+            sendResponse(_bodyBlob);
+          }
+        }
+        sendResponse("");
       }
-    } else {
-      value = merged;
     }
-  }
-} else {
-  value = noop;
-}
-class StorybookSwitcher {
-  constructor(arg0) {
-    self = this;
-    tmp = closure_0(this, StorybookSwitcher);
-    items = [];
-    items[0] = global;
-    tmp2 = c2;
-    obj = c2(StorybookSwitcher);
-    tmp3 = closure_1;
-    if (closure_3()) {
-      tmp5 = globalThis;
-      _Reflect = Reflect;
-      constructResult = Reflect.construct(obj, items, tmp2(self).constructor);
-    } else {
-      constructResult = obj.apply(self, items);
-    }
-    tmp3Result = tmp3(self, constructResult);
-    closure_0 = tmp3Result;
-    tmp3Result.state = { showStorybook: false };
-    emitter = global.emitter;
-    onResult = emitter.on("storybook", (showStorybook) => {
-      state.setState({ showStorybook });
-    });
-    return tmp3Result;
-  }
-}
-_classCallCheck = StorybookSwitcher;
-_inherits(StorybookSwitcher, value.Component);
-const entry = {
-  key: "render",
-  value: function render() {
-    let children = this.props.children;
-    const obj = { style: { flex: 1 }, children: null };
-    if (this.state.showStorybook) {
-      children = <tmp />;
-    }
-    obj.children = children;
-    return <get ActivityIndicator.View style={{ flex: 1 }}>{null}</get ActivityIndicator.View>;
-  }
+    const merged = Object.assign({}, closure_4, obj);
+    let regex = merged.ignoreContentTypes || re3;
+    c3 = 1000;
+    closure_4 = {};
+    obj = {
+      onConnect() {
+        const XHRInterceptor = obj(14430).XHRInterceptor;
+        XHRInterceptor.setSendCallback(onSend);
+        const XHRInterceptor2 = obj(14430).XHRInterceptor;
+        XHRInterceptor2.setResponseCallback(onResponse);
+        const XHRInterceptor3 = obj(14430).XHRInterceptor;
+        XHRInterceptor3.enableInterception();
+      }
+    };
+    return obj;
+  };
 };
-let items = [entry];
-
-export default _createClass(StorybookSwitcher, items);

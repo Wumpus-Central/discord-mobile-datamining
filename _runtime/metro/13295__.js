@@ -4,4 +4,4 @@
 import registerAsset from "module_1122" /* 1122 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/premium/illustrations", width: 180, height: 108.5, scales: [2, 3], hash: "9b8bd10d33176958273580b349a5855d", name: "img_what_you_lose_hd_video", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/saved_messages", width: 297, height: 238, scales: [1], hash: "2a38db2647d78740ca056c705d4301a7", name: "wumpus-clock", type: "png" });

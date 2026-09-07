@@ -1,11 +1,15 @@
 // === Module 14301: ? ===
 
 // Module 14301
+import _mod14300 from "module_14300" /* 14300 */;
 
-export default (fn) => {
+
+export default (arg0, value) => {
   try {
-    return fn();
+    const obj = { value, configurable: true, writable: true };
+    defineProperty(_mod14300, arg0, obj);
+    return value;
   } catch (err) {
-    return true;
+    _mod14300[tmp2] = tmp;
   }
 };

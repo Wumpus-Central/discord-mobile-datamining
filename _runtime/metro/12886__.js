@@ -1,194 +1,76 @@
 // === Module 12886: ? ===
 
 // Module 12886
-import _mod12797 from "module_12797" /* 12797 */;
-import stackParserFromStackParserOptions from "stackParserFromStackParserOptions" /* 12800 */;
-import _mod12825 from "module_12825" /* 12825 */;
-import setupIntegration from "module_12853" /* 12853 */;
+import _mod12828 from "module_12828" /* 12828 */;
+import _mod12888 from "module_12888" /* 12888 */;
+import setupIntegration from "module_12857" /* 12857 */;
 
-function _shouldDropEvent(message, message2) {
-  let tmp = message2;
-  if (tmp) {
-    message = message.message;
-    message2 = message2.message;
-    if (message) {
-      if (!message) {
-        if (message) {
-          let flag = false;
-          if (message === message2) {
-            flag = false;
-            if (_isSameFingerprint(message, message2)) {
-              const framesFromEvent = stackParserFromStackParserOptions.getFramesFromEvent(message);
-              const framesFromEvent1 = stackParserFromStackParserOptions.getFramesFromEvent(message2);
-              if (framesFromEvent) {
-                if (!framesFromEvent) {
-                  if (framesFromEvent) {
-                    let flag2 = false;
-                    if (framesFromEvent1.length === framesFromEvent.length) {
-                      let num = 0;
-                      flag2 = true;
-                      if (0 < framesFromEvent1.length) {
-                        flag2 = false;
-                        while (framesFromEvent1[num].filename === framesFromEvent[num].filename) {
-                          flag2 = false;
-                          if (tmp5.lineno !== tmp6.lineno) {
-                            break;
-                          } else {
-                            flag2 = false;
-                            if (tmp5.colno !== tmp6.colno) {
-                              break;
-                            } else {
-                              flag2 = false;
-                              if (tmp5.function !== tmp6.function) {
-                                break;
-                              } else {
-                                let sum = num + 1;
-                                num = sum;
-                                flag2 = true;
-                                if (sum >= framesFromEvent1.length) {
-                                  break;
-                                }
-                              }
-                            }
-                          }
-                        }
-                      }
-                    }
-                  } else {
-                    flag2 = false;
-                  }
-                } else {
-                  flag2 = false;
-                }
-              } else {
-                flag2 = true;
-              }
-              flag = false;
-              if (flag2) {
-                flag = true;
-              }
-            }
-          }
-        } else {
-          flag = false;
-        }
-      } else {
-        flag = false;
-      }
-    } else {
-      flag = false;
-    }
-    let tmp9 = flag;
-    if (!tmp9) {
-      let flag3 = false;
-      if (message2.exception && message2.exception.values && message2.exception.values[0]) {
-        flag3 = false;
-        if (iter2) {
-          flag3 = false;
-          if (iter.type === iter2.type) {
-            flag3 = false;
-            if (iter.value === iter2.value) {
-              flag3 = false;
-              if (_isSameFingerprint(message, message2)) {
-                const framesFromEvent2 = stackParserFromStackParserOptions.getFramesFromEvent(message);
-                const framesFromEvent3 = stackParserFromStackParserOptions.getFramesFromEvent(message2);
-                if (framesFromEvent2) {
-                  if (!framesFromEvent2) {
-                    if (framesFromEvent2) {
-                      let flag4 = false;
-                      if (framesFromEvent3.length === framesFromEvent2.length) {
-                        let num2 = 0;
-                        flag4 = true;
-                        if (0 < framesFromEvent3.length) {
-                          flag4 = false;
-                          while (framesFromEvent3[num2].filename === framesFromEvent2[num2].filename) {
-                            flag4 = false;
-                            if (tmp12.lineno !== tmp13.lineno) {
-                              break;
-                            } else {
-                              flag4 = false;
-                              if (tmp12.colno !== tmp13.colno) {
-                                break;
-                              } else {
-                                flag4 = false;
-                                if (tmp12.function !== tmp13.function) {
-                                  break;
-                                } else {
-                                  let sum1 = num2 + 1;
-                                  num2 = sum1;
-                                  flag4 = true;
-                                  if (sum1 >= framesFromEvent3.length) {
-                                    break;
-                                  }
-                                }
-                              }
-                            }
-                          }
-                        }
-                      }
-                    } else {
-                      flag4 = false;
-                    }
-                  } else {
-                    flag4 = false;
-                  }
-                } else {
-                  flag4 = true;
-                }
-                flag3 = false;
-                if (flag4) {
-                  flag3 = true;
-                }
-              }
-            }
-          }
-        }
-      }
-      tmp9 = flag3;
-    }
-    tmp = tmp9;
-  }
-  return tmp;
-}
-function _isSameFingerprint(fingerprint, fingerprint2) {
-  fingerprint = fingerprint.fingerprint;
-  fingerprint2 = fingerprint2.fingerprint;
-  if (!fingerprint) {
-    if (!fingerprint2) {
-      return true;
-    }
-  }
-  if (!fingerprint) {
-    try {
-      const joined = fingerprint.join("");
-      return joined === fingerprint2.join("");
-    } catch (err) {
-      return false;
-    }
-  }
-  return false;
-}
 
-export { _shouldDropEvent };
-export const dedupeIntegration = setupIntegration.defineIntegration(() => ({
-  name: "Dedupe",
-  processEvent(type) {
-    if (type.type) {
-      return type;
-    } else {
-      try {
-        if (_shouldDropEvent(type, closure_0)) {
-          if (_mod12825.DEBUG_BUILD) {
-            const logger = _mod12797.logger;
-            logger.warn("Event dropped due to being a duplicate of previously captured event.");
+export const captureConsoleIntegration = setupIntegration.defineIntegration(() => {
+  let obj = arg0;
+  if (arg0 === undefined) {
+    obj = {};
+  }
+  let handled;
+  let CONSOLE_LEVELS = obj.levels;
+  if (!CONSOLE_LEVELS) {
+    CONSOLE_LEVELS = CONSOLE_LEVELS(handled[0]).CONSOLE_LEVELS;
+  }
+  handled = obj.handled;
+  obj = {
+    name: "CaptureConsole",
+    setup(arg0) {
+      closure_0 = arg0;
+      if ("console" in CONSOLE_LEVELS(handled[1]).GLOBAL_OBJ) {
+        let result = CONSOLE_LEVELS(handled[2]).addConsoleInstrumentationHandler((arg0) => {
+          ({ args, level } = arg0);
+          let extra = _mod12828;
+          let hasItem = extra.getClient() === args;
+          if (hasItem) {
+            hasItem = CONSOLE_LEVELS.includes(level);
           }
-          return null;
-        } else {
-          closure_0 = type;
-          return type;
-        }
-      } catch (err) {
+          if (hasItem) {
+            closure_2 = handled;
+            extra = { level: null, extra: null };
+            let tmpResult = _mod12888;
+            extra.level = tmpResult.severityLevelFromString(level);
+            extra = { arguments: args };
+            extra.extra = extra;
+            tmpResult = _mod12828;
+            tmpResult.withScope((addEventProcessor) => {
+              addEventProcessor.addEventProcessor((arg0) => {
+                arg0.logger = "console";
+                args(level[6]);
+                const obj = { handled, type: "console" };
+                const result = obj.addExceptionMechanism(arg0, obj);
+                return arg0;
+              });
+              if ("assert" !== level) {
+                const found = args.find((item) => item instanceof Error);
+                if (found) {
+                  let tmp14Result = args(12849);
+                  tmp14Result.captureException(found, obj);
+                } else {
+                  tmp14Result = args(12810);
+                  const safeJoinResult = tmp14Result.safeJoin(args, " ");
+                  args(12849).captureMessage(safeJoinResult, obj);
+                  const obj4 = args(12849);
+                }
+              } else if (!args[0]) {
+                obj = args(12810);
+                const _HermesInternal = HermesInternal;
+                const combined = "Assertion failed: " + obj.safeJoin(args.slice(1), " ") || "console.assert";
+                addEventProcessor.setExtra("arguments", args.slice(1));
+                const tmp4 = obj.safeJoin(args.slice(1), " ") || "console.assert";
+                args(12849).captureMessage(combined, obj);
+                const obj2 = args(12849);
+              }
+            });
+          }
+        });
+        let tmpResult = CONSOLE_LEVELS(handled[2]);
       }
     }
-  }
-}));
+  };
+  return obj;
+});

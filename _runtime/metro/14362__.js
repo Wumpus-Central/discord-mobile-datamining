@@ -1,10 +1,14 @@
 // === Module 14362: ? ===
 
 // Module 14362
-import _mod14340 from "module_14340" /* 14340 */;
-import _mod14341 from "module_14341" /* 14341 */;
+import _mod14300 from "module_14300" /* 14300 */;
+import all from "module_14326" /* 14326 */;
 
+let _moduleResult = all(_mod14300.WeakMap);
+if (_moduleResult) {
+  const _String = String;
+  _moduleResult = /native code/.test(String(_mod14300.WeakMap));
+  const obj = /native code/;
+}
 
-export default Object.keys || (function keys(arg0) {
-  return _mod14341(arg0, _mod14340);
-});
+export default _moduleResult;

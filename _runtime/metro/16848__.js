@@ -4,4 +4,4 @@
 import registerAsset from "module_1122" /* 1122 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Illustration/native/redesign/generated/images", width: 292, height: 182, scales: [2, 3], hash: "580ec4f595fa69a80ec70eff21ac3c71", name: "webhook_empty_darker", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "b83c9486cfaf14d2dd0ad9edbe75c34d", name: "WebhookPlusIcon", type: "png" });

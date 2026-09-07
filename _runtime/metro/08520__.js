@@ -1,15 +1,13 @@
 // === Module 8520: ? ===
 
 // Module 8520
-import _modDef8477 from "module_8477" /* 8477 */;
 import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
 import c3 from "_possibleConstructorReturn" /* 93 */;
 import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
-import noop from "module_19" /* 19 */;
 
-const Filter = importDefault;
+const FeSpotLight = fn;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -29,15 +27,14 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-const jsx = fn(21).jsx;
-class Filter {
+class FeSpotLight {
   constructor() {
     self = this;
-    tmp = c2(this, Filter);
+    tmp = c2(this, FeSpotLight);
     tmp2 = closure_4;
-    obj = closure_4(Filter);
+    obj = closure_4(FeSpotLight);
     tmp3 = closure_3;
-    if (metroRequire()) {
+    if (hasOwnProperty()) {
       tmp7 = globalThis;
       _Reflect = Reflect;
       tmp8 = arguments;
@@ -50,30 +47,17 @@ class Filter {
     return tmp3(self, constructResult);
   }
 }
-_inherits(Filter, _modDef8477);
+_inherits(FeSpotLight, fn(19).Component);
 const entry = {
   key: "render",
   value: function render() {
-    const self = this;
-    const props = this.props;
-    const size = { name: props.id, x: props.x, y: props.y, width: props.width, height: props.height, filterUnits: props.filterUnits, primitiveUnits: props.primitiveUnits };
-    const obj = {
-      ref(arg0) {
-        return self.refMethod(arg0);
-      }
-    };
-    const merged = Object.assign(size);
-    obj.children = this.props.children;
-    return jsx(Filter(8521), {
-      ref(arg0) {
-        return self.refMethod(arg0);
-      }
-    });
+    const result = FeSpotLight(8472).warnUnimplementedFilter();
+    return null;
   }
 };
 const items = [entry];
-const importDefaultResultResult = _createClass(Filter, items);
-importDefaultResultResult.displayName = "Filter";
-importDefaultResultResult.defaultProps = { x: "-10%", y: "-10%", width: "120%", height: "120%", filterUnits: "objectBoundingBox", primitiveUnits: "userSpaceOnUse" };
+const importDefaultResultResult = _createClass(FeSpotLight, items);
+importDefaultResultResult.displayName = "FeSpotLight";
+importDefaultResultResult.defaultProps = {};
 
 export default importDefaultResultResult;

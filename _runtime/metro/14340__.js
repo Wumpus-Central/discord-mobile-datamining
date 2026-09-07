@@ -1,5 +1,24 @@
 // === Module 14340: ? ===
 
 // Module 14340
+import _mod14323 from "module_14323" /* 14323 */;
+import _mod14341 from "module_14341" /* 14341 */;
 
-export default ["constructor", "hasOwnProperty", "isPrototypeOf", "propertyIsEnumerable", "toLocaleString", "toString", "valueOf"];
+
+export default (arg0, arg1, arg2) => {
+  const arr = _mod14341(arg1);
+  for (let num = 0; num < arr.length; num = num + 1) {
+    let tmp3 = arr[num];
+    let tmp6 = _mod14323(arg0, tmp3);
+    if (!tmp6) {
+      let tmp8 = arg2;
+      if (arg2) {
+        tmp8 = _mod14323(arg2, tmp3);
+      }
+      tmp6 = tmp8;
+    }
+    if (!tmp6) {
+      let tmpResult = tmp(arg0, tmp3, tmp2(arg1, tmp3));
+    }
+  }
+};

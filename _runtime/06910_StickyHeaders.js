@@ -177,8 +177,8 @@ export const StickyHeaders = (stickyHeaderIndices) => {
     if (-1 !== currentStickyIndex) {
       tmpResult = null;
       if (currentStickyIndex < data.length) {
-        obj = { index: currentStickyIndex, item: tmp6[currentStickyIndex], renderItem, layout: { x: 0, y: 0, width: 0, height: 0 }, refHolder: current, extraData, trailingItem: "accessible", target: "y", hidden: "ro", inverted };
-        tmpResult = jsx(ViewHolder.ViewHolder, { index: currentStickyIndex, item: tmp6[currentStickyIndex], renderItem, layout: { x: 0, y: 0, width: 0, height: 0 }, refHolder: current, extraData, trailingItem: "accessible", target: "y", hidden: "ro", inverted });
+        obj = { index: currentStickyIndex, item: tmp6[currentStickyIndex], renderItem, layout: { x: 0, y: 0, width: 0, height: 0 }, refHolder: current, extraData, trailingItem: "accessible", target: false, hidden: false, inverted };
+        tmpResult = jsx(ViewHolder.ViewHolder, { index: currentStickyIndex, item: tmp6[currentStickyIndex], renderItem, layout: { x: 0, y: 0, width: 0, height: 0 }, refHolder: current, extraData, trailingItem: "accessible", target: false, hidden: false, inverted });
       }
     }
     obj.children = tmpResult;

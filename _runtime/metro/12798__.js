@@ -2,25 +2,32 @@
 
 // Module 12798
 import _mod12799 from "module_12799" /* 12799 */;
+import _mod12802 from "module_12802" /* 12802 */;
 
 require = arg1;
 const dependencyMap = arg6;
+function instrumentError() {
+  onerror = _mod12802.GLOBAL_OBJ.onerror;
+  _mod12802.GLOBAL_OBJ.onerror = function(msg, url, line, column, error) {
+    _mod12799.triggerHandlers("error", { column, error, line, msg, url });
+    if (!onerror) {
+      return onerror;
+    } else {
+      const self = this;
+      const apply = onerror.apply;
+      if (typeof apply === "unknown") {
+        let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+      } else {
+        applyArgumentsResult = apply(self, arguments);
+      }
+    }
+    const obj = { column, error, line, msg, url };
+  };
+  _mod12802.GLOBAL_OBJ.onerror.__SENTRY_INSTRUMENTED__ = true;
+}
+let onerror = null;
 
-export const GLOBAL_OBJ = globalThis;
-export const getGlobalSingleton = function getGlobalSingleton(globalMetricsAggregators, fn, arg2) {
-  let tmp = arg2;
-  if (!arg2) {
-    tmp = globalThis;
-  }
-  const tmp2 = tmp.__SENTRY__ || {};
-  tmp.__SENTRY__ = tmp2;
-  const tmp3 = tmp2[_mod12799.SDK_VERSION] || {};
-  tmp2[_mod12799.SDK_VERSION] = tmp3;
-  let tmp4 = tmp3[globalMetricsAggregators];
-  if (!tmp4) {
-    const tmp6 = fn();
-    tmp3[globalMetricsAggregators] = tmp6;
-    tmp4 = tmp6;
-  }
-  return tmp4;
+export const addGlobalErrorInstrumentationHandler = function addGlobalErrorInstrumentationHandler(errorCallback) {
+  _mod12799.addHandler("error", errorCallback);
+  _mod12799.maybeInstrument("error", instrumentError);
 };

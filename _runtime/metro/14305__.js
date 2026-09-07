@@ -1,17 +1,8 @@
 // === Module 14305: ? ===
 
 // Module 14305
-import _mod14301 from "module_14301" /* 14301 */;
+import _mod14306 from "module_14306" /* 14306 */;
+import _mod14310 from "module_14310" /* 14310 */;
 
 
-export default !_mod14301(() => {
-  const fn = () => {
-
-  };
-  const bindResult = fn.bind();
-  let hasOwnPropertyResult = typeof bindResult !== "function";
-  if (typeof bindResult === "function") {
-    hasOwnPropertyResult = bindResult.hasOwnProperty("prototype");
-  }
-  return hasOwnPropertyResult;
-});
+export default (arg0) => _mod14306(_mod14310(arg0));

@@ -1,71 +1,152 @@
 // === Module 12824: ? ===
 
 // Module 12824
-import _mod12798 from "module_12798" /* 12798 */;
-import _mod12803 from "module_12803" /* 12803 */;
+import _mod12807 from "module_12807" /* 12807 */;
+import _mod12812 from "module_12812" /* 12812 */;
 import _mod12815 from "module_12815" /* 12815 */;
-import _mod12816 from "module_12816" /* 12816 */;
-import ScopeClass from "ScopeClass" /* 12818 */;
+import _mod12825 from "module_12825" /* 12825 */;
+import __SENTRY_DEBUG__ from "module_12800" /* 12800 */;
+import consoleSandbox from "module_12801" /* 12801 */;
 
-require = arg1;
-const dependencyMap = arg6;
+function updateSession(ipAddress) {
+  let obj = arg1;
+  if (arg1 === undefined) {
+    obj = {};
+  }
+  if (obj.user) {
+    ipAddress = ipAddress.ipAddress;
+    let ip_address = !ipAddress;
+    if (!ipAddress) {
+      ip_address = obj.user.ip_address;
+    }
+    if (ip_address) {
+      ipAddress.ipAddress = obj.user.ip_address;
+    }
+    if (!tmp) {
+      ipAddress.did = obj.user.id || obj.user.email || obj.user.username;
+    }
+    tmp = ipAddress.did || obj.did;
+  }
+  let timestamp = obj.timestamp;
+  if (!timestamp) {
+    timestamp = _mod12815.timestampInSeconds();
+  }
+  ipAddress.timestamp = timestamp;
+  if (obj.abnormal_mechanism) {
+    ipAddress.abnormal_mechanism = obj.abnormal_mechanism;
+  }
+  if (obj.ignoreDuration) {
+    ipAddress.ignoreDuration = obj.ignoreDuration;
+  }
+  if (!obj.sid) {
+    if (undefined !== obj.init) {
+      ipAddress.init = obj.init;
+    }
+    const did = ipAddress.did;
+    let did2 = !did;
+    if (!did) {
+      did2 = obj.did;
+    }
+    if (did2) {
+      const _HermesInternal = HermesInternal;
+      ipAddress.did = "" + obj.did;
+    }
+    if (typeof obj.started === "number") {
+      ipAddress.started = obj.started;
+    }
+    if (ipAddress.ignoreDuration) {
+      ipAddress.duration = undefined;
+    } else if (typeof obj.duration === "number") {
+      ipAddress.duration = obj.duration;
+    } else {
+      const diff = ipAddress.timestamp - ipAddress.started;
+      let num2 = 0;
+      if (diff >= 0) {
+        num2 = diff;
+      }
+      ipAddress.duration = num2;
+    }
+    if (obj.release) {
+      ipAddress.release = obj.release;
+    }
+    if (obj.environment) {
+      ipAddress.environment = obj.environment;
+    }
+    const ipAddress2 = ipAddress.ipAddress;
+    let ipAddress3 = !ipAddress2;
+    if (!ipAddress2) {
+      ipAddress3 = obj.ipAddress;
+    }
+    if (ipAddress3) {
+      ipAddress.ipAddress = obj.ipAddress;
+    }
+    const userAgent = ipAddress.userAgent;
+    let userAgent2 = !userAgent;
+    if (!userAgent) {
+      userAgent2 = obj.userAgent;
+    }
+    if (userAgent2) {
+      ipAddress.userAgent = obj.userAgent;
+    }
+    if (typeof obj.errors === "number") {
+      ipAddress.errors = obj.errors;
+    }
+    if (obj.status) {
+      ipAddress.status = obj.status;
+    }
+  } else {
+    if (32 === obj.sid.length) {
+      let sid = obj.sid;
+    } else {
+      sid = _mod12812.uuid4();
+    }
+    ipAddress.sid = sid;
+  }
+}
+_mod12825;
 
-export const getClient = function getClient() {
-  const mainCarrier = _mod12815.getMainCarrier();
-  const asyncContextStrategy = _mod12816.getAsyncContextStrategy(mainCarrier);
-  const currentScope = asyncContextStrategy.getCurrentScope();
-  return currentScope.getClient();
-};
-export const getCurrentScope = function getCurrentScope() {
-  const mainCarrier = _mod12815.getMainCarrier();
-  const asyncContextStrategy = _mod12816.getAsyncContextStrategy(mainCarrier);
-  return asyncContextStrategy.getCurrentScope();
-};
-export const getGlobalScope = function getGlobalScope() {
-  return _mod12798.getGlobalSingleton("globalScope", () => {
-    const scope = new ScopeClass.Scope();
-    return scope;
-  });
-};
-export const getIsolationScope = function getIsolationScope() {
-  const mainCarrier = _mod12815.getMainCarrier();
-  const asyncContextStrategy = _mod12816.getAsyncContextStrategy(mainCarrier);
-  return asyncContextStrategy.getIsolationScope();
-};
-export const getTraceContextFromScope = function getTraceContextFromScope(getPropagationContext) {
-  const propagationContext = getPropagationContext.getPropagationContext();
-  ({ traceId, spanId, parentSpanId } = propagationContext);
-  return _mod12803.dropUndefinedKeys({ trace_id, span_id, parent_span_id });
-};
-export const withIsolationScope = function withIsolationScope() {
-  const items = [...arguments];
-  const mainCarrier = _mod12815.getMainCarrier();
-  const asyncContextStrategy = _mod12816.getAsyncContextStrategy(mainCarrier);
-  if (2 === items.length) {
-    [tmp2, tmp3] = items;
-    if (tmp2) {
-      let result = asyncContextStrategy.withSetIsolationScope(tmp2, tmp3);
-    } else {
-      result = asyncContextStrategy.withIsolationScope(tmp3);
-    }
-    return result;
+export const closeSession = function closeSession(status, status2) {
+  if (status2) {
+    let obj = { status: status2 };
   } else {
-    return asyncContextStrategy.withIsolationScope(items[0]);
-  }
-};
-export const withScope = function withScope() {
-  const items = [...arguments];
-  const mainCarrier = _mod12815.getMainCarrier();
-  const asyncContextStrategy = _mod12816.getAsyncContextStrategy(mainCarrier);
-  if (2 === items.length) {
-    [tmp2, tmp3] = items;
-    if (tmp2) {
-      let withSetScopeResult = asyncContextStrategy.withSetScope(tmp2, tmp3);
-    } else {
-      withSetScopeResult = asyncContextStrategy.withScope(tmp3);
+    obj = {};
+    if ("ok" === status.status) {
+      obj = { status: "exited" };
     }
-    return withSetScopeResult;
-  } else {
-    return asyncContextStrategy.withScope(items[0]);
   }
+  updateSession(status, obj);
 };
+export const makeSession = function makeSession(arg0) {
+  obj = obj(12815);
+  const timestampInSecondsResult = obj.timestampInSeconds();
+  obj = {
+    sid: obj(12812).uuid4(),
+    init: true,
+    timestamp: timestampInSecondsResult,
+    started: timestampInSecondsResult,
+    duration: 0,
+    status: "ok",
+    errors: 0,
+    ignoreDuration: false,
+    toJSON() {
+      obj = _mod12807;
+      obj = { sid: "" + obj.sid, init: obj.init, started: new Date(1000 * obj.started).toISOString(), timestamp: null, status: null, errors: null, did: null, duration: null, abnormal_mechanism: null, attrs: null };
+      const date = new Date(1000 * obj.started);
+      obj.timestamp = new Date(1000 * obj.timestamp).toISOString();
+      ({ status: obj2.status, errors: obj2.errors } = obj);
+      if (typeof obj.did === "number") {
+        const _HermesInternal = HermesInternal;
+        const combined = "" + tmp.did;
+      }
+      obj.did = combined;
+      ({ duration: obj2.duration, abnormal_mechanism: obj2.abnormal_mechanism } = obj);
+      obj.attrs = { release: obj.release, environment: obj.environment, ip_address: obj.ipAddress, user_agent: obj.userAgent };
+      return obj.dropUndefinedKeys(obj);
+    }
+  };
+  if (arg0) {
+    updateSession(obj, arg0);
+  }
+  return obj;
+};
+export { updateSession };

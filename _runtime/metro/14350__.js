@@ -2,4 +2,6 @@
 
 // Module 14350
 
-export const f = Object.getOwnPropertySymbols;
+export default Math.trunc || (function trunc(arg0) {
+  return 0 < +arg0 ? floor : ceil(+arg0);
+});

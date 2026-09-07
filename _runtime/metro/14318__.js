@@ -1,13 +1,15 @@
 // === Module 14318: ? ===
 
 // Module 14318
-import _mod14297 from "module_14297" /* 14297 */;
+import prop from "module_14319" /* 14319 */;
 
-const tmp = _mod14297.navigator && _mod14297.navigator.userAgent;
-let str = "";
-if (tmp) {
-  const _String = String;
-  str = String(tmp);
+if (prop) {
+  const _Symbol = Symbol;
+  prop = !Symbol.sham;
+}
+if (prop) {
+  const _Symbol2 = Symbol;
+  prop = typeof Symbol.iterator === "symbol";
 }
 
-export default str;
+export default prop;

@@ -1,15 +1,10 @@
 // === Module 14298: ? ===
 
 // Module 14298
-import _mod14297 from "module_14297" /* 14297 */;
+import _mod14364 from "module_14364" /* 14364 */;
+import module_14299 from "module_14299" /* 14299 */;
 
-
-export default (arg0, value) => {
-  try {
-    const obj = { value, configurable: true, writable: true };
-    defineProperty(_mod14297, arg0, obj);
-    return value;
-  } catch (err) {
-    _mod14297[tmp2] = tmp;
-  }
-};
+let obj = { target: "Object", stat: true, arity: 2, forced: null };
+obj.forced = Object.assign !== _mod14364;
+obj = { assign: _mod14364 };
+module_14299(obj, obj);

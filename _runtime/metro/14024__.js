@@ -1,24 +1,73 @@
 // === Module 14024: ? ===
 
 // Module 14024
-import _mod14016 from "module_14016" /* 14016 */;
+const re0 = /^[0-9]+$/;
 
-
-export default (version, pre, major2, major2, major22) => {
-  let tmp = major22;
-  let tmp2 = major2;
-  if (typeof major2 === "string") {
-    tmp = major2;
-    tmp2 = major2;
-  }
-  try {
-    let tmp7 = _mod14016;
-    if (version instanceof _mod14016) {
-      version = version.version;
+export default {
+  compareIdentifiers(major, major2) {
+    const isMatch = re0.test(major);
+    const isMatch1 = re0.test(major2);
+    let tmp3 = isMatch;
+    if (isMatch) {
+      tmp3 = isMatch1;
     }
-    tmp7 = new tmp7(version, tmp3);
-    return tmp7.inc(pre, tmp2, tmp).version;
-  } catch (err) {
-    return null;
+    let tmp4 = major2;
+    let tmp5 = major;
+    if (tmp3) {
+      tmp5 = +major;
+      tmp4 = +major2;
+    }
+    let num = 0;
+    if (tmp5 !== tmp4) {
+      if (!isMatch) {
+        if (!isMatch1) {
+          let num4 = 1;
+          if (tmp5 < tmp4) {
+            num4 = -1;
+          }
+          let num3 = num4;
+        } else {
+          num3 = 1;
+        }
+        let num2 = num3;
+      } else {
+        num2 = -1;
+      }
+      num = num2;
+    }
+    return num;
+  },
+  rcompareIdentifiers(arg0, arg1) {
+    const isMatch = re0.test(arg1);
+    const isMatch1 = re0.test(arg0);
+    let tmp3 = isMatch;
+    if (isMatch) {
+      tmp3 = isMatch1;
+    }
+    let tmp4 = arg0;
+    let tmp5 = arg1;
+    if (tmp3) {
+      tmp5 = +arg1;
+      tmp4 = +arg0;
+    }
+    let num = 0;
+    if (tmp5 !== tmp4) {
+      if (!isMatch) {
+        if (!isMatch1) {
+          let num4 = 1;
+          if (tmp5 < tmp4) {
+            num4 = -1;
+          }
+          let num3 = num4;
+        } else {
+          num3 = 1;
+        }
+        let num2 = num3;
+      } else {
+        num2 = -1;
+      }
+      num = num2;
+    }
+    return num;
   }
 };

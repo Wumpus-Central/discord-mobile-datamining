@@ -2,7 +2,7 @@
 
 // Module 10472
 import _possibleConstructorReturn from "_possibleConstructorReturn" /* 93 */;
-import Filter from "Filter" /* 10451 */;
+import Filter from "Filter" /* 10456 */;
 import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
 import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
@@ -28,12 +28,12 @@ function _isNativeReflectConstruct() {
   }
 }
 _possibleConstructorReturn;
-class UnlikelyFormatFilter {
-  constructor(arg0) {
+class ENUnlikelyFormatFilter {
+  constructor() {
     self = this;
-    tmp = closure_0(this, UnlikelyFormatFilter);
+    tmp = closure_0(this, ENUnlikelyFormatFilter);
     tmp2 = c2;
-    obj = c2(UnlikelyFormatFilter);
+    obj = c2(ENUnlikelyFormatFilter);
     tmp3 = closure_1;
     if (closure_3()) {
       tmp5 = globalThis;
@@ -42,67 +42,47 @@ class UnlikelyFormatFilter {
     } else {
       constructResult = obj.apply(self, undefined);
     }
-    tmp3Result = tmp3(self, constructResult);
-    tmp3Result.strictMode = global;
-    return tmp3Result;
+    return tmp3(self, constructResult);
   }
 }
-_classCallCheck = UnlikelyFormatFilter;
-_inherits(UnlikelyFormatFilter, Filter.Filter);
+_classCallCheck = ENUnlikelyFormatFilter;
+_inherits(ENUnlikelyFormatFilter, Filter.Filter);
 const entry = {
   key: "isValid",
-  value: function isValid(debug, text) {
-    if (str2.match(/^\d*(\.\d*)?$/)) {
-      debug.debug(() => {
-        console.log("Removing unlikely result '" + text.text + "'");
-      });
-      let flag = false;
+  value: function isValid(text, text2) {
+    closure_0 = text2;
+    const str2 = text2.text.trim();
+    if (str2 === str3.trim()) {
+      return true;
     } else {
-      const start = text.start;
-      if (start.isValidDate()) {
-        if (text.end) {
-          const end = text.end;
-          if (!end.isValidDate()) {
-            debug.debug(() => {
-              console.log("Removing invalid result: " + text + " (" + text.end + ")");
-            });
-            let flag2 = false;
-          }
+      if ("may" === str2.toLowerCase()) {
+        const str5 = text.text.substring(0, text2.index);
+        if (!str6.match(/\b(in)$/i)) {
+          text.debug(() => {
+            console.log("Removing unlikely result: " + closure_0);
+          });
+          return false;
         }
-        const self = this;
-        const strictMode = this.strictMode;
-        let isStrictModeValidResult = !strictMode;
-        if (strictMode) {
-          isStrictModeValidResult = self.isStrictModeValid(debug, text);
-        }
-        flag2 = isStrictModeValidResult;
-      } else {
-        debug.debug(() => {
-          console.log("Removing invalid result: " + text + " (" + text.start + ")");
-        });
-        flag = false;
+        str6 = text.text.substring(0, text2.index).trim();
       }
+      const formatted = str2.toLowerCase();
+      const endsWithResult = formatted.endsWith("the second");
+      let flag2 = !endsWithResult;
+      if (endsWithResult) {
+        flag2 = false;
+        if (str9.trim().length > 0) {
+          text.debug(() => {
+            console.log("Removing unlikely result: " + closure_0);
+          });
+          flag2 = false;
+        }
+        str9 = text.text.substring(text2.index + text2.text.length);
+      }
+      return flag2;
     }
-    return flag;
+    str3 = text.text;
   }
 };
-const items = [
-  entry,
-  {
-    key: "isStrictModeValid",
-    value: function isStrictModeValid(debug, start) {
-      start = start.start;
-      const result = start.isOnlyWeekdayComponent();
-      let flag = !result;
-      if (result) {
-        debug.debug(() => {
-          console.log("(Strict) Removing weekday only component: " + start + " (" + start.end + ")");
-        });
-        flag = false;
-      }
-      return flag;
-    }
-  }
-];
+const items = [entry];
 
-export default _createClass(UnlikelyFormatFilter, items);
+export default _createClass(ENUnlikelyFormatFilter, items);

@@ -4,4 +4,4 @@
 import registerAsset from "module_1122" /* 1122 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native", width: 24, height: 24, scales: [2, 3], hash: "24a38b74eed4b16cf7662ebd8e1be84d", name: "ic_message_retry", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/consoles", width: 84, height: 46, scales: [2, 3], hash: "1dc3d638940bcdf9b267c8229f603041", name: "xbox_upsell", type: "png" });

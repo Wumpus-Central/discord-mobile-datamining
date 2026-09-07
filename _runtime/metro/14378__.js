@@ -1,698 +1,375 @@
 // === Module 14378: ? ===
 
 // Module 14378
-import _mod14372 from "module_14372" /* 14372 */;
-import URLSearchParamsImpl from "URLSearchParamsImpl" /* 14379 */;
-import _classCallCheck from "_classCallCheck" /* 41 */;
-import _createClass from "_createClass" /* 42 */;
-import _slicedToArray from "module_32" /* 32 */;
-
-let exports = {
-  next: {
-    value: function next() {
-      const tmp3 = this[_mod14372.iterInternalSymbol];
-      ({ kind, index } = tmp3);
-      const arr = Array.from(tmp3.target[_mod14372.implSymbol]);
-      if (index >= arr.length) {
-        return { value: "HermesInternal", done: null };
-      } else {
-        tmp3.index = index + 1;
-        [tmp7, tmp8] = _slicedToArray(arr[index].map(_mod14372.tryWrapperForImpl), 2);
-        if ("key" === kind) {
-          let tmp4 = tmp7;
-        } else if ("value" === kind) {
-          tmp4 = tmp8;
-        } else if ("key+value" === kind) {
-          const items = [tmp7, tmp8];
-          tmp4 = items;
-        }
-        obj = { value: tmp4, done: false };
-        return obj;
-      }
-    },
-    writable: true,
-    enumerable: true,
-    configurable: true
-  }
-};
-exports[Symbol.toStringTag] = { value: "URLSearchParams Iterator", configurable: true };
-let closure_6 = Object.create(_mod14372.IteratorPrototype, exports);
-exports = {
-  _mixedIntoPredicates: [],
-  is(arg0) {
-    if (arg0) {
-      if (obj.hasOwn(arg0, _mod14372.implSymbol)) {
-        if (arg0[_mod14372.implSymbol] instanceof URLSearchParamsImpl.implementation) {
-          return true;
-        }
-      }
-      const _mixedIntoPredicates = module.exports._mixedIntoPredicates;
-      for (const item10025 of _mixedIntoPredicates) {
-        if (item10025(arg0)) {
-          obj2.return();
-          let flag = true;
-          return true;
-        }
-      }
-      obj = _mod14372;
-    }
-    return false;
-  },
-  isImpl(arg0) {
-    if (arg0) {
-      if (arg0 instanceof URLSearchParamsImpl.implementation) {
-        return true;
-      } else {
-        const _mixedIntoPredicates = module.exports._mixedIntoPredicates;
-        for (const item10018 of _mixedIntoPredicates) {
-          if (item10018(tmpResult.wrapperForImpl(arg0))) {
-            obj2.return();
-            let flag = true;
-            return true;
+function error(arg0) {
+  const rangeError = new RangeError(closure_3.overflow);
+  throw rangeError;
+}
+function ucs2decode(str) {
+  const items = [];
+  let num = 0;
+  if (0 < str.length) {
+    while (true) {
+      let sum = num + 1;
+      let charCodeAtResult = str.charCodeAt(num);
+      if (charCodeAtResult >= 55296) {
+        if (charCodeAtResult <= 56319) {
+          if (sum < length) {
+            let sum1 = sum + 1;
+            let charCodeAtResult1 = str.charCodeAt(sum);
+            if (56320 === (64512 & charCodeAtResult1)) {
+              let arr = items.push(((1023 & charCodeAtResult) << 10) + (1023 & charCodeAtResult1) + 65536);
+              let diff = sum1;
+            } else {
+              arr = items.push(charCodeAtResult);
+              diff = sum1 - 1;
+            }
+            num = diff;
+            if (diff >= length) {
+              break;
+            }
           }
         }
-        const tmpResult = _mod14372;
       }
+      let arr1 = items.push(charCodeAtResult);
+      diff = sum;
     }
-    return false;
-  },
-  convert(arg0) {
-    obj = arg1;
-    if (arg1 === undefined) {
-      obj = {};
+  }
+  return items;
+}
+const re0 = /^xn--/;
+const re1 = /[^\0-\x7F]/;
+const re2 = /[\x2E\u3002\uFF0E\uFF61]/g;
+let closure_3 = { overflow: "Overflow: input needs wider integers to process", "not-basic": "Illegal input >= 0x80 (not a basic code point)", "invalid-input": "Invalid input" };
+function digitToBasic(arg0, arg1) {
+  return arg0 + 22 + 75 * (arg0 < 26) - (false << 5);
+}
+function adapt(arg0, arg1, arg2) {
+  if (arg2) {
+    let tmp = floor(arg0 / 700);
+  } else {
+    tmp = arg0 >> 1;
+  }
+  let tmp3 = floor;
+  let sum = tmp + floor(tmp / arg1);
+  let num3 = 0;
+  let num4 = 0;
+  let tmp5 = sum;
+  if (sum > 455) {
+    do {
+      sum = floor(sum / 35);
+      num3 = num3 + 36;
+      num4 = num3;
+      tmp3 = floor;
+      tmp5 = sum;
+    } while (sum > 455);
+  }
+  return tmp3(num4 + 36 * tmp5 / (tmp5 + 38));
+}
+function decode(arr) {
+  let num = arr.lastIndexOf("-");
+  if (num < 0) {
+    num = 0;
+  }
+  const items = [];
+  let num2 = 128;
+  let num3 = 0;
+  if (0 < num) {
+    while (arr.charCodeAt(num3) < num2) {
+      arr = items.push(arr.charCodeAt(num3));
+      num3 = num3 + 1;
     }
-    let str = obj.context;
-    if (str === undefined) {
-      str = "The provided value";
-    }
-    const _exports = module.exports;
-    if (_exports.is(arg0)) {
-      return _mod14372.implForWrapper(arg0);
-    } else {
-      const _TypeError = TypeError;
-      const _HermesInternal = HermesInternal;
-      const typeError = new TypeError("" + str + " is not of type 'URLSearchParams'.");
-      throw typeError;
-    }
-  },
-  createDefaultIterator(self, key) {
-    Object.create(closure_6);
-    value = { value: null, configurable: true };
-    value = { target: self, kind: key, index: 0 };
-    value.value = value;
-    Object.defineProperty(value, _mod14372.iterInternalSymbol, value);
-    return value;
-  },
-  create(arg0, arg1, arg2) {
-    if (undefined === arg0[_mod14372.ctorRegistrySymbol]) {
-      const _Error2 = Error;
-      const error = new Error("Internal error: invalid global object");
-      throw error;
-    } else {
-      const _URLSearchParams = arg0[_mod14372.ctorRegistrySymbol].URLSearchParams;
-      if (undefined === _URLSearchParams) {
-        const _Error = Error;
-        const error1 = new Error("Internal error: constructor URLSearchParams is not installed on the passed global object");
-        throw error1;
-      } else {
-        const _Object = Object;
-        return obj.setup(Object.create(_URLSearchParams.prototype), arg0, arg1, arg2);
-      }
-    }
-  },
-  createImpl(arg0, arg1, arg2) {
-    obj.create(arg0, arg1, arg2);
-    obj = _mod14372;
-    return obj.implForWrapper(obj);
-  },
-  _internalSetup(arg0) {
-
-  },
-  setup(wrapper, arg1) {
-    let items = arg2;
-    if (arg2 === undefined) {
-      items = [];
-    }
-    obj = arg3;
-    if (arg3 === undefined) {
-      obj = {};
-    }
-    obj.wrapper = wrapper;
-    obj._internalSetup(wrapper);
-    obj = { value: null, configurable: true };
-    const implementation = new URLSearchParamsImpl.implementation(arg1, items, obj);
-    obj.value = implementation;
-    Object.defineProperty(wrapper, _mod14372.implSymbol, obj);
-    wrapper[_mod14372.implSymbol][_mod14372.wrapperSymbol] = wrapper;
-    if (URLSearchParamsImpl.init) {
-      URLSearchParamsImpl.init(wrapper[_mod14372.implSymbol], obj);
-      const tmp2Result = URLSearchParamsImpl;
-    }
-    return wrapper;
-  },
-  install(arg0) {
-    const URLSearchParams = arg0;
-    class URLSearchParams {
-      constructor() {
-        tmp = closure_3(this, URLSearchParams);
-        first = arguments[0];
-        str = "";
-        if (undefined !== first) {
-          tmp54 = closure_0;
-          tmp55 = closure_0;
-          tmp56 = c2;
-          tmp57 = c2;
-          obj7 = closure_0(c2[3]);
-          if (obj7.isObject(first)) {
-            tmp5 = globalThis;
-            _Symbol = Symbol;
-            if (undefined !== first[Symbol.iterator]) {
-              tmp25 = tmp54;
-              tmp26 = tmp56;
-              tmp55Result = tmp55(tmp57[3]);
-              if (tmp55Result.isObject(first)) {
-                items = [];
-                tmp31 = first;
-                tmp32 = first;
-                str = items;
-                for (const item10081 of first) {
-                  tmp34 = closure_0;
-                  tmp35 = closure_0;
-                  tmp36 = c2;
-                  tmp37 = c2;
-                  tmp33 = item10081;
-                  obj5 = closure_0(c2[3]);
-                  if (obj5.isObject(item10081)) {
-                    items1 = [];
-                    tmp42 = tmp33;
-                    tmp43 = item10081;
-                    for (const item10103 of item10081) {
-                      tmp44 = closure_0;
-                      tmp45 = closure_0;
-                      tmp46 = c2;
-                      tmp47 = c2;
-                      obj6 = closure_0(c2[5]);
-                      tmp48 = items1;
-                      arr = items1.push(obj6.USVString(item10103, { context: "Failed to construct 'URLSearchParams': parameter 1 sequence's element's element" }));
-                      continue;
-                    }
-                    tmp50 = items1;
-                    tmp51 = items1;
-                    arr1 = items.push(items1);
-                    continue;
+    const _RangeError6 = RangeError;
+    const rangeError = new RangeError(closure_3["not-basic"]);
+    throw rangeError;
+  }
+  let num4 = 0;
+  if (num > 0) {
+    num4 = num + 1;
+  }
+  let num5 = 72;
+  let num6 = 0;
+  if (num4 < arr.length) {
+    let tmp2 = num4;
+    let num7 = 36;
+    let num8 = 1;
+    let tmp6 = num6;
+    while (true) {
+      while (tmp2 < length) {
+        let tmp64 = +tmp2;
+        let charCodeAtResult = arr.charCodeAt(tmp64);
+        if (charCodeAtResult >= 48) {
+          if (charCodeAtResult < 58) {
+            let num9 = charCodeAtResult - 48 + 26;
+            if (36 <= num9) {
+              let tmp45 = globalThis;
+              let _RangeError4 = RangeError;
+              let tmp47 = new.target;
+              let tmp48 = new.target;
+              let rangeError1 = new RangeError(closure_3["invalid-input"]);
+              throw rangeError1;
+            } else if (num9 > floor((2147483647 - tmp6) / num8)) {
+              let tmp39 = globalThis;
+              let _RangeError3 = RangeError;
+              let tmp41 = new.target;
+              let tmp42 = new.target;
+              let rangeError2 = new RangeError(closure_3.overflow);
+              throw rangeError2;
+            } else {
+              let num11 = 1;
+              if (num7 > num5) {
+                let num10 = 26;
+                if (num7 < num5 + 26) {
+                  num10 = num7 - num5;
+                }
+                num11 = num10;
+              }
+              let sum = tmp64 + 1;
+              let sum1 = tmp6 + num9 * num8;
+              if (num9 < num11) {
+                let sum2 = items.length + 1;
+                if (typeof adapt === "function") {
+                  let diff = sum1 - num6;
+                  if (0 === num6) {
+                    let tmp66Result = floor(diff / 700);
                   } else {
-                    _TypeError3 = TypeError;
-                    tmp38 = new.target;
-                    str4 = "Failed to construct 'URLSearchParams': parameter 1 sequence's element is not an iterable object.";
-                    tmp39 = new.target;
-                    typeError = new TypeError("Failed to construct 'URLSearchParams': parameter 1 sequence's element is not an iterable object.");
-                    tmp41 = typeError;
-                    throw typeError;
+                    tmp66Result = diff >> 1;
                   }
+                  let sum3 = tmp66Result + floor(tmp66Result / sum2);
+                  let num12 = 0;
+                  let num13 = 0;
+                  let tmp25 = floor;
+                  let tmp26 = sum3;
+                  if (sum3 > 455) {
+                    do {
+                      sum3 = floor(sum3 / 35);
+                      num12 = num12 + 36;
+                      num13 = num12;
+                      tmp25 = floor;
+                      tmp26 = sum3;
+                    } while (sum3 > 455);
+                  }
+                  let result = sum1 / sum2;
+                  let tmp25Result = tmp25(num13 + 36 * tmp26 / (tmp26 + 38));
+                  if (floor(result) > 2147483647 - num2) {
+                    let tmp33 = globalThis;
+                    let _RangeError2 = RangeError;
+                    let tmp35 = new.target;
+                    let tmp36 = new.target;
+                    let rangeError3 = new RangeError(closure_3.overflow);
+                    throw rangeError3;
+                  } else {
+                    let sum4 = num2 + floor(result);
+                    let result1 = sum1 % sum2;
+                    num6 = result1 + 1;
+                    let spliceResult = items.splice(result1, 0, sum4);
+                    num4 = sum;
+                    num5 = tmp25Result;
+                    num2 = sum4;
+                  }
+                } else {
+                  let str = "Trying to call a non-function";
+                  throw new TypeError("Trying to call a non-function");
                 }
               } else {
-                _TypeError2 = TypeError;
-                tmp27 = new.target;
-                str3 = "Failed to construct 'URLSearchParams': parameter 1 sequence is not an iterable object.";
-                tmp28 = new.target;
-                typeError1 = new TypeError("Failed to construct 'URLSearchParams': parameter 1 sequence is not an iterable object.");
-                tmp30 = typeError1;
-                throw typeError1;
-              }
-            } else {
-              tmp58 = tmp54;
-              tmp59 = tmp56;
-              tmp55Result1 = tmp55(tmp57[3]);
-              if (tmp55Result1.isObject(first)) {
-                _Object = Object;
-                tmp10 = null;
-                obj = Object.create(null);
-                _Reflect = Reflect;
-                ownKeysResult = Reflect.ownKeys(first);
-                tmp13 = ownKeysResult;
-                tmp14 = ownKeysResult;
-                str = obj;
-                for (const item10039 of ownKeysResult) {
-                  tmp15 = item10039;
-                  _Object2 = Object;
-                  ownPropertyDescriptor = Object.getOwnPropertyDescriptor(first, item10039);
-                  if (!ownPropertyDescriptor) {
-                  } else {
-                    tmp18 = ownPropertyDescriptor;
-                    if (!tmp17.enumerable) {
-                    } else {
-                      tmp19 = item10039;
-                      tmp20 = closure_0;
-                      tmp21 = closure_0;
-                      tmp22 = c2;
-                      tmp23 = c2;
-                      obj2 = closure_0(c2[5]);
-                      USVStringResult = obj2.USVString(tmp15, { context: "Failed to construct 'URLSearchParams': parameter 1 record's key" });
-                      obj3 = closure_0(c2[5]);
-                      obj[USVStringResult] = obj3.USVString(first[tmp15], { context: "Failed to construct 'URLSearchParams': parameter 1 record's value" });
-                    }
-                  }
+                let diff1 = 36 - num11;
+                if (num8 > floor(2147483647 / diff1)) {
+                  let tmp14 = globalThis;
+                  let _RangeError = RangeError;
+                  let tmp16 = new.target;
+                  let tmp17 = new.target;
+                  let rangeError4 = new RangeError(closure_3.overflow);
+                  throw rangeError4;
+                } else {
+                  num8 = num8 * diff1;
+                  num7 = num7 + 36;
+                  tmp2 = sum;
+                  tmp6 = sum1;
                   continue;
                 }
-              } else {
-                _TypeError = TypeError;
-                tmp6 = new.target;
-                str2 = "Failed to construct 'URLSearchParams': parameter 1 record is not an object.";
-                tmp7 = new.target;
-                typeError2 = new TypeError("Failed to construct 'URLSearchParams': parameter 1 record is not an object.");
-                tmp9 = typeError2;
-                throw typeError2;
               }
+              continue;
             }
+          }
+        }
+        if (charCodeAtResult >= 65) {
+          if (charCodeAtResult < 91) {
+            num9 = charCodeAtResult - 65;
+          }
+        }
+        num9 = 36;
+        if (charCodeAtResult >= 97) {
+          num9 = 36;
+          if (charCodeAtResult < 123) {
+            num9 = charCodeAtResult - 97;
+          }
+        }
+      }
+      let tmp51 = globalThis;
+      let _RangeError5 = RangeError;
+      let tmp53 = new.target;
+      let tmp54 = new.target;
+      let rangeError5 = new RangeError(closure_3["invalid-input"]);
+      throw rangeError5;
+    }
+  }
+  const items1 = [...items];
+  return String.fromCodePoint.apply(items1);
+}
+function encode(arg0) {
+  const items = [];
+  let arr1 = ucs2decode(arg0);
+  let num = 0;
+  let num2 = 72;
+  const iter = arr1[Symbol.iterator]();
+  let num3 = 128;
+  const nextResult = iter.next();
+  while (iter !== undefined) {
+    if (nextResult < num3) {
+      let arr = items.push(fromCharCode(tmp2));
+    }
+    continue;
+  }
+  let sum2 = length2;
+  if (items.length) {
+    items.push("-");
+  }
+  if (sum2 < length) {
+    let num4 = 2147483647;
+    const iter2 = arr1[Symbol.iterator]();
+    while (true) {
+      let nextResult1 = iter2.next();
+      while (iter2 !== undefined) {
+        let tmp14 = nextResult1 >= num3;
+        if (tmp14) {
+          tmp14 = tmp13 < num4;
+        }
+        if (tmp14) {
+          num4 = nextResult1;
+        }
+        continue;
+      }
+      let sum = sum2 + 1;
+      let diff = num4 - num3;
+      if (diff > floor((2147483647 - num) / sum)) {
+        break;
+      } else {
+        let num5 = num + (num4 - num3) * sum;
+        for (const item10065 of arr1) {
+          let tmp25 = item10065 < num4;
+          if (tmp25) {
+            let sum1 = num5 + 1;
+            num5 = sum1;
+            tmp25 = sum1 > 2147483647;
+          }
+          if (tmp25) {
+            let str2 = "overflow";
+            let tmp55 = error("overflow");
+            obj.return();
+            throw __exception;
           } else {
-            tmp3 = tmp54;
-            tmp4 = tmp56;
-            tmp55Result2 = tmp55(tmp57[5]);
-            str = tmp55Result2.USVString(first, { context: "Failed to construct 'URLSearchParams': parameter 1" });
+            if (item10065 === num4) {
+              let tmp45 = num5;
+              let num8 = 36;
+              while (true) {
+                let num6 = 1;
+                if (num8 > num2) {
+                  let num7 = 26;
+                  if (num8 < num2 + 26) {
+                    num7 = num8 - num2;
+                  }
+                  num6 = num7;
+                }
+                let tmp35 = num6;
+                if (tmp45 < num6) {
+                  break;
+                } else {
+                  let diff1 = tmp45 - tmp35;
+                  let diff2 = 36 - tmp35;
+                  arr1 = items.push(fromCharCode(digitToBasic(tmp35 + diff1 % diff2, 0)));
+                  tmp45 = floor(diff1 / diff2);
+                  num8 = num8 + 36;
+                  continue;
+                }
+              }
+              let arr2 = items.push(fromCharCode(digitToBasic(tmp45, 0)));
+              num2 = adapt(num5, sum, sum2 === length2);
+              num5 = 0;
+              sum2 = sum2 + 1;
+            }
+            continue;
           }
         }
-        items2 = [];
-        arr2 = items2.push(str);
-        return closure_7.setup(Object.create(this.constructor.prototype), closure_0, items2);
+        num = num5 + 1;
+        num3 = num4 + 1;
       }
     }
-    const entry = {
-      key: "append",
-      value: function append(arg0, arg1) {
-        const self = this;
-        if (this) {
-          const _exports = module.exports;
-          if (_exports.is(self)) {
-            if (arguments.length < 2) {
-              const _TypeError = TypeError;
-              const typeError = new TypeError("Failed to execute 'append' on 'URLSearchParams': 2 arguments required, but only " + arguments.length + " present.");
-              throw typeError;
-            } else {
-              const items = [];
-              items.push(URLSearchParams(14380).USVString(arguments[0], { context: "Failed to execute 'append' on 'URLSearchParams': parameter 1" }));
-              obj = URLSearchParams(14380);
-              items.push(URLSearchParams(14380).USVString(arguments[1], { context: "Failed to execute 'append' on 'URLSearchParams': parameter 2" }));
-              const tmp12 = self[URLSearchParams(undefined, 14372).implSymbol];
-              const append = tmp12.append;
-              const items1 = [];
-              HermesBuiltin.arraySpread(items, 0);
-              return HermesBuiltin.apply(items1, tmp12);
-            }
-          }
-        }
-        const typeError1 = new TypeError("Illegal invocation");
-        throw typeError1;
-      }
-    };
-    let items = [
-      entry,
-      {
-        key: "delete",
-        value: function _delete(arg0) {
-          const self = this;
-          if (this) {
-            const _exports = module.exports;
-            if (_exports.is(self)) {
-              if (arguments.length < 1) {
-                const _TypeError = TypeError;
-                const typeError = new TypeError("Failed to execute 'delete' on 'URLSearchParams': 1 argument required, but only " + arguments.length + " present.");
-                throw typeError;
-              } else {
-                const items = [];
-                items.push(URLSearchParams(14380).USVString(arguments[0], { context: "Failed to execute 'delete' on 'URLSearchParams': parameter 1" }));
-                const tmp6 = self[URLSearchParams(undefined, 14372).implSymbol];
-                const _delete = tmp6.delete;
-                const items1 = [];
-                HermesBuiltin.arraySpread(items, 0);
-                return HermesBuiltin.apply(items1, tmp6);
-              }
-            }
-          }
-          const typeError1 = new TypeError("Illegal invocation");
-          throw typeError1;
-        }
-      },
-      {
-        key: "get",
-        value: function get(arg0) {
-          const self = this;
-          if (this) {
-            const _exports = module.exports;
-            if (_exports.is(self)) {
-              if (arguments.length < 1) {
-                const _TypeError = TypeError;
-                const typeError = new TypeError("Failed to execute 'get' on 'URLSearchParams': 1 argument required, but only " + arguments.length + " present.");
-                throw typeError;
-              } else {
-                const items = [];
-                items.push(URLSearchParams(14380).USVString(arguments[0], { context: "Failed to execute 'get' on 'URLSearchParams': parameter 1" }));
-                const tmp6 = self[URLSearchParams(undefined, 14372).implSymbol];
-                const get = tmp6.get;
-                const items1 = [];
-                HermesBuiltin.arraySpread(items, 0);
-                return HermesBuiltin.apply(items1, tmp6);
-              }
-            }
-          }
-          const typeError1 = new TypeError("Illegal invocation");
-          throw typeError1;
-        }
-      },
-      {
-        key: "getAll",
-        value: function getAll(arg0) {
-          const self = this;
-          if (this) {
-            const _exports = module.exports;
-            if (_exports.is(self)) {
-              if (arguments.length < 1) {
-                const _TypeError = TypeError;
-                const typeError = new TypeError("Failed to execute 'getAll' on 'URLSearchParams': 1 argument required, but only " + arguments.length + " present.");
-                throw typeError;
-              } else {
-                const items = [];
-                items.push(URLSearchParams(14380).USVString(arguments[0], { context: "Failed to execute 'getAll' on 'URLSearchParams': parameter 1" }));
-                obj = URLSearchParams(14380);
-                const tmp11 = self[URLSearchParams(undefined, 14372).implSymbol];
-                const getAll = tmp11.getAll;
-                const items1 = [];
-                HermesBuiltin.arraySpread(items, 0);
-                return URLSearchParams(14372).tryWrapperForImpl(HermesBuiltin.apply(items1, tmp11));
-              }
-            }
-          }
-          const typeError1 = new TypeError("Illegal invocation");
-          throw typeError1;
-        }
-      },
-      {
-        key: "has",
-        value: function has(arg0) {
-          const self = this;
-          if (this) {
-            const _exports = module.exports;
-            if (_exports.is(self)) {
-              if (arguments.length < 1) {
-                const _TypeError = TypeError;
-                const typeError = new TypeError("Failed to execute 'has' on 'URLSearchParams': 1 argument required, but only " + arguments.length + " present.");
-                throw typeError;
-              } else {
-                const items = [];
-                items.push(URLSearchParams(14380).USVString(arguments[0], { context: "Failed to execute 'has' on 'URLSearchParams': parameter 1" }));
-                const tmp6 = self[URLSearchParams(undefined, 14372).implSymbol];
-                const has = tmp6.has;
-                const items1 = [];
-                HermesBuiltin.arraySpread(items, 0);
-                return HermesBuiltin.apply(items1, tmp6);
-              }
-            }
-          }
-          const typeError1 = new TypeError("Illegal invocation");
-          throw typeError1;
-        }
-      },
-      {
-        key: "set",
-        value: function set(arg0, arg1) {
-          const self = this;
-          if (this) {
-            const _exports = module.exports;
-            if (_exports.is(self)) {
-              if (arguments.length < 2) {
-                const _TypeError = TypeError;
-                const typeError = new TypeError("Failed to execute 'set' on 'URLSearchParams': 2 arguments required, but only " + arguments.length + " present.");
-                throw typeError;
-              } else {
-                const items = [];
-                items.push(URLSearchParams(14380).USVString(arguments[0], { context: "Failed to execute 'set' on 'URLSearchParams': parameter 1" }));
-                obj = URLSearchParams(14380);
-                items.push(URLSearchParams(14380).USVString(arguments[1], { context: "Failed to execute 'set' on 'URLSearchParams': parameter 2" }));
-                const tmp12 = self[URLSearchParams(undefined, 14372).implSymbol];
-                const items1 = [];
-                HermesBuiltin.arraySpread(items, 0);
-                return HermesBuiltin.apply(items1, tmp12);
-              }
-            }
-          }
-          const typeError1 = new TypeError("Illegal invocation");
-          throw typeError1;
-        }
-      },
-      {
-        key: "sort",
-        value: function sort() {
-          const self = this;
-          if (this) {
-            const _exports = module.exports;
-            if (_exports.is(self)) {
-              return self[URLSearchParams(undefined, 14372).implSymbol].sort();
-            }
-          }
-          const typeError = new TypeError("Illegal invocation");
-          throw typeError;
-        }
-      },
-      {
-        key: "toString",
-        value: function toString() {
-          const self = this;
-          if (this) {
-            const _exports = module.exports;
-            if (_exports.is(self)) {
-              return self[URLSearchParams(undefined, 14372).implSymbol].toString();
-            }
-          }
-          const typeError = new TypeError("Illegal invocation");
-          throw typeError;
-        }
-      },
-      {
-        key: "keys",
-        value: function keys() {
-          const self = this;
-          if (this) {
-            const _exports = module.exports;
-            if (_exports.is(self)) {
-              const _exports2 = module.exports;
-              return _exports2.createDefaultIterator(self, "key");
-            }
-          }
-          const typeError = new TypeError("Illegal invocation");
-          throw typeError;
-        }
-      },
-      {
-        key: "values",
-        value: function values() {
-          const self = this;
-          if (this) {
-            const _exports = module.exports;
-            if (_exports.is(self)) {
-              const _exports2 = module.exports;
-              return _exports2.createDefaultIterator(self, "value");
-            }
-          }
-          const typeError = new TypeError("Illegal invocation");
-          throw typeError;
-        }
-      },
-      {
-        key: "entries",
-        value: function entries() {
-          const self = this;
-          if (this) {
-            const _exports = module.exports;
-            if (_exports.is(self)) {
-              const _exports2 = module.exports;
-              return _exports2.createDefaultIterator(self, "key+value");
-            }
-          }
-          const typeError = new TypeError("Illegal invocation");
-          throw typeError;
-        }
-      },
-      {
-        key: "forEach",
-        value: function forEach(call) {
-          const self = this;
-          if (this) {
-            const _exports = module.exports;
-            if (_exports.is(self)) {
-              if (arguments.length < 1) {
-                const _TypeError2 = TypeError;
-                const typeError = new TypeError("Failed to execute 'forEach' on 'iterable': 1 argument required, but only 0 present.");
-                throw typeError;
-              } else if (typeof call !== "function") {
-                const _TypeError = TypeError;
-                const typeError1 = new TypeError("Failed to execute 'forEach' on 'iterable': The callback provided as parameter 1 is not a function.");
-                throw typeError1;
-              } else {
-                const tmp23 = arguments[1];
-                const _Array2 = Array;
-                let arr = Array.from(self[URLSearchParams(undefined, 14372).implSymbol]);
-                let num2 = 0;
-                let tmp11 = arr;
-                if (0 < arr.length) {
-                  do {
-                    arr = tmp11[num2];
-                    let tmp6 = _slicedToArray(arr.map(URLSearchParams(14372).tryWrapperForImpl), 2);
-                    [tmp7, tmp8] = tmp6;
-                    call = call.call;
-                    if (typeof call === "unknown") {
-                      let tmp10 = call(tmp8, tmp7, self);
-                    } else {
-                      let callResult = call(tmp23, tmp8, tmp7, self);
-                    }
-                    let _Array = Array;
-                    arr = Array.from(self[URLSearchParams(undefined, 14372).implSymbol]);
-                    num2 = num2 + 1;
-                    tmp11 = arr;
-                  } while (num2 < arr.length);
-                }
-              }
-            }
-          }
-          const typeError2 = new TypeError("Illegal invocation");
-          throw typeError2;
-        }
-      }
-    ];
-    const tmp = _createClass(URLSearchParams, items);
-    obj = { append: { enumerable: true }, delete: { enumerable: true }, get: { enumerable: true }, getAll: { enumerable: true }, has: { enumerable: true }, set: { enumerable: true }, sort: { enumerable: true }, toString: { enumerable: true }, keys: { enumerable: true }, values: { enumerable: true }, entries: { enumerable: true }, forEach: { enumerable: true } };
-    obj[Symbol.toStringTag] = { value: "URLSearchParams", configurable: true };
-    obj[Symbol.iterator] = { value: tmp.prototype.entries, configurable: true, writable: true };
-    Object.defineProperties(tmp.prototype, obj);
-    if (undefined === arg0[URLSearchParams(undefined, 14372).ctorRegistrySymbol]) {
-      let _Object = Object;
-      const ctorRegistrySymbol = tmp3(14372).ctorRegistrySymbol;
-      class URLSearchParams {
-        constructor() {
-          tmp = closure_3(this, URLSearchParams);
-          first = arguments[0];
-          str = "";
-          if (undefined !== first) {
-            tmp54 = closure_0;
-            tmp55 = closure_0;
-            tmp56 = c2;
-            tmp57 = c2;
-            obj7 = closure_0(c2[3]);
-            if (obj7.isObject(first)) {
-              tmp5 = globalThis;
-              _Symbol = Symbol;
-              if (undefined !== first[Symbol.iterator]) {
-                tmp25 = tmp54;
-                tmp26 = tmp56;
-                tmp55Result = tmp55(tmp57[3]);
-                if (tmp55Result.isObject(first)) {
-                  items = [];
-                  tmp31 = first;
-                  tmp32 = first;
-                  str = items;
-                  for (const item10081 of first) {
-                    tmp34 = closure_0;
-                    tmp35 = closure_0;
-                    tmp36 = c2;
-                    tmp37 = c2;
-                    tmp33 = item10081;
-                    obj5 = closure_0(c2[3]);
-                    if (obj5.isObject(item10081)) {
-                      items1 = [];
-                      tmp42 = tmp33;
-                      tmp43 = item10081;
-                      for (const item10103 of item10081) {
-                        tmp44 = closure_0;
-                        tmp45 = closure_0;
-                        tmp46 = c2;
-                        tmp47 = c2;
-                        obj6 = closure_0(c2[5]);
-                        tmp48 = items1;
-                        arr = items1.push(obj6.USVString(item10103, { context: "Failed to construct 'URLSearchParams': parameter 1 sequence's element's element" }));
-                        continue;
-                      }
-                      tmp50 = items1;
-                      tmp51 = items1;
-                      arr1 = items.push(items1);
-                      continue;
-                    } else {
-                      _TypeError3 = TypeError;
-                      tmp38 = new.target;
-                      str4 = "Failed to construct 'URLSearchParams': parameter 1 sequence's element is not an iterable object.";
-                      tmp39 = new.target;
-                      typeError = new TypeError("Failed to construct 'URLSearchParams': parameter 1 sequence's element is not an iterable object.");
-                      tmp41 = typeError;
-                      throw typeError;
-                    }
-                  }
-                } else {
-                  _TypeError2 = TypeError;
-                  tmp27 = new.target;
-                  str3 = "Failed to construct 'URLSearchParams': parameter 1 sequence is not an iterable object.";
-                  tmp28 = new.target;
-                  typeError1 = new TypeError("Failed to construct 'URLSearchParams': parameter 1 sequence is not an iterable object.");
-                  tmp30 = typeError1;
-                  throw typeError1;
-                }
-              } else {
-                tmp58 = tmp54;
-                tmp59 = tmp56;
-                tmp55Result1 = tmp55(tmp57[3]);
-                if (tmp55Result1.isObject(first)) {
-                  _Object = Object;
-                  tmp10 = null;
-                  obj = Object.create(null);
-                  _Reflect = Reflect;
-                  ownKeysResult = Reflect.ownKeys(first);
-                  tmp13 = ownKeysResult;
-                  tmp14 = ownKeysResult;
-                  str = obj;
-                  for (const item10039 of ownKeysResult) {
-                    tmp15 = item10039;
-                    _Object2 = Object;
-                    ownPropertyDescriptor = Object.getOwnPropertyDescriptor(first, item10039);
-                    if (!ownPropertyDescriptor) {
-                    } else {
-                      tmp18 = ownPropertyDescriptor;
-                      if (!tmp17.enumerable) {
-                      } else {
-                        tmp19 = item10039;
-                        tmp20 = closure_0;
-                        tmp21 = closure_0;
-                        tmp22 = c2;
-                        tmp23 = c2;
-                        obj2 = closure_0(c2[5]);
-                        USVStringResult = obj2.USVString(tmp15, { context: "Failed to construct 'URLSearchParams': parameter 1 record's key" });
-                        obj3 = closure_0(c2[5]);
-                        obj[USVStringResult] = obj3.USVString(first[tmp15], { context: "Failed to construct 'URLSearchParams': parameter 1 record's value" });
-                      }
-                    }
-                    continue;
-                  }
-                } else {
-                  _TypeError = TypeError;
-                  tmp6 = new.target;
-                  str2 = "Failed to construct 'URLSearchParams': parameter 1 record is not an object.";
-                  tmp7 = new.target;
-                  typeError2 = new TypeError("Failed to construct 'URLSearchParams': parameter 1 record is not an object.");
-                  tmp9 = typeError2;
-                  throw typeError2;
-                }
-              }
-            } else {
-              tmp3 = tmp54;
-              tmp4 = tmp56;
-              tmp55Result2 = tmp55(tmp57[5]);
-              str = tmp55Result2.USVString(first, { context: "Failed to construct 'URLSearchParams': parameter 1" });
-            }
-          }
-          items2 = [];
-          arr2 = items2.push(str);
-          return closure_7.setup(Object.create(this.constructor.prototype), closure_0, items2);
-        }
-      }
+  }
+  return items.join("");
+}
+
+export default {
+  version: "2.3.1",
+  ucs2: {
+    decode: ucs2decode,
+    encode(arg0) {
+      const items = [...arg0];
+      return String.fromCodePoint.apply(items);
     }
-    arg0[URLSearchParams(undefined, 14372).ctorRegistrySymbol].URLSearchParams = tmp;
-    Object.defineProperty(arg0, "URLSearchParams", { configurable: true, writable: true, value: tmp });
+  },
+  decode,
+  encode,
+  toASCII(str) {
+    let tmp8;
+    const parts = str.split("@");
+    str = "";
+    let str2 = str;
+    if (parts.length > 1) {
+      str = `${arr[0]}@`;
+      str2 = parts[1];
+    }
+    const parts1 = str2.replace(re2, ".").split(".");
+    const items = [];
+    let diff = tmp - 1;
+    if (+parts1.length) {
+      do {
+        let tmp3 = parts1[diff];
+        let text = tmp3;
+        if (re1.test(tmp3)) {
+          text = `xn--${encode(tmp3)}`;
+        }
+        items[diff] = text;
+        tmp8 = +diff;
+        diff = tmp8 - 1;
+      } while (tmp8);
+    }
+    return str + items.join(".");
+  },
+  toUnicode(str) {
+    let tmp7;
+    const parts = str.split("@");
+    str = "";
+    let str2 = str;
+    if (parts.length > 1) {
+      str = `${arr[0]}@`;
+      str2 = parts[1];
+    }
+    const parts1 = str2.replace(re2, ".").split(".");
+    const items = [];
+    let diff = tmp - 1;
+    if (+parts1.length) {
+      do {
+        let arr4 = parts1[diff];
+        let tmp5 = arr4;
+        if (re0.test(arr4)) {
+          let str4 = arr4.slice(4);
+          tmp5 = decode(str4.toLowerCase());
+        }
+        items[diff] = tmp5;
+        tmp7 = +diff;
+        diff = tmp7 - 1;
+      } while (tmp7);
+    }
+    return str + items.join(".");
   }
 };
-
-export default exports;

@@ -1,23 +1,18 @@
 // === Module 17267: ? ===
 
 // Module 17267
-let obj = {
-  locale: "zh",
+globalThis.IntlMessageFormat.__addLocaleData({
+  locale: "tr",
   pluralRuleFunction(arg0, arg1) {
-    return "other";
+    let str = "other";
+    let str2 = "other";
+    if (!arg1) {
+      if (1 == arg0) {
+        str = "one";
+      }
+      str2 = str;
+    }
+    return str2;
   }
-};
-globalThis.IntlMessageFormat.__addLocaleData(obj);
-globalThis.IntlMessageFormat.__addLocaleData({ locale: "zh-Hans", parentLocale: "zh" });
-globalThis.IntlMessageFormat.__addLocaleData({ locale: "zh-Hans-HK", parentLocale: "zh-Hans" });
-globalThis.IntlMessageFormat.__addLocaleData({ locale: "zh-Hans-MO", parentLocale: "zh-Hans" });
-globalThis.IntlMessageFormat.__addLocaleData({ locale: "zh-Hans-SG", parentLocale: "zh-Hans" });
-obj = {
-  locale: "zh-Hant",
-  pluralRuleFunction(arg0, arg1) {
-    return "other";
-  }
-};
-globalThis.IntlMessageFormat.__addLocaleData(obj);
-globalThis.IntlMessageFormat.__addLocaleData({ locale: "zh-Hant-HK", parentLocale: "zh-Hant" });
-globalThis.IntlMessageFormat.__addLocaleData({ locale: "zh-Hant-MO", parentLocale: "zh-Hant-HK" });
+});
+globalThis.IntlMessageFormat.__addLocaleData({ locale: "tr-CY", parentLocale: "tr" });
