@@ -1,19 +1,10 @@
 // _runtime/metro/14323__.js
-let all = typeof document === "object";
-if (typeof document === "object") {
-  const _document = document;
-  all = document.all;
-}
-if (undefined === all) {
-  if (undefined !== all) {
-    let fn = (fn) => {
-      let tmp = typeof fn === "function";
-      if (typeof fn !== "function") {
-        tmp = fn === all;
-      }
-      return tmp;
-    };
-  }
-  module.exports = fn;
-}
-fn = (fn) => typeof fn === "function";
+import _mod14307 from "14307__.js";
+import _mod14324 from "14324__.js";
+
+let closure_2 = _mod14307({}.hasOwnProperty);
+
+export default Object.hasOwn ||
+  function hasOwn(arg0, arg1) {
+    return closure_2(_mod14324(arg0), arg1);
+  };

@@ -4,10 +4,10 @@ import registerAsset from "01122__.js";
 export default registerAsset.registerAsset({
   __packager_asset: true,
   httpServerLocation: "/assets/images/native/premium/guild_boosting/tier_icons/flower_star/dark",
-  width: 24,
-  height: 23,
+  width: 16,
+  height: 16,
   scales: [2, 3],
-  hash: "d3ced0dd7614d99a1c612f606eea8d5d",
-  name: "tier_2_24px",
+  hash: "90c1dc5d32c0284bd720743e9ec59702",
+  name: "tier_0_24px",
   type: "png",
 });

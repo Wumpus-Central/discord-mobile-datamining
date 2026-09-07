@@ -3,11 +3,11 @@ import registerAsset from "01122__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/guild_onboarding_home/images",
-  width: 223,
-  height: 145.5,
+  httpServerLocation: "/assets/images/native/icons",
+  width: 32,
+  height: 32,
   scales: [2, 3],
-  hash: "fa8d8980f41bbcb7aeb9d5dc519482cb",
-  name: "mobile-empty-state",
+  hash: "b7959151112c46092618236391150e02",
+  name: "ic_rulebook",
   type: "png",
 });

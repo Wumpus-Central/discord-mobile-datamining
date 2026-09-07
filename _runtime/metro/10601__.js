@@ -1,261 +1,112 @@
 // _runtime/metro/10601__.js
-import repeatedTimeunitPattern from "../10432_repeatedTimeunitPattern.js";
-import findMostLikelyADYear from "../10433_findMostLikelyADYear.js";
+import _mod10593 from "10593__.js";
+import _classCallCheck from "00041__classCallCheck.js";
+import _createClass from "00042__createClass.js";
+import c3 from "00093__possibleConstructorReturn.js";
+import _getPrototypeOf from "../00095__getPrototypeOf.js";
+import _inherits from "../00098__inherits.js";
 
-const combined =
-  "(" +
-  exports.NUMBER_PATTERN +
-  ")\\s{0,3}(" +
-  repeatedTimeunitPattern.matchAnyPattern(exports.TIME_UNIT_DICTIONARY) +
-  ")";
-const regExp = new RegExp(combined, "i");
-
-export const parseNumberPattern = function parseNumberPattern(str) {
-  str = str.toLowerCase();
-  if (undefined !== exports.INTEGER_WORD_DICTIONARY[str]) {
-    let num5 = exports.INTEGER_WORD_DICTIONARY[str];
-  } else {
-    num5 = 1;
-    if ("un" !== str) {
-      num5 = 1;
-      if ("una" !== str) {
-        let num4 = 3;
-        if (!str.match(/alcuni/)) {
-          let num = 0.5;
-          if (!str.match(/metá/)) {
-            let num2 = 2;
-            if (!str.match(/paio/)) {
-              let num3 = 7;
-              if (!str.match(/molti/)) {
-                const _parseFloat = parseFloat;
-                num3 = parseFloat(str);
-              }
-              num2 = num3;
-            }
-            num = num2;
-          }
-          num4 = num;
-        }
-        num5 = num4;
-      }
-    }
-  }
-  return num5;
-};
-export const parseOrdinalNumberPattern = function parseOrdinalNumberPattern(str) {
-  str = str.toLowerCase();
-  if (undefined !== exports.ORDINAL_WORD_DICTIONARY[str]) {
-    return exports.ORDINAL_WORD_DICTIONARY[str];
-  } else {
-    const _parseInt = parseInt;
-    return parseInt(str.replace(/(?:imo|ndo|rzo|rto|nto|sto|tavo|nono|cimo|timo|esimo)$/i, ""));
-  }
-};
-export const parseYear = function parseYear(match) {
-  if (obj.test(match)) {
-    const _parseInt4 = parseInt;
-    return parseInt(match.replace(/BE/i, "")) - 543;
-  } else {
-    if (obj2.test(match)) {
-      const _parseInt3 = parseInt;
-      return -parseInt(match.replace(/BCE?/i, ""));
+const UKWeekdayParser = require;
+function _isNativeReflectConstruct() {
+  try {
+    const _Boolean = Boolean;
+    const call = valueOf.call;
+    const _Reflect = Reflect;
+    const _Boolean2 = Boolean;
+    if (typeof call === "unknown") {
+      let callResult = valueOf();
     } else {
-      if (obj3.test(match)) {
-        const _parseInt2 = parseInt;
-        return parseInt(match.replace(/(AD|CE)/i, ""));
-      } else {
-        const _parseInt = parseInt;
-        const parsed = parseInt(match);
-        return findMostLikelyADYear.findMostLikelyADYear(parsed);
-      }
-      obj3 = /(AD|CE)/i;
+      callResult = call(constructResult);
     }
-    obj2 = /BCE?/i;
-  }
-  obj = /BE/i;
-};
-export const parseDuration = function parseDuration(arg0) {
-  let str = arg0;
-  const obj = {};
-  let match = regExp.exec(arg0);
-  while (match) {
-    let str2 = match[1];
-    let str3 = str2.toLowerCase();
-    if (undefined !== exports.INTEGER_WORD_DICTIONARY[str3]) {
-      let num5 = exports.INTEGER_WORD_DICTIONARY[str3];
+    closure_0 = !callResult;
+    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
+      return closure_0;
+    };
+    return _isNativeReflectConstruct();
+  } catch (err) {}
+}
+class UKWeekdayParser {
+  constructor() {
+    self = this;
+    tmp = c2(this, UKWeekdayParser);
+    tmp2 = closure_4;
+    obj = closure_4(UKWeekdayParser);
+    tmp3 = closure_3;
+    if (hasOwnProperty()) {
+      tmp7 = globalThis;
+      _Reflect = Reflect;
+      tmp8 = arguments;
+      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
     } else {
-      num5 = 1;
-      if ("un" !== str3) {
-        num5 = 1;
-        if ("una" !== str3) {
-          let num4 = 3;
-          if (!str3.match(/alcuni/)) {
-            let num = 0.5;
-            if (!str3.match(/metá/)) {
-              let num2 = 2;
-              if (!str3.match(/paio/)) {
-                let num3 = 7;
-                if (!str3.match(/molti/)) {
-                  let _parseFloat = parseFloat;
-                  num3 = parseFloat(str3);
+      tmp4 = arguments;
+      tmp5 = arguments;
+      constructResult = obj(...arguments);
+    }
+    return tmp3(self, constructResult);
+  }
+}
+_inherits(UKWeekdayParser, _mod10593.AbstractParserWithLeftRightBoundaryChecking);
+const entry = {
+  key: "innerPatternString",
+  value: function innerPatternString(arg0) {
+    return (
+      "(?:(?:,|\\(|\uFF08)\\s*)?(?:\u0432\\s*?)?(?:\u0443\\s*?)?(?:(\u0446\u0435\u0439|\u043C\u0438\u043D\u0443\u043B\u043E\u0433\u043E|\u043C\u0438\u043D\u0443\u043B\u0438\u0439|\u043F\u043E\u043F\u0435\u0440\u0435\u0434\u043D\u0456\u0439|\u043F\u043E\u043F\u0435\u0440\u0435\u0434\u043D\u044C\u043E\u0433\u043E|\u043D\u0430\u0441\u0442\u0443\u043F\u043D\u043E\u0433\u043E|\u043D\u0430\u0441\u0442\u0443\u043F\u043D\u0438\u0439|\u043D\u0430\u0441\u0442\u0443\u043F\u043D\u043E\u043C\u0443)\\s*)?(" +
+      UKWeekdayParser(10437).matchAnyPattern(UKWeekdayParser(10591).WEEKDAY_DICTIONARY) +
+      ")(?:\\s*(?:,|\\)|\uFF09))?(?:\\s*(\u043D\u0430|\u0443|\u0432)\\s*(\u0446\u044C\u043E\u043C\u0443|\u043C\u0438\u043D\u0443\u043B\u043E\u043C\u0443|\u043D\u0430\u0441\u0442\u0443\u043F\u043D\u043E\u043C\u0443)\\s*\u0442\u0438\u0436\u043D\u0456)?"
+    );
+  },
+};
+const items = [
+  entry,
+  {
+    key: "innerExtract",
+    value: function innerExtract(reference, arg1) {
+      let str = arg1[1];
+      if (!str) {
+        str = arg1[3];
+      }
+      if (!str) {
+        str = "";
+      }
+      const toLocaleLowerCaseResult1 = str.toLocaleLowerCase();
+      let str2 = "last";
+      if ("\u043C\u0438\u043D\u0443\u043B\u043E\u0433\u043E" != toLocaleLowerCaseResult1) {
+        str2 = "last";
+        if ("\u043C\u0438\u043D\u0443\u043B\u0438\u0439" != toLocaleLowerCaseResult1) {
+          str2 = "last";
+          if ("\u043F\u043E\u043F\u0435\u0440\u0435\u0434\u043D\u0456\u0439" != toLocaleLowerCaseResult1) {
+            str2 = "last";
+            if (
+              "\u043F\u043E\u043F\u0435\u0440\u0435\u0434\u043D\u044C\u043E\u0433\u043E" != toLocaleLowerCaseResult1
+            ) {
+              str2 = "next";
+              if ("\u043D\u0430\u0441\u0442\u0443\u043F\u043D\u043E\u0433\u043E" != toLocaleLowerCaseResult1) {
+                str2 = "next";
+                if ("\u043D\u0430\u0441\u0442\u0443\u043F\u043D\u0438\u0439" != toLocaleLowerCaseResult1) {
+                  let tmp5 = "\u0446\u0435\u0439" != toLocaleLowerCaseResult1;
+                  if (tmp5) {
+                    tmp5 = "\u0446\u044C\u043E\u0433\u043E" != toLocaleLowerCaseResult1;
+                  }
+                  if (tmp5) {
+                    tmp5 = "\u0446\u044C\u043E\u043C\u0443" != toLocaleLowerCaseResult1;
+                  }
+                  str2 = null;
+                  if (!tmp5) {
+                    str2 = "this";
+                  }
                 }
-                num2 = num3;
               }
-              num = num2;
             }
-            num4 = num;
           }
-          num5 = num4;
         }
       }
-    }
-    let str4 = match[2];
-    obj[exports.TIME_UNIT_DICTIONARY[str4.toLowerCase(str4)]] = num5;
-    let str5 = str.substring(match[0].length);
-    let trimmed = str5.trim();
-    match = regExp.exec(trimmed);
-    str = trimmed;
-  }
-  return obj;
-};
-export const WEEKDAY_DICTIONARY = {
-  domenica: 0,
-  dom: 0,
-  lunedì: 1,
-  lun: 1,
-  martedì: 2,
-  mar: 2,
-  mercoledì: 3,
-  merc: 3,
-  giovedì: 4,
-  giov: 4,
-  venerdì: 5,
-  ven: 5,
-  sabato: 6,
-  sab: 6,
-};
-export const FULL_MONTH_NAME_DICTIONARY = {};
-export const MONTH_DICTIONARY = Object.assign(Object.assign({}, exports.FULL_MONTH_NAME_DICTIONARY), {
-  gennaio: 1,
-  gen: 1,
-  "gen.": 1,
-  febbraio: 2,
-  feb: 2,
-  "feb.": 2,
-  febraio: 2,
-  febb: 2,
-  "febb.": 2,
-  marzo: 3,
-  mar: 3,
-  "mar.": 3,
-  aprile: 4,
-  apr: 4,
-  "apr.": 4,
-  maggio: 5,
-  mag: 5,
-  giugno: 6,
-  giu: 6,
-  luglio: 7,
-  lug: 7,
-  lugl: 7,
-  "lug.": 7,
-  agosto: 8,
-  ago: 8,
-  settembre: 9,
-  set: 9,
-  "set.": 9,
-  sett: 9,
-  "sett.": 9,
-  ottobre: 10,
-  ott: 10,
-  "ott.": 10,
-  novembre: 11,
-  nov: 11,
-  "nov.": 11,
-  dicembre: 12,
-  dic: 12,
-  dice: 12,
-  "dic.": 12,
-});
-export const INTEGER_WORD_DICTIONARY = {
-  uno: 1,
-  due: 2,
-  tre: 3,
-  quattro: 4,
-  cinque: 5,
-  sei: 6,
-  sette: 7,
-  otto: 8,
-  nove: 9,
-  dieci: 10,
-  undici: 11,
-  dodici: 12,
-};
-export const ORDINAL_WORD_DICTIONARY = {
-  primo: 1,
-  secondo: 2,
-  terzo: 3,
-  quarto: 4,
-  quinto: 5,
-  sesto: 6,
-  settimo: 7,
-  ottavo: 8,
-  nono: 9,
-  decimo: 10,
-  undicesimo: 11,
-  dodicesimo: 12,
-  tredicesimo: 13,
-  quattordicesimo: 14,
-  quindicesimo: 15,
-  sedicesimo: 16,
-  diciassettesimo: 17,
-  diciottesimo: 18,
-  diciannovesimo: 19,
-  ventesimo: 20,
-  ventunesimo: 21,
-  ventiduesimo: 22,
-  ventitreesimo: 23,
-  ventiquattresimo: 24,
-  venticinquesimo: 25,
-  ventiseiesimo: 26,
-  ventisettesimo: 27,
-  ventottesimo: 28,
-  ventinovesimo: 29,
-  trentesimo: 30,
-  trentunesimo: 31,
-};
-export const TIME_UNIT_DICTIONARY = {
-  sec: "second",
-  secondo: "second",
-  secondi: "second",
-  min: "minute",
-  mins: "minute",
-  minuti: "minute",
-  h: "hour",
-  hr: "hour",
-  o: "hour",
-  ora: "hour",
-  ore: "hour",
-  giorno: "day",
-  giorni: "day",
-  settimana: "week",
-  settimane: "week",
-  mese: "month",
-  trimestre: "quarter",
-  trimestri: "quarter",
-  anni: "year",
-  anno: "year",
-};
-export const NUMBER_PATTERN =
-  "(?:" +
-  repeatedTimeunitPattern.matchAnyPattern(exports.INTEGER_WORD_DICTIONARY) +
-  "|[0-9]+|[0-9]+\\.[0-9]+|half(?:\\s{0,2}un?)?|un?\\b(?:\\s{0,2}qualcuno)?|qualcuno|molti|a?\\s{0,2}alcuni\\s{0,2}(?:of)?)";
-export const ORDINAL_NUMBER_PATTERN =
-  "(?:" +
-  repeatedTimeunitPattern.matchAnyPattern(exports.ORDINAL_WORD_DICTIONARY) +
-  "|[0-9]{1,2}(?:mo|ndo|rzo|simo|esimo)?)";
-export const YEAR_PATTERN = "(?:[1-9][0-9]{0,3}\\s{0,2}(?:BE|AD|BC|BCE|CE)|[1-2][0-9]{3}|[5-9][0-9])";
-export const TIME_UNITS_PATTERN = repeatedTimeunitPattern.repeatedTimeunitPattern(
-  "(?:(?:about|around)\\s{0,3})?",
-  combined,
-);
+      return UKWeekdayParser(10464).createParsingComponentsAtWeekday(
+        reference.reference,
+        UKWeekdayParser(10591).WEEKDAY_DICTIONARY[arg1[2].toLocaleLowerCase()],
+        str2,
+      );
+    },
+  },
+];
+
+export default _createClass(UKWeekdayParser, items);

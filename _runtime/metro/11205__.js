@@ -3,11 +3,11 @@ import registerAsset from "01122__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
-  width: 24,
-  height: 24,
+  httpServerLocation: "/assets/images/native/badge",
+  width: 30,
+  height: 30,
   scales: [2, 3],
-  hash: "80a1b67e775ddb8de80fde27e63a5302",
-  name: "CirclePlusIcon-secondary",
+  hash: "581374036ac67fb316291b50b3effd2f",
+  name: "ic_badge_nitro",
   type: "png",
 });

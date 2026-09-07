@@ -3,11 +3,11 @@ import registerAsset from "01122__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/premium_marketing/native/images",
-  width: 254,
-  height: 180,
+  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
+  width: 24,
+  height: 24,
   scales: [2, 3],
-  hash: "e23a08d55bf782056090f3aa9709d84f",
-  name: "img_client_themes",
+  hash: "ffb75c82f97e39285286ef89f1767a3c",
+  name: "ServerGridIcon",
   type: "png",
 });

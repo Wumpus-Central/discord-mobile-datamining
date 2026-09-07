@@ -3190,7 +3190,7 @@ function initObservers(doc) {
       ({ mousemoveCb: drag, sampling, doc, mirror: fn3 } = doc);
       closure_2 = undefined;
       closure_3 = undefined;
-      let f71408;
+      let f71424;
       items = undefined;
       if (false === sampling.mousemove) {
         return () => {
@@ -3241,7 +3241,7 @@ function initObservers(doc) {
           closure_130_2 = {};
           closure_130_3 = null;
           closure_130_4 = 0;
-          f71408 = function() {
+          f71424 = function() {
             items = [...arguments];
             let self;
             const timestamp = Date.now();
@@ -4543,7 +4543,7 @@ function initObservers(doc) {
                       } catch (tmp7) {
                         if (closure_2_79) {
                           if (true === tmp8(tmp7)) {
-                            return /* F107989 */ function() { ... };
+                            return /* F108014 */ function() { ... };
                           }
                         }
                         throw tmp7;
@@ -4609,7 +4609,7 @@ function initObservers(doc) {
                       } catch (tmp7) {
                         if (closure_2_79) {
                           if (true === tmp8(tmp7)) {
-                            return /* F107989 */ function() { ... };
+                            return /* F108014 */ function() { ... };
                           }
                         }
                         throw tmp7;
@@ -5468,7 +5468,7 @@ function addBreadcrumbEvent(triggerUserActivity, category) {
       }
       data.timestamp = 1000 * num;
       data = { tag: "breadcrumb", payload: null };
-      const normalizer = f108031(map[8]);
+      const normalizer = f108056(map[8]);
       data.payload = normalizer.normalize(_null, 10, 1000);
       data.data = data;
       data.throttledAddEvent(data);
@@ -6208,7 +6208,7 @@ function mergeWarning(_meta, arg1) {
     _meta._meta = _meta;
     return _meta;
   } else {
-    _meta = { headers: null, size: "Array", _meta: -1 };
+    _meta = { headers: null, size: "Array", _meta: "Array" };
     _meta.headers = _meta;
     _meta = { warnings: null };
     const items1 = [arg1];
@@ -6654,7 +6654,7 @@ let closure_159 = async function _prepareFetchData2(arg0, arg1, arg2) {
                         tmp23._meta = obj8;
                         let obj9 = tmp23;
                       } else {
-                        obj9 = { headers: obj8, size: "Array", _meta: -1 };
+                        obj9 = { headers: obj8, size: "Array", _meta: "Array" };
                         const obj10 = { warnings: null };
                         const items1 = [tmp21];
                         obj10.warnings = items1;
@@ -7432,7 +7432,7 @@ let closure_164 = async function _captureXhrBreadcrumbToReplay(arg0, arg1, arg2)
                             tmp22._meta = obj5;
                             let obj6 = tmp22;
                           } else {
-                            obj6 = { headers: obj5, size: "Array", _meta: -1 };
+                            obj6 = { headers: obj5, size: "Array", _meta: "Array" };
                             const obj7 = { warnings: null };
                             let items2 = [tmp17];
                             obj7.warnings = items2;
@@ -7450,7 +7450,7 @@ let closure_164 = async function _captureXhrBreadcrumbToReplay(arg0, arg1, arg2)
                           tmp18._meta = obj8;
                           let obj9 = tmp18;
                         } else {
-                          obj9 = { headers: obj8, size: "Array", _meta: -1 };
+                          obj9 = { headers: obj8, size: "Array", _meta: "Array" };
                           const obj10 = { warnings: null };
                           let items4 = [tmp14];
                           obj10.warnings = items4;

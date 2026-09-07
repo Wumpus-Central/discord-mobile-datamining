@@ -1,69 +1,43 @@
 // _runtime/metro/12915__.js
-import stackParserFromStackParserOptions from "../12800_stackParserFromStackParserOptions.js";
-import _mod12803 from "12803__.js";
-import _mod12913 from "12913__.js";
+import _mod12916 from "12916__.js";
 
 require = arg1;
+const module = arg4;
 const dependencyMap = arg6;
+function dynamicRequire(require, arg1) {
+  return require.require(arg1);
+}
 
-export const callFrameToStackFrame = function callFrameToStackFrame(location, str, fn) {
-  let replaced;
-  if (str) {
-    replaced = str.replace(/^file:\/\//, "");
+export { dynamicRequire };
+export const isNodeEnv = function isNodeEnv() {
+  const isBrowserBundleResult = _mod12916.isBrowserBundle();
+  if (isBrowserBundleResult) {
+    return !isBrowserBundleResult;
+  } else {
+    const _Object = Object;
+    const call = toString.call;
+    const _process = process;
+    let str = 0;
+    if (typeof process !== "undefined") {
+      str = process;
+    }
+    str = "[object process]";
+    const tmp3 = typeof call === "unknown" ? toString() : call(str);
   }
-  let sum;
-  if (location.location.columnNumber) {
-    sum = location.location.columnNumber + 1;
-  }
-  let sum1;
-  if (location.location.lineNumber) {
-    sum1 = location.location.lineNumber + 1;
-  }
-  const obj = {
-    filename: replaced,
-    module: fn(replaced),
-    function: location.functionName || stackParserFromStackParserOptions.UNKNOWN_FUNCTION,
-    colno: sum,
-    lineno: sum1,
-    in_app: null,
-  };
-  let filenameIsInAppResult;
-  if (replaced) {
-    filenameIsInAppResult = _mod12913.filenameIsInApp(replaced);
-    const tmp4Result = _mod12913;
-  }
-  obj.in_app = filenameIsInAppResult;
-  return obj.dropUndefinedKeys(obj);
 };
-export const watchdogTimer = function watchdogTimer(fn, arg1, arg2, arg3) {
-  closure_0 = arg1;
-  closure_1 = arg2;
-  closure_2 = arg3;
-  const navigation = fn();
-  c4 = false;
-  closure_5 = true;
-  const timerId = setInterval(() => {
-    const timeMs = navigation.getTimeMs();
-    let tmp2 = false === c4;
-    if (tmp2) {
-      tmp2 = timeMs > closure_0 + closure_1;
+export const loadModule = function loadModule(arg0) {
+  let tmp = arg1;
+  if (arg1 === undefined) {
+    tmp = module;
+  }
+  try {
+    let tmp3 = dynamicRequire(tmp, arg0);
+    if (!tmp3) {
+      try {
+        const _HermesInternal = HermesInternal;
+        tmp3 = dynamicRequire(tmp, "" + dynamicRequire(tmp, "process").cwd() + "/node_modules/" + arg0);
+      } catch (err) {}
     }
-    if (tmp2) {
-      c4 = true;
-      if (closure_5) {
-        closure_2();
-      }
-    }
-    if (timeMs < closure_0 + closure_1) {
-      c4 = false;
-    }
-  }, 20);
-  return {
-    poll() {
-      navigation.reset();
-    },
-    enabled(arg0) {
-      closure_5 = arg0;
-    },
-  };
+    return tmp3;
+  } catch (err) {}
 };

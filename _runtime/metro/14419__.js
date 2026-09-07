@@ -1,41 +1,42 @@
 // _runtime/metro/14419__.js
 
-export default () => (startTimer) => {
-  closure_0 = startTimer;
-  startTimer = startTimer.startTimer;
-  return {
-    features: {
-      benchmark(title) {
-        const items = [];
-        closure_2 = items();
-        function step(title) {
-          let arr = items;
-          let num = 0;
-          if (0 !== items.length) {
-            num = arr[arr.length - 1].time;
-          }
-          const tmp = closure_2();
-          arr = arr.push({ title, time: tmp, delta: tmp - num });
+export default (createSocket) => {
+  ({ host, port } = createSocket);
+  if (null != createSocket.createSocket) {
+    let tmp7 = typeof host === "string";
+    if (typeof host === "string") {
+      tmp7 = host;
+    }
+    if (tmp7) {
+      tmp7 = "" !== host;
+    }
+    if (tmp7) {
+      let tmp13 = typeof port === "number";
+      if (typeof port === "number") {
+        tmp13 = port >= 1;
+      }
+      if (tmp13) {
+        tmp13 = port <= 65535;
+      }
+      if (tmp13) {
+        if (typeof tmp !== "function") {
+          const _Error4 = Error;
+          const error = new Error("invalid onCommand handler");
+          throw error;
         }
-        items.push({ title, time: 0, delta: 0 });
-        function stop(title) {
-          if (typeof step === "function") {
-            let arr = items;
-            let num = 0;
-            if (0 !== items.length) {
-              num = arr[arr.length - 1].time;
-            }
-            const tmp3 = closure_2();
-            let obj = { title, time: tmp3, delta: tmp3 - num };
-            arr = arr.push(obj);
-            obj = { title, steps: arr };
-            title.send("benchmark.report", obj);
-          } else {
-            throw new TypeError("Trying to call a non-function");
-          }
-        }
-        return { step, stop, last: stop };
-      },
-    },
-  };
+      } else {
+        const _Error3 = Error;
+        const error1 = new Error("invalid port");
+        throw error1;
+      }
+    } else {
+      const _Error2 = Error;
+      const error2 = new Error("invalid host");
+      throw error2;
+    }
+  } else {
+    const _Error = Error;
+    const error3 = new Error("invalid createSocket function");
+    throw error3;
+  }
 };

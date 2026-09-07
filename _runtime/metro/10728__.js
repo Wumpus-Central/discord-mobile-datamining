@@ -4,10 +4,10 @@ import registerAsset from "01122__.js";
 export default registerAsset.registerAsset({
   __packager_asset: true,
   httpServerLocation: "/assets/images/native/premium/activated",
-  width: 302,
-  height: 42,
+  width: 278.5,
+  height: 48,
   scales: [2, 3],
-  hash: "180afb9edd1653ca63d752893222f1c8",
-  name: "img_plan_activated",
+  hash: "fd5849efd39a217c9ef72fb828af8485",
+  name: "img_nitro_tier_0_activated_light",
   type: "png",
 });

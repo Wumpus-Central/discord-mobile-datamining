@@ -3,11 +3,11 @@ import registerAsset from "01122__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/icons",
-  width: 24,
-  height: 24.5,
+  httpServerLocation: "/assets/modules/instant_invite/native/images",
+  width: 160.5,
+  height: 140,
   scales: [2, 3],
-  hash: "8baf8e74a5de42544f8c13cd8c4c504d",
-  name: "ic_share_android",
+  hash: "ad61eda1bea496e5c4dfb770ef28c56b",
+  name: "server-invite-envelope",
   type: "png",
 });

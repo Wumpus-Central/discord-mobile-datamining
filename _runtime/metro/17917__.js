@@ -3,11 +3,11 @@ import registerAsset from "01122__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native",
-  width: 120,
-  height: 62,
+  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
+  width: 24,
+  height: 24,
   scales: [2, 3],
-  hash: "45f60dd7d404beac5f4bf97c97606d27",
-  name: "poop_light_large",
+  hash: "3cfafdcd8589d496d2b3358a1b5ec72d",
+  name: "ImageBrokenIcon",
   type: "png",
 });

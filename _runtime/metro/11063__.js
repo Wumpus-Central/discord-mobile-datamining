@@ -1,355 +1,221 @@
 // _runtime/metro/11063__.js
 import asyncGeneratorStep from "../00005_asyncGeneratorStep.js";
 
-const require = fn;
-const noop = fn(19);
-({ useCallback: c3, useEffect: closure_4 } = noop);
-
-export const useIAP = () => {
-  let obj = require("11064__.js");
-  const iAPContext = obj.useIAPContext();
-  const currentPurchase = iAPContext.currentPurchase;
-  currentPurchaseError = iAPContext.currentPurchaseError;
-  ({ setConnected: asyncGeneratorStep, setProducts } = iAPContext);
-  const setSubscriptions = iAPContext.setSubscriptions;
-  const setAvailablePurchases = iAPContext.setAvailablePurchases;
-  const setPurchaseHistory = iAPContext.setPurchaseHistory;
-  const setCurrentPurchase = iAPContext.setCurrentPurchase;
-  const setCurrentPurchaseError = iAPContext.setCurrentPurchaseError;
-  ({
-    connected,
-    products,
-    promotedProductsIOS,
-    subscriptions,
-    purchaseHistory,
-    availablePurchases,
-    initConnectionError,
-  } = iAPContext);
-  asyncGeneratorStep(async (arg0) => {
-    dependencyMap = closure_3;
-    await closure_0(currentPurchaseError[3]).getProducts({ skus });
-    dependencyMap(value);
-    await "HermesInternal";
-    closure_2 = tmp2;
-    skus = closure_0.skus;
-    return "PX_16";
-  });
-  const items = [setProducts];
-  asyncGeneratorStep(async (arg0) => {
-    await closure_0(currentPurchaseError[3]).getSubscriptions({ skus });
-    dependencyMap(value);
-    await "HermesInternal";
-    closure_2 = tmp2;
-    skus = closure_0.skus;
-    return "PX_16";
-  });
-  const items1 = [setSubscriptions];
-  const tmp4 = setProducts;
-  const tmp5 = setProducts(function (arg0) {
-    const self = this;
-    const apply = closure_0.apply;
-    if (typeof apply === "unknown") {
-      let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+get_ActivityIndicator = fn(17);
+({ Linking: c2, NativeModules } = get_ActivityIndicator);
+({ RNIapModule: c3, RNIapModule } = NativeModules);
+let closure_0 = asyncGeneratorStep(async (arg0) => {
+  if (c6 === 2) {
+    c6 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp4 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      let obj = { value, done: true };
+      return obj;
     } else {
-      applyArgumentsResult = apply(self, arguments);
+      return { value: "HermesInternal", done: null };
     }
-    return applyArgumentsResult;
-  }, items);
-  const items2 = [setAvailablePurchases];
-  const tmp6 = setProducts(function (arg0) {
-    const self = this;
-    const apply = closure_0.apply;
-    if (typeof apply === "unknown") {
-      let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-    } else {
-      applyArgumentsResult = apply(self, arguments);
-    }
-    return applyArgumentsResult;
-  }, items1);
-  const items3 = [setPurchaseHistory];
-  const tmp7 = setProducts(
-    asyncGeneratorStep(async () => {
-      if (c2 === 2) {
-        c2 = 3;
-        throw new TypeError("Generator functions may not be called on executing generators");
-      } else if (tmp3 === 3) {
+  } else {
+    try {
+      c6 = 2;
+      if (0 === c5) {
         if (arg0 === 1) {
-          throw value;
-        } else if (arg0 === 2) {
-          let obj = { value, done: true };
-          return obj;
-        } else {
-          return { value: "HermesInternal", done: null };
-        }
-      } else {
-        try {
-          c2 = 2;
-          if (0 === dependencyMap) {
-            if (arg0 === 1) {
-              c2 = 3;
-              throw value;
-            } else if (arg0 === 2) {
-              c2 = 3;
-              obj = { value, done: true };
-              return obj;
-            } else {
-              closure_0 = setAvailablePurchases;
-              let obj1 = closure_0(dependencyMap[3]);
-              dependencyMap = 1;
-              c2 = 1;
-              obj1 = { value: null, done: false };
-              obj1.value = obj1.getAvailablePurchases();
-              return obj1;
-            }
-          } else if (arg0 === 1) {
-            c2 = 3;
-            throw value;
-          } else if (arg0 === 2) {
-            c2 = 3;
-            obj = { value, done: true };
-            return obj;
-          } else {
-            closure_0(value);
-            c2 = 3;
-            return { value: "HermesInternal", done: null };
-          }
-        } catch (tmp10) {
-          c2 = tmp;
-          throw tmp10;
-        }
-      }
-    }),
-    items2,
-  );
-  _require = asyncGeneratorStep(async (arg0) => {
-    if (c6 === 2) {
-      c6 = 3;
-      throw new TypeError("Generator functions may not be called on executing generators");
-    } else if (tmp8 === 3) {
-      if (arg0 === 1) {
-        throw value;
-      } else if (arg0 === 2) {
-        let obj = { value, done: true };
-        return obj;
-      } else {
-        return { value: "HermesInternal", done: null };
-      }
-    } else {
-      try {
-        c6 = 2;
-        if (0 === c5) {
-          if (arg0 === 1) {
-            c6 = 3;
-            throw value;
-          } else if (arg0 === 2) {
-            c6 = 3;
-            obj = { value, done: true };
-            return obj;
-          } else {
-            closure_2 = tmp4;
-            closure_129_0 = undefined;
-            closure_129_1 = undefined;
-            closure_129_2 = undefined;
-            ({
-              purchase: closure_129_0,
-              isConsumable: closure_129_1,
-              developerPayloadAndroid: closure_129_2,
-            } = closure_0);
-            c5 = 1;
-            c6 = 1;
-            return { value: "PX_16", done: true };
-          }
-        } else if (1 === tmp9) {
-          if (arg0 === 1) {
-            c6 = 3;
-            throw value;
-          } else if (arg0 === 2) {
-            c6 = 3;
-            const obj1 = { value, done: true };
-            return obj1;
-          } else {
-            c4 = 2;
-            let obj2 = closure_0(currentPurchaseError[3]);
-            obj2 = { purchase: closure_129_0, isConsumable: closure_129_1, developerPayloadAndroid: closure_129_2 };
-            c5 = 4;
-            c6 = 1;
-            const obj3 = { value: obj2.finishTransaction(obj2), done: false };
-            return obj3;
-          }
-        } else if (2 === tmp9) {
-          c4 = 0;
-          let productId;
-          if (closure_0 != null) {
-            productId = closure_0.productId;
-          }
-          if (closure_129_0.productId === productId) {
-            setCurrentPurchase(undefined);
-          }
-          let productId1;
-          if (tmp6 != null) {
-            productId1 = tmp6.productId;
-          }
-          if (closure_129_0.productId === productId1) {
-            setCurrentPurchaseError(undefined);
-          }
-          throw closure_3;
-        } else if (3 === tmp9) {
-          c4 = 1;
-          throw closure_3;
-        } else if (arg0 === 1) {
           c6 = 3;
           throw value;
         } else if (arg0 === 2) {
-          c4 = 0;
-          let productId2;
-          if (closure_0 != null) {
-            productId2 = closure_0.productId;
-          }
-          if (closure_129_0.productId === productId2) {
-            setCurrentPurchase(undefined);
-          }
-          let productId3;
-          if (tmp6 != null) {
-            productId3 = tmp6.productId;
-          }
-          if (closure_129_0.productId === productId3) {
-            setCurrentPurchaseError(undefined);
-          }
-          c6 = 3;
-          const obj4 = { value, done: true };
-          return obj4;
-        } else {
-          c4 = 0;
-          let productId4;
-          if (closure_0 != null) {
-            productId4 = closure_0.productId;
-          }
-          if (closure_129_0.productId === productId4) {
-            setCurrentPurchase(undefined);
-          }
-          let productId5;
-          if (tmp6 != null) {
-            productId5 = tmp6.productId;
-          }
-          if (closure_129_0.productId === productId5) {
-            setCurrentPurchaseError(undefined);
-          }
           c6 = 3;
           obj = { value, done: true };
           return obj;
-        }
-      } catch (tmp61) {
-        closure_3 = tmp61;
-        if (tmp5 === c4) {
-          c6 = tmp3;
-          throw tmp61;
-        } else if (tmp2 === tmp63) {
-          c5 = tmp;
         } else {
-          c5 = tmp3;
+          const packageName = tmp5;
+          closure_4 = tmp2;
+          let sku;
+          sku = closure_0.sku;
+          c5 = 1;
+          c6 = 1;
+          return { value: "PX_16", done: true };
         }
-      }
-    }
-  });
-  let productId;
-  if (currentPurchase != null) {
-    productId = currentPurchase.productId;
-  }
-  const items4 = [productId, , ,];
-  let productId1;
-  if (currentPurchaseError != null) {
-    productId1 = currentPurchaseError.productId;
-  }
-  items4[1] = productId1;
-  items4[2] = setCurrentPurchase;
-  items4[3] = setCurrentPurchaseError;
-  const tmp8 = setProducts(
-    asyncGeneratorStep(async () => {
-      if (c2 === 2) {
-        c2 = 3;
-        throw new TypeError("Generator functions may not be called on executing generators");
-      } else if (tmp3 === 3) {
+      } else if (1 === tmp5) {
         if (arg0 === 1) {
+          c6 = 3;
           throw value;
         } else if (arg0 === 2) {
-          let obj = { value, done: true };
+          c6 = 3;
+          const obj1 = { value, done: true };
+          return obj1;
+        } else {
+          let obj2 = closure_0(openURL[3]);
+          const result = obj2.checkNativeAndroidAvailable();
+          openURL = openURL.openURL;
+          c5 = 2;
+          c6 = 1;
+          obj2 = { value: packageName.getPackageName(), done: false };
+          return obj2;
+        }
+      } else if (arg0 === 1) {
+        c6 = 3;
+        throw value;
+      } else if (arg0 === 2) {
+        c6 = 3;
+        const obj3 = { value, done: true };
+        return obj3;
+      } else {
+        const _HermesInternal = HermesInternal;
+        c6 = 3;
+        obj = {
+          value: openURL("https://play.google.com/store/account/subscriptions?package=" + value + "&sku=" + sku),
+          done: true,
+        };
+        return obj;
+      }
+    } catch (tmp18) {
+      c6 = tmp;
+      throw tmp18;
+    }
+  }
+});
+let closure_129_0 = asyncGeneratorStep(async (arg0) => {
+  if (c3 === 2) {
+    c3 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp4 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      let obj = { value, done: true };
+      return obj;
+    } else {
+      return { value: "HermesInternal", done: null };
+    }
+  } else {
+    try {
+      c3 = 2;
+      if (0 === c2) {
+        if (arg0 === 1) {
+          c3 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c3 = 3;
+          obj = { value, done: true };
           return obj;
         } else {
-          return { value: "HermesInternal", done: null };
+          closure_1 = tmp2;
+          closure_129_0 = undefined;
+          closure_129_1 = undefined;
+          closure_129_2 = undefined;
+          closure_129_3 = undefined;
+          closure_129_4 = undefined;
+          ({
+            packageName: closure_129_0,
+            productId: closure_129_1,
+            productToken: closure_129_2,
+            accessToken: closure_129_3,
+            isSub: closure_129_4,
+          } = closure_0);
+          closure_129_5 = undefined;
+          closure_129_6 = undefined;
+          c2 = 1;
+          c3 = 1;
+          return { value: "PX_16", done: true };
         }
-      } else {
-        try {
-          c2 = 2;
-          if (0 === dependencyMap) {
-            if (arg0 === 1) {
-              c2 = 3;
-              throw value;
-            } else if (arg0 === 2) {
-              c2 = 3;
-              obj = { value, done: true };
-              return obj;
-            } else {
-              closure_0 = setPurchaseHistory;
-              let obj1 = closure_0(dependencyMap[3]);
-              dependencyMap = 1;
-              c2 = 1;
-              obj1 = { value: null, done: false };
-              obj1.value = obj1.getPurchaseHistory();
-              return obj1;
-            }
-          } else if (arg0 === 1) {
-            c2 = 3;
-            throw value;
-          } else if (arg0 === 2) {
-            c2 = 3;
-            obj = { value, done: true };
-            return obj;
-          } else {
-            closure_0(value);
-            c2 = 3;
-            return { value: "HermesInternal", done: null };
+      } else if (1 === tmp5) {
+        if (arg0 === 1) {
+          c3 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c3 = 3;
+          const obj1 = { value, done: true };
+          return obj1;
+        } else {
+          let str = "products";
+          if (closure_129_4) {
+            str = "subscriptions";
           }
-        } catch (tmp10) {
-          c2 = tmp;
-          throw tmp10;
+          const _HermesInternal = HermesInternal;
+          closure_129_5 =
+            "https://androidpublisher.googleapis.com/androidpublisher/v3/applications/" +
+            tmp30 +
+            "/purchases/" +
+            str +
+            "/" +
+            closure_129_1 +
+            "/tokens/" +
+            closure_129_2 +
+            "?access_token=" +
+            closure_129_3;
+          const _fetch = fetch;
+          const obj2 = { method: "GET", headers: { "Content-Type": "application/json" } };
+          c2 = 2;
+          c3 = 1;
+          const obj3 = { value: fetch(closure_129_5, obj2), done: false };
+          return obj3;
+        }
+      } else if (arg0 === 1) {
+        c3 = 3;
+        throw value;
+      } else if (arg0 === 2) {
+        c3 = 3;
+        const obj4 = { value, done: true };
+        return obj4;
+      } else {
+        closure_129_6 = value;
+        if (closure_129_6.ok) {
+          c3 = 3;
+          const obj5 = { value: closure_129_6.json(), done: true };
+          return obj5;
+        } else {
+          const _Object = Object;
+          const _Error = Error;
+          const error = new Error(closure_129_6.statusText);
+          obj = { statusCode: closure_129_6.status };
+          throw Object.assign(error, obj);
         }
       }
-    }),
-    items3,
-  );
-  setSubscriptions(() => {
-    asyncGeneratorStep(true);
-    return () => {
-      closure_1_2(false);
-      setCurrentPurchaseError(undefined);
-    };
-  }, []);
-  obj = {
-    connected,
-    products,
-    promotedProductsIOS,
-    subscriptions,
-    purchaseHistory,
-    availablePurchases,
-    currentPurchase,
-    currentPurchaseError,
-    initConnectionError,
-    finishTransaction: tmp4(function (arg0) {
-      const self = this;
-      const apply = closure_0.apply;
-      if (typeof apply === "unknown") {
-        let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-      } else {
-        applyArgumentsResult = apply(self, arguments);
-      }
-      return applyArgumentsResult;
-    }, items4),
-    getProducts: tmp5,
-    getSubscriptions: tmp6,
-    getAvailablePurchases: tmp7,
-    getPurchaseHistory: tmp8,
-    requestPurchase: tmp(tmp2[3]).requestPurchase,
-    requestSubscription: tmp(tmp2[3]).requestSubscription,
-  };
-  return obj;
+    } catch (tmp21) {
+      c3 = tmp;
+      throw tmp21;
+    }
+  }
+});
+
+export const AndroidModule = RNIapModule;
+export const getInstallSourceAndroid = () => {
+  const InstallSourceAndroid = closure_0(11055).InstallSourceAndroid;
+  return React3 ? InstallSourceAndroid.GOOGLE_PLAY : InstallSourceAndroid.AMAZON;
+};
+export const deepLinkToSubscriptionsAndroid = function deepLinkToSubscriptionsAndroid(arg0) {
+  const self = this;
+  const apply = closure_0.apply;
+  if (typeof apply === "unknown") {
+    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+  } else {
+    applyArgumentsResult = apply(self, arguments);
+  }
+  return applyArgumentsResult;
+};
+export const validateReceiptAndroid = function validateReceiptAndroid(arg0) {
+  const self = this;
+  const apply = closure_0.apply;
+  if (typeof apply === "unknown") {
+    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+  } else {
+    applyArgumentsResult = apply(self, arguments);
+  }
+  return applyArgumentsResult;
+};
+export const acknowledgePurchaseAndroid = (arg0) => {
+  ({ token, developerPayload } = arg0);
+  const androidModule = closure_0(11056).getAndroidModule();
+  return androidModule.acknowledgePurchase(token, developerPayload);
+};
+export const isFeatureSupported = (arg0) => {
+  if (closure_0(11056).isAndroid) {
+    if (React3) {
+      let isFeatureSupportedResult = RNIapModule.isFeatureSupported(arg0);
+    }
+    return isFeatureSupportedResult;
+  }
+  isFeatureSupportedResult = Promise.reject("This is only available on Android clients");
 };

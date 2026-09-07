@@ -175,7 +175,7 @@ const forwardRefResult = noop.forwardRef(function PlatformPressableInternal(disa
   if (!disabled) {
     const obj1 = {};
     const merged3 = Object.assign(hoverEffect);
-    tmp13 = closure_6(f36956, obj1);
+    tmp13 = closure_6(f36959, obj1);
   }
   const items3 = [tmp13, children];
   obj.children = items3;
@@ -198,7 +198,7 @@ String.raw(
   "__react-navigation_elements_Pressable_hover",
   "__react-navigation_elements_Pressable_hover",
 );
-const f36956 = (arg0) => {
+const f36959 = (arg0) => {
   ({ color, hoverOpacity, activeOpacity } = arg0);
   return null;
 };

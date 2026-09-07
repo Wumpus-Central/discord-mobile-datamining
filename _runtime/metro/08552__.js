@@ -1,17 +1,13 @@
 // _runtime/metro/08552__.js
-import _possibleConstructorReturnDefault from "00093__possibleConstructorReturn.js";
-import appendTransformPropsDefault from "../08461_appendTransformProps.js";
-import extractPropsDefault from "../08468_extractProps.js";
-import extractFontDefault from "../08475_extractFont.js";
-import _modDef8477 from "08477__.js";
-import _modDef8553 from "08553__.js";
+import _modDef8480 from "08480__.js";
 import _classCallCheck from "00041__classCallCheck.js";
 import _createClass from "00042__createClass.js";
+import c3 from "00093__possibleConstructorReturn.js";
 import _getPrototypeOf from "../00095__getPrototypeOf.js";
 import _inherits from "../00098__inherits.js";
 import noop from "00019__.js";
 
-const TSpan = fn;
+const Symbol = importDefault;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -30,73 +26,51 @@ function _isNativeReflectConstruct() {
     return _isNativeReflectConstruct();
   } catch (err) {}
 }
-_possibleConstructorReturnDefault;
 const jsx = fn(21).jsx;
-class TSpan {
+class Symbol {
   constructor() {
     self = this;
-    items = [...arguments];
-    closure_0 = undefined;
-    tmp = closure_3(this, TSpan);
-    items1 = [...items];
-    tmp2 = hasOwnProperty;
-    obj = hasOwnProperty(TSpan);
-    tmp3 = closure_4;
-    if (closure_7()) {
-      tmp5 = globalThis;
+    tmp = c2(this, Symbol);
+    tmp2 = closure_4;
+    obj = closure_4(Symbol);
+    tmp3 = closure_3;
+    if (metroRequire()) {
+      tmp7 = globalThis;
       _Reflect = Reflect;
-      constructResult = Reflect.construct(obj, items1, tmp2(self).constructor);
+      tmp8 = arguments;
+      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
     } else {
-      constructResult = obj.apply(self, items1);
+      tmp4 = arguments;
+      tmp5 = arguments;
+      constructResult = obj(...arguments);
     }
-    tmp3Result = tmp3(self, constructResult);
-    closure_0 = tmp3Result;
-    tmp3Result.setNativeProps = (matrix) => {
-      matrix = matrix.matrix;
-      let tmp = !matrix;
-      if (!matrix) {
-        tmp = appendTransformPropsDefault(matrix);
-      }
-      if (tmp) {
-        matrix.matrix = tmp;
-      }
-      const propsAndStylesResult = TSpan(8468).propsAndStyles(matrix);
-      const obj = TSpan(8468);
-      const merged = Object.assign(
-        propsAndStylesResult,
-        TSpan(8469).pickNotNil(extractFontDefault(propsAndStylesResult, false)),
-      );
-      if (closure_0.root) {
-        const root = closure_0.root;
-        root.setNativeProps(propsAndStylesResult);
-      }
-      const obj2 = TSpan(8469);
-    };
-    return tmp3Result;
+    return tmp3(self, constructResult);
   }
 }
-_inherits(TSpan, _modDef8477);
+_inherits(Symbol, _modDef8480);
 const entry = {
   key: "render",
   value: function render() {
-    let obj = TSpan(8468);
-    const propsAndStylesResult = obj.propsAndStyles(this.props);
-    obj = {};
-    const merged = Object.assign(propsAndStylesResult);
-    obj.x = null;
-    obj.y = null;
-    const tmp2Result = extractPropsDefault(obj, this);
-    const merged1 = Object.assign(tmp2Result, extractFontDefault(propsAndStylesResult, false));
-    tmp2Result.ref = this.refMethod;
-    obj = {};
-    const merged2 = Object.assign(tmp2Result);
-    return jsx(_modDef8553, {});
+    const self = this;
+    const props = this.props;
+    let obj = { name: props.id };
+    obj = {
+      ref(arg0) {
+        return self.refMethod(arg0);
+      },
+    };
+    const merged = Object.assign(obj);
+    const merged1 = Object.assign(Symbol(8469)(props));
+    obj.children = props.children;
+    return jsx(Symbol(8553), {
+      ref(arg0) {
+        return self.refMethod(arg0);
+      },
+    });
   },
 };
-let items = [entry];
-const importDefaultResultResult = _createClass(TSpan, items);
-importDefaultResultResult.displayName = "TSpan";
-const extractFont = fn(8475);
-extractFont.setTSpan(importDefaultResultResult);
+const items = [entry];
+const importDefaultResultResult = _createClass(Symbol, items);
+importDefaultResultResult.displayName = "Symbol";
 
 export default importDefaultResultResult;

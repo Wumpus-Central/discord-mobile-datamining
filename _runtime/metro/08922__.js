@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "78e18d727d8c0a3ff78e647d73ffb0be",
-  name: "QuoteIcon",
+  hash: "8d9a4a6e9caf6cfaa5505c9d5954c20b",
+  name: "ThumbsUpIcon",
   type: "png",
 });

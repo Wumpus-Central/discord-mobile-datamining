@@ -3,11 +3,11 @@ import registerAsset from "01122__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/custom_app_icons/BeanieIcon",
+  httpServerLocation: "/assets/images/native/custom_app_icons/CamoIcon",
   width: 60,
   height: 60,
   scales: [2, 3],
-  hash: "5ed4f057d69445a6e4a7fd8ca936d32a",
-  name: "BeanieIcon",
+  hash: "4e81188cb8befe97a7c2fb2d0b3c1c42",
+  name: "CamoIcon",
   type: "png",
 });

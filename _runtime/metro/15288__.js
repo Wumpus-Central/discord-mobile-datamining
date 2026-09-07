@@ -5,9 +5,9 @@ export default registerAsset.registerAsset({
   __packager_asset: true,
   httpServerLocation: "/assets/images/native/avatars",
   width: 161,
-  height: 161,
+  height: 160,
   scales: [1],
-  hash: "f06539dd2236c72b26d5b18fa1a5f589",
-  name: "amanda_2",
+  hash: "4410c16931512594c3c3f276c24fe456",
+  name: "nelly_1",
   type: "png",
 });

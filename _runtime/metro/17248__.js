@@ -1,18 +1,16 @@
 // _runtime/metro/17248__.js
 globalThis.IntlMessageFormat.__addLocaleData({
-  locale: "fi",
+  locale: "el",
   pluralRuleFunction(arg0, arg1) {
+    let str = "other";
     let str2 = "other";
     if (!arg1) {
-      let str3 = "other";
       if (1 == arg0) {
-        str3 = "other";
-        if (!str.split(".")[1]) {
-          str3 = "one";
-        }
+        str = "one";
       }
-      str2 = str3;
+      str2 = str;
     }
     return str2;
   },
 });
+globalThis.IntlMessageFormat.__addLocaleData({ locale: "el-CY", parentLocale: "el" });

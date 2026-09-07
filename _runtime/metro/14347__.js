@@ -1,6 +1,4 @@
 // _runtime/metro/14347__.js
+import _mod14348 from "14348__.js";
 
-export default Math.trunc ||
-  function trunc(arg0) {
-    return 0 < +arg0 ? floor : ceil(+arg0);
-  };
+export default (arg0) => _mod14348(arg0.length);

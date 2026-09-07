@@ -1,5 +1,5 @@
 // _runtime/metro/08984__.js
-import _mod8939 from "08939__.js";
+import _mod8944 from "08944__.js";
 
 const self = this;
 let self2 = this;
@@ -56,26 +56,14 @@ if (self2) {
       if (typeof error === "function") {
         let obj = { localeError: null };
         obj = {
-          string: {
-            unit: "\u0B8E\u0BB4\u0BC1\u0BA4\u0BCD\u0BA4\u0BC1\u0B95\u0BCD\u0B95\u0BB3\u0BCD",
-            verb: "\u0B95\u0BCA\u0BA3\u0BCD\u0B9F\u0BBF\u0BB0\u0BC1\u0B95\u0BCD\u0B95 \u0BB5\u0BC7\u0BA3\u0BCD\u0B9F\u0BC1\u0BAE\u0BCD",
-          },
-          file: {
-            unit: "\u0BAA\u0BC8\u0B9F\u0BCD\u0B9F\u0BC1\u0B95\u0BB3\u0BCD",
-            verb: "\u0B95\u0BCA\u0BA3\u0BCD\u0B9F\u0BBF\u0BB0\u0BC1\u0B95\u0BCD\u0B95 \u0BB5\u0BC7\u0BA3\u0BCD\u0B9F\u0BC1\u0BAE\u0BCD",
-          },
-          array: {
-            unit: "\u0B89\u0BB1\u0BC1\u0BAA\u0BCD\u0BAA\u0BC1\u0B95\u0BB3\u0BCD",
-            verb: "\u0B95\u0BCA\u0BA3\u0BCD\u0B9F\u0BBF\u0BB0\u0BC1\u0B95\u0BCD\u0B95 \u0BB5\u0BC7\u0BA3\u0BCD\u0B9F\u0BC1\u0BAE\u0BCD",
-          },
-          set: {
-            unit: "\u0B89\u0BB1\u0BC1\u0BAA\u0BCD\u0BAA\u0BC1\u0B95\u0BB3\u0BCD",
-            verb: "\u0B95\u0BCA\u0BA3\u0BCD\u0B9F\u0BBF\u0BB0\u0BC1\u0B95\u0BCD\u0B95 \u0BB5\u0BC7\u0BA3\u0BCD\u0B9F\u0BC1\u0BAE\u0BCD",
-          },
+          string: { unit: "znak\u00F3w", verb: "mie\u0107" },
+          file: { unit: "bajt\u00F3w", verb: "mie\u0107" },
+          array: { unit: "element\u00F3w", verb: "mie\u0107" },
+          set: { unit: "element\u00F3w", verb: "mie\u0107" },
         };
         closure_1 = {
-          regex: "\u0B89\u0BB3\u0BCD\u0BB3\u0BC0\u0B9F\u0BC1",
-          email: "\u0BAE\u0BBF\u0BA9\u0BCD\u0BA9\u0B9E\u0BCD\u0B9A\u0BB2\u0BCD \u0BAE\u0BC1\u0B95\u0BB5\u0BB0\u0BBF",
+          regex: "wyra\u017Cenie",
+          email: "adres email",
           url: "URL",
           emoji: "emoji",
           uuid: "UUID",
@@ -88,27 +76,22 @@ if (self2) {
           ulid: "ULID",
           xid: "XID",
           ksuid: "KSUID",
-          datetime: "ISO \u0BA4\u0BC7\u0BA4\u0BBF \u0BA8\u0BC7\u0BB0\u0BAE\u0BCD",
-          date: "ISO \u0BA4\u0BC7\u0BA4\u0BBF",
-          time: "ISO \u0BA8\u0BC7\u0BB0\u0BAE\u0BCD",
-          duration: "ISO \u0B95\u0BBE\u0BB2 \u0B85\u0BB3\u0BB5\u0BC1",
-          ipv4: "IPv4 \u0BAE\u0BC1\u0B95\u0BB5\u0BB0\u0BBF",
-          ipv6: "IPv6 \u0BAE\u0BC1\u0B95\u0BB5\u0BB0\u0BBF",
-          cidrv4: "IPv4 \u0BB5\u0BB0\u0BAE\u0BCD\u0BAA\u0BC1",
-          cidrv6: "IPv6 \u0BB5\u0BB0\u0BAE\u0BCD\u0BAA\u0BC1",
-          base64: "base64-encoded \u0B9A\u0BB0\u0BAE\u0BCD",
-          base64url: "base64url-encoded \u0B9A\u0BB0\u0BAE\u0BCD",
-          json_string: "JSON \u0B9A\u0BB0\u0BAE\u0BCD",
-          e164: "E.164 \u0B8E\u0BA3\u0BCD",
+          datetime: "data i godzina w formacie ISO",
+          date: "data w formacie ISO",
+          time: "godzina w formacie ISO",
+          duration: "czas trwania ISO",
+          ipv4: "adres IPv4",
+          ipv6: "adres IPv6",
+          cidrv4: "zakres IPv4",
+          cidrv6: "zakres IPv6",
+          base64: "ci\u0105g znak\u00F3w zakodowany w formacie base64",
+          base64url: "ci\u0105g znak\u00F3w zakodowany w formacie base64url",
+          json_string: "ci\u0105g znak\u00F3w w formacie JSON",
+          e164: "liczba E.164",
           jwt: "JWT",
-          template_literal: "input",
+          template_literal: "wej\u015Bcie",
         };
-        closure_2 = {
-          nan: "NaN",
-          number: "\u0B8E\u0BA3\u0BCD",
-          array: "\u0B85\u0BA3\u0BBF",
-          null: "\u0BB5\u0BC6\u0BB1\u0BC1\u0BAE\u0BC8",
-        };
+        closure_2 = { nan: "NaN", number: "liczba", array: "tablica" };
         obj.localeError = (code) => {
           switch (code.code) {
             case "invalid_type":
@@ -117,186 +100,164 @@ if (self2) {
                 expected = code.expected;
               }
               const parsedTypeResult = closure_2.parsedType(code.input);
-              let tmp48 = closure_2[parsedTypeResult];
-              if (tmp48 == null) {
-                tmp48 = parsedTypeResult;
+              let tmp49 = closure_2[parsedTypeResult];
+              if (tmp49 == null) {
+                tmp49 = parsedTypeResult;
               }
               obj = /^[A-Z]/;
               if (obj.test(code.expected)) {
                 const _HermesInternal17 = HermesInternal;
                 let combined =
-                  "\u0BA4\u0BB5\u0BB1\u0BBE\u0BA9 \u0B89\u0BB3\u0BCD\u0BB3\u0BC0\u0B9F\u0BC1: \u0B8E\u0BA4\u0BBF\u0BB0\u0BCD\u0BAA\u0BBE\u0BB0\u0BCD\u0B95\u0BCD\u0B95\u0BAA\u0BCD\u0BAA\u0B9F\u0BCD\u0B9F\u0BA4\u0BC1 instanceof " +
+                  "Nieprawid\u0142owe dane wej\u015Bciowe: oczekiwano instanceof " +
                   code.expected +
-                  ", \u0BAA\u0BC6\u0BB1\u0BAA\u0BCD\u0BAA\u0B9F\u0BCD\u0B9F\u0BA4\u0BC1 " +
-                  tmp48;
+                  ", otrzymano " +
+                  tmp49;
               } else {
                 const _HermesInternal16 = HermesInternal;
-                combined =
-                  "\u0BA4\u0BB5\u0BB1\u0BBE\u0BA9 \u0B89\u0BB3\u0BCD\u0BB3\u0BC0\u0B9F\u0BC1: \u0B8E\u0BA4\u0BBF\u0BB0\u0BCD\u0BAA\u0BBE\u0BB0\u0BCD\u0B95\u0BCD\u0B95\u0BAA\u0BCD\u0BAA\u0B9F\u0BCD\u0B9F\u0BA4\u0BC1 " +
-                  expected +
-                  ", \u0BAA\u0BC6\u0BB1\u0BAA\u0BCD\u0BAA\u0B9F\u0BCD\u0B9F\u0BA4\u0BC1 " +
-                  tmp48;
+                combined = "Nieprawid\u0142owe dane wej\u015Bciowe: oczekiwano " + expected + ", otrzymano " + tmp49;
               }
               return combined;
             case "invalid_value":
               if (1 === code.values.length) {
                 const _HermesInternal15 = HermesInternal;
                 let combined1 =
-                  "\u0BA4\u0BB5\u0BB1\u0BBE\u0BA9 \u0B89\u0BB3\u0BCD\u0BB3\u0BC0\u0B9F\u0BC1: \u0B8E\u0BA4\u0BBF\u0BB0\u0BCD\u0BAA\u0BBE\u0BB0\u0BCD\u0B95\u0BCD\u0B95\u0BAA\u0BCD\u0BAA\u0B9F\u0BCD\u0B9F\u0BA4\u0BC1 " +
-                  closure_2.stringifyPrimitive(code.values[0]);
+                  "Nieprawid\u0142owe dane wej\u015Bciowe: oczekiwano " + closure_2.stringifyPrimitive(code.values[0]);
               } else {
                 const _HermesInternal14 = HermesInternal;
                 combined1 =
-                  "\u0BA4\u0BB5\u0BB1\u0BBE\u0BA9 \u0BB5\u0BBF\u0BB0\u0BC1\u0BAA\u0BCD\u0BAA\u0BAE\u0BCD: \u0B8E\u0BA4\u0BBF\u0BB0\u0BCD\u0BAA\u0BBE\u0BB0\u0BCD\u0B95\u0BCD\u0B95\u0BAA\u0BCD\u0BAA\u0B9F\u0BCD\u0B9F\u0BA4\u0BC1 " +
-                  closure_2.joinValues(code.values, "|") +
-                  " \u0B87\u0BB2\u0BCD \u0B92\u0BA9\u0BCD\u0BB1\u0BC1";
+                  "Nieprawid\u0142owa opcja: oczekiwano jednej z warto\u015Bci " +
+                  closure_2.joinValues(code.values, "|");
               }
               return combined1;
             case "too_big":
-              let str31 = "<";
+              let str29 = "<";
               if (code.inclusive) {
-                str31 = "<=";
+                str29 = "<=";
               }
-              let tmp27 = obj[code.origin];
-              if (tmp27 == null) {
-                tmp27 = null;
+              let tmp28 = obj[code.origin];
+              if (tmp28 == null) {
+                tmp28 = null;
               }
-              let str32 = code.origin;
-              if (tmp27) {
-                if (str32 == null) {
-                  str32 = "\u0BAE\u0BA4\u0BBF\u0BAA\u0BCD\u0BAA\u0BC1";
+              let str30 = code.origin;
+              if (tmp28) {
+                if (str30 == null) {
+                  str30 = "warto\u015B\u0107";
                 }
                 let str = code.maximum.toString();
-                let str39 = tmp27.unit;
-                if (str39 == null) {
-                  str39 = "\u0B89\u0BB1\u0BC1\u0BAA\u0BCD\u0BAA\u0BC1\u0B95\u0BB3\u0BCD";
+                let str36 = tmp28.unit;
+                if (str36 == null) {
+                  str36 = "element\u00F3w";
                 }
                 const _HermesInternal13 = HermesInternal;
                 let combined2 =
-                  "\u0BAE\u0BBF\u0B95 \u0BAA\u0BC6\u0BB0\u0BBF\u0BAF\u0BA4\u0BC1: \u0B8E\u0BA4\u0BBF\u0BB0\u0BCD\u0BAA\u0BBE\u0BB0\u0BCD\u0B95\u0BCD\u0B95\u0BAA\u0BCD\u0BAA\u0B9F\u0BCD\u0B9F\u0BA4\u0BC1 " +
-                  str32 +
-                  " " +
-                  str31 +
+                  "Za du\u017Ca warto\u015B\u0107: oczekiwano, \u017Ce " +
+                  str30 +
+                  " b\u0119dzie mie\u0107 " +
+                  str29 +
                   str +
                   " " +
-                  str39 +
-                  " \u0B86\u0B95 \u0B87\u0BB0\u0BC1\u0B95\u0BCD\u0B95 \u0BB5\u0BC7\u0BA3\u0BCD\u0B9F\u0BC1\u0BAE\u0BCD";
+                  str36;
               } else {
-                let str33 = str32;
-                if (str32 == null) {
-                  str33 = "\u0BAE\u0BA4\u0BBF\u0BAA\u0BCD\u0BAA\u0BC1";
+                let str31 = str30;
+                if (str30 == null) {
+                  str31 = "warto\u015B\u0107";
                 }
                 const _HermesInternal12 = HermesInternal;
                 combined2 =
-                  "\u0BAE\u0BBF\u0B95 \u0BAA\u0BC6\u0BB0\u0BBF\u0BAF\u0BA4\u0BC1: \u0B8E\u0BA4\u0BBF\u0BB0\u0BCD\u0BAA\u0BBE\u0BB0\u0BCD\u0B95\u0BCD\u0B95\u0BAA\u0BCD\u0BAA\u0B9F\u0BCD\u0B9F\u0BA4\u0BC1 " +
-                  str33 +
-                  " " +
+                  "Zbyt du\u017C(y/a/e): oczekiwano, \u017Ce " +
                   str31 +
-                  code.maximum.toString() +
-                  " \u0B86\u0B95 \u0B87\u0BB0\u0BC1\u0B95\u0BCD\u0B95 \u0BB5\u0BC7\u0BA3\u0BCD\u0B9F\u0BC1\u0BAE\u0BCD";
+                  " b\u0119dzie wynosi\u0107 " +
+                  str29 +
+                  code.maximum.toString();
               }
               return combined2;
             case "too_small":
-              let str22 = ">";
+              let str18 = ">";
               if (code.inclusive) {
-                str22 = ">=";
+                str18 = ">=";
               }
               let tmp15 = obj[code.origin];
               if (tmp15 == null) {
                 tmp15 = null;
               }
-              ({ origin, minimum } = code);
-              const str1 = minimum.toString();
+              let str19 = code.origin;
               if (tmp15) {
+                if (str19 == null) {
+                  str19 = "warto\u015B\u0107";
+                }
+                const str1 = code.minimum.toString();
+                let str25 = tmp15.unit;
+                if (str25 == null) {
+                  str25 = "element\u00F3w";
+                }
                 const _HermesInternal11 = HermesInternal;
                 let combined3 =
-                  "\u0BAE\u0BBF\u0B95\u0B9A\u0BCD \u0B9A\u0BBF\u0BB1\u0BBF\u0BAF\u0BA4\u0BC1: \u0B8E\u0BA4\u0BBF\u0BB0\u0BCD\u0BAA\u0BBE\u0BB0\u0BCD\u0B95\u0BCD\u0B95\u0BAA\u0BCD\u0BAA\u0B9F\u0BCD\u0B9F\u0BA4\u0BC1 " +
-                  origin +
-                  " " +
-                  str22 +
+                  "Za ma\u0142a warto\u015B\u0107: oczekiwano, \u017Ce " +
+                  str19 +
+                  " b\u0119dzie mie\u0107 " +
+                  str18 +
                   str1 +
                   " " +
-                  tmp15.unit +
-                  " \u0B86\u0B95 \u0B87\u0BB0\u0BC1\u0B95\u0BCD\u0B95 \u0BB5\u0BC7\u0BA3\u0BCD\u0B9F\u0BC1\u0BAE\u0BCD";
+                  str25;
               } else {
+                let str20 = str19;
+                if (str19 == null) {
+                  str20 = "warto\u015B\u0107";
+                }
                 const _HermesInternal10 = HermesInternal;
                 combined3 =
-                  "\u0BAE\u0BBF\u0B95\u0B9A\u0BCD \u0B9A\u0BBF\u0BB1\u0BBF\u0BAF\u0BA4\u0BC1: \u0B8E\u0BA4\u0BBF\u0BB0\u0BCD\u0BAA\u0BBE\u0BB0\u0BCD\u0B95\u0BCD\u0B95\u0BAA\u0BCD\u0BAA\u0B9F\u0BCD\u0B9F\u0BA4\u0BC1 " +
-                  origin +
-                  " " +
-                  str22 +
-                  str1 +
-                  " \u0B86\u0B95 \u0B87\u0BB0\u0BC1\u0B95\u0BCD\u0B95 \u0BB5\u0BC7\u0BA3\u0BCD\u0B9F\u0BC1\u0BAE\u0BCD";
+                  "Zbyt ma\u0142(y/a/e): oczekiwano, \u017Ce " +
+                  str20 +
+                  " b\u0119dzie wynosi\u0107 " +
+                  str18 +
+                  code.minimum.toString();
               }
               return combined3;
             case "invalid_format":
               if ("starts_with" === code.format) {
                 const _HermesInternal9 = HermesInternal;
                 let combined4 =
-                  '\u0BA4\u0BB5\u0BB1\u0BBE\u0BA9 \u0B9A\u0BB0\u0BAE\u0BCD: "' +
-                  code.prefix +
-                  '" \u0B87\u0BB2\u0BCD \u0BA4\u0BCA\u0B9F\u0B99\u0BCD\u0B95 \u0BB5\u0BC7\u0BA3\u0BCD\u0B9F\u0BC1\u0BAE\u0BCD';
+                  'Nieprawid\u0142owy ci\u0105g znak\u00F3w: musi zaczyna\u0107 si\u0119 od "' + code.prefix + '"';
               } else if ("ends_with" === code.format) {
                 const _HermesInternal8 = HermesInternal;
                 combined4 =
-                  '\u0BA4\u0BB5\u0BB1\u0BBE\u0BA9 \u0B9A\u0BB0\u0BAE\u0BCD: "' +
-                  code.suffix +
-                  '" \u0B87\u0BB2\u0BCD \u0BAE\u0BC1\u0B9F\u0BBF\u0BB5\u0B9F\u0BC8\u0BAF \u0BB5\u0BC7\u0BA3\u0BCD\u0B9F\u0BC1\u0BAE\u0BCD';
+                  'Nieprawid\u0142owy ci\u0105g znak\u00F3w: musi ko\u0144czy\u0107 si\u0119 na "' + code.suffix + '"';
               } else if ("includes" === code.format) {
                 const _HermesInternal7 = HermesInternal;
-                combined4 =
-                  '\u0BA4\u0BB5\u0BB1\u0BBE\u0BA9 \u0B9A\u0BB0\u0BAE\u0BCD: "' +
-                  code.includes +
-                  '" \u0B90 \u0B89\u0BB3\u0BCD\u0BB3\u0B9F\u0B95\u0BCD\u0B95 \u0BB5\u0BC7\u0BA3\u0BCD\u0B9F\u0BC1\u0BAE\u0BCD';
+                combined4 = 'Nieprawid\u0142owy ci\u0105g znak\u00F3w: musi zawiera\u0107 "' + code.includes + '"';
               } else if ("regex" === code.format) {
                 const _HermesInternal6 = HermesInternal;
-                combined4 =
-                  "\u0BA4\u0BB5\u0BB1\u0BBE\u0BA9 \u0B9A\u0BB0\u0BAE\u0BCD: " +
-                  code.pattern +
-                  " \u0BAE\u0BC1\u0BB1\u0BC8\u0BAA\u0BBE\u0B9F\u0BCD\u0B9F\u0BC1\u0B9F\u0BA9\u0BCD \u0BAA\u0BCA\u0BB0\u0BC1\u0BA8\u0BCD\u0BA4 \u0BB5\u0BC7\u0BA3\u0BCD\u0B9F\u0BC1\u0BAE\u0BCD";
+                combined4 = "Nieprawid\u0142owy ci\u0105g znak\u00F3w: musi odpowiada\u0107 wzorcowi " + code.pattern;
               } else {
                 let format = closure_1[code.format];
                 if (format == null) {
                   format = code.format;
                 }
                 const _HermesInternal5 = HermesInternal;
-                combined4 = "\u0BA4\u0BB5\u0BB1\u0BBE\u0BA9 " + format;
+                combined4 = "Nieprawid\u0142ow(y/a/e) " + format;
               }
               return combined4;
             case "not_multiple_of":
               const _HermesInternal4 = HermesInternal;
-              return (
-                "\u0BA4\u0BB5\u0BB1\u0BBE\u0BA9 \u0B8E\u0BA3\u0BCD: " +
-                code.divisor +
-                " \u0B87\u0BA9\u0BCD \u0BAA\u0BB2\u0BAE\u0BBE\u0B95 \u0B87\u0BB0\u0BC1\u0B95\u0BCD\u0B95 \u0BB5\u0BC7\u0BA3\u0BCD\u0B9F\u0BC1\u0BAE\u0BCD"
-              );
+              return "Nieprawid\u0142owa liczba: musi by\u0107 wielokrotno\u015Bci\u0105 " + code.divisor;
             case "unrecognized_keys":
-              let str5 = "";
+              let str3 = "";
               if (code.keys.length > 1) {
-                str5 = "\u0B95\u0BB3\u0BCD";
+                str3 = "s";
               }
               const _HermesInternal3 = HermesInternal;
-              return (
-                "\u0B85\u0B9F\u0BC8\u0BAF\u0BBE\u0BB3\u0BAE\u0BCD \u0BA4\u0BC6\u0BB0\u0BBF\u0BAF\u0BBE\u0BA4 \u0BB5\u0BBF\u0B9A\u0BC8" +
-                str5 +
-                ": " +
-                closure_2.joinValues(code.keys, ", ")
-              );
+              return "Nierozpoznane klucze" + str3 + ": " + closure_2.joinValues(code.keys, ", ");
             case "invalid_key":
               const _HermesInternal2 = HermesInternal;
-              return "" + code.origin + " \u0B87\u0BB2\u0BCD \u0BA4\u0BB5\u0BB1\u0BBE\u0BA9 \u0BB5\u0BBF\u0B9A\u0BC8";
+              return "Nieprawid\u0142owy klucz w " + code.origin;
             case "invalid_union":
-              return "\u0BA4\u0BB5\u0BB1\u0BBE\u0BA9 \u0B89\u0BB3\u0BCD\u0BB3\u0BC0\u0B9F\u0BC1";
+              return "Nieprawid\u0142owe dane wej\u015Bciowe";
             case "invalid_element":
               const _HermesInternal = HermesInternal;
-              str = " \u0B87\u0BB2\u0BCD \u0BA4\u0BB5\u0BB1\u0BBE\u0BA9 \u0BAE\u0BA4\u0BBF\u0BAA\u0BCD\u0BAA\u0BC1";
-              return (
-                "" +
-                code.origin +
-                " \u0B87\u0BB2\u0BCD \u0BA4\u0BB5\u0BB1\u0BBE\u0BA9 \u0BAE\u0BA4\u0BBF\u0BAA\u0BCD\u0BAA\u0BC1"
-              );
+              str = "Nieprawid\u0142owa warto\u015B\u0107 w ";
+              return "Nieprawid\u0142owa warto\u015B\u0107 w " + code.origin;
             default:
-              return "\u0BA4\u0BB5\u0BB1\u0BBE\u0BA9 \u0B89\u0BB3\u0BCD\u0BB3\u0BC0\u0B9F\u0BC1";
+              return "Nieprawid\u0142owe dane wej\u015Bciowe";
           }
         };
         return obj;
@@ -304,7 +265,7 @@ if (self2) {
         throw new TypeError("Trying to call a non-function");
       }
     };
-    let closure_2 = fn(_mod8939);
+    let closure_2 = fn(_mod8944);
     function error() {}
     module.exports = exports.default;
   } else {

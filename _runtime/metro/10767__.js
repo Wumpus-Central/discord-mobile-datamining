@@ -1,58 +1,105 @@
 // _runtime/metro/10767__.js
-import cancelAnimation from "../01636_cancelAnimation.js";
-import noop from "00019__.js";
+import handlerOffsetDirection from "../10768_handlerOffsetDirection.js";
+import omitZero from "../10769_omitZero.js";
+import computeOffsetIfSizeChanged from "../10770_computeOffsetIfSizeChanged.js";
 
-require = fn;
-const jsx = fn(21).jsx;
-let context = noop.createContext({});
-const __initData = {
-  code: "function pnpm_indexTsx1(index,dimensions){const{itemDimensions}=this.__closure;itemDimensions.value={...itemDimensions.value,[index]:dimensions};}",
+require = arg1;
+const dependencyMap = arg6;
+let closure_2 = {
+  code: "function pnpm_useCommonVariablesTs1(){const{prevDataLength,dataLength,loop}=this.__closure;const previousLength=prevDataLength.value;const currentLength=dataLength;const isLengthChanged=previousLength!==currentLength;const shouldComputed=isLengthChanged&&loop;if(shouldComputed)prevDataLength.value=dataLength;return{shouldComputed:shouldComputed,previousLength:previousLength,currentLength:currentLength};}",
 };
-const __initData2 = {
-  code: "function pnpm_indexTsx2(dimensions){const{containerSize}=this.__closure;containerSize.value=dimensions;}",
+let closure_3 = {
+  code: "function pnpm_useCommonVariablesTs2({shouldComputed:shouldComputed,previousLength:previousLength,currentLength:currentLength}){const{handlerOffsetDirection,handlerOffset,computeOffsetIfDataChanged,size}=this.__closure;if(shouldComputed){const direction=handlerOffsetDirection(handlerOffset);handlerOffset.value=computeOffsetIfDataChanged({direction:direction,previousLength:previousLength,currentLength:currentLength,size:size,handlerOffset:handlerOffset.value});}}",
+};
+let closure_4 = {
+  code: "function pnpm_useCommonVariablesTs3(){const{prevSize,size}=this.__closure;const previousSize=prevSize.value;const isSizeChanged=previousSize!==size;const shouldComputed=isSizeChanged;if(shouldComputed)prevSize.value=size;return{shouldComputed:shouldComputed,previousSize:previousSize,size:size};}",
+};
+let closure_5 = {
+  code: "function pnpm_useCommonVariablesTs4({shouldComputed:shouldComputed,previousSize:previousSize,size:size}){const{handlerOffset,computeOffsetIfSizeChanged}=this.__closure;if(shouldComputed){handlerOffset.value=computeOffsetIfSizeChanged({handlerOffset:handlerOffset.value,prevSize:previousSize,size:size});}}",
 };
 
-export const GlobalStateContext = context;
-export const GlobalStateProvider = (arg0) => {
-  ({ children, value } = arg0);
-  let obj = cancelAnimation;
-  const sharedValue = obj.useSharedValue({ width: 0, height: 0 });
-  const sharedValue1 = cancelAnimation.useSharedValue({});
-  const fn = function c(arg0, arg1) {
-    const obj = {};
-    const merged = Object.assign(sharedValue1.value);
-    obj[arg0] = arg1;
-    sharedValue1.value = obj;
-  };
-  fn.__closure = { itemDimensions: sharedValue1 };
-  fn.__workletHash = 9846581158902;
-  fn.__initData = __initData;
-  const fn2 = function _(value) {
-    sharedValue.value = value;
-  };
-  fn2.__closure = { containerSize: sharedValue };
-  fn2.__workletHash = 5978604737778;
-  fn2.__initData = __initData2;
-  obj = { value: null, children: null };
-  obj = {};
-  let merged = Object.assign(value);
-  obj.layout = {
-    containerSize: sharedValue,
-    itemDimensions: sharedValue1,
-    updateItemDimensions: fn,
-    updateContainerSize: fn2,
-  };
-  obj.value = obj;
-  obj.children = children;
-  return <context.Provider />;
-};
-export const useGlobalState = () => {
-  context = noop.useContext(context);
-  if (context) {
-    return context;
-  } else {
-    const _Error = Error;
-    const error = new Error("useGlobalState must be used within a GlobalStateProvider");
-    throw error;
+export const useCommonVariables = function useCommonVariables(initProps) {
+  ({ width, dataLength } = initProps);
+  ({ defaultScrollOffsetValue, loop } = initProps);
+  if (initProps.vertical) {
+    width = initProps.height;
   }
+  let obj = dataLength(loop[0]);
+  if (defaultScrollOffsetValue == null) {
+    defaultScrollOffsetValue = obj.useSharedValue(tmp);
+  }
+  let tmp2Result = tmp2(tmp3[0]);
+  const sharedValue = tmp2Result.useSharedValue(dataLength);
+  tmp2Result = tmp2(tmp3[0]);
+  const sharedValue1 = tmp2Result.useSharedValue(width);
+  tmp = -Math.abs(initProps.defaultIndex * width);
+  const fn = function f() {
+    const previousLength = sharedValue.value;
+    const currentLength = dataLength;
+    let shouldComputed = previousLength !== dataLength;
+    if (shouldComputed) {
+      shouldComputed = loop;
+    }
+    if (shouldComputed) {
+      sharedValue.value = currentLength;
+    }
+    return { shouldComputed, previousLength, currentLength };
+  };
+  fn.__closure = { prevDataLength: sharedValue, dataLength, loop };
+  fn.__workletHash = 16900133248154;
+  fn.__initData = width;
+  const fn2 = function h(shouldComputed) {
+    if (shouldComputed.shouldComputed) {
+      let obj = handlerOffsetDirection;
+      const result = obj.handlerOffsetDirection(defaultScrollOffsetValue);
+      obj = {
+        direction: result,
+        previousLength: tmp,
+        currentLength: tmp2,
+        size: width,
+        handlerOffset: defaultScrollOffsetValue.value,
+      };
+      defaultScrollOffsetValue.value = omitZero.computeOffsetIfDataChanged(obj);
+    }
+  };
+  obj = {
+    handlerOffsetDirection: tmp2(tmp3[1]).handlerOffsetDirection,
+    handlerOffset: defaultScrollOffsetValue,
+    computeOffsetIfDataChanged: tmp2(tmp3[2]).computeOffsetIfDataChanged,
+    size: width,
+  };
+  fn2.__closure = obj;
+  fn2.__workletHash = 6990374823872;
+  fn2.__initData = defaultScrollOffsetValue;
+  const items = [dataLength, loop];
+  const animatedReaction = dataLength(loop[0]).useAnimatedReaction(fn, fn2, items);
+  const tmp2Result1 = dataLength(loop[0]);
+  const fn3 = function c() {
+    const previousSize = sharedValue1.value;
+    const size = width;
+    const shouldComputed = previousSize !== width;
+    if (shouldComputed) {
+      sharedValue1.value = size;
+    }
+    return { shouldComputed, previousSize, size };
+  };
+  fn3.__closure = { prevSize: sharedValue1, size: width };
+  fn3.__workletHash = 10373775645111;
+  fn3.__initData = sharedValue;
+  const fn4 = function l(shouldComputed) {
+    if (shouldComputed.shouldComputed) {
+      const obj = { handlerOffset: defaultScrollOffsetValue.value, prevSize: tmp, size: tmp2 };
+      defaultScrollOffsetValue.value = obj.computeOffsetIfSizeChanged(obj);
+    }
+  };
+  obj = {
+    handlerOffset: defaultScrollOffsetValue,
+    computeOffsetIfSizeChanged: tmp2(tmp3[3]).computeOffsetIfSizeChanged,
+  };
+  fn4.__closure = obj;
+  fn4.__workletHash = 12618693189041;
+  fn4.__initData = sharedValue1;
+  const items1 = [width];
+  const animatedReaction1 = dataLength(loop[0]).useAnimatedReaction(fn3, fn4, items1);
+  return { size: width, validLength: dataLength - 1, handlerOffset: defaultScrollOffsetValue };
 };

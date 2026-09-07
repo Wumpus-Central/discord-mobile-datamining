@@ -221,8 +221,8 @@ export const StickyHeaders = (stickyHeaderIndices) => {
           refHolder: current,
           extraData,
           trailingItem: "accessible",
-          target: "y",
-          hidden: "ro",
+          target: false,
+          hidden: false,
           inverted,
         };
         tmpResult = jsx(ViewHolder.ViewHolder, {
@@ -233,8 +233,8 @@ export const StickyHeaders = (stickyHeaderIndices) => {
           refHolder: current,
           extraData,
           trailingItem: "accessible",
-          target: "y",
-          hidden: "ro",
+          target: false,
+          hidden: false,
           inverted,
         });
       }

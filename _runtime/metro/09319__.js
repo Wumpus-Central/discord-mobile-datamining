@@ -4,10 +4,10 @@ import registerAsset from "01122__.js";
 export default registerAsset.registerAsset({
   __packager_asset: true,
   httpServerLocation: "/assets/images/native/premium/upsell",
-  width: 49,
-  height: 48.5,
+  width: 120,
+  height: 80,
   scales: [2, 3],
-  hash: "6922badb2f007833b3becc6f00bcb5a4",
-  name: "img_custom_app_icons",
+  hash: "e92f31ca34ceaeec68c2321f683014ca",
+  name: "img_nitro_global_emoji",
   type: "png",
 });

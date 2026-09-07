@@ -3,11 +3,11 @@ import registerAsset from "01122__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/premium/illustrations",
-  width: 222.5,
-  height: 118,
+  httpServerLocation: "/assets/modules/premium_marketing/native/images",
+  width: 364,
+  height: 180,
   scales: [2, 3],
-  hash: "2762ca199009f1ddb659b515502ab30e",
-  name: "img_tier_0_perk_custom_video_backgrounds",
+  hash: "d7e552e30321c5576e018b6c00e2147c",
+  name: "img_stickers",
   type: "png",
 });

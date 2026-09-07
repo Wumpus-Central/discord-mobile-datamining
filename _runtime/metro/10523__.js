@@ -1,7 +1,7 @@
 // _runtime/metro/10523__.js
 import _possibleConstructorReturn from "00093__possibleConstructorReturn.js";
-import AbstractParserWithWordBoundaryChecking from "../10439_AbstractParserWithWordBoundaryChecking.js";
-import now from "../10456_now.js";
+import AbstractParserWithWordBoundaryChecking from "../10444_AbstractParserWithWordBoundaryChecking.js";
+import now from "../10461_now.js";
 import _classCallCheck from "00041__classCallCheck.js";
 import _createClass from "00042__createClass.js";
 import _getPrototypeOf from "../00095__getPrototypeOf.js";
@@ -42,7 +42,7 @@ if (self2) {
       fn = self.__importStar;
     }
     if (!fn) {
-      fn = function o(arg0) {
+      fn = function u(arg0) {
         fn = Object.getOwnPropertyNames;
         if (!fn) {
           fn = (obj) => {
@@ -90,12 +90,12 @@ if (self2) {
     }
     const _Object3 = Object;
     let closure_7 = fn(now);
-    class NLCasualDateParser {
+    class PTCasualDateParser {
       constructor() {
         self = this;
-        tmp = closure_0(this, NLCasualDateParser);
+        tmp = closure_0(this, PTCasualDateParser);
         tmp2 = c2;
-        obj = c2(NLCasualDateParser);
+        obj = c2(PTCasualDateParser);
         tmp3 = closure_1;
         if (closure_3()) {
           tmp7 = globalThis;
@@ -110,12 +110,12 @@ if (self2) {
         return tmp3(self, constructResult);
       }
     }
-    _classCallCheck = NLCasualDateParser;
-    _inherits(NLCasualDateParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
+    _classCallCheck = PTCasualDateParser;
+    _inherits(PTCasualDateParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
     const entry = {
       key: "innerPattern",
       value: function innerPattern(arg0) {
-        return /(nu|vandaag|morgen|morgend|gisteren)(?=\W|$)/i;
+        return /(agora|hoje|amanha|amanhã|ontem)(?=\W|$)/i;
       },
     };
     let items = [entry];
@@ -123,14 +123,14 @@ if (self2) {
       key: "innerExtract",
       value: function innerExtract(reference, arg1) {
         const formatted = arg1[0].toLowerCase();
-        if ("nu" === formatted) {
+        if ("agora" === formatted) {
           return closure_7.now(reference.reference);
-        } else if ("vandaag" === formatted) {
+        } else if ("hoje" === formatted) {
           return closure_7.today(reference.reference);
         } else {
-          if ("morgen" !== formatted) {
-            if ("morgend" !== formatted) {
-              if ("gisteren" === formatted) {
+          if ("amanha" !== formatted) {
+            if ("amanh\u00E3" !== formatted) {
+              if ("ontem" === formatted) {
                 return closure_7.yesterday(reference.reference);
               } else {
                 return tmp2;
@@ -142,7 +142,7 @@ if (self2) {
       },
     };
     items[1] = entry1;
-    exports.default = _createClass(NLCasualDateParser, items);
+    exports.default = _createClass(PTCasualDateParser, items);
   } else {
     const _Object2 = Object;
   }

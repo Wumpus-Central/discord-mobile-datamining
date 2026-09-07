@@ -1,73 +1,39 @@
 // _runtime/metro/12836__.js
-import _mod12797 from "12797__.js";
-import _mod12824 from "12824__.js";
-import _mod12825 from "12825__.js";
-import _mod12829 from "12829__.js";
-import _mod12837 from "12837__.js";
+import _mod12808 from "12808__.js";
 
 require = arg1;
 const dependencyMap = arg6;
 
-export const sampleSpan = function sampleSpan(tracesSampler, normalizedRequest) {
-  let obj = _mod12829;
-  if (obj.hasTracingEnabled(tracesSampler)) {
-    let tmpResult = _mod12824;
-    const isolationScope = tmpResult.getIsolationScope();
-    obj = {};
-    const merged = Object.assign(normalizedRequest);
-    obj.normalizedRequest =
-      normalizedRequest.normalizedRequest || isolationScope.getScopeData().sdkProcessingMetadata.normalizedRequest;
-    if (typeof tracesSampler.tracesSampler === "function") {
-      let num = tracesSampler.tracesSampler(obj);
-    } else if (undefined !== obj.parentSampled) {
-      num = obj.parentSampled;
-    } else {
-      num = 1;
-      if (undefined !== tracesSampler.tracesSampleRate) {
-        num = tracesSampler.tracesSampleRate;
-      }
-    }
-    tmpResult = _mod12837;
-    const parseSampleRateResult = tmpResult.parseSampleRate(num);
-    if (undefined === parseSampleRateResult) {
-      if (_mod12825.DEBUG_BUILD) {
-        const logger3 = _mod12797.logger;
-        logger3.warn("[Tracing] Discarding transaction because of invalid sample rate.");
-      }
-      const items = [false];
-      let items3 = items;
-    } else if (parseSampleRateResult) {
-      const _Math = Math;
-      if (Math.random() < parseSampleRateResult) {
-        const items1 = [true, parseSampleRateResult];
-        let items2 = items1;
+export const handleCallbackErrors = function handleCallbackErrors(fn, arg1) {
+  fn = arg2;
+  if (arg2 === undefined) {
+    fn = function t() {};
+  }
+  try {
+    return (function maybeHandlePromiseRejection(promise, arg1, fn) {
+      closure_0 = arg1;
+      closure_1 = fn;
+      if (obj.isThenable(promise)) {
+        return promise.then(
+          (result) => {
+            closure_1();
+            return result;
+          },
+          (arg0) => {
+            closure_0(arg0);
+            closure_1();
+            throw arg0;
+          },
+        );
       } else {
-        if (_mod12825.DEBUG_BUILD) {
-          const logger2 = _mod12797.logger;
-          const _Number = Number;
-          const _HermesInternal = HermesInternal;
-          logger2.log(
-            "[Tracing] Discarding transaction because it's not included in the random sample (sampling rate = " +
-              Number(num) +
-              ")",
-          );
-        }
-        items2 = [false, parseSampleRateResult];
+        fn();
+        return promise;
       }
-    } else {
-      if (_mod12825.DEBUG_BUILD) {
-        const logger = _mod12797.logger;
-        let str = "a negative sampling decision was inherited or tracesSampleRate is set to 0";
-        if (typeof tracesSampler.tracesSampler === "function") {
-          str = "tracesSampler returned 0 or false";
-        }
-        logger.log(`[Tracing] Discarding transaction because ${str}`);
-      }
-      items3 = [false, parseSampleRateResult];
-    }
-    return items3;
-  } else {
-    const items4 = [false];
-    return items4;
+      obj = _mod12808;
+    })(fn(), arg1, fn);
+  } catch (tmp5) {
+    tmp3(tmp5);
+    tmp2();
+    throw tmp5;
   }
 };

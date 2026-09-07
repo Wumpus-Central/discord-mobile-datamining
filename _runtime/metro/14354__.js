@@ -1,47 +1,74 @@
 // _runtime/metro/14354__.js
-import _mod14298 from "14298__.js";
-import _mod14323 from "14323__.js";
-import _mod14351 from "14351__.js";
+import _mod14303 from "14303__.js";
+import text from "../14312_text.js";
+import _mod14335 from "14335__.js";
+import _mod14352 from "14352__.js";
 import _mod14355 from "14355__.js";
 
-export default (arg0, arg1, value, arg3) => {
-  let obj = arg3;
-  if (!arg3) {
-    obj = {};
-  }
-  let flag = obj.enumerable;
-  let name = arg1;
-  if (undefined !== obj.name) {
-    name = obj.name;
-  }
-  if (_mod14323(value)) {
-    _mod14355(value, name, obj);
-  }
-  if (obj.global) {
-    if (flag) {
-      arg0[arg1] = value;
-    } else {
-      _mod14298(arg1, value);
-    }
-  } else {
-    try {
-      if (obj.unsafe) {
-        if (arg0[arg1]) {
-          flag = true;
+const enumerable = "enumerable";
+const configurable = "configurable";
+const writable = "writable";
+if (_mod14303) {
+  if (_mod14355) {
+    defineProperty = function defineProperty(fn, arg1, value) {
+      _mod14352(fn);
+      const tmp2 = text(arg1);
+      _mod14352(value);
+      let tmp4 = value;
+      if (typeof fn === "function") {
+        tmp4 = value;
+        if ("prototype" === tmp2) {
+          tmp4 = value;
+          if ("value" in value) {
+            tmp4 = value;
+            if (writable in value) {
+              tmp4 = value;
+              if (!value[writable]) {
+                const tmp7 = getOwnPropertyDescriptor(fn, tmp2);
+                let tmp8 = tmp7;
+                if (tmp7) {
+                  tmp8 = tmp7[writable];
+                }
+                tmp4 = value;
+                if (tmp8) {
+                  fn[tmp2] = value.value;
+                  const obj = {
+                    configurable: configurable in value ? value[configurable] : tmp7[configurable],
+                    enumerable: enumerable in value ? value[enumerable] : tmp7[enumerable],
+                    writable: false,
+                  };
+                }
+              }
+            }
+          }
         }
-      } else {
-        delete tmp[tmp2];
       }
-      if (flag) {
-        arg0[arg1] = value;
-      } else {
-        obj = { value, enumerable: false, configurable: null, writable: null };
-        obj.configurable = !obj.nonConfigurable;
-        obj.writable = !obj.nonWritable;
-        _mod14351.f(arg0, arg1, obj);
-        const tmp3Result = _mod14351;
-      }
-    } catch (err) {}
+      return defineProperty(fn, tmp2, tmp4);
+    };
   }
-  return arg0;
-};
+  let defineProperty2 = defineProperty;
+} else {
+  defineProperty2 = function defineProperty(arg0, arg1, value) {
+    _mod14352(arg0);
+    const tmp2 = text(arg1);
+    _mod14352(value);
+    if (!_mod14335) {
+      if (!("get" in value)) {
+        if (!("set" in value)) {
+          if ("value" in value) {
+            arg0[tmp2] = value.value;
+          }
+          return arg0;
+        }
+      }
+      const tmp8 = new TypeError("Accessors not supported");
+      throw tmp8;
+    } else {
+      try {
+        return defineProperty(arg0, tmp2, value);
+      } catch (err) {}
+    }
+  };
+}
+
+export const f = defineProperty2;

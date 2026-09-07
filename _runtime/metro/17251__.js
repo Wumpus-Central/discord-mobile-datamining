@@ -1,20 +1,18 @@
 // _runtime/metro/17251__.js
 globalThis.IntlMessageFormat.__addLocaleData({
-  locale: "hu",
+  locale: "fi",
   pluralRuleFunction(arg0, arg1) {
-    if (arg1) {
+    let str2 = "other";
+    if (!arg1) {
+      let str3 = "other";
       if (1 == arg0) {
-        let str2 = "one";
-      } else {
-        str2 = "other";
+        str3 = "other";
+        if (!str.split(".")[1]) {
+          str3 = "one";
+        }
       }
-      let str = str2;
-    } else {
-      str = "other";
-      if (1 == arg0) {
-        str = "one";
-      }
+      str2 = str3;
     }
-    return str;
+    return str2;
   },
 });

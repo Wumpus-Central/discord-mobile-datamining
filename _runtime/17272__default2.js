@@ -1,0 +1,14 @@
+// _runtime/17272__default2.js
+import _mod17273 from "metro/17273__.js";
+import 01318__ from "metro/01318__.js";
+
+global.IntlPolyfill = _mod17273.default;
+if (!global.Intl) {
+  global.Intl = _mod17273.default;
+  const result = _mod17273.default.__applyLocaleSensitivePrototypes();
+  const _default = _mod17273.default;
+}
+const _default2 = _mod17273.default;
+_default2.default = _mod17273.default;
+
+export default _default2;

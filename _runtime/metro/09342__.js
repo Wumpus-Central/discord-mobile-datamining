@@ -3,11 +3,11 @@ import registerAsset from "01122__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/custom_app_icons/GamingIcon",
+  httpServerLocation: "/assets/images/native/custom_app_icons/SunsetIcon",
   width: 60,
   height: 60,
   scales: [2, 3],
-  hash: "27dc2bbcf6aa3b0cbef53a5212edf486",
-  name: "GamingIcon",
+  hash: "9f9f6665c181624b81b98f40c0532d57",
+  name: "SunsetIcon",
   type: "png",
 });

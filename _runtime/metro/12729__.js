@@ -3,11 +3,11 @@ import registerAsset from "01122__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/hub/native/images",
+  httpServerLocation: "/assets/images/native",
   width: 48,
   height: 48,
   scales: [1, 2, 3],
-  hash: "3c685966e643346896f1eed744338b14",
-  name: "study",
+  hash: "079f1f5099b5396d01af5ed23e7bac76",
+  name: "ic_invites_disabled",
   type: "png",
 });

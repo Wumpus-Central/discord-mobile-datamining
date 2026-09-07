@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "3446a422668528039c87de87a6054a15",
-  name: "KeyboardIcon",
+  hash: "8d2a9da7873a6a1912be7bfb3d52eaf6",
+  name: "SpoilerIcon",
   type: "png",
 });

@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 84,
   height: 66,
   scales: [1],
-  hash: "bb53327d21615c77cfbccb9f06aeb711",
-  name: "wumpus-link",
+  hash: "ba11c4394297d005e32400d962515cfe",
+  name: "wumpus-luigi",
   type: "png",
 });

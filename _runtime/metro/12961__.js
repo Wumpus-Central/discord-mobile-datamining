@@ -3,11 +3,11 @@ import registerAsset from "01122__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/media_viewer/native/images",
+  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "05e33949de588de2bb105d38c549ac02",
-  name: "ic_eye_hidden",
+  hash: "6fc18e0c40f0ce37259a8a45cc634c66",
+  name: "WindowLaunchIcon",
   type: "png",
 });

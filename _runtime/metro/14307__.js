@@ -1,11 +1,24 @@
 // _runtime/metro/14307__.js
-import _mod14308 from "14308__.js";
+import 14308__ from "14308__.js";
 
-export default (arg0) => {
-  if (_mod14308(arg0)) {
-    const tmp4 = new TypeError("Can't call method on " + arg0);
-    throw tmp4;
-  } else {
-    return arg0;
-  }
-};
+const call = prototype.call;
+if (module_14308) {
+  const bind = prototype.bind;
+  module_14308 = bind.bind(call, call);
+}
+if (!module_14308) {
+  module_14308 = (arg0) => {
+    closure_0 = arg0;
+    return () => {
+      const apply = call.apply;
+      if (typeof apply === "unknown") {
+        let applyArgumentsResult = HermesBuiltin.applyArguments(closure_0);
+      } else {
+        applyArgumentsResult = apply(closure_0, arguments);
+      }
+      return applyArgumentsResult;
+    };
+  };
+}
+
+export default module_14308;

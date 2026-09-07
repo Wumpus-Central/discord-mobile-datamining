@@ -3,11 +3,11 @@ import registerAsset from "01122__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/icons",
-  width: 20,
-  height: 20,
+  httpServerLocation: "/assets/images/native/chat_sidebar",
+  width: 24,
+  height: 24,
   scales: [2, 3],
-  hash: "fb208a5c686091d257485844d9c5539d",
-  name: "ic_play_dark",
+  hash: "589ea89ec85b91078a06c4317f368a2d",
+  name: "ic_pins",
   type: "png",
 });

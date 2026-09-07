@@ -1,8 +1,12 @@
 // _runtime/metro/14362__.js
-import _mod14340 from "14340__.js";
-import _mod14341 from "14341__.js";
+import _mod14300 from "14300__.js";
+import all from "14326__.js";
 
-export default Object.keys ||
-  function keys(arg0) {
-    return _mod14341(arg0, _mod14340);
-  };
+let _moduleResult = all(_mod14300.WeakMap);
+if (_moduleResult) {
+  const _String = String;
+  _moduleResult = /native code/.test(String(_mod14300.WeakMap));
+  const obj = /native code/;
+}
+
+export default _moduleResult;

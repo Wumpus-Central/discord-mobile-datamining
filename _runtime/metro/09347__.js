@@ -3,11 +3,11 @@ import registerAsset from "01122__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/custom_app_icons/MangaIcon",
+  httpServerLocation: "/assets/images/native/custom_app_icons/GamingIcon",
   width: 60,
   height: 60,
   scales: [2, 3],
-  hash: "c95dda79dd2256b3ff93ba5baa549fb1",
-  name: "MangaIcon",
+  hash: "27dc2bbcf6aa3b0cbef53a5212edf486",
+  name: "GamingIcon",
   type: "png",
 });

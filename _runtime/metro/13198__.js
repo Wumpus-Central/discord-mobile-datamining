@@ -3,11 +3,11 @@ import registerAsset from "01122__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/gifting/seasonal",
+  httpServerLocation: "/assets/images/native/gifting/standard",
   width: 144,
   height: 150,
   scales: [1],
-  hash: "2428d071b75d8fac57234ccab81c5c37",
-  name: "cake_idle",
+  hash: "c4e1982e9b2ef93acb5f2236a23782fc",
+  name: "coffee_idle",
   type: "png",
 });

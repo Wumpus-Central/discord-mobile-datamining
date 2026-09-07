@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "ffb75c82f97e39285286ef89f1767a3c",
-  name: "ServerGridIcon",
+  hash: "d287ab85d54506fcfae6aa3f9742222f",
+  name: "DoorEnterIcon",
   type: "png",
 });

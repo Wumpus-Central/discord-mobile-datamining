@@ -1,3 +1,15 @@
 // _runtime/metro/10786__.js
+import _mod19 from "00019__.js";
 
-export const Pagination = { Basic: fn(10787).Basic, Custom: fn(10789).Custom };
+const useEffect = _mod19.useEffect;
+
+export const useUpdateGestureConfig = (arg0, options) => {
+  closure_0 = arg0;
+  const enabled = options.enabled;
+  const items = [enabled, arg0];
+  useEffect(() => {
+    if (undefined !== enabled) {
+      closure_0.enabled(tmp);
+    }
+  }, items);
+};

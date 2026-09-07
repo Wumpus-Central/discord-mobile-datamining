@@ -1,14 +1,29 @@
 // _runtime/metro/12869__.js
-import _mod12868 from "12868__.js";
 
-require = arg1;
-const dependencyMap = arg6;
-
-export const getTraceMetaTags = function getTraceMetaTags() {
-  const entries = Object.entries(_mod12868.getTraceData());
-  const mapped = entries.map((item) => {
-    [tmp, tmp2] = item;
-    return '<meta name="' + tmp + '" content="' + tmp2 + '"/>';
-  });
-  return mapped.join("\n");
+export const isSentryRequestUrl = function isSentryRequestUrl(arr, getDsn) {
+  let dsn = getDsn;
+  if (getDsn) {
+    dsn = getDsn.getDsn();
+  }
+  let tunnel = getDsn;
+  if (getDsn) {
+    tunnel = getDsn.getOptions().tunnel;
+  }
+  let tmp2 = dsn && arr.includes(dsn.host);
+  if (!tmp2) {
+    let flag = false;
+    if (tunnel) {
+      let substr = arr;
+      if ("/" === arr[arr.length - 1]) {
+        substr = arr.slice(0, -1);
+      }
+      let substr1 = tunnel;
+      if ("/" === tunnel[tunnel.length - 1]) {
+        substr1 = tunnel.slice(0, -1);
+      }
+      flag = substr === substr1;
+    }
+    tmp2 = flag;
+  }
+  return tmp2;
 };

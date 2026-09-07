@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "d596d6fe17dcf89145bacf83df3826b6",
-  name: "PuzzlePieceIcon",
+  hash: "912599b20b4f4689d8c9b765ff8e94f3",
+  name: "VrHeadsetIcon",
   type: "png",
 });

@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "c8f47b968e51eb4d5f2964cb9e696a2a",
-  name: "ChannelsFollowedIcon",
+  hash: "c7e2eadc5cd55417a6c70f428f65fac7",
+  name: "SlashIcon",
   type: "png",
 });

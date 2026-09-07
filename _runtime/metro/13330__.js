@@ -4,10 +4,10 @@ import registerAsset from "01122__.js";
 export default registerAsset.registerAsset({
   __packager_asset: true,
   httpServerLocation: "/assets/images/native/premium/logos",
-  width: 605.5,
-  height: 244.5,
+  width: 179,
+  height: 32,
   scales: [2, 3],
-  hash: "fdaf8ab7fb8f1ab3047aef93e706bcc1",
-  name: "img_discord_nitro_logo_left_light",
+  hash: "ed5b973480dda2a9e5ec5c3384729f7b",
+  name: "img_logo_bundle_horizontal_black",
   type: "png",
 });
