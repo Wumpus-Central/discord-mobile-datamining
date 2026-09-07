@@ -222,7 +222,7 @@ export default noop.memo(function StandaloneChannelScreen(arg0) {
   dependencyMap = tmp;
   let obj = channelId(1484);
   noop = obj.useNavigation();
-  let obj1 = channelId(11466);
+  let obj1 = channelId(11471);
   const isSwipeToMemberListEnabled = obj1.useIsSwipeToMemberListEnabled();
   const needSubscriptionToAccess = frame(5007)(channelId).needSubscriptionToAccess;
   let obj2 = channelId(7222);
@@ -262,7 +262,7 @@ export default noop.memo(function StandaloneChannelScreen(arg0) {
     items[1] = splitDivider;
     return items;
   }, items1);
-  let tmp2Result = channelId(13274);
+  let tmp2Result = channelId(13278);
   let tmp14 = !isChatLockedOpen;
   const isForumChannelSearchActive = tmp2Result.useIsForumChannelSearchActive(channelId);
   if (isChatLockedOpen) {
@@ -300,7 +300,7 @@ export default noop.memo(function StandaloneChannelScreen(arg0) {
             let tmp33Result = null;
             if (canSeeOnboardingHome) {
               obj2 = { guildId };
-              tmp33Result = closure_11(frame(16550), obj2);
+              tmp33Result = closure_11(frame(16553), obj2);
             }
             obj1.children = tmp33Result;
             items4[1] = closure_11(closure_4, obj1);
@@ -308,10 +308,10 @@ export default noop.memo(function StandaloneChannelScreen(arg0) {
             return closure_12(closure_4, obj);
           } else if (channelId === StaticChannelRoute.MEMBER_SAFETY) {
             const obj3 = { guildId };
-            return closure_11(frame(16568), obj3);
+            return closure_11(frame(16571), obj3);
           } else if (channelId === StaticChannelRoute.VIBEGRATIONS) {
             const obj4 = { guildId };
-            return closure_11(frame(16585), obj4);
+            return closure_11(frame(16588), obj4);
           } else {
             if (tmp17) {
               if (null != stateFromStores) {
@@ -319,7 +319,7 @@ export default noop.memo(function StandaloneChannelScreen(arg0) {
                 const items5 = [tmp35];
                 const obj6 = { style: memo1, children: null };
                 const obj7 = { channel: stateFromStores };
-                obj6.children = closure_11(frame(16613), obj7);
+                obj6.children = closure_11(frame(16616), obj7);
                 items5[1] = closure_11(closure_4, obj6);
                 obj5.children = items5;
                 return closure_12(closure_4, obj5);
@@ -329,7 +329,7 @@ export default noop.memo(function StandaloneChannelScreen(arg0) {
               const obj8 = { style: memo1, children: null };
               const items6 = [tmp35];
               const obj9 = { channelId, screenIndex };
-              items6[1] = closure_11(channelId(16619).CreateThreadView, obj9);
+              items6[1] = closure_11(channelId(16622).CreateThreadView, obj9);
               obj8.children = items6;
               return closure_12(closure_4, obj8);
             } else {
@@ -337,13 +337,13 @@ export default noop.memo(function StandaloneChannelScreen(arg0) {
               const items7 = [tmp35];
               const obj11 = { style: memo1, children: null };
               const obj12 = { guildId, channelId, chatInputRef: ref, screenIndex };
-              obj11.children = closure_11(frame(11340), obj12);
+              obj11.children = closure_11(frame(11345), obj12);
               items7[1] = closure_11(closure_4, obj11);
               obj10.children = items7;
               const tmp18Result = closure_12(closure_13, obj10);
               if (isSwipeToMemberListEnabled) {
                 const obj13 = { style: memo, channelId, screenIndex, isBackEnabled: tmp14, children: tmp18Result };
-                tmp33Result = closure_11(frame(16623), obj13);
+                tmp33Result = closure_11(frame(16626), obj13);
               } else {
                 const obj14 = {
                   style: memo,
@@ -372,7 +372,7 @@ export default noop.memo(function StandaloneChannelScreen(arg0) {
         tmp32 = channelId;
       }
       obj17.gatedChannelId = tmp32;
-      items9[1] = closure_11(frame(16533), obj17);
+      items9[1] = closure_11(frame(16536), obj17);
       obj16.children = items9;
       items8[1] = closure_12(closure_4, obj16);
       obj15.children = items8;

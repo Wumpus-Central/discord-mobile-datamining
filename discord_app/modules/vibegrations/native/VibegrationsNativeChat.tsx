@@ -277,8 +277,8 @@ function TodoList(todos) {
 }
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-const turnSettled = fn(16586).turnSettled;
-let VibegrationsConnectionStore = fn(16589);
+const turnSettled = fn(16589).turnSettled;
+let VibegrationsConnectionStore = fn(16592);
 ({
   ensureConnection: closure_9,
   getAttachmentUrl: c10,

@@ -126,7 +126,7 @@ export default function ConnectAccountStep(clientId) {
     const obj3 = { source: applicationIconSource, size: tmp5(1178).AvatarSizes.XLARGE };
     const items4 = [closure_8(tmp5(1178).Avatar, obj3), ,];
     const obj4 = { color: tmp2(576).colors.INTERACTIVE_TEXT_DEFAULT, size: "md" };
-    items4[1] = closure_8(tmp5(8672).MoreHorizontalIcon, obj4);
+    items4[1] = closure_8(tmp5(8677).MoreHorizontalIcon, obj4);
     const obj5 = { source: userAvatarSource, size: tmp5(1178).AvatarSizes.XLARGE };
     items4[2] = closure_8(tmp5(1178).Avatar, obj5);
     obj2.children = items4;

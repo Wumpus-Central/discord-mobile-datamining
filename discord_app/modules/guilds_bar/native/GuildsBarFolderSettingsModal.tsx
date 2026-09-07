@@ -28,7 +28,7 @@ function GuildFolderSettingsScene(color) {
   const callback = noop.useCallback(() => {
     hasOwnProperty.dismiss();
     const obj = { color, onSelect: onColorChange };
-    obj.openLazy(asyncRequireImpl(16291, dependencyMap.paths), "RoleColorPicker", obj);
+    obj.openLazy(asyncRequireImpl(16294, dependencyMap.paths), "RoleColorPicker", obj);
   }, items);
   obj.padding = onColorChange(576).space.PX_16;
   obj.paddingBottom = 38 + onColorChange(6981)().insets.bottom;
@@ -56,7 +56,7 @@ function GuildFolderSettingsScene(color) {
   obj3.label = intl3.string(color(1114).t.xpurRF);
   obj3.subLabel = color(1091).int2hex(color);
   obj3.onPress = callback;
-  obj3.trailing = closure_9(onColorChange(14597), { color, style: tmp.colorBlock });
+  obj3.trailing = closure_9(onColorChange(14600), { color, style: tmp.colorBlock });
   obj2.children = closure_9(color(5605).TableRow, obj3);
   items1[1] = closure_9(color(5687).TableRowGroup, obj2);
   obj.children = items1;
@@ -65,7 +65,7 @@ function GuildFolderSettingsScene(color) {
 }
 get_ActivityIndicator = fn(17);
 ({ Keyboard: hasOwnProperty, ScrollView: metroRequire } = get_ActivityIndicator);
-const DEFAULT_FOLDER_COLOR = fn(16290).DEFAULT_FOLDER_COLOR;
+const DEFAULT_FOLDER_COLOR = fn(16293).DEFAULT_FOLDER_COLOR;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
 const createStyles = fn(4560);

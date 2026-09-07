@@ -19,7 +19,7 @@ export default function FavoritesGuildActionSheet(onClose) {
   const tmp3 = useFavoritesGuildResetActionDefault();
   dependencyMap = tmp3;
   const tmp4 = useFavoritesGuildAutoAddedThreadsActionDefault();
-  onClose(10224);
+  onClose(10229);
   let obj1 = onClose(504);
   const items = [FavoriteStore];
   const stateFromStores = obj1.useStateFromStores(items, () => FavoriteStore.hasStoredFavorites());
@@ -48,7 +48,7 @@ export default function FavoritesGuildActionSheet(onClose) {
       const obj5 = { label: null, icon: null, onPress: null };
       const intl2 = tmp5(1114).intl;
       obj5.label = intl2.string(tmp5(1114).t["0dOFq+"]);
-      const obj6 = { IconComponent: tmp5(12151).ArrowsUpDownIcon };
+      const obj6 = { IconComponent: tmp5(12155).ArrowsUpDownIcon };
       obj5.icon = closure_4(tmp5(7200).ActionSheetRow.Icon, obj6);
       obj5.onPress = function onPress() {
         onClose();

@@ -61,7 +61,7 @@ function SuggestionRow(suggestion) {
 }
 const View = fn(17).View;
 const AnalyticEvents = fn(1074).AnalyticEvents;
-const SuggestedFriendSource = fn(12699).SuggestedFriendSource;
+const SuggestedFriendSource = fn(12703).SuggestedFriendSource;
 const jsxProd = fn(21);
 ({ jsx: closure_8, Fragment: closure_9, jsxs: c10 } = jsxProd);
 fn(4560);
@@ -226,7 +226,7 @@ export default function ContactSyncSuggestions(friendSuggestions) {
   obj.contentContainerStyle = obj1;
   obj.data = memo;
   obj.renderItem = callback1;
-  const items5 = [closure_8(friendSuggestions(8874).FlashList, obj), ,];
+  const items5 = [closure_8(friendSuggestions(8879).FlashList, obj), ,];
   obj2 = { style: tmp.linearGradient, start: null, end: null, pointerEvents: "none", colors: null };
   const someResult = keys.some((item) => first[item]);
   obj2.start = friendSuggestions(1093).VerticalGradient.START;

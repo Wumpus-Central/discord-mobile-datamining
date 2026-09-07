@@ -97,7 +97,7 @@ function NativeCheckoutStoreProvider(children) {
       state = state.getState();
       const orderRecord = state.orderRecord;
       if (null != orderRecord) {
-        checkoutInitParameters(10812);
+        checkoutInitParameters(10817);
         let obj = { checkoutSucceeded: tmp2, order: null };
         obj = { id: null, status: null };
         ({ id: obj3.id, status: obj3.status } = orderRecord);

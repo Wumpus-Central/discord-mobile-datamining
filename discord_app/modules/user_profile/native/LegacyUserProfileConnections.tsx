@@ -537,8 +537,8 @@ export default function LegacyUserProfileConnections(user) {
         const intl = tmp(1114).intl;
         obj.title = intl.string(tmp(1114).t.PHjkRE);
         obj.children = mapped;
-        tmp10 = closure_14(stateFromStores(11582), obj);
-        const tmp13 = stateFromStores(11582);
+        tmp10 = closure_14(stateFromStores(11587), obj);
+        const tmp13 = stateFromStores(11587);
       }
       obj = { children: null };
       const items6 = [tmp10];
@@ -546,10 +546,10 @@ export default function LegacyUserProfileConnections(user) {
       const intl2 = tmp(1114).intl;
       obj1.title = intl2.string(tmp(1114).t["3fe7U5"]);
       obj1.children = tmp8;
-      items6[1] = closure_14(stateFromStores(11582), obj1);
+      items6[1] = closure_14(stateFromStores(11587), obj1);
       obj.children = items6;
       tmp17Result = closure_15(closure_16, obj);
-      const tmp16 = stateFromStores(11582);
+      const tmp16 = stateFromStores(11587);
     }
   }
   return tmp17Result;

@@ -331,7 +331,7 @@ prototype["update"] = function update(id, id, arg2, arr) {
             let obj = set;
             if (!set.has(user_id)) {
               obj.add(user_id);
-              obj = { userId: user_id, position: size(14461).toListenerRelativePosition(closure_0, user_id.position) };
+              obj = { userId: user_id, position: size(14464).toListenerRelativePosition(closure_0, user_id.position) };
               return obj;
             }
           }

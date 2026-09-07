@@ -214,7 +214,7 @@ obj.onLongPressAttachmentLink = function () {
   return applyArgumentsResult;
 };
 obj.onTapMention = function onTapMention(nativeEvent) {
-  let obj = parsedUserId(11547);
+  let obj = parsedUserId(11552);
   const nativeSyntheticEventData = obj.getNativeSyntheticEventData(nativeEvent);
   ({ userId, channelId, roleName, parsedUserId } = nativeSyntheticEventData);
   ({ roleId, guildId } = nativeSyntheticEventData);
@@ -228,7 +228,7 @@ obj.onTapMention = function onTapMention(nativeEvent) {
       if (null != guildId) {
         obj = { guildId, roleId, channelId };
         ActionSheetActionCreatorsDefault.openLazy(
-          parsedUserId(1896)(11587, dependencyMap.paths),
+          parsedUserId(1896)(11592, dependencyMap.paths),
           "RoleMembersActionSheet",
           obj,
         );
@@ -238,7 +238,7 @@ obj.onTapMention = function onTapMention(nativeEvent) {
       if (null != guildId) {
         const obj1 = { guildId, roleId: null, channelId: null };
         const obj6 = ActionSheetActionCreatorsDefault;
-        const tmp10 = parsedUserId(1896)(11587, dependencyMap.paths);
+        const tmp10 = parsedUserId(1896)(11592, dependencyMap.paths);
         obj1.roleId = SnowflakeUtilsDefault.castGuildIdAsEveryoneGuildRoleId(guildId);
         obj1.channelId = channelId;
         obj6.openLazy(tmp10, "RoleMembersActionSheet", obj1);
@@ -283,7 +283,7 @@ obj.onTapInlineCode = function onTapInlineCode(nativeEvent) {
   tmp = null != node.content && typeof node.content === "string";
 };
 obj.onTapEmoji = function onTapEmoji(emojiNode) {
-  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(10329, dependencyMap.paths), "MessageEmojiActionSheet", {
+  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(10334, dependencyMap.paths), "MessageEmojiActionSheet", {
     emojiNode: emojiNode.nativeEvent.node,
   });
 };

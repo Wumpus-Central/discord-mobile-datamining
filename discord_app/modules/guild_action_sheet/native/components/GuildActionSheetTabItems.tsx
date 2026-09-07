@@ -27,13 +27,13 @@ let result = size.fileFinishedImporting("modules/guild_action_sheet/native/compo
 export default function GuildActionSheetTabItems(guild) {
   guild = guild.guild;
   let stateFromStores;
-  let obj = guild(13961);
+  let obj = guild(13964);
   let canAccessSettings = obj.useGuildActionSheetPermissions(guild).canAccessSettings;
   const total = stateFromStores(4469)(guild.id).total;
   let obj1 = guild(504);
   const items = [GuildChannelStore];
   stateFromStores = obj1.useStateFromStores(items, () => GuildChannelStore.getChannels(guild.id));
-  let obj2 = guild(9823);
+  let obj2 = guild(9828);
   let shouldRenderInviteResult = obj2.shouldRenderInvite(stateFromStores, guild);
   const items1 = [stateFromStores, guild];
   closure_2 = noop.useCallback(() => {
@@ -63,7 +63,7 @@ export default function GuildActionSheetTabItems(guild) {
   }
   obj1 = { variant: "secondary", label: formatToPlainStringResult, icon: null, grow: true, onPress: null };
   obj2 = { color: tmp3(576).unsafe_rawColors.GUILD_BOOSTING_PINK };
-  obj1.icon = closure_12(guild(9375).BoostGemIcon, obj2);
+  obj1.icon = closure_12(guild(9380).BoostGemIcon, obj2);
   obj1.onPress = function onPress() {
     let obj = { location: null };
     obj = { section: constants3.GUILD_POPOUT, object: constants2.BOOST_GEM_ICON };
@@ -77,7 +77,7 @@ export default function GuildActionSheetTabItems(guild) {
     const obj3 = { variant: "secondary", label: null, icon: null, grow: true, onPress: null };
     const intl3 = tmp(1114).intl;
     obj3.label = intl3.string(tmp(1114).t.VINpSK);
-    obj3.icon = tmp3(10031);
+    obj3.icon = tmp3(10036);
     obj3.onPress = function onPress() {
       ActionSheetActionCreatorsDefault.hideActionSheet();
       closure_2();

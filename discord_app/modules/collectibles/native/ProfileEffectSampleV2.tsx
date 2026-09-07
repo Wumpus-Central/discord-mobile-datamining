@@ -3,7 +3,7 @@ import _mod17 from "../../../../_runtime/metro/00017__.js";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import FastImageDefault from "../../../components_native/common/FastImage.tsx";
 import CollectiblesPreviewConstants from "CollectiblesPreviewConstants.tsx";
-import _modDef8800 from "../../../../discord_assets/assets/collectibles/previews/sample_profile.png.js";
+import _modDef8805 from "../../../../discord_assets/assets/collectibles/previews/sample_profile.png.js";
 import ProfileEffectDefault from "../profile_effects/native/ProfileEffect.tsx";
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
 import createStyles from "../../../design/components/Styles/native/createStyles.tsx";
@@ -47,7 +47,7 @@ export default function ProfileEffectSample(hideBackground) {
   obj = { style: null, source: null, accessible: false, resizeMode: "cover" };
   const items1 = [tmp.sampleProfileImage];
   obj.style = items1;
-  obj = { uri: _modDef8800 };
+  obj = { uri: _modDef8805 };
   obj.source = obj;
   const items2 = [React3(FastImageDefault, obj), ,];
   let tmp4Result = !flag;

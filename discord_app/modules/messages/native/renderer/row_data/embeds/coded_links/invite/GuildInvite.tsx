@@ -19,10 +19,10 @@ import GuildBadgeImageSource from "../../../../../../../guild_badge/native/Guild
 import CodedLinksConstants from "../CodedLinksConstants.tsx";
 import getChannelAndRecipientsFromInviteDefault from "getChannelAndRecipientsFromInvite.tsx";
 import GuestUtilsDefault from "../../../../../../../guests/GuestUtils.tsx";
-import _modDef11808 from "../../../../../../../../../_runtime/metro/11808__.js";
-import _modDef11809 from "../../../../../../../../../_runtime/metro/11809__.js";
+import _modDef11813 from "../../../../../../../../../_runtime/metro/11813__.js";
+import _modDef11814 from "../../../../../../../../../_runtime/metro/11814__.js";
 import InviteErrorUtils from "../../../../../../../../utils/InviteErrorUtils.tsx";
-import _modDef12725 from "../../../../../../../../../_runtime/metro/12725__.js";
+import _modDef12729 from "../../../../../../../../../_runtime/metro/12729__.js";
 import getHeaderTextForInvite from "../../../../../../getHeaderTextForInvite.tsx";
 import GuildRecord from "../../../../../../../../records/GuildRecord.tsx";
 import ApplicationStreamingStore from "../../../../../../../../stores/ApplicationStreamingStore.tsx";
@@ -97,9 +97,9 @@ export const createExpiredGuildInvite = function createExpiredGuildInvite(author
   obj.titleText = intl5.string(tmp6(1114).t["Jhx/ud"]);
   tmp6Result = tmp6(4411);
   if (tmp6Result.isThemeDark(theme)) {
-    tmpResult = _modDef11808;
+    tmpResult = _modDef11813;
   } else {
-    tmpResult = _modDef11809;
+    tmpResult = _modDef11814;
   }
   obj.thumbnailUrl = Image.resolveAssetSource(tmpResult).uri;
   ({ thumbnailBackgroundColor: obj.thumbnailBackgroundColor, subtitleColor: obj.subtitleColor } = tmp3.colors);
@@ -153,7 +153,7 @@ export const createDisabledGuildInvite = function createDisabledGuildInvite(invi
   obj.helpCenterArticleURL = HelpdeskUtilsDefault.getArticleURL(constants.INVITE_DISABLED);
   obj.guildIcon = tmp11;
   const tmpResult = HelpdeskUtilsDefault;
-  obj.thumbnailUrl = renderer_EmbedUtils.getAssetUriForEmbed(_modDef12725);
+  obj.thumbnailUrl = renderer_EmbedUtils.getAssetUriForEmbed(_modDef12729);
   let tmp17;
   if (null == tmp11) {
     let tmp18;
@@ -212,9 +212,9 @@ export const createErroredGuildInvite = function createErroredGuildInvite(code, 
   obj.titleText = title;
   tmp5Result = shared;
   if (tmp5Result.isThemeDark(theme)) {
-    let tmpResult = _modDef11808;
+    let tmpResult = _modDef11813;
   } else {
-    tmpResult = _modDef11809;
+    tmpResult = _modDef11814;
   }
   obj.thumbnailUrl = Image.resolveAssetSource(tmpResult).uri;
   ({ thumbnailBackgroundColor: obj2.thumbnailBackgroundColor, subtitleColor: obj2.subtitleColor } = colors);

@@ -10,7 +10,7 @@ import useA11yRolesNative from "../../../../../../discord_common/js/packages/des
 import utils_ColorDefault from "../../../../../utils/Color.tsx";
 import Pressables from "../../../../../design/void/Pressables/native/Pressables.tsx";
 import ThemedGradient from "../../../../client_themes/native/ThemedGradient.tsx";
-import _modDef15274 from "../../../../../../_runtime/metro/15274__.js";
+import _modDef15277 from "../../../../../../_runtime/metro/15277__.js";
 import SynchronizeIconNativeDefault from "../../../../client_themes/images/native/SynchronizeIconNative.tsx";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 import ThemeStore from "../../../ThemeStore.tsx";
@@ -38,7 +38,7 @@ function GradientThemeBackground(arg0) {
   obj1.mixColorOverride = isThemeDarkResult ? closure_10 : closure_11;
   const items1 = [timestampProducer(ThemedGradientDefault, obj1)];
   if (isThemeLocked) {
-    const obj3 = { source: _modDef15274, style: tmp4.lock };
+    const obj3 = { source: _modDef15277, style: tmp4.lock };
     isThemeLocked = timestampProducer(native.Icon, obj3);
   }
   items1[1] = isThemeLocked;
@@ -101,7 +101,7 @@ function CustomThemeBackground(arg0) {
   };
   const items1 = [timestampProducer(ThemedGradient.CustomThemedGradient, obj1)];
   if (isThemeLocked) {
-    const obj3 = { source: _modDef15274, style: tmp4.lock };
+    const obj3 = { source: _modDef15277, style: tmp4.lock };
     isThemeLocked = timestampProducer(native.Icon, obj3);
   }
   items1[1] = isThemeLocked;

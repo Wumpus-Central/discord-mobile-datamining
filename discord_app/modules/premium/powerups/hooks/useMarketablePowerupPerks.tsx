@@ -28,7 +28,7 @@ export default function useMarketablePowerupPerks(arg0) {
     }
     return tmp2;
   });
-  let tmp2 = stateFromStores(12576)(arg0);
+  let tmp2 = stateFromStores(12580)(arg0);
   dependencyMap = tmp2;
   let items1 = [stateFromStores, tmp2];
   return noop.useMemo(() => {

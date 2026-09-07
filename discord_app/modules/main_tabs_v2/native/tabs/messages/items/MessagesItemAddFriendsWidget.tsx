@@ -6,8 +6,8 @@ import Text_Text from "../../../../../../design/components/Text/native/Text.tsx"
 import Pressables from "../../../../../../design/void/Pressables/native/Pressables.tsx";
 import InstantInviteActionCreatorsDefault from "../../../../../../actions/InstantInviteActionCreators.tsx";
 import IconActionButtonDefault from "../../../shared_components/IconActionButton.tsx";
-import _modDef13854 from "../../../../../../../_runtime/metro/13854__.js";
-import _modDef16099 from "../../../../../../../_runtime/metro/16099__.js";
+import _modDef13857 from "../../../../../../../_runtime/metro/13857__.js";
+import _modDef16102 from "../../../../../../../_runtime/metro/16102__.js";
 import asyncGeneratorStep from "../../../../../../../_runtime/00005_asyncGeneratorStep.js";
 import noop from "../../../../../../../_runtime/metro/00019__.js";
 
@@ -230,7 +230,7 @@ const View = fn(17).View;
 const InstantInviteSources = fn(1074).InstantInviteSources;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const sum = fn(13253).ICON_ACTION_BUTTON_SIZE + nativeDefault.space.PX_16;
+const sum = fn(13257).ICON_ACTION_BUTTON_SIZE + nativeDefault.space.PX_16;
 fn(4560);
 let obj = { container: null, title: null, actions: null, actionIcon: null };
 obj = {
@@ -287,7 +287,7 @@ export default noop.memo(function MessagesItemAddFriendsWidget() {
   const obj2 = {
     style: tmp.actionIcon,
     variant: "filled",
-    source: _modDef13854,
+    source: _modDef13857,
     onPress: handleShare,
     accessibilityLabel: null,
   };
@@ -295,7 +295,7 @@ export default noop.memo(function MessagesItemAddFriendsWidget() {
   obj2.accessibilityLabel = intl3.string(util.t.Ej3B3Y);
   const items1 = [React5(IconActionButtonDefault, obj2)];
   const obj3 = { style: tmp.actionIcon, variant: "filled", source: null, onPress: null, accessibilityLabel: null };
-  obj3.source = _modDef16099;
+  obj3.source = _modDef16102;
   obj3.onPress = handleLink;
   const intl4 = util.intl;
   obj3.accessibilityLabel = intl4.string(util.t.WqhZss);

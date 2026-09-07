@@ -8,7 +8,7 @@ import MessageStore from "../../stores/MessageStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-let useChatBottomManagerUIStore = fn(9485);
+let useChatBottomManagerUIStore = fn(9490);
 ({ useChatInputContainerHeight: closure_4, useSmallSuggestionBarHeight: hasOwnProperty } = useChatBottomManagerUIStore);
 const jsx = fn(21).jsx;
 fn(4560);
@@ -61,10 +61,10 @@ export default function JumpToPresentButton(channelId) {
     }
     return tmp;
   });
-  const isVoicePanelMounted = channelId(9681).useIsVoicePanelMounted(channelId);
-  const obj2 = channelId(9681);
-  const isVoicePanelOpen = channelId(9681).useIsVoicePanelOpen(channelId);
-  const obj3 = channelId(9681);
+  const isVoicePanelMounted = channelId(9686).useIsVoicePanelMounted(channelId);
+  const obj2 = channelId(9686);
+  const isVoicePanelOpen = channelId(9686).useIsVoicePanelOpen(channelId);
+  const obj3 = channelId(9686);
   const items1 = [MessageStore];
   const stateFromStores = channelId(504).useStateFromStores(
     items1,
@@ -91,15 +91,15 @@ export default function JumpToPresentButton(channelId) {
   const items3 = [tmp.container, tmp10];
   obj.style = items3;
   if (tmp5) {
-    obj = { accessibilityLabel: stringResult, icon: screenIndex(12269), onPress: channelId.onJumpToPresent };
-    let tmp12Result = jsx(screenIndex(12268), {
+    obj = { accessibilityLabel: stringResult, icon: screenIndex(12273), onPress: channelId.onJumpToPresent };
+    let tmp12Result = jsx(screenIndex(12272), {
       accessibilityLabel: stringResult,
-      icon: screenIndex(12269),
+      icon: screenIndex(12273),
       onPress: channelId.onJumpToPresent,
     });
-    const tmp16 = screenIndex(12268);
+    const tmp16 = screenIndex(12272);
   } else {
-    tmp12Result = jsx(tmp3(12270).MemoedVoicePanelDismissChatButton, {});
+    tmp12Result = jsx(tmp3(12274).MemoedVoicePanelDismissChatButton, {});
   }
   obj.children = tmp12Result;
   return <View style={null}>{null}</View>;

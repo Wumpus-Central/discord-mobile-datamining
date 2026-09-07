@@ -99,7 +99,7 @@ export const NameplateDummyUserPreview = function NameplateDummyUserPreview(hide
   const obj1 = {
     style: tmp3.avatarContainer,
     children: hasOwnProperty(native.Avatar, {
-      source: importDefault(stateFromStores ? 8820 : 8821),
+      source: importDefault(stateFromStores ? 8825 : 8826),
       size: NORMAL,
       "aria-hidden": true,
       style: tmp3.avatar,

@@ -6,7 +6,7 @@ import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
-let FeedbackRating = fn(11626).FeedbackRating;
+let FeedbackRating = fn(11631).FeedbackRating;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
 fn(4560);

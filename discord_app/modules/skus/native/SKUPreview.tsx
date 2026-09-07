@@ -139,7 +139,7 @@ function CollectiblesSKUPreview(sku) {
   sku = sku.sku;
   let DEFAULT_ITEM_SIZE = sku.size;
   if (DEFAULT_ITEM_SIZE === undefined) {
-    DEFAULT_ITEM_SIZE = sku(8773).DEFAULT_ITEM_SIZE;
+    DEFAULT_ITEM_SIZE = sku(8778).DEFAULT_ITEM_SIZE;
   }
   const items = [sku];
   const memo = noop.useMemo(() => closure_5(sku), items);
@@ -225,7 +225,7 @@ const React6 = createStyles.createStyles((width, height) => {
   obj.premiumRiveContainer = { width, height };
   return obj;
 });
-let size = { width: fn(8773).DEFAULT_ITEM_SIZE, height: fn(8773).DEFAULT_ITEM_SIZE };
+let size = { width: fn(8778).DEFAULT_ITEM_SIZE, height: fn(8778).DEFAULT_ITEM_SIZE };
 size = fn(2);
 const result = size.fileFinishedImporting("modules/skus/native/SKUPreview.tsx");
 

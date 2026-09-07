@@ -4,7 +4,7 @@ import MessageRecord from "../../../../records/MessageRecord.tsx";
 
 require = fn;
 let closure_3 = fn(7878).EMBED_TYPES_WITHOUT_DESCRIPTION;
-fn(16711).CachedSearchResultParser;
+fn(16714).CachedSearchResultParser;
 const prototype = function SearchResultMessageParser(searchQueryString, lineClamp) {
   const tmp4 = new prototype(tmp3, tmp2, tmp, new.target, new.target);
   _require = tmp4;
@@ -19,9 +19,9 @@ const prototype = function SearchResultMessageParser(searchQueryString, lineClam
     } else {
       const str4 = content.replace(/(\r\n|\n|\r)/gm, " ");
       const _Set = Set;
-      set = new Set(set(16712).analyze(tokenizedQueryContent));
+      set = new Set(set(16715).analyze(tokenizedQueryContent));
       const parts = str4.split(/(\W+)/g);
-      const found = parts.find((item) => set(16712).shouldHighlight(item, set));
+      const found = parts.find((item) => set(16715).shouldHighlight(item, set));
       if (null == found) {
         return null;
       } else {
@@ -41,7 +41,7 @@ const prototype = function SearchResultMessageParser(searchQueryString, lineClam
           return "" + str2 + str4.substring(bound);
         }
       }
-      const obj = set(16712);
+      const obj = set(16715);
     }
   };
   tmp4.getSearchResults = function getSearchResults(content) {

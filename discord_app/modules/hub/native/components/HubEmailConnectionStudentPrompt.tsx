@@ -7,7 +7,7 @@ import TextStyles from "../../../rebrand/native/TextStyles.tsx";
 const require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: c3, Image: closure_4 } = get_ActivityIndicator);
-const HubEmailConnectionSteps = fn(12719).HubEmailConnectionSteps;
+const HubEmailConnectionSteps = fn(12723).HubEmailConnectionSteps;
 const Constants = fn(1074);
 ({ AnalyticEvents: metroRequire, Fonts } = Constants);
 const jsxProd = fn(21);
@@ -45,7 +45,7 @@ export default function HubEmailConnectionStudentPrompt(onClose) {
   obj1.children = intl.string(onClose(1114).t["+/Pv0h"]);
   const items = [closure_7(onClose(1178).LegacyText, obj1), ,];
   const obj2 = { DEPRECATED_style: tmp.row, leading: null, trailing: null, label: null, subLabel: null, onPress: null };
-  const obj3 = { source: invite(12729) };
+  const obj3 = { source: invite(12733) };
   obj2.leading = closure_7(closure_4, obj3);
   obj2.trailing = invite(7137).Arrow;
   const intl2 = onClose(1114).intl;
@@ -62,7 +62,7 @@ export default function HubEmailConnectionStudentPrompt(onClose) {
   const obj4 = { DEPRECATED_style: tmp.row, leading: null, trailing: null, label: null, onPress: null };
   const obj5 = { source: null };
   const tmp2 = invite(7137);
-  obj5.source = invite(12730);
+  obj5.source = invite(12734);
   obj4.leading = closure_7(closure_4, obj5);
   obj4.trailing = invite(7137).Arrow;
   const intl4 = onClose(1114).intl;
@@ -71,5 +71,5 @@ export default function HubEmailConnectionStudentPrompt(onClose) {
   items[2] = closure_7(invite(7137), obj4);
   obj.children = items;
   obj.children = closure_8(closure_3, obj);
-  return closure_7(onClose(12727).HubEmailConnectionScreen, obj);
+  return closure_7(onClose(12731).HubEmailConnectionScreen, obj);
 }

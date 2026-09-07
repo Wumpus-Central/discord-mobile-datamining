@@ -16,7 +16,7 @@ function FamilyCenterModalAcceptScreen(otherUser) {
     const intl = otherUser(1114).intl;
     otherUser(4258).presentFailedToast(intl.string(otherUser(1114).t.R0RpRX));
   }, []);
-  let obj = otherUser(11916);
+  let obj = otherUser(11921);
   const familyCenterActions = obj.useFamilyCenterActions({ onSuccess: callback, onError: callback1 });
   const acceptLinkRequest = familyCenterActions.acceptLinkRequest;
   const isAcceptLoading = familyCenterActions.isAcceptLoading;
@@ -28,14 +28,14 @@ function FamilyCenterModalAcceptScreen(otherUser) {
   obj = { children: null };
   const obj1 = { style: tmp.header, children: null };
   const obj2 = { otherUser, iconSrc: acceptLinkRequest(4504), iconStyles: tmp.icon };
-  const items1 = [closure_5(acceptLinkRequest(14922), obj2), ,];
+  const items1 = [closure_5(acceptLinkRequest(14925), obj2), ,];
   const obj3 = { style: tmp.headerText, variant: "text-lg/bold", children: null };
   let intl = otherUser(1114).intl;
   obj3.children = intl.string(acceptLinkRequest(2396).rlNJwZ);
   items1[1] = closure_5(otherUser(4556).Text, obj3);
-  items1[2] = closure_5(acceptLinkRequest(14892), { user: otherUser });
+  items1[2] = closure_5(acceptLinkRequest(14895), { user: otherUser });
   obj1.children = items1;
-  const items2 = [closure_6(View, obj1), closure_5(acceptLinkRequest(11918), {})];
+  const items2 = [closure_6(View, obj1), closure_5(acceptLinkRequest(11923), {})];
   const obj4 = { style: tmp.disclaimer, variant: "text-xs/normal", color: "text-default", children: null };
   const intl2 = otherUser(1114).intl;
   obj4.children = intl2.format(acceptLinkRequest(2396).snlFqR, { username: otherUser.username });
@@ -56,7 +56,7 @@ function FamilyCenterModalAcceptScreen(otherUser) {
   items4[1] = closure_5(otherUser(4975).Button, obj9);
   obj7.children = items4;
   obj6.children = closure_6(otherUser(5433).ButtonGroup, obj7);
-  items3[1] = closure_5(otherUser(11926).ModalFooter, obj6);
+  items3[1] = closure_5(otherUser(11931).ModalFooter, obj6);
   obj.children = items3;
   return closure_6(otherUser(8421).ModalScreen, obj);
 }
@@ -104,5 +104,5 @@ export default function FamilyCenterModalAccept(otherUser) {
   let obj = { initialRouteName: "ACCEPT", screens: memo, headerBackTitle: null };
   const intl = otherUser(1114).intl;
   obj.headerBackTitle = intl.string(otherUser(1114).t["13/7kX"]);
-  return closure_5(otherUser(11928).Modal, obj);
+  return closure_5(otherUser(11933).Modal, obj);
 }

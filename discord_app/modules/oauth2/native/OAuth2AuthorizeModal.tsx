@@ -45,7 +45,7 @@ let result = size.fileFinishedImporting("modules/oauth2/native/OAuth2AuthorizeMo
 
 export default function OAuth2AuthorizeModal(arg0) {
   const tmp = closure_8();
-  const tmp4 = sharedValue(9235)(arg0);
+  const tmp4 = sharedValue(9240)(arg0);
   _require = tmp4;
   let obj = require("ReanimatedRexport");
   sharedValue = obj.useSharedValue(0);
@@ -97,7 +97,7 @@ export default function OAuth2AuthorizeModal(arg0) {
   };
   if (null != tmp4.backStep) {
     const obj3 = { color: tmp2(576).colors.INTERACTIVE_TEXT_DEFAULT };
-    let tmp11Result = closure_5(tmp5(9579).ArrowSmallLeftIcon, obj3);
+    let tmp11Result = closure_5(tmp5(9584).ArrowSmallLeftIcon, obj3);
   } else {
     const obj4 = { color: tmp2(576).colors.INTERACTIVE_TEXT_DEFAULT };
     tmp11Result = closure_5(tmp5(5680).XSmallIcon, obj4);
@@ -121,7 +121,7 @@ export default function OAuth2AuthorizeModal(arg0) {
   const merged = Object.assign(tmp4);
   obj9.onScroll = callback;
   obj9.centerContent = true;
-  obj8.children = closure_5(sharedValue(9581), obj9);
+  obj8.children = closure_5(sharedValue(9586), obj9);
   items4[1] = closure_5(require("common/SafeAreaView").SafeAreaPaddingView, obj8);
   obj.children = items4;
   return closure_6(View, obj);

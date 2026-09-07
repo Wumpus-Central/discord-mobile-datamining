@@ -65,7 +65,7 @@ function ExternalPipViewVideoUser(arg0) {
 }
 function ExternalPipViewVideoStream(streamId) {
   streamId = streamId.streamId;
-  let obj = streamId(9605);
+  let obj = streamId(9610);
   _slicedToArray = undefined;
   noop = undefined;
   const surfaceDirectRendererExperiment = obj.useSurfaceDirectRendererExperiment(streamId.userId, {
@@ -116,7 +116,7 @@ function ExternalPipViewVideoStream(streamId) {
     }
   }, items3);
   const children = [
-    closure_11(first(9616), {
+    closure_11(first(9621), {
       useSurfaceDirectRenderer: surfaceDirectRendererExperiment,
       style: memo,
       streamId,

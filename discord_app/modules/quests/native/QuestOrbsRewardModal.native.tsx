@@ -7,11 +7,11 @@ import XSmallIcon from "../../../design/components/Icon/native/redesign/generate
 import common_Video from "../../../components_native/common/Video.tsx";
 import APNGPlayer from "../../image/native/APNGPlayer.android.tsx";
 import OrbsIcon from "../../../design/components/Icon/native/redesign/generated/OrbsIcon.tsx";
-import _modDef11780 from "../../../../discord_assets/assets/orbs/quest_reward_mobile_bg_static.png.js";
-import _modDef11781 from "../../../../discord_assets/assets/orbs/quest_reward_mobile_bg.mp4.js";
-import _modDef11782 from "../../../../discord_assets/assets/orbs/static_idle_orb.png.js";
-import _modDef11783 from "../../../../discord_assets/assets/orbs/quest_reward_mobile_idle_dark.png.js";
-import _modDef11784 from "../../../../discord_assets/assets/orbs/quest_reward_mobile_entry_dark.png.js";
+import _modDef11785 from "../../../../discord_assets/assets/orbs/quest_reward_mobile_bg_static.png.js";
+import _modDef11786 from "../../../../discord_assets/assets/orbs/quest_reward_mobile_bg.mp4.js";
+import _modDef11787 from "../../../../discord_assets/assets/orbs/static_idle_orb.png.js";
+import _modDef11788 from "../../../../discord_assets/assets/orbs/quest_reward_mobile_idle_dark.png.js";
+import _modDef11789 from "../../../../discord_assets/assets/orbs/quest_reward_mobile_entry_dark.png.js";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
 import noop from "../../../../_runtime/metro/00019__.js";
@@ -58,7 +58,7 @@ function StaticOrb() {
   obj = { source: null, style: null, fade: false };
   obj = { uri: null };
   const tmp = closure_26();
-  obj.uri = _modDef11782;
+  obj.uri = _modDef11787;
   obj.source = obj;
   obj.style = tmp.animatedOrb;
   obj.children = map1(FastImageDefault, obj);
@@ -103,7 +103,7 @@ function AnimatedOrbContainer(isAppActive) {
     tmp13 = map1(React6, obj);
   }
   const items1 = [tmp13, ,];
-  obj = { uri: _modDef11783, style: null, onLoad: null, animate: null };
+  obj = { uri: _modDef11788, style: null, onLoad: null, animate: null };
   const items2 = [tmp.animatedOrb];
   let obj1 = tmp15Result;
   if (!tmp15Result) {
@@ -122,7 +122,7 @@ function AnimatedOrbContainer(isAppActive) {
   obj.animate = tmp19;
   items1[1] = map1(closure_24, obj);
   if (tmp15Result) {
-    const obj2 = { uri: _modDef11784, style: null, onLoad: null, animate: null };
+    const obj2 = { uri: _modDef11789, style: null, onLoad: null, animate: null };
     const items3 = [tmp.animatedOrb];
     obj2.style = items3;
     obj2.onLoad = callback;
@@ -243,7 +243,7 @@ let closure_25 = noop.memo((arg0) => {
   ({ useReducedMotion, style } = arg0);
   ({ onStaticBgLoad, onAnimatedBgLoad, isAppActive } = arg0);
   let obj = { source: null, style: null, resizeMode: "cover", onLoad: null };
-  obj = { uri: _modDef11780 };
+  obj = { uri: _modDef11785 };
   obj.source = obj;
   obj.style = style;
   obj.onLoad = onStaticBgLoad;
@@ -262,7 +262,7 @@ let closure_25 = noop.memo((arg0) => {
       playInBackground: true,
       preventsDisplaySleepDuringVideoPlayback: false,
     };
-    const obj1 = { uri: _modDef11781 };
+    const obj1 = { uri: _modDef11786 };
     obj.source = obj1;
     obj.style = style;
     obj.onLoad = onAnimatedBgLoad;
@@ -295,7 +295,7 @@ export default function QuestOrbsRewardModal(quest) {
   let obj = num(504);
   const items = [AccessibilityStore];
   const stateFromStores = obj.useStateFromStores(items, () => useReducedMotion.useReducedMotion);
-  let obj1 = num(8850);
+  let obj1 = num(8855);
   num = obj1.useFetchVirtualCurrencyBalance().balance;
   let obj2 = noop;
   [tmp6, c1] = _slicedToArray(noop.useState(false), 2);
@@ -313,8 +313,8 @@ export default function QuestOrbsRewardModal(quest) {
     num2 = userStatus.orbQuantityClaimed;
   }
   if (num2 == null) {
-    num2 = tmp2(11290).getQuestOrbRewardQuantityForUser(quest.config, stateFromStores2);
-    const tmp2Result = tmp2(11290);
+    num2 = tmp2(11295).getQuestOrbRewardQuantityForUser(quest.config, stateFromStores2);
+    const tmp2Result = tmp2(11295);
   }
   const tmp11 = stateFromStores1 === num(1093).AppStates.ACTIVE;
   const effect = obj2.useEffect(() => {

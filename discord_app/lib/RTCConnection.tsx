@@ -83,7 +83,7 @@ let Constants = fn(1074);
 } = Constants);
 const StreamSettingsConstants = fn(4607);
 ({ ApplicationStreamFPS: closure_22, ApplicationStreamResolutions: closure_23 } = StreamSettingsConstants);
-let closure_24 = fn(13802).BROWSER_SUPPORTS_UNIFIED_PLAN;
+let closure_24 = fn(13805).BROWSER_SUPPORTS_UNIFIED_PLAN;
 Constants = fn(4585);
 ({
   Features: closure_25,

@@ -253,7 +253,7 @@ function ForYouMessagePreviewV2(item) {
   } else {
     const obj3 = { style: messagePreviewIconV2.messagePreviewIconV2Container, children: null };
     if (constants4.ATTACHMENT === ATTACHMENT) {
-      let tmp29 = guild_id(11245);
+      let tmp29 = guild_id(11250);
       const obj4 = { source: tmp29, size: null, style: null };
       SMALL = tmp2(1178).IconSizes.SMALL;
       obj4.size = SMALL;
@@ -264,10 +264,10 @@ function ForYouMessagePreviewV2(item) {
     } else if (constants4.STICKER !== ATTACHMENT) {
       tmp29 = null;
       if (constants4.VOICE_MESSAGE === ATTACHMENT) {
-        tmp29 = guild_id(8619);
+        tmp29 = guild_id(8624);
       }
     }
-    tmp29 = guild_id(10420);
+    tmp29 = guild_id(10425);
   }
   const tmp2Result4 = item(7888);
 }
@@ -594,7 +594,7 @@ let closure_35 = noop.memo((item) => {
       obj.icon = tmp6(notificationCenterItemAcked[42]);
       obj.IconComponent = tmp2(notificationCenterItemAcked[43]).TrashIcon;
       item = navigation(function* () {
-        yield tmp3(16414).deleteNotificationCenterItem(tmp3);
+        yield tmp3(16417).deleteNotificationCenterItem(tmp3);
         if (1 === tmp7) {
           c3 = 0;
           const obj2 = { key: "REMOVE_NOTIFICATION_ERROR", content: null };

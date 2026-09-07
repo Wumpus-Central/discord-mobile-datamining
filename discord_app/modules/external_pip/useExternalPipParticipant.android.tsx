@@ -57,7 +57,7 @@ export default function useExternalPipParticipant() {
     if (ref.current !== id2) {
       let obj = {
         focusedParticipantStreamId: "Array",
-        focusedParticipantUserId: "isArray",
+        focusedParticipantUserId: "options",
         focusedParticipantType: ref2.current,
       };
     } else {

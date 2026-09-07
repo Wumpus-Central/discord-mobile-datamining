@@ -120,7 +120,7 @@ export default function EditGuildEventWhere(guild) {
               const error1 = new Error(intl2.string(guild(1114).t.q91szp));
               throw error1;
             }
-            obj = guild(9705);
+            obj = guild(9710);
           }
           if (null == tmp) {
             if (entityType !== constants.EXTERNAL) {
@@ -158,7 +158,7 @@ export default function EditGuildEventWhere(guild) {
       entityType: guildEvent.entityType,
       onChange(entityType) {
         _undefined(null);
-        const obj = { entityType, scheduledEndTime: "a" };
+        const obj = { entityType, scheduledEndTime: "Array" };
         if (entityType === constants.EXTERNAL) {
           let obj2 = _modDef4153(guildEvent.scheduledStartTime);
           if (obj2 == null) {
@@ -179,7 +179,7 @@ export default function EditGuildEventWhere(guild) {
     entityType: guildEvent.entityType,
     onChange(entityType) {
       _undefined(null);
-      const obj = { entityType, scheduledEndTime: "a" };
+      const obj = { entityType, scheduledEndTime: "Array" };
       if (entityType === constants.EXTERNAL) {
         let obj2 = _modDef4153(guildEvent.scheduledStartTime);
         if (obj2 == null) {

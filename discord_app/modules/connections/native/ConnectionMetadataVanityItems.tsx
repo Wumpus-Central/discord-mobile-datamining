@@ -6,8 +6,8 @@ import native from "../../../design/void/native.tsx";
 import NumberUtils from "../../../utils/NumberUtils.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import ConnectionsUtils from "../ConnectionsUtils.tsx";
-import _modDef11576 from "../../../../_runtime/metro/11576__.js";
-import _modDef11577 from "../../../../_runtime/metro/11577__.js";
+import _modDef11581 from "../../../../_runtime/metro/11581__.js";
+import _modDef11582 from "../../../../_runtime/metro/11582__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -221,7 +221,7 @@ export const generateSteamMetadataItems = function generateSteamMetadataItems(me
     const intl = util.intl;
     obj = { count: NumberResult1 };
     obj.label = intl.format(util.t.Y88M5x, obj);
-    obj.imageSrc = _modDef11576;
+    obj.imageSrc = _modDef11581;
     const intl2 = util.intl;
     obj.imageAlt = intl2.string(util.t.HKUEZo);
     items.push(timestampProducer(VanityItem, obj, constants.STEAM_ITEM_COUNT_DOTA2));
@@ -231,7 +231,7 @@ export const generateSteamMetadataItems = function generateSteamMetadataItems(me
     const intl3 = util.intl;
     const obj2 = { count: NumberResult2 };
     obj1.label = intl3.format(util.t.Y88M5x, obj2);
-    obj1.imageSrc = _modDef11577;
+    obj1.imageSrc = _modDef11582;
     const intl4 = util.intl;
     obj1.imageAlt = intl4.string(util.t.C8p1Sh);
     items.push(timestampProducer(VanityItem, obj1, constants.STEAM_ITEM_COUNT_TF2));

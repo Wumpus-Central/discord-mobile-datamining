@@ -4,7 +4,7 @@ import Text_Text from "../../../../../../design/components/Text/native/Text.tsx"
 import components_Button_Button from "../../../../../../design/components/Button/native/Button.native.tsx";
 import common_SafeAreaView from "../../../../../../components_native/common/SafeAreaView.tsx";
 import TwoWayLinkStyles from "../TwoWayLinkStyles.tsx";
-import _modDef9264 from "../../../../../../../discord_assets/assets/connections/console_setup_confirmation.png.js";
+import _modDef9269 from "../../../../../../../discord_assets/assets/connections/console_setup_confirmation.png.js";
 import noop from "../../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -26,7 +26,7 @@ export const PlayStationLinkSuccess = function PlayStationLinkSuccess(onClose) {
   obj = { style: twoWayLinkStyles.content, children: null };
   const tmp = closure_8();
   const items = [
-    timestampProducer(React4, { source: noop.useMemo(() => ({ uri: _modDef9264 }), []), style: closure_8().image }),
+    timestampProducer(React4, { source: noop.useMemo(() => ({ uri: _modDef9269 }), []), style: closure_8().image }),
     ,
   ];
   const obj2 = {

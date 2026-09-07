@@ -1,6 +1,6 @@
 // discord_app/modules/share/native/ShareUtils.tsx
 import ToastActionCreatorsDefault from "../../toast/native/ToastActionCreators.tsx";
-import _modDef11253 from "../../../../_runtime/metro/11253__.js";
+import _modDef11258 from "../../../../_runtime/metro/11258__.js";
 import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
 
 const require = fn;
@@ -84,7 +84,7 @@ let closure_6 = async function _sendShareMessage(arg0) {
             attachmentsToUpload: closure_130_4,
             onAttachmentUploadError() {
               closure_1_6.reject(undefined);
-              c1(9307);
+              c1(9312);
               const obj = { channelId, uploads, draftType: uploads.ChannelMessage, resetState: true };
               obj.setUploads(obj);
               c1(7777).saveDraft(channelId, dependencyMap, uploads.ChannelMessage);
@@ -121,7 +121,7 @@ let size = fn(2);
 const result = size.fileFinishedImporting("modules/share/native/ShareUtils.tsx");
 
 export const showInformationToast = function showInformationToast(intl3) {
-  const obj = { key: "INFORMATION_TOAST-" + intl3, content: intl3, icon: _modDef11253 };
+  const obj = { key: "INFORMATION_TOAST-" + intl3, content: intl3, icon: _modDef11258 };
   obj.open(obj);
 };
 export const sendShareMessage = function sendShareMessage() {

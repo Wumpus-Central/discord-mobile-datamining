@@ -84,7 +84,7 @@ export default function ConversationNavigator(route) {
         return obj;
       },
       getComponent() {
-        return channelId(13251).default;
+        return channelId(13255).default;
       },
     }),
   ];

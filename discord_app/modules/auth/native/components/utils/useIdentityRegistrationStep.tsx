@@ -6,13 +6,13 @@ import _slicedToArray from "../../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const RegistrationUIStore = fn(15946);
+const RegistrationUIStore = fn(15949);
 ({
   setRegistrationErrors: metroRequire,
   updateRegistrationOptions: closure_7,
   useRegistrationUIStore: closure_8,
 } = RegistrationUIStore);
-const RegistrationConstants = fn(15947);
+const RegistrationConstants = fn(15950);
 ({
   authStateToRegisterTransitionStep: closure_9,
   RegisterTransitionSteps: c10,

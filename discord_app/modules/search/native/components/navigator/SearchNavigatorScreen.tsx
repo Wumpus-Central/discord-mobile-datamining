@@ -30,7 +30,7 @@ export default function SearchNavigatorScreen(navigation) {
   const searchContext = navigation.route.params.searchContext;
   const tmp = closure_8();
   importDefault = tmp;
-  let obj = navigation(16625);
+  let obj = navigation(16628);
   const searchSuggestionsGesture = obj.useSearchSuggestionsGesture(searchContext);
   ({ gesture, dismissed, setDismissed, onLayoutMeasure } = searchSuggestionsGesture);
   const items = [navigation.goBack, tmp.back];
@@ -70,7 +70,7 @@ export default function SearchNavigatorScreen(navigation) {
   });
   obj1.children = items3;
   obj.children = closure_6(View, obj1);
-  items1[1] = closure_5(navigation(16361).NonCollapsableGestureDetector, obj);
+  items1[1] = closure_5(navigation(16364).NonCollapsableGestureDetector, obj);
   obj.children = items1;
   return closure_6(closure_7, obj);
 }

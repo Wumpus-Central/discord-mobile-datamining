@@ -84,7 +84,7 @@ let prototype = function AcceptInviteManager() {
               }
               let obj = { location: str };
               FriendInviteUtils.acceptFriendInvite(invite, obj);
-              DispatcherDefault.wait(() => set(8738).clearDisplayedInvite());
+              DispatcherDefault.wait(() => set(8743).clearDisplayedInvite());
               flag = false;
             }
           }
@@ -138,13 +138,13 @@ let prototype = function AcceptInviteManager() {
           obj9 = InviteTypeUtils;
         }
         if (flag2) {
-          DispatcherDefault.wait(() => set(8738).clearDisplayedInvite());
+          DispatcherDefault.wait(() => set(8743).clearDisplayedInvite());
           flag = false;
         } else {
           ActionSheetActionCreatorsDefault.hideActionSheet();
           obj = { code, isRegistration: applyArgumentsResult._isRegistration, deeplinkAttemptId, inviteInstanceId };
           ModalActionCreatorsDefault.pushLazy(
-            asyncRequireImpl(17302, dependencyMap.paths),
+            asyncRequireImpl(17305, dependencyMap.paths),
             obj,
             ACCEPT_INVITE_MODAL_KEY,
           );

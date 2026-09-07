@@ -14,7 +14,7 @@ import AuthenticationStore from "../../../../stores/AuthenticationStore.tsx";
 import ConnectedAccountsStore from "../../../../stores/ConnectedAccountsStore.tsx";
 import LocaleStore from "../../LocaleStore.tsx";
 
-const ConnectionsEmptyStateUpsellDefault = tmp2(14959);
+const ConnectionsEmptyStateUpsellDefault = tmp2(14962);
 require = fn;
 const ActivityIndicator = fn(17).ActivityIndicator;
 const FetchState = fn(7107).FetchState;
@@ -67,7 +67,7 @@ export const UserSettingsConnections = function UserSettingsConnections(selected
   const effect2 = authorizedAppsFetchState.useEffect(() => {
     if (null != selectedPlatformType) {
       if (-1 === selectedPlatformType) {
-        ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(14957, dependencyMap.paths), "AddConnection");
+        ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(14960, dependencyMap.paths), "AddConnection");
       } else {
         const obj = { platformType: selectedPlatformType, location: AnalyticsLocations.USER_SETTINGS };
         authorizeConnectionDefault(obj);
@@ -99,7 +99,7 @@ export const UserSettingsConnections = function UserSettingsConnections(selected
       ];
       obj.children = items5;
       obj.children = closure_12(tmp4(4973).Stack, obj);
-      tmp14 = closure_11(tmp4(8593).Form, obj);
+      tmp14 = closure_11(tmp4(8598).Form, obj);
     }
     return tmp14;
   }

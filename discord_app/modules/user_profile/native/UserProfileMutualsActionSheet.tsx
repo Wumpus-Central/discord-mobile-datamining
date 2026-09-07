@@ -132,7 +132,7 @@ export default function UserProfileMutualsActionSheet(user) {
   const tmp2 = _slicedToArray(noop.useState(0), 2);
   noop = tmp2[1];
   ({ mutualFriends, mutualGuilds } = useUserProfileMutualsDefault(user));
-  let obj1 = user(9792);
+  let obj1 = user(9797);
   let obj = { pageWidth: tmp2[0], defaultIndex: null, items: null };
   let num = 0;
   if (user.section === UserProfileSections.MUTUAL_GUILDS) {
@@ -150,7 +150,7 @@ export default function UserProfileMutualsActionSheet(user) {
     let tmp10 = closure_9(closure_5, obj1);
     let tmp9 = closure_9;
   } else if (0 === mutualFriends.length) {
-    const obj2 = { style: tmp.emptyState, children: closure_9(tmp6(12610).NoMutualFriends, {}) };
+    const obj2 = { style: tmp.emptyState, children: closure_9(tmp6(12614).NoMutualFriends, {}) };
     tmp10 = closure_9(closure_5, obj2);
     tmp9 = closure_9;
   } else {
@@ -173,7 +173,7 @@ export default function UserProfileMutualsActionSheet(user) {
         });
       },
     };
-    tmp10 = closure_9(tmp6(11151).UserProfileStackedActionSheetList, obj3);
+    tmp10 = closure_9(tmp6(11156).UserProfileStackedActionSheetList, obj3);
   }
   obj.page = tmp10;
   const items = [obj];
@@ -187,7 +187,7 @@ export default function UserProfileMutualsActionSheet(user) {
     const obj5 = { style: tmp.loadingState, children: tmp9(closure_6, {}) };
     let tmp9Result = tmp9(closure_5, obj5);
   } else if (0 === mutualGuilds.length) {
-    const obj6 = { style: tmp.emptyState, children: tmp9(tmp6(12604).NoMutualServers, {}) };
+    const obj6 = { style: tmp.emptyState, children: tmp9(tmp6(12608).NoMutualServers, {}) };
     tmp9Result = tmp9(closure_5, obj6);
   } else {
     const obj7 = {
@@ -208,7 +208,7 @@ export default function UserProfileMutualsActionSheet(user) {
         });
       },
     };
-    tmp9Result = tmp9(tmp6(11151).UserProfileStackedActionSheetList, obj7);
+    tmp9Result = tmp9(tmp6(11156).UserProfileStackedActionSheetList, obj7);
   }
   obj4.page = tmp9Result;
   items[1] = obj4;
@@ -224,8 +224,8 @@ export default function UserProfileMutualsActionSheet(user) {
   const obj9 = { style: tmp.container, onLayout: callback, children: null };
   const tmp3Result1 = UserProfileStackedActionSheetDefault;
   const items1 = [
-    tmp9(closure_5, { children: tmp9(user(12614).Tabs, { state: segmentedControlState }) }),
-    tmp9(user(12616).SegmentedControlPages, { state: segmentedControlState }),
+    tmp9(closure_5, { children: tmp9(user(12618).Tabs, { state: segmentedControlState }) }),
+    tmp9(user(12620).SegmentedControlPages, { state: segmentedControlState }),
   ];
   obj9.children = items1;
   obj8.children = closure_10(closure_5, obj9);

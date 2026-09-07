@@ -159,7 +159,7 @@ export default noop.memo(function GuildsBarPendingGuild(guildId) {
     styles: null,
     externalChildren: null,
     expandedChildren: null,
-    children: "nl-CW",
+    children: "place",
   };
   let str = guildName;
   let tmp5Result = tmp5(tmp3[8]);
@@ -198,7 +198,7 @@ export default noop.memo(function GuildsBarPendingGuild(guildId) {
       externalChildren={null}
       expandedChildren={null}
     >
-      {"nl-CW"}
+      {"place"}
     </tmp5Result>
   );
 });

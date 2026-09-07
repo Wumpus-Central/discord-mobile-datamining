@@ -44,7 +44,7 @@ export default function ContextMenuCommandItem(item) {
     }
     return intl.formatToPlainString(util.t.Pk4Mz3, { applicationName: name, commandName: item.displayName });
   }, items);
-  let obj = item(12231);
+  let obj = item(12235);
   const applicationCommandsIconSource = obj.getApplicationCommandsIconSource(section);
   obj = {
     accessibilityLabel: memo,

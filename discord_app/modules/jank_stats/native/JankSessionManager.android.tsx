@@ -43,7 +43,7 @@ prototype["handleAppStateUpdate"] = function handleAppStateUpdate(state) {
 prototype["deliverPendingSessions"] = function deliverPendingSessions() {
   const self = this;
   if (!this._isDelivering) {
-    let properties = self(17409);
+    let properties = self(17412);
     if (null != properties) {
       tmp._isDelivering = true;
       const pendingReports = properties.getPendingReports();

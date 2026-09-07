@@ -49,7 +49,7 @@ export default function useAppLauncherOnboardingContent(channelId) {
           result = result1;
         }
         obj.fetchesShelf = !result;
-        const activityApplications = channelId(12038).useActivityApplications(obj);
+        const activityApplications = channelId(12042).useActivityApplications(obj);
         let flag = false;
         for (const item10042 of activityApplications) {
           if (null != stateFromStores.getEntry(item10042.id)) {
@@ -60,7 +60,7 @@ export default function useAppLauncherOnboardingContent(channelId) {
           obj = { hasUsedActivities: flag };
           return obj;
         }
-        const tmpResult = channelId(12038);
+        const tmpResult = channelId(12042);
       })(obj).hasUsedActivities
     ) {
       push(DismissibleContent.APP_LAUNCHER_ONBOARDING_ACTIVITIES_BANNER);

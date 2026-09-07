@@ -75,7 +75,7 @@ function isQuestRobloxRelated(desktopApplicationIds, distributor) {
 }
 const QuestConstants = fn(5444);
 ({ DISCORD_APPLICATION_ID: closure_12, QuestsExperimentLocations } = QuestConstants);
-const isLaunched = fn(9511).isLaunched;
+const isLaunched = fn(9516).isLaunched;
 const MINUTE = DurationsDefault.Millis.MINUTE;
 const SECOND = DurationsDefault.Millis.SECOND;
 fn(7709);
@@ -176,15 +176,15 @@ class QuestProgressManager extends tmp4 {
                   executablePath,
                   executableFingerprint: prop,
                 };
-                timerId(11276).sendHeartbeat(obj);
-                const timerIdResult1 = timerId(11276);
+                timerId(11281).sendHeartbeat(obj);
+                const timerIdResult1 = timerId(11281);
               }
             } else {
               const _HermesInternal2 = HermesInternal;
               logger.log("~ initiateHeartbeat -> Sending heartbeat for questId: " + questId);
               obj = { questId, applicationId, executablePath, executableFingerprint: prop };
-              timerId(11276).sendHeartbeat(obj);
-              const timerIdResult2 = timerId(11276);
+              timerId(11281).sendHeartbeat(obj);
+              const timerIdResult2 = timerId(11281);
             }
             prop = obj.calculateHeartbeatDurationMs(questId);
             const _window = window;

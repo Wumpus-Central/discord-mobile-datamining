@@ -94,7 +94,7 @@ function MediaInfo(message) {
         if (memo) {
           const obj2 = { style: { flex: 1 }, children: null };
           const obj3 = { spacing: 20, speed: 0.2, children: tmp14 };
-          const items3 = [closure_15(tmp2(17226).Marquee, obj3)];
+          const items3 = [closure_15(tmp2(17229).Marquee, obj3)];
           const obj4 = {
             start: { x: 0, y: 0 },
             end: { x: 1, y: 0 },
@@ -184,7 +184,7 @@ function PiPControls(message) {
   obj = { style: null, children: null };
   const items1 = [tmp.pipControls, animatedStyle];
   obj.style = items1;
-  const items2 = [closure_15(message(8902).BackgroundBlurFill, { blurAmount: 0.05 }), ,];
+  const items2 = [closure_15(message(8907).BackgroundBlurFill, { blurAmount: 0.05 }), ,];
   const obj1 = {
     disabled: !visible,
     style: null,
@@ -218,7 +218,7 @@ get_ActivityIndicator = fn(17);
 ({ Easing: hasOwnProperty, StyleSheet, TouchableOpacity: metroRequire, View: closure_7 } = get_ActivityIndicator);
 const Constants = fn(1074);
 ({ AnalyticEvents: closure_12, MessageFlags: map1, Routes: closure_14 } = Constants);
-const SquarePIPReferenceDimensions = fn(17088).SquarePIPReferenceDimensions;
+const SquarePIPReferenceDimensions = fn(17091).SquarePIPReferenceDimensions;
 const jsxProd = fn(21);
 ({ jsx: closure_15, jsxs: closure_16 } = jsxProd);
 fn(4560);

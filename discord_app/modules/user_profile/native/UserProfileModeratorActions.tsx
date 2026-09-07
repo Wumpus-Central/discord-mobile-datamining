@@ -355,7 +355,7 @@ export default function UserProfileModeratorActions(user) {
           obj.onSelect = function onSelect(id) {
             return guildId(showUserProfile[34]).setChannel(id2.id, id.id, id.id);
           };
-          obj.openLazy(asyncRequireImpl(11330, dependencyMap.paths), "ChannelPicker", obj, "stack");
+          obj.openLazy(asyncRequireImpl(11335, dependencyMap.paths), "ChannelPicker", obj, "stack");
         };
         items7.push(
           <ModeratorActionRow
@@ -406,7 +406,7 @@ export default function UserProfileModeratorActions(user) {
               arr = arr.pop();
             },
           };
-          obj.pushLazy(asyncRequireImpl(11836, dependencyMap.paths), obj);
+          obj.pushLazy(asyncRequireImpl(11841, dependencyMap.paths), obj);
         };
         items7.push(<ModeratorActionRow key="manage" label={null} icon={null} onPress={null} />);
       }

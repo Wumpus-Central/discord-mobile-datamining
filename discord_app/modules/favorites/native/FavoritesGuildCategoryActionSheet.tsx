@@ -9,7 +9,7 @@ require = fn;
 function FavoritesGuildCategoryActionSheetConnected(category) {
   category = category.category;
   const onClose = category.onClose;
-  const tmp3 = onClose(10975)(category);
+  const tmp3 = onClose(10980)(category);
   dependencyMap = tmp3;
   const DeveloperMode = category(1935).DeveloperMode;
   const setting = DeveloperMode.useSetting();
@@ -21,7 +21,7 @@ function FavoritesGuildCategoryActionSheetConnected(category) {
   if (null != tmp3) {
     obj = { hasIcons: true, children: null };
     obj = { label: tmp3.label, icon: null, onPress: null };
-    const obj1 = { IconComponent: tmp4(10951).PlusLargeIcon };
+    const obj1 = { IconComponent: tmp4(10956).PlusLargeIcon };
     obj.icon = closure_5(tmp4(7200).ActionSheetRow.Icon, obj1);
     obj.onPress = function onPress() {
       closure_2.perform();
@@ -49,7 +49,7 @@ function FavoritesGuildCategoryActionSheetConnected(category) {
     const obj6 = { label: null, icon: null, onPress: null };
     const intl2 = tmp4(1114).intl;
     obj6.label = intl2.string(tmp4(1114).t["2visC6"]);
-    const obj7 = { IconComponent: tmp4(10629).IdIcon };
+    const obj7 = { IconComponent: tmp4(10634).IdIcon };
     obj6.icon = closure_5(tmp4(7200).ActionSheetRow.Icon, obj7);
     obj6.onPress = function onPress() {
       ClipboardUtils.copy(category.id);

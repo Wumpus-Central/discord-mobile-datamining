@@ -649,7 +649,7 @@ prototype["render"] = function render() {
   obj1.border = str3;
   obj1.onPress = onHeaderClick;
   const obj2 = { style: tmp.rowContainer, children: null };
-  const items2 = [closure_14(user(17547), { action: log.action }), , ,];
+  const items2 = [closure_14(user(17550), { action: log.action }), , ,];
   const obj4 = {
     accessibilityRole: "button",
     accessibilityLabel: null,
@@ -723,7 +723,7 @@ prototype["render"] = function render() {
           const items4 = [tmp.arrow, rotate90];
           obj8.style = items4;
           obj8.size = tmp10(1178).Icon.Sizes.CUSTOM;
-          obj8.source = tmp18(14602);
+          obj8.source = tmp18(14605);
           tmp17Result = closure_14(tmp10(1178).Icon, obj8);
         }
         items2[3] = tmp17Result;

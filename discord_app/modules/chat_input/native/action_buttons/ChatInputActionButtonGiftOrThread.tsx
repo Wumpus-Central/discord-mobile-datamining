@@ -18,7 +18,7 @@ function renderChatInputActionButtonGiftAndThread(key, styleButton, state, clean
     const intl = onPress(1114).intl;
     obj.accessibilityLabel = intl.string(onPress(1114).t["4WNcpu"]);
     obj.disabled = !canStartThreads;
-    obj.IconComponent = onPress(12237).ThreadPlusIcon;
+    obj.IconComponent = onPress(12241).ThreadPlusIcon;
     obj.onPress = function onPress(arg0) {
       return onPress(arg0, ChatInputActionType.THREAD);
     };
@@ -53,7 +53,7 @@ function getChatInputActionButtonGiftAndThreadKey(shouldShowThread) {
   return str;
 }
 const View = fn(17).View;
-const ChatInputActionType = fn(11962).ChatInputActionType;
+const ChatInputActionType = fn(11966).ChatInputActionType;
 const jsx = fn(21).jsx;
 const createStyles = fn(4560);
 let closure_7 = createStyles.createStyles((height, arg1) => {

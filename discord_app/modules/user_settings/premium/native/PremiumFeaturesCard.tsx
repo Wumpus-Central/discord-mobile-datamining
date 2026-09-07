@@ -457,7 +457,7 @@ export default function PremiumFeaturesCard(premiumType) {
   _modDef38(null != premiumBundleWithPredicate, "could not find a premium item");
   const tmp8Result4 = premiumType(7409);
   const items3 = [premiumBundleWithPredicate];
-  const discountedPriceString = premiumType(9379).useDiscountedPremiumProductInfo(
+  const discountedPriceString = premiumType(9384).useDiscountedPremiumProductInfo(
     premiumDiscountOffer,
     items3,
   ).discountedPriceString;
@@ -489,7 +489,7 @@ export default function PremiumFeaturesCard(premiumType) {
   obj2 = { premiumType, style, children: null };
   obj3 = { style: tmp3.card, children: null };
   const obj4 = { style: tmp3.logoContainer, children: null };
-  const tmp8Result5 = premiumType(9379);
+  const tmp8Result5 = premiumType(9384);
   if (flag3) {
     let tmp37Result = closure_19(PremiumGroupWordmarkDefault, { width: 185, height: 20, alwaysWhite: true });
   } else {
@@ -584,7 +584,7 @@ export default function PremiumFeaturesCard(premiumType) {
             color: nativeDefault.colors.CONTROL_OVERLAY_PRIMARY_TEXT_DEFAULT,
             size: "sm",
           };
-          const tmp37Result2 = closure_19(tmp8(8662).NitroWheelIcon, obj15);
+          const tmp37Result2 = closure_19(tmp8(8667).NitroWheelIcon, obj15);
         }
         obj14.icon = tmp37Result2;
         let str;

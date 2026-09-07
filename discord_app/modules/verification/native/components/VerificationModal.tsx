@@ -10,7 +10,7 @@ import UserStore from "../../../../stores/UserStore.tsx";
 require = fn;
 function PhoneThenEmailInterstitial(navigation) {
   navigation = navigation.navigation;
-  let obj = { Illustration: navigation(17510).VerifyPhone, title: null, body: null, children: null };
+  let obj = { Illustration: navigation(17513).VerifyPhone, title: null, body: null, children: null };
   const intl = navigation(1114).intl;
   obj.title = intl.string(navigation(1114).t.KLnLIP);
   const intl2 = navigation(1114).intl;
@@ -92,7 +92,7 @@ export default function VerificationModal() {
       let obj9 = stateFromStores(5624);
       obj3.headerTitle = obj9.getHeaderNoTitle();
       obj3.headerRight = function headerRight() {
-        let obj = { source: closure_1_1(9800), accessibilityLabel: null, onPress: null };
+        let obj = { source: closure_1_1(9805), accessibilityLabel: null, onPress: null };
         let intl = stateFromStores(1114).intl;
         obj.accessibilityLabel = intl.string(stateFromStores(1114).t.PdRCRg);
         obj.onPress = function onPress() {
@@ -111,7 +111,7 @@ export default function VerificationModal() {
         return closure_1_11(stateFromStores(7377).HeaderActionButton, obj);
       };
       obj3.render = function render() {
-        return closure_1_11(closure_1_1(17514), {});
+        return closure_1_11(closure_1_1(17517), {});
       };
       obj[constants.OVERVIEW] = obj3;
       let obj5 = { impressionName: stateFromStores(1250).ImpressionNames.USER_VERIFICATION_MODAL, impressionProperties: null, headerTitle: null, render: null };
@@ -175,9 +175,9 @@ export default function VerificationModal() {
             onVerified(arg0) {
               closure_0 = arg0;
               let obj = { hideUnverifiedBanner: true, onSubmit: null, onSuccess: null };
-              closure_2 = closure_1_3(/* F125925 */ function() { ... });
+              closure_2 = closure_1_3(/* F125957 */ function() { ... });
               obj.onSubmit = function onSubmit() { ... };
-              closure_1 = closure_1_3(/* F125927 */ function() { ... });
+              closure_1 = closure_1_3(/* F125959 */ function() { ... });
               obj.onSuccess = function onSuccess() { ... };
               closure_0.push(constants.VERIFY_PASSWORD, obj);
             }
@@ -250,7 +250,7 @@ export default function VerificationModal() {
       let obj9 = stateFromStores(5624);
       obj3.headerTitle = obj9.getHeaderNoTitle();
       obj3.headerRight = function headerRight() {
-        let obj = { source: closure_1_1(9800), accessibilityLabel: null, onPress: null };
+        let obj = { source: closure_1_1(9805), accessibilityLabel: null, onPress: null };
         let intl = stateFromStores(1114).intl;
         obj.accessibilityLabel = intl.string(stateFromStores(1114).t.PdRCRg);
         obj.onPress = function onPress() {
@@ -269,7 +269,7 @@ export default function VerificationModal() {
         return closure_1_11(stateFromStores(7377).HeaderActionButton, obj);
       };
       obj3.render = function render() {
-        return closure_1_11(closure_1_1(17514), {});
+        return closure_1_11(closure_1_1(17517), {});
       };
       obj[constants.OVERVIEW] = obj3;
       let obj5 = { impressionName: stateFromStores(1250).ImpressionNames.USER_VERIFICATION_MODAL, impressionProperties: null, headerTitle: null, render: null };
@@ -333,9 +333,9 @@ export default function VerificationModal() {
             onVerified(arg0) {
               closure_0 = arg0;
               let obj = { hideUnverifiedBanner: true, onSubmit: null, onSuccess: null };
-              closure_2 = closure_1_3(/* F125925 */ function() { ... });
+              closure_2 = closure_1_3(/* F125957 */ function() { ... });
               obj.onSubmit = function onSubmit() { ... };
-              closure_1 = closure_1_3(/* F125927 */ function() { ... });
+              closure_1 = closure_1_3(/* F125959 */ function() { ... });
               obj.onSuccess = function onSuccess() { ... };
               closure_0.push(constants.VERIFY_PASSWORD, obj);
             }

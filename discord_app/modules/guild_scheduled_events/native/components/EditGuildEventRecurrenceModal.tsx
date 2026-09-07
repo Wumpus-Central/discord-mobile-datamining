@@ -104,9 +104,9 @@ export default function EditGuildEventRecurrenceModal(guildEvent) {
   ({ left, right } = useSafeAreaInsetsDefault());
   const tmp3 = useEventExceptionDefault(recurrenceId, guildEvent.id);
   dependencyMap = tmp3;
-  let obj = guildEvent(9665);
+  let obj = guildEvent(9670);
   const baseScheduleForRecurrence = obj.getBaseScheduleForRecurrence(recurrenceId, guildEvent);
-  let obj1 = guildEvent(9665);
+  let obj1 = guildEvent(9670);
   const scheduleForRecurrenceWithException = obj1.getScheduleForRecurrenceWithException(
     baseScheduleForRecurrence,
     tmp3,

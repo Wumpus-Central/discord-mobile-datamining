@@ -7,7 +7,7 @@ import Timers from "../../../discord_common/js/packages/timers/Timers.tsx";
 import AudioActionCreatorsDefault from "../../actions/AudioActionCreators.tsx";
 import GameConsoleActionCreators from "GameConsoleActionCreators.tsx";
 import GameConsoleAlertUtilsDefault from "GameConsoleAlertUtils.tsx";
-import _modDef17369 from "getErrorMessageForCommandResult.tsx";
+import _modDef17372 from "getErrorMessageForCommandResult.tsx";
 import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
 import AuthenticationStore from "../../stores/AuthenticationStore.tsx";
 import MediaEngineStore from "../../stores/MediaEngineStore.tsx";
@@ -90,7 +90,7 @@ let closure_15 = async function _syncLocalState(arg0) {
     }
   })();
 };
-const GameConsoleConstants = fn(9233);
+const GameConsoleConstants = fn(9238);
 ({ GAME_CONSOLE_SESSIONS: c10, USER_ACTION_REQUIRED_ERROR_CODES: closure_11 } = GameConsoleConstants);
 const MediaEngineContextTypes = fn(4585).MediaEngineContextTypes;
 let closure_13 = new LoggerDefault("GameConsoleManager");
@@ -226,7 +226,7 @@ let prototype = function GameConsoleManager() {
   applyArgumentsResult.handleWaitForRemoteSession = function handleWaitForRemoteSession() {
     const awaitRemoteTimeout = applyArgumentsResult.awaitRemoteTimeout;
     awaitRemoteTimeout.start(60000, () => {
-      let obj = closure_1_0(9448);
+      let obj = closure_1_0(9453);
       obj.disconnectRemote();
       obj = { title: null, body: null };
       const intl = closure_1_0(1114).intl;
@@ -260,7 +260,7 @@ let prototype = function GameConsoleManager() {
             obj.name = intl2.string(util.t["UQMV/E"]);
             device = obj;
           }
-          const tmp8Result = _modDef17369(device, result, error);
+          const tmp8Result = _modDef17372(device, result, error);
           if (null != tmp8Result) {
             obj = { title: null, body: null, errorCodeMessage: null, reconnectPlatformType: null };
             ({ title: obj3.title, body: obj3.body, errorCodeMessage: obj3.errorCodeMessage } = tmp8Result);

@@ -303,7 +303,7 @@ export default function FileUploadActionComponent(maxValues) {
       extensions: allowedExtensions,
       uploadLimit: InteractionModal,
       onDismissKeyboard() {
-        return InteractionModal(10636).hideMediaKeyboardActionSheet();
+        return InteractionModal(10641).hideMediaKeyboardActionSheet();
       },
       onRestoreKeyboard: effectiveKestrelLimit,
       onSelectFiles(arg0) {
@@ -356,8 +356,8 @@ export default function FileUploadActionComponent(maxValues) {
           obj.handleViewAllDialog(obj);
         },
         onManageLimited() {
-          InteractionModal(10635);
-          obj = { onDismissKeyboard: InteractionModal(10636).hideMediaKeyboardActionSheet, onRestoreKeyboard };
+          InteractionModal(10640);
+          obj = { onDismissKeyboard: InteractionModal(10641).hideMediaKeyboardActionSheet, onRestoreKeyboard };
           const result = obj.handleLimitedPickerDialog(obj);
         },
         onClose: tmp4(customId[29]).hideMediaKeyboardActionSheet,

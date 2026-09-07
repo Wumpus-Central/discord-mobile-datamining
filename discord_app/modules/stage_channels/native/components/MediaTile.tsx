@@ -20,7 +20,7 @@ export default noop.memo((channel) => {
   const participant = channel.participant;
   const size = channel.size;
   const tmp = closure_7();
-  let obj = channel(10046);
+  let obj = channel(10051);
   const speakerTileStyles = obj.useSpeakerTileStyles();
   const isScreenLandscape = channel(5126).useIsScreenLandscape();
   const obj2 = channel(5126);
@@ -38,9 +38,9 @@ export default noop.memo((channel) => {
     if (stateFromStores.type !== ParticipantTypes.ACTIVITY) {
       obj = { style: null, children: null };
       const items2 = [tmp.container, ,];
-      let tmp2Result = tmp2(10046);
+      let tmp2Result = tmp2(10051);
       items2[1] = tmp2Result.getSizeStyle(size, speakerTileStyles);
-      tmp2Result = tmp2(10046);
+      tmp2Result = tmp2(10051);
       items2[2] = tmp2Result.getTileWidthStyle(size, participant(1477)().width, isScreenLandscape);
       obj.style = items2;
       obj = {
@@ -54,7 +54,7 @@ export default noop.memo((channel) => {
         shrinkStreamEmptyState: false,
         contentStyle: tmp.media,
       };
-      obj.children = jsx(tmp5(10057), {
+      obj.children = jsx(tmp5(10062), {
         hasBottomSafeArea: false,
         hasLeftSafeArea: false,
         hasRightSafeArea: false,
@@ -78,7 +78,7 @@ export default noop.memo((channel) => {
           contentStyle={tmp.media}
         />
       );
-      const tmp5Result = tmp5(10057);
+      const tmp5Result = tmp5(10062);
     }
   }
   return tmp8;

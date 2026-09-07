@@ -40,8 +40,8 @@ export const receiveLocalNotification = function receiveLocalNotification(getDat
         const result = GuildActionCreatorsDefault.transitionToGuildSync(data.guildId);
         const tmpResult = GuildActionCreatorsDefault;
       } else if (constants.CALL_RING === type) {
-        data(1896)(9536, dependencyMap.paths).then((result) => result.default(channelId.channelId));
-        const promise2 = data(1896)(9536, dependencyMap.paths);
+        data(1896)(9541, dependencyMap.paths).then((result) => result.default(channelId.channelId));
+        const promise2 = data(1896)(9541, dependencyMap.paths);
       } else if (constants.MESSAGE_SEND_FAILED === type) {
         data(1896)(4571, dependencyMap.paths).then((transitionToMessage) => {
           ({ channelId, messageId } = closure_1_0);

@@ -6,7 +6,7 @@ import useResourceChannelsDefault from "../useResourceChannels.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
-let closure_3 = fn(16558).ONBOARDING_HOME_RESOURCES_SHEET_KEY;
+let closure_3 = fn(16561).ONBOARDING_HOME_RESOURCES_SHEET_KEY;
 const jsx = fn(21).jsx;
 let size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_onboarding_home/native/OnboardingHomeResourcesSheet.tsx");

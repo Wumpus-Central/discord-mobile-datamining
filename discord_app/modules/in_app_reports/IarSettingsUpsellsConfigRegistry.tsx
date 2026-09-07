@@ -7,11 +7,11 @@ import noop from "../../../_runtime/metro/00019__.js";
 
 require = fn;
 const SettingsUpsellsConfigRegistry = {};
-SettingsUpsellsConfigRegistry[fn(8630).SettingsUpsells.SAFETY_DM_SPAM_FILTER] =
+SettingsUpsellsConfigRegistry[fn(8635).SettingsUpsells.SAFETY_DM_SPAM_FILTER] =
   IarSettingsUpsellsConfigDmSpamFilterDefault;
-SettingsUpsellsConfigRegistry[fn(8630).SettingsUpsells.SAFETY_SC_FILTERS_SEXUAL_MEDIA] =
+SettingsUpsellsConfigRegistry[fn(8635).SettingsUpsells.SAFETY_SC_FILTERS_SEXUAL_MEDIA] =
   IarSettingsUpsellsConfigScFiltersSexualMediaDefault;
-SettingsUpsellsConfigRegistry[fn(8630).SettingsUpsells.SAFETY_SC_FILTERS_GRAPHIC_MEDIA] =
+SettingsUpsellsConfigRegistry[fn(8635).SettingsUpsells.SAFETY_SC_FILTERS_GRAPHIC_MEDIA] =
   IarSettingsUpsellsConfigScFiltersGraphicMediaDefault;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/in_app_reports/IarSettingsUpsellsConfigRegistry.tsx");

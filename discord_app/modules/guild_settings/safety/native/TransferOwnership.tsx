@@ -11,7 +11,7 @@ import UserStore from "../../../../stores/UserStore.tsx";
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: metroRequire, Image: closure_7, ScrollView: closure_8 } = get_ActivityIndicator);
-const TransferOwnershipConstants = fn(11846);
+const TransferOwnershipConstants = fn(11851);
 ({ TransferOwnershipModalScenes: c10, TransferOwnershipVerificationTypes: closure_11 } = TransferOwnershipConstants);
 const NOOP = fn(1074).NOOP;
 const jsxProd = fn(21);
@@ -97,7 +97,7 @@ export default function TransferOwnership(guild) {
             closure_0 = tmp2;
             if (!mfaEnabled.mfaEnabled) {
               if (null != mfaEnabled.email) {
-                let obj1 = v1(9063);
+                let obj1 = v1(9068);
                 v1 = 1;
                 dependencyMap = 1;
                 obj1 = { value: null, done: false };
@@ -109,18 +109,18 @@ export default function TransferOwnership(guild) {
             if (mfaEnabled.mfaEnabled) {
               MFA = constants2.MFA;
             }
-            const obj4 = v1(9063);
-            v1(9063)
+            const obj4 = v1(9068);
+            v1(9068)
               .transferOwnership(user.id, id.id, MFA)
               .then(() => {
-                v1(11844).close();
-                const obj = v1(11844);
-                v1(9063).close();
-                const obj2 = v1(9063);
+                v1(11849).close();
+                const obj = v1(11849);
+                v1(9068).close();
+                const obj2 = v1(9068);
                 const result = closure_1_0(4258).showTransferOwnershipSuccess();
               }, NOOP);
             dependencyMap = 3;
-            const transferOwnershipResult = v1(9063).transferOwnership(user.id, id.id, MFA);
+            const transferOwnershipResult = v1(9068).transferOwnership(user.id, id.id, MFA);
           }
         } else if (arg0 === 1) {
           dependencyMap = 3;
@@ -189,7 +189,7 @@ export default function TransferOwnership(guild) {
   obj1 = { paddingTop: toUser(576).space.PX_16, paddingHorizontal: token };
   obj.style = obj1;
   obj2 = { style: tmp5.header, children: null };
-  obj3 = { source: toUser(11848), style: tmp5.arrow };
+  obj3 = { source: toUser(11853), style: tmp5.arrow };
   const items1 = [closure_13(c7, obj3), , ,];
   let obj4 = { style: tmp5.avatarsWrapper, children: null };
   const tmp7 = _slicedToArray(noop.useState(false), 2);

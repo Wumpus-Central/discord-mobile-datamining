@@ -23,8 +23,8 @@ const items = [
     },
   },
   {
-    model: "claude-fable-5-1",
-    thinking: "high",
+    model: "gpt-6-astra",
+    thinking: "medium",
     summary() {
       const intl = util.intl;
       return intl.string(_modDef3547.Ly6zYL);

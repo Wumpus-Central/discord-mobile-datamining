@@ -7,7 +7,7 @@ import BottomSheetModal from "../../../../../../_runtime/06627_BottomSheetModal.
 import showUserProfileActionSheetDefault from "../../../../user_profile/native/showUserProfileActionSheet.tsx";
 import StageSparkleDefault from "../../../../stage_channels/native/components/StageSparkle.tsx";
 import Form from "../../../../../design/void/Form/native/index.tsx";
-import _modDef9802 from "../../../../../../_runtime/metro/09802__.js";
+import _modDef9807 from "../../../../../../_runtime/metro/09807__.js";
 import EventDetailTypes from "EventDetailTypes.tsx";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 import PresenceStore from "../../../../../stores/PresenceStore.tsx";
@@ -20,7 +20,7 @@ function EmptyDisplay(arg0) {
   let obj = { style: null, children: null };
   const items = [closure_9().emptyDisplayContainer, style];
   obj.style = items;
-  obj = { icon: _modDef9802 };
+  obj = { icon: _modDef9807 };
   const items1 = [React5(StageSparkleDefault, obj), children];
   obj.children = items1;
   return React6(View, obj);
@@ -55,7 +55,7 @@ function RemainingUsersRow(remainingUsersGroup) {
   const tmp = closure_9();
   let obj = { DEPRECATED_style: tmp.userListRow, leading: null, label: null };
   obj = { style: tmp.remainingUsersIconContainer, children: null };
-  obj = { source: _modDef9802, style: tmp.remainingUsersIcon };
+  obj = { source: _modDef9807, style: tmp.remainingUsersIcon };
   obj.children = React5(FastImageDefault, obj);
   obj.leading = React5(View, obj);
   const intl = util.intl;
@@ -305,7 +305,7 @@ const memoResult = noop.memo((eventUser) => {
   obj1 = { user: stateFromStores, nick: null, usernameStyle: null, nicknameStyle: null };
   const member = eventUser.member;
   let nick;
-  let tmp2Result = tmp2(9803);
+  let tmp2Result = tmp2(9808);
   if (member != null) {
     nick = member.nick;
   }
@@ -319,7 +319,7 @@ const memoResult = noop.memo((eventUser) => {
   obj.onPress = function onPress() {
     showUserProfileActionSheetDefault({ userId: eventUser.user_id, sourceAnalyticsLocations: analyticsLocations });
   };
-  return closure_7(eventUser(8593).FormRow, obj, eventUser.user_id);
+  return closure_7(eventUser(8598).FormRow, obj, eventUser.user_id);
 });
 EventDetailRsvpSheet.displayName = "EventDetailRsvpSheet";
 size = fn(2);

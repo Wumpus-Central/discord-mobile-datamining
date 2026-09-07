@@ -259,7 +259,7 @@ function SocialLayerStorefrontProductDetailsModal(skuId) {
   const tmp = closure_19();
   dependencyMap = tmp;
   const rect = analyticsLocations(1611)();
-  let obj = analyticsLocations(9366);
+  let obj = analyticsLocations(9371);
   const storeFront = obj.useNativeIAPPayments().storeFront;
   let obj1 = skuId(504);
   let items = [trackPDPClick];
@@ -325,8 +325,10 @@ function SocialLayerStorefrontProductDetailsModal(skuId) {
       sku_id: skuId,
       guild_id: true,
       application_id: true,
-      cta_type: "unmarkNodeAsRemovable",
-      location_stack: null,
+      cta_type:
+        "function changeEventCalculator_Pnpm_rotationGestureTs1(current,previous){let changePayload;if(previous===undefined){changePayload={rotationChange:current.rotation};}else{changePayload={rotationChange:current.rotation-previous.rotation};}return{...current,...changePayload};}",
+      location_stack:
+        "function changeEventCalculator_Pnpm_forceTouchGestureTs1(current,previous){let changePayload;if(previous===undefined){changePayload={forceChange:current.force};}else{changePayload={forceChange:current.force-previous.force};}return{...current,...changePayload};}",
     };
     let applicationId;
     if (stateFromStores != null) {
@@ -500,7 +502,7 @@ function SocialLayerStorefrontProductDetailsModal(skuId) {
       const tmp4Result = redirectToSlayerStorefrontWebDefault(obj);
     }
   }, items9);
-  const OTPACOMOrderExperiment = tmp4(9365).OTPACOMOrderExperiment;
+  const OTPACOMOrderExperiment = tmp4(9370).OTPACOMOrderExperiment;
   let enabled = OTPACOMOrderExperiment.useConfig({ location: "SocialLayerStorefrontProductDetailsModal" }).enabled;
   tmp4Result = tmp4(1115);
   if (tmp4Result.isIOS()) {
@@ -523,14 +525,14 @@ function SocialLayerStorefrontProductDetailsModal(skuId) {
       checkoutAnalyticsFields: null,
       children: null,
     };
-    tmp2Result = tmp2(10804);
+    tmp2Result = tmp2(10809);
     if (enabled) {
       enabled = GOOGLE === tmp39.APPLE_ADVANCED_COMMERCE;
     }
     obj.orderRequired = enabled;
     const items10 = [skuId];
     obj.skuIds = items10;
-    obj.onOrderRetryCancellation = tmp4(10797).closeSocialLayerStorefrontProductDetailsModal;
+    obj.onOrderRetryCancellation = tmp4(10802).closeSocialLayerStorefrontProductDetailsModal;
     obj = {
       is_gift: false,
       location_stack: memo1,
@@ -564,7 +566,7 @@ function SocialLayerStorefrontProductDetailsModal(skuId) {
       onPurchaseComplete: callback2,
       onPurchaseError: callback1,
     };
-    obj.children = closure_14(tmp4(10813).HeadlessSlayerStorefrontPurchaseRunner, obj1);
+    obj.children = closure_14(tmp4(10818).HeadlessSlayerStorefrontPurchaseRunner, obj1);
     tmp41Result = closure_14(tmp2Result, obj, skuId);
   }
   const items11 = [skuId, memo1, trackPDPClick];
@@ -589,7 +591,7 @@ function SocialLayerStorefrontProductDetailsModal(skuId) {
     const items13 = [tmp41Result, , ,];
     const obj4 = { style: tmp.header, children: null };
     obj5 = {
-      onPress: tmp4(10797).closeSocialLayerStorefrontProductDetailsModal,
+      onPress: tmp4(10802).closeSocialLayerStorefrontProductDetailsModal,
       backImage() {
         return closure_2_14(XSmallIcon.XSmallIcon, { size: "md", style: closeButtonIcon.closeButtonIcon });
       },
@@ -630,13 +632,13 @@ function SocialLayerStorefrontProductDetailsModal(skuId) {
       tmp47Result = null != memo;
       if (tmp47Result) {
         const obj11 = { sku: stateFromStores };
-        tmp47Result = closure_14(tmp2(8825), obj11);
+        tmp47Result = closure_14(tmp2(8830), obj11);
       }
     }
     const items17 = [tmp47Result, ,];
     let exclusive2 = stateFromStores.exclusive;
     if (exclusive2) {
-      const obj12 = { style: tmp.exclusiveBadgeContainer, children: closure_14(tmp4(10817).ExclusiveBadge, {}) };
+      const obj12 = { style: tmp.exclusiveBadgeContainer, children: closure_14(tmp4(10822).ExclusiveBadge, {}) };
       exclusive2 = closure_14(tmp70, obj12);
     }
     items17[1] = exclusive2;
@@ -709,7 +711,7 @@ function SocialLayerStorefrontProductDetailsModal(skuId) {
     if (result) {
       const obj26 = { style: tmp.legalCopy, children: null };
       const obj27 = { shouldAppendDisclaimer: false === tmp2Result(tmp10).hasAlreadyLinked };
-      const mobileFinePrintMessageForApplication = tmp4(10820).getMobileFinePrintMessageForApplication(
+      const mobileFinePrintMessageForApplication = tmp4(10825).getMobileFinePrintMessageForApplication(
         getOrFetchApplication,
         stringResult,
         obj27,
@@ -722,7 +724,7 @@ function SocialLayerStorefrontProductDetailsModal(skuId) {
         ),
       );
       result = closure_14(tmp70, obj26);
-      const tmp4Result4 = tmp4(10820);
+      const tmp4Result4 = tmp4(10825);
     }
     items20[3] = result;
     obj18.children = items20;
@@ -734,7 +736,7 @@ function SocialLayerStorefrontProductDetailsModal(skuId) {
 }
 get_ActivityIndicator = fn(17);
 ({ ScrollView: hasOwnProperty, StyleSheet: metroRequire, View: closure_7 } = get_ActivityIndicator);
-const SlayerShopPDPCTAType = fn(10800).SlayerShopPDPCTAType;
+const SlayerShopPDPCTAType = fn(10805).SlayerShopPDPCTAType;
 const Constants = fn(1074);
 ({ AnalyticEvents: closure_11, PaymentGateways: closure_12, PriceSetAssignmentPurchaseTypes: map1 } = Constants);
 const jsxProd = fn(21);
@@ -834,14 +836,14 @@ obj.legalCopy = { display: "flex", flexDirection: "column", gap: nativeDefault.s
 let obj12 = { display: "flex", flexDirection: "column", gap: nativeDefault.space.PX_4 };
 obj.hero = {
   marginHorizontal: nativeDefault.space.PX_16,
-  height: fn(10801).MOBILE_HERO_HEIGHT_PX,
+  height: fn(10806).MOBILE_HERO_HEIGHT_PX,
   borderRadius: nativeDefault.radii.md,
   overflow: "hidden",
   backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH,
 };
 let obj13 = {
   marginHorizontal: nativeDefault.space.PX_16,
-  height: fn(10801).MOBILE_HERO_HEIGHT_PX,
+  height: fn(10806).MOBILE_HERO_HEIGHT_PX,
   borderRadius: nativeDefault.radii.md,
   overflow: "hidden",
   backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH,

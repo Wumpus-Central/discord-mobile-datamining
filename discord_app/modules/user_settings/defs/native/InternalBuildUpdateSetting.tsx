@@ -9,7 +9,7 @@ import MobileNativeUpdateStore from "../../../mobile_native_updater/MobileNative
 
 require = fn;
 const jsx = fn(21).jsx;
-fn(11468);
+fn(11473);
 let SettingBuilders = {
   useTitle() {
     return "Internal Build Update";

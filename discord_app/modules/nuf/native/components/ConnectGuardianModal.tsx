@@ -64,7 +64,7 @@ const result = size.fileFinishedImporting("modules/nuf/native/components/Connect
 export default function ConnectGuardianModal(route) {
   const onComplete = route.route.params.onComplete;
   const tmp = closure_9();
-  let obj = onComplete(17455);
+  let obj = onComplete(17458);
   const connectGuardianGate = obj.useConnectGuardianGate();
   dependencyMap = noop.useRef(false);
   const items = [connectGuardianGate.state, onComplete];
@@ -108,7 +108,7 @@ export default function ConnectGuardianModal(route) {
     obj5.children = intl3.string(tmp2(2396).Mi60fm);
     const items4 = [closure_7(tmp4(4556).Text, obj5)];
     ({ linkCode: obj9.linkCode, expiresAt: obj9.expiresAt, refresh: obj9.onRefresh } = connectGuardianGate);
-    items4[1] = closure_7(tmp4(14881).ConnectGuardianCard, {
+    items4[1] = closure_7(tmp4(14884).ConnectGuardianCard, {
       shareActions: "compact",
       linkCode: null,
       expiresAt: null,

@@ -204,7 +204,7 @@ export default function ParentalConsentConnectionScreen() {
     const intl2 = util.intl;
     obj = { link };
     obj.body = intl2.format(_modDef2690["6GaRTu"], obj);
-    obj.openLazy(asyncRequireImpl(14879, dependencyMap.paths), closure_9, obj);
+    obj.openLazy(asyncRequireImpl(14882, dependencyMap.paths), closure_9, obj);
   }, items7);
   obj = { title: null, subtitle: null, subtitleColor: "text-muted", submitting: null, footer: null, children: null };
   tmp5(tmp3[27]);

@@ -40,7 +40,7 @@ let closure_12 = async function _postMessageToWebView(arg0) {
   }
   return value;
 };
-const isLaunched = fn(9511).isLaunched;
+const isLaunched = fn(9516).isLaunched;
 const ComponentActions = fn(1074).ComponentActions;
 let closure_7 = fn(1920).DISALLOWED_NAVIGATION_ERROR_CLOSE_ACTIVITY;
 const TransportTypes = fn(4465).TransportTypes;

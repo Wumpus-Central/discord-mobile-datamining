@@ -140,7 +140,7 @@ obj.container = obj;
 const createStyles = {
   flexDirection: "row",
   justifyContent: "space-between",
-  gap: fn(10369).GIF_PICKER_GUTTER_SPACING,
+  gap: fn(10374).GIF_PICKER_GUTTER_SPACING,
 };
 obj.headerContainer = createStyles;
 obj.header = {

@@ -9,7 +9,7 @@ import EmojiStore from "../../../../emojis/EmojiStore.tsx";
 require = fn;
 const LoadState = fn(5459).LoadState;
 const EmojiCategoryTypes = fn(5463).EmojiCategoryTypes;
-let closure_7 = fn(10290).EmojiPickerRenderingDataType;
+let closure_7 = fn(10295).EmojiPickerRenderingDataType;
 const EmojiPickerItemType = {
   PLACEHOLDER: 0,
   [0]: "PLACEHOLDER",

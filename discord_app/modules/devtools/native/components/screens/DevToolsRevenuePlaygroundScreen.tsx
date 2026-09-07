@@ -672,7 +672,7 @@ function TrialOfferSheetExample() {
           userTrialOffer: tmp2,
           markAsDismissed() {},
         };
-        obj.openLazy(asyncRequireImpl(15687, dependencyMap.paths), "PremiumTrialOfferActionSheet", obj);
+        obj.openLazy(asyncRequireImpl(15690, dependencyMap.paths), "PremiumTrialOfferActionSheet", obj);
       }
     },
   };
@@ -689,7 +689,7 @@ function TrialOfferSheetExample() {
           userTrialOffer: tmp2,
           markAsDismissed() {},
         };
-        obj.openLazy(asyncRequireImpl(15687, dependencyMap.paths), "PremiumTrialOfferActionSheet", obj);
+        obj.openLazy(asyncRequireImpl(15690, dependencyMap.paths), "PremiumTrialOfferActionSheet", obj);
       }
     },
   });

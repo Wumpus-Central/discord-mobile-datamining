@@ -98,7 +98,7 @@ export default function PremiumGuildSubscribeModal(arg0) {
         obj5.headerTitle = intl.string(util.t.VJEVbu);
         obj5.render = function render(arg0) {
           const merged = Object.assign(arg0);
-          return closure_1_8(guildBoostSlots(13606), {});
+          return closure_1_8(guildBoostSlots(13610), {});
         };
         obj2[constants.CONFIRMATION] = obj5;
         obj1.screens = obj2;

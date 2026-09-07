@@ -84,17 +84,17 @@ function QuestBottomSheet(initialStep) {
 function useEnrolledQuestContentProps(quest) {
   quest = quest.quest;
   ({ location: _location, sourceQuestContent: importDefault } = quest);
-  let obj = quest(11774);
+  let obj = quest(11779);
   dependencyMap = obj.useTrackQuestContentClickedWithImpression();
-  let obj1 = quest(11486);
+  let obj1 = quest(11491);
   _slicedToArray = obj1.useQuestImpressionId();
-  let obj2 = quest(11483);
+  let obj2 = quest(11488);
   const questTaskDetails = obj2.useQuestTaskDetails(quest);
-  const isQuestProgressing = quest(11483).useIsQuestProgressing(quest);
-  const obj4 = quest(11483);
-  let tmp6 = _slicedToArray(quest(11483).useTaskPlatformScreen(quest, questTaskDetails), 3);
+  const isQuestProgressing = quest(11488).useIsQuestProgressing(quest);
+  const obj4 = quest(11488);
+  let tmp6 = _slicedToArray(quest(11488).useTaskPlatformScreen(quest, questTaskDetails), 3);
   noop = tmp6[2];
-  const obj5 = quest(11483);
+  const obj5 = quest(11488);
   closure_129_0 = quest;
   closure_129_1 = undefined;
   closure_129_2 = undefined;
@@ -117,11 +117,11 @@ function useEnrolledQuestContentProps(quest) {
   };
   const userStatus = quest.userStatus;
   let completedAt;
-  const hasWatchVideoOnMobileTasks = quest(15091).useHasWatchVideoOnMobileTasks(quest.config);
+  const hasWatchVideoOnMobileTasks = quest(15094).useHasWatchVideoOnMobileTasks(quest.config);
   if (userStatus != null) {
     completedAt = userStatus.completedAt;
   }
-  let tmpResult = tmp(11483);
+  let tmpResult = tmp(11488);
   const xboxAndPlaystationAccounts = tmpResult.useConnectedAccounts().xboxAndPlaystationAccounts;
   closure_129_1 = xboxAndPlaystationAccounts;
   let items = [quest, xboxAndPlaystationAccounts];
@@ -133,12 +133,12 @@ function useEnrolledQuestContentProps(quest) {
       }),
     items,
   );
-  tmpResult = tmp(11483);
+  tmpResult = tmp(11488);
   const questTaskDetails1 = tmpResult.useQuestTaskDetails(quest);
-  const obj6 = quest(15091);
-  let isQuestProgressing1 = quest(11483).useIsQuestProgressing(quest);
-  const tmpResult1 = quest(11483);
-  let tmp5Result = tmp5(quest(11483).useTaskPlatformScreen(quest, questTaskDetails1), 3);
+  const obj6 = quest(15094);
+  let isQuestProgressing1 = quest(11488).useIsQuestProgressing(quest);
+  const tmpResult1 = quest(11488);
+  let tmp5Result = tmp5(quest(11488).useTaskPlatformScreen(quest, questTaskDetails1), 3);
   const first = tmp5Result[0];
   closure_129_2 = first;
   closure_129_3 = tmp14;
@@ -161,7 +161,7 @@ function useEnrolledQuestContentProps(quest) {
     isQuestProgressing1 = questTaskDetails1.progressSeconds > 0;
   }
   closure_129_7 = isQuestProgressing1;
-  const tmpResult2 = quest(11483);
+  const tmpResult2 = quest(11488);
   if (!tmp21) {
     tmp20(true);
   }
@@ -216,10 +216,10 @@ function useEnrolledQuestContentProps(quest) {
   }, items3);
   closure_129_13 = memo3;
   tmp21 = 0 !== memo.length || null != completedAt || first !== quest(5447).TaskPlatformScreen.CONSOLE || first1;
-  const hasWatchVideoOnMobileTasks1 = quest(15091).useHasWatchVideoOnMobileTasks(quest.config);
+  const hasWatchVideoOnMobileTasks1 = quest(15094).useHasWatchVideoOnMobileTasks(quest.config);
   closure_129_14 = hasWatchVideoOnMobileTasks1;
-  const tmpResult3 = quest(15091);
-  const isMobileActivityQuest = quest(15091).useMobileActivityQuest(quest).isMobileActivityQuest;
+  const tmpResult3 = quest(15094);
+  const isMobileActivityQuest = quest(15094).useMobileActivityQuest(quest).isMobileActivityQuest;
   closure_129_15 = isMobileActivityQuest;
   const items4 = [tmp5Result[1], memo3, memo1, memo2, hasWatchVideoOnMobileTasks1, isMobileActivityQuest];
   const memo4 = obj8.useMemo(() => {
@@ -260,7 +260,7 @@ function useEnrolledQuestContentProps(quest) {
   }
   obj.onNext = onNext;
   items5[1] = obj;
-  const tmpResult4 = quest(15091);
+  const tmpResult4 = quest(15094);
   closure_130_0 = quest;
   [tmp32, tmp33] = _slicedToArray(items5, 2);
   const tmp5Result1 = _slicedToArray(items5, 2);
@@ -321,16 +321,16 @@ function useEnrolledQuestContentProps(quest) {
         DESELECT_PLATFORM = AnalyticsTypes.QuestContentCTA.DESELECT_PLATFORM;
         tmp4 = require;
       }
-      let tmp4Result = tmp4(11192);
+      let tmp4Result = tmp4(11197);
       if (
         tmp4Result.shouldMigrateToAdAnalyticsInterface(
-          tmp4(11192).AdAnalyticsInterfaceExperimentStep.STEP_2_CLICKED_INTERNAL,
+          tmp4(11197).AdAnalyticsInterfaceExperimentStep.STEP_2_CLICKED_INTERNAL,
           "quest_bottom_sheet",
         )
       ) {
-        tmp4Result = tmp4(11193);
+        tmp4Result = tmp4(11198);
         let obj = {
-          type: tmp4(11197).AdUserActionType.CLICK_INTERNAL,
+          type: tmp4(11202).AdUserActionType.CLICK_INTERNAL,
           adCreativeType: tmp4(5451).AdCreativeType.QUEST,
           adCreativeId: quest.id,
           questContentCTA: DESELECT_PLATFORM,

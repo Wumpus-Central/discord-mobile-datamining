@@ -77,7 +77,7 @@ export default function AppealIngestionCollectSignal(isDsaEligible) {
         },
       };
       ActionSheetActionCreatorsDefault.openLazy(
-        asyncRequireImpl(11902, dependencyMap.paths),
+        asyncRequireImpl(11907, dependencyMap.paths),
         "AppealIngestionFreeTextAppealReasonActionSheet",
         obj,
       );
@@ -86,14 +86,14 @@ export default function AppealIngestionCollectSignal(isDsaEligible) {
   }
   const tmp = closure_8();
   const formRow = tmp;
-  let obj = isDsaEligible(11880);
+  let obj = isDsaEligible(11885);
   dependencyMap = obj.useSafetyHubAppealSignal();
   const intl = isDsaEligible(1114).intl;
   const intl2 = isDsaEligible(1114).intl;
   const stringResult = intl.string(isDsaEligible(1114).t["C5q+pW"]);
   obj = { children: null };
   const items = [
-    closure_6(isDsaEligible(11886).AppealIngestionModalHeader, {
+    closure_6(isDsaEligible(11891).AppealIngestionModalHeader, {
       headerText: stringResult,
       subHeaderText: intl2.string(isDsaEligible(1114).t.VEcRhw),
     }),
@@ -102,7 +102,7 @@ export default function AppealIngestionCollectSignal(isDsaEligible) {
   const obj1 = { style: tmp.form, children: null };
   const stringResult1 = intl2.string(isDsaEligible(1114).t.VEcRhw);
   const items1 = [
-    closure_6(isDsaEligible(8593).FormSection, {
+    closure_6(isDsaEligible(8598).FormSection, {
       sectionBodyStyle: tmp.formSection,
       accessibilityRole: "radiogroup",
       children: closure_5.map((signal, index) =>
@@ -121,8 +121,8 @@ export default function AppealIngestionCollectSignal(isDsaEligible) {
   obj3.children = closure_6(isDsaEligible(4556).Text, obj4);
   items1[1] = closure_6(handleAppealSignalSelect, obj3);
   obj1.children = items1;
-  obj.children = closure_7(isDsaEligible(8593).Form, obj1);
+  obj.children = closure_7(isDsaEligible(8598).Form, obj1);
   items[1] = closure_6(handleAppealSignalSelect, obj);
   obj.children = items;
-  return closure_7(isDsaEligible(11886).AppealIngestionModalScreen, obj);
+  return closure_7(isDsaEligible(11891).AppealIngestionModalScreen, obj);
 }

@@ -4,7 +4,7 @@ import util from "../../../../intl/index.native.tsx";
 import UserStore from "../../../../stores/UserStore.tsx";
 
 require = fn;
-fn(11468);
+fn(11473);
 let SettingBuilders = {
   useTitle() {
     const intl = util.intl;

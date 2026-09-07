@@ -4,7 +4,7 @@ import util from "../../../../intl/index.native.tsx";
 import RelationshipStore from "../../../../stores/RelationshipStore.tsx";
 
 require = fn;
-fn(11468);
+fn(11473);
 let SettingBuilders = {
   IconComponent: fn(6968).EyeSlashIcon,
   useTitle() {

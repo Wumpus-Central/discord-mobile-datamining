@@ -7,7 +7,7 @@ import UserStore from "../../../../stores/UserStore.tsx";
 
 require = fn;
 const PlatformTypes = fn(1074).PlatformTypes;
-fn(11468);
+fn(11473);
 let SettingBuilders = {
   useTitle() {
     const intl = util.intl;

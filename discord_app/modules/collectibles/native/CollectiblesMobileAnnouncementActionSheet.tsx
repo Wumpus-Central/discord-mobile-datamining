@@ -7,8 +7,8 @@ import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import BottomSheetModal from "../../../../_runtime/06627_BottomSheetModal.js";
 import AnalyticsLocationDefault from "../../app_analytics/AnalyticsLocation.tsx";
 import CollectiblesActionCreators from "../CollectiblesActionCreators.tsx";
-import _modDef16945 from "../../../../discord_assets/assets/collectibles/frames/announcement_sheet_frame.png.js";
-import _modDef16947 from "../../../../discord_assets/assets/collectibles/frames/ea/announcement_key_1.png.js";
+import _modDef16948 from "../../../../discord_assets/assets/collectibles/frames/announcement_sheet_frame.png.js";
+import _modDef16950 from "../../../../discord_assets/assets/collectibles/frames/ea/announcement_key_1.png.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 const ReanimatedRexportDefault = ReanimatedRexport;
@@ -44,7 +44,7 @@ function CatEarsBackdrop() {
   items1[1] = rect;
   obj.style = items1;
   obj1 = {
-    source: { uri: _modDef16945 },
+    source: { uri: _modDef16948 },
     style: tmp.mascotImage,
     accessibilityElementsHidden: true,
     importantForAccessibility: "no-hide-descendants",
@@ -118,7 +118,7 @@ export default function CollectiblesMobileAnnouncementActionSheet(markAsDismisse
   importDefault = undefined;
   dependencyMap = undefined;
   const tmp = closure_11();
-  let obj = markAsDismissed(16946);
+  let obj = markAsDismissed(16949);
   const intl = markAsDismissed(1114).intl;
   const string = intl.string;
   const t = markAsDismissed(1114).t;
@@ -161,7 +161,7 @@ export default function CollectiblesMobileAnnouncementActionSheet(markAsDismisse
   obj = { onDismiss: callback1, backdropChildren: memo, children: null };
   obj = { style: tmp.container, children: null };
   const obj1 = {
-    source: { uri: _modDef16947 },
+    source: { uri: _modDef16950 },
     style: tmp.framePreviewImage,
     accessibilityElementsHidden: true,
     importantForAccessibility: "no-hide-descendants",
@@ -186,7 +186,7 @@ export default function CollectiblesMobileAnnouncementActionSheet(markAsDismisse
   const intl4 = tmp2(1114).intl;
   obj6.text = intl4.string(markAsDismissed(1114).t.MkVbBY);
   items4[1] = closure_9(FeatureRow, obj6);
-  const obj2 = { uri: _modDef16947 };
+  const obj2 = { uri: _modDef16950 };
   items4[2] = closure_9(FeatureRow, {
     icon: closure_9(markAsDismissed(5692).ShopIllocon, { size: 32 }),
     text: stringResult,

@@ -79,11 +79,11 @@ export default function DataAndPrivacySettings() {
   items1.push(obj11);
   const effect = noop.useEffect(() => {
     if (!fetchedConsents.fetchedConsents) {
-      const consents = stackNavigation(14855).fetchConsents();
-      const obj = stackNavigation(14855);
+      const consents = stackNavigation(14858).fetchConsents();
+      const obj = stackNavigation(14858);
     }
-    const harvestStatus = stackNavigation(14858).fetchHarvestStatus();
-    const obj2 = stackNavigation(14858);
+    const harvestStatus = stackNavigation(14861).fetchHarvestStatus();
+    const obj2 = stackNavigation(14861);
   }, []);
   const items8 = [stackNavigation, items1];
   obj12 = { children: null };
@@ -126,8 +126,8 @@ export default function DataAndPrivacySettings() {
     },
   };
   const obj16 = items1(2024);
-  obj13.screen = stackNavigation(14815).SettingsScreen.DATA_AND_PRIVACY;
-  const items9 = [closure_8(items1(14815), obj13), closure_8(items1(14689), { node: memo })];
+  obj13.screen = stackNavigation(14818).SettingsScreen.DATA_AND_PRIVACY;
+  const items9 = [closure_8(items1(14818), obj13), closure_8(items1(14692), { node: memo })];
   obj12.children = items9;
   return closure_10(closure_9, obj12);
 }

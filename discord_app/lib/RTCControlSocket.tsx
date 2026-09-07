@@ -214,7 +214,7 @@ prototype["createWebSocket"] = function createWebSocket() {
     );
   }, closure_13);
   obj = { location: "RTCControlSocket", supportsSfuUpdate: MediaEngineStore.supports(constants.UDP_ENDPOINT_UPDATE) };
-  const webSocket = new WebSocket("" + self.url + "?v=" + self(14079).getVoiceGatewayProtocolVersion(obj));
+  const webSocket = new WebSocket("" + self.url + "?v=" + self(14082).getVoiceGatewayProtocolVersion(obj));
   self.webSocket = webSocket;
   webSocket.binaryType = "arraybuffer";
   webSocket.onopen = () => {

@@ -306,7 +306,7 @@ export default function getOnClick(url) {
         if (_undefined.type !== CodedLink.CodedLinkType.APP_DIRECTORY_STOREFRONT) {
           let result = storefrontMessageEmbedCodedLink.parseStorefrontSkuCodedLink(code);
           if (result == null) {
-            result = { applicationId: "hash", skuId: "call" };
+            result = { applicationId: "push", skuId: "channel" };
           }
           const tmp3Result = storefrontMessageEmbedCodedLink;
         }
@@ -324,7 +324,7 @@ export default function getOnClick(url) {
         openURLDefault(closure_0);
         return true;
       }
-      result = { applicationId: code, skuId: "a" };
+      result = { applicationId: code, skuId: "Array" };
     };
   }
   if (null != findCodedLinkResult) {
@@ -527,7 +527,7 @@ export default function getOnClick(url) {
         }
         [closure_0, closure_1] = _slicedToArray(_undefined.code.split("-"), 2);
         const tmp2 = _slicedToArray(_undefined.code.split("-"), 2);
-        asyncRequireImpl(12944, dependencyMap.paths).then((openGuildProductLink) => {
+        asyncRequireImpl(12948, dependencyMap.paths).then((openGuildProductLink) => {
           openGuildProductLink.openGuildProductLink(url, analyticsLocations);
         });
         return true;
@@ -566,7 +566,7 @@ export default function getOnClick(url) {
   }
   if (null != findCodedLinkResult) {
     if (findCodedLinkResult.type === tmp2(4548).CodedLinkType.QUESTS_EMBED) {
-      let tmp2Result = tmp2(11484);
+      let tmp2Result = tmp2(11489);
       if (tmp2Result.getIsEligibleForQuests()) {
         return (preventDefault) => {
           if (preventDefault != null) {

@@ -8,7 +8,7 @@ import triggerIOSHapticDefault from "triggerIOSHaptic.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const MorphablePanelConstants = fn(12274);
+const MorphablePanelConstants = fn(12278);
 ({ IS_IOS: closure_4, MIN_PAN_GESTURE_MOVE: hasOwnProperty, MorphablePanelModes } = MorphablePanelConstants);
 ({
   PANEL_TAP_GESTURE_MAX_DISTANCE: closure_7,

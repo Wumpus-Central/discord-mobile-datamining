@@ -6,8 +6,8 @@ import _mod1155 from "../../../../_runtime/metro/01155__.js";
 import _modDef4153 from "../../../../_runtime/metro/04153__.js";
 import TableRow from "../../../design/components/TableRow/native/TableRow.native.tsx";
 import TableRowGroup from "../../../design/components/TableRow/native/TableRowGroup.native.tsx";
-import _modDef15623 from "../messages/Test.messages.js";
-import _modDef15655 from "../messages/SecondTest.messages.js";
+import _modDef15626 from "../messages/Test.messages.js";
+import _modDef15658 from "../messages/SecondTest.messages.js";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
 import noop from "../../../../_runtime/metro/00019__.js";
@@ -165,29 +165,29 @@ export default function IntlTestingSettingsPage() {
   const items = [closure_10(LocaleInfo, {}), closure_10(TestLocaleSelector, {}), , , , , ,];
   obj = { variant: "text-md/normal", children: null };
   const intl = require("util").intl;
-  obj.children = intl.format(_modDef15623.HMvEC5, {});
+  obj.children = intl.format(_modDef15626.HMvEC5, {});
   items[2] = closure_10(require("Text/Text").Text, obj);
   const obj1 = { variant: "text-md/normal", children: null };
   const intl2 = require("util").intl;
-  obj1.children = intl2.format(_modDef15655.swfLzV, {});
+  obj1.children = intl2.format(_modDef15658.swfLzV, {});
   items[3] = closure_10(require("Text/Text").Text, obj1);
   const obj2 = { variant: "text-md/normal", children: null };
   const intl3 = require("util").intl;
-  obj2.children = intl3.format(_modDef15623.rmps8y, {});
+  obj2.children = intl3.format(_modDef15626.rmps8y, {});
   items[4] = closure_10(require("Text/Text").Text, obj2);
   const obj3 = { variant: "text-md/normal", children: null };
   const intl4 = require("util").intl;
-  obj3.children = intl4.format(_modDef15623.uczI4g, {
+  obj3.children = intl4.format(_modDef15626.uczI4g, {
     linkTarget() {},
   });
   items[5] = closure_10(require("Text/Text").Text, obj3);
   const obj5 = { variant: "text-md/normal", children: null };
   const intl5 = require("util").intl;
-  obj5.children = intl5.format(_modDef15623.rdfRyh, {});
+  obj5.children = intl5.format(_modDef15626.rdfRyh, {});
   items[6] = closure_10(require("Text/Text").Text, obj5);
   const obj6 = { variant: "text-md/normal", children: null };
   const intl6 = require("util").intl;
-  obj6.children = intl6.format(_modDef15623.XOdbAy, {
+  obj6.children = intl6.format(_modDef15626.XOdbAy, {
     username: "some user",
     usernameHook(children) {
       let obj = {

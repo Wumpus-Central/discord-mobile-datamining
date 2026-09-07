@@ -53,7 +53,7 @@ export default function VideoEmptyState(style) {
     let tmp16 = !removeSplashImage;
     if (!removeSplashImage) {
       obj = { style: tmp2.placeholderImage };
-      tmp16 = closure_5(stream(9598).StreamEnded, obj);
+      tmp16 = closure_5(stream(9603).StreamEnded, obj);
     }
     obj = { children: null };
     const items = [tmp16];
@@ -67,7 +67,7 @@ export default function VideoEmptyState(style) {
     let tmp7 = !removeSplashImage;
     if (!removeSplashImage) {
       obj = { style: tmp2.placeholderImage };
-      tmp7 = closure_5(stream(9601).StreamFailed, obj);
+      tmp7 = closure_5(stream(9606).StreamFailed, obj);
     }
     let obj2 = { children: null };
     const items1 = [tmp7];
@@ -81,13 +81,13 @@ export default function VideoEmptyState(style) {
     tmp5Result = null;
   }
   if (null != avError) {
-    let obj7 = stream(9110);
+    let obj7 = stream(9115);
     let errorCode = obj7.getErrorInfo(avError).errorCode;
   } else {
     errorCode = null;
     if (type === tmp3.STREAM_FAILED) {
-      let obj6 = stream(9110);
-      errorCode = obj6.getErrorInfo(stream(9110).AVError.STREAM_FAILED_TO_START).errorCode;
+      let obj6 = stream(9115);
+      errorCode = obj6.getErrorInfo(stream(9115).AVError.STREAM_FAILED_TO_START).errorCode;
     }
   }
   let obj8 = stream(504);

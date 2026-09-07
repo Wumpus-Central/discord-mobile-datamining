@@ -6,14 +6,14 @@ import openBlockedPaymentsCountryActionSheetDefault from "../../../billing/nativ
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-fn(11468);
+fn(11473);
 let SettingBuilders = {
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t["z5YcJ+"]);
   },
   parent: null,
-  IconComponent: fn(14987).SubscriptionIcon,
+  IconComponent: fn(14990).SubscriptionIcon,
   usePreNavigationAction: function useCanNavigateToPaymentSetting() {
     return noop.useCallback(() => {
       const isPaymentsBlocked = BlockedPaymentsCountryExperiment.getIsPaymentsBlocked();

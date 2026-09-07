@@ -4,7 +4,7 @@ import util from "../../../../intl/index.native.tsx";
 import native from "../../../../design/void/native.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import common_AlertDefault from "../../../../components_native/common/Alert.tsx";
-import _modDef15219 from "../../../../../_runtime/metro/15219__.js";
+import _modDef15222 from "../../../../../_runtime/metro/15222__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -33,7 +33,7 @@ export default function ResubscribedAlert(onClose) {
   obj.onConfirm = onClose.onClose;
   obj.style = tmp.container;
   obj = { style: tmp.body, children: null };
-  obj = { source: _modDef15219, style: tmp.headerImage };
+  obj = { source: _modDef15222, style: tmp.headerImage };
   const items = [hasOwnProperty(React4, obj), hasOwnProperty(native.Spacer, { size: 27 }), , ,];
   const obj1 = {
     variant: "text-lg/semibold",

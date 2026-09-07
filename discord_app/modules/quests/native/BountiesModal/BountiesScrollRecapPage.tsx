@@ -9,9 +9,9 @@ import components_Button_Button from "../../../../design/components/Button/nativ
 import common_Video from "../../../../components_native/common/Video.tsx";
 import APNGPlayer from "../../../image/native/APNGPlayer.android.tsx";
 import OrbsIcon from "../../../../design/components/Icon/native/redesign/generated/OrbsIcon.tsx";
-import _modDef15050 from "../../../../../discord_assets/assets/quests/bounties/_3d_orbs.png.js";
-import _modDef15051 from "../../../../../discord_assets/assets/quests/bounties/_3d_orbs.mov.js";
-import _modDef15052 from "../../../../../discord_assets/assets/quests/bounties/starfield_bg.mp4.js";
+import _modDef15053 from "../../../../../discord_assets/assets/quests/bounties/_3d_orbs.png.js";
+import _modDef15054 from "../../../../../discord_assets/assets/quests/bounties/_3d_orbs.mov.js";
+import _modDef15055 from "../../../../../discord_assets/assets/quests/bounties/starfield_bg.mp4.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import AccessibilityStore from "../../../a11y/AccessibilityStore.tsx";
 
@@ -27,7 +27,7 @@ function BountiesRecapOrbsBackground(arg0) {
       pointerEvents: "none",
       children: null,
     };
-    obj = { url: _modDef15050, style: React3.absoluteFillObject, autoplay: !reducedMotion };
+    obj = { url: _modDef15053, style: React3.absoluteFillObject, autoplay: !reducedMotion };
     obj.children = timestampProducer(APNGPlayer.APNGPlayer, obj);
     let tmp3Result = timestampProducer(React4, obj);
   } else {
@@ -40,7 +40,7 @@ function BountiesRecapOrbsBackground(arg0) {
       preventsDisplaySleepDuringVideoPlayback: false,
       importantForAccessibility: "no-hide-descendants",
     };
-    const obj2 = { uri: _modDef15051 };
+    const obj2 = { uri: _modDef15054 };
     obj1.source = obj2;
     obj1.style = style;
     obj1.paused = reducedMotion;
@@ -125,7 +125,7 @@ export const BountiesScrollRecapPage = function BountiesScrollRecapPage(orbAmoun
     importantForAccessibility: "no-hide-descendants",
   };
   const tmp2 = useSafeAreaInsetsDefault();
-  obj1.source = { uri: _modDef15052 };
+  obj1.source = { uri: _modDef15055 };
   obj1.style = React3.absoluteFillObject;
   obj1.paused = stateFromStores;
   const items2 = [
@@ -143,7 +143,7 @@ export const BountiesScrollRecapPage = function BountiesScrollRecapPage(orbAmoun
   const obj7 = { accessible: true, accessibilityRole: "text", accessibilityLabel: "+" + orbAmount, children: null };
   const obj8 = { style: tmp.titleRow, children: null };
   const items5 = [timestampProducer(OrbsIcon.OrbsIcon, { size: "lg", color: "icon-strong", accessible: false })];
-  const obj2 = { uri: _modDef15052 };
+  const obj2 = { uri: _modDef15055 };
   const obj3 = { style: tmp.orbsBackground, reducedMotion: stateFromStores };
   items5[1] = timestampProducer(Text_Text.Text, {
     variant: "display-lg",

@@ -9,7 +9,7 @@ import UserStore from "../../../../stores/UserStore.tsx";
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, Image: hasOwnProperty } = get_ActivityIndicator);
-const NsfwGateSource = fn(10296).NsfwGateSource;
+const NsfwGateSource = fn(10301).NsfwGateSource;
 const Constants = fn(1074);
 ({ AnalyticEvents: closure_9, HelpdeskArticles: c10 } = Constants);
 const jsxProd = fn(21);
@@ -76,7 +76,7 @@ export default function NsfwGateGuild(guildId) {
   }, items);
   obj = { style: tmp.container, children: null };
   const items1 = [closure_11(currentUser(6975), {}), , , , ,];
-  obj = { source: currentUser(10297), style: tmp.image };
+  obj = { source: currentUser(10302), style: tmp.image };
   items1[1] = closure_11(closure_5, obj);
   obj1 = {
     style: tmp.header,

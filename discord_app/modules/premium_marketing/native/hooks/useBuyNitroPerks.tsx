@@ -15,22 +15,22 @@ import UserSquareIcon from "../../../../design/components/Icon/native/redesign/g
 import VideoIcon from "../../../../design/components/Icon/native/redesign/generated/VideoIcon.tsx";
 import StickerIcon from "../../../../design/components/Icon/native/redesign/generated/StickerIcon.tsx";
 import SoundboardIcon from "../../../../design/components/Icon/native/redesign/generated/SoundboardIcon.tsx";
-import _modDef13361 from "../../../../../_runtime/metro/13361__.js";
-import _modDef13362 from "../../../../../_runtime/metro/13362__.js";
-import AppIconUtils from "../../../app_icons/native/AppIconUtils.tsx";
 import _modDef13365 from "../../../../../_runtime/metro/13365__.js";
 import _modDef13366 from "../../../../../_runtime/metro/13366__.js";
-import _modDef13367 from "../../../../../_runtime/metro/13367__.js";
-import _modDef13368 from "../../../../../_runtime/metro/13368__.js";
+import AppIconUtils from "../../../app_icons/native/AppIconUtils.tsx";
 import _modDef13369 from "../../../../../_runtime/metro/13369__.js";
 import _modDef13370 from "../../../../../_runtime/metro/13370__.js";
-import DoorEnterIcon from "../../../../design/components/Icon/native/redesign/generated/DoorEnterIcon.tsx";
+import _modDef13371 from "../../../../../_runtime/metro/13371__.js";
+import _modDef13372 from "../../../../../_runtime/metro/13372__.js";
 import _modDef13373 from "../../../../../_runtime/metro/13373__.js";
 import _modDef13374 from "../../../../../_runtime/metro/13374__.js";
-import ServerGridIcon from "../../../../design/components/Icon/native/redesign/generated/ServerGridIcon.tsx";
+import DoorEnterIcon from "../../../../design/components/Icon/native/redesign/generated/DoorEnterIcon.tsx";
 import _modDef13377 from "../../../../../_runtime/metro/13377__.js";
+import _modDef13378 from "../../../../../_runtime/metro/13378__.js";
+import ServerGridIcon from "../../../../design/components/Icon/native/redesign/generated/ServerGridIcon.tsx";
+import _modDef13381 from "../../../../../_runtime/metro/13381__.js";
 import PaintPaletteIcon from "../../../../design/components/Icon/native/redesign/generated/PaintPaletteIcon.tsx";
-import _modDef13380 from "../../../../../_runtime/metro/13380__.js";
+import _modDef13384 from "../../../../../_runtime/metro/13384__.js";
 import LettersIcon from "../../../../design/components/Icon/native/redesign/generated/LettersIcon.tsx";
 import SparklesIcon from "../../../../design/components/Icon/native/redesign/generated/SparklesIcon.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
@@ -71,7 +71,7 @@ export default function useBuyNitroPerks(arg0) {
     const intl2 = util.intl;
     obj.subLabel = intl2.string(util.t["3cyhe3"]);
     obj.IconComponent = ReactionIcon.ReactionIcon;
-    obj = { image: _modDef13361, description: util.t["3SUJLd"] };
+    obj = { image: _modDef13365, description: util.t["3SUJLd"] };
     obj.detail = obj;
     let items = [obj, , , , , , , , , , , , , , ,];
     obj = {
@@ -90,7 +90,7 @@ export default function useBuyNitroPerks(arg0) {
     const intl5 = util.intl;
     obj.subLabel = intl5.string(util.t["8AhJqy"]);
     obj.IconComponent = UploadIcon.UploadIcon;
-    obj.detail = { image: _modDef13362, description: util.t.i1UuMk };
+    obj.detail = { image: _modDef13366, description: util.t.i1UuMk };
     items[1] = obj;
     let obj4 = AppIconUtils;
     if (obj4.isAppIconsSupported()) {
@@ -126,7 +126,7 @@ export default function useBuyNitroPerks(arg0) {
     const intl9 = util.intl;
     obj3.subLabel = intl9.string(util.t["t/Mvdj"]);
     obj3.IconComponent = UserSquareIcon.UserSquareIcon;
-    obj4 = { image: _modDef13365, description: util.t.kWcDK8 };
+    obj4 = { image: _modDef13369, description: util.t.kWcDK8 };
     obj3.detail = obj4;
     items[arraySpreadResult] = obj3;
     if (closure_1) {
@@ -146,7 +146,7 @@ export default function useBuyNitroPerks(arg0) {
       const intl11 = util.intl;
       obj5.subLabel = intl11.string(util.t["n+DGY/"]);
       obj5.IconComponent = BoostGemIcon.BoostGemIcon;
-      const obj7 = { image: _modDef13366, description: util.t.jsyNHm };
+      const obj7 = { image: _modDef13370, description: util.t.jsyNHm };
       obj5.detail = obj7;
       items3 = [obj5];
     }
@@ -164,9 +164,9 @@ export default function useBuyNitroPerks(arg0) {
     const intl13 = util.intl;
     obj8.subLabel = intl13.string(util.t.ymCPxp);
     obj8.IconComponent = ScreenStreamIcon.ScreenStreamIcon;
-    const obj1 = { image: _modDef13362, description: util.t.i1UuMk };
+    const obj1 = { image: _modDef13366, description: util.t.i1UuMk };
     const tmp5 = closure_1;
-    obj8.detail = { image: _modDef13367, description: util.t.ymCPxp };
+    obj8.detail = { image: _modDef13371, description: util.t.ymCPxp };
     items[arraySpreadResult] = obj8;
     const sum = arraySpreadResult + 1;
     const obj10 = {
@@ -182,8 +182,8 @@ export default function useBuyNitroPerks(arg0) {
     const intl15 = util.intl;
     obj10.subLabel = intl15.string(util.t.ZK3ZoX);
     obj10.IconComponent = SuperReactionIcon.SuperReactionIcon;
-    const obj9 = { image: _modDef13367, description: util.t.ymCPxp };
-    obj10.detail = { image: _modDef13368, description: util.t.A0U9fk };
+    const obj9 = { image: _modDef13371, description: util.t.ymCPxp };
+    obj10.detail = { image: _modDef13372, description: util.t.A0U9fk };
     items[sum] = obj10;
     if (tmp5) {
       let items4 = [];
@@ -217,8 +217,8 @@ export default function useBuyNitroPerks(arg0) {
     const intl19 = util.intl;
     obj13.subLabel = intl19.string(util.t.hJG8ZN);
     obj13.IconComponent = StickerIcon.StickerIcon;
-    const obj11 = { image: _modDef13368, description: util.t.A0U9fk };
-    obj13.detail = { image: _modDef13369, description: util.t.FXlU24 };
+    const obj11 = { image: _modDef13372, description: util.t.A0U9fk };
+    obj13.detail = { image: _modDef13373, description: util.t.FXlU24 };
     items[arraySpreadResult1] = obj13;
     const sum1 = arraySpreadResult1 + 1;
     const obj15 = {
@@ -234,8 +234,8 @@ export default function useBuyNitroPerks(arg0) {
     const intl21 = util.intl;
     obj15.subLabel = intl21.string(util.t["4lSyCY"]);
     obj15.IconComponent = SoundboardIcon.SoundboardIcon;
-    const obj14 = { image: _modDef13369, description: util.t.FXlU24 };
-    obj15.detail = { image: _modDef13370, description: util.t["4lSyCY"] };
+    const obj14 = { image: _modDef13373, description: util.t.FXlU24 };
+    obj15.detail = { image: _modDef13374, description: util.t["4lSyCY"] };
     items[sum1] = obj15;
     const sum2 = sum1 + 1;
     const obj17 = {
@@ -266,8 +266,8 @@ export default function useBuyNitroPerks(arg0) {
     const intl25 = util.intl;
     obj18.subLabel = intl25.string(util.t["A8O/Qw"]);
     obj18.IconComponent = VideoIcon.VideoIcon;
-    const obj16 = { image: _modDef13370, description: util.t["4lSyCY"] };
-    obj18.detail = { image: _modDef13373, description: util.t["A8O/Qw"] };
+    const obj16 = { image: _modDef13374, description: util.t["4lSyCY"] };
+    obj18.detail = { image: _modDef13377, description: util.t["A8O/Qw"] };
     items[sum3] = obj18;
     const sum4 = sum3 + 1;
     const obj20 = {
@@ -283,8 +283,8 @@ export default function useBuyNitroPerks(arg0) {
     const intl27 = util.intl;
     obj20.subLabel = intl27.string(util.t.vN6XpQ);
     obj20.IconComponent = ChatIcon.ChatIcon;
-    const obj19 = { image: _modDef13373, description: util.t["A8O/Qw"] };
-    obj20.detail = { image: _modDef13374, description: util.t.vN6XpQ };
+    const obj19 = { image: _modDef13377, description: util.t["A8O/Qw"] };
+    obj20.detail = { image: _modDef13378, description: util.t.vN6XpQ };
     items[sum4] = obj20;
     const sum5 = sum4 + 1;
     const obj22 = {
@@ -300,8 +300,8 @@ export default function useBuyNitroPerks(arg0) {
     const intl29 = util.intl;
     obj22.subLabel = intl29.string(util.t.JMfaTU);
     obj22.IconComponent = ServerGridIcon.ServerGridIcon;
-    const obj21 = { image: _modDef13374, description: util.t.vN6XpQ };
-    obj22.detail = { image: _modDef13377, description: util.t.JMfaTU };
+    const obj21 = { image: _modDef13378, description: util.t.vN6XpQ };
+    obj22.detail = { image: _modDef13381, description: util.t.JMfaTU };
     items[sum5] = obj22;
     const sum6 = sum5 + 1;
     const obj24 = {
@@ -317,8 +317,8 @@ export default function useBuyNitroPerks(arg0) {
     const intl31 = util.intl;
     obj24.subLabel = intl31.string(util.t.CjRASJ);
     obj24.IconComponent = PaintPaletteIcon.PaintPaletteIcon;
-    const obj23 = { image: _modDef13377, description: util.t.JMfaTU };
-    obj24.detail = { image: _modDef13380, description: util.t.jBTTws };
+    const obj23 = { image: _modDef13381, description: util.t.JMfaTU };
+    obj24.detail = { image: _modDef13384, description: util.t.jBTTws };
     items[sum6] = obj24;
     const sum7 = sum6 + 1;
     const obj26 = {
@@ -447,6 +447,6 @@ export default function useBuyNitroPerks(arg0) {
       );
       return items7;
     }
-    const obj25 = { image: _modDef13380, description: util.t.jBTTws };
+    const obj25 = { image: _modDef13384, description: util.t.jBTTws };
   }, items);
 }

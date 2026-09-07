@@ -21,7 +21,7 @@ function ColorBox(hue) {
       return obj.hslToRgbWorklet(obj);
     }
   }
-  obj = { hslToRgbWorklet: hue(14598).hslToRgbWorklet, hue };
+  obj = { hslToRgbWorklet: hue(14601).hslToRgbWorklet, hue };
   S.__closure = obj;
   S.__workletHash = 8814597686728;
   S.__initData = __initData;
@@ -134,7 +134,7 @@ export default function SaturationValueColorPicker(hue) {
   };
   let size = {
     saturation,
-    normalizeValue: hue(14598).normalizeValue,
+    normalizeValue: hue(14601).normalizeValue,
     width: colorBoxWidth,
     value,
     height: first1,
@@ -155,7 +155,7 @@ export default function SaturationValueColorPicker(hue) {
   };
   const size1 = {
     saturation,
-    normalizeValue: hue(14598).normalizeValue,
+    normalizeValue: hue(14601).normalizeValue,
     width: colorBoxWidth,
     value,
     height: first1,
@@ -198,7 +198,7 @@ export default function SaturationValueColorPicker(hue) {
     return obj1;
   };
   fn4.__closure = {
-    hsvToRgbWorklet: hue(14598).hsvToRgbWorklet,
+    hsvToRgbWorklet: hue(14601).hsvToRgbWorklet,
     hue,
     saturation,
     value,
@@ -230,7 +230,7 @@ export default function SaturationValueColorPicker(hue) {
   obj2.style = items1;
   const obj3 = { gesture: panGesture, children: null };
   let obj1 = {
-    hsvToRgbWorklet: hue(14598).hsvToRgbWorklet,
+    hsvToRgbWorklet: hue(14601).hsvToRgbWorklet,
     hue,
     saturation,
     value,

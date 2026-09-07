@@ -2,7 +2,7 @@
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import ModalActionCreatorsDefault from "../../../actions/ModalActionCreators.tsx";
 import NavigatorHeader from "../../../design/components/Navigator/native/NavigatorHeader.native.tsx";
-import _mod8850 from "../../virtual_currency/hooks/index.tsx";
+import _mod8855 from "../../virtual_currency/hooks/index.tsx";
 import BalanceWidgetPill from "../../virtual_currency/native/index.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 import AccessibilityStore from "../../a11y/AccessibilityStore.tsx";
@@ -26,7 +26,7 @@ function OrbBadgeCollectedRootScreen(modalKey) {
   }, items2);
   if (stateFromStores) {
     obj = { source: null, style: null };
-    const obj1 = { uri: onPressViewBadge(11780) };
+    const obj1 = { uri: onPressViewBadge(11785) };
     obj.source = obj1;
     obj.style = tmp.background;
     let tmp9Result = closure_6(onPressViewBadge(5587), obj);
@@ -43,9 +43,9 @@ function OrbBadgeCollectedRootScreen(modalKey) {
       pauseWhileAppInactive: true,
       paused: false,
     };
-    const obj3 = { uri: onPressViewBadge(11781) };
+    const obj3 = { uri: onPressViewBadge(11786) };
     obj2.source = obj3;
-    obj2.poster = onPressViewBadge(11780);
+    obj2.poster = onPressViewBadge(11785);
     obj2.style = tmp.background;
     tmp9Result = closure_6(tmp2(8307).VideoComponent, obj2);
     tmp12 = onPressViewBadge;
@@ -55,7 +55,7 @@ function OrbBadgeCollectedRootScreen(modalKey) {
   const rect = { style: tmp.main, top: true, bottom: true, left: true, right: true, children: null };
   const obj4 = { style: tmp.body, children: null };
   const obj5 = { source: null, style: null };
-  const obj6 = { uri: tmp12(8845) };
+  const obj6 = { uri: tmp12(8850) };
   obj5.source = obj6;
   obj5.style = tmp.orbBadge;
   const items4 = [tmp13(tmp12(5587), obj5)];
@@ -165,7 +165,7 @@ export default function OrbBadgeCollectedModal(arg0) {
       );
     },
     headerRight() {
-      let obj = _mod8850;
+      let obj = _mod8855;
       obj = {
         initialRenderedBalance: orbBalancePriorToPurchase,
         balance: obj.useFetchVirtualCurrencyBalance().balance,

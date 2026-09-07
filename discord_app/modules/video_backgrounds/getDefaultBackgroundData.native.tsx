@@ -1,10 +1,10 @@
 // discord_app/modules/video_backgrounds/getDefaultBackgroundData.native.tsx
 import util from "../../intl/index.native.tsx";
 import VideoBackgroundConstants from "VideoBackgroundConstants.tsx";
-import _modDef9102 from "../../../discord_assets/assets/video-backgrounds/backgrounds/cybercity.png.js";
-import _modDef9103 from "../../../discord_assets/assets/video-backgrounds/backgrounds/movie.png.js";
-import _modDef9104 from "../../../discord_assets/assets/video-backgrounds/backgrounds/tropical.png.js";
-import _modDef9105 from "../../../discord_assets/assets/video-backgrounds/backgrounds/vaporwave.png.js";
+import _modDef9107 from "../../../discord_assets/assets/video-backgrounds/backgrounds/cybercity.png.js";
+import _modDef9108 from "../../../discord_assets/assets/video-backgrounds/backgrounds/movie.png.js";
+import _modDef9109 from "../../../discord_assets/assets/video-backgrounds/backgrounds/tropical.png.js";
+import _modDef9110 from "../../../discord_assets/assets/video-backgrounds/backgrounds/vaporwave.png.js";
 import size from "../../../_runtime/metro/00002__.js";
 
 const DefaultVideoBackground = VideoBackgroundConstants.DefaultVideoBackground;
@@ -13,19 +13,19 @@ const result = size.fileFinishedImporting("modules/video_backgrounds/getDefaultB
 
 export default function getDefaultBackgroundData() {
   let obj = {};
-  obj = { id: DefaultVideoBackground.OPTION_1, source: _modDef9102, name: null };
+  obj = { id: DefaultVideoBackground.OPTION_1, source: _modDef9107, name: null };
   const intl = util.intl;
   obj.name = intl.string(util.t.SHUTBj);
   obj[DefaultVideoBackground.OPTION_1] = obj;
-  obj = { id: DefaultVideoBackground.OPTION_2, source: _modDef9103, name: null };
+  obj = { id: DefaultVideoBackground.OPTION_2, source: _modDef9108, name: null };
   const intl2 = util.intl;
   obj.name = intl2.string(util.t.UxTcIq);
   obj[DefaultVideoBackground.OPTION_2] = obj;
-  const obj1 = { id: DefaultVideoBackground.OPTION_3, source: _modDef9104, name: null };
+  const obj1 = { id: DefaultVideoBackground.OPTION_3, source: _modDef9109, name: null };
   const intl3 = util.intl;
   obj1.name = intl3.string(util.t.HFBsc8);
   obj[DefaultVideoBackground.OPTION_3] = obj1;
-  const obj2 = { id: DefaultVideoBackground.OPTION_4, source: _modDef9105, name: null };
+  const obj2 = { id: DefaultVideoBackground.OPTION_4, source: _modDef9110, name: null };
   const intl4 = util.intl;
   obj2.name = intl4.string(util.t["/Dl3+Z"]);
   obj[DefaultVideoBackground.OPTION_4] = obj2;

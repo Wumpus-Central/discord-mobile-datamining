@@ -11,7 +11,7 @@ const SearchConstants = fn(7878);
   SEARCH_QUERY_DEFAULT_FILTERS: metroRequire,
 } = SearchConstants);
 const SearchTypes = fn(1074).SearchTypes;
-const AbstractSearchFetchManager = fn(12349).AbstractSearchFetchManager;
+const AbstractSearchFetchManager = fn(12353).AbstractSearchFetchManager;
 class SearchTabsFetchManager extends AbstractSearchFetchManager {}
 const prototype = SearchTabsFetchManager.prototype;
 prototype["createRequestPayload"] = function createRequestPayload(trackExactTotalHits) {

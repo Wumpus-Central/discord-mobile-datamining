@@ -10,7 +10,7 @@ import noop from "../../../../_runtime/metro/00019__.js";
 import AccessibilityStore from "../../a11y/AccessibilityStore.tsx";
 
 require = fn;
-const InAppNotificationConstants = fn(10095);
+const InAppNotificationConstants = fn(10100);
 ({ IN_APP_NOTIFICATION_MAX_HEIGHT: hasOwnProperty, NOTIFICATION_PREVIEW_LINE_CLAMP: metroRequire } =
   InAppNotificationConstants);
 const jsx = fn(21).jsx;
@@ -98,7 +98,7 @@ export default noop.memo(function MessageNotification(notification) {
   const items4 = [channel, parentChannel, guild, nullableMessageAuthor, handleDismissNotification];
   const callback1 = guild.useCallback(() => {
     const obj = { channelId: channel.id };
-    return obj.pushLazy(asyncRequireImpl(10142, dependencyMap.paths), obj, "in-app-notification-settings-modal");
+    return obj.pushLazy(asyncRequireImpl(10147, dependencyMap.paths), obj, "in-app-notification-settings-modal");
   }, items3);
   const memo = guild.useMemo(
     () => ({

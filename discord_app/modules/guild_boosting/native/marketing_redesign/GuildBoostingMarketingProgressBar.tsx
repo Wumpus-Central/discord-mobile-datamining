@@ -29,14 +29,14 @@ createStyles = {
   alignItems: "center",
   width: "100%",
   marginTop: 40,
-  paddingHorizontal: fn(13583).MARKER_DIMENSIONS / 2 + 34,
+  paddingHorizontal: fn(13587).MARKER_DIMENSIONS / 2 + 34,
 };
 createStyles.progressBarContainer = createStyles;
 createStyles.progressBar = { height: 54, maxWidth: 660, width: "100%" };
 createStyles.progressBarScrubber = {
   height: 8,
-  top: fn(13583).MARKER_DIMENSIONS / 2 - 4,
-  marginHorizontal: fn(13583).MARKER_DIMENSIONS / 2 + 2,
+  top: fn(13587).MARKER_DIMENSIONS / 2 - 4,
+  marginHorizontal: fn(13587).MARKER_DIMENSIONS / 2 + 2,
 };
 let size = {
   borderRadius: 8,

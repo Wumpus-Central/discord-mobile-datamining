@@ -29,7 +29,7 @@ const Constants = fn(1074);
   DISPLAY_NAME_MAX_LENGTH,
   MAX_CHANNEL_NAME_LENGTH,
 } = Constants);
-const DiceRollConstants = fn(9301);
+const DiceRollConstants = fn(9306);
 ({ ALLOWED_DICE_SIDES, MAX_DICE_COUNT } = DiceRollConstants);
 let closure_11 = fn(2023).getDisableCommunicationDurationOptions;
 const MessageSendLocation = fn(4553).MessageSendLocation;
@@ -52,7 +52,7 @@ Object.defineProperty(obj, "name", {
   set: undefined,
 });
 obj[BuiltInSectionId.FRECENCY] = obj;
-let items = [...fn(9302).default];
+let items = [...fn(9307).default];
 let obj1 = {
   id: "-1",
   untranslatedName: "shrug",
@@ -1525,7 +1525,7 @@ const found = items.filter((untranslatedName) => {
 let size = fn(2);
 const result = size.fileFinishedImporting("modules/application_commands/ApplicationCommandBuiltIns.tsx");
 
-export const PLATFORM_COMMANDS = fn(9302).default;
+export const PLATFORM_COMMANDS = fn(9307).default;
 export const BUILT_IN_SECTIONS = obj;
 export const BUILT_IN_COMMANDS = items;
 export const BUILT_IN_COMMANDS_ORIGINAL = found;

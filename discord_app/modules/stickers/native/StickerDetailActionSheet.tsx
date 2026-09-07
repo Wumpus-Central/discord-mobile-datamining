@@ -150,7 +150,7 @@ function UnavailableStickerDetail(arg0) {
   const callback = obj1.useCallback(() => {
     if (null != stickerAssetUrl) {
       const obj = { stickerUrl: tmp };
-      obj.openLazy(asyncRequireImpl(10405, dependencyMap.paths), "StickerOptionsActionSheet", obj, "stack");
+      obj.openLazy(asyncRequireImpl(10410, dependencyMap.paths), "StickerOptionsActionSheet", obj, "stack");
     }
   }, items1);
   const items2 = [closure_21(require("Sticker"), { sticker: renderableSticker, size: 48 }), ,];
@@ -197,7 +197,7 @@ function UnavailableStickerDetail(arg0) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: metroRequire, ActivityIndicator: closure_7, Pressable: closure_8 } = get_ActivityIndicator);
-const StickerPickerConstants = fn(10273);
+const StickerPickerConstants = fn(10278);
 ({ PADDING_HORIZONTAL: closure_12, MIN_MARGIN: map1, STICKER_SIZE: closure_14 } = StickerPickerConstants);
 const Constants = fn(1074);
 ({
@@ -360,7 +360,7 @@ function GuildStickerDetail(sticker) {
   const callback2 = obj.useCallback(() => {
     if (null != stickerAssetUrl) {
       const obj = { stickerUrl: tmp };
-      obj.openLazy(asyncRequireImpl(10405, dependencyMap.paths), "StickerOptionsActionSheet", obj, "stack");
+      obj.openLazy(asyncRequireImpl(10410, dependencyMap.paths), "StickerOptionsActionSheet", obj, "stack");
     }
   }, items3);
   analyticsLocation = obj.useMemo(() => {

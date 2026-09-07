@@ -484,9 +484,9 @@ export default function _default(command) {
   obj.children = items5;
   const items8 = [
     c10(closure_6, obj),
-    ref(command(8593).FormDivider, { style: tmp.applicationDescriptionDivider }),
+    ref(command(8598).FormDivider, { style: tmp.applicationDescriptionDivider }),
     ref(stateFromStores, { command, option: currentOption, optionState: tmp17 }),
-    ref(command(8593).FormDivider, { style: tmp.applicationDescriptionDivider }),
+    ref(command(8598).FormDivider, { style: tmp.applicationDescriptionDivider }),
   ];
   obj.children = items8;
   return c10(onPressOption, obj);

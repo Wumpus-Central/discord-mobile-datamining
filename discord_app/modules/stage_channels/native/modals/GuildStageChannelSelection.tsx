@@ -47,7 +47,7 @@ export default function GuildStageChannelSelection(channel) {
       id = channel.id;
     }
     obj.selectedItem = id;
-    obj2.openLazy(asyncRequireImpl(9426, dependencyMap.paths), "SelectUpdatesChannel", obj);
+    obj2.openLazy(asyncRequireImpl(9431, dependencyMap.paths), "SelectUpdatesChannel", obj);
   }
   function renderChannelHook(children, key) {
     return jsx(

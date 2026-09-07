@@ -42,11 +42,11 @@ export default function ICYMICustomScoresModal() {
       const intl = closure_0(1114).intl;
       obj.title = intl.string(closure_0(1114).t.jVshKt);
       obj.headerLeft = closure_0(7863).getRenderModalCloseImage(navigation.navigation);
-      const merged = Object.assign(closure_1(10925)());
+      const merged = Object.assign(closure_1(10930)());
       return obj;
     },
     getComponent() {
-      return closure_0(16456).default;
+      return closure_0(16459).default;
     },
   };
   const items = [
@@ -58,7 +58,7 @@ export default function ICYMICustomScoresModal() {
         return obj;
       },
       getComponent() {
-        return closure_0(16457).default;
+        return closure_0(16460).default;
       },
     }),
   ];

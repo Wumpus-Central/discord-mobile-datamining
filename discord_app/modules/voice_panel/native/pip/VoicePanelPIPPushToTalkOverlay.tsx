@@ -12,7 +12,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 const ReanimatedRexport = ReanimatedRexport2;
 
 require = fn;
-const PUSH_TO_TALK_PIP_PHYSICS = fn(12273).PUSH_TO_TALK_PIP_PHYSICS;
+const PUSH_TO_TALK_PIP_PHYSICS = fn(12277).PUSH_TO_TALK_PIP_PHYSICS;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, Fragment: closure_7, jsxs: closure_8 } = jsxProd);
 const NativeView = ReanimatedRexport.createAnimatedComponent(NativeViewDefault);
@@ -56,7 +56,7 @@ size = fn(2);
 let result = size.fileFinishedImporting("modules/voice_panel/native/pip/VoicePanelPIPPushToTalkOverlay.tsx");
 
 export default function VoicePanelPIPPushToTalkOverlay() {
-  let obj = pIPState(17092);
+  let obj = pIPState(17095);
   pIPState = obj.usePIPState();
   const tmp2 = closure_12();
   let obj1 = pIPState(4296);
@@ -158,7 +158,7 @@ export default function VoicePanelPIPPushToTalkOverlay() {
     withSpring: pIPState(4974).withSpring,
     isPushingToTalk,
     PUSH_TO_TALK_PIP_PHYSICS,
-    getVoicePanelPIPBorderRadius: pIPState(17087).getVoicePanelPIPBorderRadius,
+    getVoicePanelPIPBorderRadius: pIPState(17090).getVoicePanelPIPBorderRadius,
     pipState: pIPState,
   };
   H.__closure = obj1;
@@ -214,7 +214,7 @@ export default function VoicePanelPIPPushToTalkOverlay() {
   obj6 = {
     style: animatedStyle1,
     size: pIPState(1178).Icon.Sizes.SMALL_20,
-    source: isPushingToTalk(17168),
+    source: isPushingToTalk(17171),
     disableColor: true,
   };
   obj5.children = closure_6(closure_10, obj6);

@@ -15,8 +15,8 @@ import ClipboardUtils from "../../../utils/ClipboardUtils.native.tsx";
 import UserProfileCardDefault from "UserProfileCard.tsx";
 import MaskedLinkUtils from "../../../utils/MaskedLinkUtils.tsx";
 import ConnectionMetadataVanityItems from "../../connections/native/ConnectionMetadataVanityItems.tsx";
-import _modDef11580 from "../../../../_runtime/metro/11580__.js";
-import _modDef11581 from "../../../../_runtime/metro/11581__.js";
+import _modDef11585 from "../../../../_runtime/metro/11585__.js";
+import _modDef11586 from "../../../../_runtime/metro/11586__.js";
 import useUserProfileApplicationRoleConnectionsDefault from "../hooks/useUserProfileApplicationRoleConnections.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 import LocaleStore from "../../user_settings/LocaleStore.tsx";
@@ -40,10 +40,10 @@ function VerifiedIcon(arg0) {
       let WHITE = nativeDefault.unsafe_rawColors.BLACK;
     }
     obj = { style: tmp.verifiedIconContainer, children: null };
-    obj = { source: _modDef11580, color: PLATFORM_TWITTER };
+    obj = { source: _modDef11585, color: PLATFORM_TWITTER };
     const merged = Object.assign(obj);
     const items = [closure_1_12(native2.Icon, obj)];
-    obj1 = { source: _modDef11581, color: WHITE };
+    obj1 = { source: _modDef11586, color: WHITE };
     const merged1 = Object.assign(obj);
     items[1] = closure_1_12(native2.Icon, obj1);
     obj.children = items;
@@ -442,7 +442,7 @@ export const UserProfileAccountConnectionsCard = function UserProfileAccountConn
   const stateFromStores = userId(504).useStateFromStores(items1, () => StreamerModeStore.hidePersonalInformation);
   const obj3 = userId(504);
   const tmp5 = theme;
-  ({ connections, appIdentities } = theme(13080)(userId));
+  ({ connections, appIdentities } = theme(13084)(userId));
   if (!stateFromStores) {
     const items2 = [];
     let arraySpreadResult = HermesBuiltin.arraySpread(

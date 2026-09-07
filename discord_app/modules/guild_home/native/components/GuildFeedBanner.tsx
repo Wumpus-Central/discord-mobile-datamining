@@ -85,7 +85,7 @@ function GuildFeedBanner(guild) {
   width = size.width;
   height = size.height;
   const tmp8 = sharedValue(4495)();
-  drawerWidth = guild(11528).useDrawerWidth();
+  drawerWidth = guild(11533).useDrawerWidth();
   const items4 = [width, height, tmp12, drawerWidth];
   obj = { style: tmp.container, children: null };
   const memo1 = obj2.useMemo(() => {
@@ -112,9 +112,9 @@ function GuildFeedBanner(guild) {
     const items6 = [size1, animatedStyle];
     obj1.style = items6;
     if (tmp2Result2.isThemeDark(tmp8)) {
-      let tmp6Result = tmp6(16554);
+      let tmp6Result = tmp6(16557);
     } else {
-      tmp6Result = tmp6(16555);
+      tmp6Result = tmp6(16558);
     }
     obj1.source = tmp6Result;
     obj1.onLoad = handleLoad;
@@ -176,7 +176,7 @@ function GuildFeedBanner(guild) {
         },
         children: null,
       };
-      const obj12 = { style: tmp.publicIcon, source: tmp6(16556) };
+      const obj12 = { style: tmp.publicIcon, source: tmp6(16559) };
       const items12 = [closure_11(tmp2(1178).Icon, obj12)];
       const obj13 = { variant: "text-xs/medium", color: "text-default", children: null };
       let intl = tmp2(1114).intl;
@@ -216,7 +216,7 @@ function GuildFeedBanner(guild) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, Image: hasOwnProperty } = get_ActivityIndicator);
-const GuildFeedConstants = fn(16553);
+const GuildFeedConstants = fn(16556);
 const GUILD_FEED_CARD_MARGIN_HORIZONTAL = GuildFeedConstants.GUILD_FEED_CARD_MARGIN_HORIZONTAL;
 let closure_9 = GuildFeedConstants.GUILD_FEED_MIN_BANNER_HEIGHT;
 const GuildFeatures = fn(1074).GuildFeatures;

@@ -48,7 +48,7 @@ export default function UserProfileYourFriendsCard(arg0) {
     RelationshipTypes.FRIEND,
   );
   const effect = stateFromStoresArray1.useEffect(() => {
-    const userAffinitiesV2 = closure_0(9848).fetchUserAffinitiesV2();
+    const userAffinitiesV2 = closure_0(9853).fetchUserAffinitiesV2();
   }, []);
   const items2 = [stateFromStoresArray, stateFromStoresArray1, gameRelationshipsByType];
   const effect1 = stateFromStoresArray1.useEffect(() => {

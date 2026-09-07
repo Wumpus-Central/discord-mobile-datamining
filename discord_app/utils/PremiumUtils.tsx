@@ -2288,7 +2288,7 @@ obj = {
       throw error;
     }
   },
-  getUserMaxFileSize: fn(9359).getUserMaxFileSize,
+  getUserMaxFileSize: fn(9364).getUserMaxFileSize,
   getSkuIdForPlan(planId) {
     if (null == dependencyMap2[planId]) {
       const _Error = Error;

@@ -3,7 +3,7 @@ import FlagUtils from "../../../discord_common/js/shared/utils/FlagUtils.tsx";
 import GuildStore from "../../stores/GuildStore.tsx";
 
 require = fn;
-const HUB_PROGRESS_STEP_ORDER = fn(9831).HUB_PROGRESS_STEP_ORDER;
+const HUB_PROGRESS_STEP_ORDER = fn(9836).HUB_PROGRESS_STEP_ORDER;
 const GuildFeatures = fn(1074).GuildFeatures;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/hub/HubProgressActionCreators.tsx");

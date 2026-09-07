@@ -191,16 +191,16 @@ function CardContentFreezer(children) {
 }
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-const VoicePanelConstants = fn(12273);
+const VoicePanelConstants = fn(12277);
 ({
   LAYOUT_PHYSICS: closure_8,
   VoicePanelModes: closure_9,
   UI_SHOW_HIDE_PHYSICS,
   VOICE_PANEL_CHUNK_DIVISOR,
 } = VoicePanelConstants);
-const VoicePanelControlsModes = fn(12271).VoicePanelControlsModes;
-const VoicePanelPIPModes = fn(17088).VoicePanelPIPModes;
-const EDGE_GUTTER = fn(12276).EDGE_GUTTER;
+const VoicePanelControlsModes = fn(12275).VoicePanelControlsModes;
+const VoicePanelPIPModes = fn(17091).VoicePanelPIPModes;
+const EDGE_GUTTER = fn(12280).EDGE_GUTTER;
 const isUserParticipant = fn(4581).isUserParticipant;
 const jsx = fn(21).jsx;
 let obj = {};

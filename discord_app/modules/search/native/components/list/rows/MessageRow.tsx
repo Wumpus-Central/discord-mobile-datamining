@@ -8,8 +8,8 @@ import useChannelNameDefault from "../../../../../channel/useChannelName.tsx";
 import useMessageAuthorDefault from "../../../../../messages/useMessageAuthor.tsx";
 import enhanced_role_colors_EnhancedRoleColorUtils from "../../../../../premium/enhanced_role_colors/native/EnhancedRoleColorUtils.tsx";
 import BotTagDefault from "../../../../../applications/native/BotTag.tsx";
-import _modDef10145 from "../../../../../../../_runtime/metro/10145__.js";
-import _modDef10391 from "../../../../../../../_runtime/metro/10391__.js";
+import _modDef10150 from "../../../../../../../_runtime/metro/10150__.js";
+import _modDef10396 from "../../../../../../../_runtime/metro/10396__.js";
 import BellZIcon from "../../../../../../design/components/Icon/native/redesign/generated/BellZIcon.tsx";
 import useSearchMessageTimestamp from "../../../hooks/useSearchMessageTimestamp.tsx";
 import PollBadgeDefault from "../../../../../polls/native/PollBadge.tsx";
@@ -52,12 +52,12 @@ function GuildChannelMessageRowHeader(channel) {
     ,
   ];
   if (muted) {
-    const obj2 = { source: _modDef10145, size: tmp2(1178).Icon.Sizes.EXTRA_SMALL, style: tmp.channelStatus };
+    const obj2 = { source: _modDef10150, size: tmp2(1178).Icon.Sizes.EXTRA_SMALL, style: tmp.channelStatus };
     muted = closure_11(tmp2(1178).Icon, obj2);
   }
   items1[2] = muted;
   if (isFavorite) {
-    const obj3 = { source: _modDef10391, size: tmp2(1178).Icon.Sizes.EXTRA_SMALL, style: tmp.channelStatus };
+    const obj3 = { source: _modDef10396, size: tmp2(1178).Icon.Sizes.EXTRA_SMALL, style: tmp.channelStatus };
     isFavorite = closure_11(tmp2(1178).Icon, obj3);
   }
   items1[3] = isFavorite;
@@ -95,7 +95,7 @@ function PrivateChannelMessageRowLabel(message) {
     }
     tmp = channel.isDM() || channel.isGroupDM();
   }, items1);
-  let obj = message(16670);
+  let obj = message(16673);
   const searchMessageTimestamp = obj.useSearchMessageTimestamp(message, channel);
   obj = { style: tmp.labelContainer, children: null };
   obj = { style: tmp.authorRow, children: null };
@@ -110,15 +110,15 @@ function PrivateChannelMessageRowLabel(message) {
     ,
   ];
   if (muted) {
-    const obj1 = { source: channel(10145), size: tmp4(1178).Icon.Sizes.EXTRA_SMALL, style: tmp.channelStatus };
+    const obj1 = { source: channel(10150), size: tmp4(1178).Icon.Sizes.EXTRA_SMALL, style: tmp.channelStatus };
     muted = closure_11(tmp4(1178).Icon, obj1);
   }
   items2[1] = muted;
   let isSystemDMResult = channel.isSystemDM();
   if (isSystemDMResult) {
-    const obj2 = { type: channel(9438).Types.SYSTEM_DM, verified: true };
-    isSystemDMResult = closure_11(channel(9438), obj2);
-    const tmp13 = channel(9438);
+    const obj2 = { type: channel(9443).Types.SYSTEM_DM, verified: true };
+    isSystemDMResult = closure_11(channel(9443), obj2);
+    const tmp13 = channel(9443);
   }
   items2[2] = isSystemDMResult;
   obj.children = items2;
@@ -137,13 +137,13 @@ function PrivateChannelMessageRowLabel(message) {
   let tmp9Result = null;
   if (message.hasFlag(MessageFlags.SUPPRESS_NOTIFICATIONS)) {
     const obj4 = { size: "xs", style: tmp.suppressNotificationsIcon };
-    tmp9Result = closure_11(tmp4(13287).BellZIcon, obj4);
+    tmp9Result = closure_11(tmp4(13291).BellZIcon, obj4);
   }
   items3[2] = tmp9Result;
   tmp9Result = null;
   if (message.isPoll()) {
     const obj5 = { style: tmp.pollBadge };
-    tmp9Result = closure_11(channel(16671), obj5);
+    tmp9Result = closure_11(channel(16674), obj5);
   }
   items3[3] = tmp9Result;
   obj.children = items3;

@@ -110,7 +110,7 @@ createStyles = {
 };
 createStyles.flexLoading = createStyles;
 let closure_12 = createStyles.createStyles(createStyles);
-const makeAuthenticated = fn(16744);
+const makeAuthenticated = fn(16747);
 const authenticated = makeAuthenticated.makeAuthenticated(function MemberVerificationRouteContainer(navigation) {
   navigation = navigation.navigation;
   guildId = navigation.route.params.guildId;

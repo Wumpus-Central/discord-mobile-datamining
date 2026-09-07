@@ -31,7 +31,7 @@ export const BugReporterNotification = function BugReporterNotification(notifica
   obj.children = <closure_4 source={{ uri: notification.imageUri }} style={tmp.preview} />;
   obj = {
     header: memo,
-    children: jsx(notification(10107).SystemMessageText, { text: "Bzzz! Found a bug? Tap to submit." }),
+    children: jsx(notification(10112).SystemMessageText, { text: "Bzzz! Found a bug? Tap to submit." }),
     rightAccessory: <closure_5 source={{ uri: notification.imageUri }} style={tmp.preview} />,
     onPress() {
       let obj = BugReportStore;
@@ -44,7 +44,7 @@ export const BugReporterNotification = function BugReporterNotification(notifica
         obj.setState({ isReportOpen: true });
         obj = { screenshotUri: null, screenshot: null };
         ({ imageUri: obj7.screenshotUri, image: obj7.screenshot } = notification);
-        ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(10185, dependencyMap.paths), obj);
+        ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(10190, dependencyMap.paths), obj);
       }
     },
     onSettingsPress() {
@@ -54,9 +54,9 @@ export const BugReporterNotification = function BugReporterNotification(notifica
     },
     notification,
   };
-  return jsx(notification(10170).NotificationPressable, {
+  return jsx(notification(10175).NotificationPressable, {
     header: memo,
-    children: jsx(notification(10107).SystemMessageText, { text: "Bzzz! Found a bug? Tap to submit." }),
+    children: jsx(notification(10112).SystemMessageText, { text: "Bzzz! Found a bug? Tap to submit." }),
     rightAccessory: <closure_5 source={{ uri: notification.imageUri }} style={tmp.preview} />,
     onPress() {
       let obj = BugReportStore;
@@ -69,7 +69,7 @@ export const BugReporterNotification = function BugReporterNotification(notifica
         obj.setState({ isReportOpen: true });
         obj = { screenshotUri: null, screenshot: null };
         ({ imageUri: obj7.screenshotUri, image: obj7.screenshot } = notification);
-        ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(10185, dependencyMap.paths), obj);
+        ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(10190, dependencyMap.paths), obj);
       }
     },
     onSettingsPress() {

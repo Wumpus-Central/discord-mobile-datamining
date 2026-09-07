@@ -67,15 +67,15 @@ export default noop.memo((active) => {
   obj.accessibilityLabel = intl.string(util.t.iZ7Mz9);
   obj.accessibilityState = { expanded: flag };
   obj.onPress = callback;
-  obj = { size: token1, style: tmp7.expressionButtonIconTint, source: importDefault(showKeyboardIcon ? 11247 : 8758) };
+  obj = { size: token1, style: tmp7.expressionButtonIconTint, source: importDefault(showKeyboardIcon ? 11252 : 8763) };
   obj.children = jsx(native.Icon, {
     size: token1,
     style: tmp7.expressionButtonIconTint,
-    source: importDefault(showKeyboardIcon ? 11247 : 8758),
+    source: importDefault(showKeyboardIcon ? 11252 : 8763),
   });
   return jsx(Pressables.PressableOpacity, {
     size: token1,
     style: tmp7.expressionButtonIconTint,
-    source: importDefault(showKeyboardIcon ? 11247 : 8758),
+    source: importDefault(showKeyboardIcon ? 11252 : 8763),
   });
 });

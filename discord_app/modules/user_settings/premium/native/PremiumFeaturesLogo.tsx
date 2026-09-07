@@ -1,7 +1,7 @@
 // discord_app/modules/user_settings/premium/native/PremiumFeaturesLogo.tsx
 import PremiumUtils from "../../../../utils/PremiumUtils.tsx";
 import _modDef7437 from "../../../../../_runtime/metro/07437__.js";
-import _modDef9383 from "../../../../../_runtime/metro/09383__.js";
+import _modDef9388 from "../../../../../_runtime/metro/09388__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -13,7 +13,7 @@ const result = size.fileFinishedImporting("modules/user_settings/premium/native/
 export default function PremiumFeaturesLogo(premiumType) {
   premiumType = premiumType.premiumType;
   if (premiumType === PremiumTypes.TIER_0) {
-    let tmp3 = _modDef9383;
+    let tmp3 = _modDef9388;
     let tmp = importDefault;
   } else {
     tmp = importDefault;

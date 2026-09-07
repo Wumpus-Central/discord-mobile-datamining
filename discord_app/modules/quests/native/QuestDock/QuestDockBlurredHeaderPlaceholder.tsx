@@ -1,12 +1,12 @@
 // discord_app/modules/quests/native/QuestDock/QuestDockBlurredHeaderPlaceholder.tsx
-import thumbHashToRGBA from "../../../../../_runtime/15194_thumbHashToRGBA.js";
+import thumbHashToRGBA from "../../../../../_runtime/15197_thumbHashToRGBA.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ StyleSheet, View: closure_4 } = get_ActivityIndicator);
 const QuestDockMode = fn(5444).QuestDockMode;
-const QuestDockConstants = fn(15095);
+const QuestDockConstants = fn(15098);
 ({ QUEST_DOCK_EXPANDED_HEIGHT, QUEST_DOCK_UNENROLLED_HEADER_INSET_EXPANDED } = QuestDockConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_7, Fragment: closure_8, jsxs: closure_9 } = jsxProd);

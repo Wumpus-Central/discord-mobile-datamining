@@ -79,7 +79,7 @@ const obj5 = {
   typingIndicator: { position: { top: 25, left: 11 } },
 };
 const obj6 = { container: { paddingPanels: { paddingVertical: 8 } }, icon: null };
-const importDefaultResultResult = deepmerge(fn(10124).CHANNEL_LIST_STYLES_COMPACT, obj);
+const importDefaultResultResult = deepmerge(fn(10129).CHANNEL_LIST_STYLES_COMPACT, obj);
 obj6.icon = { avatarSize: fn(1178).AvatarSizes.REFRESH_MEDIUM_32 };
 const obj7 = { avatarSize: fn(1178).AvatarSizes.REFRESH_MEDIUM_32 };
 const size = fn(2);
@@ -88,4 +88,4 @@ const result = size.fileFinishedImporting(
 );
 
 export const CHANNEL_LIST_STYLES_COZY_DRAWER = importDefaultResultResult;
-export const CHANNEL_LIST_STYLES_COZY_DRAWER_SMOL = deepmerge(fn(10124).CHANNEL_LIST_STYLES_COMPACT, obj6);
+export const CHANNEL_LIST_STYLES_COZY_DRAWER_SMOL = deepmerge(fn(10129).CHANNEL_LIST_STYLES_COMPACT, obj6);

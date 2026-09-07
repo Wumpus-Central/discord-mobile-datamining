@@ -7,7 +7,7 @@ import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import Pressables from "../../../../design/void/Pressables/native/Pressables.tsx";
 import ReactionIcon from "../../../../design/components/Icon/native/redesign/generated/ReactionIcon.tsx";
 import PencilIcon from "../../../../design/components/Icon/native/redesign/generated/PencilIcon.tsx";
-import _modDef11245 from "../../../../../_runtime/metro/11245__.js";
+import _modDef11250 from "../../../../../_runtime/metro/11250__.js";
 import ArrowAngleLeftUpIcon from "../../../../design/components/Icon/native/redesign/generated/ArrowAngleLeftUpIcon.tsx";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
@@ -17,7 +17,7 @@ import ICYMIStore from "../../ICYMIStore.tsx";
 require = fn;
 function UploadPlaceholder() {
   let obj = { style: closure_13(false).uploadContainer, children: null };
-  obj = { source: _modDef11245, size: native.IconSizes.SMALL };
+  obj = { source: _modDef11250, size: native.IconSizes.SMALL };
   const items = [React6(native.Icon, obj)];
   obj = { variant: "text-md/normal", color: "text-strong", children: null };
   const intl = util.intl;
@@ -37,7 +37,7 @@ let closure_12 = createStyles.createStyles((backgroundColor) => {
   obj.background = obj;
   return obj;
 });
-const createICYMIStyles = fn(16452);
+const createICYMIStyles = fn(16455);
 let closure_13 = createICYMIStyles.createICYMIStyles((gap, arg1) => {
   let num = 56;
   if (!arg1) {

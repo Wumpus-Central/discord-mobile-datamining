@@ -17,10 +17,10 @@ obj = {
   flexDirection: "row",
   alignItems: "center",
   justifyContent: "space-between",
-  paddingHorizontal: fn(13170).GUTTER_SIZE,
+  paddingHorizontal: fn(13174).GUTTER_SIZE,
 };
 obj.row = obj;
-const createStyles = { height: fn(13170).GUTTER_SIZE };
+const createStyles = { height: fn(13174).GUTTER_SIZE };
 obj.rowSpacer = createStyles;
 obj.nameplate = { overflow: "hidden" };
 let closure_9 = createStyles.createStyles(obj);
@@ -81,8 +81,8 @@ const memoResult1 = noop.memo((nameplate) => {
   obj = { nameplate: memo, fullOpacity: true, isSquarePreview: true, style: null };
   const items2 = [closure_9().nameplate, { borderRadius: 6 }];
   obj.style = items2;
-  obj.children = closure_6(setSelectedNameplate(8818), obj);
-  return closure_6(nameplate(13171).EditCollectiblesListItemProduct, obj);
+  obj.children = closure_6(setSelectedNameplate(8823), obj);
+  return closure_6(nameplate(13175).EditCollectiblesListItemProduct, obj);
 });
 memoResult1.displayName = "EditNameplateItem";
 let size = fn(2);

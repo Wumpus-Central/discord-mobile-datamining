@@ -10,7 +10,7 @@ import GuildMemberStore from "../../../stores/GuildMemberStore.tsx";
 import UserStore from "../../../stores/UserStore.tsx";
 
 require = fn;
-const constants = fn(17605).GuildSettingsRoleEditSections;
+const constants = fn(17608).GuildSettingsRoleEditSections;
 const AnalyticEvents = fn(1074).AnalyticEvents;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_settings/roles/GuildSettingsRolesUtils.tsx");

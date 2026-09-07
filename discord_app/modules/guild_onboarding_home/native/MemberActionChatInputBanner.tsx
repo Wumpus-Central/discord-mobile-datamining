@@ -9,11 +9,11 @@ import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import timing from "../../../design/animation/reanimated/timing/timing.tsx";
 import Pressables from "../../../design/void/Pressables/native/Pressables.tsx";
 import FastImageDefault from "../../../components_native/common/FastImage.tsx";
-import _modDef11804 from "../../../../_runtime/metro/11804__.js";
+import _modDef11809 from "../../../../_runtime/metro/11809__.js";
 import GuildOnboardingHomeTypes from "../GuildOnboardingHomeTypes.tsx";
-import _modDef12286 from "../../../../_runtime/metro/12286__.js";
+import _modDef12290 from "../../../../_runtime/metro/12290__.js";
 import MemberActionUtils from "../MemberActionUtils.tsx";
-import _modDef12289 from "../../../../_runtime/metro/12289__.js";
+import _modDef12293 from "../../../../_runtime/metro/12293__.js";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 import AccessibilityStore from "../../a11y/AccessibilityStore.tsx";
@@ -48,7 +48,7 @@ function ChannelActionEmoji(emoji) {
   let id;
   const tmp = closure_15();
   let obj = { style: tmp.emojiPlaceholder, children: null };
-  obj = { size: id(1178).Icon.Sizes.REFRESH_SMALL_16, source: _modDef11804 };
+  obj = { size: id(1178).Icon.Sizes.REFRESH_SMALL_16, source: _modDef11809 };
   obj.children = closure_12(id(1178).Icon, obj);
   const tmp6 = closure_12(View, obj);
   id = undefined;
@@ -275,7 +275,7 @@ function MemberActionChatInputBanner(channel) {
         items[1] = map1(View, obj);
         let tmp6Result = completed;
         if (completed) {
-          const obj3 = { disableColor: true, size: native.Icon.Sizes.MEDIUM, source: _modDef12289 };
+          const obj3 = { disableColor: true, size: native.Icon.Sizes.MEDIUM, source: _modDef12293 };
           tmp6Result = closure_2_12(native.Icon, obj3);
         }
         items[2] = tmp6Result;
@@ -335,7 +335,7 @@ function MemberActionChatInputBanner(channel) {
             obj.children = items1;
             items[1] = map1(View, obj);
             const obj4 = { style: closure_1.circle, children: null };
-            const obj5 = { size: native.Icon.Sizes.REFRESH_SMALL_16, style: closure_1.icon, source: _modDef12286 };
+            const obj5 = { size: native.Icon.Sizes.REFRESH_SMALL_16, style: closure_1.icon, source: _modDef12290 };
             obj4.children = closure_2_12(native.Icon, obj5);
             items[2] = closure_2_12(View, obj4);
             obj.children = items;

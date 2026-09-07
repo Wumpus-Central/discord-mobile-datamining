@@ -56,7 +56,7 @@ const View = fn(17).View;
 const GuildScheduledEventsConstants = fn(1963);
 ({ AGE_VERIFICATION_STAGE_CHANNEL_TYPES: closure_9, GuildScheduledEventEntityTypes: c10 } =
   GuildScheduledEventsConstants);
-const START_EVENT_MODAL_KEY = fn(9699).START_EVENT_MODAL_KEY;
+const START_EVENT_MODAL_KEY = fn(9704).START_EVENT_MODAL_KEY;
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
 fn(4560);

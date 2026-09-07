@@ -42,8 +42,8 @@ function IgnoredInformationTable() {
   });
 }
 const View = fn(17).View;
-const UserRemediationAction = fn(9043).UserRemediationAction;
-const RestrictionConfirmationConstants = fn(11382);
+const UserRemediationAction = fn(9048).UserRemediationAction;
+const RestrictionConfirmationConstants = fn(11387);
 ({ BLOCK_CONFIRMATION_ACTION_SHEET_KEY: closure_9, RESTRICTION_CONFIRMATION_ACTION_SHEET_HEIGHT: c10 } =
   RestrictionConfirmationConstants);
 const Constants = fn(1074);
@@ -311,7 +311,7 @@ export default noop.memo(function IgnoreConfirmationActionSheet(userId) {
         onSuccess,
         impressionName: discord_common_AnalyticsUtils.ImpressionNames.BLOCK_USER_CONFIRMATION,
       };
-      obj3.openLazy(asyncRequireImpl(11383, dependencyMap.paths), React7, obj, "replaceTopSheet");
+      obj3.openLazy(asyncRequireImpl(11388, dependencyMap.paths), React7, obj, "replaceTopSheet");
     };
     obj13.children = closure_13(tmp7(5605).TableRow, obj14);
     obj12.children = closure_13(tmp7(5687).TableRowGroup, obj13);

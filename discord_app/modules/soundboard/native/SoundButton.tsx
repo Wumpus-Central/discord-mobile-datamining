@@ -177,7 +177,7 @@ let obj = {
 };
 obj = {
   marginTop: 4,
-  height: fn(17062).SOUND_BUTTON_HEIGHT,
+  height: fn(17065).SOUND_BUTTON_HEIGHT,
   backgroundColor: nativeDefault.colors.CARD_BACKGROUND_DEFAULT,
   display: "flex",
   flexDirection: "column",

@@ -42,7 +42,7 @@ export default function UnifiedGiftModalSuccessScreen(giftBadgeProgress) {
     }
     if (tmp2) {
       const obj = { giftBadgeProgress };
-      obj.pushLazy(asyncRequireImpl(11027, dependencyMap.paths), obj, "collectibles_shop_gift_badge_modal");
+      obj.pushLazy(asyncRequireImpl(11032, dependencyMap.paths), obj, "collectibles_shop_gift_badge_modal");
     }
   }, items);
   const items1 = [onClose];

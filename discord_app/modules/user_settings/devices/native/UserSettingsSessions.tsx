@@ -1,10 +1,10 @@
 // discord_app/modules/user_settings/devices/native/UserSettingsSessions.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import UserSettingsModalActionCreatorsDefault from "../../../../actions/UserSettingsModalActionCreators.tsx";
-import _modDef10064 from "../../../../../_runtime/metro/10064__.js";
-import _modDef12264 from "../../../../../_runtime/metro/12264__.js";
+import _modDef10069 from "../../../../../_runtime/metro/10069__.js";
+import _modDef12268 from "../../../../../_runtime/metro/12268__.js";
 import AuthSessionsActionCreators from "../../../auth_sessions/AuthSessionsActionCreators.tsx";
-import _modDef14950 from "../../../../../_runtime/metro/14950__.js";
+import _modDef14953 from "../../../../../_runtime/metro/14953__.js";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import UserStore from "../../../../stores/UserStore.tsx";
@@ -14,7 +14,7 @@ const _modDef6992 = tmp10(6992);
 require = fn;
 function UserSettingsSessions() {
   const tmp = closure_13();
-  let obj = otherSessions(14671);
+  let obj = otherSessions(14674);
   let authSessions = obj.useAuthSessions();
   ({ currentSession, otherSessions } = authSessions);
   let obj1 = otherSessions(504);
@@ -129,22 +129,22 @@ function SessionInfo(session) {
         if ("ios" !== trimmed) {
           if ("android" !== trimmed) {
             if ("horizon os" === trimmed) {
-              let obj = { text: os, iconSource: _modDef10064, IconComponent: session(14951).VrHeadsetIcon };
+              let obj = { text: os, iconSource: _modDef10069, IconComponent: session(14954).VrHeadsetIcon };
               let tmp9 = session;
             } else {
-              obj = { text: os, iconSource: _modDef14950, IconComponent: session(8879).ScreenIcon };
+              obj = { text: os, iconSource: _modDef14953, IconComponent: session(8884).ScreenIcon };
               tmp9 = session;
             }
           }
         }
-        obj = { text: os, iconSource: _modDef10064, IconComponent: session(6960).MobilePhoneIcon };
+        obj = { text: os, iconSource: _modDef10069, IconComponent: session(6960).MobilePhoneIcon };
         tmp9 = session;
       }
       let formatDateResult = null;
       ({ text, iconSource, IconComponent } = obj);
       if (!current) {
-        formatDateResult = tmp9(14671).formatDate(session.approx_last_used_time);
-        const tmp9Result = tmp9(14671);
+        formatDateResult = tmp9(14674).formatDate(session.approx_last_used_time);
+        const tmp9Result = tmp9(14674);
       }
       const items = [text, platform];
       const found = items.filter(tmp9(1369).isNotNullish);
@@ -225,8 +225,8 @@ function SessionInfo(session) {
   const obj16 = { text: null, iconSource: null, IconComponent: null };
   const intl = session(1114).intl;
   obj16.text = intl.string(session(1114).t.cDHCNY);
-  obj16.iconSource = _modDef14950;
-  obj16.IconComponent = session(8879).ScreenIcon;
+  obj16.iconSource = _modDef14953;
+  obj16.IconComponent = session(8884).ScreenIcon;
   tmp9 = session;
   obj = obj16;
 }
@@ -234,7 +234,7 @@ function UnknownLegacySessionsInfo() {
   let obj = require("useNavigation");
   _require = obj.useNavigation();
   obj = { icon: null, label: null, subLabel: null };
-  obj = { variant: "translucent", source: _modDef12264 };
+  obj = { variant: "translucent", source: _modDef12268 };
   obj.icon = closure_10(require("TableRow").TableRow.Icon, obj);
   const intl = require("util").intl;
   obj.label = intl.string(require("util").t.iUa0sn);

@@ -42,7 +42,7 @@ function RestrictedUser(guildId) {
     const obj2 = { style: null, children: null };
     const items3 = [tmp.iconContainer];
     obj2.style = items3;
-    const obj3 = { style: tmp.icon, source: user(8619), color: user(576).unsafe_rawColors.WHITE };
+    const obj3 = { style: tmp.icon, source: user(8624), color: user(576).unsafe_rawColors.WHITE };
     obj2.children = closure_9(native.Icon, obj3);
     speaker = closure_9(View, obj2);
   }
@@ -225,9 +225,9 @@ export default function StageBlockedUsersActionSheet(channel) {
   const tmp = closure_11();
   const tmp2 = items1(noop.useState(0), 2);
   dependencyMap = tmp2[1];
-  let obj = channel(8620);
+  let obj = channel(8625);
   const stageBlockedUsers = obj.useStageBlockedUsers(channel.id);
-  let obj1 = channel(8620);
+  let obj1 = channel(8625);
   const stageIgnoredUsers = obj1.useStageIgnoredUsers(channel.id);
   const callback = noop.useCallback((nativeEvent) => {
     dependencyMap(nativeEvent.nativeEvent.layout.height);

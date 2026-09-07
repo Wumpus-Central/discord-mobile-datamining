@@ -36,7 +36,7 @@ function DemoActionSheet() {
   let tmp14Result = first;
   if (first) {
     obj = { onPress: NOOP, label: tmp12 };
-    tmp14Result = React5(tmp15(9718).ActionSheetHeaderPressableText, obj);
+    tmp14Result = React5(tmp15(9723).ActionSheetHeaderPressableText, obj);
   }
   obj.leading = tmp14Result;
   tmp14Result = tmp2;

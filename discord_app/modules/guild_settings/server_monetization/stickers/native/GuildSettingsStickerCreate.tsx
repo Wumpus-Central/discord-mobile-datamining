@@ -539,7 +539,7 @@ export default noop.forwardRef((stickerId, arg1) => {
     obj14.style = tmp.stickerPreviewImage;
     tmp32Result = tmp32(c6, obj14);
   } else {
-    tmp32Result = tmp32(tmp31(17581).StickerPlusIcon, { size: "lg" });
+    tmp32Result = tmp32(tmp31(17584).StickerPlusIcon, { size: "lg" });
   }
   obj12.children = tmp32Result;
   items4[1] = onPressEmoji(stickerId(5123).PressableHighlight, obj12);
@@ -573,7 +573,7 @@ export default noop.forwardRef((stickerId, arg1) => {
     tmp32Result = tmp32(EmojiDefault, obj18);
     const tmp14Result1 = EmojiDefault;
   } else {
-    tmp32Result = tmp32(tmp31(8757).ReactionIcon, { size: "md", color: "text-subtle" });
+    tmp32Result = tmp32(tmp31(8762).ReactionIcon, { size: "md", color: "text-subtle" });
   }
   const items5 = [tmp32Result];
   if (null != first1) {

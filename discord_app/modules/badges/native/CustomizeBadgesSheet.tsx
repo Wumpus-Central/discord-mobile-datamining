@@ -190,8 +190,8 @@ let obj6 = {
   paddingVertical: nativeDefault.space.PX_32,
 };
 getSlotOffset.__closure = {
-  BADGE_GRID_COLUMNS: fn(14621).BADGE_GRID_COLUMNS,
-  BADGE_GRID_GAP: fn(14621).BADGE_GRID_GAP,
+  BADGE_GRID_COLUMNS: fn(14624).BADGE_GRID_COLUMNS,
+  BADGE_GRID_GAP: fn(14624).BADGE_GRID_GAP,
 };
 getSlotOffset.__workletHash = 8647997879684;
 getSlotOffset.__initData = {

@@ -300,7 +300,7 @@ export default function GuildSettingsModalIntegrationPlatform(platformType) {
     items2[1] = closure_11(tmp(4556).Text, obj6);
     obj3.children = items2;
     obj2.children = closure_12(tmp(4973).Stack, obj3);
-    const items3 = [closure_11(tmp(8593).Form, obj2), closure_11(tmp(7040).NavScrim, {})];
+    const items3 = [closure_11(tmp(8598).Form, obj2), closure_11(tmp(7040).NavScrim, {})];
     obj5.children = items3;
     return closure_12(closure_13, obj5);
   }

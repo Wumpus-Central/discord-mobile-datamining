@@ -5,7 +5,7 @@ import useAnalyticsLocationsDefault from "../../../app_analytics/useAnalyticsLoc
 import showUserProfileActionSheetDefault from "../../../user_profile/native/showUserProfileActionSheet.tsx";
 import Form from "../../../../design/void/Form/native/index.tsx";
 import instant_invite_InstantInviteUtils from "../../../instant_invite/native/InstantInviteUtils.tsx";
-import _modDef10031 from "../../../../../_runtime/metro/10031__.js";
+import _modDef10036 from "../../../../../_runtime/metro/10036__.js";
 import openGroupDMAddMembersDefault from "../../../group_dm/native/openGroupDMAddMembers.tsx";
 import GuildEventVoiceBannerDefault from "../../../guild_scheduled_events/native/components/GuildEventVoiceBanner.tsx";
 import VoiceMemberUser from "VoiceMemberUser.tsx";
@@ -63,7 +63,7 @@ function extractKey(id) {
 function VoiceSectionRow(arg0) {
   ({ item, isActionSheet } = arg0);
   ({ channelId, onPressUser } = arg0);
-  let obj = isActionSheet(9619);
+  let obj = isActionSheet(9624);
   importDefault = obj.useAnalyticsContext();
   const analyticsLocations = useAnalyticsLocationsDefault().analyticsLocations;
   if (tmp3) {
@@ -153,13 +153,13 @@ function VoiceSectionRow(arg0) {
       },
       isActionSheet,
     };
-    return closure_21(tmp2(13785), obj);
+    return closure_21(tmp2(13788), obj);
   } else {
     obj = {};
     const merged = Object.assign(item);
     obj.onPress = onPressUser;
     obj.isActionSheet = isActionSheet;
-    return closure_21(tmp2(13786), obj);
+    return closure_21(tmp2(13789), obj);
   }
   tmp3 = undefined !== item.url && undefined !== item.applicationId;
 }
@@ -196,9 +196,9 @@ let closure_26 = noop.memo((channel) => {
       obj = { accessibilityLabel: null, accessibilityHidden: true, source: null, size: null };
       const intl = tmp4(1114).intl;
       obj.accessibilityLabel = intl.string(tmp4(1114).t["6Qgrev"]);
-      obj.source = _modDef10031;
-      obj.size = tmp4(13466).CircularIconButton.Sizes.MEDIUM_32;
-      obj.leading = closure_21(tmp4(13466).CircularIconButton, obj);
+      obj.source = _modDef10036;
+      obj.size = tmp4(13470).CircularIconButton.Sizes.MEDIUM_32;
+      obj.leading = closure_21(tmp4(13470).CircularIconButton, obj);
       const intl2 = tmp4(1114).intl;
       obj.label = intl2.string(tmp4(1114).t["6Qgrev"]);
       obj.onPress = function onPress() {
@@ -209,7 +209,7 @@ let closure_26 = noop.memo((channel) => {
           const result = obj.showInstantInviteActionSheet(channel, obj);
         }
       };
-      items[1] = closure_21(tmp4(8593).FormRow, obj);
+      items[1] = closure_21(tmp4(8598).FormRow, obj);
       obj.children = items;
       tmp7 = closure_22(noop.Fragment, obj);
     }
@@ -401,7 +401,7 @@ export default noop.forwardRef(function VoiceMemberList(channel, ref) {
               return sum;
             } else {
               if (tmp) {
-                tmp4 = tmp4(13785);
+                tmp4 = tmp4(13788);
                 calculateActivityRowHeight = tmp4.calculateActivityRowHeight;
                 let result = calculateActivityRowHeight(closure_4);
               } else {

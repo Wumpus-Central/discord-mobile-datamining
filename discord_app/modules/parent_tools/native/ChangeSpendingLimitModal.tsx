@@ -143,13 +143,13 @@ function ChangeSpendingLimitScreen(teenId) {
     items4[1] = closure_6(tmp2(4975).Button, obj11);
     obj10.children = items4;
     obj9.children = closure_7(tmp2(5433).ButtonGroup, obj10);
-    items3[1] = closure_6(tmp2(11926).ModalFooter, obj9);
+    items3[1] = closure_6(tmp2(11931).ModalFooter, obj9);
     obj8.children = items3;
     return closure_7(tmp2(8421).ModalScreen, obj8);
   } else if (isOverspending) {
     const obj12 = { style: formatToPlainStringResult.warningRow, children: null };
     const obj13 = { size: "xs", color: tmp10(576).colors.ICON_FEEDBACK_WARNING };
-    const items5 = [closure_6(tmp2(8588).WarningIcon, obj13)];
+    const items5 = [closure_6(tmp2(8593).WarningIcon, obj13)];
     const obj14 = { variant: "text-sm/normal", style: formatToPlainStringResult.warningText, children: null };
     const intl6 = tmp2(1114).intl;
     const obj15 = { amount: formatPriceResult, date: renewalDate };
@@ -211,5 +211,5 @@ export default function ChangeSpendingLimitModal(teenId) {
   let obj = { initialRouteName: "CHANGE_SPENDING_LIMIT", screens: memo, headerBackTitle: null };
   let intl = teenId(1114).intl;
   obj.headerBackTitle = intl.string(teenId(1114).t["13/7kX"]);
-  return closure_6(teenId(11928).Modal, obj);
+  return closure_6(teenId(11933).Modal, obj);
 }

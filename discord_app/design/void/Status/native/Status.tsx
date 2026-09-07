@@ -3,13 +3,13 @@ import nativeDefault from "../../../../../discord_common/js/packages/tokens/nati
 import spring from "../../../animation/reanimated/spring/spring.tsx";
 import Status_StatusUtils from "StatusUtils.tsx";
 import getStatusContainerStyleDefault from "getStatusContainerStyle.tsx";
-import _modDef14106 from "../../../../../_runtime/metro/14106__.js";
-import _modDef14107 from "../../../../../_runtime/metro/14107__.js";
-import _modDef14108 from "../../../../../_runtime/metro/14108__.js";
 import _modDef14109 from "../../../../../_runtime/metro/14109__.js";
 import _modDef14110 from "../../../../../_runtime/metro/14110__.js";
 import _modDef14111 from "../../../../../_runtime/metro/14111__.js";
 import _modDef14112 from "../../../../../_runtime/metro/14112__.js";
+import _modDef14113 from "../../../../../_runtime/metro/14113__.js";
+import _modDef14114 from "../../../../../_runtime/metro/14114__.js";
+import _modDef14115 from "../../../../../_runtime/metro/14115__.js";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
@@ -18,7 +18,7 @@ get_ActivityIndicator = fn(17);
 ({ Image: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
 const STATUS_PADDING = fn(1179).STATUS_PADDING;
 const StatusTypes = fn(1074).StatusTypes;
-const ChannelAnimationConstants = fn(13029);
+const ChannelAnimationConstants = fn(13033);
 ({ TYPING_ENTERING: closure_8, TYPING_EXITING: closure_9, CHANNEL_SPRING_CONFIG: c10 } = ChannelAnimationConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
@@ -93,23 +93,23 @@ export default function Status(isMobileOnline) {
   obj.style = items;
   obj = { style: closure_13().statusIcon, source: null, resizeMode: "stretch" };
   if (streaming) {
-    let tmp4Result = _modDef14106;
+    let tmp4Result = _modDef14109;
   } else if (flag2) {
-    tmp4Result = _modDef14107;
-  } else if (flag) {
-    tmp4Result = _modDef14108;
-  } else if (StatusTypes.IDLE === status) {
-    tmp4Result = _modDef14109;
-  } else if (StatusTypes.DND === status) {
     tmp4Result = _modDef14110;
+  } else if (flag) {
+    tmp4Result = _modDef14111;
+  } else if (StatusTypes.IDLE === status) {
+    tmp4Result = _modDef14112;
+  } else if (StatusTypes.DND === status) {
+    tmp4Result = _modDef14113;
   } else {
     if (StatusTypes.OFFLINE !== status) {
       if (StatusTypes.INVISIBLE !== status) {
         const ONLINE = StatusTypes.ONLINE;
-        tmp4Result = _modDef14112;
+        tmp4Result = _modDef14115;
       }
     }
-    tmp4Result = _modDef14111;
+    tmp4Result = _modDef14114;
   }
   obj.source = tmp4Result;
   obj.children = closure_1_11(React4, obj);

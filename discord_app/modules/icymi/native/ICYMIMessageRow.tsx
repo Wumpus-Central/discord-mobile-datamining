@@ -144,7 +144,7 @@ function ReplyMessageContent(message) {
   ({ channel, guild } = message);
   const tmp = closure_18();
   let obj = noop;
-  const context = noop.useContext(message(16453).ICYMIContext);
+  const context = noop.useContext(message(16456).ICYMIContext);
   let obj1 = message(504);
   const items = [UserStore];
   const stateFromStores = obj1.useStateFromStores(items, () => UserStore.getUser(message.author.id));
@@ -160,7 +160,7 @@ function ReplyMessageContent(message) {
   if (colorString == null) {
     colorString = closure_12;
   }
-  const width = obj.useContext(tmp2(16453).ICYMIContext).width;
+  const width = obj.useContext(tmp2(16456).ICYMIContext).width;
   let tmp8 = null;
   if (null != stateFromStores) {
     obj = { style: tmp.replyPreview, children: null };
@@ -185,7 +185,7 @@ function ReplyMessageContent(message) {
     obj7.value = obj8;
     const obj9 = { message, channel, guild, nested: true };
     obj7.children = closure_14(MessageRowContent, obj9);
-    items4[1] = closure_14(tmp2(16453).ICYMIContext.Provider, obj7);
+    items4[1] = closure_14(tmp2(16456).ICYMIContext.Provider, obj7);
     obj3.children = items4;
     items3[1] = closure_15(View, obj3);
     obj1.children = items3;
@@ -197,14 +197,14 @@ function ReplyMessageContent(message) {
   return tmp8;
 }
 const View = fn(17).View;
-const ITEM_PADDING = fn(16490).ITEM_PADDING;
+const ITEM_PADDING = fn(16493).ITEM_PADDING;
 const Constants = fn(1074);
 ({ DEFAULT_ROLE_COLOR_HEX: closure_12, MessageEmbedTypes: map1 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
 const PX_12 = nativeDefault.space.PX_12;
 const PX_8 = nativeDefault.space.PX_8;
-const createICYMIStyles = fn(16452);
+const createICYMIStyles = fn(16455);
 const collapsedCategories = createICYMIStyles.createICYMIStyles((paddingLeft) => {
   let obj = {
     pressable: null,

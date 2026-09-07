@@ -5,7 +5,7 @@ import native from "../../../design/void/native.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import FastestListPropsPlaceholder from "../../fastest_list/props/FastestListPropsPlaceholder.tsx";
 import StickerPickerListRowDefault from "StickerPickerListRow.tsx";
-import _modDef10415 from "../../../../_runtime/metro/10415__.js";
+import _modDef10420 from "../../../../_runtime/metro/10420__.js";
 import useStickerPickerListData from "useStickerPickerListData.tsx";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
@@ -13,8 +13,8 @@ import StickersStore from "../StickersStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-const useStickerPickerStore = fn(10390).useStickerPickerStore;
-const StickerPickerConstants = fn(10273);
+const useStickerPickerStore = fn(10395).useStickerPickerStore;
+const StickerPickerConstants = fn(10278);
 ({
   STICKER_SCROLL_LOAD_DELAY_MS: closure_8,
   STICKER_SCROLL_LOAD_DELAY_AFTER_HEIGHT_CHANGE_MS: closure_9,
@@ -50,7 +50,7 @@ let closure_14 = noop.memo((height) => {
   let obj = { style: null, children: null };
   const items = [tmp.nsfwContainer, { height: height.height }];
   obj.style = items;
-  obj = { source: _modDef10415, size: native.Icon.Sizes.SMALL };
+  obj = { source: _modDef10420, size: native.Icon.Sizes.SMALL };
   const items1 = [closure_1_11(native.Icon, obj)];
   obj = { style: tmp.nsfwText, variant: "text-sm/normal", color: "interactive-text-active", children: null };
   const intl = util.intl;

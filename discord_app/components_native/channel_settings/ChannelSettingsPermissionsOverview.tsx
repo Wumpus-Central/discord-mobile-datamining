@@ -72,14 +72,14 @@ function ChannelPermissionSyncModule(channel) {
               const obj8 = PermissionUtilsAll;
               const syncedPermissionOverwrites = obj8.getSyncedPermissionOverwrites(
                 tmp5,
-                tmp2(11610).getAppChannelBotUserId(tmp2),
+                tmp2(11615).getAppChannelBotUserId(tmp2),
               );
               closure_128_0 = syncedPermissionOverwrites;
-              const obj9 = tmp2(11610);
+              const obj9 = tmp2(11615);
               c2 = 1;
               c3 = 1;
               const obj1 = {
-                value: tmp2(9740).checkChattableChannelThresholdMetAfterChannelPermissionDeny(
+                value: tmp2(9745).checkChattableChannelThresholdMetAfterChannelPermissionDeny(
                   tmp2,
                   syncedPermissionOverwrites[guild_id].deny,
                   syncedPermissionOverwrites[guild_id].allow,
@@ -97,7 +97,7 @@ function ChannelPermissionSyncModule(channel) {
             return obj2;
           } else {
             if (value) {
-              obj = tmp2(8625);
+              obj = tmp2(8630);
               const obj3 = { permissionOverwrites: null };
               obj2 = category(12);
               obj3.permissionOverwrites = obj2.values(closure_128_0);
@@ -138,7 +138,7 @@ function ChannelPermissionSyncModule(channel) {
     formatToPlainStringResult = formatToPlainString(t.OIhm0M, obj1);
   }
   let obj2 = { title: formatToPlainStringResult, hasIcons: true, children: null };
-  let obj3 = { icon: closure_16(channel(15158).RefreshIcon, {}), label: null, onPress: null };
+  let obj3 = { icon: closure_16(channel(15161).RefreshIcon, {}), label: null, onPress: null };
   let intl2 = tmp3(1114).intl;
   obj3.label = intl2.string(channel(1114).t.NVwuHq);
   obj3.onPress = callback;
@@ -169,14 +169,14 @@ function AddPermission(isEditing) {
     obj = { title: null, hasIcons: true, children: null };
     const intl = tmp2(1114).intl;
     obj.title = intl.string(tmp2(1114).t.vPHdP5);
-    const obj1 = { icon: closure_16(tmp2(12753).PlusMediumIcon, {}), label: null, onPress: null };
+    const obj1 = { icon: closure_16(tmp2(12757).PlusMediumIcon, {}), label: null, onPress: null };
     const intl2 = tmp2(1114).intl;
     obj1.label = intl2.string(tmp2(1114).t.fVWxvT);
     obj1.onPress = function onPress() {
       closure_0.push(constants2.NEW_PERMISSION, { type: constants.ROLE });
     };
     const items = [closure_16(tmp2(5605).TableRow, obj1)];
-    const obj2 = { icon: closure_16(tmp2(12753).PlusMediumIcon, {}), label: null, onPress: null };
+    const obj2 = { icon: closure_16(tmp2(12757).PlusMediumIcon, {}), label: null, onPress: null };
     const intl3 = tmp2(1114).intl;
     obj2.label = intl3.string(tmp2(1114).t.riesLt);
     obj2.onPress = function onPress() {

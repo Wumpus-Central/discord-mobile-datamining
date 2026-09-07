@@ -34,8 +34,8 @@ function HubItem(arg0) {
     channelInfo: null,
   };
   const tmp = closure_9();
-  obj.name = React5(tmp5(12379).BaseChannelName, { name: label, mode: DEFAULT });
-  obj.icon = React5(tmp5(12379).BaseChannelIcon, { mode: DEFAULT, IconComponent });
+  obj.name = React5(tmp5(12383).BaseChannelName, { name: label, mode: DEFAULT });
+  obj.icon = React5(tmp5(12383).BaseChannelIcon, { mode: DEFAULT, IconComponent });
   let tmp6Result = null;
   if (null != unreadCount) {
     obj = { value: unreadCount };
@@ -51,7 +51,7 @@ const jsxProd = fn(21);
 fn(4560);
 let createStyles = { container: null, row: null };
 createStyles = {
-  marginVertical: fn(10118).CHANNEL_MARGIN_VERTICAL,
+  marginVertical: fn(10123).CHANNEL_MARGIN_VERTICAL,
   marginHorizontal: 8,
   borderRadius: nativeDefault.radii.md,
 };
@@ -79,7 +79,7 @@ export default function HubSidebar(guild) {
     }
     return tmp2;
   });
-  guild(16212);
+  guild(16215);
   let tmp9Result = null;
   if (null != stateFromStores) {
     let row = null;
@@ -88,10 +88,10 @@ export default function HubSidebar(guild) {
     }
     obj = { style: row, children: null };
     obj = { guild };
-    const items4 = [closure_7(stateFromStores(16213), obj), , ,];
+    const items4 = [closure_7(stateFromStores(16216), obj), , ,];
     obj1 = {
       active: stateFromStores1,
-      IconComponent: tmp(15593).CompassIcon,
+      IconComponent: tmp(15596).CompassIcon,
       label: null,
       handleItemClick: null,
       unreadCount: null,
@@ -103,7 +103,7 @@ export default function HubSidebar(guild) {
     };
     obj1.unreadCount = tmp7;
     items4[1] = closure_7(HubItem, obj1);
-    obj2 = { IconComponent: tmp(12753).PlusMediumIcon, label: null, handleItemClick: null };
+    obj2 = { IconComponent: tmp(12757).PlusMediumIcon, label: null, handleItemClick: null };
     const intl2 = tmp(1114).intl;
     obj2.label = intl2.string(tmp(1114).t.emRpdS);
     obj2.handleItemClick = function handleItemClick() {

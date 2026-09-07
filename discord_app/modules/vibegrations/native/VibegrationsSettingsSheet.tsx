@@ -11,7 +11,7 @@ import VibegrationsProjectStore from "../stores/VibegrationsProjectStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-let VibegrationsConnectionStore = fn(16589);
+let VibegrationsConnectionStore = fn(16592);
 ({
   requestProjectRebuild: closure_8,
   sendUserMessage: closure_9,
@@ -410,7 +410,7 @@ export default function VibegrationsSettingsSheet(projectId) {
     return items;
   }, items4);
   let someResult = found1.some((item) => map.has(item));
-  const segmentedControlState = projectId(9792).useSegmentedControlState({
+  const segmentedControlState = projectId(9797).useSegmentedControlState({
     items: memo3,
     pageWidth: tmp24,
     defaultIndex: num,
@@ -553,9 +553,9 @@ export default function VibegrationsSettingsSheet(projectId) {
                     if (application_id == null) {
                       _null = null;
                     }
-                    _null2(13254)(_null);
+                    _null2(13258)(_null);
                     let prop;
-                    const tmp19 = _null2(13254);
+                    const tmp19 = _null2(13258);
                     if (project2 != null) {
                       prop = project2.preview_application_id;
                     }
@@ -563,8 +563,8 @@ export default function VibegrationsSettingsSheet(projectId) {
                     if (prop == null) {
                       _null2 = null;
                     }
-                    _null2(13254)(_null2);
-                    const tmp27 = _null2(13254);
+                    _null2(13258)(_null2);
+                    const tmp27 = _null2(13258);
                   }
                 }
                 obj = _null2(4527);
@@ -654,7 +654,7 @@ export default function VibegrationsSettingsSheet(projectId) {
     if (tmp19) {
       const obj6 = { onLayout: callback, children: null };
       const obj7 = { state: segmentedControlState };
-      obj6.children = tmp32(tmp4(9793).SegmentedControl, obj7);
+      obj6.children = tmp32(tmp4(9798).SegmentedControl, obj7);
       tmp32Result2 = tmp32(tmp34, obj6);
     }
     const items9 = [tmp32Result2];

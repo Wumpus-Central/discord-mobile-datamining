@@ -33,7 +33,7 @@ function GuildPill(guild) {
 const View = fn(17).View;
 const Constants = fn(1074);
 ({ HelpdeskArticles: closure_8, HighlightSettings: closure_9 } = Constants);
-const FeedbackRating = fn(11626).FeedbackRating;
+const FeedbackRating = fn(11631).FeedbackRating;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
 fn(4560);

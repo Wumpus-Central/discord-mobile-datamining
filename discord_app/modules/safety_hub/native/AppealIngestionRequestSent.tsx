@@ -1,6 +1,6 @@
 // discord_app/modules/safety_hub/native/AppealIngestionRequestSent.tsx
 import AppealIngestionExternalLinkDefault from "AppealIngestionExternalLink.tsx";
-import _modDef11906 from "../../../../_runtime/metro/11906__.js";
+import _modDef11911 from "../../../../_runtime/metro/11911__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 const require = fn;
@@ -30,7 +30,7 @@ export default function AppealIngestionRequestSent() {
   obj = { style: tmp.container, children: null };
   const stringResult1 = intl2.string(require("util").t.Qdx8AP);
   const items = [
-    closure_7(closure_4, { source: _modDef11906, style: tmp.checkboxPng }),
+    closure_7(closure_4, { source: _modDef11911, style: tmp.checkboxPng }),
     closure_7(require("AppealIngestionModal").AppealIngestionModalHeader, {
       headerText: stringResult,
       subHeaderText: stringResult1,
@@ -48,7 +48,7 @@ export default function AppealIngestionRequestSent() {
   obj2.children = intl3.string(require("util").t["9BRc1N"]);
   items[2] = closure_7(require("Text/Text").Text, obj2);
   const obj3 = { text: null, url: null, onPress: null };
-  const obj1 = { source: _modDef11906, style: tmp.checkboxPng };
+  const obj1 = { source: _modDef11911, style: tmp.checkboxPng };
   const intl4 = require("util").intl;
   obj3.text = intl4.string(require("util").t.PxL38B);
   obj3.url = constants.COMMUNITY_GUIDELINES;

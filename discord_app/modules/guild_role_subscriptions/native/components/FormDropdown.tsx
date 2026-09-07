@@ -2,15 +2,15 @@
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import native from "../../../../design/void/native.tsx";
 import TouchableHitBoxDefault from "../../../../design/void/TouchableHitBox/native/TouchableHitBox.tsx";
-import _modDef9939 from "../../../../../_runtime/metro/09939__.js";
-import _modDef13897 from "../../../../../_runtime/metro/13897__.js";
+import _modDef9944 from "../../../../../_runtime/metro/09944__.js";
+import _modDef13900 from "../../../../../_runtime/metro/13900__.js";
 import FormStylesDefault from "FormStyles.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import TextStyles from "../../../rebrand/native/TextStyles.tsx";
 
 require = fn;
 function LockedIcon() {
-  return React3(native.Icon, { size: native.Icon.Sizes.MEDIUM, source: _modDef13897 });
+  return React3(native.Icon, { size: native.Icon.Sizes.MEDIUM, source: _modDef13900 });
 }
 function DropdownIcon() {
   let obj = { style: null, size: null, source: null };
@@ -19,7 +19,7 @@ function DropdownIcon() {
   obj.transform = items;
   obj.style = obj;
   obj.size = native.Icon.Sizes.MEDIUM;
-  obj.source = _modDef9939;
+  obj.source = _modDef9944;
   return React3(native.Icon, obj);
 }
 const Fonts = fn(1074).Fonts;

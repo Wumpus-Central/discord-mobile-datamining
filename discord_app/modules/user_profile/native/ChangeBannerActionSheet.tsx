@@ -69,7 +69,7 @@ function ChangeBannerColorRow(user) {
   obj1.text = intl.string(require("util").t.xzNfPz);
   obj.label = closure_9(require("Form").FormLabel, obj1);
   const obj2 = { style: tmp.selectedColor, children: null };
-  const items2 = [closure_9(pendingAccentColor(14597), { style: tmp.bannerColor, color: pendingAccentColor }), ,];
+  const items2 = [closure_9(pendingAccentColor(14600), { style: tmp.bannerColor, color: pendingAccentColor }), ,];
   const obj4 = {
     style: tmp.selectedColorHex,
     variant: "text-md/medium",
@@ -84,7 +84,7 @@ function ChangeBannerColorRow(user) {
   items2[2] = closure_9(require("native").Icon, {
     style: tmp.rowArrow,
     size: require("native").Icon.Sizes.CUSTOM,
-    source: pendingAccentColor(14602),
+    source: pendingAccentColor(14605),
   });
   obj2.children = items2;
   obj.trailing = closure_10(View, obj2);
@@ -200,7 +200,7 @@ export default function ChangeBannerActionSheet(isTryItOut) {
           base64 = closure_128_0.base64;
           originalMd5 = closure_128_0.originalMd5;
           if (null != base64) {
-            obj = tmp2(14593);
+            obj = tmp2(14596);
             obj3 = {
               assetOrigin: tmp2(6989).AssetOriginTypes.NEW_ASSET,
               imageUri: base64,
@@ -274,7 +274,7 @@ export default function ChangeBannerActionSheet(isTryItOut) {
   if (!flag) {
     const obj6 = { style: tmp.upsellButton, children: null };
     const obj7 = { analyticsObject: constants.EDIT_PROFILE_BANNER };
-    obj6.children = closure_9(tmp2(14594), obj7);
+    obj6.children = closure_9(tmp2(14597), obj7);
     tmp4Result2 = closure_9(View, obj6);
   }
   items3[1] = tmp4Result2;

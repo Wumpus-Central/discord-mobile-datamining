@@ -15,7 +15,7 @@ const jsx = fn(21).jsx;
 fn(4560);
 let createStyles = { container: null, channelInfoContainer: null };
 createStyles = {
-  marginVertical: fn(10118).CHANNEL_MARGIN_VERTICAL,
+  marginVertical: fn(10123).CHANNEL_MARGIN_VERTICAL,
   marginHorizontal: 8,
   borderRadius: nativeDefault.radii.md,
 };
@@ -49,11 +49,11 @@ export const GuildRolesAndChannelsRow = function GuildRolesAndChannelsRow(guild)
   );
   const callback = noop.useCallback(() => {
     const obj = { guildId: id };
-    obj.pushLazy(asyncRequireImpl(11549, dependencyMap.paths), obj, closure_7);
+    obj.pushLazy(asyncRequireImpl(11554, dependencyMap.paths), obj, closure_7);
   }, items2);
-  let SELECTED = guild(12379).ChannelModes.DEFAULT;
+  let SELECTED = guild(12383).ChannelModes.DEFAULT;
   if (selected) {
-    SELECTED = tmp5(12379).ChannelModes.SELECTED;
+    SELECTED = tmp5(12383).ChannelModes.SELECTED;
   }
   let tmp10 = !result;
   if (result) {
@@ -64,8 +64,8 @@ export const GuildRolesAndChannelsRow = function GuildRolesAndChannelsRow(guild)
   }
   let tmp11 = null;
   if (tmp10) {
-    obj = { style: tmp.channelInfoContainer, children: jsx(tmp5(12291).NewBadge, {}) };
-    tmp11 = <View style={tmp.channelInfoContainer}>{jsx(tmp5(12291).NewBadge, {})}</View>;
+    obj = { style: tmp.channelInfoContainer, children: jsx(tmp5(12295).NewBadge, {}) };
+    tmp11 = <View style={tmp.channelInfoContainer}>{jsx(tmp5(12295).NewBadge, {})}</View>;
   }
   obj = {
     onPress: callback,
@@ -98,14 +98,14 @@ export const GuildRolesAndChannelsRow = function GuildRolesAndChannelsRow(guild)
   } else {
     string2Result = string2(t2.et6wav);
   }
-  obj.name = jsx(guild(12379).BaseChannelName, { name: string2Result, mode: SELECTED });
-  obj1 = { mode: SELECTED, IconComponent: tmp5(13843).ChannelListMagnifyingGlassIcon };
-  obj.icon = jsx(guild(12379).BaseChannelIcon, {
+  obj.name = jsx(guild(12383).BaseChannelName, { name: string2Result, mode: SELECTED });
+  obj1 = { mode: SELECTED, IconComponent: tmp5(13846).ChannelListMagnifyingGlassIcon };
+  obj.icon = jsx(guild(12383).BaseChannelIcon, {
     mode: SELECTED,
-    IconComponent: tmp5(13843).ChannelListMagnifyingGlassIcon,
+    IconComponent: tmp5(13846).ChannelListMagnifyingGlassIcon,
   });
   obj.channelInfo = tmp11;
-  return jsx(id(12379), {
+  return jsx(id(12383), {
     onPress: callback,
     style: tmp.container,
     accessible: true,

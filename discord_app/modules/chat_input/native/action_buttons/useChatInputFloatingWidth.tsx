@@ -4,7 +4,7 @@ import timing from "../../../../design/animation/reanimated/timing/timing.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-let closure_3 = fn(11962).CHAT_INPUT_FLOATING_SLIDE_TIMING_CONFIG;
+let closure_3 = fn(11966).CHAT_INPUT_FLOATING_SLIDE_TIMING_CONFIG;
 let closure_4 = {
   code: "function useChatInputFloatingWidthTsx1(){const{collapsedWidth,expandedWidth,progress}=this.__closure;return{width:collapsedWidth+(expandedWidth-collapsedWidth)*progress.get()};}",
 };

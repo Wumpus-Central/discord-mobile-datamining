@@ -94,7 +94,7 @@ prototype["handleSetRegion"] = function handleSetRegion(arg0) {
     c0 = null;
     tmp = null;
   }
-  self(8625).updateChannel({ rtcRegion: tmp });
+  self(8630).updateChannel({ rtcRegion: tmp });
   self.setState({ submitting: true }, () => {
     const obj = { rtcRegion };
     obj.saveChannel(self.props.channel.id, obj);

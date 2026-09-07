@@ -13,7 +13,7 @@ export default {
     guildId = guildId.guildId;
     let obj = {
       importer() {
-        return asyncRequireImpl(10299, dependencyMap.paths).then((result) => {
+        return asyncRequireImpl(10304, dependencyMap.paths).then((result) => {
           closure_0 = result.default;
           return (arg0) => {
             const obj = {};

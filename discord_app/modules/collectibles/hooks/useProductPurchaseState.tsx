@@ -1,6 +1,6 @@
 // discord_app/modules/collectibles/hooks/useProductPurchaseState.tsx
 import CollectiblesItemType from "../../../../discord_common/js/shared/shared-constants/CollectiblesItemType.tsx";
-import compactDefault from "../../../../_runtime/08843_compact.js";
+import compactDefault from "../../../../_runtime/08848_compact.js";
 import CollectiblesPurchaseStore from "../CollectiblesPurchaseStore.tsx";
 
 require = fn;

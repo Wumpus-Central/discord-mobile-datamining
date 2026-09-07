@@ -23,8 +23,8 @@ import MessagePreviewStore from "../../../stores/native/MessagePreviewStore.tsx"
 
 require = fn;
 const View = fn(17).View;
-const MAX_DESTINATION_COUNT = fn(11683).MAX_DESTINATION_COUNT;
-let UserRowModes = fn(10860).UserRowModes;
+const MAX_DESTINATION_COUNT = fn(11688).MAX_DESTINATION_COUNT;
+let UserRowModes = fn(10865).UserRowModes;
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
 fn(4560);
@@ -256,7 +256,7 @@ export default function ForwardModal(message) {
                         return closure_0(false);
                       },
                     };
-                    obj.openAlert("staff-to-non-staff-forward", ref2(forwardOptions(11686), obj));
+                    obj.openAlert("staff-to-non-staff-forward", ref2(forwardOptions(11691), obj));
                   });
                   c3 = 3;
                   c4 = 1;

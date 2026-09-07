@@ -50,7 +50,7 @@ const jsxProd = fn(21);
 fn(4560);
 let createStyles = { container: null };
 createStyles = {
-  marginVertical: fn(10118).CHANNEL_MARGIN_VERTICAL,
+  marginVertical: fn(10123).CHANNEL_MARGIN_VERTICAL,
   marginHorizontal: 8,
   borderRadius: nativeDefault.radii.md,
 };
@@ -64,7 +64,7 @@ export default function GuildPowerupsChannelRow(guildId) {
   let dismissNewBadgeIfShown;
   let obj = noop;
   const ref = noop.useRef(null);
-  const tmp5 = dismissNewBadgeIfShown(12491)(guildId);
+  const tmp5 = dismissNewBadgeIfShown(12495)(guildId);
   let indicator;
   const tmp = closure_8();
   if (tmp5 != null) {
@@ -78,13 +78,13 @@ export default function GuildPowerupsChannelRow(guildId) {
     }
     tmp8 = null != popout;
   }
-  const tmp6Result = dismissNewBadgeIfShown(12510)(guildId, tmp8);
+  const tmp6Result = dismissNewBadgeIfShown(12514)(guildId, tmp8);
   dismissNewBadgeIfShown = tmp6Result.dismissNewBadgeIfShown;
   let showUnread;
   if (tmp5 != null) {
     showUnread = tmp5.showUnread;
   }
-  const ChannelModes = guildId(12379).ChannelModes;
+  const ChannelModes = guildId(12383).ChannelModes;
   if (true === showUnread) {
     let DEFAULT = ChannelModes.UNREAD_IMPORTANT;
     let tmp14 = tmp13;
@@ -118,7 +118,7 @@ export default function GuildPowerupsChannelRow(guildId) {
     icon: null,
     channelInfo: null,
   };
-  const tmp6 = dismissNewBadgeIfShown(12510);
+  const tmp6 = dismissNewBadgeIfShown(12514);
   const intl = tmp14(1114).intl;
   obj1.accessibilityLabel = intl.string(dismissNewBadgeIfShown(2428).yv3DJJ);
   obj1.accessibilityState = { selected: false };
@@ -126,11 +126,11 @@ export default function GuildPowerupsChannelRow(guildId) {
   const intl2 = tmp14(1114).intl;
   obj2.name = intl2.string(dismissNewBadgeIfShown(2428).yv3DJJ);
   obj2.mode = DEFAULT;
-  obj1.name = closure_5(tmp14(12379).BaseChannelName, obj2);
-  const tmp3Result = dismissNewBadgeIfShown(12379);
-  obj1.icon = closure_5(tmp14(12379).BaseChannelIcon, { mode: DEFAULT, IconComponent: tmp14(16218).BoostTier2Icon });
+  obj1.name = closure_5(tmp14(12383).BaseChannelName, obj2);
+  const tmp3Result = dismissNewBadgeIfShown(12383);
+  obj1.icon = closure_5(tmp14(12383).BaseChannelIcon, { mode: DEFAULT, IconComponent: tmp14(16221).BoostTier2Icon });
   if (tmp6Result.showNewBadgeOnRow) {
-    let tmp16Result = closure_5(tmp14(12291).NewBadge, {});
+    let tmp16Result = closure_5(tmp14(12295).NewBadge, {});
   } else {
     let indicator1;
     if (tmp5 != null) {

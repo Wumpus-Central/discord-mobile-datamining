@@ -11,7 +11,7 @@ const result = size.fileFinishedImporting("modules/quests/native/QuestBottomShee
 export default function QuestBottomSheetTaskSelect(onTaskSelect) {
   onTaskSelect = onTaskSelect.onTaskSelect;
   let obj = { hasIcons: true, children: null };
-  obj = { arrow: true, icon: closure_3(onTaskSelect(8879).ScreenIcon, {}), label: null, onPress: null };
+  obj = { arrow: true, icon: closure_3(onTaskSelect(8884).ScreenIcon, {}), label: null, onPress: null };
   const intl = onTaskSelect(1114).intl;
   obj.label = intl.string(onTaskSelect(1114).t["QXc01+"]);
   obj.onPress = function onPress() {
@@ -22,7 +22,7 @@ export default function QuestBottomSheetTaskSelect(onTaskSelect) {
     return tmpResult;
   };
   const items = [closure_3(onTaskSelect(5605).TableRow, obj)];
-  obj = { arrow: true, icon: closure_3(onTaskSelect(9223).GameControllerIcon, {}), label: null, onPress: null };
+  obj = { arrow: true, icon: closure_3(onTaskSelect(9228).GameControllerIcon, {}), label: null, onPress: null };
   const intl2 = onTaskSelect(1114).intl;
   obj.label = intl2.string(onTaskSelect(1114).t["8lAfuB"]);
   obj.onPress = function onPress() {

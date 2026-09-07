@@ -10,7 +10,7 @@ import noop from "../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-const TwoFAModalSetupSections = fn(14783).TwoFAModalSetupSections;
+const TwoFAModalSetupSections = fn(14786).TwoFAModalSetupSections;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
 fn(4560);
@@ -39,21 +39,21 @@ export default function TwoFASetupModal(initialRouteName) {
       totpSecret = obj.generateTotpSecret();
       obj = {};
       obj = {
-        headerLeft: totpSecret(5624).getHeaderCloseButton(closure_1(14781).close),
+        headerLeft: totpSecret(5624).getHeaderCloseButton(closure_1(14784).close),
         headerTitle() {
-          return closure_1_6(totpSecret(14784).PageMarker, {
+          return closure_1_6(totpSecret(14787).PageMarker, {
             currentPage: dependencyMap2[constants.LANDING],
             numMarkers: Object.keys(dependencyMap2).length - 1,
           });
         },
         render() {
-          return closure_1_6(closure_1_1(14785), {});
+          return closure_1_6(closure_1_1(14788), {});
         },
       };
       obj[constants.LANDING] = obj;
       obj[constants.SCAN] = {
         headerTitle() {
-          return closure_1_6(totpSecret(14784).PageMarker, {
+          return closure_1_6(totpSecret(14787).PageMarker, {
             currentPage: dependencyMap2[constants.SCAN],
             numMarkers: Object.keys(dependencyMap2).length - 1,
           });
@@ -64,7 +64,7 @@ export default function TwoFASetupModal(initialRouteName) {
       };
       obj[constants.ENTER_CODE] = {
         headerTitle() {
-          return closure_1_6(totpSecret(14784).PageMarker, {
+          return closure_1_6(totpSecret(14787).PageMarker, {
             currentPage: dependencyMap2[constants.ENTER_CODE],
             numMarkers: Object.keys(dependencyMap2).length - 1,
           });
@@ -75,12 +75,12 @@ export default function TwoFASetupModal(initialRouteName) {
       };
       const obj1 = { headerLeft: null, headerTitle: null, render: null };
       const obj4 = totpSecret(5624);
-      obj1.headerLeft = totpSecret(5624).getHeaderCloseButton(closure_1(14781).close);
+      obj1.headerLeft = totpSecret(5624).getHeaderCloseButton(closure_1(14784).close);
       obj1.headerTitle = function headerTitle() {
         return null;
       };
       obj1.render = function render() {
-        return closure_1_6(closure_1_1(14791), {});
+        return closure_1_6(closure_1_1(14794), {});
       };
       obj[constants.SUCCESS] = obj1;
       return obj;

@@ -52,7 +52,7 @@ export default function usePowerupActiveStatus(arg0, arg1) {
         if (hasItem) {
           let INACTIVE = constants.POWERUP_ACTIVATED;
         }
-        let obj = { type: INACTIVE, powerup: skuId, sourceEntitlement: "r", sourcePowerup: "HermesInternal" };
+        let obj = { type: INACTIVE, powerup: skuId, sourceEntitlement: "r", sourcePowerup: "isArray" };
       }
       INACTIVE = constants.INACTIVE;
     } else {
@@ -99,7 +99,7 @@ export default function usePowerupActiveStatus(arg0, arg1) {
           if (tmp10 == null) {
             tmp10 = null;
           }
-          obj = { type: constants.INACTIVE, powerup: skuId, sourceEntitlement: "r", sourcePowerup: "HermesInternal" };
+          obj = { type: constants.INACTIVE, powerup: skuId, sourceEntitlement: "r", sourcePowerup: "isArray" };
           if (isActiveFromLevel) {
             const obj1 = {
               type: constants.LEVEL_ACTIVATED,
@@ -132,7 +132,7 @@ export default function usePowerupActiveStatus(arg0, arg1) {
     }
   });
   if (mapped.length <= 0) {
-    obj = { type: constants.INACTIVE, sourceEntitlement: "Array", sourcePowerup: "isArray" };
+    obj = { type: constants.INACTIVE, sourceEntitlement: "Array", sourcePowerup: "options" };
     let first = obj;
   } else {
     first = mapped[0];
@@ -172,7 +172,7 @@ export const usePowerupsActiveStatuses = function usePowerupsActiveStatuses(guil
         if (hasItem) {
           let INACTIVE = constants.POWERUP_ACTIVATED;
         }
-        let obj = { type: INACTIVE, powerup: skuId, sourceEntitlement: "r", sourcePowerup: "HermesInternal" };
+        let obj = { type: INACTIVE, powerup: skuId, sourceEntitlement: "r", sourcePowerup: "isArray" };
       }
       INACTIVE = constants.INACTIVE;
     } else {
@@ -219,7 +219,7 @@ export const usePowerupsActiveStatuses = function usePowerupsActiveStatuses(guil
           if (tmp10 == null) {
             tmp10 = null;
           }
-          obj = { type: constants.INACTIVE, powerup: skuId, sourceEntitlement: "r", sourcePowerup: "HermesInternal" };
+          obj = { type: constants.INACTIVE, powerup: skuId, sourceEntitlement: "r", sourcePowerup: "isArray" };
           if (isActiveFromLevel) {
             const obj1 = {
               type: constants.LEVEL_ACTIVATED,

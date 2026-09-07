@@ -27,7 +27,7 @@ import ChannelRTCStore from "../../../calls/ChannelRTCStore.tsx";
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, StyleSheet } = get_ActivityIndicator);
-const VoicePanelConstants = fn(12273);
+const VoicePanelConstants = fn(12277);
 ({
   UI_SHOW_HIDE_PHYSICS: closure_7,
   MODE_CHANGE_PHYSICS: closure_8,
@@ -35,9 +35,9 @@ const VoicePanelConstants = fn(12273);
   PANEL_CONTROLS_HEIGHT_PHYSICS: c10,
   VoicePanelModes: closure_11,
 } = VoicePanelConstants);
-const VoicePanelCardConstants = fn(12276);
+const VoicePanelCardConstants = fn(12280);
 ({ CALL_TILE_GUTTER: closure_12, EDGE_GUTTER: map1 } = VoicePanelCardConstants);
-const VoicePanelControlsConstants = fn(12271);
+const VoicePanelControlsConstants = fn(12275);
 ({ CONTROLS_DRAWER_HEADER_EXPANDED_SIZE: closure_14, VoicePanelControlsModes: closure_15 } =
   VoicePanelControlsConstants);
 const Constants = fn(1074);

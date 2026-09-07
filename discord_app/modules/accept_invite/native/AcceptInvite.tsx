@@ -7,7 +7,7 @@ import useWindowDimensionsDefault from "../../screen/useWindowDimensions.native.
 import useToken from "../../../design/tokens/native/useToken.tsx";
 import DeprecatedLayoutAnimation from "../../animations/native/DeprecatedLayoutAnimation.tsx";
 import Card from "../../../design/components/Card/native/Card.native.tsx";
-import _modDef12726 from "../../../../_runtime/metro/12726__.js";
+import _modDef12730 from "../../../../_runtime/metro/12730__.js";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
@@ -83,12 +83,12 @@ function AcceptInviteCardComponent(invite) {
     let obj = {};
     const merged = Object.assign(invite);
     obj.invite = invite;
-    return closure_9(first(12718), obj);
+    return closure_9(first(12722), obj);
   } else if (tmp22.ERROR === first) {
     obj = {};
     const merged1 = Object.assign(invite);
     obj.invite = invite;
-    return closure_9(first(12721), obj);
+    return closure_9(first(12725), obj);
   } else {
     return closure_9(InviteResolving, {});
   }
@@ -144,7 +144,7 @@ export default function AcceptInvite(invite) {
     splash = guild.splash;
   }
   if (null == splash) {
-    let guildSplashSource = _modDef12726;
+    let guildSplashSource = _modDef12730;
   } else {
     obj = { id: null, splash: null, size: null };
     ({ id: obj3.id, splash: obj3.splash } = guild);

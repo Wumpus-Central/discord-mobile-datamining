@@ -19,12 +19,12 @@ import useIsScreenLandscape from "../modules/screen/useIsScreenLandscape.native.
 import useNavigationTheme from "../design/components/Navigator/native/useNavigationTheme.native.tsx";
 import WebViewContext from "../modules/activities/native/WebViewContext.tsx";
 import StartupProfiler from "../modules/app_startup/StartupProfiler.tsx";
-import MemoryRouter from "../../_runtime/12783_MemoryRouter.js";
+import MemoryRouter from "../../_runtime/12787_MemoryRouter.js";
 import RouteManagerDefault from "../modules/routing/RouteManager.tsx";
 import DiscordGestureHandlerRootViewDefault from "../modules/gesture_handler/native/DiscordGestureHandlerRootView.android.tsx";
 import getChannelDetailsFromRouteDefault from "../modules/main_tabs_v2/native/getChannelDetailsFromRoute.tsx";
 import MainNavigationLoggerDefault from "../modules/main_tabs_v2/helpers/MainNavigationLogger.tsx";
-import ReanimatedScreenProvider from "../../_runtime/14561_ReanimatedScreenProvider.js";
+import ReanimatedScreenProvider from "../../_runtime/14564_ReanimatedScreenProvider.js";
 import RootThemeContextProvider from "../modules/themes/RootThemeContextProvider.native.tsx";
 import AccessibilityPreferencesContextProviderDefault from "../modules/a11y/native/AccessibilityPreferencesContextProvider.native.tsx";
 import ErrorBoundaryDefault from "ErrorBoundary.tsx";
@@ -190,7 +190,7 @@ let result = ReanimatedRexport.configureReanimatedLogger({ level: fn(4296).Reani
 try {
   fn(4912).enableFreeze();
   let obj6 = fn(4912);
-  let obj2 = { useTrackNavigatorScreenImpression: fn(14557).useTrackNavigatorScreenImpression };
+  let obj2 = { useTrackNavigatorScreenImpression: fn(14560).useTrackNavigatorScreenImpression };
   fn(7036).setDesignConfig(obj2);
   let c22 = false;
   let closure_23 = {
@@ -200,7 +200,7 @@ try {
   const result1 = SentryUtilsDefault.profiledRootComponent(function AppContainer(children) {
     children = children.children;
     const appEntryKey = children.appEntryKey;
-    const requestGatewaySocket = appEntryKey(14560).useRequestGatewaySocket("AppContainer:" + appEntryKey);
+    const requestGatewaySocket = appEntryKey(14563).useRequestGatewaySocket("AppContainer:" + appEntryKey);
     const effect = noop.useEffect(() => {
       if (!c22) {
         RNScreensTurboModule = RNScreensTurboModule.RNScreensTurboModule;
@@ -227,8 +227,8 @@ try {
       }
       const obj = appEntryKey(1115);
     }, []);
-    let obj = appEntryKey(14560);
-    const riveAppStatePlaybackExperiment = appEntryKey(15939).useRiveAppStatePlaybackExperiment("AppContainer");
+    let obj = appEntryKey(14563);
+    const riveAppStatePlaybackExperiment = appEntryKey(15942).useRiveAppStatePlaybackExperiment("AppContainer");
     closure_129_0 = riveAppStatePlaybackExperiment;
     let items = [riveAppStatePlaybackExperiment];
     const memo = noop.useMemo(() => {

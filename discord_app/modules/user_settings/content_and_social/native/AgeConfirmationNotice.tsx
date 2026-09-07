@@ -18,7 +18,7 @@ export default function AgeConfirmationNotice() {
   let obj = sensitiveContentFilterHelpArticle(7301);
   sensitiveContentFilterHelpArticle = obj.useSensitiveContentFilterHelpArticle();
   const effect = noop.useEffect(() => {
-    const result = sensitiveContentFilterHelpArticle(14688).trackSafetySettingsNoticeAnalytics(
+    const result = sensitiveContentFilterHelpArticle(14691).trackSafetySettingsNoticeAnalytics(
       constants2.AGE_CONFIRMATION_NOTICE,
       constants.VIEWED,
     );
@@ -40,7 +40,7 @@ export default function AgeConfirmationNotice() {
       entryPoint: sensitiveContentFilterHelpArticle(8413).AgeVerificationModalEntryPoint.CONTENT_AND_SOCIAL_NOTICE,
     };
     const result = obj.showAgeVerificationGetStartedModal(obj);
-    const result1 = sensitiveContentFilterHelpArticle(14688).trackSafetySettingsNoticeAnalytics(
+    const result1 = sensitiveContentFilterHelpArticle(14691).trackSafetySettingsNoticeAnalytics(
       constants2.AGE_CONFIRMATION_NOTICE,
       constants.CONFIRM_AGE,
     );

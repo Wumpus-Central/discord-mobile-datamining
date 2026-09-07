@@ -74,7 +74,7 @@ function DiscoverabilityNameScene(onComplete) {
     name = "";
   }
   obj.initialName = name;
-  obj.children = jsx(allowPhone(12697), { onNext: callback, loading: false, initialName: null });
+  obj.children = jsx(allowPhone(12701), { onNext: callback, loading: false, initialName: null });
   return <View onNext={callback} loading={false} initialName={null} />;
 }
 class RedesignDiscoverabilityModal {
@@ -137,7 +137,7 @@ class RedesignDiscoverabilityModal {
   }
 }
 const View = fn(17).View;
-const useContactSyncModalStore = fn(12677).useContactSyncModalStore;
+const useContactSyncModalStore = fn(12681).useContactSyncModalStore;
 const jsx = fn(21).jsx;
 fn(4560);
 let createStyles = { header: null, container: null };

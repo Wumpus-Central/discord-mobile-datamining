@@ -11,7 +11,7 @@ const ClipViewDefault = ClipView;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: c3, StyleSheet } = get_ActivityIndicator);
-const HappeningNowConstants = fn(15294);
+const HappeningNowConstants = fn(15297);
 ({
   HAPPENING_NOW_BADGE_SIZE,
   HAPPENING_NOW_CONTENT_HEIGHT,

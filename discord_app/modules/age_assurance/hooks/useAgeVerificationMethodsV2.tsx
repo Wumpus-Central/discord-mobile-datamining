@@ -94,7 +94,7 @@ export const useAgeVerificationMethodsV2 = function useAgeVerificationMethodsV2(
             v0 = 2;
             let obj5 = closure_0(8418);
             const result = obj5.isCurrentUserSuspended();
-            const obj7 = closure_0(8447);
+            const obj7 = closure_0(8437);
             if (result) {
               c5 = 4;
               c6 = 1;

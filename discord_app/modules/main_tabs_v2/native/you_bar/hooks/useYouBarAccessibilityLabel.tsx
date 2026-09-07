@@ -35,7 +35,7 @@ export const useYouBarAccessibilityLabel = function useYouBarAccessibilityLabel(
   if (setting != null) {
     text = setting.text;
   }
-  let tmp3Result = tmp3(10880);
+  let tmp3Result = tmp3(10885);
   let tmp7 = null;
   if ("" !== text) {
     tmp7 = text;

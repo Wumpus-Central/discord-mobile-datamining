@@ -90,8 +90,8 @@ export const reset = function reset() {
       initiatedPurchaseFromNewFlow: false,
       isPaymentSuccess: false,
       mobileWebRedirectCheckoutStatus: str,
-      onPaymentSuccess: "accessible",
-      onPaymentDismiss: "diversity",
+      onPaymentSuccess: "r",
+      onPaymentDismiss: "accessible",
     });
   });
 };

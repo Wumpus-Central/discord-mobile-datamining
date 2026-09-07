@@ -9,9 +9,9 @@ import hooks from "../../../../../_runtime/metro/04153__.js";
 
 require = fn;
 const View = fn(17).View;
-const RegistrationUIStore = fn(15946);
+const RegistrationUIStore = fn(15949);
 ({ updateRegistrationOptions: closure_7, useRegistrationUIStore: closure_8 } = RegistrationUIStore);
-const RegistrationConstants = fn(15947);
+const RegistrationConstants = fn(15950);
 ({ RegisterTransitionSteps: closure_9, RegistrationTransitionActionTypes: c10 } = RegistrationConstants);
 const AuthStates = fn(1074).AuthStates;
 const jsxProd = fn(21);

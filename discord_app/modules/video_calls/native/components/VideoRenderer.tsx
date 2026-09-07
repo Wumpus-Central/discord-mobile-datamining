@@ -37,7 +37,7 @@ export default noop.memo((gestureEnabled) => {
   c9 = undefined;
   let onReady;
   const tmp2 = onReady();
-  let obj = resizeMode(9605);
+  let obj = resizeMode(9610);
   const surfaceDirectRendererExperiment = obj.useSurfaceDirectRendererExperiment(userId, { location: "VideoRenderer" });
   let tmp6 = first1(noop.useState(0), 2);
   let width = tmp6[0];
@@ -52,8 +52,8 @@ export default noop.memo((gestureEnabled) => {
   const first3 = tmp13[0];
   closure_8 = tmp15;
   [tmp17, c9] = first1(noop.useState(true), 2);
-  width(9606)({ location: "VideoRenderer", videoSpinnerContext, userId, streamId, paused, loading: tmp17 });
-  onReady = width(9608)({ streamId, userId, videoSpinnerContext, paused, loading: tmp17, streamKey }).onReady;
+  width(9611)({ location: "VideoRenderer", videoSpinnerContext, userId, streamId, paused, loading: tmp17 });
+  onReady = width(9613)({ streamId, userId, videoSpinnerContext, paused, loading: tmp17, streamKey }).onReady;
   noop.useRef(null);
   const ref1 = noop.useRef(null);
   ref = noop.useRef({ width: 0, height: 0 });
@@ -217,7 +217,7 @@ export default noop.memo((gestureEnabled) => {
   }, items9);
   if (tmp17) {
     obj = { animate: true, style: tmp2.spinner };
-    tmp35 = closure_8(tmp18(9613), obj);
+    tmp35 = closure_8(tmp18(9618), obj);
   }
   const tmp37 = store === resizeMode(8332).OrientationType.PORTRAIT;
   const tmp16 = first1(noop.useState(true), 2);
@@ -236,10 +236,10 @@ export default noop.memo((gestureEnabled) => {
       onReady: callback1,
       style: memo2,
     };
-    const items11 = [closure_8(tmp18(9616), obj3), tmp35];
+    const items11 = [closure_8(tmp18(9621), obj3), tmp35];
     obj2.children = items11;
     obj1.children = c9(first2, obj2);
-    const items12 = [closure_8(tmp18(9614), obj1)];
+    const items12 = [closure_8(tmp18(9619), obj1)];
     const obj4 = { style: memo5, children: null };
     let tmp56 = null;
     if (!tmp17) {
@@ -259,7 +259,7 @@ export default noop.memo((gestureEnabled) => {
     items12[1] = closure_8(first2, obj4);
     obj.children = items12;
     let tmp43Result = c9(tmp52, obj);
-    const tmp18Result = tmp18(9614);
+    const tmp18Result = tmp18(9619);
   } else if (flag) {
     const obj5 = {
       ref,
@@ -285,7 +285,7 @@ export default noop.memo((gestureEnabled) => {
       onReady: callback1,
       style: memo1,
     };
-    obj8.children = closure_8(tmp18(9616), obj9);
+    obj8.children = closure_8(tmp18(9621), obj9);
     const items13 = [closure_8(tmp18(4296).View, obj8)];
     let tmp48 = null;
     if (tmp37) {
@@ -322,7 +322,7 @@ export default noop.memo((gestureEnabled) => {
       onReady: callback1,
       style: memo1,
     };
-    const items17 = [closure_8(tmp18(9616), obj12), tmp35];
+    const items17 = [closure_8(tmp18(9621), obj12), tmp35];
     obj11.children = items17;
     tmp43Result = c9(first2, obj11);
   }

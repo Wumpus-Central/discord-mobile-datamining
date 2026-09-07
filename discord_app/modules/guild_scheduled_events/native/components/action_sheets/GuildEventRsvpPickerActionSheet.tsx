@@ -28,9 +28,9 @@ export default function GuildEventRsvpPickerActionSheet(event) {
   let defaultValue;
   closure_5 = undefined;
   const tmp = closure_9();
-  const tmp4 = _slicedToArray(defaultValue.useState(event(9706).ResponseOptions.SERIES), 2);
+  const tmp4 = _slicedToArray(defaultValue.useState(event(9711).ResponseOptions.SERIES), 2);
   defaultValue = tmp4[0];
-  let obj = event(9706);
+  let obj = event(9711);
   const existingRsvp = obj.getExistingRsvp(event.id, null);
   let response;
   if (existingRsvp != null) {
@@ -48,7 +48,7 @@ export default function GuildEventRsvpPickerActionSheet(event) {
   obj = { header: closure_7(tmp2(7149).BottomSheetTitleHeader, { title: stringResult }), children: null };
   obj = { bottom: true, style: tmp.container, children: null };
   const obj1 = { defaultValue, onChange: tmp4[1], hasIcons: false, children: null };
-  const responseOptions = event(9706).getResponseOptions();
+  const responseOptions = event(9711).getResponseOptions();
   obj1.children = responseOptions.map((value) =>
     closure_1_7(event(dependencyMap[13]).TableRadioRow, { value: value.value, label: value.name }, value.value),
   );

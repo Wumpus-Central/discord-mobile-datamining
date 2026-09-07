@@ -52,7 +52,7 @@ export const createGroupDMInvite = function createGroupDMInvite(invite, arg1, th
   }
   let channelIconSource = null;
   if (null != channel) {
-    let tmp8Result = tmp8(13030);
+    let tmp8Result = tmp8(13034);
     channelIconSource = tmp8Result.getChannelIconSource(channel);
   }
   let uri = null;

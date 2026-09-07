@@ -36,9 +36,9 @@ function QuestActivityUnenrolledModalInner(quest) {
   let obj3 = quest(7168);
   let obj4 = quest(7724);
   const getOrFetchApplication = obj3.useGetOrFetchApplication(obj4.getActivityApplicationId(quest));
-  let obj5 = quest(11483);
+  let obj5 = quest(11488);
   const questTaskDetails = obj5.useQuestTaskDetails(quest);
-  let obj6 = quest(11775);
+  let obj6 = quest(11780);
   obj = {
     quest,
     taskDetails: questTaskDetails,
@@ -90,7 +90,7 @@ function QuestActivityUnenrolledModalInner(quest) {
               };
               v1 = 1;
               dependencyMap = 1;
-              const obj2 = { value: tmp4(11276).enrollInQuest(quest.id, obj1), done: false };
+              const obj2 = { value: tmp4(11281).enrollInQuest(quest.id, obj1), done: false };
               return obj2;
             }
           } else if (arg0 === 1) {
@@ -117,9 +117,9 @@ function QuestActivityUnenrolledModalInner(quest) {
   let obj8 = quest(4277);
   const checkboxA11yNative = obj8.useCheckboxA11yNative({ checked });
   ({ accessibilityRole, accessibilityState } = checkboxA11yNative);
-  let obj9 = quest(11483);
+  let obj9 = quest(11488);
   const isQuestAccessSuspended = obj9.useIsQuestAccessSuspended();
-  let obj10 = quest(11774);
+  let obj10 = quest(11779);
   trackQuestContentClickedWithImpression = obj10.useTrackQuestContentClickedWithImpression();
   const items3 = [quest.id, trackQuestContentClickedWithImpression];
   const callback1 = noop.useCallback(() => {
@@ -148,7 +148,7 @@ function QuestActivityUnenrolledModalInner(quest) {
   const items4 = [tmp18Result];
   const obj7 = { style: tmp4.rewardTileContainer, children: null };
   const size = { quest, height: 87, width: 87, style: tmp4.questRewardTile };
-  obj7.children = closure_11(checked(11770), size);
+  obj7.children = closure_11(checked(11775), size);
   items4[1] = closure_11(closure_7, obj7);
   obj3.children = items4;
   obj2.children = closure_12(closure_7, obj3);
@@ -390,7 +390,7 @@ export default function QuestActivityUnenrolledModal(questId) {
     };
     obj[constants.MAIN] = obj;
     const obj1 = { screens: obj, initialRouteName: constants.MAIN };
-    return closure_11(tmp(11928).Modal, obj1);
+    return closure_11(tmp(11933).Modal, obj1);
   }
   tmp = questId;
 }

@@ -34,7 +34,7 @@ export const PromoSheet = function PromoSheet(arg0) {
             let obj = {};
             const merged = Object.assign(arg0);
             obj = { offsetBottom: 0.25, color, backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND };
-            obj.children = closure_2_7(gradientColor(10231).ExpressiveGradient, obj);
+            obj.children = closure_2_7(gradientColor(10236).ExpressiveGradient, obj);
             return closure_2_7(View, obj);
           }
         : undefined,
@@ -49,7 +49,7 @@ export const PromoSheet = function PromoSheet(arg0) {
     obj = {};
     const merged1 = Object.assign(graphic);
     obj.style = tmp2.graphic;
-    let tmp4Result = closure_7(gradientColor(10232).Graphic, obj);
+    let tmp4Result = closure_7(gradientColor(10237).Graphic, obj);
   } else {
     tmp4Result = null;
     if (null != illustration) {

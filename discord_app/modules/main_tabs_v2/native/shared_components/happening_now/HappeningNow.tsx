@@ -164,7 +164,7 @@ function getItemType(kind) {
 }
 get_ActivityIndicator = fn(17);
 ({ ScrollView: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-const HappeningNowConstants = fn(15294);
+const HappeningNowConstants = fn(15297);
 ({
   HAPPENING_NOW_CARD_WIDTH_NORMAL_WITH_MARGIN: closure_7,
   HAPPENING_NOW_CARD_WIDTH_XSMALL_WITH_MARGIN: closure_8,

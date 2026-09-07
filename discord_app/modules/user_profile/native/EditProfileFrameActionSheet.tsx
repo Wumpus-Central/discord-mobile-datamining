@@ -120,7 +120,7 @@ function ProfileFrameSectionPreview(arg0) {
     }
     return tmp3;
   }, items);
-  const items1 = [closure_9(purchase(11219), { user, guildId, profileFrame: memo, maxWidth: 280 })];
+  const items1 = [closure_9(purchase(11224), { user, guildId, profileFrame: memo, maxWidth: 280 })];
   obj = { style: tmp.previewGradient, start: { x: 0, y: 0.6 }, end: { x: 0, y: 1 }, colors: null };
   const items2 = ["" + tmp.previewGradient.color + "00", tmp.previewGradient.color];
   obj.colors = items2;

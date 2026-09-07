@@ -6,12 +6,12 @@ import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSh
 import StreamKeyUtils from "../../go_live/utils/StreamKeyUtils.tsx";
 import ChannelRTCActionCreatorsDefault from "../../../actions/ChannelRTCActionCreators.tsx";
 import actions_AlertActionCreatorsDefault from "../../../actions/native/AlertActionCreators.tsx";
-import _modDef8627 from "../../../../_runtime/metro/08627__.js";
+import _modDef8632 from "../../../../_runtime/metro/08632__.js";
 import instant_invite_InstantInviteUtils from "../../instant_invite/native/InstantInviteUtils.tsx";
-import _modDef10001 from "../../../../_runtime/metro/10001__.js";
+import _modDef10006 from "../../../../_runtime/metro/10006__.js";
 import openGroupDMAddMembersDefault from "../../group_dm/native/openGroupDMAddMembers.tsx";
-import _modDef17215 from "../../../../_runtime/metro/17215__.js";
-import _modDef17216 from "../../../../_runtime/metro/17216__.js";
+import _modDef17218 from "../../../../_runtime/metro/17218__.js";
+import _modDef17219 from "../../../../_runtime/metro/17219__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 import StreamRTCConnectionStore from "../../../stores/StreamRTCConnectionStore.tsx";
 
@@ -31,7 +31,7 @@ export const voiceSettings = function voiceSettings() {
   let obj = { label: null, icon: null, onPress: null };
   const intl = util.intl;
   obj.label = intl.string(util.t.NiTd0e);
-  obj.icon = _modDef17215;
+  obj.icon = _modDef17218;
   obj.onPress = function onPress() {
     require("openUserSettings");
     const obj = { screen: constants.VOICE };
@@ -57,7 +57,7 @@ export const openHideSelfStreamAndVideoConfirmDialog = function openHideSelfStre
   importDefault = arg1;
   let obj = {
     importer() {
-      return asyncRequireImpl(17212, dependencyMap.paths).then((result) => {
+      return asyncRequireImpl(17215, dependencyMap.paths).then((result) => {
         closure_0 = result.default;
         return (arg0) => {
           const obj = {};
@@ -87,7 +87,7 @@ export const reportStreamIssue = function reportStreamIssue(stream) {
   let obj = { label: null, icon: null, onPress: null };
   const intl = require("util").intl;
   obj.label = intl.string(require("util").t.KHGhHf);
-  obj.icon = _modDef17216;
+  obj.icon = _modDef17219;
   obj.onPress = function onPress() {
     let obj = StreamKeyUtils;
     const encodeStreamKeyResult = obj.encodeStreamKey(stream);
@@ -103,11 +103,11 @@ export const reportStreamIssue = function reportStreamIssue(stream) {
     };
     const merged = Object.assign(videoStats);
     const obj5 = ActionSheetActionCreatorsDefault;
-    obj5.openLazy(asyncRequireImpl(17217, dependencyMap.paths), "StreamReportProblem" + stream.ownerId, {
+    obj5.openLazy(asyncRequireImpl(17220, dependencyMap.paths), "StreamReportProblem" + stream.ownerId, {
       stream,
       analyticsData: obj,
     });
-    const tmp6 = asyncRequireImpl(17217, dependencyMap.paths);
+    const tmp6 = asyncRequireImpl(17220, dependencyMap.paths);
   };
   return obj;
 };
@@ -140,7 +140,7 @@ export const invite = function invite(dependencyMap, stream, targetApplicationId
   let obj = { label: null, icon: null, onPress: null };
   const intl = require("util").intl;
   obj.label = intl.string(require("util").t.VINpSK);
-  obj.icon = _modDef10001;
+  obj.icon = _modDef10006;
   obj.onPress = onPress;
   return obj;
 };
@@ -149,7 +149,7 @@ export const rtcDebugPanel = function rtcDebugPanel(arg0) {
   const obj = { label: null, icon: null, onPress: null };
   const intl = require("util").intl;
   obj.label = intl.string(require("util").t.X8bCMe);
-  obj.icon = _modDef8627;
+  obj.icon = _modDef8632;
   obj.onPress = function onPress() {
     closure_0();
     ActionSheetActionCreatorsDefault.hideActionSheet();
@@ -160,7 +160,7 @@ export const shareActivityLogs = function shareActivityLogs() {
   let obj = { label: null, icon: null, onPress: null };
   let intl = util.intl;
   obj.label = intl.string(util.t.iQzQs3);
-  obj.icon = _modDef8627;
+  obj.icon = _modDef8632;
   obj.onPress = function onPress() {
     let obj = require("LogAggregator");
     const items = [closure_1_7];

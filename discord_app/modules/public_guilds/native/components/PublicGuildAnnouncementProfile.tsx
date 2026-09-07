@@ -6,7 +6,7 @@ import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import FastImageDefault from "../../../../components_native/common/FastImage.tsx";
 import Sheet_BottomSheet from "../../../../design/components/Sheet/native/BottomSheet.native.tsx";
 import PublicGuildsUtils from "../../PublicGuildsUtils.tsx";
-import _modDef11650 from "../../../../../_runtime/metro/11650__.js";
+import _modDef11655 from "../../../../../_runtime/metro/11655__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -33,7 +33,7 @@ export default function PublicGuildAnnouncementProfile() {
   obj.source = obj3.getPublicSystemMessageAvatar();
   const items = [React4(FastImageDefault, obj), , ,];
   const obj1 = { style: tmp.nameWrapper, children: null };
-  const items1 = [React4(native.Icon, { source: _modDef11650, disableColor: true })];
+  const items1 = [React4(native.Icon, { source: _modDef11655, disableColor: true })];
   obj3 = {
     style: tmp.headerText,
     variant: "heading-xl/extrabold",

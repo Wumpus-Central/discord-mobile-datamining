@@ -159,7 +159,7 @@ export default function AppLauncherMentionableOption(option) {
       onActionSheetDismiss,
     };
     obj.openLazy(
-      asyncRequireImpl(12180, dependencyMap.paths),
+      asyncRequireImpl(12184, dependencyMap.paths),
       AppLauncherMentionableListActionSheet.APP_LAUNCHER_MENTIONABLE_LIST_ACTION_SHEET_KEY,
       obj,
     );

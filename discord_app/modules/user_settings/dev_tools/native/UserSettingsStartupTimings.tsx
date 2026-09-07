@@ -107,7 +107,7 @@ export default function UserSettingsStartupTimings() {
             return obj2;
           } else {
             closure_128_0 = value;
-            closure_128_1 = tmp5(10193)(closure_128_0);
+            closure_128_1 = tmp5(10198)(closure_128_0);
             obj = tmp2(8361);
             obj3 = { message: closure_128_1 };
             obj.showShareActionSheet(obj3, "Startup Timing");

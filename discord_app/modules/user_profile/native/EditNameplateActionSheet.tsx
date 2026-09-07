@@ -135,8 +135,8 @@ function NameplateActionSheetPreview(arg0) {
   obj.accessibilityLabel = formatToPlainStringResult;
   obj = { style: tmp.nameplateGradientContainer, children: null };
   const items1 = [
-    closure_10(tmp10(8817).NameplateDummyUserPreview, { width: 100 }),
-    closure_10(tmp10(8817).NameplateDummyUserPreview, { width: 140 }),
+    closure_10(tmp10(8822).NameplateDummyUserPreview, { width: 100 }),
+    closure_10(tmp10(8822).NameplateDummyUserPreview, { width: 140 }),
   ];
   const obj1 = { style: tmp.nameplatePreviewGradient, start: { x: 0, y: 0.1 }, end: { x: 0, y: 0.8 }, colors: null };
   const items2 = [tmp.nameplatePreviewGradient.color];
@@ -147,12 +147,12 @@ function NameplateActionSheetPreview(arg0) {
   obj.children = items1;
   const items3 = [
     closure_11(View, obj),
-    closure_10(tmp10(11220).NameplatePreview, { nameplate: memo, user, guildId, animate: true, "aria-hidden": true }),
+    closure_10(tmp10(11225).NameplatePreview, { nameplate: memo, user, guildId, animate: true, "aria-hidden": true }),
   ];
   const obj2 = { style: tmp.nameplateGradientContainer, children: null };
   const items4 = [
-    closure_10(tmp10(8817).NameplateDummyUserPreview, { width: 140 }),
-    closure_10(tmp10(8817).NameplateDummyUserPreview, { width: 100 }),
+    closure_10(tmp10(8822).NameplateDummyUserPreview, { width: 140 }),
+    closure_10(tmp10(8822).NameplateDummyUserPreview, { width: 100 }),
   ];
   const obj3 = { style: tmp.nameplatePreviewGradient, start: { x: 0, y: 0.2 }, end: { x: 0, y: 0.9 }, colors: null };
   tmp2Result = tmp2(4987);

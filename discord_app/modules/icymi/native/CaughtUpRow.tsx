@@ -13,7 +13,7 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
 let closure_9 = ReanimatedRexport.createAnimatedComponent(fn(4556).Text);
-const createICYMIStyles = fn(16452);
+const createICYMIStyles = fn(16455);
 let closure_10 = createICYMIStyles.createICYMIStyles((margin) => {
   let obj = {
     container: null,
@@ -133,7 +133,7 @@ export default function ExploreServersRow(visible) {
               const obj6 = v1(8351);
               v1 = 1;
               dependencyMap = 1;
-              const obj2 = { value: tmp4(16469).maybeFetchGuildDiscoveryCategories(), done: false };
+              const obj2 = { value: tmp4(16472).maybeFetchGuildDiscoveryCategories(), done: false };
               return obj2;
             }
           } else if (arg0 === 1) {
@@ -305,7 +305,7 @@ export default function ExploreServersRow(visible) {
   const obj4 = { style: tmp.textContainer, children: null };
   obj5 = {
     style: null,
-    children: closure_7(visible(13011).FlashIcon, { size: "custom", style: tmp.icon, color: "background-brand" }),
+    children: closure_7(visible(13015).FlashIcon, { size: "custom", style: tmp.icon, color: "background-brand" }),
   };
   const items1 = [tmp.iconWrapper, animatedStyle];
   obj5.style = items1;
@@ -339,7 +339,7 @@ export default function ExploreServersRow(visible) {
   obj9.children = items6;
   items5[1] = closure_8(View, obj9);
   obj3.children = items5;
-  const items7 = [closure_8(View, obj3), closure_7(visible(16491).Separator, {})];
+  const items7 = [closure_8(View, obj3), closure_7(visible(16494).Separator, {})];
   const obj12 = {
     style: tmp.gradient,
     start: visible(1093).VerticalGradient.START,

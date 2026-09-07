@@ -55,7 +55,7 @@ export const ForumChannelCloseSearchButton = memoResult;
 export const ForumChannelSearchInput = noop.memo((channelId) => {
   channelId = channelId.channelId;
   ({ guildId: importDefault, placeholder } = channelId);
-  let obj = channelId(13258);
+  let obj = channelId(13262);
   const canSearchForumPostsByChannelId = obj.useCanSearchForumPostsByChannelId(channelId);
   const tmp = closure_8();
   const items = [ForumSearchStore];

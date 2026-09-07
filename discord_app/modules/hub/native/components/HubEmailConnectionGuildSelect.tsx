@@ -84,7 +84,7 @@ function HubEmailConnectionGuildSelectFooter(onFooterButtonPressed) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: metroRequire, FlatList: closure_7 } = get_ActivityIndicator);
-const HubEmailConnectionSteps = fn(12719).HubEmailConnectionSteps;
+const HubEmailConnectionSteps = fn(12723).HubEmailConnectionSteps;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
 fn(4560);
@@ -208,7 +208,7 @@ export default function HubEmailConnectionGuildSelect(onClose) {
                   v3(null);
                   closure_1_7(true);
                   c3 = 2;
-                  let obj2 = email(12732);
+                  let obj2 = email(12736);
                   c4 = 3;
                   v3 = 1;
                   const obj1 = { value: obj2.sendVerificationEmail(email, true, id), done: false };

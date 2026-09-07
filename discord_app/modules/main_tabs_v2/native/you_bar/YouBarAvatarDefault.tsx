@@ -122,7 +122,7 @@ function AvatarDefaultLarge() {
   return closure_1_12(View, obj);
 }
 const View = fn(17).View;
-const YouBarConstants = fn(15098);
+const YouBarConstants = fn(15101);
 ({
   YOU_BAR_AVATAR_LARGE_SIZE: closure_4,
   YOU_BAR_AVATAR_PLACEHOLDER_SIZE: hasOwnProperty,

@@ -411,7 +411,7 @@ export const useItemActionButtonPropsV2 = function useItemActionButtonPropsV2(
   const callback4 = noop.useCallback(() => {
     const dMChannel = ChannelActionCreatorsDefault.getDMChannel(id);
     dMChannel.then((channelId) => {
-      closure_1(13850)({
+      closure_1(13853)({
         payload: closure_1(4540)("https://discord.com/channels/@me/" + channelId).payload,
         safe: true,
         navigationReplace: false,

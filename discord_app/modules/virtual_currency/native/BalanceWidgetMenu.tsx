@@ -9,7 +9,7 @@ import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import ButtonEllipsis from "../../../design/components/Button/native/ButtonEllipsis.native.tsx";
 import Pressables from "../../../design/void/Pressables/native/Pressables.tsx";
 import AnalyticsLocationDefault from "../../app_analytics/AnalyticsLocation.tsx";
-import _mod8850 from "../hooks/index.tsx";
+import _mod8855 from "../hooks/index.tsx";
 import SelectedDismissibleContentDefault from "../../dismissible_content/native/SelectedDismissibleContent.tsx";
 import BalanceWidgetPillButtonDefault from "BalanceWidgetPillButton.tsx";
 import OrbOnboardingPillDefault from "OrbOnboardingPill.tsx";
@@ -63,7 +63,7 @@ class OrbsOnboardingMenuDismissibleContent {
             filter: constants3.VIRTUAL_CURRENCY,
             fromContent: style(5447).QuestContent.MOBILE_ORBS_ONBOARDING_DC,
           };
-          style(11767).openQuestHome(obj);
+          style(11772).openQuestHome(obj);
         }
         let obj = { onPress: handleOnboardingPress, style, accessibilityLabel: null, children: null };
         const intl = util.intl;
@@ -80,7 +80,7 @@ class OrbsOnboardingMenuDismissibleContent {
 }
 function BalanceWidgetMenu(style) {
   let str;
-  let obj = str(8850);
+  let obj = str(8855);
   str = obj.useFetchVirtualCurrencyBalance().balance;
   let items = [str];
   const callback = noop.useCallback(() => {
@@ -114,7 +114,7 @@ function BalanceWidgetMenu(style) {
         filter: constants3.VIRTUAL_CURRENCY,
         fromContent: str(5447).QuestContent.ORBS_BALANCE_MENU,
       };
-      str(11767).openQuestHome(obj);
+      str(11772).openQuestHome(obj);
     };
     obj.secondaryButtonConfig = obj1;
     obj.source = AnalyticsLocationDefault.YOU_SCREEN;
@@ -168,7 +168,7 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/virtual_currency/native/BalanceWidgetMenu.tsx");
 
 export default function BalanceWidgetMenuWrapper(style) {
-  let obj = _mod8850;
+  let obj = _mod8855;
   const balance = obj.useFetchVirtualCurrencyBalance().balance;
   DismissibleContentUnsafeUtils;
   if (null == balance) {

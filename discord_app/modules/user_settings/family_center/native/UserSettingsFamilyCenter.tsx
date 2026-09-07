@@ -24,11 +24,11 @@ function FamilyCenterLoading() {
 }
 function FamilyCenter() {
   const tmp = closure_19();
-  let obj = familyCenterInitialized(8645);
+  let obj = familyCenterInitialized(8650);
   const acceptedRequestsCount = obj.useAcceptedRequestsCount();
-  const tmp6 = isLoading(14870)();
-  const selectedTab = isLoading(14871)().selectedTab;
-  let obj1 = familyCenterInitialized(8647);
+  const tmp6 = isLoading(14873)();
+  const selectedTab = isLoading(14874)().selectedTab;
+  let obj1 = familyCenterInitialized(8652);
   const selectedTeenId = obj1.useSelectedTeenId();
   let obj2 = familyCenterInitialized(563);
   items = [FamilyCenterStore];
@@ -45,19 +45,19 @@ function FamilyCenter() {
   const callback = obj2.useCallback((nativeEvent) => {
     _slicedToArray(nativeEvent.nativeEvent.layout.width);
   }, []);
-  let obj3 = familyCenterInitialized(9792);
+  let obj3 = familyCenterInitialized(9797);
   obj = { items: null, onPageChange: null, pageWidth: null, defaultIndex: null };
   obj = { label: null, id: null, page: null };
   const intl = familyCenterInitialized(1114).intl;
   obj.label = intl.string(isLoading(2396).bdBmqy);
   obj.id = FamilyCenterSubPages.ACTIVITY;
-  obj.page = closure_15(isLoading(14872), {});
+  obj.page = closure_15(isLoading(14875), {});
   const items1 = [obj];
   obj1 = { label: null, id: null, page: null };
   const intl2 = familyCenterInitialized(1114).intl;
   obj1.label = intl2.string(isLoading(2396)["gVWG+6"]);
   obj1.id = FamilyCenterSubPages.REQUESTS;
-  obj1.page = closure_15(isLoading(14912), {});
+  obj1.page = closure_15(isLoading(14915), {});
   items1[1] = obj1;
   obj.items = items1;
   obj.onPageChange = function onPageChange(arg0) {
@@ -117,7 +117,7 @@ function FamilyCenter() {
   const items3 = [
     closure_15(ref, {
       style: tmp.segmentedControlContainer,
-      children: closure_15(familyCenterInitialized(9793).SegmentedControl, { state: segmentedControlState }),
+      children: closure_15(familyCenterInitialized(9798).SegmentedControl, { state: segmentedControlState }),
     }),
   ];
   let obj6 = { style: tmp.container, children: null };
@@ -125,7 +125,7 @@ function FamilyCenter() {
     let tmp14Result = closure_15(FamilyCenterLoading, {});
   } else {
     const obj7 = { state: segmentedControlState };
-    tmp14Result = closure_15(tmp4(12616).SegmentedControlPages, obj7);
+    tmp14Result = closure_15(tmp4(12620).SegmentedControlPages, obj7);
   }
   obj6.children = tmp14Result;
   obj6 = closure_15(tmp23, obj6);
@@ -136,7 +136,7 @@ function FamilyCenter() {
   tmp14Result = closure_15(tmp4(7162).AnalyticsLocationProvider, obj3);
   const obj5 = {
     style: tmp.segmentedControlContainer,
-    children: closure_15(familyCenterInitialized(9793).SegmentedControl, { state: segmentedControlState }),
+    children: closure_15(familyCenterInitialized(9798).SegmentedControl, { state: segmentedControlState }),
   };
 }
 get_ActivityIndicator = fn(17);

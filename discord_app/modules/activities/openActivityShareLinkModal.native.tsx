@@ -13,7 +13,7 @@ export const openActivityShareLinkModal = function openActivityShareLinkModal(ar
   let obj = ChatInputUtils;
   obj.dismissKeyboard();
   obj = { applicationId, customId, linkId, message, onShare };
-  ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(14486, dependencyMap.paths), obj, ACTIVITY_SHARE_LINK_MODAL, {
+  ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(14489, dependencyMap.paths), obj, ACTIVITY_SHARE_LINK_MODAL, {
     presentation: "modal",
   });
 };

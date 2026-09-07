@@ -16,7 +16,7 @@ import UserStore from "../../../stores/UserStore.tsx";
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-const SecureFramesConstants = fn(9152);
+const SecureFramesConstants = fn(9157);
 ({
   USER_VERIFICATION_CHUNK_SIZE: closure_9,
   USER_VERIFICATION_LENGTH: c10,
@@ -133,8 +133,8 @@ export default function SecureFramesUserVerificationModal(userId) {
         let obj = { userId, channelId };
         const result = SecureFramesTracking.trackE2EEUserVerificationShareClicked(obj);
         if (enabled) {
-          let userVerificationDeeplink = showShareActionSheet(9150).getUserVerificationDeeplink(userId, tmp);
-          const showShareActionSheetResult = showShareActionSheet(9150);
+          let userVerificationDeeplink = showShareActionSheet(9155).getUserVerificationDeeplink(userId, tmp);
+          const showShareActionSheetResult = showShareActionSheet(9155);
         } else {
           userVerificationDeeplink = readableSecureFramesFingerprint.join(" ");
         }

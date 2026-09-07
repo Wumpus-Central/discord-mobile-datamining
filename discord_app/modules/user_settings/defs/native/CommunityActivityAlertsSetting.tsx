@@ -4,7 +4,7 @@ import util from "../../../../intl/index.native.tsx";
 import GuildIncidentsStore from "../../../guild_antiraid/GuildIncidentsStore.tsx";
 
 require = fn;
-fn(11468);
+fn(11473);
 let SettingBuilders = {
   useTitle() {
     const intl = util.intl;

@@ -71,7 +71,7 @@ export default function AppLauncherChoicesOption(option) {
       onSelect(choice);
     };
     obj.onDismiss = onDismissChoicesSheet;
-    obj2.openLazy(asyncRequireImpl(12165, dependencyMap.paths), "AppLauncherChoicesActionSheet", obj);
+    obj2.openLazy(asyncRequireImpl(12169, dependencyMap.paths), "AppLauncherChoicesActionSheet", obj);
   }, items);
   let obj = option(onSelect[9]);
   const animationDelayedAutoFocus = obj.useAnimationDelayedAutoFocus(autoFocus, callback);

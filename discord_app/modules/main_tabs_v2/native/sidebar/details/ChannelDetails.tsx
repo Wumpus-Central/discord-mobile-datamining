@@ -21,7 +21,7 @@ const ChannelDetailsStore = fn(7876);
   useChannelDetailsSearchActiveSource: closure_8,
   useIsChannelDetailsSearchActive: closure_9,
 } = ChannelDetailsStore);
-const ChannelDetailsConstants = fn(10916);
+const ChannelDetailsConstants = fn(10921);
 ({ SPRING_CHANNEL_HEADER: c10, CHANNEL_DETAILS_TOP_MARGIN } = ChannelDetailsConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);

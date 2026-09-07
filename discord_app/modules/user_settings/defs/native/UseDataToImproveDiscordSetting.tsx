@@ -10,7 +10,7 @@ import ConsentStore from "../../../../stores/ConsentStore.tsx";
 
 require = fn;
 const Consents = fn(1074).Consents;
-fn(11468);
+fn(11473);
 let SettingBuilders = {
   useTitle() {
     const intl = util.intl;

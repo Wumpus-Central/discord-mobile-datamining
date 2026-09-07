@@ -1362,7 +1362,7 @@ function createMessageContent(message) {
       applicationIconSource = author.getAvatarSource(undefined);
       tmp13Result8 = tmp13(tmp3[53]);
     }
-    parseMessageMarkupResult = { content: "flex", hasSpoilerEmbeds: "processingStart", hasBailedAst: null };
+    parseMessageMarkupResult = { content: "flex", hasSpoilerEmbeds: "balra", hasBailedAst: "balra tol\u00F3 k\u00E9z" };
     const tmp13Result2 = tmp13(tmp3[42]);
   }
 }

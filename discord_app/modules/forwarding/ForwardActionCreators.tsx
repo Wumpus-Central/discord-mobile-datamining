@@ -130,7 +130,7 @@ let obj = {
                   result = "" === closure_128_2;
                 }
                 if (!result) {
-                  obj1 = tmp2(11684);
+                  obj1 = tmp2(11689);
                   result = obj1.isRatelimitedInChannel(closure_128_0, PermissionStore);
                 }
                 if (!result) {

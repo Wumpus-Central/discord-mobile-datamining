@@ -153,7 +153,7 @@ let closure_12 = noop.memo((voiceState) => {
   obj.sessionId = voiceState2.sessionId;
   obj.channel = channel;
   obj.isGuest = isGuest;
-  obj.children = closure_6(channel(16122), obj, user.id);
+  obj.children = closure_6(channel(16125), obj, user.id);
   return closure_6(View, obj);
 });
 const size = fn(2);

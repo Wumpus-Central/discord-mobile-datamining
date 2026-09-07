@@ -5,7 +5,7 @@ import components_Button_Button from "../../../../design/components/Button/nativ
 import FastImageDefault from "../../../../components_native/common/FastImage.tsx";
 import Sheet_BottomSheet from "../../../../design/components/Sheet/native/BottomSheet.native.tsx";
 import GuildSettingsActionCreatorsDefault from "../../../guild_settings/GuildSettingsActionCreators.tsx";
-import _modDef16243 from "../../../../../_runtime/metro/16243__.js";
+import _modDef16246 from "../../../../../_runtime/metro/16246__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -35,7 +35,7 @@ export default function GuildRoleSubscriptionsUpsellActionSheet(arg0) {
     },
     children: null,
   };
-  obj = { source: _modDef16243 };
+  obj = { source: _modDef16246 };
   const items = [closure_6(FastImageDefault, obj), , , ,];
   obj = {
     style: tmp.title,

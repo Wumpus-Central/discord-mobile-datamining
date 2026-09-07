@@ -467,7 +467,7 @@ export const GuildEventShareAction = function GuildEventShareAction(event) {
   event = event.event;
   const tmp3 = useCanInviteForGuildEventDefault(event);
   importDefault = tmp3;
-  event(9775);
+  event(9780);
   let obj = { guildId: event.guild_id, guildEventId: event.id };
   dependencyMap = obj.SHARE_EVENT_DETAILS_LINK(obj);
   obj = { accessibilityLabel: null, onPress: null, icon: null, variant: "secondary" };
@@ -483,7 +483,7 @@ export const GuildEventShareAction = function GuildEventShareAction(event) {
       ToastUtils.presentLinkCopied();
     }
   };
-  obj.icon = importDefault(tmp3 ? 9054 : 4504);
+  obj.icon = importDefault(tmp3 ? 9059 : 4504);
   return closure_22(event(8097).IconButton, obj);
 };
 export const GuildEventModeratorAction = function GuildEventModeratorAction(event) {
@@ -553,7 +553,7 @@ export const GuildEventIndicateInterestAction = function GuildEventIndicateInter
   if (first) {
     let BellIcon = tmp(4511).CheckmarkLargeIcon;
   } else {
-    BellIcon = tmp(9776).BellIcon;
+    BellIcon = tmp(9781).BellIcon;
   }
   obj = {
     accessibilityRole: "togglebutton",
@@ -965,14 +965,14 @@ export const GuildEventSimpleLocation = function GuildEventSimpleLocation(event)
     items3,
   );
   let tmp7 = stateFromStores(4713)(stateFromStores);
-  let obj2 = channel_id(9705);
+  let obj2 = channel_id(9710);
   const locationFromEvent = obj2.getLocationFromEvent(event);
   if (null == stateFromStores) {
     if (null == locationFromEvent) {
       return null;
     }
   }
-  let tmp2Result = tmp2(9769);
+  let tmp2Result = tmp2(9774);
   const eventLocationIconComponent = tmp2Result.getEventLocationIconComponent(event, stateFromStores, stateFromStores1);
   obj = { style: tmp.channelContainer, children: null };
   let tmp12 = null != eventLocationIconComponent;
@@ -990,7 +990,7 @@ export const GuildEventSimpleLocation = function GuildEventSimpleLocation(event)
   };
   if (null != stateFromStores) {
     obj2 = { channel: stateFromStores };
-    let combined = stateFromStores(9770)(obj2);
+    let combined = stateFromStores(9775)(obj2);
   } else if (null != locationFromEvent) {
     const intl = tmp2(1114).intl;
     const _HermesInternal = HermesInternal;
@@ -1000,7 +1000,7 @@ export const GuildEventSimpleLocation = function GuildEventSimpleLocation(event)
   if (tmp7 == null) {
     let result = null;
     if (null != locationFromEvent) {
-      tmp2Result = tmp2(9771);
+      tmp2Result = tmp2(9776);
       const obj3 = { guildId: event.guild_id };
       result = tmp2Result.guildEventLocationParser(locationFromEvent, true, obj3);
     }

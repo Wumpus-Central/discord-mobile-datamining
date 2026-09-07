@@ -29,7 +29,7 @@ export default noop.memo(() => {
     return guild_id;
   });
   const obj2 = channelId(504);
-  const channelDetailsSearchContext = channelId(12299).useChannelDetailsSearchContext(channelId, stateFromStores);
+  const channelDetailsSearchContext = channelId(12303).useChannelDetailsSearchContext(channelId, stateFromStores);
   obj = { style: closure_7().container, children: null };
   obj = { searchContext: channelDetailsSearchContext, isFocused: true, tab: SearchTabs.PINS };
   obj.children = jsx(messages_PinsScreenDefault, {

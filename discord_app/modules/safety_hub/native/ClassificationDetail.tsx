@@ -171,7 +171,7 @@ function ClassificationPolicyCard(classificationDescription) {
   obj.style = items;
   obj = { style: tmp.classificationPolicyCardIcon, children: null };
   const tmp2 = TouchableHitBoxDefault;
-  obj.children = closure_13(policyExplainerLink(9402).ShieldIcon, {
+  obj.children = closure_13(policyExplainerLink(9407).ShieldIcon, {
     size: "sm",
     color: nativeDefault.colors.TEXT_LINK,
   });

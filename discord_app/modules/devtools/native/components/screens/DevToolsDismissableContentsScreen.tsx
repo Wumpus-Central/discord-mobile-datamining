@@ -182,7 +182,7 @@ export default function DevToolsDismissableContentsScreen() {
   const tmp = closure_10();
   const ref = initialSearchQuery.useRef(null);
   importDefault = initialSearchQuery.useRef(0);
-  let obj = ref(9931);
+  let obj = ref(9936);
   const tmp2 = useSafeAreaInsetsDefault();
   [dependencyMap, tmp5] = _slicedToArray(obj.useLocalStorageState("devtools-dc-search", ""), 2);
   _slicedToArray = tmp5;
@@ -239,7 +239,7 @@ export default function DevToolsDismissableContentsScreen() {
   const dailyCapOverridden = stateFromStoresObject.dailyCapOverridden;
   const newUserMinAgeRequiredOverridden = stateFromStoresObject.newUserMinAgeRequiredOverridden;
   let tmp4 = _slicedToArray(obj.useLocalStorageState("devtools-dc-search", ""), 2);
-  const tmp9 = _slicedToArray(ref(15011).useForceBountiesSwipeUpNux(), 2);
+  const tmp9 = _slicedToArray(ref(15014).useForceBountiesSwipeUpNux(), 2);
   const first2 = tmp9[0];
   closure_10 = tmp11;
   const items1 = [tmp9[1]];
@@ -341,6 +341,6 @@ export default function DevToolsDismissableContentsScreen() {
   };
   obj.renderItem = callback4;
   obj.onScroll = callback3;
-  obj.children = dailyCapOverridden(ref(8874).FlashList, obj);
+  obj.children = dailyCapOverridden(ref(8879).FlashList, obj);
   return dailyCapOverridden(first1, obj);
 }

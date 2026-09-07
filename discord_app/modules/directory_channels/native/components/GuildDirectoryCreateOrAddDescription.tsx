@@ -149,5 +149,5 @@ export default function GuildDirectoryCreateOrAddDescription(directoryChannelId)
   items1[1] = closure_6(GuildDirectoryEditDescriptionTemplateDefault, obj3);
   obj.children = items1;
   obj.children = closure_7(closure_5, obj);
-  return closure_6(directoryChannelId(12309).GuildDirectoryAddModalScreen, obj);
+  return closure_6(directoryChannelId(12313).GuildDirectoryAddModalScreen, obj);
 }

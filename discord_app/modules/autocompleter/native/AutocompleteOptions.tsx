@@ -22,7 +22,7 @@ const ChannelAutocompleteConstants = fn(5000);
   CHANNEL_SENTINEL: closure_14,
   COMMAND_SENTINEL: closure_15,
 } = ChannelAutocompleteConstants);
-const AutocompleteTypes = fn(10424).AutocompleteTypes;
+const AutocompleteTypes = fn(10429).AutocompleteTypes;
 const EmojiConstants = fn(1374);
 ({ EmojiIntention: closure_17, EMOJI_MAX_LENGTH: closure_18, EMOJI_URL_BASE_SIZE: closure_19 } = EmojiConstants);
 let c20 = false;

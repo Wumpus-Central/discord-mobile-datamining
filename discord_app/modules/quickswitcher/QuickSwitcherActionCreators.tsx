@@ -368,23 +368,23 @@ const Constants = fn(1074);
 const isStaticChannelRoute = fn(1964).isStaticChannelRoute;
 const CollectibleShopTab = fn(1076).CollectibleShopTab;
 let obj = {};
-obj[fn(9835).AutocompleterQuerySymbols.USER] = fn(9835).AutocompleterResultTypes.USER;
-obj[fn(9835).AutocompleterQuerySymbols.TEXT_CHANNEL] = fn(9835).AutocompleterResultTypes.TEXT_CHANNEL;
-obj[fn(9835).AutocompleterQuerySymbols.VOICE_CHANNEL] = fn(9835).AutocompleterResultTypes.VOICE_CHANNEL;
-obj[fn(9835).AutocompleterQuerySymbols.GUILD] = fn(9835).AutocompleterResultTypes.GUILD;
-obj[fn(9835).AutocompleterQuerySymbols.GAME_PROFILE] = fn(9835).AutocompleterResultTypes.GAME_PROFILE;
+obj[fn(9840).AutocompleterQuerySymbols.USER] = fn(9840).AutocompleterResultTypes.USER;
+obj[fn(9840).AutocompleterQuerySymbols.TEXT_CHANNEL] = fn(9840).AutocompleterResultTypes.TEXT_CHANNEL;
+obj[fn(9840).AutocompleterQuerySymbols.VOICE_CHANNEL] = fn(9840).AutocompleterResultTypes.VOICE_CHANNEL;
+obj[fn(9840).AutocompleterQuerySymbols.GUILD] = fn(9840).AutocompleterResultTypes.GUILD;
+obj[fn(9840).AutocompleterQuerySymbols.GAME_PROFILE] = fn(9840).AutocompleterResultTypes.GAME_PROFILE;
 let closure_19 = Object.freeze(obj);
 const regExp = new RegExp(
   "^" +
-    fn(9835).AutocompleterQuerySymbols.USER +
+    fn(9840).AutocompleterQuerySymbols.USER +
     "|" +
-    fn(9835).AutocompleterQuerySymbols.TEXT_CHANNEL +
+    fn(9840).AutocompleterQuerySymbols.TEXT_CHANNEL +
     "|" +
-    fn(9835).AutocompleterQuerySymbols.VOICE_CHANNEL +
+    fn(9840).AutocompleterQuerySymbols.VOICE_CHANNEL +
     "|\\" +
-    fn(9835).AutocompleterQuerySymbols.GUILD +
+    fn(9840).AutocompleterQuerySymbols.GUILD +
     "|\\" +
-    fn(9835).AutocompleterQuerySymbols.GAME_PROFILE,
+    fn(9840).AutocompleterQuerySymbols.GAME_PROFILE,
 );
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/quickswitcher/QuickSwitcherActionCreators.tsx");
@@ -439,10 +439,10 @@ export const switchToResultInNewTab = function switchToResultInNewTab(type) {
   _require = type;
   type = type.type;
   if (require("sortByMatchScore").AutocompleterResultTypes.TEXT_CHANNEL !== type) {
-    if (tmp(9835).AutocompleterResultTypes.VOICE_CHANNEL !== type) {
-      if (tmp(9835).AutocompleterResultTypes.GROUP_DM !== type) {
-        if (tmp(9835).AutocompleterResultTypes.DM !== type) {
-          if (tmp(9835).AutocompleterResultTypes.USER === type) {
+    if (tmp(9840).AutocompleterResultTypes.VOICE_CHANNEL !== type) {
+      if (tmp(9840).AutocompleterResultTypes.GROUP_DM !== type) {
+        if (tmp(9840).AutocompleterResultTypes.DM !== type) {
+          if (tmp(9840).AutocompleterResultTypes.USER === type) {
             let obj = DispatcherDefault;
             obj.dispatch({ type: "QUICKSWITCHER_HIDE" });
             trackClose(constants.QUICKSWITCHER_RESULT_SELECTED, type);
@@ -493,7 +493,7 @@ export const switchToResultInNewTab = function switchToResultInNewTab(type) {
                     return obj3;
                   } else {
                     closure_128_0 = value;
-                    obj = tmp5(10989);
+                    obj = tmp5(10994);
                     obj.openChannelTabActive(closure_128_0, null);
                     c3 = 3;
                     return { value: "HermesInternal", done: null };
@@ -549,7 +549,7 @@ export const switchToResultInNewTab = function switchToResultInNewTab(type) {
                     return obj3;
                   } else {
                     closure_128_0 = value;
-                    obj = tmp5(10989);
+                    obj = tmp5(10994);
                     obj.openChannelTabActive(closure_128_0, null);
                     c3 = 3;
                     return { value: "HermesInternal", done: null };
@@ -579,7 +579,7 @@ export const switchToResultInNewTab = function switchToResultInNewTab(type) {
     trackClose(constants.QUICKSWITCHER_RESULT_SELECTED, type);
     obj = { type: "QUICKSWITCHER_SWITCH_TO", result: type };
     DispatcherDefault.dispatch(obj);
-    tmp(10989).openChannelTabActive(channel.id, guildId);
-    const tmpResult = tmp(10989);
+    tmp(10994).openChannelTabActive(channel.id, guildId);
+    const tmpResult = tmp(10994);
   }
 };

@@ -75,7 +75,7 @@ export default function FamilyCenterActivityBanner() {
     intl3.format(_modDef2396.MXjDSv, { articleLink: "https://support.discord.com/hc/articles/14155060633623" }),
     intl4.format(_modDef2396.EMCf6j, { articleLink: "https://support.discord.com/hc/articles/14155043715735" }),
   );
-  obj.source = importDefault(tmp3 ? 14883 : 14884);
+  obj.source = importDefault(tmp3 ? 14886 : 14887);
   obj.style = tmp4.art;
   const items = [hasOwnProperty(React4, obj), , ,];
   obj1 = { style: tmp4.header, variant: "heading-lg/semibold", children: ageSpecificText };

@@ -17,7 +17,7 @@ import PremiumUpsellUtilsDefault from "../../../utils/native/PremiumUpsellUtils.
 import getStreamSettingsForPreset from "../utils/getStreamSettingsForPreset.tsx";
 import SpeedometerIcon from "../../../design/components/Icon/native/redesign/generated/SpeedometerIcon.tsx";
 import ImageSparkleIcon from "../../../design/components/Icon/native/redesign/generated/ImageSparkleIcon.tsx";
-import _modDef9963 from "../../../../_runtime/metro/09963__.js";
+import _modDef9968 from "../../../../_runtime/metro/09968__.js";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 import ApplicationStreamingSettingsStore from "../../../stores/ApplicationStreamingSettingsStore.tsx";
@@ -227,7 +227,7 @@ export default noop.memo(function MobileGoLiveActionSheet() {
         obj5.children = intl5.string(_modDef2234.nMcXo1);
         const items = [closure_2_14(Text_Text.Text, obj5)];
         const tmp8Result = NativeViewDefault;
-        items[1] = closure_2_14(BaseIconImage.BaseIconImage, { source: _modDef9963, size: "xs" });
+        items[1] = closure_2_14(BaseIconImage.BaseIconImage, { source: _modDef9968, size: "xs" });
         obj4.children = items;
         obj3.label = __initData(tmp8Result, obj4);
         if (null != maxSettingsForPreset2) {
@@ -328,5 +328,5 @@ export const showMobileGoLiveActionSheet = function showMobileGoLiveActionSheet(
   };
   obj = { location_stack };
   obj.impressionProperties = obj;
-  obj.openLazy(asyncRequireImpl(9952, dependencyMap.paths), MobileGoLiveActionSheet, obj);
+  obj.openLazy(asyncRequireImpl(9957, dependencyMap.paths), MobileGoLiveActionSheet, obj);
 };

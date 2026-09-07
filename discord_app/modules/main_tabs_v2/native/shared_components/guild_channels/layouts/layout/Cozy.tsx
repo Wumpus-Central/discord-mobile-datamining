@@ -87,7 +87,7 @@ obj.typing = {
   typingIndicator: { position: { top: 25, left: 11 } },
 };
 obj.separator = { margin: { marginVertical: 20 } };
-const importDefaultResultResult = deepmerge(fn(10124).CHANNEL_LIST_STYLES_COMPACT, obj);
+const importDefaultResultResult = deepmerge(fn(10129).CHANNEL_LIST_STYLES_COMPACT, obj);
 const obj4 = { size: fn(1178).IconSizes.REFRESH_SMALL_16, gameSize: fn(7172).GameIconSizes.SMALL };
 const obj6 = {
   position: { top: 12, left: 12 },

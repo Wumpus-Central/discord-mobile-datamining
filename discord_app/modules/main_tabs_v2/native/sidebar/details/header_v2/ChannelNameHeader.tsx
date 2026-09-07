@@ -55,9 +55,9 @@ function DirectMessageIcon(channel) {
       guildId: "Boolean",
       size: tmp2(1178).AvatarSizes.NORMAL,
       status: false,
-      isMobileOnline: "done",
-      isVROnline: "flowing",
-      statusStyle: "hourglass",
+      isMobileOnline: null,
+      isVROnline: true,
+      statusStyle: null,
     };
     let isSystemUserResult;
     if (stateFromStores != null) {

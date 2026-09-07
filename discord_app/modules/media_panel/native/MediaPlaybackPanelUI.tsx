@@ -15,10 +15,10 @@ import SafeAreaDisabledStore from "../../panels/morphable/native/SafeAreaDisable
 
 require = fn;
 const useContext = fn(19).useContext;
-const MediaPlaybackPanelConstants = fn(14537);
+const MediaPlaybackPanelConstants = fn(14540);
 ({ MEDIA_PLAYBACK_PANEL_LAYOUT_PHYSICS: closure_7, MediaPlaybackPanelModes: closure_8 } = MediaPlaybackPanelConstants);
-const IS_IOS = fn(12274).IS_IOS;
-const BORDER_RADIUS_PHYSICS = fn(12273).BORDER_RADIUS_PHYSICS;
+const IS_IOS = fn(12278).IS_IOS;
+const BORDER_RADIUS_PHYSICS = fn(12277).BORDER_RADIUS_PHYSICS;
 const jsx = fn(21).jsx;
 fn(4560);
 let createStyles = {
@@ -426,26 +426,26 @@ export default function MediaPlaybackPanelUI() {
       fn4.__workletHash = 8557652955267;
       fn4.__initData = __initData7;
       const animatedStyle3 = tmp6(4296).useAnimatedStyle(fn4);
-      const context1 = obj1.useContext(tmp2(17223));
+      const context1 = obj1.useContext(tmp2(17226));
       ({ wrapperOffset: wrapperOffset2, pipState: pipState2 } = context1);
       obj4 = { panGestureEnabled: true, mode: null, pipState: null, wrapperOffset: null };
       const tmp6Result1 = tmp6(4296);
-      obj4.mode = tmp6(17021).MorphablePanelModes.PIP;
+      obj4.mode = tmp6(17024).MorphablePanelModes.PIP;
       obj4.pipState = pipState2;
       obj4.wrapperOffset = wrapperOffset2;
-      const tmp2Result = tmp2(17021);
+      const tmp2Result = tmp2(17024);
       obj5 = { children: null };
       obj6 = { style: animatedStyle, pointerEvents: "box-none", children: null };
       obj7 = { style: tmp30, children: null };
       const View = tmp2(4296).View;
       obj8 = { style: tmp31, children: null };
-      const obj9 = { gesture: tmp2(17021)(obj4), children: null };
+      const obj9 = { gesture: tmp2(17024)(obj4), children: null };
       const obj10 = { style: null, children: null };
       const items3 = [tmp.content, animatedStyle3];
       obj10.style = items3;
-      obj10.children = jsx(tmp2(17225), {});
+      obj10.children = jsx(tmp2(17228), {});
       obj9.children = jsx(tmp2(4296).View, { style: null, children: null });
-      obj8.children = jsx(tmp6(6655).GestureDetector, { gesture: tmp2(17021)(obj4), children: null });
+      obj8.children = jsx(tmp6(6655).GestureDetector, { gesture: tmp2(17024)(obj4), children: null });
       obj7.children = jsx(tmp2(4296).View, { style: tmp31, children: null });
       class R {
         constructor() {

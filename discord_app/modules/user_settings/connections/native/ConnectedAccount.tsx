@@ -583,33 +583,33 @@ prototype["renderMetadata"] = function renderMetadata() {
   const createdAtDate = obj1.getCreatedAtDate(metadata[MetadataFields.CREATED_AT], props.locale);
   const type = account.type;
   if (constants.REDDIT === type) {
-    let tmp2Result = tmp2(11575);
+    let tmp2Result = tmp2(11580);
     let redditMetadataItems = tmp2Result.generateRedditMetadataItems(metadata);
   } else if (constants.STEAM === type) {
-    tmp2Result = tmp2(11575);
+    tmp2Result = tmp2(11580);
     redditMetadataItems = tmp2Result.generateSteamMetadataItems(metadata);
   } else {
     if (constants.BLUESKY !== type) {
       if (constants.TWITTER !== type) {
         if (constants.MASTODON !== type) {
           if (constants.EBAY === type) {
-            redditMetadataItems = tmp2(11575).generateEbayMetadataItems(metadata);
-            const tmp2Result1 = tmp2(11575);
+            redditMetadataItems = tmp2(11580).generateEbayMetadataItems(metadata);
+            const tmp2Result1 = tmp2(11580);
           } else if (constants.PAYPAL === type) {
-            redditMetadataItems = tmp2(11575).generatePaypalMetadataItems(metadata);
-            const tmp2Result2 = tmp2(11575);
+            redditMetadataItems = tmp2(11580).generatePaypalMetadataItems(metadata);
+            const tmp2Result2 = tmp2(11580);
           } else {
             redditMetadataItems = [];
             if (constants.TIKTOK === type) {
-              redditMetadataItems = tmp2(11575).generateTikTokMetadataItems(metadata);
-              const tmp2Result3 = tmp2(11575);
+              redditMetadataItems = tmp2(11580).generateTikTokMetadataItems(metadata);
+              const tmp2Result3 = tmp2(11580);
             }
           }
         }
       }
     }
-    redditMetadataItems = tmp2(11575).generateTwitterMetadataItems(metadata);
-    const tmp2Result4 = tmp2(11575);
+    redditMetadataItems = tmp2(11580).generateTwitterMetadataItems(metadata);
+    const tmp2Result4 = tmp2(11580);
   }
   if (null !== createdAtDate) {
     let obj = { variant: "text-xs/normal", color: "interactive-text-default", children: null };
@@ -707,9 +707,9 @@ prototype["renderMetadata"] = function renderMetadata() {
     obj9.style = items2;
     const obj10 = { style: tmp.metadataRefreshIcon, size: tmp2(1178).Icon.Sizes.SMALL, source: null };
     if (self.state.metadataAlreadyRefreshed) {
-      let tmp9Result = tmp9(10652);
+      let tmp9Result = tmp9(10657);
     } else {
-      tmp9Result = tmp9(14970);
+      tmp9Result = tmp9(14973);
     }
     obj10.source = tmp9Result;
     obj9.children = closure_14(tmp2(1178).Icon, obj10);

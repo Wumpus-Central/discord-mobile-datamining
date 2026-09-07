@@ -126,8 +126,8 @@ function showNotification(uri) {
               }
               closure_128_0 = tmp7;
               BUG_REPORTER = constants.BUG_REPORTER;
-              notificationDuration = tmp2(10094).getNotificationDuration(BUG_REPORTER);
-              const obj5 = tmp2(10094);
+              notificationDuration = tmp2(10099).getNotificationDuration(BUG_REPORTER);
+              const obj5 = tmp2(10099);
               const obj3 = {
                 type: BUG_REPORTER,
                 duration: notificationDuration,
@@ -137,7 +137,7 @@ function showNotification(uri) {
                 onDismiss: null,
                 inAppNotificationId: null,
               };
-              const obj6 = tmp3(10096);
+              const obj6 = tmp3(10101);
               obj3.key = tmp2(1256).v4();
               obj3.image = closure_128_0;
               uri = undefined;

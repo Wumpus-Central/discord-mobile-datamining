@@ -21,7 +21,7 @@ function UnmuteOptions(channel) {
     MuteSettingsUtils.handleUnmutePress(channel.id, channel.guild_id);
   }, items);
   obj = { icon: null, label: null, onPress: null, start: true, end: true };
-  obj = { disableColor: true, source: navigation(10145) };
+  obj = { disableColor: true, source: navigation(10150) };
   obj.icon = closure_10(channel(1178).Icon, obj);
   const obj1 = { variant: "text-md/semibold", color: "mobile-text-heading-primary", children: null };
   const intl = channel(1114).intl;
@@ -34,8 +34,8 @@ function UnmuteOptions(channel) {
   const items1 = [closure_10(channel(5605).TableRow, obj)];
   const obj3 = { muteConfig: channel.muteConfig, type: null };
   const obj6 = channel(4713);
-  const tmp6 = navigation(10146);
-  const MuteSettingType = channel(10146).MuteSettingType;
+  const tmp6 = navigation(10151);
+  const MuteSettingType = channel(10151).MuteSettingType;
   obj3.type = channel.isPrivate() ? MuteSettingType.DM : MuteSettingType.CHANNEL;
   items1[1] = closure_10(tmp6, obj3);
   obj.children = items1;

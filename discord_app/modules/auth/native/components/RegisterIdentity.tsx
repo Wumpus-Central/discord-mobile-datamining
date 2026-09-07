@@ -55,7 +55,7 @@ function RegisterIdentityBase(inputMode) {
             obj1.actionType = constants2.SUBMITTED;
             React7(obj1);
             if (inputMode === tmp3(tmp31[18]).PhoneOrEmailSelectorForceMode.EMAIL) {
-              const obj2 = { email, phoneToken: "a" };
+              const obj2 = { email, phoneToken: "Array" };
               closure_1_10(obj2);
               const tmp26 = React5();
               if (null != tmp26) {
@@ -127,7 +127,7 @@ function RegisterIdentityBase(inputMode) {
   dependencyMap = obj1.useNavigation();
   const tmp5 = closure_11((errors) => errors.errors);
   let message = tmp5;
-  let obj2 = inputMode(15956);
+  let obj2 = inputMode(15959);
   const identityRegistrationStep = obj2.useIdentityRegistrationStep(
     inputMode(1093).AuthStates.REGISTER_IDENTITY,
     inputMode,
@@ -138,7 +138,7 @@ function RegisterIdentityBase(inputMode) {
   ({ setLoginEmail, loginPhone, updateLoginPhone, preventSubmitIdentity, identityError } = identityRegistrationStep);
   const tmp4 = setInputMode(6944)();
   [tmp8, c8] = loginEmail(identityErrorMessage.useState(false), 2);
-  closure_9 = identityErrorMessage.useContext(inputMode(15943).TrackRegistrationContext);
+  closure_9 = identityErrorMessage.useContext(inputMode(15946).TrackRegistrationContext);
   let items = [tmp5.message, identityErrorMessage];
   const memo = identityErrorMessage.useMemo(() => {
     message = identityErrorMessage;
@@ -148,10 +148,10 @@ function RegisterIdentityBase(inputMode) {
     return message;
   }, items);
   const tmp7 = loginEmail(identityErrorMessage.useState(false), 2);
-  setInputMode(15961)(inputMode(1093).AuthStates.REGISTER_IDENTITY);
-  const tmp10 = setInputMode(15961);
-  let obj3 = inputMode(15945);
-  setInputMode(15962)(obj3.getPreviousRegistrationTransitionStep(inputMode(1093).AuthStates.REGISTER_IDENTITY));
+  setInputMode(15964)(inputMode(1093).AuthStates.REGISTER_IDENTITY);
+  const tmp10 = setInputMode(15964);
+  let obj3 = inputMode(15948);
+  setInputMode(15965)(obj3.getPreviousRegistrationTransitionStep(inputMode(1093).AuthStates.REGISTER_IDENTITY));
   setInputMode(4992)(() => {
     closure_9({ step: constants.ACCOUNT_IDENTITY, actionType: constants2.VIEWED });
   });
@@ -163,8 +163,8 @@ function RegisterIdentityBase(inputMode) {
     children: null,
   };
   const items1 = [controlComponent, , ,];
-  const tmp12 = setInputMode(15962);
-  items1[1] = closure_14(inputMode(15963).RegisterPhoneOrEmailInput, {
+  const tmp12 = setInputMode(15965);
+  items1[1] = closure_14(inputMode(15966).RegisterPhoneOrEmailInput, {
     loginPhone,
     loginEmail,
     setLoginPhone: updateLoginPhone,
@@ -203,14 +203,14 @@ function RegisterIdentityBase(inputMode) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: metroRequire, ScrollView: closure_7 } = get_ActivityIndicator);
-const RegistrationUIStore = fn(15946);
+const RegistrationUIStore = fn(15949);
 ({
   clearRegistrationErrorMessage: closure_8,
   setRegistrationErrors: closure_9,
   updateRegistrationOptions: c10,
   useRegistrationUIStore: closure_11,
 } = RegistrationUIStore);
-const RegistrationConstants = fn(15947);
+const RegistrationConstants = fn(15950);
 ({ RegisterTransitionSteps: closure_12, RegistrationTransitionActionTypes: map1 } = RegistrationConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
@@ -233,11 +233,11 @@ let result = size.fileFinishedImporting("modules/auth/native/components/Register
 
 export const RegisterIdentity = function RegisterIdentity() {
   let obj = hasItem(4982);
-  let obj1 = hasItem(15965);
+  let obj1 = hasItem(15968);
   const deviceCountry = obj1.getDeviceCountry();
   hasItem = null != deviceCountry;
   if (hasItem) {
-    const EMAIL_FIRST_COUNTRIES = tmp(15966).EMAIL_FIRST_COUNTRIES;
+    const EMAIL_FIRST_COUNTRIES = tmp(15969).EMAIL_FIRST_COUNTRIES;
     hasItem = EMAIL_FIRST_COUNTRIES.has(deviceCountry);
   }
   let items = [hasItem];
@@ -282,7 +282,7 @@ export const RegisterIdentity = function RegisterIdentity() {
       return obj;
     }),
   };
-  const segmentedControlState = hasItem(9792).useSegmentedControlState(obj);
+  const segmentedControlState = hasItem(9797).useSegmentedControlState(obj);
   const items2 = [segmentedControlState, memo];
   obj = {
     inputMode: tmp6[0],
@@ -298,7 +298,7 @@ export const RegisterIdentity = function RegisterIdentity() {
   };
   obj1 = {
     style: tmp3.segmentedControl,
-    children: closure_14(tmp(9793).SegmentedControl, {
+    children: closure_14(tmp(9798).SegmentedControl, {
       state: segmentedControlState,
       keyboardShouldPersistTaps: "handled",
     }),

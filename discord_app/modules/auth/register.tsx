@@ -338,7 +338,7 @@ function registerFull(giftCodeSKUId) {
     },
   );
 }
-const ParentalConsentStore = fn(15958);
+const ParentalConsentStore = fn(15961);
 const Constants = fn(1074);
 ({ AnalyticEvents: metroRequire, AnalyticsSections: closure_7, Endpoints: closure_8 } = Constants);
 const AgeGateConstants = fn(1098);

@@ -78,9 +78,9 @@ function ForumPostMedia(obscureReason) {
   if (obscureReason.isMediaPost) {
     obj = {};
     const merged = Object.assign(obscureReason);
-    let tmp6Result = closure_10(ref(12011), obj);
+    let tmp6Result = closure_10(ref(12015), obj);
     let tmp12 = closure_10;
-    const tmp19 = ref(12011);
+    const tmp19 = ref(12015);
   } else {
     if (tmp3Result.isAndroid()) {
       obj = {};

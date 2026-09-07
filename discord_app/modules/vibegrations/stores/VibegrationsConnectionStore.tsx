@@ -146,7 +146,36 @@ function flushPendingSends(projectId, pendingSends) {
     }
   }
 }
-let closure_30 = async function _relayCaptureRequest(arg0, arg1, arg2) {
+let closure_27 = async function _mintUpstreamTicket(arg0) {
+  closure_131_0 = closure_0;
+  closure_131_1 = closure_1;
+  await require("VibegrationsWorkerTickets").mintRemixTicket(closure_2);
+  if (1 === tmp6) {
+    c6 = 0;
+    let status;
+    if (tmp24 != null) {
+      status = tmp24.status;
+    }
+    closure_131_3 = status;
+    const ws2 = closure_131_0.ws;
+    let str = "failed";
+    if (403 === closure_131_3) {
+      str = "forbidden";
+    }
+    const result = ws2.sendUpstreamTicketAck(closure_131_1, undefined, str);
+    c7 = 3;
+  } else if (arg0 === 1) {
+    c7 = 3;
+    throw value;
+  } else if (arg0 !== 2) {
+    const ticket = value.ticket;
+    const ws = closure_131_0.ws;
+    const result1 = ws.sendUpstreamTicketAck(closure_131_1, ticket);
+    c6 = 0;
+  }
+  return value;
+};
+let closure_31 = async function _relayCaptureRequest(arg0, arg1, arg2) {
   closure_0 = arg0;
   closure_1 = arg1;
   let id = arg2;
@@ -165,7 +194,7 @@ let closure_30 = async function _relayCaptureRequest(arg0, arg1, arg2) {
     closure_131_4 = asyncGeneratorStep(async () => {
       ws = ws.ws;
       ws.sendCaptureAck(user.id, "accepted");
-      await v3(closure_1_2[8]).awaitVibegrationsPreviewClaim(closure_2_0, user.id);
+      await v3(closure_1_2[9]).awaitVibegrationsPreviewClaim(closure_2_0, user.id);
       return value;
     });
     obj1.onAccepted = function() {
@@ -195,7 +224,7 @@ let closure_30 = async function _relayCaptureRequest(arg0, arg1, arg2) {
     return value;
   })();
 };
-let closure_31 = async function _relayControlRequest(arg0) {
+let closure_32 = async function _relayControlRequest(arg0) {
   closure_131_0 = closure_0;
   closure_131_1 = ws;
   closure_131_2 = user;
@@ -205,7 +234,7 @@ let closure_31 = async function _relayControlRequest(arg0) {
   await VibegrationsPlatformUtilsDefault.relayPreviewControl(closure_0, id, request, asyncGeneratorStep(async () => {
     ws = ws.ws;
     ws.sendControlAck(user.id, "accepted");
-    await v3(closure_1_2[8]).awaitVibegrationsPreviewClaim(closure_2_0, user.id);
+    await v3(closure_1_2[9]).awaitVibegrationsPreviewClaim(closure_2_0, user.id);
     return null != value;
   }));
   if (1 === tmp6) {
@@ -241,9 +270,11 @@ function handleEvent(projectId, pendingEvents, type) {
           if ("control_claim" !== type.type) {
             if ("capture_claim" !== type.type) {
               if ("preview_operation" !== type.type) {
-                if ("open" !== map1.get(projectId)) {
-                  pendingEvents = pendingEvents.pendingEvents;
-                  pendingEvents.push(type);
+                if ("request_upstream_ticket" !== type.type) {
+                  if ("open" !== map1.get(projectId)) {
+                    pendingEvents = pendingEvents.pendingEvents;
+                    pendingEvents.push(type);
+                  }
                 }
               }
             }
@@ -262,15 +293,15 @@ function handleEvent(projectId, pendingEvents, type) {
         messages = [];
       }
       obj.entries = messages.slice();
-      let tmp193 = null;
+      let tmp194 = null;
       if (true === type.has_more) {
         let cursor = type.cursor;
         if (cursor == null) {
           cursor = null;
         }
-        tmp193 = cursor;
+        tmp194 = cursor;
       }
-      obj.cursor = tmp193;
+      obj.cursor = tmp194;
       attachment_id(573).dispatch(obj);
       loadOlderHistory(projectId);
       const obj73 = attachment_id(573);
@@ -286,15 +317,15 @@ function handleEvent(projectId, pendingEvents, type) {
     }
     const substr = messages1.slice();
     obj = { type: "VIBEGRATIONS_CHAT_HISTORY_SET", projectId, entries: substr, cursor: null };
-    let tmp172 = null;
+    let tmp173 = null;
     if (true === type.has_more) {
       let cursor1 = type.cursor;
       if (cursor1 == null) {
         cursor1 = null;
       }
-      tmp172 = cursor1;
+      tmp173 = cursor1;
     }
-    obj.cursor = tmp172;
+    obj.cursor = tmp173;
     attachment_id(573).dispatch(obj);
     map7.delete(projectId);
     (function beginHistoryDrain(projectId) {
@@ -313,8 +344,8 @@ function handleEvent(projectId, pendingEvents, type) {
     pendingEvents = pendingEvents.pendingEvents;
     pendingEvents.pendingEvents = [];
     setConnState(projectId, "open");
-    for (const item10586 of pendingEvents) {
-      let tmp183 = handleEvent(arg0, arg1, item10586);
+    for (const item10591 of pendingEvents) {
+      let tmp184 = handleEvent(arg0, arg1, item10591);
       continue;
     }
     const pendingModelSettings = pendingEvents.pendingModelSettings;
@@ -429,7 +460,7 @@ function handleEvent(projectId, pendingEvents, type) {
       }
     } else if ("thinking_lifecycle" === type.kind) {
       ({ phase, session, seq, ticks, elapsed_ms, text } = type);
-      if (tmp137) {
+      if (tmp138) {
         const obj10 = { type: "VIBEGRATIONS_CHAT_THINKING_SET", projectId, activity: null };
         const obj11 = { phase, session, seq, ticks: null, elapsedMs: null, text: null };
         if (ticks == null) {
@@ -448,19 +479,19 @@ function handleEvent(projectId, pendingEvents, type) {
         attachment_id(573).dispatch(obj10);
         const obj56 = attachment_id(573);
       }
-      tmp137 = null != phase && null != seq && null != session;
+      tmp138 = null != phase && null != seq && null != session;
     } else if ("compaction" === type.kind) {
-      let tmp132 = "start" !== type.phase;
-      if (tmp132) {
-        tmp132 = "end" !== type.phase;
+      let tmp133 = "start" !== type.phase;
+      if (tmp133) {
+        tmp133 = "end" !== type.phase;
       }
-      if (!tmp132) {
+      if (!tmp133) {
         let obj12 = { type: "VIBEGRATIONS_CHAT_COMPACTING_SET", projectId, compacting: "start" === type.phase };
         attachment_id(573).dispatch(obj12);
         const obj54 = attachment_id(573);
       }
     } else if ("debug_compaction_declined" === type.kind) {
-      if (tmp124) {
+      if (tmp125) {
         const obj13 = { type: "VIBEGRATIONS_DEBUG_COMPACTION_DECLINED", projectId, promptCeiling: null, threshold: null, projected: null, headroom: null, retainedMessages: null, observedAt: null };
         let num13 = type.prompt_ceiling;
         if (num13 == null) {
@@ -483,9 +514,9 @@ function handleEvent(projectId, pendingEvents, type) {
         attachment_id(573).dispatch(obj13);
         const obj51 = attachment_id(573);
       }
-      tmp124 = null != type.projected && null != type.threshold;
+      tmp125 = null != type.projected && null != type.threshold;
     } else if ("debug_compaction_report" === type.kind) {
-      if (tmp115) {
+      if (tmp116) {
         let obj14 = { type: "VIBEGRATIONS_DEBUG_COMPACTION_REPORT", projectId, tokensBefore: null, tokensAfter: null, retainedMessages: null, promptCeiling: null, observedAt: null };
         ({ tokens_before: obj49.tokensBefore, tokens_after: obj49.tokensAfter, retained_messages } = type);
         if (retained_messages == null) {
@@ -503,7 +534,7 @@ function handleEvent(projectId, pendingEvents, type) {
         attachment_id(573).dispatch(obj14);
         const obj48 = attachment_id(573);
       }
-      tmp115 = null != type.tokens_before && null != type.tokens_after;
+      tmp116 = null != type.tokens_before && null != type.tokens_after;
     } else if ("todos" === type.kind) {
       let items = type.items;
       if (items == null) {
@@ -531,11 +562,11 @@ function handleEvent(projectId, pendingEvents, type) {
         sendFailedStep(projectId, intl.string(attachment_id(3547).IHCafX), obj);
       }
     } else if ("ideas" === type.kind) {
-      let tmp99 = null != type.ideas;
-      if (tmp99) {
-        tmp99 = type.ideas.length > 0;
+      let tmp100 = null != type.ideas;
+      if (tmp100) {
+        tmp100 = type.ideas.length > 0;
       }
-      if (tmp99) {
+      if (tmp100) {
         let obj41 = attachment_id(573);
         const obj20 = { type: "VIBEGRATIONS_CHAT_TURN_PATCH", projectId, turnId: type.turn_id, patch: null };
         let obj21 = { ideas: type.ideas };
@@ -543,8 +574,8 @@ function handleEvent(projectId, pendingEvents, type) {
         obj41.dispatch(obj20);
       }
     } else if ("clarification" === type.kind) {
-      let tmp94 = null != type.clarification;
-      if (tmp94) {
+      let tmp95 = null != type.clarification;
+      if (tmp95) {
         const questions = type.clarification.questions;
         let num7;
         if (questions != null) {
@@ -553,9 +584,9 @@ function handleEvent(projectId, pendingEvents, type) {
         if (num7 == null) {
           num7 = 0;
         }
-        tmp94 = num7 > 0;
+        tmp95 = num7 > 0;
       }
-      if (tmp94) {
+      if (tmp95) {
         let obj38 = attachment_id(573);
         let obj22 = { type: "VIBEGRATIONS_CHAT_TURN_PATCH", projectId, turnId: type.turn_id, patch: null };
         const obj23 = { clarification: type.clarification };
@@ -563,11 +594,11 @@ function handleEvent(projectId, pendingEvents, type) {
         obj38.dispatch(obj22);
       }
     } else if ("attachment" === type.kind) {
-      let tmp89 = null != type.attachments;
-      if (tmp89) {
-        tmp89 = type.attachments.length > 0;
+      let tmp90 = null != type.attachments;
+      if (tmp90) {
+        tmp90 = type.attachments.length > 0;
       }
-      if (tmp89) {
+      if (tmp90) {
         let obj35 = attachment_id(573);
         let obj24 = { type: "VIBEGRATIONS_CHAT_TURN_PATCH", projectId, turnId: type.turn_id, patch: null };
         const obj25 = { attachments: type.attachments };
@@ -599,20 +630,20 @@ function handleEvent(projectId, pendingEvents, type) {
       obj29.patch = obj30;
       obj31.dispatch(obj29);
     } else if ("usage" === type.kind) {
-      if (tmp80) {
+      if (tmp81) {
         obj29 = attachment_id(573);
         const obj32 = { type: "VIBEGRATIONS_CHAT_USAGE_SET", projectId, turn: null, project: null };
         ({ turn: obj31.turn, project: obj31.project } = type);
         obj29.dispatch(obj32);
       }
-      tmp80 = null != type.turn && null != type.project;
+      tmp81 = null != type.turn && null != type.project;
     } else if ("project_named" === type.kind) {
       const name = type.name;
-      let tmp75 = null != name;
-      if (tmp75) {
-        tmp75 = "" !== name;
+      let tmp76 = null != name;
+      if (tmp76) {
+        tmp76 = "" !== name;
       }
-      if (tmp75) {
+      if (tmp76) {
         obj28 = require("VibegrationsActionCreators");
         obj28.renameProject(projectId, name).catch(() => {
 
@@ -637,13 +668,13 @@ function handleEvent(projectId, pendingEvents, type) {
       }
     } else if ("patch_notes_draft" === type.kind) {
       const pendingPatchNotesDraft = pendingEvents.pendingPatchNotesDraft;
-      if (tmp65) {
+      if (tmp66) {
         pendingEvents.pendingPatchNotesDraft = null;
         const _clearTimeout = clearTimeout;
         clearTimeout(pendingPatchNotesDraft.timeout);
         pendingPatchNotesDraft.resolve(type);
       }
-      tmp65 = null != pendingPatchNotesDraft && pendingPatchNotesDraft.nonce === type.nonce;
+      tmp66 = null != pendingPatchNotesDraft && pendingPatchNotesDraft.nonce === type.nonce;
     } else if ("app_icon_set" === type.kind) {
       const icon = type.icon;
       if (null != icon) {
@@ -708,21 +739,21 @@ function handleEvent(projectId, pendingEvents, type) {
       }
       if (deleteResult2) {
         obj35 = { type: "VIBEGRATIONS_CHAT_INTERRUPTED", projectId };
-        tmp58(573).dispatch(obj35);
-        const tmp58Result = tmp58(573);
+        tmp59(573).dispatch(obj35);
+        const tmp59Result = tmp59(573);
       }
-      tmp58 = attachment_id;
+      tmp59 = attachment_id;
     } else {
       const obj36 = { type: "VIBEGRATIONS_CHAT_STEP_APPEND", projectId, turnId: type.turn_id, step: type };
       attachment_id(573).dispatch(obj36);
-      let tmp46 = "build_error" !== type.kind;
-      if (tmp46) {
-        tmp46 = "healthcheck_failed" !== type.kind;
+      let tmp47 = "build_error" !== type.kind;
+      if (tmp47) {
+        tmp47 = "healthcheck_failed" !== type.kind;
       }
-      if (tmp46) {
-        tmp46 = "error" !== type.kind;
+      if (tmp47) {
+        tmp47 = "error" !== type.kind;
       }
-      if (!tmp46) {
+      if (!tmp47) {
         obj19 = require("VibegrationsAnalytics");
         const obj37 = {};
         let merged = Object.assign(obj[type.kind]);
@@ -746,7 +777,7 @@ function handleEvent(projectId, pendingEvents, type) {
   } else if ("capture_preview" === type.type) {
     (function relayCaptureRequest() {
       const self = this;
-      const apply = closure_1_30.apply;
+      const apply = closure_1_31.apply;
       if (typeof apply === "unknown") {
         let applyArgumentsResult = HermesBuiltin.applyArguments(self);
       } else {
@@ -758,7 +789,7 @@ function handleEvent(projectId, pendingEvents, type) {
     });
     const promise2 = (function relayCaptureRequest() {
       const self = this;
-      const apply = closure_1_30.apply;
+      const apply = closure_1_31.apply;
       if (typeof apply === "unknown") {
         let applyArgumentsResult = HermesBuiltin.applyArguments(self);
       } else {
@@ -769,7 +800,7 @@ function handleEvent(projectId, pendingEvents, type) {
   } else if ("control_preview" === type.type) {
     (function relayControlRequest() {
       const self = this;
-      const apply = closure_1_31.apply;
+      const apply = closure_1_32.apply;
       if (typeof apply === "unknown") {
         let applyArgumentsResult = HermesBuiltin.applyArguments(self);
       } else {
@@ -781,7 +812,7 @@ function handleEvent(projectId, pendingEvents, type) {
     });
     const promise = (function relayControlRequest() {
       const self = this;
-      const apply = closure_1_31.apply;
+      const apply = closure_1_32.apply;
       if (typeof apply === "unknown") {
         let applyArgumentsResult = HermesBuiltin.applyArguments(self);
       } else {
@@ -794,10 +825,10 @@ function handleEvent(projectId, pendingEvents, type) {
       if ("capture_claim" !== type.type) {
         if ("preview_operation" === type.type) {
           if ("begin" === type.phase) {
-            obj17 = attachment_id(16588);
+            obj17 = attachment_id(16591);
             const result3 = obj17.beginPreviewOperation(projectId);
           } else {
-            obj16 = attachment_id(16588);
+            obj16 = attachment_id(16591);
             obj16.endPreviewOperation(projectId);
           }
         } else if ("model_settings" === type.type) {
@@ -871,14 +902,25 @@ function handleEvent(projectId, pendingEvents, type) {
             const _Date = Date;
             const date2 = new Date();
             obj43.observedAt = date2.toISOString();
-            tmp13(573).dispatch(obj43);
-            const tmp13Result = tmp13(573);
+            tmp14(573).dispatch(obj43);
+            const tmp14Result = tmp14(573);
           }
-          tmp13 = attachment_id;
+          tmp14 = attachment_id;
         } else if ("debug_tool_call" === type.type) {
           obj4 = attachment_id(573);
           obj44 = { type: "VIBEGRATIONS_TOOL_CALL_APPEND", projectId, toolCall: type };
           obj4.dispatch(obj44);
+        } else if ("request_upstream_ticket" === type.type) {
+          (function mintUpstreamTicket() {
+            const self = this;
+            const apply = closure_1_27.apply;
+            if (typeof apply === "unknown") {
+              let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+            } else {
+              applyArgumentsResult = apply(self, arguments);
+            }
+            return applyArgumentsResult;
+          })(pendingEvents, type.id, type.project_id);
         } else if ("debug_history_state" === type.type) {
           obj2 = attachment_id(573);
           const obj45 = { type: "VIBEGRATIONS_HISTORY_LOAD_SETTLE", projectId, scope: null, status: null, count: null, truncated: null };
@@ -915,9 +957,9 @@ function handleEvent(projectId, pendingEvents, type) {
                     value.add(combined);
                     ({ location: obj3.location, code: obj3.code } = tmp2);
                     ({ message: obj3.message, source: obj3.details } = historical);
-                    const result1 = pendingEvents(16590).trackVibegrationErrored(projectId, { location: null, code: null, message: null, details: null });
+                    const result1 = pendingEvents(16593).trackVibegrationErrored(projectId, { location: null, code: null, message: null, details: null });
                     obj = { location: null, code: null, message: null, details: null };
-                    const obj2 = pendingEvents(16590);
+                    const obj2 = pendingEvents(16593);
                   }
                 }
               }
@@ -934,7 +976,7 @@ function handleEvent(projectId, pendingEvents, type) {
     const vibegrationsPreviewClaim = obj18.resolveVibegrationsPreviewClaim(type.id, upload_token);
   }
 }
-let closure_33 = async function _openWithFreshTicket(arg0, arg1) {
+let closure_34 = async function _openWithFreshTicket(arg0, arg1) {
   closure_0 = arg0;
   let ws = arg1;
   c6 = 0;
@@ -1027,7 +1069,7 @@ let closure_33 = async function _openWithFreshTicket(arg0, arg1) {
                 url: baseUrl,
                 ticket,
                 onEvent(arg0) {
-                            return closure_2_32(projectId, ws, arg0);
+                            return closure_2_33(projectId, ws, arg0);
                           },
                 onClose() {
                             const pendingPublish = ws.pendingPublish;
@@ -1048,7 +1090,7 @@ let closure_33 = async function _openWithFreshTicket(arg0, arg1) {
                               const error1 = new Error("Connection closed before the draft arrived");
                               pendingPatchNotesDraft.reject(error1);
                             }
-                            obj = projectId(dependencyMap[8]);
+                            obj = projectId(dependencyMap[9]);
                             const result = obj.clearVibegrationsPreviewClaims(projectId);
                             if (ws.disposed) {
                               obj = { type: "VIBEGRATIONS_CHAT_CONN_STATE", projectId, connState: "closed" };
@@ -1060,7 +1102,7 @@ let closure_33 = async function _openWithFreshTicket(arg0, arg1) {
                               closure_1(dependencyMap[5]).dispatch(obj);
                               const backoff = ws.backoff;
                               backoff.fail(() => {
-                                closure_2_34(projectId);
+                                closure_2_35(projectId);
                               });
                               obj4 = closure_1(dependencyMap[5]);
                             } else {
@@ -1120,7 +1162,7 @@ function connect(projectId) {
   DispatcherDefault.dispatch(obj1);
   (function openWithFreshTicket() {
     const self = this;
-    const apply = closure_1_33.apply;
+    const apply = closure_1_34.apply;
     if (typeof apply === "unknown") {
       let applyArgumentsResult = HermesBuiltin.applyArguments(self);
     } else {
@@ -1232,7 +1274,7 @@ function getMediaTicket(projectId) {
     return cleanupPromise;
   }
 }
-let closure_41 = async function _fetchSourceHistory(arg0) {
+let closure_42 = async function _fetchSourceHistory(arg0) {
   if (c3 === 2) {
     c3 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -1338,7 +1380,7 @@ let closure_41 = async function _fetchSourceHistory(arg0) {
     }
   }
 };
-let closure_42 = async function _restoreSourceHistoryEntry(arg0) {
+let closure_43 = async function _restoreSourceHistoryEntry(arg0) {
   if (c5 === 2) {
     c5 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -1460,7 +1502,7 @@ let closure_42 = async function _restoreSourceHistoryEntry(arg0) {
           const error1 = new Error("version restore returned no commit");
           throw error1;
         } else {
-          obj = closure_131_0(closure_131_2[11]);
+          obj = closure_131_0(closure_131_2[12]);
           const result = obj.refreshPublishedProject(closure_130_0, { isPreview: true });
           result.catch(() => {
 
@@ -1489,7 +1531,7 @@ function attachmentEndpoint(arg0, arg1) {
 }
 function uploadAttachmentBytes() {
   const self = this;
-  const apply = closure_45.apply;
+  const apply = closure_46.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -1497,7 +1539,7 @@ function uploadAttachmentBytes() {
   }
   return applyArgumentsResult;
 }
-let closure_45 = async function _uploadAttachmentBytes() {
+let closure_46 = async function _uploadAttachmentBytes() {
   closure_4 = tmp2;
   closure_132_0 = closure_1;
   closure_132_1 = closure_2;
@@ -1511,7 +1553,7 @@ let closure_45 = async function _uploadAttachmentBytes() {
   closure_132_6 = uRLSearchParams;
   const _HermesInternal2 = HermesInternal;
   let str3 = "application/octet-stream";
-  const combined = "" + closure_133_43(baseUrl) + "?" + closure_132_6;
+  const combined = "" + closure_133_44(baseUrl) + "?" + closure_132_6;
   if ("" !== closure_132_2) {
     str3 = closure_132_2;
   }
@@ -1527,7 +1569,7 @@ let closure_45 = async function _uploadAttachmentBytes() {
   await closure_132_7.json();
   return value;
 };
-let closure_47 = async function _exportProjectArchive() {
+let closure_48 = async function _exportProjectArchive() {
   closure_2 = tmp2;
   closure_130_0 = closure_1;
   await require("VibegrationsWorkerTickets").mintWorkerTicket(closure_0);
@@ -1542,12 +1584,12 @@ let closure_47 = async function _exportProjectArchive() {
   await fetch("" + baseUrl + "/agent/export?" + closure_130_4);
   closure_130_5 = value;
   if (!closure_130_5.ok) {
-    throw new closure_131_46(closure_130_5.status);
+    throw new closure_131_47(closure_130_5.status);
   }
   await closure_130_5.blob();
   return value;
 };
-let closure_49 = async function _remixProjectWorkspace(arg0) {
+let closure_50 = async function _remixProjectWorkspace(arg0) {
   if (c5 === 2) {
     c5 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -1630,7 +1672,7 @@ let closure_49 = async function _remixProjectWorkspace(arg0) {
           c5 = 3;
           return { value: "HermesInternal", done: null };
         } else {
-          throw new closure_131_48(closure_130_5.status);
+          throw new closure_131_49(closure_130_5.status);
         }
       }
     } catch (tmp13) {
@@ -1639,7 +1681,7 @@ let closure_49 = async function _remixProjectWorkspace(arg0) {
     }
   }
 };
-let closure_50 = async function _submitProjectSecrets(arg0) {
+let closure_51 = async function _submitProjectSecrets(arg0) {
   if (c4 === 2) {
     c4 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -1729,7 +1771,7 @@ let closure_50 = async function _submitProjectSecrets(arg0) {
     }
   }
 };
-let closure_51 = async function _submitProjectSettings() {
+let closure_52 = async function _submitProjectSettings() {
   closure_2 = tmp2;
   closure_130_0 = closure_1;
   await require("VibegrationsWorkerTickets").mintWorkerTicket(closure_0);
@@ -1761,7 +1803,7 @@ let closure_51 = async function _submitProjectSettings() {
   }
   return { rebuildRequired: true === rebuild_required };
 };
-let closure_52 = async function _fetchProjectMcpConnection(arg0) {
+let closure_53 = async function _fetchProjectMcpConnection(arg0) {
   if (c5 === 2) {
     c5 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -1818,7 +1860,7 @@ let closure_52 = async function _fetchProjectMcpConnection(arg0) {
           const obj2 = { value, done: true };
           return obj2;
         } else {
-          let obj7 = closure_131_0(closure_131_2[12]);
+          let obj7 = closure_131_0(closure_131_2[7]);
           c4 = 2;
           c5 = 1;
           const obj3 = { value: obj7.mintWorkerTicket(closure_130_0), done: false };
@@ -1892,7 +1934,7 @@ let closure_52 = async function _fetchProjectMcpConnection(arg0) {
     }
   }
 };
-let closure_53 = async function _requestExternalAuthorizeUrl(arg0) {
+let closure_54 = async function _requestExternalAuthorizeUrl(arg0) {
   if (c8 === 2) {
     c8 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -2061,7 +2103,7 @@ let closure_53 = async function _requestExternalAuthorizeUrl(arg0) {
     }
   }
 };
-let closure_54 = async function _deleteStagedAttachment(arg0) {
+let closure_55 = async function _deleteStagedAttachment(arg0) {
   if (c5 === 2) {
     c5 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -2120,7 +2162,7 @@ let closure_54 = async function _deleteStagedAttachment(arg0) {
           const _HermesInternal2 = HermesInternal;
           c4 = 2;
           c5 = 1;
-          obj4 = { value: fetch("" + closure_131_43(baseUrl, closure_130_0) + "?" + closure_130_4, { method: "DELETE", keepalive: true }), done: false };
+          obj4 = { value: fetch("" + closure_131_44(baseUrl, closure_130_0) + "?" + closure_130_4, { method: "DELETE", keepalive: true }), done: false };
           return obj4;
         }
       } else if (arg0 === 1) {
@@ -2148,7 +2190,7 @@ let closure_54 = async function _deleteStagedAttachment(arg0) {
     }
   }
 };
-let closure_55 = async function _getPreviewScreenshotUrl() {
+let closure_56 = async function _getPreviewScreenshotUrl() {
   closure_2 = tmp2;
   closure_130_0 = closure_1;
   await getMediaTicket(closure_0);
@@ -2164,7 +2206,7 @@ let closure_55 = async function _getPreviewScreenshotUrl() {
 };
 function getAttachmentUrl(arg0, arg1) {
   const self = this;
-  const apply = closure_57.apply;
+  const apply = closure_58.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -2172,7 +2214,7 @@ function getAttachmentUrl(arg0, arg1) {
   }
   return applyArgumentsResult;
 }
-let closure_57 = async function _getAttachmentUrl(arg0) {
+let closure_58 = async function _getAttachmentUrl(arg0) {
   if (c6 === 2) {
     c6 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -2230,7 +2272,7 @@ let closure_57 = async function _getAttachmentUrl(arg0) {
         } else {
           c5 = 2;
           c6 = 1;
-          const obj3 = { value: closure_132_40(closure_131_0), done: false };
+          const obj3 = { value: closure_132_41(closure_131_0), done: false };
           return obj3;
         }
       } else if (arg0 === 1) {
@@ -2253,7 +2295,7 @@ let closure_57 = async function _getAttachmentUrl(arg0) {
         }
         const _HermesInternal = HermesInternal;
         c6 = 3;
-        obj = { value: "" + closure_132_43(baseUrl, closure_131_1) + "?" + closure_131_6, done: true };
+        obj = { value: "" + closure_132_44(baseUrl, closure_131_1) + "?" + closure_131_6, done: true };
         return obj;
       }
     } catch (tmp21) {
@@ -2262,7 +2304,7 @@ let closure_57 = async function _getAttachmentUrl(arg0) {
     }
   }
 };
-let closure_58 = async function _isAttachmentAvailable(arg0) {
+let closure_59 = async function _isAttachmentAvailable(arg0) {
   if (c5 === 2) {
     c5 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -2307,7 +2349,7 @@ let closure_58 = async function _isAttachmentAvailable(arg0) {
             const self = this;
             const tmp = c4(function*() {
               const _fetch = fetch;
-              yield closure_1_56(closure_2_0, closure_2_1);
+              yield closure_1_57(closure_2_0, closure_2_1);
               return fetch(value, { method: "HEAD" });
             });
             closure_3 = tmp;
@@ -2336,7 +2378,7 @@ let closure_58 = async function _isAttachmentAvailable(arg0) {
           } else {
             closure_130_4 = value;
             if (401 === closure_130_4.status) {
-              closure_131_38.delete(closure_130_0);
+              closure_131_39.delete(closure_130_0);
               c4 = 2;
               c5 = 1;
               const obj3 = { value: closure_130_2(), done: false };
@@ -2383,27 +2425,27 @@ function closeAllConnections() {
   map8.clear();
   tmp2 = Array.from(map.keys())[Symbol.iterator]();
 }
-const getOlderHistoryCursor = fn(16586).getOlderHistoryCursor;
+const getOlderHistoryCursor = fn(16589).getOlderHistoryCursor;
 const map = new Map();
 const map1 = new Map();
 const map2 = new Map();
 let set = new Set();
 const map3 = new Map();
 const map4 = new Map();
-let obj = { location: "connection", code: fn(16590).VibegrationErrorCodes.SEND_FAILED };
-obj = { location: "agent", code: fn(16590).VibegrationErrorCodes.AGENT_ERROR };
+let obj = { location: "connection", code: fn(16593).VibegrationErrorCodes.SEND_FAILED };
+obj = { location: "agent", code: fn(16593).VibegrationErrorCodes.AGENT_ERROR };
 const map5 = new Map();
 let closure_24 = { steered: true, queued: true, restarting: true, answered: true };
-obj = { build_error: { location: "build", code: fn(16590).VibegrationErrorCodes.BUILD_FAILED }, healthcheck_failed: null, error: null };
-let obj1 = { location: "build", code: fn(16590).VibegrationErrorCodes.BUILD_FAILED };
-obj.healthcheck_failed = { location: "healthcheck", code: fn(16590).VibegrationErrorCodes.HEALTHCHECK_FAILED };
-let obj2 = { location: "healthcheck", code: fn(16590).VibegrationErrorCodes.HEALTHCHECK_FAILED };
-obj.error = { location: "agent", code: fn(16590).VibegrationErrorCodes.AGENT_ERROR };
+obj = { build_error: { location: "build", code: fn(16593).VibegrationErrorCodes.BUILD_FAILED }, healthcheck_failed: null, error: null };
+let obj1 = { location: "build", code: fn(16593).VibegrationErrorCodes.BUILD_FAILED };
+obj.healthcheck_failed = { location: "healthcheck", code: fn(16593).VibegrationErrorCodes.HEALTHCHECK_FAILED };
+let obj2 = { location: "healthcheck", code: fn(16593).VibegrationErrorCodes.HEALTHCHECK_FAILED };
+obj.error = { location: "agent", code: fn(16593).VibegrationErrorCodes.AGENT_ERROR };
 let obj4 = { web: null, preview: null };
-let obj3 = { location: "agent", code: fn(16590).VibegrationErrorCodes.AGENT_ERROR };
-obj4.web = { location: "runtime_frame", code: fn(16590).VibegrationErrorCodes.RUNTIME_FRAME_ERROR };
-let obj5 = { location: "runtime_frame", code: fn(16590).VibegrationErrorCodes.RUNTIME_FRAME_ERROR };
-obj4.preview = { location: "runtime_worker", code: fn(16590).VibegrationErrorCodes.RUNTIME_WORKER_ERROR };
+let obj3 = { location: "agent", code: fn(16593).VibegrationErrorCodes.AGENT_ERROR };
+obj4.web = { location: "runtime_frame", code: fn(16593).VibegrationErrorCodes.RUNTIME_FRAME_ERROR };
+let obj5 = { location: "runtime_frame", code: fn(16593).VibegrationErrorCodes.RUNTIME_FRAME_ERROR };
+obj4.preview = { location: "runtime_worker", code: fn(16593).VibegrationErrorCodes.RUNTIME_WORKER_ERROR };
 const map6 = new Map();
 const map7 = new Map();
 const map8 = new Map();
@@ -2464,11 +2506,11 @@ prototype3["getDeclaredConnections"] = function getDeclaredConnections(arg0) {
     connections = value.connections;
   }
   if (connections == null) {
-    connections = closure_60;
+    connections = closure_61;
   }
   return connections;
 };
-let closure_60 = [];
+let closure_61 = [];
 const vibegrationsConnectionStore = new VibegrationsConnectionStore(DispatcherDefault, {
   VIBEGRATIONS_CHAT_CONN_STATE: function handleChatConnState(arg0) {
     ({ projectId, connState } = arg0);
@@ -2767,7 +2809,7 @@ export const resetHistoryPaging = function resetHistoryPaging(arg0) {
 };
 export const fetchSourceHistory = function fetchSourceHistory() {
   const self = this;
-  const apply = closure_41.apply;
+  const apply = closure_42.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -2777,7 +2819,7 @@ export const fetchSourceHistory = function fetchSourceHistory() {
 };
 export const restoreSourceHistoryEntry = function restoreSourceHistoryEntry() {
   const self = this;
-  const apply = closure_42.apply;
+  const apply = closure_43.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -2792,7 +2834,7 @@ export { uploadAttachmentBytes };
 export const VibegrationsExportError = prototype;
 export const exportProjectArchive = function exportProjectArchive() {
   const self = this;
-  const apply = closure_47.apply;
+  const apply = closure_48.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -2803,7 +2845,7 @@ export const exportProjectArchive = function exportProjectArchive() {
 export const VibegrationsRemixError = prototype2;
 export const remixProjectWorkspace = function remixProjectWorkspace() {
   const self = this;
-  const apply = closure_49.apply;
+  const apply = closure_50.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -2813,7 +2855,7 @@ export const remixProjectWorkspace = function remixProjectWorkspace() {
 };
 export const submitProjectSecrets = function submitProjectSecrets() {
   const self = this;
-  const apply = closure_50.apply;
+  const apply = closure_51.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -2823,7 +2865,7 @@ export const submitProjectSecrets = function submitProjectSecrets() {
 };
 export const submitProjectSettings = function submitProjectSettings() {
   const self = this;
-  const apply = closure_51.apply;
+  const apply = closure_52.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -2862,7 +2904,7 @@ export const requestProjectRebuild = function requestProjectRebuild(arg0) {
             let ticket;
             let baseUrl;
             closure_128_3 = undefined;
-            let obj3 = tmp2(c2[12]);
+            let obj3 = tmp2(c2[7]);
             c1 = 1;
             c2 = 1;
             const obj1 = { value: obj3.mintWorkerTicket(_require), done: false };
@@ -2924,7 +2966,7 @@ export const requestProjectRebuild = function requestProjectRebuild(arg0) {
 };
 export const fetchProjectMcpConnection = function fetchProjectMcpConnection(arg0) {
   const self = this;
-  const apply = closure_52.apply;
+  const apply = closure_53.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -2934,7 +2976,7 @@ export const fetchProjectMcpConnection = function fetchProjectMcpConnection(arg0
 };
 export const requestExternalAuthorizeUrl = function requestExternalAuthorizeUrl(arg0, arg1) {
   const self = this;
-  const apply = closure_53.apply;
+  const apply = closure_54.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -2944,7 +2986,7 @@ export const requestExternalAuthorizeUrl = function requestExternalAuthorizeUrl(
 };
 export const deleteStagedAttachment = function deleteStagedAttachment(arg0, arg1) {
   const self = this;
-  const apply = closure_54.apply;
+  const apply = closure_55.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -2954,7 +2996,7 @@ export const deleteStagedAttachment = function deleteStagedAttachment(arg0, arg1
 };
 export const getPreviewScreenshotUrl = function getPreviewScreenshotUrl(arg0, arg1) {
   const self = this;
-  const apply = closure_55.apply;
+  const apply = closure_56.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -2965,7 +3007,7 @@ export const getPreviewScreenshotUrl = function getPreviewScreenshotUrl(arg0, ar
 export { getAttachmentUrl };
 export const isAttachmentAvailable = function isAttachmentAvailable(arg0, arg1) {
   const self = this;
-  const apply = closure_58.apply;
+  const apply = closure_59.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {

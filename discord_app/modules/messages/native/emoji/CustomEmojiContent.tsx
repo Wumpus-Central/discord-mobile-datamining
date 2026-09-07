@@ -347,7 +347,7 @@ export default function CustomEmojiContent(emojiNode) {
       const obj15 = { accessibilityLabel: null, style: null, onPress: null, children: null };
       function handleOpenEmojiOptionsMenu() {
         obj = { emojiSrc: emojiNode.src };
-        obj.openLazy(asyncRequireImpl(10340, dependencyMap.paths), "EmojiOptionsActionSheet", obj, "stack");
+        obj.openLazy(asyncRequireImpl(10345, dependencyMap.paths), "EmojiOptionsActionSheet", obj, "stack");
       }
       const intl3 = tmp2(nonce[28]).intl;
       obj15.accessibilityLabel = intl3.string(tmp2(nonce[28]).t.PdRCRg);

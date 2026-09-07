@@ -5,7 +5,7 @@ import UserSettingsAppearanceThemeUtils from "../../appearance/native/UserSettin
 import ThemeStore from "../../ThemeStore.tsx";
 
 require = fn;
-fn(11468);
+fn(11473);
 let SettingBuilders = {
   useTitle() {
     const intl = util.intl;

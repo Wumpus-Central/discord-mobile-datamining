@@ -18,11 +18,11 @@ function MethodsScreen(onClose) {
   onClose = onClose.onClose;
   const modalSessionId = onClose.modalSessionId;
   methods = undefined;
-  let first;
   let onComplete;
-  c11 = undefined;
-  c12 = undefined;
-  const tmp = c11();
+  c8 = undefined;
+  c9 = undefined;
+  let isAgeVerificationCustomTabOpen;
+  const tmp = isAgeVerificationCustomTabOpen();
   let obj = require("ShowExpressiveModalSubtitleAltFlag");
   const shouldShowExpressiveModalSubtitleAlt = obj.useShouldShowExpressiveModalSubtitleAlt(
     "age_verification_expressive_v2_modal",
@@ -30,60 +30,24 @@ function MethodsScreen(onClose) {
   let obj1 = require("useAgeVerificationMethodsV2");
   const ageVerificationMethodsV2 = obj1.useAgeVerificationMethodsV2();
   ({ loading, methods } = ageVerificationMethodsV2);
-  ({ footerMessage, outageBannerMessage, refetch } = ageVerificationMethodsV2);
-  const tmp6 = methods(first.useState(false), 2);
-  first = tmp6[0];
-  closure_6 = tmp6[1];
-  const effect = first.useEffect(() => {
-    c0 = false;
-    const result = closure_0(onComplete[17]).checkGoogleWalletAvailable();
-    result.then((result) => {
-      if (!c0) {
-        closure_6(result);
-      }
-    });
-    return () => {
-      c0 = true;
-    };
-  }, []);
-  const memo = first.useMemo(() => {
-    let isIOSResult = closure_0(onComplete[11]).isIOS();
-    if (isIOSResult) {
-      isIOSResult = closure_0(onComplete[18]).isAppStoreAgeSignalSupported();
-      const tmpResult = closure_0(onComplete[18]);
-    }
-    return isIOSResult;
-  }, []);
-  let items = [methods, first, memo];
-  const memo1 = first.useMemo(
-    () =>
-      methods.filter((method) => {
-        method = method.method;
-        if (closure_0(onComplete[7]).AgeAssuranceMethod.GOOGLE_WALLET === method) {
-          return first;
-        } else if (closure_0(onComplete[7]).AgeAssuranceMethod.OS_SIGNAL === method) {
-          return memo;
-        } else {
-          return true;
-        }
-      }),
-    items,
-  );
-  const items1 = [onComplete, onClose];
-  onComplete = first.useCallback(() => {
+  ({ footerMessage, outageBannerMessage, refetch, error } = ageVerificationMethodsV2);
+  let obj2 = require("AgeVerificationMethodAvailability");
+  const availableMethodsV2 = obj2.useAvailableMethodsV2(methods);
+  let items = [onComplete, onClose];
+  onComplete = onComplete.useCallback(() => {
     if (onComplete != null) {
       tmp();
     }
     onClose();
-  }, items1);
-  let obj2 = require("AgeVerificationUtils");
-  const initiateAgeVerificationV2 = obj2.useInitiateAgeVerificationV2({
+  }, items);
+  let obj3 = require("AgeVerificationUtils");
+  const initiateAgeVerificationV2 = obj3.useInitiateAgeVerificationV2({
     onComplete,
     entryPoint,
     onMethodUnavailable: refetch,
   }).initiateAgeVerificationV2;
-  closure_10 = first.useRef(false);
-  [c11, c12] = methods(first.useState(null), 2);
+  closure_7 = onComplete.useRef(false);
+  [c8, c9] = methods(onComplete.useState(null), 2);
   _require = modalSessionId((arg0, arg1) => {
     const navigation = arg0;
     closure_1 = arg1;
@@ -91,8 +55,8 @@ function MethodsScreen(onClose) {
     c6 = 0;
     c5 = 0;
     return (function* (arg0, value) {
-      if (c6 === 2) {
-        c6 = 3;
+      if (v3 === 2) {
+        v3 = 3;
         throw new TypeError("Generator functions may not be called on executing generators");
       } else if (tmp6 === 3) {
         if (arg0 === 1) {
@@ -105,70 +69,70 @@ function MethodsScreen(onClose) {
         }
       } else {
         try {
-          c6 = 2;
+          v3 = 2;
           if (0 === c3) {
             if (arg0 === 1) {
-              c6 = 3;
+              v3 = 3;
               throw value;
             } else if (arg0 === 2) {
-              c6 = 3;
+              v3 = 3;
               obj = { value, done: true };
               return obj;
             } else {
               closure_2 = tmp3;
               if (!ref.current) {
-                let obj1 = navigation(onComplete[20]);
+                let obj1 = navigation(onComplete[19]);
                 const result = obj1.trackAgeVerificationModalClicked(
                   c3,
-                  navigation(onComplete[20]).AgeVerificationModalVersion.EXPRESSIVE_V2,
-                  navigation(onComplete[20]).AgeVerificationModalCta.METHOD_SELECT,
+                  navigation(onComplete[19]).AgeVerificationModalVersion.EXPRESSIVE_V2,
+                  navigation(onComplete[19]).AgeVerificationModalCta.METHOD_SELECT,
                   navigation.method,
                 );
                 if (navigation.method !== navigation(onComplete[7]).AgeAssuranceMethod.GOOGLE_WALLET) {
                   if (navigation.method !== navigation(onComplete[7]).AgeAssuranceMethod.OS_SIGNAL) {
-                    let tmp22Result = navigation(onComplete[21]);
+                    let tmp22Result = navigation(onComplete[20]);
                     const result1 = tmp22Result.releaseAgeVerificationCustomTab();
-                    tmp22Result = navigation(onComplete[22]);
+                    tmp22Result = navigation(onComplete[21]);
                     const result2 = tmp22Result.closeAgeVerificationAuthSession();
                     ref.current = true;
-                    closure_1_12(tmp49);
+                    _undefined(tmp49);
                     c5 = 1;
                     c3 = 2;
-                    c6 = 1;
-                    obj1 = { value: initiateAgeVerificationV2(navigation), done: false };
+                    v3 = 1;
+                    obj1 = { value: v3(navigation), done: false };
                     return obj1;
                   } else {
-                    navigation.navigate(c12.APP_STORE_VERIFICATION);
+                    navigation.navigate(memo.APP_STORE_VERIFICATION);
                   }
                 } else {
-                  navigation.navigate(c12.GOOGLE_WALLET_VERIFICATION);
+                  navigation.navigate(memo.GOOGLE_WALLET_VERIFICATION);
                 }
               }
-              c6 = 3;
+              v3 = 3;
             }
           } else if (1 === tmp7) {
             c5 = 0;
             ref.current = false;
-            closure_1_12(null);
+            _undefined(null);
             throw closure_4;
           } else if (arg0 === 1) {
-            c6 = 3;
+            v3 = 3;
             throw value;
           } else if (arg0 !== 2) {
             c5 = 0;
             ref.current = false;
-            closure_1_12(null);
+            _undefined(null);
           }
           c5 = 0;
           ref.current = false;
-          closure_1_12(null);
-          c6 = 3;
+          _undefined(null);
+          v3 = 3;
           obj = { value, done: true };
           return obj;
         } catch (tmp40) {
           closure_4 = tmp40;
           if (tmp4 === c5) {
-            c6 = tmp2;
+            v3 = tmp2;
             throw tmp40;
           } else {
             c3 = tmp;
@@ -177,8 +141,8 @@ function MethodsScreen(onClose) {
       }
     })();
   });
-  const items2 = [navigation, initiateAgeVerificationV2, modalSessionId];
-  closure_13 = first.useCallback(function () {
+  const items1 = [navigation, initiateAgeVerificationV2, modalSessionId];
+  closure_10 = onComplete.useCallback(function () {
     const self = this;
     const apply = closure_0.apply;
     if (typeof apply === "unknown") {
@@ -187,31 +151,31 @@ function MethodsScreen(onClose) {
       applyArgumentsResult = apply(self, arguments);
     }
     return applyArgumentsResult;
-  }, items2);
-  let obj3 = require("AgeVerificationCustomTab");
-  const isAgeVerificationCustomTabOpen = obj3.useIsAgeVerificationCustomTabOpen();
+  }, items1);
   let obj4 = require("AgeVerificationCustomTab");
-  const items3 = [methods];
-  const ageVerificationCustomTabCopy = obj4.useAgeVerificationCustomTabCopy();
-  const memo2 = first.useMemo(() => {
+  isAgeVerificationCustomTabOpen = obj4.useIsAgeVerificationCustomTabOpen();
+  let obj5 = require("AgeVerificationCustomTab");
+  const items2 = [methods];
+  const ageVerificationCustomTabCopy = obj5.useAgeVerificationCustomTabCopy();
+  const memo = onComplete.useMemo(() => {
     let externalWindow;
     const found = methods.find((externalWindow) => null != externalWindow.externalWindow);
     if (found != null) {
       externalWindow = found.externalWindow;
     }
     return externalWindow;
-  }, items3);
-  const effect1 = first.useEffect(() => {
-    const result = closure_0(onComplete[21]).resumeAgeVerificationCustomTab();
+  }, items2);
+  const effect = onComplete.useEffect(() => {
+    const result = closure_0(onComplete[20]).resumeAgeVerificationCustomTab();
   }, []);
-  const items4 = [memo2];
-  const effect2 = first.useEffect(() => {
-    if (null != memo2) {
+  const items3 = [memo];
+  const effect1 = onComplete.useEffect(() => {
+    if (null != memo) {
       const result = AgeVerificationCustomTab.setAgeVerificationCustomTabCopy(tmp);
     }
-  }, items4);
-  const items5 = [onComplete];
-  const callback1 = first.useCallback(() => {
+  }, items3);
+  const items4 = [onComplete];
+  const callback1 = onComplete.useCallback(() => {
     if (obj.isAgeVerified()) {
       let tmpResult = AgeVerificationCustomTab;
       if (tmpResult.getIsAgeVerificationCustomTabAwaitingResult()) {
@@ -236,15 +200,15 @@ function MethodsScreen(onClose) {
       const tmpResult2 = AgeVerificationAuthSession;
     }
     obj = AgeVerificationUtils;
-  }, items5);
-  let obj5 = require("AgeVerificationUtils");
-  const watchAgeVerificationStatusChange = obj5.useWatchAgeVerificationStatusChange(callback1);
-  let obj6 = require("AgeVerificationAuthSession");
-  const isAgeVerificationAuthSessionOpen = obj6.useIsAgeVerificationAuthSessionOpen();
-  first.useRef(isAgeVerificationCustomTabOpen);
-  first.useRef(isAgeVerificationAuthSessionOpen);
-  const items6 = [isAgeVerificationCustomTabOpen, callback1];
-  const effect3 = first.useEffect(() => {
+  }, items4);
+  let obj6 = require("AgeVerificationUtils");
+  const watchAgeVerificationStatusChange = obj6.useWatchAgeVerificationStatusChange(callback1);
+  let obj7 = require("AgeVerificationAuthSession");
+  const isAgeVerificationAuthSessionOpen = obj7.useIsAgeVerificationAuthSessionOpen();
+  onComplete.useRef(isAgeVerificationCustomTabOpen);
+  onComplete.useRef(isAgeVerificationAuthSessionOpen);
+  const items5 = [isAgeVerificationCustomTabOpen, callback1];
+  const effect2 = onComplete.useEffect(() => {
     let current = ref.current;
     if (current) {
       current = !isAgeVerificationCustomTabOpen;
@@ -253,9 +217,9 @@ function MethodsScreen(onClose) {
       callback1();
     }
     ref.current = isAgeVerificationCustomTabOpen;
-  }, items6);
-  const items7 = [isAgeVerificationAuthSessionOpen, callback1];
-  const effect4 = first.useEffect(() => {
+  }, items5);
+  const items6 = [isAgeVerificationAuthSessionOpen, callback1];
+  const effect3 = onComplete.useEffect(() => {
     let current = ref2.current;
     if (current) {
       current = !isAgeVerificationAuthSessionOpen;
@@ -264,24 +228,24 @@ function MethodsScreen(onClose) {
       callback1();
     }
     ref2.current = isAgeVerificationAuthSessionOpen;
-  }, items7);
+  }, items6);
   if (isAgeVerificationCustomTabOpen) {
     obj = { copy: ageVerificationCustomTabCopy };
-    let tmp23Result = tmp23(onClose(tmp3[23]), obj);
+    let tmp19Result = tmp19(onClose(tmp3[22]), obj);
   } else {
     obj = { align: "stretch", spacing: 24, style: tmp.container, children: null };
-    const items8 = [tmp23(tmp2(tmp3[27]).AgeVerificationSpotIllustration, { width: 150, height: 100 })];
+    const items7 = [tmp19(tmp2(tmp3[26]).AgeVerificationSpotIllustration, { width: 150, height: 100 })];
     obj1 = {
       accessibilityRole: "header",
       variant: "heading-xl/bold",
       color: "mobile-text-heading-primary",
       children: null,
     };
-    let tmp2Result = tmp2(tmp3[19]);
+    let tmp2Result = tmp2(tmp3[18]);
     obj1.children = tmp2Result.getAgeVerificationGetStartedTitle(entryPoint, true);
-    const items9 = [tmp23(tmp2(tmp3[28]).Text, obj1)];
+    const items8 = [tmp19(tmp2(tmp3[27]).Text, obj1)];
     obj2 = { variant: "text-md/medium", color: "text-subtle", style: tmp.header, children: null };
-    tmp2Result = tmp2(tmp3[19]);
+    tmp2Result = tmp2(tmp3[18]);
     let fn;
     if (shouldShowExpressiveModalSubtitleAlt) {
       fn = () => {
@@ -310,37 +274,37 @@ function MethodsScreen(onClose) {
       fn,
       true,
     );
-    items9[1] = tmp23(tmp2(tmp3[28]).Text, obj2);
-    obj4.children = items9;
-    items8[1] = closure_10(tmp2(tmp3[26]).Stack, obj4);
-    obj3.children = items8;
-    const items10 = [closure_10(tmp2(tmp3[26]).Stack, obj3), , ,];
-    tmp23Result = loading;
+    items8[1] = tmp19(tmp2(tmp3[27]).Text, obj2);
+    obj4.children = items8;
+    items7[1] = closure_10(tmp2(tmp3[25]).Stack, obj4);
+    obj3.children = items7;
+    const items9 = [closure_10(tmp2(tmp3[25]).Stack, obj3), , ,];
+    tmp19Result = loading;
     if (loading) {
       obj5 = {
         align: "center",
         justify: "center",
         style: tmp.loadingContainer,
-        children: tmp23(closure_6, { size: "large" }),
+        children: tmp19(initiateAgeVerificationV2, { size: "large" }),
       };
-      tmp23Result = tmp23(tmp2(tmp3[26]).Stack, obj5);
+      tmp19Result = tmp19(tmp2(tmp3[25]).Stack, obj5);
     }
-    items10[1] = tmp23Result;
-    let tmp24Result = !loading;
+    items9[1] = tmp19Result;
+    let tmp20Result = !loading;
     if (!loading) {
-      let tmp23Result1 = null != outageBannerMessage;
-      if (tmp23Result1) {
-        obj6 = { messageType: tmp2(tmp3[31]).HelpMessageTypes.WARNING, children: outageBannerMessage };
-        tmp23Result1 = tmp23(tmp2(tmp3[31]).HelpMessage, obj6);
+      let tmp19Result1 = null != outageBannerMessage;
+      if (tmp19Result1) {
+        obj6 = { messageType: tmp2(tmp3[30]).HelpMessageTypes.WARNING, children: outageBannerMessage };
+        tmp19Result1 = tmp19(tmp2(tmp3[30]).HelpMessage, obj6);
       }
-      const items11 = [tmp23Result1, ,];
-      if (tmp10) {
-        items11[1] = !tmp10;
-        let tmp23Result2 = tmp10;
-        if (tmp10) {
-          const obj7 = {
+      const items10 = [tmp19Result1, ,];
+      if (tmp6) {
+        items10[1] = !tmp6;
+        let tmp19Result2 = tmp6;
+        if (tmp6) {
+          obj7 = {
             hasIcons: true,
-            children: memo1.map((children) => {
+            children: availableMethodsV2.map((children) => {
               closure_0 = children;
               const method = children.method;
               if (closure_0(onComplete[7]).AgeAssuranceMethod.FACIAL_AGE_ESTIMATION === method) {
@@ -360,34 +324,34 @@ function MethodsScreen(onClose) {
               }
               if (null != GoogleNeutralIcon) {
                 let obj = { IconComponent: GoogleNeutralIcon, variant: "secondary" };
-                let tmp4 = initiateAgeVerificationV2(tmp(onComplete[36]).TableRow.Icon, obj);
-                let tmp5 = initiateAgeVerificationV2;
+                let tmp4 = _undefined(tmp(onComplete[35]).TableRow.Icon, obj);
+                let tmp5 = _undefined;
               } else if (null != children.icon) {
                 obj = { icon: children.icon };
-                tmp4 = initiateAgeVerificationV2(onClose(onComplete[37]), obj);
-                tmp5 = initiateAgeVerificationV2;
+                tmp4 = _undefined(onClose(onComplete[36]), obj);
+                tmp5 = _undefined;
               } else {
-                const obj1 = { IconComponent: tmp(onComplete[38]).UnknownGameIcon, variant: "secondary" };
-                tmp4 = initiateAgeVerificationV2(tmp(onComplete[36]).TableRow.Icon, obj1);
-                tmp5 = initiateAgeVerificationV2;
+                const obj1 = { IconComponent: tmp(onComplete[37]).UnknownGameIcon, variant: "secondary" };
+                tmp4 = _undefined(tmp(onComplete[35]).TableRow.Icon, obj1);
+                tmp5 = _undefined;
               }
               const combined = "" + children.method + "-" + children.vendor;
-              if (c11 === combined) {
-                let tmp5Result = tmp5(closure_6, {});
+              if (c8 === combined) {
+                let tmp5Result = tmp5(initiateAgeVerificationV2, {});
               } else {
                 const obj2 = { size: "md", color: onClose(onComplete[14]).colors.INTERACTIVE_ICON_DEFAULT };
-                tmp5Result = tmp5(tmp(onComplete[39]).ChevronSmallRightIcon, obj2);
+                tmp5Result = tmp5(tmp(onComplete[38]).ChevronSmallRightIcon, obj2);
               }
               const obj3 = {
                 trailing: tmp5Result,
-                disabled: null != c11,
+                disabled: null != c8,
                 icon: tmp4,
                 label: children.title,
                 subLabel: null,
                 onPress: null,
               };
               const items = [
-                tmp5(closure_0(onComplete[28]).Text, {
+                tmp5(closure_0(onComplete[27]).Text, {
                   variant: "text-sm/normal",
                   color: "text-muted",
                   children: children.description,
@@ -396,63 +360,63 @@ function MethodsScreen(onClose) {
               tmp5Result = null != children.providedBy;
               if (tmp5Result) {
                 const obj5 = { variant: "text-sm/normal", color: "text-muted", children: children.providedBy };
-                tmp5Result = tmp5(tmp(onComplete[28]).Text, obj5);
+                tmp5Result = tmp5(tmp(onComplete[27]).Text, obj5);
               }
               items[1] = tmp5Result;
-              obj3.subLabel = closure_10(closure_0(onComplete[26]).Stack, {
+              obj3.subLabel = closure_10(closure_0(onComplete[25]).Stack, {
                 direction: "vertical",
                 spacing: 4,
                 children: items,
               });
               obj3.onPress = function onPress() {
-                return closure_13(closure_0, combined);
+                return closure_10(closure_0, combined);
               };
-              return tmp5(closure_0(onComplete[36]).TableRow, obj3, combined);
+              return tmp5(closure_0(onComplete[35]).TableRow, obj3, combined);
             }),
           };
-          tmp23Result2 = tmp23(tmp2(tmp3[35]).TableRowGroup, obj7);
+          tmp19Result2 = tmp19(tmp2(tmp3[34]).TableRowGroup, obj7);
         }
         const obj8 = { direction: "vertical", spacing: 12, children: null };
-        items11[2] = tmp23Result2;
-        obj8.children = items11;
-        tmp24Result = tmp24(tmp2(tmp3[26]).Stack, obj8);
+        items10[2] = tmp19Result2;
+        obj8.children = items10;
+        tmp20Result = tmp20(tmp2(tmp3[25]).Stack, obj8);
       } else {
         const obj9 = { style: tmp.emptyContainer, children: null };
-        let obj10 = { messageType: tmp2(tmp3[31]).HelpMessageTypes.ERROR, button: null, children: null };
+        let obj10 = { messageType: tmp2(tmp3[30]).HelpMessageTypes.ERROR, button: null, children: null };
         const obj11 = { variant: "primary", size: "sm", text: null, onPress: null };
-        const intl = tmp2(tmp3[33]).intl;
-        obj11.text = intl.string(onClose(tmp3[34]).hDvmYP);
+        const intl = tmp2(tmp3[32]).intl;
+        obj11.text = intl.string(onClose(tmp3[33]).hDvmYP);
         obj11.onPress = refetch;
-        obj10.button = tmp23(tmp2(tmp3[32]).Button, obj11);
-        const intl2 = tmp2(tmp3[33]).intl;
-        const tmp33 = onClose(tmp3[34]);
-        obj10.children = intl2.string(ageVerificationMethodsV2.error ? tmp33.Bkmk4Y : tmp33.cR6336);
-        obj10 = tmp23(tmp2(tmp3[31]).HelpMessage, obj10);
+        obj10.button = tmp19(tmp2(tmp3[31]).Button, obj11);
+        const intl2 = tmp2(tmp3[32]).intl;
+        const tmp29 = onClose(tmp3[33]);
+        obj10.children = intl2.string(error ? tmp29.Bkmk4Y : tmp29.cR6336);
+        obj10 = tmp19(tmp2(tmp3[30]).HelpMessage, obj10);
         obj9.children = obj10;
-        tmp23(tmp2(tmp3[26]).Stack, obj9);
+        tmp19(tmp2(tmp3[25]).Stack, obj9);
       }
     }
-    items10[2] = tmp24Result;
-    let tmp23Result4 = !loading;
+    items9[2] = tmp20Result;
+    let tmp19Result4 = !loading;
     if (!loading) {
-      tmp23Result4 = tmp10;
+      tmp19Result4 = tmp6;
     }
-    if (tmp23Result4) {
-      tmp23Result4 = null != footerMessage;
+    if (tmp19Result4) {
+      tmp19Result4 = null != footerMessage;
     }
-    if (tmp23Result4) {
+    if (tmp19Result4) {
       const obj12 = { variant: "text-sm/normal", color: "text-subtle", style: tmp.footer, children: footerMessage };
-      tmp23Result4 = tmp23(tmp2(tmp3[28]).Text, obj12);
+      tmp19Result4 = tmp19(tmp2(tmp3[27]).Text, obj12);
     }
     const obj13 = { children: null };
     const obj14 = { children: null };
-    items10[3] = tmp23Result4;
-    obj.children = items10;
-    obj14.children = closure_10(tmp2(tmp3[26]).Stack, obj);
-    obj13.children = tmp23(tmp2(tmp3[25]).ModalContent, obj14);
-    tmp23Result = tmp23(tmp2(tmp3[24]).ModalScreen, obj13);
+    items9[3] = tmp19Result4;
+    obj.children = items9;
+    obj14.children = closure_10(tmp2(tmp3[25]).Stack, obj);
+    obj13.children = tmp19(tmp2(tmp3[24]).ModalContent, obj14);
+    tmp19Result = tmp19(tmp2(tmp3[23]).ModalScreen, obj13);
   }
-  return tmp23Result;
+  return tmp19Result;
 }
 const ActivityIndicator = fn(17).ActivityIndicator;
 const TRUSTED_PROVIDERS_URL = fn(8412).TRUSTED_PROVIDERS_URL;
@@ -491,14 +455,14 @@ export default function AgeVerificationExpressiveV2Modal(entryPoint) {
   const onComplete = entryPoint.onComplete;
   const tmp = closure_11();
   closure_3 = tmp;
-  const memo = noop.useMemo(() => entryPoint(onComplete[44]).v4(), []);
+  const memo = noop.useMemo(() => entryPoint(onComplete[43]).v4(), []);
   const items = [tmp, memo, entryPoint, onClose, onComplete];
   const items1 = [memo, entryPoint];
   const memo1 = noop.useMemo(() => {
     const modalSessionId = memo;
     closure_2 = onClose;
     function closeModal() {
-      let arr = onClose(onComplete[40]);
+      let arr = onClose(onComplete[39]);
       arr = arr.pop();
       closure_2();
     }
@@ -524,7 +488,7 @@ export default function AgeVerificationExpressiveV2Modal(entryPoint) {
     };
     obj.headerLeft = NavigatorHeader.getHeaderBackButton();
     obj.render = function render() {
-      return closure_2_9(onClose(onComplete[42]), { onClose: closeModal, onComplete, modalSessionId });
+      return closure_2_9(onClose(onComplete[41]), { onClose: closeModal, onComplete, modalSessionId });
     };
     obj[constants.GOOGLE_WALLET_VERIFICATION] = obj;
     const obj1 = {
@@ -537,7 +501,7 @@ export default function AgeVerificationExpressiveV2Modal(entryPoint) {
     };
     obj1.headerLeft = NavigatorHeader.getHeaderBackButton();
     obj1.render = function render() {
-      return closure_2_9(onClose(onComplete[43]), { onClose: closeModal, modalSessionId });
+      return closure_2_9(onClose(onComplete[42]), { onClose: closeModal, modalSessionId });
     };
     obj[constants.APP_STORE_VERIFICATION] = obj1;
     return obj;
@@ -550,7 +514,7 @@ export default function AgeVerificationExpressiveV2Modal(entryPoint) {
     );
   }, items1);
   let obj = { screens: memo1, initialRouteName: constants.METHODS, headerBackTitle: null };
-  const intl = entryPoint(onComplete[33]).intl;
-  obj.headerBackTitle = intl.string(entryPoint(onComplete[33]).t["13/7kX"]);
-  return closure_9(entryPoint(onComplete[45]).Navigator, obj);
+  const intl = entryPoint(onComplete[32]).intl;
+  obj.headerBackTitle = intl.string(entryPoint(onComplete[32]).t["13/7kX"]);
+  return closure_9(entryPoint(onComplete[44]).Navigator, obj);
 }

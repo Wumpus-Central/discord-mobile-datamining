@@ -121,7 +121,7 @@ function useMediaShareActions(source) {
             message: stateFromStores,
             source: "media-viewer",
             initialSelectedDestinations: "Array",
-            forwardOptions: "QUESTS_USER_COMPLETION_UPDATE",
+            forwardOptions: "QUEST_PREVIEW_UPDATE",
           };
           obj = { onlyAttachmentIds: null };
           const items = [attachmentId];
@@ -134,7 +134,7 @@ function useMediaShareActions(source) {
           message: stateFromStores,
           source: "media-viewer",
           initialSelectedDestinations: "Array",
-          forwardOptions: "QUESTS_USER_COMPLETION_UPDATE",
+          forwardOptions: "QUEST_PREVIEW_UPDATE",
         };
         const obj2 = { onlyEmbedIndices: null };
         const items1 = [source.mediaIndex];
@@ -167,7 +167,7 @@ function useMediaShareActions(source) {
       obj = { messageId: null, channelId: null, attachmentId: null };
       ({ messageId: obj3.messageId, channelId: obj3.channelId } = source);
       obj.attachmentId = attachmentId;
-      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(11677, dependencyMap.paths), closure_11, obj);
+      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(11682, dependencyMap.paths), closure_11, obj);
       const tmpResult = ActionSheetActionCreatorsDefault;
     }
     tmp5 = null != attachmentId && null != source.channelId && null != source.messageId;

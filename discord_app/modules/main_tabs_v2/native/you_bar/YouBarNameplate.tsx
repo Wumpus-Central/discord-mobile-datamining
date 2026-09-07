@@ -4,7 +4,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 import AccessibilityStore from "../../../a11y/AccessibilityStore.tsx";
 
 require = fn;
-const YOU_BAR_SPRING_CONFIG = fn(15098).YOU_BAR_SPRING_CONFIG;
+const YOU_BAR_SPRING_CONFIG = fn(15101).YOU_BAR_SPRING_CONFIG;
 const jsx = fn(21).jsx;
 const __initData = {
   code: "function YouBarNameplateTsx1(){const{withSpring,isQuestRendered,questDockAnimatedBorderRadius,borderRadius,YOU_BAR_SPRING_CONFIG}=this.__closure;return{borderTopRightRadius:withSpring(isQuestRendered?questDockAnimatedBorderRadius.get():borderRadius,YOU_BAR_SPRING_CONFIG)};}",
@@ -19,7 +19,7 @@ export default noop.memo(function YouBarNameplate(isQuestRendered) {
   ({ nameplate, barWidth } = isQuestRendered);
   let obj = isQuestRendered(4262);
   token = obj.useToken(token(576).modules.mobile.YOU_BAR_BORDER_RADIUS);
-  const tmp4 = token(15184)(token);
+  const tmp4 = token(15187)(token);
   dependencyMap = tmp4;
   let obj1 = isQuestRendered(504);
   const items = [AccessibilityStore];
@@ -75,6 +75,6 @@ export default noop.memo(function YouBarNameplate(isQuestRendered) {
     str = "always";
   }
   obj1.animate = str;
-  obj.children = jsx(token(8818), { nameplate, isFocused: true, animate: null });
+  obj.children = jsx(token(8823), { nameplate, isFocused: true, animate: null });
   return jsx(token(4296).View, { style: null, pointerEvents: "none", children: null });
 });

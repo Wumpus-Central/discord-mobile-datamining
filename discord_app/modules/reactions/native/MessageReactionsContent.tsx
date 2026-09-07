@@ -329,7 +329,7 @@ function EmojiOptionsButton(channelId) {
   const items = [ChannelStore];
   const items1 = [channelId];
   const stateFromStores = obj.useStateFromStores(items, () => ChannelStore.getChannel(channelId), items1);
-  const tmp3 = messageId(11260)(stateFromStores);
+  const tmp3 = messageId(11265)(stateFromStores);
   const canRemoveReactions = tmp3;
   dependencyMap = tmp4;
   const items2 = [channelId, messageId, reactions[reactionSelectedIndex], tmp3];
@@ -337,7 +337,7 @@ function EmojiOptionsButton(channelId) {
     onPress: noop.useCallback(() => {
       const obj = { channelId, messageId, reaction, canRemoveReactions };
       obj.openLazy(
-        asyncRequireImpl(11261, dependencyMap.paths),
+        asyncRequireImpl(11266, dependencyMap.paths),
         "ReactionEmojiOptionsActionSheet",
         obj,
         "replaceTopSheet",
@@ -388,12 +388,12 @@ function ReactionTabs(setReactionSelectedIndex) {
   };
   ({ tab: obj3.tabStyle, tabActive: obj3.tabStyleActive, tabSelected: obj3.tabStyleSelected } = tmp);
   const items = [
-    closure_17(setReactionSelectedIndex(11262), obj),
-    closure_17(setReactionSelectedIndex(8599), { outer: true }),
+    closure_17(setReactionSelectedIndex(11267), obj),
+    closure_17(setReactionSelectedIndex(8604), { outer: true }),
   ];
   const obj1 = { style: tmp.removeButtonContainer, children: null };
   const obj2 = { style: tmp.emojiTextIdentifier, variant: "eyebrow", color: "text-default", children: null };
-  const tmp5 = setReactionSelectedIndex(11262);
+  const tmp5 = setReactionSelectedIndex(11267);
   obj2.children = reactionSelectedIndex(4211).getReactionEmojiName(reactions[reactionSelectedIndex].emoji);
   const items1 = [closure_17(reactionSelectedIndex(4556).Text, obj2)];
   const obj3 = {};

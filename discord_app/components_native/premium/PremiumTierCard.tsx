@@ -5,11 +5,11 @@ import PremiumUtils from "../../utils/PremiumUtils.tsx";
 import LinearGradientDefault from "../../../_runtime/04987_LinearGradient.js";
 import Card from "../../design/components/Card/native/Card.native.tsx";
 import _modDef8068 from "../../../_runtime/metro/08068__.js";
-import _modDef9385 from "../../../_runtime/metro/09385__.js";
-import _modDef10715 from "../../../_runtime/metro/10715__.js";
-import _modDef10716 from "../../../_runtime/metro/10716__.js";
-import _modDef13565 from "../../../_runtime/metro/13565__.js";
-import _modDef13566 from "../../../_runtime/metro/13566__.js";
+import _modDef9390 from "../../../_runtime/metro/09390__.js";
+import _modDef10720 from "../../../_runtime/metro/10720__.js";
+import _modDef10721 from "../../../_runtime/metro/10721__.js";
+import _modDef13569 from "../../../_runtime/metro/13569__.js";
+import _modDef13570 from "../../../_runtime/metro/13570__.js";
 import noop from "../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -64,9 +64,9 @@ export default function _default(premiumType) {
   }
   obj.style = textLogoTier2;
   if (PremiumTypes.TIER_0 === premiumType) {
-    let tmp5Result = _modDef13565;
+    let tmp5Result = _modDef13569;
   } else if (PremiumTypes.TIER_1 === premiumType) {
-    tmp5Result = _modDef13566;
+    tmp5Result = _modDef13570;
   } else if (PremiumTypes.TIER_2 === premiumType) {
     tmp5Result = _modDef8068;
   }
@@ -84,11 +84,11 @@ export default function _default(premiumType) {
   obj = { accessible: false, importantForAccessibility: "no", style: items1, source: null };
   items1[1] = wumpusLogoTier2;
   if (PremiumTypes.TIER_0 === premiumType) {
-    tmp5Result = _modDef9385;
+    tmp5Result = _modDef9390;
   } else if (PremiumTypes.TIER_1 === premiumType) {
-    tmp5Result = _modDef10715;
+    tmp5Result = _modDef10720;
   } else if (PremiumTypes.TIER_2 === premiumType) {
-    tmp5Result = _modDef10716;
+    tmp5Result = _modDef10721;
   }
   const obj1 = { children: null };
   obj.source = tmp5Result;

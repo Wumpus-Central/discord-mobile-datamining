@@ -6,11 +6,6 @@ import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import FileUtils from "../../../utils/FileUtils.tsx";
 import FastImageDefault from "../../../components_native/common/FastImage.tsx";
 import common_Video from "../../../components_native/common/Video.tsx";
-import _modDef10197 from "../../../../_runtime/metro/10197__.js";
-import _modDef10198 from "../../../../_runtime/metro/10198__.js";
-import _modDef10199 from "../../../../_runtime/metro/10199__.js";
-import _modDef10200 from "../../../../_runtime/metro/10200__.js";
-import _modDef10201 from "../../../../_runtime/metro/10201__.js";
 import _modDef10202 from "../../../../_runtime/metro/10202__.js";
 import _modDef10203 from "../../../../_runtime/metro/10203__.js";
 import _modDef10204 from "../../../../_runtime/metro/10204__.js";
@@ -20,6 +15,11 @@ import _modDef10207 from "../../../../_runtime/metro/10207__.js";
 import _modDef10208 from "../../../../_runtime/metro/10208__.js";
 import _modDef10209 from "../../../../_runtime/metro/10209__.js";
 import _modDef10210 from "../../../../_runtime/metro/10210__.js";
+import _modDef10211 from "../../../../_runtime/metro/10211__.js";
+import _modDef10212 from "../../../../_runtime/metro/10212__.js";
+import _modDef10213 from "../../../../_runtime/metro/10213__.js";
+import _modDef10214 from "../../../../_runtime/metro/10214__.js";
+import _modDef10215 from "../../../../_runtime/metro/10215__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -39,7 +39,7 @@ class AttachmentIcon {
         }
         let tmp2 = createStyles[obj.classifyFileName(obj, str)];
         if (tmp2 == null) {
-          tmp2 = _modDef10208;
+          tmp2 = _modDef10213;
         }
         return tmp2;
       }, items),
@@ -126,20 +126,20 @@ obj.videoIcon = {
 };
 const React6 = createStyles.createStyles(obj);
 createStyles = {
-  archive: _modDef10197,
-  acrobat: _modDef10198,
-  ae: _modDef10199,
-  ai: _modDef10200,
-  audio: _modDef10201,
-  code: _modDef10202,
-  document: _modDef10203,
-  image: _modDef10204,
-  photoshop: _modDef10205,
-  sketch: _modDef10206,
-  spreadsheet: _modDef10207,
-  unknown: _modDef10208,
-  video: _modDef10209,
-  webcode: _modDef10210,
+  archive: _modDef10202,
+  acrobat: _modDef10203,
+  ae: _modDef10204,
+  ai: _modDef10205,
+  audio: _modDef10206,
+  code: _modDef10207,
+  document: _modDef10208,
+  image: _modDef10209,
+  photoshop: _modDef10210,
+  sketch: _modDef10211,
+  spreadsheet: _modDef10212,
+  unknown: _modDef10213,
+  video: _modDef10214,
+  webcode: _modDef10215,
 };
 let closure_13 = noop.memo((borderRadius) => {
   ({ uri, width, height, style, fileName } = borderRadius);
@@ -260,7 +260,7 @@ export default function AttachmentPreview(height) {
       const obj3 = { style: null, children: null };
       videoIcon = videoIcon.videoIcon;
       obj3.style = videoIcon;
-      CirclePlayIcon = CirclePlayIcon(10132).CirclePlayIcon;
+      CirclePlayIcon = CirclePlayIcon(10137).CirclePlayIcon;
       tmp6 = timestampProducer(CirclePlayIcon, { size: "md", color: "white", secondaryColor: "black" });
       obj3.children = tmp6;
       items[1] = timestampProducer(hasOwnProperty, obj3);

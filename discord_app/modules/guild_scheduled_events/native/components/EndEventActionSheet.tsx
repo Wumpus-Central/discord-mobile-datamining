@@ -35,7 +35,7 @@ const result = size.fileFinishedImporting("modules/guild_scheduled_events/native
 export default function EndEventActionSheet(channel) {
   channel = channel.channel;
   const tmp = closure_7();
-  let obj = channel(9662);
+  let obj = channel(9667);
   const activeEvent = obj.useActiveEvent(channel.id);
   if (null == activeEvent) {
     return null;
@@ -76,6 +76,6 @@ export default function EndEventActionSheet(channel) {
     items[3] = closure_5(View, obj5);
     obj.children = items;
     obj.children = closure_6(View, obj);
-    return closure_5(activeEvent(8591), obj);
+    return closure_5(activeEvent(8596), obj);
   }
 }

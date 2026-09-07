@@ -53,7 +53,7 @@ export const useTieredTenureBadgeClickHandler = function useTieredTenureBadgeCli
         let obj = { screen: constants2.PREMIUM };
         openUserSettings.openUserSettings(obj);
       } else {
-        const tmp4 = asyncRequireImpl(11157, dependencyMap.paths);
+        const tmp4 = asyncRequireImpl(11162, dependencyMap.paths);
         obj = { userId };
         obj.openLazy(tmp4, TieredTenureBadgeActionSheet.TIERED_TENURE_BADGE_ACTION_SHEET_KEY, obj, "stack");
       }

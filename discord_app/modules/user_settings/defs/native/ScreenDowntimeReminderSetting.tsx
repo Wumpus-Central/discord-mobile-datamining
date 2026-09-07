@@ -8,7 +8,7 @@ import NotificationActionCreatorsDefault from "../../../../actions/NotificationA
 import NotificationSettingsStore from "../../../../stores/NotificationSettingsStore.tsx";
 
 require = fn;
-fn(11468);
+fn(11473);
 let SettingBuilders = {
   useTitle() {
     const intl = util.intl;

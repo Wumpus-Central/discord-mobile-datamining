@@ -12,7 +12,7 @@ const result = size.fileFinishedImporting("modules/app_channels/native/AppChanne
 export default function AppChannelApplicationActionSheet(arg0) {
   ({ selectedApplicationId, onChange } = arg0);
   ({ guildId, channelId } = arg0);
-  let obj = onChange(9743);
+  let obj = onChange(9748);
   const options = obj.useAppChannelApplicationOptions(guildId, channelId, selectedApplicationId).options;
   const items = [onChange];
   const callback = noop.useCallback((arg0) => {

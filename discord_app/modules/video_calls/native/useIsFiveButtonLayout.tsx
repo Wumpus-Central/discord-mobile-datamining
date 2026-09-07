@@ -32,8 +32,8 @@ export const useIsFiveButtonLayout = function useIsFiveButtonLayout(id) {
   if (stateFromStores != null) {
     id = stateFromStores.id;
   }
-  const tmp6 = guild_id(9501);
-  const tmp6Result = guild_id(9501)(guild_id1, id);
+  const tmp6 = guild_id(9506);
+  const tmp6Result = guild_id(9506)(guild_id1, id);
   const items1 = [GuildStore];
   const items2 = [guild_id];
   const stateFromStores1 = tmp(504).useStateFromStores(items1, () => GuildStore.getGuild(guild_id), items2);
@@ -52,8 +52,8 @@ export const useIsFiveButtonLayout = function useIsFiveButtonLayout(id) {
   if (stateFromStores != null) {
     id1 = stateFromStores.id;
   }
-  const tmp5Result = guild_id(9503);
-  const tmp5ResultResult = guild_id(9503)(id1);
+  const tmp5Result = guild_id(9508);
+  const tmp5ResultResult = guild_id(9508)(id1);
   if (isConnectedToVoiceChannel) {
     isConnectedToVoiceChannel = tmp6Result;
   }

@@ -220,9 +220,9 @@ function CurrentUserVoiceSettings(channel) {
     }
     obj = { label: stringResult, icon: null, onPress: null };
     if (stateFromStores) {
-      let MicrophoneIcon = tmp2(9127).MicrophoneSlashIcon;
+      let MicrophoneIcon = tmp2(9132).MicrophoneSlashIcon;
     } else {
-      MicrophoneIcon = tmp2(10005).MicrophoneIcon;
+      MicrophoneIcon = tmp2(10010).MicrophoneIcon;
     }
     obj1 = { children: null };
     obj.icon = MicrophoneIcon;

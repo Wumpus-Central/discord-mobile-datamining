@@ -5,14 +5,14 @@ import MemberVerificationAlertActionCreators from "../../../guild_member_verific
 import LottieAnimationViewDefault from "../../../../components_native/common/LottieAnimationView.tsx";
 import MemberVerificationModalActionCreators from "../../../guild_member_verification/MemberVerificationModalActionCreators.tsx";
 import ChatInputGuardDefault from "ChatInputGuard.tsx";
-import _modDef12457 from "../../../../../_runtime/metro/12457__.js";
-import _modDef12458 from "../../../../../_runtime/metro/12458__.js";
+import _modDef12461 from "../../../../../_runtime/metro/12461__.js";
+import _modDef12462 from "../../../../../_runtime/metro/12462__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import AccessibilityStore from "../../../a11y/AccessibilityStore.tsx";
 
 require = fn;
 const Image = fn(17).Image;
-const TextAreaCta = fn(11962).TextAreaCta;
+const TextAreaCta = fn(11966).TextAreaCta;
 const AnalyticEvents = fn(1074).AnalyticEvents;
 const jsx = fn(21).jsx;
 const createStyles = fn(4560);
@@ -33,7 +33,7 @@ export default noop.memo(function ChatInputGuardGuildMemberVerification(guildId)
     applicationStatus = currentUserGuildJoinRequest.applicationStatus;
   }
   if (guildId(4384).GuildJoinRequestApplicationStatuses.REJECTED === applicationStatus) {
-    let tmp8 = _modDef12457;
+    let tmp8 = _modDef12461;
     const intl3 = tmp2(1114).intl;
     let stringResult = intl3.string(tmp2(1114).t.lk30cY);
     let fn = function _() {
@@ -43,7 +43,7 @@ export default noop.memo(function ChatInputGuardGuildMemberVerification(guildId)
       const result = MemberVerificationAlertActionCreators.openMemberVerificationRejectedAlert(obj);
     };
   } else if (tmp2(4384).GuildJoinRequestApplicationStatuses.SUBMITTED === applicationStatus) {
-    tmp8 = _modDef12458;
+    tmp8 = _modDef12462;
     const intl2 = tmp2(1114).intl;
     stringResult = intl2.string(tmp2(1114).t["5iLvSx"]);
     fn = function _() {
@@ -71,10 +71,10 @@ export default noop.memo(function ChatInputGuardGuildMemberVerification(guildId)
     obj = { style: tmp.noticeIcon, source: tmp8 };
     let tmp13Result = <Image style={tmp.noticeIcon} source={tmp8} />;
   } else {
-    obj = { style: tmp.lottieAnimation, source: tmp2(12459), autoPlay: !stateFromStores };
+    obj = { style: tmp.lottieAnimation, source: tmp2(12463), autoPlay: !stateFromStores };
     tmp13Result = jsx(LottieAnimationViewDefault, {
       style: tmp.lottieAnimation,
-      source: tmp2(12459),
+      source: tmp2(12463),
       autoPlay: !stateFromStores,
     });
     const tmp14Result = LottieAnimationViewDefault;

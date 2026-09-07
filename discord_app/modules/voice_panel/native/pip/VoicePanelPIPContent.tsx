@@ -313,7 +313,7 @@ function User(participantId) {
   if (user == null) {
     user = UserStore.getCurrentUser();
   }
-  tmp3Result = tmp3(8826);
+  tmp3Result = tmp3(8831);
   let avatarURL;
   if (user != null) {
     avatarURL = user.getAvatarURL(guildId, 80, false);
@@ -347,7 +347,7 @@ function User(participantId) {
     }
   }
   const items3 = [channelId];
-  const surfaceDirectRendererExperiment = participantId(9605).useSurfaceDirectRendererExperiment(id1, {
+  const surfaceDirectRendererExperiment = participantId(9610).useSurfaceDirectRendererExperiment(id1, {
     location: "VoicePanelPIPContent",
   });
   updateIsActivityFocused = obj.useCallback((arg0, arg1) => {
@@ -364,7 +364,7 @@ function User(participantId) {
     }
     _undefined(tmp5);
   }, items3);
-  const tmp3Result1 = participantId(9605);
+  const tmp3Result1 = participantId(9610);
   class S {
     constructor() {
       value = focused.get();
@@ -434,7 +434,7 @@ function User(participantId) {
     layoutManager.setTargetDimensions(participantId, nativeEvent.width, nativeEvent.height);
   }, items5);
   const tmp3Result4 = participantId(563);
-  canRenderParticipantVideo = participantId(9622).useCanRenderParticipantVideo(stateFromStores);
+  canRenderParticipantVideo = participantId(9627).useCanRenderParticipantVideo(stateFromStores);
   if (canRenderParticipantVideo) {
     let tmp27 = tmp18;
     if (tmp18) {
@@ -480,7 +480,7 @@ function User(participantId) {
         start: { x: 0, y: 0 },
         end: { x: 0, y: 1 },
         style: layoutManager.absoluteFill,
-        layout: tmp3(17087).layoutTransition,
+        layout: tmp3(17090).layoutTransition,
         pointerEvents: "none",
       };
       tmp31 = closure_22(LinearGradient, obj4);
@@ -490,7 +490,7 @@ function User(participantId) {
     let tmp35Result = null;
     if (null != user) {
       const obj6 = {
-        source: tmp3(8826).getCachedSourceFromURI(user.getAvatarURL(guildId, 80, false)),
+        source: tmp3(8831).getCachedSourceFromURI(user.getAvatarURL(guildId, 80, false)),
         size: null,
         avatarDecoration: null,
       };
@@ -502,7 +502,7 @@ function User(participantId) {
       }
       obj6.avatarDecoration = userAvatarDecoration;
       tmp35Result = closure_22(tmp3(1178).Avatar, obj6);
-      const tmp3Result6 = tmp3(8826);
+      const tmp3Result6 = tmp3(8831);
     }
     obj5.children = tmp35Result;
     items10[1] = closure_22(tmp6(5589), obj5);
@@ -513,7 +513,7 @@ function User(participantId) {
       tmp35Result = null;
       if (consumedRequestToRespondToSeriousThermalState) {
         const obj8 = { style: tmp.thermalAlertIconContainer, children: null };
-        const obj9 = { style: tmp.thermalAlertIcon, source: tmp6(9625), color: tmp.thermalAlertIcon.color };
+        const obj9 = { style: tmp.thermalAlertIcon, source: tmp6(9630), color: tmp.thermalAlertIcon.color };
         obj8.children = closure_22(tmp3(1178).Icon, obj9);
         tmp35Result = closure_22(tmp6(5589), obj8);
         const tmp6Result2 = tmp6(5589);
@@ -563,7 +563,7 @@ function Stream(participantId) {
   c5 = undefined;
   let callback2;
   let tmp = closure_24();
-  let obj = participantId(17092);
+  let obj = participantId(17095);
   const mode = obj.usePIPState().mode;
   closure_129_0 = transitionState;
   closure_129_1 = transitionCleanUp;
@@ -598,7 +598,7 @@ function Stream(participantId) {
       };
     }
   }, items);
-  const context = obj1.useContext(mode(12272));
+  const context = obj1.useContext(mode(12276));
   ({ channelId: c2, layoutManager } = context);
   let tmp2Result = tmp2(563);
   const items1 = [callback2];
@@ -626,7 +626,7 @@ function Stream(participantId) {
     return obj;
   });
   streamId = stateFromStoresObject.streamId;
-  tmp2Result = tmp2(9605);
+  tmp2Result = tmp2(9610);
   const surfaceDirectRendererExperiment = tmp2Result.useSurfaceDirectRendererExperiment(stateFromStoresObject.userId, {
     location: "VoicePanelPIPContent.Stream",
   });
@@ -700,10 +700,10 @@ function Stream(participantId) {
   }, items7);
   if (stateFromStores === constants.ENDED) {
     obj = { style: tmp.streamEmptyImage, resizeMode: "contain" };
-    let tmp18Result = closure_22(tmp2(9598).StreamEnded, obj);
+    let tmp18Result = closure_22(tmp2(9603).StreamEnded, obj);
   } else if (stateFromStores === tmp17.FAILED) {
     obj = { style: tmp.streamEmptyImage, resizeMode: "contain" };
-    tmp18Result = closure_22(tmp2(9601).StreamFailed, obj);
+    tmp18Result = closure_22(tmp2(9606).StreamFailed, obj);
   } else if (tmp15) {
     obj1 = { style: tmp5, participantId, children: null };
     const obj2 = {
@@ -777,8 +777,8 @@ function areParticipantsEqual(arg0, arg1) {
 }
 get_ActivityIndicator = fn(17);
 ({ PixelRatio: hasOwnProperty, StyleSheet } = get_ActivityIndicator);
-const VoicePanelModes = fn(12273).VoicePanelModes;
-const VoicePanelPIPModes = fn(17088).VoicePanelPIPModes;
+const VoicePanelModes = fn(12277).VoicePanelModes;
+const VoicePanelPIPModes = fn(17091).VoicePanelPIPModes;
 let Constants = fn(1074);
 ({ ApplicationStreamStates: closure_16, ComponentActions: closure_17 } = Constants);
 Constants = fn(1920);

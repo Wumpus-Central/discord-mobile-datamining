@@ -273,9 +273,9 @@ let closure_27 = async function _runPrimaryAppCommandOrJoinEmbeddedActivity(arg0
                 }
                 let tmp2 = type === constants2.GUILD_VOICE;
                 application = application.getApplication(arg0);
-                const obj = closure_1_0(8856);
-                const hasApplicationFlagResult = closure_1_0(8856).hasApplicationFlag(application, constants.EMBEDDED);
-                const result = closure_1_0(9546).isActivityInTextSupportedForChannel(type);
+                const obj = closure_1_0(8861);
+                const hasApplicationFlagResult = closure_1_0(8861).hasApplicationFlag(application, constants.EMBEDDED);
+                const result = closure_1_0(9551).isActivityInTextSupportedForChannel(type);
                 if (tmp2) {
                   tmp2 = hasApplicationFlagResult;
                 }
@@ -603,7 +603,7 @@ let closure_29 = async function _maybeSendPrimaryAppCommand(arg0) {
                 };
                 obj = { channel, guild };
                 obj.context = obj;
-                nonce(9411)(obj);
+                nonce(9416)(obj);
               });
               c5 = 7;
               c6 = 1;
@@ -1561,9 +1561,9 @@ let closure_42 = async function _refreshProxyTicket() {
     }
   })();
 };
-let closure_4 = fn(9290).getOrFetchApplicationCommandIndexForTarget;
+let closure_4 = fn(9295).getOrFetchApplicationCommandIndexForTarget;
 let closure_16 = fn(1920).SUPPORTED_ACTIVITY_IN_TEXT_CHANNEL_TYPES;
-const ActivityPanelModes = fn(9505).ActivityPanelModes;
+const ActivityPanelModes = fn(9510).ActivityPanelModes;
 const Constants = fn(1074);
 ({ AnalyticEvents: closure_18, AnalyticsGameOpenTypes: closure_19, ApplicationFlags: closure_20, ChannelTypes: closure_21, Endpoints: closure_22, PopoutWindowKeys: closure_23 } = Constants);
 const INSTALL_LESS_APP_IDS = fn(1350).INSTALL_LESS_APP_IDS;

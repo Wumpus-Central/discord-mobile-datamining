@@ -60,7 +60,7 @@ export default function EditCredentialModal(credential) {
   obj.placeholder = credential.name;
   obj.disabled = tmp6;
   obj.clearButtonVisibility = credential(1178).ClearButtonVisibility.WITH_CONTENT;
-  const items1 = [closure_5(credential(8593).FormInput, obj), closure_5(credential(8593).FormDivider, {})];
+  const items1 = [closure_5(credential(8598).FormInput, obj), closure_5(credential(8598).FormDivider, {})];
   const obj1 = {
     onPress() {
       _undefined(true);
@@ -77,7 +77,7 @@ export default function EditCredentialModal(credential) {
         };
         const intl = credential(1114).intl;
         obj.content = intl.string(credential(1114).t.IV13mH);
-        obj.icon = navigation(10652);
+        obj.icon = navigation(10657);
         obj.IconComponent = credential(4520).CircleCheckIcon;
         obj.open(obj);
         closure_1_1.popToTop();
@@ -94,7 +94,7 @@ export default function EditCredentialModal(credential) {
           };
           const intl = credential(1114).intl;
           obj.content = intl.string(credential(1114).t.IV13mH);
-          obj.icon = navigation(10652);
+          obj.icon = navigation(10657);
           obj.IconComponent = credential(4520).CircleCheckIcon;
           obj.open(obj);
           closure_1_1.popToTop();
@@ -122,5 +122,5 @@ export default function EditCredentialModal(credential) {
   obj1.text = intl2.string(credential(1114).t["7asiR3"]);
   items1[2] = closure_5(credential(4975).Button, obj1);
   obj.children = items1;
-  return closure_6(credential(8593).Form, obj);
+  return closure_6(credential(8598).Form, obj);
 }

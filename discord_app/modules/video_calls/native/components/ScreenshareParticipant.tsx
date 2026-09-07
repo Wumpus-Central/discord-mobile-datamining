@@ -5,7 +5,7 @@ import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import components_Button_Button from "../../../../design/components/Button/native/Button.native.tsx";
 import LegacyBaseButton from "../../../../../_runtime/06655_LegacyBaseButton.js";
 import useParticipantTileTapGestureDefault from "../useParticipantTileTapGesture.tsx";
-import _modDef9593 from "../../../../../_runtime/metro/09593__.js";
+import _modDef9598 from "../../../../../_runtime/metro/09598__.js";
 import useScreenshareUtils from "../useScreenshareUtils.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
@@ -58,7 +58,7 @@ export default function ScreenshareParticipant(participant) {
   obj = { style: null, children: null };
   const items2 = [tmp4.container, participant.containerStyle];
   obj.style = items2;
-  obj = { source: _modDef9593, style: tmp4.image };
+  obj = { source: _modDef9598, style: tmp4.image };
   const items3 = [timestampProducer(hasOwnProperty, obj), , ,];
   const obj1 = {
     style: tmp4.title,

@@ -64,11 +64,11 @@ export default function ForYouSuggestedFriendRow(suggestedFriend) {
   }
   let sharedValue;
   let stateFromStores;
-  let obj = suggestedFriend(10121);
+  let obj = suggestedFriend(10126);
   const messagesTabLayout = obj.useMessagesTabLayout(panelVariant);
   const tmp4 = closure_12(messagesTabLayout);
   const analyticsLocations = useAnalyticsLocationsDefault().analyticsLocations;
-  let obj1 = suggestedFriend(10121);
+  let obj1 = suggestedFriend(10126);
   const layoutStyles = obj1.getLayoutStyles(messagesTabLayout);
   let obj2 = suggestedFriend(4982);
   const fontScale = obj2.useFontScale();
@@ -81,7 +81,7 @@ export default function ForYouSuggestedFriendRow(suggestedFriend) {
     if (suggestedFriend.friendSuggestionName.length > 0) {
       let friendSuggestionName = suggestedFriend.friendSuggestionName;
     }
-    let tmpResult = tmp(16043);
+    let tmpResult = tmp(16046);
     const suggestedContactNameForSuggestion = tmpResult.getSuggestedContactNameForSuggestion(
       friendSuggestionName,
       suggestedFriend,
@@ -122,7 +122,7 @@ export default function ForYouSuggestedFriendRow(suggestedFriend) {
       obj1 = { borderRadius: layoutStyles.container.borderRadius };
       items4[1] = obj1;
       obj.style = items4;
-      const tmpResult2 = tmp(16440);
+      const tmpResult2 = tmp(16443);
       obj2 = { style: tmp4.avatar, children: null };
       obj3 = {
         user: suggestedFriend.user,
@@ -141,7 +141,7 @@ export default function ForYouSuggestedFriendRow(suggestedFriend) {
         children: friendSuggestionName,
       };
       const items6 = [closure_9(tmp(4556).Text, obj5)];
-      const tmpResult3 = tmp(16441);
+      const tmpResult3 = tmp(16444);
       let num3 = 0;
       if (tmpResult4.isAndroid()) {
         num3 = -2;
@@ -168,7 +168,7 @@ export default function ForYouSuggestedFriendRow(suggestedFriend) {
       const intl2 = tmp(1114).intl;
       obj8.actionStatus = intl2.string(tmp(1114).t.Kzyxm9);
       obj8.animate = !stateFromStoresObject;
-      obj6.children = closure_9(tmp(16442).ActionStatusSubLabel, obj8);
+      obj6.children = closure_9(tmp(16445).ActionStatusSubLabel, obj8);
       items6[1] = closure_9(sharedValue, obj6);
       obj4.children = items6;
       items5[1] = closure_10(sharedValue, obj4);
@@ -200,7 +200,7 @@ export default function ForYouSuggestedFriendRow(suggestedFriend) {
         dependencyMap(suggestedFriend);
       };
       obj9.animate = !stateFromStoresObject;
-      items5[2] = closure_9(tmp(16443).ContactSuggestionActions, obj9);
+      items5[2] = closure_9(tmp(16446).ContactSuggestionActions, obj9);
       obj10.children = items5;
       const obj11 = { layout: messagesTabLayout, fontScale, panelVariant };
       obj.children = tmpResult3.renderChannelWrapper(closure_10(closure_11, obj10), obj11);

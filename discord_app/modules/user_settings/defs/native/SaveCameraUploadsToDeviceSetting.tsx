@@ -5,7 +5,7 @@ import UserSettingsActionCreatorsDefault from "../../../../actions/UserSettingsA
 import UnsyncedUserSettingsStore from "../../UnsyncedUserSettingsStore.tsx";
 
 require = fn;
-fn(11468);
+fn(11473);
 let SettingBuilders = {
   useTitle() {
     const intl = util.intl;

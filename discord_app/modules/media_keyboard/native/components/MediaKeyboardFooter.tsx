@@ -4,7 +4,7 @@ import util from "../../../../intl/index.native.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import components_Button_Button from "../../../../design/components/Button/native/Button.native.tsx";
 import DeviceMediaDefault from "../../../device/native/DeviceMedia.tsx";
-import _modDef10656 from "../../../../../_runtime/metro/10656__.js";
+import _modDef10661 from "../../../../../_runtime/metro/10661__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -42,7 +42,7 @@ export default noop.memo(function MediaKeyboardFooter(arg0) {
     obj2.disabled = disabled;
     obj1.children = timestampProducer(components_Button_Button.Button, obj2);
     items[1] = timestampProducer(React3, obj1);
-    const obj3 = { source: _modDef10656 };
+    const obj3 = { source: _modDef10661 };
     items[2] = timestampProducer(React4, obj3);
     obj.children = items;
     let tmp6 = React5(React3, obj);

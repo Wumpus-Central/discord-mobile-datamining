@@ -209,7 +209,7 @@ export default function VibegrationsClarificationCard(clarification) {
     });
   };
   obj6.onSubmitEditing = callback2;
-  obj5.children = closure_6(clarification(14170).GhostInput, obj6);
+  obj5.children = closure_6(clarification(14173).GhostInput, obj6);
   items5[1] = closure_6(closure_5, obj5);
   obj3.children = items5;
   items4[3] = closure_7(closure_5, obj3);

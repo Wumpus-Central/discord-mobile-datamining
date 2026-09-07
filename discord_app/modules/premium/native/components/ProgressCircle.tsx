@@ -1,6 +1,6 @@
 // discord_app/modules/premium/native/components/ProgressCircle.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import inlineStyles from "../../../../../_runtime/08453_inlineStyles.js";
+import inlineStyles from "../../../../../_runtime/08456_inlineStyles.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 const inlineStylesDefault = inlineStyles;

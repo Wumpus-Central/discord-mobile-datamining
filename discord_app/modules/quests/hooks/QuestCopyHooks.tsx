@@ -21,7 +21,7 @@ import UserStore from "../../../stores/UserStore.tsx";
 
 const util = v1votF6(1114);
 const utils_QuestUtils = v1votF6(7722);
-const SponsoredQuestUtils = v1votF6(11776);
+const SponsoredQuestUtils = v1votF6(11781);
 require = fn;
 function _getQuestsInstructionsToWinReward(arg0) {
   ({ quest, taskDetails, thirdPartyTaskDetails, withoutMarkdown, currentUser, onGameTitleClick } = arg0);
@@ -868,7 +868,7 @@ export const usePrimaryCtaCopy = function usePrimaryCtaCopy(showPlayInstantlyLab
     }
     PLAY = constants.PLAY;
   }, items);
-  quest(11483);
+  quest(11488);
   if (constants3.PLAY === memo) {
     const features2 = quest.config.features;
     let hasItem = features2.includes(constants2.MOBILE_ACTIVITY_QUEST);
@@ -907,7 +907,7 @@ export const usePrimaryCtaCopy = function usePrimaryCtaCopy(showPlayInstantlyLab
     const intl3 = quest(1114).intl;
     return intl3.string(quest(1114).t.l7E81v);
   } else if (constants3.WATCH_VIDEO === memo) {
-    tmp2Result = quest(11513);
+    tmp2Result = quest(11518);
     return tmp2Result.getVideoQuestWatchCtaText(tmp5);
   } else if (constants3.IN_GAME === memo) {
     if (tmp2Result1.canLaunchActivity(quest)) {
@@ -1066,7 +1066,7 @@ export const useModalCtaConfig = function useModalCtaConfig(quest) {
           }
           obj2.impressionId = tmp5;
           obj2.sourceQuestContent = closure_128_4;
-          tmp4(11496).openGameLinkDirectly(closure_128_0, obj2);
+          tmp4(11501).openGameLinkDirectly(closure_128_0, obj2);
           dependencyMap = 3;
           return { value: "HermesInternal", done: null };
         }
@@ -1117,7 +1117,7 @@ export const useModalCtaConfig = function useModalCtaConfig(quest) {
       obj3 = QuestTaskUtils;
     }
   }, items);
-  obj.ctaText = quest(11295).getExternalCtaLabel(quest);
+  obj.ctaText = quest(11300).getExternalCtaLabel(quest);
   obj.onClickCta = function defaultOnClickCta() {
     const self = this;
     const apply = closure_5.apply;

@@ -25,7 +25,7 @@ import QuestHomeNavigationStore from "../QuestHomeNavigationStore.tsx";
 require = fn;
 function openRewardClaimBottomSheet(arg0) {
   ({ questId, questContent, questContentPosition, sourceQuestContent } = arg0);
-  return ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(11772, dependencyMap.paths), timestampProducer, {
+  return ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(11777, dependencyMap.paths), timestampProducer, {
     questId,
     questContent,
     questContentPosition,
@@ -38,7 +38,7 @@ function viewReward(quest) {
   let obj = QuestRewardUtils;
   if (obj.hasQuestRewardCode(quest.config)) {
     obj = { questId: quest.id, questContent, questContentPosition, sourceQuestContent };
-    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(11772, dependencyMap.paths), timestampProducer, obj);
+    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(11777, dependencyMap.paths), timestampProducer, obj);
   } else {
     let tmpResult = QuestRewardUtils;
     if (tmpResult.hasVirtualCurrencyReward(quest.config)) {
@@ -288,7 +288,7 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/quests/native/QuestUtils.native.tsx");
 
 export const openRewardDetailsBottomSheet = function openRewardDetailsBottomSheet(questId) {
-  return ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(11769, dependencyMap.paths), React5, {
+  return ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(11774, dependencyMap.paths), React5, {
     questId: questId.questId,
   });
 };

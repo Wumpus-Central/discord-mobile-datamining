@@ -10,7 +10,7 @@ import GuildStore from "../../../stores/GuildStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-let useStickerPickerStore = fn(10390).useStickerPickerStore;
+let useStickerPickerStore = fn(10395).useStickerPickerStore;
 const Constants = fn(1074);
 ({
   AnalyticEvents: closure_8,
@@ -251,7 +251,7 @@ export default function _default(categories) {
   );
   let obj = { portalHostName: "expression-footer", style: categories.style, children: null };
   const tmp17 = categoryIndex;
-  const tmp19 = categoryIndex(10358)();
+  const tmp19 = categoryIndex(10363)();
   obj = {
     estimatedListSize: "windowSize",
     horizontal: true,
@@ -278,12 +278,12 @@ export default function _default(categories) {
     const items10 = [,];
     ({ item: arr11[0], fadedItem: arr11[1] } = tmp);
     obj1.style = items10;
-    const obj2 = { style: tmp.guildIcon, source: tmp17(10420) };
+    const obj2 = { style: tmp.guildIcon, source: tmp17(10425) };
     obj1.children = closure_14(categories(1178).Icon, obj2);
     obj.children = closure_14(closure_5, obj1);
     tmp22Result = closure_14(categories(5123).PressableOpacity, obj);
   }
   items9[1] = tmp22Result;
   obj.children = items9;
-  return closure_15(categoryIndex(10359), obj);
+  return closure_15(categoryIndex(10364), obj);
 }

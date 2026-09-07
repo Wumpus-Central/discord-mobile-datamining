@@ -136,7 +136,7 @@ export default noop.memo(function AppLauncherNavigator(arg0) {
     const obj15 = { customId: null, referrerId: null };
   }
   const tmp8Result = closure_8(entrypoint(1484).NavigationIndependentTree, obj13);
-  return closure_8(entrypoint(11215).AppLauncherContext.Provider, {
+  return closure_8(entrypoint(11220).AppLauncherContext.Provider, {
     value: {
       bottomSheetExpandReasonRef,
       bottomSheetIndex,

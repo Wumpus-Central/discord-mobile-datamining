@@ -2,8 +2,8 @@
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import GuildRecordUtils from "../../../../utils/GuildRecordUtils.tsx";
 import ToastActionCreatorsDefault from "../../../toast/native/ToastActionCreators.tsx";
-import _modDef8744 from "../../../../../_runtime/metro/08744__.js";
-import _modDef8747 from "../../../../../_runtime/metro/08747__.js";
+import _modDef8749 from "../../../../../_runtime/metro/08749__.js";
+import _modDef8752 from "../../../../../_runtime/metro/08752__.js";
 import GuildPopoutActionCreators from "../../../guild_profile/GuildPopoutActionCreators.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import GuildPopoutStore from "../../../guild_profile/GuildPopoutStore.tsx";
@@ -16,12 +16,12 @@ function CommunityPill(guildVisibility) {
   const tmp = closure_12();
   const intl = GlobeEarthIcon(1114).intl;
   importDefault = intl.string(GlobeEarthIcon(1114).t.TME4LJ);
-  let tmp4Result = _modDef8744;
-  if (guildVisibility.guildVisibility === GlobeEarthIcon(8743).GuildVisibility.PUBLIC) {
+  let tmp4Result = _modDef8749;
+  if (guildVisibility.guildVisibility === GlobeEarthIcon(8748).GuildVisibility.PUBLIC) {
     const intl2 = tmp2(1114).intl;
     importDefault = intl2.string(tmp2(1114).t.op2cJ6);
-    GlobeEarthIcon = tmp2(8886).GlobeEarthIcon;
-    tmp4Result = _modDef8747;
+    GlobeEarthIcon = tmp2(8891).GlobeEarthIcon;
+    tmp4Result = _modDef8752;
   }
   let obj = {
     style: tmp.communityPill,

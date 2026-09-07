@@ -13,10 +13,10 @@ import useFetchStreamPreviewDefault from "../../../../go_live/useFetchStreamPrev
 import isListeningOnSpotifyDefault from "../../../../activities/utils/isListeningOnSpotify.tsx";
 import isOnXboxDefault from "../../../../activities/utils/isOnXbox.tsx";
 import useLiveStageData from "useLiveStageData.tsx";
-import _modDef16074 from "../../../../../../_runtime/metro/16074__.js";
-import _modDef16075 from "../../../../../../_runtime/metro/16075__.js";
+import _modDef16077 from "../../../../../../_runtime/metro/16077__.js";
+import _modDef16078 from "../../../../../../_runtime/metro/16078__.js";
 import HappeningNowAvatarStack from "HappeningNowAvatarStack.tsx";
-import _modDef16084 from "../../../../../../_runtime/metro/16084__.js";
+import _modDef16087 from "../../../../../../_runtime/metro/16087__.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 import StageInstanceStore from "../../../../stage_channels/StageInstanceStore.tsx";
 import UserStore from "../../../../../stores/UserStore.tsx";
@@ -171,7 +171,7 @@ function IconOrPreview(arg0) {
       userId = substr.charCodeAt(0);
       tmp2Result = items[userId % items.length];
     } else {
-      tmp2Result = _modDef16084;
+      tmp2Result = _modDef16087;
     }
   }
 }
@@ -193,7 +193,7 @@ function StageStreamAvatars(stage) {
 }
 get_ActivityIndicator = fn(17);
 ({ PixelRatio, View: closure_4 } = get_ActivityIndicator);
-const HappeningNowConstants = fn(15294);
+const HappeningNowConstants = fn(15297);
 ({
   HAPPENING_NOW_CONTENT_HEIGHT,
   HappeningNowCardTrackingType: closure_7,
@@ -205,7 +205,7 @@ const Constants = fn(1074);
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12, Fragment: map1 } = jsxProd);
 const pixelSizeForLayoutSize = PixelRatio.getPixelSizeForLayoutSize(HAPPENING_NOW_CONTENT_HEIGHT);
-let items = [_modDef16074, _modDef16075];
+let items = [_modDef16077, _modDef16078];
 fn(4560);
 let obj = {
   content: { flexShrink: 1, gap: 2 },
@@ -365,8 +365,8 @@ export default noop.memo((userId) => {
     obj.destination_channel_id = channelId;
     obj.track(constants3.ACTIVITY_CARD_CLICKED, obj);
     if (null != stream) {
-      asyncRequireImpl(9536, dependencyMap.paths).then((result) => result.default(channelId.channelId, true));
-      const promise2 = asyncRequireImpl(9536, dependencyMap.paths);
+      asyncRequireImpl(9541, dependencyMap.paths).then((result) => result.default(channelId.channelId, true));
+      const promise2 = asyncRequireImpl(9541, dependencyMap.paths);
     } else {
       asyncRequireImpl(8179, dependencyMap.paths).then((result) =>
         result.default({ userId, localUser, sourceAnalyticsLocations }),

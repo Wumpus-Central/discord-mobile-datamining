@@ -247,7 +247,7 @@ prototype["renderWebhooks"] = function renderWebhooks() {
   }
   items[1] = tmp4Result;
   if (0 === found.length) {
-    obj = { Illustration: webhookType(16846).WebhookEmpty, title: null };
+    obj = { Illustration: webhookType(16849).WebhookEmpty, title: null };
     if (webhookType === constants3.CHANNEL_FOLLOWER) {
       const intl2 = webhookType(1114).intl;
       dkHRkE = webhookType(1114).t.dkHRkE;

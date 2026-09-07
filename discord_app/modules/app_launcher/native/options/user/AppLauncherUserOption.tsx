@@ -99,7 +99,7 @@ export default function AppLauncherUserOption(option) {
       onActionSheetDismiss,
     };
     obj2.openLazy(
-      asyncRequireImpl(12185, dependencyMap.paths),
+      asyncRequireImpl(12189, dependencyMap.paths),
       AppLauncherUserListActionSheet.APP_LAUNCHER_USER_LIST_ACTION_SHEET_KEY,
       obj,
     );
@@ -109,7 +109,7 @@ export default function AppLauncherUserOption(option) {
     let tmp9Result = tmp9(tmp2(1178).Avatar, obj);
   } else {
     const obj1 = {
-      icon: tmp9(tmp2(10917).UserCircleIcon, { size: "sm", color: "interactive-text-default" }),
+      icon: tmp9(tmp2(10922).UserCircleIcon, { size: "sm", color: "interactive-text-default" }),
       wrapperStyle: tmp.iconWrapper,
     };
     tmp9Result = tmp9(AppLauncherOptionIconDefault, obj1);

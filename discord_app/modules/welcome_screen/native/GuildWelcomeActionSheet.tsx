@@ -124,8 +124,8 @@ class WelcomeChannelRow {
 }
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, ScrollView: hasOwnProperty } = get_ActivityIndicator);
-const NO_WELCOME_SCREEN = fn(12654).NO_WELCOME_SCREEN;
-const WELCOME_SCREEN_TYPE = fn(12658).WELCOME_SCREEN_TYPE;
+const NO_WELCOME_SCREEN = fn(12658).NO_WELCOME_SCREEN;
+const WELCOME_SCREEN_TYPE = fn(12662).WELCOME_SCREEN_TYPE;
 const Constants = fn(1074);
 ({ AnalyticEvents: map1, Fonts, Routes: closure_14 } = Constants);
 const EMOJI_URL_BASE_SIZE = fn(1374).EMOJI_URL_BASE_SIZE;
@@ -278,8 +278,8 @@ export default function GuildWelcomeActionSheet(guildId) {
     if (null != welcomeScreen) {
       obj = { startExpanded: true, children: null };
       obj = { contentContainerStyle: tmp.container, children: null };
-      obj1 = { style: tmp.guildIcon, guild: stateFromStores, size: onHide(12659).Sizes.MEDIUM, textScale: 2 };
-      const items9 = [closure_17(onHide(12659), obj1), , , ,];
+      obj1 = { style: tmp.guildIcon, guild: stateFromStores, size: onHide(12663).Sizes.MEDIUM, textScale: 2 };
+      const items9 = [closure_17(onHide(12663), obj1), , , ,];
       const obj2 = { style: tmp.header, variant: "heading-xl/extrabold", color: "text-default", children: null };
       const intl = tmp2(1114).intl;
       const obj3 = {
@@ -308,7 +308,7 @@ export default function GuildWelcomeActionSheet(guildId) {
       items9[2] = closure_17(tmp2(4556).Text, obj4);
       const obj5 = { style: tmp.channelsTitle, variant: "eyebrow", color: "text-default", children: null };
       const intl2 = tmp2(1114).intl;
-      const tmp17 = onHide(12659);
+      const tmp17 = onHide(12663);
       obj5.children = intl2.string(tmp2(1114).t["haj5+i"]).toUpperCase();
       items9[3] = closure_17(tmp2(4556).Text, obj5);
       let welcome_channels = welcomeScreen.welcome_channels;

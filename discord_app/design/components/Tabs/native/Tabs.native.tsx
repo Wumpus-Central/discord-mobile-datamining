@@ -396,7 +396,7 @@ export const Tabs = function Tabs(state) {
             const result = pressed.set(-1);
           };
           obj.variant = variant;
-          return variant(state(12615).TabItem, obj, id);
+          return variant(state(12619).TabItem, obj, id);
         }),
       }),
     items3,

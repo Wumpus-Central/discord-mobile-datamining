@@ -3,7 +3,7 @@ import nativeDefault from "../../../../../discord_common/js/packages/tokens/nati
 import util from "../../../../intl/index.native.tsx";
 import native from "../../../../design/void/native.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
-import _modDef12779 from "../../../../../_runtime/metro/12779__.js";
+import _modDef12783 from "../../../../../_runtime/metro/12783__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -22,7 +22,7 @@ const result = size.fileFinishedImporting(
 
 export default noop.memo(function GuildRoleSubscriptionsChannelHeader() {
   let obj = { style: closure_6().header, children: null };
-  obj = { source: _modDef12779, size: native.Icon.Sizes.MEDIUM, disableColor: true };
+  obj = { source: _modDef12783, size: native.Icon.Sizes.MEDIUM, disableColor: true };
   const items = [React4(native.Icon, obj)];
   obj = { variant: "heading-lg/extrabold", color: "interactive-text-active", children: null };
   const intl = util.intl;

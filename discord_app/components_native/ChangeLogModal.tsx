@@ -9,8 +9,8 @@ import ChangeLogStandardTemplateDefault from "ChangeLogStandardTemplate.tsx";
 import openMediaModal from "../modules/media_viewer/native/components/openMediaModal.tsx";
 import common_VideoDefault from "common/Video.tsx";
 import TouchableHitBoxDefault from "../design/void/TouchableHitBox/native/TouchableHitBox.tsx";
-import _modDef10397 from "../../_runtime/metro/10397__.js";
-import _modDef15543 from "../../_runtime/metro/15543__.js";
+import _modDef10402 from "../../_runtime/metro/10402__.js";
+import _modDef15546 from "../../_runtime/metro/15546__.js";
 import noop from "../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -310,7 +310,7 @@ prototype["renderVideo"] = function renderVideo() {
         },
         useLocalHTML: true,
       };
-      const items = [closure_7(_modDef15543, obj1)];
+      const items = [closure_7(_modDef15546, obj1)];
       let tmp6Result = null;
       if (!tmp2) {
         const obj2 = { style: tmp.videoOverlay, source: null };
@@ -360,7 +360,7 @@ prototype["renderVideo"] = function renderVideo() {
     const obj7 = {
       accessibilityLabel: "Play Video",
       accessibilityRole: "button",
-      source: _modDef10397,
+      source: _modDef10402,
       onPress: self.playVideo,
       style: tmp.playButton,
       iconSize: tmp18(1178).IconSizes.CUSTOM,

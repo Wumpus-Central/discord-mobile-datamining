@@ -9,9 +9,9 @@ import _modDef7435 from "../../../../_runtime/metro/07435__.js";
 import _modDef7436 from "../../../../_runtime/metro/07436__.js";
 import _modDef7437 from "../../../../_runtime/metro/07437__.js";
 import PremiumPill from "../../user_settings/premium/native/PremiumPill.tsx";
-import _modDef9385 from "../../../../_runtime/metro/09385__.js";
 import _modDef9390 from "../../../../_runtime/metro/09390__.js";
-import _modDef10715 from "../../../../_runtime/metro/10715__.js";
+import _modDef9395 from "../../../../_runtime/metro/09395__.js";
+import _modDef10720 from "../../../../_runtime/metro/10720__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 const PremiumUtilsDefault = PremiumUtils;
@@ -126,11 +126,11 @@ export default function PremiumPlanActionSheetHeader(arg0) {
     obj.children = items1;
     items[1] = React6(View, obj);
     if (TIER_0.TIER_0 === premiumType) {
-      let tmp13Result3 = _modDef9385;
+      let tmp13Result3 = _modDef9390;
     } else if (TIER_0.TIER_1 === premiumType) {
-      tmp13Result3 = _modDef10715;
+      tmp13Result3 = _modDef10720;
     } else if (TIER_0.TIER_2 === premiumType) {
-      tmp13Result3 = _modDef9390;
+      tmp13Result3 = _modDef9395;
     }
     const obj4 = { source: tmp13Result3, style: null, resizeMode: "contain" };
     const items2 = [tmp.imgWumpus];

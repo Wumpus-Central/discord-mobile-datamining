@@ -10,7 +10,7 @@ import QuestContent from "../../../../../discord_common/js/shared/shared-constan
 import AdCreativeType from "../../../../../discord_common/js/shared/shared-constants/AdCreativeType.tsx";
 import AnalyticsActions from "../../lib/analytics/AnalyticsActions.tsx";
 import AnalyticsTypes from "../../lib/analytics/AnalyticsTypes.tsx";
-import _mod8874 from "../../../../../discord_common/js/packages/flash-list/index.js";
+import _mod8879 from "../../../../../discord_common/js/packages/flash-list/index.js";
 import QuestActionCreators from "../../QuestActionCreators.tsx";
 import hooks_QuestHooks from "../../hooks/QuestHooks.tsx";
 import AppStoreOverlayTelemetryManager from "../AppStoreOverlayTelemetryManager.tsx";
@@ -1168,7 +1168,7 @@ function BountiesModalContentScrollInner(arg0) {
     return null;
   } else {
     if (tmp55) {
-      let tmp99 = c15(sourceQuestContent(15046), {});
+      let tmp99 = c15(sourceQuestContent(15049), {});
     } else {
       tmp99 = null;
       if (tmp45) {
@@ -1178,7 +1178,7 @@ function BountiesModalContentScrollInner(arg0) {
     }
     const obj19 = { value: memo3, children: null };
     const obj20 = { style: tmp.root, children: null };
-    let tmp2Result = sourceQuestContent(15048);
+    let tmp2Result = sourceQuestContent(15051);
     if (peekActive) {
       peekActive = !tmp19;
     }
@@ -1234,7 +1234,7 @@ function BountiesModalContentScrollInner(arg0) {
       scrollEnabled: !tmp19,
       contentContainerStyle: memo10,
     };
-    obj24.children = c15(_mod8874.AnimatedFlashList, obj25);
+    obj24.children = c15(_mod8879.AnimatedFlashList, obj25);
     items30[2] = c15(sourceQuestContent(4296).View, obj24);
     tmp102Result = null;
     if (null != tmp18) {
@@ -1245,7 +1245,7 @@ function BountiesModalContentScrollInner(arg0) {
         onDismiss: callback2,
         onInstallPress: tmp18.onInstallPress,
       };
-      tmp102Result = tmp102(sourceQuestContent(15053), obj26);
+      tmp102Result = tmp102(sourceQuestContent(15056), obj26);
     }
     items30[3] = tmp102Result;
     let tmp102Result1 = null;
@@ -1272,7 +1272,7 @@ function BountiesModalContentScrollInner(arg0) {
     let tmp102Result2 = null;
     if (tmp42) {
       const obj30 = { onPress: callback6 };
-      tmp102Result2 = tmp102(sourceQuestContent(15054), obj30);
+      tmp102Result2 = tmp102(sourceQuestContent(15057), obj30);
     }
     obj29.children = tmp102Result2;
     items30[5] = c15(sourceQuestContent(4296).View, obj29);
@@ -1282,12 +1282,12 @@ function BountiesModalContentScrollInner(arg0) {
       if (!tmp19) {
         const obj31 = { style: memo13, pointerEvents: "none", children: null };
         const obj32 = { progress, showProgressRing };
-        obj31.children = tmp102(sourceQuestContent(15055), obj32);
+        obj31.children = tmp102(sourceQuestContent(15058), obj32);
         tmp102Result3 = tmp102(tmp104, obj31);
       }
     }
     items30[6] = tmp102Result3;
-    tmp2Result = sourceQuestContent(15006);
+    tmp2Result = sourceQuestContent(15009);
     if (!tmp55) {
       tmp55 = tmp45;
     }
@@ -1312,7 +1312,7 @@ get_ActivityIndicator = fn(17);
 ({ StyleSheet: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
 const QuestConstants = fn(5444);
 ({ DEFAULT_PLACEHOLDER_ENTRYPOINT_BOUNTY_ID: closure_8, QuestsExperimentLocations: closure_9 } = QuestConstants);
-const BountiesModalConstants = fn(15005);
+const BountiesModalConstants = fn(15008);
 ({ getBountyVideoEndAppStoreSheetHeight: c10, getBountyVideoEndPeekTargetScale: closure_11 } = BountiesModalConstants);
 const Constants = fn(1074);
 ({ AnalyticEvents: closure_12, ComponentActions: map1 } = Constants);

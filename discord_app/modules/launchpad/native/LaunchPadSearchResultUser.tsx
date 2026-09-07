@@ -149,7 +149,7 @@ function UserResult(user) {
         muted: flag,
         layout: tmp6(7879).ChannelListLayoutTypes.COMPACT,
       };
-      tmp14Result = closure_12(tmp6(10109).ChannelRowPreview, obj3);
+      tmp14Result = closure_12(tmp6(10114).ChannelRowPreview, obj3);
     }
   }
   const obj4 = { children: null };
@@ -182,7 +182,7 @@ function UserResultWithChannel(arg0) {
   obj = {};
   const merged = Object.assign(arg0);
   obj.channel = channel;
-  obj.lastMessage = channel(15317)(channel, { unread });
+  obj.lastMessage = channel(15320)(channel, { unread });
   obj.unread = unread;
   obj.mentionCount = mentionCount;
   obj.muted = stateFromStores;

@@ -29,13 +29,13 @@ export const ChannelCallSingleController = function ChannelCallSingleController(
       return null;
     } else {
       let tmp18 = channel;
-      tmp18 = tmp18(selectedParticipant.user.id === tmp15 ? 10023 : 10025);
+      tmp18 = tmp18(selectedParticipant.user.id === tmp15 ? 10028 : 10030);
       let obj = { participant: selectedParticipant, channel };
       <tmp18 participant={selectedParticipant} channel={channel} />;
     }
   } else if (ParticipantTypes.USER === type) {
     obj = { participant: selectedParticipant, channel };
-    return jsx(channel(10026), { participant: selectedParticipant, channel });
+    return jsx(channel(10031), { participant: selectedParticipant, channel });
   } else if (ParticipantTypes.HIDDEN_STREAM === type) {
     return null;
   } else if (ParticipantTypes.ACTIVITY === type) {

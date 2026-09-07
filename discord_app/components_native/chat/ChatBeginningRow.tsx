@@ -41,9 +41,9 @@ import PencilIcon from "../../design/components/Icon/native/redesign/generated/P
 import openGroupDMAddMembers from "../../modules/group_dm/native/openGroupDMAddMembers.tsx";
 import showChatGDMUpsellActionSheetDefault from "../../modules/group_dm/native/showChatGDMUpsellActionSheet.tsx";
 import channel_permissions_ChannelPermissionsUtils from "../../modules/channel_permissions/native/ChannelPermissionsUtils.tsx";
-import _modDef12470 from "../../../_runtime/metro/12470__.js";
+import _modDef12474 from "../../../_runtime/metro/12474__.js";
 import ChannelAccessInfoDefault from "../../modules/channel_permissions/native/components/ChannelAccessInfo.tsx";
-import _modDef12596 from "../../../_runtime/metro/12596__.js";
+import _modDef12600 from "../../../_runtime/metro/12600__.js";
 import UserSettingsAuthedAppDeleteWarningModalDefault from "../../modules/user_settings/authorized_apps/native/UserSettingsAuthedAppDeleteWarningModal.tsx";
 import PortalAccessibilityWorkaroundViewDefault from "../../modules/a11y/native/PortalAccessibilityWorkaroundView.tsx";
 import _slicedToArray from "../../../_runtime/metro/00032__.js";
@@ -189,7 +189,7 @@ function LinkManageButtons(arg0) {
     const items = [,];
     ({ ctaButton: arr[0], subtitle: arr[1] } = tmp);
     obj.style = items;
-    const obj1 = { source: _modDef12470, size: native.IconSizes.REFRESH_SMALL_16, color: token };
+    const obj1 = { source: _modDef12474, size: native.IconSizes.REFRESH_SMALL_16, color: token };
     const items1 = [closure_44(native.Icon, obj1)];
     const obj2 = { style: null, variant: "text-sm/medium", color: "text-link", children: null };
     const items2 = [,];
@@ -311,7 +311,7 @@ function ThreadOwner(arg0) {
 function ChatBeginningRowThread(channel) {
   channel = channel.channel;
   const tmp = closure_47();
-  let obj = channel(9738);
+  let obj = channel(9743);
   const result = obj.isPrivateGuildChannel(channel);
   let obj1 = channel(7275);
   const appliedTags = obj1.useAppliedTags(channel);
@@ -381,7 +381,7 @@ function ChatBeginningRowGuildNonDefaultChannel(channel) {
   const canResult = PermissionStore.can(constants7.MANAGE_CHANNELS, channel);
   const tmp4 = useChannelNameDefault(channel, false);
   const canResult1 = PermissionStore.can(constants7.MANAGE_ROLES, channel);
-  let obj = channel(9738);
+  let obj = channel(9743);
   const result = obj.isPrivateGuildChannel(channel);
   const canResult2 = PermissionStore.can(constants7.READ_MESSAGE_HISTORY, channel);
   const intl = channel(1114).intl;
@@ -452,7 +452,7 @@ function ChatBeginningRowGuild(guild) {
 function DMSpamButton(channel) {
   channel = channel.channel;
   const user = channel.user;
-  let obj = channel(12592);
+  let obj = channel(12596);
   const dMMessageToReport = obj.useDMMessageToReport(channel, user.id, true === user.bot);
   const message = dMMessageToReport.message;
   if (!channel.showingSpamBanner) {
@@ -486,7 +486,7 @@ function ManageAppButton(application) {
       obj = { size: "sm", variant: "secondary", text: null, icon: null, onPress: null };
       const intl = tmp2(1114).intl;
       obj.text = intl.string(tmp2(1114).t["5S3sQF"]);
-      obj = { size: tmp2(1178).Icon.Sizes.SMALL, source: _modDef12596, style: tmp.appDMButtonIcon };
+      obj = { size: tmp2(1178).Icon.Sizes.SMALL, source: _modDef12600, style: tmp.appDMButtonIcon };
       obj.icon = closure_44(tmp2(1178).Icon, obj);
       obj.onPress = function onPress() {
         let obj = {
@@ -577,7 +577,7 @@ function MuteAppButton(channel) {
       } else {
         tmpResult = ActionSheetActionCreatorsDefault;
         obj = { channel };
-        tmpResult.openLazy(asyncRequireImpl(12599, dependencyMap.paths), "MessageNotificationChannelActionSheet", obj);
+        tmpResult.openLazy(asyncRequireImpl(12603, dependencyMap.paths), "MessageNotificationChannelActionSheet", obj);
       }
     };
     tmp6Result = closure_44(tmp2(tmp3[73]).Button, obj);
@@ -616,7 +616,7 @@ function ChatBeginningRowDM(channel) {
   if (id == null) {
     id = closure_30;
   }
-  let tmp4Result = user(12600)(id);
+  let tmp4Result = user(12604)(id);
   id = tmp4Result;
   let obj = channel(504);
   let items = [AuthorizedAppsStore];
@@ -648,7 +648,7 @@ function ChatBeginningRowDM(channel) {
     items2,
   );
   let items3 = [user, channel];
-  const tmp4 = user(12600);
+  const tmp4 = user(12604);
   const effect = authorizedAppsFetchState.useEffect(() => {
     let guild_id;
     ({ id, getAvatarURL } = user);
@@ -743,7 +743,7 @@ function ChatBeginningRowDM(channel) {
     tmp15Result = null;
     if (user.isProvisional) {
       let obj8 = { style: tmp.provisionalAccountExplainer, userId: user.id, iconSize: 14 };
-      tmp15Result = closure_44(tmp7(12627).ChatProvisionalAccountExplainerCard, obj8);
+      tmp15Result = closure_44(tmp7(12631).ChatProvisionalAccountExplainerCard, obj8);
     }
     items5[4] = tmp15Result;
     let tmp18Result;
@@ -767,7 +767,7 @@ function ChatBeginningRowDM(channel) {
                 user(4763).popWithKey(closure_1_42);
               },
             };
-            obj.openLazy(asyncRequireImpl(12601, dependencyMap.paths), "MutualGuildsActionSheet", obj);
+            obj.openLazy(asyncRequireImpl(12605, dependencyMap.paths), "MutualGuildsActionSheet", obj);
           }
         }
         const substr = stateFromStores.slice(0, num2);
@@ -787,7 +787,7 @@ function ChatBeginningRowDM(channel) {
             return closure_1_44(user(dependencyMap[98]), obj, guild.id);
           }),
         };
-        const items6 = [closure_44(tmp7(12618).GuildIconPile, obj10)];
+        const items6 = [closure_44(tmp7(12622).GuildIconPile, obj10)];
         let obj11 = { style: tmp.mutualGuildsLabel, variant: "text-sm/medium", color: "text-default", children: null };
         let intl5 = tmp7(1114).intl;
         const obj12 = { count: stateFromStores.length };
@@ -1028,7 +1028,7 @@ function ChatBeginningRowGroupDM(channel) {
           } else if (arg0 !== 2) {
             closure_128_0 = value;
             if (null != closure_128_0) {
-              obj = tmp5(9820);
+              obj = tmp5(9825);
               obj.handleCopy(closure_128_0, closure_129_0, constants.GROUP_DM, false);
             }
             closure_129_2(false);
@@ -1071,9 +1071,9 @@ function ChatBeginningRowGroupDM(channel) {
       showChatGDMUpsellActionSheetDefault(obj);
     }
   }, items4);
-  let obj1 = first(11594);
+  let obj1 = first(11599);
   obj = { location: GroupDMChatBeginning };
-  let obj3 = channel(11591);
+  let obj3 = channel(11596);
   const groupDMNitroAudience = obj3.useGroupDMNitroAudience();
   const recipients = channel.recipients;
   let num;
@@ -1086,8 +1086,8 @@ function ChatBeginningRowGroupDM(channel) {
   const sum = num + 1;
   let enabled = stateFromStores;
   if (stateFromStores) {
-    enabled = tmp7(11591).isGroupDMNitroUpsellAudience(groupDMNitroAudience);
-    const tmp7Result = tmp7(11591);
+    enabled = tmp7(11596).isGroupDMNitroUpsellAudience(groupDMNitroAudience);
+    const tmp7Result = tmp7(11596);
   }
   if (enabled) {
     enabled = obj1.useConfig(obj).enabled;
@@ -1096,12 +1096,12 @@ function ChatBeginningRowGroupDM(channel) {
     enabled = sum >= tmp16;
   }
   obj = { audience: groupDMNitroAudience, location: GroupDMChatBeginning, acquisitionStrategy: null };
-  tmp2(11598);
-  obj.acquisitionStrategy = channel(11591).GroupDMNitroAcquisitionStrategy.MARKETING;
-  tmp16 = first(11592)({ useNitroCapExperiment: true });
+  tmp2(11603);
+  obj.acquisitionStrategy = channel(11596).GroupDMNitroAcquisitionStrategy.MARKETING;
+  tmp16 = first(11597)({ useNitroCapExperiment: true });
   obj1 = { style: tmp.centerHeader, children: null };
   let obj2 = { style: tmp.avatarRedesign, channel, size: null, accessible: false };
-  const tmp2Result = tmp2(10910);
+  const tmp2Result = tmp2(10915);
   obj2.size = channel(1178).AvatarSizes.XXLARGE;
   const items5 = [closure_44(tmp2Result, obj2), , ,];
   obj3 = { style: tmp.dmTitle, variant: null, color: "mobile-text-heading-primary", children: null };
@@ -1132,7 +1132,7 @@ function ChatBeginningRowGroupDM(channel) {
       const obj6 = {
         style: tmp.gdmInviteFriends,
         onPress: tmp2ResultResult,
-        IconComponent: tmp7(8662).NitroWheelIcon,
+        IconComponent: tmp7(8667).NitroWheelIcon,
         iconVariant: "default",
         title: null,
         subtitle: null,
@@ -1149,7 +1149,7 @@ function ChatBeginningRowGroupDM(channel) {
         const obj8 = {
           style: tmp.gdmInviteFriends,
           onPress: callback2,
-          IconComponent: tmp7(10032).GroupPlusIcon,
+          IconComponent: tmp7(10037).GroupPlusIcon,
           iconVariant: "default",
           title: null,
         };
@@ -1182,7 +1182,7 @@ function ChatBeginningRowGroupDM(channel) {
     let tmp21Result1 = null;
     if (channel.hasFlag(ChannelFlags.IS_JOIN_REQUEST_INTERVIEW_CHANNEL)) {
       const obj10 = { channelId: channel.id };
-      tmp21Result1 = closure_44(tmp2(12631), obj10);
+      tmp21Result1 = closure_44(tmp2(12635), obj10);
     }
     const obj11 = { children: null };
     items6[2] = tmp21Result1;
@@ -1215,11 +1215,11 @@ const Constants = fn(1074);
   WELCOME_OLD_GUILD_AGE_THRESHOLD: closure_37,
 } = Constants);
 const ChannelFlags = fn(1964).ChannelFlags;
-const number = fn(11593).MAX_GROUP_DM_NITRO_PARTICIPANTS;
-const GuildProgressConstants = fn(12469);
+const number = fn(11598).MAX_GROUP_DM_NITRO_PARTICIPANTS;
+const GuildProgressConstants = fn(12473);
 ({ AnalyticsActions: closure_40, AnalyticsSetupTypes: closure_41 } = GuildProgressConstants);
-let closure_42 = fn(12443).MOBILE_MESSAGE_REQUESTS_MODAL_KEY;
-let closure_43 = fn(11382).BLOCK_CONFIRMATION_ACTION_SHEET_KEY;
+let closure_42 = fn(12447).MOBILE_MESSAGE_REQUESTS_MODAL_KEY;
+let closure_43 = fn(11387).BLOCK_CONFIRMATION_ACTION_SHEET_KEY;
 const jsxProd = fn(21);
 ({ jsx: closure_44, Fragment: closure_45, jsxs: closure_46 } = jsxProd);
 fn(4560);
@@ -1360,8 +1360,8 @@ function ChatBeginningRowGuildDefaultChannel(guild) {
             } else {
               closure_0 = tmp2;
               let base64;
-              tmp5(9063).init(id);
-              const obj7 = tmp5(9063);
+              tmp5(9068).init(id);
+              const obj7 = tmp5(9068);
               let obj1 = { size };
               dependencyMap = 1;
               c3 = 1;
@@ -1378,9 +1378,9 @@ function ChatBeginningRowGuildDefaultChannel(guild) {
           } else {
             base64 = value.base64;
             if (null != base64) {
-              obj = tmp5(9063);
+              obj = tmp5(9068);
               obj.updateIcon(closure_129_2, base64);
-              obj1 = tmp5(9063);
+              obj1 = tmp5(9068);
               obj1.open(closure_129_2, constants.LANDING);
             }
             c3 = 3;

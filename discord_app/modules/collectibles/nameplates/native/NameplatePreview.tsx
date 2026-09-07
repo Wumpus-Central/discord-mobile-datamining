@@ -120,7 +120,7 @@ export const NameplatePreview = function NameplatePreview(aria_hidden) {
     items2,
   );
   obj1 = { nameplate: nameplateData, style: tmp.nameplate, fullOpacity: true, animate: flag2 };
-  const items3 = [closure_7(guildId(8818), obj1), ,];
+  const items3 = [closure_7(guildId(8823), obj1), ,];
   obj2 = { style: tmp.avatar, children: memo };
   items3[1] = closure_7(pendingAvatarDecoration, obj2);
   obj3 = { style: tmp.content, children: null };
@@ -131,12 +131,12 @@ export const NameplatePreview = function NameplatePreview(aria_hidden) {
       guildId,
       userName: pendingGlobalName,
       variant: "text-md/semibold",
-      effectDisplayType: user(10900).EffectDisplayType.STATIC,
+      effectDisplayType: user(10905).EffectDisplayType.STATIC,
       lineClamp: 1,
       pendingDisplayNameStyles,
     };
-    tmp19Result = closure_7(tmp7(10899), obj4);
-    const tmp7Result = tmp7(10899);
+    tmp19Result = closure_7(tmp7(10904), obj4);
+    const tmp7Result = tmp7(10904);
   }
   const items4 = [tmp19Result];
   tmp19Result = null == tmp15;

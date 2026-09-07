@@ -11,7 +11,7 @@ let closure_4 = {
   sm: { width: 18, height: 18 },
   md: { width: 24, height: 24 },
   lg: { width: 32, height: 32 },
-  custom: { width: "hash", height: "call" },
+  custom: { width: "push", height: "channel" },
   refresh_sm: { width: 18, height: 18 },
 };
 const size = fn(2);

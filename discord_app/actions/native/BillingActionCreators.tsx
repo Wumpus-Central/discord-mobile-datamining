@@ -17,7 +17,7 @@ import BlockedPaymentsCountryExperiment from "../../modules/billing/experiments/
 import ACOMExperiments from "../../modules/billing/native/ACOMExperiments.tsx";
 import showSpendingLimitReachedAlert from "../../modules/parent_tools/native/showSpendingLimitReachedAlert.tsx";
 import IAPUtils from "../../utils/native/IAPUtils.tsx";
-import _mod11048 from "../../../_runtime/metro/11048__.js";
+import _mod11053 from "../../../_runtime/metro/11053__.js";
 import openBlockedPaymentsCountryActionSheetDefault from "../../modules/billing/native/openBlockedPaymentsCountryActionSheet.tsx";
 import ErrorUtilsAll from "../../utils/ErrorUtils.tsx";
 import APBRequestOperations from "../../../discord_common/js/shared/shared-constants/APBRequestOperations.tsx";
@@ -233,7 +233,7 @@ let closure_31 = async function _clearAndMakeIAPRequest() {
   closure_132_1 = closure_1;
   closure_132_2 = closure_2;
   closure_132_3 = closure_3;
-  await _mod11048.clearTransactionIOS();
+  await _mod11053.clearTransactionIOS();
   return closure_133_32(closure_132_0, closure_132_1, closure_132_2, closure_132_3);
 };
 function makeTrackedIAPRequest(arg0, arg1, arg2, arg3) {
@@ -2119,7 +2119,7 @@ let SubscriptionPurchaseFailureReason = {
                 c3 = 1;
                 c4 = 2;
                 c5 = 1;
-                const obj2 = { value: _mod11048.initConnection(), done: false };
+                const obj2 = { value: _mod11053.initConnection(), done: false };
                 return obj2;
               }
             }
@@ -2956,7 +2956,7 @@ let SubscriptionPurchaseFailureReason = {
     })();
   }
 };
-let items = [fn(11048).ErrorCode.E_USER_CANCELLED, StoreKitErrors.PAYMENT_CANCELED];
+let items = [fn(11053).ErrorCode.E_USER_CANCELLED, StoreKitErrors.PAYMENT_CANCELED];
 const set = new Set(items);
 SubscriptionPurchaseFailureReason = { NONE: "none", CANNOT_MAKE_REQUEST: "cannot_make_request", INVALID_CURRENCY: "invalid_currency", PURCHASE_INCOMPLETE: "purchase_incomplete", USER_CANCELLED: "user_cancelled", POST_PURCHASE_FAILED: "post_purchase_failed" };
 const size = fn(2);

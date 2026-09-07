@@ -1,7 +1,7 @@
 // discord_app/design/components/Icon/native/redesign/generated/ArrowAngleLeftUpIcon.tsx
 import nativeDefault from "../../../../../../../discord_common/js/packages/tokens/native.tsx";
 import BaseIconImage from "../../BaseIconImage.tsx";
-import _mod11735 from "../../../../../../../_runtime/metro/11735__.js";
+import _mod11740 from "../../../../../../../_runtime/metro/11740__.js";
 import noop from "../../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -16,5 +16,5 @@ export const ArrowAngleLeftUpIcon = function ArrowAngleLeftUpIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod11735, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod11740, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 };

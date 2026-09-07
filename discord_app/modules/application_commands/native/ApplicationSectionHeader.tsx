@@ -40,7 +40,7 @@ export default function ApplicationSectionHeader(section) {
       }
     }
   });
-  const applicationCommandsIconSource = section(12231).getApplicationCommandsIconSource(section, stateFromStores);
+  const applicationCommandsIconSource = section(12235).getApplicationCommandsIconSource(section, stateFromStores);
   let nick;
   if (stateFromStores != null) {
     nick = stateFromStores.nick;

@@ -48,10 +48,10 @@ const Constants = fn(1074);
 const StaticChannelRoute = fn(1964).StaticChannelRoute;
 const StreamTypes = fn(4602).StreamTypes;
 const NativePermissionTypes = fn(4770).NativePermissionTypes;
-let closure_21 = fn(9574).OAUTH2_AUTHORIZE_MODAL_KEY;
+let closure_21 = fn(9579).OAUTH2_AUTHORIZE_MODAL_KEY;
 let closure_22 = fn(7538).FAMILY_CENTER_LINK_REQUEST_REGEX;
 let closure_23 = fn(4542).MobileWebRedirectCheckoutDeepLinkActions;
-const SHARE_SCREEN_MODAL_KEY = fn(13851).SHARE_SCREEN_MODAL_KEY;
+const SHARE_SCREEN_MODAL_KEY = fn(13854).SHARE_SCREEN_MODAL_KEY;
 const MobileUserSettings = fn(7975).MobileUserSettings;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/links/native/handleSupportedURL.tsx");
@@ -201,7 +201,7 @@ export default function handleSupportedURL(payload) {
     }
     if (flag2) {
       payload(inviteCode[28]).startDiceRoll(channelId2, diceCount, diceSides);
-      let obj3 = { guildId: guildId2, channelId: channelId2, messageId: "Array", navigationSettings: false };
+      let obj3 = { guildId: guildId2, channelId: channelId2, messageId: "Array", navigationSettings: true };
       let obj4 = { safe, navigationReplace, waitForConnection, skipMessageFetch };
       obj3.navigationSettings = obj4;
       rootNavigationRef1(inviteCode[29])(obj3);
@@ -295,7 +295,7 @@ export default function handleSupportedURL(payload) {
             null != remoteAuthFingerprint
               ? () => {
                   const obj = { remoteAuthFingerprint };
-                  obj.pushLazy(asyncRequireImpl(13863, dependencyMap.paths), obj, "REMOTE_AUTH_MODAL");
+                  obj.pushLazy(asyncRequireImpl(13866, dependencyMap.paths), obj, "REMOTE_AUTH_MODAL");
                 }
               : () => {
                   let obj = payload(inviteCode[39]);

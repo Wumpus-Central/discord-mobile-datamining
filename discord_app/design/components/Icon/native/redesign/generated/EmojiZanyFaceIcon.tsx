@@ -1,7 +1,7 @@
 // discord_app/design/components/Icon/native/redesign/generated/EmojiZanyFaceIcon.tsx
 import nativeDefault from "../../../../../../../discord_common/js/packages/tokens/native.tsx";
 import BaseIconImage from "../../BaseIconImage.tsx";
-import _mod15400 from "../../../../../../../_runtime/metro/15400__.js";
+import _mod15403 from "../../../../../../../_runtime/metro/15403__.js";
 import noop from "../../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -16,5 +16,5 @@ export const EmojiZanyFaceIcon = function EmojiZanyFaceIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod15400, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod15403, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 };

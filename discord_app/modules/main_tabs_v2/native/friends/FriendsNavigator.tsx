@@ -6,13 +6,13 @@ import native from "../../../../../discord_common/js/packages/design/native.tsx"
 import useColorThemeBackgroundDefault from "../../../client_themes/native/useColorThemeBackground.tsx";
 import HeaderShared from "../shared_components/HeaderShared.tsx";
 import PressableNavigatorButtonWrapperDefault from "../shared_components/navigator/PressableNavigatorButtonWrapper.tsx";
-import _modDef12596 from "../../../../../_runtime/metro/12596__.js";
+import _modDef12600 from "../../../../../_runtime/metro/12600__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 function RequestsSettingsModalButton(onPress) {
   let obj = { isModal: true, children: null };
-  obj = { source: _modDef12596, onPress: onPress.onPress, accessibilityLabel: null };
+  obj = { source: _modDef12600, onPress: onPress.onPress, accessibilityLabel: null };
   const intl = util.intl;
   obj.accessibilityLabel = intl.string(util.t["3D5yo/"]);
   obj.children = hasOwnProperty(HeaderShared.HeaderIconButton, obj);
@@ -85,7 +85,7 @@ function FriendsNavigator() {
       return obj;
     },
     getComponent() {
-      return closure_0(16747).default;
+      return closure_0(16750).default;
     },
   };
   const items = [closure_5(closure_7.Screen, obj), , , , , , , , , ,];
@@ -95,7 +95,7 @@ function FriendsNavigator() {
   obj2.title = intl.string(require("util").t.jD1qzM);
   obj1.options = obj2;
   obj1.getComponent = function getComponent() {
-    return closure_0(16753).default;
+    return closure_0(16756).default;
   };
   items[1] = closure_5(closure_7.Screen, obj1);
   let obj3 = { name: "gdm", options: null, getComponent: null };
@@ -104,7 +104,7 @@ function FriendsNavigator() {
   obj4.title = intl2.string(require("util").t["3hF1W4"]);
   obj3.options = obj4;
   obj3.getComponent = function getComponent() {
-    return closure_0(16765).default;
+    return closure_0(16768).default;
   };
   items[2] = closure_5(closure_7.Screen, obj3);
   const obj5 = { name: "add-friend", options: null, getComponent: null };
@@ -113,7 +113,7 @@ function FriendsNavigator() {
   obj6.title = intl3.string(require("util").t.w5uwoI);
   obj5.options = obj6;
   obj5.getComponent = function getComponent() {
-    return closure_0(16766).default;
+    return closure_0(16769).default;
   };
   items[3] = closure_5(closure_7.Screen, obj5);
   const obj7 = { name: "add-friends", options: null, getComponent: null };
@@ -122,7 +122,7 @@ function FriendsNavigator() {
   obj8.title = intl4.string(require("util").t.zIJnA6);
   obj7.options = obj8;
   obj7.getComponent = function getComponent() {
-    return closure_0(16767).default;
+    return closure_0(16770).default;
   };
   items[4] = closure_5(closure_7.Screen, obj7);
   const obj9 = { name: "username-search", options: null, getComponent: null };
@@ -131,7 +131,7 @@ function FriendsNavigator() {
   obj10.title = intl5.string(require("util").t.QzVsOs);
   obj9.options = obj10;
   obj9.getComponent = function getComponent() {
-    return closure_0(16773).default;
+    return closure_0(16776).default;
   };
   items[5] = closure_5(closure_7.Screen, obj9);
   const obj11 = { name: "suggested-friends", options: null, getComponent: null };
@@ -140,7 +140,7 @@ function FriendsNavigator() {
   obj12.title = intl6.string(require("util").t["1uAmCw"]);
   obj11.options = obj12;
   obj11.getComponent = function getComponent() {
-    return closure_0(16774).default;
+    return closure_0(16777).default;
   };
   items[6] = closure_5(closure_7.Screen, obj11);
   const obj13 = { name: "requests-settings", options: null, getComponent: null };
@@ -149,7 +149,7 @@ function FriendsNavigator() {
   obj14.title = intl7.string(require("util").t.XT4hVl);
   obj13.options = obj14;
   obj13.getComponent = function getComponent() {
-    return closure_0(16775).default;
+    return closure_0(16778).default;
   };
   items[7] = closure_5(closure_7.Screen, obj13);
   items[8] = closure_5(closure_7.Screen, {
@@ -169,7 +169,7 @@ function FriendsNavigator() {
       return obj;
     },
     getComponent() {
-      return closure_0(16777).default;
+      return closure_0(16780).default;
     },
   });
   const obj16 = { name: "spam-requests", options: null, getComponent: null };
@@ -178,7 +178,7 @@ function FriendsNavigator() {
   obj17.title = intl8.string(require("util").t.oHVeHc);
   obj16.options = obj17;
   obj16.getComponent = function getComponent() {
-    return closure_0(16780).default;
+    return closure_0(16783).default;
   };
   items[9] = closure_5(closure_7.Screen, obj16);
   const obj18 = { name: "ignored-user-requests", options: null, getComponent: null };
@@ -187,7 +187,7 @@ function FriendsNavigator() {
   obj19.title = intl9.string(require("util").t.tFY5Zb);
   obj18.options = obj19;
   obj18.getComponent = function getComponent() {
-    return closure_0(16781).default;
+    return closure_0(16784).default;
   };
   items[10] = closure_5(closure_7.Screen, obj18);
   obj.children = items;

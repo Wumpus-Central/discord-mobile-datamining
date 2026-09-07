@@ -45,7 +45,7 @@ export default function GuildPowerupsLevelsSection(arg0) {
   obj.title = intl.string(listings(2428)["TXY/b0"]);
   const intl2 = util.intl;
   obj.description = intl2.string(listings(2428).aJv4PB);
-  const items1 = [closure_5(listings(12552), obj)];
+  const items1 = [closure_5(listings(12556), obj)];
   obj = {
     cardMarginRight: PX_16,
     cardWidth: 250,

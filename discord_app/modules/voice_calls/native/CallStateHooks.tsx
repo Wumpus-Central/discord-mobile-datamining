@@ -9,7 +9,7 @@ const Constants = fn(1074);
 ({ EMPTY_STRING_SNOWFLAKE_ID: closure_7, RTCConnectionStates: closure_8 } = Constants);
 const ParticipantTypes = fn(4581).ParticipantTypes;
 let obj = {};
-const merged = Object.assign({ initialized: false, callId: "PX_16" });
+const merged = Object.assign({ initialized: false, callId: "Array" });
 obj = {
   DISCONNECTED: "disconneted",
   DISCONNECTING: "disconnecting",
@@ -66,7 +66,7 @@ export default function _default() {
     }
     return tmp;
   });
-  const tmp3 = id(9215)();
+  const tmp3 = id(9220)();
   dependencyMap = tmp3;
   const items2 = [RTCConnectionStore];
   stateFromStores = require("initialize").useStateFromStores(items2, RTCConnectionStore.getRTCConnectionId, []);

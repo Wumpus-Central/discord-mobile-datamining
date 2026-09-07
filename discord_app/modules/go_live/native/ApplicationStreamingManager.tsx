@@ -39,7 +39,7 @@ prototype["platformHandleStreamStart"] = function platformHandleStreamStart(sour
       state = { preset: ApplicationStreamPresets.PRESET_CUSTOM, resolution: 720, fps: 30, soundshareEnabled: true };
     }
     ({ preset, resolution, fps, soundshareEnabled } = state);
-    setGoLiveSource = setGoLiveSource(9089).setGoLiveSource;
+    setGoLiveSource = setGoLiveSource(9094).setGoLiveSource;
     desktopSettings = { desktopSettings: null, qualityOptions: null, context: null };
     desktopSettings = { sourceId, sound: soundshareEnabled };
     desktopSettings.desktopSettings = desktopSettings;
@@ -47,7 +47,7 @@ prototype["platformHandleStreamStart"] = function platformHandleStreamStart(sour
     desktopSettings.qualityOptions = obj1;
     desktopSettings.context = MediaEngineContextTypes.STREAM;
     setGoLiveSource(desktopSettings);
-    const setGoLiveSourceResult = setGoLiveSource(9089);
+    const setGoLiveSourceResult = setGoLiveSource(9094);
   } else {
     const _HermesInternal = HermesInternal;
     desktopSettings.warn(

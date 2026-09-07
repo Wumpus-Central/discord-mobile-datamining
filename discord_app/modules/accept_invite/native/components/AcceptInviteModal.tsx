@@ -32,7 +32,7 @@ export default function AcceptInviteModal(arg0) {
     obj.render = function render() {
       const obj = {};
       const merged = Object.assign(closure_0);
-      obj.onPressClose = closure_0(8738).clearDisplayedInvite;
+      obj.onPressClose = closure_0(8743).clearDisplayedInvite;
       return jsx(AcceptInviteContainerDefault, {});
     };
     obj[CreateGuildModalStates.ACCEPT_INVITE] = obj;

@@ -49,11 +49,11 @@ function showMessageRequestRestrictionModal(arg0) {
   };
   obj.show(obj);
 }
-const UserSettingsSafetySelectedGuildStore = fn(15869);
+const UserSettingsSafetySelectedGuildStore = fn(15872);
 ({ getSelectedGuildId: closure_4, useUserSafetySettingsSelectedGuildStore: hasOwnProperty } =
   UserSettingsSafetySelectedGuildStore);
-let closure_6 = fn(11469).GUILD_SELECT_ALL_SERVERS_OPTION_ID;
-fn(11468);
+let closure_6 = fn(11474).GUILD_SELECT_ALL_SERVERS_OPTION_ID;
+fn(11473);
 let SettingBuilders = {
   useTitle() {
     const intl = util.intl;

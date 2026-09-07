@@ -21,9 +21,9 @@ export default noop.memo(function VoicePanelChannelOptInNotice(channel) {
   obj.label = intl.string(channel(1114).t["9mysCh"]);
   const intl2 = channel(1114).intl;
   obj.subLabel = intl2.string(channel(1114).t.PDUCIN);
-  obj = { IconComponent: channel(13843).ChannelListMagnifyingGlassIcon };
-  obj.icon = jsx(channel(5611).TableRowIcon, { IconComponent: channel(13843).ChannelListMagnifyingGlassIcon });
+  obj = { IconComponent: channel(13846).ChannelListMagnifyingGlassIcon };
+  obj.icon = jsx(channel(5611).TableRowIcon, { IconComponent: channel(13846).ChannelListMagnifyingGlassIcon });
   obj.onPress = callback;
-  obj.children = jsx(channel(5605).TableRow, { IconComponent: channel(13843).ChannelListMagnifyingGlassIcon });
-  return jsx(analyticsSection(5589), { IconComponent: channel(13843).ChannelListMagnifyingGlassIcon });
+  obj.children = jsx(channel(5605).TableRow, { IconComponent: channel(13846).ChannelListMagnifyingGlassIcon });
+  return jsx(analyticsSection(5589), { IconComponent: channel(13846).ChannelListMagnifyingGlassIcon });
 });

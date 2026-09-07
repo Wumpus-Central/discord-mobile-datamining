@@ -19,7 +19,7 @@ export default noop.memo(
     const optional = chatInputRef.optional;
     ref = undefined;
     dependencyMap = ref;
-    chatInputRef(16621);
+    chatInputRef(16624);
     let obj = { content: threadSettingsDraft.name };
     ref = ref.useRef(threadSettingsDraft.name);
     const items = [threadSettingsDraft.parentChannelId];
@@ -77,8 +77,8 @@ export default noop.memo(
     );
     let str = "";
     if (null != stateFromStores) {
-      str = tmp(9305).getDefaultThreadName(stateFromStores, threadSettingsDraft.parentMessageId);
-      const tmpResult = tmp(9305);
+      str = tmp(9310).getDefaultThreadName(stateFromStores, threadSettingsDraft.parentMessageId);
+      const tmpResult = tmp(9310);
     }
     const intl = tmp(1114).intl;
     const string = intl.string;

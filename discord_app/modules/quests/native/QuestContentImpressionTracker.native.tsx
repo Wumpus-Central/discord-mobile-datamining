@@ -10,7 +10,7 @@ function AdContentImpressionTrackerBaseNative(skipRemountKey) {
   const tmp3 = obj.useStateFromStores(items, () => state.getState()) === AppStates.ACTIVE;
   const ref = noop.useRef(null);
   const tmp5 = visibilityRef;
-  let obj1 = adContentIds2(11486);
+  let obj1 = adContentIds2(11491);
   const adContentImpressionTrackerProps = obj1.useAdContentImpressionTrackerProps(skipRemountKey);
   const adContentIds = adContentImpressionTrackerProps.adContentIds;
   obj = {};
@@ -22,7 +22,7 @@ function AdContentImpressionTrackerBaseNative(skipRemountKey) {
   const joined = adContentIds2.join("_");
   let tmp6 = visibilityRef(8272)(tmp3);
   let items1 = [joined];
-  const tmp10 = _slicedToArray(adContentIds2(8874).useRecyclingState(false, items1), 2);
+  const tmp10 = _slicedToArray(adContentIds2(8879).useRecyclingState(false, items1), 2);
   dependencyMap = tmp11;
   let items2 = [adContentIds2, tmp10[1], visibilityRef];
   const effect = noop.useEffect(() => {
@@ -154,9 +154,9 @@ function AdContentImpressionTrackerBaseNative(skipRemountKey) {
     obj2.adCreativeType = skipRemountKey.adCreativeType;
     tmp19 = obj2;
   }
-  return createElement(adContentIds2(11487).QuestContentImpressionTracker, tmp19);
+  return createElement(adContentIds2(11492).QuestContentImpressionTracker, tmp19);
 }
-let closure_6 = fn(11196).MIN_QUEST_CONTENT_VISIBILITY_PERCENTAGE;
+let closure_6 = fn(11201).MIN_QUEST_CONTENT_VISIBILITY_PERCENTAGE;
 const AppStates = fn(1074).AppStates;
 const createElement = fn(19).createElement;
 const jsx = fn(21).jsx;

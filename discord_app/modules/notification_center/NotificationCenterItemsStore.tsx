@@ -214,8 +214,8 @@ let obj = {
   notifCenterLocalItems: [],
   paginationHasMore: true,
   paginationCursor: "flex",
-  notifCenterActive: "processingStart",
-  notifCenterTabFocused: null,
+  notifCenterActive: "balra",
+  notifCenterTabFocused: "balra tol\u00F3 k\u00E9z",
 };
 const PersistedStore = initializeDefault.PersistedStore;
 class NotificationCenterItemsStore extends PersistedStore {}
@@ -398,8 +398,8 @@ obj = {
       notifCenterLocalItems: null,
       paginationHasMore: true,
       paginationCursor: "flex",
-      notifCenterActive: "processingStart",
-      notifCenterTabFocused: null,
+      notifCenterActive: "balra",
+      notifCenterTabFocused: "balra tol\u00F3 k\u00E9z",
     };
     if (flag) {
       let prop = obj.notifCenterLocalItems;
@@ -540,8 +540,8 @@ obj = {
       notifCenterLocalItems: null,
       paginationHasMore: true,
       paginationCursor: "flex",
-      notifCenterActive: "processingStart",
-      notifCenterTabFocused: null,
+      notifCenterActive: "balra",
+      notifCenterTabFocused: "balra tol\u00F3 k\u00E9z",
     };
     if (flag) {
       let prop = obj.notifCenterLocalItems;
@@ -711,8 +711,8 @@ obj = {
       notifCenterLocalItems: null,
       paginationHasMore: true,
       paginationCursor: "flex",
-      notifCenterActive: "processingStart",
-      notifCenterTabFocused: null,
+      notifCenterActive: "balra",
+      notifCenterTabFocused: "balra tol\u00F3 k\u00E9z",
     };
     if (flag) {
       let prop = obj.notifCenterLocalItems;

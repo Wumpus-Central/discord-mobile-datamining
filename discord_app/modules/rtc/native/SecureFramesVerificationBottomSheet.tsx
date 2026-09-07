@@ -5,7 +5,7 @@ import noop from "../../../../_runtime/metro/00019__.js";
 
 const require = fn;
 const View = fn(17).View;
-const SecureFramesConstants = fn(9152);
+const SecureFramesConstants = fn(9157);
 ({
   EPOCH_AUTHENTICATOR_CHUNK_SIZE: hasOwnProperty,
   EPOCH_AUTHENTICATOR_COLUMNS: metroRequire,
@@ -37,7 +37,7 @@ export default function SecureFramesVerificationBottomSheet(onShareClick) {
   onShareClick = onShareClick.onShareClick;
   ({ title, subtitle, footer, epochAuthenticator } = onShareClick);
   const tmp = closure_10();
-  onShareClick(9158);
+  onShareClick(9163);
   let obj = { fingerprintBase64: epochAuthenticator, chunkSize, desiredLength };
   const readableSecureFramesFingerprint = obj.useReadableSecureFramesFingerprint(obj);
   const items = [readableSecureFramesFingerprint, onShareClick];
@@ -109,12 +109,12 @@ export default function SecureFramesVerificationBottomSheet(onShareClick) {
   let tmp7Result = null != readableSecureFramesFingerprint;
   if (tmp7Result) {
     const obj10 = { chunks: readableSecureFramesFingerprint };
-    tmp7Result = closure_8(tmp10(9168), obj10);
+    tmp7Result = closure_8(tmp10(9173), obj10);
   }
   obj9.trailing = tmp7Result;
   obj9.chunks = readableSecureFramesFingerprint;
   obj9.columns = columns;
-  items2[1] = closure_8(readableSecureFramesFingerprint(9165), obj9);
+  items2[1] = closure_8(readableSecureFramesFingerprint(9170), obj9);
   items2[2] = closure_8(tmp2(4556).Text, {
     style: tmp.footer,
     variant: "text-xs/normal",

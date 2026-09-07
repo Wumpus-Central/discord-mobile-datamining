@@ -16,10 +16,10 @@ function BountiesScrollEndCardContent(isScrollingInBoundsSharedValue) {
   const sourceQuestContent = isScrollingInBoundsSharedValue.sourceQuestContent;
   ({ visible, onReplay, opacityStyle } = isScrollingInBoundsSharedValue);
   const tmp = closure_11();
-  let obj = isActive(11521);
+  let obj = isActive(11526);
   const isBountiesVerticalScrollExperimentEnabled =
     obj.useIsBountiesVerticalScrollExperimentEnabled("BountiesScrollEndCard");
-  let obj1 = isActive(15040);
+  let obj1 = isActive(15043);
   const bountyCtaInfo = obj1.getBountyCtaInfo(bounty);
   const intl = isActive(1114).intl;
   const stringResult = intl.string(isActive(1114).t["9UtZAY"]);
@@ -61,7 +61,7 @@ function BountiesScrollEndCardContent(isScrollingInBoundsSharedValue) {
     const items2 = [tmp.overlayContent, animatedStyle];
     obj3.style = items2;
     const obj4 = { bounty, sourceQuestContent, disabled: !isActive };
-    const items3 = [closure_9(tmp9(15043), obj4)];
+    const items3 = [closure_9(tmp9(15046), obj4)];
     const obj5 = { style: tmp.endedCtaButtonsContainer, pointerEvents: "box-none", children: null };
     const obj6 = {
       bounty,
@@ -71,7 +71,7 @@ function BountiesScrollEndCardContent(isScrollingInBoundsSharedValue) {
       showCloseButton: false,
       disabled: !isActive,
     };
-    obj5.children = closure_9(tmp9(15045), obj6);
+    obj5.children = closure_9(tmp9(15048), obj6);
     items3[1] = closure_9(closure_6, obj5);
     obj3.children = items3;
     let tmp10Result = closure_10(tmp9(4296).View, obj3);
@@ -103,7 +103,7 @@ function BountiesScrollEndCardContent(isScrollingInBoundsSharedValue) {
       color: tmp9(576).colors.CONTROL_OVERLAY_SECONDARY_TEXT_DEFAULT,
       style: tmp.replayIcon,
     };
-    items6[1] = closure_9(isActive(10180).RetryIcon, obj12);
+    items6[1] = closure_9(isActive(10185).RetryIcon, obj12);
     obj8.children = items6;
     obj7.children = closure_10(tmp9(4296).View, obj8);
     tmp10Result = closure_9(closure_4, obj7);

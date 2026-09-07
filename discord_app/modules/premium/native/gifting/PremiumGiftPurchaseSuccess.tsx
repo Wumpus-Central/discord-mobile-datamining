@@ -32,7 +32,7 @@ let result = size.fileFinishedImporting("modules/premium/native/gifting/PremiumG
 export default function PremiumGiftSuccessBody(giftCodeRecord) {
   giftCodeRecord = giftCodeRecord.giftCodeRecord;
   const tmp = closure_11();
-  let obj = giftCodeRecord(10699);
+  let obj = giftCodeRecord(10704);
   const nativeGiftContext = obj.useNativeGiftContext();
   ({ giftStyle, premiumType, planInterval } = nativeGiftContext);
   let obj1 = giftCodeRecord(4799);
@@ -59,7 +59,7 @@ export default function PremiumGiftSuccessBody(giftCodeRecord) {
     ClipboardUtils.copy(giftCodeURL);
     const result = ToastUtils.presentCopiedToClipboard();
   }, items);
-  obj.children = closure_8(giftCodeURL(10830), { giftStyle });
+  obj.children = closure_8(giftCodeURL(10835), { giftStyle });
   const items1 = [closure_8(View, obj), , , ,];
   obj = { style: tmp.title, variant: "heading-lg/bold", children: null };
   const intl = tmp2(1114).intl;
@@ -81,7 +81,7 @@ export default function PremiumGiftSuccessBody(giftCodeRecord) {
   obj4.children = intl3.string(giftCodeRecord(1114).t["qS+yMo"]);
   const items2 = [
     closure_8(giftCodeRecord(4556).Text, obj4),
-    closure_8(giftCodeRecord(8902).InputButton, {
+    closure_8(giftCodeRecord(8907).InputButton, {
       text: giftCodeURL,
       icon: giftCodeURL(4508),
       iconPosition: "end",

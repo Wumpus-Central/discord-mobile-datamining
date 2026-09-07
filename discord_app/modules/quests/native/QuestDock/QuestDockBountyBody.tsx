@@ -1,6 +1,6 @@
 // discord_app/modules/quests/native/QuestDock/QuestDockBountyBody.tsx
 import util from "../../../../intl/index.native.tsx";
-import _modDef11297 from "../../../../../discord_assets/assets/orbs/reward_tile_v3_mobile.mp4.js";
+import _modDef11302 from "../../../../../discord_assets/assets/orbs/reward_tile_v3_mobile.mp4.js";
 import QuestDockHooks from "QuestDockHooks.tsx";
 import QuestDockCreativeContext from "QuestDockCreativeContext.tsx";
 import QuestDockVisibilityContextDefault from "QuestDockVisibilityContext.tsx";
@@ -20,7 +20,7 @@ export default noop.memo(function QuestDockBountyBody() {
   const questDockBounty = obj.useQuestDockBounty();
   let isQuestDockExpanded = QuestDockHooks.useIsQuestDockExpanded();
   const callback = noop.useCallback(() => {}, []);
-  obj = { assetUrl: _modDef11297, isAnimatedAsset: true, paused: null, withAnimation: null };
+  obj = { assetUrl: _modDef11302, isAnimatedAsset: true, paused: null, withAnimation: null };
   let tmp8 = !isQuestDockExpanded;
   if (isQuestDockExpanded) {
     tmp8 = !isRendered;
@@ -31,7 +31,7 @@ export default noop.memo(function QuestDockBountyBody() {
   }
   obj = {
     rewardTile: jsx(QuestDockInsetHeaderBody.QuestDockBodyRewardTile, {
-      assetUrl: _modDef11297,
+      assetUrl: _modDef11302,
       isAnimatedAsset: true,
       paused: null,
       withAnimation: null,
@@ -54,7 +54,7 @@ export default noop.memo(function QuestDockBountyBody() {
   obj.onCtaPress = callback;
   return jsx(QuestDockInsetHeaderBodyDefault, {
     rewardTile: jsx(QuestDockInsetHeaderBody.QuestDockBodyRewardTile, {
-      assetUrl: _modDef11297,
+      assetUrl: _modDef11302,
       isAnimatedAsset: true,
       paused: null,
       withAnimation: null,

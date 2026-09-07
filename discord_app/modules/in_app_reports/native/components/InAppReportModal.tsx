@@ -10,7 +10,7 @@ import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const IN_APP_REPORTS_NODE = fn(8635).IN_APP_REPORTS_NODE;
+const IN_APP_REPORTS_NODE = fn(8640).IN_APP_REPORTS_NODE;
 let jsx = fn(21).jsx;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/in_app_reports/native/components/InAppReportModal.tsx");

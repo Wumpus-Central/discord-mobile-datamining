@@ -6,7 +6,7 @@ import noop from "../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-const HappeningNowConstants = fn(15294);
+const HappeningNowConstants = fn(15297);
 const HAPPENING_NOW_CARD_MARGIN_RIGHT = HappeningNowConstants.HAPPENING_NOW_CARD_MARGIN_RIGHT;
 ({
   HAPPENING_NOW_CARD_PADDING: hasOwnProperty,

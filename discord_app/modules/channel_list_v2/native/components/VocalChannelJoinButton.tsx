@@ -80,7 +80,7 @@ export default noop.memo(function VocalChannelJoinButton(channel) {
   const tmp = voiceStates(7873)();
   let obj = channel(4411);
   let joinButtonText = closure_11(tmp, obj.isThemeLight(voiceStates(4495)()));
-  let obj1 = channel(9471);
+  let obj1 = channel(9476);
   const isConnectedToVoiceChannel = obj1.useIsConnectedToVoiceChannel(channel);
   let obj2 = channel(563);
   const items = [PermissionStore];
@@ -109,10 +109,10 @@ export default noop.memo(function VocalChannelJoinButton(channel) {
   if (!stateFromStores1) {
     tmp12 = tmp8;
   }
-  tmp3Result = tmp3(12294);
+  tmp3Result = tmp3(12298);
   const connectedUserLimit = tmp3Result.useConnectedUserLimit({ channel, video: tmp12 });
   tmp8 = channel(5417).useStageHasMedia(channel.id) && isGuildStageVoiceResult;
-  let connectedUserLimitFormatted = channel(12294).useConnectedUserLimitFormatted({
+  let connectedUserLimitFormatted = channel(12298).useConnectedUserLimitFormatted({
     channel,
     video: tmp12,
     userCount: sum,
@@ -228,5 +228,5 @@ export default noop.memo(function VocalChannelJoinButton(channel) {
       formatted = str(toUpperCase.VJlc0S);
     }
   }
-  const tmp3Result1 = channel(12294);
+  const tmp3Result1 = channel(12298);
 });

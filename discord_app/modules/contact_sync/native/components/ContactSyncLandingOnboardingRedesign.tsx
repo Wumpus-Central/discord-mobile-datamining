@@ -1,7 +1,7 @@
 // discord_app/modules/contact_sync/native/components/ContactSyncLandingOnboardingRedesign.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import RedesignContactSyncDiscoverabilityFooterDefault from "RedesignContactSyncDiscoverabilityFooter.tsx";
-import _modDef12693 from "../../../../../_runtime/metro/12693__.js";
+import _modDef12697 from "../../../../../_runtime/metro/12697__.js";
 import ContactSyncErrorDefault from "ContactSyncError.tsx";
 import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
@@ -113,7 +113,7 @@ export default function ContactSyncLandingOnboardingRedesign(onNext) {
     }),
     items,
   );
-  obj.source = _modDef12693;
+  obj.source = _modDef12697;
   const items1 = [closure_8(closure_6, obj), , , ,];
   let obj1 = { style: tmp.title, variant: "heading-xl/bold", children: null };
   const intl = onNext(1114).intl;

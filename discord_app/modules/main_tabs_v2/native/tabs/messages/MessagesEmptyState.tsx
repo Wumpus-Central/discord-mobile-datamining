@@ -8,7 +8,7 @@ import components_Button_Button from "../../../../../design/components/Button/na
 import useIsScreenLandscape from "../../../../screen/useIsScreenLandscape.native.tsx";
 import useTrackImpressionDefault from "../../../../app_analytics/useTrackImpression.tsx";
 import useYouBarTotalHeight from "../../you_bar/hooks/useYouBarTotalHeight.tsx";
-import _modDef16054 from "../../../../../../_runtime/metro/16054__.js";
+import _modDef16057 from "../../../../../../_runtime/metro/16057__.js";
 import _slicedToArray from "../../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
@@ -70,7 +70,7 @@ export default function MessagesEmptyState() {
   const obj2 = { style: tmp.container, onLayout: callback, children: null };
   const obj3 = { style: tmp.innerContainer, children: null };
   const obj4 = { style: tmp.imageContainer, children: null };
-  const obj5 = { resizeMode: "contain", source: _modDef16054, style: null };
+  const obj5 = { resizeMode: "contain", source: _modDef16057, style: null };
   let num = 350;
   if (result < 622) {
     num = (result / 622) * 350;

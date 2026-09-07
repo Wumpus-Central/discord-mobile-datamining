@@ -2,7 +2,7 @@
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../intl/index.native.tsx";
 import AlertActionCreatorsDefault from "../../../actions/AlertActionCreators.tsx";
-import _modDef16340 from "../../../../_runtime/metro/16340__.js";
+import _modDef16343 from "../../../../_runtime/metro/16343__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 import GuildAvailabilityStore from "../../../stores/GuildAvailabilityStore.tsx";
 
@@ -48,8 +48,8 @@ export default noop.memo(function GuildsBarItemUnavailableGuilds() {
       obj.show(obj);
     };
     obj.style = tmp.unavailableGuilds;
-    const obj1 = { style: tmp.unavailableGuildsIcon, source: _modDef16340 };
-    obj.children = <closure_3 style={tmp.unavailableGuildsIcon} source={_modDef16340} />;
+    const obj1 = { style: tmp.unavailableGuildsIcon, source: _modDef16343 };
+    obj.children = <closure_3 style={tmp.unavailableGuildsIcon} source={_modDef16343} />;
     tmp5 = <closure_4 count={stateFromStores} />;
   }
   return tmp5;

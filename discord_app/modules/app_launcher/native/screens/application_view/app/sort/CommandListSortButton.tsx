@@ -6,7 +6,7 @@ import noop from "../../../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-const CommandListSortOrder = fn(12135).CommandListSortOrder;
+const CommandListSortOrder = fn(12139).CommandListSortOrder;
 const ANDROID_FOREGROUND_RIPPLE = fn(1182).ANDROID_FOREGROUND_RIPPLE;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
@@ -52,7 +52,7 @@ export default function CommandListSortButton(sortOrder) {
           onSortOptionPress(closure_1_2[9]).hideActionSheet("CommandListSortActionSheet");
         },
       };
-      obj.openLazy(asyncRequireImpl(12150, dependencyMap.paths), "CommandListSortActionSheet", obj);
+      obj.openLazy(asyncRequireImpl(12154, dependencyMap.paths), "CommandListSortActionSheet", obj);
     },
     children: null,
   };
@@ -61,7 +61,7 @@ export default function CommandListSortButton(sortOrder) {
     closure_6(sortOrder(4556).Text, { variant: "text-sm/medium", color: "text-default", children: stringResult }),
   ];
   obj = { size: "xs", color: onSortOptionPress(576).colors.TEXT_DEFAULT };
-  items[1] = closure_6(sortOrder(11153).ChevronSmallDownIcon, obj);
+  items[1] = closure_6(sortOrder(11158).ChevronSmallDownIcon, obj);
   obj.children = items;
   obj.children = closure_7(View, obj);
   return closure_6(sortOrder(5123).PressableOpacity, obj);

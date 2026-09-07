@@ -14,7 +14,7 @@ export default function openStickerPackDetailActionSheet(stickerPack) {
   const obj = { location: analyticsLocation, sticker_pack_id: stickerPack.id };
   obj.track(AnalyticEvents.STICKER_PACK_VIEW_ALL, obj);
   ActionSheetActionCreatorsDefault.openLazy(
-    asyncRequireImpl(10395, dependencyMap.paths),
+    asyncRequireImpl(10400, dependencyMap.paths),
     "StickerPackDetailActionSheet",
     { stickerPack, analyticsPopoutType },
   );

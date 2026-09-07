@@ -151,7 +151,7 @@ function renderUnreadIndicator(arg0, sharedId, transitionState, cleanUp) {
   );
 }
 const IOS_POINTER_STYLE = fn(4984).IOS_POINTER_STYLE;
-const GuildsBarConstants = fn(16285);
+const GuildsBarConstants = fn(16288);
 ({
   GUILD_ITEM_HIT_SLOP: hasOwnProperty,
   GUILD_ITEM_INSET_LEFT: metroRequire,

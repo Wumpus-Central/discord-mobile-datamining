@@ -30,7 +30,7 @@ function useRoleColorSettingOptions() {
     return items;
   }, []);
 }
-fn(11468);
+fn(11473);
 let SettingBuilders = {
   useTitle() {
     const intl = util.intl;

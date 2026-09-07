@@ -17,11 +17,11 @@ let obj = {
   GIFTING_BADGE: "GiftingBadgePostPurchase",
 };
 obj = {
-  [PLAN_SELECT]: fn(10663).PaymentFlowStep.SKU_SELECT,
-  [REWARD_SELECT]: fn(10663).PaymentFlowStep.REWARD_SKU_SELECT,
-  [CUSTOMIZATION]: fn(10663).PaymentFlowStep.PLAN_SELECT,
-  [SUCCESS]: fn(10663).PaymentFlowStep.CONFIRM,
-  [GIFTING_BADGE]: fn(10663).PaymentFlowStep.CONFIRM,
+  [PLAN_SELECT]: fn(10668).PaymentFlowStep.SKU_SELECT,
+  [REWARD_SELECT]: fn(10668).PaymentFlowStep.REWARD_SKU_SELECT,
+  [CUSTOMIZATION]: fn(10668).PaymentFlowStep.PLAN_SELECT,
+  [SUCCESS]: fn(10668).PaymentFlowStep.CONFIRM,
+  [GIFTING_BADGE]: fn(10668).PaymentFlowStep.CONFIRM,
 };
 ({ PLAN_SELECT, REWARD_SELECT, CUSTOMIZATION, SUCCESS, GIFTING_BADGE } = obj);
 const createStyles = fn(4560);
@@ -176,7 +176,7 @@ export default function PremiumGiftModal(analyticsLocations) {
       return jsx(analyticsLocations(onDismiss[16]), {
         currentProgress: currentProgress.currentProgress,
         onSendGift() {
-          analyticsLocation(10661);
+          analyticsLocation(10666);
           obj = { analyticsLocations: null };
           const items = [analyticsLocations(7182).GIFTING_BADGE_POST_PURCHASE];
           obj.analyticsLocations = items;

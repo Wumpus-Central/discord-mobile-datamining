@@ -122,7 +122,7 @@ export default noop.memo(function VEVOOPropTintColor() {
   const obj4 = { children: null };
   obj3.label = "Blur Tint Opacity " + str2;
   const ref = obj1.useRef(first1);
-  obj3.subLabel = closure_8(backgroundColor(15928), {
+  obj3.subLabel = closure_8(backgroundColor(15931), {
     disabled: !tmp7,
     initialValue: obj1.useRef(first1),
     onValueChange(arg0) {

@@ -5,7 +5,7 @@ import DurationsDefault from "../../../utils/Durations.tsx";
 import util from "../../../intl/index.native.tsx";
 import _modDef4153 from "../../../../_runtime/metro/04153__.js";
 import DateUtils from "../../../utils/DateUtils.tsx";
-import m from "../../../../_runtime/09667_m.js";
+import m from "../../../../_runtime/09672_m.js";
 import UserStore from "../../../stores/UserStore.tsx";
 
 require = fn;
@@ -98,42 +98,42 @@ function getValidWeekends(toDate) {
   }
   return tmp5;
 }
-const RecurrenceOptions = fn(9666).RecurrenceOptions;
+const RecurrenceOptions = fn(9671).RecurrenceOptions;
 const GuildScheduledEventsConstants = fn(1963);
 ({ GuildScheduledEventEntityTypes: hasOwnProperty, GuildScheduledEventStatus: metroRequire } =
   GuildScheduledEventsConstants);
 let items = [
-  fn(9667).RRule.MO.weekday,
-  fn(9667).RRule.TU.weekday,
-  fn(9667).RRule.WE.weekday,
-  fn(9667).RRule.TH.weekday,
-  fn(9667).RRule.FR.weekday,
+  fn(9672).RRule.MO.weekday,
+  fn(9672).RRule.TU.weekday,
+  fn(9672).RRule.WE.weekday,
+  fn(9672).RRule.TH.weekday,
+  fn(9672).RRule.FR.weekday,
 ];
 let items1 = [
-  fn(9667).RRule.SU.weekday,
-  fn(9667).RRule.MO.weekday,
-  fn(9667).RRule.TU.weekday,
-  fn(9667).RRule.WE.weekday,
-  fn(9667).RRule.TH.weekday,
+  fn(9672).RRule.SU.weekday,
+  fn(9672).RRule.MO.weekday,
+  fn(9672).RRule.TU.weekday,
+  fn(9672).RRule.WE.weekday,
+  fn(9672).RRule.TH.weekday,
 ];
 let items2 = [
-  fn(9667).RRule.TU.weekday,
-  fn(9667).RRule.WE.weekday,
-  fn(9667).RRule.TH.weekday,
-  fn(9667).RRule.FR.weekday,
-  fn(9667).RRule.SA.weekday,
+  fn(9672).RRule.TU.weekday,
+  fn(9672).RRule.WE.weekday,
+  fn(9672).RRule.TH.weekday,
+  fn(9672).RRule.FR.weekday,
+  fn(9672).RRule.SA.weekday,
 ];
-let items3 = [fn(9667).RRule.SA.weekday, fn(9667).RRule.SU.weekday];
-const items4 = [fn(9667).RRule.FR.weekday, fn(9667).RRule.SA.weekday];
-const items5 = [fn(9667).RRule.SU.weekday, fn(9667).RRule.MO.weekday];
+let items3 = [fn(9672).RRule.SA.weekday, fn(9672).RRule.SU.weekday];
+const items4 = [fn(9672).RRule.FR.weekday, fn(9672).RRule.SA.weekday];
+const items5 = [fn(9672).RRule.SU.weekday, fn(9672).RRule.MO.weekday];
 const items6 = [
-  fn(9667).RRule.SU.weekday,
-  fn(9667).RRule.MO.weekday,
-  fn(9667).RRule.TU.weekday,
-  fn(9667).RRule.WE.weekday,
-  fn(9667).RRule.TH.weekday,
-  fn(9667).RRule.FR.weekday,
-  fn(9667).RRule.SA.weekday,
+  fn(9672).RRule.SU.weekday,
+  fn(9672).RRule.MO.weekday,
+  fn(9672).RRule.TU.weekday,
+  fn(9672).RRule.WE.weekday,
+  fn(9672).RRule.TH.weekday,
+  fn(9672).RRule.FR.weekday,
+  fn(9672).RRule.SA.weekday,
 ];
 const set = new Set([0, 6]);
 const size = fn(2);
@@ -295,7 +295,7 @@ export const getBaseScheduleForRecurrence = function getBaseScheduleForRecurrenc
   ({ scheduled_start_time, scheduled_end_time } = guildEvent);
   let tmp;
   if (null != scheduled_start_time) {
-    const obj = { startDate: _modDef4153(scheduled_start_time), endDate: "a" };
+    const obj = { startDate: _modDef4153(scheduled_start_time), endDate: "Array" };
     tmp = obj;
     if (null != scheduled_end_time) {
       obj.endDate = _modDef4153(scheduled_end_time);
@@ -345,7 +345,7 @@ export const getScheduleFromEventData = function getScheduleFromEventData(arg0) 
   ({ scheduledStartTime, scheduledEndTime } = arg0);
   let tmp;
   if (null != scheduledStartTime) {
-    const obj = { startDate: _modDef4153(scheduledStartTime), endDate: "a" };
+    const obj = { startDate: _modDef4153(scheduledStartTime), endDate: "Array" };
     tmp = obj;
     if (null != scheduledEndTime) {
       obj.endDate = _modDef4153(scheduledEndTime);
@@ -358,7 +358,7 @@ export const getScheduleFromEvent = function getScheduleFromEvent(arg0) {
   ({ scheduled_start_time, scheduled_end_time } = arg0);
   let tmp;
   if (null != scheduled_start_time) {
-    const obj = { startDate: _modDef4153(scheduled_start_time), endDate: "a" };
+    const obj = { startDate: _modDef4153(scheduled_start_time), endDate: "Array" };
     tmp = obj;
     if (null != scheduled_end_time) {
       obj.endDate = _modDef4153(scheduled_end_time);

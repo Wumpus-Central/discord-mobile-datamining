@@ -127,7 +127,7 @@ export default function GameProfileNavigationHeader(game) {
   let tmp13Result = null;
   if (null != name) {
     obj = { style: tmp.headerContainer, children: null };
-    const items2 = [closure_7(tmp3(8902).BackgroundBlurFill, {})];
+    const items2 = [closure_7(tmp3(8907).BackgroundBlurFill, {})];
     obj = { style: tmp.headerRow, children: null };
     let tmp15Result = null != memo;
     if (tmp15Result) {
@@ -154,12 +154,12 @@ export default function GameProfileNavigationHeader(game) {
     if (tmp13Result) {
       const obj5 = { style: tmp.rankPillContainer, children: null };
       const obj6 = { rank: game.l30Rank, compact: true };
-      const items5 = [closure_7(application(8716), obj6)];
+      const items5 = [closure_7(application(8721), obj6)];
       const obj7 = { style: null, children: null };
       const items6 = [StyleSheet.absoluteFill, animatedStyle1];
       obj7.style = items6;
       const obj8 = { rank: game.l30Rank };
-      obj7.children = closure_7(application(8716), obj8);
+      obj7.children = closure_7(application(8721), obj8);
       items5[1] = closure_7(application(4296).View, obj7);
       obj5.children = items5;
       tmp13Result = closure_8(closure_5, obj5);

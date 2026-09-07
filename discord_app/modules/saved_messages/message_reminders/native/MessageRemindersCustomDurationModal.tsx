@@ -91,8 +91,8 @@ export default noop.memo((onClose) => {
     obj.maximumDate = toDateResult;
     obj.mode = date;
     obj.onSubmit = onSubmit;
-    obj2.openLazy(asyncRequireImpl(9717, dependencyMap.paths), "DatePicker", obj);
-    const tmp3 = asyncRequireImpl(9717, dependencyMap.paths);
+    obj2.openLazy(asyncRequireImpl(9722, dependencyMap.paths), "DatePicker", obj);
+    const tmp3 = asyncRequireImpl(9722, dependencyMap.paths);
   }
   const tmp = onPress();
   let obj = first;

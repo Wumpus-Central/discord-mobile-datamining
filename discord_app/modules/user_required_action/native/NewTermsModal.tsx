@@ -215,15 +215,15 @@ export default function NewTermsModal() {
     const obj18 = { top };
     items4[1] = obj18;
     obj17.style = items4;
-    obj17.source = tmp2(9800);
+    obj17.source = tmp2(9805);
     obj17.color = tmp.navbarRight.tintColor;
     obj17.onPress = handleMoreActions;
     const intl9 = tmp6(1114).intl;
     obj17.accessibilityLabel = intl9.string(tmp6(1114).t["UKOtz+"]);
-    items3[2] = closure_12(tmp2(9050), obj17);
+    items3[2] = closure_12(tmp2(9055), obj17);
     obj.children = items3;
     tmp10 = closure_13(closure_6, obj);
-    const tmp2Result = tmp2(9050);
+    const tmp2Result = tmp2(9055);
   }
   return tmp10;
 }

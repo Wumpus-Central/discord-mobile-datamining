@@ -62,11 +62,11 @@ export const useBuyNitroMarketingLifecycleHooks = function useBuyNitroMarketingL
     BuyNitroPurchaseLock.end();
     let result = nativeStackNavigation(_navigator[11]).resetBuyNitroTrialAndPriceOverrides();
     return () => {
-      const BuyNitroPurchaseLock = nativeStackNavigation(13356).BuyNitroPurchaseLock;
+      const BuyNitroPurchaseLock = nativeStackNavigation(13360).BuyNitroPurchaseLock;
       BuyNitroPurchaseLock.end();
-      const BuyNitroPurchaseLock2 = nativeStackNavigation(13356).BuyNitroPurchaseLock;
+      const BuyNitroPurchaseLock2 = nativeStackNavigation(13360).BuyNitroPurchaseLock;
       const result = BuyNitroPurchaseLock2.setInitialLoadComplete(false);
-      const result1 = nativeStackNavigation(13357).resetBuyNitroTrialAndPriceOverrides();
+      const result1 = nativeStackNavigation(13361).resetBuyNitroTrialAndPriceOverrides();
     };
   }, []);
   const items1 = [initialLoadCompleted];

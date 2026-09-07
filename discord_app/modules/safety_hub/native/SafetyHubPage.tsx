@@ -149,7 +149,7 @@ export default function SafetyHubPage(visible) {
     if (visible) {
       if (null != safetyHubFetchError) {
         ActionSheetActionCreatorsDefault.openLazy(
-          asyncRequireImpl(14770, dependencyMap.paths),
+          asyncRequireImpl(14773, dependencyMap.paths),
           "SafetyHubErrorActionSheet",
           {},
         );

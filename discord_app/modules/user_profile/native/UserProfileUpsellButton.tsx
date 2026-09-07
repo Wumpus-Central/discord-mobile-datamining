@@ -61,6 +61,6 @@ export default function UserProfileUpsellButton(analyticsObject) {
   }
   obj.text = label;
   obj = { color: "white", size: "sm", style: closure_10().nitroWheel };
-  obj.icon = jsx(analyticsObject(8662).NitroWheelIcon, { color: "white", size: "sm", style: closure_10().nitroWheel });
+  obj.icon = jsx(analyticsObject(8667).NitroWheelIcon, { color: "white", size: "sm", style: closure_10().nitroWheel });
   return jsx(analyticsObject(4975).Button, { color: "white", size: "sm", style: closure_10().nitroWheel });
 }

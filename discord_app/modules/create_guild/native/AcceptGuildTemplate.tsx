@@ -10,12 +10,12 @@ import GuildRoleRecordUtilsAll from "../../../utils/GuildRoleRecordUtils.tsx";
 import ActivityIndicator_ActivityIndicator from "../../../design/components/ActivityIndicator/native/ActivityIndicator.native.tsx";
 import FreeFormInputGroupDefault from "../../../design/void/Form/native/FreeFormInputGroup.tsx";
 import FormDividerDefault from "../../../design/void/Form/native/FormDivider.tsx";
-import _modDef9713 from "../../../../_runtime/metro/09713__.js";
+import _modDef9718 from "../../../../_runtime/metro/09718__.js";
 import RolePillDefault from "../../../components_native/common/RolePill.tsx";
 import InvalidLink from "../../../design/components/Illustration/native/redesign/generated/InvalidLink.tsx";
 import GuildIconUploaderDefault from "../../guild/native/GuildIconUploader.tsx";
-import _modDef11803 from "../../../../_runtime/metro/11803__.js";
-import _modDef11804 from "../../../../_runtime/metro/11804__.js";
+import _modDef11808 from "../../../../_runtime/metro/11808__.js";
+import _modDef11809 from "../../../../_runtime/metro/11809__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 import TextStyles from "../../rebrand/native/TextStyles.tsx";
 
@@ -175,11 +175,11 @@ function Channels(channels) {
         items[1] = channelCategoryIcon;
         const type = children.type;
         if (isGuildVocalChannelType(type)) {
-          let tmp10Result = _modDef9713;
+          let tmp10Result = _modDef9718;
         } else if (type === constants2.GUILD_CATEGORY) {
-          tmp10Result = _modDef11803;
+          tmp10Result = _modDef11808;
         } else {
-          tmp10Result = _modDef11804;
+          tmp10Result = _modDef11809;
         }
         obj.source = tmp10Result;
         const items1 = [closure_2_11(native.Icon, obj)];

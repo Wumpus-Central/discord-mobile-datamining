@@ -19,9 +19,9 @@ function GameProfileShopCarouselContent(trackAction) {
   trackAction = trackAction.trackAction;
   const tmp = closure_8();
   dependencyMap = tmp;
-  let obj = closeModal(8872);
+  let obj = closeModal(8877);
   const gameProfileShopCollection = obj.useGameProfileShopCollection(collectionId);
-  let obj1 = closeModal(8873);
+  let obj1 = closeModal(8878);
   const fetchCollectiblesProducts = obj1.useFetchCollectiblesProducts(gameProfileShopCollection);
   let obj2 = closeModal(563);
   let items = [CollectiblesCategoryStore];
@@ -48,7 +48,7 @@ function GameProfileShopCarouselContent(trackAction) {
     const items3 = [closure_7(View, obj)];
     const obj3 = {
       horizontal: true,
-      renderScrollComponent: trackAction(8720),
+      renderScrollComponent: trackAction(8725),
       data: stateFromStoresArray,
       renderItem(item) {
         item = item.item;
@@ -75,9 +75,9 @@ function GameProfileShopCarouselContent(trackAction) {
       ListHeaderComponent: HorizontalSpacing,
       ListFooterComponent: HorizontalSpacing,
       decelerationRate: "fast",
-      snapToInterval: closeModal(8764).COLLECTIBLES_SHOP_CARD_WIDTH + closeModal(8764).COLLECTIBLES_SHOP_CARD_GAP,
+      snapToInterval: closeModal(8769).COLLECTIBLES_SHOP_CARD_WIDTH + closeModal(8769).COLLECTIBLES_SHOP_CARD_GAP,
     };
-    items3[1] = closure_6(closeModal(8874).FlashList, obj3, collectionId);
+    items3[1] = closure_6(closeModal(8879).FlashList, obj3, collectionId);
     obj.children = items3;
     tmp7 = closure_7(View, obj);
   }

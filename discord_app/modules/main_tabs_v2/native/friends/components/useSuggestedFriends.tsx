@@ -5,7 +5,7 @@ import noop from "../../../../../../_runtime/metro/00019__.js";
 import FriendSuggestionStore from "../../../../friend_suggestions/FriendSuggestionStore.tsx";
 
 const require = fn;
-const SuggestedFriendSource = fn(12699).SuggestedFriendSource;
+const SuggestedFriendSource = fn(12703).SuggestedFriendSource;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/main_tabs_v2/native/friends/components/useSuggestedFriends.tsx");
 

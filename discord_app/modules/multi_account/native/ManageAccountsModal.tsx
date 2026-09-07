@@ -75,7 +75,7 @@ function RemoveMultiAccountUserButton(user) {
           return obj4;
         } else {
           if (value) {
-            obj = v3(12417);
+            obj = v3(12421);
             obj.removeAccount(closure_128_0.id);
           }
           v3 = 3;
@@ -122,7 +122,7 @@ function RemoveMultiAccountUserButton(user) {
       return applyArgumentsResult;
     };
     obj = { color: nativeDefault.colors.ICON_FEEDBACK_CRITICAL };
-    obj.children = closure_18(tmp(15312).CircleMinusIcon, obj);
+    obj.children = closure_18(tmp(15315).CircleMinusIcon, obj);
     return closure_18(tmp(5123).PressableOpacity, obj);
   }
   let obj2 = user(504);
@@ -289,14 +289,14 @@ function ManageAccounts(isEditing) {
   return closure_18(isEditing(multiAccountUsers[27]).SafeAreaPaddingView, obj);
 }
 const View = fn(17).View;
-const MultiAccountTokenStatus = fn(12413).MultiAccountTokenStatus;
-let Constants = fn(12414);
+const MultiAccountTokenStatus = fn(12417).MultiAccountTokenStatus;
+let Constants = fn(12418);
 ({
   MANAGE_EDIT_TRANSITION_DURATION: closure_12,
   MAX_ACCOUNTS: map1,
   MultiAccountSwitchLocation: closure_14,
 } = Constants);
-const ManageAccountsScreens = fn(16376).ManageAccountsScreens;
+const ManageAccountsScreens = fn(16379).ManageAccountsScreens;
 Constants = fn(1074);
 ({ AnalyticEvents: closure_16, AuthStates: closure_17 } = Constants);
 const jsxProd = fn(21);
@@ -393,7 +393,7 @@ export default noop.memo(function ManageAccountsModal(initialRouteName) {
         return obj;
       },
       children() {
-        return closure_1_18(isEditing(15977), {
+        return closure_1_18(isEditing(15980), {
           handleLogin(login, password, undelete) {
             isEditing(6593);
             const obj = { login, password, undelete };
@@ -420,7 +420,7 @@ export default noop.memo(function ManageAccountsModal(initialRouteName) {
         return { headerShown: false };
       },
       children() {
-        return closure_1_18(isEditing(15976), { isMultiAccount: true });
+        return closure_1_18(isEditing(15979), { isMultiAccount: true });
       },
     }),
   ];

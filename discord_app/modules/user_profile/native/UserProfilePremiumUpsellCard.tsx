@@ -83,7 +83,7 @@ export const UserProfilePremiumUpsellCard = function UserProfilePremiumUpsellCar
     maxFontSizeMultiplier: 2.5,
     children: stringResult1,
   });
-  return jsx(tmp(14622), {
+  return jsx(tmp(14625), {
     style: tmp3.container,
     ctaText: null,
     showLinearGradient: true,

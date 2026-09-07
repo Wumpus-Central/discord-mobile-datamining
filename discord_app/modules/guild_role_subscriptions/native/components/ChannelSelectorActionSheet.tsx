@@ -5,7 +5,7 @@ import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/Actio
 import ModalActionCreatorsDefault from "../../../../actions/ModalActionCreators.tsx";
 import useCreateChannelSubmit from "../../../channel/useCreateChannelSubmit.tsx";
 import CreateChannelModalActionCreatorsDefault from "../../../../actions/native/CreateChannelModalActionCreators.tsx";
-import _modDef13605 from "../../../../../_runtime/metro/13605__.js";
+import _modDef13609 from "../../../../../_runtime/metro/13609__.js";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import ChannelStore from "../../../../stores/ChannelStore.tsx";
@@ -39,9 +39,9 @@ function ChannelRow(channel) {
   obj.channel = channel;
   obj.selected = selected;
   obj.resolvedUnreadSetting = UnreadSetting.ONLY_MENTIONS;
-  const children = [closure_11(onChannelSelected(16116), obj)];
+  const children = [closure_11(onChannelSelected(16119), obj)];
   if (selected) {
-    obj = { style: tmp.selectedIcon, source: tmp2(17692) };
+    obj = { style: tmp.selectedIcon, source: tmp2(17695) };
     selected = closure_11(tmp2(5587), obj);
     const tmp2Result = tmp2(5587);
   }
@@ -189,7 +189,7 @@ export default function ChannelSelectorActionSheet(guildId) {
           const obj = onChannelSelected(dependencyMap[27]);
         };
         obj2.pushLazy(
-          asyncRequireImpl(9732, dependencyMap.paths),
+          asyncRequireImpl(9737, dependencyMap.paths),
           obj,
           CreateChannelModalActionCreatorsDefault.CREATE_CHANNEL_MODAL_KEY,
         );
@@ -200,7 +200,7 @@ export default function ChannelSelectorActionSheet(guildId) {
     if (str != null) {
       str = str.toString();
     }
-    const obj4 = { color: str, source: _modDef13605 };
+    const obj4 = { color: str, source: _modDef13609 };
     const items3 = [closure_11(tmp5(1178).Icon, obj4)];
     const obj5 = { style: tmp.createChannelLabel, variant: "text-md/medium", color: "text-link", children: null };
     const intl3 = tmp5(1114).intl;

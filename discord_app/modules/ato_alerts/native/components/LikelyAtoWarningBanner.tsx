@@ -96,7 +96,7 @@ class LikelyAtoWarningBanner {
       };
       const intl = util.intl;
       obj.description = intl.string(util.t["/uid3p"]);
-      const tmp = asyncRequireImpl(11375, dependencyMap.paths);
+      const tmp = asyncRequireImpl(11380, dependencyMap.paths);
       obj.safetyTips = hasOwnProperty().map((children, index) => {
         let obj = { children: null };
         obj = { variant: "text-md/medium", color: "mobile-text-heading-primary", children: children.title };
@@ -142,8 +142,8 @@ class LikelyAtoWarningBanner {
     return jsx(tmp3, obj);
   }
 }
-const SafetyWarningTypes = fn(10915).SafetyWarningTypes;
-const Constants = fn(11369);
+const SafetyWarningTypes = fn(10920).SafetyWarningTypes;
+const Constants = fn(11374);
 ({
   getLikelyAtoMoreTips: hasOwnProperty,
   LIKELY_ATO_MORE_TIPS_MODAL_KEY: metroRequire,

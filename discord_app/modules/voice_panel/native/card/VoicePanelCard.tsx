@@ -943,7 +943,7 @@ function AnimatedWrapper(children) {
   return windowDimensions(cleanUp(id[52]).GestureDetector, obj5);
 }
 const StyleSheet = fn(17).StyleSheet;
-const VoicePanelConstants = fn(12273);
+const VoicePanelConstants = fn(12277);
 ({
   VoicePanelCTACard: closure_9,
   VoicePanelModes: c10,
@@ -951,12 +951,12 @@ const VoicePanelConstants = fn(12273);
   SPEAKING_PHYSICS: closure_12,
   VoicePanelCardItemType: map1,
 } = VoicePanelConstants);
-const VoicePanelControlsModes = fn(12271).VoicePanelControlsModes;
-const VoicePanelPIPModes = fn(17088).VoicePanelPIPModes;
-const EDGE_GUTTER = fn(12276).EDGE_GUTTER;
+const VoicePanelControlsModes = fn(12275).VoicePanelControlsModes;
+const VoicePanelPIPModes = fn(17091).VoicePanelPIPModes;
+const EDGE_GUTTER = fn(12280).EDGE_GUTTER;
 const ApplicationStreamStates = fn(1074).ApplicationStreamStates;
 const ParticipantTypes = fn(4581).ParticipantTypes;
-let SCALE_PHYSICS = fn(12274).SCALE_PHYSICS;
+let SCALE_PHYSICS = fn(12278).SCALE_PHYSICS;
 const jsxProd = fn(21);
 ({ jsx: closure_20, Fragment: closure_21, jsxs: closure_22 } = jsxProd);
 let closure_23 = ReanimatedRexport.createAnimatedComponent(fn(4556).Text);
@@ -1664,7 +1664,7 @@ export default noop.memo(function VoicePanelCard(cleanUp) {
   const obj8 = {
     isRinging: tmp8,
     avatarURI: "r",
-    avatarDecoration: "isArray",
+    avatarDecoration: "accessible",
     layout: layoutTransition,
     layoutPhysics: physics,
   };

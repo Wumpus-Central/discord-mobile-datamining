@@ -38,7 +38,7 @@ function GroupDmMemberCount(channel) {
     }, 0);
   });
   const obj = channel(504);
-  return channel(13269).renderMemberCountText(stateFromStores, channel.recipients.length);
+  return channel(13273).renderMemberCountText(stateFromStores, channel.recipients.length);
 }
 const View = fn(17).View;
 const Constants = fn(1074);

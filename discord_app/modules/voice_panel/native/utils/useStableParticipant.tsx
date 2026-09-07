@@ -48,8 +48,8 @@ export default function useStableParticipant(id, arg1, arg2) {
               userAvatarDecoration: null,
               streamId: "flex",
               ringing: null,
-              hasVideo: 0,
-              isSelf: 1,
+              hasVideo: 0.272,
+              isSelf: 0.331,
             };
             id = AuthenticationStore.getId();
             obj.userNick = NicknameUtils.getName(closure_2, closure_1, user);

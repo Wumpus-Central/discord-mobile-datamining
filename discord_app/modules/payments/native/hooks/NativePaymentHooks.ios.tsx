@@ -331,7 +331,7 @@ function useResubscribeSubscription(connected) {
       products = BillingActionCreatorsDefault.loadProducts();
     }
   }, items1);
-  nativePaymentsConnected(10755)(() => {
+  nativePaymentsConnected(10760)(() => {
     let tmp = memo;
     if (!memo) {
       tmp = c15;
@@ -370,7 +370,7 @@ function useResubscribeSubscription(connected) {
     }
     return tmp3;
   }, items4);
-  const tmp12 = nativePaymentsConnected(10811)(connected);
+  const tmp12 = nativePaymentsConnected(10816)(connected);
   noop = tmp12;
   obj = { resubscribeSubscription: null, nativePaymentsConnected };
   const items5 = [memo, nativePaymentsConnected, tmp12, stateFromStores];

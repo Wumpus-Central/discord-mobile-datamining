@@ -25,7 +25,7 @@ require = fn;
 const ChannelDetailsStore = fn(7876);
 ({ useChannelDetailsStore: closure_7, getIsChannelDetailsSearchActive: closure_8 } = ChannelDetailsStore);
 const isTextChannel = fn(1961).isTextChannel;
-let closure_16 = fn(11196).MIN_QUEST_CONTENT_VISIBILITY_PERCENTAGE;
+let closure_16 = fn(11201).MIN_QUEST_CONTENT_VISIBILITY_PERCENTAGE;
 const MessageStates = fn(1074).MessageStates;
 function log() {
   if (questLogger == null) {
@@ -216,7 +216,7 @@ class QuestMobileEmbedVisibilityManager extends tmp3 {
       return { channelId: tmp[0], messageId: tmp[1], questId: tmp[2] };
     };
     applyArgumentsResult.isOnChannelNavigationRoute = function isOnChannelNavigationRoute() {
-      let isChannelFocusedResult = applyArgumentsResult(10089).isChannelFocused();
+      let isChannelFocusedResult = applyArgumentsResult(10094).isChannelFocused();
       applyArgumentsResult(4417);
       if (isChannelFocusedResult) {
         isChannelFocusedResult = "channel" === tmp3;

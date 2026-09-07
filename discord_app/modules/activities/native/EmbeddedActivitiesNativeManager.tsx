@@ -12,7 +12,7 @@ import NativeAppLifecycleModuleDefault from "../../../../discord_common/js/packa
 import getPostMessageJavaScriptDefault from "getPostMessageJavaScript.tsx";
 import ThermalUtilsDefault from "../../device/ThermalUtils.native.tsx";
 import WebViewPostMessageTransportDefault from "../../rpc/native/server/transports/WebViewPostMessageTransport.tsx";
-import _modDef9566 from "../../../../_runtime/metro/09566__.js";
+import _modDef9571 from "../../../../_runtime/metro/09571__.js";
 import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
 import ChannelStore from "../../../stores/ChannelStore.tsx";
 import RTCConnectionStore from "../../../stores/RTCConnectionStore.tsx";
@@ -265,7 +265,7 @@ prototype["showDevShelfOverrideEnabled"] = function showDevShelfOverrideEnabled(
   };
   const intl = util.intl;
   obj.content = intl.string(util.t.JfA7IK);
-  obj.icon = _modDef9566;
+  obj.icon = _modDef9571;
   obj.open(obj);
 };
 prototype["releaseWebView"] = function releaseWebView() {

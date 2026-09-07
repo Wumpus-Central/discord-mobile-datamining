@@ -452,7 +452,7 @@ function QuestDockWithEntranceAnimation(arg0) {
     backgroundContent: _objectWithoutProperties,
   } = arg0);
   ({ renderImpressionTracker, trackAssetLoadingFailure } = arg0);
-  const context = isRendered.useContext(identifierMetricTag(15182));
+  const context = isRendered.useContext(identifierMetricTag(15185));
   isRendered = context.isRendered;
   let obj1 = initialize;
   let items = [componentDimensions];
@@ -839,14 +839,14 @@ function QuestDockBountyContent(bounty) {
     },
   };
   obj.children = closure_21(QuestDockWithEntranceAnimation, obj);
-  return closure_21(bounty(15102).QuestDockBountyProvider, obj);
+  return closure_21(bounty(15105).QuestDockBountyProvider, obj);
 }
 let closure_3 = ["mode"];
 get_ActivityIndicator = fn(17);
 ({ View: closure_8, StyleSheet, Pressable: closure_9, Image: c10 } = get_ActivityIndicator);
 const QuestConstants = fn(5444);
 ({ QuestDockMode: closure_12, QuestsExperimentLocations: map1 } = QuestConstants);
-const QuestDockConstants = fn(15095);
+const QuestDockConstants = fn(15098);
 ({
   QUEST_DOCK_MODE_CHANGE_PHYSICS: closure_14,
   QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED: closure_15,

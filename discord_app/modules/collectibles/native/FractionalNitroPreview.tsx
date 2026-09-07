@@ -5,7 +5,7 @@ import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import LinearGradientDefault from "../../../../_runtime/04987_LinearGradient.js";
 import FastImageDefault from "../../../components_native/common/FastImage.tsx";
 import CheckmarkSmallIcon from "../../../design/components/Icon/native/redesign/generated/CheckmarkSmallIcon.tsx";
-import _modDef13142 from "../../../../discord_assets/assets/orbs/fn_pdp_preview_header.png.js";
+import _modDef13146 from "../../../../discord_assets/assets/orbs/fn_pdp_preview_header.png.js";
 import NitroIconDefault from "NitroIcon.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
@@ -68,7 +68,7 @@ export const FractionalNitroPreview = function FractionalNitroPreview() {
   };
   const items1 = [closure_5(LinearGradientDefault, obj), , ,];
   obj = { source: null, style: null };
-  const obj1 = { uri: _modDef13142 };
+  const obj1 = { uri: _modDef13146 };
   obj.source = obj1;
   obj.style = tmp.headerImage;
   items1[1] = closure_5(FastImageDefault, obj);

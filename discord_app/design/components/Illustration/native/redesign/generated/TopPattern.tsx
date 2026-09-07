@@ -12,13 +12,13 @@ const result = size.fileFinishedImporting("design/components/Illustration/native
 export const getTopPatternSource = function getTopPatternSource(theme) {
   const obj = {
     dark() {
-      return require("../../../../../../../_runtime/metro/13520__.js");
+      return require("../../../../../../../_runtime/metro/13524__.js");
     },
     darker() {
-      return require("../../../../../../../_runtime/metro/13521__.js");
+      return require("../../../../../../../_runtime/metro/13525__.js");
     },
     light() {
-      return require("../../../../../../../_runtime/metro/13522__.js");
+      return require("../../../../../../../_runtime/metro/13526__.js");
     },
   };
   return obj.getIllustrationSource(theme, obj);
@@ -26,13 +26,13 @@ export const getTopPatternSource = function getTopPatternSource(theme) {
 export const useTopPatternSource = function useTopPatternSource() {
   const obj = {
     dark() {
-      return require("../../../../../../../_runtime/metro/13520__.js");
+      return require("../../../../../../../_runtime/metro/13524__.js");
     },
     darker() {
-      return require("../../../../../../../_runtime/metro/13521__.js");
+      return require("../../../../../../../_runtime/metro/13525__.js");
     },
     light() {
-      return require("../../../../../../../_runtime/metro/13522__.js");
+      return require("../../../../../../../_runtime/metro/13526__.js");
     },
   };
   return _mod8233.getIllustrationSource(obj.useThemeContext().theme, obj);
@@ -40,13 +40,13 @@ export const useTopPatternSource = function useTopPatternSource() {
 export const TopPattern = function TopPattern(arg0) {
   let obj = {
     dark() {
-      return require("../../../../../../../_runtime/metro/13520__.js");
+      return require("../../../../../../../_runtime/metro/13524__.js");
     },
     darker() {
-      return require("../../../../../../../_runtime/metro/13521__.js");
+      return require("../../../../../../../_runtime/metro/13525__.js");
     },
     light() {
-      return require("../../../../../../../_runtime/metro/13522__.js");
+      return require("../../../../../../../_runtime/metro/13526__.js");
     },
   };
   obj = {};

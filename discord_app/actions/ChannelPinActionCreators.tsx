@@ -4,7 +4,7 @@ import asyncGeneratorStep from "../../_runtime/00005_asyncGeneratorStep.js";
 import ChannelPinsStore from "../stores/ChannelPinsStore.tsx";
 
 const require = fn;
-const FetchState = fn(11675).FetchState;
+const FetchState = fn(11680).FetchState;
 const Constants = fn(1074);
 ({ AbortCodes: metroRequire, Endpoints: closure_7, MAX_PINS_PER_CHANNEL: closure_8 } = Constants);
 let query = {

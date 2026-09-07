@@ -136,7 +136,7 @@ let closure_14 = async function _createChannelsFromTemplateTierBenefits(arg0) {
   }
 };
 const useMemo = fn(19).useMemo;
-const useEditStateStore = fn(15228).useEditStateStore;
+const useEditStateStore = fn(15231).useEditStateStore;
 const GuildFeatures = fn(1074).GuildFeatures;
 const ChannelFlags = fn(1964).ChannelFlags;
 allSettled = allSettled.shim();

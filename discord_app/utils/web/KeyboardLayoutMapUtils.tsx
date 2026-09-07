@@ -1,7 +1,7 @@
 // discord_app/utils/web/KeyboardLayoutMapUtils.tsx
 import LoggerDefault from "../../modules/debug/Logger.tsx";
 import Storage2 from "../../../discord_common/js/packages/storage/Storage.tsx";
-import keyCodeDefault from "../../../_runtime/14066_keyCode.js";
+import keyCodeDefault from "../../../_runtime/14069_keyCode.js";
 import _slicedToArray from "../../../_runtime/metro/00032__.js";
 import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
 import DeveloperOptionsStore from "../../stores/DeveloperOptionsStore.tsx";

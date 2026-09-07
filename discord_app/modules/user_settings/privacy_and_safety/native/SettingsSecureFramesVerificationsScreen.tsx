@@ -122,7 +122,7 @@ export default function SettingsSecureFramesVerificationsScreen() {
     navigation.setOptions(obj);
   });
   const obj4 = navigation(4404);
-  secureFramesUserVerifiedKeys = userId(15851).useSecureFramesUserVerifiedKeys(userId);
+  secureFramesUserVerifiedKeys = userId(15854).useSecureFramesUserVerifiedKeys(userId);
   const items1 = [userId, secureFramesUserVerifiedKeys];
   const items2 = [navigation, secureFramesUserVerifiedKeys];
   const memo = secureFramesUserVerifiedKeys.useMemo(() => {
@@ -164,7 +164,7 @@ export default function SettingsSecureFramesVerificationsScreen() {
       <ClearVerificationsListFooter userId={userId} />
     </View>
   );
-  obj.children = jsx(userId(8874).FlashList, {
+  obj.children = jsx(userId(8879).FlashList, {
     keyExtractor,
     getItemType,
     renderItem,

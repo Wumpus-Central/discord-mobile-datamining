@@ -68,14 +68,14 @@ export default function useNativeForumPostHandlers(threadId) {
         if (tmp) {
           let isAttachmentPathUrlResult = src.type === threadId(7897).ForumPostMediaTypes.ATTACHMENT;
           if (isAttachmentPathUrlResult) {
-            isAttachmentPathUrlResult = callback1(9942).isAttachmentPathUrl(str);
-            const obj5 = callback1(9942);
+            isAttachmentPathUrlResult = callback1(9947).isAttachmentPathUrl(str);
+            const obj5 = callback1(9947);
           }
           if (!isAttachmentPathUrlResult) {
             let result = src.type === threadId(7897).ForumPostMediaTypes.EMBED;
             if (result) {
-              result = callback1(9942).isExternalProxiedAttachmentUrl(str);
-              const obj6 = callback1(9942);
+              result = callback1(9947).isExternalProxiedAttachmentUrl(str);
+              const obj6 = callback1(9947);
             }
             isAttachmentPathUrlResult = result;
           }

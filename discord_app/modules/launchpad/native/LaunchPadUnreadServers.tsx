@@ -79,7 +79,7 @@ let closure_13 = noop.memo(function GuildItemInner(guildId) {
     onLongPress: callback1,
     backgroundColor: tmp.maskStrokeStyle.backgroundColor,
   };
-  obj.children = closure_10(onGuildSelect(16970), obj);
+  obj.children = closure_10(onGuildSelect(16973), obj);
   return closure_10(closure_5, obj);
 });
 let closure_14 = noop.memo(function PrivateChannelItemInner(channelId) {

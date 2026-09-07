@@ -39,7 +39,7 @@ let size = {
 };
 obj.voiceStateCollapsed = size;
 obj = { marginLeft: 6 };
-const ChannelListLayout = fn(10121);
+const ChannelListLayout = fn(10126);
 let merged = Object.assign(ChannelListLayout.makeSizeStyle(14));
 obj.voiceStateIcon = obj;
 const createStyles = { tintColor: nativeDefault.colors.REDESIGN_CHANNEL_NAME_MUTED_TEXT, marginLeft: 6 };

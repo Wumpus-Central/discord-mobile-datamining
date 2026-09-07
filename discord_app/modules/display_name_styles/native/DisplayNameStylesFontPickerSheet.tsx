@@ -80,9 +80,9 @@ export default function DisplayNameStylesFontPickerSheet(displayName) {
   const tmp = closure_10();
   importDefault = tmp;
   let obj = onSelectFont(8170);
-  let obj1 = onSelectFont(15337);
+  let obj1 = onSelectFont(15340);
   const visibleFontOrder = obj1.useVisibleFontOrder();
-  let obj2 = onSelectFont(15339);
+  let obj2 = onSelectFont(15342);
   const displayNameStylesNewFonts = obj2.useDisplayNameStylesNewFonts(visibleFontOrder);
   ({ dotFontIds: c2, dismissFontDot: c3 } = displayNameStylesNewFonts);
   const tmp5 = _slicedToArray(first.useState(selectedFontId), 2);

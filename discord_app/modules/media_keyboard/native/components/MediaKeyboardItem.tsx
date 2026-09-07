@@ -8,7 +8,7 @@ import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import timing from "../../../../design/animation/reanimated/timing/timing.tsx";
 import ImageIcon from "../../../../design/components/Icon/native/redesign/generated/ImageIcon.tsx";
 import AttachmentIcon from "../../../../design/components/Icon/native/redesign/generated/AttachmentIcon.tsx";
-import _modDef10397 from "../../../../../_runtime/metro/10397__.js";
+import _modDef10402 from "../../../../../_runtime/metro/10402__.js";
 import CameraIcon from "../../../../design/components/Icon/native/redesign/generated/CameraIcon.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import UploadAttachmentStore from "../../../../stores/UploadAttachmentStore.tsx";
@@ -22,7 +22,7 @@ function NewCaption(arg0) {
   let obj = { style: null, children: null };
   const items = [tmp.labelContainer, style];
   obj.style = items;
-  obj = { source: _modDef10397, style: tmp.icon };
+  obj = { source: _modDef10402, style: tmp.icon };
   const items1 = [
     React7(native.Icon, obj),
     React7(Text_Text.Text, { style: textStyle, color: "text-overlay-light", variant: "text-xs/bold", children: label }),
@@ -376,7 +376,7 @@ function MediaKeyboardSpecialButton(arg0) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, Pressable } = get_ActivityIndicator);
-const DeviceConstants = fn(10649);
+const DeviceConstants = fn(10654);
 ({ ALAssetsType: closure_7, DeviceMediaType: closure_8 } = DeviceConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);

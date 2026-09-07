@@ -40,7 +40,7 @@ function CutoutGuildBanner(guild) {
   obj = { style: tmp.bannerImage, children: null };
   const memo = noop.useMemo(() => GuildRecordUtils.fromClientDiscoverableGuild(guild), items1);
   obj = { cutouts: null, children: null };
-  const size = { shape: guild(8813).CutoutShape.RoundedRect, x: 8, y: 46, width: 56, height: 56, cornerRadius: 20 };
+  const size = { shape: guild(8818).CutoutShape.RoundedRect, x: 8, y: 46, width: 56, height: 56, cornerRadius: 20 };
   const items2 = [size];
   obj.cutouts = items2;
   if (null != guild.banner) {
@@ -316,7 +316,7 @@ const Constants = fn(1074);
 ({ AnalyticsObjects: c10, AnalyticsPages: closure_11, AnalyticsSections: closure_12, GuildFeatures: map1 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15, Fragment: closure_16 } = jsxProd);
-const createICYMIStyles = fn(16452);
+const createICYMIStyles = fn(16455);
 let closure_17 = createICYMIStyles.createICYMIStyles((marginHorizontal) => {
   let obj = {
     container: null,

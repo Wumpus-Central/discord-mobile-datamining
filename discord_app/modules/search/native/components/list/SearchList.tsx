@@ -1,7 +1,7 @@
 // discord_app/modules/search/native/components/list/SearchList.tsx
 import util from "../../../../../intl/index.native.tsx";
 import useSafeAreaInsetsDefault from "../../../../safe_area/useSafeAreaInsets.native.tsx";
-import _mod8874 from "../../../../../../discord_common/js/packages/flash-list/index.js";
+import _mod8879 from "../../../../../../discord_common/js/packages/flash-list/index.js";
 import pages_ErrorScreenDefault from "../tabs/pages/ErrorScreen.tsx";
 import MediaGridPlaceholderDefault from "../tabs/pages/placeholders/MediaGridPlaceholder.tsx";
 import DMRowDefault from "rows/DMRow.tsx";
@@ -254,7 +254,7 @@ export default noop.memo(function SearchList(arg0) {
   obj1.ListFooterComponent = ListFooterComponent;
   obj1.ItemSeparatorComponent = ItemSeparatorComponent;
   obj1.numColumns = numColumns;
-  items[1] = React6(_mod8874.AnimatedFlashList, obj1);
+  items[1] = React6(_mod8879.AnimatedFlashList, obj1);
   obj.children = items;
   return React7(React4, obj);
 });

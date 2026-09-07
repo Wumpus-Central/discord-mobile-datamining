@@ -5,7 +5,7 @@ import native from "../../../../../design/void/native.tsx";
 import Text_Text from "../../../../../design/components/Text/native/Text.tsx";
 import components_Button_Button from "../../../../../design/components/Button/native/Button.native.tsx";
 import TwoFASetupModal from "TwoFASetupModal.tsx";
-import _mod14792 from "../../../../../../_runtime/metro/14792__.js";
+import _mod14795 from "../../../../../../_runtime/metro/14795__.js";
 import asyncGeneratorStep from "../../../../../../_runtime/00005_asyncGeneratorStep.js";
 import _slicedToArray from "../../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
@@ -140,7 +140,7 @@ export default function TwoFASetupSuccess() {
               c6 = 3;
               throw value;
             } else if (arg0 !== 2) {
-              obj = setError(14781);
+              obj = setError(14784);
               obj.close();
               c4 = 0;
             }
@@ -180,7 +180,7 @@ export default function TwoFASetupSuccess() {
   let obj = { style: tmp.container, children: null };
   obj = { style: tmp.flex };
   const items = [closure_8(closure_6, obj), , , , , , ,];
-  obj = { source: _mod14792, style: tmp.image };
+  obj = { source: _mod14795, style: tmp.image };
   items[1] = closure_8(closure_7, obj);
   let obj1 = { style: tmp.success, variant: "text-lg/semibold", color: "mobile-text-heading-primary", children: null };
   let intl = util.intl;

@@ -303,6 +303,6 @@ export default function ICYMICustomScoresGuildScreen(navigation) {
   obj.renderItem = callback;
   obj.data = memo;
   obj.keyExtractor = keyExtractor;
-  obj.children = closure_11(navigation(8874).AnimatedFlashList, obj);
+  obj.children = closure_11(navigation(8879).AnimatedFlashList, obj);
   return closure_11(guildChannels, obj);
 }

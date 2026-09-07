@@ -26,13 +26,13 @@ export default function FormRoleColorPicker(color) {
   const items = [color, onChange];
   const callback = noop.useCallback(() => {
     const obj = { color, onSelect: onChange };
-    obj.openLazy(asyncRequireImpl(16291, dependencyMap.paths), "RoleColorPicker", obj);
+    obj.openLazy(asyncRequireImpl(16294, dependencyMap.paths), "RoleColorPicker", obj);
   }, items);
   let obj = { leading: null, label: null, disabled: null, onPress: null };
   const tmp = closure_6();
   obj = { color, style: tmp.rowColorBlock, onSelect: callback };
-  obj.leading = jsx(onChange(14597), { color, style: tmp.rowColorBlock, onSelect: callback });
-  const tmp3 = onChange(13896);
+  obj.leading = jsx(onChange(14600), { color, style: tmp.rowColorBlock, onSelect: callback });
+  const tmp3 = onChange(13899);
   obj.label = color(1091).int2hex(color);
   obj.disabled = flag;
   obj.onPress = callback;

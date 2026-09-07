@@ -7,9 +7,9 @@ require = fn;
 const Constants = fn(1074);
 ({ RPCCommands, RPCErrors: closure_4, ApplicationFlags: hasOwnProperty } = Constants);
 let obj = {};
-let CONTEXT_MENU_ICON_NAMES = fn(14476);
+let CONTEXT_MENU_ICON_NAMES = fn(14479);
 obj = {
-  scope: fn(14464).activityInstanceConnectedParticipantsScope,
+  scope: fn(14467).activityInstanceConnectedParticipantsScope,
   handler(socket) {
     const result = RPCHelpers.validatePostMessageTransport(socket.socket.transport);
     return activityInstanceConnectedParticipants.activityInstanceConnectedParticipants();
@@ -19,9 +19,9 @@ obj[RPCCommands.GET_ACTIVITY_INSTANCE_CONNECTED_PARTICIPANTS] = CONTEXT_MENU_ICO
   RPCCommands.GET_ACTIVITY_INSTANCE_CONNECTED_PARTICIPANTS,
   obj,
 );
-CONTEXT_MENU_ICON_NAMES = fn(14476);
+CONTEXT_MENU_ICON_NAMES = fn(14479);
 obj = {
-  scope: fn(14464).activityInstanceConnectedParticipantsScope,
+  scope: fn(14467).activityInstanceConnectedParticipantsScope,
   handler(socket) {
     socket = socket.socket;
     return (async () => {

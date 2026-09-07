@@ -4,7 +4,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 
 const require = fn;
 const View = fn(17).View;
-const ContactSyncModalStore = fn(12677);
+const ContactSyncModalStore = fn(12681);
 ({
   useContactSyncModalStore: closure_4,
   setAllowSync: hasOwnProperty,

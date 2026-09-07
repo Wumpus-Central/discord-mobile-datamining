@@ -33,7 +33,7 @@ export default noop.memo((onInviteRevoked) => {
   }
   const items = [invite];
   const memo = noop.useMemo(() => closure_5(invite.channel), items);
-  let obj = invite(10943);
+  let obj = invite(10948);
   const items1 = [invite.roles];
   const inviteActions = obj.useInviteActions({ invite, onInviteRevoked: onInviteRevoked.onInviteRevoked });
   const memo1 = noop.useMemo(() => {
@@ -45,7 +45,7 @@ export default noop.memo((onInviteRevoked) => {
   obj = { variant: "text-lg/bold", tabularNumbers: true, children: invite.code };
   const items2 = [
     closure_7(invite(4556).Text, obj),
-    closure_7(invite(8666).ContextMenu, {
+    closure_7(invite(8671).ContextMenu, {
       items: inviteActions,
       children(ref) {
         const merged = Object.assign(ref, Object.assign({ ref: 0 }));
@@ -85,7 +85,7 @@ export default noop.memo((onInviteRevoked) => {
     },
   };
   const tmp = closure_9();
-  items3[1] = closure_7(invite(10941).InstantInviteDetails, { channel: memo, expiresAt: invite.getExpiresAt() });
+  items3[1] = closure_7(invite(10946).InstantInviteDetails, { channel: memo, expiresAt: invite.getExpiresAt() });
   if (tmp9Result) {
     const obj3 = { roleIds: memo1, guildId: id };
     tmp9Result = closure_7(InviteRolesDisplayDefault, obj3);
@@ -134,16 +134,16 @@ export const LinkedChannelInvite = function LinkedChannelInvite(channel) {
     application_id = linkedLobby2.application_id;
   }
   const getOrFetchApplication = obj.useGetOrFetchApplication(application_id);
-  canUnlinkLobbyChannel = channel(10933).useCanUnlinkLobbyChannel(channel);
+  canUnlinkLobbyChannel = channel(10938).useCanUnlinkLobbyChannel(channel);
   let str;
-  const tmp3Result = channel(10933);
+  const tmp3Result = channel(10938);
   if (getOrFetchApplication != null) {
     str = getOrFetchApplication.name;
   }
   if (str == null) {
     str = "";
   }
-  const tmp9Result = canUnlinkLobbyChannel(10934)(channel.id, str);
+  const tmp9Result = canUnlinkLobbyChannel(10939)(channel.id, str);
   dependencyMap = tmp9Result;
   let items = [canUnlinkLobbyChannel, tmp9Result];
   action = action.useCallback(() => {
@@ -180,7 +180,7 @@ export const LinkedChannelInvite = function LinkedChannelInvite(channel) {
   }, items1);
   obj = { style: tmp.gameWrapper, children: null };
   obj = { game: getOrFetchApplication, size: null };
-  const tmp9 = canUnlinkLobbyChannel(10934);
+  const tmp9 = canUnlinkLobbyChannel(10939);
   obj.size = channel(7172).GameIconSizes.SIZE_24;
   const items2 = [closure_7(canUnlinkLobbyChannel(7172), obj)];
   const obj1 = { ellipsizeMode: "tail", lineClamp: 1, variant: "text-lg/bold", style: tmp.gameText, children: null };
@@ -194,14 +194,14 @@ export const LinkedChannelInvite = function LinkedChannelInvite(channel) {
   obj.children = items2;
   const items3 = [
     closure_8(View, obj),
-    closure_7(channel(8666).ContextMenu, {
+    closure_7(channel(8671).ContextMenu, {
       items: memo,
       children(ref) {
         const merged = Object.assign(ref, Object.assign({ ref: 0 }));
         const obj = {
           size: "sm",
           variant: "secondary",
-          icon: canUnlinkLobbyChannel(10937).more,
+          icon: canUnlinkLobbyChannel(10942).more,
           accessibilityLabel: null,
           ref: null,
         };
@@ -214,12 +214,12 @@ export const LinkedChannelInvite = function LinkedChannelInvite(channel) {
     }),
   ];
   obj2.children = items3;
-  const items4 = [closure_8(channel(4973).Stack, obj2), closure_7(channel(10941).InstantInviteDetails, { channel })];
+  const items4 = [closure_8(channel(4973).Stack, obj2), closure_7(channel(10946).InstantInviteDetails, { channel })];
   const obj4 = { style: tmp.creatorWrapper, children: null };
   let tmp15Result = null;
   if (null != linked_by) {
     const obj5 = { start: true, end: true, userId: linked_by, guildId: channel.guild_id };
-    tmp15Result = closure_7(tmp8(10942), obj5);
+    tmp15Result = closure_7(tmp8(10947), obj5);
   }
   const obj6 = { children: null };
   const obj3 = {
@@ -229,7 +229,7 @@ export const LinkedChannelInvite = function LinkedChannelInvite(channel) {
       const obj = {
         size: "sm",
         variant: "secondary",
-        icon: canUnlinkLobbyChannel(10937).more,
+        icon: canUnlinkLobbyChannel(10942).more,
         accessibilityLabel: null,
         ref: null,
       };

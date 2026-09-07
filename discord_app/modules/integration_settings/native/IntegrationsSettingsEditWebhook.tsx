@@ -325,7 +325,7 @@ prototype["render"] = function render() {
   items1[4] = closure_11(webhookId(5687).TableRowGroup, obj8);
   obj.children = items1;
   obj.children = closure_12(webhookId(4973).Stack, obj);
-  return closure_11(webhookId(8593).Form, obj);
+  return closure_11(webhookId(8598).Form, obj);
 };
 EditWebhook.contextType = fn(4271).ThemeContext;
 const size = fn(2);

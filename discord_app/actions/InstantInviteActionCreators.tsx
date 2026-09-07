@@ -609,7 +609,7 @@ export default {
       obj = { type: "INVITE_RESOLVE", code };
       tmp(573).dispatch(obj);
       const tmpResult = tmp(573);
-      nextPromise = tmp(8737)(code, arg1, arg2).then((result) => {
+      nextPromise = tmp(8742)(code, arg1, arg2).then((result) => {
         ({ invite, code } = result);
         if (null != invite) {
           let obj = { type: "INVITE_RESOLVE_SUCCESS", invite, code };
@@ -622,7 +622,7 @@ export default {
         }
         return { invite, code };
       });
-      const promise = tmp(8737)(code, arg1, arg2);
+      const promise = tmp(8742)(code, arg1, arg2);
     }
     return nextPromise;
   },
@@ -1828,8 +1828,8 @@ export default {
         hasItem = features.includes(constants2.HUB);
       }
       if (hasItem) {
-        obj(12934).onOpenHubInvite(flags);
-        const obj6 = obj(12934);
+        obj(12938).onOpenHubInvite(flags);
+        const obj6 = obj(12938);
       }
     }
     let num = flags.flags;
@@ -1844,10 +1844,10 @@ export default {
     if (null != guild) {
       if (!hasFlagResult) {
         if (flags.new_member) {
-          tmp6Result = tmp6(12935);
+          tmp6Result = tmp6(12939);
           if (tmp6Result.inviteGuildHasPendingMemberDisabledVerification(guild)) {
-            const result1 = tmp6(12935).openVerificationModalOrTransitionToApplication(guild.id);
-            const tmp6Result1 = tmp6(12935);
+            const result1 = tmp6(12939).openVerificationModalOrTransitionToApplication(guild.id);
+            const tmp6Result1 = tmp6(12939);
           }
         }
       }
@@ -2303,7 +2303,7 @@ export default {
       inviteDynamicLinkTemplate = require("DynamicLinkTemplates").getDefaultDynamicLinkTemplate();
       const obj4 = require("DynamicLinkTemplates");
     }
-    let tmp18Result = tmp18(12937);
+    let tmp18Result = tmp18(12941);
     const attemptId = tmp18Result.generateAttemptId();
     inviteType = undefined;
     if (inviteType != null) {

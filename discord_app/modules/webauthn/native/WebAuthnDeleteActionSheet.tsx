@@ -2,7 +2,7 @@
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import WebAuthnActionCreators from "../WebAuthnActionCreators.tsx";
-import _modDef14670 from "../../../../_runtime/metro/14670__.js";
+import _modDef14673 from "../../../../_runtime/metro/14673__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -36,7 +36,7 @@ export default function WebAuthnDeleteActionSheet(credential) {
   obj.trailing = closure_5(credential(7199).ActionSheetCloseButton, { onPress: handleClose });
   const items = [closure_5(credential(7149).BottomSheetTitleHeader, obj), , ,];
   const obj1 = { style: tmp.content, children: null };
-  const items1 = [closure_5(closure_3, { source: _modDef14670 })];
+  const items1 = [closure_5(closure_3, { source: _modDef14673 })];
   const obj3 = { variant: "heading-md/normal", style: tmp.subtitle, children: null };
   const intl2 = credential(1114).intl;
   obj3.children = intl2.string(credential(1114).t.IfTbc1);
@@ -69,7 +69,7 @@ export default function WebAuthnDeleteActionSheet(credential) {
       };
       const intl = credential(1114).intl;
       obj.content = intl.string(credential(1114).t.ZnkeXs);
-      obj.icon = closure_1_1(10652);
+      obj.icon = closure_1_1(10657);
       obj.IconComponent = credential(4520).CircleCheckIcon;
       obj.open(obj);
     });
@@ -85,7 +85,7 @@ export default function WebAuthnDeleteActionSheet(credential) {
         };
         const intl = credential(1114).intl;
         obj.content = intl.string(credential(1114).t.ZnkeXs);
-        obj.icon = closure_1_1(10652);
+        obj.icon = closure_1_1(10657);
         obj.IconComponent = credential(4520).CircleCheckIcon;
         obj.open(obj);
       })
@@ -94,8 +94,8 @@ export default function WebAuthnDeleteActionSheet(credential) {
         const obj = {
           key: "WEBAUTHN_CREDENTIAL_DELETE_ERROR_TOAST_KEY",
           content: error.message,
-          icon: closure_1_1(9625),
-          IconComponent: credential(8588).WarningIcon,
+          icon: closure_1_1(9630),
+          IconComponent: credential(8593).WarningIcon,
           iconColor: "icon-feedback-critical",
         };
         obj.open(obj);

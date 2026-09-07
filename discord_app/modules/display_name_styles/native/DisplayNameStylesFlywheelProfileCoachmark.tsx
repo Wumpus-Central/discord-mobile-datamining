@@ -71,6 +71,6 @@ export default function DisplayNameStylesFlywheelProfileCoachmark(visible) {
     items2,
   );
   const obj2 = markAsDismissed(4218);
-  const coachmark = visible(11127).useCoachmark(visible.targetRef, memo);
+  const coachmark = visible(11132).useCoachmark(visible.targetRef, memo);
   return null;
 }

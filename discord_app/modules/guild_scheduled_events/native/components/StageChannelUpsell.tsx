@@ -9,7 +9,7 @@ import ModalActionCreatorsDefault from "../../../../actions/ModalActionCreators.
 import components_Button_Button from "../../../../design/components/Button/native/Button.native.tsx";
 import Pressables from "../../../../design/void/Pressables/native/Pressables.tsx";
 import _modDef6992 from "../../../../../_runtime/metro/06992__.js";
-import _modDef9731 from "../../../../../_runtime/metro/09731__.js";
+import _modDef9736 from "../../../../../_runtime/metro/09736__.js";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
@@ -17,8 +17,8 @@ require = fn;
 get_ActivityIndicator = fn(17);
 ({ Image: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
 const createChannelRecord = fn(1961).createChannelRecord;
-let closure_7 = fn(9730).useStageChannelUpsellCardStore;
-let closure_8 = fn(9699).CREATE_GUILD_EVENT_MODAL_KEY;
+let closure_7 = fn(9735).useStageChannelUpsellCardStore;
+let closure_8 = fn(9704).CREATE_GUILD_EVENT_MODAL_KEY;
 const ChannelTypes = fn(1074).ChannelTypes;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
@@ -62,7 +62,7 @@ export default function StageChannelUpsell(arg0) {
     obj = { source: _modDef6992 };
     obj.children = closure_10(native.Icon, obj);
     const items = [closure_10(Pressables.PressableOpacity, obj), , , , ,];
-    const obj1 = { source: _modDef9731, style: tmp.image };
+    const obj1 = { source: _modDef9736, style: tmp.image };
     items[1] = closure_10(closure_4, obj1);
     let obj2 = { style: tmp.header, variant: "text-md/bold", color: "mobile-text-heading-primary", children: null };
     const intl = util.intl;
@@ -106,7 +106,7 @@ export default function StageChannelUpsell(arg0) {
           closure_1_1(dependencyMap[17]).popWithKey(closure_1_12);
         },
       };
-      ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(9732, dependencyMap.paths), obj, CREATE_CHANNEL_MODAL_KEY);
+      ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(9737, dependencyMap.paths), obj, CREATE_CHANNEL_MODAL_KEY);
       dependencyMap();
       ActionSheetActionCreatorsDefault.hideActionSheet();
     };

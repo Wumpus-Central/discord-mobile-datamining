@@ -35,20 +35,20 @@ function CommandRow(arg0) {
   let hasOptions;
   let onPressSend;
   ({ context, onPress, isFirstRow, isLastRow, beforeExecuteCommand, onExecuteCommand } = arg0);
-  let obj = hasOptions(12051);
+  let obj = hasOptions(12055);
   const appLauncherIconSource = obj.getAppLauncherIconSource(application);
   let tmp4 = null != appLauncherIconSource;
   if (tmp4) {
     obj = { iconSource: appLauncherIconSource };
-    tmp4 = closure_10(onPressSend(12056), obj);
+    tmp4 = closure_10(onPressSend(12060), obj);
   }
-  let tmpResult = tmp(12105);
+  let tmpResult = tmp(12109);
   obj = {
     command,
     context,
     beforeExecuteCommand,
     onExecuteCommand,
-    sectionName: tmp(9409).AppLauncherSectionName.SEARCH,
+    sectionName: tmp(9414).AppLauncherSectionName.SEARCH,
   };
   const commandRowSend = tmpResult.useCommandRowSend(obj);
   hasOptions = commandRowSend.hasOptions;
@@ -83,14 +83,14 @@ function CommandRow(arg0) {
     onAccessibilityAction: null,
     trailing: null,
   };
-  tmpResult = tmp(9289);
+  tmpResult = tmp(9294);
   obj1.subLabel = tmpResult.getSectionName(application);
   obj1.start = isFirstRow;
   obj1.end = isLastRow;
   obj1.onPress = onPress;
   obj1.accessibilityActions = memo;
   obj1.onAccessibilityAction = callback;
-  obj1.trailing = closure_10(onPressSend(12105), { hasOptions, sending: commandRowSend.sending, onPressSend });
+  obj1.trailing = closure_10(onPressSend(12109), { hasOptions, sending: commandRowSend.sending, onPressSend });
   return closure_10(hasOptions(5605).TableRow, obj1);
 }
 function PlaceholderCommandRow(isFirstRow) {
@@ -175,8 +175,8 @@ function CommandsExpandableList(expandedOverride) {
   });
 }
 const View = fn(17).View;
-const getSection = fn(9290).getSection;
-const FetchState = fn(12068).FetchState;
+const getSection = fn(9295).getSection;
+const FetchState = fn(12072).FetchState;
 const AppLauncherNativeConstants = fn(1482);
 const DEFAULT_CONTENT_PADDING = AppLauncherNativeConstants.DEFAULT_CONTENT_PADDING;
 const useAppLauncherNavigation = AppLauncherNativeConstants.useAppLauncherNavigation;

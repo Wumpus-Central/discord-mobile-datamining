@@ -13,7 +13,7 @@ import noop from "../../../../_runtime/metro/00019__.js";
 const GuildIconDefault = GuildIcon;
 
 require = fn;
-const GUILD_ITEM_BADGE_SIZE = fn(16285).GUILD_ITEM_BADGE_SIZE;
+const GUILD_ITEM_BADGE_SIZE = fn(16288).GUILD_ITEM_BADGE_SIZE;
 const jsx = fn(21).jsx;
 const createStyles = fn(4560);
 let obj = { guildIcon: null, geoRestrictedBadge: null };
@@ -37,7 +37,7 @@ const result = size.fileFinishedImporting("modules/guilds_bar/native/GuildsBarGe
 export default noop.memo(function GuildsBarGeoRestrictedGuild(restrictedGuild) {
   restrictedGuild = restrictedGuild.restrictedGuild;
   const tmp = closure_5();
-  let obj = restrictedGuild(16294);
+  let obj = restrictedGuild(16297);
   let animatableSourceWithFallback = null;
   if (null != restrictedGuild.icon) {
     let obj1 = AvatarUtilsDefault;
@@ -82,9 +82,9 @@ export default noop.memo(function GuildsBarGeoRestrictedGuild(restrictedGuild) {
     config: memo,
     cutouts: items,
     overState: "a",
-    externalChildren: 0.12,
-    expandedChildren: 0.12,
-    children: 0.167,
+    externalChildren: -0.038,
+    expandedChildren: 0.029,
+    children: -3.91,
   };
   const guildsBarAnimatedWrapperStyles = obj.useGuildsBarAnimatedWrapperStyles({
     disableSelectedColor: true,

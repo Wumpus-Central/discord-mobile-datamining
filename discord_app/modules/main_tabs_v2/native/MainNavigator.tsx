@@ -63,7 +63,7 @@ function getAccountStanding() {
   return require("SuspendedUserPage").default;
 }
 const View = fn(17).View;
-let animation = fn(15941).StackNavigationAnimationSettings;
+let animation = fn(15944).StackNavigationAnimationSettings;
 const Constants = fn(1074);
 ({ AnalyticEvents: closure_8, DrawerSourceTypes: closure_9 } = Constants);
 const jsxProd = fn(21);
@@ -284,7 +284,7 @@ export default noop.memo(function StackNavigator() {
         name: "conversations",
         getComponent: getConversationsComponent,
         options() {
-          return stateFromStores(10925)();
+          return stateFromStores(10930)();
         },
       }),
       closure_2_10(closure_16.Screen, { name: "auth", getComponent: getAuthComponent, options }),
@@ -345,7 +345,7 @@ export default noop.memo(function StackNavigator() {
           str = "modal";
         }
         const obj = {};
-        const merged = Object.assign(stateFromStores(10925)({ presentation: str }));
+        const merged = Object.assign(stateFromStores(10930)({ presentation: str }));
         const params3 = route.params;
         let presentation;
         if (params3 != null) {
@@ -454,7 +454,7 @@ export default noop.memo(function StackNavigator() {
       name: "conversations",
       getComponent: getConversationsComponent,
       options() {
-        return stateFromStores(10925)();
+        return stateFromStores(10930)();
       },
     };
     const obj5 = { name: "auth", getComponent: getAuthComponent, options };
@@ -514,7 +514,7 @@ export default noop.memo(function StackNavigator() {
           obj = { presentation: "modal" };
         }
         obj = {};
-        const merged = Object.assign(stateFromStores(10925)(obj));
+        const merged = Object.assign(stateFromStores(10930)(obj));
         obj.animation = "slide_from_bottom";
         obj.fullScreenGestureEnabled = true;
         return obj;
@@ -525,7 +525,7 @@ export default noop.memo(function StackNavigator() {
       name: "sidebar",
       getComponent: getChannelDetailsComponent,
       options() {
-        return stateFromStores(10925)({ lockOrientation: false });
+        return stateFromStores(10930)({ lockOrientation: false });
       },
     });
     const obj13 = {
@@ -537,7 +537,7 @@ export default noop.memo(function StackNavigator() {
           obj = { presentation: "modal" };
         }
         obj = {};
-        const merged = Object.assign(stateFromStores(10925)(obj));
+        const merged = Object.assign(stateFromStores(10930)(obj));
         obj.animation = "slide_from_bottom";
         obj.fullScreenGestureEnabled = true;
         return obj;
@@ -548,7 +548,7 @@ export default noop.memo(function StackNavigator() {
       name: "sidebar",
       getComponent: getChannelDetailsComponent,
       options() {
-        return stateFromStores(10925)({ lockOrientation: false });
+        return stateFromStores(10930)({ lockOrientation: false });
       },
     };
     tmp5Result = PlatformUtils2;
@@ -588,7 +588,7 @@ export default noop.memo(function StackNavigator() {
           }
           str2 = str3;
         }
-        const merged = Object.assign(stateFromStores(10925)({ presentation: str2 }));
+        const merged = Object.assign(stateFromStores(10930)({ presentation: str2 }));
         return obj;
       },
       getComponent: getModalComponent,

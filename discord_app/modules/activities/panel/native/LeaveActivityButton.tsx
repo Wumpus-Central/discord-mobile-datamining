@@ -1,7 +1,7 @@
 // discord_app/modules/activities/panel/native/LeaveActivityButton.tsx
 import util from "../../../../intl/index.native.tsx";
 import components_Button_Button from "../../../../design/components/Button/native/Button.native.tsx";
-import _modDef9074 from "../../../../../_runtime/metro/09074__.js";
+import _modDef9079 from "../../../../../_runtime/metro/09079__.js";
 import EmbeddedActivitiesNativeManagerDefault from "../../native/EmbeddedActivitiesNativeManager.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
@@ -24,7 +24,7 @@ class BaseLeaveActivityButton {
     return jsx(closure_0(closure_2[3]).Button, obj);
   }
 }
-const ActivityPanelModes = fn(9505).ActivityPanelModes;
+const ActivityPanelModes = fn(9510).ActivityPanelModes;
 const jsx = fn(21).jsx;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/activities/panel/native/LeaveActivityButton.tsx");

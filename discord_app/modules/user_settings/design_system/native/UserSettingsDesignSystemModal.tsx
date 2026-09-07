@@ -318,7 +318,7 @@ function SwitchesScreen(onAction) {
     text: "Come on fhqwhgads",
     onPress: onAction.onAction,
   };
-  obj.footer = closure_7(parts(10995).ModalFloatingAction, obj);
+  obj.footer = closure_7(parts(11000).ModalFloatingAction, obj);
   obj = { style: tmp.tableRows, children: null };
   const tmp2 = _slicedToArray(noop.useState(parts.map(() => false)), 2);
   obj.children = closure_7(parts(5687).TableRowGroup, {
@@ -347,7 +347,7 @@ function SwitchesScreen(onAction) {
       );
     }),
   });
-  const items = [closure_7(closure_5, obj), closure_7(parts(10995).ModalFloatingActionSpacer, {})];
+  const items = [closure_7(closure_5, obj), closure_7(parts(11000).ModalFloatingActionSpacer, {})];
   obj.children = items;
   return closure_8(DemoScreen, obj);
 }

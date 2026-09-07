@@ -1,7 +1,7 @@
 // discord_app/modules/timestamp_autocomplete/TimestampSuggestionUtils.tsx
 import util from "../../intl/index.native.tsx";
 import _modDef4153 from "../../../_runtime/metro/04153__.js";
-import _mod10426 from "../../../_runtime/metro/10426__.js";
+import _mod10431 from "../../../_runtime/metro/10431__.js";
 import _slicedToArray from "../../../_runtime/metro/00032__.js";
 import LocaleStore from "../user_settings/LocaleStore.tsx";
 
@@ -14,7 +14,7 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/timestamp_autocomplete/TimestampSuggestionUtils.tsx");
 
 export const preloadTimestampParser = function preloadTimestampParser() {
-  _mod10426;
+  _mod10431;
 };
 export const queryTimestampSuggestions = function queryTimestampSuggestions(arg0) {
   let obj = cloneResult1;
@@ -232,7 +232,7 @@ export const queryTimestampSuggestions = function queryTimestampSuggestions(arg0
     }
     return items1;
   } else {
-    const tmp6 = _mod10426;
+    const tmp6 = _mod10431;
     locale = LocaleStore.locale;
     str = "en-US";
     if ("en-US" === locale) {

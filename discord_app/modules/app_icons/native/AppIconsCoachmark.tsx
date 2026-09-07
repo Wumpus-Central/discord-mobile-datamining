@@ -2,9 +2,9 @@
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import PremiumUtilsDefault from "../../../utils/PremiumUtils.tsx";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
-import _modDef9963 from "../../../../_runtime/metro/09963__.js";
+import _modDef9968 from "../../../../_runtime/metro/09968__.js";
 import AppIconUtils from "AppIconUtils.tsx";
-import _modDef16926 from "../../../../_runtime/metro/16926__.js";
+import _modDef16929 from "../../../../_runtime/metro/16929__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 import UserStore from "../../../stores/UserStore.tsx";
 
@@ -57,13 +57,13 @@ export default function AppIconsCoachmarkActionSheet(markAsDismissed) {
     children: null,
   };
   obj = { style: tmp.info, children: null };
-  const obj1 = { source: _modDef16926, style: tmp.image };
+  const obj1 = { source: _modDef16929, style: tmp.image };
   const items2 = [closure_8(closure_4, obj1), ,];
   let obj2 = { style: tmp.titleContainer, children: null };
   const isPremiumResult = obj1.isPremium(stateFromStores);
   const items3 = [
     closure_8(markAsDismissed(1178).Icon, {
-      source: _modDef9963,
+      source: _modDef9968,
       size: markAsDismissed(1178).IconSizes.MEDIUM,
       style: tmp.nitroWheel,
       disableColor: true,

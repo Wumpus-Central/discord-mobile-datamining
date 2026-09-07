@@ -54,6 +54,20 @@ prototype["sendUserMessage"] = function sendUserMessage(content, nonce, attachme
   const error = new Error("WebSocket not open");
   throw error;
 };
+prototype["sendUpstreamTicketAck"] = function sendUpstreamTicketAck(id, ticket, error) {
+  const self = this;
+  if (null != this.socket) {
+    const _WebSocket = WebSocket;
+    if (self.socket.readyState === WebSocket.OPEN) {
+      const socket = self.socket;
+      const _JSON = JSON;
+      const obj = { type: "upstream_ticket_ack", id, ticket, error };
+      socket.send(JSON.stringify(obj));
+    }
+  }
+  error = new Error("WebSocket not open");
+  throw error;
+};
 prototype["sendInterrupt"] = function sendInterrupt() {
   const self = this;
   if (null != this.socket) {

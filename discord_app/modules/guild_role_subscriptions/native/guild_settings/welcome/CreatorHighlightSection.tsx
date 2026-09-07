@@ -4,7 +4,7 @@ import util from "../../../../../intl/index.native.tsx";
 import native from "../../../../../design/void/native.tsx";
 import LinkingDefault from "../../../../../lib/native/Linking.tsx";
 import Text_Text from "../../../../../design/components/Text/native/Text.tsx";
-import _modDef10302 from "../../../../../../_runtime/metro/10302__.js";
+import _modDef10307 from "../../../../../../_runtime/metro/10307__.js";
 import EmojiIconDefault from "../../components/EmojiIcon.tsx";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
@@ -28,7 +28,7 @@ function GuildServerSubscriberCount(arg0) {
     size: native.Icon.Sizes.SMALL,
     color: nativeDefault.unsafe_rawColors.WHITE,
     style: tmp.subscriberCountIcon,
-    source: _modDef10302,
+    source: _modDef10307,
   };
   items1[1] = timestampProducer(native.Icon, obj);
   const obj1 = { variant: "text-sm/normal", color: "text-overlay-light", children: null };
@@ -45,12 +45,12 @@ function CreatorGuildCard(highlightedCreatorGuild) {
   const guild_id = highlightedCreatorGuild.guild_id;
   let quote_attribution_title = highlightedCreatorGuild.quote_attribution_title;
   ({ quote, quote_attribution } = highlightedCreatorGuild);
-  const tmp4 = guild_id(17708)(guild_id, 3, 60);
+  const tmp4 = guild_id(17711)(guild_id, 3, 60);
   dependencyMap = tmp4;
   const hasAllImperativeDetails = tmp4.hasAllImperativeDetails;
   let items = [hasAllImperativeDetails, tmp4];
   if (tmp4.isLoading) {
-    let obj = { style: tmp.cardContainer, children: closure_6(tmp2(17680), {}) };
+    let obj = { style: tmp.cardContainer, children: closure_6(tmp2(17683), {}) };
     return closure_6(closure_4, obj);
   } else if (hasAllImperativeDetails) {
     const details = tmp4.details;

@@ -4,7 +4,7 @@ import router_utils from "../../routing/router_utils.tsx";
 import MessageActionCreatorsDefault from "../../../actions/MessageActionCreators.tsx";
 import GuildOnboardingHomeActionCreators from "../GuildOnboardingHomeActionCreators.tsx";
 import useResourceChannelsDefault from "../useResourceChannels.tsx";
-import _modDef16567 from "../../../../_runtime/metro/16567__.js";
+import _modDef16570 from "../../../../_runtime/metro/16570__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 import ChannelStore from "../../../stores/ChannelStore.tsx";
 import GuildChannelStore from "../../../stores/GuildChannelStore.tsx";
@@ -41,9 +41,9 @@ function ResourceChannelRow(channelId) {
   if (length > 0) {
     first = forumPostMediaProperties[0];
   }
-  let tmp2Result = tmp2(12009);
+  let tmp2Result = tmp2(12013);
   let flag = tmp2Result.useSharedMediaProps({ channel: stateFromStores, media: first }).shouldObscure;
-  const tmp11 = stateFromStores(16566)(firstResult);
+  const tmp11 = stateFromStores(16569)(firstResult);
   const tmp12 =
     null != stateFromStores &&
     null == stateFromStores2.first() &&
@@ -150,7 +150,7 @@ function ResourceChannelRow(channelId) {
               }
               obj9.firstMessageId = id;
               obj9.containerStyle = tmp.thumbnail;
-              tmp19Result2 = closure_12(tmp2(12009).ForumPostMediaThumbnail, obj9);
+              tmp19Result2 = closure_12(tmp2(12013).ForumPostMediaThumbnail, obj9);
             }
           }
         }
@@ -208,7 +208,7 @@ export default function GuildHomeResources(guildId) {
     const intl = guildId(1114).intl;
     obj.children = intl.string(guildId(1114).t.owvC9U);
     const items = [closure_12(guildId(4556).Text, obj), ,];
-    const obj1 = { style: tmp.emptyStateImage, source: _modDef16567 };
+    const obj1 = { style: tmp.emptyStateImage, source: _modDef16570 };
     items[1] = closure_12(closure_5, obj1);
     const obj2 = {
       onPress() {

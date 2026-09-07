@@ -556,7 +556,7 @@ export const BountiesScrollVideoItem = function BountiesScrollVideoItem(bounty) 
   if (softDownloadCapsEnabled === undefined) {
     softDownloadCapsEnabled = false;
   }
-  return flag3(bounty(11778).BillableAdPlacementImpressionTrackerNative, {
+  return flag3(bounty(11783).BillableAdPlacementImpressionTrackerNative, {
     adContentId: bounty.id,
     adCreativeType: bounty(5451).AdCreativeType.BOUNTY,
     questContent: bounty(5449).QuestContent.VIDEO_MODAL_MOBILE,

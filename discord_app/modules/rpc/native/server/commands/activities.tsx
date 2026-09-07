@@ -73,10 +73,10 @@ obj1.handler = function handler(socket) {
             closure_128_0 = id;
             if (null == id) {
               const obj1 = { errorCode: constants.INVALID_COMMAND };
-              const tmp62 = new tmp2(9554)(obj1, "No application.");
+              const tmp62 = new tmp2(9559)(obj1, "No application.");
               throw tmp62;
             } else {
-              const tmp91 = tmp2(14468)();
+              const tmp91 = tmp2(14471)();
               id = undefined;
               if (tmp91 != null) {
                 id = tmp91.id;
@@ -84,7 +84,7 @@ obj1.handler = function handler(socket) {
               closure_128_1 = id;
               if (null == id) {
                 const obj2 = { errorCode: constants.UNKNOWN_ERROR };
-                const tmp54 = new tmp2(9554)(obj2, "Unable to find selected channel");
+                const tmp54 = new tmp2(9559)(obj2, "Unable to find selected channel");
                 throw tmp54;
               } else {
                 let obj11 = tmp2(5139);
@@ -126,7 +126,7 @@ obj1.handler = function handler(socket) {
             return obj5;
           } else {
             const obj6 = { errorCode: constants.UNKNOWN_ERROR };
-            const tmp42 = new tmp2(9554)(obj6, "Missing photo permissions");
+            const tmp42 = new tmp2(9559)(obj6, "Missing photo permissions");
             throw tmp42;
           }
         } else if (2 === tmp6) {
@@ -141,14 +141,14 @@ obj1.handler = function handler(socket) {
             closure_128_2 = value.assets[0];
             if (null == closure_128_2) {
               const obj8 = { errorCode: constants.UNKNOWN_ERROR };
-              const tmp36 = new tmp2(9554)(obj8, "No image selected");
+              const tmp36 = new tmp2(9559)(obj8, "No image selected");
               throw tmp36;
             } else {
               const obj9 = { name: closure_128_2.fileName, type: closure_128_2.type, uri: closure_128_2.uri };
               dependencyMap = 3;
               c3 = 1;
               const obj10 = {
-                value: tmp3(9504).uploadImageAttachment(closure_128_0, closure_128_1, obj9),
+                value: tmp3(9509).uploadImageAttachment(closure_128_0, closure_128_1, obj9),
                 done: false,
               };
               return obj10;
@@ -175,7 +175,7 @@ obj1.handler = function handler(socket) {
           }
           const obj13 = { errorCode: constants.UNKNOWN_ERROR };
           const _JSON = JSON;
-          let tmp20 = tmp2(9554);
+          let tmp20 = tmp2(9559);
           tmp20 = new tmp20(obj13, JSON.stringify(closure_128_3));
           throw tmp20;
         }

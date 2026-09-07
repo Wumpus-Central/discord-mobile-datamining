@@ -11,7 +11,7 @@ import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSh
 import PlatformsDefault from "../../../lib/Platforms.tsx";
 import ConnectedAccountsActionCreatorsDefault from "../../../actions/ConnectedAccountsActionCreators.tsx";
 import openUserSettings from "../../user_settings/core/native/openUserSettings.tsx";
-import inlineStyles from "../../../../_runtime/08453_inlineStyles.js";
+import inlineStyles from "../../../../_runtime/08456_inlineStyles.js";
 import authorizeConnectionDefault from "../../connections/authorizeConnection.native.tsx";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
@@ -158,7 +158,7 @@ export default function RobloxConnectionActionSheet(markAsDismissed) {
   const obj7 = { text: null, icon: null, iconPosition: "end", size: "lg", onPress: null };
   const intl3 = markAsDismissed(1114).intl;
   obj7.text = intl3.string(markAsDismissed(1114).t.ItuabN);
-  obj7.icon = closure_13(markAsDismissed(12956).WindowLaunchIcon, { size: "sm", color: nativeDefault.colors.WHITE });
+  obj7.icon = closure_13(markAsDismissed(12960).WindowLaunchIcon, { size: "sm", color: nativeDefault.colors.WHITE });
   obj7.onPress = function onPress() {
     let obj = ActionSheetActionCreatorsDefault;
     obj.hideActionSheet();
@@ -186,7 +186,7 @@ export { UnionIcon };
 export const useShouldShowRobloxConnectionCoachmark = function useShouldShowRobloxConnectionCoachmark() {
   const items = [LocalAppDetectionStore];
   stateFromStores = stateFromStores(504).useStateFromStores(items, () =>
-    appInstalled.isAppInstalled(stateFromStores(13712).DetectableAppNames.ROBLOX),
+    appInstalled.isAppInstalled(stateFromStores(13716).DetectableAppNames.ROBLOX),
   );
   const tmp2 = hasRoloxAccount(noop.useState(false), 2);
   const first = tmp2[0];

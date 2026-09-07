@@ -4,7 +4,7 @@ import SettingSegmentedControlRendererDefault from "SettingSegmentedControlRende
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const NodeType = fn(11469).NodeType;
+const NodeType = fn(11474).NodeType;
 const jsx = fn(21).jsx;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/settings/native/renderer/SettingLayout.tsx");

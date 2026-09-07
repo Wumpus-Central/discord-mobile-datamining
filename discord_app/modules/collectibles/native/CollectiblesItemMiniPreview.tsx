@@ -6,7 +6,7 @@ import ProfileEffectDefault from "../profile_effects/native/ProfileEffect.tsx";
 import AvatarDecorationSampleV2Default from "AvatarDecorationSampleV2.tsx";
 import NameplateDefault from "../nameplates/native/Nameplate.tsx";
 import ProfileFrameSamplePreviewDefault from "../profile_frames/native/previews/ProfileFrameSamplePreview.tsx";
-import _modDef8823 from "../../../../discord_assets/assets/collectibles/previews/sample_profile_small-2x.png.js";
+import _modDef8828 from "../../../../discord_assets/assets/collectibles/previews/sample_profile_small-2x.png.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -38,7 +38,7 @@ let obj = {
 };
 let size = { overflow: "hidden", width: "100%", height: "100%", borderRadius: nativeDefault.radii.sm };
 obj.profileEffect = size;
-obj.sampleProfile = { aspectRatio: fn(8798).SAMPLE_PROFILE_ASPECT_RATIO, width: "100%" };
+obj.sampleProfile = { aspectRatio: fn(8803).SAMPLE_PROFILE_ASPECT_RATIO, width: "100%" };
 obj = {
   overflow: "hidden",
   borderTopRightRadius: nativeDefault.radii.xs,
@@ -76,7 +76,7 @@ export default noop.memo(function CollectiblesItemMiniPreview(arg0) {
     const obj4 = { style: items, children: null };
     const obj5 = { style: tmp.profileEffect, accessible: false, importantForAccessibility: "no", children: null };
     const obj6 = { source: null, style: null, resizeMode: "cover" };
-    const obj7 = { uri: _modDef8823 };
+    const obj7 = { uri: _modDef8828 };
     obj6.source = obj7;
     obj6.style = tmp.sampleProfile;
     const items1 = [React7(FastImageDefault, obj6)];

@@ -96,7 +96,7 @@ const result = size.fileFinishedImporting("modules/collectibles/native/Collectib
 export default noop.memo(function CardProductVariants(product) {
   product = product.product;
   let defaultVariantIndex;
-  let obj = defaultVariantIndex(8765);
+  let obj = defaultVariantIndex(8770);
   defaultVariantIndex = obj.useDefaultVariantIndex(product);
   const tmp = closure_6();
   if (obj2.getIsVariantProduct(product)) {

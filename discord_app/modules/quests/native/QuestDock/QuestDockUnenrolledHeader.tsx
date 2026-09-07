@@ -6,8 +6,8 @@ import AnalyticsTypes from "../../lib/analytics/AnalyticsTypes.tsx";
 import QuestDisclosureModalActionCreatorsDefault from "../QuestDisclosureModal/QuestDisclosureModalActionCreators.tsx";
 import QuestGameLogotypeDefault from "../QuestGameLogotype.tsx";
 import QuestDockBackgroundBlurHeaderDefault from "QuestDockBackgroundBlurHeader.tsx";
-import _modDef15196 from "../../../../../_runtime/metro/15196__.js";
-import _modDef15197 from "../../../../../_runtime/metro/15197__.js";
+import _modDef15199 from "../../../../../_runtime/metro/15199__.js";
+import _modDef15200 from "../../../../../_runtime/metro/15200__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -26,11 +26,11 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/quests/native/QuestDock/QuestDockUnenrolledHeader.tsx");
 
 export default noop.memo(function QuestDockUnenrolledHeader() {
-  let obj = questCreative(15102);
+  let obj = questCreative(15105);
   const questDockQuest = obj.useQuestDockQuest();
-  let obj1 = questCreative(15102);
+  let obj1 = questCreative(15105);
   questCreative = obj1.useQuestCreative(questDockQuest);
-  let obj2 = questCreative(15092);
+  let obj2 = questCreative(15095);
   const items = [questCreative];
   const callback = noop.useCallback(() => {
     let obj = { creative: questCreative, isTargetedDisclosure: true, trackingCtx: null };
@@ -53,7 +53,7 @@ export default noop.memo(function QuestDockUnenrolledHeader() {
   }
   const tmp11 = closure_8();
   tmp8 = useThemeDefault();
-  const questGameLogotypeAssetUrl = questCreative(15091).useQuestGameLogotypeAssetUrl(questDockQuest);
+  const questGameLogotypeAssetUrl = questCreative(15094).useQuestGameLogotypeAssetUrl(questDockQuest);
   const questBarHeroBlurhash = questDockQuest.config.assets.questBarHeroBlurhash;
   obj = {
     blurHash: questBarHeroBlurhash,
@@ -72,9 +72,9 @@ export default noop.memo(function QuestDockUnenrolledHeader() {
   obj1 = { style: tmp11.primaryContent, children: null };
   const tmp7Result = FastImageDefault;
   if (LIGHT === tmp10.DARK) {
-    let tmp7Result1 = _modDef15196;
+    let tmp7Result1 = _modDef15199;
   } else {
-    tmp7Result1 = _modDef15197;
+    tmp7Result1 = _modDef15200;
   }
   obj2 = { source: tmp7Result1, resizeMode: "contain", style: tmp11.wreathImage };
   const items1 = [closure_6(tmp7Result, obj2)];

@@ -49,10 +49,10 @@ export default function ClassificationEvidence(arg0) {
   const items1 = [id];
   const resolveAssetSource = first3.resolveAssetSource;
   if (obj2.useStateFromStores(items1, () => ref(4411).isThemeLight(id.theme))) {
-    let assetSource = resolveAssetSource(tmp11(11892));
+    let assetSource = resolveAssetSource(tmp11(11897));
     let tmp13 = tmp11;
   } else {
-    assetSource = resolveAssetSource(tmp11(11893));
+    assetSource = resolveAssetSource(tmp11(11898));
     tmp13 = tmp11;
   }
   let first2 = arg0.flaggedContent[0];
@@ -261,9 +261,9 @@ export default function ClassificationEvidence(arg0) {
     let obj5 = obj;
   } else {
     obj1 = { ref, onTapImage: callback, inverted: false };
-    const items9 = [closure_18(tmp13(11894), obj1)];
+    const items9 = [closure_18(tmp13(11899), obj1)];
     obj2 = { rowGenerator, message: null, modifyRow: null, pointerEvents: "none" };
-    tmp13(8652);
+    tmp13(8657);
     tmpResult = tmp(4783);
     const obj3 = {
       id: first2.id,

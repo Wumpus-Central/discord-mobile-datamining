@@ -7,7 +7,7 @@ import components_Button_Button from "../../../../design/components/Button/nativ
 import FastImageDefault from "../../../../components_native/common/FastImage.tsx";
 import NavigatorConstants from "../../../../design/components/Navigator/native/NavigatorConstants.native.tsx";
 import ContactSyncUtils from "../../../contact_sync/native/ContactSyncUtils.tsx";
-import _modDef12750 from "../../../../../_runtime/metro/12750__.js";
+import _modDef12754 from "../../../../../_runtime/metro/12754__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -66,7 +66,7 @@ export default function RedesignDiscoverabilityLanding(onNext) {
   const intl2 = util.intl;
   obj2.children = intl2.string(util.t.KMW0kP);
   items[2] = hasOwnProperty(Text_Text.Text, obj2);
-  const obj3 = { resizeMode: "contain", style: tmp.image, source: _modDef12750 };
+  const obj3 = { resizeMode: "contain", style: tmp.image, source: _modDef12754 };
   items[3] = hasOwnProperty(FastImageDefault, obj3);
   const obj4 = { style: tmp.info, variant: "text-sm/medium", color: "text-default", children: null };
   const intl3 = util.intl;

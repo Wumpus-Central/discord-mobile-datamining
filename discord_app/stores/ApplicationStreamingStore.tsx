@@ -789,11 +789,11 @@ const applicationStreamingStore = new ApplicationStreamingStore(DispatcherDefaul
       } else if (reason === constants3.SAFETY_GUILD_RATE_LIMITED) {
         let obj = StreamKeyUtils;
         guildId = obj.decodeStreamKey(streamKey).guildId;
-        asyncRequireImpl(13830, dependencyMap.paths).then((result) => {
+        asyncRequireImpl(13833, dependencyMap.paths).then((result) => {
           result.default(guildId);
         });
         FAILED = constants.ENDED;
-        const promise = asyncRequireImpl(13830, dependencyMap.paths);
+        const promise = asyncRequireImpl(13833, dependencyMap.paths);
       } else {
         if (tmp9) {
           FAILED = constants.FAILED;

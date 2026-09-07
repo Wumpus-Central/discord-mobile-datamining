@@ -11,7 +11,7 @@ fn(4560);
 let obj = { row: null, rowInner: null, placeholderAvatar: null, placeholderText: null, placeholderBody: null };
 obj = {
   paddingLeft: nativeDefault.space.PX_12,
-  paddingTop: fn(12640).CHAT_PLACEHOLDER_ROW_MARGIN_TOP,
+  paddingTop: fn(12644).CHAT_PLACEHOLDER_ROW_MARGIN_TOP,
   flexDirection: "row",
 };
 obj.row = obj;
@@ -26,17 +26,17 @@ let size = {
 obj.placeholderAvatar = size;
 obj.placeholderText = {
   backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED,
-  height: fn(12640).CHAT_PLACEHOLDER_ROW_LINE_HEIGHT,
+  height: fn(12644).CHAT_PLACEHOLDER_ROW_LINE_HEIGHT,
   borderRadius: nativeDefault.radii.sm,
 };
 let obj2 = {
   backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED,
-  height: fn(12640).CHAT_PLACEHOLDER_ROW_LINE_HEIGHT,
+  height: fn(12644).CHAT_PLACEHOLDER_ROW_LINE_HEIGHT,
   borderRadius: nativeDefault.radii.sm,
 };
-obj.placeholderBody = { marginTop: fn(12640).CHAT_PLACEHOLDER_ROW_LINE_MARGIN_TOP, width: "100%" };
+obj.placeholderBody = { marginTop: fn(12644).CHAT_PLACEHOLDER_ROW_LINE_MARGIN_TOP, width: "100%" };
 let closure_5 = createStyles.createStyles(obj);
-let obj3 = { marginTop: fn(12640).CHAT_PLACEHOLDER_ROW_LINE_MARGIN_TOP, width: "100%" };
+let obj3 = { marginTop: fn(12644).CHAT_PLACEHOLDER_ROW_LINE_MARGIN_TOP, width: "100%" };
 size = fn(2);
 const result = size.fileFinishedImporting("modules/chat/native/placeholder/ChatPlaceholderRow.tsx");
 

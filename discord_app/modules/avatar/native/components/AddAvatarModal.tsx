@@ -68,7 +68,7 @@ function AddAvatarScreen() {
           if (null == base64) {
             pendingImage = undefined;
             if (null != base64) {
-              obj = tmp2(14593);
+              obj = tmp2(14596);
               const obj4 = { imageUri: base64, description: null };
               obj2 = tmp2(8169);
               obj4.description = obj2.generateAvatarDescription();
@@ -146,7 +146,7 @@ function AddAvatarScreen() {
   obj2.children = items2;
   const items3 = [closure_10(View, obj2), ,];
   const memoizedImageSourceResult = VideoBackground.memoizedImageSource(imageUri);
-  items3[1] = closure_9(selectedAvatar(17445), {
+  items3[1] = closure_9(selectedAvatar(17448), {
     avatarSource: VideoBackground.memoizedImageSource(imageUri),
     showPendingAvatar: null != pendingImage,
     onSelectAvatar: function handleSelectAvatar() {
@@ -172,7 +172,7 @@ function AddAvatarScreen() {
   obj1.children = items3;
   const items4 = [
     closure_10(View, obj1),
-    closure_9(selectedAvatar(17436), { onAvatarSelect: tmp4[1], selectedAvatar }),
+    closure_9(selectedAvatar(17439), { onAvatarSelect: tmp4[1], selectedAvatar }),
   ];
   const obj8 = { style: tmp.buttonContainer, children: null };
   const obj9 = { text: null, grow: true, onPress: null, disabled: null };

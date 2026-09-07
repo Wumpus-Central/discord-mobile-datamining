@@ -28,7 +28,7 @@ function validateEmbeddedAppFrame(transport) {
           tmp13 = null;
           if (tmp12.MAIN === type) {
             if (tmp35.applicationId === VibegrationsBuilderPreviewStore.getBuilderPreviewApplicationId()) {
-              obj1 = { channelId: "hash", guildId: "call" };
+              obj1 = { channelId: "push", guildId: "channel" };
             } else {
               obj1 = null;
             }
@@ -56,7 +56,7 @@ function validateEmbeddedAppFrame(transport) {
 const TransportTypes = fn(4465).TransportTypes;
 const Constants = fn(1074);
 ({ ApplicationFlags: metroRequire, RPCErrors: closure_7 } = Constants);
-const FramesConstants = fn(9511);
+const FramesConstants = fn(9516);
 ({ asLaunched: closure_8, EmbeddedSurfaceType: closure_9 } = FramesConstants);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/rpc/helpers/validateEmbeddedAppFrame.tsx");

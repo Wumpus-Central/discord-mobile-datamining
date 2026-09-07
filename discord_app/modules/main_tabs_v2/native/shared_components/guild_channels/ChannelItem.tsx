@@ -18,7 +18,7 @@ require = fn;
 function LaunchpadChannelIcon(channel) {
   channel = channel.channel;
   const layout = channel.layout;
-  let obj = channel(10121);
+  let obj = channel(10126);
   const layoutStyles = obj.getLayoutStyles(layout);
   let obj1 = channel(504);
   const items = [GuildStore];
@@ -34,14 +34,14 @@ function LaunchpadChannelIcon(channel) {
     str = "md";
   }
   obj1.size = str;
-  obj6 = channel(10121);
+  obj6 = channel(10126);
   let num = 32;
   if (tmp2Result.isLayoutCozy(layout)) {
     num = 48;
   }
   const obj2 = { children: null };
   obj1.wrapperSize = num;
-  items1[1] = closure_8(channel(12191).ChannelIcon, obj1);
+  items1[1] = closure_8(channel(12195).ChannelIcon, obj1);
   obj2.children = items1;
   return closure_10(closure_9, obj2);
 }

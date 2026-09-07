@@ -5,7 +5,7 @@ import Text_Text from "../../../../../design/components/Text/native/Text.tsx";
 import components_Button_Button from "../../../../../design/components/Button/native/Button.native.tsx";
 import ContactSyncModalActionCreators from "../../../../contact_sync/native/ContactSyncModalActionCreators.tsx";
 import ContactSyncUtils from "../../../../contact_sync/native/ContactSyncUtils.tsx";
-import _modDef12693 from "../../../../../../_runtime/metro/12693__.js";
+import _modDef12697 from "../../../../../../_runtime/metro/12697__.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -62,7 +62,7 @@ const result = size.fileFinishedImporting(
 export default function AddFriendsContactSyncEmptyState() {
   const tmp = closure_7();
   let obj = { style: tmp.content, children: null };
-  obj = { resizeMode: "contain", style: tmp.headerImage, source: _modDef12693 };
+  obj = { resizeMode: "contain", style: tmp.headerImage, source: _modDef12697 };
   const items = [hasOwnProperty(React4, obj), , ,];
   obj = { style: tmp.title, variant: "heading-lg/bold", color: "mobile-text-heading-primary", children: null };
   const intl = util.intl;

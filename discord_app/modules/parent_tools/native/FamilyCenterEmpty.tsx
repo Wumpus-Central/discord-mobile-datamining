@@ -1,6 +1,6 @@
 // discord_app/modules/parent_tools/native/FamilyCenterEmpty.tsx
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
-import _modDef14917 from "../../../../_runtime/metro/14917__.js";
+import _modDef14920 from "../../../../_runtime/metro/14920__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -19,7 +19,7 @@ const result = size.fileFinishedImporting("modules/parent_tools/native/FamilyCen
 export default function FamilyCenterEmpty(children) {
   const tmp = closure_7();
   let obj = { style: tmp.empty, children: null };
-  obj = { source: _modDef14917, style: tmp.art, resizeMethod: "scale" };
+  obj = { source: _modDef14920, style: tmp.art, resizeMethod: "scale" };
   const items = [
     hasOwnProperty(React4, obj),
     hasOwnProperty(Text_Text.Text, { variant: "text-sm/medium", color: "text-muted", children: children.text }),

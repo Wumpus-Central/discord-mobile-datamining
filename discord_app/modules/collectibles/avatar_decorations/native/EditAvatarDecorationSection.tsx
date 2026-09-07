@@ -18,10 +18,10 @@ obj = {
   flexDirection: "row",
   alignItems: "center",
   justifyContent: "space-between",
-  paddingHorizontal: fn(13170).GUTTER_SIZE,
+  paddingHorizontal: fn(13174).GUTTER_SIZE,
 };
 obj.row = obj;
-const createStyles = { height: fn(13170).GUTTER_SIZE };
+const createStyles = { height: fn(13174).GUTTER_SIZE };
 obj.rowSpacer = createStyles;
 let closure_10 = createStyles.createStyles(obj);
 const memoResult = noop.memo((size) => {

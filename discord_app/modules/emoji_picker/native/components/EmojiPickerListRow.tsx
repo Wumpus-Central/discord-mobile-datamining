@@ -117,7 +117,7 @@ class EmojiItem {
 }
 get_ActivityIndicator = fn(17);
 ({ View: c3, StyleSheet } = get_ActivityIndicator);
-const EmojiPickerListConstants = fn(10290);
+const EmojiPickerListConstants = fn(10295);
 const IMAGE_SIZE = EmojiPickerListConstants.IMAGE_SIZE;
 const PADDING_VERTICAL = fn(1219).PADDING_VERTICAL;
 const jsxProd = fn(21);

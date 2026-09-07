@@ -19,13 +19,13 @@ function PremiumFeatureUpsellPill(featureName) {
     flag = true;
   }
   let loading;
-  let obj = featureName(9313);
-  let obj1 = featureName(9965);
+  let obj = featureName(9318);
+  let obj1 = featureName(9970);
   const premiumUpsellConfig = obj.usePremiumUpsellConfig(obj1.getUpsellType(featureName));
   const useTier0UpsellContent = premiumUpsellConfig.useTier0UpsellContent;
   const tmp4 = closure_14(useTier0UpsellContent);
   dependencyMap = tmp4;
-  let obj2 = featureName(9966);
+  let obj2 = featureName(9971);
   const mobileEmojiPickerUpsellRestyleEnabledForFeature = obj2.getMobileEmojiPickerUpsellRestyleEnabledForFeature(
     featureName,
     "native.PremiumFeatureUpsell",
@@ -59,7 +59,7 @@ function PremiumFeatureUpsellPill(featureName) {
     const obj3 = { onClick: fn };
     formatResult = intl6.format(tmp(1114).t.x2dQxN, obj3);
   }
-  const tmp11 = useTier0UpsellContent(9967)(
+  const tmp11 = useTier0UpsellContent(9972)(
     useTier0UpsellContent,
     premiumUpsellConfig.onViewAllPerks,
     constants3.PREMIUM_UPSELL_FILE_UPLOAD,
@@ -137,7 +137,7 @@ function PremiumFeatureUpsellPill(featureName) {
     obj4.children = items2;
     return closure_13(closure_5, obj4);
   } else {
-    const obj8 = { source: tmp10(useTier0UpsellContent ? 9968 : 9963), style: tmp4.nitroWheel, disableColor: true };
+    const obj8 = { source: tmp10(useTier0UpsellContent ? 9973 : 9968), style: tmp4.nitroWheel, disableColor: true };
     closure_12(tmp(1178).Icon, obj8);
   }
   tmp10 = useTier0UpsellContent;

@@ -71,7 +71,7 @@ function AdvancedInstantInviteScreen() {
   }, items1);
   tmp2Result = tmp2(4992);
   const unmountEffect = tmp2Result.useUnmountEffect(() => {
-    channel(573).wait(channel(9826).resetSettings);
+    channel(573).wait(channel(9831).resetSettings);
   });
   const items2 = [channel];
   callback = noop.useCallback(() => {
@@ -105,27 +105,27 @@ function AdvancedInstantInviteScreen() {
     });
   }, items3);
   const callback1 = noop.useCallback((maxUses) => {
-    channel(9826);
+    channel(9831);
     const obj = { maxUses };
     obj.updateSettings(obj);
   }, []);
   const callback2 = noop.useCallback((maxAge) => {
-    channel(9826);
+    channel(9831);
     const obj = { maxAge };
     obj.updateSettings(obj);
   }, []);
   const callback3 = noop.useCallback((temporary) => {
-    channel(9826);
+    channel(9831);
     const obj = { temporary };
     obj.updateSettings(obj);
   }, []);
   const callback4 = noop.useCallback((flags) => {
-    channel(9826);
+    channel(9831);
     const obj = { flags };
     obj.updateSettings(obj);
   }, []);
   const callback5 = noop.useCallback((roleIds) => {
-    channel(9826);
+    channel(9831);
     const obj = { roleIds };
     obj.updateSettings(obj);
   }, []);
@@ -147,14 +147,14 @@ function AdvancedInstantInviteScreen() {
     onChangeRoleIds: null,
   };
   let obj2 = navigation(504);
-  obj.maxUsesOptions = channel(9822).getMaxUsesOptions;
+  obj.maxUsesOptions = channel(9827).getMaxUsesOptions;
   ({ temporary: obj7.temporary, flags: obj7.flags, roleIds: obj7.roleIds } = settings);
   obj.onChangeMaxAge = callback2;
   obj.onChangeMaxUses = callback1;
   obj.onChangeTemporary = callback3;
   obj.onChangeFlags = callback4;
   obj.onChangeRoleIds = callback5;
-  obj.children = jsx(channel(17795), {
+  obj.children = jsx(channel(17798), {
     style: tmp.formContent,
     channel: first,
     guild,
@@ -170,7 +170,7 @@ function AdvancedInstantInviteScreen() {
     onChangeFlags: null,
     onChangeRoleIds: null,
   });
-  return jsx(navigation(8593).Form, {
+  return jsx(navigation(8598).Form, {
     style: tmp.formContent,
     channel: first,
     guild,

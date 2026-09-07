@@ -6,7 +6,7 @@ import SoundpackStore from "../soundpacks/SoundpackStore.tsx";
 import StreamerModeStore from "../../stores/StreamerModeStore.tsx";
 
 require = fn;
-const SoundOutputChannel = fn(9091).SoundOutputChannel;
+const SoundOutputChannel = fn(9096).SoundOutputChannel;
 const logger = new LoggerDefault("SoundUtils");
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/sound_playback/SoundUtils.tsx");

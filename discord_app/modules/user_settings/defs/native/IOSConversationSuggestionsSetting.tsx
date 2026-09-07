@@ -9,7 +9,7 @@ require = fn;
 let identity = fn(1244);
 let closure_4 = identity.createWithEqualityFn(() => ({ isEnabled: true }));
 fn(17).NativeModules.IntentsHandler;
-const SettingBuilders = fn(11468);
+const SettingBuilders = fn(11473);
 identity = {
   useTitle() {
     const intl = util.intl;

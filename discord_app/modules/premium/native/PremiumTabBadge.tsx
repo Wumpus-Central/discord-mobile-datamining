@@ -21,7 +21,7 @@ import usePremiumDiscountOffer from "../hooks/usePremiumDiscountOffer.android.ts
 import useTrackImpressionDefault from "../../app_analytics/useTrackImpression.tsx";
 import MarketingComponentType from "../../../../discord_common/js/shared/shared-constants/MarketingComponentType.tsx";
 import usePromotionMarketingComponent from "../hooks/usePromotionMarketingComponent.tsx";
-import _modDef14982 from "../../../../_runtime/metro/14982__.js";
+import _modDef14985 from "../../../../_runtime/metro/14985__.js";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 import SubscriptionStore from "../../../stores/billing/SubscriptionStore.tsx";
@@ -64,7 +64,7 @@ function OfferBadge(componentId) {
   useTrackImpressionDefault(obj, obj);
   if (acked) {
     const obj1 = { style: tmp.acked, children: null };
-    const obj2 = { source: _modDef14982, size: native.Icon.Sizes.EXTRA_SMALL, color: tmp.icon.color, style: tmp.icon };
+    const obj2 = { source: _modDef14985, size: native.Icon.Sizes.EXTRA_SMALL, color: tmp.icon.color, style: tmp.icon };
     const items = [React6(native.Icon, obj2)];
     const obj3 = { variant: "eyebrow", color: "interactive-text-default", style: null, children: null };
     const items1 = [,];
@@ -301,7 +301,7 @@ export default function PremiumTabBadge() {
           ({ premiumDiscountBadge: arr6[0], ackedBadge: arr6[1] } = tmp);
           obj4.style = items4;
           const obj5 = {
-            source: _modDef14982,
+            source: _modDef14985,
             size: native.Icon.Sizes.EXTRA_SMALL,
             color: tmp.icon.color,
             style: tmp.icon,

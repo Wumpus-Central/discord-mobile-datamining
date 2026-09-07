@@ -9,7 +9,7 @@ import ActivityPrivacyMatchingExperiment from "../../../activity_privacy/Activit
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-fn(11468);
+fn(11473);
 let SettingBuilders = {
   useTitle() {
     const intl = util.intl;
@@ -71,7 +71,7 @@ let SettingBuilders = {
         ({ direction: obj5.direction, affectedGuildIds: obj5.affectedGuildIds } = affectedGuilds);
         obj.settingName = activityRestrictionSettingName;
         ActionSheetActionCreatorsDefault.openLazy(
-          asyncRequireImpl(15908, dependencyMap.paths),
+          asyncRequireImpl(15911, dependencyMap.paths),
           "ActivityPrivacyUpsellActionSheet",
           obj,
         );

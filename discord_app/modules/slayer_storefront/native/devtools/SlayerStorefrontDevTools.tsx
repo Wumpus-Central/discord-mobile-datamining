@@ -77,7 +77,7 @@ export default function SlayerStorefrontDevTools() {
               tmp3(null);
               tmp5(true);
               c4 = 1;
-              let obj1 = length(10816);
+              let obj1 = length(10821);
               c5 = 2;
               c6 = 1;
               obj1 = { value: null, done: false };
@@ -147,7 +147,7 @@ export default function SlayerStorefrontDevTools() {
   obj = { paddingVertical: null, paddingBottom: null };
   const callback2 = noop.useCallback(() => {
     callback((skuId) => {
-      closure_0(10797);
+      closure_0(10802);
       const obj = { skuId, recipient: stateFromStores1 };
       const result = obj.openSocialLayerStorefrontProductGiftPurchaseSuccessModal(obj);
     });

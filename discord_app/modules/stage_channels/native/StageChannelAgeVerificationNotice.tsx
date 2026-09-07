@@ -7,7 +7,7 @@ import noop from "../../../../_runtime/metro/00019__.js";
 const native = Text(1178);
 const CircleInformationIcon = Text(4515);
 const Text_Text = Text(4556);
-const WarningIcon2 = Text(8588);
+const WarningIcon2 = Text(8593);
 require = fn;
 function StageChannelAgeVerificationNoticeContent(onConfirmPress) {
   onConfirmPress = onConfirmPress.onConfirmPress;

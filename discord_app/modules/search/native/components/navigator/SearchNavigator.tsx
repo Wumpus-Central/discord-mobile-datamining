@@ -8,7 +8,7 @@ import noop from "../../../../../../_runtime/metro/00019__.js";
 const require = fn;
 const View = fn(17).View;
 let closure_5 = fn(7877).SearchEntrypointAnalyticsLocations;
-const SearchNavigatorScreens = fn(16643).SearchNavigatorScreens;
+const SearchNavigatorScreens = fn(16646).SearchNavigatorScreens;
 const SearchTypes = fn(1074).SearchTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
@@ -52,7 +52,7 @@ export default noop.memo((route) => {
       name: SearchNavigatorScreens.SEARCH_TABS,
       options: { headerShown: false, fullScreenGestureEnabled: true },
       getComponent() {
-        return searchContext(16865).default;
+        return searchContext(16868).default;
       },
     }),
     closure_8(closure_11.Screen, {
@@ -71,7 +71,7 @@ export default noop.memo((route) => {
         return obj;
       },
       getComponent() {
-        return searchContext(16861).default;
+        return searchContext(16864).default;
       },
     }),
   ];

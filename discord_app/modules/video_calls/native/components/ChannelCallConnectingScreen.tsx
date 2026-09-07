@@ -11,7 +11,7 @@ import beginConsoleTransfer from "../../../game_console/native/beginConsoleTrans
 import instant_invite_InstantInviteUtils from "../../../instant_invite/native/InstantInviteUtils.tsx";
 import UserSettingsVoiceDefault from "../../../user_settings/voice/native/UserSettingsVoice.tsx";
 import VoiceChatHeaderIconDefault from "../../../voice_chat/native/components/VoiceChatHeaderIcon.tsx";
-import _modDef10001 from "../../../../../_runtime/metro/10001__.js";
+import _modDef10006 from "../../../../../_runtime/metro/10006__.js";
 import ChannelCallMicButton from "ChannelCallMicButton.tsx";
 import coercePlatformTypeToConsoleType from "../../../game_console/coercePlatformTypeToConsoleType.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
@@ -138,7 +138,7 @@ function JoinVoiceButton(channel) {
   return closure_12(channel(stateFromStores1[33]).LabeledActionButton, obj);
 }
 const View = fn(17).View;
-const resetFocus = fn(9467).resetFocus;
+const resetFocus = fn(9472).resetFocus;
 const InstantInviteSources = fn(1074).InstantInviteSources;
 const Permissions = fn(1085).Permissions;
 const jsxProd = fn(21);
@@ -151,7 +151,7 @@ createStyles = {
   justifyContent: "center",
   alignItems: "flex-start",
   flexDirection: "row",
-  height: fn(9496).CALL_ACTION_BAR_HEIGHT,
+  height: fn(9501).CALL_ACTION_BAR_HEIGHT,
 };
 createStyles.actionBarContainer = createStyles;
 let closure_15 = createStyles.createStyles(createStyles);
@@ -165,7 +165,7 @@ export const showVoiceSettingsActionSheet = function showVoiceSettingsActionShee
 export const ChannelCallConnectingHeader = function ChannelCallConnectingHeader(channel) {
   channel = channel.channel;
   const tmp = closure_15();
-  let obj = channel(9937);
+  let obj = channel(9942);
   const isVoiceChannelLocked = obj.useIsVoiceChannelLocked(channel);
   let fn = null;
   if (PermissionStore.can(Permissions.CREATE_INSTANT_INVITE, channel)) {
@@ -180,7 +180,7 @@ export const ChannelCallConnectingHeader = function ChannelCallConnectingHeader(
   const items = [closure_12(View, { style: { width: 4 } }), , ,];
   let tmp9Result = null;
   if (null != fn) {
-    obj = { source: _modDef10001, onPress: fn, accessibilityLabel: null };
+    obj = { source: _modDef10006, onPress: fn, accessibilityLabel: null };
     const intl = tmp5(1114).intl;
     obj = { channelName: tmp4 };
     obj.accessibilityLabel = intl.formatToPlainString(tmp5(1114).t["dHHb/2"], obj);

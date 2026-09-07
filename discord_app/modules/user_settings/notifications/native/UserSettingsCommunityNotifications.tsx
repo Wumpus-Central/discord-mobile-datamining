@@ -64,7 +64,7 @@ export default function UserSettingsCommunityNotifications() {
       }),
     };
     obj.children = closure_4(tmp2(4973).Stack, obj);
-    tmp5 = closure_4(tmp2(8593).Form, obj);
+    tmp5 = closure_4(tmp2(8598).Form, obj);
   }
   return tmp5;
 }

@@ -806,7 +806,7 @@ let result = size.fileFinishedImporting("modules/quests/native/VideoQuestModal/V
 export default noop.memo(function VideoQuestModalContentInProgress(arg0) {
   ({ onClose, sourceQuestContent } = arg0);
   ({ contentWidth, isFullscreen, onNavigateToPostWatchVideo, onEnd, setIsFullscreen } = arg0);
-  let obj = sourceQuestContent(15126);
+  let obj = sourceQuestContent(15129);
   const quest = obj.useVideoQuestModalContext().quest;
   items = [quest];
   items1 = [quest];
@@ -823,11 +823,11 @@ export default noop.memo(function VideoQuestModalContentInProgress(arg0) {
   const callback = noop.useCallback(() => dependencyMap((arg0) => !arg0), []);
   const callback1 = noop.useCallback(() => {
     const obj = { quest };
-    obj.openLazy(asyncRequireImpl(15154, dependencyMap.paths), "transcript-" + quest.id, obj);
+    obj.openLazy(asyncRequireImpl(15157, dependencyMap.paths), "transcript-" + quest.id, obj);
   }, items2);
   const tmp5 = getQuestImpressionId(noop.useState(false), 2);
-  getQuestImpressionId = sourceQuestContent(11486).useGetQuestImpressionId();
-  const obj2 = sourceQuestContent(11486);
+  getQuestImpressionId = sourceQuestContent(11491).useGetQuestImpressionId();
+  const obj2 = sourceQuestContent(11491);
   [tmp11, noop] = getQuestImpressionId(noop.useState(false), 2);
   const tmp10 = getQuestImpressionId(noop.useState(false), 2);
   const isShareableQuestResult = sourceQuestContent(7722).isShareableQuest(quest.config);
@@ -844,9 +844,9 @@ export default noop.memo(function VideoQuestModalContentInProgress(arg0) {
           "video_quest_modal_in_progress",
         )
       ) {
-        const questUrl = getQuestUrl(11193);
+        const questUrl = getQuestUrl(11198);
         obj = {
-          type: getQuestUrl(11197).AdUserActionType.CLICK_INTERNAL,
+          type: getQuestUrl(11202).AdUserActionType.CLICK_INTERNAL,
           adCreativeType: getQuestUrl(5451).AdCreativeType.QUEST,
           adCreativeId: quest.id,
           questContentCTA: getQuestUrl(7728).QuestContentCTA.MOBILE_SHARESHEET,
@@ -876,7 +876,7 @@ export default noop.memo(function VideoQuestModalContentInProgress(arg0) {
       noop(true);
       const questUrl2 = getQuestUrl(8361);
       const obj1 = { message: null, iOSOnlyShareCallback: null };
-      const questUrl3 = getQuestUrl(11295);
+      const questUrl3 = getQuestUrl(11300);
       getQuestUrl = questUrl3.getQuestUrl;
       obj1.message = getQuestUrl(tmp.id);
       obj1.iOSOnlyShareCallback = function iOSOnlyShareCallback() {
@@ -888,7 +888,7 @@ export default noop.memo(function VideoQuestModalContentInProgress(arg0) {
     }
   }, items3);
   const obj3 = sourceQuestContent(7722);
-  const videoQuestClickCtaAndMaybeCloseModal = sourceQuestContent(15155).useVideoQuestClickCtaAndMaybeCloseModal({
+  const videoQuestClickCtaAndMaybeCloseModal = sourceQuestContent(15158).useVideoQuestClickCtaAndMaybeCloseModal({
     quest,
     onClose,
     sourceQuestContent,
@@ -908,14 +908,14 @@ export default noop.memo(function VideoQuestModalContentInProgress(arg0) {
     const obj = { questId: quest.id };
     const result = obj.openRewardDetailsBottomSheet(obj);
   }, items6);
-  const obj4 = sourceQuestContent(15155);
-  const videoExternallyPaused = sourceQuestContent(15156).useVideoExternallyPaused(quest.id, tmp11);
+  const obj4 = sourceQuestContent(15158);
+  const videoExternallyPaused = sourceQuestContent(15159).useVideoExternallyPaused(quest.id, tmp11);
   const tmp19 =
     quest.config.taskConfigV2.tasks[sourceQuestContent(undefined, 5452).FirstPartyQuestTaskTypes.WATCH_VIDEO_ON_MOBILE];
   let tmp20 = null == tmp19;
   if (!tmp20) {
-    tmp20 = "portrait" === sourceQuestContent(11512).getVideoOrientation(tmp19);
-    const tmpResult = sourceQuestContent(11512);
+    tmp20 = "portrait" === sourceQuestContent(11517).getVideoOrientation(tmp19);
+    const tmpResult = sourceQuestContent(11517);
   }
   obj = {
     quest,

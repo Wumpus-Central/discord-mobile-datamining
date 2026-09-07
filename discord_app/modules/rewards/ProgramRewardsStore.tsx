@@ -122,7 +122,7 @@ let DidNotFetchReason = {
   CACHE_SHOULD_NOT_FETCH: "CACHE_SHOULD_NOT_FETCH",
 };
 let c6 = 86400000;
-const networkTtlCache = new fn(13725).NetworkTtlCache({ ttlMs: 86400000 });
+const networkTtlCache = new fn(13729).NetworkTtlCache({ ttlMs: 86400000 });
 let closure_8 = {
   MORE_THAN_24H_BEFORE_REWARD: "MORE_THAN_24H_BEFORE_REWARD",
   LESS_THAN_24H_BEFORE_REWARD: "LESS_THAN_24H_BEFORE_REWARD",

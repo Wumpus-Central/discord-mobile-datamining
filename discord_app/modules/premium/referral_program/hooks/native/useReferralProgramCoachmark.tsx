@@ -2,7 +2,7 @@
 import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../../intl/index.native.tsx";
 import FastImageDefault from "../../../../../components_native/common/FastImage.tsx";
-import _modDef16787 from "../../../../../../_runtime/metro/16787__.js";
+import _modDef16790 from "../../../../../../_runtime/metro/16790__.js";
 import _slicedToArray from "../../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
@@ -10,9 +10,9 @@ require = fn;
 function ReferralProgramCoachmarkImg() {
   const tmp = closure_9();
   let obj = { style: tmp.coachmarkImageContainer, children: null };
-  obj = { source: _modDef16787, style: tmp.coachmarkImage };
-  obj.children = jsx(FastImageDefault, { source: _modDef16787, style: tmp.coachmarkImage });
-  return <View source={_modDef16787} style={tmp.coachmarkImage} />;
+  obj = { source: _modDef16790, style: tmp.coachmarkImage };
+  obj.children = jsx(FastImageDefault, { source: _modDef16790, style: tmp.coachmarkImage });
+  return <View source={_modDef16790} style={tmp.coachmarkImage} />;
 }
 const View = fn(17).View;
 const UserSettingsSections = fn(1074).UserSettingsSections;

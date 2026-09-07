@@ -349,11 +349,11 @@ let closure_35 = noop.memo((tab) => {
 });
 const results = [];
 let items = [
-  fn(9835).AutocompleterResultTypes.GUILD,
-  fn(9835).AutocompleterResultTypes.TEXT_CHANNEL,
-  fn(9835).AutocompleterResultTypes.GROUP_DM,
-  fn(9835).AutocompleterResultTypes.VOICE_CHANNEL,
-  fn(9835).AutocompleterResultTypes.USER,
+  fn(9840).AutocompleterResultTypes.GUILD,
+  fn(9840).AutocompleterResultTypes.TEXT_CHANNEL,
+  fn(9840).AutocompleterResultTypes.GROUP_DM,
+  fn(9840).AutocompleterResultTypes.VOICE_CHANNEL,
+  fn(9840).AutocompleterResultTypes.USER,
 ];
 const __initData3 = {
   code: "function LaunchPadTsx3(){const{sharedState}=this.__closure;return sharedState.get()===0;}",

@@ -40,7 +40,7 @@ export default function EnableCommunityModal() {
         return null;
       },
       render() {
-        return closure_1_4(closure_1_1(17664), {});
+        return closure_1_4(closure_1_1(17667), {});
       },
     };
     obj = {
@@ -49,7 +49,7 @@ export default function EnableCommunityModal() {
         return null;
       },
       render() {
-        return closure_1_4(closure_1_1(17676), {});
+        return closure_1_4(closure_1_1(17679), {});
       },
     };
     obj = {
@@ -58,7 +58,7 @@ export default function EnableCommunityModal() {
         return null;
       },
       render() {
-        return closure_1_4(closure_1_1(17677), {});
+        return closure_1_4(closure_1_1(17680), {});
       },
     };
     return {

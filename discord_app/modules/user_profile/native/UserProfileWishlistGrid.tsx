@@ -82,8 +82,8 @@ class WishlistEmptyState {
   }
 }
 const View = fn(17).View;
-let closure_9 = fn(8780).isCollectiblesWishlistItemRecord;
-const getWishlistProductLines = fn(8778).getWishlistProductLines;
+let closure_9 = fn(8785).isCollectiblesWishlistItemRecord;
+const getWishlistProductLines = fn(8783).getWishlistProductLines;
 let Constants = fn(8183);
 ({ TrackUserProfileWishlistActions: closure_14, UserProfileSections: closure_15 } = Constants);
 Constants = fn(1074);
@@ -700,7 +700,7 @@ export default function UserProfileWishlistGrid(wishlistId) {
     trackUserProfileWishlistAction(obj);
     obj = { wishlistId, analyticsContext: context, analyticsLocations };
     ActionSheetActionCreatorsDefault.openLazy(
-      asyncRequireImpl(13089, dependencyMap.paths),
+      asyncRequireImpl(13093, dependencyMap.paths),
       "EditWishlistActionSheet",
       obj,
       "stack",

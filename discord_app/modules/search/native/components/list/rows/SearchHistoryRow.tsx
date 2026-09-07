@@ -32,7 +32,7 @@ function SearchHistoryTextRow(searchContext) {
   const searchHistoryItem = searchContext.searchHistoryItem;
   const tmp = closure_12();
   dependencyMap = tmp;
-  let obj = searchContext(16642);
+  let obj = searchContext(16645);
   const onPressSearchHistoryText = obj.useOnPressSearchHistoryText({ searchContext });
   const items = [onPressSearchHistoryText, searchContext, , ,];
   ({ tags: arr[2], text: arr[3], type: arr[4] } = searchHistoryItem);
@@ -77,7 +77,7 @@ function SearchHistoryTextRow(searchContext) {
     style: tmp.iconContainer,
     children: closure_10(searchContext(7051).MagnifyingGlassIcon, { size: "sm", color: "interactive-text-default" }),
   });
-  return closure_10(searchContext(16652).SearchListRow, obj);
+  return closure_10(searchContext(16655).SearchListRow, obj);
 }
 function SearchHistoryGroupDMRow(searchContext) {
   searchContext = searchContext.searchContext;

@@ -745,7 +745,7 @@ let closure_28 = async function _createPoll(arg0) {
               tmp2 = items;
             }
             poll_media = { attachment_ids: tmp2 };
-            if (closure_1_5 === guildId(11720).PollLayoutTypes.DEFAULT) {
+            if (closure_1_5 === guildId(11725).PollLayoutTypes.DEFAULT) {
               let trimmed;
               if (text.text != null) {
                 trimmed = str2.trim();
@@ -781,7 +781,7 @@ let closure_28 = async function _createPoll(arg0) {
             attachmentsToUpload: uploads,
             scheduledTimestamp: closure_129_7,
             onAttachmentUploadError(file, code, reason) {
-              guildId(9309);
+              guildId(9314);
               const obj = { file, guildId: guildId.getGuildId(), analyticsLocations: [], code, reason };
               const result = obj.handleUploadMessageAttachmentsErrors(obj);
             },
@@ -878,7 +878,7 @@ let closure_29 = async function _endPollEarly(arg0) {
   return "PX_16";
 };
 const DraftType = fn(4901).DraftType;
-const PollsInteractionStore = fn(11427);
+const PollsInteractionStore = fn(11432);
 ({ getPollState: map1, updatePollState: closure_14 } = PollsInteractionStore);
 const Constants = fn(1074);
 ({ AnalyticEvents: closure_15, JoinGuildSources: closure_16 } = Constants);

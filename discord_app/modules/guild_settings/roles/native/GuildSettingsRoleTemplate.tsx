@@ -9,8 +9,8 @@ import AppAnalyticsUtils from "../../../app_analytics/AppAnalyticsUtils.tsx";
 import useIsScreenReaderEnabled from "../../../a11y/native/useIsScreenReaderEnabled.native.tsx";
 import useIsWindowLargeDefault from "../../../screen/native/useIsWindowLarge.tsx";
 import _modDef8278 from "../../../../../_runtime/metro/08278__.js";
-import PaginationDefault from "../../../../../_runtime/10757_Pagination.js";
-import _modDef11564 from "../../../../../_runtime/metro/11564__.js";
+import PaginationDefault from "../../../../../_runtime/10762_Pagination.js";
+import _modDef11569 from "../../../../../_runtime/metro/11569__.js";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import AccessibilityStore from "../../../a11y/AccessibilityStore.tsx";
@@ -19,7 +19,7 @@ import GuildStore from "../../../../stores/GuildStore.tsx";
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, Dimensions, ScrollView: metroRequire } = get_ActivityIndicator);
-const GuildSettingsRoleConstants = fn(17609);
+const GuildSettingsRoleConstants = fn(17612);
 ({
   PermissionTemplateTypes: closure_9,
   PermissionTemplates: c10,
@@ -297,7 +297,7 @@ export default function GuildSettingsRoleTemplate(arg0) {
         obj5.children = item.contents().map((children, index) => {
           let obj = { style: closure_3.templateContent, children: null };
           obj = {
-            source: _modDef11564,
+            source: _modDef11569,
             size: native.IconSizes.MEDIUM,
             color: nativeDefault.unsafe_rawColors.GREEN_360,
           };

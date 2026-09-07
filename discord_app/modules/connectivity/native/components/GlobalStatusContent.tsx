@@ -15,7 +15,7 @@ import SessionsStore from "../../../../stores/SessionsStore.tsx";
 
 const require = fn;
 const View = fn(17).View;
-const RTC_PANEL_HEIGHT = fn(9680).RTC_PANEL_HEIGHT;
+const RTC_PANEL_HEIGHT = fn(9685).RTC_PANEL_HEIGHT;
 const RTCConnectionStates = fn(1074).RTCConnectionStates;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);

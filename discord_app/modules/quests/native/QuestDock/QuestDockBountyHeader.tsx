@@ -10,7 +10,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 require = fn;
 const View = fn(17).View;
 const QuestDockMode = fn(5444).QuestDockMode;
-const QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED = fn(15095).QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED;
+const QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED = fn(15098).QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
 const PX_32 = nativeDefault.space.PX_32;
@@ -70,7 +70,7 @@ size = fn(2);
 const result = size.fileFinishedImporting("modules/quests/native/QuestDock/QuestDockBountyHeader.tsx");
 
 export default noop.memo(function QuestDockBountyHeader() {
-  let obj = activeQuestDockMode(15102);
+  let obj = activeQuestDockMode(15105);
   const questDockBounty = obj.useQuestDockBounty();
   const tmp4 = closure_9();
   let str = questDockBounty.productName;
@@ -79,7 +79,7 @@ export default noop.memo(function QuestDockBountyHeader() {
   }
   const intl = tmp(1114).intl;
   const stringResult = intl.string(activeQuestDockMode(1114).t["4QEsIN"]);
-  activeQuestDockMode = noop.useContext(tmp(15096).QuestDockGestureContext).activeQuestDockMode;
+  activeQuestDockMode = noop.useContext(tmp(15099).QuestDockGestureContext).activeQuestDockMode;
   let tmpResult = tmp(4296);
   const fn = function n() {
     let obj = spring;
@@ -120,11 +120,11 @@ export default noop.memo(function QuestDockBountyHeader() {
   fn2.__workletHash = 3799310117358;
   fn2.__initData = __initData2;
   const animatedStyle1 = tmpResult.useAnimatedStyle(fn2);
-  const bountyCreative = activeQuestDockMode(15102).useBountyCreative(questDockBounty);
-  const tmpResult1 = activeQuestDockMode(15102);
-  const tmpResult2 = activeQuestDockMode(15092);
+  const bountyCreative = activeQuestDockMode(15105).useBountyCreative(questDockBounty);
+  const tmpResult1 = activeQuestDockMode(15105);
+  const tmpResult2 = activeQuestDockMode(15095);
   const obj1 = {
-    onSubmenuPress: activeQuestDockMode(15092).useActionSheetPressHandler(bountyCreative),
+    onSubmenuPress: activeQuestDockMode(15095).useActionSheetPressHandler(bountyCreative),
     children: null,
   };
   const obj2 = {
@@ -135,7 +135,7 @@ export default noop.memo(function QuestDockBountyHeader() {
     children: null,
   };
   let combined = stringResult;
-  const actionSheetPressHandler = activeQuestDockMode(15092).useActionSheetPressHandler(bountyCreative);
+  const actionSheetPressHandler = activeQuestDockMode(15095).useActionSheetPressHandler(bountyCreative);
   if ("" !== str) {
     const _HermesInternal = HermesInternal;
     combined = "" + str + ", " + stringResult;

@@ -2,7 +2,7 @@
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
 import UserSettingsModalActionCreatorsDefault from "../../../../actions/UserSettingsModalActionCreators.tsx";
-import _modDef10398 from "../../../../../_runtime/metro/10398__.js";
+import _modDef10403 from "../../../../../_runtime/metro/10403__.js";
 import SettingBuilders from "../../../settings/native/renderer/SettingBuilders.tsx";
 import SettingLayoutDefault from "../../../settings/native/renderer/SettingLayout.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
@@ -34,7 +34,7 @@ function VideoUploadQualityNitroUpsell() {
     const obj2 = { style: tmp3.cardContent, children: null };
     const obj3 = {
       style: tmp3.cardIcon,
-      source: _modDef10398,
+      source: _modDef10403,
       size: tmp(1178).Icon.Sizes.SMALL,
       color: nativeDefault.unsafe_rawColors.PRIMARY_400,
     };

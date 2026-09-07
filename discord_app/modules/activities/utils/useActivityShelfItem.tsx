@@ -89,7 +89,7 @@ function useOnActivityItemSelected(arg0) {
   }
   let tmp = useActivityAction({ context, applicationId: str, fetchesApplication });
   analyticsLocations = context(7162)().analyticsLocations;
-  closure_14 = context(9633)();
+  closure_14 = context(9638)();
   obj = canLaunchFrame;
   closure_15 = obj.canLaunchFrame(application);
   if (null == application) {
@@ -352,7 +352,7 @@ function useOnActivityItemSelected(arg0) {
 }
 const STAFF_RELEASE_PHASES = fn(1920).STAFF_RELEASE_PHASES;
 const ApplicationFlags = fn(1074).ApplicationFlags;
-const MAIN_SURFACE = fn(9511).MAIN_SURFACE;
+const MAIN_SURFACE = fn(9516).MAIN_SURFACE;
 const ActivityAction = { START: 0, [0]: "START", JOIN: 1, [1]: "JOIN", LEAVE: 2, [2]: "LEAVE" };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/activities/utils/useActivityShelfItem.tsx");

@@ -113,7 +113,7 @@ export default function useUploadAvatar(guildId) {
                 }
               }
             }
-            obj1 = tmp2(14593);
+            obj1 = tmp2(14596);
             const obj4 = { imageUri: base64, description: null, originalMd5: null };
             tmp22 = tmp2;
             obj3 = tmp2(8169);

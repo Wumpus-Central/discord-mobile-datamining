@@ -4,9 +4,9 @@ import native from "../../../../../../design/void/native.tsx";
 import UserUtils from "../../../../../../utils/UserUtils.tsx";
 import Text_Text from "../../../../../../design/components/Text/native/Text.tsx";
 import BotTagDefault from "../../../../../applications/native/BotTag.tsx";
-import _modDef9753 from "../../../../../../../_runtime/metro/09753__.js";
+import _modDef9758 from "../../../../../../../_runtime/metro/09758__.js";
 import ActivityStatusDefault from "../../../../../activity_status/native/ActivityStatus.tsx";
-import _modDef13502 from "../../../../../../../_runtime/metro/13502__.js";
+import _modDef13506 from "../../../../../../../_runtime/metro/13506__.js";
 import asyncGeneratorStep from "../../../../../../../_runtime/00005_asyncGeneratorStep.js";
 import _slicedToArray from "../../../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../../../_runtime/metro/00019__.js";
@@ -174,7 +174,7 @@ export default noop.memo(function DMRow(user) {
       let tmp4Result = isOwner;
       if (isOwner) {
         obj = { style: title.tag, children: null };
-        const obj1 = { size: native.Icon.Sizes.REFRESH_SMALL_16, source: _modDef9753, disableColor: true };
+        const obj1 = { size: native.Icon.Sizes.REFRESH_SMALL_16, source: _modDef9758, disableColor: true };
         obj.children = map1(native.Icon, obj1);
         tmp4Result = map1(timestampProducer, obj);
       }
@@ -182,7 +182,7 @@ export default noop.memo(function DMRow(user) {
       tmp4Result = null != premiumSince;
       if (tmp4Result) {
         obj2 = { style: title.tag, children: null };
-        const obj3 = { size: native.Icon.Sizes.REFRESH_SMALL_16, source: _modDef13502, disableColor: true };
+        const obj3 = { size: native.Icon.Sizes.REFRESH_SMALL_16, source: _modDef13506, disableColor: true };
         obj2.children = map1(native.Icon, obj3);
         tmp4Result = map1(timestampProducer, obj2);
       }

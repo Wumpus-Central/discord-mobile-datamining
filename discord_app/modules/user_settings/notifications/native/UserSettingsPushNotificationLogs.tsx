@@ -194,7 +194,7 @@ export default function UserSettingsPushNotificationLogs() {
             closure_128_0 = undefined;
             dependencyMap = 1;
             c3 = 1;
-            const obj1 = { value: tmp5(10191)(), done: false };
+            const obj1 = { value: tmp5(10196)(), done: false };
             return obj1;
           }
         } else if (arg0 === 1) {
@@ -207,7 +207,7 @@ export default function UserSettingsPushNotificationLogs() {
         } else {
           closure_128_0 = value;
           obj = tmp2(8361);
-          const obj3 = { message: tmp5(10192)(closure_128_0, false) };
+          const obj3 = { message: tmp5(10197)(closure_128_0, false) };
           obj.showShareActionSheet(obj3, "push-notification-logs");
           c3 = 3;
           return { value: "HermesInternal", done: null };
@@ -218,7 +218,7 @@ export default function UserSettingsPushNotificationLogs() {
       }
     }
   });
-  obj.children = closure_7(defaultValue(9053).ShareIcon, {});
+  obj.children = closure_7(defaultValue(9058).ShareIcon, {});
   items1[1] = closure_7(defaultValue(5123).PressableOpacity, obj);
   obj.children = items1;
   let items2 = [closure_8(View, obj)];
@@ -251,7 +251,7 @@ export default function UserSettingsPushNotificationLogs() {
     obj.children = items;
     return React6(View, obj, item.index);
   };
-  items2[1] = closure_7(defaultValue(8874).FlashList, obj1);
+  items2[1] = closure_7(defaultValue(8879).FlashList, obj1);
   obj.children = items2;
   return closure_8(View, obj);
 }

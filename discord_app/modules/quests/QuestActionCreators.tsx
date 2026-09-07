@@ -2397,7 +2397,7 @@ let closure_37 = async function _fetchQuestHomeHeroPreview(arg0) {
     }
   }
 };
-const getVisibleGuildIdsMethod = fn(11195).getVisibleGuildIdsMethod;
+const getVisibleGuildIdsMethod = fn(11200).getVisibleGuildIdsMethod;
 const FetchStatus = fn(7705).FetchStatus;
 const ORBS_INTRO_QUEST_ID = fn(5444).ORBS_INTRO_QUEST_ID;
 const Constants = fn(1074);

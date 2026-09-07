@@ -8,21 +8,21 @@ import GameIconDefault from "../../modules/game_detection/native/GameIcon.tsx";
 import ChevronSmallRightIcon2 from "../../design/components/Icon/native/redesign/generated/ChevronSmallRightIcon.tsx";
 import SlayerStorefrontUtils from "../../modules/slayer_storefront/SlayerStorefrontUtils.tsx";
 import SlayerStorefrontItemCardDefault from "../../modules/slayer_storefront/native/SlayerStorefrontItemCard.tsx";
-import _modDef11022 from "../../../discord_assets/assets/premium/gifting/halloween-card-small.png.js";
+import _modDef11027 from "../../../discord_assets/assets/premium/gifting/halloween-card-small.png.js";
 import ChevronSmallDownIcon from "../../design/components/Icon/native/redesign/generated/ChevronSmallDownIcon.tsx";
 import GiftCodeActionCreatorsDefault from "../../actions/GiftCodeActionCreators.tsx";
 import SubscriptionUtils from "../../utils/SubscriptionUtils.tsx";
-import _modDef13193 from "../../../_runtime/metro/13193__.js";
-import _modDef13194 from "../../../_runtime/metro/13194__.js";
-import _modDef13195 from "../../../_runtime/metro/13195__.js";
-import _modDef13196 from "../../../_runtime/metro/13196__.js";
 import _modDef13197 from "../../../_runtime/metro/13197__.js";
 import _modDef13198 from "../../../_runtime/metro/13198__.js";
 import _modDef13199 from "../../../_runtime/metro/13199__.js";
 import _modDef13200 from "../../../_runtime/metro/13200__.js";
 import _modDef13201 from "../../../_runtime/metro/13201__.js";
+import _modDef13202 from "../../../_runtime/metro/13202__.js";
+import _modDef13203 from "../../../_runtime/metro/13203__.js";
 import _modDef13204 from "../../../_runtime/metro/13204__.js";
 import _modDef13205 from "../../../_runtime/metro/13205__.js";
+import _modDef13208 from "../../../_runtime/metro/13208__.js";
+import _modDef13209 from "../../../_runtime/metro/13209__.js";
 import GiftCodeRowDefault from "GiftCodeRow.tsx";
 import noop from "../../../_runtime/metro/00019__.js";
 import ApplicationStore from "../../modules/applications/ApplicationStore.tsx";
@@ -268,35 +268,35 @@ prototype["renderHeader"] = function renderHeader(source, children) {
 };
 prototype["getCardHeaderThumbnail"] = function getCardHeaderThumbnail(id, giftStyle) {
   if (constants2.STANDARD_BOX === giftStyle) {
-    return _modDef13193;
-  } else if (constants2.CAKE === giftStyle) {
-    return _modDef13195;
-  } else if (constants2.CHEST === giftStyle) {
-    return _modDef13196;
-  } else if (constants2.COFFEE === giftStyle) {
-    return _modDef13194;
-  } else if (constants2.SEASONAL_STANDARD_BOX === giftStyle) {
     return _modDef13197;
-  } else if (constants2.SEASONAL_CAKE === giftStyle) {
-    return _modDef13198;
-  } else if (constants2.SEASONAL_CHEST === giftStyle) {
+  } else if (constants2.CAKE === giftStyle) {
     return _modDef13199;
-  } else if (constants2.SEASONAL_COFFEE === giftStyle) {
+  } else if (constants2.CHEST === giftStyle) {
     return _modDef13200;
+  } else if (constants2.COFFEE === giftStyle) {
+    return _modDef13198;
+  } else if (constants2.SEASONAL_STANDARD_BOX === giftStyle) {
+    return _modDef13201;
+  } else if (constants2.SEASONAL_CAKE === giftStyle) {
+    return _modDef13202;
+  } else if (constants2.SEASONAL_CHEST === giftStyle) {
+    return _modDef13203;
+  } else if (constants2.SEASONAL_COFFEE === giftStyle) {
+    return _modDef13204;
   } else if (constants2.NITROWEEN_STANDARD === giftStyle) {
-    const obj = { uri: _modDef11022 };
+    const obj = { uri: _modDef11027 };
     return obj;
   } else if (TIER_0.TIER_0 === id) {
-    return _modDef13201;
+    return _modDef13205;
   } else if (TIER_0.TIER_1 === id) {
-    return _modDef13204;
+    return _modDef13208;
   } else {
     if (TIER_0.TIER_2 !== id) {
       if (TIER_0.LEGACY !== id) {
         return null;
       }
     }
-    return _modDef13205;
+    return _modDef13209;
   }
 };
 prototype["renderCardHeader"] = function renderCardHeader(sku) {

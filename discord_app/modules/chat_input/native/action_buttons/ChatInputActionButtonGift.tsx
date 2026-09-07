@@ -9,7 +9,7 @@ import PromotionsStore from "../../../premium/promotions/PromotionsStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-const ChatInputActionType = fn(11962).ChatInputActionType;
+const ChatInputActionType = fn(11966).ChatInputActionType;
 const ContentDismissActionType = fn(1954).ContentDismissActionType;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);

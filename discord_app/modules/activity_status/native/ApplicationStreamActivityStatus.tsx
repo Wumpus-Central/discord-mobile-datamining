@@ -49,7 +49,7 @@ export default function ApplicationStreamActivityStatus(hideText) {
   }
   let tmp12 = !hideIcon;
   if (!hideIcon) {
-    obj = { icon: tmp7(10883).TvIcon, style: iconStyle };
+    obj = { icon: tmp7(10888).TvIcon, style: iconStyle };
     tmp12 = React3(ActivityStatusIconDefault, obj);
   }
   const children = [tmp12];

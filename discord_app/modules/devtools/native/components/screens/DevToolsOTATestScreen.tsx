@@ -140,7 +140,7 @@ export default function DevToolsOTATestScreen() {
             closure_0 = tmp2;
             closure_128_0 = undefined;
             noop(true);
-            let obj1 = tmp5(11791);
+            let obj1 = tmp5(11796);
             dependencyMap = 1;
             c3 = 1;
             obj1 = { value: null, done: false };
@@ -192,7 +192,7 @@ export default function DevToolsOTATestScreen() {
   }, []);
   let obj = { style: tmp.wrap, contentContainerStyle: tmp.contentContainer, children: null };
   obj = { title: "OTA Status", hasIcons: true, children: null };
-  obj = { label: "Status", subLabel: tmp8[0], icon: closure_8(subLabel(15562).WrenchIcon, {}) };
+  obj = { label: "Status", subLabel: tmp8[0], icon: closure_8(subLabel(15565).WrenchIcon, {}) };
   const items = [
     closure_8(subLabel(5605).TableRow, obj),
     closure_8(subLabel(5605).TableRow, {
@@ -225,7 +225,7 @@ export default function DevToolsOTATestScreen() {
     closure_8(subLabel(5605).TableRow, {
       label: "Manifest Source",
       subLabel: str,
-      icon: closure_8(subLabel(15562).WrenchIcon, {}),
+      icon: closure_8(subLabel(15565).WrenchIcon, {}),
     }),
   ];
   let obj3 = { icon: closure_8(subLabel(7910).PaperIcon, {}), label: null };
@@ -242,7 +242,7 @@ export default function DevToolsOTATestScreen() {
   items2[1] = closure_8(subLabel(5605).TableRow, obj3);
   obj4.children = items2;
   items1[1] = closure_9(subLabel(5687).TableRowGroup, obj4);
-  const obj5 = { icon: closure_8(subLabel(15562).WrenchIcon, {}), label: "Is cookie set?", subLabel: null };
+  const obj5 = { icon: closure_8(subLabel(15565).WrenchIcon, {}), label: "Is cookie set?", subLabel: null };
   let str3 = "Yes";
   if (null == tmp7) {
     str3 = "No";
@@ -251,7 +251,7 @@ export default function DevToolsOTATestScreen() {
   const items3 = [closure_8(subLabel(5605).TableRow, obj5)];
   let tmp12Result = null != tmp7;
   if (tmp12Result) {
-    const obj6 = { icon: closure_8(tmp15(15562).WrenchIcon, {}), label: null };
+    const obj6 = { icon: closure_8(tmp15(15565).WrenchIcon, {}), label: null };
     const _JSON = JSON;
     obj6.label = JSON.stringify(tmp7, null, 2);
     tmp12Result = closure_8(tmp15(5605).TableRow, obj6);
@@ -262,7 +262,7 @@ export default function DevToolsOTATestScreen() {
     hasIcons: true,
     children: items3,
   });
-  let obj2 = { label: "Manifest Source", subLabel: str, icon: closure_8(subLabel(15562).WrenchIcon, {}) };
+  let obj2 = { label: "Manifest Source", subLabel: str, icon: closure_8(subLabel(15565).WrenchIcon, {}) };
   const items4 = [
     closure_8(subLabel(5605).TableRow, {
       label: "Check for Update & Reload",
@@ -284,7 +284,7 @@ export default function DevToolsOTATestScreen() {
   items4[1] = closure_8(subLabel(5605).TableRow, {
     label: "Verify OTA Files",
     subLabel: str4,
-    icon: closure_8(subLabel(15658).ClipboardCheckIcon, {}),
+    icon: closure_8(subLabel(15661).ClipboardCheckIcon, {}),
     onPress: function verifyFiles() {
       const self = this;
       const apply = closure_6.apply;

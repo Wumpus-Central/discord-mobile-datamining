@@ -1,7 +1,7 @@
 // discord_app/modules/collectibles/native/OrbsBadgeCoachmark.tsx
 import util from "../../../intl/index.native.tsx";
 import useCoachmark from "../../../design/components/Coachmark/native/useCoachmark.native.tsx";
-import _modDef11188 from "../../../../discord_assets/assets/orbs/orbs_badge_asset.png.js";
+import _modDef11193 from "../../../../discord_assets/assets/orbs/orbs_badge_asset.png.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -9,11 +9,11 @@ function OrbsBadgeCoachmarkImg() {
   const tmp = closure_7();
   let obj = { style: tmp.coachmarkImageContainer, children: null };
   obj = { source: null, style: null };
-  obj = { uri: _modDef11188 };
+  obj = { uri: _modDef11193 };
   obj.source = obj;
   obj.style = tmp.coachmarkImage;
-  obj.children = <hasOwnProperty uri={_modDef11188} />;
-  return <React4 uri={_modDef11188} />;
+  obj.children = <hasOwnProperty uri={_modDef11193} />;
+  return <React4 uri={_modDef11193} />;
 }
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, Image: hasOwnProperty } = get_ActivityIndicator);

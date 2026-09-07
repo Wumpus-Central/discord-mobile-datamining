@@ -38,7 +38,7 @@ export default function SettingsAgeGroupResetAlert() {
             dependencyMap = 1;
             c1 = 2;
             c3 = 1;
-            const obj1 = { value: tmp3(13764).resetAgeVerification(), done: false };
+            const obj1 = { value: tmp3(13767).resetAgeVerification(), done: false };
             return obj1;
           }
         } else if (1 === tmp7) {

@@ -9,7 +9,7 @@ import MobileGameCommunitiesStore from "MobileGameCommunitiesStore.tsx";
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ ScrollView: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-let closure_8 = fn(16265).MAX_DISPLAYED_UPSELL_GUILDS;
+let closure_8 = fn(16268).MAX_DISPLAYED_UPSELL_GUILDS;
 const AnalyticEvents = fn(1074).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);

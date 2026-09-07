@@ -68,12 +68,12 @@ function AddDescription(id) {
         const renderHeaderTextButton = obj.getRenderHeaderTextButton(
           intl.string(channelId(stateFromStores[14]).t["R3BPH+"]),
           () => {
-            id(9307);
+            id(9312);
             const obj = {};
             const merged = Object.assign(dependencyMap);
             obj.description = ref.current;
             obj.update(closure_1_0, closure_1_1, ChannelMessage.ChannelMessage, obj);
-            id(11239).close();
+            id(11244).close();
           },
         );
         let merged = Object.assign(arg0);

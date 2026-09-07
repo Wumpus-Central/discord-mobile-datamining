@@ -33,8 +33,8 @@ export const VideoKeyBindings = {
   FULLSCREEN: "f",
   MUTE: "m",
 };
-export const ControlBarSize = { MD: "md", LG: "lg" };
-export const ControlButtonSize = { MD: "md", LG: "lg" };
+export const ControlBarSize = { SM: "sm", MD: "md", LG: "lg" };
+export const ControlButtonSize = { SM: "sm", MD: "md", LG: "lg" };
 export const VideoPlayerStateChangeReason = {
   VISIBILITY: "visibility",
   FOCUS: "focus",

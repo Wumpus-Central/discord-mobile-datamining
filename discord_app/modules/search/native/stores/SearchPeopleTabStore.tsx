@@ -48,7 +48,7 @@ prototype["search"] = function search(str) {
       let items = [];
     } else {
       const values = _modDef12.chain(ChannelStore.getMutablePrivateChannels()).values();
-      const found = values.filter(trimmed1(12366).filterGroupDMs);
+      const found = values.filter(trimmed1(12370).filterGroupDMs);
       const mapped = found.map((id) => {
         const items = [
           id,

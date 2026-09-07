@@ -3,11 +3,11 @@ import nativeDefault from "../../../../discord_common/js/packages/tokens/native.
 import native from "../../../design/void/native.tsx";
 import LinkingDefault from "../../../lib/native/Linking.tsx";
 import common_AlertDefault from "../../../components_native/common/Alert.tsx";
-import _modDef9444 from "../../../../_runtime/metro/09444__.js";
+import _modDef9449 from "../../../../_runtime/metro/09449__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const GameConsoleConstants = fn(9233);
+const GameConsoleConstants = fn(9238);
 ({ XBOX_ANDROID_APP_LINK: c3, XBOX_IOS_APP_LINK: closure_4 } = GameConsoleConstants);
 const jsx = fn(21).jsx;
 fn(4560);
@@ -32,7 +32,7 @@ export default function XboxInstallAlert(arg0) {
   obj.cancelText = intl4.string(require("util").t.kYaBOg);
   obj.fillCancelText = true;
   obj.renderConfirmRightIcon = function renderConfirmRightIcon() {
-    return jsx(native.Icon, { source: _modDef9444, style: closure_0.externalLinkIcon });
+    return jsx(native.Icon, { source: _modDef9449, style: closure_0.externalLinkIcon });
   };
   obj.onConfirm = function onConfirm() {
     const obj = closure_0(1115);

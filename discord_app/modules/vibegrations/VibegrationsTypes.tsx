@@ -13,6 +13,7 @@ const items = [
   { id: "gpt-5.6-sol", label: "GPT-5.6 Sol", provider: "openai" },
   { id: "gpt-5.6-terra", label: "GPT-5.6 Terra", provider: "openai" },
   { id: "gpt-5.6-luna", label: "GPT-5.6 Luna", provider: "openai" },
+  { id: "gpt-6-astra", label: "GPT-6 Astra", provider: "openai" },
 ];
 let obj = { main: items, subagent: items, thinking: ["low", "medium", "high", "xhigh", "max"] };
 const items1 = [

@@ -126,7 +126,7 @@ function ActionBar(channel) {
       const items5 = [,];
       ({ actionButton: arr9[0], mediaButton: arr9[1] } = tmp);
       obj2.style = items5;
-      obj2.IconComponent = tmp2(8862).TagIcon;
+      obj2.IconComponent = tmp2(8867).TagIcon;
       obj2.onPress = function onPress() {
         timestampProducer.dismiss();
         const obj = {
@@ -155,12 +155,12 @@ function ActionBar(channel) {
             closure_1_7 !== channel(1609).KeyboardTypes.SYSTEM &&
             closure_1_7 !== channel(1609).KeyboardTypes.EXPRESSION;
         };
-        obj.openLazy(asyncRequireImpl(11248, dependencyMap.paths), "ForumPostTagsActionSheet", obj);
+        obj.openLazy(asyncRequireImpl(11253, dependencyMap.paths), "ForumPostTagsActionSheet", obj);
       };
       tmp10 = closure_29(tmp2(7377).HeaderActionButton, obj2);
     }
     items4[1] = tmp10;
-    let tmp18 = lastInput === tmp2(10259).PostComposerInputs.CONTENT;
+    let tmp18 = lastInput === tmp2(10264).PostComposerInputs.CONTENT;
     if (tmp18) {
       const obj3 = {
         accessibilityLabel: null,
@@ -172,7 +172,7 @@ function ActionBar(channel) {
       const intl3 = tmp2(1114).intl;
       obj3.accessibilityLabel = intl3.string(tmp2(1114).t.iZ7Mz9);
       obj3.style = tmp.actionButton;
-      obj3.IconComponent = tmp2(8757).ReactionIcon;
+      obj3.IconComponent = tmp2(8762).ReactionIcon;
       obj3.onPress = onShowExpressionPicker;
       tmp18 = closure_29(tmp2(7377).HeaderActionButton, obj3);
     }
@@ -212,7 +212,7 @@ function ActionBar(channel) {
     ({ actionButton: arr7[0], mediaButton: arr7[1] } = tmp);
     obj7.style = items6;
     if (tmp8) {
-      let ImageIcon = tmp2(11246).KeyboardIcon;
+      let ImageIcon = tmp2(11251).KeyboardIcon;
     } else {
       ImageIcon = tmp2(5087).ImageIcon;
     }

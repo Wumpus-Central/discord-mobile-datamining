@@ -105,13 +105,13 @@ export default function QuestBottomSheetConsoleConnect(quest) {
   ({ step: importDefault, sourceQuestContent: dependencyMap } = quest);
   function openQuestBottomSheet() {
     const obj = { questId: quest.id, initialStep, sourceQuestContent };
-    obj.openLazy(asyncRequireImpl(15120, dependencyMap.paths), "QuestBottomSheet", obj);
+    obj.openLazy(asyncRequireImpl(15123, dependencyMap.paths), "QuestBottomSheet", obj);
   }
-  let obj = quest(11483);
+  let obj = quest(11488);
   const xboxAndPlaystationAccounts = obj.useConnectedAccounts().xboxAndPlaystationAccounts;
-  closure_4 = quest(11774).useTrackQuestContentClickedWithImpression();
-  let obj2 = quest(11774);
-  const impressionId = quest(11486).useQuestImpressionId();
+  closure_4 = quest(11779).useTrackQuestContentClickedWithImpression();
+  let obj2 = quest(11779);
+  const impressionId = quest(11491).useQuestImpressionId();
   const items = [quest, xboxAndPlaystationAccounts];
   obj = {
     consoles: xboxAndPlaystationAccounts.useMemo(

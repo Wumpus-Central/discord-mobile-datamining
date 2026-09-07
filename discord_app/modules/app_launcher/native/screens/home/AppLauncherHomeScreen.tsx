@@ -193,7 +193,7 @@ function ActivityRow(section) {
   let tmp5 = null != applicationIconSource;
   if (tmp5) {
     obj = { iconSource: applicationIconSource };
-    tmp5 = closure_19(onPress(12056), obj);
+    tmp5 = closure_19(onPress(12060), obj);
   }
   const items = [section];
   const items1 = [section, onPress];
@@ -244,7 +244,7 @@ function ActivityItemTuple(arg0) {
   const items = [containerWidth];
   let size = noop.useMemo(() => {
     if (null == containerWidth) {
-      return { width: "hash", height: "call" };
+      return { width: "push", height: "channel" };
     } else {
       const tmp5 = roundToNearestPixelDefault(tmp / 2 - DEFAULT_CONTENT_PADDING - 6);
       const size = { width: tmp5, height: roundToNearestPixelDefault(tmp5 / c22) };
@@ -431,7 +431,7 @@ function RecommendationItemTuple(isLastTuple) {
   items = [containerWidth, num];
   styles = noop.useMemo(() => {
     if (null == containerWidth) {
-      return { width: "hash", height: "call" };
+      return { width: "push", height: "channel" };
     } else {
       const tmp6 = roundToNearestPixelDefault((tmp - 2 * DEFAULT_CONTENT_PADDING - 12 * (2 - 1)) / 2);
       const size = { width: tmp6, height: roundToNearestPixelDefault(tmp6 / c22) };
@@ -638,7 +638,7 @@ function getRecommendationItemsWithViewAll(found1, in_this_server, stringResult)
 }
 get_ActivityIndicator = fn(17);
 ({ View: metroRequire, StyleSheet } = get_ActivityIndicator);
-const ApplicationCommandIndexStore = fn(9290);
+const ApplicationCommandIndexStore = fn(9295);
 ({ useContextIndexState: closure_8, useUserIndexState: closure_9 } = ApplicationCommandIndexStore);
 const AppLauncherNativeConstants = fn(1482);
 const DEFAULT_CONTENT_PADDING = AppLauncherNativeConstants.DEFAULT_CONTENT_PADDING;
@@ -650,7 +650,7 @@ const jsxProd = fn(21);
 ({ jsx: closure_19, jsxs: closure_20, Fragment: closure_21 } = jsxProd);
 let c22 = 1.7777777777777777;
 let closure_23 = [];
-const APP_LAUNCHER_IN_TEXT = fn(12077).ApplicationCollectionSurface.APP_LAUNCHER_IN_TEXT;
+const APP_LAUNCHER_IN_TEXT = fn(12081).ApplicationCollectionSurface.APP_LAUNCHER_IN_TEXT;
 fn(4560);
 let createStyles = {
   container: null,
@@ -1043,7 +1043,7 @@ export default function AppLauncherHomeScreen(route) {
             isLastTuple: false,
           };
           const diff1 = arr.length - 1;
-          obj.type = tmp8(12088).AppLauncherHomeListItemType.SHELF_ITEM_TUPLE;
+          obj.type = tmp8(12092).AppLauncherHomeListItemType.SHELF_ITEM_TUPLE;
           obj.shelfItem1 = arr[arr.length - 1];
           obj.shelfItem2 = undefined;
           obj.shelfItem1SectionPosition = diff1;
@@ -1052,7 +1052,7 @@ export default function AppLauncherHomeScreen(route) {
         }
         items[items.length - 1].isLastTuple = true;
         obj = {
-          type: tmp8(12088).AppLauncherHomeListItemType.SECTION_HEADER,
+          type: tmp8(12092).AppLauncherHomeListItemType.SECTION_HEADER,
           section: null,
           sectionName: "activities",
           numItems: null,
@@ -1211,10 +1211,10 @@ export default function AppLauncherHomeScreen(route) {
           obj.numVisibleItems = bound;
           items.push(obj);
           const mapped = application_directory_collection_items.map((type, sectionPosition) => {
-            if (type.type === found1(9417).ApplicationDirectoryCollectionItemType.APPLICATION) {
+            if (type.type === found1(9422).ApplicationDirectoryCollectionItemType.APPLICATION) {
               let collectionItemAssetUrl;
               if (tmp4) {
-                let tmpResult = found1(12124);
+                let tmpResult = found1(12128);
                 let obj = { itemId: null, hash: null };
                 ({ id: obj2.itemId, image_hash: obj2.hash } = type);
                 collectionItemAssetUrl = tmpResult.getCollectionItemAssetUrl(obj);
@@ -1226,7 +1226,7 @@ export default function AppLauncherHomeScreen(route) {
                 sectionPosition: null,
               };
               tmpResult = found1(1384);
-              obj.showsPromoted = tmpResult.hasFlag(type.flags, found1(12125).ApplicationCollectionItemFlags.PROMOTED);
+              obj.showsPromoted = tmpResult.hasFlag(type.flags, found1(12129).ApplicationCollectionItemFlags.PROMOTED);
               obj.overrideImageUrl = collectionItemAssetUrl;
               obj.sectionPosition = sectionPosition;
               return obj;
@@ -1254,10 +1254,10 @@ export default function AppLauncherHomeScreen(route) {
         } else if (type === ApplicationDirectoryCollectionType.ApplicationDirectoryCollectionType.EXPANDABLE_LIST) {
           const prop = title.application_directory_collection_items;
           const mapped1 = prop.map((type) => {
-            if (type.type === found1(9417).ApplicationDirectoryCollectionItemType.APPLICATION) {
+            if (type.type === found1(9422).ApplicationDirectoryCollectionItemType.APPLICATION) {
               const obj = {
                 application: type.application,
-                showsPromoted: found1(1384).hasFlag(type.flags, found1(12125).ApplicationCollectionItemFlags.PROMOTED),
+                showsPromoted: found1(1384).hasFlag(type.flags, found1(12129).ApplicationCollectionItemFlags.PROMOTED),
               };
               return obj;
             }
@@ -1757,7 +1757,7 @@ export default function AppLauncherHomeScreen(route) {
       items: memo,
       onAppSelected: callback3,
       onViewAllSelected() {
-        const found = memo.find((type) => type.type === context(12088).AppLauncherHomeListItemType.VIEW_ALL);
+        const found = memo.find((type) => type.type === context(12092).AppLauncherHomeListItemType.VIEW_ALL);
         let mapped;
         if (found != null) {
           const applications = found.applications;

@@ -145,7 +145,7 @@ function ProfileEffect(profileEffect) {
       }
     }
   }, []);
-  jsx = noop.useRef(-memo(8803).PROFILE_EFFECT_INTRO_DELAY);
+  jsx = noop.useRef(-memo(8808).PROFILE_EFFECT_INTRO_DELAY);
   [c10, c11] = ref(noop.useState([]), 2);
   noop.useRef([]);
   noop.useRef(false);
@@ -161,7 +161,7 @@ function ProfileEffect(profileEffect) {
   }, items3);
   const items4 = [ref];
   const tmp7 = ref(noop.useState([]), 2);
-  const tmp9Result = memo1(8806)(
+  const tmp9Result = memo1(8811)(
     noop.useCallback((arg0) => {
       if (ref.current) {
         if (!ref3.current) {

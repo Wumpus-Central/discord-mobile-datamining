@@ -187,7 +187,7 @@ let closure_9 = async function _confirmActivityChange(arg0) {
                   if (dependencyMap != null) {
                     dependencyMap();
                   }
-                  shouldClosePopout(9540)(
+                  shouldClosePopout(9545)(
                     tmp,
                     channel,
                     () => {

@@ -171,7 +171,7 @@ createStyles = {
   channelTraits: { display: "flex", flexDirection: "row", alignItems: "center" },
   channelTraitIcon: null,
 };
-createStyles = { opacity: fn(10118).SUBTITLE_OPACITY_NORMAL, marginRight: 4, marginTop: null };
+createStyles = { opacity: fn(10123).SUBTITLE_OPACITY_NORMAL, marginRight: 4, marginTop: null };
 PlatformUtils = fn(1115);
 let num2 = 0;
 if (PlatformUtils.isAndroid()) {

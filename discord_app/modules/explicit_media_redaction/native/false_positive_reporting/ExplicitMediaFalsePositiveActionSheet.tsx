@@ -7,7 +7,7 @@ import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/Actio
 import utils_UploadUtils from "../../../../utils/native/UploadUtils.tsx";
 import ExplicitMediaRedactionUtils from "../../ExplicitMediaRedactionUtils.tsx";
 import _modDef8308 from "../../../../../_runtime/metro/08308__.js";
-import _modDef9401 from "../../../../../_runtime/metro/09401__.js";
+import _modDef9406 from "../../../../../_runtime/metro/09406__.js";
 import ShieldIcon from "../../../../design/components/Icon/native/redesign/generated/ShieldIcon.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
@@ -129,7 +129,7 @@ export const handleSuccess = function handleSuccess(arg0) {
   obj.hideActionSheet(arg0);
   obj = {
     key: "explicit_media_report_false_positive_success",
-    icon: _modDef9401,
+    icon: _modDef9406,
     IconComponent: ShieldIcon.ShieldIcon,
     iconColor: "text-brand",
     content: null,

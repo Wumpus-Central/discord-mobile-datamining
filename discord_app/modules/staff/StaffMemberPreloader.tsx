@@ -3,7 +3,7 @@ import GuildActionCreatorsDefault from "../../actions/GuildActionCreators.tsx";
 import GuildStore from "../../stores/GuildStore.tsx";
 import UserStore from "../../stores/UserStore.tsx";
 
-const PRELOAD_SERVER_ID = fn(17490).PRELOAD_SERVER_ID;
+const PRELOAD_SERVER_ID = fn(17493).PRELOAD_SERVER_ID;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/staff/StaffMemberPreloader.tsx");
 

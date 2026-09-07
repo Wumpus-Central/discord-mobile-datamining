@@ -5,8 +5,8 @@ import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import LegacyBaseButton from "../../../../../_runtime/06655_LegacyBaseButton.js";
 import NoiseCancellationUtils from "../../../noise_cancellation/NoiseCancellationUtils.tsx";
 import KrispLogo2 from "KrispLogo.tsx";
-import _modDef9998 from "../../../../../_runtime/metro/09998__.js";
-import _modDef9999 from "../../../../../_runtime/metro/09999__.js";
+import _modDef10003 from "../../../../../_runtime/metro/10003__.js";
+import _modDef10004 from "../../../../../_runtime/metro/10004__.js";
 import SettingBuilders from "../../../settings/native/renderer/SettingBuilders.tsx";
 import SettingLayoutDefault from "../../../settings/native/renderer/SettingLayout.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
@@ -18,9 +18,9 @@ function KrispLogo() {
   const tmp = closure_13();
   let obj = shared;
   if (obj.isThemeLight(tmp4)) {
-    let tmp2Result = _modDef9998;
+    let tmp2Result = _modDef10003;
   } else {
-    tmp2Result = _modDef9999;
+    tmp2Result = _modDef10004;
   }
   obj = { style: tmp.krisp, children: null };
   obj = { style: tmp.logo, source: tmp2Result, accessibilityLabel: null };

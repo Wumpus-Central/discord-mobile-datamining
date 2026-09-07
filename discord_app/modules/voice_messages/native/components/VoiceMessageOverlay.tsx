@@ -8,7 +8,7 @@ import useIsScreenReaderEnabled from "../../../a11y/native/useIsScreenReaderEnab
 import setAccessibilityFocus from "../../../a11y/native/setAccessibilityFocus.android.tsx";
 import LegacyTokens from "../../../../design/migrations/native/LegacyTokens.tsx";
 import useRefValueDefault from "../../../../hooks/useRefValue.tsx";
-import inlineStyles from "../../../../../_runtime/08453_inlineStyles.js";
+import inlineStyles from "../../../../../_runtime/08456_inlineStyles.js";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import AccessibilityStore from "../../../a11y/AccessibilityStore.tsx";
@@ -348,10 +348,10 @@ function LockPill(safeAreaBottom) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, AppState: metroRequire } = get_ActivityIndicator);
-const useVoiceMessagesUIStore = fn(11960).useVoiceMessagesUIStore;
-const VoiceMessageAnimationState = fn(11961).VoiceMessageAnimationState;
+const useVoiceMessagesUIStore = fn(11964).useVoiceMessagesUIStore;
+const VoiceMessageAnimationState = fn(11965).VoiceMessageAnimationState;
 const ComponentActionsKeyed = fn(1074).ComponentActionsKeyed;
-const CHAT_INPUT_HEIGHT = fn(11962).CHAT_INPUT_HEIGHT;
+const CHAT_INPUT_HEIGHT = fn(11966).CHAT_INPUT_HEIGHT;
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14, Fragment: closure_15 } = jsxProd);
 let closure_16 = ReanimatedRexport.createAnimatedComponent(fn(1178).Icon);

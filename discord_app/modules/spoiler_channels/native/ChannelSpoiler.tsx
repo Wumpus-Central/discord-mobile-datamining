@@ -13,7 +13,7 @@ import GuildStore from "../../../stores/GuildStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-const VoicePanelControlsModes = fn(12271).VoicePanelControlsModes;
+const VoicePanelControlsModes = fn(12275).VoicePanelControlsModes;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
 fn(4560);
@@ -47,7 +47,7 @@ export default function ChannelSpoiler(channelId) {
     isVocalResult = stateFromStores1.isVocal();
   }
   dependencyMap = isVocalResult;
-  setControlsMode = obj3.useContext(tmp6(12272)).setControlsMode;
+  setControlsMode = obj3.useContext(tmp6(12276)).setControlsMode;
   const items2 = [, , ,];
   ({ guildId: arr3[0], channelId: arr3[1] } = channelId);
   items2[2] = setControlsMode;

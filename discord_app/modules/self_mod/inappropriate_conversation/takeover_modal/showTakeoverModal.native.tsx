@@ -15,6 +15,6 @@ export const showTakeoverModal = function showTakeoverModal(arg0) {
   let obj = SelfModInappropriateConversationExperiment;
   if (obj.isEligibleForInappropriateConversationWarning({ location: "takeover-modal" })) {
     obj = { warningId, warningType, senderId, channelId };
-    ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(15722, dependencyMap.paths), obj, TAKEOVER_MODAL_KEY);
+    ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(15725, dependencyMap.paths), obj, TAKEOVER_MODAL_KEY);
   }
 };

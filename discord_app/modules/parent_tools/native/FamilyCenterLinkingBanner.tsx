@@ -6,7 +6,7 @@ import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import useIsInAdultAgeGroupDefault from "../hooks/useIsInAdultAgeGroup.tsx";
 import useAgeSpecificText from "../hooks/useAgeSpecificText.tsx";
 import FamilyCenterBannerButton from "FamilyCenterBannerButton.tsx";
-import _modDef14914 from "../../../../_runtime/metro/14914__.js";
+import _modDef14917 from "../../../../_runtime/metro/14917__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -139,7 +139,7 @@ export default function FamilyCenterLinkingBanner() {
     intl3.format(_modDef2396.yMnoDl, { link: "https://support.discord.com/hc/articles/14155060633623" }),
     intl4.string(_modDef2396.JsAEDi),
   );
-  obj.source = _modDef14914;
+  obj.source = _modDef14917;
   obj.style = tmp.art;
   const items = [hasOwnProperty(React4, obj), ,];
   obj1 = { style: tmp.content, children: null };

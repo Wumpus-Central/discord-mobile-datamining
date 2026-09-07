@@ -5,8 +5,8 @@ import age_gate_AgeGateUtils from "../../age_gate/native/AgeGateUtils.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
-let useStickerPickerStore = fn(10390).useStickerPickerStore;
-const StickerPickerConstants = fn(10273);
+let useStickerPickerStore = fn(10395).useStickerPickerStore;
+const StickerPickerConstants = fn(10278);
 ({
   MIN_MARGIN: hasOwnProperty,
   ROW_HEIGHT: metroRequire,

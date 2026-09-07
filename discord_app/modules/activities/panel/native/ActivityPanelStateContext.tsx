@@ -2,7 +2,7 @@
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 const obj = {
-  mode: fn(9505).ActivityPanelModes.PANEL,
+  mode: fn(9510).ActivityPanelModes.PANEL,
   setMode() {
     const error = new Error("ActivityPanelStateContextType.Provider.setMode: not called within a context provider");
     throw error;

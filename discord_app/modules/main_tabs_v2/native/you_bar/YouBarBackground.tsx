@@ -114,7 +114,7 @@ function YouBarAnimatedBackground(arg0) {
   return closure_6(ReanimatedRexportDefault.View, obj);
 }
 const View = fn(17).View;
-const YouBarConstants = fn(15098);
+const YouBarConstants = fn(15101);
 const YOU_BAR_HEIGHT = YouBarConstants.YOU_BAR_HEIGHT;
 const YOU_BAR_SPRING_CONFIG = YouBarConstants.YOU_BAR_SPRING_CONFIG;
 const jsxProd = fn(21);

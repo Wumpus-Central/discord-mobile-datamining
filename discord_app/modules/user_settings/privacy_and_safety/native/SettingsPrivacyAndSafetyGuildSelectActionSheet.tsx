@@ -6,7 +6,7 @@ import GuildStore from "../../../../stores/GuildStore.tsx";
 import SortedGuildStore from "../../../../stores/SortedGuildStore.tsx";
 
 const require = fn;
-const UserSettingsSafetySelectedGuildStore = fn(15869);
+const UserSettingsSafetySelectedGuildStore = fn(15872);
 ({
   GUILD_SELECT_ALL_SERVERS_OPTION_ID: closure_7,
   setSelectedGuildId: closure_8,

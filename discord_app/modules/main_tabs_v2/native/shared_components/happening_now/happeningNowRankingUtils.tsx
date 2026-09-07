@@ -7,7 +7,7 @@ import VoiceStateStore from "../../../../../stores/VoiceStateStore.tsx";
 const _modDef12 = _mod12;
 
 require = fn;
-const HappeningNowConstants = fn(15294);
+const HappeningNowConstants = fn(15297);
 ({
   HAPPENING_NOW_CARD_WIDTH_NORMAL_WITH_MARGIN: hasOwnProperty,
   HAPPENING_NOW_CARD_WIDTH_SMALL_WITH_MARGIN: metroRequire,

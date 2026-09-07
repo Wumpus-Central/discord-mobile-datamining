@@ -3,8 +3,8 @@ import spring from "../../../../design/animation/reanimated/spring/spring.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const MODE_CHANGE_PHYSICS = fn(12273).MODE_CHANGE_PHYSICS;
-const CALL_TILE_GUTTER = fn(12276).CALL_TILE_GUTTER;
+const MODE_CHANGE_PHYSICS = fn(12277).MODE_CHANGE_PHYSICS;
+const CALL_TILE_GUTTER = fn(12280).CALL_TILE_GUTTER;
 const __initData = {
   code: "function useControlsTranslationTsx1(){const{withSpring,wrapperSpecs,MODE_CHANGE_PHYSICS,useReducedMotion,CALL_TILE_GUTTER,viewHeight}=this.__closure;return{transform:[{translateX:withSpring(wrapperSpecs.get().x,MODE_CHANGE_PHYSICS)},{translateY:withSpring(!useReducedMotion.get()&&wrapperSpecs.get().hidden?wrapperSpecs.get().height+CALL_TILE_GUTTER+viewHeight.get():wrapperSpecs.get().y,MODE_CHANGE_PHYSICS)}]};}",
 };

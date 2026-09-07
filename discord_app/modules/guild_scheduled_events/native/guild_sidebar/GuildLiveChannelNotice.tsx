@@ -87,8 +87,8 @@ function UserSummaryRow(arg0) {
       const items2 = [,];
       ({ badge: arr3[0], audienceBadge: arr3[1] } = tmp);
       obj.style = items2;
-      let obj1 = { size: "custom", style: max(10121).makeSizeStyle(14) };
-      const items3 = [closure_13(max(12530).HeadphonesIcon, obj1)];
+      let obj1 = { size: "custom", style: max(10126).makeSizeStyle(14) };
+      const items3 = [closure_13(max(12534).HeadphonesIcon, obj1)];
       let obj2 = {
         variant: "text-xs/semibold",
         style: { marginLeft: 4 },
@@ -99,7 +99,7 @@ function UserSummaryRow(arg0) {
       obj.children = items3;
       obj.children = closure_14(View, obj);
       tmp8Result = closure_13(View, obj);
-      const obj5 = max(10121);
+      const obj5 = max(10126);
       const tmp9 = users.length > 0 && { marginLeft: 4 };
     }
     items[1] = tmp8Result;
@@ -183,7 +183,7 @@ function GuildVoiceEventNotice(channel) {
   obj.location = tmp2;
   const obj3 = channel(504);
   obj.LocationIcon = channel(5028).getChannelIconComponent(channel);
-  obj.LiveIcon = channel(9785).CalendarIcon;
+  obj.LiveIcon = channel(9790).CalendarIcon;
   obj = { guildId: channel.guild_id, users: stateFromStoresArray, isLiveStreaming: stateFromStores1 };
   obj.voiceUsers = closure_13(UserSummaryRow, obj);
   let tmp7Result;
@@ -260,7 +260,7 @@ function GuildLiveStageNotice(channel) {
   const obj3 = channel(504);
   const stageHasStream = channel(5417).useStageHasStream(channel.id);
   const obj4 = channel(5417);
-  const guildActiveEvent = channel(9662).useGuildActiveEvent(channel.guild_id);
+  const guildActiveEvent = channel(9667).useGuildActiveEvent(channel.guild_id);
   obj = {
     heading: null,
     location: null,
@@ -280,7 +280,7 @@ function GuildLiveStageNotice(channel) {
   }
   obj.LocationIcon = channelIconComponent;
   if (null != guildActiveEvent) {
-    let StageIcon = tmp3(9785).CalendarIcon;
+    let StageIcon = tmp3(9790).CalendarIcon;
   } else {
     StageIcon = tmp3(5097).StageIcon;
   }
@@ -318,7 +318,7 @@ let obj = {};
 const merged = Object.assign(guildEventRules);
 obj = {};
 const merged1 = Object.assign(guildEventRules.channelMention);
-obj.react = fn(10128).inlineChannelMentionReact;
+obj.react = fn(10133).inlineChannelMentionReact;
 obj.channelMention = obj;
 obj.guild = {
   react(content, output, state) {
@@ -330,7 +330,7 @@ obj.guild = {
     return content;
   },
 };
-obj.channel = { react: fn(10128).inlineChannelReact };
+obj.channel = { react: fn(10133).inlineChannelReact };
 let closure_26 = MarkupUtils.reactParserFor(obj);
 let createStyles = fn(4560);
 let closure_27 = createStyles.createStyles((height) => {
@@ -488,7 +488,7 @@ let closure_31 = noop.memo((arg0) => {
   obj8.children = items2;
   return closure_1_14(View, obj8);
 });
-let obj1 = { react: fn(10128).inlineChannelReact };
+let obj1 = { react: fn(10133).inlineChannelReact };
 size = fn(2);
 let result = size.fileFinishedImporting(
   "modules/guild_scheduled_events/native/guild_sidebar/GuildLiveChannelNotice.tsx",
@@ -497,9 +497,9 @@ let result = size.fileFinishedImporting(
 export default noop.memo((guild) => {
   guild = guild.guild;
   let activeEventOrStageInstanceChannel;
-  let obj = activeEventOrStageInstanceChannel(16187);
+  let obj = activeEventOrStageInstanceChannel(16190);
   activeEventOrStageInstanceChannel = obj.useActiveEventOrStageInstanceChannel(guild.id);
-  let obj1 = activeEventOrStageInstanceChannel(9662);
+  let obj1 = activeEventOrStageInstanceChannel(9667);
   const guildActiveEvent = obj1.useGuildActiveEvent(guild.id);
   let obj2 = activeEventOrStageInstanceChannel(504);
   const items = [StageInstanceStore];

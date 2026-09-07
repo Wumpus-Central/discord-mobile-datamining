@@ -47,19 +47,19 @@ export default function BuyNitroPlanSelector(planSelection) {
     }
     return product;
   });
-  let obj1 = planSelection(13356);
+  let obj1 = planSelection(13360);
   const isBuyNitroPurchaseBlocked = obj1.useIsBuyNitroPurchaseBlocked();
-  let obj2 = planSelection(13404);
+  let obj2 = planSelection(13408);
   closure_4 = obj2.useBuyNitroPlanLabelRenderer();
-  let obj3 = planSelection(13405);
+  let obj3 = planSelection(13409);
   closure_5 = obj3.useBuyNitroPlanSubLabelRenderer();
   obj = { style: tmp.header, children: null };
   obj = { title: null };
   const intl = planSelection(1114).intl;
   obj.title = intl.string(planSelection(1114).t.u95Dt4);
-  const items1 = [closure_7(selection(13392), obj)];
+  const items1 = [closure_7(selection(13396), obj)];
   obj1 = { selectedTier: selection.tier, setSelectedTier: selection.setTier, disabled: isBuyNitroPurchaseBlocked };
-  items1[1] = closure_7(selection(13406), obj1);
+  items1[1] = closure_7(selection(13410), obj1);
   obj.children = items1;
   const children = [closure_8(isBuyNitroPurchaseBlocked, obj), ,];
   let tmp8Result = null != selection.productId;
@@ -101,9 +101,9 @@ export default function BuyNitroPlanSelector(planSelection) {
     obj6.convertToMajorUnits = tmp2Result.isAndroid();
     obj5.kunaPriceWithCurrency = tmp2Result.formatPrice(result, CurrencyCodes.HRK, obj6);
     obj4.message = intl2.formatToPlainString(tmp2(1114).t["9hnZoK"], obj5);
-    obj3.children = closure_7(selection(13300), obj4);
+    obj3.children = closure_7(selection(13304), obj4);
     tmp8Result = closure_7(tmp7, obj3);
-    const tmp9Result = selection(13300);
+    const tmp9Result = selection(13304);
   }
   children[2] = tmp8Result;
   return closure_8(isBuyNitroPurchaseBlocked, { children });

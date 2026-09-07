@@ -84,7 +84,7 @@ export default function GuildSettingsRoleEditPermission(guild) {
         React5.dismiss();
         const obj = { permissionsEdited, onPermissionsChanged, guildId: guild.id };
         obj.openLazy(
-          asyncRequireImpl(17633, dependencyMap.paths),
+          asyncRequireImpl(17636, dependencyMap.paths),
           "role-permission-templates-" + guild.id + "-" + role.id,
           obj,
         );
@@ -95,7 +95,7 @@ export default function GuildSettingsRoleEditPermission(guild) {
   }
   tmp18Result = closure_14(tmp19, { children: tmp18Result });
   canResult = PermissionUtilsAll.can(obj);
-  const guildPermissionSpec = role(16830).generateGuildPermissionSpec(guild);
+  const guildPermissionSpec = role(16833).generateGuildPermissionSpec(guild);
   const mapped = guildPermissionSpec.map((permissions) => {
     const obj = {};
     const merged = Object.assign(permissions);
@@ -108,7 +108,7 @@ export default function GuildSettingsRoleEditPermission(guild) {
   });
   const found = mapped.filter((permissions) => permissions.permissions.length > 0);
   const mapped1 = found.map((title) => ({ title: title.title, data: title.permissions }));
-  const children = [closure_14(role(17630), { role }), , ,];
+  const children = [closure_14(role(17633), { role }), , ,];
   const obj2 = {
     children: closure_14(guild(7050).SearchField, {
       size: "md",
@@ -215,7 +215,7 @@ export default function GuildSettingsRoleEditPermission(guild) {
     };
     let tmp18Result1 = closure_14(closure_8, obj4);
   } else {
-    let obj5 = { Illustration: tmp27(9760).NoResultsAlt, style: null, bodyStyle: null, body: null };
+    let obj5 = { Illustration: tmp27(9765).NoResultsAlt, style: null, bodyStyle: null, body: null };
     ({ emptyState: obj10.style, emptyStateText: obj10.bodyStyle } = tmp);
     const intl2 = tmp27(1114).intl;
     const obj6 = { query };

@@ -3,7 +3,7 @@ import nativeDefault from "../../../../../../discord_common/js/packages/tokens/n
 import util from "../../../../../intl/index.native.tsx";
 import native from "../../../../../design/void/native.tsx";
 import Text_Text from "../../../../../design/components/Text/native/Text.tsx";
-import _modDef12777 from "../../../../../../_runtime/metro/12777__.js";
+import _modDef12781 from "../../../../../../_runtime/metro/12781__.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -20,7 +20,7 @@ const result = size.fileFinishedImporting("modules/main_tabs_v2/native/channel/h
 
 export default noop.memo(function HomeChannelHeader() {
   let obj = { style: closure_6().container, children: null };
-  obj = { source: _modDef12777, size: native.Icon.Sizes.MEDIUM, disableColor: true };
+  obj = { source: _modDef12781, size: native.Icon.Sizes.MEDIUM, disableColor: true };
   const items = [React4(native.Icon, obj)];
   obj = { variant: "heading-lg/extrabold", color: "interactive-text-active", children: null };
   const intl = util.intl;

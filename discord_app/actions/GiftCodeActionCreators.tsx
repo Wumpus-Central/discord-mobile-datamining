@@ -225,7 +225,7 @@ let closure_6 = fn(7550).isUnknownCollectiblesItemRecord;
 const Constants = fn(1074);
 ({ COLLECTIBLES_APPLICATION_ID: closure_7, Endpoints: closure_8, RPCCommands: closure_9 } = Constants);
 let closure_10 = fn(1373).PREMIUM_SUBSCRIPTION_APPLICATION;
-const merged = Object.assign(fn(11432).default);
+const merged = Object.assign(fn(11437).default);
 const size = fn(2);
 const result = size.fileFinishedImporting("actions/GiftCodeActionCreators.tsx");
 

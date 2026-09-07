@@ -379,5 +379,5 @@ export default function ChannelSettingsEditForumTag(channelId) {
     tmp31 = tag;
     const tmp32 = tag(7130);
   }
-  tmp27Result1 = tmp27(tmp3(8757).ReactionIcon, {});
+  tmp27Result1 = tmp27(tmp3(8762).ReactionIcon, {});
 }

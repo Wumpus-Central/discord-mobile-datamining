@@ -82,10 +82,10 @@ export default function RecommendationsBannerCard(application) {
   }
   const tmp = closure_8();
   if (!showsPromoted) {
-    let obj = application(9289);
+    let obj = application(9294);
     showsPromoted = obj.isPromotedApplication(application);
   }
-  let obj1 = application(9289);
+  let obj1 = application(9294);
   const shelfBadgeTypeIfActive = obj1.getShelfBadgeTypeIfActive(application);
   let bot = application.bot;
   let id;
@@ -109,7 +109,7 @@ export default function RecommendationsBannerCard(application) {
   const applicationIconSource = obj2.getApplicationIconSource(obj);
   if (isLandscape) {
     obj = { application, iconSource: applicationIconSource, onPress, isFirstRow: isFirst, isLastRow: isLast };
-    let tmp12Result = closure_6(tmp4(12083).BaseAppRow, obj);
+    let tmp12Result = closure_6(tmp4(12087).BaseAppRow, obj);
   } else {
     const items1 = [tmp.container, ,];
     let num = 8;
@@ -136,7 +136,7 @@ export default function RecommendationsBannerCard(application) {
       overrideImageUrl: null,
     };
     const tmp10Result = RecommendationsBannerDefault;
-    obj4.applicationEmbedded = tmp4(9289).isEmbeddedApp(application);
+    obj4.applicationEmbedded = tmp4(9294).isEmbeddedApp(application);
     ({ id: obj8.applicationId, icon } = application);
     obj4.applicationIcon = icon;
     obj4.overrideImageUrl = application.overrideImageUrl;
@@ -186,7 +186,7 @@ export default function RecommendationsBannerCard(application) {
     items4[1] = closure_7(View, obj9);
     obj2.children = items4;
     tmp12Result = closure_7(tmp4(5123).PressableOpacity, obj2);
-    const tmp4Result = tmp4(9289);
+    const tmp4Result = tmp4(9294);
   }
   return tmp12Result;
 }

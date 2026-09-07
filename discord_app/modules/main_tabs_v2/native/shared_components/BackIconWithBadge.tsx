@@ -26,7 +26,7 @@ function IconWithBadge(includeNotificationsCount) {
   }
   let num2 = 0;
   if (flag) {
-    num2 = memo(16394)().value;
+    num2 = memo(16397)().value;
   }
   const sum = num + num2;
   _require = sum;
@@ -75,7 +75,7 @@ function IconWithBadge(includeNotificationsCount) {
       color: "interactive-text-default",
     }),
   };
-  const items5 = [closure_6(memo(8813), obj1)];
+  const items5 = [closure_6(memo(8818), obj1)];
   let tmp9Result = null;
   if (sum > 0) {
     const obj3 = { style: tmp.badgeWrapper, children: null };

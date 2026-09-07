@@ -70,7 +70,7 @@ export default function useBurstToggleCoachmark(targetRef) {
     obj.visible = first === closure_9;
     return obj;
   }, items3);
-  tmpResult = tmp(11127);
+  tmpResult = tmp(11132);
   const coachmark = tmpResult.useCoachmark(targetRef, memo);
   return tmp5[1];
 }

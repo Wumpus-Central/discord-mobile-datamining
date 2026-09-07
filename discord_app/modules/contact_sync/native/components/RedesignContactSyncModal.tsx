@@ -101,7 +101,7 @@ function ContactSyncLandingScreen(openSettingsSheet) {
                 obj = { value, done: true };
                 return obj;
               } else if (!currentUser) {
-                let obj2 = tmp2(12684);
+                let obj2 = tmp2(12688);
                 let tmp12 = discoverabilityEnabled;
                 if (tmp12) {
                   let email;
@@ -146,7 +146,7 @@ function ContactSyncLandingScreen(openSettingsSheet) {
             }
             dependencyMap = 1;
             c3 = 1;
-            const obj4 = { value: tmp2(12676).startContactSync(closure_129_3), done: false };
+            const obj4 = { value: tmp2(12680).startContactSync(closure_129_3), done: false };
             return obj4;
           } catch (tmp2) {
             c3 = tmp;
@@ -177,7 +177,7 @@ function ContactSyncLandingScreen(openSettingsSheet) {
       const obj = { type: "Contact Sync", location: { page: "Contact Sync" } };
       obj.track(AnalyticEvents.OPEN_POPOUT, obj);
       ActionSheetActionCreatorsDefault.openLazy(
-        asyncRequireImpl(12687, dependencyMap.paths),
+        asyncRequireImpl(12691, dependencyMap.paths),
         "Contact Sync Info Settings",
       );
     }
@@ -226,7 +226,7 @@ function ContactSyncLandingScreen(openSettingsSheet) {
             if (value) {
               closure_128_8();
             } else {
-              obj = tmp4(12676);
+              obj = tmp4(12680);
               obj3 = { onComplete: closure_128_2, skip: true };
               const result = obj.closeContactSyncModal(obj3);
             }
@@ -302,7 +302,7 @@ function ContactSyncNameInputScreen(navigateToLandingPage) {
   const tmp5 = closure_10();
   const name = tmp5.name;
   ({ isNameFromContactBook, error } = tmp5);
-  loading(12695)(navigation, navigateToLandingPage.navigateToLandingPage);
+  loading(12699)(navigation, navigateToLandingPage.navigateToLandingPage);
   _require = onNext(function* (arg0) {
     if (c3 === 2) {
       c3 = 3;
@@ -331,7 +331,7 @@ function ContactSyncNameInputScreen(navigateToLandingPage) {
             closure_1 = tmp2;
             dependencyMap(true);
             React7(options);
-            let obj1 = options(12676);
+            let obj1 = options(12680);
             dependencyMap = 1;
             c3 = 1;
             obj1 = { value: null, done: false };
@@ -398,7 +398,7 @@ function ContactSyncNameInputScreen(navigateToLandingPage) {
     tmp12 = isNameFromContactBook;
   }
   obj.prefilledFromContactBook = tmp12;
-  obj.children = closure_16(loading(12697), obj);
+  obj.children = closure_16(loading(12701), obj);
   return closure_16(View, obj);
 }
 function ContactSyncSuggestionScreen(onComplete) {
@@ -647,9 +647,9 @@ class ContactSyncModal {
   }
 }
 const View = fn(17).View;
-const ContactSyncModalStore = fn(12677);
+const ContactSyncModalStore = fn(12681);
 ({ setName: closure_9, useContactSyncModalStore: c10, useIsOnboarding: closure_11 } = ContactSyncModalStore);
-const ContactSyncConstants = fn(12678);
+const ContactSyncConstants = fn(12682);
 ({ ContactPermissions: closure_12, ContactSyncScenes: map1 } = ContactSyncConstants);
 const AnalyticEvents = fn(1074).AnalyticEvents;
 const NativePermissionTypes = fn(4770).NativePermissionTypes;

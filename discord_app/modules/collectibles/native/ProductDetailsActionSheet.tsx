@@ -91,7 +91,7 @@ function ManagedProductDetailsActionSheetInner(skuId) {
   skuId = skuId.skuId;
   const initialVariantIndex = skuId.initialVariantIndex;
   ({ analyticsLocations, stageCollectibleChangeForEditProfile } = skuId);
-  let obj = skuId(13108);
+  let obj = skuId(13112);
   const collectiblesShopProduct = obj.useCollectiblesShopProduct(skuId, {
     needsCategory: false,
     seedCategoryStore: true,
@@ -99,7 +99,7 @@ function ManagedProductDetailsActionSheetInner(skuId) {
   const product = collectiblesShopProduct.product;
   dependencyMap = product;
   ({ state, retry } = collectiblesShopProduct);
-  let obj1 = skuId(10734);
+  let obj1 = skuId(10739);
   const getOrFetchPurchases = obj1.useGetOrFetchPurchases();
   ({ hasPreviouslyFetched, fetchPurchasesError } = getOrFetchPurchases);
   const ref1 = noop.useRef(null);
@@ -152,7 +152,7 @@ function ManagedProductDetailsActionSheetInner(skuId) {
     obj1.children = closure_13(tmp(4975).Button, obj2);
     closure_13(tmp(1178).EmptyState, obj1);
   } else {
-    closure_13(initialVariantIndex(13167), {});
+    closure_13(initialVariantIndex(13171), {});
   }
   ref = noop.useRef(null);
 }

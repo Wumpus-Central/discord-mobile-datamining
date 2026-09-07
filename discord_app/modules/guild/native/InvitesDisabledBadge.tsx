@@ -1,7 +1,7 @@
 // discord_app/modules/guild/native/InvitesDisabledBadge.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import native from "../../../design/void/native.tsx";
-import _modDef12725 from "../../../../_runtime/metro/12725__.js";
+import _modDef12729 from "../../../../_runtime/metro/12729__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -46,14 +46,14 @@ export default noop.memo(function InvitesDisabledBadge(style) {
   const items = [tmp.pauseRing, style.style];
   obj.style = items;
   obj = { style: tmp.pauseBackground, children: null };
-  obj = { style: tmp.pause, themedColor: nativeDefault.colors.INTERACTIVE_TEXT_ACTIVE, source: _modDef12725 };
+  obj = { style: tmp.pause, themedColor: nativeDefault.colors.INTERACTIVE_TEXT_ACTIVE, source: _modDef12729 };
   obj.children = jsx(native.ThemedIcon, {
     style: tmp.pause,
     themedColor: nativeDefault.colors.INTERACTIVE_TEXT_ACTIVE,
-    source: _modDef12725,
+    source: _modDef12729,
   });
   obj.children = (
-    <View style={tmp.pause} themedColor={nativeDefault.colors.INTERACTIVE_TEXT_ACTIVE} source={_modDef12725} />
+    <View style={tmp.pause} themedColor={nativeDefault.colors.INTERACTIVE_TEXT_ACTIVE} source={_modDef12729} />
   );
-  return <View style={tmp.pause} themedColor={nativeDefault.colors.INTERACTIVE_TEXT_ACTIVE} source={_modDef12725} />;
+  return <View style={tmp.pause} themedColor={nativeDefault.colors.INTERACTIVE_TEXT_ACTIVE} source={_modDef12729} />;
 });

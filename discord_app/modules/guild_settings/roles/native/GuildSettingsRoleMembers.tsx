@@ -129,7 +129,7 @@ export default function GuildSettingsRoleMembers(guild) {
     });
     const obj2 = ActionSheetActionCreatorsDefault;
     obj = { guild, role };
-    obj2.openLazy(asyncRequireImpl(17615, dependencyMap.paths), "role-add-members-" + guild.id + "-" + role.id, obj);
+    obj2.openLazy(asyncRequireImpl(17618, dependencyMap.paths), "role-add-members-" + guild.id + "-" + role.id, obj);
   }, items3);
   closure_6 = found.useCallback((item) => {
     item = item.item;

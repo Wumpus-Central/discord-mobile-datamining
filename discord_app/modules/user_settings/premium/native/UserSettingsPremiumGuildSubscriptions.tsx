@@ -186,7 +186,7 @@ export default function ConnectedUserSettingsPremiumGuildSubscriptions(route) {
   let tmpResult = tmp(8065);
   isInReverseTrial = tmpResult.useIsInReverseTrial();
   const tmp3 = flag(7393)({ forceFetch: true });
-  fpDurationText = flag(13461)(endsAt, tmp(13461).CountDownMessageTypes.LONG_TIME_LEFT);
+  fpDurationText = flag(13465)(endsAt, tmp(13465).CountDownMessageTypes.LONG_TIME_LEFT);
   tmpResult = tmp(504);
   const items = [GuildBoostSlotStore, BillingInfoStore, SubscriptionPlanStore, UserStore];
   const stateFromStoresObject = tmpResult.useStateFromStoresObject(items, () => {
@@ -220,7 +220,7 @@ export default function ConnectedUserSettingsPremiumGuildSubscriptions(route) {
     obj.premiumGroupRole = premiumGroupRole;
     return obj;
   });
-  const tmp4 = flag(13461);
+  const tmp4 = flag(13465);
   const items1 = [SubscriptionStore];
   const stateFromStores = require("initialize").useStateFromStores(items1, () =>
     premiumTypeSubscription.getPremiumTypeSubscription(),

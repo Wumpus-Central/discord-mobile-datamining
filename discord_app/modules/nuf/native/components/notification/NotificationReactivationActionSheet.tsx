@@ -3,13 +3,13 @@ import nativeDefault from "../../../../../../discord_common/js/packages/tokens/n
 import AnalyticsUtilsDefault from "../../../../../utils/AnalyticsUtils.tsx";
 import ActionSheetActionCreatorsDefault from "../../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import NotificationPermissionUtil from "../../NotificationPermissionUtil.tsx";
-import _modDef17458 from "../../../../../../_runtime/metro/17458__.js";
+import _modDef17461 from "../../../../../../_runtime/metro/17461__.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, Image: hasOwnProperty } = get_ActivityIndicator);
-const EventActionType = fn(12410).EventActionType;
+const EventActionType = fn(12414).EventActionType;
 const AnalyticEvents = fn(1074).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
@@ -50,7 +50,7 @@ export default function NotificationReactivationActionSheet(location) {
   }, items1);
   let obj = { children: null };
   obj = { style: tmp.container, children: null };
-  obj = { style: tmp.image, source: _modDef17458, resizeMode: "contain" };
+  obj = { style: tmp.image, source: _modDef17461, resizeMode: "contain" };
   const items2 = [closure_8(closure_5, obj), , ,];
   const obj1 = { style: tmp.title, variant: "heading-xl/bold", accessibilityRole: "header", children: null };
   const intl = _location(1114).intl;

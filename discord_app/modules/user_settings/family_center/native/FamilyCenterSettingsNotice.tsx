@@ -12,7 +12,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/family_center/native/FamilyCenterSettingsNotice.tsx");
 
 export default function FamilyCenterSettingsParentalControlsNotice() {
-  let obj = activeLinkUserIds(8645);
+  let obj = activeLinkUserIds(8650);
   activeLinkUserIds = obj.useActiveLinkUserIds();
   obj = {
     label: _modDef2396.i284fU,

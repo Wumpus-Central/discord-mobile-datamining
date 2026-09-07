@@ -81,10 +81,10 @@ class InappropriateConversationWarningBanner {
               obj.warningId = warningId;
               obj.warningType = closure_3_5.INAPPROPRIATE_CONVERSATION_TIER_2;
               obj.senderId = senderId;
-              obj.analyticsBlockContext = closure_3_0(11370).CtaEventTypes.USER_BANNER_BLOCK_CONFIRM;
+              obj.analyticsBlockContext = closure_3_0(11375).CtaEventTypes.USER_BANNER_BLOCK_CONFIRM;
               obj.analyticsBlockAndReportContext =
-                closure_3_0(11370).CtaEventTypes.USER_BANNER_BLOCK_AND_REPORT_CONFIRM;
-              obj.analyticsCancelContext = closure_3_0(11370).CtaEventTypes.USER_BANNER_BLOCK_CANCEL;
+                closure_3_0(11375).CtaEventTypes.USER_BANNER_BLOCK_AND_REPORT_CONFIRM;
+              obj.analyticsCancelContext = closure_3_0(11375).CtaEventTypes.USER_BANNER_BLOCK_CANCEL;
               obj.onDismiss = onDismiss;
               return closure_3_6(closure_0, obj);
             };
@@ -140,7 +140,7 @@ class InappropriateConversationWarningBanner {
     return tmp9(tmp10, obj);
   }
 }
-const SafetyWarningTypes = fn(10915).SafetyWarningTypes;
+const SafetyWarningTypes = fn(10920).SafetyWarningTypes;
 const jsx = fn(21).jsx;
 const size = fn(2);
 let result = size.fileFinishedImporting(

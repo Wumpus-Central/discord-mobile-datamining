@@ -28,7 +28,7 @@ export const useTrackSearchItems = function useTrackSearchItems(callback3, memo1
           if (null == ref.current[tmp2]) {
             ref.current[tmp2] = true;
             ({ applicationId, commandId } = dependencyMap(isViewable.item));
-            closure_0(8768);
+            closure_0(8773);
             let obj = {
               type: closure_0(1250).ImpressionTypes.VIEW,
               name: closure_0(1250).ImpressionNames.APP_LAUNCHER_SEARCH_RESULTS_ITEM,

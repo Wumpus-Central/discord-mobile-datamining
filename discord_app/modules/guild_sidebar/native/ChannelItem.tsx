@@ -6,7 +6,7 @@ import utils_ChannelUtils from "../../../utils/native/ChannelUtils.tsx";
 import BookCheckIcon2 from "../../../design/components/Icon/native/redesign/generated/BookCheckIcon.tsx";
 import FastImageDefault from "../../../components_native/common/FastImage.tsx";
 import BaseChannelItem from "BaseChannelItem.tsx";
-import _modDef16117 from "../../../../_runtime/metro/16117__.js";
+import _modDef16120 from "../../../../_runtime/metro/16120__.js";
 import _objectWithoutProperties from "../../../../_runtime/metro/00109__objectWithoutProperties.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 import PresenceStore from "../../../stores/PresenceStore.tsx";
@@ -61,7 +61,7 @@ function ChannelIcon(arg0) {
       }
     }
     if (tmp2) {
-      let tmp12 = _modDef16117;
+      let tmp12 = _modDef16120;
       let BookCheckIcon = BookCheckIcon2.BookCheckIcon;
       let tmp9 = require;
     } else {
@@ -86,7 +86,7 @@ function ChannelIcon(arg0) {
       obj6 = {};
     }
     const merged = Object.assign(obj6);
-    return map1(tmp9(12379).BaseChannelIcon, obj4);
+    return map1(tmp9(12383).BaseChannelIcon, obj4);
   }
 }
 function DMChannelIcon(userId) {

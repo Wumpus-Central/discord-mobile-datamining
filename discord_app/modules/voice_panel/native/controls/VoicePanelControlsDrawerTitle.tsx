@@ -21,7 +21,7 @@ let obj = {
     justifyContent: "center",
     alignItems: "center",
     padding: 16,
-    height: fn(12271).CONTROLS_DRAWER_HEADER_SIZE,
+    height: fn(12275).CONTROLS_DRAWER_HEADER_SIZE,
   },
   titlePill: null,
   titlePillBG: null,

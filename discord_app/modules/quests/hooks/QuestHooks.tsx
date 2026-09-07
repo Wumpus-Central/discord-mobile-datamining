@@ -75,7 +75,7 @@ function useQuests(arg0) {
   const isFetchingCurrentQuests = stateFromStoresObject.isFetchingCurrentQuests;
   lastFetchedCurrentQuests = stateFromStoresObject.lastFetchedCurrentQuests;
   const obj4 = obj(504);
-  isEligibleForQuests = obj(11484).getIsEligibleForQuests();
+  isEligibleForQuests = obj(11489).getIsEligibleForQuests();
   const items3 = [
     obj.fetchPolicy,
     isEligibleForQuests,
@@ -1275,7 +1275,7 @@ export const useConnectedConsoleLinkOnClick = function useConnectedConsoleLinkOn
   }
   c3 = isConsoleQuestResult;
   let obj2 = quest(7724);
-  closure_4 = tmp(11486).useGetQuestImpressionId();
+  closure_4 = tmp(11491).useGetQuestImpressionId();
   return () => {
     obj = QuestPlatformUtils;
     if (c3) {
@@ -1382,23 +1382,23 @@ export const useQuestPreviewActions = function useQuestPreviewActions(id) {
   return noop.useMemo(
     () => ({
       handleComplete() {
-        return closure_0(11276).completeQuestPreview(id);
+        return closure_0(11281).completeQuestPreview(id);
       },
       handleProgress(random) {
-        return closure_0(11276).completeQuestPreview(id, random);
+        return closure_0(11281).completeQuestPreview(id, random);
       },
       handleResetStatusClick() {
-        return closure_0(11276).resetQuestPreviewStatus(id);
+        return closure_0(11281).resetQuestPreviewStatus(id);
       },
       handleResetDismissibilityClick() {
-        return closure_0(11276).resetQuestDismissibilityStatus(id);
+        return closure_0(11281).resetQuestDismissibilityStatus(id);
       },
       handleOverridePreviewClick(placement) {
-        return closure_0(11276).overrideQuestForPlacement(placement, id);
+        return closure_0(11281).overrideQuestForPlacement(placement, id);
       },
       handleResetHasBeenSeenClick() {
         const items = [id];
-        return closure_0(11276).markAdContentUnseen(closure_0(5451).AdCreativeType.QUEST, items);
+        return closure_0(11281).markAdContentUnseen(closure_0(5451).AdCreativeType.QUEST, items);
       },
     }),
     items,
@@ -1880,7 +1880,7 @@ export const useQuestWarningTips = function useQuestWarningTips(userStatus) {
     let tmp11Result = tmp11(1115);
     let tmp22 = tmp11Result.isWeb() && tmp17;
     if (tmp22) {
-      tmp11Result = tmp11(11496);
+      tmp11Result = tmp11(11501);
       tmp22 = !tmp11Result.isQuestSupportedOnWeb(userStatus);
     }
     const obj2 = require("initialize");
@@ -2326,11 +2326,11 @@ export const useFetchQuestHomeBounties = function useFetchQuestHomeBounties() {
                 if (arr.length > 0) {
                   c1 = 3;
                   v3 = 1;
-                  const obj1 = { value: previewAdCreativeIds(11524).fetchBountyPreview(arr, c3), done: false };
+                  const obj1 = { value: previewAdCreativeIds(11529).fetchBountyPreview(arr, c3), done: false };
                   return obj1;
                 }
               }
-              let obj2 = previewAdCreativeIds(11524);
+              let obj2 = previewAdCreativeIds(11529);
               c1 = 2;
               v3 = 1;
               obj2 = { value: null, done: false };

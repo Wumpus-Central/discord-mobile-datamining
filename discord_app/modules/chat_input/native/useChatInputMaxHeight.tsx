@@ -29,7 +29,7 @@ function getChatInputMaxHeight() {
     ),
   );
 }
-const CHAT_INPUT_PILL_CONTENT_SIZE = fn(11962).CHAT_INPUT_PILL_CONTENT_SIZE;
+const CHAT_INPUT_PILL_CONTENT_SIZE = fn(11966).CHAT_INPUT_PILL_CONTENT_SIZE;
 let c6 = 200;
 function getChatInputMaxHeightWorklet() {
   const keyboardStateWorklet = useKeyboardStateSharedValue.getKeyboardStateWorklet();
@@ -46,9 +46,9 @@ function getChatInputMaxHeightWorklet() {
   );
 }
 let obj = {
-  getKeyboardStateWorklet: fn(12032).getKeyboardStateWorklet,
+  getKeyboardStateWorklet: fn(12036).getKeyboardStateWorklet,
   KeyboardTypes: fn(1609).KeyboardTypes,
-  getWindowDimensionsWorklet: fn(12033).getWindowDimensionsWorklet,
+  getWindowDimensionsWorklet: fn(12037).getWindowDimensionsWorklet,
   MAX_HEIGHT: 200,
   MIN_HEIGHT: CHAT_INPUT_PILL_CONTENT_SIZE,
 };

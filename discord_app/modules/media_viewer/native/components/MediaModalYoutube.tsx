@@ -132,7 +132,7 @@ export default noop.memo((visible) => {
     if (playerState === tmp2(8297).PlayerState.ERRORED) {
       if ("embed_not_allowed" === tmp6[0]) {
         obj = { videoId: youtubeVideoIdFromURI.videoId };
-        return ref(tmp7(12977), obj);
+        return ref(tmp7(12981), obj);
       }
     }
     tmp2Result = tmp2(1115);

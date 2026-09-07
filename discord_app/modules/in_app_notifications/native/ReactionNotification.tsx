@@ -76,7 +76,7 @@ function ReactionNotificationBodyWrapper(arg0) {
   noop = tmp4;
   const AnimateEmoji = message(1935).AnimateEmoji;
   const setting = AnimateEmoji.useSetting();
-  let obj = message(10131);
+  let obj = message(10136);
   const previewableMedia = obj.usePreviewableMedia(message);
   const items = [setting, reaction, , ,];
   ({ imageEmoji: arr[2], textEmoji: arr[3], italic: arr[4] } = tmp4);
@@ -218,9 +218,9 @@ function ReactionNotificationBodyWrapper(arg0) {
     return { text, secondaryText: null };
   }, items1);
   ({ secondaryText, text } = memo);
-  let obj1 = message(10094);
+  let obj1 = message(10099);
   const hasPreviewableMedia = obj1.useHasPreviewableMedia(message);
-  let obj2 = message(10140);
+  let obj2 = message(10145);
   if (hasPreviewableMedia) {
     message = obj2.useGetInitialMessagePreview({ message });
   }
@@ -273,7 +273,7 @@ function ReactorNotificationIcon(notification) {
   tmp = closure_13();
 }
 const View = fn(17).View;
-const InAppNotificationConstants = fn(10095);
+const InAppNotificationConstants = fn(10100);
 ({ IN_APP_NOTIFICATION_MAX_HEIGHT: metroRequire, NOTIFICATION_PREVIEW_LINE_CLAMP: closure_7 } =
   InAppNotificationConstants);
 const Constants = fn(1074);
@@ -418,7 +418,7 @@ export default function ReactionNotification(notification) {
   }, items3);
   const callback1 = obj1.useCallback(() => {
     const obj = { channelId: id };
-    return obj.pushLazy(asyncRequireImpl(10142, dependencyMap.paths), obj);
+    return obj.pushLazy(asyncRequireImpl(10147, dependencyMap.paths), obj);
   }, items4);
   obj = {
     icon: closure_10(ReactorNotificationIcon, { notification, isMilestone: result }),

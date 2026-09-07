@@ -10,7 +10,7 @@ import UserSettingsProtoStore from "../../UserSettingsProtoStore.tsx";
 
 require = fn;
 const AnalyticEvents = fn(1074).AnalyticEvents;
-fn(11468);
+fn(11473);
 let SettingBuilders = {
   useTitle() {
     const intl = util.intl;

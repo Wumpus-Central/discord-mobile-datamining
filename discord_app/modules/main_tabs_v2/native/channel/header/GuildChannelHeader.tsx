@@ -66,7 +66,7 @@ function GuildChannelMemberCount(channel) {
     const count = ChannelMemberCountStore.requestCount(channel.guild_id, channel.id);
   }, items1);
   if (null == total) {
-    const tmpResult = tmp(13269);
+    const tmpResult = tmp(13273);
     return tmpResult.renderMemberCountText(online, total, flag, tmp(6620).ICON_SIZE[token]);
   }
   const obj2 = channel(504);
@@ -138,7 +138,7 @@ function ChannelLinkedLobbyCoachmark(guild) {
     return obj;
   }, items1);
   let obj = guild(7388);
-  const coachmark = guild(11127).useCoachmark(guild.iconRef, memo);
+  const coachmark = guild(11132).useCoachmark(guild.iconRef, memo);
   return null;
 }
 const View = fn(17).View;

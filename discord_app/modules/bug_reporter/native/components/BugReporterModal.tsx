@@ -324,7 +324,7 @@ class BugCreateScreen {
                                 let obj5 = closure_2_1(4259);
                                 const obj1 = {
                                   key: "BUG_REPORT_BUG_SUBMITTED",
-                                  icon: closure_2_1(9566),
+                                  icon: closure_2_1(9571),
                                   content: null,
                                   toastDurationMs: null,
                                 };
@@ -387,7 +387,7 @@ class BugCreateScreen {
                         c5 = 1;
                         c6 = 1;
                         obj5 = {
-                          value: closure_2_0(10187).submitReport(closure_131_0, closure_131_1, closure_131_2),
+                          value: closure_2_0(10192).submitReport(closure_131_0, closure_131_1, closure_131_2),
                           done: false,
                         };
                         return obj5;
@@ -436,7 +436,7 @@ class BugCreateScreen {
                     let obj3 = { value: undefined, done: true };
                     return obj3;
                   } else {
-                    obj3 = handleSubmit(10186);
+                    obj3 = handleSubmit(10191);
                     description = 1;
                     priority = 1;
                     let obj4 = { value: obj3.getAttachments(first3), done: false };
@@ -799,7 +799,7 @@ class BugCreateScreen {
       obj15.disabled = null == first7;
       obj15.onPress = function onPress() {
         const obj = { features: null != first7 ? first7.features : [], feature: first8, setFeature };
-        return obj.openLazy(asyncRequireImpl(10211, dependencyMap.paths), "BugReporterFeatureActionSheet", obj);
+        return obj.openLazy(asyncRequireImpl(10216, dependencyMap.paths), "BugReporterFeatureActionSheet", obj);
       };
       if (null != first8) {
         name = first8.name;

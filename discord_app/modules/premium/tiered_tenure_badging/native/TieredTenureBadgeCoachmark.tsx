@@ -101,6 +101,6 @@ export default function TieredTenureBadgeCoachmark(arg0) {
     return obj;
   }, items2);
   let obj = tieredTenureBadgeData(7634);
-  const coachmark = tieredTenureBadgeData(11127).useCoachmark(targetRef, memo);
+  const coachmark = tieredTenureBadgeData(11132).useCoachmark(targetRef, memo);
   return null;
 }

@@ -87,13 +87,13 @@ function WishlistSuggestionsGridContents(arg0) {
   }, items1);
   obj = { minCardSize: 80, maxCardSize: 120, containerWidth, maxWidth, sidePadding: closure_8 + PX_16 + 1, gap };
   const analyticsLocations = useAnalyticsLocationsDefault().analyticsLocations;
-  let obj3 = trackUserProfileWishlistAction(13092);
+  let obj3 = trackUserProfileWishlistAction(13096);
   obj = {
     userId,
     wishlist,
     numWishlistItemsToRecommend: 15,
     maxWishlistItemsToShow: 9,
-    source: trackUserProfileWishlistAction(8776).WishlistFetchSource.USER_PROFILE,
+    source: trackUserProfileWishlistAction(8781).WishlistFetchSource.USER_PROFILE,
   };
   const items2 = obj3.useAddToWishlistGridItems(obj).items;
   const items3 = [trackUserProfileWishlistAction];
@@ -115,7 +115,7 @@ function WishlistSuggestionsGridContents(arg0) {
     let obj2 = {
       size: "md",
       variant: "secondary",
-      icon: closure_12(tmp(12138).ShopIcon, { size: "sm" }),
+      icon: closure_12(tmp(12142).ShopIcon, { size: "sm" }),
       text: null,
       onPress: null,
     };
@@ -188,7 +188,7 @@ function WishlistSuggestionsGridContents(arg0) {
     const obj13 = {
       size: "md",
       variant: "secondary",
-      icon: closure_12(tmp(12138).ShopIcon, { size: "sm" }),
+      icon: closure_12(tmp(12142).ShopIcon, { size: "sm" }),
       text: null,
       onPress: null,
     };
@@ -199,7 +199,7 @@ function WishlistSuggestionsGridContents(arg0) {
     items6[2] = closure_12(View, obj12);
     obj5.children = items6;
     obj3.children = closure_13(ReanimatedRexportDefault.View, obj5);
-    tmp12Result = closure_12(tmp(13093).WishlistAnalyticsProvider, obj3);
+    tmp12Result = closure_12(tmp(13097).WishlistAnalyticsProvider, obj3);
   }
   return tmp12Result;
 }

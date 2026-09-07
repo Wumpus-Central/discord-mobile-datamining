@@ -3,11 +3,11 @@ import nativeDefault from "../../../../../discord_common/js/packages/tokens/nati
 import util from "../../../../intl/index.native.tsx";
 import native from "../../../../design/void/native.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
-import _modDef8614 from "../../../../../_runtime/metro/08614__.js";
-import _modDef9625 from "../../../../../_runtime/metro/09625__.js";
-import _modDef9626 from "../../../../../_runtime/metro/09626__.js";
-import _modDef9627 from "../../../../../_runtime/metro/09627__.js";
-import _modDef9628 from "../../../../../_runtime/metro/09628__.js";
+import _modDef8619 from "../../../../../_runtime/metro/08619__.js";
+import _modDef9630 from "../../../../../_runtime/metro/09630__.js";
+import _modDef9631 from "../../../../../_runtime/metro/09631__.js";
+import _modDef9632 from "../../../../../_runtime/metro/09632__.js";
+import _modDef9633 from "../../../../../_runtime/metro/09633__.js";
 import mediaEngineContextFromParticipantTypeDefault from "../../../calls/mediaEngineContextFromParticipantType.tsx";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
@@ -18,7 +18,7 @@ import MediaEngineStore from "../../../../stores/MediaEngineStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-let closure_7 = fn(9624).clearVoiceChannelEffectForUser;
+let closure_7 = fn(9629).clearVoiceChannelEffectForUser;
 const VideoToggleState = fn(1074).VideoToggleState;
 const ParticipantTypes = fn(4581).ParticipantTypes;
 const MediaEngineContextTypes = fn(4585).MediaEngineContextTypes;
@@ -161,7 +161,7 @@ let closure_18 = noop.memo((guildId) => {
       const items = [,];
       ({ autoDisabledVideo: arr[0], autoDisabledVideoTextWrapper: arr[1] } = closure_1);
       obj.style = items;
-      obj = { source: _modDef9625, size: native.Icon.Sizes.SMALL, disableColor: true };
+      obj = { source: _modDef9630, size: native.Icon.Sizes.SMALL, disableColor: true };
       const items1 = [closure_2_14(native.Icon, obj)];
       const obj1 = { variant: "text-sm/normal", color: "text-default", style: closure_1.labelText, children: null };
       const intl = util.intl;
@@ -203,11 +203,11 @@ let closure_19 = noop.memo((userId) => {
   );
   let tmp5 = tmp4[1];
   if (tmp4[0]) {
-    let tmp6 = _modDef8614;
+    let tmp6 = _modDef8619;
   } else if (deafened) {
-    tmp6 = _modDef9626;
+    tmp6 = _modDef9631;
   } else if (muted) {
-    tmp6 = _modDef9627;
+    tmp6 = _modDef9632;
   }
   if (tmp5) {
     tmp5 = !tmp4[2];
@@ -218,7 +218,7 @@ let closure_19 = noop.memo((userId) => {
       obj = { style: null, children: null };
       const items2 = [tmp.statusWrapper, style];
       obj.style = items2;
-      obj = { source: _modDef9628, size: tmp2(1178).Icon.Sizes.SMALL, disableColor: true };
+      obj = { source: _modDef9633, size: tmp2(1178).Icon.Sizes.SMALL, disableColor: true };
       obj.children = closure_14(tmp2(1178).Icon, obj);
       tmp14 = closure_14(View, obj);
     }
@@ -237,7 +237,7 @@ let closure_19 = noop.memo((userId) => {
         source: tmp6,
         size: tmp2(1178).Icon.Sizes.SMALL,
         color: nativeDefault.unsafe_rawColors.WHITE,
-        disableColor: tmp6 === _modDef8614,
+        disableColor: tmp6 === _modDef8619,
       };
       obj2.children = closure_14(tmp2(1178).Icon, obj3);
       tmp19Result = closure_14(View, obj2);

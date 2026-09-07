@@ -1,6 +1,6 @@
 // discord_app/modules/main_tabs_v2/native/sidebar/details/ChannelDetailsMoreButton.tsx
 import PressableNavigatorButtonWrapperDefault from "../../shared_components/navigator/PressableNavigatorButtonWrapper.tsx";
-import _modDef9800 from "../../../../../../_runtime/metro/09800__.js";
+import _modDef9805 from "../../../../../../_runtime/metro/09805__.js";
 import openChannelLongPressActionSheet from "../../../../channel/native/openChannelLongPressActionSheet.tsx";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
@@ -19,7 +19,7 @@ export default function MoreButton(channel) {
       obj = { accessibilityLabel: null, source: null, onPress: null };
       const intl = channel(1114).intl;
       obj.accessibilityLabel = intl.string(channel(1114).t["UKOtz+"]);
-      obj.source = _modDef9800;
+      obj.source = _modDef9805;
       obj.onPress = tmp;
       obj.children = jsx(channel(7863).HeaderIconButton, { accessibilityLabel: null, source: null, onPress: null });
       tmp2 = jsx(PressableNavigatorButtonWrapperDefault, { accessibilityLabel: null, source: null, onPress: null });

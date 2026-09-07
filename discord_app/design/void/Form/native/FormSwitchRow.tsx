@@ -7,7 +7,7 @@ import TableSwitchRow from "../../../components/TableRow/native/TableSwitchRow.n
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
-const Form_FormSwitchDefault = tmp13(8605);
+const Form_FormSwitchDefault = tmp13(8610);
 require = fn;
 function FormSwitchRow(onValueChange) {
   onValueChange = onValueChange.onValueChange;

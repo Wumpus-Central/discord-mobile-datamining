@@ -272,7 +272,7 @@ function getItemAndNodeFromTouchEvent(absoluteY, arg1, fastListRef, map) {
 }
 const Dimensions = fn(17).Dimensions;
 const GuildsNodeType = fn(5438).GuildsNodeType;
-const GuildsBarConstants = fn(16285);
+const GuildsBarConstants = fn(16288);
 ({ FastListRenderSections: c10, useGuildWrapperSize: closure_11 } = GuildsBarConstants);
 let c12 = 160;
 let c13 = 16.666666666666668;
@@ -657,7 +657,7 @@ export default function useGuildsBarGesture() {
         const close = menu.requestClose(-1 === activeIndex.get());
       }
     }
-    state.setStateShallow({ dragSpecs: "hash", overSpecs: "call" });
+    state.setStateShallow({ dragSpecs: "push", overSpecs: "channel" });
     value = gestureState.get();
     if (null != value.mode) {
       const obj5 = {};
@@ -853,10 +853,10 @@ export default function useGuildsBarGesture() {
         id1 = node.id;
       }
       if (id !== id1) {
-        const ContextMenuStore = tmp66(8667).ContextMenuStore;
+        const ContextMenuStore = tmp66(8672).ContextMenuStore;
         if (null != ContextMenuStore.getState().menu) {
-          tmp66(8667).hideContextMenu();
-          const tmp66Result = tmp66(8667);
+          tmp66(8672).hideContextMenu();
+          const tmp66Result = tmp66(8672);
         }
         node2 = node;
         overPercentage2 = overPercentage;

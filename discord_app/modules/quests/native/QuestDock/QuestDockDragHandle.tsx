@@ -5,7 +5,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 require = fn;
 const StyleSheet = fn(17).StyleSheet;
 const QuestDockMode = fn(5444).QuestDockMode;
-const QuestDockConstants = fn(15095);
+const QuestDockConstants = fn(15098);
 ({ QUEST_DOCK_MODE_CHANGE_PHYSICS: hasOwnProperty, QUEST_DOCK_COLLAPSED_MAX_WIDTH: metroRequire } = QuestDockConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
@@ -52,11 +52,11 @@ const result = size.fileFinishedImporting("modules/quests/native/QuestDock/Quest
 export default noop.memo(function QuestDockDragHandle(arg0) {
   ({ isExpanded, variant } = arg0);
   const tmp = closure_9();
-  const context = youBarHorizontalMargin.useContext(activeQuestDockMode(15096).QuestDockGestureContext);
+  const context = youBarHorizontalMargin.useContext(activeQuestDockMode(15099).QuestDockGestureContext);
   activeQuestDockMode = context.activeQuestDockMode;
   const windowDimensions = context.windowDimensions;
   dependencyMap = tmp5;
-  let obj = activeQuestDockMode(15097);
+  let obj = activeQuestDockMode(15100);
   youBarHorizontalMargin = obj.useYouBarHorizontalMargin();
   let obj1 = activeQuestDockMode(4296);
   const fn = function n() {
@@ -172,7 +172,7 @@ export default noop.memo(function QuestDockDragHandle(arg0) {
   const tmp12 = windowDimensions;
   const obj4 = { style: animatedStyle1, layout: null, children: null };
   const tmp13 = windowDimensions(7073);
-  obj4.layout = activeQuestDockMode(15094).dimensionsLayoutTransition;
+  obj4.layout = activeQuestDockMode(15097).dimensionsLayoutTransition;
   obj5 = { style: null, children: null };
   const items1 = [tmp.dragHandleOverlay, animatedStyle3];
   obj5.style = items1;

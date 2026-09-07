@@ -10,7 +10,7 @@ require = fn;
 function closeModal() {
   TransferOwnershipModalActionCreatorsDefault.close();
 }
-const TransferOwnershipConstants = fn(11846);
+const TransferOwnershipConstants = fn(11851);
 ({ TransferOwnershipModalScenes: hasOwnProperty, TransferOwnershipVerificationTypes: metroRequire } =
   TransferOwnershipConstants);
 const jsx = fn(21).jsx;
@@ -47,7 +47,7 @@ export default function TransferOwnershipModal(guild) {
         c2 = 0;
         c1 = 0;
         return (function* (arg0) {
-          yield toUser(9063).transferOwnership(id.id, id2.id, constants.EMAIL, id);
+          yield toUser(9068).transferOwnership(id.id, id2.id, constants.EMAIL, id);
           return value;
         })();
       });
@@ -62,10 +62,10 @@ export default function TransferOwnershipModal(guild) {
         return applyArgumentsResult;
       };
       obj.onSuccess = function onSuccess() {
-        toUser(11844).close();
-        const obj = toUser(11844);
-        toUser(9063).close();
-        const obj2 = toUser(9063);
+        toUser(11849).close();
+        const obj = toUser(11849);
+        toUser(9068).close();
+        const obj2 = toUser(9068);
         const result = closure_0(4258).showTransferOwnershipSuccess();
       };
       obj.onResend = closure_1_3(function* () {

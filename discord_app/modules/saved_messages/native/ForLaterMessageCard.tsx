@@ -83,7 +83,7 @@ export default noop.memo(function ForLaterMessageCard(savedMessage) {
   savedMessage = savedMessage.savedMessage;
   const throttledNow = savedMessage.throttledNow;
   const tmp = closure_12();
-  let obj = savedMessage(11711);
+  let obj = savedMessage(11716);
   const savedMessageChannel = obj.useSavedMessageChannel(savedMessage);
   const items = [savedMessage, savedMessageChannel];
   const callback = noop.useCallback(
@@ -147,7 +147,7 @@ export default noop.memo(function ForLaterMessageCard(savedMessage) {
                         obj = { value, done: true };
                         return obj;
                       } else {
-                        let obj2 = v3(11711);
+                        let obj2 = v3(11716);
                         c1 = 1;
                         c2 = 1;
                         const obj1 = { value: obj2.savedMessageJumpToMessage(tmp4, c1), done: false };
@@ -249,7 +249,7 @@ export default noop.memo(function ForLaterMessageCard(savedMessage) {
         })
       ) {
         obj = { savedMessage, jumpToMessage: callback, throttledNow };
-        const tmp8 = closure_10(savedMessageChannel(13286), obj);
+        const tmp8 = closure_10(savedMessageChannel(13290), obj);
         obj = {
           variant: "primary",
           border: "subtle",
@@ -261,7 +261,7 @@ export default noop.memo(function ForLaterMessageCard(savedMessage) {
         let tmp6Result = null;
         if (null != savedMessage.saveData.dueAt) {
           obj1 = { savedMessage, throttledNow, actions: tmp8 };
-          tmp6Result = closure_10(tmp2(13289).ForLaterCardReminderHeader, obj1);
+          tmp6Result = closure_10(tmp2(13293).ForLaterCardReminderHeader, obj1);
         }
         const items2 = [tmp6Result, , ,];
         let obj2 = { channel: savedMessageChannel, actions: null };
@@ -270,11 +270,11 @@ export default noop.memo(function ForLaterMessageCard(savedMessage) {
           tmp12 = tmp8;
         }
         obj2.actions = tmp12;
-        items2[1] = closure_10(tmp2(12215).ForLaterCardHeader, obj2);
+        items2[1] = closure_10(tmp2(12219).ForLaterCardHeader, obj2);
         let obj3 = { style: tmp.cardDivider };
         items2[2] = closure_10(View, obj3);
         const obj4 = { message: savedMessage.message, lineClamp: 2, maxHeight: 250 };
-        items2[3] = closure_10(tmp2(12216).ForLaterMessageRow, obj4);
+        items2[3] = closure_10(tmp2(12220).ForLaterMessageRow, obj4);
         obj.children = items2;
         return closure_11(tmp2(5607).Card, obj);
       }

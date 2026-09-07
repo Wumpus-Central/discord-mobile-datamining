@@ -29,7 +29,7 @@ function LoggedEvent(arg0) {
   let tmp6Result = dependencyMap;
   let obj = {
     arrow: !tmp2,
-    icon: closure_8(fingerprint(10384).AnalyticsIcon, {}),
+    icon: closure_8(fingerprint(10389).AnalyticsIcon, {}),
     label: event,
     subLabel: null,
     onPress: null,
@@ -72,7 +72,7 @@ function LoggedEvent(arg0) {
     if (tmp6Result) {
       obj4 = { name: "User ", children: null };
       const obj5 = { user };
-      obj4.children = closure_8(tmp10(9803), obj5);
+      obj4.children = closure_8(tmp10(9808), obj5);
       tmp6Result = closure_8(CommonProperty, obj4);
     }
     items1[1] = tmp6Result;
@@ -223,14 +223,14 @@ export default function DevToolsAnalyticsScreen() {
   const str2 = str.toLowerCase();
   const items2 = [
     closure_8(trimmed(7201).TableSwitchRow, {
-      icon: closure_8(trimmed(12151).ArrowsUpDownIcon, {}),
+      icon: closure_8(trimmed(12155).ArrowsUpDownIcon, {}),
       label: "Reverse Events",
       value: first,
       onValueChange: tmp5[1],
     }),
   ];
   const obj1 = {
-    icon: closure_8(trimmed(12151).ArrowsUpDownIcon, {}),
+    icon: closure_8(trimmed(12155).ArrowsUpDownIcon, {}),
     label: "Reverse Events",
     value: first,
     onValueChange: tmp5[1],
@@ -240,7 +240,7 @@ export default function DevToolsAnalyticsScreen() {
     variant: "danger",
     icon: closure_8(trimmed(4518).TrashIcon, { color: "text-feedback-critical" }),
     label: "Clear Analytics Log",
-    onPress: trimmed(15574).clearAnalyticsLog,
+    onPress: trimmed(15577).clearAnalyticsLog,
   });
   obj.children = items2;
   const items3 = [closure_9(trimmed(5687).TableRowGroup, obj), ,];
@@ -249,7 +249,7 @@ export default function DevToolsAnalyticsScreen() {
     variant: "danger",
     icon: closure_8(trimmed(4518).TrashIcon, { color: "text-feedback-critical" }),
     label: "Clear Analytics Log",
-    onPress: trimmed(15574).clearAnalyticsLog,
+    onPress: trimmed(15577).clearAnalyticsLog,
   };
   items3[1] = closure_8(View, {
     style: tmp.searchFieldContainer,
@@ -295,6 +295,6 @@ export default function DevToolsAnalyticsScreen() {
       fingerprint: item.fingerprint,
     });
   };
-  obj.children = closure_8(trimmed(8874).FlashList, obj5);
+  obj.children = closure_8(trimmed(8879).FlashList, obj5);
   return closure_8(View, obj);
 }

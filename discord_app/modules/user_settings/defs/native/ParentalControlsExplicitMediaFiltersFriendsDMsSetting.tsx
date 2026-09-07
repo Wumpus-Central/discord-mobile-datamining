@@ -6,7 +6,7 @@ import FamilyCenterControlledSettingsUtils from "../../../parent_tools/FamilyCen
 import FamilyCenterStore from "../../../parent_tools/FamilyCenterStore.tsx";
 
 require = fn;
-fn(11468);
+fn(11473);
 let SettingBuilders = {
   useTitle: function getTitle() {
     const intl = util.intl;
@@ -30,7 +30,7 @@ let SettingBuilders = {
   onPress: function onObscuredContentFriendsDmOnPress() {
     const selectedTeenId = FamilyCenterStore.getSelectedTeenId();
     if (null != selectedTeenId) {
-      selectedTeenId(14828);
+      selectedTeenId(14831);
       const intl = selectedTeenId(1114).intl;
       const stringResult = intl.string(selectedTeenId(1114).t.GYpoAq);
       let obj = { title: stringResult, subtitle: null, handlePress: null, currentValue: null, excluded: null };
@@ -43,8 +43,8 @@ let SettingBuilders = {
       obj.currentValue = obj.getExplicitContentSettingOrDefault(selectedTeenId).explicitContentFriendDm;
       const items = [selectedTeenId(1187).ExplicitContentRedaction.SHOW];
       obj.excluded = items;
-      const result = selectedTeenId(14821).handleSensitiveMediaFilterPress(obj);
-      const obj2 = selectedTeenId(14821);
+      const result = selectedTeenId(14824).handleSensitiveMediaFilterPress(obj);
+      const obj2 = selectedTeenId(14824);
     }
   },
   unsearchable: true,

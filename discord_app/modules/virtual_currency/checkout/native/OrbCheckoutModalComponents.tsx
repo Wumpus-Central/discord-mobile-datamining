@@ -120,7 +120,7 @@ export const OrbCheckoutPaymentSourceDetails = function OrbCheckoutPaymentSource
   return React5(React4, obj);
 };
 export const OrbCheckoutLegalFinePrint = function OrbCheckoutLegalFinePrint() {
-  let obj = skuId(13153);
+  let obj = skuId(13157);
   skuId = obj.useOrbCheckoutModalContext().skuId;
   const items = [skuId];
   const memo = noop.useMemo(() => OrbCheckoutUtils.getOrbCheckoutDisclaimerMessage(skuId), items);

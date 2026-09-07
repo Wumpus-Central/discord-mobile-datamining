@@ -22,7 +22,7 @@ let closure_8 = async function _getGeneratedPoolById() {
       if (body.ok) {
         const users = body.users;
         let obj = { type: "GENERATED_POOL_BY_ID_FETCH_SUCCESS", pool: null, users: null };
-        const GeneratedTestPoolRecord = closure_0(15612).GeneratedTestPoolRecord;
+        const GeneratedTestPoolRecord = closure_0(15615).GeneratedTestPoolRecord;
         const obj2 = closure_1(573);
         obj.pool = GeneratedTestPoolRecord.fromServer(body.generated_pool).setPassword(closure_0);
         obj.users = users.map((item) => new closure_1_4(item));

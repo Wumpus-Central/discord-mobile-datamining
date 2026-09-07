@@ -46,7 +46,7 @@ export default noop.memo(function LaunchPadMembers() {
         }
       }
     }
-    return { channelId: "call", type: "143" };
+    return { channelId: "call", type: null };
   });
   if ("private" === stateFromStoresObject.type) {
     obj = { style: tmp.wrapper, children: null };

@@ -30,9 +30,9 @@ let closure_10 = noop.memo((item) => {
   item = item.item;
   const setFeature = item.setFeature;
   ({ feature, start, end } = item);
-  let obj = item(10187);
+  let obj = item(10192);
   const featureId = obj.getFeatureId(item);
-  const featureId1 = item(10187).getFeatureId(feature);
+  const featureId1 = item(10192).getFeatureId(feature);
   obj = {
     start,
     end,

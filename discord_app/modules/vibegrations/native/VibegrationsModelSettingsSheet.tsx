@@ -6,7 +6,7 @@ import noop from "../../../../_runtime/metro/00019__.js";
 import VibegrationsConnectionStore from "../stores/VibegrationsConnectionStore.tsx";
 
 require = fn;
-const sendModelSettings = fn(16589).sendModelSettings;
+const sendModelSettings = fn(16592).sendModelSettings;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
 const size = fn(2);
@@ -69,7 +69,7 @@ export default function VibegrationsModelSettingsSheet(projectId) {
     obj3.children = main.map((label) =>
       closure_1_6(
         projectId(5688).TableRadioRow,
-        { label: label.label, subLabel: projectId(16600).PROVIDER_LABELS[label.provider], value: label.id },
+        { label: label.label, subLabel: projectId(16603).PROVIDER_LABELS[label.provider], value: label.id },
         label.id,
       ),
     );
@@ -91,7 +91,7 @@ export default function VibegrationsModelSettingsSheet(projectId) {
     };
     let thinking = choices.thinking;
     obj4.children = thinking.map((value) => {
-      let tmp2 = projectId(16600).THINKING_LABELS[value];
+      let tmp2 = projectId(16603).THINKING_LABELS[value];
       if (tmp2 == null) {
         tmp2 = value;
       }

@@ -456,7 +456,7 @@ prototype["renderSystemMessageSettings"] = function renderSystemMessageSettings(
     );
     const tmpResult1 = tmp(1384);
   }
-  let result1 = tmp(17336).isPastVcActivityMessagesEnabled(guild.id, "GuildSettingsModalOverview");
+  let result1 = tmp(17339).isPastVcActivityMessagesEnabled(guild.id, "GuildSettingsModalOverview");
   if (!result1) {
     result1 = tmp(1384).hasFlag(guild.systemChannelFlags, constants5.SUPPRESS_VOICE_SESSION_NOTIFICATIONS);
     const tmpResult3 = tmp(1384);
@@ -477,7 +477,7 @@ prototype["renderSystemMessageSettings"] = function renderSystemMessageSettings(
   const intl5 = tmp(1114).intl;
   obj1.label = intl5.string(tmp(1114).t["+f0bXQ"]);
   obj1.disabled = !canManage;
-  const tmpResult2 = tmp(17336);
+  const tmpResult2 = tmp(17339);
   obj1.value = !tmp(1384).hasFlag(guild.systemChannelFlags, constants5.SUPPRESS_JOIN_NOTIFICATIONS);
   obj1.onValueChange = self.handleSystemJoinMessages;
   items[1] = closure_1_19(tmp(7201).TableSwitchRow, obj1);

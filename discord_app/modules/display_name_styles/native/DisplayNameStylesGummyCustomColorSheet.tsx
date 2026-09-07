@@ -61,12 +61,12 @@ export default function DisplayNameStylesGummyCustomColorSheet(onSelect) {
   obj2 = { style: tmp.body, children: null };
   const obj3 = {
     style: tmp.previewWrapper,
-    children: closure_7(View, { style: tmp.preview, children: closure_7(sharedValue(15348), { hue: sharedValue }) }),
+    children: closure_7(View, { style: tmp.preview, children: closure_7(sharedValue(15351), { hue: sharedValue }) }),
   };
   const items1 = [closure_7(View, obj3)];
   const obj5 = {
     style: tmp.huePickerInset,
-    children: closure_7(sharedValue(14601), {
+    children: closure_7(sharedValue(14604), {
       hue: sharedValue,
       onPanFinalize: callback,
       saturation,

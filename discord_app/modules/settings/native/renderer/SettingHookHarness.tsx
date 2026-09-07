@@ -4,7 +4,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 import SettingBlocklistStore from "stores/SettingBlocklistStore.tsx";
 
 const require = fn;
-const NodeType = fn(11469).NodeType;
+const NodeType = fn(11474).NodeType;
 let closure_6 = [];
 const map = new Map();
 const map1 = new Map();

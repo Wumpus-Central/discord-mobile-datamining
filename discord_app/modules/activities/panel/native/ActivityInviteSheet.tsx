@@ -25,7 +25,7 @@ function Loading() {
   return __initData(closure_1_14, obj);
 }
 const View = fn(17).View;
-const InstantInviteSendStateStore = fn(9894);
+const InstantInviteSendStateStore = fn(9899);
 ({ setSendState: metroRequire, useInstantInviteSendStates: closure_7 } = InstantInviteSendStateStore);
 const ActivityActionTypes = fn(1074).ActivityActionTypes;
 const Constants = fn(7736);
@@ -188,14 +188,14 @@ export default function ActivityInviteSheet(activity) {
   obj1.title = intl.string(activity(1114).t["OzOM/q"]);
   obj.header = closure_13(activity(7149).BottomSheetTitleHeader, obj1);
   if (null != tmp6) {
-    const obj2 = { style: tmp.emptyState, Illustration: tmp11(9849).AppCrash, title: tmp6 };
+    const obj2 = { style: tmp.emptyState, Illustration: tmp11(9854).AppCrash, title: tmp6 };
     let tmp19Result = closure_13(tmp11(1178).EmptyState, obj2);
   } else if (tmp15) {
     tmp19Result = closure_13(Loading, {});
   } else {
     let obj3 = { children: null };
     const obj4 = { style: tmp.searchAndShareContainer, children: null };
-    const obj5 = { size: "md", isRound: true, onChange: tmp11(9847).searchInviteSuggestions, placeholder: null };
+    const obj5 = { size: "md", isRound: true, onChange: tmp11(9852).searchInviteSuggestions, placeholder: null };
     const intl2 = tmp11(1114).intl;
     obj5.placeholder = intl2.string(tmp11(1114).t.iI1gMg);
     obj4.children = closure_13(tmp11(7050).SearchField, obj5);
@@ -214,7 +214,7 @@ export default function ActivityInviteSheet(activity) {
         onInviteSent: callback2,
         onPressAvatar: callback1,
       };
-      tmp17Result = closure_13(tmp2(17028), obj7);
+      tmp17Result = closure_13(tmp2(17031), obj7);
     }
     const obj8 = { children: null };
     items4[1] = tmp17Result;

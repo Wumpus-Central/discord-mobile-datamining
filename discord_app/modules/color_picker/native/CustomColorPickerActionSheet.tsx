@@ -184,7 +184,7 @@ export default function CustomColorPickerActionSheet(arg0) {
       obj.runOnJS(updateInputHexValueFromHsv)(obj);
     },
   };
-  items3[2] = sharedValue2(tmp16(14599), obj5);
+  items3[2] = sharedValue2(tmp16(14602), obj5);
   obj2.children = items3;
   obj.children = tmp13(tmp14, obj2);
   return sharedValue2(onSelect(7150).BottomSheet, obj);

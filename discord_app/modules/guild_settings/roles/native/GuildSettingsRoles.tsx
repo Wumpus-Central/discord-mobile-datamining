@@ -23,9 +23,9 @@ import GuildSettingsRoleCreateModalActionCreatorsDefault from "GuildSettingsRole
 import GuildSettingsRolesUtils from "../GuildSettingsRolesUtils.tsx";
 import actions_GuildActionCreators from "../../../../actions/native/GuildActionCreators.tsx";
 import GuildSettingsModalRolesActionCreatorsDefault from "../GuildSettingsModalRolesActionCreators.tsx";
-import _modDef17619 from "../../../../../_runtime/metro/17619__.js";
-import _modDef17620 from "../../../../../_runtime/metro/17620__.js";
-import _modDef17621 from "../../../../../_runtime/metro/17621__.js";
+import _modDef17622 from "../../../../../_runtime/metro/17622__.js";
+import _modDef17623 from "../../../../../_runtime/metro/17623__.js";
+import _modDef17624 from "../../../../../_runtime/metro/17624__.js";
 import GuildSettingsRoleItemDefault from "GuildSettingsRoleItem.tsx";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
@@ -43,7 +43,7 @@ require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: metroRequire, StyleSheet } = get_ActivityIndicator);
 const isEveryoneRole = fn(2016).isEveryoneRole;
-let closure_16 = fn(17605).GuildSettingsRoleEditSections;
+let closure_16 = fn(17608).GuildSettingsRoleEditSections;
 const Constants = fn(1074);
 ({
   GuildSettingsSections: closure_17,
@@ -194,7 +194,7 @@ export default function ConnectedGuildSettingsModalRoles(guildId) {
   currentUserId = stateFromStoresObject.currentUserId;
   highestRole = stateFromStoresObject.highestRole;
   closure_129_0 = ref;
-  let obj4 = guildId(17606);
+  let obj4 = guildId(17609);
   const guildSettingsRolesManagerState = obj4.useGuildSettingsRolesManagerState(
     (roleJustCreated) => roleJustCreated.roleJustCreated,
   );
@@ -476,16 +476,16 @@ export default function ConnectedGuildSettingsModalRoles(guildId) {
     let tmp4 = dependencyMap;
     if (closure_3) {
       if (isThemeDarkResult) {
-        tmp4 = 17618;
+        tmp4 = 17621;
         let tmp3Result = importDefault(tmp4);
       } else {
-        tmp3Result = _modDef17619;
+        tmp3Result = _modDef17622;
       }
     } else {
       if (isThemeDarkResult) {
-        tmp3Result = _modDef17620;
+        tmp3Result = _modDef17623;
       } else {
-        tmp3Result = _modDef17621;
+        tmp3Result = _modDef17624;
       }
       if (hasRoles) {
         const items = [closure_1.subheaderContainer];
@@ -642,7 +642,7 @@ export default function ConnectedGuildSettingsModalRoles(guildId) {
         };
       }
       obj.onMoveDown = fn2;
-      return hasRoles(closure_1(17622), obj, role.id);
+      return hasRoles(closure_1(17625), obj, role.id);
     }
   }, items19);
   const items20 = [callback2, callback6, callback5, hasRoles, sorting, navigation];
@@ -667,7 +667,7 @@ export default function ConnectedGuildSettingsModalRoles(guildId) {
       };
     } else if (hasRoles) {
       fn2 = () => {
-        const obj = { onPress, source: closure_1(12773), accessibilityLabel: null };
+        const obj = { onPress, source: closure_1(12777), accessibilityLabel: null };
         const intl = guildId(1114).intl;
         obj.accessibilityLabel = intl.string(guildId(1114).t.JZZjQK);
         return hasRoles(guildId(7377).HeaderActionButton, obj);
@@ -727,13 +727,13 @@ export default function ConnectedGuildSettingsModalRoles(guildId) {
     let tmp47Result = null;
     if (!hasRoles) {
       obj1 = { leading: null, label: null };
-      obj2 = { style: tmp.emptyRolesIcon, size: tmp3(1178).Icon.Sizes.LARGE, source: tmp6(9754) };
+      obj2 = { style: tmp.emptyRolesIcon, size: tmp3(1178).Icon.Sizes.LARGE, source: tmp6(9759) };
       obj1.leading = tmp47(tmp3(1178).Icon, obj2);
       obj3 = { variant: "text-md/semibold", color: "interactive-text-default", children: null };
       let intl = tmp3(1114).intl;
       obj3.children = intl.string(tmp3(1114).t.nZfHsf);
       obj1.label = tmp47(tmp3(4556).Text, obj3);
-      tmp47Result = tmp47(tmp3(8593).FormRow, obj1);
+      tmp47Result = tmp47(tmp3(8598).FormRow, obj1);
     }
     obj4 = { children: null };
     items25[1] = tmp47Result;

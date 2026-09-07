@@ -23,7 +23,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/forwarding/ForwardDestinationUtils.tsx");
 
 export const useSelectedDestinationChannel = function useSelectedDestinationChannel(selectedDestinations) {
-  const mapped = selectedDestinations.map(found(10981).getChannelIdFromDestinationId);
+  const mapped = selectedDestinations.map(found(10986).getChannelIdFromDestinationId);
   found = mapped.find(found(1369).isNotNullish);
   const items = [ChannelStore];
   const items1 = [found];

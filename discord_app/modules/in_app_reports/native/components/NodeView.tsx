@@ -152,8 +152,8 @@ function NullComponent() {
 }
 get_ActivityIndicator = fn(17);
 ({ View: metroRequire, ScrollView: closure_7 } = get_ActivityIndicator);
-const REMEDIATION_ELEMENT_TYPES = fn(8637).REMEDIATION_ELEMENT_TYPES;
-const IN_APP_REPORTS_NODE = fn(8635).IN_APP_REPORTS_NODE;
+const REMEDIATION_ELEMENT_TYPES = fn(8642).REMEDIATION_ELEMENT_TYPES;
+const IN_APP_REPORTS_NODE = fn(8640).IN_APP_REPORTS_NODE;
 const Constants = fn(1074);
 ({ AnalyticEvents: map1, ChannelTypes: closure_14 } = Constants);
 const Permissions = fn(1085).Permissions;

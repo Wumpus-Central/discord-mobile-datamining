@@ -4,7 +4,7 @@ import util from "../../../../intl/index.native.tsx";
 import MediaEngineStore from "../../../../stores/MediaEngineStore.tsx";
 
 require = fn;
-fn(11468);
+fn(11473);
 let SettingBuilders = {
   useTitle() {
     const intl = util.intl;
@@ -15,7 +15,7 @@ let SettingBuilders = {
     const items = [MediaEngineStore];
     return initialize.useStateFromStores(items, () => echoCancellation.getEchoCancellation());
   },
-  onValueChange: fn(9993).handleEchoCancellationChange,
+  onValueChange: fn(9998).handleEchoCancellationChange,
 };
 SettingBuilders = SettingBuilders.createToggle(SettingBuilders);
 const size = fn(2);

@@ -18,7 +18,7 @@ import UserStore from "../../../stores/UserStore.tsx";
 
 require = fn;
 const DraftType = fn(4901).DraftType;
-let closure_11 = fn(9485).updateChatInputContainerHeight;
+let closure_11 = fn(9490).updateChatInputContainerHeight;
 const AnalyticEvents = fn(1074).AnalyticEvents;
 const COMMAND_SENTINEL = fn(5000).COMMAND_SENTINEL;
 const MessageSendLocation = fn(4553).MessageSendLocation;
@@ -385,7 +385,7 @@ export default function useChatInputRefs(chatInputProps) {
                 state.current.text,
                 tmp4.current.channel,
                 (command, optionValues) => {
-                  threadCreationCallback(11997);
+                  threadCreationCallback(12001);
                   let applicationCommand = { applicationCommand: null, params: null };
                   applicationCommand = { command, optionValues };
                   applicationCommand.applicationCommand = applicationCommand;
@@ -412,7 +412,7 @@ export default function useChatInputRefs(chatInputProps) {
                     }
                   } else {
                     closure_1_1.cancel();
-                    chatInputProps(11997);
+                    chatInputProps(12001);
                     let params = { text, params: null };
                     params = {};
                     const merged = Object.assign(tmp.current);

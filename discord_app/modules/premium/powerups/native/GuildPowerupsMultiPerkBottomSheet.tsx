@@ -225,12 +225,12 @@ export default function GuildPowerupsMultiPerkBottomSheet(guildId) {
     obj = { paddingBottom: useSafeAreaInsetsDefault().bottom };
     obj.contentContainerStyle = obj;
     ({ title: obj4.title, description: obj4.description } = tmp4);
-    const items = [closure_4(tmp2(12552), { title: null, description: null }), ,];
+    const items = [closure_4(tmp2(12556), { title: null, description: null }), ,];
     tmp6Result = null != tmp4.disabledReason;
     if (tmp6Result) {
       const obj2 = { style: tmp.disabledReasonContainer, children: null };
       const obj3 = { text: tmp4.disabledReason };
-      obj2.children = closure_4(tmp2(12545), obj3);
+      obj2.children = closure_4(tmp2(12549), obj3);
       tmp6Result = closure_4(View, obj2);
     }
     items[1] = tmp6Result;

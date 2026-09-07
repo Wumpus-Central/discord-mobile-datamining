@@ -7,7 +7,7 @@ import noop from "../../../../_runtime/metro/00019__.js";
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ Image: c3, View: closure_4 } = get_ActivityIndicator);
-const getIconById = fn(9323).getIconById;
+const getIconById = fn(9328).getIconById;
 const jsx = fn(21).jsx;
 fn(4560);
 let createStyles = { container: null, image: null };

@@ -39,7 +39,7 @@ function NotificationBody(channel) {
   let obj1 = channel(504);
   const items1 = [ChannelStore];
   const stateFromStores1 = obj1.useStateFromStores(items1, () => ChannelStore.getChannel(channel.parent_id));
-  let obj2 = channel(10094);
+  let obj2 = channel(10099);
   const hasPreviewableMedia = obj2.useHasPreviewableMedia(message);
   const tmp6 = channel.type === channel(1094).ChannelTypes.DM;
   let num = 1;
@@ -47,7 +47,7 @@ function NotificationBody(channel) {
     num = closure_8;
   }
   let tmp10 = null;
-  const messagePreviewTextVariant = channel(10094).getMessagePreviewTextVariant();
+  const messagePreviewTextVariant = channel(10099).getMessagePreviewTextVariant();
   if (!tmp6) {
     obj = { channel, parentChannel: stateFromStores1, guild: stateFromStores, author: null };
     tmp10 = closure_10(MessageNotificationHeaderDefault, obj);
@@ -64,7 +64,7 @@ function NotificationBody(channel) {
         muted: false,
         lineClamp: num,
       };
-      let tmp14 = closure_10(tmp(10109).ChannelRowPreview, obj);
+      let tmp14 = closure_10(tmp(10114).ChannelRowPreview, obj);
     }
     obj1 = { children: null };
     items2[1] = tmp14;
@@ -73,10 +73,10 @@ function NotificationBody(channel) {
   }
   obj2 = { message, lineClamp: num, showMessageAuthor: true, maxHeight };
   tmp14 = closure_10(MessagePreviewTextDefault, obj2);
-  const tmpResult = channel(10094);
+  const tmpResult = channel(10099);
 }
 const View = fn(17).View;
-const InAppNotificationConstants = fn(10095);
+const InAppNotificationConstants = fn(10100);
 ({
   IN_APP_NOTIFICATION_MAX_HEIGHT: closure_7,
   NOTIFICATION_PREVIEW_LINE_CLAMP: closure_8,
@@ -137,5 +137,5 @@ export default noop.memo(function ReminderNotification(notification) {
     rightAccessory: closure_10(closure_16, { message }),
     children: closure_10(NotificationBody, { channel, message }),
   };
-  return closure_10(notification(10170).NotificationPressable, obj);
+  return closure_10(notification(10175).NotificationPressable, obj);
 });

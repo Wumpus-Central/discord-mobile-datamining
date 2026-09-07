@@ -16,7 +16,7 @@ import GuildDirectoryActionCreatorsAll from "../../GuildDirectoryActionCreators.
 import GuildDirectoryRowDefault from "GuildDirectoryRow.tsx";
 import GuildDirectoryPlaceholderRowDefault from "GuildDirectoryPlaceholderRow.tsx";
 import GuildDirectoryRowGenerator from "../GuildDirectoryRowGenerator.tsx";
-import _mod12671 from "../../../../../_runtime/metro/12671__.js";
+import _mod12675 from "../../../../../_runtime/metro/12675__.js";
 import HubProgressHeaderDefault from "../../../hub/native/components/progress_bar/HubProgressHeader.tsx";
 import PlusMediumIcon from "../../../../design/components/Icon/native/redesign/generated/PlusMediumIcon.tsx";
 import GuildDirectoryCategorySelectorDefault from "GuildDirectoryCategorySelector.tsx";
@@ -75,7 +75,7 @@ function GuildDirectoryHeader(guild) {
   let obj = { style: tmp.headerWrapper, children: null };
   obj = { source: null, style: null };
   const hasItem = features.has(constants3.HUB);
-  obj.source = _mod12671;
+  obj.source = _mod12675;
   obj.style = tmp.backgroundImage;
   const items = [closure_1_19(timestampProducer, obj)];
   obj = { style: tmp.textWrapper, children: null };
@@ -143,8 +143,8 @@ function GuildDirectoryFooter(hideFooter) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, Image: metroRequire, SectionList: closure_7, StyleSheet } = get_ActivityIndicator);
-const DirectoryEntryCategories = fn(12305).DirectoryEntryCategories;
-const GuildDirectoryConstants = fn(12310);
+const DirectoryEntryCategories = fn(12309).DirectoryEntryCategories;
+const GuildDirectoryConstants = fn(12314);
 const GUILD_DIRECTORY_BASE_HEADER_HEIGHT = GuildDirectoryConstants.GUILD_DIRECTORY_BASE_HEADER_HEIGHT;
 ({ GUILD_DIRECTORY_PROGRESS_BAR_HEIGHT: map1, DirectoryChannelScrollBehavior: closure_14 } = GuildDirectoryConstants);
 const Constants = fn(1074);
@@ -219,9 +219,9 @@ export default function GuildDirectory(channel) {
   let obj1 = noop;
   dependencyMap = noop.useRef(null);
   let bottom = guildId(1611)().bottom;
-  let obj2 = channel(12669);
+  let obj2 = channel(12673);
   const hubProgressBarCompletedSteps = obj2.useHubProgressBarCompletedSteps(onPressSearch);
-  let obj3 = channel(12669);
+  let obj3 = channel(12673);
   if (null == obj3.getNextHubProgressStep(hubProgressBarCompletedSteps)) {
     let sum = _location;
   } else {
@@ -358,8 +358,8 @@ export default function GuildDirectory(channel) {
         obj1 = { style: tmp.border };
         const items9 = [closure_19(currentCategoryId, obj1), ,];
         obj2 = { guild: onPressSearch, channel };
-        items9[1] = closure_19(tmp4(12754), obj2);
-        items9[2] = closure_19(tmp2(11896).TTIFirstContentfulPaint, { label: "guild_directory_empty" });
+        items9[1] = closure_19(tmp4(12758), obj2);
+        items9[2] = closure_19(tmp2(11901).TTIFirstContentfulPaint, { label: "guild_directory_empty" });
         obj.children = items9;
         let tmp23 = closure_20(currentCategoryId, obj);
       }

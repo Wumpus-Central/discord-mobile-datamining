@@ -29,7 +29,7 @@ function LaunchpadChannelIcon(channel) {
   });
   const items1 = [
     closure_8(View, obj),
-    closure_8(channel(12191).ChannelIcon, { channel, size: "sm", wrapperSize: 32 }),
+    closure_8(channel(12195).ChannelIcon, { channel, size: "sm", wrapperSize: 32 }),
   ];
   obj.children = items1;
   return closure_10(closure_9, obj);

@@ -108,7 +108,7 @@ export default function useGuildsBarBottomRightBadge(mentionCount) {
       obj5.cutouts = items2;
       return obj5;
     } else {
-      return { badge: null, cutout: "Array", cutouts: "isArray" };
+      return { badge: null, cutout: "Array", cutouts: "options" };
     }
   }, items1);
 }

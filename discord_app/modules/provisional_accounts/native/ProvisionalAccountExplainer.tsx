@@ -31,7 +31,7 @@ export const ChatProvisionalAccountExplainerCard = function ChatProvisionalAccou
       hasOwnProperty(ApplicationIconAndNameDefault, { application, textVariant, iconSize }, application.id),
     items,
   );
-  let obj = iconSize(12629);
+  let obj = iconSize(12633);
   const provisionalAccountExplanationText = obj.useProvisionalAccountExplanationText({
     userId,
     renderApplicationName: callback,
@@ -71,7 +71,7 @@ export const UserProfileProvisionalAccountExplainerCard = function UserProfilePr
       hasOwnProperty(ApplicationIconAndNameDefault, { application, textVariant, iconSize }, application.id),
     items,
   );
-  let obj = iconSize(12629);
+  let obj = iconSize(12633);
   const provisionalAccountExplanationText = obj.useProvisionalAccountExplanationText({
     userId,
     renderApplicationName: callback,

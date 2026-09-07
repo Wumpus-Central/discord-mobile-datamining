@@ -1,5 +1,5 @@
 // discord_app/utils/ErrorUtils.tsx
-import _mod13302 from "../../_runtime/metro/13302__.js";
+import _mod13306 from "../../_runtime/metro/13306__.js";
 import size from "../../_runtime/metro/00002__.js";
 
 function getUnderlyingIOSExceptionRecursively(NSUnderlyingError) {
@@ -36,5 +36,5 @@ export const serializeError = function serializeError(arg0) {
     const _String = String;
     error1 = new Error(String(error));
   }
-  return JSON.stringify(_mod13302.normalizeToSize(error1));
+  return JSON.stringify(_mod13306.normalizeToSize(error1));
 };

@@ -163,10 +163,10 @@ export const connectOrLurkStage = function connectOrLurkStage(arg0, arg1, arg2) 
             flag = null == channel;
             if (!flag) {
               connectToStage(channel);
-              closure_1(12927).initialize();
+              closure_1(12931).initialize();
               closure_1_0(channel);
               flag = false;
-              const obj = closure_1(12927);
+              const obj = closure_1(12931);
             }
             return flag;
           });

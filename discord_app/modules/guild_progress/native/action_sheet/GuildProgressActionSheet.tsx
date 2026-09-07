@@ -39,7 +39,7 @@ class GuildProgressHeader {
   }
 }
 const View = fn(17).View;
-const GuildProgressConstants = fn(12469);
+const GuildProgressConstants = fn(12473);
 ({ AnalyticsSetupTypes: closure_8, AnalyticsActions: closure_9 } = GuildProgressConstants);
 const Constants = fn(1074);
 ({
@@ -96,10 +96,10 @@ export default function GuildProgressActionSheet(guild) {
             return obj;
           } else {
             let base64;
-            tmp5(9063).init(View);
-            const obj6 = tmp5(9063);
-            tmp2(12474).hideActionSheet(id.id);
-            const obj7 = tmp2(12474);
+            tmp5(9068).init(View);
+            const obj6 = tmp5(9068);
+            tmp2(12478).hideActionSheet(id.id);
+            const obj7 = tmp2(12478);
             const obj1 = { size };
             dependencyMap = 1;
             c3 = 1;
@@ -116,7 +116,7 @@ export default function GuildProgressActionSheet(guild) {
         } else {
           base64 = value.base64;
           if (null != base64) {
-            obj = tmp5(9063);
+            obj = tmp5(9068);
             obj.updateIcon(closure_129_5, base64);
           }
           c3 = 3;

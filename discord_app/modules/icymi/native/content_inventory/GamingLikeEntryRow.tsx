@@ -52,7 +52,7 @@ items[4] = {
     return true === utils.isEntryMarathon(entry);
   },
 };
-const createICYMIStyles = fn(16452);
+const createICYMIStyles = fn(16455);
 let closure_11 = createICYMIStyles.createICYMIStyles((gap) => {
   let obj = { card: null, cardInnerContainer: null, image: null, gameName: null, badges: null };
   obj = {
@@ -150,7 +150,7 @@ export default function GamingLikeEntryRow(content) {
   }, items2);
   const items3 = [content];
   const callback1 = noop.useCallback(() => {
-    asyncRequireImpl(16502, dependencyMap.paths).then((GameShareModal) => {
+    asyncRequireImpl(16505, dependencyMap.paths).then((GameShareModal) => {
       GameShareModal = GameShareModal.GameShareModal;
       if (null != GameShareModal) {
         let obj = author_id(openReplyActionSheet[19]);

@@ -10,9 +10,9 @@ import ChannelStore from "../../stores/ChannelStore.tsx";
 const InstantInviteDefault = InstantInvite;
 
 const FastestListDefault = tmp2(7055);
-const _modDef10949 = tmp2(10949);
-const _modDef10950 = tmp2(10950);
-const InstantInviteSelfMeasurerDefault = tmp2(16820);
+const _modDef10954 = tmp2(10954);
+const _modDef10955 = tmp2(10955);
+const InstantInviteSelfMeasurerDefault = tmp2(16823);
 require = fn;
 const View = fn(17).View;
 const ChannelSettingsSections = fn(1074).ChannelSettingsSections;
@@ -110,7 +110,7 @@ export default function ConnectedChannelSettingsInstantInvites() {
   }, items7);
   if (!loading) {
     if (0 === memo1.length) {
-      obj = { lightSource: _modDef10949, darkSource: _modDef10950, title: null, body: null };
+      obj = { lightSource: _modDef10954, darkSource: _modDef10955, title: null, body: null };
       const intl = tmpResult(1114).intl;
       obj.title = intl.string(tmpResult(1114).t["+nLJkZ"]);
       const intl2 = tmpResult(1114).intl;

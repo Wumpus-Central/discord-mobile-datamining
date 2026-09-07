@@ -207,7 +207,7 @@ class CommandRow {
   }
 }
 const View = fn(17).View;
-const ApplicationCommandIndexStore = fn(9290);
+const ApplicationCommandIndexStore = fn(9295);
 ({ useContextIndexState: closure_7, useUserIndexState: closure_8 } = ApplicationCommandIndexStore);
 const AppLauncherNativeConstants = fn(1482);
 const DEFAULT_CONTENT_PADDING = AppLauncherNativeConstants.DEFAULT_CONTENT_PADDING;
@@ -231,7 +231,7 @@ let createStyles = {
   loadingTextPlaceholderSmall: null,
   noCommandsTextContainer: null,
 };
-createStyles = { height: fn(12130).EXPANDED_HEADER_HEIGHT - fn(12130).SHEET_HANDLE_CONTAINER_HEIGHT };
+createStyles = { height: fn(12134).EXPANDED_HEADER_HEIGHT - fn(12134).SHEET_HANDLE_CONTAINER_HEIGHT };
 createStyles.headerSpacer = createStyles;
 createStyles.list = { paddingHorizontal: DEFAULT_CONTENT_PADDING };
 createStyles.commandsHeaderContainer = {

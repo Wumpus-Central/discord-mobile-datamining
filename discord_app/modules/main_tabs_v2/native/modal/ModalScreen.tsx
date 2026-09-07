@@ -67,7 +67,7 @@ export default function Modal(route) {
   );
   const layoutEffect = obj1.useLayoutEffect(() => modal(7475).trackAppUIViewed("ModalScreen"), []);
   ({ left, right } = useSafeAreaInsetsDefault());
-  let tmp7Result = tmp7(16872);
+  let tmp7Result = tmp7(16875);
   const items = [absoluteFillObject.absoluteFillObject];
   let tmp16;
   if (!tmp7Result.shouldExcludeSafeAreaForModalKey(modal.key)) {
@@ -93,7 +93,7 @@ export default function Modal(route) {
   tmp7Result = tmp7(1115);
   let isIOSResult = tmp7Result.isIOS();
   if (isIOSResult) {
-    isIOSResult = closure_9(tmp7(16756).PortalKeyboardRenderer, { portal: false });
+    isIOSResult = closure_9(tmp7(16759).PortalKeyboardRenderer, { portal: false });
   }
   items2[1] = isIOSResult;
   obj1.children = items2;

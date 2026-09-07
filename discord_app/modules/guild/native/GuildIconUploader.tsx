@@ -4,10 +4,10 @@ import util from "../../../intl/index.native.tsx";
 import shared from "../../../design/shared.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import Pressables from "../../../design/void/Pressables/native/Pressables.tsx";
-import _modDef11799 from "../../../../_runtime/metro/11799__.js";
-import _modDef11800 from "../../../../_runtime/metro/11800__.js";
-import _modDef11801 from "../../../../_runtime/metro/11801__.js";
-import _modDef11802 from "../../../../_runtime/metro/11802__.js";
+import _modDef11804 from "../../../../_runtime/metro/11804__.js";
+import _modDef11805 from "../../../../_runtime/metro/11805__.js";
+import _modDef11806 from "../../../../_runtime/metro/11806__.js";
+import _modDef11807 from "../../../../_runtime/metro/11807__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 import ThemeStore from "../../user_settings/ThemeStore.tsx";
 
@@ -92,9 +92,9 @@ prototype["renderIcon"] = function renderIcon() {
     ({ guildIcon: arr3[0], emptyGuildIcon: arr3[1] } = tmp);
     obj1.style = items1;
     if (obj6.isThemeDark(ThemeStore.theme)) {
-      let tmp13Result = _modDef11799;
+      let tmp13Result = _modDef11804;
     } else {
-      tmp13Result = _modDef11800;
+      tmp13Result = _modDef11805;
     }
     obj = { source: tmp13Result };
     const items2 = [timestampProducer(React4, obj)];
@@ -125,12 +125,12 @@ prototype["renderUpload"] = function renderUpload() {
     const obj3 = { tintColor: iconBackgroundColor };
     items1[1] = obj3;
     obj2.style = items1;
-    obj2.source = _modDef11801;
+    obj2.source = _modDef11806;
     obj1.children = timestampProducer(React4, obj2);
     obj.children = timestampProducer(React3, obj1);
   } else {
     obj = { style: tmp.emptyIconWrapper, children: null };
-    const obj4 = { source: _modDef11802 };
+    const obj4 = { source: _modDef11807 };
     obj.children = timestampProducer(React4, obj4);
   }
   return timestampProducer(React3, obj);

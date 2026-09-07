@@ -7,7 +7,7 @@ import HeaderActionButton from "../../../../../design/components/Navigator/nativ
 import getInviteURLDefault from "../../../../instant_invite/getInviteURL.tsx";
 import GuildSettingsVanityURLUtils from "../GuildSettingsVanityURLUtils.tsx";
 import ChangeVanityURLActionCreatorsDefault from "../../../../../actions/ChangeVanityURLActionCreators.tsx";
-import _modDef17645 from "../../../../../../_runtime/metro/17645__.js";
+import _modDef17648 from "../../../../../../_runtime/metro/17648__.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 import ChangeVanityURLModalStore from "../../../../../stores/ChangeVanityURLModalStore.tsx";
 import GuildStore from "../../../../../stores/GuildStore.tsx";
@@ -197,7 +197,7 @@ prototype["render"] = function render() {
     obj2.children = items1;
     const items3 = [closure_1_10(React3, obj2)];
     const obj9 = { style: styles.center, children: null };
-    const obj10 = { source: _modDef17645, style: styles.image, resizeMode: "contain" };
+    const obj10 = { source: _modDef17648, style: styles.image, resizeMode: "contain" };
     obj9.children = React7(React4, obj10);
     items3[1] = React7(React3, obj9);
     obj1.children = items3;

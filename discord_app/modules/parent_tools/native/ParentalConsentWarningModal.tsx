@@ -103,7 +103,7 @@ export default function ParentalConsentWarningModal(daysRemaining) {
         return obj.openUserSettings(obj);
       });
     } else {
-      ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(17463, dependencyMap.paths));
+      ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(17466, dependencyMap.paths));
       const tmp2Result1 = ModalActionCreatorsDefault;
     }
   }, items2);

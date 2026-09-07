@@ -24,7 +24,7 @@ const forwardRefResult = noop.forwardRef((analyticsLocations, arg1) => {
   );
   const tmp = closure_10();
   [tmp6, c2] = _slicedToArray(noop.useState(0), 2);
-  const tmp7 = stateFromStores(9304)();
+  const tmp7 = stateFromStores(9309)();
   _slicedToArray = tmp7;
   const imperativeHandle = noop.useImperativeHandle(arg1, () => ({
     onMessageLengthChanged(length) {
@@ -38,7 +38,7 @@ const forwardRefResult = noop.forwardRef((analyticsLocations, arg1) => {
     obj = { color: "text-feedback-critical", lineClamp: 1, variant: "text-xs/medium", children: null };
     const _HermesInternal = HermesInternal;
     obj.children = "-" + tmp6;
-    const items2 = [closure_8(tmp2(4556).Text, obj), closure_8(tmp2(8662).NitroWheelIcon, { size: "sm" })];
+    const items2 = [closure_8(tmp2(4556).Text, obj), closure_8(tmp2(8667).NitroWheelIcon, { size: "sm" })];
     obj.children = items2;
     tmp10 = closure_9(tmp2(5123).PressableOpacity, obj);
   }

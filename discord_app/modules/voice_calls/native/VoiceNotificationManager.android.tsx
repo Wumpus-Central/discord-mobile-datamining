@@ -27,10 +27,10 @@ class VoiceNotificationManager {
       channelId: "flexDirection",
       connectionState: "content",
       selfMute: false,
-      deafened: "15.30",
-      isPushToTalk: "3.30",
-      embeddedActivity: "halv fire",
-      isStreaming: "klokkesl\u00E6t",
+      deafened: null,
+      isPushToTalk: "braintreeunionpayhostedfields",
+      embeddedActivity: "tanabata_tree",
+      isStreaming: "leaves",
     };
     obj.handleVoiceStateChange = function handleVoiceStateChange() {
       const channelId = RTCConnectionStore.getChannelId();
@@ -151,8 +151,8 @@ class VoiceNotificationManager {
               name = application.name;
             }
             const _HermesInternal = HermesInternal;
-            str2 = " - " + tmp16(10890)(name);
-            const tmp16Result = tmp16(10890);
+            str2 = " - " + tmp16(10895)(name);
+            const tmp16Result = tmp16(10895);
           }
           const obj3 = RTCConnectionUtilsDefault;
           obj = {
@@ -239,10 +239,10 @@ size.state = {
   channelId: "flexDirection",
   connectionState: "content",
   selfMute: false,
-  deafened: "15.30",
-  isPushToTalk: "3.30",
-  embeddedActivity: "halv fire",
-  isStreaming: "klokkesl\u00E6t",
+  deafened: null,
+  isPushToTalk: "braintreeunionpayhostedfields",
+  embeddedActivity: "tanabata_tree",
+  isStreaming: "leaves",
 };
 size.handleVoiceStateChange = function handleVoiceStateChange() {
   const channelId = RTCConnectionStore.getChannelId();
@@ -363,8 +363,8 @@ size.handleUpdate = function handleUpdate(connectionState) {
           name = application.name;
         }
         const _HermesInternal = HermesInternal;
-        str2 = " - " + tmp16(10890)(name);
-        const tmp16Result = tmp16(10890);
+        str2 = " - " + tmp16(10895)(name);
+        const tmp16Result = tmp16(10895);
       }
       const obj3 = RTCConnectionUtilsDefault;
       obj = {

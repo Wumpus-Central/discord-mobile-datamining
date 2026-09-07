@@ -50,9 +50,9 @@ export default noop.memo(function StickerPicker(channel) {
   noop = undefined;
   ({ bottomSheetRef, bottomSheetIndex, paddingTop, stickerFormats, inPortalKeyboard } = channel);
   let tmp = closure_16();
-  let obj = channel(10387);
+  let obj = channel(10392);
   const fetchStickerPacks = obj.useFetchStickerPacks();
-  let obj1 = channel(10389);
+  let obj1 = channel(10394);
   const stickerCategories = obj1.useStickerCategories(channel);
   let obj2 = channel(504);
   const items = [StickersStore];
@@ -63,7 +63,7 @@ export default noop.memo(function StickerPicker(channel) {
   const tmp9 = onPressSticker(7162);
   [tmp11, c4] = analyticsLocations(noop.useState(null), 2);
   const tmp10 = analyticsLocations(noop.useState(null), 2);
-  ({ safeAreaStyle, safeAreaBottomKeyboardAware } = onPressSticker(10283)({ hasCategories: true }));
+  ({ safeAreaStyle, safeAreaBottomKeyboardAware } = onPressSticker(10288)({ hasCategories: true }));
   const items1 = [,];
   ({ id: arr3[0], guild_id: arr3[1] } = channel);
   const callback = noop.useCallback((arg0) => {
@@ -153,7 +153,7 @@ export default noop.memo(function StickerPicker(channel) {
   if (stateFromStores) {
     if (0 === stickerCategories.length) {
       obj3 = { style: tmp.emptyState, children: null };
-      tmp = closure_14(tmp8(10413), {});
+      tmp = closure_14(tmp8(10418), {});
       obj3.children = tmp;
       tmp18Result = closure_14(closure_5, obj3);
     } else {
@@ -181,17 +181,17 @@ export default noop.memo(function StickerPicker(channel) {
       obj4.stickerFormats = stickerFormats;
       obj4.searchResults = tmp11;
       obj4.inPortalKeyboard = inPortalKeyboard;
-      tmp18Result = closure_14(tmp8(10414), obj4);
-      const tmp8Result = tmp8(10414);
+      tmp18Result = closure_14(tmp8(10419), obj4);
+      const tmp8Result = tmp8(10419);
     }
   } else {
     const obj5 = { animating: true, size: "large", style: tmp.loadingIndicator };
     items5[1] = closure_14(closure_6, obj5);
     const obj6 = { categories: stickerCategories, categoryIndex: tmp6[0], style: safeAreaStyle };
-    items5[2] = closure_14(tmp8(10419), obj6);
+    items5[2] = closure_14(tmp8(10424), obj6);
     obj.children = items5;
     obj.children = closure_15(closure_5, obj);
     return closure_14(channel(7162).AnalyticsLocationProvider, obj);
   }
-  const tmp12 = onPressSticker(10283)({ hasCategories: true });
+  const tmp12 = onPressSticker(10288)({ hasCategories: true });
 });

@@ -282,7 +282,7 @@ export default function UserSettingsGiftingBadgeProgress(analyticsLocation) {
   } else {
     let tmp21 = closure_8(currentTier);
     const tmp27 = closure_8(nextTier);
-    const giftingBadgeProgressPercent = tmp7(13571).getGiftingBadgeProgressPercent(
+    const giftingBadgeProgressPercent = tmp7(13575).getGiftingBadgeProgressPercent(
       badgeProgress,
       currentTier,
       nextTier,
@@ -321,7 +321,7 @@ export default function UserSettingsGiftingBadgeProgress(analyticsLocation) {
     let tmp14 = null != simple_icon_url;
     if (tmp14) {
       const obj5 = { icon: currentTier.simple_icon_url, size: 36, style: { margin: 4 } };
-      tmp14 = closure_9(tmp4(10749), obj5);
+      tmp14 = closure_9(tmp4(10754), obj5);
     }
     let items1 = [tmp14, ,];
     const obj6 = {
@@ -338,7 +338,7 @@ export default function UserSettingsGiftingBadgeProgress(analyticsLocation) {
     let tmp16Result = null != simple_icon_url1;
     if (tmp16Result) {
       const obj7 = { icon: nextTier.simple_icon_url, size: 36, style: { margin: 4 } };
-      tmp16Result = closure_9(tmp4(10749), obj7);
+      tmp16Result = closure_9(tmp4(10754), obj7);
     }
     items1[2] = tmp16Result;
     obj4.children = items1;
@@ -375,7 +375,7 @@ export default function UserSettingsGiftingBadgeProgress(analyticsLocation) {
     const items5 = [closure_10(closure_6, obj3), , , ,];
     const obj15 = { variant: "primary", icon: null, text: null, onPress: null, grow: true };
     const obj16 = { size: "sm", color: tmp4(576).unsafe_rawColors.WHITE };
-    obj15.icon = closure_9(tmp7(11030).GiftIcon, obj16);
+    obj15.icon = closure_9(tmp7(11035).GiftIcon, obj16);
     const intl4 = tmp7(1114).intl;
     obj15.text = intl4.string(tmp4(2492).DZnomS);
     obj15.onPress = function onPress() {
@@ -397,9 +397,9 @@ export default function UserSettingsGiftingBadgeProgress(analyticsLocation) {
     obj19.children = intl5.string(tmp4(2492).WZ4cXA);
     const items6 = [closure_9(tmp7(4556).Text, obj19)];
     if (tmp11Result) {
-      let ChevronSmallDownIcon = tmp7(13573).ChevronSmallUpIcon;
+      let ChevronSmallDownIcon = tmp7(13577).ChevronSmallUpIcon;
     } else {
-      ChevronSmallDownIcon = tmp7(11153).ChevronSmallDownIcon;
+      ChevronSmallDownIcon = tmp7(11158).ChevronSmallDownIcon;
     }
     const obj20 = { color: tmp4(576).colors.INTERACTIVE_ICON_DEFAULT };
     items6[1] = closure_9(ChevronSmallDownIcon, obj20);

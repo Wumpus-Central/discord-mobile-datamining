@@ -50,7 +50,7 @@ class AccountStatusIcon {
 }
 get_ActivityIndicator = fn(17);
 ({ Pressable: c3, View: closure_4 } = get_ActivityIndicator);
-const MultiAccountTokenStatus = fn(12413).MultiAccountTokenStatus;
+const MultiAccountTokenStatus = fn(12417).MultiAccountTokenStatus;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
 const createStyles = fn(4560);
@@ -125,7 +125,7 @@ export default function AccountSwitcherListItem(arg0) {
     const merged = Object.assign(sortHandlers);
     const items2 = [leading, ,];
     obj2 = { style: tmp.accountInfo, children: null };
-    const obj3 = { user: obj2, guildId: "a" };
+    const obj3 = { user: obj2, guildId: "Array" };
     const items3 = [React7(native.Avatar, obj3)];
     const obj4 = { style: tmp.accountListTag, children: null };
     const obj5 = { style: tmp.tagContainer, children: null };

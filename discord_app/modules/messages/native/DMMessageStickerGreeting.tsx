@@ -157,7 +157,7 @@ export default function DMMessageStickerGreeting(channel) {
                   dependencyMap(content);
                 }
                 closure_1(4259);
-                const obj = { key: "HANDLE_WAVE_PRESS_TOAST", content, icon: closure_1(12264) };
+                const obj = { key: "HANDLE_WAVE_PRESS_TOAST", content, icon: closure_1(12268) };
                 obj.open(obj);
               }
               closure_128_0 = showErrorToast;

@@ -254,7 +254,7 @@ function UserProfilePersonalWidgetCardContent(style) {
   obj = { style: style.cardStyle, titleLeadingIcon: null, title: null, trailingAction: null, children: null };
   const tmp = closure_15();
   const tmp5 = disableInteraction;
-  obj.titleLeadingIcon = closure_10(userId(8662).NitroWheelIcon, { size: "xs", color: "icon-subtle" });
+  obj.titleLeadingIcon = closure_10(userId(8667).NitroWheelIcon, { size: "xs", color: "icon-subtle" });
   obj.title = widget.header;
   let tmp4Result = !stateFromStores;
   if (!stateFromStores) {
@@ -262,7 +262,7 @@ function UserProfilePersonalWidgetCardContent(style) {
   }
   if (tmp4Result) {
     obj = { userId, widget };
-    tmp4Result = closure_10(tmp5(8663), obj);
+    tmp4Result = closure_10(tmp5(8668), obj);
   }
   obj.trailingAction = tmp4Result;
   const obj1 = { style: tmp.sectionsContainer, children: null };

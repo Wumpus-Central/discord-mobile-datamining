@@ -55,8 +55,8 @@ let size = {
   borderTopLeftRadius: nativeDefault.radii.none,
   borderTopRightRadius: nativeDefault.radii.none,
   width: "100%",
-  height: fn(8902).ACTION_SHEET_DRAG_HANDLE_HEIGHT,
-  marginBottom: -fn(8902).ACTION_SHEET_DRAG_HANDLE_HEIGHT,
+  height: fn(8907).ACTION_SHEET_DRAG_HANDLE_HEIGHT,
+  marginBottom: -fn(8907).ACTION_SHEET_DRAG_HANDLE_HEIGHT,
 };
 obj.headerContainer = size;
 PlatformUtils = { marginBottom: -nativeDefault.space.PX_8 };

@@ -134,7 +134,7 @@ function InitialPinsScreen(searchContext) {
     ItemSeparatorComponent: null,
   });
 }
-const FetchState = fn(11675).FetchState;
+const FetchState = fn(11680).FetchState;
 const SearchConstants = fn(7878);
 ({
   MESSAGE_PLACEHOLDER_ITEM_SIZE: closure_8,

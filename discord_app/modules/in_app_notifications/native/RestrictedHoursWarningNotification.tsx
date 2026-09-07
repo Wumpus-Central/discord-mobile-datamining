@@ -7,7 +7,7 @@ import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-const lineClamp = fn(10095).NOTIFICATION_PREVIEW_LINE_CLAMP;
+const lineClamp = fn(10100).NOTIFICATION_PREVIEW_LINE_CLAMP;
 const Constants = fn(1074);
 ({ InAppNotificationTypes: metroRequire, UserSettingsSections: closure_7 } = Constants);
 const jsx = fn(21).jsx;
@@ -31,7 +31,7 @@ export default noop.memo(function RestrictedHoursWarningNotification(notificatio
   const type = notification.type;
   let obj = { style: closure_9().iconContainer, children: null };
   obj = { size: "sm", color: type(576).colors.WHITE };
-  obj.children = jsx(notification(11320).ThemeDarkIcon, { size: "sm", color: type(576).colors.WHITE });
+  obj.children = jsx(notification(11325).ThemeDarkIcon, { size: "sm", color: type(576).colors.WHITE });
   const items = [notification.title];
   const items1 = [type];
   const memo = noop.useMemo(() => ({ type: "simple", text: notification.title }), items);
@@ -56,7 +56,7 @@ export default noop.memo(function RestrictedHoursWarningNotification(notificatio
     onPress: callback,
     notification,
   };
-  return jsx(notification(10170).NotificationPressable, {
+  return jsx(notification(10175).NotificationPressable, {
     icon: <View size="sm" color={type(576).colors.WHITE} />,
     header: memo,
     children: jsx(notification(4556).Text, {

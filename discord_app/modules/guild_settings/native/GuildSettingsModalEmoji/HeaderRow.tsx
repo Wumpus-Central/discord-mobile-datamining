@@ -85,7 +85,7 @@ function HeaderRow(guild) {
               if (null != base64) {
                 upload = function upload(image, originalMd5, roles) {
                   const combined = "emoji_" + closure_1 + 1;
-                  closure_1_0(10336);
+                  closure_1_0(10341);
                   let obj = { guildId: image.id, image, name: combined, roles, originalMd5 };
                   const uploadEmojiResult = obj.uploadEmoji(obj);
                   obj
@@ -166,7 +166,7 @@ function HeaderRow(guild) {
   [tmp5, c5] = _slicedToArray(noop.useState(null), 2);
   const tmp4 = _slicedToArray(noop.useState(null), 2);
   [c6, c7] = _slicedToArray(noop.useState(""), 2);
-  let obj = guild(9671);
+  let obj = guild(9676);
   let canCreateExpressions = obj.useManageResourcePermissions(guild).canCreateExpressions;
   let intl = guild(1114).intl;
   obj = { id: null, text: null };

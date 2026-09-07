@@ -238,7 +238,7 @@ obj = {
 };
 const items2 = [RPC_AUTHENTICATED_SCOPE];
 obj.scope = { [RPC_SCOPE_CONFIG.ANY]: items2 };
-const CONTEXT_MENU_ICON_NAMES = fn(14476);
+const CONTEXT_MENU_ICON_NAMES = fn(14479);
 let obj1 = {
   scope: null,
   handler(arg0) {

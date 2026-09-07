@@ -42,10 +42,10 @@ let obj = {
               if (null == events.events[event]) {
                 const obj1 = { errorCode: constants2.INVALID_EVENT };
                 const _HermesInternal = HermesInternal;
-                let tmp35 = v0(9554);
+                let tmp35 = v0(9559);
                 tmp35 = new tmp35(obj1, "Invalid event: " + event);
                 throw tmp35;
-              } else if (v0(14502)(importDefault.authorization.scopes, tmp66.scope)) {
+              } else if (v0(14505)(importDefault.authorization.scopes, tmp66.scope)) {
                 const obj2 = { event, scope: null, application_id: null, socket_scope: null };
                 if (typeof tmp66.scope === "object") {
                   const _JSON = JSON;
@@ -66,7 +66,7 @@ let obj = {
                 const tmp71Result = tmp71(1242);
               } else {
                 const obj4 = { errorCode: constants2.INVALID_PERMISSIONS };
-                const tmp10 = new tmp71(9554)(obj4, "Not authenticated or invalid scope");
+                const tmp10 = new tmp71(9559)(obj4, "Not authenticated or invalid scope");
                 throw tmp10;
               }
             }
@@ -84,13 +84,13 @@ let obj = {
               closure_128_1.validate(closure_129_3, closure_128_0.validation(closure_128_1), { convert: false }).error
             ) {
               let obj5 = { errorCode: constants2.INVALID_PAYLOAD };
-              const tmp63 = new v0(9554)(obj5, "Invalid subscription parameters provided");
+              const tmp63 = new v0(9559)(obj5, "Invalid subscription parameters provided");
               throw tmp63;
             }
           }
           const obj6 = { args: closure_129_3, socket: closure_129_1 };
           closure_128_2 = closure_128_0.handler(obj6);
-          obj5 = tmp2(14503);
+          obj5 = tmp2(14506);
           initialSubscriptionPayload = obj5.getInitialSubscriptionPayload(closure_129_1, closure_129_2, closure_129_3);
           const promise = new Promise((fn) => {
             setImmediate(() => {

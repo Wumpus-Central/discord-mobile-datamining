@@ -19,7 +19,7 @@ export const useRedeemVirtualCurrency = function useRedeemVirtualCurrency(order)
   const isSubmitting = _slicedToArray(enabled(false), 2);
   _slicedToArray = isSubmitting[1];
   const tmp5 = _slicedToArray(enabled(null), 2);
-  enabled = entitlements(8859).useConfig({ location: "orb_checkout_modal" }).enabled;
+  enabled = entitlements(8864).useConfig({ location: "orb_checkout_modal" }).enabled;
   order = undefined;
   if (order != null) {
     order = order.order;
@@ -31,7 +31,7 @@ export const useRedeemVirtualCurrency = function useRedeemVirtualCurrency(order)
   if (order != null) {
     onSignFailure = order.onSignFailure;
   }
-  let obj = entitlements(8859);
+  let obj = entitlements(8864);
   const orderSigning = require("useOrderSigning").useOrderSigning({
     order,
     errorSource: "orb_redeem_orders_api",

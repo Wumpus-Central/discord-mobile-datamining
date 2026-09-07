@@ -11,7 +11,7 @@ fn(4560);
 let createStyles = { wrapper: null, progress: null };
 createStyles = {
   position: "relative",
-  backgroundColor: fn(12474).PROGRESS_BACKGROUND_COLOR,
+  backgroundColor: fn(12478).PROGRESS_BACKGROUND_COLOR,
   borderRadius: nativeDefault.radii.xs,
   height: 8,
 };

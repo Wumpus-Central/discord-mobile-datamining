@@ -292,7 +292,7 @@ function isValidChannelAutocomplete(token, items) {
         flag = flag2;
       }
     }
-    obj2 = replaced(12340);
+    obj2 = replaced(12344);
   }
   return flag;
 }
@@ -578,7 +578,7 @@ function getChannelAutocompletions(arg0) {
         boosters: null,
       };
       let tmpResult = tmp(5442);
-      obj.boosters = tmpResult.getBoosterMap(tmp(9835).AutocompleterResultTypes.TEXT_CHANNEL);
+      obj.boosters = tmpResult.getBoosterMap(tmp(9840).AutocompleterResultTypes.TEXT_CHANNEL);
       const tmp7 = importDefault;
       const queryChannelsResult = AutocompleteUtilsDefault.queryChannels(obj);
       obj = {
@@ -591,7 +591,7 @@ function getChannelAutocompletions(arg0) {
         boosters: null,
       };
       tmpResult = tmp(5442);
-      obj.boosters = tmpResult.getBoosterMap(tmp(9835).AutocompleterResultTypes.VOICE_CHANNEL);
+      obj.boosters = tmpResult.getBoosterMap(tmp(9840).AutocompleterResultTypes.VOICE_CHANNEL);
       const combined = queryChannelsResult.concat(AutocompleteUtilsDefault.queryChannels(obj));
       const mapped = combined.map((record) => record.record);
       if (0 === substr1.length) {
@@ -639,15 +639,15 @@ function getChannelAutocompletions(arg0) {
         if (!StreamerModeStore.hidePersonalInformation) {
           const obj1 = { query: substr1, limit: maxResults, fuzzy: true, boosters: null };
           const obj4 = AutocompleteUtilsDefault;
-          obj1.boosters = tmp(5442).getBoosterMap(tmp(9835).AutocompleterResultTypes.GROUP_DM);
+          obj1.boosters = tmp(5442).getBoosterMap(tmp(9840).AutocompleterResultTypes.GROUP_DM);
           const tmpResult1 = tmp(5442);
           const queryGroupDMsResult = obj4.queryGroupDMs(obj1);
           obj2 = { query: substr1, limit: maxResults, boosters: null };
           const obj8 = AutocompleteUtilsDefault;
-          obj2.boosters = tmp(5442).getBoosterMap(tmp(9835).AutocompleterResultTypes.USER);
+          obj2.boosters = tmp(5442).getBoosterMap(tmp(9840).AutocompleterResultTypes.USER);
           const tmpResult2 = tmp(5442);
           const queryDMChannelsResult = obj8.queryDMChannels(obj2);
-          const sorted = _modDef12(queryGroupDMsResult.concat(queryDMChannelsResult)).sort(tmp(9835).sortByMatchScore);
+          const sorted = _modDef12(queryGroupDMsResult.concat(queryDMChannelsResult)).sort(tmp(9840).sortByMatchScore);
           const mapped1 = sorted.map((record) => {
             record = record.record;
             obj = { text: record.comparator, channel: record, key: null };

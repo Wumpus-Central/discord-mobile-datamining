@@ -16,7 +16,7 @@ import NavigatorHeader from "../../../../design/components/Navigator/native/Navi
 import TableRowGroup from "../../../../design/components/TableRow/native/TableRowGroup.native.tsx";
 import HeaderActionButton from "../../../../design/components/Navigator/native/HeaderActionButton.native.tsx";
 import Form from "../../../../design/void/Form/native/index.tsx";
-import _modDef9566 from "../../../../../_runtime/metro/09566__.js";
+import _modDef9571 from "../../../../../_runtime/metro/09571__.js";
 import ChannelPermissionsUtils from "../../../channel_permissions/ChannelPermissionsUtils.tsx";
 import ConnectionsRoleActionCreators from "../../../connections/ConnectionsRoleActionCreators.tsx";
 import GuildSettingsRolesUtils from "../GuildSettingsRolesUtils.tsx";
@@ -39,11 +39,11 @@ require = fn;
 let closure_4 = ["guild"];
 const View = fn(17).View;
 const isEveryoneRole = fn(2016).isEveryoneRole;
-const RoleColorsStyle = fn(17610).RoleColorsStyle;
-const constants = fn(17605).GuildSettingsRoleEditSections;
+const RoleColorsStyle = fn(17613).RoleColorsStyle;
+const constants = fn(17608).GuildSettingsRoleEditSections;
 const Constants = fn(1074);
 ({ AnalyticEvents: closure_18, DEFAULT_ROLE_COLOR: closure_19, GuildSettingsSections: closure_20 } = Constants);
-const HOLOGRAPHIC_ROLE_COLORS = fn(17612).HOLOGRAPHIC_ROLE_COLORS;
+const HOLOGRAPHIC_ROLE_COLORS = fn(17615).HOLOGRAPHIC_ROLE_COLORS;
 const jsxProd = fn(21);
 ({ jsx: closure_22, jsxs: closure_23, Fragment: closure_24 } = jsxProd);
 fn(4560);
@@ -199,14 +199,14 @@ class GuildSettingsRoleEdit extends PureComponent {
           closure_2 = editedRoleConnectionConfigurationsMap.get(id);
         }
         function success() {
-          let obj = applyArgumentsResult(17624);
+          let obj = applyArgumentsResult(17627);
           obj.commitSectionChanges(id, effectiveSection);
           navigation.pop();
           closure_2_0.setState({ submitting: false, formErrors: {} });
           obj = { key: "ROLE_EDIT_SAVED", content: null, icon: null };
           const intl = applyArgumentsResult(1114).intl;
           obj.content = intl.string(applyArgumentsResult(1114).t.ulZn1j);
-          obj.icon = _modDef9566;
+          obj.icon = _modDef9571;
           ToastActionCreatorsDefault.open(obj);
           closure_0(true);
         }
@@ -308,7 +308,7 @@ class GuildSettingsRoleEdit extends PureComponent {
                 if (null === guild_connections) {
                   v1 = 1;
                   c2 = 1;
-                  let obj1 = { value: tmp4(11573).putRoleConnectionsConfigurations(id.id, role.id, []), done: false };
+                  let obj1 = { value: tmp4(11578).putRoleConnectionsConfigurations(id.id, role.id, []), done: false };
                   return obj1;
                 }
               }
@@ -379,11 +379,11 @@ class GuildSettingsRoleEdit extends PureComponent {
             const id = closure_2_0.props.role.id;
             const effectiveSection = closure_2_0.getEffectiveSection();
             if (effectiveSection === constants.VERIFICATIONS) {
-              const result = applyArgumentsResult(17624).discardConnectionsChanges(id);
-              const obj2 = applyArgumentsResult(17624);
+              const result = applyArgumentsResult(17627).discardConnectionsChanges(id);
+              const obj2 = applyArgumentsResult(17627);
             } else {
-              const result1 = applyArgumentsResult(17624).discardSectionChanges(id, effectiveSection);
-              const obj = applyArgumentsResult(17624);
+              const result1 = applyArgumentsResult(17627).discardSectionChanges(id, effectiveSection);
+              const obj = applyArgumentsResult(17627);
             }
             closure_0(true);
           };

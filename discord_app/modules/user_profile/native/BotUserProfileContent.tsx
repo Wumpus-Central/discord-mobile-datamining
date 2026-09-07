@@ -125,7 +125,7 @@ export default noop.memo(function BotUserProfileContent(user) {
           }
           obj.channelId = id;
           obj.openLazy(
-            asyncRequireImpl(11149, dependencyMap.paths),
+            asyncRequireImpl(11154, dependencyMap.paths),
             "UserProfileCustomStatusActionSheet",
             obj,
             "stack",

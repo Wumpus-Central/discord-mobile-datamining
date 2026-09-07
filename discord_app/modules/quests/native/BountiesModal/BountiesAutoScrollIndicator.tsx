@@ -6,7 +6,7 @@ import ReanimatedRexport from "../../../reanimated/ReanimatedRexport.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import timing from "../../../../design/animation/reanimated/timing/timing.tsx";
 import ArrowSmallUpIcon from "../../../../design/components/Icon/native/redesign/generated/ArrowSmallUpIcon.tsx";
-import CircularProgress from "../../../../../_runtime/15058_CircularProgress.js";
+import CircularProgress from "../../../../../_runtime/15061_CircularProgress.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 const ReanimatedRexportDefault = ReanimatedRexport;

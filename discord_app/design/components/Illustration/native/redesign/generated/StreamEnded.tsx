@@ -12,10 +12,10 @@ const result = size.fileFinishedImporting("design/components/Illustration/native
 export const getStreamEndedSource = function getStreamEndedSource(theme) {
   const obj = {
     dark() {
-      return require("../../../../../../../_runtime/metro/09599__.js");
+      return require("../../../../../../../_runtime/metro/09604__.js");
     },
     darker() {
-      return require("../../../../../../../_runtime/metro/09600__.js");
+      return require("../../../../../../../_runtime/metro/09605__.js");
     },
   };
   return obj.getIllustrationSource(theme, obj);
@@ -23,10 +23,10 @@ export const getStreamEndedSource = function getStreamEndedSource(theme) {
 export const useStreamEndedSource = function useStreamEndedSource() {
   const obj = {
     dark() {
-      return require("../../../../../../../_runtime/metro/09599__.js");
+      return require("../../../../../../../_runtime/metro/09604__.js");
     },
     darker() {
-      return require("../../../../../../../_runtime/metro/09600__.js");
+      return require("../../../../../../../_runtime/metro/09605__.js");
     },
   };
   return _mod8233.getIllustrationSource(obj.useThemeContext().theme, obj);
@@ -34,10 +34,10 @@ export const useStreamEndedSource = function useStreamEndedSource() {
 export const StreamEnded = function StreamEnded(arg0) {
   let obj = {
     dark() {
-      return require("../../../../../../../_runtime/metro/09599__.js");
+      return require("../../../../../../../_runtime/metro/09604__.js");
     },
     darker() {
-      return require("../../../../../../../_runtime/metro/09600__.js");
+      return require("../../../../../../../_runtime/metro/09605__.js");
     },
   };
   obj = {};

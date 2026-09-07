@@ -16,6 +16,6 @@ export const showPushNotificationPromptModal = function showPushNotificationProm
       onComplete();
     },
   };
-  obj.pushLazy(onComplete(1896)(15999, dependencyMap.paths), obj, closure_4);
-  const result = onComplete(12412).setPushPermissionState(PermissionStateType.PROMPT_SEEN);
+  obj.pushLazy(onComplete(1896)(16002, dependencyMap.paths), obj, closure_4);
+  const result = onComplete(12416).setPushPermissionState(PermissionStateType.PROMPT_SEEN);
 };

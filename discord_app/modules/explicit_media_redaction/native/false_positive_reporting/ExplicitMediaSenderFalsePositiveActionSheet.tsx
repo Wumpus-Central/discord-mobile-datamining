@@ -41,7 +41,7 @@ export default function ExplicitMediaObscuredFalsePositiveActionSheet(channelId)
       );
     },
   };
-  const explicitMediaActions = channelId(9399).useExplicitMediaActions(obj);
+  const explicitMediaActions = channelId(9404).useExplicitMediaActions(obj);
   reportFalsePositive = explicitMediaActions.reportFalsePositive;
   if (stateFromStores.attachments.length <= 0) {
     messageId(4527).hideActionSheet();
@@ -58,7 +58,7 @@ export default function ExplicitMediaObscuredFalsePositiveActionSheet(channelId)
     onConfirmPress: callback,
     analyticsContext: tmp(7600).TrackMediaRedactionContext.EXPLICIT_MEDIA_SENDER_FALSE_POSITIVE_FLOW,
   };
-  return jsx(channelId(9400).ExplicitMediaFalsePositiveActionSheet, {
+  return jsx(channelId(9405).ExplicitMediaFalsePositiveActionSheet, {
     channelId,
     messageId,
     isReportFalsePositiveLoading: explicitMediaActions.isReportFalsePositiveLoading,

@@ -92,7 +92,7 @@ prototype["getState"] = function getState() {
   if (tmp2) {
     let obj = { theme, customTheme: prop };
   } else {
-    obj = { theme: "hash", customTheme: "call" };
+    obj = { theme: "push", customTheme: "channel" };
   }
   return obj;
 };

@@ -64,7 +64,7 @@ export default function CreateGuildModal(channel) {
       CreateGuildModalActionCreatorsDefault.closeCreateGuildModal,
     );
     impressionProperties.render = function render() {
-      return closure_1_10(closure_1(12710), { trigger: constants2.IN_APP });
+      return closure_1_10(closure_1(12714), { trigger: constants2.IN_APP });
     };
     impressionProperties[constants.GUILD_TEMPLATES] = impressionProperties;
     impressionProperties = {
@@ -75,7 +75,7 @@ export default function CreateGuildModal(channel) {
         return null;
       },
       render(guildTemplate) {
-        return closure_1_10(closure_1(12712), {
+        return closure_1_10(closure_1(12716), {
           guildTemplate: guildTemplate.guildTemplate,
           trigger: constants2.IN_APP,
         });
@@ -96,14 +96,14 @@ export default function CreateGuildModal(channel) {
         obj.onCreate = function onCreate(guild) {
           const id = guild.guild.id;
           let arr = closure_0;
-          obj = closure_0(12474);
+          obj = closure_0(12478);
           const guildProgress = obj.createGuildProgress(id);
           defaultChannel = defaultChannel.getDefaultChannel(id);
           if (null != defaultChannel) {
-            closure_1(9826).init(id, defaultChannel.id, { location: "Guild Create Flow" });
+            closure_1(9831).init(id, defaultChannel.id, { location: "Guild Create Flow" });
             obj = { guildId: id };
             arr = arr.push(constants.GUILD_INVITE, obj);
-            const obj2 = closure_1(9826);
+            const obj2 = closure_1(9831);
             obj = { flow_type: constants4.GUILD_CREATE_MODAL, from_step: null, to_step: null };
             ({ CREATE_SERVER: obj5.from_step, GUILD_INVITE: obj5.to_step } = constants);
             closure_1(1242).track(constants3.USER_FLOW_TRANSITION, obj);
@@ -112,7 +112,7 @@ export default function CreateGuildModal(channel) {
         };
         const intl = initialRoute(1114).intl;
         obj.customTitle = intl.string(initialRoute(1114).t["5HZu07"]);
-        return closure_10(closure_1(12333), obj);
+        return closure_10(closure_1(12337), obj);
       },
     };
     obj2 = {
@@ -124,7 +124,7 @@ export default function CreateGuildModal(channel) {
       },
       render(guildId) {
         guildId = guildId.guildId;
-        return closure_1_10(closure_1(12713), {
+        return closure_1_10(closure_1(12717), {
           closeOnEditInviteLink: false,
           onClose() {
             const result = initialState(onSuccess[9]).transitionToGuildSync(guildId);
@@ -153,14 +153,14 @@ export default function CreateGuildModal(channel) {
         obj.onCreate = function onCreate(guild) {
           const id = guild.guild.id;
           let arr = closure_0;
-          obj = closure_0(12474);
+          obj = closure_0(12478);
           const guildProgress = obj.createGuildProgress(id);
           defaultChannel = defaultChannel.getDefaultChannel(id);
           if (null != defaultChannel) {
-            closure_1(9826).init(id, defaultChannel.id, { location: "Guild Create Flow" });
+            closure_1(9831).init(id, defaultChannel.id, { location: "Guild Create Flow" });
             obj = { guildId: id };
             arr = arr.push(constants.GUILD_INVITE, obj);
-            const obj2 = closure_1(9826);
+            const obj2 = closure_1(9831);
             obj = { flow_type: constants4.GUILD_CREATE_MODAL, from_step: null, to_step: null };
             ({ CREATE_SERVER: obj5.from_step, GUILD_INVITE: obj5.to_step } = constants);
             closure_1(1242).track(constants3.USER_FLOW_TRANSITION, obj);
@@ -169,7 +169,7 @@ export default function CreateGuildModal(channel) {
         };
         const intl = initialRoute(1114).intl;
         obj.customTitle = intl.string(initialRoute(1114).t["5HZu07"]);
-        return closure_10(closure_1(12333), obj);
+        return closure_10(closure_1(12337), obj);
       },
     };
     impressionProperties[constants.JOIN_SERVER] = {
@@ -221,8 +221,8 @@ export default function CreateGuildModal(channel) {
         return null;
       },
       render(code) {
-        obj = { code: code.code, onPressClose: closure_1(12708).closeCreateGuildModal };
-        return closure_1_10(closure_1(12716), obj);
+        obj = { code: code.code, onPressClose: closure_1(12712).closeCreateGuildModal };
+        return closure_1_10(closure_1(12720), obj);
       },
     };
     const obj5 = {
@@ -237,7 +237,7 @@ export default function CreateGuildModal(channel) {
         return null;
       },
       render() {
-        return closure_1_10(closure_1(12727), { isNestedNavigator: true });
+        return closure_1_10(closure_1(12731), { isNestedNavigator: true });
       },
     };
     impressionProperties[constants.JOIN_STUDENT_HUB] = obj5;

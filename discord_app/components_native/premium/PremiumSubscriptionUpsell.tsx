@@ -10,8 +10,8 @@ import Text_Text from "../../design/components/Text/native/Text.tsx";
 import components_Button_Button from "../../design/components/Button/native/Button.native.tsx";
 import LinearGradientDefault from "../../../_runtime/04987_LinearGradient.js";
 import PremiumFeatureListDefault from "PremiumFeatureList.tsx";
-import _modDef13540 from "../../../_runtime/metro/13540__.js";
-import _modDef13541 from "../../../_runtime/metro/13541__.js";
+import _modDef13544 from "../../../_runtime/metro/13544__.js";
+import _modDef13545 from "../../../_runtime/metro/13545__.js";
 import noop from "../../../_runtime/metro/00019__.js";
 import LocaleStore from "../../modules/user_settings/LocaleStore.tsx";
 import UserStore from "../../stores/UserStore.tsx";
@@ -134,9 +134,9 @@ export default function PremiumSubscriptionUpsell(arg0) {
     }
     const items3 = [tmp6Result, ,];
     const obj6 = { style: tmp.upsellFeatures, children: null };
-    const obj7 = { style: tmp.upsellFeatureSubLogo, source: _modDef13540 };
+    const obj7 = { style: tmp.upsellFeatureSubLogo, source: _modDef13544 };
     const items4 = [closure_1_10(React4, obj7), ,];
-    const obj8 = { style: tmp.upsellFeatureLogoTier2, source: _modDef13541 };
+    const obj8 = { style: tmp.upsellFeatureLogoTier2, source: _modDef13545 };
     items4[1] = closure_1_10(React4, obj8);
     const obj9 = { style: tmp.upsellFeatureList, features: null, labelStyle: null, rowStyle: null };
     const obj10 = { IconComponent: CheckmarkLargeIcon.CheckmarkLargeIcon, label: null, color: null };

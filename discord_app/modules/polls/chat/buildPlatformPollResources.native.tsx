@@ -7,7 +7,7 @@ import renderer_EmbedUtils from "../../messages/native/renderer/EmbedUtils.tsx";
 import apply from "../../../../_runtime/metro/00012__.js";
 
 require = fn;
-let closure_3 = apply.mapValues(fn(11719).pollStyleSets, (arg0) => {
+let closure_3 = apply.mapValues(fn(11724).pollStyleSets, (arg0) => {
   _require = arg0;
   closure_1 = require("createStyles").createNativeStyleProperties((arg0) => {
     let tmp = closure_0(nativeDefault, arg0);

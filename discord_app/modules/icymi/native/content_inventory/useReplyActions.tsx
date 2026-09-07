@@ -274,7 +274,7 @@ export const useReplyActions = function useReplyActions(content) {
         ICYMIActionCreatorsDefault.feedItemActioned(obj);
         obj = { content: user, author: tmp, sendMessage, onPressEmoji: callback1 };
         ActionSheetActionCreatorsDefault.openLazy(
-          asyncRequireImpl(16507, dependencyMap.paths),
+          asyncRequireImpl(16510, dependencyMap.paths),
           "ReactActionSheet",
           obj,
         );

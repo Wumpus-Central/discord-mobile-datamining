@@ -199,7 +199,7 @@ function ReanimatedGuildBanner(guild) {
 }
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: closure_4, View: hasOwnProperty, Pressable: metroRequire } = get_ActivityIndicator);
-const RedesignChannelListConstants = fn(10118);
+const RedesignChannelListConstants = fn(10123);
 ({
   STICKY_BANNER_ASPECT_RATIO: closure_9,
   BANNER_MAX_HEIGHT_PERCENTAGE: c10,

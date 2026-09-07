@@ -266,20 +266,20 @@ class BaseActivityPanelFocusedView {
   }
 }
 const ActivityLayoutMode = fn(1920).ActivityLayoutMode;
-const ActivityPanelConstants = fn(9505);
+const ActivityPanelConstants = fn(9510);
 ({
   ACTIVITY_LAYOUT_PHYSICS_GESTURE: closure_8,
   ACTIVITY_LAYOUT_PHYSICS_DEFAULT: closure_9,
   ActivityPanelModes: c10,
 } = ActivityPanelConstants);
-const ActivityPanelNativeConstants = fn(17018);
+const ActivityPanelNativeConstants = fn(17021);
 ({
   DEFAULT_PORTRAIT_SAFE_AREAS_CONFIG: closure_11,
   DEFAULT_PORTRAIT_LETTERBOX_CONFIG: closure_12,
   DEFAULT_LANDSCAPE_PILLERBOX_CONFIG: map1,
 } = ActivityPanelNativeConstants);
 const ThemeTypes = fn(1074).ThemeTypes;
-const IS_IOS = fn(12273).IS_IOS;
+const IS_IOS = fn(12277).IS_IOS;
 const jsxProd = fn(21);
 ({ jsx: closure_16, jsxs: closure_17 } = jsxProd);
 const collapsedCategories = { duration: 300 };

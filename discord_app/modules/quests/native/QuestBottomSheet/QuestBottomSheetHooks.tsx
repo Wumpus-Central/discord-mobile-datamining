@@ -164,13 +164,13 @@ export const useMobileActivityPressHandler = function useMobileActivityPressHand
             let captureAdUserAction = tmp4;
             if (
               obj12.shouldMigrateToAdAnalyticsInterface(
-                tmp4(11192).AdAnalyticsInterfaceExperimentStep.STEP_2_CLICKED_INTERNAL,
+                tmp4(11197).AdAnalyticsInterfaceExperimentStep.STEP_2_CLICKED_INTERNAL,
                 "quest_bottom_sheet_mobile_activity",
               )
             ) {
-              captureAdUserAction = captureAdUserAction(11193).captureAdUserAction;
+              captureAdUserAction = captureAdUserAction(11198).captureAdUserAction;
               let obj3 = {
-                type: tmp4(11197).AdUserActionType.CLICK_INTERNAL,
+                type: tmp4(11202).AdUserActionType.CLICK_INTERNAL,
                 adCreativeType: tmp4(5451).AdCreativeType.QUEST,
                 adCreativeId: closure_128_0,
                 questContentCTA: tmp4(7728).QuestContentCTA.LAUNCH_MOBILE_ACTIVITY,
@@ -190,7 +190,7 @@ export const useMobileActivityPressHandler = function useMobileActivityPressHand
               }
               obj3.questContentPosition = questContentPosition;
               captureAdUserAction(obj3);
-              const captureAdUserActionResult = captureAdUserAction(11193);
+              const captureAdUserActionResult = captureAdUserAction(11198);
             } else {
               const obj4 = {
                 questId: closure_128_0,
@@ -217,7 +217,7 @@ export const useMobileActivityPressHandler = function useMobileActivityPressHand
               const captureAdUserActionResult2 = captureAdUserAction(7718);
             }
             dependencyMap = 3;
-            obj12 = tmp4(11192);
+            obj12 = tmp4(11197);
           }
         } catch (tmp36) {
           dependencyMap = tmp;

@@ -83,7 +83,7 @@ export const NotificationSettingsGuildMessageUnread = function NotificationSetti
     setting: require("notificationSettingsGuildFlagUtils").useGuildPresetSettings(style.guildId).unread,
     onCustomize() {
       const obj = { guildId: style.guildId };
-      obj.openLazy(asyncRequireImpl(10166, dependencyMap.paths), "MessageUnreadActionSheet", obj);
+      obj.openLazy(asyncRequireImpl(10171, dependencyMap.paths), "MessageUnreadActionSheet", obj);
     },
   };
   return closure_4(NotificationSettingsMessageUnread, obj);
@@ -95,7 +95,7 @@ export const NotificationSettingsChannelMessageUnread = function NotificationSet
     setting: require("notficationSettingsChannelFlagUtils").useChannelPresetSettings(style.channel).unread,
     onCustomize() {
       const obj = { channel: style.channel };
-      obj.openLazy(asyncRequireImpl(10168, dependencyMap.paths), "MessageUnreadActionSheet", obj);
+      obj.openLazy(asyncRequireImpl(10173, dependencyMap.paths), "MessageUnreadActionSheet", obj);
     },
   };
   return closure_4(NotificationSettingsMessageUnread, obj);

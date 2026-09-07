@@ -147,8 +147,8 @@ class VoicePanelConsoleStatus {
     return tmp13(cleanUp(windowDimensions[9]).View, obj1);
   }
 }
-const EDGE_GUTTER = fn(12276).EDGE_GUTTER;
-const CONTROLS_HEIGHT = fn(12271).CONTROLS_HEIGHT;
+const EDGE_GUTTER = fn(12280).EDGE_GUTTER;
+const CONTROLS_HEIGHT = fn(12275).CONTROLS_HEIGHT;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
 fn(4560);
@@ -181,7 +181,7 @@ createStyles.blockingControlCover = {
 };
 const React6 = createStyles.createStyles(createStyles);
 let obj2 = {};
-let merged = Object.assign(fn(12273).MODE_CHANGE_PHYSICS);
+let merged = Object.assign(fn(12277).MODE_CHANGE_PHYSICS);
 obj2.overshootClamping = true;
 const __initData = {
   code: "function VoicePanelConsoleStatusTsx1(){const{color,windowDimensions,EDGE_GUTTER,CONTROLS_HEIGHT,CONSOLE_STATUS_HEIGHT,withSpring,shouldShow,FADE_IN_MODE_PHYSICS,runOnJS,cleanUp}=this.__closure;return{backgroundColor:color,width:windowDimensions.get().width-EDGE_GUTTER*2,height:CONTROLS_HEIGHT+CONSOLE_STATUS_HEIGHT,borderRadius:32,transform:[{translateY:withSpring(shouldShow.get()?0:100,FADE_IN_MODE_PHYSICS,'respect-motion-settings',function(finished){if(finished&&!shouldShow.get()){runOnJS(cleanUp)();}})}]};}",

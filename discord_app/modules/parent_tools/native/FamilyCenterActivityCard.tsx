@@ -11,8 +11,8 @@ import useUserLinks from "../hooks/useUserLinks.tsx";
 import useIsInAdultAgeGroupDefault from "../hooks/useIsInAdultAgeGroup.tsx";
 import TouchableHitBoxDefault from "../../../design/void/TouchableHitBox/native/TouchableHitBox.tsx";
 import useAgeSpecificText from "../hooks/useAgeSpecificText.tsx";
-import _modDef12769 from "../../../../_runtime/metro/12769__.js";
-import _modDef14890 from "../../../../_runtime/metro/14890__.js";
+import _modDef12773 from "../../../../_runtime/metro/12773__.js";
+import _modDef14893 from "../../../../_runtime/metro/14893__.js";
 import FamilyCenterUsernameHeaderDefault from "FamilyCenterUsernameHeader.tsx";
 import useSelectedTeenUser from "../hooks/useSelectedTeenUser.tsx";
 import FamilyCenterActivityTotalDefault from "FamilyCenterActivityTotal.tsx";
@@ -42,7 +42,7 @@ function FamilyCenterActivityCardPrefaceText() {
   obj = { style: tmp.container, children: null };
   let tmp12 = null;
   if (!tmp4) {
-    obj1 = { color: tmp.icon.color, source: _modDef14890, style: tmp.icon };
+    obj1 = { color: tmp.icon.color, source: _modDef14893, style: tmp.icon };
     tmp12 = React6(native.Icon, obj1);
   }
   const items = [tmp12, ,];
@@ -66,7 +66,7 @@ function FamilyCenterActivityCardPrefaceText() {
   const tmp2Result = TouchableHitBoxDefault;
   obj3.children = React6(native.Icon, {
     color: tmp.icon.color,
-    source: _modDef12769,
+    source: _modDef12773,
     size: native.Icon.Sizes.EXTRA_SMALL,
     style: tmp.icon,
   });
@@ -187,8 +187,8 @@ class FamilyCenterActivityCardAccountSelect {
             });
           };
           obj.selectedItem = tmp.id;
-          obj.openLazy(asyncRequireImpl(9426, dependencyMap.paths), FamilyCenterTeenAccountSelect, obj);
-          const tmp5 = asyncRequireImpl(9426, dependencyMap.paths);
+          obj.openLazy(asyncRequireImpl(9431, dependencyMap.paths), FamilyCenterTeenAccountSelect, obj);
+          const tmp5 = asyncRequireImpl(9431, dependencyMap.paths);
         }
       };
       tmp12 = closure_15;

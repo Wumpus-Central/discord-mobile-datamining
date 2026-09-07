@@ -5,7 +5,7 @@ import SecureFramesActionCreatorsDefault from "../../../rtc/SecureFramesActionCr
 import SecureFramesPersistedStore from "../../../rtc/SecureFramesPersistedStore.tsx";
 
 require = fn;
-fn(11468);
+fn(11473);
 let SettingBuilders = {
   useTitle() {
     const intl = util.intl;

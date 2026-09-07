@@ -37,7 +37,7 @@ function PostPurchaseFooter(onSendGift) {
   }, []);
   obj = { grow: true, variant: "primary", icon: null, text: null, onPress: null };
   obj = { size: "sm", color: nativeDefault.colors.CONTROL_PRIMARY_TEXT_DEFAULT };
-  obj.icon = closure_10(onSendGift(11030).GiftIcon, obj);
+  obj.icon = closure_10(onSendGift(11035).GiftIcon, obj);
   const intl = onSendGift(1114).intl;
   obj.text = intl.string(_modDef2492.g86YiI);
   obj.onPress = callback;
@@ -145,7 +145,7 @@ function LevelUpScreen(arg0) {
   return closure_1_11(View, obj);
 }
 const View = fn(17).View;
-const GiftingBadgeConstants = fn(11029);
+const GiftingBadgeConstants = fn(11034);
 ({
   getRemainingGiftsToNextTier: metroRequire,
   getTierForProgress: closure_7,

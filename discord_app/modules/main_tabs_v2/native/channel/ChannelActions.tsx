@@ -465,7 +465,7 @@ export default function ChannelActions(channelId) {
   obj = { style: containerStyle, children: null };
   if (obj1.useHasForumSearchQuery(channelId)) {
     obj = { channelId };
-    let tmp4Result = jsx(channelId(13257).ForumChannelCloseSearchButton, { channelId });
+    let tmp4Result = jsx(channelId(13261).ForumChannelCloseSearchButton, { channelId });
   } else {
     if (!isDM) {
       if (!isMultiUserDM) {

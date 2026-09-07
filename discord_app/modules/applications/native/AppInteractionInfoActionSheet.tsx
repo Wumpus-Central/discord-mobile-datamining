@@ -35,7 +35,7 @@ export default function AppInteractionInfoActionSheet(message) {
   if (interactionMetadata != null) {
     tmp5 =
       interactionMetadata.authorizing_integration_owners[
-        message(undefined, 9245).ApplicationIntegrationType.USER_INSTALL
+        message(undefined, 9250).ApplicationIntegrationType.USER_INSTALL
       ];
   }
   dependencyMap = tmp5;
@@ -44,7 +44,7 @@ export default function AppInteractionInfoActionSheet(message) {
   if (interactionMetadata2 != null) {
     tmp7 =
       interactionMetadata2.authorizing_integration_owners[
-        message(undefined, 9245).ApplicationIntegrationType.GUILD_INSTALL
+        message(undefined, 9250).ApplicationIntegrationType.GUILD_INSTALL
       ];
   }
   noop = tmp7;

@@ -51,7 +51,7 @@ let createStyles = {
   labelRow: null,
 };
 createStyles = {
-  height: fn(10263).AUTOCOMPLETE_ROW_HEIGHT,
+  height: fn(10268).AUTOCOMPLETE_ROW_HEIGHT,
   paddingVertical: 0,
   backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH,
 };
@@ -143,8 +143,8 @@ export default {
     const items1 = [,];
     ({ trailing: arr2[0], username: arr2[1] } = tmp);
     obj1.usernameStyle = items1;
-    obj.trailing = closure_9(guildId(9803), obj1);
-    return closure_9(user(8593).FormRow, obj);
+    obj.trailing = closure_9(guildId(9808), obj1);
+    return closure_9(user(8598).FormRow, obj);
   },
   Global(arg0) {
     ({ text, badge } = arg0);

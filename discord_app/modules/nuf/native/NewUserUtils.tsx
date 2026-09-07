@@ -236,7 +236,7 @@ let closure_18 = async function _getNextOnboardingStep() {
 const NativeModules = fn(17).NativeModules;
 const Constants = fn(1074);
 ({ PlatformTypes: closure_8, Routes: closure_9 } = Constants);
-const ContactPermissions = fn(12678).ContactPermissions;
+const ContactPermissions = fn(12682).ContactPermissions;
 let closure_11 = fn(4770).NotificationAuthorizationStatus;
 let obj = {
   key: "choose-avatar",
@@ -403,7 +403,7 @@ let items = [
   },
   {
     key: "accept-invite",
-    shouldShowStep: fn(9820).hasDeferredInvite,
+    shouldShowStep: fn(9825).hasDeferredInvite,
     transitionStep() {
       DispatcherDefault.dispatch({ type: "DEFERRED_INVITE_SHOW" });
     },

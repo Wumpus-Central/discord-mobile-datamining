@@ -100,7 +100,7 @@ function FrameViewInner(frame) {
     children: null,
   });
 }
-const FramesConstants = fn(9511);
+const FramesConstants = fn(9516);
 ({ asLaunched: metroRequire, FrameLayoutModes: closure_7 } = FramesConstants);
 const ActivityPlatform = fn(1920).ActivityPlatform;
 const jsx = fn(21).jsx;

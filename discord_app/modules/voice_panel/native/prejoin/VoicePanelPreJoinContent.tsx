@@ -145,7 +145,7 @@ function ActivityInfo(activity) {
               return obj;
             } else if (closure_1_7) {
               if (null != inputApplication) {
-                let obj2 = v3(9530);
+                let obj2 = v3(9535);
                 let obj1 = {
                   channelId,
                   applicationId: inputApplication.id,
@@ -466,11 +466,11 @@ function renderItem(arg0, arg1, transitionState, transitionCleanUp) {
   return closure_1_25(PreJoinTransitioner, { transitionState, transitionCleanUp }, arg0);
 }
 const StyleSheet = fn(17).StyleSheet;
-const MODE_CHANGE_PHYSICS = fn(12273).MODE_CHANGE_PHYSICS;
-const EDGE_GUTTER = fn(12276).EDGE_GUTTER;
+const MODE_CHANGE_PHYSICS = fn(12277).MODE_CHANGE_PHYSICS;
+const EDGE_GUTTER = fn(12280).EDGE_GUTTER;
 const Constants = fn(1074);
 ({ AnalyticEvents: closure_20, AnalyticsSections: closure_21, Permissions: closure_22 } = Constants);
-const constants4 = fn(13737).VoiceChannelWarningSurfaces;
+const constants4 = fn(13741).VoiceChannelWarningSurfaces;
 const Features = fn(4585).Features;
 const jsxProd = fn(21);
 ({ jsx: closure_25, jsxs: closure_26, Fragment: closure_27 } = jsxProd);
@@ -488,7 +488,7 @@ let obj = {
   blockedMemberWarning: null,
   consolePreJoinPadding: null,
 };
-obj = { paddingTop: EDGE_GUTTER + fn(12277).BASE_VOICE_PANEL_HEADER_HEIGHT + EDGE_GUTTER, gap: 24, paddingBottom: 16 };
+obj = { paddingTop: EDGE_GUTTER + fn(12281).BASE_VOICE_PANEL_HEADER_HEIGHT + EDGE_GUTTER, gap: 24, paddingBottom: 16 };
 obj.contentWrapper = obj;
 obj.channelInfoWrapper = { paddingHorizontal: 16 };
 obj.subheading = { textAlign: "center", paddingTop: 16, paddingBottom: 16 };
@@ -731,10 +731,10 @@ let size = fn(2);
 let result = size.fileFinishedImporting("modules/voice_panel/native/prejoin/VoicePanelPreJoinContent.tsx");
 
 export default noop.memo(function VoicePanelPreJoinWrapper() {
-  const context = noop.useContext(guildId(12272));
+  const context = noop.useContext(guildId(12276));
   const channelId = context.channelId;
   guildId = context.guildId;
-  const tmp2 = guildId(17037)(channelId);
+  const tmp2 = guildId(17040)(channelId);
   dependencyMap = tmp2;
   let obj = channelId(504);
   let items = [
@@ -785,7 +785,7 @@ export default noop.memo(function VoicePanelPreJoinWrapper() {
       }
     },
     items1,
-    channelId(17163).areVoicePanelPreJoinContentPropsEqual,
+    channelId(17166).areVoicePanelPreJoinContentPropsEqual,
   );
   obj = { item: stateFromStores, renderItem };
   return closure_25(channelId(4271).TransitionItem, obj);

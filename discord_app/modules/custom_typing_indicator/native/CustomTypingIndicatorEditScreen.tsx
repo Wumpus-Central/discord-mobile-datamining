@@ -126,11 +126,11 @@ export default function CustomTypingIndicatorEditScreen() {
   const items5 = [memo, first3];
   const callback1 = first1.useCallback(() => {
     const obj = { initialValue: first2, onChange };
-    obj.openLazy(asyncRequireImpl(15358, dependencyMap.paths), "CustomTypingIndicatorTypingSuggestionPickerSheet", obj);
+    obj.openLazy(asyncRequireImpl(15361, dependencyMap.paths), "CustomTypingIndicatorTypingSuggestionPickerSheet", obj);
   }, items4);
   const callback2 = first1.useCallback(() => {
     const obj = { emojis: memo, initialAnimation: first3, onChange: onChange2 };
-    obj.openLazy(asyncRequireImpl(15359, dependencyMap.paths), "CustomTypingIndicatorAnimationPickerSheet", obj);
+    obj.openLazy(asyncRequireImpl(15362, dependencyMap.paths), "CustomTypingIndicatorAnimationPickerSheet", obj);
   }, items5);
   first1.useRef(null);
   const callback3 = first1.useCallback(() => {

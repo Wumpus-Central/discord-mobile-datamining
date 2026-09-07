@@ -4,7 +4,7 @@ import Text_Text from "../../../../../../design/components/Text/native/Text.tsx"
 import components_Button_Button from "../../../../../../design/components/Button/native/Button.native.tsx";
 import common_SafeAreaView from "../../../../../../components_native/common/SafeAreaView.tsx";
 import TwoWayLinkStyles from "../TwoWayLinkStyles.tsx";
-import _modDef9279 from "../../../../../../../_runtime/metro/09279__.js";
+import _modDef9284 from "../../../../../../../_runtime/metro/09284__.js";
 import noop from "../../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -25,7 +25,7 @@ export default function CrunchyrollLinkDiscordSuccess(onClose) {
   obj = { style: twoWayLinkStyles.container, children: null };
   obj = { style: twoWayLinkStyles.content, children: null };
   const tmp = closure_7();
-  const items = [hasOwnProperty(React3, { source: _modDef9279, style: closure_7().image }), ,];
+  const items = [hasOwnProperty(React3, { source: _modDef9284, style: closure_7().image }), ,];
   const obj2 = {
     variant: "heading-xl/extrabold",
     color: "mobile-text-heading-primary",

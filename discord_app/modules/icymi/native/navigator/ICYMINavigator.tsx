@@ -21,7 +21,7 @@ export default function ICYMINavigator() {
   obj = {
     name: "icymi-screen",
     getComponent() {
-      return closure_0(16450).ICYMITab;
+      return closure_0(16453).ICYMITab;
     },
   };
   const items = [
@@ -29,7 +29,7 @@ export default function ICYMINavigator() {
     closure_2(closure_4.Screen, {
       name: "notifications-screen",
       getComponent() {
-        return closure_0(16401).ThemedNotificationsModal;
+        return closure_0(16404).ThemedNotificationsModal;
       },
     }),
   ];

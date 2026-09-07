@@ -40,7 +40,7 @@ function GuildEventsListHeader(arg0) {
         const result1 = GuildScheduledEventModalActionCreators.openCreateOrEditGuildEventModal(guild, obj);
       }
     };
-    tmp3Result = jsx(guild(9718).ActionSheetHeaderPressableText, {
+    tmp3Result = jsx(guild(9723).ActionSheetHeaderPressableText, {
       accessibilityLabel: null,
       label: null,
       onPress: null,
@@ -64,16 +64,16 @@ let result = size.fileFinishedImporting(
 export default function GuildEventsListActionSheet(guild) {
   guild = guild.guild;
   let events;
-  events = events(9662)(guild.id);
+  events = events(9667)(guild.id);
   const items = [events, guild.id];
   const tmp = closure_10();
   const effect = noop.useEffect(() => {
-    const item = arr.forEach((id) => arr(9781).getGuildEventUserCounts(id.id, id.id, []));
+    const item = arr.forEach((id) => arr(9786).getGuildEventUserCounts(id.id, id.id, []));
     const guildEventsForCurrentUser = GuildScheduledEventManagerDefault.getGuildEventsForCurrentUser(guild.id);
   }, items);
   const items1 = [guild];
   const callback = noop.useCallback(() => {
-    const result = guild(9698).closeGuildEventListActionSheet();
+    const result = guild(9703).closeGuildEventListActionSheet();
   }, []);
   const callback1 = noop.useCallback((eventId, recurrenceId) => {
     const obj = {
@@ -81,7 +81,7 @@ export default function GuildEventsListActionSheet(guild) {
       event: eventId,
       recurrenceId,
       onClose() {
-        const result = guild(9698).openGuildEventListActionSheet(closure_1_0);
+        const result = guild(9703).openGuildEventListActionSheet(closure_1_0);
       },
     };
     let result = obj.openGuildEventDetails(obj);
@@ -119,7 +119,7 @@ export default function GuildEventsListActionSheet(guild) {
   };
   const ref = noop.useRef(ReadStateStore.ackMessageId(guild.id, ReadStateTypes.GUILD_EVENT));
   obj1.lastAckedId = events(5586)(ref);
-  obj.children = jsx(events(9806), {
+  obj.children = jsx(events(9811), {
     inActionSheet: true,
     events,
     onPressEvent: callback1,

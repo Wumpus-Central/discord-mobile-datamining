@@ -151,7 +151,7 @@ function CutoutGuildBanner(guild) {
   }
   obj = { style: tmp.bannerImage, children: null };
   obj = { cutouts: null, children: null };
-  const size = { shape: guild(8813).CutoutShape.RoundedRect, x: 8, y: 46, width: 56, height: 56, cornerRadius: 20 };
+  const size = { shape: guild(8818).CutoutShape.RoundedRect, x: 8, y: 46, width: 56, height: 56, cornerRadius: 20 };
   const items1 = [size];
   obj.cutouts = items1;
   if (null != guild.banner) {
@@ -279,7 +279,7 @@ const GuildFeatures = fn(1074).GuildFeatures;
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1, Fragment: closure_14 } = jsxProd);
 let c15 = 50;
-const createICYMIStyles = fn(16452);
+const createICYMIStyles = fn(16455);
 let closure_16 = createICYMIStyles.createICYMIStyles((margin) => {
   let obj = {
     container: null,
@@ -508,7 +508,7 @@ export default function ICYMIJoinGuildsScreen() {
               const guildChannelScores = obj7.getGuildChannelScores();
               const recommendedGuilds = v3(8351).getRecommendedGuilds();
               const obj9 = v3(8351);
-              v3(4763).popWithKey(stateFromStoresArray(16467).ICYMI_INFO_MODAL_KEY);
+              v3(4763).popWithKey(stateFromStoresArray(16470).ICYMI_INFO_MODAL_KEY);
               dependencyMap = 3;
               const obj5 = { value: undefined, done: true };
               return obj5;
@@ -540,7 +540,7 @@ export default function ICYMIJoinGuildsScreen() {
             const obj19 = v3(8351);
             const recommendedGuilds1 = v3(8351).getRecommendedGuilds();
             const obj20 = v3(8351);
-            v3(4763).popWithKey(stateFromStoresArray(16467).ICYMI_INFO_MODAL_KEY);
+            v3(4763).popWithKey(stateFromStoresArray(16470).ICYMI_INFO_MODAL_KEY);
             dependencyMap = 3;
             return { value: "HermesInternal", done: null };
           }

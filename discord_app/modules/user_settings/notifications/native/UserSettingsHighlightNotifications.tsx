@@ -80,7 +80,7 @@ export default function UserSettingsHighlightNotifications() {
   let tmp4 = null;
   if (0 !== stateFromStoresArray.length) {
     obj = { children: tmp3 };
-    tmp4 = jsx(stateFromStoresArray(8593).Form, { children: tmp3 });
+    tmp4 = jsx(stateFromStoresArray(8598).Form, { children: tmp3 });
   }
   return tmp4;
 }

@@ -68,7 +68,7 @@ prototype["getLastErrored"] = function getLastErrored(id) {
       optionNameToNonce: null,
       optionNameToLastQuery: null,
       lastErrored: false,
-      lastResponseNonce: "call",
+      lastResponseNonce: "add",
     };
     const _Map = Map;
     map = new Map();
@@ -102,7 +102,7 @@ prototype["getAutocompleteChoices"] = function getAutocompleteChoices(id, name, 
       optionNameToNonce: null,
       optionNameToLastQuery: null,
       lastErrored: false,
-      lastResponseNonce: "call",
+      lastResponseNonce: "add",
     };
     const _Map = Map;
     map = new Map();
@@ -142,7 +142,7 @@ prototype["getAutocompleteLastChoices"] = function getAutocompleteLastChoices(id
       optionNameToNonce: null,
       optionNameToLastQuery: null,
       lastErrored: false,
-      lastResponseNonce: "call",
+      lastResponseNonce: "add",
     };
     const _Map = Map;
     map = new Map();
@@ -176,7 +176,7 @@ prototype["getLastResponseNonce"] = function getLastResponseNonce(id) {
       optionNameToNonce: null,
       optionNameToLastQuery: null,
       lastErrored: false,
-      lastResponseNonce: "call",
+      lastResponseNonce: "add",
     };
     const _Map = Map;
     map = new Map();
@@ -216,7 +216,7 @@ PlatformUtils = {
         optionNameToNonce: null,
         optionNameToLastQuery: null,
         lastErrored: false,
-        lastResponseNonce: "call",
+        lastResponseNonce: "add",
       };
       const _Map = Map;
       map = new Map();
@@ -295,7 +295,7 @@ PlatformUtils = {
           optionNameToNonce: null,
           optionNameToLastQuery: null,
           lastErrored: false,
-          lastResponseNonce: "call",
+          lastResponseNonce: "add",
         };
         const _Map = Map;
         map = new Map();
@@ -417,7 +417,7 @@ PlatformUtils = {
             optionNameToNonce: null,
             optionNameToLastQuery: null,
             lastErrored: false,
-            lastResponseNonce: "call",
+            lastResponseNonce: "add",
           };
           const _Map = Map;
           map = new Map();

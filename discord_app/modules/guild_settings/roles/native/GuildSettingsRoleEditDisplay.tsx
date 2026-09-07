@@ -8,11 +8,11 @@ import GuildSettingsRolesStore from "../GuildSettingsRolesStore.tsx";
 require = fn;
 const View = fn(17).View;
 const isEveryoneRole = fn(2016).isEveryoneRole;
-const RoleColorsStyle = fn(17610).RoleColorsStyle;
-const STYLE_CONFIGS = fn(17609).STYLE_CONFIGS;
+const RoleColorsStyle = fn(17613).RoleColorsStyle;
+const STYLE_CONFIGS = fn(17612).STYLE_CONFIGS;
 const Constants = fn(1074);
 ({ DEFAULT_ROLE_COLOR: closure_9, MAX_ROLE_LENGTH: c10 } = Constants);
-let closure_11 = fn(17612).DEFAULT_GRADIENT_ROLE_COLORS;
+let closure_11 = fn(17615).DEFAULT_GRADIENT_ROLE_COLORS;
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1, Fragment: closure_14 } = jsxProd);
 fn(4560);
@@ -117,7 +117,7 @@ export default function GuildSettingsRoleEditDisplay(guild) {
             guild(id[19]).updateRoleColor(role, arg0);
           },
         };
-        obj.openLazy(asyncRequireImpl(16291, dependencyMap.paths), "RoleColorPicker", obj);
+        obj.openLazy(asyncRequireImpl(16294, dependencyMap.paths), "RoleColorPicker", obj);
       } else if (tmp === tmp2.GRADIENT) {
         obj = {
           colors: concat,
@@ -125,7 +125,7 @@ export default function GuildSettingsRoleEditDisplay(guild) {
             guild(id[19]).updateRoleColors(closure_1_2, colors, constants.GRADIENT);
           },
         };
-        ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(17627, dependencyMap.paths), "RoleColorPicker", obj);
+        ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(17630, dependencyMap.paths), "RoleColorPicker", obj);
       }
     }, items1);
     const callback1 = SOLID.useCallback(() => {
@@ -137,7 +137,7 @@ export default function GuildSettingsRoleEditDisplay(guild) {
           guild(id[19]).updateRoleStyles(closure_1_2, currentStyle);
         },
       };
-      obj.openLazy(asyncRequireImpl(17628, dependencyMap.paths), "EnhancedRoleColorsSelectStyleModal", obj);
+      obj.openLazy(asyncRequireImpl(17631, dependencyMap.paths), "EnhancedRoleColorsSelectStyleModal", obj);
     }, items2);
     obj1 = {
       label: null,

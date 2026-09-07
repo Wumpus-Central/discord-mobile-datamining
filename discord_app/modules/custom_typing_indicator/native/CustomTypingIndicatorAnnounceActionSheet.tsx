@@ -125,10 +125,10 @@ export default function CustomTypingIndicatorAnnounceActionSheet(markAsDismissed
     emojiSource: null,
     style: null,
   };
-  const items5 = [ref(11972), ref(11973), ref(11972)];
+  const items5 = [ref(11976), ref(11977), ref(11976)];
   obj4.emojiSource = items5;
   obj4.style = tmp2.outerStack;
-  obj3.children = closure_7(ref(11970), obj4);
+  obj3.children = closure_7(ref(11974), obj4);
   const items6 = [closure_7(View, obj3), ,];
   const obj5 = { style: null, children: null };
   const items7 = [,];
@@ -154,12 +154,12 @@ export default function CustomTypingIndicatorAnnounceActionSheet(markAsDismissed
       markAsDismissed(ContentDismissActionType.USER_DISMISS);
     },
   };
-  const tmp6 = ref(11970);
+  const tmp6 = ref(11974);
   obj6.suggestion = markAsDismissed(1379).TypingSuggestion.YAPPING;
   obj6.style = tmp2.innerStack;
-  const items8 = [ref(11974), ref(11975), ref(11974)];
+  const items8 = [ref(11978), ref(11979), ref(11978)];
   obj6.emojiSource = items8;
-  obj5.children = closure_7(ref(11970), obj6);
+  obj5.children = closure_7(ref(11974), obj6);
   items6[1] = closure_7(View, obj5);
   const obj7 = { style: null, children: null };
   const items9 = [,];
@@ -176,12 +176,12 @@ export default function CustomTypingIndicatorAnnounceActionSheet(markAsDismissed
     style: null,
     emojiSource: null,
   };
-  const tmp7 = ref(11970);
+  const tmp7 = ref(11974);
   obj8.suggestion = markAsDismissed(1379).TypingSuggestion.OVERSHARING;
   obj8.style = tmp2.outerStack;
-  const items10 = [ref(11976), ref(11977), ref(11978)];
+  const items10 = [ref(11980), ref(11981), ref(11982)];
   obj8.emojiSource = items10;
-  obj7.children = closure_7(ref(11970), obj8);
+  obj7.children = closure_7(ref(11974), obj8);
   items6[2] = closure_7(View, obj7);
   obj2.children = items6;
   items3[1] = closure_8(View, obj2);

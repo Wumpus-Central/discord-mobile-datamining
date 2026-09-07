@@ -4,7 +4,7 @@ import native from "../../../../design/void/native.tsx";
 import useSafeAreaInsetsDefault from "../../../safe_area/useSafeAreaInsets.native.tsx";
 import SearchField from "../../../../design/components/TextField/native/SearchField.native.tsx";
 import AppLauncherFlashList from "AppLauncherFlashList.tsx";
-import _modDef12168 from "../../../../../_runtime/metro/12168__.js";
+import _modDef12172 from "../../../../../_runtime/metro/12172__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 const AppLauncherFlashListDefault = AppLauncherFlashList;
@@ -50,8 +50,8 @@ export const AppLauncherListEmptyState = function AppLauncherListEmptyState() {
   const obj = {
     style: tmp.emptyState,
     imageStyle: tmp.emptyStateImage,
-    lightSource: _modDef12168,
-    darkSource: _modDef12168,
+    lightSource: _modDef12172,
+    darkSource: _modDef12172,
     title: null,
     body: null,
   };
@@ -62,8 +62,8 @@ export const AppLauncherListEmptyState = function AppLauncherListEmptyState() {
   return jsx(native.EmptyState, {
     style: tmp.emptyState,
     imageStyle: tmp.emptyStateImage,
-    lightSource: _modDef12168,
-    darkSource: _modDef12168,
+    lightSource: _modDef12172,
+    darkSource: _modDef12172,
     title: null,
     body: null,
   });

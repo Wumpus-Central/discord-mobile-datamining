@@ -25,7 +25,7 @@ export default function TwoFASetupScan(totpSecret) {
     closure_1(true);
     ClipboardUtils.copy(totpSecret.replace(/[^a-zA-Z0-9]/g, ""));
   }, items);
-  let obj = totpSecret(14786);
+  let obj = totpSecret(14789);
   const twoFASetupStyles = obj.useTwoFASetupStyles();
   obj = { bottom: true, style: tmp.container, children: null };
   obj = { style: null, children: null };
@@ -63,5 +63,5 @@ export default function TwoFASetupScan(totpSecret) {
   items2[3] = closure_4(totpSecret(5123).PressableOpacity, obj2);
   obj.children = items2;
   obj4.children = closure_5(totpSecret(7123).SafeAreaPaddingView, obj);
-  return closure_4(totpSecret(14782).TwoFASetupModalScreen, obj4);
+  return closure_4(totpSecret(14785).TwoFASetupModalScreen, obj4);
 }

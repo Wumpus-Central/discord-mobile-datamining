@@ -10,7 +10,7 @@ const AppLauncherNativeConstants = fn(1482);
 const DEFAULT_CONTENT_PADDING = AppLauncherNativeConstants.DEFAULT_CONTENT_PADDING;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const sum = fn(12131).BACK_BUTTON_SIZE + 2 * DEFAULT_CONTENT_PADDING + 36 + 4;
+const sum = fn(12135).BACK_BUTTON_SIZE + 2 * DEFAULT_CONTENT_PADDING + 36 + 4;
 const TOTAL_SCROLL_RANGE = sum - 56;
 fn(4560);
 let createStyles = {
@@ -204,7 +204,7 @@ export const AppLauncherCommandViewHeader = function AppLauncherCommandViewHeade
   const obj5 = { style: null };
   let items3 = [tmp.headerBannerOverlay, animatedStyle2];
   obj5.style = items3;
-  const items4 = [tmp16(section(4296).View, obj5), tmp16(section(12131), { onPress: onPress.onPressBack }), , ,];
+  const items4 = [tmp16(section(4296).View, obj5), tmp16(section(12135), { onPress: onPress.onPressBack }), , ,];
   obj6 = {
     lineClamp: 1,
     animated: true,

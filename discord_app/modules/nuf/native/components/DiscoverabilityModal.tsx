@@ -58,9 +58,9 @@ function DiscoverabilityNameScene() {
   }, items);
   let obj = { style: tmp.container, children: null };
   const callback = noop.useCallback((arg0) => {
-    const result = allowPhone(12704).startContactSyncForDiscoverability(arg0);
-    const obj = allowPhone(12704);
-    const result1 = allowPhone(12704).closeDiscoverabilityModal(false);
+    const result = allowPhone(12708).startContactSyncForDiscoverability(arg0);
+    const obj = allowPhone(12708);
+    const result1 = allowPhone(12708).closeDiscoverabilityModal(false);
   }, []);
   obj = { onNext: callback, loading: false, initialName: null };
   const tmp2 = useContactSyncModalStore();
@@ -114,7 +114,7 @@ class DiscoverabilityModal {
   }
 }
 const View = fn(17).View;
-const useContactSyncModalStore = fn(12677).useContactSyncModalStore;
+const useContactSyncModalStore = fn(12681).useContactSyncModalStore;
 const jsx = fn(21).jsx;
 fn(4560);
 let createStyles = { container: null };

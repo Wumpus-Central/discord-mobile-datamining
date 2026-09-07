@@ -13,7 +13,7 @@ import CollectiblesActionCreators from "../CollectiblesActionCreators.tsx";
 import CollectiblesUtils from "../CollectiblesUtils.tsx";
 import useCollectiblesDataDefault from "../hooks/useCollectiblesData.tsx";
 import CollectiblesBadges from "CollectiblesBadges.tsx";
-import _modDef13172 from "../../../../_runtime/metro/13172__.js";
+import _modDef13176 from "../../../../_runtime/metro/13176__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 import UserStore from "../../../stores/UserStore.tsx";
 
@@ -100,7 +100,7 @@ export const EditCollectiblesListItemNone = function EditCollectiblesListItemNon
   const tmp = closure_9();
   let obj = { style: tmp.optionCell };
   const merged = Object.assign(asDefault);
-  obj = { source: _modDef13172, size: native.IconSizes.LARGE };
+  obj = { source: _modDef13176, size: native.IconSizes.LARGE };
   const items = [React5(native.Icon, obj)];
   obj = { variant: "text-sm/medium", color: "mobile-text-heading-primary", style: tmp.optionCellText, children: null };
   const intl = util.intl;
@@ -133,13 +133,13 @@ export const EditCollectiblesListItemShop = function EditCollectiblesListItemSho
     }, items),
   };
   const merged1 = Object.assign(merged);
-  obj = { source: analyticsLocations(13173), size: analyticsSource(1178).IconSizes.LARGE };
+  obj = { source: analyticsLocations(13177), size: analyticsSource(1178).IconSizes.LARGE };
   const items1 = [closure_7(analyticsSource(1178).Icon, obj), ,];
   obj = { variant: "text-sm/medium", color: "mobile-text-heading-primary", style: tmp2.optionCellText, children: null };
   const intl = analyticsSource(1114).intl;
   obj.children = intl.string(analyticsSource(1114).t.pWG4ze);
   items1[1] = closure_7(analyticsSource(4556).Text, obj);
-  items1[2] = closure_7(analyticsSource(8832).NewBadge, { style: tmp2.newIcon });
+  items1[2] = closure_7(analyticsSource(8837).NewBadge, { style: tmp2.newIcon });
   obj.children = items1;
   return closure_8(EditCollectibleListItem, obj);
 };

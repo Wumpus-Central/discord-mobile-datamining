@@ -82,7 +82,7 @@ export const usePopularOrbShopProducts = function usePopularOrbShopProducts(enab
                 colors: [],
                 themes: [],
                 orbs_eligible: true,
-                currency: enabled(15071).CollectibleSearchCurrencyFilter.ORBS,
+                currency: enabled(15074).CollectibleSearchCurrencyFilter.ORBS,
                 offset: 0,
                 limit: 10,
                 sort_type,
@@ -91,7 +91,7 @@ export const usePopularOrbShopProducts = function usePopularOrbShopProducts(enab
               const obj2 = { timeout };
               c5 = 3;
               c6 = 1;
-              const obj3 = { value: enabled(15070).search(obj1, obj2), done: false };
+              const obj3 = { value: enabled(15073).search(obj1, obj2), done: false };
               return obj3;
             }
           } else if (1 === tmp8) {
@@ -182,7 +182,7 @@ export const usePopularOrbShopProducts = function usePopularOrbShopProducts(enab
     }
     closure_5(false);
   }, items2);
-  let tmp5Result = tmp5(8873);
+  let tmp5Result = tmp5(8878);
   let fetchCollectiblesProducts = tmp5Result.useFetchCollectiblesProducts(skuIds);
   const items3 = [skuIds];
   const effect2 = obj.useEffect(() => {
@@ -191,7 +191,7 @@ export const usePopularOrbShopProducts = function usePopularOrbShopProducts(enab
       const result = obj.maybeFetchProductsBySkuIds(obj);
     }
   }, items3);
-  tmp5Result = tmp5(8784);
+  tmp5Result = tmp5(8789);
   const getOrFetchStorefrontPricesForSkuIds = tmp5Result.useGetOrFetchStorefrontPricesForSkuIds({ skuIds });
   let obj3 = skuIds(4218);
   const items4 = [c6];
@@ -203,7 +203,7 @@ export const usePopularOrbShopProducts = function usePopularOrbShopProducts(enab
   stateFromStoresArray1 = enabled(504).useStateFromStoresArray(items5, () =>
     first.map((item) => fetchStateForSku.getFetchStateForSku(item)),
   );
-  const tmp17 = tmp8(15072)();
+  const tmp17 = tmp8(15075)();
   constants = tmp17;
   const items6 = [tmp17, skuIds, stateFromStoresArray, canUseShopDiscountsResult];
   memo = obj.useMemo(
@@ -328,7 +328,7 @@ export const usePopularOrbShopProducts = function usePopularOrbShopProducts(enab
   );
   const tmp5Result2 = enabled(504);
   obj = { products: memo2, screen: constants.ORBS, bypassAndroidUnsyncedFilter: true };
-  filteredAndSortedProducts = enabled(15074).useFilteredAndSortedProducts(obj);
+  filteredAndSortedProducts = enabled(15077).useFilteredAndSortedProducts(obj);
   const items9 = [filteredAndSortedProducts];
   const memo3 = obj.useMemo(() => filteredAndSortedProducts.slice(0, 10), items9);
   if (!fetchCollectiblesProducts) {

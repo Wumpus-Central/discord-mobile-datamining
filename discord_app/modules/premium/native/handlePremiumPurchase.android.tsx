@@ -126,7 +126,7 @@ let closure_15 = async function _validatePurchase(arg0) {
   }
 };
 let closure_3 = ["succeededOnlyFields"];
-const setGPlayAnalytics = fn(9368).setGPlayAnalytics;
+const setGPlayAnalytics = fn(9373).setGPlayAnalytics;
 const Constants = fn(1074);
 ({ AnalyticEvents: closure_11, Endpoints: closure_12 } = Constants);
 const PaymentGateways = fn(1085).PaymentGateways;
@@ -342,9 +342,9 @@ export const useHandlePremiumPurchase = function useHandlePremiumPurchase() {
         if (!(combined instanceof premiumSubscription(4461).BillingError)) {
           billingError = new premiumSubscription(4461).BillingError(combined);
         }
-        let tmpResult = premiumSubscription(10705);
+        let tmpResult = premiumSubscription(10710);
         if (tmpResult.isSpendingLimitError(billingError)) {
-          tmpResult = premiumSubscription(10705);
+          tmpResult = premiumSubscription(10710);
           const result = tmpResult.showSpendingLimitReachedAlert();
         } else {
           const intl = premiumSubscription(1114).intl;

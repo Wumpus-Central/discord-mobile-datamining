@@ -4,7 +4,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 import ChannelStore from "../../../../stores/ChannelStore.tsx";
 
 require = fn;
-const VoicePanelControlsConstants = fn(12271);
+const VoicePanelControlsConstants = fn(12275);
 ({ VoicePanelControlsModes: hasOwnProperty, CONTROLS_DRAWER_HEADER_SIZE } = VoicePanelControlsConstants);
 const ComponentActions = fn(1074).ComponentActions;
 const jsxProd = fn(21);
@@ -31,7 +31,7 @@ export default noop.memo(function VoicePanelControlsAppLauncher(gestureSpecs) {
   let derivedValue1;
   let obj = gestureSpecs(7872);
   const gradientTop = obj.useGradientTop();
-  const context = noop.useContext(setControlsMode(12272));
+  const context = noop.useContext(setControlsMode(12276));
   setControlsMode = context.setControlsMode;
   ({ channelId: c2, safeArea, windowDimensions } = context);
   const tmp4 = setControlsMode(8265)(windowDimensions);
@@ -41,7 +41,7 @@ export default noop.memo(function VoicePanelControlsAppLauncher(gestureSpecs) {
   const items = [rect];
   const stateFromStores = obj1.useStateFromStores(items, () => ChannelStore.getChannel(c2));
   setControlsMode(38)(null != stateFromStores, "channel should not be null");
-  let obj2 = gestureSpecs(12279);
+  let obj2 = gestureSpecs(12283);
   const items1 = [setControlsMode];
   const controlsDrawerOpenWidth = obj2.getControlsDrawerOpenWidth(tmp4.width, rect.left, rect.right);
   const callback = noop.useCallback(() => {
@@ -50,9 +50,9 @@ export default noop.memo(function VoicePanelControlsAppLauncher(gestureSpecs) {
     setControlsMode({ mode: hasOwnProperty.HIDDEN });
   }, items1);
   const tmp = closure_10();
-  const appLauncherChatInputRefDummy = gestureSpecs(11215).useAppLauncherChatInputRefDummy({ noop: true });
-  const obj4 = gestureSpecs(11215);
-  const ref = noop.useRef(gestureSpecs(11215).AppLauncherKeyboardCloseReason.DISMISSED);
+  const appLauncherChatInputRefDummy = gestureSpecs(11220).useAppLauncherChatInputRefDummy({ noop: true });
+  const obj4 = gestureSpecs(11220);
+  const ref = noop.useRef(gestureSpecs(11220).AppLauncherKeyboardCloseReason.DISMISSED);
   const ref1 = noop.useRef(undefined);
   const sharedValue = gestureSpecs(4296).useSharedValue(0);
   const obj5 = gestureSpecs(4296);
@@ -108,17 +108,17 @@ export default noop.memo(function VoicePanelControlsAppLauncher(gestureSpecs) {
     bottomSheetExpandReasonRef: ref1,
     context: { type: "channel", channel: stateFromStores },
     chatInputRef: appLauncherChatInputRefDummy,
-    entrypoint: gestureSpecs(9409).AppLauncherEntrypoint.VOICE,
+    entrypoint: gestureSpecs(9414).AppLauncherEntrypoint.VOICE,
     keyboardCloseReasonRef: ref,
     onActivityItemSelected: callback,
     width: controlsDrawerOpenWidth,
   };
-  const items3 = [closure_7(setControlsMode(12082), obj1)];
+  const items3 = [closure_7(setControlsMode(12086), obj1)];
   obj2 = { title: null, disablePill: true };
   const obj9 = gestureSpecs(4296);
   const intl = gestureSpecs(1114).intl;
   obj2.title = intl.string(gestureSpecs(1114).t.shUONg);
-  items3[1] = closure_7(setControlsMode(12280), obj2);
+  items3[1] = closure_7(setControlsMode(12284), obj2);
   obj.children = items3;
   obj.children = closure_8(setControlsMode(4296).View, obj);
   return closure_7(closure_9, obj);

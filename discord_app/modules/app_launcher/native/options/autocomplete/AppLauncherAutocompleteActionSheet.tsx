@@ -8,7 +8,7 @@ import Text_Text from "../../../../../design/components/Text/native/Text.tsx";
 import _mod4745 from "module_4745" /* 4745 */;
 import TableRow from "../../../../../design/components/TableRow/native/TableRow.native.tsx";
 import executeCommandDefault from "../../../../application_commands/executeCommand.tsx";
-import _modDef12168 from "../../../../../../_runtime/metro/12168__.js";
+import _modDef12172 from "../../../../../../_runtime/metro/12172__.js";
 import _slicedToArray from "../../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 import ApplicationCommandAutocompleteStore from "../../../../application_commands/ApplicationCommandAutocompleteStore.tsx";
@@ -156,7 +156,7 @@ function Item(arg0) {
     .exhaustive();
 }
 function AutocompleteFailedEmptyState() {
-  const obj = { style: closure_12().emptyState, lightSource: _modDef12168, darkSource: _modDef12168, title: null };
+  const obj = { style: closure_12().emptyState, lightSource: _modDef12172, darkSource: _modDef12172, title: null };
   const intl = util.intl;
   obj.title = intl.string(util.t.rTAbPn);
   return React7(native.EmptyState, obj);

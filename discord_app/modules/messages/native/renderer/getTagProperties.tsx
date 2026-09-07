@@ -66,12 +66,12 @@ export default function getTagProperties(arg0) {
         tagAccessibilityLabel: null,
         tagVerified: flag,
         tagTextColor: "Boolean",
-        tagBackgroundColor: "accessible",
+        tagBackgroundColor: "alignItems",
         tagType: SYSTEM_DM_TAG_SYSTEM_TYPE,
         tagIconUrl: tmp5,
         opTagText: stringResult2,
-        opTagTextColor: "isArray",
-        opTagBackgroundColor: "shouldObscureSpoiler",
+        opTagTextColor: null,
+        opTagBackgroundColor: null,
       };
       ({ opTagTextColor: obj3.opTagTextColor, opTagBackgroundColor: obj3.opTagBackgroundColor } = colors);
       return obj;

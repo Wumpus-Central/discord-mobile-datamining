@@ -7,7 +7,7 @@ import GuildDirectoryAddModalActionCreatorsDefault from "GuildDirectoryAddModalA
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const GuildDirectoryCreate = fn(12310).GuildDirectoryCreate;
+const GuildDirectoryCreate = fn(12314).GuildDirectoryCreate;
 const jsx = fn(21).jsx;
 fn(4560);
 let createStyles = { safeArea: null };
@@ -41,7 +41,7 @@ export default function GuildDirectoryAddModal(arg0) {
     };
     obj2.render = function render(arg0) {
       const merged = Object.assign(arg0);
-      return closure_1_4(closure_1_1(12311), {});
+      return closure_1_4(closure_1_1(12315), {});
     };
     obj1[GuildDirectoryCreate.CREATE_OR_ADD] = obj2;
     obj1[GuildDirectoryCreate.DESCRIPTION] = {
@@ -52,7 +52,7 @@ export default function GuildDirectoryAddModal(arg0) {
       },
       render(arg0) {
         const merged = Object.assign(arg0);
-        return closure_1_4(closure_1_1(12319), {});
+        return closure_1_4(closure_1_1(12323), {});
       },
     };
     const obj3 = {
@@ -63,7 +63,7 @@ export default function GuildDirectoryAddModal(arg0) {
       },
       render(arg0) {
         const merged = Object.assign(arg0);
-        return closure_1_4(closure_1_1(12319), {});
+        return closure_1_4(closure_1_1(12323), {});
       },
     };
     obj1[GuildDirectoryCreate.TEMPLATES] = {
@@ -74,7 +74,7 @@ export default function GuildDirectoryAddModal(arg0) {
       },
       render(arg0) {
         const merged = Object.assign(arg0);
-        return closure_1_4(closure_1_1(12323), {});
+        return closure_1_4(closure_1_1(12327), {});
       },
     };
     obj5 = {
@@ -85,7 +85,7 @@ export default function GuildDirectoryAddModal(arg0) {
       impressionName: discord_common_AnalyticsUtils.ImpressionNames.HUB_CREATE_GUILD_CUSTOMIZE,
       render(arg0) {
         const merged = Object.assign(arg0);
-        return closure_1_4(closure_1_1(12333), {});
+        return closure_1_4(closure_1_1(12337), {});
       },
     };
     obj1[GuildDirectoryCreate.CREATE] = obj5;

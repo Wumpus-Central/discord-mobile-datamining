@@ -162,7 +162,7 @@ export default function GameProfileDetails(game) {
               if (obj != null) {
                 const websites = obj.websites;
                 if (websites != null) {
-                  const mapped3 = websites.map((item) => trackAction(8885)(item, trackAction(576).colors.ICON_SUBTLE));
+                  const mapped3 = websites.map((item) => trackAction(8890)(item, trackAction(576).colors.ICON_SUBTLE));
                   found = mapped3.filter((item) => null != item);
                 }
               }
@@ -214,7 +214,7 @@ export default function GameProfileDetails(game) {
                 style: closure_2.platformsContainer,
                 children: platforms.map((platform) =>
                   closure_1_8(
-                    game(8878).GameUpdatePlatformIcon,
+                    game(8883).GameUpdatePlatformIcon,
                     { platform, size: "md", color: trackAction(576).colors.ICON_SUBTLE },
                     platform,
                   ),

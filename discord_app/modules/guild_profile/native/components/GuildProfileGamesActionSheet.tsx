@@ -46,7 +46,7 @@ export default function GuildProfileGamesActionSheet(profile) {
   profile = profile.profile;
   const id = profile.id;
   const gameActivity = profile.gameActivity;
-  let obj = id(9200);
+  let obj = id(9205);
   const allGuildProfileGames = obj.useAllGuildProfileGames(profile);
   let obj1 = id(8170);
   const intl = id(1114).intl;
@@ -55,7 +55,7 @@ export default function GuildProfileGamesActionSheet(profile) {
   str = str.toString();
   const callback = noop.useCallback(() => {
     const obj = { guildId: id };
-    obj.openLazy(asyncRequireImpl(9185, dependencyMap.paths), "GuildProfileActionSheet:" + id, obj);
+    obj.openLazy(asyncRequireImpl(9190, dependencyMap.paths), "GuildProfileActionSheet:" + id, obj);
   }, items);
   obj = {
     ref: obj1.useBottomSheetRef().bottomSheetRef,

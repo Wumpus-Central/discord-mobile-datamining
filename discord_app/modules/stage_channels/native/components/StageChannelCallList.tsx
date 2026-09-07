@@ -12,7 +12,7 @@ import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const StageChannelListStore = fn(10045);
+const StageChannelListStore = fn(10050);
 ({ useActiveSpeakerPillScrollHandler: hasOwnProperty, useActiveSpeakerPillState: metroRequire } =
   StageChannelListStore);
 const MAX_AUDIENCE_ROW_LIMIT = fn(5414).MAX_AUDIENCE_ROW_LIMIT;
@@ -300,7 +300,7 @@ export default function StageChannelCallList(channel) {
   channel = channel.channel;
   let width;
   let isScreenLandscape;
-  let obj = width(10071);
+  let obj = width(10076);
   const throttleDurationForChannel = obj.useThrottleDurationForChannel(channel.id);
   width = isScreenLandscape(1477)().width;
   isScreenLandscape = width(5126).useIsScreenLandscape();
@@ -319,7 +319,7 @@ export default function StageChannelCallList(channel) {
   }, items);
   const obj2 = width(5126);
   const tmp4 = _slicedToArray(
-    width(10071).useStageChannelParticipantsListThrottled(channel.id, memo, throttleDurationForChannel, true),
+    width(10076).useStageChannelParticipantsListThrottled(channel.id, memo, throttleDurationForChannel, true),
     2,
   );
   obj = { channel, listSections: tmp4[0], rowsBySection: tmp4[1] };

@@ -2,8 +2,8 @@
 import nativeDefault from "../../../../../../../discord_common/js/packages/tokens/native.tsx";
 import GuildSettingsActionCreatorsDefault from "../../../../../guild_settings/GuildSettingsActionCreators.tsx";
 import CreateChannelModalActionCreatorsDefault from "../../../../../../actions/native/CreateChannelModalActionCreators.tsx";
-import _modDef16255 from "../../../../../../../_runtime/metro/16255__.js";
-import _modDef16256 from "../../../../../../../_runtime/metro/16256__.js";
+import _modDef16258 from "../../../../../../../_runtime/metro/16258__.js";
+import _modDef16259 from "../../../../../../../_runtime/metro/16259__.js";
 import noop from "../../../../../../../_runtime/metro/00019__.js";
 import PermissionStore from "../../../../../../stores/PermissionStore.tsx";
 
@@ -61,7 +61,7 @@ export default noop.memo(function ChannelsEmpty(guild) {
   const callback1 = noop.useCallback(() => {
     CreateChannelModalActionCreatorsDefault.open(null, guild.id, null, null);
   }, items3);
-  let obj1 = guild(15100);
+  let obj1 = guild(15103);
   obj = { style: null, children: null };
   const items4 = [tmp.wrapper];
   obj = { paddingBottom: obj1.useYouBarTotalHeight(16) };
@@ -70,17 +70,17 @@ export default noop.memo(function ChannelsEmpty(guild) {
   if (canCustomizeGuild) {
     obj1 = { style: tmp.personalizeButtonWrapper, children: null };
     const obj2 = { icon: null, label: null, onPress: null };
-    const obj3 = { source: _modDef16255, disableColor: true };
+    const obj3 = { source: _modDef16258, disableColor: true };
     obj2.icon = closure_8(tmp2(1178).Icon, obj3);
     const intl = tmp2(1114).intl;
     obj2.label = intl.string(tmp2(1114).t["Yhi9/N"]);
     obj2.onPress = callback;
-    obj1.children = closure_8(tmp2(8595).RowButton, obj2);
+    obj1.children = closure_8(tmp2(8600).RowButton, obj2);
     canCustomizeGuild = closure_8(closure_4, obj1);
   }
   const items5 = [canCustomizeGuild];
   const obj4 = { style: tmp.content, children: null };
-  const items6 = [closure_8(closure_5, { source: _modDef16256 }), , ,];
+  const items6 = [closure_8(closure_5, { source: _modDef16259 }), , ,];
   const obj6 = { color: "mobile-text-heading-primary", variant: "heading-md/bold", style: null, children: null };
   const items7 = [,];
   ({ text: arr8[0], headerText: arr8[1] } = tmp);

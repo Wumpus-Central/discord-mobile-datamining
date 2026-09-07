@@ -74,7 +74,7 @@ function ForumPostUsername(arg0) {
   const tmp4 = useChatWidthDefault();
 }
 const View = fn(17).View;
-const useForumChannelStore = fn(12001).useForumChannelStore;
+const useForumChannelStore = fn(12005).useForumChannelStore;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
 const createStyles = fn(4560);

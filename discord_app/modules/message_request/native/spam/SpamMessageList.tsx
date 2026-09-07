@@ -10,7 +10,7 @@ import MetricEvents from "../../../../../discord_common/js/shared/shared-constan
 import useSortedSpamMessageRequestsDefault from "../../hooks/useSortedSpamMessageRequests.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
-const MessageRequestEmptyDefault = tmp2(16886);
+const MessageRequestEmptyDefault = tmp2(16889);
 require = fn;
 function PendingSpamMessageRequestRow(isLastRow) {
   ({ messageRequest, goToMessageRequestPreview: require, hasSingleMessageRequest } = isLastRow);
@@ -260,10 +260,10 @@ export default function SpamMessageList(goToMessageRequestPreview) {
   const tmp = closure_10();
   importDefault = tmp;
   const bottom = useSafeAreaInsetsDefault().bottom;
-  let obj = goToMessageRequestPreview(16885);
+  let obj = goToMessageRequestPreview(16888);
   dependencyMap = obj.useSpamMessageRequestCount();
   const arr = useSortedSpamMessageRequestsDefault();
-  let obj1 = goToMessageRequestPreview(16883);
+  let obj1 = goToMessageRequestPreview(16886);
   const hasSingleMessageRequest = obj1.useListHasSingleSpamMessageRequest();
   useMountEffectDefault(() => {
     let obj = { num_spam_message_requests };

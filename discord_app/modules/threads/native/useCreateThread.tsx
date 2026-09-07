@@ -24,7 +24,7 @@ export default function useCreateThread(arg0) {
     useDefaultThreadName,
   } = arg0);
   const analyticsLocations = useAnalyticsLocationsDefault().analyticsLocations;
-  analyticsLocations(9305);
+  analyticsLocations(9310);
   let obj = {
     parentChannel,
     parentMessageId,
@@ -74,7 +74,7 @@ export const useCreateForumPost = function useCreateForumPost(parentChannel) {
       obj7.on("progress", (currentSize) => {
         if (currentSize.currentSize > closure_1_3) {
           analyticsLocations.cancel();
-          analyticsLocations(9307);
+          analyticsLocations(9312);
           let obj = {
             channelId: uploads.id,
             uploads,
@@ -83,8 +83,8 @@ export const useCreateForumPost = function useCreateForumPost(parentChannel) {
           };
           obj.setUploads(obj);
           obj = { file: currentSize, maxSize: tmp, baseMaxSize, guildId: uploads.getGuildId(), analyticsLocations };
-          analyticsLocations(9310)(obj);
-          const tmp10 = analyticsLocations(9310);
+          analyticsLocations(9315)(obj);
+          const tmp10 = analyticsLocations(9315);
         }
       });
       await obj7.uploadFiles(guildId);

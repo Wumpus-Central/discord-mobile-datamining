@@ -38,15 +38,15 @@ let closure_0 = asyncGeneratorStep(async (arg0, arg1, arg2) => {
             closure_131_0 = closure_0;
             closure_131_1 = closure_1;
             closure_131_2 = dependencyMap;
-            const result = closure_0(9559).validateOriginAndUpdateSocket(closure_0, closure_1);
+            const result = closure_0(9564).validateOriginAndUpdateSocket(closure_0, closure_1);
             if (null == dependencyMap) {
               const obj1 = { closeCode: constants.INVALID_CLIENTID };
-              const tmp23 = new closure_1(9554)(obj1, "No Client ID Specified");
+              const tmp23 = new closure_1(9559)(obj1, "No Client ID Specified");
               c6 = 3;
               const obj2 = { value: Promise.reject(tmp23), done: true };
               return obj2;
             } else {
-              let obj3 = closure_0(9559);
+              let obj3 = closure_0(9564);
               c5 = 1;
               c6 = 1;
               obj3 = { value: null, done: false };
@@ -57,7 +57,7 @@ let closure_0 = asyncGeneratorStep(async (arg0, arg1, arg2) => {
               );
               return obj3;
             }
-            const obj10 = closure_0(9559);
+            const obj10 = closure_0(9564);
           }
         } else if (arg0 === 1) {
           c6 = 3;
@@ -67,7 +67,7 @@ let closure_0 = asyncGeneratorStep(async (arg0, arg1, arg2) => {
           const obj4 = { value, done: true };
           return obj4;
         } else {
-          obj = closure_0(9559);
+          obj = closure_0(9564);
           c6 = 3;
           const obj5 = {
             value: obj.validateSocketApplication(closure_131_0, closure_131_2, closure_131_1),
@@ -95,5 +95,5 @@ export const validateSocketClient = function () {
   }
   return applyArgumentsResult;
 };
-export const getDeprecatedVoiceSettings = () => closure_0(9559).getDeprecatedVoiceSettingsWithShortcut(() => []);
-export const getVoiceSettings = (arg0) => closure_0(9559).getVoiceSettingsWithShortcut(arg0, () => "");
+export const getDeprecatedVoiceSettings = () => closure_0(9564).getDeprecatedVoiceSettingsWithShortcut(() => []);
+export const getVoiceSettings = (arg0) => closure_0(9564).getVoiceSettingsWithShortcut(arg0, () => "");

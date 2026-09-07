@@ -9,7 +9,7 @@ import TypingStore from "../../../../../../../stores/TypingStore.tsx";
 import UserStore from "../../../../../../../stores/UserStore.tsx";
 
 const require = fn;
-const MUTED_OPACITY_CONTENT = fn(10118).MUTED_OPACITY_CONTENT;
+const MUTED_OPACITY_CONTENT = fn(10123).MUTED_OPACITY_CONTENT;
 const jsx = fn(21).jsx;
 const createStyles = fn(4560);
 let closure_10 = createStyles.createStyles((arg0) => {
@@ -125,11 +125,11 @@ export default noop.memo(function MessagesItemChannelAvatar(channel) {
         isVROnline: stateFromStores4,
         status: true,
         streaming: true,
-        style: "accessible",
-        size: "<string:307298308>",
-        animate: "<string:906248450>",
-        typing: "<string:1715535874>",
-        autoStatusCutout: "<string:1358955583>",
+        style: "imagebutton",
+        size: null,
+        animate: "Double tap to focus",
+        typing: null,
+        autoStatusCutout: null,
       };
       let tmp12 = null;
       if (!stateFromStores2.isSystemUser()) {
@@ -149,11 +149,11 @@ export default noop.memo(function MessagesItemChannelAvatar(channel) {
         isVROnline: stateFromStores4,
         status: true,
         streaming: true,
-        style: "accessible",
-        size: "<string:307298308>",
-        animate: "<string:906248450>",
-        typing: "<string:1715535874>",
-        autoStatusCutout: "<string:1358955583>",
+        style: "imagebutton",
+        size: null,
+        animate: "Double tap to focus",
+        typing: null,
+        autoStatusCutout: null,
       });
     }
   }

@@ -4,7 +4,7 @@ import util from "../../../intl/index.native.tsx";
 import native from "../../../design/void/native.tsx";
 import AnalyticsUtilsDefault from "../../../utils/AnalyticsUtils.tsx";
 import UsernameWithEffectsDefault from "../../display_name_styles/native/UsernameWithEffects.tsx";
-import _modDef13172 from "../../../../_runtime/metro/13172__.js";
+import _modDef13176 from "../../../../_runtime/metro/13176__.js";
 import getDisplayNameStylesFontNameDefault from "../../display_name_styles/getDisplayNameStylesFontName.tsx";
 import DisplayNameStylesColorSwatchDefault from "../../display_name_styles/native/DisplayNameStylesColorSwatch.tsx";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
@@ -108,8 +108,8 @@ export default function UserProfileDisplayNameStylesEditButton(user) {
   }, items2);
   const tmp16 = nativeStackNavigation(() => {
     if (null == closure_6) {
-      let obj = { source: _modDef13172, style: closure_3.noneIcon };
-      let tmp10 = jsx(native.Icon, { source: _modDef13172, style: closure_3.noneIcon });
+      let obj = { source: _modDef13176, style: closure_3.noneIcon };
+      let tmp10 = jsx(native.Icon, { source: _modDef13176, style: closure_3.noneIcon });
     } else {
       obj = { style: closure_3.ggContainer, children: null };
       obj = {

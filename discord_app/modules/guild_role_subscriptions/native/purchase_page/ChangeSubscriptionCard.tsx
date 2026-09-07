@@ -77,10 +77,10 @@ export default function ChangeSubscriptionCard(activeSubscription) {
     obj6.text = intl4.string(tmp6(1114).t.UwHVxr);
     obj6.onPress = function onPress() {
       const obj = { subscriptionId: activeSubscription.id };
-      obj.pushLazy(asyncRequireImpl(16549, dependencyMap.paths), obj);
+      obj.pushLazy(asyncRequireImpl(16552, dependencyMap.paths), obj);
       ActionSheetActionCreatorsDefault.hideActionSheet();
     };
-    items3[1] = closure_7(tmp6(16541).ArrowButton, obj6);
+    items3[1] = closure_7(tmp6(16544).ArrowButton, obj6);
     obj5.children = items3;
     tmp7Result = closure_8(closure_9, obj5);
   }

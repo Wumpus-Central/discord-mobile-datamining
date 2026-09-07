@@ -149,7 +149,7 @@ export default function RequestToSpeakParticipantList(channel) {
   if (0 === sortedRequestToSpeakParticipants.length) {
     obj = { style: tmp.container, children: null };
     obj = { style: tmp.emptyContainer, children: null };
-    const obj1 = { source: require("../../../../../_runtime/metro/09926__.js") };
+    const obj1 = { source: require("../../../../../_runtime/metro/09931__.js") };
     const items = [closure_4(require("FastImage"), obj1), ,];
     const obj2 = {
       style: tmp.emptyTitle,

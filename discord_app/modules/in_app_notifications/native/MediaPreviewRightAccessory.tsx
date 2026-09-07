@@ -360,7 +360,7 @@ let closure_14 = createStyles.createStyles({ container: { overflow: "visible" } 
 createStyles = fn(4560);
 let obj2 = { borderRadius: nativeDefault.radii.sm, overflow: "hidden" };
 let closure_15 = createStyles.createStyles({
-  rightAccessoryContainer: { marginLeft: fn(10095).RIGHT_ACCESSORY_LEFT_MARGIN },
+  rightAccessoryContainer: { marginLeft: fn(10100).RIGHT_ACCESSORY_LEFT_MARGIN },
 });
 size = fn(2);
 const result = size.fileFinishedImporting("modules/in_app_notifications/native/MediaPreviewRightAccessory.tsx");

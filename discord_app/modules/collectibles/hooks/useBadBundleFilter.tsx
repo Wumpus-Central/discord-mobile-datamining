@@ -21,7 +21,7 @@ export const useBadBundleFilter = function useBadBundleFilter() {
       found = arr;
       if (0 !== arr.length) {
         found = arr.filter((product) => {
-          let obj = canUseShopDiscountsResult(8842);
+          let obj = canUseShopDiscountsResult(8847);
           if (obj2.isBundleProduct(product)) {
             let tmpResult = canUseShopDiscountsResult(7554);
             if (!tmpResult.isFreeCollectiblesProduct(product)) {

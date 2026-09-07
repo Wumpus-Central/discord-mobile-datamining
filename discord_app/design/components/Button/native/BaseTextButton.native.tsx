@@ -178,14 +178,14 @@ let closure_18 = createStyles.createStyles((arg0, marginLeft) => {
 createStyles = { sm: null, md: null, lg: null };
 const LARGE_BUTTON_HEIGHT = fn(4980).LARGE_BUTTON_HEIGHT;
 const bound = Math.max((fn(4980).MINIMUM_HIT_AREA - fn(4980).SMALL_BUTTON_HEIGHT) / 2, 0);
-const rect = { top: bound, left: "Array", right: "isArray", bottom: bound };
+const rect = { top: bound, left: "Array", right: "options", bottom: bound };
 createStyles.sm = rect;
 const LARGE_BUTTON_HEIGHT2 = fn(4980).LARGE_BUTTON_HEIGHT;
 const bound1 = Math.max((fn(4980).MINIMUM_HIT_AREA - fn(4980).MEDIUM_BUTTON_HEIGHT) / 2, 0);
-const rect1 = { top: bound1, left: "Array", right: "isArray", bottom: bound1 };
+const rect1 = { top: bound1, left: "Array", right: "options", bottom: bound1 };
 createStyles.md = rect1;
 const bound2 = Math.max((fn(4980).MINIMUM_HIT_AREA - fn(4980).LARGE_BUTTON_HEIGHT) / 2, 0);
-const rect2 = { top: bound2, left: "Array", right: "isArray", bottom: bound2 };
+const rect2 = { top: bound2, left: "Array", right: "options", bottom: bound2 };
 createStyles.lg = rect2;
 function getTextPlatformLineHeight(arg0, arg1) {}
 createStyles = {

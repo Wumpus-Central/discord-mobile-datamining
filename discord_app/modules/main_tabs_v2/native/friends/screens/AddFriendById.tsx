@@ -182,7 +182,7 @@ export default noop.forwardRef((arg0, ref) => {
         substr = trimmed.substring(1);
         tmp2 = substr;
       }
-      obj = sourcePage(9046);
+      obj = sourcePage(9051);
       const validateDiscordTagResult = obj.validateDiscordTag(tmp2);
       if (null != validateDiscordTagResult) {
         obj = { status: constants.ERROR, field: constants2.DISCORD_TAG, message: validateDiscordTagResult };
@@ -193,7 +193,7 @@ export default noop.forwardRef((arg0, ref) => {
         const obj2 = {
           discordTag: tmp2,
           context: { location: "Search - Add Friend Search" },
-          errorUxConfig: sourcePage(9042).RelationshipErrorUXConfig.SHOW_ONLY_IF_ACTION_NEEDED,
+          errorUxConfig: sourcePage(9047).RelationshipErrorUXConfig.SHOW_ONLY_IF_ACTION_NEEDED,
           note: null,
         };
         let tmp9;
@@ -201,8 +201,8 @@ export default noop.forwardRef((arg0, ref) => {
           tmp9 = trimmed1;
         }
         obj2.note = tmp9;
-        const obj5 = ref(9042);
-        ref(9042)
+        const obj5 = ref(9047);
+        ref(9047)
           .sendRequest(obj2)
           .then(
             () => {
@@ -262,7 +262,7 @@ export default noop.forwardRef((arg0, ref) => {
               closure_6(obj);
             },
           );
-        const sendRequestResult = ref(9042).sendRequest(obj2);
+        const sendRequestResult = ref(9047).sendRequest(obj2);
       }
     }
   }

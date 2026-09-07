@@ -7,7 +7,7 @@ import ChannelRTCStore from "../../../calls/ChannelRTCStore.tsx";
 
 const require = fn;
 const View = fn(17).View;
-const StageChannelListStore = fn(10045);
+const StageChannelListStore = fn(10050);
 ({ useActiveSpeakerPillScrollHandler: metroRequire, useActiveSpeakerPillState: closure_7 } = StageChannelListStore);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);

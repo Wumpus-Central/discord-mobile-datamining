@@ -87,7 +87,7 @@ class FacepileGroupDMAvatar {
       style: tmp.secondFace,
       size: pileSizeOverride,
       guildId: "Array",
-      animate: "Gift Message (Optional)",
+      animate: "Submit",
     };
     obj4.animate = animate;
     if (null == users) {

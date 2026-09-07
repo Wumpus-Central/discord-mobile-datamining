@@ -3,7 +3,7 @@ import ToastUtils from "../../toast/native/ToastUtils.tsx";
 import ClipboardUtils from "../../../utils/ClipboardUtils.native.tsx";
 import getInviteURLDefault from "../../instant_invite/getInviteURL.tsx";
 import instant_invite_InstantInviteUtils from "../../instant_invite/native/InstantInviteUtils.tsx";
-import _modDef10944 from "../../../../_runtime/metro/10944__.js";
+import _modDef10949 from "../../../../_runtime/metro/10949__.js";
 import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
 import ChannelStore from "../../../stores/ChannelStore.tsx";
 import UserStore from "../../../stores/UserStore.tsx";
@@ -27,9 +27,9 @@ export const useInviteActions = function useInviteActions(invite) {
   let obj = { label: null, iconSource: null, action: null };
   let intl = invite(1114).intl;
   obj.label = intl.string(invite(1114).t.RDE0Sc);
-  obj.iconSource = onInviteRevoked(10937).share;
+  obj.iconSource = onInviteRevoked(10942).share;
   obj.action = function action() {
-    _modDef10944(() => {
+    _modDef10949(() => {
       let obj = invite(dependencyMap[7]);
       let tmp4;
       if (!closure_1_3) {
@@ -62,7 +62,7 @@ export const useInviteActions = function useInviteActions(invite) {
   obj = { label: null, iconSource: null, action: null };
   const intl2 = invite(1114).intl;
   obj.label = intl2.string(invite(1114).t.OpuAlK);
-  obj.iconSource = onInviteRevoked(10937).copy;
+  obj.iconSource = onInviteRevoked(10942).copy;
   obj.action = function action() {
     if (c3) {
       let tmpResult = instant_invite_InstantInviteUtils;
@@ -77,7 +77,7 @@ export const useInviteActions = function useInviteActions(invite) {
   const obj1 = { label: null, iconSource: null, variant: "destructive", action: null };
   const intl3 = invite(1114).intl;
   obj1.label = intl3.string(invite(1114).t.v6Yazx);
-  obj1.iconSource = onInviteRevoked(10937).revoke;
+  obj1.iconSource = onInviteRevoked(10942).revoke;
   dependencyMap = asyncGeneratorStep(async () => {
     await v2(tmp24[12]).revokeInvite(invite);
     if (1 === tmp7) {

@@ -19,7 +19,7 @@ import MediaEngineStore from "../../../../stores/MediaEngineStore.tsx";
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, StyleSheet: metroRequire, TouchableOpacity: closure_7 } = get_ActivityIndicator);
-let closure_10 = fn(9485).useBestActiveChatInputContainerHeight;
+let closure_10 = fn(9490).useBestActiveChatInputContainerHeight;
 const PictureInPicturePositions = fn(1074).PictureInPicturePositions;
 const ParticipantTypes = fn(4581).ParticipantTypes;
 const jsxProd = fn(21);

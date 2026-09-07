@@ -12,5 +12,5 @@ export default function openFavoritesGuildCategoryActionSheet(categoryId) {
       ActionSheetActionCreatorsDefault.hideActionSheet(combined);
     },
   };
-  obj.openLazy(combined(1896)(16110, dependencyMap.paths), combined, obj);
+  obj.openLazy(combined(1896)(16113, dependencyMap.paths), combined, obj);
 }

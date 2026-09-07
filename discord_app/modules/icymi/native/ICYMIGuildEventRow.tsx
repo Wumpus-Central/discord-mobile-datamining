@@ -16,7 +16,7 @@ function ICYMIGuildEventRow(event) {
   ({ channel, guild } = event);
   noop = undefined;
   const tmp = closure_13();
-  const tmp4 = guild(9668)(event, null);
+  const tmp4 = guild(9673)(event, null);
   const tmp5 = closure_7(event);
   dependencyMap = tmp5;
   let toISOStringResult;
@@ -27,13 +27,13 @@ function ICYMIGuildEventRow(event) {
   noop = toISOStringResult;
   const items = [toISOStringResult, tmp5];
   const tmp7 = guild(4713)(channel);
-  let obj = event(9705);
+  let obj = event(9710);
   const locationFromEvent = obj.getLocationFromEvent(event);
-  let obj1 = event(9769);
+  let obj1 = event(9774);
   const eventLocationIconSource = obj1.getEventLocationIconSource(event, channel, true);
-  let obj2 = event(9769);
+  let obj2 = event(9774);
   const eventLocationIconComponent = obj2.getEventLocationIconComponent(event, channel, true);
-  let obj3 = event(9665);
+  let obj3 = event(9670);
   const items1 = [event];
   const nextRecurrenceIdInEvent = obj3.getNextRecurrenceIdInEvent(event);
   const items2 = [guild.id, event.id];
@@ -75,7 +75,7 @@ function ICYMIGuildEventRow(event) {
     title = event.description.length > 0;
   }
   let guild_id;
-  let tmp2Result = guild(9780);
+  let tmp2Result = guild(9785);
   if (event != null) {
     guild_id = event.guild_id;
   }
@@ -94,7 +94,7 @@ function ICYMIGuildEventRow(event) {
     onHeaderLongPress: null,
     children: null,
   };
-  tmp2Result = guild(16493);
+  tmp2Result = guild(16496);
   let intl = tmp8(1114).intl;
   obj.actionLabel = intl.string(event(1114).t["6pFsLQ"]);
   obj.id = event.id;
@@ -142,7 +142,7 @@ function ICYMIGuildEventRow(event) {
   }
   if (tmp19Result) {
     obj3 = { variant: "text-md/normal", color: "text-subtle", lineClamp: 5, children: null };
-    let tmp8Result = tmp8(9771);
+    let tmp8Result = tmp8(9776);
     const obj4 = { guildId: guild.id };
     obj3.children = tmp8Result.guildEventDetailsParser(event.description, true, obj4);
     tmp19Result = closure_11(tmp8(4556).Text, obj3);
@@ -179,7 +179,7 @@ function ICYMIGuildEventRow(event) {
   if (tmp7 == null) {
     let result = null;
     if (null != locationFromEvent) {
-      tmp8Result = tmp8(9771);
+      tmp8Result = tmp8(9776);
       result = tmp8Result.guildEventLocationParser(locationFromEvent, true);
     }
     tmp27 = result;
@@ -204,7 +204,7 @@ let GuildScheduledEventStore = fn(7526);
 ({ isGuildEventEnded: metroRequire, isGuildScheduledEventActive: closure_7 } = GuildScheduledEventStore);
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
-const createICYMIStyles = fn(16452);
+const createICYMIStyles = fn(16455);
 let closure_13 = createICYMIStyles.createICYMIStyles((marginHorizontal) => {
   let obj = {
     container: {

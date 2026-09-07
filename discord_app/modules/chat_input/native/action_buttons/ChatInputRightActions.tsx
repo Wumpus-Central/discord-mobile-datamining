@@ -29,12 +29,12 @@ function LeftSlot(state) {
     channel,
     onPress,
     styleButton: "PX_16",
-    shouldShowThread: "setRequestSession",
+    shouldShowThread: "mp3",
   });
   return React5(ReanimatedRexportDefault.View, obj);
 }
 const View = fn(17).View;
-const enterDelayMs = fn(11962).CHAT_INPUT_FLOATING_BOUNCE_ENTER_DELAY_MS;
+const enterDelayMs = fn(11966).CHAT_INPUT_FLOATING_BOUNCE_ENTER_DELAY_MS;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
 const createStyles = fn(4560);
@@ -89,7 +89,7 @@ const forwardRefResult = noop.forwardRef((channel, arg1) => {
     showKeyboardIcon,
     onPress: onPressExpression,
   };
-  items1[1] = closure_7(onPressAction(12174), obj1);
+  items1[1] = closure_7(onPressAction(12178), obj1);
   obj.children = items1;
   return closure_8(View, obj);
 });

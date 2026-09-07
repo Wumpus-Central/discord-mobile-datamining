@@ -8,7 +8,7 @@ import useWindowDimensionsSharedValue from "../../screen/useWindowDimensionsShar
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const LaunchPadConstants = fn(11464);
+const LaunchPadConstants = fn(11469);
 ({
   LAUNCH_PAD_EDGE_GESTURE_AFFORDANCE: closure_4,
   LAUNCH_PAD_END_TRANSLATION_THRESHOLD: hasOwnProperty,

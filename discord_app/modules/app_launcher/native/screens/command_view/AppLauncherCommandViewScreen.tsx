@@ -21,14 +21,14 @@ import showMediaKeyboardActionSheet from "../../../../media_keyboard/native/show
 import AppLauncherContext from "../../AppLauncherContext.tsx";
 import ApplicationCommandOptionValueParser from "../../../../chat_input/native/ApplicationCommandOptionValueParser.tsx";
 import AppLauncherNativeUtils from "../../AppLauncherNativeUtils.tsx";
-import _modDef12114 from "../../../../../../_runtime/metro/12114__.js";
-import _modDef12115 from "../../../../../../_runtime/metro/12115__.js";
+import _modDef12118 from "../../../../../../_runtime/metro/12118__.js";
+import _modDef12119 from "../../../../../../_runtime/metro/12119__.js";
 import AppLauncherCommandViewHeader from "AppLauncherCommandViewHeader.tsx";
 import ApplicationCommandValidationUtils from "../../../../application_commands/ApplicationCommandValidationUtils.tsx";
 import application_commands_ApplicationCommandValidationUtils from "../../../../application_commands/native/ApplicationCommandValidationUtils.tsx";
 import CommandOptionViewDefault from "CommandOptionView.tsx";
-import _modDef12193 from "../../../../../../_runtime/metro/12193__.js";
-import _modDef12194 from "../../../../../../_runtime/metro/12194__.js";
+import _modDef12197 from "../../../../../../_runtime/metro/12197__.js";
+import _modDef12198 from "../../../../../../_runtime/metro/12198__.js";
 import asyncGeneratorStep from "../../../../../../_runtime/00005_asyncGeneratorStep.js";
 import _slicedToArray from "../../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
@@ -1490,8 +1490,8 @@ function NotFoundState(onPress) {
   obj = { style: tmp.emptyStateContainer, children: null };
   obj = {
     style: tmp.emptyState,
-    lightSource: _modDef12193,
-    darkSource: _modDef12194,
+    lightSource: _modDef12197,
+    darkSource: _modDef12198,
     title: null,
     body: null,
     children: null,
@@ -1536,8 +1536,8 @@ function NoPermsState(command) {
   const items1 = [__initData(React5, obj)];
   const obj3 = {
     style: tmp.emptyState,
-    lightSource: _modDef12114,
-    darkSource: _modDef12115,
+    lightSource: _modDef12118,
+    darkSource: _modDef12119,
     title: null,
     body: null,
     children: null,
@@ -1564,7 +1564,7 @@ function NoPermsState(command) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: closure_7, ActivityIndicator: closure_8, ScrollView: closure_9 } = get_ActivityIndicator);
-const ApplicationCommandIndexStore = fn(9290);
+const ApplicationCommandIndexStore = fn(9295);
 ({ useContextIndexState: closure_11, useUserIndexState: closure_12 } = ApplicationCommandIndexStore);
 const AppLauncherNativeConstants = fn(1482);
 ({
@@ -1602,7 +1602,7 @@ let createStyles = {
 createStyles = { height: "100%", backgroundColor: nativeDefault.colors.MOBILE_KEYBOARD_PANEL_BACKGROUND };
 createStyles.container = createStyles;
 createStyles.optionsContainer = {
-  paddingTop: fn(12154).EXPANDED_HEADER_TOTAL_CONSUMED_SPACE_IN_PARENT + nativeDefault.space.PX_4,
+  paddingTop: fn(12158).EXPANDED_HEADER_TOTAL_CONSUMED_SPACE_IN_PARENT + nativeDefault.space.PX_4,
   paddingHorizontal: DEFAULT_CONTENT_PADDING,
   paddingBottom: DEFAULT_CONTENT_PADDING,
   backgroundColor: nativeDefault.colors.MOBILE_KEYBOARD_PANEL_BACKGROUND,
@@ -1623,7 +1623,7 @@ createStyles.submitButton = { flex: 1, overflow: "hidden" };
 createStyles.optionalOptionsSectionTitle = { marginTop: 36 };
 createStyles.optionalOptionList = { marginTop: 12 };
 let obj1 = {
-  paddingTop: fn(12154).EXPANDED_HEADER_TOTAL_CONSUMED_SPACE_IN_PARENT + nativeDefault.space.PX_4,
+  paddingTop: fn(12158).EXPANDED_HEADER_TOTAL_CONSUMED_SPACE_IN_PARENT + nativeDefault.space.PX_4,
   paddingHorizontal: DEFAULT_CONTENT_PADDING,
   paddingBottom: DEFAULT_CONTENT_PADDING,
   backgroundColor: nativeDefault.colors.MOBILE_KEYBOARD_PANEL_BACKGROUND,
@@ -1656,11 +1656,11 @@ let obj3 = {
   borderRadius: nativeDefault.radii.lg,
 };
 createStyles.emptyStateContainer = {
-  paddingTop: fn(12154).EXPANDED_HEADER_TOTAL_CONSUMED_SPACE_IN_PARENT + nativeDefault.space.PX_4,
+  paddingTop: fn(12158).EXPANDED_HEADER_TOTAL_CONSUMED_SPACE_IN_PARENT + nativeDefault.space.PX_4,
   flex: 1,
 };
 createStyles.failureStateButtonWrapper = { marginTop: 24, alignSelf: "center" };
-let obj4 = { paddingTop: fn(12154).EXPANDED_HEADER_TOTAL_CONSUMED_SPACE_IN_PARENT + nativeDefault.space.PX_4, flex: 1 };
+let obj4 = { paddingTop: fn(12158).EXPANDED_HEADER_TOTAL_CONSUMED_SPACE_IN_PARENT + nativeDefault.space.PX_4, flex: 1 };
 createStyles.failureStateButtonPill = {
   borderRadius: nativeDefault.radii.xxl,
   paddingHorizontal: 12,

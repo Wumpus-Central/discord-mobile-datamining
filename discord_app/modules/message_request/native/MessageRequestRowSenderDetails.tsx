@@ -58,7 +58,7 @@ export default function MessageRequestRowSenderDetails(isRestricted) {
     }
     return tmp2;
   });
-  let obj1 = otherUser(16877);
+  let obj1 = otherUser(16880);
   const messageRequestRelativeTimestampText = obj1.useMessageRequestRelativeTimestampText(channel);
   const random = Math.random();
   const rounded = Math.floor(random * utils_AvatarUtilsDefault.DEFAULT_AVATARS.length);
@@ -69,7 +69,7 @@ export default function MessageRequestRowSenderDetails(isRestricted) {
       user: otherUser,
       guildId: "HermesInternal",
       disablePlaceholder: null,
-      avatarDecoration: "Warning",
+      avatarDecoration: "Heartbeat",
     };
     let avatarDecoration;
     if (otherUser != null) {

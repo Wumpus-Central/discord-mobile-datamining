@@ -438,7 +438,7 @@ function showSimpleMediaKeyboard(channel) {
     },
     onPressItem(arg0) {
       ({ channelId, item, isIncluded } = arg0);
-      const result = channel(10636).hideMediaKeyboardActionSheet();
+      const result = channel(10641).hideMediaKeyboardActionSheet();
       handleSelectKeyboardItem(channelId, item, isIncluded);
     },
     onViewAll() {
@@ -534,8 +534,8 @@ function showSimpleMediaKeyboard(channel) {
                             tmp2 = someResult;
                           }
                           if (!tmp2) {
-                            c1(9307).remove(found.id, origin.id, ChannelMessage.ChannelMessage);
-                            const obj = c1(9307);
+                            c1(9312).remove(found.id, origin.id, ChannelMessage.ChannelMessage);
+                            const obj = c1(9312);
                           }
                         });
                       }
@@ -773,8 +773,8 @@ export const handleViewAllDialog = function handleViewAllDialog(arg0) {
                         tmp2 = someResult;
                       }
                       if (!tmp2) {
-                        c1(9307).remove(found.id, origin.id, ChannelMessage.ChannelMessage);
-                        const obj = c1(9307);
+                        c1(9312).remove(found.id, origin.id, ChannelMessage.ChannelMessage);
+                        const obj = c1(9312);
                       }
                     });
                   }

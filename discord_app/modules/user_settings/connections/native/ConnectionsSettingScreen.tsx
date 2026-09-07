@@ -5,7 +5,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 function onPress() {
-  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(14957, dependencyMap.paths), "AddConnection");
+  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(14960, dependencyMap.paths), "AddConnection");
 }
 const jsx = fn(21).jsx;
 const size = fn(2);
@@ -33,5 +33,5 @@ export default noop.memo(function ConnectionsSettingScreen() {
       },
     });
   }, items);
-  return jsx(tmp(14958).UserSettingsConnections, { selectedPlatformType });
+  return jsx(tmp(14961).UserSettingsConnections, { selectedPlatformType });
 });

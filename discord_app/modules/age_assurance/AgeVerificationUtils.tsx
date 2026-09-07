@@ -8,8 +8,8 @@ import RegionalFeatureConfigUtils from "../regional_feature_config/RegionalFeatu
 import AgeGatedFeature from "../../../discord_common/js/shared/shared-constants/AgeGatedFeature.tsx";
 import usePreviousDefault from "../../hooks/usePrevious.tsx";
 import AgeVerificationURLActionCreators from "AgeVerificationURLActionCreators.tsx";
-import FamilyCenterConnectionPrereqExperiment2 from "../parent_tools/FamilyCenterConnectionPrereqExperiment.tsx";
 import ManualAgeAssuranceFallbackExperiment from "ManualAgeAssuranceFallbackExperiment.tsx";
+import FamilyCenterConnectionPrereqExperiment2 from "../parent_tools/FamilyCenterConnectionPrereqExperiment.tsx";
 import ReactiveCheckActionCreators from "ReactiveCheckActionCreators.tsx";
 import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
 import _slicedToArray from "../../../_runtime/metro/00032__.js";

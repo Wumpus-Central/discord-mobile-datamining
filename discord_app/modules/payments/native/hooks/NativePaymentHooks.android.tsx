@@ -69,7 +69,7 @@ function useGoogleSkuIds(arg0, arg1) {
                       ref = 1;
                       v2 = 2;
                       c5 = 1;
-                      const obj1 = { value: closure_2_0(9367).loadInAppSkus(differenceResult), done: false };
+                      const obj1 = { value: closure_2_0(9372).loadInAppSkus(differenceResult), done: false };
                       return obj1;
                     }
                   }

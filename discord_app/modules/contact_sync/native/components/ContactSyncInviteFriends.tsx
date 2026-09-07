@@ -5,7 +5,7 @@ import AnalyticsUtilsDefault from "../../../../utils/AnalyticsUtils.tsx";
 import UserUtilsDefault from "../../../../utils/UserUtils.tsx";
 import FastImageDefault from "../../../../components_native/common/FastImage.tsx";
 import showShareActionSheet from "../../../action_sheet/native/showShareActionSheet.tsx";
-import _modDef12701 from "../../../../../_runtime/metro/12701__.js";
+import _modDef12705 from "../../../../../_runtime/metro/12705__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import UserStore from "../../../../stores/UserStore.tsx";
 
@@ -40,7 +40,7 @@ export default function ContactSyncInviteFriends() {
   _require = obj.useStateFromStores(items, () => currentUser.getCurrentUser());
   obj = { children: null };
   obj = { style: tmp.container, children: null };
-  const obj1 = { style: tmp.art, source: _modDef12701 };
+  const obj1 = { style: tmp.art, source: _modDef12705 };
   const items1 = [closure_7(FastImageDefault, obj1), ,];
   const obj2 = {
     style: tmp.title,

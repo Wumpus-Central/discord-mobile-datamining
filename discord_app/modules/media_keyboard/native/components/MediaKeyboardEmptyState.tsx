@@ -5,8 +5,8 @@ import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import components_Button_Button from "../../../../design/components/Button/native/Button.native.tsx";
 import SettingsIcon from "../../../../design/components/Icon/native/redesign/generated/SettingsIcon.tsx";
 import CameraIcon from "../../../../design/components/Icon/native/redesign/generated/CameraIcon.tsx";
-import _modDef10659 from "../../../../../_runtime/metro/10659__.js";
-import _modDef10660 from "../../../../../_runtime/metro/10660__.js";
+import _modDef10664 from "../../../../../_runtime/metro/10664__.js";
+import _modDef10665 from "../../../../../_runtime/metro/10665__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -68,7 +68,7 @@ export const getMediaEmptyStateComponentOrNull = function getMediaEmptyStateComp
           const intl3 = util.intl;
           obj.actionLabel = intl3.string(util.t.JuXTi6);
           obj.actionPress = tmp2;
-          obj.imageSource = _modDef10659;
+          obj.imageSource = _modDef10664;
           const intl4 = util.intl;
           obj.label = intl4.string(util.t["5g7NcN"]);
           return timestampProducer(MediaKeyboardEmptyState, obj);
@@ -83,7 +83,7 @@ export const getMediaEmptyStateComponentOrNull = function getMediaEmptyStateComp
           const intl = util.intl;
           obj.actionLabel = intl.string(util.t.tpoWUd);
           obj.actionPress = tmp;
-          obj.imageSource = _modDef10660;
+          obj.imageSource = _modDef10665;
           const intl2 = util.intl;
           obj.label = intl2.string(util.t.YOvRBZ);
           return timestampProducer(MediaKeyboardEmptyState, obj);
@@ -101,7 +101,7 @@ export const getMediaEmptyStateComponentOrNull = function getMediaEmptyStateComp
   const intl5 = util.intl;
   obj.actionLabel = intl5.string(util.t["457oeG"]);
   obj.actionPress = photosEmpty.onPressPrivacySettings;
-  obj.imageSource = _modDef10659;
+  obj.imageSource = _modDef10664;
   const intl6 = util.intl;
   obj.label = intl6.string(util.t["8p9jGu"]);
   return timestampProducer(MediaKeyboardEmptyState, obj);

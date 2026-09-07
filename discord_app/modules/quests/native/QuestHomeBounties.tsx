@@ -385,7 +385,7 @@ const ContentDismissActionType = fn(1954).ContentDismissActionType;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
 const PX_16 = nativeDefault.space.PX_16;
-let closure_13 = fn(15068).CARD_WIDTH + PX_16;
+let closure_13 = fn(15071).CARD_WIDTH + PX_16;
 const createStyles = fn(4560);
 let closure_14 = createStyles.createStyles(() => {
   let obj = { container: null, listContentContainer: null, emptyState: null, emptyStateText: null };
@@ -418,7 +418,7 @@ export default noop.memo(function QuestHomeBounties(shopCarouselConfig) {
   if (showOrbShopPlaceholderCarousel === undefined) {
     showOrbShopPlaceholderCarousel = false;
   }
-  let obj = first(11483);
+  let obj = first(11488);
   const questHomeBounties = obj.useQuestHomeBounties().questHomeBounties;
   const tmp3 = closure_14();
   first = undefined;
@@ -474,9 +474,9 @@ export default noop.memo(function QuestHomeBounties(shopCarouselConfig) {
         let tmp14 = "none" !== placement && obtainableOrbRewards > 0;
         if (tmp14) {
           tmp14 =
-            orbShopProducts.length >= tmp(15069).MIN_PRODUCTS_FOR_ORB_SHOP_CAROUSEL || showOrbShopPlaceholderCarousel;
+            orbShopProducts.length >= tmp(15072).MIN_PRODUCTS_FOR_ORB_SHOP_CAROUSEL || showOrbShopPlaceholderCarousel;
           const tmp15 =
-            orbShopProducts.length >= tmp(15069).MIN_PRODUCTS_FOR_ORB_SHOP_CAROUSEL || showOrbShopPlaceholderCarousel;
+            orbShopProducts.length >= tmp(15072).MIN_PRODUCTS_FOR_ORB_SHOP_CAROUSEL || showOrbShopPlaceholderCarousel;
         }
         if (!tmp14) {
           obj = { style: tmp3.container, children: null };

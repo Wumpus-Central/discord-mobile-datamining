@@ -3,7 +3,7 @@ import nativeDefault from "../../../../discord_common/js/packages/tokens/native.
 import util from "../../../intl/index.native.tsx";
 import native from "../../../design/void/native.tsx";
 import generated_NoResults from "../../../design/components/Illustration/native/redesign/generated/NoResults.tsx";
-import _mod8874 from "../../../../discord_common/js/packages/flash-list/index.js";
+import _mod8879 from "../../../../discord_common/js/packages/flash-list/index.js";
 import useScrollToInitialIndexOnce from "hooks/useScrollToInitialIndexOnce.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
@@ -49,7 +49,7 @@ export default function ShopFlashList(initialScrollIndex) {
     getItemType,
     contentContainerStyle: closure_4().contentContainer,
   };
-  return jsx(_mod8874.FlashList, {
+  return jsx(_mod8879.FlashList, {
     ref,
     data,
     renderItem,

@@ -126,7 +126,7 @@ function ProfileEffectSectionPreview(arg0) {
     }
     return tmp3;
   }, items);
-  const items1 = [closure_9(purchase(11108), { user, guildId, profileEffect: memo, maxWidth: 250 })];
+  const items1 = [closure_9(purchase(11113), { user, guildId, profileEffect: memo, maxWidth: 250 })];
   obj = { style: tmp.previewGradient, start: { x: 0, y: 0.6 }, end: { x: 0, y: 1 }, colors: null };
   const items2 = ["" + tmp.previewGradient.color + "00", tmp.previewGradient.color];
   obj.colors = items2;

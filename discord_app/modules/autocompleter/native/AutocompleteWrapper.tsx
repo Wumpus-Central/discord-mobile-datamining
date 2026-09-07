@@ -41,7 +41,7 @@ const Constants = fn(1074);
   UpsellTypes: closure_14,
 } = Constants);
 const BOOLEAN_CHOICES = fn(4999).BOOLEAN_CHOICES;
-const ApplicationCommandsConstants = fn(10263);
+const ApplicationCommandsConstants = fn(10268);
 ({ AUTOCOMPLETE_EMOJI_ROW_HEIGHT: closure_16, AUTOCOMPLETE_ROW_HEIGHT: closure_17 } = ApplicationCommandsConstants);
 const ChannelAutocompleteConstants = fn(5000);
 ({
@@ -52,7 +52,7 @@ const ChannelAutocompleteConstants = fn(5000);
   GAME_MENTION_INPUT_PREFIX: closure_22,
   TIMESTAMP_MENTION_INPUT_PREFIX: closure_23,
 } = ChannelAutocompleteConstants);
-const AutocompleteTypes = fn(10424).AutocompleteTypes;
+const AutocompleteTypes = fn(10429).AutocompleteTypes;
 const EmojiInteractionPoint = fn(1374).EmojiInteractionPoint;
 const jsxProd = fn(21);
 ({ jsx: closure_26, Fragment: closure_27, jsxs: closure_28 } = jsxProd);

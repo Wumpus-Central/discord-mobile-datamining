@@ -11,7 +11,7 @@ import AuthenticationStore from "../../../stores/AuthenticationStore.tsx";
 
 require = fn;
 const AnalyticEvents = fn(1074).AnalyticEvents;
-const Constants = fn(11626);
+const Constants = fn(11631);
 ({ FeedbackCategory: hasOwnProperty, FeedbackType: metroRequire, StreamFeedbackOption: closure_7 } = Constants);
 const jsx = fn(21).jsx;
 const size = fn(2);
@@ -50,7 +50,7 @@ export default function StreamFeedbackActionSheet(stream) {
   const intl5 = tmp(1114).intl;
   obj.problemsHeader = intl5.string(stream(1114).t["6Y1t5P"]);
   const stringResult1 = intl2.string(stream(1114).t["0uxA2V"]);
-  obj.problemOptions = stream(11629).getStreamFeedbackOptions({ isStreamer: stateFromStores });
+  obj.problemOptions = stream(11634).getStreamFeedbackOptions({ isStreamer: stateFromStores });
   obj = { value: constants2.FREEFORM, label: null };
   const intl6 = tmp(1114).intl;
   obj.label = intl6.string(stream(1114).t.emlT91);
@@ -64,7 +64,7 @@ export default function StreamFeedbackActionSheet(stream) {
     trackOpen: null,
     trackReport: null,
   };
-  const tmpResult = stream(11629);
+  const tmpResult = stream(11634);
   if (stateFromStores) {
     stringResult2 = stringResult1;
   }
@@ -144,7 +144,7 @@ export default function StreamFeedbackActionSheet(stream) {
       if (null != reason) {
         if (obj3.shouldShowLogUploadForCategory(rating, category, reason)) {
           ({ media_session_id: obj6.mediaSessionId, rtc_connection_id: obj6.rtcConnectionId } = analyticsData);
-          ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(17356, dependencyMap.paths), "UploadLogs", {
+          ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(17359, dependencyMap.paths), "UploadLogs", {
             mediaSessionId: null,
             rtcConnectionId: null,
           });
@@ -156,7 +156,7 @@ export default function StreamFeedbackActionSheet(stream) {
       ToastUtils.presentFeedbackSent();
     }
   };
-  return jsx(tmp10(17354), {
+  return jsx(tmp10(17357), {
     headerLabel: stringResult,
     showHeaderCloseButton: true,
     ratingBody: null,

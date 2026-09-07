@@ -12,13 +12,13 @@ import _modDef1422 from "../../../../_runtime/metro/01422__.js";
 import _modDef1423 from "../../../../_runtime/metro/01423__.js";
 import _modDef1424 from "../../../../_runtime/metro/01424__.js";
 import _modDef1425 from "../../../../_runtime/metro/01425__.js";
-import _modDef17916 from "../../../../_runtime/metro/17916__.js";
-import _modDef17917 from "../../../../_runtime/metro/17917__.js";
-import _modDef17918 from "../../../../_runtime/metro/17918__.js";
 import _modDef17919 from "../../../../_runtime/metro/17919__.js";
 import _modDef17920 from "../../../../_runtime/metro/17920__.js";
 import _modDef17921 from "../../../../_runtime/metro/17921__.js";
 import _modDef17922 from "../../../../_runtime/metro/17922__.js";
+import _modDef17923 from "../../../../_runtime/metro/17923__.js";
+import _modDef17924 from "../../../../_runtime/metro/17924__.js";
+import _modDef17925 from "../../../../_runtime/metro/17925__.js";
 import size from "../../../../_runtime/metro/00002__.js";
 
 const result = size.fileFinishedImporting("modules/react_asset/native/native_required_assets_misc.tsx");
@@ -37,11 +37,11 @@ export const NATIVE_REQUIRED_ASSETS_MISC = {
   DefaultGroup5: _modDef1423,
   DefaultGroup6: _modDef1424,
   DefaultGroup7: _modDef1425,
-  PoopDark: _modDef17916,
-  PoopLight: _modDef17917,
-  RoleSubscriptionBadge: _modDef17918,
-  RoleSubscriptionLanyard: _modDef17919,
-  RoleSubscriptionPurchaseCard: _modDef17920,
-  SummaryIndicatorEnd: _modDef17921,
-  SummaryIndicatorStart: _modDef17922,
+  PoopDark: _modDef17919,
+  PoopLight: _modDef17920,
+  RoleSubscriptionBadge: _modDef17921,
+  RoleSubscriptionLanyard: _modDef17922,
+  RoleSubscriptionPurchaseCard: _modDef17923,
+  SummaryIndicatorEnd: _modDef17924,
+  SummaryIndicatorStart: _modDef17925,
 };

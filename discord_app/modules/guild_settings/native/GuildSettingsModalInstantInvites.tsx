@@ -167,7 +167,7 @@ function GuildSettingsModalInstantInvites(invites) {
         obj = { guild, analyticsData: null };
         obj.analyticsData = obj;
         ActionSheetActionCreatorsDefault.openLazy(
-          asyncRequireImpl(11829, dependencyMap.paths),
+          asyncRequireImpl(11834, dependencyMap.paths),
           "GuildIncidentActionsActionSheet",
           obj,
         );

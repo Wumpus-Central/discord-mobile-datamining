@@ -210,7 +210,7 @@ export default {
                   event_id: timestamp.event_id,
                   timestamp: result,
                   level: formatted,
-                  tags: "BULK_ACK",
+                  tags: 92.773,
                 };
                 const origin = timestamp.origin;
                 let tmp3 = typeof origin === "string";

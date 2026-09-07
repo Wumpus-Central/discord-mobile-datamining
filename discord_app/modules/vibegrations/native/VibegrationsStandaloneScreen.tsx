@@ -601,7 +601,7 @@ function ChatScene(guildId) {
             ({ ref, onPress, accessibilityActions, onAccessibilityAction } = arg0);
             const obj = {
               ref,
-              IconComponent: closure_1_0(8672).MoreHorizontalIcon,
+              IconComponent: closure_1_0(8677).MoreHorizontalIcon,
               onPress,
               accessibilityLabel: null,
               accessibilityActions: null,
@@ -640,7 +640,7 @@ function ChatScene(guildId) {
             ({ ref, onPress, accessibilityActions, onAccessibilityAction } = arg0);
             const obj = {
               ref,
-              IconComponent: closure_1_0(8672).MoreHorizontalIcon,
+              IconComponent: closure_1_0(8677).MoreHorizontalIcon,
               onPress,
               accessibilityLabel: null,
               accessibilityActions: null,
@@ -669,17 +669,17 @@ function ChatScene(guildId) {
 }
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: metroRequire, ScrollView: closure_7, View: closure_8 } = get_ActivityIndicator);
-let VibegrationsConnectionStore = fn(16589);
+let VibegrationsConnectionStore = fn(16592);
 ({
   draftPatchNotes: map1,
   ensureConnection: closure_14,
   publishProject: closure_15,
   sendUserMessage: closure_16,
 } = VibegrationsConnectionStore);
-let VibegrationsProjectStore = fn(16587);
+let VibegrationsProjectStore = fn(16590);
 ({ canPublishProject: closure_18, isProjectOwner: closure_19 } = VibegrationsProjectStore);
 const Permissions = fn(1074).Permissions;
-const MAIN_SURFACE = fn(9511).MAIN_SURFACE;
+const MAIN_SURFACE = fn(9516).MAIN_SURFACE;
 const jsxProd = fn(21);
 ({ jsx: closure_23, jsxs: closure_24 } = jsxProd);
 const createStyles = fn(4560);

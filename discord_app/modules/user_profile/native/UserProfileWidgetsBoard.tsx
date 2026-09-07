@@ -522,7 +522,7 @@ export default function UserProfileWidgetsBoard(userId) {
     flag = true;
   }
   const cardStyle = userId.cardStyle;
-  let obj = userId(9032);
+  let obj = userId(9037);
   const displayableBoardWidgets = obj.useDisplayableBoardWidgets(userId);
   closure_129_0 = flag;
   closure_129_1 = tmp2;

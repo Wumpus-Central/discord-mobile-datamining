@@ -968,8 +968,8 @@ prototype["trackVideoEndStats"] = function trackVideoEndStats(reason) {
     }
     obj = { stream_application_name: obj2(4701).default.getApplicationNames() };
     if (self.isOwner) {
-      obj = { clips_enabled: tmp5(13674).isClipsEnabled(), clips_buffer_length: tmp8.clipsLength };
-      const tmp5Result = tmp5(13674);
+      obj = { clips_enabled: tmp5(13678).isClipsEnabled(), clips_buffer_length: tmp8.clipsLength };
+      const tmp5Result = tmp5(13678);
     } else {
       obj = {};
     }

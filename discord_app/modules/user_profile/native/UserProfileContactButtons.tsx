@@ -49,7 +49,7 @@ function FriendRequestButton(user) {
     newestAnalyticsLocation = trackUserProfileAction(7162)().newestAnalyticsLocation;
   }
   dependencyMap = { location: newestAnalyticsLocation };
-  let tmp3Result = tmp3(13063);
+  let tmp3Result = tmp3(13067);
   const gameFriendsForUser = tmp3Result.useGameFriendsForUser(user.id);
   tmp3Result = tmp3(504);
   const items = [userDisplayName];
@@ -63,7 +63,7 @@ function FriendRequestButton(user) {
         return null;
       } else {
         if (stateFromStores === RelationshipTypes.PENDING_OUTGOING) {
-          let UserPlusIcon = tmp3(13125).UserClockIcon;
+          let UserPlusIcon = tmp3(13129).UserClockIcon;
         } else {
           UserPlusIcon = tmp3(4497).UserPlusIcon;
         }

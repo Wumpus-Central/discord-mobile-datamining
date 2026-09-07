@@ -120,7 +120,7 @@ export default noop.memo(function VoiceOrStageSummaryRow(layout) {
     let obj3 = {
       size: tmp(tmp2[7]).Icon.Sizes.CUSTOM,
       style: { height: 14, width: 14 },
-      source: require("../../../../../../_runtime/metro/16658__.js"),
+      source: require("../../../../../../_runtime/metro/16661__.js"),
     };
     const items4 = [closure_4(tmp(tmp2[7]).Icon, obj3)];
     let obj4 = { variant: "text-sm/bold", style: { marginLeft: 4 }, children: audienceCount };

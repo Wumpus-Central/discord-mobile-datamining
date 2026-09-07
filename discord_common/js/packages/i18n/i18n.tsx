@@ -1,14 +1,11 @@
 // discord_common/js/packages/i18n/i18n.tsx
 import getSystemLocale from "getSystemLocale.tsx";
-import _modDef17232 from "../../../../_runtime/metro/17232__.js";
-import _mod17273 from "../../../../_runtime/metro/17273__.js";
+import _modDef17235 from "../../../../_runtime/metro/17235__.js";
+import _mod17276 from "../../../../_runtime/metro/17276__.js";
 import parse from "parse.tsx";
 
 require = fn;
-global.IntlMessageFormat = _modDef17232;
-const module_17241 = fn(17241);
-const module_17242 = fn(17242);
-const module_17243 = fn(17243);
+global.IntlMessageFormat = _modDef17235;
 const module_17244 = fn(17244);
 const module_17245 = fn(17245);
 const module_17246 = fn(17246);
@@ -34,9 +31,12 @@ const module_17265 = fn(17265);
 const module_17266 = fn(17266);
 const module_17267 = fn(17267);
 const module_17268 = fn(17268);
+const module_17269 = fn(17269);
+const module_17270 = fn(17270);
+const module_17271 = fn(17271);
 delete tmp2[tmp];
 if (typeof Intl === "undefined") {
-  fn(17269);
+  fn(17272);
 }
 const React2 = "en-US";
 class Provider {
@@ -139,11 +139,11 @@ _instance_members_initializer_I18N_ = function () {
       return _createProxy(obj);
     } else {
       try {
-        obj = self(17274);
+        obj = self(17277);
         return obj.getMessage(tmp4, locale);
       } catch (err) {
         if (typeof tmp3[tmp2] === "string") {
-          return self(17274).getMessage(tmp7, tmp);
+          return self(17277).getMessage(tmp7, tmp);
         } else {
           return "";
         }

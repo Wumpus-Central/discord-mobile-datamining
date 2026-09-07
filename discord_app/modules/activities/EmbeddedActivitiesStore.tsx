@@ -14,7 +14,7 @@ import ChannelStore from "../../stores/ChannelStore.tsx";
 import SelectedChannelStore from "../../stores/SelectedChannelStore.tsx";
 import UserStore from "../../stores/UserStore.tsx";
 
-const isVoiceEmbeddedActivityDefault = combined(9526);
+const isVoiceEmbeddedActivityDefault = combined(9531);
 require = fn;
 function participantFromServer(userId) {
   return { userId: userId.user_id, sessionId: userId.session_id, nonce: userId.nonce };
@@ -53,7 +53,7 @@ function updateEmbeddedActivities(content_classification) {
     if (found1 != null) {
       const sessionId = found1.sessionId;
     }
-    mapped.some((item) => application_id(13985).isActivityParticipantCurrentUserCurrentSession(item));
+    mapped.some((item) => application_id(13988).isActivityParticipantCurrentUserCurrentSession(item));
     const value1 = map.get(application_id);
     let tmp12 = embeddedActivityLocationChannelId;
     if (embeddedActivityLocationChannelId == null) {
@@ -225,7 +225,7 @@ function updateEmbeddedActivities(content_classification) {
                 const ComponentDispatch2 = application_id(1109).ComponentDispatch;
                 const obj2 = { location: _location, applicationId: application_id, isFirstActivityInChannel: 0 === arr2.length, isStart: tmp78, participants: mapped, embeddedActivity: obj1, inviterUserId };
                 ComponentDispatch2.dispatch(constants.OPEN_EMBEDDED_ACTIVITY, obj2);
-                application_id(9534);
+                application_id(9539);
                 if (true === renderInFramePool) {
                   let ACTIVITY_POPOUT_WINDOW = ActivityPanelModes.DISCONNECTED;
                   const _HermesInternal2 = HermesInternal;
@@ -264,7 +264,7 @@ function updateEmbeddedActivities(content_classification) {
     const obj19 = application_id(4189);
   }
 }
-const ActivityPanelConstants = fn(9505);
+const ActivityPanelConstants = fn(9510);
 const ActivityPanelModes = ActivityPanelConstants.ActivityPanelModes;
 const FocusedActivityLayouts = ActivityPanelConstants.FocusedActivityLayouts;
 const Constants = fn(1074);

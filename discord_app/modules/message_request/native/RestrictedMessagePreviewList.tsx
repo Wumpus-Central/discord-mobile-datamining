@@ -81,15 +81,15 @@ let createStyles = {
   mediaPlaceholderCard: null,
   mediaHiddenRow: null,
 };
-createStyles = { marginLeft: fn(16899).RESTRICTED_CONTENT_INSET };
+createStyles = { marginLeft: fn(16902).RESTRICTED_CONTENT_INSET };
 createStyles.hiddenMedia = createStyles;
 createStyles.messageRow = { position: "relative" };
 let size = {
   position: "absolute",
   top: 0,
   left: 0,
-  width: fn(16899).RESTRICTED_CONTENT_INSET,
-  height: fn(16899).RESTRICTED_AVATAR_SIZE,
+  width: fn(16902).RESTRICTED_CONTENT_INSET,
+  height: fn(16902).RESTRICTED_AVATAR_SIZE,
 };
 createStyles.avatarHitbox = size;
 createStyles.dateDivider = {

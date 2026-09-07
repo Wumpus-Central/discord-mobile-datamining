@@ -339,7 +339,7 @@ export default function DatePickerActionSheet(mode) {
   obj4 = { style: tmp3.datetimePickerContainer, children: null };
   const obj3 = { maxDate: minimumDate(4153)(maximumDate).format(str2) };
   const tmp38 = date;
-  const tmp13Result = minimumDate(9719);
+  const tmp13Result = minimumDate(9724);
   let str4 = "dark";
   if (tmp29Result.isThemeLight(tmp15)) {
     str4 = "light";

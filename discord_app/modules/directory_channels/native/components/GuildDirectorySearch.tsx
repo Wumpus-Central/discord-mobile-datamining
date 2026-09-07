@@ -3,7 +3,7 @@ import nativeDefault from "../../../../../discord_common/js/packages/tokens/nati
 import native from "../../../../design/void/native.tsx";
 import AnalyticsUtilsDefault from "../../../../utils/AnalyticsUtils.tsx";
 import GuildDirectorySearchModalActionCreatorsDefault from "GuildDirectorySearchModalActionCreators.tsx";
-import _modDef12306 from "../../../../../_runtime/metro/12306__.js";
+import _modDef12310 from "../../../../../_runtime/metro/12310__.js";
 import GuildDirectoryAddModalActionCreatorsDefault from "GuildDirectoryAddModalActionCreators.tsx";
 import GuildDirectoryActionCreatorsAll from "../../GuildDirectoryActionCreators.tsx";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
@@ -16,7 +16,7 @@ function DefaultState() {
   const tmp = closure_14();
   _require = tmp;
   let obj = { style: tmp.emptyWrapper, children: null };
-  obj = { style: tmp.emptyStateImage, source: _modDef12306 };
+  obj = { style: tmp.emptyStateImage, source: _modDef12310 };
   const items = [closure_12(closure_7, obj)];
   obj = { style: tmp.emptyStateText, variant: "text-sm/medium", color: "text-default", children: null };
   const intl = require("util").intl;
@@ -35,7 +35,7 @@ function EmptyState(channel) {
   let obj = channel(504);
   const items = [GuildStore];
   importDefault = obj.useStateFromStores(items, () => GuildStore.getGuild(channel.getGuildId()));
-  let obj1 = channel(12307);
+  let obj1 = channel(12311);
   const canCreateOrAddGuildInDirectory = obj1.useCanCreateOrAddGuildInDirectory(channel);
   const intl = channel(1114).intl;
   if (canCreateOrAddGuildInDirectory) {
@@ -50,7 +50,7 @@ function EmptyState(channel) {
     formatResult = intl.string(tmp2(1114).t.vYyEnv);
   }
   obj = { style: tmp.emptyWrapper, children: null };
-  obj1 = { style: tmp.emptyStateImage, source: _modDef12306 };
+  obj1 = { style: tmp.emptyStateImage, source: _modDef12310 };
   const items1 = [closure_12(closure_7, obj1), ,];
   const obj2 = {
     style: tmp.emptyStateTitle,

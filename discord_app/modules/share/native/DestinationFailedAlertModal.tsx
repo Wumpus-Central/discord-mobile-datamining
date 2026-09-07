@@ -50,11 +50,11 @@ function FailedUserRow(user) {
       user,
       guildId: "Boolean",
       status: true,
-      isMobileOnline: null,
-      isVROnline: null,
-      size: 195,
-      avatarDecoration: null,
-      autoStatusCutout: null,
+      isMobileOnline: "done",
+      isVROnline: true,
+      size: null,
+      avatarDecoration: "secondary",
+      autoStatusCutout: true,
     };
     let tmp13 = null;
     if (StatusTypes.OFFLINE !== status) {
@@ -94,9 +94,9 @@ function FailedChannelRow(channel) {
     "aria-label": "",
     guild: stateFromStores,
     channel,
-    size: channel(10999).GuildIconWithChannelTypeSizes.SMALL_32,
+    size: channel(11004).GuildIconWithChannelTypeSizes.SMALL_32,
   };
-  const items1 = [closure_10(channel(10999).GuildIconWithChannelType, obj)];
+  const items1 = [closure_10(channel(11004).GuildIconWithChannelType, obj)];
   const tmp3 = useChannelNameDefault(channel);
   items1[1] = closure_10(channel(4556).Text, {
     style: tmp.label,

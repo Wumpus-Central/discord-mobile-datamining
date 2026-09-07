@@ -16,7 +16,7 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/quests/lib/analytics/AnalyticsHooks.tsx");
 
 export const useTrackQuestEventWithImpression = function useTrackQuestEventWithImpression() {
-  getQuestImpressionId = getQuestImpressionId(11486).useGetQuestImpressionId();
+  getQuestImpressionId = getQuestImpressionId(11491).useGetQuestImpressionId();
   const items = [getQuestImpressionId];
   return noop.useCallback((properties) => {
     let obj = {};
@@ -29,7 +29,7 @@ export const useTrackQuestEventWithImpression = function useTrackQuestEventWithI
   }, items);
 };
 export const useTrackQuestContentClickedWithImpression = function useTrackQuestContentClickedWithImpression() {
-  const getQuestImpressionId = callback(11486).useGetQuestImpressionId();
+  const getQuestImpressionId = callback(11491).useGetQuestImpressionId();
   closure_129_0 = getQuestImpressionId;
   const items = [getQuestImpressionId];
   callback = noop.useCallback((properties) => {
@@ -120,7 +120,7 @@ export const useTrackQuestContentClickedWithImpression = function useTrackQuestC
   }, items1);
 };
 export const useTrackAdContentEventWithImpression = function useTrackAdContentEventWithImpression() {
-  getQuestImpressionId = getQuestImpressionId(11486).useGetQuestImpressionId();
+  getQuestImpressionId = getQuestImpressionId(11491).useGetQuestImpressionId();
   const items = [getQuestImpressionId];
   return noop.useCallback((properties) => {
     let obj = {};
@@ -133,7 +133,7 @@ export const useTrackAdContentEventWithImpression = function useTrackAdContentEv
   }, items);
 };
 export const useTrackAdContentClickedWithImpression = function useTrackAdContentClickedWithImpression() {
-  const getQuestImpressionId = callback(11486).useGetQuestImpressionId();
+  const getQuestImpressionId = callback(11491).useGetQuestImpressionId();
   closure_129_0 = getQuestImpressionId;
   const items = [getQuestImpressionId];
   callback = noop.useCallback((properties) => {

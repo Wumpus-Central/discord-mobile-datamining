@@ -15,7 +15,7 @@ import ChannelStore from "../../../../stores/ChannelStore.tsx";
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: metroRequire, ScrollView: closure_7 } = get_ActivityIndicator);
-const HubConstants = fn(12719);
+const HubConstants = fn(12723);
 ({ HubEmailConnectionSteps: closure_9, INVITE_ROUTING_HUB_GUILD_ID: c10 } = HubConstants);
 const MarketingURLs = fn(1074).MarketingURLs;
 const jsxProd = fn(21);

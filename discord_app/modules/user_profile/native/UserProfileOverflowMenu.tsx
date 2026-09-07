@@ -38,7 +38,7 @@ const Constants = fn(1074);
   RelationshipTypes: closure_15,
 } = Constants);
 const ParticipantTypes = fn(4581).ParticipantTypes;
-const RestrictionConfirmationConstants = fn(11382);
+const RestrictionConfirmationConstants = fn(11387);
 ({ BLOCK_CONFIRMATION_ACTION_SHEET_KEY: closure_17, IGNORE_CONFIRMATION_ACTION_SHEET_KEY: closure_18 } =
   RestrictionConfirmationConstants);
 const jsxProd = fn(21);
@@ -342,8 +342,8 @@ export default function UserProfileOverflowMenu(user) {
               const obj = displayProfile(channel[39]);
             };
             obj.impressionName = discord_common_AnalyticsUtils.ImpressionNames.BLOCK_USER_CONFIRMATION;
-            obj.openLazy(asyncRequireImpl(11383, dependencyMap.paths), closure_2_17, obj, "stack");
-            const tmp3 = asyncRequireImpl(11383, dependencyMap.paths);
+            obj.openLazy(asyncRequireImpl(11388, dependencyMap.paths), closure_2_17, obj, "stack");
+            const tmp3 = asyncRequireImpl(11388, dependencyMap.paths);
           };
           push(obj8);
           if (result) {
@@ -407,8 +407,8 @@ export default function UserProfileOverflowMenu(user) {
           obj.channelId = id;
           obj.onSuccess = onSuccess;
           obj.impressionName = discord_common_AnalyticsUtils.ImpressionNames.IGNORE_USER_CONFIRMATION;
-          obj2.openLazy(asyncRequireImpl(11384, dependencyMap.paths), collapsedCategories, obj, "stack");
-          const tmp4 = asyncRequireImpl(11384, dependencyMap.paths);
+          obj2.openLazy(asyncRequireImpl(11389, dependencyMap.paths), collapsedCategories, obj, "stack");
+          const tmp4 = asyncRequireImpl(11389, dependencyMap.paths);
         };
         items7.push(obj12);
       }
@@ -427,7 +427,7 @@ export default function UserProfileOverflowMenu(user) {
           let obj = { action: "PRESS_SET_FRIEND_NICKNAME", analyticsLocations };
           trackUserProfileAction(obj);
           obj = { userId: id, showUserProfile };
-          ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(13115, dependencyMap.paths), obj);
+          ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(13119, dependencyMap.paths), obj);
           ActionSheetActionCreatorsDefault.hideActionSheet();
         },
       };

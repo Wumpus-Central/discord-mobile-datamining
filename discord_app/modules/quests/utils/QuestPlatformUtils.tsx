@@ -488,16 +488,16 @@ function openAdGameLinkDirectlyImpl(adContentId, impressionId, preferExternalApp
   if (null != tmp) {
     url = tmp;
   }
-  let obj = adContentId(11192);
+  let obj = adContentId(11197);
   if (
     obj.shouldMigrateToAdAnalyticsInterface(
-      adContentId(11192).AdAnalyticsInterfaceExperimentStep.STEP_3_CLICKED_EXTERNAL,
+      adContentId(11197).AdAnalyticsInterfaceExperimentStep.STEP_3_CLICKED_EXTERNAL,
       "open_ad_game_link_directly",
     )
   ) {
-    let tmp2Result = tmp2(11193);
+    let tmp2Result = tmp2(11198);
     obj = {
-      type: tmp2(11197).AdUserActionType.CLICK_EXTERNAL_ADVERTISER_CTA,
+      type: tmp2(11202).AdUserActionType.CLICK_EXTERNAL_ADVERTISER_CTA,
       adCreativeType,
       adCreativeId: adContentId,
       questContentCTA: null,
@@ -544,12 +544,12 @@ function openAdGameLinkDirectlyImpl(adContentId, impressionId, preferExternalApp
     if (ios != null) {
       iosAppId = ios.iosAppId;
     }
-    iosAttributionClickFramework = tmp2(11488).getIosAttributionClickFramework(
+    iosAttributionClickFramework = tmp2(11493).getIosAttributionClickFramework(
       null != iosAppId,
       impressionId.sourceQuestContent,
       adContentId,
     );
-    const tmp2Result1 = tmp2(11488);
+    const tmp2Result1 = tmp2(11493);
   }
   let fn;
   if (null != iosAttributionClickFramework) {

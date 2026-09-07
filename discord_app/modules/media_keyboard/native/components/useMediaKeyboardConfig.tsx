@@ -30,11 +30,11 @@ export default function useMediaKeyboardConfig(arg0) {
   if (canStartThread) {
     canStartThread = !tmp;
   }
-  tmp2Result = tmp2(9546);
+  tmp2Result = tmp2(9551);
   const tmp8 = tmp2Result.useIsAppLauncherEnabled(channel.id) && context.target !== MediaKeyboardTarget.COMMAND;
   MediaKeyboardTarget = tmp8;
   let obj = context(7761);
-  mediaKeyboardDraftType = context(10635).getMediaKeyboardDraftType(context.target);
+  mediaKeyboardDraftType = context(10640).getMediaKeyboardDraftType(context.target);
   let items = [context, tmp4, tmp5, mediaKeyboardDraftType, canStartThread, tmp8];
   return canStartThread.useMemo(() => {
     const target = context.target;

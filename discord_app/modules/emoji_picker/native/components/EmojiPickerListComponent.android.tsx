@@ -12,7 +12,7 @@ const ReanimatedRexport = ReanimatedRexport2;
 
 require = fn;
 const EmojiCategoryTypes = fn(5463).EmojiCategoryTypes;
-const IMAGE_SIZE = fn(10290).IMAGE_SIZE;
+const IMAGE_SIZE = fn(10295).IMAGE_SIZE;
 const PADDING_VERTICAL = fn(1219).PADDING_VERTICAL;
 const jsxProd = fn(21);
 ({ jsx: closure_8, Fragment: closure_9, jsxs: c10 } = jsxProd);

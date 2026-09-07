@@ -26,7 +26,7 @@ let closure_9 = noop.forwardRef((sheetKey, arg1) => {
     ref2.current();
   }, []);
   let obj = { type: sheetKey(1250).ImpressionTypes.HALFSHEET, name: impressionName, properties: impressionProperties };
-  transitionState(8768)(obj);
+  transitionState(8773)(obj);
   const imperativeHandle = registerDismissHandler.useImperativeHandle(
     arg1,
     () => ({
@@ -99,7 +99,7 @@ export const ActionSheetPresenter = function ActionSheetPresenter(appEntryKey) {
     />
   ));
   obj = { style: StyleSheet.absoluteFill, component: appEntryKey(4911).TransitionGroupOverlayView, children: mapped };
-  return jsx(appEntryKey(12423).TransitionGroup, {
+  return jsx(appEntryKey(12427).TransitionGroup, {
     style: StyleSheet.absoluteFill,
     component: appEntryKey(4911).TransitionGroupOverlayView,
     children: mapped,

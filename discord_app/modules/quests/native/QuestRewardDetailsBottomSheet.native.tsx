@@ -32,11 +32,11 @@ function QuestRewardDetailsBottomSheet(quest) {
   let obj = quest(504);
   const items2 = [UserStore];
   const stateFromStores = obj.useStateFromStores(items2, () => currentUser.getCurrentUser());
-  let obj1 = quest(11290);
+  let obj1 = quest(11295);
   const defaultRewardName = obj1.getDefaultRewardName(quest.config, stateFromStores);
   obj = { direction: "vertical", spacing: memo(576).space.PX_16, style: tmp.wrapper, children: null };
   obj = { align: "center", direction: "horizontal", spacing: memo(576).space.PX_16, children: null };
-  const items3 = [closure_6(memo(11770), { quest, height: 56, width: 56, withAnimation: true })];
+  const items3 = [closure_6(memo(11775), { quest, height: 56, width: 56, withAnimation: true })];
   obj1 = { direction: "vertical", spacing: memo(576).space.PX_4, style: tmp.rewardDetailsCopy, children: null };
   const obj2 = { variant: "eyebrow", color: "text-subtle", children: null };
   let intl = quest(1114).intl;

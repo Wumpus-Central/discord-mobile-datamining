@@ -11,18 +11,18 @@ import FastImageDefault from "../common/FastImage.tsx";
 import TableSwitchRow from "../../design/components/TableRow/native/TableSwitchRow.native.tsx";
 import usePremiumTrialOffer from "../../modules/premium/hooks/usePremiumTrialOffer.android.tsx";
 import useMessageMaxLengthDefault from "../../modules/messages/useMessageMaxLength.tsx";
-import _modDef9314 from "../../../_runtime/metro/09314__.js";
-import _modDef9315 from "../../../_runtime/metro/09315__.js";
-import _modDef9350 from "../../../_runtime/metro/09350__.js";
-import _modDef9351 from "../../../_runtime/metro/09351__.js";
-import _modDef9352 from "../../../_runtime/metro/09352__.js";
-import _modDef9353 from "../../../_runtime/metro/09353__.js";
-import _modDef9354 from "../../../_runtime/metro/09354__.js";
+import _modDef9319 from "../../../_runtime/metro/09319__.js";
+import _modDef9320 from "../../../_runtime/metro/09320__.js";
 import _modDef9355 from "../../../_runtime/metro/09355__.js";
 import _modDef9356 from "../../../_runtime/metro/09356__.js";
 import _modDef9357 from "../../../_runtime/metro/09357__.js";
-import UserSettingsActionCreatorsDefault from "../../actions/UserSettingsActionCreators.tsx";
+import _modDef9358 from "../../../_runtime/metro/09358__.js";
+import _modDef9359 from "../../../_runtime/metro/09359__.js";
 import _modDef9360 from "../../../_runtime/metro/09360__.js";
+import _modDef9361 from "../../../_runtime/metro/09361__.js";
+import _modDef9362 from "../../../_runtime/metro/09362__.js";
+import UserSettingsActionCreatorsDefault from "../../actions/UserSettingsActionCreators.tsx";
+import _modDef9365 from "../../../_runtime/metro/09365__.js";
 import _slicedToArray from "../../../_runtime/metro/00032__.js";
 import noop from "../../../_runtime/metro/00019__.js";
 import UnsyncedUserSettingsStore from "../../modules/user_settings/UnsyncedUserSettingsStore.tsx";
@@ -107,7 +107,7 @@ function GlobalEmojiUpsell(arg0) {
     }
   }
   const obj2 = { alertWidth, upsellItem: null };
-  const obj3 = { image: _modDef9314, title: null, description: null };
+  const obj3 = { image: _modDef9319, title: null, description: null };
   const intl4 = util.intl;
   obj3.title = intl4.string(util.t.UNtcBV);
   obj3.description = formatResult1;
@@ -116,7 +116,7 @@ function GlobalEmojiUpsell(arg0) {
 }
 function AnimatedEmojiUpsell(alertWidth) {
   let obj = { alertWidth: alertWidth.alertWidth, upsellItem: null };
-  obj = { image: _modDef9315, title: null, description: null };
+  obj = { image: _modDef9320, title: null, description: null };
   const intl = util.intl;
   obj.title = intl.string(util.t.F6rmyq);
   const intl2 = util.intl;
@@ -143,9 +143,9 @@ function PremiumGuildIdentityUpsell(alertWidth) {
   };
   const tmp5 = useThemeDefault();
   if (obj3.isThemeDark(tmp5)) {
-    let tmp4Result = _modDef9350;
+    let tmp4Result = _modDef9355;
   } else {
-    tmp4Result = _modDef9351;
+    tmp4Result = _modDef9356;
   }
   obj = { image: tmp4Result, title: null, description: null };
   const intl = util.intl;
@@ -162,7 +162,7 @@ function CustomProfilesUpsell(alertWidth) {
     imageStyle: obj.useLegacyClassComponentStyles(closure_17).customProfileUpsellImage,
     upsellItem: null,
   };
-  obj = { image: _modDef9352, title: null, description: null };
+  obj = { image: _modDef9357, title: null, description: null };
   const intl = util.intl;
   obj.title = intl.string(util.t.rTY76D);
   const intl2 = util.intl;
@@ -197,7 +197,7 @@ function CustomAppIconsUpsell(alertWidth) {
 }
 function GlobalStickerUpsell(alertWidth) {
   let obj = { alertWidth: alertWidth.alertWidth, upsellItem: null };
-  obj = { image: _modDef9353, title: null, description: null };
+  obj = { image: _modDef9358, title: null, description: null };
   const intl = util.intl;
   obj.title = intl.string(util.t.jn2mBl);
   const intl2 = util.intl;
@@ -225,9 +225,9 @@ function LongerMessageUpsell(alertWidth) {
   const tmp5 = useThemeDefault();
   const tmp6 = useMessageMaxLengthDefault();
   if (obj3.isThemeDark(tmp5)) {
-    let tmp4Result = _modDef9354;
+    let tmp4Result = _modDef9359;
   } else {
-    tmp4Result = _modDef9355;
+    tmp4Result = _modDef9360;
   }
   obj = { image: tmp4Result, title: null, description: null };
   const intl = util.intl;
@@ -247,9 +247,9 @@ function GuildCapUpsell(alertWidth) {
   };
   const tmp5 = useThemeDefault();
   if (obj3.isThemeDark(tmp5)) {
-    let tmp4Result = _modDef9356;
+    let tmp4Result = _modDef9361;
   } else {
-    tmp4Result = _modDef9357;
+    tmp4Result = _modDef9362;
   }
   obj = { image: tmp4Result, title: null, description: null };
   const intl = util.intl;
@@ -359,7 +359,7 @@ class PremiumUpsellAlert {
     obj1.confirmColor = initialUpsellKey(closure_2[41]).ButtonColors.GREEN;
     obj1.confirmText = getNitroText;
     obj1.renderConfirmIcon = function renderConfirmIcon() {
-      const obj = { source: _modDef9360, style: legacyClassComponentStyles.nitroWheel, resizeMode: "contain" };
+      const obj = { source: _modDef9365, style: legacyClassComponentStyles.nitroWheel, resizeMode: "contain" };
       if (constants2.GLOBAL_EMOJI !== initialUpsellKey) {
         if (constants2.ANIMATED_EMOJI !== initialUpsellKey) {
           if (constants2.CUSTOM_PROFILES !== initialUpsellKey) {
@@ -478,7 +478,7 @@ get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, Image: metroRequire } = get_ActivityIndicator);
 const Constants = fn(1074);
 ({ AnalyticEvents: closure_9, UpsellTypes: c10 } = Constants);
-const getIcons = fn(9323).getIcons;
+const getIcons = fn(9328).getIcons;
 const PremiumConstants = fn(1373);
 ({ PremiumSubscriptionSKUs: closure_12, PremiumTypes: map1 } = PremiumConstants);
 const jsxProd = fn(21);

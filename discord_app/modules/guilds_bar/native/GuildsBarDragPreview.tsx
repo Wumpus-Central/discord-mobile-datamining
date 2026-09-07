@@ -338,7 +338,7 @@ function AnimatedItemPreview(cleanUp) {
   return <tmp4Result style={items}>{null}</tmp4Result>;
 }
 const GuildsNodeType = fn(5438).GuildsNodeType;
-const GUILD_ITEM_INSET_LEFT = fn(16285).GUILD_ITEM_INSET_LEFT;
+const GUILD_ITEM_INSET_LEFT = fn(16288).GUILD_ITEM_INSET_LEFT;
 const jsx = fn(21).jsx;
 let createStyles = fn(4560);
 let closure_8 = createStyles.createStyles({
@@ -430,12 +430,12 @@ export default noop.memo(function GuildsBarDragPreview() {
             overState: null,
             overNode: null,
             dropPosition: "o",
-            gestureState: "LongPressCommandMention",
-            scrollPosition: null,
-            dragRegion: true,
-            windowSize: "button",
-            dropComplete: null,
-            listInsets: null,
+            gestureState: "text-xxs/semibold",
+            scrollPosition: "text-muted",
+            dragRegion: null,
+            windowSize: "GuildPowerupsManager",
+            dropComplete: "heading-sm/bold",
+            listInsets: "mobile-text-heading-primary",
           };
           ({ node: obj.draggedNode, itemSize: obj.draggedHeight } = dragSpecs);
           obj.overState = state;

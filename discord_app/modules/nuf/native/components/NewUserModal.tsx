@@ -49,11 +49,11 @@ export default function NewUserModal(arg0) {
       closure_1_4(lastShownStepIndex);
       if (continueNavigation) {
         if (null != ref.current) {
-          closure_0(17447).continueToNextStep(onboardingStepIndex, tmp3.current);
-          const obj2 = closure_0(17447);
+          closure_0(17450).continueToNextStep(onboardingStepIndex, tmp3.current);
+          const obj2 = closure_0(17450);
         }
       }
-      first(4763).popWithKey(closure_0(17448).NEW_USER_MODAL_KEY);
+      first(4763).popWithKey(closure_0(17451).NEW_USER_MODAL_KEY);
       const obj = first(4763);
     });
   }, items);
@@ -99,7 +99,7 @@ export default function NewUserModal(arg0) {
   obj = {
     name: "enable-notification",
     getComponent() {
-      return closure_0(15999).RedesignNotificationScreen;
+      return closure_0(16002).RedesignNotificationScreen;
     },
     initialParams: { onComplete },
   };
@@ -107,7 +107,7 @@ export default function NewUserModal(arg0) {
   obj1 = {
     name: "choose-avatar",
     getComponent() {
-      return closure_0(17451).default;
+      return closure_0(17454).default;
     },
     options() {
       return {
@@ -130,7 +130,7 @@ export default function NewUserModal(arg0) {
               ),
             );
           };
-          return closure_6(first(12696), obj);
+          return closure_6(first(12700), obj);
         },
       };
     },
@@ -141,7 +141,7 @@ export default function NewUserModal(arg0) {
     name: "contact-sync",
     options: { headerShown: false },
     getComponent() {
-      return closure_0(12685).ContactSyncOnboardingModal;
+      return closure_0(12689).ContactSyncOnboardingModal;
     },
     initialParams: { onComplete },
   });
@@ -149,14 +149,14 @@ export default function NewUserModal(arg0) {
     name: "discoverability",
     options: { headerShown: false },
     getComponent() {
-      return closure_0(17452).default;
+      return closure_0(17455).default;
     },
     initialParams: { onComplete },
   });
   items1[4] = closure_6(Navigator.Screen, {
     name: "connect-guardian",
     getComponent() {
-      return closure_0(17454).default;
+      return closure_0(17457).default;
     },
     initialParams: { onComplete },
   });

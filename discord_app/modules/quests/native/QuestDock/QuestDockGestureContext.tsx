@@ -5,7 +5,7 @@ import QuestDockStore from "QuestDockStore.tsx";
 
 const require = fn;
 const QuestDockMode = fn(5444).QuestDockMode;
-const QuestDockConstants = fn(15095);
+const QuestDockConstants = fn(15098);
 ({ QUEST_DOCK_COLLAPSED_HEIGHT: metroRequire, QUEST_DOCK_EXPANDED_HEIGHT: closure_7 } = QuestDockConstants);
 const jsx = fn(21).jsx;
 let obj = {

@@ -64,7 +64,7 @@ export default function CustomStatusPreview(user) {
     obj.dismissKeyboard();
     obj = { user, previewText: pendingStatusText, previewEmoji: pendingStatusEmoji };
     ActionSheetActionCreatorsDefault.openLazy(
-      asyncRequireImpl(11149, dependencyMap.paths),
+      asyncRequireImpl(11154, dependencyMap.paths),
       "UserProfileCustomStatusActionSheet",
       obj,
       "stack",

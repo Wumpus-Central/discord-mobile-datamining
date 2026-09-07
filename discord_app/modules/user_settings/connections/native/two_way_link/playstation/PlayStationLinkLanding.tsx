@@ -1,10 +1,10 @@
 // discord_app/modules/user_settings/connections/native/two_way_link/playstation/PlayStationLinkLanding.tsx
 import HelpdeskUtilsDefault from "../../../../../../utils/HelpdeskUtils.tsx";
-import _modDef9257 from "../../../../../../../discord_assets/assets/connections/ps_link_landing.png.js";
+import _modDef9262 from "../../../../../../../discord_assets/assets/connections/ps_link_landing.png.js";
 import noop from "../../../../../../../_runtime/metro/00019__.js";
 
 const require = fn;
-let closure_4 = fn(9255).PlayStationLinkModalScenes;
+let closure_4 = fn(9260).PlayStationLinkModalScenes;
 const HelpdeskArticles = fn(1074).HelpdeskArticles;
 const jsx = fn(21).jsx;
 const createStyles = fn(4560);
@@ -33,14 +33,14 @@ export const PlayStationLinkLanding = function PlayStationLinkLanding(platformTy
     obj = { label: null, icon: null };
     const intl3 = navigation(1114).intl;
     obj.label = intl3.string(navigation(1114).t.ZH4QFa);
-    obj.icon = navigation(9223).GameControllerIcon;
+    obj.icon = navigation(9228).GameControllerIcon;
     items[1] = obj;
     return items;
   }, []);
   const callback = noop.useCallback(() => {
     navigation.push(constants.PRE_CONNECT);
   }, items);
-  const memo1 = noop.useMemo(() => ({ uri: _modDef9257 }), []);
+  const memo1 = noop.useMemo(() => ({ uri: _modDef9262 }), []);
   obj = {
     platformType: platformType.platformType,
     img: memo1,
@@ -58,7 +58,7 @@ export const PlayStationLinkLanding = function PlayStationLinkLanding(platformTy
   obj.body = intl.format(navigation(1114).t.kqZQNe, { helpdeskArticleUrl: articleURL });
   obj.onNext = callback;
   obj.valueProps = memo;
-  return jsx(navigation(9225).TwoWayLinkLanding, {
+  return jsx(navigation(9230).TwoWayLinkLanding, {
     platformType: platformType.platformType,
     img: memo1,
     imgStyle: tmp.image,

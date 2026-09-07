@@ -5,14 +5,14 @@ import HelpdeskUtilsDefault from "../../../../utils/HelpdeskUtils.tsx";
 import NavigatorHeader from "../../../../design/components/Navigator/native/NavigatorHeader.native.tsx";
 import NativeCeremoniesDefault from "../NativeCeremonies.tsx";
 import PasskeyUpsellManagerDefault from "../PasskeyUpsellManager.tsx";
-import _modDef14666 from "../../../../../_runtime/metro/14666__.js";
+import _modDef14669 from "../../../../../_runtime/metro/14669__.js";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, Image: metroRequire, ScrollView: closure_7 } = get_ActivityIndicator);
-const WebAuthnScreens = fn(14657).WebAuthnScreens;
+const WebAuthnScreens = fn(14660).WebAuthnScreens;
 const HelpdeskArticles = fn(1074).HelpdeskArticles;
 const ContentDismissActionType = fn(1954).ContentDismissActionType;
 const jsxProd = fn(21);
@@ -97,7 +97,7 @@ export default function PasskeyUpsellView() {
   obj = { contentContainerStyle: tmp4.scrollViewContainer, children: null };
   obj1 = { style: tmp4.headerContainer, children: null };
   const tmp6 = onRegisterSuccess(onCancel.useState(false), 2);
-  const items1 = [closure_11(closure_6, { source: _modDef14666, style: tmp4.headerImage }), ,];
+  const items1 = [closure_11(closure_6, { source: _modDef14669, style: tmp4.headerImage }), ,];
   const obj3 = {
     accessibilityRole: "header",
     variant: "heading-xl/bold",
@@ -110,7 +110,7 @@ export default function PasskeyUpsellView() {
   items1[1] = closure_11(navigation(4556).Text, obj3);
   const obj4 = { variant: "heading-md/normal", color: "text-default", style: tmp4.headerText, children: null };
   let obj8 = navigation(1115);
-  const obj2 = { source: _modDef14666, style: tmp4.headerImage };
+  const obj2 = { source: _modDef14669, style: tmp4.headerImage };
   const intl2 = navigation(1114).intl;
   const string = intl2.string;
   const t = navigation(1114).t;

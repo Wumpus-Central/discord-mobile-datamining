@@ -305,8 +305,8 @@ export const useJoinRequestButtonActions = function useJoinRequestButtonActions(
     if (tmp2) {
       const _HermesInternal = HermesInternal;
       const obj = { joinRequest, onError, onDismiss };
-      obj.openLazy(asyncRequireImpl(12634, dependencyMap.paths), "RejectionReason-" + joinRequestId, obj);
-      const tmp9 = asyncRequireImpl(12634, dependencyMap.paths);
+      obj.openLazy(asyncRequireImpl(12638, dependencyMap.paths), "RejectionReason-" + joinRequestId, obj);
+      const tmp9 = asyncRequireImpl(12638, dependencyMap.paths);
     }
   }, items2);
   obj.submitting = submitting;

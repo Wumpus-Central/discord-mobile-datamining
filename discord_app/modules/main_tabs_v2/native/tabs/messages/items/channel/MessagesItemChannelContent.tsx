@@ -10,10 +10,10 @@ import _modDef7930 from "../../../../../../../../_runtime/metro/07930__.js";
 import isChangelogChannelDefault from "../../../../../../changelog/utils/isChangelogChannel.tsx";
 import GuildTagDefault from "../../../../../../guild_tag/native/GuildTag.tsx";
 import BotTagDefault from "../../../../../../applications/native/BotTag.tsx";
-import _modDef10145 from "../../../../../../../../_runtime/metro/10145__.js";
+import _modDef10150 from "../../../../../../../../_runtime/metro/10150__.js";
 import ActivityStatusDefault from "../../../../../../activity_status/native/ActivityStatus.tsx";
 import UsernameWithEffectsDefault from "../../../../../../display_name_styles/native/UsernameWithEffects.tsx";
-import _modDef10954 from "../../../../../../../../_runtime/metro/10954__.js";
+import _modDef10959 from "../../../../../../../../_runtime/metro/10959__.js";
 import useMessagePreviewsDefault from "../../../../../useMessagePreviews.tsx";
 import usePrivateChannelWaveDefault from "../../../../../../channel/usePrivateChannelWave.native.tsx";
 import MessagesItemChannelWaveDefault from "MessagesItemChannelWave.tsx";
@@ -37,7 +37,7 @@ function MessagesItemChannelContentIcon(selected) {
     obj.style = items1;
     tmp2 = timestampProducer(native.Icon, obj);
   } else if (muted) {
-    const obj1 = { source: _modDef10145, size: native.Icon.Sizes.EXTRA_SMALL, style: null };
+    const obj1 = { source: _modDef10150, size: native.Icon.Sizes.EXTRA_SMALL, style: null };
     const items2 = [,];
     ({ channelIcon: arr2[0], channelMutedIcon: arr2[1] } = tmp);
     obj1.style = items2;
@@ -45,7 +45,7 @@ function MessagesItemChannelContentIcon(selected) {
   } else {
     tmp2 = null;
     if (favorite) {
-      obj = { source: _modDef10954, size: native.Icon.Sizes.EXTRA_SMALL, style: null };
+      obj = { source: _modDef10959, size: native.Icon.Sizes.EXTRA_SMALL, style: null };
       const items3 = [,];
       ({ channelIcon: arr[0], channelFavoriteIcon: arr[1] } = tmp);
       obj.style = items3;
@@ -166,7 +166,7 @@ export default noop.memo(function MessagesItemChannelContent(channel) {
   if (tmp12) {
     tmp12 = !isChangelogChannelDefault(channel.id);
   }
-  tmpResult = tmp(16036);
+  tmpResult = tmp(16039);
   let tmp3Result = SnowflakeUtilsDefault;
   let id = stateFromStores;
   if (stateFromStores == null) {
@@ -195,7 +195,7 @@ export default noop.memo(function MessagesItemChannelContent(channel) {
       if (channel.recipients.length > 0) {
         const obj4 = { userId: channel.recipients[0], userName: tmp16, effectDisplayType: null };
         tmp3Result = UsernameWithEffectsDefault;
-        const EffectDisplayType = tmp(10900).EffectDisplayType;
+        const EffectDisplayType = tmp(10905).EffectDisplayType;
         obj4.effectDisplayType = channelSelected ? EffectDisplayType.STATIC : EffectDisplayType.PLAIN;
         obj = Object.assign(obj);
         closure_6(tmp3Result, obj4);
@@ -280,7 +280,7 @@ export default noop.memo(function MessagesItemChannelContent(channel) {
       obj15.color = str7;
       obj15.layout = tmp(7879).ChannelListLayoutTypes.COZY_DRAWER_SMOL;
       obj15.muted = muted;
-      let tmp20Result2 = closure_6(tmp(10109).ChannelRowPreview, obj15);
+      let tmp20Result2 = closure_6(tmp(10114).ChannelRowPreview, obj15);
     } else if (channel.isDM()) {
       const obj16 = { textStyle: tmp9.channelText, userId: channel.getRecipientId(), guildId: null };
       let guild_id;

@@ -116,7 +116,7 @@ export default noop.memo(function GuildDisableCommunication(arg0) {
             obj = { value, done: true };
             return obj;
           } else {
-            let obj3 = tmp4(11842);
+            let obj3 = tmp4(11847);
             dependencyMap = 1;
             c3 = 1;
             const obj1 = {
@@ -148,7 +148,7 @@ export default noop.memo(function GuildDisableCommunication(arg0) {
           obj = { key: "GUILD_COMMUNICATION_DISABLED_SUCCESS", content: null, icon: null };
           obj3 = { user };
           obj.content = intl.formatToPlainString(user(1114).t.O9C3Nt, obj3);
-          obj.icon = tmp4(9566);
+          obj.icon = tmp4(9571);
           obj8.open(obj);
           closure_129_2();
           c3 = 3;

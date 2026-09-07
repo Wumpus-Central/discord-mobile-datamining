@@ -4,7 +4,7 @@ import DispatcherDefault from "../../../Dispatcher.tsx";
 import _modDef1332 from "../../../../_runtime/metro/01332__.js";
 import SelectedChannelStore from "../../../stores/SelectedChannelStore.tsx";
 
-const VoiceCallOverlayType = fn(9468).VoiceCallOverlayType;
+const VoiceCallOverlayType = fn(9473).VoiceCallOverlayType;
 let c4 = false;
 let c5 = false;
 let c6 = false;

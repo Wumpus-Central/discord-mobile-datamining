@@ -12,10 +12,10 @@ const result = size.fileFinishedImporting("design/components/Illustration/native
 export const getWumpTrashSource = function getWumpTrashSource(theme) {
   const obj = {
     dark() {
-      return require("../../../../../../../_runtime/metro/15979__.js");
+      return require("../../../../../../../_runtime/metro/15982__.js");
     },
     darker() {
-      return require("../../../../../../../_runtime/metro/15980__.js");
+      return require("../../../../../../../_runtime/metro/15983__.js");
     },
   };
   return obj.getIllustrationSource(theme, obj);
@@ -23,10 +23,10 @@ export const getWumpTrashSource = function getWumpTrashSource(theme) {
 export const useWumpTrashSource = function useWumpTrashSource() {
   const obj = {
     dark() {
-      return require("../../../../../../../_runtime/metro/15979__.js");
+      return require("../../../../../../../_runtime/metro/15982__.js");
     },
     darker() {
-      return require("../../../../../../../_runtime/metro/15980__.js");
+      return require("../../../../../../../_runtime/metro/15983__.js");
     },
   };
   return _mod8233.getIllustrationSource(obj.useThemeContext().theme, obj);
@@ -34,10 +34,10 @@ export const useWumpTrashSource = function useWumpTrashSource() {
 export const WumpTrash = function WumpTrash(arg0) {
   let obj = {
     dark() {
-      return require("../../../../../../../_runtime/metro/15979__.js");
+      return require("../../../../../../../_runtime/metro/15982__.js");
     },
     darker() {
-      return require("../../../../../../../_runtime/metro/15980__.js");
+      return require("../../../../../../../_runtime/metro/15983__.js");
     },
   };
   obj = {};

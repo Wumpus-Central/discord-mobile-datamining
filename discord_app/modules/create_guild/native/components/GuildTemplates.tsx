@@ -99,7 +99,7 @@ function GuildTemplatesItem(guildTemplate) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, ScrollView: metroRequire } = get_ActivityIndicator);
-let CreateGuildConstants = fn(12707);
+let CreateGuildConstants = fn(12711);
 ({ getGuildTemplatesMap: closure_7, GuildTemplateId: closure_8 } = CreateGuildConstants);
 CreateGuildConstants = fn(6980);
 ({

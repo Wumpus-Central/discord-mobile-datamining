@@ -187,11 +187,11 @@ const prototype = function SearchQueryStateManager(type) {
       const intl = obj(1114).intl;
       const stringResult = intl.string(obj(1114).t.WNpFHa);
       let _HermesInternal = HermesInternal;
-      obj.text = "" + stringResult + ": " + obj(12340).quoteChannelName(channelName);
+      obj.text = "" + stringResult + ": " + obj(12344).quoteChannelName(channelName);
       obj.channelId = type.channelId;
       obj.location = SearchFilterAddLocations.CLIENT_AUTO_ADD;
       items1 = [obj];
-      const obj4 = obj(12340);
+      const obj4 = obj(12344);
     }
     items = items1;
   }

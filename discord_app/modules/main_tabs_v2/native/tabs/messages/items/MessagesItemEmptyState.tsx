@@ -4,7 +4,7 @@ import util from "../../../../../../intl/index.native.tsx";
 import RootNavigationRef from "../../../../RootNavigationRef.native.tsx";
 import Text_Text from "../../../../../../design/components/Text/native/Text.tsx";
 import components_Button_Button from "../../../../../../design/components/Button/native/Button.native.tsx";
-import _modDef16054 from "../../../../../../../_runtime/metro/16054__.js";
+import _modDef16057 from "../../../../../../../_runtime/metro/16057__.js";
 import noop from "../../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -42,7 +42,7 @@ export default noop.memo(function MessagesItemEmptyState() {
       }
     }
   }, []);
-  obj.source = _modDef16054;
+  obj.source = _modDef16057;
   obj.style = tmp.image;
   obj.children = timestampProducer(React4, obj);
   const items = [timestampProducer(hasOwnProperty, obj), , ,];

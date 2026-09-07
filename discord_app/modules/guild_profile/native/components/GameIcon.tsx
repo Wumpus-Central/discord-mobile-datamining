@@ -4,7 +4,7 @@ import AvatarUtilsDefault from "../../../../utils/AvatarUtils.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 const Pressables = FireIcon(5123);
-const FireIcon2 = FireIcon(9198);
+const FireIcon2 = FireIcon(9203);
 const require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, Image: hasOwnProperty } = get_ActivityIndicator);

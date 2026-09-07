@@ -145,7 +145,7 @@ let result = size.fileFinishedImporting("modules/quests/native/QuestOrbMultiplie
 export default function QuestOrbMultiplierPerkInfoActionSheet(multiplier) {
   multiplier = multiplier.multiplier;
   const orbMultiplierEligibility = multiplier.orbMultiplierEligibility;
-  let obj = multiplier(11293);
+  let obj = multiplier(11298);
   const result = obj.shouldReceiveQuestOrbMultiplier(orbMultiplierEligibility);
   dependencyMap = result;
   const items = [orbMultiplierEligibility];
@@ -182,14 +182,14 @@ export default function QuestOrbMultiplierPerkInfoActionSheet(multiplier) {
   obj = { scrollable: false, handleDisabled: true, startExpanded: true, contentStyles, children: null };
   obj = {
     visible:
-      orbMultiplierEligibility === multiplier(11293).QuestOrbMultiplierEligibilityType.NITRO ||
-      orbMultiplierEligibility === multiplier(11293).QuestOrbMultiplierEligibilityType.UPSELL,
+      orbMultiplierEligibility === multiplier(11298).QuestOrbMultiplierEligibilityType.NITRO ||
+      orbMultiplierEligibility === multiplier(11298).QuestOrbMultiplierEligibilityType.UPSELL,
     children: null,
   };
   const tmp4 =
-    orbMultiplierEligibility === multiplier(11293).QuestOrbMultiplierEligibilityType.NITRO ||
-    orbMultiplierEligibility === multiplier(11293).QuestOrbMultiplierEligibilityType.UPSELL;
+    orbMultiplierEligibility === multiplier(11298).QuestOrbMultiplierEligibilityType.NITRO ||
+    orbMultiplierEligibility === multiplier(11298).QuestOrbMultiplierEligibilityType.UPSELL;
   obj.children = closure_8(SheetContent, { title: memo, body: memo1, eligibleToReceivePremiumRewards: result });
-  obj.children = closure_8(orbMultiplierEligibility(15164), obj);
+  obj.children = closure_8(orbMultiplierEligibility(15167), obj);
   return closure_8(multiplier(7150).BottomSheet, obj);
 }

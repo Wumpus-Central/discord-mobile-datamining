@@ -14,7 +14,7 @@ function onImageDescriptionSettingValueChange(viewImageDescriptions) {
   };
   obj.setImageDescriptions(obj);
 }
-fn(11468);
+fn(11473);
 let SettingBuilders = {
   useTitle() {
     const intl = util.intl;

@@ -65,7 +65,7 @@ function renderCategoryItem(muted) {
     Icon = trailingAction.Icon;
   }
   if (Icon == null) {
-    Icon = trailingAction(12753).PlusMediumIcon;
+    Icon = trailingAction(12757).PlusMediumIcon;
   }
   if (null == trailingAction) {
     const items1 = [tmp34Result, , ,];
@@ -163,7 +163,7 @@ function renderCategoryItem(muted) {
   }
 }
 const View = fn(17).View;
-const RedesignChannelListConstants = fn(10118);
+const RedesignChannelListConstants = fn(10123);
 ({
   CATEGORY_MARGIN_BOTTOM: closure_8,
   CATEGORY_MARGIN_TOP: closure_9,
@@ -295,7 +295,7 @@ export const CategoryChannel = function CategoryChannel(channel) {
   const colors = nativeDefault.colors;
   obj1 = {};
   const merged1 = Object.assign(merged);
-  obj1.icon = closure_11(channel(11153).ChevronSmallDownIcon, {
+  obj1.icon = closure_11(channel(11158).ChevronSmallDownIcon, {
     size: "xxs",
     color: merged.muted ? colors.ICON_MUTED : colors.TEXT_SUBTLE,
     style: collapsed2 ? createStyles : obj1,
@@ -325,7 +325,7 @@ export const RecentlyActiveCategory = function RecentlyActiveCategory(guildId) {
   const colors = stateFromStores(576).colors;
   obj = {};
   const merged1 = Object.assign(merged);
-  obj.icon = closure_11(guildId(11153).ChevronSmallDownIcon, {
+  obj.icon = closure_11(guildId(11158).ChevronSmallDownIcon, {
     size: "xxs",
     color: merged.muted ? colors.ICON_MUTED : colors.TEXT_SUBTLE,
     style: collapsed ? createStyles : obj1,

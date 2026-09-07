@@ -45,9 +45,9 @@ export default noop.memo(function GuildsBarMessages() {
     cutouts,
     config,
     overState: "y",
-    label: "CATEGORY_COLLAPSE_ALL",
-    externalChildren: null,
-    expandedChildren: false,
+    label: "eyebrow",
+    externalChildren: "interactive-text-default",
+    expandedChildren: null,
     children: false,
   };
   const tmp6 = useGuildsBarBottomRightBadgeDefault({ mentionCount: 0 });
@@ -65,9 +65,9 @@ export default noop.memo(function GuildsBarMessages() {
     cutouts,
     config,
     overState: "y",
-    label: "CATEGORY_COLLAPSE_ALL",
-    externalChildren: null,
-    expandedChildren: false,
+    label: "eyebrow",
+    externalChildren: "interactive-text-default",
+    expandedChildren: null,
     children: false,
   });
 });

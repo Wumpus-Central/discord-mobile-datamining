@@ -399,7 +399,7 @@ export default {
       tmpResult.track(constants.CHANGE_LOG_DM_REMOVED, obj);
     }
     tmpResult = DispatcherDefault;
-    obj = { type: "CHANNEL_DELETE", channel: { id, guild_id: "Array", parent_id: "isArray" }, silent: flag2 };
+    obj = { type: "CHANNEL_DELETE", channel: { id, guild_id: "Array", parent_id: "options" }, silent: flag2 };
     tmpResult.dispatch(obj);
     if (flag) {
       router_utils.transitionTo(constants2.FRIENDS);

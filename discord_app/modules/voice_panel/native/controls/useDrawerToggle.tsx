@@ -3,7 +3,7 @@ import trackVoicePanelTabOpened from "trackVoicePanelTabOpened.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const VoicePanelControlsModes = fn(12271).VoicePanelControlsModes;
+const VoicePanelControlsModes = fn(12275).VoicePanelControlsModes;
 const __initData = {
   code: "function useDrawerToggleTsx1(){const{controlsSpecs,VoicePanelControlsModes}=this.__closure;return controlsSpecs.get().mode===VoicePanelControlsModes.DRAWER;}",
 };

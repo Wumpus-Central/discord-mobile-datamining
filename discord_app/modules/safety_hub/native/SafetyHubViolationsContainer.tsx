@@ -175,7 +175,7 @@ function ClassificationDetail(classification) {
   obj = {
     onPress() {
       const obj = { classificationId: id, source: React6.StandingTab };
-      obj.pushLazy(asyncRequireImpl(11878, dependencyMap.paths), obj);
+      obj.pushLazy(asyncRequireImpl(11883, dependencyMap.paths), obj);
     },
     children: null,
   };

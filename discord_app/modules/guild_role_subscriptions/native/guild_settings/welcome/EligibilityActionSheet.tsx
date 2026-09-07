@@ -29,8 +29,8 @@ export default function EligibilityActionSheet(onRequireModeratorMFAClick) {
         onEnableMFAClick() {
           let obj = closure_1_1(4527);
           obj.hideActionSheet(closure_1_7);
-          closure_1_1(9063).close();
-          const obj2 = closure_1_1(9063);
+          closure_1_1(9068).close();
+          const obj2 = closure_1_1(9068);
           obj = { screen: constants.ACCOUNT };
           onRequireModeratorMFAClick(7382).openUserSettings(obj);
         },

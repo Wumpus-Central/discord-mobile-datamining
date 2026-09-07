@@ -231,7 +231,7 @@ function NewMessagesChatBar(channel) {
 }
 get_ActivityIndicator = fn(17);
 ({ StyleSheet, View: closure_4 } = get_ActivityIndicator);
-const ChatOverlays = fn(11421).ChatOverlays;
+const ChatOverlays = fn(11426).ChatOverlays;
 const Constants = fn(1074);
 ({
   AnalyticsObjectTypes: closure_8,

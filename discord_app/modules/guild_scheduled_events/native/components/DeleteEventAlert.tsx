@@ -40,7 +40,7 @@ export default function DeleteEventAlert(eventException) {
             return obj;
           } else {
             closure_0 = tmp4;
-            const obj8 = v1(9703);
+            const obj8 = v1(9708);
             if (GuildScheduledEventStore) {
               v1 = 2;
               dependencyMap = 1;

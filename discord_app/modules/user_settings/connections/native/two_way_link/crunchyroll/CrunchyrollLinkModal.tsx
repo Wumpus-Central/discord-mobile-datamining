@@ -26,7 +26,7 @@ function CloseButton() {
     accessibilityLabel: null,
   });
 }
-const constants = fn(9272).CrunchyrollLinkModalScenes;
+const constants = fn(9277).CrunchyrollLinkModalScenes;
 const PlatformTypes = fn(1074).PlatformTypes;
 const jsx = fn(21).jsx;
 const size = fn(2);
@@ -36,12 +36,12 @@ const result = size.fileFinishedImporting(
 
 export default function CrunchyrollLinkModal(locationStack) {
   let twoWayLinkStyles;
-  let obj = twoWayLinkStyles(9226);
+  let obj = twoWayLinkStyles(9231);
   twoWayLinkStyles = obj.useTwoWayLinkStyles();
   const items = [twoWayLinkStyles];
   const memo = noop.useMemo(() => {
     function onClose() {
-      return closure_1_1(9270).hideModal();
+      return closure_1_1(9275).hideModal();
     }
     function blank() {
       return null;
@@ -52,7 +52,7 @@ export default function CrunchyrollLinkModal(locationStack) {
       headerTitle: blank,
       headerStyle: twoWayLinkStyles.navHeader,
       render() {
-        return closure_1_6(closure_1_1(9273), {});
+        return closure_1_6(closure_1_1(9278), {});
       },
     };
     obj = {
@@ -60,10 +60,10 @@ export default function CrunchyrollLinkModal(locationStack) {
       headerRight: CloseButton,
       headerStyle: twoWayLinkStyles.navHeader,
       headerTitle() {
-        return closure_1_6(onClose(9227).TwoWayLinkStepHeader, { idx: 1, total: 2 });
+        return closure_1_6(onClose(9232).TwoWayLinkStepHeader, { idx: 1, total: 2 });
       },
       render() {
-        return closure_1_6(closure_1_1(9275), {});
+        return closure_1_6(closure_1_1(9280), {});
       },
     };
     obj = {
@@ -71,11 +71,11 @@ export default function CrunchyrollLinkModal(locationStack) {
       headerRight: CloseButton,
       headerStyle: twoWayLinkStyles.navHeader,
       headerTitle() {
-        return closure_1_6(onClose(9227).TwoWayLinkStepHeader, { idx: 2, total: 2 });
+        return closure_1_6(onClose(9232).TwoWayLinkStepHeader, { idx: 2, total: 2 });
       },
       render(arg0) {
         ({ callbackCode, callbackState } = arg0);
-        return closure_1_6(closure_1_1(9277), { callbackCode, callbackState });
+        return closure_1_6(closure_1_1(9282), { callbackCode, callbackState });
       },
     };
     return {
@@ -102,7 +102,7 @@ export default function CrunchyrollLinkModal(locationStack) {
       },
     };
   }, items);
-  const accountLinkStepTracking = twoWayLinkStyles(9269).useAccountLinkStepTracking(
+  const accountLinkStepTracking = twoWayLinkStyles(9274).useAccountLinkStepTracking(
     PlatformTypes.CRUNCHYROLL,
     locationStack.locationStack,
   );

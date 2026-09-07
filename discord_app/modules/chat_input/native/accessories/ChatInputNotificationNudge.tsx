@@ -81,11 +81,11 @@ function ChatInputNotificationNudgeImpl(children) {
 const noop = fn(19);
 ({ useCallback: closure_4, useEffect: hasOwnProperty } = noop);
 const View = fn(17).View;
-const PermissionPromptType = fn(12409).PermissionPromptType;
+const PermissionPromptType = fn(12413).PermissionPromptType;
 const Constants = fn(1074);
 ({ AnalyticEvents: c10, NOOP: closure_11 } = Constants);
 const ContentDismissActionType = fn(1954).ContentDismissActionType;
-const NotificationPermissionConstants = fn(12410);
+const NotificationPermissionConstants = fn(12414);
 ({
   EventActionLocation: map1,
   EventActionType: closure_14,
@@ -148,11 +148,11 @@ export default function ChatInputNotificationNudge(channel) {
   if (!stateFromStores) {
     tmp5 = !useIsAppDMDefault(channel);
   }
-  let tmpResult = tmp(12411);
+  let tmpResult = tmp(12415);
   const shouldShowPushNotificationNudgeByPromptType = tmpResult.useShouldShowPushNotificationNudgeByPromptType(
     PermissionPromptType.CHANNEL_BANNER,
   );
-  tmpResult = tmp(12411);
+  tmpResult = tmp(12415);
   const shouldShowPushNotificationNudgeByPromptType1 = tmpResult.useShouldShowPushNotificationNudgeByPromptType(
     PermissionPromptType.POST_REACTION_BANNER,
   );

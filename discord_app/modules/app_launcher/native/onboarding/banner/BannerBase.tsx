@@ -29,7 +29,7 @@ const rect = {
   paddingHorizontal: nativeDefault.space.PX_16,
   paddingVertical: PX_12,
   flexDirection: "row",
-  minHeight: fn(12050).APP_ICON_SIZE + 2 * PX_12 + 4,
+  minHeight: fn(12054).APP_ICON_SIZE + 2 * PX_12 + 4,
   bottom: nativeDefault.space.PX_16,
   left: nativeDefault.space.PX_16,
 };
@@ -130,7 +130,7 @@ export default function BannerBase(arg0) {
   obj2 = { style: tmp.imageContainer, children: null };
   obj3 = { style: tmp.trinketsLottie, source: null, autoPlay: null };
   const tmp2 = _slicedToArray(noop.useState(0), 2);
-  obj3.source = require("../../../../../../_runtime/metro/12062__.js");
+  obj3.source = require("../../../../../../_runtime/metro/12066__.js");
   obj3.autoPlay = !stateFromStores;
   const items5 = [closure_7(sharedValue(5529), obj3), image];
   obj2.children = items5;

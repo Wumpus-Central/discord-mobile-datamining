@@ -290,19 +290,19 @@ export default function ConnectedSearchTabsLayout(width) {
   const items2 = [candidateTabs];
   const memo = noop.useMemo(() => new Set(candidateTabs), items2);
   const obj = searchContext(504);
-  const autoSearchGuildChannelTab = searchContext(16720).useAutoSearchGuildChannelTab(
+  const autoSearchGuildChannelTab = searchContext(16723).useAutoSearchGuildChannelTab(
     searchContext,
     !memo.has(constants.GUILD_CHANNELS),
   );
-  const obj3 = searchContext(16720);
-  const autoSearchMembersTab = searchContext(16721).useAutoSearchMembersTab(
+  const obj3 = searchContext(16723);
+  const autoSearchMembersTab = searchContext(16724).useAutoSearchMembersTab(
     searchContext,
     !memo.has(constants.MEMBERS),
   );
-  const obj4 = searchContext(16721);
-  const autoSearchPeopleTab = searchContext(16722).useAutoSearchPeopleTab(searchContext, !memo.has(constants.PEOPLE));
-  const obj5 = searchContext(16722);
-  const autoTrackSearchTabCountsViewedAnalytics = searchContext(16723).useAutoTrackSearchTabCountsViewedAnalytics({
+  const obj4 = searchContext(16724);
+  const autoSearchPeopleTab = searchContext(16725).useAutoSearchPeopleTab(searchContext, !memo.has(constants.PEOPLE));
+  const obj5 = searchContext(16725);
+  const autoTrackSearchTabCountsViewedAnalytics = searchContext(16726).useAutoTrackSearchTabCountsViewedAnalytics({
     searchContext,
     visibleTabCounts,
     visibleTabs,

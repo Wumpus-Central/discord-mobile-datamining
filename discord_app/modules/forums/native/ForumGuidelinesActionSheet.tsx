@@ -232,5 +232,5 @@ export default function ForumGuidelinesActionSheet(channel) {
 export const openForumGuidelinesActionSheet = function openForumGuidelinesActionSheet(arg0) {
   const obj = {};
   const merged = Object.assign(arg0);
-  obj.openLazy(asyncRequireImpl(10267, dependencyMap.paths), closure_6, obj);
+  obj.openLazy(asyncRequireImpl(10272, dependencyMap.paths), closure_6, obj);
 };

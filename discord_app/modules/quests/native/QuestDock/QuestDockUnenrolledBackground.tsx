@@ -9,7 +9,7 @@ require = fn;
 get_ActivityIndicator = fn(17);
 ({ AppState: hasOwnProperty, StyleSheet } = get_ActivityIndicator);
 const QuestDockMode = fn(5444).QuestDockMode;
-const QuestDockConstants = fn(15095);
+const QuestDockConstants = fn(15098);
 ({
   QUEST_DOCK_EXPANDED_HEIGHT,
   QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED: closure_8,

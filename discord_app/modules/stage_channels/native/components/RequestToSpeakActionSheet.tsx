@@ -14,7 +14,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 import AuthenticationStore from "../../../../stores/AuthenticationStore.tsx";
 import ChannelStore from "../../../../stores/ChannelStore.tsx";
 
-const _modDef9921 = tmp4(9921);
+const _modDef9926 = tmp4(9926);
 require = fn;
 function RequestToSpeakRow(channel) {
   c0 = undefined;
@@ -60,9 +60,9 @@ function ManageSelfSpeakerRow(channel) {
     stringResult = string(t["8Joh+p"]);
   }
   if (tmp8) {
-    let MicrophoneArrowRightIcon = tmp(9917).GroupArrowDownIcon;
+    let MicrophoneArrowRightIcon = tmp(9922).GroupArrowDownIcon;
   } else {
-    MicrophoneArrowRightIcon = tmp(9919).MicrophoneArrowRightIcon;
+    MicrophoneArrowRightIcon = tmp(9924).MicrophoneArrowRightIcon;
   }
   obj = {
     onPress() {
@@ -81,7 +81,7 @@ function ManageSelfSpeakerRow(channel) {
     label: stringResult,
     trailing: null,
   };
-  obj = { source: _modDef9921 };
+  obj = { source: _modDef9926 };
   obj.trailing = closure_9(channel(1178).Icon, obj);
   return closure_9(channel(5605).TableRow, obj);
 }
@@ -179,13 +179,13 @@ export default function RequestToSpeakActionSheet(channelId) {
     const obj11 = { channel: stateFromStores, height: null };
     const _Math = Math;
     obj11.height = Math.max(first1 - first - 8, 0);
-    items4[1] = closure_9(tmp3(9922), obj11);
+    items4[1] = closure_9(tmp3(9927), obj11);
     obj2.children = items4;
     obj1.children = closure_10(tmp(4973).Stack, obj2);
     obj.children = closure_9(tmp(6627).BottomSheetScrollView, obj1);
     obj.children = closure_9(tmp(7150).BottomSheet, obj);
     tmp14 = closure_9(tmp(7162).AnalyticsLocationProvider, obj);
-    const tmp3Result = tmp3(9922);
+    const tmp3Result = tmp3(9927);
   }
   return tmp14;
 }

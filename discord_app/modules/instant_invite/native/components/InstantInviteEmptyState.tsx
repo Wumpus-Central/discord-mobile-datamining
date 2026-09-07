@@ -2,7 +2,7 @@
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import FreeFormTextInputDefault from "../../../../design/void/Form/native/FreeFormTextInput.tsx";
 import InstantInviteUtilsDefault from "../../../../utils/InstantInviteUtils.tsx";
-import _modDef9854 from "../../../../../_runtime/metro/09854__.js";
+import _modDef9859 from "../../../../../_runtime/metro/09859__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import CreateInviteModalStore from "../../../../stores/CreateInviteModalStore.tsx";
 
@@ -47,7 +47,7 @@ export default function _default(link) {
     containerStyle: tmp.emptyStateContainer,
     imageStyle: tmp.emptyStateArt,
     titleStyle: tmp.emptyStateTitle,
-    source: _modDef9854,
+    source: _modDef9859,
     title: null,
     body: null,
   };

@@ -4,8 +4,8 @@ import util from "../../../../intl/index.native.tsx";
 import native from "../../../../design/void/native.tsx";
 import useA11yRolesNative from "../../../../../discord_common/js/packages/design/hooks/useA11yRolesNative.tsx";
 import TouchableHitBoxDefault from "../../../../design/void/TouchableHitBox/native/TouchableHitBox.tsx";
-import _modDef17762 from "../../../../../_runtime/metro/17762__.js";
-import _modDef17763 from "../../../../../_runtime/metro/17763__.js";
+import _modDef17765 from "../../../../../_runtime/metro/17765__.js";
+import _modDef17766 from "../../../../../_runtime/metro/17766__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import TextStyles from "../../../rebrand/native/TextStyles.tsx";
 
@@ -46,7 +46,7 @@ function Row(arg0) {
   return timestampProducer(TouchableHitBoxDefault, obj);
 }
 const View = fn(17).View;
-const AllChannelAccessOptions = fn(15228).AllChannelAccessOptions;
+const AllChannelAccessOptions = fn(15231).AllChannelAccessOptions;
 const Fonts = fn(1074).Fonts;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
@@ -90,7 +90,7 @@ export default function AllChannelsSwitch(style) {
   let obj = { style: null, accessibilityRole: "radiogroup", accessibilityState: { disabled }, children: null };
   const items = [tmp.container, style.style];
   obj.style = items;
-  obj = { icon: _modDef17762, label: null, selected: null, onPress: null, disabled: null };
+  obj = { icon: _modDef17765, label: null, selected: null, onPress: null, disabled: null };
   const intl = util.intl;
   obj.label = intl.string(util.t["vs2T+B"]);
   obj.selected = channelAccessFormat === AllChannelAccessOptions.SOME_CHANNELS_ACCESS;
@@ -101,7 +101,7 @@ export default function AllChannelsSwitch(style) {
   const items1 = [closure_5(Row, obj), ,];
   obj = { style: tmp.separator };
   items1[1] = closure_5(View, obj);
-  const obj1 = { icon: _modDef17763, label: null, selected: null, onPress: null, disabled: null };
+  const obj1 = { icon: _modDef17766, label: null, selected: null, onPress: null, disabled: null };
   const intl2 = util.intl;
   obj1.label = intl2.string(util.t.l4Tr7X);
   obj1.selected = channelAccessFormat === AllChannelAccessOptions.ALL_CHANNELS_ACCESS;

@@ -46,7 +46,7 @@ export default function GIFPickerItemView(onPressGIF) {
   const items2 = [index, item.src];
   const callback1 = noop.useCallback(() => {
     const obj = { item };
-    obj.openLazy(asyncRequireImpl(10380, dependencyMap.paths), "GIFPickerItemActionSheet", obj, "stack");
+    obj.openLazy(asyncRequireImpl(10385, dependencyMap.paths), "GIFPickerItemActionSheet", obj, "stack");
     const result = KeyboardManagerUtils.dismissGlobalKeyboard();
   }, items1);
   const memo = noop.useMemo(() => {

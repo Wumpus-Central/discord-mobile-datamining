@@ -8,7 +8,7 @@ import noop from "../../../_runtime/metro/00019__.js";
 import ICYMIStore from "ICYMIStore.tsx";
 
 require = fn;
-const SCROLL_EVENT_THROTTLE_MS = fn(16451).SCROLL_EVENT_THROTTLE_MS;
+const SCROLL_EVENT_THROTTLE_MS = fn(16454).SCROLL_EVENT_THROTTLE_MS;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/icymi/useSharedICYMILogic.tsx");
 

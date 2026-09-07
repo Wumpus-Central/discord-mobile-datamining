@@ -48,7 +48,7 @@ function LimitAndDurationInfo(channel) {
     }
     obj.video = hasVideo;
     obj.channel = channel;
-    let tmp6Result = jsx(channel(16119).ConnectedUserLimit, {
+    let tmp6Result = jsx(channel(16122).ConnectedUserLimit, {
       userCount: voiceStatesCount,
       video: null,
       channel: null,
@@ -144,7 +144,7 @@ export default function ChannelInfo(channel) {
     }
     if (null != enableActivities) {
       if (enableActivities) {
-        tmpResult = tmp(16231);
+        tmpResult = tmp(16234);
         if (tmpResult.showChannelItemEmbeddedActivities(tmp5)) {
           obj = { embeddedApps: tmp5, muted };
           tmp11Result = jsx(ChannelItemEmbeddedActivitiesDefault, { embeddedApps: tmp5, muted });

@@ -11,7 +11,7 @@ import GuildChannelStore from "../../../../../stores/GuildChannelStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-const HubProgressBarConstants = fn(9831);
+const HubProgressBarConstants = fn(9836);
 ({ HUB_PROGRESS_ACTION_SHEET_ID: metroRequire, HUB_PROGRESS_NUM_TOTAL_STEPS: closure_7 } = HubProgressBarConstants);
 const Constants = fn(1074);
 ({
@@ -20,8 +20,8 @@ const Constants = fn(1074);
   InstantInviteSources: c10,
   Routes: closure_11,
 } = Constants);
-let closure_12 = fn(12310).DirectoryChannelScrollBehavior;
-const GuildProgressConstants = fn(12469);
+let closure_12 = fn(12314).DirectoryChannelScrollBehavior;
+const GuildProgressConstants = fn(12473);
 ({ AnalyticsActions: map1, AnalyticsSetupTypes: closure_14 } = GuildProgressConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_15, jsxs: closure_16 } = jsxProd);

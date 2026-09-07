@@ -10,7 +10,7 @@ import DefaultDMSettingsExperiment from "../../content_and_social/DefaultDMSetti
 import FamilyCenterStore from "../../../parent_tools/FamilyCenterStore.tsx";
 
 require = fn;
-fn(11468);
+fn(11473);
 let SettingBuilders = {
   useTitle() {
     const intl = util.intl;

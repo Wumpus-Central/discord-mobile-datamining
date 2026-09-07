@@ -139,7 +139,7 @@ export default function UserPrimaryGuildListBottomSheet(availableGuilds) {
   obj.children = intl.string(availableGuilds(1114).t.Fo0g9x);
   obj.children = closure_6(availableGuilds(4556).Text, obj);
   obj.header = closure_6(memo, obj);
-  obj.children = closure_6(availableGuilds(8874).BottomSheetFlashList, {
+  obj.children = closure_6(availableGuilds(8879).BottomSheetFlashList, {
     ItemSeparatorComponent() {
       return timestampProducer(Form.FormDivider, { iconPush: true, style: divider.divider });
     },

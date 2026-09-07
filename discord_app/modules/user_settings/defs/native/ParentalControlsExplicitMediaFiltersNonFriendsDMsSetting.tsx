@@ -23,7 +23,7 @@ function useObscuredContentNonFriendsDmSettingValue() {
 function onObscuredContentNonFriendsDmOnPress() {
   const selectedTeenId = FamilyCenterStore.getSelectedTeenId();
   if (null != selectedTeenId) {
-    selectedTeenId(14828);
+    selectedTeenId(14831);
     const intl = selectedTeenId(1114).intl;
     const stringResult = intl.string(selectedTeenId(1114).t.GYpoAq);
     let obj = { title: stringResult, subtitle: null, excluded: null, handlePress: null, currentValue: null };
@@ -36,11 +36,11 @@ function onObscuredContentNonFriendsDmOnPress() {
       const result = obj.updateExplicitContentSetting(selectedTeenId, obj);
     };
     obj.currentValue = obj.getExplicitContentSettingOrDefault(selectedTeenId).explicitContentNonFriendDm;
-    let result = selectedTeenId(14821).handleSensitiveMediaFilterPress(obj);
-    const obj2 = selectedTeenId(14821);
+    let result = selectedTeenId(14824).handleSensitiveMediaFilterPress(obj);
+    const obj2 = selectedTeenId(14824);
   }
 }
-fn(11468);
+fn(11473);
 let SettingBuilders = {
   useTitle: function getTitle() {
     const intl = util.intl;

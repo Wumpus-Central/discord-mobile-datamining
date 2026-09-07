@@ -8,8 +8,8 @@ import TableRow from "../../../../design/components/TableRow/native/TableRow.nat
 import FormCheckbox from "../../../../design/components/Forms/native/FormCheckbox.native.tsx";
 import ChannelPermissionsUtilsAll from "../../ChannelPermissionsUtils.tsx";
 import ShieldUserIcon from "../../../../design/components/Icon/native/redesign/generated/ShieldUserIcon.tsx";
-import _modDef9753 from "../../../../../_runtime/metro/09753__.js";
-import _modDef9754 from "../../../../../_runtime/metro/09754__.js";
+import _modDef9758 from "../../../../../_runtime/metro/09758__.js";
+import _modDef9759 from "../../../../../_runtime/metro/09759__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import UserStore from "../../../../stores/UserStore.tsx";
 
@@ -142,7 +142,7 @@ function MemberItem(arg0) {
   const items1 = [React5(Text_Text.Text, obj)];
   let tmp4Result = null;
   if (item.rowType === RowType.OWNER) {
-    obj = { size: native.Icon.Sizes.REFRESH_SMALL_16, source: _modDef9753, disableColor: true, style: tmp.ownerIcon };
+    obj = { size: native.Icon.Sizes.REFRESH_SMALL_16, source: _modDef9758, disableColor: true, style: tmp.ownerIcon };
     tmp4Result = React5(native.Icon, obj);
   }
   items1[1] = tmp4Result;
@@ -186,7 +186,7 @@ function MemberItem(arg0) {
 function EmptyRoleItem(item) {
   item = item.item;
   let obj = { icon: null, label: null };
-  obj = { source: _modDef9754, color: item.colorString, size: native.IconSizes.MEDIUM, style: closure_9().roleIcon };
+  obj = { source: _modDef9759, color: item.colorString, size: native.IconSizes.MEDIUM, style: closure_9().roleIcon };
   obj.icon = React5(native.Icon, obj);
   obj.label = item.name;
   return React5(TableRow.TableRow, obj);

@@ -5,7 +5,7 @@ import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 const require = fn;
-const StickerPickerConstants = fn(10273);
+const StickerPickerConstants = fn(10278);
 ({ MIN_MARGIN: hasOwnProperty, STICKER_SIZE: metroRequire } = StickerPickerConstants);
 const AnalyticEvents = fn(1074).AnalyticEvents;
 const ACTION_SHEET_MAX_WIDTH = fn(7151).ACTION_SHEET_MAX_WIDTH;
@@ -23,7 +23,7 @@ let closure_12 = createStyles.createStyles({
     justifyContent: "center",
     backgroundColor: "rgba(0, 0, 0, 0.85)",
   },
-  header: { marginHorizontal: 16, marginVertical: 8, backgroundColor: "transparent", height: "call" },
+  header: { marginHorizontal: 16, marginVertical: 8, backgroundColor: "transparent", height: "channel" },
   stickers: { paddingHorizontal: 16, marginBottom: 16 },
   popoutContainer: { position: "absolute", bottom: 50 },
 });

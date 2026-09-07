@@ -433,7 +433,7 @@ export default function AddMembersActionSheet(channel) {
         }
       }
     });
-    await closure_0(9739).savePermissionUpdates(channel.id, items);
+    await closure_0(9744).savePermissionUpdates(channel.id, items);
     if (1 === tmp7) {
       dependencyMap = 0;
       c5 = 3;

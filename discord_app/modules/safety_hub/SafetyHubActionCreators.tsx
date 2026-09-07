@@ -72,6 +72,7 @@ let closure_11 = async function _getSafetyHubData() {
                 appeal_eligibility,
                 expressive_modal_v2_enabled,
                 show_expressive_modal_subtitle_alt,
+                manual_review_fallback_enabled,
                 account_standing,
                 is_dsa_eligible,
                 username,
@@ -115,6 +116,7 @@ let closure_11 = async function _getSafetyHubData() {
                 appealEligibility: null,
                 expressiveModalV2Enabled: null,
                 showExpressiveModalSubtitleAlt: null,
+                manualReviewFallbackEnabled: null,
               };
               if (appeal_eligibility == null) {
                 appeal_eligibility = [];
@@ -128,6 +130,10 @@ let closure_11 = async function _getSafetyHubData() {
                 show_expressive_modal_subtitle_alt = false;
               }
               obj.showExpressiveModalSubtitleAlt = show_expressive_modal_subtitle_alt;
+              if (manual_review_fallback_enabled == null) {
+                manual_review_fallback_enabled = false;
+              }
+              obj.manualReviewFallbackEnabled = manual_review_fallback_enabled;
               closure_1_1(573).dispatch(obj);
             })
             .catch((error) => {
@@ -152,6 +158,7 @@ let closure_11 = async function _getSafetyHubData() {
               appeal_eligibility,
               expressive_modal_v2_enabled,
               show_expressive_modal_subtitle_alt,
+              manual_review_fallback_enabled,
               account_standing,
               is_dsa_eligible,
               username,
@@ -195,6 +202,7 @@ let closure_11 = async function _getSafetyHubData() {
               appealEligibility: null,
               expressiveModalV2Enabled: null,
               showExpressiveModalSubtitleAlt: null,
+              manualReviewFallbackEnabled: null,
             };
             if (appeal_eligibility == null) {
               appeal_eligibility = [];
@@ -208,6 +216,10 @@ let closure_11 = async function _getSafetyHubData() {
               show_expressive_modal_subtitle_alt = false;
             }
             obj.showExpressiveModalSubtitleAlt = show_expressive_modal_subtitle_alt;
+            if (manual_review_fallback_enabled == null) {
+              manual_review_fallback_enabled = false;
+            }
+            obj.manualReviewFallbackEnabled = manual_review_fallback_enabled;
             closure_1_1(573).dispatch(obj);
           });
         }

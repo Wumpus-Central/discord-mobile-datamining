@@ -25,9 +25,9 @@ MediaViewerAnalytics = {
   channelId: "isArray",
   channelType: "isArray",
   numMediaItems: "Array",
-  hasMediaOptions: "PX_16",
-  source: null,
-  incrementableActions: null,
+  hasMediaOptions: "call",
+  source: "user",
+  incrementableActions: "HermesInternal",
 };
 const values = Object.values(MediaViewerAnalytics);
 MediaViewerAnalytics.incrementableActions = Object.fromEntries(

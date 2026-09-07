@@ -152,8 +152,8 @@ const createStyles = {
   profileFrameContainer: null,
 };
 let size = {
-  width: fn(14902).PREVIEW_SIZE,
-  height: fn(14902).PREVIEW_SIZE,
+  width: fn(14905).PREVIEW_SIZE,
+  height: fn(14905).PREVIEW_SIZE,
   borderRadius: nativeDefault.radii.xs,
   backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH,
   display: "flex",
@@ -162,11 +162,11 @@ let size = {
   marginRight: 12,
 };
 createStyles.purchasePlaceholder = size;
-const size1 = { width: fn(14902).PREVIEW_SIZE, height: fn(14902).PREVIEW_SIZE, marginRight: 12 };
+const size1 = { width: fn(14905).PREVIEW_SIZE, height: fn(14905).PREVIEW_SIZE, marginRight: 12 };
 createStyles.avatarDecorationPreview = size1;
 const size2 = {
-  width: fn(14902).PREVIEW_SIZE,
-  height: fn(14902).PREVIEW_SIZE,
+  width: fn(14905).PREVIEW_SIZE,
+  height: fn(14905).PREVIEW_SIZE,
   marginRight: 12,
   borderRadius: nativeDefault.radii.xs,
   overflow: "hidden",
@@ -176,13 +176,13 @@ createStyles.nameplateContainer = size2;
 const size3 = {
   position: "absolute",
   right: 0,
-  width: fn(14902).PREVIEW_SIZE * fn(14902).NAMEPLATE_ASPECT_RATIO,
-  height: fn(14902).PREVIEW_SIZE,
+  width: fn(14905).PREVIEW_SIZE * fn(14905).NAMEPLATE_ASPECT_RATIO,
+  height: fn(14905).PREVIEW_SIZE,
 };
 createStyles.nameplatePreview = size3;
 const size4 = {
-  width: fn(14902).PREVIEW_SIZE,
-  height: fn(14902).PREVIEW_SIZE,
+  width: fn(14905).PREVIEW_SIZE,
+  height: fn(14905).PREVIEW_SIZE,
   marginRight: 12,
   alignItems: "center",
   justifyContent: "center",

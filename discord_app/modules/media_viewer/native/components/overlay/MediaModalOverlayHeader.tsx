@@ -42,7 +42,7 @@ export const MediaModalOverlayHeader = function MediaModalOverlayHeader(arg0) {
   let isModalOpen;
   ({ onClose, disableDownload, disableMediaOverlayButton, shareable, animationDriver, channelId } = arg0);
   const tmp = closure_8();
-  let obj = isModalOpen(12962);
+  let obj = isModalOpen(12966);
   const headerLayoutAnimation = obj.useHeaderLayoutAnimation(animationDriver);
   let obj1 = isModalOpen(8334);
   const mediaShareActions = obj1.useMediaShareActions({ source, disableDownload, shareable });
@@ -133,12 +133,12 @@ export const MediaModalOverlayHeader = function MediaModalOverlayHeader(arg0) {
           obj.accessibilityLabel = intl.string(isModalOpen(1114).t.PdRCRg);
           const tmp4 = MediaViewerOverlayButtonDefault;
           if (obj2.isAndroid()) {
-            let tmp2Result = closure_1_6(isModalOpen(12967).MoreVerticalIcon, {
+            let tmp2Result = closure_1_6(isModalOpen(12971).MoreVerticalIcon, {
               size: "md",
               color: "interactive-text-active",
             });
           } else {
-            tmp2Result = closure_1_6(isModalOpen(8672).MoreHorizontalIcon, {
+            tmp2Result = closure_1_6(isModalOpen(8677).MoreHorizontalIcon, {
               size: "md",
               color: "interactive-text-active",
             });
@@ -149,7 +149,7 @@ export const MediaModalOverlayHeader = function MediaModalOverlayHeader(arg0) {
           return closure_1_6(tmp4, obj);
         },
       };
-      tmp10Result1 = closure_6(tmp2(8666).ContextMenu, obj13);
+      tmp10Result1 = closure_6(tmp2(8671).ContextMenu, obj13);
     }
     items4[1] = tmp10Result1;
     obj11.children = items4;

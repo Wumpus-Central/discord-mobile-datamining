@@ -62,7 +62,7 @@ export default function ActivityEmoji(emoji) {
     }
   }
   if (null == emoji) {
-    ReactionIcon = ReactionIcon(8757).ReactionIcon;
+    ReactionIcon = ReactionIcon(8762).ReactionIcon;
     obj = { style, size: "sm" };
     <ReactionIcon style={style} size="sm" />;
   } else {

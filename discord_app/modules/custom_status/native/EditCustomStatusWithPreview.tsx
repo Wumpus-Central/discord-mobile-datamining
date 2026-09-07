@@ -303,7 +303,7 @@ function EditCustomStatusWithPreview(navigation) {
       obj.dismissKeyboard();
       obj = { initialValue: first2, onChange };
       ActionSheetActionCreatorsDefault.openLazy(
-        asyncRequireImpl(11201, dependencyMap.paths),
+        asyncRequireImpl(11206, dependencyMap.paths),
         "ClearAfterOptionsActionSheet",
         obj,
       );
@@ -344,7 +344,7 @@ function EditCustomStatusWithPreview(navigation) {
 }
 get_ActivityIndicator = fn(17);
 ({ ScrollView: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-const STATUS_MAX_LENGTH = fn(11115).STATUS_MAX_LENGTH;
+const STATUS_MAX_LENGTH = fn(11120).STATUS_MAX_LENGTH;
 const Constants = fn(1074);
 ({ AnalyticEvents: closure_9, AnalyticsSections: c10, NOOP: closure_11, Fonts } = Constants);
 const EmojiIntention = fn(1374).EmojiIntention;

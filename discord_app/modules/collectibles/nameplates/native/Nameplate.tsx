@@ -72,7 +72,7 @@ function NameplateInner(isFocused) {
   tmpResult = tmp(1886);
   const backgroundGradientColors = tmpResult.getBackgroundGradientColors(nameplate.palette, sharedValue(4495)());
   const tmp6 = sharedValue(4495)();
-  const nameplateAssets = flag6(8819).getNameplateAssets(nameplate);
+  const nameplateAssets = flag6(8824).getNameplateAssets(nameplate);
   let str = nameplateAssets.staticImageUrl;
   let tmp12 = true === flag7;
   if (tmp12) {
@@ -107,11 +107,11 @@ function NameplateInner(isFocused) {
     const tmp5Result = tmp5(4987);
   }
   const items4 = [tmp15Result];
-  const tmpResult1 = flag6(8819);
+  const tmpResult1 = flag6(8824);
   if (tmpResult2.isAndroid()) {
     if (tmp12) {
       obj1 = { url: str, style: tmp4.img, autoplay: true };
-      let tmp17 = closure_5(tmp(8808).APNGPlayer, obj1);
+      let tmp17 = closure_5(tmp(8813).APNGPlayer, obj1);
     }
     items4[1] = tmp17;
     obj.children = items4;

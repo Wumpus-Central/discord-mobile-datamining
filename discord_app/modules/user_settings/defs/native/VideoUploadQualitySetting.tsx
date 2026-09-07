@@ -7,7 +7,7 @@ import UnsyncedUserSettingsStore from "../../UnsyncedUserSettingsStore.tsx";
 
 require = fn;
 const VideoQualitySettings = fn(1185).VideoQualitySettings;
-fn(11468);
+fn(11473);
 let SettingBuilders = {
   useTitle() {
     const intl = util.intl;

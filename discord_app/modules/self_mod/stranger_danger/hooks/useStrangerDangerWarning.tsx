@@ -8,7 +8,7 @@ import useIsMessageRequest from "../../../message_request/hooks/useIsMessageRequ
 import UserStore from "../../../../stores/UserStore.tsx";
 
 require = fn;
-const SafetyWarningTypes = fn(10915).SafetyWarningTypes;
+const SafetyWarningTypes = fn(10920).SafetyWarningTypes;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/self_mod/stranger_danger/hooks/useStrangerDangerWarning.tsx");
 

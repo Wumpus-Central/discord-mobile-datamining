@@ -471,7 +471,7 @@ export const transformChannel = function transformChannel(channel, arg1) {
           };
           voice_state = { mute, deaf, self_mute: selfMute, self_deaf: selfDeaf, suppress };
           voice_state.voice_state = voice_state;
-          voice_state.user = closure_1(9560)(user);
+          voice_state.user = closure_1(9565)(user);
           return voice_state;
         }
       });

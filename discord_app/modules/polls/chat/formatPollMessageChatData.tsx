@@ -179,7 +179,7 @@ function computeBasicPollChatData(message, arg1) {
     return obj;
   }
 }
-const getPollState = fn(11427).getPollState;
+const getPollState = fn(11432).getPollState;
 const Constants = fn(1074);
 const MessageStates = Constants.MessageStates;
 let pollMedia = {

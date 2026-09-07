@@ -13,7 +13,7 @@ import UserStore from "../../../stores/UserStore.tsx";
 require = fn;
 const View = fn(17).View;
 const StickerAnimationSettings = fn(1938).StickerAnimationSettings;
-const StickerPickerConstants = fn(10273);
+const StickerPickerConstants = fn(10278);
 const STICKER_SIZE = StickerPickerConstants.STICKER_SIZE;
 const PADDING_VERTICAL = fn(1219).PADDING_VERTICAL;
 const jsx = fn(21).jsx;
@@ -102,7 +102,7 @@ export default function StickerPickerListRow(stickers) {
             stickerOpaque: null,
           };
           ({ id: obj4.stickerId, name: obj4.stickerName, format_type: obj4.stickerType } = tmp12);
-          let obj4 = stickers(10176);
+          let obj4 = stickers(10181);
           obj.stickerUrl = obj4.getStickerAssetUrl(tmp12, itemSize, first);
           obj.stickerAnimated = first;
           obj.stickerDisabled = tmp18[2];

@@ -13,7 +13,11 @@ let suggestions = {
 };
 suggestions = {
   migration: { suggestion: { username: "Array" }, fetched: false, usernameSuggestionLoading: false },
-  registration: { suggestion: { username: "Array" }, source: "PX_16", fetched: "2026-05-mana-type-consolidation" },
+  registration: {
+    suggestion: { username: "Array" },
+    source: "PX_16",
+    fetched: "2026-03-icymi-staff-debugging-utility",
+  },
 };
 suggestions.suggestions = suggestions;
 const Store = initializeDefault.Store;
@@ -91,7 +95,7 @@ suggestions = {
     obj.suggestions.registration = {
       suggestion: { username: "Array" },
       source: "PX_16",
-      fetched: "2026-05-mana-type-consolidation",
+      fetched: "2026-03-icymi-staff-debugging-utility",
     };
   },
   UNIQUE_USERNAME_SUGGESTIONS_SUCCESS: function handleUniqueUsernameSuggestionsSuccess(suggestion) {

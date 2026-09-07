@@ -32,7 +32,7 @@ items[1] = {
     }
     return false === nsfwAllowed;
   },
-  Component: fn(14817).SensitiveContentFiltersTeenNotice,
+  Component: fn(14820).SensitiveContentFiltersTeenNotice,
 };
 const obj3 = {
   order: 300,
@@ -44,7 +44,7 @@ const obj3 = {
     }
     return false === nsfwAllowed;
   },
-  Component: fn(14817).SensitiveContentFiltersTeenNotice,
+  Component: fn(14820).SensitiveContentFiltersTeenNotice,
 };
 items[2] = {
   order: 200,

@@ -160,11 +160,11 @@ function fetchInitialMessages(searchContext) {
     const searchTabFetchId = obj.getSearchTabFetchId(searchContext, searchTabs[0], queryString);
     let obj1 = SearchMessageStore;
     if (!SearchMessageStore.getIsFetching(searchTabFetchId)) {
-      const result = queryString(12347).clearAllSearchMesssages();
-      const obj3 = queryString(12347);
+      const result = queryString(12351).clearAllSearchMesssages();
+      const obj3 = queryString(12351);
       obj = { searchContext };
-      queryString(12358).trackSearchStarted(obj);
-      const obj4 = queryString(12358);
+      queryString(12362).trackSearchStarted(obj);
+      const obj4 = queryString(12362);
       obj = {
         searchContext,
         searchTabs,
@@ -185,7 +185,7 @@ function fetchInitialMessages(searchContext) {
       }
       obj1 = { cursor };
       obj.pagination = obj1;
-      const obj6 = queryString(12347);
+      const obj6 = queryString(12351);
       obj.trackExactTotalHits = tmp6(1935).SearchResultExactCountEnabled.getSetting();
       obj.searchMode = constants5.NEWEST;
       const tabMessages = obj6.fetchTabMessages(obj);
@@ -218,7 +218,7 @@ const SearchConstants = fn(7878);
   SearchLinkTypes: closure_11,
   SearchMediaTypes: closure_12,
 } = SearchConstants);
-const SearchPlatformConstants = fn(12353);
+const SearchPlatformConstants = fn(12357);
 ({ PLATFORM_REGEX_ICON_PAIRS: map1, SEARCH_TEXT_INPUT_DEBOUNCE_TIME } = SearchPlatformConstants);
 const Constants = fn(1074);
 ({ MessageFlags: closure_14, SearchModes: closure_15, SearchTypes: closure_16 } = Constants);
@@ -282,7 +282,7 @@ obj.fetchNextMessages = function fetchNextMessages(searchContext, tab, onFetchSu
       }
       obj = { cursor };
       obj.pagination = obj;
-      const obj4 = queryString(12347);
+      const obj4 = queryString(12351);
       obj.trackExactTotalHits = tmp2(1935).SearchResultExactCountEnabled.getSetting();
       obj.searchMode = constants5.NEWEST;
       tabMessages = obj4.fetchTabMessages(obj);
@@ -322,10 +322,10 @@ obj.subscribeSearchQueryState = function subscribeSearchQueryState(searchContext
   closure_2 = fn2;
   let tmp = arg3;
   function callback() {
-    const tmp = f93178(SearchQueryStore.getManager(closure_0));
+    const tmp = f93201(SearchQueryStore.getManager(closure_0));
     if (null == closure_3) {
       closure_3 = tmp;
-      f93179(tmp, closure_3);
+      f93202(tmp, closure_3);
     }
   }
   const tmp2 = fn(callback.getManager(searchContext));
@@ -342,11 +342,11 @@ obj.subscribeSearchQueryState = function subscribeSearchQueryState(searchContext
 obj.subscribeTextInputValue = function subscribeTextInputValue(searchContext, debounceResult, arg2) {
   searchContext = debounceResult;
   let flag = arg2;
-  const f93178 = (getTextInputValue) => ({
+  const f93201 = (getTextInputValue) => ({
     textInputValue: getTextInputValue.getTextInputValue(),
     textInputChangedFromInput: getTextInputValue.getTextValueChangedFromInput(),
   });
-  const f93179 = (textInputValue, textInputValue2) => {
+  const f93202 = (textInputValue, textInputValue2) => {
     textInputValue = undefined;
     if (textInputValue2 != null) {
       textInputValue = textInputValue2.textInputValue;
@@ -354,10 +354,10 @@ obj.subscribeTextInputValue = function subscribeTextInputValue(searchContext, de
     searchContext(textInputValue.textInputValue, textInputValue, textInputValue.textInputChangedFromInput);
   };
   function callback() {
-    const tmp = f93178(SearchQueryStore.getManager(closure_0));
+    const tmp = f93201(SearchQueryStore.getManager(closure_0));
     if (null == closure_3) {
       closure_3 = tmp;
-      f93179(tmp, closure_3);
+      f93202(tmp, closure_3);
     }
   }
   const manager = callback.getManager(searchContext);
@@ -380,7 +380,7 @@ let result = size.fileFinishedImporting("modules/search/native/SearchPlatformUti
 
 export default obj;
 export const getMedia = function getMedia(searchContext, items1) {
-  guildIdFromSearchContext = guildIdFromSearchContext(12340).getGuildIdFromSearchContext(searchContext);
+  guildIdFromSearchContext = guildIdFromSearchContext(12344).getGuildIdFromSearchContext(searchContext);
   const items = [];
   let item = items1.forEach((getContentMessage) => {
     closure_0 = getContentMessage;

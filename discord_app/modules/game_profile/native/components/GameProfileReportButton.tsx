@@ -21,7 +21,7 @@ export default function GameProfileReportButton(applicationId) {
     trackAction(GameProfileAnalyticUtils.GameProfileTrackActionActions.Feedback);
     obj = { applicationId };
     const obj2 = ModalActionCreatorsDefault;
-    obj2.pushLazy(asyncRequireImpl(8898, dependencyMap.paths), obj, GameDetectionReportModal.MODAL_KEY);
+    obj2.pushLazy(asyncRequireImpl(8903, dependencyMap.paths), obj, GameDetectionReportModal.MODAL_KEY);
   }, items);
   let obj = { variant: "secondary", size: "md", text: null, onPress: null };
   const intl = applicationId(1114).intl;
