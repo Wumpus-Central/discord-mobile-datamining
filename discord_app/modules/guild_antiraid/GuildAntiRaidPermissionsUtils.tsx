@@ -1,8 +1,8 @@
-// === Module 10099: GuildAntiRaidPermissionsUtils ===
+// === Module 10104: GuildAntiRaidPermissionsUtils ===
 
-// Module 10099 (GuildAntiRaidPermissionsUtils)
+// Module 10104 (GuildAntiRaidPermissionsUtils)
 import PermissionStore from "PermissionStore" /* 4199 */;
-import GuildIncidentsStore from "GuildIncidentsStore" /* 10080 */;
+import GuildIncidentsStore from "GuildIncidentsStore" /* 10085 */;
 
 const require = fn;
 const Constants = fn(1074);

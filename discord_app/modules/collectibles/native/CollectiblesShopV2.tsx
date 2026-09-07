@@ -1,15 +1,15 @@
-// === Module 15807: CollectiblesShopV2 ===
+// === Module 15810: CollectiblesShopV2 ===
 
-// Module 15807 (CollectiblesShopV2)
+// Module 15810 (CollectiblesShopV2)
 import PlatformUtils from "PlatformUtils" /* 1115 */;
 import SentryUtilsDefault from "SentryUtils" /* 1232 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
 import CollectiblesPerfLogging from "CollectiblesPerfLogging" /* 7590 */;
 import maybeFetchUserProfileDefault from "maybeFetchUserProfile" /* 8187 */;
-import collectibles_CollectiblesUtils from "collectibles/CollectiblesUtils" /* 8848 */;
-import NativePaymentHooksDefault from "NativePaymentHooks" /* 9366 */;
-import ShopCategory from "ShopCategory" /* 15812 */;
-import CollectiblesShopFeaturedPageDefault from "CollectiblesShopFeaturedPage" /* 15814 */;
+import collectibles_CollectiblesUtils from "collectibles/CollectiblesUtils" /* 8853 */;
+import NativePaymentHooksDefault from "NativePaymentHooks" /* 9371 */;
+import ShopCategory from "ShopCategory" /* 15815 */;
+import CollectiblesShopFeaturedPageDefault from "CollectiblesShopFeaturedPage" /* 15817 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import DevSettingsStore from "DevSettingsStore" /* 4559 */;

@@ -1,8 +1,8 @@
-// === Module 13713: LocalAppDetectionUtils ===
+// === Module 13717: LocalAppDetectionUtils ===
 
-// Module 13713 (LocalAppDetectionUtils)
-import LocalAppDetectionTypes from "LocalAppDetectionTypes" /* 13712 */;
-import GameCommunityUpsellExperiment from "GameCommunityUpsellExperiment" /* 13714 */;
+// Module 13717 (LocalAppDetectionUtils)
+import LocalAppDetectionTypes from "LocalAppDetectionTypes" /* 13716 */;
+import GameCommunityUpsellExperiment from "GameCommunityUpsellExperiment" /* 13718 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import ConsentStore from "ConsentStore" /* 6595 */;
 

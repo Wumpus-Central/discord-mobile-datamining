@@ -1,13 +1,13 @@
-// === Module 12156: ApplicationCommandValidators ===
+// === Module 12160: ApplicationCommandValidators ===
 
-// Module 12156 (ApplicationCommandValidators)
+// Module 12160 (ApplicationCommandValidators)
 import _modDef38 from "module_38" /* 38 */;
 import util from "util" /* 1114 */;
 import Server from "Server" /* 1894 */;
 import ApplicationCommandUtils from "ApplicationCommandUtils" /* 7521 */;
-import ApplicationCommandOptionUtilsAll from "ApplicationCommandOptionUtils" /* 9412 */;
-import ApplicationCommandChoiceUtils from "ApplicationCommandChoiceUtils" /* 9414 */;
-import PlaintextResolvers from "PlaintextResolvers" /* 9415 */;
+import ApplicationCommandOptionUtilsAll from "ApplicationCommandOptionUtils" /* 9417 */;
+import ApplicationCommandChoiceUtils from "ApplicationCommandChoiceUtils" /* 9419 */;
+import PlaintextResolvers from "PlaintextResolvers" /* 9420 */;
 import LocaleStore from "LocaleStore" /* 2025 */;
 import UploadAttachmentStore from "UploadAttachmentStore" /* 4900 */;
 

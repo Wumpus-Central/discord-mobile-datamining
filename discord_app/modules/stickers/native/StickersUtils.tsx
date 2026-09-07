@@ -1,6 +1,6 @@
-// === Module 10389: stickers/StickersUtils ===
+// === Module 10394: stickers/StickersUtils ===
 
-// Module 10389 (stickers/StickersUtils)
+// Module 10394 (stickers/StickersUtils)
 import KeyboardTypes from "KeyboardTypes" /* 1609 */;
 import noop from "module_19" /* 19 */;
 import GuildStore from "GuildStore" /* 1979 */;
@@ -8,7 +8,7 @@ import UserStore from "UserStore" /* 1371 */;
 
 require = fn;
 const NativeModules = fn(17).NativeModules;
-const useStickerPickerStore = fn(10390).useStickerPickerStore;
+const useStickerPickerStore = fn(10395).useStickerPickerStore;
 const GuildNSFWContentLevel = fn(1074).GuildNSFWContentLevel;
 const ExpressionPickerViewType = fn(1219).ExpressionPickerViewType;
 const size = fn(2);
@@ -46,9 +46,9 @@ export const useStickerCategories = function useStickerCategories(channel) {
         }
       }
       if (type.type === stickerPackCategories(5268).StickerCategoryTypes.FAVORITE) {
-        let tmp4 = currentUser(10391);
+        let tmp4 = currentUser(10396);
       } else {
-        tmp4 = currentUser(10392);
+        tmp4 = currentUser(10397);
       }
       const obj = {};
       const merged = Object.assign(type);

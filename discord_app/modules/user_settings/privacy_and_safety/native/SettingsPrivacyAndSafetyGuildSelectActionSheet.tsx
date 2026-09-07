@@ -1,6 +1,6 @@
-// === Module 15870: SettingsPrivacyAndSafetyGuildSelectActionSheet ===
+// === Module 15873: SettingsPrivacyAndSafetyGuildSelectActionSheet ===
 
-// Module 15870 (SettingsPrivacyAndSafetyGuildSelectActionSheet)
+// Module 15873 (SettingsPrivacyAndSafetyGuildSelectActionSheet)
 import nativeDefault from "native" /* 576 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -8,7 +8,7 @@ import GuildStore from "GuildStore" /* 1979 */;
 import SortedGuildStore from "SortedGuildStore" /* 5438 */;
 
 const require = fn;
-const UserSettingsSafetySelectedGuildStore = fn(15869);
+const UserSettingsSafetySelectedGuildStore = fn(15872);
 ({ GUILD_SELECT_ALL_SERVERS_OPTION_ID: closure_7, setSelectedGuildId: closure_8, useUserSafetySettingsSelectedGuildStore: closure_9 } = UserSettingsSafetySelectedGuildStore);
 const jsx = fn(21).jsx;
 fn(4560);

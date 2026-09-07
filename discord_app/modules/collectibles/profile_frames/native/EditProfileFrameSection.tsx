@@ -1,12 +1,12 @@
-// === Module 14633: EditProfileFrameSection ===
+// === Module 14636: EditProfileFrameSection ===
 
-// Module 14633 (EditProfileFrameSection)
+// Module 14636 (EditProfileFrameSection)
 import nativeDefault from "native" /* 576 */;
 import AnalyticsLocationDefault from "AnalyticsLocation" /* 7182 */;
-import ProfileFrameSamplePreviewDefault from "ProfileFrameSamplePreview" /* 8822 */;
-import useCollectibleListLayout from "useCollectibleListLayout" /* 13170 */;
-import CollectiblesEditUserProfileListItems from "CollectiblesEditUserProfileListItems" /* 13171 */;
-import useProfileFrameSections from "useProfileFrameSections" /* 14632 */;
+import ProfileFrameSamplePreviewDefault from "ProfileFrameSamplePreview" /* 8827 */;
+import useCollectibleListLayout from "useCollectibleListLayout" /* 13174 */;
+import CollectiblesEditUserProfileListItems from "CollectiblesEditUserProfileListItems" /* 13175 */;
+import useProfileFrameSections from "useProfileFrameSections" /* 14635 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,9 +18,9 @@ const jsxProd = fn(21);
 const PX_8 = nativeDefault.space.PX_8;
 fn(4560);
 let obj = { row: null, rowSpacer: null, previewContainer: null };
-obj = { flexDirection: "row", alignItems: "center", justifyContent: "space-between", paddingHorizontal: fn(13170).GUTTER_SIZE };
+obj = { flexDirection: "row", alignItems: "center", justifyContent: "space-between", paddingHorizontal: fn(13174).GUTTER_SIZE };
 obj.row = obj;
-const createStyles = { height: fn(13170).GUTTER_SIZE };
+const createStyles = { height: fn(13174).GUTTER_SIZE };
 obj.rowSpacer = createStyles;
 obj.previewContainer = { width: "100%", height: "100%", paddingVertical: PX_8, overflow: "hidden", alignItems: "center", justifyContent: "center" };
 let closure_11 = createStyles.createStyles(obj);

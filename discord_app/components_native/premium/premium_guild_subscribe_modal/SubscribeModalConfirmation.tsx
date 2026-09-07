@@ -1,6 +1,6 @@
-// === Module 13606: SubscribeModalConfirmation ===
+// === Module 13610: SubscribeModalConfirmation ===
 
-// Module 13606 (SubscribeModalConfirmation)
+// Module 13610 (SubscribeModalConfirmation)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
@@ -9,11 +9,11 @@ import GuildBoostingUtils from "GuildBoostingUtils" /* 4454 */;
 import Text_Text from "Text/Text" /* 4556 */;
 import components_Button_Button from "components/Button/Button" /* 4975 */;
 import _modDef5597 from "module_5597" /* 5597 */;
-import _modDef13607 from "module_13607" /* 13607 */;
-import PremiumGuildPreviewDefault from "PremiumGuildPreview" /* 13608 */;
+import _modDef13611 from "module_13611" /* 13611 */;
+import PremiumGuildPreviewDefault from "PremiumGuildPreview" /* 13612 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import AppliedGuildBoostStore from "AppliedGuildBoostStore" /* 12562 */;
+import AppliedGuildBoostStore from "AppliedGuildBoostStore" /* 12566 */;
 import GuildStore from "GuildStore" /* 1979 */;
 import GuildBoostSlotStore from "GuildBoostSlotStore" /* 4455 */;
 import SubscriptionStore from "SubscriptionStore" /* 4224 */;
@@ -49,7 +49,7 @@ function SubscribeConfirmation(arg0) {
   ({ guild, isModifyingSubscription } = arg0);
   const tmp = closure_22();
   let obj = { children: null };
-  obj = { style: tmp.subscribeImage, source: _modDef13607 };
+  obj = { style: tmp.subscribeImage, source: _modDef13611 };
   const items = [closure_1_19(timestampProducer, obj), , , , , ];
   obj = { style: tmp.header, variant: "heading-lg/extrabold", color: "mobile-text-heading-primary", children: null };
   const intl = util.intl;
@@ -82,7 +82,7 @@ function TransferConfirmation(previousGuildSubscriptionSlots) {
   const onPremiumGuildSubscribe = previousGuildSubscriptionSlots.onPremiumGuildSubscribe;
   ({ guild, isModifyingSubscription } = previousGuildSubscriptionSlots);
   const tmp = closure_22();
-  let obj = prop(13617);
+  let obj = prop(13621);
   const guildSubscriptionRemovalSource = obj.useGuildSubscriptionRemovalSource();
   let obj1 = prop(504);
   const items = [GuildStore];
@@ -119,7 +119,7 @@ function TransferConfirmation(previousGuildSubscriptionSlots) {
     obj6.children = intl3.format(tmp2(1114).t["5zQYEz"], { guildCount: 1 });
     const items2 = [closure_19(tmp2(4556).Text, obj6), , , ];
     const obj7 = { style: tmp.guildPreview, guild: stateFromStores };
-    items2[1] = closure_19(onPremiumGuildSubscribe(13608), obj7);
+    items2[1] = closure_19(onPremiumGuildSubscribe(13612), obj7);
     const obj8 = { style: tmp.previewHeader, variant: "eyebrow", color: "text-default", children: null };
     const intl4 = tmp2(1114).intl;
     const obj9 = { slotCount: prop.length };
@@ -133,7 +133,7 @@ function TransferConfirmation(previousGuildSubscriptionSlots) {
     obj10.end = tmp2(1093).HorizontalGradient.END;
     obj10.colors = Gradients.PREMIUM_GUILD;
     const obj11 = { guild };
-    obj10.children = closure_19(onPremiumGuildSubscribe(13608), obj11);
+    obj10.children = closure_19(onPremiumGuildSubscribe(13612), obj11);
     items2[3] = closure_19(onPremiumGuildSubscribe(4987), obj10);
     obj5.children = items2;
     items1[3] = closure_20(closure_7, obj5);

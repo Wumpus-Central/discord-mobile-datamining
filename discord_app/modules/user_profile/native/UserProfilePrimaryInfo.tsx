@@ -1,6 +1,6 @@
-// === Module 11152: UserProfilePrimaryInfo ===
+// === Module 11157: UserProfilePrimaryInfo ===
 
-// Module 11152 (UserProfilePrimaryInfo)
+// Module 11157 (UserProfilePrimaryInfo)
 import nativeDefault from "native" /* 576 */;
 import PlatformUtils from "PlatformUtils" /* 1115 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
@@ -15,13 +15,13 @@ import AnalyticsTypes from "AnalyticsTypes" /* 7728 */;
 import GuildTagUtils from "GuildTagUtils" /* 8165 */;
 import BadgeId from "BadgeId" /* 8184 */;
 import useBadges from "useBadges" /* 8242 */;
-import GuildTagDefault from "GuildTag" /* 9184 */;
-import BotTagDefault from "BotTag" /* 9438 */;
-import UsernameWithEffectsDefault from "UsernameWithEffects" /* 10899 */;
-import AdAnalyticsInterfaceExperiment from "AdAnalyticsInterfaceExperiment" /* 11192 */;
-import captureAdUserAction from "captureAdUserAction" /* 11193 */;
-import captureAdUserActionTypes from "captureAdUserActionTypes" /* 11197 */;
-import BadgeUtils from "BadgeUtils" /* 11199 */;
+import GuildTagDefault from "GuildTag" /* 9189 */;
+import BotTagDefault from "BotTag" /* 9443 */;
+import UsernameWithEffectsDefault from "UsernameWithEffects" /* 10904 */;
+import AdAnalyticsInterfaceExperiment from "AdAnalyticsInterfaceExperiment" /* 11197 */;
+import captureAdUserAction from "captureAdUserAction" /* 11198 */;
+import captureAdUserActionTypes from "captureAdUserActionTypes" /* 11202 */;
+import BadgeUtils from "BadgeUtils" /* 11204 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

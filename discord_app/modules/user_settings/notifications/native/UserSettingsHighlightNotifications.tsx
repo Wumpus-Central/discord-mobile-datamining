@@ -1,6 +1,6 @@
-// === Module 15520: UserSettingsHighlightNotifications ===
+// === Module 15523: UserSettingsHighlightNotifications ===
 
-// Module 15520 (UserSettingsHighlightNotifications)
+// Module 15523 (UserSettingsHighlightNotifications)
 import GuildIconDefault from "GuildIcon" /* 5584 */;
 import NotificationSettingsUtils from "NotificationSettingsUtils" /* 7114 */;
 import NotificationSettingsModalActionCreatorsDefault from "NotificationSettingsModalActionCreators" /* 7119 */;
@@ -58,7 +58,7 @@ export default function UserSettingsHighlightNotifications() {
   let tmp4 = null;
   if (0 !== stateFromStoresArray.length) {
     obj = { children: tmp3 };
-    tmp4 = jsx(stateFromStoresArray(8593).Form, { children: tmp3 });
+    tmp4 = jsx(stateFromStoresArray(8598).Form, { children: tmp3 });
   }
   return tmp4;
 };

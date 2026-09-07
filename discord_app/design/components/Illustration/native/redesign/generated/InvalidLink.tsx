@@ -1,6 +1,6 @@
-// === Module 11796: InvalidLink ===
+// === Module 11801: InvalidLink ===
 
-// Module 11796 (InvalidLink)
+// Module 11801 (InvalidLink)
 import shared from "shared" /* 4411 */;
 import _mod8233 from "module_8233" /* 8233 */;
 import noop from "module_19" /* 19 */;
@@ -14,13 +14,13 @@ const result = size.fileFinishedImporting("design/components/Illustration/native
 export const getInvalidLinkSource = function getInvalidLinkSource(theme) {
   const obj = {
     dark() {
-      return require("module_11454");
+      return require("module_11459");
     },
     darker() {
-      return require("module_11797");
+      return require("module_11802");
     },
     light() {
-      return require("module_11455");
+      return require("module_11460");
     }
   };
   return obj.getIllustrationSource(theme, obj);
@@ -28,13 +28,13 @@ export const getInvalidLinkSource = function getInvalidLinkSource(theme) {
 export const useInvalidLinkSource = function useInvalidLinkSource() {
   const obj = {
     dark() {
-      return require("module_11454");
+      return require("module_11459");
     },
     darker() {
-      return require("module_11797");
+      return require("module_11802");
     },
     light() {
-      return require("module_11455");
+      return require("module_11460");
     }
   };
   return _mod8233.getIllustrationSource(obj.useThemeContext().theme, obj);
@@ -42,13 +42,13 @@ export const useInvalidLinkSource = function useInvalidLinkSource() {
 export const InvalidLink = function InvalidLink(arg0) {
   let obj = {
     dark() {
-      return require("module_11454");
+      return require("module_11459");
     },
     darker() {
-      return require("module_11797");
+      return require("module_11802");
     },
     light() {
-      return require("module_11455");
+      return require("module_11460");
     }
   };
   obj = {};

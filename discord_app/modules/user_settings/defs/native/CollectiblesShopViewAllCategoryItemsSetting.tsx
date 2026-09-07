@@ -1,9 +1,9 @@
-// === Module 15843: CollectiblesShopViewAllCategoryItemsSetting ===
+// === Module 15846: CollectiblesShopViewAllCategoryItemsSetting ===
 
-// Module 15843 (CollectiblesShopViewAllCategoryItemsSetting)
+// Module 15846 (CollectiblesShopViewAllCategoryItemsSetting)
 import Constants from "Constants" /* 1074 */;
-import useIsStaffOrDeveloperSettingPredicate from "useIsStaffOrDeveloperSettingPredicate" /* 14842 */;
-import SettingBuilders from "SettingBuilders" /* 11468 */;
+import useIsStaffOrDeveloperSettingPredicate from "useIsStaffOrDeveloperSettingPredicate" /* 14845 */;
+import SettingBuilders from "SettingBuilders" /* 11473 */;
 import size from "module_2" /* 2 */;
 
 const route = SettingBuilders.createRoute({

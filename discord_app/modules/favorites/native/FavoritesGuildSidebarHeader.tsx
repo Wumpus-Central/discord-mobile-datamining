@@ -1,6 +1,6 @@
-// === Module 16278: FavoritesGuildSidebarHeader ===
+// === Module 16281: FavoritesGuildSidebarHeader ===
 
-// Module 16278 (FavoritesGuildSidebarHeader)
+// Module 16281 (FavoritesGuildSidebarHeader)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
@@ -11,9 +11,9 @@ import Stack_Stack from "Stack/Stack" /* 4973 */;
 import ChatIcon from "ChatIcon" /* 5071 */;
 import TextIcon from "TextIcon" /* 5080 */;
 import VoiceNormalIcon from "VoiceNormalIcon" /* 5101 */;
-import FavoritesHooks from "FavoritesHooks" /* 10224 */;
-import openFavoritesGuildLimitUpsell from "openFavoritesGuildLimitUpsell" /* 10227 */;
-import openFavoritesGuildAddChannelModalDefault from "openFavoritesGuildAddChannelModal" /* 10976 */;
+import FavoritesHooks from "FavoritesHooks" /* 10229 */;
+import openFavoritesGuildLimitUpsell from "openFavoritesGuildLimitUpsell" /* 10232 */;
+import openFavoritesGuildAddChannelModalDefault from "openFavoritesGuildAddChannelModal" /* 10981 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -69,7 +69,7 @@ function PlaceholderRows() {
   return React5(View, obj);
 }
 const View = fn(17).View;
-let closure_5 = fn(16202).useHasFavoritesGuildSuggestions;
+let closure_5 = fn(16205).useHasFavoritesGuildSuggestions;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7, Fragment: closure_8 } = jsxProd);
 fn(4560);

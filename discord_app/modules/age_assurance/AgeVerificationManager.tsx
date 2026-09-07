@@ -1,13 +1,13 @@
-// === Module 17312: AgeVerificationManager ===
+// === Module 17315: AgeVerificationManager ===
 
-// Module 17312 (AgeVerificationManager)
+// Module 17315 (AgeVerificationManager)
 import LoggerDefault from "Logger" /* 3 */;
 import MessageEmbedTypes from "MessageEmbedTypes" /* 1095 */;
 import Server from "Server" /* 1894 */;
 import ChannelMessagesDefault from "ChannelMessages" /* 5272 */;
 import RegionalFeatureConfigUtils from "RegionalFeatureConfigUtils" /* 5423 */;
 import AgeGatedFeature from "AgeGatedFeature" /* 5424 */;
-import ManualReviewActionCreators from "ManualReviewActionCreators" /* 11929 */;
+import ManualReviewActionCreators from "ManualReviewActionCreators" /* 8592 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 import MessageStore from "MessageStore" /* 4781 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2011 */;

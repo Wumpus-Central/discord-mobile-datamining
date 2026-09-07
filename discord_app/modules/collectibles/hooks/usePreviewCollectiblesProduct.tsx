@@ -1,8 +1,8 @@
-// === Module 11089: usePreviewCollectiblesProduct ===
+// === Module 11094: usePreviewCollectiblesProduct ===
 
-// Module 11089 (usePreviewCollectiblesProduct)
+// Module 11094 (usePreviewCollectiblesProduct)
 import UserProfileSettingsActionCreators from "UserProfileSettingsActionCreators" /* 8164 */;
-import CollectiblePreviewSession from "CollectiblePreviewSession" /* 11088 */;
+import CollectiblePreviewSession from "CollectiblePreviewSession" /* 11093 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import UserProfileSettingsStore from "UserProfileSettingsStore" /* 8160 */;
@@ -27,7 +27,7 @@ export const usePreviewCollectibleProduct = function usePreviewCollectibleProduc
   const items = [product, arg1, firstProfileEffect, firstAvatarDecoration, firstNameplate, firstProfileFrame, arg2];
   const effect = firstProfileEffect.useEffect(() => {
     let obj = product;
-    let obj1 = product(11088);
+    let obj1 = product(11093);
     product = obj1.currentPreviewGeneration();
     const pendingChanges = firstAvatarDecoration.getPendingChanges();
     dependencyMap = { avatarDecoration: pendingChanges.pendingAvatarDecoration, profileEffect: pendingChanges.pendingProfileEffect, nameplate: pendingChanges.pendingNameplate, profileFrame: pendingChanges.pendingProfileFrame };

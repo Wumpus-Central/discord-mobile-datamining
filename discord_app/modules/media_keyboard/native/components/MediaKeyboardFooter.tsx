@@ -1,12 +1,12 @@
-// === Module 10655: MediaKeyboardFooter ===
+// === Module 10660: MediaKeyboardFooter ===
 
-// Module 10655 (MediaKeyboardFooter)
+// Module 10660 (MediaKeyboardFooter)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import Text_Text from "Text/Text" /* 4556 */;
 import components_Button_Button from "components/Button/Button" /* 4975 */;
-import DeviceMediaDefault from "DeviceMedia" /* 10644 */;
-import _modDef10656 from "module_10656" /* 10656 */;
+import DeviceMediaDefault from "DeviceMedia" /* 10649 */;
+import _modDef10661 from "module_10661" /* 10661 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -44,7 +44,7 @@ export default noop.memo(function MediaKeyboardFooter(arg0) {
     obj2.disabled = disabled;
     obj1.children = timestampProducer(components_Button_Button.Button, obj2);
     items[1] = timestampProducer(React3, obj1);
-    const obj3 = { source: _modDef10656 };
+    const obj3 = { source: _modDef10661 };
     items[2] = timestampProducer(React4, obj3);
     obj.children = items;
     let tmp6 = React5(React3, obj);

@@ -1,6 +1,6 @@
-// === Module 17629: useGuildSettingsRoleExampleMessage ===
+// === Module 17632: useGuildSettingsRoleExampleMessage ===
 
-// Module 17629 (useGuildSettingsRoleExampleMessage)
+// Module 17632 (useGuildSettingsRoleExampleMessage)
 import util from "util" /* 1114 */;
 import MessageRecordUtils from "MessageRecordUtils" /* 4783 */;
 import createMessageDefault from "createMessage" /* 7752 */;

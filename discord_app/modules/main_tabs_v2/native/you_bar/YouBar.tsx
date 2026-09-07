@@ -1,6 +1,6 @@
-// === Module 16362: YouBar ===
+// === Module 16365: YouBar ===
 
-// Module 16362 (YouBar)
+// Module 16365 (YouBar)
 import _mod12 from "module_12" /* 12 */;
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 576 */;
@@ -14,9 +14,9 @@ import spring from "spring" /* 4974 */;
 import LegacyBaseButton from "LegacyBaseButton" /* 6655 */;
 import transitionToGuild from "transitionToGuild" /* 7342 */;
 import openUserSettings from "openUserSettings" /* 7382 */;
-import getNavigatorCurrentRouteDefault from "getNavigatorCurrentRoute" /* 11218 */;
-import YouBarFloatingShadeDefault from "YouBarFloatingShade" /* 16395 */;
-import ConnectionBannerDefault from "ConnectionBanner" /* 16396 */;
+import getNavigatorCurrentRouteDefault from "getNavigatorCurrentRoute" /* 11223 */;
+import YouBarFloatingShadeDefault from "YouBarFloatingShade" /* 16398 */;
+import ConnectionBannerDefault from "ConnectionBanner" /* 16399 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -27,7 +27,7 @@ import UserStore from "UserStore" /* 1371 */;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: metroRequire, Pressable: closure_7 } = get_ActivityIndicator);
-const YouBarConstants = fn(15098);
+const YouBarConstants = fn(15101);
 ({ YOU_BAR_HEIGHT: closure_11, YOU_BAR_PADDING: closure_12, YOU_BAR_SPRING_CONFIG: map1, YOU_BAR_AVATAR_LARGE_SIZE: closure_14, YOU_BAR_AVATAR_SIZE: closure_15, YOU_BAR_BUTTON_HIT_SLOP: closure_16 } = YouBarConstants);
 const ME = fn(1074).ME;
 const ContentDismissActionType = fn(1954).ContentDismissActionType;
@@ -48,20 +48,20 @@ let closure_24 = { code: "function YouBarTsx3(_,manager){const{startingTranslate
 let closure_25 = { code: "function YouBarTsx4(){const{startingTranslateX,translateX}=this.__closure;startingTranslateX.set(translateX.get());}" };
 let closure_26 = noop.memo(() => {
   const tmp = closure_21();
-  let obj = isMobileQuestDockRenderedBase(15091);
+  let obj = isMobileQuestDockRenderedBase(15094);
   const mobileQuestDock = obj.useMobileQuestDock();
-  let obj1 = isMobileQuestDockRenderedBase(15091);
+  let obj1 = isMobileQuestDockRenderedBase(15094);
   isMobileQuestDockRenderedBase = obj1.useIsMobileQuestDockRenderedBase(mobileQuestDock);
-  let obj2 = isMobileQuestDockRenderedBase(11528);
+  let obj2 = isMobileQuestDockRenderedBase(11533);
   const drawerWidth = obj2.useDrawerWidth();
-  let obj3 = isMobileQuestDockRenderedBase(15097);
+  let obj3 = isMobileQuestDockRenderedBase(15100);
   const youBarHorizontalMargin = obj3.useYouBarHorizontalMargin();
   let result = 2 * youBarHorizontalMargin;
   const tmp10 = youBarHorizontalMargin(4420)().isChatBesideChannelList ? drawerWidth - result : youBarHorizontalMargin(1477)().width - result;
   dependencyMap = tmp10;
-  let tmp4Result = tmp4(15097);
+  let tmp4Result = tmp4(15100);
   const youBarBottomMargin = tmp4Result.useYouBarBottomMargin();
-  tmp4Result = tmp4(15101);
+  tmp4Result = tmp4(15104);
   const connectionBannerHeight = tmp4Result.useConnectionBannerHeight();
   let items = [tmp10, youBarHorizontalMargin];
   const memo = sharedValue.useMemo(() => {
@@ -92,11 +92,11 @@ let closure_26 = noop.memo(() => {
   const tmp4Result2 = isMobileQuestDockRenderedBase(4296);
   const iCYMIEnabled = isMobileQuestDockRenderedBase(8352).useICYMIEnabled("TabsNavigator");
   const tmp4Result3 = isMobileQuestDockRenderedBase(8352);
-  const youBarCoachmark = isMobileQuestDockRenderedBase(16363).useYouBarCoachmark({ isQuestRendered: isMobileQuestDockRenderedBase });
+  const youBarCoachmark = isMobileQuestDockRenderedBase(16366).useYouBarCoachmark({ isQuestRendered: isMobileQuestDockRenderedBase });
   const visibleContent = youBarCoachmark.visibleContent;
   const markAsDismissed = youBarCoachmark.markAsDismissed;
-  const tmp4Result4 = isMobileQuestDockRenderedBase(16363);
-  const showTinyBroncoPromoSheet = isMobileQuestDockRenderedBase(16364).useShowTinyBroncoPromoSheet({ visibleContent, markAsDismissed });
+  const tmp4Result4 = isMobileQuestDockRenderedBase(16366);
+  const showTinyBroncoPromoSheet = isMobileQuestDockRenderedBase(16367).useShowTinyBroncoPromoSheet({ visibleContent, markAsDismissed });
   sharedValue.useRef(markAsDismissed);
   sharedValue.useRef(visibleContent);
   const items1 = [markAsDismissed, visibleContent];
@@ -104,13 +104,13 @@ let closure_26 = noop.memo(() => {
     closure_9.current = visibleContent;
     closure_8.current = markAsDismissed;
   }, items1);
-  const tmp4Result5 = isMobileQuestDockRenderedBase(16364);
+  const tmp4Result5 = isMobileQuestDockRenderedBase(16367);
   const items2 = [currentUser];
   const stateFromStores = isMobileQuestDockRenderedBase(504).useStateFromStores(items2, () => currentUser.getCurrentUser());
   const tmp4Result6 = isMobileQuestDockRenderedBase(504);
   const nameplate = isMobileQuestDockRenderedBase(8218).useNameplate({ user: stateFromStores });
   const tmp4Result7 = isMobileQuestDockRenderedBase(8218);
-  const youBarAccessibilityLabel = isMobileQuestDockRenderedBase(16366).useYouBarAccessibilityLabel(stateFromStores);
+  const youBarAccessibilityLabel = isMobileQuestDockRenderedBase(16369).useYouBarAccessibilityLabel(stateFromStores);
   currentUser = sharedValue.useRef(null);
   const tmp24 = connectionBannerHeight(sharedValue.useState(0), 2);
   closure_11 = tmp24[1];
@@ -297,10 +297,10 @@ let closure_26 = noop.memo(() => {
       callback3();
     }
   }, items7);
-  const context = sharedValue.useContext(tmp2(16010));
+  const context = sharedValue.useContext(tmp2(16013));
   const gesture = context.gesture;
   const translateX = context.translateX;
-  const tmp4Result8 = isMobileQuestDockRenderedBase(16366);
+  const tmp4Result8 = isMobileQuestDockRenderedBase(16369);
   hitSlop = isMobileQuestDockRenderedBase(4296).useSharedValue(0);
   const items8 = [callback3, gesture, tmp24[0]];
   const memo3 = sharedValue.useMemo(() => {
@@ -348,11 +348,11 @@ let closure_26 = noop.memo(() => {
   obj = { ref: youBarCoachmark.animatedRef, style: null, shouldRasterizeIOS: true, children: null };
   const items9 = [tmp.youRow, memo, animatedStyle];
   obj.style = items9;
-  const items10 = [closure_19(youBarHorizontalMargin(16383), { hasNameplate: null != nameplate, isLargeAvatar: !isMobileQuestDockRenderedBase, barWidth: tmp10, isQuestRendered: isMobileQuestDockRenderedBase, avatarSize: tmp37 }), , , ];
+  const items10 = [closure_19(youBarHorizontalMargin(16386), { hasNameplate: null != nameplate, isLargeAvatar: !isMobileQuestDockRenderedBase, barWidth: tmp10, isQuestRendered: isMobileQuestDockRenderedBase, avatarSize: tmp37 }), , , ];
   let tmp40Result = tmp22;
   if (null != nameplate) {
     obj1 = { nameplate, barWidth: tmp10, isQuestRendered: isMobileQuestDockRenderedBase, avatarSize: tmp37 };
-    tmp40Result = closure_19(tmp2(16384), obj1);
+    tmp40Result = closure_19(tmp2(16387), obj1);
   }
   items10[1] = tmp40Result;
   obj2 = { gesture: memo3, children: null };
@@ -366,16 +366,16 @@ let closure_26 = noop.memo(() => {
   obj3.onPress = memo1;
   obj3.onLongPress = callback;
   obj3.hitSlop = hitSlop;
-  obj3.children = closure_19(youBarHorizontalMargin(16385), { isQuestRendered: isMobileQuestDockRenderedBase, onAvatarPress: memo1 });
+  obj3.children = closure_19(youBarHorizontalMargin(16388), { isQuestRendered: isMobileQuestDockRenderedBase, onAvatarPress: memo1 });
   obj2.children = closure_19(markAsDismissed, obj3);
   items10[2] = closure_19(isMobileQuestDockRenderedBase(6655).GestureDetector, obj2);
   const obj4 = { style: tmp.youRowRight, children: null };
   tmp40Result = null;
   if (iCYMIEnabled) {
     const obj5 = { hasNameplate: tmp22 };
-    tmp40Result = closure_19(tmp2(16390), obj5);
+    tmp40Result = closure_19(tmp2(16393), obj5);
   }
-  const items11 = [tmp40Result, closure_19(youBarHorizontalMargin(16393), { hasNameplate: null != nameplate })];
+  const items11 = [tmp40Result, closure_19(youBarHorizontalMargin(16396), { hasNameplate: null != nameplate })];
   obj4.children = items11;
   items10[3] = closure_20(visibleContent, obj4);
   obj.children = items10;

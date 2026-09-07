@@ -1,6 +1,6 @@
-// === Module 17191: VoicePanelNsfwAlert ===
+// === Module 17194: VoicePanelNsfwAlert ===
 
-// Module 17191 (VoicePanelNsfwAlert)
+// Module 17194 (VoicePanelNsfwAlert)
 import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 5411 */;
 import GuildActionCreatorsDefault from "GuildActionCreators" /* 5520 */;
 import noop from "module_19" /* 19 */;

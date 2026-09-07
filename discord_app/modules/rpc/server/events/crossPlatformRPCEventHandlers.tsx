@@ -1,17 +1,17 @@
-// === Module 14519: crossPlatformRPCEventHandlers ===
+// === Module 14522: crossPlatformRPCEventHandlers ===
 
-// Module 14519 (crossPlatformRPCEventHandlers)
+// Module 14522 (crossPlatformRPCEventHandlers)
 import _modDef12 from "module_12" /* 12 */;
 import discord_common_shallowEqualDefault from "discord_common/shallowEqual" /* 558 */;
 import BigFlagUtilsAll from "BigFlagUtils" /* 1086 */;
 import AgeGateUtils from "AgeGateUtils" /* 4771 */;
-import RPCErrorDefault from "RPCError" /* 9554 */;
-import createRpcJoiSchemaObjectDefault from "createRpcJoiSchemaObject" /* 9557 */;
-import RPCHelpers from "RPCHelpers" /* 9559 */;
-import transformUserDefault from "transformUser" /* 9560 */;
-import VibegrationsVoiceSessionCoordinatorDefault from "VibegrationsVoiceSessionCoordinator" /* 14459 */;
-import transformGuildMemberDefault from "transformGuildMember" /* 14520 */;
-import transformApplicationDefault from "transformApplication" /* 14521 */;
+import RPCErrorDefault from "RPCError" /* 9559 */;
+import createRpcJoiSchemaObjectDefault from "createRpcJoiSchemaObject" /* 9562 */;
+import RPCHelpers from "RPCHelpers" /* 9564 */;
+import transformUserDefault from "transformUser" /* 9565 */;
+import VibegrationsVoiceSessionCoordinatorDefault from "VibegrationsVoiceSessionCoordinator" /* 14462 */;
+import transformGuildMemberDefault from "transformGuildMember" /* 14523 */;
+import transformApplicationDefault from "transformApplication" /* 14524 */;
 import ApplicationStore from "ApplicationStore" /* 4788 */;
 import RunningGameStore from "RunningGameStore" /* 1915 */;
 import ApplicationStreamingStore from "ApplicationStreamingStore" /* 4582 */;
@@ -283,7 +283,7 @@ obj[RPCEvents.VOICE_SESSION_PARTICIPANTS_UPDATE] = {
   handler(args) {
     const session_id = args.args.session_id;
     const socket = args.socket;
-    const result = socket(14459).validateEventSubscription(socket, session_id);
+    const result = socket(14462).validateEventSubscription(socket, session_id);
     return (prevState) => {
       prevState = prevState.prevState;
       let obj = VibegrationsVoiceSessionCoordinatorDefault;
@@ -402,7 +402,7 @@ const obj32 = {
   }
 };
 obj[RPCEvents.FRAME_LAYOUT_MODE_UPDATE] = obj32;
-obj[RPCEvents.ACTIVITY_INSTANCE_PARTICIPANTS_UPDATE] = fn(14464).activityInstanceConnectedParticipantsUpdateEvent;
+obj[RPCEvents.ACTIVITY_INSTANCE_PARTICIPANTS_UPDATE] = fn(14467).activityInstanceConnectedParticipantsUpdateEvent;
 const obj33 = {
   scope: null,
   handler() {

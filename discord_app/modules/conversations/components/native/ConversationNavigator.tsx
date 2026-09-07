@@ -7,7 +7,7 @@ import useToken from "useToken" /* 4262 */;
 import RootNavigationRef from "RootNavigationRef" /* 4418 */;
 import HeaderShared from "HeaderShared" /* 7863 */;
 import ConversationNavigatorHeaderDefault from "ConversationNavigatorHeader" /* 7924 */;
-import ConversationNavigatorMoreMenuDefault from "ConversationNavigatorMoreMenu" /* 13250 */;
+import ConversationNavigatorMoreMenuDefault from "ConversationNavigatorMoreMenu" /* 13254 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -79,7 +79,7 @@ export default function ConversationNavigator(route) {
         return obj;
       },
       getComponent() {
-        return channelId(13251).default;
+        return channelId(13255).default;
       }
     })
   ];

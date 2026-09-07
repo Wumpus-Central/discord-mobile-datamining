@@ -1,16 +1,16 @@
-// === Module 10170: Notification ===
+// === Module 10175: Notification ===
 
-// Module 10170 (Notification)
+// Module 10175 (Notification)
 import nativeDefault from "native" /* 576 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4296 */;
 import timing from "timing" /* 4561 */;
 import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 4740 */;
 import spring from "spring" /* 4974 */;
-import InAppNotificationUtils from "InAppNotificationUtils" /* 10094 */;
+import InAppNotificationUtils from "InAppNotificationUtils" /* 10099 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const InAppNotificationConstants = fn(10095);
+const InAppNotificationConstants = fn(10100);
 ({ MIN_SWIPE_VELOCITY: closure_4, STARTED_SWIPE_THRESHOLD: hasOwnProperty, NOTIFICATION_MAX_WIDTH } = InAppNotificationConstants);
 const AnalyticEvents = fn(1074).AnalyticEvents;
 const jsxProd = fn(21);

@@ -1,11 +1,11 @@
-// === Module 16993: VoiceOrStageSummaryRow ===
+// === Module 16996: VoiceOrStageSummaryRow ===
 
-// Module 16993 (VoiceOrStageSummaryRow)
+// Module 16996 (VoiceOrStageSummaryRow)
 import nativeDefault from "native" /* 576 */;
 import native from "native" /* 1178 */;
 import Text_Text from "Text/Text" /* 4556 */;
-import _modDef16658 from "module_16658" /* 16658 */;
-import getLayoutStylesDefault from "getLayoutStyles" /* 16977 */;
+import _modDef16661 from "module_16661" /* 16661 */;
+import getLayoutStylesDefault from "getLayoutStyles" /* 16980 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -92,7 +92,7 @@ export default noop.memo(function VoiceOrStageSummaryRow(arg0) {
     const items3 = [, ];
     ({ badge: arr4[0], audienceBadge: arr4[1] } = tmp4);
     obj1.style = items3;
-    let obj2 = { size: max(1178).Icon.Sizes.CUSTOM, style: { height: 14, width: 14 }, source: _modDef16658 };
+    let obj2 = { size: max(1178).Icon.Sizes.CUSTOM, style: { height: 14, width: 14 }, source: _modDef16661 };
     const items4 = [closure_4(max(1178).Icon, obj2), ];
     let obj3 = { variant: "text-sm/bold", style: { marginLeft: 4 }, children: audienceCount };
     items4[1] = closure_4(max(4556).Text, obj3);

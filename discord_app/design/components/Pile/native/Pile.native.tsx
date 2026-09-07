@@ -1,10 +1,10 @@
-// === Module 11000: Pile ===
+// === Module 11005: Pile ===
 
-// Module 11000 (Pile)
+// Module 11005 (Pile)
 import _mod12 from "module_12" /* 12 */;
 import GlobalUtils from "GlobalUtils" /* 1369 */;
-import ClipView from "ClipView" /* 8813 */;
-import PileOverflow from "PileOverflow" /* 11001 */;
+import ClipView from "ClipView" /* 8818 */;
+import PileOverflow from "PileOverflow" /* 11006 */;
 import noop from "module_19" /* 19 */;
 
 const ClipViewDefault = ClipView;

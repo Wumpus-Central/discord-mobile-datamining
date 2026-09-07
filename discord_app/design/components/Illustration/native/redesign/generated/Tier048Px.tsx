@@ -1,6 +1,6 @@
-// === Module 13508: Tier048Px ===
+// === Module 13512: Tier048Px ===
 
-// Module 13508 (Tier048Px)
+// Module 13512 (Tier048Px)
 import shared from "shared" /* 4411 */;
 import _mod8233 from "module_8233" /* 8233 */;
 import noop from "module_19" /* 19 */;
@@ -14,13 +14,13 @@ const result = size.fileFinishedImporting("design/components/Illustration/native
 export const getTier048PxSource = function getTier048PxSource(theme) {
   const obj = {
     dark() {
-      return require("module_13509");
+      return require("module_13513");
     },
     darker() {
-      return require("module_13510");
+      return require("module_13514");
     },
     light() {
-      return require("module_13511");
+      return require("module_13515");
     }
   };
   return obj.getIllustrationSource(theme, obj);
@@ -28,13 +28,13 @@ export const getTier048PxSource = function getTier048PxSource(theme) {
 export const useTier048PxSource = function useTier048PxSource() {
   const obj = {
     dark() {
-      return require("module_13509");
+      return require("module_13513");
     },
     darker() {
-      return require("module_13510");
+      return require("module_13514");
     },
     light() {
-      return require("module_13511");
+      return require("module_13515");
     }
   };
   return _mod8233.getIllustrationSource(obj.useThemeContext().theme, obj);
@@ -42,13 +42,13 @@ export const useTier048PxSource = function useTier048PxSource() {
 export const Tier048Px = function Tier048Px(arg0) {
   let obj = {
     dark() {
-      return require("module_13509");
+      return require("module_13513");
     },
     darker() {
-      return require("module_13510");
+      return require("module_13514");
     },
     light() {
-      return require("module_13511");
+      return require("module_13515");
     }
   };
   obj = {};

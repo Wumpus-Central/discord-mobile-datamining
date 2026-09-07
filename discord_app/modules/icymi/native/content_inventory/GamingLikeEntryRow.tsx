@@ -1,13 +1,13 @@
-// === Module 16501: GamingLikeEntryRow ===
+// === Module 16504: GamingLikeEntryRow ===
 
-// Module 16501 (GamingLikeEntryRow)
+// Module 16504 (GamingLikeEntryRow)
 import nativeDefault from "native" /* 576 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
 import ContentInventoryEntryType from "ContentInventoryEntryType" /* 8130 */;
 import utils from "utils" /* 8135 */;
 import ICYMIActionCreatorsDefault from "ICYMIActionCreators" /* 8351 */;
-import BadgesAll from "Badges" /* 13008 */;
-import TrendingType from "TrendingType" /* 13013 */;
+import BadgesAll from "Badges" /* 13012 */;
+import TrendingType from "TrendingType" /* 13017 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1371 */;
 
@@ -54,7 +54,7 @@ items[4] = {
     return true === utils.isEntryMarathon(entry);
   }
 };
-const createICYMIStyles = fn(16452);
+const createICYMIStyles = fn(16455);
 let closure_11 = createICYMIStyles.createICYMIStyles((gap) => {
   let obj = { card: null, cardInnerContainer: null, image: null, gameName: null, badges: null };
   obj = { flexDirection: "row", gap: gap.margin, alignItems: "center", padding: gap.margin, marginLeft: gap.inset, borderRadius: nativeDefault.radii.lg, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH };
@@ -129,7 +129,7 @@ export default function GamingLikeEntryRow(content) {
   }, items2);
   const items3 = [content];
   const callback1 = noop.useCallback(() => {
-    asyncRequireImpl(16502, dependencyMap.paths).then((GameShareModal) => {
+    asyncRequireImpl(16505, dependencyMap.paths).then((GameShareModal) => {
       GameShareModal = GameShareModal.GameShareModal;
       if (null != GameShareModal) {
         let obj = author_id(openReplyActionSheet[19]);

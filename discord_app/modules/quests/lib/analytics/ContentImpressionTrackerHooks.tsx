@@ -1,9 +1,9 @@
-// === Module 11486: ContentImpressionTrackerHooks ===
+// === Module 11491: ContentImpressionTrackerHooks ===
 
-// Module 11486 (ContentImpressionTrackerHooks)
+// Module 11491 (ContentImpressionTrackerHooks)
 import AdCreativeType from "AdCreativeType" /* 5451 */;
 import AnalyticsTypes from "AnalyticsTypes" /* 7728 */;
-import ContentImpressionTracker from "ContentImpressionTracker" /* 11487 */;
+import ContentImpressionTracker from "ContentImpressionTracker" /* 11492 */;
 import noop from "module_19" /* 19 */;
 import QuestStore from "QuestStore" /* 7703 */;
 

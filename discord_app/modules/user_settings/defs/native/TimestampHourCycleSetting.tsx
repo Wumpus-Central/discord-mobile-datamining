@@ -1,13 +1,13 @@
-// === Module 15472: TimestampHourCycleSetting ===
+// === Module 15475: TimestampHourCycleSetting ===
 
-// Module 15472 (TimestampHourCycleSetting)
+// Module 15475 (TimestampHourCycleSetting)
 import util from "util" /* 1114 */;
 import preloaded_user_settings from "preloaded_user_settings" /* 1187 */;
 import UserSettings from "UserSettings" /* 1935 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-fn(11468);
+fn(11473);
 let SettingBuilders = {
   useTitle() {
     const intl = util.intl;

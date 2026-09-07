@@ -1,12 +1,12 @@
-// === Module 17531: AssetChooser ===
+// === Module 17534: AssetChooser ===
 
-// Module 17531 (AssetChooser)
+// Module 17534 (AssetChooser)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import native from "native" /* 1178 */;
 import Pressables from "Pressables" /* 5123 */;
-import _modDef17532 from "module_17532" /* 17532 */;
-import _modDef17533 from "module_17533" /* 17533 */;
+import _modDef17535 from "module_17535" /* 17535 */;
+import _modDef17536 from "module_17536" /* 17536 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 
@@ -131,13 +131,13 @@ prototype["render"] = function render() {
   obj.disabled = disabled;
   let tmp9 = source;
   if (null == source) {
-    tmp9 = _modDef17532;
+    tmp9 = _modDef17535;
   }
   obj = { source: tmp9, style: tmp.asset, children: null };
   let tmp5Result = null;
   if (!disabled) {
     obj = { style: tmp.uploadIconWrapper, children: null };
-    const obj1 = { style: tmp.uploadIcon, source: _modDef17533 };
+    const obj1 = { style: tmp.uploadIcon, source: _modDef17536 };
     obj.children = React7(hasOwnProperty, obj1);
     tmp5Result = React7(React4, obj);
   }

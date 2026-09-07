@@ -1,6 +1,6 @@
-// === Module 9363: PremiumFeaturesCard ===
+// === Module 9368: PremiumFeaturesCard ===
 
-// Module 9363 (PremiumFeaturesCard)
+// Module 9368 (PremiumFeaturesCard)
 import _modDef38 from "module_38" /* 38 */;
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
@@ -12,13 +12,13 @@ import PriceUtils from "PriceUtils" /* 7234 */;
 import useFractionalPremiumInfoDefault from "useFractionalPremiumInfo" /* 7393 */;
 import openPremiumPlanSelectionActionSheetDefault from "openPremiumPlanSelectionActionSheet" /* 7422 */;
 import PremiumGroupUtils from "PremiumGroupUtils" /* 8049 */;
-import PremiumFeaturesBackgroundDefault from "PremiumFeaturesBackground" /* 8833 */;
-import usePremiumPlanPrice from "usePremiumPlanPrice" /* 9364 */;
-import usePremiumFeaturesDefault from "usePremiumFeatures" /* 9370 */;
-import PremiumGroupWordmarkDefault from "PremiumGroupWordmark" /* 9381 */;
-import PremiumFeaturesLogoDefault from "PremiumFeaturesLogo" /* 9382 */;
-import PremiumFeaturesWumpusDefault from "PremiumFeaturesWumpus" /* 9384 */;
-import PremiumFeatureListDefault from "PremiumFeatureList" /* 9391 */;
+import PremiumFeaturesBackgroundDefault from "PremiumFeaturesBackground" /* 8838 */;
+import usePremiumPlanPrice from "usePremiumPlanPrice" /* 9369 */;
+import usePremiumFeaturesDefault from "usePremiumFeatures" /* 9375 */;
+import PremiumGroupWordmarkDefault from "PremiumGroupWordmark" /* 9386 */;
+import PremiumFeaturesLogoDefault from "PremiumFeaturesLogo" /* 9387 */;
+import PremiumFeaturesWumpusDefault from "PremiumFeaturesWumpus" /* 9389 */;
+import PremiumFeatureListDefault from "PremiumFeatureList" /* 9396 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4552 */;
@@ -363,7 +363,7 @@ export default function PremiumFeaturesCard(premiumType) {
   _modDef38(null != premiumBundleWithPredicate, "could not find a premium item");
   const tmp8Result4 = premiumType(7409);
   const items3 = [premiumBundleWithPredicate];
-  const discountedPriceString = premiumType(9379).useDiscountedPremiumProductInfo(premiumDiscountOffer, items3).discountedPriceString;
+  const discountedPriceString = premiumType(9384).useDiscountedPremiumProductInfo(premiumDiscountOffer, items3).discountedPriceString;
   let tmp32 = tmp24;
   if (null != first && stateFromStores && tmp19[1] && !isBoostOnly) {
     let flag4 = false;
@@ -385,7 +385,7 @@ export default function PremiumFeaturesCard(premiumType) {
   obj2 = { premiumType, style, children: null };
   obj3 = { style: tmp3.card, children: null };
   const obj4 = { style: tmp3.logoContainer, children: null };
-  const tmp8Result5 = premiumType(9379);
+  const tmp8Result5 = premiumType(9384);
   if (flag3) {
     let tmp37Result = closure_19(PremiumGroupWordmarkDefault, { width: 185, height: 20, alwaysWhite: true });
   } else {
@@ -451,7 +451,7 @@ export default function PremiumFeaturesCard(premiumType) {
         const obj14 = { text: stringResult, icon: null, iconPosition: null, variant: null, size: "md", grow: true, shiny: null, disabled: null, onPress: null };
         if (null != premiumDiscountOffer) {
           const obj15 = { style: tmp3.buttonIcon, color: nativeDefault.colors.CONTROL_OVERLAY_PRIMARY_TEXT_DEFAULT, size: "sm" };
-          const tmp37Result2 = closure_19(tmp8(8662).NitroWheelIcon, obj15);
+          const tmp37Result2 = closure_19(tmp8(8667).NitroWheelIcon, obj15);
         }
         obj14.icon = tmp37Result2;
         let str;

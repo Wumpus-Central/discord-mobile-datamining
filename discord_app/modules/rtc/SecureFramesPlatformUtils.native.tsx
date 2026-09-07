@@ -1,6 +1,6 @@
-// === Module 9154: SecureFramesPlatformUtils ===
+// === Module 9159: SecureFramesPlatformUtils ===
 
-// Module 9154 (SecureFramesPlatformUtils)
+// Module 9159 (SecureFramesPlatformUtils)
 import util from "util" /* 1114 */;
 import native from "native" /* 1178 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
@@ -12,7 +12,7 @@ import ChannelStore from "ChannelStore" /* 1957 */;
 import RTCConnectionStore from "RTCConnectionStore" /* 4583 */;
 
 require = fn;
-const SecureFramesConstants = fn(9152);
+const SecureFramesConstants = fn(9157);
 ({ SECURE_FRAMES_LINKING_BOTTOM_SHEET_KEY: hasOwnProperty, SECURE_FRAMES_STREAM_VERIFICATION_BOTTOM_SHEET_KEY: metroRequire, SECURE_FRAMES_USER_VERIFICATION_MODAL_KEY: closure_7 } = SecureFramesConstants);
 const Constants = fn(1074);
 ({ ME: closure_8, Routes: closure_9 } = Constants);
@@ -22,12 +22,12 @@ const result = size.fileFinishedImporting("modules/rtc/SecureFramesPlatformUtils
 export default {
   openSecureFramesStreamVerification(streamKey, channelId) {
     const obj = { streamKey, channelId };
-    obj.openLazy(asyncRequireImpl(9166, dependencyMap.paths), timestampProducer, obj);
+    obj.openLazy(asyncRequireImpl(9171, dependencyMap.paths), timestampProducer, obj);
   },
   openSecureFramesUserVerificationModal(id, id2, fn) {
     if (fn()) {
       const obj = { userId: id, channelId: id2 };
-      obj.pushLazy(asyncRequireImpl(9155, dependencyMap.paths), obj, React5);
+      obj.pushLazy(asyncRequireImpl(9160, dependencyMap.paths), obj, React5);
     }
   },
   openSecureFramesUpdateConfirmation(confirmText) {
@@ -64,7 +64,7 @@ export default {
       if (null != channel) {
         safeTransitionToDefault(React7.CHANNEL(guildId, channelId));
         let obj = { userId, channelId, guildId, fingerprint };
-        ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(9169, dependencyMap.paths), hasOwnProperty, obj);
+        ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(9174, dependencyMap.paths), hasOwnProperty, obj);
       }
     }
     obj = { title: null, body: null };

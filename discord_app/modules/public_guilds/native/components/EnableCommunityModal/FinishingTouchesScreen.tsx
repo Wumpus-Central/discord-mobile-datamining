@@ -1,12 +1,12 @@
-// === Module 17677: FinishingTouchesScreen ===
+// === Module 17680: FinishingTouchesScreen ===
 
-// Module 17677 (FinishingTouchesScreen)
+// Module 17680 (FinishingTouchesScreen)
 import BigFlagUtilsAll from "BigFlagUtils" /* 1086 */;
 import PermissionUtilsAll from "PermissionUtils" /* 4204 */;
-import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 9063 */;
+import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 9068 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GuildSettingsStore from "GuildSettingsStore" /* 9064 */;
+import GuildSettingsStore from "GuildSettingsStore" /* 9069 */;
 import GuildRoleStore from "GuildRoleStore" /* 2015 */;
 
 const require = fn;
@@ -88,19 +88,19 @@ export default function FinishingTouchesScreen() {
       }
       obj.publicUpdatesChannelId = publicUpdatesChannelId;
       obj.defaultMessageNotifications = features.defaultMessageNotifications;
-      first(9063).saveGuild(features.id, obj);
+      first(9068).saveGuild(features.id, obj);
       if (removeResult !== everyoneRole.permissions) {
-        obj = guild(17624);
+        obj = guild(17627);
         const items = [obj];
         obj.saveRoleSettings(features.id, items);
       }
-      const obj5 = first(9063);
+      const obj5 = first(9068);
     }
   }, []);
   const tmp11 = _slicedToArray(obj.useState(!closure_11.some((item) => PermissionUtilsAll.canEveryone(item, guild))), 2);
-  const tmp19 = defaultMessageNotifications(17666)();
-  const enableCommunitySharedStyles = guild(17665).useEnableCommunitySharedStyles();
-  obj = { headerRef: ref, currentStep: tmp2(17663).EnableCommunityModalSteps.STEP_3, onSuccess: callback1, disableNextStep: !first1, buttonText: null, children: null };
+  const tmp19 = defaultMessageNotifications(17669)();
+  const enableCommunitySharedStyles = guild(17668).useEnableCommunitySharedStyles();
+  obj = { headerRef: ref, currentStep: tmp2(17666).EnableCommunityModalSteps.STEP_3, onSuccess: callback1, disableNextStep: !first1, buttonText: null, children: null };
   const intl = tmp2(1114).intl;
   obj.buttonText = intl.string(guild(1114).t.XGl4ba);
   obj = { style: enableCommunitySharedStyles.content, children: null };
@@ -122,7 +122,7 @@ export default function FinishingTouchesScreen() {
   const items3 = [closure_17(closure_7, obj), , ];
   let obj5 = { spacing: 24, style: { paddingHorizontal: token }, children: null };
   const obj6 = { formSwitchDisabled: defaultMessageNotifications === constants2.ONLY_MENTIONS, children: null };
-  let tmp4Result = tmp4(17675);
+  let tmp4Result = tmp4(17678);
   const obj7 = { label: null, value: null, disabled: null, onValueChange: null };
   const intl5 = tmp2(1114).intl;
   obj7.label = intl5.format(guild(1114).t.K8Eg4P, {
@@ -141,7 +141,7 @@ export default function FinishingTouchesScreen() {
   obj6.children = closure_16(guild(7201).TableSwitchRow, obj7);
   const items4 = [closure_16(tmp4Result, obj6), ];
   const obj10 = { formSwitchDisabled: first2, children: null };
-  tmp4Result = tmp4(17675);
+  tmp4Result = tmp4(17678);
   const obj11 = { label: null, value: null, disabled: null, onValueChange: null };
   const intl6 = tmp2(1114).intl;
   obj11.label = intl6.format(guild(1114).t.v8qCoG, {
@@ -181,12 +181,12 @@ export default function FinishingTouchesScreen() {
       return null;
     }
   };
-  const tmp2Result = guild(17665);
+  const tmp2Result = guild(17668);
   obj16.communityGuidelines = defaultMessageNotifications(2024).getArticleURL(constants.PUBLIC_GUILD_GUILDLINES);
   const tmp4Result1 = defaultMessageNotifications(2024);
   obj16.typesOfGuilds = defaultMessageNotifications(2024).getArticleURL(constants.FRIEND_COMMUNITY_DISCOVERABLE_GUILD_TYPES);
   obj15.children = intl9.format(guild(1114).t["BwbW/Q"], obj16);
   items3[2] = closure_16(guild(4556).Text, obj15);
   obj.children = items3;
-  return closure_17(guild(17663).EnableCommunityModalScreen, obj);
+  return closure_17(guild(17666).EnableCommunityModalScreen, obj);
 };

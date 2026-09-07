@@ -1,17 +1,17 @@
-// === Module 12482: GameServerActionCreators ===
+// === Module 12486: GameServerActionCreators ===
 
-// Module 12482 (GameServerActionCreators)
+// Module 12486 (GameServerActionCreators)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
 import HTTPUtils from "HTTPUtils" /* 1272 */;
 import gameServerResponseToInstanceDefault from "gameServerResponseToInstance" /* 4472 */;
 import StoreUtils from "StoreUtils" /* 4802 */;
-import GameServerMocks from "GameServerMocks" /* 12484 */;
-import GameServerStatus from "GameServerStatus" /* 12485 */;
-import regionResponseToRegionDefault from "regionResponseToRegion" /* 12487 */;
+import GameServerMocks from "GameServerMocks" /* 12488 */;
+import GameServerStatus from "GameServerStatus" /* 12489 */;
+import regionResponseToRegionDefault from "regionResponseToRegion" /* 12491 */;
 import LocaleStore from "LocaleStore" /* 2025 */;
 import UserStore from "UserStore" /* 1371 */;
-import OwnedGameServersStore from "OwnedGameServersStore" /* 12483 */;
+import OwnedGameServersStore from "OwnedGameServersStore" /* 12487 */;
 
 require = fn;
 const GAME_SERVER_COLLECTION_ID = fn(4451).GAME_SERVER_COLLECTION_ID;
@@ -234,7 +234,7 @@ export const optimisticallyMarkGameServerResizing = function optimisticallyMarkG
   const gameServers = OwnedGameServersStore.getGameServers();
   const found = gameServers.find((subscription_id) => subscription_id.subscription_id === closure_0);
   if (null != found) {
-    let obj = { type: "GAME_SERVER_UPDATE", guildId: "Array", gameServer: "LOCAL_PAYMENT_NOT_ENABLED" };
+    let obj = { type: "GAME_SERVER_UPDATE", guildId: "Array", gameServer: "METHOD_CALLED_AFTER_TEARDOWN" };
     obj = {};
     const merged = Object.assign(found);
     obj.status = GameServerStatus.GameServerStatus.STARTING;
@@ -249,7 +249,7 @@ export const updateMyGameServerName = function updateMyGameServerName(arg0, name
   if (null == found) {
     let resolved = Promise.resolve();
   } else {
-    let obj = { type: "GAME_SERVER_UPDATE", guildId: "Array", gameServer: "LOCAL_PAYMENT_NOT_ENABLED" };
+    let obj = { type: "GAME_SERVER_UPDATE", guildId: "Array", gameServer: "METHOD_CALLED_AFTER_TEARDOWN" };
     obj = {};
     const merged = Object.assign(found);
     obj.name = name;
@@ -316,7 +316,7 @@ export const wakeMyGameServer = function wakeMyGameServer(arg0) {
   const gameServers = OwnedGameServersStore.getGameServers();
   const found = gameServers.find((id) => id.id === closure_0);
   if (null != found) {
-    let obj = { type: "GAME_SERVER_UPDATE", guildId: "Array", gameServer: "LOCAL_PAYMENT_NOT_ENABLED" };
+    let obj = { type: "GAME_SERVER_UPDATE", guildId: "Array", gameServer: "METHOD_CALLED_AFTER_TEARDOWN" };
     obj = {};
     let merged = Object.assign(found);
     obj.status = require("GameServerStatus").GameServerStatus.STARTING;
@@ -330,10 +330,10 @@ export const wakeMyGameServer = function wakeMyGameServer(arg0) {
     body = body.body;
     let obj = DispatcherDefault;
     let tmp3 = body;
-    if (body.status === closure_0(12485).GameServerStatus.SLEEPING) {
+    if (body.status === closure_0(12489).GameServerStatus.SLEEPING) {
       obj = {};
       const merged = Object.assign(body);
-      obj.status = closure_0(12485).GameServerStatus.STARTING;
+      obj.status = closure_0(12489).GameServerStatus.STARTING;
       tmp3 = obj;
     }
     obj = { type: "GAME_SERVER_UPDATE", guildId: "Array", gameServer: tmp3 };

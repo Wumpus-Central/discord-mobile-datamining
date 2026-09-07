@@ -1,6 +1,6 @@
-// === Module 17821: SocialRpcNetworkConfigManager ===
+// === Module 17824: SocialRpcNetworkConfigManager ===
 
-// Module 17821 (SocialRpcNetworkConfigManager)
+// Module 17824 (SocialRpcNetworkConfigManager)
 import _mod17 from "module_17" /* 17 */;
 import PlatformUtils from "PlatformUtils" /* 1115 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;

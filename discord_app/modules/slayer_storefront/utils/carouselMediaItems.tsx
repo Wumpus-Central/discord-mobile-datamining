@@ -1,6 +1,6 @@
-// === Module 10801: carouselMediaItems ===
+// === Module 10806: carouselMediaItems ===
 
-// Module 10801 (carouselMediaItems)
+// Module 10806 (carouselMediaItems)
 import StoreUtils from "StoreUtils" /* 4802 */;
 import SlayerStorefrontUtils from "SlayerStorefrontUtils" /* 7226 */;
 import size from "module_2" /* 2 */;

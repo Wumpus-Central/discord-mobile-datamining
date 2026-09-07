@@ -1,6 +1,6 @@
-// === Module 16612: VibegrationsNativeComposer ===
+// === Module 16615: VibegrationsNativeComposer ===
 
-// Module 16612 (VibegrationsNativeComposer)
+// Module 16615 (VibegrationsNativeComposer)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import _modDef3547 from "module_3547" /* 3547 */;
@@ -19,7 +19,7 @@ function tooLargeText(contentType) {
 }
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: metroRequire, View: closure_7 } = get_ActivityIndicator);
-const VibegrationsConnectionStore = fn(16589);
+const VibegrationsConnectionStore = fn(16592);
 ({ deleteStagedAttachment: closure_8, uploadAttachmentBytes: closure_9 } = VibegrationsConnectionStore);
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);

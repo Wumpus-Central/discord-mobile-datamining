@@ -1,6 +1,6 @@
-// === Module 11305: MessageViewTrackingManager ===
+// === Module 11310: MessageViewTrackingManager ===
 
-// Module 11305 (MessageViewTrackingManager)
+// Module 11310 (MessageViewTrackingManager)
 import Constants from "Constants" /* 1074 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
 import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1250 */;

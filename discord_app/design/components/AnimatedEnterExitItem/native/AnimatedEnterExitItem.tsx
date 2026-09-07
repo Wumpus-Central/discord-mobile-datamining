@@ -1,6 +1,6 @@
-// === Module 9969: AnimatedEnterExitItem ===
+// === Module 9974: AnimatedEnterExitItem ===
 
-// Module 9969 (AnimatedEnterExitItem)
+// Module 9974 (AnimatedEnterExitItem)
 import native from "native" /* 4271 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4296 */;
 import noop from "module_19" /* 19 */;

@@ -1,6 +1,6 @@
-// === Module 14455: PreloadedUserSettingsMigrations ===
+// === Module 14458: PreloadedUserSettingsMigrations ===
 
-// Module 14455 (PreloadedUserSettingsMigrations)
+// Module 14458 (PreloadedUserSettingsMigrations)
 import initializeDefault from "initialize" /* 504 */;
 import Storage4 from "Storage" /* 510 */;
 import preloaded_user_settings from "preloaded_user_settings" /* 1187 */;
@@ -38,7 +38,7 @@ function migrateHotspotLocation(userContent, ACTIVITY_BEB_TUTORIAL, ACCOUNT_MULT
   return hasHiddenHotspotResult;
 }
 const ChannelNoticeTypes = fn(1074).ChannelNoticeTypes;
-let closure_5 = fn(12414).MULTIACCOUNT_TOOLTIP_SEEN_KEY;
+let closure_5 = fn(12418).MULTIACCOUNT_TOOLTIP_SEEN_KEY;
 let items = [
   {
     version: 2,

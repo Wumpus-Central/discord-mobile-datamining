@@ -1,6 +1,6 @@
-// === Module 8769: CollectiblesWishlistUtils ===
+// === Module 8774: CollectiblesWishlistUtils ===
 
-// Module 8769 (CollectiblesWishlistUtils)
+// Module 8774 (CollectiblesWishlistUtils)
 import util from "util" /* 1114 */;
 import CollectiblesItemType from "CollectiblesItemType" /* 1889 */;
 import CollectiblesUtils from "CollectiblesUtils" /* 7554 */;

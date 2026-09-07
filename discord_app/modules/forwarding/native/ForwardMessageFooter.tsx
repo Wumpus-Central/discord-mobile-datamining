@@ -1,6 +1,6 @@
-// === Module 11691: ForwardMessageFooter ===
+// === Module 11696: ForwardMessageFooter ===
 
-// Module 11691 (ForwardMessageFooter)
+// Module 11696 (ForwardMessageFooter)
 import DraftActionCreatorsDefault from "DraftActionCreators" /* 7777 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;

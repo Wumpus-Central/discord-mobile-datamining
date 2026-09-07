@@ -1,6 +1,6 @@
-// === Module 12116: AppLauncherGlobalSearchOnboardingBanner ===
+// === Module 12120: AppLauncherGlobalSearchOnboardingBanner ===
 
-// Module 12116 (AppLauncherGlobalSearchOnboardingBanner)
+// Module 12120 (AppLauncherGlobalSearchOnboardingBanner)
 import nativeDefault from "native" /* 576 */;
 import AppsIcon from "AppsIcon" /* 5106 */;
 import noop from "module_19" /* 19 */;
@@ -60,7 +60,7 @@ export default function GlobalSearchCoachmark(markAsDismissed) {
     obj.targetMeasurements = size;
     const size1 = { x: -140, y: -40, width: diff, height: windowDimensions.height };
     obj.surfaceMeasurements = size1;
-    tmp3 = jsx(markAsDismissed(11135).Coachmark, {
+    tmp3 = jsx(markAsDismissed(11140).Coachmark, {
       renderImgComponent: function appsIcon() {
           let obj = { style: closure_2.appsIcon, children: null };
           obj = { style: closure_2.appsIconImage, color: nativeDefault.colors.INTERACTIVE_TEXT_ACTIVE };

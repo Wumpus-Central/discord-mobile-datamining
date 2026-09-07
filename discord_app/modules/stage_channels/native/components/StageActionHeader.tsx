@@ -1,6 +1,6 @@
-// === Module 10027: StageActionHeader ===
+// === Module 10032: StageActionHeader ===
 
-// Module 10027 (StageActionHeader)
+// Module 10032 (StageActionHeader)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
@@ -11,24 +11,24 @@ import ModalActionCreatorsDefault from "ModalActionCreators" /* 4763 */;
 import PrivateChannelCallUtils from "PrivateChannelCallUtils" /* 4767 */;
 import LinearGradientDefault from "LinearGradient" /* 4987 */;
 import StageChannelActionCreatorExtras from "StageChannelActionCreatorExtras" /* 8394 */;
-import _modDef8619 from "module_8619" /* 8619 */;
-import _modDef8622 from "module_8622" /* 8622 */;
-import StatusBarDefault from "StatusBar" /* 9481 */;
-import instant_invite_InstantInviteUtils from "instant_invite/InstantInviteUtils" /* 9820 */;
-import StageMusicActionCreators from "StageMusicActionCreators" /* 9913 */;
-import ChannelCallNavigatorIconDefault from "ChannelCallNavigatorIcon" /* 9924 */;
-import _modDef10028 from "module_10028" /* 10028 */;
-import _modDef10029 from "module_10029" /* 10029 */;
-import _modDef10030 from "module_10030" /* 10030 */;
-import useMyCurrentStageChannelRoleDefault from "useMyCurrentStageChannelRole" /* 10033 */;
-import ChannelCallHeaderButtons from "ChannelCallHeaderButtons" /* 10034 */;
+import _modDef8624 from "module_8624" /* 8624 */;
+import _modDef8627 from "module_8627" /* 8627 */;
+import StatusBarDefault from "StatusBar" /* 9486 */;
+import instant_invite_InstantInviteUtils from "instant_invite/InstantInviteUtils" /* 9825 */;
+import StageMusicActionCreators from "StageMusicActionCreators" /* 9918 */;
+import ChannelCallNavigatorIconDefault from "ChannelCallNavigatorIcon" /* 9929 */;
+import _modDef10033 from "module_10033" /* 10033 */;
+import _modDef10034 from "module_10034" /* 10034 */;
+import _modDef10035 from "module_10035" /* 10035 */;
+import useMyCurrentStageChannelRoleDefault from "useMyCurrentStageChannelRole" /* 10038 */;
+import ChannelCallHeaderButtons from "ChannelCallHeaderButtons" /* 10039 */;
 import noop from "module_19" /* 19 */;
 import ChannelRTCStore from "ChannelRTCStore" /* 4576 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 import GuildReadStateStore from "GuildReadStateStore" /* 7636 */;
 import GuildStore from "GuildStore" /* 1979 */;
 import StageInstanceStore from "StageInstanceStore" /* 1962 */;
-import StageMusicStore from "StageMusicStore" /* 9899 */;
+import StageMusicStore from "StageMusicStore" /* 9904 */;
 
 require = fn;
 class HideStageChannelCallIcon {
@@ -338,7 +338,7 @@ export const HideChannelCallButton = function HideChannelCallButton(channel) {
   const stateFromStores = obj.useStateFromStores(items, () => totalMentionCount.getTotalMentionCount());
   obj = { source: null, accessibilityLabel: null, onPress: null, containerStyle: null, disableBackground: true, children: null };
   const tmp = closure_14();
-  obj.source = _modDef10028;
+  obj.source = _modDef10033;
   const intl = channel(1114).intl;
   obj.accessibilityLabel = intl.string(channel(1114).t.cpT0Cq);
   obj.onPress = function onPress() {

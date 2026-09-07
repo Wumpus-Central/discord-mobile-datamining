@@ -1,6 +1,6 @@
-// === Module 8789: useDisplayProfileSocialLayerStorefrontApplicationIds ===
+// === Module 8794: useDisplayProfileSocialLayerStorefrontApplicationIds ===
 
-// Module 8789 (useDisplayProfileSocialLayerStorefrontApplicationIds)
+// Module 8794 (useDisplayProfileSocialLayerStorefrontApplicationIds)
 import _mod12 from "module_12" /* 12 */;
 import UserProfileGameWidgetTypes from "UserProfileGameWidgetTypes" /* 7623 */;
 import UserProfileApplicationWidgetTypes from "UserProfileApplicationWidgetTypes" /* 7633 */;

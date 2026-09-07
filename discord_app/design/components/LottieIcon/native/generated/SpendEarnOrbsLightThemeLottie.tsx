@@ -1,8 +1,8 @@
-// === Module 11094: SpendEarnOrbsLightThemeLottie ===
+// === Module 11099: SpendEarnOrbsLightThemeLottie ===
 
-// Module 11094 (SpendEarnOrbsLightThemeLottie)
-import LottieIcon from "LottieIcon" /* 9948 */;
-import _mod11095 from "module_11095" /* 11095 */;
+// Module 11099 (SpendEarnOrbsLightThemeLottie)
+import LottieIcon from "LottieIcon" /* 9953 */;
+import _mod11100 from "module_11100" /* 11100 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -14,5 +14,5 @@ const result = size.fileFinishedImporting("design/components/LottieIcon/native/g
 
 export const SpendEarnOrbsLightThemeLottie = noop.forwardRef((arg0, ref) => {
   const merged = Object.assign(arg0);
-  return jsx(LottieIcon.LottieIcon, { dotLottie: _mod11095, ref, layers, markers: items });
+  return jsx(LottieIcon.LottieIcon, { dotLottie: _mod11100, ref, layers, markers: items });
 });

@@ -1,6 +1,6 @@
-// === Module 15943: Auth ===
+// === Module 15946: Auth ===
 
-// Module 15943 (Auth)
+// Module 15946 (Auth)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import utils_PlatformUtils from "utils/PlatformUtils" /* 1116 */;
@@ -10,15 +10,15 @@ import WideAuthScrollContext from "WideAuthScrollContext" /* 6973 */;
 import BackgroundImageDefault from "BackgroundImage" /* 6975 */;
 import Navigator from "Navigator" /* 7000 */;
 import StackNavigator from "StackNavigator" /* 7002 */;
-import RegistrationHandoff from "RegistrationHandoff" /* 15944 */;
-import RegistrationUtils from "RegistrationUtils" /* 15954 */;
-import useIsHCaptchaModalOpenTracking from "useIsHCaptchaModalOpenTracking" /* 15995 */;
-import _mod15996 from "module_15996" /* 15996 */;
-import AuthManagerDefault from "AuthManager" /* 15997 */;
-import useOrientationLockDefault from "useOrientationLock" /* 16001 */;
+import RegistrationHandoff from "RegistrationHandoff" /* 15947 */;
+import RegistrationUtils from "RegistrationUtils" /* 15957 */;
+import useIsHCaptchaModalOpenTracking from "useIsHCaptchaModalOpenTracking" /* 15998 */;
+import _mod15999 from "module_15999" /* 15999 */;
+import AuthManagerDefault from "AuthManager" /* 16000 */;
+import useOrientationLockDefault from "useOrientationLock" /* 16004 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import MultiAccountStore from "MultiAccountStore" /* 12413 */;
+import MultiAccountStore from "MultiAccountStore" /* 12417 */;
 
 require = fn;
 function getInitialAuthRouteStack() {
@@ -64,7 +64,7 @@ function NavigatorWithCaptchaHook() {
   }, []);
   obj = { backgroundImageSource: null, backgroundImageCover: true };
   const tmp7 = _slicedToArray(noop.useState(first[first.length - 1].name), 2);
-  obj.backgroundImageSource = _mod15996;
+  obj.backgroundImageSource = _mod15999;
   const children = [closure_9(BackgroundImageDefault, obj), ];
   if (tmp5) {
     obj = { value: tmp11, children: null };
@@ -134,7 +134,7 @@ get_ActivityIndicator = fn(17);
 const AuthStates = fn(1074).AuthStates;
 const jsxProd = fn(21);
 ({ jsx: closure_9, Fragment: c10, jsxs: closure_11 } = jsxProd);
-let RegistrationStepsUtils = fn(15945);
+let RegistrationStepsUtils = fn(15948);
 RegistrationStepsUtils = RegistrationStepsUtils.getAllAuthScreens();
 RegistrationStepsUtils = Object.entries(RegistrationStepsUtils);
 const screens = Object.fromEntries(RegistrationStepsUtils.map((item) => {

@@ -1,6 +1,6 @@
-// === Module 12171: AppLauncherAutocompleteActionSheet ===
+// === Module 12175: AppLauncherAutocompleteActionSheet ===
 
-// Module 12171 (AppLauncherAutocompleteActionSheet)
+// Module 12175 (AppLauncherAutocompleteActionSheet)
 import _modDef38 from "module_38" /* 38 */;
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
@@ -9,8 +9,8 @@ import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4527
 import Text_Text from "Text/Text" /* 4556 */;
 import _mod4745 from "module_4745" /* 4745 */;
 import TableRow from "TableRow" /* 5605 */;
-import executeCommandDefault from "executeCommand" /* 9411 */;
-import _modDef12168 from "module_12168" /* 12168 */;
+import executeCommandDefault from "executeCommand" /* 9416 */;
+import _modDef12172 from "module_12172" /* 12172 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ApplicationCommandAutocompleteStore from "ApplicationCommandAutocompleteStore" /* 7779 */;
@@ -132,7 +132,7 @@ function Item(arg0) {
   }).exhaustive();
 }
 function AutocompleteFailedEmptyState() {
-  const obj = { style: closure_12().emptyState, lightSource: _modDef12168, darkSource: _modDef12168, title: null };
+  const obj = { style: closure_12().emptyState, lightSource: _modDef12172, darkSource: _modDef12172, title: null };
   const intl = util.intl;
   obj.title = intl.string(util.t.rTAbPn);
   return React7(native.EmptyState, obj);

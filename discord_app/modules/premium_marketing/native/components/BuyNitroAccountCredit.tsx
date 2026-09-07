@@ -1,10 +1,10 @@
-// === Module 13407: BuyNitroAccountCredit ===
+// === Module 13411: BuyNitroAccountCredit ===
 
-// Module 13407 (BuyNitroAccountCredit)
+// Module 13411 (BuyNitroAccountCredit)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 576 */;
 import SetUtils from "SetUtils" /* 1974 */;
-import PremiumAccountCreditDefault from "PremiumAccountCredit" /* 13348 */;
+import PremiumAccountCreditDefault from "PremiumAccountCredit" /* 13352 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1371 */;
 import SubscriptionStore from "SubscriptionStore" /* 4224 */;

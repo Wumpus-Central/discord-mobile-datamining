@@ -1,14 +1,14 @@
-// === Module 16897: RestrictedMessagePreviewActions ===
+// === Module 16900: RestrictedMessagePreviewActions ===
 
-// Module 16897 (RestrictedMessagePreviewActions)
+// Module 16900 (RestrictedMessagePreviewActions)
 import nativeDefault from "native" /* 576 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
 import UserUtilsDefault from "UserUtils" /* 4404 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4527 */;
-import ReportModals from "ReportModals" /* 8629 */;
-import RelationshipActionCreatorsDefault from "RelationshipActionCreators" /* 9042 */;
-import PeopleUtilsDefault from "PeopleUtils" /* 10870 */;
-import UserProfileAlertUtils from "UserProfileAlertUtils" /* 12620 */;
+import ReportModals from "ReportModals" /* 8634 */;
+import RelationshipActionCreatorsDefault from "RelationshipActionCreators" /* 9047 */;
+import PeopleUtilsDefault from "PeopleUtils" /* 10875 */;
+import UserProfileAlertUtils from "UserProfileAlertUtils" /* 12624 */;
 import noop from "module_19" /* 19 */;
 import RelationshipStore from "RelationshipStore" /* 4209 */;
 
@@ -16,7 +16,7 @@ require = fn;
 const View = fn(17).View;
 const Constants = fn(1074);
 ({ AnalyticsPages: metroRequire, RelationshipTypes: closure_7 } = Constants);
-let closure_8 = fn(11382).BLOCK_CONFIRMATION_ACTION_SHEET_KEY;
+let closure_8 = fn(11387).BLOCK_CONFIRMATION_ACTION_SHEET_KEY;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
 fn(4560);
@@ -74,7 +74,7 @@ export default function RestrictedMessagePreviewActions(channel) {
   const items7 = [user.id];
   const callback4 = noop.useCallback(() => {
     const obj = { userId: user.id, channelId: channel.id };
-    obj.openLazy(asyncRequireImpl(11383, dependencyMap.paths), closure_8, obj);
+    obj.openLazy(asyncRequireImpl(11388, dependencyMap.paths), closure_8, obj);
   }, items6);
   const items8 = [message, channel.id];
   const callback5 = noop.useCallback(() => {

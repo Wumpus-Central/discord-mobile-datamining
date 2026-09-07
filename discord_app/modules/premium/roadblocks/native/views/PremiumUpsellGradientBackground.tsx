@@ -1,6 +1,6 @@
-// === Module 10307: PremiumUpsellGradientBackground ===
+// === Module 10312: PremiumUpsellGradientBackground ===
 
-// Module 10307 (PremiumUpsellGradientBackground)
+// Module 10312 (PremiumUpsellGradientBackground)
 import ConstantsIOS from "ConstantsIOS" /* 1093 */;
 import LinearGradientDefault from "LinearGradient" /* 4987 */;
 import noop from "module_19" /* 19 */;

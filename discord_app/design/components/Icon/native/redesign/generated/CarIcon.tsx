@@ -1,9 +1,9 @@
-// === Module 15595: CarIcon ===
+// === Module 15598: CarIcon ===
 
-// Module 15595 (CarIcon)
+// Module 15598 (CarIcon)
 import nativeDefault from "native" /* 576 */;
 import BaseIconImage from "BaseIconImage" /* 4261 */;
-import _mod15596 from "module_15596" /* 15596 */;
+import _mod15599 from "module_15599" /* 15599 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export const CarIcon = function CarIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod15596, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod15599, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 };

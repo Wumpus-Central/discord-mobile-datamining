@@ -1,6 +1,6 @@
-// === Module 14646: useGuildProfileEditForm ===
+// === Module 14649: useGuildProfileEditForm ===
 
-// Module 14646 (useGuildProfileEditForm)
+// Module 14649 (useGuildProfileEditForm)
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
@@ -65,7 +65,7 @@ export default function useGuildProfileEditForm() {
   const merged1 = Object.assign(stateFromStoresObject.errors);
   const memo = pendingThemeColors.useMemo(() => {
     const delayedCall = new stateFromStores(pendingNickname[11]).DelayedCall(200, () => {
-      pendingAvatar(573).wait(stateFromStores(9210).resetAllPending);
+      pendingAvatar(573).wait(stateFromStores(9215).resetAllPending);
     });
     return delayedCall;
   }, []);

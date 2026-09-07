@@ -1,6 +1,6 @@
-// === Module 8567: AppStoreAgeVerificationScreen ===
+// === Module 8570: AppStoreAgeVerificationScreen ===
 
-// Module 8567 (AppStoreAgeVerificationScreen)
+// Module 8570 (AppStoreAgeVerificationScreen)
 import MonitoringAgentDefault from "MonitoringAgent" /* 7602 */;
 import MetricEvents from "MetricEvents" /* 7607 */;
 import AgeVerificationAnalyticsUtils from "AgeVerificationAnalyticsUtils" /* 8413 */;

@@ -1,6 +1,6 @@
-// === Module 12509: GameServerPricingExperiment ===
+// === Module 12513: GameServerPricingExperiment ===
 
-// Module 12509 (GameServerPricingExperiment)
+// Module 12513 (GameServerPricingExperiment)
 import GameServerExperiment from "GameServerExperiment" /* 4473 */;
 import createExperiment from "module_4474" /* 4474 */;
 import size from "module_2" /* 2 */;

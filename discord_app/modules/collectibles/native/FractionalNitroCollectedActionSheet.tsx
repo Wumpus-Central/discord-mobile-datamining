@@ -1,22 +1,22 @@
-// === Module 13157: FractionalNitroCollectedActionSheet ===
+// === Module 13161: FractionalNitroCollectedActionSheet ===
 
-// Module 13157 (FractionalNitroCollectedActionSheet)
+// Module 13161 (FractionalNitroCollectedActionSheet)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import shared from "shared" /* 4411 */;
 import Text_Text from "Text/Text" /* 4556 */;
 import FastImageDefault from "FastImage" /* 5587 */;
-import FractionalNitroCoinIllustration from "FractionalNitroCoinIllustration" /* 8846 */;
-import _modDef10724 from "module_10724" /* 10724 */;
-import _modDef10725 from "module_10725" /* 10725 */;
-import _modDef13158 from "module_13158" /* 13158 */;
+import FractionalNitroCoinIllustration from "FractionalNitroCoinIllustration" /* 8851 */;
+import _modDef10729 from "module_10729" /* 10729 */;
+import _modDef10730 from "module_10730" /* 10730 */;
+import _modDef13162 from "module_13162" /* 13162 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 function NitroAcquiredHeader(skuId) {
   const tmp = closure_12();
   let obj = { style: tmp.header, children: null };
-  obj = { source: _modDef13158 };
+  obj = { source: _modDef13162 };
   const items = [React7(FastImageDefault, obj), ];
   obj = { style: tmp.fractionNitroIcon, children: null };
   const size = { skuId: skuId.skuId, width: FractionalNitroCoinIllustration.FRACTIONAL_NITRO_COIN_SIZE.COLLECTED_SHEET, height: FractionalNitroCoinIllustration.FRACTIONAL_NITRO_COIN_SIZE.COLLECTED_SHEET };
@@ -41,11 +41,11 @@ let obj1 = { flex: 1, gap: nativeDefault.space.PX_16, alignItems: "center" };
 createStyles.buttonContainer = { flex: 1, gap: nativeDefault.space.PX_16, alignSelf: "stretch" };
 createStyles.description = { textAlign: "center" };
 createStyles.header = { height: 112, justifyContent: "center", alignItems: "center", overflow: "hidden" };
-let size = { width: fn(8846).FRACTIONAL_NITRO_COIN_SIZE.COLLECTED_SHEET, height: fn(8846).FRACTIONAL_NITRO_COIN_SIZE.COLLECTED_SHEET, position: "absolute", top: "50%", left: "50%", transform: null };
+let size = { width: fn(8851).FRACTIONAL_NITRO_COIN_SIZE.COLLECTED_SHEET, height: fn(8851).FRACTIONAL_NITRO_COIN_SIZE.COLLECTED_SHEET, position: "absolute", top: "50%", left: "50%", transform: null };
 let obj2 = { flex: 1, gap: nativeDefault.space.PX_16, alignSelf: "stretch" };
-let items = [{ translateX: -fn(8846).FRACTIONAL_NITRO_COIN_SIZE.COLLECTED_SHEET / 2 }, ];
-const obj3 = { translateX: -fn(8846).FRACTIONAL_NITRO_COIN_SIZE.COLLECTED_SHEET / 2 };
-items[1] = { translateY: -fn(8846).FRACTIONAL_NITRO_COIN_SIZE.COLLECTED_SHEET / 2 };
+let items = [{ translateX: -fn(8851).FRACTIONAL_NITRO_COIN_SIZE.COLLECTED_SHEET / 2 }, ];
+const obj3 = { translateX: -fn(8851).FRACTIONAL_NITRO_COIN_SIZE.COLLECTED_SHEET / 2 };
+items[1] = { translateY: -fn(8851).FRACTIONAL_NITRO_COIN_SIZE.COLLECTED_SHEET / 2 };
 size.transform = items;
 createStyles.fractionNitroIcon = size;
 const size1 = { position: "absolute", right: nativeDefault.space.PX_16, top: nativeDefault.space.PX_16, width: 32, height: 32, backgroundColor: nativeDefault.colors.CONTROL_OVERLAY_SECONDARY_BACKGROUND_DEFAULT, justifyContent: "center", borderRadius: nativeDefault.radii.lg, alignItems: "center" };
@@ -74,9 +74,9 @@ export default function FractionalNitroCollectedActionSheet(skuId) {
       const tmp10 = FastImageDefault;
       let obj = dependencyMap;
       if (obj2.isThemeDark(closure_3)) {
-        let tmp8Result = _modDef10724;
+        let tmp8Result = _modDef10729;
       } else {
-        tmp8Result = _modDef10725;
+        tmp8Result = _modDef10730;
       }
       obj = { source: tmp8Result };
       React7(tmp10, obj);
@@ -133,7 +133,7 @@ export default function FractionalNitroCollectedActionSheet(skuId) {
   }
   const obj1 = { children: null };
   const items2 = [tmp12Result, ];
-  let obj2 = { style: tmp.questionIconContainer, onPress: callback, children: tmp15(skuId(11105).CircleQuestionIcon, { style: tmp.questionIcon, color: consumed(576).colors.WHITE }) };
+  let obj2 = { style: tmp.questionIconContainer, onPress: callback, children: tmp15(skuId(11110).CircleQuestionIcon, { style: tmp.questionIcon, color: consumed(576).colors.WHITE }) };
   items2[1] = tmp15(skuId(5123).PressableOpacity, obj2);
   obj1.children = items2;
   const items3 = [closure_10(closure_11, obj1), , ];

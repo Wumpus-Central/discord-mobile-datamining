@@ -1,15 +1,15 @@
-// === Module 12231: application_commands/ApplicationCommandUtils ===
+// === Module 12235: application_commands/ApplicationCommandUtils ===
 
-// Module 12231 (application_commands/ApplicationCommandUtils)
+// Module 12235 (application_commands/ApplicationCommandUtils)
 import AvatarUtilsDefault from "AvatarUtils" /* 1396 */;
 import _modDef1884 from "module_1884" /* 1884 */;
 import DraftStore from "DraftStore" /* 4901 */;
 import ApplicationCommandConstants from "ApplicationCommandConstants" /* 4999 */;
 import ApplicationCommandTypes from "ApplicationCommandTypes" /* 7523 */;
-import UploadAttachmentActionCreatorsDefault from "UploadAttachmentActionCreators" /* 9307 */;
-import showUploadPreviewActionSheetDefault from "showUploadPreviewActionSheet" /* 10633 */;
-import _modDef12232 from "module_12232" /* 12232 */;
-import _modDef12233 from "module_12233" /* 12233 */;
+import UploadAttachmentActionCreatorsDefault from "UploadAttachmentActionCreators" /* 9312 */;
+import showUploadPreviewActionSheetDefault from "showUploadPreviewActionSheet" /* 10638 */;
+import _modDef12236 from "module_12236" /* 12236 */;
+import _modDef12237 from "module_12237" /* 12237 */;
 import UploadAttachmentStore from "UploadAttachmentStore" /* 4900 */;
 import size from "module_2" /* 2 */;
 
@@ -23,9 +23,9 @@ export const getApplicationCommandsIconSource = function getApplicationCommandsI
   } else {
     const id = section.id;
     if (BuiltInSectionId.BUILT_IN === id) {
-      return AvatarUtilsDefault.makeSource(_modDef12232);
+      return AvatarUtilsDefault.makeSource(_modDef12236);
     } else if (tmp10.FRECENCY === id) {
-      return AvatarUtilsDefault.makeSource(_modDef12233);
+      return AvatarUtilsDefault.makeSource(_modDef12237);
     } else {
       if (section.type === ApplicationCommandTypes.ApplicationCommandSectionType.APPLICATION) {
         const obj = { id: null, icon: null, bot: null, botIconFirst: true, guildMember: null };

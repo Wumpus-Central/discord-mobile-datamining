@@ -1,12 +1,12 @@
-// === Module 13111: StorefrontCollectionActionCreators ===
+// === Module 13115: StorefrontCollectionActionCreators ===
 
-// Module 13111 (StorefrontCollectionActionCreators)
+// Module 13115 (StorefrontCollectionActionCreators)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import DurationsDefault from "Durations" /* 1090 */;
 import StoreUtils from "StoreUtils" /* 4802 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import LocaleStore from "LocaleStore" /* 2025 */;
-import StorefrontCollectionStore from "StorefrontCollectionStore" /* 13109 */;
+import StorefrontCollectionStore from "StorefrontCollectionStore" /* 13113 */;
 import StorefrontCollectionRecord from "StorefrontCollectionRecord" /* 7561 */;
 
 require = fn;

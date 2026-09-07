@@ -39,7 +39,7 @@ function parseLink(arg0) {
   if (null == punycodeLinkResult) {
     obj = { type: "text", content: arg0[1] };
   } else {
-    obj = { type: "link", content: null, target: null, title: "call" };
+    obj = { type: "link", content: null, target: null, title: "accessible" };
     const obj1 = { type: "text", content: punycodeLinkResult.displayTarget };
     const items = [obj1];
     obj.content = items;

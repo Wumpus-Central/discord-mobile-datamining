@@ -1,6 +1,6 @@
-// === Module 17462: ParentalConsentWarningModal ===
+// === Module 17465: ParentalConsentWarningModal ===
 
-// Module 17462 (ParentalConsentWarningModal)
+// Module 17465 (ParentalConsentWarningModal)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import nativeDefault from "native" /* 576 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
@@ -103,7 +103,7 @@ export default function ParentalConsentWarningModal(daysRemaining) {
         return obj.openUserSettings(obj);
       });
     } else {
-      ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(17463, dependencyMap.paths));
+      ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(17466, dependencyMap.paths));
       const tmp2Result1 = ModalActionCreatorsDefault;
     }
   }, items2);

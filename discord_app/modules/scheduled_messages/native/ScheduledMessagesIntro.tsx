@@ -1,13 +1,13 @@
-// === Module 12219: ScheduledMessagesIntro ===
+// === Module 12223: ScheduledMessagesIntro ===
 
-// Module 12219 (ScheduledMessagesIntro)
+// Module 12223 (ScheduledMessagesIntro)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import Text_Text from "Text/Text" /* 4556 */;
-import AttachmentIcon from "AttachmentIcon" /* 10112 */;
-import PlusLargeIcon from "PlusLargeIcon" /* 10951 */;
-import CalendarPlusIcon from "CalendarPlusIcon" /* 12209 */;
-import _modDef12220 from "module_12220" /* 12220 */;
+import AttachmentIcon from "AttachmentIcon" /* 10117 */;
+import PlusLargeIcon from "PlusLargeIcon" /* 10956 */;
+import CalendarPlusIcon from "CalendarPlusIcon" /* 12213 */;
+import _modDef12224 from "module_12224" /* 12224 */;
 import get_ActivityIndicator from "module_17" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createStyles from "createStyles" /* 4560 */;
@@ -59,7 +59,7 @@ export default function ScheduledMessagesIntro() {
   const tmp = closure_8();
   let obj = { style: tmp.scrollView, contentContainerStyle: tmp.pageContainer, children: null };
   obj = { style: tmp.container, children: null };
-  obj = { source: _modDef12220, style: tmp.upsellImage };
+  obj = { source: _modDef12224, style: tmp.upsellImage };
   const items = [timestampProducer(React3, obj), , ];
   const obj1 = { style: tmp.textContainer, children: null };
   const obj2 = { variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", style: tmp.text, children: null };

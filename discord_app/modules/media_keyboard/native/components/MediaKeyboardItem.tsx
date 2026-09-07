@@ -1,6 +1,6 @@
-// === Module 10648: MediaKeyboardItem ===
+// === Module 10653: MediaKeyboardItem ===
 
-// Module 10648 (MediaKeyboardItem)
+// Module 10653 (MediaKeyboardItem)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import native from "native" /* 1178 */;
@@ -9,9 +9,9 @@ import ReanimatedRexport2 from "ReanimatedRexport" /* 4296 */;
 import Text_Text from "Text/Text" /* 4556 */;
 import timing from "timing" /* 4561 */;
 import ImageIcon from "ImageIcon" /* 5087 */;
-import AttachmentIcon from "AttachmentIcon" /* 10112 */;
-import _modDef10397 from "module_10397" /* 10397 */;
-import CameraIcon from "CameraIcon" /* 10653 */;
+import AttachmentIcon from "AttachmentIcon" /* 10117 */;
+import _modDef10402 from "module_10402" /* 10402 */;
+import CameraIcon from "CameraIcon" /* 10658 */;
 import noop from "module_19" /* 19 */;
 import UploadAttachmentStore from "UploadAttachmentStore" /* 4900 */;
 
@@ -24,7 +24,7 @@ function NewCaption(arg0) {
   let obj = { style: null, children: null };
   const items = [tmp.labelContainer, style];
   obj.style = items;
-  obj = { source: _modDef10397, style: tmp.icon };
+  obj = { source: _modDef10402, style: tmp.icon };
   const items1 = [React7(native.Icon, obj), React7(Text_Text.Text, { style: textStyle, color: "text-overlay-light", variant: "text-xs/bold", children: label })];
   obj.children = items1;
   return closure_1_10(React4, obj);
@@ -335,7 +335,7 @@ function MediaKeyboardSpecialButton(arg0) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, Pressable } = get_ActivityIndicator);
-const DeviceConstants = fn(10649);
+const DeviceConstants = fn(10654);
 ({ ALAssetsType: closure_7, DeviceMediaType: closure_8 } = DeviceConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);

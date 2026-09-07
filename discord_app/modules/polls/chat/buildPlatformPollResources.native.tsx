@@ -1,6 +1,6 @@
-// === Module 11718: buildPlatformPollResources ===
+// === Module 11723: buildPlatformPollResources ===
 
-// Module 11718 (buildPlatformPollResources)
+// Module 11723 (buildPlatformPollResources)
 import nativeDefault from "native" /* 576 */;
 import utils_AvatarUtils from "utils/AvatarUtils" /* 1399 */;
 import _modDef5618 from "module_5618" /* 5618 */;
@@ -9,7 +9,7 @@ import renderer_EmbedUtils from "renderer/EmbedUtils" /* 7946 */;
 import apply from "module_12" /* 12 */;
 
 require = fn;
-let closure_3 = apply.mapValues(fn(11719).pollStyleSets, (arg0) => {
+let closure_3 = apply.mapValues(fn(11724).pollStyleSets, (arg0) => {
   _require = arg0;
   closure_1 = require("createStyles").createNativeStyleProperties((arg0) => {
     let tmp = closure_0(nativeDefault, arg0);

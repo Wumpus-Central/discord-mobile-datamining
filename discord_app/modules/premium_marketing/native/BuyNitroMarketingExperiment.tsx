@@ -1,6 +1,6 @@
-// === Module 13308: BuyNitroMarketingExperiment ===
+// === Module 13312: BuyNitroMarketingExperiment ===
 
-// Module 13308 (BuyNitroMarketingExperiment)
+// Module 13312 (BuyNitroMarketingExperiment)
 import ApexExperiment from "ApexExperiment" /* 1433 */;
 import size from "module_2" /* 2 */;
 

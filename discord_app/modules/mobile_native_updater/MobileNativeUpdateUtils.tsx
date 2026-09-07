@@ -1,6 +1,6 @@
-// === Module 13906: MobileNativeUpdateUtils ===
+// === Module 13909: MobileNativeUpdateUtils ===
 
-// Module 13906 (MobileNativeUpdateUtils)
+// Module 13909 (MobileNativeUpdateUtils)
 import LoggerDefault from "Logger" /* 3 */;
 import ConstantsIOS from "ConstantsIOS" /* 1093 */;
 import PlatformUtils from "PlatformUtils" /* 1115 */;

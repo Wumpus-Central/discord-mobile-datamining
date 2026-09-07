@@ -1,12 +1,12 @@
-// === Module 16172: useGuildPowerupsCoachmark ===
+// === Module 16175: useGuildPowerupsCoachmark ===
 
-// Module 16172 (useGuildPowerupsCoachmark)
+// Module 16175 (useGuildPowerupsCoachmark)
 import nativeDefault from "native" /* 576 */;
-import useGetGuildPowerupBannerImage from "useGetGuildPowerupBannerImage" /* 12520 */;
-import GuildPowerupsBoostGemDefault from "GuildPowerupsBoostGem" /* 12521 */;
-import GuildPowerupsImageDefault from "GuildPowerupsImage" /* 12523 */;
-import _modDef16170 from "module_16170" /* 16170 */;
-import _modDef16174 from "module_16174" /* 16174 */;
+import useGetGuildPowerupBannerImage from "useGetGuildPowerupBannerImage" /* 12524 */;
+import GuildPowerupsBoostGemDefault from "GuildPowerupsBoostGem" /* 12525 */;
+import GuildPowerupsImageDefault from "GuildPowerupsImage" /* 12527 */;
+import _modDef16173 from "module_16173" /* 16173 */;
+import _modDef16177 from "module_16177" /* 16177 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4552 */;
 import GuildStore from "GuildStore" /* 1979 */;
@@ -162,7 +162,7 @@ export default function useGuildPowerupsCoachmark(targetRef, arg1, type) {
           obj6.visible = true;
           obj6.renderImgComponent = function renderImgComponent() {
             if (powerups.length > 1) {
-              let str = _modDef16174;
+              let str = _modDef16177;
             } else {
               let obj = useGetGuildPowerupBannerImage;
               str = obj.getGuildPowerupBannerImage(powerups[0], stateFromStores1, true);
@@ -225,7 +225,7 @@ export default function useGuildPowerupsCoachmark(targetRef, arg1, type) {
             let obj = useGetGuildPowerupBannerImage;
             guildPowerupBannerImage = obj.getGuildPowerupBannerImage(found1, stateFromStores1, true);
             if (guildPowerupBannerImage == null) {
-              guildPowerupBannerImage = _modDef16170;
+              guildPowerupBannerImage = _modDef16173;
             }
             obj = { imageUrl: guildPowerupBannerImage, isAnimated: !stateFromStores1, style: null };
             const items = [, ];

@@ -1,12 +1,12 @@
-// === Module 16360: GuildsBarDragPreview ===
+// === Module 16363: GuildsBarDragPreview ===
 
-// Module 16360 (GuildsBarDragPreview)
+// Module 16363 (GuildsBarDragPreview)
 import _mod4184 from "module_4184" /* 4184 */;
 import native from "native" /* 4271 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4296 */;
 import spring from "spring" /* 4974 */;
 import noop from "module_19" /* 19 */;
-import GuildsBarDnDStore from "GuildsBarDnDStore" /* 16284 */;
+import GuildsBarDnDStore from "GuildsBarDnDStore" /* 16287 */;
 
 require = fn;
 function PreviewItem(dragRegion) {
@@ -287,7 +287,7 @@ function AnimatedItemPreview(cleanUp) {
   return <tmp4Result style={items}>{null}</tmp4Result>;
 }
 const GuildsNodeType = fn(5438).GuildsNodeType;
-const GUILD_ITEM_INSET_LEFT = fn(16285).GUILD_ITEM_INSET_LEFT;
+const GUILD_ITEM_INSET_LEFT = fn(16288).GUILD_ITEM_INSET_LEFT;
 const jsx = fn(21).jsx;
 let createStyles = fn(4560);
 let closure_8 = createStyles.createStyles({ dragPreview: { position: "absolute", left: 0 }, animatedPreviewStyle: { position: "absolute" }, dragPreviewHome: { right: 0 } });
@@ -335,7 +335,7 @@ export default noop.memo(function GuildsBarDragPreview() {
       if (null != dragSpecs) {
         if (null != overSpecs) {
           const state = overSpecs.state;
-          obj = { draggedNode: null, draggedHeight: null, overState: null, overNode: null, dropPosition: "o", gestureState: "LongPressCommandMention", scrollPosition: null, dragRegion: true, windowSize: "button", dropComplete: null, listInsets: null };
+          obj = { draggedNode: null, draggedHeight: null, overState: null, overNode: null, dropPosition: "o", gestureState: "text-xxs/semibold", scrollPosition: "text-muted", dragRegion: null, windowSize: "GuildPowerupsManager", dropComplete: "heading-sm/bold", listInsets: "mobile-text-heading-primary" };
           ({ node: obj.draggedNode, itemSize: obj.draggedHeight } = dragSpecs);
           obj.overState = state;
           let node;

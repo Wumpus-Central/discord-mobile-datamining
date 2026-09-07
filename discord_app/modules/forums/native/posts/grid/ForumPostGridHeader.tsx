@@ -1,11 +1,11 @@
-// === Module 12002: ForumPostGridHeader ===
+// === Module 12006: ForumPostGridHeader ===
 
-// Module 12002 (ForumPostGridHeader)
-import ForumPostPinIconDefault from "ForumPostPinIcon" /* 12003 */;
-import ForumPostUsername from "ForumPostUsername" /* 12005 */;
-import ForumPostTimestampDefault from "ForumPostTimestamp" /* 12014 */;
-import ForumPostNewTagDefault from "ForumPostNewTag" /* 12015 */;
-import ForumPostTitleDefault from "ForumPostTitle" /* 12016 */;
+// Module 12006 (ForumPostGridHeader)
+import ForumPostPinIconDefault from "ForumPostPinIcon" /* 12007 */;
+import ForumPostUsername from "ForumPostUsername" /* 12009 */;
+import ForumPostTimestampDefault from "ForumPostTimestamp" /* 12018 */;
+import ForumPostNewTagDefault from "ForumPostNewTag" /* 12019 */;
+import ForumPostTitleDefault from "ForumPostTitle" /* 12020 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

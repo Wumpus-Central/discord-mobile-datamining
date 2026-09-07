@@ -1,8 +1,8 @@
-// === Module 10970: useSafetyAlertsSettingOrDefault ===
+// === Module 10975: useSafetyAlertsSettingOrDefault ===
 
-// Module 10970 (useSafetyAlertsSettingOrDefault)
+// Module 10975 (useSafetyAlertsSettingOrDefault)
 import initialize from "initialize" /* 504 */;
-import useUserIsTeen from "useUserIsTeen" /* 8644 */;
+import useUserIsTeen from "useUserIsTeen" /* 8649 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1221 */;
 import UserStore from "UserStore" /* 1371 */;
 

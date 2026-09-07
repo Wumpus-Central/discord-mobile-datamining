@@ -1,7 +1,7 @@
-// === Module 14464: activityInstanceConnectedParticipants ===
+// === Module 14467: activityInstanceConnectedParticipants ===
 
-// Module 14464 (activityInstanceConnectedParticipants)
-import transformUserDefault from "transformUser" /* 9560 */;
+// Module 14467 (activityInstanceConnectedParticipants)
+import transformUserDefault from "transformUser" /* 9565 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 1956 */;
 import UserStore from "UserStore" /* 1371 */;
 

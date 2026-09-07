@@ -1,6 +1,6 @@
-// === Module 14182: Badges/Badges ===
+// === Module 14185: Badges/Badges ===
 
-// Module 14182 (Badges/Badges)
+// Module 14185 (Badges/Badges)
 import nativeDefault from "native" /* 576 */;
 import Text_Text from "Text/Text" /* 4556 */;
 import noop from "module_19" /* 19 */;

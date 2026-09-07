@@ -1,10 +1,10 @@
-// === Module 13349: BuyNitroMarketing ===
+// === Module 13353: BuyNitroMarketing ===
 
-// Module 13349 (BuyNitroMarketing)
+// Module 13353 (BuyNitroMarketing)
 import nativeDefault from "native" /* 576 */;
-import BuyNitroPerkDetails from "BuyNitroPerkDetails" /* 13385 */;
-import BuyNitroSectionHeaderDefault from "BuyNitroSectionHeader" /* 13392 */;
-import BuyNitroPerkDefault from "BuyNitroPerk" /* 13393 */;
+import BuyNitroPerkDetails from "BuyNitroPerkDetails" /* 13389 */;
+import BuyNitroSectionHeaderDefault from "BuyNitroSectionHeader" /* 13396 */;
+import BuyNitroPerkDefault from "BuyNitroPerk" /* 13397 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -47,7 +47,7 @@ export default function BuyNitroMarketing(onPaymentDismiss) {
   let obj3 = applicationId(onPaymentDismiss[9]);
   let tmp7;
   if (null != initialTier) {
-    obj = { tier: initialTier, productId: "a" };
+    obj = { tier: initialTier, productId: "Array" };
     tmp7 = obj;
   }
   buyNitroPlanSelection = obj3.useBuyNitroPlanSelection(tmp7);

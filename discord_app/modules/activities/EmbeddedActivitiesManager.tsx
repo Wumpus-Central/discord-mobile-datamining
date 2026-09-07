@@ -1,6 +1,6 @@
-// === Module 9518: EmbeddedActivitiesManager ===
+// === Module 9523: EmbeddedActivitiesManager ===
 
-// Module 9518 (EmbeddedActivitiesManager)
+// Module 9523 (EmbeddedActivitiesManager)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1109 */;
 import PlatformUtils from "PlatformUtils" /* 1115 */;
@@ -10,16 +10,16 @@ import StringUtils from "StringUtils" /* 1925 */;
 import embeddedActivityLocationUtils from "embeddedActivityLocationUtils" /* 4189 */;
 import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 4761 */;
 import AnalyticsLocationDefault from "AnalyticsLocation" /* 7182 */;
-import CommandPermissionContext from "CommandPermissionContext" /* 9295 */;
-import getPlatformDefault from "getPlatform" /* 9410 */;
-import FramesActionCreatorsDefault from "FramesActionCreators" /* 9507 */;
-import getURLForApplication from "getURLForApplication" /* 9512 */;
-import getShelfItemDataDefault from "getShelfItemData" /* 9520 */;
-import ThermalUtilsDefault from "ThermalUtils" /* 9521 */;
-import tryLaunchAsFrame from "tryLaunchAsFrame" /* 9523 */;
-import pendingFrameLaunch from "pendingFrameLaunch" /* 9524 */;
-import EmbeddedActivityLocationKind from "EmbeddedActivityLocationKind" /* 9525 */;
-import isVoiceEmbeddedActivityDefault from "isVoiceEmbeddedActivity" /* 9526 */;
+import CommandPermissionContext from "CommandPermissionContext" /* 9300 */;
+import getPlatformDefault from "getPlatform" /* 9415 */;
+import FramesActionCreatorsDefault from "FramesActionCreators" /* 9512 */;
+import getURLForApplication from "getURLForApplication" /* 9517 */;
+import getShelfItemDataDefault from "getShelfItemData" /* 9525 */;
+import ThermalUtilsDefault from "ThermalUtils" /* 9526 */;
+import tryLaunchAsFrame from "tryLaunchAsFrame" /* 9528 */;
+import pendingFrameLaunch from "pendingFrameLaunch" /* 9529 */;
+import EmbeddedActivityLocationKind from "EmbeddedActivityLocationKind" /* 9530 */;
+import isVoiceEmbeddedActivityDefault from "isVoiceEmbeddedActivity" /* 9531 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import ChannelRTCStore from "ChannelRTCStore" /* 4576 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
@@ -27,7 +27,7 @@ import ChannelStore from "ChannelStore" /* 1957 */;
 import RTCConnectionStore from "RTCConnectionStore" /* 4583 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2011 */;
 import UserStore from "UserStore" /* 1371 */;
-import ActivityShelfStore from "ActivityShelfStore" /* 9519 */;
+import ActivityShelfStore from "ActivityShelfStore" /* 9524 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 1956 */;
 import LifecycleManager from "LifecycleManager" /* 1898 */;
 
@@ -645,7 +645,7 @@ class EmbeddedActivitiesManager extends tmp3 {
                   const intl = applyArgumentsResult(1114).intl;
                   closure_132_1.showLaunchErrorModal(intl.string(applyArgumentsResult(1114).t.UXoQTp));
                 }
-                obj25 = applyArgumentsResult(9502);
+                obj25 = applyArgumentsResult(9507);
               }
             } else {
               if (3 === getChannel) {
@@ -661,8 +661,8 @@ class EmbeddedActivitiesManager extends tmp3 {
                   activityConfigs = closure_131_9.activityConfigs;
                   applications = closure_131_9.applications;
                   const obj5 = { applicationId: closure_131_1, activityConfigs, applications };
-                  if (null == getChannel(9520)(obj5)) {
-                    let obj9 = applyArgumentsResult(9504);
+                  if (null == getChannel(9525)(obj5)) {
+                    let obj9 = applyArgumentsResult(9509);
                     let obj6 = { guildId: closure_131_8, force: true };
                     set = 4;
                     c6 = 1;
@@ -681,7 +681,7 @@ class EmbeddedActivitiesManager extends tmp3 {
                 } else {
                   closure_131_12 = value;
                   obj9 = { applicationId: closure_131_1, activityConfigs: closure_131_12.activityConfigs, applications: closure_131_12.applications };
-                  getChannel(9520)(obj9);
+                  getChannel(9525)(obj9);
                 }
               } else if (5 === getChannel) {
                 if (arg0 === 1) {
@@ -711,7 +711,7 @@ class EmbeddedActivitiesManager extends tmp3 {
                 dependencyMap = 0;
               }
               if (dependencyMap > 0) {
-                obj6 = applyArgumentsResult(9530);
+                obj6 = applyArgumentsResult(9535);
                 const obj11 = { channelId: closure_131_0, applicationId: closure_131_1, launchId: null, inputApplication: null, analyticsLocations: null, inviterUserId: null };
                 let launchId;
                 if (closure_131_13 != null) {
@@ -728,7 +728,7 @@ class EmbeddedActivitiesManager extends tmp3 {
                 let obj13 = { targetApplicationId: closure_131_1, channelId: closure_131_0, analyticsLocations: closure_131_2, commandOrigin: closure_131_3, inviterUserId: closure_131_4 };
                 set = 5;
                 c6 = 1;
-                let obj14 = { value: getChannel(9548)(obj13), done: false };
+                let obj14 = { value: getChannel(9553)(obj13), done: false };
                 return obj14;
               }
             }
@@ -747,7 +747,7 @@ class EmbeddedActivitiesManager extends tmp3 {
               }
               getChannel = guildId;
               closure_131_8 = getChannel;
-              obj14 = applyArgumentsResult(9504);
+              obj14 = applyArgumentsResult(9509);
               const obj15 = { guildId: closure_131_8 };
               set = 3;
               c6 = 1;
@@ -757,7 +757,7 @@ class EmbeddedActivitiesManager extends tmp3 {
               const intl2 = applyArgumentsResult(1114).intl;
               closure_132_1.showLaunchErrorModal(intl2.string(applyArgumentsResult(1114).t.uGDCcw));
             }
-            tmp56 = getChannel(9529);
+            tmp56 = getChannel(9534);
           }
         } catch (tmp89) {
           c6 = tmp;

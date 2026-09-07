@@ -1,8 +1,8 @@
-// === Module 12315: GuildDirectoryEditDescriptionModal ===
+// === Module 12319: GuildDirectoryEditDescriptionModal ===
 
-// Module 12315 (GuildDirectoryEditDescriptionModal)
-import GuildDirectoryEditDescriptionModalActionCreatorsDefault from "GuildDirectoryEditDescriptionModalActionCreators" /* 12314 */;
-import GuildDirectoryEditDescriptionTemplateDefault from "GuildDirectoryEditDescriptionTemplate" /* 12317 */;
+// Module 12319 (GuildDirectoryEditDescriptionModal)
+import GuildDirectoryEditDescriptionModalActionCreatorsDefault from "GuildDirectoryEditDescriptionModalActionCreators" /* 12318 */;
+import GuildDirectoryEditDescriptionTemplateDefault from "GuildDirectoryEditDescriptionTemplate" /* 12321 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 
@@ -34,7 +34,7 @@ function GuildDirectoryEditDescription(entry) {
             obj = { value, done: true };
             return obj;
           } else {
-            let obj2 = tmp4(12316);
+            let obj2 = tmp4(12320);
             dependencyMap = 1;
             c4 = 1;
             const obj1 = { value: obj2.updateDirectoryEntry(entry.channelId, entry.guildId, closure_0, closure_1), done: false };
@@ -48,7 +48,7 @@ function GuildDirectoryEditDescription(entry) {
           obj2 = { value, done: true };
           return obj2;
         } else {
-          obj = closure_1(12314);
+          obj = closure_1(12318);
           obj.close();
           c4 = 3;
           return { value: "HermesInternal", done: null };

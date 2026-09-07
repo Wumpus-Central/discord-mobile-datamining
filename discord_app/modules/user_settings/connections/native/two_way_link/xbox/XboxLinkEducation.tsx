@@ -1,13 +1,13 @@
-// === Module 9445: XboxLinkEducation ===
+// === Module 9450: XboxLinkEducation ===
 
-// Module 9445 (XboxLinkEducation)
+// Module 9450 (XboxLinkEducation)
 import util from "util" /* 1114 */;
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2024 */;
 import Text_Text from "Text/Text" /* 4556 */;
 import components_Button_Button from "components/Button/Button" /* 4975 */;
 import common_SafeAreaView from "common/SafeAreaView" /* 7123 */;
-import TwoWayLinkStyles from "TwoWayLinkStyles" /* 9226 */;
-import _modDef9264 from "module_9264" /* 9264 */;
+import TwoWayLinkStyles from "TwoWayLinkStyles" /* 9231 */;
+import _modDef9269 from "module_9269" /* 9269 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -28,7 +28,7 @@ export default function XboxLinkEducation(onClose) {
   const articleURL = obj1.getArticleURL(HelpdeskArticles.XBOX_CONNECTION);
   obj = { style: twoWayLinkStyles.container, children: null };
   obj = { style: twoWayLinkStyles.content, children: null };
-  obj1 = { source: noop.useMemo(() => ({ uri: _modDef9264 }), []), style: closure_9().image };
+  obj1 = { source: noop.useMemo(() => ({ uri: _modDef9269 }), []), style: closure_9().image };
   const items = [React5(React4, obj1), , ];
   const obj2 = { variant: "heading-xl/bold", color: "mobile-text-heading-primary", style: twoWayLinkStyles.title, children: null };
   const intl = util.intl;

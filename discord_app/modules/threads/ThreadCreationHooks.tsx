@@ -1,6 +1,6 @@
-// === Module 9305: ThreadCreationHooks ===
+// === Module 9310: ThreadCreationHooks ===
 
-// Module 9305 (ThreadCreationHooks)
+// Module 9310 (ThreadCreationHooks)
 import HTTPUtils from "HTTPUtils" /* 1272 */;
 import ThreadHooks from "ThreadHooks" /* 7269 */;
 import sanitizeThreadNameDefault from "sanitizeThreadName" /* 7274 */;

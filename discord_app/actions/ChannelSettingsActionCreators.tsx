@@ -1,11 +1,11 @@
-// === Module 8625: ChannelSettingsActionCreators ===
+// === Module 8630: ChannelSettingsActionCreators ===
 
-// Module 8625 (ChannelSettingsActionCreators)
+// Module 8630 (ChannelSettingsActionCreators)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import HTTPUtils from "HTTPUtils" /* 1272 */;
 import RootNavigationRef from "RootNavigationRef" /* 4418 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ChannelSettingsStore from "ChannelSettingsStore" /* 8626 */;
+import ChannelSettingsStore from "ChannelSettingsStore" /* 8631 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 
 require = fn;

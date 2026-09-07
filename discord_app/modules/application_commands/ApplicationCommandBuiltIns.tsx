@@ -1,12 +1,12 @@
-// === Module 9300: ApplicationCommandBuiltIns ===
+// === Module 9305: ApplicationCommandBuiltIns ===
 
-// Module 9300 (ApplicationCommandBuiltIns)
+// Module 9305 (ApplicationCommandBuiltIns)
 import UserSettings from "UserSettings" /* 1935 */;
 import DiceRollActionCreators from "DiceRollActionCreators" /* 7245 */;
 import ThreadHooks from "ThreadHooks" /* 7269 */;
 import MessageActionCreatorsDefault from "MessageActionCreators" /* 7456 */;
 import ApplicationCommandTypes from "ApplicationCommandTypes" /* 7523 */;
-import ChangeNicknameActionCreatorsDefault from "ChangeNicknameActionCreators" /* 9303 */;
+import ChangeNicknameActionCreatorsDefault from "ChangeNicknameActionCreators" /* 9308 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 import PermissionStore from "PermissionStore" /* 4199 */;
@@ -25,7 +25,7 @@ function getOptionValue(arr, arg1) {
 const BuiltInSectionId = fn(4999).BuiltInSectionId;
 const Constants = fn(1074);
 ({ Permissions: closure_7, MARKDOWN_SPOILER_WRAPPER: closure_8, ME: closure_9, DISPLAY_NAME_MAX_LENGTH, MAX_CHANNEL_NAME_LENGTH } = Constants);
-const DiceRollConstants = fn(9301);
+const DiceRollConstants = fn(9306);
 ({ ALLOWED_DICE_SIDES, MAX_DICE_COUNT } = DiceRollConstants);
 let closure_11 = fn(2023).getDisableCommunicationDurationOptions;
 const MessageSendLocation = fn(4553).MessageSendLocation;
@@ -48,7 +48,7 @@ Object.defineProperty(obj, "name", {
   set: undefined
 });
 obj[BuiltInSectionId.FRECENCY] = obj;
-let items = [...fn(9302).default];
+let items = [...fn(9307).default];
 let obj1 = { id: "-1", untranslatedName: "shrug", displayName: "shrug", type: fn(1894).ApplicationCommandType.CHAT, inputType: fn(7523).ApplicationCommandInputType.BUILT_IN_TEXT, applicationId: BuiltInSectionId.BUILT_IN };
 Object.defineProperty(obj1, "untranslatedDescription", {
   get: () => {
@@ -1398,7 +1398,7 @@ const found = items.filter((untranslatedName) => {
 let size = fn(2);
 const result = size.fileFinishedImporting("modules/application_commands/ApplicationCommandBuiltIns.tsx");
 
-export const PLATFORM_COMMANDS = fn(9302).default;
+export const PLATFORM_COMMANDS = fn(9307).default;
 export const BUILT_IN_SECTIONS = obj;
 export const BUILT_IN_COMMANDS = items;
 export const BUILT_IN_COMMANDS_ORIGINAL = found;

@@ -1,17 +1,17 @@
-// === Module 13564: PremiumTierCard ===
+// === Module 13568: PremiumTierCard ===
 
-// Module 13564 (PremiumTierCard)
+// Module 13568 (PremiumTierCard)
 import nativeDefault from "native" /* 576 */;
 import ConstantsIOS from "ConstantsIOS" /* 1093 */;
 import PremiumUtils from "PremiumUtils" /* 4218 */;
 import LinearGradientDefault from "LinearGradient" /* 4987 */;
 import Card from "Card" /* 5607 */;
 import _modDef8068 from "module_8068" /* 8068 */;
-import _modDef9385 from "module_9385" /* 9385 */;
-import _modDef10715 from "module_10715" /* 10715 */;
-import _modDef10716 from "module_10716" /* 10716 */;
-import _modDef13565 from "module_13565" /* 13565 */;
-import _modDef13566 from "module_13566" /* 13566 */;
+import _modDef9390 from "module_9390" /* 9390 */;
+import _modDef10720 from "module_10720" /* 10720 */;
+import _modDef10721 from "module_10721" /* 10721 */;
+import _modDef13569 from "module_13569" /* 13569 */;
+import _modDef13570 from "module_13570" /* 13570 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -46,9 +46,9 @@ export default function _default(premiumType) {
   }
   obj.style = textLogoTier2;
   if (PremiumTypes.TIER_0 === premiumType) {
-    let tmp5Result = _modDef13565;
+    let tmp5Result = _modDef13569;
   } else if (PremiumTypes.TIER_1 === premiumType) {
-    tmp5Result = _modDef13566;
+    tmp5Result = _modDef13570;
   } else if (PremiumTypes.TIER_2 === premiumType) {
     tmp5Result = _modDef8068;
   }
@@ -66,11 +66,11 @@ export default function _default(premiumType) {
   obj = { accessible: false, importantForAccessibility: "no", style: items1, source: null };
   items1[1] = wumpusLogoTier2;
   if (PremiumTypes.TIER_0 === premiumType) {
-    tmp5Result = _modDef9385;
+    tmp5Result = _modDef9390;
   } else if (PremiumTypes.TIER_1 === premiumType) {
-    tmp5Result = _modDef10715;
+    tmp5Result = _modDef10720;
   } else if (PremiumTypes.TIER_2 === premiumType) {
-    tmp5Result = _modDef10716;
+    tmp5Result = _modDef10721;
   }
   const obj1 = { children: null };
   obj.source = tmp5Result;

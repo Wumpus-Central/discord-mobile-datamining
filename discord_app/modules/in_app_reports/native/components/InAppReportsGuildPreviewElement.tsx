@@ -1,6 +1,6 @@
-// === Module 9036: InAppReportsGuildPreviewElement ===
+// === Module 9041: InAppReportsGuildPreviewElement ===
 
-// Module 9036 (InAppReportsGuildPreviewElement)
+// Module 9041 (InAppReportsGuildPreviewElement)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import ColorUtils from "ColorUtils" /* 4409 */;

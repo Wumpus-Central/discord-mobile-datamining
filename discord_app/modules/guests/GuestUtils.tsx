@@ -1,6 +1,6 @@
-// === Module 11311: GuestUtils ===
+// === Module 11316: GuestUtils ===
 
-// Module 11311 (GuestUtils)
+// Module 11316 (GuestUtils)
 import FlagUtils from "FlagUtils" /* 1384 */;
 import GuildMemberConstants from "GuildMemberConstants" /* 4187 */;
 import GuildInviteFlags from "GuildInviteFlags" /* 8392 */;

@@ -1,6 +1,6 @@
-// === Module 12392: ChannelAutocompleteAnalytics ===
+// === Module 12396: ChannelAutocompleteAnalytics ===
 
-// Module 12392 (ChannelAutocompleteAnalytics)
+// Module 12396 (ChannelAutocompleteAnalytics)
 import Constants from "Constants" /* 1074 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
 import AppAnalyticsUtils from "AppAnalyticsUtils" /* 4740 */;

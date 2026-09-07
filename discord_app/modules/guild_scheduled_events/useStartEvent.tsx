@@ -1,6 +1,6 @@
-// === Module 9810: useStartEvent ===
+// === Module 9815: useStartEvent ===
 
-// Module 9810 (useStartEvent)
+// Module 9815 (useStartEvent)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -86,7 +86,7 @@ export default function useStartEvent() {
               c6 = 1;
               c7 = 3;
               c8 = 1;
-              const obj2 = { value: closure_1(9811).preStartEventActions(closure_131_0, closure_131_3), done: false };
+              const obj2 = { value: closure_1(9816).preStartEventActions(closure_131_0, closure_131_3), done: false };
               return obj2;
             }
           } else {
@@ -109,7 +109,7 @@ export default function useStartEvent() {
                 const obj3 = { value, done: true };
                 return obj3;
               } else {
-                let obj7 = closure_1(9811);
+                let obj7 = closure_1(9816);
                 c7 = 4;
                 c8 = 1;
                 let obj4 = { value: obj7.setEventAsActive(closure_131_0, closure_131_1), done: false };
@@ -125,7 +125,7 @@ export default function useStartEvent() {
                 const obj5 = { value, done: true };
                 return obj5;
               } else {
-                obj4 = closure_0(9812);
+                obj4 = closure_0(9817);
                 c7 = 5;
                 c8 = 1;
                 const obj6 = { value: obj4.navigateToEvent(closure_131_0, closure_131_2), done: false };
@@ -141,7 +141,7 @@ export default function useStartEvent() {
                 obj7 = { value, done: true };
                 return obj7;
               } else {
-                obj1 = closure_0(9812);
+                obj1 = closure_0(9817);
                 c7 = 6;
                 c8 = 1;
                 const obj8 = { value: obj1.postStartActions(closure_131_0, closure_131_2), done: false };

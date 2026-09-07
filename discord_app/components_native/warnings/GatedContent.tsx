@@ -1,6 +1,6 @@
-// === Module 12666: GatedContent ===
+// === Module 12670: GatedContent ===
 
-// Module 12666 (GatedContent)
+// Module 12670 (GatedContent)
 import nativeDefault from "native" /* 576 */;
 import AgeVerificationAnalyticsUtils from "AgeVerificationAnalyticsUtils" /* 8413 */;
 import noop from "module_19" /* 19 */;

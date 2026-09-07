@@ -1,6 +1,6 @@
-// === Module 16891: SpamMessageList ===
+// === Module 16894: SpamMessageList ===
 
-// Module 16891 (SpamMessageList)
+// Module 16894 (SpamMessageList)
 import nativeDefault from "native" /* 576 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1611 */;
@@ -9,10 +9,10 @@ import ModalActionCreatorsDefault from "ModalActionCreators" /* 4763 */;
 import useMountEffectDefault from "useMountEffect" /* 4992 */;
 import MonitoringAgentDefault from "MonitoringAgent" /* 7602 */;
 import MetricEvents from "MetricEvents" /* 7607 */;
-import useSortedSpamMessageRequestsDefault from "useSortedSpamMessageRequests" /* 16892 */;
+import useSortedSpamMessageRequestsDefault from "useSortedSpamMessageRequests" /* 16895 */;
 import noop from "module_19" /* 19 */;
 
-const MessageRequestEmptyDefault = tmp2(16886);
+const MessageRequestEmptyDefault = tmp2(16889);
 require = fn;
 function PendingSpamMessageRequestRow(isLastRow) {
   ({ messageRequest, goToMessageRequestPreview: require, hasSingleMessageRequest } = isLastRow);
@@ -181,10 +181,10 @@ export default function SpamMessageList(goToMessageRequestPreview) {
   const tmp = closure_10();
   importDefault = tmp;
   const bottom = useSafeAreaInsetsDefault().bottom;
-  let obj = goToMessageRequestPreview(16885);
+  let obj = goToMessageRequestPreview(16888);
   dependencyMap = obj.useSpamMessageRequestCount();
   const arr = useSortedSpamMessageRequestsDefault();
-  let obj1 = goToMessageRequestPreview(16883);
+  let obj1 = goToMessageRequestPreview(16886);
   const hasSingleMessageRequest = obj1.useListHasSingleSpamMessageRequest();
   useMountEffectDefault(() => {
     let obj = { num_spam_message_requests };

@@ -1,23 +1,23 @@
-// === Module 17087: VoicePanelPIPUtils ===
+// === Module 17090: VoicePanelPIPUtils ===
 
-// Module 17087 (VoicePanelPIPUtils)
+// Module 17090 (VoicePanelPIPUtils)
 import nativeDefault from "native" /* 576 */;
 import spring from "spring" /* 4974 */;
-import participantHasVideo from "participantHasVideo" /* 9622 */;
-import isActivityParticipantCurrentUserCurrentSession from "isActivityParticipantCurrentUserCurrentSession" /* 13985 */;
+import participantHasVideo from "participantHasVideo" /* 9627 */;
+import isActivityParticipantCurrentUserCurrentSession from "isActivityParticipantCurrentUserCurrentSession" /* 13988 */;
 import ChannelRTCStore from "ChannelRTCStore" /* 4576 */;
 import ApplicationStreamingStore from "ApplicationStreamingStore" /* 4582 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
 require = fn;
-const VoicePanelConstants = fn(12273);
+const VoicePanelConstants = fn(12277);
 ({ SECONDARY_PIP_TOP_MARGIN: hasOwnProperty, VoicePanelModes: metroRequire } = VoicePanelConstants);
-const VoicePanelPIPConstants = fn(17088);
+const VoicePanelPIPConstants = fn(17091);
 ({ VoicePanelPIPModes: closure_7, PIPReferenceDimensions } = VoicePanelPIPConstants);
 const SquarePIPReferenceDimensions = VoicePanelPIPConstants.SquarePIPReferenceDimensions;
 const SquareActivityPIPReferenceDimensions = VoicePanelPIPConstants.SquareActivityPIPReferenceDimensions;
 const ParticipantTypes = fn(4581).ParticipantTypes;
-const MorphablePanelConstants = fn(12274);
+const MorphablePanelConstants = fn(12278);
 const MIN_PIP_TOSS_VELOCITY = MorphablePanelConstants.MIN_PIP_TOSS_VELOCITY;
 const PIP_WINDOW_OFFSET = MorphablePanelConstants.PIP_WINDOW_OFFSET;
 const set = new Set();

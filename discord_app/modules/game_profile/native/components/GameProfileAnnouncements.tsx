@@ -1,17 +1,17 @@
-// === Module 8750: GameProfileAnnouncements ===
+// === Module 8755: GameProfileAnnouncements ===
 
-// Module 8750 (GameProfileAnnouncements)
+// Module 8755 (GameProfileAnnouncements)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import DateUtils from "DateUtils" /* 4242 */;
 import Text_Text from "Text/Text" /* 4556 */;
 import CustomMarkupAll from "CustomMarkup" /* 4995 */;
-import GameProfileActionCreatorsDefault from "GameProfileActionCreators" /* 8680 */;
-import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 8686 */;
-import AnnouncementMessageUtils from "AnnouncementMessageUtils" /* 8752 */;
-import ImageWithPlaceholder from "ImageWithPlaceholder" /* 8755 */;
-import ReactionIcon from "ReactionIcon" /* 8757 */;
-import navigateToGameAnnouncementDefault from "navigateToGameAnnouncement" /* 8762 */;
+import GameProfileActionCreatorsDefault from "GameProfileActionCreators" /* 8685 */;
+import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 8691 */;
+import AnnouncementMessageUtils from "AnnouncementMessageUtils" /* 8757 */;
+import ImageWithPlaceholder from "ImageWithPlaceholder" /* 8760 */;
+import ReactionIcon from "ReactionIcon" /* 8762 */;
+import navigateToGameAnnouncementDefault from "navigateToGameAnnouncement" /* 8767 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -325,7 +325,7 @@ function PollAnnouncementCard(message) {
     const _Date = Date;
     const date = new Date(message.timestamp);
     obj6.createdAt = date;
-    obj6.expiryLabel = message(8752).getPollExpiryLabel(poll);
+    obj6.expiryLabel = message(8757).getPollExpiryLabel(poll);
     obj5.children = intl2.format(message(1114).t.t0FTsH, obj6);
     obj4.children = closure_10(message(4556).Text, obj5);
     items[2] = closure_10(closure_6, obj4);
@@ -336,7 +336,7 @@ function PollAnnouncementCard(message) {
 }
 get_ActivityIndicator = fn(17);
 ({ Image: hasOwnProperty, View: metroRequire, Pressable: closure_7, ActivityIndicator: closure_8 } = get_ActivityIndicator);
-const MAX_VISIBLE_ANNOUNCEMENTS = fn(8751).MAX_VISIBLE_ANNOUNCEMENTS;
+const MAX_VISIBLE_ANNOUNCEMENTS = fn(8756).MAX_VISIBLE_ANNOUNCEMENTS;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
 let c12 = 120;

@@ -1,6 +1,6 @@
-// === Module 8626: ChannelSettingsStore ===
+// === Module 8631: ChannelSettingsStore ===
 
-// Module 8626 (ChannelSettingsStore)
+// Module 8631 (ChannelSettingsStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import ThreadConstants from "ThreadConstants" /* 1113 */;

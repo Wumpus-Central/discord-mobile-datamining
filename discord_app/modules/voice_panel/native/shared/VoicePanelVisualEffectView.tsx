@@ -1,9 +1,9 @@
-// === Module 17181: VoicePanelVisualEffectView ===
+// === Module 17184: VoicePanelVisualEffectView ===
 
-// Module 17181 (VoicePanelVisualEffectView)
+// Module 17184 (VoicePanelVisualEffectView)
 import nativeDefault from "native" /* 576 */;
 import useToken from "useToken" /* 4262 */;
-import native from "native" /* 8902 */;
+import native from "native" /* 8907 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

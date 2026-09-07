@@ -1,12 +1,12 @@
-// === Module 16366: useYouBarAccessibilityLabel ===
+// === Module 16369: useYouBarAccessibilityLabel ===
 
-// Module 16366 (useYouBarAccessibilityLabel)
+// Module 16369 (useYouBarAccessibilityLabel)
 import util from "util" /* 1114 */;
 import UserUtils from "UserUtils" /* 4404 */;
-import useDiscoverableApplicationStream from "useDiscoverableApplicationStream" /* 10878 */;
-import useUserVoiceActivity from "useUserVoiceActivity" /* 10879 */;
-import isGameActivityDefault from "isGameActivity" /* 10886 */;
-import getActivityStatusTextDefault from "getActivityStatusText" /* 10888 */;
+import useDiscoverableApplicationStream from "useDiscoverableApplicationStream" /* 10883 */;
+import useUserVoiceActivity from "useUserVoiceActivity" /* 10884 */;
+import isGameActivityDefault from "isGameActivity" /* 10891 */;
+import getActivityStatusTextDefault from "getActivityStatusText" /* 10893 */;
 import ApplicationStreamingStore from "ApplicationStreamingStore" /* 4582 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 import PermissionStore from "PermissionStore" /* 4199 */;
@@ -37,7 +37,7 @@ export const useYouBarAccessibilityLabel = function useYouBarAccessibilityLabel(
   if (setting != null) {
     text = setting.text;
   }
-  let tmp3Result = tmp3(10880);
+  let tmp3Result = tmp3(10885);
   let tmp7 = null;
   if ("" !== text) {
     tmp7 = text;

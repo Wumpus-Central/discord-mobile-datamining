@@ -1,14 +1,14 @@
-// === Module 15899: ParentalControlsGoreMediaFiltersFriendsDMsSetting ===
+// === Module 15902: ParentalControlsGoreMediaFiltersFriendsDMsSetting ===
 
-// Module 15899 (ParentalControlsGoreMediaFiltersFriendsDMsSetting)
+// Module 15902 (ParentalControlsGoreMediaFiltersFriendsDMsSetting)
 import util from "util" /* 1114 */;
 import ExplicitMediaRedactionUtils from "ExplicitMediaRedactionUtils" /* 7600 */;
-import useParentalControlSettings from "useParentalControlSettings" /* 14824 */;
-import FamilyCenterControlledSettingsUtils from "FamilyCenterControlledSettingsUtils" /* 14828 */;
+import useParentalControlSettings from "useParentalControlSettings" /* 14827 */;
+import FamilyCenterControlledSettingsUtils from "FamilyCenterControlledSettingsUtils" /* 14831 */;
 import FamilyCenterStore from "FamilyCenterStore" /* 7537 */;
 
 require = fn;
-fn(11468);
+fn(11473);
 let SettingBuilders = {
   useTitle: function getTitle() {
     const intl = util.intl;
@@ -31,7 +31,7 @@ let SettingBuilders = {
   onPress: function onGoreContentFriendsDmOnPress() {
     const selectedTeenId = FamilyCenterStore.getSelectedTeenId();
     if (null != selectedTeenId) {
-      selectedTeenId(14828);
+      selectedTeenId(14831);
       let obj = { title: null, subtitle: null, handlePress: null, currentValue: null, excluded: null };
       const intl = selectedTeenId(1114).intl;
       obj.title = intl.string(selectedTeenId(1114).t["16/3Bi"]);
@@ -44,8 +44,8 @@ let SettingBuilders = {
       obj.currentValue = obj.getGoreContentSettingOrDefault(selectedTeenId).goreContentFriendDm;
       const items = [selectedTeenId(1187).ExplicitContentRedaction.SHOW];
       obj.excluded = items;
-      const result = selectedTeenId(14821).handleSensitiveMediaFilterPress(obj);
-      const obj2 = selectedTeenId(14821);
+      const result = selectedTeenId(14824).handleSensitiveMediaFilterPress(obj);
+      const obj2 = selectedTeenId(14824);
     }
   },
   unsearchable: true

@@ -1,14 +1,14 @@
-// === Module 10416: useStickerPickerListData ===
+// === Module 10421: useStickerPickerListData ===
 
-// Module 10416 (useStickerPickerListData)
+// Module 10421 (useStickerPickerListData)
 import _modDef12 from "module_12" /* 12 */;
 import StickersTypes from "StickersTypes" /* 5268 */;
-import age_gate_AgeGateUtils from "age_gate/AgeGateUtils" /* 10294 */;
+import age_gate_AgeGateUtils from "age_gate/AgeGateUtils" /* 10299 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-let useStickerPickerStore = fn(10390).useStickerPickerStore;
-const StickerPickerConstants = fn(10273);
+let useStickerPickerStore = fn(10395).useStickerPickerStore;
+const StickerPickerConstants = fn(10278);
 ({ MIN_MARGIN: hasOwnProperty, ROW_HEIGHT: metroRequire, STICKER_SIZE: closure_7, LABEL_HEIGHT } = StickerPickerConstants);
 const StickerPickerSectionType = { STICKERS: 0, [0]: "STICKERS", NSFW: 1, [1]: "NSFW" };
 let closure_9 = LABEL_HEIGHT + 2 * fn(1219).PADDING_VERTICAL;

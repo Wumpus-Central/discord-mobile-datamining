@@ -1,6 +1,6 @@
-// === Module 9820: instant_invite/InstantInviteUtils ===
+// === Module 9825: instant_invite/InstantInviteUtils ===
 
-// Module 9820 (instant_invite/InstantInviteUtils)
+// Module 9825 (instant_invite/InstantInviteUtils)
 import _modDef38 from "module_38" /* 38 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
 import ToastUtils from "ToastUtils" /* 4258 */;
@@ -11,17 +11,17 @@ import ClipboardUtils from "ClipboardUtils" /* 7190 */;
 import StreamerApplicationSelectors from "StreamerApplicationSelectors" /* 7738 */;
 import getInviteURLDefault from "getInviteURL" /* 7759 */;
 import showShareActionSheet from "showShareActionSheet" /* 8361 */;
-import utils_InstantInviteUtils from "utils/InstantInviteUtils" /* 9823 */;
-import CreateInviteModalActionCreatorsDefault from "CreateInviteModalActionCreators" /* 9826 */;
-import openInstantInviteActionSheetDefault from "openInstantInviteActionSheet" /* 9827 */;
+import utils_InstantInviteUtils from "utils/InstantInviteUtils" /* 9828 */;
+import CreateInviteModalActionCreatorsDefault from "CreateInviteModalActionCreators" /* 9831 */;
+import openInstantInviteActionSheetDefault from "openInstantInviteActionSheet" /* 9832 */;
 import GuildTemplateStore from "GuildTemplateStore" /* 7457 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
-import CreateInviteModalStore from "CreateInviteModalStore" /* 9821 */;
+import CreateInviteModalStore from "CreateInviteModalStore" /* 9826 */;
 import GuildChannelStore from "GuildChannelStore" /* 2012 */;
 import InviteStore from "InviteStore" /* 4544 */;
 import PresenceStore from "PresenceStore" /* 4600 */;
 import UserStore from "UserStore" /* 1371 */;
-import DisplayedInviteStore from "DisplayedInviteStore" /* 8739 */;
+import DisplayedInviteStore from "DisplayedInviteStore" /* 8744 */;
 
 require = fn;
 function showInstantInviteActionSheet(channel, source) {
@@ -165,7 +165,7 @@ function trackOptionClicked(code, channel, COPY, _location) {
 }
 const ChannelRecordBase = fn(1961).ChannelRecordBase;
 const InviteTargetTypes = fn(7736).InviteTargetTypes;
-const IOS_COPY_TO_PASTEBOARD = fn(9825).IOS_COPY_TO_PASTEBOARD;
+const IOS_COPY_TO_PASTEBOARD = fn(9830).IOS_COPY_TO_PASTEBOARD;
 const Constants = fn(1074);
 ({ AnalyticEvents: closure_14, InviteOptionsType: closure_15, Permissions: closure_16 } = Constants);
 const size = fn(2);

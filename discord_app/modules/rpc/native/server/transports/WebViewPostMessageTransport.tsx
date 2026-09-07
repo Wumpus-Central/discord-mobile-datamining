@@ -1,12 +1,12 @@
-// === Module 9550: WebViewPostMessageTransport ===
+// === Module 9555: WebViewPostMessageTransport ===
 
-// Module 9550 (WebViewPostMessageTransport)
+// Module 9555 (WebViewPostMessageTransport)
 import LoggerDefault from "Logger" /* 3 */;
-import stripSensitiveLoggingDataDefault from "stripSensitiveLoggingData" /* 9551 */;
-import WebViewWindowProxySocketFactoryDefault from "WebViewWindowProxySocketFactory" /* 9562 */;
-import PostMessageTransport from "PostMessageTransport" /* 9552 */;
+import stripSensitiveLoggingDataDefault from "stripSensitiveLoggingData" /* 9556 */;
+import WebViewWindowProxySocketFactoryDefault from "WebViewWindowProxySocketFactory" /* 9567 */;
+import PostMessageTransport from "PostMessageTransport" /* 9557 */;
 
-PostMessageTransport = new PostMessageTransport(fn(9558).validateSocketClient, new LoggerDefault("RPCServer:PostMessage"), WebViewWindowProxySocketFactoryDefault, (arg0, info, id) => {
+PostMessageTransport = new PostMessageTransport(fn(9563).validateSocketClient, new LoggerDefault("RPCServer:PostMessage"), WebViewWindowProxySocketFactoryDefault, (arg0, info, id) => {
   const combined = "Socket Message: " + id.id;
   info.info(combined, stripSensitiveLoggingDataDefault(arg0));
 });

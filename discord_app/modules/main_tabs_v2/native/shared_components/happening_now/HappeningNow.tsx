@@ -1,24 +1,24 @@
-// === Module 16058: HappeningNow ===
+// === Module 16061: HappeningNow ===
 
-// Module 16058 (HappeningNow)
+// Module 16061 (HappeningNow)
 import _mod12 from "module_12" /* 12 */;
 import nativeDefault from "native" /* 576 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
 import GlobalUtils from "GlobalUtils" /* 1369 */;
 import LegacyBaseButton from "LegacyBaseButton" /* 6655 */;
-import updateSharedValueIfChanged from "updateSharedValueIfChanged" /* 11354 */;
-import HappeningNowAnalytics from "HappeningNowAnalytics" /* 16059 */;
-import happeningNowRankingUtils from "happeningNowRankingUtils" /* 16067 */;
-import HappeningNowCardPlaceholder from "HappeningNowCardPlaceholder" /* 16069 */;
-import HappeningNowCardLiveStageDefault from "HappeningNowCardLiveStage" /* 16070 */;
-import HappeningNowCardUnifiedVCDefault from "HappeningNowCardUnifiedVC" /* 16072 */;
-import HappeningNowCardActivityDefault from "HappeningNowCardActivity" /* 16073 */;
-import HappeningNowCardEmbeddedActivityDefault from "HappeningNowCardEmbeddedActivity" /* 16085 */;
-import HappeningNowCardVoiceDefault from "HappeningNowCardVoice" /* 16086 */;
-import HappeningNowCardEventDefault from "HappeningNowCardEvent" /* 16087 */;
-import HappeningNowCardActiveChannelDefault from "HappeningNowCardActiveChannel" /* 16089 */;
-import HappeningNowCardUserDefault from "HappeningNowCardUser" /* 16090 */;
-import HappeningNowActions from "HappeningNowActions" /* 16091 */;
+import updateSharedValueIfChanged from "updateSharedValueIfChanged" /* 11359 */;
+import HappeningNowAnalytics from "HappeningNowAnalytics" /* 16062 */;
+import happeningNowRankingUtils from "happeningNowRankingUtils" /* 16070 */;
+import HappeningNowCardPlaceholder from "HappeningNowCardPlaceholder" /* 16072 */;
+import HappeningNowCardLiveStageDefault from "HappeningNowCardLiveStage" /* 16073 */;
+import HappeningNowCardUnifiedVCDefault from "HappeningNowCardUnifiedVC" /* 16075 */;
+import HappeningNowCardActivityDefault from "HappeningNowCardActivity" /* 16076 */;
+import HappeningNowCardEmbeddedActivityDefault from "HappeningNowCardEmbeddedActivity" /* 16088 */;
+import HappeningNowCardVoiceDefault from "HappeningNowCardVoice" /* 16089 */;
+import HappeningNowCardEventDefault from "HappeningNowCardEvent" /* 16090 */;
+import HappeningNowCardActiveChannelDefault from "HappeningNowCardActiveChannel" /* 16092 */;
+import HappeningNowCardUserDefault from "HappeningNowCardUser" /* 16093 */;
+import HappeningNowActions from "HappeningNowActions" /* 16094 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -163,7 +163,7 @@ function getItemType(kind) {
 }
 get_ActivityIndicator = fn(17);
 ({ ScrollView: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-const HappeningNowConstants = fn(15294);
+const HappeningNowConstants = fn(15297);
 ({ HAPPENING_NOW_CARD_WIDTH_NORMAL_WITH_MARGIN: closure_7, HAPPENING_NOW_CARD_WIDTH_XSMALL_WITH_MARGIN: closure_8, HAPPENING_NOW_PANELS_CONTAINER_PADDING, HappeningNowKindIds: closure_9 } = HappeningNowConstants);
 const AnalyticEvents = fn(1074).AnalyticEvents;
 const jsx = fn(21).jsx;

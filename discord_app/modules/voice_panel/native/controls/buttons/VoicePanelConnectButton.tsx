@@ -1,15 +1,15 @@
-// === Module 17186: VoicePanelConnectButton ===
+// === Module 17189: VoicePanelConnectButton ===
 
-// Module 17186 (VoicePanelConnectButton)
+// Module 17189 (VoicePanelConnectButton)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import Text_Text from "Text/Text" /* 4556 */;
 import useAlertStore from "useAlertStore" /* 4906 */;
 import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 5411 */;
-import VoicePanelSpoilerAlert from "VoicePanelSpoilerAlert" /* 12933 */;
-import VoicePanelNoJoinPermissionsAlert from "VoicePanelNoJoinPermissionsAlert" /* 17187 */;
-import VoicePanelMaxCapacityAlert from "VoicePanelMaxCapacityAlert" /* 17190 */;
-import VoicePanelNsfwAlert from "VoicePanelNsfwAlert" /* 17191 */;
+import VoicePanelSpoilerAlert from "VoicePanelSpoilerAlert" /* 12937 */;
+import VoicePanelNoJoinPermissionsAlert from "VoicePanelNoJoinPermissionsAlert" /* 17190 */;
+import VoicePanelMaxCapacityAlert from "VoicePanelMaxCapacityAlert" /* 17193 */;
+import VoicePanelNsfwAlert from "VoicePanelNsfwAlert" /* 17194 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 

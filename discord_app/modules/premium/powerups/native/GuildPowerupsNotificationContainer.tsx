@@ -1,15 +1,15 @@
-// === Module 12555: GuildPowerupsNotificationContainer ===
+// === Module 12559: GuildPowerupsNotificationContainer ===
 
-// Module 12555 (GuildPowerupsNotificationContainer)
+// Module 12559 (GuildPowerupsNotificationContainer)
 import _mod17 from "module_17" /* 17 */;
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import _modDef2428 from "module_2428" /* 2428 */;
 import Text_Text from "Text/Text" /* 4556 */;
 import ManaTypeConsolidationExperiment from "ManaTypeConsolidationExperiment" /* 8095 */;
-import useGuildPowerupTier3OverrideConfigDefault from "useGuildPowerupTier3OverrideConfig" /* 12556 */;
-import useGuildPowerupExpiringNotificationsConfigDefault from "useGuildPowerupExpiringNotificationsConfig" /* 12557 */;
-import GuildPowerupsWarningDefault from "GuildPowerupsWarning" /* 12560 */;
+import useGuildPowerupTier3OverrideConfigDefault from "useGuildPowerupTier3OverrideConfig" /* 12560 */;
+import useGuildPowerupExpiringNotificationsConfigDefault from "useGuildPowerupExpiringNotificationsConfig" /* 12561 */;
+import GuildPowerupsWarningDefault from "GuildPowerupsWarning" /* 12564 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createStyles from "createStyles" /* 4560 */;
 import size from "module_2" /* 2 */;

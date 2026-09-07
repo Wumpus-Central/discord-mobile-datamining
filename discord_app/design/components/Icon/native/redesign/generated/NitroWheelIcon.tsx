@@ -1,6 +1,6 @@
-// === Module 8662: NitroWheelIcon ===
+// === Module 8667: NitroWheelIcon ===
 
-// Module 8662 (NitroWheelIcon)
+// Module 8667 (NitroWheelIcon)
 import nativeDefault from "native" /* 576 */;
 import BaseIconImage from "BaseIconImage" /* 4261 */;
 import _mod8051 from "module_8051" /* 8051 */;

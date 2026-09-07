@@ -1,6 +1,6 @@
-// === Module 16418: ForYouItems ===
+// === Module 16421: ForYouItems ===
 
-// Module 16418 (ForYouItems)
+// Module 16421 (ForYouItems)
 import nativeDefault from "native" /* 576 */;
 import _mod675 from "module_675" /* 675 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
@@ -10,18 +10,18 @@ import parseURLDefault from "parseURL" /* 4540 */;
 import Text_Text from "Text/Text" /* 4556 */;
 import CustomMarkupAll from "CustomMarkup" /* 4995 */;
 import NotificationCenterItemsTypes from "NotificationCenterItemsTypes" /* 7640 */;
-import ApplicationIconAndNameDefault from "ApplicationIconAndName" /* 12628 */;
-import handleSupportedURLDefault from "handleSupportedURL" /* 13850 */;
-import NotificationCenterStoreActions from "NotificationCenterStoreActions" /* 16416 */;
-import ForYouMentionPlaceholder from "ForYouMentionPlaceholder" /* 16417 */;
-import ForYouReadSectionHeader from "ForYouReadSectionHeader" /* 16435 */;
-import ForYouRecentActivitySectionHeader from "ForYouRecentActivitySectionHeader" /* 16436 */;
-import ForYouHoistedItemsHeader from "ForYouHoistedItemsHeader" /* 16437 */;
-import ForYouSuggestedFriendsSectionHeaderDefault from "ForYouSuggestedFriendsSectionHeader" /* 16438 */;
-import ForYouSuggestedFriendRowDefault from "ForYouSuggestedFriendRow" /* 16439 */;
-import ForYouShowAllRow from "ForYouShowAllRow" /* 16445 */;
-import ForYouUnreadClearedState from "ForYouUnreadClearedState" /* 16446 */;
-import ForYouLoadMore from "ForYouLoadMore" /* 16447 */;
+import ApplicationIconAndNameDefault from "ApplicationIconAndName" /* 12632 */;
+import handleSupportedURLDefault from "handleSupportedURL" /* 13853 */;
+import NotificationCenterStoreActions from "NotificationCenterStoreActions" /* 16419 */;
+import ForYouMentionPlaceholder from "ForYouMentionPlaceholder" /* 16420 */;
+import ForYouReadSectionHeader from "ForYouReadSectionHeader" /* 16438 */;
+import ForYouRecentActivitySectionHeader from "ForYouRecentActivitySectionHeader" /* 16439 */;
+import ForYouHoistedItemsHeader from "ForYouHoistedItemsHeader" /* 16440 */;
+import ForYouSuggestedFriendsSectionHeaderDefault from "ForYouSuggestedFriendsSectionHeader" /* 16441 */;
+import ForYouSuggestedFriendRowDefault from "ForYouSuggestedFriendRow" /* 16442 */;
+import ForYouShowAllRow from "ForYouShowAllRow" /* 16448 */;
+import ForYouUnreadClearedState from "ForYouUnreadClearedState" /* 16449 */;
+import ForYouLoadMore from "ForYouLoadMore" /* 16450 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -30,7 +30,7 @@ import ApplicationStore from "ApplicationStore" /* 4788 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 import GuildStore from "GuildStore" /* 1979 */;
 import UserStore from "UserStore" /* 1371 */;
-import NotificationCenterStore from "NotificationCenterStore" /* 16412 */;
+import NotificationCenterStore from "NotificationCenterStore" /* 16415 */;
 
 require = fn;
 function ForYouFooter(loading) {
@@ -243,7 +243,7 @@ function ForYouMessagePreviewV2(item) {
   } else {
     const obj3 = { style: messagePreviewIconV2.messagePreviewIconV2Container, children: null };
     if (constants4.ATTACHMENT === ATTACHMENT) {
-      let tmp29 = guild_id(11245);
+      let tmp29 = guild_id(11250);
       const obj4 = { source: tmp29, size: null, style: null };
       SMALL = tmp2(1178).IconSizes.SMALL;
       obj4.size = SMALL;
@@ -254,10 +254,10 @@ function ForYouMessagePreviewV2(item) {
     } else if (constants4.STICKER !== ATTACHMENT) {
       tmp29 = null;
       if (constants4.VOICE_MESSAGE === ATTACHMENT) {
-        tmp29 = guild_id(8619);
+        tmp29 = guild_id(8624);
       }
     }
-    tmp29 = guild_id(10420);
+    tmp29 = guild_id(10425);
   }
   const tmp2Result4 = item(7888);
 }
@@ -486,7 +486,7 @@ let closure_35 = noop.memo((item) => {
       obj.icon = tmp6(notificationCenterItemAcked[42]);
       obj.IconComponent = tmp2(notificationCenterItemAcked[43]).TrashIcon;
       item = navigation(function*() {
-        yield tmp3(16414).deleteNotificationCenterItem(tmp3);
+        yield tmp3(16417).deleteNotificationCenterItem(tmp3);
         if (1 === tmp7) {
           c3 = 0;
           const obj2 = { key: "REMOVE_NOTIFICATION_ERROR", content: null };

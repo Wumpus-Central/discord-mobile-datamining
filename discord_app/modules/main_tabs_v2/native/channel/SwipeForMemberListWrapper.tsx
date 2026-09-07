@@ -1,6 +1,6 @@
-// === Module 16623: SwipeForMemberListWrapper ===
+// === Module 16626: SwipeForMemberListWrapper ===
 
-// Module 16623 (SwipeForMemberListWrapper)
+// Module 16626 (SwipeForMemberListWrapper)
 import LoggerDefault from "Logger" /* 3 */;
 import nativeDefault from "native" /* 576 */;
 import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1109 */;

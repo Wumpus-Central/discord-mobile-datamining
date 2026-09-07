@@ -1,7 +1,7 @@
-// === Module 9781: GuildScheduledEventManager ===
+// === Module 9786: GuildScheduledEventManager ===
 
-// Module 9781 (GuildScheduledEventManager)
-import GuildScheduledEventsActionCreatorsDefault from "GuildScheduledEventsActionCreators" /* 9703 */;
+// Module 9786 (GuildScheduledEventManager)
+import GuildScheduledEventsActionCreatorsDefault from "GuildScheduledEventsActionCreators" /* 9708 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import SelectedGuildStore from "SelectedGuildStore" /* 4381 */;
 import GuildScheduledEventStore from "GuildScheduledEventStore" /* 7526 */;

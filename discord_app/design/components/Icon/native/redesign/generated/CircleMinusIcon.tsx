@@ -1,10 +1,10 @@
-// === Module 15312: CircleMinusIcon ===
+// === Module 15315: CircleMinusIcon ===
 
-// Module 15312 (CircleMinusIcon)
+// Module 15315 (CircleMinusIcon)
 import nativeDefault from "native" /* 576 */;
 import BaseIconImage from "BaseIconImage" /* 4261 */;
-import _mod15313 from "module_15313" /* 15313 */;
-import _mod15314 from "module_15314" /* 15314 */;
+import _mod15316 from "module_15316" /* 15316 */;
+import _mod15317 from "module_15317" /* 15317 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -25,10 +25,10 @@ export const CircleMinusIcon = function CircleMinusIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, secondaryColor: 0, color: 0 }));
   let obj = { children: null };
-  obj = { source: _mod15313, color: secondaryColor, style };
+  obj = { source: _mod15316, color: secondaryColor, style };
   const merged1 = Object.assign(merged);
   const items = [React4(BaseIconImage.BaseIconImage, obj), ];
-  obj = { source: _mod15314, color: INTERACTIVE_ICON_DEFAULT, style: null };
+  obj = { source: _mod15317, color: INTERACTIVE_ICON_DEFAULT, style: null };
   const items1 = [style];
   const items2 = [];
   items2[HermesBuiltin.arraySpread(items1.flat(), 0)] = { position: "absolute", top: 0 };

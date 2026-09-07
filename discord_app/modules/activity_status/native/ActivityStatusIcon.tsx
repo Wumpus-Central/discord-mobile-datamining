@@ -1,6 +1,6 @@
-// === Module 10882: ActivityStatusIcon ===
+// === Module 10887: ActivityStatusIcon ===
 
-// Module 10882 (ActivityStatusIcon)
+// Module 10887 (ActivityStatusIcon)
 import noop from "module_19" /* 19 */;
 
 const jsx = fn(21).jsx;

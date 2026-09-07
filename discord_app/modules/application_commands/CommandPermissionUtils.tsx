@@ -1,6 +1,6 @@
-// === Module 9405: CommandPermissionUtils ===
+// === Module 9410: CommandPermissionUtils ===
 
-// Module 9405 (CommandPermissionUtils)
+// Module 9410 (CommandPermissionUtils)
 import _modDef38 from "module_38" /* 38 */;
 import Constants from "Constants" /* 1074 */;
 import BigFlagUtilsAll from "BigFlagUtils" /* 1086 */;
@@ -10,8 +10,8 @@ import ApplicationCommandConstants from "ApplicationCommandConstants" /* 4999 */
 import ApplicationCommandUtils from "ApplicationCommandUtils" /* 7521 */;
 import IntegrationPermissionUtils from "IntegrationPermissionUtils" /* 7522 */;
 import ApplicationCommandTypes from "ApplicationCommandTypes" /* 7523 */;
-import ApplicationIntegrationType from "ApplicationIntegrationType" /* 9245 */;
-import CommandPermissionContext from "CommandPermissionContext" /* 9295 */;
+import ApplicationIntegrationType from "ApplicationIntegrationType" /* 9250 */;
+import CommandPermissionContext from "CommandPermissionContext" /* 9300 */;
 import GuildStore from "GuildStore" /* 1979 */;
 import size from "module_2" /* 2 */;
 

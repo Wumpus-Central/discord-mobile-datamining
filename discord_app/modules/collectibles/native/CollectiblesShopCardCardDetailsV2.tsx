@@ -1,6 +1,6 @@
-// === Module 8847: CollectiblesShopCardCardDetailsV2 ===
+// === Module 8852: CollectiblesShopCardCardDetailsV2 ===
 
-// Module 8847 (CollectiblesShopCardCardDetailsV2)
+// Module 8852 (CollectiblesShopCardCardDetailsV2)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 576 */;
 import CollectiblesItemType from "CollectiblesItemType" /* 1889 */;
@@ -12,9 +12,9 @@ import LinearGradientDefault from "LinearGradient" /* 4987 */;
 import CollectiblesProductUtils from "CollectiblesProductUtils" /* 7553 */;
 import CollectiblesUtils from "CollectiblesUtils" /* 7554 */;
 import useCurrentUser from "useCurrentUser" /* 8178 */;
-import useCanPurchaseFrames from "useCanPurchaseFrames" /* 8830 */;
-import getProductName from "getProductName" /* 8864 */;
-import CollectiblesShopCardVariantsDefault from "CollectiblesShopCardVariants" /* 8865 */;
+import useCanPurchaseFrames from "useCanPurchaseFrames" /* 8835 */;
+import getProductName from "getProductName" /* 8869 */;
+import CollectiblesShopCardVariantsDefault from "CollectiblesShopCardVariants" /* 8870 */;
 import noop from "module_19" /* 19 */;
 import IAPStore from "IAPStore" /* 7237 */;
 

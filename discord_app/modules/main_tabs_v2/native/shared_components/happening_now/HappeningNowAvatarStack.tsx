@@ -1,11 +1,11 @@
-// === Module 16082: HappeningNowAvatarStack ===
+// === Module 16085: HappeningNowAvatarStack ===
 
-// Module 16082 (HappeningNowAvatarStack)
+// Module 16085 (HappeningNowAvatarStack)
 import nativeDefault from "native" /* 576 */;
 import native from "native" /* 1178 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4296 */;
 import spring from "spring" /* 4974 */;
-import ClipView from "ClipView" /* 8813 */;
+import ClipView from "ClipView" /* 8818 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import LocaleStore from "LocaleStore" /* 2025 */;
@@ -14,7 +14,7 @@ const ClipViewDefault = ClipView;
 
 require = fn;
 const View = fn(17).View;
-const CHANNEL_SPRING_CONFIG = fn(13029).CHANNEL_SPRING_CONFIG;
+const CHANNEL_SPRING_CONFIG = fn(13033).CHANNEL_SPRING_CONFIG;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 let SPRING_CONFIG = { damping: 17, stiffness: 320, mass: 0.5 };

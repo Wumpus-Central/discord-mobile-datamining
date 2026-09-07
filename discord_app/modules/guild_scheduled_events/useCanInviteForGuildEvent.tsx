@@ -1,8 +1,8 @@
-// === Module 9773: useCanInviteForGuildEvent ===
+// === Module 9778: useCanInviteForGuildEvent ===
 
-// Module 9773 (useCanInviteForGuildEvent)
+// Module 9778 (useCanInviteForGuildEvent)
 import PermissionUtilsAll from "PermissionUtils" /* 4204 */;
-import canViewInviteModal from "canViewInviteModal" /* 9774 */;
+import canViewInviteModal from "canViewInviteModal" /* 9779 */;
 import StageInstanceStore from "StageInstanceStore" /* 1962 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 import GuildChannelStore from "GuildChannelStore" /* 2012 */;

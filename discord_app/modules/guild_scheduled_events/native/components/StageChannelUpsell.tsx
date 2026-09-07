@@ -1,6 +1,6 @@
-// === Module 9729: StageChannelUpsell ===
+// === Module 9734: StageChannelUpsell ===
 
-// Module 9729 (StageChannelUpsell)
+// Module 9734 (StageChannelUpsell)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import native from "native" /* 1178 */;
@@ -11,7 +11,7 @@ import ModalActionCreatorsDefault from "ModalActionCreators" /* 4763 */;
 import components_Button_Button from "components/Button/Button" /* 4975 */;
 import Pressables from "Pressables" /* 5123 */;
 import _modDef6992 from "module_6992" /* 6992 */;
-import _modDef9731 from "module_9731" /* 9731 */;
+import _modDef9736 from "module_9736" /* 9736 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -19,8 +19,8 @@ require = fn;
 get_ActivityIndicator = fn(17);
 ({ Image: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
 const createChannelRecord = fn(1961).createChannelRecord;
-let closure_7 = fn(9730).useStageChannelUpsellCardStore;
-let closure_8 = fn(9699).CREATE_GUILD_EVENT_MODAL_KEY;
+let closure_7 = fn(9735).useStageChannelUpsellCardStore;
+let closure_8 = fn(9704).CREATE_GUILD_EVENT_MODAL_KEY;
 const ChannelTypes = fn(1074).ChannelTypes;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
@@ -50,7 +50,7 @@ export default function StageChannelUpsell(arg0) {
     obj = { source: _modDef6992 };
     obj.children = closure_10(native.Icon, obj);
     const items = [closure_10(Pressables.PressableOpacity, obj), , , , , ];
-    const obj1 = { source: _modDef9731, style: tmp.image };
+    const obj1 = { source: _modDef9736, style: tmp.image };
     items[1] = closure_10(closure_4, obj1);
     let obj2 = { style: tmp.header, variant: "text-md/bold", color: "mobile-text-heading-primary", children: null };
     const intl = util.intl;
@@ -90,7 +90,7 @@ export default function StageChannelUpsell(arg0) {
           closure_1_1(dependencyMap[17]).popWithKey(closure_1_12);
         }
       };
-      ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(9732, dependencyMap.paths), obj, CREATE_CHANNEL_MODAL_KEY);
+      ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(9737, dependencyMap.paths), obj, CREATE_CHANNEL_MODAL_KEY);
       dependencyMap();
       ActionSheetActionCreatorsDefault.hideActionSheet();
     };

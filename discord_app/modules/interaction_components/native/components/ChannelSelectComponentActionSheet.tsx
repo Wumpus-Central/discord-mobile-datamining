@@ -1,6 +1,6 @@
-// === Module 11827: ChannelSelectComponentActionSheet ===
+// === Module 11832: ChannelSelectComponentActionSheet ===
 
-// Module 11827 (ChannelSelectComponentActionSheet)
+// Module 11832 (ChannelSelectComponentActionSheet)
 import native from "native" /* 1178 */;
 import SearchableSelectActionComponentUtils from "SearchableSelectActionComponentUtils" /* 8120 */;
 import NativeSearchableSelectActionComponentUtils from "NativeSearchableSelectActionComponentUtils" /* 8122 */;

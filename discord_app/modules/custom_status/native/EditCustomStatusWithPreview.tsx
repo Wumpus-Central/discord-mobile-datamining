@@ -1,6 +1,6 @@
-// === Module 11114: EditCustomStatusWithPreview ===
+// === Module 11119: EditCustomStatusWithPreview ===
 
-// Module 11114 (EditCustomStatusWithPreview)
+// Module 11119 (EditCustomStatusWithPreview)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import native from "native" /* 1178 */;
@@ -14,11 +14,11 @@ import setAccessibilityFocus from "setAccessibilityFocus" /* 4971 */;
 import Pressables from "Pressables" /* 5123 */;
 import NavigatorHeader from "NavigatorHeader" /* 5624 */;
 import _modDef6940 from "module_6940" /* 6940 */;
-import maybeShowDiscardChangesAlertDefault from "maybeShowDiscardChangesAlert" /* 10923 */;
-import setCustomStatusDefault from "setCustomStatus" /* 11118 */;
-import removeCustomStatusDefault from "removeCustomStatus" /* 11120 */;
-import openEmojiPickerActionSheet from "openEmojiPickerActionSheet" /* 11121 */;
-import CustomStatusPreviewDefault from "CustomStatusPreview" /* 11148 */;
+import maybeShowDiscardChangesAlertDefault from "maybeShowDiscardChangesAlert" /* 10928 */;
+import setCustomStatusDefault from "setCustomStatus" /* 11123 */;
+import removeCustomStatusDefault from "removeCustomStatus" /* 11125 */;
+import openEmojiPickerActionSheet from "openEmojiPickerActionSheet" /* 11126 */;
+import CustomStatusPreviewDefault from "CustomStatusPreview" /* 11153 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1371 */;
@@ -270,7 +270,7 @@ function EditCustomStatusWithPreview(navigation) {
       let obj = ChatInputUtils;
       obj.dismissKeyboard();
       obj = { initialValue: first2, onChange };
-      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(11201, dependencyMap.paths), "ClearAfterOptionsActionSheet", obj);
+      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(11206, dependencyMap.paths), "ClearAfterOptionsActionSheet", obj);
     };
     const obj14 = { variant: "text-sm/medium", children: tmp10(tmp7[39])(first2) };
     obj13.trailing = ref1(tmp6(tmp7[31]).Text, obj14);
@@ -308,7 +308,7 @@ function EditCustomStatusWithPreview(navigation) {
 }
 get_ActivityIndicator = fn(17);
 ({ ScrollView: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-const STATUS_MAX_LENGTH = fn(11115).STATUS_MAX_LENGTH;
+const STATUS_MAX_LENGTH = fn(11120).STATUS_MAX_LENGTH;
 const Constants = fn(1074);
 ({ AnalyticEvents: closure_9, AnalyticsSections: c10, NOOP: closure_11, Fonts } = Constants);
 const EmojiIntention = fn(1374).EmojiIntention;

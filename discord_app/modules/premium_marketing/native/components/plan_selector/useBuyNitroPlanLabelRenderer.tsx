@@ -1,6 +1,6 @@
-// === Module 13404: useBuyNitroPlanLabelRenderer ===
+// === Module 13408: useBuyNitroPlanLabelRenderer ===
 
-// Module 13404 (useBuyNitroPlanLabelRenderer)
+// Module 13408 (useBuyNitroPlanLabelRenderer)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import NumberUtils from "NumberUtils" /* 1880 */;

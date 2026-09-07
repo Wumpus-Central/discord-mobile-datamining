@@ -1,6 +1,6 @@
-// === Module 12322: GuildDirectoryAddAlert ===
+// === Module 12326: GuildDirectoryAddAlert ===
 
-// Module 12322 (GuildDirectoryAddAlert)
+// Module 12326 (GuildDirectoryAddAlert)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import Text_Text from "Text/Text" /* 4556 */;

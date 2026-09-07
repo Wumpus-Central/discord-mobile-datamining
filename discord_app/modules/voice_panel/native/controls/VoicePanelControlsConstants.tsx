@@ -1,6 +1,6 @@
-// === Module 12271: VoicePanelControlsConstants ===
+// === Module 12275: VoicePanelControlsConstants ===
 
-// Module 12271 (VoicePanelControlsConstants)
+// Module 12275 (VoicePanelControlsConstants)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/voice_panel/native/controls/VoicePanelControlsConstants.tsx");

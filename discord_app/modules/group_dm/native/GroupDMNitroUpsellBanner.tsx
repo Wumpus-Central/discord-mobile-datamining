@@ -1,6 +1,6 @@
-// === Module 16688: GroupDMNitroUpsellBanner ===
+// === Module 16691: GroupDMNitroUpsellBanner ===
 
-// Module 16688 (GroupDMNitroUpsellBanner)
+// Module 16691 (GroupDMNitroUpsellBanner)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 576 */;
 import _modDef672 from "module_672" /* 672 */;
@@ -9,10 +9,10 @@ import Text_Text from "Text/Text" /* 4556 */;
 import spring from "spring" /* 4974 */;
 import components_Button_Button from "components/Button/Button" /* 4975 */;
 import _modDef8051 from "module_8051" /* 8051 */;
-import GroupDMNitroUpsellModel from "GroupDMNitroUpsellModel" /* 11591 */;
-import GroupDMNitroCapExperimentDefault from "GroupDMNitroCapExperiment" /* 11594 */;
-import useGroupDMNitroUpsellActionDefault from "useGroupDMNitroUpsellAction" /* 11598 */;
-import GroupDMNitroCapBannerDefault from "GroupDMNitroCapBanner" /* 16690 */;
+import GroupDMNitroUpsellModel from "GroupDMNitroUpsellModel" /* 11596 */;
+import GroupDMNitroCapExperimentDefault from "GroupDMNitroCapExperiment" /* 11599 */;
+import useGroupDMNitroUpsellActionDefault from "useGroupDMNitroUpsellAction" /* 11603 */;
+import GroupDMNitroCapBannerDefault from "GroupDMNitroCapBanner" /* 16693 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4552 */;
@@ -150,7 +150,7 @@ function FloatingBanner(children) {
 }
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-const number = fn(11593).MAX_GROUP_DM_NITRO_PARTICIPANTS;
+const number = fn(11598).MAX_GROUP_DM_NITRO_PARTICIPANTS;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
 const PX_40 = nativeDefault.space.PX_40;

@@ -1,12 +1,12 @@
-// === Module 15218: ResubscribedAlert ===
+// === Module 15221: ResubscribedAlert ===
 
-// Module 15218 (ResubscribedAlert)
+// Module 15221 (ResubscribedAlert)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import native from "native" /* 1178 */;
 import Text_Text from "Text/Text" /* 4556 */;
 import common_AlertDefault from "common/Alert" /* 4994 */;
-import _modDef15219 from "module_15219" /* 15219 */;
+import _modDef15222 from "module_15222" /* 15222 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -33,7 +33,7 @@ export default function ResubscribedAlert(onClose) {
   obj.onConfirm = onClose.onClose;
   obj.style = tmp.container;
   obj = { style: tmp.body, children: null };
-  obj = { source: _modDef15219, style: tmp.headerImage };
+  obj = { source: _modDef15222, style: tmp.headerImage };
   const items = [hasOwnProperty(React4, obj), hasOwnProperty(native.Spacer, { size: 27 }), , , ];
   const obj1 = { variant: "text-lg/semibold", color: "mobile-text-heading-primary", style: tmp.centerText, children: null };
   const intl2 = util.intl;

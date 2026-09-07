@@ -1,6 +1,6 @@
-// === Module 9241: applications ===
+// === Module 9246: applications ===
 
-// Module 9241 (applications)
+// Module 9246 (applications)
 import _mod1188 from "module_1188" /* 1188 */;
 import timestamp from "timestamp" /* 1217 */;
 import _slicedToArray from "module_32" /* 32 */;

@@ -1,12 +1,12 @@
-// === Module 11900: AppealIngestionExternalLink ===
+// === Module 11905: AppealIngestionExternalLink ===
 
-// Module 11900 (AppealIngestionExternalLink)
+// Module 11905 (AppealIngestionExternalLink)
 import nativeDefault from "native" /* 576 */;
 import native from "native" /* 1178 */;
 import LinkingDefault from "Linking" /* 4255 */;
 import Text_Text from "Text/Text" /* 4556 */;
 import Pressables from "Pressables" /* 5123 */;
-import _mod8639 from "module_8639" /* 8639 */;
+import _mod8644 from "module_8644" /* 8644 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -41,7 +41,7 @@ export default function AppealIngestionExternalLink(children) {
   };
   obj = { style: tmp.childContainer, children: null };
   obj = { style: tmp.childButtonText, variant: "text-md/semibold", color: "mobile-text-heading-primary", children: children.text };
-  const items = [closure_4(Text_Text.Text, obj), closure_4(native.Icon, { source: _mod8639, color: tmp.chevron.color })];
+  const items = [closure_4(Text_Text.Text, obj), closure_4(native.Icon, { source: _mod8644, color: tmp.chevron.color })];
   obj.children = items;
   obj.children = closure_5(View, obj);
   return closure_4(Pressables.PressableHighlight, obj);

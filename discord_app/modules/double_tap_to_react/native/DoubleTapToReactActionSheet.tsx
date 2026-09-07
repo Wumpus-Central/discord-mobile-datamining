@@ -1,6 +1,6 @@
-// === Module 12381: DoubleTapToReactActionSheet ===
+// === Module 12385: DoubleTapToReactActionSheet ===
 
-// Module 12381 (DoubleTapToReactActionSheet)
+// Module 12385 (DoubleTapToReactActionSheet)
 import nativeDefault from "native" /* 576 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1396 */;
 import UserSettings from "UserSettings" /* 1935 */;

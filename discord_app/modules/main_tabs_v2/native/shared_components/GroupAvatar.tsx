@@ -1,6 +1,6 @@
-// === Module 13039: GroupAvatar ===
+// === Module 13043: GroupAvatar ===
 
-// Module 13039 (GroupAvatar)
+// Module 13043 (GroupAvatar)
 import nativeDefault from "native" /* 576 */;
 import Text_Text from "Text/Text" /* 4556 */;
 import timing from "timing" /* 4561 */;

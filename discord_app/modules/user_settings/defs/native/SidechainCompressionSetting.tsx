@@ -1,14 +1,14 @@
-// === Module 15258: SidechainCompressionSetting ===
+// === Module 15261: SidechainCompressionSetting ===
 
-// Module 15258 (SidechainCompressionSetting)
+// Module 15261 (SidechainCompressionSetting)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1114 */;
-import AudioActionCreatorsDefault from "AudioActionCreators" /* 9089 */;
+import AudioActionCreatorsDefault from "AudioActionCreators" /* 9094 */;
 import MediaEngineStore from "MediaEngineStore" /* 1908 */;
 
 require = fn;
 const Features = fn(4585).Features;
-fn(11468);
+fn(11473);
 let SettingBuilders = {
   useTitle() {
     const intl = util.intl;

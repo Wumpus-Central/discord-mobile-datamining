@@ -1,15 +1,15 @@
-// === Module 15464: VideoUploadQualitySetting ===
+// === Module 15467: VideoUploadQualitySetting ===
 
-// Module 15464 (VideoUploadQualitySetting)
+// Module 15467 (VideoUploadQualitySetting)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1114 */;
 import UserSettings from "UserSettings" /* 1935 */;
-import UserSettingsText from "UserSettingsText" /* 15463 */;
+import UserSettingsText from "UserSettingsText" /* 15466 */;
 import UnsyncedUserSettingsStore from "UnsyncedUserSettingsStore" /* 1185 */;
 
 require = fn;
 const VideoQualitySettings = fn(1185).VideoQualitySettings;
-fn(11468);
+fn(11473);
 let SettingBuilders = {
   useTitle() {
     const intl = util.intl;

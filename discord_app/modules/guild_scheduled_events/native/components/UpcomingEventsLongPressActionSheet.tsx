@@ -1,6 +1,6 @@
-// === Module 12375: UpcomingEventsLongPressActionSheet ===
+// === Module 12379: UpcomingEventsLongPressActionSheet ===
 
-// Module 12375 (UpcomingEventsLongPressActionSheet)
+// Module 12379 (UpcomingEventsLongPressActionSheet)
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4527 */;
 import ReadStateActionCreators from "ReadStateActionCreators" /* 7110 */;
 import NotificationSettingsUtils from "NotificationSettingsUtils" /* 7114 */;
@@ -40,19 +40,19 @@ export default function UpcomingEventsLongPressActionSheet(guildId) {
   const items2 = [closure_7(guildId(7149).BottomSheetTitleHeader, obj), , ];
   const obj2 = { leading: null, label: null, onPress: null };
   const tmp9 = stateFromStores1(5584);
-  obj2.leading = closure_7(guildId(1178).Icon, { source: stateFromStores1(12376) });
+  obj2.leading = closure_7(guildId(1178).Icon, { source: stateFromStores1(12380) });
   const obj4 = { text: null };
   const intl2 = guildId(1114).intl;
   obj4.text = intl2.string(guildId(1114).t.e6RscS);
-  obj2.label = closure_7(guildId(8593).FormLabel, obj4);
+  obj2.label = closure_7(guildId(8598).FormLabel, obj4);
   obj2.onPress = function onPress() {
     ReadStateActionCreators.ackGuildFeature(guildId, ReadStateTypes.GUILD_EVENT);
     ActionSheetActionCreatorsDefault.hideActionSheet();
   };
-  items2[1] = closure_7(guildId(8593).FormRow, obj2);
+  items2[1] = closure_7(guildId(8598).FormRow, obj2);
   const obj5 = { leading: null, label: null, onPress: null };
-  const obj3 = { source: stateFromStores1(12376) };
-  obj5.leading = closure_7(guildId(1178).Icon, { source: tmp8(stateFromStores1 ? 12377 : 12378) });
+  const obj3 = { source: stateFromStores1(12380) };
+  obj5.leading = closure_7(guildId(1178).Icon, { source: tmp8(stateFromStores1 ? 12381 : 12382) });
   const intl3 = tmp2(1114).intl;
   const string = intl3.string;
   const t = tmp2(1114).t;
@@ -62,13 +62,13 @@ export default function UpcomingEventsLongPressActionSheet(guildId) {
     stringResult = string(t.ONG3Yz);
   }
   const obj7 = { children: null };
-  obj5.label = closure_7(guildId(8593).FormLabel, { text: stringResult });
+  obj5.label = closure_7(guildId(8598).FormLabel, { text: stringResult });
   obj5.onPress = function onPress() {
     const obj = { mute_scheduled_events: !stateFromStores1 };
     const NotificationLabel = NotificationSettingsUtils.NotificationLabel;
     const result = obj.updateGuildNotificationSettings(guildId, obj, NotificationLabel.mutedEvents(!stateFromStores1));
   };
-  items2[2] = closure_7(guildId(8593).FormRow, obj5);
+  items2[2] = closure_7(guildId(8598).FormRow, obj5);
   obj7.children = items2;
   return closure_8(guildId(7198).ActionSheet, obj7);
 };

@@ -1,6 +1,6 @@
-// === Module 16824: AddModeratorsActionSheet ===
+// === Module 16827: AddModeratorsActionSheet ===
 
-// Module 16824 (AddModeratorsActionSheet)
+// Module 16827 (AddModeratorsActionSheet)
 import nativeDefault from "native" /* 576 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
@@ -106,7 +106,7 @@ export default function AddModeratorsActionSheet(channel) {
       obj1.header = jsx(tmp4(7149).BottomSheetTitleHeader, obj);
       let obj2 = { style: tmp.container, children: null };
       const obj3 = { inActionSheet: true, channel, guild: stateFromStores, permission: tmp4(1965).MODERATE_STAGE_CHANNEL_PERMISSIONS, pendingAdditions, setPendingAdditions: tmp2[1] };
-      obj2.children = jsx(tmp7(9764), { inActionSheet: true, channel, guild: stateFromStores, permission: tmp4(1965).MODERATE_STAGE_CHANNEL_PERMISSIONS, pendingAdditions, setPendingAdditions: tmp2[1] });
+      obj2.children = jsx(tmp7(9769), { inActionSheet: true, channel, guild: stateFromStores, permission: tmp4(1965).MODERATE_STAGE_CHANNEL_PERMISSIONS, pendingAdditions, setPendingAdditions: tmp2[1] });
       obj1.children = <View style={tmp.container}>{null}</View>;
       return jsx(tmp4(7150).BottomSheet, { scrollable: true, header: null, startExpanded: true, children: null });
     }

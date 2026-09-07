@@ -1,13 +1,13 @@
-// === Module 17194: VoicePanelDisconnectCancelButton ===
+// === Module 17197: VoicePanelDisconnectCancelButton ===
 
-// Module 17194 (VoicePanelDisconnectCancelButton)
+// Module 17197 (VoicePanelDisconnectCancelButton)
 import nativeDefault from "native" /* 576 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4296 */;
 import StreamActionCreators from "StreamActionCreators" /* 4702 */;
 import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 4761 */;
 import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 5411 */;
-import ChannelRTCParticipants from "ChannelRTCParticipants" /* 9476 */;
-import EmbeddedActivitiesNativeManagerDefault from "EmbeddedActivitiesNativeManager" /* 9515 */;
+import ChannelRTCParticipants from "ChannelRTCParticipants" /* 9481 */;
+import EmbeddedActivitiesNativeManagerDefault from "EmbeddedActivitiesNativeManager" /* 9520 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 1956 */;
@@ -15,7 +15,7 @@ import ApplicationStreamingStore from "ApplicationStreamingStore" /* 4582 */;
 import VoicePanelStore from "VoicePanelStore" /* 4768 */;
 
 require = fn;
-const VoicePanelModes = fn(12273).VoicePanelModes;
+const VoicePanelModes = fn(12277).VoicePanelModes;
 const jsx = fn(21).jsx;
 const constants = { USER: 0, [0]: "USER", STREAM: 1, [1]: "STREAM", ACTIVITY: 2, [2]: "ACTIVITY" };
 fn(4560);

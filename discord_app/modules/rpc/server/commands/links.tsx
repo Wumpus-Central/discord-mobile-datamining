@@ -1,12 +1,12 @@
-// === Module 14481: links ===
+// === Module 14484: links ===
 
-// Module 14481 (links)
+// Module 14484 (links)
 import openUserSettings from "openUserSettings" /* 7382 */;
-import ApplicationFlagUtils from "ApplicationFlagUtils" /* 8856 */;
-import RPCErrorDefault from "RPCError" /* 9554 */;
-import createRpcJoiSchemaObjectDefault from "createRpcJoiSchemaObject" /* 9557 */;
-import RPCHelpers from "RPCHelpers" /* 9559 */;
-import openActivityShareLinkModal from "openActivityShareLinkModal" /* 14485 */;
+import ApplicationFlagUtils from "ApplicationFlagUtils" /* 8861 */;
+import RPCErrorDefault from "RPCError" /* 9559 */;
+import createRpcJoiSchemaObjectDefault from "createRpcJoiSchemaObject" /* 9562 */;
+import RPCHelpers from "RPCHelpers" /* 9564 */;
+import openActivityShareLinkModal from "openActivityShareLinkModal" /* 14488 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 1956 */;
 import ApplicationStore from "ApplicationStore" /* 4788 */;
@@ -228,7 +228,7 @@ obj = {
 };
 const items2 = [RPC_AUTHENTICATED_SCOPE];
 obj.scope = { [RPC_SCOPE_CONFIG.ANY]: items2 };
-const CONTEXT_MENU_ICON_NAMES = fn(14476);
+const CONTEXT_MENU_ICON_NAMES = fn(14479);
 let obj1 = {
   scope: null,
   handler(arg0) {

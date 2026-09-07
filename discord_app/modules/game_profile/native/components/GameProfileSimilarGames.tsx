@@ -1,11 +1,11 @@
-// === Module 8875: GameProfileSimilarGames ===
+// === Module 8880: GameProfileSimilarGames ===
 
-// Module 8875 (GameProfileSimilarGames)
+// Module 8880 (GameProfileSimilarGames)
 import nativeDefault from "native" /* 576 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1477 */;
-import GameProfileActionCreatorsDefault from "GameProfileActionCreators" /* 8680 */;
-import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 8686 */;
-import useSimilarGamesDefault from "useSimilarGames" /* 8876 */;
+import GameProfileActionCreatorsDefault from "GameProfileActionCreators" /* 8685 */;
+import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 8691 */;
+import useSimilarGamesDefault from "useSimilarGames" /* 8881 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -128,7 +128,7 @@ export default function GameProfileSimilarGames(trackAction) {
     const items = [closure_7(closure_6, obj), ];
     const obj1 = {
       horizontal: true,
-      renderScrollComponent: tmp2(8720),
+      renderScrollComponent: tmp2(8725),
       data,
       renderItem() {
           return React5(LoadingCard, { cardWidth });
@@ -138,7 +138,7 @@ export default function GameProfileSimilarGames(trackAction) {
       ListHeaderComponent: ListPadding,
       ListFooterComponent: ListPadding
     };
-    items[1] = closure_7(trackAction(8874).FlashList, obj1);
+    items[1] = closure_7(trackAction(8879).FlashList, obj1);
     obj.children = items;
     let tmp7 = closure_8(closure_6, obj);
   } else {
@@ -153,7 +153,7 @@ export default function GameProfileSimilarGames(trackAction) {
       const items1 = [closure_7(closure_6, obj3), ];
       const obj5 = {
         horizontal: true,
-        renderScrollComponent: tmp2(8720),
+        renderScrollComponent: tmp2(8725),
         data: similarGames,
         renderItem(game) {
               return React5(SimilarGameCard, { game: game.item, trackAction, cardWidth });
@@ -165,7 +165,7 @@ export default function GameProfileSimilarGames(trackAction) {
         decelerationRate: "fast",
         snapToInterval: result + tmp5
       };
-      items1[1] = closure_7(trackAction(8874).FlashList, obj5);
+      items1[1] = closure_7(trackAction(8879).FlashList, obj5);
       obj2.children = items1;
       tmp7 = closure_8(closure_6, obj2);
     }

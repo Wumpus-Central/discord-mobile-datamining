@@ -1,6 +1,6 @@
-// === Module 15706: DevToolsTogglesScreen ===
+// === Module 15709: DevToolsTogglesScreen ===
 
-// Module 15706 (DevToolsTogglesScreen)
+// Module 15709 (DevToolsTogglesScreen)
 import nativeDefault from "native" /* 576 */;
 import ToastActionCreatorsDefault from "ToastActionCreators" /* 4259 */;
 import fuzzysearchDefault from "fuzzysearch" /* 5517 */;
@@ -88,7 +88,7 @@ export default function DevToolsTogglesScreen() {
   let tmp = closure_12();
   const tmp3 = _slicedToArray(noop.useState(""), 2);
   const query = tmp3[0];
-  let obj = query(15707);
+  let obj = query(15710);
   const manaTextMigrationHighlightRestartNotice = obj.useManaTextMigrationHighlightRestartNotice();
   let obj1 = query(504);
   const items = [DesignTogglesStore];
@@ -119,9 +119,9 @@ export default function DevToolsTogglesScreen() {
       label: "Clear All",
       variant: "danger",
       onPress() {
-        first(15708).clearAll();
-        const obj = first(15708);
-        first(15690).clearAll();
+        first(15711).clearAll();
+        const obj = first(15711);
+        first(15693).clearAll();
       },
       arrow: true
     }),
@@ -141,7 +141,7 @@ export default function DevToolsTogglesScreen() {
             description: tmp3,
             value: tmp2,
             onValueChange(arg0) {
-              return first(15708).toggle(query, arg0);
+              return first(15711).toggle(query, arg0);
             }
           }, tmp);
         })

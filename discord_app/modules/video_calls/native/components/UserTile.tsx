@@ -1,26 +1,26 @@
-// === Module 9623: UserTile ===
+// === Module 9628: UserTile ===
 
-// Module 9623 (UserTile)
+// Module 9628 (UserTile)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import native from "native" /* 1178 */;
 import Text_Text from "Text/Text" /* 4556 */;
-import _modDef8614 from "module_8614" /* 8614 */;
-import _modDef9625 from "module_9625" /* 9625 */;
-import _modDef9626 from "module_9626" /* 9626 */;
-import _modDef9627 from "module_9627" /* 9627 */;
-import _modDef9628 from "module_9628" /* 9628 */;
-import mediaEngineContextFromParticipantTypeDefault from "mediaEngineContextFromParticipantType" /* 9629 */;
+import _modDef8619 from "module_8619" /* 8619 */;
+import _modDef9630 from "module_9630" /* 9630 */;
+import _modDef9631 from "module_9631" /* 9631 */;
+import _modDef9632 from "module_9632" /* 9632 */;
+import _modDef9633 from "module_9633" /* 9633 */;
+import mediaEngineContextFromParticipantTypeDefault from "mediaEngineContextFromParticipantType" /* 9634 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import VoiceChannelEffectsStore from "VoiceChannelEffectsStore" /* 9624 */;
+import VoiceChannelEffectsStore from "VoiceChannelEffectsStore" /* 9629 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 import MediaEngineStore from "MediaEngineStore" /* 1908 */;
 
 require = fn;
 const View = fn(17).View;
-let closure_7 = fn(9624).clearVoiceChannelEffectForUser;
+let closure_7 = fn(9629).clearVoiceChannelEffectForUser;
 const VideoToggleState = fn(1074).VideoToggleState;
 const ParticipantTypes = fn(4581).ParticipantTypes;
 const MediaEngineContextTypes = fn(4585).MediaEngineContextTypes;
@@ -107,7 +107,7 @@ let closure_18 = noop.memo((guildId) => {
       const items = [, ];
       ({ autoDisabledVideo: arr[0], autoDisabledVideoTextWrapper: arr[1] } = closure_1);
       obj.style = items;
-      obj = { source: _modDef9625, size: native.Icon.Sizes.SMALL, disableColor: true };
+      obj = { source: _modDef9630, size: native.Icon.Sizes.SMALL, disableColor: true };
       const items1 = [closure_2_14(native.Icon, obj), ];
       const obj1 = { variant: "text-sm/normal", color: "text-default", style: closure_1.labelText, children: null };
       const intl = util.intl;
@@ -138,11 +138,11 @@ let closure_19 = noop.memo((userId) => {
   }, items1), 3);
   let tmp5 = tmp4[1];
   if (tmp4[0]) {
-    let tmp6 = _modDef8614;
+    let tmp6 = _modDef8619;
   } else if (deafened) {
-    tmp6 = _modDef9626;
+    tmp6 = _modDef9631;
   } else if (muted) {
-    tmp6 = _modDef9627;
+    tmp6 = _modDef9632;
   }
   if (tmp5) {
     tmp5 = !tmp4[2];
@@ -153,7 +153,7 @@ let closure_19 = noop.memo((userId) => {
       obj = { style: null, children: null };
       const items2 = [tmp.statusWrapper, style];
       obj.style = items2;
-      obj = { source: _modDef9628, size: tmp2(1178).Icon.Sizes.SMALL, disableColor: true };
+      obj = { source: _modDef9633, size: tmp2(1178).Icon.Sizes.SMALL, disableColor: true };
       obj.children = closure_14(tmp2(1178).Icon, obj);
       tmp14 = closure_14(View, obj);
     }
@@ -168,7 +168,7 @@ let closure_19 = noop.memo((userId) => {
       const obj2 = { style: null, children: null };
       items4[2] = obj1;
       obj2.style = items4;
-      const obj3 = { source: tmp6, size: tmp2(1178).Icon.Sizes.SMALL, color: nativeDefault.unsafe_rawColors.WHITE, disableColor: tmp6 === _modDef8614 };
+      const obj3 = { source: tmp6, size: tmp2(1178).Icon.Sizes.SMALL, color: nativeDefault.unsafe_rawColors.WHITE, disableColor: tmp6 === _modDef8619 };
       obj2.children = closure_14(tmp2(1178).Icon, obj3);
       tmp19Result = closure_14(View, obj2);
     }

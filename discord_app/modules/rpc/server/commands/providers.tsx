@@ -1,7 +1,7 @@
-// === Module 14490: providers ===
+// === Module 14493: providers ===
 
-// Module 14490 (providers)
-import createRpcJoiSchemaObjectDefault from "createRpcJoiSchemaObject" /* 9557 */;
+// Module 14493 (providers)
+import createRpcJoiSchemaObjectDefault from "createRpcJoiSchemaObject" /* 9562 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import ConnectedAccountsStore from "ConnectedAccountsStore" /* 5281 */;
 
@@ -41,12 +41,12 @@ obj = {
     if (null == value) {
       obj = { errorCode: constants2.INVALID_PROVIDER };
       const _HermesInternal = HermesInternal;
-      let tmp4Result = tmp4(9554);
+      let tmp4Result = tmp4(9559);
       tmp4Result = new tmp4Result(obj, "Platform not found for provider \"" + provider + "\"");
       throw tmp4Result;
     } else if (provider !== constants.AMAZON_MUSIC) {
       obj = { errorCode: constants2.UNAUTHORIZED_FOR_APPLICATION };
-      const tmp22 = new tmp4(9554)(obj, "Command not available for this application");
+      const tmp22 = new tmp4(9559)(obj, "Command not available for this application");
       throw tmp22;
     } else if (set.has(validateApplicationResult)) {
       _require = asyncGeneratorStep(async (arg0, successRedirect) => {
@@ -105,7 +105,7 @@ obj = {
                     }
                     closure_130_3 = handleConnectionsUpdate;
                     function handleConnectionsCallbackError() {
-                      let tmp = connection_redirect(9554);
+                      let tmp = connection_redirect(9559);
                       tmp = new tmp({ errorCode: closure_3_9.OAUTH2_ERROR }, "OAuth2 setup for \"" + closure_0 + "\" failed");
                       successRedirect(tmp);
                       connection_redirect(573).unsubscribe("USER_CONNECTIONS_UPDATE", closure_1_3);
@@ -178,7 +178,7 @@ obj = {
       return promise;
     } else {
       obj1 = { errorCode: constants2.UNAUTHORIZED_FOR_APPLICATION };
-      const tmp10 = new tmp4(9554)(obj1, "Command not available for this application");
+      const tmp10 = new tmp4(9559)(obj1, "Command not available for this application");
       throw tmp10;
     }
     let obj3 = connection_redirect(5283);

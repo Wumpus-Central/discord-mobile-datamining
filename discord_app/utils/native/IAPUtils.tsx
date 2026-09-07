@@ -1,6 +1,6 @@
-// === Module 11047: IAPUtils ===
+// === Module 11052: IAPUtils ===
 
-// Module 11047 (IAPUtils)
+// Module 11052 (IAPUtils)
 import LoggerDefault from "Logger" /* 3 */;
 import _modDef12 from "module_12" /* 12 */;
 import _modDef38 from "module_38" /* 38 */;
@@ -9,8 +9,8 @@ import v1 from "v1" /* 1256 */;
 import ClientInfoUtilsAll from "ClientInfoUtils" /* 1364 */;
 import DeviceUtils from "DeviceUtils" /* 4539 */;
 import ProductIds from "ProductIds" /* 7240 */;
-import StorekitIAPQueueDefault from "StorekitIAPQueue" /* 11067 */;
-import GeneratedPaymentCurrencies from "GeneratedPaymentCurrencies" /* 11068 */;
+import StorekitIAPQueueDefault from "StorekitIAPQueue" /* 11072 */;
+import GeneratedPaymentCurrencies from "GeneratedPaymentCurrencies" /* 11073 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import DevSettingsStore from "DevSettingsStore" /* 4559 */;
 import UserStore from "UserStore" /* 1371 */;
@@ -269,7 +269,7 @@ let closure_19 = async function _fetchStoreFront() {
             c3 = 1;
             c4 = 2;
             c5 = 1;
-            let obj1 = { value: require("module_11048").getStorefront(), done: false };
+            let obj1 = { value: require("module_11053").getStorefront(), done: false };
             return obj1;
           } else {
             c5 = 3;
@@ -315,7 +315,7 @@ const Constants = fn(1074);
 ({ CurrencyCodes: closure_8, IOS_BUNDLE_ID } = Constants);
 const NAMESPACE_SNOWFLAKE_UUID = fn(1373).NAMESPACE_SNOWFLAKE_UUID;
 ({ InAppUtils: closure_11, RNIapIosSk2: closure_12 } = fn(17).NativeModules);
-let items = [fn(11048).ErrorCode.E_USER_CANCELLED, Constants.StoreKitErrors.PAYMENT_CANCELED];
+let items = [fn(11053).ErrorCode.E_USER_CANCELLED, Constants.StoreKitErrors.PAYMENT_CANCELED];
 let set = new Set(items);
 new LoggerDefault("IAPUtils.tsx");
 let _default = {
@@ -386,7 +386,7 @@ let _default = {
                   c5 = 1;
                   c6 = 2;
                   c7 = 1;
-                  let obj1 = { value: sku(11048).clearTransactionIOS(), done: false };
+                  let obj1 = { value: sku(11053).clearTransactionIOS(), done: false };
                   return obj1;
                 } else {
                   const _Error2 = Error;
@@ -408,7 +408,7 @@ let _default = {
                   const obj2 = { value, done: true };
                   return obj2;
                 } else {
-                  obj1 = sku(11048);
+                  obj1 = sku(11053);
                   const obj3 = { sku, appAccountToken, withOffer };
                   c6 = 3;
                   c7 = 1;
@@ -517,7 +517,7 @@ if (PlatformUtils) {
   let obj4 = fn(1115);
 }
 if (PlatformUtils) {
-  _default = fn(11069).default;
+  _default = fn(11074).default;
 }
 function shouldMockIAPForceEnable() {
   let isIOSResult = PlatformUtils2.isIOS();
@@ -578,7 +578,7 @@ export const makeIAPRequest = function makeIAPRequest(arg0, arg1, arg2) {
               currentUser = currentUser.getCurrentUser();
               if (null != currentUser) {
                 c5 = 1;
-                let obj3 = requestJSONString(11048);
+                let obj3 = requestJSONString(11053);
                 const obj1 = { requestJSONString, sku, appAccountToken: convertToUUID(currentUser.id), andDangerouslyFinishTransactionAutomaticallyIOS: false, useACOM };
                 c6 = 2;
                 c7 = 1;

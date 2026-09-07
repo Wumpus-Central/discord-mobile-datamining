@@ -1,9 +1,9 @@
-// === Module 15772: DesignSystemSegmentedControlSetting ===
+// === Module 15775: DesignSystemSegmentedControlSetting ===
 
-// Module 15772 (DesignSystemSegmentedControlSetting)
+// Module 15775 (DesignSystemSegmentedControlSetting)
 import Constants from "Constants" /* 1074 */;
 import SettingsConstants from "SettingsConstants" /* 7975 */;
-import SettingBuilders from "SettingBuilders" /* 11468 */;
+import SettingBuilders from "SettingBuilders" /* 11473 */;
 import size from "module_2" /* 2 */;
 
 const route = SettingBuilders.createRoute({

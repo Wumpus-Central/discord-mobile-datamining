@@ -1,9 +1,9 @@
-// === Module 16194: AccountLinkBanner ===
+// === Module 16197: AccountLinkBanner ===
 
-// Module 16194 (AccountLinkBanner)
+// Module 16197 (AccountLinkBanner)
 import nativeDefault from "native" /* 576 */;
 import ButtonConstants from "ButtonConstants" /* 4980 */;
-import useScaledTextLineHeight from "useScaledTextLineHeight" /* 10119 */;
+import useScaledTextLineHeight from "useScaledTextLineHeight" /* 10124 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1371 */;
 

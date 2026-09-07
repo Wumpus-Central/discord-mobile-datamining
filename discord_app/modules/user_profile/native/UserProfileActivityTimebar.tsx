@@ -1,9 +1,9 @@
-// === Module 13022: UserProfileActivityTimebar ===
+// === Module 13026: UserProfileActivityTimebar ===
 
-// Module 13022 (UserProfileActivityTimebar)
+// Module 13026 (UserProfileActivityTimebar)
 import nativeDefault from "native" /* 576 */;
 import Text_Text from "Text/Text" /* 4556 */;
-import useActivityTimer from "useActivityTimer" /* 13023 */;
+import useActivityTimer from "useActivityTimer" /* 13027 */;
 import noop from "module_19" /* 19 */;
 
 const useActivityTimerDefault = useActivityTimer;

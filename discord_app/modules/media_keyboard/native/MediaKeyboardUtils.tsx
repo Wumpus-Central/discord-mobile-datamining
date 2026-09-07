@@ -1,6 +1,6 @@
-// === Module 10635: MediaKeyboardUtils ===
+// === Module 10640: MediaKeyboardUtils ===
 
-// Module 10635 (MediaKeyboardUtils)
+// Module 10640 (MediaKeyboardUtils)
 import _modDef12 from "module_12" /* 12 */;
 import PlatformUtils from "PlatformUtils" /* 1115 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
@@ -10,9 +10,9 @@ import Upload from "Upload" /* 5128 */;
 import uploader_UploadUtils from "uploader/UploadUtils" /* 5136 */;
 import utils_UploadUtils from "utils/UploadUtils" /* 5138 */;
 import NativePermissionUtilsDefault from "NativePermissionUtils" /* 5139 */;
-import UploadAttachmentActionCreatorsDefault from "UploadAttachmentActionCreators" /* 9307 */;
-import showMediaKeyboardActionSheet from "showMediaKeyboardActionSheet" /* 10636 */;
-import navigateToThreadCreation from "navigateToThreadCreation" /* 11222 */;
+import UploadAttachmentActionCreatorsDefault from "UploadAttachmentActionCreators" /* 9312 */;
+import showMediaKeyboardActionSheet from "showMediaKeyboardActionSheet" /* 10641 */;
+import navigateToThreadCreation from "navigateToThreadCreation" /* 11227 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import UnsyncedUserSettingsStore from "UnsyncedUserSettingsStore" /* 1185 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
@@ -440,7 +440,7 @@ function showSimpleMediaKeyboard(channel) {
     },
     onPressItem(arg0) {
       ({ channelId, item, isIncluded } = arg0);
-      const result = channel(10636).hideMediaKeyboardActionSheet();
+      const result = channel(10641).hideMediaKeyboardActionSheet();
       handleSelectKeyboardItem(channelId, item, isIncluded);
     },
     onViewAll() {
@@ -536,8 +536,8 @@ function showSimpleMediaKeyboard(channel) {
                             tmp2 = someResult;
                           }
                           if (!tmp2) {
-                            c1(9307).remove(found.id, origin.id, ChannelMessage.ChannelMessage);
-                            const obj = c1(9307);
+                            c1(9312).remove(found.id, origin.id, ChannelMessage.ChannelMessage);
+                            const obj = c1(9312);
                           }
                         });
                       }
@@ -775,8 +775,8 @@ export const handleViewAllDialog = function handleViewAllDialog(arg0) {
                         tmp2 = someResult;
                       }
                       if (!tmp2) {
-                        c1(9307).remove(found.id, origin.id, ChannelMessage.ChannelMessage);
-                        const obj = c1(9307);
+                        c1(9312).remove(found.id, origin.id, ChannelMessage.ChannelMessage);
+                        const obj = c1(9312);
                       }
                     });
                   }

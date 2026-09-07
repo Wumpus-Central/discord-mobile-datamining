@@ -1,8 +1,8 @@
-// === Module 10736: ? ===
+// === Module 10741: ? ===
 
-// Module 10736
+// Module 10741
 import initialize from "initialize" /* 504 */;
-import useMaybeFetchCollectiblesCategoriesShared from "useMaybeFetchCollectiblesCategoriesShared" /* 10737 */;
+import useMaybeFetchCollectiblesCategoriesShared from "useMaybeFetchCollectiblesCategoriesShared" /* 10742 */;
 import DevSettingsStore from "DevSettingsStore" /* 4559 */;
 
 require = fn;

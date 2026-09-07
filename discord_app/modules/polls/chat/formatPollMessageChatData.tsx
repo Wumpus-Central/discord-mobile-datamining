@@ -1,6 +1,6 @@
-// === Module 11717: formatPollMessageChatData ===
+// === Module 11722: formatPollMessageChatData ===
 
-// Module 11717 (formatPollMessageChatData)
+// Module 11722 (formatPollMessageChatData)
 import util from "util" /* 1114 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1396 */;
 import CommunicationDisabledUtils from "CommunicationDisabledUtils" /* 4188 */;
@@ -8,8 +8,8 @@ import AutomodPermissionUtils from "AutomodPermissionUtils" /* 4205 */;
 import UnicodeEmojisDefault from "UnicodeEmojis" /* 4213 */;
 import EmojiUtilsDefault from "EmojiUtils" /* 4217 */;
 import _mod4745 from "module_4745" /* 4745 */;
-import useFormattedExpirationLabel from "useFormattedExpirationLabel" /* 8754 */;
-import PollLayoutTypes from "PollLayoutTypes" /* 11720 */;
+import useFormattedExpirationLabel from "useFormattedExpirationLabel" /* 8759 */;
+import PollLayoutTypes from "PollLayoutTypes" /* 11725 */;
 import AccessibilityStore from "AccessibilityStore" /* 4552 */;
 import EmojiStore from "EmojiStore" /* 5459 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
@@ -162,7 +162,7 @@ function computeBasicPollChatData(message, arg1) {
     return obj;
   }
 }
-const getPollState = fn(11427).getPollState;
+const getPollState = fn(11432).getPollState;
 const Constants = fn(1074);
 const MessageStates = Constants.MessageStates;
 let pollMedia = { channelId: Constants.EMPTY_STRING_SNOWFLAKE_ID, selectedAnswerIds: new Set(), submitting: false, editing: false, showResults: false };

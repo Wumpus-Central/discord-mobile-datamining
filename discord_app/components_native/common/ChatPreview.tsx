@@ -1,6 +1,6 @@
-// === Module 13252: ChatPreview ===
+// === Module 13256: ChatPreview ===
 
-// Module 13252 (ChatPreview)
+// Module 13256 (ChatPreview)
 import _modDef12 from "module_12" /* 12 */;
 import nativeDefault from "native" /* 576 */;
 import PlatformUtils from "PlatformUtils" /* 1115 */;
@@ -14,22 +14,22 @@ import common_SafeAreaView from "common/SafeAreaView" /* 7123 */;
 import ReactionActionCreators from "ReactionActionCreators" /* 7764 */;
 import RowGeneratorDefault from "RowGenerator" /* 7932 */;
 import canAddNewReactionsDefault from "canAddNewReactions" /* 7971 */;
-import messages_MessagesUtils from "messages/MessagesUtils" /* 11252 */;
-import reactions_ReactionUtils from "reactions/ReactionUtils" /* 11254 */;
-import computeScrollDataDefault from "computeScrollData" /* 11270 */;
-import NativeChatUtilsDefault from "NativeChatUtils" /* 11271 */;
-import ChatManagerDefault from "ChatManager" /* 11538 */;
-import handleMessagesTapImage from "handleMessagesTapImage" /* 11546 */;
-import MessageDataSnowflakeUtils from "MessageDataSnowflakeUtils" /* 11547 */;
-import handleMessagesTapChannel from "handleMessagesTapChannel" /* 11548 */;
-import handleMessagesLongPressChannel from "handleMessagesLongPressChannel" /* 11583 */;
-import showLongPressURLActionSheetDefault from "showLongPressURLActionSheet" /* 11584 */;
-import handleMessagesTapLink from "handleMessagesTapLink" /* 11616 */;
-import showLongPressMessageActionSheet from "showLongPressMessageActionSheet" /* 11657 */;
-import ChatDefault from "Chat" /* 11894 */;
-import isNewMessageGroupDefault from "isNewMessageGroup" /* 11952 */;
-import GuildNSFWDefault from "GuildNSFW" /* 12665 */;
-import ChannelSpoilerDefault from "ChannelSpoiler" /* 12667 */;
+import messages_MessagesUtils from "messages/MessagesUtils" /* 11257 */;
+import reactions_ReactionUtils from "reactions/ReactionUtils" /* 11259 */;
+import computeScrollDataDefault from "computeScrollData" /* 11275 */;
+import NativeChatUtilsDefault from "NativeChatUtils" /* 11276 */;
+import ChatManagerDefault from "ChatManager" /* 11543 */;
+import handleMessagesTapImage from "handleMessagesTapImage" /* 11551 */;
+import MessageDataSnowflakeUtils from "MessageDataSnowflakeUtils" /* 11552 */;
+import handleMessagesTapChannel from "handleMessagesTapChannel" /* 11553 */;
+import handleMessagesLongPressChannel from "handleMessagesLongPressChannel" /* 11588 */;
+import showLongPressURLActionSheetDefault from "showLongPressURLActionSheet" /* 11589 */;
+import handleMessagesTapLink from "handleMessagesTapLink" /* 11621 */;
+import showLongPressMessageActionSheet from "showLongPressMessageActionSheet" /* 11662 */;
+import ChatDefault from "Chat" /* 11899 */;
+import isNewMessageGroupDefault from "isNewMessageGroup" /* 11956 */;
+import GuildNSFWDefault from "GuildNSFW" /* 12669 */;
+import ChannelSpoilerDefault from "ChannelSpoiler" /* 12671 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4552 */;
 import ActionSheetStore from "ActionSheetStore" /* 4251 */;
@@ -215,7 +215,7 @@ class ChatPreviewBase extends PureComponent {
         const jumpTargetId = tmp3.jumpTargetId;
         let tmp23;
         if (!tmp7) {
-          obj = { rows: tmp22, scrollToMessageId: jumpTargetId, jumpTargetId, jumpType: "flex", shouldInitialScroll: "Array", animated: 0.999, scrollPosition: 0.999, focusTargetId: 0.793 };
+          obj = { rows: tmp22, scrollToMessageId: jumpTargetId, jumpTargetId, jumpType: "flex", shouldInitialScroll: "Array", animated: 1065.6, scrollPosition: -236.8, focusTargetId: 0 };
           tmp23 = computeScrollDataDefault(obj);
         }
         obj.updateContent(changeset, tmp23);

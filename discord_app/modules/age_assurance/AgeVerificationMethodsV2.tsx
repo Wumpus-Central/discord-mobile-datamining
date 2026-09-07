@@ -1,6 +1,6 @@
-// === Module 8447: AgeVerificationMethodsV2 ===
+// === Module 8437: AgeVerificationMethodsV2 ===
 
-// Module 8447 (AgeVerificationMethodsV2)
+// Module 8437 (AgeVerificationMethodsV2)
 import HTTPUtils from "HTTPUtils" /* 1272 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;

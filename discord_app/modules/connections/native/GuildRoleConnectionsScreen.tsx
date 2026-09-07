@@ -1,6 +1,6 @@
-// === Module 11571: GuildRoleConnectionsScreen ===
+// === Module 11576: GuildRoleConnectionsScreen ===
 
-// Module 11571 (GuildRoleConnectionsScreen)
+// Module 11576 (GuildRoleConnectionsScreen)
 import nativeDefault from "native" /* 576 */;
 import native from "native" /* 1178 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
@@ -11,7 +11,7 @@ import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4527
 import AppAnalyticsUtils from "AppAnalyticsUtils" /* 4740 */;
 import PlatformsDefault from "Platforms" /* 5283 */;
 import GuildActionCreatorsDefault from "GuildActionCreators" /* 5520 */;
-import GuildRoleConnectionsModalActionCreators from "GuildRoleConnectionsModalActionCreators" /* 11569 */;
+import GuildRoleConnectionsModalActionCreators from "GuildRoleConnectionsModalActionCreators" /* 11574 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import UserRecord from "UserRecord" /* 1385 */;
@@ -189,10 +189,10 @@ export default function GuildRoleConnectionsScreen(guildId) {
                       const result = hasItem(closure_2_2[16]).unassignGuildRoleConnection(closure_1, id.id);
                     }
                 };
-                obj4.openLazy(asyncRequireImpl(11572, dependencyMap.paths), "LeaveConnectionRoleActionSheet-" + tmp.id, obj);
-                const tmp20 = asyncRequireImpl(11572, dependencyMap.paths);
+                obj4.openLazy(asyncRequireImpl(11577, dependencyMap.paths), "LeaveConnectionRoleActionSheet-" + tmp.id, obj);
+                const tmp20 = asyncRequireImpl(11577, dependencyMap.paths);
               } else {
-                const tmp9 = asyncRequireImpl(11562, dependencyMap.paths);
+                const tmp9 = asyncRequireImpl(11567, dependencyMap.paths);
                 obj = { role: tmp, guildId, onCloseModal };
                 obj.openLazy(tmp9, GuildRoleConnectionsModalActionCreators.makeGuildRoleConnectionsConnectAccountsActionSheetKey(tmp.id), obj);
               }

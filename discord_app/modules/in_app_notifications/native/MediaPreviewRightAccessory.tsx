@@ -1,6 +1,6 @@
-// === Module 10174: MediaPreviewRightAccessory ===
+// === Module 10179: MediaPreviewRightAccessory ===
 
-// Module 10174 (MediaPreviewRightAccessory)
+// Module 10179 (MediaPreviewRightAccessory)
 import useStateFromStores from "useStateFromStores" /* 563 */;
 import nativeDefault from "native" /* 576 */;
 import native from "native" /* 1178 */;
@@ -18,10 +18,10 @@ import ExplicitMediaUtils from "ExplicitMediaUtils" /* 8125 */;
 import MediaSourceUtil from "MediaSourceUtil" /* 8263 */;
 import PlayIcon from "PlayIcon" /* 8274 */;
 import common_VideoDefault from "common/Video" /* 8307 */;
-import ClipView from "ClipView" /* 8813 */;
-import usePreviewableMedia from "usePreviewableMedia" /* 10131 */;
-import useContentHarmTypes from "useContentHarmTypes" /* 10175 */;
-import StickerDefault from "Sticker" /* 10176 */;
+import ClipView from "ClipView" /* 8818 */;
+import usePreviewableMedia from "usePreviewableMedia" /* 10136 */;
+import useContentHarmTypes from "useContentHarmTypes" /* 10180 */;
+import StickerDefault from "Sticker" /* 10181 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4552 */;
 
@@ -289,7 +289,7 @@ createStyles = fn(4560);
 let closure_14 = createStyles.createStyles({ container: { overflow: "visible" } });
 createStyles = fn(4560);
 let obj2 = { borderRadius: nativeDefault.radii.sm, overflow: "hidden" };
-let closure_15 = createStyles.createStyles({ rightAccessoryContainer: { marginLeft: fn(10095).RIGHT_ACCESSORY_LEFT_MARGIN } });
+let closure_15 = createStyles.createStyles({ rightAccessoryContainer: { marginLeft: fn(10100).RIGHT_ACCESSORY_LEFT_MARGIN } });
 size = fn(2);
 const result = size.fileFinishedImporting("modules/in_app_notifications/native/MediaPreviewRightAccessory.tsx");
 

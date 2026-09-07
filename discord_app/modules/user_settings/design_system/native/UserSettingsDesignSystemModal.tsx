@@ -1,6 +1,6 @@
-// === Module 15793: UserSettingsDesignSystemModal ===
+// === Module 15796: UserSettingsDesignSystemModal ===
 
-// Module 15793 (UserSettingsDesignSystemModal)
+// Module 15796 (UserSettingsDesignSystemModal)
 import nativeDefault from "native" /* 576 */;
 import Text_Text from "Text/Text" /* 4556 */;
 import ModalActionCreatorsDefault from "ModalActionCreators" /* 4763 */;
@@ -9,11 +9,11 @@ import NavigatorHeader from "NavigatorHeader" /* 5624 */;
 import Navigator from "Navigator" /* 7000 */;
 import ModalScreen from "ModalScreen" /* 8421 */;
 import ModalContent from "ModalContent" /* 8422 */;
-import ModalActionButton from "ModalActionButton" /* 10996 */;
-import ModalFooter from "ModalFooter" /* 11926 */;
-import Modal from "Modal" /* 11928 */;
-import StepModal from "StepModal" /* 14174 */;
-import ModalDisclaimer from "ModalDisclaimer" /* 14176 */;
+import ModalActionButton from "ModalActionButton" /* 11001 */;
+import ModalFooter from "ModalFooter" /* 11931 */;
+import Modal from "Modal" /* 11933 */;
+import StepModal from "StepModal" /* 14177 */;
+import ModalDisclaimer from "ModalDisclaimer" /* 14179 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -293,7 +293,7 @@ function SwitchesScreen(onAction) {
   [arr2, c1] = _slicedToArray(noop.useState(parts.map(() => false)), 2);
   let obj = { title: "Everybody come on fhqwhgads.", emoji: "\u{1F44F}", footer: null, children: null };
   obj = { isVisible: arr2.some((item) => item), floatingBackgroundColor: tmp.screen.backgroundColor, text: "Come on fhqwhgads", onPress: onAction.onAction };
-  obj.footer = closure_7(parts(10995).ModalFloatingAction, obj);
+  obj.footer = closure_7(parts(11000).ModalFloatingAction, obj);
   obj = { style: tmp.tableRows, children: null };
   const tmp2 = _slicedToArray(noop.useState(parts.map(() => false)), 2);
   obj.children = closure_7(parts(5687).TableRowGroup, {
@@ -316,7 +316,7 @@ function SwitchesScreen(onAction) {
       }, index);
     })
   });
-  const items = [closure_7(closure_5, obj), closure_7(parts(10995).ModalFloatingActionSpacer, {})];
+  const items = [closure_7(closure_5, obj), closure_7(parts(11000).ModalFloatingActionSpacer, {})];
   obj.children = items;
   return closure_8(DemoScreen, obj);
 }

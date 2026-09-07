@@ -1,6 +1,6 @@
-// === Module 8684: GameUtils ===
+// === Module 8689: GameUtils ===
 
-// Module 8684 (GameUtils)
+// Module 8689 (GameUtils)
 import size from "module_2" /* 2 */;
 
 let c0 = "not supported";

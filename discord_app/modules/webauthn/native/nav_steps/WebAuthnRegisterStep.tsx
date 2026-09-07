@@ -1,6 +1,6 @@
-// === Module 14674: WebAuthnRegisterStep ===
+// === Module 14677: WebAuthnRegisterStep ===
 
-// Module 14674 (WebAuthnRegisterStep)
+// Module 14677 (WebAuthnRegisterStep)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import native from "native" /* 1178 */;
@@ -38,7 +38,7 @@ function AndroidPasskeyRadioGroup(onChange) {
   return React5(native.RadioGroup, obj1);
 }
 const View = fn(17).View;
-const WebAuthnScreens = fn(14657).WebAuthnScreens;
+const WebAuthnScreens = fn(14660).WebAuthnScreens;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
 fn(4560);
@@ -75,10 +75,10 @@ export default function WebAuthnRegisterStep() {
   const items2 = [onRegisterSuccess, tmp11, tmp8];
   closure_6 = obj1.useMemo(() => ({ onRegisterSuccess, setError, setRegistering }), items2);
   const tmp9 = authenticatorSelection(onRegisterSuccess.useState(""), 2);
-  const announceError = navigation(14675).useAnnounceError(tmp10);
+  const announceError = navigation(14678).useAnnounceError(tmp10);
   const rect = { bottom: true, left: true, right: true, style: tmp4.flexContainer, children: null };
   obj = { style: tmp4.centerFlex, children: null };
-  const items3 = [closure_7(navigation(14676).KeyImage, {}), , ];
+  const items3 = [closure_7(navigation(14679).KeyImage, {}), , ];
   obj = { style: tmp4.margin, variant: "text-md/normal", children: null };
   const intl = tmp(1114).intl;
   const string = intl.string;

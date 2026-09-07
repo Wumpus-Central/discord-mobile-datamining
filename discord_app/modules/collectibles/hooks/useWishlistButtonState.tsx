@@ -1,6 +1,6 @@
-// === Module 8829: useWishlistButtonState ===
+// === Module 8834: useWishlistButtonState ===
 
-// Module 8829 (useWishlistButtonState)
+// Module 8834 (useWishlistButtonState)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;

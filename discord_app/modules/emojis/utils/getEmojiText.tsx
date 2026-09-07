@@ -1,6 +1,6 @@
-// === Module 12428: getEmojiText ===
+// === Module 12432: getEmojiText ===
 
-// Module 12428 (getEmojiText)
+// Module 12432 (getEmojiText)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/emojis/utils/getEmojiText.tsx");

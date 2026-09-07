@@ -1,8 +1,8 @@
-// === Module 11270: computeScrollData ===
+// === Module 11275: computeScrollData ===
 
-// Module 11270 (computeScrollData)
+// Module 11275 (computeScrollData)
 import Client from "Client" /* 4491 */;
-import NativeChatUtils from "NativeChatUtils" /* 11271 */;
+import NativeChatUtils from "NativeChatUtils" /* 11276 */;
 import AccessibilityStore from "AccessibilityStore" /* 4552 */;
 
 require = fn;

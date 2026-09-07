@@ -1,6 +1,6 @@
-// === Module 15150: QuestGameLogotype ===
+// === Module 15153: QuestGameLogotype ===
 
-// Module 15150 (QuestGameLogotype)
+// Module 15153 (QuestGameLogotype)
 import nativeDefault from "native" /* 576 */;
 import spring from "spring" /* 4974 */;
 import _slicedToArray from "module_32" /* 32 */;

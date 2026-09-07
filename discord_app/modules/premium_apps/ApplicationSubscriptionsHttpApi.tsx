@@ -1,6 +1,6 @@
-// === Module 9538: ApplicationSubscriptionsHttpApi ===
+// === Module 9543: ApplicationSubscriptionsHttpApi ===
 
-// Module 9538 (ApplicationSubscriptionsHttpApi)
+// Module 9543 (ApplicationSubscriptionsHttpApi)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import APIErrorDefault from "APIError" /* 4462 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;

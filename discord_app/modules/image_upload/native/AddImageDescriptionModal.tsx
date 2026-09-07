@@ -1,9 +1,9 @@
-// === Module 11240: AddImageDescriptionModal ===
+// === Module 11245: AddImageDescriptionModal ===
 
-// Module 11240 (AddImageDescriptionModal)
+// Module 11245 (AddImageDescriptionModal)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import ModalStackNavigatorDefault from "ModalStackNavigator" /* 10924 */;
+import ModalStackNavigatorDefault from "ModalStackNavigator" /* 10929 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import UploadAttachmentStore from "UploadAttachmentStore" /* 4900 */;
@@ -66,12 +66,12 @@ function AddDescription(id) {
         const intl = channelId(stateFromStores[14]).intl;
         let obj = {};
         const renderHeaderTextButton = obj.getRenderHeaderTextButton(intl.string(channelId(stateFromStores[14]).t["R3BPH+"]), () => {
-          id(9307);
+          id(9312);
           const obj = {};
           const merged = Object.assign(dependencyMap);
           obj.description = ref.current;
           obj.update(closure_1_0, closure_1_1, ChannelMessage.ChannelMessage, obj);
-          id(11239).close();
+          id(11244).close();
         });
         let merged = Object.assign(arg0);
         return renderHeaderTextButton(obj);

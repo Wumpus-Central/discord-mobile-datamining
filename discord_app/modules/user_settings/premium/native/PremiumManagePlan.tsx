@@ -1,6 +1,6 @@
-// === Module 13497: PremiumManagePlan ===
+// === Module 13501: PremiumManagePlan ===
 
-// Module 13497 (PremiumManagePlan)
+// Module 13501 (PremiumManagePlan)
 import LoggerDefault from "Logger" /* 3 */;
 import nativeDefault from "native" /* 576 */;
 import ConstantsIOS from "ConstantsIOS" /* 1093 */;
@@ -21,11 +21,11 @@ import UserSettingsUtils from "UserSettingsUtils" /* 6995 */;
 import useFractionalPremiumInfoDefault from "useFractionalPremiumInfo" /* 7393 */;
 import PremiumManagementUtils from "PremiumManagementUtils" /* 7404 */;
 import _modDef8051 from "module_8051" /* 8051 */;
-import PremiumFeaturesCardDefault from "PremiumFeaturesCard" /* 9363 */;
-import PremiumSubscriptionDetails from "PremiumSubscriptionDetails" /* 13309 */;
-import PremiumNitroHomeUtils from "PremiumNitroHomeUtils" /* 13438 */;
-import useFPDurationLeftDefault from "useFPDurationLeft" /* 13461 */;
-import PremiumFeaturesTableDefault from "PremiumFeaturesTable" /* 13476 */;
+import PremiumFeaturesCardDefault from "PremiumFeaturesCard" /* 9368 */;
+import PremiumSubscriptionDetails from "PremiumSubscriptionDetails" /* 13313 */;
+import PremiumNitroHomeUtils from "PremiumNitroHomeUtils" /* 13442 */;
+import useFPDurationLeftDefault from "useFPDurationLeft" /* 13465 */;
+import PremiumFeaturesTableDefault from "PremiumFeaturesTable" /* 13480 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -614,7 +614,7 @@ export default function PremiumManagePlan() {
   const tmp = closure_32();
   const rect = useSafeAreaInsetsDefault();
   const top = rect.top;
-  let obj = navigation(13350);
+  let obj = navigation(13354);
   const youBarSettingsOutsideSafeAreaTop = obj.useYouBarSettingsOutsideSafeAreaTop();
   let obj1 = navigation(1483);
   navigation = obj1.useNavigation();
@@ -736,7 +736,7 @@ export default function PremiumManagePlan() {
   const items9 = [tmp29Result, , , , , , ];
   if (isInReverseTrial) {
     obj3 = { premiumType: closure_27.TIER_2, forFractionalPremium: true, hideButton: true };
-    isInReverseTrial = closure_29(tmp2(9363), obj3);
+    isInReverseTrial = closure_29(tmp2(9368), obj3);
   }
   items9[1] = isInReverseTrial;
   tmp29Result = result;
@@ -745,7 +745,7 @@ export default function PremiumManagePlan() {
   }
   if (tmp29Result) {
     obj4 = { premiumType: closure_27.TIER_2, hideButton: true, hidePrice: true, isPremiumGroup: true, premiumGroupRole };
-    tmp29Result = closure_29(tmp2(9363), obj4);
+    tmp29Result = closure_29(tmp2(9368), obj4);
   }
   items9[2] = tmp29Result;
   if (tmp29Result1) {
@@ -773,23 +773,23 @@ export default function PremiumManagePlan() {
         },
       subscription: tmp10
     };
-    const items10 = [closure_29(tmp2(13309), obj7), ];
+    const items10 = [closure_29(tmp2(13313), obj7), ];
     obj8 = { style: tmp.billingInfo, subscription: tmp10 };
-    items10[1] = closure_29(tmp2(13346), obj8);
+    items10[1] = closure_29(tmp2(13350), obj8);
     obj6.children = items10;
     tmp27Result = closure_30(closure_8, obj6);
   }
   items9[4] = tmp27Result;
   const obj9 = { style: tmp.accountCredit, creditListContainerStyle: tmp.accountCreditList, currentSubscription: tmp10, entitlements: stateFromStores2, hasPremiumGroup: null };
   let flag = result;
-  tmp2Result = tmp2(13348);
+  tmp2Result = tmp2(13352);
   if (result == null) {
     flag = false;
   }
   obj9.hasPremiumGroup = flag;
   items9[5] = closure_29(tmp2Result, obj9);
   const obj10 = { style: tmp.featuresTable, variant: "nitro_home", titleOverride: null, isFractionalOnly: null, isPremiumGroup: null, premiumGroupRole: null };
-  tmp15Result = useFPDurationLeftDefault(tmp12.endsAt, navigation(13461).CountDownMessageTypes.SHORT_TIME);
+  tmp15Result = useFPDurationLeftDefault(tmp12.endsAt, navigation(13465).CountDownMessageTypes.SHORT_TIME);
   const intl = tmp4(1114).intl;
   obj10.titleOverride = intl.string(navigation(1114).t.QXx2gs);
   obj10.isFractionalOnly = tmp12.fractionalState === constants4.FP_ONLY;

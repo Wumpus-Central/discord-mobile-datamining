@@ -1,13 +1,13 @@
-// === Module 10401: StickerPickerListRow ===
+// === Module 10406: StickerPickerListRow ===
 
-// Module 10401 (StickerPickerListRow)
+// Module 10406 (StickerPickerListRow)
 import UserSettings from "UserSettings" /* 1935 */;
 import HapticUtils from "HapticUtils" /* 4528 */;
 import haptics_HapticFeedbackTypesDefault from "haptics/HapticFeedbackTypes" /* 4529 */;
 import StickersUtils from "StickersUtils" /* 4899 */;
 import StickerSendability from "StickerSendability" /* 7337 */;
-import StickerDefault from "Sticker" /* 10176 */;
-import StickerPickerListRowNativeComponentDefault from "StickerPickerListRowNativeComponent" /* 10402 */;
+import StickerDefault from "Sticker" /* 10181 */;
+import StickerPickerListRowNativeComponentDefault from "StickerPickerListRowNativeComponent" /* 10407 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1371 */;
@@ -15,7 +15,7 @@ import UserStore from "UserStore" /* 1371 */;
 require = fn;
 const View = fn(17).View;
 const StickerAnimationSettings = fn(1938).StickerAnimationSettings;
-const StickerPickerConstants = fn(10273);
+const StickerPickerConstants = fn(10278);
 const STICKER_SIZE = StickerPickerConstants.STICKER_SIZE;
 const PADDING_VERTICAL = fn(1219).PADDING_VERTICAL;
 const jsx = fn(21).jsx;
@@ -79,7 +79,7 @@ export default function StickerPickerListRow(stickers) {
           let first = tmp18[0];
           obj = { stickerId: null, stickerName: null, stickerType: null, stickerUrl: null, stickerAnimated: null, stickerDisabled: null, stickerOpaque: null };
           ({ id: obj4.stickerId, name: obj4.stickerName, format_type: obj4.stickerType } = tmp12);
-          let obj4 = stickers(10176);
+          let obj4 = stickers(10181);
           obj.stickerUrl = obj4.getStickerAssetUrl(tmp12, itemSize, first);
           obj.stickerAnimated = first;
           obj.stickerDisabled = tmp18[2];

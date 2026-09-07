@@ -1,6 +1,6 @@
-// === Module 9572: installApplicationOnDemandIfNeeded ===
+// === Module 9577: installApplicationOnDemandIfNeeded ===
 
-// Module 9572 (installApplicationOnDemandIfNeeded)
+// Module 9577 (installApplicationOnDemandIfNeeded)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import ApplicationRecord from "ApplicationRecord" /* 1918 */;
 import ApplicationStore from "ApplicationStore" /* 4788 */;
@@ -125,7 +125,7 @@ let closure_6 = async function _installApplicationOnDemandIfNeeded(arg0) {
               }
             }
           };
-          closure_1_0(9573).openOAuth2Modal(obj);
+          closure_1_0(9578).openOAuth2Modal(obj);
         });
         c4 = 3;
         const obj6 = { value: promise, done: true };

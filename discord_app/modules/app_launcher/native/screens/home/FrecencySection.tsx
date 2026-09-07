@@ -1,6 +1,6 @@
-// === Module 12052: FrecencySection ===
+// === Module 12056: FrecencySection ===
 
-// Module 12052 (FrecencySection)
+// Module 12056 (FrecencySection)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import GlobalUtils from "GlobalUtils" /* 1369 */;
@@ -8,15 +8,15 @@ import ReanimatedRexportDefault from "ReanimatedRexport" /* 4296 */;
 import Text_Text from "Text/Text" /* 4556 */;
 import timing from "timing" /* 4561 */;
 import AppAnalyticsUtils from "AppAnalyticsUtils" /* 4740 */;
-import AppLauncherUtils from "AppLauncherUtils" /* 9289 */;
-import AppLauncherTypes from "AppLauncherTypes" /* 9409 */;
-import ChevronSmallDownIcon from "ChevronSmallDownIcon" /* 11153 */;
-import usePlaceholderSize from "usePlaceholderSize" /* 12054 */;
-import FrecencySectionStoreActionCreators from "FrecencySectionStoreActionCreators" /* 12055 */;
+import AppLauncherUtils from "AppLauncherUtils" /* 9294 */;
+import AppLauncherTypes from "AppLauncherTypes" /* 9414 */;
+import ChevronSmallDownIcon from "ChevronSmallDownIcon" /* 11158 */;
+import usePlaceholderSize from "usePlaceholderSize" /* 12058 */;
+import FrecencySectionStoreActionCreators from "FrecencySectionStoreActionCreators" /* 12059 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 1956 */;
-import FrecencySectionStore from "FrecencySectionStore" /* 12053 */;
+import FrecencySectionStore from "FrecencySectionStore" /* 12057 */;
 
 require = fn;
 function Placeholder() {
@@ -107,7 +107,7 @@ function FrecentApp(app) {
   if (null == app.section) {
     return null;
   } else {
-    const appLauncherIconSource = app(12051).getAppLauncherIconSource(app.section.application);
+    const appLauncherIconSource = app(12055).getAppLauncherIconSource(app.section.application);
     let obj = { style: disabled ? tmp.appContainerDisabled : tmp.appContainer, disabled, accessible: true, accessibilityLabel: null, accessibilityRole: "button", onPress: null, children: null };
     const application = app.section.application;
     let name;
@@ -132,14 +132,14 @@ function FrecentApp(app) {
     }
     const items = [tmp3, ];
     obj = { submitting, style: tmp.submittingOverlay };
-    items[1] = closure_11(app(12060).SubmittingOverlay, obj);
+    items[1] = closure_11(app(12064).SubmittingOverlay, obj);
     obj.children = items;
     return closure_12(app(5123).PressableOpacity, obj, app.applicationId);
   }
 }
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, ScrollView: metroRequire } = get_ActivityIndicator);
-const FrecencySectionSelection = fn(12053).FrecencySectionSelection;
+const FrecencySectionSelection = fn(12057).FrecencySectionSelection;
 const AnalyticEvents = fn(1074).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);

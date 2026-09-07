@@ -13,7 +13,7 @@ import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 
 import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 5411 */;
 import RunAfterInteractionsUtils from "RunAfterInteractionsUtils" /* 7038 */;
 import StageChannelActionCreatorExtras from "StageChannelActionCreatorExtras" /* 8394 */;
-import VoicePanelUtils from "VoicePanelUtils" /* 9681 */;
+import VoicePanelUtils from "VoicePanelUtils" /* 9686 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 import ActionSheetStore from "ActionSheetStore" /* 4251 */;
@@ -38,8 +38,8 @@ function openChannelCallModal(channel) {
       obj = { channel };
       const _HermesInternal = HermesInternal;
       const tmp3Result = ModalActionCreatorsDefault;
-      tmp3Result.pushLazy(asyncRequireImpl(9466, dependencyMap.paths), obj, "" + c17 + "-" + channel.id);
-      const tmp5 = asyncRequireImpl(9466, dependencyMap.paths);
+      tmp3Result.pushLazy(asyncRequireImpl(9471, dependencyMap.paths), obj, "" + c17 + "-" + channel.id);
+      const tmp5 = asyncRequireImpl(9471, dependencyMap.paths);
     }
     tmpResult = VoicePanelUtils;
   }
@@ -164,7 +164,7 @@ export const maybeShowAgeGateModal = function maybeShowAgeGateModal(channelId) {
 };
 export const openVoiceChannelActionSheet = function openVoiceChannelActionSheet(channel) {
   const obj = { channel };
-  obj.openLazy(asyncRequireImpl(13765, dependencyMap.paths), "" + c17 + "-" + channel.id, obj);
+  obj.openLazy(asyncRequireImpl(13768, dependencyMap.paths), "" + c17 + "-" + channel.id, obj);
 };
 export const hideVoiceChannelActionSheet = function hideVoiceChannelActionSheet(id) {
   ActionSheetActionCreatorsDefault.hideActionSheet("" + c17 + "-" + id.id);
@@ -324,7 +324,7 @@ export const handleStartCall = function handleStartCall(channel) {
           recipientId = closure_129_0.getRecipientId();
         }
         closure_128_1 = recipientId;
-        const tmp25 = tmp5(9182);
+        const tmp25 = tmp5(9187);
         const call = tmp25.call;
         const id = closure_129_0.id;
         let tmp28 = closure_128_0;
@@ -421,7 +421,7 @@ export const handleRedesignGroupDMCall = function handleRedesignGroupDMCall(id) 
         }
         obj1 = tmp4(4425);
         obj1.dismissKeyboard();
-        const tmp11 = v1(9182);
+        const tmp11 = v1(9187);
         const call = tmp11.call;
         id = closure_128_0.id;
         if (typeof call === "unknown") {

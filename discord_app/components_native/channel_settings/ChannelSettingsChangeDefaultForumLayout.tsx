@@ -1,9 +1,9 @@
-// === Module 16856: ChannelSettingsChangeDefaultForumLayout ===
+// === Module 16859: ChannelSettingsChangeDefaultForumLayout ===
 
-// Module 16856 (ChannelSettingsChangeDefaultForumLayout)
+// Module 16859 (ChannelSettingsChangeDefaultForumLayout)
 import nativeDefault from "native" /* 576 */;
 import FastImageDefault from "FastImage" /* 5587 */;
-import ChannelSettingsActionCreatorsDefault from "ChannelSettingsActionCreators" /* 8625 */;
+import ChannelSettingsActionCreatorsDefault from "ChannelSettingsActionCreators" /* 8630 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 1957 */;

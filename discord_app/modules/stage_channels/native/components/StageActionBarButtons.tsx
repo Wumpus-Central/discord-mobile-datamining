@@ -1,6 +1,6 @@
-// === Module 9898: StageActionBarButtons ===
+// === Module 9903: StageActionBarButtons ===
 
-// Module 9898 (StageActionBarButtons)
+// Module 9903 (StageActionBarButtons)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import native from "native" /* 1178 */;
@@ -16,20 +16,20 @@ import StageChannelActionCreators from "StageChannelActionCreators" /* 8398 */;
 import _modDef8408 from "module_8408" /* 8408 */;
 import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 8411 */;
 import AgeVerificationAnalyticsUtils from "AgeVerificationAnalyticsUtils" /* 8413 */;
-import Form from "Form" /* 8593 */;
-import _modDef8615 from "module_8615" /* 8615 */;
-import CallsUtils from "CallsUtils" /* 9082 */;
-import CallBarActionAll from "CallBarAction" /* 9497 */;
-import useStageChannelConnectAction from "useStageChannelConnectAction" /* 9674 */;
-import _modDef9900 from "module_9900" /* 9900 */;
-import StageMusicActionCreators from "StageMusicActionCreators" /* 9913 */;
-import shouldShowEndStageModalDefault from "shouldShowEndStageModal" /* 9914 */;
-import _modDef9939 from "module_9939" /* 9939 */;
+import Form from "Form" /* 8598 */;
+import _modDef8620 from "module_8620" /* 8620 */;
+import CallsUtils from "CallsUtils" /* 9087 */;
+import CallBarActionAll from "CallBarAction" /* 9502 */;
+import useStageChannelConnectAction from "useStageChannelConnectAction" /* 9679 */;
+import _modDef9905 from "module_9905" /* 9905 */;
+import StageMusicActionCreators from "StageMusicActionCreators" /* 9918 */;
+import shouldShowEndStageModalDefault from "shouldShowEndStageModal" /* 9919 */;
+import _modDef9944 from "module_9944" /* 9944 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4552 */;
 import ReadStateStore from "ReadStateStore" /* 4575 */;
-import StageMusicStore from "StageMusicStore" /* 9899 */;
+import StageMusicStore from "StageMusicStore" /* 9904 */;
 
 const ActionSheetActionCreatorsDefault = ActionSheetActionCreators;
 
@@ -192,7 +192,7 @@ export const MoveToAudienceButton = function MoveToAudienceButton(channel) {
   const obj = { accessibilityLabel: null, source: null, onPress: null, isSmallSize: null };
   const intl = channel(1114).intl;
   obj.accessibilityLabel = intl.string(channel(1114).t.ezLpY6);
-  obj.source = _modDef9900;
+  obj.source = _modDef9905;
   obj.onPress = function onPress() {
     const result = StageChannelActionCreators.audienceAckRequestToSpeak(channel, true);
   };
@@ -218,12 +218,12 @@ export const MusicMuteButton = function MusicMuteButton(arg0) {
     } else {
       stringResult = string(t.zqxfrf);
     }
-    obj = { accessibilityLabel: stringResult, source: importDefault(stateFromStores ? 9907 : 9908), IconComponent: null, imageStyle: null, onPress: null, isSmallSize: null };
+    obj = { accessibilityLabel: stringResult, source: importDefault(stateFromStores ? 9912 : 9913), IconComponent: null, imageStyle: null, onPress: null, isSmallSize: null };
     if (stateFromStores) {
-      tmpResult = tmp(9909);
+      tmpResult = tmp(9914);
       let MusicIcon = tmpResult.MusicSlashIcon;
     } else {
-      MusicIcon = tmp(9911).MusicIcon;
+      MusicIcon = tmp(9916).MusicIcon;
     }
     obj.IconComponent = MusicIcon;
     imageStyle = imageStyle.imageStyle;
@@ -234,15 +234,15 @@ export const MusicMuteButton = function MusicMuteButton(arg0) {
     obj.isSmallSize = isSmallSize;
     closure_12(CallBarActionAll.ActionButton, obj);
   }
-  obj2 = stateFromStores(9901);
+  obj2 = stateFromStores(9906);
 };
 export const DisconnectStageButton = function DisconnectStageButton(channel) {
   channel = channel.channel;
   const obj = { accessibilityLabel: null, source: null, IconComponent: null, onPress: null, isSmallSize: null };
   const intl = channel(1114).intl;
   obj.accessibilityLabel = intl.string(channel(1114).t.SMKyih);
-  obj.source = _modDef8615;
-  obj.IconComponent = channel(9073).DoorExitIcon;
+  obj.source = _modDef8620;
+  obj.IconComponent = channel(9078).DoorExitIcon;
   obj.onPress = function onPress() {
     if (shouldShowEndStageModalDefault(channel)) {
       let tmp3Result = StageChannelActionCreatorExtras;
@@ -261,7 +261,7 @@ export const RequestToSpeakListButton = function RequestToSpeakListButton(channe
   let analyticsLocations;
   function handleOpenAudienceList() {
     const obj = { channelId: channel.id, analyticsLocations };
-    obj.openLazy(asyncRequireImpl(9915, dependencyMap.paths), closure_10, obj);
+    obj.openLazy(asyncRequireImpl(9920, dependencyMap.paths), closure_10, obj);
   }
   analyticsLocations = analyticsLocations(7162)().analyticsLocations;
   let obj = channel(5431);
@@ -271,10 +271,10 @@ export const RequestToSpeakListButton = function RequestToSpeakListButton(channe
     const intl = tmp3(1114).intl;
     obj = { count: stageParticipantsCount };
     obj.accessibilityLabel = intl.formatToPlainString(tmp3(1114).t.OhK58v, obj);
-    obj.source = tmp(9927);
+    obj.source = tmp(9932);
     const obj1 = { tintColor: tmp(576).unsafe_rawColors.WHITE };
     obj.imageStyle = obj1;
-    obj.IconComponent = tmp3(9928).HandRequestSpeakListIcon;
+    obj.IconComponent = tmp3(9933).HandRequestSpeakListIcon;
     obj.onPress = handleOpenAudienceList;
     obj.notifications = stageParticipantsCount;
     obj.isSmallSize = isSmallSize;
@@ -283,10 +283,10 @@ export const RequestToSpeakListButton = function RequestToSpeakListButton(channe
     const obj2 = { accessibilityLabel: null, source: null, imageStyle: null, IconComponent: null, onPress: null, isSmallSize: null };
     const intl2 = tmp3(1114).intl;
     obj2.accessibilityLabel = intl2.string(tmp3(1114).t.KJnyvh);
-    obj2.source = tmp(9927);
+    obj2.source = tmp(9932);
     const obj3 = { tintColor: tmp(576).unsafe_rawColors.WHITE };
     obj2.imageStyle = obj3;
-    obj2.IconComponent = tmp3(9928).HandRequestSpeakListIcon;
+    obj2.IconComponent = tmp3(9933).HandRequestSpeakListIcon;
     obj2.onPress = handleOpenAudienceList;
     obj2.isSmallSize = isSmallSize;
     tmp7 = closure_12(CallBarActionAll.ActionButton, obj2);
@@ -368,9 +368,9 @@ export const ChatButton = function ChatButton(channel) {
   const items1 = [channel.id];
   const stateFromStoresObject = obj.useStateFromStoresObject(items, () => ({ unreadCount: ReadStateStore.getUnreadCount(channel.id), mentionCount: ReadStateStore.getMentionCount(channel.id) }), items1);
   ({ unreadCount, mentionCount } = stateFromStoresObject);
-  let obj1 = channel(9937);
+  let obj1 = channel(9942);
   const isVoiceChannelLocked = obj1.useIsVoiceChannelLocked(channel);
-  let obj2 = channel(9589);
+  let obj2 = channel(9594);
   const voiceChatNavigationContext = obj2.useVoiceChatNavigationContext();
   let openChat;
   if (voiceChatNavigationContext != null) {
@@ -391,11 +391,11 @@ export const ChatButton = function ChatButton(channel) {
       const intl2 = tmp(1114).intl;
       obj.accessibilityLabel = intl2.string(tmp(1114).t.ZXxLQg);
       obj.IconComponent = tmp(5071).ChatIcon;
-      obj.source = isVoiceChannelLocked(9938);
+      obj.source = isVoiceChannelLocked(9943);
       obj.onPress = onPress;
       obj.appearsDisabled = isVoiceChannelLocked;
       obj.isSmallSize = isSmallSize;
-      let tmp7Result = closure_12(openChat(9497).ActionButton, obj);
+      let tmp7Result = closure_12(openChat(9502).ActionButton, obj);
     }
     return tmp7Result;
   }
@@ -408,11 +408,11 @@ export const ChatButton = function ChatButton(channel) {
   const intl = tmp(1114).intl;
   obj1.accessibilityLabel = intl.string(channel(1114).t.ZXxLQg);
   obj1.IconComponent = channel(5071).ChatIcon;
-  obj1.source = isVoiceChannelLocked(9938);
+  obj1.source = isVoiceChannelLocked(9943);
   obj1.onPress = onPress;
   obj1.appearsDisabled = isVoiceChannelLocked;
   obj1.isSmallSize = isSmallSize;
-  tmp7Result = closure_12(openChat(9497).NotifiedActionButton, obj1);
+  tmp7Result = closure_12(openChat(9502).NotifiedActionButton, obj1);
 };
 export { AnimatedPrompt };
 export const AnimatedStartStagePrompt = function AnimatedStartStagePrompt(channel) {
@@ -497,7 +497,7 @@ export const JoinStagePrompt = function JoinStagePrompt(channel) {
   obj.title = intl.string(channel(1114).t["7vb2cc"]);
   const intl2 = channel(1114).intl;
   obj.subtitle = intl2.string(channel(1114).t.lyCW4E);
-  return closure_12(channel(8593).FormCTA, obj);
+  return closure_12(channel(8598).FormCTA, obj);
 };
 export const ContinueToStagePrompt = function ContinueToStagePrompt(onContinue) {
   const tmp = closure_14();
@@ -509,7 +509,7 @@ export const ContinueToStagePrompt = function ContinueToStagePrompt(onContinue) 
   obj1.children = intl.string(util.t["jMLfp/"]);
   obj.children = closure_1_12(native.LegacyText, obj1);
   const items = [closure_1_12(View, obj), ];
-  const obj2 = { children: closure_1_12(native.Icon, { style: tmp.continueIcon, source: _modDef9939, size: native.Icon.Sizes.SMALL, disableColor: true }) };
+  const obj2 = { children: closure_1_12(native.Icon, { style: tmp.continueIcon, source: _modDef9944, size: native.Icon.Sizes.SMALL, disableColor: true }) };
   items[1] = closure_1_12(View, obj2);
   obj.children = items;
   obj.children = map1(View, obj);

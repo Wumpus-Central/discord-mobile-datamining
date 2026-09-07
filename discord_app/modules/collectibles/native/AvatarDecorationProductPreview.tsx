@@ -1,6 +1,6 @@
-// === Module 13139: AvatarDecorationProductPreview ===
+// === Module 13143: AvatarDecorationProductPreview ===
 
-// Module 13139 (AvatarDecorationProductPreview)
+// Module 13143 (AvatarDecorationProductPreview)
 import util from "util" /* 1114 */;
 import native from "native" /* 1178 */;
 import useShopProductItems from "useShopProductItems" /* 8171 */;

@@ -1,6 +1,6 @@
-// === Module 8896: GameProfileGameClaimCta ===
+// === Module 8901: GameProfileGameClaimCta ===
 
-// Module 8896 (GameProfileGameClaimCta)
+// Module 8901 (GameProfileGameClaimCta)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 
@@ -40,7 +40,7 @@ export default function GameProfileGameClaimCta(trackAction) {
             obj = { value, done: true };
             return obj;
           } else {
-            trackAction(v3(8686).GameProfileTrackActionActions.ClaimGame);
+            trackAction(v3(8691).GameProfileTrackActionActions.ClaimGame);
             let obj1 = v1(7316);
             v1 = 1;
             v3 = 1;

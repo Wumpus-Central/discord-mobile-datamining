@@ -1,12 +1,12 @@
-// === Module 15804: CollectiblesShopSetting ===
+// === Module 15807: CollectiblesShopSetting ===
 
-// Module 15804 (CollectiblesShopSetting)
+// Module 15807 (CollectiblesShopSetting)
 import Constants from "Constants" /* 1074 */;
 import util from "util" /* 1114 */;
 import AnalyticsLocationDefault from "AnalyticsLocation" /* 7182 */;
 import CollectiblesActionCreators from "CollectiblesActionCreators" /* 7541 */;
-import ShopIcon from "ShopIcon" /* 12138 */;
-import SettingBuilders from "SettingBuilders" /* 11468 */;
+import ShopIcon from "ShopIcon" /* 12142 */;
+import SettingBuilders from "SettingBuilders" /* 11473 */;
 import size from "module_2" /* 2 */;
 
 const route = SettingBuilders.createRoute({

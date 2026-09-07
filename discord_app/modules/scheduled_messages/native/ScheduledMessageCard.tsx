@@ -1,14 +1,14 @@
-// === Module 12214: ScheduledMessageCard ===
+// === Module 12218: ScheduledMessageCard ===
 
-// Module 12214 (ScheduledMessageCard)
+// Module 12218 (ScheduledMessageCard)
 import nativeDefault from "native" /* 576 */;
 import router_utils from "router_utils" /* 1100 */;
 import util from "util" /* 1114 */;
 import ModalActionCreatorsDefault from "ModalActionCreators" /* 4763 */;
 import ScheduledMessageUtils from "ScheduledMessageUtils" /* 7845 */;
-import CalendarPlusIcon from "CalendarPlusIcon" /* 12209 */;
-import ForLaterCardStatusHeader from "ForLaterCardStatusHeader" /* 12217 */;
-import ScheduledMessageCardActionButtonsDefault from "ScheduledMessageCardActionButtons" /* 12218 */;
+import CalendarPlusIcon from "CalendarPlusIcon" /* 12213 */;
+import ForLaterCardStatusHeader from "ForLaterCardStatusHeader" /* 12221 */;
+import ScheduledMessageCardActionButtonsDefault from "ScheduledMessageCardActionButtons" /* 12222 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 
@@ -61,7 +61,7 @@ export default noop.memo(function ScheduledMessageCard(scheduledMessage) {
     obj = { scheduledMessage, isPendingRemoval };
     const items1 = [closure_7(ScheduledMessageCardStatusHeader, obj), , , ];
     const obj1 = { channel: stateFromStores, actions: null };
-    items1[1] = closure_7(tmp2(12215).ForLaterCardHeader, obj1);
+    items1[1] = closure_7(tmp2(12219).ForLaterCardHeader, obj1);
     let obj2 = { style: tmp.cardDivider };
     items1[2] = closure_7(View, obj2);
     if (isPendingRemoval) {
@@ -73,7 +73,7 @@ export default noop.memo(function ScheduledMessageCard(scheduledMessage) {
       if (length > 0) {
         const obj5 = { style: tmp.attachmentCount, children: null };
         const obj6 = { size: "xxs", color: stateFromStores(576).colors.TEXT_MUTED };
-        const items2 = [closure_7(tmp2(10112).AttachmentIcon, obj6), ];
+        const items2 = [closure_7(tmp2(10117).AttachmentIcon, obj6), ];
         const obj7 = { variant: "text-sm/normal", color: "text-muted", children: null };
         const intl = tmp2(1114).intl;
         const obj8 = { count: length };
@@ -83,7 +83,7 @@ export default noop.memo(function ScheduledMessageCard(scheduledMessage) {
         tmp9Result = closure_8(View, obj5);
       }
       obj4.footer = tmp9Result;
-      tmp10Result = closure_7(tmp2(12216).ForLaterMessageRow, obj4);
+      tmp10Result = closure_7(tmp2(12220).ForLaterMessageRow, obj4);
     }
     items1[3] = tmp10Result;
     obj.children = items1;

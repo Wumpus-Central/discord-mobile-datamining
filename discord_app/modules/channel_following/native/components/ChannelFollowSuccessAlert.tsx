@@ -1,6 +1,6 @@
-// === Module 11333: ChannelFollowSuccessAlert ===
+// === Module 11338: ChannelFollowSuccessAlert ===
 
-// Module 11333 (ChannelFollowSuccessAlert)
+// Module 11338 (ChannelFollowSuccessAlert)
 import _modDef12 from "module_12" /* 12 */;
 import util from "util" /* 1114 */;
 import useThemeDefault from "useTheme" /* 4495 */;
@@ -11,8 +11,8 @@ require = fn;
 const Image = fn(17).Image;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-let items = [fn(11334), fn(11335), fn(11336)];
-let items1 = [fn(11337), fn(11338), fn(11339)];
+let items = [fn(11339), fn(11340), fn(11341)];
+let items1 = [fn(11342), fn(11343), fn(11344)];
 const items2 = [
   () => {
     const intl = util.intl;

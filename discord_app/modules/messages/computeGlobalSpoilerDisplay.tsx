@@ -1,6 +1,6 @@
-// === Module 11526: computeGlobalSpoilerDisplay ===
+// === Module 11531: computeGlobalSpoilerDisplay ===
 
-// Module 11526 (computeGlobalSpoilerDisplay)
+// Module 11531 (computeGlobalSpoilerDisplay)
 import PermissionStore from "PermissionStore" /* 4199 */;
 
 const require = fn;

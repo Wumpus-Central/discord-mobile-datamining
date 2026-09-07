@@ -1,6 +1,6 @@
-// === Module 17800: VoicePanelManager ===
+// === Module 17803: VoicePanelManager ===
 
-// Module 17800 (VoicePanelManager)
+// Module 17803 (VoicePanelManager)
 import RTCConnectionStore from "RTCConnectionStore" /* 4583 */;
 import VoicePanelStore from "VoicePanelStore" /* 4768 */;
 import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7118 */;

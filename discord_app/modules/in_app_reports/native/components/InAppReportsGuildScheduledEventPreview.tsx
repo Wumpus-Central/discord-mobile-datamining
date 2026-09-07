@@ -1,6 +1,6 @@
-// === Module 9037: InAppReportsGuildScheduledEventPreview ===
+// === Module 9042: InAppReportsGuildScheduledEventPreview ===
 
-// Module 9037 (InAppReportsGuildScheduledEventPreview)
+// Module 9042 (InAppReportsGuildScheduledEventPreview)
 import nativeDefault from "native" /* 576 */;
 import GuildIconDefault from "GuildIcon" /* 5584 */;
 import noop from "module_19" /* 19 */;

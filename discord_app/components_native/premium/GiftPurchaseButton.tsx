@@ -1,6 +1,6 @@
-// === Module 13567: GiftPurchaseButton ===
+// === Module 13571: GiftPurchaseButton ===
 
-// Module 13567 (GiftPurchaseButton)
+// Module 13571 (GiftPurchaseButton)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 import SubscriptionStore from "SubscriptionStore" /* 4224 */;
@@ -58,7 +58,7 @@ export default function GiftPurchaseButton(style) {
     const premiumTypeFromPlanId = planId(4218).getPremiumTypeFromPlanId(closure_129_0);
     const premiumType = premiumTypeFromPlanId.premiumType;
     const planInterval = premiumTypeFromPlanId.planInterval;
-    planId(10661).openGiftModal({ recipientUserId: closure_129_2, premiumType, planInterval, analyticsLocation: closure_129_1, analyticsLocations: closure_129_4, order: closure_128_0 });
+    planId(10666).openGiftModal({ recipientUserId: closure_129_2, premiumType, planInterval, analyticsLocation: closure_129_1, analyticsLocations: closure_129_4, order: closure_128_0 });
     yield "HermesInternal";
     obj1 = tmp3(4905);
     const obj3 = { title: null, body: null };

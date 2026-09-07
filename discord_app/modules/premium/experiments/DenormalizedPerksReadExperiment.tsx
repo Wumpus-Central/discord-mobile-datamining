@@ -1,6 +1,6 @@
-// === Module 13983: DenormalizedPerksReadExperiment ===
+// === Module 13986: DenormalizedPerksReadExperiment ===
 
-// Module 13983 (DenormalizedPerksReadExperiment)
+// Module 13986 (DenormalizedPerksReadExperiment)
 import ApexExperiment from "ApexExperiment" /* 1433 */;
 import size from "module_2" /* 2 */;
 

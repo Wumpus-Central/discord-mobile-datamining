@@ -1,16 +1,16 @@
-// === Module 14471: channels ===
+// === Module 14474: channels ===
 
-// Module 14471 (channels)
+// Module 14474 (channels)
 import _modDef12 from "module_12" /* 12 */;
 import router_utils from "router_utils" /* 1100 */;
 import ChannelUtils from "ChannelUtils" /* 4705 */;
 import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 5411 */;
 import OAuth2Scopes from "OAuth2Scopes" /* 8339 */;
 import InstantInviteActionCreatorsDefault from "InstantInviteActionCreators" /* 8378 */;
-import RPCErrorDefault from "RPCError" /* 9554 */;
-import createRpcJoiSchemaObjectDefault from "createRpcJoiSchemaObject" /* 9557 */;
-import RPCHelpers from "RPCHelpers" /* 9559 */;
-import getCurrentEmbeddedActivityChannelDefault from "getCurrentEmbeddedActivityChannel" /* 14468 */;
+import RPCErrorDefault from "RPCError" /* 9559 */;
+import createRpcJoiSchemaObjectDefault from "createRpcJoiSchemaObject" /* 9562 */;
+import RPCHelpers from "RPCHelpers" /* 9564 */;
+import getCurrentEmbeddedActivityChannelDefault from "getCurrentEmbeddedActivityChannel" /* 14471 */;
 import ChannelRecord from "ChannelRecord" /* 1961 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 import GuildStore from "GuildStore" /* 1979 */;
@@ -266,10 +266,10 @@ obj[RPCCommands.SELECT_TEXT_CHANNEL] = {
     if (channel_id) {
       const storeWaitResult = server.storeWait(socket, () => ChannelStore.getChannel(channel_id), num);
       const catchPromise = server.storeWait(socket, () => ChannelStore.getChannel(channel_id), num).catch(() => {
-        throw new channel_id(9554)({ errorCode: constants2.SELECT_CHANNEL_TIMED_OUT }, "Request to select text channel timed out.");
+        throw new channel_id(9559)({ errorCode: constants2.SELECT_CHANNEL_TIMED_OUT }, "Request to select text channel timed out.");
       });
       let nextPromise1 = server.storeWait(socket, () => ChannelStore.getChannel(channel_id), num).catch(() => {
-        throw new channel_id(9554)({ errorCode: constants2.SELECT_CHANNEL_TIMED_OUT }, "Request to select text channel timed out.");
+        throw new channel_id(9559)({ errorCode: constants2.SELECT_CHANNEL_TIMED_OUT }, "Request to select text channel timed out.");
       }).then((type) => {
         if (null == type) {
           let obj = { errorCode: constants2.INVALID_CHANNEL };
@@ -292,7 +292,7 @@ obj[RPCCommands.SELECT_TEXT_CHANNEL] = {
         if (tmp2.guild_id) {
           if (!PermissionStore.can(constants.VIEW_CHANNEL, tmp)) {
             const obj = { errorCode: constants2.INVALID_CHANNEL };
-            const tmp11 = new channel_id(9554)(obj, "No permission to see channel");
+            const tmp11 = new channel_id(9559)(obj, "No permission to see channel");
             throw tmp11;
           }
         }
@@ -306,7 +306,7 @@ obj[RPCCommands.SELECT_TEXT_CHANNEL] = {
         return tmp2;
       });
       const nextPromise = server.storeWait(socket, () => ChannelStore.getChannel(channel_id), num).catch(() => {
-        throw new channel_id(9554)({ errorCode: constants2.SELECT_CHANNEL_TIMED_OUT }, "Request to select text channel timed out.");
+        throw new channel_id(9559)({ errorCode: constants2.SELECT_CHANNEL_TIMED_OUT }, "Request to select text channel timed out.");
       }).then((type) => {
         if (null == type) {
           let obj = { errorCode: constants2.INVALID_CHANNEL };
@@ -356,10 +356,10 @@ const obj8 = {
     if (channel_id) {
       const storeWaitResult = server.storeWait(socket, () => ChannelStore.getChannel(channel_id), num);
       const catchPromise = server.storeWait(socket, () => ChannelStore.getChannel(channel_id), num).catch(() => {
-        throw new channel_id(9554)({ errorCode: constants2.SELECT_CHANNEL_TIMED_OUT }, "Request to select text channel timed out.");
+        throw new channel_id(9559)({ errorCode: constants2.SELECT_CHANNEL_TIMED_OUT }, "Request to select text channel timed out.");
       });
       let nextPromise1 = server.storeWait(socket, () => ChannelStore.getChannel(channel_id), num).catch(() => {
-        throw new channel_id(9554)({ errorCode: constants2.SELECT_CHANNEL_TIMED_OUT }, "Request to select text channel timed out.");
+        throw new channel_id(9559)({ errorCode: constants2.SELECT_CHANNEL_TIMED_OUT }, "Request to select text channel timed out.");
       }).then((type) => {
         if (null == type) {
           let obj = { errorCode: constants2.INVALID_CHANNEL };
@@ -382,7 +382,7 @@ const obj8 = {
         if (tmp2.guild_id) {
           if (!PermissionStore.can(constants.VIEW_CHANNEL, tmp)) {
             const obj = { errorCode: constants2.INVALID_CHANNEL };
-            const tmp11 = new channel_id(9554)(obj, "No permission to see channel");
+            const tmp11 = new channel_id(9559)(obj, "No permission to see channel");
             throw tmp11;
           }
         }
@@ -396,7 +396,7 @@ const obj8 = {
         return tmp2;
       });
       const nextPromise = server.storeWait(socket, () => ChannelStore.getChannel(channel_id), num).catch(() => {
-        throw new channel_id(9554)({ errorCode: constants2.SELECT_CHANNEL_TIMED_OUT }, "Request to select text channel timed out.");
+        throw new channel_id(9559)({ errorCode: constants2.SELECT_CHANNEL_TIMED_OUT }, "Request to select text channel timed out.");
       }).then((type) => {
         if (null == type) {
           let obj = { errorCode: constants2.INVALID_CHANNEL };

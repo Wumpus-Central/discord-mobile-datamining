@@ -1,10 +1,10 @@
-// === Module 11751: SpotifyActionCreators ===
+// === Module 11756: SpotifyActionCreators ===
 
-// Module 11751 (SpotifyActionCreators)
+// Module 11756 (SpotifyActionCreators)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import PlatformUtils from "PlatformUtils" /* 1115 */;
-import GameUtilsDefault from "GameUtils" /* 8684 */;
-import SpotifyProtocolStore from "SpotifyProtocolStore" /* 11750 */;
+import GameUtilsDefault from "GameUtils" /* 8689 */;
+import SpotifyProtocolStore from "SpotifyProtocolStore" /* 11755 */;
 
 require = fn;
 function apiRequest(fn, arg1, arg2, headers) {

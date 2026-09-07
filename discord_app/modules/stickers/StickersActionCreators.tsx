@@ -1,6 +1,6 @@
-// === Module 10388: StickersActionCreators ===
+// === Module 10393: StickersActionCreators ===
 
-// Module 10388 (StickersActionCreators)
+// Module 10393 (StickersActionCreators)
 import _modDef12 from "module_12" /* 12 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import util from "util" /* 1114 */;

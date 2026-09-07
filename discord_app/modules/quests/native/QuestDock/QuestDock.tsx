@@ -1,6 +1,6 @@
-// === Module 15183: QuestDock ===
+// === Module 15186: QuestDock ===
 
-// Module 15183 (QuestDock)
+// Module 15186 (QuestDock)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 576 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
@@ -15,19 +15,19 @@ import MonitoringAgentDefault from "MonitoringAgent" /* 7602 */;
 import MetricEvents from "MetricEvents" /* 7607 */;
 import AnalyticsTypes from "AnalyticsTypes" /* 7728 */;
 import ClientThemesOverrides from "ClientThemesOverrides" /* 7872 */;
-import QuestActionCreators from "QuestActionCreators" /* 11276 */;
-import hooks_QuestHooks from "hooks/QuestHooks" /* 11483 */;
-import QuestsEligibility from "QuestsEligibility" /* 11484 */;
-import QuestContentImpressionTracker from "QuestContentImpressionTracker" /* 11778 */;
-import QuestDockUtils from "QuestDockUtils" /* 15094 */;
-import QuestDockGestureContext from "QuestDockGestureContext" /* 15096 */;
-import QuestDockBountyHeaderDefault from "QuestDockBountyHeader" /* 15202 */;
-import QuestDockBountyBodyDefault from "QuestDockBountyBody" /* 15203 */;
+import QuestActionCreators from "QuestActionCreators" /* 11281 */;
+import hooks_QuestHooks from "hooks/QuestHooks" /* 11488 */;
+import QuestsEligibility from "QuestsEligibility" /* 11489 */;
+import QuestContentImpressionTracker from "QuestContentImpressionTracker" /* 11783 */;
+import QuestDockUtils from "QuestDockUtils" /* 15097 */;
+import QuestDockGestureContext from "QuestDockGestureContext" /* 15099 */;
+import QuestDockBountyHeaderDefault from "QuestDockBountyHeader" /* 15205 */;
+import QuestDockBountyBodyDefault from "QuestDockBountyBody" /* 15206 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
-import QuestDockStore from "QuestDockStore" /* 15093 */;
+import QuestDockStore from "QuestDockStore" /* 15096 */;
 
 require = fn;
 function QuestDockWithGestureAnimation(appThemedBackgroundColor) {
@@ -360,7 +360,7 @@ function QuestDockWithEntranceAnimation(arg0) {
   ({ renderModeChangeTracker: require, identifierMetricTag } = arg0);
   ({ backgroundImageUrl, iconUrl, layoutVariant: dependencyMap, theme: closure_3, collapsedContent: asyncGeneratorStep, expandedContent: _slicedToArray, backgroundContent: _objectWithoutProperties } = arg0);
   ({ renderImpressionTracker, trackAssetLoadingFailure } = arg0);
-  const context = isRendered.useContext(identifierMetricTag(15182));
+  const context = isRendered.useContext(identifierMetricTag(15185));
   isRendered = context.isRendered;
   let obj1 = initialize;
   let items = [componentDimensions];
@@ -715,14 +715,14 @@ function QuestDockBountyContent(bounty) {
     }
   };
   obj.children = closure_21(QuestDockWithEntranceAnimation, obj);
-  return closure_21(bounty(15102).QuestDockBountyProvider, obj);
+  return closure_21(bounty(15105).QuestDockBountyProvider, obj);
 }
 let closure_3 = ["mode"];
 get_ActivityIndicator = fn(17);
 ({ View: closure_8, StyleSheet, Pressable: closure_9, Image: c10 } = get_ActivityIndicator);
 const QuestConstants = fn(5444);
 ({ QuestDockMode: closure_12, QuestsExperimentLocations: map1 } = QuestConstants);
-const QuestDockConstants = fn(15095);
+const QuestDockConstants = fn(15098);
 ({ QUEST_DOCK_MODE_CHANGE_PHYSICS: closure_14, QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED: closure_15, QUEST_DOCK_CONTENT_BORDER_RADII: closure_16, QUEST_DOCK_UNENROLLED_HEADER_INSET_EXPANDED: closure_17, QUEST_DOCK_COLLAPSED_HEIGHT: closure_18 } = QuestDockConstants);
 const AnalyticEvents = fn(1074).AnalyticEvents;
 const ThemeTypes = fn(1085).ThemeTypes;

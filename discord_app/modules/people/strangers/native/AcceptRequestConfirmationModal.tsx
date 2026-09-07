@@ -1,6 +1,6 @@
-// === Module 10875: AcceptRequestConfirmationModal ===
+// === Module 10880: AcceptRequestConfirmationModal ===
 
-// Module 10875 (AcceptRequestConfirmationModal)
+// Module 10880 (AcceptRequestConfirmationModal)
 import nativeDefault from "native" /* 576 */;
 import AlertActionCreatorsDefault from "AlertActionCreators" /* 4904 */;
 import common_AlertDefault from "common/Alert" /* 4994 */;

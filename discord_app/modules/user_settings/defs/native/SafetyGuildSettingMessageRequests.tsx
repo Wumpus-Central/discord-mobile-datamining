@@ -1,6 +1,6 @@
-// === Module 15878: SafetyGuildSettingMessageRequests ===
+// === Module 15881: SafetyGuildSettingMessageRequests ===
 
-// Module 15878 (SafetyGuildSettingMessageRequests)
+// Module 15881 (SafetyGuildSettingMessageRequests)
 import util from "util" /* 1114 */;
 import UserSettings from "UserSettings" /* 1935 */;
 import AlertActionCreatorsDefault from "AlertActionCreators" /* 4904 */;
@@ -8,9 +8,9 @@ import common_AlertDefault from "common/Alert" /* 4994 */;
 import UserSettingsUtils from "UserSettingsUtils" /* 6995 */;
 import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 8411 */;
 import AgeVerificationAnalyticsUtils from "AgeVerificationAnalyticsUtils" /* 8413 */;
-import useParentalControlSettings from "useParentalControlSettings" /* 14824 */;
-import DefultGuildsRestrictedSetting from "DefultGuildsRestrictedSetting" /* 15876 */;
-import DefaultDMSettingsExperiment from "DefaultDMSettingsExperiment" /* 15879 */;
+import useParentalControlSettings from "useParentalControlSettings" /* 14827 */;
+import DefultGuildsRestrictedSetting from "DefultGuildsRestrictedSetting" /* 15879 */;
+import DefaultDMSettingsExperiment from "DefaultDMSettingsExperiment" /* 15882 */;
 import GuildStore from "GuildStore" /* 1979 */;
 
 require = fn;
@@ -43,10 +43,10 @@ function showMessageRequestRestrictionModal(arg0) {
   };
   obj.show(obj);
 }
-const UserSettingsSafetySelectedGuildStore = fn(15869);
+const UserSettingsSafetySelectedGuildStore = fn(15872);
 ({ getSelectedGuildId: closure_4, useUserSafetySettingsSelectedGuildStore: hasOwnProperty } = UserSettingsSafetySelectedGuildStore);
-let closure_6 = fn(11469).GUILD_SELECT_ALL_SERVERS_OPTION_ID;
-fn(11468);
+let closure_6 = fn(11474).GUILD_SELECT_ALL_SERVERS_OPTION_ID;
+fn(11473);
 let SettingBuilders = {
   useTitle() {
     const intl = util.intl;

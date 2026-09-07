@@ -1,6 +1,6 @@
-// === Module 17628: EnhancedRoleColorsSelectStyleModal ===
+// === Module 17631: EnhancedRoleColorsSelectStyleModal ===
 
-// Module 17628 (EnhancedRoleColorsSelectStyleModal)
+// Module 17631 (EnhancedRoleColorsSelectStyleModal)
 import nativeDefault from "native" /* 576 */;
 import Constants from "Constants" /* 1085 */;
 import util from "util" /* 1114 */;
@@ -14,11 +14,11 @@ import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7149 */;
 import Sheet_BottomSheet from "Sheet/BottomSheet" /* 7150 */;
 import RowGeneratorDefault from "RowGenerator" /* 7932 */;
 import enhanced_role_colors_EnhancedRoleColorUtils from "enhanced_role_colors/EnhancedRoleColorUtils" /* 7961 */;
-import _modDef13293 from "module_13293" /* 13293 */;
-import GuildSettingsRoleConstants from "GuildSettingsRoleConstants" /* 17609 */;
-import GuildSettingsRolesStore from "GuildSettingsRolesStore" /* 17610 */;
-import EnhancedRoleColorConstants from "EnhancedRoleColorConstants" /* 17612 */;
-import useGuildSettingsRoleExampleMessage from "useGuildSettingsRoleExampleMessage" /* 17629 */;
+import _modDef13297 from "module_13297" /* 13297 */;
+import GuildSettingsRoleConstants from "GuildSettingsRoleConstants" /* 17612 */;
+import GuildSettingsRolesStore from "GuildSettingsRolesStore" /* 17613 */;
+import EnhancedRoleColorConstants from "EnhancedRoleColorConstants" /* 17615 */;
+import useGuildSettingsRoleExampleMessage from "useGuildSettingsRoleExampleMessage" /* 17632 */;
 import get_ActivityIndicator from "module_17" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createStyles from "createStyles" /* 4560 */;
@@ -117,7 +117,7 @@ export default function EnhancedRoleColorsSelectStyleModal(arg0) {
             const result = EnhancedRoleColorUtils.extractColorStringsFromServerColors(id.colors);
             message.message.roleColors = enhanced_role_colors_EnhancedRoleColorUtils.processColorStrings(result);
             message.message.shouldShowRoleOnName = true;
-            message.message.avatarURL = _modDef13293;
+            message.message.avatarURL = _modDef13297;
           }
         };
         const items1 = [closure_1_9(require("ChatItem"), obj), ];

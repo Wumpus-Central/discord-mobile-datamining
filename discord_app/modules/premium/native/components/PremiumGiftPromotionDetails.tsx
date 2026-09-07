@@ -1,11 +1,11 @@
-// === Module 10754: PremiumGiftPromotionDetails ===
+// === Module 10759: PremiumGiftPromotionDetails ===
 
-// Module 10754 (PremiumGiftPromotionDetails)
+// Module 10759 (PremiumGiftPromotionDetails)
 import nativeDefault from "native" /* 576 */;
 import utils_PlatformUtils from "utils/PlatformUtils" /* 1116 */;
 import CollectiblesItemType from "CollectiblesItemType" /* 1889 */;
 import Text_Text from "Text/Text" /* 4556 */;
-import SKUPreview from "SKUPreview" /* 8772 */;
+import SKUPreview from "SKUPreview" /* 8777 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4552 */;

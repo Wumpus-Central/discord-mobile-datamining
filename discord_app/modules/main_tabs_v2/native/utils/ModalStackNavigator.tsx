@@ -1,9 +1,9 @@
-// === Module 10924: ModalStackNavigator ===
+// === Module 10929: ModalStackNavigator ===
 
-// Module 10924 (ModalStackNavigator)
+// Module 10929 (ModalStackNavigator)
 import Navigator from "Navigator" /* 7000 */;
 import HeaderShared from "HeaderShared" /* 7863 */;
-import getNavigationModalPresentationDefault from "getNavigationModalPresentation" /* 10925 */;
+import getNavigationModalPresentationDefault from "getNavigationModalPresentation" /* 10930 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

@@ -1,17 +1,17 @@
-// === Module 16264: GuildUpsellChannelList ===
+// === Module 16267: GuildUpsellChannelList ===
 
-// Module 16264 (GuildUpsellChannelList)
+// Module 16267 (GuildUpsellChannelList)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import Text_Text from "Text/Text" /* 4556 */;
 import components_Button_Button from "components/Button/Button" /* 4975 */;
 import noop from "module_19" /* 19 */;
-import MobileGameCommunitiesStore from "MobileGameCommunitiesStore" /* 15620 */;
+import MobileGameCommunitiesStore from "MobileGameCommunitiesStore" /* 15623 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ ScrollView: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-let closure_8 = fn(16265).MAX_DISPLAYED_UPSELL_GUILDS;
+let closure_8 = fn(16268).MAX_DISPLAYED_UPSELL_GUILDS;
 const AnalyticEvents = fn(1074).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);

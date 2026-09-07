@@ -1,15 +1,15 @@
-// === Module 17368: GameConsoleManager ===
+// === Module 17371: GameConsoleManager ===
 
-// Module 17368 (GameConsoleManager)
+// Module 17371 (GameConsoleManager)
 import LoggerDefault from "Logger" /* 3 */;
 import _modDef38 from "module_38" /* 38 */;
 import util from "util" /* 1114 */;
 import GlobalUtils from "GlobalUtils" /* 1369 */;
 import Timers from "Timers" /* 4447 */;
-import AudioActionCreatorsDefault from "AudioActionCreators" /* 9089 */;
-import GameConsoleActionCreators from "GameConsoleActionCreators" /* 9448 */;
-import GameConsoleAlertUtilsDefault from "GameConsoleAlertUtils" /* 9451 */;
-import _modDef17369 from "module_17369" /* 17369 */;
+import AudioActionCreatorsDefault from "AudioActionCreators" /* 9094 */;
+import GameConsoleActionCreators from "GameConsoleActionCreators" /* 9453 */;
+import GameConsoleAlertUtilsDefault from "GameConsoleAlertUtils" /* 9456 */;
+import _modDef17372 from "module_17372" /* 17372 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import MediaEngineStore from "MediaEngineStore" /* 1908 */;
@@ -92,7 +92,7 @@ let closure_15 = async function _syncLocalState(arg0) {
     }
   })();
 };
-const GameConsoleConstants = fn(9233);
+const GameConsoleConstants = fn(9238);
 ({ GAME_CONSOLE_SESSIONS: c10, USER_ACTION_REQUIRED_ERROR_CODES: closure_11 } = GameConsoleConstants);
 const MediaEngineContextTypes = fn(4585).MediaEngineContextTypes;
 let closure_13 = new LoggerDefault("GameConsoleManager");
@@ -225,7 +225,7 @@ let prototype = function GameConsoleManager() {
   applyArgumentsResult.handleWaitForRemoteSession = function handleWaitForRemoteSession() {
     const awaitRemoteTimeout = applyArgumentsResult.awaitRemoteTimeout;
     awaitRemoteTimeout.start(60000, () => {
-      let obj = closure_1_0(9448);
+      let obj = closure_1_0(9453);
       obj.disconnectRemote();
       obj = { title: null, body: null };
       const intl = closure_1_0(1114).intl;
@@ -259,7 +259,7 @@ let prototype = function GameConsoleManager() {
             obj.name = intl2.string(util.t["UQMV/E"]);
             device = obj;
           }
-          const tmp8Result = _modDef17369(device, result, error);
+          const tmp8Result = _modDef17372(device, result, error);
           if (null != tmp8Result) {
             obj = { title: null, body: null, errorCodeMessage: null, reconnectPlatformType: null };
             ({ title: obj3.title, body: obj3.body, errorCodeMessage: obj3.errorCodeMessage } = tmp8Result);

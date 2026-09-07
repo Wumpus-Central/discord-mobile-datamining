@@ -1,13 +1,13 @@
-// === Module 11515: QuestMatchingUtils ===
+// === Module 11520: QuestMatchingUtils ===
 
-// Module 11515 (QuestMatchingUtils)
+// Module 11520 (QuestMatchingUtils)
 import QuestDataUtils from "QuestDataUtils" /* 7699 */;
 import utils_QuestUtils from "utils/QuestUtils" /* 7722 */;
 import QuestTaskUtils from "QuestTaskUtils" /* 7724 */;
-import getApplicationIdsForGameDefault from "getApplicationIdsForGame" /* 11516 */;
+import getApplicationIdsForGameDefault from "getApplicationIdsForGame" /* 11521 */;
 import _slicedToArray from "module_32" /* 32 */;
 import ApplicationStore from "ApplicationStore" /* 4788 */;
-import LocalActivityStore from "LocalActivityStore" /* 11457 */;
+import LocalActivityStore from "LocalActivityStore" /* 11462 */;
 
 require = fn;
 function questMatchesActivity(arg0, id) {

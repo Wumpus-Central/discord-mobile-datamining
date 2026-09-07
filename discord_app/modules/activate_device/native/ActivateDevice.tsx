@@ -1,11 +1,11 @@
-// === Module 13875: ActivateDevice ===
+// === Module 13878: ActivateDevice ===
 
-// Module 13875 (ActivateDevice)
+// Module 13878 (ActivateDevice)
 import nativeDefault from "native" /* 576 */;
 import FastImageDefault from "FastImage" /* 5587 */;
-import ConsoleOAuthApplications from "ConsoleOAuthApplications" /* 9261 */;
-import _modDef13879 from "module_13879" /* 13879 */;
-import _modDef13880 from "module_13880" /* 13880 */;
+import ConsoleOAuthApplications from "ConsoleOAuthApplications" /* 9266 */;
+import _modDef13882 from "module_13882" /* 13882 */;
+import _modDef13883 from "module_13883" /* 13883 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -76,11 +76,11 @@ export const ActivateDevice = (onClose) => {
       const userCodeData = first.userCodeData;
       const items = [ConsoleOAuthApplications.ConsoleOAuthApplications.PLAYSTATION_APPLICATION_ID, ConsoleOAuthApplications.ConsoleOAuthApplications.PLAYSTATION_STAGING_APPLICATION_ID];
       if (items.includes(userCodeData.clientId)) {
-        closure_3(_modDef13879);
+        closure_3(_modDef13882);
       } else {
         const scopes = userCodeData.scopes;
         if (scopes.some((item) => first(first1[11]).isSocialLayerUmbrellaScope(item))) {
-          closure_3(_modDef13880);
+          closure_3(_modDef13883);
         }
       }
     }
@@ -111,12 +111,12 @@ export const ActivateDevice = (onClose) => {
       tmp21Result = jsx(tmp7(tmp8[16]).ActivateDeviceError, { onRetry: callback });
     }
   }
-  const obj2 = { source: first(first1[17]).makeSource(require("module_13887")), imageStyle: tmp.imageStyle, style: null, children: null };
+  const obj2 = { source: first(first1[17]).makeSource(require("module_13890")), imageStyle: tmp.imageStyle, style: null, children: null };
   const items6 = [tmp.background];
   obj2.style = items6;
   const rect = { bottom: true, top: true, style: tmp.safeArea, children: null };
   const obj3 = { style: tmp.content, children: <closure_8 bounces={false} style={tmp.scroller} contentContainerStyle={tmp.scrollerContent}>{tmp21Result}</closure_8> };
   rect.children = <closure_5 style={tmp.content}><closure_8 bounces={false} style={tmp.scroller} contentContainerStyle={tmp.scrollerContent}>{tmp21Result}</closure_8></closure_5>;
   obj2.children = jsx(first(first1[19]).SafeAreaPaddingView, { bottom: true, top: true, style: tmp.safeArea, children: null });
-  return <closure_6 source={first(first1[17]).makeSource(require("module_13887"))} imageStyle={tmp.imageStyle} style={null}>{null}</closure_6>;
+  return <closure_6 source={first(first1[17]).makeSource(require("module_13890"))} imageStyle={tmp.imageStyle} style={null}>{null}</closure_6>;
 };

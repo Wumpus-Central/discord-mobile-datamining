@@ -1,6 +1,6 @@
-// === Module 14932: FamilyCenterParentalControlsScreenTime ===
+// === Module 14935: FamilyCenterParentalControlsScreenTime ===
 
-// Module 14932 (FamilyCenterParentalControlsScreenTime)
+// Module 14935 (FamilyCenterParentalControlsScreenTime)
 import _mod17 from "module_17" /* 17 */;
 import nativeDefault from "native" /* 576 */;
 import Constants from "Constants" /* 1074 */;
@@ -15,10 +15,10 @@ function ScheduleRuleRow(rule) {
   if (readOnly === undefined) {
     readOnly = false;
   }
-  let obj = rule(10083);
+  let obj = rule(10088);
   const scheduleRuleDateRange = obj.getScheduleRuleDateRange(rule);
-  const obj2 = rule(10083);
-  obj = { label: scheduleRuleDateRange, subLabel: rule(10083).formatDays(rule.days), trailing: null, arrow: null, onPress: null };
+  const obj2 = rule(10088);
+  obj = { label: scheduleRuleDateRange, subLabel: rule(10088).formatDays(rule.days), trailing: null, arrow: null, onPress: null };
   const intl = rule(1114).intl;
   const string = intl.string;
   const tmp4 = _modDef2396;

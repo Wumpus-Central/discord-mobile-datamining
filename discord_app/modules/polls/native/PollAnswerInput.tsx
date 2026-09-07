@@ -1,13 +1,13 @@
-// === Module 12225: PollAnswerInput ===
+// === Module 12229: PollAnswerInput ===
 
-// Module 12225 (PollAnswerInput)
+// Module 12229 (PollAnswerInput)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4527 */;
 import PollsUtils from "PollsUtils" /* 7761 */;
-import UploadAttachmentActionCreatorsDefault from "UploadAttachmentActionCreators" /* 9307 */;
-import openEmojiPickerActionSheet from "openEmojiPickerActionSheet" /* 11121 */;
+import UploadAttachmentActionCreatorsDefault from "UploadAttachmentActionCreators" /* 9312 */;
+import openEmojiPickerActionSheet from "openEmojiPickerActionSheet" /* 11126 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 
@@ -159,7 +159,7 @@ export default function PollAnswerInput(answer) {
     openExpressionPicker,
     openImageInputActionSheet() {
       const obj = { channelId, index, answer, onSaveAltText: handleSaveAltText, onRemoveAnswerImage, openExpressionPicker };
-      obj.openLazy(asyncRequireImpl(12227, dependencyMap.paths), closure_2_10, obj);
+      obj.openLazy(asyncRequireImpl(12231, dependencyMap.paths), closure_2_10, obj);
     },
     iconSrc: index(channelId[19]),
     containerStyle: tmp.defaultImageContainer,

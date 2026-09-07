@@ -1,13 +1,13 @@
-// === Module 17350: feedback/FeedbackManager ===
+// === Module 17353: feedback/FeedbackManager ===
 
-// Module 17350 (feedback/FeedbackManager)
+// Module 17353 (feedback/FeedbackManager)
 import _mod12 from "module_12" /* 12 */;
 import Storage2 from "Storage" /* 510 */;
 import UserSettings from "UserSettings" /* 1935 */;
-import SearchResultsFeedbackExperiment from "SearchResultsFeedbackExperiment" /* 17352 */;
+import SearchResultsFeedbackExperiment from "SearchResultsFeedbackExperiment" /* 17355 */;
 import HotspotStore from "hotspot/HotspotStore" /* 7214 */;
 import RTCConnectionStore from "RTCConnectionStore" /* 4583 */;
-import FeedbackOverrideStore from "FeedbackOverrideStore" /* 17351 */;
+import FeedbackOverrideStore from "FeedbackOverrideStore" /* 17354 */;
 import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7118 */;
 
 require = fn;
@@ -118,7 +118,7 @@ function groupRecencyEligibilityCheck(cooldown) {
   }
   return true;
 }
-const Constants = fn(11626);
+const Constants = fn(11631);
 ({ FeedbackGroup, FeedbackType, FeedbackTypePrecedence: hasOwnProperty, MAX_REPRESENTABLE_DATE: metroRequire } = Constants);
 let FeedbackConfig = { chance: 0.2, cooldown: 86400000 };
 FeedbackConfig = {};

@@ -1,6 +1,6 @@
-// === Module 12977: MediaModalYoutubeEmbedError ===
+// === Module 12981: MediaModalYoutubeEmbedError ===
 
-// Module 12977 (MediaModalYoutubeEmbedError)
+// Module 12981 (MediaModalYoutubeEmbedError)
 import nativeDefault from "native" /* 576 */;
 import LinkingDefault from "Linking" /* 4255 */;
 import noop from "module_19" /* 19 */;
@@ -23,7 +23,7 @@ export default noop.memo(function MediaModalYoutubeEmbedError(videoId) {
   videoId = videoId.videoId;
   const tmp = closure_6();
   let obj = { style: tmp.container, children: null };
-  const items = [closure_4(videoId(9601).StreamFailed, { resizeMode: "contain" }), , ];
+  const items = [closure_4(videoId(9606).StreamFailed, { resizeMode: "contain" }), , ];
   obj = { style: tmp.text, variant: "text-md/semibold", color: "text-overlay-light", children: null };
   const intl = videoId(1114).intl;
   obj.children = intl.string(videoId(1114).t.u7vKPs);

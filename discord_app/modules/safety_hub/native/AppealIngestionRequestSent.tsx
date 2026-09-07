@@ -1,8 +1,8 @@
-// === Module 11905: AppealIngestionRequestSent ===
+// === Module 11910: AppealIngestionRequestSent ===
 
-// Module 11905 (AppealIngestionRequestSent)
-import AppealIngestionExternalLinkDefault from "AppealIngestionExternalLink" /* 11900 */;
-import _modDef11906 from "module_11906" /* 11906 */;
+// Module 11910 (AppealIngestionRequestSent)
+import AppealIngestionExternalLinkDefault from "AppealIngestionExternalLink" /* 11905 */;
+import _modDef11911 from "module_11911" /* 11911 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
@@ -27,13 +27,13 @@ export default function AppealIngestionRequestSent() {
   obj = { children: null };
   obj = { style: tmp.container, children: null };
   const stringResult1 = intl2.string(require("util").t.Qdx8AP);
-  const items = [closure_7(closure_4, { source: _modDef11906, style: tmp.checkboxPng }), closure_7(require("AppealIngestionModal").AppealIngestionModalHeader, { headerText: stringResult, subHeaderText: stringResult1 }), , , ];
+  const items = [closure_7(closure_4, { source: _modDef11911, style: tmp.checkboxPng }), closure_7(require("AppealIngestionModal").AppealIngestionModalHeader, { headerText: stringResult, subHeaderText: stringResult1 }), , , ];
   const obj2 = { variant: "heading-md/bold", color: "mobile-text-heading-primary", style: tmp.actionsHeader, children: null };
   const intl3 = require("util").intl;
   obj2.children = intl3.string(require("util").t["9BRc1N"]);
   items[2] = closure_7(require("Text/Text").Text, obj2);
   const obj3 = { text: null, url: null, onPress: null };
-  const obj1 = { source: _modDef11906, style: tmp.checkboxPng };
+  const obj1 = { source: _modDef11911, style: tmp.checkboxPng };
   const intl4 = require("util").intl;
   obj3.text = intl4.string(require("util").t.PxL38B);
   obj3.url = constants.COMMUNITY_GUIDELINES;

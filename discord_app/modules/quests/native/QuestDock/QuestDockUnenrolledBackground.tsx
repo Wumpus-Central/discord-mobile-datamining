@@ -1,6 +1,6 @@
-// === Module 15201: QuestDockUnenrolledBackground ===
+// === Module 15204: QuestDockUnenrolledBackground ===
 
-// Module 15201 (QuestDockUnenrolledBackground)
+// Module 15204 (QuestDockUnenrolledBackground)
 import _modDef672 from "module_672" /* 672 */;
 import spring from "spring" /* 4974 */;
 import _slicedToArray from "module_32" /* 32 */;
@@ -11,7 +11,7 @@ require = fn;
 get_ActivityIndicator = fn(17);
 ({ AppState: hasOwnProperty, StyleSheet } = get_ActivityIndicator);
 const QuestDockMode = fn(5444).QuestDockMode;
-const QuestDockConstants = fn(15095);
+const QuestDockConstants = fn(15098);
 ({ QUEST_DOCK_EXPANDED_HEIGHT, QUEST_DOCK_MODE_CHANGE_PHYSICS_CLAMPED: closure_8, QUEST_DOCK_UNENROLLED_HEADER_INSET_EXPANDED: closure_9 } = QuestDockConstants);
 const VerticalGradient = fn(1074).VerticalGradient;
 const jsxProd = fn(21);

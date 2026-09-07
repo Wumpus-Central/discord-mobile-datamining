@@ -1,7 +1,7 @@
-// === Module 12064: OnboardingAppsRocket ===
+// === Module 12068: OnboardingAppsRocket ===
 
-// Module 12064 (OnboardingAppsRocket)
-import inlineStyles from "inlineStyles" /* 8453 */;
+// Module 12068 (OnboardingAppsRocket)
+import inlineStyles from "inlineStyles" /* 8456 */;
 import noop from "module_19" /* 19 */;
 
 const inlineStylesDefault = inlineStyles;

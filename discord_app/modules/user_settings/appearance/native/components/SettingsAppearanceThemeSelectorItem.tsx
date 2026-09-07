@@ -1,6 +1,6 @@
-// === Module 15273: SettingsAppearanceThemeSelectorItem ===
+// === Module 15276: SettingsAppearanceThemeSelectorItem ===
 
-// Module 15273 (SettingsAppearanceThemeSelectorItem)
+// Module 15276 (SettingsAppearanceThemeSelectorItem)
 import useStateFromStores from "useStateFromStores" /* 563 */;
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
@@ -12,11 +12,11 @@ import useA11yRolesNative from "useA11yRolesNative" /* 4277 */;
 import utils_ColorDefault from "utils/Color" /* 4410 */;
 import Pressables from "Pressables" /* 5123 */;
 import ThemedGradient from "ThemedGradient" /* 5125 */;
-import _modDef15274 from "module_15274" /* 15274 */;
-import SynchronizeIconNativeDefault from "SynchronizeIconNative" /* 15275 */;
+import _modDef15277 from "module_15277" /* 15277 */;
+import SynchronizeIconNativeDefault from "SynchronizeIconNative" /* 15278 */;
 import noop from "module_19" /* 19 */;
 import ThemeStore from "ThemeStore" /* 1183 */;
-import SettingsAppearanceConstants from "SettingsAppearanceConstants" /* 15272 */;
+import SettingsAppearanceConstants from "SettingsAppearanceConstants" /* 15275 */;
 
 const ThemedGradientDefault = ThemedGradient;
 
@@ -40,7 +40,7 @@ function GradientThemeBackground(arg0) {
   obj1.mixColorOverride = isThemeDarkResult ? closure_10 : closure_11;
   const items1 = [timestampProducer(ThemedGradientDefault, obj1), ];
   if (isThemeLocked) {
-    const obj3 = { source: _modDef15274, style: tmp4.lock };
+    const obj3 = { source: _modDef15277, style: tmp4.lock };
     isThemeLocked = timestampProducer(native.Icon, obj3);
   }
   items1[1] = isThemeLocked;
@@ -91,7 +91,7 @@ function CustomThemeBackground(arg0) {
   const obj1 = { componentStyles: { borderRadius: nativeDefault.radii.sm }, mix: true, mixColorOverride: isThemeDarkResult ? closure_10 : closure_11, customTheme: item };
   const items1 = [timestampProducer(ThemedGradient.CustomThemedGradient, obj1), ];
   if (isThemeLocked) {
-    const obj3 = { source: _modDef15274, style: tmp4.lock };
+    const obj3 = { source: _modDef15277, style: tmp4.lock };
     isThemeLocked = timestampProducer(native.Icon, obj3);
   }
   items1[1] = isThemeLocked;

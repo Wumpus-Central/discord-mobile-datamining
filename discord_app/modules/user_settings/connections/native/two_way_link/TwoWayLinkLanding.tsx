@@ -1,6 +1,6 @@
-// === Module 9225: TwoWayLinkLanding ===
+// === Module 9230: TwoWayLinkLanding ===
 
-// Module 9225 (TwoWayLinkLanding)
+// Module 9230 (TwoWayLinkLanding)
 import Text_Text from "Text/Text" /* 4556 */;
 import TableRow from "TableRow" /* 5605 */;
 import noop from "module_19" /* 19 */;

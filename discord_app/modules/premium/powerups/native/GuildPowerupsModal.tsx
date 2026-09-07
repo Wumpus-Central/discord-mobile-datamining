@@ -1,11 +1,11 @@
-// === Module 12480: GuildPowerupsModal ===
+// === Module 12484: GuildPowerupsModal ===
 
-// Module 12480 (GuildPowerupsModal)
+// Module 12484 (GuildPowerupsModal)
 import nativeDefault from "native" /* 576 */;
-import openGuildPowerupsBottomSheetDefault from "openGuildPowerupsBottomSheet" /* 12517 */;
-import openGuildPowerupsMultiPerkBottomSheetDefault from "openGuildPowerupsMultiPerkBottomSheet" /* 12546 */;
-import GuildPowerupsLevelsSectionDefault from "GuildPowerupsLevelsSection" /* 12563 */;
-import GuildPowerupsPerksSectionDefault from "GuildPowerupsPerksSection" /* 12569 */;
+import openGuildPowerupsBottomSheetDefault from "openGuildPowerupsBottomSheet" /* 12521 */;
+import openGuildPowerupsMultiPerkBottomSheetDefault from "openGuildPowerupsMultiPerkBottomSheet" /* 12550 */;
+import GuildPowerupsLevelsSectionDefault from "GuildPowerupsLevelsSection" /* 12567 */;
+import GuildPowerupsPerksSectionDefault from "GuildPowerupsPerksSection" /* 12573 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;

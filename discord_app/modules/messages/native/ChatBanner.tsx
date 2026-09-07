@@ -1,6 +1,6 @@
-// === Module 11420: ChatBanner ===
+// === Module 11425: ChatBanner ===
 
-// Module 11420 (ChatBanner)
+// Module 11425 (ChatBanner)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import nativeDefault from "native" /* 576 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
@@ -8,7 +8,7 @@ import AppAnalyticsUtils from "AppAnalyticsUtils" /* 4740 */;
 import ReadStateActionCreators from "ReadStateActionCreators" /* 7110 */;
 import OptInChannelsActionCreators from "OptInChannelsActionCreators" /* 7113 */;
 import ThreadActionCreatorsDefault from "ThreadActionCreators" /* 7765 */;
-import useAllowedChatOverlaysDefault from "useAllowedChatOverlays" /* 11423 */;
+import useAllowedChatOverlaysDefault from "useAllowedChatOverlays" /* 11428 */;
 import noop from "module_19" /* 19 */;
 import GatewayConnectionStore from "GatewayConnectionStore" /* 5277 */;
 import ReadStateStore from "ReadStateStore" /* 4575 */;
@@ -206,7 +206,7 @@ function NewMessagesChatBar(channel) {
 }
 get_ActivityIndicator = fn(17);
 ({ StyleSheet, View: closure_4 } = get_ActivityIndicator);
-const ChatOverlays = fn(11421).ChatOverlays;
+const ChatOverlays = fn(11426).ChatOverlays;
 const Constants = fn(1074);
 ({ AnalyticsObjectTypes: closure_8, AnalyticsObjects: closure_9, AnalyticEvents: c10, AnalyticsSections: closure_11 } = Constants);
 const jsxProd = fn(21);

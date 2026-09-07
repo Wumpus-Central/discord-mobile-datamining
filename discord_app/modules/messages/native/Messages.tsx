@@ -1,22 +1,22 @@
-// === Module 11424: Messages ===
+// === Module 11429: Messages ===
 
-// Module 11424 (Messages)
+// Module 11429 (Messages)
 import _modDef12 from "module_12" /* 12 */;
 import discord_common_shallowEqual from "discord_common/shallowEqual" /* 558 */;
 import GlobalUtils from "GlobalUtils" /* 1369 */;
 import ApplicationActionCreatorsDefault from "ApplicationActionCreators" /* 7163 */;
-import DimensionActionCreatorsDefault from "DimensionActionCreators" /* 10987 */;
-import messages_MessagesUtils from "messages/MessagesUtils" /* 11252 */;
+import DimensionActionCreatorsDefault from "DimensionActionCreators" /* 10992 */;
+import messages_MessagesUtils from "messages/MessagesUtils" /* 11257 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4552 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 1956 */;
 import ApplicationAssetsStore from "ApplicationAssetsStore" /* 8140 */;
 import ApplicationStore from "ApplicationStore" /* 4788 */;
-import BuildOverrideStore from "BuildOverrideStore" /* 11425 */;
+import BuildOverrideStore from "BuildOverrideStore" /* 11430 */;
 import CacheStore from "CacheStore" /* 7476 */;
 import ChannelRTCStore from "ChannelRTCStore" /* 4576 */;
-import VoiceChannelStartTimeStore from "VoiceChannelStartTimeStore" /* 11308 */;
+import VoiceChannelStartTimeStore from "VoiceChannelStartTimeStore" /* 11313 */;
 import EmojiStore from "EmojiStore" /* 5459 */;
 import ExperimentStore from "ExperimentStore" /* 4476 */;
 import ExplicitMediaStore from "ExplicitMediaStore" /* 7293 */;
@@ -27,15 +27,15 @@ import GuildScheduledEventStore from "GuildScheduledEventStore" /* 7526 */;
 import GuildTemplateStore from "GuildTemplateStore" /* 7457 */;
 import LocalInteractionComponentStateStore from "LocalInteractionComponentStateStore" /* 8113 */;
 import InteractionStore from "InteractionStore" /* 7941 */;
-import MediaPostEmbedStore from "MediaPostEmbedStore" /* 11426 */;
+import MediaPostEmbedStore from "MediaPostEmbedStore" /* 11431 */;
 import MediaPostSharePromptStore from "MediaPostSharePromptStore" /* 7942 */;
 import AuthorizedAppsStore from "AuthorizedAppsStore" /* 7107 */;
 import FamilyCenterPendingConnectionStore from "FamilyCenterPendingConnectionStore" /* 4774 */;
 import ReferralTrialStore from "ReferralTrialStore" /* 7452 */;
-import PushFeedbackStore from "PushFeedbackStore" /* 11428 */;
+import PushFeedbackStore from "PushFeedbackStore" /* 11433 */;
 import PendingReplyStore from "PendingReplyStore" /* 7680 */;
 import ReferencedMessageStore from "ReferencedMessageStore" /* 7595 */;
-import SummaryStore from "SummaryStore" /* 11345 */;
+import SummaryStore from "SummaryStore" /* 11350 */;
 import JoinedThreadsStore from "JoinedThreadsStore" /* 4201 */;
 import ThreadMessageStore from "ThreadMessageStore" /* 7306 */;
 import LocaleStore from "LocaleStore" /* 2025 */;
@@ -43,7 +43,7 @@ import ThemeStore from "ThemeStore" /* 1183 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 import EditMessageStore from "EditMessageStore" /* 7681 */;
-import GiftCodeStore from "GiftCodeStore" /* 11429 */;
+import GiftCodeStore from "GiftCodeStore" /* 11434 */;
 import GuildMemberStore from "GuildMemberStore" /* 2021 */;
 import GuildStore from "GuildStore" /* 1979 */;
 import GuildVerificationStore from "GuildVerificationStore" /* 5413 */;
@@ -58,11 +58,11 @@ import UploadStore from "UploadStore" /* 7838 */;
 import UserStore from "UserStore" /* 1371 */;
 import VoiceStateStore from "VoiceStateStore" /* 4579 */;
 import SKUStore from "SKUStore" /* 5510 */;
-import ActivityLauncherStore from "ActivityLauncherStore" /* 11456 */;
+import ActivityLauncherStore from "ActivityLauncherStore" /* 11461 */;
 import SortedVoiceStateStore from "SortedVoiceStateStore" /* 4584 */;
 
 require = fn;
-const PollsInteractionStore = fn(11427);
+const PollsInteractionStore = fn(11432);
 ({ useChannelPollInteractions: closure_27, useMessagePollInteractions: closure_28 } = PollsInteractionStore);
 const Constants = fn(1074);
 ({ ActivityActionTypes: closure_58, ChannelTypesSets: closure_59, ME: closure_60, MessageTypes: closure_61, Permissions: closure_62 } = Constants);

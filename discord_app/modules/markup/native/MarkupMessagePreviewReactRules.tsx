@@ -1,15 +1,15 @@
-// === Module 10117: MarkupMessagePreviewReactRules ===
+// === Module 10122: MarkupMessagePreviewReactRules ===
 
-// Module 10117 (MarkupMessagePreviewReactRules)
+// Module 10122 (MarkupMessagePreviewReactRules)
 import utils_PlatformUtils from "utils/PlatformUtils" /* 1116 */;
 import MarkupRulesDefault from "MarkupRules" /* 4998 */;
 import FastImageDefault from "FastImage" /* 5587 */;
 import IconSize from "IconSize" /* 6620 */;
 import MarkupRulesUtils from "MarkupRulesUtils" /* 8096 */;
-import ChannelListLayout from "ChannelListLayout" /* 10121 */;
-import HighlightTextDefault from "HighlightText" /* 10126 */;
-import SpoilerDefault from "Spoiler" /* 10127 */;
-import TimestampDefault from "Timestamp" /* 10129 */;
+import ChannelListLayout from "ChannelListLayout" /* 10126 */;
+import HighlightTextDefault from "HighlightText" /* 10131 */;
+import SpoilerDefault from "Spoiler" /* 10132 */;
+import TimestampDefault from "Timestamp" /* 10134 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -155,7 +155,7 @@ function createMessagePreviewReactRules(customEmojiSize) {
   obj[num(4996).AST_KEY.MENTION] = obj12;
   const obj13 = {};
   const merged13 = Object.assign(MarkupRulesDefault.RULES[num(undefined, 4996).AST_KEY.CHANNEL_MENTION]);
-  obj13.react = num(10128).inlineChannelMentionReact;
+  obj13.react = num(10133).inlineChannelMentionReact;
   obj[num(4996).AST_KEY.CHANNEL_MENTION] = obj13;
   const obj14 = {};
   const merged14 = Object.assign(MarkupRulesDefault.RULES[num(undefined, 4996).AST_KEY.ATTACHMENT_LINK]);
@@ -172,7 +172,7 @@ function createMessagePreviewReactRules(customEmojiSize) {
   obj[num(4996).AST_KEY.SOUNDBOARD] = obj15;
   obj[num(4996).AST_KEY.GUILD] = { react: defaultReactFn };
   const obj16 = { react: null };
-  let obj19 = num(10128);
+  let obj19 = num(10133);
   obj16.react = obj19.createInlineChannelReact("\u{1F4AC}");
   obj[num(4996).AST_KEY.CHANNEL] = obj16;
   const obj17 = {};
@@ -210,7 +210,7 @@ function createMessagePreviewReactRules(customEmojiSize) {
   obj[num(4996).AST_KEY.SUBTEXT] = { react: defaultReactFn };
   return obj;
 }
-const MUTED_OPACITY_CONTENT = fn(10118).MUTED_OPACITY_CONTENT;
+const MUTED_OPACITY_CONTENT = fn(10123).MUTED_OPACITY_CONTENT;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
 const regExp = new RegExp(fn(4555).ANSI_CONTROL_SEQUENCE_RE, "g");

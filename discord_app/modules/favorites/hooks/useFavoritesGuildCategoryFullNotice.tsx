@@ -1,11 +1,11 @@
-// === Module 16107: useFavoritesGuildCategoryFullNotice ===
+// === Module 16110: useFavoritesGuildCategoryFullNotice ===
 
-// Module 16107 (useFavoritesGuildCategoryFullNotice)
+// Module 16110 (useFavoritesGuildCategoryFullNotice)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1114 */;
 import FavoritesUtils from "FavoritesUtils" /* 1982 */;
 import _modDef3225 from "module_3225" /* 3225 */;
-import FavoritesHooks from "FavoritesHooks" /* 10224 */;
+import FavoritesHooks from "FavoritesHooks" /* 10229 */;
 import FavoriteStore from "FavoriteStore" /* 1960 */;
 
 require = fn;

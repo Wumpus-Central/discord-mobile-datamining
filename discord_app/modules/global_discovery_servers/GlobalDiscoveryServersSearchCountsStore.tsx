@@ -1,6 +1,6 @@
-// === Module 13702: GlobalDiscoveryServersSearchCountsStore ===
+// === Module 13706: GlobalDiscoveryServersSearchCountsStore ===
 
-// Module 13702 (GlobalDiscoveryServersSearchCountsStore)
+// Module 13706 (GlobalDiscoveryServersSearchCountsStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import V6OrEarlierAPIError from "V6OrEarlierAPIError" /* 4461 */;

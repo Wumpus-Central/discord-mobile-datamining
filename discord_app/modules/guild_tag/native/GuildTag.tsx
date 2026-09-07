@@ -1,6 +1,6 @@
-// === Module 9184: GuildTag ===
+// === Module 9189: GuildTag ===
 
-// Module 9184 (GuildTag)
+// Module 9189 (GuildTag)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;

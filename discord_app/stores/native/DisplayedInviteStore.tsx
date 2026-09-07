@@ -1,6 +1,6 @@
-// === Module 8739: DisplayedInviteStore ===
+// === Module 8744: DisplayedInviteStore ===
 
-// Module 8739 (DisplayedInviteStore)
+// Module 8744 (DisplayedInviteStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 

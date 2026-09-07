@@ -1,9 +1,9 @@
-// === Module 11950: useRowManager ===
+// === Module 11954: useRowManager ===
 
-// Module 11950 (useRowManager)
+// Module 11954 (useRowManager)
 import Client from "Client" /* 4491 */;
-import NativeChatUtilsDefault from "NativeChatUtils" /* 11271 */;
-import createChannelStreamDefault from "createChannelStream" /* 11951 */;
+import NativeChatUtilsDefault from "NativeChatUtils" /* 11276 */;
+import createChannelStreamDefault from "createChannelStream" /* 11955 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/messages/native/hooks/useRowManager.tsx");

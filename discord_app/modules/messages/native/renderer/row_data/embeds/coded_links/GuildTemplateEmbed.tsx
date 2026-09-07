@@ -1,6 +1,6 @@
-// === Module 13218: GuildTemplateEmbed ===
+// === Module 13222: GuildTemplateEmbed ===
 
-// Module 13218 (GuildTemplateEmbed)
+// Module 13222 (GuildTemplateEmbed)
 import _mod17 from "module_17" /* 17 */;
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
@@ -8,9 +8,9 @@ import GuildTemplatesConstants from "GuildTemplatesConstants" /* 7326 */;
 import Constants from "Constants" /* 7736 */;
 import RowGeneratorStyleSheet from "RowGeneratorStyleSheet" /* 7936 */;
 import getEmbedThemeColorsDefault from "getEmbedThemeColors" /* 7945 */;
-import _modDef11808 from "module_11808" /* 11808 */;
-import _modDef11809 from "module_11809" /* 11809 */;
-import _modDef13219 from "module_13219" /* 13219 */;
+import _modDef11813 from "module_11813" /* 11813 */;
+import _modDef11814 from "module_11814" /* 11814 */;
+import _modDef13223 from "module_13223" /* 13223 */;
 import GuildTemplateStore from "GuildTemplateStore" /* 7457 */;
 import size from "module_2" /* 2 */;
 
@@ -43,9 +43,9 @@ export const createGuildTemplateEmbed = function createGuildTemplateEmbed(code, 
     obj.titleText = intl2.string(util.t.A6MwXE);
     const str = intl.string(util.t.C7ZRNw);
     if (obj3.isThemeDark(theme)) {
-      let tmpResult = _modDef11808;
+      let tmpResult = _modDef11813;
     } else {
-      tmpResult = _modDef11809;
+      tmpResult = _modDef11814;
     }
     obj.thumbnailUrl = Image.resolveAssetSource(tmpResult).uri;
     obj.thumbnailBackgroundColor = colors.thumbnailBackgroundColor;
@@ -64,7 +64,7 @@ export const createGuildTemplateEmbed = function createGuildTemplateEmbed(code, 
     obj1.titleColor = colors.titleColor;
     obj1.subtitle = formatToPlainStringResult;
     obj1.subtitleColor = colors.subtitleColor;
-    obj1.thumbnailUrl = Image.resolveAssetSource(_modDef13219).uri;
+    obj1.thumbnailUrl = Image.resolveAssetSource(_modDef13223).uri;
     ({ acceptLabelGreenColor: obj6.acceptLabelColor, acceptLabelGreenBackgroundColor: obj6.acceptLabelBackgroundColor } = colors);
     const intl6 = util.intl;
     obj1.acceptLabelText = intl6.string(util.t["a3Gl+e"]);

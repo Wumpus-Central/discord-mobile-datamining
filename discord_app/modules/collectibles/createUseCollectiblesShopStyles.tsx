@@ -1,6 +1,6 @@
-// === Module 11080: createUseCollectiblesShopStyles ===
+// === Module 11085: createUseCollectiblesShopStyles ===
 
-// Module 11080 (createUseCollectiblesShopStyles)
+// Module 11085 (createUseCollectiblesShopStyles)
 import useStateFromStores from "useStateFromStores" /* 563 */;
 import tinycolorDefault from "tinycolor" /* 7552 */;
 import UserProfileGradientUtils from "UserProfileGradientUtils" /* 8229 */;

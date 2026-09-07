@@ -1,6 +1,6 @@
-// === Module 9613: MessageLoadingSpinner ===
+// === Module 9618: MessageLoadingSpinner ===
 
-// Module 9613 (MessageLoadingSpinner)
+// Module 9618 (MessageLoadingSpinner)
 import nativeDefault from "native" /* 576 */;
 import useToken from "useToken" /* 4262 */;
 import ActivityIndicator_ActivityIndicator from "ActivityIndicator/ActivityIndicator" /* 5577 */;

@@ -1,19 +1,19 @@
-// === Module 17753: GuildRoleSubscriptionBenefitEditorModal ===
+// === Module 17756: GuildRoleSubscriptionBenefitEditorModal ===
 
-// Module 17753 (GuildRoleSubscriptionBenefitEditorModal)
+// Module 17756 (GuildRoleSubscriptionBenefitEditorModal)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import native from "native" /* 1178 */;
 import TrashIcon from "TrashIcon" /* 4518 */;
 import useChannelName from "useChannelName" /* 4713 */;
 import Pressables from "Pressables" /* 5123 */;
-import FormStylesDefault from "FormStyles" /* 13898 */;
+import FormStylesDefault from "FormStyles" /* 13901 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import RelationshipStore from "RelationshipStore" /* 4209 */;
 import UserStore from "UserStore" /* 1371 */;
-import GuildRoleSubscriptionBenefitEditorModalStateStore from "GuildRoleSubscriptionBenefitEditorModalStateStore" /* 17752 */;
+import GuildRoleSubscriptionBenefitEditorModalStateStore from "GuildRoleSubscriptionBenefitEditorModalStateStore" /* 17755 */;
 import TextStyles from "TextStyles" /* 5524 */;
 
 require = fn;
@@ -33,7 +33,7 @@ function DeleteButton(onDelete) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, ScrollView: metroRequire } = get_ActivityIndicator);
-const GuildRoleSubscriptionsConstants = fn(15205);
+const GuildRoleSubscriptionsConstants = fn(15208);
 ({ GuildRoleSubscriptionBenefitTypes: c10, MAX_SUBSCRIPTION_BENEFIT_DESCRIPTION_LENGTH: closure_11, MAX_SUBSCRIPTION_BENEFIT_NAME_LENGTH: closure_12 } = GuildRoleSubscriptionsConstants);
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
@@ -144,7 +144,7 @@ export default noop.forwardRef((benefitType) => {
     return value;
   };
   const tmp = closure_15();
-  const tmp4 = value(13898)();
+  const tmp4 = value(13901)();
   const tmp5 = _slicedToArray(GuildRoleSubscriptionBenefitEditorModalStateStore.useNameState(), 2);
   value = tmp5[0];
   dependencyMap = tmp6;
@@ -210,7 +210,7 @@ export default noop.forwardRef((benefitType) => {
               closure_2(useChannelName.computeChannelName(id, UserStore, RelationshipStore));
             }
       };
-      let tmp25 = closure_13(tmp2(17754), obj);
+      let tmp25 = closure_13(tmp2(17757), obj);
       let tmp26 = closure_13;
     } else {
       obj = { style: tmp4.textInput, showTopContainer: false, multiline: false, maxLength: maxLength2, value, placeholder: null, onChange: null, autoFocus: true, clearButtonVisibility: null };
@@ -218,7 +218,7 @@ export default noop.forwardRef((benefitType) => {
       obj.placeholder = intl9.string(tmp20(1114).t["kV54/Y"]);
       obj.onChange = tmp6;
       obj.clearButtonVisibility = tmp20(1178).ClearButtonVisibility.WITH_CONTENT;
-      tmp25 = closure_13(tmp20(8593).FormInput, obj);
+      tmp25 = closure_13(tmp20(8598).FormInput, obj);
       tmp26 = closure_13;
     }
     obj = { style: tmp.container, children: null };
@@ -238,16 +238,16 @@ export default noop.forwardRef((benefitType) => {
         },
       listingId: benefitType.listingId
     };
-    const items = [tmp26(tmp2(17756), obj1), ];
+    const items = [tmp26(tmp2(17759), obj1), ];
     let obj2 = { keyboardShouldPersistTaps: "handled", showsVerticalScrollIndicator: false, alwaysBounceVertical: false, contentContainerStyle: null, children: null };
     const items1 = [tmp.scrollContainer, ];
     const obj3 = { paddingBottom: value(1611)().bottom + 32 + 16 };
     items1[1] = obj3;
     obj2.contentContainerStyle = items1;
     const obj4 = { style: tmp4.header, children: stringResult1 };
-    const items2 = [tmp26(tmp2(9816), obj4), tmp25, , , , , ];
+    const items2 = [tmp26(tmp2(9821), obj4), tmp25, , , , , ];
     const obj5 = { style: tmp4.header, children: null };
-    let tmp2Result = tmp2(9816);
+    let tmp2Result = tmp2(9821);
     const intl7 = tmp20(1114).intl;
     obj5.children = intl7.string(tmp20(1114).t.sMOuuS);
     items2[2] = tmp26(tmp2Result, obj5);
@@ -259,14 +259,14 @@ export default noop.forwardRef((benefitType) => {
       closure_4(emojiId.emojiId);
       closure_6(emojiId.emojiName);
     };
-    items2[3] = tmp26(tmp2(17757), obj6);
+    items2[3] = tmp26(tmp2(17760), obj6);
     const obj8 = { style: tmp4.header, children: null };
-    tmp2Result = tmp2(9816);
+    tmp2Result = tmp2(9821);
     const intl8 = tmp20(1114).intl;
     obj8.children = intl8.string(tmp20(1114).t["74JctW"]);
     items2[4] = tmp26(tmp2Result, obj8);
     const obj9 = { style: tmp4.textInput, showTopContainer: false, multiline: true, maxLength, numberOfLines: 3, value: first3, onChange: tmp9[1], placeholder: stringResult2 };
-    items2[5] = tmp26(tmp20(8593).FormInput, obj9);
+    items2[5] = tmp26(tmp20(8598).FormInput, obj9);
     let tmp26Result = null;
     if (null != benefitType.onDelete) {
       const obj10 = {

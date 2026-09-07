@@ -1,19 +1,19 @@
-// === Module 10037: RTCDebugOverlay ===
+// === Module 10042: RTCDebugOverlay ===
 
-// Module 10037 (RTCDebugOverlay)
+// Module 10042 (RTCDebugOverlay)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import native from "native" /* 1178 */;
 import components_Button_Button from "components/Button/Button" /* 4975 */;
 import common_SafeAreaView from "common/SafeAreaView" /* 7123 */;
-import RTCDebugActionCreatorsAll from "RTCDebugActionCreators" /* 10039 */;
-import RTCConnectionUtilsDefault from "RTCConnectionUtils" /* 10040 */;
+import RTCDebugActionCreatorsAll from "RTCDebugActionCreators" /* 10044 */;
+import RTCConnectionUtilsDefault from "RTCConnectionUtils" /* 10045 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 import GuildStore from "GuildStore" /* 1979 */;
 import RTCConnectionStore from "RTCConnectionStore" /* 4583 */;
-import RTCDebugStore from "RTCDebugStore" /* 10038 */;
+import RTCDebugStore from "RTCDebugStore" /* 10043 */;
 import StreamRTCConnectionStore from "StreamRTCConnectionStore" /* 4599 */;
 import UserStore from "UserStore" /* 1371 */;
 
@@ -218,7 +218,7 @@ export default function RTCDebugOverlay(arg0) {
   const tmp = closure_18();
   const effect = noop.useEffect(() => {
     RTCDebugActionCreatorsAll.open();
-    return () => closure_1_1(573).wait(closure_1_2(10039).close);
+    return () => closure_1_1(573).wait(closure_1_2(10044).close);
   }, []);
   const rect = { top: true, left: true, right: true, bottom: true, style: null, children: null };
   const items = [tmp.container, style];

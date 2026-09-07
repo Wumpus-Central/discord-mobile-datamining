@@ -1,6 +1,6 @@
-// === Module 13470: useScheduledForcedUpdate ===
+// === Module 13474: useScheduledForcedUpdate ===
 
-// Module 13470 (useScheduledForcedUpdate)
+// Module 13474 (useScheduledForcedUpdate)
 import areHookInputsEqual from "areHookInputsEqual" /* 7440 */;
 import noop from "module_19" /* 19 */;
 

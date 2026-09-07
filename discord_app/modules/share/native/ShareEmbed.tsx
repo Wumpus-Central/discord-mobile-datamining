@@ -1,6 +1,6 @@
-// === Module 13904: ShareEmbed ===
+// === Module 13907: ShareEmbed ===
 
-// Module 13904 (ShareEmbed)
+// Module 13907 (ShareEmbed)
 import nativeDefault from "native" /* 576 */;
 import Text_Text from "Text/Text" /* 4556 */;
 import ActivityIndicator_ActivityIndicator from "ActivityIndicator/ActivityIndicator" /* 5577 */;

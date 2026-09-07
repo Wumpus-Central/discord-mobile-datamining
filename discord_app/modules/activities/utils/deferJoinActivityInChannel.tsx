@@ -1,6 +1,6 @@
-// === Module 12931: deferJoinActivityInChannel ===
+// === Module 12935: deferJoinActivityInChannel ===
 
-// Module 12931 (deferJoinActivityInChannel)
+// Module 12935 (deferJoinActivityInChannel)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import size from "module_2" /* 2 */;
 

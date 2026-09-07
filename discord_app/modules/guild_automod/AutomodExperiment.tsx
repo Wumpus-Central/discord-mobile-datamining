@@ -1,6 +1,6 @@
-// === Module 10101: AutomodExperiment ===
+// === Module 10106: AutomodExperiment ===
 
-// Module 10101 (AutomodExperiment)
+// Module 10106 (AutomodExperiment)
 import createExperiment from "module_4474" /* 4474 */;
 import size from "module_2" /* 2 */;
 

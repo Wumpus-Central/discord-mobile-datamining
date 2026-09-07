@@ -1,10 +1,10 @@
-// === Module 9153: SecureFramesActionCreators ===
+// === Module 9158: SecureFramesActionCreators ===
 
-// Module 9153 (SecureFramesActionCreators)
+// Module 9158 (SecureFramesActionCreators)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import util from "util" /* 1114 */;
-import SecureFramesUtils from "SecureFramesUtils" /* 9150 */;
-import SecureFramesPlatformUtilsDefault from "SecureFramesPlatformUtils" /* 9154 */;
+import SecureFramesUtils from "SecureFramesUtils" /* 9155 */;
+import SecureFramesPlatformUtilsDefault from "SecureFramesPlatformUtils" /* 9159 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
@@ -277,7 +277,7 @@ let closure_11 = async function _updatePersistentCodesEnabled(arg0) {
     }
   }
 };
-let closure_7 = fn(9152).SECURE_FRAMES_PUBLIC_KEY_VERSION;
+let closure_7 = fn(9157).SECURE_FRAMES_PUBLIC_KEY_VERSION;
 const ChannelTypes = fn(1074).ChannelTypes;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/rtc/SecureFramesActionCreators.tsx");

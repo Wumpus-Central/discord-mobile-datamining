@@ -1,19 +1,19 @@
-// === Module 8772: SKUPreview ===
+// === Module 8777: SKUPreview ===
 
-// Module 8772 (SKUPreview)
+// Module 8777 (SKUPreview)
 import nativeDefault from "native" /* 576 */;
 import GlobalUtils from "GlobalUtils" /* 1369 */;
 import CollectiblesItemType from "CollectiblesItemType" /* 1889 */;
 import useToken from "useToken" /* 4262 */;
 import native from "native" /* 4271 */;
 import useShopProductItems from "useShopProductItems" /* 8171 */;
-import WishlistItemCardBase from "WishlistItemCardBase" /* 8773 */;
-import BundleSampleV2Default from "BundleSampleV2" /* 8797 */;
-import ProfileEffectSampleV2Default from "ProfileEffectSampleV2" /* 8799 */;
-import AvatarDecorationSampleV2Default from "AvatarDecorationSampleV2" /* 8810 */;
-import ProfileFrameSamplePreviewDefault from "ProfileFrameSamplePreview" /* 8822 */;
-import NameplateCardPreviewDefault from "NameplateCardPreview" /* 8824 */;
-import SlayerStorefrontItemCardDefault from "SlayerStorefrontItemCard" /* 8825 */;
+import WishlistItemCardBase from "WishlistItemCardBase" /* 8778 */;
+import BundleSampleV2Default from "BundleSampleV2" /* 8802 */;
+import ProfileEffectSampleV2Default from "ProfileEffectSampleV2" /* 8804 */;
+import AvatarDecorationSampleV2Default from "AvatarDecorationSampleV2" /* 8815 */;
+import ProfileFrameSamplePreviewDefault from "ProfileFrameSamplePreview" /* 8827 */;
+import NameplateCardPreviewDefault from "NameplateCardPreview" /* 8829 */;
+import SlayerStorefrontItemCardDefault from "SlayerStorefrontItemCard" /* 8830 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -129,7 +129,7 @@ function CollectiblesSKUPreview(sku) {
   sku = sku.sku;
   let DEFAULT_ITEM_SIZE = sku.size;
   if (DEFAULT_ITEM_SIZE === undefined) {
-    DEFAULT_ITEM_SIZE = sku(8773).DEFAULT_ITEM_SIZE;
+    DEFAULT_ITEM_SIZE = sku(8778).DEFAULT_ITEM_SIZE;
   }
   const items = [sku];
   const memo = noop.useMemo(() => closure_5(sku), items);
@@ -202,7 +202,7 @@ const React6 = createStyles.createStyles((width, height) => {
   obj.premiumRiveContainer = { width, height };
   return obj;
 });
-let size = { width: fn(8773).DEFAULT_ITEM_SIZE, height: fn(8773).DEFAULT_ITEM_SIZE };
+let size = { width: fn(8778).DEFAULT_ITEM_SIZE, height: fn(8778).DEFAULT_ITEM_SIZE };
 size = fn(2);
 const result = size.fileFinishedImporting("modules/skus/native/SKUPreview.tsx");
 

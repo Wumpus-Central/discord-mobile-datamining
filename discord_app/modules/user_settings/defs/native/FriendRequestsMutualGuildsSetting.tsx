@@ -1,16 +1,16 @@
-// === Module 14978: FriendRequestsMutualGuildsSetting ===
+// === Module 14981: FriendRequestsMutualGuildsSetting ===
 
-// Module 14978 (FriendRequestsMutualGuildsSetting)
+// Module 14981 (FriendRequestsMutualGuildsSetting)
 import util from "util" /* 1114 */;
 import FlagUtilsAll from "FlagUtils" /* 1384 */;
 import UserSettings from "UserSettings" /* 1935 */;
 import UserSettingsUtils from "UserSettingsUtils" /* 6995 */;
-import useParentalControlSettings from "useParentalControlSettings" /* 14824 */;
+import useParentalControlSettings from "useParentalControlSettings" /* 14827 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const FriendSourceFlags = fn(1074).FriendSourceFlags;
-fn(11468);
+fn(11473);
 let SettingBuilders = {
   useTitle() {
     const intl = util.intl;

@@ -1,7 +1,7 @@
-// === Module 14609: useUploadAvatar ===
+// === Module 14612: useUploadAvatar ===
 
-// Module 14609 (useUploadAvatar)
-import PremiumUpsellUtilsDefault from "PremiumUpsellUtils" /* 9313 */;
+// Module 14612 (useUploadAvatar)
+import PremiumUpsellUtilsDefault from "PremiumUpsellUtils" /* 9318 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import UserStore from "UserStore" /* 1371 */;
 
@@ -101,7 +101,7 @@ export default function useUploadAvatar(guildId) {
               }
             }
           }
-          obj1 = tmp2(14593);
+          obj1 = tmp2(14596);
           const obj4 = { imageUri: base64, description: null, originalMd5: null };
           tmp22 = tmp2;
           obj3 = tmp2(8169);

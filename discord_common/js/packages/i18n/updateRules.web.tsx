@@ -1,6 +1,6 @@
-// === Module 17277: i18n/updateRules ===
+// === Module 17280: i18n/updateRules ===
 
-// Module 17277 (i18n/updateRules)
+// Module 17280 (i18n/updateRules)
 import _mod4257 from "module_4257" /* 4257 */;
 import noop from "module_19" /* 19 */;
 

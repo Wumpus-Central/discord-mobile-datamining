@@ -1,11 +1,11 @@
-// === Module 8629: ReportModals ===
+// === Module 8634: ReportModals ===
 
-// Module 8629 (ReportModals)
+// Module 8634 (ReportModals)
 import GuildRecordUtils from "GuildRecordUtils" /* 1971 */;
 import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 4740 */;
-import MenuTypes from "MenuTypes" /* 8630 */;
-import showReportModal from "showReportModal" /* 8631 */;
-import in_app_reports_ReportUtils from "in_app_reports/ReportUtils" /* 8633 */;
+import MenuTypes from "MenuTypes" /* 8635 */;
+import showReportModal from "showReportModal" /* 8636 */;
+import in_app_reports_ReportUtils from "in_app_reports/ReportUtils" /* 8638 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import StageInstanceStore from "StageInstanceStore" /* 1962 */;
 import MessageRecord from "MessageRecord" /* 4210 */;
@@ -218,7 +218,7 @@ export const showUnauthenticatedReportModalForTida = function showUnauthenticate
 };
 export const showUnauthenticatedReportModalForMessage = function showUnauthenticatedReportModalForMessage(emailToken, onClose) {
   let obj = { report_type: MenuTypes.UnauthenticatedReportNames.MESSAGE };
-  const merged = Object.assign({ message_id: "hash", channel_id: "call" });
+  const merged = Object.assign({ message_id: "push", channel_id: "channel" });
   obj.trackWithMetadata(AnalyticEvents.IAR_MODAL_OPEN, obj);
   const tmp = new MessageRecord({});
   obj = { name: MenuTypes.UnauthenticatedReportNames.MESSAGE, record: tmp };

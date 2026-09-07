@@ -1,6 +1,6 @@
-// === Module 10947: RolePill ===
+// === Module 10952: RolePill ===
 
-// Module 10947 (RolePill)
+// Module 10952 (RolePill)
 import nativeDefault from "native" /* 576 */;
 import ToastUtils from "ToastUtils" /* 4258 */;
 import ClipboardUtils from "ClipboardUtils" /* 7190 */;

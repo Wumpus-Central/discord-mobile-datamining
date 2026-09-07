@@ -1,6 +1,6 @@
-// === Module 16846: WebhookEmpty ===
+// === Module 16849: WebhookEmpty ===
 
-// Module 16846 (WebhookEmpty)
+// Module 16849 (WebhookEmpty)
 import shared from "shared" /* 4411 */;
 import _mod8233 from "module_8233" /* 8233 */;
 import noop from "module_19" /* 19 */;
@@ -14,13 +14,13 @@ const result = size.fileFinishedImporting("design/components/Illustration/native
 export const getWebhookEmptySource = function getWebhookEmptySource(theme) {
   const obj = {
     dark() {
-      return require("module_16847");
+      return require("module_16850");
     },
     darker() {
-      return require("module_16848");
+      return require("module_16851");
     },
     light() {
-      return require("module_16849");
+      return require("module_16852");
     }
   };
   return obj.getIllustrationSource(theme, obj);
@@ -28,13 +28,13 @@ export const getWebhookEmptySource = function getWebhookEmptySource(theme) {
 export const useWebhookEmptySource = function useWebhookEmptySource() {
   const obj = {
     dark() {
-      return require("module_16847");
+      return require("module_16850");
     },
     darker() {
-      return require("module_16848");
+      return require("module_16851");
     },
     light() {
-      return require("module_16849");
+      return require("module_16852");
     }
   };
   return _mod8233.getIllustrationSource(obj.useThemeContext().theme, obj);
@@ -42,13 +42,13 @@ export const useWebhookEmptySource = function useWebhookEmptySource() {
 export const WebhookEmpty = function WebhookEmpty(arg0) {
   let obj = {
     dark() {
-      return require("module_16847");
+      return require("module_16850");
     },
     darker() {
-      return require("module_16848");
+      return require("module_16851");
     },
     light() {
-      return require("module_16849");
+      return require("module_16852");
     }
   };
   obj = {};

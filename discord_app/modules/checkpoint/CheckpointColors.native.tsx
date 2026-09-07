@@ -1,6 +1,6 @@
-// === Module 11696: CheckpointColors ===
+// === Module 11701: CheckpointColors ===
 
-// Module 11696 (CheckpointColors)
+// Module 11701 (CheckpointColors)
 import nativeDefault from "native" /* 576 */;
 import CheckpointConstants from "CheckpointConstants" /* 4786 */;
 import size from "module_2" /* 2 */;

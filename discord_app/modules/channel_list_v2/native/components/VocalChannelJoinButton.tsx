@@ -1,6 +1,6 @@
-// === Module 12293: VocalChannelJoinButton ===
+// === Module 12297: VocalChannelJoinButton ===
 
-// Module 12293 (VocalChannelJoinButton)
+// Module 12297 (VocalChannelJoinButton)
 import nativeDefault from "native" /* 576 */;
 import noop from "module_19" /* 19 */;
 import PermissionStore from "PermissionStore" /* 4199 */;
@@ -60,7 +60,7 @@ export default noop.memo(function VocalChannelJoinButton(channel) {
   const tmp = voiceStates(7873)();
   let obj = channel(4411);
   let joinButtonText = closure_11(tmp, obj.isThemeLight(voiceStates(4495)()));
-  let obj1 = channel(9471);
+  let obj1 = channel(9476);
   const isConnectedToVoiceChannel = obj1.useIsConnectedToVoiceChannel(channel);
   let obj2 = channel(563);
   const items = [PermissionStore];
@@ -86,10 +86,10 @@ export default noop.memo(function VocalChannelJoinButton(channel) {
   if (!stateFromStores1) {
     tmp12 = tmp8;
   }
-  tmp3Result = tmp3(12294);
+  tmp3Result = tmp3(12298);
   const connectedUserLimit = tmp3Result.useConnectedUserLimit({ channel, video: tmp12 });
   tmp8 = channel(5417).useStageHasMedia(channel.id) && isGuildStageVoiceResult;
-  let connectedUserLimitFormatted = channel(12294).useConnectedUserLimitFormatted({ channel, video: tmp12, userCount: sum });
+  let connectedUserLimitFormatted = channel(12298).useConnectedUserLimitFormatted({ channel, video: tmp12, userCount: sum });
   let tmp15 = !stateFromStores;
   if (!stateFromStores) {
     tmp15 = !isConnectedToVoiceChannel;
@@ -158,5 +158,5 @@ export default noop.memo(function VocalChannelJoinButton(channel) {
       formatted = str(toUpperCase.VJlc0S);
     }
   }
-  const tmp3Result1 = channel(12294);
+  const tmp3Result1 = channel(12298);
 });

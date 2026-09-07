@@ -1,11 +1,11 @@
-// === Module 8718: GameProfileMedia ===
+// === Module 8723: GameProfileMedia ===
 
-// Module 8718 (GameProfileMedia)
+// Module 8723 (GameProfileMedia)
 import nativeDefault from "native" /* 576 */;
 import utils_PlatformUtils from "utils/PlatformUtils" /* 1116 */;
 import openMediaModal from "openMediaModal" /* 8261 */;
-import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 8686 */;
-import GameProfileMediaSources from "GameProfileMediaSources" /* 8719 */;
+import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 8691 */;
+import GameProfileMediaSources from "GameProfileMediaSources" /* 8724 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -130,7 +130,7 @@ createStyles.scrollView = { flexDirection: "row", overflow: "visible" };
 createStyles.scrollViewContent = { gap: nativeDefault.space.PX_12, paddingHorizontal: nativeDefault.space.PX_16 };
 const obj1 = { gap: nativeDefault.space.PX_12, paddingHorizontal: nativeDefault.space.PX_16 };
 const merged = Object.assign(nativeDefault.shadows.SHADOW_HIGH);
-createStyles.mediaItem = { maxWidth: fn(8719).MEDIA_ITEM_MAX_WIDTH, maxHeight: fn(8719).MEDIA_ITEM_MAX_HEIGHT, borderRadius: nativeDefault.radii.lg, overflow: "hidden" };
+createStyles.mediaItem = { maxWidth: fn(8724).MEDIA_ITEM_MAX_WIDTH, maxHeight: fn(8724).MEDIA_ITEM_MAX_HEIGHT, borderRadius: nativeDefault.radii.lg, overflow: "hidden" };
 createStyles.mediaImage = { width: "100%", height: "100%", resizeMode: "cover" };
 let size = { width: "100%", height: "100%", backgroundColor: nativeDefault.colors.BLACK };
 createStyles.mediaVideo = size;

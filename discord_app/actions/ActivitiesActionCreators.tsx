@@ -1,11 +1,11 @@
-// === Module 11472: ActivitiesActionCreators ===
+// === Module 11477: ActivitiesActionCreators ===
 
-// Module 11472 (ActivitiesActionCreators)
+// Module 11477 (ActivitiesActionCreators)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 4573 */;
 import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 4740 */;
-import getActivitySessionKey from "getActivitySessionKey" /* 11473 */;
-import RichPresenceInviteBarActionCreators from "RichPresenceInviteBarActionCreators" /* 11474 */;
+import getActivitySessionKey from "getActivitySessionKey" /* 11478 */;
+import RichPresenceInviteBarActionCreators from "RichPresenceInviteBarActionCreators" /* 11479 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 

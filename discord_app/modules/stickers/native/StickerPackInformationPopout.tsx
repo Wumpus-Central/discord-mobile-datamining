@@ -1,6 +1,6 @@
-// === Module 10400: StickerPackInformationPopout ===
+// === Module 10405: StickerPackInformationPopout ===
 
-// Module 10400 (StickerPackInformationPopout)
+// Module 10405 (StickerPackInformationPopout)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import Text_Text from "Text/Text" /* 4556 */;

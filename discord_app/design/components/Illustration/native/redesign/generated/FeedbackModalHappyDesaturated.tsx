@@ -1,6 +1,6 @@
-// === Module 11642: FeedbackModalHappyDesaturated ===
+// === Module 11647: FeedbackModalHappyDesaturated ===
 
-// Module 11642 (FeedbackModalHappyDesaturated)
+// Module 11647 (FeedbackModalHappyDesaturated)
 import shared from "shared" /* 4411 */;
 import _mod8233 from "module_8233" /* 8233 */;
 import noop from "module_19" /* 19 */;
@@ -14,13 +14,13 @@ const result = size.fileFinishedImporting("design/components/Illustration/native
 export const getFeedbackModalHappyDesaturatedSource = function getFeedbackModalHappyDesaturatedSource(theme) {
   const obj = {
     dark() {
-      return require("module_11643");
+      return require("module_11648");
     },
     darker() {
-      return require("module_11644");
+      return require("module_11649");
     },
     light() {
-      return require("module_11645");
+      return require("module_11650");
     }
   };
   return obj.getIllustrationSource(theme, obj);
@@ -28,13 +28,13 @@ export const getFeedbackModalHappyDesaturatedSource = function getFeedbackModalH
 export const useFeedbackModalHappyDesaturatedSource = function useFeedbackModalHappyDesaturatedSource() {
   const obj = {
     dark() {
-      return require("module_11643");
+      return require("module_11648");
     },
     darker() {
-      return require("module_11644");
+      return require("module_11649");
     },
     light() {
-      return require("module_11645");
+      return require("module_11650");
     }
   };
   return _mod8233.getIllustrationSource(obj.useThemeContext().theme, obj);
@@ -42,13 +42,13 @@ export const useFeedbackModalHappyDesaturatedSource = function useFeedbackModalH
 export const FeedbackModalHappyDesaturated = function FeedbackModalHappyDesaturated(arg0) {
   let obj = {
     dark() {
-      return require("module_11643");
+      return require("module_11648");
     },
     darker() {
-      return require("module_11644");
+      return require("module_11649");
     },
     light() {
-      return require("module_11645");
+      return require("module_11650");
     }
   };
   obj = {};

@@ -1,15 +1,15 @@
-// === Module 15957: auth/register ===
+// === Module 15960: auth/register ===
 
-// Module 15957 (auth/register)
+// Module 15960 (auth/register)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
 import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1250 */;
 import _modDef4153 from "module_4153" /* 4153 */;
 import APIErrorDefault from "APIError" /* 4462 */;
 import TrackedHTTPUtilsDefault from "TrackedHTTPUtils" /* 4753 */;
-import SharedCaptchaUtils from "SharedCaptchaUtils" /* 11277 */;
-import trackAgeGateSubmittedDefault from "trackAgeGateSubmitted" /* 15959 */;
-import AgeGateActionCreatorsAll from "AgeGateActionCreators" /* 15960 */;
+import SharedCaptchaUtils from "SharedCaptchaUtils" /* 11282 */;
+import trackAgeGateSubmittedDefault from "trackAgeGateSubmitted" /* 15962 */;
+import AgeGateActionCreatorsAll from "AgeGateActionCreators" /* 15963 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
@@ -290,7 +290,7 @@ function registerFull(giftCodeSKUId) {
     }
   });
 }
-const ParentalConsentStore = fn(15958);
+const ParentalConsentStore = fn(15961);
 const Constants = fn(1074);
 ({ AnalyticEvents: metroRequire, AnalyticsSections: closure_7, Endpoints: closure_8 } = Constants);
 const AgeGateConstants = fn(1098);

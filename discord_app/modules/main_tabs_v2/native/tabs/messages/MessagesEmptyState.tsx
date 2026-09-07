@@ -1,6 +1,6 @@
-// === Module 16053: MessagesEmptyState ===
+// === Module 16056: MessagesEmptyState ===
 
-// Module 16053 (MessagesEmptyState)
+// Module 16056 (MessagesEmptyState)
 import util from "util" /* 1114 */;
 import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1250 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1477 */;
@@ -8,9 +8,9 @@ import useNavigation from "useNavigation" /* 1483 */;
 import Text_Text from "Text/Text" /* 4556 */;
 import components_Button_Button from "components/Button/Button" /* 4975 */;
 import useIsScreenLandscape from "useIsScreenLandscape" /* 5126 */;
-import useTrackImpressionDefault from "useTrackImpression" /* 8768 */;
-import useYouBarTotalHeight from "useYouBarTotalHeight" /* 15100 */;
-import _modDef16054 from "module_16054" /* 16054 */;
+import useTrackImpressionDefault from "useTrackImpression" /* 8773 */;
+import useYouBarTotalHeight from "useYouBarTotalHeight" /* 15103 */;
+import _modDef16057 from "module_16057" /* 16057 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -60,7 +60,7 @@ export default function MessagesEmptyState() {
   const obj2 = { style: tmp.container, onLayout: callback, children: null };
   const obj3 = { style: tmp.innerContainer, children: null };
   const obj4 = { style: tmp.imageContainer, children: null };
-  const obj5 = { resizeMode: "contain", source: _modDef16054, style: null };
+  const obj5 = { resizeMode: "contain", source: _modDef16057, style: null };
   let num = 350;
   if (result < 622) {
     num = result / 622 * 350;

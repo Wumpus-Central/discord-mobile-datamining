@@ -1,12 +1,12 @@
-// === Module 12540: GuildPowerupsDeactivateAlert ===
+// === Module 12544: GuildPowerupsDeactivateAlert ===
 
-// Module 12540 (GuildPowerupsDeactivateAlert)
+// Module 12544 (GuildPowerupsDeactivateAlert)
 import _mod17 from "module_17" /* 17 */;
 import nativeDefault from "native" /* 576 */;
 import _modDef2428 from "module_2428" /* 2428 */;
 import Text_Text from "Text/Text" /* 4556 */;
-import useGuildPowerupOnDeactivateDefault from "useGuildPowerupOnDeactivate" /* 12541 */;
-import useDeactivateWarningTextDefault from "useDeactivateWarningText" /* 12542 */;
+import useGuildPowerupOnDeactivateDefault from "useGuildPowerupOnDeactivate" /* 12545 */;
+import useDeactivateWarningTextDefault from "useDeactivateWarningText" /* 12546 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createStyles from "createStyles" /* 4560 */;
 import size from "module_2" /* 2 */;

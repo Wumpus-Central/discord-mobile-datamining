@@ -1,9 +1,9 @@
-// === Module 17824: ForwardGuildBreadcrumbManager ===
+// === Module 17827: ForwardGuildBreadcrumbManager ===
 
-// Module 17824 (ForwardGuildBreadcrumbManager)
+// Module 17827 (ForwardGuildBreadcrumbManager)
 import Constants from "Constants" /* 1074 */;
-import setupLoadFromMessageManagerHandlersDefault from "setupLoadFromMessageManagerHandlers" /* 17423 */;
-import BasicGuildActionCreators from "BasicGuildActionCreators" /* 17825 */;
+import setupLoadFromMessageManagerHandlersDefault from "setupLoadFromMessageManagerHandlers" /* 17426 */;
+import BasicGuildActionCreators from "BasicGuildActionCreators" /* 17828 */;
 import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7118 */;
 import size from "module_2" /* 2 */;
 

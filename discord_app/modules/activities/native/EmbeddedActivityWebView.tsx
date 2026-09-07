@@ -1,6 +1,6 @@
-// === Module 9642: EmbeddedActivityWebView ===
+// === Module 9647: EmbeddedActivityWebView ===
 
-// Module 9642 (EmbeddedActivityWebView)
+// Module 9647 (EmbeddedActivityWebView)
 import LoggerDefault from "Logger" /* 3 */;
 import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1109 */;
 import util from "util" /* 1114 */;
@@ -11,15 +11,15 @@ import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 4761 *
 import AlertActionCreatorsDefault from "AlertActionCreators" /* 4904 */;
 import usePreviousDefault from "usePrevious" /* 8272 */;
 import WebView from "WebView" /* 8298 */;
-import EmbeddedActivitiesNativeManagerDefault from "EmbeddedActivitiesNativeManager" /* 9515 */;
-import getPostMessageJavaScriptDefault from "getPostMessageJavaScript" /* 9517 */;
-import WebViewPostMessageTransportDefault from "WebViewPostMessageTransport" /* 9550 */;
-import useStableSafeAreaInsets from "useStableSafeAreaInsets" /* 9645 */;
-import createWebviewHtmlFileDefault from "createWebviewHtmlFile" /* 9648 */;
+import EmbeddedActivitiesNativeManagerDefault from "EmbeddedActivitiesNativeManager" /* 9520 */;
+import getPostMessageJavaScriptDefault from "getPostMessageJavaScript" /* 9522 */;
+import WebViewPostMessageTransportDefault from "WebViewPostMessageTransport" /* 9555 */;
+import useStableSafeAreaInsets from "useStableSafeAreaInsets" /* 9650 */;
+import createWebviewHtmlFileDefault from "createWebviewHtmlFile" /* 9653 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import DeveloperActivityShelfStore from "DeveloperActivityShelfStore" /* 8855 */;
+import DeveloperActivityShelfStore from "DeveloperActivityShelfStore" /* 8860 */;
 
 require = fn;
 function getSafeArea(arg0, arg1) {

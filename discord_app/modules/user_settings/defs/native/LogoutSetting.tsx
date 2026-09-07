@@ -1,6 +1,6 @@
-// === Module 15555: LogoutSetting ===
+// === Module 15558: LogoutSetting ===
 
-// Module 15555 (LogoutSetting)
+// Module 15558 (LogoutSetting)
 import Storage2 from "Storage" /* 510 */;
 import ConstantsIOS from "ConstantsIOS" /* 1093 */;
 import util from "util" /* 1114 */;
@@ -9,10 +9,10 @@ import AlertModal from "AlertModal" /* 4910 */;
 import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 5411 */;
 import AuthenticationActionCreatorsDefault from "AuthenticationActionCreators" /* 6593 */;
 import UserSettingsModalActionCreatorsDefault from "UserSettingsModalActionCreators" /* 6990 */;
-import DoorExitIcon from "DoorExitIcon" /* 9073 */;
-import PushNotificationDefault from "PushNotification" /* 9687 */;
+import DoorExitIcon from "DoorExitIcon" /* 9078 */;
+import PushNotificationDefault from "PushNotification" /* 9692 */;
 import jsxProd from "jsxProd" /* 21 */;
-import SettingBuilders from "SettingBuilders" /* 11468 */;
+import SettingBuilders from "SettingBuilders" /* 11473 */;
 import size from "module_2" /* 2 */;
 
 function handleLogout() {

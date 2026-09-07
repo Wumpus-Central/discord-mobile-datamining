@@ -1,6 +1,6 @@
-// === Module 13824: VoiceStateAnalytics ===
+// === Module 13827: VoiceStateAnalytics ===
 
-// Module 13824 (VoiceStateAnalytics)
+// Module 13827 (VoiceStateAnalytics)
 import _mod12 from "module_12" /* 12 */;
 import MediaEngineStore from "MediaEngineStore" /* 1908 */;
 import VoiceStateStore from "VoiceStateStore" /* 4579 */;

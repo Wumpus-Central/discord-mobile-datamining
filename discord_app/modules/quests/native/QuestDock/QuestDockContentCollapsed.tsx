@@ -1,12 +1,12 @@
-// === Module 15186: QuestDockContentCollapsed ===
+// === Module 15189: QuestDockContentCollapsed ===
 
-// Module 15186 (QuestDockContentCollapsed)
+// Module 15189 (QuestDockContentCollapsed)
 import spring from "spring" /* 4974 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const QuestDockMode = fn(5444).QuestDockMode;
-const QUEST_DOCK_MODE_CHANGE_PHYSICS = fn(15095).QUEST_DOCK_MODE_CHANGE_PHYSICS;
+const QUEST_DOCK_MODE_CHANGE_PHYSICS = fn(15098).QUEST_DOCK_MODE_CHANGE_PHYSICS;
 const jsx = fn(21).jsx;
 const createStyles = fn(4560);
 let obj = { questDockContentCollapsed: null };
@@ -28,7 +28,7 @@ export default noop.memo(function QuestDockContentCollapsed(children) {
     tmp = hideOnExpand;
   }
   hideOnExpand = tmp;
-  const activeQuestDockMode = noop.useContext(hideOnExpand(15096).QuestDockGestureContext).activeQuestDockMode;
+  const activeQuestDockMode = noop.useContext(hideOnExpand(15099).QuestDockGestureContext).activeQuestDockMode;
   hideOnExpand(4296);
   const fn = function l() {
     let obj = spring;

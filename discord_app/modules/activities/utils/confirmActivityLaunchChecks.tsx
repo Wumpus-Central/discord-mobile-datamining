@@ -1,6 +1,6 @@
-// === Module 9539: confirmActivityLaunchChecks ===
+// === Module 9544: confirmActivityLaunchChecks ===
 
-// Module 9539 (confirmActivityLaunchChecks)
+// Module 9544 (confirmActivityLaunchChecks)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 1956 */;
@@ -177,7 +177,7 @@ let closure_9 = async function _confirmActivityChange(arg0) {
                   if (dependencyMap != null) {
                     dependencyMap();
                   }
-                  shouldClosePopout(9540)(tmp, channel, () => {
+                  shouldClosePopout(9545)(tmp, channel, () => {
                     value(c2[10])();
                     const obj = { location: value.location, applicationId: closure_2_0.id, shouldClosePopout };
                     obj.leaveActivity(obj);

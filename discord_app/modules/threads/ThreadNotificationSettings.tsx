@@ -1,6 +1,6 @@
-// === Module 10088: ThreadNotificationSettings ===
+// === Module 10093: ThreadNotificationSettings ===
 
-// Module 10088 (ThreadNotificationSettings)
+// Module 10093 (ThreadNotificationSettings)
 import FlagUtils from "FlagUtils" /* 1384 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 import UserGuildSettingsStore from "UserGuildSettingsStore" /* 4741 */;

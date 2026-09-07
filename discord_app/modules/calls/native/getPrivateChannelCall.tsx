@@ -1,7 +1,7 @@
-// === Module 10869: getPrivateChannelCall ===
+// === Module 10874: getPrivateChannelCall ===
 
-// Module 10869 (getPrivateChannelCall)
-import CallsUtils from "CallsUtils" /* 9082 */;
+// Module 10874 (getPrivateChannelCall)
+import CallsUtils from "CallsUtils" /* 9087 */;
 import VoiceStateStore from "VoiceStateStore" /* 4579 */;
 
 require = fn;

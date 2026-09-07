@@ -1,11 +1,11 @@
-// === Module 16446: ForYouUnreadClearedState ===
+// === Module 16449: ForYouUnreadClearedState ===
 
-// Module 16446 (ForYouUnreadClearedState)
+// Module 16449 (ForYouUnreadClearedState)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import native from "native" /* 1178 */;
 import Text_Text from "Text/Text" /* 4556 */;
-import _modDef10652 from "module_10652" /* 10652 */;
+import _modDef10657 from "module_10657" /* 10657 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -28,7 +28,7 @@ export const ForYouUnreadClearedState = function ForYouUnreadClearedState() {
   let obj = { style: tmp.container, children: null };
   obj = { style: tmp.imageContainer };
   const items = [React4(View, obj), , ];
-  obj = { source: _modDef10652, style: tmp.icon, color: tmp.icon.color };
+  obj = { source: _modDef10657, style: tmp.icon, color: tmp.icon.color };
   items[1] = React4(native.Icon, obj);
   const obj1 = { children: null };
   const obj2 = { color: "mobile-text-heading-primary", variant: "text-md/semibold", style: tmp.headerText, children: null };

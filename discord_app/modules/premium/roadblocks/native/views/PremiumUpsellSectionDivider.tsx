@@ -1,10 +1,10 @@
-// === Module 10306: PremiumUpsellSectionDivider ===
+// === Module 10311: PremiumUpsellSectionDivider ===
 
-// Module 10306 (PremiumUpsellSectionDivider)
+// Module 10311 (PremiumUpsellSectionDivider)
 import nativeDefault from "native" /* 576 */;
 import ConstantsIOS from "ConstantsIOS" /* 1093 */;
 import LinearGradientDefault from "LinearGradient" /* 4987 */;
-import PremiumUpsellGradientBackground from "PremiumUpsellGradientBackground" /* 10307 */;
+import PremiumUpsellGradientBackground from "PremiumUpsellGradientBackground" /* 10312 */;
 import noop from "module_19" /* 19 */;
 
 const LockIcon2 = LockIcon(5095);

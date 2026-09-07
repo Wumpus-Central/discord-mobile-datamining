@@ -1,6 +1,6 @@
-// === Module 17783: GuildRoleSubscriptionTierTemplatePreviewCard ===
+// === Module 17786: GuildRoleSubscriptionTierTemplatePreviewCard ===
 
-// Module 17783 (GuildRoleSubscriptionTierTemplatePreviewCard)
+// Module 17786 (GuildRoleSubscriptionTierTemplatePreviewCard)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import native from "native" /* 1178 */;
@@ -10,8 +10,8 @@ import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4527
 import Text_Text from "Text/Text" /* 4556 */;
 import AppAnalyticsUtils from "AppAnalyticsUtils" /* 4740 */;
 import _modDef7158 from "module_7158" /* 7158 */;
-import GuildRoleSubscriptionTierTemplateUtils from "GuildRoleSubscriptionTierTemplateUtils" /* 17787 */;
-import GuildRoleSubscriptionTierTemplateActionCreators from "GuildRoleSubscriptionTierTemplateActionCreators" /* 17789 */;
+import GuildRoleSubscriptionTierTemplateUtils from "GuildRoleSubscriptionTierTemplateUtils" /* 17790 */;
+import GuildRoleSubscriptionTierTemplateActionCreators from "GuildRoleSubscriptionTierTemplateActionCreators" /* 17792 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -137,7 +137,7 @@ export default function GuildRoleSubscriptionTierTemplatePreviewCard(template) {
   callback1 = obj2.useCallback((selectedTemplate, arg1) => {
     if (closure_7) {
       const obj = { selectedTemplate, handleCreateFromTemplate, newPricesToPick: suggestedUnusedPrices };
-      obj.openLazy(asyncRequireImpl(17788, dependencyMap.paths), "TierTemplatePriceReselectionCard", obj);
+      obj.openLazy(asyncRequireImpl(17791, dependencyMap.paths), "TierTemplatePriceReselectionCard", obj);
     } else {
       handleCreateFromTemplate(selectedTemplate, arg1);
     }
@@ -149,7 +149,7 @@ export default function GuildRoleSubscriptionTierTemplatePreviewCard(template) {
     style: tmp.contentContainer,
     onPress() {
       const obj = { template, guildId, handleSelectTemplateInPreview: callback1 };
-      obj.openLazy(asyncRequireImpl(17784, dependencyMap.paths), "TierTemplateCard", obj);
+      obj.openLazy(asyncRequireImpl(17787, dependencyMap.paths), "TierTemplateCard", obj);
     },
     children: null
   };

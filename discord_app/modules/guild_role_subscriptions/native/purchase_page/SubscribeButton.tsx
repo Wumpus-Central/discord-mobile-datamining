@@ -1,6 +1,6 @@
-// === Module 16547: SubscribeButton ===
+// === Module 16550: SubscribeButton ===
 
-// Module 16547 (SubscribeButton)
+// Module 16550 (SubscribeButton)
 import util from "util" /* 1114 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4527 */;
@@ -20,7 +20,7 @@ function SwitchTiersButton(activeSubscription) {
   activeSubscription = activeSubscription.activeSubscription;
   const activeListingId = activeSubscription.activeListingId;
   const changeToListingId = activeSubscription.changeToListingId;
-  changeToListingId(15227);
+  changeToListingId(15230);
   let obj1 = activeListingId(4153)(activeSubscription.currentPeriodEnd);
   let obj = { children: null };
   obj = { variant: "text-xs/normal", color: "text-muted", children: null };
@@ -33,9 +33,9 @@ function SwitchTiersButton(activeSubscription) {
   obj2.text = intl2.string(activeSubscription(1114).t.SACegK);
   obj2.onPress = function onPress() {
     const obj = { activeSubscription, activeListingId, changeToListingId };
-    obj.openLazy(asyncRequireImpl(16548, dependencyMap.paths), "ChangeSubscriptionCard:" + changeToListingId, obj);
+    obj.openLazy(asyncRequireImpl(16551, dependencyMap.paths), "ChangeSubscriptionCard:" + changeToListingId, obj);
   };
-  items[2] = closure_12(activeSubscription(16541).ArrowButton, obj2);
+  items[2] = closure_12(activeSubscription(16544).ArrowButton, obj2);
   obj.children = items;
   return closure_13(View, obj);
 }

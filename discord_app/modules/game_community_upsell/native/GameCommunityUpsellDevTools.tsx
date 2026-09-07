@@ -1,10 +1,10 @@
-// === Module 15619: GameCommunityUpsellDevTools ===
+// === Module 15622: GameCommunityUpsellDevTools ===
 
-// Module 15619 (GameCommunityUpsellDevTools)
+// Module 15622 (GameCommunityUpsellDevTools)
 import nativeDefault from "native" /* 576 */;
 import noop from "module_19" /* 19 */;
-import LocalAppDetectionStore from "LocalAppDetectionStore" /* 13711 */;
-import MobileGameCommunitiesStore from "MobileGameCommunitiesStore" /* 15620 */;
+import LocalAppDetectionStore from "LocalAppDetectionStore" /* 13715 */;
+import MobileGameCommunitiesStore from "MobileGameCommunitiesStore" /* 15623 */;
 
 const require = fn;
 function MultiGuildDevTools() {

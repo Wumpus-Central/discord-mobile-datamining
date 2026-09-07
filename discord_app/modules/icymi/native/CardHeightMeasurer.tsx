@@ -1,6 +1,6 @@
-// === Module 16520: CardHeightMeasurer ===
+// === Module 16523: CardHeightMeasurer ===
 
-// Module 16520 (CardHeightMeasurer)
+// Module 16523 (CardHeightMeasurer)
 import ICYMIActionCreatorsDefault from "ICYMIActionCreators" /* 8351 */;
 import noop from "module_19" /* 19 */;
 
@@ -15,5 +15,5 @@ export const CardHeightMeasurer = noop.memo((children) => {
   const items = [itemId];
   return <View onLayout={noop.useCallback((nativeEvent) => {
     ICYMIActionCreatorsDefault.setCardHeight(itemId, nativeEvent.nativeEvent.layout.height);
-  }, items)} pointerEvents="box-none" style={{ width: noop.useContext(itemId(16453).ICYMIContext).width, alignSelf: "center" }}>{children.children}</View>;
+  }, items)} pointerEvents="box-none" style={{ width: noop.useContext(itemId(16456).ICYMIContext).width, alignSelf: "center" }}>{children.children}</View>;
 });

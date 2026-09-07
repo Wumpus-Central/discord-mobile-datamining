@@ -1,16 +1,16 @@
-// === Module 17031: QuestActivityButton ===
+// === Module 17034: QuestActivityButton ===
 
-// Module 17031 (QuestActivityButton)
+// Module 17034 (QuestActivityButton)
 import nativeDefault from "native" /* 576 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4527 */;
 import timing from "timing" /* 4561 */;
 import ModalActionCreatorsDefault from "ModalActionCreators" /* 4763 */;
-import QuestMatchingUtils from "QuestMatchingUtils" /* 11515 */;
+import QuestMatchingUtils from "QuestMatchingUtils" /* 11520 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4552 */;
 import QuestStore from "QuestStore" /* 7703 */;
-import UnenrolledActivityQuestStore from "UnenrolledActivityQuestStore" /* 17032 */;
+import UnenrolledActivityQuestStore from "UnenrolledActivityQuestStore" /* 17035 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4296 */;
 
 require = fn;
@@ -23,7 +23,7 @@ function QuestActivityButtonInner(quest) {
   let sharedValue1;
   let ref;
   let confetti;
-  let obj = quest(11483);
+  let obj = quest(11488);
   let obj1 = quest(504);
   let items = [sharedValue];
   const stateFromStores = obj1.useStateFromStores(items, () => sharedValue.useReducedMotion);
@@ -46,10 +46,10 @@ function QuestActivityButtonInner(quest) {
     }
     if (null == enrolledAt) {
       let obj = { questId: quest.id };
-      ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(17033, dependencyMap.paths), obj, QUEST_ACTIVITY_UNENROLLED_MODAL_KEY);
+      ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(17036, dependencyMap.paths), obj, QUEST_ACTIVITY_UNENROLLED_MODAL_KEY);
     } else {
       obj = { questId: quest.id };
-      obj.openLazy(asyncRequireImpl(17034, dependencyMap.paths), "QuestProgressBottomSheet", obj);
+      obj.openLazy(asyncRequireImpl(17037, dependencyMap.paths), "QuestProgressBottomSheet", obj);
     }
   }, items1);
   if (quest != null) {
@@ -153,27 +153,27 @@ function QuestActivityButtonInner(quest) {
   obj = { style: memo, pointerEvents: "none", children: null };
   obj1 = { ref, source: null, autoPlay: false, loop: false };
   const tmpResult2 = quest(4296);
-  obj1.source = quest(15132);
+  obj1.source = quest(15135);
   obj.children = closure_9(stateFromStores(5529), obj1);
   const items6 = [closure_9(closure_4, obj), , , ];
   obj2 = { style: tmp14.buttonWrapper, children: null };
   let obj3 = { icon: null, onPress: null, accessibilityLabel: null };
   const tmp20 = stateFromStores(5529);
-  obj3.icon = stateFromStores(14995);
+  obj3.icon = stateFromStores(14998);
   obj3.onPress = callback;
   const intl = tmp(1114).intl;
   obj3.accessibilityLabel = intl.string(quest(1114).t.JALI2K);
-  obj2.children = closure_9(stateFromStores(17035), obj3);
+  obj2.children = closure_9(stateFromStores(17038), obj3);
   items6[1] = closure_9(closure_4, obj2);
   const obj4 = { pointerEvents: "none", style: tmp14.canvas, children: null };
   const size = { height: v32, width: v32, children: null };
-  const tmp21 = stateFromStores(17035);
-  size.children = closure_9(quest(8453).Circle, { cx: 16, cy: 16, r: 14.3, fill: "none", stroke: stateFromStores(576).unsafe_rawColors.OPACITY_32, strokeWidth: 3.4, strokeDasharray: result });
-  obj4.children = closure_9(quest(8453).Svg, size);
+  const tmp21 = stateFromStores(17038);
+  size.children = closure_9(quest(8456).Circle, { cx: 16, cy: 16, r: 14.3, fill: "none", stroke: stateFromStores(576).unsafe_rawColors.OPACITY_32, strokeWidth: 3.4, strokeDasharray: result });
+  obj4.children = closure_9(quest(8456).Svg, size);
   items6[2] = closure_9(closure_4, obj4);
   const obj6 = { pointerEvents: "none", style: tmp14.canvas, children: null };
   const size1 = { height: v32, width: v32, children: closure_9(closure_12, { cx: 16, cy: 16, r: 14.3, fill: "none", stroke: tmp14.progressPath.color, strokeWidth: 3.4, strokeDasharray: result, animatedProps }) };
-  obj6.children = closure_9(quest(8453).Svg, size1);
+  obj6.children = closure_9(quest(8456).Svg, size1);
   items6[3] = closure_9(closure_4, obj6);
   obj.children = items6;
   return closure_10(stateFromStores(4296).View, obj);
@@ -183,7 +183,7 @@ const QuestVariants = fn(5444).QuestVariants;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
 let c11 = 32;
-let closure_12 = ReanimatedRexport.createAnimatedComponent(fn(8453).Circle);
+let closure_12 = ReanimatedRexport.createAnimatedComponent(fn(8456).Circle);
 const createStyles = fn(4560);
 let obj = { container: { position: "relative", width: 32, height: 32, justifyContent: "center", alignItems: "center" }, completionGlow: { shadowOffset: { width: 0, height: 0 }, shadowRadius: 12, shadowOpacity: 0, elevation: 4, shadowColor: "#30C77399" }, canvas: null, progressPath: null, buttonWrapper: null, confetti: null };
 obj = { position: "absolute", transform: null };
@@ -246,7 +246,7 @@ export default noop.memo(function QuestActivityButton(applicationId) {
     }
     if (!tmp2) {
       const obj = { questId: memo.id };
-      obj.pushLazy(asyncRequireImpl(17033, dependencyMap.paths), obj, QUEST_ACTIVITY_UNENROLLED_MODAL_KEY);
+      obj.pushLazy(asyncRequireImpl(17036, dependencyMap.paths), obj, QUEST_ACTIVITY_UNENROLLED_MODAL_KEY);
     }
   }, items4);
   let tmp6 = null;

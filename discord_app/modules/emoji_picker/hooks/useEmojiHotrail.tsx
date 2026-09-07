@@ -1,6 +1,6 @@
-// === Module 10282: useEmojiHotrail ===
+// === Module 10287: useEmojiHotrail ===
 
-// Module 10282 (useEmojiHotrail)
+// Module 10287 (useEmojiHotrail)
 import noop from "module_19" /* 19 */;
 
 const EMOJI_ROW_SIZE = fn(5463).EMOJI_ROW_SIZE;

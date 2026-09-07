@@ -1,13 +1,13 @@
-// === Module 15254: AndroidMobileOverlaySetting ===
+// === Module 15257: AndroidMobileOverlaySetting ===
 
-// Module 15254 (AndroidMobileOverlaySetting)
+// Module 15257 (AndroidMobileOverlaySetting)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1114 */;
-import MobileVoiceOverlayActionCreatorsDefault from "MobileVoiceOverlayActionCreators" /* 9991 */;
-import MobileVoiceOverlayStore from "MobileVoiceOverlayStore" /* 9980 */;
+import MobileVoiceOverlayActionCreatorsDefault from "MobileVoiceOverlayActionCreators" /* 9996 */;
+import MobileVoiceOverlayStore from "MobileVoiceOverlayStore" /* 9985 */;
 
 require = fn;
-fn(11468);
+fn(11473);
 let SettingBuilders = {
   useTitle() {
     const intl = util.intl;
@@ -23,7 +23,7 @@ let SettingBuilders = {
     const intl = util.intl;
     return intl.string(util.t.Wfoivk);
   },
-  usePredicate: fn(9980).isMobileOverlaySupported
+  usePredicate: fn(9985).isMobileOverlaySupported
 };
 SettingBuilders = SettingBuilders.createToggle(SettingBuilders);
 const size = fn(2);

@@ -1,11 +1,11 @@
-// === Module 16855: ChannelSettingsEditForumTag ===
+// === Module 16858: ChannelSettingsEditForumTag ===
 
-// Module 16855 (ChannelSettingsEditForumTag)
+// Module 16858 (ChannelSettingsEditForumTag)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 4905 */;
 import ForumActionCreatorsDefault from "ForumActionCreators" /* 7898 */;
-import openEmojiPickerActionSheet from "openEmojiPickerActionSheet" /* 11121 */;
+import openEmojiPickerActionSheet from "openEmojiPickerActionSheet" /* 11126 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import EmojiStore from "EmojiStore" /* 5459 */;
@@ -361,5 +361,5 @@ export default function ChannelSettingsEditForumTag(channelId) {
     tmp31 = tag;
     const tmp32 = tag(7130);
   }
-  tmp27Result1 = tmp27(tmp3(8757).ReactionIcon, {});
+  tmp27Result1 = tmp27(tmp3(8762).ReactionIcon, {});
 };

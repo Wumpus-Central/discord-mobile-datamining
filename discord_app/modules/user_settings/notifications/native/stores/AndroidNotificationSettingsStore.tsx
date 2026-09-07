@@ -1,8 +1,8 @@
-// === Module 15480: AndroidNotificationSettingsStore ===
+// === Module 15483: AndroidNotificationSettingsStore ===
 
-// Module 15480 (AndroidNotificationSettingsStore)
+// Module 15483 (AndroidNotificationSettingsStore)
 import _mod4184 from "module_4184" /* 4184 */;
-import PushNotificationDefault from "PushNotification" /* 9687 */;
+import PushNotificationDefault from "PushNotification" /* 9692 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -129,7 +129,7 @@ let closure_5 = async function _initializeAndroidNotificationSettingsStore() {
   }
 };
 const identity = fn(1244);
-let closure_4 = identity.createWithEqualityFn(() => ({ isLightsEnabled: "Array", isVibrationsEnabled: "flexDirection", isSoundsEnabled: "y", isNotifyEveryTime: "HermesInternal" }));
+let closure_4 = identity.createWithEqualityFn(() => ({ isLightsEnabled: "T", isVibrationsEnabled: "call", isSoundsEnabled: "sk", isNotifyEveryTime: "rejectWithError" }));
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_settings/notifications/native/stores/AndroidNotificationSettingsStore.tsx");
 

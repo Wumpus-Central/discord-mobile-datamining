@@ -1,15 +1,15 @@
-// === Module 8658: UserProfilePersonalWidgetCard ===
+// === Module 8663: UserProfilePersonalWidgetCard ===
 
-// Module 8658 (UserProfilePersonalWidgetCard)
+// Module 8663 (UserProfilePersonalWidgetCard)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import native from "native" /* 4271 */;
 import Text_Text from "Text/Text" /* 4556 */;
 import FastImageDefault from "FastImage" /* 5587 */;
 import GifTagDefault from "GifTag" /* 8255 */;
-import PersonalWidgetExpandCollapseContext from "PersonalWidgetExpandCollapseContext" /* 8659 */;
-import PersonalWidgetMarkupUtils from "PersonalWidgetMarkupUtils" /* 8660 */;
-import WidgetAssetUtils from "WidgetAssetUtils" /* 8661 */;
+import PersonalWidgetExpandCollapseContext from "PersonalWidgetExpandCollapseContext" /* 8664 */;
+import PersonalWidgetMarkupUtils from "PersonalWidgetMarkupUtils" /* 8665 */;
+import WidgetAssetUtils from "WidgetAssetUtils" /* 8666 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
@@ -250,7 +250,7 @@ function UserProfilePersonalWidgetCardContent(style) {
   obj = { style: style.cardStyle, titleLeadingIcon: null, title: null, trailingAction: null, children: null };
   const tmp = closure_15();
   const tmp5 = disableInteraction;
-  obj.titleLeadingIcon = closure_10(userId(8662).NitroWheelIcon, { size: "xs", color: "icon-subtle" });
+  obj.titleLeadingIcon = closure_10(userId(8667).NitroWheelIcon, { size: "xs", color: "icon-subtle" });
   obj.title = widget.header;
   let tmp4Result = !stateFromStores;
   if (!stateFromStores) {
@@ -258,7 +258,7 @@ function UserProfilePersonalWidgetCardContent(style) {
   }
   if (tmp4Result) {
     obj = { userId, widget };
-    tmp4Result = closure_10(tmp5(8663), obj);
+    tmp4Result = closure_10(tmp5(8668), obj);
   }
   obj.trailingAction = tmp4Result;
   const obj1 = { style: tmp.sectionsContainer, children: null };

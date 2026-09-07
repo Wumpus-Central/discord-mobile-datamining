@@ -1,6 +1,6 @@
-// === Module 9223: GameControllerIcon ===
+// === Module 9228: GameControllerIcon ===
 
-// Module 9223 (GameControllerIcon)
+// Module 9228 (GameControllerIcon)
 import nativeDefault from "native" /* 576 */;
 import BaseIconImage from "BaseIconImage" /* 4261 */;
 import _mod8138 from "module_8138" /* 8138 */;

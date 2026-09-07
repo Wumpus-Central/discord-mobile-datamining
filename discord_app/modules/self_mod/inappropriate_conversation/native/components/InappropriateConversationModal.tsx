@@ -1,6 +1,6 @@
-// === Module 15722: InappropriateConversationModal ===
+// === Module 15725: InappropriateConversationModal ===
 
-// Module 15722 (InappropriateConversationModal)
+// Module 15725 (InappropriateConversationModal)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
@@ -10,10 +10,10 @@ import Text_Text from "Text/Text" /* 4556 */;
 import ModalActionCreatorsDefault from "ModalActionCreators" /* 4763 */;
 import components_Button_Button from "components/Button/Button" /* 4975 */;
 import native from "native" /* 5692 */;
-import SafetyWarningUtils from "SafetyWarningUtils" /* 11370 */;
-import ChannelSafetyWarningsActionCreators from "ChannelSafetyWarningsActionCreators" /* 11371 */;
-import SafetyTipsSectionDefault from "SafetyTipsSection" /* 11376 */;
-import TakeActionScreenDefault from "TakeActionScreen" /* 15723 */;
+import SafetyWarningUtils from "SafetyWarningUtils" /* 11375 */;
+import ChannelSafetyWarningsActionCreators from "ChannelSafetyWarningsActionCreators" /* 11376 */;
+import SafetyTipsSectionDefault from "SafetyTipsSection" /* 11381 */;
+import TakeActionScreenDefault from "TakeActionScreen" /* 15726 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1371 */;
@@ -136,7 +136,7 @@ function CrisisTextLineScreen(trackAnalyticsEvent) {
 const useState = fn(19).useState;
 get_ActivityIndicator = fn(17);
 ({ Linking: metroRequire, View: closure_7 } = get_ActivityIndicator);
-const Constants = fn(11363);
+const Constants = fn(11368);
 ({ CRISIS_TEXT_LINE_SMS_URI: closure_9, CRISIS_TEXT_LINE_URL: c10, TAKEOVER_MODAL_KEY: closure_11, getInappropriateConversationsSafetyTips: closure_12 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);

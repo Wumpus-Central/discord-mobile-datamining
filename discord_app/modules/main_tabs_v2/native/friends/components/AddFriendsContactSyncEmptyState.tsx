@@ -1,13 +1,13 @@
-// === Module 16772: AddFriendsContactSyncEmptyState ===
+// === Module 16775: AddFriendsContactSyncEmptyState ===
 
-// Module 16772 (AddFriendsContactSyncEmptyState)
+// Module 16775 (AddFriendsContactSyncEmptyState)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import Text_Text from "Text/Text" /* 4556 */;
 import components_Button_Button from "components/Button/Button" /* 4975 */;
-import ContactSyncModalActionCreators from "ContactSyncModalActionCreators" /* 12676 */;
-import ContactSyncUtils from "ContactSyncUtils" /* 12680 */;
-import _modDef12693 from "module_12693" /* 12693 */;
+import ContactSyncModalActionCreators from "ContactSyncModalActionCreators" /* 12680 */;
+import ContactSyncUtils from "ContactSyncUtils" /* 12684 */;
+import _modDef12697 from "module_12697" /* 12697 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -34,7 +34,7 @@ const result = size.fileFinishedImporting("modules/main_tabs_v2/native/friends/c
 export default function AddFriendsContactSyncEmptyState() {
   const tmp = closure_7();
   let obj = { style: tmp.content, children: null };
-  obj = { resizeMode: "contain", style: tmp.headerImage, source: _modDef12693 };
+  obj = { resizeMode: "contain", style: tmp.headerImage, source: _modDef12697 };
   const items = [hasOwnProperty(React4, obj), , , ];
   obj = { style: tmp.title, variant: "heading-lg/bold", color: "mobile-text-heading-primary", children: null };
   const intl = util.intl;

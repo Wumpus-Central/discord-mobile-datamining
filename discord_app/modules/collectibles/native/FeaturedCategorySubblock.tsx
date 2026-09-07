@@ -1,11 +1,11 @@
-// === Module 15828: FeaturedCategorySubblock ===
+// === Module 15831: FeaturedCategorySubblock ===
 
-// Module 15828 (FeaturedCategorySubblock)
+// Module 15831 (FeaturedCategorySubblock)
 import nativeDefault from "native" /* 576 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
 import AnalyticsLocationDefault from "AnalyticsLocation" /* 7182 */;
 import CollectiblesActionCreators from "CollectiblesActionCreators" /* 7541 */;
-import VisibilitySensorDefault from "VisibilitySensor" /* 15823 */;
+import VisibilitySensorDefault from "VisibilitySensor" /* 15826 */;
 import noop from "module_19" /* 19 */;
 import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7542 */;
 
@@ -26,13 +26,13 @@ export default function _default(subblock) {
   const tmp = closure_10();
   let obj = subblock(1483);
   importDefault = obj.useNavigation();
-  let obj1 = subblock(8767);
+  let obj1 = subblock(8772);
   dependencyMap = obj1.useCollectiblesAnalyticsContext();
   const assetUrl = subblock.assetUrl;
   let obj2 = subblock(504);
   let items = [CollectiblesCategoryStore];
   const stateFromStores = obj2.useStateFromStores(items, () => CollectiblesCategoryStore.getCategoryByStoreListingId(subblock.categoryStoreListingId));
-  let obj3 = subblock(15818);
+  let obj3 = subblock(15821);
   let unpublishedAt = subblock.unpublishedAt;
   if (unpublishedAt == null) {
     unpublishedAt = undefined;
@@ -105,7 +105,7 @@ export default function _default(subblock) {
   let result = subblock(7554).shouldShowLimitedTimeBadge(date);
   if (result) {
     const obj5 = { style: tmp.limitedTimeBadge };
-    result = closure_8(tmp2(8832).LimitedTimeBadge, obj5);
+    result = closure_8(tmp2(8837).LimitedTimeBadge, obj5);
   }
   items1[1] = result;
   obj.children = items1;

@@ -1,11 +1,11 @@
-// === Module 13352: usePromotionMarketingComponent ===
+// === Module 13356: usePromotionMarketingComponent ===
 
-// Module 13352 (usePromotionMarketingComponent)
-import constants from "constants" /* 10697 */;
+// Module 13356 (usePromotionMarketingComponent)
+import constants from "constants" /* 10702 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import UserOfferStore from "UserOfferStore" /* 7450 */;
-import PromotionsStore from "PromotionsStore" /* 10665 */;
+import PromotionsStore from "PromotionsStore" /* 10670 */;
 
 require = fn;
 const size = fn(2);

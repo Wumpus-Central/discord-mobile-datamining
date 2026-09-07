@@ -1,6 +1,6 @@
-// === Module 13306: UserTrialActionCreators ===
+// === Module 13310: UserTrialActionCreators ===
 
-// Module 13306 (UserTrialActionCreators)
+// Module 13310 (UserTrialActionCreators)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import UserTrialOfferRecord from "UserTrialOfferRecord" /* 7454 */;
 

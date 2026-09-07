@@ -1,9 +1,9 @@
-// === Module 15410: ShowLinkDecorationsSetting ===
+// === Module 15413: ShowLinkDecorationsSetting ===
 
-// Module 15410 (ShowLinkDecorationsSetting)
+// Module 15413 (ShowLinkDecorationsSetting)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1114 */;
-import AccessibilityActionCreators from "AccessibilityActionCreators" /* 14437 */;
+import AccessibilityActionCreators from "AccessibilityActionCreators" /* 14440 */;
 import AccessibilityStore from "AccessibilityStore" /* 4552 */;
 
 require = fn;
@@ -14,7 +14,7 @@ function useShowLinkDecorationsSettingValue() {
 function onShowLinkDecorationsValueChange(alwaysShowLinkDecorations) {
   const result = AccessibilityActionCreators.setAlwaysShowLinkDecorations(alwaysShowLinkDecorations);
 }
-fn(11468);
+fn(11473);
 let SettingBuilders = {
   useTitle() {
     const intl = util.intl;

@@ -1,13 +1,13 @@
-// === Module 15302: SameAsDeviceThemeSetting ===
+// === Module 15305: SameAsDeviceThemeSetting ===
 
-// Module 15302 (SameAsDeviceThemeSetting)
+// Module 15305 (SameAsDeviceThemeSetting)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1114 */;
-import UserSettingsAppearanceThemeUtils from "UserSettingsAppearanceThemeUtils" /* 15177 */;
+import UserSettingsAppearanceThemeUtils from "UserSettingsAppearanceThemeUtils" /* 15180 */;
 import ThemeStore from "ThemeStore" /* 1183 */;
 
 require = fn;
-fn(11468);
+fn(11473);
 let SettingBuilders = {
   useTitle() {
     const intl = util.intl;

@@ -1,6 +1,6 @@
-// === Module 10338: CustomEmojiContent ===
+// === Module 10343: CustomEmojiContent ===
 
-// Module 10338 (CustomEmojiContent)
+// Module 10343 (CustomEmojiContent)
 import nativeDefault from "native" /* 576 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
@@ -9,9 +9,9 @@ import ToastActionCreatorsDefault from "ToastActionCreators" /* 4259 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4527 */;
 import RoleSubscriptionEmojiUtilsAll from "RoleSubscriptionEmojiUtils" /* 5464 */;
 import openUserSettings from "openUserSettings" /* 7382 */;
-import openPremiumModalDefault from "openPremiumModal" /* 9392 */;
-import EmojiActionCreators from "EmojiActionCreators" /* 10336 */;
-import guild_GuildUtils from "guild/GuildUtils" /* 10341 */;
+import openPremiumModalDefault from "openPremiumModal" /* 9397 */;
+import EmojiActionCreators from "EmojiActionCreators" /* 10341 */;
+import guild_GuildUtils from "guild/GuildUtils" /* 10346 */;
 import noop from "module_19" /* 19 */;
 import SubscriptionRoleStore from "SubscriptionRoleStore" /* 5460 */;
 import SelectedGuildStore from "SelectedGuildStore" /* 4381 */;
@@ -287,7 +287,7 @@ export default function CustomEmojiContent(emojiNode) {
       const obj15 = { accessibilityLabel: null, style: null, onPress: null, children: null };
       function handleOpenEmojiOptionsMenu() {
         obj = { emojiSrc: emojiNode.src };
-        obj.openLazy(asyncRequireImpl(10340, dependencyMap.paths), "EmojiOptionsActionSheet", obj, "stack");
+        obj.openLazy(asyncRequireImpl(10345, dependencyMap.paths), "EmojiOptionsActionSheet", obj, "stack");
       }
       const intl3 = tmp2(nonce[28]).intl;
       obj15.accessibilityLabel = intl3.string(tmp2(nonce[28]).t.PdRCRg);

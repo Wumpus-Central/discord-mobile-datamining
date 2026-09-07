@@ -1,12 +1,12 @@
-// === Module 9486: ChannelCallLifecycleStore ===
+// === Module 9491: ChannelCallLifecycleStore ===
 
-// Module 9486 (ChannelCallLifecycleStore)
+// Module 9491 (ChannelCallLifecycleStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import _modDef1332 from "module_1332" /* 1332 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2011 */;
 
-const VoiceCallOverlayType = fn(9468).VoiceCallOverlayType;
+const VoiceCallOverlayType = fn(9473).VoiceCallOverlayType;
 let c4 = false;
 let c5 = false;
 let c6 = false;

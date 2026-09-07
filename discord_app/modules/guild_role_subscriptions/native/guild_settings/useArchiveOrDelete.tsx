@@ -1,9 +1,9 @@
-// === Module 17737: useArchiveOrDelete ===
+// === Module 17740: useArchiveOrDelete ===
 
-// Module 17737 (useArchiveOrDelete)
+// Module 17740 (useArchiveOrDelete)
 import util from "util" /* 1114 */;
 import ToastUtilsAll from "ToastUtils" /* 4258 */;
-import GuildRoleSubscriptionListingEditStateUtilsAll from "GuildRoleSubscriptionListingEditStateUtils" /* 15227 */;
+import GuildRoleSubscriptionListingEditStateUtilsAll from "GuildRoleSubscriptionListingEditStateUtils" /* 15230 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 

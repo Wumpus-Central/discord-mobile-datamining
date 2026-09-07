@@ -1,6 +1,6 @@
-// === Module 11682: ForwardModal ===
+// === Module 11687: ForwardModal ===
 
-// Module 11682 (ForwardModal)
+// Module 11687 (ForwardModal)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import ToastUtils from "ToastUtils" /* 4258 */;
@@ -10,10 +10,10 @@ import haptics_HapticFeedbackTypesDefault from "haptics/HapticFeedbackTypes" /* 
 import ChannelUtils from "ChannelUtils" /* 4705 */;
 import ClipboardUtils from "ClipboardUtils" /* 7190 */;
 import HeaderActionButton from "HeaderActionButton" /* 7377 */;
-import formatResults from "formatResults" /* 10981 */;
-import ForwardModalUtils from "ForwardModalUtils" /* 11680 */;
-import ForwardingAnalyticsUtils from "ForwardingAnalyticsUtils" /* 11681 */;
-import ForwardDestinationUtils from "ForwardDestinationUtils" /* 11684 */;
+import formatResults from "formatResults" /* 10986 */;
+import ForwardModalUtils from "ForwardModalUtils" /* 11685 */;
+import ForwardingAnalyticsUtils from "ForwardingAnalyticsUtils" /* 11686 */;
+import ForwardDestinationUtils from "ForwardDestinationUtils" /* 11689 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -25,8 +25,8 @@ import MessagePreviewStore from "MessagePreviewStore" /* 8360 */;
 
 require = fn;
 const View = fn(17).View;
-const MAX_DESTINATION_COUNT = fn(11683).MAX_DESTINATION_COUNT;
-let UserRowModes = fn(10860).UserRowModes;
+const MAX_DESTINATION_COUNT = fn(11688).MAX_DESTINATION_COUNT;
+let UserRowModes = fn(10865).UserRowModes;
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
 fn(4560);
@@ -241,7 +241,7 @@ export default function ForwardModal(message) {
                         return closure_0(false);
                       }
                     };
-                    obj.openAlert("staff-to-non-staff-forward", ref2(forwardOptions(11686), obj));
+                    obj.openAlert("staff-to-non-staff-forward", ref2(forwardOptions(11691), obj));
                   });
                   c3 = 3;
                   c4 = 1;

@@ -1,6 +1,6 @@
-// === Module 16169: GuildThemeMemberCoachmark ===
+// === Module 16172: GuildThemeMemberCoachmark ===
 
-// Module 16169 (GuildThemeMemberCoachmark)
+// Module 16172 (GuildThemeMemberCoachmark)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import _modDef2428 from "module_2428" /* 2428 */;
@@ -46,9 +46,9 @@ export default function GuildThemeMemberCoachmark(guildId) {
   const items2 = [guildPowerupBannerImage];
   const stateFromStores1 = guildId(504).useStateFromStores(items2, () => guildPowerupBannerImage.useReducedMotion);
   const obj2 = guildId(504);
-  guildPowerupBannerImage = guildId(12520).getGuildPowerupBannerImage(stateFromStores, stateFromStores1, true);
+  guildPowerupBannerImage = guildId(12524).getGuildPowerupBannerImage(stateFromStores, stateFromStores1, true);
   if (guildPowerupBannerImage == null) {
-    guildPowerupBannerImage = markAsDismissed(16170);
+    guildPowerupBannerImage = markAsDismissed(16173);
   }
   const diff = onDismiss - markAsDismissed(4469)(guildId).available;
   c5 = diff;
@@ -79,7 +79,7 @@ export default function GuildThemeMemberCoachmark(guildId) {
     obj.onButtonPress = callback1;
     return obj;
   }, items5);
-  const obj3 = guildId(12520);
-  const coachmark = tmp2(11127).useCoachmark(guildId.targetRef, memo);
+  const obj3 = guildId(12524);
+  const coachmark = tmp2(11132).useCoachmark(guildId.targetRef, memo);
   return null;
 };

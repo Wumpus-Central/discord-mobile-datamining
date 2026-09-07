@@ -1,6 +1,6 @@
-// === Module 12440: useIsMessageRequestRestrictedViewer ===
+// === Module 12444: useIsMessageRequestRestrictedViewer ===
 
-// Module 12440 (useIsMessageRequestRestrictedViewer)
+// Module 12444 (useIsMessageRequestRestrictedViewer)
 import AgeVerificationUtils from "AgeVerificationUtils" /* 4773 */;
 import RegionalFeatureConfigUtils from "RegionalFeatureConfigUtils" /* 5423 */;
 import SettingsDefaultFeature from "SettingsDefaultFeature" /* 7299 */;

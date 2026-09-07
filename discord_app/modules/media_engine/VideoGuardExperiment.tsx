@@ -1,6 +1,6 @@
-// === Module 13260: VideoGuardExperiment ===
+// === Module 13264: VideoGuardExperiment ===
 
-// Module 13260 (VideoGuardExperiment)
+// Module 13264 (VideoGuardExperiment)
 import ApexExperiment from "ApexExperiment" /* 1433 */;
 import size from "module_2" /* 2 */;
 

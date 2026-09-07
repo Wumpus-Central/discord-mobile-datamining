@@ -1,6 +1,6 @@
-// === Module 9322: PremiumUpsellAlert ===
+// === Module 9327: PremiumUpsellAlert ===
 
-// Module 9322 (PremiumUpsellAlert)
+// Module 9327 (PremiumUpsellAlert)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
@@ -12,19 +12,19 @@ import createStyles2 from "createStyles" /* 4560 */;
 import FastImageDefault from "FastImage" /* 5587 */;
 import TableSwitchRow from "TableSwitchRow" /* 7201 */;
 import usePremiumTrialOffer from "usePremiumTrialOffer" /* 7447 */;
-import useMessageMaxLengthDefault from "useMessageMaxLength" /* 9304 */;
-import _modDef9314 from "module_9314" /* 9314 */;
-import _modDef9315 from "module_9315" /* 9315 */;
-import _modDef9350 from "module_9350" /* 9350 */;
-import _modDef9351 from "module_9351" /* 9351 */;
-import _modDef9352 from "module_9352" /* 9352 */;
-import _modDef9353 from "module_9353" /* 9353 */;
-import _modDef9354 from "module_9354" /* 9354 */;
+import useMessageMaxLengthDefault from "useMessageMaxLength" /* 9309 */;
+import _modDef9319 from "module_9319" /* 9319 */;
+import _modDef9320 from "module_9320" /* 9320 */;
 import _modDef9355 from "module_9355" /* 9355 */;
 import _modDef9356 from "module_9356" /* 9356 */;
 import _modDef9357 from "module_9357" /* 9357 */;
-import UserSettingsActionCreatorsDefault from "UserSettingsActionCreators" /* 9358 */;
+import _modDef9358 from "module_9358" /* 9358 */;
+import _modDef9359 from "module_9359" /* 9359 */;
 import _modDef9360 from "module_9360" /* 9360 */;
+import _modDef9361 from "module_9361" /* 9361 */;
+import _modDef9362 from "module_9362" /* 9362 */;
+import UserSettingsActionCreatorsDefault from "UserSettingsActionCreators" /* 9363 */;
+import _modDef9365 from "module_9365" /* 9365 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import UnsyncedUserSettingsStore from "UnsyncedUserSettingsStore" /* 1185 */;
@@ -99,7 +99,7 @@ function GlobalEmojiUpsell(arg0) {
     }
   }
   const obj2 = { alertWidth, upsellItem: null };
-  const obj3 = { image: _modDef9314, title: null, description: null };
+  const obj3 = { image: _modDef9319, title: null, description: null };
   const intl4 = util.intl;
   obj3.title = intl4.string(util.t.UNtcBV);
   obj3.description = formatResult1;
@@ -108,7 +108,7 @@ function GlobalEmojiUpsell(arg0) {
 }
 function AnimatedEmojiUpsell(alertWidth) {
   let obj = { alertWidth: alertWidth.alertWidth, upsellItem: null };
-  obj = { image: _modDef9315, title: null, description: null };
+  obj = { image: _modDef9320, title: null, description: null };
   const intl = util.intl;
   obj.title = intl.string(util.t.F6rmyq);
   const intl2 = util.intl;
@@ -131,9 +131,9 @@ function PremiumGuildIdentityUpsell(alertWidth) {
   obj = { alertWidth: alertWidth.alertWidth, imageStyle: legacyClassComponentStyles.largerUpsellImage, upsellItem: null };
   const tmp5 = useThemeDefault();
   if (obj3.isThemeDark(tmp5)) {
-    let tmp4Result = _modDef9350;
+    let tmp4Result = _modDef9355;
   } else {
-    tmp4Result = _modDef9351;
+    tmp4Result = _modDef9356;
   }
   obj = { image: tmp4Result, title: null, description: null };
   const intl = util.intl;
@@ -146,7 +146,7 @@ function PremiumGuildIdentityUpsell(alertWidth) {
 function CustomProfilesUpsell(alertWidth) {
   let obj = createStyles2;
   obj = { alertWidth: alertWidth.alertWidth, imageStyle: obj.useLegacyClassComponentStyles(closure_17).customProfileUpsellImage, upsellItem: null };
-  obj = { image: _modDef9352, title: null, description: null };
+  obj = { image: _modDef9357, title: null, description: null };
   const intl = util.intl;
   obj.title = intl.string(util.t.rTY76D);
   const intl2 = util.intl;
@@ -181,7 +181,7 @@ function CustomAppIconsUpsell(alertWidth) {
 }
 function GlobalStickerUpsell(alertWidth) {
   let obj = { alertWidth: alertWidth.alertWidth, upsellItem: null };
-  obj = { image: _modDef9353, title: null, description: null };
+  obj = { image: _modDef9358, title: null, description: null };
   const intl = util.intl;
   obj.title = intl.string(util.t.jn2mBl);
   const intl2 = util.intl;
@@ -205,9 +205,9 @@ function LongerMessageUpsell(alertWidth) {
   const tmp5 = useThemeDefault();
   const tmp6 = useMessageMaxLengthDefault();
   if (obj3.isThemeDark(tmp5)) {
-    let tmp4Result = _modDef9354;
+    let tmp4Result = _modDef9359;
   } else {
-    tmp4Result = _modDef9355;
+    tmp4Result = _modDef9360;
   }
   obj = { image: tmp4Result, title: null, description: null };
   const intl = util.intl;
@@ -223,9 +223,9 @@ function GuildCapUpsell(alertWidth) {
   obj = { alertWidth: alertWidth.alertWidth, imageStyle: legacyClassComponentStyles.largerUpsellImage, upsellItem: null };
   const tmp5 = useThemeDefault();
   if (obj3.isThemeDark(tmp5)) {
-    let tmp4Result = _modDef9356;
+    let tmp4Result = _modDef9361;
   } else {
-    tmp4Result = _modDef9357;
+    tmp4Result = _modDef9362;
   }
   obj = { image: tmp4Result, title: null, description: null };
   const intl = util.intl;
@@ -324,7 +324,7 @@ class PremiumUpsellAlert {
     obj1.confirmColor = initialUpsellKey(closure_2[41]).ButtonColors.GREEN;
     obj1.confirmText = getNitroText;
     obj1.renderConfirmIcon = function renderConfirmIcon() {
-      const obj = { source: _modDef9360, style: legacyClassComponentStyles.nitroWheel, resizeMode: "contain" };
+      const obj = { source: _modDef9365, style: legacyClassComponentStyles.nitroWheel, resizeMode: "contain" };
       if (constants2.GLOBAL_EMOJI !== initialUpsellKey) {
         if (constants2.ANIMATED_EMOJI !== initialUpsellKey) {
           if (constants2.CUSTOM_PROFILES !== initialUpsellKey) {
@@ -436,7 +436,7 @@ get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, Image: metroRequire } = get_ActivityIndicator);
 const Constants = fn(1074);
 ({ AnalyticEvents: closure_9, UpsellTypes: c10 } = Constants);
-const getIcons = fn(9323).getIcons;
+const getIcons = fn(9328).getIcons;
 const PremiumConstants = fn(1373);
 ({ PremiumSubscriptionSKUs: closure_12, PremiumTypes: map1 } = PremiumConstants);
 const jsxProd = fn(21);

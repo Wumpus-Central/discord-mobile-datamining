@@ -1,6 +1,6 @@
-// === Module 15931: ScreenRecordingPip ===
+// === Module 15934: ScreenRecordingPip ===
 
-// Module 15931 (ScreenRecordingPip)
+// Module 15934 (ScreenRecordingPip)
 import nativeDefault from "native" /* 576 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4296 */;
 import spring from "spring" /* 4974 */;
@@ -202,7 +202,7 @@ function ScreenRecordingPip(surveyConfig) {
   tmp5 = useScreenRecordingStore((isRecording) => isRecording.isRecording);
 }
 const View = fn(17).View;
-const useScreenRecordingStore = fn(15932).useScreenRecordingStore;
+const useScreenRecordingStore = fn(15935).useScreenRecordingStore;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8, Fragment: closure_9 } = jsxProd);
 let c10 = 100;

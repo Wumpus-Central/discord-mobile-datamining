@@ -1,9 +1,9 @@
-// === Module 14453: VoiceNotificationManager ===
+// === Module 14456: VoiceNotificationManager ===
 
-// Module 14453 (VoiceNotificationManager)
+// Module 14456 (VoiceNotificationManager)
 import nativeDefault from "native" /* 576 */;
 import ForegroundServiceManagerDefault from "ForegroundServiceManager" /* 7756 */;
-import RTCConnectionUtilsDefault from "RTCConnectionUtils" /* 10040 */;
+import RTCConnectionUtilsDefault from "RTCConnectionUtils" /* 10045 */;
 import _slicedToArray from "module_32" /* 32 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 1956 */;
 import ApplicationStore from "ApplicationStore" /* 4788 */;
@@ -25,7 +25,7 @@ class VoiceNotificationManager {
     obj = Object.create(new.target.prototype);
     closure_0 = obj;
     obj.voiceServiceHandlerId = 9000;
-    obj.state = { channelId: "flexDirection", connectionState: "content", selfMute: false, deafened: "15.30", isPushToTalk: "3.30", embeddedActivity: "halv fire", isStreaming: "klokkesl\u00E6t" };
+    obj.state = { channelId: "flexDirection", connectionState: "content", selfMute: false, deafened: null, isPushToTalk: "braintreeunionpayhostedfields", embeddedActivity: "tanabata_tree", isStreaming: "leaves" };
     obj.handleVoiceStateChange = function handleVoiceStateChange() {
       const channelId = RTCConnectionStore.getChannelId();
       const state = RTCConnectionStore.getState();
@@ -145,8 +145,8 @@ class VoiceNotificationManager {
               name = application.name;
             }
             const _HermesInternal = HermesInternal;
-            str2 = " - " + tmp16(10890)(name);
-            const tmp16Result = tmp16(10890);
+            str2 = " - " + tmp16(10895)(name);
+            const tmp16Result = tmp16(10895);
           }
           const obj3 = RTCConnectionUtilsDefault;
           obj = { title: null, content: null, priority: null, contentAction: null, auxiliaryActions: null, type: null, usesGateway: true, icon: null, color: null };
@@ -216,7 +216,7 @@ prototype["terminate"] = function terminate() {
 };
 size = Object.create(VoiceNotificationManager.prototype);
 size.voiceServiceHandlerId = 9000;
-size.state = { channelId: "flexDirection", connectionState: "content", selfMute: false, deafened: "15.30", isPushToTalk: "3.30", embeddedActivity: "halv fire", isStreaming: "klokkesl\u00E6t" };
+size.state = { channelId: "flexDirection", connectionState: "content", selfMute: false, deafened: null, isPushToTalk: "braintreeunionpayhostedfields", embeddedActivity: "tanabata_tree", isStreaming: "leaves" };
 size.handleVoiceStateChange = function handleVoiceStateChange() {
   const channelId = RTCConnectionStore.getChannelId();
   const state = RTCConnectionStore.getState();
@@ -336,8 +336,8 @@ size.handleUpdate = function handleUpdate(connectionState) {
           name = application.name;
         }
         const _HermesInternal = HermesInternal;
-        str2 = " - " + tmp16(10890)(name);
-        const tmp16Result = tmp16(10890);
+        str2 = " - " + tmp16(10895)(name);
+        const tmp16Result = tmp16(10895);
       }
       const obj3 = RTCConnectionUtilsDefault;
       obj = { title: null, content: null, priority: null, contentAction: null, auxiliaryActions: null, type: null, usesGateway: true, icon: null, color: null };

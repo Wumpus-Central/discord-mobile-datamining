@@ -1,6 +1,6 @@
-// === Module 17579: GuildSettingsStickerCreate ===
+// === Module 17582: GuildSettingsStickerCreate ===
 
-// Module 17579 (GuildSettingsStickerCreate)
+// Module 17582 (GuildSettingsStickerCreate)
 import nativeDefault from "native" /* 576 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1396 */;
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2024 */;
@@ -8,9 +8,9 @@ import UnicodeEmojisDefault from "UnicodeEmojis" /* 4213 */;
 import useInitialValueDefault from "useInitialValue" /* 5598 */;
 import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 6981 */;
 import EmojiDefault from "Emoji" /* 7130 */;
-import StickerDefault from "Sticker" /* 10176 */;
-import openEmojiPickerActionSheet from "openEmojiPickerActionSheet" /* 11121 */;
-import useSafeAreaAvoidingInputsDefault from "useSafeAreaAvoidingInputs" /* 11146 */;
+import StickerDefault from "Sticker" /* 10181 */;
+import openEmojiPickerActionSheet from "openEmojiPickerActionSheet" /* 11126 */;
+import useSafeAreaAvoidingInputsDefault from "useSafeAreaAvoidingInputs" /* 11151 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -478,7 +478,7 @@ export default noop.forwardRef((stickerId, arg1) => {
     obj14.style = tmp.stickerPreviewImage;
     tmp32Result = tmp32(c6, obj14);
   } else {
-    tmp32Result = tmp32(tmp31(17581).StickerPlusIcon, { size: "lg" });
+    tmp32Result = tmp32(tmp31(17584).StickerPlusIcon, { size: "lg" });
   }
   obj12.children = tmp32Result;
   items4[1] = onPressEmoji(stickerId(5123).PressableHighlight, obj12);
@@ -508,7 +508,7 @@ export default noop.forwardRef((stickerId, arg1) => {
     tmp32Result = tmp32(EmojiDefault, obj18);
     const tmp14Result1 = EmojiDefault;
   } else {
-    tmp32Result = tmp32(tmp31(8757).ReactionIcon, { size: "md", color: "text-subtle" });
+    tmp32Result = tmp32(tmp31(8762).ReactionIcon, { size: "md", color: "text-subtle" });
   }
   const items5 = [tmp32Result, ];
   if (null != first1) {

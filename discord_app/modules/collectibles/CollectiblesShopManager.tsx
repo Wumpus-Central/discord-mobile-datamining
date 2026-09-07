@@ -1,9 +1,9 @@
-// === Module 13110: CollectiblesShopManager ===
+// === Module 13114: CollectiblesShopManager ===
 
-// Module 13110 (CollectiblesShopManager)
+// Module 13114 (CollectiblesShopManager)
 import StorefrontProductActionCreators from "StorefrontProductActionCreators" /* 8219 */;
-import StorefrontCollectionActionCreators from "StorefrontCollectionActionCreators" /* 13111 */;
-import StorefrontCollectionStore from "StorefrontCollectionStore" /* 13109 */;
+import StorefrontCollectionActionCreators from "StorefrontCollectionActionCreators" /* 13115 */;
+import StorefrontCollectionStore from "StorefrontCollectionStore" /* 13113 */;
 import StorefrontProductStore from "StorefrontProductStore" /* 8220 */;
 import Dispatcher from "Dispatcher" /* 573 */;
 

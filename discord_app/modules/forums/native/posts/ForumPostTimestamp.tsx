@@ -1,12 +1,12 @@
-// === Module 12014: ForumPostTimestamp ===
+// === Module 12018: ForumPostTimestamp ===
 
-// Module 12014 (ForumPostTimestamp)
+// Module 12018 (ForumPostTimestamp)
 import Text_Text from "Text/Text" /* 4556 */;
 import ForumHooks from "ForumHooks" /* 7885 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const useForumChannelStore = fn(12001).useForumChannelStore;
+const useForumChannelStore = fn(12005).useForumChannelStore;
 const jsx = fn(21).jsx;
 const createStyles = fn(4560);
 let closure_4 = createStyles.createStyles({ text: { lineHeight: 18, height: 18 } });

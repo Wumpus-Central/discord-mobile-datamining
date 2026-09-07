@@ -1,14 +1,14 @@
-// === Module 16655: GuildVoiceOrStageChannelRow ===
+// === Module 16658: GuildVoiceOrStageChannelRow ===
 
-// Module 16655 (GuildVoiceOrStageChannelRow)
+// Module 16658 (GuildVoiceOrStageChannelRow)
 import util from "util" /* 1114 */;
 import UserUtilsDefault from "UserUtils" /* 4404 */;
 import StageChannelParticipantStoreHooks from "StageChannelParticipantStoreHooks" /* 5431 */;
-import ChannelListLayout from "ChannelListLayout" /* 10121 */;
-import renderChannelBadge from "renderChannelBadge" /* 12291 */;
-import guild_channels_ChannelSubtitle from "guild_channels/ChannelSubtitle" /* 16656 */;
-import guild_channels_VoiceOrStageSummaryRowDefault from "guild_channels/VoiceOrStageSummaryRow" /* 16657 */;
-import GuildChannelRowDefault from "GuildChannelRow" /* 16659 */;
+import ChannelListLayout from "ChannelListLayout" /* 10126 */;
+import renderChannelBadge from "renderChannelBadge" /* 12295 */;
+import guild_channels_ChannelSubtitle from "guild_channels/ChannelSubtitle" /* 16659 */;
+import guild_channels_VoiceOrStageSummaryRowDefault from "guild_channels/VoiceOrStageSummaryRow" /* 16660 */;
+import GuildChannelRowDefault from "GuildChannelRow" /* 16662 */;
 import noop from "module_19" /* 19 */;
 import StageInstanceStore from "StageInstanceStore" /* 1962 */;
 

@@ -1,11 +1,11 @@
-// === Module 10323: EmojiPickerListComponent ===
+// === Module 10328: EmojiPickerListComponent ===
 
-// Module 10323 (EmojiPickerListComponent)
+// Module 10328 (EmojiPickerListComponent)
 import UnicodeEmojisDefault from "UnicodeEmojis" /* 4213 */;
 import ReanimatedRexport2 from "ReanimatedRexport" /* 4296 */;
 import PortalToNativeViewDefault from "PortalToNativeView" /* 7070 */;
-import EmojiPickerPremiumSearchUpsell from "EmojiPickerPremiumSearchUpsell" /* 10313 */;
-import EmojiPickerNativeComponent2 from "EmojiPickerNativeComponent" /* 10324 */;
+import EmojiPickerPremiumSearchUpsell from "EmojiPickerPremiumSearchUpsell" /* 10318 */;
+import EmojiPickerNativeComponent2 from "EmojiPickerNativeComponent" /* 10329 */;
 import noop from "module_19" /* 19 */;
 import EmojiStore from "EmojiStore" /* 5459 */;
 
@@ -14,7 +14,7 @@ const ReanimatedRexport = ReanimatedRexport2;
 
 require = fn;
 const EmojiCategoryTypes = fn(5463).EmojiCategoryTypes;
-const IMAGE_SIZE = fn(10290).IMAGE_SIZE;
+const IMAGE_SIZE = fn(10295).IMAGE_SIZE;
 const PADDING_VERTICAL = fn(1219).PADDING_VERTICAL;
 const jsxProd = fn(21);
 ({ jsx: closure_8, Fragment: closure_9, jsxs: c10 } = jsxProd);

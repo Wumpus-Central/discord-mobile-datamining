@@ -1,6 +1,6 @@
-// === Module 9932: useCanRaiseHand ===
+// === Module 9937: useCanRaiseHand ===
 
-// Module 9932 (useCanRaiseHand)
+// Module 9937 (useCanRaiseHand)
 import PermissionStore from "PermissionStore" /* 4199 */;
 
 const require = fn;

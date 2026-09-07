@@ -1,10 +1,10 @@
-// === Module 11527: useChatWidth ===
+// === Module 11532: useChatWidth ===
 
-// Module 11527 (useChatWidth)
+// Module 11532 (useChatWidth)
 import useChatLayout from "useChatLayout" /* 4420 */;
 import useBaseAppContainerDimensions from "useBaseAppContainerDimensions" /* 4422 */;
-import useDrawerWidth from "useDrawerWidth" /* 11528 */;
-import ChatViewWidthContextDefault from "ChatViewWidthContext" /* 11529 */;
+import useDrawerWidth from "useDrawerWidth" /* 11533 */;
+import ChatViewWidthContextDefault from "ChatViewWidthContext" /* 11534 */;
 import noop from "module_19" /* 19 */;
 
 const useChatLayoutDefault = useChatLayout;

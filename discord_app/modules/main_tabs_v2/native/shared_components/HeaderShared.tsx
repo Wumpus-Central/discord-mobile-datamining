@@ -11,7 +11,7 @@ import _mod5631 from "module_5631" /* 5631 */;
 import PressableNavigatorBackIcon from "PressableNavigatorBackIcon" /* 7865 */;
 import PressableNavigatorModalIconDefault from "PressableNavigatorModalIcon" /* 7870 */;
 import ChannelActionsDefault from "ChannelActions" /* 7875 */;
-import ChannelHeaderDefault from "ChannelHeader" /* 13263 */;
+import ChannelHeaderDefault from "ChannelHeader" /* 13267 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

@@ -1,10 +1,10 @@
-// === Module 12312: GuildDirectoryStore ===
+// === Module 12316: GuildDirectoryStore ===
 
-// Module 12312 (GuildDirectoryStore)
+// Module 12316 (GuildDirectoryStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import GuildDirectoryUtils from "GuildDirectoryUtils" /* 12304 */;
-import GuildDirectoryConstants from "GuildDirectoryConstants" /* 12305 */;
+import GuildDirectoryUtils from "GuildDirectoryUtils" /* 12308 */;
+import GuildDirectoryConstants from "GuildDirectoryConstants" /* 12309 */;
 import size from "module_2" /* 2 */;
 
 const DirectoryEntryCategories = GuildDirectoryConstants.DirectoryEntryCategories;

@@ -1,6 +1,6 @@
-// === Module 16701: useFileOrLinkImageDimensions ===
+// === Module 16704: useFileOrLinkImageDimensions ===
 
-// Module 16701 (useFileOrLinkImageDimensions)
+// Module 16704 (useFileOrLinkImageDimensions)
 import noop from "module_19" /* 19 */;
 
 const SearchConstants = fn(7878);

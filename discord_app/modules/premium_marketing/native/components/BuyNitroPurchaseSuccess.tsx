@@ -1,6 +1,6 @@
-// === Module 13391: BuyNitroPurchaseSuccess ===
+// === Module 13395: BuyNitroPurchaseSuccess ===
 
-// Module 13391 (BuyNitroPurchaseSuccess)
+// Module 13395 (BuyNitroPurchaseSuccess)
 import util from "util" /* 1114 */;
 import useAlertStore from "useAlertStore" /* 4906 */;
 import AlertModal from "AlertModal" /* 4910 */;

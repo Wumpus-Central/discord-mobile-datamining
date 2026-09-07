@@ -1,6 +1,6 @@
-// === Module 13038: VoicePanelStreamPreview ===
+// === Module 13042: VoicePanelStreamPreview ===
 
-// Module 13038 (VoicePanelStreamPreview)
+// Module 13042 (VoicePanelStreamPreview)
 import nativeDefault from "native" /* 576 */;
 import timing from "timing" /* 4561 */;
 import StreamKeyUtils from "StreamKeyUtils" /* 4612 */;
@@ -47,7 +47,7 @@ export const VoicePanelStreamPreview = function VoicePanelStreamPreview(mode) {
   if (stream != null) {
     ownerId = stream.ownerId;
   }
-  const previewUrl = stream(10062)(guildId, channelId, ownerId).previewUrl;
+  const previewUrl = stream(10067)(guildId, channelId, ownerId).previewUrl;
   let obj = mode(504);
   const items = [ApplicationStreamingStore, AuthenticationStore];
   const items1 = [stream];
@@ -104,7 +104,7 @@ export const VoicePanelStreamPreview = function VoicePanelStreamPreview(mode) {
   }
   const items2 = [tmp14, ];
   const obj3 = { style: animatedStyle, layout, children: null };
-  const tmp4 = stream(10062);
+  const tmp4 = stream(10067);
   if (stateFromStores) {
     const obj4 = { style: tmp.ownStreamTextContainer, children: null };
     const obj5 = { variant: "text-sm/semibold", color: "text-overlay-light", style: tmp.ownStreamText, children: null };

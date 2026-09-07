@@ -1,6 +1,6 @@
-// === Module 15936: ScreenRecordingActionSheet ===
+// === Module 15939: ScreenRecordingActionSheet ===
 
-// Module 15936 (ScreenRecordingActionSheet)
+// Module 15939 (ScreenRecordingActionSheet)
 import nativeDefault from "native" /* 576 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4527 */;
 import MarkupUtilsDefault from "MarkupUtils" /* 4550 */;
@@ -8,7 +8,7 @@ import noop from "module_19" /* 19 */;
 
 const require = fn;
 const View = fn(17).View;
-const useScreenRecordingStore = fn(15932).useScreenRecordingStore;
+const useScreenRecordingStore = fn(15935).useScreenRecordingStore;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
 fn(4560);

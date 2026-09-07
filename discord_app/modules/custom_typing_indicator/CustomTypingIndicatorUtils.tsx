@@ -1,6 +1,6 @@
-// === Module 11971: CustomTypingIndicatorUtils ===
+// === Module 11975: CustomTypingIndicatorUtils ===
 
-// Module 11971 (CustomTypingIndicatorUtils)
+// Module 11975 (CustomTypingIndicatorUtils)
 import BigFlagUtilsAll from "BigFlagUtils" /* 1086 */;
 import CustomTypingIndicatorTypes from "CustomTypingIndicatorTypes" /* 1392 */;
 import _modDef3549 from "module_3549" /* 3549 */;

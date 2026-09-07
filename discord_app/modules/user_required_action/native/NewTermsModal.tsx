@@ -1,12 +1,12 @@
-// === Module 17516: NewTermsModal ===
+// === Module 17519: NewTermsModal ===
 
-// Module 17516 (NewTermsModal)
+// Module 17519 (NewTermsModal)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1611 */;
 import AuthenticationActionCreatorsDefault from "AuthenticationActionCreators" /* 6593 */;
 import showSimpleActionSheet from "showSimpleActionSheet" /* 7195 */;
-import useTrackImpressionDefault from "useTrackImpression" /* 8768 */;
+import useTrackImpressionDefault from "useTrackImpression" /* 8773 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -182,15 +182,15 @@ export default function NewTermsModal() {
     const obj18 = { top };
     items4[1] = obj18;
     obj17.style = items4;
-    obj17.source = tmp2(9800);
+    obj17.source = tmp2(9805);
     obj17.color = tmp.navbarRight.tintColor;
     obj17.onPress = handleMoreActions;
     const intl9 = tmp6(1114).intl;
     obj17.accessibilityLabel = intl9.string(tmp6(1114).t["UKOtz+"]);
-    items3[2] = closure_12(tmp2(9050), obj17);
+    items3[2] = closure_12(tmp2(9055), obj17);
     obj.children = items3;
     tmp10 = closure_13(closure_6, obj);
-    const tmp2Result = tmp2(9050);
+    const tmp2Result = tmp2(9055);
   }
   return tmp10;
 };

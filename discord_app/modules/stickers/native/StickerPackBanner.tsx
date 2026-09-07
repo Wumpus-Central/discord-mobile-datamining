@@ -1,6 +1,6 @@
-// === Module 10399: StickerPackBanner ===
+// === Module 10404: StickerPackBanner ===
 
-// Module 10399 (StickerPackBanner)
+// Module 10404 (StickerPackBanner)
 import StickersUtils from "StickersUtils" /* 4899 */;
 import noop from "module_19" /* 19 */;
 

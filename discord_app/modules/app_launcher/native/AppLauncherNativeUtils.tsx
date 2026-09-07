@@ -1,6 +1,6 @@
-// === Module 12051: AppLauncherNativeUtils ===
+// === Module 12055: AppLauncherNativeUtils ===
 
-// Module 12051 (AppLauncherNativeUtils)
+// Module 12055 (AppLauncherNativeUtils)
 import AvatarUtilsDefault from "AvatarUtils" /* 1396 */;
 import _modDef1884 from "module_1884" /* 1884 */;
 import Server from "Server" /* 1894 */;
@@ -9,8 +9,8 @@ import AppAnalyticsUtils from "AppAnalyticsUtils" /* 4740 */;
 import ApplicationCommandUtils from "ApplicationCommandUtils" /* 7521 */;
 import ApplicationCommandTypes from "ApplicationCommandTypes" /* 7523 */;
 import ApplicationCommandActionCreatorsAll from "ApplicationCommandActionCreators" /* 7778 */;
-import AppLauncherUtils from "AppLauncherUtils" /* 9289 */;
-import FrecencySection from "FrecencySection" /* 12052 */;
+import AppLauncherUtils from "AppLauncherUtils" /* 9294 */;
+import FrecencySection from "FrecencySection" /* 12056 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 import UserStore from "UserStore" /* 1371 */;

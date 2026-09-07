@@ -1,9 +1,9 @@
-// === Module 16946: useProfileFramesMarketing ===
+// === Module 16949: useProfileFramesMarketing ===
 
-// Module 16946 (useProfileFramesMarketing)
+// Module 16949 (useProfileFramesMarketing)
 import CollectiblesProfileFramesExperimentDefault from "CollectiblesProfileFramesExperiment" /* 8212 */;
-import useCanPurchaseFrames from "useCanPurchaseFrames" /* 8830 */;
-import CollectiblesProfileFramesPurchaseExperiment from "CollectiblesProfileFramesPurchaseExperiment" /* 8831 */;
+import useCanPurchaseFrames from "useCanPurchaseFrames" /* 8835 */;
+import CollectiblesProfileFramesPurchaseExperiment from "CollectiblesProfileFramesPurchaseExperiment" /* 8836 */;
 import size from "module_2" /* 2 */;
 
 const CollectiblesProfileFramesPurchaseExperimentDefault = CollectiblesProfileFramesPurchaseExperiment;

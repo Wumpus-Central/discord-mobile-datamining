@@ -1,6 +1,6 @@
-// === Module 11294: FractionalPremiumUtils ===
+// === Module 11299: FractionalPremiumUtils ===
 
-// Module 11294 (FractionalPremiumUtils)
+// Module 11299 (FractionalPremiumUtils)
 import DurationsDefault from "Durations" /* 1090 */;
 import util from "util" /* 1114 */;
 import PremiumUtils from "PremiumUtils" /* 4218 */;

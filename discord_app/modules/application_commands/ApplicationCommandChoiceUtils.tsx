@@ -1,6 +1,6 @@
-// === Module 9414: ApplicationCommandChoiceUtils ===
+// === Module 9419: ApplicationCommandChoiceUtils ===
 
-// Module 9414 (ApplicationCommandChoiceUtils)
+// Module 9419 (ApplicationCommandChoiceUtils)
 import ApplicationCommandAutocompleteStore from "ApplicationCommandAutocompleteStore" /* 7779 */;
 
 const ApplicationCommandConstants = fn(4999);

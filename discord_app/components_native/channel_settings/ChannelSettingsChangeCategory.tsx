@@ -1,6 +1,6 @@
-// === Module 16853: ChannelSettingsChangeCategory ===
+// === Module 16856: ChannelSettingsChangeCategory ===
 
-// Module 16853 (ChannelSettingsChangeCategory)
+// Module 16856 (ChannelSettingsChangeCategory)
 import _modDef38 from "module_38" /* 38 */;
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
@@ -11,7 +11,7 @@ import Stack_Stack from "Stack/Stack" /* 4973 */;
 import GuildActionCreatorsDefault from "GuildActionCreators" /* 5520 */;
 import TableRow from "TableRow" /* 5605 */;
 import TableRowGroup from "TableRowGroup" /* 5687 */;
-import Form from "Form" /* 8593 */;
+import Form from "Form" /* 8598 */;
 import _slicedToArray from "module_32" /* 32 */;
 import _toArray from "_toArray" /* 718 */;
 import noop from "module_19" /* 19 */;
@@ -286,7 +286,7 @@ export default function ConnectedChannelSettingsChangeCategory(channelId) {
   const obj = channelId(504);
   const navigation = channelId(1483).useNavigation();
   const obj2 = channelId(1483);
-  const appChannelBotUserId = channelId(11610).useAppChannelBotUserId(channel);
+  const appChannelBotUserId = channelId(11615).useAppChannelBotUserId(channel);
   _modDef38(null != channel, "ConnectedChannelSettingsChangeCategory: channel cannot be undefined");
   return closure_13(ChannelSettingsChangeCategory, { channel, navigation, appChannelBotUserId });
 };

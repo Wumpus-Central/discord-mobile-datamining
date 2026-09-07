@@ -1,6 +1,6 @@
-// === Module 14692: SettingRenderer ===
+// === Module 14695: SettingRenderer ===
 
-// Module 14692 (SettingRenderer)
+// Module 14695 (SettingRenderer)
 import nativeDefault from "native" /* 576 */;
 import KeyboardManagerUtils from "KeyboardManagerUtils" /* 1874 */;
 import ToastUtils from "ToastUtils" /* 4258 */;
@@ -16,16 +16,16 @@ import TableRadioRow from "TableRadioRow" /* 5688 */;
 import Tracking from "Tracking" /* 6997 */;
 import ClipboardUtils from "ClipboardUtils" /* 7190 */;
 import TableSwitchRow from "TableSwitchRow" /* 7201 */;
-import VolumeSliderDefault from "VolumeSlider" /* 9986 */;
-import ClydeIcon from "ClydeIcon" /* 10818 */;
-import SettingRendererUtils from "SettingRendererUtils" /* 14693 */;
-import useHighlightSettingItem from "useHighlightSettingItem" /* 14695 */;
-import SettingListItemHighlightDefault from "SettingListItemHighlight" /* 14696 */;
+import VolumeSliderDefault from "VolumeSlider" /* 9991 */;
+import ClydeIcon from "ClydeIcon" /* 10823 */;
+import SettingRendererUtils from "SettingRendererUtils" /* 14696 */;
+import useHighlightSettingItem from "useHighlightSettingItem" /* 14698 */;
+import SettingListItemHighlightDefault from "SettingListItemHighlight" /* 14699 */;
 import _slicedToArray from "module_32" /* 32 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 import LocaleStore from "LocaleStore" /* 2025 */;
-import UserSettingSearchStore from "UserSettingSearchStore" /* 14691 */;
+import UserSettingSearchStore from "UserSettingSearchStore" /* 14694 */;
 import GuildStore from "GuildStore" /* 1979 */;
 
 const GuildIconDefault = GuildIcon;
@@ -182,7 +182,7 @@ function SettingSearchResultPlaceholder(arg0) {
 let closure_3 = ["onSlidingComplete", "step", "startIcon", "endIcon", "minimumValue", "maximumValue", "valueLabel", "defaultValue", "onValueChange"];
 let closure_4 = ["settingData"];
 const View = fn(17).View;
-const SettingRendererConstants = fn(11469);
+const SettingRendererConstants = fn(11474);
 ({ GUILD_SELECT_ALL_SERVERS_OPTION_ID: closure_12, NodeType: map1 } = SettingRendererConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_14, Fragment: closure_15, jsxs: closure_16 } = jsxProd);
@@ -424,7 +424,7 @@ let closure_25 = noop.memo((arg0) => {
   ({ variant, useTrailing, useIsDisabled, useDescription, start, end, IconComponent } = arg0);
   let trailing;
   ({ setting, useTitle } = arg0);
-  let obj = trailing(14695);
+  let obj = trailing(14698);
   let highlightSettingItem = obj.useHighlightSettingItem(setting);
   trailing = undefined;
   const title = useTitle();

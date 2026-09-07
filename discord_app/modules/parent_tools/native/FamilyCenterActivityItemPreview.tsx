@@ -1,16 +1,16 @@
-// === Module 14903: FamilyCenterActivityItemPreview ===
+// === Module 14906: FamilyCenterActivityItemPreview ===
 
-// Module 14903 (FamilyCenterActivityItemPreview)
+// Module 14906 (FamilyCenterActivityItemPreview)
 import nativeDefault from "native" /* 576 */;
 import utils from "utils" /* 1886 */;
 import CollectiblesItemType from "CollectiblesItemType" /* 1889 */;
 import useMaybeFetchProfileFrameDefault from "useMaybeFetchProfileFrame" /* 8201 */;
-import NitroWheelIcon2 from "NitroWheelIcon" /* 8662 */;
-import NameplateUtils from "NameplateUtils" /* 8819 */;
-import ProfileFrameSamplePreviewDefault from "ProfileFrameSamplePreview" /* 8822 */;
-import BoostGemIcon from "BoostGemIcon" /* 9375 */;
-import ShopIcon from "ShopIcon" /* 12138 */;
-import FamilyCenterActivityPurchaseRowUtils from "FamilyCenterActivityPurchaseRowUtils" /* 14902 */;
+import NitroWheelIcon2 from "NitroWheelIcon" /* 8667 */;
+import NameplateUtils from "NameplateUtils" /* 8824 */;
+import ProfileFrameSamplePreviewDefault from "ProfileFrameSamplePreview" /* 8827 */;
+import BoostGemIcon from "BoostGemIcon" /* 9380 */;
+import ShopIcon from "ShopIcon" /* 12142 */;
+import FamilyCenterActivityPurchaseRowUtils from "FamilyCenterActivityPurchaseRowUtils" /* 14905 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -130,15 +130,15 @@ let closure_5 = fn(8222).PROFILE_FRAME_ASPECT_RATIO;
 const jsx = fn(21).jsx;
 fn(4560);
 const createStyles = { purchasePlaceholder: null, avatarDecorationPreview: null, nameplateContainer: null, nameplatePreview: null, profileFrameContainer: null };
-let size = { width: fn(14902).PREVIEW_SIZE, height: fn(14902).PREVIEW_SIZE, borderRadius: nativeDefault.radii.xs, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, display: "flex", alignItems: "center", justifyContent: "center", marginRight: 12 };
+let size = { width: fn(14905).PREVIEW_SIZE, height: fn(14905).PREVIEW_SIZE, borderRadius: nativeDefault.radii.xs, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, display: "flex", alignItems: "center", justifyContent: "center", marginRight: 12 };
 createStyles.purchasePlaceholder = size;
-const size1 = { width: fn(14902).PREVIEW_SIZE, height: fn(14902).PREVIEW_SIZE, marginRight: 12 };
+const size1 = { width: fn(14905).PREVIEW_SIZE, height: fn(14905).PREVIEW_SIZE, marginRight: 12 };
 createStyles.avatarDecorationPreview = size1;
-const size2 = { width: fn(14902).PREVIEW_SIZE, height: fn(14902).PREVIEW_SIZE, marginRight: 12, borderRadius: nativeDefault.radii.xs, overflow: "hidden", position: "relative" };
+const size2 = { width: fn(14905).PREVIEW_SIZE, height: fn(14905).PREVIEW_SIZE, marginRight: 12, borderRadius: nativeDefault.radii.xs, overflow: "hidden", position: "relative" };
 createStyles.nameplateContainer = size2;
-const size3 = { position: "absolute", right: 0, width: fn(14902).PREVIEW_SIZE * fn(14902).NAMEPLATE_ASPECT_RATIO, height: fn(14902).PREVIEW_SIZE };
+const size3 = { position: "absolute", right: 0, width: fn(14905).PREVIEW_SIZE * fn(14905).NAMEPLATE_ASPECT_RATIO, height: fn(14905).PREVIEW_SIZE };
 createStyles.nameplatePreview = size3;
-const size4 = { width: fn(14902).PREVIEW_SIZE, height: fn(14902).PREVIEW_SIZE, marginRight: 12, alignItems: "center", justifyContent: "center" };
+const size4 = { width: fn(14905).PREVIEW_SIZE, height: fn(14905).PREVIEW_SIZE, marginRight: 12, alignItems: "center", justifyContent: "center" };
 createStyles.profileFrameContainer = size4;
 let closure_7 = createStyles.createStyles(createStyles);
 size = fn(2);

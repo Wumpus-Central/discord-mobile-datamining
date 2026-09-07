@@ -1,11 +1,11 @@
-// === Module 8830: useCanPurchaseFrames ===
+// === Module 8835: useCanPurchaseFrames ===
 
-// Module 8830 (useCanPurchaseFrames)
+// Module 8835 (useCanPurchaseFrames)
 import initialize from "initialize" /* 504 */;
 import user from "user" /* 1379 */;
 import PremiumTypeUtils from "PremiumTypeUtils" /* 1885 */;
 import CollectiblesProfileFramesExperiment from "CollectiblesProfileFramesExperiment" /* 8212 */;
-import CollectiblesProfileFramesPurchaseExperiment from "CollectiblesProfileFramesPurchaseExperiment" /* 8831 */;
+import CollectiblesProfileFramesPurchaseExperiment from "CollectiblesProfileFramesPurchaseExperiment" /* 8836 */;
 import UserStore from "UserStore" /* 1371 */;
 
 const CollectiblesProfileFramesPurchaseExperimentDefault = CollectiblesProfileFramesPurchaseExperiment;

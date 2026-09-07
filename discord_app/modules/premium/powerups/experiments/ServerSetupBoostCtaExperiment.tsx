@@ -1,6 +1,6 @@
-// === Module 12588: ServerSetupBoostCtaExperiment ===
+// === Module 12592: ServerSetupBoostCtaExperiment ===
 
-// Module 12588 (ServerSetupBoostCtaExperiment)
+// Module 12592 (ServerSetupBoostCtaExperiment)
 import ApexExperiment from "ApexExperiment" /* 1433 */;
 import size from "module_2" /* 2 */;
 

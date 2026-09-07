@@ -1,6 +1,6 @@
-// === Module 8717: TrophyIcon ===
+// === Module 8722: TrophyIcon ===
 
-// Module 8717 (TrophyIcon)
+// Module 8722 (TrophyIcon)
 import nativeDefault from "native" /* 576 */;
 import BaseIconImage from "BaseIconImage" /* 4261 */;
 import _mod8137 from "module_8137" /* 8137 */;

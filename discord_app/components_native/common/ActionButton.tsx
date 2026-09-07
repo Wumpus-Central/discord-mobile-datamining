@@ -1,6 +1,6 @@
-// === Module 10896: ActionButton ===
+// === Module 10901: ActionButton ===
 
-// Module 10896 (ActionButton)
+// Module 10901 (ActionButton)
 import ButtonHooks from "ButtonHooks" /* 4981 */;
 import IconButton from "IconButton" /* 8097 */;
 import noop from "module_19" /* 19 */;

@@ -1,6 +1,6 @@
-// === Module 16867: ContextMenuCommandNavigator ===
+// === Module 16870: ContextMenuCommandNavigator ===
 
-// Module 16867 (ContextMenuCommandNavigator)
+// Module 16870 (ContextMenuCommandNavigator)
 import nativeDefault from "native" /* 576 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1611 */;
 import HeaderShared from "HeaderShared" /* 7863 */;
@@ -62,7 +62,7 @@ export default function ContextMenuCommandNavigator() {
   obj2.title = intl.string(require("util").t.PHjkRE);
   obj1.options = obj2;
   obj1.getComponent = function getComponent() {
-    return closure_0(16868).default;
+    return closure_0(16871).default;
   };
   const items1 = [
     closure_5(Screen, obj1),
@@ -77,7 +77,7 @@ export default function ContextMenuCommandNavigator() {
         return { title };
       },
       getComponent() {
-        return closure_0(16870).default;
+        return closure_0(16873).default;
       }
     })
   ];

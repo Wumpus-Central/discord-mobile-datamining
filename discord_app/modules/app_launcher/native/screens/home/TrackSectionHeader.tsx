@@ -1,9 +1,9 @@
-// === Module 12096: TrackSectionHeader ===
+// === Module 12100: TrackSectionHeader ===
 
-// Module 12096 (TrackSectionHeader)
+// Module 12100 (TrackSectionHeader)
 import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1250 */;
-import useTrackImpressionDefault from "useTrackImpression" /* 8768 */;
-import AppLauncherStore from "AppLauncherStore" /* 9408 */;
+import useTrackImpressionDefault from "useTrackImpression" /* 8773 */;
+import AppLauncherStore from "AppLauncherStore" /* 9413 */;
 
 require = fn;
 const size = fn(2);

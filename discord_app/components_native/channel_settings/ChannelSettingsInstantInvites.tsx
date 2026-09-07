@@ -1,20 +1,20 @@
-// === Module 16819: ChannelSettingsInstantInvites ===
+// === Module 16822: ChannelSettingsInstantInvites ===
 
-// Module 16819 (ChannelSettingsInstantInvites)
+// Module 16822 (ChannelSettingsInstantInvites)
 import nativeDefault from "native" /* 576 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1611 */;
-import InstantInvite from "InstantInvite" /* 10932 */;
+import InstantInvite from "InstantInvite" /* 10937 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ChannelSettingsStore from "ChannelSettingsStore" /* 8626 */;
+import ChannelSettingsStore from "ChannelSettingsStore" /* 8631 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 
 const InstantInviteDefault = InstantInvite;
 
 const FastestListDefault = tmp2(7055);
-const _modDef10949 = tmp2(10949);
-const _modDef10950 = tmp2(10950);
-const InstantInviteSelfMeasurerDefault = tmp2(16820);
+const _modDef10954 = tmp2(10954);
+const _modDef10955 = tmp2(10955);
+const InstantInviteSelfMeasurerDefault = tmp2(16823);
 require = fn;
 const View = fn(17).View;
 const ChannelSettingsSections = fn(1074).ChannelSettingsSections;
@@ -105,7 +105,7 @@ export default function ConnectedChannelSettingsInstantInvites() {
   }, items7);
   if (!loading) {
     if (0 === memo1.length) {
-      obj = { lightSource: _modDef10949, darkSource: _modDef10950, title: null, body: null };
+      obj = { lightSource: _modDef10954, darkSource: _modDef10955, title: null, body: null };
       const intl = tmpResult(1114).intl;
       obj.title = intl.string(tmpResult(1114).t["+nLJkZ"]);
       const intl2 = tmpResult(1114).intl;

@@ -1,6 +1,6 @@
-// === Module 11190: BadgeCatalogIcon ===
+// === Module 11195: BadgeCatalogIcon ===
 
-// Module 11190 (BadgeCatalogIcon)
+// Module 11195 (BadgeCatalogIcon)
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -66,8 +66,8 @@ export default function BadgeCatalogIcon(style) {
     if (url === complex_icon_animated_url) {
       let xml = tmp4.xml;
     } else {
-      xml = complex_icon_animated_url(11191).getCachedSvgXml(complex_icon_animated_url);
-      const obj6 = complex_icon_animated_url(11191);
+      xml = complex_icon_animated_url(11196).getCachedSvgXml(complex_icon_animated_url);
+      const obj6 = complex_icon_animated_url(11196);
     }
     obj = { style: items1, "aria-hidden": true, children: null };
     let tmp15Result = null;
@@ -75,7 +75,7 @@ export default function BadgeCatalogIcon(style) {
       size = { xml, width: null, height: null };
       size.width = size;
       size.height = size;
-      tmp15Result = jsx(complex_icon_animated_url(8453).SvgXml, { xml, width: null, height: null });
+      tmp15Result = jsx(complex_icon_animated_url(8456).SvgXml, { xml, width: null, height: null });
     }
     obj.children = tmp15Result;
     return <View style={items1} aria-hidden>{null}</View>;

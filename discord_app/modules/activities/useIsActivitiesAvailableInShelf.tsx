@@ -1,7 +1,7 @@
-// === Module 9501: useIsActivitiesAvailableInShelf ===
+// === Module 9506: useIsActivitiesAvailableInShelf ===
 
-// Module 9501 (useIsActivitiesAvailableInShelf)
-import EmbeddedActivitiesActionCreators from "EmbeddedActivitiesActionCreators" /* 9504 */;
+// Module 9506 (useIsActivitiesAvailableInShelf)
+import EmbeddedActivitiesActionCreators from "EmbeddedActivitiesActionCreators" /* 9509 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

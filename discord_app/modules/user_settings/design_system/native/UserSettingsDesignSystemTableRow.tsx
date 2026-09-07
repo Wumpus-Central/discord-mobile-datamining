@@ -1,6 +1,6 @@
-// === Module 15767: UserSettingsDesignSystemTableRow ===
+// === Module 15770: UserSettingsDesignSystemTableRow ===
 
-// Module 15767 (UserSettingsDesignSystemTableRow)
+// Module 15770 (UserSettingsDesignSystemTableRow)
 import initialize from "initialize" /* 504 */;
 import native from "native" /* 1178 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1396 */;
@@ -16,11 +16,11 @@ import TableRowGroup from "TableRowGroup" /* 5687 */;
 import TableRadioRow from "TableRadioRow" /* 5688 */;
 import TableSwitchRow from "TableSwitchRow" /* 7201 */;
 import SettingsIcon from "SettingsIcon" /* 7380 */;
-import RowButton from "RowButton" /* 8595 */;
-import _modDef14109 from "module_14109" /* 14109 */;
-import _modDef14110 from "module_14110" /* 14110 */;
-import _modDef14111 from "module_14111" /* 14111 */;
+import RowButton from "RowButton" /* 8600 */;
 import _modDef14112 from "module_14112" /* 14112 */;
+import _modDef14113 from "module_14113" /* 14113 */;
+import _modDef14114 from "module_14114" /* 14114 */;
+import _modDef14115 from "module_14115" /* 14115 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import SelectedGuildStore from "SelectedGuildStore" /* 4381 */;
@@ -183,26 +183,26 @@ export default function UserSettingsDesignSystemTableRow() {
   const obj46 = { label: "First Item", subLabel: "Here is an item", onPress };
   const obj47 = { label: "Second Item", subLabel: "Here is another item", onPress };
   const obj48 = { label: "Third Item", subLabel: "Here is yet another item", onPress };
-  obj51.icon = closure_12(TableRowIcon.TableRowIcon, { variant: "text-status-online", source: _modDef14112 });
+  obj51.icon = closure_12(TableRowIcon.TableRowIcon, { variant: "text-status-online", source: _modDef14115 });
   const items8 = [closure_12(TableRadioRow.TableRadioRow, obj51), , , ];
   const obj53 = { icon: null, label: "Idle", value: "option2" };
-  const obj52 = { variant: "text-status-online", source: _modDef14112 };
-  obj53.icon = closure_12(TableRowIcon.TableRowIcon, { variant: "text-status-idle", source: _modDef14109 });
+  const obj52 = { variant: "text-status-online", source: _modDef14115 };
+  obj53.icon = closure_12(TableRowIcon.TableRowIcon, { variant: "text-status-idle", source: _modDef14112 });
   items8[1] = closure_12(TableRadioRow.TableRadioRow, obj53);
   const obj55 = { icon: null, label: "Do Not Disturb", value: "option3" };
-  const obj54 = { variant: "text-status-idle", source: _modDef14109 };
-  obj55.icon = closure_12(TableRowIcon.TableRowIcon, { variant: "text-status-dnd", source: _modDef14110 });
+  const obj54 = { variant: "text-status-idle", source: _modDef14112 };
+  obj55.icon = closure_12(TableRowIcon.TableRowIcon, { variant: "text-status-dnd", source: _modDef14113 });
   items8[2] = closure_12(TableRadioRow.TableRadioRow, obj55);
   const obj57 = { icon: null, label: "Invisible", value: "option4" };
-  const obj56 = { variant: "text-status-dnd", source: _modDef14110 };
-  obj57.icon = closure_12(TableRowIcon.TableRowIcon, { variant: "text-status-offline", source: _modDef14111 });
+  const obj56 = { variant: "text-status-dnd", source: _modDef14113 };
+  obj57.icon = closure_12(TableRowIcon.TableRowIcon, { variant: "text-status-offline", source: _modDef14114 });
   items8[3] = closure_12(TableRadioRow.TableRadioRow, obj57);
   obj50.children = items8;
   items3[5] = closure_13(TableRadioGroup.TableRadioGroup, obj50);
   const obj59 = { spacing: 12, children: null };
   const items9 = [closure_12(Text_Text.Text, { variant: "heading-sm/semibold", children: "Row buttons" }), , , ];
   const obj60 = { icon: null, label: "Boost your server", onPress: null };
-  const obj58 = { variant: "text-status-offline", source: _modDef14111 };
+  const obj58 = { variant: "text-status-offline", source: _modDef14114 };
   obj60.icon = closure_12(TableRow.TableRow.Icon, { IconComponent: SettingsIcon.SettingsIcon });
   obj60.onPress = onPress;
   items9[1] = closure_12(RowButton.RowButton, obj60);

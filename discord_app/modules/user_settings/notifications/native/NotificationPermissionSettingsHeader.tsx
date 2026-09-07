@@ -1,6 +1,6 @@
-// === Module 15483: NotificationPermissionSettingsHeader ===
+// === Module 15486: NotificationPermissionSettingsHeader ===
 
-// Module 15483 (NotificationPermissionSettingsHeader)
+// Module 15486 (NotificationPermissionSettingsHeader)
 import nativeDefault from "native" /* 576 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
 import noop from "module_19" /* 19 */;
@@ -9,7 +9,7 @@ const require = fn;
 const View = fn(17).View;
 const Constants = fn(1074);
 ({ AnalyticEvents: hasOwnProperty, NOOP: metroRequire } = Constants);
-const NotificationPermissionConstants = fn(12410);
+const NotificationPermissionConstants = fn(12414);
 ({ EventActionLocation: closure_7, EventActionType: closure_8, NotificationNudgeAnalyticsAction: closure_9, NotificationNudgeSurface: c10 } = NotificationPermissionConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
@@ -27,7 +27,7 @@ const result = size.fileFinishedImporting("modules/user_settings/notifications/n
 
 export default function NotificationPermissionSettingsHeader() {
   const tmp = closure_13();
-  let obj = canSeePushNotificationNudge(12411);
+  let obj = canSeePushNotificationNudge(12415);
   canSeePushNotificationNudge = obj.useCanSeePushNotificationNudge();
   const items = [canSeePushNotificationNudge];
   const effect = noop.useEffect(() => {
@@ -43,7 +43,7 @@ export default function NotificationPermissionSettingsHeader() {
     const obj1 = { style: tmp.cardContent, children: null };
     const obj2 = { style: tmp.iconCircle, children: null };
     const obj3 = { size: "md", color: nativeDefault.colors.ICON_STRONG };
-    obj2.children = closure_11(tmp2(9059).BellSlashIcon, obj3);
+    obj2.children = closure_11(tmp2(9064).BellSlashIcon, obj3);
     const items1 = [closure_11(View, obj2), , , ];
     const obj4 = { variant: "heading-lg/bold", color: "text-default", children: null };
     const intl = tmp2(1114).intl;

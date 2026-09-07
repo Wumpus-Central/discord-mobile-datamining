@@ -1,6 +1,6 @@
-// === Module 16496: ICYMIMessageRowPreview ===
+// === Module 16499: ICYMIMessageRowPreview ===
 
-// Module 16496 (ICYMIMessageRowPreview)
+// Module 16499 (ICYMIMessageRowPreview)
 import util from "util" /* 1114 */;
 import UserSettings from "UserSettings" /* 1935 */;
 import createStyles from "createStyles" /* 4560 */;
@@ -51,7 +51,7 @@ function ICYMIMessageRowPreview(pointerEvents) {
     messageSizeCacheRef,
     maxHeight
   };
-  return setting2(messageOptions(8652), obj);
+  return setting2(messageOptions(8657), obj);
 }
 const MessageEmbedTypes = fn(1074).MessageEmbedTypes;
 const jsx = fn(21).jsx;

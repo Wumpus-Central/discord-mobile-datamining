@@ -1,14 +1,14 @@
-// === Module 15055: BountiesAutoScrollIndicator ===
+// === Module 15058: BountiesAutoScrollIndicator ===
 
-// Module 15055 (BountiesAutoScrollIndicator)
+// Module 15058 (BountiesAutoScrollIndicator)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import useToken from "useToken" /* 4262 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4296 */;
 import Text_Text from "Text/Text" /* 4556 */;
 import timing from "timing" /* 4561 */;
-import ArrowSmallUpIcon from "ArrowSmallUpIcon" /* 15056 */;
-import CircularProgress from "CircularProgress" /* 15058 */;
+import ArrowSmallUpIcon from "ArrowSmallUpIcon" /* 15059 */;
+import CircularProgress from "CircularProgress" /* 15061 */;
 import noop from "module_19" /* 19 */;
 
 const ReanimatedRexportDefault = ReanimatedRexport;

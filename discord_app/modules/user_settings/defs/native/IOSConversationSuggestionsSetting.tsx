@@ -1,6 +1,6 @@
-// === Module 14849: IOSConversationSuggestionsSetting ===
+// === Module 14852: IOSConversationSuggestionsSetting ===
 
-// Module 14849 (IOSConversationSuggestionsSetting)
+// Module 14852 (IOSConversationSuggestionsSetting)
 import LoggerDefault from "Logger" /* 3 */;
 import util from "util" /* 1114 */;
 import PlatformUtils from "PlatformUtils" /* 1115 */;
@@ -11,7 +11,7 @@ require = fn;
 let identity = fn(1244);
 let closure_4 = identity.createWithEqualityFn(() => ({ isEnabled: true }));
 fn(17).NativeModules.IntentsHandler;
-const SettingBuilders = fn(11468);
+const SettingBuilders = fn(11473);
 identity = {
   useTitle() {
     const intl = util.intl;

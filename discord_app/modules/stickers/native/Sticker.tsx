@@ -1,6 +1,6 @@
-// === Module 10176: Sticker ===
+// === Module 10181: Sticker ===
 
-// Module 10176 (Sticker)
+// Module 10181 (Sticker)
 import util from "util" /* 1114 */;
 import StickersUtils from "StickersUtils" /* 4899 */;
 import StickersTypes from "StickersTypes" /* 5268 */;
@@ -8,7 +8,7 @@ import FastImageDefault from "FastImage" /* 5587 */;
 import _modDef7131 from "module_7131" /* 7131 */;
 import _modDef7132 from "module_7132" /* 7132 */;
 import NativeLottieView from "NativeLottieView" /* 7999 */;
-import NativeAPNGViewDefault from "NativeAPNGView" /* 10177 */;
+import NativeAPNGViewDefault from "NativeAPNGView" /* 10182 */;
 import noop from "module_19" /* 19 */;
 import ThemeStore from "ThemeStore" /* 1183 */;
 

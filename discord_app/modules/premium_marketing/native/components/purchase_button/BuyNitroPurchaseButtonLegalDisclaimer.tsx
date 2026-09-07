@@ -1,6 +1,6 @@
-// === Module 13389: BuyNitroPurchaseButtonLegalDisclaimer ===
+// === Module 13393: BuyNitroPurchaseButtonLegalDisclaimer ===
 
-// Module 13389 (BuyNitroPurchaseButtonLegalDisclaimer)
+// Module 13393 (BuyNitroPurchaseButtonLegalDisclaimer)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import PlatformUtils from "PlatformUtils" /* 1115 */;

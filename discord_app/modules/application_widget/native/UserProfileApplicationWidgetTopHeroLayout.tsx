@@ -1,13 +1,13 @@
-// === Module 8925: UserProfileApplicationWidgetTopHeroLayout ===
+// === Module 8930: UserProfileApplicationWidgetTopHeroLayout ===
 
-// Module 8925 (UserProfileApplicationWidgetTopHeroLayout)
+// Module 8930 (UserProfileApplicationWidgetTopHeroLayout)
 import nativeDefault from "native" /* 576 */;
 import LinearGradientDefault from "LinearGradient" /* 4987 */;
 import _modDef5664 from "module_5664" /* 5664 */;
 import UserProfileSharedStyles from "UserProfileSharedStyles" /* 8241 */;
-import resolvedValuesFromUserApplicationIdentityProfile from "resolvedValuesFromUserApplicationIdentityProfile" /* 8926 */;
-import UserProfileApplicationWidgetFieldUtils from "UserProfileApplicationWidgetFieldUtils" /* 9013 */;
-import UserProfileApplicationWidgetSkeletons from "UserProfileApplicationWidgetSkeletons" /* 9014 */;
+import resolvedValuesFromUserApplicationIdentityProfile from "resolvedValuesFromUserApplicationIdentityProfile" /* 8931 */;
+import UserProfileApplicationWidgetFieldUtils from "UserProfileApplicationWidgetFieldUtils" /* 9018 */;
+import UserProfileApplicationWidgetSkeletons from "UserProfileApplicationWidgetSkeletons" /* 9019 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 

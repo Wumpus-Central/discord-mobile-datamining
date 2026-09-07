@@ -1,11 +1,11 @@
-// === Module 10805: hooks/NativePaymentHooks ===
+// === Module 10810: hooks/NativePaymentHooks ===
 
-// Module 10805 (hooks/NativePaymentHooks)
+// Module 10810 (hooks/NativePaymentHooks)
 import LoggerDefault from "Logger" /* 3 */;
 import BillingUtils from "BillingUtils" /* 4233 */;
 import ProductIds from "ProductIds" /* 7240 */;
 import BillingActionCreatorsDefault from "BillingActionCreators" /* 7419 */;
-import PaymentFlowStartedTriggerPoint from "PaymentFlowStartedTriggerPoint" /* 10808 */;
+import PaymentFlowStartedTriggerPoint from "PaymentFlowStartedTriggerPoint" /* 10813 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -277,7 +277,7 @@ function useResubscribeSubscription(connected) {
       products = BillingActionCreatorsDefault.loadProducts();
     }
   }, items1);
-  nativePaymentsConnected(10755)(() => {
+  nativePaymentsConnected(10760)(() => {
     let tmp = memo;
     if (!memo) {
       tmp = c15;
@@ -312,7 +312,7 @@ function useResubscribeSubscription(connected) {
     }
     return tmp3;
   }, items4);
-  const tmp12 = nativePaymentsConnected(10811)(connected);
+  const tmp12 = nativePaymentsConnected(10816)(connected);
   noop = tmp12;
   obj = { resubscribeSubscription: null, nativePaymentsConnected };
   const items5 = [memo, nativePaymentsConnected, tmp12, stateFromStores];

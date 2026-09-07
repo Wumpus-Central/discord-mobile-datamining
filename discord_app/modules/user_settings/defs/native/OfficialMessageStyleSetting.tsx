@@ -1,9 +1,9 @@
-// === Module 15332: OfficialMessageStyleSetting ===
+// === Module 15335: OfficialMessageStyleSetting ===
 
-// Module 15332 (OfficialMessageStyleSetting)
+// Module 15335 (OfficialMessageStyleSetting)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1114 */;
-import AccessibilityActionCreators from "AccessibilityActionCreators" /* 14437 */;
+import AccessibilityActionCreators from "AccessibilityActionCreators" /* 14440 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4552 */;
 
@@ -36,7 +36,7 @@ function useOfficialMessageStyleSettingOptions() {
     return items;
   }, []);
 }
-fn(11468);
+fn(11473);
 let SettingBuilders = {
   useTitle() {
     const intl = util.intl;

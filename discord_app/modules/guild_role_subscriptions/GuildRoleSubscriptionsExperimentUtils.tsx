@@ -1,6 +1,6 @@
-// === Module 13893: GuildRoleSubscriptionsExperimentUtils ===
+// === Module 13896: GuildRoleSubscriptionsExperimentUtils ===
 
-// Module 13893 (GuildRoleSubscriptionsExperimentUtils)
+// Module 13896 (GuildRoleSubscriptionsExperimentUtils)
 import GuildStore from "GuildStore" /* 1979 */;
 
 const require = fn;

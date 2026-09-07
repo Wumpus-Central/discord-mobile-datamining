@@ -1,14 +1,14 @@
-// === Module 12747: DiscoverabilityModal ===
+// === Module 12751: DiscoverabilityModal ===
 
-// Module 12747 (DiscoverabilityModal)
+// Module 12751 (DiscoverabilityModal)
 import nativeDefault from "native" /* 576 */;
 import ConstantsIOS from "ConstantsIOS" /* 1093 */;
 import util from "util" /* 1114 */;
 import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1250 */;
 import Navigator from "Navigator" /* 7000 */;
-import ContactSyncActionCreatorsDefault from "ContactSyncActionCreators" /* 12684 */;
-import ContactSyncNameInputDefault from "ContactSyncNameInput" /* 12697 */;
-import NUFActionCreators from "NUFActionCreators" /* 12704 */;
+import ContactSyncActionCreatorsDefault from "ContactSyncActionCreators" /* 12688 */;
+import ContactSyncNameInputDefault from "ContactSyncNameInput" /* 12701 */;
+import NUFActionCreators from "NUFActionCreators" /* 12708 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1371 */;
 
@@ -60,9 +60,9 @@ function DiscoverabilityNameScene() {
   }, items);
   let obj = { style: tmp.container, children: null };
   const callback = noop.useCallback((arg0) => {
-    const result = allowPhone(12704).startContactSyncForDiscoverability(arg0);
-    const obj = allowPhone(12704);
-    const result1 = allowPhone(12704).closeDiscoverabilityModal(false);
+    const result = allowPhone(12708).startContactSyncForDiscoverability(arg0);
+    const obj = allowPhone(12708);
+    const result1 = allowPhone(12708).closeDiscoverabilityModal(false);
   }, []);
   obj = { onNext: callback, loading: false, initialName: null };
   const tmp2 = useContactSyncModalStore();
@@ -116,7 +116,7 @@ class DiscoverabilityModal {
   }
 }
 const View = fn(17).View;
-const useContactSyncModalStore = fn(12677).useContactSyncModalStore;
+const useContactSyncModalStore = fn(12681).useContactSyncModalStore;
 const jsx = fn(21).jsx;
 fn(4560);
 let createStyles = { container: null };

@@ -1,12 +1,12 @@
-// === Module 12997: AddOrOpenAppButton ===
+// === Module 13001: AddOrOpenAppButton ===
 
-// Module 12997 (AddOrOpenAppButton)
+// Module 13001 (AddOrOpenAppButton)
 import ToastUtils from "ToastUtils" /* 4258 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4527 */;
 import ClipboardUtils from "ClipboardUtils" /* 7190 */;
-import ApplicationUtils from "ApplicationUtils" /* 9573 */;
-import getApplicationInstallURL from "getApplicationInstallURL" /* 12132 */;
-import useIsAppDMDefault from "useIsAppDM" /* 12145 */;
+import ApplicationUtils from "ApplicationUtils" /* 9578 */;
+import getApplicationInstallURL from "getApplicationInstallURL" /* 12136 */;
+import useIsAppDMDefault from "useIsAppDM" /* 12149 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -28,7 +28,7 @@ function AddAppButton(application) {
   const customInstallUrl = application.customInstallUrl;
   if (null != customInstallUrl) {
     if (!obj2.isDiscordUrl(customInstallUrl)) {
-      let PlusSmallIcon = application(8580).LinkExternalSmallIcon;
+      let PlusSmallIcon = application(8583).LinkExternalSmallIcon;
       let tmp6 = application;
     }
     const items1 = [application];
@@ -57,7 +57,7 @@ function AddAppButton(application) {
     obj.icon = <PlusSmallIcon size="sm" color={guildId(576).colors.WHITE} />;
     return jsx(tmp6(4975).Button, { size: "sm", color: guildId(576).colors.WHITE });
   }
-  PlusSmallIcon = application(8867).PlusSmallIcon;
+  PlusSmallIcon = application(8872).PlusSmallIcon;
   tmp6 = application;
 }
 function OpenAppButton(profileApplication) {
@@ -186,7 +186,7 @@ function OpenAppButton(profileApplication) {
   obj.onPress = callback;
   return jsx(profileApplication(channel[17]).Button, { text: null, loading: null, onPress: null });
 }
-const getSection = fn(9290).getSection;
+const getSection = fn(9295).getSection;
 const AnalyticEvents = fn(1074).AnalyticEvents;
 const AppLauncherRouteName = fn(1482).AppLauncherRouteName;
 const jsx = fn(21).jsx;

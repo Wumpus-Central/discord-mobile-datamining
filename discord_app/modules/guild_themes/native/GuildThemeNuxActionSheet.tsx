@@ -1,6 +1,6 @@
-// === Module 16161: GuildThemeNuxActionSheet ===
+// === Module 16164: GuildThemeNuxActionSheet ===
 
-// Module 16161 (GuildThemeNuxActionSheet)
+// Module 16164 (GuildThemeNuxActionSheet)
 import LoggerDefault from "Logger" /* 3 */;
 import nativeDefault from "native" /* 576 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4527 */;
@@ -45,8 +45,8 @@ export default function GuildThemeNuxActionSheet(guildId) {
   let stateFromStores;
   let callback1;
   const tmp = closure_14();
-  [tmp5, c2] = _slicedToArray(noop.useState(guildId(16162).getInitialGuildThemeNuxSelection), 2);
-  const tmp4 = _slicedToArray(noop.useState(guildId(16162).getInitialGuildThemeNuxSelection), 2);
+  [tmp5, c2] = _slicedToArray(noop.useState(guildId(16165).getInitialGuildThemeNuxSelection), 2);
+  const tmp4 = _slicedToArray(noop.useState(guildId(16165).getInitialGuildThemeNuxSelection), 2);
   [tmp7, c3] = _slicedToArray(noop.useState(null), 2);
   const tmp6 = _slicedToArray(noop.useState(null), 2);
   [tmp9, c4] = _slicedToArray(noop.useState(false), 2);
@@ -182,7 +182,7 @@ export default function GuildThemeNuxActionSheet(guildId) {
   obj.dismissAccessibilityLabel = intl2.string(guildId(1114).t.cpT0Cq);
   obj.onDismiss = callback3;
   obj.contentStyles = tmp.container;
-  const items7 = [closure_10(markAsDismissed(16163), { themeSettings: stateFromStores1, isPersonal: tmp10 }), , , , , , ];
+  const items7 = [closure_10(markAsDismissed(16166), { themeSettings: stateFromStores1, isPersonal: tmp10 }), , , , , , ];
   obj = { accessibilityRole: "header", variant: "heading-xl/semibold", color: "mobile-text-heading-primary", style: tmp.title, children: null };
   const intl3 = tmp2(1114).intl;
   obj.children = intl3.string(guildId(1114).t.Q9zFy9);

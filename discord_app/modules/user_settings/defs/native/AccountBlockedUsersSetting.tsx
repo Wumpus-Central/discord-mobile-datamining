@@ -1,12 +1,12 @@
-// === Module 14800: AccountBlockedUsersSetting ===
+// === Module 14803: AccountBlockedUsersSetting ===
 
-// Module 14800 (AccountBlockedUsersSetting)
+// Module 14803 (AccountBlockedUsersSetting)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1114 */;
 import RelationshipStore from "RelationshipStore" /* 4209 */;
 
 require = fn;
-fn(11468);
+fn(11473);
 let SettingBuilders = {
   useTitle() {
     const intl = util.intl;

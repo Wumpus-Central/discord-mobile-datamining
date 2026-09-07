@@ -1,6 +1,6 @@
-// === Module 15165: QuestOrbMultiplierPerkPill ===
+// === Module 15168: QuestOrbMultiplierPerkPill ===
 
-// Module 15165 (QuestOrbMultiplierPerkPill)
+// Module 15168 (QuestOrbMultiplierPerkPill)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import useToken from "useToken" /* 4262 */;
@@ -9,10 +9,10 @@ import ColorUtils from "ColorUtils" /* 4409 */;
 import useTheme from "useTheme" /* 4495 */;
 import Text_Text from "Text/Text" /* 4556 */;
 import Pressables from "Pressables" /* 5123 */;
-import NitroWheelIcon from "NitroWheelIcon" /* 8662 */;
-import QuestOrbMultiplierUtils from "QuestOrbMultiplierUtils" /* 11293 */;
-import hooks_QuestHooks from "hooks/QuestHooks" /* 11483 */;
-import openQuestOrbMultiplierPerkInfoActionSheetDefault from "openQuestOrbMultiplierPerkInfoActionSheet" /* 15166 */;
+import NitroWheelIcon from "NitroWheelIcon" /* 8667 */;
+import QuestOrbMultiplierUtils from "QuestOrbMultiplierUtils" /* 11298 */;
+import hooks_QuestHooks from "hooks/QuestHooks" /* 11488 */;
+import openQuestOrbMultiplierPerkInfoActionSheetDefault from "openQuestOrbMultiplierPerkInfoActionSheet" /* 15169 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

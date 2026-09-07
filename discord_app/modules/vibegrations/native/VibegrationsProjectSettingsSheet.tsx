@@ -1,6 +1,6 @@
-// === Module 16601: VibegrationsProjectSettingsSheet ===
+// === Module 16604: VibegrationsProjectSettingsSheet ===
 
-// Module 16601 (VibegrationsProjectSettingsSheet)
+// Module 16604 (VibegrationsProjectSettingsSheet)
 import nativeDefault from "native" /* 576 */;
 import ActionSheetActionCreators from "ActionSheetActionCreators" /* 4527 */;
 import VibegrationsTypes from "VibegrationsTypes" /* 7248 */;
@@ -8,7 +8,7 @@ import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import GuildRoleStore from "GuildRoleStore" /* 2015 */;
-import VibegrationsProjectStore from "VibegrationsProjectStore" /* 16587 */;
+import VibegrationsProjectStore from "VibegrationsProjectStore" /* 16590 */;
 
 const ActionSheetActionCreatorsDefault = ActionSheetActionCreators;
 

@@ -1,6 +1,6 @@
-// === Module 13035: isActivityJoinableOnCurrentPlatform ===
+// === Module 13039: isActivityJoinableOnCurrentPlatform ===
 
-// Module 13035 (isActivityJoinableOnCurrentPlatform)
+// Module 13039 (isActivityJoinableOnCurrentPlatform)
 import utils_PlatformUtils from "utils/PlatformUtils" /* 1116 */;
 import MetaQuestUtils from "MetaQuestUtils" /* 1608 */;
 import hasFlagDefault from "hasFlag" /* 7313 */;

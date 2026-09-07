@@ -1,8 +1,8 @@
-// === Module 14507: soundboard ===
+// === Module 14510: soundboard ===
 
-// Module 14507 (soundboard)
+// Module 14510 (soundboard)
 import SoundboardActionCreators from "SoundboardActionCreators" /* 7338 */;
-import createRpcJoiSchemaObjectDefault from "createRpcJoiSchemaObject" /* 9557 */;
+import createRpcJoiSchemaObjectDefault from "createRpcJoiSchemaObject" /* 9562 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import SoundboardStore from "SoundboardStore" /* 5012 */;
 import UserStore from "UserStore" /* 1371 */;
@@ -98,7 +98,7 @@ obj1.handler = function handler(args) {
           closure_128_3 = result;
           if (null == closure_128_2) {
             let obj3 = { errorCode: constants.INVALID_CHANNEL };
-            const tmp52 = new tmp5(9554)(obj3, "Invalid Channel.");
+            const tmp52 = new tmp5(9559)(obj3, "Invalid Channel.");
             throw tmp52;
           } else if (closure_128_3) {
             if (tmp5(7375)(closure_128_2)) {
@@ -111,12 +111,12 @@ obj1.handler = function handler(args) {
               return { value: "HermesInternal", done: null };
             } else {
               const obj4 = { errorCode: constants.INVALID_PERMISSIONS };
-              const tmp32 = new tmp5(9554)(obj4, "Invalid Permissions.");
+              const tmp32 = new tmp5(9559)(obj4, "Invalid Permissions.");
               throw tmp32;
             }
           } else {
             const obj5 = { errorCode: constants.INVALID_SOUND };
-            const tmp22 = new tmp5(9554)(obj5, "Invalid Sound.");
+            const tmp22 = new tmp5(9559)(obj5, "Invalid Sound.");
             throw tmp22;
           }
         }

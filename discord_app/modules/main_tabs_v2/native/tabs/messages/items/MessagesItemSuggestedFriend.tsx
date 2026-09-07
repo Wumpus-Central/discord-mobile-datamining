@@ -1,16 +1,16 @@
-// === Module 16042: MessagesItemSuggestedFriend ===
+// === Module 16045: MessagesItemSuggestedFriend ===
 
-// Module 16042 (MessagesItemSuggestedFriend)
+// Module 16045 (MessagesItemSuggestedFriend)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
 import UserUtilsDefault from "UserUtils" /* 4404 */;
-import _mod8874 from "module_8874" /* 8874 */;
-import useScaledTextLineHeight from "useScaledTextLineHeight" /* 10119 */;
-import _mod16041 from "module_16041" /* 16041 */;
-import FriendSuggestionUtils from "FriendSuggestionUtils" /* 16043 */;
-import AddFriendsScreenUtils from "AddFriendsScreenUtils" /* 16044 */;
+import _mod8879 from "module_8879" /* 8879 */;
+import useScaledTextLineHeight from "useScaledTextLineHeight" /* 10124 */;
+import _mod16044 from "module_16044" /* 16044 */;
+import FriendSuggestionUtils from "FriendSuggestionUtils" /* 16046 */;
+import AddFriendsScreenUtils from "AddFriendsScreenUtils" /* 16047 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import RelationshipStore from "RelationshipStore" /* 4209 */;

@@ -1,16 +1,16 @@
-// === Module 9420: ApplicationEducation ===
+// === Module 9425: ApplicationEducation ===
 
-// Module 9420 (ApplicationEducation)
+// Module 9425 (ApplicationEducation)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import FriendsIcon from "FriendsIcon" /* 4260 */;
 import Text_Text from "Text/Text" /* 4556 */;
 import SettingsIcon from "SettingsIcon" /* 7380 */;
 import OAuth2Scopes from "OAuth2Scopes" /* 8339 */;
-import GameControllerIcon from "GameControllerIcon" /* 9223 */;
-import useIsSocialLayerParentApplicationDefault from "useIsSocialLayerParentApplication" /* 9243 */;
-import ChatSmileIcon from "ChatSmileIcon" /* 9421 */;
-import AuthorizeFormSeparator from "AuthorizeFormSeparator" /* 9423 */;
+import GameControllerIcon from "GameControllerIcon" /* 9228 */;
+import useIsSocialLayerParentApplicationDefault from "useIsSocialLayerParentApplication" /* 9248 */;
+import ChatSmileIcon from "ChatSmileIcon" /* 9426 */;
+import AuthorizeFormSeparator from "AuthorizeFormSeparator" /* 9428 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

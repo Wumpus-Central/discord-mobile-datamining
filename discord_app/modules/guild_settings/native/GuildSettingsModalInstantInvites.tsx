@@ -1,6 +1,6 @@
-// === Module 17646: GuildSettingsModalInstantInvites ===
+// === Module 17649: GuildSettingsModalInstantInvites ===
 
-// Module 17646 (GuildSettingsModalInstantInvites)
+// Module 17649 (GuildSettingsModalInstantInvites)
 import _modDef12 from "module_12" /* 12 */;
 import util from "util" /* 1114 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
@@ -12,14 +12,14 @@ import TableCheckboxRow from "TableCheckboxRow" /* 5604 */;
 import TableRowIcon from "TableRowIcon" /* 5611 */;
 import GuildAntiRaidUtils from "GuildAntiRaidUtils" /* 8015 */;
 import GuildAntiRaidTypes from "GuildAntiRaidTypes" /* 8017 */;
-import InstantInvite from "InstantInvite" /* 10932 */;
+import InstantInvite from "InstantInvite" /* 10937 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GuildIncidentsStore from "GuildIncidentsStore" /* 10080 */;
+import GuildIncidentsStore from "GuildIncidentsStore" /* 10085 */;
 import InviteRecord from "InviteRecord" /* 8380 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 import GuildStore from "GuildStore" /* 1979 */;
-import GuildSettingsStore from "GuildSettingsStore" /* 9064 */;
+import GuildSettingsStore from "GuildSettingsStore" /* 9069 */;
 
 require = fn;
 class InvitesDisabledRow {
@@ -152,7 +152,7 @@ function GuildSettingsModalInstantInvites(invites) {
         let obj = { source: GuildAntiRaidTypes.GuildIncidentActionSources.MESSAGE, alertType: GuildAntiRaidUtils.getIncidentAlertType(stateFromStores) };
         obj = { guild, analyticsData: null };
         obj.analyticsData = obj;
-        ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(11829, dependencyMap.paths), "GuildIncidentActionsActionSheet", obj);
+        ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(11834, dependencyMap.paths), "GuildIncidentActionsActionSheet", obj);
         closure_7(false);
       } catch (tmp17) {
         tmp2(false);

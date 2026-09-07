@@ -1,6 +1,6 @@
-// === Module 9764: AddMembersBody ===
+// === Module 9769: AddMembersBody ===
 
-// Module 9764 (AddMembersBody)
+// Module 9769 (AddMembersBody)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import PermissionUtilsAll from "PermissionUtils" /* 4204 */;
@@ -8,7 +8,7 @@ import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 4272 */;
 import RegexUtilsDefault from "RegexUtils" /* 4547 */;
 import Text_Text from "Text/Text" /* 4556 */;
 import GuildUtilsDefault from "GuildUtils" /* 5519 */;
-import ChannelPermissionsUtilsAll from "ChannelPermissionsUtils" /* 9738 */;
+import ChannelPermissionsUtilsAll from "ChannelPermissionsUtils" /* 9743 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -193,7 +193,7 @@ export default function AddMembersBody(pendingAdditions) {
       return first(dependencyMap, items.map(_toPropertyKey));
     });
   };
-  obj2.children = closure_16(pendingAdditions(9755), obj3);
+  obj2.children = closure_16(pendingAdditions(9760), obj3);
   const items5 = [closure_16(closure_7, obj2), , , ];
   let tmp27Result = null;
   if (null != inputDesc) {
@@ -216,7 +216,7 @@ export default function AddMembersBody(pendingAdditions) {
     if (0 === items2.length) {
       if (0 === membersRows.length) {
         const obj8 = { children: null };
-        const obj9 = { Illustration: guild(9760).NoResultsAlt, style: null, bodyStyle: null, body: null };
+        const obj9 = { Illustration: guild(9765).NoResultsAlt, style: null, bodyStyle: null, body: null };
         ({ emptyState: obj21.style, emptyStateText: obj21.bodyStyle } = tmp3);
         const intl5 = guild(1114).intl;
         const obj10 = { query: str };
@@ -231,7 +231,7 @@ export default function AddMembersBody(pendingAdditions) {
     }
   }
   const obj12 = { contentContainerStyle: null, renderItem: null, renderSectionHeader: null, sections: null, keyboardShouldPersistTaps: "always" };
-  const tmp4Result = pendingAdditions(9755);
+  const tmp4Result = pendingAdditions(9760);
   obj12.contentContainerStyle = { paddingHorizontal: pendingAdditions(576).space.PX_16, paddingBottom: pendingAdditions(576).space.PX_16 + pendingAdditions(6981)(obj).insets.bottom };
   obj12.renderItem = function renderItem(item) {
     item = item.item;

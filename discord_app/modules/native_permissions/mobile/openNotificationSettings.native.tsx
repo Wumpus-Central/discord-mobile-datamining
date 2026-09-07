@@ -1,6 +1,6 @@
-// === Module 9690: openNotificationSettings ===
+// === Module 9695: openNotificationSettings ===
 
-// Module 9690 (openNotificationSettings)
+// Module 9695 (openNotificationSettings)
 import _mod17 from "module_17" /* 17 */;
 import PlatformUtils from "PlatformUtils" /* 1115 */;
 import NativeDeviceSettingsModuleDefault from "NativeDeviceSettingsModule" /* 5148 */;

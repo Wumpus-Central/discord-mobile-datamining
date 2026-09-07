@@ -1,7 +1,7 @@
-// === Module 9542: ActivityAnnouncement ===
+// === Module 9547: ActivityAnnouncement ===
 
-// Module 9542 (ActivityAnnouncement)
-import inlineStyles from "inlineStyles" /* 8453 */;
+// Module 9547 (ActivityAnnouncement)
+import inlineStyles from "inlineStyles" /* 8456 */;
 import noop from "module_19" /* 19 */;
 
 const inlineStylesDefault = inlineStyles;

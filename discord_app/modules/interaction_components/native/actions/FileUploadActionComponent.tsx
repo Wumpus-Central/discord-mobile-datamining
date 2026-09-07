@@ -1,6 +1,6 @@
-// === Module 17395: FileUploadActionComponent ===
+// === Module 17398: FileUploadActionComponent ===
 
-// Module 17395 (FileUploadActionComponent)
+// Module 17398 (FileUploadActionComponent)
 import util from "util" /* 1114 */;
 import FileSizeUtils from "FileSizeUtils" /* 4457 */;
 import CircleCheckIcon from "CircleCheckIcon" /* 4520 */;
@@ -8,10 +8,10 @@ import InteractionComponentUtils from "InteractionComponentUtils" /* 4785 */;
 import TableRow from "TableRow" /* 5605 */;
 import XSmallIcon from "XSmallIcon" /* 5680 */;
 import IconButton from "IconButton" /* 8097 */;
-import UploadAttachmentActionCreatorsDefault from "UploadAttachmentActionCreators" /* 9307 */;
-import AttachmentPreview from "AttachmentPreview" /* 10196 */;
-import MediaKeyboardUtils from "MediaKeyboardUtils" /* 10635 */;
-import FileUpIcon from "FileUpIcon" /* 15538 */;
+import UploadAttachmentActionCreatorsDefault from "UploadAttachmentActionCreators" /* 9312 */;
+import AttachmentPreview from "AttachmentPreview" /* 10201 */;
+import MediaKeyboardUtils from "MediaKeyboardUtils" /* 10640 */;
+import FileUpIcon from "FileUpIcon" /* 15541 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
@@ -263,7 +263,7 @@ export default function FileUploadActionComponent(maxValues) {
       extensions: allowedExtensions,
       uploadLimit: InteractionModal,
       onDismissKeyboard() {
-        return InteractionModal(10636).hideMediaKeyboardActionSheet();
+        return InteractionModal(10641).hideMediaKeyboardActionSheet();
       },
       onRestoreKeyboard: effectiveKestrelLimit,
       onSelectFiles(arg0) {
@@ -314,8 +314,8 @@ export default function FileUploadActionComponent(maxValues) {
             obj.handleViewAllDialog(obj);
           },
         onManageLimited() {
-            InteractionModal(10635);
-            obj = { onDismissKeyboard: InteractionModal(10636).hideMediaKeyboardActionSheet, onRestoreKeyboard };
+            InteractionModal(10640);
+            obj = { onDismissKeyboard: InteractionModal(10641).hideMediaKeyboardActionSheet, onRestoreKeyboard };
             const result = obj.handleLimitedPickerDialog(obj);
           },
         onClose: tmp4(customId[29]).hideMediaKeyboardActionSheet,

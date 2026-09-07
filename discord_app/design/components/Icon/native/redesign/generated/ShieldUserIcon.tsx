@@ -1,6 +1,6 @@
-// === Module 9752: ShieldUserIcon ===
+// === Module 9757: ShieldUserIcon ===
 
-// Module 9752 (ShieldUserIcon)
+// Module 9757 (ShieldUserIcon)
 import nativeDefault from "native" /* 576 */;
 import BaseIconImage from "BaseIconImage" /* 4261 */;
 import _mod8123 from "module_8123" /* 8123 */;

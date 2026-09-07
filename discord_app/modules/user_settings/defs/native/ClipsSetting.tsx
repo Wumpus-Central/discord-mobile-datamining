@@ -1,10 +1,10 @@
-// === Module 14971: ClipsSetting ===
+// === Module 14974: ClipsSetting ===
 
-// Module 14971 (ClipsSetting)
+// Module 14974 (ClipsSetting)
 import Constants from "Constants" /* 1074 */;
 import util from "util" /* 1114 */;
-import ClipsIcon from "ClipsIcon" /* 14972 */;
-import SettingBuilders from "SettingBuilders" /* 11468 */;
+import ClipsIcon from "ClipsIcon" /* 14975 */;
+import SettingBuilders from "SettingBuilders" /* 11473 */;
 import size from "module_2" /* 2 */;
 
 const route = SettingBuilders.createRoute({

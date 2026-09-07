@@ -1,10 +1,10 @@
-// === Module 8790: SocialLayerStorefrontEligibilityHooks ===
+// === Module 8795: SocialLayerStorefrontEligibilityHooks ===
 
-// Module 8790 (SocialLayerStorefrontEligibilityHooks)
+// Module 8795 (SocialLayerStorefrontEligibilityHooks)
 import initialize from "initialize" /* 504 */;
 import ContentInventoryTypes from "ContentInventoryTypes" /* 8341 */;
 import noop from "module_19" /* 19 */;
-import ContentInventoryOutboxStore from "ContentInventoryOutboxStore" /* 8791 */;
+import ContentInventoryOutboxStore from "ContentInventoryOutboxStore" /* 8796 */;
 import RunningGameStore from "RunningGameStore" /* 1915 */;
 import UserProfileStore from "UserProfileStore" /* 7621 */;
 import GuildStore from "GuildStore" /* 1979 */;

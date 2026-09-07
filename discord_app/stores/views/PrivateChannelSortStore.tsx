@@ -76,7 +76,7 @@ const secondaryIndexMap = new fn(4195).SecondaryIndexMap(function indexBy(value)
 let values = [];
 values = [];
 let closure_17 = [];
-const f38615 = () => {
+const f38618 = () => {
 
 };
 const Store = initializeDefault.Store;
@@ -89,7 +89,7 @@ prototype["initialize"] = function initialize() {
   this.syncWith(items, handleConnectionOpen);
 };
 prototype["getPrivateChannelIds"] = function getPrivateChannelIds() {
-  if (typeof f38615 === "function") {
+  if (typeof f38618 === "function") {
     secondaryIndexMap.values(constants.FAVORITE);
     values = secondaryIndexMap.values(constants.DEFAULT);
     let tmp4 = values === values;

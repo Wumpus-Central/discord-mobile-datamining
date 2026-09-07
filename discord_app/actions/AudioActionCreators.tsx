@@ -1,16 +1,16 @@
-// === Module 9089: AudioActionCreators ===
+// === Module 9094: AudioActionCreators ===
 
-// Module 9089 (AudioActionCreators)
+// Module 9094 (AudioActionCreators)
 import LoggerDefault from "Logger" /* 3 */;
 import debounceDefault from "debounce" /* 551 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
-import AudioSettingsUtils from "AudioSettingsUtils" /* 9092 */;
-import trackVoiceAndVideoSettingsUpdateDefault from "trackVoiceAndVideoSettingsUpdate" /* 9094 */;
-import applyBackgroundOption from "applyBackgroundOption" /* 9095 */;
-import StreamQualityUtils from "StreamQualityUtils" /* 9109 */;
+import AudioSettingsUtils from "AudioSettingsUtils" /* 9097 */;
+import trackVoiceAndVideoSettingsUpdateDefault from "trackVoiceAndVideoSettingsUpdate" /* 9099 */;
+import applyBackgroundOption from "applyBackgroundOption" /* 9100 */;
+import StreamQualityUtils from "StreamQualityUtils" /* 9114 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import CertifiedDeviceStore from "CertifiedDeviceStore" /* 9090 */;
+import CertifiedDeviceStore from "CertifiedDeviceStore" /* 9095 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 import MediaEngineStore from "MediaEngineStore" /* 1908 */;
 import RTCConnectionStore from "RTCConnectionStore" /* 4583 */;
@@ -55,7 +55,7 @@ function trackDeviceChanged(inputDevices, inputDeviceId, found, Video) {
 }
 const Constants = fn(1074);
 ({ InputModes: c10, AnalyticEvents: closure_11 } = Constants);
-const SoundOutputChannel = fn(9091).SoundOutputChannel;
+const SoundOutputChannel = fn(9096).SoundOutputChannel;
 const MediaEngineContextTypes = fn(4585).MediaEngineContextTypes;
 let settings = new LoggerDefault("AudioActionCreators");
 settings.enableNativeLogger(true);
@@ -628,7 +628,7 @@ settings = {
               isNotSupported();
               v1 = 1;
               dependencyMap = 1;
-              const obj1 = { value: v1(9094)("debug_logging_enabled", closure_0, debugLogging.getDebugLogging()), done: false };
+              const obj1 = { value: v1(9099)("debug_logging_enabled", closure_0, debugLogging.getDebugLogging()), done: false };
               return obj1;
             }
           } else if (arg0 === 1) {
@@ -710,7 +710,7 @@ settings = {
               isNotSupported();
               v1 = 1;
               dependencyMap = 1;
-              const obj1 = { value: v1(9094)("audio_subsystem", closure_0, audioSubsystem.getAudioSubsystem()), done: false };
+              const obj1 = { value: v1(9099)("audio_subsystem", closure_0, audioSubsystem.getAudioSubsystem()), done: false };
               return obj1;
             }
           } else if (arg0 === 1) {

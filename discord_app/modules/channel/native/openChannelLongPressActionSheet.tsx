@@ -1,6 +1,6 @@
-// === Module 10913: openChannelLongPressActionSheet ===
+// === Module 10918: openChannelLongPressActionSheet ===
 
-// Module 10913 (openChannelLongPressActionSheet)
+// Module 10918 (openChannelLongPressActionSheet)
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4527 */;
 import size from "module_2" /* 2 */;
 
@@ -14,5 +14,5 @@ export const openChannelLongPressActionSheet = function openChannelLongPressActi
       ActionSheetActionCreatorsDefault.hideActionSheet(combined);
     }
   };
-  obj.openLazy(combined(1896)(10914, dependencyMap.paths), combined, obj);
+  obj.openLazy(combined(1896)(10919, dependencyMap.paths), combined, obj);
 };

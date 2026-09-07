@@ -1,9 +1,9 @@
-// === Module 9381: PremiumGroupWordmark ===
+// === Module 9386: PremiumGroupWordmark ===
 
-// Module 9381 (PremiumGroupWordmark)
+// Module 9386 (PremiumGroupWordmark)
 import nativeDefault from "native" /* 576 */;
 import useToken from "useToken" /* 4262 */;
-import inlineStyles from "inlineStyles" /* 8453 */;
+import inlineStyles from "inlineStyles" /* 8456 */;
 import noop from "module_19" /* 19 */;
 
 const inlineStylesDefault = inlineStyles;

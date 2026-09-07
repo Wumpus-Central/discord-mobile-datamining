@@ -1,11 +1,11 @@
-// === Module 10928: IconUploader ===
+// === Module 10933: IconUploader ===
 
-// Module 10928 (IconUploader)
+// Module 10933 (IconUploader)
 import util from "util" /* 1114 */;
 import AvatarUtils from "AvatarUtils" /* 1396 */;
 import Pressables from "Pressables" /* 5123 */;
 import GuildIcon from "GuildIcon" /* 5584 */;
-import _modDef10929 from "module_10929" /* 10929 */;
+import _modDef10934 from "module_10934" /* 10934 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 
@@ -126,7 +126,7 @@ export default function IconUploader(disabled) {
   const items1 = [tmp7, ];
   let tmp16 = null;
   if (!flag) {
-    obj1 = { style: tmp.uploadIcon, source: _modDef10929 };
+    obj1 = { style: tmp.uploadIcon, source: _modDef10934 };
     tmp16 = closure_8(closure_6, obj1);
   }
   items1[1] = tmp16;

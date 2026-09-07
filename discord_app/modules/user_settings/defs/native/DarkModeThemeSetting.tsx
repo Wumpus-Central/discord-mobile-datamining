@@ -1,14 +1,14 @@
-// === Module 15306: DarkModeThemeSetting ===
+// === Module 15309: DarkModeThemeSetting ===
 
-// Module 15306 (DarkModeThemeSetting)
+// Module 15309 (DarkModeThemeSetting)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1114 */;
-import useSyncedModeThemeName from "useSyncedModeThemeName" /* 15304 */;
+import useSyncedModeThemeName from "useSyncedModeThemeName" /* 15307 */;
 import ThemeStore from "ThemeStore" /* 1183 */;
 
 require = fn;
 const SystemTheme = fn(1186).SystemTheme;
-fn(11468);
+fn(11473);
 let SettingBuilders = {
   useTitle() {
     const intl = util.intl;

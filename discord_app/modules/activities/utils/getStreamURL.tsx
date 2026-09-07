@@ -1,6 +1,6 @@
-// === Module 13036: getStreamURL ===
+// === Module 13040: getStreamURL ===
 
-// Module 13036 (getStreamURL)
+// Module 13040 (getStreamURL)
 import Constants from "Constants" /* 1920 */;
 import size from "module_2" /* 2 */;
 

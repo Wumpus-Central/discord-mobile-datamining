@@ -1,6 +1,6 @@
-// === Module 14608: EditUserProfileAvatar ===
+// === Module 14611: EditUserProfileAvatar ===
 
-// Module 14608 (EditUserProfileAvatar)
+// Module 14611 (EditUserProfileAvatar)
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4296 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4527 */;
@@ -88,7 +88,7 @@ export default function EditUserProfileAvatar(user) {
       },
       showRemoveAvatar: null
     };
-    const tmp = asyncRequireImpl(14610, dependencyMap.paths);
+    const tmp = asyncRequireImpl(14613, dependencyMap.paths);
     obj.showRemoveAvatar = ProfileCustomizationUtils.showRemoveAvatar(pendingAvatar, user.avatar);
     obj.openLazy(tmp, "Change Avatar", obj);
   }, items);

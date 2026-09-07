@@ -1,6 +1,6 @@
-// === Module 12385: AutocompleteWrapper ===
+// === Module 12389: AutocompleteWrapper ===
 
-// Module 12385 (AutocompleteWrapper)
+// Module 12389 (AutocompleteWrapper)
 import nativeDefault from "native" /* 576 */;
 import PlatformUtils from "PlatformUtils" /* 1115 */;
 import KeyboardTypes from "KeyboardTypes" /* 1609 */;
@@ -10,13 +10,13 @@ import TimestampUtils from "TimestampUtils" /* 5022 */;
 import utils_AutocompleteUtilsDefault from "utils/AutocompleteUtils" /* 5516 */;
 import RunAfterInteractionsUtils from "RunAfterInteractionsUtils" /* 7038 */;
 import ApplicationCommandTypes from "ApplicationCommandTypes" /* 7523 */;
-import PremiumUpsellUtilsDefault from "PremiumUpsellUtils" /* 9313 */;
-import autocompleter_AutocompleteUtils from "autocompleter/AutocompleteUtils" /* 10262 */;
-import AutocompleteOptions from "AutocompleteOptions" /* 10423 */;
-import TimestampSuggestionUtils from "TimestampSuggestionUtils" /* 10425 */;
-import application_commands_ApplicationCommandUtils from "application_commands/ApplicationCommandUtils" /* 12231 */;
-import Autocomplete from "Autocomplete" /* 12386 */;
-import ChannelAutocompleteAnalytics from "ChannelAutocompleteAnalytics" /* 12392 */;
+import PremiumUpsellUtilsDefault from "PremiumUpsellUtils" /* 9318 */;
+import autocompleter_AutocompleteUtils from "autocompleter/AutocompleteUtils" /* 10267 */;
+import AutocompleteOptions from "AutocompleteOptions" /* 10428 */;
+import TimestampSuggestionUtils from "TimestampSuggestionUtils" /* 10430 */;
+import application_commands_ApplicationCommandUtils from "application_commands/ApplicationCommandUtils" /* 12235 */;
+import Autocomplete from "Autocomplete" /* 12390 */;
+import ChannelAutocompleteAnalytics from "ChannelAutocompleteAnalytics" /* 12396 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ApplicationCommandStore from "ApplicationCommandStore" /* 7780 */;
@@ -38,11 +38,11 @@ get_ActivityIndicator = fn(17);
 const Constants = fn(1074);
 ({ AutoCompleteResultTypes: closure_11, WHITESPACE_RE: closure_12, AnalyticEvents: map1, UpsellTypes: closure_14 } = Constants);
 const BOOLEAN_CHOICES = fn(4999).BOOLEAN_CHOICES;
-const ApplicationCommandsConstants = fn(10263);
+const ApplicationCommandsConstants = fn(10268);
 ({ AUTOCOMPLETE_EMOJI_ROW_HEIGHT: closure_16, AUTOCOMPLETE_ROW_HEIGHT: closure_17 } = ApplicationCommandsConstants);
 const ChannelAutocompleteConstants = fn(5000);
 ({ MENTION_SENTINEL: closure_18, CHANNEL_SENTINEL: closure_19, EMOJI_SENTINEL: closure_20, COMMAND_SENTINEL: closure_21, GAME_MENTION_INPUT_PREFIX: closure_22, TIMESTAMP_MENTION_INPUT_PREFIX: closure_23 } = ChannelAutocompleteConstants);
-const AutocompleteTypes = fn(10424).AutocompleteTypes;
+const AutocompleteTypes = fn(10429).AutocompleteTypes;
 const EmojiInteractionPoint = fn(1374).EmojiInteractionPoint;
 const jsxProd = fn(21);
 ({ jsx: closure_26, Fragment: closure_27, jsxs: closure_28 } = jsxProd);

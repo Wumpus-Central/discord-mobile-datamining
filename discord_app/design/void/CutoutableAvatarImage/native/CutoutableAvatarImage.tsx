@@ -1,21 +1,21 @@
-// === Module 13028: CutoutableAvatarImage ===
+// === Module 13032: CutoutableAvatarImage ===
 
-// Module 13028 (CutoutableAvatarImage)
+// Module 13032 (CutoutableAvatarImage)
 import LoggerDefault from "Logger" /* 3 */;
 import discord_common_shallowEqualDefault from "discord_common/shallowEqual" /* 558 */;
 import v1 from "v1" /* 1256 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1396 */;
 import spring from "spring" /* 4974 */;
 import FastImageDefault from "FastImage" /* 5587 */;
-import ClipView from "ClipView" /* 8813 */;
-import getChannelIcon from "getChannelIcon" /* 13030 */;
-import getReactNativeSVGImageSourceDefault from "getReactNativeSVGImageSource" /* 13031 */;
+import ClipView from "ClipView" /* 8818 */;
+import getChannelIcon from "getChannelIcon" /* 13034 */;
+import getReactNativeSVGImageSourceDefault from "getReactNativeSVGImageSource" /* 13035 */;
 import noop from "module_19" /* 19 */;
 
 const ClipViewDefault = ClipView;
 
-const inlineStyles = Circle(8453);
-const inlineStylesDefault = tmp9(8453);
+const inlineStyles = Circle(8456);
+const inlineStylesDefault = tmp9(8456);
 require = fn;
 function StaticNativeCutoutAvatarImage(cutout) {
   cutout = cutout.cutout;
@@ -65,7 +65,7 @@ function AnimatedNativeCutoutAvatarImage(cutout) {
     obj.cutouts = items;
     return obj;
   };
-  let __closure = { cutout, CutoutShape: cutout(8813).CutoutShape, withSpring: cutout(4974).withSpring, CHANNEL_SPRING_CONFIG };
+  let __closure = { cutout, CutoutShape: cutout(8818).CutoutShape, withSpring: cutout(4974).withSpring, CHANNEL_SPRING_CONFIG };
   fn.__closure = __closure;
   fn.__workletHash = 12529564164821;
   fn.__initData = __initData;
@@ -75,7 +75,7 @@ function AnimatedNativeCutoutAvatarImage(cutout) {
   let items = [__closure.image, imageStyle];
   obj1.style = items;
   __closure.children = closure_7(FastImageDefault, obj1);
-  return closure_7(cutout(8813).ClipViewAnimated, __closure);
+  return closure_7(cutout(8818).ClipViewAnimated, __closure);
 }
 function NativeCutoutAvatarImage(animate) {
   if (true === animate.animate) {
@@ -182,7 +182,7 @@ function CutoutAvatarImage(arg0) {
 }
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-const CHANNEL_SPRING_CONFIG = fn(13029).CHANNEL_SPRING_CONFIG;
+const CHANNEL_SPRING_CONFIG = fn(13033).CHANNEL_SPRING_CONFIG;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
 const logger = new LoggerDefault("UIKit - AvatarImage");

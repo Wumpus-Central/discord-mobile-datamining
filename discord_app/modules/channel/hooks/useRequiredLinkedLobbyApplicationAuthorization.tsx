@@ -1,6 +1,6 @@
-// === Module 12436: useRequiredLinkedLobbyApplicationAuthorization ===
+// === Module 12440: useRequiredLinkedLobbyApplicationAuthorization ===
 
-// Module 12436 (useRequiredLinkedLobbyApplicationAuthorization)
+// Module 12440 (useRequiredLinkedLobbyApplicationAuthorization)
 import _mod19 from "module_19" /* 19 */;
 import AuthorizedAppsStore2 from "AuthorizedAppsStore" /* 7107 */;
 import ApplicationActionCreatorsDefault from "ApplicationActionCreators" /* 7163 */;

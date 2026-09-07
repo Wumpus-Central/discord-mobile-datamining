@@ -1,13 +1,13 @@
-// === Module 13108: useCollectiblesShopProducts ===
+// === Module 13112: useCollectiblesShopProducts ===
 
-// Module 13108 (useCollectiblesShopProducts)
+// Module 13112 (useCollectiblesShopProducts)
 import CollectiblesActionCreators from "CollectiblesActionCreators" /* 7541 */;
 import StorefrontProductActionCreators from "StorefrontProductActionCreators" /* 8219 */;
-import CollectiblesShopManager2 from "CollectiblesShopManager" /* 13110 */;
-import StorefrontCollectionActionCreators from "StorefrontCollectionActionCreators" /* 13111 */;
+import CollectiblesShopManager2 from "CollectiblesShopManager" /* 13114 */;
+import StorefrontCollectionActionCreators from "StorefrontCollectionActionCreators" /* 13115 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import StorefrontCollectionStore from "StorefrontCollectionStore" /* 13109 */;
+import StorefrontCollectionStore from "StorefrontCollectionStore" /* 13113 */;
 import StorefrontProductStore from "StorefrontProductStore" /* 8220 */;
 import CollectiblesCategoryRecord from "CollectiblesCategoryRecord" /* 7543 */;
 import CollectiblesProductRecord from "CollectiblesProductRecord" /* 7544 */;

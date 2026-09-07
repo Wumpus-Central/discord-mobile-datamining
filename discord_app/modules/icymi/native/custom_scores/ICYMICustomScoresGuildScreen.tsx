@@ -1,6 +1,6 @@
-// === Module 16457: ICYMICustomScoresGuildScreen ===
+// === Module 16460: ICYMICustomScoresGuildScreen ===
 
-// Module 16457 (ICYMICustomScoresGuildScreen)
+// Module 16460 (ICYMICustomScoresGuildScreen)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
@@ -8,8 +8,8 @@ import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4527
 import Text_Text from "Text/Text" /* 4556 */;
 import ChannelListState from "ChannelListState" /* 7528 */;
 import ICYMIUtils from "ICYMIUtils" /* 8350 */;
-import ChevronSmallDownIcon from "ChevronSmallDownIcon" /* 11153 */;
-import ICYMIContentSettingControl from "ICYMIContentSettingControl" /* 16459 */;
+import ChevronSmallDownIcon from "ChevronSmallDownIcon" /* 11158 */;
+import ICYMIContentSettingControl from "ICYMIContentSettingControl" /* 16462 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ChannelListStore from "ChannelListStore" /* 7525 */;
@@ -266,6 +266,6 @@ export default function ICYMICustomScoresGuildScreen(navigation) {
   obj.renderItem = callback;
   obj.data = memo;
   obj.keyExtractor = keyExtractor;
-  obj.children = closure_11(navigation(8874).AnimatedFlashList, obj);
+  obj.children = closure_11(navigation(8879).AnimatedFlashList, obj);
   return closure_11(guildChannels, obj);
 };

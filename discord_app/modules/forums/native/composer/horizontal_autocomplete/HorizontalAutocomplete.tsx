@@ -1,6 +1,6 @@
-// === Module 10624: HorizontalAutocomplete ===
+// === Module 10629: HorizontalAutocomplete ===
 
-// Module 10624 (HorizontalAutocomplete)
+// Module 10629 (HorizontalAutocomplete)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 576 */;
 import native from "native" /* 1178 */;

@@ -1,6 +1,6 @@
-// === Module 9812: StartEventPlatformUtils ===
+// === Module 9817: StartEventPlatformUtils ===
 
-// Module 9812 (StartEventPlatformUtils)
+// Module 9817 (StartEventPlatformUtils)
 import _modDef38 from "module_38" /* 38 */;
 import router_utils from "router_utils" /* 1100 */;
 import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 5411 */;

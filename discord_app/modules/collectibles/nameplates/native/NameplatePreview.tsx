@@ -1,6 +1,6 @@
-// === Module 11220: NameplatePreview ===
+// === Module 11225: NameplatePreview ===
 
-// Module 11220 (NameplatePreview)
+// Module 11225 (NameplatePreview)
 import nativeDefault from "native" /* 576 */;
 import native from "native" /* 1178 */;
 import noop from "module_19" /* 19 */;
@@ -102,15 +102,15 @@ export const NameplatePreview = function NameplatePreview(aria_hidden) {
   obj = { style: tmp.container, "aria-hidden": aria_hidden["aria-hidden"], children: null };
   const memo = stateFromStores.useMemo(() => React5(native.Avatar, { style: user.avatar, user, guildId, size: native.AvatarSizes.NORMAL, avatarDecoration: pendingAvatarDecoration, animate: !stateFromStores, autoStatusCutout: true, "aria-hidden": true }), items2);
   obj1 = { nameplate: nameplateData, style: tmp.nameplate, fullOpacity: true, animate: flag2 };
-  const items3 = [closure_7(guildId(8818), obj1), , ];
+  const items3 = [closure_7(guildId(8823), obj1), , ];
   obj2 = { style: tmp.avatar, children: memo };
   items3[1] = closure_7(pendingAvatarDecoration, obj2);
   obj3 = { style: tmp.content, children: null };
   let tmp19Result = null != tmp15;
   if (tmp19Result) {
-    obj4 = { userId: user.id, guildId, userName: pendingGlobalName, variant: "text-md/semibold", effectDisplayType: user(10900).EffectDisplayType.STATIC, lineClamp: 1, pendingDisplayNameStyles };
-    tmp19Result = closure_7(tmp7(10899), obj4);
-    const tmp7Result = tmp7(10899);
+    obj4 = { userId: user.id, guildId, userName: pendingGlobalName, variant: "text-md/semibold", effectDisplayType: user(10905).EffectDisplayType.STATIC, lineClamp: 1, pendingDisplayNameStyles };
+    tmp19Result = closure_7(tmp7(10904), obj4);
+    const tmp7Result = tmp7(10904);
   }
   const items4 = [tmp19Result, ];
   tmp19Result = null == tmp15;

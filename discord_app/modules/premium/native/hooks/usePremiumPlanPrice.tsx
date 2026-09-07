@@ -1,6 +1,6 @@
-// === Module 9364: usePremiumPlanPrice ===
+// === Module 9369: usePremiumPlanPrice ===
 
-// Module 9364 (usePremiumPlanPrice)
+// Module 9369 (usePremiumPlanPrice)
 import SubscriptionPlanActionCreators from "SubscriptionPlanActionCreators" /* 7257 */;
 import noop from "module_19" /* 19 */;
 import SubscriptionPlanStore from "SubscriptionPlanStore" /* 4223 */;

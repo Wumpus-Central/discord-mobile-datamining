@@ -1,11 +1,11 @@
-// === Module 14581: DevToolsNavigator ===
+// === Module 14584: DevToolsNavigator ===
 
-// Module 14581 (DevToolsNavigator)
+// Module 14584 (DevToolsNavigator)
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4527 */;
 import ModalActionCreatorsDefault from "ModalActionCreators" /* 4763 */;
 import HeaderShared from "HeaderShared" /* 7863 */;
-import SettingHookHarnessDefault from "SettingHookHarness" /* 14582 */;
-import DevToolsContentDefault from "DevToolsContent" /* 15743 */;
+import SettingHookHarnessDefault from "SettingHookHarness" /* 14585 */;
+import DevToolsContentDefault from "DevToolsContent" /* 15746 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -49,7 +49,7 @@ let closure_8 = noop.memo((screenKey) => {
         return {
           headerTitle() {
             let obj = { style: { flexDirection: "row" }, children: null };
-            const items = [closure_1_4(closure_1_0(9433).HammerIcon, { size: "sm" }), ];
+            const items = [closure_1_4(closure_1_0(9438).HammerIcon, { size: "sm" }), ];
             obj = { style: null, variant: "heading-md/semibold", color: "mobile-text-heading-primary", children: "DevTools" };
             obj = { marginLeft: closure_1_1(576).space.PX_8 };
             obj.style = obj;
@@ -64,8 +64,8 @@ let closure_8 = noop.memo((screenKey) => {
   ,
 
   ];
-  let merged = Object.assign(tmp(15578).DevToolsScreens);
-  let merged1 = Object.assign(tmp(15578).PerformanceTestingScreens);
+  let merged = Object.assign(tmp(15581).DevToolsScreens);
+  let merged1 = Object.assign(tmp(15581).PerformanceTestingScreens);
   const entries = Object.entries({});
   items1[1] = entries.map((item) => {
     [tmp, ] = item;
@@ -84,7 +84,7 @@ let closure_8 = noop.memo((screenKey) => {
       return {
         headerTitle() {
           let obj = { style: { flexDirection: "row" }, children: null };
-          const items = [closure_1_4(closure_1_0(9433).HammerIcon, { size: "sm" }), ];
+          const items = [closure_1_4(closure_1_0(9438).HammerIcon, { size: "sm" }), ];
           obj = { style: null, variant: "heading-md/semibold", color: "mobile-text-heading-primary", children: "DevTools" };
           obj = { marginLeft: closure_1_1(576).space.PX_8 };
           obj.style = obj;

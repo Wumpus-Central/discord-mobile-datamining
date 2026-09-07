@@ -1,6 +1,6 @@
-// === Module 10252: ForumComposerModal ===
+// === Module 10257: ForumComposerModal ===
 
-// Module 10252 (ForumComposerModal)
+// Module 10257 (ForumComposerModal)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
@@ -9,10 +9,10 @@ import KeyboardTypes from "KeyboardTypes" /* 1609 */;
 import KeyboardManagerUtilsAll from "KeyboardManagerUtils" /* 1874 */;
 import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 4905 */;
 import DraftActionCreatorsDefault from "DraftActionCreators" /* 7777 */;
-import UploadAttachmentActionCreatorsDefault from "UploadAttachmentActionCreators" /* 9307 */;
-import ForumComposerModalActionCreators from "ForumComposerModalActionCreators" /* 10251 */;
+import UploadAttachmentActionCreatorsDefault from "UploadAttachmentActionCreators" /* 9312 */;
+import ForumComposerModalActionCreators from "ForumComposerModalActionCreators" /* 10256 */;
 import noop from "module_19" /* 19 */;
-import NativeMenuStore from "NativeMenuStore" /* 9684 */;
+import NativeMenuStore from "NativeMenuStore" /* 9689 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 import DraftStore from "DraftStore" /* 4901 */;
 import UploadAttachmentStore from "UploadAttachmentStore" /* 4900 */;

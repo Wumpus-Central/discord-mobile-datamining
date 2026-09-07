@@ -1,6 +1,6 @@
-// === Module 9813: StartStageChannelModal ===
+// === Module 9818: StartStageChannelModal ===
 
-// Module 9813 (StartStageChannelModal)
+// Module 9818 (StartStageChannelModal)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
@@ -14,7 +14,7 @@ import GuildIcon from "GuildIcon" /* 5584 */;
 import _modDef7089 from "module_7089" /* 7089 */;
 import HotspotStore2 from "HotspotStore" /* 7213 */;
 import StageSparkleDefault from "StageSparkle" /* 8407 */;
-import Form from "Form" /* 8593 */;
+import Form from "Form" /* 8598 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;

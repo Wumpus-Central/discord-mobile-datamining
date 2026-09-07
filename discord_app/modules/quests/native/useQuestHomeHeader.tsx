@@ -1,6 +1,6 @@
-// === Module 14997: useQuestHomeHeader ===
+// === Module 15000: useQuestHomeHeader ===
 
-// Module 14997 (useQuestHomeHeader)
+// Module 15000 (useQuestHomeHeader)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
@@ -8,7 +8,7 @@ import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4527 */;
 import Text_Text from "Text/Text" /* 4556 */;
 import AnalyticsLocationDefault from "AnalyticsLocation" /* 7182 */;
-import QuestsIcon from "QuestsIcon" /* 14994 */;
+import QuestsIcon from "QuestsIcon" /* 14997 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -27,13 +27,13 @@ function QuestHomeHeaderRight(isVirtualCurrencyEnabled) {
   isVirtualCurrencyEnabled = isVirtualCurrencyEnabled.isVirtualCurrencyEnabled;
   const merged = Object.assign(isVirtualCurrencyEnabled, Object.assign({ isVirtualCurrencyEnabled: 0 }));
   let balance;
-  let obj = balance(8851);
+  let obj = balance(8856);
   balance = obj.useFetchVirtualCurrencyBalance().balance;
   [][0] = balance;
   obj = { style: closure_10().headerRightContainer, children: null };
   if (isVirtualCurrencyEnabled) {
     obj = { balance, onPress: tmp5 };
-    isVirtualCurrencyEnabled = closure_8(balance(11090).BalanceWidgetPillButton, obj);
+    isVirtualCurrencyEnabled = closure_8(balance(11095).BalanceWidgetPillButton, obj);
   }
   let items = [isVirtualCurrencyEnabled, ];
   const merged1 = Object.assign(merged);
@@ -65,7 +65,7 @@ function FiltersButton(setSelectedSortMethod) {
   const items = [setSelectedSortMethod, setSelectedFilters, selectedFilters, selectedSortMethod];
   const callback = selectedSortMethod.useCallback(() => {
     const obj = { onSortMethodChange: setSelectedSortMethod, onFiltersChange: setSelectedFilters, initialSortMethod: selectedSortMethod, initialFilters: selectedFilters };
-    obj.openLazy(asyncRequireImpl(14998, dependencyMap.paths), "QuestHomeSortingFilteringBottomSheet", obj);
+    obj.openLazy(asyncRequireImpl(15001, dependencyMap.paths), "QuestHomeSortingFilteringBottomSheet", obj);
   }, items);
   let obj = { icon: closure_8(setSelectedSortMethod(tmp3[21]).FiltersHorizontalIcon, { size: "sm", color: INTERACTIVE_TEXT_DEFAULT }), size: "sm", variant: str, onPress: callback, accessibilityLabel: null, scaleAmountInPx: 4 };
   const intl = setSelectedSortMethod(tmp3[10]).intl;

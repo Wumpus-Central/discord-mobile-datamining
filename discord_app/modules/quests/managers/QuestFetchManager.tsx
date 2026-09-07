@@ -1,13 +1,13 @@
-// === Module 17813: QuestFetchManager ===
+// === Module 17816: QuestFetchManager ===
 
-// Module 17813 (QuestFetchManager)
+// Module 17816 (QuestFetchManager)
 import DurationsDefault from "Durations" /* 1090 */;
 import PlatformUtils from "PlatformUtils" /* 1115 */;
 import SentryUtilsDefault from "SentryUtils" /* 1232 */;
-import QuestActionCreators from "QuestActionCreators" /* 11276 */;
-import DiscordAppStateDefault from "DiscordAppState" /* 11300 */;
-import QuestsEligibility from "QuestsEligibility" /* 11484 */;
-import QuestFetchReconnectJitterExperiment from "QuestFetchReconnectJitterExperiment" /* 17814 */;
+import QuestActionCreators from "QuestActionCreators" /* 11281 */;
+import DiscordAppStateDefault from "DiscordAppState" /* 11305 */;
+import QuestsEligibility from "QuestsEligibility" /* 11489 */;
+import QuestFetchReconnectJitterExperiment from "QuestFetchReconnectJitterExperiment" /* 17817 */;
 import QuestStore from "QuestStore" /* 7703 */;
 import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7118 */;
 

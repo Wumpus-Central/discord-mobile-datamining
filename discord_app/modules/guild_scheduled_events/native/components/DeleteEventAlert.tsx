@@ -1,6 +1,6 @@
-// === Module 9818: DeleteEventAlert ===
+// === Module 9823: DeleteEventAlert ===
 
-// Module 9818 (DeleteEventAlert)
+// Module 9823 (DeleteEventAlert)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 import GuildScheduledEventStore from "GuildScheduledEventStore" /* 7526 */;
@@ -42,7 +42,7 @@ export default function DeleteEventAlert(eventException) {
             return obj;
           } else {
             closure_0 = tmp4;
-            const obj8 = v1(9703);
+            const obj8 = v1(9708);
             if (GuildScheduledEventStore) {
               v1 = 2;
               dependencyMap = 1;

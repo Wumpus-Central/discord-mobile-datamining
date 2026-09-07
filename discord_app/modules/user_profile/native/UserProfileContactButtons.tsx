@@ -1,15 +1,15 @@
-// === Module 13124: UserProfileContactButtons ===
+// === Module 13128: UserProfileContactButtons ===
 
-// Module 13124 (UserProfileContactButtons)
+// Module 13128 (UserProfileContactButtons)
 import nativeDefault from "native" /* 576 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4527 */;
 import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 4573 */;
 import ModalActionCreatorsDefault from "ModalActionCreators" /* 4763 */;
 import components_Button_Button from "components/Button/Button" /* 4975 */;
-import RelationshipActionCreatorsDefault from "RelationshipActionCreators" /* 9042 */;
-import navigateToLastChannelDefault from "navigateToLastChannel" /* 11217 */;
-import UserProfileAlertUtils from "UserProfileAlertUtils" /* 12620 */;
-import ConfirmStartCall from "ConfirmStartCall" /* 13128 */;
+import RelationshipActionCreatorsDefault from "RelationshipActionCreators" /* 9047 */;
+import navigateToLastChannelDefault from "navigateToLastChannel" /* 11222 */;
+import UserProfileAlertUtils from "UserProfileAlertUtils" /* 12624 */;
+import ConfirmStartCall from "ConfirmStartCall" /* 13132 */;
 import noop from "module_19" /* 19 */;
 import RelationshipStore from "RelationshipStore" /* 4209 */;
 
@@ -44,7 +44,7 @@ function FriendRequestButton(user) {
     newestAnalyticsLocation = trackUserProfileAction(7162)().newestAnalyticsLocation;
   }
   dependencyMap = { location: newestAnalyticsLocation };
-  let tmp3Result = tmp3(13063);
+  let tmp3Result = tmp3(13067);
   const gameFriendsForUser = tmp3Result.useGameFriendsForUser(user.id);
   tmp3Result = tmp3(504);
   const items = [userDisplayName];
@@ -58,7 +58,7 @@ function FriendRequestButton(user) {
         return null;
       } else {
         if (stateFromStores === RelationshipTypes.PENDING_OUTGOING) {
-          let UserPlusIcon = tmp3(13125).UserClockIcon;
+          let UserPlusIcon = tmp3(13129).UserClockIcon;
         } else {
           UserPlusIcon = tmp3(4497).UserPlusIcon;
         }

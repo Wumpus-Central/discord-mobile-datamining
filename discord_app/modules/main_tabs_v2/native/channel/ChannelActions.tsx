@@ -12,15 +12,15 @@ import VibegrationsUtils from "VibegrationsUtils" /* 7247 */;
 import PhoneCallIcon from "PhoneCallIcon" /* 7880 */;
 import PhoneHangUpIcon from "PhoneHangUpIcon" /* 7882 */;
 import ForumActionCreatorsDefault from "ForumActionCreators" /* 7898 */;
-import showThreadBrowserModalDefault from "showThreadBrowserModal" /* 10963 */;
-import SwipeToMemberListUtils from "SwipeToMemberListUtils" /* 11466 */;
-import useSearchContext from "useSearchContext" /* 12299 */;
-import GuildDirectorySearchModalActionCreatorsDefault from "GuildDirectorySearchModalActionCreators" /* 12300 */;
-import search_tracking_TrackingDefault from "search/tracking/Tracking" /* 12358 */;
-import IconActionButtonDefault from "IconActionButton" /* 13253 */;
-import restartVibegrationsAppFramesDefault from "restartVibegrationsAppFrames" /* 13254 */;
-import ConversationCoachmark from "ConversationCoachmark" /* 13256 */;
-import PrivateChannelButtonsDefault from "PrivateChannelButtons" /* 13259 */;
+import showThreadBrowserModalDefault from "showThreadBrowserModal" /* 10968 */;
+import SwipeToMemberListUtils from "SwipeToMemberListUtils" /* 11471 */;
+import useSearchContext from "useSearchContext" /* 12303 */;
+import GuildDirectorySearchModalActionCreatorsDefault from "GuildDirectorySearchModalActionCreators" /* 12304 */;
+import search_tracking_TrackingDefault from "search/tracking/Tracking" /* 12362 */;
+import IconActionButtonDefault from "IconActionButton" /* 13257 */;
+import restartVibegrationsAppFramesDefault from "restartVibegrationsAppFrames" /* 13258 */;
+import ConversationCoachmark from "ConversationCoachmark" /* 13260 */;
+import PrivateChannelButtonsDefault from "PrivateChannelButtons" /* 13263 */;
 import noop from "module_19" /* 19 */;
 import ActiveThreadsStore from "ActiveThreadsStore" /* 5507 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
@@ -424,7 +424,7 @@ export default function ChannelActions(channelId) {
   obj = { style: containerStyle, children: null };
   if (obj1.useHasForumSearchQuery(channelId)) {
     obj = { channelId };
-    let tmp4Result = jsx(channelId(13257).ForumChannelCloseSearchButton, { channelId });
+    let tmp4Result = jsx(channelId(13261).ForumChannelCloseSearchButton, { channelId });
   } else {
     if (!isDM) {
       if (!isMultiUserDM) {

@@ -1,13 +1,13 @@
-// === Module 9591: ScreenshareTile ===
+// === Module 9596: ScreenshareTile ===
 
-// Module 9591 (ScreenshareTile)
+// Module 9596 (ScreenshareTile)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import native from "native" /* 1178 */;
 import Text_Text from "Text/Text" /* 4556 */;
 import LegacyBaseButton from "LegacyBaseButton" /* 6655 */;
-import useParticipantTileTapGestureDefault from "useParticipantTileTapGesture" /* 9592 */;
-import _modDef9593 from "module_9593" /* 9593 */;
+import useParticipantTileTapGestureDefault from "useParticipantTileTapGesture" /* 9597 */;
+import _modDef9598 from "module_9598" /* 9598 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -42,7 +42,7 @@ export default function ScreenShareTile(onSingleTap) {
   obj = { style: tmp.liveContainer, children: timestampProducer(native.LiveTag, {}) };
   const items = [timestampProducer(React3, obj), , ];
   const tmp2 = useParticipantTileTapGestureDefault({ onSingleTapStart: onSingleTap, onDoubleTapStart: onDoubleTap });
-  items[1] = timestampProducer(React4, { source: _modDef9593, style: tmp.image, resizeMode: "contain" });
+  items[1] = timestampProducer(React4, { source: _modDef9598, style: tmp.image, resizeMode: "contain" });
   const obj2 = { style: tmp.label, variant: "text-xs/bold", color: "text-overlay-light", children: null };
   const intl = util.intl;
   obj2.children = intl.string(util.t.G84gtR);

@@ -1,15 +1,15 @@
-// === Module 13538: GuildBoostingGuildList ===
+// === Module 13542: GuildBoostingGuildList ===
 
-// Module 13538 (GuildBoostingGuildList)
+// Module 13542 (GuildBoostingGuildList)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 576 */;
 import useGuildPowerupsBoostCountDefault from "useGuildPowerupsBoostCount" /* 4469 */;
 import GuildIconDefault from "GuildIcon" /* 5584 */;
 import UserSettingsModalActionCreatorsDefault from "UserSettingsModalActionCreators" /* 6990 */;
 import transitionToGuild from "transitionToGuild" /* 7342 */;
-import TouchableHitBoxDefault from "TouchableHitBox" /* 9050 */;
-import _modDef10410 from "module_10410" /* 10410 */;
-import BoostedGuildTierProgressCircleDefault from "BoostedGuildTierProgressCircle" /* 13507 */;
+import TouchableHitBoxDefault from "TouchableHitBox" /* 9055 */;
+import _modDef10415 from "module_10415" /* 10415 */;
+import BoostedGuildTierProgressCircleDefault from "BoostedGuildTierProgressCircle" /* 13511 */;
 import noop from "module_19" /* 19 */;
 import GuildStore from "GuildStore" /* 1979 */;
 import SortedGuildStore from "SortedGuildStore" /* 5438 */;
@@ -46,7 +46,7 @@ function GuildBoostingGuildListItem(guildId) {
     const obj2 = { variant: "text-md/bold", children: stateFromStores.name };
     const items2 = [closure_8(tmp5(4556).Text, obj2), ];
     const obj3 = { style: tmp.subscriptionInfo, children: null };
-    const obj4 = { source: _modDef10410, style: tmp.premiumGuildImage, resizeMode: "contain", resizeMethod: "resize" };
+    const obj4 = { source: _modDef10415, style: tmp.premiumGuildImage, resizeMode: "contain", resizeMethod: "resize" };
     const items3 = [closure_8(closure_4, obj4), ];
     const obj5 = { variant: "text-xs/medium", children: null };
     const intl = tmp5(1114).intl;

@@ -1,9 +1,9 @@
-// === Module 13000: useEntryActivityAndApplication ===
+// === Module 13004: useEntryActivityAndApplication ===
 
-// Module 13000 (useEntryActivityAndApplication)
+// Module 13004 (useEntryActivityAndApplication)
 import _slicedToArray from "module_32" /* 32 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 1956 */;
-import ContentInventoryActivityStore from "ContentInventoryActivityStore" /* 13001 */;
+import ContentInventoryActivityStore from "ContentInventoryActivityStore" /* 13005 */;
 
 const require = fn;
 const size = fn(2);

@@ -1,6 +1,6 @@
-// === Module 13006: useTimestampTickedNow ===
+// === Module 13010: useTimestampTickedNow ===
 
-// Module 13006 (useTimestampTickedNow)
+// Module 13010 (useTimestampTickedNow)
 import DurationsDefault from "Durations" /* 1090 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;

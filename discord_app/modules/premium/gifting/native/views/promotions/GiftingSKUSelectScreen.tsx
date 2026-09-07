@@ -1,12 +1,12 @@
-// === Module 11040: GiftingSKUSelectScreen ===
+// === Module 11045: GiftingSKUSelectScreen ===
 
-// Module 11040 (GiftingSKUSelectScreen)
+// Module 11045 (GiftingSKUSelectScreen)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1611 */;
 import Text_Text from "Text/Text" /* 4556 */;
 import components_Button_Button from "components/Button/Button" /* 4975 */;
-import GiftingSKUCardsGridDefault from "GiftingSKUCardsGrid" /* 11041 */;
+import GiftingSKUCardsGridDefault from "GiftingSKUCardsGrid" /* 11046 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 

@@ -1,9 +1,9 @@
-// === Module 11520: useBountiesExperience ===
+// === Module 11525: useBountiesExperience ===
 
-// Module 11520 (useBountiesExperience)
-import BountiesVerticalScrollExperiment2 from "BountiesVerticalScrollExperiment" /* 11521 */;
-import BountiesStage1Experiment2 from "BountiesStage1Experiment" /* 11522 */;
-import QuestHomeBountiesExperiment2 from "QuestHomeBountiesExperiment" /* 11523 */;
+// Module 11525 (useBountiesExperience)
+import BountiesVerticalScrollExperiment2 from "BountiesVerticalScrollExperiment" /* 11526 */;
+import BountiesStage1Experiment2 from "BountiesStage1Experiment" /* 11527 */;
+import QuestHomeBountiesExperiment2 from "QuestHomeBountiesExperiment" /* 11528 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/quests/experiments/useBountiesExperience.tsx");

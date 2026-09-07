@@ -1,10 +1,10 @@
-// === Module 12692: ContactSyncLandingOnboardingRedesign ===
+// === Module 12696: ContactSyncLandingOnboardingRedesign ===
 
-// Module 12692 (ContactSyncLandingOnboardingRedesign)
+// Module 12696 (ContactSyncLandingOnboardingRedesign)
 import nativeDefault from "native" /* 576 */;
-import RedesignContactSyncDiscoverabilityFooterDefault from "RedesignContactSyncDiscoverabilityFooter" /* 12686 */;
-import _modDef12693 from "module_12693" /* 12693 */;
-import ContactSyncErrorDefault from "ContactSyncError" /* 12694 */;
+import RedesignContactSyncDiscoverabilityFooterDefault from "RedesignContactSyncDiscoverabilityFooter" /* 12690 */;
+import _modDef12697 from "module_12697" /* 12697 */;
+import ContactSyncErrorDefault from "ContactSyncError" /* 12698 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 
@@ -93,7 +93,7 @@ export default function ContactSyncLandingOnboardingRedesign(onNext) {
       }
     }
   }), items);
-  obj.source = _modDef12693;
+  obj.source = _modDef12697;
   const items1 = [closure_8(closure_6, obj), , , , ];
   let obj1 = { style: tmp.title, variant: "heading-xl/bold", children: null };
   const intl = onNext(1114).intl;

@@ -1,16 +1,16 @@
-// === Module 16662: guild_channels/ChannelItem ===
+// === Module 16665: guild_channels/ChannelItem ===
 
-// Module 16662 (guild_channels/ChannelItem)
+// Module 16665 (guild_channels/ChannelItem)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import useChannelName from "useChannelName" /* 4713 */;
 import GuildIconDefault from "GuildIcon" /* 5584 */;
 import NotificationCenterUtils from "NotificationCenterUtils" /* 7641 */;
-import getChannelA11yLabelDefault from "getChannelA11yLabel" /* 9770 */;
-import ChannelListLayout from "ChannelListLayout" /* 10121 */;
-import GroupDMAvatarDefault from "GroupDMAvatar" /* 10910 */;
-import ChannelWrapper from "ChannelWrapper" /* 16441 */;
-import ChannelContent from "ChannelContent" /* 16660 */;
+import getChannelA11yLabelDefault from "getChannelA11yLabel" /* 9775 */;
+import ChannelListLayout from "ChannelListLayout" /* 10126 */;
+import GroupDMAvatarDefault from "GroupDMAvatar" /* 10915 */;
+import ChannelWrapper from "ChannelWrapper" /* 16444 */;
+import ChannelContent from "ChannelContent" /* 16663 */;
 import noop from "module_19" /* 19 */;
 import GuildStore from "GuildStore" /* 1979 */;
 import RelationshipStore from "RelationshipStore" /* 4209 */;
@@ -20,7 +20,7 @@ require = fn;
 function LaunchpadChannelIcon(channel) {
   channel = channel.channel;
   const layout = channel.layout;
-  let obj = channel(10121);
+  let obj = channel(10126);
   const layoutStyles = obj.getLayoutStyles(layout);
   let obj1 = channel(504);
   const items = [GuildStore];
@@ -36,14 +36,14 @@ function LaunchpadChannelIcon(channel) {
     str = "md";
   }
   obj1.size = str;
-  obj6 = channel(10121);
+  obj6 = channel(10126);
   let num = 32;
   if (tmp2Result.isLayoutCozy(layout)) {
     num = 48;
   }
   const obj2 = { children: null };
   obj1.wrapperSize = num;
-  items1[1] = closure_8(channel(12191).ChannelIcon, obj1);
+  items1[1] = closure_8(channel(12195).ChannelIcon, obj1);
   obj2.children = items1;
   return closure_10(closure_9, obj2);
 }

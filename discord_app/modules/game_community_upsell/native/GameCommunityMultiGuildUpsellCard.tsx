@@ -1,6 +1,6 @@
-// === Module 16268: GameCommunityMultiGuildUpsellCard ===
+// === Module 16271: GameCommunityMultiGuildUpsellCard ===
 
-// Module 16268 (GameCommunityMultiGuildUpsellCard)
+// Module 16271 (GameCommunityMultiGuildUpsellCard)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1396 */;

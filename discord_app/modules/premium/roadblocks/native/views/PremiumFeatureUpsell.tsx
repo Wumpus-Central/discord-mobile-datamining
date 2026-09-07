@@ -1,6 +1,6 @@
-// === Module 9964: PremiumFeatureUpsell ===
+// === Module 9969: PremiumFeatureUpsell ===
 
-// Module 9964 (PremiumFeatureUpsell)
+// Module 9969 (PremiumFeatureUpsell)
 import nativeDefault from "native" /* 576 */;
 import ConstantsIOS from "ConstantsIOS" /* 1093 */;
 import native from "native" /* 1178 */;
@@ -10,7 +10,7 @@ import springPresets from "springPresets" /* 4978 */;
 import LinearGradientDefault from "LinearGradient" /* 4987 */;
 import openPremiumUpsellActionSheetDefault from "openPremiumUpsellActionSheet" /* 7850 */;
 import EntitlementFeatureNames from "EntitlementFeatureNames" /* 7853 */;
-import NitroWheelIcon from "NitroWheelIcon" /* 8662 */;
+import NitroWheelIcon from "NitroWheelIcon" /* 8667 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -21,13 +21,13 @@ function PremiumFeatureUpsellPill(featureName) {
     flag = true;
   }
   let loading;
-  let obj = featureName(9313);
-  let obj1 = featureName(9965);
+  let obj = featureName(9318);
+  let obj1 = featureName(9970);
   const premiumUpsellConfig = obj.usePremiumUpsellConfig(obj1.getUpsellType(featureName));
   const useTier0UpsellContent = premiumUpsellConfig.useTier0UpsellContent;
   const tmp4 = closure_14(useTier0UpsellContent);
   dependencyMap = tmp4;
-  let obj2 = featureName(9966);
+  let obj2 = featureName(9971);
   const mobileEmojiPickerUpsellRestyleEnabledForFeature = obj2.getMobileEmojiPickerUpsellRestyleEnabledForFeature(featureName, "native.PremiumFeatureUpsell");
   const tmp7 = useTier0UpsellContent ? closure_7.TIER_0 : closure_7.TIER_2;
   const fn = () => openPremiumUpsellActionSheetDefault(featureName);
@@ -58,7 +58,7 @@ function PremiumFeatureUpsellPill(featureName) {
     const obj3 = { onClick: fn };
     formatResult = intl6.format(tmp(1114).t.x2dQxN, obj3);
   }
-  const tmp11 = useTier0UpsellContent(9967)(useTier0UpsellContent, premiumUpsellConfig.onViewAllPerks, constants3.PREMIUM_UPSELL_FILE_UPLOAD);
+  const tmp11 = useTier0UpsellContent(9972)(useTier0UpsellContent, premiumUpsellConfig.onViewAllPerks, constants3.PREMIUM_UPSELL_FILE_UPLOAD);
   loading = tmp11.loading;
   let items = [tmp4.container, , ];
   if (flag) {
@@ -117,7 +117,7 @@ function PremiumFeatureUpsellPill(featureName) {
     obj4.children = items2;
     return closure_13(closure_5, obj4);
   } else {
-    const obj8 = { source: tmp10(useTier0UpsellContent ? 9968 : 9963), style: tmp4.nitroWheel, disableColor: true };
+    const obj8 = { source: tmp10(useTier0UpsellContent ? 9973 : 9968), style: tmp4.nitroWheel, disableColor: true };
     closure_12(tmp(1178).Icon, obj8);
   }
   tmp10 = useTier0UpsellContent;

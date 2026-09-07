@@ -1,6 +1,6 @@
-// === Module 10080: GuildIncidentsStore ===
+// === Module 10085: GuildIncidentsStore ===
 
-// Module 10080 (GuildIncidentsStore)
+// Module 10085 (GuildIncidentsStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import GuildAntiRaidUtils from "GuildAntiRaidUtils" /* 8015 */;

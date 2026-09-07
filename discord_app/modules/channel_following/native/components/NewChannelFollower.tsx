@@ -1,12 +1,12 @@
-// === Module 11326: NewChannelFollower ===
+// === Module 11331: NewChannelFollower ===
 
-// Module 11326 (NewChannelFollower)
+// Module 11331 (NewChannelFollower)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4527 */;
-import openChannelPickerDefault from "openChannelPicker" /* 11329 */;
-import ChannelFollowerActionCreatorsDefault from "ChannelFollowerActionCreators" /* 11332 */;
+import openChannelPickerDefault from "openChannelPicker" /* 11334 */;
+import ChannelFollowerActionCreatorsDefault from "ChannelFollowerActionCreators" /* 11337 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
@@ -80,9 +80,9 @@ export default function NewChannelFollower(targetChannelId) {
   });
   let tmp5Result = require("shared");
   if (tmp5Result.isThemeDark(tmp9)) {
-    let tmp8Result = require("module_11327");
+    let tmp8Result = require("module_11332");
   } else {
-    tmp8Result = require("module_11328");
+    tmp8Result = require("module_11333");
   }
   obj = { handleDisabled: true, startExpanded: true, scrollable: true, ref: bottomSheetRef, children: null };
   obj = { source: tmp8Result, style: tmp.header, children: null };
@@ -164,8 +164,8 @@ export default function NewChannelFollower(targetChannelId) {
     obj.onClose = function onClose() {
       closure_1_4(targetGuildId, targetChannelId);
     };
-    obj.openLazy(asyncRequireImpl(9426, dependencyMap.paths), "NewChannelFollowerGuildPicker", obj);
-    const tmp = asyncRequireImpl(9426, dependencyMap.paths);
+    obj.openLazy(asyncRequireImpl(9431, dependencyMap.paths), "NewChannelFollowerGuildPicker", obj);
+    const tmp = asyncRequireImpl(9431, dependencyMap.paths);
   };
   obj9.children = closure_16(require("TableRow").TableRow, obj10);
   const items6 = [closure_16(require("TableRowGroup").TableRowGroup, obj9), ];

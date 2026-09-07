@@ -1,6 +1,6 @@
-// === Module 11199: BadgeUtils ===
+// === Module 11204: BadgeUtils ===
 
-// Module 11199 (BadgeUtils)
+// Module 11204 (BadgeUtils)
 import Constants from "Constants" /* 8183 */;
 import BadgeId from "BadgeId" /* 8184 */;
 import BadgeIdResolution from "BadgeIdResolution" /* 8193 */;

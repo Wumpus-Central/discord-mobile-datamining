@@ -1,14 +1,14 @@
-// === Module 15084: QuestHomeOrbShopCarousel ===
+// === Module 15087: QuestHomeOrbShopCarousel ===
 
-// Module 15084 (QuestHomeOrbShopCarousel)
+// Module 15087 (QuestHomeOrbShopCarousel)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import Text_Text from "Text/Text" /* 4556 */;
 import AnalyticsActions from "AnalyticsActions" /* 7718 */;
 import AnalyticsTypes from "AnalyticsTypes" /* 7728 */;
-import CollectiblesAnalyticsContext from "CollectiblesAnalyticsContext" /* 8767 */;
-import SkeletonCardDefault from "SkeletonCard" /* 15085 */;
-import QuestHomeOrbShopRewardCardDefault from "QuestHomeOrbShopRewardCard" /* 15086 */;
+import CollectiblesAnalyticsContext from "CollectiblesAnalyticsContext" /* 8772 */;
+import SkeletonCardDefault from "SkeletonCard" /* 15088 */;
+import QuestHomeOrbShopRewardCardDefault from "QuestHomeOrbShopRewardCard" /* 15089 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ThemeStore from "ThemeStore" /* 1183 */;
@@ -96,7 +96,7 @@ const jsxProd = fn(21);
 const PX_20 = nativeDefault.space.PX_20;
 const PX_12 = nativeDefault.space.PX_12;
 const contentContainerStyle = { backgroundColor: "transparent" };
-const data = Array.from({ length: fn(15069).MIN_PRODUCTS_FOR_ORB_SHOP_CAROUSEL }, (arg0, arg1) => arg1);
+const data = Array.from({ length: fn(15072).MIN_PRODUCTS_FOR_ORB_SHOP_CAROUSEL }, (arg0, arg1) => arg1);
 const createStyles = fn(4560);
 let closure_17 = createStyles.createStyles(() => {
   let obj = { standaloneRoot: null, headerMediaRoot: null };
@@ -271,7 +271,7 @@ export default function QuestHomeOrbShopCarousel(showOrbShopPlaceholderCarousel)
 export const useQuestHomeOrbShopCarouselData = function useQuestHomeOrbShopCarouselData(arg0) {
   let orbAmount;
   ({ enabled, sortType } = arg0);
-  const BountiesStage1Experiment = orbAmount(11522).BountiesStage1Experiment;
+  const BountiesStage1Experiment = orbAmount(11527).BountiesStage1Experiment;
   let obj = { location: QuestsExperimentLocations.QUEST_HOME_MOBILE };
   orbAmount = BountiesStage1Experiment.useConfig(obj).orbAmount;
   const items = [BountyStore];
@@ -286,7 +286,7 @@ export const useQuestHomeOrbShopCarouselData = function useQuestHomeOrbShopCarou
     return num;
   });
   const obj2 = orbAmount(504);
-  const popularOrbShopProducts = orbAmount(15069).usePopularOrbShopProducts({ enabled, sortType });
+  const popularOrbShopProducts = orbAmount(15072).usePopularOrbShopProducts({ enabled, sortType });
   obj = { products: popularOrbShopProducts.products, obtainableOrbRewards: stateFromStores, showPlaceholderCarousel: popularOrbShopProducts.showPlaceholderCarousel };
   return obj;
 };

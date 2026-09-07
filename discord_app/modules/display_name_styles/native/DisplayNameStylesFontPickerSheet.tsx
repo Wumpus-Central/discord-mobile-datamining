@@ -1,6 +1,6 @@
-// === Module 15342: DisplayNameStylesFontPickerSheet ===
+// === Module 15345: DisplayNameStylesFontPickerSheet ===
 
-// Module 15342 (DisplayNameStylesFontPickerSheet)
+// Module 15345 (DisplayNameStylesFontPickerSheet)
 import nativeDefault from "native" /* 576 */;
 import _modDef2786 from "module_2786" /* 2786 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4527 */;
@@ -40,9 +40,9 @@ export default function DisplayNameStylesFontPickerSheet(displayName) {
   const tmp = closure_10();
   importDefault = tmp;
   let obj = onSelectFont(8170);
-  let obj1 = onSelectFont(15337);
+  let obj1 = onSelectFont(15340);
   const visibleFontOrder = obj1.useVisibleFontOrder();
-  let obj2 = onSelectFont(15339);
+  let obj2 = onSelectFont(15342);
   const displayNameStylesNewFonts = obj2.useDisplayNameStylesNewFonts(visibleFontOrder);
   ({ dotFontIds: c2, dismissFontDot: c3 } = displayNameStylesNewFonts);
   const tmp5 = _slicedToArray(first.useState(selectedFontId), 2);

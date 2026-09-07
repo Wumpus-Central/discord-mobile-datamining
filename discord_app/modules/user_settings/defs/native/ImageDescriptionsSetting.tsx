@@ -1,9 +1,9 @@
-// === Module 15462: ImageDescriptionsSetting ===
+// === Module 15465: ImageDescriptionsSetting ===
 
-// Module 15462 (ImageDescriptionsSetting)
+// Module 15465 (ImageDescriptionsSetting)
 import util from "util" /* 1114 */;
 import UserSettings from "UserSettings" /* 1935 */;
-import UserSettingsText from "UserSettingsText" /* 15463 */;
+import UserSettingsText from "UserSettingsText" /* 15466 */;
 import UnsyncedUserSettingsStore from "UnsyncedUserSettingsStore" /* 1185 */;
 
 require = fn;
@@ -11,7 +11,7 @@ function onImageDescriptionSettingValueChange(viewImageDescriptions) {
   const obj = { videoUploadQuality: UnsyncedUserSettingsStore.videoUploadQuality, viewImageDescriptions, lowQualityImageMode: UnsyncedUserSettingsStore.lowQualityImageMode, dataSavingMode: UnsyncedUserSettingsStore.dataSavingMode };
   obj.setImageDescriptions(obj);
 }
-fn(11468);
+fn(11473);
 let SettingBuilders = {
   useTitle() {
     const intl = util.intl;

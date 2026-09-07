@@ -1,6 +1,6 @@
-// === Module 13855: AddFriendById ===
+// === Module 13858: AddFriendById ===
 
-// Module 13855 (AddFriendById)
+// Module 13858 (AddFriendById)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
@@ -8,8 +8,8 @@ import ToastUtils from "ToastUtils" /* 4258 */;
 import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 4272 */;
 import Text_Text from "Text/Text" /* 4556 */;
 import TextField from "TextField" /* 6613 */;
-import FriendsUtils from "FriendsUtils" /* 9046 */;
-import FriendRequestMessageExperimentDefault from "FriendRequestMessageExperiment" /* 13856 */;
+import FriendsUtils from "FriendsUtils" /* 9051 */;
+import FriendRequestMessageExperimentDefault from "FriendRequestMessageExperiment" /* 13859 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -133,7 +133,7 @@ export default noop.forwardRef((arg0, ref) => {
         substr = trimmed.substring(1);
         tmp2 = substr;
       }
-      obj = sourcePage(9046);
+      obj = sourcePage(9051);
       const validateDiscordTagResult = obj.validateDiscordTag(tmp2);
       if (null != validateDiscordTagResult) {
         obj = { status: constants.ERROR, field: constants2.DISCORD_TAG, message: validateDiscordTagResult };
@@ -141,14 +141,14 @@ export default noop.forwardRef((arg0, ref) => {
       } else {
         const obj1 = { status: constants.LOADING };
         closure_6(obj1);
-        const obj2 = { discordTag: tmp2, context: { location: "Search - Add Friend Search" }, errorUxConfig: sourcePage(9042).RelationshipErrorUXConfig.SHOW_ONLY_IF_ACTION_NEEDED, note: null };
+        const obj2 = { discordTag: tmp2, context: { location: "Search - Add Friend Search" }, errorUxConfig: sourcePage(9047).RelationshipErrorUXConfig.SHOW_ONLY_IF_ACTION_NEEDED, note: null };
         let tmp9;
         if (trimmed1.length > 0) {
           tmp9 = trimmed1;
         }
         obj2.note = tmp9;
-        const obj5 = ref(9042);
-        ref(9042).sendRequest(obj2).then(() => {
+        const obj5 = ref(9047);
+        ref(9047).sendRequest(obj2).then(() => {
           let obj = { validatedText: "", hint: null };
           const intl = util.intl;
           obj.hint = intl.string(util.t["6p7Mhh"]);
@@ -203,7 +203,7 @@ export default noop.forwardRef((arg0, ref) => {
           }
           closure_6(obj);
         });
-        const sendRequestResult = ref(9042).sendRequest(obj2);
+        const sendRequestResult = ref(9047).sendRequest(obj2);
       }
     }
   }

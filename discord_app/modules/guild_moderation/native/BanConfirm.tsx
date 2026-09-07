@@ -1,6 +1,6 @@
-// === Module 11851: BanConfirm ===
+// === Module 11856: BanConfirm ===
 
-// Module 11851 (BanConfirm)
+// Module 11856 (BanConfirm)
 import nativeDefault from "native" /* 576 */;
 import DurationsDefault from "Durations" /* 1090 */;
 import util from "util" /* 1114 */;
@@ -149,7 +149,7 @@ export default noop.memo(function BanConfirm(arg0) {
       obj = { paddingHorizontal: require("native").space.PX_24, paddingBottom: insets.bottom };
       obj.contentContainerStyle = obj;
       obj1 = { style: tmp.iconLabelBlock, children: null };
-      obj2 = { style: tmp.iconStyles, source: require("module_11852"), resizeMode: "contain" };
+      obj2 = { style: tmp.iconStyles, source: require("module_11857"), resizeMode: "contain" };
       const items4 = [closure_10(ref, obj2), , ];
       const obj3 = { style: tmp.redText, variant: "text-md/semibold", children: null };
       const intl = require("util").intl;

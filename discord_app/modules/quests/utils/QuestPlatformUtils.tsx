@@ -1,6 +1,6 @@
-// === Module 11496: QuestPlatformUtils ===
+// === Module 11501: QuestPlatformUtils ===
 
-// Module 11496 (QuestPlatformUtils)
+// Module 11501 (QuestPlatformUtils)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import util from "util" /* 1114 */;
 import PlatformUtils from "PlatformUtils" /* 1115 */;
@@ -12,13 +12,13 @@ import FirstPartyQuestTaskTypes from "FirstPartyQuestTaskTypes" /* 5452 */;
 import openUserSettings from "openUserSettings" /* 7382 */;
 import AnalyticsActions from "AnalyticsActions" /* 7718 */;
 import QuestTaskUtils from "QuestTaskUtils" /* 7724 */;
-import authorizeConnectionDefault from "authorizeConnection" /* 9252 */;
-import AdAnalyticsInterfaceExperiment from "AdAnalyticsInterfaceExperiment" /* 11192 */;
-import captureAdUserAction from "captureAdUserAction" /* 11193 */;
-import captureAdUserActionTypes from "captureAdUserActionTypes" /* 11197 */;
-import apexExperiment from "apexExperiment" /* 11489 */;
-import IosAttributionImpressionRegistry from "IosAttributionImpressionRegistry" /* 11493 */;
-import AppStoreOverlayTelemetryManager from "AppStoreOverlayTelemetryManager" /* 11497 */;
+import authorizeConnectionDefault from "authorizeConnection" /* 9257 */;
+import AdAnalyticsInterfaceExperiment from "AdAnalyticsInterfaceExperiment" /* 11197 */;
+import captureAdUserAction from "captureAdUserAction" /* 11198 */;
+import captureAdUserActionTypes from "captureAdUserActionTypes" /* 11202 */;
+import apexExperiment from "apexExperiment" /* 11494 */;
+import IosAttributionImpressionRegistry from "IosAttributionImpressionRegistry" /* 11498 */;
+import AppStoreOverlayTelemetryManager from "AppStoreOverlayTelemetryManager" /* 11502 */;
 import Constants from "Constants" /* 1074 */;
 import size from "module_2" /* 2 */;
 
@@ -345,10 +345,10 @@ function openAdGameLinkDirectlyImpl(adContentId, impressionId, preferExternalApp
   if (null != tmp) {
     url = tmp;
   }
-  let obj = adContentId(11192);
-  if (obj.shouldMigrateToAdAnalyticsInterface(adContentId(11192).AdAnalyticsInterfaceExperimentStep.STEP_3_CLICKED_EXTERNAL, "open_ad_game_link_directly")) {
-    let tmp2Result = tmp2(11193);
-    obj = { type: tmp2(11197).AdUserActionType.CLICK_EXTERNAL_ADVERTISER_CTA, adCreativeType, adCreativeId: adContentId, questContentCTA: null, surfaceId: null, sourceQuestContent: null, questContentPosition: null, impressionId: null };
+  let obj = adContentId(11197);
+  if (obj.shouldMigrateToAdAnalyticsInterface(adContentId(11197).AdAnalyticsInterfaceExperimentStep.STEP_3_CLICKED_EXTERNAL, "open_ad_game_link_directly")) {
+    let tmp2Result = tmp2(11198);
+    obj = { type: tmp2(11202).AdUserActionType.CLICK_EXTERNAL_ADVERTISER_CTA, adCreativeType, adCreativeId: adContentId, questContentCTA: null, surfaceId: null, sourceQuestContent: null, questContentPosition: null, impressionId: null };
     ({ ctaContent: obj5.questContentCTA, content: obj5.surfaceId, sourceQuestContent: obj5.sourceQuestContent, position: obj5.questContentPosition, impressionId: obj5.impressionId } = impressionId);
     tmp2Result.captureAdUserAction(obj);
   } else {
@@ -367,8 +367,8 @@ function openAdGameLinkDirectlyImpl(adContentId, impressionId, preferExternalApp
     if (ios != null) {
       iosAppId = ios.iosAppId;
     }
-    iosAttributionClickFramework = tmp2(11488).getIosAttributionClickFramework(null != iosAppId, impressionId.sourceQuestContent, adContentId);
-    const tmp2Result1 = tmp2(11488);
+    iosAttributionClickFramework = tmp2(11493).getIosAttributionClickFramework(null != iosAppId, impressionId.sourceQuestContent, adContentId);
+    const tmp2Result1 = tmp2(11493);
   }
   let fn;
   if (null != iosAttributionClickFramework) {

@@ -1,6 +1,6 @@
-// === Module 12696: SkipHeaderButton ===
+// === Module 12700: SkipHeaderButton ===
 
-// Module 12696 (SkipHeaderButton)
+// Module 12700 (SkipHeaderButton)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import HeaderShared from "HeaderShared" /* 7863 */;

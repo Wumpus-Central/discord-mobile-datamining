@@ -1,12 +1,12 @@
-// === Module 11582: UserProfileSection ===
+// === Module 11587: UserProfileSection ===
 
-// Module 11582 (UserProfileSection)
+// Module 11587 (UserProfileSection)
 import nativeDefault from "native" /* 576 */;
 import native from "native" /* 4271 */;
 import ColorUtils from "ColorUtils" /* 4409 */;
 import Text_Text from "Text/Text" /* 4556 */;
 import useProfileThemeValues from "useProfileThemeValues" /* 7184 */;
-import FormDivider from "FormDivider" /* 8599 */;
+import FormDivider from "FormDivider" /* 8604 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

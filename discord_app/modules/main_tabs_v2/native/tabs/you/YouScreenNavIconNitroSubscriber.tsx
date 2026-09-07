@@ -1,13 +1,13 @@
-// === Module 16797: YouScreenNavIconNitroSubscriber ===
+// === Module 16800: YouScreenNavIconNitroSubscriber ===
 
-// Module 16797 (YouScreenNavIconNitroSubscriber)
+// Module 16800 (YouScreenNavIconNitroSubscriber)
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ReferralTrialStore from "ReferralTrialStore" /* 7452 */;
-import PremiumNitroNavigationStore from "PremiumNitroNavigationStore" /* 13413 */;
+import PremiumNitroNavigationStore from "PremiumNitroNavigationStore" /* 13417 */;
 
 const require = fn;
-const NitroHomeSectionId = fn(13413).NitroHomeSectionId;
+const NitroHomeSectionId = fn(13417).NitroHomeSectionId;
 const ContentDismissActionType = fn(1954).ContentDismissActionType;
 const jsx = fn(21).jsx;
 const size = fn(2);
@@ -37,7 +37,7 @@ export default noop.memo(function SubscriberNitroIcon(onPress) {
       }
     }
   }
-  obj = { cooldownDurationMs: tmp(16792).REFERRAL_NITRO_BUTTON_RED_DOT_COOLDOWN_MS };
+  obj = { cooldownDurationMs: tmp(16795).REFERRAL_NITRO_BUTTON_RED_DOT_COOLDOWN_MS };
   const tmp5 = _slicedToArray(tmpResult.useSelectedTimeRecurringDismissibleContent(prop, obj, undefined, true), 2);
   dependencyMap = tmp6;
   const tmp7 = tmp5[0] === onPress(1943).DismissibleContent.REFERRAL_PROGRAM_ENTRYPOINT_NITRO_BUTTON_NOTIFICATION;
@@ -51,10 +51,10 @@ export default noop.memo(function SubscriberNitroIcon(onPress) {
     }
     onPress();
   }, items2);
-  obj = { IconComponent: onPress(8662).NitroWheelIcon, accessibilityLabel: null, onPress: null, showRedDot: null };
+  obj = { IconComponent: onPress(8667).NitroWheelIcon, accessibilityLabel: null, onPress: null, showRedDot: null };
   const intl = tmp(1114).intl;
   obj.accessibilityLabel = intl.string(onPress(1114).t.Ipxkog);
   obj.onPress = callback;
   obj.showRedDot = tmp7;
-  return jsx(showReferralNotificationDot(16794), { IconComponent: onPress(8662).NitroWheelIcon, accessibilityLabel: null, onPress: null, showRedDot: null });
+  return jsx(showReferralNotificationDot(16797), { IconComponent: onPress(8667).NitroWheelIcon, accessibilityLabel: null, onPress: null, showRedDot: null });
 });

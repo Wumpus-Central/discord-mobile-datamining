@@ -1,21 +1,21 @@
-// === Module 11377: WasThisHelpfulSection ===
+// === Module 11382: WasThisHelpfulSection ===
 
-// Module 11377 (WasThisHelpfulSection)
+// Module 11382 (WasThisHelpfulSection)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import ToastActionCreatorsDefault from "ToastActionCreators" /* 4259 */;
-import _modDef9401 from "module_9401" /* 9401 */;
-import ShieldIcon from "ShieldIcon" /* 9402 */;
-import SafetyWarningUtils from "SafetyWarningUtils" /* 11370 */;
-import ChannelSafetyWarningsActionCreators from "ChannelSafetyWarningsActionCreators" /* 11371 */;
+import _modDef9406 from "module_9406" /* 9406 */;
+import ShieldIcon from "ShieldIcon" /* 9407 */;
+import SafetyWarningUtils from "SafetyWarningUtils" /* 11375 */;
+import ChannelSafetyWarningsActionCreators from "ChannelSafetyWarningsActionCreators" /* 11376 */;
 import noop from "module_19" /* 19 */;
-import ChannelSafetyWarningsStore from "ChannelSafetyWarningsStore" /* 10915 */;
+import ChannelSafetyWarningsStore from "ChannelSafetyWarningsStore" /* 10920 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ Pressable: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-let closure_7 = fn(10915).SafetyWarningFeedbackTypes;
-const Constants = fn(11363);
+let closure_7 = fn(10920).SafetyWarningFeedbackTypes;
+const Constants = fn(11368);
 ({ DOWNVOTE_FEEDBACK_CONFIRMATION_TOAST_KEY: closure_8, TOAST_SHIELD_ICON_COLOR: closure_9, UPVOTE_FEEDBACK_CONFIRMATION_TOAST_KEY: c10, FEEDBACK_BUTTON_ACTIVE_BACKGROUND_COLOR } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
@@ -69,7 +69,7 @@ export default function WasThisHelpfulSection(channelId) {
     obj = { key: feedbackType === constants.UPVOTE ? closure_2_10 : React6, content: null, icon: null, IconComponent: null, iconColor: null, containerStyle: null, recolorLegacyIcon: true };
     const intl = util.intl;
     obj.content = intl.string(util.t["gd/Yqs"]);
-    obj.icon = _modDef9401;
+    obj.icon = _modDef9406;
     obj.IconComponent = ShieldIcon.ShieldIcon;
     obj.iconColor = iconColor;
     obj.containerStyle = toastContainer.toastContainer;

@@ -1,13 +1,13 @@
-// === Module 8633: in_app_reports/ReportUtils ===
+// === Module 8638: in_app_reports/ReportUtils ===
 
-// Module 8633 (in_app_reports/ReportUtils)
+// Module 8638 (in_app_reports/ReportUtils)
 import _modDef38 from "module_38" /* 38 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import HTTPUtils from "HTTPUtils" /* 1272 */;
 import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 4740 */;
 import SafetyToastsActionCreatorsDefault from "SafetyToastsActionCreators" /* 8404 */;
-import MenuTypes from "MenuTypes" /* 8630 */;
-import ReportMenuType from "ReportMenuType" /* 8632 */;
+import MenuTypes from "MenuTypes" /* 8635 */;
+import ReportMenuType from "ReportMenuType" /* 8637 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 import DevSettingsStore from "DevSettingsStore" /* 4559 */;
@@ -219,16 +219,16 @@ function genSubmitData(version, name, arr, email_token) {
     str = "en";
   }
   obj = {
-    channel_id: "create",
+    channel_id: "HermesInternal",
     message_id: "call",
-    stage_instance_id: "call",
-    guild_id: "withTiming",
-    guild_scheduled_event_id: "getChannel",
-    user_id: "channelId",
-    email_token: "string",
-    application_id: "isArray",
-    entrypoint: "fill",
-    widget_id: "fill",
+    stage_instance_id: "formatToPlainString",
+    guild_id: "PX_16",
+    guild_scheduled_event_id: "call",
+    user_id: "default",
+    email_token: "isArray",
+    application_id: "r",
+    entrypoint: "HermesInternal",
+    widget_id: "PX_16",
     language: str,
     breadcrumbs: arr.map((nodeRef) => nodeRef.nodeRef),
     elements: arr.reduce((acc, item) => {
@@ -408,7 +408,7 @@ export const submitReport = function submitReport(language, name, arr) {
   if (DevSettingsStore.get("iar_skip_api_report_submit")) {
     let resolved = Promise.resolve();
   } else {
-    const REPORT_TO_MOD = obj1(8632).ReportMenuTypeSets.REPORT_TO_MOD;
+    const REPORT_TO_MOD = obj1(8637).ReportMenuTypeSets.REPORT_TO_MOD;
     if (REPORT_TO_MOD.has(name.name)) {
       let str2 = language.language;
       let obj = { version: null, variant: null, language: null, breadcrumbs: null, elements: null };
@@ -442,8 +442,8 @@ export const submitReport = function submitReport(language, name, arr) {
         return obj;
       }, {});
       let tmp15 = null;
-      if (name.name === tmp4(8630).ModeratorReportNames.MESSAGE) {
-        obj = { channel_id: "Array", message_id: "call", guild_id: "o" };
+      if (name.name === tmp4(8635).ModeratorReportNames.MESSAGE) {
+        obj = { channel_id: "Array", message_id: "padding", guild_id: "_desired" };
         obj1 = {};
         ({ channel_id, id } = name.record);
         let merged = Object.assign(obj);
@@ -455,11 +455,11 @@ export const submitReport = function submitReport(language, name, arr) {
       }
       obj1 = tmp15;
       const HTTP2 = tmp4(1272).HTTP;
-      const REPORT_TO_MOD2 = tmp4(8632).ReportMenuTypeSets.REPORT_TO_MOD;
+      const REPORT_TO_MOD2 = tmp4(8637).ReportMenuTypeSets.REPORT_TO_MOD;
       const _HermesInternal2 = HermesInternal;
       const hasItem = REPORT_TO_MOD2.has(name.name);
       _modDef38(hasItem, "Invalid report type " + name.name);
-      if (name.name === tmp4(8630).ModeratorReportNames.MESSAGE) {
+      if (name.name === tmp4(8635).ModeratorReportNames.MESSAGE) {
         const request = { url: closure_7.SUBMIT_MODERATOR_MESSAGE_REPORT(name.record.channel_id, name.record.id), body: tmp15, rejectWithError: false };
         resolved = HTTP2.post(request).then((result) => {
           let obj = SafetyToastsActionCreatorsDefault;
@@ -496,7 +496,7 @@ export const submitReport = function submitReport(language, name, arr) {
       const request1 = { url: null, body: null, rejectWithError: false };
       name = name.name;
       let _Object = Object;
-      const values = Object.values(tmp4(8630).ReportNames);
+      const values = Object.values(tmp4(8635).ReportNames);
       const _HermesInternal = HermesInternal;
       const hasItem1 = values.includes(name);
       _modDef38(hasItem1, "Invalid report type " + name.name);

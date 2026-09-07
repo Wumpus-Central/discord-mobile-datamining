@@ -25,7 +25,7 @@ export const showShareActionSheet = function showShareActionSheet(source, PREMIU
     let mediaShareParams = require("ShowShareActionSheetUtils").getMediaShareParams(source.source);
     const obj2 = require("ShowShareActionSheetUtils");
   } else {
-    mediaShareParams = { mediaFallbackUrl: "hash", mediaStagingOptions: "call" };
+    mediaShareParams = { mediaFallbackUrl: "push", mediaStagingOptions: "channel" };
   }
   ({ mediaFallbackUrl, mediaStagingOptions } = mediaShareParams);
   if (null == source.source) {

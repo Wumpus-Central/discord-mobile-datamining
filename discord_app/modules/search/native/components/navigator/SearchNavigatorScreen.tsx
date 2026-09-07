@@ -1,15 +1,15 @@
-// === Module 16865: SearchNavigatorScreen ===
+// === Module 16868: SearchNavigatorScreen ===
 
-// Module 16865 (SearchNavigatorScreen)
+// Module 16868 (SearchNavigatorScreen)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import useBaseAppContainerDimensionsDefault from "useBaseAppContainerDimensions" /* 4422 */;
 import Pressables from "Pressables" /* 5123 */;
 import ThemedGradientDefault from "ThemedGradient" /* 5125 */;
 import ArrowLargeLeftIcon from "ArrowLargeLeftIcon" /* 5628 */;
-import SearchScreenSearchBarDefault from "SearchScreenSearchBar" /* 16627 */;
-import SearchScreenLayoutDefault from "SearchScreenLayout" /* 16636 */;
-import useSearchLayoutInsetTopDefault from "useSearchLayoutInsetTop" /* 16866 */;
+import SearchScreenSearchBarDefault from "SearchScreenSearchBar" /* 16630 */;
+import SearchScreenLayoutDefault from "SearchScreenLayout" /* 16639 */;
+import useSearchLayoutInsetTopDefault from "useSearchLayoutInsetTop" /* 16869 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -32,7 +32,7 @@ export default function SearchNavigatorScreen(navigation) {
   const searchContext = navigation.route.params.searchContext;
   const tmp = closure_8();
   importDefault = tmp;
-  let obj = navigation(16625);
+  let obj = navigation(16628);
   const searchSuggestionsGesture = obj.useSearchSuggestionsGesture(searchContext);
   ({ gesture, dismissed, setDismissed, onLayoutMeasure } = searchSuggestionsGesture);
   const items = [navigation.goBack, tmp.back];
@@ -58,7 +58,7 @@ export default function SearchNavigatorScreen(navigation) {
   items3[1] = closure_5(View, { style: tmp.tabs, children: closure_5(SearchScreenLayoutDefault, { searchContext, width: useBaseAppContainerDimensionsDefault().width }) });
   obj1.children = items3;
   obj.children = closure_6(View, obj1);
-  items1[1] = closure_5(navigation(16361).NonCollapsableGestureDetector, obj);
+  items1[1] = closure_5(navigation(16364).NonCollapsableGestureDetector, obj);
   obj.children = items1;
   return closure_6(closure_7, obj);
 };

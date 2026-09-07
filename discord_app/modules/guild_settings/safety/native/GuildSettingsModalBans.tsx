@@ -1,6 +1,6 @@
-// === Module 17650: GuildSettingsModalBans ===
+// === Module 17653: GuildSettingsModalBans ===
 
-// Module 17650 (GuildSettingsModalBans)
+// Module 17653 (GuildSettingsModalBans)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import fuzzysearchDefault from "fuzzysearch" /* 5517 */;
@@ -10,7 +10,7 @@ import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import GuildStore from "GuildStore" /* 1979 */;
 import UserStore from "UserStore" /* 1371 */;
-import GuildSettingsStore from "GuildSettingsStore" /* 9064 */;
+import GuildSettingsStore from "GuildSettingsStore" /* 9069 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);

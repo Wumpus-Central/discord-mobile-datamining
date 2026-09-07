@@ -1,6 +1,6 @@
-// === Module 9106: getFilterImage ===
+// === Module 9111: getFilterImage ===
 
-// Module 9106 (getFilterImage)
+// Module 9111 (getFilterImage)
 import VideoBackgroundConstants from "VideoBackgroundConstants" /* 6987 */;
 import size from "module_2" /* 2 */;
 

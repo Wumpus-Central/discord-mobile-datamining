@@ -1,11 +1,11 @@
-// === Module 11071: PremiumGiftSuccess ===
+// === Module 11076: PremiumGiftSuccess ===
 
-// Module 11071 (PremiumGiftSuccess)
+// Module 11076 (PremiumGiftSuccess)
 import nativeDefault from "native" /* 576 */;
 import dismissible_content from "dismissible_content" /* 1943 */;
 import DismissibleContentUtils from "DismissibleContentUtils" /* 1945 */;
 import noop from "module_19" /* 19 */;
-import PromotionsStore from "PromotionsStore" /* 10665 */;
+import PromotionsStore from "PromotionsStore" /* 10670 */;
 
 require = fn;
 const View = fn(17).View;

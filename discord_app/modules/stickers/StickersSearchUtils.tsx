@@ -1,6 +1,6 @@
-// === Module 10393: StickersSearchUtils ===
+// === Module 10398: StickersSearchUtils ===
 
-// Module 10393 (StickersSearchUtils)
+// Module 10398 (StickersSearchUtils)
 import AutocompleteUtilsDefault from "AutocompleteUtils" /* 5442 */;
 import StickerSendability from "StickerSendability" /* 7337 */;
 import size from "module_2" /* 2 */;

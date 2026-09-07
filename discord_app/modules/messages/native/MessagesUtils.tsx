@@ -1,6 +1,6 @@
-// === Module 11252: messages/MessagesUtils ===
+// === Module 11257: messages/MessagesUtils ===
 
-// Module 11252 (messages/MessagesUtils)
+// Module 11257 (messages/MessagesUtils)
 import TTITrackerDefault from "TTITracker" /* 9 */;
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import _modDef12 from "module_12" /* 12 */;
@@ -32,13 +32,13 @@ import MessageReactionsTypes from "MessageReactionsTypes" /* 7763 */;
 import ReactionActionCreators from "ReactionActionCreators" /* 7764 */;
 import ThreadActionCreatorsDefault from "ThreadActionCreators" /* 7765 */;
 import tracking_Tracking from "tracking/Tracking" /* 7767 */;
-import _modDef11253 from "module_11253" /* 11253 */;
-import reactions_ReactionUtils from "reactions/ReactionUtils" /* 11254 */;
-import computeScrollData from "computeScrollData" /* 11270 */;
-import NativeChatUtilsDefault from "NativeChatUtils" /* 11271 */;
-import MediaPlaybackFacts from "MediaPlaybackFacts" /* 11275 */;
-import QuestActionCreators from "QuestActionCreators" /* 11276 */;
-import MessageImpressionAnalyticsHelpers from "MessageImpressionAnalyticsHelpers" /* 11304 */;
+import _modDef11258 from "module_11258" /* 11258 */;
+import reactions_ReactionUtils from "reactions/ReactionUtils" /* 11259 */;
+import computeScrollData from "computeScrollData" /* 11275 */;
+import NativeChatUtilsDefault from "NativeChatUtils" /* 11276 */;
+import MediaPlaybackFacts from "MediaPlaybackFacts" /* 11280 */;
+import QuestActionCreators from "QuestActionCreators" /* 11281 */;
+import MessageImpressionAnalyticsHelpers from "MessageImpressionAnalyticsHelpers" /* 11309 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import ReferencedMessageStore from "ReferencedMessageStore" /* 7595 */;
@@ -207,7 +207,7 @@ function parseVoiceStateChannelIdSummary(prop) {
   }
   return map;
 }
-let closure_5 = fn(9485).updateShouldShowJumpToPresentButton;
+let closure_5 = fn(9490).updateShouldShowJumpToPresentButton;
 const RowGeneratorConstants = fn(7933);
 ({ RowType: closure_15, Changeset: closure_16 } = RowGeneratorConstants);
 const Constants = fn(1074);
@@ -399,7 +399,7 @@ export const handleAddOrRemoveReaction = function handleAddOrRemoveReaction(mess
       stringResult = string(t.X2L3Oa);
     }
     obj = { key: "ARCHIVED_POST_REACTIONS_DISABLED_TOAST", content: stringResult, icon: null };
-    tmp36Result = _modDef11253;
+    tmp36Result = _modDef11258;
     obj.icon = tmp36Result;
     t = obj15.open(obj);
     isForumPostResult = channel.isForumPost();

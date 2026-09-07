@@ -1,10 +1,10 @@
-// === Module 17015: ActivityPanelStateContext ===
+// === Module 17018: ActivityPanelStateContext ===
 
-// Module 17015 (ActivityPanelStateContext)
+// Module 17018 (ActivityPanelStateContext)
 import noop from "module_19" /* 19 */;
 
 const obj = {
-  mode: fn(9505).ActivityPanelModes.PANEL,
+  mode: fn(9510).ActivityPanelModes.PANEL,
   setMode() {
     const error = new Error("ActivityPanelStateContextType.Provider.setMode: not called within a context provider");
     throw error;

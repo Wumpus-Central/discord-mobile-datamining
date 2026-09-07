@@ -1,6 +1,6 @@
-// === Module 17647: InviteEmpty ===
+// === Module 17650: InviteEmpty ===
 
-// Module 17647 (InviteEmpty)
+// Module 17650 (InviteEmpty)
 import shared from "shared" /* 4411 */;
 import _mod8233 from "module_8233" /* 8233 */;
 import noop from "module_19" /* 19 */;
@@ -14,13 +14,13 @@ const result = size.fileFinishedImporting("design/components/Illustration/native
 export const getInviteEmptySource = function getInviteEmptySource(theme) {
   const obj = {
     dark() {
-      return require("module_10950");
+      return require("module_10955");
     },
     darker() {
-      return require("module_17648");
+      return require("module_17651");
     },
     light() {
-      return require("module_10949");
+      return require("module_10954");
     }
   };
   return obj.getIllustrationSource(theme, obj);
@@ -28,13 +28,13 @@ export const getInviteEmptySource = function getInviteEmptySource(theme) {
 export const useInviteEmptySource = function useInviteEmptySource() {
   const obj = {
     dark() {
-      return require("module_10950");
+      return require("module_10955");
     },
     darker() {
-      return require("module_17648");
+      return require("module_17651");
     },
     light() {
-      return require("module_10949");
+      return require("module_10954");
     }
   };
   return _mod8233.getIllustrationSource(obj.useThemeContext().theme, obj);
@@ -42,13 +42,13 @@ export const useInviteEmptySource = function useInviteEmptySource() {
 export const InviteEmpty = function InviteEmpty(arg0) {
   let obj = {
     dark() {
-      return require("module_10950");
+      return require("module_10955");
     },
     darker() {
-      return require("module_17648");
+      return require("module_17651");
     },
     light() {
-      return require("module_10949");
+      return require("module_10954");
     }
   };
   obj = {};

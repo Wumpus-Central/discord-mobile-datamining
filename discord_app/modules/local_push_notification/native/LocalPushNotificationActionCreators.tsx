@@ -1,12 +1,12 @@
-// === Module 17902: LocalPushNotificationActionCreators ===
+// === Module 17905: LocalPushNotificationActionCreators ===
 
-// Module 17902 (LocalPushNotificationActionCreators)
+// Module 17905 (LocalPushNotificationActionCreators)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import SentryUtilsDefault from "SentryUtils" /* 1232 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
 import ChannelConstants from "ChannelConstants" /* 1964 */;
 import GuildActionCreatorsDefault from "GuildActionCreators" /* 5520 */;
-import Constants2 from "Constants" /* 13716 */;
+import Constants2 from "Constants" /* 13720 */;
 import Constants from "Constants" /* 1074 */;
 import size from "module_2" /* 2 */;
 
@@ -40,8 +40,8 @@ export const receiveLocalNotification = function receiveLocalNotification(getDat
         const result = GuildActionCreatorsDefault.transitionToGuildSync(data.guildId);
         const tmpResult = GuildActionCreatorsDefault;
       } else if (constants.CALL_RING === type) {
-        data(1896)(9536, dependencyMap.paths).then((result) => result.default(channelId.channelId));
-        const promise2 = data(1896)(9536, dependencyMap.paths);
+        data(1896)(9541, dependencyMap.paths).then((result) => result.default(channelId.channelId));
+        const promise2 = data(1896)(9541, dependencyMap.paths);
       } else if (constants.MESSAGE_SEND_FAILED === type) {
         data(1896)(4571, dependencyMap.paths).then((transitionToMessage) => {
           ({ channelId, messageId } = closure_1_0);

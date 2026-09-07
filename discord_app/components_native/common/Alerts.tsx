@@ -1,18 +1,18 @@
-// === Module 16915: Alerts ===
+// === Module 16918: Alerts ===
 
-// Module 16915 (Alerts)
+// Module 16918 (Alerts)
 import discord_common_shallowEqualDefault from "discord_common/shallowEqual" /* 558 */;
 import nativeDefault from "native" /* 576 */;
 import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 4905 */;
 import Dialog from "Dialog" /* 4958 */;
 import KeyboardAwareViewDefault from "KeyboardAwareView" /* 5578 */;
-import ModalRegistryDefault from "ModalRegistry" /* 16916 */;
+import ModalRegistryDefault from "ModalRegistry" /* 16919 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4552 */;
-import PermissionSpeakStore from "PermissionSpeakStore" /* 13751 */;
-import PermissionVADStore from "PermissionVADStore" /* 14396 */;
+import PermissionSpeakStore from "PermissionSpeakStore" /* 13755 */;
+import PermissionVADStore from "PermissionVADStore" /* 14399 */;
 import SurveyStore from "SurveyStore" /* 4751 */;
-import AlertStore from "AlertStore" /* 11545 */;
+import AlertStore from "AlertStore" /* 11550 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
@@ -150,7 +150,7 @@ AlertWrapper.prototype["render"] = function render() {
   return map1(Dialog.Dialog, obj);
 };
 AlertWrapper.contextType = fn(4271).ThemeContext;
-let closure_18 = Object.freeze({ renderAlert: "Array", renderKey: "call", props: "o" });
+let closure_18 = Object.freeze({ renderAlert: "Array", renderKey: "padding", props: "_desired" });
 const tmp7 = new ModalRegistryDefault(items1);
 const size = fn(2);
 const result = size.fileFinishedImporting("components_native/common/Alerts.tsx");
@@ -185,7 +185,7 @@ export default noop.memo(function Alerts() {
           return <openModal.component />;
         };
       } else {
-        return { renderAlert: "Array", renderKey: "call", props: "o" };
+        return { renderAlert: "Array", renderKey: "padding", props: "_desired" };
       }
     }
   });

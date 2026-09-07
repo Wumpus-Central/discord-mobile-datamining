@@ -1,12 +1,12 @@
-// === Module 12408: ChatInputNotificationNudge ===
+// === Module 12412: ChatInputNotificationNudge ===
 
-// Module 12408 (ChatInputNotificationNudge)
+// Module 12412 (ChatInputNotificationNudge)
 import nativeDefault from "native" /* 576 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
-import useIsAppDMDefault from "useIsAppDM" /* 12145 */;
-import NotificationPermissionUtil from "NotificationPermissionUtil" /* 12411 */;
-import PushNotificationActionCreators from "PushNotificationActionCreators" /* 12412 */;
-import PostReactionPermissionNudgeExperimentDefault from "PostReactionPermissionNudgeExperiment" /* 12420 */;
+import useIsAppDMDefault from "useIsAppDM" /* 12149 */;
+import NotificationPermissionUtil from "NotificationPermissionUtil" /* 12415 */;
+import PushNotificationActionCreators from "PushNotificationActionCreators" /* 12416 */;
+import PostReactionPermissionNudgeExperimentDefault from "PostReactionPermissionNudgeExperiment" /* 12424 */;
 import _slicedToArray from "module_32" /* 32 */;
 import JoinedThreadsStore from "JoinedThreadsStore" /* 4201 */;
 import UserGuildSettingsStore from "UserGuildSettingsStore" /* 4741 */;
@@ -73,11 +73,11 @@ function ChatInputNotificationNudgeImpl(children) {
 const noop = fn(19);
 ({ useCallback: closure_4, useEffect: hasOwnProperty } = noop);
 const View = fn(17).View;
-const PermissionPromptType = fn(12409).PermissionPromptType;
+const PermissionPromptType = fn(12413).PermissionPromptType;
 const Constants = fn(1074);
 ({ AnalyticEvents: c10, NOOP: closure_11 } = Constants);
 const ContentDismissActionType = fn(1954).ContentDismissActionType;
-const NotificationPermissionConstants = fn(12410);
+const NotificationPermissionConstants = fn(12414);
 ({ EventActionLocation: map1, EventActionType: closure_14, NotificationNudgeAnalyticsAction: closure_15, NotificationNudgeSurface: closure_16 } = NotificationPermissionConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_17, jsxs: closure_18 } = jsxProd);
@@ -117,9 +117,9 @@ export default function ChatInputNotificationNudge(channel) {
   if (!stateFromStores) {
     tmp5 = !useIsAppDMDefault(channel);
   }
-  let tmpResult = tmp(12411);
+  let tmpResult = tmp(12415);
   const shouldShowPushNotificationNudgeByPromptType = tmpResult.useShouldShowPushNotificationNudgeByPromptType(PermissionPromptType.CHANNEL_BANNER);
-  tmpResult = tmp(12411);
+  tmpResult = tmp(12415);
   const shouldShowPushNotificationNudgeByPromptType1 = tmpResult.useShouldShowPushNotificationNudgeByPromptType(PermissionPromptType.POST_REACTION_BANNER);
   const tmp4Result = PostReactionPermissionNudgeExperimentDefault;
   let prop = null;

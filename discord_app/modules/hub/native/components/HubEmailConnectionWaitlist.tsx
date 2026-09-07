@@ -1,6 +1,6 @@
-// === Module 12734: HubEmailConnectionWaitlist ===
+// === Module 12738: HubEmailConnectionWaitlist ===
 
-// Module 12734 (HubEmailConnectionWaitlist)
+// Module 12738 (HubEmailConnectionWaitlist)
 import nativeDefault from "native" /* 576 */;
 import noop from "module_19" /* 19 */;
 
@@ -37,7 +37,7 @@ export default function HubEmailConnectionWaitlist(school) {
     });
   }, items);
   obj = { style: tmp.container, children: null };
-  obj = { source: navigation(12735), style: tmp.header };
+  obj = { source: navigation(12739), style: tmp.header };
   const items1 = [closure_6(closure_5, obj), , , ];
   const obj1 = { style: tmp.title, accessibilityRole: "header", children: null };
   let intl = onClose(1114).intl;

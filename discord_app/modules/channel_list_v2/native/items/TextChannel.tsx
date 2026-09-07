@@ -1,12 +1,12 @@
-// === Module 16225: TextChannel ===
+// === Module 16228: TextChannel ===
 
-// Module 16225 (TextChannel)
+// Module 16228 (TextChannel)
 import nativeDefault from "native" /* 576 */;
 import RoutingSourcesDefault from "RoutingSources" /* 1112 */;
 import transitionToChannel from "transitionToChannel" /* 4571 */;
 import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 4573 */;
 import useChannelRoleSubscriptionStatus from "useChannelRoleSubscriptionStatus" /* 5007 */;
-import openChannelLongPressActionSheet from "openChannelLongPressActionSheet" /* 10913 */;
+import openChannelLongPressActionSheet from "openChannelLongPressActionSheet" /* 10918 */;
 import noop from "module_19" /* 19 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 1956 */;
 import GatedChannelStore from "GatedChannelStore" /* 2013 */;
@@ -17,7 +17,7 @@ import UserGuildSettingsStore from "UserGuildSettingsStore" /* 4741 */;
 
 require = fn;
 const View = fn(17).View;
-const RedesignChannelListConstants = fn(10118);
+const RedesignChannelListConstants = fn(10123);
 ({ CHANNEL_MARGIN_VERTICAL: closure_11, CHANNEL_TITLE_LINE_HEIGHT: closure_12 } = RedesignChannelListConstants);
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);

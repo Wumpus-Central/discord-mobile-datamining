@@ -1,13 +1,13 @@
-// === Module 14596: CustomColorPickerActionSheet ===
+// === Module 14599: CustomColorPickerActionSheet ===
 
-// Module 14596 (CustomColorPickerActionSheet)
+// Module 14599 (CustomColorPickerActionSheet)
 import nativeDefault from "native" /* 576 */;
 import _modDef672 from "module_672" /* 672 */;
 import utils_ColorUtils from "utils/ColorUtils" /* 1091 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4296 */;
 import ColorUtils from "ColorUtils" /* 4409 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4527 */;
-import ColorPickerUtils from "ColorPickerUtils" /* 14598 */;
+import ColorPickerUtils from "ColorPickerUtils" /* 14601 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -182,7 +182,7 @@ export default function CustomColorPickerActionSheet(arg0) {
       obj.runOnJS(updateInputHexValueFromHsv)(obj);
     }
   };
-  items3[2] = sharedValue2(tmp16(14599), obj5);
+  items3[2] = sharedValue2(tmp16(14602), obj5);
   obj2.children = items3;
   obj.children = tmp13(tmp14, obj2);
   return sharedValue2(onSelect(7150).BottomSheet, obj);

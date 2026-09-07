@@ -1,15 +1,15 @@
-// === Module 16541: Elements ===
+// === Module 16544: Elements ===
 
-// Module 16541 (Elements)
+// Module 16544 (Elements)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import native from "native" /* 1178 */;
 import Text_Text from "Text/Text" /* 4556 */;
 import Pressables from "Pressables" /* 5123 */;
-import NativePaymentHooksDefault from "NativePaymentHooks" /* 9366 */;
-import useStoreFrontPriceDefault from "useStoreFrontPrice" /* 9369 */;
-import GuildRoleSubscriptionListingEditStateUtilsAll from "GuildRoleSubscriptionListingEditStateUtils" /* 15227 */;
-import _modDef16542 from "module_16542" /* 16542 */;
+import NativePaymentHooksDefault from "NativePaymentHooks" /* 9371 */;
+import useStoreFrontPriceDefault from "useStoreFrontPrice" /* 9374 */;
+import GuildRoleSubscriptionListingEditStateUtilsAll from "GuildRoleSubscriptionListingEditStateUtils" /* 15230 */;
+import _modDef16545 from "module_16545" /* 16545 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import SubscriptionPlanStore from "SubscriptionPlanStore" /* 4223 */;
@@ -103,7 +103,7 @@ export const ArrowButton = function ArrowButton(arg0) {
   let obj = { accessibilityRole: "button", style: tmp.arrowButton, onPress, children: null };
   obj = { variant: "text-md/semibold", color: "text-default", style: tmp.arrowButtonText, children: text };
   const items = [React7(Text_Text.Text, obj), ];
-  obj = { size: native.Icon.Sizes.SMALL, source: _modDef16542, style: tmp.arrowButtonIcon };
+  obj = { size: native.Icon.Sizes.SMALL, source: _modDef16545, style: tmp.arrowButtonIcon };
   items[1] = React7(native.Icon, obj);
   obj.children = items;
   return closure_1_10(Pressables.PressableOpacity, obj);

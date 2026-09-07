@@ -1,6 +1,6 @@
-// === Module 10085: NotificationTextUtils ===
+// === Module 10090: NotificationTextUtils ===
 
-// Module 10085 (NotificationTextUtils)
+// Module 10090 (NotificationTextUtils)
 import LoggerDefault from "Logger" /* 3 */;
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1114 */;
@@ -19,10 +19,10 @@ import MessageParserDefault from "MessageParser" /* 7682 */;
 import IsolateString from "IsolateString" /* 7685 */;
 import SystemMessageUtilsDefault from "SystemMessageUtils" /* 7986 */;
 import getDisplayFilenameDefault from "getDisplayFilename" /* 8264 */;
-import ChannelVisibilityUtils from "ChannelVisibilityUtils" /* 10087 */;
-import ThreadNotificationSettings from "ThreadNotificationSettings" /* 10088 */;
-import isChannelFocused from "isChannelFocused" /* 10089 */;
-import FocusModeUtils from "FocusModeUtils" /* 10090 */;
+import ChannelVisibilityUtils from "ChannelVisibilityUtils" /* 10092 */;
+import ThreadNotificationSettings from "ThreadNotificationSettings" /* 10093 */;
+import isChannelFocused from "isChannelFocused" /* 10094 */;
+import FocusModeUtils from "FocusModeUtils" /* 10095 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 1956 */;
 import LurkingStore from "LurkingStore" /* 4200 */;
 import MessageRequestStore from "MessageRequestStore" /* 7219 */;
@@ -38,7 +38,7 @@ import SelfPresenceStore from "SelfPresenceStore" /* 5279 */;
 import UserGuildSettingsStore from "UserGuildSettingsStore" /* 4741 */;
 import UserRequiredActionStore from "UserRequiredActionStore" /* 1951 */;
 import UserStore from "UserStore" /* 1371 */;
-import RpcNotificationSettingsStore from "RpcNotificationSettingsStore" /* 10086 */;
+import RpcNotificationSettingsStore from "RpcNotificationSettingsStore" /* 10091 */;
 
 const isForwardMessageDefault = isForwardMessage;
 
@@ -159,7 +159,7 @@ const ChannelRecord = fn(1961);
 ({ GUILD_VOCAL_CHANNEL_TYPES: closure_8, THREAD_CHANNEL_TYPES: closure_9 } = ChannelRecord);
 const Constants = fn(1074);
 ({ ActivityActionTypes: closure_21, ChannelTypes: closure_22, MessageFlags: closure_23, MessageTypes: closure_24, MessageTypesSets: closure_25, StatusTypes: closure_26, UserFlags: closure_27 } = Constants);
-const ActivityPanelModes = fn(9505).ActivityPanelModes;
+const ActivityPanelModes = fn(9510).ActivityPanelModes;
 const ThreadMemberFlags = fn(1113).ThreadMemberFlags;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/notifications/NotificationTextUtils.tsx");

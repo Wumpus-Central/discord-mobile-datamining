@@ -1,6 +1,6 @@
-// === Module 9601: StreamFailed ===
+// === Module 9606: StreamFailed ===
 
-// Module 9601 (StreamFailed)
+// Module 9606 (StreamFailed)
 import shared from "shared" /* 4411 */;
 import _mod8233 from "module_8233" /* 8233 */;
 import noop from "module_19" /* 19 */;
@@ -14,10 +14,10 @@ const result = size.fileFinishedImporting("design/components/Illustration/native
 export const getStreamFailedSource = function getStreamFailedSource(theme) {
   const obj = {
     dark() {
-      return require("module_9602");
+      return require("module_9607");
     },
     darker() {
-      return require("module_9603");
+      return require("module_9608");
     }
   };
   return obj.getIllustrationSource(theme, obj);
@@ -25,10 +25,10 @@ export const getStreamFailedSource = function getStreamFailedSource(theme) {
 export const useStreamFailedSource = function useStreamFailedSource() {
   const obj = {
     dark() {
-      return require("module_9602");
+      return require("module_9607");
     },
     darker() {
-      return require("module_9603");
+      return require("module_9608");
     }
   };
   return _mod8233.getIllustrationSource(obj.useThemeContext().theme, obj);
@@ -36,10 +36,10 @@ export const useStreamFailedSource = function useStreamFailedSource() {
 export const StreamFailed = function StreamFailed(arg0) {
   let obj = {
     dark() {
-      return require("module_9602");
+      return require("module_9607");
     },
     darker() {
-      return require("module_9603");
+      return require("module_9608");
     }
   };
   obj = {};

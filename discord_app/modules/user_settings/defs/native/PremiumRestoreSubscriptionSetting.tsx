@@ -1,6 +1,6 @@
-// === Module 15243: PremiumRestoreSubscriptionSetting ===
+// === Module 15246: PremiumRestoreSubscriptionSetting ===
 
-// Module 15243 (PremiumRestoreSubscriptionSetting)
+// Module 15246 (PremiumRestoreSubscriptionSetting)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1114 */;
 import PlatformUtils from "PlatformUtils" /* 1115 */;
@@ -10,14 +10,14 @@ import UserStore from "UserStore" /* 1371 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-fn(11468);
+fn(11473);
 let SettingBuilders = {
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.s9h22P);
   },
   parent: null,
-  IconComponent: fn(8662).NitroWheelIcon,
+  IconComponent: fn(8667).NitroWheelIcon,
   onPress: function handleNitroRestoreSettingPress() {
     let obj = BillingActionCreatorsDefault;
     const result = obj.restoreAndApplyPurchases(true);

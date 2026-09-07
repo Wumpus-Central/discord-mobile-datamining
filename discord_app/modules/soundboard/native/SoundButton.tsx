@@ -1,12 +1,12 @@
-// === Module 17069: SoundButton ===
+// === Module 17072: SoundButton ===
 
-// Module 17069 (SoundButton)
+// Module 17072 (SoundButton)
 import nativeDefault from "native" /* 576 */;
 import ReanimatedRexport2 from "ReanimatedRexport" /* 4296 */;
 import spring from "spring" /* 4974 */;
 import EmojiDefault from "Emoji" /* 7130 */;
-import getSoundboardEmojiUrlDefault from "getSoundboardEmojiUrl" /* 11935 */;
-import openSoundboardSoundPreviewActionSheetDefault from "openSoundboardSoundPreviewActionSheet" /* 17075 */;
+import getSoundboardEmojiUrlDefault from "getSoundboardEmojiUrl" /* 11939 */;
+import openSoundboardSoundPreviewActionSheetDefault from "openSoundboardSoundPreviewActionSheet" /* 17078 */;
 import noop from "module_19" /* 19 */;
 
 const ReanimatedRexport = ReanimatedRexport2;
@@ -132,7 +132,7 @@ let closure_7 = ReanimatedRexport.createAnimatedComponent(View);
 const SPRING_CONFIG = { damping: 10, stiffness: 300, mass: 1 };
 fn(4560);
 let obj = { button: null, buttonPressed: null, buttonDisabled: null, buttonPlaying: null, playingBackground: null, emoji: null, emojiWrapper: null, text: null, textPlaying: null, lock: null };
-obj = { marginTop: 4, height: fn(17062).SOUND_BUTTON_HEIGHT, backgroundColor: nativeDefault.colors.CARD_BACKGROUND_DEFAULT, display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center", borderRadius: nativeDefault.radii.lg, borderWidth: 1, borderColor: nativeDefault.colors.BORDER_MUTED };
+obj = { marginTop: 4, height: fn(17065).SOUND_BUTTON_HEIGHT, backgroundColor: nativeDefault.colors.CARD_BACKGROUND_DEFAULT, display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center", borderRadius: nativeDefault.radii.lg, borderWidth: 1, borderColor: nativeDefault.colors.BORDER_MUTED };
 const merged = Object.assign(nativeDefault.shadows.SHADOW_LOW);
 obj.button = obj;
 obj.buttonPressed = { backgroundColor: nativeDefault.colors.CARD_PRIMARY_PRESSED_BG };

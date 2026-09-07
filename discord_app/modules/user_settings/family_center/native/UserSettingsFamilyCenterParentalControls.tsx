@@ -1,6 +1,6 @@
-// === Module 14929: UserSettingsFamilyCenterParentalControls ===
+// === Module 14932: UserSettingsFamilyCenterParentalControls ===
 
-// Module 14929 (UserSettingsFamilyCenterParentalControls)
+// Module 14932 (UserSettingsFamilyCenterParentalControls)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import _modDef2396 from "module_2396" /* 2396 */;
@@ -103,7 +103,7 @@ export default function FamilyCenterParentalControlsSettings() {
         }
       }
     }
-    stackNavigation.setOptions({ title: "hash", headerRight: "call" });
+    stackNavigation.setOptions({ title: "push", headerRight: "channel" });
   }, items1);
   if (isFamilyCenterV3Enabled) {
     isFamilyCenterV3Enabled = selectedSubPage === items2.SCREEN_TIME_CONTROLS;

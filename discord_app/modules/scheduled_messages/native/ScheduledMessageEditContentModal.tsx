@@ -1,6 +1,6 @@
-// === Module 12222: ScheduledMessageEditContentModal ===
+// === Module 12226: ScheduledMessageEditContentModal ===
 
-// Module 12222 (ScheduledMessageEditContentModal)
+// Module 12226 (ScheduledMessageEditContentModal)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import Text_Text from "Text/Text" /* 4556 */;
@@ -75,7 +75,7 @@ export default function ScheduledMessageEditContentModal(scheduledMessage) {
             const obj1 = { content: obj5.parse(stateFromStores, first).content, flags: scheduledMessage.createArgs.flags };
             v1 = 1;
             dependencyMap = 1;
-            const obj2 = { value: tmp4(12211).editScheduledMessage(scheduledMessage.scheduledMessageId, obj1), done: false };
+            const obj2 = { value: tmp4(12215).editScheduledMessage(scheduledMessage.scheduledMessageId, obj1), done: false };
             return obj2;
           }
         } else if (arg0 === 1) {

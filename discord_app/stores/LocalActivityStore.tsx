@@ -1,6 +1,6 @@
-// === Module 11457: LocalActivityStore ===
+// === Module 11462: LocalActivityStore ===
 
-// Module 11457 (LocalActivityStore)
+// Module 11462 (LocalActivityStore)
 import _modDef12 from "module_12" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
@@ -8,20 +8,20 @@ import _modDef1332 from "module_1332" /* 1332 */;
 import FlagUtils from "FlagUtils" /* 1384 */;
 import UserSettings from "UserSettings" /* 1935 */;
 import RobloxSubgameUtils from "RobloxSubgameUtils" /* 4690 */;
-import userSettingToActivity from "userSettingToActivity" /* 11110 */;
-import PresenceActivityFiltering from "PresenceActivityFiltering" /* 11461 */;
-import ActivityFlagUtils from "ActivityFlagUtils" /* 11462 */;
+import userSettingToActivity from "userSettingToActivity" /* 11115 */;
+import PresenceActivityFiltering from "PresenceActivityFiltering" /* 11466 */;
+import ActivityFlagUtils from "ActivityFlagUtils" /* 11467 */;
 import _slicedToArray from "module_32" /* 32 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 1956 */;
 import ApplicationStore from "ApplicationStore" /* 4788 */;
 import RunningGameStore from "RunningGameStore" /* 1915 */;
-import FirstPartyRichPresenceStore from "FirstPartyRichPresenceStore" /* 11458 */;
+import FirstPartyRichPresenceStore from "FirstPartyRichPresenceStore" /* 11463 */;
 import SpotifyStore from "SpotifyStore" /* 5280 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1221 */;
 import ApplicationStreamingStore from "ApplicationStreamingStore" /* 4582 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 import DetectableGameStore from "DetectableGameStore" /* 1931 */;
-import ExternalStreamingStore from "ExternalStreamingStore" /* 11460 */;
+import ExternalStreamingStore from "ExternalStreamingStore" /* 11465 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2011 */;
 import SessionsStore from "SessionsStore" /* 4578 */;
 

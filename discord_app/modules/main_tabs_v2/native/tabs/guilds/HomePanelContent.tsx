@@ -1,11 +1,11 @@
-// === Module 16281: HomePanelContent ===
+// === Module 16284: HomePanelContent ===
 
-// Module 16281 (HomePanelContent)
+// Module 16284 (HomePanelContent)
 import ReanimatedRexport from "ReanimatedRexport" /* 4296 */;
-import useHomeDrawerGesture from "useHomeDrawerGesture" /* 16022 */;
-import GuildsBarDefault from "GuildsBar" /* 16282 */;
+import useHomeDrawerGesture from "useHomeDrawerGesture" /* 16025 */;
+import GuildsBarDefault from "GuildsBar" /* 16285 */;
 import noop from "module_19" /* 19 */;
-import HomeDrawerStore from "HomeDrawerStore" /* 16023 */;
+import HomeDrawerStore from "HomeDrawerStore" /* 16026 */;
 
 require = fn;
 function HomeDrawerPanelContent() {

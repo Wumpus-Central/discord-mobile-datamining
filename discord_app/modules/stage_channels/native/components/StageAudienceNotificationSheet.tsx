@@ -1,16 +1,16 @@
-// === Module 8590: StageAudienceNotificationSheet ===
+// === Module 8595: StageAudienceNotificationSheet ===
 
-// Module 8590 (StageAudienceNotificationSheet)
+// Module 8595 (StageAudienceNotificationSheet)
 import nativeDefault from "native" /* 576 */;
 import native from "native" /* 1178 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4527 */;
 import FastImageDefault from "FastImage" /* 5587 */;
-import ScrollHandlingActionSheetDefault from "ScrollHandlingActionSheet" /* 8591 */;
-import _modDef8592 from "module_8592" /* 8592 */;
-import _modDef8614 from "module_8614" /* 8614 */;
-import _modDef8615 from "module_8615" /* 8615 */;
-import _modDef8616 from "module_8616" /* 8616 */;
-import _modDef8617 from "module_8617" /* 8617 */;
+import ScrollHandlingActionSheetDefault from "ScrollHandlingActionSheet" /* 8596 */;
+import _modDef8597 from "module_8597" /* 8597 */;
+import _modDef8619 from "module_8619" /* 8619 */;
+import _modDef8620 from "module_8620" /* 8620 */;
+import _modDef8621 from "module_8621" /* 8621 */;
+import _modDef8622 from "module_8622" /* 8622 */;
 import noop from "module_19" /* 19 */;
 import StageInstanceStore from "StageInstanceStore" /* 1962 */;
 
@@ -57,7 +57,7 @@ export default function StageAudienceNotificationSheet(channelId) {
   obj = { style: tmp.header, children: null };
   const obj1 = { source: null, style: null };
   const tmp8 = ScrollHandlingActionSheetDefault;
-  obj1.source = _modDef8592;
+  obj1.source = _modDef8597;
   obj1.style = tmp.headerImage;
   const items1 = [closure_7(FastImageDefault, obj1), , ];
   const obj2 = { style: tmp.headerTitle, accessibilityRole: "header", variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: null };
@@ -66,38 +66,38 @@ export default function StageAudienceNotificationSheet(channelId) {
   items1[1] = closure_7(channelId(4556).Text, obj2);
   const obj3 = { style: tmp.headerBulletList, children: null };
   const obj4 = { leading: null, label: null };
-  obj4.leading = closure_7(BulletIcon, { source: _modDef8614 });
+  obj4.leading = closure_7(BulletIcon, { source: _modDef8619 });
   const obj6 = { style: tmp.headerBullet, variant: "text-md/medium", color: "text-default", children: null };
   const intl2 = tmp2(1114).intl;
   obj6.children = intl2.string(channelId(1114).t.sBDfo6);
   obj4.label = closure_7(channelId(4556).Text, obj6);
-  const items2 = [closure_7(channelId(8593).FormRow, obj4), , , ];
+  const items2 = [closure_7(channelId(8598).FormRow, obj4), , , ];
   const obj7 = { leading: null, label: null };
-  const obj5 = { source: _modDef8614 };
-  obj7.leading = closure_7(BulletIcon, { source: _modDef8615 });
+  const obj5 = { source: _modDef8619 };
+  obj7.leading = closure_7(BulletIcon, { source: _modDef8620 });
   const obj9 = { style: tmp.headerBullet, variant: "text-md/medium", color: "text-default", children: null };
   const intl3 = tmp2(1114).intl;
   obj9.children = intl3.string(channelId(1114).t.x58YtH);
   obj7.label = closure_7(channelId(4556).Text, obj9);
-  items2[1] = closure_7(channelId(8593).FormRow, obj7);
+  items2[1] = closure_7(channelId(8598).FormRow, obj7);
   const obj10 = { leading: null, label: null };
-  const obj8 = { source: _modDef8615 };
-  obj10.leading = closure_7(BulletIcon, { source: _modDef8616 });
+  const obj8 = { source: _modDef8620 };
+  obj10.leading = closure_7(BulletIcon, { source: _modDef8621 });
   const obj12 = { style: tmp.headerBullet, variant: "text-md/medium", color: "text-default", children: null };
   const intl4 = tmp2(1114).intl;
   obj12.children = intl4.string(channelId(1114).t.XtVqla);
   obj10.label = closure_7(channelId(4556).Text, obj12);
-  items2[2] = closure_7(channelId(8593).FormRow, obj10);
+  items2[2] = closure_7(channelId(8598).FormRow, obj10);
   let tmp6Result = null;
   if (privacy_level === constants.PUBLIC) {
     const obj13 = { leading: null, label: null };
-    const obj14 = { source: _modDef8617 };
+    const obj14 = { source: _modDef8622 };
     obj13.leading = closure_7(BulletIcon, obj14);
     const obj15 = { style: tmp.headerBullet, variant: "text-md/medium", color: "text-default", children: null };
     const intl6 = tmp2(1114).intl;
     obj15.children = intl6.string(tmp2(1114).t.nDsbJg);
     obj13.label = closure_7(tmp2(4556).Text, obj15);
-    tmp6Result = closure_7(tmp2(8593).FormRow, obj13);
+    tmp6Result = closure_7(tmp2(8598).FormRow, obj13);
   }
   const obj16 = { children: null };
   items2[3] = tmp6Result;

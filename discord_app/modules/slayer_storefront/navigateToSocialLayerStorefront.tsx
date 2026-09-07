@@ -1,9 +1,9 @@
-// === Module 13400: navigateToSocialLayerStorefront ===
+// === Module 13404: navigateToSocialLayerStorefront ===
 
-// Module 13400 (navigateToSocialLayerStorefront)
+// Module 13404 (navigateToSocialLayerStorefront)
 import router_utils from "router_utils" /* 1100 */;
 import SlayerStorefrontUtils from "SlayerStorefrontUtils" /* 7226 */;
-import SocialLayerStorefrontActionCreators from "SocialLayerStorefrontActionCreators" /* 10798 */;
+import SocialLayerStorefrontActionCreators from "SocialLayerStorefrontActionCreators" /* 10803 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import GuildStore from "GuildStore" /* 1979 */;
 import SocialLayerStorefrontStore from "SocialLayerStorefrontStore" /* 7228 */;

@@ -1,8 +1,8 @@
-// === Module 14594: UserProfileUpsellButton ===
+// === Module 14597: UserProfileUpsellButton ===
 
-// Module 14594 (UserProfileUpsellButton)
+// Module 14597 (UserProfileUpsellButton)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
-import PremiumUpsellUtilsDefault from "PremiumUpsellUtils" /* 9313 */;
+import PremiumUpsellUtilsDefault from "PremiumUpsellUtils" /* 9318 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
@@ -49,6 +49,6 @@ export default function UserProfileUpsellButton(analyticsObject) {
   }
   obj.text = label;
   obj = { color: "white", size: "sm", style: closure_10().nitroWheel };
-  obj.icon = jsx(analyticsObject(8662).NitroWheelIcon, { color: "white", size: "sm", style: closure_10().nitroWheel });
+  obj.icon = jsx(analyticsObject(8667).NitroWheelIcon, { color: "white", size: "sm", style: closure_10().nitroWheel });
   return jsx(analyticsObject(4975).Button, { color: "white", size: "sm", style: closure_10().nitroWheel });
 };

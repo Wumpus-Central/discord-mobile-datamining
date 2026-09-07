@@ -1,9 +1,9 @@
-// === Module 9808: GuildEventCard ===
+// === Module 9813: GuildEventCard ===
 
-// Module 9808 (GuildEventCard)
+// Module 9813 (GuildEventCard)
 import nativeDefault from "native" /* 576 */;
 import ButtonGroup from "ButtonGroup" /* 5433 */;
-import GuildEventCardComponents from "GuildEventCardComponents" /* 9772 */;
+import GuildEventCardComponents from "GuildEventCardComponents" /* 9777 */;
 import noop from "module_19" /* 19 */;
 import RTCConnectionStore from "RTCConnectionStore" /* 4583 */;
 

@@ -1,6 +1,6 @@
-// === Module 15533: LabFeatureActions ===
+// === Module 15536: LabFeatureActions ===
 
-// Module 15533 (LabFeatureActions)
+// Module 15536 (LabFeatureActions)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import LabFeatureStore from "LabFeatureStore" /* 8353 */;
 

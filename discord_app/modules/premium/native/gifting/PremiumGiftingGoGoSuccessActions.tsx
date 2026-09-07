@@ -1,13 +1,13 @@
-// === Module 11075: PremiumGiftingGoGoSuccessActions ===
+// === Module 11080: PremiumGiftingGoGoSuccessActions ===
 
-// Module 11075 (PremiumGiftingGoGoSuccessActions)
+// Module 11080 (PremiumGiftingGoGoSuccessActions)
 import nativeDefault from "native" /* 576 */;
 import AnalyticsLocationDefault from "AnalyticsLocation" /* 7182 */;
 import CollectiblesActionCreators from "CollectiblesActionCreators" /* 7541 */;
 import showShareActionSheet from "showShareActionSheet" /* 8361 */;
-import PremiumGiftModal from "PremiumGiftModal" /* 10662 */;
+import PremiumGiftModal from "PremiumGiftModal" /* 10667 */;
 import noop from "module_19" /* 19 */;
-import PromotionsStore from "PromotionsStore" /* 10665 */;
+import PromotionsStore from "PromotionsStore" /* 10670 */;
 
 require = fn;
 const AnalyticsSections = fn(1074).AnalyticsSections;

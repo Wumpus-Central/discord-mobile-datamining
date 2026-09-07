@@ -1,6 +1,6 @@
-// === Module 16585: VibegrationsStandaloneScreen ===
+// === Module 16588: VibegrationsStandaloneScreen ===
 
-// Module 16585 (VibegrationsStandaloneScreen)
+// Module 16588 (VibegrationsStandaloneScreen)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import _modDef3547 from "module_3547" /* 3547 */;
@@ -8,24 +8,24 @@ import ActionSheetActionCreators from "ActionSheetActionCreators" /* 4527 */;
 import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 4905 */;
 import NavigatorHeader from "NavigatorHeader" /* 5624 */;
 import SettingsIcon from "SettingsIcon" /* 7380 */;
-import UploadIcon from "UploadIcon" /* 9371 */;
-import FramesActionCreatorsDefault from "FramesActionCreators" /* 9507 */;
-import RetryIcon from "RetryIcon" /* 10180 */;
-import restartVibegrationsAppFramesDefault from "restartVibegrationsAppFrames" /* 13254 */;
-import FiltersHorizontalIcon from "FiltersHorizontalIcon" /* 14999 */;
-import VibegrationsActionCreators from "VibegrationsActionCreators" /* 16592 */;
-import VibegrationsPublishNotesSheet from "VibegrationsPublishNotesSheet" /* 16597 */;
-import VibegrationsModelSettingsSheet from "VibegrationsModelSettingsSheet" /* 16598 */;
-import VibegrationsProjectSettingsSheet from "VibegrationsProjectSettingsSheet" /* 16601 */;
+import UploadIcon from "UploadIcon" /* 9376 */;
+import FramesActionCreatorsDefault from "FramesActionCreators" /* 9512 */;
+import RetryIcon from "RetryIcon" /* 10185 */;
+import restartVibegrationsAppFramesDefault from "restartVibegrationsAppFrames" /* 13258 */;
+import FiltersHorizontalIcon from "FiltersHorizontalIcon" /* 15002 */;
+import VibegrationsActionCreators from "VibegrationsActionCreators" /* 16597 */;
+import VibegrationsPublishNotesSheet from "VibegrationsPublishNotesSheet" /* 16600 */;
+import VibegrationsModelSettingsSheet from "VibegrationsModelSettingsSheet" /* 16601 */;
+import VibegrationsProjectSettingsSheet from "VibegrationsProjectSettingsSheet" /* 16604 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import GuildMemberStore from "GuildMemberStore" /* 2021 */;
 import GuildStore from "GuildStore" /* 1979 */;
 import PermissionStore from "PermissionStore" /* 4199 */;
-import VibegrationsChatStore from "VibegrationsChatStore" /* 16586 */;
-import VibegrationsConnectionStore from "VibegrationsConnectionStore" /* 16589 */;
-import VibegrationsProjectStore from "VibegrationsProjectStore" /* 16587 */;
+import VibegrationsChatStore from "VibegrationsChatStore" /* 16589 */;
+import VibegrationsConnectionStore from "VibegrationsConnectionStore" /* 16592 */;
+import VibegrationsProjectStore from "VibegrationsProjectStore" /* 16590 */;
 
 const VibegrationsPublishNotesSheetDefault = VibegrationsPublishNotesSheet;
 const VibegrationsModelSettingsSheetDefault = VibegrationsModelSettingsSheet;
@@ -573,7 +573,7 @@ function ChatScene(guildId) {
           align: "below",
           children(arg0) {
             ({ ref, onPress, accessibilityActions, onAccessibilityAction } = arg0);
-            const obj = { ref, IconComponent: closure_1_0(8672).MoreHorizontalIcon, onPress, accessibilityLabel: null, accessibilityActions: null, onAccessibilityAction: null };
+            const obj = { ref, IconComponent: closure_1_0(8677).MoreHorizontalIcon, onPress, accessibilityLabel: null, accessibilityActions: null, onAccessibilityAction: null };
             const intl = closure_1_0(1114).intl;
             obj.accessibilityLabel = intl.string(closure_1_0(1114).t["UKOtz+"]);
             obj.accessibilityActions = accessibilityActions;
@@ -605,7 +605,7 @@ function ChatScene(guildId) {
           align: "below",
           children(arg0) {
             ({ ref, onPress, accessibilityActions, onAccessibilityAction } = arg0);
-            const obj = { ref, IconComponent: closure_1_0(8672).MoreHorizontalIcon, onPress, accessibilityLabel: null, accessibilityActions: null, onAccessibilityAction: null };
+            const obj = { ref, IconComponent: closure_1_0(8677).MoreHorizontalIcon, onPress, accessibilityLabel: null, accessibilityActions: null, onAccessibilityAction: null };
             const intl = closure_1_0(1114).intl;
             obj.accessibilityLabel = intl.string(closure_1_0(1114).t["UKOtz+"]);
             obj.accessibilityActions = accessibilityActions;
@@ -629,12 +629,12 @@ function ChatScene(guildId) {
 }
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: metroRequire, ScrollView: closure_7, View: closure_8 } = get_ActivityIndicator);
-let VibegrationsConnectionStore = fn(16589);
+let VibegrationsConnectionStore = fn(16592);
 ({ draftPatchNotes: map1, ensureConnection: closure_14, publishProject: closure_15, sendUserMessage: closure_16 } = VibegrationsConnectionStore);
-let VibegrationsProjectStore = fn(16587);
+let VibegrationsProjectStore = fn(16590);
 ({ canPublishProject: closure_18, isProjectOwner: closure_19 } = VibegrationsProjectStore);
 const Permissions = fn(1074).Permissions;
-const MAIN_SURFACE = fn(9511).MAIN_SURFACE;
+const MAIN_SURFACE = fn(9516).MAIN_SURFACE;
 const jsxProd = fn(21);
 ({ jsx: closure_23, jsxs: closure_24 } = jsxProd);
 const createStyles = fn(4560);

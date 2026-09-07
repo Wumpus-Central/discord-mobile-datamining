@@ -1,6 +1,6 @@
-// === Module 9430: ApplicationDetails ===
+// === Module 9435: ApplicationDetails ===
 
-// Module 9430 (ApplicationDetails)
+// Module 9435 (ApplicationDetails)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
@@ -9,14 +9,14 @@ import ClockIcon from "ClockIcon" /* 4523 */;
 import Text_Text from "Text/Text" /* 4556 */;
 import LockIcon from "LockIcon" /* 5095 */;
 import OAuth2Scopes from "OAuth2Scopes" /* 8339 */;
-import GlobeEarthIcon from "GlobeEarthIcon" /* 8886 */;
-import scopes from "scopes" /* 9238 */;
-import disclosures from "disclosures" /* 9240 */;
-import Utils from "Utils" /* 9242 */;
-import ShieldIcon from "ShieldIcon" /* 9402 */;
-import EmbedIcon from "EmbedIcon" /* 9431 */;
-import HammerIcon from "HammerIcon" /* 9433 */;
-import RobotIcon from "RobotIcon" /* 9435 */;
+import GlobeEarthIcon from "GlobeEarthIcon" /* 8891 */;
+import scopes from "scopes" /* 9243 */;
+import disclosures from "disclosures" /* 9245 */;
+import Utils from "Utils" /* 9247 */;
+import ShieldIcon from "ShieldIcon" /* 9407 */;
+import EmbedIcon from "EmbedIcon" /* 9436 */;
+import HammerIcon from "HammerIcon" /* 9438 */;
+import RobotIcon from "RobotIcon" /* 9440 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

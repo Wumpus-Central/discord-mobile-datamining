@@ -1,7 +1,7 @@
-// === Module 16820: InstantInviteSelfMeasurer ===
+// === Module 16823: InstantInviteSelfMeasurer ===
 
-// Module 16820 (InstantInviteSelfMeasurer)
-import InstantInvite from "InstantInvite" /* 10932 */;
+// Module 16823 (InstantInviteSelfMeasurer)
+import InstantInvite from "InstantInvite" /* 10937 */;
 import noop from "module_19" /* 19 */;
 
 const InstantInviteDefault = InstantInvite;

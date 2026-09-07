@@ -1,13 +1,13 @@
-// === Module 17568: HeaderRow ===
+// === Module 17571: HeaderRow ===
 
-// Module 17568 (HeaderRow)
+// Module 17571 (HeaderRow)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 576 */;
 import Text_Text from "Text/Text" /* 4556 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GuildSettingsEmojiStore from "GuildSettingsEmojiStore" /* 17562 */;
+import GuildSettingsEmojiStore from "GuildSettingsEmojiStore" /* 17565 */;
 
 require = fn;
 function HeaderRow(guild) {
@@ -87,7 +87,7 @@ function HeaderRow(guild) {
               if (null != base64) {
                 upload = function upload(image, originalMd5, roles) {
                   const combined = "emoji_" + closure_1 + 1;
-                  closure_1_0(10336);
+                  closure_1_0(10341);
                   let obj = { guildId: image.id, image, name: combined, roles, originalMd5 };
                   const uploadEmojiResult = obj.uploadEmoji(obj);
                   obj.uploadEmoji(obj).then(() => {
@@ -165,7 +165,7 @@ function HeaderRow(guild) {
   [tmp5, c5] = _slicedToArray(noop.useState(null), 2);
   const tmp4 = _slicedToArray(noop.useState(null), 2);
   [c6, c7] = _slicedToArray(noop.useState(""), 2);
-  let obj = guild(9671);
+  let obj = guild(9676);
   let canCreateExpressions = obj.useManageResourcePermissions(guild).canCreateExpressions;
   let intl = guild(1114).intl;
   obj = { id: null, text: null };

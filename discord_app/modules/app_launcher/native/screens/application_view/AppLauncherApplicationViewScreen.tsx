@@ -1,10 +1,10 @@
-// === Module 12127: AppLauncherApplicationViewScreen ===
+// === Module 12131: AppLauncherApplicationViewScreen ===
 
-// Module 12127 (AppLauncherApplicationViewScreen)
+// Module 12131 (AppLauncherApplicationViewScreen)
 import KeyboardTypes from "KeyboardTypes" /* 1609 */;
-import AppLauncherContext from "AppLauncherContext" /* 11215 */;
+import AppLauncherContext from "AppLauncherContext" /* 11220 */;
 import noop from "module_19" /* 19 */;
-import ApplicationCommandIndexStore from "ApplicationCommandIndexStore" /* 9290 */;
+import ApplicationCommandIndexStore from "ApplicationCommandIndexStore" /* 9295 */;
 
 require = fn;
 function AppLauncherApplicationViewScreenInner(application) {

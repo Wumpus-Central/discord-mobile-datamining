@@ -1,10 +1,10 @@
-// === Module 12663: NsfwGateChat ===
+// === Module 12667: NsfwGateChat ===
 
-// Module 12663 (NsfwGateChat)
+// Module 12667 (NsfwGateChat)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import Text_Text from "Text/Text" /* 4556 */;
-import _modDef12664 from "module_12664" /* 12664 */;
+import _modDef12668 from "module_12668" /* 12668 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -28,7 +28,7 @@ export default function NsfwGateChat() {
   obj = { style: tmp.border };
   const items = [hasOwnProperty(React3, obj), ];
   obj = { style: tmp.container, children: null };
-  const items1 = [hasOwnProperty(React4, { source: _modDef12664 }), ];
+  const items1 = [hasOwnProperty(React4, { source: _modDef12668 }), ];
   const obj2 = { style: tmp.description, variant: "text-md/medium", color: "text-muted", children: null };
   const intl = util.intl;
   obj2.children = intl.string(util.t.W4Qyxr);

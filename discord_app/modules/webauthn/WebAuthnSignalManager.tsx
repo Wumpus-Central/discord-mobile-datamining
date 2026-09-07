@@ -1,6 +1,6 @@
-// === Module 17826: WebAuthnSignalManager ===
+// === Module 17829: WebAuthnSignalManager ===
 
-// Module 17826 (WebAuthnSignalManager)
+// Module 17829 (WebAuthnSignalManager)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7118 */;

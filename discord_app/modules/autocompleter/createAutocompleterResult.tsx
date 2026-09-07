@@ -1,6 +1,6 @@
-// === Module 9842: AutocompleterConstants ===
+// === Module 9847: AutocompleterConstants ===
 
-// Module 9842 (AutocompleterConstants)
+// Module 9847 (AutocompleterConstants)
 import AutocompleterConstants from "autocompleter/AutocompleterConstants" /* 5515 */;
 import size from "module_2" /* 2 */;
 

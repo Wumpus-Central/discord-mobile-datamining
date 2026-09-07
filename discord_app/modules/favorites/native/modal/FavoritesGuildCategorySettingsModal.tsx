@@ -1,11 +1,11 @@
-// === Module 16112: FavoritesGuildCategorySettingsModal ===
+// === Module 16115: FavoritesGuildCategorySettingsModal ===
 
-// Module 16112 (FavoritesGuildCategorySettingsModal)
+// Module 16115 (FavoritesGuildCategorySettingsModal)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import native from "native" /* 1178 */;
 import AlertActionCreatorsDefault from "AlertActionCreators" /* 4904 */;
-import FavoritesActionCreators from "FavoritesActionCreators" /* 10223 */;
+import FavoritesActionCreators from "FavoritesActionCreators" /* 10228 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import FavoriteStore from "FavoriteStore" /* 1960 */;
@@ -135,12 +135,12 @@ let result = size.fileFinishedImporting("modules/favorites/native/modal/Favorite
 export default function FavoritesGuildCategorySettingsModal(categoryId) {
   categoryId = categoryId.categoryId;
   let onGoBack;
-  onGoBack = onGoBack(10922)().onGoBack;
+  onGoBack = onGoBack(10927)().onGoBack;
   const obj = { screenKey: "favoritesGuildCategorySettings", title: null, render: null };
   const intl = categoryId(1114).intl;
   obj.title = intl.string(categoryId(1114).t["/uELTj"]);
   obj.render = function render() {
     return React6(FavoritesGuildCategorySettings, { categoryId, onGoBack });
   };
-  return closure_8(onGoBack(10924), obj);
+  return closure_8(onGoBack(10929), obj);
 };

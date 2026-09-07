@@ -1,6 +1,6 @@
-// === Module 12718: InviteDetails ===
+// === Module 12722: InviteDetails ===
 
-// Module 12718 (InviteDetails)
+// Module 12722 (InviteDetails)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import native from "native" /* 1178 */;
@@ -10,11 +10,11 @@ import UserUtilsDefault from "UserUtils" /* 4404 */;
 import Text_Text from "Text/Text" /* 4556 */;
 import GuildBadgeDefault from "GuildBadge" /* 5590 */;
 import InviteTypeUtils from "InviteTypeUtils" /* 7735 */;
-import GuildInviteIconDefault from "GuildInviteIcon" /* 12659 */;
-import InviteRolesListDefault from "InviteRolesList" /* 12720 */;
+import GuildInviteIconDefault from "GuildInviteIcon" /* 12663 */;
+import InviteRolesListDefault from "InviteRolesList" /* 12724 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import MultiAccountStore from "MultiAccountStore" /* 12413 */;
+import MultiAccountStore from "MultiAccountStore" /* 12417 */;
 import UserRecord from "UserRecord" /* 1385 */;
 import UserStore from "UserStore" /* 1371 */;
 
@@ -64,7 +64,7 @@ function InviteDestinationIcon(invite) {
     if (null != invite.inviter) {
       let tmp2Result = null;
       if (null != invite.inviter) {
-        obj = { avatarStyle: tmp.avatar, user: null, guildId: "Array", size: false };
+        obj = { avatarStyle: tmp.avatar, user: null, guildId: "Array", size: true };
         const tmp14 = new UserRecord(invite.inviter);
         obj.user = tmp14;
         obj.size = native.AvatarSizes.XLARGE;
@@ -288,7 +288,7 @@ function InviteMemberCounts(invite) {
 const View = fn(17).View;
 const Constants = fn(1074);
 ({ AnalyticEvents: closure_9, InviteStates: c10 } = Constants);
-let closure_11 = fn(12719).INVITE_ROUTING_HUB_GUILD_ID;
+let closure_11 = fn(12723).INVITE_ROUTING_HUB_GUILD_ID;
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1, Fragment: closure_14 } = jsxProd);
 fn(4560);
@@ -351,11 +351,11 @@ export default function InviteDetails(invite) {
   if (tmp8Result) {
     const obj4 = { style: tmp.embedDetailsCard, children: null };
     const obj5 = { event: guild_scheduled_event };
-    const items3 = [closure_12(tmp4(9772).GuildEventCardHeader, obj5), , ];
+    const items3 = [closure_12(tmp4(9777).GuildEventCardHeader, obj5), , ];
     const obj6 = { event: guild_scheduled_event };
-    items3[1] = closure_12(tmp4(9772).GuildEventCardMetaInfo, obj6);
+    items3[1] = closure_12(tmp4(9777).GuildEventCardMetaInfo, obj6);
     const obj7 = { event: guild_scheduled_event };
-    items3[2] = closure_12(tmp4(9772).GuildEventCardGuildInfo, obj7);
+    items3[2] = closure_12(tmp4(9777).GuildEventCardGuildInfo, obj7);
     obj4.children = items3;
     tmp8Result = closure_13(View, obj4);
   }

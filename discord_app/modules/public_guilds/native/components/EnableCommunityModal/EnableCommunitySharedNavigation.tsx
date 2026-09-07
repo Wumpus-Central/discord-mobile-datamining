@@ -1,9 +1,9 @@
-// === Module 17663: EnableCommunitySharedNavigation ===
+// === Module 17666: EnableCommunitySharedNavigation ===
 
-// Module 17663 (EnableCommunitySharedNavigation)
+// Module 17666 (EnableCommunitySharedNavigation)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import noop from "module_19" /* 19 */;
-import GuildSettingsStore from "GuildSettingsStore" /* 9064 */;
+import GuildSettingsStore from "GuildSettingsStore" /* 9069 */;
 
 const require = fn;
 get_ActivityIndicator = fn(17);

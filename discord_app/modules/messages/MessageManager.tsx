@@ -1,6 +1,6 @@
-// === Module 9941: MessageManager ===
+// === Module 9946: MessageManager ===
 
-// Module 9941 (MessageManager)
+// Module 9946 (MessageManager)
 import LoggerDefault from "Logger" /* 3 */;
 import Storage3 from "Storage" /* 510 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
@@ -14,8 +14,8 @@ import ChannelMessagesDefault from "ChannelMessages" /* 5272 */;
 import SidebarActionTypes from "SidebarActionTypes" /* 7282 */;
 import MessageActionCreatorsDefault from "MessageActionCreators" /* 7456 */;
 import isChangelogChannelDefault from "isChangelogChannel" /* 8374 */;
-import AttachmentUrlUtilsAll from "AttachmentUrlUtils" /* 9942 */;
-import getAdaptiveMessageLimit from "getAdaptiveMessageLimit" /* 9943 */;
+import AttachmentUrlUtilsAll from "AttachmentUrlUtils" /* 9947 */;
+import getAdaptiveMessageLimit from "getAdaptiveMessageLimit" /* 9948 */;
 import _slicedToArray from "module_32" /* 32 */;
 import ChannelRTCStore from "ChannelRTCStore" /* 4576 */;
 import GatewayConnectionStore from "GatewayConnectionStore" /* 5277 */;

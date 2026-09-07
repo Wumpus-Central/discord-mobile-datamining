@@ -1,6 +1,6 @@
-// === Module 8853: VirtualCurrencyActionCreators ===
+// === Module 8858: VirtualCurrencyActionCreators ===
 
-// Module 8853 (VirtualCurrencyActionCreators)
+// Module 8858 (VirtualCurrencyActionCreators)
 import LoggerDefault from "Logger" /* 3 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import HTTPUtils from "HTTPUtils" /* 1272 */;

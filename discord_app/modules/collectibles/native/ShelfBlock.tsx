@@ -1,11 +1,11 @@
-// === Module 15836: ShelfBlock ===
+// === Module 15839: ShelfBlock ===
 
-// Module 15836 (ShelfBlock)
+// Module 15839 (ShelfBlock)
 import nativeDefault from "native" /* 576 */;
 import AnalyticsLocationDefault from "AnalyticsLocation" /* 7182 */;
 import CollectiblesActionCreators from "CollectiblesActionCreators" /* 7541 */;
-import CollectiblesShopCardV2Default from "CollectiblesShopCardV2" /* 8764 */;
-import CollectiblesAnalyticsContext from "CollectiblesAnalyticsContext" /* 8767 */;
+import CollectiblesShopCardV2Default from "CollectiblesShopCardV2" /* 8769 */;
+import CollectiblesAnalyticsContext from "CollectiblesAnalyticsContext" /* 8772 */;
 import noop from "module_19" /* 19 */;
 import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7542 */;
 

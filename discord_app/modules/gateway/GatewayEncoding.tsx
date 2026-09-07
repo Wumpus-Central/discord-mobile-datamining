@@ -1,8 +1,8 @@
-// === Module 13631: GatewayEncoding ===
+// === Module 13635: GatewayEncoding ===
 
-// Module 13631 (GatewayEncoding)
+// Module 13635 (GatewayEncoding)
 import ProcessArgs2 from "ProcessArgs" /* 5141 */;
-import GatewayEncodingErlpackEncoding from "GatewayEncodingErlpackEncoding" /* 13632 */;
+import GatewayEncodingErlpackEncoding from "GatewayEncodingErlpackEncoding" /* 13636 */;
 import size from "module_2" /* 2 */;
 
 GatewayEncodingErlpackEncoding = GatewayEncodingErlpackEncoding.getErlpackEncoding();

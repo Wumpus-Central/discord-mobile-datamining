@@ -1,6 +1,6 @@
-// === Module 16940: ConnectionDeprecationBottomSheet ===
+// === Module 16943: ConnectionDeprecationBottomSheet ===
 
-// Module 16940 (ConnectionDeprecationBottomSheet)
+// Module 16943 (ConnectionDeprecationBottomSheet)
 import nativeDefault from "native" /* 576 */;
 import AvatarUtils from "AvatarUtils" /* 1396 */;
 import themes from "themes" /* 4269 */;
@@ -8,7 +8,7 @@ import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4527
 import Icon from "Icon" /* 4977 */;
 import useStartAuthorizeDefault from "useStartAuthorize" /* 7165 */;
 import GameIcon from "GameIcon" /* 7172 */;
-import AccountLinkManager from "AccountLinkManager" /* 16941 */;
+import AccountLinkManager from "AccountLinkManager" /* 16944 */;
 import noop from "module_19" /* 19 */;
 import ApplicationStore from "ApplicationStore" /* 4788 */;
 import ConnectedAccountsStore from "ConnectedAccountsStore" /* 5281 */;

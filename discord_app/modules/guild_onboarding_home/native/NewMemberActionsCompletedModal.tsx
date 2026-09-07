@@ -1,6 +1,6 @@
-// === Module 17371: NewMemberActionsCompletedModal ===
+// === Module 17374: NewMemberActionsCompletedModal ===
 
-// Module 17371 (NewMemberActionsCompletedModal)
+// Module 17374 (NewMemberActionsCompletedModal)
 import nativeDefault from "native" /* 576 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4296 */;
 import timing from "timing" /* 4561 */;
@@ -46,7 +46,7 @@ export default function NewMemberActionsCompleted(arg0) {
   fn.__initData = __initData;
   const animatedStyle = obj1.useAnimatedStyle(fn);
   const effect1 = noop.useEffect(() => {
-    const timerId = setTimeout(() => closure_1_1(4763).popWithKey(sharedValue(12285).NEW_MEMBER_ACTION_COMPLETE_MODAL_KEY), 2500);
+    const timerId = setTimeout(() => closure_1_1(4763).popWithKey(sharedValue(12289).NEW_MEMBER_ACTION_COMPLETE_MODAL_KEY), 2500);
   }, []);
   obj = { style: tmp.screen, children: null };
   obj1 = { style: tmp.text, variant: "heading-xl/semibold", color: "text-overlay-light", children: null };

@@ -1,9 +1,9 @@
-// === Module 8886: GlobeEarthIcon ===
+// === Module 8891: GlobeEarthIcon ===
 
-// Module 8886 (GlobeEarthIcon)
+// Module 8891 (GlobeEarthIcon)
 import nativeDefault from "native" /* 576 */;
 import BaseIconImage from "BaseIconImage" /* 4261 */;
-import _mod8887 from "module_8887" /* 8887 */;
+import _mod8892 from "module_8892" /* 8892 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export const GlobeEarthIcon = function GlobeEarthIcon(dependencyMap) {
   }
   const merged = Object.assign(dependencyMap, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod8887, color: INTERACTIVE_ICON_DEFAULT, style: dependencyMap.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod8892, color: INTERACTIVE_ICON_DEFAULT, style: dependencyMap.style });
 };

@@ -1,10 +1,10 @@
-// === Module 14642: UserPrimaryGuildListBottomSheet ===
+// === Module 14645: UserPrimaryGuildListBottomSheet ===
 
-// Module 14642 (UserPrimaryGuildListBottomSheet)
+// Module 14645 (UserPrimaryGuildListBottomSheet)
 import _modDef12 from "module_12" /* 12 */;
 import nativeDefault from "native" /* 576 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4527 */;
-import Form from "Form" /* 8593 */;
+import Form from "Form" /* 8598 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -118,7 +118,7 @@ export default function UserPrimaryGuildListBottomSheet(availableGuilds) {
   obj.children = intl.string(availableGuilds(1114).t.Fo0g9x);
   obj.children = closure_6(availableGuilds(4556).Text, obj);
   obj.header = closure_6(memo, obj);
-  obj.children = closure_6(availableGuilds(8874).BottomSheetFlashList, {
+  obj.children = closure_6(availableGuilds(8879).BottomSheetFlashList, {
     ItemSeparatorComponent() {
       return timestampProducer(Form.FormDivider, { iconPush: true, style: divider.divider });
     },

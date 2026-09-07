@@ -1,8 +1,8 @@
-// === Module 13307: useBuyNitroExperiment ===
+// === Module 13311: useBuyNitroExperiment ===
 
-// Module 13307 (useBuyNitroExperiment)
+// Module 13311 (useBuyNitroExperiment)
 import useInitialValueDefault from "useInitialValue" /* 5598 */;
-import BuyNitroMarketingExperiment from "BuyNitroMarketingExperiment" /* 13308 */;
+import BuyNitroMarketingExperiment from "BuyNitroMarketingExperiment" /* 13312 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 

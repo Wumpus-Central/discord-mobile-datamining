@@ -1,6 +1,6 @@
-// === Module 12427: useEmojiSuggestions ===
+// === Module 12431: useEmojiSuggestions ===
 
-// Module 12427 (useEmojiSuggestions)
+// Module 12431 (useEmojiSuggestions)
 import AutocompleteUtilsDefault from "AutocompleteUtils" /* 5442 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;

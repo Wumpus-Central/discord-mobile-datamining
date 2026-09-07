@@ -1,6 +1,6 @@
-// === Module 13500: UserSettingsPremiumGuildSubscriptions ===
+// === Module 13504: UserSettingsPremiumGuildSubscriptions ===
 
-// Module 13500 (UserSettingsPremiumGuildSubscriptions)
+// Module 13504 (UserSettingsPremiumGuildSubscriptions)
 import util from "util" /* 1114 */;
 import user from "user" /* 1379 */;
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2024 */;
@@ -10,11 +10,11 @@ import actions_BillingActionCreators from "actions/BillingActionCreators" /* 488
 import UserSettingsModalActionCreatorsDefault from "UserSettingsModalActionCreators" /* 6990 */;
 import UserSettingsUtils from "UserSettingsUtils" /* 6995 */;
 import SubscriptionPlanActionCreators from "SubscriptionPlanActionCreators" /* 7257 */;
-import GuildBoostSlotsInventoryDefault from "GuildBoostSlotsInventory" /* 13501 */;
-import BoostingUnavailablePillDefault from "BoostingUnavailablePill" /* 13515 */;
-import BoostingCountDownPillDefault from "BoostingCountDownPill" /* 13517 */;
-import TopPattern from "TopPattern" /* 13519 */;
-import GuildBoostingUpsellDefault from "GuildBoostingUpsell" /* 13523 */;
+import GuildBoostSlotsInventoryDefault from "GuildBoostSlotsInventory" /* 13505 */;
+import BoostingUnavailablePillDefault from "BoostingUnavailablePill" /* 13519 */;
+import BoostingCountDownPillDefault from "BoostingCountDownPill" /* 13521 */;
+import TopPattern from "TopPattern" /* 13523 */;
+import GuildBoostingUpsellDefault from "GuildBoostingUpsell" /* 13527 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1371 */;
 import BillingInfoStore from "BillingInfoStore" /* 4220 */;
@@ -167,7 +167,7 @@ export default function ConnectedUserSettingsPremiumGuildSubscriptions(route) {
   let tmpResult = tmp(8065);
   isInReverseTrial = tmpResult.useIsInReverseTrial();
   const tmp3 = flag(7393)({ forceFetch: true });
-  fpDurationText = flag(13461)(endsAt, tmp(13461).CountDownMessageTypes.LONG_TIME_LEFT);
+  fpDurationText = flag(13465)(endsAt, tmp(13465).CountDownMessageTypes.LONG_TIME_LEFT);
   tmpResult = tmp(504);
   const items = [GuildBoostSlotStore, BillingInfoStore, SubscriptionPlanStore, UserStore];
   const stateFromStoresObject = tmpResult.useStateFromStoresObject(items, () => {
@@ -189,7 +189,7 @@ export default function ConnectedUserSettingsPremiumGuildSubscriptions(route) {
     obj.premiumGroupRole = premiumGroupRole;
     return obj;
   });
-  const tmp4 = flag(13461);
+  const tmp4 = flag(13465);
   const items1 = [SubscriptionStore];
   const stateFromStores = require("initialize").useStateFromStores(items1, () => premiumTypeSubscription.getPremiumTypeSubscription());
   const tmpResult1 = require("initialize");

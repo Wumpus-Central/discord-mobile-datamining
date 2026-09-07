@@ -1,14 +1,14 @@
-// === Module 16116: ChannelItem ===
+// === Module 16119: ChannelItem ===
 
-// Module 16116 (ChannelItem)
+// Module 16119 (ChannelItem)
 import nativeDefault from "native" /* 576 */;
 import router_utils from "router_utils" /* 1100 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1396 */;
 import utils_ChannelUtils from "utils/ChannelUtils" /* 5028 */;
 import BookCheckIcon2 from "BookCheckIcon" /* 5075 */;
 import FastImageDefault from "FastImage" /* 5587 */;
-import BaseChannelItem from "BaseChannelItem" /* 12379 */;
-import _modDef16117 from "module_16117" /* 16117 */;
+import BaseChannelItem from "BaseChannelItem" /* 12383 */;
+import _modDef16120 from "module_16120" /* 16120 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 import PresenceStore from "PresenceStore" /* 4600 */;
@@ -63,7 +63,7 @@ function ChannelIcon(arg0) {
       }
     }
     if (tmp2) {
-      let tmp12 = _modDef16117;
+      let tmp12 = _modDef16120;
       let BookCheckIcon = BookCheckIcon2.BookCheckIcon;
       let tmp9 = require;
     } else {
@@ -88,7 +88,7 @@ function ChannelIcon(arg0) {
       obj6 = {};
     }
     const merged = Object.assign(obj6);
-    return map1(tmp9(12379).BaseChannelIcon, obj4);
+    return map1(tmp9(12383).BaseChannelIcon, obj4);
   }
 }
 function DMChannelIcon(userId) {

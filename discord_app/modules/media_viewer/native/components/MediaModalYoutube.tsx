@@ -1,6 +1,6 @@
-// === Module 12976: MediaModalYoutube ===
+// === Module 12980: MediaModalYoutube ===
 
-// Module 12976 (MediaModalYoutube)
+// Module 12980 (MediaModalYoutube)
 import MediaViewerAnalyticsManager from "MediaViewerAnalyticsManager" /* 8266 */;
 import MediaModalWebView from "MediaModalWebView" /* 8297 */;
 import _slicedToArray from "module_32" /* 32 */;
@@ -134,7 +134,7 @@ export default noop.memo((visible) => {
     if (playerState === tmp2(8297).PlayerState.ERRORED) {
       if ("embed_not_allowed" === tmp6[0]) {
         obj = { videoId: youtubeVideoIdFromURI.videoId };
-        return ref(tmp7(12977), obj);
+        return ref(tmp7(12981), obj);
       }
     }
     tmp2Result = tmp2(1115);

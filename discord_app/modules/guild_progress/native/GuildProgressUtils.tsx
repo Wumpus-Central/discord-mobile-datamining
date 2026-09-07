@@ -1,15 +1,15 @@
-// === Module 12474: GuildProgressUtils ===
+// === Module 12478: GuildProgressUtils ===
 
-// Module 12474 (GuildProgressUtils)
+// Module 12478 (GuildProgressUtils)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import util from "util" /* 1114 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4527 */;
-import GuildProgressActionCreatorsDefault from "GuildProgressActionCreators" /* 12477 */;
+import GuildProgressActionCreatorsDefault from "GuildProgressActionCreators" /* 12481 */;
 import GuildChannelStore from "GuildChannelStore" /* 2012 */;
 import GuildStore from "GuildStore" /* 1979 */;
 import PermissionStore from "PermissionStore" /* 4199 */;
-import GuildProgressStore from "GuildProgressStore" /* 12475 */;
+import GuildProgressStore from "GuildProgressStore" /* 12479 */;
 
 require = fn;
 function useIOSCompletionStates(guild) {
@@ -64,7 +64,7 @@ function useIOSCompletionStates(guild) {
   const items6 = [GuildProgressStore];
   const stateFromStores4 = require("initialize").useStateFromStores(items6, () => GuildProgressStore.getProgress(guild.id));
   if (stateFromStores) {
-    const ServerSetupBoostCtaExperiment = tmp(12588).ServerSetupBoostCtaExperiment;
+    const ServerSetupBoostCtaExperiment = tmp(12592).ServerSetupBoostCtaExperiment;
     const enabled = ServerSetupBoostCtaExperiment.getConfig({ location: "GuildProgress" }).enabled;
     const items7 = [guildPopulated, guildPersonalized, stateFromStores2];
     if (enabled) {
@@ -95,7 +95,7 @@ function useIOSCompletionStates(guild) {
   }
   const tmpResult1 = require("initialize");
 }
-const Steps = fn(12469).Steps;
+const Steps = fn(12473).Steps;
 const Constants = fn(1074);
 ({ WELCOME_OLD_GUILD_AGE_THRESHOLD: closure_8, Permissions: closure_9 } = Constants);
 const size = fn(2);
@@ -105,7 +105,7 @@ export const MIN_PROGRESS_PERCENT = 3;
 export const PROGRESS_BACKGROUND_COLOR = "rgba(78, 93, 148, 0.3)";
 export const openActionSheet = function openActionSheet(guild) {
   const obj = { guild };
-  obj.openLazy(asyncRequireImpl(12476, dependencyMap.paths), "guild-progress-" + guild.id, obj);
+  obj.openLazy(asyncRequireImpl(12480, dependencyMap.paths), "guild-progress-" + guild.id, obj);
 };
 export const hideActionSheet = function hideActionSheet(id) {
   ActionSheetActionCreatorsDefault.hideActionSheet("guild-progress-" + id);

@@ -1,6 +1,6 @@
-// === Module 16125: VoiceGuildTag ===
+// === Module 16128: VoiceGuildTag ===
 
-// Module 16125 (VoiceGuildTag)
+// Module 16128 (VoiceGuildTag)
 import nativeDefault from "native" /* 576 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1371 */;
@@ -52,7 +52,7 @@ export default function VoiceGuildTagChiplet(userId) {
       const obj2 = { uri: guildTagBadgeUrl };
       obj1.source = obj2;
       obj1.size = GuildTagBadgeSize.SIZE_12;
-      const items2 = [closure_5(tmp2(9184).GuildTagBadge, obj1), ];
+      const items2 = [closure_5(tmp2(9189).GuildTagBadge, obj1), ];
       const obj3 = { variant: "text-xs/semibold", color: "text-default", style: tmp.tag, children: tag };
       items2[1] = closure_5(tmp2(4556).Text, obj3);
       obj.children = items2;

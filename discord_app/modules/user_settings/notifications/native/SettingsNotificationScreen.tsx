@@ -1,19 +1,19 @@
-// === Module 15479: SettingsNotificationScreen ===
+// === Module 15482: SettingsNotificationScreen ===
 
-// Module 15479 (SettingsNotificationScreen)
+// Module 15482 (SettingsNotificationScreen)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import Text_Text from "Text/Text" /* 4556 */;
 import Card from "Card" /* 5607 */;
 import CircleErrorIcon from "CircleErrorIcon" /* 6610 */;
 import ManaTypeConsolidationExperiment from "ManaTypeConsolidationExperiment" /* 8095 */;
-import SettingBuilders from "SettingBuilders" /* 11468 */;
-import NotificationPermissionUtil from "NotificationPermissionUtil" /* 12411 */;
-import SettingLayoutDefault from "SettingLayout" /* 14689 */;
-import ContextualOptInNudgeHoldoutExperimentDefault from "ContextualOptInNudgeHoldoutExperiment" /* 15481 */;
-import SettingsNotificationUtils from "SettingsNotificationUtils" /* 15482 */;
-import NotificationPermissionSettingsHeaderDefault from "NotificationPermissionSettingsHeader" /* 15483 */;
-import FamilyCenterAgeGroupPrefetch from "FamilyCenterAgeGroupPrefetch" /* 15484 */;
+import SettingBuilders from "SettingBuilders" /* 11473 */;
+import NotificationPermissionUtil from "NotificationPermissionUtil" /* 12415 */;
+import SettingLayoutDefault from "SettingLayout" /* 14692 */;
+import ContextualOptInNudgeHoldoutExperimentDefault from "ContextualOptInNudgeHoldoutExperiment" /* 15484 */;
+import SettingsNotificationUtils from "SettingsNotificationUtils" /* 15485 */;
+import NotificationPermissionSettingsHeaderDefault from "NotificationPermissionSettingsHeader" /* 15486 */;
+import FamilyCenterAgeGroupPrefetch from "FamilyCenterAgeGroupPrefetch" /* 15487 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -61,7 +61,7 @@ function SystemNotificationsSubLabel() {
   return React6(React7, { children });
 }
 const View = fn(17).View;
-let closure_5 = fn(15480).initializeAndroidNotificationSettingsStore;
+let closure_5 = fn(15483).initializeAndroidNotificationSettingsStore;
 const MobileUserSettings = fn(7975).MobileUserSettings;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8, Fragment: closure_9 } = jsxProd);

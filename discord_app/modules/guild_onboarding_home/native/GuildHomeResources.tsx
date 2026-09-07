@@ -1,12 +1,12 @@
-// === Module 16565: GuildHomeResources ===
+// === Module 16568: GuildHomeResources ===
 
-// Module 16565 (GuildHomeResources)
+// Module 16568 (GuildHomeResources)
 import nativeDefault from "native" /* 576 */;
 import router_utils from "router_utils" /* 1100 */;
 import MessageActionCreatorsDefault from "MessageActionCreators" /* 7456 */;
-import GuildOnboardingHomeActionCreators from "GuildOnboardingHomeActionCreators" /* 12284 */;
-import useResourceChannelsDefault from "useResourceChannels" /* 16559 */;
-import _modDef16567 from "module_16567" /* 16567 */;
+import GuildOnboardingHomeActionCreators from "GuildOnboardingHomeActionCreators" /* 12288 */;
+import useResourceChannelsDefault from "useResourceChannels" /* 16562 */;
+import _modDef16570 from "module_16570" /* 16570 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 import GuildChannelStore from "GuildChannelStore" /* 2012 */;
@@ -41,9 +41,9 @@ function ResourceChannelRow(channelId) {
   if (length > 0) {
     first = forumPostMediaProperties[0];
   }
-  let tmp2Result = tmp2(12009);
+  let tmp2Result = tmp2(12013);
   let flag = tmp2Result.useSharedMediaProps({ channel: stateFromStores, media: first }).shouldObscure;
-  const tmp11 = stateFromStores(16566)(firstResult);
+  const tmp11 = stateFromStores(16569)(firstResult);
   const tmp12 = null != stateFromStores && null == stateFromStores2.first() && !stateFromStores2.loadingMore && !stateFromStores2.ready && !stateFromStores2.hasFetched;
   dependencyMap = tmp12;
   const items3 = [channelId, tmp12];
@@ -124,7 +124,7 @@ function ResourceChannelRow(channelId) {
               }
               obj9.firstMessageId = id;
               obj9.containerStyle = tmp.thumbnail;
-              tmp19Result2 = closure_12(tmp2(12009).ForumPostMediaThumbnail, obj9);
+              tmp19Result2 = closure_12(tmp2(12013).ForumPostMediaThumbnail, obj9);
             }
           }
         }
@@ -165,7 +165,7 @@ export default function GuildHomeResources(guildId) {
     const intl = guildId(1114).intl;
     obj.children = intl.string(guildId(1114).t.owvC9U);
     const items = [closure_12(guildId(4556).Text, obj), , ];
-    const obj1 = { style: tmp.emptyStateImage, source: _modDef16567 };
+    const obj1 = { style: tmp.emptyStateImage, source: _modDef16570 };
     items[1] = closure_12(closure_5, obj1);
     const obj2 = {
       onPress() {

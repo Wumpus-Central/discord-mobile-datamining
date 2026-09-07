@@ -1,6 +1,6 @@
-// === Module 11998: AddMediaToOriginalForumPostActionSheet ===
+// === Module 12002: AddMediaToOriginalForumPostActionSheet ===
 
-// Module 11998 (AddMediaToOriginalForumPostActionSheet)
+// Module 12002 (AddMediaToOriginalForumPostActionSheet)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import nativeDefault from "native" /* 576 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4527 */;
@@ -82,7 +82,7 @@ let closure_16 = async function _upload2(arg0) {
               dependencyMap(false);
               closure_1(4527).hideActionSheet();
               obj = { file: currentSize, maxSize: effectiveKestrelLimit, baseMaxSize: maxFileSizeResult, guildId: id.id, analyticsLocations };
-              closure_1(9310)(obj);
+              closure_1(9315)(obj);
               const obj4 = closure_1(4527);
             }
             const obj3 = closure_0(5179);
@@ -93,8 +93,8 @@ let closure_16 = async function _upload2(arg0) {
           });
           closure_132_5.on("complete", () => {
             dependencyMap(false);
-            closure_1(9307).clearAll(closure_1_0, ChannelMessage.ChannelMessage);
-            const obj = closure_1(9307);
+            closure_1(9312).clearAll(closure_1_0, ChannelMessage.ChannelMessage);
+            const obj = closure_1(9312);
             closure_1(4527).hideActionSheet();
           });
           const messages = closure_133_10.getMessages(closure_132_0);

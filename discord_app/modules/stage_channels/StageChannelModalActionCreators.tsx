@@ -3,7 +3,7 @@
 // Module 8393 (StageChannelModalActionCreators)
 import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 5411 */;
 import StageChannelActionCreatorExtrasAll from "StageChannelActionCreatorExtras" /* 8394 */;
-import StageChannelNewUserManagerDefault from "StageChannelNewUserManager" /* 12928 */;
+import StageChannelNewUserManagerDefault from "StageChannelNewUserManager" /* 12932 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import ApplicationStreamingStore from "ApplicationStreamingStore" /* 4582 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
@@ -163,10 +163,10 @@ export const connectOrLurkStage = function connectOrLurkStage(arg0, arg1, arg2) 
             flag = null == channel;
             if (!flag) {
               connectToStage(channel);
-              closure_1(12927).initialize();
+              closure_1(12931).initialize();
               closure_1_0(channel);
               flag = false;
-              const obj = closure_1(12927);
+              const obj = closure_1(12931);
             }
             return flag;
           });

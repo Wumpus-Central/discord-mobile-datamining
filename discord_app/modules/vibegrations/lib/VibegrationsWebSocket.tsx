@@ -1,6 +1,6 @@
-// === Module 16595: VibegrationsWebSocket ===
+// === Module 16598: VibegrationsWebSocket ===
 
-// Module 16595 (VibegrationsWebSocket)
+// Module 16598 (VibegrationsWebSocket)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/vibegrations/lib/VibegrationsWebSocket.tsx");
@@ -54,6 +54,20 @@ prototype["sendUserMessage"] = function sendUserMessage(content, nonce, attachme
     }
   }
   const error = new Error("WebSocket not open");
+  throw error;
+};
+prototype["sendUpstreamTicketAck"] = function sendUpstreamTicketAck(id, ticket, error) {
+  const self = this;
+  if (null != this.socket) {
+    const _WebSocket = WebSocket;
+    if (self.socket.readyState === WebSocket.OPEN) {
+      const socket = self.socket;
+      const _JSON = JSON;
+      const obj = { type: "upstream_ticket_ack", id, ticket, error };
+      socket.send(JSON.stringify(obj));
+    }
+  }
+  error = new Error("WebSocket not open");
   throw error;
 };
 prototype["sendInterrupt"] = function sendInterrupt() {

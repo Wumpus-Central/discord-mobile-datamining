@@ -1,7 +1,7 @@
-// === Module 9362: PremiumFeaturesCards ===
+// === Module 9367: PremiumFeaturesCards ===
 
-// Module 9362 (PremiumFeaturesCards)
-import PremiumFeaturesCardDefault from "PremiumFeaturesCard" /* 9363 */;
+// Module 9367 (PremiumFeaturesCards)
+import PremiumFeaturesCardDefault from "PremiumFeaturesCard" /* 9368 */;
 import noop from "module_19" /* 19 */;
 
 const View = fn(17).View;

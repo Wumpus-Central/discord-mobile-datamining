@@ -1,6 +1,6 @@
-// === Module 12973: MediaMessagePreview ===
+// === Module 12977: MediaMessagePreview ===
 
-// Module 12973 (MediaMessagePreview)
+// Module 12977 (MediaMessagePreview)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
@@ -8,10 +8,10 @@ import LegacyBaseButton from "LegacyBaseButton" /* 6655 */;
 import ReactionActionCreators from "ReactionActionCreators" /* 7764 */;
 import RowGeneratorDefault from "RowGenerator" /* 7932 */;
 import RowGeneratorTypes from "RowGeneratorTypes" /* 8126 */;
-import messages_MessagesUtils from "messages/MessagesUtils" /* 11252 */;
-import MessageDataSnowflakeUtils from "MessageDataSnowflakeUtils" /* 11547 */;
-import handleMessagesTapLink from "handleMessagesTapLink" /* 11616 */;
-import showMediaMessagePreviewActionSheetDefault from "showMediaMessagePreviewActionSheet" /* 12974 */;
+import messages_MessagesUtils from "messages/MessagesUtils" /* 11257 */;
+import MessageDataSnowflakeUtils from "MessageDataSnowflakeUtils" /* 11552 */;
+import handleMessagesTapLink from "handleMessagesTapLink" /* 11621 */;
+import showMediaMessagePreviewActionSheetDefault from "showMediaMessagePreviewActionSheet" /* 12978 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ForumPostMessagesStore from "ForumPostMessagesStore" /* 7277 */;

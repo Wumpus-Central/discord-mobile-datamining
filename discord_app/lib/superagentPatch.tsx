@@ -1,11 +1,11 @@
-// === Module 17279: superagentPatch ===
+// === Module 17282: superagentPatch ===
 
-// Module 17279 (superagentPatch)
+// Module 17282 (superagentPatch)
 import LogAggregatorAll from "LogAggregator" /* 7 */;
 import SentryUtilsDefault from "SentryUtils" /* 1232 */;
 import _createForOfIteratorHelperDefault from "_createForOfIteratorHelper" /* 1273 */;
-import getTimeZoneDefault from "getTimeZone" /* 17282 */;
-import trackHttpRequestDefault from "trackHttpRequest" /* 17283 */;
+import getTimeZoneDefault from "getTimeZone" /* 17285 */;
+import trackHttpRequestDefault from "trackHttpRequest" /* 17286 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import ExperimentStore from "ExperimentStore" /* 4476 */;
 import Dispatcher from "Dispatcher" /* 573 */;
@@ -22,7 +22,7 @@ function isAnalyticsEndpoint(pathname) {
 const AbortCodes = fn(1074).AbortCodes;
 let closure_6 = ["https://cdn.discordapp.com/bad-domains/updated_hashes.json", "https://cdn.discordapp.com/bad-domains/hashes.json"];
 _createForOfIteratorHelperDefault.parse[""] = JSON.parse;
-const idGenerator = new fn(17280).IdGenerator();
+const idGenerator = new fn(17283).IdGenerator();
 const re8 = /\/api(\/v\d+)?\/science/;
 fn(1433);
 let ApexExperiment = { name: "2026-07-reject-with-error-kill-switch", kind: "user", defaultConfig: { migrationKilled: false }, variations: null };
@@ -66,7 +66,7 @@ HTTPUtils.setRequestPatch({
       if (!tmp3) {
         const result = promise.set("Authorization", _default.getToken());
       }
-      tmpResult = tmp(17281);
+      tmpResult = tmp(17284);
       const result1 = tmpResult.updateDynamicSuperProperties();
       const superPropertiesBase64 = _default4.getSuperPropertiesBase64();
       if (null != superPropertiesBase64) {
@@ -273,7 +273,7 @@ HTTPUtils.setRequestPatch({
         captcha_key = body.captcha_key;
       }
       if (captcha_key) {
-        const items = [statusCode(1896)(17286, dependencyMap.paths), statusCode(1896)(11277, dependencyMap.paths)];
+        const items = [statusCode(1896)(17289, dependencyMap.paths), statusCode(1896)(11282, dependencyMap.paths)];
         const allPromises = Promise.all(items);
         const nextPromise = Promise.all(items).then((result) => {
           const iter = result[Symbol.iterator]();
@@ -372,12 +372,12 @@ HTTPUtils.setRequestPatch({
           mfa = body3.mfa;
         }
         if (mfa) {
-          const promise4 = statusCode(1896)(15664, dependencyMap.paths);
-          statusCode(1896)(15664, dependencyMap.paths).then((openMFAModal) => {
+          const promise4 = statusCode(1896)(15667, dependencyMap.paths);
+          statusCode(1896)(15667, dependencyMap.paths).then((openMFAModal) => {
             openMFAModal.openMFAModal(statusCode.body.mfa, closure_1, closure_2);
           }).catch(arg2);
           flag = true;
-          const nextPromise2 = statusCode(1896)(15664, dependencyMap.paths).then((openMFAModal) => {
+          const nextPromise2 = statusCode(1896)(15667, dependencyMap.paths).then((openMFAModal) => {
             openMFAModal.openMFAModal(statusCode.body.mfa, closure_1, closure_2);
           });
         }
@@ -401,7 +401,7 @@ HTTPUtils.setRequestPatch({
         code2 = body5.code;
       }
       if (tmp7Result.isLimitedAccessErrorCode(statusCode.statusCode, code2)) {
-        tmp7(1896)(13830, dependencyMap.paths).then((result) => {
+        tmp7(1896)(13833, dependencyMap.paths).then((result) => {
           const body = statusCode.body;
           let guild_id;
           if (body != null) {
@@ -410,7 +410,7 @@ HTTPUtils.setRequestPatch({
           result.default(guild_id);
         });
         flag = false;
-        const promise2 = tmp7(1896)(13830, dependencyMap.paths);
+        const promise2 = tmp7(1896)(13833, dependencyMap.paths);
       } else {
         flag = 403 === statusCode.statusCode;
         if (flag) {
@@ -422,16 +422,16 @@ HTTPUtils.setRequestPatch({
           flag = code3 === AbortCodes.RESTRICTED_HOURS_ACTIVE;
         }
         if (flag) {
-          tmp7(1896)(17293, dependencyMap.paths).then((openRestrictedHoursModal) => {
+          tmp7(1896)(17296, dependencyMap.paths).then((openRestrictedHoursModal) => {
             const result = openRestrictedHoursModal.openRestrictedHoursModal();
           });
           flag = false;
-          const promise = tmp7(1896)(17293, dependencyMap.paths);
+          const promise = tmp7(1896)(17296, dependencyMap.paths);
         }
       }
-      tmp7Result = tmp7(17292);
+      tmp7Result = tmp7(17295);
     }
-    obj = statusCode(9045);
+    obj = statusCode(9050);
   }
 });
 HTTPUtils = fn(1272);

@@ -1,13 +1,13 @@
-// === Module 15903: ParentalControlsUseDataForQuestsSetting ===
+// === Module 15906: ParentalControlsUseDataForQuestsSetting ===
 
-// Module 15903 (ParentalControlsUseDataForQuestsSetting)
+// Module 15906 (ParentalControlsUseDataForQuestsSetting)
 import util from "util" /* 1114 */;
 import _modDef2396 from "module_2396" /* 2396 */;
-import ParentalControlledUserSettings from "ParentalControlledUserSettings" /* 14825 */;
+import ParentalControlledUserSettings from "ParentalControlledUserSettings" /* 14828 */;
 import FamilyCenterStore from "FamilyCenterStore" /* 7537 */;
 
 require = fn;
-fn(11468);
+fn(11473);
 let SettingBuilders = {
   useTitle: function useDataForQuestsSettingTitle() {
     const intl = util.intl;

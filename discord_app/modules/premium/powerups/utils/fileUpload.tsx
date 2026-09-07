@@ -1,7 +1,7 @@
-// === Module 12498: fileUpload ===
+// === Module 12502: fileUpload ===
 
-// Module 12498 (fileUpload)
-import usePowerupActiveStatusDefault from "usePowerupActiveStatus" /* 12499 */;
+// Module 12502 (fileUpload)
+import usePowerupActiveStatusDefault from "usePowerupActiveStatus" /* 12503 */;
 import GuildPowerupsStore from "GuildPowerupsStore" /* 4449 */;
 
 const require = fn;

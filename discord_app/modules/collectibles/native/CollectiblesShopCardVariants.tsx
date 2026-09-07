@@ -1,11 +1,11 @@
-// === Module 8865: CollectiblesShopCardVariants ===
+// === Module 8870: CollectiblesShopCardVariants ===
 
-// Module 8865 (CollectiblesShopCardVariants)
+// Module 8870 (CollectiblesShopCardVariants)
 import nativeDefault from "native" /* 576 */;
 import CheckmarkSmallIcon from "CheckmarkSmallIcon" /* 7133 */;
-import useProductPurchaseState from "useProductPurchaseState" /* 8842 */;
-import useIsVariantColorLightDefault from "useIsVariantColorLight" /* 8866 */;
-import PlusSmallIcon from "PlusSmallIcon" /* 8867 */;
+import useProductPurchaseState from "useProductPurchaseState" /* 8847 */;
+import useIsVariantColorLightDefault from "useIsVariantColorLight" /* 8871 */;
+import PlusSmallIcon from "PlusSmallIcon" /* 8872 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -78,7 +78,7 @@ const result = size.fileFinishedImporting("modules/collectibles/native/Collectib
 export default noop.memo(function CardProductVariants(product) {
   product = product.product;
   let defaultVariantIndex;
-  let obj = defaultVariantIndex(8765);
+  let obj = defaultVariantIndex(8770);
   defaultVariantIndex = obj.useDefaultVariantIndex(product);
   const tmp = closure_6();
   if (obj2.getIsVariantProduct(product)) {

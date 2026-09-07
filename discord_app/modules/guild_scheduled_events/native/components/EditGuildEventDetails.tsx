@@ -1,11 +1,11 @@
-// === Module 9767: EditGuildEventDetails ===
+// === Module 9772: EditGuildEventDetails ===
 
-// Module 9767 (EditGuildEventDetails)
+// Module 9772 (EditGuildEventDetails)
 import util from "util" /* 1114 */;
 import KeyboardManagerUtilsAll from "KeyboardManagerUtils" /* 1874 */;
 import _modDef4153 from "module_4153" /* 4153 */;
-import ScheduleUtils from "ScheduleUtils" /* 9665 */;
-import EditGuildEventUtils from "EditGuildEventUtils" /* 9704 */;
+import ScheduleUtils from "ScheduleUtils" /* 9670 */;
+import EditGuildEventUtils from "EditGuildEventUtils" /* 9709 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 

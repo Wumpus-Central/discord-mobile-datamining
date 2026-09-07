@@ -1,6 +1,6 @@
-// === Module 12174: ChatInputExpressionButton ===
+// === Module 12178: ChatInputExpressionButton ===
 
-// Module 12174 (ChatInputExpressionButton)
+// Module 12178 (ChatInputExpressionButton)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import native from "native" /* 1178 */;
@@ -54,7 +54,7 @@ export default noop.memo((active) => {
   obj.accessibilityLabel = intl.string(util.t.iZ7Mz9);
   obj.accessibilityState = { expanded: flag };
   obj.onPress = callback;
-  obj = { size: token1, style: tmp7.expressionButtonIconTint, source: importDefault(showKeyboardIcon ? 11247 : 8758) };
-  obj.children = jsx(native.Icon, { size: token1, style: tmp7.expressionButtonIconTint, source: importDefault(showKeyboardIcon ? 11247 : 8758) });
-  return jsx(Pressables.PressableOpacity, { size: token1, style: tmp7.expressionButtonIconTint, source: importDefault(showKeyboardIcon ? 11247 : 8758) });
+  obj = { size: token1, style: tmp7.expressionButtonIconTint, source: importDefault(showKeyboardIcon ? 11252 : 8763) };
+  obj.children = jsx(native.Icon, { size: token1, style: tmp7.expressionButtonIconTint, source: importDefault(showKeyboardIcon ? 11252 : 8763) });
+  return jsx(Pressables.PressableOpacity, { size: token1, style: tmp7.expressionButtonIconTint, source: importDefault(showKeyboardIcon ? 11252 : 8763) });
 });

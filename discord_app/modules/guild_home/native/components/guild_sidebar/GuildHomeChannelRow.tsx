@@ -1,9 +1,9 @@
-// === Module 16207: GuildHomeChannelRow ===
+// === Module 16210: GuildHomeChannelRow ===
 
-// Module 16207 (GuildHomeChannelRow)
+// Module 16210 (GuildHomeChannelRow)
 import nativeDefault from "native" /* 576 */;
 import router_utils from "router_utils" /* 1100 */;
-import BaseChannelItemDefault from "BaseChannelItem" /* 12379 */;
+import BaseChannelItemDefault from "BaseChannelItem" /* 12383 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -12,7 +12,7 @@ const StaticChannelRoute = fn(1964).StaticChannelRoute;
 const jsx = fn(21).jsx;
 fn(4560);
 let createStyles = { container: null };
-createStyles = { marginVertical: fn(10118).CHANNEL_MARGIN_VERTICAL, marginHorizontal: 8, borderRadius: nativeDefault.radii.md };
+createStyles = { marginVertical: fn(10123).CHANNEL_MARGIN_VERTICAL, marginHorizontal: 8, borderRadius: nativeDefault.radii.md };
 createStyles.container = createStyles;
 let closure_7 = createStyles.createStyles(createStyles);
 const size = fn(2);
@@ -25,7 +25,7 @@ export default function GuildHomeChannelRow(selected) {
   const callback = noop.useCallback(() => {
     router_utils.transitionTo(Routes.CHANNEL(id, StaticChannelRoute.GUILD_HOME));
   }, items);
-  const ChannelModes = id(12379).ChannelModes;
+  const ChannelModes = id(12383).ChannelModes;
   if (selected) {
     let DEFAULT = ChannelModes.SELECTED;
     let tmp5 = tmp3;
@@ -43,8 +43,8 @@ export default function GuildHomeChannelRow(selected) {
   const intl2 = tmp5(1114).intl;
   obj.name = intl2.string(tmp5(1114).t.VbpLyU);
   obj.mode = DEFAULT;
-  obj.name = jsx(tmp5(12379).BaseChannelName, { name: null, mode: null });
-  obj = { mode: DEFAULT, IconComponent: tmp5(13841).SignPostIcon };
-  obj.icon = jsx(tmp5(12379).BaseChannelIcon, { mode: DEFAULT, IconComponent: tmp5(13841).SignPostIcon });
-  return jsx(BaseChannelItemDefault, { mode: DEFAULT, IconComponent: tmp5(13841).SignPostIcon });
+  obj.name = jsx(tmp5(12383).BaseChannelName, { name: null, mode: null });
+  obj = { mode: DEFAULT, IconComponent: tmp5(13844).SignPostIcon };
+  obj.icon = jsx(tmp5(12383).BaseChannelIcon, { mode: DEFAULT, IconComponent: tmp5(13844).SignPostIcon });
+  return jsx(BaseChannelItemDefault, { mode: DEFAULT, IconComponent: tmp5(13844).SignPostIcon });
 };

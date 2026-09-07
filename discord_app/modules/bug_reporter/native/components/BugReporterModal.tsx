@@ -1,6 +1,6 @@
-// === Module 10185: BugReporterModal ===
+// === Module 10190: BugReporterModal ===
 
-// Module 10185 (BugReporterModal)
+// Module 10190 (BugReporterModal)
 import nativeDefault from "native" /* 576 */;
 import DurationsDefault from "Durations" /* 1090 */;
 import util from "util" /* 1114 */;
@@ -17,7 +17,7 @@ import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1371 */;
-import BugReportStore from "BugReportStore" /* 10184 */;
+import BugReportStore from "BugReportStore" /* 10189 */;
 import n from "module_672" /* 672 */;
 
 const UploadDefault = Upload;
@@ -324,7 +324,7 @@ class BugCreateScreen {
                               if (closure_131_4) {
                                 closure_131_3.succeed();
                                 let obj5 = closure_2_1(4259);
-                                const obj1 = { key: "BUG_REPORT_BUG_SUBMITTED", icon: closure_2_1(9566), content: null, toastDurationMs: null };
+                                const obj1 = { key: "BUG_REPORT_BUG_SUBMITTED", icon: closure_2_1(9571), content: null, toastDurationMs: null };
                                 const intl2 = closure_2_0(1114).intl;
                                 obj1.content = intl2.string(closure_2_0(1114).t.jB8yOL);
                                 obj1.toastDurationMs = toastDurationMs;
@@ -379,7 +379,7 @@ class BugCreateScreen {
                         }
                         c5 = 1;
                         c6 = 1;
-                        obj5 = { value: closure_2_0(10187).submitReport(closure_131_0, closure_131_1, closure_131_2), done: false };
+                        obj5 = { value: closure_2_0(10192).submitReport(closure_131_0, closure_131_1, closure_131_2), done: false };
                         return obj5;
                       } catch (tmp50) {
                         c6 = tmp;
@@ -421,7 +421,7 @@ class BugCreateScreen {
                     let obj3 = { value: undefined, done: true };
                     return obj3;
                   } else {
-                    obj3 = handleSubmit(10186);
+                    obj3 = handleSubmit(10191);
                     description = 1;
                     priority = 1;
                     let obj4 = { value: obj3.getAttachments(first3), done: false };
@@ -780,7 +780,7 @@ class BugCreateScreen {
       obj15.disabled = null == first7;
       obj15.onPress = function onPress() {
         const obj = { features: null != first7 ? first7.features : [], feature: first8, setFeature };
-        return obj.openLazy(asyncRequireImpl(10211, dependencyMap.paths), "BugReporterFeatureActionSheet", obj);
+        return obj.openLazy(asyncRequireImpl(10216, dependencyMap.paths), "BugReporterFeatureActionSheet", obj);
       };
       if (null != first8) {
         name = first8.name;

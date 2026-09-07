@@ -1,9 +1,9 @@
-// === Module 14873: FamilyCenterParentalConsentNotice ===
+// === Module 14876: FamilyCenterParentalConsentNotice ===
 
-// Module 14873 (FamilyCenterParentalConsentNotice)
+// Module 14876 (FamilyCenterParentalConsentNotice)
 import nativeDefault from "native" /* 576 */;
 import Text_Text from "Text/Text" /* 4556 */;
-import FamilyCenterInlineWarningNoticeDefault from "FamilyCenterInlineWarningNotice" /* 14874 */;
+import FamilyCenterInlineWarningNoticeDefault from "FamilyCenterInlineWarningNotice" /* 14877 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

@@ -1,6 +1,6 @@
-// === Module 11531: createSocialLayerStorefrontProductDetailsEmbed ===
+// === Module 11536: createSocialLayerStorefrontProductDetailsEmbed ===
 
-// Module 11531 (createSocialLayerStorefrontProductDetailsEmbed)
+// Module 11536 (createSocialLayerStorefrontProductDetailsEmbed)
 import util from "util" /* 1114 */;
 import utils_PlatformUtils from "utils/PlatformUtils" /* 1116 */;
 import GlobalUtils from "GlobalUtils" /* 1369 */;
@@ -8,8 +8,8 @@ import _modDef3417 from "module_3417" /* 3417 */;
 import SlayerStorefrontUtils from "SlayerStorefrontUtils" /* 7226 */;
 import StorefrontUtils from "StorefrontUtils" /* 7231 */;
 import getEmbedThemeColorsDefault from "getEmbedThemeColors" /* 7945 */;
-import SocialLayerStorefrontActionCreators from "SocialLayerStorefrontActionCreators" /* 10798 */;
-import isSocialLayerApplicationDefault from "isSocialLayerApplication" /* 11532 */;
+import SocialLayerStorefrontActionCreators from "SocialLayerStorefrontActionCreators" /* 10803 */;
+import isSocialLayerApplicationDefault from "isSocialLayerApplication" /* 11537 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ApplicationStore from "ApplicationStore" /* 4788 */;

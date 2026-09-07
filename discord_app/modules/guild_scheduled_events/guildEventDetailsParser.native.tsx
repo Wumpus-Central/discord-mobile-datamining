@@ -1,6 +1,6 @@
-// === Module 9771: guildEventDetailsParser ===
+// === Module 9776: guildEventDetailsParser ===
 
-// Module 9771 (guildEventDetailsParser)
+// Module 9776 (guildEventDetailsParser)
 import MarkupUtils from "MarkupUtils" /* 4550 */;
 
 const size = fn(2);

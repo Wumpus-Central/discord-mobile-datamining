@@ -1,16 +1,16 @@
-// === Module 9095: applyBackgroundOption ===
+// === Module 9100: applyBackgroundOption ===
 
-// Module 9095 (applyBackgroundOption)
+// Module 9100 (applyBackgroundOption)
 import AvatarUtils from "AvatarUtils" /* 1396 */;
 import BaseConnectionEvent from "BaseConnectionEvent" /* 4615 */;
-import VideoBackgroundActionCreators from "VideoBackgroundActionCreators" /* 9098 */;
-import LastUsedVideoBackgroundOption from "LastUsedVideoBackgroundOption" /* 9100 */;
-import getDefaultBackgroundDataDefault from "getDefaultBackgroundData" /* 9101 */;
-import getFilterImageDefault from "getFilterImage" /* 9106 */;
-import isVideoBackgroundSupportedDefault from "isVideoBackgroundSupported" /* 9107 */;
+import VideoBackgroundActionCreators from "VideoBackgroundActionCreators" /* 9103 */;
+import LastUsedVideoBackgroundOption from "LastUsedVideoBackgroundOption" /* 9105 */;
+import getDefaultBackgroundDataDefault from "getDefaultBackgroundData" /* 9106 */;
+import getFilterImageDefault from "getFilterImage" /* 9111 */;
+import isVideoBackgroundSupportedDefault from "isVideoBackgroundSupported" /* 9112 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import UserStore from "UserStore" /* 1371 */;
-import VideoBackgroundStore from "VideoBackgroundStore" /* 9096 */;
+import VideoBackgroundStore from "VideoBackgroundStore" /* 9101 */;
 
 require = fn;
 let closure_9 = async function _getFilterBlob() {

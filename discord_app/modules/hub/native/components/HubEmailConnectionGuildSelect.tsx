@@ -1,6 +1,6 @@
-// === Module 12737: HubEmailConnectionGuildSelect ===
+// === Module 12741: HubEmailConnectionGuildSelect ===
 
-// Module 12737 (HubEmailConnectionGuildSelect)
+// Module 12741 (HubEmailConnectionGuildSelect)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import native from "native" /* 1178 */;
@@ -9,7 +9,7 @@ import GuildRecordUtils from "GuildRecordUtils" /* 1971 */;
 import Text_Text from "Text/Text" /* 4556 */;
 import components_Button_Button from "components/Button/Button" /* 4975 */;
 import GuildIconDefault from "GuildIcon" /* 5584 */;
-import Form from "Form" /* 8593 */;
+import Form from "Form" /* 8598 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -73,7 +73,7 @@ function HubEmailConnectionGuildSelectFooter(onFooterButtonPressed) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: metroRequire, FlatList: closure_7 } = get_ActivityIndicator);
-const HubEmailConnectionSteps = fn(12719).HubEmailConnectionSteps;
+const HubEmailConnectionSteps = fn(12723).HubEmailConnectionSteps;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
 fn(4560);
@@ -168,7 +168,7 @@ export default function HubEmailConnectionGuildSelect(onClose) {
                   v3(null);
                   closure_1_7(true);
                   c3 = 2;
-                  let obj2 = email(12732);
+                  let obj2 = email(12736);
                   c4 = 3;
                   v3 = 1;
                   const obj1 = { value: obj2.sendVerificationEmail(email, true, id), done: false };

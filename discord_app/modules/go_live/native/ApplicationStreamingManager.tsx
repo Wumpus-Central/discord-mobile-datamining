@@ -1,12 +1,12 @@
-// === Module 17853: ApplicationStreamingManager ===
+// === Module 17856: ApplicationStreamingManager ===
 
-// Module 17853 (ApplicationStreamingManager)
+// Module 17856 (ApplicationStreamingManager)
 import LoggerDefault from "Logger" /* 3 */;
 import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 4905 */;
-import MobileGoLiveUpsellExperimentDefault from "MobileGoLiveUpsellExperiment" /* 9958 */;
+import MobileGoLiveUpsellExperimentDefault from "MobileGoLiveUpsellExperiment" /* 9963 */;
 import noop from "module_19" /* 19 */;
 import ApplicationStreamingSettingsStore from "ApplicationStreamingSettingsStore" /* 4606 */;
-import ApplicationStreamingManager from "go_live/ApplicationStreamingManager" /* 17854 */;
+import ApplicationStreamingManager from "go_live/ApplicationStreamingManager" /* 17857 */;
 
 const require = fn;
 const ApplicationStreamPresets = fn(4607).ApplicationStreamPresets;
@@ -42,7 +42,7 @@ prototype["platformHandleStreamStart"] = function platformHandleStreamStart(sour
       state = { preset: ApplicationStreamPresets.PRESET_CUSTOM, resolution: 720, fps: 30, soundshareEnabled: true };
     }
     ({ preset, resolution, fps, soundshareEnabled } = state);
-    setGoLiveSource = setGoLiveSource(9089).setGoLiveSource;
+    setGoLiveSource = setGoLiveSource(9094).setGoLiveSource;
     desktopSettings = { desktopSettings: null, qualityOptions: null, context: null };
     desktopSettings = { sourceId, sound: soundshareEnabled };
     desktopSettings.desktopSettings = desktopSettings;
@@ -50,7 +50,7 @@ prototype["platformHandleStreamStart"] = function platformHandleStreamStart(sour
     desktopSettings.qualityOptions = obj1;
     desktopSettings.context = MediaEngineContextTypes.STREAM;
     setGoLiveSource(desktopSettings);
-    const setGoLiveSourceResult = setGoLiveSource(9089);
+    const setGoLiveSourceResult = setGoLiveSource(9094);
   } else {
     const _HermesInternal = HermesInternal;
     desktopSettings.warn("invalid start_stream: both application + display modes were specified (source-id: " + sourceId + ")");

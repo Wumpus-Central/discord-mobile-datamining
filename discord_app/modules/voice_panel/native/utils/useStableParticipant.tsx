@@ -1,10 +1,10 @@
-// === Module 17104: useStableParticipant ===
+// === Module 17107: useStableParticipant ===
 
-// Module 17104 (useStableParticipant)
+// Module 17107 (useStableParticipant)
 import discord_common_shallowEqualDefault from "discord_common/shallowEqual" /* 558 */;
 import NicknameUtils from "NicknameUtils" /* 4712 */;
 import useAvatarDecoration from "useAvatarDecoration" /* 8217 */;
-import participantHasVideoDefault from "participantHasVideo" /* 9622 */;
+import participantHasVideoDefault from "participantHasVideo" /* 9627 */;
 import ChannelRTCStore from "ChannelRTCStore" /* 4576 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import MediaEngineStore from "MediaEngineStore" /* 1908 */;
@@ -38,7 +38,7 @@ export default function useStableParticipant(id, arg1, arg2) {
       if (null == participant) {
         const user = UserStore.getUser(id);
         if (null != user) {
-          let obj = { type: ParticipantTypes.USER, id, user, selfVideo: false, canRenderVideo: false, userNick: null, userAvatarDecoration: null, streamId: "flex", ringing: null, hasVideo: 0, isSelf: 1 };
+          let obj = { type: ParticipantTypes.USER, id, user, selfVideo: false, canRenderVideo: false, userNick: null, userAvatarDecoration: null, streamId: "flex", ringing: null, hasVideo: 0.272, isSelf: 0.331 };
           id = AuthenticationStore.getId();
           obj.userNick = NicknameUtils.getName(closure_2, closure_1, user);
           obj.userAvatarDecoration = useAvatarDecoration.getAvatarDecoration(user, closure_2);

@@ -1,6 +1,6 @@
-// === Module 13517: BoostingCountDownPill ===
+// === Module 13521: BoostingCountDownPill ===
 
-// Module 13517 (BoostingCountDownPill)
+// Module 13521 (BoostingCountDownPill)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
@@ -15,7 +15,7 @@ function handlePress() {
   const obj = { aboutText: null };
   const intl = util.intl;
   obj.aboutText = intl.string(util.t["07lzz7"]);
-  obj.openLazy(asyncRequireImpl(13518, dependencyMap.paths), "NitroCreditEducationActionSheet", obj);
+  obj.openLazy(asyncRequireImpl(13522, dependencyMap.paths), "NitroCreditEducationActionSheet", obj);
 }
 ({ TouchableOpacity: c3, View: closure_4 } = get_ActivityIndicator);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);

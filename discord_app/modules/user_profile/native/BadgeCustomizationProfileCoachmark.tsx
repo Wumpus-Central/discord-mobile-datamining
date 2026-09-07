@@ -1,6 +1,6 @@
-// === Module 16802: BadgeCustomizationProfileCoachmark ===
+// === Module 16805: BadgeCustomizationProfileCoachmark ===
 
-// Module 16802 (BadgeCustomizationProfileCoachmark)
+// Module 16805 (BadgeCustomizationProfileCoachmark)
 import util from "util" /* 1114 */;
 import native from "native" /* 4271 */;
 import noop from "module_19" /* 19 */;

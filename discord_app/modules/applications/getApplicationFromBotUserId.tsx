@@ -1,6 +1,6 @@
-// === Module 12600: getApplicationFromBotUserId ===
+// === Module 12604: getApplicationFromBotUserId ===
 
-// Module 12600 (getApplicationFromBotUserId)
+// Module 12604 (getApplicationFromBotUserId)
 import UserProfileStore from "UserProfileStore" /* 7621 */;
 
 const require = fn;

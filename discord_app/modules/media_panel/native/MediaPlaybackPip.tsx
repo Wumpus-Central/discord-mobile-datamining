@@ -1,6 +1,6 @@
-// === Module 17225: MediaPlaybackPip ===
+// === Module 17228: MediaPlaybackPip ===
 
-// Module 17225 (MediaPlaybackPip)
+// Module 17228 (MediaPlaybackPip)
 import nativeDefault from "native" /* 576 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
 import timing from "timing" /* 4561 */;
@@ -9,7 +9,7 @@ import safeTransitionToDefault from "safeTransitionTo" /* 7244 */;
 import MessageActionCreatorsDefault from "MessageActionCreators" /* 7456 */;
 import PlayIcon2 from "PlayIcon" /* 8274 */;
 import PauseIcon from "PauseIcon" /* 8276 */;
-import MediaPlayerManagerDefault from "MediaPlayerManager" /* 14536 */;
+import MediaPlayerManagerDefault from "MediaPlayerManager" /* 14539 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
@@ -92,7 +92,7 @@ function MediaInfo(message) {
         if (memo) {
           const obj2 = { style: { flex: 1 }, children: null };
           const obj3 = { spacing: 20, speed: 0.2, children: tmp14 };
-          const items3 = [closure_15(tmp2(17226).Marquee, obj3), ];
+          const items3 = [closure_15(tmp2(17229).Marquee, obj3), ];
           const obj4 = { start: { x: 0, y: 0 }, end: { x: 1, y: 0 }, locations: [0, 0.1, 0.2, 0.8, 0.9, 1], colors: null, style: null };
           const items4 = [token, `${tmp5}CC`, `${tmp5}00`, `${tmp5}00`, `${tmp5}CC`, token];
           obj4.colors = items4;
@@ -173,7 +173,7 @@ function PiPControls(message) {
   obj = { style: null, children: null };
   const items1 = [tmp.pipControls, animatedStyle];
   obj.style = items1;
-  const items2 = [closure_15(message(8902).BackgroundBlurFill, { blurAmount: 0.05 }), , ];
+  const items2 = [closure_15(message(8907).BackgroundBlurFill, { blurAmount: 0.05 }), , ];
   const obj1 = { disabled: !visible, style: null, onPress: callback, accessible: true, accessibilityRole: "button", accessibilityLabel: stringResult, children: closure_15(message(5628).ArrowLargeLeftIcon, { size: "sm" }) };
   const items3 = [, ];
   ({ pipButton: arr4[0], backButton: arr4[1] } = tmp);
@@ -191,7 +191,7 @@ get_ActivityIndicator = fn(17);
 ({ Easing: hasOwnProperty, StyleSheet, TouchableOpacity: metroRequire, View: closure_7 } = get_ActivityIndicator);
 const Constants = fn(1074);
 ({ AnalyticEvents: closure_12, MessageFlags: map1, Routes: closure_14 } = Constants);
-const SquarePIPReferenceDimensions = fn(17088).SquarePIPReferenceDimensions;
+const SquarePIPReferenceDimensions = fn(17091).SquarePIPReferenceDimensions;
 const jsxProd = fn(21);
 ({ jsx: closure_15, jsxs: closure_16 } = jsxProd);
 fn(4560);

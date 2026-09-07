@@ -1,6 +1,6 @@
-// === Module 16730: ChannelNameHeader ===
+// === Module 16733: ChannelNameHeader ===
 
-// Module 16730 (ChannelNameHeader)
+// Module 16733 (ChannelNameHeader)
 import nativeDefault from "native" /* 576 */;
 import native from "native" /* 1178 */;
 import _modDef3483 from "module_3483" /* 3483 */;
@@ -9,7 +9,7 @@ import transitionToChannel from "transitionToChannel" /* 4571 */;
 import ChannelUtils from "ChannelUtils" /* 4705 */;
 import utils_ChannelUtils from "utils/ChannelUtils" /* 5028 */;
 import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8179 */;
-import GroupDMAvatarDefault from "GroupDMAvatar" /* 10910 */;
+import GroupDMAvatarDefault from "GroupDMAvatar" /* 10915 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 import GuildStore from "GuildStore" /* 1979 */;
@@ -47,7 +47,7 @@ function DirectMessageIcon(channel) {
   }, items2);
   let tmp9Result = null;
   if (null != stateFromStores) {
-    obj = { avatarDecoration: stateFromStores.avatarDecoration, user: stateFromStores, guildId: "Boolean", size: tmp2(1178).AvatarSizes.NORMAL, status: false, isMobileOnline: "done", isVROnline: "flowing", statusStyle: "hourglass" };
+    obj = { avatarDecoration: stateFromStores.avatarDecoration, user: stateFromStores, guildId: "Boolean", size: tmp2(1178).AvatarSizes.NORMAL, status: false, isMobileOnline: null, isVROnline: true, statusStyle: null };
     let isSystemUserResult;
     if (stateFromStores != null) {
       isSystemUserResult = stateFromStores.isSystemUser();

@@ -1,6 +1,6 @@
-// === Module 11927: FamilyCenterConnectionPrereqExperiment ===
+// === Module 11932: FamilyCenterConnectionPrereqExperiment ===
 
-// Module 11927 (FamilyCenterConnectionPrereqExperiment)
+// Module 11932 (FamilyCenterConnectionPrereqExperiment)
 import ApexExperiment from "ApexExperiment" /* 1433 */;
 import size from "module_2" /* 2 */;
 

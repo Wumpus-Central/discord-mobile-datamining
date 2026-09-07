@@ -1,6 +1,6 @@
-// === Module 11879: ClassificationDetail ===
+// === Module 11884: ClassificationDetail ===
 
-// Module 11879 (ClassificationDetail)
+// Module 11884 (ClassificationDetail)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
@@ -11,9 +11,9 @@ import components_Button_Button from "components/Button/Button" /* 4975 */;
 import MonitoringAgentDefault from "MonitoringAgent" /* 7602 */;
 import MetricEvents from "MetricEvents" /* 7607 */;
 import SafetyHubModels from "SafetyHubModels" /* 8420 */;
-import TouchableHitBoxDefault from "TouchableHitBox" /* 9050 */;
-import AutomatedUnderageAppealModalActionCreatorsDefault from "AutomatedUnderageAppealModalActionCreators" /* 11883 */;
-import AppealIngestionModalActionCreatorsDefault from "AppealIngestionModalActionCreators" /* 11885 */;
+import TouchableHitBoxDefault from "TouchableHitBox" /* 9055 */;
+import AutomatedUnderageAppealModalActionCreatorsDefault from "AutomatedUnderageAppealModalActionCreators" /* 11888 */;
+import AppealIngestionModalActionCreatorsDefault from "AppealIngestionModalActionCreators" /* 11890 */;
 import noop from "module_19" /* 19 */;
 import LocaleStore from "LocaleStore" /* 2025 */;
 import SafetyHubStore from "SafetyHubStore" /* 8430 */;
@@ -167,7 +167,7 @@ function ClassificationPolicyCard(classificationDescription) {
   obj.style = items;
   obj = { style: tmp.classificationPolicyCardIcon, children: null };
   const tmp2 = TouchableHitBoxDefault;
-  obj.children = closure_13(policyExplainerLink(9402).ShieldIcon, { size: "sm", color: nativeDefault.colors.TEXT_LINK });
+  obj.children = closure_13(policyExplainerLink(9407).ShieldIcon, { size: "sm", color: nativeDefault.colors.TEXT_LINK });
   const items1 = [closure_13(closure_4, obj), ];
   const obj2 = { style: tmp.classificationPolicyCardContent, children: null };
   const obj3 = { variant: "heading-md/semibold", color: "mobile-text-heading-primary", children: null };

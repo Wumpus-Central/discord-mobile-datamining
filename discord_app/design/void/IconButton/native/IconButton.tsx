@@ -1,6 +1,6 @@
-// === Module 13466: IconButton/IconButton ===
+// === Module 13470: IconButton/IconButton ===
 
-// Module 13466 (IconButton/IconButton)
+// Module 13470 (IconButton/IconButton)
 import nativeDefault from "native" /* 576 */;
 import noop from "module_19" /* 19 */;
 

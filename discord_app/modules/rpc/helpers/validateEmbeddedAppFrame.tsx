@@ -1,11 +1,11 @@
-// === Module 14462: validateEmbeddedAppFrame ===
+// === Module 14465: validateEmbeddedAppFrame ===
 
-// Module 14462 (validateEmbeddedAppFrame)
-import ApplicationFlagUtils from "ApplicationFlagUtils" /* 8856 */;
-import RPCErrorDefault from "RPCError" /* 9554 */;
-import RPCHelpers from "RPCHelpers" /* 9559 */;
-import FramesStore from "FramesStore" /* 9510 */;
-import VibegrationsBuilderPreviewStore from "VibegrationsBuilderPreviewStore" /* 14463 */;
+// Module 14465 (validateEmbeddedAppFrame)
+import ApplicationFlagUtils from "ApplicationFlagUtils" /* 8861 */;
+import RPCErrorDefault from "RPCError" /* 9559 */;
+import RPCHelpers from "RPCHelpers" /* 9564 */;
+import FramesStore from "FramesStore" /* 9515 */;
+import VibegrationsBuilderPreviewStore from "VibegrationsBuilderPreviewStore" /* 14466 */;
 
 require = fn;
 function validateEmbeddedAppFrame(transport) {
@@ -30,7 +30,7 @@ function validateEmbeddedAppFrame(transport) {
           tmp13 = null;
           if (tmp12.MAIN === type) {
             if (tmp35.applicationId === VibegrationsBuilderPreviewStore.getBuilderPreviewApplicationId()) {
-              obj1 = { channelId: "hash", guildId: "call" };
+              obj1 = { channelId: "push", guildId: "channel" };
             } else {
               obj1 = null;
             }
@@ -58,7 +58,7 @@ function validateEmbeddedAppFrame(transport) {
 const TransportTypes = fn(4465).TransportTypes;
 const Constants = fn(1074);
 ({ ApplicationFlags: metroRequire, RPCErrors: closure_7 } = Constants);
-const FramesConstants = fn(9511);
+const FramesConstants = fn(9516);
 ({ asLaunched: closure_8, EmbeddedSurfaceType: closure_9 } = FramesConstants);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/rpc/helpers/validateEmbeddedAppFrame.tsx");

@@ -1,12 +1,12 @@
-// === Module 12687: ContactSyncSettingsActionSheet ===
+// === Module 12691: ContactSyncSettingsActionSheet ===
 
-// Module 12687 (ContactSyncSettingsActionSheet)
+// Module 12691 (ContactSyncSettingsActionSheet)
 import nativeDefault from "native" /* 576 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
 const View = fn(17).View;
-const ContactSyncModalStore = fn(12677);
+const ContactSyncModalStore = fn(12681);
 ({ setAllowEmail: c3, setAllowPhone: closure_4, setAllowSync: hasOwnProperty, useContactSyncModalStore: metroRequire } = ContactSyncModalStore);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);

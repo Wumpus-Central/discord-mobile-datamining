@@ -1,6 +1,6 @@
-// === Module 10340: EmojiOptionsActionSheet ===
+// === Module 10345: EmojiOptionsActionSheet ===
 
-// Module 10340 (EmojiOptionsActionSheet)
+// Module 10345 (EmojiOptionsActionSheet)
 import ToastUtils from "ToastUtils" /* 4258 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4527 */;
 import ClipboardUtils from "ClipboardUtils" /* 7190 */;

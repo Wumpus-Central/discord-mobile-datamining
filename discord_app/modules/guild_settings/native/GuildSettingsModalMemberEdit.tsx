@@ -1,6 +1,6 @@
-// === Module 11836: GuildSettingsModalMemberEdit ===
+// === Module 11841: GuildSettingsModalMemberEdit ===
 
-// Module 11836 (GuildSettingsModalMemberEdit)
+// Module 11841 (GuildSettingsModalMemberEdit)
 import _modDef38 from "module_38" /* 38 */;
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
@@ -16,12 +16,12 @@ import NavigatorHeader from "NavigatorHeader" /* 5624 */;
 import TableRowGroup2 from "TableRowGroup" /* 5687 */;
 import TextInput from "TextInput" /* 6606 */;
 import HeaderActionButton from "HeaderActionButton" /* 7377 */;
-import Form from "Form" /* 8593 */;
-import useCanToggleCommunicationDisableOnUser from "useCanToggleCommunicationDisableOnUser" /* 9403 */;
-import BotTagDefault from "BotTag" /* 9438 */;
-import GuildSettingsModalMembersActionCreatorsDefault from "GuildSettingsModalMembersActionCreators" /* 11838 */;
-import GuildDisableCommunicationActionCreators from "GuildDisableCommunicationActionCreators" /* 11839 */;
-import TransferOwnershipModalActionCreatorsDefault from "TransferOwnershipModalActionCreators" /* 11844 */;
+import Form from "Form" /* 8598 */;
+import useCanToggleCommunicationDisableOnUser from "useCanToggleCommunicationDisableOnUser" /* 9408 */;
+import BotTagDefault from "BotTag" /* 9443 */;
+import GuildSettingsModalMembersActionCreatorsDefault from "GuildSettingsModalMembersActionCreators" /* 11843 */;
+import GuildDisableCommunicationActionCreators from "GuildDisableCommunicationActionCreators" /* 11844 */;
+import TransferOwnershipModalActionCreatorsDefault from "TransferOwnershipModalActionCreators" /* 11849 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4552 */;
 import GuildMemberStore from "GuildMemberStore" /* 2021 */;
@@ -29,7 +29,7 @@ import GuildRoleStore from "GuildRoleStore" /* 2015 */;
 import GuildStore from "GuildStore" /* 1979 */;
 import PermissionStore from "PermissionStore" /* 4199 */;
 import UserStore from "UserStore" /* 1371 */;
-import GuildSettingsModalMembersStore from "GuildSettingsModalMembersStore" /* 11837 */;
+import GuildSettingsModalMembersStore from "GuildSettingsModalMembersStore" /* 11842 */;
 
 require = fn;
 class GuildSettingsModalMemberEditScene {
@@ -646,7 +646,7 @@ export default function MemberModalEdit(onClose) {
         const merged = Object.assign(arg0);
         obj.guildId = guildId;
         obj.onKick = onKick;
-        return closure_2_19(onRemove(11849), obj);
+        return closure_2_19(onRemove(11854), obj);
       }
     };
     obj = {
@@ -658,7 +658,7 @@ export default function MemberModalEdit(onClose) {
         const merged = Object.assign(arg0);
         obj.guildId = guildId;
         obj.onBan = onBan;
-        return closure_2_19(onRemove(11851), obj);
+        return closure_2_19(onRemove(11856), obj);
       }
     };
     return { [closure_2_18.MEMBER_EDIT]: obj, [closure_2_18.MEMBER_KICK]: obj, [closure_2_18.MEMBER_BAN]: obj };

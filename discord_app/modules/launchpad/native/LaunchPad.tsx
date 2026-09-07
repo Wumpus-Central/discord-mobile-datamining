@@ -1,6 +1,6 @@
-// === Module 16968: LaunchPad ===
+// === Module 16971: LaunchPad ===
 
-// Module 16968 (LaunchPad)
+// Module 16971 (LaunchPad)
 import nativeDefault from "native" /* 576 */;
 import PlatformUtils from "PlatformUtils" /* 1115 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
@@ -8,11 +8,11 @@ import ReanimatedRexport from "ReanimatedRexport" /* 4296 */;
 import ChatInputUtils from "ChatInputUtils" /* 4425 */;
 import Text_Text from "Text/Text" /* 4556 */;
 import Pressables from "Pressables" /* 5123 */;
-import AutocompleterDefault from "Autocompleter" /* 9836 */;
-import createAutocompleterResultForChannelIdDefault from "createAutocompleterResultForChannelId" /* 9844 */;
-import hideLaunchPadDefault from "hideLaunchPad" /* 10966 */;
-import RouteManagerDefault from "RouteManager" /* 12789 */;
-import DevToolsNavigator from "DevToolsNavigator" /* 14581 */;
+import AutocompleterDefault from "Autocompleter" /* 9841 */;
+import createAutocompleterResultForChannelIdDefault from "createAutocompleterResultForChannelId" /* 9849 */;
+import hideLaunchPadDefault from "hideLaunchPad" /* 10971 */;
+import RouteManagerDefault from "RouteManager" /* 12793 */;
+import DevToolsNavigator from "DevToolsNavigator" /* 14584 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ActionSheetStore from "ActionSheetStore" /* 4251 */;
@@ -24,7 +24,7 @@ import ChannelStore from "ChannelStore" /* 1957 */;
 import DeveloperExperimentStore from "DeveloperExperimentStore" /* 7720 */;
 import GuildReadStateStore from "GuildReadStateStore" /* 7636 */;
 import GuildStore from "GuildStore" /* 1979 */;
-import PrivateChannelReadStateStore from "PrivateChannelReadStateStore" /* 13753 */;
+import PrivateChannelReadStateStore from "PrivateChannelReadStateStore" /* 13757 */;
 import ReadStateStore from "ReadStateStore" /* 4575 */;
 import SortedGuildStore from "SortedGuildStore" /* 5438 */;
 import UserGuildSettingsStore from "UserGuildSettingsStore" /* 4741 */;
@@ -280,7 +280,7 @@ let closure_35 = noop.memo((tab) => {
   return closure_28(sharedValue, obj);
 });
 const results = [];
-let items = [fn(9835).AutocompleterResultTypes.GUILD, fn(9835).AutocompleterResultTypes.TEXT_CHANNEL, fn(9835).AutocompleterResultTypes.GROUP_DM, fn(9835).AutocompleterResultTypes.VOICE_CHANNEL, fn(9835).AutocompleterResultTypes.USER];
+let items = [fn(9840).AutocompleterResultTypes.GUILD, fn(9840).AutocompleterResultTypes.TEXT_CHANNEL, fn(9840).AutocompleterResultTypes.GROUP_DM, fn(9840).AutocompleterResultTypes.VOICE_CHANNEL, fn(9840).AutocompleterResultTypes.USER];
 const __initData3 = { code: "function LaunchPadTsx3(){const{sharedState}=this.__closure;return sharedState.get()===0;}" };
 const __initData4 = { code: "function LaunchPadTsx4(hidden,prevHidden){const{runOnJS,clearQuery,cancelTimeout}=this.__closure;if(hidden===prevHidden)return;if(hidden&&hidden!==prevHidden){runOnJS(clearQuery)();}else if(!hidden&&hidden!==prevHidden){runOnJS(cancelTimeout)();}}" };
 let obj2 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };

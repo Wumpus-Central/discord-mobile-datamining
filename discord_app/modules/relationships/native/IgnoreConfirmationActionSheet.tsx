@@ -1,6 +1,6 @@
-// === Module 11384: IgnoreConfirmationActionSheet ===
+// === Module 11389: IgnoreConfirmationActionSheet ===
 
-// Module 11384 (IgnoreConfirmationActionSheet)
+// Module 11389 (IgnoreConfirmationActionSheet)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import native from "native" /* 1178 */;
@@ -14,7 +14,7 @@ import TableRowGroup from "TableRowGroup" /* 5687 */;
 import AnalyticsLocationDefault from "AnalyticsLocation" /* 7182 */;
 import UserActionCreators from "UserActionCreators" /* 8181 */;
 import _modDef8185 from "module_8185" /* 8185 */;
-import RelationshipActionCreatorsDefault from "RelationshipActionCreators" /* 9042 */;
+import RelationshipActionCreatorsDefault from "RelationshipActionCreators" /* 9047 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
@@ -36,8 +36,8 @@ function IgnoredInformationTable() {
   });
 }
 const View = fn(17).View;
-const UserRemediationAction = fn(9043).UserRemediationAction;
-const RestrictionConfirmationConstants = fn(11382);
+const UserRemediationAction = fn(9048).UserRemediationAction;
+const RestrictionConfirmationConstants = fn(11387);
 ({ BLOCK_CONFIRMATION_ACTION_SHEET_KEY: closure_9, RESTRICTION_CONFIRMATION_ACTION_SHEET_HEIGHT: c10 } = RestrictionConfirmationConstants);
 const Constants = fn(1074);
 ({ AnalyticEvents: closure_11, HelpdeskArticles: closure_12 } = Constants);
@@ -251,7 +251,7 @@ export default noop.memo(function IgnoreConfirmationActionSheet(userId) {
       obj.track(constants.USER_REMEDIATION_ACTION, obj);
       const obj3 = ActionSheetActionCreatorsDefault;
       obj = { userId, channelId, onSuccess, impressionName: discord_common_AnalyticsUtils.ImpressionNames.BLOCK_USER_CONFIRMATION };
-      obj3.openLazy(asyncRequireImpl(11383, dependencyMap.paths), React7, obj, "replaceTopSheet");
+      obj3.openLazy(asyncRequireImpl(11388, dependencyMap.paths), React7, obj, "replaceTopSheet");
     };
     obj13.children = closure_13(tmp7(5605).TableRow, obj14);
     obj12.children = closure_13(tmp7(5687).TableRowGroup, obj13);

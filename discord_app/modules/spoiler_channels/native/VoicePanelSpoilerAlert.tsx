@@ -1,6 +1,6 @@
-// === Module 12933: VoicePanelSpoilerAlert ===
+// === Module 12937: VoicePanelSpoilerAlert ===
 
-// Module 12933 (VoicePanelSpoilerAlert)
+// Module 12937 (VoicePanelSpoilerAlert)
 import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 5411 */;
 import GuildActionCreatorsDefault from "GuildActionCreators" /* 5520 */;
 import noop from "module_19" /* 19 */;

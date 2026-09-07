@@ -1,14 +1,14 @@
-// === Module 17469: PromotionsManager ===
+// === Module 17472: PromotionsManager ===
 
-// Module 17469 (PromotionsManager)
+// Module 17472 (PromotionsManager)
 import PremiumUtilsDefault from "PremiumUtils" /* 4218 */;
-import PromotionsActionCreators from "PromotionsActionCreators" /* 13353 */;
-import PremiumBogoPromotionUtilsCommon from "PremiumBogoPromotionUtilsCommon" /* 13467 */;
+import PromotionsActionCreators from "PromotionsActionCreators" /* 13357 */;
+import PremiumBogoPromotionUtilsCommon from "PremiumBogoPromotionUtilsCommon" /* 13471 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import LocaleStore from "LocaleStore" /* 2025 */;
 import UserStore from "UserStore" /* 1371 */;
 import SubscriptionStore from "SubscriptionStore" /* 4224 */;
-import PromotionsStore from "PromotionsStore" /* 10665 */;
+import PromotionsStore from "PromotionsStore" /* 10670 */;
 import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7118 */;
 
 require = fn;

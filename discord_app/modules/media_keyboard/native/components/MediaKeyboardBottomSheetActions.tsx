@@ -1,6 +1,6 @@
-// === Module 10642: MediaKeyboardBottomSheetActions ===
+// === Module 10647: MediaKeyboardBottomSheetActions ===
 
-// Module 10642 (MediaKeyboardBottomSheetActions)
+// Module 10647 (MediaKeyboardBottomSheetActions)
 import nativeDefault from "native" /* 576 */;
 import _modDef672 from "module_672" /* 672 */;
 import PlatformUtils from "PlatformUtils" /* 1115 */;

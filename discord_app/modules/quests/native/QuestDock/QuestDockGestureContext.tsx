@@ -1,13 +1,13 @@
-// === Module 15096: QuestDockGestureContext ===
+// === Module 15099: QuestDockGestureContext ===
 
-// Module 15096 (QuestDockGestureContext)
-import subscribeToWindowDimensionsDefault from "subscribeToWindowDimensions" /* 12034 */;
+// Module 15099 (QuestDockGestureContext)
+import subscribeToWindowDimensionsDefault from "subscribeToWindowDimensions" /* 12038 */;
 import noop from "module_19" /* 19 */;
-import QuestDockStore from "QuestDockStore" /* 15093 */;
+import QuestDockStore from "QuestDockStore" /* 15096 */;
 
 const require = fn;
 const QuestDockMode = fn(5444).QuestDockMode;
-const QuestDockConstants = fn(15095);
+const QuestDockConstants = fn(15098);
 ({ QUEST_DOCK_COLLAPSED_HEIGHT: metroRequire, QUEST_DOCK_EXPANDED_HEIGHT: closure_7 } = QuestDockConstants);
 const jsx = fn(21).jsx;
 let obj = { questDockWrapperSpecs: null, windowDimensions: null, activeQuestDockMode: null, minExpandedContentHeight: null };

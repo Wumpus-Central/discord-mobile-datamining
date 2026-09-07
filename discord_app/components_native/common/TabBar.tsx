@@ -1,6 +1,6 @@
-// === Module 11262: TabBar ===
+// === Module 11267: TabBar ===
 
-// Module 11262 (TabBar)
+// Module 11267 (TabBar)
 import nativeDefault from "native" /* 576 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;

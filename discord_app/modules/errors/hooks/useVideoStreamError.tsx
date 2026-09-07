@@ -1,9 +1,9 @@
-// === Module 9595: useVideoStreamError ===
+// === Module 9600: useVideoStreamError ===
 
-// Module 9595 (useVideoStreamError)
-import AVError from "AVError" /* 9110 */;
+// Module 9600 (useVideoStreamError)
+import AVError from "AVError" /* 9115 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import AVErrorStore from "AVErrorStore" /* 9596 */;
+import AVErrorStore from "AVErrorStore" /* 9601 */;
 
 require = fn;
 const MediaEngineContextTypes = fn(4585).MediaEngineContextTypes;

@@ -1,6 +1,6 @@
-// === Module 16131: RedesignVoiceUserSummary ===
+// === Module 16134: RedesignVoiceUserSummary ===
 
-// Module 16131 (RedesignVoiceUserSummary)
+// Module 16134 (RedesignVoiceUserSummary)
 import ChannelUtils from "ChannelUtils" /* 4705 */;
 import noop from "module_19" /* 19 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2011 */;

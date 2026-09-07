@@ -1,6 +1,6 @@
-// === Module 8861: CollectiblesShopPricePlaceholder ===
+// === Module 8866: CollectiblesShopPricePlaceholder ===
 
-// Module 8861 (CollectiblesShopPricePlaceholder)
+// Module 8866 (CollectiblesShopPricePlaceholder)
 import nativeDefault from "native" /* 576 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4296 */;
 import timing from "timing" /* 4561 */;

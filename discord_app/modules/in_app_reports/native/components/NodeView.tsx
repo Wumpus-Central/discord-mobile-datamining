@@ -1,6 +1,6 @@
-// === Module 8636: NodeView ===
+// === Module 8641: NodeView ===
 
-// Module 8636 (NodeView)
+// Module 8641 (NodeView)
 import nativeDefault from "native" /* 576 */;
 import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 4272 */;
 import ColorUtils from "ColorUtils" /* 4409 */;
@@ -8,8 +8,8 @@ import CircleInformationIcon from "CircleInformationIcon" /* 4515 */;
 import Text_Text from "Text/Text" /* 4556 */;
 import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 4740 */;
 import CustomMarkupAll from "CustomMarkup" /* 4995 */;
-import MenuTypes from "MenuTypes" /* 8630 */;
-import ArrowDefault from "Arrow" /* 8638 */;
+import MenuTypes from "MenuTypes" /* 8635 */;
+import ArrowDefault from "Arrow" /* 8643 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import DevSettingsStore from "DevSettingsStore" /* 4559 */;
@@ -127,8 +127,8 @@ function NullComponent() {
 }
 get_ActivityIndicator = fn(17);
 ({ View: metroRequire, ScrollView: closure_7 } = get_ActivityIndicator);
-const REMEDIATION_ELEMENT_TYPES = fn(8637).REMEDIATION_ELEMENT_TYPES;
-const IN_APP_REPORTS_NODE = fn(8635).IN_APP_REPORTS_NODE;
+const REMEDIATION_ELEMENT_TYPES = fn(8642).REMEDIATION_ELEMENT_TYPES;
+const IN_APP_REPORTS_NODE = fn(8640).IN_APP_REPORTS_NODE;
 const Constants = fn(1074);
 ({ AnalyticEvents: map1, ChannelTypes: closure_14 } = Constants);
 const Permissions = fn(1085).Permissions;

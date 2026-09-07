@@ -1,13 +1,13 @@
-// === Module 12411: NotificationPermissionUtil ===
+// === Module 12415: NotificationPermissionUtil ===
 
-// Module 12411 (NotificationPermissionUtil)
+// Module 12415 (NotificationPermissionUtil)
 import initialize from "initialize" /* 504 */;
-import PushNotificationActionCreators from "PushNotificationActionCreators" /* 12412 */;
-import RegionalTeenUtils from "RegionalTeenUtils" /* 12419 */;
+import PushNotificationActionCreators from "PushNotificationActionCreators" /* 12416 */;
+import RegionalTeenUtils from "RegionalTeenUtils" /* 12423 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import PushNotificationPermissionStore from "PushNotificationPermissionStore" /* 12409 */;
+import PushNotificationPermissionStore from "PushNotificationPermissionStore" /* 12413 */;
 
 require = fn;
 let closure_11 = async function _requestPushNotificationPermission(arg0) {
@@ -151,7 +151,7 @@ let closure_12 = async function _enableProvisionalPushNotification() {
   }
 };
 const NativeModules = fn(17).NativeModules;
-const EventActionType = fn(12410).EventActionType;
+const EventActionType = fn(12414).EventActionType;
 const AnalyticEvents = fn(1074).AnalyticEvents;
 let closure_10 = fn(4770).NotificationAuthorizationStatus;
 const size = fn(2);

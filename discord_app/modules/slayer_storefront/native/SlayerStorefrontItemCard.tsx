@@ -1,6 +1,6 @@
-// === Module 8825: SlayerStorefrontItemCard ===
+// === Module 8830: SlayerStorefrontItemCard ===
 
-// Module 8825 (SlayerStorefrontItemCard)
+// Module 8830 (SlayerStorefrontItemCard)
 import nativeDefault from "native" /* 576 */;
 import SlayerStorefrontUtils from "SlayerStorefrontUtils" /* 7226 */;
 import tinycolorDefault from "tinycolor" /* 7552 */;

@@ -1,22 +1,22 @@
-// === Module 16684: MembersScreen ===
+// === Module 16687: MembersScreen ===
 
-// Module 16684 (MembersScreen)
+// Module 16687 (MembersScreen)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import KeyboardManagerUtils from "KeyboardManagerUtils" /* 1874 */;
 import PermissionUtilsAll from "PermissionUtils" /* 4204 */;
 import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 4272 */;
 import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8179 */;
-import getGroupDMRecipientLimitDefault from "getGroupDMRecipientLimit" /* 11592 */;
-import search_tracking_TrackingDefault from "search/tracking/Tracking" /* 12358 */;
+import getGroupDMRecipientLimitDefault from "getGroupDMRecipientLimit" /* 11597 */;
+import search_tracking_TrackingDefault from "search/tracking/Tracking" /* 12362 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 import GuildMemberStore from "GuildMemberStore" /* 2021 */;
 import GuildStore from "GuildStore" /* 1979 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2011 */;
 import UserStore from "UserStore" /* 1371 */;
-import SearchMemberTabStore from "SearchMemberTabStore" /* 12364 */;
-import SearchQueryStore from "SearchQueryStore" /* 12339 */;
+import SearchMemberTabStore from "SearchMemberTabStore" /* 12368 */;
+import SearchQueryStore from "SearchQueryStore" /* 12343 */;
 
 require = fn;
 function SearchableMembersScreen(searchContext) {
@@ -30,7 +30,7 @@ function SearchableMembersScreen(searchContext) {
   let stateFromStores5;
   let stateFromStores6;
   const analyticsLocations = guildId(7162)().analyticsLocations;
-  let obj = searchContext(12340);
+  let obj = searchContext(12344);
   dependencyMap = obj.getSearchContextId(searchContext);
   let obj1 = searchContext(563);
   let items = [SearchMemberTabStore];
@@ -52,7 +52,7 @@ function SearchableMembersScreen(searchContext) {
   let tmp4Result = tmp4(563);
   const items3 = [stateFromStores5];
   stateFromStores2 = tmp4Result.useStateFromStores(items3, () => stateFromStores5.getChannelId());
-  tmp4Result = tmp4(16646);
+  tmp4Result = tmp4(16649);
   obj = { placeholderHeight, numColumns: 1 };
   fullscreenPlaceholderCount = tmp4Result.useFullscreenPlaceholderCount(obj);
   const tmp = closure_21();
@@ -188,21 +188,21 @@ function SearchableMembersScreen(searchContext) {
     return items;
   }, items13);
   const tmp4Result4 = searchContext(563);
-  const contentContainerStyles = searchContext(16685).useContentContainerStyles();
-  const tmp4Result5 = searchContext(16685);
-  const messageTabCountsErrorText = searchContext(16683).useMessageTabCountsErrorText({ searchContext });
+  const contentContainerStyles = searchContext(16688).useContentContainerStyles();
+  const tmp4Result5 = searchContext(16688);
+  const messageTabCountsErrorText = searchContext(16686).useMessageTabCountsErrorText({ searchContext });
   if (null != messageTabCountsErrorText) {
     obj = { text: messageTabCountsErrorText };
-    let tmp25 = jsx(tmp2(16638), { text: messageTabCountsErrorText });
+    let tmp25 = jsx(tmp2(16641), { text: messageTabCountsErrorText });
   } else {
     if (stateFromStores5) {
       if (null != stateFromStores4) {
         obj1 = { onUserPress: callback1, onUserLongPress: callback2, channelId: stateFromStores4, guildId, disableStickySections: true, listStyleOverride: tmp.userList, isNameplatedList: true, canShowDisplayNameStylesFont: true };
-        tmp25 = jsx(tmp2(11588), { onUserPress: callback1, onUserLongPress: callback2, channelId: stateFromStores4, guildId, disableStickySections: true, listStyleOverride: tmp.userList, isNameplatedList: true, canShowDisplayNameStylesFont: true });
+        tmp25 = jsx(tmp2(11593), { onUserPress: callback1, onUserLongPress: callback2, channelId: stateFromStores4, guildId, disableStickySections: true, listStyleOverride: tmp.userList, isNameplatedList: true, canShowDisplayNameStylesFont: true });
       }
     }
     obj2 = { contentContainerStyle: contentContainerStyles.membersContentContainer, data: memo };
-    tmp25 = jsx(tmp2(16650), { contentContainerStyle: contentContainerStyles.membersContentContainer, data: memo });
+    tmp25 = jsx(tmp2(16653), { contentContainerStyle: contentContainerStyles.membersContentContainer, data: memo });
   }
   return tmp25;
 }
@@ -228,8 +228,8 @@ function ThreadMembersScreen(searchContext) {
   if (!stateFromStores) {
     if (obj2.useStateFromStores(items1, () => SearchQueryStore.isInitialSearchQuery(searchContext) && !SearchQueryStore.isTagsEmpty(searchContext), items2)) {
       obj = { channelId, guildId, onUserPress: tmp(1874).dismissGlobalKeyboard, disableStickySections: true };
-      let tmp7 = jsx(channelId(16686), { channelId, guildId, onUserPress: tmp(1874).dismissGlobalKeyboard, disableStickySections: true });
-      const tmp6 = channelId(16686);
+      let tmp7 = jsx(channelId(16689), { channelId, guildId, onUserPress: tmp(1874).dismissGlobalKeyboard, disableStickySections: true });
+      const tmp6 = channelId(16689);
     }
     return tmp7;
   }
@@ -312,10 +312,10 @@ export default noop.memo(function MembersScreen(searchContext) {
     let tmp21Result = null;
     if (stateFromStores) {
       const obj2 = { location: "GroupDMDetailsMembers", memberCount: stateFromStores1, recipientLimit: tmp11, wrapperStyle: tmp.promoBanner };
-      tmp21Result = jsx(tmp2(16688), { location: "GroupDMDetailsMembers", memberCount: stateFromStores1, recipientLimit: tmp11, wrapperStyle: tmp.promoBanner });
+      tmp21Result = jsx(tmp2(16691), { location: "GroupDMDetailsMembers", memberCount: stateFromStores1, recipientLimit: tmp11, wrapperStyle: tmp.promoBanner });
     }
     obj1.listHeaderContent = tmp21Result;
-    obj.children = jsx(tmp2(12186), { channelId: searchContext.channelId, disableStickySections: true, listStyleOverride: tmp.userList, onUserPress: tmp7(1874).dismissGlobalKeyboard, listHeaderContent: null });
+    obj.children = jsx(tmp2(12190), { channelId: searchContext.channelId, disableStickySections: true, listStyleOverride: tmp.userList, onUserPress: tmp7(1874).dismissGlobalKeyboard, listHeaderContent: null });
     obj.children = <View style={tmp.container}>{null}</View>;
     return jsx(tmp7(7162).AnalyticsLocationProvider, { style: tmp.container, children: null });
   } else if (constants3.THREAD === type) {

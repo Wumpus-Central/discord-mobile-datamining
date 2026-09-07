@@ -1,12 +1,12 @@
-// === Module 14712: AccountDisplayNameSetting ===
+// === Module 14715: AccountDisplayNameSetting ===
 
-// Module 14712 (AccountDisplayNameSetting)
+// Module 14715 (AccountDisplayNameSetting)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1114 */;
 import UserStore from "UserStore" /* 1371 */;
 
 require = fn;
-fn(11468);
+fn(11473);
 let SettingBuilders = {
   useTitle() {
     const intl = util.intl;

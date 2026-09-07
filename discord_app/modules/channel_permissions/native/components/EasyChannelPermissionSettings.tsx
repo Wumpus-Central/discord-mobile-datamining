@@ -1,17 +1,17 @@
-// === Module 16821: EasyChannelPermissionSettings ===
+// === Module 16824: EasyChannelPermissionSettings ===
 
-// Module 16821 (EasyChannelPermissionSettings)
+// Module 16824 (EasyChannelPermissionSettings)
 import nativeDefault from "native" /* 576 */;
 import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 4740 */;
 import AlertActionCreatorsDefault from "AlertActionCreators" /* 4904 */;
-import ChannelPermissionsUtilsAll from "ChannelPermissionsUtils" /* 9738 */;
-import ChannelSettingsPermissionsActionCreators from "ChannelSettingsPermissionsActionCreators" /* 9739 */;
-import ChannelOverwritesItemDefault from "ChannelOverwritesItem" /* 9751 */;
-import channel_permissions_ChannelPermissionsUtils from "channel_permissions/ChannelPermissionsUtils" /* 11608 */;
+import ChannelPermissionsUtilsAll from "ChannelPermissionsUtils" /* 9743 */;
+import ChannelSettingsPermissionsActionCreators from "ChannelSettingsPermissionsActionCreators" /* 9744 */;
+import ChannelOverwritesItemDefault from "ChannelOverwritesItem" /* 9756 */;
+import channel_permissions_ChannelPermissionsUtils from "channel_permissions/ChannelPermissionsUtils" /* 11613 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import ChannelSettingsPermissionsStore from "ChannelSettingsPermissionsStore" /* 16822 */;
+import ChannelSettingsPermissionsStore from "ChannelSettingsPermissionsStore" /* 16825 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 import GuildMemberStore from "GuildMemberStore" /* 2021 */;
 import GuildRoleStore from "GuildRoleStore" /* 2015 */;
@@ -65,13 +65,13 @@ function ChannelPermissionSettingsBasicView(channel) {
             closure_1 = tmp5;
             closure_128_0 = undefined;
             accessPermissions = accessPermissions.accessPermissions;
-            const result = v2(9738).isPrivateGuildChannel(accessPermissions);
-            const obj9 = v2(9738);
+            const result = v2(9743).isPrivateGuildChannel(accessPermissions);
+            const obj9 = v2(9743);
             const tmp21 = v2;
-            closure_128_0 = v2(9738).flipEveryonePermission(accessPermissions, accessPermissions, result);
+            closure_128_0 = v2(9743).flipEveryonePermission(accessPermissions, accessPermissions, result);
             currentUser = currentUser.getCurrentUser();
             let tmp7 = ChannelSettingsPermissionsStore;
-            const obj10 = v2(9738);
+            const obj10 = v2(9743);
             if (!ChannelSettingsPermissionsStore) {
               tmp7 = null == currentUser;
             }
@@ -81,7 +81,7 @@ function ChannelPermissionSettingsBasicView(channel) {
             if (!tmp7) {
               v2 = 1;
               dependencyMap = 1;
-              const obj1 = { value: tmp21(9738).grantUserChannelAccess(accessPermissions, accessPermissions), done: false };
+              const obj1 = { value: tmp21(9743).grantUserChannelAccess(accessPermissions, accessPermissions), done: false };
               return obj1;
             }
             canResult = PermissionStore.can(constants.ADMINISTRATOR, guild);
@@ -109,7 +109,7 @@ function ChannelPermissionSettingsBasicView(channel) {
         const items = [closure_128_0];
         v2 = 2;
         dependencyMap = 1;
-        const obj3 = { value: tmp2(9739).savePermissionUpdates(closure_129_0.id, items), done: false };
+        const obj3 = { value: tmp2(9744).savePermissionUpdates(closure_129_0.id, items), done: false };
         return obj3;
       } catch (tmp16) {
         dependencyMap = tmp;
@@ -147,7 +147,7 @@ function ChannelPermissionSettingsBasicView(channel) {
             closure_128_2 = undefined;
             if (null != guild_id.guild_id) {
               if (!privateToggleState) {
-                let obj1 = tmp5(9740);
+                let obj1 = tmp5(9745);
                 c2 = 1;
                 dependencyMap = 1;
                 obj1 = { value: null, done: false };

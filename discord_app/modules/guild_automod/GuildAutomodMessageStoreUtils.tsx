@@ -1,6 +1,6 @@
-// === Module 13762: GuildAutomodMessageStoreUtils ===
+// === Module 13766: GuildAutomodMessageStoreUtils ===
 
-// Module 13762 (GuildAutomodMessageStoreUtils)
+// Module 13766 (GuildAutomodMessageStoreUtils)
 import MessageEmbedTypes from "MessageEmbedTypes" /* 1095 */;
 import size from "module_2" /* 2 */;
 

@@ -1,12 +1,12 @@
-// === Module 15352: DisplayNameStylesColorPickerSheet ===
+// === Module 15355: DisplayNameStylesColorPickerSheet ===
 
-// Module 15352 (DisplayNameStylesColorPickerSheet)
+// Module 15355 (DisplayNameStylesColorPickerSheet)
 import nativeDefault from "native" /* 576 */;
 import utils_ColorUtils from "utils/ColorUtils" /* 1091 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4527 */;
 import HapticUtils from "HapticUtils" /* 4528 */;
-import showCustomColorPickerActionSheetDefault from "showCustomColorPickerActionSheet" /* 14595 */;
+import showCustomColorPickerActionSheetDefault from "showCustomColorPickerActionSheet" /* 14598 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 

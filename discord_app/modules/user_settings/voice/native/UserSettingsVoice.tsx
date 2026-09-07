@@ -1,23 +1,23 @@
-// === Module 9979: UserSettingsVoice ===
+// === Module 9984: UserSettingsVoice ===
 
-// Module 9979 (UserSettingsVoice)
+// Module 9984 (UserSettingsVoice)
 import util from "util" /* 1114 */;
 import Text_Text from "Text/Text" /* 4556 */;
 import Stack_Stack from "Stack/Stack" /* 4973 */;
 import TableRowGroup from "TableRowGroup" /* 5687 */;
 import common_SafeAreaView from "common/SafeAreaView" /* 7123 */;
-import MobileAudioOutputExperimentDefault from "MobileAudioOutputExperiment" /* 9982 */;
-import UserSettingsVoiceInputOptionsDefault from "UserSettingsVoiceInputOptions" /* 9983 */;
-import UserSettingsVoiceOutputOptionsDefault from "UserSettingsVoiceOutputOptions" /* 9985 */;
-import UserSettingsSoundboardVolumeDefault from "UserSettingsSoundboardVolume" /* 9989 */;
-import UserSettingsVoiceOverlayDefault from "UserSettingsVoiceOverlay" /* 9990 */;
-import UserSettingsVoiceProcessingDefault from "UserSettingsVoiceProcessing" /* 9992 */;
+import MobileAudioOutputExperimentDefault from "MobileAudioOutputExperiment" /* 9987 */;
+import UserSettingsVoiceInputOptionsDefault from "UserSettingsVoiceInputOptions" /* 9988 */;
+import UserSettingsVoiceOutputOptionsDefault from "UserSettingsVoiceOutputOptions" /* 9990 */;
+import UserSettingsSoundboardVolumeDefault from "UserSettingsSoundboardVolume" /* 9994 */;
+import UserSettingsVoiceOverlayDefault from "UserSettingsVoiceOverlay" /* 9995 */;
+import UserSettingsVoiceProcessingDefault from "UserSettingsVoiceProcessing" /* 9997 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-const isMobileOverlaySupported = fn(9980).isMobileOverlaySupported;
-const guideURL = fn(9981).USER_SETTINGS_VOICE_GUILD_URL;
+const isMobileOverlaySupported = fn(9985).isMobileOverlaySupported;
+const guideURL = fn(9986).USER_SETTINGS_VOICE_GUILD_URL;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
 const createStyles = fn(4560);

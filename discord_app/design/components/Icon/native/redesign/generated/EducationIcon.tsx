@@ -1,9 +1,9 @@
-// === Module 11407: EducationIcon ===
+// === Module 11412: EducationIcon ===
 
-// Module 11407 (EducationIcon)
+// Module 11412 (EducationIcon)
 import nativeDefault from "native" /* 576 */;
 import BaseIconImage from "BaseIconImage" /* 4261 */;
-import _mod11406 from "module_11406" /* 11406 */;
+import _mod11411 from "module_11411" /* 11411 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export const EducationIcon = function EducationIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod11406, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod11411, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 };

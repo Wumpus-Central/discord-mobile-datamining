@@ -1,6 +1,6 @@
-// === Module 11201: ClearAfterOptionsActionSheet ===
+// === Module 11206: ClearAfterOptionsActionSheet ===
 
-// Module 11201 (ClearAfterOptionsActionSheet)
+// Module 11206 (ClearAfterOptionsActionSheet)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4527 */;
@@ -14,7 +14,7 @@ import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-const ClearAfterOptions = fn(11115).ClearAfterOptions;
+const ClearAfterOptions = fn(11120).ClearAfterOptions;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
 fn(4560);
@@ -40,7 +40,7 @@ export default function ClearAfterOptionsActionSheet(arg0) {
   const intl2 = util.intl;
   obj.title = intl2.string(util.t.E45wvP);
   obj.defaultValue = initialValue;
-  obj.children = ClearAfterOptions.map((value) => closure_1_7(TableRadioRow.TableRadioRow, { value, label: closure_1(11202)(value) }, value));
+  obj.children = ClearAfterOptions.map((value) => closure_1_7(TableRadioRow.TableRadioRow, { value, label: closure_1(11207)(value) }, value));
   const items = [closure_7(TableRadioGroup.TableRadioGroup, obj), ];
   const obj1 = { style: tmp.buttonWrapper, children: null };
   const obj2 = {

@@ -1,19 +1,19 @@
-// === Module 9467: ChannelCallStore ===
+// === Module 9472: ChannelCallStore ===
 
-// Module 9467 (ChannelCallStore)
+// Module 9472 (ChannelCallStore)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import ReactBatchUpdates from "ReactBatchUpdates" /* 1249 */;
 import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 4761 */;
 import DeviceOrientation from "DeviceOrientation" /* 8332 */;
-import useIsPrivateAudioOnlyCallDefault from "useIsPrivateAudioOnlyCall" /* 9469 */;
-import useSelectedParticipantDefault from "useSelectedParticipant" /* 9470 */;
-import isOrientationLockSupportedDefault from "isOrientationLockSupported" /* 9472 */;
+import useIsPrivateAudioOnlyCallDefault from "useIsPrivateAudioOnlyCall" /* 9474 */;
+import useSelectedParticipantDefault from "useSelectedParticipant" /* 9475 */;
+import isOrientationLockSupportedDefault from "isOrientationLockSupported" /* 9477 */;
 import noop from "module_19" /* 19 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 1956 */;
 import apply from "module_12" /* 12 */;
 
 require = fn;
-const ChannelCallConstants = fn(9468);
+const ChannelCallConstants = fn(9473);
 ({ VoiceCallOverlayType, VoiceChatDrawerState } = ChannelCallConstants);
 const OrientationLockState = fn(1920).OrientationLockState;
 const ParticipantTypes = fn(4581).ParticipantTypes;

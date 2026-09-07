@@ -1,8 +1,8 @@
-// === Module 9582: getEmbeddedActivityLaunchability ===
+// === Module 9587: getEmbeddedActivityLaunchability ===
 
-// Module 9582 (getEmbeddedActivityLaunchability)
+// Module 9587 (getEmbeddedActivityLaunchability)
 import util from "util" /* 1114 */;
-import useIsActivitiesEnabledForCurrentPlatform from "useIsActivitiesEnabledForCurrentPlatform" /* 9502 */;
+import useIsActivitiesEnabledForCurrentPlatform from "useIsActivitiesEnabledForCurrentPlatform" /* 9507 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 import GuildStore from "GuildStore" /* 1979 */;
 import PermissionStore from "PermissionStore" /* 4199 */;

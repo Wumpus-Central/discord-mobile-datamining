@@ -1,6 +1,6 @@
-// === Module 10158: NotificationSettingsMockMessage ===
+// === Module 10163: NotificationSettingsMockMessage ===
 
-// Module 10158 (NotificationSettingsMockMessage)
+// Module 10163 (NotificationSettingsMockMessage)
 import nativeDefault from "native" /* 576 */;
 import timing from "timing" /* 4561 */;
 import timingPresets from "timingPresets" /* 4564 */;
@@ -84,7 +84,7 @@ export default function NotificationSettingsMockMessage(notificationSetting) {
   }, items3);
   const obj4 = { style: tmp.card, children: null };
   const obj5 = { style: tmp.cardContent, children: null };
-  const obj6 = { children: tmp12(require("native").Avatar, { source: sharedValue(10159), size: require("native").AvatarSizes.LARGE_48 }) };
+  const obj6 = { children: tmp12(require("native").Avatar, { source: sharedValue(10164), size: require("native").AvatarSizes.LARGE_48 }) };
   const items4 = [tmp12(View, obj6), ];
   const obj8 = { style: tmp.cardMessage, children: null };
   const obj9 = { variant: "text-sm/semibold", children: null };

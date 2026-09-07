@@ -1,16 +1,16 @@
-// === Module 16864: SearchNavigator ===
+// === Module 16867: SearchNavigator ===
 
-// Module 16864 (SearchNavigator)
+// Module 16867 (SearchNavigator)
 import nativeDefault from "native" /* 576 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1611 */;
-import search_tracking_TrackingDefault from "search/tracking/Tracking" /* 12358 */;
-import SearchNavigatorPreviewHeaderDefault from "SearchNavigatorPreviewHeader" /* 16860 */;
+import search_tracking_TrackingDefault from "search/tracking/Tracking" /* 12362 */;
+import SearchNavigatorPreviewHeaderDefault from "SearchNavigatorPreviewHeader" /* 16863 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
 const View = fn(17).View;
 let closure_5 = fn(7877).SearchEntrypointAnalyticsLocations;
-const SearchNavigatorScreens = fn(16643).SearchNavigatorScreens;
+const SearchNavigatorScreens = fn(16646).SearchNavigatorScreens;
 const SearchTypes = fn(1074).SearchTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
@@ -54,7 +54,7 @@ export default noop.memo((route) => {
       name: SearchNavigatorScreens.SEARCH_TABS,
       options: { headerShown: false, fullScreenGestureEnabled: true },
       getComponent() {
-        return searchContext(16865).default;
+        return searchContext(16868).default;
       }
     }),
     closure_8(closure_11.Screen, {
@@ -73,7 +73,7 @@ export default noop.memo((route) => {
         return obj;
       },
       getComponent() {
-        return searchContext(16861).default;
+        return searchContext(16864).default;
       }
     })
   ];

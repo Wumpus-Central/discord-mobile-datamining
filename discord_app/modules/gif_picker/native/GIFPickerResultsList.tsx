@@ -1,7 +1,7 @@
-// === Module 10378: GIFPickerResultsList ===
+// === Module 10383: GIFPickerResultsList ===
 
-// Module 10378 (GIFPickerResultsList)
-import GIFPickerItemView from "GIFPickerItemView" /* 10379 */;
+// Module 10383 (GIFPickerResultsList)
+import GIFPickerItemView from "GIFPickerItemView" /* 10384 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -11,7 +11,7 @@ require = fn;
 const jsx = fn(21).jsx;
 fn(4560);
 let createStyles = { list: null };
-createStyles = { marginHorizontal: -fn(10369).GIF_PICKER_GUTTER_SPACING / 2 };
+createStyles = { marginHorizontal: -fn(10374).GIF_PICKER_GUTTER_SPACING / 2 };
 createStyles.list = createStyles;
 let closure_6 = createStyles.createStyles(createStyles);
 const obj1 = { length: 20 };
@@ -95,7 +95,7 @@ export default function GIFPickerResultsList(columnWidth) {
       return tmp15Result;
     }
   }, items2);
-  const tmp11 = require("module_8874");
+  const tmp11 = require("module_8879");
   if (inActionSheet) {
     let MasonryFlashList = tmp11.BottomSheetMasonryFlashList;
     let tmp12 = tmp10;

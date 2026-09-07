@@ -1,12 +1,12 @@
-// === Module 9263: PlayStationLinkSuccess ===
+// === Module 9268: PlayStationLinkSuccess ===
 
-// Module 9263 (PlayStationLinkSuccess)
+// Module 9268 (PlayStationLinkSuccess)
 import util from "util" /* 1114 */;
 import Text_Text from "Text/Text" /* 4556 */;
 import components_Button_Button from "components/Button/Button" /* 4975 */;
 import common_SafeAreaView from "common/SafeAreaView" /* 7123 */;
-import TwoWayLinkStyles from "TwoWayLinkStyles" /* 9226 */;
-import _modDef9264 from "module_9264" /* 9264 */;
+import TwoWayLinkStyles from "TwoWayLinkStyles" /* 9231 */;
+import _modDef9269 from "module_9269" /* 9269 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -25,7 +25,7 @@ export const PlayStationLinkSuccess = function PlayStationLinkSuccess(onClose) {
   obj = { style: twoWayLinkStyles.container, children: null };
   obj = { style: twoWayLinkStyles.content, children: null };
   const tmp = closure_8();
-  const items = [timestampProducer(React4, { source: noop.useMemo(() => ({ uri: _modDef9264 }), []), style: closure_8().image }), , ];
+  const items = [timestampProducer(React4, { source: noop.useMemo(() => ({ uri: _modDef9269 }), []), style: closure_8().image }), , ];
   const obj2 = { variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", style: twoWayLinkStyles.title, children: null };
   const intl = util.intl;
   obj2.children = intl.string(util.t.e6SOl0);

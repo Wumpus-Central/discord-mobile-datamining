@@ -1,14 +1,14 @@
-// === Module 15343: DisplayNameStylesEffectPickerSheet ===
+// === Module 15346: DisplayNameStylesEffectPickerSheet ===
 
-// Module 15343 (DisplayNameStylesEffectPickerSheet)
+// Module 15346 (DisplayNameStylesEffectPickerSheet)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import _modDef2786 from "module_2786" /* 2786 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4527 */;
 import HapticUtils from "HapticUtils" /* 4528 */;
-import UsernameWithEffectsDefault from "UsernameWithEffects" /* 10899 */;
-import types from "types" /* 10900 */;
-import useDisplayNameStylesEffectConfigs from "useDisplayNameStylesEffectConfigs" /* 10902 */;
+import UsernameWithEffectsDefault from "UsernameWithEffects" /* 10904 */;
+import types from "types" /* 10905 */;
+import useDisplayNameStylesEffectConfigs from "useDisplayNameStylesEffectConfigs" /* 10907 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -73,9 +73,9 @@ export default function DisplayNameStylesEffectPickerSheet(userId) {
   let first;
   const tmp = closure_9();
   let obj = userId(8170);
-  let obj1 = userId(15338);
+  let obj1 = userId(15341);
   const visibleEffectOrder = obj1.useVisibleEffectOrder();
-  let obj2 = userId(15339);
+  let obj2 = userId(15342);
   const displayNameStylesNewEffects = obj2.useDisplayNameStylesNewEffects(visibleEffectOrder);
   ({ dotEffectIds: c2, dismissEffectDot: c3 } = displayNameStylesNewEffects);
   const tmp5 = _slicedToArray(first.useState(selectedEffectId), 2);

@@ -22,12 +22,12 @@ import FastImageDefault from "FastImage" /* 5587 */;
 import ClipboardUtils from "ClipboardUtils" /* 7190 */;
 import MarkupRulesUtils from "MarkupRulesUtils" /* 8096 */;
 import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8179 */;
-import SpoilerDefault from "Spoiler" /* 10127 */;
-import TimestampDefault from "Timestamp" /* 10129 */;
-import MarkupReactCommandRuleDefault from "MarkupReactCommandRule" /* 11212 */;
-import showLongPressURLActionSheetDefault from "showLongPressURLActionSheet" /* 11584 */;
-import SignPostIcon2 from "SignPostIcon" /* 13841 */;
-import ChannelListMagnifyingGlassIcon from "ChannelListMagnifyingGlassIcon" /* 13843 */;
+import SpoilerDefault from "Spoiler" /* 10132 */;
+import TimestampDefault from "Timestamp" /* 10134 */;
+import MarkupReactCommandRuleDefault from "MarkupReactCommandRule" /* 11217 */;
+import showLongPressURLActionSheetDefault from "showLongPressURLActionSheet" /* 11589 */;
+import SignPostIcon2 from "SignPostIcon" /* 13844 */;
+import ChannelListMagnifyingGlassIcon from "ChannelListMagnifyingGlassIcon" /* 13846 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4552 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
@@ -92,7 +92,7 @@ function MarkupLink(arg0) {
             return LinkingDefault.openURL(formatResult);
           },
         trusted() {
-            return node(11614).isLinkTrusted(formatResult);
+            return node(11619).isLinkTrusted(formatResult);
           }
       };
       node(8370).handleClick(obj);
@@ -204,13 +204,13 @@ function MarkupMention(styles) {
           const obj5 = ActionSheetActionCreatorsDefault;
           obj = { guildId: null, roleId: null, channelId: null };
           ({ guildId: obj6.guildId, roleId: obj6.roleId, channelId: obj6.channelId } = node);
-          obj5.openLazy(asyncRequireImpl(11587, dependencyMap.paths), "RoleMembersActionSheet", obj, "stack");
+          obj5.openLazy(asyncRequireImpl(11592, dependencyMap.paths), "RoleMembersActionSheet", obj, "stack");
         }
       }
       if ("@everyone" === node.roleName) {
         if (null != node.guildId) {
           let obj1 = ActionSheetActionCreatorsDefault;
-          const tmp12 = asyncRequireImpl(11587, dependencyMap.paths);
+          const tmp12 = asyncRequireImpl(11592, dependencyMap.paths);
           obj = { guildId: node.guildId, roleId: SnowflakeUtilsDefault.castGuildIdAsEveryoneGuildRoleId(node.guildId), channelId: node.channelId };
           obj1.openLazy(tmp12, "RoleMembersActionSheet", obj, "stack");
         }
@@ -466,7 +466,7 @@ function MarkupChannelMention(state) {
       size = fontScale < 2 ? { width: 12, height: 12 } : { width: 16, height: 16 };
     }
     obj2.style = size;
-    obj2.source = node(11565);
+    obj2.source = node(11570);
     obj2.size = tmp3(1178).Icon.Sizes.CUSTOM;
     closure_15(tmp3(1178).ThemedIcon, obj2);
   }
@@ -485,7 +485,7 @@ function MarkupAttachmentLink(state) {
     str2 = "text-xs/medium";
   }
   obj = { variant: str2, style: tmp.channelMentionText, children: null };
-  obj = { themedColor: node(576).colors.MENTION_FOREGROUND, source: node(13840), size: null };
+  obj = { themedColor: node(576).colors.MENTION_FOREGROUND, source: node(13843), size: null };
   const fontScale = closure_4.getFontScale();
   if (fontScale < 1) {
     let SMALL = tmp3(1178).Icon.Sizes.EXTRA_SMALL_10;
@@ -949,7 +949,7 @@ export default function createRules() {
     [closure_0(closure_2[43]).AST_KEY.GAME_MENTION]: {
       react(node, arg1, state) {
         obj = { node, state };
-        return closure_1_15(obj(13845), obj, state.key);
+        return closure_1_15(obj(13848), obj, state.key);
       }
     },
     [closure_0(closure_2[43]).AST_KEY.TIMESTAMP]: {
@@ -1160,4 +1160,4 @@ export const plainSpoilerRenderer = function plainSpoilerRenderer(content) {
   }
   return str;
 };
-export const createFetchingGameMentionRule = fn(13845).createFetchingGameMentionRule;
+export const createFetchingGameMentionRule = fn(13848).createFetchingGameMentionRule;

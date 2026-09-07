@@ -1,6 +1,6 @@
-// === Module 14632: useProfileFrameSections ===
+// === Module 14635: useProfileFrameSections ===
 
-// Module 14632 (useProfileFrameSections)
+// Module 14635 (useProfileFrameSections)
 import util from "util" /* 1114 */;
 import CollectiblesUtils from "CollectiblesUtils" /* 7554 */;
 import _slicedToArray from "module_32" /* 32 */;

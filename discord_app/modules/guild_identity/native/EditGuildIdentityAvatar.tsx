@@ -1,9 +1,9 @@
-// === Module 14653: EditGuildIdentityAvatar ===
+// === Module 14656: EditGuildIdentityAvatar ===
 
-// Module 14653 (EditGuildIdentityAvatar)
+// Module 14656 (EditGuildIdentityAvatar)
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4527 */;
-import PremiumUpsellUtilsDefault from "PremiumUpsellUtils" /* 9313 */;
+import PremiumUpsellUtilsDefault from "PremiumUpsellUtils" /* 9318 */;
 import noop from "module_19" /* 19 */;
 import GuildMemberStore from "GuildMemberStore" /* 2021 */;
 import UserStore from "UserStore" /* 1371 */;

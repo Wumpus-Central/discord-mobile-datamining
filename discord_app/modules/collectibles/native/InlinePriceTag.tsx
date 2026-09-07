@@ -1,6 +1,6 @@
-// === Module 13147: InlinePriceTag ===
+// === Module 13151: InlinePriceTag ===
 
-// Module 13147 (InlinePriceTag)
+// Module 13151 (InlinePriceTag)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
@@ -11,15 +11,15 @@ import Text_Text from "Text/Text" /* 4556 */;
 import CollectiblesProductUtils from "CollectiblesProductUtils" /* 7553 */;
 import CollectiblesUtils from "CollectiblesUtils" /* 7554 */;
 import useCurrentUser from "useCurrentUser" /* 8178 */;
-import NitroWheelIcon from "NitroWheelIcon" /* 8662 */;
-import useCanPurchaseFrames from "useCanPurchaseFrames" /* 8830 */;
-import OrbsIcon from "OrbsIcon" /* 8837 */;
-import collectibles_CollectiblesUtils from "collectibles/CollectiblesUtils" /* 8848 */;
-import CollectiblesShopPricePlaceholder from "CollectiblesShopPricePlaceholder" /* 8861 */;
-import TagIcon from "TagIcon" /* 8862 */;
-import useProductDisableState from "useProductDisableState" /* 8869 */;
-import useOpenNitroSubscribeActionSheetDefault from "useOpenNitroSubscribeActionSheet" /* 13148 */;
-import useVirtualCurrencyData from "useVirtualCurrencyData" /* 13149 */;
+import NitroWheelIcon from "NitroWheelIcon" /* 8667 */;
+import useCanPurchaseFrames from "useCanPurchaseFrames" /* 8835 */;
+import OrbsIcon from "OrbsIcon" /* 8842 */;
+import collectibles_CollectiblesUtils from "collectibles/CollectiblesUtils" /* 8853 */;
+import CollectiblesShopPricePlaceholder from "CollectiblesShopPricePlaceholder" /* 8866 */;
+import TagIcon from "TagIcon" /* 8867 */;
+import useProductDisableState from "useProductDisableState" /* 8874 */;
+import useOpenNitroSubscribeActionSheetDefault from "useOpenNitroSubscribeActionSheet" /* 13152 */;
+import useVirtualCurrencyData from "useVirtualCurrencyData" /* 13153 */;
 import noop from "module_19" /* 19 */;
 import IAPStore from "IAPStore" /* 7237 */;
 

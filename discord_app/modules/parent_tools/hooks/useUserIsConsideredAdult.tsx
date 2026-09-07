@@ -1,6 +1,6 @@
-// === Module 11877: useUserIsConsideredAdult ===
+// === Module 11882: useUserIsConsideredAdult ===
 
-// Module 11877 (useUserIsConsideredAdult)
+// Module 11882 (useUserIsConsideredAdult)
 import initialize from "initialize" /* 504 */;
 import UserStore from "UserStore" /* 1371 */;
 

@@ -9,7 +9,7 @@ import Sheet_BottomSheet from "Sheet/BottomSheet" /* 7150 */;
 import CollectiblesProductUtils from "CollectiblesProductUtils" /* 7553 */;
 import ShopStandalonePdpMobileExperiment from "ShopStandalonePdpMobileExperiment" /* 8174 */;
 import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8179 */;
-import CollectiblesAnalyticsContext from "CollectiblesAnalyticsContext" /* 8767 */;
+import CollectiblesAnalyticsContext from "CollectiblesAnalyticsContext" /* 8772 */;
 import _slicedToArray from "module_32" /* 32 */;
 import "module_19";
 import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7542 */;
@@ -87,12 +87,12 @@ function ManagedProductDetailsActionSheetInner(skuId) {
   skuId = skuId.skuId;
   const initialVariantIndex = skuId.initialVariantIndex;
   ({ analyticsLocations, stageCollectibleChangeForEditProfile } = skuId);
-  let obj = skuId(13108);
+  let obj = skuId(13112);
   const collectiblesShopProduct = obj.useCollectiblesShopProduct(skuId, { needsCategory: false, seedCategoryStore: true });
   const product = collectiblesShopProduct.product;
   dependencyMap = product;
   ({ state, retry } = collectiblesShopProduct);
-  let obj1 = skuId(10734);
+  let obj1 = skuId(10739);
   const getOrFetchPurchases = obj1.useGetOrFetchPurchases();
   ({ hasPreviouslyFetched, fetchPurchasesError } = getOrFetchPurchases);
   const ref1 = noop.useRef(null);
@@ -139,7 +139,7 @@ function ManagedProductDetailsActionSheetInner(skuId) {
     obj1.children = closure_13(tmp(4975).Button, obj2);
     closure_13(tmp(1178).EmptyState, obj1);
   } else {
-    closure_13(initialVariantIndex(13167), {});
+    closure_13(initialVariantIndex(13171), {});
   }
   ref = noop.useRef(null);
 }

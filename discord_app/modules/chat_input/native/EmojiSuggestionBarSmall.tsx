@@ -1,11 +1,11 @@
-// === Module 12431: EmojiSuggestionBarSmall ===
+// === Module 12435: EmojiSuggestionBarSmall ===
 
-// Module 12431 (EmojiSuggestionBarSmall)
+// Module 12435 (EmojiSuggestionBarSmall)
 import nativeDefault from "native" /* 576 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4296 */;
-import EmojiPickerListRow from "EmojiPickerListRow" /* 10310 */;
-import openEmojiActionSheet2 from "openEmojiActionSheet" /* 10328 */;
-import EmojiSuggestionBarUtils from "EmojiSuggestionBarUtils" /* 12426 */;
+import EmojiPickerListRow from "EmojiPickerListRow" /* 10315 */;
+import openEmojiActionSheet2 from "openEmojiActionSheet" /* 10333 */;
+import EmojiSuggestionBarUtils from "EmojiSuggestionBarUtils" /* 12430 */;
 import noop from "module_19" /* 19 */;
 
 const ReanimatedRexportDefault = ReanimatedRexport;
@@ -15,7 +15,7 @@ function EmojiSuggestionBarSmallAnimated(displayEmojis) {
   displayEmojis = displayEmojis.displayEmojis;
   ({ reducedMotion: importDefault, handlePress: dependencyMap, handlePressEmojiUnavailable: noop, transitionState } = displayEmojis);
   ({ onOccupiedHeightChange, cleanUp } = displayEmojis);
-  let obj = displayEmojis(12426);
+  let obj = displayEmojis(12430);
   const suggestionBarHeight = obj.useSuggestionBarHeight(transitionState, cleanUp, CONTAINER_SMALL_WRAPPER_HEIGHT, onOccupiedHeightChange);
   const tmp = closure_7(displayEmojis.anchorTop);
   class A {
@@ -55,7 +55,7 @@ function EmojiSuggestionBarSmallAnimated(displayEmojis) {
   return suggestionBarHeight(ReanimatedRexportDefault.View, obj);
 }
 const jsx = fn(21).jsx;
-const sum = fn(10290).IMAGE_SIZE + 2 * nativeDefault.space.PX_8 + 2;
+const sum = fn(10295).IMAGE_SIZE + 2 * nativeDefault.space.PX_8 + 2;
 const hasOwnProperty = sum;
 const CONTAINER_SMALL_WRAPPER_HEIGHT = sum + nativeDefault.space.PX_8;
 const createStyles = fn(4560);

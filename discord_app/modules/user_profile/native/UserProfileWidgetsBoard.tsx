@@ -1,18 +1,18 @@
-// === Module 8674: UserProfileWidgetsBoard ===
+// === Module 8679: UserProfileWidgetsBoard ===
 
-// Module 8674 (UserProfileWidgetsBoard)
+// Module 8679 (UserProfileWidgetsBoard)
 import _modDef12 from "module_12" /* 12 */;
 import nativeDefault from "native" /* 576 */;
 import StringUtils from "StringUtils" /* 1925 */;
 import Text_Text from "Text/Text" /* 4556 */;
 import UserProfilePersonalWidget from "UserProfilePersonalWidget" /* 7630 */;
 import UserProfileApplicationWidgetTypes from "UserProfileApplicationWidgetTypes" /* 7633 */;
-import UserProfilePersonalWidgetCardDefault from "UserProfilePersonalWidgetCard" /* 8658 */;
-import useOpenGameProfileModalDefault from "useOpenGameProfileModal" /* 8675 */;
-import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 8686 */;
-import useGameNameAndCoverImageDefault from "useGameNameAndCoverImage" /* 8920 */;
-import QuoteIcon from "QuoteIcon" /* 8921 */;
-import UserProfileApplicationWidgetCardDefault from "UserProfileApplicationWidgetCard" /* 8923 */;
+import UserProfilePersonalWidgetCardDefault from "UserProfilePersonalWidgetCard" /* 8663 */;
+import useOpenGameProfileModalDefault from "useOpenGameProfileModal" /* 8680 */;
+import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 8691 */;
+import useGameNameAndCoverImageDefault from "useGameNameAndCoverImage" /* 8925 */;
+import QuoteIcon from "QuoteIcon" /* 8926 */;
+import UserProfileApplicationWidgetCardDefault from "UserProfileApplicationWidgetCard" /* 8928 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
@@ -441,7 +441,7 @@ export default function UserProfileWidgetsBoard(userId) {
     flag = true;
   }
   const cardStyle = userId.cardStyle;
-  let obj = userId(9032);
+  let obj = userId(9037);
   const displayableBoardWidgets = obj.useDisplayableBoardWidgets(userId);
   closure_129_0 = flag;
   closure_129_1 = tmp2;

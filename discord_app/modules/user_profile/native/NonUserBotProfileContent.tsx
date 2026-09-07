@@ -71,7 +71,7 @@ export default noop.memo(function NonUserBotProfileContent(scrollPosition) {
     const obj4 = { style: tmp3.primaryInfo, children: null };
     const obj5 = { user, guildId: null, displayName: null, pronouns: null, badges: null, badgeContainerBackground: null, displayNameAccessibilityHint: null, onPressDisplayName: null, onPressUserTag: null, onPressPronouns: null, showBadgeToastOnPress: true };
     let guild_id1;
-    tmpResult = tmp(11152);
+    tmpResult = tmp(11157);
     if (channel != null) {
       guild_id1 = channel.guild_id;
     }
@@ -106,7 +106,7 @@ export default noop.memo(function NonUserBotProfileContent(scrollPosition) {
     const obj9 = { backgroundColor: containerBackground };
     items4[1] = obj9;
     obj8.style = items4;
-    obj7.children = closure_7(tmp(11207), obj8);
+    obj7.children = closure_7(tmp(11212), obj8);
     items3[1] = closure_7(View, obj7);
     obj2.children = items3;
     items1[1] = closure_8(View, obj2);

@@ -1,6 +1,6 @@
-// === Module 17453: RedesignDiscoverabilityLanding ===
+// === Module 17456: RedesignDiscoverabilityLanding ===
 
-// Module 17453 (RedesignDiscoverabilityLanding)
+// Module 17456 (RedesignDiscoverabilityLanding)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1611 */;
@@ -8,8 +8,8 @@ import Text_Text from "Text/Text" /* 4556 */;
 import components_Button_Button from "components/Button/Button" /* 4975 */;
 import FastImageDefault from "FastImage" /* 5587 */;
 import NavigatorConstants from "NavigatorConstants" /* 5682 */;
-import ContactSyncUtils from "ContactSyncUtils" /* 12680 */;
-import _modDef12750 from "module_12750" /* 12750 */;
+import ContactSyncUtils from "ContactSyncUtils" /* 12684 */;
+import _modDef12754 from "module_12754" /* 12754 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -49,7 +49,7 @@ export default function RedesignDiscoverabilityLanding(onNext) {
   const intl2 = util.intl;
   obj2.children = intl2.string(util.t.KMW0kP);
   items[2] = hasOwnProperty(Text_Text.Text, obj2);
-  const obj3 = { resizeMode: "contain", style: tmp.image, source: _modDef12750 };
+  const obj3 = { resizeMode: "contain", style: tmp.image, source: _modDef12754 };
   items[3] = hasOwnProperty(FastImageDefault, obj3);
   const obj4 = { style: tmp.info, variant: "text-sm/medium", color: "text-default", children: null };
   const intl3 = util.intl;

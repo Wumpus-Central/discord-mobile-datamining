@@ -1,6 +1,6 @@
-// === Module 13230: getRemoteJoinFooterLabel ===
+// === Module 13234: getRemoteJoinFooterLabel ===
 
-// Module 13230 (getRemoteJoinFooterLabel)
+// Module 13234 (getRemoteJoinFooterLabel)
 import Constants from "Constants" /* 1074 */;
 import util from "util" /* 1114 */;
 import size from "module_2" /* 2 */;

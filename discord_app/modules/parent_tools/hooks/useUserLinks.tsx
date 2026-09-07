@@ -1,6 +1,6 @@
-// === Module 8645: useUserLinks ===
+// === Module 8650: useUserLinks ===
 
-// Module 8645 (useUserLinks)
+// Module 8650 (useUserLinks)
 import useStateFromStores from "useStateFromStores" /* 563 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1371 */;
@@ -191,7 +191,7 @@ export const useUserQRLinkUrl = function useUserQRLinkUrl() {
 export const useHasMaxConnections = function useHasMaxConnections() {
   const ACTIVE = constants.ACTIVE;
   let stateFromStores;
-  const tmp = stateFromStores(8646)();
+  const tmp = stateFromStores(8651)();
   const items = [FamilyCenterStore];
   stateFromStores = ACTIVE(563).useStateFromStores(items, () => linkedUsers.getLinkedUsers());
   const items1 = [stateFromStores, ACTIVE];

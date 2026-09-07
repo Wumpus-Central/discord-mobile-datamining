@@ -1,9 +1,9 @@
-// === Module 16341: GuildsBarDirectMessage ===
+// === Module 16344: GuildsBarDirectMessage ===
 
-// Module 16341 (GuildsBarDirectMessage)
+// Module 16344 (GuildsBarDirectMessage)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import getChannelA11yLabelDefault from "getChannelA11yLabel" /* 9770 */;
+import getChannelA11yLabelDefault from "getChannelA11yLabel" /* 9775 */;
 import noop from "module_19" /* 19 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import CallStore from "CallStore" /* 5278 */;
@@ -101,7 +101,7 @@ export default noop.memo(function GuildsBarDirectMessage(channelId) {
   if (channel != null) {
     isMultiUserDMResult = channel.isMultiUserDM();
   }
-  obj = { selected: false, circle: !isMultiUserDMResult, unread: true, styles: guildsBarAnimatedWrapperStyles, label: stateFromStoresObject.label, overState: "Boolean", config: memo1, cutouts, externalChildren: badge, expandedChildren: "flowing", children: "hourglass" };
+  obj = { selected: false, circle: !isMultiUserDMResult, unread: true, styles: guildsBarAnimatedWrapperStyles, label: stateFromStoresObject.label, overState: "Boolean", config: memo1, cutouts, externalChildren: badge, expandedChildren: true, children: null };
   let tmp11Result = null;
   if (null != channel) {
     obj = { channel };
@@ -124,5 +124,5 @@ export default noop.memo(function GuildsBarDirectMessage(channelId) {
     }
   }
   obj.children = tmp11Result;
-  return jsx(stateFromStores(channel[11]), { selected: false, circle: !isMultiUserDMResult, unread: true, styles: guildsBarAnimatedWrapperStyles, label: stateFromStoresObject.label, overState: "Boolean", config: memo1, cutouts, externalChildren: badge, expandedChildren: "flowing", children: "hourglass" });
+  return jsx(stateFromStores(channel[11]), { selected: false, circle: !isMultiUserDMResult, unread: true, styles: guildsBarAnimatedWrapperStyles, label: stateFromStoresObject.label, overState: "Boolean", config: memo1, cutouts, externalChildren: badge, expandedChildren: true, children: null });
 });

@@ -1,10 +1,10 @@
-// === Module 10423: AutocompleteOptions ===
+// === Module 10428: AutocompleteOptions ===
 
-// Module 10423 (AutocompleteOptions)
+// Module 10428 (AutocompleteOptions)
 import util from "util" /* 1114 */;
 import AutocompleteUtilsDefault from "AutocompleteUtils" /* 5442 */;
-import executeCommandDefault from "executeCommand" /* 9411 */;
-import StickersActionCreators from "StickersActionCreators" /* 10388 */;
+import executeCommandDefault from "executeCommand" /* 9416 */;
+import StickersActionCreators from "StickersActionCreators" /* 10393 */;
 import ApplicationCommandAutocompleteStore from "ApplicationCommandAutocompleteStore" /* 7779 */;
 import ApplicationCommandStore from "ApplicationCommandStore" /* 7780 */;
 import GameAutocompleteStore from "GameAutocompleteStore" /* 5108 */;
@@ -19,7 +19,7 @@ const Constants = fn(1074);
 ({ AutoCompleteResultTypes: c10, MAX_AUTOCOMPLETE_RESULTS: closure_11 } = Constants);
 const ChannelAutocompleteConstants = fn(5000);
 ({ MENTION_SENTINEL: closure_12, EMOJI_SENTINEL: map1, CHANNEL_SENTINEL: closure_14, COMMAND_SENTINEL: closure_15 } = ChannelAutocompleteConstants);
-const AutocompleteTypes = fn(10424).AutocompleteTypes;
+const AutocompleteTypes = fn(10429).AutocompleteTypes;
 const EmojiConstants = fn(1374);
 ({ EmojiIntention: closure_17, EMOJI_MAX_LENGTH: closure_18, EMOJI_URL_BASE_SIZE: closure_19 } = EmojiConstants);
 let c20 = false;

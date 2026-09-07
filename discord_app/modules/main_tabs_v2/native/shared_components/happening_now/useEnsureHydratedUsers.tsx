@@ -1,6 +1,6 @@
-// === Module 16088: useEnsureHydratedUsers ===
+// === Module 16091: useEnsureHydratedUsers ===
 
-// Module 16088 (useEnsureHydratedUsers)
+// Module 16091 (useEnsureHydratedUsers)
 import noop from "module_19" /* 19 */;
 import GuildMemberRequesterStore from "GuildMemberRequesterStore" /* 5426 */;
 import UserStore from "UserStore" /* 1371 */;

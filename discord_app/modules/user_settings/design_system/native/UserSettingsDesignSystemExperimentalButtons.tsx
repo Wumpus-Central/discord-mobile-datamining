@@ -1,6 +1,6 @@
-// === Module 15765: UserSettingsDesignSystemExperimentalButtons ===
+// === Module 15768: UserSettingsDesignSystemExperimentalButtons ===
 
-// Module 15765 (UserSettingsDesignSystemExperimentalButtons)
+// Module 15768 (UserSettingsDesignSystemExperimentalButtons)
 import nativeDefault from "native" /* 576 */;
 import useToken from "useToken" /* 4262 */;
 import native from "native" /* 4271 */;
@@ -13,8 +13,8 @@ import _modDef5613 from "module_5613" /* 5613 */;
 import TableRowGroup from "TableRowGroup" /* 5687 */;
 import _modDef7052 from "module_7052" /* 7052 */;
 import _modDef7381 from "module_7381" /* 7381 */;
-import RowButton from "RowButton" /* 8595 */;
-import native2 from "native" /* 8902 */;
+import RowButton from "RowButton" /* 8600 */;
+import native2 from "native" /* 8907 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

@@ -1,10 +1,10 @@
-// === Module 9675: StageViewWithPrompts ===
+// === Module 9680: StageViewWithPrompts ===
 
-// Module 9675 (StageViewWithPrompts)
+// Module 9680 (StageViewWithPrompts)
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1611 */;
 import Text_Text from "Text/Text" /* 4556 */;
 import StageSparkleDefault from "StageSparkle" /* 8407 */;
-import FocusedControls from "FocusedControls" /* 9677 */;
+import FocusedControls from "FocusedControls" /* 9682 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -13,7 +13,7 @@ get_ActivityIndicator = fn(17);
 const ThemeTypes = fn(1085).ThemeTypes;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-let closure_8 = fn(9676).CALL_ACTION_BAR_HEIGHT + 8;
+let closure_8 = fn(9681).CALL_ACTION_BAR_HEIGHT + 8;
 const createStyles = fn(4560);
 const styles = createStyles.createStyles({ scrollView: { flex: 1 }, container: { paddingHorizontal: 16, alignItems: "center" }, sparkle: { marginTop: 48, marginBottom: 16 }, title: { marginTop: 16, marginBottom: 8, textAlign: "center" }, body: { fontSize: 14, textAlign: "center" }, prompts: { marginTop: 24, display: "flex", flexDirection: "column", width: "100%" } });
 const size = fn(2);

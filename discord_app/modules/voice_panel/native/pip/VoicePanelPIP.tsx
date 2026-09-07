@@ -1,23 +1,23 @@
-// === Module 17164: VoicePanelPIP ===
+// === Module 17167: VoicePanelPIP ===
 
-// Module 17164 (VoicePanelPIP)
+// Module 17167 (VoicePanelPIP)
 import util from "util" /* 1114 */;
 import embeddedActivityLocationUtils from "embeddedActivityLocationUtils" /* 4189 */;
 import native from "native" /* 4271 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4296 */;
 import spring from "spring" /* 4974 */;
 import LegacyBaseButton from "LegacyBaseButton" /* 6655 */;
-import EmbeddedActivitiesActionCreatorsAll from "EmbeddedActivitiesActionCreators" /* 9504 */;
-import FramesActionCreatorsDefault from "FramesActionCreators" /* 9507 */;
-import ExternalPipDefault from "ExternalPip" /* 9610 */;
-import updateSharedValueIfChangedDefault from "updateSharedValueIfChanged" /* 11354 */;
-import VoicePanelPIPUtils from "VoicePanelPIPUtils" /* 17087 */;
-import VoicePanelPIPStateContext from "VoicePanelPIPStateContext" /* 17092 */;
-import utils_triggerIOSHapticDefault from "utils/triggerIOSHaptic" /* 17094 */;
+import EmbeddedActivitiesActionCreatorsAll from "EmbeddedActivitiesActionCreators" /* 9509 */;
+import FramesActionCreatorsDefault from "FramesActionCreators" /* 9512 */;
+import ExternalPipDefault from "ExternalPip" /* 9615 */;
+import updateSharedValueIfChangedDefault from "updateSharedValueIfChanged" /* 11359 */;
+import VoicePanelPIPUtils from "VoicePanelPIPUtils" /* 17090 */;
+import VoicePanelPIPStateContext from "VoicePanelPIPStateContext" /* 17095 */;
+import utils_triggerIOSHapticDefault from "utils/triggerIOSHaptic" /* 17097 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 1956 */;
-import FramesStore from "FramesStore" /* 9510 */;
+import FramesStore from "FramesStore" /* 9515 */;
 import VoicePanelStore from "VoicePanelStore" /* 4768 */;
 
 require = fn;
@@ -486,12 +486,12 @@ function renderPIPWrapper(arg0, pipMode, transitionState, transitionCleanUp) {
 }
 get_ActivityIndicator = fn(17);
 const StyleSheet = get_ActivityIndicator.StyleSheet;
-const VoicePanelConstants = fn(12273);
+const VoicePanelConstants = fn(12277);
 ({ DRAWER_SPRING_PHYSICS: c10, VoicePanelModes: closure_11, SECONDARY_PIP_TOP_MARGIN } = VoicePanelConstants);
-const VoicePanelControlsModes = fn(12271).VoicePanelControlsModes;
-const VoicePanelPIPModes = fn(17088).VoicePanelPIPModes;
-const ActivityPanelModes = fn(9505).ActivityPanelModes;
-const isLaunched = fn(9511).isLaunched;
+const VoicePanelControlsModes = fn(12275).VoicePanelControlsModes;
+const VoicePanelPIPModes = fn(17091).VoicePanelPIPModes;
+const ActivityPanelModes = fn(9510).ActivityPanelModes;
+const isLaunched = fn(9516).isLaunched;
 const jsxProd = fn(21);
 ({ jsx: closure_16, jsxs: closure_17 } = jsxProd);
 fn(4560);
@@ -581,7 +581,7 @@ let closure_35 = noop.memo((transitionState) => {
       };
     }
   }, items1);
-  panelCardStillInPIP = obj.useContext(transitionCleanUp(12272)).panelCardStillInPIP;
+  panelCardStillInPIP = obj.useContext(transitionCleanUp(12276)).panelCardStillInPIP;
   const tmp4 = fireCleanup(panelCardStillInPIP.useState(tmp), 2);
   class I {
     constructor() {

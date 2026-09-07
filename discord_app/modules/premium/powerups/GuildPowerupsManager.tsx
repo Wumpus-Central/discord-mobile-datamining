@@ -1,6 +1,6 @@
-// === Module 17373: GuildPowerupsManager ===
+// === Module 17376: GuildPowerupsManager ===
 
-// Module 17373 (GuildPowerupsManager)
+// Module 17376 (GuildPowerupsManager)
 import FavoritesUtils from "FavoritesUtils" /* 1982 */;
 import BoostingActionCreators from "BoostingActionCreators" /* 4458 */;
 import GameServerExperiment2 from "GameServerExperiment" /* 4473 */;
@@ -9,11 +9,11 @@ import ServerThemeUserExperiment from "ServerThemeUserExperiment" /* 4488 */;
 import ServerThemeExperiment2 from "ServerThemeExperiment" /* 4489 */;
 import ServerThemeApexShadowExperiment2 from "ServerThemeApexShadowExperiment" /* 4490 */;
 import shared_PlatformUtils from "shared/PlatformUtils" /* 4801 */;
-import GuildPowerupsActionCreators from "GuildPowerupsActionCreators" /* 12488 */;
-import BoostToUnlockMobileCoachmarkExperimentDefault from "BoostToUnlockMobileCoachmarkExperiment" /* 12502 */;
-import GameServerPricingExperiment2 from "GameServerPricingExperiment" /* 12509 */;
-import useHasAllocateBoostPermission from "useHasAllocateBoostPermission" /* 12513 */;
-import useIsCurrentUserEligibleForPowerupUpsells from "useIsCurrentUserEligibleForPowerupUpsells" /* 16167 */;
+import GuildPowerupsActionCreators from "GuildPowerupsActionCreators" /* 12492 */;
+import BoostToUnlockMobileCoachmarkExperimentDefault from "BoostToUnlockMobileCoachmarkExperiment" /* 12506 */;
+import GameServerPricingExperiment2 from "GameServerPricingExperiment" /* 12513 */;
+import useHasAllocateBoostPermission from "useHasAllocateBoostPermission" /* 12517 */;
+import useIsCurrentUserEligibleForPowerupUpsells from "useIsCurrentUserEligibleForPowerupUpsells" /* 16170 */;
 import GuildStore from "GuildStore" /* 1979 */;
 import PermissionStore from "PermissionStore" /* 4199 */;
 import SelectedGuildStore from "SelectedGuildStore" /* 4381 */;

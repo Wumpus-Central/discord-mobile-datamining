@@ -1,6 +1,6 @@
-// === Module 10921: useNavigatorConfirmChangesOnBack ===
+// === Module 10926: useNavigatorConfirmChangesOnBack ===
 
-// Module 10921 (useNavigatorConfirmChangesOnBack)
+// Module 10926 (useNavigatorConfirmChangesOnBack)
 import noop from "module_19" /* 19 */;
 
 const Keyboard = fn(17).Keyboard;
@@ -40,6 +40,6 @@ export default function useNavigatorConfirmChangesOnBack() {
       }
     }
   };
-  obj.onGoBack = ref(10922)(obj).onGoBack;
+  obj.onGoBack = ref(10927)(obj).onGoBack;
   return obj;
 };

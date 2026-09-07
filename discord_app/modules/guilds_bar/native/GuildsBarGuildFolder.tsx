@@ -1,6 +1,6 @@
-// === Module 16293: GuildsBarGuildFolder ===
+// === Module 16296: GuildsBarGuildFolder ===
 
-// Module 16293 (GuildsBarGuildFolder)
+// Module 16296 (GuildsBarGuildFolder)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 576 */;
 import utils_ColorUtils from "utils/ColorUtils" /* 1091 */;
@@ -13,8 +13,8 @@ import _modDef5031 from "module_5031" /* 5031 */;
 import GuildIcon from "GuildIcon" /* 5584 */;
 import FastImageDefault from "FastImage" /* 5587 */;
 import NativeViewDefault from "NativeView" /* 5589 */;
-import ListUtils from "ListUtils" /* 12619 */;
-import GuildsBarFolderMenuItems from "GuildsBarFolderMenuItems" /* 16287 */;
+import ListUtils from "ListUtils" /* 12623 */;
+import GuildsBarFolderMenuItems from "GuildsBarFolderMenuItems" /* 16290 */;
 import noop from "module_19" /* 19 */;
 import GuildReadStateStore from "GuildReadStateStore" /* 7636 */;
 import GuildStore from "GuildStore" /* 1979 */;
@@ -169,10 +169,10 @@ function renderGuildFolderContent(arg0, type, state, cleanUp) {
   }
 }
 const GuildsNodeType = fn(5438).GuildsNodeType;
-const GuildsBarDnDStore = fn(16284);
+const GuildsBarDnDStore = fn(16287);
 ({ useItemDragState: closure_9, useFolderBGHeightOffset: c10 } = GuildsBarDnDStore);
-const DEFAULT_FOLDER_COLOR = fn(16290).DEFAULT_FOLDER_COLOR;
-const GuildsBarConstants = fn(16285);
+const DEFAULT_FOLDER_COLOR = fn(16293).DEFAULT_FOLDER_COLOR;
+const GuildsBarConstants = fn(16288);
 ({ TRANSITION_PHYSICS: closure_12, FOLDER_SPRING_PHYSICS: map1 } = GuildsBarConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);

@@ -1,15 +1,15 @@
-// === Module 13208: InviteEmbed ===
+// === Module 13212: InviteEmbed ===
 
-// Module 13208 (InviteEmbed)
+// Module 13212 (InviteEmbed)
 import InviteTypeUtils from "InviteTypeUtils" /* 7735 */;
-import VoiceChannelListInviteExperiment from "VoiceChannelListInviteExperiment" /* 11306 */;
-import VoiceChannelListInviteEmbed from "VoiceChannelListInviteEmbed" /* 11307 */;
-import invite_GuildInvite from "invite/GuildInvite" /* 13209 */;
-import GroupDMInvite from "GroupDMInvite" /* 13211 */;
-import FriendInvite from "FriendInvite" /* 13212 */;
-import GuildScheduledEventEmbed from "GuildScheduledEventEmbed" /* 13213 */;
-import EmbeddedActivityInviteEmbed from "EmbeddedActivityInviteEmbed" /* 13215 */;
-import GuildProfileInvite from "GuildProfileInvite" /* 13217 */;
+import VoiceChannelListInviteExperiment from "VoiceChannelListInviteExperiment" /* 11311 */;
+import VoiceChannelListInviteEmbed from "VoiceChannelListInviteEmbed" /* 11312 */;
+import invite_GuildInvite from "invite/GuildInvite" /* 13213 */;
+import GroupDMInvite from "GroupDMInvite" /* 13215 */;
+import FriendInvite from "FriendInvite" /* 13216 */;
+import GuildScheduledEventEmbed from "GuildScheduledEventEmbed" /* 13217 */;
+import EmbeddedActivityInviteEmbed from "EmbeddedActivityInviteEmbed" /* 13219 */;
+import GuildProfileInvite from "GuildProfileInvite" /* 13221 */;
 import InviteStore from "InviteStore" /* 4544 */;
 import UserStore from "UserStore" /* 1371 */;
 

@@ -1,12 +1,12 @@
-// === Module 15476: SelectWebBrowserSetting ===
+// === Module 15479: SelectWebBrowserSetting ===
 
-// Module 15476 (SelectWebBrowserSetting)
+// Module 15479 (SelectWebBrowserSetting)
 import ConstantsIOS from "ConstantsIOS" /* 1093 */;
 import util from "util" /* 1114 */;
 import PlatformUtils from "PlatformUtils" /* 1115 */;
 import BrowserManager from "BrowserManager" /* 4525 */;
 import SettingsConstants from "SettingsConstants" /* 7975 */;
-import SettingBuilders from "SettingBuilders" /* 11468 */;
+import SettingBuilders from "SettingBuilders" /* 11473 */;
 import size from "module_2" /* 2 */;
 
 function useWebBrowserSettingOptions() {

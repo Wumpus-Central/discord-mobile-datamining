@@ -1,8 +1,8 @@
-// === Module 15829: FeedBlock ===
+// === Module 15832: FeedBlock ===
 
-// Module 15829 (FeedBlock)
+// Module 15832 (FeedBlock)
 import nativeDefault from "native" /* 576 */;
-import ShopHomeSortType from "ShopHomeSortType" /* 15830 */;
+import ShopHomeSortType from "ShopHomeSortType" /* 15833 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4552 */;
 import ThemeStore from "ThemeStore" /* 1183 */;
@@ -43,7 +43,7 @@ export default function _default(feedBlock) {
   let obj1 = feedBlock(504);
   let items1 = [ConsentStore];
   const stateFromStores1 = obj1.useStateFromStores(items1, () => ConsentStore.hasConsented(constants2.PERSONALIZATION));
-  let tmp6 = stateFromStores1(15072)();
+  let tmp6 = stateFromStores1(15075)();
   dependencyMap = tmp6;
   const items2 = [feedBlock.sortedSkuIds, tmp6, stateFromStores1];
   const memo = noop.useMemo(() => {
@@ -73,7 +73,7 @@ export default function _default(feedBlock) {
     return { feedProducts: paths(items1), isPersonalized: tmp6 };
   }, items2);
   ({ isPersonalized, feedProducts } = memo);
-  let obj2 = feedBlock(15074);
+  let obj2 = feedBlock(15077);
   const filteredAndSortedProducts = obj2.useFilteredAndSortedProducts({ products: feedProducts, maxProducts: 36, screen });
   let obj3 = feedBlock(504);
   const items3 = [AccessibilityStore];
@@ -126,7 +126,7 @@ export default function _default(feedBlock) {
   }
   items5[1] = tmp12Result;
   obj1.children = items5;
-  const items6 = [closure_12(closure_5, obj1), closure_11(stateFromStores1(15824), { products: filteredAndSortedProducts, loadingCardsNum: 36, preferVCPrice, accessibilityLabel: stringResult, disableBundleStaticBackground }), ];
+  const items6 = [closure_12(closure_5, obj1), closure_11(stateFromStores1(15827), { products: filteredAndSortedProducts, loadingCardsNum: 36, preferVCPrice, accessibilityLabel: stringResult, disableBundleStaticBackground }), ];
   const obj5 = { style: feedFooterOrbImage.feedFooter, children: null };
   const obj6 = { variant: "heading-lg/bold", accessibilityRole: "header", children: null };
   const intl4 = tmp(1114).intl;
@@ -140,7 +140,7 @@ export default function _default(feedBlock) {
     if (stateFromStores2) {
       const obj8 = { source: null, style: null, accessibilityElementsHidden: true, importantForAccessibility: "no-hide-descendants" };
       const obj9 = { uri: null };
-      tmp5Result = tmp5(15832);
+      tmp5Result = tmp5(15835);
       obj9.uri = tmp5Result;
       obj8.source = obj9;
       feedFooterOrbImage = feedFooterOrbImage.feedFooterOrbImage;
@@ -149,13 +149,13 @@ export default function _default(feedBlock) {
     } else {
       if (tmpResult.isAndroid()) {
         const obj10 = { url: null, autoplay: true, style: null, accessibilityElementsHidden: true, importantForAccessibility: "no-hide-descendants" };
-        tmp5Result = tmp5(8809);
-        obj10.url = tmp5(15833);
+        tmp5Result = tmp5(8814);
+        obj10.url = tmp5(15836);
         obj10.style = feedFooterOrbImage.feedFooterOrbImage;
         tmp12Result = closure_11(tmp5Result, obj10);
       } else {
         const obj11 = { source: null, enableAnimation: true, resizeMode: "contain", style: null, accessibilityElementsHidden: true, importantForAccessibility: "no-hide-descendants" };
-        const obj12 = { uri: tmp5(15833) };
+        const obj12 = { uri: tmp5(15836) };
         obj11.source = obj12;
         obj11.style = feedFooterOrbImage.feedFooterOrbImage;
         tmp12Result = closure_11(tmp5(5587), obj11);
@@ -166,11 +166,11 @@ export default function _default(feedBlock) {
   } else {
     const obj13 = { source: null, style: null, accessibilityElementsHidden: true, importantForAccessibility: "no-hide-descendants" };
     if (stateFromStores) {
-      obj13.source = tmp(15834);
+      obj13.source = tmp(15837);
       obj13.style = feedFooterOrbImage.feedFooterImage;
       let tmp18 = obj13;
     } else {
-      obj13.source = tmp(15835);
+      obj13.source = tmp(15838);
       obj13.style = feedFooterOrbImage.feedFooterImage;
       tmp18 = obj13;
     }

@@ -1,13 +1,13 @@
-// === Module 16028: MessageRequestsButton ===
+// === Module 16031: MessageRequestsButton ===
 
-// Module 16028 (MessageRequestsButton)
+// Module 16031 (MessageRequestsButton)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1114 */;
 import components_Button_Button from "components/Button/Button" /* 4975 */;
 import IconButton from "IconButton" /* 8097 */;
-import _modDef9883 from "module_9883" /* 9883 */;
-import IconActionButton from "IconActionButton" /* 13253 */;
-import _mod16029 from "module_16029" /* 16029 */;
+import _modDef9888 from "module_9888" /* 9888 */;
+import IconActionButton from "IconActionButton" /* 13257 */;
+import _mod16032 from "module_16032" /* 16032 */;
 import noop from "module_19" /* 19 */;
 import MessageRequestStore from "MessageRequestStore" /* 7219 */;
 import SpamMessageRequestStore from "SpamMessageRequestStore" /* 7220 */;
@@ -32,7 +32,7 @@ function MessageRequestAnimation(color) {
       }
     }
   }, items2);
-  return React5(_mod16029.MessageRequestLottie, { ref, color: color.color, size: "sm", autoPlay: true });
+  return React5(_mod16032.MessageRequestLottie, { ref, color: color.color, size: "sm", autoPlay: true });
 }
 const View = fn(17).View;
 const jsxProd = fn(21);
@@ -83,7 +83,7 @@ export default function MessageRequestsButton(alternateVariant) {
     obj.children = items2;
     return React6(View, obj);
   } else {
-    const obj2 = { source: _modDef9883, IconComponent: MessageRequestAnimation, accessibilityLabel: null, buttonText: null, badge: null, badgePosition: "right" };
+    const obj2 = { source: _modDef9888, IconComponent: MessageRequestAnimation, accessibilityLabel: null, buttonText: null, badge: null, badgePosition: "right" };
     const intl = util.intl;
     obj2.accessibilityLabel = intl.string(util.t.e7GWjQ);
     let str1;

@@ -1,16 +1,16 @@
-// === Module 15311: AndroidFontScaleSetting ===
+// === Module 15314: AndroidFontScaleSetting ===
 
-// Module 15311 (AndroidFontScaleSetting)
+// Module 15314 (AndroidFontScaleSetting)
 import util from "util" /* 1114 */;
-import CirclePlusIcon from "CirclePlusIcon" /* 11204 */;
-import CircleMinusIcon from "CircleMinusIcon" /* 15312 */;
+import CirclePlusIcon from "CirclePlusIcon" /* 11209 */;
+import CircleMinusIcon from "CircleMinusIcon" /* 15315 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const useFontScaleStore = fn(15263).useFontScaleStore;
+const useFontScaleStore = fn(15266).useFontScaleStore;
 const FontScales = fn(1084).FontScales;
 const jsx = fn(21).jsx;
-fn(11468);
+fn(11473);
 let SettingBuilders = {
   useTitle() {
     const intl = util.intl;

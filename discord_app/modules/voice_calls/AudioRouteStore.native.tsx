@@ -1,11 +1,11 @@
-// === Module 9083: AudioRouteStore ===
+// === Module 9088: AudioRouteStore ===
 
-// Module 9083 (AudioRouteStore)
+// Module 9088 (AudioRouteStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import PlatformUtils from "PlatformUtils" /* 1115 */;
-import VoiceCallTypes from "VoiceCallTypes" /* 9084 */;
-import NativeAudioRouteEmitterModuleDefault from "NativeAudioRouteEmitterModule" /* 9085 */;
+import VoiceCallTypes from "VoiceCallTypes" /* 9089 */;
+import NativeAudioRouteEmitterModuleDefault from "NativeAudioRouteEmitterModule" /* 9090 */;
 import get_ActivityIndicator from "module_17" /* 17 */;
 import RTCConnectionStore from "RTCConnectionStore" /* 4583 */;
 import size from "module_2" /* 2 */;

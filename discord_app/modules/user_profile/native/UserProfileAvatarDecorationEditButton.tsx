@@ -1,6 +1,6 @@
-// === Module 14625: UserProfileAvatarDecorationEditButton ===
+// === Module 14628: UserProfileAvatarDecorationEditButton ===
 
-// Module 14625 (UserProfileAvatarDecorationEditButton)
+// Module 14628 (UserProfileAvatarDecorationEditButton)
 import nativeDefault from "native" /* 576 */;
 import avatar_decorations_AvatarDecorationUtils from "avatar_decorations/AvatarDecorationUtils" /* 8157 */;
 import noop from "module_19" /* 19 */;

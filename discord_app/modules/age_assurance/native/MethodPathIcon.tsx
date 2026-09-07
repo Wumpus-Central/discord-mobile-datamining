@@ -1,8 +1,8 @@
-// === Module 8452: MethodPathIcon ===
+// === Module 8455: MethodPathIcon ===
 
-// Module 8452 (MethodPathIcon)
+// Module 8455 (MethodPathIcon)
 import nativeDefault from "native" /* 576 */;
-import inlineStyles from "inlineStyles" /* 8453 */;
+import inlineStyles from "inlineStyles" /* 8456 */;
 import noop from "module_19" /* 19 */;
 
 const inlineStylesDefault = inlineStyles;

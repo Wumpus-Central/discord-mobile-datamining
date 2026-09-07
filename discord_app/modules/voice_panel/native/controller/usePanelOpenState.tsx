@@ -1,6 +1,6 @@
-// === Module 17091: usePanelOpenState ===
+// === Module 17094: usePanelOpenState ===
 
-// Module 17091 (usePanelOpenState)
+// Module 17094 (usePanelOpenState)
 import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1109 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4296 */;
 import _slicedToArray from "module_32" /* 32 */;
@@ -8,7 +8,7 @@ import noop from "module_19" /* 19 */;
 import VoicePanelStore from "VoicePanelStore" /* 4768 */;
 
 require = fn;
-const VoicePanelModes = fn(12273).VoicePanelModes;
+const VoicePanelModes = fn(12277).VoicePanelModes;
 const Constants = fn(1074);
 ({ ComponentActions: closure_7, Routes: closure_8 } = Constants);
 const __initData = { code: "function usePanelOpenStateTsx1(){const{connected}=this.__closure;return{connected:connected.get()};}" };
@@ -86,12 +86,12 @@ export default function usePanelOpenState(arg0, arg1, arg2, connected) {
       ComponentDispatch2.unsubscribe(constants.VOICE_PANEL_CLOSE, componentActionClose);
     };
   }, items);
-  const tmp3 = _slicedToArray(doCloseChannel.useState(() => closure_1(12789).getHistory().location.pathname), 2);
+  const tmp3 = _slicedToArray(doCloseChannel.useState(() => closure_1(12793).getHistory().location.pathname), 2);
   const first = tmp3[0];
   closure_6 = tmp3[1];
   const items1 = [arg0, first];
   const effect1 = doCloseChannel.useEffect(() => {
-    closure_0 = closure_1(12789).addRouteChangeListener((pathname) => {
+    closure_0 = closure_1(12793).addRouteChangeListener((pathname) => {
       if (first !== pathname.pathname) {
         closure_1_6(tmp);
         closure_0(4386);
@@ -107,10 +107,10 @@ export default function usePanelOpenState(arg0, arg1, arg2, connected) {
             tmp2 = matchPathResult.params.channelId === closure_0;
           }
           if (!tmp2) {
-            closure_1(9508)();
+            closure_1(9513)();
           }
         }
-        obj3 = closure_0(12782);
+        obj3 = closure_0(12786);
       }
     });
     return () => {

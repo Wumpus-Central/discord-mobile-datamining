@@ -1,9 +1,9 @@
-// === Module 9569: FramesManager ===
+// === Module 9574: FramesManager ===
 
-// Module 9569 (FramesManager)
+// Module 9574 (FramesManager)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
-import FramesStore from "FramesStore" /* 9510 */;
+import FramesStore from "FramesStore" /* 9515 */;
 import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7118 */;
 
 let require = fn;
@@ -20,13 +20,13 @@ class FramesManager extends tmp3 {
           },
       FRAME_LAUNCH(arg0) {
             ({ applicationId, analyticsContext } = arg0);
-            const result = applyArgumentsResult(9518).trackFrameSessionStart(applicationId, analyticsContext);
+            const result = applyArgumentsResult(9523).trackFrameSessionStart(applicationId, analyticsContext);
           },
       FRAME_LAUNCH_FAIL(applicationId) {
-            const result = applyArgumentsResult(9524).discardPendingFrameLaunch(applicationId.applicationId);
+            const result = applyArgumentsResult(9529).discardPendingFrameLaunch(applicationId.applicationId);
           },
       FRAME_STOP(applicationId) {
-            applyArgumentsResult(9518).trackFrameSessionEnd(applicationId.applicationId);
+            applyArgumentsResult(9523).trackFrameSessionEnd(applicationId.applicationId);
           }
     };
     applyArgumentsResult.handleRPCDisconnect = function handleRPCDisconnect(arg0) {

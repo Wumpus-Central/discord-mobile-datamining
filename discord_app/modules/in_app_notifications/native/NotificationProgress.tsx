@@ -1,6 +1,6 @@
-// === Module 10173: NotificationProgress ===
+// === Module 10178: NotificationProgress ===
 
-// Module 10173 (NotificationProgress)
+// Module 10178 (NotificationProgress)
 import nativeDefault from "native" /* 576 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4296 */;
 import _slicedToArray from "module_32" /* 32 */;

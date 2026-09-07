@@ -1,6 +1,6 @@
-// === Module 9380: useDiscountedPremiumPlan ===
+// === Module 9385: useDiscountedPremiumPlan ===
 
-// Module 9380 (useDiscountedPremiumPlan)
+// Module 9385 (useDiscountedPremiumPlan)
 import noop from "module_19" /* 19 */;
 import IAPStore from "IAPStore" /* 7237 */;
 

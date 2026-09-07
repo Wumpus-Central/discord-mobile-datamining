@@ -1,6 +1,6 @@
-// === Module 15353: DisplayNameStylesEditPreview ===
+// === Module 15356: DisplayNameStylesEditPreview ===
 
-// Module 15353 (DisplayNameStylesEditPreview)
+// Module 15356 (DisplayNameStylesEditPreview)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import native from "native" /* 1178 */;
@@ -9,10 +9,10 @@ import _modDef2786 from "module_2786" /* 2786 */;
 import DateUtils from "DateUtils" /* 4242 */;
 import Text_Text from "Text/Text" /* 4556 */;
 import ProfileCustomizationUtils from "ProfileCustomizationUtils" /* 8166 */;
-import UsernameWithEffectsDefault from "UsernameWithEffects" /* 10899 */;
-import types from "types" /* 10900 */;
-import UserProfilePreviewDefault from "UserProfilePreview" /* 11109 */;
-import NameplatePreview from "NameplatePreview" /* 11220 */;
+import UsernameWithEffectsDefault from "UsernameWithEffects" /* 10904 */;
+import types from "types" /* 10905 */;
+import UserProfilePreviewDefault from "UserProfilePreview" /* 11114 */;
+import NameplatePreview from "NameplatePreview" /* 11225 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

@@ -1,6 +1,6 @@
-// === Module 13257: ForumChannelSearch ===
+// === Module 13261: ForumChannelSearch ===
 
-// Module 13257 (ForumChannelSearch)
+// Module 13261 (ForumChannelSearch)
 import tracking_Tracking from "tracking/Tracking" /* 7767 */;
 import ForumActionCreatorsDefault from "ForumActionCreators" /* 7898 */;
 import noop from "module_19" /* 19 */;
@@ -51,7 +51,7 @@ export const ForumChannelCloseSearchButton = memoResult;
 export const ForumChannelSearchInput = noop.memo((channelId) => {
   channelId = channelId.channelId;
   ({ guildId: importDefault, placeholder } = channelId);
-  let obj = channelId(13258);
+  let obj = channelId(13262);
   const canSearchForumPostsByChannelId = obj.useCanSearchForumPostsByChannelId(channelId);
   const tmp = closure_8();
   const items = [ForumSearchStore];

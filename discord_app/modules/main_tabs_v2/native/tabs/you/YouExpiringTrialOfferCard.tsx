@@ -1,15 +1,15 @@
-// === Module 16804: YouExpiringTrialOfferCard ===
+// === Module 16807: YouExpiringTrialOfferCard ===
 
-// Module 16804 (YouExpiringTrialOfferCard)
+// Module 16807 (YouExpiringTrialOfferCard)
 import nativeDefault from "native" /* 576 */;
 import DurationsDefault from "Durations" /* 1090 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
 import _modDef4153 from "module_4153" /* 4153 */;
 import LinearGradientDefault from "LinearGradient" /* 4987 */;
 import useCountdownDefault from "useCountdown" /* 7439 */;
-import NoticeActionCreatorsDefault from "NoticeActionCreators" /* 16805 */;
+import NoticeActionCreatorsDefault from "NoticeActionCreators" /* 16808 */;
 import noop from "module_19" /* 19 */;
-import NoticeStore from "NoticeStore" /* 13722 */;
+import NoticeStore from "NoticeStore" /* 13726 */;
 
 const require = fn;
 const View = fn(17).View;
@@ -51,7 +51,7 @@ export default function YouExpiringTrialOfferCard(navigateToPremium) {
     }
   }
   const time = useCountdownDefault(num, closure_15);
-  let tmp4Result = tmp4(16803);
+  let tmp4Result = tmp4(16806);
   shouldShowExpiringTrialOfferCard = tmp4Result.useShouldShowExpiringTrialOfferCard();
   const items1 = [stateFromStores, shouldShowExpiringTrialOfferCard, premiumTrialOffer];
   const effect = stateFromStores.useEffect(() => {

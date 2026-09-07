@@ -1,10 +1,10 @@
-// === Module 15308: SyncThemeSetting ===
+// === Module 15311: SyncThemeSetting ===
 
-// Module 15308 (SyncThemeSetting)
+// Module 15311 (SyncThemeSetting)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1114 */;
-import UserSettingsActionCreatorsDefault from "UserSettingsActionCreators" /* 9358 */;
-import actions_AnalyticsTrackingActionCreators from "actions/AnalyticsTrackingActionCreators" /* 15309 */;
+import UserSettingsActionCreatorsDefault from "UserSettingsActionCreators" /* 9363 */;
+import actions_AnalyticsTrackingActionCreators from "actions/AnalyticsTrackingActionCreators" /* 15312 */;
 import ClientThemesBackgroundStore from "ClientThemesBackgroundStore" /* 4379 */;
 import SelectivelySyncedUserSettingsStore from "SelectivelySyncedUserSettingsStore" /* 1184 */;
 import ThemeStore from "ThemeStore" /* 1183 */;
@@ -12,7 +12,7 @@ import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1221 */;
 
 require = fn;
 const AnalyticEvents = fn(1074).AnalyticEvents;
-fn(11468);
+fn(11473);
 let SettingBuilders = {
   useTitle() {
     const intl = util.intl;

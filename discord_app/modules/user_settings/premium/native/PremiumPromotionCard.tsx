@@ -1,6 +1,6 @@
-// === Module 13474: PremiumPromotionCard ===
+// === Module 13478: PremiumPromotionCard ===
 
-// Module 13474 (PremiumPromotionCard)
+// Module 13478 (PremiumPromotionCard)
 import nativeDefault from "native" /* 576 */;
 import openPremiumPlanSelectionActionSheetDefault from "openPremiumPlanSelectionActionSheet" /* 7422 */;
 import noop from "module_19" /* 19 */;

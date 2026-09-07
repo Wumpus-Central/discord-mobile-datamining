@@ -1,7 +1,7 @@
-// === Module 9107: isVideoBackgroundSupported ===
+// === Module 9112: isVideoBackgroundSupported ===
 
-// Module 9107 (isVideoBackgroundSupported)
-import VirtualBackgroundsIosExperimentDefault from "VirtualBackgroundsIosExperiment" /* 9108 */;
+// Module 9112 (isVideoBackgroundSupported)
+import VirtualBackgroundsIosExperimentDefault from "VirtualBackgroundsIosExperiment" /* 9113 */;
 import MediaEngineStore from "MediaEngineStore" /* 1908 */;
 
 const require = fn;

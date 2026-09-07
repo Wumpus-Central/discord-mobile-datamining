@@ -1,13 +1,13 @@
-// === Module 14836: DirectMessageSpamFilterSetting ===
+// === Module 14839: DirectMessageSpamFilterSetting ===
 
-// Module 14836 (DirectMessageSpamFilterSetting)
+// Module 14839 (DirectMessageSpamFilterSetting)
 import util from "util" /* 1114 */;
 import UserSettings from "UserSettings" /* 1935 */;
-import ModerationUtils from "ModerationUtils" /* 14837 */;
+import ModerationUtils from "ModerationUtils" /* 14840 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-fn(11468);
+fn(11473);
 let SettingBuilders = {
   useTitle() {
     const intl = util.intl;
@@ -20,7 +20,7 @@ let SettingBuilders = {
       return dmSpamOptions.map((value) => ({ value: value.value, label: value.name, subLabel: value.desc }));
     }, []);
   },
-  useValue: fn(14839).useDerivedDmSpamFilterSettingValue,
+  useValue: fn(14842).useDerivedDmSpamFilterSettingValue,
   onValueChange: function onDmSpamFilterSettingValueChange(arg0) {
     const DmSpamFilterV2 = UserSettings.DmSpamFilterV2;
     DmSpamFilterV2.updateSetting(Number(arg0));

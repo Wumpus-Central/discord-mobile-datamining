@@ -12,9 +12,9 @@ import QuestContent from "QuestContent" /* 5449 */;
 import safeTransitionToDefault from "safeTransitionTo" /* 7244 */;
 import storefrontMessageEmbedCodedLink from "storefrontMessageEmbedCodedLink" /* 7691 */;
 import InstantInviteActionCreatorsDefault from "InstantInviteActionCreators" /* 8378 */;
-import SocialLayerStorefrontNativeActionCreators from "SocialLayerStorefrontNativeActionCreators" /* 10797 */;
-import QuestUtils from "QuestUtils" /* 11767 */;
-import SuspiciousDownloadModalActionCreatorsDefault from "SuspiciousDownloadModalActionCreators" /* 12946 */;
+import SocialLayerStorefrontNativeActionCreators from "SocialLayerStorefrontNativeActionCreators" /* 10802 */;
+import QuestUtils from "QuestUtils" /* 11772 */;
+import SuspiciousDownloadModalActionCreatorsDefault from "SuspiciousDownloadModalActionCreators" /* 12950 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import ApplicationStore from "ApplicationStore" /* 4788 */;
@@ -302,7 +302,7 @@ export default function getOnClick(url) {
         if (_undefined.type !== CodedLink.CodedLinkType.APP_DIRECTORY_STOREFRONT) {
           let result = storefrontMessageEmbedCodedLink.parseStorefrontSkuCodedLink(code);
           if (result == null) {
-            result = { applicationId: "hash", skuId: "call" };
+            result = { applicationId: "push", skuId: "channel" };
           }
           const tmp3Result = storefrontMessageEmbedCodedLink;
         }
@@ -315,7 +315,7 @@ export default function getOnClick(url) {
         openURLDefault(closure_0);
         return true;
       }
-      result = { applicationId: code, skuId: "a" };
+      result = { applicationId: code, skuId: "Array" };
     };
   }
   if (null != findCodedLinkResult) {
@@ -490,7 +490,7 @@ export default function getOnClick(url) {
         }
         [closure_0, closure_1] = _slicedToArray(_undefined.code.split("-"), 2);
         const tmp2 = _slicedToArray(_undefined.code.split("-"), 2);
-        asyncRequireImpl(12944, dependencyMap.paths).then((openGuildProductLink) => {
+        asyncRequireImpl(12948, dependencyMap.paths).then((openGuildProductLink) => {
           openGuildProductLink.openGuildProductLink(url, analyticsLocations);
         });
         return true;
@@ -523,7 +523,7 @@ export default function getOnClick(url) {
   }
   if (null != findCodedLinkResult) {
     if (findCodedLinkResult.type === tmp2(4548).CodedLinkType.QUESTS_EMBED) {
-      let tmp2Result = tmp2(11484);
+      let tmp2Result = tmp2(11489);
       if (tmp2Result.getIsEligibleForQuests()) {
         return (preventDefault) => {
           if (preventDefault != null) {

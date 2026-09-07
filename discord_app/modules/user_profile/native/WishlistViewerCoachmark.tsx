@@ -1,8 +1,8 @@
-// === Module 13129: WishlistViewerCoachmark ===
+// === Module 13133: WishlistViewerCoachmark ===
 
-// Module 13129 (WishlistViewerCoachmark)
+// Module 13133 (WishlistViewerCoachmark)
 import util from "util" /* 1114 */;
-import _modDef13130 from "module_13130" /* 13130 */;
+import _modDef13134 from "module_13134" /* 13134 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -10,11 +10,11 @@ function CoachmarkImage() {
   const tmp = closure_8();
   let obj = { style: tmp.imageContainer, children: null };
   obj = { source: null, style: null };
-  obj = { uri: _modDef13130 };
+  obj = { uri: _modDef13134 };
   obj.source = obj;
   obj.style = tmp.image;
-  obj.children = <hasOwnProperty uri={_modDef13130} />;
-  return <React4 uri={_modDef13130} />;
+  obj.children = <hasOwnProperty uri={_modDef13134} />;
+  return <React4 uri={_modDef13134} />;
 }
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, Image: hasOwnProperty } = get_ActivityIndicator);

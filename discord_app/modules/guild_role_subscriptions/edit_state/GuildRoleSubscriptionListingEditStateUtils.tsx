@@ -1,14 +1,14 @@
-// === Module 15227: GuildRoleSubscriptionListingEditStateUtils ===
+// === Module 15230: GuildRoleSubscriptionListingEditStateUtils ===
 
-// Module 15227 (GuildRoleSubscriptionListingEditStateUtils)
+// Module 15230 (GuildRoleSubscriptionListingEditStateUtils)
 import utils_ColorUtils from "utils/ColorUtils" /* 1091 */;
 import v1 from "v1" /* 1256 */;
 import RolePermissionUtils from "RolePermissionUtils" /* 4191 */;
 import StoreUtils from "StoreUtils" /* 4802 */;
-import GuildRoleSubscriptionsHooks from "GuildRoleSubscriptionsHooks" /* 15212 */;
-import useSubscriptionRoleDefault from "useSubscriptionRole" /* 15229 */;
-import Contants from "Contants" /* 15230 */;
-import useTrialIntervalOptionsDefault from "useTrialIntervalOptions" /* 15232 */;
+import GuildRoleSubscriptionsHooks from "GuildRoleSubscriptionsHooks" /* 15215 */;
+import useSubscriptionRoleDefault from "useSubscriptionRole" /* 15232 */;
+import Contants from "Contants" /* 15233 */;
+import useTrialIntervalOptionsDefault from "useTrialIntervalOptions" /* 15235 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -177,7 +177,7 @@ let closure_20 = async function _updateListingPeripheralsFromEditState(arg0) {
               closure_129_15 = closure_129_13.map((item) => {
                 const customEmojiById = closure_2_7.getCustomEmojiById(item);
                 if (null != customEmojiById) {
-                  guildId(10336);
+                  guildId(10341);
                   const obj = { guildId, emojiId: customEmojiById.id, roles: null };
                   const items = [];
                   items[HermesBuiltin.arraySpread(customEmojiById.roles, 0)] = dependencyMap;
@@ -192,10 +192,10 @@ let closure_20 = async function _updateListingPeripheralsFromEditState(arg0) {
                   const found = roles.filter((item) => item !== dependencyMap);
                   if (found.length > 0) {
                     let obj = { guildId, emojiId: customEmojiById.id, roles: found };
-                    let updateEmojiResult = guildId(10336).updateEmoji(obj);
-                    const obj2 = guildId(10336);
+                    let updateEmojiResult = guildId(10341).updateEmoji(obj);
+                    const obj2 = guildId(10341);
                   } else {
-                    obj = guildId(10336);
+                    obj = guildId(10341);
                     updateEmojiResult = obj.deleteEmoji(guildId, customEmojiById.id);
                   }
                   return updateEmojiResult;
@@ -384,9 +384,9 @@ let closure_21 = async function _createListingFromEditState(arg0) {
     }
   }
 };
-const GuildRoleSubscriptionEditStore = fn(15228);
+const GuildRoleSubscriptionEditStore = fn(15231);
 ({ AllChannelAccessOptions: closure_9, useEditStateStore: c10 } = GuildRoleSubscriptionEditStore);
-let closure_11 = fn(15205).GuildRoleSubscriptionBenefitTypes;
+let closure_11 = fn(15208).GuildRoleSubscriptionBenefitTypes;
 const Constants = fn(1074);
 ({ CurrencyCodes: closure_12, DEFAULT_ROLE_COLOR: map1 } = Constants);
 const SubscriptionIntervalTypes = fn(1373).SubscriptionIntervalTypes;
@@ -673,7 +673,7 @@ export const useImage = function useImage(editStateId, arg1) {
 };
 export const useApplicationId = function useApplicationId(listingId) {
   _require = listingId;
-  const f99294 = (application_id) => {
+  const f99317 = (application_id) => {
     application_id = undefined;
     if (application_id != null) {
       application_id = application_id.application_id;
@@ -682,7 +682,7 @@ export const useApplicationId = function useApplicationId(listingId) {
   };
   const items = [GuildRoleSubscriptionsStore];
   const stateFromStores = require("initialize").useStateFromStores(items, () => GuildRoleSubscriptionsStore.getSubscriptionListing(closure_0));
-  const tmp2 = f99294(5598)(() => first);
+  const tmp2 = f99317(5598)(() => first);
   dependencyMap = tmp2;
   const items1 = [stateFromStores, tmp2];
   return noop.useMemo(() => closure_3(c2), items1);
@@ -788,7 +788,7 @@ export const useRole = function useRole(listingId, guildId) {
   }, items);
 };
 export const useRoleColor = function useRoleColor(editStateId, guildId) {
-  const tmp = roleColor(15229)(guildId, editStateId);
+  const tmp = roleColor(15232)(guildId, editStateId);
   editStateId = tmp;
   const items = [tmp];
   let memo = noop.useMemo(() => {
@@ -838,7 +838,7 @@ export const useRoleColor = function useRoleColor(editStateId, guildId) {
   return items2;
 };
 export const useChannelAccessFormat = function useChannelAccessFormat(editStateId, guildId) {
-  const tmp = channelAccessFormat(15229)(guildId, editStateId);
+  const tmp = channelAccessFormat(15232)(guildId, editStateId);
   const items = [tmp];
   let memo = noop.useMemo(() => {
     if (null == closure_0) {
@@ -993,7 +993,7 @@ export const useIntangibleBenefits = function useIntangibleBenefits(listingId) {
 };
 export const useTierEmojiIds = function useTierEmojiIds(listingId, guildId) {
   _require = guildId;
-  const tmp = tierEmojiIds(15229)(guildId, listingId);
+  const tmp = tierEmojiIds(15232)(guildId, listingId);
   const items = [EmojiStore];
   const items1 = [guildId];
   const stateFromStoresArray = require("initialize").useStateFromStoresArray(items, () => EmojiStore.getGuildEmoji(closure_0), items1);
@@ -1365,8 +1365,8 @@ export const useCreateOrUpdateListingFromEditState = function useCreateOrUpdateL
                             if (null != channelBenefits) {
                               const benefits = subscriptionListing.role_benefits.benefits;
                               const benefits1 = subscriptionListing.role_benefits.benefits;
-                              const found = benefits.filter(closure_1_0(15231).isChannelBenefit);
-                              const found1 = benefits1.filter(closure_1_0(15231).isIntangibleBenefit);
+                              const found = benefits.filter(closure_1_0(15234).isChannelBenefit);
+                              const found1 = benefits1.filter(closure_1_0(15234).isIntangibleBenefit);
                               if (channelBenefits == null) {
                                 channelBenefits = found;
                               }

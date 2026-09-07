@@ -1,9 +1,9 @@
-// === Module 16410: NotificationCenterPermissionNudge ===
+// === Module 16413: NotificationCenterPermissionNudge ===
 
-// Module 16410 (NotificationCenterPermissionNudge)
+// Module 16413 (NotificationCenterPermissionNudge)
 import nativeDefault from "native" /* 576 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
-import ContextualOptInNudgeHoldoutExperimentDefault from "ContextualOptInNudgeHoldoutExperiment" /* 15481 */;
+import ContextualOptInNudgeHoldoutExperimentDefault from "ContextualOptInNudgeHoldoutExperiment" /* 15484 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 const require = fn;
@@ -17,7 +17,7 @@ function NotificationCenterBannerImpl(onDismiss) {
   let obj = { style: tmp.container, children: null };
   obj = { style: tmp.iconContainer, children: null };
   obj = { size: "md", color: nativeDefault.colors.ICON_STRONG };
-  obj.children = closure_14(onDismiss(9059).BellSlashIcon, obj);
+  obj.children = closure_14(onDismiss(9064).BellSlashIcon, obj);
   const items = [closure_14(View, obj), , ];
   const obj1 = { style: tmp.contentContainer, children: null };
   const obj2 = { variant: "text-md/semibold", color: "text-default", children: null };
@@ -33,7 +33,7 @@ function NotificationCenterBannerImpl(onDismiss) {
   const intl3 = onDismiss(1114).intl;
   obj6.text = intl3.string(onDismiss(1114).t.a4bgO0);
   obj6.onPress = function onPress() {
-    let obj = onDismiss(12411);
+    let obj = onDismiss(12415);
     const pushNotificationPermission = obj.requestPushNotificationPermission(constants2.ALLOW_TO_REQUEST, constants3.NOTIFICATION_CENTER, closure_1_8);
     obj = { action: constants4.ACCEPT, prompt_type: constants5.NOTIFICATION_CENTER_BANNER };
     AnalyticsUtilsDefault.track(constants.CONTEXTUAL_REMINDER_ACTION, obj);
@@ -66,7 +66,7 @@ const View = fn(17).View;
 const Constants = fn(1074);
 ({ AnalyticEvents: closure_7, NOOP: closure_8 } = Constants);
 const ContentDismissActionType = fn(1954).ContentDismissActionType;
-const NotificationPermissionConstants = fn(12410);
+const NotificationPermissionConstants = fn(12414);
 ({ EventActionType: c10, EventActionLocation: closure_11, NotificationNudgeAnalyticsAction: closure_12, NotificationNudgeSurface: map1 } = NotificationPermissionConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);

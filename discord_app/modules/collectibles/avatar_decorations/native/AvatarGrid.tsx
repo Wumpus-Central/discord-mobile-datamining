@@ -1,6 +1,6 @@
-// === Module 13176: AvatarGrid ===
+// === Module 13180: AvatarGrid ===
 
-// Module 13176 (AvatarGrid)
+// Module 13180 (AvatarGrid)
 import nativeDefault from "native" /* 576 */;
 import native from "native" /* 1178 */;
 import noop from "module_19" /* 19 */;

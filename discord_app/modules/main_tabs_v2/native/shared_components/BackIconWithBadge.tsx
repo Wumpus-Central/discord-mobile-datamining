@@ -1,12 +1,12 @@
-// === Module 16403: BackIconWithBadge ===
+// === Module 16406: BackIconWithBadge ===
 
-// Module 16403 (BackIconWithBadge)
+// Module 16406 (BackIconWithBadge)
 import nativeDefault from "native" /* 576 */;
 import native from "native" /* 1178 */;
 import XLargeIcon from "XLargeIcon" /* 4513 */;
 import ArrowLargeLeftIcon from "ArrowLargeLeftIcon" /* 5628 */;
 import XSmallIcon from "XSmallIcon" /* 5680 */;
-import ClipView from "ClipView" /* 8813 */;
+import ClipView from "ClipView" /* 8818 */;
 import noop from "module_19" /* 19 */;
 import GuildReadStateStore from "GuildReadStateStore" /* 7636 */;
 
@@ -28,7 +28,7 @@ function IconWithBadge(includeNotificationsCount) {
   }
   let num2 = 0;
   if (flag) {
-    num2 = memo(16394)().value;
+    num2 = memo(16397)().value;
   }
   const sum = num + num2;
   _require = sum;
@@ -63,7 +63,7 @@ function IconWithBadge(includeNotificationsCount) {
     items4 = [];
   }
   const obj1 = { cutouts: items4, children: closure_6(includeNotificationsCount.Icon, { size: "md", style: tmp.backIcon, color: "interactive-text-default" }) };
-  const items5 = [closure_6(memo(8813), obj1), ];
+  const items5 = [closure_6(memo(8818), obj1), ];
   let tmp9Result = null;
   if (sum > 0) {
     const obj3 = { style: tmp.badgeWrapper, children: null };

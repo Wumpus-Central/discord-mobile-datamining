@@ -1,16 +1,16 @@
-// === Module 11041: GiftingSKUCardsGrid ===
+// === Module 11046: GiftingSKUCardsGrid ===
 
-// Module 11041 (GiftingSKUCardsGrid)
+// Module 11046 (GiftingSKUCardsGrid)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import useA11yRolesNative from "useA11yRolesNative" /* 4277 */;
 import Text_Text from "Text/Text" /* 4556 */;
 import Pressables from "Pressables" /* 5123 */;
 import useCurrentUser from "useCurrentUser" /* 8178 */;
-import CheckmarkLargeBoldIcon from "CheckmarkLargeBoldIcon" /* 8795 */;
-import AvatarDecorationSampleV2Default from "AvatarDecorationSampleV2" /* 8810 */;
-import NameplateCardPreviewDefault from "NameplateCardPreview" /* 8824 */;
-import useFetchCollectiblesProduct from "useFetchCollectiblesProduct" /* 11042 */;
+import CheckmarkLargeBoldIcon from "CheckmarkLargeBoldIcon" /* 8800 */;
+import AvatarDecorationSampleV2Default from "AvatarDecorationSampleV2" /* 8815 */;
+import NameplateCardPreviewDefault from "NameplateCardPreview" /* 8829 */;
+import useFetchCollectiblesProduct from "useFetchCollectiblesProduct" /* 11047 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

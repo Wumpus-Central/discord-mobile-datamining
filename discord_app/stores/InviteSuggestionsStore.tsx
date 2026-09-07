@@ -1,11 +1,11 @@
-// === Module 9833: InviteSuggestionsStore ===
+// === Module 9838: InviteSuggestionsStore ===
 
-// Module 9833 (InviteSuggestionsStore)
+// Module 9838 (InviteSuggestionsStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import autocompleter_sortByMatchScoreDefault from "autocompleter/sortByMatchScore" /* 5518 */;
-import InstantInviteUtils from "InstantInviteUtils" /* 9822 */;
-import QuickSwitcherStore from "QuickSwitcherStore" /* 9834 */;
+import InstantInviteUtils from "InstantInviteUtils" /* 9827 */;
+import QuickSwitcherStore from "QuickSwitcherStore" /* 9839 */;
 import UserAffinitiesV2Store from "UserAffinitiesV2Store" /* 7659 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 import PermissionStore from "PermissionStore" /* 4199 */;
@@ -40,7 +40,7 @@ function _computeRows(query) {
   if (!tmp) {
     id = guild.id;
   }
-  const mostRecentDMedUser = set1(9822).getMostRecentDMedUser(set, id);
+  const mostRecentDMedUser = set1(9827).getMostRecentDMedUser(set, id);
   let isBlockedOrIgnoredResult = null == mostRecentDMedUser;
   if (!isBlockedOrIgnoredResult) {
     isBlockedOrIgnoredResult = RelationshipStore.isBlockedOrIgnored(mostRecentDMedUser.id);
@@ -63,8 +63,8 @@ function _computeRows(query) {
     const substr = found2.slice(0, 3);
     const item = substr.forEach((id) => set1.add(id.id));
   }
-  const obj2 = set1(9822);
-  return set1(9822).generateRowsForQuery({ query, omitUserIds: set, suggestedUserIds: set, maxRowsWithoutQuery: 100, omitGuildId: id, suggestedChannelIds: set1, inviteTargetType });
+  const obj2 = set1(9827);
+  return set1(9827).generateRowsForQuery({ query, omitUserIds: set, suggestedUserIds: set, maxRowsWithoutQuery: 100, omitGuildId: id, suggestedChannelIds: set1, inviteTargetType });
 }
 const Constants = fn(1074);
 ({ ChannelTypes: closure_14, Permissions: closure_15 } = Constants);

@@ -1,6 +1,6 @@
-// === Module 13335: WhatYouLoseProfileTier1 ===
+// === Module 13339: WhatYouLoseProfileTier1 ===
 
-// Module 13335 (WhatYouLoseProfileTier1)
+// Module 13339 (WhatYouLoseProfileTier1)
 import shared from "shared" /* 4411 */;
 import _mod8233 from "module_8233" /* 8233 */;
 import noop from "module_19" /* 19 */;
@@ -14,13 +14,13 @@ const result = size.fileFinishedImporting("design/components/Illustration/native
 export const getWhatYouLoseProfileTier1Source = function getWhatYouLoseProfileTier1Source(theme) {
   const obj = {
     dark() {
-      return require("module_13336");
+      return require("module_13340");
     },
     darker() {
-      return require("module_13337");
+      return require("module_13341");
     },
     light() {
-      return require("module_13338");
+      return require("module_13342");
     }
   };
   return obj.getIllustrationSource(theme, obj);
@@ -28,13 +28,13 @@ export const getWhatYouLoseProfileTier1Source = function getWhatYouLoseProfileTi
 export const useWhatYouLoseProfileTier1Source = function useWhatYouLoseProfileTier1Source() {
   const obj = {
     dark() {
-      return require("module_13336");
+      return require("module_13340");
     },
     darker() {
-      return require("module_13337");
+      return require("module_13341");
     },
     light() {
-      return require("module_13338");
+      return require("module_13342");
     }
   };
   return _mod8233.getIllustrationSource(obj.useThemeContext().theme, obj);
@@ -42,13 +42,13 @@ export const useWhatYouLoseProfileTier1Source = function useWhatYouLoseProfileTi
 export const WhatYouLoseProfileTier1 = function WhatYouLoseProfileTier1(arg0) {
   let obj = {
     dark() {
-      return require("module_13336");
+      return require("module_13340");
     },
     darker() {
-      return require("module_13337");
+      return require("module_13341");
     },
     light() {
-      return require("module_13338");
+      return require("module_13342");
     }
   };
   obj = {};

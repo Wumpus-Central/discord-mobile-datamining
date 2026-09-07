@@ -154,12 +154,12 @@ export default function StageBoostingActionSheet(channel) {
     if (tmp9) {
       tmp24Result = tmp24(tmp(5692).HoldingGemSpotIllustration, { accessible: false });
     } else {
-      const obj5 = { source: tmp22(8592) };
+      const obj5 = { source: tmp22(8597) };
       tmp24Result = tmp24(tmp22(5587), obj5);
       const tmp22Result = tmp22(5587);
     }
     obj4.illustration = tmp24Result;
     obj4.actions = tmp24Result;
-    return tmp24(tmp(10230).PromoSheet, obj4);
+    return tmp24(tmp(10235).PromoSheet, obj4);
   }
 };

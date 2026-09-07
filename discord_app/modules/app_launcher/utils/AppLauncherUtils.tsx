@@ -1,20 +1,20 @@
-// === Module 9289: AppLauncherUtils ===
+// === Module 9294: AppLauncherUtils ===
 
-// Module 9289 (AppLauncherUtils)
+// Module 9294 (AppLauncherUtils)
 import util from "util" /* 1114 */;
 import PlatformUtils from "PlatformUtils" /* 1115 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1396 */;
 import Server from "Server" /* 1894 */;
 import ApplicationCommandUtils from "ApplicationCommandUtils" /* 7521 */;
-import ApplicationFlagUtils from "ApplicationFlagUtils" /* 8856 */;
-import AppLauncherTypes from "AppLauncherTypes" /* 9409 */;
-import getPlatformDefault from "getPlatform" /* 9410 */;
-import ApplicationInstallUtils from "ApplicationInstallUtils" /* 9418 */;
+import ApplicationFlagUtils from "ApplicationFlagUtils" /* 8861 */;
+import AppLauncherTypes from "AppLauncherTypes" /* 9414 */;
+import getPlatformDefault from "getPlatform" /* 9415 */;
+import ApplicationInstallUtils from "ApplicationInstallUtils" /* 9423 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ApplicationCommandIndexStore from "ApplicationCommandIndexStore" /* 9290 */;
+import ApplicationCommandIndexStore from "ApplicationCommandIndexStore" /* 9295 */;
 import ApplicationRecord from "ApplicationRecord" /* 1918 */;
-import AppLauncherStore from "AppLauncherStore" /* 9408 */;
+import AppLauncherStore from "AppLauncherStore" /* 9413 */;
 
 require = fn;
 function getShelfBadgeTypeIfActive(application) {

@@ -1,10 +1,10 @@
-// === Module 9530: handlePressJoinActivity ===
+// === Module 9535: handlePressJoinActivity ===
 
-// Module 9530 (handlePressJoinActivity)
+// Module 9535 (handlePressJoinActivity)
 import util from "util" /* 1114 */;
 import AlertActionCreatorsDefault from "AlertActionCreators" /* 4904 */;
-import getEmbeddedActivityJoinability from "getEmbeddedActivityJoinability" /* 9531 */;
-import showActivitiesInvalidPermissionsAlert from "showActivitiesInvalidPermissionsAlert" /* 9532 */;
+import getEmbeddedActivityJoinability from "getEmbeddedActivityJoinability" /* 9536 */;
+import showActivitiesInvalidPermissionsAlert from "showActivitiesInvalidPermissionsAlert" /* 9537 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import ApplicationRecord from "ApplicationRecord" /* 1918 */;
 import ChannelStore from "ChannelStore" /* 1957 */;

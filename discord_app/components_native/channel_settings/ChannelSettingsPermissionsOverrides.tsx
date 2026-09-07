@@ -1,14 +1,14 @@
-// === Module 16829: ChannelSettingsPermissionsOverrides ===
+// === Module 16832: ChannelSettingsPermissionsOverrides ===
 
-// Module 16829 (ChannelSettingsPermissionsOverrides)
+// Module 16832 (ChannelSettingsPermissionsOverrides)
 import nativeDefault from "native" /* 576 */;
 import BigFlagUtilsAll from "BigFlagUtils" /* 1086 */;
 import util from "util" /* 1114 */;
 import StageChannelPermissions from "StageChannelPermissions" /* 1965 */;
 import PermissionUtils from "PermissionUtils" /* 4204 */;
 import TableRowGroup from "TableRowGroup" /* 5687 */;
-import AppChannelPermissionUtils from "AppChannelPermissionUtils" /* 11610 */;
-import PermissionSpecUtilsDefault from "PermissionSpecUtils" /* 16830 */;
+import AppChannelPermissionUtils from "AppChannelPermissionUtils" /* 11615 */;
+import PermissionSpecUtilsDefault from "PermissionSpecUtils" /* 16833 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
@@ -301,7 +301,7 @@ export default function ChannelSettingsPermissionsOverrides(fromCreate) {
   const tmp13 = closure_19(require("Text/Text").Text, obj);
   if (fromCreate.type === constants.MEMBER) {
     obj = { userId: id, guildId: stateFromStores.guild_id, start: true, end: true, trailing: tmp13 };
-    let tmp12Result = closure_19(id(10942), obj);
+    let tmp12Result = closure_19(id(10947), obj);
   } else {
     const role = GuildRoleStore.getRole(stateFromStores.guild_id, id);
     let str;
@@ -344,7 +344,7 @@ export default function ChannelSettingsPermissionsOverrides(fromCreate) {
         ({ title, flag } = description);
         const tmp = closure_8(flag);
         let obj = { variant: "text-xs/medium", color: "text-subtle", children: null };
-        let obj1 = closure_1_0(16834);
+        let obj1 = closure_1_0(16837);
         obj.children = obj1.renderDescription(description.description);
         const items = [closure_1_19(closure_1_0(4556).Text, obj), ];
         let tmp5Result = null;
@@ -366,7 +366,7 @@ export default function ChannelSettingsPermissionsOverrides(fromCreate) {
         obj1.onValueChange = function onValueChange(arg0) {
           closure_2_7(flag, arg0);
         };
-        obj.trailing = closure_1_19(id(16835), obj1);
+        obj.trailing = closure_1_19(id(16838), obj1);
         return closure_1_19(closure_1_0(5605).TableRow, obj, "row-" + index);
       })
     };

@@ -1,6 +1,6 @@
-// === Module 15163: QuestBottomSheetConsoleConnect ===
+// === Module 15166: QuestBottomSheetConsoleConnect ===
 
-// Module 15163 (QuestBottomSheetConsoleConnect)
+// Module 15166 (QuestBottomSheetConsoleConnect)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
@@ -11,13 +11,13 @@ import TableRow from "TableRow" /* 5605 */;
 import TableRowGroup from "TableRowGroup" /* 5687 */;
 import openUserSettings from "openUserSettings" /* 7382 */;
 import AnalyticsTypes from "AnalyticsTypes" /* 7728 */;
-import XboxNeutralIcon from "XboxNeutralIcon" /* 8708 */;
-import PlaystationNeutralIcon from "PlaystationNeutralIcon" /* 8881 */;
-import authorizeConnectionDefault from "authorizeConnection" /* 9252 */;
-import AdAnalyticsInterfaceExperiment from "AdAnalyticsInterfaceExperiment" /* 11192 */;
-import captureAdUserAction from "captureAdUserAction" /* 11193 */;
-import captureAdUserActionTypes from "captureAdUserActionTypes" /* 11197 */;
-import QuestPlatformUtils from "QuestPlatformUtils" /* 11496 */;
+import XboxNeutralIcon from "XboxNeutralIcon" /* 8713 */;
+import PlaystationNeutralIcon from "PlaystationNeutralIcon" /* 8886 */;
+import authorizeConnectionDefault from "authorizeConnection" /* 9257 */;
+import AdAnalyticsInterfaceExperiment from "AdAnalyticsInterfaceExperiment" /* 11197 */;
+import captureAdUserAction from "captureAdUserAction" /* 11198 */;
+import captureAdUserActionTypes from "captureAdUserActionTypes" /* 11202 */;
+import QuestPlatformUtils from "QuestPlatformUtils" /* 11501 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -90,13 +90,13 @@ export default function QuestBottomSheetConsoleConnect(quest) {
   ({ step: importDefault, sourceQuestContent: dependencyMap } = quest);
   function openQuestBottomSheet() {
     const obj = { questId: quest.id, initialStep, sourceQuestContent };
-    obj.openLazy(asyncRequireImpl(15120, dependencyMap.paths), "QuestBottomSheet", obj);
+    obj.openLazy(asyncRequireImpl(15123, dependencyMap.paths), "QuestBottomSheet", obj);
   }
-  let obj = quest(11483);
+  let obj = quest(11488);
   const xboxAndPlaystationAccounts = obj.useConnectedAccounts().xboxAndPlaystationAccounts;
-  closure_4 = quest(11774).useTrackQuestContentClickedWithImpression();
-  let obj2 = quest(11774);
-  const impressionId = quest(11486).useQuestImpressionId();
+  closure_4 = quest(11779).useTrackQuestContentClickedWithImpression();
+  let obj2 = quest(11779);
+  const impressionId = quest(11491).useQuestImpressionId();
   const items = [quest, xboxAndPlaystationAccounts];
   obj = {
     consoles: xboxAndPlaystationAccounts.useMemo(() => QuestPlatformUtils.supportedConsoles(quest).map((type) => {

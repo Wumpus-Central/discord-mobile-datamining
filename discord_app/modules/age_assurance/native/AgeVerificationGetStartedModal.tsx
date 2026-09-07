@@ -1,6 +1,6 @@
-// === Module 8576: AgeVerificationGetStartedModal ===
+// === Module 8579: AgeVerificationGetStartedModal ===
 
-// Module 8576 (AgeVerificationGetStartedModal)
+// Module 8579 (AgeVerificationGetStartedModal)
 import nativeDefault from "native" /* 576 */;
 import NavigatorHeader from "NavigatorHeader" /* 5624 */;
 import AgeVerificationAnalyticsUtils from "AgeVerificationAnalyticsUtils" /* 8413 */;

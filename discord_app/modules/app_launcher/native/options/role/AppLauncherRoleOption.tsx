@@ -1,9 +1,9 @@
-// === Module 12183: AppLauncherRoleOption ===
+// === Module 12187: AppLauncherRoleOption ===
 
-// Module 12183 (AppLauncherRoleOption)
+// Module 12187 (AppLauncherRoleOption)
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4527 */;
-import AppLauncherRoleListActionSheet from "AppLauncherRoleListActionSheet" /* 12181 */;
+import AppLauncherRoleListActionSheet from "AppLauncherRoleListActionSheet" /* 12185 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import GuildRoleStore from "GuildRoleStore" /* 2015 */;
@@ -73,7 +73,7 @@ export default function AppLauncherRoleOption(option) {
       },
       onActionSheetDismiss
     };
-    obj.openLazy(asyncRequireImpl(12181, dependencyMap.paths), AppLauncherRoleListActionSheet.APP_LAUNCHER_ROLE_LIST_ACTION_SHEET_KEY, obj);
+    obj.openLazy(asyncRequireImpl(12185, dependencyMap.paths), AppLauncherRoleListActionSheet.APP_LAUNCHER_ROLE_LIST_ACTION_SHEET_KEY, obj);
   };
   obj.leading = guild_id(option(onRolePress[9]).RoleIcon, { role: stateFromStores });
   obj.autoFocus = autoFocus;

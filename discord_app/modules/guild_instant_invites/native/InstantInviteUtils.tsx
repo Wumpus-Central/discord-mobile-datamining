@@ -1,11 +1,11 @@
-// === Module 10943: guild_instant_invites/InstantInviteUtils ===
+// === Module 10948: guild_instant_invites/InstantInviteUtils ===
 
-// Module 10943 (guild_instant_invites/InstantInviteUtils)
+// Module 10948 (guild_instant_invites/InstantInviteUtils)
 import ToastUtils from "ToastUtils" /* 4258 */;
 import ClipboardUtils from "ClipboardUtils" /* 7190 */;
 import getInviteURLDefault from "getInviteURL" /* 7759 */;
-import instant_invite_InstantInviteUtils from "instant_invite/InstantInviteUtils" /* 9820 */;
-import _modDef10944 from "module_10944" /* 10944 */;
+import instant_invite_InstantInviteUtils from "instant_invite/InstantInviteUtils" /* 9825 */;
+import _modDef10949 from "module_10949" /* 10949 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 import UserStore from "UserStore" /* 1371 */;
@@ -29,9 +29,9 @@ export const useInviteActions = function useInviteActions(invite) {
   let obj = { label: null, iconSource: null, action: null };
   let intl = invite(1114).intl;
   obj.label = intl.string(invite(1114).t.RDE0Sc);
-  obj.iconSource = onInviteRevoked(10937).share;
+  obj.iconSource = onInviteRevoked(10942).share;
   obj.action = function action() {
-    _modDef10944(() => {
+    _modDef10949(() => {
       let obj = invite(dependencyMap[7]);
       let tmp4;
       if (!closure_1_3) {
@@ -64,7 +64,7 @@ export const useInviteActions = function useInviteActions(invite) {
   obj = { label: null, iconSource: null, action: null };
   const intl2 = invite(1114).intl;
   obj.label = intl2.string(invite(1114).t.OpuAlK);
-  obj.iconSource = onInviteRevoked(10937).copy;
+  obj.iconSource = onInviteRevoked(10942).copy;
   obj.action = function action() {
     if (c3) {
       let tmpResult = instant_invite_InstantInviteUtils;
@@ -79,7 +79,7 @@ export const useInviteActions = function useInviteActions(invite) {
   const obj1 = { label: null, iconSource: null, variant: "destructive", action: null };
   const intl3 = invite(1114).intl;
   obj1.label = intl3.string(invite(1114).t.v6Yazx);
-  obj1.iconSource = onInviteRevoked(10937).revoke;
+  obj1.iconSource = onInviteRevoked(10942).revoke;
   dependencyMap = asyncGeneratorStep(async () => {
     await v2(tmp24[12]).revokeInvite(invite);
     if (1 === tmp7) {

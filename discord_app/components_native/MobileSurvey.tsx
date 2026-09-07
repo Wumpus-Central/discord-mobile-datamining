@@ -1,11 +1,11 @@
-// === Module 16922: MobileSurvey ===
+// === Module 16925: MobileSurvey ===
 
-// Module 16922 (MobileSurvey)
+// Module 16925 (MobileSurvey)
 import nativeDefault from "native" /* 576 */;
 import native from "native" /* 1178 */;
 import LinkingDefault from "Linking" /* 4255 */;
 import SurveyActionCreators from "SurveyActionCreators" /* 4752 */;
-import _modDef9444 from "module_9444" /* 9444 */;
+import _modDef9449 from "module_9449" /* 9449 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 import SurveyStore from "SurveyStore" /* 4751 */;
@@ -103,7 +103,7 @@ export default function MobileSurvey() {
       return SurveyActionCreators.surveyHide(stateFromStores.key, true);
     };
     obj.renderConfirmRightIcon = function renderConfirmRightIcon() {
-      return jsx(native.Icon, { style: confirmIcon.confirmIcon, color: nativeDefault.unsafe_rawColors.WHITE, size: native.Icon.Sizes.SMALL, source: _modDef9444 });
+      return jsx(native.Icon, { style: confirmIcon.confirmIcon, color: nativeDefault.unsafe_rawColors.WHITE, size: native.Icon.Sizes.SMALL, source: _modDef9449 });
     };
     tmp5 = jsx(stateFromStores(4994), { body: null, confirmText: null, cancelText: null, onConfirm: null, onCancel: null, renderConfirmRightIcon: null });
     const tmp8 = stateFromStores(4994);

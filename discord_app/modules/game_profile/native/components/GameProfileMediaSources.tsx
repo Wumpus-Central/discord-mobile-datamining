@@ -1,6 +1,6 @@
-// === Module 8719: GameProfileMediaSources ===
+// === Module 8724: GameProfileMediaSources ===
 
-// Module 8719 (GameProfileMediaSources)
+// Module 8724 (GameProfileMediaSources)
 import ImageLoaderUtils from "ImageLoaderUtils" /* 1430 */;
 import ImageProxyUtils from "ImageProxyUtils" /* 1929 */;
 import StoreUtils from "StoreUtils" /* 4802 */;

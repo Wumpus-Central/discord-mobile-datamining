@@ -1,6 +1,6 @@
-// === Module 17005: useExternalPipParticipant ===
+// === Module 17008: useExternalPipParticipant ===
 
-// Module 17005 (useExternalPipParticipant)
+// Module 17008 (useExternalPipParticipant)
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ChannelRTCStore from "ChannelRTCStore" /* 4576 */;
@@ -57,7 +57,7 @@ export default function useExternalPipParticipant() {
       id2 = tmp6.id;
     }
     if (ref.current !== id2) {
-      let obj = { focusedParticipantStreamId: "Array", focusedParticipantUserId: "isArray", focusedParticipantType: ref2.current };
+      let obj = { focusedParticipantStreamId: "Array", focusedParticipantUserId: "options", focusedParticipantType: ref2.current };
     } else {
       let type1;
       if (tmp6 != null) {

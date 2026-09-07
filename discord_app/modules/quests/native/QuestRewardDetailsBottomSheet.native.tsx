@@ -1,13 +1,13 @@
-// === Module 11769: QuestRewardDetailsBottomSheet ===
+// === Module 11774: QuestRewardDetailsBottomSheet ===
 
-// Module 11769 (QuestRewardDetailsBottomSheet)
+// Module 11774 (QuestRewardDetailsBottomSheet)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4527 */;
 import QuestRewardTypes from "QuestRewardTypes" /* 7708 */;
-import QuestRewardUtils from "QuestRewardUtils" /* 11290 */;
-import hooks_QuestHooks from "hooks/QuestHooks" /* 11483 */;
-import QuestUtils from "QuestUtils" /* 11767 */;
+import QuestRewardUtils from "QuestRewardUtils" /* 11295 */;
+import hooks_QuestHooks from "hooks/QuestHooks" /* 11488 */;
+import QuestUtils from "QuestUtils" /* 11772 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1371 */;
 
@@ -34,11 +34,11 @@ function QuestRewardDetailsBottomSheet(quest) {
   let obj = quest(504);
   const items2 = [UserStore];
   const stateFromStores = obj.useStateFromStores(items2, () => currentUser.getCurrentUser());
-  let obj1 = quest(11290);
+  let obj1 = quest(11295);
   const defaultRewardName = obj1.getDefaultRewardName(quest.config, stateFromStores);
   obj = { direction: "vertical", spacing: memo(576).space.PX_16, style: tmp.wrapper, children: null };
   obj = { align: "center", direction: "horizontal", spacing: memo(576).space.PX_16, children: null };
-  const items3 = [closure_6(memo(11770), { quest, height: 56, width: 56, withAnimation: true }), ];
+  const items3 = [closure_6(memo(11775), { quest, height: 56, width: 56, withAnimation: true }), ];
   obj1 = { direction: "vertical", spacing: memo(576).space.PX_4, style: tmp.rewardDetailsCopy, children: null };
   const obj2 = { variant: "eyebrow", color: "text-subtle", children: null };
   let intl = quest(1114).intl;

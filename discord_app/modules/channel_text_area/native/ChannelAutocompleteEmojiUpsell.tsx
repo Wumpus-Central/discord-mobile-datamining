@@ -1,6 +1,6 @@
-// === Module 12387: ChannelAutocompleteEmojiUpsell ===
+// === Module 12391: ChannelAutocompleteEmojiUpsell ===
 
-// Module 12387 (ChannelAutocompleteEmojiUpsell)
+// Module 12391 (ChannelAutocompleteEmojiUpsell)
 import nativeDefault from "native" /* 576 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1396 */;
 import FastImageDefault from "FastImage" /* 5587 */;

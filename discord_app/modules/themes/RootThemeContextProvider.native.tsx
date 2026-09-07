@@ -1,6 +1,6 @@
-// === Module 14569: RootThemeContextProvider ===
+// === Module 14572: RootThemeContextProvider ===
 
-// Module 14569 (RootThemeContextProvider)
+// Module 14572 (RootThemeContextProvider)
 import useColorThemeBackgroundDefault from "useColorThemeBackground" /* 4413 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4552 */;
@@ -22,7 +22,7 @@ export const RootThemeContextProvider = function RootThemeContextProvider(childr
   manaTypeConsolidationExperiment = manaTypeConsolidationExperiment(8095).useManaTypeConsolidationExperiment("RootThemeContextProvider");
   const obj2 = manaTypeConsolidationExperiment(8095);
   [][0] = manaTypeConsolidationExperiment;
-  const plainTextExperiment = manaTypeConsolidationExperiment(14570).usePlainTextExperiment("RootThemeContextProvider");
+  const plainTextExperiment = manaTypeConsolidationExperiment(14573).usePlainTextExperiment("RootThemeContextProvider");
   if (null == tmp4) {
     let num2 = 0;
     if (1 !== saturation) {
@@ -33,7 +33,7 @@ export const RootThemeContextProvider = function RootThemeContextProvider(childr
       obj = { theme: stateFromStoresObject.theme, flags: num2, saturation, contrast, enabledExperiments: tmp7, children: null };
       obj = { enabled: plainTextExperiment, children: children.children };
       obj.children = jsx(tmp(4565).PlainTextExperimentProvider, { enabled: plainTextExperiment, children: children.children });
-      return jsx(tmp(10075).RootThemeContextProvider, { enabled: plainTextExperiment, children: children.children });
+      return jsx(tmp(10080).RootThemeContextProvider, { enabled: plainTextExperiment, children: children.children });
     } else {
       tmpResult = tmp(4271);
       if (contrast > 1) {
@@ -50,5 +50,5 @@ export const RootThemeContextProvider = function RootThemeContextProvider(childr
     setThemeFlagResult1 = tmp(4271).setThemeFlag(0, tmp(4271).ThemeContextFlags.MOBILE_DARK_GRADIENT_THEME_ENABLED);
     const tmpResult2 = tmp(4271);
   }
-  const obj3 = manaTypeConsolidationExperiment(14570);
+  const obj3 = manaTypeConsolidationExperiment(14573);
 };

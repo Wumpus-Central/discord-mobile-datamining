@@ -1,7 +1,7 @@
-// === Module 12419: RegionalTeenUtils ===
+// === Module 12423: RegionalTeenUtils ===
 
-// Module 12419 (RegionalTeenUtils)
-import MessageRequestActionCreators from "MessageRequestActionCreators" /* 10959 */;
+// Module 12423 (RegionalTeenUtils)
+import MessageRequestActionCreators from "MessageRequestActionCreators" /* 10964 */;
 import noop from "module_19" /* 19 */;
 import RegionalFeatureConfigStore from "RegionalFeatureConfigStore" /* 4775 */;
 
@@ -33,7 +33,7 @@ export const useIsTeenInCountrySet = function useIsTeenInCountrySet(set) {
     }
   }, items1);
   const obj = stateFromStores(504);
-  let userIsTeen = stateFromStores(8644).useUserIsTeen();
+  let userIsTeen = stateFromStores(8649).useUserIsTeen();
   if (userIsTeen) {
     userIsTeen = null != stateFromStores;
   }
@@ -52,7 +52,7 @@ export const useIsTeenInStrictCountry = function useIsTeenInStrictCountry() {
     }
   }, items1);
   const obj2 = stateFromStores(504);
-  let userIsTeen = stateFromStores(8644).useUserIsTeen();
+  let userIsTeen = stateFromStores(8649).useUserIsTeen();
   if (userIsTeen) {
     userIsTeen = null != stateFromStores;
   }

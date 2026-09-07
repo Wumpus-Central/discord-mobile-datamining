@@ -1,14 +1,14 @@
-// === Module 12184: AppLauncherUserOption ===
+// === Module 12188: AppLauncherUserOption ===
 
-// Module 12184 (AppLauncherUserOption)
+// Module 12188 (AppLauncherUserOption)
 import nativeDefault from "native" /* 576 */;
 import KeyboardManagerUtils from "KeyboardManagerUtils" /* 1874 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4527 */;
-import AppLauncherSelectOptionFormRowDefault from "AppLauncherSelectOptionFormRow" /* 12176 */;
-import AppLauncherOptionIconDefault from "AppLauncherOptionIcon" /* 12179 */;
-import UsernameTextDefault from "UsernameText" /* 12182 */;
-import AppLauncherUserListActionSheet from "AppLauncherUserListActionSheet" /* 12185 */;
+import AppLauncherSelectOptionFormRowDefault from "AppLauncherSelectOptionFormRow" /* 12180 */;
+import AppLauncherOptionIconDefault from "AppLauncherOptionIcon" /* 12183 */;
+import UsernameTextDefault from "UsernameText" /* 12186 */;
+import AppLauncherUserListActionSheet from "AppLauncherUserListActionSheet" /* 12189 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4552 */;
@@ -85,13 +85,13 @@ export default function AppLauncherUserOption(option) {
       },
       onActionSheetDismiss
     };
-    obj2.openLazy(asyncRequireImpl(12185, dependencyMap.paths), AppLauncherUserListActionSheet.APP_LAUNCHER_USER_LIST_ACTION_SHEET_KEY, obj);
+    obj2.openLazy(asyncRequireImpl(12189, dependencyMap.paths), AppLauncherUserListActionSheet.APP_LAUNCHER_USER_LIST_ACTION_SHEET_KEY, obj);
   };
   if (null != tmp8) {
     obj = { user: tmp8, guildId: guild_id, animate: !stateFromStores, size: tmp2(1178).AvatarSizes.REFRESH_MEDIUM_32 };
     let tmp9Result = tmp9(tmp2(1178).Avatar, obj);
   } else {
-    const obj1 = { icon: tmp9(tmp2(10917).UserCircleIcon, { size: "sm", color: "interactive-text-default" }), wrapperStyle: tmp.iconWrapper };
+    const obj1 = { icon: tmp9(tmp2(10922).UserCircleIcon, { size: "sm", color: "interactive-text-default" }), wrapperStyle: tmp.iconWrapper };
     tmp9Result = tmp9(AppLauncherOptionIconDefault, obj1);
     const tmp10Result = AppLauncherOptionIconDefault;
   }

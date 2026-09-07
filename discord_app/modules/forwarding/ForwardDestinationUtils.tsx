@@ -1,6 +1,6 @@
-// === Module 11684: ForwardDestinationUtils ===
+// === Module 11689: ForwardDestinationUtils ===
 
-// Module 11684 (ForwardDestinationUtils)
+// Module 11689 (ForwardDestinationUtils)
 import ChannelTypes from "ChannelTypes" /* 1094 */;
 import GlobalUtils from "GlobalUtils" /* 1369 */;
 import StickersUtils from "StickersUtils" /* 4899 */;
@@ -21,7 +21,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/forwarding/ForwardDestinationUtils.tsx");
 
 export const useSelectedDestinationChannel = function useSelectedDestinationChannel(selectedDestinations) {
-  const mapped = selectedDestinations.map(found(10981).getChannelIdFromDestinationId);
+  const mapped = selectedDestinations.map(found(10986).getChannelIdFromDestinationId);
   found = mapped.find(found(1369).isNotNullish);
   const items = [ChannelStore];
   const items1 = [found];

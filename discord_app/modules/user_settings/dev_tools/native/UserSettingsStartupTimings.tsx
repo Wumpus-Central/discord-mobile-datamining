@@ -1,14 +1,14 @@
-// === Module 15567: UserSettingsStartupTimings ===
+// === Module 15570: UserSettingsStartupTimings ===
 
-// Module 15567 (UserSettingsStartupTimings)
+// Module 15570 (UserSettingsStartupTimings)
 import nativeDefault from "native" /* 576 */;
 import Text_Text from "Text/Text" /* 4556 */;
 import Stack_Stack from "Stack/Stack" /* 4973 */;
 import TableCheckboxRow from "TableCheckboxRow" /* 5604 */;
 import TableRow from "TableRow" /* 5605 */;
 import TableRowGroup from "TableRowGroup" /* 5687 */;
-import ShareIcon from "ShareIcon" /* 9053 */;
-import serializeAppStartLogsDefault from "serializeAppStartLogs" /* 10193 */;
+import ShareIcon from "ShareIcon" /* 9058 */;
+import serializeAppStartLogsDefault from "serializeAppStartLogs" /* 10198 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -108,7 +108,7 @@ export default function UserSettingsStartupTimings() {
           return obj2;
         } else {
           closure_128_0 = value;
-          closure_128_1 = tmp5(10193)(closure_128_0);
+          closure_128_1 = tmp5(10198)(closure_128_0);
           obj = tmp2(8361);
           obj3 = { message: closure_128_1 };
           obj.showShareActionSheet(obj3, "Startup Timing");
@@ -261,6 +261,6 @@ export default function UserSettingsStartupTimings() {
   obj.renderItem = function renderItem(children) {
     return closure_8(lastTrackedAppUiViewed2Properties, { children: children.item });
   };
-  obj.children = closure_8(require("module_8874").FlashList, obj);
+  obj.children = closure_8(require("module_8879").FlashList, obj);
   return closure_8(checked, obj);
 };

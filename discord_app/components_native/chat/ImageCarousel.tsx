@@ -1,6 +1,6 @@
-// === Module 10631: ImageCarousel ===
+// === Module 10636: ImageCarousel ===
 
-// Module 10631 (ImageCarousel)
+// Module 10636 (ImageCarousel)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import native from "native" /* 1178 */;
@@ -13,11 +13,11 @@ import Upload from "Upload" /* 5128 */;
 import EyeIcon from "EyeIcon" /* 6970 */;
 import VisualEffectViewThemedDefault from "VisualEffectViewThemed" /* 8245 */;
 import PlayIcon from "PlayIcon" /* 8274 */;
-import UploadAttachmentActionCreatorsDefault from "UploadAttachmentActionCreators" /* 9307 */;
-import AttachmentPreviewDefault from "AttachmentPreview" /* 10196 */;
-import showUploadPreviewActionSheetDefault from "showUploadPreviewActionSheet" /* 10633 */;
-import MediaKeyboardUtils from "MediaKeyboardUtils" /* 10635 */;
-import _modDef11245 from "module_11245" /* 11245 */;
+import UploadAttachmentActionCreatorsDefault from "UploadAttachmentActionCreators" /* 9312 */;
+import AttachmentPreviewDefault from "AttachmentPreview" /* 10201 */;
+import showUploadPreviewActionSheetDefault from "showUploadPreviewActionSheet" /* 10638 */;
+import MediaKeyboardUtils from "MediaKeyboardUtils" /* 10640 */;
+import _modDef11250 from "module_11250" /* 11250 */;
 import noop from "module_19" /* 19 */;
 import UploadAttachmentStore from "UploadAttachmentStore" /* 4900 */;
 
@@ -156,7 +156,7 @@ function Tile(onEdit) {
     let tmp6Result = null;
     if (isThumbnail) {
       obj = { style: tileContainer.footerRightContainer, children: null };
-      obj = { source: _modDef11245, size: native.Icon.Sizes.SMALL_14 };
+      obj = { source: _modDef11250, size: native.Icon.Sizes.SMALL_14 };
       obj.children = closure_2_11(native.Icon, obj);
       tmp6Result = closure_2_11(React4, obj);
     }
@@ -276,7 +276,7 @@ function CustomScrollView(arg0) {
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, StyleSheet, ScrollView: hasOwnProperty } = get_ActivityIndicator);
 const DraftType = fn(4901).DraftType;
-const ImageCarouselConstants = fn(10632);
+const ImageCarouselConstants = fn(10637);
 const IMAGE_CAROUSEL_EXPERIMENT_TILE_MARGIN = ImageCarouselConstants.IMAGE_CAROUSEL_EXPERIMENT_TILE_MARGIN;
 const IMAGE_CAROUSEL_TILE_CLOSE_BUTTON_PADDING = ImageCarouselConstants.IMAGE_CAROUSEL_TILE_CLOSE_BUTTON_PADDING;
 let closure_10 = ImageCarouselConstants.IMAGE_CAROUSEL_TILE_HEIGHT;

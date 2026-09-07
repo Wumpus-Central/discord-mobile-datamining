@@ -1,6 +1,6 @@
-// === Module 13736: BlockedUserInGdmActionSheet ===
+// === Module 13740: BlockedUserInGdmActionSheet ===
 
-// Module 13736 (BlockedUserInGdmActionSheet)
+// Module 13740 (BlockedUserInGdmActionSheet)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
@@ -9,7 +9,7 @@ import Text_Text from "Text/Text" /* 4556 */;
 import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 4573 */;
 import NicknameUtilsDefault from "NicknameUtils" /* 4712 */;
 import TableRow from "TableRow" /* 5605 */;
-import SharedSpacesWarningActionCreators from "SharedSpacesWarningActionCreators" /* 13738 */;
+import SharedSpacesWarningActionCreators from "SharedSpacesWarningActionCreators" /* 13742 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 import UserStore from "UserStore" /* 1371 */;
@@ -89,11 +89,11 @@ function UserCalloutAvatars(userIds) {
       obj.size = REFRESH_MEDIUM_32;
       let tmp6 = closure_11(tmp(1178).Avatar, obj);
     } else {
-      tmp6 = closure_11(tmp(11825).UserIcon, {});
+      tmp6 = closure_11(tmp(11830).UserIcon, {});
     }
   } else {
     obj = { users: found, size: tmp(1178).AvatarSizes.REFRESH_MEDIUM_32 };
-    return closure_11(tmp(10910).FacepileGroupDMAvatar, obj);
+    return closure_11(tmp(10915).FacepileGroupDMAvatar, obj);
   }
 }
 function BlockedUserInGDMDescription(arg0) {
@@ -135,7 +135,7 @@ function BlockedUserInGDMDescription(arg0) {
 }
 get_ActivityIndicator = fn(17);
 ({ Image: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-const SharedSpaceWarningConstants = fn(13737);
+const SharedSpaceWarningConstants = fn(13741);
 ({ BlockWarningEngagements: closure_8, GdmWarningMedium: closure_9 } = SharedSpaceWarningConstants);
 const AnalyticEvents = fn(1074).AnalyticEvents;
 const jsxProd = fn(21);

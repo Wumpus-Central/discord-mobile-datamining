@@ -1,6 +1,6 @@
-// === Module 17482: SelectedChannelManager ===
+// === Module 17485: SelectedChannelManager ===
 
-// Module 17482 (SelectedChannelManager)
+// Module 17485 (SelectedChannelManager)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import router_utils from "router_utils" /* 1100 */;
 import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 5411 */;

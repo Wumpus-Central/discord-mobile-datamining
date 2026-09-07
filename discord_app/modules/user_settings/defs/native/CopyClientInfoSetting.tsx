@@ -1,6 +1,6 @@
-// === Module 15557: CopyClientInfoSetting ===
+// === Module 15560: CopyClientInfoSetting ===
 
-// Module 15557 (CopyClientInfoSetting)
+// Module 15560 (CopyClientInfoSetting)
 import util from "util" /* 1114 */;
 import ToastUtils from "ToastUtils" /* 4258 */;
 import CopyIcon from "CopyIcon" /* 4507 */;
@@ -10,8 +10,8 @@ import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7149 */;
 import ClipboardUtils from "ClipboardUtils" /* 7190 */;
 import ActionSheet from "ActionSheet" /* 7198 */;
 import ActionSheetRow from "ActionSheetRow" /* 7200 */;
-import build_overrides_BuildOverrideUtils from "build_overrides/BuildOverrideUtils" /* 11789 */;
-import BuildOverrideStore from "BuildOverrideStore" /* 11425 */;
+import build_overrides_BuildOverrideUtils from "build_overrides/BuildOverrideUtils" /* 11794 */;
+import BuildOverrideStore from "BuildOverrideStore" /* 11430 */;
 import ClientInfoUtils from "ClientInfoUtils" /* 1364 */;
 
 require = fn;
@@ -139,7 +139,7 @@ function ClientClientInfoActionSheet() {
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
 const Manifest = ClientInfoUtils.getConstants();
-const SettingBuilders = fn(11468);
+const SettingBuilders = fn(11473);
 const pressable = SettingBuilders.createPressable({
   useTitle() {
     const intl = util.intl;

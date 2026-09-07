@@ -1,8 +1,8 @@
-// === Module 14579: DevToolsLazy ===
+// === Module 14582: DevToolsLazy ===
 
-// Module 14579 (DevToolsLazy)
+// Module 14582 (DevToolsLazy)
 import PlatformUtils2 from "PlatformUtils" /* 1115 */;
-import NativeKeyCommandsModuleDefault from "NativeKeyCommandsModule" /* 14580 */;
+import NativeKeyCommandsModuleDefault from "NativeKeyCommandsModule" /* 14583 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 import DeveloperExperimentStore from "DeveloperExperimentStore" /* 7720 */;
@@ -97,10 +97,10 @@ export default function DevToolsLazy() {
     obj = PlatformUtils2;
   });
   const obj2 = stateFromStores(504);
-  const keyCommands = stateFromStores(14575).useKeyCommands(stateFromStores ? items : []);
+  const keyCommands = stateFromStores(14578).useKeyCommands(stateFromStores ? items : []);
   if (stateFromStores) {
     if (stateFromStores1) {
-      return jsx(tmp(15925).default, {});
+      return jsx(tmp(15928).default, {});
     }
   }
   return null;

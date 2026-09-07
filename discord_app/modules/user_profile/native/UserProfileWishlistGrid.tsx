@@ -1,6 +1,6 @@
-// === Module 13084: UserProfileWishlistGrid ===
+// === Module 13088: UserProfileWishlistGrid ===
 
-// Module 13084 (UserProfileWishlistGrid)
+// Module 13088 (UserProfileWishlistGrid)
 import LoggerDefault from "Logger" /* 3 */;
 import nativeDefault from "native" /* 576 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
@@ -10,8 +10,8 @@ import CollectiblesActionCreators from "CollectiblesActionCreators" /* 7541 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7542 */;
-import SentGiftsStore from "SentGiftsStore" /* 11035 */;
-import WishlistStore from "WishlistStore" /* 8777 */;
+import SentGiftsStore from "SentGiftsStore" /* 11040 */;
+import WishlistStore from "WishlistStore" /* 8782 */;
 import UserStore from "UserStore" /* 1371 */;
 import SKUStore from "SKUStore" /* 5510 */;
 import UserProfileStore from "UserProfileStore" /* 7621 */;
@@ -79,8 +79,8 @@ class WishlistEmptyState {
   }
 }
 const View = fn(17).View;
-let closure_9 = fn(8780).isCollectiblesWishlistItemRecord;
-const getWishlistProductLines = fn(8778).getWishlistProductLines;
+let closure_9 = fn(8785).isCollectiblesWishlistItemRecord;
+const getWishlistProductLines = fn(8783).getWishlistProductLines;
 let Constants = fn(8183);
 ({ TrackUserProfileWishlistActions: closure_14, UserProfileSections: closure_15 } = Constants);
 Constants = fn(1074);
@@ -585,7 +585,7 @@ export default function UserProfileWishlistGrid(wishlistId) {
     obj.productLines = tmp4;
     trackUserProfileWishlistAction(obj);
     obj = { wishlistId, analyticsContext: context, analyticsLocations };
-    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(13089, dependencyMap.paths), "EditWishlistActionSheet", obj, "stack");
+    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(13093, dependencyMap.paths), "EditWishlistActionSheet", obj, "stack");
   }, items14);
   const callback1 = obj11.useCallback(() => {
     let obj = { action: constants.PRESS_ADD_WISHLIST_ITEM, wishlistId, productLines: null };

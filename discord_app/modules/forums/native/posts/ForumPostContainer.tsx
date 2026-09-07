@@ -1,10 +1,10 @@
-// === Module 12020: ForumPostContainer ===
+// === Module 12024: ForumPostContainer ===
 
-// Module 12020 (ForumPostContainer)
+// Module 12024 (ForumPostContainer)
 import nativeDefault from "native" /* 576 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4296 */;
 import Card from "Card" /* 5607 */;
-import useNativeForumPostHandlersDefault from "useNativeForumPostHandlers" /* 10219 */;
+import useNativeForumPostHandlersDefault from "useNativeForumPostHandlers" /* 10224 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

@@ -1,12 +1,12 @@
-// === Module 15459: SettingsChatScreen ===
+// === Module 15462: SettingsChatScreen ===
 
-// Module 15459 (SettingsChatScreen)
+// Module 15462 (SettingsChatScreen)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import UserSettingsModalActionCreatorsDefault from "UserSettingsModalActionCreators" /* 6990 */;
-import _modDef10398 from "module_10398" /* 10398 */;
-import SettingBuilders from "SettingBuilders" /* 11468 */;
-import SettingLayoutDefault from "SettingLayout" /* 14689 */;
+import _modDef10403 from "module_10403" /* 10403 */;
+import SettingBuilders from "SettingBuilders" /* 11473 */;
+import SettingLayoutDefault from "SettingLayout" /* 14692 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1371 */;
 import SubscriptionStore from "SubscriptionStore" /* 4224 */;
@@ -32,7 +32,7 @@ function VideoUploadQualityNitroUpsell() {
     obj = { style: tmp3.card, children: null };
     obj1 = { border: "none", shadow: "none", children: null };
     const obj2 = { style: tmp3.cardContent, children: null };
-    const obj3 = { style: tmp3.cardIcon, source: _modDef10398, size: tmp(1178).Icon.Sizes.SMALL, color: nativeDefault.unsafe_rawColors.PRIMARY_400 };
+    const obj3 = { style: tmp3.cardIcon, source: _modDef10403, size: tmp(1178).Icon.Sizes.SMALL, color: nativeDefault.unsafe_rawColors.PRIMARY_400 };
     const items2 = [closure_9(tmp(1178).Icon, obj3), ];
     const obj4 = { variant: "text-sm/medium", color: "text-muted", children: null };
     const intl2 = tmp(1114).intl;

@@ -1,15 +1,15 @@
-// === Module 13133: FramesEarlyAccessBadge ===
+// === Module 13137: FramesEarlyAccessBadge ===
 
-// Module 13133 (FramesEarlyAccessBadge)
+// Module 13137 (FramesEarlyAccessBadge)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import shared from "shared" /* 4411 */;
 import useThemeDefault from "useTheme" /* 4495 */;
 import Text_Text from "Text/Text" /* 4556 */;
 import LayerScope from "LayerScope" /* 7156 */;
-import NitroWheelIcon from "NitroWheelIcon" /* 8662 */;
-import useCanPurchaseFrames from "useCanPurchaseFrames" /* 8830 */;
-import useTooltip from "useTooltip" /* 11128 */;
+import NitroWheelIcon from "NitroWheelIcon" /* 8667 */;
+import useCanPurchaseFrames from "useCanPurchaseFrames" /* 8835 */;
+import useTooltip from "useTooltip" /* 11133 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 

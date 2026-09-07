@@ -1,6 +1,6 @@
-// === Module 17754: FormChannelPicker ===
+// === Module 17757: FormChannelPicker ===
 
-// Module 17754 (FormChannelPicker)
+// Module 17757 (FormChannelPicker)
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4527 */;
 import noop from "module_19" /* 19 */;
@@ -41,7 +41,7 @@ export default function FormChannelPicker(channelId) {
       }
       obj.selectedChannelId = id;
       obj.onChannelSelected = onChange;
-      obj.openLazy(asyncRequireImpl(17755, dependencyMap.paths), "ChannelSelectorActionSheet", obj);
+      obj.openLazy(asyncRequireImpl(17758, dependencyMap.paths), "ChannelSelectorActionSheet", obj);
     },
     children: null
   };
@@ -71,7 +71,7 @@ export default function FormChannelPicker(channelId) {
   obj.children = stringResult;
   items3[1] = closure_4(channelId(stateFromStores[13]).Text, obj);
   const tmpResult = require("TouchableHitBox");
-  items3[2] = closure_4(channelId(stateFromStores[15]).Icon, { size: channelId(stateFromStores[15]).Icon.Sizes.MEDIUM, source: require("module_9939") });
+  items3[2] = closure_4(channelId(stateFromStores[15]).Icon, { size: channelId(stateFromStores[15]).Icon.Sizes.MEDIUM, source: require("module_9944") });
   obj.children = items3;
   return closure_5(tmpResult, obj);
 };

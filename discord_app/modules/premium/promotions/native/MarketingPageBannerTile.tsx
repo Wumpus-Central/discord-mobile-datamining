@@ -1,11 +1,11 @@
-// === Module 13398: MarketingPageBannerTile ===
+// === Module 13402: MarketingPageBannerTile ===
 
-// Module 13398 (MarketingPageBannerTile)
+// Module 13402 (MarketingPageBannerTile)
 import nativeDefault from "native" /* 576 */;
 import LinkingDefault from "Linking" /* 4255 */;
 import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7162 */;
-import useTrackImpressionDefault from "useTrackImpression" /* 8768 */;
-import NitroUpsellButtonDefault from "NitroUpsellButton" /* 9970 */;
+import useTrackImpressionDefault from "useTrackImpression" /* 8773 */;
+import NitroUpsellButtonDefault from "NitroUpsellButton" /* 9975 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
@@ -31,7 +31,7 @@ export default function MarketingPageBannerTile(bannerFields) {
   let helpArticleLinkProps;
   ({ style, cardStyle, componentId, promotionId, analyticsPage, onPaymentSuccess, onPaymentDismiss } = bannerFields);
   const tmp = closure_7();
-  let obj = helpArticleLinkProps(13399);
+  let obj = helpArticleLinkProps(13403);
   const button = bannerFields.button;
   let buttonAction;
   if (button != null) {
@@ -55,11 +55,11 @@ export default function MarketingPageBannerTile(bannerFields) {
   obj.type = helpArticleLinkProps(1250).ImpressionTypes.VIEW;
   obj.name = helpArticleLinkProps(1250).ImpressionNames.PREMIUM_MARKETING_COMPONENT;
   const tmp2Result = useTrackImpressionDefault;
-  obj.properties = { component_type: helpArticleLinkProps(10742).MarketingComponentType.MARKETING_PAGE_BANNER, component_id: componentId, promotion_id: promotionId };
+  obj.properties = { component_type: helpArticleLinkProps(10747).MarketingComponentType.MARKETING_PAGE_BANNER, component_id: componentId, promotion_id: promotionId };
   tmp2Result(obj);
-  let tmp4Result = tmp4(13402);
+  let tmp4Result = tmp4(13406);
   const formatStringWithCommonPremiumParams = tmp4Result.useFormatStringWithCommonPremiumParams(bannerFields.body);
-  tmp4Result = tmp4(13402);
+  tmp4Result = tmp4(13406);
   helpArticleLinkProps = tmp4Result.getHelpArticleLinkProps(bannerFields.helpArticle, bannerFields.helpArticleId);
   const obj2 = { style: null, children: null };
   const items = [tmp.container, style];

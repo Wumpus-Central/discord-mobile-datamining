@@ -1,9 +1,9 @@
-// === Module 15331: RoleColorsSetting ===
+// === Module 15334: RoleColorsSetting ===
 
-// Module 15331 (RoleColorsSetting)
+// Module 15334 (RoleColorsSetting)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1114 */;
-import AccessibilityActionCreators from "AccessibilityActionCreators" /* 14437 */;
+import AccessibilityActionCreators from "AccessibilityActionCreators" /* 14440 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4552 */;
 
@@ -32,7 +32,7 @@ function useRoleColorSettingOptions() {
     return items;
   }, []);
 }
-fn(11468);
+fn(11473);
 let SettingBuilders = {
   useTitle() {
     const intl = util.intl;

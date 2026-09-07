@@ -1,16 +1,16 @@
-// === Module 9466: ChannelCallModal ===
+// === Module 9471: ChannelCallModal ===
 
-// Module 9466 (ChannelCallModal)
+// Module 9471 (ChannelCallModal)
 import ReanimatedRexport from "ReanimatedRexport" /* 4296 */;
 import NavigationRouteUtils from "NavigationRouteUtils" /* 4417 */;
 import PrivateChannelCallUtils from "PrivateChannelCallUtils" /* 4767 */;
-import VoiceChatHooks from "VoiceChatHooks" /* 9471 */;
-import RevealProvider from "RevealProvider" /* 9474 */;
-import CameraPreviewDefault from "CameraPreview" /* 9484 */;
-import ChannelCallModalManagerDefault from "ChannelCallModalManager" /* 9656 */;
-import ChannelCallNavigatorDefault from "ChannelCallNavigator" /* 9657 */;
-import PanGestureAnimations from "PanGestureAnimations" /* 12781 */;
-import RouteManagerUtils from "RouteManagerUtils" /* 12782 */;
+import VoiceChatHooks from "VoiceChatHooks" /* 9476 */;
+import RevealProvider from "RevealProvider" /* 9479 */;
+import CameraPreviewDefault from "CameraPreview" /* 9489 */;
+import ChannelCallModalManagerDefault from "ChannelCallModalManager" /* 9661 */;
+import ChannelCallNavigatorDefault from "ChannelCallNavigator" /* 9662 */;
+import PanGestureAnimations from "PanGestureAnimations" /* 12785 */;
+import RouteManagerUtils from "RouteManagerUtils" /* 12786 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ChannelRTCStore from "ChannelRTCStore" /* 4576 */;
@@ -52,10 +52,10 @@ class ChannelCallModal {
     return jsx(closure_30, obj);
   }
 }
-const ChannelCallStore = fn(9467);
+const ChannelCallStore = fn(9472);
 ({ useChannelCallOrientationHandlers: closure_7, resetChannelCallStore: closure_8, useChannelCallStore: closure_9, setVoiceChatDrawerState: c10, useIsVoiceChatFocused: closure_11 } = ChannelCallStore);
-let VoiceChatDrawerState = fn(9468).VoiceChatDrawerState;
-const Constants = fn(9473);
+let VoiceChatDrawerState = fn(9473).VoiceChatDrawerState;
+const Constants = fn(9478);
 ({ PAN_GESTURE_FAIL_OFFSET_Y: map1, SWIPE_TO_CHAT_ACTIVE_OFFSET: closure_14 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_15, jsxs: closure_16 } = jsxProd);
@@ -67,10 +67,10 @@ let closure_18 = noop.memo((arg0) => {
     if (null != first) {
       ChannelCallModalManagerDefault.initialize(tmp);
       return () => {
-        closure_1_1(9656).terminate();
-        const obj = closure_1_1(9656);
-        closure_1_1(9481).setHidden(false);
-        const obj2 = closure_1_1(9481);
+        closure_1_1(9661).terminate();
+        const obj = closure_1_1(9661);
+        closure_1_1(9486).setHidden(false);
+        const obj2 = closure_1_1(9486);
         if (!obj3.isModalOpen(closure_1_31)) {
           closure_1_8();
         }

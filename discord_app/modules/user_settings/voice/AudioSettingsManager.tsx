@@ -1,12 +1,12 @@
-// === Module 17319: AudioSettingsManager ===
+// === Module 17322: AudioSettingsManager ===
 
-// Module 17319 (AudioSettingsManager)
+// Module 17322 (AudioSettingsManager)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import Storage2 from "Storage" /* 510 */;
 import UserSettingsProtoActionCreators from "UserSettingsProtoActionCreators" /* 1940 */;
-import AudioSettingsUtils from "AudioSettingsUtils" /* 9092 */;
-import AudioSettingsDefaultVolumes from "AudioSettingsDefaultVolumes" /* 9093 */;
-import AudioSettingsPending from "AudioSettingsPending" /* 14071 */;
+import AudioSettingsUtils from "AudioSettingsUtils" /* 9097 */;
+import AudioSettingsDefaultVolumes from "AudioSettingsDefaultVolumes" /* 9098 */;
+import AudioSettingsPending from "AudioSettingsPending" /* 14074 */;
 import _slicedToArray from "module_32" /* 32 */;
 import GameConsoleStore from "GameConsoleStore" /* 4577 */;
 import SoundboardStore from "SoundboardStore" /* 5012 */;
@@ -116,7 +116,7 @@ function handleSetLocalMute(arg0) {
     const PreloadedUserSettingsActionCreators = UserSettingsProtoActionCreators.PreloadedUserSettingsActionCreators;
     PreloadedUserSettingsActionCreators.updateAsync("audioContextSettings", async (arg0) => {
       closure_0 = arg0;
-      let result = closure_0(14071).drainPendingAudioSettings((arg0, arg1, arg2) => {
+      let result = closure_0(14074).drainPendingAudioSettings((arg0, arg1, arg2) => {
         let diff;
         let obj = AudioSettingsUtils;
         const result = obj.coerceAudioContextForProto(arg0);
@@ -190,7 +190,7 @@ function handleSetLocalSoundboardMute(userId) {
     const PreloadedUserSettingsActionCreators = UserSettingsProtoActionCreators.PreloadedUserSettingsActionCreators;
     PreloadedUserSettingsActionCreators.updateAsync("audioContextSettings", async (arg0) => {
       closure_0 = arg0;
-      let result = closure_0(14071).drainPendingAudioSettings((arg0, arg1, arg2) => {
+      let result = closure_0(14074).drainPendingAudioSettings((arg0, arg1, arg2) => {
         let diff;
         let obj = AudioSettingsUtils;
         const result = obj.coerceAudioContextForProto(arg0);
@@ -280,7 +280,7 @@ let closure_12 = apply.debounce(() => {
   const PreloadedUserSettingsActionCreators = UserSettingsProtoActionCreators.PreloadedUserSettingsActionCreators;
   PreloadedUserSettingsActionCreators.updateAsync("audioContextSettings", async (arg0) => {
     closure_0 = arg0;
-    let result = closure_0(14071).drainPendingAudioSettings((arg0, arg1, arg2) => {
+    let result = closure_0(14074).drainPendingAudioSettings((arg0, arg1, arg2) => {
       let diff;
       let obj = AudioSettingsUtils;
       const result = obj.coerceAudioContextForProto(arg0);
@@ -342,7 +342,7 @@ let closure_12 = apply.debounce(() => {
     return false;
   }, UserSettingsProtoActionCreators.UserSettingsDelay.INFREQUENT_USER_ACTION);
 }, 2000);
-let closure_13 = apply.debounce(fn(9448).remoteAudioSettingsUpdate, 500, { maxWait: 500 });
+let closure_13 = apply.debounce(fn(9453).remoteAudioSettingsUpdate, 500, { maxWait: 500 });
 let prototype = function AudioSettingsManager() {
   const applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
   applyArgumentsResult.actions = { POST_CONNECTION_OPEN: handleConnectionOpen, AUDIO_SET_LOCAL_VOLUME: handleSetLocalVolume, AUDIO_TOGGLE_LOCAL_MUTE: handleSetLocalMute, AUDIO_TOGGLE_LOCAL_SOUNDBOARD_MUTE: handleSetLocalSoundboardMute, MEDIA_ENGINE_RESET_SETTINGS: handleResetMediaEngineSettings };

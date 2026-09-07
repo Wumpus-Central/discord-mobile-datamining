@@ -1,6 +1,6 @@
-// === Module 12478: ProgressItem ===
+// === Module 12482: ProgressItem ===
 
-// Module 12478 (ProgressItem)
+// Module 12482 (ProgressItem)
 import nativeDefault from "native" /* 576 */;
 import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 4740 */;
 import noop from "module_19" /* 19 */;

@@ -1,6 +1,6 @@
-// === Module 17530: GuildSettingsModalOverview ===
+// === Module 17533: GuildSettingsModalOverview ===
 
-// Module 17530 (GuildSettingsModalOverview)
+// Module 17533 (GuildSettingsModalOverview)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import native from "native" /* 1178 */;
@@ -22,19 +22,19 @@ import NavScrim from "NavScrim" /* 7040 */;
 import TextArea from "TextArea" /* 7085 */;
 import TableSwitchRow from "TableSwitchRow" /* 7201 */;
 import HeaderActionButton from "HeaderActionButton" /* 7377 */;
-import Form from "Form" /* 8593 */;
-import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 9063 */;
-import openChannelPickerDefault from "openChannelPicker" /* 11329 */;
-import ChannelSummariesExperiment from "ChannelSummariesExperiment" /* 11347 */;
-import MobileBoostProgressBarExperiment from "MobileBoostProgressBarExperiment" /* 16157 */;
-import AssetChooserDefault from "AssetChooser" /* 17531 */;
+import Form from "Form" /* 8598 */;
+import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 9068 */;
+import openChannelPickerDefault from "openChannelPicker" /* 11334 */;
+import ChannelSummariesExperiment from "ChannelSummariesExperiment" /* 11352 */;
+import MobileBoostProgressBarExperiment from "MobileBoostProgressBarExperiment" /* 16160 */;
+import AssetChooserDefault from "AssetChooser" /* 17534 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 import GuildMemberCountStore from "GuildMemberCountStore" /* 4480 */;
 import PermissionStore from "PermissionStore" /* 4199 */;
 import RelationshipStore from "RelationshipStore" /* 4209 */;
 import UserStore from "UserStore" /* 1371 */;
-import GuildSettingsStore from "GuildSettingsStore" /* 9064 */;
+import GuildSettingsStore from "GuildSettingsStore" /* 9069 */;
 
 require = fn;
 let closure_3 = fn(1975).isGuildOwnerWithRequiredMfaLevel;
@@ -379,7 +379,7 @@ prototype["renderSystemMessageSettings"] = function renderSystemMessageSettings(
     hasFlagResult1 = tmp(1384).hasFlag(guild.systemChannelFlags, constants5.SUPPRESS_ROLE_SUBSCRIPTION_PURCHASE_NOTIFICATION_REPLIES);
     const tmpResult1 = tmp(1384);
   }
-  let result1 = tmp(17336).isPastVcActivityMessagesEnabled(guild.id, "GuildSettingsModalOverview");
+  let result1 = tmp(17339).isPastVcActivityMessagesEnabled(guild.id, "GuildSettingsModalOverview");
   if (!result1) {
     result1 = tmp(1384).hasFlag(guild.systemChannelFlags, constants5.SUPPRESS_VOICE_SESSION_NOTIFICATIONS);
     const tmpResult3 = tmp(1384);
@@ -400,7 +400,7 @@ prototype["renderSystemMessageSettings"] = function renderSystemMessageSettings(
   const intl5 = tmp(1114).intl;
   obj1.label = intl5.string(tmp(1114).t["+f0bXQ"]);
   obj1.disabled = !canManage;
-  const tmpResult2 = tmp(17336);
+  const tmpResult2 = tmp(17339);
   obj1.value = !tmp(1384).hasFlag(guild.systemChannelFlags, constants5.SUPPRESS_JOIN_NOTIFICATIONS);
   obj1.onValueChange = self.handleSystemJoinMessages;
   items[1] = closure_1_19(tmp(7201).TableSwitchRow, obj1);

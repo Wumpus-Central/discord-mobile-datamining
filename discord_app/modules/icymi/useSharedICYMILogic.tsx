@@ -1,6 +1,6 @@
-// === Module 16485: useSharedICYMILogic ===
+// === Module 16488: useSharedICYMILogic ===
 
-// Module 16485 (useSharedICYMILogic)
+// Module 16488 (useSharedICYMILogic)
 import ICYMITypes from "ICYMITypes" /* 8348 */;
 import ICYMIUtils from "ICYMIUtils" /* 8350 */;
 import ICYMIActionCreatorsDefault from "ICYMIActionCreators" /* 8351 */;
@@ -10,7 +10,7 @@ import noop from "module_19" /* 19 */;
 import ICYMIStore from "ICYMIStore" /* 8335 */;
 
 require = fn;
-const SCROLL_EVENT_THROTTLE_MS = fn(16451).SCROLL_EVENT_THROTTLE_MS;
+const SCROLL_EVENT_THROTTLE_MS = fn(16454).SCROLL_EVENT_THROTTLE_MS;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/icymi/useSharedICYMILogic.tsx");
 

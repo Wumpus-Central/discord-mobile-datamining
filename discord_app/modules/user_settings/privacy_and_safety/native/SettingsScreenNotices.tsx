@@ -1,12 +1,12 @@
-// === Module 14815: SettingsScreenNotices ===
+// === Module 14818: SettingsScreenNotices ===
 
-// Module 14815 (SettingsScreenNotices)
+// Module 14818 (SettingsScreenNotices)
 import nativeDefault from "native" /* 576 */;
 import AgeVerificationUtils from "AgeVerificationUtils" /* 4773 */;
 import RegionalFeatureConfigUtils from "RegionalFeatureConfigUtils" /* 5423 */;
 import AgeGatedFeature from "AgeGatedFeature" /* 5424 */;
-import FamilyCenterSettingsNoticeDefault from "FamilyCenterSettingsNotice" /* 14816 */;
-import AgeConfirmationNoticeDefault from "AgeConfirmationNotice" /* 14818 */;
+import FamilyCenterSettingsNoticeDefault from "FamilyCenterSettingsNotice" /* 14819 */;
+import AgeConfirmationNoticeDefault from "AgeConfirmationNotice" /* 14821 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1371 */;
 
@@ -31,7 +31,7 @@ items[1] = {
     }
     return false === nsfwAllowed;
   },
-  Component: fn(14817).SensitiveContentFiltersTeenNotice
+  Component: fn(14820).SensitiveContentFiltersTeenNotice
 };
 const obj3 = {
   order: 300,
@@ -43,7 +43,7 @@ const obj3 = {
     }
     return false === nsfwAllowed;
   },
-  Component: fn(14817).SensitiveContentFiltersTeenNotice
+  Component: fn(14820).SensitiveContentFiltersTeenNotice
 };
 items[2] = {
   order: 200,

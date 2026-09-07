@@ -1,6 +1,6 @@
-// === Module 9766: StageChannelAgeVerificationNoticeForEvent ===
+// === Module 9771: StageChannelAgeVerificationNoticeForEvent ===
 
-// Module 9766 (StageChannelAgeVerificationNoticeForEvent)
+// Module 9771 (StageChannelAgeVerificationNoticeForEvent)
 import nativeDefault from "native" /* 576 */;
 import AgeVerificationUtils from "AgeVerificationUtils" /* 4773 */;
 import useStageSpeakingForCurrentUser from "useStageSpeakingForCurrentUser" /* 5422 */;
@@ -9,7 +9,7 @@ import noop from "module_19" /* 19 */;
 const native = Text(1178);
 const CircleInformationIcon = Text(4515);
 const Text_Text = Text(4556);
-const WarningIcon2 = Text(8588);
+const WarningIcon2 = Text(8593);
 require = fn;
 function StageChannelAgeVerificationNoticeContent(onConfirmPress) {
   onConfirmPress = onConfirmPress.onConfirmPress;

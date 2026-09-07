@@ -1,19 +1,19 @@
-// === Module 16611: VibegrationsSettingsSheet ===
+// === Module 16614: VibegrationsSettingsSheet ===
 
-// Module 16611 (VibegrationsSettingsSheet)
+// Module 16614 (VibegrationsSettingsSheet)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import _modDef3547 from "module_3547" /* 3547 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import VibegrationsChatStore from "VibegrationsChatStore" /* 16586 */;
-import VibegrationsConnectionStore from "VibegrationsConnectionStore" /* 16589 */;
-import VibegrationsProjectStore from "VibegrationsProjectStore" /* 16587 */;
+import VibegrationsChatStore from "VibegrationsChatStore" /* 16589 */;
+import VibegrationsConnectionStore from "VibegrationsConnectionStore" /* 16592 */;
+import VibegrationsProjectStore from "VibegrationsProjectStore" /* 16590 */;
 
 require = fn;
 const View = fn(17).View;
-let VibegrationsConnectionStore = fn(16589);
+let VibegrationsConnectionStore = fn(16592);
 ({ requestProjectRebuild: closure_8, sendUserMessage: closure_9, submitProjectSettings: c10 } = VibegrationsConnectionStore);
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14, Fragment: closure_15 } = jsxProd);
@@ -359,7 +359,7 @@ export default function VibegrationsSettingsSheet(projectId) {
     return items;
   }, items4);
   let someResult = found1.some((item) => map.has(item));
-  const segmentedControlState = projectId(9792).useSegmentedControlState({ items: memo3, pageWidth: tmp24, defaultIndex: num, onSetActiveIndex: tmp22 });
+  const segmentedControlState = projectId(9797).useSegmentedControlState({ items: memo3, pageWidth: tmp24, defaultIndex: num, onSetActiveIndex: tmp22 });
   if (tmp19) {
     let tmp28 = 1 === tmp21;
   } else {
@@ -496,9 +496,9 @@ export default function VibegrationsSettingsSheet(projectId) {
                   if (application_id == null) {
                     _null = null;
                   }
-                  _null2(13254)(_null);
+                  _null2(13258)(_null);
                   let prop;
-                  const tmp19 = _null2(13254);
+                  const tmp19 = _null2(13258);
                   if (project2 != null) {
                     prop = project2.preview_application_id;
                   }
@@ -506,8 +506,8 @@ export default function VibegrationsSettingsSheet(projectId) {
                   if (prop == null) {
                     _null2 = null;
                   }
-                  _null2(13254)(_null2);
-                  const tmp27 = _null2(13254);
+                  _null2(13258)(_null2);
+                  const tmp27 = _null2(13258);
                 }
               }
               obj = _null2(4527);
@@ -595,7 +595,7 @@ export default function VibegrationsSettingsSheet(projectId) {
     if (tmp19) {
       const obj6 = { onLayout: callback, children: null };
       const obj7 = { state: segmentedControlState };
-      obj6.children = tmp32(tmp4(9793).SegmentedControl, obj7);
+      obj6.children = tmp32(tmp4(9798).SegmentedControl, obj7);
       tmp32Result2 = tmp32(tmp34, obj6);
     }
     const items9 = [tmp32Result2, ];

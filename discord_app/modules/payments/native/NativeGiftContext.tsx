@@ -1,6 +1,6 @@
-// === Module 10699: NativeGiftContext ===
+// === Module 10704: NativeGiftContext ===
 
-// Module 10699 (NativeGiftContext)
+// Module 10704 (NativeGiftContext)
 import LoggerDefault from "Logger" /* 3 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import util from "util" /* 1114 */;
@@ -11,14 +11,14 @@ import AnalyticsLocationDefault from "AnalyticsLocation" /* 7182 */;
 import ContextUtilsDefault from "ContextUtils" /* 7428 */;
 import BadgeId from "BadgeId" /* 8184 */;
 import BadgeDirectoryActionCreators from "BadgeDirectoryActionCreators" /* 8197 */;
-import PremiumAnalyticsUtils from "PremiumAnalyticsUtils" /* 10663 */;
-import PremiumGiftingIntentActionCreators from "PremiumGiftingIntentActionCreators" /* 10744 */;
+import PremiumAnalyticsUtils from "PremiumAnalyticsUtils" /* 10668 */;
+import PremiumGiftingIntentActionCreators from "PremiumGiftingIntentActionCreators" /* 10749 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import BadgeDirectoryStore from "BadgeDirectoryStore" /* 8192 */;
-import PromotionsStore from "PromotionsStore" /* 10665 */;
-import GiftCodeRecord from "GiftCodeRecord" /* 10700 */;
+import PromotionsStore from "PromotionsStore" /* 10670 */;
+import GiftCodeRecord from "GiftCodeRecord" /* 10705 */;
 import UserStore from "UserStore" /* 1371 */;
 
 require = fn;
@@ -270,7 +270,7 @@ export const NativeGiftContextProvider = function NativeGiftContextProvider(base
     closure_130_10 = tmp5;
     closure_130_11 = tmp9;
     closure_130_12 = tmp26;
-    obj = { orderId: "a", planId: 150, planSelection: "center", giftInfo: "center" };
+    obj = { orderId: "a", planId: false, planSelection: false, giftInfo: "a" };
     obj = { premiumType, planInterval: first1 };
     obj.planSelection = obj;
     closure_130_13 = obj.useRef(obj);

@@ -1,6 +1,6 @@
-// === Module 9040: InAppReportsRemediationsElement ===
+// === Module 9045: InAppReportsRemediationsElement ===
 
-// Module 9040 (InAppReportsRemediationsElement)
+// Module 9045 (InAppReportsRemediationsElement)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import TableRowGroup from "TableRowGroup" /* 5687 */;

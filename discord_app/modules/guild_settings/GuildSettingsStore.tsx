@@ -1,6 +1,6 @@
-// === Module 9064: GuildSettingsStore ===
+// === Module 9069: GuildSettingsStore ===
 
-// Module 9064 (GuildSettingsStore)
+// Module 9069 (GuildSettingsStore)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import _modDef12 from "module_12" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
@@ -12,12 +12,12 @@ import GuildRecordUtils from "GuildRecordUtils" /* 1971 */;
 import PlainRecord from "PlainRecord" /* 1972 */;
 import GuildRecord from "GuildRecord" /* 1975 */;
 import _modDef4153 from "module_4153" /* 4153 */;
-import GlobalDiscoveryServersConstants from "GlobalDiscoveryServersConstants" /* 9066 */;
-import GuildSettingsServerTagUtils from "GuildSettingsServerTagUtils" /* 9067 */;
-import GuildSettingsVanityURLActionCreators from "GuildSettingsVanityURLActionCreators" /* 9069 */;
-import getDefaultGuildSettingsSection from "getDefaultGuildSettingsSection" /* 9070 */;
-import GuildSettingsFetchActionCreators from "GuildSettingsFetchActionCreators" /* 9071 */;
-import GuildProfileStore from "GuildProfileStore" /* 9065 */;
+import GlobalDiscoveryServersConstants from "GlobalDiscoveryServersConstants" /* 9071 */;
+import GuildSettingsServerTagUtils from "GuildSettingsServerTagUtils" /* 9072 */;
+import GuildSettingsVanityURLActionCreators from "GuildSettingsVanityURLActionCreators" /* 9074 */;
+import getDefaultGuildSettingsSection from "getDefaultGuildSettingsSection" /* 9075 */;
+import GuildSettingsFetchActionCreators from "GuildSettingsFetchActionCreators" /* 9076 */;
+import GuildProfileStore from "GuildProfileStore" /* 9070 */;
 import InviteRecord from "InviteRecord" /* 8380 */;
 import UserRecord from "UserRecord" /* 1385 */;
 import GuildStore from "GuildStore" /* 1979 */;

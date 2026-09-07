@@ -1,6 +1,6 @@
-// === Module 16929: RobloxConnectionCoachmark ===
+// === Module 16932: RobloxConnectionCoachmark ===
 
-// Module 16929 (RobloxConnectionCoachmark)
+// Module 16932 (RobloxConnectionCoachmark)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 576 */;
 import native from "native" /* 1178 */;
@@ -13,13 +13,13 @@ import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4527
 import PlatformsDefault from "Platforms" /* 5283 */;
 import ConnectedAccountsActionCreatorsDefault from "ConnectedAccountsActionCreators" /* 5406 */;
 import openUserSettings from "openUserSettings" /* 7382 */;
-import inlineStyles from "inlineStyles" /* 8453 */;
-import authorizeConnectionDefault from "authorizeConnection" /* 9252 */;
+import inlineStyles from "inlineStyles" /* 8456 */;
+import authorizeConnectionDefault from "authorizeConnection" /* 9257 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ConnectedAccountsStore from "ConnectedAccountsStore" /* 5281 */;
 import UserStore from "UserStore" /* 1371 */;
-import LocalAppDetectionStore from "LocalAppDetectionStore" /* 13711 */;
+import LocalAppDetectionStore from "LocalAppDetectionStore" /* 13715 */;
 
 require = fn;
 function RobloxIcon(theme) {
@@ -133,7 +133,7 @@ export default function RobloxConnectionActionSheet(markAsDismissed) {
   const obj7 = { text: null, icon: null, iconPosition: "end", size: "lg", onPress: null };
   const intl3 = markAsDismissed(1114).intl;
   obj7.text = intl3.string(markAsDismissed(1114).t.ItuabN);
-  obj7.icon = closure_13(markAsDismissed(12956).WindowLaunchIcon, { size: "sm", color: nativeDefault.colors.WHITE });
+  obj7.icon = closure_13(markAsDismissed(12960).WindowLaunchIcon, { size: "sm", color: nativeDefault.colors.WHITE });
   obj7.onPress = function onPress() {
     let obj = ActionSheetActionCreatorsDefault;
     obj.hideActionSheet();
@@ -160,7 +160,7 @@ export default function RobloxConnectionActionSheet(markAsDismissed) {
 export { UnionIcon };
 export const useShouldShowRobloxConnectionCoachmark = function useShouldShowRobloxConnectionCoachmark() {
   const items = [LocalAppDetectionStore];
-  stateFromStores = stateFromStores(504).useStateFromStores(items, () => appInstalled.isAppInstalled(stateFromStores(13712).DetectableAppNames.ROBLOX));
+  stateFromStores = stateFromStores(504).useStateFromStores(items, () => appInstalled.isAppInstalled(stateFromStores(13716).DetectableAppNames.ROBLOX));
   const tmp2 = hasRoloxAccount(noop.useState(false), 2);
   const first = tmp2[0];
   dependencyMap = tmp2[1];

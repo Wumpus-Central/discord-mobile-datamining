@@ -1,9 +1,9 @@
-// === Module 15589: AchievementsIcon ===
+// === Module 15592: AchievementsIcon ===
 
-// Module 15589 (AchievementsIcon)
+// Module 15592 (AchievementsIcon)
 import nativeDefault from "native" /* 576 */;
 import BaseIconImage from "BaseIconImage" /* 4261 */;
-import _mod15590 from "module_15590" /* 15590 */;
+import _mod15593 from "module_15593" /* 15593 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export const AchievementsIcon = function AchievementsIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod15590, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod15593, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 };

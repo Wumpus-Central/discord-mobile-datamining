@@ -1,10 +1,10 @@
-// === Module 15407: DisplayNameStylesAccessibilitySetting ===
+// === Module 15410: DisplayNameStylesAccessibilitySetting ===
 
-// Module 15407 (DisplayNameStylesAccessibilitySetting)
+// Module 15410 (DisplayNameStylesAccessibilitySetting)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1114 */;
 import _modDef2786 from "module_2786" /* 2786 */;
-import AccessibilityActionCreators from "AccessibilityActionCreators" /* 14437 */;
+import AccessibilityActionCreators from "AccessibilityActionCreators" /* 14440 */;
 import AccessibilityStore from "AccessibilityStore" /* 4552 */;
 
 require = fn;
@@ -15,7 +15,7 @@ function useValue() {
 function onValueChange(enabled) {
   const result = AccessibilityActionCreators.setDisplayNameStylesEnabled(enabled);
 }
-fn(11468);
+fn(11473);
 let SettingBuilders = {
   useTitle() {
     const intl = util.intl;

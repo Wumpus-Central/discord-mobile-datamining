@@ -1,6 +1,6 @@
-// === Module 11490: QuestOrbsMultiplier ===
+// === Module 11495: QuestOrbsMultiplier ===
 
-// Module 11490 (QuestOrbsMultiplier)
+// Module 11495 (QuestOrbsMultiplier)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_common/js/shared/shared-constants/QuestOrbsMultiplier.tsx");

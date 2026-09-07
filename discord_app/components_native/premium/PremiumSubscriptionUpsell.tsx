@@ -1,6 +1,6 @@
-// === Module 13539: PremiumSubscriptionUpsell ===
+// === Module 13543: PremiumSubscriptionUpsell ===
 
-// Module 13539 (PremiumSubscriptionUpsell)
+// Module 13543 (PremiumSubscriptionUpsell)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 576 */;
 import ConstantsIOS from "ConstantsIOS" /* 1093 */;
@@ -11,9 +11,9 @@ import CheckmarkLargeIcon from "CheckmarkLargeIcon" /* 4511 */;
 import Text_Text from "Text/Text" /* 4556 */;
 import components_Button_Button from "components/Button/Button" /* 4975 */;
 import LinearGradientDefault from "LinearGradient" /* 4987 */;
-import PremiumFeatureListDefault from "PremiumFeatureList" /* 9391 */;
-import _modDef13540 from "module_13540" /* 13540 */;
-import _modDef13541 from "module_13541" /* 13541 */;
+import PremiumFeatureListDefault from "PremiumFeatureList" /* 9396 */;
+import _modDef13544 from "module_13544" /* 13544 */;
+import _modDef13545 from "module_13545" /* 13545 */;
 import noop from "module_19" /* 19 */;
 import LocaleStore from "LocaleStore" /* 2025 */;
 import UserStore from "UserStore" /* 1371 */;
@@ -85,9 +85,9 @@ export default function PremiumSubscriptionUpsell(arg0) {
     }
     const items3 = [tmp6Result, , ];
     const obj6 = { style: tmp.upsellFeatures, children: null };
-    const obj7 = { style: tmp.upsellFeatureSubLogo, source: _modDef13540 };
+    const obj7 = { style: tmp.upsellFeatureSubLogo, source: _modDef13544 };
     const items4 = [closure_1_10(React4, obj7), , ];
-    const obj8 = { style: tmp.upsellFeatureLogoTier2, source: _modDef13541 };
+    const obj8 = { style: tmp.upsellFeatureLogoTier2, source: _modDef13545 };
     items4[1] = closure_1_10(React4, obj8);
     const obj9 = { style: tmp.upsellFeatureList, features: null, labelStyle: null, rowStyle: null };
     const obj10 = { IconComponent: CheckmarkLargeIcon.CheckmarkLargeIcon, label: null, color: null };

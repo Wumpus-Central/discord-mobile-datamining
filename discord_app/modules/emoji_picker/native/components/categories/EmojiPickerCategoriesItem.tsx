@@ -1,6 +1,6 @@
-// === Module 10348: EmojiPickerCategoriesItem ===
+// === Module 10353: EmojiPickerCategoriesItem ===
 
-// Module 10348 (EmojiPickerCategoriesItem)
+// Module 10353 (EmojiPickerCategoriesItem)
 import nativeDefault from "native" /* 576 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4296 */;
 import timing from "timing" /* 4561 */;

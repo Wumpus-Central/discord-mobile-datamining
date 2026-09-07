@@ -1,10 +1,10 @@
-// === Module 9819: GuildEventRsvpPickerActionSheet ===
+// === Module 9824: GuildEventRsvpPickerActionSheet ===
 
-// Module 9819 (GuildEventRsvpPickerActionSheet)
+// Module 9824 (GuildEventRsvpPickerActionSheet)
 import nativeDefault from "native" /* 576 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4527 */;
-import GuildScheduledEventModalActionCreators from "GuildScheduledEventModalActionCreators" /* 9698 */;
-import GuildEventRsvpUtils from "GuildEventRsvpUtils" /* 9706 */;
+import GuildScheduledEventModalActionCreators from "GuildScheduledEventModalActionCreators" /* 9703 */;
+import GuildEventRsvpUtils from "GuildEventRsvpUtils" /* 9711 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -28,9 +28,9 @@ export default function GuildEventRsvpPickerActionSheet(event) {
   let defaultValue;
   closure_5 = undefined;
   const tmp = closure_9();
-  const tmp4 = _slicedToArray(defaultValue.useState(event(9706).ResponseOptions.SERIES), 2);
+  const tmp4 = _slicedToArray(defaultValue.useState(event(9711).ResponseOptions.SERIES), 2);
   defaultValue = tmp4[0];
-  let obj = event(9706);
+  let obj = event(9711);
   const existingRsvp = obj.getExistingRsvp(event.id, null);
   let response;
   if (existingRsvp != null) {
@@ -48,7 +48,7 @@ export default function GuildEventRsvpPickerActionSheet(event) {
   obj = { header: closure_7(tmp2(7149).BottomSheetTitleHeader, { title: stringResult }), children: null };
   obj = { bottom: true, style: tmp.container, children: null };
   const obj1 = { defaultValue, onChange: tmp4[1], hasIcons: false, children: null };
-  const responseOptions = event(9706).getResponseOptions();
+  const responseOptions = event(9711).getResponseOptions();
   obj1.children = responseOptions.map((value) => closure_1_7(event(dependencyMap[13]).TableRadioRow, { value: value.value, label: value.name }, value.value));
   const items = [closure_7(event(5685).TableRadioGroup, obj1), ];
   let obj2 = { style: tmp.buttonWrapper, children: null };

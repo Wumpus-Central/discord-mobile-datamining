@@ -1,6 +1,6 @@
-// === Module 9982: MobileAudioOutputExperiment ===
+// === Module 9987: MobileAudioOutputExperiment ===
 
-// Module 9982 (MobileAudioOutputExperiment)
+// Module 9987 (MobileAudioOutputExperiment)
 import ApexExperiment from "ApexExperiment" /* 1433 */;
 import size from "module_2" /* 2 */;
 

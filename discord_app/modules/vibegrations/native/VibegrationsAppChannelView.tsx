@@ -1,17 +1,17 @@
-// === Module 16613: VibegrationsAppChannelView ===
+// === Module 16616: VibegrationsAppChannelView ===
 
-// Module 16613 (VibegrationsAppChannelView)
+// Module 16616 (VibegrationsAppChannelView)
 import nativeDefault from "native" /* 576 */;
-import FramesActionCreatorsDefault from "FramesActionCreators" /* 9507 */;
-import FramesNativeManagerDefault from "FramesNativeManager" /* 9568 */;
+import FramesActionCreatorsDefault from "FramesActionCreators" /* 9512 */;
+import FramesNativeManagerDefault from "FramesNativeManager" /* 9573 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import FramesStore from "FramesStore" /* 9510 */;
+import FramesStore from "FramesStore" /* 9515 */;
 
 const require = fn;
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-const FramesConstants = fn(9511);
+const FramesConstants = fn(9516);
 ({ EmbeddedSurfaceType: closure_8, FrameLayoutModes: closure_9, isLaunched: c10 } = FramesConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);

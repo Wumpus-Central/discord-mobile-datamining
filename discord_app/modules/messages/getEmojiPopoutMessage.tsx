@@ -1,6 +1,6 @@
-// === Module 10339: getEmojiPopoutMessage ===
+// === Module 10344: getEmojiPopoutMessage ===
 
-// Module 10339 (getEmojiPopoutMessage)
+// Module 10344 (getEmojiPopoutMessage)
 import util from "util" /* 1114 */;
 import ExpressionSourceRecord from "ExpressionSourceRecord" /* 5585 */;
 import size from "module_2" /* 2 */;

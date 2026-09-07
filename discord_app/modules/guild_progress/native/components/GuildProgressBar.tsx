@@ -1,6 +1,6 @@
-// === Module 13976: GuildProgressBar ===
+// === Module 13979: GuildProgressBar ===
 
-// Module 13976 (GuildProgressBar)
+// Module 13979 (GuildProgressBar)
 import nativeDefault from "native" /* 576 */;
 import timing from "timing" /* 4561 */;
 import timingPresets from "timingPresets" /* 4564 */;
@@ -11,7 +11,7 @@ const View = fn(17).View;
 const jsx = fn(21).jsx;
 fn(4560);
 let createStyles = { wrapper: null, progress: null };
-createStyles = { position: "relative", backgroundColor: fn(12474).PROGRESS_BACKGROUND_COLOR, borderRadius: nativeDefault.radii.xs, height: 8 };
+createStyles = { position: "relative", backgroundColor: fn(12478).PROGRESS_BACKGROUND_COLOR, borderRadius: nativeDefault.radii.xs, height: 8 };
 createStyles.wrapper = createStyles;
 createStyles.progress = { position: "absolute", height: 8, backgroundColor: nativeDefault.colors.BACKGROUND_BRAND, borderRadius: nativeDefault.radii.xs };
 let closure_6 = createStyles.createStyles(createStyles);

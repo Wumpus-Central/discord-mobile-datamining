@@ -1,14 +1,14 @@
-// === Module 15465: DataSavingModeSetting ===
+// === Module 15468: DataSavingModeSetting ===
 
-// Module 15465 (DataSavingModeSetting)
+// Module 15468 (DataSavingModeSetting)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1114 */;
 import UserSettings from "UserSettings" /* 1935 */;
-import UserSettingsText from "UserSettingsText" /* 15463 */;
+import UserSettingsText from "UserSettingsText" /* 15466 */;
 import UnsyncedUserSettingsStore from "UnsyncedUserSettingsStore" /* 1185 */;
 
 require = fn;
-fn(11468);
+fn(11473);
 let SettingBuilders = {
   useTitle() {
     const intl = util.intl;

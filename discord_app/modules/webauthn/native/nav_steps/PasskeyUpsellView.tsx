@@ -1,20 +1,20 @@
-// === Module 14661: PasskeyUpsellView ===
+// === Module 14664: PasskeyUpsellView ===
 
-// Module 14661 (PasskeyUpsellView)
+// Module 14664 (PasskeyUpsellView)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2024 */;
 import NavigatorHeader from "NavigatorHeader" /* 5624 */;
 import NativeCeremoniesDefault from "NativeCeremonies" /* 6949 */;
-import PasskeyUpsellManagerDefault from "PasskeyUpsellManager" /* 14662 */;
-import _modDef14666 from "module_14666" /* 14666 */;
+import PasskeyUpsellManagerDefault from "PasskeyUpsellManager" /* 14665 */;
+import _modDef14669 from "module_14669" /* 14669 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, Image: metroRequire, ScrollView: closure_7 } = get_ActivityIndicator);
-const WebAuthnScreens = fn(14657).WebAuthnScreens;
+const WebAuthnScreens = fn(14660).WebAuthnScreens;
 const HelpdeskArticles = fn(1074).HelpdeskArticles;
 const ContentDismissActionType = fn(1954).ContentDismissActionType;
 const jsxProd = fn(21);
@@ -71,14 +71,14 @@ export default function PasskeyUpsellView() {
   obj = { contentContainerStyle: tmp4.scrollViewContainer, children: null };
   obj1 = { style: tmp4.headerContainer, children: null };
   const tmp6 = onRegisterSuccess(onCancel.useState(false), 2);
-  const items1 = [closure_11(closure_6, { source: _modDef14666, style: tmp4.headerImage }), , ];
+  const items1 = [closure_11(closure_6, { source: _modDef14669, style: tmp4.headerImage }), , ];
   const obj3 = { accessibilityRole: "header", variant: "heading-xl/bold", color: "mobile-text-heading-primary", style: tmp4.headerText, children: null };
   let intl = navigation(1114).intl;
   obj3.children = intl.string(navigation(1114).t.CjleBl);
   items1[1] = closure_11(navigation(4556).Text, obj3);
   const obj4 = { variant: "heading-md/normal", color: "text-default", style: tmp4.headerText, children: null };
   let obj8 = navigation(1115);
-  const obj2 = { source: _modDef14666, style: tmp4.headerImage };
+  const obj2 = { source: _modDef14669, style: tmp4.headerImage };
   const intl2 = navigation(1114).intl;
   const string = intl2.string;
   const t = navigation(1114).t;

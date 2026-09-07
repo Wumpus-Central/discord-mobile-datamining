@@ -1,22 +1,22 @@
-// === Module 11340: ChatView ===
+// === Module 11345: ChatView ===
 
-// Module 11340 (ChatView)
+// Module 11345 (ChatView)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import PlatformUtils from "PlatformUtils" /* 1115 */;
 import ChatInputUtils from "ChatInputUtils" /* 4425 */;
 import LazyLoadedThreadManagerDefault from "LazyLoadedThreadManager" /* 7314 */;
-import SummaryActionCreators from "SummaryActionCreators" /* 11344 */;
-import ChatViewWrapperDefault from "ChatViewWrapper" /* 11349 */;
-import ChatViewStickyHeaderDefault from "ChatViewStickyHeader" /* 11362 */;
-import MessagesDefault from "Messages" /* 11424 */;
-import ChatInputDefault from "ChatInput" /* 11958 */;
-import JumpToPresentButtonDefault from "JumpToPresentButton" /* 12267 */;
-import ChatBeginningRowDefault from "ChatBeginningRow" /* 12468 */;
-import PortalKeyboardInlineComponentDefault from "PortalKeyboardInlineComponent" /* 12637 */;
-import ChatPlaceholderDefault from "ChatPlaceholder" /* 12638 */;
-import ChannelSafeAreaBottomDefault from "ChannelSafeAreaBottom" /* 12642 */;
-import VoiceMessageOverlayDefault from "VoiceMessageOverlay" /* 12645 */;
+import SummaryActionCreators from "SummaryActionCreators" /* 11349 */;
+import ChatViewWrapperDefault from "ChatViewWrapper" /* 11354 */;
+import ChatViewStickyHeaderDefault from "ChatViewStickyHeader" /* 11367 */;
+import MessagesDefault from "Messages" /* 11429 */;
+import ChatInputDefault from "ChatInput" /* 11962 */;
+import JumpToPresentButtonDefault from "JumpToPresentButton" /* 12271 */;
+import ChatBeginningRowDefault from "ChatBeginningRow" /* 12472 */;
+import PortalKeyboardInlineComponentDefault from "PortalKeyboardInlineComponent" /* 12641 */;
+import ChatPlaceholderDefault from "ChatPlaceholder" /* 12642 */;
+import ChannelSafeAreaBottomDefault from "ChannelSafeAreaBottom" /* 12646 */;
+import VoiceMessageOverlayDefault from "VoiceMessageOverlay" /* 12649 */;
 import noop from "module_19" /* 19 */;
 import GatewayConnectionStore from "GatewayConnectionStore" /* 5277 */;
 import ChannelStore from "ChannelStore" /* 1957 */;

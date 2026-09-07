@@ -1,6 +1,6 @@
-// === Module 11823: MentionableSelectComponentActionSheet ===
+// === Module 11828: MentionableSelectComponentActionSheet ===
 
-// Module 11823 (MentionableSelectComponentActionSheet)
+// Module 11828 (MentionableSelectComponentActionSheet)
 import nativeDefault from "native" /* 576 */;
 import native from "native" /* 1178 */;
 import Text_Text from "Text/Text" /* 4556 */;
@@ -8,9 +8,9 @@ import InteractionComponentTypes from "InteractionComponentTypes" /* 4792 */;
 import guild_boosting_RoleIconUtils from "guild_boosting/RoleIconUtils" /* 7187 */;
 import RoleIconDefault from "RoleIcon" /* 7188 */;
 import SearchableSelectActionComponentUtils from "SearchableSelectActionComponentUtils" /* 8120 */;
-import ShieldUserIcon from "ShieldUserIcon" /* 9752 */;
-import DiscordTagDefault from "DiscordTag" /* 9803 */;
-import UserIcon from "UserIcon" /* 11825 */;
+import ShieldUserIcon from "ShieldUserIcon" /* 9757 */;
+import DiscordTagDefault from "DiscordTag" /* 9808 */;
+import UserIcon from "UserIcon" /* 11830 */;
 import noop from "module_19" /* 19 */;
 import GuildRoleStore from "GuildRoleStore" /* 2015 */;
 import GuildStore from "GuildStore" /* 1979 */;

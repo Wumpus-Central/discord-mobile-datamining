@@ -1,6 +1,6 @@
-// === Module 13079: UserProfileConnections ===
+// === Module 13083: UserProfileConnections ===
 
-// Module 13079 (UserProfileConnections)
+// Module 13083 (UserProfileConnections)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
@@ -16,10 +16,10 @@ import TableRowGroup from "TableRowGroup" /* 5687 */;
 import ClipboardUtils from "ClipboardUtils" /* 7190 */;
 import UserProfileCardDefault from "UserProfileCard" /* 7207 */;
 import MaskedLinkUtils from "MaskedLinkUtils" /* 8370 */;
-import ConnectionMetadataVanityItems from "ConnectionMetadataVanityItems" /* 11575 */;
-import _modDef11580 from "module_11580" /* 11580 */;
-import _modDef11581 from "module_11581" /* 11581 */;
-import useUserProfileApplicationRoleConnectionsDefault from "useUserProfileApplicationRoleConnections" /* 13083 */;
+import ConnectionMetadataVanityItems from "ConnectionMetadataVanityItems" /* 11580 */;
+import _modDef11585 from "module_11585" /* 11585 */;
+import _modDef11586 from "module_11586" /* 11586 */;
+import useUserProfileApplicationRoleConnectionsDefault from "useUserProfileApplicationRoleConnections" /* 13087 */;
 import noop from "module_19" /* 19 */;
 import LocaleStore from "LocaleStore" /* 2025 */;
 import StreamerModeStore from "StreamerModeStore" /* 4405 */;
@@ -42,10 +42,10 @@ function VerifiedIcon(arg0) {
       let WHITE = nativeDefault.unsafe_rawColors.BLACK;
     }
     obj = { style: tmp.verifiedIconContainer, children: null };
-    obj = { source: _modDef11580, color: PLATFORM_TWITTER };
+    obj = { source: _modDef11585, color: PLATFORM_TWITTER };
     const merged = Object.assign(obj);
     const items = [closure_1_12(native2.Icon, obj), ];
-    obj1 = { source: _modDef11581, color: WHITE };
+    obj1 = { source: _modDef11586, color: WHITE };
     const merged1 = Object.assign(obj);
     items[1] = closure_1_12(native2.Icon, obj1);
     obj.children = items;
@@ -411,7 +411,7 @@ export const UserProfileAccountConnectionsCard = function UserProfileAccountConn
   const stateFromStores = userId(504).useStateFromStores(items1, () => StreamerModeStore.hidePersonalInformation);
   const obj3 = userId(504);
   const tmp5 = theme;
-  ({ connections, appIdentities } = theme(13080)(userId));
+  ({ connections, appIdentities } = theme(13084)(userId));
   if (!stateFromStores) {
     const items2 = [];
     let arraySpreadResult = HermesBuiltin.arraySpread(connections.map((account) => closure_2_12(closure_18, { account, theme, locale, userId }, account.id)), 0);

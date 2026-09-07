@@ -1,11 +1,11 @@
-// === Module 8810: AvatarDecorationSampleV2 ===
+// === Module 8815: AvatarDecorationSampleV2 ===
 
-// Module 8810 (AvatarDecorationSampleV2)
+// Module 8815 (AvatarDecorationSampleV2)
 import _modDef38 from "module_38" /* 38 */;
 import nativeDefault from "native" /* 576 */;
 import CollectiblesItemType from "CollectiblesItemType" /* 1889 */;
-import _modDef8811 from "module_8811" /* 8811 */;
-import CutoutableAvatarDecorationDefault from "CutoutableAvatarDecoration" /* 8812 */;
+import _modDef8816 from "module_8816" /* 8816 */;
+import CutoutableAvatarDecorationDefault from "CutoutableAvatarDecoration" /* 8817 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -42,7 +42,7 @@ export default function AvatarDecorationSampleV2(arg0) {
   let obj = { style: items, resizeMode: "contain", source: null, accessible: false };
   items[1] = solidAvatar;
   if (null == avatarSource) {
-    avatarSource = _modDef8811;
+    avatarSource = _modDef8816;
   }
   obj = { children: null, source: avatarSource };
   const items1 = [hasOwnProperty(React3, obj), ];

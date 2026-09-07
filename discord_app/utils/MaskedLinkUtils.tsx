@@ -220,8 +220,8 @@ export const handleClick = function handleClick(href, preventDefault, arg2) {
         if (preventDefault != null) {
           preventDefault.preventDefault();
         }
-        tmp3(12948).show(tmp8);
-        const tmp3Result3 = tmp3(12948);
+        tmp3(12952).show(tmp8);
+        const tmp3Result3 = tmp3(12952);
       } else {
         let trustedResult = trusted;
         if (typeof trusted === "function") {
@@ -252,9 +252,9 @@ export const handleClick = function handleClick(href, preventDefault, arg2) {
             preventDefault.preventDefault();
           }
           if (tmp56) {
-            obj4 = { url: tmp8, trustUrl: tmp53(12955).trustProtocol, onConfirm: handleConfirm, onCancel, isProtocol: true, contextKey };
-            tmp3(12953).show(obj4);
-            const tmp3Result4 = tmp3(12953);
+            obj4 = { url: tmp8, trustUrl: tmp53(12959).trustProtocol, onConfirm: handleConfirm, onCancel, isProtocol: true, contextKey };
+            tmp3(12957).show(obj4);
+            const tmp3Result4 = tmp3(12957);
           } else {
             const punycodeLinkResult = tmp53(5001).punycodeLink(tmp8);
             let displayTarget = tmp8;
@@ -262,9 +262,9 @@ export const handleClick = function handleClick(href, preventDefault, arg2) {
               displayTarget = punycodeLinkResult.displayTarget;
             }
             const tmp53Result = tmp53(5001);
-            const obj5 = { url: displayTarget, trustUrl: tmp53(12955).trustDomain, onConfirm: handleConfirm, onCancel, isProtocol: false, contextKey };
-            tmp3(12953).show(obj5);
-            const tmp3Result5 = tmp3(12953);
+            const obj5 = { url: displayTarget, trustUrl: tmp53(12959).trustDomain, onConfirm: handleConfirm, onCancel, isProtocol: false, contextKey };
+            tmp3(12957).show(obj5);
+            const tmp3Result5 = tmp3(12957);
           }
         }
         if (null == preventDefault) {

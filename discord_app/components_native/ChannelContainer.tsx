@@ -1,12 +1,12 @@
-// === Module 10077: ChannelContainer ===
+// === Module 10082: ChannelContainer ===
 
-// Module 10077 (ChannelContainer)
+// Module 10082 (ChannelContainer)
 import initialize from "initialize" /* 504 */;
 import dismissible_content from "dismissible_content" /* 1943 */;
 import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 4380 */;
 import useChatLayoutDefault from "useChatLayout" /* 4420 */;
-import common_NotificationsDefault from "common/Notifications" /* 10078 */;
-import useChannelStylesShared from "useChannelStylesShared" /* 11323 */;
+import common_NotificationsDefault from "common/Notifications" /* 10083 */;
+import useChannelStylesShared from "useChannelStylesShared" /* 11328 */;
 import noop from "module_19" /* 19 */;
 import LurkingStore from "LurkingStore" /* 4200 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
@@ -52,7 +52,7 @@ export const ChannelContainer = function ChannelContainer(children) {
   ({ channel, isStageChannel } = stateFromStoresObject);
   let tmp5 = !isStageChannel;
   if (isStageChannel) {
-    tmp5 = channelId(9583)(stateFromStoresObject.voiceChannelId);
+    tmp5 = channelId(9588)(stateFromStoresObject.voiceChannelId);
   }
   let tmpResult = initialize;
   const items1 = [LurkingStore];
@@ -106,13 +106,13 @@ export const ChannelContainer = function ChannelContainer(children) {
     tmp15 = null;
     if (stateFromStores) {
       const obj1 = { channel };
-      tmp15 = closure_10(channelId(11324), obj1);
+      tmp15 = closure_10(channelId(11329), obj1);
     }
   }
   const items3 = [tmp15, children.children, ];
   if (tmp5) {
     const obj2 = { style: channelStyles.callPTTButton };
-    tmp5 = closure_10(channelId(9695), obj2);
+    tmp5 = closure_10(channelId(9700), obj2);
   }
   items3[2] = tmp5;
   obj.children = items3;

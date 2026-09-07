@@ -1,12 +1,12 @@
-// === Module 11831: GuildAntiRaidActionCreators ===
+// === Module 11836: GuildAntiRaidActionCreators ===
 
-// Module 11831 (GuildAntiRaidActionCreators)
+// Module 11836 (GuildAntiRaidActionCreators)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
 import HTTPUtils from "HTTPUtils" /* 1272 */;
 import _modDef4153 from "module_4153" /* 4153 */;
 import AppAnalyticsUtils from "AppAnalyticsUtils" /* 4740 */;
-import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 9063 */;
-import getGuildSafetyAlertsChannelIdDefault from "getGuildSafetyAlertsChannelId" /* 10102 */;
+import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 9068 */;
+import getGuildSafetyAlertsChannelIdDefault from "getGuildSafetyAlertsChannelId" /* 10107 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import GuildStore from "GuildStore" /* 1979 */;
 

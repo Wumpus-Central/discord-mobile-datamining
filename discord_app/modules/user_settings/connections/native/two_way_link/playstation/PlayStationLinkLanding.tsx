@@ -1,12 +1,12 @@
-// === Module 9256: PlayStationLinkLanding ===
+// === Module 9261: PlayStationLinkLanding ===
 
-// Module 9256 (PlayStationLinkLanding)
+// Module 9261 (PlayStationLinkLanding)
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2024 */;
-import _modDef9257 from "module_9257" /* 9257 */;
+import _modDef9262 from "module_9262" /* 9262 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
-let closure_4 = fn(9255).PlayStationLinkModalScenes;
+let closure_4 = fn(9260).PlayStationLinkModalScenes;
 const HelpdeskArticles = fn(1074).HelpdeskArticles;
 const jsx = fn(21).jsx;
 const createStyles = fn(4560);
@@ -33,14 +33,14 @@ export const PlayStationLinkLanding = function PlayStationLinkLanding(platformTy
     obj = { label: null, icon: null };
     const intl3 = navigation(1114).intl;
     obj.label = intl3.string(navigation(1114).t.ZH4QFa);
-    obj.icon = navigation(9223).GameControllerIcon;
+    obj.icon = navigation(9228).GameControllerIcon;
     items[1] = obj;
     return items;
   }, []);
   const callback = noop.useCallback(() => {
     navigation.push(constants.PRE_CONNECT);
   }, items);
-  const memo1 = noop.useMemo(() => ({ uri: _modDef9257 }), []);
+  const memo1 = noop.useMemo(() => ({ uri: _modDef9262 }), []);
   obj = { platformType: platformType.platformType, img: memo1, imgStyle: tmp.image, headerConnect: null, headerReconnect: null, body: null, onNext: null, valueProps: null };
   let intl2 = navigation(1114).intl;
   obj.headerConnect = intl2.string(navigation(1114).t.xAWHOy);
@@ -49,5 +49,5 @@ export const PlayStationLinkLanding = function PlayStationLinkLanding(platformTy
   obj.body = intl.format(navigation(1114).t.kqZQNe, { helpdeskArticleUrl: articleURL });
   obj.onNext = callback;
   obj.valueProps = memo;
-  return jsx(navigation(9225).TwoWayLinkLanding, { platformType: platformType.platformType, img: memo1, imgStyle: tmp.image, headerConnect: null, headerReconnect: null, body: null, onNext: null, valueProps: null });
+  return jsx(navigation(9230).TwoWayLinkLanding, { platformType: platformType.platformType, img: memo1, imgStyle: tmp.image, headerConnect: null, headerReconnect: null, body: null, onNext: null, valueProps: null });
 };

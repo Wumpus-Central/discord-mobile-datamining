@@ -1,6 +1,6 @@
-// === Module 12235: ChatInputActions ===
+// === Module 12239: ChatInputActions ===
 
-// Module 12235 (ChatInputActions)
+// Module 12239 (ChatInputActions)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
@@ -8,18 +8,18 @@ import mergeProps from "mergeProps" /* 4267 */;
 import ImageIcon from "ImageIcon" /* 5087 */;
 import AppsIcon from "AppsIcon" /* 5106 */;
 import ImagePickerUtils from "ImagePickerUtils" /* 5151 */;
-import AttachmentIcon from "AttachmentIcon" /* 10112 */;
-import PollsIcon from "PollsIcon" /* 10638 */;
-import CameraIcon from "CameraIcon" /* 10653 */;
-import CalendarPlusIcon from "CalendarPlusIcon" /* 12209 */;
-import ThreadPlusIcon from "ThreadPlusIcon" /* 12237 */;
-import ChatInputActionButtonDefault from "ChatInputActionButton" /* 12239 */;
-import MediaKeyboardButtonIcon from "MediaKeyboardButtonIcon" /* 12240 */;
+import AttachmentIcon from "AttachmentIcon" /* 10117 */;
+import PollsIcon from "PollsIcon" /* 10643 */;
+import CameraIcon from "CameraIcon" /* 10658 */;
+import CalendarPlusIcon from "CalendarPlusIcon" /* 12213 */;
+import ThreadPlusIcon from "ThreadPlusIcon" /* 12241 */;
+import ChatInputActionButtonDefault from "ChatInputActionButton" /* 12243 */;
+import MediaKeyboardButtonIcon from "MediaKeyboardButtonIcon" /* 12244 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const ChatInputConstants = fn(11962);
+const ChatInputConstants = fn(11966);
 ({ ChatInputActionType: hasOwnProperty, ChatInputOmniButtonActionType: metroRequire } = ChatInputConstants);
 const AnalyticEvents = fn(1074).AnalyticEvents;
 const jsxProd = fn(21);

@@ -1,6 +1,6 @@
-// === Module 17524: useChannelsAllowedToUnlink ===
+// === Module 17527: useChannelsAllowedToUnlink ===
 
-// Module 17524 (useChannelsAllowedToUnlink)
+// Module 17527 (useChannelsAllowedToUnlink)
 import GuildChannelStore from "GuildChannelStore" /* 2012 */;
 import PermissionStore from "PermissionStore" /* 4199 */;
 

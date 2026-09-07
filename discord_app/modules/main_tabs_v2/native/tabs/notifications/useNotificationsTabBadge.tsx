@@ -1,6 +1,6 @@
-// === Module 16394: useNotificationsTabBadge ===
+// === Module 16397: useNotificationsTabBadge ===
 
-// Module 16394 (useNotificationsTabBadge)
+// Module 16397 (useNotificationsTabBadge)
 import noop from "module_19" /* 19 */;
 import NotificationCenterItemsStore from "NotificationCenterItemsStore" /* 7639 */;
 

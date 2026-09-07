@@ -1,6 +1,6 @@
-// === Module 10933: LobbyUtils ===
+// === Module 10938: LobbyUtils ===
 
-// Module 10933 (LobbyUtils)
+// Module 10938 (LobbyUtils)
 import PermissionStore from "PermissionStore" /* 4199 */;
 
 const require = fn;

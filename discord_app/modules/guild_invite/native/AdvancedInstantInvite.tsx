@@ -1,6 +1,6 @@
-// === Module 17795: AdvancedInstantInvite ===
+// === Module 17798: AdvancedInstantInvite ===
 
-// Module 17795 (AdvancedInstantInvite)
+// Module 17798 (AdvancedInstantInvite)
 import util from "util" /* 1114 */;
 import FlagUtils from "FlagUtils" /* 1384 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
@@ -66,13 +66,13 @@ export default function AdvancedInstantInvite(maxAge) {
     }
     if (tmp) {
       const obj = { assignableRoles, selectedRoleIds: roleIds, onSave: onChangeRoleIds };
-      obj.openLazy(asyncRequireImpl(17798, dependencyMap.paths), "SelectInviteRolesActionSheet", obj, "stack");
+      obj.openLazy(asyncRequireImpl(17801, dependencyMap.paths), "SelectInviteRolesActionSheet", obj, "stack");
     }
   }, items);
   const items2 = [maxUses, maxUsesOptions, onChangeMaxUses];
   const callback1 = maxUsesOptions.useCallback(() => {
     if (null != onChangeMaxAge) {
-      const tmp5 = asyncRequireImpl(17799, dependencyMap.paths);
+      const tmp5 = asyncRequireImpl(17802, dependencyMap.paths);
       const obj = { title: null, options: null, value: null, onChange: null };
       const intl = util.intl;
       obj.title = intl.string(util.t.gKmKP0);
@@ -85,7 +85,7 @@ export default function AdvancedInstantInvite(maxAge) {
   const items3 = [tmp16Result, roleIds];
   const callback2 = maxUsesOptions.useCallback(() => {
     if (null != onChangeMaxUses) {
-      const tmp5 = asyncRequireImpl(17799, dependencyMap.paths);
+      const tmp5 = asyncRequireImpl(17802, dependencyMap.paths);
       const obj = { title: null, options: null, value: null, onChange: null };
       const intl = util.intl;
       obj.title = intl.string(util.t["+3vH1h"]);

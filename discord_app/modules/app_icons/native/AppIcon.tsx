@@ -1,6 +1,6 @@
-// === Module 15523: AppIcon ===
+// === Module 15526: AppIcon ===
 
-// Module 15523 (AppIcon)
+// Module 15526 (AppIcon)
 import nativeDefault from "native" /* 576 */;
 import shared from "shared" /* 4411 */;
 import useThemeDefault from "useTheme" /* 4495 */;
@@ -9,7 +9,7 @@ import noop from "module_19" /* 19 */;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ Image: c3, View: closure_4 } = get_ActivityIndicator);
-const getIconById = fn(9323).getIconById;
+const getIconById = fn(9328).getIconById;
 const jsx = fn(21).jsx;
 fn(4560);
 let createStyles = { container: null, image: null };

@@ -1,6 +1,6 @@
-// === Module 12983: getMediaViewerStateForScreen ===
+// === Module 12987: getMediaViewerStateForScreen ===
 
-// Module 12983 (getMediaViewerStateForScreen)
+// Module 12987 (getMediaViewerStateForScreen)
 import MediaSourceUtil from "MediaSourceUtil" /* 8263 */;
 import size from "module_2" /* 2 */;
 

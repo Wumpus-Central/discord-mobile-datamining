@@ -1,11 +1,11 @@
-// === Module 9697: GuildScheduledEventPrompts ===
+// === Module 9702: GuildScheduledEventPrompts ===
 
-// Module 9697 (GuildScheduledEventPrompts)
+// Module 9702 (GuildScheduledEventPrompts)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import Form from "Form" /* 8593 */;
-import useManageResourcePermissions from "useManageResourcePermissions" /* 9671 */;
-import GuildScheduledEventModalActionCreators from "GuildScheduledEventModalActionCreators" /* 9698 */;
+import Form from "Form" /* 8598 */;
+import useManageResourcePermissions from "useManageResourcePermissions" /* 9676 */;
+import GuildScheduledEventModalActionCreators from "GuildScheduledEventModalActionCreators" /* 9703 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -33,7 +33,7 @@ export const ScheduleEventPrompt = function ScheduleEventPrompt(isLive) {
           const obj = { channel };
           const result = obj.openCreateOrEditGuildEventModal(closure_1_0, obj);
         },
-      iconSource: channel(9783),
+      iconSource: channel(9788),
       iconStyle: null,
       iconContainerStyle: null,
       completed: null,
@@ -52,7 +52,7 @@ export const ScheduleEventPrompt = function ScheduleEventPrompt(isLive) {
           const obj = { channel };
           const result = obj.openCreateOrEditGuildEventModal(closure_1_0, obj);
         },
-      iconSource: channel(9783),
+      iconSource: channel(9788),
       iconStyle: null,
       iconContainerStyle: null,
       completed: null,
@@ -68,7 +68,7 @@ export const StartEventPrompt = function StartEventPrompt(event) {
   ({ channel, isLive } = event);
   const tmp = closure_4();
   ({ name, scheduled_start_time } = event);
-  let obj = event(9671);
+  let obj = event(9676);
   let tmp4 = null;
   if (obj.useManageResourcePermissions(channel).canManageGuildEvent(event)) {
     obj = {
@@ -76,7 +76,7 @@ export const StartEventPrompt = function StartEventPrompt(event) {
       onPress() {
           const result = GuildScheduledEventModalActionCreators.openStartGuildEventModal(event, recurrenceId);
         },
-      iconSource: recurrenceId(9783),
+      iconSource: recurrenceId(9788),
       iconStyle: tmp.iconStyle,
       iconContainerStyle: null,
       completed: null,
@@ -93,7 +93,7 @@ export const StartEventPrompt = function StartEventPrompt(event) {
     const intl2 = tmp2(1114).intl;
     const obj1 = { startTime: tmp2(4242).calendarFormat(recurrenceId(4153)(scheduled_start_time)) };
     obj.subtitle = intl2.formatToPlainString(tmp2(1114).t.PTebCR, obj1);
-    tmp4 = jsx(tmp2(8593).FormCTA, { eventName: name });
+    tmp4 = jsx(tmp2(8598).FormCTA, { eventName: name });
     const tmp2Result = tmp2(4242);
   }
   return tmp4;

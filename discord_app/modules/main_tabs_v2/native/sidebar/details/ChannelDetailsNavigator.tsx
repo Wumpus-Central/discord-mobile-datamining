@@ -1,12 +1,12 @@
-// === Module 16807: ChannelDetailsNavigator ===
+// === Module 16810: ChannelDetailsNavigator ===
 
-// Module 16807 (ChannelDetailsNavigator)
+// Module 16810 (ChannelDetailsNavigator)
 import util from "util" /* 1114 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
 import HeaderShared from "HeaderShared" /* 7863 */;
-import navigateToThreadCreation from "navigateToThreadCreation" /* 11222 */;
-import _modDef12773 from "module_12773" /* 12773 */;
-import ChannelSettingsModal from "ChannelSettingsModal" /* 16808 */;
+import navigateToThreadCreation from "navigateToThreadCreation" /* 11227 */;
+import _modDef12777 from "module_12777" /* 12777 */;
+import ChannelSettingsModal from "ChannelSettingsModal" /* 16811 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 
@@ -34,15 +34,15 @@ function CreateThreadHeaderButton(channel) {
     const intl = tmp(1114).intl;
     obj.accessibilityLabel = intl.string(tmp(1114).t.rBIGBL);
     obj.onPress = tmp4;
-    obj.source = _modDef12773;
+    obj.source = _modDef12777;
     tmp5 = closure_9(tmp(7863).HeaderIconButton, obj);
   }
   return tmp5;
 }
 const View = fn(17).View;
-const constants = fn(10916).ChannelDetailsNavigatorScreens;
+const constants = fn(10921).ChannelDetailsNavigatorScreens;
 const AnalyticEvents = fn(1074).AnalyticEvents;
-const SearchNavigatorScreens = fn(16643).SearchNavigatorScreens;
+const SearchNavigatorScreens = fn(16646).SearchNavigatorScreens;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
 let closure_11 = Object.freeze({});

@@ -1,6 +1,6 @@
-// === Module 16896: RestrictedMessagePreviewHeader ===
+// === Module 16899: RestrictedMessagePreviewHeader ===
 
-// Module 16896 (RestrictedMessagePreviewHeader)
+// Module 16899 (RestrictedMessagePreviewHeader)
 import nativeDefault from "native" /* 576 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
 import ToastUtils from "ToastUtils" /* 4258 */;
@@ -11,7 +11,7 @@ import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-let closure_5 = fn(12443).MOBILE_MESSAGE_REQUESTS_MODAL_KEY;
+let closure_5 = fn(12447).MOBILE_MESSAGE_REQUESTS_MODAL_KEY;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
 fn(4560);
@@ -57,7 +57,7 @@ export default function RestrictedMessagePreviewHeader(channel) {
         user(4763).popWithKey(closure_1_5);
       }
     };
-    obj.openLazy(asyncRequireImpl(12601, dependencyMap.paths), "MutualGuildsActionSheet", obj);
+    obj.openLazy(asyncRequireImpl(12605, dependencyMap.paths), "MutualGuildsActionSheet", obj);
   }, items2);
   obj = { accessibilityRole: "button", accessibilityLabel: null, onPress: null, children: null };
   const intl = channel(analyticsLocations[18]).intl;

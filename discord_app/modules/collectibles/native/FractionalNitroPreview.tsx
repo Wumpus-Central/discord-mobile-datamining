@@ -1,14 +1,14 @@
-// === Module 13141: FractionalNitroPreview ===
+// === Module 13145: FractionalNitroPreview ===
 
-// Module 13141 (FractionalNitroPreview)
+// Module 13145 (FractionalNitroPreview)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import Text_Text from "Text/Text" /* 4556 */;
 import LinearGradientDefault from "LinearGradient" /* 4987 */;
 import FastImageDefault from "FastImage" /* 5587 */;
 import CheckmarkSmallIcon from "CheckmarkSmallIcon" /* 7133 */;
-import _modDef13142 from "module_13142" /* 13142 */;
-import NitroIconDefault from "NitroIcon" /* 13143 */;
+import _modDef13146 from "module_13146" /* 13146 */;
+import NitroIconDefault from "NitroIcon" /* 13147 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -38,7 +38,7 @@ export const FractionalNitroPreview = function FractionalNitroPreview() {
   obj = { colors: ["#000000", "#36266d"], start: VerticalGradient.START, end: VerticalGradient.END, style: tmp.gradient };
   const items1 = [closure_5(LinearGradientDefault, obj), , , ];
   obj = { source: null, style: null };
-  const obj1 = { uri: _modDef13142 };
+  const obj1 = { uri: _modDef13146 };
   obj.source = obj1;
   obj.style = tmp.headerImage;
   items1[1] = closure_5(FastImageDefault, obj);

@@ -1,22 +1,22 @@
-// === Module 8713: GameProfileView ===
+// === Module 8718: GameProfileView ===
 
-// Module 8713 (GameProfileView)
+// Module 8718 (GameProfileView)
 import nativeDefault from "native" /* 576 */;
 import useAnalyticsLocations from "useAnalyticsLocations" /* 7162 */;
 import AnalyticsLocationDefault from "AnalyticsLocation" /* 7182 */;
-import GameProfileHeaderDefault from "GameProfileHeader" /* 8714 */;
-import GameProfileMediaDefault from "GameProfileMedia" /* 8718 */;
-import GameProfileStoreLinksDefault from "GameProfileStoreLinks" /* 8721 */;
-import GameProfileReviewsDefault from "GameProfileReviews" /* 8722 */;
-import GameProfileSummaryDefault from "GameProfileSummary" /* 8732 */;
-import GameProfileLinkAccountDefault from "GameProfileLinkAccount" /* 8733 */;
-import GameProfileCommunityDefault from "GameProfileCommunity" /* 8736 */;
-import GameProfileAnnouncementsDefault from "GameProfileAnnouncements" /* 8750 */;
-import GameProfileShopCarouselDefault from "GameProfileShopCarousel" /* 8763 */;
-import GameProfileSimilarGamesDefault from "GameProfileSimilarGames" /* 8875 */;
-import GameProfileDetailsDefault from "GameProfileDetails" /* 8877 */;
-import GameProfileGameClaimCtaDefault from "GameProfileGameClaimCta" /* 8896 */;
-import GameProfileReportButtonDefault from "GameProfileReportButton" /* 8897 */;
+import GameProfileHeaderDefault from "GameProfileHeader" /* 8719 */;
+import GameProfileMediaDefault from "GameProfileMedia" /* 8723 */;
+import GameProfileStoreLinksDefault from "GameProfileStoreLinks" /* 8726 */;
+import GameProfileReviewsDefault from "GameProfileReviews" /* 8727 */;
+import GameProfileSummaryDefault from "GameProfileSummary" /* 8737 */;
+import GameProfileLinkAccountDefault from "GameProfileLinkAccount" /* 8738 */;
+import GameProfileCommunityDefault from "GameProfileCommunity" /* 8741 */;
+import GameProfileAnnouncementsDefault from "GameProfileAnnouncements" /* 8755 */;
+import GameProfileShopCarouselDefault from "GameProfileShopCarousel" /* 8768 */;
+import GameProfileSimilarGamesDefault from "GameProfileSimilarGames" /* 8880 */;
+import GameProfileDetailsDefault from "GameProfileDetails" /* 8882 */;
+import GameProfileGameClaimCtaDefault from "GameProfileGameClaimCta" /* 8901 */;
+import GameProfileReportButtonDefault from "GameProfileReportButton" /* 8902 */;
 import noop from "module_19" /* 19 */;
 
 const useAnalyticsLocationsDefault = useAnalyticsLocations;

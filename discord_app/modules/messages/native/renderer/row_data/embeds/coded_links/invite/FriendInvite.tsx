@@ -1,6 +1,6 @@
-// === Module 13212: FriendInvite ===
+// === Module 13216: FriendInvite ===
 
-// Module 13212 (FriendInvite)
+// Module 13216 (FriendInvite)
 import _mod17 from "module_17" /* 17 */;
 import util from "util" /* 1114 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1396 */;

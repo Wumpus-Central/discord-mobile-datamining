@@ -1,6 +1,6 @@
-// === Module 17742: RoleTierEditScenesModal ===
+// === Module 17745: RoleTierEditScenesModal ===
 
-// Module 17742 (RoleTierEditScenesModal)
+// Module 17745 (RoleTierEditScenesModal)
 import _modDef38 from "module_38" /* 38 */;
 import ModalActionCreatorsDefault from "ModalActionCreators" /* 4763 */;
 import _slicedToArray from "module_32" /* 32 */;
@@ -18,9 +18,9 @@ function orderify(scene, arg1) {
   }
   return obj;
 }
-const RoleTierEditStore = fn(17729);
+const RoleTierEditStore = fn(17732);
 ({ useCurrentTierEditScene: hasOwnProperty, useResetTierEditState: metroRequire } = RoleTierEditStore);
-let closure_7 = fn(15205).GuildRoleSubscriptionsTierScenes;
+let closure_7 = fn(15208).GuildRoleSubscriptionsTierScenes;
 const jsxProd = fn(21);
 ({ jsx: closure_8, Fragment: closure_9, jsxs: c10 } = jsxProd);
 const createStyles = fn(4560);

@@ -1,13 +1,13 @@
-// === Module 13215: EmbeddedActivityInviteEmbed ===
+// === Module 13219: EmbeddedActivityInviteEmbed ===
 
-// Module 13215 (EmbeddedActivityInviteEmbed)
+// Module 13219 (EmbeddedActivityInviteEmbed)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import util from "util" /* 1114 */;
 import useChannelName from "useChannelName" /* 4713 */;
 import utils_ChannelUtils from "utils/ChannelUtils" /* 5028 */;
 import getEmbedThemeColorsDefault from "getEmbedThemeColors" /* 7945 */;
 import ApplicationAssetUtils from "ApplicationAssetUtils" /* 8139 */;
-import useEmbeddedActivityParticipantAvatarUris from "useEmbeddedActivityParticipantAvatarUris" /* 13216 */;
+import useEmbeddedActivityParticipantAvatarUris from "useEmbeddedActivityParticipantAvatarUris" /* 13220 */;
 import _slicedToArray from "module_32" /* 32 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 1956 */;
 import ApplicationAssetsStore from "ApplicationAssetsStore" /* 8140 */;
@@ -21,7 +21,7 @@ import UserStore from "UserStore" /* 1371 */;
 require = fn;
 const Image = fn(17).Image;
 const FetchState = fn(8140).FetchState;
-const CodedLinkExtendedType = fn(11309).CodedLinkExtendedType;
+const CodedLinkExtendedType = fn(11314).CodedLinkExtendedType;
 const InviteTargetTypes = fn(7736).InviteTargetTypes;
 let closure_16 = ["embedded_cover"];
 const size = fn(2);

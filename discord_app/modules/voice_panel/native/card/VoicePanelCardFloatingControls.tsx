@@ -1,6 +1,6 @@
-// === Module 17152: VoicePanelCardFloatingControls ===
+// === Module 17155: VoicePanelCardFloatingControls ===
 
-// Module 17152 (VoicePanelCardFloatingControls)
+// Module 17155 (VoicePanelCardFloatingControls)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import native from "native" /* 4271 */;
@@ -10,20 +10,20 @@ import spring from "spring" /* 4974 */;
 import NativeViewDefault from "NativeView" /* 5589 */;
 import CircleErrorIcon from "CircleErrorIcon" /* 6610 */;
 import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8179 */;
-import useShouldOpenGameProfileModal from "useShouldOpenGameProfileModal" /* 8676 */;
-import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 8686 */;
-import VoiceStateIcons from "VoiceStateIcons" /* 9119 */;
-import VoiceStateIconUtils from "VoiceStateIconUtils" /* 9120 */;
-import EmbeddedActivitiesNativeManagerDefault from "EmbeddedActivitiesNativeManager" /* 9515 */;
-import VoiceXIcon from "VoiceXIcon" /* 9987 */;
-import _modDef10064 from "module_10064" /* 10064 */;
-import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 12272 */;
-import useStableParticipant from "useStableParticipant" /* 17104 */;
-import useVoicePanelCardUserStateIcons from "useVoicePanelCardUserStateIcons" /* 17106 */;
-import _modDef17108 from "module_17108" /* 17108 */;
-import getRandomNumberInRangeDefault from "getRandomNumberInRange" /* 17138 */;
-import _modDef17153 from "module_17153" /* 17153 */;
-import _modDef17154 from "module_17154" /* 17154 */;
+import useShouldOpenGameProfileModal from "useShouldOpenGameProfileModal" /* 8681 */;
+import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 8691 */;
+import VoiceStateIcons from "VoiceStateIcons" /* 9124 */;
+import VoiceStateIconUtils from "VoiceStateIconUtils" /* 9125 */;
+import EmbeddedActivitiesNativeManagerDefault from "EmbeddedActivitiesNativeManager" /* 9520 */;
+import VoiceXIcon from "VoiceXIcon" /* 9992 */;
+import _modDef10069 from "module_10069" /* 10069 */;
+import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 12276 */;
+import useStableParticipant from "useStableParticipant" /* 17107 */;
+import useVoicePanelCardUserStateIcons from "useVoicePanelCardUserStateIcons" /* 17109 */;
+import _modDef17111 from "module_17111" /* 17111 */;
+import getRandomNumberInRangeDefault from "getRandomNumberInRange" /* 17141 */;
+import _modDef17156 from "module_17156" /* 17156 */;
+import _modDef17157 from "module_17157" /* 17157 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4552 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 1956 */;
@@ -55,13 +55,13 @@ function StreamIcon(voicePlatform) {
   fn.__workletHash = 3270040588948;
   fn.__initData = __initData;
   const animatedStyle = obj.useAnimatedStyle(fn);
-  let tmp2Result = _modDef17108;
+  let tmp2Result = _modDef17111;
   if (voicePlatform === constants2.XBOX) {
-    tmp2Result = _modDef17153;
+    tmp2Result = _modDef17156;
   } else if (voicePlatform === constants2.MOBILE) {
-    tmp2Result = _modDef10064;
+    tmp2Result = _modDef10069;
   } else if (voicePlatform === constants2.QUEST) {
-    tmp2Result = _modDef17154;
+    tmp2Result = _modDef17157;
   }
   obj = { source: tmp2Result, style: null };
   const items = [closure_22().iconWithoutBackground, animatedStyle];
@@ -120,10 +120,10 @@ function AnimatedLabelIcon(icon) {
 }
 get_ActivityIndicator = fn(17);
 ({ Platform, Pressable } = get_ActivityIndicator);
-const VoicePanelConstants = fn(12273);
+const VoicePanelConstants = fn(12277);
 ({ MODE_CHANGE_PHYSICS: closure_9, VoicePanelModes: c10 } = VoicePanelConstants);
-const VoicePanelControlsModes = fn(12271).VoicePanelControlsModes;
-const VOICE_PANEL_CARD_INNER_PADDING = fn(12276).VOICE_PANEL_CARD_INNER_PADDING;
+const VoicePanelControlsModes = fn(12275).VoicePanelControlsModes;
+const VOICE_PANEL_CARD_INNER_PADDING = fn(12280).VOICE_PANEL_CARD_INNER_PADDING;
 const ThemeTypes = fn(1074).ThemeTypes;
 const CallConstants = fn(4581);
 ({ ParticipantTypes: closure_14, VoicePlatforms: closure_15 } = CallConstants);
@@ -161,7 +161,7 @@ let closure_27 = noop.memo((participant) => {
   const controlsHidden = participant.controlsHidden;
   let guildId;
   ({ isSelf, layout } = participant);
-  guildId = noop.useContext(guildId(12272)).guildId;
+  guildId = noop.useContext(guildId(12276)).guildId;
   closure_129_0 = controlsHidden;
   participant(4296);
   const fn = function n() {
@@ -205,9 +205,9 @@ let closure_27 = noop.memo((participant) => {
     }
     tmpResult1 = useStableParticipant;
   }, items);
-  obj = { icon: guildId(17155), onPress: callback, style: animatedStyle, layout, accessibilityLabel: null };
-  const tmp4 = guildId(17035);
-  const result = participant(17104).isStableActivityParticipant(participant);
+  obj = { icon: guildId(17158), onPress: callback, style: animatedStyle, layout, accessibilityLabel: null };
+  const tmp4 = guildId(17038);
+  const result = participant(17107).isStableActivityParticipant(participant);
   const intl = participant(1114).intl;
   const string = intl.string;
   const t = participant(1114).t;
@@ -383,9 +383,9 @@ let closure_39 = noop.memo((arg0) => {
   let gameRecord;
   dependencyMap = undefined;
   noop = undefined;
-  let obj = gameRecord(17158);
+  let obj = gameRecord(17161);
   const showGameTag = obj.useConfig({ location: "VoicePanelCardFloatingControls" }).showGameTag;
-  const first = gameRecord(9179)(userId, arg0.guildId, showGameTag)[0];
+  const first = gameRecord(9184)(userId, arg0.guildId, showGameTag)[0];
   let tmp5;
   if (showGameTag) {
     let application_id;
@@ -394,7 +394,7 @@ let closure_39 = noop.memo((arg0) => {
     }
     tmp5 = application_id;
   }
-  gameRecord = gameRecord(8678)({ applicationId: tmp5 }).gameRecord;
+  gameRecord = gameRecord(8683)({ applicationId: tmp5 }).gameRecord;
   const tmp8 = gameRecord(5111)(gameRecord);
   dependencyMap = tmp8;
   noop = noop.useRef(false);
@@ -421,13 +421,13 @@ let closure_39 = noop.memo((arg0) => {
     if (null != gameRecord) {
       if (!tmp8) {
         obj = { game: gameRecord, userId, textColor };
-        let tmp12 = closure_16(tmp(17159), obj);
+        let tmp12 = closure_16(tmp(17162), obj);
       }
       return tmp12;
     }
   }
-  tmp12 = closure_16(tmp(9184), { userId, textColor });
-  const tmp4 = gameRecord(8678);
+  tmp12 = closure_16(tmp(9189), { userId, textColor });
+  const tmp4 = gameRecord(8683);
 });
 const __initData8 = { code: "function VoicePanelCardFloatingControlsTsx10(){const{hasHiddenVisibleIcon,focused,connected,mode,VoicePanelModes,controlsHidden}=this.__closure;const showIcon=hasHiddenVisibleIcon&&focused.get()==null;return!connected.get()||mode.get()===VoicePanelModes.PIP||!showIcon&&controlsHidden.get();}" };
 const __initData9 = { code: "function VoicePanelCardFloatingControlsTsx11(){const{isPillHidden}=this.__closure;return isPillHidden.get();}" };

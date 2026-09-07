@@ -1,14 +1,14 @@
-// === Module 10387: StickersHooks ===
+// === Module 10392: StickersHooks ===
 
-// Module 10387 (StickersHooks)
+// Module 10392 (StickersHooks)
 import util from "util" /* 1114 */;
 import UserSettings from "UserSettings" /* 1935 */;
 import PermissionUtilsAll from "PermissionUtils" /* 4204 */;
 import StickersUtils from "StickersUtils" /* 4899 */;
 import StickersTypes from "StickersTypes" /* 5268 */;
-import useManageResourcePermissions from "useManageResourcePermissions" /* 9671 */;
-import FrecencyUserSettingsHooks from "FrecencyUserSettingsHooks" /* 10371 */;
-import StickersActionCreators from "StickersActionCreators" /* 10388 */;
+import useManageResourcePermissions from "useManageResourcePermissions" /* 9676 */;
+import FrecencyUserSettingsHooks from "FrecencyUserSettingsHooks" /* 10376 */;
+import StickersActionCreators from "StickersActionCreators" /* 10393 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -367,7 +367,7 @@ export const useFavoriteStickerIds = function useFavoriteStickerIds() {
   return stickerIds;
 };
 export const useFavoriteStickers = function useFavoriteStickers() {
-  const favoriteStickers = stickerIds(10371).useFrecencySettings().favoriteStickers;
+  const favoriteStickers = stickerIds(10376).useFrecencySettings().favoriteStickers;
   stickerIds = undefined;
   if (favoriteStickers != null) {
     stickerIds = favoriteStickers.stickerIds;
@@ -375,7 +375,7 @@ export const useFavoriteStickers = function useFavoriteStickers() {
   if (stickerIds == null) {
     stickerIds = closure_13;
   }
-  const obj = stickerIds(10371);
+  const obj = stickerIds(10376);
   const items = [StickersStore];
   const items1 = [stickerIds];
   return stickerIds(504).useStateFromStoresArray(items, () => {
@@ -419,7 +419,7 @@ export const useLatestFrecentStickerIds = function useLatestFrecentStickerIds() 
   return keys;
 };
 export const useLatestFrecentStickers = function useLatestFrecentStickers() {
-  const frecencySettings = keys(10371).useFrecencySettings();
+  const frecencySettings = keys(10376).useFrecencySettings();
   keys = closure_13;
   let stickers;
   if (frecencySettings != null) {
@@ -438,7 +438,7 @@ export const useLatestFrecentStickers = function useLatestFrecentStickers() {
     }
     keys = Object.keys(stickers1);
   }
-  const obj = keys(10371);
+  const obj = keys(10376);
   const items = [StickersStore];
   const items1 = [keys];
   return keys(504).useStateFromStoresArray(items, () => {

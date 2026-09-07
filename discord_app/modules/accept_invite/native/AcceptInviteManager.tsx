@@ -1,13 +1,13 @@
-// === Module 17301: AcceptInviteManager ===
+// === Module 17304: AcceptInviteManager ===
 
-// Module 17301 (AcceptInviteManager)
+// Module 17304 (AcceptInviteManager)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import router_utils from "router_utils" /* 1100 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4527 */;
 import ModalActionCreatorsDefault from "ModalActionCreators" /* 4763 */;
 import InviteTypeUtils from "InviteTypeUtils" /* 7735 */;
-import FriendInviteUtils from "FriendInviteUtils" /* 17303 */;
+import FriendInviteUtils from "FriendInviteUtils" /* 17306 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 import GuildMemberStore from "GuildMemberStore" /* 2021 */;
@@ -78,7 +78,7 @@ let prototype = function AcceptInviteManager() {
               }
               let obj = { location: str };
               FriendInviteUtils.acceptFriendInvite(invite, obj);
-              DispatcherDefault.wait(() => set(8738).clearDisplayedInvite());
+              DispatcherDefault.wait(() => set(8743).clearDisplayedInvite());
               flag = false;
             }
           }
@@ -129,12 +129,12 @@ let prototype = function AcceptInviteManager() {
           obj9 = InviteTypeUtils;
         }
         if (flag2) {
-          DispatcherDefault.wait(() => set(8738).clearDisplayedInvite());
+          DispatcherDefault.wait(() => set(8743).clearDisplayedInvite());
           flag = false;
         } else {
           ActionSheetActionCreatorsDefault.hideActionSheet();
           obj = { code, isRegistration: applyArgumentsResult._isRegistration, deeplinkAttemptId, inviteInstanceId };
-          ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(17302, dependencyMap.paths), obj, ACCEPT_INVITE_MODAL_KEY);
+          ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(17305, dependencyMap.paths), obj, ACCEPT_INVITE_MODAL_KEY);
           flag = false;
         }
       }

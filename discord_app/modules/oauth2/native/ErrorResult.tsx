@@ -1,13 +1,13 @@
-// === Module 9249: ? ===
+// === Module 9254: ? ===
 
-// Module 9249
+// Module 9254
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import Text_Text from "Text/Text" /* 4556 */;
 import ModalActionCreatorsDefault from "ModalActionCreators" /* 4763 */;
 import components_Button_Button from "components/Button/Button" /* 4975 */;
 import common_SafeAreaView from "common/SafeAreaView" /* 7123 */;
-import _modDef9250 from "module_9250" /* 9250 */;
+import _modDef9255 from "module_9255" /* 9255 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -31,7 +31,7 @@ export default function ErrorResult(error) {
   const tmp = closure_7();
   let obj = { bottom: true, style: tmp.container, children: null };
   obj = { style: tmp.inner, children: null };
-  obj = { source: _modDef9250, style: tmp.image };
+  obj = { source: _modDef9255, style: tmp.image };
   const items = [hasOwnProperty(React3, obj), ];
   const obj1 = { style: tmp.text, variant: "text-md/medium", children: null };
   if (error == null) {

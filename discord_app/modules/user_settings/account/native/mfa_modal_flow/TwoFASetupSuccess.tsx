@@ -1,13 +1,13 @@
-// === Module 14791: TwoFASetupSuccess ===
+// === Module 14794: TwoFASetupSuccess ===
 
-// Module 14791 (TwoFASetupSuccess)
+// Module 14794 (TwoFASetupSuccess)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import native from "native" /* 1178 */;
 import Text_Text from "Text/Text" /* 4556 */;
 import components_Button_Button from "components/Button/Button" /* 4975 */;
-import TwoFASetupModal from "TwoFASetupModal" /* 14782 */;
-import _mod14792 from "module_14792" /* 14792 */;
+import TwoFASetupModal from "TwoFASetupModal" /* 14785 */;
+import _mod14795 from "module_14795" /* 14795 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -95,7 +95,7 @@ export default function TwoFASetupSuccess() {
               c6 = 3;
               throw value;
             } else if (arg0 !== 2) {
-              obj = setError(14781);
+              obj = setError(14784);
               obj.close();
               c4 = 0;
             }
@@ -135,7 +135,7 @@ export default function TwoFASetupSuccess() {
   let obj = { style: tmp.container, children: null };
   obj = { style: tmp.flex };
   const items = [closure_8(closure_6, obj), , , , , , , ];
-  obj = { source: _mod14792, style: tmp.image };
+  obj = { source: _mod14795, style: tmp.image };
   items[1] = closure_8(closure_7, obj);
   let obj1 = { style: tmp.success, variant: "text-lg/semibold", color: "mobile-text-heading-primary", children: null };
   let intl = util.intl;

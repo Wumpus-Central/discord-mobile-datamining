@@ -1,12 +1,12 @@
-// === Module 9523: tryLaunchAsFrame ===
+// === Module 9528: tryLaunchAsFrame ===
 
-// Module 9523 (tryLaunchAsFrame)
-import canLaunchFrame from "canLaunchFrame" /* 9506 */;
-import FramesActionCreatorsDefault from "FramesActionCreators" /* 9507 */;
+// Module 9528 (tryLaunchAsFrame)
+import canLaunchFrame from "canLaunchFrame" /* 9511 */;
+import FramesActionCreatorsDefault from "FramesActionCreators" /* 9512 */;
 import ApplicationStore from "ApplicationStore" /* 4788 */;
 
 require = fn;
-const MAIN_SURFACE = fn(9511).MAIN_SURFACE;
+const MAIN_SURFACE = fn(9516).MAIN_SURFACE;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/activities/utils/tryLaunchAsFrame.tsx");
 

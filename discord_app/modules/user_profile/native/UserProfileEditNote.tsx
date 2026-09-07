@@ -1,6 +1,6 @@
-// === Module 13058: UserProfileEditNote ===
+// === Module 13062: UserProfileEditNote ===
 
-// Module 13058 (UserProfileEditNote)
+// Module 13062 (UserProfileEditNote)
 import NavigatorHeader from "NavigatorHeader" /* 5624 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -57,7 +57,7 @@ export default function UserProfileEditNote(userId) {
         if (closure_5 == null) {
           str = "";
         }
-        const tmp2 = closure_1_1(10923);
+        const tmp2 = closure_1_1(10928);
         tmp2({
           hasEdits: str !== closure_6,
           onHasEdits: closure_1_0(4425).dismissKeyboard,

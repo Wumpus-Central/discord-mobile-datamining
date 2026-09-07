@@ -1,9 +1,9 @@
-// === Module 13393: BuyNitroPerk ===
+// === Module 13397: BuyNitroPerk ===
 
-// Module 13393 (BuyNitroPerk)
+// Module 13397 (BuyNitroPerk)
 import nativeDefault from "native" /* 576 */;
 import TableRow from "TableRow" /* 5605 */;
-import BuyNitroGradientDefault from "BuyNitroGradient" /* 13394 */;
+import BuyNitroGradientDefault from "BuyNitroGradient" /* 13398 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

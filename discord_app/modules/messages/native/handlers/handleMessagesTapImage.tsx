@@ -1,6 +1,6 @@
-// === Module 11546: handleMessagesTapImage ===
+// === Module 11551: handleMessagesTapImage ===
 
-// Module 11546 (handleMessagesTapImage)
+// Module 11551 (handleMessagesTapImage)
 import LinkingDefault from "Linking" /* 4255 */;
 import MediaSourceUtil from "MediaSourceUtil" /* 8263 */;
 import ReferencedMessageStore from "ReferencedMessageStore" /* 7595 */;
@@ -190,6 +190,6 @@ export const handleMessagesTapImage = function handleMessagesTapImage(tapImageDa
       tmp12 = message;
     }
   } else {
-    embedId(11544);
+    embedId(11549);
   }
 };

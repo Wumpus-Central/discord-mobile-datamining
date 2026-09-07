@@ -1,6 +1,6 @@
-// === Module 16936: DisplayNameStylesFlywheelMobileActionSheet ===
+// === Module 16939: DisplayNameStylesFlywheelMobileActionSheet ===
 
-// Module 16936 (DisplayNameStylesFlywheelMobileActionSheet)
+// Module 16939 (DisplayNameStylesFlywheelMobileActionSheet)
 import nativeDefault from "native" /* 576 */;
 import openUserSettings from "openUserSettings" /* 7382 */;
 import noop from "module_19" /* 19 */;
@@ -137,15 +137,15 @@ export default function DisplayNameStylesFlywheelMobileActionSheet(markAsDismiss
   } else {
     if (tmp2Result.isIOS()) {
       const obj9 = { source: null, style: null, resizeMode: "contain", enableAnimation: null };
-      const obj10 = { uri: tmp4(16937) };
+      const obj10 = { uri: tmp4(16940) };
       obj9.source = obj10;
       obj9.style = tmp6.image;
       obj9.enableAnimation = !enabled;
       tmp14Result = closure_9(tmp4(5587), obj9);
       const tmp4Result = tmp4(5587);
     } else {
-      const obj11 = { url: tmp4(16937), style: tmp6.image, autoplay: true };
-      tmp14Result = closure_9(tmp2(8808).APNGPlayer, obj11);
+      const obj11 = { url: tmp4(16940), style: tmp6.image, autoplay: true };
+      tmp14Result = closure_9(tmp2(8813).APNGPlayer, obj11);
     }
     tmp2Result = tmp2(1115);
   }

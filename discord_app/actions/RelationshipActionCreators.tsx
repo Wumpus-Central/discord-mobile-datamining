@@ -1,6 +1,6 @@
-// === Module 9042: RelationshipActionCreators ===
+// === Module 9047: RelationshipActionCreators ===
 
-// Module 9042 (RelationshipActionCreators)
+// Module 9047 (RelationshipActionCreators)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import util from "util" /* 1114 */;
 import HTTPUtils from "HTTPUtils" /* 1272 */;
@@ -10,10 +10,10 @@ import AlertActionCreatorsDefault from "AlertActionCreators" /* 4904 */;
 import openQuarantineModeInfoModalDefault from "openQuarantineModeInfoModal" /* 5522 */;
 import ContextMenuActionCreators from "ContextMenuActionCreators" /* 5553 */;
 import SafetyToastsActionCreatorsDefault from "SafetyToastsActionCreators" /* 8404 */;
-import ClaimAccountModalActionCreatorsAll from "ClaimAccountModalActionCreators" /* 9044 */;
-import UserLimitedAccessUtils from "UserLimitedAccessUtils" /* 9045 */;
-import FriendsUtils from "FriendsUtils" /* 9046 */;
-import ClearAllIncomingRequestsConfirmationModalDefault from "ClearAllIncomingRequestsConfirmationModal" /* 9047 */;
+import ClaimAccountModalActionCreatorsAll from "ClaimAccountModalActionCreators" /* 9049 */;
+import UserLimitedAccessUtils from "UserLimitedAccessUtils" /* 9050 */;
+import FriendsUtils from "FriendsUtils" /* 9051 */;
+import ClearAllIncomingRequestsConfirmationModalDefault from "ClearAllIncomingRequestsConfirmationModal" /* 9052 */;
 import _slicedToArray from "module_32" /* 32 */;
 import UserStore from "UserStore" /* 1371 */;
 
@@ -89,7 +89,7 @@ function handleRelationshipAddError(error, SHOW_ALWAYS, userTag) {
 }
 const Constants = fn(1074);
 ({ Endpoints: metroRequire, AbortCodes: closure_7, RelationshipTypes: closure_8 } = Constants);
-const ClearFriendRequestFilters = fn(9043).ClearFriendRequestFilters;
+const ClearFriendRequestFilters = fn(9048).ClearFriendRequestFilters;
 let obj = { SHOW_ALWAYS: 0, [0]: "SHOW_ALWAYS", SHOW_ONLY_IF_ACTION_NEEDED: 1, [1]: "SHOW_ONLY_IF_ACTION_NEEDED" };
 obj = {
   sendRequest(discordTag) {

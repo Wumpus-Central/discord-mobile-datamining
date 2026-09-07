@@ -1,6 +1,6 @@
-// === Module 9150: SecureFramesUtils ===
+// === Module 9155: SecureFramesUtils ===
 
-// Module 9150 (SecureFramesUtils)
+// Module 9155 (SecureFramesUtils)
 import _modDef38 from "module_38" /* 38 */;
 import byteLengthDefault from "byteLength" /* 206 */;
 import DurationsDefault from "Durations" /* 1090 */;
@@ -10,10 +10,10 @@ import _modDef4153 from "module_4153" /* 4153 */;
 import UserUtilsDefault from "UserUtils" /* 4404 */;
 import NicknameUtilsDefault from "NicknameUtils" /* 4712 */;
 import AlertActionCreatorsDefault from "AlertActionCreators" /* 4904 */;
-import _mod9135 from "module_9135" /* 9135 */;
-import SecureFramesActionCreatorsDefault from "SecureFramesActionCreators" /* 9153 */;
-import SecureFramesPlatformUtilsDefault from "SecureFramesPlatformUtils" /* 9154 */;
-import SecureFramesTracking from "SecureFramesTracking" /* 9161 */;
+import _mod9140 from "module_9140" /* 9140 */;
+import SecureFramesActionCreatorsDefault from "SecureFramesActionCreators" /* 9158 */;
+import SecureFramesPlatformUtilsDefault from "SecureFramesPlatformUtils" /* 9159 */;
+import SecureFramesTracking from "SecureFramesTracking" /* 9166 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
@@ -21,7 +21,7 @@ import MediaEngineStore from "MediaEngineStore" /* 1908 */;
 import RTCConnectionStore from "RTCConnectionStore" /* 4583 */;
 import StreamRTCConnectionStore from "StreamRTCConnectionStore" /* 4599 */;
 import UserStore from "UserStore" /* 1371 */;
-import SecureFramesPersistedStore from "SecureFramesPersistedStore" /* 9151 */;
+import SecureFramesPersistedStore from "SecureFramesPersistedStore" /* 9156 */;
 
 require = fn;
 function getCurrentUserSigningKey() {
@@ -420,7 +420,7 @@ function getIsSecureFramesKeyInconsistent(userId, items) {
   }
   const tmp = _slicedToArray(items, 2);
 }
-const SecureFramesConstants = fn(9152);
+const SecureFramesConstants = fn(9157);
 ({ AnalyticsSecureFramesUserVerification: closure_11, SECURE_FRAMES_PUBLIC_KEY_VERSION: closure_12 } = SecureFramesConstants);
 const Constants = fn(1074);
 ({ LinkingTypes: map1, Routes: closure_14, Endpoints: closure_15, HelpdeskArticles: closure_16 } = Constants);
@@ -450,7 +450,7 @@ export const deleteVerification = function deleteVerification(userId, arg1, isOt
   if (isOtherUserKeyPersistent) {
     const _Uint8Array = Uint8Array;
     const uint8Array = new Uint8Array(arg1);
-    const serializeKeyResult = _mod9135.serializeKey(uint8Array);
+    const serializeKeyResult = _mod9140.serializeKey(uint8Array);
     const result = SecureFramesActionCreatorsDefault.deleteSecureFramesVerifiedKey(userId, serializeKeyResult);
   } else {
     const result1 = SecureFramesActionCreatorsDefault.deleteSecureFramesTransientKey(userId);

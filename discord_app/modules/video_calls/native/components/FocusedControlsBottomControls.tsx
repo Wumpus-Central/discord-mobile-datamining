@@ -1,13 +1,13 @@
-// === Module 9691: FocusedControlsBottomControls ===
+// === Module 9696: FocusedControlsBottomControls ===
 
-// Module 9691 (FocusedControlsBottomControls)
+// Module 9696 (FocusedControlsBottomControls)
 import nativeDefault from "native" /* 576 */;
 import ConstantsIOS from "ConstantsIOS" /* 1093 */;
 import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1109 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4296 */;
 import timing from "timing" /* 4561 */;
-import TooltipActionCreatorsDefault from "TooltipActionCreators" /* 9694 */;
-import CallPTTButton from "CallPTTButton" /* 9695 */;
+import TooltipActionCreatorsDefault from "TooltipActionCreators" /* 9699 */;
+import CallPTTButton from "CallPTTButton" /* 9700 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import TextStyles from "TextStyles" /* 5524 */;
@@ -60,7 +60,7 @@ function FocusedControlsExpanded(availableHeight) {
 function FocusedControlsBottomDrawerTooltip(positionY) {
   positionY = positionY.positionY;
   const tmp = closure_18();
-  let obj = positionY(9692);
+  let obj = positionY(9697);
   const canShowTooltip = obj.useCanShowTooltip(positionY(1093).TooltipNames.SCREENSHARE_SWIPE_UP_CONTROLS, true);
   positionY(4296);
   const fn = function o() {
@@ -637,9 +637,9 @@ class FocusedControlsBottomDrawer {
 }
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, TouchableWithoutFeedback: metroRequire, ScrollView: closure_7, StyleSheet } = get_ActivityIndicator);
-const ChannelCallStore = fn(9467);
+const ChannelCallStore = fn(9472);
 ({ clearFocusTimer: closure_8, resetFocusTimer: closure_9 } = ChannelCallStore);
-const ChannelCallConstants = fn(9468);
+const ChannelCallConstants = fn(9473);
 ({ BOX_MODE_THRESHOLD_WIDTH: c10, BOX_MODE_ACTIONSHEET_HEIGHT: closure_11 } = ChannelCallConstants);
 const Constants = fn(1074);
 ({ ComponentActions: closure_12, Fonts } = Constants);

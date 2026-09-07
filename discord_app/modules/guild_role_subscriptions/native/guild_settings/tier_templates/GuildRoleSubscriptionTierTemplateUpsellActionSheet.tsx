@@ -1,6 +1,6 @@
-// === Module 16249: GuildRoleSubscriptionTierTemplateUpsellActionSheet ===
+// === Module 16252: GuildRoleSubscriptionTierTemplateUpsellActionSheet ===
 
-// Module 16249 (GuildRoleSubscriptionTierTemplateUpsellActionSheet)
+// Module 16252 (GuildRoleSubscriptionTierTemplateUpsellActionSheet)
 import useStateFromStores from "useStateFromStores" /* 563 */;
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
@@ -8,7 +8,7 @@ import Text_Text from "Text/Text" /* 4556 */;
 import components_Button_Button from "components/Button/Button" /* 4975 */;
 import useIsScreenLandscape from "useIsScreenLandscape" /* 5126 */;
 import Sheet_BottomSheet from "Sheet/BottomSheet" /* 7150 */;
-import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 9063 */;
+import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 9068 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4552 */;

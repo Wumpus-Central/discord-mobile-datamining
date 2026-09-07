@@ -1,9 +1,9 @@
-// === Module 15290: SettingsAppearanceChannelRowItem ===
+// === Module 15293: SettingsAppearanceChannelRowItem ===
 
-// Module 15290 (SettingsAppearanceChannelRowItem)
+// Module 15293 (SettingsAppearanceChannelRowItem)
 import nativeDefault from "native" /* 576 */;
 import native2 from "native" /* 1178 */;
-import GroupDMAvatar from "GroupDMAvatar" /* 10910 */;
+import GroupDMAvatar from "GroupDMAvatar" /* 10915 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

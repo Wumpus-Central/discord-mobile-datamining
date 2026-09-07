@@ -1,18 +1,18 @@
-// === Module 16013: guilds/Guilds ===
+// === Module 16016: guilds/Guilds ===
 
-// Module 16013 (guilds/Guilds)
+// Module 16016 (guilds/Guilds)
 import native from "native" /* 4271 */;
 import useColorThemeBackgroundDefault from "useColorThemeBackground" /* 4413 */;
-import QuestsEligibility from "QuestsEligibility" /* 11484 */;
-import QuestDockExternalCoordinationContext from "QuestDockExternalCoordinationContext" /* 15099 */;
-import QuestDockDefault from "QuestDock" /* 15183 */;
-import TabsPerformanceTracker from "TabsPerformanceTracker" /* 16014 */;
-import MainChannelsDefault from "MainChannels" /* 16015 */;
-import YouBarDefault from "YouBar" /* 16362 */;
+import QuestsEligibility from "QuestsEligibility" /* 11489 */;
+import QuestDockExternalCoordinationContext from "QuestDockExternalCoordinationContext" /* 15102 */;
+import QuestDockDefault from "QuestDock" /* 15186 */;
+import TabsPerformanceTracker from "TabsPerformanceTracker" /* 16017 */;
+import MainChannelsDefault from "MainChannels" /* 16018 */;
+import YouBarDefault from "YouBar" /* 16365 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const YouBarNavigatorScreens = fn(11084).YouBarNavigatorScreens;
+const YouBarNavigatorScreens = fn(11089).YouBarNavigatorScreens;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
 const size = fn(2);

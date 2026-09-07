@@ -1,11 +1,11 @@
-// === Module 12272: VoicePanelStateContext ===
+// === Module 12276: VoicePanelStateContext ===
 
-// Module 12272 (VoicePanelStateContext)
-import VoicePanelCardLayoutManagerDefault from "VoicePanelCardLayoutManager" /* 12275 */;
+// Module 12276 (VoicePanelStateContext)
+import VoicePanelCardLayoutManagerDefault from "VoicePanelCardLayoutManager" /* 12279 */;
 import noop from "module_19" /* 19 */;
 
-const VoicePanelModes = fn(12273).VoicePanelModes;
-const VoicePanelControlsConstants = fn(12271);
+const VoicePanelModes = fn(12277).VoicePanelModes;
+const VoicePanelControlsConstants = fn(12275);
 ({ CONTROLS_HEIGHT, VoicePanelControlsModes } = VoicePanelControlsConstants);
 let obj = { channelId: "context-not-initialized", channelType: "e", connected: "Array", contentDimensions: false, controlsSpecs: null, dismissPanel: null, dismissToPIPGestureRef: null, dragScrolling: null, focused: null, generateStateLocker: null, guildId: null, hideControls: null, isCall: null, isFocusedVideoZoomed: null, layoutManager: null, mode: null, morphablePanelMode: null, mountedCards: null, pipAvoidanceSpecs: null, preJoinContentSize: null, safeArea: null, scrollPosition: null, setControlsMode: null, setFocused: null, setIsFocusedVideoZoomed: null, setMode: null, setShowFloatingCTA: "dragon_face", showControls: false, showFloatingCTA: false, streamOutputSinkStack: false, windowDimensions: false, wrapperDimensions: false, useReducedMotion: false, wrapperOffset: false, panelCardStillInPIP: false };
 let ReanimatedHelperTypes = fn(7074);
@@ -38,7 +38,7 @@ obj.layoutManager = new VoicePanelCardLayoutManagerDefault("invalid");
 ReanimatedHelperTypes = fn(7074);
 obj.mode = ReanimatedHelperTypes.createFakeSharedValue(VoicePanelModes.PANEL);
 ReanimatedHelperTypes = fn(7074);
-obj.morphablePanelMode = ReanimatedHelperTypes.createFakeSharedValue(fn(12274).MorphablePanelModes.PANEL);
+obj.morphablePanelMode = ReanimatedHelperTypes.createFakeSharedValue(fn(12278).MorphablePanelModes.PANEL);
 const tmp3 = new VoicePanelCardLayoutManagerDefault("invalid");
 obj.mountedCards = new Set();
 ReanimatedHelperTypes = fn(7074);

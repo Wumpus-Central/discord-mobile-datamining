@@ -1,11 +1,11 @@
-// === Module 9288: DetailsHeader ===
+// === Module 9293: DetailsHeader ===
 
-// Module 9288 (DetailsHeader)
+// Module 9293 (DetailsHeader)
 import nativeDefault from "native" /* 576 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4296 */;
 import timing from "timing" /* 4561 */;
 import timingPresets from "timingPresets" /* 4564 */;
-import BioMarkupUtils from "BioMarkupUtils" /* 9419 */;
+import BioMarkupUtils from "BioMarkupUtils" /* 9424 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -45,7 +45,7 @@ export default noop.memo(function DetailsHeader(viewContainerStyle) {
   let isScreenLandscape;
   closure_18 = undefined;
   let tmp = ref();
-  let obj = sharedValue(9289);
+  let obj = sharedValue(9294);
   let obj1 = noop;
   ref = noop.useRef(null);
   const tmp7 = first1(noop.useState(false), 2);
@@ -66,9 +66,9 @@ export default noop.memo(function DetailsHeader(viewContainerStyle) {
   fn.__workletHash = 23826674246;
   fn.__initData = __initData;
   const animatedStyle = obj3.useAnimatedStyle(fn);
-  let obj4 = sharedValue(9289);
+  let obj4 = sharedValue(9294);
   const sectionName = obj4.getSectionName(application);
-  let obj5 = sharedValue(9289);
+  let obj5 = sharedValue(9294);
   const str = obj5.getSectionDescription(application);
   let tmp28Result1 = null != str;
   if (tmp28Result1) {

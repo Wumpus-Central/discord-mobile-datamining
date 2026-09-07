@@ -1,10 +1,10 @@
-// === Module 16349: GuildsBarItemUnavailableGuilds ===
+// === Module 16352: GuildsBarItemUnavailableGuilds ===
 
-// Module 16349 (GuildsBarItemUnavailableGuilds)
+// Module 16352 (GuildsBarItemUnavailableGuilds)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import AlertActionCreatorsDefault from "AlertActionCreators" /* 4904 */;
-import _modDef16340 from "module_16340" /* 16340 */;
+import _modDef16343 from "module_16343" /* 16343 */;
 import noop from "module_19" /* 19 */;
 import GuildAvailabilityStore from "GuildAvailabilityStore" /* 4902 */;
 
@@ -43,8 +43,8 @@ export default noop.memo(function GuildsBarItemUnavailableGuilds() {
       obj.show(obj);
     };
     obj.style = tmp.unavailableGuilds;
-    const obj1 = { style: tmp.unavailableGuildsIcon, source: _modDef16340 };
-    obj.children = <closure_3 style={tmp.unavailableGuildsIcon} source={_modDef16340} />;
+    const obj1 = { style: tmp.unavailableGuildsIcon, source: _modDef16343 };
+    obj.children = <closure_3 style={tmp.unavailableGuildsIcon} source={_modDef16343} />;
     tmp5 = <closure_4 count={stateFromStores} />;
   }
   return tmp5;

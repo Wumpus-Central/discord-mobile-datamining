@@ -1,12 +1,12 @@
-// === Module 13707: GuildMediaStateStore ===
+// === Module 13711: GuildMediaStateStore ===
 
-// Module 13707 (GuildMediaStateStore)
+// Module 13711 (GuildMediaStateStore)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import initializeDefault from "initialize" /* 504 */;
 import discord_common_shallowEqualDefault from "discord_common/shallowEqual" /* 558 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import ChannelTypes from "ChannelTypes" /* 1094 */;
-import BlockedUserUtils from "BlockedUserUtils" /* 13709 */;
+import BlockedUserUtils from "BlockedUserUtils" /* 13713 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 1956 */;
 import ApexExperimentStore from "ApexExperimentStore" /* 1236 */;
 import GuildScheduledEventStore from "GuildScheduledEventStore" /* 7526 */;
@@ -113,7 +113,7 @@ function computeGuildMediaState(guildId) {
       }
       continue;
     }
-    obj = { skipMutedVcs: guildId(13708).getIsDontBadgeMutedVcsEnabled("GuildMediaStateStore"), currentUserId: id.getId(), selectedVoiceChannelId: voiceChannelId, selectedVoiceGuildId: null, selectedVoiceChannelHasVideo: null, isSelectedVoiceChannelStage: null, blockedOrIgnoredUserIds: null, streamChannelIdsByGuild: null };
+    obj = { skipMutedVcs: guildId(13712).getIsDontBadgeMutedVcsEnabled("GuildMediaStateStore"), currentUserId: id.getId(), selectedVoiceChannelId: voiceChannelId, selectedVoiceGuildId: null, selectedVoiceChannelHasVideo: null, isSelectedVoiceChannelStage: null, blockedOrIgnoredUserIds: null, streamChannelIdsByGuild: null };
     let guild_id;
     if (channel != null) {
       guild_id = channel.guild_id;
@@ -230,7 +230,7 @@ function computeGuildMediaState(guildId) {
           _location = first.location;
         }
         let embeddedActivityLocationChannelId = obj5.getEmbeddedActivityLocationChannelId(_location);
-        let tmp34Result = tmp34(9546);
+        let tmp34Result = tmp34(9551);
         if (tmp34Result.isActivitiesInTextEnabled(ChannelStore.getChannel(embeddedActivityLocationChannelId))) {
           let someResult2 = found.length > 0;
         } else {
@@ -244,7 +244,7 @@ function computeGuildMediaState(guildId) {
           });
         }
         obj = { audio: flag2, video: flag, screenshare: someResult, liveStage: someResult1, activeEvent: null, activity: null, isCurrentUserConnected: false };
-        tmp34Result = tmp34(9662);
+        tmp34Result = tmp34(9667);
         obj.activeEvent = null != tmp34Result.getGuildActiveEvent(arg0);
         obj.activity = someResult2;
         return obj;

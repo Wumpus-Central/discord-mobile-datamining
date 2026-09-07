@@ -1,6 +1,6 @@
-// === Module 14979: ScanQrCodeSetting ===
+// === Module 14982: ScanQrCodeSetting ===
 
-// Module 14979 (ScanQrCodeSetting)
+// Module 14982 (ScanQrCodeSetting)
 import util from "util" /* 1114 */;
 import MetaQuestUtils from "MetaQuestUtils" /* 1608 */;
 import NativePermissionUtilsDefault from "NativePermissionUtils" /* 5139 */;
@@ -9,14 +9,14 @@ import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 require = fn;
 const NativePermissionTypes = fn(4770).NativePermissionTypes;
 let apply = fn(12);
-const SettingBuilders = fn(11468);
+const SettingBuilders = fn(11473);
 apply = {
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.RC0kJz);
   },
   parent: null,
-  IconComponent: fn(14882).QrCodeIcon,
+  IconComponent: fn(14885).QrCodeIcon,
   onPress: apply.debounce(asyncGeneratorStep(async () => {
     if (c3 === 2) {
       c3 = 3;

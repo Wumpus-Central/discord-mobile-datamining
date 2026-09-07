@@ -1,6 +1,6 @@
-// === Module 16445: ForYouShowAllRow ===
+// === Module 16448: ForYouShowAllRow ===
 
-// Module 16445 (ForYouShowAllRow)
+// Module 16448 (ForYouShowAllRow)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import PlatformUtils from "PlatformUtils" /* 1115 */;
@@ -10,10 +10,10 @@ import Text_Text from "Text/Text" /* 4556 */;
 import useFontScale from "useFontScale" /* 4982 */;
 import Pressables from "Pressables" /* 5123 */;
 import _modDef7142 from "module_7142" /* 7142 */;
-import ChannelListLayout from "ChannelListLayout" /* 10121 */;
-import AvatarDuoPile from "AvatarDuoPile" /* 14177 */;
-import ChannelPressableWrapper from "ChannelPressableWrapper" /* 16440 */;
-import ChannelWrapper from "ChannelWrapper" /* 16441 */;
+import ChannelListLayout from "ChannelListLayout" /* 10126 */;
+import AvatarDuoPile from "AvatarDuoPile" /* 14180 */;
+import ChannelPressableWrapper from "ChannelPressableWrapper" /* 16443 */;
+import ChannelWrapper from "ChannelWrapper" /* 16444 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -53,7 +53,7 @@ function ForYouShowAllRow(panelVariant) {
 }
 const View = fn(17).View;
 const AnalyticEvents = fn(1074).AnalyticEvents;
-const Sections = fn(12699).Sections;
+const Sections = fn(12703).Sections;
 const jsxProd = fn(21);
 ({ jsx: closure_7, Fragment: closure_8, jsxs: closure_9 } = jsxProd);
 const createStyles = fn(4560);
@@ -107,7 +107,7 @@ export const ForYouSuggestedFriendShowAllRow = function ForYouSuggestedFriendSho
     children: noop.useMemo(() => {
       const substr = suggestedFriends.slice(2, 4);
       return substr.map((user) => {
-        const obj = { user: user.user, guildId: "Array", size: -1 };
+        const obj = { user: user.user, guildId: "Array", size: "Array" };
         const obj2 = suggestedFriends(messagesTabLayout[6]);
         const AvatarSizes = suggestedFriends(messagesTabLayout[11]).AvatarSizes;
         obj.size = suggestedFriends(messagesTabLayout[6]).isLayoutCompact(closure_1_2) ? AvatarSizes.XSMALL_20 : AvatarSizes.SMALL;

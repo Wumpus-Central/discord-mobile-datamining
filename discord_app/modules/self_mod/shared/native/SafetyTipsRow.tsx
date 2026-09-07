@@ -1,6 +1,6 @@
-// === Module 8579: SafetyTipsRow ===
+// === Module 8582: SafetyTipsRow ===
 
-// Module 8579 (SafetyTipsRow)
+// Module 8582 (SafetyTipsRow)
 import nativeDefault from "native" /* 576 */;
 import Text_Text from "Text/Text" /* 4556 */;
 import noop from "module_19" /* 19 */;

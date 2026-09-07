@@ -1,6 +1,6 @@
-// === Module 12434: useShouldBlockDMInputForQuarantinedUser ===
+// === Module 12438: useShouldBlockDMInputForQuarantinedUser ===
 
-// Module 12434 (useShouldBlockDMInputForQuarantinedUser)
+// Module 12438 (useShouldBlockDMInputForQuarantinedUser)
 import MessageStore from "MessageStore" /* 4781 */;
 
 const require = fn;

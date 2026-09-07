@@ -1,9 +1,9 @@
-// === Module 11500: openAppStoreOverlayBottomSheet ===
+// === Module 11505: openAppStoreOverlayBottomSheet ===
 
-// Module 11500 (openAppStoreOverlayBottomSheet)
+// Module 11505 (openAppStoreOverlayBottomSheet)
 import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1109 */;
 import AnalyticsActions from "AnalyticsActions" /* 7718 */;
-import AppStoreOverlayTelemetryManager from "AppStoreOverlayTelemetryManager" /* 11497 */;
+import AppStoreOverlayTelemetryManager from "AppStoreOverlayTelemetryManager" /* 11502 */;
 import Constants from "Constants" /* 1074 */;
 import size from "module_2" /* 2 */;
 
@@ -35,5 +35,5 @@ export const openAppStoreOverlayBottomSheet = function openAppStoreOverlayBottom
       });
     }
   };
-  obj.openLazy(require("asyncRequireImpl")(11501, dependencyMap.paths), "QuestAppStoreOverlayBottomSheet", obj);
+  obj.openLazy(require("asyncRequireImpl")(11506, dependencyMap.paths), "QuestAppStoreOverlayBottomSheet", obj);
 };

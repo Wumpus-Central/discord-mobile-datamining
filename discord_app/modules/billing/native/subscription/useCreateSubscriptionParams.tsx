@@ -1,8 +1,8 @@
-// === Module 10806: useCreateSubscriptionParams ===
+// === Module 10811: useCreateSubscriptionParams ===
 
-// Module 10806 (useCreateSubscriptionParams)
+// Module 10811 (useCreateSubscriptionParams)
 import v1 from "v1" /* 1256 */;
-import useToggleOnIAPSuccessDefault from "useToggleOnIAPSuccess" /* 10807 */;
+import useToggleOnIAPSuccessDefault from "useToggleOnIAPSuccess" /* 10812 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

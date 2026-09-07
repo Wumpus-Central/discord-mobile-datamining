@@ -1,13 +1,13 @@
-// === Module 14956: ConnectionsSettingScreen ===
+// === Module 14959: ConnectionsSettingScreen ===
 
-// Module 14956 (ConnectionsSettingScreen)
+// Module 14959 (ConnectionsSettingScreen)
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4527 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 function onPress() {
-  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(14957, dependencyMap.paths), "AddConnection");
+  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(14960, dependencyMap.paths), "AddConnection");
 }
 const jsx = fn(21).jsx;
 const size = fn(2);
@@ -35,5 +35,5 @@ export default noop.memo(function ConnectionsSettingScreen() {
       }
     });
   }, items);
-  return jsx(tmp(14958).UserSettingsConnections, { selectedPlatformType });
+  return jsx(tmp(14961).UserSettingsConnections, { selectedPlatformType });
 });

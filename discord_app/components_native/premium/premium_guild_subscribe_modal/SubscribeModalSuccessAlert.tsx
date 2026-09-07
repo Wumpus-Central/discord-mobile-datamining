@@ -1,6 +1,6 @@
-// === Module 13621: SubscribeModalSuccessAlert ===
+// === Module 13625: SubscribeModalSuccessAlert ===
 
-// Module 13621 (SubscribeModalSuccessAlert)
+// Module 13625 (SubscribeModalSuccessAlert)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 576 */;
 import ConstantsIOS from "ConstantsIOS" /* 1093 */;
@@ -10,8 +10,8 @@ import Text_Text from "Text/Text" /* 4556 */;
 import LinearGradientDefault from "LinearGradient" /* 4987 */;
 import common_AlertDefault from "common/Alert" /* 4994 */;
 import actions_BoostingActionCreators from "actions/BoostingActionCreators" /* 5434 */;
-import SequencedLottieAnimationViewDefault from "SequencedLottieAnimationView" /* 13622 */;
-import _mod13623 from "module_13623" /* 13623 */;
+import SequencedLottieAnimationViewDefault from "SequencedLottieAnimationView" /* 13626 */;
+import _mod13627 from "module_13627" /* 13627 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import GuildStore from "GuildStore" /* 1979 */;
@@ -99,9 +99,9 @@ export default function SubscribeModalSuccessAlert(arg0) {
   const obj3 = { style: tmp.activatedImage, source: null };
   const tmp14 = LinearGradientDefault;
   if (tmp2Result.isThemeLight(tmp9)) {
-    let tmp8Result = tmp8(13624);
+    let tmp8Result = tmp8(13628);
   } else {
-    tmp8Result = tmp8(13625);
+    tmp8Result = tmp8(13629);
   }
   obj3.source = tmp8Result;
   obj2.children = closure_9(closure_6, obj3);

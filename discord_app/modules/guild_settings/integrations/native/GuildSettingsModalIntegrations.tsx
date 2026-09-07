@@ -1,10 +1,10 @@
-// === Module 17560: GuildSettingsModalIntegrations ===
+// === Module 17563: GuildSettingsModalIntegrations ===
 
-// Module 17560 (GuildSettingsModalIntegrations)
+// Module 17563 (GuildSettingsModalIntegrations)
 import nativeDefault from "native" /* 576 */;
 import noop from "module_19" /* 19 */;
 import PermissionStore from "PermissionStore" /* 4199 */;
-import GuildSettingsStore from "GuildSettingsStore" /* 9064 */;
+import GuildSettingsStore from "GuildSettingsStore" /* 9069 */;
 
 const require = fn;
 const Image = fn(17).Image;

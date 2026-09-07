@@ -1,11 +1,11 @@
-// === Module 15475: WebBrowserSetting ===
+// === Module 15478: WebBrowserSetting ===
 
-// Module 15475 (WebBrowserSetting)
+// Module 15478 (WebBrowserSetting)
 import Constants from "Constants" /* 1074 */;
 import util from "util" /* 1114 */;
-import GlobeEarthIcon from "GlobeEarthIcon" /* 8886 */;
-import SelectWebBrowserSetting from "SelectWebBrowserSetting" /* 15476 */;
-import SettingBuilders from "SettingBuilders" /* 11468 */;
+import GlobeEarthIcon from "GlobeEarthIcon" /* 8891 */;
+import SelectWebBrowserSetting from "SelectWebBrowserSetting" /* 15479 */;
+import SettingBuilders from "SettingBuilders" /* 11473 */;
 import size from "module_2" /* 2 */;
 
 const route = SettingBuilders.createRoute({

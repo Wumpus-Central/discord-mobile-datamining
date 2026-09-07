@@ -1,8 +1,8 @@
-// === Module 8611: CardSection ===
+// === Module 8616: CardSection ===
 
-// Module 8611 (CardSection)
+// Module 8616 (CardSection)
 import nativeDefault from "native" /* 576 */;
-import LegacyText_LegacyTextDefault from "LegacyText/LegacyText" /* 8612 */;
+import LegacyText_LegacyTextDefault from "LegacyText/LegacyText" /* 8617 */;
 import noop from "module_19" /* 19 */;
 import TextStyles from "TextStyles" /* 5524 */;
 

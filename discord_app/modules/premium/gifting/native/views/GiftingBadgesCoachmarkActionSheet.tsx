@@ -1,6 +1,6 @@
-// === Module 16938: GiftingBadgesCoachmarkActionSheet ===
+// === Module 16941: GiftingBadgesCoachmarkActionSheet ===
 
-// Module 16938 (GiftingBadgesCoachmarkActionSheet)
+// Module 16941 (GiftingBadgesCoachmarkActionSheet)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 576 */;
 import _modDef2492 from "module_2492" /* 2492 */;
@@ -8,9 +8,9 @@ import RootNavigationRef from "RootNavigationRef" /* 4418 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4527 */;
 import AnalyticsLocationDefault from "AnalyticsLocation" /* 7182 */;
 import BadgeId from "BadgeId" /* 8184 */;
-import utils_openGiftModal from "utils/openGiftModal" /* 10661 */;
-import GiftingBadgeIconDefault from "GiftingBadgeIcon" /* 10749 */;
-import _modDef16939 from "module_16939" /* 16939 */;
+import utils_openGiftModal from "utils/openGiftModal" /* 10666 */;
+import GiftingBadgeIconDefault from "GiftingBadgeIcon" /* 10754 */;
+import _modDef16942 from "module_16942" /* 16942 */;
 import noop from "module_19" /* 19 */;
 import BadgeDirectoryStore from "BadgeDirectoryStore" /* 8192 */;
 
@@ -91,7 +91,7 @@ function NewBadgeCoachmark(markAsDismissed) {
   let obj = { startExpanded: true, onDismiss: callback1, children: null };
   obj = { style: tmp.container, children: null };
   obj = { style: tmp.graphicContainer, children: null };
-  const obj1 = { source: { uri: _modDef16939 }, style: tmp.newBadgeImage };
+  const obj1 = { source: { uri: _modDef16942 }, style: tmp.newBadgeImage };
   obj.children = closure_8(closure_4, obj1);
   const items2 = [closure_8(closure_5, obj), , ];
   const obj3 = { style: tmp.textContainer, children: null };
@@ -109,8 +109,8 @@ function NewBadgeCoachmark(markAsDismissed) {
   const obj7 = { grow: true, text: null, icon: null, onPress: null };
   const intl3 = markAsDismissed(1114).intl;
   obj7.text = intl3.string(_modDef2492.DZnomS);
-  const obj2 = { uri: _modDef16939 };
-  obj7.icon = closure_8(markAsDismissed(11030).GiftIcon, { size: "sm", color: nativeDefault.colors.CONTROL_PRIMARY_TEXT_DEFAULT });
+  const obj2 = { uri: _modDef16942 };
+  obj7.icon = closure_8(markAsDismissed(11035).GiftIcon, { size: "sm", color: nativeDefault.colors.CONTROL_PRIMARY_TEXT_DEFAULT });
   obj7.onPress = callback;
   obj6.children = closure_8(markAsDismissed(4975).Button, obj7);
   items2[2] = closure_8(closure_5, obj6);

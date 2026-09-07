@@ -1,6 +1,6 @@
-// === Module 11632: FeedbackModalSadDesaturated ===
+// === Module 11637: FeedbackModalSadDesaturated ===
 
-// Module 11632 (FeedbackModalSadDesaturated)
+// Module 11637 (FeedbackModalSadDesaturated)
 import shared from "shared" /* 4411 */;
 import _mod8233 from "module_8233" /* 8233 */;
 import noop from "module_19" /* 19 */;
@@ -14,13 +14,13 @@ const result = size.fileFinishedImporting("design/components/Illustration/native
 export const getFeedbackModalSadDesaturatedSource = function getFeedbackModalSadDesaturatedSource(theme) {
   const obj = {
     dark() {
-      return require("module_11633");
+      return require("module_11638");
     },
     darker() {
-      return require("module_11634");
+      return require("module_11639");
     },
     light() {
-      return require("module_11635");
+      return require("module_11640");
     }
   };
   return obj.getIllustrationSource(theme, obj);
@@ -28,13 +28,13 @@ export const getFeedbackModalSadDesaturatedSource = function getFeedbackModalSad
 export const useFeedbackModalSadDesaturatedSource = function useFeedbackModalSadDesaturatedSource() {
   const obj = {
     dark() {
-      return require("module_11633");
+      return require("module_11638");
     },
     darker() {
-      return require("module_11634");
+      return require("module_11639");
     },
     light() {
-      return require("module_11635");
+      return require("module_11640");
     }
   };
   return _mod8233.getIllustrationSource(obj.useThemeContext().theme, obj);
@@ -42,13 +42,13 @@ export const useFeedbackModalSadDesaturatedSource = function useFeedbackModalSad
 export const FeedbackModalSadDesaturated = function FeedbackModalSadDesaturated(arg0) {
   let obj = {
     dark() {
-      return require("module_11633");
+      return require("module_11638");
     },
     darker() {
-      return require("module_11634");
+      return require("module_11639");
     },
     light() {
-      return require("module_11635");
+      return require("module_11640");
     }
   };
   obj = {};

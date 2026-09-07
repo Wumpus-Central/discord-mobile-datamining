@@ -1,13 +1,13 @@
-// === Module 14616: DisplayNameStylesColorSwatch ===
+// === Module 14619: DisplayNameStylesColorSwatch ===
 
-// Module 14616 (DisplayNameStylesColorSwatch)
+// Module 14619 (DisplayNameStylesColorSwatch)
 import _mod17 from "module_17" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 import nativeDefault from "native" /* 576 */;
 import utils_ColorUtils from "utils/ColorUtils" /* 1091 */;
 import DisplayNameEffect from "DisplayNameEffect" /* 1390 */;
 import LinearGradientDefault from "LinearGradient" /* 4987 */;
-import GummyStripesDefault from "GummyStripes" /* 14617 */;
+import GummyStripesDefault from "GummyStripes" /* 14620 */;
 import createStyles from "createStyles" /* 4560 */;
 import size from "module_2" /* 2 */;
 

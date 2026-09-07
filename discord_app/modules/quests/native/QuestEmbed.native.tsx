@@ -1,6 +1,6 @@
-// === Module 13223: QuestEmbed ===
+// === Module 13227: QuestEmbed ===
 
-// Module 13223 (QuestEmbed)
+// Module 13227 (QuestEmbed)
 import _mod17 from "module_17" /* 17 */;
 import Constants from "Constants" /* 1074 */;
 import util from "util" /* 1114 */;
@@ -14,9 +14,9 @@ import utils_QuestUtils from "utils/QuestUtils" /* 7722 */;
 import QuestTaskUtils from "QuestTaskUtils" /* 7724 */;
 import Constants2 from "Constants" /* 7736 */;
 import getEmbedThemeColorsDefault from "getEmbedThemeColors" /* 7945 */;
-import AssetUtils from "AssetUtils" /* 11285 */;
-import QuestCopyHooks from "QuestCopyHooks" /* 11775 */;
-import _modDef13224 from "module_13224" /* 13224 */;
+import AssetUtils from "AssetUtils" /* 11290 */;
+import QuestCopyHooks from "QuestCopyHooks" /* 11780 */;
+import _modDef13228 from "module_13228" /* 13228 */;
 import ThemeStore from "ThemeStore" /* 1183 */;
 import QuestStore from "QuestStore" /* 7703 */;
 import QuestConstants from "QuestConstants" /* 5444 */;
@@ -44,7 +44,7 @@ export const createQuestsEmbed = function createQuestsEmbed(questId) {
     obj.headerColor = colors5.headerColor;
     obj.titleText = intl9.string(util.t["6LxbQM"]);
     ({ titleColor: obj25.titleColor, bodyTextColor: obj25.subtitleColor, bodyTextColor: obj25.bodyTextColor } = colors5);
-    obj.thumbnailUrl = Image.resolveAssetSource(_modDef13224).uri;
+    obj.thumbnailUrl = Image.resolveAssetSource(_modDef13228).uri;
     obj.embedCanBeTapped = true;
     obj.canBeAccepted = true;
     obj.type = InviteTypes.GUILD;
@@ -116,7 +116,7 @@ export const createQuestsEmbed = function createQuestsEmbed(questId) {
         obj4.headerColor = colors6.headerColor;
         obj4.titleText = intl12.string(util.t["rxf+nx"]);
         ({ titleColor: obj34.titleColor, bodyTextColor: obj34.subtitleColor, bodyTextColor: obj34.bodyTextColor } = colors6);
-        obj4.thumbnailUrl = Image.resolveAssetSource(_modDef13224).uri;
+        obj4.thumbnailUrl = Image.resolveAssetSource(_modDef13228).uri;
         obj4.embedCanBeTapped = true;
         obj4.canBeAccepted = true;
         obj4.type = InviteTypes.GUILD;
@@ -144,7 +144,7 @@ export const createQuestsEmbed = function createQuestsEmbed(questId) {
       obj6.headerColor = colors3.headerColor;
       obj6.titleText = intl7.string(util.t.Dd6Daw);
       ({ titleColor: obj18.titleColor, bodyTextColor: obj18.subtitleColor, bodyTextColor: obj18.bodyTextColor } = colors3);
-      obj6.thumbnailUrl = Image.resolveAssetSource(_modDef13224).uri;
+      obj6.thumbnailUrl = Image.resolveAssetSource(_modDef13228).uri;
       obj6.embedCanBeTapped = true;
       obj6.canBeAccepted = true;
       obj6.type = InviteTypes.GUILD;
@@ -256,7 +256,7 @@ export const createQuestsEmbed = function createQuestsEmbed(questId) {
         obj14.headerColor = colors.headerColor;
         obj14.titleText = intl.string(util.t.Dd6Daw);
         ({ titleColor: obj4.titleColor, bodyTextColor: obj4.subtitleColor, bodyTextColor: obj4.bodyTextColor } = colors);
-        obj14.thumbnailUrl = Image.resolveAssetSource(_modDef13224).uri;
+        obj14.thumbnailUrl = Image.resolveAssetSource(_modDef13228).uri;
         obj14.embedCanBeTapped = true;
         obj14.canBeAccepted = true;
         obj14.type = InviteTypes.GUILD;

@@ -1,12 +1,12 @@
-// === Module 15564: UserSettingsDebugLogs ===
+// === Module 15567: UserSettingsDebugLogs ===
 
-// Module 15564 (UserSettingsDebugLogs)
+// Module 15567 (UserSettingsDebugLogs)
 import LogAggregator from "LogAggregator" /* 7 */;
 import Storage2 from "Storage" /* 510 */;
 import nativeDefault from "native" /* 576 */;
 import ToastActionCreatorsDefault from "ToastActionCreators" /* 4259 */;
 import Text_Text from "Text/Text" /* 4556 */;
-import UserSettingsDebugLogsActionSheet from "UserSettingsDebugLogsActionSheet" /* 15565 */;
+import UserSettingsDebugLogsActionSheet from "UserSettingsDebugLogsActionSheet" /* 15568 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -151,7 +151,7 @@ export default function UserSettingsDebugLogs() {
   obj5.data = tmp4Result1[0];
   obj5.renderItem = callback1;
   obj5.refreshControl = closure_8(closure_5, { refreshing: false, onRefresh });
-  items4[1] = closure_8(require("module_8874").FlashList, obj5);
+  items4[1] = closure_8(require("module_8879").FlashList, obj5);
   obj.children = items4;
   return first1(memo, obj);
 };

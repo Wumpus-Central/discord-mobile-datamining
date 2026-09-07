@@ -1,6 +1,6 @@
-// === Module 14714: AccountPhoneSetting ===
+// === Module 14717: AccountPhoneSetting ===
 
-// Module 14714 (AccountPhoneSetting)
+// Module 14717 (AccountPhoneSetting)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1114 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
@@ -10,7 +10,7 @@ import UserStore from "UserStore" /* 1371 */;
 
 require = fn;
 let closure_4 = fn(7043).PHONE_VERIFICATION_MODAL_KEY;
-fn(11468);
+fn(11473);
 let SettingBuilders = {
   useTitle() {
     const intl = util.intl;

@@ -1,6 +1,6 @@
-// === Module 12396: ApplicationSectionHeader ===
+// === Module 12400: ApplicationSectionHeader ===
 
-// Module 12396 (ApplicationSectionHeader)
+// Module 12400 (ApplicationSectionHeader)
 import nativeDefault from "native" /* 576 */;
 import noop from "module_19" /* 19 */;
 import GuildMemberStore from "GuildMemberStore" /* 2021 */;
@@ -36,7 +36,7 @@ export default function ApplicationSectionHeader(section) {
       }
     }
   });
-  const applicationCommandsIconSource = section(12231).getApplicationCommandsIconSource(section, stateFromStores);
+  const applicationCommandsIconSource = section(12235).getApplicationCommandsIconSource(section, stateFromStores);
   let nick;
   if (stateFromStores != null) {
     nick = stateFromStores.nick;

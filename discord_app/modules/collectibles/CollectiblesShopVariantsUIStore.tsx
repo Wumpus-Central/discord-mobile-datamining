@@ -1,6 +1,6 @@
-// === Module 8828: CollectiblesShopVariantsUIStore ===
+// === Module 8833: CollectiblesShopVariantsUIStore ===
 
-// Module 8828 (CollectiblesShopVariantsUIStore)
+// Module 8833 (CollectiblesShopVariantsUIStore)
 import _mod4184 from "module_4184" /* 4184 */;
 import CollectiblesProductUtils from "CollectiblesProductUtils" /* 7553 */;
 import identity from "module_1244" /* 1244 */;

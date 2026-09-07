@@ -1,17 +1,17 @@
-// === Module 9021: useApplicationWidgetLayoutRendererProps ===
+// === Module 9026: useApplicationWidgetLayoutRendererProps ===
 
-// Module 9021 (useApplicationWidgetLayoutRendererProps)
+// Module 9026 (useApplicationWidgetLayoutRendererProps)
 import GlobalUtils from "GlobalUtils" /* 1369 */;
-import resolvedValuesFromUserApplicationIdentityProfile from "resolvedValuesFromUserApplicationIdentityProfile" /* 8926 */;
-import ApplicationAssetV2Utils from "ApplicationAssetV2Utils" /* 9029 */;
+import resolvedValuesFromUserApplicationIdentityProfile from "resolvedValuesFromUserApplicationIdentityProfile" /* 8931 */;
+import ApplicationAssetV2Utils from "ApplicationAssetV2Utils" /* 9034 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ApplicationAssetsV2Store from "ApplicationAssetsV2Store" /* 9022 */;
-import UserApplicationIdentityStore from "UserApplicationIdentityStore" /* 9023 */;
+import ApplicationAssetsV2Store from "ApplicationAssetsV2Store" /* 9027 */;
+import UserApplicationIdentityStore from "UserApplicationIdentityStore" /* 9028 */;
 import LocaleStore from "LocaleStore" /* 2025 */;
 
 require = fn;
-const FetchState = fn(9023).FetchState;
+const FetchState = fn(9028).FetchState;
 const localizedStrings = [];
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/application_widget/hooks/useApplicationWidgetLayoutRendererProps.tsx");

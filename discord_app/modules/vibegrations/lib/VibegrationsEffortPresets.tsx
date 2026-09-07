@@ -1,9 +1,9 @@
-// === Module 16599: VibegrationsEffortPresets ===
+// === Module 16602: VibegrationsEffortPresets ===
 
-// Module 16599 (VibegrationsEffortPresets)
+// Module 16602 (VibegrationsEffortPresets)
 import util from "util" /* 1114 */;
 import _modDef3547 from "module_3547" /* 3547 */;
-import VibegrationsModelLabels from "VibegrationsModelLabels" /* 16600 */;
+import VibegrationsModelLabels from "VibegrationsModelLabels" /* 16603 */;
 import size from "module_2" /* 2 */;
 
 let obj = {
@@ -25,8 +25,8 @@ const items = [
     }
   },
   {
-    model: "claude-fable-5-1",
-    thinking: "high",
+    model: "gpt-6-astra",
+    thinking: "medium",
     summary() {
       const intl = util.intl;
       return intl.string(_modDef3547.Ly6zYL);

@@ -1,13 +1,13 @@
-// === Module 12318: useAvailableAndAddedGuilds ===
+// === Module 12322: useAvailableAndAddedGuilds ===
 
-// Module 12318 (useAvailableAndAddedGuilds)
+// Module 12322 (useAvailableAndAddedGuilds)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import GuildStore from "GuildStore" /* 1979 */;
 import PermissionStore from "PermissionStore" /* 4199 */;
 import SortedGuildStore from "SortedGuildStore" /* 5438 */;
-import GuildDirectoryStore from "GuildDirectoryStore" /* 12312 */;
+import GuildDirectoryStore from "GuildDirectoryStore" /* 12316 */;
 
 const require = fn;
 const Permissions = fn(1074).Permissions;

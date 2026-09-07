@@ -1,6 +1,6 @@
-// === Module 12775: NavigationPathUtils ===
+// === Module 12779: NavigationPathUtils ===
 
-// Module 12775 (NavigationPathUtils)
+// Module 12779 (NavigationPathUtils)
 import Constants from "Constants" /* 1074 */;
 import _mod4392 from "module_4392" /* 4392 */;
 import size from "module_2" /* 2 */;

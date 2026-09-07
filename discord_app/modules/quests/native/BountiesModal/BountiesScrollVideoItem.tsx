@@ -1,16 +1,16 @@
-// === Module 15014: BountiesScrollVideoItem ===
+// === Module 15017: BountiesScrollVideoItem ===
 
-// Module 15014 (BountiesScrollVideoItem)
+// Module 15017 (BountiesScrollVideoItem)
 import QuestContent from "QuestContent" /* 5449 */;
 import AdCreativeType from "AdCreativeType" /* 5451 */;
 import AnalyticsTypes from "AnalyticsTypes" /* 7728 */;
-import QuestPlatformUtils from "QuestPlatformUtils" /* 11496 */;
-import QuestContentImpressionTracker from "QuestContentImpressionTracker" /* 11778 */;
-import AdsVideoTypes from "AdsVideoTypes" /* 15015 */;
+import QuestPlatformUtils from "QuestPlatformUtils" /* 11501 */;
+import QuestContentImpressionTracker from "QuestContentImpressionTracker" /* 11783 */;
+import AdsVideoTypes from "AdsVideoTypes" /* 15018 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import VirtualCurrencyStore from "VirtualCurrencyStore" /* 8852 */;
+import VirtualCurrencyStore from "VirtualCurrencyStore" /* 8857 */;
 import BountyStore from "BountyStore" /* 7702 */;
 
 require = fn;
@@ -449,7 +449,7 @@ export const BountiesScrollVideoItem = function BountiesScrollVideoItem(bounty) 
   if (softDownloadCapsEnabled === undefined) {
     softDownloadCapsEnabled = false;
   }
-  return flag3(bounty(11778).BillableAdPlacementImpressionTrackerNative, {
+  return flag3(bounty(11783).BillableAdPlacementImpressionTrackerNative, {
     adContentId: bounty.id,
     adCreativeType: bounty(5451).AdCreativeType.BOUNTY,
     questContent: bounty(5449).QuestContent.VIDEO_MODAL_MOBILE,

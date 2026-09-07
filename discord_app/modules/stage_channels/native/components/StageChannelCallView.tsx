@@ -1,13 +1,13 @@
-// === Module 10041: StageChannelCallView ===
+// === Module 10046: StageChannelCallView ===
 
-// Module 10041 (StageChannelCallView)
+// Module 10046 (StageChannelCallView)
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1611 */;
 import ReanimatedRexportDefault from "ReanimatedRexport" /* 4296 */;
-import StatusBarDefault from "StatusBar" /* 9481 */;
-import FocusedControls from "FocusedControls" /* 9677 */;
-import StageChannelAnimationUtils from "StageChannelAnimationUtils" /* 10042 */;
-import StageChannelBackgroundDefault from "StageChannelBackground" /* 10043 */;
-import StageChannelCallListDefault from "StageChannelCallList" /* 10044 */;
+import StatusBarDefault from "StatusBar" /* 9486 */;
+import FocusedControls from "FocusedControls" /* 9682 */;
+import StageChannelAnimationUtils from "StageChannelAnimationUtils" /* 10047 */;
+import StageChannelBackgroundDefault from "StageChannelBackground" /* 10048 */;
+import StageChannelCallListDefault from "StageChannelCallList" /* 10049 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

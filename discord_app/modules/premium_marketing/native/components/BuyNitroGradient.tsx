@@ -1,6 +1,6 @@
-// === Module 13394: BuyNitroGradient ===
+// === Module 13398: BuyNitroGradient ===
 
-// Module 13394 (BuyNitroGradient)
+// Module 13398 (BuyNitroGradient)
 import timing from "timing" /* 4561 */;
 import timingPresets from "timingPresets" /* 4564 */;
 import LinearGradientDefault from "LinearGradient" /* 4987 */;

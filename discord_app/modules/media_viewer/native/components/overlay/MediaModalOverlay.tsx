@@ -1,6 +1,6 @@
-// === Module 12958: MediaModalOverlay ===
+// === Module 12962: MediaModalOverlay ===
 
-// Module 12958 (MediaModalOverlay)
+// Module 12962 (MediaModalOverlay)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import PlatformUtils from "PlatformUtils" /* 1115 */;
@@ -12,14 +12,14 @@ import MediaSourceUtil from "MediaSourceUtil" /* 8263 */;
 import useVideoControls from "useVideoControls" /* 8270 */;
 import MediaPlayerMuteManager from "MediaPlayerMuteManager" /* 8271 */;
 import MediaViewerDimensionsContext from "MediaViewerDimensionsContext" /* 8293 */;
-import TouchableHitBoxDefault from "TouchableHitBox" /* 9050 */;
-import useMediaModalFooterAction from "useMediaModalFooterAction" /* 11509 */;
-import useOverlayLayoutDriver from "useOverlayLayoutDriver" /* 12962 */;
-import MediaViewerThumbnailsDefault from "MediaViewerThumbnails" /* 12963 */;
-import MediaModalOverlayHeader from "MediaModalOverlayHeader" /* 12965 */;
-import MediaModalOverlayAltTextDefault from "MediaModalOverlayAltText" /* 12969 */;
-import MediaModalOverlayFooterAction from "MediaModalOverlayFooterAction" /* 12970 */;
-import MediaModalOverlayFooter from "MediaModalOverlayFooter" /* 12971 */;
+import TouchableHitBoxDefault from "TouchableHitBox" /* 9055 */;
+import useMediaModalFooterAction from "useMediaModalFooterAction" /* 11514 */;
+import useOverlayLayoutDriver from "useOverlayLayoutDriver" /* 12966 */;
+import MediaViewerThumbnailsDefault from "MediaViewerThumbnails" /* 12967 */;
+import MediaModalOverlayHeader from "MediaModalOverlayHeader" /* 12969 */;
+import MediaModalOverlayAltTextDefault from "MediaModalOverlayAltText" /* 12973 */;
+import MediaModalOverlayFooterAction from "MediaModalOverlayFooterAction" /* 12974 */;
+import MediaModalOverlayFooter from "MediaModalOverlayFooter" /* 12975 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -31,7 +31,7 @@ function OverlayMuteButton(arg0) {
   const intl = util.intl;
   obj.accessibilityLabel = intl.string(util.t.w4m945);
   const rect = { left: true, right: true, children: null };
-  obj.source = importDefault(isMuted ? 12959 : 10011);
+  obj.source = importDefault(isMuted ? 12963 : 10016);
   obj.color = nativeDefault.unsafe_rawColors.WHITE;
   obj.onPress = onToggleMute;
   ({ overlayButton: obj.style, overlayButtonIcon: obj.iconStyle } = tmp);
@@ -45,7 +45,7 @@ function OverlayObscureToggleButton(arg0) {
   const intl = util.intl;
   obj.accessibilityLabel = intl.string(util.t.UIsxUw);
   const rect = { left: true, right: true, children: null };
-  obj.source = importDefault(spoilerActive ? 12960 : 12961);
+  obj.source = importDefault(spoilerActive ? 12964 : 12965);
   obj.color = nativeDefault.unsafe_rawColors.WHITE;
   obj.onPress = onToggleObscure;
   ({ overlayButton: obj.style, overlayButtonIcon: obj.iconStyle } = tmp);
@@ -55,7 +55,7 @@ function OverlayObscureToggleButton(arg0) {
 function MediaModalOverlay(getVideoControls) {
   ({ source, index } = getVideoControls);
   const videoControls = getVideoControls.getVideoControls(index, source);
-  index(12964);
+  index(12968);
   const items = [index];
   const items1 = [videoControls];
   const callback = noop.useCallback(() => useMediaViewerSources.toggleSpoiler(index), items);

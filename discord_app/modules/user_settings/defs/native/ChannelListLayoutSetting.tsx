@@ -1,11 +1,11 @@
-// === Module 15531: ChannelListLayoutSetting ===
+// === Module 15534: ChannelListLayoutSetting ===
 
-// Module 15531 (ChannelListLayoutSetting)
+// Module 15534 (ChannelListLayoutSetting)
 import util from "util" /* 1114 */;
 import UserSettings from "UserSettings" /* 1935 */;
 import ChannelListLayoutTypes from "ChannelListLayoutTypes" /* 7879 */;
 import SettingsConstants from "SettingsConstants" /* 7975 */;
-import SettingBuilders from "SettingBuilders" /* 11468 */;
+import SettingBuilders from "SettingBuilders" /* 11473 */;
 import size from "module_2" /* 2 */;
 
 function useChannelListLayoutPredicate() {

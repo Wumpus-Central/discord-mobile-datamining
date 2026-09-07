@@ -1,10 +1,10 @@
-// === Module 8752: AnnouncementMessageUtils ===
+// === Module 8757: AnnouncementMessageUtils ===
 
-// Module 8752 (AnnouncementMessageUtils)
+// Module 8757 (AnnouncementMessageUtils)
 import util from "util" /* 1114 */;
 import URLUtilsDefault from "URLUtils" /* 1365 */;
 import MessageRecord from "MessageRecord" /* 4210 */;
-import useFormattedExpirationLabel from "useFormattedExpirationLabel" /* 8754 */;
+import useFormattedExpirationLabel from "useFormattedExpirationLabel" /* 8759 */;
 import size from "module_2" /* 2 */;
 
 const isMessageComponentsV2 = MessageRecord.isMessageComponentsV2;

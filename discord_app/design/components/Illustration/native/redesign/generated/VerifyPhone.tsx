@@ -1,6 +1,6 @@
-// === Module 17510: generated/VerifyPhone ===
+// === Module 17513: generated/VerifyPhone ===
 
-// Module 17510 (generated/VerifyPhone)
+// Module 17513 (generated/VerifyPhone)
 import shared from "shared" /* 4411 */;
 import _mod8233 from "module_8233" /* 8233 */;
 import noop from "module_19" /* 19 */;
@@ -14,13 +14,13 @@ const result = size.fileFinishedImporting("design/components/Illustration/native
 export const getVerifyPhoneSource = function getVerifyPhoneSource(theme) {
   const obj = {
     dark() {
-      return require("module_17511");
+      return require("module_17514");
     },
     darker() {
-      return require("module_17512");
+      return require("module_17515");
     },
     light() {
-      return require("module_17513");
+      return require("module_17516");
     }
   };
   return obj.getIllustrationSource(theme, obj);
@@ -28,13 +28,13 @@ export const getVerifyPhoneSource = function getVerifyPhoneSource(theme) {
 export const useVerifyPhoneSource = function useVerifyPhoneSource() {
   const obj = {
     dark() {
-      return require("module_17511");
+      return require("module_17514");
     },
     darker() {
-      return require("module_17512");
+      return require("module_17515");
     },
     light() {
-      return require("module_17513");
+      return require("module_17516");
     }
   };
   return _mod8233.getIllustrationSource(obj.useThemeContext().theme, obj);
@@ -42,13 +42,13 @@ export const useVerifyPhoneSource = function useVerifyPhoneSource() {
 export const VerifyPhone = function VerifyPhone(arg0) {
   let obj = {
     dark() {
-      return require("module_17511");
+      return require("module_17514");
     },
     darker() {
-      return require("module_17512");
+      return require("module_17515");
     },
     light() {
-      return require("module_17513");
+      return require("module_17516");
     }
   };
   obj = {};

@@ -1,6 +1,6 @@
-// === Module 11695: ForwardPreviewUtils ===
+// === Module 11700: ForwardPreviewUtils ===
 
-// Module 11695 (ForwardPreviewUtils)
+// Module 11700 (ForwardPreviewUtils)
 import EmbedUtils from "EmbedUtils" /* 4897 */;
 import PermissionStore from "PermissionStore" /* 4199 */;
 

@@ -1,22 +1,22 @@
-// === Module 10414: StickerPickerList ===
+// === Module 10419: StickerPickerList ===
 
-// Module 10414 (StickerPickerList)
+// Module 10419 (StickerPickerList)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import native from "native" /* 1178 */;
 import Text_Text from "Text/Text" /* 4556 */;
 import FastestListPropsPlaceholder from "FastestListPropsPlaceholder" /* 7062 */;
-import StickerPickerListRowDefault from "StickerPickerListRow" /* 10401 */;
-import _modDef10415 from "module_10415" /* 10415 */;
-import useStickerPickerListData from "useStickerPickerListData" /* 10416 */;
+import StickerPickerListRowDefault from "StickerPickerListRow" /* 10406 */;
+import _modDef10420 from "module_10420" /* 10420 */;
+import useStickerPickerListData from "useStickerPickerListData" /* 10421 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import StickersStore from "StickersStore" /* 5502 */;
 
 require = fn;
 const View = fn(17).View;
-const useStickerPickerStore = fn(10390).useStickerPickerStore;
-const StickerPickerConstants = fn(10273);
+const useStickerPickerStore = fn(10395).useStickerPickerStore;
+const StickerPickerConstants = fn(10278);
 ({ STICKER_SCROLL_LOAD_DELAY_MS: closure_8, STICKER_SCROLL_LOAD_DELAY_AFTER_HEIGHT_CHANGE_MS: closure_9, STICKER_SIZE: c10 } = StickerPickerConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
@@ -36,7 +36,7 @@ let closure_14 = noop.memo((height) => {
   let obj = { style: null, children: null };
   const items = [tmp.nsfwContainer, { height: height.height }];
   obj.style = items;
-  obj = { source: _modDef10415, size: native.Icon.Sizes.SMALL };
+  obj = { source: _modDef10420, size: native.Icon.Sizes.SMALL };
   const items1 = [closure_1_11(native.Icon, obj), ];
   obj = { style: tmp.nsfwText, variant: "text-sm/normal", color: "interactive-text-active", children: null };
   const intl = util.intl;

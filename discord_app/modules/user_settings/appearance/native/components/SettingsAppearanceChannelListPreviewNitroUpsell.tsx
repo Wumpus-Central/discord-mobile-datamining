@@ -1,14 +1,14 @@
-// === Module 15301: SettingsAppearanceChannelListPreviewNitroUpsell ===
+// === Module 15304: SettingsAppearanceChannelListPreviewNitroUpsell ===
 
-// Module 15301 (SettingsAppearanceChannelListPreviewNitroUpsell)
+// Module 15304 (SettingsAppearanceChannelListPreviewNitroUpsell)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 576 */;
 import spring from "spring" /* 4974 */;
 import springPresets from "springPresets" /* 4978 */;
 import LinearGradientDefault from "LinearGradient" /* 4987 */;
-import PremiumFeaturesCards from "PremiumFeaturesCards" /* 9362 */;
-import openPremiumModalDefault from "openPremiumModal" /* 9392 */;
-import AnimatedEnterExitItemDefault from "AnimatedEnterExitItem" /* 9969 */;
+import PremiumFeaturesCards from "PremiumFeaturesCards" /* 9367 */;
+import openPremiumModalDefault from "openPremiumModal" /* 9397 */;
+import AnimatedEnterExitItemDefault from "AnimatedEnterExitItem" /* 9974 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4552 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4296 */;

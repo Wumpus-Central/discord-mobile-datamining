@@ -1,20 +1,20 @@
-// === Module 16022: useHomeDrawerGesture ===
+// === Module 16025: useHomeDrawerGesture ===
 
-// Module 16022 (useHomeDrawerGesture)
+// Module 16025 (useHomeDrawerGesture)
 import ReanimatedRexport from "ReanimatedRexport" /* 4296 */;
 import NavigationRouteUtils from "NavigationRouteUtils" /* 4417 */;
 import HapticUtils from "HapticUtils" /* 4528 */;
 import timing from "timing" /* 4561 */;
-import HomeDrawerAnimations from "HomeDrawerAnimations" /* 16024 */;
+import HomeDrawerAnimations from "HomeDrawerAnimations" /* 16027 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import HomeDrawerStore from "HomeDrawerStore" /* 16023 */;
-import HomeDrawerSubtitleStore from "HomeDrawerSubtitleStore" /* 16025 */;
+import HomeDrawerStore from "HomeDrawerStore" /* 16026 */;
+import HomeDrawerSubtitleStore from "HomeDrawerSubtitleStore" /* 16028 */;
 
 require = fn;
-const computeMaxX = fn(16023).computeMaxX;
+const computeMaxX = fn(16026).computeMaxX;
 const AnalyticEvents = fn(1074).AnalyticEvents;
-const LaunchPadTypes = fn(11464).LaunchPadTypes;
+const LaunchPadTypes = fn(11469).LaunchPadTypes;
 let c10 = 144;
 let c11 = 96.00000000000001;
 let closure_12 = { PEEK: "PEEK", OPEN: "OPEN" };

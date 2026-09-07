@@ -1,12 +1,12 @@
-// === Module 9832: useMobileInviteSuggestions ===
+// === Module 9837: useMobileInviteSuggestions ===
 
-// Module 9832 (useMobileInviteSuggestions)
+// Module 9837 (useMobileInviteSuggestions)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import GuildMemberStore from "GuildMemberStore" /* 2021 */;
 import GuildStore from "GuildStore" /* 1979 */;
-import InviteSuggestionsStore from "InviteSuggestionsStore" /* 9833 */;
+import InviteSuggestionsStore from "InviteSuggestionsStore" /* 9838 */;
 import SortedVoiceStateStore from "SortedVoiceStateStore" /* 4584 */;
 
 const require = fn;
@@ -53,7 +53,7 @@ export default function useMobileInviteSuggestions(arg0, _location, arg2, applic
       isGuildVoiceResult = set.isGuildVoice();
     }
     if (isGuildVoiceResult) {
-      closure_0(9846);
+      closure_0(9851);
       let obj = { location: "useMobileInviteSuggestions", guildId: set.guild_id };
       isGuildVoiceResult = obj.getGuildMembersInMobileVCInvitesExperiment(obj);
     }
@@ -72,8 +72,8 @@ export default function useMobileInviteSuggestions(arg0, _location, arg2, applic
         });
       }
       obj = { omitUserIds: set, guild: isFetchingRows.getGuild(set.guild_id), channel: set, inviteTargetType: dependencyMap };
-      const inviteSuggestions = closure_0(9847).loadInviteSuggestions(obj);
-      const obj3 = closure_0(9847);
+      const inviteSuggestions = closure_0(9852).loadInviteSuggestions(obj);
+      const obj3 = closure_0(9852);
       inviteSuggestions.catch(NOOP_NULL).finally(() => {
         closure_1_7(false);
       });

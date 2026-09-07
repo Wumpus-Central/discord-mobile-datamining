@@ -1,6 +1,6 @@
-// === Module 17599: GuildSettingsModalIntegrationPlatform ===
+// === Module 17602: GuildSettingsModalIntegrationPlatform ===
 
-// Module 17599 (GuildSettingsModalIntegrationPlatform)
+// Module 17602 (GuildSettingsModalIntegrationPlatform)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import AvatarUtils from "AvatarUtils" /* 1396 */;
@@ -14,11 +14,11 @@ import TableRowGroup from "TableRowGroup" /* 5687 */;
 import TableSwitchRow from "TableSwitchRow" /* 7201 */;
 import HeaderActionButton from "HeaderActionButton" /* 7377 */;
 import openUserSettings from "openUserSettings" /* 7382 */;
-import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 9063 */;
-import GuildSettingsModalIntegrations from "GuildSettingsModalIntegrations" /* 17560 */;
-import IntegrationTypes from "IntegrationTypes" /* 17600 */;
+import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 9068 */;
+import GuildSettingsModalIntegrations from "GuildSettingsModalIntegrations" /* 17563 */;
+import IntegrationTypes from "IntegrationTypes" /* 17603 */;
 import noop from "module_19" /* 19 */;
-import GuildSettingsStore from "GuildSettingsStore" /* 9064 */;
+import GuildSettingsStore from "GuildSettingsStore" /* 9069 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
@@ -278,7 +278,7 @@ export default function GuildSettingsModalIntegrationPlatform(platformType) {
     items2[1] = closure_11(tmp(4556).Text, obj6);
     obj3.children = items2;
     obj2.children = closure_12(tmp(4973).Stack, obj3);
-    const items3 = [closure_11(tmp(8593).Form, obj2), closure_11(tmp(7040).NavScrim, {})];
+    const items3 = [closure_11(tmp(8598).Form, obj2), closure_11(tmp(7040).NavScrim, {})];
     obj5.children = items3;
     return closure_12(closure_13, obj5);
   }

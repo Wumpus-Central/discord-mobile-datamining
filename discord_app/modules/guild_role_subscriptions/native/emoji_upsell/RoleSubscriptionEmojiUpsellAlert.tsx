@@ -1,10 +1,10 @@
-// === Module 10299: RoleSubscriptionEmojiUpsellAlert ===
+// === Module 10304: RoleSubscriptionEmojiUpsellAlert ===
 
-// Module 10299 (RoleSubscriptionEmojiUpsellAlert)
+// Module 10304 (RoleSubscriptionEmojiUpsellAlert)
 import util from "util" /* 1114 */;
 import GuildActionCreatorsDefault from "GuildActionCreators" /* 5520 */;
-import _modDef9314 from "module_9314" /* 9314 */;
-import CreatorRevenueButton from "CreatorRevenueButton" /* 10300 */;
+import _modDef9319 from "module_9319" /* 9319 */;
+import CreatorRevenueButton from "CreatorRevenueButton" /* 10305 */;
 import noop from "module_19" /* 19 */;
 import GuildStore from "GuildStore" /* 1979 */;
 
@@ -44,7 +44,7 @@ export default function RoleSubscriptionEmojiUpsellAlert(arg0) {
     if (stateFromStores != null) {
       name = stateFromStores.name;
     }
-    const obj = { image: _modDef9314, title: null, description: null };
+    const obj = { image: _modDef9319, title: null, description: null };
     const intl = util.intl;
     obj.title = intl.string(util.t.cBjkcx);
     const intl2 = util.intl;

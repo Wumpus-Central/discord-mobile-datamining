@@ -1,16 +1,16 @@
-// === Module 14588: UserProfileEditForm ===
+// === Module 14591: UserProfileEditForm ===
 
-// Module 14588 (UserProfileEditForm)
+// Module 14591 (UserProfileEditForm)
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4527 */;
 import ProfileCustomizationUtils from "ProfileCustomizationUtils" /* 8166 */;
 import UserProfileActionCreators from "UserProfileActionCreators" /* 8167 */;
 import BadgeDirectoryActionCreators from "BadgeDirectoryActionCreators" /* 8197 */;
-import PendingBadgeSettings from "PendingBadgeSettings" /* 13067 */;
-import _modDef14590 from "module_14590" /* 14590 */;
+import PendingBadgeSettings from "PendingBadgeSettings" /* 13071 */;
+import _modDef14593 from "module_14593" /* 14593 */;
 import noop from "module_19" /* 19 */;
 import BadgeDirectoryStore from "BadgeDirectoryStore" /* 8192 */;
-import ProfileCustomizationNavigationStore from "ProfileCustomizationNavigationStore" /* 9208 */;
+import ProfileCustomizationNavigationStore from "ProfileCustomizationNavigationStore" /* 9213 */;
 
 require = fn;
 function EditUserProfileBanner(user) {
@@ -50,7 +50,7 @@ function EditUserProfileBanner(user) {
       };
     }
     obj.onBannerChange = fn;
-    const tmp3 = asyncRequireImpl(14592, dependencyMap.paths);
+    const tmp3 = asyncRequireImpl(14595, dependencyMap.paths);
     let banner;
     if (displayProfile != null) {
       banner = displayProfile.banner;
@@ -72,10 +72,10 @@ const FLOATING_UPSELL_HEIGHT = fn(7208).FLOATING_UPSELL_HEIGHT;
 const Constants = fn(1074);
 ({ DISPLAY_NAME_MAX_LENGTH: closure_9, PRONOUNS_MAX_LENGTH: c10 } = Constants);
 let closure_11 = fn(1084).ProfileCustomizationScrollPositions;
-const constants = fn(14589).UserProfileEditAutoFocusElement;
+const constants = fn(14592).UserProfileEditAutoFocusElement;
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
-let obj = { assetOrigin: fn(6989).AssetOriginTypes.NEW_ASSET, imageUri: _modDef14590, staticImageUri: _modDef14590, description: "", originalAsset: "add" };
+let obj = { assetOrigin: fn(6989).AssetOriginTypes.NEW_ASSET, imageUri: _modDef14593, staticImageUri: _modDef14593, description: "", originalAsset: "channel" };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_profile/native/UserProfileEditForm.tsx");
 

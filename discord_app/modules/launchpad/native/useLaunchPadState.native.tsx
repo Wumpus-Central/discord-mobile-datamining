@@ -1,14 +1,14 @@
-// === Module 16961: useLaunchPadState ===
+// === Module 16964: useLaunchPadState ===
 
-// Module 16961 (useLaunchPadState)
+// Module 16964 (useLaunchPadState)
 import noop from "module_19" /* 19 */;
 
 const require = fn;
-const LaunchPadConstants = fn(11464);
+const LaunchPadConstants = fn(11469);
 ({ LAUNCH_PAD_PULL_TAB_MAX_POSITION: closure_4, LAUNCH_PAD_PULL_TAB_SCALE_OFFSET: hasOwnProperty } = LaunchPadConstants);
 let closure_6 = { active: false, initialLaunchPadPosition: 0, initialPullTabPosition: 0, initialTouchX: 0, initialTouchY: 0, positionOffsetX: 0, positionOffsetY: 0, startTime: -1, requiresPop: false, startShown: false };
 let __closure = { position: null, scale: 1, offset: 0, minimized: false };
-const LaunchPadPullTabCache = fn(16962);
+const LaunchPadPullTabCache = fn(16965);
 __closure.position = LaunchPadPullTabCache.getLaunchPadPullTabPositionCached();
 let closure_8 = { code: "function setLaunchPadShown_useLaunchPadStateNativeTsx1(shown){const{launchPadShown}=this.__closure;launchPadShown.set(shown);}" };
 let closure_9 = { code: "function setLaunchPadPosition_useLaunchPadStateNativeTsx2(value){const{launchPadSharedState}=this.__closure;launchPadSharedState.set(Math.max(Math.min(value,1),0));}" };

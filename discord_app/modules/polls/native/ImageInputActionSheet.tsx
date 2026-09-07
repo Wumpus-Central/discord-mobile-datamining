@@ -1,8 +1,8 @@
-// === Module 12227: ImageInputActionSheet ===
+// === Module 12231: ImageInputActionSheet ===
 
-// Module 12227 (ImageInputActionSheet)
+// Module 12231 (ImageInputActionSheet)
 import nativeDefault from "native" /* 576 */;
-import EditPollCreationImageAltTextModalActionCreators from "EditPollCreationImageAltTextModalActionCreators" /* 12228 */;
+import EditPollCreationImageAltTextModalActionCreators from "EditPollCreationImageAltTextModalActionCreators" /* 12232 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

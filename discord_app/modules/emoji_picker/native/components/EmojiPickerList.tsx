@@ -1,26 +1,26 @@
-// === Module 10289: EmojiPickerList ===
+// === Module 10294: EmojiPickerList ===
 
-// Module 10289 (EmojiPickerList)
+// Module 10294 (EmojiPickerList)
 import util from "util" /* 1114 */;
 import EmojiUtilsDefault from "EmojiUtils" /* 4217 */;
 import ToastActionCreatorsDefault from "ToastActionCreators" /* 4259 */;
 import ChatInputUtils from "ChatInputUtils" /* 4425 */;
 import HapticUtils from "HapticUtils" /* 4528 */;
 import haptics_HapticFeedbackTypesDefault from "haptics/HapticFeedbackTypes" /* 4529 */;
-import PremiumUpsellUtilsDefault from "PremiumUpsellUtils" /* 9313 */;
-import TopEmojisActionCreators from "TopEmojisActionCreators" /* 10279 */;
-import EmojiPickerUtils from "EmojiPickerUtils" /* 10285 */;
-import RoleSubscriptionUpsellUtilsDefault from "RoleSubscriptionUpsellUtils" /* 10298 */;
-import useEmojiPickerData from "useEmojiPickerData" /* 10303 */;
-import PremiumUpsellSectionDividerDefault from "PremiumUpsellSectionDivider" /* 10306 */;
-import PremiumUpsellGradientBackground from "PremiumUpsellGradientBackground" /* 10307 */;
-import EmojiPickerListComponents from "EmojiPickerListComponents" /* 10309 */;
-import EmojiPickerListRow from "EmojiPickerListRow" /* 10310 */;
-import EmojiPickerPremiumSearchUpsell from "EmojiPickerPremiumSearchUpsell" /* 10313 */;
+import PremiumUpsellUtilsDefault from "PremiumUpsellUtils" /* 9318 */;
+import TopEmojisActionCreators from "TopEmojisActionCreators" /* 10284 */;
+import EmojiPickerUtils from "EmojiPickerUtils" /* 10290 */;
+import RoleSubscriptionUpsellUtilsDefault from "RoleSubscriptionUpsellUtils" /* 10303 */;
+import useEmojiPickerData from "useEmojiPickerData" /* 10308 */;
+import PremiumUpsellSectionDividerDefault from "PremiumUpsellSectionDivider" /* 10311 */;
+import PremiumUpsellGradientBackground from "PremiumUpsellGradientBackground" /* 10312 */;
+import EmojiPickerListComponents from "EmojiPickerListComponents" /* 10314 */;
+import EmojiPickerListRow from "EmojiPickerListRow" /* 10315 */;
+import EmojiPickerPremiumSearchUpsell from "EmojiPickerPremiumSearchUpsell" /* 10318 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const IMAGE_SIZE = fn(10290).IMAGE_SIZE;
+const IMAGE_SIZE = fn(10295).IMAGE_SIZE;
 const Constants = fn(1074);
 ({ AnalyticsObjects: hasOwnProperty, AnalyticsPages: metroRequire, AnalyticsSections: closure_7, UpsellTypes: closure_8 } = Constants);
 const EmojiConstants = fn(1374);

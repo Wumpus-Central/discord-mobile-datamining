@@ -1,6 +1,6 @@
-// === Module 12639: useChatPlaceholderAnimatedStyles ===
+// === Module 12643: useChatPlaceholderAnimatedStyles ===
 
-// Module 12639 (useChatPlaceholderAnimatedStyles)
+// Module 12643 (useChatPlaceholderAnimatedStyles)
 import ReanimatedRexport from "ReanimatedRexport" /* 4296 */;
 import timing from "timing" /* 4561 */;
 import timingPresets from "timingPresets" /* 4564 */;

@@ -1,9 +1,9 @@
-// === Module 14644: UserProfilePremiumUpsellCard ===
+// === Module 14647: UserProfilePremiumUpsellCard ===
 
-// Module 14644 (UserProfilePremiumUpsellCard)
+// Module 14647 (UserProfilePremiumUpsellCard)
 import UserSettingsModalActionCreatorsDefault from "UserSettingsModalActionCreators" /* 6990 */;
-import PremiumFeaturesCards from "PremiumFeaturesCards" /* 9362 */;
-import openPremiumModalDefault from "openPremiumModal" /* 9392 */;
+import PremiumFeaturesCards from "PremiumFeaturesCards" /* 9367 */;
+import openPremiumModalDefault from "openPremiumModal" /* 9397 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -72,5 +72,5 @@ export const UserProfilePremiumUpsellCard = function UserProfilePremiumUpsellCar
     stringResult1 = string(t.Tii53U);
   }
   obj.children = jsx(navigation(4556).Text, { variant: "text-sm/normal", maxFontSizeMultiplier: 2.5, children: stringResult1 });
-  return jsx(tmp(14622), { style: tmp3.container, ctaText: null, showLinearGradient: true, onPress: null, children: null });
+  return jsx(tmp(14625), { style: tmp3.container, ctaText: null, showLinearGradient: true, onPress: null, children: null });
 };

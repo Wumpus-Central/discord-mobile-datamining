@@ -1,6 +1,6 @@
-// === Module 11109: UserProfilePreview ===
+// === Module 11114: UserProfilePreview ===
 
-// Module 11109 (UserProfilePreview)
+// Module 11114 (UserProfilePreview)
 import nativeDefault from "native" /* 576 */;
 import scaleProfileFrameDefault from "scaleProfileFrame" /* 8224 */;
 import _slicedToArray from "module_32" /* 32 */;

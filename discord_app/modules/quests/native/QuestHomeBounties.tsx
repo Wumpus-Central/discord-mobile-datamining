@@ -1,6 +1,6 @@
-// === Module 15067: QuestHomeBounties ===
+// === Module 15070: QuestHomeBounties ===
 
-// Module 15067 (QuestHomeBounties)
+// Module 15070 (QuestHomeBounties)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
@@ -12,15 +12,15 @@ import AdCreativeType from "AdCreativeType" /* 5451 */;
 import native from "native" /* 5692 */;
 import AnalyticsActions from "AnalyticsActions" /* 7718 */;
 import AnalyticsTypes from "AnalyticsTypes" /* 7728 */;
-import AdAnalyticsInterfaceExperiment from "AdAnalyticsInterfaceExperiment" /* 11192 */;
-import captureAdUserAction from "captureAdUserAction" /* 11193 */;
-import captureAdUserActionTypes from "captureAdUserActionTypes" /* 11197 */;
-import AnalyticsHooks from "AnalyticsHooks" /* 11774 */;
-import BountiesModalActionCreatorsDefault from "BountiesModalActionCreators" /* 15002 */;
-import openBountiesNuxPromoSheetDefault from "openBountiesNuxPromoSheet" /* 15065 */;
-import BountyCard from "BountyCard" /* 15068 */;
-import BountiesCtaHeaderDefault from "BountiesCtaHeader" /* 15079 */;
-import QuestHomeOrbShopCarouselDefault from "QuestHomeOrbShopCarousel" /* 15084 */;
+import AdAnalyticsInterfaceExperiment from "AdAnalyticsInterfaceExperiment" /* 11197 */;
+import captureAdUserAction from "captureAdUserAction" /* 11198 */;
+import captureAdUserActionTypes from "captureAdUserActionTypes" /* 11202 */;
+import AnalyticsHooks from "AnalyticsHooks" /* 11779 */;
+import BountiesModalActionCreatorsDefault from "BountiesModalActionCreators" /* 15005 */;
+import openBountiesNuxPromoSheetDefault from "openBountiesNuxPromoSheet" /* 15068 */;
+import BountyCard from "BountyCard" /* 15071 */;
+import BountiesCtaHeaderDefault from "BountiesCtaHeader" /* 15082 */;
+import QuestHomeOrbShopCarouselDefault from "QuestHomeOrbShopCarousel" /* 15087 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import BountyStore from "BountyStore" /* 7702 */;
@@ -328,7 +328,7 @@ const ContentDismissActionType = fn(1954).ContentDismissActionType;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
 const PX_16 = nativeDefault.space.PX_16;
-let closure_13 = fn(15068).CARD_WIDTH + PX_16;
+let closure_13 = fn(15071).CARD_WIDTH + PX_16;
 const createStyles = fn(4560);
 let closure_14 = createStyles.createStyles(() => {
   let obj = { container: null, listContentContainer: null, emptyState: null, emptyStateText: null };
@@ -348,7 +348,7 @@ export default noop.memo(function QuestHomeBounties(shopCarouselConfig) {
   if (showOrbShopPlaceholderCarousel === undefined) {
     showOrbShopPlaceholderCarousel = false;
   }
-  let obj = first(11483);
+  let obj = first(11488);
   const questHomeBounties = obj.useQuestHomeBounties().questHomeBounties;
   const tmp3 = closure_14();
   first = undefined;
@@ -403,8 +403,8 @@ export default noop.memo(function QuestHomeBounties(shopCarouselConfig) {
       if (verticalScrollEnabled) {
         let tmp14 = "none" !== placement && obtainableOrbRewards > 0;
         if (tmp14) {
-          tmp14 = orbShopProducts.length >= tmp(15069).MIN_PRODUCTS_FOR_ORB_SHOP_CAROUSEL || showOrbShopPlaceholderCarousel;
-          const tmp15 = orbShopProducts.length >= tmp(15069).MIN_PRODUCTS_FOR_ORB_SHOP_CAROUSEL || showOrbShopPlaceholderCarousel;
+          tmp14 = orbShopProducts.length >= tmp(15072).MIN_PRODUCTS_FOR_ORB_SHOP_CAROUSEL || showOrbShopPlaceholderCarousel;
+          const tmp15 = orbShopProducts.length >= tmp(15072).MIN_PRODUCTS_FOR_ORB_SHOP_CAROUSEL || showOrbShopPlaceholderCarousel;
         }
         if (!tmp14) {
           obj = { style: tmp3.container, children: null };

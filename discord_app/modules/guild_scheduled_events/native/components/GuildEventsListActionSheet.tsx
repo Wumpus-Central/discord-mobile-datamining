@@ -1,12 +1,12 @@
-// === Module 9788: GuildEventsListActionSheet ===
+// === Module 9793: GuildEventsListActionSheet ===
 
-// Module 9788 (GuildEventsListActionSheet)
+// Module 9793 (GuildEventsListActionSheet)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
 import ReadStateActionCreators from "ReadStateActionCreators" /* 7110 */;
-import useCanCreateAnEventDefault from "useCanCreateAnEvent" /* 9673 */;
-import GuildScheduledEventModalActionCreators from "GuildScheduledEventModalActionCreators" /* 9698 */;
-import GuildScheduledEventManagerDefault from "GuildScheduledEventManager" /* 9781 */;
-import guild_scheduled_events_GuildScheduledEventModalActionCreators from "guild_scheduled_events/GuildScheduledEventModalActionCreators" /* 9789 */;
+import useCanCreateAnEventDefault from "useCanCreateAnEvent" /* 9678 */;
+import GuildScheduledEventModalActionCreators from "GuildScheduledEventModalActionCreators" /* 9703 */;
+import GuildScheduledEventManagerDefault from "GuildScheduledEventManager" /* 9786 */;
+import guild_scheduled_events_GuildScheduledEventModalActionCreators from "guild_scheduled_events/GuildScheduledEventModalActionCreators" /* 9794 */;
 import noop from "module_19" /* 19 */;
 import ReadStateStore from "ReadStateStore" /* 4575 */;
 
@@ -42,7 +42,7 @@ function GuildEventsListHeader(arg0) {
         const result1 = GuildScheduledEventModalActionCreators.openCreateOrEditGuildEventModal(guild, obj);
       }
     };
-    tmp3Result = jsx(guild(9718).ActionSheetHeaderPressableText, { accessibilityLabel: null, label: null, onPress: null });
+    tmp3Result = jsx(guild(9723).ActionSheetHeaderPressableText, { accessibilityLabel: null, label: null, onPress: null });
   }
   obj.trailing = tmp3Result;
   return jsx(guild(7149).BottomSheetTitleHeader, { title: formatToPlainStringResult, trailing: null });
@@ -60,16 +60,16 @@ let result = size.fileFinishedImporting("modules/guild_scheduled_events/native/c
 export default function GuildEventsListActionSheet(guild) {
   guild = guild.guild;
   let events;
-  events = events(9662)(guild.id);
+  events = events(9667)(guild.id);
   const items = [events, guild.id];
   const tmp = closure_10();
   const effect = noop.useEffect(() => {
-    const item = arr.forEach((id) => arr(9781).getGuildEventUserCounts(id.id, id.id, []));
+    const item = arr.forEach((id) => arr(9786).getGuildEventUserCounts(id.id, id.id, []));
     const guildEventsForCurrentUser = GuildScheduledEventManagerDefault.getGuildEventsForCurrentUser(guild.id);
   }, items);
   const items1 = [guild];
   const callback = noop.useCallback(() => {
-    const result = guild(9698).closeGuildEventListActionSheet();
+    const result = guild(9703).closeGuildEventListActionSheet();
   }, []);
   const callback1 = noop.useCallback((eventId, recurrenceId) => {
     const obj = {
@@ -77,7 +77,7 @@ export default function GuildEventsListActionSheet(guild) {
       event: eventId,
       recurrenceId,
       onClose() {
-        const result = guild(9698).openGuildEventListActionSheet(closure_1_0);
+        const result = guild(9703).openGuildEventListActionSheet(closure_1_0);
       }
     };
     let result = obj.openGuildEventDetails(obj);
@@ -101,7 +101,7 @@ export default function GuildEventsListActionSheet(guild) {
   const obj1 = { inActionSheet: true, events, onPressEvent: callback1, onCloseAction: callback, guild, lastAckedId: null };
   const ref = noop.useRef(ReadStateStore.ackMessageId(guild.id, ReadStateTypes.GUILD_EVENT));
   obj1.lastAckedId = events(5586)(ref);
-  obj.children = jsx(events(9806), { inActionSheet: true, events, onPressEvent: callback1, onCloseAction: callback, guild, lastAckedId: null });
+  obj.children = jsx(events(9811), { inActionSheet: true, events, onPressEvent: callback1, onCloseAction: callback, guild, lastAckedId: null });
   obj.children = <View style={tmp.container}>{null}</View>;
   return jsx(guild(7150).BottomSheet, { style: tmp.container, children: null });
 };

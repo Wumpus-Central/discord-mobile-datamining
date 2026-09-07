@@ -1,6 +1,6 @@
-// === Module 11111: UserProfileGradientContainer ===
+// === Module 11116: UserProfileGradientContainer ===
 
-// Module 11111 (UserProfileGradientContainer)
+// Module 11116 (UserProfileGradientContainer)
 import LinearGradientDefault from "LinearGradient" /* 4987 */;
 import useUserProfileGradientColors from "useUserProfileGradientColors" /* 8239 */;
 import noop from "module_19" /* 19 */;

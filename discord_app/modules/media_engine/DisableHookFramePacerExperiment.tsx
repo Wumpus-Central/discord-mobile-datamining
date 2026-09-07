@@ -1,6 +1,6 @@
-// === Module 14006: DisableHookFramePacerExperiment ===
+// === Module 14009: DisableHookFramePacerExperiment ===
 
-// Module 14006 (DisableHookFramePacerExperiment)
+// Module 14009 (DisableHookFramePacerExperiment)
 import ApexExperiment from "ApexExperiment" /* 1433 */;
 import size from "module_2" /* 2 */;
 

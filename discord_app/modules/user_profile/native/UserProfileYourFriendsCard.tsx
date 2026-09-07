@@ -1,6 +1,6 @@
-// === Module 16806: UserProfileYourFriendsCard ===
+// === Module 16809: UserProfileYourFriendsCard ===
 
-// Module 16806 (UserProfileYourFriendsCard)
+// Module 16809 (UserProfileYourFriendsCard)
 import _modDef12 from "module_12" /* 12 */;
 import nativeDefault from "native" /* 576 */;
 import GlobalUtils from "GlobalUtils" /* 1369 */;
@@ -48,7 +48,7 @@ export default function UserProfileYourFriendsCard(arg0) {
   const obj2 = require("initialize");
   const gameRelationshipsByType = require("GameRelationshipStoreHooks").useGameRelationshipsByType(RelationshipTypes.FRIEND);
   const effect = stateFromStoresArray1.useEffect(() => {
-    const userAffinitiesV2 = closure_0(9848).fetchUserAffinitiesV2();
+    const userAffinitiesV2 = closure_0(9853).fetchUserAffinitiesV2();
   }, []);
   const items2 = [stateFromStoresArray, stateFromStoresArray1, gameRelationshipsByType];
   const effect1 = stateFromStoresArray1.useEffect(() => {

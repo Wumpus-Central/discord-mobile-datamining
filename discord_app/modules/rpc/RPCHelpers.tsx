@@ -1,6 +1,6 @@
-// === Module 9559: RPCHelpers ===
+// === Module 9564: RPCHelpers ===
 
-// Module 9559 (RPCHelpers)
+// Module 9564 (RPCHelpers)
 import _modDef12 from "module_12" /* 12 */;
 import DurationsDefault from "Durations" /* 1090 */;
 import HTTPUtils from "HTTPUtils" /* 1272 */;
@@ -10,10 +10,10 @@ import NicknameUtilsDefault from "NicknameUtils" /* 4712 */;
 import useMessageAuthor from "useMessageAuthor" /* 4793 */;
 import MessageActionCreatorsDefault from "MessageActionCreators" /* 7456 */;
 import OAuth2Scopes from "OAuth2Scopes" /* 8339 */;
-import getURLForApplicationDefault from "getURLForApplication" /* 9512 */;
-import RPCErrorDefault from "RPCError" /* 9554 */;
-import transformUserDefault from "transformUser" /* 9560 */;
-import LeakyBucketDefault from "LeakyBucket" /* 9561 */;
+import getURLForApplicationDefault from "getURLForApplication" /* 9517 */;
+import RPCErrorDefault from "RPCError" /* 9559 */;
+import transformUserDefault from "transformUser" /* 9565 */;
+import LeakyBucketDefault from "LeakyBucket" /* 9566 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import ApplicationStore from "ApplicationStore" /* 4788 */;
 import ApplicationRecord from "ApplicationRecord" /* 1918 */;
@@ -409,7 +409,7 @@ export const transformChannel = function transformChannel(channel, arg1) {
           let voice_state = { nick: closure_1(4712).getName(dependencyMap, id.id, user), mute: MediaEngineStore.isLocalMute(user.id), volume: MediaEngineStore.getLocalVolume(user.id), pan: MediaEngineStore.getLocalPan(user.id), voice_state: null, user: null };
           voice_state = { mute, deaf, self_mute: selfMute, self_deaf: selfDeaf, suppress };
           voice_state.voice_state = voice_state;
-          voice_state.user = closure_1(9560)(user);
+          voice_state.user = closure_1(9565)(user);
           return voice_state;
         }
       });

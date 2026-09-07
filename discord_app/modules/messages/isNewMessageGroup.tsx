@@ -1,6 +1,6 @@
-// === Module 11952: isNewMessageGroup ===
+// === Module 11956: isNewMessageGroup ===
 
-// Module 11952 (isNewMessageGroup)
+// Module 11956 (isNewMessageGroup)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import DurationsDefault from "Durations" /* 1090 */;
 import DateUtils from "DateUtils" /* 4242 */;

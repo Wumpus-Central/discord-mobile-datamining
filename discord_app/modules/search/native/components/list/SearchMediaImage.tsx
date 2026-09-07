@@ -1,17 +1,17 @@
-// === Module 16665: SearchMediaImage ===
+// === Module 16668: SearchMediaImage ===
 
-// Module 16665 (SearchMediaImage)
+// Module 16668 (SearchMediaImage)
 import util from "util" /* 1114 */;
 import PlatformUtils from "PlatformUtils" /* 1115 */;
 import utils_ImageUtils from "utils/ImageUtils" /* 1476 */;
 import ImageWarningIcon from "ImageWarningIcon" /* 5081 */;
 import ObscureMediaModels from "ObscureMediaModels" /* 7296 */;
 import MediaSourceUtil from "MediaSourceUtil" /* 8263 */;
-import ImageWithPlaceholder from "ImageWithPlaceholder" /* 8755 */;
-import CirclePlayIcon from "CirclePlayIcon" /* 10132 */;
-import AttachmentPreview from "AttachmentPreview" /* 10196 */;
-import generated_SpoilerIcon from "generated/SpoilerIcon" /* 11241 */;
-import MessageAttachmentUtils from "MessageAttachmentUtils" /* 12012 */;
+import ImageWithPlaceholder from "ImageWithPlaceholder" /* 8760 */;
+import CirclePlayIcon from "CirclePlayIcon" /* 10137 */;
+import AttachmentPreview from "AttachmentPreview" /* 10201 */;
+import generated_SpoilerIcon from "generated/SpoilerIcon" /* 11246 */;
+import MessageAttachmentUtils from "MessageAttachmentUtils" /* 12016 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
@@ -150,7 +150,7 @@ export const SearchAttachmentMediaImage = function SearchAttachmentMediaImage(at
   const channelId = attachment.channelId;
   const merged = Object.assign(attachment, Object.assign({ attachment: 0, channelId: 0, authorId: 0 }));
   dependencyMap = undefined;
-  let obj = attachment(10175);
+  let obj = attachment(10180);
   const enabledHarmTypesBitmaskForChannelAndAuthorId = obj.useEnabledHarmTypesBitmaskForChannelAndAuthorId(channelId, attachment.authorId);
   let num = attachment.flags;
   if (num == null) {
@@ -177,7 +177,7 @@ export const SearchEmbedMediaImage = function SearchEmbedMediaImage(embed) {
   embed = embed.embed;
   ({ sources: importDefault, messageId: dependencyMap, channelId } = embed);
   const merged = Object.assign(embed, Object.assign({ embed: 0, sources: 0, messageId: 0, channelId: 0, authorId: 0 }));
-  let obj = embed(10175);
+  let obj = embed(10180);
   closure_3 = obj.useEnabledHarmTypesBitmaskForChannelAndAuthorId(channelId, embed.authorId);
   closure_4 = embed(7329).useIsChannelSpoilerGated(ChannelStore.getChannel(channelId));
   const obj2 = embed(7329);

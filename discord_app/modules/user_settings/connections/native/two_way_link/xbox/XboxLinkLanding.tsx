@@ -1,12 +1,12 @@
-// === Module 9220: XboxLinkLanding ===
+// === Module 9225: XboxLinkLanding ===
 
-// Module 9220 (XboxLinkLanding)
+// Module 9225 (XboxLinkLanding)
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2024 */;
-import _modDef9224 from "module_9224" /* 9224 */;
+import _modDef9229 from "module_9229" /* 9229 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
-const XboxLinkModalScenes = fn(9219).XboxLinkModalScenes;
+const XboxLinkModalScenes = fn(9224).XboxLinkModalScenes;
 const Constants = fn(1074);
 ({ HelpdeskArticles: hasOwnProperty, PlatformTypes: metroRequire } = Constants);
 const jsx = fn(21).jsx;
@@ -31,7 +31,7 @@ export default function XboxLinkLanding() {
     obj = { label: null, icon: null };
     const intl2 = navigation(1114).intl;
     obj.label = intl2.string(navigation(1114).t.Xt1n4P);
-    obj.icon = navigation(9221).ScreenStreamIcon;
+    obj.icon = navigation(9226).ScreenStreamIcon;
     items[1] = obj;
     obj = { label: null, icon: null };
     const intl3 = navigation(1114).intl;
@@ -41,14 +41,14 @@ export default function XboxLinkLanding() {
     const obj1 = { label: null, icon: null };
     const intl4 = navigation(1114).intl;
     obj1.label = intl4.string(navigation(1114).t.iQsKVW);
-    obj1.icon = navigation(9223).GameControllerIcon;
+    obj1.icon = navigation(9228).GameControllerIcon;
     items[3] = obj1;
     return items;
   }, []);
   const callback = noop.useCallback(() => {
     navigation.push(XboxLinkModalScenes.PRE_CONNECT);
   }, items);
-  const memo1 = noop.useMemo(() => ({ uri: _modDef9224 }), []);
+  const memo1 = noop.useMemo(() => ({ uri: _modDef9229 }), []);
   obj = { platformType: constants2.XBOX, img: memo1, imgStyle: tmp.image, headerConnect: null, headerReconnect: null, body: null, onNext: null, valueProps: null };
   let intl2 = navigation(1114).intl;
   obj.headerConnect = intl2.string(navigation(1114).t.m8aahn);
@@ -57,5 +57,5 @@ export default function XboxLinkLanding() {
   obj.body = intl.format(navigation(1114).t.CIc3IN, { helpdeskArticleUrl: articleURL });
   obj.onNext = callback;
   obj.valueProps = memo;
-  return jsx(navigation(9225).TwoWayLinkLanding, { platformType: constants2.XBOX, img: memo1, imgStyle: tmp.image, headerConnect: null, headerReconnect: null, body: null, onNext: null, valueProps: null });
+  return jsx(navigation(9230).TwoWayLinkLanding, { platformType: constants2.XBOX, img: memo1, imgStyle: tmp.image, headerConnect: null, headerReconnect: null, body: null, onNext: null, valueProps: null });
 };

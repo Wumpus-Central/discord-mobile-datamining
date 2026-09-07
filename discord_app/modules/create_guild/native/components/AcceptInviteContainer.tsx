@@ -1,6 +1,6 @@
-// === Module 12716: AcceptInviteContainer ===
+// === Module 12720: AcceptInviteContainer ===
 
-// Module 12716 (AcceptInviteContainer)
+// Module 12720 (AcceptInviteContainer)
 import nativeDefault from "native" /* 576 */;
 import NavigatorHeader from "NavigatorHeader" /* 5624 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;

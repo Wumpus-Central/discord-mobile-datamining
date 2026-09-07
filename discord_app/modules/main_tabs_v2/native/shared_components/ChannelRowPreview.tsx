@@ -1,6 +1,6 @@
-// === Module 10109: ChannelRowPreview ===
+// === Module 10114: ChannelRowPreview ===
 
-// Module 10109 (ChannelRowPreview)
+// Module 10114 (ChannelRowPreview)
 import UserSettings from "UserSettings" /* 1935 */;
 import useToken from "useToken" /* 4262 */;
 import LinkIcon from "LinkIcon" /* 4503 */;
@@ -13,14 +13,14 @@ import PhoneHangUpIcon from "PhoneHangUpIcon" /* 7882 */;
 import RowGeneratorDefault from "RowGenerator" /* 7932 */;
 import RowGeneratorStyleSheet from "RowGeneratorStyleSheet" /* 7936 */;
 import RowGeneratorTypes from "RowGeneratorTypes" /* 8126 */;
-import MusicIcon from "MusicIcon" /* 9911 */;
-import useFormattedMessagePreview from "useFormattedMessagePreview" /* 10093 */;
-import VideoIcon from "VideoIcon" /* 10110 */;
-import AttachmentIcon from "AttachmentIcon" /* 10112 */;
-import StickerIcon from "StickerIcon" /* 10114 */;
-import MessagePreviewMarkup from "MessagePreviewMarkup" /* 10116 */;
-import useScaledTextLineHeight from "useScaledTextLineHeight" /* 10119 */;
-import ChannelListLayout from "ChannelListLayout" /* 10121 */;
+import MusicIcon from "MusicIcon" /* 9916 */;
+import useFormattedMessagePreview from "useFormattedMessagePreview" /* 10098 */;
+import VideoIcon from "VideoIcon" /* 10115 */;
+import AttachmentIcon from "AttachmentIcon" /* 10117 */;
+import StickerIcon from "StickerIcon" /* 10119 */;
+import MessagePreviewMarkup from "MessagePreviewMarkup" /* 10121 */;
+import useScaledTextLineHeight from "useScaledTextLineHeight" /* 10124 */;
+import ChannelListLayout from "ChannelListLayout" /* 10126 */;
 import noop from "module_19" /* 19 */;
 import RelationshipStore from "RelationshipStore" /* 4209 */;
 

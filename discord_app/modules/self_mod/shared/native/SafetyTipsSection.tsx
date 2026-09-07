@@ -1,8 +1,8 @@
-// === Module 11376: SafetyTipsSection ===
+// === Module 11381: SafetyTipsSection ===
 
-// Module 11376 (SafetyTipsSection)
+// Module 11381 (SafetyTipsSection)
 import nativeDefault from "native" /* 576 */;
-import SafetyTipsRowDefault from "SafetyTipsRow" /* 8579 */;
+import SafetyTipsRowDefault from "SafetyTipsRow" /* 8582 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;

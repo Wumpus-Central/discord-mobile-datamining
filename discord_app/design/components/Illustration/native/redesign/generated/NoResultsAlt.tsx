@@ -1,6 +1,6 @@
-// === Module 9760: NoResultsAlt ===
+// === Module 9765: NoResultsAlt ===
 
-// Module 9760 (NoResultsAlt)
+// Module 9765 (NoResultsAlt)
 import shared from "shared" /* 4411 */;
 import _mod8233 from "module_8233" /* 8233 */;
 import noop from "module_19" /* 19 */;
@@ -14,10 +14,10 @@ const result = size.fileFinishedImporting("design/components/Illustration/native
 export const getNoResultsAltSource = function getNoResultsAltSource(theme) {
   const obj = {
     dark() {
-      return require("module_9761");
+      return require("module_9766");
     },
     darker() {
-      return require("module_9762");
+      return require("module_9767");
     },
     light() {
       return require("module_7054");
@@ -28,10 +28,10 @@ export const getNoResultsAltSource = function getNoResultsAltSource(theme) {
 export const useNoResultsAltSource = function useNoResultsAltSource() {
   const obj = {
     dark() {
-      return require("module_9761");
+      return require("module_9766");
     },
     darker() {
-      return require("module_9762");
+      return require("module_9767");
     },
     light() {
       return require("module_7054");
@@ -42,10 +42,10 @@ export const useNoResultsAltSource = function useNoResultsAltSource() {
 export const NoResultsAlt = function NoResultsAlt(arg0) {
   let obj = {
     dark() {
-      return require("module_9761");
+      return require("module_9766");
     },
     darker() {
-      return require("module_9762");
+      return require("module_9767");
     },
     light() {
       return require("module_7054");

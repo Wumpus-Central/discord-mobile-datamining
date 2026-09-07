@@ -1,6 +1,6 @@
-// === Module 8864: getProductName ===
+// === Module 8869: getProductName ===
 
-// Module 8864 (getProductName)
+// Module 8869 (getProductName)
 import util from "util" /* 1114 */;
 import CollectiblesItemType from "CollectiblesItemType" /* 1889 */;
 import CollectiblesProductUtils from "CollectiblesProductUtils" /* 7553 */;

@@ -1,8 +1,8 @@
-// === Module 15174: QuestEmbedPreview ===
+// === Module 15177: QuestEmbedPreview ===
 
-// Module 15174 (QuestEmbedPreview)
+// Module 15177 (QuestEmbedPreview)
 import CodedLink from "CodedLink" /* 4548 */;
-import QuestCopyUtils from "QuestCopyUtils" /* 11295 */;
+import QuestCopyUtils from "QuestCopyUtils" /* 11300 */;
 import noop from "module_19" /* 19 */;
 import MessageRecord from "MessageRecord" /* 4210 */;
 import UserStore from "UserStore" /* 1371 */;
@@ -52,9 +52,9 @@ export const QuestEmbedPreview = function QuestEmbedPreview(questId) {
     const intl = tmp2(1114).intl;
     obj.title = intl.string(tmp2(1114).t["habP/M"]);
     obj = { rowGenerator: memo, message: memo1, horizontalOffset: 0, pointerEvents: "none" };
-    obj.children = jsx(stateFromStores(8652), { rowGenerator: memo, message: memo1, horizontalOffset: 0, pointerEvents: "none" });
-    tmp6 = jsx(stateFromStores(15173), { rowGenerator: memo, message: memo1, horizontalOffset: 0, pointerEvents: "none" });
-    const tmp9 = stateFromStores(15173);
+    obj.children = jsx(stateFromStores(8657), { rowGenerator: memo, message: memo1, horizontalOffset: 0, pointerEvents: "none" });
+    tmp6 = jsx(stateFromStores(15176), { rowGenerator: memo, message: memo1, horizontalOffset: 0, pointerEvents: "none" });
+    const tmp9 = stateFromStores(15176);
   }
   return tmp6;
 };

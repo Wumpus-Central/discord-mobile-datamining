@@ -1,6 +1,6 @@
-// === Module 9770: getChannelA11yLabel ===
+// === Module 9775: getChannelA11yLabel ===
 
-// Module 9770 (getChannelA11yLabel)
+// Module 9775 (getChannelA11yLabel)
 import util from "util" /* 1114 */;
 import UserUtils from "UserUtils" /* 4404 */;
 import useChannelName from "useChannelName" /* 4713 */;

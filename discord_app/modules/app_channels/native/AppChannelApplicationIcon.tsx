@@ -1,6 +1,6 @@
-// === Module 9745: AppChannelApplicationIcon ===
+// === Module 9750: AppChannelApplicationIcon ===
 
-// Module 9745 (AppChannelApplicationIcon)
+// Module 9750 (AppChannelApplicationIcon)
 import nativeDefault from "native" /* 576 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1396 */;
 import FastImageDefault from "FastImage" /* 5587 */;

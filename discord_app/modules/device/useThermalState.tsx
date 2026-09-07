@@ -1,8 +1,8 @@
-// === Module 9565: useThermalState ===
+// === Module 9570: useThermalState ===
 
-// Module 9565 (useThermalState)
+// Module 9570 (useThermalState)
 import PlatformUtils from "PlatformUtils" /* 1115 */;
-import ThermalUtilsDefault from "ThermalUtils" /* 9521 */;
+import ThermalUtilsDefault from "ThermalUtils" /* 9526 */;
 import size from "module_2" /* 2 */;
 
 let obj = { UNHANDLED: -1, [-1]: "UNHANDLED", NOMINAL: 0, [0]: "NOMINAL", FAIR: 1, [1]: "FAIR", SERIOUS: 2, [2]: "SERIOUS", CRITICAL: 3, [3]: "CRITICAL" };

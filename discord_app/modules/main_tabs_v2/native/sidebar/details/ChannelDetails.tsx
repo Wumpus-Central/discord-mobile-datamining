@@ -1,17 +1,17 @@
-// === Module 16624: ChannelDetails ===
+// === Module 16627: ChannelDetails ===
 
-// Module 16624 (ChannelDetails)
+// Module 16627 (ChannelDetails)
 import nativeDefault from "native" /* 576 */;
 import PlatformUtils from "PlatformUtils" /* 1115 */;
 import ChatInputUtils from "ChatInputUtils" /* 4425 */;
 import timing from "timing" /* 4561 */;
 import timingPresets from "timingPresets" /* 4564 */;
 import spring from "spring" /* 4974 */;
-import SearchPlatformUtilsDefault from "SearchPlatformUtils" /* 12338 */;
-import SearchActionCreatorsDefault from "SearchActionCreators" /* 12347 */;
-import SearchPlatformActionCreatorsDefault from "SearchPlatformActionCreators" /* 12361 */;
+import SearchPlatformUtilsDefault from "SearchPlatformUtils" /* 12342 */;
+import SearchActionCreatorsDefault from "SearchActionCreators" /* 12351 */;
+import SearchPlatformActionCreatorsDefault from "SearchPlatformActionCreators" /* 12365 */;
 import noop from "module_19" /* 19 */;
-import SearchQueryStore from "SearchQueryStore" /* 12339 */;
+import SearchQueryStore from "SearchQueryStore" /* 12343 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 
 require = fn;
@@ -19,7 +19,7 @@ get_ActivityIndicator = fn(17);
 ({ View: closure_4, StyleSheet } = get_ActivityIndicator);
 const ChannelDetailsStore = fn(7876);
 ({ deleteChannelDetailsSearchState: closure_7, useChannelDetailsSearchActiveSource: closure_8, useIsChannelDetailsSearchActive: closure_9 } = ChannelDetailsStore);
-const ChannelDetailsConstants = fn(10916);
+const ChannelDetailsConstants = fn(10921);
 ({ SPRING_CHANNEL_HEADER: c10, CHANNEL_DETAILS_TOP_MARGIN } = ChannelDetailsConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);

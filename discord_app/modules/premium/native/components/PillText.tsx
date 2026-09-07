@@ -1,12 +1,12 @@
-// === Module 13435: PillText ===
+// === Module 13439: PillText ===
 
-// Module 13435 (PillText)
+// Module 13439 (PillText)
 import jsxProd from "jsxProd" /* 21 */;
 import nativeDefault from "native" /* 576 */;
 import Constants from "Constants" /* 1074 */;
 import Text_Text from "Text/Text" /* 4556 */;
 import LinearGradientDefault from "LinearGradient" /* 4987 */;
-import usePremiumPrimaryGradientColorsDefault from "usePremiumPrimaryGradientColors" /* 13436 */;
+import usePremiumPrimaryGradientColorsDefault from "usePremiumPrimaryGradientColors" /* 13440 */;
 import createStyles from "createStyles" /* 4560 */;
 import size from "module_2" /* 2 */;
 

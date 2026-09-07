@@ -1,6 +1,6 @@
-// === Module 9763: AddModerators ===
+// === Module 9768: AddModerators ===
 
-// Module 9763 (AddModerators)
+// Module 9768 (AddModerators)
 import nativeDefault from "native" /* 576 */;
 import HeaderActionButton from "HeaderActionButton" /* 7377 */;
 import _slicedToArray from "module_32" /* 32 */;

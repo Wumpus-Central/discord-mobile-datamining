@@ -1,11 +1,11 @@
-// === Module 16654: SearchHistoryRow ===
+// === Module 16657: SearchHistoryRow ===
 
-// Module 16654 (SearchHistoryRow)
+// Module 16657 (SearchHistoryRow)
 import nativeDefault from "native" /* 576 */;
 import Text_Text from "Text/Text" /* 4556 */;
 import UserActionCreators from "UserActionCreators" /* 8181 */;
-import search_tracking_TrackingDefault from "search/tracking/Tracking" /* 12358 */;
-import SearchPlatformActionCreatorsDefault from "SearchPlatformActionCreators" /* 12361 */;
+import search_tracking_TrackingDefault from "search/tracking/Tracking" /* 12362 */;
+import SearchPlatformActionCreatorsDefault from "SearchPlatformActionCreators" /* 12365 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
@@ -27,7 +27,7 @@ function SearchHistoryTextRow(searchContext) {
   const searchHistoryItem = searchContext.searchHistoryItem;
   const tmp = closure_12();
   dependencyMap = tmp;
-  let obj = searchContext(16642);
+  let obj = searchContext(16645);
   const onPressSearchHistoryText = obj.useOnPressSearchHistoryText({ searchContext });
   const items = [onPressSearchHistoryText, searchContext, , , ];
   ({ tags: arr[2], text: arr[3], type: arr[4] } = searchHistoryItem);
@@ -55,7 +55,7 @@ function SearchHistoryTextRow(searchContext) {
   obj.trailing = closure_10(SearchHistoryRemoveIcon, { searchContext, searchHistoryItem });
   obj.iconContainerStyle = tmp.textIconContainer;
   obj.icon = closure_10(View, { style: tmp.iconContainer, children: closure_10(searchContext(7051).MagnifyingGlassIcon, { size: "sm", color: "interactive-text-default" }) });
-  return closure_10(searchContext(16652).SearchListRow, obj);
+  return closure_10(searchContext(16655).SearchListRow, obj);
 }
 function SearchHistoryGroupDMRow(searchContext) {
   searchContext = searchContext.searchContext;

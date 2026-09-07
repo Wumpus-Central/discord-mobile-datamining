@@ -1,14 +1,14 @@
-// === Module 10024: ScreenshareParticipant ===
+// === Module 10029: ScreenshareParticipant ===
 
-// Module 10024 (ScreenshareParticipant)
+// Module 10029 (ScreenshareParticipant)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import Text_Text from "Text/Text" /* 4556 */;
 import components_Button_Button from "components/Button/Button" /* 4975 */;
 import LegacyBaseButton from "LegacyBaseButton" /* 6655 */;
-import useParticipantTileTapGestureDefault from "useParticipantTileTapGesture" /* 9592 */;
-import _modDef9593 from "module_9593" /* 9593 */;
-import useScreenshareUtils from "useScreenshareUtils" /* 9951 */;
+import useParticipantTileTapGestureDefault from "useParticipantTileTapGesture" /* 9597 */;
+import _modDef9598 from "module_9598" /* 9598 */;
+import useScreenshareUtils from "useScreenshareUtils" /* 9956 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -52,7 +52,7 @@ export default function ScreenshareParticipant(participant) {
   obj = { style: null, children: null };
   const items2 = [tmp4.container, participant.containerStyle];
   obj.style = items2;
-  obj = { source: _modDef9593, style: tmp4.image };
+  obj = { source: _modDef9598, style: tmp4.image };
   const items3 = [timestampProducer(hasOwnProperty, obj), , , ];
   const obj1 = { style: tmp4.title, accessibilityRole: "header", variant: "heading-lg/extrabold", color: "mobile-text-heading-primary", children: null };
   const intl = util.intl;

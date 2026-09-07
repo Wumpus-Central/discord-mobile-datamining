@@ -1,11 +1,11 @@
-// === Module 10327: PremiumEmojiFeatureUpsell ===
+// === Module 10332: PremiumEmojiFeatureUpsell ===
 
-// Module 10327 (PremiumEmojiFeatureUpsell)
+// Module 10332 (PremiumEmojiFeatureUpsell)
 import nativeDefault from "native" /* 576 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4296 */;
 import useKeyboardIsOpenDefault from "useKeyboardIsOpen" /* 6625 */;
 import EntitlementFeatureNames from "EntitlementFeatureNames" /* 7853 */;
-import PremiumFeatureUpsellDefault from "PremiumFeatureUpsell" /* 9964 */;
+import PremiumFeatureUpsellDefault from "PremiumFeatureUpsell" /* 9969 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

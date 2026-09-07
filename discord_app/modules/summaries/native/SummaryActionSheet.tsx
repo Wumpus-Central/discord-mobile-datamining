@@ -1,6 +1,6 @@
-// === Module 11652: SummaryActionSheet ===
+// === Module 11657: SummaryActionSheet ===
 
-// Module 11652 (SummaryActionSheet)
+// Module 11657 (SummaryActionSheet)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import nativeDefault from "native" /* 576 */;
 import router_utils from "router_utils" /* 1100 */;
@@ -16,7 +16,7 @@ import showShareActionSheet from "showShareActionSheet" /* 8361 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 import MessageStore from "MessageStore" /* 4781 */;
-import SummaryStore from "SummaryStore" /* 11345 */;
+import SummaryStore from "SummaryStore" /* 11350 */;
 
 require = fn;
 const View = fn(17).View;
@@ -75,8 +75,8 @@ export default function SummaryActionSheet(summary) {
         guild_id1 = channel.guild_id;
       }
       obj = { guildId: guild_id1 };
-      tmpResult.openLazy(asyncRequireImpl(11625, dependencyMap.paths), "GuildHighlightsNotifications", obj);
-      const tmp7 = asyncRequireImpl(11625, dependencyMap.paths);
+      tmpResult.openLazy(asyncRequireImpl(11630, dependencyMap.paths), "GuildHighlightsNotifications", obj);
+      const tmp7 = asyncRequireImpl(11630, dependencyMap.paths);
     }
   }, items);
   const items2 = [summary, channel, message];
@@ -191,7 +191,7 @@ export const openSummaryDividerActionSheet = function openSummaryDividerActionSh
   if (null != findSummaryResult) {
     const _HermesInternal = HermesInternal;
     const obj = { summary: findSummaryResult };
-    obj.openLazy(asyncRequireImpl(11652, dependencyMap.paths), "SummaryDivider" + summaryId, obj);
-    const tmp5 = asyncRequireImpl(11652, dependencyMap.paths);
+    obj.openLazy(asyncRequireImpl(11657, dependencyMap.paths), "SummaryDivider" + summaryId, obj);
+    const tmp5 = asyncRequireImpl(11657, dependencyMap.paths);
   }
 };

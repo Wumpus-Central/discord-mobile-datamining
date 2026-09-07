@@ -1,8 +1,8 @@
-// === Module 9807: GuildEventsNoContent ===
+// === Module 9812: GuildEventsNoContent ===
 
-// Module 9807 (GuildEventsNoContent)
+// Module 9812 (GuildEventsNoContent)
 import nativeDefault from "native" /* 576 */;
-import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 9063 */;
+import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 9068 */;
 import noop from "module_19" /* 19 */;
 import PermissionStore from "PermissionStore" /* 4199 */;
 import TextStyles from "TextStyles" /* 5524 */;
@@ -34,7 +34,7 @@ export default function GuildEventsNoContent(guild) {
   const items1 = [guild];
   let stateFromStores = obj.useStateFromStores(items, () => PermissionStore.can(constants.MANAGE_ROLES, guild), items1);
   obj = { style: tmp.container, children: null };
-  obj = { icon: onClose(9783), IconComponent: guild(9785).CalendarIcon };
+  obj = { icon: onClose(9788), IconComponent: guild(9790).CalendarIcon };
   const items2 = [closure_7(onClose(8407), obj), , , ];
   const obj1 = { style: tmp.title, accessibilityRole: "header", variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: null };
   const intl = guild(1114).intl;

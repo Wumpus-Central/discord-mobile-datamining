@@ -1,15 +1,15 @@
-// === Module 11798: GuildIconUploader ===
+// === Module 11803: GuildIconUploader ===
 
-// Module 11798 (GuildIconUploader)
+// Module 11803 (GuildIconUploader)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import shared from "shared" /* 4411 */;
 import Text_Text from "Text/Text" /* 4556 */;
 import Pressables from "Pressables" /* 5123 */;
-import _modDef11799 from "module_11799" /* 11799 */;
-import _modDef11800 from "module_11800" /* 11800 */;
-import _modDef11801 from "module_11801" /* 11801 */;
-import _modDef11802 from "module_11802" /* 11802 */;
+import _modDef11804 from "module_11804" /* 11804 */;
+import _modDef11805 from "module_11805" /* 11805 */;
+import _modDef11806 from "module_11806" /* 11806 */;
+import _modDef11807 from "module_11807" /* 11807 */;
 import noop from "module_19" /* 19 */;
 import ThemeStore from "ThemeStore" /* 1183 */;
 
@@ -53,9 +53,9 @@ prototype["renderIcon"] = function renderIcon() {
     ({ guildIcon: arr3[0], emptyGuildIcon: arr3[1] } = tmp);
     obj1.style = items1;
     if (obj6.isThemeDark(ThemeStore.theme)) {
-      let tmp13Result = _modDef11799;
+      let tmp13Result = _modDef11804;
     } else {
-      tmp13Result = _modDef11800;
+      tmp13Result = _modDef11805;
     }
     obj = { source: tmp13Result };
     const items2 = [timestampProducer(React4, obj), ];
@@ -86,12 +86,12 @@ prototype["renderUpload"] = function renderUpload() {
     const obj3 = { tintColor: iconBackgroundColor };
     items1[1] = obj3;
     obj2.style = items1;
-    obj2.source = _modDef11801;
+    obj2.source = _modDef11806;
     obj1.children = timestampProducer(React4, obj2);
     obj.children = timestampProducer(React3, obj1);
   } else {
     obj = { style: tmp.emptyIconWrapper, children: null };
-    const obj4 = { source: _modDef11802 };
+    const obj4 = { source: _modDef11807 };
     obj.children = timestampProducer(React4, obj4);
   }
   return timestampProducer(React3, obj);

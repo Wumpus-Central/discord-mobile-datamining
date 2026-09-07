@@ -1,13 +1,13 @@
-// === Module 16789: CustomTypingIndicatorProfileCoachmark ===
+// === Module 16792: CustomTypingIndicatorProfileCoachmark ===
 
-// Module 16789 (CustomTypingIndicatorProfileCoachmark)
+// Module 16792 (CustomTypingIndicatorProfileCoachmark)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import user from "user" /* 1379 */;
 import _modDef3549 from "module_3549" /* 3549 */;
-import CustomTypingIndicatorDynamicAssetDefault from "CustomTypingIndicatorDynamicAsset" /* 11970 */;
-import _modDef11974 from "module_11974" /* 11974 */;
-import _modDef11975 from "module_11975" /* 11975 */;
+import CustomTypingIndicatorDynamicAssetDefault from "CustomTypingIndicatorDynamicAsset" /* 11974 */;
+import _modDef11978 from "module_11978" /* 11978 */;
+import _modDef11979 from "module_11979" /* 11979 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -15,7 +15,7 @@ function CoachmarkPreview() {
   const tmp = closure_8();
   let obj = { style: tmp.coachmarkImageContainer, children: null };
   obj = { name: "Locke", suggestion: user.TypingSuggestion.YAPPING, emojiSize: 16, spacing: 8, emojiGap: 4, textVariant: "text-xs/medium", textColor: "text-subtle", textStyle: tmp.typingText, emojiSource: null };
-  const items = [_modDef11974, _modDef11975, _modDef11974];
+  const items = [_modDef11978, _modDef11979, _modDef11978];
   obj.emojiSource = items;
   obj.children = jsx(CustomTypingIndicatorDynamicAssetDefault, { name: "Locke", suggestion: user.TypingSuggestion.YAPPING, emojiSize: 16, spacing: 8, emojiGap: 4, textVariant: "text-xs/medium", textColor: "text-subtle", textStyle: tmp.typingText, emojiSource: null });
   return <View name="Locke" suggestion={user.TypingSuggestion.YAPPING} emojiSize={16} spacing={8} emojiGap={4} textVariant="text-xs/medium" textColor="text-subtle" textStyle={tmp.typingText} emojiSource={null} />;

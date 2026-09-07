@@ -1,6 +1,6 @@
-// === Module 12105: CommandRowButton ===
+// === Module 12109: CommandRowButton ===
 
-// Module 12105 (CommandRowButton)
+// Module 12109 (CommandRowButton)
 import util from "util" /* 1114 */;
 import SendMessageIcon from "SendMessageIcon" /* 4505 */;
 import components_Button_Button from "components/Button/Button" /* 4975 */;
@@ -76,8 +76,8 @@ export const useCommandRowSend = function useCommandRowSend(command) {
               beforeExecuteCommand();
             }
             c3 = 1;
-            let obj1 = tmp3(9289);
-            obj1 = { command, optionValues: tmp3(11993).parseOptionValuesForSend(commandContext.channel, command, {}), context: commandContext, sectionName, commandOrigin: tmp3(7523).CommandOrigin.APP_LAUNCHER_APPLICATION_VIEW };
+            let obj1 = tmp3(9294);
+            obj1 = { command, optionValues: tmp3(11997).parseOptionValuesForSend(commandContext.channel, command, {}), context: commandContext, sectionName, commandOrigin: tmp3(7523).CommandOrigin.APP_LAUNCHER_APPLICATION_VIEW };
             dependencyMap = 2;
             c4 = 1;
             const obj2 = { value: obj1.executeAppLauncherCommand(obj1), done: false };

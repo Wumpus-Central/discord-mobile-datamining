@@ -1,6 +1,6 @@
-// === Module 11013: CollectiblesShopGiftPurchaseSection ===
+// === Module 11018: CollectiblesShopGiftPurchaseSection ===
 
-// Module 11013 (CollectiblesShopGiftPurchaseSection)
+// Module 11018 (CollectiblesShopGiftPurchaseSection)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import nativeDefault from "native" /* 576 */;
 import PlatformUtils from "PlatformUtils" /* 1115 */;

@@ -1,6 +1,6 @@
-// === Module 16035: MessagesItemChannelContent ===
+// === Module 16038: MessagesItemChannelContent ===
 
-// Module 16035 (MessagesItemChannelContent)
+// Module 16038 (MessagesItemChannelContent)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import nativeDefault from "native" /* 576 */;
 import native from "native" /* 1178 */;
@@ -10,15 +10,15 @@ import useChannelNameDefault from "useChannelName" /* 4713 */;
 import _modDef6969 from "module_6969" /* 6969 */;
 import _modDef7930 from "module_7930" /* 7930 */;
 import isChangelogChannelDefault from "isChangelogChannel" /* 8374 */;
-import GuildTagDefault from "GuildTag" /* 9184 */;
-import BotTagDefault from "BotTag" /* 9438 */;
-import _modDef10145 from "module_10145" /* 10145 */;
-import ActivityStatusDefault from "ActivityStatus" /* 10876 */;
-import UsernameWithEffectsDefault from "UsernameWithEffects" /* 10899 */;
-import _modDef10954 from "module_10954" /* 10954 */;
-import useMessagePreviewsDefault from "useMessagePreviews" /* 15317 */;
-import usePrivateChannelWaveDefault from "usePrivateChannelWave" /* 16037 */;
-import MessagesItemChannelWaveDefault from "MessagesItemChannelWave" /* 16039 */;
+import GuildTagDefault from "GuildTag" /* 9189 */;
+import BotTagDefault from "BotTag" /* 9443 */;
+import _modDef10150 from "module_10150" /* 10150 */;
+import ActivityStatusDefault from "ActivityStatus" /* 10881 */;
+import UsernameWithEffectsDefault from "UsernameWithEffects" /* 10904 */;
+import _modDef10959 from "module_10959" /* 10959 */;
+import useMessagePreviewsDefault from "useMessagePreviews" /* 15320 */;
+import usePrivateChannelWaveDefault from "usePrivateChannelWave" /* 16040 */;
+import MessagesItemChannelWaveDefault from "MessagesItemChannelWave" /* 16042 */;
 import noop from "module_19" /* 19 */;
 import ReadStateStore from "ReadStateStore" /* 4575 */;
 
@@ -39,7 +39,7 @@ function MessagesItemChannelContentIcon(selected) {
     obj.style = items1;
     tmp2 = timestampProducer(native.Icon, obj);
   } else if (muted) {
-    const obj1 = { source: _modDef10145, size: native.Icon.Sizes.EXTRA_SMALL, style: null };
+    const obj1 = { source: _modDef10150, size: native.Icon.Sizes.EXTRA_SMALL, style: null };
     const items2 = [, ];
     ({ channelIcon: arr2[0], channelMutedIcon: arr2[1] } = tmp);
     obj1.style = items2;
@@ -47,7 +47,7 @@ function MessagesItemChannelContentIcon(selected) {
   } else {
     tmp2 = null;
     if (favorite) {
-      obj = { source: _modDef10954, size: native.Icon.Sizes.EXTRA_SMALL, style: null };
+      obj = { source: _modDef10959, size: native.Icon.Sizes.EXTRA_SMALL, style: null };
       const items3 = [, ];
       ({ channelIcon: arr[0], channelFavoriteIcon: arr[1] } = tmp);
       obj.style = items3;
@@ -143,7 +143,7 @@ export default noop.memo(function MessagesItemChannelContent(channel) {
   if (tmp12) {
     tmp12 = !isChangelogChannelDefault(channel.id);
   }
-  tmpResult = tmp(16036);
+  tmpResult = tmp(16039);
   let tmp3Result = SnowflakeUtilsDefault;
   let id = stateFromStores;
   if (stateFromStores == null) {
@@ -172,7 +172,7 @@ export default noop.memo(function MessagesItemChannelContent(channel) {
       if (channel.recipients.length > 0) {
         const obj4 = { userId: channel.recipients[0], userName: tmp16, effectDisplayType: null };
         tmp3Result = UsernameWithEffectsDefault;
-        const EffectDisplayType = tmp(10900).EffectDisplayType;
+        const EffectDisplayType = tmp(10905).EffectDisplayType;
         obj4.effectDisplayType = channelSelected ? EffectDisplayType.STATIC : EffectDisplayType.PLAIN;
         obj = Object.assign(obj);
         closure_6(tmp3Result, obj4);
@@ -257,7 +257,7 @@ export default noop.memo(function MessagesItemChannelContent(channel) {
       obj15.color = str7;
       obj15.layout = tmp(7879).ChannelListLayoutTypes.COZY_DRAWER_SMOL;
       obj15.muted = muted;
-      let tmp20Result2 = closure_6(tmp(10109).ChannelRowPreview, obj15);
+      let tmp20Result2 = closure_6(tmp(10114).ChannelRowPreview, obj15);
     } else if (channel.isDM()) {
       const obj16 = { textStyle: tmp9.channelText, userId: channel.getRecipientId(), guildId: null };
       let guild_id;

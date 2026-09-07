@@ -1,6 +1,6 @@
-// === Module 13503: SubscriptionPlaceholderPattern ===
+// === Module 13507: SubscriptionPlaceholderPattern ===
 
-// Module 13503 (SubscriptionPlaceholderPattern)
+// Module 13507 (SubscriptionPlaceholderPattern)
 import shared from "shared" /* 4411 */;
 import _mod8233 from "module_8233" /* 8233 */;
 import noop from "module_19" /* 19 */;
@@ -14,13 +14,13 @@ const result = size.fileFinishedImporting("design/components/Illustration/native
 export const getSubscriptionPlaceholderPatternSource = function getSubscriptionPlaceholderPatternSource(theme) {
   const obj = {
     dark() {
-      return require("module_13504");
+      return require("module_13508");
     },
     darker() {
-      return require("module_13505");
+      return require("module_13509");
     },
     light() {
-      return require("module_13506");
+      return require("module_13510");
     }
   };
   return obj.getIllustrationSource(theme, obj);
@@ -28,13 +28,13 @@ export const getSubscriptionPlaceholderPatternSource = function getSubscriptionP
 export const useSubscriptionPlaceholderPatternSource = function useSubscriptionPlaceholderPatternSource() {
   const obj = {
     dark() {
-      return require("module_13504");
+      return require("module_13508");
     },
     darker() {
-      return require("module_13505");
+      return require("module_13509");
     },
     light() {
-      return require("module_13506");
+      return require("module_13510");
     }
   };
   return _mod8233.getIllustrationSource(obj.useThemeContext().theme, obj);
@@ -42,13 +42,13 @@ export const useSubscriptionPlaceholderPatternSource = function useSubscriptionP
 export const SubscriptionPlaceholderPattern = function SubscriptionPlaceholderPattern(arg0) {
   let obj = {
     dark() {
-      return require("module_13504");
+      return require("module_13508");
     },
     darker() {
-      return require("module_13505");
+      return require("module_13509");
     },
     light() {
-      return require("module_13506");
+      return require("module_13510");
     }
   };
   obj = {};

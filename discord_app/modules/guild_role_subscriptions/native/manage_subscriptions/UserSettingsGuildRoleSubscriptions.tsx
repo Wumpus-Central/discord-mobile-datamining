@@ -1,14 +1,14 @@
-// === Module 15209: UserSettingsGuildRoleSubscriptions ===
+// === Module 15212: UserSettingsGuildRoleSubscriptions ===
 
-// Module 15209 (UserSettingsGuildRoleSubscriptions)
+// Module 15212 (UserSettingsGuildRoleSubscriptions)
 import util from "util" /* 1114 */;
 import native from "native" /* 1178 */;
 import Text_Text from "Text/Text" /* 4556 */;
-import useRestorePurchasesDefault from "useRestorePurchases" /* 15210 */;
-import useActiveGuildSubscriptionsDefault from "useActiveGuildSubscriptions" /* 15211 */;
-import GuildRoleSubscriptionsHooks from "GuildRoleSubscriptionsHooks" /* 15212 */;
-import LoadingIndicatorDefault from "LoadingIndicator" /* 15215 */;
-import ManageSubscriptionCardDefault from "ManageSubscriptionCard" /* 15216 */;
+import useRestorePurchasesDefault from "useRestorePurchases" /* 15213 */;
+import useActiveGuildSubscriptionsDefault from "useActiveGuildSubscriptions" /* 15214 */;
+import GuildRoleSubscriptionsHooks from "GuildRoleSubscriptionsHooks" /* 15215 */;
+import LoadingIndicatorDefault from "LoadingIndicator" /* 15218 */;
+import ManageSubscriptionCardDefault from "ManageSubscriptionCard" /* 15219 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

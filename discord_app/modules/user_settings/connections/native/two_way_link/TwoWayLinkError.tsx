@@ -1,13 +1,13 @@
-// === Module 9267: TwoWayLinkError ===
+// === Module 9272: TwoWayLinkError ===
 
-// Module 9267 (TwoWayLinkError)
+// Module 9272 (TwoWayLinkError)
 import util from "util" /* 1114 */;
 import Text_Text from "Text/Text" /* 4556 */;
 import Stack_Stack from "Stack/Stack" /* 4973 */;
 import components_Button_Button from "components/Button/Button" /* 4975 */;
 import common_SafeAreaView from "common/SafeAreaView" /* 7123 */;
-import TwoWayLinkStyles from "TwoWayLinkStyles" /* 9226 */;
-import _modDef9268 from "module_9268" /* 9268 */;
+import TwoWayLinkStyles from "TwoWayLinkStyles" /* 9231 */;
+import _modDef9273 from "module_9273" /* 9273 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -27,7 +27,7 @@ export const TwoWayLinkError = function TwoWayLinkError(arg0) {
   obj = { style: twoWayLinkStyles.container, children: null };
   obj = { style: twoWayLinkStyles.content, children: null };
   const tmp = closure_7();
-  const items = [hasOwnProperty(React3, { source: _modDef9268, style: closure_7().image }), hasOwnProperty(Text_Text.Text, { variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", style: twoWayLinkStyles.title, children: title }), hasOwnProperty(Text_Text.Text, { variant: "text-md/normal", color: "text-default", style: twoWayLinkStyles.body, children: body })];
+  const items = [hasOwnProperty(React3, { source: _modDef9273, style: closure_7().image }), hasOwnProperty(Text_Text.Text, { variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", style: twoWayLinkStyles.title, children: title }), hasOwnProperty(Text_Text.Text, { variant: "text-md/normal", color: "text-default", style: twoWayLinkStyles.body, children: body })];
   obj.children = items;
   const items1 = [timestampProducer(React4, obj), ];
   const obj4 = { bottom: true, style: twoWayLinkStyles.footerContainer, children: null };

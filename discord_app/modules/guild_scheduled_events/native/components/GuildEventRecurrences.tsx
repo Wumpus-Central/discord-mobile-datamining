@@ -1,10 +1,10 @@
-// === Module 9796: GuildEventRecurrences ===
+// === Module 9801: GuildEventRecurrences ===
 
-// Module 9796 (GuildEventRecurrences)
+// Module 9801 (GuildEventRecurrences)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import nativeDefault from "native" /* 576 */;
-import useGuildEventRecurrencesDefault from "useGuildEventRecurrences" /* 9797 */;
-import GuildEventRecurrenceDefault from "GuildEventRecurrence" /* 9799 */;
+import useGuildEventRecurrencesDefault from "useGuildEventRecurrences" /* 9802 */;
+import GuildEventRecurrenceDefault from "GuildEventRecurrence" /* 9804 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;

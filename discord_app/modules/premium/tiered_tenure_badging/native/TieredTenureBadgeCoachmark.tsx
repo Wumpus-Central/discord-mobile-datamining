@@ -1,10 +1,10 @@
-// === Module 11189: TieredTenureBadgeCoachmark ===
+// === Module 11194: TieredTenureBadgeCoachmark ===
 
-// Module 11189 (TieredTenureBadgeCoachmark)
+// Module 11194 (TieredTenureBadgeCoachmark)
 import util from "util" /* 1114 */;
 import dismissible_content from "dismissible_content" /* 1943 */;
 import FastImageDefault from "FastImage" /* 5587 */;
-import useMobileTenureBadgeImages from "useMobileTenureBadgeImages" /* 11158 */;
+import useMobileTenureBadgeImages from "useMobileTenureBadgeImages" /* 11163 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -87,6 +87,6 @@ export default function TieredTenureBadgeCoachmark(arg0) {
     return obj;
   }, items2);
   let obj = tieredTenureBadgeData(7634);
-  const coachmark = tieredTenureBadgeData(11127).useCoachmark(targetRef, memo);
+  const coachmark = tieredTenureBadgeData(11132).useCoachmark(targetRef, memo);
   return null;
 };

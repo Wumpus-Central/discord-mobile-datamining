@@ -1,13 +1,13 @@
-// === Module 13455: ProgressWheel ===
+// === Module 13459: ProgressWheel ===
 
-// Module 13455 (ProgressWheel)
+// Module 13459 (ProgressWheel)
 import nativeDefault from "native" /* 576 */;
 import useToken from "useToken" /* 4262 */;
 import FastImageDefault from "FastImage" /* 5587 */;
-import inlineStyles from "inlineStyles" /* 8453 */;
-import useReferralProgramBannerDetails from "useReferralProgramBannerDetails" /* 13445 */;
-import _modDef13456 from "module_13456" /* 13456 */;
-import _modDef13457 from "module_13457" /* 13457 */;
+import inlineStyles from "inlineStyles" /* 8456 */;
+import useReferralProgramBannerDetails from "useReferralProgramBannerDetails" /* 13449 */;
+import _modDef13460 from "module_13460" /* 13460 */;
+import _modDef13461 from "module_13461" /* 13461 */;
 import noop from "module_19" /* 19 */;
 
 const inlineStylesDefault = inlineStyles;
@@ -35,7 +35,7 @@ export default function ProgressWheel(arg0) {
   if (tmp9) {
     obj = { source: null, style: null };
     let tmp4Result = FastImageDefault;
-    obj.source = _modDef13456;
+    obj.source = _modDef13460;
     obj.style = tmp.glowImage;
     tmp9 = React4(tmp4Result, obj);
   }
@@ -48,7 +48,7 @@ export default function ProgressWheel(arg0) {
   size.children = items1;
   items[1] = hasOwnProperty(tmp4Result, size);
   if (altImage == null) {
-    altImage = _modDef13457;
+    altImage = _modDef13461;
   }
   items[2] = React4(FastImageDefault, { source: { uri: altImage }, style: tmp.progressCircleImage });
   obj.children = items;

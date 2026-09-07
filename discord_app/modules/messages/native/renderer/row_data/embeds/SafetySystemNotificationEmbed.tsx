@@ -1,6 +1,6 @@
-// === Module 13246: SafetySystemNotificationEmbed ===
+// === Module 13250: SafetySystemNotificationEmbed ===
 
-// Module 13246 (SafetySystemNotificationEmbed)
+// Module 13250 (SafetySystemNotificationEmbed)
 import _mod17 from "module_17" /* 17 */;
 import Constants from "Constants" /* 1074 */;
 import util from "util" /* 1114 */;
@@ -51,7 +51,7 @@ export const createSafetySystemNotificationEmbed = function createSafetySystemNo
             if (str == null) {
               str = "";
             }
-            obj = { titleText: str, titleIcon: renderer_EmbedUtils.getAssetUriForEmbed(Image.resolveAssetSource(importDefault("danger" === parseMessageForPropsResult.icon ? 8589 : 5036))), subtitleText: null, descriptionText: null, primaryCtaText: null, primaryCtaType: null, primaryCtaKey: null, secondaryCtaText: null, secondaryCtaType: null, secondaryCtaKey: null, footerTheme: null };
+            obj = { titleText: str, titleIcon: renderer_EmbedUtils.getAssetUriForEmbed(Image.resolveAssetSource(importDefault("danger" === parseMessageForPropsResult.icon ? 8594 : 5036))), subtitleText: null, descriptionText: null, primaryCtaText: null, primaryCtaType: null, primaryCtaKey: null, secondaryCtaText: null, secondaryCtaType: null, secondaryCtaKey: null, footerTheme: null };
             const intl = util.intl;
             let num = parseMessageForPropsResult.timestamp;
             if (num == null) {

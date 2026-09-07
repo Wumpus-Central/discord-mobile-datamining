@@ -1,6 +1,6 @@
-// === Module 9038: InAppReportsGuildDiscoveryPreviewElement ===
+// === Module 9043: InAppReportsGuildDiscoveryPreviewElement ===
 
-// Module 9038 (InAppReportsGuildDiscoveryPreviewElement)
+// Module 9043 (InAppReportsGuildDiscoveryPreviewElement)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;

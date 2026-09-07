@@ -1,6 +1,6 @@
-// === Module 15048: BountiesAutoScrollOverlayNuxGradient ===
+// === Module 15051: BountiesAutoScrollOverlayNuxGradient ===
 
-// Module 15048 (BountiesAutoScrollOverlayNuxGradient)
+// Module 15051 (BountiesAutoScrollOverlayNuxGradient)
 import nativeDefault from "native" /* 576 */;
 import timing from "timing" /* 4561 */;
 import timingPresets from "timingPresets" /* 4564 */;

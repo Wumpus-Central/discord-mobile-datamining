@@ -1,15 +1,15 @@
-// === Module 13225: EmbeddedActivityInstanceEmbed ===
+// === Module 13229: EmbeddedActivityInstanceEmbed ===
 
-// Module 13225 (EmbeddedActivityInstanceEmbed)
+// Module 13229 (EmbeddedActivityInstanceEmbed)
 import util from "util" /* 1114 */;
 import ApplicationActionCreators from "ApplicationActionCreators" /* 7163 */;
-import ContentClassificationVisibility from "ContentClassificationVisibility" /* 11941 */;
-import CodedLinksTypes from "CodedLinksTypes" /* 11942 */;
-import getPlayInContext from "getPlayInContext" /* 11943 */;
-import nativeAppMessageEmbedUtil from "nativeAppMessageEmbedUtil" /* 11944 */;
-import getApplicationInstallURL from "getApplicationInstallURL" /* 12132 */;
-import useEmbeddedActivityParticipantAvatarUris from "useEmbeddedActivityParticipantAvatarUris" /* 13216 */;
-import EmbeddedApplicationInstanceUtils from "EmbeddedApplicationInstanceUtils" /* 13226 */;
+import ContentClassificationVisibility from "ContentClassificationVisibility" /* 11945 */;
+import CodedLinksTypes from "CodedLinksTypes" /* 11946 */;
+import getPlayInContext from "getPlayInContext" /* 11947 */;
+import nativeAppMessageEmbedUtil from "nativeAppMessageEmbedUtil" /* 11948 */;
+import getApplicationInstallURL from "getApplicationInstallURL" /* 12136 */;
+import useEmbeddedActivityParticipantAvatarUris from "useEmbeddedActivityParticipantAvatarUris" /* 13220 */;
+import EmbeddedApplicationInstanceUtils from "EmbeddedApplicationInstanceUtils" /* 13230 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 1956 */;
 import ApplicationStore from "ApplicationStore" /* 4788 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
@@ -18,7 +18,7 @@ import PresenceStore from "PresenceStore" /* 4600 */;
 import UserStore from "UserStore" /* 1371 */;
 
 require = fn;
-const CodedLinkExtendedType = fn(11309).CodedLinkExtendedType;
+const CodedLinkExtendedType = fn(11314).CodedLinkExtendedType;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/messages/native/renderer/row_data/embeds/EmbeddedActivityInstanceEmbed.tsx");
 

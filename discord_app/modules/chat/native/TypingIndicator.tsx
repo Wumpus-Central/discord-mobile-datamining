@@ -1,17 +1,17 @@
-// === Module 11964: TypingIndicator ===
+// === Module 11968: TypingIndicator ===
 
-// Module 11964 (TypingIndicator)
+// Module 11968 (TypingIndicator)
 import nativeDefault from "native" /* 576 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
 import native from "native" /* 4271 */;
 import NicknameUtilsDefault from "NicknameUtils" /* 4712 */;
 import spring from "spring" /* 4974 */;
 import springPresets from "springPresets" /* 4978 */;
-import CustomTypingIndicatorUtils from "CustomTypingIndicatorUtils" /* 11971 */;
+import CustomTypingIndicatorUtils from "CustomTypingIndicatorUtils" /* 11975 */;
 import noop from "module_19" /* 19 */;
 import DevSettingsStore from "DevSettingsStore" /* 4559 */;
 import RawGuildEmojiStore from "RawGuildEmojiStore" /* 5461 */;
-import TypingStore from "TypingStore" /* 11965 */;
+import TypingStore from "TypingStore" /* 11969 */;
 import UserStore from "UserStore" /* 1371 */;
 
 require = fn;
@@ -215,7 +215,7 @@ function renderTypingIndicator(arg0, arg1, transitionState, cleanUp) {
   return closure_1_12(TypingIndicatorInner, obj, arg0);
 }
 const View = fn(17).View;
-let closure_5 = fn(9485).useChatShowingAutoComplete;
+let closure_5 = fn(9490).useChatShowingAutoComplete;
 const SlowmodeType = fn(7687).SlowmodeType;
 const AnalyticEvents = fn(1074).AnalyticEvents;
 const jsxProd = fn(21);

@@ -1,9 +1,9 @@
-// === Module 11770: QuestRewardTile ===
+// === Module 11775: QuestRewardTile ===
 
-// Module 11770 (QuestRewardTile)
-import AssetUtils from "AssetUtils" /* 11285 */;
-import QuestRewardUtils from "QuestRewardUtils" /* 11290 */;
-import QuestDockRewardTileDefault from "QuestDockRewardTile" /* 11771 */;
+// Module 11775 (QuestRewardTile)
+import AssetUtils from "AssetUtils" /* 11290 */;
+import QuestRewardUtils from "QuestRewardUtils" /* 11295 */;
+import QuestDockRewardTileDefault from "QuestDockRewardTile" /* 11776 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

@@ -1,6 +1,6 @@
-// === Module 17276: markdownRules ===
+// === Module 17279: markdownRules ===
 
-// Module 17276 (markdownRules)
+// Module 17279 (markdownRules)
 import t from "module_4257" /* 4257 */;
 import size from "module_2" /* 2 */;
 

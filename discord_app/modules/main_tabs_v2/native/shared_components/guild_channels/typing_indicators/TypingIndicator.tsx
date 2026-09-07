@@ -1,6 +1,6 @@
-// === Module 16083: typing_indicators/TypingIndicator ===
+// === Module 16086: typing_indicators/TypingIndicator ===
 
-// Module 16083 (typing_indicators/TypingIndicator)
+// Module 16086 (typing_indicators/TypingIndicator)
 import nativeDefault from "native" /* 576 */;
 import native from "native" /* 1178 */;
 import shared from "shared" /* 4411 */;

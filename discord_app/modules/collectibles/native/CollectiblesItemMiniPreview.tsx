@@ -1,14 +1,14 @@
-// === Module 13137: CollectiblesItemMiniPreview ===
+// === Module 13141: CollectiblesItemMiniPreview ===
 
-// Module 13137 (CollectiblesItemMiniPreview)
+// Module 13141 (CollectiblesItemMiniPreview)
 import nativeDefault from "native" /* 576 */;
 import utils from "utils" /* 1886 */;
 import FastImageDefault from "FastImage" /* 5587 */;
-import ProfileEffectDefault from "ProfileEffect" /* 8801 */;
-import AvatarDecorationSampleV2Default from "AvatarDecorationSampleV2" /* 8810 */;
-import NameplateDefault from "Nameplate" /* 8818 */;
-import ProfileFrameSamplePreviewDefault from "ProfileFrameSamplePreview" /* 8822 */;
-import _modDef8823 from "module_8823" /* 8823 */;
+import ProfileEffectDefault from "ProfileEffect" /* 8806 */;
+import AvatarDecorationSampleV2Default from "AvatarDecorationSampleV2" /* 8815 */;
+import NameplateDefault from "Nameplate" /* 8823 */;
+import ProfileFrameSamplePreviewDefault from "ProfileFrameSamplePreview" /* 8827 */;
+import _modDef8828 from "module_8828" /* 8828 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -25,7 +25,7 @@ const createStyles = fn(4560);
 let obj = { tile: { overflow: "hidden", alignItems: "center", justifyContent: "center" }, framePreview: { width: "100%", height: "100%", paddingVertical: PX_8, overflow: "hidden", alignItems: "center", justifyContent: "center" }, profileEffect: null, sampleProfile: null, nameplate: null, nameplateTile: null, nameplateStrip: null };
 let size = { overflow: "hidden", width: "100%", height: "100%", borderRadius: nativeDefault.radii.sm };
 obj.profileEffect = size;
-obj.sampleProfile = { aspectRatio: fn(8798).SAMPLE_PROFILE_ASPECT_RATIO, width: "100%" };
+obj.sampleProfile = { aspectRatio: fn(8803).SAMPLE_PROFILE_ASPECT_RATIO, width: "100%" };
 obj = { overflow: "hidden", borderTopRightRadius: nativeDefault.radii.xs, borderBottomRightRadius: nativeDefault.radii.xs };
 obj.nameplate = obj;
 obj.nameplateTile = { alignItems: "flex-start" };
@@ -54,7 +54,7 @@ export default noop.memo(function CollectiblesItemMiniPreview(arg0) {
     const obj4 = { style: items, children: null };
     const obj5 = { style: tmp.profileEffect, accessible: false, importantForAccessibility: "no", children: null };
     const obj6 = { source: null, style: null, resizeMode: "cover" };
-    const obj7 = { uri: _modDef8823 };
+    const obj7 = { uri: _modDef8828 };
     obj6.source = obj7;
     obj6.style = tmp.sampleProfile;
     const items1 = [React7(FastImageDefault, obj6), ];

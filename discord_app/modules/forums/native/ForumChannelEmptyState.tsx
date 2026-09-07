@@ -1,12 +1,12 @@
-// === Module 12766: ForumChannelEmptyState ===
+// === Module 12770: ForumChannelEmptyState ===
 
-// Module 12766 (ForumChannelEmptyState)
+// Module 12770 (ForumChannelEmptyState)
 import util from "util" /* 1114 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1611 */;
 import shared from "shared" /* 4411 */;
 import Text_Text from "Text/Text" /* 4556 */;
-import _modDef12767 from "module_12767" /* 12767 */;
-import _modDef12768 from "module_12768" /* 12768 */;
+import _modDef12771 from "module_12771" /* 12771 */;
+import _modDef12772 from "module_12772" /* 12772 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -32,9 +32,9 @@ export default noop.memo((topViewHeight) => {
   obj.style = items;
   let obj2 = shared;
   if (obj2.isThemeLight(obj.useThemeContext().theme)) {
-    let tmp4Result = _modDef12767;
+    let tmp4Result = _modDef12771;
   } else {
-    tmp4Result = _modDef12768;
+    tmp4Result = _modDef12772;
   }
   obj = { source: tmp4Result, style: tmp.image };
   const items1 = [hasOwnProperty(React4, obj), , ];

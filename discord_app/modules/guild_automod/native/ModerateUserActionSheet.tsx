@@ -1,13 +1,13 @@
-// === Module 11834: ModerateUserActionSheet ===
+// === Module 11839: ModerateUserActionSheet ===
 
-// Module 11834 (ModerateUserActionSheet)
+// Module 11839 (ModerateUserActionSheet)
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
 import ModalActionCreatorsDefault from "ModalActionCreators" /* 4763 */;
-import useCanToggleCommunicationDisableOnUser from "useCanToggleCommunicationDisableOnUser" /* 9403 */;
-import GuildMemberUtils from "GuildMemberUtils" /* 11835 */;
-import GuildDisableCommunicationActionCreators from "GuildDisableCommunicationActionCreators" /* 11839 */;
-import showKickConfirmModalDefault from "showKickConfirmModal" /* 11855 */;
-import showBanConfirmModalDefault from "showBanConfirmModal" /* 11857 */;
+import useCanToggleCommunicationDisableOnUser from "useCanToggleCommunicationDisableOnUser" /* 9408 */;
+import GuildMemberUtils from "GuildMemberUtils" /* 11840 */;
+import GuildDisableCommunicationActionCreators from "GuildDisableCommunicationActionCreators" /* 11844 */;
+import showKickConfirmModalDefault from "showKickConfirmModal" /* 11860 */;
+import showBanConfirmModalDefault from "showBanConfirmModal" /* 11862 */;
 import noop from "module_19" /* 19 */;
 import GuildMemberStore from "GuildMemberStore" /* 2021 */;
 import GuildStore from "GuildStore" /* 1979 */;
@@ -117,7 +117,7 @@ export default noop.memo((user) => {
               arr = arr.pop();
             }
           };
-          obj.pushLazy(asyncRequireImpl(11836, dependencyMap.paths), obj);
+          obj.pushLazy(asyncRequireImpl(11841, dependencyMap.paths), obj);
         };
         items4.push(closure_9(tmp2(tmp3[13]).ActionSheetRow, obj));
       }

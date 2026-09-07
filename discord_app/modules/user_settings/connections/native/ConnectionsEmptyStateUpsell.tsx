@@ -1,14 +1,14 @@
-// === Module 14959: ConnectionsEmptyStateUpsell ===
+// === Module 14962: ConnectionsEmptyStateUpsell ===
 
-// Module 14959 (ConnectionsEmptyStateUpsell)
+// Module 14962 (ConnectionsEmptyStateUpsell)
 import nativeDefault from "native" /* 576 */;
 import AvatarUtils from "AvatarUtils" /* 1396 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1611 */;
 import shared from "shared" /* 4411 */;
 import Text_Text from "Text/Text" /* 4556 */;
 import Card from "Card" /* 5607 */;
-import authorizeConnectionDefault from "authorizeConnection" /* 9252 */;
-import ConnectionsTracking from "ConnectionsTracking" /* 14960 */;
+import authorizeConnectionDefault from "authorizeConnection" /* 9257 */;
+import ConnectionsTracking from "ConnectionsTracking" /* 14963 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

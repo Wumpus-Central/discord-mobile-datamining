@@ -1,6 +1,6 @@
-// === Module 11313: ThreadNotificationSettingsBottomSheet ===
+// === Module 11318: ThreadNotificationSettingsBottomSheet ===
 
-// Module 11313 (ThreadNotificationSettingsBottomSheet)
+// Module 11318 (ThreadNotificationSettingsBottomSheet)
 import jsxProd from "jsxProd" /* 21 */;
 import ThreadConstants from "ThreadConstants" /* 1113 */;
 import ThreadActionCreatorsDefault from "ThreadActionCreators" /* 7765 */;
@@ -12,7 +12,7 @@ const result = size.fileFinishedImporting("modules/threads/native/components/Thr
 
 export default function ThreadNotificationsBottomSheet(channel) {
   channel = channel.channel;
-  let obj = channel(10088);
+  let obj = channel(10093);
   const threadNotificationSetting = obj.useThreadNotificationSetting(channel);
   obj = { header: null, children: null };
   obj = { title: null };

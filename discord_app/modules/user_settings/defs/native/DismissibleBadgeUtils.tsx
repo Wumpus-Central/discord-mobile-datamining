@@ -1,7 +1,7 @@
-// === Module 14719: DismissibleBadgeUtils ===
+// === Module 14722: DismissibleBadgeUtils ===
 
-// Module 14719 (DismissibleBadgeUtils)
-import DismissiblePremiumNewBadgeDefault from "DismissiblePremiumNewBadge" /* 14718 */;
+// Module 14722 (DismissibleBadgeUtils)
+import DismissiblePremiumNewBadgeDefault from "DismissiblePremiumNewBadge" /* 14721 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 

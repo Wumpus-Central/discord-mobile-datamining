@@ -1,22 +1,22 @@
-// === Module 17100: VoicePanelHeader ===
+// === Module 17103: VoicePanelHeader ===
 
-// Module 17100 (VoicePanelHeader)
+// Module 17103 (VoicePanelHeader)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4296 */;
 import timing from "timing" /* 4561 */;
 import useChannelName from "useChannelName" /* 4713 */;
 import spring from "spring" /* 4974 */;
-import StageMusicActionCreators from "StageMusicActionCreators" /* 9913 */;
-import useMyCurrentStageChannelRoleDefault from "useMyCurrentStageChannelRole" /* 10033 */;
-import calculateVoicePanelHeaderSpecsDefault from "calculateVoicePanelHeaderSpecs" /* 12277 */;
-import VoicePanelIconButtonDefault from "VoicePanelIconButton" /* 17035 */;
-import useStableParticipant from "useStableParticipant" /* 17104 */;
+import StageMusicActionCreators from "StageMusicActionCreators" /* 9918 */;
+import useMyCurrentStageChannelRoleDefault from "useMyCurrentStageChannelRole" /* 10038 */;
+import calculateVoicePanelHeaderSpecsDefault from "calculateVoicePanelHeaderSpecs" /* 12281 */;
+import VoicePanelIconButtonDefault from "VoicePanelIconButton" /* 17038 */;
+import useStableParticipant from "useStableParticipant" /* 17107 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ChannelRTCStore from "ChannelRTCStore" /* 4576 */;
 import ExperimentStore from "ExperimentStore" /* 4476 */;
-import StageMusicStore from "StageMusicStore" /* 9899 */;
+import StageMusicStore from "StageMusicStore" /* 9904 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 import MediaEngineStore from "MediaEngineStore" /* 1908 */;
@@ -49,7 +49,7 @@ function MusicMuteButton(channelId) {
       }
       obj = {
         accessibilityLabel: stringResult,
-        icon: importDefault(stateFromStores ? 9910 : 9912),
+        icon: importDefault(stateFromStores ? 9915 : 9917),
         onPress() {
               return StageMusicActionCreators.updateStageMusicMuted(!stateFromStores);
             }
@@ -62,11 +62,11 @@ function MusicMuteButton(channelId) {
 }
 get_ActivityIndicator = fn(17);
 const StyleSheet = get_ActivityIndicator.StyleSheet;
-const VoicePanelConstants = fn(12273);
+const VoicePanelConstants = fn(12277);
 const MODE_CHANGE_PHYSICS = VoicePanelConstants.MODE_CHANGE_PHYSICS;
 ({ UI_SHOW_HIDE_PHYSICS: closure_16, VoicePanelModes: closure_17, DRAWER_SPRING_PHYSICS_GESTURE_ACTIVE: closure_18 } = VoicePanelConstants);
-const EDGE_GUTTER = fn(12276).EDGE_GUTTER;
-const VoicePanelControlsModes = fn(12271).VoicePanelControlsModes;
+const EDGE_GUTTER = fn(12280).EDGE_GUTTER;
+const VoicePanelControlsModes = fn(12275).VoicePanelControlsModes;
 const ParticipantTypes = fn(4581).ParticipantTypes;
 const ThemeTypes = fn(1085).ThemeTypes;
 const jsxProd = fn(21);

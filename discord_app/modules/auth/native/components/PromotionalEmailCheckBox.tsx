@@ -1,6 +1,6 @@
-// === Module 15985: PromotionalEmailCheckBox ===
+// === Module 15988: PromotionalEmailCheckBox ===
 
-// Module 15985 (PromotionalEmailCheckBox)
+// Module 15988 (PromotionalEmailCheckBox)
 import noop from "module_19" /* 19 */;
 
 const require = fn;

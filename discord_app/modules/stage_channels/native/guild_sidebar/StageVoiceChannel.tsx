@@ -1,6 +1,6 @@
-// === Module 16237: StageVoiceChannel ===
+// === Module 16240: StageVoiceChannel ===
 
-// Module 16237 (StageVoiceChannel)
+// Module 16240 (StageVoiceChannel)
 import nativeDefault from "native" /* 576 */;
 import KeyboardManagerUtilsAll from "KeyboardManagerUtils" /* 1874 */;
 import useChannelNameDefault from "useChannelName" /* 4713 */;
@@ -8,11 +8,11 @@ import useShowMemberVerificationGate from "useShowMemberVerificationGate" /* 505
 import StageMediaHooks from "StageMediaHooks" /* 5417 */;
 import MemberVerificationModalActionCreators from "MemberVerificationModalActionCreators" /* 5569 */;
 import StageChannelModalActionCreators from "StageChannelModalActionCreators" /* 8393 */;
-import openChannelLongPressActionSheet from "openChannelLongPressActionSheet" /* 10913 */;
-import ChannelItemDefault from "ChannelItem" /* 16116 */;
-import VoiceUsersDefault from "VoiceUsers" /* 16121 */;
-import ChannelInfoDefault from "ChannelInfo" /* 16227 */;
-import useStageChannelSpeakerVoiceStatesDefault from "useStageChannelSpeakerVoiceStates" /* 16238 */;
+import openChannelLongPressActionSheet from "openChannelLongPressActionSheet" /* 10918 */;
+import ChannelItemDefault from "ChannelItem" /* 16119 */;
+import VoiceUsersDefault from "VoiceUsers" /* 16124 */;
+import ChannelInfoDefault from "ChannelInfo" /* 16230 */;
+import useStageChannelSpeakerVoiceStatesDefault from "useStageChannelSpeakerVoiceStates" /* 16241 */;
 import noop from "module_19" /* 19 */;
 import CollapsedVoiceChannelStore from "CollapsedVoiceChannelStore" /* 7527 */;
 import PermissionStore from "PermissionStore" /* 4199 */;
@@ -29,7 +29,7 @@ const Constants = fn(1074);
 const jsx = fn(21).jsx;
 const createStyles = fn(4560);
 let obj = { voiceStates: { marginLeft: 36, marginBottom: 8 }, container: null };
-obj = { marginVertical: fn(10118).CHANNEL_MARGIN_VERTICAL, marginHorizontal: 8, borderRadius: nativeDefault.radii.md };
+obj = { marginVertical: fn(10123).CHANNEL_MARGIN_VERTICAL, marginHorizontal: 8, borderRadius: nativeDefault.radii.md };
 obj.container = obj;
 let closure_16 = createStyles.createStyles(obj);
 const size = fn(2);
@@ -72,7 +72,7 @@ export default noop.memo((channel) => {
     const result = openChannelLongPressActionSheet.openChannelLongPressActionSheet(channel.id);
   }, items3);
   const tmp10 = useChannelNameDefault(channel, false);
-  tmp2Result = tmp2(9471);
+  tmp2Result = tmp2(9476);
   const isConnectedToVoiceChannel = tmp2Result.useIsConnectedToVoiceChannel(channel);
   if (stageInstance != null) {
     const topic = stageInstance.topic;

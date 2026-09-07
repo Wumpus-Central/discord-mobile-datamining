@@ -1,6 +1,6 @@
-// === Module 14761: SettingsAgeGroupResetAlert ===
+// === Module 14764: SettingsAgeGroupResetAlert ===
 
-// Module 14761 (SettingsAgeGroupResetAlert)
+// Module 14764 (SettingsAgeGroupResetAlert)
 import _modDef2946 from "module_2946" /* 2946 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
@@ -40,7 +40,7 @@ export default function SettingsAgeGroupResetAlert() {
             dependencyMap = 1;
             c1 = 2;
             c3 = 1;
-            const obj1 = { value: tmp3(13764).resetAgeVerification(), done: false };
+            const obj1 = { value: tmp3(13767).resetAgeVerification(), done: false };
             return obj1;
           }
         } else if (1 === tmp7) {

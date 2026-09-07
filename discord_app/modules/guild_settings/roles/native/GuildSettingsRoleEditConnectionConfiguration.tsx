@@ -1,6 +1,6 @@
-// === Module 17636: GuildSettingsRoleEditConnectionConfiguration ===
+// === Module 17639: GuildSettingsRoleEditConnectionConfiguration ===
 
-// Module 17636 (GuildSettingsRoleEditConnectionConfiguration)
+// Module 17639 (GuildSettingsRoleEditConnectionConfiguration)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import native from "native" /* 1178 */;
@@ -12,8 +12,8 @@ import PlatformsDefault from "Platforms" /* 5283 */;
 import TableRow from "TableRow" /* 5605 */;
 import XSmallIcon from "XSmallIcon" /* 5680 */;
 import TableRowGroup from "TableRowGroup" /* 5687 */;
-import useGetOrFetchApplicationBatched from "useGetOrFetchApplicationBatched" /* 11563 */;
-import RoleConnectionRequirementUtils from "RoleConnectionRequirementUtils" /* 17637 */;
+import useGetOrFetchApplicationBatched from "useGetOrFetchApplicationBatched" /* 11568 */;
+import RoleConnectionRequirementUtils from "RoleConnectionRequirementUtils" /* 17640 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -172,7 +172,7 @@ function NumericalConfigRule(existingPendingConfiguration) {
   if (num == null) {
     num = -1;
   }
-  let obj = metadataField(17637);
+  let obj = metadataField(17640);
   const realizedOperatorForResult = obj.realizedOperatorFor(existingPendingConfiguration.operator);
   c7 = realizedOperatorForResult;
   value = undefined;
@@ -181,7 +181,7 @@ function NumericalConfigRule(existingPendingConfiguration) {
       value = iter.value;
     }
   }
-  let tmpResult = metadataField(17637);
+  let tmpResult = metadataField(17640);
   str = tmpResult.displayedValueFor(value, realizedOperatorForResult);
   str = str.toString();
   let mapped = noop;

@@ -1,6 +1,6 @@
-// === Module 9892: InstantInviteFriendsList ===
+// === Module 9897: InstantInviteFriendsList ===
 
-// Module 9892 (InstantInviteFriendsList)
+// Module 9897 (InstantInviteFriendsList)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import native from "native" /* 1178 */;
@@ -8,7 +8,7 @@ import RootNavigationRef from "RootNavigationRef" /* 4418 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4527 */;
 import Text_Text from "Text/Text" /* 4556 */;
 import Pressables from "Pressables" /* 5123 */;
-import InstantInviteRowDefault from "InstantInviteRow" /* 9893 */;
+import InstantInviteRowDefault from "InstantInviteRow" /* 9898 */;
 import noop from "module_19" /* 19 */;
 import TextStyles from "TextStyles" /* 5524 */;
 

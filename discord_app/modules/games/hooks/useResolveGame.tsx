@@ -1,6 +1,6 @@
-// === Module 8679: useResolveGame ===
+// === Module 8684: useResolveGame ===
 
-// Module 8679 (useResolveGame)
+// Module 8684 (useResolveGame)
 import useGetOrFetchApplications from "useGetOrFetchApplications" /* 7168 */;
 import useGame from "useGame" /* 7309 */;
 import noop from "module_19" /* 19 */;

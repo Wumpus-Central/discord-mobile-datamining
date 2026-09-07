@@ -1,9 +1,9 @@
-// === Module 13909: useMessageRequestPrivacyOption ===
+// === Module 13912: useMessageRequestPrivacyOption ===
 
-// Module 13909 (useMessageRequestPrivacyOption)
+// Module 13912 (useMessageRequestPrivacyOption)
 import UserSettings from "UserSettings" /* 1935 */;
 import UserSettingsUtils from "UserSettingsUtils" /* 6995 */;
-import useIsStricterMessageRequestsDefault from "useIsStricterMessageRequests" /* 12445 */;
+import useIsStricterMessageRequestsDefault from "useIsStricterMessageRequests" /* 12449 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

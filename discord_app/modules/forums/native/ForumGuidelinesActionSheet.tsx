@@ -1,13 +1,13 @@
-// === Module 10267: ForumGuidelinesActionSheet ===
+// === Module 10272: ForumGuidelinesActionSheet ===
 
-// Module 10267 (ForumGuidelinesActionSheet)
+// Module 10272 (ForumGuidelinesActionSheet)
 import nativeDefault from "native" /* 576 */;
 import PlatformUtils from "PlatformUtils" /* 1115 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4527 */;
 import LinkUtils from "LinkUtils" /* 4714 */;
-import ChannelSettingsActionCreatorsDefault from "ChannelSettingsActionCreators" /* 8625 */;
-import ForumGuidelinesManagerDefault from "ForumGuidelinesManager" /* 10269 */;
+import ChannelSettingsActionCreatorsDefault from "ChannelSettingsActionCreators" /* 8630 */;
+import ForumGuidelinesManagerDefault from "ForumGuidelinesManager" /* 10274 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -185,5 +185,5 @@ export default function ForumGuidelinesActionSheet(channel) {
 export const openForumGuidelinesActionSheet = function openForumGuidelinesActionSheet(arg0) {
   const obj = {};
   const merged = Object.assign(arg0);
-  obj.openLazy(asyncRequireImpl(10267, dependencyMap.paths), closure_6, obj);
+  obj.openLazy(asyncRequireImpl(10272, dependencyMap.paths), closure_6, obj);
 };

@@ -1,9 +1,9 @@
-// === Module 17092: VoicePanelPIPStateContext ===
+// === Module 17095: VoicePanelPIPStateContext ===
 
-// Module 17092 (VoicePanelPIPStateContext)
+// Module 17095 (VoicePanelPIPStateContext)
 import noop from "module_19" /* 19 */;
 
-const context = noop.createContext({ id: "sa", mode: "isArray", width: false, height: "comp_0", containerHeight: "DIS_Nitro_Gifcard_004", showSecondaryPIP: 24 });
+const context = noop.createContext({ id: "sa", mode: "isArray", width: false, height: "first_quarter_moon", containerHeight: "waxing_gibbous_moon", showSecondaryPIP: "earth_africa" });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/voice_panel/native/pip/VoicePanelPIPStateContext.tsx");
 

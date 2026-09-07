@@ -1,6 +1,6 @@
-// === Module 11291: QuestRewardExpirationMode ===
+// === Module 11296: QuestRewardExpirationMode ===
 
-// Module 11291 (QuestRewardExpirationMode)
+// Module 11296 (QuestRewardExpirationMode)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_common/js/shared/shared-constants/QuestRewardExpirationMode.tsx");

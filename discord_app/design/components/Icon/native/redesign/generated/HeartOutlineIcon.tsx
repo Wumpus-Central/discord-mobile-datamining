@@ -1,9 +1,9 @@
-// === Module 8840: HeartOutlineIcon ===
+// === Module 8845: HeartOutlineIcon ===
 
-// Module 8840 (HeartOutlineIcon)
+// Module 8845 (HeartOutlineIcon)
 import nativeDefault from "native" /* 576 */;
 import BaseIconImage from "BaseIconImage" /* 4261 */;
-import _mod8841 from "module_8841" /* 8841 */;
+import _mod8846 from "module_8846" /* 8846 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export const HeartOutlineIcon = function HeartOutlineIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod8841, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod8846, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 };

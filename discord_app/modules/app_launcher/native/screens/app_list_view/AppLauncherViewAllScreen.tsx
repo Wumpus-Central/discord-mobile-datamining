@@ -1,6 +1,6 @@
-// === Module 12195: AppLauncherViewAllScreen ===
+// === Module 12199: AppLauncherViewAllScreen ===
 
-// Module 12195 (AppLauncherViewAllScreen)
+// Module 12199 (AppLauncherViewAllScreen)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import native from "native" /* 1178 */;
@@ -8,9 +8,9 @@ import Text_Text from "Text/Text" /* 4556 */;
 import Pressables from "Pressables" /* 5123 */;
 import ArrowLargeLeftIcon from "ArrowLargeLeftIcon" /* 5628 */;
 import ApplicationCommandTypes from "ApplicationCommandTypes" /* 7523 */;
-import AppLauncherContext from "AppLauncherContext" /* 11215 */;
-import AppLauncherNativeUtils from "AppLauncherNativeUtils" /* 12051 */;
-import AppLauncherBackButton from "AppLauncherBackButton" /* 12131 */;
+import AppLauncherContext from "AppLauncherContext" /* 11220 */;
+import AppLauncherNativeUtils from "AppLauncherNativeUtils" /* 12055 */;
+import AppLauncherBackButton from "AppLauncherBackButton" /* 12135 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -28,7 +28,7 @@ createStyles.container = createStyles;
 createStyles.header = { flexDirection: "row", alignItems: "center", justifyContent: "space-between", height: 24, backgroundColor: nativeDefault.colors.MOBILE_KEYBOARD_PANEL_BACKGROUND, paddingHorizontal: DEFAULT_CONTENT_PADDING, marginBottom: 12 };
 let obj1 = { flexDirection: "row", alignItems: "center", justifyContent: "space-between", height: 24, backgroundColor: nativeDefault.colors.MOBILE_KEYBOARD_PANEL_BACKGROUND, paddingHorizontal: DEFAULT_CONTENT_PADDING, marginBottom: 12 };
 createStyles.list = { paddingHorizontal: DEFAULT_CONTENT_PADDING, paddingBottom: nativeDefault.space.PX_4 };
-let size = { width: fn(12131).BACK_BUTTON_SIZE, height: fn(12131).BACK_BUTTON_SIZE, alignItems: "center", justifyContent: "center" };
+let size = { width: fn(12135).BACK_BUTTON_SIZE, height: fn(12135).BACK_BUTTON_SIZE, alignItems: "center", justifyContent: "center" };
 createStyles.backButton = size;
 let closure_10 = createStyles.createStyles(createStyles);
 size = fn(2);

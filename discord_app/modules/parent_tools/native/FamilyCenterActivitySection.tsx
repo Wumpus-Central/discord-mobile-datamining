@@ -1,11 +1,11 @@
-// === Module 14899: FamilyCenterActivitySection ===
+// === Module 14902: FamilyCenterActivitySection ===
 
-// Module 14899 (FamilyCenterActivitySection)
+// Module 14902 (FamilyCenterActivitySection)
 import nativeDefault from "native" /* 576 */;
 import Text_Text from "Text/Text" /* 4556 */;
 import FamilyCenterUtils from "FamilyCenterUtils" /* 7593 */;
-import useIsInAdultAgeGroupDefault from "useIsInAdultAgeGroup" /* 8646 */;
-import useFamilyCenterActivities from "useFamilyCenterActivities" /* 14894 */;
+import useIsInAdultAgeGroupDefault from "useIsInAdultAgeGroup" /* 8651 */;
+import useFamilyCenterActivities from "useFamilyCenterActivities" /* 14897 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -78,11 +78,11 @@ const result = size.fileFinishedImporting("modules/parent_tools/native/FamilyCen
 export default function FamilyCenterActivitySection(displayType) {
   displayType = displayType.displayType;
   let loadMoreButton = closure_13();
-  let obj = displayType(14894);
+  let obj = displayType(14897);
   const actionsForDisplayType = obj.useActionsForDisplayType(displayType);
-  let obj1 = displayType(14894);
+  let obj1 = displayType(14897);
   const actionTotalsForDisplayType = obj1.useActionTotalsForDisplayType(displayType);
-  let obj2 = displayType(11916);
+  let obj2 = displayType(11921);
   const familyCenterActions = obj2.useFamilyCenterActions({});
   const loadMore = familyCenterActions.loadMore;
   const tmp6 = _slicedToArray(noop.useState(closure_7), 2);
@@ -99,7 +99,7 @@ export default function FamilyCenterActivitySection(displayType) {
     const formatToPlainStringResult = intl.formatToPlainString(loadMore(2396)["7dMmJY"], obj);
     obj = { style: loadMoreButton.container, children: null };
     obj1 = { displayType };
-    const items1 = [closure_9(FamilyCenterActivitySectionHeader, obj1), substr.map((action) => closure_1_9(loadMore(14900), { action }, action.event_id)), ];
+    const items1 = [closure_9(FamilyCenterActivitySectionHeader, obj1), substr.map((action) => closure_1_9(loadMore(14903), { action }, action.event_id)), ];
     if (substr.length >= actionTotalsForDisplayType) {
       items1[2] = null;
       obj.children = items1;

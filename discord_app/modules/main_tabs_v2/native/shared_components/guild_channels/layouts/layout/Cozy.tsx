@@ -1,8 +1,8 @@
-// === Module 10125: Cozy ===
+// === Module 10130: Cozy ===
 
-// Module 10125 (Cozy)
+// Module 10130 (Cozy)
 import nativeDefault from "native" /* 576 */;
-import deepmerge from "deepmerge" /* 10123 */;
+import deepmerge from "deepmerge" /* 10128 */;
 
 let obj = { layout: { margin: { marginVertical: 2 }, marginPanels: { marginVertical: 2 }, marginThread: { marginVertical: 2, marginLeft: 76 } }, container: null, category: null, voiceUsers: null, voiceOrStageSummaryRow: null, messagePreview: null, inviteRow: null, icon: null, unreadBadge: null, mentionBadge: null, joinVoiceButton: null, threadSpine: null, happeningNow: null, typing: null, separator: null };
 obj = { borderRadius: nativeDefault.radii.lg, padding: { paddingVertical: 8 }, paddingPanels: { paddingVertical: 8 }, paddingThread: { paddingVertical: 6, paddingLeft: 8 } };
@@ -28,7 +28,7 @@ obj.threadSpine = obj5;
 obj.happeningNow = { margin: { marginBottom: 20 } };
 obj.typing = { position: { top: 12, left: 12 }, positionThread: { top: 3, left: -17 }, typingIndicator: { position: { top: 25, left: 11 } } };
 obj.separator = { margin: { marginVertical: 20 } };
-const importDefaultResultResult = deepmerge(fn(10124).CHANNEL_LIST_STYLES_COMPACT, obj);
+const importDefaultResultResult = deepmerge(fn(10129).CHANNEL_LIST_STYLES_COMPACT, obj);
 const obj4 = { size: fn(1178).IconSizes.REFRESH_SMALL_16, gameSize: fn(7172).GameIconSizes.SMALL };
 const obj6 = { position: { top: 12, left: 12 }, positionThread: { top: 3, left: -17 }, typingIndicator: { position: { top: 25, left: 11 } } };
 const obj7 = { layout: { marginThread: { marginLeft: 0 } }, container: { paddingThread: { paddingLeft: 20 } }, unreadBadge: { positionThread: { left: 4 } }, mentionBadge: { positionThread: { top: 34 } } };

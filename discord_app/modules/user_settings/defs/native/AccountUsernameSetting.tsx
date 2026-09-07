@@ -1,17 +1,17 @@
-// === Module 14704: AccountUsernameSetting ===
+// === Module 14707: AccountUsernameSetting ===
 
-// Module 14704 (AccountUsernameSetting)
+// Module 14707 (AccountUsernameSetting)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1114 */;
 import UserUtilsDefault from "UserUtils" /* 4404 */;
 import Text_Text from "Text/Text" /* 4556 */;
-import AutomodQuarantineUtils from "AutomodQuarantineUtils" /* 11871 */;
+import AutomodQuarantineUtils from "AutomodQuarantineUtils" /* 11876 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1371 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-fn(11468);
+fn(11473);
 let SettingBuilders = {
   useTitle() {
     const intl = util.intl;

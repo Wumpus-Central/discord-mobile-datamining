@@ -15,11 +15,11 @@ import MediaSourceUtil from "MediaSourceUtil" /* 8263 */;
 import MediaViewerAnalyticsManager from "MediaViewerAnalyticsManager" /* 8266 */;
 import showShareActionSheet from "showShareActionSheet" /* 8361 */;
 import MaskedLinkUtils from "MaskedLinkUtils" /* 8370 */;
-import ShareIcon from "ShareIcon" /* 9053 */;
-import ForwardModalUtils from "ForwardModalUtils" /* 11680 */;
-import ForwardingIconDefault from "ForwardingIcon" /* 11688 */;
-import ChatArrowRightIcon from "ChatArrowRightIcon" /* 11736 */;
-import WindowLaunchIcon from "WindowLaunchIcon" /* 12956 */;
+import ShareIcon from "ShareIcon" /* 9058 */;
+import ForwardModalUtils from "ForwardModalUtils" /* 11685 */;
+import ForwardingIconDefault from "ForwardingIcon" /* 11693 */;
+import ChatArrowRightIcon from "ChatArrowRightIcon" /* 11741 */;
+import WindowLaunchIcon from "WindowLaunchIcon" /* 12960 */;
 import noop from "module_19" /* 19 */;
 import ICYMIStore from "ICYMIStore" /* 8335 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
@@ -102,7 +102,7 @@ function useMediaShareActions(source) {
       if ("embed" !== source.accessoryType) {
         const attachmentId = source.attachmentId;
         if (null != attachmentId) {
-          obj = { message: stateFromStores, source: "media-viewer", initialSelectedDestinations: "Array", forwardOptions: "QUESTS_USER_COMPLETION_UPDATE" };
+          obj = { message: stateFromStores, source: "media-viewer", initialSelectedDestinations: "Array", forwardOptions: "QUEST_PREVIEW_UPDATE" };
           obj = { onlyAttachmentIds: null };
           const items = [attachmentId];
           obj.onlyAttachmentIds = items;
@@ -110,7 +110,7 @@ function useMediaShareActions(source) {
           ForwardModalUtils.openForwardModal(obj);
         }
       } else {
-        const obj1 = { message: stateFromStores, source: "media-viewer", initialSelectedDestinations: "Array", forwardOptions: "QUESTS_USER_COMPLETION_UPDATE" };
+        const obj1 = { message: stateFromStores, source: "media-viewer", initialSelectedDestinations: "Array", forwardOptions: "QUEST_PREVIEW_UPDATE" };
         const obj2 = { onlyEmbedIndices: null };
         const items1 = [source.mediaIndex];
         obj2.onlyEmbedIndices = items1;
@@ -142,7 +142,7 @@ function useMediaShareActions(source) {
       obj = { messageId: null, channelId: null, attachmentId: null };
       ({ messageId: obj3.messageId, channelId: obj3.channelId } = source);
       obj.attachmentId = attachmentId;
-      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(11677, dependencyMap.paths), closure_11, obj);
+      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(11682, dependencyMap.paths), closure_11, obj);
       const tmpResult = ActionSheetActionCreatorsDefault;
     }
     tmp5 = null != attachmentId && null != source.channelId && null != source.messageId;

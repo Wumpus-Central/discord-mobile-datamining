@@ -1,6 +1,6 @@
-// === Module 12771: CreateGameInvitePostModal ===
+// === Module 12775: CreateGameInvitePostModal ===
 
-// Module 12771 (CreateGameInvitePostModal)
+// Module 12775 (CreateGameInvitePostModal)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
@@ -28,7 +28,7 @@ function CreateGameInvitePostContent(parentChannel) {
   dependencyMap = tmp7[1];
   let items = [tags];
   const memo = noop.useMemo(() => new Set(first.map((id) => id.id)), items);
-  parentChannel(12772);
+  parentChannel(12776);
   let obj = {
     parentChannel,
     description: tmp5,
@@ -69,7 +69,7 @@ function CreateGameInvitePostContent(parentChannel) {
     const intl = util.intl;
     obj.title = intl.string(util.t.HPu3kq);
     obj.tags = tags;
-    obj.openLazy(asyncRequireImpl(11248, dependencyMap.paths), "ForumPostTagsActionSheet", obj);
+    obj.openLazy(asyncRequireImpl(11253, dependencyMap.paths), "ForumPostTagsActionSheet", obj);
   }, items2);
   const obj2 = { style: tmp.closeButton, accessibilityRole: "button", accessibilityLabel: null, onPress: null, children: null };
   let intl = parentChannel(1114).intl;

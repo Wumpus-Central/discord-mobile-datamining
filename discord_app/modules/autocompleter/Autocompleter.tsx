@@ -1,6 +1,6 @@
-// === Module 9836: Autocompleter ===
+// === Module 9841: Autocompleter ===
 
-// Module 9836 (Autocompleter)
+// Module 9841 (Autocompleter)
 import _modDef12 from "module_12" /* 12 */;
 import URLUtilsDefault from "URLUtils" /* 1365 */;
 import StringUtils from "StringUtils" /* 1925 */;
@@ -10,9 +10,9 @@ import CodedLink from "CodedLink" /* 4548 */;
 import AutocompleteUtils from "AutocompleteUtils" /* 5442 */;
 import autocompleter_sortByMatchScoreDefault from "autocompleter/sortByMatchScore" /* 5518 */;
 import GuildUtilsDefault from "GuildUtils" /* 5519 */;
-import UserSearchManagerDefault from "UserSearchManager" /* 9839 */;
-import ThreadMemberListStore from "ThreadMemberListStore" /* 9837 */;
-import LinkRecord from "LinkRecord" /* 9838 */;
+import UserSearchManagerDefault from "UserSearchManager" /* 9844 */;
+import ThreadMemberListStore from "ThreadMemberListStore" /* 9842 */;
+import LinkRecord from "LinkRecord" /* 9843 */;
 import RelationshipStore from "RelationshipStore" /* 4209 */;
 import UserStore from "UserStore" /* 1371 */;
 

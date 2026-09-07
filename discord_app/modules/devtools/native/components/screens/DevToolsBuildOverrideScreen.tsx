@@ -1,14 +1,14 @@
-// === Module 15580: DevToolsBuildOverrideScreen ===
+// === Module 15583: DevToolsBuildOverrideScreen ===
 
-// Module 15580 (DevToolsBuildOverrideScreen)
+// Module 15583 (DevToolsBuildOverrideScreen)
 import nativeDefault from "native" /* 576 */;
 import GlobalUtils from "GlobalUtils" /* 1369 */;
 import ToastUtils from "ToastUtils" /* 4258 */;
 import ClipboardUtils from "ClipboardUtils" /* 7190 */;
-import build_overrides_BuildOverrideUtils from "build_overrides/BuildOverrideUtils" /* 11789 */;
+import build_overrides_BuildOverrideUtils from "build_overrides/BuildOverrideUtils" /* 11794 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import BuildOverrideStore from "BuildOverrideStore" /* 11425 */;
+import BuildOverrideStore from "BuildOverrideStore" /* 11430 */;
 
 require = fn;
 const ScrollView = fn(17).ScrollView;
@@ -22,10 +22,10 @@ obj.content = obj;
 const createStyles = { padding: nativeDefault.space.PX_16 };
 obj.contentContainer = createStyles;
 let closure_9 = createStyles.createStyles(obj);
-let items = [{ label: "Branch Name", value: "branch", icon: jsx(fn(8862).TagIcon, {}) }, ];
-let obj2 = { label: "Branch Name", value: "branch", icon: jsx(fn(8862).TagIcon, {}) };
-items[1] = { label: "Commit SHA", value: "id", icon: jsx(fn(15581).HashmarkIcon, {}) };
-let obj3 = { label: "Commit SHA", value: "id", icon: jsx(fn(15581).HashmarkIcon, {}) };
+let items = [{ label: "Branch Name", value: "branch", icon: jsx(fn(8867).TagIcon, {}) }, ];
+let obj2 = { label: "Branch Name", value: "branch", icon: jsx(fn(8867).TagIcon, {}) };
+items[1] = { label: "Commit SHA", value: "id", icon: jsx(fn(15584).HashmarkIcon, {}) };
+let obj3 = { label: "Commit SHA", value: "id", icon: jsx(fn(15584).HashmarkIcon, {}) };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/devtools/native/components/screens/DevToolsBuildOverrideScreen.tsx");
 
@@ -37,7 +37,7 @@ export default noop.memo(() => {
     const overrides = currentBuildOverride.getCurrentBuildOverride().overrides;
     let tmp;
     if (overrides != null) {
-      tmp = overrides[first(undefined, 11789).DEVICE_FIELD];
+      tmp = overrides[first(undefined, 11794).DEVICE_FIELD];
     }
     return tmp;
   });
@@ -66,10 +66,10 @@ export default noop.memo(() => {
       const result = ToastUtils.presentCopiedToClipboard();
     };
     const items1 = [jsx(tmp3(5605).TableRow, { icon: jsx(tmp3(4507).CopyIcon, {}), label: null, subLabel: null, onPress: null }), , ];
-    let obj3 = { icon: jsx(tmp3(15158).RefreshIcon, {}), label: "Refresh Override", onPress: tmp3(11789).refreshBuildOverride, arrow: true };
-    items1[1] = jsx(tmp3(5605).TableRow, { icon: jsx(tmp3(15158).RefreshIcon, {}), label: "Refresh Override", onPress: tmp3(11789).refreshBuildOverride, arrow: true });
-    const obj4 = { icon: jsx(tmp3(4518).TrashIcon, { color: "text-feedback-critical" }), label: "Clear Override", variant: "danger", onPress: tmp3(11789).clearBuildOverride, arrow: true };
-    items1[2] = jsx(tmp3(5605).TableRow, { icon: jsx(tmp3(4518).TrashIcon, { color: "text-feedback-critical" }), label: "Clear Override", variant: "danger", onPress: tmp3(11789).clearBuildOverride, arrow: true });
+    let obj3 = { icon: jsx(tmp3(15161).RefreshIcon, {}), label: "Refresh Override", onPress: tmp3(11794).refreshBuildOverride, arrow: true };
+    items1[1] = jsx(tmp3(5605).TableRow, { icon: jsx(tmp3(15161).RefreshIcon, {}), label: "Refresh Override", onPress: tmp3(11794).refreshBuildOverride, arrow: true });
+    const obj4 = { icon: jsx(tmp3(4518).TrashIcon, { color: "text-feedback-critical" }), label: "Clear Override", variant: "danger", onPress: tmp3(11794).clearBuildOverride, arrow: true };
+    items1[2] = jsx(tmp3(5605).TableRow, { icon: jsx(tmp3(4518).TrashIcon, { color: "text-feedback-critical" }), label: "Clear Override", variant: "danger", onPress: tmp3(11794).clearBuildOverride, arrow: true });
     obj2.children = items1;
     tmp10Result = jsxs(tmp3(5687).TableRowGroup, { title: "Current Override", hasIcons: true, children: null });
   }

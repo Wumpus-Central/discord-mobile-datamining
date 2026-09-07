@@ -5,7 +5,7 @@ import FlagUtils from "FlagUtils" /* 1384 */;
 import ReactionUtils from "ReactionUtils" /* 4211 */;
 import isForwardMessageDefault from "isForwardMessage" /* 7302 */;
 import MessageReactionsTypes from "MessageReactionsTypes" /* 7763 */;
-import ApplicationIntegrationType from "ApplicationIntegrationType" /* 9245 */;
+import ApplicationIntegrationType from "ApplicationIntegrationType" /* 9250 */;
 import Record from "Record" /* 1386 */;
 
 require = fn;

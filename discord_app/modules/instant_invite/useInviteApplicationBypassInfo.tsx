@@ -1,6 +1,6 @@
-// === Module 17796: useInviteApplicationBypassInfo ===
+// === Module 17799: useInviteApplicationBypassInfo ===
 
-// Module 17796 (useInviteApplicationBypassInfo)
+// Module 17799 (useInviteApplicationBypassInfo)
 import PermissionStore from "PermissionStore" /* 4199 */;
 
 const require = fn;

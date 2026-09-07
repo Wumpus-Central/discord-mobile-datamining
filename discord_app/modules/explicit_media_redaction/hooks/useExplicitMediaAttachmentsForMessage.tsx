@@ -1,6 +1,6 @@
-// === Module 11678: useExplicitMediaAttachmentsForMessage ===
+// === Module 11683: useExplicitMediaAttachmentsForMessage ===
 
-// Module 11678 (useExplicitMediaAttachmentsForMessage)
+// Module 11683 (useExplicitMediaAttachmentsForMessage)
 import ObscuredMediaUtils from "ObscuredMediaUtils" /* 7292 */;
 import ExplicitMediaRedactionModels from "ExplicitMediaRedactionModels" /* 7297 */;
 import MessageStore from "MessageStore" /* 4781 */;

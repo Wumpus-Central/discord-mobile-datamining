@@ -1,9 +1,9 @@
-// === Module 10012: DisconnectRemoteButton ===
+// === Module 10017: DisconnectRemoteButton ===
 
-// Module 10012 (DisconnectRemoteButton)
-import CallsUtils from "CallsUtils" /* 9082 */;
-import GameConsoleActionCreators from "GameConsoleActionCreators" /* 9448 */;
-import CallBarActionAll from "CallBarAction" /* 9497 */;
+// Module 10017 (DisconnectRemoteButton)
+import CallsUtils from "CallsUtils" /* 9087 */;
+import GameConsoleActionCreators from "GameConsoleActionCreators" /* 9453 */;
+import CallBarActionAll from "CallBarAction" /* 9502 */;
 import noop from "module_19" /* 19 */;
 import GameConsoleStore from "GameConsoleStore" /* 4577 */;
 
@@ -18,7 +18,7 @@ export const DisconnectRemoteButton = function DisconnectRemoteButton(channel) {
   const items = [GameConsoleStore];
   const stateFromStoresObject = obj.useStateFromStoresObject(items, () => ({ awaitingRemote: null != GameConsoleStore.getAwaitingRemoteSessionInfo(), remoteSessionId: GameConsoleStore.getRemoteSessionId() }));
   const remoteSessionId = stateFromStoresObject.remoteSessionId;
-  obj = { source: remoteSessionId(stateFromStoresObject.awaitingRemote ? 6992 : 9975), accessibilityLabel: null, isSmallSize: null, onPress: null };
+  obj = { source: remoteSessionId(stateFromStoresObject.awaitingRemote ? 6992 : 9980), accessibilityLabel: null, isSmallSize: null, onPress: null };
   const intl = tmp(1114).intl;
   obj.accessibilityLabel = intl.string(channel(1114).t["6vrfgt"]);
   obj.isSmallSize = channel.isSmallSize;
@@ -30,5 +30,5 @@ export const DisconnectRemoteButton = function DisconnectRemoteButton(channel) {
       GameConsoleActionCreators.disconnectRemote();
     }
   };
-  return jsx(CallBarActionAll.PrimaryActionButton, { source: remoteSessionId(stateFromStoresObject.awaitingRemote ? 6992 : 9975), accessibilityLabel: null, isSmallSize: null, onPress: null });
+  return jsx(CallBarActionAll.PrimaryActionButton, { source: remoteSessionId(stateFromStoresObject.awaitingRemote ? 6992 : 9980), accessibilityLabel: null, isSmallSize: null, onPress: null });
 };

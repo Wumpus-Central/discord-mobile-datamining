@@ -1,7 +1,7 @@
-// === Module 17338: CustomStatusManager ===
+// === Module 17341: CustomStatusManager ===
 
-// Module 17338 (CustomStatusManager)
-import setUserStatusDefault from "setUserStatus" /* 10091 */;
+// Module 17341 (CustomStatusManager)
+import setUserStatusDefault from "setUserStatus" /* 10096 */;
 import SelfPresenceStore from "SelfPresenceStore" /* 5279 */;
 import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7118 */;
 
@@ -136,9 +136,9 @@ let prototype = function CustomStatusManager() {
             closure_1_0(dependencyMap[8]).setFocusMode(false);
           }, true);
         } else {
-          applyArgumentsResult(10090).setFocusMode(false);
+          applyArgumentsResult(10095).setFocusMode(false);
           timeout1.stop();
-          const tmpResult = applyArgumentsResult(10090);
+          const tmpResult = applyArgumentsResult(10095);
         }
       }
     }

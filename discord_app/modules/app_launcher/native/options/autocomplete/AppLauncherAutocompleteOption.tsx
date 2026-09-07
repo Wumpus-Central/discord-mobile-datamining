@@ -1,13 +1,13 @@
-// === Module 12170: AppLauncherAutocompleteOption ===
+// === Module 12174: AppLauncherAutocompleteOption ===
 
-// Module 12170 (AppLauncherAutocompleteOption)
+// Module 12174 (AppLauncherAutocompleteOption)
 import nativeDefault from "native" /* 576 */;
 import KeyboardManagerUtils from "KeyboardManagerUtils" /* 1874 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4527 */;
 import Text_Text from "Text/Text" /* 4556 */;
 import Pressables from "Pressables" /* 5123 */;
-import useAnimationDelayedAutoFocus from "useAnimationDelayedAutoFocus" /* 12169 */;
+import useAnimationDelayedAutoFocus from "useAnimationDelayedAutoFocus" /* 12173 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -44,7 +44,7 @@ export default function AppLauncherAutocompleteOption(arg0) {
       onDismissAutocompleteSheet,
       optionValues: ref.current
     };
-    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(12171, dependencyMap.paths), "AppLauncherAutocompleteActionSheet", obj);
+    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(12175, dependencyMap.paths), "AppLauncherAutocompleteActionSheet", obj);
   }
   ({ style, autoFocus } = arg0);
   const tmp = _slicedToArray(noop.useState(() => {

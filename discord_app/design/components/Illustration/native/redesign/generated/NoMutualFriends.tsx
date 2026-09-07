@@ -1,6 +1,6 @@
-// === Module 12610: NoMutualFriends ===
+// === Module 12614: NoMutualFriends ===
 
-// Module 12610 (NoMutualFriends)
+// Module 12614 (NoMutualFriends)
 import shared from "shared" /* 4411 */;
 import _mod8233 from "module_8233" /* 8233 */;
 import noop from "module_19" /* 19 */;
@@ -14,13 +14,13 @@ const result = size.fileFinishedImporting("design/components/Illustration/native
 export const getNoMutualFriendsSource = function getNoMutualFriendsSource(theme) {
   const obj = {
     dark() {
-      return require("module_12611");
+      return require("module_12615");
     },
     darker() {
-      return require("module_12612");
+      return require("module_12616");
     },
     light() {
-      return require("module_12613");
+      return require("module_12617");
     }
   };
   return obj.getIllustrationSource(theme, obj);
@@ -28,13 +28,13 @@ export const getNoMutualFriendsSource = function getNoMutualFriendsSource(theme)
 export const useNoMutualFriendsSource = function useNoMutualFriendsSource() {
   const obj = {
     dark() {
-      return require("module_12611");
+      return require("module_12615");
     },
     darker() {
-      return require("module_12612");
+      return require("module_12616");
     },
     light() {
-      return require("module_12613");
+      return require("module_12617");
     }
   };
   return _mod8233.getIllustrationSource(obj.useThemeContext().theme, obj);
@@ -42,13 +42,13 @@ export const useNoMutualFriendsSource = function useNoMutualFriendsSource() {
 export const NoMutualFriends = function NoMutualFriends(arg0) {
   let obj = {
     dark() {
-      return require("module_12611");
+      return require("module_12615");
     },
     darker() {
-      return require("module_12612");
+      return require("module_12616");
     },
     light() {
-      return require("module_12613");
+      return require("module_12617");
     }
   };
   obj = {};

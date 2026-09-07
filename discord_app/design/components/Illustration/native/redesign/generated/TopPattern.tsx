@@ -1,6 +1,6 @@
-// === Module 13519: TopPattern ===
+// === Module 13523: TopPattern ===
 
-// Module 13519 (TopPattern)
+// Module 13523 (TopPattern)
 import shared from "shared" /* 4411 */;
 import _mod8233 from "module_8233" /* 8233 */;
 import noop from "module_19" /* 19 */;
@@ -14,13 +14,13 @@ const result = size.fileFinishedImporting("design/components/Illustration/native
 export const getTopPatternSource = function getTopPatternSource(theme) {
   const obj = {
     dark() {
-      return require("module_13520");
+      return require("module_13524");
     },
     darker() {
-      return require("module_13521");
+      return require("module_13525");
     },
     light() {
-      return require("module_13522");
+      return require("module_13526");
     }
   };
   return obj.getIllustrationSource(theme, obj);
@@ -28,13 +28,13 @@ export const getTopPatternSource = function getTopPatternSource(theme) {
 export const useTopPatternSource = function useTopPatternSource() {
   const obj = {
     dark() {
-      return require("module_13520");
+      return require("module_13524");
     },
     darker() {
-      return require("module_13521");
+      return require("module_13525");
     },
     light() {
-      return require("module_13522");
+      return require("module_13526");
     }
   };
   return _mod8233.getIllustrationSource(obj.useThemeContext().theme, obj);
@@ -42,13 +42,13 @@ export const useTopPatternSource = function useTopPatternSource() {
 export const TopPattern = function TopPattern(arg0) {
   let obj = {
     dark() {
-      return require("module_13520");
+      return require("module_13524");
     },
     darker() {
-      return require("module_13521");
+      return require("module_13525");
     },
     light() {
-      return require("module_13522");
+      return require("module_13526");
     }
   };
   obj = {};

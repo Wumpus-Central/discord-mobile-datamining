@@ -1,6 +1,6 @@
-// === Module 8833: PremiumFeaturesBackground ===
+// === Module 8838: PremiumFeaturesBackground ===
 
-// Module 8833 (PremiumFeaturesBackground)
+// Module 8838 (PremiumFeaturesBackground)
 import nativeDefault from "native" /* 576 */;
 import _modDef672 from "module_672" /* 672 */;
 import LinearGradientDefault from "LinearGradient" /* 4987 */;

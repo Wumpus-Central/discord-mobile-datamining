@@ -1,6 +1,6 @@
-// === Module 17455: useConnectGuardianGate ===
+// === Module 17458: useConnectGuardianGate ===
 
-// Module 17455 (useConnectGuardianGate)
+// Module 17458 (useConnectGuardianGate)
 import initialize from "initialize" /* 504 */;
 import useMountEffectDefault from "useMountEffect" /* 4992 */;
 import _slicedToArray from "module_32" /* 32 */;

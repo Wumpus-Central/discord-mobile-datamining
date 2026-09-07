@@ -1,6 +1,6 @@
-// === Module 12386: Autocomplete ===
+// === Module 12390: Autocomplete ===
 
-// Module 12386 (Autocomplete)
+// Module 12390 (Autocomplete)
 import _modDef12 from "module_12" /* 12 */;
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
@@ -16,11 +16,11 @@ import FastImageDefault from "FastImage" /* 5587 */;
 import TableRow from "TableRow" /* 5605 */;
 import TableRowTrailingText from "TableRowTrailingText" /* 5614 */;
 import _modDef8124 from "module_8124" /* 8124 */;
-import UnknownGameIcon from "UnknownGameIcon" /* 8565 */;
-import Form from "Form" /* 8593 */;
-import StickerDefault from "Sticker" /* 10176 */;
-import StickersHooks from "StickersHooks" /* 10387 */;
-import ChannelAutocompleteEmojiUpsellDefault from "ChannelAutocompleteEmojiUpsell" /* 12387 */;
+import UnknownGameIcon from "UnknownGameIcon" /* 8568 */;
+import Form from "Form" /* 8598 */;
+import StickerDefault from "Sticker" /* 10181 */;
+import StickersHooks from "StickersHooks" /* 10392 */;
+import ChannelAutocompleteEmojiUpsellDefault from "ChannelAutocompleteEmojiUpsell" /* 12391 */;
 import noop from "module_19" /* 19 */;
 import GuildStore from "GuildStore" /* 1979 */;
 import RelationshipStore from "RelationshipStore" /* 4209 */;
@@ -38,7 +38,7 @@ const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
 fn(4560);
 let createStyles = { row: null, leading: null, trailing: null, username: null, emoji: null, emojiImage: null, emojiText: null, stickerContainer: null, commandChoiceLoadingContainer: null, commandChoiceLoadingItem: null, autocompleteIcon: null, gameIcon: null, labelRow: null };
-createStyles = { height: fn(10263).AUTOCOMPLETE_ROW_HEIGHT, paddingVertical: 0, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH };
+createStyles = { height: fn(10268).AUTOCOMPLETE_ROW_HEIGHT, paddingVertical: 0, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH };
 createStyles.row = createStyles;
 createStyles.leading = { fontSize: 16, color: nativeDefault.colors.INTERACTIVE_TEXT_ACTIVE, fontFamily: Fonts.PRIMARY_SEMIBOLD };
 let obj1 = { fontSize: 16, color: nativeDefault.colors.INTERACTIVE_TEXT_ACTIVE, fontFamily: Fonts.PRIMARY_SEMIBOLD };
@@ -93,8 +93,8 @@ export default {
     const items1 = [, ];
     ({ trailing: arr2[0], username: arr2[1] } = tmp);
     obj1.usernameStyle = items1;
-    obj.trailing = closure_9(guildId(9803), obj1);
-    return closure_9(user(8593).FormRow, obj);
+    obj.trailing = closure_9(guildId(9808), obj1);
+    return closure_9(user(8598).FormRow, obj);
   },
   Global(arg0) {
     ({ text, badge } = arg0);

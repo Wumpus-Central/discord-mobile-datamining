@@ -1,6 +1,6 @@
-// === Module 9829: UserPlaceholderRow ===
+// === Module 9834: UserPlaceholderRow ===
 
-// Module 9829 (UserPlaceholderRow)
+// Module 9834 (UserPlaceholderRow)
 import nativeDefault from "native" /* 576 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4296 */;
 import timing from "timing" /* 4561 */;

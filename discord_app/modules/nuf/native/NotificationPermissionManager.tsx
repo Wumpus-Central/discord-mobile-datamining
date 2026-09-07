@@ -1,17 +1,17 @@
-// === Module 17456: NotificationPermissionManager ===
+// === Module 17459: NotificationPermissionManager ===
 
-// Module 17456 (NotificationPermissionManager)
+// Module 17459 (NotificationPermissionManager)
 import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1250 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
 import _modDef4153 from "module_4153" /* 4153 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4527 */;
-import PushNotificationActionCreators from "PushNotificationActionCreators" /* 12412 */;
+import PushNotificationActionCreators from "PushNotificationActionCreators" /* 12416 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import JoinedThreadsStore from "JoinedThreadsStore" /* 4201 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 import UserGuildSettingsStore from "UserGuildSettingsStore" /* 4741 */;
-import PushNotificationPermissionStore from "PushNotificationPermissionStore" /* 12409 */;
+import PushNotificationPermissionStore from "PushNotificationPermissionStore" /* 12413 */;
 import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7118 */;
 
 require = fn;
@@ -91,7 +91,7 @@ function showPrompt(arg0, arg1, arg2) {
     obj.impressionName = discord_common_AnalyticsUtils.ImpressionNames.PUSH_NOTIFICATION_REACTIVATION_PROMPT;
     obj.impressionProperties = { action_location: location };
     obj.location = location;
-    obj2.openLazy(asyncRequireImpl(17457, dependencyMap.paths), closure_2_11, obj);
+    obj2.openLazy(asyncRequireImpl(17460, dependencyMap.paths), closure_2_11, obj);
   }, arg2);
 }
 function _logNotificationPermissionStatus() {
@@ -168,8 +168,8 @@ let closure_26 = async function _logNotificationPermissionStatus2() {
   }
 };
 const NativeModules = fn(17).NativeModules;
-const PermissionPromptType = fn(12409).PermissionPromptType;
-const NotificationPermissionConstants = fn(12410);
+const PermissionPromptType = fn(12413).PermissionPromptType;
+const NotificationPermissionConstants = fn(12414);
 ({ NOTIFICATION_REACTIVATION_ACTIONSHEET_KEY: closure_11, EventActionLocation: closure_12 } = NotificationPermissionConstants);
 const Constants = fn(1074);
 ({ RelationshipTypes: map1, GuildFeatures: closure_14, AnalyticEvents: closure_15 } = Constants);

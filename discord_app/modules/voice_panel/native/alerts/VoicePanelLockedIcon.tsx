@@ -1,10 +1,10 @@
-// === Module 17188: VoicePanelLockedIcon ===
+// === Module 17191: VoicePanelLockedIcon ===
 
-// Module 17188 (VoicePanelLockedIcon)
+// Module 17191 (VoicePanelLockedIcon)
 import nativeDefault from "native" /* 576 */;
 import native from "native" /* 1178 */;
 import NativeViewDefault from "NativeView" /* 5589 */;
-import _modDef17189 from "module_17189" /* 17189 */;
+import _modDef17192 from "module_17192" /* 17192 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -21,7 +21,7 @@ const result = size.fileFinishedImporting("modules/voice_panel/native/alerts/Voi
 export default function VoicePanelLockedIcon() {
   const tmp = closure_4();
   let obj = { style: tmp.container, children: null };
-  obj = { style: tmp.icon, source: _modDef17189, size: native.IconSizes.LARGE };
-  obj.children = jsx(native.Icon, { style: tmp.icon, source: _modDef17189, size: native.IconSizes.LARGE });
-  return jsx(NativeViewDefault, { style: tmp.icon, source: _modDef17189, size: native.IconSizes.LARGE });
+  obj = { style: tmp.icon, source: _modDef17192, size: native.IconSizes.LARGE };
+  obj.children = jsx(native.Icon, { style: tmp.icon, source: _modDef17192, size: native.IconSizes.LARGE });
+  return jsx(NativeViewDefault, { style: tmp.icon, source: _modDef17192, size: native.IconSizes.LARGE });
 };

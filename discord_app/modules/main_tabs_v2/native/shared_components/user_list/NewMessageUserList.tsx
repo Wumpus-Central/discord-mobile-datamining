@@ -1,6 +1,6 @@
-// === Module 12366: NewMessageUserList ===
+// === Module 12370: NewMessageUserList ===
 
-// Module 12366 (NewMessageUserList)
+// Module 12370 (NewMessageUserList)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import UserUtilsDefault from "UserUtils" /* 4404 */;
@@ -95,7 +95,7 @@ function filterGroupDMs(isGroupDM) {
   return isGroupDM.isGroupDM();
 }
 const View = fn(17).View;
-const UserRowModes = fn(10860).UserRowModes;
+const UserRowModes = fn(10865).UserRowModes;
 const jsxProd = fn(21);
 ({ jsx: c10, Fragment: closure_11, jsxs: closure_12 } = jsxProd);
 let closure_13 = [];

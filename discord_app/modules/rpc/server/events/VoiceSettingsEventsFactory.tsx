@@ -1,6 +1,6 @@
-// === Module 14524: VoiceSettingsEventsFactory ===
+// === Module 14527: VoiceSettingsEventsFactory ===
 
-// Module 14524 (VoiceSettingsEventsFactory)
+// Module 14527 (VoiceSettingsEventsFactory)
 import Constants2 from "Constants" /* 1074 */;
 import Constants from "Constants" /* 4465 */;
 import size from "module_2" /* 2 */;

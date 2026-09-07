@@ -1,6 +1,6 @@
-// === Module 12927: StageLurkingManager ===
+// === Module 12931: StageLurkingManager ===
 
-// Module 12927 (StageLurkingManager)
+// Module 12931 (StageLurkingManager)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 import SelectedGuildStore from "SelectedGuildStore" /* 4381 */;

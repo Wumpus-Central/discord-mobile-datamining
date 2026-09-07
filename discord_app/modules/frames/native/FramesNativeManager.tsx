@@ -1,18 +1,18 @@
-// === Module 9568: FramesNativeManager ===
+// === Module 9573: FramesNativeManager ===
 
-// Module 9568 (FramesNativeManager)
+// Module 9573 (FramesNativeManager)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1109 */;
 import util from "util" /* 1114 */;
 import v1 from "v1" /* 1256 */;
 import GlobalUtils from "GlobalUtils" /* 1369 */;
 import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 4905 */;
-import NativeAppLifecycleModuleDefault from "NativeAppLifecycleModule" /* 9516 */;
-import getPostMessageJavaScriptDefault from "getPostMessageJavaScript" /* 9517 */;
-import WebViewPostMessageTransportDefault from "WebViewPostMessageTransport" /* 9550 */;
+import NativeAppLifecycleModuleDefault from "NativeAppLifecycleModule" /* 9521 */;
+import getPostMessageJavaScriptDefault from "getPostMessageJavaScript" /* 9522 */;
+import WebViewPostMessageTransportDefault from "WebViewPostMessageTransport" /* 9555 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import FramesStore from "FramesStore" /* 9510 */;
-import FramesManager from "FramesManager" /* 9569 */;
+import FramesStore from "FramesStore" /* 9515 */;
+import FramesManager from "FramesManager" /* 9574 */;
 
 require = fn;
 function postMessageToWebView() {
@@ -42,7 +42,7 @@ let closure_12 = async function _postMessageToWebView(arg0) {
   }
   return value;
 };
-const isLaunched = fn(9511).isLaunched;
+const isLaunched = fn(9516).isLaunched;
 const ComponentActions = fn(1074).ComponentActions;
 let closure_7 = fn(1920).DISALLOWED_NAVIGATION_ERROR_CLOSE_ACTIVITY;
 const TransportTypes = fn(4465).TransportTypes;

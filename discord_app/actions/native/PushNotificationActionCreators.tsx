@@ -1,6 +1,6 @@
-// === Module 12412: PushNotificationActionCreators ===
+// === Module 12416: PushNotificationActionCreators ===
 
-// Module 12412 (PushNotificationActionCreators)
+// Module 12416 (PushNotificationActionCreators)
 import LoggerDefault from "Logger" /* 3 */;
 import Storage2 from "Storage" /* 510 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
@@ -10,7 +10,7 @@ import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 125
 import HTTPUtils from "HTTPUtils" /* 1272 */;
 import TrackedHTTPUtilsDefault from "TrackedHTTPUtils" /* 4753 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import MultiAccountStore from "MultiAccountStore" /* 12413 */;
+import MultiAccountStore from "MultiAccountStore" /* 12417 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
 require = fn;
@@ -221,8 +221,8 @@ export default {
       } else if (arg0 !== 2) {
         closure_128_2 = value;
         if (closure_128_2.body.invalid_push_sync_tokens.length > 0) {
-          const result = v2(12417).invalidatePushSyncTokens(closure_128_2.body.invalid_push_sync_tokens);
-          v2(12417);
+          const result = v2(12421).invalidatePushSyncTokens(closure_128_2.body.invalid_push_sync_tokens);
+          v2(12421);
         }
       }
       return value;

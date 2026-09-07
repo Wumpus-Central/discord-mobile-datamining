@@ -1,6 +1,6 @@
-// === Module 16912: BurstReactionAnimationContainer ===
+// === Module 16915: BurstReactionAnimationContainer ===
 
-// Module 16912 (BurstReactionAnimationContainer)
+// Module 16915 (BurstReactionAnimationContainer)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import nativeDefault from "native" /* 576 */;
 import native from "native" /* 4271 */;
@@ -123,8 +123,8 @@ function BurstReactionAnimationContainerInner() {
       obj.children = closure_1_8(first(4296).View, obj);
       return closure_1_8(closure_0(1178).OverlayView, obj);
     };
-    tmp8 = closure_8(animationData(10625), obj);
-    let tmp11 = animationData(10625);
+    tmp8 = closure_8(animationData(10630), obj);
+    let tmp11 = animationData(10630);
   }
   return tmp8;
 }

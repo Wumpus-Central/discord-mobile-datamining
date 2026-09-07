@@ -1,7 +1,7 @@
-// === Module 10992: useAutocompleter ===
+// === Module 10997: useAutocompleter ===
 
-// Module 10992 (useAutocompleter)
-import sortByMatchScoreDefault from "sortByMatchScore" /* 9835 */;
+// Module 10997 (useAutocompleter)
+import sortByMatchScoreDefault from "sortByMatchScore" /* 9840 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 

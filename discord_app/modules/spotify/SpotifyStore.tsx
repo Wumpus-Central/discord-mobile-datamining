@@ -10,9 +10,9 @@ import DurationsDefault from "Durations" /* 1090 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
 import Timers from "Timers" /* 4447 */;
 import ApplicationAssetUtils from "ApplicationAssetUtils" /* 8139 */;
-import useIsSpeaking from "useIsSpeaking" /* 9478 */;
-import SpotifyActionCreators from "SpotifyActionCreators" /* 11751 */;
-import stopSyncingUserActivityDefault from "stopSyncingUserActivity" /* 13627 */;
+import useIsSpeaking from "useIsSpeaking" /* 9483 */;
+import SpotifyActionCreators from "SpotifyActionCreators" /* 11756 */;
+import stopSyncingUserActivityDefault from "stopSyncingUserActivity" /* 13631 */;
 import RunningGameStore from "RunningGameStore" /* 1915 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ConnectedAccountsStore from "ConnectedAccountsStore" /* 5281 */;
@@ -579,7 +579,7 @@ prototype["connect"] = function connect() {
     ({ accountId, accessToken } = self);
     closure_129_0 = accountId;
     closure_129_1 = accessToken;
-    const SpotifyAPI = self(11751).SpotifyAPI;
+    const SpotifyAPI = self(11756).SpotifyAPI;
     const request = { url: constants.PLAYER, query: null, onlyRetryOnAuthorizationErrors: true };
     const obj = { additional_types: null };
     const _HermesInternal = HermesInternal;
@@ -1181,7 +1181,7 @@ const spotifyStore = new SpotifyStore(DispatcherDefault, {
           }
         }
         timeout1.start(100, () => closure_1_35.stop(), false);
-        obj9 = device(9478);
+        obj9 = device(9483);
       }
       if (null != tmp10) {
         if (!tmp22) {

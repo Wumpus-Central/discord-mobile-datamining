@@ -1,14 +1,14 @@
-// === Module 13152: OrbCheckoutModal ===
+// === Module 13156: OrbCheckoutModal ===
 
-// Module 13152 (OrbCheckoutModal)
+// Module 13156 (OrbCheckoutModal)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
 import ModalActionCreatorsDefault from "ModalActionCreators" /* 4763 */;
 import Stack_Stack from "Stack/Stack" /* 4973 */;
-import PaymentFlowStartedTriggerPoint from "PaymentFlowStartedTriggerPoint" /* 10808 */;
-import useFetchCollectiblesProduct from "useFetchCollectiblesProduct" /* 11042 */;
-import VirtualCurrencyUtils from "VirtualCurrencyUtils" /* 11280 */;
-import OrbCheckoutModalContext from "OrbCheckoutModalContext" /* 13153 */;
-import OrbCheckoutModalComponents from "OrbCheckoutModalComponents" /* 13154 */;
+import PaymentFlowStartedTriggerPoint from "PaymentFlowStartedTriggerPoint" /* 10813 */;
+import useFetchCollectiblesProduct from "useFetchCollectiblesProduct" /* 11047 */;
+import VirtualCurrencyUtils from "VirtualCurrencyUtils" /* 11285 */;
+import OrbCheckoutModalContext from "OrbCheckoutModalContext" /* 13157 */;
+import OrbCheckoutModalComponents from "OrbCheckoutModalComponents" /* 13158 */;
 import "module_19";
 
 require = fn;
@@ -50,12 +50,12 @@ function OrbCheckoutModalScreen(startTime) {
   startTime = startTime.startTime;
   let onRedeemVirtualCurrency;
   let ref;
-  let obj = onRedeemVirtualCurrency(13153);
+  let obj = onRedeemVirtualCurrency(13157);
   const orbCheckoutModalContext = obj.useOrbCheckoutModalContext();
   onRedeemVirtualCurrency = orbCheckoutModalContext.onRedeemVirtualCurrency;
   const orbRedemptionError = orbCheckoutModalContext.orbRedemptionError;
   closure_129_0 = startTime;
-  let obj1 = onRedeemVirtualCurrency(13153);
+  let obj1 = onRedeemVirtualCurrency(13157);
   const orbCheckoutModalContext1 = obj1.useOrbCheckoutModalContext();
   const skuId = orbCheckoutModalContext1.skuId;
   closure_129_1 = skuId;
@@ -122,7 +122,7 @@ function OrbCheckoutModalScreen(startTime) {
     }
   }, items1);
   dependencyMap = tmp7;
-  const virtualCurrencyBalance = onRedeemVirtualCurrency(13155).useVirtualCurrencyBalance();
+  const virtualCurrencyBalance = onRedeemVirtualCurrency(13159).useVirtualCurrencyBalance();
   const tmp9 = ref(virtualCurrencyBalance);
   ref = tmp9;
   const items2 = [tmp7];
@@ -145,7 +145,7 @@ function OrbCheckoutModalScreen(startTime) {
     current = virtualCurrencyBalance;
   }
   const items4 = [tmp7, virtualCurrencyBalance, onRedeemVirtualCurrency];
-  let obj3 = onRedeemVirtualCurrency(13155);
+  let obj3 = onRedeemVirtualCurrency(13159);
   obj = { children: null };
   obj = { children: closure_11(OrbCheckoutModalContent, { orbBalance: current }) };
   const items5 = [closure_11(onRedeemVirtualCurrency(8422).ModalContent, obj), ];
@@ -162,7 +162,7 @@ function OrbCheckoutModalScreen(startTime) {
       }, items4)
     })
   };
-  items5[1] = closure_11(onRedeemVirtualCurrency(11926).ModalFooter, obj1);
+  items5[1] = closure_11(onRedeemVirtualCurrency(11931).ModalFooter, obj1);
   obj.children = items5;
   return closure_12(onRedeemVirtualCurrency(8421).ModalScreen, obj);
 }

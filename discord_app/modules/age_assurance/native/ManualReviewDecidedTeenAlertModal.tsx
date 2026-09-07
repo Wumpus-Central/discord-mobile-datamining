@@ -1,6 +1,6 @@
-// === Module 8587: ManualReviewDecidedTeenAlertModal ===
+// === Module 8590: ManualReviewDecidedTeenAlertModal ===
 
-// Module 8587 (ManualReviewDecidedTeenAlertModal)
+// Module 8590 (ManualReviewDecidedTeenAlertModal)
 import util from "util" /* 1114 */;
 import _modDef2978 from "module_2978" /* 2978 */;
 import AlertModal from "AlertModal" /* 4910 */;

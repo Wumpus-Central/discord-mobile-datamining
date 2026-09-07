@@ -1,6 +1,6 @@
-// === Module 9424: AuthorizeScopes ===
+// === Module 9429: AuthorizeScopes ===
 
-// Module 9424 (AuthorizeScopes)
+// Module 9429 (AuthorizeScopes)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import noop from "module_19" /* 19 */;
@@ -80,7 +80,7 @@ export default function AuthorizeScopes(accountScopes) {
       PZpY9c = t["1Hz+Sl"];
       tmp5 = tmp15;
     }
-    let hasItem = integrationType === tmp5(9245).ApplicationIntegrationType.USER_INSTALL;
+    let hasItem = integrationType === tmp5(9250).ApplicationIntegrationType.USER_INSTALL;
     if (hasItem) {
       hasItem = requestedScopes.includes(tmp5(8339).OAuth2Scopes.APPLICATIONS_COMMANDS);
     }
@@ -93,7 +93,7 @@ export default function AuthorizeScopes(accountScopes) {
     const obj1 = { style: tmp.scopes, children: null };
     const mapped = accountScopes.map((item) => {
       closure_0 = item;
-      const scopeNames = accountScopes(9238).getScopeNames(item, closure_0);
+      const scopeNames = accountScopes(9243).getScopeNames(item, closure_0);
       return scopeNames.map((text, index) => {
         const obj = { text, error: null };
         let tmp3;

@@ -1,6 +1,6 @@
-// === Module 9065: GuildProfileStore ===
+// === Module 9070: GuildProfileStore ===
 
-// Module 9065 (GuildProfileStore)
+// Module 9070 (GuildProfileStore)
 import initializeDefault from "initialize" /* 504 */;
 import BackoffDefault from "Backoff" /* 559 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;

@@ -1,6 +1,6 @@
-// === Module 15956: useIdentityRegistrationStep ===
+// === Module 15959: useIdentityRegistrationStep ===
 
-// Module 15956 (useIdentityRegistrationStep)
+// Module 15959 (useIdentityRegistrationStep)
 import util from "util" /* 1114 */;
 import PhoneOrEmailUtils from "PhoneOrEmailUtils" /* 6963 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
@@ -8,9 +8,9 @@ import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const RegistrationUIStore = fn(15946);
+const RegistrationUIStore = fn(15949);
 ({ setRegistrationErrors: metroRequire, updateRegistrationOptions: closure_7, useRegistrationUIStore: closure_8 } = RegistrationUIStore);
-const RegistrationConstants = fn(15947);
+const RegistrationConstants = fn(15950);
 ({ authStateToRegisterTransitionStep: closure_9, RegisterTransitionSteps: c10, RegistrationTransitionActionTypes: closure_11 } = RegistrationConstants);
 const AbortCodes = fn(1074).AbortCodes;
 const size = fn(2);

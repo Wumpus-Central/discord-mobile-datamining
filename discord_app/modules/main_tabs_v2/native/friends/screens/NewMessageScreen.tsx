@@ -1,6 +1,6 @@
-// === Module 16753: NewMessageScreen ===
+// === Module 16756: NewMessageScreen ===
 
-// Module 16753 (NewMessageScreen)
+// Module 16756 (NewMessageScreen)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import nativeDefault from "native" /* 576 */;
 import router_utils from "router_utils" /* 1100 */;
@@ -16,15 +16,15 @@ import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAwar
 import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7162 */;
 import AnalyticsLocationDefault from "AnalyticsLocation" /* 7182 */;
 import FakePlaceholderPrivateChannel from "FakePlaceholderPrivateChannel" /* 7221 */;
-import _modDef10031 from "module_10031" /* 10031 */;
-import GroupPlusIcon from "GroupPlusIcon" /* 10032 */;
-import NoResultsDefault from "NoResults" /* 10994 */;
-import ChatViewDefault from "ChatView" /* 11340 */;
-import getGroupDMRecipientLimitDefault from "getGroupDMRecipientLimit" /* 11592 */;
-import GroupDMNitroCapExperimentDefault from "GroupDMNitroCapExperiment" /* 11594 */;
-import NewMessageUserListDefault from "NewMessageUserList" /* 12366 */;
-import GroupDMNitroUpsellBannerDefault from "GroupDMNitroUpsellBanner" /* 16688 */;
-import useOnMessageSendDefault from "useOnMessageSend" /* 16754 */;
+import _modDef10036 from "module_10036" /* 10036 */;
+import GroupPlusIcon from "GroupPlusIcon" /* 10037 */;
+import NoResultsDefault from "NoResults" /* 10999 */;
+import ChatViewDefault from "ChatView" /* 11345 */;
+import getGroupDMRecipientLimitDefault from "getGroupDMRecipientLimit" /* 11597 */;
+import GroupDMNitroCapExperimentDefault from "GroupDMNitroCapExperiment" /* 11599 */;
+import NewMessageUserListDefault from "NewMessageUserList" /* 12370 */;
+import GroupDMNitroUpsellBannerDefault from "GroupDMNitroUpsellBanner" /* 16691 */;
+import useOnMessageSendDefault from "useOnMessageSend" /* 16757 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -180,7 +180,7 @@ function Header(recipientLimit) {
   fn.__initData = __initData;
   if (recipientLimit.usePersonLimitCopy) {
     obj = { title, memberCount: numInGroup + 1, recipientLimit };
-    return closure_17(recipientLimit(16755), obj);
+    return closure_17(recipientLimit(16758), obj);
   } else {
     obj = { style: tmp.header, children: null };
     const obj1 = { title };
@@ -233,14 +233,14 @@ function ChatPreview(channelId) {
   const obj1 = { portal: null };
   const ref = noop.useRef(null);
   obj1.portal = channelId(1115).isAndroid();
-  items2[1] = closure_17(channelId(16756).PortalKeyboardRenderer, obj1);
+  items2[1] = closure_17(channelId(16759).PortalKeyboardRenderer, obj1);
   obj.children = items2;
   obj.children = closure_18(View, obj);
   return closure_17(View, obj);
 }
 const View = fn(17).View;
 const PrivateChannelRecord = fn(1961).PrivateChannelRecord;
-const UserRowModes = fn(10860).UserRowModes;
+const UserRowModes = fn(10865).UserRowModes;
 const Constants = fn(1074);
 ({ AnalyticEvents: closure_12, AnalyticsSections: map1, ChannelTypes: closure_14, ME: closure_15, Routes: closure_16 } = Constants);
 const jsxProd = fn(21);
@@ -457,7 +457,7 @@ export default function NewMessageScreen(navigation) {
         return () => {
           source_page(573);
           let obj = { type: "CHANNEL_DELETE", channel: null };
-          obj = { id: navigation(7221).FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID, guild_id: "Array", parent_id: "isArray" };
+          obj = { id: navigation(7221).FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID, guild_id: "Array", parent_id: "options" };
           obj.channel = obj;
           obj.dispatch(obj);
         };
@@ -486,7 +486,7 @@ export default function NewMessageScreen(navigation) {
   require("GroupDMNitroUpsellModel");
   enabled = config.enabled;
   if (enabled) {
-    let tmp13Result = tmp13(11591);
+    let tmp13Result = tmp13(11596);
     enabled = tmp13Result.isGroupDMNitroUpsellAudience(tmp23);
   }
   const items7 = [navigation, selectedUserIds.length, FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID, tmp20, result];
@@ -643,7 +643,7 @@ export default function NewMessageScreen(navigation) {
     const items = [];
     if (constants) {
       if (stateFromStores1) {
-        let obj = { icon: _modDef10031, IconComponent: GroupPlusIcon.GroupPlusIcon, label: null, iconVariant: "default", onPress: null };
+        let obj = { icon: _modDef10036, IconComponent: GroupPlusIcon.GroupPlusIcon, label: null, iconVariant: "default", onPress: null };
         const intl = util.intl;
         obj.label = intl.string(util.t["3hF1W4"]);
         obj.onPress = function onPress() {

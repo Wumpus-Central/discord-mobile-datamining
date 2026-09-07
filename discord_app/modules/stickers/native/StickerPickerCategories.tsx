@@ -1,6 +1,6 @@
-// === Module 10419: StickerPickerCategories ===
+// === Module 10424: StickerPickerCategories ===
 
-// Module 10419 (StickerPickerCategories)
+// Module 10424 (StickerPickerCategories)
 import nativeDefault from "native" /* 576 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
 import HapticUtils from "HapticUtils" /* 4528 */;
@@ -12,7 +12,7 @@ import GuildStore from "GuildStore" /* 1979 */;
 
 require = fn;
 const View = fn(17).View;
-let useStickerPickerStore = fn(10390).useStickerPickerStore;
+let useStickerPickerStore = fn(10395).useStickerPickerStore;
 const Constants = fn(1074);
 ({ AnalyticEvents: closure_8, AnalyticsPages: closure_9, CATEGORY_ICON_RIPPLE_CONFIG: c10, CATEGORY_ICON_SIZE } = Constants);
 const EXPRESSION_FOOTER_HEIGHT = Constants.EXPRESSION_FOOTER_HEIGHT;
@@ -197,7 +197,7 @@ export default function _default(categories) {
   const callback5 = first.useCallback((arg0, index) => closure_2_14(closure_17, { category: categories[index], index, isActive: index === categoryIndex, onPressCategory: callback2 }), items8);
   let obj = { portalHostName: "expression-footer", style: categories.style, children: null };
   const tmp17 = categoryIndex;
-  const tmp19 = categoryIndex(10358)();
+  const tmp19 = categoryIndex(10363)();
   obj = { estimatedListSize: "windowSize", horizontal: true, itemSize: EXPRESSION_FOOTER_HEIGHT, keyboardShouldPersistTaps: "always", listId: ExpressionPickerViewType.STICKER, onLayout: callback4, onScroll: callback1, placeholderConfig: tmp19, ref, scrollReporting: "callbacks", sections: memo, renderItem: callback5, showsHorizontalScrollIndicator: false, style: tmp.list };
   const items9 = [closure_14(categoryIndex(7055), obj), ];
   let tmp22Result = null != first && first1;
@@ -209,12 +209,12 @@ export default function _default(categories) {
     const items10 = [, ];
     ({ item: arr11[0], fadedItem: arr11[1] } = tmp);
     obj1.style = items10;
-    const obj2 = { style: tmp.guildIcon, source: tmp17(10420) };
+    const obj2 = { style: tmp.guildIcon, source: tmp17(10425) };
     obj1.children = closure_14(categories(1178).Icon, obj2);
     obj.children = closure_14(closure_5, obj1);
     tmp22Result = closure_14(categories(5123).PressableOpacity, obj);
   }
   items9[1] = tmp22Result;
   obj.children = items9;
-  return closure_15(categoryIndex(10359), obj);
+  return closure_15(categoryIndex(10364), obj);
 };

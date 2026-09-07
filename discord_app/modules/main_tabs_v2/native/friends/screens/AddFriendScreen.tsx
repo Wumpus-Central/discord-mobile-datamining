@@ -1,8 +1,8 @@
-// === Module 16766: AddFriendScreen ===
+// === Module 16769: AddFriendScreen ===
 
-// Module 16766 (AddFriendScreen)
+// Module 16769 (AddFriendScreen)
 import nativeDefault from "native" /* 576 */;
-import ContactSyncUtils from "ContactSyncUtils" /* 12680 */;
+import ContactSyncUtils from "ContactSyncUtils" /* 12684 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1371 */;
@@ -11,7 +11,7 @@ require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, ScrollView: metroRequire } = get_ActivityIndicator);
 const AnalyticEvents = fn(1074).AnalyticEvents;
-const ContactPermissions = fn(12678).ContactPermissions;
+const ContactPermissions = fn(12682).ContactPermissions;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11, Fragment: closure_12 } = jsxProd);
 fn(4560);
@@ -30,9 +30,9 @@ export default function AddFriendScreen(navigation) {
   dependencyMap = undefined;
   let callback;
   const tmp = closure_13();
-  let obj = navigation(12680);
+  let obj = navigation(12684);
   const contactSyncAccount = obj.useContactSyncAccount();
-  let obj1 = navigation(12680);
+  let obj1 = navigation(12684);
   [tmp5, c2] = callback(noop.useState(!obj1.isContactSyncEnabled(contactSyncAccount)), 2);
   callback = noop.useCallback(() => {
     currentUser = currentUser.getCurrentUser();
@@ -66,8 +66,8 @@ export default function AddFriendScreen(navigation) {
       const obj = navigation(1115);
       let tmp5 = result === constants2.NOT_DETERMINED || navigation(1115).isAndroid() && result === constants2.UNAUTHORIZED;
       if (!tmp5) {
-        tmp5 = !navigation(12680).isContactSyncEnabled(contactSyncAccount);
-        const tmp2Result = navigation(12680);
+        tmp5 = !navigation(12684).isContactSyncEnabled(contactSyncAccount);
+        const tmp2Result = navigation(12684);
       }
       dependencyMap(tmp5);
       const tmp4 = navigation(1115).isAndroid() && result === constants2.UNAUTHORIZED;
@@ -83,7 +83,7 @@ export default function AddFriendScreen(navigation) {
   const intl2 = navigation(1114).intl;
   obj1.children = intl2.string(navigation(1114).t["Rn/sLl"]);
   items2[1] = closure_10(navigation(4556).Text, obj1);
-  items2[2] = closure_10(contactSyncAccount(13855), { style: tmp.input, autoFocusInput: false, sourcePage: navigation.route.params.sourcePage });
+  items2[2] = closure_10(contactSyncAccount(13858), { style: tmp.input, autoFocusInput: false, sourcePage: navigation.route.params.sourcePage });
   const obj3 = { style: tmp.otherOptionsContainer, children: null };
   let obj4 = { accessibilityRole: "header", variant: "eyebrow", color: "text-default", children: null };
   const intl3 = navigation(1114).intl;
@@ -92,7 +92,7 @@ export default function AddFriendScreen(navigation) {
   let tmp10Result = null;
   if (tmp5) {
     const obj5 = { style: tmp.rowContainer, location: "Add Friend Modal" };
-    tmp10Result = closure_10(contactSyncAccount(13857), obj5);
+    tmp10Result = closure_10(contactSyncAccount(13860), obj5);
   }
   const obj6 = { children: null };
   items3[1] = tmp10Result;

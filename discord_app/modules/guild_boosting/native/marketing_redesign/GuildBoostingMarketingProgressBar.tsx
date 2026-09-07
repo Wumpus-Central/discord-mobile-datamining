@@ -1,11 +1,11 @@
-// === Module 13582: GuildBoostingMarketingProgressBar ===
+// === Module 13586: GuildBoostingMarketingProgressBar ===
 
-// Module 13582 (GuildBoostingMarketingProgressBar)
+// Module 13586 (GuildBoostingMarketingProgressBar)
 import nativeDefault from "native" /* 576 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4296 */;
 import GuildBoostingUtils from "GuildBoostingUtils" /* 4454 */;
 import spring from "spring" /* 4974 */;
-import GuildBoostingMarketingProgressBarMarker from "GuildBoostingMarketingProgressBarMarker" /* 13583 */;
+import GuildBoostingMarketingProgressBarMarker from "GuildBoostingMarketingProgressBarMarker" /* 13587 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4552 */;
@@ -19,10 +19,10 @@ const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 fn(4560);
 let createStyles = { progressBarContainer: null, progressBar: null, progressBarScrubber: null, progressBarTrack: null, progressBarFill: null, progressBarGradientFill: null };
-createStyles = { display: "flex", alignItems: "center", width: "100%", marginTop: 40, paddingHorizontal: fn(13583).MARKER_DIMENSIONS / 2 + 34 };
+createStyles = { display: "flex", alignItems: "center", width: "100%", marginTop: 40, paddingHorizontal: fn(13587).MARKER_DIMENSIONS / 2 + 34 };
 createStyles.progressBarContainer = createStyles;
 createStyles.progressBar = { height: 54, maxWidth: 660, width: "100%" };
-createStyles.progressBarScrubber = { height: 8, top: fn(13583).MARKER_DIMENSIONS / 2 - 4, marginHorizontal: fn(13583).MARKER_DIMENSIONS / 2 + 2 };
+createStyles.progressBarScrubber = { height: 8, top: fn(13587).MARKER_DIMENSIONS / 2 - 4, marginHorizontal: fn(13587).MARKER_DIMENSIONS / 2 + 2 };
 let size = { borderRadius: 8, height: "100%", width: "100%", position: "absolute", zIndex: 0, backgroundColor: nativeDefault.colors.SPINE_DEFAULT };
 createStyles.progressBarTrack = size;
 createStyles.progressBarFill = { borderRadius: 8, position: "absolute", height: "100%", left: 0, zIndex: 1 };

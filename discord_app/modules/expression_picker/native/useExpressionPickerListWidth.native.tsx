@@ -1,6 +1,6 @@
-// === Module 10291: useExpressionPickerListWidth ===
+// === Module 10296: useExpressionPickerListWidth ===
 
-// Module 10291 (useExpressionPickerListWidth)
+// Module 10296 (useExpressionPickerListWidth)
 import ExpressionPickerConstants from "ExpressionPickerConstants" /* 1219 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1477 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1611 */;

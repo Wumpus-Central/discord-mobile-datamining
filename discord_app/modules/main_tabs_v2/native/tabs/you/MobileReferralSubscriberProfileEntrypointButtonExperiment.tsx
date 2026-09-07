@@ -1,6 +1,6 @@
-// === Module 16792: MobileReferralSubscriberProfileEntrypointButtonExperiment ===
+// === Module 16795: MobileReferralSubscriberProfileEntrypointButtonExperiment ===
 
-// Module 16792 (MobileReferralSubscriberProfileEntrypointButtonExperiment)
+// Module 16795 (MobileReferralSubscriberProfileEntrypointButtonExperiment)
 import DurationsDefault from "Durations" /* 1090 */;
 
 const result = 3 * DurationsDefault.Millis.DAYS_30;

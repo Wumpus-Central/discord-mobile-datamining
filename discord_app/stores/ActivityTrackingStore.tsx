@@ -1,12 +1,12 @@
-// === Module 13743: ActivityTrackingStore ===
+// === Module 13747: ActivityTrackingStore ===
 
-// Module 13743 (ActivityTrackingStore)
+// Module 13747 (ActivityTrackingStore)
 import initializeDefault from "initialize" /* 504 */;
 import Storage2 from "Storage" /* 510 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import DurationsDefault from "Durations" /* 1090 */;
 import GameAnalyticsUtils from "GameAnalyticsUtils" /* 4689 */;
-import ActivitiesActionCreatorsDefault from "ActivitiesActionCreators" /* 11472 */;
+import ActivitiesActionCreatorsDefault from "ActivitiesActionCreators" /* 11477 */;
 import RunningGameStore from "RunningGameStore" /* 1915 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1221 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;

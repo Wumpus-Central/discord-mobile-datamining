@@ -1,6 +1,6 @@
-// === Module 15569: CacheActionsSetting ===
+// === Module 15572: CacheActionsSetting ===
 
-// Module 15569 (CacheActionsSetting)
+// Module 15572 (CacheActionsSetting)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1114 */;
 import UserSettings from "UserSettings" /* 1935 */;
@@ -9,9 +9,9 @@ import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4527
 import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7149 */;
 import ActionSheet from "ActionSheet" /* 7198 */;
 import ActionSheetRow from "ActionSheetRow" /* 7200 */;
-import FileUpIcon from "FileUpIcon" /* 15538 */;
-import CacheActionCreators from "CacheActionCreators" /* 15570 */;
-import FileWarningIcon from "FileWarningIcon" /* 15571 */;
+import FileUpIcon from "FileUpIcon" /* 15541 */;
+import CacheActionCreators from "CacheActionCreators" /* 15573 */;
+import FileWarningIcon from "FileWarningIcon" /* 15574 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import GatewayConnectionStore from "GatewayConnectionStore" /* 5277 */;
 
@@ -116,14 +116,14 @@ function CacheActionsActionSheet() {
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
 CacheActionsActionSheet = "CacheActionsActionSheet";
-fn(11468);
+fn(11473);
 let SettingBuilders = {
   useTitle: function useCacheActionsTitle() {
     const intl = util.intl;
     return intl.string(util.t.ZVZVwR);
   },
   parent: null,
-  IconComponent: fn(15571).FileWarningIcon,
+  IconComponent: fn(15574).FileWarningIcon,
   onPress: function handleCacheActionsPress() {
     const obj = { default: CacheActionsActionSheet };
     obj.openLazy(Promise.resolve(obj), CacheActionsActionSheet);

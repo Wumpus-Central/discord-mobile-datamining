@@ -1,6 +1,6 @@
-// === Module 11028: GiftBadgePostPurchase ===
+// === Module 11033: GiftBadgePostPurchase ===
 
-// Module 11028 (GiftBadgePostPurchase)
+// Module 11033 (GiftBadgePostPurchase)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
@@ -13,9 +13,9 @@ import haptics_HapticFeedbackTypesDefault from "haptics/HapticFeedbackTypes" /* 
 import Text_Text from "Text/Text" /* 4556 */;
 import ModalActionCreatorsDefault from "ModalActionCreators" /* 4763 */;
 import BadgeId from "BadgeId" /* 8184 */;
-import GiftingBadgeIconDefault from "GiftingBadgeIcon" /* 10749 */;
-import GiftingBadgeProgressDefault from "GiftingBadgeProgress" /* 11031 */;
-import GiftingBadgeLevelUpProgressDefault from "GiftingBadgeLevelUpProgress" /* 11032 */;
+import GiftingBadgeIconDefault from "GiftingBadgeIcon" /* 10754 */;
+import GiftingBadgeProgressDefault from "GiftingBadgeProgress" /* 11036 */;
+import GiftingBadgeLevelUpProgressDefault from "GiftingBadgeLevelUpProgress" /* 11037 */;
 import noop from "module_19" /* 19 */;
 import BadgeDirectoryStore from "BadgeDirectoryStore" /* 8192 */;
 
@@ -39,7 +39,7 @@ function PostPurchaseFooter(onSendGift) {
   }, []);
   obj = { grow: true, variant: "primary", icon: null, text: null, onPress: null };
   obj = { size: "sm", color: nativeDefault.colors.CONTROL_PRIMARY_TEXT_DEFAULT };
-  obj.icon = closure_10(onSendGift(11030).GiftIcon, obj);
+  obj.icon = closure_10(onSendGift(11035).GiftIcon, obj);
   const intl = onSendGift(1114).intl;
   obj.text = intl.string(_modDef2492.g86YiI);
   obj.onPress = callback;
@@ -123,7 +123,7 @@ function LevelUpScreen(arg0) {
   return closure_1_11(View, obj);
 }
 const View = fn(17).View;
-const GiftingBadgeConstants = fn(11029);
+const GiftingBadgeConstants = fn(11034);
 ({ getRemainingGiftsToNextTier: metroRequire, getTierForProgress: closure_7, getNextTierForProgress: closure_8 } = GiftingBadgeConstants);
 const ContentDismissActionType = fn(1954).ContentDismissActionType;
 const jsxProd = fn(21);

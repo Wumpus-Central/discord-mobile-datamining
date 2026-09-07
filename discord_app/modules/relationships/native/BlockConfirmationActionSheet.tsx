@@ -1,6 +1,6 @@
-// === Module 11383: BlockConfirmationActionSheet ===
+// === Module 11388: BlockConfirmationActionSheet ===
 
-// Module 11383 (BlockConfirmationActionSheet)
+// Module 11388 (BlockConfirmationActionSheet)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import native from "native" /* 1178 */;
@@ -14,7 +14,7 @@ import TableRowGroup from "TableRowGroup" /* 5687 */;
 import AnalyticsLocationDefault from "AnalyticsLocation" /* 7182 */;
 import UserActionCreators from "UserActionCreators" /* 8181 */;
 import _modDef8185 from "module_8185" /* 8185 */;
-import RelationshipActionCreatorsDefault from "RelationshipActionCreators" /* 9042 */;
+import RelationshipActionCreatorsDefault from "RelationshipActionCreators" /* 9047 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
@@ -37,8 +37,8 @@ function BlockedInformationTable() {
   });
 }
 const View = fn(17).View;
-const UserRemediationAction = fn(9043).UserRemediationAction;
-const RestrictionConfirmationConstants = fn(11382);
+const UserRemediationAction = fn(9048).UserRemediationAction;
+const RestrictionConfirmationConstants = fn(11387);
 ({ IGNORE_CONFIRMATION_ACTION_SHEET_KEY: c10, RESTRICTION_CONFIRMATION_ACTION_SHEET_HEIGHT: closure_11 } = RestrictionConfirmationConstants);
 const Constants = fn(1074);
 ({ HelpdeskArticles: closure_12, AnalyticEvents: map1 } = Constants);
@@ -262,7 +262,7 @@ export default noop.memo(function BlockConfirmationActionSheet(userId) {
         obj.track(constants.USER_REMEDIATION_ACTION, obj);
         const obj3 = ActionSheetActionCreatorsDefault;
         obj = { userId, channelId, onSuccess, onIgnore, impressionName: discord_common_AnalyticsUtils.ImpressionNames.IGNORE_USER_CONFIRMATION };
-        obj3.openLazy(asyncRequireImpl(11384, dependencyMap.paths), closure_2_10, obj, "replaceTopSheet");
+        obj3.openLazy(asyncRequireImpl(11389, dependencyMap.paths), closure_2_10, obj, "replaceTopSheet");
       };
       obj12.children = closure_14(tmp7(5605).TableRow, obj13);
       obj11.children = closure_14(tmp7(5687).TableRowGroup, obj12);

@@ -1,6 +1,6 @@
-// === Module 12630: useProvisionalAccountApplication ===
+// === Module 12634: useProvisionalAccountApplication ===
 
-// Module 12630 (useProvisionalAccountApplication)
+// Module 12634 (useProvisionalAccountApplication)
 import GameRelationshipStore from "GameRelationshipStore" /* 7658 */;
 
 const require = fn;

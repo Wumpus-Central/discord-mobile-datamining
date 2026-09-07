@@ -1,6 +1,6 @@
-// === Module 16602: VibegrationsNativeChat ===
+// === Module 16605: VibegrationsNativeChat ===
 
-// Module 16602 (VibegrationsNativeChat)
+// Module 16605 (VibegrationsNativeChat)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import _modDef3547 from "module_3547" /* 3547 */;
@@ -8,15 +8,15 @@ import MarkupUtilsDefault from "MarkupUtils" /* 4550 */;
 import Text_Text from "Text/Text" /* 4556 */;
 import Stack_Stack from "Stack/Stack" /* 4973 */;
 import components_Button_Button from "components/Button/Button" /* 4975 */;
-import VibegrationsTimelineTree from "VibegrationsTimelineTree" /* 16603 */;
-import VibegrationsMessageAuthorDefault from "VibegrationsMessageAuthor" /* 16604 */;
-import VibegrationsClarificationCardDefault from "VibegrationsClarificationCard" /* 16606 */;
-import VibegrationsSecretRequestCardDefault from "VibegrationsSecretRequestCard" /* 16608 */;
-import VibegrationsSettingsRequestCardDefault from "VibegrationsSettingsRequestCard" /* 16610 */;
+import VibegrationsTimelineTree from "VibegrationsTimelineTree" /* 16606 */;
+import VibegrationsMessageAuthorDefault from "VibegrationsMessageAuthor" /* 16607 */;
+import VibegrationsClarificationCardDefault from "VibegrationsClarificationCard" /* 16609 */;
+import VibegrationsSecretRequestCardDefault from "VibegrationsSecretRequestCard" /* 16611 */;
+import VibegrationsSettingsRequestCardDefault from "VibegrationsSettingsRequestCard" /* 16613 */;
 import noop from "module_19" /* 19 */;
 import AppStateStore from "AppStateStore" /* 1895 */;
-import VibegrationsChatStore from "VibegrationsChatStore" /* 16586 */;
-import VibegrationsConnectionStore from "VibegrationsConnectionStore" /* 16589 */;
+import VibegrationsChatStore from "VibegrationsChatStore" /* 16589 */;
+import VibegrationsConnectionStore from "VibegrationsConnectionStore" /* 16592 */;
 
 require = fn;
 function ProposalCard(proposal) {
@@ -265,8 +265,8 @@ function TodoList(todos) {
 }
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-const turnSettled = fn(16586).turnSettled;
-let VibegrationsConnectionStore = fn(16589);
+const turnSettled = fn(16589).turnSettled;
+let VibegrationsConnectionStore = fn(16592);
 ({ ensureConnection: closure_9, getAttachmentUrl: c10, interruptTurn: closure_11, sendUserMessage: closure_12 } = VibegrationsConnectionStore);
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);

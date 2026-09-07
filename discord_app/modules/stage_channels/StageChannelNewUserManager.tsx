@@ -1,8 +1,8 @@
-// === Module 12928: StageChannelNewUserManager ===
+// === Module 12932: StageChannelNewUserManager ===
 
-// Module 12928 (StageChannelNewUserManager)
+// Module 12932 (StageChannelNewUserManager)
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import StageChannelAlertActionCreatorsAll from "StageChannelAlertActionCreators" /* 12929 */;
+import StageChannelAlertActionCreatorsAll from "StageChannelAlertActionCreators" /* 12933 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2011 */;
 import StageChannelRoleStore from "StageChannelRoleStore" /* 5421 */;

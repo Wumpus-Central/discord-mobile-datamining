@@ -1,6 +1,6 @@
-// === Module 10636: showMediaKeyboardActionSheet ===
+// === Module 10641: showMediaKeyboardActionSheet ===
 
-// Module 10636 (showMediaKeyboardActionSheet)
+// Module 10641 (showMediaKeyboardActionSheet)
 import _mod17 from "module_17" /* 17 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4527 */;
@@ -14,7 +14,7 @@ export const hideMediaKeyboardActionSheet = function hideMediaKeyboardActionShee
   ActionSheetActionCreatorsDefault.hideActionSheet(MEDIA_KEYBOARD_ACTION_SHEET);
 };
 export const showMediaKeyboardActionSheet = function showMediaKeyboardActionSheet(arg0) {
-  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(10637, dependencyMap.paths), MEDIA_KEYBOARD_ACTION_SHEET, arg0);
+  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(10642, dependencyMap.paths), MEDIA_KEYBOARD_ACTION_SHEET, arg0);
 };
 export const presentLimitedLibraryPicker = function presentLimitedLibraryPicker() {
   const NativePermissionManager = NativeModules.NativePermissionManager;

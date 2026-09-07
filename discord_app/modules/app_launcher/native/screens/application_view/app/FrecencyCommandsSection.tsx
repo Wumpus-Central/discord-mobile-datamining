@@ -1,11 +1,11 @@
-// === Module 12147: FrecencyCommandsSection ===
+// === Module 12151: FrecencyCommandsSection ===
 
-// Module 12147 (FrecencyCommandsSection)
+// Module 12151 (FrecencyCommandsSection)
 import AppAnalyticsUtils from "AppAnalyticsUtils" /* 4740 */;
 import ApplicationCommandTypes from "ApplicationCommandTypes" /* 7523 */;
-import AppLauncherTypes from "AppLauncherTypes" /* 9409 */;
-import AppDetailContent from "AppDetailContent" /* 12129 */;
-import useFilterAndSortToOnlyFrecentCommandsDefault from "useFilterAndSortToOnlyFrecentCommands" /* 12148 */;
+import AppLauncherTypes from "AppLauncherTypes" /* 9414 */;
+import AppDetailContent from "AppDetailContent" /* 12133 */;
+import useFilterAndSortToOnlyFrecentCommandsDefault from "useFilterAndSortToOnlyFrecentCommands" /* 12152 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -15,7 +15,7 @@ const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
 fn(4560);
 let createStyles = { container: null, header: null };
-createStyles = { marginBottom: fn(12129).BETWEEN_SECTIONS_MARGIN };
+createStyles = { marginBottom: fn(12133).BETWEEN_SECTIONS_MARGIN };
 createStyles.container = createStyles;
 createStyles.header = { flexDirection: "row", alignItems: "center", gap: 4, marginBottom: 8 };
 let closure_8 = createStyles.createStyles(createStyles);

@@ -1,6 +1,6 @@
-// === Module 9901: StageMusicManager ===
+// === Module 9906: StageMusicManager ===
 
-// Module 9901 (StageMusicManager)
+// Module 9906 (StageMusicManager)
 import StageChannelParticipants from "StageChannelParticipants" /* 5425 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 import MediaEngineStore from "MediaEngineStore" /* 1908 */;
@@ -8,7 +8,7 @@ import SelectedChannelStore from "SelectedChannelStore" /* 2011 */;
 import VoiceStateStore from "VoiceStateStore" /* 4579 */;
 import StageChannelParticipantStore from "StageChannelParticipantStore" /* 5418 */;
 import StageInstanceStore from "StageInstanceStore" /* 1962 */;
-import StageMusicStore from "StageMusicStore" /* 9899 */;
+import StageMusicStore from "StageMusicStore" /* 9904 */;
 import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7118 */;
 
 require = fn;
@@ -67,7 +67,7 @@ function checkVoiceStates() {
   }
 }
 let c9 = false;
-const SoundUtils = fn(9902);
+const SoundUtils = fn(9907);
 let closure_10 = SoundUtils.createSound("stage_waiting", "stage_waiting", MediaEngineStore.getOutputVolume() / 400);
 class StageMusicManager extends tmp2 {
   constructor() {

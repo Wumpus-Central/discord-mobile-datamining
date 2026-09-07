@@ -1,6 +1,6 @@
-// === Module 9744: useGuildEmbeddedApplications ===
+// === Module 9749: useGuildEmbeddedApplications ===
 
-// Module 9744 (useGuildEmbeddedApplications)
+// Module 9749 (useGuildEmbeddedApplications)
 import DurationsDefault from "Durations" /* 1090 */;
 import ApplicationActionCreatorsDefault from "ApplicationActionCreators" /* 7163 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;

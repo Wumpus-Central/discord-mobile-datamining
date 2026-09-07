@@ -1,10 +1,10 @@
-// === Module 16873: MessageRequestsNavigator ===
+// === Module 16876: MessageRequestsNavigator ===
 
-// Module 16873 (MessageRequestsNavigator)
+// Module 16876 (MessageRequestsNavigator)
 import nativeDefault from "native" /* 576 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1611 */;
 import HeaderShared from "HeaderShared" /* 7863 */;
-import getNavigationModalPresentationDefault from "getNavigationModalPresentation" /* 10925 */;
+import getNavigationModalPresentationDefault from "getNavigationModalPresentation" /* 10930 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -59,7 +59,7 @@ export default function MessageRequestsNavigator() {
   let merged = Object.assign(getNavigationModalPresentationDefault());
   obj1.options = obj2;
   obj1.getComponent = function getComponent() {
-    return closure_0(16874).default;
+    return closure_0(16877).default;
   };
   const items1 = [closure_5(Screen, obj1), , ];
   const obj3 = { name: "spam", options: null, getComponent: null };
@@ -69,7 +69,7 @@ export default function MessageRequestsNavigator() {
   let merged1 = Object.assign(getNavigationModalPresentationDefault());
   obj3.options = obj4;
   obj3.getComponent = function getComponent() {
-    return closure_0(16893).default;
+    return closure_0(16896).default;
   };
   items1[1] = closure_5(closure_7.Screen, obj3);
   const obj5 = { name: "preview", options: null, getComponent: null };
@@ -79,7 +79,7 @@ export default function MessageRequestsNavigator() {
   const merged2 = Object.assign(getNavigationModalPresentationDefault());
   obj5.options = obj6;
   obj5.getComponent = function getComponent() {
-    return closure_0(16894).default;
+    return closure_0(16897).default;
   };
   items1[2] = closure_5(closure_7.Screen, obj5);
   obj.children = items1;

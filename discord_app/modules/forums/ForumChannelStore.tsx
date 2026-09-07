@@ -1,6 +1,6 @@
-// === Module 12001: ForumChannelStore ===
+// === Module 12005: ForumChannelStore ===
 
-// Module 12001 (ForumChannelStore)
+// Module 12005 (ForumChannelStore)
 import _modDef38 from "module_38" /* 38 */;
 import ForumChannelAnalyticsManagerDefault from "ForumChannelAnalyticsManager" /* 7772 */;
 import ChannelStore from "ChannelStore" /* 1957 */;

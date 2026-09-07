@@ -1,6 +1,6 @@
-// === Module 12990: useSheetDismissPointerEvents ===
+// === Module 12994: useSheetDismissPointerEvents ===
 
-// Module 12990 (useSheetDismissPointerEvents)
+// Module 12994 (useSheetDismissPointerEvents)
 import LegacyBaseButton from "LegacyBaseButton" /* 6655 */;
 import size from "module_2" /* 2 */;
 

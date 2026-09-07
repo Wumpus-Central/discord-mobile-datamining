@@ -1,6 +1,6 @@
-// === Module 9517: getPostMessageJavaScript ===
+// === Module 9522: getPostMessageJavaScript ===
 
-// Module 9517 (getPostMessageJavaScript)
+// Module 9522 (getPostMessageJavaScript)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/activities/native/getPostMessageJavaScript.tsx");

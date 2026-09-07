@@ -1,17 +1,17 @@
-// === Module 15906: ActivityPrivacyDefaultSharingSetting ===
+// === Module 15909: ActivityPrivacyDefaultSharingSetting ===
 
-// Module 15906 (ActivityPrivacyDefaultSharingSetting)
+// Module 15909 (ActivityPrivacyDefaultSharingSetting)
 import util from "util" /* 1114 */;
 import preloaded_user_settings from "preloaded_user_settings" /* 1187 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
 import UserSettings from "UserSettings" /* 1935 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4527 */;
-import ActivityPrivacyUpsellUtils from "ActivityPrivacyUpsellUtils" /* 14851 */;
-import ActivityPrivacyMatchingExperiment from "ActivityPrivacyMatchingExperiment" /* 15907 */;
+import ActivityPrivacyUpsellUtils from "ActivityPrivacyUpsellUtils" /* 14854 */;
+import ActivityPrivacyMatchingExperiment from "ActivityPrivacyMatchingExperiment" /* 15910 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-fn(11468);
+fn(11473);
 let SettingBuilders = {
   useTitle() {
     const intl = util.intl;
@@ -62,7 +62,7 @@ let SettingBuilders = {
         obj = { direction: null, affectedGuildIds: null, settingName: null };
         ({ direction: obj5.direction, affectedGuildIds: obj5.affectedGuildIds } = affectedGuilds);
         obj.settingName = activityRestrictionSettingName;
-        ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(15908, dependencyMap.paths), "ActivityPrivacyUpsellActionSheet", obj);
+        ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(15911, dependencyMap.paths), "ActivityPrivacyUpsellActionSheet", obj);
       }
     }
   }

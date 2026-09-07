@@ -1,6 +1,6 @@
-// === Module 16517: ICYMIServerRecommendationRow ===
+// === Module 16520: ICYMIServerRecommendationRow ===
 
-// Module 16517 (ICYMIServerRecommendationRow)
+// Module 16520 (ICYMIServerRecommendationRow)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
@@ -10,8 +10,8 @@ import Text_Text from "Text/Text" /* 4556 */;
 import GuildIconDefault from "GuildIcon" /* 5584 */;
 import FastImageDefault from "FastImage" /* 5587 */;
 import FastestListDefault from "FastestList" /* 7055 */;
-import ClipViewDefault from "ClipView" /* 8813 */;
-import ICYMIShared from "ICYMIShared" /* 16491 */;
+import ClipViewDefault from "ClipView" /* 8818 */;
+import ICYMIShared from "ICYMIShared" /* 16494 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
@@ -42,7 +42,7 @@ function CutoutGuildBanner(guild) {
   obj = { style: tmp.bannerImage, children: null };
   const memo = noop.useMemo(() => GuildRecordUtils.fromClientDiscoverableGuild(guild), items1);
   obj = { cutouts: null, children: null };
-  const size = { shape: guild(8813).CutoutShape.RoundedRect, x: 8, y: 46, width: 56, height: 56, cornerRadius: 20 };
+  const size = { shape: guild(8818).CutoutShape.RoundedRect, x: 8, y: 46, width: 56, height: 56, cornerRadius: 20 };
   const items2 = [size];
   obj.cutouts = items2;
   if (null != guild.banner) {
@@ -275,7 +275,7 @@ const Constants = fn(1074);
 ({ AnalyticsObjects: c10, AnalyticsPages: closure_11, AnalyticsSections: closure_12, GuildFeatures: map1 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15, Fragment: closure_16 } = jsxProd);
-const createICYMIStyles = fn(16452);
+const createICYMIStyles = fn(16455);
 let closure_17 = createICYMIStyles.createICYMIStyles((marginHorizontal) => {
   let obj = { container: null, title: null, subtitle: null, featuredServerInnerContainer: null, buttonContainer: null, featuredServerTitle: null, guildIcon: null, bannerImage: null, emptyBanner: null, featuredServerContainer: null };
   obj = { marginVertical: nativeDefault.space.PX_24 };

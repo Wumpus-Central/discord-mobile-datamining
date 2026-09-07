@@ -1,9 +1,9 @@
-// === Module 11440: useGiftCodeErrorMessage ===
+// === Module 11445: useGiftCodeErrorMessage ===
 
-// Module 11440 (useGiftCodeErrorMessage)
+// Module 11445 (useGiftCodeErrorMessage)
 import _slicedToArray from "module_32" /* 32 */;
 import CollectiblesPurchaseStore from "CollectiblesPurchaseStore" /* 7558 */;
-import GiftCodeStore from "GiftCodeStore" /* 11429 */;
+import GiftCodeStore from "GiftCodeStore" /* 11434 */;
 
 const require = fn;
 const size = fn(2);

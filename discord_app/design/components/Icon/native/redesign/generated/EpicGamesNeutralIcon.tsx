@@ -1,9 +1,9 @@
-// === Module 8696: EpicGamesNeutralIcon ===
+// === Module 8701: EpicGamesNeutralIcon ===
 
-// Module 8696 (EpicGamesNeutralIcon)
+// Module 8701 (EpicGamesNeutralIcon)
 import nativeDefault from "native" /* 576 */;
 import BaseIconImage from "BaseIconImage" /* 4261 */;
-import _mod8697 from "module_8697" /* 8697 */;
+import _mod8702 from "module_8702" /* 8702 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export const EpicGamesNeutralIcon = function EpicGamesNeutralIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod8697, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod8702, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 };

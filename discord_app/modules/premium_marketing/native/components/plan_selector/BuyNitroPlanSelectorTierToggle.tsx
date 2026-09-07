@@ -1,6 +1,6 @@
-// === Module 13406: BuyNitroPlanSelectorTierToggle ===
+// === Module 13410: BuyNitroPlanSelectorTierToggle ===
 
-// Module 13406 (BuyNitroPlanSelectorTierToggle)
+// Module 13410 (BuyNitroPlanSelectorTierToggle)
 import nativeDefault from "native" /* 576 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4296 */;
 import HapticUtils from "HapticUtils" /* 4528 */;
@@ -185,7 +185,7 @@ export default function BuyNitroPlanSelectorTierToggle(selectedTier) {
     const obj1 = { top: null, height: null };
   }
   const items6 = [tmp23, ];
-  const NITRO_PLAN_TIERS = tmp3(13358).NITRO_PLAN_TIERS;
+  const NITRO_PLAN_TIERS = tmp3(13362).NITRO_PLAN_TIERS;
   items6[1] = NITRO_PLAN_TIERS.map((item) => {
     closure_0 = item;
     let str = "text-muted";

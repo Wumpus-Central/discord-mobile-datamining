@@ -1,7 +1,7 @@
-// === Module 9521: ThermalUtils ===
+// === Module 9526: ThermalUtils ===
 
-// Module 9521 (ThermalUtils)
-import NativeDeviceThermalStateModuleDefault from "NativeDeviceThermalStateModule" /* 9522 */;
+// Module 9526 (ThermalUtils)
+import NativeDeviceThermalStateModuleDefault from "NativeDeviceThermalStateModule" /* 9527 */;
 import get_ActivityIndicator from "module_17" /* 17 */;
 import PlatformUtils from "PlatformUtils" /* 1115 */;
 import module_560 from "module_560" /* 560 */;

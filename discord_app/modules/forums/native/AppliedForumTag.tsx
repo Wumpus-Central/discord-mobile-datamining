@@ -1,13 +1,13 @@
-// === Module 10627: AppliedForumTag ===
+// === Module 10632: AppliedForumTag ===
 
-// Module 10627 (AppliedForumTag)
+// Module 10632 (AppliedForumTag)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1396 */;
 import Text_Text from "Text/Text" /* 4556 */;
 import EmojiDefault from "Emoji" /* 7130 */;
-import ForumTagContextMenuDefault from "ForumTagContextMenu" /* 10628 */;
+import ForumTagContextMenuDefault from "ForumTagContextMenu" /* 10633 */;
 import noop from "module_19" /* 19 */;
 import EmojiStore from "EmojiStore" /* 5459 */;
 

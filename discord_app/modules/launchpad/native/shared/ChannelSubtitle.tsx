@@ -1,10 +1,10 @@
-// === Module 16988: ChannelSubtitle ===
+// === Module 16991: ChannelSubtitle ===
 
-// Module 16988 (ChannelSubtitle)
+// Module 16991 (ChannelSubtitle)
 import Text_Text from "Text/Text" /* 4556 */;
-import MessagePreviewMarkup from "MessagePreviewMarkup" /* 10116 */;
-import getChannelSubtitleData from "getChannelSubtitleData" /* 16226 */;
-import getLayoutStylesDefault from "getLayoutStyles" /* 16977 */;
+import MessagePreviewMarkup from "MessagePreviewMarkup" /* 10121 */;
+import getChannelSubtitleData from "getChannelSubtitleData" /* 16229 */;
+import getLayoutStylesDefault from "getLayoutStyles" /* 16980 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -36,7 +36,7 @@ function ChannelSubtitle(arg0) {
     return jsx(Text_Text.Text, { content: channelSubtitleData.subtitle, muted: null, channelId: null, guildId: null, disableAnimatedEmoji: null, color: null });
   }
 }
-const SUBTITLE_OPACITY_NORMAL = fn(10118).SUBTITLE_OPACITY_NORMAL;
+const SUBTITLE_OPACITY_NORMAL = fn(10123).SUBTITLE_OPACITY_NORMAL;
 const jsx = fn(21).jsx;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/launchpad/native/shared/ChannelSubtitle.tsx");

@@ -1,12 +1,12 @@
-// === Module 13458: RewardGrantNotice ===
+// === Module 13462: RewardGrantNotice ===
 
-// Module 13458 (RewardGrantNotice)
+// Module 13462 (RewardGrantNotice)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import Text_Text from "Text/Text" /* 4556 */;
 import CheckmarkSmallIcon from "CheckmarkSmallIcon" /* 7133 */;
-import BalanceWidgetPill from "BalanceWidgetPill" /* 11090 */;
-import PremiumReferralIncentivesExperiment from "PremiumReferralIncentivesExperiment" /* 13446 */;
+import BalanceWidgetPill from "BalanceWidgetPill" /* 11095 */;
+import PremiumReferralIncentivesExperiment from "PremiumReferralIncentivesExperiment" /* 13450 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -39,7 +39,7 @@ function DiscountGrantNotice(nRewardsGranted) {
   return React5(View, obj);
 }
 const View = fn(17).View;
-const Constants = fn(13444);
+const Constants = fn(13448);
 ({ REFERRAL_INCENTIVE_DISCOUNT_PERCENTAGE: closure_4, REFERRAL_INCENTIVE_ORBS_PER_CONVERSION: hasOwnProperty } = Constants);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);

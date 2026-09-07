@@ -1,6 +1,6 @@
-// === Module 11098: BalanceCounter ===
+// === Module 11103: BalanceCounter ===
 
-// Module 11098 (BalanceCounter)
+// Module 11103 (BalanceCounter)
 import AccessibilityPreferencesContext from "AccessibilityPreferencesContext" /* 4279 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4296 */;
 import Text_Text from "Text/Text" /* 4556 */;

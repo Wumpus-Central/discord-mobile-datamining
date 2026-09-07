@@ -1,6 +1,6 @@
-// === Module 15787: UserSettingsDesignSystemCoachmark ===
+// === Module 15790: UserSettingsDesignSystemCoachmark ===
 
-// Module 15787 (UserSettingsDesignSystemCoachmark)
+// Module 15790 (UserSettingsDesignSystemCoachmark)
 import _modDef5754 from "module_5754" /* 5754 */;
 import common_SafeAreaView from "common/SafeAreaView" /* 7123 */;
 import LayerScope from "LayerScope" /* 7156 */;

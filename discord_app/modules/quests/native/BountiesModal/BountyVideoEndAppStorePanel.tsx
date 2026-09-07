@@ -1,6 +1,6 @@
-// === Module 15053: BountyVideoEndAppStorePanel ===
+// === Module 15056: BountyVideoEndAppStorePanel ===
 
-// Module 15053 (BountyVideoEndAppStorePanel)
+// Module 15056 (BountyVideoEndAppStorePanel)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 576 */;
 import openURLDefault from "openURL" /* 4249 */;
@@ -10,7 +10,7 @@ import timing from "timing" /* 4561 */;
 import timingPresets from "timingPresets" /* 4564 */;
 import LegacyBaseButton from "LegacyBaseButton" /* 6655 */;
 import AnalyticsActions from "AnalyticsActions" /* 7718 */;
-import AppStoreOverlayContent from "AppStoreOverlayContent" /* 11498 */;
+import AppStoreOverlayContent from "AppStoreOverlayContent" /* 11503 */;
 import noop from "module_19" /* 19 */;
 import ThemeStore from "ThemeStore" /* 1183 */;
 
@@ -145,7 +145,7 @@ createStyles.panel = createStyles;
 createStyles.headerBar = { zIndex: 1 };
 createStyles.headerGestureTarget = { position: "absolute", top: 0, left: 0, right: 0, height: 48, zIndex: 2 };
 createStyles.scrollBody = { flex: 1, minHeight: 0 };
-createStyles.scrollContent = { paddingBottom: fn(11502).APP_STORE_OVERLAY_FOOTER_GRADIENT_HEIGHT };
+createStyles.scrollContent = { paddingBottom: fn(11507).APP_STORE_OVERLAY_FOOTER_GRADIENT_HEIGHT };
 let closure_9 = createStyles.createStyles(createStyles);
 const __initData = { code: "function BountyVideoEndAppStorePanelTsx1(){const{interpolate,revealProgress,sheetHeight,Extrapolation}=this.__closure;return{transform:[{translateY:interpolate(revealProgress.get(),[0,1],[sheetHeight,0],Extrapolation.CLAMP)}]};}" };
 let closure_11 = { code: "function BountyVideoEndAppStorePanelTsx2(event){const{revealProgress,DISMISS_PROGRESS_THRESHOLD,DISMISS_VELOCITY_THRESHOLD,runOnJS,handleDismiss,withTiming,timingStandard}=this.__closure;if(revealProgress.get()<DISMISS_PROGRESS_THRESHOLD||event.velocityY>DISMISS_VELOCITY_THRESHOLD){runOnJS(handleDismiss)();return;}revealProgress.set(withTiming(1,timingStandard));}" };

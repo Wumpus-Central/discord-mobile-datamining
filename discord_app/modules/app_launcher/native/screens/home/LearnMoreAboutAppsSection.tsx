@@ -1,14 +1,14 @@
-// === Module 12095: LearnMoreAboutAppsSection ===
+// === Module 12099: LearnMoreAboutAppsSection ===
 
-// Module 12095 (LearnMoreAboutAppsSection)
+// Module 12099 (LearnMoreAboutAppsSection)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2024 */;
 import LinkingDefault from "Linking" /* 4255 */;
 import Text_Text from "Text/Text" /* 4556 */;
 import Pressables from "Pressables" /* 5123 */;
-import AppLauncherTypes from "AppLauncherTypes" /* 9409 */;
-import TrackSectionHeaderDefault from "TrackSectionHeader" /* 12096 */;
+import AppLauncherTypes from "AppLauncherTypes" /* 9414 */;
+import TrackSectionHeaderDefault from "TrackSectionHeader" /* 12100 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

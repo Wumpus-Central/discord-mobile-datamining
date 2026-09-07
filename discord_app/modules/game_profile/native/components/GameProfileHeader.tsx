@@ -1,12 +1,12 @@
-// === Module 8714: GameProfileHeader ===
+// === Module 8719: GameProfileHeader ===
 
-// Module 8714 (GameProfileHeader)
+// Module 8719 (GameProfileHeader)
 import nativeDefault from "native" /* 576 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4296 */;
 import Text_Text from "Text/Text" /* 4556 */;
 import LinearGradientDefault from "LinearGradient" /* 4987 */;
-import SKUUtils from "SKUUtils" /* 8715 */;
-import GameProfileRankPillDefault from "GameProfileRankPill" /* 8716 */;
+import SKUUtils from "SKUUtils" /* 8720 */;
+import GameProfileRankPillDefault from "GameProfileRankPill" /* 8721 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 

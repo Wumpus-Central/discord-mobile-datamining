@@ -1,6 +1,6 @@
-// === Module 17901: receiveNotification ===
+// === Module 17904: receiveNotification ===
 
-// Module 17901 (receiveNotification)
+// Module 17904 (receiveNotification)
 import LoggerDefault from "Logger" /* 3 */;
 import AppStartPerformanceDefault from "AppStartPerformance" /* 10 */;
 import initializeDefault from "initialize" /* 504 */;
@@ -11,8 +11,8 @@ import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
 import ToastActionCreatorsDefault from "ToastActionCreators" /* 4259 */;
 import parseURLDefault from "parseURL" /* 4540 */;
 import ICYMIActionCreatorsDefault from "ICYMIActionCreators" /* 8351 */;
-import MessageManagerDefault from "MessageManager" /* 9941 */;
-import _modDef11253 from "module_11253" /* 11253 */;
+import MessageManagerDefault from "MessageManager" /* 9946 */;
+import _modDef11258 from "module_11258" /* 11258 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import GuildScheduledEventStore from "GuildScheduledEventStore" /* 7526 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
@@ -24,7 +24,7 @@ function onStageConnectionError() {
   const obj = { key: "STAGE_DISCOVERY_CONNECTION_ERROR_GENERIC", content: null, icon: null };
   const intl = util.intl;
   obj.content = intl.string(util.t.ah3RLk);
-  obj.icon = _modDef11253;
+  obj.icon = _modDef11258;
   obj.open(obj);
 }
 function waitForConnection() {
@@ -317,7 +317,7 @@ let closure_28 = async function _handleGuildEventNotification(arg0) {
                 const obj = { key: "VOICE_CONNECTION_ERROR_GENERIC", content: null, icon: null };
                 const intl = closure_1_0(1114).intl;
                 obj.content = intl.string(closure_1_0(1114).t.S69lJR);
-                obj.icon = closure_1_1(11253);
+                obj.icon = closure_1_1(11258);
                 obj.open(obj);
               })();
               c4 = 3;
@@ -816,7 +816,7 @@ function receiveNotification_(data) {
               tracking_type = data.type;
             }
             if (tmp8) {
-              let tmpResult = tmp(11627);
+              let tmpResult = tmp(11632);
               tmpResult.receivedNotification(payload.messageId, payload.channelId, tracking_type);
             }
             let tmp80Result = MessageManagerDefault;
@@ -1096,7 +1096,7 @@ function receiveNotification_(data) {
             if ("" !== data.deeplink) {
               let tmp19Result2 = tmp19(4540);
               let tmp19Result3Result = tmp19Result2(data.deeplink);
-              let tmp19Result3 = tmp19(13850);
+              let tmp19Result3 = tmp19(13853);
               obj8 = { payload: tmp19Result3Result.payload, waitForConnection: false, skipMessageFetch: flag };
               tmp19Result3(obj8);
             }
@@ -1325,7 +1325,7 @@ function receiveNotification_(data) {
             if ("" !== data.deeplink) {
               tmp19Result2 = tmp19(4540);
               tmp19Result3Result = tmp19Result2(data.deeplink);
-              tmp19Result3 = tmp19(13850);
+              tmp19Result3 = tmp19(13853);
               obj8 = { payload: tmp19Result3Result.payload, waitForConnection: false, skipMessageFetch: flag };
               tmp19Result3(obj8);
             }
@@ -1554,7 +1554,7 @@ function receiveNotification_(data) {
             if ("" !== data.deeplink) {
               tmp19Result2 = tmp19(4540);
               tmp19Result3Result = tmp19Result2(data.deeplink);
-              tmp19Result3 = tmp19(13850);
+              tmp19Result3 = tmp19(13853);
               obj8 = { payload: tmp19Result3Result.payload, waitForConnection: false, skipMessageFetch: flag };
               tmp19Result3(obj8);
             }
@@ -1783,7 +1783,7 @@ function receiveNotification_(data) {
             if ("" !== data.deeplink) {
               tmp19Result2 = tmp19(4540);
               tmp19Result3Result = tmp19Result2(data.deeplink);
-              tmp19Result3 = tmp19(13850);
+              tmp19Result3 = tmp19(13853);
               obj8 = { payload: tmp19Result3Result.payload, waitForConnection: false, skipMessageFetch: flag };
               tmp19Result3(obj8);
             }
@@ -2012,7 +2012,7 @@ function receiveNotification_(data) {
             if ("" !== data.deeplink) {
               tmp19Result2 = tmp19(4540);
               tmp19Result3Result = tmp19Result2(data.deeplink);
-              tmp19Result3 = tmp19(13850);
+              tmp19Result3 = tmp19(13853);
               obj8 = { payload: tmp19Result3Result.payload, waitForConnection: false, skipMessageFetch: flag };
               tmp19Result3(obj8);
             }
@@ -2241,7 +2241,7 @@ function receiveNotification_(data) {
             if ("" !== data.deeplink) {
               tmp19Result2 = tmp19(4540);
               tmp19Result3Result = tmp19Result2(data.deeplink);
-              tmp19Result3 = tmp19(13850);
+              tmp19Result3 = tmp19(13853);
               obj8 = { payload: tmp19Result3Result.payload, waitForConnection: false, skipMessageFetch: flag };
               tmp19Result3(obj8);
             }
@@ -2470,7 +2470,7 @@ function receiveNotification_(data) {
             if ("" !== data.deeplink) {
               tmp19Result2 = tmp19(4540);
               tmp19Result3Result = tmp19Result2(data.deeplink);
-              tmp19Result3 = tmp19(13850);
+              tmp19Result3 = tmp19(13853);
               obj8 = { payload: tmp19Result3Result.payload, waitForConnection: false, skipMessageFetch: flag };
               tmp19Result3(obj8);
             }
@@ -2699,7 +2699,7 @@ function receiveNotification_(data) {
             if ("" !== data.deeplink) {
               tmp19Result2 = tmp19(4540);
               tmp19Result3Result = tmp19Result2(data.deeplink);
-              tmp19Result3 = tmp19(13850);
+              tmp19Result3 = tmp19(13853);
               obj8 = { payload: tmp19Result3Result.payload, waitForConnection: false, skipMessageFetch: flag };
               tmp19Result3(obj8);
             }
@@ -2928,7 +2928,7 @@ function receiveNotification_(data) {
             if ("" !== data.deeplink) {
               tmp19Result2 = tmp19(4540);
               tmp19Result3Result = tmp19Result2(data.deeplink);
-              tmp19Result3 = tmp19(13850);
+              tmp19Result3 = tmp19(13853);
               obj8 = { payload: tmp19Result3Result.payload, waitForConnection: false, skipMessageFetch: flag };
               tmp19Result3(obj8);
             }
@@ -3157,7 +3157,7 @@ function receiveNotification_(data) {
             if ("" !== data.deeplink) {
               tmp19Result2 = tmp19(4540);
               tmp19Result3Result = tmp19Result2(data.deeplink);
-              tmp19Result3 = tmp19(13850);
+              tmp19Result3 = tmp19(13853);
               obj8 = { payload: tmp19Result3Result.payload, waitForConnection: false, skipMessageFetch: flag };
               tmp19Result3(obj8);
             }
@@ -3175,7 +3175,7 @@ const Constants = fn(1074);
 ({ AnalyticEvents: closure_11, ComponentActions: closure_12, RelationshipTypes: map1, Routes: closure_14 } = Constants);
 const StreamTypes = fn(4602).StreamTypes;
 let closure_16 = fn(1963).GuildScheduledEventEntityTypes;
-const constants = fn(12414).MultiAccountSwitchLocation;
+const constants = fn(12418).MultiAccountSwitchLocation;
 const logger = new LoggerDefault("receiveNotification");
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/push_notifications/native/receiveNotification.tsx");
@@ -3194,14 +3194,14 @@ export default function receiveNotification(getData, arg1) {
         if (data.receiving_user_id !== AuthenticationStore.getId()) {
           tmp7(7476);
           tmp7(5277);
-          tmp7(13629);
+          tmp7(13633);
           let receiving_user_id = data.receiving_user_id;
-          receiving_user_id = tmp7(12417).switchAccount(receiving_user_id, false, arg1 ? constants.PUSH_NOTIFICATION_INITIAL : constants.PUSH_NOTIFICATION);
+          receiving_user_id = tmp7(12421).switchAccount(receiving_user_id, false, arg1 ? constants.PUSH_NOTIFICATION_INITIAL : constants.PUSH_NOTIFICATION);
           receiving_user_id.then(() => {
             const Emitter = initializeDefault.Emitter;
             Emitter.batched(() => receiveNotification_(data));
           });
-          const tmp7Result2 = tmp7(12417);
+          const tmp7Result2 = tmp7(12421);
         }
       }
     }

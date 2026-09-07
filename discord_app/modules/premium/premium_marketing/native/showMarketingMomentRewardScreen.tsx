@@ -1,6 +1,6 @@
-// === Module 13401: showMarketingMomentRewardScreen ===
+// === Module 13405: showMarketingMomentRewardScreen ===
 
-// Module 13401 (showMarketingMomentRewardScreen)
+// Module 13405 (showMarketingMomentRewardScreen)
 import CollectiblesActionCreators from "CollectiblesActionCreators" /* 7541 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7542 */;

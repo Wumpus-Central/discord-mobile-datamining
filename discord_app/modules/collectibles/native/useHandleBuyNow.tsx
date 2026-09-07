@@ -1,6 +1,6 @@
-// === Module 13166: useHandleBuyNow ===
+// === Module 13170: useHandleBuyNow ===
 
-// Module 13166 (useHandleBuyNow)
+// Module 13170 (useHandleBuyNow)
 import LoggerDefault from "Logger" /* 3 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
@@ -56,7 +56,7 @@ function useHandleBuyNow(product) {
           closure_128_5(false);
           obj = v1(4527);
           obj.hideAllActionSheets();
-          obj1 = v1(11077);
+          obj1 = v1(11082);
           const obj3 = { product: closure_128_0, useCategoryImage: true, stageCollectibleChangeForEditProfile: closure_128_3 };
           obj1.open(obj3);
           dependencyMap = 3;

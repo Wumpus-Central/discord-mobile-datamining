@@ -1,8 +1,8 @@
-// === Module 13266: PrivateChannelHeader ===
+// === Module 13270: PrivateChannelHeader ===
 
-// Module 13266 (PrivateChannelHeader)
+// Module 13270 (PrivateChannelHeader)
 import nativeDefault from "native" /* 576 */;
-import ChannelHeader from "ChannelHeader" /* 13263 */;
+import ChannelHeader from "ChannelHeader" /* 13267 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 import PresenceStore from "PresenceStore" /* 4600 */;
@@ -40,7 +40,7 @@ function GroupDmMemberCount(channel) {
     }, 0);
   });
   const obj = channel(504);
-  return channel(13269).renderMemberCountText(stateFromStores, channel.recipients.length);
+  return channel(13273).renderMemberCountText(stateFromStores, channel.recipients.length);
 }
 const View = fn(17).View;
 const Constants = fn(1074);

@@ -1,6 +1,6 @@
-// === Module 9922: RequestToSpeakParticipantList ===
+// === Module 9927: RequestToSpeakParticipantList ===
 
-// Module 9922 (RequestToSpeakParticipantList)
+// Module 9927 (RequestToSpeakParticipantList)
 import nativeDefault from "native" /* 576 */;
 import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8179 */;
 import StageChannelActionCreators from "StageChannelActionCreators" /* 8398 */;
@@ -102,7 +102,7 @@ export default function RequestToSpeakParticipantList(channel) {
   if (0 === sortedRequestToSpeakParticipants.length) {
     obj = { style: tmp.container, children: null };
     obj = { style: tmp.emptyContainer, children: null };
-    const obj1 = { source: require("module_9926") };
+    const obj1 = { source: require("module_9931") };
     const items = [closure_4(require("FastImage"), obj1), , ];
     const obj2 = { style: tmp.emptyTitle, accessibilityRole: "header", variant: "heading-lg/extrabold", color: "mobile-text-heading-primary", children: null };
     const intl = tmp2(tmp3[13]).intl;

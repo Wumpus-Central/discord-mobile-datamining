@@ -1,6 +1,6 @@
-// === Module 10894: UserProfileVoiceActivityIcon ===
+// === Module 10899: UserProfileVoiceActivityIcon ===
 
-// Module 10894 (UserProfileVoiceActivityIcon)
+// Module 10899 (UserProfileVoiceActivityIcon)
 import isRoleRequiredDefault from "isRoleRequired" /* 5062 */;
 import noop from "module_19" /* 19 */;
 import PermissionStore from "PermissionStore" /* 4199 */;

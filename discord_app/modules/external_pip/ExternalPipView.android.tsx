@@ -1,8 +1,8 @@
-// === Module 17000: ExternalPipView ===
+// === Module 17003: ExternalPipView ===
 
-// Module 17000 (ExternalPipView)
-import ExternalPipDefault from "ExternalPip" /* 9610 */;
-import ExternalPipViewVideoDefault from "ExternalPipViewVideo" /* 17003 */;
+// Module 17003 (ExternalPipView)
+import ExternalPipDefault from "ExternalPip" /* 9615 */;
+import ExternalPipViewVideoDefault from "ExternalPipViewVideo" /* 17006 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AppFreezeStore from "AppFreezeStore" /* 8290 */;

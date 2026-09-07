@@ -1,6 +1,6 @@
-// === Module 8907: PressableScale ===
+// === Module 8912: PressableScale ===
 
-// Module 8907 (PressableScale)
+// Module 8912 (PressableScale)
 import ReanimatedRexport2 from "ReanimatedRexport" /* 4296 */;
 import ButtonHooks from "ButtonHooks" /* 4981 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;

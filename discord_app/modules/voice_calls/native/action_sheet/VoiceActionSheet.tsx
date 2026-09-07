@@ -1,16 +1,16 @@
-// === Module 13765: VoiceActionSheet ===
+// === Module 13768: VoiceActionSheet ===
 
-// Module 13765 (VoiceActionSheet)
+// Module 13768 (VoiceActionSheet)
 import NavigationRouteUtils from "NavigationRouteUtils" /* 4417 */;
 import VisualEffectViewDefault from "VisualEffectView" /* 4965 */;
 import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7162 */;
 import AnalyticsLocationDefault from "AnalyticsLocation" /* 7182 */;
-import VoiceActionSheetManagerDefault from "VoiceActionSheetManager" /* 13766 */;
-import NUFChannelsManagerDefault from "NUFChannelsManager" /* 13767 */;
-import NUFVoiceChannelsTemplateDefault from "NUFVoiceChannelsTemplate" /* 13777 */;
-import GuildEventVoiceBannerDefault from "GuildEventVoiceBanner" /* 13780 */;
-import VoiceEmptyStateDefault from "VoiceEmptyState" /* 13781 */;
-import VoiceMemberListDefault from "VoiceMemberList" /* 13784 */;
+import VoiceActionSheetManagerDefault from "VoiceActionSheetManager" /* 13769 */;
+import NUFChannelsManagerDefault from "NUFChannelsManager" /* 13770 */;
+import NUFVoiceChannelsTemplateDefault from "NUFVoiceChannelsTemplate" /* 13780 */;
+import GuildEventVoiceBannerDefault from "GuildEventVoiceBanner" /* 13783 */;
+import VoiceEmptyStateDefault from "VoiceEmptyState" /* 13784 */;
+import VoiceMemberListDefault from "VoiceMemberList" /* 13787 */;
 import noop from "module_19" /* 19 */;
 import SortedVoiceStateStore from "SortedVoiceStateStore" /* 4584 */;
 

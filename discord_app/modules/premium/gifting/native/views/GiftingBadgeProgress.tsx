@@ -1,11 +1,11 @@
-// === Module 11031: GiftingBadgeProgress ===
+// === Module 11036: GiftingBadgeProgress ===
 
-// Module 11031 (GiftingBadgeProgress)
+// Module 11036 (GiftingBadgeProgress)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import _modDef2492 from "module_2492" /* 2492 */;
 import Text_Text from "Text/Text" /* 4556 */;
-import GiftingBadgeIconDefault from "GiftingBadgeIcon" /* 10749 */;
+import GiftingBadgeIconDefault from "GiftingBadgeIcon" /* 10754 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

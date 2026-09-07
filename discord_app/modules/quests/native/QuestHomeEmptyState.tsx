@@ -1,6 +1,6 @@
-// === Module 15063: QuestHomeEmptyState ===
+// === Module 15066: QuestHomeEmptyState ===
 
-// Module 15063 (QuestHomeEmptyState)
+// Module 15066 (QuestHomeEmptyState)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import PlatformUtils from "PlatformUtils" /* 1115 */;
@@ -9,7 +9,7 @@ import useChatLayoutDefault from "useChatLayout" /* 4420 */;
 import Text_Text from "Text/Text" /* 4556 */;
 import LinearGradientDefault from "LinearGradient" /* 4987 */;
 import common_SafeAreaView from "common/SafeAreaView" /* 7123 */;
-import _modDef15064 from "module_15064" /* 15064 */;
+import _modDef15067 from "module_15067" /* 15067 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -64,7 +64,7 @@ export default function QuestHomeEmptyState(subtitle) {
   let tmp11Result = null;
   if (!useChatLayoutDefault().isChatLockedOpen) {
     const obj6 = { children: null };
-    const obj7 = { style: tmp5.emptyImage, source: _modDef15064, resizeMode: "cover" };
+    const obj7 = { style: tmp5.emptyImage, source: _modDef15067, resizeMode: "cover" };
     const items2 = [timestampProducer(React4, obj7), ];
     const obj8 = { style: tmp5.gradient, end: null, start: null, colors: null };
     ({ END: obj12.end, START: obj12.start } = VerticalGradient);

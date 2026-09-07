@@ -1,6 +1,6 @@
-// === Module 13290: ForLaterIntro ===
+// === Module 13294: ForLaterIntro ===
 
-// Module 13290 (ForLaterIntro)
+// Module 13294 (ForLaterIntro)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import ClockIcon from "ClockIcon" /* 4523 */;
@@ -8,8 +8,8 @@ import Text_Text from "Text/Text" /* 4556 */;
 import ActionSheetConstants from "ActionSheetConstants" /* 7151 */;
 import ChevronSmallRightIcon from "ChevronSmallRightIcon" /* 7209 */;
 import SavedMessagesTypes from "SavedMessagesTypes" /* 7860 */;
-import BookmarkIcon from "BookmarkIcon" /* 11707 */;
-import _modDef13293 from "module_13293" /* 13293 */;
+import BookmarkIcon from "BookmarkIcon" /* 11712 */;
+import _modDef13297 from "module_13297" /* 13297 */;
 import get_ActivityIndicator from "module_17" /* 17 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createStyles from "createStyles" /* 4560 */;
@@ -20,7 +20,7 @@ function IntroDemo(isReminder) {
   const tmp = closure_8();
   let obj = { style: tmp.demo, accessibilityElementsHidden: true, importantForAccessibility: "no-hide-descendants", children: null };
   obj = { style: tmp.messages, children: null };
-  obj = { source: { uri: _modDef13293 }, style: tmp.avatar };
+  obj = { source: { uri: _modDef13297 }, style: tmp.avatar };
   const items = [timestampProducer(React3, obj), ];
   const obj2 = { style: tmp.messageLines, children: null };
   const obj3 = { variant: "text-sm/semibold", color: "text-default", children: null };
@@ -123,7 +123,7 @@ export default function ForLaterIntro(type) {
   const tmp4 = type.type === SavedMessagesTypes.SavedMessageSortTypes.REMINDER;
   let obj = { style: tmp.scrollView, contentContainerStyle: tmp.pageContainer, children: null };
   obj = { style: tmp.container, children: null };
-  obj = { source: importDefault(tmp4 ? 13291 : 13292), style: tmp.upsellImage };
+  obj = { source: importDefault(tmp4 ? 13295 : 13296), style: tmp.upsellImage };
   const items = [timestampProducer(React3, obj), , ];
   const obj1 = { style: tmp.textContainer, children: null };
   const obj2 = { variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", style: tmp.text, children: null };

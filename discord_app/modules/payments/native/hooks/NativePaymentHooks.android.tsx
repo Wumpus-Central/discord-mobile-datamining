@@ -1,6 +1,6 @@
-// === Module 9366: NativePaymentHooks ===
+// === Module 9371: NativePaymentHooks ===
 
-// Module 9366 (NativePaymentHooks)
+// Module 9371 (NativePaymentHooks)
 import LoggerDefault from "Logger" /* 3 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
@@ -69,7 +69,7 @@ function useGoogleSkuIds(arg0, arg1) {
                       ref = 1;
                       v2 = 2;
                       c5 = 1;
-                      const obj1 = { value: closure_2_0(9367).loadInAppSkus(differenceResult), done: false };
+                      const obj1 = { value: closure_2_0(9372).loadInAppSkus(differenceResult), done: false };
                       return obj1;
                     }
                   }

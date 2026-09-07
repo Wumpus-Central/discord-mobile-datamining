@@ -1,19 +1,19 @@
-// === Module 9543: confirmExternalAppLaunchAlert ===
+// === Module 9548: confirmExternalAppLaunchAlert ===
 
-// Module 9543 (confirmExternalAppLaunchAlert)
+// Module 9548 (confirmExternalAppLaunchAlert)
 import util from "util" /* 1114 */;
 import LinkingDefault from "Linking" /* 4255 */;
 import Text_Text from "Text/Text" /* 4556 */;
 import AlertActionCreatorsDefault from "AlertActionCreators" /* 4904 */;
 import components_Button_Button from "components/Button/Button" /* 4975 */;
-import _modDef9544 from "module_9544" /* 9544 */;
+import _modDef9549 from "module_9549" /* 9549 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 function ConfirmActivityGateContent(activityName) {
   const tmp = closure_8();
   let obj = { style: tmp.alertContainer, children: null };
-  obj = { source: _modDef9544, style: tmp.announcementBirb };
+  obj = { source: _modDef9549, style: tmp.announcementBirb };
   const items = [timestampProducer(React3, obj), , , ];
   obj = { style: tmp.alertEyebrowText, variant: "eyebrow", children: null };
   const intl = util.intl;

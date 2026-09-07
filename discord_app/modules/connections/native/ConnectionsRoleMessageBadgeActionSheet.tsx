@@ -1,6 +1,6 @@
-// === Module 11819: ConnectionsRoleMessageBadgeActionSheet ===
+// === Module 11824: ConnectionsRoleMessageBadgeActionSheet ===
 
-// Module 11819 (ConnectionsRoleMessageBadgeActionSheet)
+// Module 11824 (ConnectionsRoleMessageBadgeActionSheet)
 import _modDef12 from "module_12" /* 12 */;
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
@@ -17,9 +17,9 @@ import PlatformsDefault from "Platforms" /* 5283 */;
 import ConnectionsUtils from "ConnectionsUtils" /* 5407 */;
 import GuildActionCreatorsDefault from "GuildActionCreators" /* 5520 */;
 import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8179 */;
-import BotTagDefault from "BotTag" /* 9438 */;
-import OfficialConnectionIconDefault from "OfficialConnectionIcon" /* 11566 */;
-import GuildRoleConnectionsModalActionCreators from "GuildRoleConnectionsModalActionCreators" /* 11569 */;
+import BotTagDefault from "BotTag" /* 9443 */;
+import OfficialConnectionIconDefault from "OfficialConnectionIcon" /* 11571 */;
+import GuildRoleConnectionsModalActionCreators from "GuildRoleConnectionsModalActionCreators" /* 11574 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import UserRecord from "UserRecord" /* 1385 */;
@@ -27,7 +27,7 @@ import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import GuildMemberStore from "GuildMemberStore" /* 2021 */;
 import GuildRoleStore from "GuildRoleStore" /* 2015 */;
 import GuildStore from "GuildStore" /* 1979 */;
-import GuildRoleConnectionEligibilityStore from "GuildRoleConnectionEligibilityStore" /* 11820 */;
+import GuildRoleConnectionEligibilityStore from "GuildRoleConnectionEligibilityStore" /* 11825 */;
 
 require = fn;
 function PopoutCheck(arg0) {

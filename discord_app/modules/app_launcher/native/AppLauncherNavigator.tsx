@@ -1,14 +1,14 @@
-// === Module 12082: AppLauncherNavigator ===
+// === Module 12086: AppLauncherNavigator ===
 
-// Module 12082 (AppLauncherNavigator)
+// Module 12086 (AppLauncherNavigator)
 import nativeDefault from "native" /* 576 */;
 import AppAnalyticsUtils from "AppAnalyticsUtils" /* 4740 */;
 import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7162 */;
 import AnalyticsLocationDefault from "AnalyticsLocation" /* 7182 */;
-import AppLauncherHomeScreenDefault from "AppLauncherHomeScreen" /* 12083 */;
-import AppLauncherApplicationViewScreenDefault from "AppLauncherApplicationViewScreen" /* 12127 */;
-import AppLauncherCommandViewScreenDefault from "AppLauncherCommandViewScreen" /* 12153 */;
-import AppLauncherViewAllScreenDefault from "AppLauncherViewAllScreen" /* 12195 */;
+import AppLauncherHomeScreenDefault from "AppLauncherHomeScreen" /* 12087 */;
+import AppLauncherApplicationViewScreenDefault from "AppLauncherApplicationViewScreen" /* 12131 */;
+import AppLauncherCommandViewScreenDefault from "AppLauncherCommandViewScreen" /* 12157 */;
+import AppLauncherViewAllScreenDefault from "AppLauncherViewAllScreen" /* 12199 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -112,5 +112,5 @@ export default noop.memo(function AppLauncherNavigator(arg0) {
     const obj15 = { customId: null, referrerId: null };
   }
   const tmp8Result = closure_8(entrypoint(1484).NavigationIndependentTree, obj13);
-  return closure_8(entrypoint(11215).AppLauncherContext.Provider, { value: { bottomSheetExpandReasonRef, bottomSheetIndex, bottomSheetPosition, chatInputRef, entrypoint, entrypointParams: tmp20, keyboardCloseReasonRef, onActivityItemSelected, width }, children: closure_8(entrypoint(1484).NavigationIndependentTree, obj13) });
+  return closure_8(entrypoint(11220).AppLauncherContext.Provider, { value: { bottomSheetExpandReasonRef, bottomSheetIndex, bottomSheetPosition, chatInputRef, entrypoint, entrypointParams: tmp20, keyboardCloseReasonRef, onActivityItemSelected, width }, children: closure_8(entrypoint(1484).NavigationIndependentTree, obj13) });
 });

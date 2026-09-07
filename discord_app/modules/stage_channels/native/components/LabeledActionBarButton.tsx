@@ -1,6 +1,6 @@
-// === Module 10010: LabeledActionBarButton ===
+// === Module 10015: LabeledActionBarButton ===
 
-// Module 10010 (LabeledActionBarButton)
+// Module 10015 (LabeledActionBarButton)
 import nativeDefault from "native" /* 576 */;
 import native from "native" /* 1178 */;
 import Pressables from "Pressables" /* 5123 */;

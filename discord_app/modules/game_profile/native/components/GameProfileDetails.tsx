@@ -1,13 +1,13 @@
-// === Module 8877: GameProfileDetails ===
+// === Module 8882: GameProfileDetails ===
 
-// Module 8877 (GameProfileDetails)
+// Module 8882 (GameProfileDetails)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import Server from "Server" /* 1894 */;
 import DateUtilsAll from "DateUtils" /* 4242 */;
 import LinkingDefault from "Linking" /* 4255 */;
 import Text_Text from "Text/Text" /* 4556 */;
-import SKUUtils from "SKUUtils" /* 8715 */;
+import SKUUtils from "SKUUtils" /* 8720 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -133,7 +133,7 @@ export default function GameProfileDetails(game) {
               if (obj != null) {
                 const websites = obj.websites;
                 if (websites != null) {
-                  const mapped3 = websites.map((item) => trackAction(8885)(item, trackAction(576).colors.ICON_SUBTLE));
+                  const mapped3 = websites.map((item) => trackAction(8890)(item, trackAction(576).colors.ICON_SUBTLE));
                   found = mapped3.filter((item) => null != item);
                 }
               }
@@ -177,7 +177,7 @@ export default function GameProfileDetails(game) {
                 stringResult = intl8.string(util.t["UxAag+"]);
               }
               const obj4 = { label: stringResult, value: null };
-              const obj5 = { style: closure_2.platformsContainer, children: platforms.map((platform) => closure_1_8(game(8878).GameUpdatePlatformIcon, { platform, size: "md", color: trackAction(576).colors.ICON_SUBTLE }, platform)) };
+              const obj5 = { style: closure_2.platformsContainer, children: platforms.map((platform) => closure_1_8(game(8883).GameUpdatePlatformIcon, { platform, size: "md", color: trackAction(576).colors.ICON_SUBTLE }, platform)) };
               obj4.value = React6(hasOwnProperty, obj5);
               items.push(obj4);
             }

@@ -1,6 +1,6 @@
-// === Module 17750: useRoleSubscriptionEmojis ===
+// === Module 17753: useRoleSubscriptionEmojis ===
 
-// Module 17750 (useRoleSubscriptionEmojis)
+// Module 17753 (useRoleSubscriptionEmojis)
 import noop from "module_19" /* 19 */;
 import EmojiStore from "EmojiStore" /* 5459 */;
 

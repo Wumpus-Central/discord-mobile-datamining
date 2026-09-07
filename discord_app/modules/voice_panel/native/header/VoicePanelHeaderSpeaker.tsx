@@ -1,27 +1,27 @@
-// === Module 17118: VoicePanelHeaderSpeaker ===
+// === Module 17121: VoicePanelHeaderSpeaker ===
 
-// Module 17118 (VoicePanelHeaderSpeaker)
+// Module 17121 (VoicePanelHeaderSpeaker)
 import util from "util" /* 1114 */;
 import PlatformUtils from "PlatformUtils" /* 1115 */;
 import dismissible_content from "dismissible_content" /* 1943 */;
 import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 4380 */;
 import NativeViewDefault from "NativeView" /* 5589 */;
-import showAudioOutputSelector from "showAudioOutputSelector" /* 9114 */;
-import getConsoleIconDefault from "getConsoleIcon" /* 9463 */;
-import VoicePanelIconButtonDefault from "VoicePanelIconButton" /* 17035 */;
-import useSpeakerTooltipsDefault from "useSpeakerTooltips" /* 17122 */;
+import showAudioOutputSelector from "showAudioOutputSelector" /* 9119 */;
+import getConsoleIconDefault from "getConsoleIcon" /* 9468 */;
+import VoicePanelIconButtonDefault from "VoicePanelIconButton" /* 17038 */;
+import useSpeakerTooltipsDefault from "useSpeakerTooltips" /* 17125 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 import GameConsoleStore from "GameConsoleStore" /* 4577 */;
-import StageChannelAudioStore from "StageChannelAudioStore" /* 17120 */;
-import AudioRouteStore from "AudioRouteStore" /* 9083 */;
+import StageChannelAudioStore from "StageChannelAudioStore" /* 17123 */;
+import AudioRouteStore from "AudioRouteStore" /* 9088 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 import SessionsStore from "SessionsStore" /* 4578 */;
 
 require = fn;
 let closure_3 = ["ref"];
 const NativeModules = fn(17).NativeModules;
-const setVoiceUpsellDismissed = fn(17119).setVoiceUpsellDismissed;
+const setVoiceUpsellDismissed = fn(17122).setVoiceUpsellDismissed;
 const PlatformTypes = fn(1074).PlatformTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_14, Fragment: closure_15, jsxs: closure_16 } = jsxProd);
@@ -219,7 +219,7 @@ export default noop.memo(function VoicePanelHeaderSpeaker(isConnectedToVoiceChan
     function renderButton(arg0) {
       let tmp = arg0;
       if (arg0 == null) {
-        let obj = { onPress, ref: "a" };
+        let obj = { onPress, ref: "Array" };
         tmp = obj;
       }
       obj = { targetRef: ref, canShowTooltip: null };

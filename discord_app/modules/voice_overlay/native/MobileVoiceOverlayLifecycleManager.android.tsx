@@ -1,13 +1,13 @@
-// === Module 14528: MobileVoiceOverlayLifecycleManager ===
+// === Module 14531: MobileVoiceOverlayLifecycleManager ===
 
-// Module 14528 (MobileVoiceOverlayLifecycleManager)
+// Module 14531 (MobileVoiceOverlayLifecycleManager)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
 import useChannelName from "useChannelName" /* 4713 */;
 import AppAnalyticsUtils from "AppAnalyticsUtils" /* 4740 */;
 import AutocompleteUtilsDefault from "AutocompleteUtils" /* 5442 */;
 import ForegroundServiceManagerDefault from "ForegroundServiceManager" /* 7756 */;
-import MobileVoiceOverlayActionCreatorsDefault from "MobileVoiceOverlayActionCreators" /* 9991 */;
-import NativeMobileVoiceOverlayModuleDefault from "NativeMobileVoiceOverlayModule" /* 14535 */;
+import MobileVoiceOverlayActionCreatorsDefault from "MobileVoiceOverlayActionCreators" /* 9996 */;
+import NativeMobileVoiceOverlayModuleDefault from "NativeMobileVoiceOverlayModule" /* 14538 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 import GuildStore from "GuildStore" /* 1979 */;
 import MediaEngineStore from "MediaEngineStore" /* 1908 */;
@@ -17,22 +17,22 @@ import RelationshipStore from "RelationshipStore" /* 4209 */;
 import SpeakingStore from "SpeakingStore" /* 5419 */;
 import UserStore from "UserStore" /* 1371 */;
 import VoiceStateStore from "VoiceStateStore" /* 4579 */;
-import MobileVoiceOverlayStore from "MobileVoiceOverlayStore" /* 9980 */;
+import MobileVoiceOverlayStore from "MobileVoiceOverlayStore" /* 9985 */;
 import LifecycleManager from "LifecycleManager" /* 1898 */;
 
 require = fn;
 const GUILD_VOCAL_CHANNELS_KEY = fn(2012).GUILD_VOCAL_CHANNELS_KEY;
 const Constants = fn(1074);
 ({ AnalyticEvents: closure_14, Permissions: closure_15 } = Constants);
-fn(14529);
-fn(14530);
-fn(14531);
 fn(14532);
-fn(6992);
-fn(13787);
 fn(14533);
 fn(14534);
-const registerAsset = fn(8623);
+fn(14535);
+fn(6992);
+fn(13790);
+fn(14536);
+fn(14537);
+const registerAsset = fn(8628);
 let items = [VoiceStateStore, RTCConnectionStore, MediaEngineStore];
 const constants3 = { DISABLED: 0, [0]: "DISABLED", NOT_SHOWING: 1, [1]: "NOT_SHOWING", WAITING_FOR_SERVICE: 2, [2]: "WAITING_FOR_SERVICE", SHOWING: 3, [3]: "SHOWING" };
 let obj = { useSpeaker: null, mute: null, disconnectFromVoice: null, getInvite: null, switchChannels: null, openDiscord: null, inviteLinkCopied: null, channelSelect: null, closeWindow: null, searchChannels: null, noResults: null };

@@ -1,6 +1,6 @@
-// === Module 9946: useHasVideoPermission ===
+// === Module 9951: useHasVideoPermission ===
 
-// Module 9946 (useHasVideoPermission)
+// Module 9951 (useHasVideoPermission)
 import StreamPermissionUtils from "StreamPermissionUtils" /* 7726 */;
 import GuildStore from "GuildStore" /* 1979 */;
 import PermissionStore from "PermissionStore" /* 4199 */;

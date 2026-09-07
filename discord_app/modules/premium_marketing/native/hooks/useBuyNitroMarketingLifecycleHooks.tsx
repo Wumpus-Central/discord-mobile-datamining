@@ -1,11 +1,11 @@
-// === Module 13351: useBuyNitroMarketingLifecycleHooks ===
+// === Module 13355: useBuyNitroMarketingLifecycleHooks ===
 
-// Module 13351 (useBuyNitroMarketingLifecycleHooks)
+// Module 13355 (useBuyNitroMarketingLifecycleHooks)
 import nativeDefault from "native" /* 576 */;
 import dismissible_content from "dismissible_content" /* 1943 */;
 import DismissibleContentUtilsAll from "DismissibleContentUtils" /* 1945 */;
 import DismissibleContentUnsafeUtilsAll from "DismissibleContentUnsafeUtils" /* 4380 */;
-import useBuyNitroPurchaseLock from "useBuyNitroPurchaseLock" /* 13356 */;
+import useBuyNitroPurchaseLock from "useBuyNitroPurchaseLock" /* 13360 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -50,11 +50,11 @@ export const useBuyNitroMarketingLifecycleHooks = function useBuyNitroMarketingL
     BuyNitroPurchaseLock.end();
     let result = nativeStackNavigation(_navigator[11]).resetBuyNitroTrialAndPriceOverrides();
     return () => {
-      const BuyNitroPurchaseLock = nativeStackNavigation(13356).BuyNitroPurchaseLock;
+      const BuyNitroPurchaseLock = nativeStackNavigation(13360).BuyNitroPurchaseLock;
       BuyNitroPurchaseLock.end();
-      const BuyNitroPurchaseLock2 = nativeStackNavigation(13356).BuyNitroPurchaseLock;
+      const BuyNitroPurchaseLock2 = nativeStackNavigation(13360).BuyNitroPurchaseLock;
       const result = BuyNitroPurchaseLock2.setInitialLoadComplete(false);
-      const result1 = nativeStackNavigation(13357).resetBuyNitroTrialAndPriceOverrides();
+      const result1 = nativeStackNavigation(13361).resetBuyNitroTrialAndPriceOverrides();
     };
   }, []);
   const items1 = [initialLoadCompleted];

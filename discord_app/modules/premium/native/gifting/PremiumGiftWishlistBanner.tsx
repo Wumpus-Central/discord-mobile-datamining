@@ -1,10 +1,10 @@
-// === Module 10791: PremiumGiftWishlistBanner ===
+// === Module 10796: PremiumGiftWishlistBanner ===
 
-// Module 10791 (PremiumGiftWishlistBanner)
+// Module 10796 (PremiumGiftWishlistBanner)
 import nativeDefault from "native" /* 576 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
 import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8179 */;
-import WishlistBannerUtils from "WishlistBannerUtils" /* 10796 */;
+import WishlistBannerUtils from "WishlistBannerUtils" /* 10801 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 

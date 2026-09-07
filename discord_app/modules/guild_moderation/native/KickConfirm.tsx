@@ -1,6 +1,6 @@
-// === Module 11849: KickConfirm ===
+// === Module 11854: KickConfirm ===
 
-// Module 11849 (KickConfirm)
+// Module 11854 (KickConfirm)
 import nativeDefault from "native" /* 576 */;
 import GuildActionCreatorsDefault from "GuildActionCreators" /* 5520 */;
 import _slicedToArray from "module_32" /* 32 */;
@@ -60,7 +60,7 @@ export default noop.memo(function KickConfirm(arg0) {
       obj = { paddingHorizontal: require("native").space.PX_24, paddingBottom: insets.bottom };
       obj.contentContainerStyle = obj;
       obj1 = { style: tmp.iconLabelBlock, children: null };
-      obj2 = { style: tmp.iconStyles, source: require("module_11850"), resizeMode: "contain" };
+      obj2 = { style: tmp.iconStyles, source: require("module_11855"), resizeMode: "contain" };
       const items4 = [closure_10(ref, obj2), , ];
       const obj3 = { style: tmp.redText, variant: "text-md/semibold", children: null };
       const intl = require("util").intl;

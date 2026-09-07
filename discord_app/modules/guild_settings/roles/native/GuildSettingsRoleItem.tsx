@@ -1,6 +1,6 @@
-// === Module 17622: GuildSettingsRoleItem ===
+// === Module 17625: GuildSettingsRoleItem ===
 
-// Module 17622 (GuildSettingsRoleItem)
+// Module 17625 (GuildSettingsRoleItem)
 import nativeDefault from "native" /* 576 */;
 import GuildActionCreatorsDefault from "GuildActionCreators" /* 5520 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
@@ -138,7 +138,7 @@ export default noop.memo(function GuildSettingsRoleItem(guildId) {
                   } else if (closure_1_5) {
                     c1 = 1;
                     c2 = 1;
-                    let obj1 = { value: tmp2(11573).putRoleConnectionsConfigurations(guildId, tmp2.id, []), done: false };
+                    let obj1 = { value: tmp2(11578).putRoleConnectionsConfigurations(guildId, tmp2.id, []), done: false };
                     return obj1;
                   }
                 } else if (arg0 === 1) {
@@ -215,7 +215,7 @@ export default noop.memo(function GuildSettingsRoleItem(guildId) {
       }
       let tmp31Result = null;
       if (null != prop) {
-        const obj12 = { size: tmp5(onMoveUp[24]).Icon.Sizes.REFRESH_SMALL_16, source: require("module_10302"), "aria-label": null, style: null };
+        const obj12 = { size: tmp5(onMoveUp[24]).Icon.Sizes.REFRESH_SMALL_16, source: require("module_10307"), "aria-label": null, style: null };
         const intl6 = tmp5(onMoveUp[11]).intl;
         obj12["aria-label"] = intl6.string(tmp5(onMoveUp[11]).t.a2Ak8b);
         obj12.style = tmp4.sparkleIcon;

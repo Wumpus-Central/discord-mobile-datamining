@@ -1,6 +1,6 @@
-// === Module 9849: AppCrash ===
+// === Module 9854: AppCrash ===
 
-// Module 9849 (AppCrash)
+// Module 9854 (AppCrash)
 import shared from "shared" /* 4411 */;
 import _mod8233 from "module_8233" /* 8233 */;
 import noop from "module_19" /* 19 */;
@@ -14,13 +14,13 @@ const result = size.fileFinishedImporting("design/components/Illustration/native
 export const getAppCrashSource = function getAppCrashSource(theme) {
   const obj = {
     dark() {
-      return require("module_9850");
+      return require("module_9855");
     },
     darker() {
-      return require("module_9851");
+      return require("module_9856");
     },
     light() {
-      return require("module_9852");
+      return require("module_9857");
     }
   };
   return obj.getIllustrationSource(theme, obj);
@@ -28,13 +28,13 @@ export const getAppCrashSource = function getAppCrashSource(theme) {
 export const useAppCrashSource = function useAppCrashSource() {
   const obj = {
     dark() {
-      return require("module_9850");
+      return require("module_9855");
     },
     darker() {
-      return require("module_9851");
+      return require("module_9856");
     },
     light() {
-      return require("module_9852");
+      return require("module_9857");
     }
   };
   return _mod8233.getIllustrationSource(obj.useThemeContext().theme, obj);
@@ -42,13 +42,13 @@ export const useAppCrashSource = function useAppCrashSource() {
 export const AppCrash = function AppCrash(arg0) {
   let obj = {
     dark() {
-      return require("module_9850");
+      return require("module_9855");
     },
     darker() {
-      return require("module_9851");
+      return require("module_9856");
     },
     light() {
-      return require("module_9852");
+      return require("module_9857");
     }
   };
   obj = {};

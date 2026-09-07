@@ -1,6 +1,6 @@
-// === Module 14622: UserProfileUpsellCard ===
+// === Module 14625: UserProfileUpsellCard ===
 
-// Module 14622 (UserProfileUpsellCard)
+// Module 14625 (UserProfileUpsellCard)
 import nativeDefault from "native" /* 576 */;
 import ConstantsIOS from "ConstantsIOS" /* 1093 */;
 import LinearGradientDefault from "LinearGradient" /* 4987 */;
@@ -43,7 +43,7 @@ export default function UserProfileUpsellCard(headerText) {
   if (null != headerText) {
     obj = { style: tmp.titleContainer, children: null };
     const obj1 = { color: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY, size: "xs" };
-    const items3 = [closure_6(tmp3(8662).NitroWheelIcon, obj1), ];
+    const items3 = [closure_6(tmp3(8667).NitroWheelIcon, obj1), ];
     const obj2 = { variant: "heading-sm/bold", children: headerText };
     items3[1] = closure_6(tmp3(4556).Text, obj2);
     obj.children = items3;

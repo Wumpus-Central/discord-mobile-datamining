@@ -1,15 +1,15 @@
-// === Module 13912: ServerTagPreviewActionSheet ===
+// === Module 13915: ServerTagPreviewActionSheet ===
 
-// Module 13912 (ServerTagPreviewActionSheet)
+// Module 13915 (ServerTagPreviewActionSheet)
 import nativeDefault from "native" /* 576 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4527 */;
-import GuildProfileActionCreators from "GuildProfileActionCreators" /* 9188 */;
-import GuildSettingsServerTagPreviewDefault from "GuildSettingsServerTagPreview" /* 13913 */;
+import GuildProfileActionCreators from "GuildProfileActionCreators" /* 9193 */;
+import GuildSettingsServerTagPreviewDefault from "GuildSettingsServerTagPreview" /* 13916 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-const GuildProfileFetchStatus = fn(9065).GuildProfileFetchStatus;
+const GuildProfileFetchStatus = fn(9070).GuildProfileFetchStatus;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
 fn(4560);
@@ -22,7 +22,7 @@ const result = size.fileFinishedImporting("modules/guild_settings/native/ServerT
 
 export default function ServerTagPreviewActionSheet(guildId) {
   guildId = guildId.guildId;
-  let obj = guildId(9187);
+  let obj = guildId(9192);
   let guildProfile = obj.useGuildProfile(guildId);
   guildProfile = guildProfile.guildProfile;
   const items = [guildId];

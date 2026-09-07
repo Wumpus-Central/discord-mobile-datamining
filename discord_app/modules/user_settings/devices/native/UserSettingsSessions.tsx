@@ -1,12 +1,12 @@
-// === Module 14948: UserSettingsSessions ===
+// === Module 14951: UserSettingsSessions ===
 
-// Module 14948 (UserSettingsSessions)
+// Module 14951 (UserSettingsSessions)
 import nativeDefault from "native" /* 576 */;
 import UserSettingsModalActionCreatorsDefault from "UserSettingsModalActionCreators" /* 6990 */;
-import _modDef10064 from "module_10064" /* 10064 */;
-import _modDef12264 from "module_12264" /* 12264 */;
-import AuthSessionsActionCreators from "AuthSessionsActionCreators" /* 14949 */;
-import _modDef14950 from "module_14950" /* 14950 */;
+import _modDef10069 from "module_10069" /* 10069 */;
+import _modDef12268 from "module_12268" /* 12268 */;
+import AuthSessionsActionCreators from "AuthSessionsActionCreators" /* 14952 */;
+import _modDef14953 from "module_14953" /* 14953 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1371 */;
@@ -16,7 +16,7 @@ const _modDef6992 = tmp10(6992);
 require = fn;
 function UserSettingsSessions() {
   const tmp = closure_13();
-  let obj = otherSessions(14671);
+  let obj = otherSessions(14674);
   let authSessions = obj.useAuthSessions();
   ({ currentSession, otherSessions } = authSessions);
   let obj1 = otherSessions(504);
@@ -128,22 +128,22 @@ function SessionInfo(session) {
         if ("ios" !== trimmed) {
           if ("android" !== trimmed) {
             if ("horizon os" === trimmed) {
-              let obj = { text: os, iconSource: _modDef10064, IconComponent: session(14951).VrHeadsetIcon };
+              let obj = { text: os, iconSource: _modDef10069, IconComponent: session(14954).VrHeadsetIcon };
               let tmp9 = session;
             } else {
-              obj = { text: os, iconSource: _modDef14950, IconComponent: session(8879).ScreenIcon };
+              obj = { text: os, iconSource: _modDef14953, IconComponent: session(8884).ScreenIcon };
               tmp9 = session;
             }
           }
         }
-        obj = { text: os, iconSource: _modDef10064, IconComponent: session(6960).MobilePhoneIcon };
+        obj = { text: os, iconSource: _modDef10069, IconComponent: session(6960).MobilePhoneIcon };
         tmp9 = session;
       }
       let formatDateResult = null;
       ({ text, iconSource, IconComponent } = obj);
       if (!current) {
-        formatDateResult = tmp9(14671).formatDate(session.approx_last_used_time);
-        const tmp9Result = tmp9(14671);
+        formatDateResult = tmp9(14674).formatDate(session.approx_last_used_time);
+        const tmp9Result = tmp9(14674);
       }
       const items = [text, platform];
       const found = items.filter(tmp9(1369).isNotNullish);
@@ -208,8 +208,8 @@ function SessionInfo(session) {
   const obj16 = { text: null, iconSource: null, IconComponent: null };
   const intl = session(1114).intl;
   obj16.text = intl.string(session(1114).t.cDHCNY);
-  obj16.iconSource = _modDef14950;
-  obj16.IconComponent = session(8879).ScreenIcon;
+  obj16.iconSource = _modDef14953;
+  obj16.IconComponent = session(8884).ScreenIcon;
   tmp9 = session;
   obj = obj16;
 }
@@ -217,7 +217,7 @@ function UnknownLegacySessionsInfo() {
   let obj = require("useNavigation");
   _require = obj.useNavigation();
   obj = { icon: null, label: null, subLabel: null };
-  obj = { variant: "translucent", source: _modDef12264 };
+  obj = { variant: "translucent", source: _modDef12268 };
   obj.icon = closure_10(require("TableRow").TableRow.Icon, obj);
   const intl = require("util").intl;
   obj.label = intl.string(require("util").t.iUa0sn);

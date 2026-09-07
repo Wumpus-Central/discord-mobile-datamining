@@ -1,14 +1,14 @@
-// === Module 17760: GuildRoleSubscriptionBenefitPreview ===
+// === Module 17763: GuildRoleSubscriptionBenefitPreview ===
 
-// Module 17760 (GuildRoleSubscriptionBenefitPreview)
+// Module 17763 (GuildRoleSubscriptionBenefitPreview)
 import util from "util" /* 1114 */;
 import native from "native" /* 1178 */;
 import UnicodeEmojisDefault from "UnicodeEmojis" /* 4213 */;
 import Text_Text from "Text/Text" /* 4556 */;
 import utils_ChannelUtils from "utils/ChannelUtils" /* 5028 */;
-import _modDef9939 from "module_9939" /* 9939 */;
-import GuildRoleSubscriptionTierTemplatesUtils from "GuildRoleSubscriptionTierTemplatesUtils" /* 15233 */;
-import EmojiIconDefault from "EmojiIcon" /* 15240 */;
+import _modDef9944 from "module_9944" /* 9944 */;
+import GuildRoleSubscriptionTierTemplatesUtils from "GuildRoleSubscriptionTierTemplatesUtils" /* 15236 */;
+import EmojiIconDefault from "EmojiIcon" /* 15243 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -28,7 +28,7 @@ function BaseBenefitRow(isInteractive) {
   items[1] = hasOwnProperty(View, obj);
   let tmp4Result = true === flag;
   if (tmp4Result) {
-    const obj1 = { source: _modDef9939 };
+    const obj1 = { source: _modDef9944 };
     tmp4Result = hasOwnProperty(native.Icon, obj1);
   }
   items[2] = tmp4Result;
@@ -107,7 +107,7 @@ function EmojiBenefitRow(benefit) {
   return timestampProducer(BaseBenefitRow, obj);
 }
 const View = fn(17).View;
-const constants = fn(15205).GuildRoleSubscriptionBenefitTypes;
+const constants = fn(15208).GuildRoleSubscriptionBenefitTypes;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
 const createStyles = fn(4560);

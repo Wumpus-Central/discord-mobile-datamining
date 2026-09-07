@@ -1,13 +1,13 @@
-// === Module 15929: VEVOOPropTintColor ===
+// === Module 15932: VEVOOPropTintColor ===
 
-// Module 15929 (VEVOOPropTintColor)
+// Module 15932 (VEVOOPropTintColor)
 import nativeDefault from "native" /* 576 */;
 import utils_ColorUtils from "utils/ColorUtils" /* 1091 */;
 import ColorUtils from "ColorUtils" /* 4409 */;
 import FormSwitch from "FormSwitch" /* 7202 */;
-import Form from "Form" /* 8593 */;
-import showCustomColorPickerActionSheetDefault from "showCustomColorPickerActionSheet" /* 14595 */;
-import VEVOO from "VEVOO" /* 15926 */;
+import Form from "Form" /* 8598 */;
+import showCustomColorPickerActionSheetDefault from "showCustomColorPickerActionSheet" /* 14598 */;
+import VEVOO from "VEVOO" /* 15929 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -106,7 +106,7 @@ export default noop.memo(function VEVOOPropTintColor() {
   const obj4 = { children: null };
   obj3.label = "Blur Tint Opacity " + str2;
   const ref = obj1.useRef(first1);
-  obj3.subLabel = closure_8(backgroundColor(15928), {
+  obj3.subLabel = closure_8(backgroundColor(15931), {
     disabled: !tmp7,
     initialValue: obj1.useRef(first1),
     onValueChange(arg0) {

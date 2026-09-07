@@ -1,6 +1,6 @@
-// === Module 9942: AttachmentUrlUtils ===
+// === Module 9947: AttachmentUrlUtils ===
 
-// Module 9942 (AttachmentUrlUtils)
+// Module 9947 (AttachmentUrlUtils)
 import DurationsDefault from "Durations" /* 1090 */;
 import HTTPUtils from "HTTPUtils" /* 1272 */;
 import URLUtilsDefault from "URLUtils" /* 1365 */;

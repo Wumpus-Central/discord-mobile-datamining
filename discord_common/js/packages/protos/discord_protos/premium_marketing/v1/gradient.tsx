@@ -1,6 +1,6 @@
-// === Module 10678: gradient ===
+// === Module 10683: gradient ===
 
-// Module 10678 (gradient)
+// Module 10683 (gradient)
 import _mod1188 from "module_1188" /* 1188 */;
 import _slicedToArray from "module_32" /* 32 */;
 

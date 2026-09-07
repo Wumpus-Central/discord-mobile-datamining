@@ -1,17 +1,17 @@
-// === Module 10098: GuildAntiRaidHooks ===
+// === Module 10103: GuildAntiRaidHooks ===
 
-// Module 10098 (GuildAntiRaidHooks)
+// Module 10103 (GuildAntiRaidHooks)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import BigFlagUtilsAll from "BigFlagUtils" /* 1086 */;
 import PermissionUtilsAll from "PermissionUtils" /* 4204 */;
 import GuildAntiRaidUtils from "GuildAntiRaidUtils" /* 8015 */;
-import GuildAntiRaidPermissionsUtils from "GuildAntiRaidPermissionsUtils" /* 10099 */;
+import GuildAntiRaidPermissionsUtils from "GuildAntiRaidPermissionsUtils" /* 10104 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1221 */;
 import GuildStore from "GuildStore" /* 1979 */;
 import PermissionStore from "PermissionStore" /* 4199 */;
 import SelectedGuildStore from "SelectedGuildStore" /* 4381 */;
 import UserStore from "UserStore" /* 1371 */;
-import GuildIncidentsStore from "GuildIncidentsStore" /* 10080 */;
+import GuildIncidentsStore from "GuildIncidentsStore" /* 10085 */;
 
 require = fn;
 function getFirstGuildIncidentId(guildId) {

@@ -1,12 +1,12 @@
-// === Module 14718: DismissiblePremiumNewBadge ===
+// === Module 14721: DismissiblePremiumNewBadge ===
 
-// Module 14718 (DismissiblePremiumNewBadge)
+// Module 14721 (DismissiblePremiumNewBadge)
 import nativeDefault from "native" /* 576 */;
 import ConstantsIOS from "ConstantsIOS" /* 1093 */;
 import PlatformUtils from "PlatformUtils" /* 1115 */;
 import native from "native" /* 1178 */;
 import LinearGradientDefault from "LinearGradient" /* 4987 */;
-import SelectedDismissibleContentDefault from "SelectedDismissibleContent" /* 10625 */;
+import SelectedDismissibleContentDefault from "SelectedDismissibleContent" /* 10630 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

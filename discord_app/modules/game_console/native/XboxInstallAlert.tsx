@@ -1,15 +1,15 @@
-// === Module 9462: XboxInstallAlert ===
+// === Module 9467: XboxInstallAlert ===
 
-// Module 9462 (XboxInstallAlert)
+// Module 9467 (XboxInstallAlert)
 import nativeDefault from "native" /* 576 */;
 import native from "native" /* 1178 */;
 import LinkingDefault from "Linking" /* 4255 */;
 import common_AlertDefault from "common/Alert" /* 4994 */;
-import _modDef9444 from "module_9444" /* 9444 */;
+import _modDef9449 from "module_9449" /* 9449 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const GameConsoleConstants = fn(9233);
+const GameConsoleConstants = fn(9238);
 ({ XBOX_ANDROID_APP_LINK: c3, XBOX_IOS_APP_LINK: closure_4 } = GameConsoleConstants);
 const jsx = fn(21).jsx;
 fn(4560);
@@ -34,7 +34,7 @@ export default function XboxInstallAlert(arg0) {
   obj.cancelText = intl4.string(require("util").t.kYaBOg);
   obj.fillCancelText = true;
   obj.renderConfirmRightIcon = function renderConfirmRightIcon() {
-    return jsx(native.Icon, { source: _modDef9444, style: closure_0.externalLinkIcon });
+    return jsx(native.Icon, { source: _modDef9449, style: closure_0.externalLinkIcon });
   };
   obj.onConfirm = function onConfirm() {
     const obj = closure_0(1115);

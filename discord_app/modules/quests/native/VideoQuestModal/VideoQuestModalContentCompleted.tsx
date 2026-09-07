@@ -1,13 +1,13 @@
-// === Module 15157: VideoQuestModalContentCompleted ===
+// === Module 15160: VideoQuestModalContentCompleted ===
 
-// Module 15157 (VideoQuestModalContentCompleted)
+// Module 15160 (VideoQuestModalContentCompleted)
 import nativeDefault from "native" /* 576 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4296 */;
 import spring from "spring" /* 4974 */;
 import QuestTypes from "QuestTypes" /* 5447 */;
 import showShareActionSheet from "showShareActionSheet" /* 8361 */;
-import AssetUtils from "AssetUtils" /* 11285 */;
-import QuestCopyUtils from "QuestCopyUtils" /* 11295 */;
+import AssetUtils from "AssetUtils" /* 11290 */;
+import QuestCopyUtils from "QuestCopyUtils" /* 11300 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -22,7 +22,7 @@ let obj = { wrapper: { flexGrow: 1, flexShrink: 1 }, headerContentCopy: { flexGr
 obj = { padding: nativeDefault.space.PX_16 };
 obj.content = obj;
 obj.contentRewardsAnimatedWrapper = { flexGrow: 1, flexShrink: 0 };
-const createStyles = { flexGrow: 1, flexShrink: 0, paddingTop: fn(15131).COMPLETION_GLOW_CLEARANCE };
+const createStyles = { flexGrow: 1, flexShrink: 0, paddingTop: fn(15134).COMPLETION_GLOW_CLEARANCE };
 obj.contentRewardsWrapper = createStyles;
 obj.contentRewards = { alignItems: "center" };
 obj.contentRewardsCopy = { textAlign: "center" };

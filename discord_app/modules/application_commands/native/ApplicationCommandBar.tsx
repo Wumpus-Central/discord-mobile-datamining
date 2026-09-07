@@ -1,14 +1,14 @@
-// === Module 12403: ApplicationCommandBar ===
+// === Module 12407: ApplicationCommandBar ===
 
-// Module 12403 (ApplicationCommandBar)
+// Module 12407 (ApplicationCommandBar)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import native from "native" /* 1178 */;
 import Text_Text from "Text/Text" /* 4556 */;
 import Pressables from "Pressables" /* 5123 */;
 import usePreviousDefault from "usePrevious" /* 8272 */;
-import application_commands_ApplicationCommandUtils from "application_commands/ApplicationCommandUtils" /* 12231 */;
-import DescriptionEllipsisDefault from "DescriptionEllipsis" /* 12404 */;
+import application_commands_ApplicationCommandUtils from "application_commands/ApplicationCommandUtils" /* 12235 */;
+import DescriptionEllipsisDefault from "DescriptionEllipsis" /* 12408 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import GuildMemberStore from "GuildMemberStore" /* 2021 */;
@@ -383,7 +383,7 @@ export default function _default(command) {
   }
   items5[3] = tmp19Result;
   obj.children = items5;
-  const items8 = [c10(closure_6, obj), ref(command(8593).FormDivider, { style: tmp.applicationDescriptionDivider }), ref(stateFromStores, { command, option: currentOption, optionState: tmp17 }), ref(command(8593).FormDivider, { style: tmp.applicationDescriptionDivider })];
+  const items8 = [c10(closure_6, obj), ref(command(8598).FormDivider, { style: tmp.applicationDescriptionDivider }), ref(stateFromStores, { command, option: currentOption, optionState: tmp17 }), ref(command(8598).FormDivider, { style: tmp.applicationDescriptionDivider })];
   obj.children = items8;
   return c10(onPressOption, obj);
 };

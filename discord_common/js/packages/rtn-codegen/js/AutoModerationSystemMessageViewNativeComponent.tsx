@@ -1,6 +1,6 @@
-// === Module 8653: AutoModerationSystemMessageViewNativeComponent ===
+// === Module 8658: AutoModerationSystemMessageViewNativeComponent ===
 
-// Module 8653 (AutoModerationSystemMessageViewNativeComponent)
+// Module 8658 (AutoModerationSystemMessageViewNativeComponent)
 import module_65 from "module_65" /* 65 */;
 import size from "module_2" /* 2 */;
 

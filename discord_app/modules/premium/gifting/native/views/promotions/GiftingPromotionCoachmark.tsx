@@ -1,15 +1,15 @@
-// === Module 16927: GiftingPromotionCoachmark ===
+// === Module 16930: GiftingPromotionCoachmark ===
 
-// Module 16927 (GiftingPromotionCoachmark)
+// Module 16930 (GiftingPromotionCoachmark)
 import nativeDefault from "native" /* 576 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4527 */;
 import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7162 */;
 import AnalyticsLocationDefault from "AnalyticsLocation" /* 7182 */;
 import usePreviousDefault from "usePrevious" /* 8272 */;
-import utils_openGiftModal from "utils/openGiftModal" /* 10661 */;
+import utils_openGiftModal from "utils/openGiftModal" /* 10666 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4552 */;
-import PromotionsStore from "PromotionsStore" /* 10665 */;
+import PromotionsStore from "PromotionsStore" /* 10670 */;
 
 require = fn;
 const View = fn(17).View;
@@ -55,7 +55,7 @@ export default function GiftingPromotionCoachmarkActionSheet(arg0) {
   let obj = markAsDismissed(504);
   const items = [analyticsLocations];
   const stateFromStores = obj.useStateFromStores(items, () => analyticsLocations.useReducedMotion);
-  let obj1 = markAsDismissed(10753);
+  let obj1 = markAsDismissed(10758);
   let asset;
   if (coachmarkComponent != null) {
     asset = coachmarkComponent.asset;
@@ -64,7 +64,7 @@ export default function GiftingPromotionCoachmarkActionSheet(arg0) {
   let tmp2Result = markAsDismissed(504);
   const items1 = [PromotionsStore];
   const stateFromStores1 = tmp2Result.useStateFromStores(items1, () => giftPromotion.getGiftPromotion());
-  tmp2Result = markAsDismissed(16928);
+  tmp2Result = markAsDismissed(16931);
   let endDate;
   if (stateFromStores1 != null) {
     endDate = stateFromStores1.endDate;
@@ -123,7 +123,7 @@ export default function GiftingPromotionCoachmarkActionSheet(arg0) {
       items4[2] = closure_12(tmp21, obj3);
       const obj6 = { grow: true, icon: null, text: null, onPress: null };
       const obj7 = { size: "sm", color: tmp10(576).colors.WHITE };
-      obj6.icon = closure_11(markAsDismissed(11030).GiftIcon, obj7);
+      obj6.icon = closure_11(markAsDismissed(11035).GiftIcon, obj7);
       const intl = markAsDismissed(1114).intl;
       obj6.text = intl.string(markAsDismissed(1114).t.Ve9Ge6);
       obj6.onPress = tmp16;
@@ -139,7 +139,7 @@ export default function GiftingPromotionCoachmarkActionSheet(arg0) {
           ({ imageShared: arr5[0], imageWrapperAndroid: arr5[1] } = tmp);
           obj8.style = items6;
           const obj9 = { url: themeAndReducedMotionAwareAssetUrl, style: tmp.imageShared, autoplay: true };
-          obj8.children = closure_11(markAsDismissed(8808).APNGPlayer, obj9);
+          obj8.children = closure_11(markAsDismissed(8813).APNGPlayer, obj9);
           let tmp18Result1 = closure_11(tmp21, obj8);
         }
       }

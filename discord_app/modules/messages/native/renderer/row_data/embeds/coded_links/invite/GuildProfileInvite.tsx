@@ -1,6 +1,6 @@
-// === Module 13217: GuildProfileInvite ===
+// === Module 13221: GuildProfileInvite ===
 
-// Module 13217 (GuildProfileInvite)
+// Module 13221 (GuildProfileInvite)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import nativeDefault from "native" /* 576 */;
 import utils_ColorUtils from "utils/ColorUtils" /* 1091 */;
@@ -15,7 +15,7 @@ import _slicedToArray from "module_32" /* 32 */;
 import LocaleStore from "LocaleStore" /* 2025 */;
 
 require = fn;
-const CodedLinkExtendedType = fn(11309).CodedLinkExtendedType;
+const CodedLinkExtendedType = fn(11314).CodedLinkExtendedType;
 const GuildFeatures = fn(1074).GuildFeatures;
 const InviteTypes = fn(7736).InviteTypes;
 const size = fn(2);
@@ -33,15 +33,15 @@ export const createGuildProfileInvite = function createGuildProfileInvite(invite
     let tmp4Result = tmp4(1971);
     fromGuildProfileResult = tmp4Result.fromGuildProfile(guildProfileFromInvite);
   }
-  tmp4Result = tmp4(9192);
+  tmp4Result = tmp4(9197);
   let profilePrimaryColor = tmp4Result.getProfilePrimaryColor(guildProfileFromInvite);
   const tmp7 = obj1.isThemeDark(theme) ? unsafe_rawColors.PRIMARY_660 : unsafe_rawColors.PRIMARY_160;
   if (profilePrimaryColor == null) {
     profilePrimaryColor = tmp7;
   }
-  const tmp4Result1 = id(9190);
+  const tmp4Result1 = id(9195);
   let memberCount;
-  [tmp11, tmp12] = _slicedToArray(id(9190).getBackgroundForProfile(theme, profilePrimaryColor), 2);
+  [tmp11, tmp12] = _slicedToArray(id(9195).getBackgroundForProfile(theme, profilePrimaryColor), 2);
   if (guildProfileFromInvite != null) {
     memberCount = guildProfileFromInvite.memberCount;
   }
@@ -126,32 +126,32 @@ export const createGuildProfileInvite = function createGuildProfileInvite(invite
   }
   let guildProfileCTAType = null;
   if (null != guildProfileFromInvite) {
-    guildProfileCTAType = tmp4(9205).getGuildProfileCTAType(guildProfileFromInvite, invite.code);
-    const tmp4Result3 = tmp4(9205);
+    guildProfileCTAType = tmp4(9210).getGuildProfileCTAType(guildProfileFromInvite, invite.code);
+    const tmp4Result3 = tmp4(9210);
   }
-  if (id(9205).CTATypes.IS_MEMBER === guildProfileCTAType) {
+  if (id(9210).CTATypes.IS_MEMBER === guildProfileCTAType) {
     const intl7 = tmp4(1114).intl;
     let stringResult = intl7.string(tmp4(1114).t.IRoQXr);
-  } else if (tmp4(9205).CTATypes.HAS_APPLICATION === guildProfileCTAType) {
+  } else if (tmp4(9210).CTATypes.HAS_APPLICATION === guildProfileCTAType) {
     const intl6 = tmp4(1114).intl;
     stringResult = intl6.string(tmp4(1114).t["4yfIDk"]);
-  } else if (tmp4(9205).CTATypes.APPLY_TO_JOIN === guildProfileCTAType) {
+  } else if (tmp4(9210).CTATypes.APPLY_TO_JOIN === guildProfileCTAType) {
     const intl5 = tmp4(1114).intl;
     stringResult = intl5.string(tmp4(1114).t["7XdMW2"]);
-  } else if (tmp4(9205).CTATypes.ACCEPT_ROLES === guildProfileCTAType) {
+  } else if (tmp4(9210).CTATypes.ACCEPT_ROLES === guildProfileCTAType) {
     const intl4 = tmp4(1114).intl;
     stringResult = intl4.string(tmp4(1114).t.MMlhsr);
   } else {
-    if (tmp4(9205).CTATypes.LURK_DISCOVERABLE !== guildProfileCTAType) {
-      const JOIN_VIA_INVITE = tmp4(9205).CTATypes.JOIN_VIA_INVITE;
+    if (tmp4(9210).CTATypes.LURK_DISCOVERABLE !== guildProfileCTAType) {
+      const JOIN_VIA_INVITE = tmp4(9210).CTATypes.JOIN_VIA_INVITE;
     }
     const intl3 = tmp4(1114).intl;
     stringResult = intl3.string(tmp4(1114).t.XpeFYr);
   }
   let guildBadgeImageSource;
   if (null != fromGuildProfileResult) {
-    guildBadgeImageSource = tmp4(8741).getGuildBadgeImageSource(fromGuildProfileResult, theme);
-    const tmp4Result4 = tmp4(8741);
+    guildBadgeImageSource = tmp4(8746).getGuildBadgeImageSource(fromGuildProfileResult, theme);
+    const tmp4Result4 = tmp4(8746);
   }
   let found;
   if (guildProfileFromInvite != null) {
@@ -252,7 +252,7 @@ export const createGuildProfileInvite = function createGuildProfileInvite(invite
   }
   obj4.type = GUILD;
   obj4.inviteSplash = tmp20;
-  const tmp10 = _slicedToArray(id(9190).getBackgroundForProfile(theme, profilePrimaryColor), 2);
+  const tmp10 = _slicedToArray(id(9195).getBackgroundForProfile(theme, profilePrimaryColor), 2);
   obj4.bannerColor = id(7936).processColorOrThrow(tmp11);
   const tmp4Result6 = id(7936);
   obj4.bannerColorSecondary = id(7936).processColorOrThrow(tmp12);

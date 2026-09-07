@@ -1,6 +1,6 @@
-// === Module 15785: UserSettingsDesignSystemTooltip ===
+// === Module 15788: UserSettingsDesignSystemTooltip ===
 
-// Module 15785 (UserSettingsDesignSystemTooltip)
+// Module 15788 (UserSettingsDesignSystemTooltip)
 import Text_Text from "Text/Text" /* 4556 */;
 import common_SafeAreaView from "common/SafeAreaView" /* 7123 */;
 import LayerScope from "LayerScope" /* 7156 */;
@@ -50,7 +50,7 @@ function Content() {
       }
     };
   }, items1);
-  let obj1 = first1(11128);
+  let obj1 = first1(11133);
   const tooltip = obj1.useTooltip(ref, memo);
   obj = { children: null };
   obj = { style: tmp.container, children: null };

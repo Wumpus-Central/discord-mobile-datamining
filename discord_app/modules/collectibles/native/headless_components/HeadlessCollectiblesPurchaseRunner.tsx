@@ -1,7 +1,7 @@
-// === Module 13165: HeadlessCollectiblesPurchaseRunner ===
+// === Module 13169: HeadlessCollectiblesPurchaseRunner ===
 
-// Module 13165 (HeadlessCollectiblesPurchaseRunner)
-import useHandleBuyNowDefault from "useHandleBuyNow" /* 13166 */;
+// Module 13169 (HeadlessCollectiblesPurchaseRunner)
+import useHandleBuyNowDefault from "useHandleBuyNow" /* 13170 */;
 import noop from "module_19" /* 19 */;
 
 const useNativeCheckoutStore = fn(7424).useNativeCheckoutStore;

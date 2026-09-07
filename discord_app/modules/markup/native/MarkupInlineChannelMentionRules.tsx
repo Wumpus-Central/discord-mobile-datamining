@@ -1,6 +1,6 @@
-// === Module 10128: MarkupInlineChannelMentionRules ===
+// === Module 10133: MarkupInlineChannelMentionRules ===
 
-// Module 10128 (MarkupInlineChannelMentionRules)
+// Module 10133 (MarkupInlineChannelMentionRules)
 import noop from "module_19" /* 19 */;
 
 const jsxs = fn(21).jsxs;

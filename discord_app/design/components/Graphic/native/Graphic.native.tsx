@@ -1,6 +1,6 @@
-// === Module 10232: Graphic ===
+// === Module 10237: Graphic ===
 
-// Module 10232 (Graphic)
+// Module 10237 (Graphic)
 import native from "native" /* 4271 */;
 import GraphicTypes from "GraphicTypes" /* 4377 */;
 import FastImageDefault from "FastImage" /* 5587 */;

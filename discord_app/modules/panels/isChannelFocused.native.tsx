@@ -1,6 +1,6 @@
-// === Module 10089: isChannelFocused ===
+// === Module 10094: isChannelFocused ===
 
-// Module 10089 (isChannelFocused)
+// Module 10094 (isChannelFocused)
 import RootNavigationRef from "RootNavigationRef" /* 4418 */;
 import getInitialNavigationStateDefault from "getInitialNavigationState" /* 4419 */;
 import useChatLayout from "useChatLayout" /* 4420 */;

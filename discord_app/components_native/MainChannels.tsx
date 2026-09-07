@@ -1,21 +1,21 @@
-// === Module 16015: MainChannels ===
+// === Module 16018: MainChannels ===
 
-// Module 16015 (MainChannels)
+// Module 16018 (MainChannels)
 import nativeDefault from "native" /* 576 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1611 */;
 import ReanimatedRexportDefault from "ReanimatedRexport" /* 4296 */;
 import useChatLayoutDefault from "useChatLayout" /* 4420 */;
 import HomeDrawerExperiment from "HomeDrawerExperiment" /* 4423 */;
 import useRefValueDefault from "useRefValue" /* 5586 */;
-import StartupProfiler from "StartupProfiler" /* 11533 */;
-import useGuildsRouteGuildId from "useGuildsRouteGuildId" /* 16016 */;
-import useChannelListWidthDefault from "useChannelListWidth" /* 16017 */;
-import NativeFreezeScreens from "NativeFreezeScreens" /* 16018 */;
-import messages_MessagesDefault from "messages/Messages" /* 16019 */;
-import useHomeDrawerGesture from "useHomeDrawerGesture" /* 16022 */;
-import RedesignChannelListDefault from "RedesignChannelList" /* 16103 */;
-import HomePanelContent from "HomePanelContent" /* 16281 */;
-import NonCollapsableGestureDetector from "NonCollapsableGestureDetector" /* 16361 */;
+import StartupProfiler from "StartupProfiler" /* 11538 */;
+import useGuildsRouteGuildId from "useGuildsRouteGuildId" /* 16019 */;
+import useChannelListWidthDefault from "useChannelListWidth" /* 16020 */;
+import NativeFreezeScreens from "NativeFreezeScreens" /* 16021 */;
+import messages_MessagesDefault from "messages/Messages" /* 16022 */;
+import useHomeDrawerGesture from "useHomeDrawerGesture" /* 16025 */;
+import RedesignChannelListDefault from "RedesignChannelList" /* 16106 */;
+import HomePanelContent from "HomePanelContent" /* 16284 */;
+import NonCollapsableGestureDetector from "NonCollapsableGestureDetector" /* 16364 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 

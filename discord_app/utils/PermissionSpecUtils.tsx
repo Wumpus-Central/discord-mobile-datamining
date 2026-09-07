@@ -1,6 +1,6 @@
-// === Module 16830: PermissionSpecUtils ===
+// === Module 16833: PermissionSpecUtils ===
 
-// Module 16830 (PermissionSpecUtils)
+// Module 16833 (PermissionSpecUtils)
 import util from "util" /* 1114 */;
 import ChannelRecord from "ChannelRecord" /* 1961 */;
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2024 */;
@@ -9,10 +9,10 @@ import useIsCreatorMonetizationEnabledGuild from "useIsCreatorMonetizationEnable
 import GuildOfficialMessagesExperimentDefault from "GuildOfficialMessagesExperiment" /* 7268 */;
 import tracking_Tracking from "tracking/Tracking" /* 7767 */;
 import ChannelPermissionsConstants from "ChannelPermissionsConstants" /* 8401 */;
-import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 9063 */;
-import useGuildEligibleForStageChannels from "useGuildEligibleForStageChannels" /* 16831 */;
-import HangoutWindowExperiment from "HangoutWindowExperiment" /* 16832 */;
-import permissions_PermissionUtilsAll from "permissions/PermissionUtils" /* 16834 */;
+import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 9068 */;
+import useGuildEligibleForStageChannels from "useGuildEligibleForStageChannels" /* 16834 */;
+import HangoutWindowExperiment from "HangoutWindowExperiment" /* 16835 */;
+import permissions_PermissionUtilsAll from "permissions/PermissionUtils" /* 16837 */;
 import GuildStore from "GuildStore" /* 1979 */;
 import Constants from "Constants" /* 1074 */;
 import size from "module_2" /* 2 */;
@@ -68,7 +68,7 @@ export default {
       enabled = set.has(stateFromStores.type);
     }
     tmp4(5417);
-    const tmp4Result = tmp4(16833);
+    const tmp4Result = tmp4(16836);
     let result = tmp4Result.canCurrentUserManageMessageFilters(guild_id);
     const isMediaChannelResult = stateFromStores.isMediaChannel();
     importDefault = isMediaChannelResult;
@@ -104,14 +104,14 @@ export default {
       items[4] = permissions_PermissionUtilsAll.generateChannelAppsSection(tmp3, intl27.string(tmp4(1114).t["rrh/W6"]));
       if (tmp.showStageChannelPermissions) {
         const intl28 = tmp4(1114).intl;
-        const items1 = [obj33(16834).generateChannelStageSection(tmp3, intl28.string(tmp4(1114).t.yniauk))];
+        const items1 = [obj33(16837).generateChannelStageSection(tmp3, intl28.string(tmp4(1114).t.yniauk))];
         let items2 = items1;
-        const obj33Result = obj33(16834);
+        const obj33Result = obj33(16837);
       } else {
         items2 = [];
       }
       let arraySpreadResult = HermesBuiltin.arraySpread(items2, 5);
-      obj33 = obj33(16834);
+      obj33 = obj33(16837);
       const intl29 = tmp4(1114).intl;
       channelEventsSection = obj33.generateChannelEventsSection(tmp3, intl29.string(tmp4(1114).t.b8lplT));
       items[arraySpreadResult] = channelEventsSection;

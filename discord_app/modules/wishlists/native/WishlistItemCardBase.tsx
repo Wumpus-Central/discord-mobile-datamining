@@ -1,6 +1,6 @@
-// === Module 8773: WishlistItemCardBase ===
+// === Module 8778: WishlistItemCardBase ===
 
-// Module 8773 (WishlistItemCardBase)
+// Module 8778 (WishlistItemCardBase)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import GlobalUtils from "GlobalUtils" /* 1369 */;
@@ -9,8 +9,8 @@ import useToken from "useToken" /* 4262 */;
 import native from "native" /* 4271 */;
 import LockIcon from "LockIcon" /* 5095 */;
 import useUserProfileColors from "useUserProfileColors" /* 8238 */;
-import useWishlistHooks from "useWishlistHooks" /* 8776 */;
-import CheckmarkLargeBoldIcon from "CheckmarkLargeBoldIcon" /* 8795 */;
+import useWishlistHooks from "useWishlistHooks" /* 8781 */;
+import CheckmarkLargeBoldIcon from "CheckmarkLargeBoldIcon" /* 8800 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -28,7 +28,7 @@ function SourceIcon(toastText) {
     children: null
   };
   obj = { color: nativeDefault.colors.INTERACTIVE_ICON_DEFAULT, size: "md" };
-  obj.children = closure_5(toastText(8774).HeartIcon, obj);
+  obj.children = closure_5(toastText(8779).HeartIcon, obj);
   return closure_5(closure_3, obj);
 }
 get_ActivityIndicator = fn(17);

@@ -1,6 +1,6 @@
-// === Module 17613: GuildSettingsRoleTemplate ===
+// === Module 17616: GuildSettingsRoleTemplate ===
 
-// Module 17613 (GuildSettingsRoleTemplate)
+// Module 17616 (GuildSettingsRoleTemplate)
 import nativeDefault from "native" /* 576 */;
 import native from "native" /* 1178 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
@@ -11,8 +11,8 @@ import AppAnalyticsUtils from "AppAnalyticsUtils" /* 4740 */;
 import useIsScreenReaderEnabled from "useIsScreenReaderEnabled" /* 4962 */;
 import useIsWindowLargeDefault from "useIsWindowLarge" /* 6945 */;
 import _modDef8278 from "module_8278" /* 8278 */;
-import PaginationDefault from "Pagination" /* 10757 */;
-import _modDef11564 from "module_11564" /* 11564 */;
+import PaginationDefault from "Pagination" /* 10762 */;
+import _modDef11569 from "module_11569" /* 11569 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4552 */;
@@ -21,7 +21,7 @@ import GuildStore from "GuildStore" /* 1979 */;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, Dimensions, ScrollView: metroRequire } = get_ActivityIndicator);
-const GuildSettingsRoleConstants = fn(17609);
+const GuildSettingsRoleConstants = fn(17612);
 ({ PermissionTemplateTypes: closure_9, PermissionTemplates: c10, DEFAULT_TEMPLATE_TYPE: closure_11 } = GuildSettingsRoleConstants);
 const Constants = fn(1074);
 ({ AnalyticEvents: closure_12, GuildFeatures: map1 } = Constants);
@@ -208,7 +208,7 @@ export default function GuildSettingsRoleTemplate(arg0) {
         const tmp6 = !item.index !== first && undefined;
         obj5.children = item.contents().map((children, index) => {
           let obj = { style: closure_3.templateContent, children: null };
-          obj = { source: _modDef11564, size: native.IconSizes.MEDIUM, color: nativeDefault.unsafe_rawColors.GREEN_360 };
+          obj = { source: _modDef11569, size: native.IconSizes.MEDIUM, color: nativeDefault.unsafe_rawColors.GREEN_360 };
           const items = [closure_3_14(native.Icon, obj), ];
           obj = { style: closure_3.templateContentText, variant: "text-sm/medium", children };
           items[1] = closure_3_14(Text_Text.Text, obj);

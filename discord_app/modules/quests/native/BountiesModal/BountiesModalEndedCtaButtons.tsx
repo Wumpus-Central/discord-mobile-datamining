@@ -1,13 +1,13 @@
-// === Module 15045: BountiesModalEndedCtaButtons ===
+// === Module 15048: BountiesModalEndedCtaButtons ===
 
-// Module 15045 (BountiesModalEndedCtaButtons)
+// Module 15048 (BountiesModalEndedCtaButtons)
 import nativeDefault from "native" /* 576 */;
 import timing from "timing" /* 4561 */;
 import timingPresets from "timingPresets" /* 4564 */;
 import QuestContent from "QuestContent" /* 5449 */;
 import AdCreativeType from "AdCreativeType" /* 5451 */;
 import AnalyticsTypes from "AnalyticsTypes" /* 7728 */;
-import QuestPlatformUtils from "QuestPlatformUtils" /* 11496 */;
+import QuestPlatformUtils from "QuestPlatformUtils" /* 11501 */;
 import jsxProd from "jsxProd" /* 21 */;
 import createStyles from "createStyles" /* 4560 */;
 import size from "module_2" /* 2 */;
@@ -33,7 +33,7 @@ export default function BountiesModalEndedCtaButtons(bounty) {
   if (flag === undefined) {
     flag = false;
   }
-  let obj = bounty(11486);
+  let obj = bounty(11491);
   closure_3 = obj.useGetQuestImpressionId();
   let obj1 = bounty(4296);
   const fn = function y() {
@@ -50,7 +50,7 @@ export default function BountiesModalEndedCtaButtons(bounty) {
   fn.__workletHash = 11417131685254;
   fn.__initData = __initData;
   const animatedStyle = obj1.useAnimatedStyle(fn);
-  bounty(15040);
+  bounty(15043);
   if (visible) {
     obj = { style: null, children: null };
     const items = [tmp.container, animatedStyle];

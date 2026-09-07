@@ -1,12 +1,12 @@
-// === Module 15248: InputModeSetting ===
+// === Module 15251: InputModeSetting ===
 
-// Module 15248 (InputModeSetting)
+// Module 15251 (InputModeSetting)
 import util from "util" /* 1114 */;
 import MediaEngineStore from "MediaEngineStore" /* 1908 */;
 
 require = fn;
 const InputModes = fn(4585).InputModes;
-fn(11468);
+fn(11473);
 let SettingBuilders = {
   useTitle() {
     const intl = util.intl;
@@ -24,7 +24,7 @@ let SettingBuilders = {
     }
     return stringResult;
   },
-  onPress: fn(9983).handleInputModePress,
+  onPress: fn(9988).handleInputModePress,
   useSearchTerms() {
     const intl = util.intl;
     const items = [intl.string(util.t.nuFtHH)];

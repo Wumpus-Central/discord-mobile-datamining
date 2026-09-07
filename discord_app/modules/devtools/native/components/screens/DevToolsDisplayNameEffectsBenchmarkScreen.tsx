@@ -1,15 +1,15 @@
-// === Module 15727: DevToolsDisplayNameEffectsBenchmarkScreen ===
+// === Module 15730: DevToolsDisplayNameEffectsBenchmarkScreen ===
 
-// Module 15727 (DevToolsDisplayNameEffectsBenchmarkScreen)
+// Module 15730 (DevToolsDisplayNameEffectsBenchmarkScreen)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import _modDef2786 from "module_2786" /* 2786 */;
 import Text_Text from "Text/Text" /* 4556 */;
 import Stack_Stack from "Stack/Stack" /* 4973 */;
-import UsernameWithEffectsDefault from "UsernameWithEffects" /* 10899 */;
-import types from "types" /* 10900 */;
-import useDisplayNameStylesEffectConfigs from "useDisplayNameStylesEffectConfigs" /* 10902 */;
-import _mod10906 from "module_10906" /* 10906 */;
+import UsernameWithEffectsDefault from "UsernameWithEffects" /* 10904 */;
+import types from "types" /* 10905 */;
+import useDisplayNameStylesEffectConfigs from "useDisplayNameStylesEffectConfigs" /* 10907 */;
+import _mod10911 from "module_10911" /* 10911 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1371 */;
@@ -114,7 +114,7 @@ export default function DevToolsDisplayNameEffectsBenchmarkScreen() {
   }, items1);
   const memo = first1.useMemo(() => items1.find((key) => key.key === first2).name, items2);
   const items3 = [memo];
-  const memo1 = first1.useMemo(() => _mod10906.splitGraphemes(memo).length, items3);
+  const memo1 = first1.useMemo(() => _mod10911.splitGraphemes(memo).length, items3);
   const items4 = [first];
   const memo2 = first1.useMemo(() => items.filter((item) => set.has(item)), items4);
   const items5 = [memo2];
@@ -240,7 +240,7 @@ export default function DevToolsDisplayNameEffectsBenchmarkScreen() {
         const length = String(Math.max(run.params.rowCount - 1, 0)).length;
         const padStartResult = String(arg1).padStart(length, "0");
         const StringResult = String(arg1);
-        const splitGraphemesResult = _mod10906.splitGraphemes(run.params.name);
+        const splitGraphemesResult = _mod10911.splitGraphemes(run.params.name);
         let sum = padStartResult;
         if (splitGraphemesResult.length > length) {
           const substr = splitGraphemesResult.slice(0, splitGraphemesResult.length - length);

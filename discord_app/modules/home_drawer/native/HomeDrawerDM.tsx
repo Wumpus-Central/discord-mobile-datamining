@@ -1,14 +1,14 @@
-// === Module 16342: HomeDrawerDM ===
+// === Module 16345: HomeDrawerDM ===
 
-// Module 16342 (HomeDrawerDM)
+// Module 16345 (HomeDrawerDM)
 import HomeDrawerExperiment from "HomeDrawerExperiment" /* 4423 */;
 import Text_Text from "Text/Text" /* 4556 */;
 import useChannelName from "useChannelName" /* 4713 */;
 import ChannelListLayoutTypes from "ChannelListLayoutTypes" /* 7879 */;
-import BellSlashIcon2 from "BellSlashIcon" /* 9059 */;
-import ChannelRowPreview from "ChannelRowPreview" /* 10109 */;
-import BellZIcon from "BellZIcon" /* 13287 */;
-import useMessagePreviewsDefault from "useMessagePreviews" /* 15317 */;
+import BellSlashIcon2 from "BellSlashIcon" /* 9064 */;
+import ChannelRowPreview from "ChannelRowPreview" /* 10114 */;
+import BellZIcon from "BellZIcon" /* 13291 */;
+import useMessagePreviewsDefault from "useMessagePreviews" /* 15320 */;
 import noop from "module_19" /* 19 */;
 import RelationshipStore from "RelationshipStore" /* 4209 */;
 import UserGuildSettingsStore from "UserGuildSettingsStore" /* 4741 */;
@@ -37,9 +37,9 @@ function HomeDrawerDMExpandedChildren(channel) {
     return tmp2;
   });
   const obj2 = channel(504);
-  const tmp3 = useMessagePreviewsDefault(channel, { unread: channel(16343).useBaseChannelUnreadBadgeState(channel, false).unread });
+  const tmp3 = useMessagePreviewsDefault(channel, { unread: channel(16346).useBaseChannelUnreadBadgeState(channel, false).unread });
   closure_4 = tmp3;
-  const obj3 = channel(16343);
+  const obj3 = channel(16346);
   const items2 = [UserGuildSettingsStore];
   const stateFromStores1 = channel(504).useStateFromStores(items2, () => UserGuildSettingsStore.getChannelMuteConfig(channel.guild_id, channel.id));
   const items3 = [stateFromStores1];
@@ -95,7 +95,7 @@ function HomeDrawerDMExpandedChildren(channel) {
     }
     return tmp2;
   }, items5);
-  return closure_10(channel(16305).HomeDrawerSharedItem, { title, subtitle });
+  return closure_10(channel(16308).HomeDrawerSharedItem, { title, subtitle });
 }
 const View = fn(17).View;
 const isMultiUserDM = fn(1961).isMultiUserDM;

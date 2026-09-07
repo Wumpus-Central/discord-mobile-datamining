@@ -1,13 +1,13 @@
-// === Module 15419: AnimateStickersSetting ===
+// === Module 15422: AnimateStickersSetting ===
 
-// Module 15419 (AnimateStickersSetting)
+// Module 15422 (AnimateStickersSetting)
 import util from "util" /* 1114 */;
 import UserSettings from "UserSettings" /* 1935 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const StickerAnimationSettings = fn(1938).StickerAnimationSettings;
-fn(11468);
+fn(11473);
 let SettingBuilders = {
   useTitle() {
     const intl = util.intl;

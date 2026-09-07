@@ -1,6 +1,6 @@
-// === Module 17079: SoundboardSoundPickerCategories ===
+// === Module 17082: SoundboardSoundPickerCategories ===
 
-// Module 17079 (SoundboardSoundPickerCategories)
+// Module 17082 (SoundboardSoundPickerCategories)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import native from "native" /* 1178 */;
@@ -11,10 +11,10 @@ import SoundboardTypes from "SoundboardTypes" /* 5020 */;
 import LockIcon from "LockIcon" /* 5095 */;
 import Pressables from "Pressables" /* 5123 */;
 import GuildIconDefault from "GuildIcon" /* 5584 */;
-import TrophyIcon from "TrophyIcon" /* 8717 */;
-import PremiumFeatureUpsellUtils from "PremiumFeatureUpsellUtils" /* 9965 */;
-import _modDef10391 from "module_10391" /* 10391 */;
-import _modDef17077 from "module_17077" /* 17077 */;
+import TrophyIcon from "TrophyIcon" /* 8722 */;
+import PremiumFeatureUpsellUtils from "PremiumFeatureUpsellUtils" /* 9970 */;
+import _modDef10396 from "module_10396" /* 10396 */;
+import _modDef17080 from "module_17080" /* 17080 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1371 */;
 
@@ -36,7 +36,7 @@ function SoundCategoryItem(style) {
   } else if (SoundboardTypes.SoundboardSoundGridSectionType.FAVORITES === type) {
     const intl4 = util.intl;
     name = intl4.string(util.t.y3LQCG);
-    tmp6 = _modDef10391;
+    tmp6 = _modDef10396;
     tmp7 = null;
     tmp14Result = null;
   } else if (SoundboardTypes.SoundboardSoundGridSectionType.FREQUENTLY_USED === type) {
@@ -49,13 +49,13 @@ function SoundCategoryItem(style) {
   } else if (SoundboardTypes.SoundboardSoundGridSectionType.DEFAULTS === type) {
     const intl2 = util.intl;
     name = intl2.string(util.t.Rtvk9X);
-    tmp6 = _modDef17077;
+    tmp6 = _modDef17080;
     tmp7 = null;
     tmp14Result = null;
   } else if (SoundboardTypes.SoundboardSoundGridSectionType.SEARCH === type) {
     const intl = util.intl;
     name = intl.string(util.t.sKt3xS);
-    tmp6 = _modDef17077;
+    tmp6 = _modDef17080;
     tmp7 = null;
     tmp14Result = null;
   } else {
@@ -109,7 +109,7 @@ function getItemLayout(arg0, index) {
 get_ActivityIndicator = fn(17);
 const StyleSheet = get_ActivityIndicator.StyleSheet;
 ({ View: hasOwnProperty, FlatList: metroRequire } = get_ActivityIndicator);
-const setSearchQuery = fn(17061).setSearchQuery;
+const setSearchQuery = fn(17064).setSearchQuery;
 const Constants = fn(1074);
 ({ CATEGORY_ICON_SIZE, EXPRESSION_FOOTER_HEIGHT: closure_9, NODE_SIZE, NODE_MARGIN } = Constants);
 const jsxProd = fn(21);

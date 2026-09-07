@@ -1,10 +1,10 @@
-// === Module 9989: UserSettingsSoundboardVolume ===
+// === Module 9994: UserSettingsSoundboardVolume ===
 
-// Module 9989 (UserSettingsSoundboardVolume)
+// Module 9994 (UserSettingsSoundboardVolume)
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2024 */;
 import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7162 */;
 import SoundboardActionCreators from "SoundboardActionCreators" /* 7338 */;
-import VolumeSliderDefault from "VolumeSlider" /* 9986 */;
+import VolumeSliderDefault from "VolumeSlider" /* 9991 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -51,5 +51,5 @@ export default function SoundboardVolume() {
   obj1.children = items;
   obj.subLabel = closure_7(closure_6, obj1);
   obj.children = closure_5(analyticsLocations(5605).TableRow, obj);
-  return closure_5(analyticsLocations(9979).UserSettingsTableRowGroup, obj);
+  return closure_5(analyticsLocations(9984).UserSettingsTableRowGroup, obj);
 };

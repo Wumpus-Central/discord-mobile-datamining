@@ -1,9 +1,9 @@
-// === Module 12050: ApplicationsImage ===
+// === Module 12054: ApplicationsImage ===
 
-// Module 12050 (ApplicationsImage)
+// Module 12054 (ApplicationsImage)
 import nativeDefault from "native" /* 576 */;
 import FastImageDefault from "FastImage" /* 5587 */;
-import AppLauncherNativeUtils from "AppLauncherNativeUtils" /* 12051 */;
+import AppLauncherNativeUtils from "AppLauncherNativeUtils" /* 12055 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

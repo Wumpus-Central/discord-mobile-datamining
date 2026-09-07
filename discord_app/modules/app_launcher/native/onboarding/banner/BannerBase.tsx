@@ -1,6 +1,6 @@
-// === Module 12061: BannerBase ===
+// === Module 12065: BannerBase ===
 
-// Module 12061 (BannerBase)
+// Module 12065 (BannerBase)
 import nativeDefault from "native" /* 576 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4296 */;
 import spring from "spring" /* 4974 */;
@@ -16,7 +16,7 @@ const PX_12 = nativeDefault.space.PX_12;
 const SPRING_CONFIG = { mass: 1, stiffness: 100, damping: 15 };
 fn(4560);
 let createStyles = { banner: null, bannerGradientColor: null, bannerBackgroundGradient: null, imageContainer: null, trinketsLottie: null, bannerTextContainer: null, bannerText: null };
-const rect = { backgroundColor: nativeDefault.colors.BACKGROUND_BRAND, position: "absolute", borderRadius: nativeDefault.radii.lg, paddingHorizontal: nativeDefault.space.PX_16, paddingVertical: PX_12, flexDirection: "row", minHeight: fn(12050).APP_ICON_SIZE + 2 * PX_12 + 4, bottom: nativeDefault.space.PX_16, left: nativeDefault.space.PX_16 };
+const rect = { backgroundColor: nativeDefault.colors.BACKGROUND_BRAND, position: "absolute", borderRadius: nativeDefault.radii.lg, paddingHorizontal: nativeDefault.space.PX_16, paddingVertical: PX_12, flexDirection: "row", minHeight: fn(12054).APP_ICON_SIZE + 2 * PX_12 + 4, bottom: nativeDefault.space.PX_16, left: nativeDefault.space.PX_16 };
 createStyles.banner = rect;
 createStyles.bannerGradientColor = { backgroundColor: "#7eaaff" };
 const rect1 = { position: "absolute", top: 0, left: 0, borderRadius: nativeDefault.radii.lg };
@@ -99,7 +99,7 @@ export default function BannerBase(arg0) {
   obj2 = { style: tmp.imageContainer, children: null };
   obj3 = { style: tmp.trinketsLottie, source: null, autoPlay: null };
   const tmp2 = _slicedToArray(noop.useState(0), 2);
-  obj3.source = require("module_12062");
+  obj3.source = require("module_12066");
   obj3.autoPlay = !stateFromStores;
   const items5 = [closure_7(sharedValue(5529), obj3), image];
   obj2.children = items5;

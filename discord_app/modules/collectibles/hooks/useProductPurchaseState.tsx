@@ -1,8 +1,8 @@
-// === Module 8842: useProductPurchaseState ===
+// === Module 8847: useProductPurchaseState ===
 
-// Module 8842 (useProductPurchaseState)
+// Module 8847 (useProductPurchaseState)
 import CollectiblesItemType from "CollectiblesItemType" /* 1889 */;
-import compactDefault from "compact" /* 8843 */;
+import compactDefault from "compact" /* 8848 */;
 import CollectiblesPurchaseStore from "CollectiblesPurchaseStore" /* 7558 */;
 
 require = fn;

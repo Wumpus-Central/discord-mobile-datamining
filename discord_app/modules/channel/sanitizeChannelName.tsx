@@ -1,6 +1,6 @@
-// === Module 9741: sanitizeChannelName ===
+// === Module 9746: sanitizeChannelName ===
 
-// Module 9741 (sanitizeChannelName)
+// Module 9746 (sanitizeChannelName)
 import ChannelTypes from "ChannelTypes" /* 1094 */;
 import sanitizeGuildTextChannelNameDefault from "sanitizeGuildTextChannelName" /* 4715 */;
 import sanitizeThreadNameDefault from "sanitizeThreadName" /* 7274 */;

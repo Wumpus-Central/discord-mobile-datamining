@@ -1,6 +1,6 @@
-// === Module 13243: createMediaPostPreviewEmbedContent ===
+// === Module 13247: createMediaPostPreviewEmbedContent ===
 
-// Module 13243 (createMediaPostPreviewEmbedContent)
+// Module 13247 (createMediaPostPreviewEmbedContent)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import MediaPostEmbedUtils from "MediaPostEmbedUtils" /* 4708 */;
@@ -11,7 +11,7 @@ import AgeVerificationUtils from "AgeVerificationUtils" /* 4773 */;
 import ExplicitMediaRedactionUtils from "ExplicitMediaRedactionUtils" /* 7600 */;
 import useAuthorWithProcessedColor from "useAuthorWithProcessedColor" /* 7960 */;
 import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 7962 */;
-import MediaPostEmbedStore2 from "MediaPostEmbedStore" /* 11426 */;
+import MediaPostEmbedStore2 from "MediaPostEmbedStore" /* 11431 */;
 import get_ActivityIndicator from "module_17" /* 17 */;
 import DevSettingsStore from "DevSettingsStore" /* 4559 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
@@ -93,7 +93,7 @@ export default function createMediaPostPreviewEmbedContent(message, roleStyle, u
             if (mediaPostEmbedCommonData.shouldShowBlurredThumbnailImage) {
               const obj2 = {};
               const merged = Object.assign(mediaPostEmbedCommonData);
-              obj2.blurredCoverImage = React3.resolveAssetSource(tmp10(13244)).uri;
+              obj2.blurredCoverImage = React3.resolveAssetSource(tmp10(13248)).uri;
               obj2.footer = formatToPartsResult;
               obj2.ctaButtonColor = tmp11;
               return obj2;

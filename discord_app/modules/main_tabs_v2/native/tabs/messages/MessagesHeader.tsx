@@ -1,11 +1,11 @@
-// === Module 16021: MessagesHeader ===
+// === Module 16024: MessagesHeader ===
 
-// Module 16021 (MessagesHeader)
+// Module 16024 (MessagesHeader)
 import nativeDefault from "native" /* 576 */;
 import spring from "spring" /* 4974 */;
 import ButtonConstants from "ButtonConstants" /* 4980 */;
-import useScaledTextLineHeight from "useScaledTextLineHeight" /* 10119 */;
-import MobileVisualRefreshExperiment from "MobileVisualRefreshExperiment" /* 12187 */;
+import useScaledTextLineHeight from "useScaledTextLineHeight" /* 10124 */;
+import MobileVisualRefreshExperiment from "MobileVisualRefreshExperiment" /* 12191 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -60,7 +60,7 @@ export default noop.memo(function MessagesHeader(height) {
   fn.__workletHash = 17233409273245;
   fn.__initData = __initData;
   const animatedStyle = obj.useAnimatedStyle(fn);
-  let obj2 = height(16022);
+  let obj2 = height(16025);
   const isHomeDrawerEnabled = obj2.useIsHomeDrawerEnabled();
   const callback = noop.useCallback(() => {
     const rootNavigationRef = height(headerPanel[12]).getRootNavigationRef();
@@ -98,7 +98,7 @@ export default noop.memo(function MessagesHeader(height) {
   }, []);
   obj = { variant: "primary", icon: null, size: "sm", accessibilityLabel: null, onPress: null };
   const tmp12 = scrollPosition(5625)("bespoke");
-  obj.icon = closure_6(height(10951).PlusLargeIcon, { size: "sm", color: scrollPosition(576).colors.WHITE });
+  obj.icon = closure_6(height(10956).PlusLargeIcon, { size: "sm", color: scrollPosition(576).colors.WHITE });
   const intl = height(1114).intl;
   obj.accessibilityLabel = intl.string(height(1114).t.jD1qzM);
   obj.onPress = callback3;
@@ -119,7 +119,7 @@ export default noop.memo(function MessagesHeader(height) {
   const obj5 = { onPress: callback2, variant: "secondary", size: "sm", icon: scrollPosition(7052), accessibilityLabel: null };
   const intl3 = tmp3(1114).intl;
   obj5.accessibilityLabel = intl3.string(height(1114).t["5h0QOP"]);
-  const items2 = [closure_6(height(8097).IconButton, obj5), closure_6(scrollPosition(16028), { noMargin: true, onPress: callback, alternateVariant: true }), , ];
+  const items2 = [closure_6(height(8097).IconButton, obj5), closure_6(scrollPosition(16031), { noMargin: true, onPress: callback, alternateVariant: true }), , ];
   const obj6 = { variant: "secondary", grow: true, shrink: true, size: "sm", icon: scrollPosition(4498), onPress: callback1, maxFontSizeMultiplier: 1, text: null };
   const intl4 = tmp3(1114).intl;
   obj6.text = intl4.string(height(1114).t.zIJnA6);

@@ -1,6 +1,6 @@
-// === Module 15262: SettingsAppearanceScreen ===
+// === Module 15265: SettingsAppearanceScreen ===
 
-// Module 15262 (SettingsAppearanceScreen)
+// Module 15265 (SettingsAppearanceScreen)
 import util from "util" /* 1114 */;
 import PlatformUtils from "PlatformUtils" /* 1115 */;
 import HeaderShared from "HeaderShared" /* 7863 */;
@@ -10,7 +10,7 @@ import SelectivelySyncedUserSettingsStore from "SelectivelySyncedUserSettingsSto
 import ThemeStore from "ThemeStore" /* 1183 */;
 
 require = fn;
-const FontScaleStore = fn(15263);
+const FontScaleStore = fn(15266);
 ({ DEFAULT_FONT_SCALE_STORE_STATE: closure_7, useFontScaleStore: closure_8 } = FontScaleStore);
 const MobileUserSettings = fn(7975).MobileUserSettings;
 const HelpdeskArticles = fn(1074).HelpdeskArticles;
@@ -21,8 +21,8 @@ const result = size.fileFinishedImporting("modules/user_settings/appearance/nati
 export default noop.memo(() => {
   nativeStackNavigation(4992)(() => {
     if (SelectivelySyncedUserSettingsStore.shouldSync("appearance")) {
-      const userCustomThemes = closure_0(15264).fetchUserCustomThemes();
-      const obj = closure_0(15264);
+      const userCustomThemes = closure_0(15267).fetchUserCustomThemes();
+      const obj = closure_0(15267);
     }
   });
   let items = [ThemeStore, ClientThemesBackgroundStore];
@@ -56,7 +56,7 @@ export default noop.memo(() => {
       }
       obj = { headerRight: null };
       const intl = util.intl;
-      obj.headerRight = HeaderShared.getRenderHeaderTextButton(intl.string(util.t["R3BPH+"]), () => nativeStackNavigation(10120).setCustomFontScale(closure_1_0.fontScale, closure_1_0.isClassicChatFontScaleEnabled));
+      obj.headerRight = HeaderShared.getRenderHeaderTextButton(intl.string(util.t["R3BPH+"]), () => nativeStackNavigation(10125).setCustomFontScale(closure_1_0.fontScale, closure_1_0.isClassicChatFontScaleEnabled));
       nativeStackNavigation.setOptions(obj);
       const tmpResult = HeaderShared;
     }
@@ -65,7 +65,7 @@ export default noop.memo(() => {
     closure_1_0(dependencyMap[13]).batchUpdates(() => state.setState(closure_1_7));
   }, []);
   const node = noop.useMemo(() => {
-    closure_0(11468);
+    closure_0(11473);
     let obj = { sections: null };
     obj = { label: null, settings: null };
     const intl = closure_0(1114).intl;
@@ -122,5 +122,5 @@ export default noop.memo(() => {
     return obj.createList(obj);
   }, []);
   let obj2 = require("useNavigation");
-  return jsx(nativeStackNavigation(14689), { node }, "" + theme + "-" + gradientPresetId);
+  return jsx(nativeStackNavigation(14692), { node }, "" + theme + "-" + gradientPresetId);
 });

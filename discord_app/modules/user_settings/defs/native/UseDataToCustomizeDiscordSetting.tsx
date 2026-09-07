@@ -1,18 +1,18 @@
-// === Module 14857: UseDataToCustomizeDiscordSetting ===
+// === Module 14860: UseDataToCustomizeDiscordSetting ===
 
-// Module 14857 (UseDataToCustomizeDiscordSetting)
+// Module 14860 (UseDataToCustomizeDiscordSetting)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1114 */;
 import AlertActionCreatorsDefault from "AlertActionCreators" /* 4904 */;
 import common_AlertDefault from "common/Alert" /* 4994 */;
-import useParentalControlSettings from "useParentalControlSettings" /* 14824 */;
-import ConsentActionCreators from "ConsentActionCreators" /* 14855 */;
-import showDataPrivacyRateLimitAlert from "showDataPrivacyRateLimitAlert" /* 14856 */;
+import useParentalControlSettings from "useParentalControlSettings" /* 14827 */;
+import ConsentActionCreators from "ConsentActionCreators" /* 14858 */;
+import showDataPrivacyRateLimitAlert from "showDataPrivacyRateLimitAlert" /* 14859 */;
 import ConsentStore from "ConsentStore" /* 6595 */;
 
 require = fn;
 const Consents = fn(1074).Consents;
-fn(11468);
+fn(11473);
 let SettingBuilders = {
   useTitle() {
     const intl = util.intl;

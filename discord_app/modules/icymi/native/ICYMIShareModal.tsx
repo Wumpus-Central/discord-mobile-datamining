@@ -1,6 +1,6 @@
-// === Module 16502: ICYMIShareModal ===
+// === Module 16505: ICYMIShareModal ===
 
-// Module 16502 (ICYMIShareModal)
+// Module 16505 (ICYMIShareModal)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1477 */;
@@ -13,10 +13,10 @@ import ThemedGradientDefault from "ThemedGradient" /* 5125 */;
 import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 6981 */;
 import HeaderShared from "HeaderShared" /* 7863 */;
 import ClientThemesOverrides from "ClientThemesOverrides" /* 7872 */;
-import ShareEventUtils from "ShareEventUtils" /* 9775 */;
-import useShareChatInputActions from "useShareChatInputActions" /* 11692 */;
-import ShareChatInputDefault from "ShareChatInput" /* 11701 */;
-import _modDef16504 from "module_16504" /* 16504 */;
+import ShareEventUtils from "ShareEventUtils" /* 9780 */;
+import useShareChatInputActions from "useShareChatInputActions" /* 11697 */;
+import ShareChatInputDefault from "ShareChatInput" /* 11706 */;
+import _modDef16507 from "module_16507" /* 16507 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
@@ -55,7 +55,7 @@ function Screenshot(setUri) {
   const tmp4 = useColorThemeBackgroundDefault();
   const obj3 = { absolute: true, wide: true, tall: true, mix: true, mixAmount: null };
   const obj4 = { dark: null, light: null };
-  const tmp6 = _modDef16504;
+  const tmp6 = _modDef16507;
   obj4.dark = client_themes_ClientThemesUtils.OverlayOpacity.LEVEL_7;
   obj4.light = client_themes_ClientThemesUtils.OverlayOpacity.LEVEL_8;
   obj3.mixAmount = obj4;
@@ -374,7 +374,7 @@ class ICYMIShareModal {
 const View = fn(17).View;
 const DraftType = fn(4901).DraftType;
 const AbortCodes = fn(1074).AbortCodes;
-const UserRowModes = fn(10860).UserRowModes;
+const UserRowModes = fn(10865).UserRowModes;
 const MessageSendLocation = fn(4553).MessageSendLocation;
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
@@ -445,7 +445,7 @@ export const GameShareModal = function GameShareModal(content) {
             closure_1 = tmp7;
             closure_129_0 = undefined;
             c4 = 1;
-            let obj3 = entry(16503);
+            let obj3 = entry(16506);
             let obj1 = { channel: entry, content: "", entry, whenReady: false, doNotNotifyOnError: true, location: constants2.ICYMI };
             c5 = 2;
             c6 = 1;

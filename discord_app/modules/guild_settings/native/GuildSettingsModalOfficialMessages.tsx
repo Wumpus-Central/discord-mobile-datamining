@@ -1,6 +1,6 @@
-// === Module 17790: GuildSettingsModalOfficialMessages ===
+// === Module 17793: GuildSettingsModalOfficialMessages ===
 
-// Module 17790 (GuildSettingsModalOfficialMessages)
+// Module 17793 (GuildSettingsModalOfficialMessages)
 import nativeDefault from "native" /* 576 */;
 import _modDef672 from "module_672" /* 672 */;
 import util from "util" /* 1114 */;
@@ -11,12 +11,12 @@ import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4527
 import Text_Text from "Text/Text" /* 4556 */;
 import GuildOfficialMessageUtils from "GuildOfficialMessageUtils" /* 7267 */;
 import HeaderActionButton from "HeaderActionButton" /* 7377 */;
-import _modDef15282 from "module_15282" /* 15282 */;
+import _modDef15285 from "module_15285" /* 15285 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4552 */;
 import GuildStore from "GuildStore" /* 1979 */;
-import GuildSettingsStore from "GuildSettingsStore" /* 9064 */;
+import GuildSettingsStore from "GuildSettingsStore" /* 9069 */;
 
 const ReanimatedRexportDefault = ReanimatedRexport;
 
@@ -47,7 +47,7 @@ function MessagePreview(theme) {
   const items1 = [tmp.chatContainerInner, { backgroundColor: obj2.alpha(closure_1_10).hex() }];
   obj.style = items1;
   const hexResult1 = obj2.alpha(closure_1_10).hex();
-  const items2 = [closure_1_12(native.Avatar, { source: _modDef15282 }), ];
+  const items2 = [closure_1_12(native.Avatar, { source: _modDef15285 }), ];
   obj2 = { style: tmp.chatContent, children: null };
   const obj3 = { style: tmp.chatHeader, children: null };
   const obj4 = { animated: true, style: animatedStyles.textStrong, variant: "text-md/semibold", lineClamp: 1, children: null };
@@ -188,7 +188,7 @@ export default function GuildSettingsModalOfficialMessages(guildId) {
       const obj = { officialMessageColor };
       obj.updateGuild(obj);
     };
-    obj.openLazy(asyncRequireImpl(16291, dependencyMap.paths), "RoleColorPicker", obj);
+    obj.openLazy(asyncRequireImpl(16294, dependencyMap.paths), "RoleColorPicker", obj);
   }, items5);
   const tmp8 = hasChanges(officialMessageColor.useState(0), 2);
   [tmp15, c7] = hasChanges(officialMessageColor.useState(0), 2);

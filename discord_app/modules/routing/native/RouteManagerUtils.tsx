@@ -1,6 +1,6 @@
-// === Module 12782: RouteManagerUtils ===
+// === Module 12786: RouteManagerUtils ===
 
-// Module 12782 (RouteManagerUtils)
+// Module 12786 (RouteManagerUtils)
 import LoggerDefault from "Logger" /* 3 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import router_utils from "router_utils" /* 1100 */;
@@ -11,9 +11,9 @@ import ModalActionCreatorsDefault from "ModalActionCreators" /* 4763 */;
 import PrivateChannelCallUtils from "PrivateChannelCallUtils" /* 4767 */;
 import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 5411 */;
 import GuildActionCreatorsDefault from "GuildActionCreators" /* 5520 */;
-import MemoryRouter from "MemoryRouter" /* 12783 */;
-import DefaultRouteActionCreators from "DefaultRouteActionCreators" /* 12788 */;
-import RouteManagerDefault from "RouteManager" /* 12789 */;
+import MemoryRouter from "MemoryRouter" /* 12787 */;
+import DefaultRouteActionCreators from "DefaultRouteActionCreators" /* 12792 */;
+import RouteManagerDefault from "RouteManager" /* 12793 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 import DefaultRouteStore from "DefaultRouteStore" /* 4385 */;
@@ -110,7 +110,7 @@ function saveLastNonVoiceRouteListener(pathname) {
   }
 }
 function updateSelectedChannelListener(location) {
-  channel2(12783);
+  channel2(12787);
   let obj = { path: items, strict: false, exact: false };
   const matchPathResult = obj.matchPath(location.pathname, obj);
   let params;
@@ -197,7 +197,7 @@ function updateSelectedChannelListener(location) {
     const _HermesInternal2 = HermesInternal;
     logger.verbose("UpdateSelectedChannelListener -> voice route present! " + json2 + " " + JSON.stringify(obj5) + " ");
   }
-  tmpResult = tmp(9681);
+  tmpResult = tmp(9686);
   if (!tmpResult.isVoicePanelEnabled(channel2)) {
     const guild1 = GuildActionCreatorsDefault.selectGuild(voiceGuildId2);
     const obj6 = { guildId: voiceGuildId2, channelId: voiceChannelId2, messageId: voiceMessageId2, jumpType };
@@ -254,12 +254,12 @@ function logRouteChange(pathname) {
   logger.log("Navigated to: " + pathname.pathname);
 }
 let closure_3 = ["channelId", "guildId"];
-const setVoiceChatDrawerState = fn(9467).setVoiceChatDrawerState;
+const setVoiceChatDrawerState = fn(9472).setVoiceChatDrawerState;
 let closure_6 = fn(1961).isGuildSelectableChannelType;
 const Constants = fn(1074);
 ({ ME: closure_11, Routes } = Constants);
 const ChannelTypes = Constants.ChannelTypes;
-const VoiceChatDrawerState = fn(9468).VoiceChatDrawerState;
+const VoiceChatDrawerState = fn(9473).VoiceChatDrawerState;
 const logger = new LoggerDefault("RouteUtils");
 let c16 = false;
 const RouteParam = fn(4399).RouteParam;

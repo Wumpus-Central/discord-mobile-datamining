@@ -1,6 +1,6 @@
-// === Module 9192: guild_profile/GuildProfileUtils ===
+// === Module 9197: guild_profile/GuildProfileUtils ===
 
-// Module 9192 (guild_profile/GuildProfileUtils)
+// Module 9197 (guild_profile/GuildProfileUtils)
 import AvatarUtilsDefault from "AvatarUtils" /* 1396 */;
 import tinycolorDefault from "tinycolor" /* 7552 */;
 import useAvatarColor from "useAvatarColor" /* 8132 */;

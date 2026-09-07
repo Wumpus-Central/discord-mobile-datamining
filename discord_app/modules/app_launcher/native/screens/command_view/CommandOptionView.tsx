@@ -1,10 +1,10 @@
-// === Module 12160: CommandOptionView ===
+// === Module 12164: CommandOptionView ===
 
-// Module 12160 (CommandOptionView)
+// Module 12164 (CommandOptionView)
 import nativeDefault from "native" /* 576 */;
 import ReanimatedRexportDefault from "ReanimatedRexport" /* 4296 */;
-import _modDef10415 from "module_10415" /* 10415 */;
-import AppLauncherCommandOptionDefault from "AppLauncherCommandOption" /* 12163 */;
+import _modDef10420 from "module_10420" /* 10420 */;
+import AppLauncherCommandOptionDefault from "AppLauncherCommandOption" /* 12167 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4552 */;
 
@@ -34,7 +34,7 @@ export default function CommandOptionView(option) {
   const stateFromStores = obj.useStateFromStores(items, () => AccessibilityStore.useReducedMotion);
   const ReduceMotion = option(4296).ReduceMotion;
   const tmp5 = stateFromStores ? ReduceMotion.Always : ReduceMotion.Never;
-  const optionEnteringAnimation = option(12161).useOptionEnteringAnimation();
+  const optionEnteringAnimation = option(12165).useOptionEnteringAnimation();
   let fn = optionEnteringAnimation.registerAnimationCompleteCallback;
   if (set.has(option.type)) {
     if (option.required || isPreSelectedOption) {
@@ -61,8 +61,8 @@ export default function CommandOptionView(option) {
     const obj2 = {
       collapsable: false,
       entering: optionEnteringAnimation.EnteringAnimation,
-      exiting: tmp2(12161).ExitingAnimation,
-      layout: tmp2(12161).LayoutAnimation,
+      exiting: tmp2(12165).ExitingAnimation,
+      layout: tmp2(12165).LayoutAnimation,
       onLayout(arg0) {
           importDefault(arg0, option);
         },
@@ -101,7 +101,7 @@ export default function CommandOptionView(option) {
     items2[2] = closure_5(tmp2(4556).Text, obj6);
     if (hasItem) {
       const obj7 = { collapsable: false, entering: reduceMotionResult1, exiting: reduceMotionResult, style: tmp.optionErrorContainer, children: null };
-      const obj8 = { style: tmp.optionErrorIcon, source: _modDef10415, size: tmp2(1178).IconSizes.REFRESH_SMALL_16 };
+      const obj8 = { style: tmp.optionErrorIcon, source: _modDef10420, size: tmp2(1178).IconSizes.REFRESH_SMALL_16 };
       const items3 = [closure_5(tmp2(1178).Icon, obj8), ];
       const obj9 = { variant: "text-xs/medium", color: "text-feedback-critical", children: optionValidationResults[option.name].error };
       items3[1] = closure_5(tmp2(4556).Text, obj9);
@@ -112,10 +112,10 @@ export default function CommandOptionView(option) {
     obj3.children = items2;
     obj2.children = closure_6(View, obj3);
     obj1.children = closure_5(ReanimatedRexportDefault.View, obj2);
-    obj.children = closure_5(tmp2(12162).AwaitAnimationContext, obj1);
+    obj.children = closure_5(tmp2(12166).AwaitAnimationContext, obj1);
     return closure_5(tmp2(4296).LayoutAnimationConfig, obj);
   } else {
     return null;
   }
-  const tmp2Result = option(12161);
+  const tmp2Result = option(12165);
 };

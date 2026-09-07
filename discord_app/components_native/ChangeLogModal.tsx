@@ -1,6 +1,6 @@
-// === Module 15542: ChangeLogModal ===
+// === Module 15545: ChangeLogModal ===
 
-// Module 15542 (ChangeLogModal)
+// Module 15545 (ChangeLogModal)
 import nativeDefault from "native" /* 576 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
 import ModalActionCreatorsDefault from "ModalActionCreators" /* 4763 */;
@@ -10,9 +10,9 @@ import Navigator from "Navigator" /* 7000 */;
 import ChangeLogStandardTemplateDefault from "ChangeLogStandardTemplate" /* 8090 */;
 import openMediaModal from "openMediaModal" /* 8261 */;
 import common_VideoDefault from "common/Video" /* 8307 */;
-import TouchableHitBoxDefault from "TouchableHitBox" /* 9050 */;
-import _modDef10397 from "module_10397" /* 10397 */;
-import _modDef15543 from "module_15543" /* 15543 */;
+import TouchableHitBoxDefault from "TouchableHitBox" /* 9055 */;
+import _modDef10402 from "module_10402" /* 10402 */;
+import _modDef15546 from "module_15546" /* 15546 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -276,7 +276,7 @@ prototype["renderVideo"] = function renderVideo() {
             },
         useLocalHTML: true
       };
-      const items = [closure_7(_modDef15543, obj1), ];
+      const items = [closure_7(_modDef15546, obj1), ];
       let tmp6Result = null;
       if (!tmp2) {
         const obj2 = { style: tmp.videoOverlay, source: null };
@@ -307,7 +307,7 @@ prototype["renderVideo"] = function renderVideo() {
   let tmp12Result = null;
   if (null != video) {
     const obj6 = { accessibilityLabel: "Play Video", accessibilityRole: "button", style: tmp.videoOverlay, onPress: self.playVideo, children: null };
-    const obj7 = { accessibilityLabel: "Play Video", accessibilityRole: "button", source: _modDef10397, onPress: self.playVideo, style: tmp.playButton, iconSize: tmp18(1178).IconSizes.CUSTOM, iconStyle: tmp.playIcon };
+    const obj7 = { accessibilityLabel: "Play Video", accessibilityRole: "button", source: _modDef10402, onPress: self.playVideo, style: tmp.playButton, iconSize: tmp18(1178).IconSizes.CUSTOM, iconStyle: tmp.playIcon };
     obj6.children = closure_7(TouchableHitBoxDefault, obj7);
     tmp12Result = closure_7(tmp18(5123).PressableOpacity, obj6);
     const tmp15Result = TouchableHitBoxDefault;

@@ -1,12 +1,12 @@
-// === Module 16239: DMChannel ===
+// === Module 16242: DMChannel ===
 
-// Module 16239 (DMChannel)
+// Module 16242 (DMChannel)
 import nativeDefault from "native" /* 576 */;
 import transitionToChannel from "transitionToChannel" /* 4571 */;
-import getChannelA11yLabelDefault from "getChannelA11yLabel" /* 9770 */;
-import openChannelLongPressActionSheet from "openChannelLongPressActionSheet" /* 10913 */;
-import useCallA11yStateDefault from "useCallA11yState" /* 16032 */;
-import ChannelItemDefault from "ChannelItem" /* 16116 */;
+import getChannelA11yLabelDefault from "getChannelA11yLabel" /* 9775 */;
+import openChannelLongPressActionSheet from "openChannelLongPressActionSheet" /* 10918 */;
+import useCallA11yStateDefault from "useCallA11yState" /* 16035 */;
+import ChannelItemDefault from "ChannelItem" /* 16119 */;
 import noop from "module_19" /* 19 */;
 import ReadStateStore from "ReadStateStore" /* 4575 */;
 import UserGuildSettingsStore from "UserGuildSettingsStore" /* 4741 */;
@@ -16,7 +16,7 @@ const UnreadSetting = fn(4742).UnreadSetting;
 const jsx = fn(21).jsx;
 const createStyles = fn(4560);
 let obj = { container: null };
-obj = { marginVertical: fn(10118).CHANNEL_MARGIN_VERTICAL, marginHorizontal: 8, borderRadius: nativeDefault.radii.md };
+obj = { marginVertical: fn(10123).CHANNEL_MARGIN_VERTICAL, marginHorizontal: 8, borderRadius: nativeDefault.radii.md };
 obj.container = obj;
 let closure_8 = createStyles.createStyles(obj);
 const size = fn(2);

@@ -1,6 +1,6 @@
-// === Module 11999: UploaderError ===
+// === Module 12003: UploaderError ===
 
-// Module 11999 (UploaderError)
+// Module 12003 (UploaderError)
 import APIError from "APIError" /* 4462 */;
 
 const prototype = function UploaderError(body, arg1) {

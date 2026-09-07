@@ -1,6 +1,6 @@
-// === Module 11795: AcceptGuildTemplate ===
+// === Module 11800: AcceptGuildTemplate ===
 
-// Module 11795 (AcceptGuildTemplate)
+// Module 11800 (AcceptGuildTemplate)
 import _modDef12 from "module_12" /* 12 */;
 import _modDef38 from "module_38" /* 38 */;
 import nativeDefault from "native" /* 576 */;
@@ -11,13 +11,13 @@ import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1611 */;
 import GuildRoleRecordUtilsAll from "GuildRoleRecordUtils" /* 2017 */;
 import ActivityIndicator_ActivityIndicator from "ActivityIndicator/ActivityIndicator" /* 5577 */;
 import FreeFormInputGroupDefault from "FreeFormInputGroup" /* 6605 */;
-import FormDividerDefault from "FormDivider" /* 8599 */;
-import _modDef9713 from "module_9713" /* 9713 */;
-import RolePillDefault from "RolePill" /* 10947 */;
-import InvalidLink from "InvalidLink" /* 11796 */;
-import GuildIconUploaderDefault from "GuildIconUploader" /* 11798 */;
-import _modDef11803 from "module_11803" /* 11803 */;
-import _modDef11804 from "module_11804" /* 11804 */;
+import FormDividerDefault from "FormDivider" /* 8604 */;
+import _modDef9718 from "module_9718" /* 9718 */;
+import RolePillDefault from "RolePill" /* 10952 */;
+import InvalidLink from "InvalidLink" /* 11801 */;
+import GuildIconUploaderDefault from "GuildIconUploader" /* 11803 */;
+import _modDef11808 from "module_11808" /* 11808 */;
+import _modDef11809 from "module_11809" /* 11809 */;
 import noop from "module_19" /* 19 */;
 import TextStyles from "TextStyles" /* 5524 */;
 
@@ -143,11 +143,11 @@ function Channels(channels) {
       items[1] = channelCategoryIcon;
       const type = children.type;
       if (isGuildVocalChannelType(type)) {
-        let tmp10Result = _modDef9713;
+        let tmp10Result = _modDef9718;
       } else if (type === constants2.GUILD_CATEGORY) {
-        tmp10Result = _modDef11803;
+        tmp10Result = _modDef11808;
       } else {
-        tmp10Result = _modDef11804;
+        tmp10Result = _modDef11809;
       }
       obj.source = tmp10Result;
       const items1 = [closure_2_11(native.Icon, obj), ];

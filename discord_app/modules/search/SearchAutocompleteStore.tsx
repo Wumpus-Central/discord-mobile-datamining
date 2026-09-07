@@ -1,15 +1,15 @@
-// === Module 12342: SearchAutocompleteStore ===
+// === Module 12346: SearchAutocompleteStore ===
 
-// Module 12342 (SearchAutocompleteStore)
+// Module 12346 (SearchAutocompleteStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import UserUtilsDefault from "UserUtils" /* 4404 */;
 import _modDef4679 from "module_4679" /* 4679 */;
 import AutocompleteUtils from "AutocompleteUtils" /* 5442 */;
 import GuildUtilsDefault from "GuildUtils" /* 5519 */;
-import UserSearchManagerDefault from "UserSearchManager" /* 9839 */;
-import SearchUtils from "SearchUtils" /* 12340 */;
-import SearchTokens from "SearchTokens" /* 12341 */;
+import UserSearchManagerDefault from "UserSearchManager" /* 9844 */;
+import SearchUtils from "SearchUtils" /* 12344 */;
+import SearchTokens from "SearchTokens" /* 12345 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 import GuildMemberStore from "GuildMemberStore" /* 2021 */;
 import GuildStore from "GuildStore" /* 1979 */;

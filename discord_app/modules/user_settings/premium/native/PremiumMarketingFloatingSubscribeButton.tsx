@@ -1,6 +1,6 @@
-// === Module 13496: PremiumMarketingFloatingSubscribeButton ===
+// === Module 13500: PremiumMarketingFloatingSubscribeButton ===
 
-// Module 13496 (PremiumMarketingFloatingSubscribeButton)
+// Module 13500 (PremiumMarketingFloatingSubscribeButton)
 import nativeDefault from "native" /* 576 */;
 import _modDef672 from "module_672" /* 672 */;
 import timing from "timing" /* 4561 */;

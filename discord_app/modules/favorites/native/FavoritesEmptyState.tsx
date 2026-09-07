@@ -1,6 +1,6 @@
-// === Module 16735: FavoritesEmptyState ===
+// === Module 16738: FavoritesEmptyState ===
 
-// Module 16735 (FavoritesEmptyState)
+// Module 16738 (FavoritesEmptyState)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import _modDef3225 from "module_3225" /* 3225 */;
@@ -8,8 +8,8 @@ import Text_Text from "Text/Text" /* 4556 */;
 import Stack_Stack from "Stack/Stack" /* 4973 */;
 import components_Button_Button from "components/Button/Button" /* 4975 */;
 import native from "native" /* 5692 */;
-import FavoritesHooks from "FavoritesHooks" /* 10224 */;
-import PlusMediumIcon from "PlusMediumIcon" /* 12753 */;
+import FavoritesHooks from "FavoritesHooks" /* 10229 */;
+import PlusMediumIcon from "PlusMediumIcon" /* 12757 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

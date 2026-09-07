@@ -1,8 +1,8 @@
-// === Module 13021: useTrackUserProfileActivityView ===
+// === Module 13025: useTrackUserProfileActivityView ===
 
-// Module 13021 (useTrackUserProfileActivityView)
+// Module 13025 (useTrackUserProfileActivityView)
 import _slicedToArray from "module_32" /* 32 */;
-import ContentInventoryOutboxStore from "ContentInventoryOutboxStore" /* 8791 */;
+import ContentInventoryOutboxStore from "ContentInventoryOutboxStore" /* 8796 */;
 
 const require = fn;
 const noop = fn(19);

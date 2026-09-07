@@ -1,10 +1,10 @@
-// === Module 13604: GuildBoostingMarketingFaq ===
+// === Module 13608: GuildBoostingMarketingFaq ===
 
-// Module 13604 (GuildBoostingMarketingFaq)
+// Module 13608 (GuildBoostingMarketingFaq)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2024 */;
-import _modDef13605 from "module_13605" /* 13605 */;
+import _modDef13609 from "module_13609" /* 13609 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -174,7 +174,7 @@ export default function GuildBoostingMarketingFaq() {
       }
       obj = { color: str, style: tmp4.question, variant: "text-md/normal", children: getQuestion.getQuestion() };
       items1 = [closure_1_7(closure_0(4556).Text, obj), ];
-      const obj1 = { source: _modDef13605, style: null };
+      const obj1 = { source: _modDef13609, style: null };
       const items2 = [closure_0.questionIcon, ];
       let questionIconExpanded = tmp;
       if (tmp) {

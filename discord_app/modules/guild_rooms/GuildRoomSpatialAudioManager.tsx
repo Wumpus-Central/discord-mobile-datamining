@@ -1,9 +1,9 @@
-// === Module 17375: GuildRoomSpatialAudioManager ===
+// === Module 17378: GuildRoomSpatialAudioManager ===
 
-// Module 17375 (GuildRoomSpatialAudioManager)
+// Module 17378 (GuildRoomSpatialAudioManager)
 import GuildRoomsExperiment from "GuildRoomsExperiment" /* 4760 */;
-import AudioActionCreatorsDefault from "AudioActionCreators" /* 9089 */;
-import GuildRoomSpatialAudio from "GuildRoomSpatialAudio" /* 17376 */;
+import AudioActionCreatorsDefault from "AudioActionCreators" /* 9094 */;
+import GuildRoomSpatialAudio from "GuildRoomSpatialAudio" /* 17379 */;
 import _slicedToArray from "module_32" /* 32 */;
 import ExperimentStore from "ExperimentStore" /* 4476 */;
 import ApexExperimentStore from "ApexExperimentStore" /* 1236 */;

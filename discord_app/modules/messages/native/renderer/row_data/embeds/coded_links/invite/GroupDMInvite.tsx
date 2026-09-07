@@ -1,9 +1,9 @@
-// === Module 13211: GroupDMInvite ===
+// === Module 13215: GroupDMInvite ===
 
-// Module 13211 (GroupDMInvite)
+// Module 13215 (GroupDMInvite)
 import util from "util" /* 1114 */;
 import getEmbedThemeColorsDefault from "getEmbedThemeColors" /* 7945 */;
-import getChannelAndRecipientsFromInviteDefault from "getChannelAndRecipientsFromInvite" /* 11310 */;
+import getChannelAndRecipientsFromInviteDefault from "getChannelAndRecipientsFromInvite" /* 11315 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 import RelationshipStore from "RelationshipStore" /* 4209 */;
 import UserStore from "UserStore" /* 1371 */;
@@ -52,7 +52,7 @@ export const createGroupDMInvite = function createGroupDMInvite(invite, arg1, th
   }
   let channelIconSource = null;
   if (null != channel) {
-    let tmp8Result = tmp8(13030);
+    let tmp8Result = tmp8(13034);
     channelIconSource = tmp8Result.getChannelIconSource(channel);
   }
   let uri = null;

@@ -1,7 +1,7 @@
-// === Module 15011: bountiesSwipeUpNuxDevTools ===
+// === Module 15014: bountiesSwipeUpNuxDevTools ===
 
-// Module 15011 (bountiesSwipeUpNuxDevTools)
-import useLocalStorageState from "useLocalStorageState" /* 9931 */;
+// Module 15014 (bountiesSwipeUpNuxDevTools)
+import useLocalStorageState from "useLocalStorageState" /* 9936 */;
 import size from "module_2" /* 2 */;
 
 let c2 = "devtools-force-bounties-swipe-up-nux";

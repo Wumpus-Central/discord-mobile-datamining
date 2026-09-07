@@ -1,6 +1,6 @@
-// === Module 10867: useFastestListTableRowPlaceholderConfig ===
+// === Module 10872: useFastestListTableRowPlaceholderConfig ===
 
-// Module 10867 (useFastestListTableRowPlaceholderConfig)
+// Module 10872 (useFastestListTableRowPlaceholderConfig)
 import nativeDefault from "native" /* 576 */;
 import FastestListPropsPlaceholder from "FastestListPropsPlaceholder" /* 7062 */;
 import noop from "module_19" /* 19 */;

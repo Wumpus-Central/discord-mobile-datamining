@@ -1,6 +1,6 @@
-// === Module 10021: GestureContainer ===
+// === Module 10026: GestureContainer ===
 
-// Module 10021 (GestureContainer)
+// Module 10026 (GestureContainer)
 import nativeDefault from "native" /* 576 */;
 import native from "native" /* 1178 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4296 */;
@@ -10,8 +10,8 @@ import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-const useChannelCallStore = fn(9467).useChannelCallStore;
-const Constants = fn(9473);
+const useChannelCallStore = fn(9472).useChannelCallStore;
+const Constants = fn(9478);
 ({ PAN_GESTURE_FAIL_OFFSET_Y: hasOwnProperty, SWIPE_TO_CHAT_ACTIVE_OFFSET: metroRequire } = Constants);
 const jsx = fn(21).jsx;
 fn(4560);

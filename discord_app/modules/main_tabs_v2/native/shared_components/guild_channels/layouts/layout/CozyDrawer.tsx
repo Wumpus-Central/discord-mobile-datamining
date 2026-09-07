@@ -1,9 +1,9 @@
-// === Module 10122: CozyDrawer ===
+// === Module 10127: CozyDrawer ===
 
-// Module 10122 (CozyDrawer)
+// Module 10127 (CozyDrawer)
 import nativeDefault from "native" /* 576 */;
 import "deepmerge";
-import deepmerge from "deepmerge" /* 10123 */;
+import deepmerge from "deepmerge" /* 10128 */;
 
 let obj = { container: null, channelName: null, messagePreview: null, inviteRow: null, icon: null, unreadBadge: null, mentionBadge: null, joinVoiceButton: null, threadSpine: null, happeningNow: null, typing: null, separator: null };
 obj = { borderRadius: nativeDefault.radii.md, padding: { paddingVertical: 4, paddingLeft: 20, paddingRight: 12 }, paddingPanels: { paddingVertical: 6, paddingLeft: 8, paddingRight: 8 }, paddingThread: { paddingVertical: 4, paddingLeft: 8, paddingRight: 12 } };
@@ -29,11 +29,11 @@ obj.separator = { margin: { marginVertical: 20 } };
 const obj3 = { size: fn(1178).IconSizes.REFRESH_SMALL_16, gameSize: fn(7172).GameIconSizes.SMALL };
 const obj5 = { position: { top: 12, left: 12 }, positionThread: { top: 3, left: -17 }, typingIndicator: { position: { top: 25, left: 11 } } };
 const obj6 = { container: { paddingPanels: { paddingVertical: 8 } }, icon: null };
-const importDefaultResultResult = deepmerge(fn(10124).CHANNEL_LIST_STYLES_COMPACT, obj);
+const importDefaultResultResult = deepmerge(fn(10129).CHANNEL_LIST_STYLES_COMPACT, obj);
 obj6.icon = { avatarSize: fn(1178).AvatarSizes.REFRESH_MEDIUM_32 };
 const obj7 = { avatarSize: fn(1178).AvatarSizes.REFRESH_MEDIUM_32 };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/main_tabs_v2/native/shared_components/guild_channels/layouts/layout/CozyDrawer.tsx");
 
 export const CHANNEL_LIST_STYLES_COZY_DRAWER = importDefaultResultResult;
-export const CHANNEL_LIST_STYLES_COZY_DRAWER_SMOL = deepmerge(fn(10124).CHANNEL_LIST_STYLES_COMPACT, obj6);
+export const CHANNEL_LIST_STYLES_COZY_DRAWER_SMOL = deepmerge(fn(10129).CHANNEL_LIST_STYLES_COMPACT, obj6);

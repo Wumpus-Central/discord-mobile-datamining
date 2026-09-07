@@ -1,6 +1,6 @@
-// === Module 11524: BountyActionCreators ===
+// === Module 11529: BountyActionCreators ===
 
-// Module 11524 (BountyActionCreators)
+// Module 11529 (BountyActionCreators)
 import LoggerDefault from "Logger" /* 3 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import HTTPUtils from "HTTPUtils" /* 1272 */;

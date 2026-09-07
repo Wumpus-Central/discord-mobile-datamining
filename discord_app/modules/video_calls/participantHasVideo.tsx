@@ -1,6 +1,6 @@
-// === Module 9622: participantHasVideo ===
+// === Module 9627: participantHasVideo ===
 
-// Module 9622 (participantHasVideo)
+// Module 9627 (participantHasVideo)
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import MediaEngineStore from "MediaEngineStore" /* 1908 */;
 

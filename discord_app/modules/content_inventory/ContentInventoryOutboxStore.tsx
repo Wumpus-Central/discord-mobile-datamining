@@ -1,6 +1,6 @@
-// === Module 8791: ContentInventoryOutboxStore ===
+// === Module 8796: ContentInventoryOutboxStore ===
 
-// Module 8791 (ContentInventoryOutboxStore)
+// Module 8796 (ContentInventoryOutboxStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import matchUtils from "matchUtils" /* 8337 */;

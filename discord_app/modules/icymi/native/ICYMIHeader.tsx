@@ -1,6 +1,6 @@
-// === Module 16518: ICYMIHeader ===
+// === Module 16521: ICYMIHeader ===
 
-// Module 16518 (ICYMIHeader)
+// Module 16521 (ICYMIHeader)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import Text_Text from "Text/Text" /* 4556 */;
@@ -10,7 +10,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, Fragment: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createICYMIStyles = fn(16452);
+const createICYMIStyles = fn(16455);
 let closure_7 = createICYMIStyles.createICYMIStyles((margin) => {
   let obj = { text: null, separator: null };
   obj = { flexDirection: "row", justifyContent: "space-between", marginHorizontal: margin.margin };

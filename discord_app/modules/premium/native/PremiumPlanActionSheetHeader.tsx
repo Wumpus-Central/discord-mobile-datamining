@@ -11,9 +11,9 @@ import _modDef7435 from "module_7435" /* 7435 */;
 import _modDef7436 from "module_7436" /* 7436 */;
 import _modDef7437 from "module_7437" /* 7437 */;
 import PremiumPill from "PremiumPill" /* 7438 */;
-import _modDef9385 from "module_9385" /* 9385 */;
 import _modDef9390 from "module_9390" /* 9390 */;
-import _modDef10715 from "module_10715" /* 10715 */;
+import _modDef9395 from "module_9395" /* 9395 */;
+import _modDef10720 from "module_10720" /* 10720 */;
 import noop from "module_19" /* 19 */;
 
 const PremiumUtilsDefault = PremiumUtils;
@@ -100,11 +100,11 @@ export default function PremiumPlanActionSheetHeader(arg0) {
     obj.children = items1;
     items[1] = React6(View, obj);
     if (TIER_0.TIER_0 === premiumType) {
-      let tmp13Result3 = _modDef9385;
+      let tmp13Result3 = _modDef9390;
     } else if (TIER_0.TIER_1 === premiumType) {
-      tmp13Result3 = _modDef10715;
+      tmp13Result3 = _modDef10720;
     } else if (TIER_0.TIER_2 === premiumType) {
-      tmp13Result3 = _modDef9390;
+      tmp13Result3 = _modDef9395;
     }
     const obj4 = { source: tmp13Result3, style: null, resizeMode: "contain" };
     const items2 = [tmp.imgWumpus, ];

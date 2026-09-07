@@ -1,6 +1,6 @@
-// === Module 16901: RestrictedBlockedMessageGroup ===
+// === Module 16904: RestrictedBlockedMessageGroup ===
 
-// Module 16901 (RestrictedBlockedMessageGroup)
+// Module 16904 (RestrictedBlockedMessageGroup)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import Text_Text from "Text/Text" /* 4556 */;
@@ -14,7 +14,7 @@ const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
 fn(4560);
 let createStyles = { toggle: null };
-createStyles = { marginLeft: fn(16899).RESTRICTED_CONTENT_INSET, marginVertical: nativeDefault.space.PX_8 };
+createStyles = { marginLeft: fn(16902).RESTRICTED_CONTENT_INSET, marginVertical: nativeDefault.space.PX_8 };
 createStyles.toggle = createStyles;
 let closure_7 = createStyles.createStyles(createStyles);
 const size = fn(2);

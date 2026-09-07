@@ -1,6 +1,6 @@
-// === Module 9776: BellIcon ===
+// === Module 9781: BellIcon ===
 
-// Module 9776 (BellIcon)
+// Module 9781 (BellIcon)
 import nativeDefault from "native" /* 576 */;
 import BaseIconImage from "BaseIconImage" /* 4261 */;
 import _mod7949 from "module_7949" /* 7949 */;

@@ -1,12 +1,12 @@
-// === Module 11512: VideoQuestUtils ===
+// === Module 11517: VideoQuestUtils ===
 
-// Module 11512 (VideoQuestUtils)
+// Module 11517 (VideoQuestUtils)
 import util from "util" /* 1114 */;
 import NavigationRouteUtils from "NavigationRouteUtils" /* 4417 */;
 import QuestDataUtils from "QuestDataUtils" /* 7699 */;
 import AnalyticsActions from "AnalyticsActions" /* 7718 */;
 import QuestTaskUtils from "QuestTaskUtils" /* 7724 */;
-import QuestActionCreators from "QuestActionCreators" /* 11276 */;
+import QuestActionCreators from "QuestActionCreators" /* 11281 */;
 import NetworkStore from "NetworkStore" /* 4609 */;
 import QuestStore from "QuestStore" /* 7703 */;
 import VideoQuestUIStore from "VideoQuestUIStore" /* 7705 */;
@@ -17,7 +17,7 @@ const portrait = "portrait";
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/quests/utils/VideoQuestUtils.tsx");
 
-export const getVideoQuestWatchCtaText = fn(11513).getVideoQuestWatchCtaText;
+export const getVideoQuestWatchCtaText = fn(11518).getVideoQuestWatchCtaText;
 export const sendVideoProgress = function sendVideoProgress(quest, currentTime) {
   let isQuestExpiredResult = QuestDataUtils.isQuestExpired(quest);
   if (!isQuestExpiredResult) {

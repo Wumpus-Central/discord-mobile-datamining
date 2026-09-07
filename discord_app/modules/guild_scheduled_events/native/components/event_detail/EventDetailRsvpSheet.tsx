@@ -1,6 +1,6 @@
-// === Module 9801: EventDetailRsvpSheet ===
+// === Module 9806: EventDetailRsvpSheet ===
 
-// Module 9801 (EventDetailRsvpSheet)
+// Module 9806 (EventDetailRsvpSheet)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import Text_Text from "Text/Text" /* 4556 */;
@@ -8,9 +8,9 @@ import FastImageDefault from "FastImage" /* 5587 */;
 import BottomSheetModal from "BottomSheetModal" /* 6627 */;
 import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8179 */;
 import StageSparkleDefault from "StageSparkle" /* 8407 */;
-import Form from "Form" /* 8593 */;
-import _modDef9802 from "module_9802" /* 9802 */;
-import EventDetailTypes from "EventDetailTypes" /* 9804 */;
+import Form from "Form" /* 8598 */;
+import _modDef9807 from "module_9807" /* 9807 */;
+import EventDetailTypes from "EventDetailTypes" /* 9809 */;
 import noop from "module_19" /* 19 */;
 import PresenceStore from "PresenceStore" /* 4600 */;
 import UserStore from "UserStore" /* 1371 */;
@@ -22,7 +22,7 @@ function EmptyDisplay(arg0) {
   let obj = { style: null, children: null };
   const items = [closure_9().emptyDisplayContainer, style];
   obj.style = items;
-  obj = { icon: _modDef9802 };
+  obj = { icon: _modDef9807 };
   const items1 = [React5(StageSparkleDefault, obj), children];
   obj.children = items1;
   return React6(View, obj);
@@ -47,7 +47,7 @@ function RemainingUsersRow(remainingUsersGroup) {
   const tmp = closure_9();
   let obj = { DEPRECATED_style: tmp.userListRow, leading: null, label: null };
   obj = { style: tmp.remainingUsersIconContainer, children: null };
-  obj = { source: _modDef9802, style: tmp.remainingUsersIcon };
+  obj = { source: _modDef9807, style: tmp.remainingUsersIcon };
   obj.children = React5(FastImageDefault, obj);
   obj.leading = React5(View, obj);
   const intl = util.intl;
@@ -254,7 +254,7 @@ const memoResult = noop.memo((eventUser) => {
   obj1 = { user: stateFromStores, nick: null, usernameStyle: null, nicknameStyle: null };
   const member = eventUser.member;
   let nick;
-  let tmp2Result = tmp2(9803);
+  let tmp2Result = tmp2(9808);
   if (member != null) {
     nick = member.nick;
   }
@@ -268,7 +268,7 @@ const memoResult = noop.memo((eventUser) => {
   obj.onPress = function onPress() {
     showUserProfileActionSheetDefault({ userId: eventUser.user_id, sourceAnalyticsLocations: analyticsLocations });
   };
-  return closure_7(eventUser(8593).FormRow, obj, eventUser.user_id);
+  return closure_7(eventUser(8598).FormRow, obj, eventUser.user_id);
 });
 EventDetailRsvpSheet.displayName = "EventDetailRsvpSheet";
 size = fn(2);

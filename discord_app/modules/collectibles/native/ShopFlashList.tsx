@@ -1,12 +1,12 @@
-// === Module 15840: ShopFlashList ===
+// === Module 15843: ShopFlashList ===
 
-// Module 15840 (ShopFlashList)
+// Module 15843 (ShopFlashList)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import native from "native" /* 1178 */;
 import generated_NoResults from "generated/NoResults" /* 8232 */;
-import _mod8874 from "module_8874" /* 8874 */;
-import useScrollToInitialIndexOnce from "useScrollToInitialIndexOnce" /* 15813 */;
+import _mod8879 from "module_8879" /* 8879 */;
+import useScrollToInitialIndexOnce from "useScrollToInitialIndexOnce" /* 15816 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -37,5 +37,5 @@ export default function ShopFlashList(initialScrollIndex) {
   obj = { shouldScroll: tmp5, initialScrollIndex, flashListRef: ref, afterMs: useScrollToInitialIndexOnce.INITIAL_SCROLL_DELAY_MS };
   const scrollToInitialIndexOnce = obj.useScrollToInitialIndexOnce(obj);
   obj = { ref, data, renderItem, showsVerticalScrollIndicator: false, ListEmptyComponent: ShopEmptyState, initialScrollIndex, getItemType, contentContainerStyle: closure_4().contentContainer };
-  return jsx(_mod8874.FlashList, { ref, data, renderItem, showsVerticalScrollIndicator: false, ListEmptyComponent: ShopEmptyState, initialScrollIndex, getItemType, contentContainerStyle: closure_4().contentContainer });
+  return jsx(_mod8879.FlashList, { ref, data, renderItem, showsVerticalScrollIndicator: false, ListEmptyComponent: ShopEmptyState, initialScrollIndex, getItemType, contentContainerStyle: closure_4().contentContainer });
 };

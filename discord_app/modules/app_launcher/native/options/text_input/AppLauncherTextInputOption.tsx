@@ -1,10 +1,10 @@
-// === Module 12172: AppLauncherTextInputOption ===
+// === Module 12176: AppLauncherTextInputOption ===
 
-// Module 12172 (AppLauncherTextInputOption)
+// Module 12176 (AppLauncherTextInputOption)
 import nativeDefault from "native" /* 576 */;
 import KeyboardManagerUtils from "KeyboardManagerUtils" /* 1874 */;
-import TopEmojisUtils from "TopEmojisUtils" /* 10278 */;
-import openEmojiPickerActionSheet from "openEmojiPickerActionSheet" /* 11121 */;
+import TopEmojisUtils from "TopEmojisUtils" /* 10283 */;
+import openEmojiPickerActionSheet from "openEmojiPickerActionSheet" /* 11126 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -46,7 +46,7 @@ export default function AppLauncherTextInputOption(guildId) {
   }), 2);
   value = tmp2[0];
   noop = tmp2[1];
-  let obj = onChangeText(11215);
+  let obj = onChangeText(11220);
   noop.useRef({ start: 0, end: 0 });
   const ref = noop.useRef(null);
   let tmp14Result = option.type === onChangeText(1894).ApplicationCommandOptionType.STRING;
@@ -99,17 +99,17 @@ export default function AppLauncherTextInputOption(guildId) {
       const result = TopEmojisUtils.maybeFetchTopEmojisByGuild(guildId);
     }
   }, items2);
-  let obj1 = onChangeText(12169);
+  let obj1 = onChangeText(12173);
   const animationDelayedAutoFocus = obj1.useAnimationDelayedAutoFocus(autoFocus, () => {
     const current = ref.current;
     if (current != null) {
       current.focus();
     }
   });
-  if (obj.useAppLauncherContext().entrypoint === onChangeText(9409).AppLauncherEntrypoint.VOICE) {
+  if (obj.useAppLauncherContext().entrypoint === onChangeText(9414).AppLauncherEntrypoint.VOICE) {
     let TextInput = tmp4(1178).TextInput;
   } else {
-    TextInput = guildId(12173);
+    TextInput = guildId(12177);
   }
   const items3 = [tmp.container, , ];
   if (hasError) {
@@ -153,7 +153,7 @@ export default function AppLauncherTextInputOption(guildId) {
           const result1 = openEmojiPickerActionSheet.openEmojiPickerActionSheet(obj);
         }
     };
-    tmp14Result = tmp14(guildId(12174), obj1);
+    tmp14Result = tmp14(guildId(12178), obj1);
   }
   items4[1] = tmp14Result;
   obj.children = items4;

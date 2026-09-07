@@ -1,6 +1,6 @@
-// === Module 8812: CutoutableAvatarDecoration ===
+// === Module 8817: CutoutableAvatarDecoration ===
 
-// Module 8812 (CutoutableAvatarDecoration)
+// Module 8817 (CutoutableAvatarDecoration)
 import AvatarUtils from "AvatarUtils" /* 1396 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4552 */;

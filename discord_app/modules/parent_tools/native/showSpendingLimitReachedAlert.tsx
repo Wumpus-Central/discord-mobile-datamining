@@ -1,6 +1,6 @@
-// === Module 10705: showSpendingLimitReachedAlert ===
+// === Module 10710: showSpendingLimitReachedAlert ===
 
-// Module 10705 (showSpendingLimitReachedAlert)
+// Module 10710 (showSpendingLimitReachedAlert)
 import BillingError from "BillingError" /* 4240 */;
 import V6OrEarlierAPIError from "V6OrEarlierAPIError" /* 4461 */;
 import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 4573 */;
@@ -22,7 +22,7 @@ export const isSpendingLimitError = function isSpendingLimitError(billingError) 
   return tmp3;
 };
 export const showSpendingLimitReachedAlert = function showSpendingLimitReachedAlert() {
-  let obj = activeLinkUserIds(8645);
+  let obj = activeLinkUserIds(8650);
   activeLinkUserIds = obj.getActiveLinkUserIds();
   let obj1 = actions_AlertActionCreatorsDefault;
   obj = { title: null, body: null, isDismissable: true };

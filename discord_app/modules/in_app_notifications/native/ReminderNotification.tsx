@@ -1,6 +1,6 @@
-// === Module 11318: ReminderNotification ===
+// === Module 11323: ReminderNotification ===
 
-// Module 11318 (ReminderNotification)
+// Module 11323 (ReminderNotification)
 import _modDef38 from "module_38" /* 38 */;
 import nativeDefault from "native" /* 576 */;
 import native from "native" /* 1178 */;
@@ -9,10 +9,10 @@ import ClockIcon from "ClockIcon" /* 4523 */;
 import ModalActionCreatorsDefault from "ModalActionCreators" /* 4763 */;
 import showForLaterModal from "showForLaterModal" /* 7859 */;
 import SavedMessagesTypes from "SavedMessagesTypes" /* 7860 */;
-import InAppNotificationUtils from "InAppNotificationUtils" /* 10094 */;
-import MessagePreviewTextDefault from "MessagePreviewText" /* 10107 */;
-import MessageNotificationHeaderDefault from "MessageNotificationHeader" /* 10172 */;
-import MediaPreviewRightAccessory from "MediaPreviewRightAccessory" /* 10174 */;
+import InAppNotificationUtils from "InAppNotificationUtils" /* 10099 */;
+import MessagePreviewTextDefault from "MessagePreviewText" /* 10112 */;
+import MessageNotificationHeaderDefault from "MessageNotificationHeader" /* 10177 */;
+import MediaPreviewRightAccessory from "MediaPreviewRightAccessory" /* 10179 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 import GuildStore from "GuildStore" /* 1979 */;
@@ -38,7 +38,7 @@ function NotificationBody(channel) {
   let obj1 = channel(504);
   const items1 = [ChannelStore];
   const stateFromStores1 = obj1.useStateFromStores(items1, () => ChannelStore.getChannel(channel.parent_id));
-  let obj2 = channel(10094);
+  let obj2 = channel(10099);
   const hasPreviewableMedia = obj2.useHasPreviewableMedia(message);
   const tmp6 = channel.type === channel(1094).ChannelTypes.DM;
   let num = 1;
@@ -46,7 +46,7 @@ function NotificationBody(channel) {
     num = closure_8;
   }
   let tmp10 = null;
-  const messagePreviewTextVariant = channel(10094).getMessagePreviewTextVariant();
+  const messagePreviewTextVariant = channel(10099).getMessagePreviewTextVariant();
   if (!tmp6) {
     obj = { channel, parentChannel: stateFromStores1, guild: stateFromStores, author: null };
     tmp10 = closure_10(MessageNotificationHeaderDefault, obj);
@@ -55,7 +55,7 @@ function NotificationBody(channel) {
   if (!hasPreviewableMedia) {
     if (null == message.poll) {
       obj = { channel, message, color: "text-default", layout: tmp(7879).ChannelListLayoutTypes.COZY, variant: messagePreviewTextVariant, muted: false, lineClamp: num };
-      let tmp14 = closure_10(tmp(10109).ChannelRowPreview, obj);
+      let tmp14 = closure_10(tmp(10114).ChannelRowPreview, obj);
     }
     obj1 = { children: null };
     items2[1] = tmp14;
@@ -64,10 +64,10 @@ function NotificationBody(channel) {
   }
   obj2 = { message, lineClamp: num, showMessageAuthor: true, maxHeight };
   tmp14 = closure_10(MessagePreviewTextDefault, obj2);
-  const tmpResult = channel(10094);
+  const tmpResult = channel(10099);
 }
 const View = fn(17).View;
-const InAppNotificationConstants = fn(10095);
+const InAppNotificationConstants = fn(10100);
 ({ IN_APP_NOTIFICATION_MAX_HEIGHT: closure_7, NOTIFICATION_PREVIEW_LINE_CLAMP: closure_8, RIGHT_ACCESSORY_LEFT_MARGIN } = InAppNotificationConstants);
 const AnalyticEvents = fn(1074).AnalyticEvents;
 const jsxProd = fn(21);
@@ -113,5 +113,5 @@ export default noop.memo(function ReminderNotification(notification) {
     AnalyticsUtilsDefault.track(AnalyticEvents.FOR_LATER_REMINDER_NOTIFICATION_CLICKED, obj);
   }, items);
   obj = { icon: closure_10(NotificationAvatar, obj), header: memo, onPress: callback, notification, rightAccessory: closure_10(closure_16, { message }), children: closure_10(NotificationBody, { channel, message }) };
-  return closure_10(notification(10170).NotificationPressable, obj);
+  return closure_10(notification(10175).NotificationPressable, obj);
 });

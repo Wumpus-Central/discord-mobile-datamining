@@ -1,6 +1,6 @@
-// === Module 14845: ContactSyncNameUpdateModal ===
+// === Module 14848: ContactSyncNameUpdateModal ===
 
-// Module 14845 (ContactSyncNameUpdateModal)
+// Module 14848 (ContactSyncNameUpdateModal)
 import nativeDefault from "native" /* 576 */;
 import ModalActionCreatorsDefault from "ModalActionCreators" /* 4763 */;
 import Navigator from "Navigator" /* 7000 */;
@@ -26,7 +26,7 @@ function ContactSyncNameInputScreen() {
   }
   dependencyMap = async function _onNext(arg0) {
     _require(true);
-    await tmp3(12684).updateName(closure_0);
+    await tmp3(12688).updateName(closure_0);
     if (1 === tmp7) {
       c3 = 0;
       const obj2 = { key: "ERROR_GENERIC_TITLE", content: null, icon: null };
@@ -69,7 +69,7 @@ function ContactSyncNameInputScreen() {
     str = "";
   }
   obj.initialName = str;
-  obj.children = jsx(onNext(12697), {
+  obj.children = jsx(onNext(12701), {
     onNext,
     onRemoveName() {
       return onNext(null);
@@ -82,7 +82,7 @@ function ContactSyncNameInputScreen() {
   }} loading={tmp3[0]} initialName={null} />;
 }
 const View = fn(17).View;
-const ContactSyncScenes = fn(12678).ContactSyncScenes;
+const ContactSyncScenes = fn(12682).ContactSyncScenes;
 const jsx = fn(21).jsx;
 fn(4560);
 let createStyles = { container: null };

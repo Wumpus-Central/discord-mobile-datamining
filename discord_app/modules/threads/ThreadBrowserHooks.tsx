@@ -1,6 +1,6 @@
-// === Module 12761: ThreadBrowserHooks ===
+// === Module 12765: ThreadBrowserHooks ===
 
-// Module 12761 (ThreadBrowserHooks)
+// Module 12765 (ThreadBrowserHooks)
 import _modDef12 from "module_12" /* 12 */;
 import GlobalUtils from "GlobalUtils" /* 1369 */;
 import ThreadActionCreatorsDefault from "ThreadActionCreators" /* 7765 */;
@@ -15,7 +15,7 @@ import ArchivedThreadsStore from "ArchivedThreadsStore" /* 7766 */;
 import JoinedThreadsStore from "JoinedThreadsStore" /* 4201 */;
 
 require = fn;
-let closure_5 = fn(12762).useShouldShowResolvedFlagsForChannel;
+let closure_5 = fn(12766).useShouldShowResolvedFlagsForChannel;
 const Permissions = fn(1085).Permissions;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/threads/ThreadBrowserHooks.tsx");

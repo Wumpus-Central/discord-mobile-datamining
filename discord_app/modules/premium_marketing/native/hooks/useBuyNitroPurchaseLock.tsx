@@ -1,6 +1,6 @@
-// === Module 13356: useBuyNitroPurchaseLock ===
+// === Module 13360: useBuyNitroPurchaseLock ===
 
-// Module 13356 (useBuyNitroPurchaseLock)
+// Module 13360 (useBuyNitroPurchaseLock)
 import IAPStore from "IAPStore" /* 7237 */;
 
 const require = fn;

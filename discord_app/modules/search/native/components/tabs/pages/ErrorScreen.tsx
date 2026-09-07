@@ -1,6 +1,6 @@
-// === Module 16638: pages/ErrorScreen ===
+// === Module 16641: pages/ErrorScreen ===
 
-// Module 16638 (pages/ErrorScreen)
+// Module 16641 (pages/ErrorScreen)
 import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 4272 */;
 import Text_Text from "Text/Text" /* 4556 */;
 import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 6981 */;

@@ -1,6 +1,6 @@
-// === Module 8788: StorefrontPromotionRecord ===
+// === Module 8793: StorefrontPromotionRecord ===
 
-// Module 8788 (StorefrontPromotionRecord)
+// Module 8793 (StorefrontPromotionRecord)
 import _slicedToArray from "module_32" /* 32 */;
 import Record from "Record" /* 1386 */;
 

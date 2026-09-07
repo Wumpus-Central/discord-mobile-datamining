@@ -1,6 +1,6 @@
-// === Module 11703: DestinationFailedAlertModal ===
+// === Module 11708: DestinationFailedAlertModal ===
 
-// Module 11703 (DestinationFailedAlertModal)
+// Module 11708 (DestinationFailedAlertModal)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import native from "native" /* 1178 */;
@@ -8,7 +8,7 @@ import UserUtilsDefault from "UserUtils" /* 4404 */;
 import Text_Text from "Text/Text" /* 4556 */;
 import useChannelNameDefault from "useChannelName" /* 4713 */;
 import AlertModal from "AlertModal" /* 4910 */;
-import GroupDMAvatarDefault from "GroupDMAvatar" /* 10910 */;
+import GroupDMAvatarDefault from "GroupDMAvatar" /* 10915 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 import GuildStore from "GuildStore" /* 1979 */;
@@ -44,7 +44,7 @@ function FailedUserRow(user) {
   let tmp9Result = null;
   if (null != user) {
     obj = { style: tmp.row, children: null };
-    obj = { user, guildId: "Boolean", status: true, isMobileOnline: null, isVROnline: null, size: 195, avatarDecoration: null, autoStatusCutout: null };
+    obj = { user, guildId: "Boolean", status: true, isMobileOnline: "done", isVROnline: true, size: null, avatarDecoration: "secondary", autoStatusCutout: true };
     let tmp13 = null;
     if (StatusTypes.OFFLINE !== status) {
       tmp13 = status;
@@ -79,8 +79,8 @@ function FailedChannelRow(channel) {
     return GuildStore.getGuild(guild_id);
   });
   obj = { style: tmp.row, children: null };
-  obj = { "aria-label": "", guild: stateFromStores, channel, size: channel(10999).GuildIconWithChannelTypeSizes.SMALL_32 };
-  const items1 = [closure_10(channel(10999).GuildIconWithChannelType, obj), ];
+  obj = { "aria-label": "", guild: stateFromStores, channel, size: channel(11004).GuildIconWithChannelTypeSizes.SMALL_32 };
+  const items1 = [closure_10(channel(11004).GuildIconWithChannelType, obj), ];
   const tmp3 = useChannelNameDefault(channel);
   items1[1] = closure_10(channel(4556).Text, { style: tmp.label, variant: "text-md/medium", lineClamp: 1, ellipsizeMode: "tail", children: useChannelNameDefault(channel) });
   obj.children = items1;

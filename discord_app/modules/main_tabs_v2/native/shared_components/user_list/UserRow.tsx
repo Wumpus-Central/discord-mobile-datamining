@@ -1,6 +1,6 @@
-// === Module 10868: UserRow ===
+// === Module 10873: UserRow ===
 
-// Module 10868 (UserRow)
+// Module 10873 (UserRow)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
@@ -17,13 +17,13 @@ import components_Button_Button from "components/Button/Button" /* 4975 */;
 import ChatIcon from "ChatIcon" /* 5071 */;
 import FriendSuggestionActionCreatorsDefault from "FriendSuggestionActionCreators" /* 7663 */;
 import PhoneCallIcon from "PhoneCallIcon" /* 7880 */;
-import RelationshipActionCreatorsDefault from "RelationshipActionCreators" /* 9042 */;
-import BoostGemIcon from "BoostGemIcon" /* 9375 */;
-import PeopleUtilsDefault from "PeopleUtils" /* 10870 */;
-import GameRelationshipActionCreatorsDefault from "GameRelationshipActionCreators" /* 10871 */;
-import ActivityStatusDefault from "ActivityStatus" /* 10876 */;
-import ActionButtonDefault from "ActionButton" /* 10896 */;
-import CrownIcon from "CrownIcon" /* 10897 */;
+import RelationshipActionCreatorsDefault from "RelationshipActionCreators" /* 9047 */;
+import BoostGemIcon from "BoostGemIcon" /* 9380 */;
+import PeopleUtilsDefault from "PeopleUtils" /* 10875 */;
+import GameRelationshipActionCreatorsDefault from "GameRelationshipActionCreators" /* 10876 */;
+import ActivityStatusDefault from "ActivityStatus" /* 10881 */;
+import ActionButtonDefault from "ActionButton" /* 10901 */;
+import CrownIcon from "CrownIcon" /* 10902 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4552 */;
 import ApplicationStore from "ApplicationStore" /* 4788 */;
@@ -77,7 +77,7 @@ function UserRowSubLabel(arg0) {
   }
 }
 const View = fn(17).View;
-const UserRowModes = fn(10860).UserRowModes;
+const UserRowModes = fn(10865).UserRowModes;
 const Constants = fn(1074);
 ({ RelationshipTypes: closure_12, StatusTypes: map1 } = Constants);
 const jsxProd = fn(21);
@@ -192,7 +192,7 @@ export default noop.memo(function UserRow(type) {
   const memo = flag2.useMemo(() => {
     const items = [];
     if (NONE !== UserRowModes.ACTIONS) {
-      let obj = { accessibilityActions: items, actions: "a" };
+      let obj = { accessibilityActions: items, actions: "Array" };
       return obj;
     } else {
       if (constants.PENDING_INCOMING === type) {
@@ -352,7 +352,7 @@ export default noop.memo(function UserRow(type) {
             channel = channel.getChannel(result);
             if (null != channel) {
               user(38)(channel.isPrivate(), "must be a DM");
-              const obj2 = user(10869)(channel, false);
+              const obj2 = user(10874)(channel, false);
               if (!obj2.inCall) {
                 obj2.onPress();
               }
@@ -402,7 +402,7 @@ export default noop.memo(function UserRow(type) {
         channel = channel.getChannel(result);
         if (null != channel) {
           user(38)(channel.isPrivate(), "must be a DM");
-          const obj2 = user(10869)(channel, false);
+          const obj2 = user(10874)(channel, false);
           if (!obj2.inCall) {
             obj2.onPress();
           }

@@ -1,13 +1,13 @@
-// === Module 16121: VoiceUsers ===
+// === Module 16124: VoiceUsers ===
 
-// Module 16121 (VoiceUsers)
+// Module 16124 (VoiceUsers)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import Text_Text from "Text/Text" /* 4556 */;
 import useIsUsingClientThemeDefault from "useIsUsingClientTheme" /* 7873 */;
-import useScaledTextLineHeight from "useScaledTextLineHeight" /* 10119 */;
-import ChannelListLayout from "ChannelListLayout" /* 10121 */;
-import HeadphonesIcon from "HeadphonesIcon" /* 12530 */;
+import useScaledTextLineHeight from "useScaledTextLineHeight" /* 10124 */;
+import ChannelListLayout from "ChannelListLayout" /* 10126 */;
+import HeadphonesIcon from "HeadphonesIcon" /* 12534 */;
 import noop from "module_19" /* 19 */;
 import GuildMemberStore from "GuildMemberStore" /* 2021 */;
 
@@ -83,7 +83,7 @@ let closure_12 = noop.memo((voiceState) => {
   obj.sessionId = voiceState2.sessionId;
   obj.channel = channel;
   obj.isGuest = isGuest;
-  obj.children = closure_6(channel(16122), obj, user.id);
+  obj.children = closure_6(channel(16125), obj, user.id);
   return closure_6(View, obj);
 });
 const size = fn(2);

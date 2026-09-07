@@ -1,6 +1,6 @@
-// === Module 13024: UserProfileActivityVoiceChannel ===
+// === Module 13028: UserProfileActivityVoiceChannel ===
 
-// Module 13024 (UserProfileActivityVoiceChannel)
+// Module 13028 (UserProfileActivityVoiceChannel)
 import _mod17 from "module_17" /* 17 */;
 import Constants from "Constants" /* 1085 */;
 import native from "native" /* 1178 */;
@@ -134,7 +134,7 @@ export default function UserProfileActivityVoiceChannel(guild) {
         return channel(onAction[25])(obj);
       }
     };
-    obj.openLazy(asyncRequireImpl(13026, dependencyMap.paths), "UserProfileActivityVoiceChannelUsers", obj, "stack");
+    obj.openLazy(asyncRequireImpl(13030, dependencyMap.paths), "UserProfileActivityVoiceChannelUsers", obj, "stack");
   };
   const obj12 = { size: guild(onAction[27]).AvatarSizes.SIZE_16, totalCount: users.length, names: users.map((username) => username.username), children: null };
   let substr = users;

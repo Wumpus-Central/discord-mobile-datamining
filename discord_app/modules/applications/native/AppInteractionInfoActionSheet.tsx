@@ -1,9 +1,9 @@
-// === Module 11727: AppInteractionInfoActionSheet ===
+// === Module 11732: AppInteractionInfoActionSheet ===
 
-// Module 11727 (AppInteractionInfoActionSheet)
+// Module 11732 (AppInteractionInfoActionSheet)
 import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8179 */;
 import UserActionCreators from "UserActionCreators" /* 8181 */;
-import ContextMenuSubmenuActionSheetHeaderDefault from "ContextMenuSubmenuActionSheetHeader" /* 11728 */;
+import ContextMenuSubmenuActionSheetHeaderDefault from "ContextMenuSubmenuActionSheetHeader" /* 11733 */;
 import noop from "module_19" /* 19 */;
 import UserRecord from "UserRecord" /* 1385 */;
 import GuildStore from "GuildStore" /* 1979 */;
@@ -32,13 +32,13 @@ export default function AppInteractionInfoActionSheet(message) {
   let tmp5;
   const memo = noop.useMemo(() => React6(ContextMenuSubmenuActionSheetHeaderDefault, { onBack }), items);
   if (interactionMetadata != null) {
-    tmp5 = interactionMetadata.authorizing_integration_owners[message(undefined, 9245).ApplicationIntegrationType.USER_INSTALL];
+    tmp5 = interactionMetadata.authorizing_integration_owners[message(undefined, 9250).ApplicationIntegrationType.USER_INSTALL];
   }
   dependencyMap = tmp5;
   const interactionMetadata2 = message.interactionMetadata;
   let tmp7;
   if (interactionMetadata2 != null) {
-    tmp7 = interactionMetadata2.authorizing_integration_owners[message(undefined, 9245).ApplicationIntegrationType.GUILD_INSTALL];
+    tmp7 = interactionMetadata2.authorizing_integration_owners[message(undefined, 9250).ApplicationIntegrationType.GUILD_INSTALL];
   }
   noop = tmp7;
   const interactionMetadata3 = message.interactionMetadata;

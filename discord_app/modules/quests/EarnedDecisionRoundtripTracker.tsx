@@ -1,6 +1,6 @@
-// === Module 11301: EarnedDecisionRoundtripTracker ===
+// === Module 11306: EarnedDecisionRoundtripTracker ===
 
-// Module 11301 (EarnedDecisionRoundtripTracker)
+// Module 11306 (EarnedDecisionRoundtripTracker)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
 import NetStats from "NetStats" /* 7459 */;
 import SessionForegroundUtils from "SessionForegroundUtils" /* 7462 */;

@@ -1,6 +1,6 @@
-// === Module 15223: useManageSubscriptionCardData ===
+// === Module 15226: useManageSubscriptionCardData ===
 
-// Module 15223 (useManageSubscriptionCardData)
+// Module 15226 (useManageSubscriptionCardData)
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import GuildStore from "GuildStore" /* 1979 */;

@@ -1,6 +1,6 @@
-// === Module 13686: ConnectivityIndicatorStateStore ===
+// === Module 13690: ConnectivityIndicatorStateStore ===
 
-// Module 13686 (ConnectivityIndicatorStateStore)
+// Module 13690 (ConnectivityIndicatorStateStore)
 import LoggerDefault from "Logger" /* 3 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
@@ -35,7 +35,7 @@ function updateState() {
           } else if (tmp9.CONNECTING === UNKNOWN) {
             const obj1 = { state: tmp13.WAITING_FOR_NETWORK, delayMs: null };
             if (CacheStore.hasCache()) {
-              let obj15 = state(13687);
+              let obj15 = state(13691);
               let num2 = obj15.getConfig({ location: "ConnectivityIndicatorStateStore" }).timeoutMs;
               if (num2 == null) {
                 num2 = 10000;
@@ -63,7 +63,7 @@ function updateState() {
           } else if (tmp9.CONNECTING === UNKNOWN) {
             const obj5 = { state: tmp13.WAITING_FOR_NETWORK, delayMs: null };
             if (CacheStore.hasCache()) {
-              let obj10 = state(13687);
+              let obj10 = state(13691);
               let num = obj10.getConfig({ location: "ConnectivityIndicatorStateStore" }).timeoutMs;
               if (num == null) {
                 num = 10000;

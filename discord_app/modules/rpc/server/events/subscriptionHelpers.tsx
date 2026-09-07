@@ -1,12 +1,12 @@
-// === Module 14503: subscriptionHelpers ===
+// === Module 14506: subscriptionHelpers ===
 
-// Module 14503 (subscriptionHelpers)
+// Module 14506 (subscriptionHelpers)
 import useIsScreenLandscape from "useIsScreenLandscape" /* 5126 */;
 import QuestTaskUtils from "QuestTaskUtils" /* 7724 */;
-import useThermalState from "useThermalState" /* 9565 */;
-import activityInstanceConnectedParticipants from "activityInstanceConnectedParticipants" /* 14464 */;
+import useThermalState from "useThermalState" /* 9570 */;
+import activityInstanceConnectedParticipants from "activityInstanceConnectedParticipants" /* 14467 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 1956 */;
-import FramesStore from "FramesStore" /* 9510 */;
+import FramesStore from "FramesStore" /* 9515 */;
 import QuestStore from "QuestStore" /* 7703 */;
 
 require = fn;
@@ -14,7 +14,7 @@ const TransportTypes = fn(4465).TransportTypes;
 const RPCEvents = fn(1074).RPCEvents;
 const Constants = fn(1920);
 ({ ActivityLayoutMode: closure_7, ActivityScreenOrientation: closure_8 } = Constants);
-const asLaunched = fn(9511).asLaunched;
+const asLaunched = fn(9516).asLaunched;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/rpc/server/events/subscriptionHelpers.tsx");
 

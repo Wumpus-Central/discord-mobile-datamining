@@ -1,6 +1,6 @@
-// === Module 10169: NotificationSettingsChannelPost ===
+// === Module 10174: NotificationSettingsChannelPost ===
 
-// Module 10169 (NotificationSettingsChannelPost)
+// Module 10174 (NotificationSettingsChannelPost)
 import NotificationSettingsModalActionCreatorsDefault from "NotificationSettingsModalActionCreators" /* 7119 */;
 import noop from "module_19" /* 19 */;
 import UserGuildSettingsStore from "UserGuildSettingsStore" /* 4741 */;

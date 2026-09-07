@@ -1,6 +1,6 @@
-// === Module 9930: useToggleRequestToSpeak ===
+// === Module 9935: useToggleRequestToSpeak ===
 
-// Module 9930 (useToggleRequestToSpeak)
+// Module 9935 (useToggleRequestToSpeak)
 import useAudienceRequestToSpeakState from "useAudienceRequestToSpeakState" /* 4707 */;
 import useStageSpeakingForCurrentUser from "useStageSpeakingForCurrentUser" /* 5422 */;
 import StageChannelActionCreators from "StageChannelActionCreators" /* 8398 */;

@@ -1,6 +1,6 @@
-// === Module 15622: IntlTestingSettingsPage ===
+// === Module 15625: IntlTestingSettingsPage ===
 
-// Module 15622 (IntlTestingSettingsPage)
+// Module 15625 (IntlTestingSettingsPage)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
@@ -8,8 +8,8 @@ import _mod1155 from "module_1155" /* 1155 */;
 import _modDef4153 from "module_4153" /* 4153 */;
 import TableRow from "TableRow" /* 5605 */;
 import TableRowGroup from "TableRowGroup" /* 5687 */;
-import _modDef15623 from "module_15623" /* 15623 */;
-import _modDef15655 from "module_15655" /* 15655 */;
+import _modDef15626 from "module_15626" /* 15626 */;
+import _modDef15658 from "module_15658" /* 15658 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
@@ -148,19 +148,19 @@ export default function IntlTestingSettingsPage() {
   const items = [closure_10(LocaleInfo, {}), closure_10(TestLocaleSelector, {}), , , , , , ];
   obj = { variant: "text-md/normal", children: null };
   const intl = require("util").intl;
-  obj.children = intl.format(_modDef15623.HMvEC5, {});
+  obj.children = intl.format(_modDef15626.HMvEC5, {});
   items[2] = closure_10(require("Text/Text").Text, obj);
   const obj1 = { variant: "text-md/normal", children: null };
   const intl2 = require("util").intl;
-  obj1.children = intl2.format(_modDef15655.swfLzV, {});
+  obj1.children = intl2.format(_modDef15658.swfLzV, {});
   items[3] = closure_10(require("Text/Text").Text, obj1);
   const obj2 = { variant: "text-md/normal", children: null };
   const intl3 = require("util").intl;
-  obj2.children = intl3.format(_modDef15623.rmps8y, {});
+  obj2.children = intl3.format(_modDef15626.rmps8y, {});
   items[4] = closure_10(require("Text/Text").Text, obj2);
   const obj3 = { variant: "text-md/normal", children: null };
   const intl4 = require("util").intl;
-  obj3.children = intl4.format(_modDef15623.uczI4g, {
+  obj3.children = intl4.format(_modDef15626.uczI4g, {
     linkTarget() {
 
     }
@@ -168,11 +168,11 @@ export default function IntlTestingSettingsPage() {
   items[5] = closure_10(require("Text/Text").Text, obj3);
   const obj5 = { variant: "text-md/normal", children: null };
   const intl5 = require("util").intl;
-  obj5.children = intl5.format(_modDef15623.rdfRyh, {});
+  obj5.children = intl5.format(_modDef15626.rdfRyh, {});
   items[6] = closure_10(require("Text/Text").Text, obj5);
   const obj6 = { variant: "text-md/normal", children: null };
   const intl6 = require("util").intl;
-  obj6.children = intl6.format(_modDef15623.XOdbAy, {
+  obj6.children = intl6.format(_modDef15626.XOdbAy, {
     username: "some user",
     usernameHook(children) {
       let obj = { style: { backgroundColor: "green", borderRadius: 4, paddingHorizontal: 6, paddingVertical: 0 }, children: null };

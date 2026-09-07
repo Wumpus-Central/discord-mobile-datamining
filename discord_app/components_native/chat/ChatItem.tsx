@@ -1,14 +1,14 @@
-// === Module 8652: ChatItem ===
+// === Module 8657: ChatItem ===
 
-// Module 8652 (ChatItem)
+// Module 8657 (ChatItem)
 import nativeDefault from "native" /* 576 */;
 import _modDef672 from "module_672" /* 672 */;
 import MessageTypes2 from "MessageTypes" /* 1089 */;
 import isSystemMessageDefault from "isSystemMessage" /* 7270 */;
 import RowGeneratorTypes from "RowGeneratorTypes" /* 8126 */;
-import AutoModerationSystemMessageViewNativeComponent from "AutoModerationSystemMessageViewNativeComponent" /* 8653 */;
-import MessageViewNativeComponent from "MessageViewNativeComponent" /* 8654 */;
-import SystemMessageViewNativeComponent from "SystemMessageViewNativeComponent" /* 8655 */;
+import AutoModerationSystemMessageViewNativeComponent from "AutoModerationSystemMessageViewNativeComponent" /* 8658 */;
+import MessageViewNativeComponent from "MessageViewNativeComponent" /* 8659 */;
+import SystemMessageViewNativeComponent from "SystemMessageViewNativeComponent" /* 8660 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4552 */;
@@ -200,6 +200,6 @@ export default function _default(rowGenerator) {
   }
   const tmp3 = onLayout(messageSizeCacheRef.useState(0), 2);
 };
-export const DCDMessageView = fn(8654).default;
-export const DCDSystemMessageView = fn(8655).default;
-export const DCDAutoModerationSystemMessageView = fn(8653).default;
+export const DCDMessageView = fn(8659).default;
+export const DCDSystemMessageView = fn(8660).default;
+export const DCDAutoModerationSystemMessageView = fn(8658).default;

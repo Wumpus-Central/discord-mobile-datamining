@@ -1,9 +1,9 @@
-// === Module 15704: DevToolsGuildTagBadgesScreen ===
+// === Module 15707: DevToolsGuildTagBadgesScreen ===
 
-// Module 15704 (DevToolsGuildTagBadgesScreen)
+// Module 15707 (DevToolsGuildTagBadgesScreen)
 import nativeDefault from "native" /* 576 */;
 import Text_Text from "Text/Text" /* 4556 */;
-import badges_GuildBadge from "badges/GuildBadge" /* 13915 */;
+import badges_GuildBadge from "badges/GuildBadge" /* 13918 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 

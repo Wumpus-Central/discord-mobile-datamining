@@ -1,6 +1,6 @@
-// === Module 17614: GuildSettingsRolesUtils ===
+// === Module 17617: GuildSettingsRolesUtils ===
 
-// Module 17614 (GuildSettingsRolesUtils)
+// Module 17617 (GuildSettingsRolesUtils)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
 import GlobalUtils from "GlobalUtils" /* 1369 */;
 import UserUtilsDefault from "UserUtils" /* 4404 */;
@@ -12,7 +12,7 @@ import GuildMemberStore from "GuildMemberStore" /* 2021 */;
 import UserStore from "UserStore" /* 1371 */;
 
 require = fn;
-const constants = fn(17605).GuildSettingsRoleEditSections;
+const constants = fn(17608).GuildSettingsRoleEditSections;
 const AnalyticEvents = fn(1074).AnalyticEvents;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_settings/roles/GuildSettingsRolesUtils.tsx");

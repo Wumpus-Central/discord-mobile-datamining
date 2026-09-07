@@ -1,8 +1,8 @@
-// === Module 11843: GuildEnableCommunicationAlert ===
+// === Module 11848: GuildEnableCommunicationAlert ===
 
-// Module 11843 (GuildEnableCommunicationAlert)
+// Module 11848 (GuildEnableCommunicationAlert)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
-import CountDownDefault from "CountDown" /* 10930 */;
+import CountDownDefault from "CountDown" /* 10935 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -51,7 +51,7 @@ export default function GuildEnableCommunicationAlert(guildId) {
             obj = { value, done: true };
             return obj;
           } else {
-            let obj1 = v1(11842);
+            let obj1 = v1(11847);
             v1 = 1;
             dependencyMap = 1;
             obj1 = { value: null, done: false };
@@ -69,7 +69,7 @@ export default function GuildEnableCommunicationAlert(guildId) {
           const obj2 = { key: "GUILD_ENABLE_COMMUNICATION_SUCCESS", content: null, icon: null };
           const intl = tmp4(1114).intl;
           obj2.content = intl.string(tmp4(1114).t["/Mmbfv"]);
-          obj2.icon = v1(9566);
+          obj2.icon = v1(9571);
           v1(4259).open(obj2);
           dependencyMap = 3;
           return { value: "HermesInternal", done: null };

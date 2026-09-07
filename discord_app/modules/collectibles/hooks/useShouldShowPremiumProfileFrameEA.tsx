@@ -1,8 +1,8 @@
-// === Module 13161: useShouldShowPremiumProfileFrameEA ===
+// === Module 13165: useShouldShowPremiumProfileFrameEA ===
 
-// Module 13161 (useShouldShowPremiumProfileFrameEA)
+// Module 13165 (useShouldShowPremiumProfileFrameEA)
 import CollectiblesProfileFramesExperiment from "CollectiblesProfileFramesExperiment" /* 8212 */;
-import CollectiblesProfileFramesPurchaseExperiment from "CollectiblesProfileFramesPurchaseExperiment" /* 8831 */;
+import CollectiblesProfileFramesPurchaseExperiment from "CollectiblesProfileFramesPurchaseExperiment" /* 8836 */;
 import size from "module_2" /* 2 */;
 
 const CollectiblesProfileFramesPurchaseExperimentDefault = CollectiblesProfileFramesPurchaseExperiment;

@@ -1,6 +1,6 @@
-// === Module 12500: getGuildPowerupFormattedDateString ===
+// === Module 12504: getGuildPowerupFormattedDateString ===
 
-// Module 12500 (getGuildPowerupFormattedDateString)
+// Module 12504 (getGuildPowerupFormattedDateString)
 import LocaleStore from "LocaleStore" /* 2025 */;
 
 const size = fn(2);

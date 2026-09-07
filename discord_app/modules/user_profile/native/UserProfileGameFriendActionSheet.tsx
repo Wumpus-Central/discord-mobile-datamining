@@ -1,9 +1,9 @@
-// === Module 13062: UserProfileGameFriendActionSheet ===
+// === Module 13066: UserProfileGameFriendActionSheet ===
 
-// Module 13062 (UserProfileGameFriendActionSheet)
+// Module 13066 (UserProfileGameFriendActionSheet)
 import nativeDefault from "native" /* 576 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4527 */;
-import UserProfileAlertUtils from "UserProfileAlertUtils" /* 12620 */;
+import UserProfileAlertUtils from "UserProfileAlertUtils" /* 12624 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;

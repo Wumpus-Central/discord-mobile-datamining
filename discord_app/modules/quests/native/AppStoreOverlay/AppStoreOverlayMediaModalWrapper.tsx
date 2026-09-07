@@ -1,6 +1,6 @@
-// === Module 11510: AppStoreOverlayMediaModalWrapper ===
+// === Module 11515: AppStoreOverlayMediaModalWrapper ===
 
-// Module 11510 (AppStoreOverlayMediaModalWrapper)
+// Module 11515 (AppStoreOverlayMediaModalWrapper)
 import ModalActionCreatorsDefault from "ModalActionCreators" /* 4763 */;
 import MediaModalSheetWrapperDefault from "MediaModalSheetWrapper" /* 8288 */;
 import MediaModalDefault from "MediaModal" /* 8289 */;

@@ -1,6 +1,6 @@
-// === Module 11005: SocialLayerStorefrontPoductPurchaseSuccessModal ===
+// === Module 11010: SocialLayerStorefrontPoductPurchaseSuccessModal ===
 
-// Module 11005 (SocialLayerStorefrontPoductPurchaseSuccessModal)
+// Module 11010 (SocialLayerStorefrontPoductPurchaseSuccessModal)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
@@ -13,7 +13,7 @@ import spring from "spring" /* 4974 */;
 import XSmallIcon from "XSmallIcon" /* 5680 */;
 import AnalyticsLocationDefault from "AnalyticsLocation" /* 7182 */;
 import SlayerStorefrontUtils from "SlayerStorefrontUtils" /* 7226 */;
-import SocialLayerStorefrontNativeActionCreators from "SocialLayerStorefrontNativeActionCreators" /* 10797 */;
+import SocialLayerStorefrontNativeActionCreators from "SocialLayerStorefrontNativeActionCreators" /* 10802 */;
 import _slicedToArray from "module_32" /* 32 */;
 import _toArray from "_toArray" /* 718 */;
 import noop from "module_19" /* 19 */;

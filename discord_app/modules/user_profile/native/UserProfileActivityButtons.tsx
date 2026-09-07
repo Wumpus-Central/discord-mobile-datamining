@@ -1,6 +1,6 @@
-// === Module 13032: UserProfileActivityButtons ===
+// === Module 13036: UserProfileActivityButtons ===
 
-// Module 13032 (UserProfileActivityButtons)
+// Module 13036 (UserProfileActivityButtons)
 import useStateFromStores from "useStateFromStores" /* 563 */;
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
@@ -14,12 +14,12 @@ import components_Button_Button from "components/Button/Button" /* 4975 */;
 import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7162 */;
 import isStreamingDefault from "isStreaming" /* 8259 */;
 import StageChannelModalActionCreators from "StageChannelModalActionCreators" /* 8393 */;
-import authorizeConnectionDefault from "authorizeConnection" /* 9252 */;
-import handleJoinEmbeddedActivityDefault from "handleJoinEmbeddedActivity" /* 9533 */;
-import GamesActionCreatorsDefault from "GamesActionCreators" /* 11765 */;
-import getActivityChannelIdDefault from "getActivityChannelId" /* 13033 */;
-import getActivityJoinability from "getActivityJoinability" /* 13034 */;
-import getStreamURLDefault from "getStreamURL" /* 13036 */;
+import authorizeConnectionDefault from "authorizeConnection" /* 9257 */;
+import handleJoinEmbeddedActivityDefault from "handleJoinEmbeddedActivity" /* 9538 */;
+import GamesActionCreatorsDefault from "GamesActionCreators" /* 11770 */;
+import getActivityChannelIdDefault from "getActivityChannelId" /* 13037 */;
+import getActivityJoinability from "getActivityJoinability" /* 13038 */;
+import getStreamURLDefault from "getStreamURL" /* 13040 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 1956 */;
@@ -27,7 +27,7 @@ import ChannelStore from "ChannelStore" /* 1957 */;
 import ConnectedAccountsStore from "ConnectedAccountsStore" /* 5281 */;
 import GuildMemberCountStore from "GuildMemberCountStore" /* 4480 */;
 import GuildStore from "GuildStore" /* 1979 */;
-import LocalActivityStore from "LocalActivityStore" /* 11457 */;
+import LocalActivityStore from "LocalActivityStore" /* 11462 */;
 import PermissionStore from "PermissionStore" /* 4199 */;
 import RelationshipStore from "RelationshipStore" /* 4209 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2011 */;
@@ -141,7 +141,7 @@ export const PlayOnSpotifyButton = function PlayOnSpotifyButton(arg0) {
   ({ activity, onAction: require } = arg0);
   const sync_id = activity.sync_id;
   let tmp4 = null;
-  if (sync_id(10891)(activity)) {
+  if (sync_id(10896)(activity)) {
     tmp4 = null;
     if (null != sync_id) {
       let obj = { text: null, icon: null, variant: "secondary", onPress: null };

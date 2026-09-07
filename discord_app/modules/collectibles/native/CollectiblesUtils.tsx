@@ -1,6 +1,6 @@
-// === Module 8848: collectibles/CollectiblesUtils ===
+// === Module 8853: collectibles/CollectiblesUtils ===
 
-// Module 8848 (collectibles/CollectiblesUtils)
+// Module 8853 (collectibles/CollectiblesUtils)
 import Constants from "Constants" /* 1074 */;
 import PremiumUtilsDefault from "PremiumUtils" /* 4218 */;
 import BillingPlatformUtils from "BillingPlatformUtils" /* 4231 */;
@@ -9,7 +9,7 @@ import IAPStoreDefault from "IAPStore" /* 7237 */;
 import CollectiblesProductUtils from "CollectiblesProductUtils" /* 7553 */;
 import CollectiblesUtils from "CollectiblesUtils" /* 7554 */;
 import types from "types" /* 8196 */;
-import _modDef8849 from "module_8849" /* 8849 */;
+import _modDef8854 from "module_8854" /* 8854 */;
 import size from "module_2" /* 2 */;
 
 function hasAtLeastOneGPlaySynced(nextResult) {
@@ -329,5 +329,5 @@ export const filterHiddenCategories = function filterHiddenCategories(arr) {
   });
 };
 export const createOrbProfileBadge = function createOrbProfileBadge() {
-  return { id: types.OrbBadges.ORB_PROFILE_BADGE, icon: types.OrbBadges.ORB_PROFILE_BADGE, iconSrc: _modDef8849, description: "", isPreviewMode: true };
+  return { id: types.OrbBadges.ORB_PROFILE_BADGE, icon: types.OrbBadges.ORB_PROFILE_BADGE, iconSrc: _modDef8854, description: "", isPreviewMode: true };
 };

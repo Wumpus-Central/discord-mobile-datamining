@@ -1,6 +1,6 @@
-// === Module 9736: CreateChannelActionCreators ===
+// === Module 9741: CreateChannelActionCreators ===
 
-// Module 9736 (CreateChannelActionCreators)
+// Module 9741 (CreateChannelActionCreators)
 import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1250 */;
 import HTTPUtils from "HTTPUtils" /* 1272 */;
 import TypeUtils from "TypeUtils" /* 1969 */;

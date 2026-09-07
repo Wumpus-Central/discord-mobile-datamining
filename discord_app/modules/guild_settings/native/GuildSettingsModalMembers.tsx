@@ -1,13 +1,13 @@
-// === Module 16571: GuildSettingsModalMembers ===
+// === Module 16574: GuildSettingsModalMembers ===
 
-// Module 16571 (GuildSettingsModalMembers)
+// Module 16574 (GuildSettingsModalMembers)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 4272 */;
 import GuildActionCreatorsDefault from "GuildActionCreators" /* 5520 */;
 import MemberSafetyPermissionsUtils from "MemberSafetyPermissionsUtils" /* 7265 */;
-import sortByMatchScore from "sortByMatchScore" /* 9835 */;
-import RolePillDefault from "RolePill" /* 10947 */;
+import sortByMatchScore from "sortByMatchScore" /* 9840 */;
+import RolePillDefault from "RolePill" /* 10952 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
@@ -17,7 +17,7 @@ import GuildRoleStore from "GuildRoleStore" /* 2015 */;
 import GuildStore from "GuildStore" /* 1979 */;
 import PermissionStore from "PermissionStore" /* 4199 */;
 import UserStore from "UserStore" /* 1371 */;
-import GuildSettingsStore from "GuildSettingsStore" /* 9064 */;
+import GuildSettingsStore from "GuildSettingsStore" /* 9069 */;
 
 const sortByMatchScoreDefault = sortByMatchScore;
 
@@ -26,7 +26,7 @@ const View = fn(17).View;
 const GuildSettingsSections = fn(1074).GuildSettingsSections;
 const jsxProd = fn(21);
 ({ jsx: closure_15, jsxs: closure_16, Fragment: closure_17 } = jsxProd);
-let items = [fn(9835).AutocompleterResultTypes.USER];
+let items = [fn(9840).AutocompleterResultTypes.USER];
 fn(4560);
 let obj = { containerInner: null, searchFieldContainer: null, roleList: null };
 obj = { paddingHorizontal: nativeDefault.space.PX_12, flex: 1 };
@@ -93,7 +93,7 @@ let closure_20 = noop.memo((guild) => {
     };
     obj.start = start;
     obj.end = end;
-    return closure_15(guildMember(10942), obj);
+    return closure_15(guildMember(10947), obj);
   }
   tmp = closure_19();
 });
@@ -261,7 +261,7 @@ export default noop.memo(function GuildSettingsModalMembers(guildId) {
           items: membersManagementActions,
           children(ref) {
             const merged = Object.assign(ref, Object.assign({ ref: 0 }));
-            const obj = { source: closure_1_1(9800), accessibilityLabel: null, ref: null };
+            const obj = { source: closure_1_1(9805), accessibilityLabel: null, ref: null };
             const intl = closure_1_0(1114).intl;
             obj.accessibilityLabel = intl.string(closure_1_0(1114).t.ogxXGq);
             obj.ref = ref.ref;

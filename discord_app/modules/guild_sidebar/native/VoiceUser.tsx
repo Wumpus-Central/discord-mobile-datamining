@@ -1,6 +1,6 @@
-// === Module 16122: VoiceUser ===
+// === Module 16125: VoiceUser ===
 
-// Module 16122 (VoiceUser)
+// Module 16125 (VoiceUser)
 import noop from "module_19" /* 19 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 1956 */;
 import ChannelRTCStore from "ChannelRTCStore" /* 4576 */;

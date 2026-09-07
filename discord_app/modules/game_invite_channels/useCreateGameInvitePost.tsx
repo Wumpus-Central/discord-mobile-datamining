@@ -1,12 +1,12 @@
-// === Module 12772: useCreateGameInvitePost ===
+// === Module 12776: useCreateGameInvitePost ===
 
-// Module 12772 (useCreateGameInvitePost)
+// Module 12776 (useCreateGameInvitePost)
 import GameInvitesChannelUtils from "GameInvitesChannelUtils" /* 7272 */;
-import getCurrentUserPresenceActivityDefault from "getCurrentUserPresenceActivity" /* 11761 */;
+import getCurrentUserPresenceActivityDefault from "getCurrentUserPresenceActivity" /* 11766 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import LocalActivityStore from "LocalActivityStore" /* 11457 */;
+import LocalActivityStore from "LocalActivityStore" /* 11462 */;
 import SelfPresenceStore from "SelfPresenceStore" /* 5279 */;
 
 require = fn;

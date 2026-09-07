@@ -1,9 +1,9 @@
-// === Module 11878: ClassificationDetailModal ===
+// === Module 11883: ClassificationDetailModal ===
 
-// Module 11878 (ClassificationDetailModal)
+// Module 11883 (ClassificationDetailModal)
 import nativeDefault from "native" /* 576 */;
 import NavigatorHeader from "NavigatorHeader" /* 5624 */;
-import SafetyHubActionCreatorsAll from "SafetyHubActionCreators" /* 11881 */;
+import SafetyHubActionCreatorsAll from "SafetyHubActionCreators" /* 11886 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -26,7 +26,7 @@ export default function ClassificationDetailModal(classificationId) {
   }
   const tmp = closure_7();
   dependencyMap = tmp;
-  let obj = classificationId(11910);
+  let obj = classificationId(11915);
   const safetyHubInitialized = obj.useSafetyHubInitialized();
   const items = [safetyHubInitialized];
   const effect = safetyHubInitialized.useEffect(() => {
@@ -48,21 +48,21 @@ export default function ClassificationDetailModal(classificationId) {
         return closure_1(4763).pop();
       }),
       render() {
-        return jsx(source(11879), {
+        return jsx(source(11884), {
           classificationId,
           source,
           onClose() {
             let arr = closure_1(4763);
             arr = arr.pop();
             if (closure_1_1) {
-              closure_0(11909).openAccountStanding();
-              const obj = closure_0(11909);
+              closure_0(11914).openAccountStanding();
+              const obj = closure_0(11914);
             }
           },
           onError() {
             let arr = closure_1_1(4763);
             arr = arr.pop();
-            classificationId(11909).openAccountStanding();
+            classificationId(11914).openAccountStanding();
           }
         });
       }

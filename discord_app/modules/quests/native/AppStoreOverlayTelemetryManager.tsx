@@ -1,6 +1,6 @@
-// === Module 11497: AppStoreOverlayTelemetryManager ===
+// === Module 11502: AppStoreOverlayTelemetryManager ===
 
-// Module 11497 (AppStoreOverlayTelemetryManager)
+// Module 11502 (AppStoreOverlayTelemetryManager)
 import Constants from "Constants" /* 1074 */;
 import ConstantsIOS from "ConstantsIOS" /* 1093 */;
 import PlatformUtils from "PlatformUtils" /* 1115 */;

@@ -1,6 +1,6 @@
-// === Module 9415: PlaintextResolvers ===
+// === Module 9420: PlaintextResolvers ===
 
-// Module 9415 (PlaintextResolvers)
+// Module 9420 (PlaintextResolvers)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import UnicodeEmojisDefault from "UnicodeEmojis" /* 4213 */;
 import EmojiUtilsDefault from "EmojiUtils" /* 4217 */;

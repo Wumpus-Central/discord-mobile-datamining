@@ -1,6 +1,6 @@
-// === Module 9605: SurfaceDirectRendererExperiment ===
+// === Module 9610: SurfaceDirectRendererExperiment ===
 
-// Module 9605 (SurfaceDirectRendererExperiment)
+// Module 9610 (SurfaceDirectRendererExperiment)
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
 const require = fn;

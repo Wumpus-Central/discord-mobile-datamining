@@ -1,6 +1,6 @@
-// === Module 9302: application_commands/ApplicationCommandBuiltIns ===
+// === Module 9307: application_commands/ApplicationCommandBuiltIns ===
 
-// Module 9302 (application_commands/ApplicationCommandBuiltIns)
+// Module 9307 (application_commands/ApplicationCommandBuiltIns)
 import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 4573 */;
 import AlertActionCreatorsDefault from "AlertActionCreators" /* 4904 */;
 import MessageActionCreatorsDefault from "MessageActionCreators" /* 7456 */;

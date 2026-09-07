@@ -1,6 +1,6 @@
-// === Module 16182: ChannelsUnreadBar ===
+// === Module 16185: ChannelsUnreadBar ===
 
-// Module 16182 (ChannelsUnreadBar)
+// Module 16185 (ChannelsUnreadBar)
 import nativeDefault from "native" /* 576 */;
 import ReanimatedRexport2 from "ReanimatedRexport" /* 4296 */;
 import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 4740 */;
@@ -12,7 +12,7 @@ import noop from "module_19" /* 19 */;
 const ReanimatedRexport = ReanimatedRexport2;
 
 require = fn;
-const RedesignChannelListConstants = fn(10118);
+const RedesignChannelListConstants = fn(10123);
 ({ getScaledSearchBarHeight: hasOwnProperty, VIEWABILITY_CONFIG: metroRequire } = RedesignChannelListConstants);
 const AnalyticEvents = fn(1074).AnalyticEvents;
 const jsxProd = fn(21);

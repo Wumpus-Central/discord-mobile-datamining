@@ -1,6 +1,6 @@
-// === Module 14620: CustomizeBadgesSheet ===
+// === Module 14623: CustomizeBadgesSheet ===
 
-// Module 14620 (CustomizeBadgesSheet)
+// Module 14623 (CustomizeBadgesSheet)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
@@ -15,15 +15,15 @@ import Card from "Card" /* 5607 */;
 import EyeSlashIcon from "EyeSlashIcon" /* 6968 */;
 import IconButton from "IconButton" /* 8097 */;
 import BadgeDirectoryActionCreators from "BadgeDirectoryActionCreators" /* 8197 */;
-import ContextMenu from "ContextMenu" /* 8666 */;
-import ContextMenuConstants from "ContextMenuConstants" /* 8668 */;
-import PremiumFeaturesCards from "PremiumFeaturesCards" /* 9362 */;
-import openPremiumModalDefault from "openPremiumModal" /* 9392 */;
-import roundToNearestPixelDefault from "roundToNearestPixel" /* 10993 */;
-import BadgeCatalogIconDefault from "BadgeCatalogIcon" /* 11190 */;
-import BadgeUtils from "BadgeUtils" /* 11199 */;
-import PendingBadgeSettings from "PendingBadgeSettings" /* 13067 */;
-import BadgeGrid from "BadgeGrid" /* 14621 */;
+import ContextMenu from "ContextMenu" /* 8671 */;
+import ContextMenuConstants from "ContextMenuConstants" /* 8673 */;
+import PremiumFeaturesCards from "PremiumFeaturesCards" /* 9367 */;
+import openPremiumModalDefault from "openPremiumModal" /* 9397 */;
+import roundToNearestPixelDefault from "roundToNearestPixel" /* 10998 */;
+import BadgeCatalogIconDefault from "BadgeCatalogIcon" /* 11195 */;
+import BadgeUtils from "BadgeUtils" /* 11204 */;
+import PendingBadgeSettings from "PendingBadgeSettings" /* 13071 */;
+import BadgeGrid from "BadgeGrid" /* 14624 */;
 import noop from "module_19" /* 19 */;
 import UserProfileSettingsStore from "UserProfileSettingsStore" /* 8160 */;
 import UserStore from "UserStore" /* 1371 */;
@@ -136,7 +136,7 @@ function getSlotOffset(arg0, arg1) {
   return point;
 }
 let obj6 = { alignItems: "center", justifyContent: "center", paddingHorizontal: nativeDefault.space.PX_16, paddingVertical: nativeDefault.space.PX_32 };
-getSlotOffset.__closure = { BADGE_GRID_COLUMNS: fn(14621).BADGE_GRID_COLUMNS, BADGE_GRID_GAP: fn(14621).BADGE_GRID_GAP };
+getSlotOffset.__closure = { BADGE_GRID_COLUMNS: fn(14624).BADGE_GRID_COLUMNS, BADGE_GRID_GAP: fn(14624).BADGE_GRID_GAP };
 getSlotOffset.__workletHash = 8647997879684;
 getSlotOffset.__initData = { code: "function getSlotOffset_CustomizeBadgesSheetTsx1(index,tileSize){const{BADGE_GRID_COLUMNS,BADGE_GRID_GAP}=this.__closure;const column=index%BADGE_GRID_COLUMNS;return{x:column*(tileSize+BADGE_GRID_GAP),y:Math.floor(index/BADGE_GRID_COLUMNS)*(tileSize+BADGE_GRID_GAP)};}" };
 let closure_24 = noop.memo((badge) => {

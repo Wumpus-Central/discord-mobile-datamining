@@ -1,12 +1,12 @@
-// === Module 11701: ShareChatInput ===
+// === Module 11706: ShareChatInput ===
 
-// Module 11701 (ShareChatInput)
+// Module 11706 (ShareChatInput)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import Pressables from "Pressables" /* 5123 */;
-import FormInputDefault from "FormInput" /* 8601 */;
-import ReactionIcon from "ReactionIcon" /* 8757 */;
-import useMessageMaxLengthDefault from "useMessageMaxLength" /* 9304 */;
+import FormInputDefault from "FormInput" /* 8606 */;
+import ReactionIcon from "ReactionIcon" /* 8762 */;
+import useMessageMaxLengthDefault from "useMessageMaxLength" /* 9309 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 

@@ -1,6 +1,6 @@
-// === Module 16943: IncentivizedAccountLinkConfirmationBottomSheet ===
+// === Module 16946: IncentivizedAccountLinkConfirmationBottomSheet ===
 
-// Module 16943 (IncentivizedAccountLinkConfirmationBottomSheet)
+// Module 16946 (IncentivizedAccountLinkConfirmationBottomSheet)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1114 */;
 import PlatformUtils from "PlatformUtils" /* 1115 */;
@@ -9,11 +9,11 @@ import LinkingDefault from "Linking" /* 4255 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4527 */;
 import components_Button_Button from "components/Button/Button" /* 4975 */;
 import FastImageDefault from "FastImage" /* 5587 */;
-import APNGDecorationNativeComponentDefault from "APNGDecorationNativeComponent" /* 8809 */;
-import PromoSheet from "PromoSheet" /* 10230 */;
-import WindowLaunchIcon from "WindowLaunchIcon" /* 12956 */;
-import _modDef15832 from "module_15832" /* 15832 */;
-import _modDef15833 from "module_15833" /* 15833 */;
+import APNGDecorationNativeComponentDefault from "APNGDecorationNativeComponent" /* 8814 */;
+import PromoSheet from "PromoSheet" /* 10235 */;
+import WindowLaunchIcon from "WindowLaunchIcon" /* 12960 */;
+import _modDef15835 from "module_15835" /* 15835 */;
+import _modDef15836 from "module_15836" /* 15836 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4552 */;
 
@@ -30,18 +30,18 @@ export default function IncentivizedAccountLinkConfirmationBottomSheet() {
   const items = [AccessibilityStore];
   if (obj.useStateFromStores(items, () => useReducedMotion.useReducedMotion)) {
     obj = { source: null, style: null };
-    obj = { uri: _modDef15832 };
+    obj = { uri: _modDef15835 };
     obj.source = obj;
     const size = { width: v150, height: v150 };
     obj.style = size;
-    let tmp3Result = <Image uri={_modDef15832} />;
+    let tmp3Result = <Image uri={_modDef15835} />;
     let tmp8 = importDefault;
     let tmp9 = jsx;
   } else {
     if (tmpResult.isAndroid()) {
       const obj1 = { url: null, style: null };
       let tmp4Result = APNGDecorationNativeComponentDefault;
-      obj1.url = _modDef15833;
+      obj1.url = _modDef15836;
       const size1 = { width: v150, height: v150 };
       obj1.style = size1;
       tmp3Result = <tmp4Result url={null} style={null} />;
@@ -51,7 +51,7 @@ export default function IncentivizedAccountLinkConfirmationBottomSheet() {
       let obj2 = { source: null, resizeMode: "contain", style: null };
       const obj3 = { uri: null };
       tmp4Result = FastImageDefault;
-      obj3.uri = _modDef15833;
+      obj3.uri = _modDef15836;
       obj2.source = obj3;
       const size2 = { width: v150, height: v150 };
       obj2.style = size2;

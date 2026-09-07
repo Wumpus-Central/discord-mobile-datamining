@@ -1,6 +1,6 @@
-// === Module 11006: useSocialLayerStorefrontMobileAccountLinkingDisabled ===
+// === Module 11011: useSocialLayerStorefrontMobileAccountLinkingDisabled ===
 
-// Module 11006 (useSocialLayerStorefrontMobileAccountLinkingDisabled)
+// Module 11011 (useSocialLayerStorefrontMobileAccountLinkingDisabled)
 import SocialLayerStorefrontStore from "SocialLayerStorefrontStore" /* 7228 */;
 
 const require = fn;

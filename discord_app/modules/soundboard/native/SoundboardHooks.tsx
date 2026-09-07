@@ -1,6 +1,6 @@
-// === Module 17070: SoundboardHooks ===
+// === Module 17073: SoundboardHooks ===
 
-// Module 17070 (SoundboardHooks)
+// Module 17073 (SoundboardHooks)
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1477 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
@@ -8,7 +8,7 @@ import AccessibilityStore from "AccessibilityStore" /* 4552 */;
 import ThemeStore from "ThemeStore" /* 1183 */;
 
 const require = fn;
-const SoundboardStyleConstants = fn(17062);
+const SoundboardStyleConstants = fn(17065);
 ({ SOUNDS_PER_ROW: closure_7, SOUND_ROW_PADDING: closure_8 } = SoundboardStyleConstants);
 const ACTION_SHEET_MAX_WIDTH = fn(7151).ACTION_SHEET_MAX_WIDTH;
 const size = fn(2);

@@ -1,6 +1,6 @@
-// === Module 16605: vibegrationsMessageAuthors ===
+// === Module 16608: vibegrationsMessageAuthors ===
 
-// Module 16605 (vibegrationsMessageAuthors)
+// Module 16608 (vibegrationsMessageAuthors)
 import UserActionCreatorsAll from "UserActionCreators" /* 8181 */;
 import UserStore from "UserStore" /* 1371 */;
 

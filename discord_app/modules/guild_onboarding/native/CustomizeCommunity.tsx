@@ -1,6 +1,6 @@
-// === Module 11550: CustomizeCommunity ===
+// === Module 11555: CustomizeCommunity ===
 
-// Module 11550 (CustomizeCommunity)
+// Module 11555 (CustomizeCommunity)
 import nativeDefault from "native" /* 576 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1396 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
@@ -31,7 +31,7 @@ function EmptyCustomizeCommunity(setTab) {
   const items = [SelectedGuildStore];
   importDefault = obj1.useStateFromStores(items, () => guildId.getGuildId());
   let obj = { style: tmp.emptyContainer, children: null };
-  obj = { style: tmp.emptyContainerImage, source: importDefault(obj.isThemeDark(useThemeDefault()) ? 11551 : 11552) };
+  obj = { style: tmp.emptyContainerImage, source: importDefault(obj.isThemeDark(useThemeDefault()) ? 11556 : 11557) };
   const items1 = [closure_16(closure_5, obj), , ];
   obj1 = { style: tmp.emptyContainerHeader, children: null };
   const intl = tmp2(1114).intl;
@@ -467,7 +467,7 @@ export default function CustomizeCommunity(guildId) {
     }
     return prop;
   });
-  const tmp7 = stateFromStores(11553)(guildId);
+  const tmp7 = stateFromStores(11558)(guildId);
   ({ newOnboardingPrompts, onboardingPromptsWithNewAnswers, onboardingPrompts } = tmp7);
   const items2 = [guildId, stateFromStores, stateFromStores1];
   ({ onboardingPromptsRaw, newAnswersCount } = tmp7);

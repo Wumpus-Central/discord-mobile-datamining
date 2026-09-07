@@ -1,13 +1,13 @@
-// === Module 11295: QuestCopyUtils ===
+// === Module 11300: QuestCopyUtils ===
 
-// Module 11295 (QuestCopyUtils)
+// Module 11300 (QuestCopyUtils)
 import util from "util" /* 1114 */;
 import AdCreativeType from "AdCreativeType" /* 5451 */;
 import ClipboardUtils from "ClipboardUtils" /* 7190 */;
 import AnalyticsActions from "AnalyticsActions" /* 7718 */;
-import AdAnalyticsInterfaceExperiment from "AdAnalyticsInterfaceExperiment" /* 11192 */;
-import captureAdUserAction from "captureAdUserAction" /* 11193 */;
-import captureAdUserActionTypes from "captureAdUserActionTypes" /* 11197 */;
+import AdAnalyticsInterfaceExperiment from "AdAnalyticsInterfaceExperiment" /* 11197 */;
+import captureAdUserAction from "captureAdUserAction" /* 11198 */;
+import captureAdUserActionTypes from "captureAdUserActionTypes" /* 11202 */;
 import QuestConstants from "QuestConstants" /* 5444 */;
 import size from "module_2" /* 2 */;
 

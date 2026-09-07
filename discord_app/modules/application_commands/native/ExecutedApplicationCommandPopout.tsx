@@ -1,6 +1,6 @@
-// === Module 11621: ExecutedApplicationCommandPopout ===
+// === Module 11626: ExecutedApplicationCommandPopout ===
 
-// Module 11621 (ExecutedApplicationCommandPopout)
+// Module 11626 (ExecutedApplicationCommandPopout)
 import nativeDefault from "native" /* 576 */;
 import PlatformUtils from "PlatformUtils" /* 1115 */;
 import native from "native" /* 1178 */;
@@ -16,7 +16,7 @@ import FastImageDefault from "FastImage" /* 5587 */;
 import ApplicationCommandTypes from "ApplicationCommandTypes" /* 7523 */;
 import InteractionActionCreatorsAll from "InteractionActionCreators" /* 8117 */;
 import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8179 */;
-import NativeCommandClipboardModuleDefault from "NativeCommandClipboardModule" /* 11622 */;
+import NativeCommandClipboardModuleDefault from "NativeCommandClipboardModule" /* 11627 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4552 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
@@ -25,7 +25,7 @@ import GuildStore from "GuildStore" /* 1979 */;
 import MessageStore from "MessageStore" /* 4781 */;
 import RelationshipStore from "RelationshipStore" /* 4209 */;
 import UserStore from "UserStore" /* 1371 */;
-import ApplicationCommandIndexStore from "ApplicationCommandIndexStore" /* 9290 */;
+import ApplicationCommandIndexStore from "ApplicationCommandIndexStore" /* 9295 */;
 
 require = fn;
 function getCommandOptionComponents(option) {

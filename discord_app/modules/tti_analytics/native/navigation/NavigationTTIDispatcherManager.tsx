@@ -1,9 +1,9 @@
-// === Module 17861: NavigationTTIDispatcherManager ===
+// === Module 17864: NavigationTTIDispatcherManager ===
 
-// Module 17861 (NavigationTTIDispatcherManager)
+// Module 17864 (NavigationTTIDispatcherManager)
 import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1250 */;
-import navigationTTIEnabled from "navigationTTIEnabled" /* 17862 */;
-import NavigationSpanTrackerDefault from "NavigationSpanTracker" /* 17863 */;
+import navigationTTIEnabled from "navigationTTIEnabled" /* 17865 */;
+import NavigationSpanTrackerDefault from "NavigationSpanTracker" /* 17866 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 import MessageStore from "MessageStore" /* 4781 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2011 */;

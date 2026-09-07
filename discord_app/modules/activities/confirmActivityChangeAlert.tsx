@@ -1,6 +1,6 @@
-// === Module 9540: confirmActivityChangeAlert ===
+// === Module 9545: confirmActivityChangeAlert ===
 
-// Module 9540 (confirmActivityChangeAlert)
+// Module 9545 (confirmActivityChangeAlert)
 import util from "util" /* 1114 */;
 import StringUtils from "StringUtils" /* 1925 */;
 import useChannelName from "useChannelName" /* 4713 */;

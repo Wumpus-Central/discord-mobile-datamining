@@ -1,6 +1,6 @@
-// === Module 16423: ForYouItemActionButtons ===
+// === Module 16426: ForYouItemActionButtons ===
 
-// Module 16423 (ForYouItemActionButtons)
+// Module 16426 (ForYouItemActionButtons)
 import util from "util" /* 1114 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
 import ToastActionCreatorsDefault from "ToastActionCreators" /* 4259 */;
@@ -9,10 +9,10 @@ import parseURLDefault from "parseURL" /* 4540 */;
 import timing from "timing" /* 4561 */;
 import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 4573 */;
 import NotificationCenterItemsTypes from "NotificationCenterItemsTypes" /* 7640 */;
-import RelationshipActionCreatorsDefault from "RelationshipActionCreators" /* 9042 */;
-import PeopleUtilsDefault from "PeopleUtils" /* 10870 */;
-import handleSupportedURLDefault from "handleSupportedURL" /* 13850 */;
-import AddFriendsScreenUtils from "AddFriendsScreenUtils" /* 16044 */;
+import RelationshipActionCreatorsDefault from "RelationshipActionCreators" /* 9047 */;
+import PeopleUtilsDefault from "PeopleUtils" /* 10875 */;
+import handleSupportedURLDefault from "handleSupportedURL" /* 13853 */;
+import AddFriendsScreenUtils from "AddFriendsScreenUtils" /* 16047 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
@@ -360,7 +360,7 @@ export const useItemActionButtonPropsV2 = function useItemActionButtonPropsV2(ot
   const callback4 = noop.useCallback(() => {
     const dMChannel = ChannelActionCreatorsDefault.getDMChannel(id);
     dMChannel.then((channelId) => {
-      closure_1(13850)({ payload: closure_1(4540)("https://discord.com/channels/@me/" + channelId).payload, safe: true, navigationReplace: false });
+      closure_1(13853)({ payload: closure_1(4540)("https://discord.com/channels/@me/" + channelId).payload, safe: true, navigationReplace: false });
       let obj;
       let tmp3;
       if (null != channelId) {

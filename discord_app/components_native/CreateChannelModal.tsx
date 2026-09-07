@@ -1,6 +1,6 @@
-// === Module 9732: CreateChannelModal ===
+// === Module 9737: CreateChannelModal ===
 
-// Module 9732 (CreateChannelModal)
+// Module 9737 (CreateChannelModal)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import native from "native" /* 1178 */;
@@ -14,9 +14,9 @@ import TableRow from "TableRow" /* 5605 */;
 import NavigatorHeader from "NavigatorHeader" /* 5624 */;
 import FormRadio from "FormRadio" /* 5689 */;
 import HeaderActionButton from "HeaderActionButton" /* 7377 */;
-import Form from "Form" /* 8593 */;
-import CreateChannelModalActionCreatorsDefault from "CreateChannelModalActionCreators" /* 9737 */;
-import sanitizeChannelNameDefault from "sanitizeChannelName" /* 9741 */;
+import Form from "Form" /* 8598 */;
+import CreateChannelModalActionCreatorsDefault from "CreateChannelModalActionCreators" /* 9742 */;
+import sanitizeChannelNameDefault from "sanitizeChannelName" /* 9746 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 1957 */;

@@ -1,6 +1,6 @@
-// === Module 16706: ThreadBrowserRowSubtext ===
+// === Module 16709: ThreadBrowserRowSubtext ===
 
-// Module 16706 (ThreadBrowserRowSubtext)
+// Module 16709 (ThreadBrowserRowSubtext)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import nativeDefault from "native" /* 576 */;
 import native from "native" /* 1178 */;

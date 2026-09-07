@@ -1,6 +1,6 @@
-// === Module 11380: LikelyAtoMoreTipsModalActionItems ===
+// === Module 11385: LikelyAtoMoreTipsModalActionItems ===
 
-// Module 11380 (LikelyAtoMoreTipsModalActionItems)
+// Module 11385 (LikelyAtoMoreTipsModalActionItems)
 import UserUtilsDefault from "UserUtils" /* 4404 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1371 */;
@@ -25,7 +25,7 @@ export default function LikelyAtoMoreTipsModalActionItems(senderId) {
   const intl2 = senderId(1114).intl;
   obj.subLabel = intl2.string(senderId(1114).t.w2ve0t);
   obj.onPress = senderId.handleMutePressed;
-  obj.icon = jsx(senderId(9059).BellSlashIcon, {});
+  obj.icon = jsx(senderId(9064).BellSlashIcon, {});
   obj.children = jsx(senderId(5605).TableRow, { label: null, subLabel: null, onPress: null, icon: null });
   return jsx(senderId(5687).TableRowGroup, { label: null, subLabel: null, onPress: null, icon: null });
 };

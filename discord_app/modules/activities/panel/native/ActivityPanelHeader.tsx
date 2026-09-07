@@ -1,17 +1,17 @@
-// === Module 17024: ActivityPanelHeader ===
+// === Module 17027: ActivityPanelHeader ===
 
-// Module 17024 (ActivityPanelHeader)
+// Module 17027 (ActivityPanelHeader)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 576 */;
 import native from "native" /* 4271 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4296 */;
 import LegacyBaseButton from "LegacyBaseButton" /* 6655 */;
 import useGetOrFetchApplicationsDefault from "useGetOrFetchApplications" /* 7168 */;
-import BlurVisualEffectViewDefault from "BlurVisualEffectView" /* 17025 */;
-import InviteActivityButtonDefault from "InviteActivityButton" /* 17026 */;
-import MinimizeActivityButtonDefault from "MinimizeActivityButton" /* 17030 */;
-import QuestActivityButtonDefault from "QuestActivityButton" /* 17031 */;
-import LeaveActivityButtonDefault from "LeaveActivityButton" /* 17036 */;
+import BlurVisualEffectViewDefault from "BlurVisualEffectView" /* 17028 */;
+import InviteActivityButtonDefault from "InviteActivityButton" /* 17029 */;
+import MinimizeActivityButtonDefault from "MinimizeActivityButton" /* 17033 */;
+import QuestActivityButtonDefault from "QuestActivityButton" /* 17034 */;
+import LeaveActivityButtonDefault from "LeaveActivityButton" /* 17039 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 1956 */;
@@ -79,8 +79,8 @@ function useBaseActivityPanelHeaderContent(landscape) {
   const items2 = [setMode];
   obj = { gesture: null, headerWrapperStyles: null, headerStyles: null, styles: null };
   const callback = noop.useCallback(fn, items2);
-  obj = { mode: landscape(17021).MorphablePanelModes.PANEL, panGestureEnabled: true, pipState, swipeRequiresPop: true, wrapperOffset, onPanMinimizeGestureEnd: callback, disableHorizontalSafeAreas: true };
-  obj.gesture = setMode(17021)(obj);
+  obj = { mode: landscape(17024).MorphablePanelModes.PANEL, panGestureEnabled: true, pipState, swipeRequiresPop: true, wrapperOffset, onPanMinimizeGestureEnd: callback, disableHorizontalSafeAreas: true };
+  obj.gesture = setMode(17024)(obj);
   obj.headerWrapperStyles = memo;
   obj.headerStyles = memo1;
   obj.styles = tmp;
@@ -128,7 +128,7 @@ class BaseActivityPanelContent {
 }
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, StyleSheet } = get_ActivityIndicator);
-const ActivityPanelConstants = fn(9505);
+const ActivityPanelConstants = fn(9510);
 ({ ACTIVITY_PANEL_PORTRAIT_HEADER_HEIGHT: closure_8, LANDSCAPE_IFRAME_HORIZONTAL_MARGIN: closure_9, ActivityPanelModes: c10 } = ActivityPanelConstants);
 const ThemeTypes = fn(1085).ThemeTypes;
 const jsxProd = fn(21);
@@ -220,7 +220,7 @@ export default noop.memo(() => {
   let wrapperDimensions;
   const tmp2 = closure_14();
   const headerContainer = tmp2;
-  const context = noop.useContext(wrapperDimensions(17015));
+  const context = noop.useContext(wrapperDimensions(17018));
   wrapperDimensions = context.wrapperDimensions;
   let items = [tmp2.headerContainer, wrapperDimensions.isWindowLandscape];
   ({ setMode, wrapperOffset, pipState } = context);

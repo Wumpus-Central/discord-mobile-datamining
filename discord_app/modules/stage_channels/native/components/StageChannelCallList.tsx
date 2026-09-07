@@ -1,20 +1,20 @@
-// === Module 10044: StageChannelCallList ===
+// === Module 10049: StageChannelCallList ===
 
-// Module 10044 (StageChannelCallList)
+// Module 10049 (StageChannelCallList)
 import _modDef38 from "module_38" /* 38 */;
 import util from "util" /* 1114 */;
 import native from "native" /* 1178 */;
 import StageChannelParticipants from "StageChannelParticipants" /* 5425 */;
-import SpeakerTile from "SpeakerTile" /* 10046 */;
-import StageSectionHeaderDefault from "StageSectionHeader" /* 10053 */;
-import UserSummaryItemDefault from "UserSummaryItem" /* 10054 */;
-import StageGridRowDefault from "StageGridRow" /* 10055 */;
-import AudienceGridRowDefault from "AudienceGridRow" /* 10067 */;
+import SpeakerTile from "SpeakerTile" /* 10051 */;
+import StageSectionHeaderDefault from "StageSectionHeader" /* 10058 */;
+import UserSummaryItemDefault from "UserSummaryItem" /* 10059 */;
+import StageGridRowDefault from "StageGridRow" /* 10060 */;
+import AudienceGridRowDefault from "AudienceGridRow" /* 10072 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const StageChannelListStore = fn(10045);
+const StageChannelListStore = fn(10050);
 ({ useActiveSpeakerPillScrollHandler: hasOwnProperty, useActiveSpeakerPillState: metroRequire } = StageChannelListStore);
 const MAX_AUDIENCE_ROW_LIMIT = fn(5414).MAX_AUDIENCE_ROW_LIMIT;
 const jsxProd = fn(21);
@@ -285,7 +285,7 @@ export default function StageChannelCallList(channel) {
   channel = channel.channel;
   let width;
   let isScreenLandscape;
-  let obj = width(10071);
+  let obj = width(10076);
   const throttleDurationForChannel = obj.useThrottleDurationForChannel(channel.id);
   width = isScreenLandscape(1477)().width;
   isScreenLandscape = width(5126).useIsScreenLandscape();
@@ -303,7 +303,7 @@ export default function StageChannelCallList(channel) {
     return obj;
   }, items);
   const obj2 = width(5126);
-  const tmp4 = _slicedToArray(width(10071).useStageChannelParticipantsListThrottled(channel.id, memo, throttleDurationForChannel, true), 2);
+  const tmp4 = _slicedToArray(width(10076).useStageChannelParticipantsListThrottled(channel.id, memo, throttleDurationForChannel, true), 2);
   obj = { channel, listSections: tmp4[0], rowsBySection: tmp4[1] };
   return closure_8(closure_12, obj);
 };

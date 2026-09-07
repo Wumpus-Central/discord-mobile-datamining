@@ -1,14 +1,14 @@
-// === Module 10942: DetailedGuildIdentityUserRow ===
+// === Module 10947: DetailedGuildIdentityUserRow ===
 
-// Module 10942 (DetailedGuildIdentityUserRow)
+// Module 10947 (DetailedGuildIdentityUserRow)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 576 */;
 import native from "native" /* 1178 */;
 import UserUtilsDefault from "UserUtils" /* 4404 */;
 import NicknameUtilsDefault from "NicknameUtils" /* 4712 */;
 import TableRow from "TableRow" /* 5605 */;
-import Form from "Form" /* 8593 */;
-import DiscordTagDefault from "DiscordTag" /* 9803 */;
+import Form from "Form" /* 8598 */;
+import DiscordTagDefault from "DiscordTag" /* 9808 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1371 */;
 

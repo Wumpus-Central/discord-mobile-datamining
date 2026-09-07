@@ -1,12 +1,12 @@
-// === Module 16506: useReplyActions ===
+// === Module 16509: useReplyActions ===
 
-// Module 16506 (useReplyActions)
+// Module 16509 (useReplyActions)
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4527 */;
 import MessageReactionsTypes from "MessageReactionsTypes" /* 7763 */;
 import ContentInventoryEntryType from "ContentInventoryEntryType" /* 8130 */;
 import ICYMIActionCreatorsDefault from "ICYMIActionCreators" /* 8351 */;
-import openEmojiPickerActionSheet from "openEmojiPickerActionSheet" /* 11121 */;
+import openEmojiPickerActionSheet from "openEmojiPickerActionSheet" /* 11126 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
@@ -234,7 +234,7 @@ export const useReplyActions = function useReplyActions(content) {
         obj = { itemId: user.id, itemType: str, actionParameters: { actionGestureType: "press", actionTargetElement: "item_container", actionIntentType: "open", actionDestinationType: null } };
         ICYMIActionCreatorsDefault.feedItemActioned(obj);
         obj = { content: user, author: tmp, sendMessage, onPressEmoji: callback1 };
-        ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(16507, dependencyMap.paths), "ReactActionSheet", obj);
+        ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(16510, dependencyMap.paths), "ReactActionSheet", obj);
       }
     }, items6);
     obj.openEmojiPicker = callback2;

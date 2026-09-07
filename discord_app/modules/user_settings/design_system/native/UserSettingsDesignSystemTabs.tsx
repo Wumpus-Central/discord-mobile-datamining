@@ -1,6 +1,6 @@
-// === Module 15775: UserSettingsDesignSystemTabs ===
+// === Module 15778: UserSettingsDesignSystemTabs ===
 
-// Module 15775 (UserSettingsDesignSystemTabs)
+// Module 15778 (UserSettingsDesignSystemTabs)
 import nativeDefault from "native" /* 576 */;
 import Text_Text from "Text/Text" /* 4556 */;
 import _slicedToArray from "module_32" /* 32 */;
@@ -82,7 +82,7 @@ export default function UserSettingsDesignSystemTabs() {
   let tmp20Result = first2;
   if (first2) {
     obj = { state: segmentedControlState, colors: items1 };
-    tmp20Result = closure_8(first(12759), obj);
+    tmp20Result = closure_8(first(12763), obj);
   }
   obj1 = { children: null };
   obj2 = { spacing: 24, children: null };

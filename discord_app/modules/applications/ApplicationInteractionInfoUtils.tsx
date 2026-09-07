@@ -1,6 +1,6 @@
-// === Module 11619: ApplicationInteractionInfoUtils ===
+// === Module 11624: ApplicationInteractionInfoUtils ===
 
-// Module 11619 (ApplicationInteractionInfoUtils)
+// Module 11624 (ApplicationInteractionInfoUtils)
 import Server from "Server" /* 1894 */;
 import size from "module_2" /* 2 */;
 

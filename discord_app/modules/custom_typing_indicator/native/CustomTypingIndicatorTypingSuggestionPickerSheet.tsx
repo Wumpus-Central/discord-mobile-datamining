@@ -1,6 +1,6 @@
-// === Module 15358: CustomTypingIndicatorTypingSuggestionPickerSheet ===
+// === Module 15361: CustomTypingIndicatorTypingSuggestionPickerSheet ===
 
-// Module 15358 (CustomTypingIndicatorTypingSuggestionPickerSheet)
+// Module 15361 (CustomTypingIndicatorTypingSuggestionPickerSheet)
 import nativeDefault from "native" /* 576 */;
 import _modDef3549 from "module_3549" /* 3549 */;
 import _slicedToArray from "module_32" /* 32 */;
@@ -37,11 +37,11 @@ export default function CustomTypingIndicatorTypingSuggestionPickerSheet(onChang
     children: null
   };
   const tmp = closure_6();
-  const customTypingIndicatorSuggestionPresets = onChange(11971).getCustomTypingIndicatorSuggestionPresets();
+  const customTypingIndicatorSuggestionPresets = onChange(11975).getCustomTypingIndicatorSuggestionPresets();
   obj.children = customTypingIndicatorSuggestionPresets.map((value) => {
     const obj = { value, label: null };
     const intl = onChange(1114).intl;
-    obj.label = intl.string(onChange(11971).getCustomTypingIndicatorSuggestionMessage(value));
+    obj.label = intl.string(onChange(11975).getCustomTypingIndicatorSuggestionMessage(value));
     return jsx(onChange(5688).TableRadioRow, { value, label: null }, value);
   });
   obj.children = jsx(onChange(5685).TableRadioGroup, {

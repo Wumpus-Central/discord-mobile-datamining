@@ -1,6 +1,6 @@
-// === Module 8873: useFetchCollectiblesProducts ===
+// === Module 8878: useFetchCollectiblesProducts ===
 
-// Module 8873 (useFetchCollectiblesProducts)
+// Module 8878 (useFetchCollectiblesProducts)
 import CollectiblesItemType from "CollectiblesItemType" /* 1889 */;
 import CollectiblesActionCreators from "CollectiblesActionCreators" /* 7541 */;
 import _slicedToArray from "module_32" /* 32 */;

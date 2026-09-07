@@ -1,6 +1,6 @@
-// === Module 15012: useBountiesAutoScroll ===
+// === Module 15015: useBountiesAutoScroll ===
 
-// Module 15012 (useBountiesAutoScroll)
+// Module 15015 (useBountiesAutoScroll)
 import BrowserManager from "BrowserManager" /* 4525 */;
 import timing from "timing" /* 4561 */;
 import timingPresets from "timingPresets" /* 4564 */;

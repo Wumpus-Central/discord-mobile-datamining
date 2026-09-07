@@ -1,9 +1,9 @@
-// === Module 13095: AddToWishlistItemCard ===
+// === Module 13099: AddToWishlistItemCard ===
 
-// Module 13095 (AddToWishlistItemCard)
+// Module 13099 (AddToWishlistItemCard)
 import nativeDefault from "native" /* 576 */;
-import SKUPreviewDefault from "SKUPreview" /* 8772 */;
-import HeartOutlineIcon from "HeartOutlineIcon" /* 8840 */;
+import SKUPreviewDefault from "SKUPreview" /* 8777 */;
+import HeartOutlineIcon from "HeartOutlineIcon" /* 8845 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;

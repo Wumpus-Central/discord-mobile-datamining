@@ -1,8 +1,8 @@
-// === Module 8813: ClipView ===
+// === Module 8818: ClipView ===
 
-// Module 8813 (ClipView)
-import CutoutBackgroundContext from "CutoutBackgroundContext" /* 8814 */;
-import ClipViewNativeComponentDefault from "ClipViewNativeComponent" /* 8816 */;
+// Module 8818 (ClipView)
+import CutoutBackgroundContext from "CutoutBackgroundContext" /* 8819 */;
+import ClipViewNativeComponentDefault from "ClipViewNativeComponent" /* 8821 */;
 import noop from "module_19" /* 19 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4296 */;
 

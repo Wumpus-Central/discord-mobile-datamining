@@ -1,6 +1,6 @@
-// === Module 9896: InviteButton ===
+// === Module 9901: InviteButton ===
 
-// Module 9896 (InviteButton)
+// Module 9901 (InviteButton)
 import util from "util" /* 1114 */;
 import components_Button_Button from "components/Button/Button" /* 4975 */;
 import noop from "module_19" /* 19 */;

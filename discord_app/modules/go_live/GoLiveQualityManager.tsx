@@ -1,6 +1,6 @@
-// === Module 13807: GoLiveQualityManager ===
+// === Module 13810: GoLiveQualityManager ===
 
-// Module 13807 (GoLiveQualityManager)
+// Module 13810 (GoLiveQualityManager)
 import LoggerDefault from "Logger" /* 3 */;
 import Timers from "Timers" /* 4447 */;
 import TypedEventEmitter from "TypedEventEmitter" /* 4618 */;

@@ -1,13 +1,13 @@
-// === Module 8780: CollectiblesWishlistItemRecord ===
+// === Module 8785: CollectiblesWishlistItemRecord ===
 
-// Module 8780 (CollectiblesWishlistItemRecord)
+// Module 8785 (CollectiblesWishlistItemRecord)
 import CollectiblesItemType from "CollectiblesItemType" /* 1889 */;
 import AvatarDecorationRecord from "AvatarDecorationRecord" /* 7547 */;
 import NameplateRecord from "NameplateRecord" /* 1887 */;
 import ProfileEffectRecord from "ProfileEffectRecord" /* 7548 */;
 import ProfileFrameRecord from "ProfileFrameRecord" /* 7549 */;
 import SKURecord from "SKURecord" /* 5511 */;
-import BaseWishlistItemRecord from "BaseWishlistItemRecord" /* 8779 */;
+import BaseWishlistItemRecord from "BaseWishlistItemRecord" /* 8784 */;
 
 require = fn;
 function createCollectiblesItemFromServerResponse(collectibles_item) {

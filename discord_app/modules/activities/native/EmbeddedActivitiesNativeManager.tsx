@@ -1,6 +1,6 @@
-// === Module 9515: EmbeddedActivitiesNativeManager ===
+// === Module 9520: EmbeddedActivitiesNativeManager ===
 
-// Module 9515 (EmbeddedActivitiesNativeManager)
+// Module 9520 (EmbeddedActivitiesNativeManager)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1109 */;
 import util from "util" /* 1114 */;
@@ -9,17 +9,17 @@ import v1 from "v1" /* 1256 */;
 import GlobalUtils from "GlobalUtils" /* 1369 */;
 import ToastActionCreatorsDefault from "ToastActionCreators" /* 4259 */;
 import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 4905 */;
-import EmbeddedActivitiesActionCreators from "EmbeddedActivitiesActionCreators" /* 9504 */;
-import NativeAppLifecycleModuleDefault from "NativeAppLifecycleModule" /* 9516 */;
-import getPostMessageJavaScriptDefault from "getPostMessageJavaScript" /* 9517 */;
-import ThermalUtilsDefault from "ThermalUtils" /* 9521 */;
-import WebViewPostMessageTransportDefault from "WebViewPostMessageTransport" /* 9550 */;
-import _modDef9566 from "module_9566" /* 9566 */;
+import EmbeddedActivitiesActionCreators from "EmbeddedActivitiesActionCreators" /* 9509 */;
+import NativeAppLifecycleModuleDefault from "NativeAppLifecycleModule" /* 9521 */;
+import getPostMessageJavaScriptDefault from "getPostMessageJavaScript" /* 9522 */;
+import ThermalUtilsDefault from "ThermalUtils" /* 9526 */;
+import WebViewPostMessageTransportDefault from "WebViewPostMessageTransport" /* 9555 */;
+import _modDef9571 from "module_9571" /* 9571 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 import RTCConnectionStore from "RTCConnectionStore" /* 4583 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 1956 */;
-import EmbeddedActivitiesManager from "EmbeddedActivitiesManager" /* 9518 */;
+import EmbeddedActivitiesManager from "EmbeddedActivitiesManager" /* 9523 */;
 
 require = fn;
 function postMessageToWebView() {
@@ -251,7 +251,7 @@ prototype["showDevShelfOverrideEnabled"] = function showDevShelfOverrideEnabled(
   const obj = { key: "EMBEDDED_ACTIVITIES_DEV_SHELF_URL_OVERRIDE_ENABLED", content: null, icon: null, iconColor: "status-positive" };
   const intl = util.intl;
   obj.content = intl.string(util.t.JfA7IK);
-  obj.icon = _modDef9566;
+  obj.icon = _modDef9571;
   obj.open(obj);
 };
 prototype["releaseWebView"] = function releaseWebView() {

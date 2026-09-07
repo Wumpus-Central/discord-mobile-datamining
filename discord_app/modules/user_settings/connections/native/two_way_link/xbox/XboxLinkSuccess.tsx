@@ -1,6 +1,6 @@
-// === Module 9440: XboxLinkSuccess ===
+// === Module 9445: XboxLinkSuccess ===
 
-// Module 9440 (XboxLinkSuccess)
+// Module 9445 (XboxLinkSuccess)
 import nativeDefault from "native" /* 576 */;
 import PlatformUtils from "PlatformUtils" /* 1115 */;
 import _slicedToArray from "module_32" /* 32 */;
@@ -9,8 +9,8 @@ import noop from "module_19" /* 19 */;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ Image: hasOwnProperty, View: metroRequire, Linking: closure_7, Pressable: closure_8 } = get_ActivityIndicator);
-const XboxLinkModalScenes = fn(9219).XboxLinkModalScenes;
-const GameConsoleConstants = fn(9233);
+const XboxLinkModalScenes = fn(9224).XboxLinkModalScenes;
+const GameConsoleConstants = fn(9238);
 ({ XBOX_ANDROID_APP_LINK: c10, XBOX_IOS_APP_LINK: closure_11, XBOX_URL_BASE: closure_12 } = GameConsoleConstants);
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
@@ -59,7 +59,7 @@ export default function XboxLinkDiscordSuccess() {
   const callback1 = noop.useCallback(() => {
     navigation.push(XboxLinkModalScenes.EDUCATION);
   }, items1);
-  obj1.source = require("module_9441");
+  obj1.source = require("module_9446");
   obj1.style = tmp.image;
   const items2 = [closure_13(closure_5, obj1), , , ];
   const obj2 = { variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", style: twoWayLinkStyles.title, children: null };
@@ -71,7 +71,7 @@ export default function XboxLinkDiscordSuccess() {
   obj3.children = intl2.string(first(navigation[13]).t.m3mBYE);
   items2[2] = closure_13(first(navigation[12]).Text, obj3);
   const obj4 = { onPress: callback, style: tmp.getApp, children: null };
-  const obj5 = { style: tmp.appLogoBox, children: closure_13(closure_5, { source: require("module_9442"), style: tmp.appLogo }) };
+  const obj5 = { style: tmp.appLogoBox, children: closure_13(closure_5, { source: require("module_9447"), style: tmp.appLogo }) };
   const items3 = [closure_13(closure_6, obj5), , ];
   const obj7 = { style: tmp.getAppTitle, variant: "heading-md/semibold", color: "mobile-text-heading-primary", children: null };
   const intl3 = first(navigation[13]).intl;

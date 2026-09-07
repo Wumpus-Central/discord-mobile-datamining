@@ -1,6 +1,6 @@
-// === Module 15022: AdsVideoUtils ===
+// === Module 15025: AdsVideoUtils ===
 
-// Module 15022 (AdsVideoUtils)
+// Module 15025 (AdsVideoUtils)
 import PlatformUtils from "PlatformUtils" /* 1115 */;
 import size from "module_2" /* 2 */;
 

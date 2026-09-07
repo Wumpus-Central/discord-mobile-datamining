@@ -1,8 +1,8 @@
-// === Module 10238: FavoritesGuildIntroPopover ===
+// === Module 10243: FavoritesGuildIntroPopover ===
 
-// Module 10238 (FavoritesGuildIntroPopover)
+// Module 10243 (FavoritesGuildIntroPopover)
 import dismissible_content from "dismissible_content" /* 1943 */;
-import useCanShowFavoritesGuildOnboardingDefault from "useCanShowFavoritesGuildOnboarding" /* 10239 */;
+import useCanShowFavoritesGuildOnboardingDefault from "useCanShowFavoritesGuildOnboarding" /* 10244 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import DismissibleContentShownStateStore from "DismissibleContentShownStateStore" /* 1949 */;

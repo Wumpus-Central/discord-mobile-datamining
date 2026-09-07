@@ -1,6 +1,6 @@
-// === Module 8586: AgeVerificationMethodsContainer ===
+// === Module 8589: AgeVerificationMethodsContainer ===
 
-// Module 8586 (AgeVerificationMethodsContainer)
+// Module 8589 (AgeVerificationMethodsContainer)
 import nativeDefault from "native" /* 576 */;
 import MonitoringAgentDefault from "MonitoringAgent" /* 7602 */;
 import MetricEvents from "MetricEvents" /* 7607 */;

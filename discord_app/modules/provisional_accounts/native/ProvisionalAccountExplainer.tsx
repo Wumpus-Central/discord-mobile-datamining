@@ -1,9 +1,9 @@
-// === Module 12627: ProvisionalAccountExplainer ===
+// === Module 12631: ProvisionalAccountExplainer ===
 
-// Module 12627 (ProvisionalAccountExplainer)
+// Module 12631 (ProvisionalAccountExplainer)
 import nativeDefault from "native" /* 576 */;
 import UserProfileCardDefault from "UserProfileCard" /* 7207 */;
-import ApplicationIconAndNameDefault from "ApplicationIconAndName" /* 12628 */;
+import ApplicationIconAndNameDefault from "ApplicationIconAndName" /* 12632 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
@@ -29,7 +29,7 @@ export const ChatProvisionalAccountExplainerCard = function ChatProvisionalAccou
   c1 = "text-sm/semibold";
   const items = [iconSize, "text-sm/semibold"];
   const callback = noop.useCallback((application) => hasOwnProperty(ApplicationIconAndNameDefault, { application, textVariant, iconSize }, application.id), items);
-  let obj = iconSize(12629);
+  let obj = iconSize(12633);
   const provisionalAccountExplanationText = obj.useProvisionalAccountExplanationText({ userId, renderApplicationName: callback });
   obj = { style: null, children: null };
   const items1 = [tmp.chatContainer, style];
@@ -50,7 +50,7 @@ export const UserProfileProvisionalAccountExplainerCard = function UserProfilePr
   const items = [iconSize, "text-md/semibold"];
   ({ style, userId } = iconSize);
   const callback = noop.useCallback((application) => hasOwnProperty(ApplicationIconAndNameDefault, { application, textVariant, iconSize }, application.id), items);
-  let obj = iconSize(12629);
+  let obj = iconSize(12633);
   const provisionalAccountExplanationText = obj.useProvisionalAccountExplanationText({ userId, renderApplicationName: callback });
   obj = { style, title: null, titleIcon: null, children: null };
   const intl = iconSize(1114).intl;

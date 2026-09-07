@@ -1,10 +1,10 @@
-// === Module 10152: NotificationSettingsPresets ===
+// === Module 10157: NotificationSettingsPresets ===
 
-// Module 10152 (NotificationSettingsPresets)
+// Module 10157 (NotificationSettingsPresets)
 import nativeDefault from "native" /* 576 */;
 import notificationSettingsPresetUtils from "notificationSettingsPresetUtils" /* 4744 */;
-import notficationSettingsChannelFlagUtils from "notficationSettingsChannelFlagUtils" /* 10149 */;
-import notificationSettingsGuildFlagUtils from "notificationSettingsGuildFlagUtils" /* 10155 */;
+import notficationSettingsChannelFlagUtils from "notficationSettingsChannelFlagUtils" /* 10154 */;
+import notificationSettingsGuildFlagUtils from "notificationSettingsGuildFlagUtils" /* 10160 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

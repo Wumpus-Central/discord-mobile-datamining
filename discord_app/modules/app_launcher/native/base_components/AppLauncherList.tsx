@@ -1,12 +1,12 @@
-// === Module 12167: AppLauncherList ===
+// === Module 12171: AppLauncherList ===
 
-// Module 12167 (AppLauncherList)
+// Module 12171 (AppLauncherList)
 import util from "util" /* 1114 */;
 import native from "native" /* 1178 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1611 */;
 import SearchField from "SearchField" /* 7050 */;
-import AppLauncherFlashList from "AppLauncherFlashList" /* 12102 */;
-import _modDef12168 from "module_12168" /* 12168 */;
+import AppLauncherFlashList from "AppLauncherFlashList" /* 12106 */;
+import _modDef12172 from "module_12172" /* 12172 */;
 import noop from "module_19" /* 19 */;
 
 const AppLauncherFlashListDefault = AppLauncherFlashList;
@@ -37,12 +37,12 @@ export const AppLauncherList = noop.forwardRef((contentContainerStyle, arg1) => 
 });
 export const AppLauncherListEmptyState = function AppLauncherListEmptyState() {
   const tmp = closure_5();
-  const obj = { style: tmp.emptyState, imageStyle: tmp.emptyStateImage, lightSource: _modDef12168, darkSource: _modDef12168, title: null, body: null };
+  const obj = { style: tmp.emptyState, imageStyle: tmp.emptyStateImage, lightSource: _modDef12172, darkSource: _modDef12172, title: null, body: null };
   const intl = util.intl;
   obj.title = intl.string(util.t.vYocDz);
   const intl2 = util.intl;
   obj.body = intl2.string(util.t.V6nAfF);
-  return jsx(native.EmptyState, { style: tmp.emptyState, imageStyle: tmp.emptyStateImage, lightSource: _modDef12168, darkSource: _modDef12168, title: null, body: null });
+  return jsx(native.EmptyState, { style: tmp.emptyState, imageStyle: tmp.emptyStateImage, lightSource: _modDef12172, darkSource: _modDef12172, title: null, body: null });
 };
 export const AppLauncherListSearchBar = function AppLauncherListSearchBar(arg0) {
   let obj = { style: closure_5().searchBarContainer, children: null };

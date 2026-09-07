@@ -1,13 +1,13 @@
-// === Module 12113: NoPermsState ===
+// === Module 12117: NoPermsState ===
 
-// Module 12113 (NoPermsState)
+// Module 12117 (NoPermsState)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import shared from "shared" /* 4411 */;
 import useThemeDefault from "useTheme" /* 4495 */;
 import Text_Text from "Text/Text" /* 4556 */;
-import AppLauncherTypes from "AppLauncherTypes" /* 9409 */;
-import AppLauncherNativeUtils from "AppLauncherNativeUtils" /* 12051 */;
+import AppLauncherTypes from "AppLauncherTypes" /* 9414 */;
+import AppLauncherNativeUtils from "AppLauncherNativeUtils" /* 12055 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -28,7 +28,7 @@ const result = size.fileFinishedImporting("modules/app_launcher/native/screens/h
 export default function EmptyState() {
   const tmp = closure_7();
   let obj = shared;
-  const tmp4Result = importDefault(obj.isThemeLight(useThemeDefault()) ? 12114 : 12115);
+  const tmp4Result = importDefault(obj.isThemeLight(useThemeDefault()) ? 12118 : 12119);
   const logAppLauncherEmptyStateView = AppLauncherNativeUtils.useLogAppLauncherEmptyStateView(AppLauncherTypes.AppLauncherEmptyStateType.HOME_NO_PERMISSIONS);
   obj = { style: tmp.container, children: null };
   obj = { style: tmp.image, resizeMode: "contain", source: tmp4Result };

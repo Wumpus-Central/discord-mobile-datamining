@@ -1,13 +1,13 @@
-// === Module 16630: SearchFilterSuggestions ===
+// === Module 16633: SearchFilterSuggestions ===
 
-// Module 16630 (SearchFilterSuggestions)
+// Module 16633 (SearchFilterSuggestions)
 import nativeDefault from "native" /* 576 */;
 import native from "native" /* 4271 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4296 */;
 import spring from "spring" /* 4974 */;
 import springPresets from "springPresets" /* 4978 */;
-import SearchPlatformUtilsDefault from "SearchPlatformUtils" /* 12338 */;
-import SearchFilterUtils from "SearchFilterUtils" /* 16631 */;
+import SearchPlatformUtilsDefault from "SearchPlatformUtils" /* 12342 */;
+import SearchFilterUtils from "SearchFilterUtils" /* 16634 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 

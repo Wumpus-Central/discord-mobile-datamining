@@ -1,13 +1,13 @@
-// === Module 17707: CreatorHighlightSection ===
+// === Module 17710: CreatorHighlightSection ===
 
-// Module 17707 (CreatorHighlightSection)
+// Module 17710 (CreatorHighlightSection)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import native from "native" /* 1178 */;
 import LinkingDefault from "Linking" /* 4255 */;
 import Text_Text from "Text/Text" /* 4556 */;
-import _modDef10302 from "module_10302" /* 10302 */;
-import EmojiIconDefault from "EmojiIcon" /* 15240 */;
+import _modDef10307 from "module_10307" /* 10307 */;
+import EmojiIconDefault from "EmojiIcon" /* 15243 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -21,7 +21,7 @@ function GuildServerSubscriberCount(arg0) {
   obj.style = items;
   obj = { style: tmp.subscriberCount, variant: "text-sm/medium", color: "text-overlay-light", children: subscriberCount };
   const items1 = [timestampProducer(Text_Text.Text, obj), , ];
-  obj = { size: native.Icon.Sizes.SMALL, color: nativeDefault.unsafe_rawColors.WHITE, style: tmp.subscriberCountIcon, source: _modDef10302 };
+  obj = { size: native.Icon.Sizes.SMALL, color: nativeDefault.unsafe_rawColors.WHITE, style: tmp.subscriberCountIcon, source: _modDef10307 };
   items1[1] = timestampProducer(native.Icon, obj);
   const obj1 = { variant: "text-sm/normal", color: "text-overlay-light", children: null };
   const intl = util.intl;
@@ -37,12 +37,12 @@ function CreatorGuildCard(highlightedCreatorGuild) {
   const guild_id = highlightedCreatorGuild.guild_id;
   let quote_attribution_title = highlightedCreatorGuild.quote_attribution_title;
   ({ quote, quote_attribution } = highlightedCreatorGuild);
-  const tmp4 = guild_id(17708)(guild_id, 3, 60);
+  const tmp4 = guild_id(17711)(guild_id, 3, 60);
   dependencyMap = tmp4;
   const hasAllImperativeDetails = tmp4.hasAllImperativeDetails;
   let items = [hasAllImperativeDetails, tmp4];
   if (tmp4.isLoading) {
-    let obj = { style: tmp.cardContainer, children: closure_6(tmp2(17680), {}) };
+    let obj = { style: tmp.cardContainer, children: closure_6(tmp2(17683), {}) };
     return closure_6(closure_4, obj);
   } else if (hasAllImperativeDetails) {
     const details = tmp4.details;

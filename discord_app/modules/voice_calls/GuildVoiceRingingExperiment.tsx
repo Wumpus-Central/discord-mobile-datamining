@@ -1,6 +1,6 @@
-// === Module 9175: GuildVoiceRingingExperiment ===
+// === Module 9180: GuildVoiceRingingExperiment ===
 
-// Module 9175 (GuildVoiceRingingExperiment)
+// Module 9180 (GuildVoiceRingingExperiment)
 import ExperimentConstants from "ExperimentConstants" /* 4477 */;
 import createExperiment from "module_4474" /* 4474 */;
 import size from "module_2" /* 2 */;

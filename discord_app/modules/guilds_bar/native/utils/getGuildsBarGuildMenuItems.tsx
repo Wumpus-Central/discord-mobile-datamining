@@ -1,13 +1,13 @@
-// === Module 16286: getGuildsBarGuildMenuItems ===
+// === Module 16289: getGuildsBarGuildMenuItems ===
 
-// Module 16286 (getGuildsBarGuildMenuItems)
+// Module 16289 (getGuildsBarGuildMenuItems)
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4527 */;
 import NotificationSettingsUtils from "NotificationSettingsUtils" /* 7114 */;
 import NotificationSettingsModalActionCreatorsDefault from "NotificationSettingsModalActionCreators" /* 7119 */;
-import _modDef12377 from "module_12377" /* 12377 */;
-import _modDef12378 from "module_12378" /* 12378 */;
-import openGuildActionSheetDefault from "openGuildActionSheet" /* 13907 */;
+import _modDef12381 from "module_12381" /* 12381 */;
+import _modDef12382 from "module_12382" /* 12382 */;
+import openGuildActionSheetDefault from "openGuildActionSheet" /* 13910 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import GuildStore from "GuildStore" /* 1979 */;
 import UserGuildSettingsStore from "UserGuildSettingsStore" /* 4741 */;
@@ -97,7 +97,7 @@ export default function getGuildsBarGuildMenuItems(guildId) {
     const splice = items.splice;
     const obj2 = { iconSource: null, label: null, action: null };
     if (isMutedResult) {
-      obj2.iconSource = _modDef12378;
+      obj2.iconSource = _modDef12382;
       const intl5 = tmp(1114).intl;
       obj2.label = intl5.string(tmp(1114).t.De0BTC);
       obj2.action = function action() {
@@ -107,12 +107,12 @@ export default function getGuildsBarGuildMenuItems(guildId) {
       };
       splice(1, 0, obj2);
     } else {
-      obj2.iconSource = _modDef12377;
+      obj2.iconSource = _modDef12381;
       const intl4 = tmp(1114).intl;
       obj2.label = intl4.string(tmp(1114).t.vRzp7P);
       obj2.action = function action() {
         const obj = { guildId };
-        obj.openLazy(asyncRequireImpl(10144, dependencyMap.paths), "muteSettings" + guildId, obj);
+        obj.openLazy(asyncRequireImpl(10149, dependencyMap.paths), "muteSettings" + guildId, obj);
       };
       splice(1, 0, obj2);
     }

@@ -1,16 +1,16 @@
-// === Module 17142: VoicePanelAnimatedActivityCard ===
+// === Module 17145: VoicePanelAnimatedActivityCard ===
 
-// Module 17142 (VoicePanelAnimatedActivityCard)
+// Module 17145 (VoicePanelAnimatedActivityCard)
 import nativeDefault from "native" /* 576 */;
 import useWindowDimensions from "useWindowDimensions" /* 1477 */;
 import native from "native" /* 4271 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4296 */;
 import LegacyBaseButton from "LegacyBaseButton" /* 6655 */;
-import EmbeddedActivitiesActionCreators from "EmbeddedActivitiesActionCreators" /* 9504 */;
+import EmbeddedActivitiesActionCreators from "EmbeddedActivitiesActionCreators" /* 9509 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 1956 */;
-import ChannelCallLifecycleStore from "ChannelCallLifecycleStore" /* 9486 */;
+import ChannelCallLifecycleStore from "ChannelCallLifecycleStore" /* 9491 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 
 require = fn;
@@ -35,7 +35,7 @@ function VoicePanelAnimatedActivityCardInner(applicationId) {
   let obj = focused;
   let tmp3 = channelId(focused.useState(0), 2);
   dependencyMap = tmp3[1];
-  const context = focused.useContext(sharedVisible(12272));
+  const context = focused.useContext(sharedVisible(12276));
   channelId = context.channelId;
   focused = context.focused;
   const layoutManager = context.layoutManager;
@@ -43,7 +43,7 @@ function VoicePanelAnimatedActivityCardInner(applicationId) {
   const windowDimensions = context.windowDimensions;
   const hideControls = context.hideControls;
   const controlsSpecs = context.controlsSpecs;
-  const tmp7 = sharedVisible(16689)();
+  const tmp7 = sharedVisible(16692)();
   VoicePanelControlsModes = tmp7;
   let obj1 = applicationId(504);
   const items = [windowDimensions];
@@ -54,7 +54,7 @@ function VoicePanelAnimatedActivityCardInner(applicationId) {
   if (stateFromStores != null) {
     guild_id = stateFromStores.guild_id;
   }
-  let tmp8Result = tmp8(17143);
+  let tmp8Result = tmp8(17146);
   let guild_id1;
   if (stateFromStores != null) {
     guild_id1 = stateFromStores.guild_id;
@@ -76,7 +76,7 @@ function VoicePanelAnimatedActivityCardInner(applicationId) {
   const stateFromStoresObject = tmp8Result.useStateFromStoresObject(items4, () => ({ gridOrientationLockState: EmbeddedActivitiesStore.getGridOrientationLockStateForApp(applicationId), focusedOrientationLockState: EmbeddedActivitiesStore.getOrientationLockStateForApp(applicationId) }), items5);
   gridOrientationLockState = stateFromStoresObject.gridOrientationLockState;
   focusedOrientationLockState = stateFromStoresObject.focusedOrientationLockState;
-  const tmp17 = sharedVisible(9632)();
+  const tmp17 = sharedVisible(9637)();
   let tmp = incrementActivityKey();
   const items6 = [layoutManager];
   const stateFromStores1 = applicationId(504).useStateFromStores(items6, () => {
@@ -92,7 +92,7 @@ function VoicePanelAnimatedActivityCardInner(applicationId) {
   let tmp4Result = tmp4(7162);
   const tmp8Result1 = applicationId(504);
   let tmp21 = null != tmp17;
-  const analyticsContext = applicationId(9619).useAnalyticsContext();
+  const analyticsContext = applicationId(9624).useAnalyticsContext();
   if (tmp21) {
     let id;
     if (application != null) {
@@ -105,7 +105,7 @@ function VoicePanelAnimatedActivityCardInner(applicationId) {
     if (stateFromStores1 != null) {
       const participants = stateFromStores1.participants;
       if (participants != null) {
-        found = participants.find((item) => applicationId(13985).isActivityParticipantCurrentUserCurrentSession(item));
+        found = participants.find((item) => applicationId(13988).isActivityParticipantCurrentUserCurrentSession(item));
       }
     }
     tmp21 = null != found;
@@ -117,7 +117,7 @@ function VoicePanelAnimatedActivityCardInner(applicationId) {
       dependencyMap((arg0) => arg0 + 1);
     }
   }, items7);
-  const tmp8Result2 = applicationId(9619);
+  const tmp8Result2 = applicationId(9624);
   let fn = function q() {
     return { visible: sharedVisible.get(), mode: mode.get() };
   };
@@ -159,8 +159,8 @@ function VoicePanelAnimatedActivityCardInner(applicationId) {
   if (null != stateFromStores1) {
     obj = { applicationId: null, instanceId: null };
     ({ applicationId: obj10.applicationId, compositeInstanceId: obj10.instanceId } = stateFromStores1);
-    embeddedActivityParticipantId = tmp8(9476).getEmbeddedActivityParticipantId(obj);
-    const tmp8Result4 = tmp8(9476);
+    embeddedActivityParticipantId = tmp8(9481).getEmbeddedActivityParticipantId(obj);
+    const tmp8Result4 = tmp8(9481);
   }
   const tmp25 = controlsSpecs;
   const tmp8Result3 = applicationId(4296);
@@ -249,7 +249,7 @@ function VoicePanelAnimatedActivityCardInner(applicationId) {
   ve.__workletHash = 13125606009235;
   ve.__initData = callback2;
   const animatedReaction2 = tmp8Result6.useAnimatedReaction(Se, ve);
-  const tmp39 = !sharedVisible(9472)();
+  const tmp39 = !sharedVisible(9477)();
   __initData3 = tmp39;
   backgroundColor = tmp.activityContainerBackground.backgroundColor;
   let obj2 = { runOnJS: applicationId(4296).runOnJS, handleTargetAspectRatioParams: callback1, gridOrientationLockState, hasJoined: tmp21, updateNotJoinedActivityDimensions: callback2 };
@@ -345,27 +345,27 @@ function VoicePanelAnimatedActivityCardInner(applicationId) {
       obj6.activityName = name;
       obj6.isActivityFocused = first1;
       const obj7 = { channel: stateFromStores, layoutMode: tmp43 };
-      obj6.children = focusedOrientationLockState(tmp4(9635), obj7, tmp3[0]);
-      const items13 = [focusedOrientationLockState(tmp4(17144), obj6), ];
+      obj6.children = focusedOrientationLockState(tmp4(9640), obj7, tmp3[0]);
+      const items13 = [focusedOrientationLockState(tmp4(17147), obj6), ];
       let tmp47Result = null;
       if (stateFromStores2) {
-        tmp47Result = tmp47(tmp4(17145), {});
+        tmp47Result = tmp47(tmp4(17148), {});
       }
       items13[1] = tmp47Result;
       obj5.children = items13;
       obj4.children = closure_16(tmp4Result, obj5);
       tmp47Result = tmp47(tmp8(6655).GestureDetector, obj4);
       let tmp44 = tmp47;
-      const tmp4Result1 = tmp4(17144);
+      const tmp4Result1 = tmp4(17147);
     } else if (null == activityShelfItemData) {
       const obj8 = { activity: stateFromStores1, application };
-      tmp47Result = focusedOrientationLockState(tmp4(17146), obj8);
+      tmp47Result = focusedOrientationLockState(tmp4(17149), obj8);
       tmp44 = focusedOrientationLockState;
     } else {
       tmp44 = focusedOrientationLockState;
       const obj9 = { gesture: memo1, children: null };
       const obj10 = { context: memo, guildId: stateFromStores.guild_id, activityItem: activityShelfItemData, locationObject: analyticsContext.location, itemDimensions: tmp2Result[0], disableBadges: true };
-      obj9.children = focusedOrientationLockState(tmp4(17150), obj10);
+      obj9.children = focusedOrientationLockState(tmp4(17153), obj10);
       tmp47Result = focusedOrientationLockState(tmp8(6655).GestureDetector, obj9);
     }
     const obj11 = { value: tmp4Result(tmp4(7182).ACTIVITY_TILE).analyticsLocations, children: tmp47Result };
@@ -373,9 +373,9 @@ function VoicePanelAnimatedActivityCardInner(applicationId) {
   }
   const tmp8Result8 = applicationId(504);
 }
-const VoicePanelConstants = fn(12273);
+const VoicePanelConstants = fn(12277);
 ({ IS_IOS: closure_8, VoicePanelModes: closure_9 } = VoicePanelConstants);
-let VoicePanelControlsModes = fn(12271).VoicePanelControlsModes;
+let VoicePanelControlsModes = fn(12275).VoicePanelControlsModes;
 const ThemeTypes = fn(1074).ThemeTypes;
 const Constants = fn(1920);
 ({ ACTIVITY_PORTRAIT_ASPECT_RATIO: closure_12, ActivityLayoutMode: map1, OrientationLockState: closure_14 } = Constants);

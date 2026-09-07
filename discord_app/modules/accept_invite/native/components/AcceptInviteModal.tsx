@@ -1,9 +1,9 @@
-// === Module 17302: AcceptInviteModal ===
+// === Module 17305: AcceptInviteModal ===
 
-// Module 17302 (AcceptInviteModal)
+// Module 17305 (AcceptInviteModal)
 import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1250 */;
 import InviteCodeUtils from "InviteCodeUtils" /* 4545 */;
-import AcceptInviteContainerDefault from "AcceptInviteContainer" /* 12716 */;
+import AcceptInviteContainerDefault from "AcceptInviteContainer" /* 12720 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -27,7 +27,7 @@ export default function AcceptInviteModal(arg0) {
     obj.render = function render() {
       const obj = {};
       const merged = Object.assign(closure_0);
-      obj.onPressClose = closure_0(8738).clearDisplayedInvite;
+      obj.onPressClose = closure_0(8743).clearDisplayedInvite;
       return jsx(AcceptInviteContainerDefault, {});
     };
     obj[CreateGuildModalStates.ACCEPT_INVITE] = obj;

@@ -1,6 +1,6 @@
-// === Module 9034: useUserProfileWidgets ===
+// === Module 9039: useUserProfileWidgets ===
 
-// Module 9034 (useUserProfileWidgets)
+// Module 9039 (useUserProfileWidgets)
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import UserProfileStore from "UserProfileStore" /* 7621 */;
 import WidgetStore from "WidgetStore" /* 7625 */;

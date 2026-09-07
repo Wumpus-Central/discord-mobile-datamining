@@ -1,11 +1,11 @@
-// === Module 11413: ForumPostActionBar ===
+// === Module 11418: ForumPostActionBar ===
 
-// Module 11413 (ForumPostActionBar)
+// Module 11418 (ForumPostActionBar)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import nativeDefault from "native" /* 576 */;
 import Client from "Client" /* 4491 */;
 import MessageActionCreatorsDefault from "MessageActionCreators" /* 7456 */;
-import messages_MessagesUtils from "messages/MessagesUtils" /* 11252 */;
+import messages_MessagesUtils from "messages/MessagesUtils" /* 11257 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import LurkingStore from "LurkingStore" /* 4200 */;
@@ -68,7 +68,7 @@ export default function ForumPostActionBar(channel) {
   if (tmp11) {
     obj = { style: tmp.reactionRow, children: null };
     obj1 = { thread: channel, parentChannel: stateFromStores, firstMessage, containerWidth: tmp7[0] };
-    obj.children = closure_10(tmp2(11414).ForumPostActionBarReactions, obj1);
+    obj.children = closure_10(tmp2(11419).ForumPostActionBarReactions, obj1);
     tmp11 = closure_10(View, obj);
   }
   const items5 = [tmp11, ];
@@ -101,7 +101,7 @@ export default function ForumPostActionBar(channel) {
       const obj = { channelId: channel.id, messageId: SnowflakeUtilsDefault.castChannelIdAsMessageId(channel.id), flash: true, jumpType: Client.JumpType.ANIMATED };
       obj.jumpToMessage(obj);
     };
-    obj4.children = closure_10(tmp2(11415).ArrowLargeUpIcon, { size: "xs" });
+    obj4.children = closure_10(tmp2(11420).ArrowLargeUpIcon, { size: "xs" });
     items7[2] = closure_10(tmp2(5123).PressableOpacity, obj4);
     obj2.children = items7;
     items5[1] = closure_11(View, obj2);
@@ -135,7 +135,7 @@ export default function ForumPostActionBar(channel) {
       obj5.accessibilityLabel = Text(t["DjZ+6E"]);
       obj5.style = tmp.actionButton;
       obj5.onPress = items9;
-      const items11 = [closure_10(tmp2(9776).BellIcon, { size: "xs" }), ];
+      const items11 = [closure_10(tmp2(9781).BellIcon, { size: "xs" }), ];
       const obj7 = { style: tmp.buttonText, variant: "text-sm/semibold", color: "interactive-text-default", children: null };
       const intl2 = tmp2(1114).intl;
       obj7.children = intl2.string(tmp2(1114).t["0rQinA"]);

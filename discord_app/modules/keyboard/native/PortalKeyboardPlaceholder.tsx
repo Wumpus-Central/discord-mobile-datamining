@@ -1,6 +1,6 @@
-// === Module 12252: PortalKeyboardPlaceholder ===
+// === Module 12256: PortalKeyboardPlaceholder ===
 
-// Module 12252 (PortalKeyboardPlaceholder)
+// Module 12256 (PortalKeyboardPlaceholder)
 import nativeDefault from "native" /* 576 */;
 import PlatformUtils from "PlatformUtils" /* 1115 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1477 */;

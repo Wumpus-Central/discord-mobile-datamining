@@ -1,10 +1,10 @@
-// === Module 9020: UserProfileApplicationWidgetBottomCollectionLayout ===
+// === Module 9025: UserProfileApplicationWidgetBottomCollectionLayout ===
 
-// Module 9020 (UserProfileApplicationWidgetBottomCollectionLayout)
+// Module 9025 (UserProfileApplicationWidgetBottomCollectionLayout)
 import nativeDefault from "native" /* 576 */;
 import Text_Text from "Text/Text" /* 4556 */;
-import resolvedValuesFromUserApplicationIdentityProfile from "resolvedValuesFromUserApplicationIdentityProfile" /* 8926 */;
-import UserProfileApplicationWidgetSkeletons from "UserProfileApplicationWidgetSkeletons" /* 9014 */;
+import resolvedValuesFromUserApplicationIdentityProfile from "resolvedValuesFromUserApplicationIdentityProfile" /* 8931 */;
+import UserProfileApplicationWidgetSkeletons from "UserProfileApplicationWidgetSkeletons" /* 9019 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

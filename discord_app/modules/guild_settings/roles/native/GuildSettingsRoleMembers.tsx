@@ -1,6 +1,6 @@
-// === Module 17634: GuildSettingsRoleMembers ===
+// === Module 17637: GuildSettingsRoleMembers ===
 
-// Module 17634 (GuildSettingsRoleMembers)
+// Module 17637 (GuildSettingsRoleMembers)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
@@ -8,7 +8,7 @@ import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
 import ToastActionCreatorsDefault from "ToastActionCreators" /* 4259 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4527 */;
 import _modDef5597 from "module_5597" /* 5597 */;
-import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 9063 */;
+import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 9068 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import GuildRoleMemberCountStore from "GuildRoleMemberCountStore" /* 7128 */;
@@ -101,7 +101,7 @@ export default function GuildSettingsRoleMembers(guild) {
     obj.track(AnalyticEvents.OPEN_POPOUT, { type: "Add Role Members", location_page: "Role Settings", location_section: "Members" });
     const obj2 = ActionSheetActionCreatorsDefault;
     obj = { guild, role };
-    obj2.openLazy(asyncRequireImpl(17615, dependencyMap.paths), "role-add-members-" + guild.id + "-" + role.id, obj);
+    obj2.openLazy(asyncRequireImpl(17618, dependencyMap.paths), "role-add-members-" + guild.id + "-" + role.id, obj);
   }, items3);
   closure_6 = found.useCallback((item) => {
     item = item.item;

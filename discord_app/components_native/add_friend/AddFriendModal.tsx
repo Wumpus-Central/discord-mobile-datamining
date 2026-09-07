@@ -1,13 +1,13 @@
-// === Module 13853: AddFriendModal ===
+// === Module 13856: AddFriendModal ===
 
-// Module 13853 (AddFriendModal)
+// Module 13856 (AddFriendModal)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1611 */;
 import ModalActionCreatorsDefault from "ModalActionCreators" /* 4763 */;
 import NavigatorHeader from "NavigatorHeader" /* 5624 */;
-import ContactSyncUtils from "ContactSyncUtils" /* 12680 */;
+import ContactSyncUtils from "ContactSyncUtils" /* 12684 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1371 */;
@@ -107,7 +107,7 @@ get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, ScrollView: metroRequire } = get_ActivityIndicator);
 const Constants = fn(1074);
 ({ AnalyticEvents: closure_8, Fonts } = Constants);
-const ContactPermissions = fn(12678).ContactPermissions;
+const ContactPermissions = fn(12682).ContactPermissions;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
 fn(4560);

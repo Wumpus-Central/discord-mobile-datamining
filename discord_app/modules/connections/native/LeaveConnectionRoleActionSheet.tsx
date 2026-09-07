@@ -1,6 +1,6 @@
-// === Module 11572: LeaveConnectionRoleActionSheet ===
+// === Module 11577: LeaveConnectionRoleActionSheet ===
 
-// Module 11572 (LeaveConnectionRoleActionSheet)
+// Module 11577 (LeaveConnectionRoleActionSheet)
 import util from "util" /* 1114 */;
 import Text_Text from "Text/Text" /* 4556 */;
 import components_Button_Button from "components/Button/Button" /* 4975 */;

@@ -1,13 +1,13 @@
-// === Module 10182: ForumThreadCreatedNotification ===
+// === Module 10187: ForumThreadCreatedNotification ===
 
-// Module 10182 (ForumThreadCreatedNotification)
+// Module 10187 (ForumThreadCreatedNotification)
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
 import transitionToChannel from "transitionToChannel" /* 4571 */;
 import ModalActionCreatorsDefault from "ModalActionCreators" /* 4763 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-let closure_4 = fn(10095).NOTIFICATION_PREVIEW_LINE_CLAMP;
+let closure_4 = fn(10100).NOTIFICATION_PREVIEW_LINE_CLAMP;
 const jsx = fn(21).jsx;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/in_app_notifications/native/ForumThreadCreatedNotification.tsx");
@@ -36,7 +36,7 @@ export default function ForumThreadCreatedNotification(notification) {
   }, items1);
   const callback1 = guild.useCallback(() => {
     const obj = { channelId: notification.parentChannel.id };
-    return obj.pushLazy(asyncRequireImpl(10142, dependencyMap.paths), obj);
+    return obj.pushLazy(asyncRequireImpl(10147, dependencyMap.paths), obj);
   }, items2);
   obj = { icon: null, children: null, header: null, onPress: null, onSettingsPress: null, notification: null };
   obj = { size: notification(tmp[11]).AvatarSizes.NORMAL, user: threadCreator, guildId: thread.guild_id };

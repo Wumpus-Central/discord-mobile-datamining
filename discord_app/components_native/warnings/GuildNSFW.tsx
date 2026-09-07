@@ -1,9 +1,9 @@
-// === Module 12665: GuildNSFW ===
+// === Module 12669: GuildNSFW ===
 
-// Module 12665 (GuildNSFW)
+// Module 12669 (GuildNSFW)
 import GuildActionCreatorsDefault from "GuildActionCreators" /* 5520 */;
 import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 8411 */;
-import GatedContentDefault from "GatedContent" /* 12666 */;
+import GatedContentDefault from "GatedContent" /* 12670 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 import GuildStore from "GuildStore" /* 1979 */;

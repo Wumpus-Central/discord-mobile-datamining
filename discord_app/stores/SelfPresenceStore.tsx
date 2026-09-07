@@ -8,13 +8,13 @@ import _modDef1332 from "module_1332" /* 1332 */;
 import FlagUtils from "FlagUtils" /* 1384 */;
 import UserSettings from "UserSettings" /* 1935 */;
 import LibraryApplicationUtils from "LibraryApplicationUtils" /* 7399 */;
-import isListeningOnSpotifyDefault from "isListeningOnSpotify" /* 10891 */;
+import isListeningOnSpotifyDefault from "isListeningOnSpotify" /* 10896 */;
 import SpotifyStore from "SpotifyStore" /* 5280 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1221 */;
 import DetectableGameStore from "DetectableGameStore" /* 1931 */;
 import IdleStore from "IdleStore" /* 5410 */;
 import LibraryApplicationStore from "LibraryApplicationStore" /* 7397 */;
-import LocalActivityStore from "LocalActivityStore" /* 11457 */;
+import LocalActivityStore from "LocalActivityStore" /* 11462 */;
 import PresenceStore from "PresenceStore" /* 4600 */;
 import SessionsStore from "SessionsStore" /* 4578 */;
 

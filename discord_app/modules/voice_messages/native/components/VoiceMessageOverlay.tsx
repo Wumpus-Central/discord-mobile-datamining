@@ -1,6 +1,6 @@
-// === Module 12645: VoiceMessageOverlay ===
+// === Module 12649: VoiceMessageOverlay ===
 
-// Module 12645 (VoiceMessageOverlay)
+// Module 12649 (VoiceMessageOverlay)
 import nativeDefault from "native" /* 576 */;
 import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1109 */;
 import util from "util" /* 1114 */;
@@ -10,7 +10,7 @@ import useIsScreenReaderEnabled from "useIsScreenReaderEnabled" /* 4962 */;
 import setAccessibilityFocus from "setAccessibilityFocus" /* 4971 */;
 import LegacyTokens from "LegacyTokens" /* 5441 */;
 import useRefValueDefault from "useRefValue" /* 5586 */;
-import inlineStyles from "inlineStyles" /* 8453 */;
+import inlineStyles from "inlineStyles" /* 8456 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4552 */;
@@ -234,10 +234,10 @@ function LockPill(safeAreaBottom) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, AppState: metroRequire } = get_ActivityIndicator);
-const useVoiceMessagesUIStore = fn(11960).useVoiceMessagesUIStore;
-const VoiceMessageAnimationState = fn(11961).VoiceMessageAnimationState;
+const useVoiceMessagesUIStore = fn(11964).useVoiceMessagesUIStore;
+const VoiceMessageAnimationState = fn(11965).VoiceMessageAnimationState;
 const ComponentActionsKeyed = fn(1074).ComponentActionsKeyed;
-const CHAT_INPUT_HEIGHT = fn(11962).CHAT_INPUT_HEIGHT;
+const CHAT_INPUT_HEIGHT = fn(11966).CHAT_INPUT_HEIGHT;
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14, Fragment: closure_15 } = jsxProd);
 let closure_16 = ReanimatedRexport.createAnimatedComponent(fn(1178).Icon);

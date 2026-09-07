@@ -1,6 +1,6 @@
-// === Module 15310: DefaultGuildThemePreferenceSetting ===
+// === Module 15313: DefaultGuildThemePreferenceSetting ===
 
-// Module 15310 (DefaultGuildThemePreferenceSetting)
+// Module 15313 (DefaultGuildThemePreferenceSetting)
 import util from "util" /* 1114 */;
 import preloaded_user_settings from "preloaded_user_settings" /* 1187 */;
 import UserSettings from "UserSettings" /* 1935 */;
@@ -8,7 +8,7 @@ import ServerThemeUserExperiment from "ServerThemeUserExperiment" /* 4488 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-fn(11468);
+fn(11473);
 let SettingBuilders = {
   useTitle() {
     const intl = util.intl;

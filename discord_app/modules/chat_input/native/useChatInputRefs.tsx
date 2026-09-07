@@ -1,15 +1,15 @@
-// === Module 11987: useChatInputRefs ===
+// === Module 11991: useChatInputRefs ===
 
-// Module 11987 (useChatInputRefs)
+// Module 11991 (useChatInputRefs)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
 import ChatInputUtils from "ChatInputUtils" /* 4425 */;
 import StickersUtils from "StickersUtils" /* 4899 */;
 import MessageActionCreatorsDefault from "MessageActionCreators" /* 7456 */;
 import DraftActionCreatorsDefault from "DraftActionCreators" /* 7777 */;
-import LongPressMessageActionSheetUtils from "LongPressMessageActionSheetUtils" /* 11667 */;
-import PendingReplyActionCreators from "PendingReplyActionCreators" /* 11669 */;
-import ChatInputNativeCommandsDefault from "ChatInputNativeCommands" /* 11988 */;
-import ChatInputSendUtils from "ChatInputSendUtils" /* 11997 */;
+import LongPressMessageActionSheetUtils from "LongPressMessageActionSheetUtils" /* 11672 */;
+import PendingReplyActionCreators from "PendingReplyActionCreators" /* 11674 */;
+import ChatInputNativeCommandsDefault from "ChatInputNativeCommands" /* 11992 */;
+import ChatInputSendUtils from "ChatInputSendUtils" /* 12001 */;
 import noop from "module_19" /* 19 */;
 import ApplicationCommandStore from "ApplicationCommandStore" /* 7780 */;
 import StickersStore from "StickersStore" /* 5502 */;
@@ -20,7 +20,7 @@ import UserStore from "UserStore" /* 1371 */;
 
 require = fn;
 const DraftType = fn(4901).DraftType;
-let closure_11 = fn(9485).updateChatInputContainerHeight;
+let closure_11 = fn(9490).updateChatInputContainerHeight;
 const AnalyticEvents = fn(1074).AnalyticEvents;
 const COMMAND_SENTINEL = fn(5000).COMMAND_SENTINEL;
 const MessageSendLocation = fn(4553).MessageSendLocation;
@@ -356,7 +356,7 @@ export default function useChatInputRefs(chatInputProps) {
             let sendCommandResult;
             if (applicationCommandManager != null) {
               sendCommandResult = applicationCommandManager.sendCommand(state.current.text, tmp4.current.channel, (command, optionValues) => {
-                threadCreationCallback(11997);
+                threadCreationCallback(12001);
                 let applicationCommand = { applicationCommand: null, params: null };
                 applicationCommand = { command, optionValues };
                 applicationCommand.applicationCommand = applicationCommand;
@@ -379,7 +379,7 @@ export default function useChatInputRefs(chatInputProps) {
                   }
                 } else {
                   closure_1_1.cancel();
-                  chatInputProps(11997);
+                  chatInputProps(12001);
                   let params = { text, params: null };
                   params = {};
                   const merged = Object.assign(tmp.current);

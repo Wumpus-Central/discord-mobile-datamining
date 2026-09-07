@@ -1,6 +1,6 @@
-// === Module 12929: StageChannelAlertActionCreators ===
+// === Module 12933: StageChannelAlertActionCreators ===
 
-// Module 12929 (StageChannelAlertActionCreators)
+// Module 12933 (StageChannelAlertActionCreators)
 import StageChannelActionCreatorExtrasAll from "StageChannelActionCreatorExtras" /* 8394 */;
 import size from "module_2" /* 2 */;
 

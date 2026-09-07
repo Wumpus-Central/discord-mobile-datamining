@@ -1,6 +1,6 @@
-// === Module 8836: LimitedTimeBadge ===
+// === Module 8841: LimitedTimeBadge ===
 
-// Module 8836 (LimitedTimeBadge)
+// Module 8841 (LimitedTimeBadge)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;

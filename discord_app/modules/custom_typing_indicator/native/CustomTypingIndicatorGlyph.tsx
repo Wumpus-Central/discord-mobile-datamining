@@ -1,7 +1,7 @@
-// === Module 11981: CustomTypingIndicatorGlyph ===
+// === Module 11985: CustomTypingIndicatorGlyph ===
 
-// Module 11981 (CustomTypingIndicatorGlyph)
-import CustomTypingIndicatorAnimatedEmojiDefault from "CustomTypingIndicatorAnimatedEmoji" /* 11982 */;
+// Module 11985 (CustomTypingIndicatorGlyph)
+import CustomTypingIndicatorAnimatedEmojiDefault from "CustomTypingIndicatorAnimatedEmoji" /* 11986 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;

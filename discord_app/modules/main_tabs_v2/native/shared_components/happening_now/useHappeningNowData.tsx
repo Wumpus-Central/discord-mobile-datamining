@@ -1,16 +1,16 @@
-// === Module 16060: useHappeningNowData ===
+// === Module 16063: useHappeningNowData ===
 
-// Module 16060 (useHappeningNowData)
+// Module 16063 (useHappeningNowData)
 import AppStartPerformanceDefault from "AppStartPerformance" /* 10 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import GuildChannelSubscriptions from "GuildChannelSubscriptions" /* 7286 */;
 import GuildSubscriptionsActionCreators from "GuildSubscriptionsActionCreators" /* 7312 */;
-import ActiveChannelsActionCreators from "ActiveChannelsActionCreators" /* 16061 */;
+import ActiveChannelsActionCreators from "ActiveChannelsActionCreators" /* 16064 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 1956 */;
 import GatewayConnectionStore from "GatewayConnectionStore" /* 5277 */;
-import ActiveChannelsStore from "ActiveChannelsStore" /* 13705 */;
+import ActiveChannelsStore from "ActiveChannelsStore" /* 13709 */;
 import GuildScheduledEventStore from "GuildScheduledEventStore" /* 7526 */;
 import StageInstanceStore from "StageInstanceStore" /* 1962 */;
 import UserAffinitiesV2Store from "UserAffinitiesV2Store" /* 7659 */;
@@ -32,7 +32,7 @@ let GuildScheduledEventStore = fn(7526);
 ({ eventScheduledToStartWithin: closure_8, isEventUpcoming: closure_9, isGuildScheduledEventActive: c10 } = GuildScheduledEventStore);
 const MemberListRowTypes = fn(7279).MemberListRowTypes;
 let closure_20 = fn(2012).GUILD_SELECTABLE_CHANNELS_KEY;
-const HappeningNowItem = fn(15294).HappeningNowItem;
+const HappeningNowItem = fn(15297).HappeningNowItem;
 const Constants = fn(1074);
 ({ ActivityFlags: closure_29, GuildFeatures: closure_30, Permissions: items, StatusTypes: closure_32 } = Constants);
 items = [ChannelStore, ChannelMemberStore, VoiceStateStore, UserStore];

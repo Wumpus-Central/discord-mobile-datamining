@@ -1,10 +1,10 @@
-// === Module 17139: VoicePanelNoVideoParticipantsCard ===
+// === Module 17142: VoicePanelNoVideoParticipantsCard ===
 
-// Module 17139 (VoicePanelNoVideoParticipantsCard)
+// Module 17142 (VoicePanelNoVideoParticipantsCard)
 import nativeDefault from "native" /* 576 */;
 import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 4761 */;
 import NativeViewDefault from "NativeView" /* 5589 */;
-import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 12272 */;
+import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 12276 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;

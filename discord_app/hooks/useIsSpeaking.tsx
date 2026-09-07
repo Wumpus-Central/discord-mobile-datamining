@@ -1,6 +1,6 @@
-// === Module 9478: useIsSpeaking ===
+// === Module 9483: useIsSpeaking ===
 
-// Module 9478 (useIsSpeaking)
+// Module 9483 (useIsSpeaking)
 import SoundboardStore from "SoundboardStore" /* 5012 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2011 */;
 import SpeakingStore from "SpeakingStore" /* 5419 */;

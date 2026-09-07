@@ -1,9 +1,9 @@
-// === Module 13552: PremiumPlanSelectYearlyUpsellModal ===
+// === Module 13556: PremiumPlanSelectYearlyUpsellModal ===
 
-// Module 13552 (PremiumPlanSelectYearlyUpsellModal)
+// Module 13556 (PremiumPlanSelectYearlyUpsellModal)
 import common_AlertDefault from "common/Alert" /* 4994 */;
 import TextStylesDefault from "TextStyles" /* 5524 */;
-import _modDef13553 from "module_13553" /* 13553 */;
+import _modDef13557 from "module_13557" /* 13557 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import LocaleStore from "LocaleStore" /* 2025 */;
@@ -12,7 +12,7 @@ import IAPStore from "IAPStore" /* 7237 */;
 const require = fn;
 get_ActivityIndicator = fn(17);
 ({ Image: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-const usePremiumPlanSelectStore = fn(13543).usePremiumPlanSelectStore;
+const usePremiumPlanSelectStore = fn(13547).usePremiumPlanSelectStore;
 let closure_10 = fn(1373).PREMIUM_YEARLY_DISCOUNT_PERCENT;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
@@ -79,7 +79,7 @@ export default function PremiumPlanSelectYearlyUpsellModal(arg0) {
     const formatPercentResult = tmp5Result.formatPercent(stateFromStores, closure_10 / 100);
     obj = { onClose, noDefaultButtons: true, children: null };
     obj = { style: tmp.container, children: null };
-    obj1 = { style: tmp.image, source: _modDef13553 };
+    obj1 = { style: tmp.image, source: _modDef13557 };
     const items2 = [closure_11(closure_5, obj1), , , , , ];
     obj2 = { style: tmp.header, accessibilityRole: "header", children: null };
     const intl = productId(1114).intl;

@@ -1,8 +1,8 @@
-// === Module 10124: Compact ===
+// === Module 10129: Compact ===
 
-// Module 10124 (Compact)
+// Module 10129 (Compact)
 import nativeDefault from "native" /* 576 */;
-import deepmergeDefault from "deepmerge" /* 10123 */;
+import deepmergeDefault from "deepmerge" /* 10128 */;
 
 let CHANNEL_LIST_STYLES_COMPACT = { layout: { margin: { marginLeft: 4, marginRight: 4, marginVertical: 0 }, marginPanels: { marginLeft: 8, marginRight: 8, marginVertical: 0 }, marginThread: { marginLeft: 56, marginRight: 4, marginVertical: 0 } }, container: null, voiceUsers: null, voiceOrStageSummaryRow: null, channelName: null, messagePreview: null, timestamp: null, inviteRow: null, icon: null, unreadBadge: null, mentionBadge: null, category: null, typing: null, activeThreadCount: null, joinVoiceButton: null, threadSpine: null, happeningNow: null, separator: null, searchButton: null };
 CHANNEL_LIST_STYLES_COMPACT = { borderRadius: nativeDefault.radii.md, padding: { paddingVertical: 4, paddingLeft: 20, paddingRight: 12 }, paddingPanels: { paddingVertical: 4, paddingLeft: 8, paddingRight: 8 }, paddingThread: { paddingVertical: 4, paddingLeft: 8, paddingRight: 12 } };

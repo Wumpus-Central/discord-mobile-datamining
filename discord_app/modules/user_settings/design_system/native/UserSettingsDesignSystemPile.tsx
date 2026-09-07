@@ -1,16 +1,16 @@
-// === Module 15795: UserSettingsDesignSystemPile ===
+// === Module 15798: UserSettingsDesignSystemPile ===
 
-// Module 15795 (UserSettingsDesignSystemPile)
+// Module 15798 (UserSettingsDesignSystemPile)
 import native from "native" /* 1178 */;
 import utils_AvatarUtils from "utils/AvatarUtils" /* 1399 */;
 import Text_Text from "Text/Text" /* 4556 */;
 import Stack_Stack from "Stack/Stack" /* 4973 */;
 import GuildIconDefault from "GuildIcon" /* 5584 */;
 import Card from "Card" /* 5607 */;
-import ClipView from "ClipView" /* 8813 */;
-import Pile from "Pile" /* 11000 */;
-import ListUtils from "ListUtils" /* 12619 */;
-import AvatarDuoPile from "AvatarDuoPile" /* 14177 */;
+import ClipView from "ClipView" /* 8818 */;
+import Pile from "Pile" /* 11005 */;
+import ListUtils from "ListUtils" /* 12623 */;
+import AvatarDuoPile from "AvatarDuoPile" /* 14180 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -54,7 +54,7 @@ export default function UserSettingsDesignSystemPile() {
       obj = { size: children, names, totalCount: size(1399).DEFAULT_AVATARS.length, children: null };
       const DEFAULT_AVATARS = size(1399).DEFAULT_AVATARS;
       obj.children = DEFAULT_AVATARS.map((source, index) => closure_2_5(native.Avatar, { source, size }, index));
-      items[1] = closure_5(size(13027).AvatarPile, obj);
+      items[1] = closure_5(size(13031).AvatarPile, obj);
       obj.children = items;
       return closure_6(size(4973).Stack, obj, children);
     })
@@ -70,7 +70,7 @@ export default function UserSettingsDesignSystemPile() {
       obj = { size: children, names, totalCount: 9500, children: null };
       const DEFAULT_AVATARS = size(1399).DEFAULT_AVATARS;
       obj.children = DEFAULT_AVATARS.map((source, index) => closure_2_5(native.Avatar, { source, size }, index));
-      items[1] = closure_5(size(13027).AvatarPile, obj);
+      items[1] = closure_5(size(13031).AvatarPile, obj);
       obj.children = items;
       return closure_6(size(4973).Stack, obj, children);
     })
@@ -85,7 +85,7 @@ export default function UserSettingsDesignSystemPile() {
       obj = { size: children, names, totalCount: 9500, children: null };
       const DEFAULT_AVATARS = size(1399).DEFAULT_AVATARS;
       obj.children = DEFAULT_AVATARS.map((source, index) => closure_2_5(native.Avatar, { source, size }, index));
-      items[1] = closure_5(size(13027).AvatarPile, obj);
+      items[1] = closure_5(size(13031).AvatarPile, obj);
       obj.children = items;
       return closure_6(size(4973).Stack, obj, children);
     })
@@ -101,7 +101,7 @@ export default function UserSettingsDesignSystemPile() {
       const DEFAULT_AVATARS = size(1399).DEFAULT_AVATARS;
       const substr = DEFAULT_AVATARS.slice(0, 2);
       obj.children = substr.map((source, index) => closure_2_5(native.Avatar, { source, size }, index));
-      items[1] = closure_5(size(14177).AvatarDuoPile, obj);
+      items[1] = closure_5(size(14180).AvatarDuoPile, obj);
       obj.children = items;
       return closure_6(size(4973).Stack, obj, children);
     })
@@ -117,7 +117,7 @@ export default function UserSettingsDesignSystemPile() {
       const DEFAULT_AVATARS = size(1399).DEFAULT_AVATARS;
       const substr = DEFAULT_AVATARS.slice(0, 2);
       obj.children = substr.map((source, index) => closure_2_5(native.Avatar, { source, size }, index));
-      items[1] = closure_5(size(14177).AvatarDuoPile, obj);
+      items[1] = closure_5(size(14180).AvatarDuoPile, obj);
       obj.children = items;
       return closure_6(size(4973).Stack, obj, children);
     })
@@ -167,7 +167,7 @@ export default function UserSettingsDesignSystemPile() {
       obj = { variant: "text-md/medium", color: "text-subtle", children: size.toLowerCase() };
       items = [closure_5(size(4556).Text, obj), ];
       obj = { size, names: names2, totalCount: 128, children: names2.map((value, index) => closure_2_5(GuildIconDefault, { value, size }, index)) };
-      items[1] = closure_5(size(12618).GuildIconPile, obj);
+      items[1] = closure_5(size(12622).GuildIconPile, obj);
       obj.children = items;
       return closure_6(size(4973).Stack, obj, size);
     })

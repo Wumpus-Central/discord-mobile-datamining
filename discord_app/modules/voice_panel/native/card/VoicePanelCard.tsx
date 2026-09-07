@@ -1,6 +1,6 @@
-// === Module 17132: VoicePanelCard ===
+// === Module 17135: VoicePanelCard ===
 
-// Module 17132 (VoicePanelCard)
+// Module 17135 (VoicePanelCard)
 import nativeDefault from "native" /* 576 */;
 import native from "native" /* 4271 */;
 import ReanimatedRexport2 from "ReanimatedRexport" /* 4296 */;
@@ -10,11 +10,11 @@ import StreamActionCreators from "StreamActionCreators" /* 4702 */;
 import spring from "spring" /* 4974 */;
 import LinearGradientDefault from "LinearGradient" /* 4987 */;
 import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8179 */;
-import cheapWorkletShallowEqual from "cheapWorkletShallowEqual" /* 9495 */;
-import roundToNearestPixelDefault from "roundToNearestPixel" /* 10993 */;
-import VoicePanelPIPUtils from "VoicePanelPIPUtils" /* 17087 */;
-import computeCardBorderRadiusDefault from "computeCardBorderRadius" /* 17134 */;
-import calculateContentCenterOffsetDefault from "calculateContentCenterOffset" /* 17135 */;
+import cheapWorkletShallowEqual from "cheapWorkletShallowEqual" /* 9500 */;
+import roundToNearestPixelDefault from "roundToNearestPixel" /* 10998 */;
+import VoicePanelPIPUtils from "VoicePanelPIPUtils" /* 17090 */;
+import computeCardBorderRadiusDefault from "computeCardBorderRadius" /* 17137 */;
+import calculateContentCenterOffsetDefault from "calculateContentCenterOffset" /* 17138 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ApplicationStreamingStore from "ApplicationStreamingStore" /* 4582 */;
@@ -823,14 +823,14 @@ function AnimatedWrapper(children) {
   return windowDimensions(cleanUp(id[52]).GestureDetector, obj5);
 }
 const StyleSheet = fn(17).StyleSheet;
-const VoicePanelConstants = fn(12273);
+const VoicePanelConstants = fn(12277);
 ({ VoicePanelCTACard: closure_9, VoicePanelModes: c10, MODE_CHANGE_PHYSICS: closure_11, SPEAKING_PHYSICS: closure_12, VoicePanelCardItemType: map1 } = VoicePanelConstants);
-const VoicePanelControlsModes = fn(12271).VoicePanelControlsModes;
-const VoicePanelPIPModes = fn(17088).VoicePanelPIPModes;
-const EDGE_GUTTER = fn(12276).EDGE_GUTTER;
+const VoicePanelControlsModes = fn(12275).VoicePanelControlsModes;
+const VoicePanelPIPModes = fn(17091).VoicePanelPIPModes;
+const EDGE_GUTTER = fn(12280).EDGE_GUTTER;
 const ApplicationStreamStates = fn(1074).ApplicationStreamStates;
 const ParticipantTypes = fn(4581).ParticipantTypes;
-let SCALE_PHYSICS = fn(12274).SCALE_PHYSICS;
+let SCALE_PHYSICS = fn(12278).SCALE_PHYSICS;
 const jsxProd = fn(21);
 ({ jsx: closure_20, Fragment: closure_21, jsxs: closure_22 } = jsxProd);
 let closure_23 = ReanimatedRexport.createAnimatedComponent(fn(4556).Text);
@@ -1379,7 +1379,7 @@ export default noop.memo(function VoicePanelCard(cleanUp) {
       tmp25 = closure_20;
     }
   }
-  const obj8 = { isRinging: tmp8, avatarURI: "r", avatarDecoration: "isArray", layout: layoutTransition, layoutPhysics: physics };
+  const obj8 = { isRinging: tmp8, avatarURI: "r", avatarDecoration: "accessible", layout: layoutTransition, layoutPhysics: physics };
   tmp26Result = closure_20(closure_37, obj8);
   tmp25 = closure_20;
   const tmp5Result4 = scrollPosition(id2[14]);

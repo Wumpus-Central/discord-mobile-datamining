@@ -1,11 +1,11 @@
-// === Module 8876: useSimilarGames ===
+// === Module 8881: useSimilarGames ===
 
-// Module 8876 (useSimilarGames)
+// Module 8881 (useSimilarGames)
 import GameStore from "GameStore" /* 1916 */;
 import UserStore from "UserStore" /* 1371 */;
 
 const require = fn;
-fn(8761).SIMILAR_GAMES_BLOCKED_GAME_IDS;
+fn(8766).SIMILAR_GAMES_BLOCKED_GAME_IDS;
 let closure_5 = [];
 const similarGames = [];
 const size = fn(2);
@@ -13,7 +13,7 @@ const result = size.fileFinishedImporting("modules/game_profile/hooks/useSimilar
 
 export default function useSimilarGames(arg0) {
   const hasItem = set.has(arg0);
-  let obj = data(8760);
+  let obj = data(8765);
   const similarGameIds = obj.useSimilarGameIds(arg0, !hasItem);
   ({ data, isLoading, error } = similarGameIds);
   if (hasItem) {

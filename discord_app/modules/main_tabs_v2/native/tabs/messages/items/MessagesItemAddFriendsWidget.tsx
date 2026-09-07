@@ -1,15 +1,15 @@
-// === Module 16098: MessagesItemAddFriendsWidget ===
+// === Module 16101: MessagesItemAddFriendsWidget ===
 
-// Module 16098 (MessagesItemAddFriendsWidget)
+// Module 16101 (MessagesItemAddFriendsWidget)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import RootNavigationRef from "RootNavigationRef" /* 4418 */;
 import Text_Text from "Text/Text" /* 4556 */;
 import Pressables from "Pressables" /* 5123 */;
 import InstantInviteActionCreatorsDefault from "InstantInviteActionCreators" /* 8378 */;
-import IconActionButtonDefault from "IconActionButton" /* 13253 */;
-import _modDef13854 from "module_13854" /* 13854 */;
-import _modDef16099 from "module_16099" /* 16099 */;
+import IconActionButtonDefault from "IconActionButton" /* 13257 */;
+import _modDef13857 from "module_13857" /* 13857 */;
+import _modDef16102 from "module_16102" /* 16102 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 
@@ -224,7 +224,7 @@ const View = fn(17).View;
 const InstantInviteSources = fn(1074).InstantInviteSources;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const sum = fn(13253).ICON_ACTION_BUTTON_SIZE + nativeDefault.space.PX_16;
+const sum = fn(13257).ICON_ACTION_BUTTON_SIZE + nativeDefault.space.PX_16;
 fn(4560);
 let obj = { container: null, title: null, actions: null, actionIcon: null };
 obj = { height: sum, paddingHorizontal: nativeDefault.space.PX_8, justifyContent: "space-between", flexDirection: "row", alignItems: "center" };
@@ -264,12 +264,12 @@ export default noop.memo(function MessagesItemAddFriendsWidget() {
   obj.children = React5(Text_Text.Text, obj);
   const items = [React5(Pressables.PressableHighlight, obj), ];
   const obj1 = { style: tmp.actions, children: null };
-  const obj2 = { style: tmp.actionIcon, variant: "filled", source: _modDef13854, onPress: handleShare, accessibilityLabel: null };
+  const obj2 = { style: tmp.actionIcon, variant: "filled", source: _modDef13857, onPress: handleShare, accessibilityLabel: null };
   const intl3 = util.intl;
   obj2.accessibilityLabel = intl3.string(util.t.Ej3B3Y);
   const items1 = [React5(IconActionButtonDefault, obj2), ];
   const obj3 = { style: tmp.actionIcon, variant: "filled", source: null, onPress: null, accessibilityLabel: null };
-  obj3.source = _modDef16099;
+  obj3.source = _modDef16102;
   obj3.onPress = handleLink;
   const intl4 = util.intl;
   obj3.accessibilityLabel = intl4.string(util.t.WqhZss);

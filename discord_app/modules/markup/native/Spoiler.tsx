@@ -1,6 +1,6 @@
-// === Module 10127: Spoiler ===
+// === Module 10132: Spoiler ===
 
-// Module 10127 (Spoiler)
+// Module 10132 (Spoiler)
 import nativeDefault from "native" /* 576 */;
 import noop from "module_19" /* 19 */;
 
@@ -22,7 +22,7 @@ let size = { width: EMOJI_CHAT_SIZE, height: EMOJI_CHAT_SIZE, backgroundColor: n
 createStyles.placeholder = size;
 PlatformUtils = { color: nativeDefault.colors.TEXT_DEFAULT, backgroundColor: nativeDefault.colors.SPOILER_REVEALED_BACKGROUND };
 createStyles.spoilerRevealed = PlatformUtils;
-createStyles.muted = { opacity: fn(10118).MUTED_OPACITY_CONTENT };
+createStyles.muted = { opacity: fn(10123).MUTED_OPACITY_CONTENT };
 let closure_6 = createStyles.createLegacyClassComponentStyles(createStyles);
 const PureComponent = noop.PureComponent;
 class Spoiler extends PureComponent {

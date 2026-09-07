@@ -1,9 +1,9 @@
-// === Module 16345: GuildsBarPendingGuild ===
+// === Module 16348: GuildsBarPendingGuild ===
 
-// Module 16345 (GuildsBarPendingGuild)
+// Module 16348 (GuildsBarPendingGuild)
 import nativeDefault from "native" /* 576 */;
 import GuildIcon from "GuildIcon" /* 5584 */;
-import getGuildsBarGuildMenuItemsDefault from "getGuildsBarGuildMenuItems" /* 16286 */;
+import getGuildsBarGuildMenuItemsDefault from "getGuildsBarGuildMenuItems" /* 16289 */;
 import noop from "module_19" /* 19 */;
 import UserGuildJoinRequestStore from "UserGuildJoinRequestStore" /* 4382 */;
 import SelectedGuildStore from "SelectedGuildStore" /* 4381 */;
@@ -120,7 +120,7 @@ export default noop.memo(function GuildsBarPendingGuild(guildId) {
   ({ accessibilityActions, onAccessibilityAction } = memo1);
   tmp2Result = tmp2(tmp3[19]);
   const sharedValue = tmp2Result.useSharedValue(guildId);
-  obj = { id: guildId, accessibilityActions, onAccessibilityAction, cutouts, selected: stateFromStores, sharedId: sharedValue, circle: !stateFromStores, overState: "PX_16", unread: null, label: null, config: null, styles: null, externalChildren: null, expandedChildren: null, children: "nl-CW" };
+  obj = { id: guildId, accessibilityActions, onAccessibilityAction, cutouts, selected: stateFromStores, sharedId: sharedValue, circle: !stateFromStores, overState: "PX_16", unread: null, label: null, config: null, styles: null, externalChildren: null, expandedChildren: null, children: "place" };
   let str = guildName;
   let tmp5Result = tmp5(tmp3[8]);
   if (guildName == null) {
@@ -141,5 +141,5 @@ export default noop.memo(function GuildsBarPendingGuild(guildId) {
     tmp19Result = <tmp5Result value={guildName} selected={stateFromStores} animate={stateFromStores} size={null} />;
   }
   obj.children = tmp19Result;
-  return <tmp5Result id={guildId} accessibilityActions={accessibilityActions} onAccessibilityAction={onAccessibilityAction} cutouts={cutouts} selected={stateFromStores} sharedId={sharedValue} circle={!stateFromStores} overState="PX_16" unread={null} label={null} config={null} styles={null} externalChildren={null} expandedChildren={null}>{"nl-CW"}</tmp5Result>;
+  return <tmp5Result id={guildId} accessibilityActions={accessibilityActions} onAccessibilityAction={onAccessibilityAction} cutouts={cutouts} selected={stateFromStores} sharedId={sharedValue} circle={!stateFromStores} overState="PX_16" unread={null} label={null} config={null} styles={null} externalChildren={null} expandedChildren={null}>{"place"}</tmp5Result>;
 });

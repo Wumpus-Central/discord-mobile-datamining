@@ -1,6 +1,6 @@
-// === Module 13874: ActivateDeviceModal ===
+// === Module 13877: ActivateDeviceModal ===
 
-// Module 13874 (ActivateDeviceModal)
+// Module 13877 (ActivateDeviceModal)
 import _modDef6992 from "module_6992" /* 6992 */;
 import noop from "module_19" /* 19 */;
 
@@ -34,7 +34,7 @@ export default function ActivateDeviceModal(userCode) {
           return null;
         },
         render() {
-          return jsx(userCode(13875).ActivateDevice, { onClose, prefilledUserCode });
+          return jsx(userCode(13878).ActivateDevice, { onClose, prefilledUserCode });
         }
       }
     };

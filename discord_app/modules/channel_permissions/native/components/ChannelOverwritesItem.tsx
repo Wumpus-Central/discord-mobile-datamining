@@ -1,6 +1,6 @@
-// === Module 9751: ChannelOverwritesItem ===
+// === Module 9756: ChannelOverwritesItem ===
 
-// Module 9751 (ChannelOverwritesItem)
+// Module 9756 (ChannelOverwritesItem)
 import util from "util" /* 1114 */;
 import native from "native" /* 1178 */;
 import useA11yRolesNative from "useA11yRolesNative" /* 4277 */;
@@ -8,10 +8,10 @@ import Text_Text from "Text/Text" /* 4556 */;
 import AlertModal from "AlertModal" /* 4910 */;
 import TableRow from "TableRow" /* 5605 */;
 import FormCheckbox from "FormCheckbox" /* 5617 */;
-import ChannelPermissionsUtilsAll from "ChannelPermissionsUtils" /* 9738 */;
-import ShieldUserIcon from "ShieldUserIcon" /* 9752 */;
-import _modDef9753 from "module_9753" /* 9753 */;
-import _modDef9754 from "module_9754" /* 9754 */;
+import ChannelPermissionsUtilsAll from "ChannelPermissionsUtils" /* 9743 */;
+import ShieldUserIcon from "ShieldUserIcon" /* 9757 */;
+import _modDef9758 from "module_9758" /* 9758 */;
+import _modDef9759 from "module_9759" /* 9759 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1371 */;
 
@@ -97,7 +97,7 @@ function MemberItem(arg0) {
   const items1 = [React5(Text_Text.Text, obj), ];
   let tmp4Result = null;
   if (item.rowType === RowType.OWNER) {
-    obj = { size: native.Icon.Sizes.REFRESH_SMALL_16, source: _modDef9753, disableColor: true, style: tmp.ownerIcon };
+    obj = { size: native.Icon.Sizes.REFRESH_SMALL_16, source: _modDef9758, disableColor: true, style: tmp.ownerIcon };
     tmp4Result = React5(native.Icon, obj);
   }
   items1[1] = tmp4Result;
@@ -129,7 +129,7 @@ function MemberItem(arg0) {
 function EmptyRoleItem(item) {
   item = item.item;
   let obj = { icon: null, label: null };
-  obj = { source: _modDef9754, color: item.colorString, size: native.IconSizes.MEDIUM, style: closure_9().roleIcon };
+  obj = { source: _modDef9759, color: item.colorString, size: native.IconSizes.MEDIUM, style: closure_9().roleIcon };
   obj.icon = React5(native.Icon, obj);
   obj.label = item.name;
   return React5(TableRow.TableRow, obj);

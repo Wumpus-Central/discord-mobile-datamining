@@ -1,6 +1,6 @@
-// === Module 9459: InfoBox ===
+// === Module 9464: InfoBox ===
 
-// Module 9459 (InfoBox)
+// Module 9464 (InfoBox)
 import nativeDefault from "native" /* 576 */;
 import CircleInformationIcon from "CircleInformationIcon" /* 4515 */;
 import Text_Text from "Text/Text" /* 4556 */;

@@ -1,6 +1,6 @@
-// === Module 12935: GuildVerificationUtils ===
+// === Module 12939: GuildVerificationUtils ===
 
-// Module 12935 (GuildVerificationUtils)
+// Module 12939 (GuildVerificationUtils)
 import MemberVerificationTypes from "MemberVerificationTypes" /* 4384 */;
 import transitionToMemberVerification from "transitionToMemberVerification" /* 5525 */;
 import MemberVerificationModalActionCreators from "MemberVerificationModalActionCreators" /* 5569 */;

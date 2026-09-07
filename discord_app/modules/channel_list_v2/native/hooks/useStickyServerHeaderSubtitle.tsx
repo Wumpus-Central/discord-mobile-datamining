@@ -1,6 +1,6 @@
-// === Module 16134: useStickyServerHeaderSubtitle ===
+// === Module 16137: useStickyServerHeaderSubtitle ===
 
-// Module 16134 (useStickyServerHeaderSubtitle)
+// Module 16137 (useStickyServerHeaderSubtitle)
 import GuildMemberCountStore from "GuildMemberCountStore" /* 4480 */;
 
 const require = fn;

@@ -1,6 +1,6 @@
-// === Module 16930: BogoPromotionActionSheet ===
+// === Module 16933: BogoPromotionActionSheet ===
 
-// Module 16930 (BogoPromotionActionSheet)
+// Module 16933 (BogoPromotionActionSheet)
 import nativeDefault from "native" /* 576 */;
 import openPremiumPlanSelectionActionSheetDefault from "openPremiumPlanSelectionActionSheet" /* 7422 */;
 import noop from "module_19" /* 19 */;
@@ -71,7 +71,7 @@ export default function BogoPromotionActionSheet(markAsDismissed) {
   const intl3 = markAsDismissed(1114).intl;
   obj5.text = intl3.string(markAsDismissed(1114).t.J61px0);
   obj5.onPress = callback;
-  obj4.children = closure_12(analyticsLocations(9970), obj5);
+  obj4.children = closure_12(analyticsLocations(9975), obj5);
   items3[3] = closure_12(View, obj4);
   obj.children = items3;
   obj.children = closure_13(View, obj);

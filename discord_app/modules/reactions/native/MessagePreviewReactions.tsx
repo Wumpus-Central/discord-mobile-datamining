@@ -1,6 +1,6 @@
-// === Module 11267: MessagePreviewReactions ===
+// === Module 11272: MessagePreviewReactions ===
 
-// Module 11267 (MessagePreviewReactions)
+// Module 11272 (MessagePreviewReactions)
 import noop from "module_19" /* 19 */;
 import ConversationsStore from "ConversationsStore" /* 7596 */;
 import MessagePreviewStore from "MessagePreviewStore" /* 8360 */;
@@ -26,9 +26,9 @@ export default function MessagePreviewReactions(emoji) {
   obj = { value: messageId(7162)(messageId(7182).MESSAGE_PREVIEW_REACTIONS).analyticsLocations, children: null };
   if (stateFromStores.length > 0) {
     obj = { channelId, messageId, emoji: emoji.emoji, reactions: stateFromStores };
-    let tmp4Result = jsx(channelId(11256).MessageReactionsContent, { channelId, messageId, emoji: emoji.emoji, reactions: stateFromStores });
+    let tmp4Result = jsx(channelId(11261).MessageReactionsContent, { channelId, messageId, emoji: emoji.emoji, reactions: stateFromStores });
   } else {
-    tmp4Result = jsx(channelId(11256).MessageReactionsEmpty, {});
+    tmp4Result = jsx(channelId(11261).MessageReactionsEmpty, {});
   }
   obj.children = tmp4Result;
   return jsx(channelId(7162).AnalyticsLocationProvider, { value: messageId(7162)(messageId(7182).MESSAGE_PREVIEW_REACTIONS).analyticsLocations, children: null });

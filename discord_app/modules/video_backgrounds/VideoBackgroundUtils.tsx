@@ -1,6 +1,6 @@
-// === Module 9097: VideoBackgroundUtils ===
+// === Module 9102: VideoBackgroundUtils ===
 
-// Module 9097 (VideoBackgroundUtils)
+// Module 9102 (VideoBackgroundUtils)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
 import AvatarUtils from "AvatarUtils" /* 1396 */;
 import AppAnalyticsUtils from "AppAnalyticsUtils" /* 4740 */;

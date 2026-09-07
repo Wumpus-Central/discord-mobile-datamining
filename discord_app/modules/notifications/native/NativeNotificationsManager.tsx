@@ -1,9 +1,9 @@
-// === Module 17805: NativeNotificationsManager ===
+// === Module 17808: NativeNotificationsManager ===
 
-// Module 17805 (NativeNotificationsManager)
+// Module 17808 (NativeNotificationsManager)
 import LoggerDefault from "Logger" /* 3 */;
-import PushNotificationDefault from "PushNotification" /* 9687 */;
-import ClearChannelNotificationsOnAppForegroundExperiment from "ClearChannelNotificationsOnAppForegroundExperiment" /* 17806 */;
+import PushNotificationDefault from "PushNotification" /* 9692 */;
+import ClearChannelNotificationsOnAppForegroundExperiment from "ClearChannelNotificationsOnAppForegroundExperiment" /* 17809 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import GuildReadStateStore from "GuildReadStateStore" /* 7636 */;
 import ReadStateStore from "ReadStateStore" /* 4575 */;

@@ -1,10 +1,10 @@
-// === Module 13043: UserProfileVoiceSettings ===
+// === Module 13047: UserProfileVoiceSettings ===
 
-// Module 13043 (UserProfileVoiceSettings)
+// Module 13047 (UserProfileVoiceSettings)
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4527 */;
-import AudioActionCreatorsDefault from "AudioActionCreators" /* 9089 */;
-import SecureFramesPlatformUtilsDefault from "SecureFramesPlatformUtils" /* 9154 */;
-import UserProfileAlertUtils from "UserProfileAlertUtils" /* 12620 */;
+import AudioActionCreatorsDefault from "AudioActionCreators" /* 9094 */;
+import SecureFramesPlatformUtilsDefault from "SecureFramesPlatformUtils" /* 9159 */;
+import UserProfileAlertUtils from "UserProfileAlertUtils" /* 12624 */;
 import noop from "module_19" /* 19 */;
 import SoundboardStore from "SoundboardStore" /* 5012 */;
 import MediaEngineStore from "MediaEngineStore" /* 1908 */;
@@ -207,9 +207,9 @@ function CurrentUserVoiceSettings(channel) {
     }
     obj = { label: stringResult, icon: null, onPress: null };
     if (stateFromStores) {
-      let MicrophoneIcon = tmp2(9127).MicrophoneSlashIcon;
+      let MicrophoneIcon = tmp2(9132).MicrophoneSlashIcon;
     } else {
-      MicrophoneIcon = tmp2(10005).MicrophoneIcon;
+      MicrophoneIcon = tmp2(10010).MicrophoneIcon;
     }
     obj1 = { children: null };
     obj.icon = MicrophoneIcon;

@@ -1,16 +1,16 @@
-// === Module 9594: StreamTile ===
+// === Module 9599: StreamTile ===
 
-// Module 9594 (StreamTile)
+// Module 9599 (StreamTile)
 import nativeDefault from "native" /* 576 */;
 import native from "native" /* 1178 */;
 import Text_Text from "Text/Text" /* 4556 */;
 import Pressables from "Pressables" /* 5123 */;
 import LegacyBaseButton from "LegacyBaseButton" /* 6655 */;
-import useParticipantTileTapGestureDefault from "useParticipantTileTapGesture" /* 9592 */;
-import useVideoStreamErrorDefault from "useVideoStreamError" /* 9595 */;
-import VideoRenderer from "VideoRenderer" /* 9604 */;
-import StreamQualityLiveIndicatorDefault from "StreamQualityLiveIndicator" /* 9618 */;
-import _modDef9621 from "module_9621" /* 9621 */;
+import useParticipantTileTapGestureDefault from "useParticipantTileTapGesture" /* 9597 */;
+import useVideoStreamErrorDefault from "useVideoStreamError" /* 9600 */;
+import VideoRenderer from "VideoRenderer" /* 9609 */;
+import StreamQualityLiveIndicatorDefault from "StreamQualityLiveIndicator" /* 9623 */;
+import _modDef9626 from "module_9626" /* 9626 */;
 import noop from "module_19" /* 19 */;
 import ApplicationStreamingStore from "ApplicationStreamingStore" /* 4582 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
@@ -82,14 +82,14 @@ let closure_15 = noop.memo((participant) => {
     const state = stateFromStores.state;
     if (ApplicationStreamStates.FAILED === state) {
       obj = { stream: stateFromStores, removeCloseButton: removeEmptyStateButton, removeSplashImage: removeEmptyStateImage, type: null, style: null };
-      let tmp4Result = tmp4(9597);
-      obj.type = tmp(9597).VideoEmptyTypes.STREAM_FAILED;
+      let tmp4Result = tmp4(9602);
+      obj.type = tmp(9602).VideoEmptyTypes.STREAM_FAILED;
       obj.style = StyleSheet.absoluteFill;
       return closure_10(tmp4Result, obj);
     } else if (ApplicationStreamStates.ENDED === state) {
       obj = { stream: stateFromStores, removeCloseButton: removeEmptyStateButton, removeSplashImage: removeEmptyStateImage, type: null, style: null };
-      tmp4Result = tmp4(9597);
-      obj.type = tmp(9597).VideoEmptyTypes.STREAM_ENDED;
+      tmp4Result = tmp4(9602);
+      obj.type = tmp(9602).VideoEmptyTypes.STREAM_ENDED;
       obj.style = StyleSheet.absoluteFill;
       return closure_10(tmp4Result, obj);
     } else {
@@ -112,8 +112,8 @@ let closure_15 = noop.memo((participant) => {
         }
       }
       if (null != tmp5) {
-        const obj4 = { stream: stateFromStores, removeCloseButton: removeEmptyStateButton, removeSplashImage: removeEmptyStateImage, type: tmp(9597).VideoEmptyTypes.STREAM_FAILED, style: StyleSheet.absoluteFill, avError: tmp5 };
-        return closure_10(tmp4(9597), obj4);
+        const obj4 = { stream: stateFromStores, removeCloseButton: removeEmptyStateButton, removeSplashImage: removeEmptyStateImage, type: tmp(9602).VideoEmptyTypes.STREAM_FAILED, style: StyleSheet.absoluteFill, avError: tmp5 };
+        return closure_10(tmp4(9602), obj4);
       } else {
         const id = AuthenticationStore.getId();
         const obj5 = {
@@ -128,15 +128,15 @@ let closure_15 = noop.memo((participant) => {
           paused: null
         };
         if (stateFromStores.ownerId === id) {
-          let REMOTE_STREAM = tmp(9607).VideoSpinnerContext.SELF_STREAM;
+          let REMOTE_STREAM = tmp(9612).VideoSpinnerContext.SELF_STREAM;
         } else {
-          REMOTE_STREAM = tmp(9607).VideoSpinnerContext.REMOTE_STREAM;
+          REMOTE_STREAM = tmp(9612).VideoSpinnerContext.REMOTE_STREAM;
         }
         const obj6 = { children: null };
         obj5.videoSpinnerContext = REMOTE_STREAM;
         obj5.userId = user.id;
         obj5.paused = stateFromStores.state === ApplicationStreamStates.PAUSED;
-        const items1 = [closure_10(tmp4(9604), obj5), tmp9];
+        const items1 = [closure_10(tmp4(9609), obj5), tmp9];
         obj6.children = items1;
         return closure_11(closure_12, obj6);
       }
@@ -150,7 +150,7 @@ let closure_16 = noop.memo((arg0) => {
   let obj = { accessibilityRole: "button", onPress: onFullScreen, style: null, hitSlop: { top: 4, left: 4, right: 4, bottom: 4 }, children: null };
   const items = [closure_13().statusWrapper, style];
   obj.style = items;
-  obj = { source: _modDef9621, size: native.Icon.Sizes.SMALL, color: nativeDefault.unsafe_rawColors.WHITE };
+  obj = { source: _modDef9626, size: native.Icon.Sizes.SMALL, color: nativeDefault.unsafe_rawColors.WHITE };
   obj.children = closure_1_10(native.Icon, obj);
   return closure_1_10(Pressables.PressableOpacity, obj);
 });

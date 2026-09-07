@@ -1,10 +1,10 @@
-// === Module 9727: EditGuildEventWhere ===
+// === Module 9732: EditGuildEventWhere ===
 
-// Module 9727 (EditGuildEventWhere)
+// Module 9732 (EditGuildEventWhere)
 import KeyboardManagerUtilsAll from "KeyboardManagerUtils" /* 1874 */;
 import _modDef4153 from "module_4153" /* 4153 */;
-import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 9063 */;
-import EditGuildEventUtils from "EditGuildEventUtils" /* 9704 */;
+import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 9068 */;
+import EditGuildEventUtils from "EditGuildEventUtils" /* 9709 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
@@ -113,7 +113,7 @@ export default function EditGuildEventWhere(guild) {
               const error1 = new Error(intl2.string(guild(1114).t.q91szp));
               throw error1;
             }
-            obj = guild(9705);
+            obj = guild(9710);
           }
           if (null == tmp) {
             if (entityType !== constants.EXTERNAL) {
@@ -151,7 +151,7 @@ export default function EditGuildEventWhere(guild) {
       entityType: guildEvent.entityType,
       onChange(entityType) {
         _undefined(null);
-        const obj = { entityType, scheduledEndTime: "a" };
+        const obj = { entityType, scheduledEndTime: "Array" };
         if (entityType === constants.EXTERNAL) {
           let obj2 = _modDef4153(guildEvent.scheduledStartTime);
           if (obj2 == null) {
@@ -173,7 +173,7 @@ export default function EditGuildEventWhere(guild) {
     entityType: guildEvent.entityType,
     onChange(entityType) {
       _undefined(null);
-      const obj = { entityType, scheduledEndTime: "a" };
+      const obj = { entityType, scheduledEndTime: "Array" };
       if (entityType === constants.EXTERNAL) {
         let obj2 = _modDef4153(guildEvent.scheduledStartTime);
         if (obj2 == null) {

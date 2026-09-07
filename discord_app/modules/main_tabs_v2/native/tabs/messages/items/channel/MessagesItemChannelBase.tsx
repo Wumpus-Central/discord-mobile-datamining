@@ -1,10 +1,10 @@
-// === Module 16031: MessagesItemChannelBase ===
+// === Module 16034: MessagesItemChannelBase ===
 
-// Module 16031 (MessagesItemChannelBase)
+// Module 16034 (MessagesItemChannelBase)
 import nativeDefault from "native" /* 576 */;
 import transitionToChannel from "transitionToChannel" /* 4571 */;
 import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 4573 */;
-import openChannelLongPressActionSheet from "openChannelLongPressActionSheet" /* 10913 */;
+import openChannelLongPressActionSheet from "openChannelLongPressActionSheet" /* 10918 */;
 import noop from "module_19" /* 19 */;
 import PresenceStore from "PresenceStore" /* 4600 */;
 import ReadStateStore from "ReadStateStore" /* 4575 */;
@@ -77,7 +77,7 @@ export default noop.memo(function MessagesItemChannelBase(channel) {
       obj.status = PresenceStore.getStatus(obj.getRecipientId());
       obj.activities = activities;
     } else {
-      obj = { status: "hash", activities: "call" };
+      obj = { status: "push", activities: "channel" };
     }
     return obj;
   });

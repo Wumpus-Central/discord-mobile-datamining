@@ -1,6 +1,6 @@
-// === Module 16133: RedesignGuildHeader ===
+// === Module 16136: RedesignGuildHeader ===
 
-// Module 16133 (RedesignGuildHeader)
+// Module 16136 (RedesignGuildHeader)
 import nativeDefault from "native" /* 576 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1396 */;
 import FavoritesUtils from "FavoritesUtils" /* 1982 */;
@@ -14,12 +14,12 @@ import ButtonConstants from "ButtonConstants" /* 4980 */;
 import useFontScale from "useFontScale" /* 4982 */;
 import ThemedGradientDefault from "ThemedGradient" /* 5125 */;
 import useIsUsingClientThemeDefault from "useIsUsingClientTheme" /* 7873 */;
-import useScaledTextLineHeight from "useScaledTextLineHeight" /* 10119 */;
-import roundToNearestPixelDefault from "roundToNearestPixel" /* 10993 */;
-import openGuildActionSheetDefault from "openGuildActionSheet" /* 13907 */;
-import useIsGameCommunityServerPreviewDefault from "useIsGameCommunityServerPreview" /* 16104 */;
-import useStickyServerHeaderSubtitleDefault from "useStickyServerHeaderSubtitle" /* 16134 */;
-import ChannelListStickyHeaderDefault from "ChannelListStickyHeader" /* 16135 */;
+import useScaledTextLineHeight from "useScaledTextLineHeight" /* 10124 */;
+import roundToNearestPixelDefault from "roundToNearestPixel" /* 10998 */;
+import openGuildActionSheetDefault from "openGuildActionSheet" /* 13910 */;
+import useIsGameCommunityServerPreviewDefault from "useIsGameCommunityServerPreview" /* 16107 */;
+import useStickyServerHeaderSubtitleDefault from "useStickyServerHeaderSubtitle" /* 16137 */;
+import ChannelListStickyHeaderDefault from "ChannelListStickyHeader" /* 16138 */;
 import noop from "module_19" /* 19 */;
 import AccessibilityStore from "AccessibilityStore" /* 4552 */;
 import ActionSheetStore from "ActionSheetStore" /* 4251 */;
@@ -182,7 +182,7 @@ function ReanimatedGuildBanner(guild) {
 }
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: closure_4, View: hasOwnProperty, Pressable: metroRequire } = get_ActivityIndicator);
-const RedesignChannelListConstants = fn(10118);
+const RedesignChannelListConstants = fn(10123);
 ({ STICKY_BANNER_ASPECT_RATIO: closure_9, BANNER_MAX_HEIGHT_PERCENTAGE: c10, SEARCH_BAR_MARGIN_BOTTOM: closure_11 } = RedesignChannelListConstants);
 const GuildFeatures = fn(1074).GuildFeatures;
 const jsxProd = fn(21);

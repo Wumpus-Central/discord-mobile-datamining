@@ -1,14 +1,14 @@
-// === Module 15316: DmsMessagePreviewsSetting ===
+// === Module 15319: DmsMessagePreviewsSetting ===
 
-// Module 15316 (DmsMessagePreviewsSetting)
+// Module 15319 (DmsMessagePreviewsSetting)
 import util from "util" /* 1114 */;
 import UserSettings from "UserSettings" /* 1935 */;
 import ChannelListLayoutTypes from "ChannelListLayoutTypes" /* 7879 */;
-import useMessagePreviews from "useMessagePreviews" /* 15317 */;
+import useMessagePreviews from "useMessagePreviews" /* 15320 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-fn(11468);
+fn(11473);
 let SettingBuilders = {
   useTitle() {
     const intl = util.intl;

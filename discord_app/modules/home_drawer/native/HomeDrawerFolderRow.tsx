@@ -1,9 +1,9 @@
-// === Module 16304: HomeDrawerFolderRow ===
+// === Module 16307: HomeDrawerFolderRow ===
 
-// Module 16304 (HomeDrawerFolderRow)
+// Module 16307 (HomeDrawerFolderRow)
 import util from "util" /* 1114 */;
 import Text_Text from "Text/Text" /* 4556 */;
-import BellSlashIcon2 from "BellSlashIcon" /* 9059 */;
+import BellSlashIcon2 from "BellSlashIcon" /* 9064 */;
 import noop from "module_19" /* 19 */;
 import GuildReadStateStore from "GuildReadStateStore" /* 7636 */;
 import GuildStore from "GuildStore" /* 1979 */;

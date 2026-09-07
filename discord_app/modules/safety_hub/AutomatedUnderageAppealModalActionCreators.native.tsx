@@ -1,9 +1,10 @@
-// === Module 11883: AutomatedUnderageAppealModalActionCreators ===
+// === Module 11888: AutomatedUnderageAppealModalActionCreators ===
 
-// Module 11883 (AutomatedUnderageAppealModalActionCreators)
+// Module 11888 (AutomatedUnderageAppealModalActionCreators)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4527 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 4763 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -16,7 +17,7 @@ let obj = {
     obj = DispatcherDefault;
     obj.dispatch({ type: "SAFETY_HUB_AUTOMATED_UNDERAGE_APPEAL_MODAL_OPEN" });
     obj = { classificationId, onClose };
-    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(11884, dependencyMap.paths), React4, obj);
+    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(11889, dependencyMap.paths), React4, obj);
   },
   openV2(classificationId, onClose) {
     _require = classificationId;
@@ -28,34 +29,91 @@ let obj = {
         const _Math = Math;
         const _Date = Date;
         dependencyMap = Math.floor(Date.now() / 1000);
-        let tmpResult = tmp(4763);
-        obj = { onClose };
-        tmpResult.pushLazy(asyncGeneratorStep(async () => {
-          await tmp2(paths[8])(paths[13], paths.paths);
-          closure_128_0 = value.default;
-          return () => <closure_1_0 entryPoint={closure_0(8413).AgeVerificationModalEntryPoint.AUTOMATED_UNDERAGE_APPEALS} onClose={function onClose() {
-            let tmp;
-            if (closure_1_1 != null) {
-              tmp = closure_1_1();
+        (async () => {
+          if (v3 === 2) {
+            v3 = 3;
+            throw new TypeError("Generator functions may not be called on executing generators");
+          } else if (tmp3 === 3) {
+            if (arg0 === 1) {
+              throw value;
+            } else if (arg0 === 2) {
+              obj = { value, done: true };
+              return obj;
+            } else {
+              return { value: "HermesInternal", done: null };
             }
-            return tmp;
-          }} onComplete={function onComplete() {
-            closure_0 = dependencyMap;
-            closure_2_0(11881).resetAgeCheckStatus();
-            obj = closure_2_0(11881);
-            closure_2_1(573).dispatch({ type: "SAFETY_HUB_EXPRESSIVE_MODAL_V2_VERIFICATION_SUBMITTED" });
-            const obj2 = closure_2_1(573);
-            closure_2_1(573).dispatch({ type: "SAFETY_HUB_AUTOMATED_UNDERAGE_APPEAL_START_POLL" });
-            const timerId = setTimeout(() => closure_2_0(dependencyMap[4]).checkSuspendedUserAgeVerificationV2(closure_0), closure_2_5);
-          }} />;
-        }), obj, closure_6);
+          } else {
+            try {
+              v3 = 2;
+              if (0 === dependencyMap) {
+                if (arg0 === 1) {
+                  v3 = 3;
+                  throw value;
+                } else if (arg0 === 2) {
+                  v3 = 3;
+                  obj = { value, done: true };
+                  return obj;
+                } else {
+                  onClose = tmp4;
+                  classificationId = tmp4;
+                  dependencyMap = 1;
+                  v3 = 1;
+                  const obj1 = { value: classificationId(8435).shouldShowManualReviewFallback(classificationId(8413).AgeVerificationModalEntryPoint.AUTOMATED_UNDERAGE_APPEALS), done: false };
+                  return obj1;
+                }
+              } else if (arg0 === 1) {
+                v3 = 3;
+                throw value;
+              } else if (arg0 === 2) {
+                v3 = 3;
+                let obj2 = { value, done: true };
+                return obj2;
+              } else {
+                if (value) {
+                  obj2 = onClose(8411);
+                  const result = obj2.showManualReviewFallbackModal(classificationId(8413).AgeVerificationModalEntryPoint.AUTOMATED_UNDERAGE_APPEALS, closure_129_1);
+                } else {
+                  obj = onClose(4763);
+                  const obj3 = { onClose: closure_129_1 };
+                  obj.pushLazy(v3(async () => {
+                    await tmp2(paths[8])(paths[15], paths.paths);
+                    closure_128_0 = value.default;
+                    return () => closure_3_7(closure_1_0, {
+                      entryPoint: closure_3_0(dependencyMap[11]).AgeVerificationModalEntryPoint.AUTOMATED_UNDERAGE_APPEALS,
+                      onClose() {
+                        let tmp;
+                        if (closure_1_1 != null) {
+                          tmp = closure_1_1();
+                        }
+                        return tmp;
+                      },
+                      onComplete() {
+                        closure_0 = dependencyMap;
+                        closure_2_0(11886).resetAgeCheckStatus();
+                        obj = closure_2_0(11886);
+                        closure_2_1(573).dispatch({ type: "SAFETY_HUB_EXPRESSIVE_MODAL_V2_VERIFICATION_SUBMITTED" });
+                        const obj2 = closure_2_1(573);
+                        closure_2_1(573).dispatch({ type: "SAFETY_HUB_AUTOMATED_UNDERAGE_APPEAL_START_POLL" });
+                        const timerId = setTimeout(() => { ... }, closure_2_5);
+                      }
+                    });
+                  }), obj3, closure_1_6);
+                }
+                v3 = 3;
+              }
+            } catch (tmp24) {
+              v3 = tmp;
+              throw tmp24;
+            }
+          }
+        })();
       }
       tmp4Result = tmp4(8429);
     }
-    tmpResult = tmp(4763);
+    obj2 = require("SafetyHubUtils");
     obj = { onClose };
-    tmpResult.pushLazy(asyncGeneratorStep(async () => {
-      await tmp2(paths[8])(paths[14], paths.paths);
+    ModalActionCreatorsDefault.pushLazy(asyncGeneratorStep(async () => {
+      await tmp2(paths[8])(paths[16], paths.paths);
       closure_128_0 = value.default;
       return () => <closure_1_0 classificationId={classificationId} entryPoint={classificationId(closure_2[11]).AgeVerificationModalEntryPoint.AUTOMATED_UNDERAGE_APPEALS} isRetry={false} useEmbeddedMethods onComplete={function onComplete() {
         closure_2_8.success();
@@ -65,7 +123,7 @@ let obj = {
         const result = closure_2_8.start_verification_check();
       }} />;
     }), obj, closure_6);
-    obj2 = require("SafetyHubUtils");
+    const tmpResult = ModalActionCreatorsDefault;
   },
   close() {
     DispatcherDefault.dispatch({ type: "SAFETY_HUB_AUTOMATED_UNDERAGE_APPEAL_MODAL_CLOSE" });

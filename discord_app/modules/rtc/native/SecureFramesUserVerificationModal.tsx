@@ -1,6 +1,6 @@
-// === Module 9155: SecureFramesUserVerificationModal ===
+// === Module 9160: SecureFramesUserVerificationModal ===
 
-// Module 9155 (SecureFramesUserVerificationModal)
+// Module 9160 (SecureFramesUserVerificationModal)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import native from "native" /* 1178 */;
@@ -8,8 +8,8 @@ import ToastActionCreatorsDefault from "ToastActionCreators" /* 4259 */;
 import CircleCheckIcon from "CircleCheckIcon" /* 4520 */;
 import ModalActionCreatorsDefault from "ModalActionCreators" /* 4763 */;
 import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8179 */;
-import SecureFramesUtils from "SecureFramesUtils" /* 9150 */;
-import SecureFramesTracking from "SecureFramesTracking" /* 9161 */;
+import SecureFramesUtils from "SecureFramesUtils" /* 9155 */;
+import SecureFramesTracking from "SecureFramesTracking" /* 9166 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
@@ -18,7 +18,7 @@ import UserStore from "UserStore" /* 1371 */;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-const SecureFramesConstants = fn(9152);
+const SecureFramesConstants = fn(9157);
 ({ USER_VERIFICATION_CHUNK_SIZE: closure_9, USER_VERIFICATION_LENGTH: c10, USER_VERIFICATION_NUM_COLUMNS: closure_11, USER_VERIFIED_TOAST_KEY: closure_12 } = SecureFramesConstants);
 const Constants = fn(1074);
 ({ AnalyticsLocations: map1, AnalyticsSections: closure_14 } = Constants);
@@ -110,8 +110,8 @@ export default function SecureFramesUserVerificationModal(userId) {
         let obj = { userId, channelId };
         const result = SecureFramesTracking.trackE2EEUserVerificationShareClicked(obj);
         if (enabled) {
-          let userVerificationDeeplink = showShareActionSheet(9150).getUserVerificationDeeplink(userId, tmp);
-          const showShareActionSheetResult = showShareActionSheet(9150);
+          let userVerificationDeeplink = showShareActionSheet(9155).getUserVerificationDeeplink(userId, tmp);
+          const showShareActionSheetResult = showShareActionSheet(9155);
         } else {
           userVerificationDeeplink = readableSecureFramesFingerprint.join(" ");
         }

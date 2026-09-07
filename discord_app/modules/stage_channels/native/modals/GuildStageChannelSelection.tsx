@@ -1,6 +1,6 @@
-// === Module 9817: GuildStageChannelSelection ===
+// === Module 9822: GuildStageChannelSelection ===
 
-// Module 9817 (GuildStageChannelSelection)
+// Module 9822 (GuildStageChannelSelection)
 import util from "util" /* 1114 */;
 import KeyboardManagerUtilsAll from "KeyboardManagerUtils" /* 1874 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
@@ -46,7 +46,7 @@ export default function GuildStageChannelSelection(channel) {
       id = channel.id;
     }
     obj.selectedItem = id;
-    obj2.openLazy(asyncRequireImpl(9426, dependencyMap.paths), "SelectUpdatesChannel", obj);
+    obj2.openLazy(asyncRequireImpl(9431, dependencyMap.paths), "SelectUpdatesChannel", obj);
   }
   function renderChannelHook(children, key) {
     return jsx(channel(handleSelectChannel[12]).Text, { variant: "text-sm/bold", color: "mobile-text-heading-primary", children }, key);

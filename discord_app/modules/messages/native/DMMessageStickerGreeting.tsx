@@ -1,11 +1,11 @@
-// === Module 12263: DMMessageStickerGreeting ===
+// === Module 12267: DMMessageStickerGreeting ===
 
-// Module 12263 (DMMessageStickerGreeting)
+// Module 12267 (DMMessageStickerGreeting)
 import nativeDefault from "native" /* 576 */;
 import native from "native" /* 1178 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4296 */;
 import timing from "timing" /* 4561 */;
-import StickersActionCreators from "StickersActionCreators" /* 10388 */;
+import StickersActionCreators from "StickersActionCreators" /* 10393 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -128,7 +128,7 @@ export default function DMMessageStickerGreeting(channel) {
                 dependencyMap(content);
               }
               closure_1(4259);
-              const obj = { key: "HANDLE_WAVE_PRESS_TOAST", content, icon: closure_1(12264) };
+              const obj = { key: "HANDLE_WAVE_PRESS_TOAST", content, icon: closure_1(12268) };
               obj.open(obj);
             }
             closure_128_0 = showErrorToast;

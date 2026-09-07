@@ -1,17 +1,17 @@
-// === Module 16106: RedesignCategory ===
+// === Module 16109: RedesignCategory ===
 
-// Module 16106 (RedesignCategory)
+// Module 16109 (RedesignCategory)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import useChannelNameDefault from "useChannelName" /* 4713 */;
 import CircleXIcon from "CircleXIcon" /* 6616 */;
 import OptInChannelsActionCreators from "OptInChannelsActionCreators" /* 7113 */;
 import Sheet_showSimpleActionSheet from "Sheet/showSimpleActionSheet" /* 7196 */;
-import openChannelLongPressActionSheet from "openChannelLongPressActionSheet" /* 10913 */;
-import useFavoritesGuildCategoryAddActionDefault from "useFavoritesGuildCategoryAddAction" /* 10975 */;
-import CategoryCollapseActionCreators from "CategoryCollapseActionCreators" /* 11558 */;
-import useFavoritesGuildCategoryFullNoticeDefault from "useFavoritesGuildCategoryFullNotice" /* 16107 */;
-import useFavoritesGuildCategoryLongPressDefault from "useFavoritesGuildCategoryLongPress" /* 16108 */;
+import openChannelLongPressActionSheet from "openChannelLongPressActionSheet" /* 10918 */;
+import useFavoritesGuildCategoryAddActionDefault from "useFavoritesGuildCategoryAddAction" /* 10980 */;
+import CategoryCollapseActionCreators from "CategoryCollapseActionCreators" /* 11563 */;
+import useFavoritesGuildCategoryFullNoticeDefault from "useFavoritesGuildCategoryFullNotice" /* 16110 */;
+import useFavoritesGuildCategoryLongPressDefault from "useFavoritesGuildCategoryLongPress" /* 16111 */;
 import noop from "module_19" /* 19 */;
 import RecentlyActiveCollapseStore from "RecentlyActiveCollapseStore" /* 7531 */;
 import CategoryCollapseStore from "CategoryCollapseStore" /* 7117 */;
@@ -60,7 +60,7 @@ function renderCategoryItem(muted) {
     Icon = trailingAction.Icon;
   }
   if (Icon == null) {
-    Icon = trailingAction(12753).PlusMediumIcon;
+    Icon = trailingAction(12757).PlusMediumIcon;
   }
   if (null == trailingAction) {
     const items1 = [tmp34Result, , , ];
@@ -141,7 +141,7 @@ function renderCategoryItem(muted) {
   }
 }
 const View = fn(17).View;
-const RedesignChannelListConstants = fn(10118);
+const RedesignChannelListConstants = fn(10123);
 ({ CATEGORY_MARGIN_BOTTOM: closure_8, CATEGORY_MARGIN_TOP: closure_9, CATEGORY_VERTICAL_PADDING: c10 } = RedesignChannelListConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_11, Fragment: closure_12, jsxs: map1 } = jsxProd);
@@ -243,7 +243,7 @@ export const CategoryChannel = function CategoryChannel(channel) {
   const colors = nativeDefault.colors;
   obj1 = {};
   const merged1 = Object.assign(merged);
-  obj1.icon = closure_11(channel(11153).ChevronSmallDownIcon, { size: "xxs", color: merged.muted ? colors.ICON_MUTED : colors.TEXT_SUBTLE, style: collapsed2 ? createStyles : obj1 });
+  obj1.icon = closure_11(channel(11158).ChevronSmallDownIcon, { size: "xxs", color: merged.muted ? colors.ICON_MUTED : colors.TEXT_SUBTLE, style: collapsed2 ? createStyles : obj1 });
   obj1.accessibilityState = { expanded: !collapsed2 };
   return renderCategoryItem(obj1);
 };
@@ -266,7 +266,7 @@ export const RecentlyActiveCategory = function RecentlyActiveCategory(guildId) {
   const colors = stateFromStores(576).colors;
   obj = {};
   const merged1 = Object.assign(merged);
-  obj.icon = closure_11(guildId(11153).ChevronSmallDownIcon, { size: "xxs", color: merged.muted ? colors.ICON_MUTED : colors.TEXT_SUBTLE, style: collapsed ? createStyles : obj1 });
+  obj.icon = closure_11(guildId(11158).ChevronSmallDownIcon, { size: "xxs", color: merged.muted ? colors.ICON_MUTED : colors.TEXT_SUBTLE, style: collapsed ? createStyles : obj1 });
   obj.accessibilityState = { expanded: !collapsed };
   return renderCategoryItem(obj);
 };

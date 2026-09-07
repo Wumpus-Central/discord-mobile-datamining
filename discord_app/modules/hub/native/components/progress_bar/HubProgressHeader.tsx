@@ -1,6 +1,6 @@
-// === Module 12672: HubProgressHeader ===
+// === Module 12676: HubProgressHeader ===
 
-// Module 12672 (HubProgressHeader)
+// Module 12676 (HubProgressHeader)
 import nativeDefault from "native" /* 576 */;
 import preloaded_user_settings from "preloaded_user_settings" /* 1187 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
@@ -9,11 +9,11 @@ import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-const HubProgressBarConstants = fn(9831);
+const HubProgressBarConstants = fn(9836);
 ({ HUB_PROGRESS_ACTION_SHEET_ID: closure_4, HUB_PROGRESS_NUM_TOTAL_STEPS: hasOwnProperty } = HubProgressBarConstants);
 const jsx = fn(21).jsx;
 fn(4560);
-let createStyles = { container: { overflow: "hidden", height: fn(12310).GUILD_DIRECTORY_PROGRESS_BAR_HEIGHT, padding: 16 }, icon: { width: 48, height: 48 }, innerContainer: null };
+let createStyles = { container: { overflow: "hidden", height: fn(12314).GUILD_DIRECTORY_PROGRESS_BAR_HEIGHT, padding: 16 }, icon: { width: 48, height: 48 }, innerContainer: null };
 createStyles = { paddingVertical: 8, paddingLeft: 8, paddingRight: 12, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH };
 createStyles.innerContainer = createStyles;
 let closure_7 = createStyles.createStyles(createStyles);
@@ -61,7 +61,7 @@ export default function HubProgressHeader(guild) {
       }
       if (!tmp) {
         const obj = { guild, analyticsSource: "Directory Channel Header" };
-        obj.openLazy(asyncRequireImpl(12673, dependencyMap.paths), React4, obj);
+        obj.openLazy(asyncRequireImpl(12677, dependencyMap.paths), React4, obj);
       }
     };
     obj1.iconSource = flag(tmp3[14]);

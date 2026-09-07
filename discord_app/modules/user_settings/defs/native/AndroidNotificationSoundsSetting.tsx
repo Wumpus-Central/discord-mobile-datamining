@@ -1,12 +1,12 @@
-// === Module 15494: AndroidNotificationSoundsSetting ===
+// === Module 15497: AndroidNotificationSoundsSetting ===
 
-// Module 15494 (AndroidNotificationSoundsSetting)
+// Module 15497 (AndroidNotificationSoundsSetting)
 import util from "util" /* 1114 */;
 import PlatformUtils from "PlatformUtils" /* 1115 */;
 import SettingsConstants from "SettingsConstants" /* 7975 */;
-import SettingsNotificationUtils from "SettingsNotificationUtils" /* 15482 */;
-import AndroidNotificationSettingsStore from "AndroidNotificationSettingsStore" /* 15480 */;
-import SettingBuilders from "SettingBuilders" /* 11468 */;
+import SettingsNotificationUtils from "SettingsNotificationUtils" /* 15485 */;
+import AndroidNotificationSettingsStore from "AndroidNotificationSettingsStore" /* 15483 */;
+import SettingBuilders from "SettingBuilders" /* 11473 */;
 import size from "module_2" /* 2 */;
 
 ({ useAndroidNotificationSoundsEnabled: c2, setAndroidNotificationSoundsEnabled } = AndroidNotificationSettingsStore);

@@ -1,6 +1,6 @@
-// === Module 13064: UserProfileWidgetsBoardEditNotice ===
+// === Module 13068: UserProfileWidgetsBoardEditNotice ===
 
-// Module 13064 (UserProfileWidgetsBoardEditNotice)
+// Module 13068 (UserProfileWidgetsBoardEditNotice)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import dismissible_content from "dismissible_content" /* 1943 */;
@@ -9,7 +9,7 @@ import Text_Text from "Text/Text" /* 4556 */;
 import Pressables from "Pressables" /* 5123 */;
 import XSmallIcon from "XSmallIcon" /* 5680 */;
 import UserProfileSharedStylesDefault from "UserProfileSharedStyles" /* 8241 */;
-import SelectedDismissibleContentDefault from "SelectedDismissibleContent" /* 10625 */;
+import SelectedDismissibleContentDefault from "SelectedDismissibleContent" /* 10630 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

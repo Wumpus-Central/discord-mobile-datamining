@@ -1,6 +1,6 @@
-// === Module 15041: BountiesModalTimer ===
+// === Module 15044: BountiesModalTimer ===
 
-// Module 15041 (BountiesModalTimer)
+// Module 15044 (BountiesModalTimer)
 import nativeDefault from "native" /* 576 */;
 import ReanimatedRexport2 from "ReanimatedRexport" /* 4296 */;
 import timing from "timing" /* 4561 */;
@@ -21,7 +21,7 @@ const Easing2 = fn(4296).Easing;
 let closure_11 = Easing2.bezier(0.61, 0, 0.58, 1);
 const Easing3 = fn(4296).Easing;
 let closure_12 = Easing3.bezier(0.42, 0, 0.58, 1);
-let closure_13 = ReanimatedRexport.createAnimatedComponent(fn(8453).Circle);
+let closure_13 = ReanimatedRexport.createAnimatedComponent(fn(8456).Circle);
 fn(4560);
 let obj = { progress: null, ring: null, trackPath: null, countdownText: null, checkmarkLayer: null, checkmarkBackground: null, checkmarkIcon: null };
 let size = { alignItems: "center", justifyContent: "center", backgroundColor: nativeDefault.colors.CONTROL_OVERLAY_SECONDARY_BACKGROUND_DEFAULT, borderRadius: nativeDefault.radii.round, width: fn(4980).SMALL_BUTTON_HEIGHT, height: fn(4980).SMALL_BUTTON_HEIGHT };

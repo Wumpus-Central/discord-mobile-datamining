@@ -1,17 +1,17 @@
-// === Module 12079: PortalKeyboardBottomSheet ===
+// === Module 12083: PortalKeyboardBottomSheet ===
 
-// Module 12079 (PortalKeyboardBottomSheet)
+// Module 12083 (PortalKeyboardBottomSheet)
 import nativeDefault from "native" /* 576 */;
 import KeyboardManagerUtils from "KeyboardManagerUtils" /* 1874 */;
 import ReanimatedRexport from "ReanimatedRexport" /* 4296 */;
 import HapticUtils from "HapticUtils" /* 4528 */;
 import useIsScreenReaderEnabled from "useIsScreenReaderEnabled" /* 4962 */;
 import BottomSheetModal from "BottomSheetModal" /* 6627 */;
-import native from "native" /* 8902 */;
-import isChannelFocused from "isChannelFocused" /* 10089 */;
+import native from "native" /* 8907 */;
+import isChannelFocused from "isChannelFocused" /* 10094 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import NativeMenuStore from "NativeMenuStore" /* 9684 */;
+import NativeMenuStore from "NativeMenuStore" /* 9689 */;
 
 const ReanimatedRexportDefault = ReanimatedRexport;
 
@@ -47,7 +47,7 @@ const createStyles = fn(4560);
 let obj = { container: { position: "absolute", top: 0, left: 0 }, background: null, headerContainer: null, headerContainerScreenReaderEnabled: null, roundingView: null };
 obj = { backgroundColor: nativeDefault.colors.MOBILE_KEYBOARD_PANEL_BACKGROUND, overflow: "hidden" };
 obj.background = obj;
-let size = { borderTopLeftRadius: nativeDefault.radii.none, borderTopRightRadius: nativeDefault.radii.none, width: "100%", height: fn(8902).ACTION_SHEET_DRAG_HANDLE_HEIGHT, marginBottom: -fn(8902).ACTION_SHEET_DRAG_HANDLE_HEIGHT };
+let size = { borderTopLeftRadius: nativeDefault.radii.none, borderTopRightRadius: nativeDefault.radii.none, width: "100%", height: fn(8907).ACTION_SHEET_DRAG_HANDLE_HEIGHT, marginBottom: -fn(8907).ACTION_SHEET_DRAG_HANDLE_HEIGHT };
 obj.headerContainer = size;
 PlatformUtils = { marginBottom: -nativeDefault.space.PX_8 };
 obj.headerContainerScreenReaderEnabled = PlatformUtils;

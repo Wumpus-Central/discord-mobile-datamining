@@ -1,6 +1,6 @@
-// === Module 14626: UserProfileEffectEditButton ===
+// === Module 14629: UserProfileEffectEditButton ===
 
-// Module 14626 (UserProfileEffectEditButton)
+// Module 14629 (UserProfileEffectEditButton)
 import nativeDefault from "native" /* 576 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
 import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4527 */;
@@ -16,7 +16,7 @@ fn(4560);
 let createStyles = { profileEffectPreviewContainer: null, sampleProfile: null, noneIcon: null };
 let size = { height: COLLECTIBLES_PREVIEW_SIZE, width: COLLECTIBLES_PREVIEW_SIZE, borderRadius: nativeDefault.radii.xs, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED, overflow: "hidden" };
 createStyles.profileEffectPreviewContainer = size;
-createStyles.sampleProfile = { aspectRatio: fn(8798).SAMPLE_PROFILE_ASPECT_RATIO, width: "100%" };
+createStyles.sampleProfile = { aspectRatio: fn(8803).SAMPLE_PROFILE_ASPECT_RATIO, width: "100%" };
 createStyles = { tintColor: nativeDefault.colors.TEXT_SUBTLE };
 createStyles.noneIcon = createStyles;
 let closure_8 = createStyles.createStyles(createStyles);
@@ -65,7 +65,7 @@ export default function UserProfileEffectEditButton(isTryItOut) {
   let name;
   const callback = userProfileEffect.useCallback(() => {
     const obj = { user, currentProfileEffect: userProfileEffect, guildId, isTryItOut };
-    obj.openLazy(asyncRequireImpl(14627, dependencyMap.paths), "Profile Effect", obj);
+    obj.openLazy(asyncRequireImpl(14630, dependencyMap.paths), "Profile Effect", obj);
   }, items);
   if (product != null) {
     name = product.name;

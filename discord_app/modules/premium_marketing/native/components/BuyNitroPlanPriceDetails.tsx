@@ -1,6 +1,6 @@
-// === Module 13386: BuyNitroPlanPriceDetails ===
+// === Module 13390: BuyNitroPlanPriceDetails ===
 
-// Module 13386 (BuyNitroPlanPriceDetails)
+// Module 13390 (BuyNitroPlanPriceDetails)
 import nativeDefault from "native" /* 576 */;
 import noop from "module_19" /* 19 */;
 import IAPStore from "IAPStore" /* 7237 */;

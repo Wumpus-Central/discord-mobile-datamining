@@ -1,6 +1,6 @@
-// === Module 13388: BuyNitroPurchaseButtonCrossfadeLayer ===
+// === Module 13392: BuyNitroPurchaseButtonCrossfadeLayer ===
 
-// Module 13388 (BuyNitroPurchaseButtonCrossfadeLayer)
+// Module 13392 (BuyNitroPurchaseButtonCrossfadeLayer)
 import ReanimatedRexport from "ReanimatedRexport" /* 4296 */;
 import timing from "timing" /* 4561 */;
 import timingPresets from "timingPresets" /* 4564 */;

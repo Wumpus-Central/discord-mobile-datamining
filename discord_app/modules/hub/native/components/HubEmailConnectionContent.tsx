@@ -1,6 +1,6 @@
-// === Module 12731: HubEmailConnectionContent ===
+// === Module 12735: HubEmailConnectionContent ===
 
-// Module 12731 (HubEmailConnectionContent)
+// Module 12735 (HubEmailConnectionContent)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import native from "native" /* 1178 */;
@@ -8,7 +8,7 @@ import useNavigation from "useNavigation" /* 1483 */;
 import Text_Text from "Text/Text" /* 4556 */;
 import components_Button_Button from "components/Button/Button" /* 4975 */;
 import native2 from "native" /* 5692 */;
-import HubEmailConnectionModal from "HubEmailConnectionModal" /* 12727 */;
+import HubEmailConnectionModal from "HubEmailConnectionModal" /* 12731 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -17,7 +17,7 @@ import ChannelStore from "ChannelStore" /* 1957 */;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: metroRequire, ScrollView: closure_7 } = get_ActivityIndicator);
-const HubConstants = fn(12719);
+const HubConstants = fn(12723);
 ({ HubEmailConnectionSteps: closure_9, INVITE_ROUTING_HUB_GUILD_ID: c10 } = HubConstants);
 const MarketingURLs = fn(1074).MarketingURLs;
 const jsxProd = fn(21);

@@ -1,11 +1,11 @@
-// === Module 16876: MessageRequestRowSenderDetails ===
+// === Module 16879: MessageRequestRowSenderDetails ===
 
-// Module 16876 (MessageRequestRowSenderDetails)
+// Module 16879 (MessageRequestRowSenderDetails)
 import nativeDefault from "native" /* 576 */;
 import utils_AvatarUtilsDefault from "utils/AvatarUtils" /* 1399 */;
 import UserUtilsDefault from "UserUtils" /* 4404 */;
-import MessageRequestPreviewDefault from "MessageRequestPreview" /* 16878 */;
-import MessageRequestMutualServersDefault from "MessageRequestMutualServers" /* 16879 */;
+import MessageRequestPreviewDefault from "MessageRequestPreview" /* 16881 */;
+import MessageRequestMutualServersDefault from "MessageRequestMutualServers" /* 16882 */;
 import noop from "module_19" /* 19 */;
 import RelationshipStore from "RelationshipStore" /* 4209 */;
 
@@ -48,13 +48,13 @@ export default function MessageRequestRowSenderDetails(isRestricted) {
     }
     return tmp2;
   });
-  let obj1 = otherUser(16877);
+  let obj1 = otherUser(16880);
   const messageRequestRelativeTimestampText = obj1.useMessageRequestRelativeTimestampText(channel);
   const random = Math.random();
   const rounded = Math.floor(random * utils_AvatarUtilsDefault.DEFAULT_AVATARS.length);
   obj = { style: tmp.avatarContainer, children: null };
   if (null != otherUser) {
-    obj = { avatarStyle: tmp.avatar, user: otherUser, guildId: "HermesInternal", disablePlaceholder: null, avatarDecoration: "Warning" };
+    obj = { avatarStyle: tmp.avatar, user: otherUser, guildId: "HermesInternal", disablePlaceholder: null, avatarDecoration: "Heartbeat" };
     let avatarDecoration;
     if (otherUser != null) {
       avatarDecoration = otherUser.avatarDecoration;

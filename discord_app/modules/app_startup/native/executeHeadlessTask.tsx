@@ -1,13 +1,13 @@
-// === Module 17928: executeHeadlessTask ===
+// === Module 17931: executeHeadlessTask ===
 
-// Module 17928 (executeHeadlessTask)
+// Module 17931 (executeHeadlessTask)
 import LoggerDefault from "Logger" /* 3 */;
 import TTITrackerDefault from "TTITracker" /* 9 */;
 import fast_connect from "fast_connect" /* 15 */;
 import SentryUtilsDefault from "SentryUtils" /* 1232 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
 import RequestGatewaySocketAll from "RequestGatewaySocket" /* 7757 */;
-import PauseGatewaySocketAll from "PauseGatewaySocket" /* 13666 */;
+import PauseGatewaySocketAll from "PauseGatewaySocket" /* 13670 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
@@ -368,7 +368,7 @@ let closure_10 = async function _executeHeadlessTask() {
   })();
 };
 const AppState = fn(17).AppState;
-const NativeAppStartup = fn(17228);
+const NativeAppStartup = fn(17231);
 ({ initHeadlessTask: closure_7, applicationReady: closure_8 } = NativeAppStartup);
 const AnalyticEvents = fn(1074).AnalyticEvents;
 const size = fn(2);

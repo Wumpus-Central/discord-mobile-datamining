@@ -1,6 +1,6 @@
-// === Module 16190: GameClaimCoachmark ===
+// === Module 16193: GameClaimCoachmark ===
 
-// Module 16190 (GameClaimCoachmark)
+// Module 16193 (GameClaimCoachmark)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import Text_Text from "Text/Text" /* 4556 */;
@@ -9,11 +9,11 @@ import ButtonConstants from "ButtonConstants" /* 4980 */;
 import Pressables from "Pressables" /* 5123 */;
 import Card from "Card" /* 5607 */;
 import XSmallIcon from "XSmallIcon" /* 5680 */;
-import LinkExternalSmallIcon from "LinkExternalSmallIcon" /* 8580 */;
-import useGameNameAndCoverImageDefault from "useGameNameAndCoverImage" /* 8920 */;
-import useScaledTextLineHeight from "useScaledTextLineHeight" /* 10119 */;
-import GameClaimCardStack from "GameClaimCardStack" /* 16191 */;
-import UnclaimedGamesActionCreators from "UnclaimedGamesActionCreators" /* 16192 */;
+import LinkExternalSmallIcon from "LinkExternalSmallIcon" /* 8583 */;
+import useGameNameAndCoverImageDefault from "useGameNameAndCoverImage" /* 8925 */;
+import useScaledTextLineHeight from "useScaledTextLineHeight" /* 10124 */;
+import GameClaimCardStack from "GameClaimCardStack" /* 16194 */;
+import UnclaimedGamesActionCreators from "UnclaimedGamesActionCreators" /* 16195 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 

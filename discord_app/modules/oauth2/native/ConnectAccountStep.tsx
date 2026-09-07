@@ -1,6 +1,6 @@
-// === Module 9251: ConnectAccountStep ===
+// === Module 9256: ConnectAccountStep ===
 
-// Module 9251 (ConnectAccountStep)
+// Module 9256 (ConnectAccountStep)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import native from "native" /* 1178 */;
@@ -11,7 +11,7 @@ import CheckmarkLargeIcon from "CheckmarkLargeIcon" /* 4511 */;
 import Text_Text from "Text/Text" /* 4556 */;
 import PlatformsDefault from "Platforms" /* 5283 */;
 import ApplicationActionCreatorsDefault from "ApplicationActionCreators" /* 7163 */;
-import authorizeConnectionDefault from "authorizeConnection" /* 9252 */;
+import authorizeConnectionDefault from "authorizeConnection" /* 9257 */;
 import noop from "module_19" /* 19 */;
 import ApplicationStore from "ApplicationStore" /* 4788 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
@@ -89,7 +89,7 @@ export default function ConnectAccountStep(clientId) {
     const obj3 = { source: applicationIconSource, size: tmp5(1178).AvatarSizes.XLARGE };
     const items4 = [closure_8(tmp5(1178).Avatar, obj3), , ];
     const obj4 = { color: tmp2(576).colors.INTERACTIVE_TEXT_DEFAULT, size: "md" };
-    items4[1] = closure_8(tmp5(8672).MoreHorizontalIcon, obj4);
+    items4[1] = closure_8(tmp5(8677).MoreHorizontalIcon, obj4);
     const obj5 = { source: userAvatarSource, size: tmp5(1178).AvatarSizes.XLARGE };
     items4[2] = closure_8(tmp5(1178).Avatar, obj5);
     obj2.children = items4;

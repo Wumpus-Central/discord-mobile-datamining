@@ -1,17 +1,17 @@
-// === Module 16395: YouBarFloatingShade ===
+// === Module 16398: YouBarFloatingShade ===
 
-// Module 16395 (YouBarFloatingShade)
+// Module 16398 (YouBarFloatingShade)
 import initialize from "initialize" /* 504 */;
 import utils_ColorUtils from "utils/ColorUtils" /* 1091 */;
 import useToken from "useToken" /* 4262 */;
-import useYouBarTotalHeight from "useYouBarTotalHeight" /* 15100 */;
+import useYouBarTotalHeight from "useYouBarTotalHeight" /* 15103 */;
 import noop from "module_19" /* 19 */;
 import ClientThemesBackgroundStore from "ClientThemesBackgroundStore" /* 4379 */;
 
 require = fn;
 const View = fn(17).View;
-let closure_5 = fn(15098).YOU_BAR_GRADIENT_EXTRA_HEIGHT;
-const GUILD_LIST_WIDTH = fn(16285).GUILD_LIST_WIDTH;
+let closure_5 = fn(15101).YOU_BAR_GRADIENT_EXTRA_HEIGHT;
+const GUILD_LIST_WIDTH = fn(16288).GUILD_LIST_WIDTH;
 const jsxProd = fn(21);
 ({ jsx: closure_7, Fragment: closure_8, jsxs: closure_9 } = jsxProd);
 const createStyles = fn(4560);

@@ -1,9 +1,9 @@
-// === Module 11126: useBurstToggleCoachmark ===
+// === Module 11131: useBurstToggleCoachmark ===
 
-// Module 11126 (useBurstToggleCoachmark)
+// Module 11131 (useBurstToggleCoachmark)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import SuperReactionIcon from "SuperReactionIcon" /* 9373 */;
+import SuperReactionIcon from "SuperReactionIcon" /* 9378 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1371 */;
@@ -57,7 +57,7 @@ export default function useBurstToggleCoachmark(targetRef) {
     obj.visible = first === closure_9;
     return obj;
   }, items3);
-  tmpResult = tmp(11127);
+  tmpResult = tmp(11132);
   const coachmark = tmpResult.useCoachmark(targetRef, memo);
   return tmp5[1];
 };

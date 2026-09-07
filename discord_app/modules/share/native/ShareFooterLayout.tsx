@@ -1,6 +1,6 @@
-// === Module 11693: ShareFooterLayout ===
+// === Module 11698: ShareFooterLayout ===
 
-// Module 11693 (ShareFooterLayout)
+// Module 11698 (ShareFooterLayout)
 import nativeDefault from "native" /* 576 */;
 import ReanimatedRexportDefault from "ReanimatedRexport" /* 4296 */;
 import spring from "spring" /* 4974 */;

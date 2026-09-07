@@ -1,6 +1,6 @@
-// === Module 12578: ? ===
+// === Module 12582: ? ===
 
-// Module 12578
+// Module 12582
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/premium/game_servers/game_server_tile.png.js");

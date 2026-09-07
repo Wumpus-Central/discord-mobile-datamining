@@ -1,8 +1,8 @@
-// === Module 16604: VibegrationsMessageAuthor ===
+// === Module 16607: VibegrationsMessageAuthor ===
 
-// Module 16604 (VibegrationsMessageAuthor)
+// Module 16607 (VibegrationsMessageAuthor)
 import nativeDefault from "native" /* 576 */;
-import vibegrationsMessageAuthors from "vibegrationsMessageAuthors" /* 16605 */;
+import vibegrationsMessageAuthors from "vibegrationsMessageAuthors" /* 16608 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1371 */;
 

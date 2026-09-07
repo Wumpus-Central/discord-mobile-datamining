@@ -1,12 +1,12 @@
-// === Module 9853: InstantInviteEmptyState ===
+// === Module 9858: InstantInviteEmptyState ===
 
-// Module 9853 (InstantInviteEmptyState)
+// Module 9858 (InstantInviteEmptyState)
 import nativeDefault from "native" /* 576 */;
 import FreeFormTextInputDefault from "FreeFormTextInput" /* 6939 */;
-import InstantInviteUtilsDefault from "InstantInviteUtils" /* 9822 */;
-import _modDef9854 from "module_9854" /* 9854 */;
+import InstantInviteUtilsDefault from "InstantInviteUtils" /* 9827 */;
+import _modDef9859 from "module_9859" /* 9859 */;
 import noop from "module_19" /* 19 */;
-import CreateInviteModalStore from "CreateInviteModalStore" /* 9821 */;
+import CreateInviteModalStore from "CreateInviteModalStore" /* 9826 */;
 
 const require = fn;
 const View = fn(17).View;
@@ -29,7 +29,7 @@ export default function _default(link) {
   const items = [CreateInviteModalStore];
   stateFromStores = obj.useStateFromStores(items, () => inviteSettings.getInviteSettings());
   obj = { style: tmp.container, children: null };
-  obj = { containerStyle: tmp.emptyStateContainer, imageStyle: tmp.emptyStateArt, titleStyle: tmp.emptyStateTitle, source: _modDef9854, title: null, body: null };
+  obj = { containerStyle: tmp.emptyStateContainer, imageStyle: tmp.emptyStateArt, titleStyle: tmp.emptyStateTitle, source: _modDef9859, title: null, body: null };
   const intl = stateFromStores(1114).intl;
   obj.title = intl.string(stateFromStores(1114).t.tQc0l8);
   const intl2 = stateFromStores(1114).intl;

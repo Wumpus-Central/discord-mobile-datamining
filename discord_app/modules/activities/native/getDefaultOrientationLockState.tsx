@@ -1,6 +1,6 @@
-// === Module 9634: getDefaultOrientationLockState ===
+// === Module 9639: getDefaultOrientationLockState ===
 
-// Module 9634 (getDefaultOrientationLockState)
+// Module 9639 (getDefaultOrientationLockState)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import DeviceUtils from "DeviceUtils" /* 4539 */;
 import MetaQuestUtils from "MetaQuestUtils" /* 1608 */;

@@ -1,12 +1,12 @@
-// === Module 11674: ChannelPinActionCreators ===
+// === Module 11679: ChannelPinActionCreators ===
 
-// Module 11674 (ChannelPinActionCreators)
+// Module 11679 (ChannelPinActionCreators)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ChannelPinsStore from "ChannelPinsStore" /* 11675 */;
+import ChannelPinsStore from "ChannelPinsStore" /* 11680 */;
 
 const require = fn;
-const FetchState = fn(11675).FetchState;
+const FetchState = fn(11680).FetchState;
 const Constants = fn(1074);
 ({ AbortCodes: metroRequire, Endpoints: closure_7, MAX_PINS_PER_CHANNEL: closure_8 } = Constants);
 let query = {

@@ -1,15 +1,15 @@
-// === Module 12362: SearchTabsLayoutStore ===
+// === Module 12366: SearchTabsLayoutStore ===
 
-// Module 12362 (SearchTabsLayoutStore)
+// Module 12366 (SearchTabsLayoutStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import SearchUtils from "SearchUtils" /* 12340 */;
+import SearchUtils from "SearchUtils" /* 12344 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 import SearchMessageStore from "SearchMessageStore" /* 7281 */;
-import SearchGuildChannelTabStore from "SearchGuildChannelTabStore" /* 12363 */;
-import SearchMemberTabStore from "SearchMemberTabStore" /* 12364 */;
-import SearchPeopleTabStore from "SearchPeopleTabStore" /* 12365 */;
-import SearchQueryStore from "SearchQueryStore" /* 12339 */;
+import SearchGuildChannelTabStore from "SearchGuildChannelTabStore" /* 12367 */;
+import SearchMemberTabStore from "SearchMemberTabStore" /* 12368 */;
+import SearchPeopleTabStore from "SearchPeopleTabStore" /* 12369 */;
+import SearchQueryStore from "SearchQueryStore" /* 12343 */;
 
 require = fn;
 function handleSearchQuery(searchContext) {
@@ -76,7 +76,7 @@ function computeLayoutForState(value) {
         return closure_5;
       }
     });
-    let tmp6Result = tmp6(12340);
+    let tmp6Result = tmp6(12344);
     SearchQueryStore = tmp6Result.getSearchContextId(searchContext);
     const reduced = found.reduce((acc, item) => {
       if (constants.MEMBERS === item) {

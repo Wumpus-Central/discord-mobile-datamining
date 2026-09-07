@@ -1,6 +1,6 @@
-// === Module 16310: GuildsBarFavorites ===
+// === Module 16313: GuildsBarFavorites ===
 
-// Module 16310 (GuildsBarFavorites)
+// Module 16313 (GuildsBarFavorites)
 import nativeDefault from "native" /* 576 */;
 import noop from "module_19" /* 19 */;
 import FavoriteStore from "FavoriteStore" /* 1960 */;
@@ -21,21 +21,21 @@ size = fn(2);
 const result = size.fileFinishedImporting("modules/guilds_bar/native/GuildsBarFavorites.tsx");
 
 export default noop.memo(function GuildsBarFavorites() {
-  let obj = shouldShowPopover(16294);
-  let obj1 = shouldShowPopover(10224);
+  let obj = shouldShowPopover(16297);
+  let obj1 = shouldShowPopover(10229);
   const isFavoritesGuildSelected = obj1.useIsFavoritesGuildSelected();
   let obj2 = shouldShowPopover(504);
   let items = [FavoriteStore];
   const stateFromStores = obj2.useStateFromStores(items, () => favoriteChannels.getFavoriteChannels());
   const guildsBarAnimatedWrapperStyles = obj.useGuildsBarAnimatedWrapperStyles();
   const tmp5 = markPopoverAsDismissed;
-  ({ badge, unread } = markPopoverAsDismissed(16311)(stateFromStores));
-  const tmp6 = markPopoverAsDismissed(16311)(stateFromStores);
-  ({ badge: badge2, cutouts } = markPopoverAsDismissed(16296)({ mentionCount: badge }));
+  ({ badge, unread } = markPopoverAsDismissed(16314)(stateFromStores));
+  const tmp6 = markPopoverAsDismissed(16314)(stateFromStores);
+  ({ badge: badge2, cutouts } = markPopoverAsDismissed(16299)({ mentionCount: badge }));
   const ref = noop.useRef(null);
-  const tmp7 = markPopoverAsDismissed(16296)({ mentionCount: badge });
+  const tmp7 = markPopoverAsDismissed(16299)({ mentionCount: badge });
   const tmp9 = closure_11();
-  const favoritesIntroPopover = shouldShowPopover(10238).useFavoritesIntroPopover();
+  const favoritesIntroPopover = shouldShowPopover(10243).useFavoritesIntroPopover();
   shouldShowPopover = favoritesIntroPopover.shouldShowPopover;
   markPopoverAsDismissed = favoritesIntroPopover.markPopoverAsDismissed;
   const items1 = [shouldShowPopover, markPopoverAsDismissed];
@@ -44,7 +44,7 @@ export default noop.memo(function GuildsBarFavorites() {
       if (shouldShowPopover) {
         closure_1_1(constants.TAKE_ACTION);
       }
-      markPopoverAsDismissed(16308)(FAVORITES);
+      markPopoverAsDismissed(16311)(FAVORITES);
     },
     onLongPress() {
       markPopoverAsDismissed(dependencyMap[15])();
@@ -66,20 +66,20 @@ export default noop.memo(function GuildsBarFavorites() {
   }, []);
   ({ accessibilityActions, onAccessibilityAction } = memo1);
   obj = { selected: isFavoritesGuildSelected, circle: false, unread, styles: guildsBarAnimatedWrapperStyles, cutouts, overState: "l", config: memo, accessibilityActions, onAccessibilityAction, label: null, externalChildren: null, expandedChildren: null, children: null };
-  const obj4 = shouldShowPopover(10238);
+  const obj4 = shouldShowPopover(10243);
   let intl = shouldShowPopover(1114).intl;
   obj.label = intl.string(shouldShowPopover(1114).t.wMWyci);
   obj.externalChildren = badge2;
-  obj.expandedChildren = closure_8(shouldShowPopover(16312).HomeDrawerFavoritesRowExpandedChildren, {});
+  obj.expandedChildren = closure_8(shouldShowPopover(16315).HomeDrawerFavoritesRowExpandedChildren, {});
   const colors = markPopoverAsDismissed(576).colors;
   obj = { color: isFavoritesGuildSelected ? colors.WHITE : colors.MOBILE_GUILDBAR_ICON_DEFAULT };
-  obj.children = closure_8(shouldShowPopover(10235).StarIcon, obj);
-  const children = [closure_8(markPopoverAsDismissed(16294), obj), , ];
+  obj.children = closure_8(shouldShowPopover(10240).StarIcon, obj);
+  const children = [closure_8(markPopoverAsDismissed(16297), obj), , ];
   obj1 = { ref, style: tmp9.anchor, pointerEvents: "none", collapsable: false };
   children[1] = closure_8(View, obj1);
   if (shouldShowPopover) {
     obj2 = { targetRef: ref, markAsDismissed: markPopoverAsDismissed };
-    shouldShowPopover = closure_8(tmp5(16313), obj2);
+    shouldShowPopover = closure_8(tmp5(16316), obj2);
   }
   children[2] = shouldShowPopover;
   return closure_9(View, { children });

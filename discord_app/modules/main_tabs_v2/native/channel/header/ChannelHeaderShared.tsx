@@ -1,6 +1,6 @@
-// === Module 13269: ChannelHeaderShared ===
+// === Module 13273: ChannelHeaderShared ===
 
-// Module 13269 (ChannelHeaderShared)
+// Module 13273 (ChannelHeaderShared)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import PlatformUtils from "PlatformUtils" /* 1115 */;
@@ -10,10 +10,10 @@ import Text_Text from "Text/Text" /* 4556 */;
 import useChannelName from "useChannelName" /* 4713 */;
 import utils_ChannelUtils from "utils/ChannelUtils" /* 5028 */;
 import Pressables from "Pressables" /* 5123 */;
-import UsernameWithEffectsDefault from "UsernameWithEffects" /* 10899 */;
-import GroupDMAvatarDefault from "GroupDMAvatar" /* 10910 */;
-import _modDef13270 from "module_13270" /* 13270 */;
-import GuildActionSheetMemberCountDefault from "GuildActionSheetMemberCount" /* 13271 */;
+import UsernameWithEffectsDefault from "UsernameWithEffects" /* 10904 */;
+import GroupDMAvatarDefault from "GroupDMAvatar" /* 10915 */;
+import _modDef13274 from "module_13274" /* 13274 */;
+import GuildActionSheetMemberCountDefault from "GuildActionSheetMemberCount" /* 13275 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import RelationshipStore from "RelationshipStore" /* 4209 */;
@@ -71,7 +71,7 @@ function ChannelTitle(guildId) {
   items[1] = tmp8;
   let tmp5Result = !disableArrow;
   if (!disableArrow) {
-    const obj2 = { source: _modDef13270, size: native.Icon.Sizes.REFRESH_SMALL_16, style: tmp.arrowIcon };
+    const obj2 = { source: _modDef13274, size: native.Icon.Sizes.REFRESH_SMALL_16, style: tmp.arrowIcon };
     tmp5Result = tmp5(native.Icon, obj2);
   }
   items[2] = tmp5Result;
@@ -93,7 +93,7 @@ function GroupDMIcon(channel) {
 function UserAvatar(user) {
   user = user.user;
   ({ status, isMobileOnline, isVROnline } = user);
-  const obj = { user, avatarDecoration: user.avatarDecoration, guildId: "Boolean", size: native.AvatarSizes.REFRESH_MEDIUM_32, status: false, isMobileOnline: "done", isVROnline: "flowing", style: "hourglass", autoStatusCutout: "hours" };
+  const obj = { user, avatarDecoration: user.avatarDecoration, guildId: "Boolean", size: native.AvatarSizes.REFRESH_MEDIUM_32, status: false, isMobileOnline: null, isVROnline: true, style: null, autoStatusCutout: false };
   let tmp3 = null;
   if (!user.isSystemUser()) {
     tmp3 = status;
