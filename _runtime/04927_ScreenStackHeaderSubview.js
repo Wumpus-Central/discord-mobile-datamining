@@ -168,7 +168,7 @@ const forwardRefResult = noop.forwardRef((disableLeftInsetApplication, ref) => {
   return jsx(_modDef4930, {});
 });
 forwardRefResult.displayName = "ScreenStackHeaderConfig";
-const styles = StyleSheet.create({ headerSubview: { flexDirection: "row", alignItems: "center", justifyContent: "center" }, headerSubviewCenter: { flexDirection: "row", alignItems: "center", justifyContent: "center", flexShrink: 1 }, headerConfig: { position: "absolute", width: "100%", flexDirection: "row", justifyContent: "space-between", alignItems: "accessible" } });
+const styles = StyleSheet.create({ headerSubview: { flexDirection: "row", alignItems: "center", justifyContent: "center" }, headerSubviewCenter: { flexDirection: "row", alignItems: "center", justifyContent: "center", flexShrink: 1 }, headerConfig: { position: "absolute", width: "100%", flexDirection: "row", justifyContent: "space-between", alignItems: "call" } });
 
 export const ScreenStackHeaderSubview = _modDef4931;
 export const ScreenStackHeaderConfig = forwardRefResult;

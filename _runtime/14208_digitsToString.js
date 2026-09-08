@@ -704,7 +704,7 @@ function naturalExponential(constructor, precision) {
           let tmp19 = finalise(timesResult1, sum, 1);
           let sum1 = num13 + 1;
           let timesResult2 = obj4.times(sum1);
-          let plusResult = obj2.plus(f115739(timesResult1, timesResult2, sum, 1));
+          let plusResult = obj2.plus(f115745(timesResult1, timesResult2, sum, 1));
           let arr = digitsToString(plusResult.d);
           let substr = arr.slice(0, sum);
           let arr2 = digitsToString(obj2.d);
@@ -825,7 +825,7 @@ function naturalLogarithm(self, sum) {
               constructor = new constructor(`${tmp15}.` + arr.slice(1));
             }
             const minusResult = constructor.minus(1);
-            e2 = f115739(minusResult, constructor.plus(1), sum, 1);
+            e2 = f115745(minusResult, constructor.plus(1), sum, 1);
             const timesResult = e2.times(e2);
             finalise(timesResult, sum, 1);
             arr = constructor;
@@ -1026,7 +1026,7 @@ function taylorSeries(constructor, arg1, timesResult, constructor2, arg4) {
     let tmp7 = new.target;
     let tmp8 = new.target;
     let tmp9 = new constructor(tmp * sum);
-    let obj3 = f115739(timesResult1, tmp9, precision, 1);
+    let obj3 = f115745(timesResult1, tmp9, precision, 1);
     if (arg4) {
       let plusResult = obj2.plus(obj3);
     } else {
@@ -1039,7 +1039,7 @@ function taylorSeries(constructor, arg1, timesResult, constructor2, arg4) {
     let tmp18 = new.target;
     let tmp19 = new.target;
     let tmp20 = new constructor(sum1 * sum2);
-    let tmp4Result = f115739(timesResult2, tmp20, precision, 1);
+    let tmp4Result = f115745(timesResult2, tmp20, precision, 1);
     plusResult1 = plusResult.plus(tmp4Result);
     obj = tmp4Result;
     obj2 = plusResult1;
@@ -1193,7 +1193,7 @@ function toStringBinary(isFinite, c19, arg2, arg3) {
         const constructor1 = new constructor(isFinite);
         constructor1.d = arr3;
         constructor1.e = length;
-        tmp35 = f115739(constructor1, tmp11, diff, rounding, 0, num4);
+        tmp35 = f115745(constructor1, tmp11, diff, rounding, 0, num4);
         ({ d, e } = tmp35);
         let tmp36 = flag;
       }
@@ -1468,7 +1468,7 @@ function atan2(result2, result2) {
               if (obj.s < 0) {
                 self.precision = sum;
                 self.rounding = 1;
-                const atanResult = self.atan(f115739(s, tmp3, sum, 1));
+                const atanResult = self.atan(f115745(s, tmp3, sum, 1));
                 if (sum > closure_21) {
                   const _Error2 = Error;
                   throw Error(c10);
@@ -1485,7 +1485,7 @@ function atan2(result2, result2) {
                   atanResult1 = minusResult;
                 }
               } else {
-                atanResult1 = self.atan(f115739(s, tmp3, sum, 1));
+                atanResult1 = self.atan(f115745(s, tmp3, sum, 1));
               }
             }
           }
@@ -2244,14 +2244,14 @@ obj.dp = fn6;
 obj.decimalPlaces = fn6;
 const fn7 = function(arg0) {
   const constructor = new this.constructor(arg0);
-  return f115739(this, constructor);
+  return f115745(this, constructor);
 };
 obj.div = fn7;
 obj.dividedBy = fn7;
 const fn8 = function(arg0) {
   let constructor = this.constructor;
   constructor = new constructor(arg0);
-  const tmp2 = f115739(this, constructor, 0, 1, 1);
+  const tmp2 = f115745(this, constructor, 0, 1, 1);
   finalise(tmp2, constructor.precision, constructor.rounding);
   return tmp2;
 };
@@ -2414,7 +2414,7 @@ const fn14 = function() {
       constructor.rounding = 1;
       constructor.precision = precision;
       constructor.rounding = rounding;
-      const tmp9 = f115739(self.sinh(), self.cosh(), precision, rounding);
+      const tmp9 = f115745(self.sinh(), self.cosh(), precision, rounding);
       const sinhResult = self.sinh();
     }
   } else {
@@ -2550,11 +2550,11 @@ const fn18 = function() {
         const constructor1 = new constructor(1);
         constructor.precision = precision + 4;
         constructor.rounding = 1;
-        const obj3 = f115739(plusResult, constructor1.minus(self), diff + precision, 1);
+        const obj3 = f115745(plusResult, constructor1.minus(self), diff + precision, 1);
         constructor.precision = precision;
         constructor.rounding = rounding;
-        timesResult = f115739(plusResult, constructor1.minus(self), diff + precision, 1).ln().times(0.5);
-        const lnResult = f115739(plusResult, constructor1.minus(self), diff + precision, 1).ln();
+        timesResult = f115745(plusResult, constructor1.minus(self), diff + precision, 1).ln().times(0.5);
+        const lnResult = f115745(plusResult, constructor1.minus(self), diff + precision, 1).ln();
       }
     }
     if (absResult.eq(1)) {
@@ -2843,7 +2843,7 @@ const fn26 = function(arg0) {
           } else {
             tmp17Result = naturalLogarithm(constructor, sum);
           }
-          let tmp28 = f115739(tmp19, tmp17Result, sum, 1);
+          let tmp28 = f115745(tmp19, tmp17Result, sum, 1);
           let tmp29 = sum;
           let tmp30 = precision;
           if (checkRoundingDigits(tmp28.d, precision, rounding)) {
@@ -2865,7 +2865,7 @@ const fn26 = function(arg0) {
               } else {
                 tmp31Result = naturalLogarithm(constructor, sum2);
               }
-              let tmp42 = f115739(tmp33, tmp31Result, sum2, 1);
+              let tmp42 = f115745(tmp33, tmp31Result, sum2, 1);
               if (flag2) {
                 let sum4 = tmp30 + 10;
                 tmp29 = sum2;
@@ -3128,11 +3128,11 @@ const fn28 = function(arg0) {
       }
       c8 = false;
       if (9 == constructor.modulo) {
-        const tmp15 = f115739(self, constructor.abs(), 0, 3, 1);
+        const tmp15 = f115745(self, constructor.abs(), 0, 3, 1);
         tmp15.s = tmp15.s * constructor.s;
         let obj2 = tmp15;
       } else {
-        obj2 = f115739(self, tmp, 0, constructor.modulo, 1);
+        obj2 = f115745(self, tmp, 0, constructor.modulo, 1);
       }
       c8 = true;
       self.minus(obj2.times(constructor));
@@ -3505,7 +3505,7 @@ const fn36 = function() {
       const sinResult = self.sin();
       sinResult.s = 1;
       constructor = new constructor(1);
-      const obj4 = f115739(sinResult, constructor.minus(sinResult.times(sinResult)).sqrt(), precision + 10, 0);
+      const obj4 = f115745(sinResult, constructor.minus(sinResult.times(sinResult)).sqrt(), precision + 10, 0);
       constructor.precision = precision;
       constructor.rounding = rounding;
       if (2 == num) {
@@ -3802,8 +3802,8 @@ obj.toFraction = function(arg0) {
     const constructor4 = new constructor(digitsToString(d));
     const result3 = 7 * d.length * 2;
     constructor.precision = result3;
-    let tmp47 = f115739;
-    const obj4 = f115739(constructor4, constructor2, 0, 1, 1);
+    let tmp47 = f115745;
+    const obj4 = f115745(constructor4, constructor2, 0, 1, 1);
     const plusResult = constructor.plus(obj4.times(constructor1));
     let obj6 = obj4;
     let tmp50 = constructor;
@@ -3820,7 +3820,7 @@ obj.toFraction = function(arg0) {
       do {
         let plusResult1 = obj7.plus(obj6.times(tmp50));
         let minusResult = obj8.minus(obj6.times(tmp52));
-        let obj12 = f115739(tmp52, minusResult, 0, 1, 1);
+        let obj12 = f115745(tmp52, minusResult, 0, 1, 1);
         let plusResult2 = obj9.plus(obj12.times(tmp51));
         obj7 = tmp50;
         let tmp61 = tmp51;
@@ -3834,7 +3834,7 @@ obj.toFraction = function(arg0) {
         tmp53 = plusResult1;
         obj10 = obj7;
         tmp54 = tmp61;
-        tmp47 = f115739;
+        tmp47 = f115745;
         cmpResult = plusResult2.cmp(obj3);
       } while (1 != cmpResult);
     }
@@ -3907,11 +3907,11 @@ obj.toNearest = function(arg0, arg1) {
     }
   }
   if (constructor1.d[0]) {
-    const timesResult = f115739(constructor, constructor1, 0, rounding, 1).times(constructor1);
+    const timesResult = f115745(constructor, constructor1, 0, rounding, 1).times(constructor1);
     c8 = true;
     finalise(timesResult);
     let tmp9 = timesResult;
-    obj = f115739(constructor, constructor1, 0, rounding, 1);
+    obj = f115745(constructor, constructor1, 0, rounding, 1);
   } else {
     constructor1.s = constructor.s;
     tmp9 = constructor1;
@@ -4147,7 +4147,7 @@ const fn43 = function() {
 };
 obj.toJSON = fn43;
 obj.valueOf = fn43;
-const f115739 = (s, s2, arg2, rounding, arg4, arg5) => {
+const f115745 = (s, s2, arg2, rounding, arg4, arg5) => {
   let num13;
   let tmp21;
   let tmp27;
@@ -4941,9 +4941,9 @@ function clone(arg0) {
               c8 = false;
               obj2 = self;
               if (tmp24) {
-                tmp49 = f115739;
+                tmp49 = f115745;
                 num21 = 4;
-                obj2 = f115739(self, tmp27, 4 * tmp26);
+                obj2 = f115745(self, tmp27, 4 * tmp26);
               }
               constructor1 = obj2;
               if (!tmp22) {
@@ -5329,9 +5329,9 @@ function clone(arg0) {
                 c8 = false;
                 obj2 = self;
                 if (tmp24) {
-                  tmp49 = f115739;
+                  tmp49 = f115745;
                   num21 = 4;
-                  obj2 = f115739(self, tmp27, 4 * tmp26);
+                  obj2 = f115745(self, tmp27, 4 * tmp26);
                 }
                 constructor1 = obj2;
                 if (!tmp22) {

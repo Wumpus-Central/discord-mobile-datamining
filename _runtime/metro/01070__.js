@@ -238,7 +238,7 @@ class FeedbackWidget {
                 closure_129_12 = undefined;
                 closure_129_0 = undefined;
                 if (self._hasScreenshot()) {
-                  debug.setState({ filename: "Array", attachment: "padding", attachmentUri: "_desired" });
+                  debug.setState({ filename: "Array", attachment: "padding", attachmentUri: "now" });
                 } else {
                   num2 = debug.props.imagePicker;
                   closure_129_6 = num2;
@@ -468,7 +468,7 @@ class FeedbackWidget {
       FeedbackWidget._savedState = Object.assign({}, closure_0.state);
     };
     tmp4Result._clearFormState = () => {
-      closure_0._savedState = { name: "", email: "", description: "", filename: "call", attachment: "WireType", attachmentUri: "color" };
+      closure_0._savedState = { name: "", email: "", description: "", filename: "ip", attachment: "isArray", attachmentUri: "isArray" };
     };
     tmp4Result._hasScreenshot = () => undefined !== closure_0.state.filename && undefined !== closure_0.state.attachment && undefined !== closure_0.state.attachmentUri;
     tmp4Result._getUser = () => {
@@ -797,12 +797,12 @@ let items = [
 const entry1 = {
   key: "reset",
   value: function reset() {
-    FeedbackWidget._savedState = { name: "", email: "", description: "", filename: "call", attachment: "WireType", attachmentUri: "color" };
+    FeedbackWidget._savedState = { name: "", email: "", description: "", filename: "ip", attachment: "isArray", attachmentUri: "isArray" };
   }
 };
 const items1 = [entry1];
 const importDefaultResultResult = _createClass(FeedbackWidget, items, items1);
 importDefaultResultResult.defaultProps = fn(1066).defaultConfiguration;
-importDefaultResultResult._savedState = { name: "", email: "", description: "", filename: "call", attachment: "WireType", attachmentUri: "color" };
+importDefaultResultResult._savedState = { name: "", email: "", description: "", filename: "ip", attachment: "isArray", attachmentUri: "isArray" };
 
 export const FeedbackWidget = importDefaultResultResult;

@@ -238,10 +238,10 @@ export default function getPluralRules(PluralRules, arg1, arg2, arg3) {
                       str2 = "";
                       num2 = 0;
                       if (0 >= arr.length) {
-                        tmp19 = f97051;
+                        tmp19 = f97055;
                         tmp20 = new.target;
                         tmp21 = new.target;
-                        obj7 = new f97051();
+                        obj7 = new f97055();
                         tmp22 = obj7;
                         str4 = obj7.resolvedOptions().locale;
                         tmp23 = _defineProperties;
@@ -421,12 +421,12 @@ export default function getPluralRules(PluralRules, arg1, arg2, arg3) {
                                         throw typeError8;
                                       }
                                       obj12 = closure_2_9;
-                                      tmp92 = f97051;
+                                      tmp92 = f97055;
                                       tmp93 = new.target;
                                       str20 = "en";
                                       tmp94 = new.target;
                                       tmp95 = obj;
-                                      tmp96 = new f97051("en", obj);
+                                      tmp96 = new f97055("en", obj);
                                       if (closure_2_9.has(self)) {
                                         tmp101 = tmp96;
                                         value4 = obj12.get(self);

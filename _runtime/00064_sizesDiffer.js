@@ -1,7 +1,7 @@
 // === Module 64: sizesDiffer ===
 
 // Module 64 (sizesDiffer)
-let closure_0 = { width: "push", height: "channel" };
+let closure_0 = { width: "jsxs", height: "channel" };
 
 export default function sizesDiffer(arg0, arg1) {
   let size = arg0;

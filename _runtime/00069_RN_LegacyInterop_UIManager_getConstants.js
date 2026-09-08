@@ -12,7 +12,7 @@ const f18355 = () => {
 ({ RN$LegacyInterop_UIManager_getConstantsForViewManager: closure_7, RN$LegacyInterop_UIManager_getDefaultEventTypes: closure_8 } = global);
 let c0 = false;
 let c1 = null;
-const f69053 = () => {
+const f69057 = () => {
 
 };
 let obj = {};
@@ -48,7 +48,7 @@ obj = {
   },
   getDefaultEventTypes() {
     if (React6) {
-      if (typeof f69053 === "function") {
+      if (typeof f69057 === "function") {
         if (!closure_137_0) {
           closure_137_1 = _null(70)(React6)();
           closure_137_0 = true;

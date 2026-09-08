@@ -156,7 +156,7 @@ export const useHeaderConfigProps = function useHeaderConfigProps(headerLargeTit
   }
   let headerLeftResult;
   if (headerLeft != null) {
-    obj = { tintColor: text, canGoBack: tmp18, label: null, href: "Array" };
+    obj = { tintColor: text, canGoBack: tmp18, label: null, href: "a" };
     let tmp20 = headerBackTitle;
     if (headerBackTitle == null) {
       title = undefined;
@@ -283,7 +283,7 @@ export const useHeaderConfigProps = function useHeaderConfigProps(headerLargeTit
     tmp44 = closure_10(colors(4912).ScreenStackHeaderSearchBarView, obj14);
   }
   items7[3] = tmp44;
-  const obj16 = { backButtonInCustomView: tmp24, backgroundColor, backTitle: headerBackTitle, backTitleVisible: "minimal" !== headerBackButtonDisplayMode, backButtonDisplayMode: "fill", backTitleFontFamily: tmp10, backTitleFontSize: fontSize, blurEffect: headerBlurEffect, color: text, direction: obj.useLocale().direction, disableBackButtonMenu: false === headerBackButtonMenuEnabled, hidden: false === headerShown, hideBackButton: false === headerBackVisible, hideShadow: true, largeTitle: true, largeTitleBackgroundColor: true, largeTitleColor: true, largeTitleFontFamily: true, largeTitleFontSize: true, largeTitleFontWeight: true, largeTitleHideShadow: 0.32, title: 10, titleColor: 300, titleFontFamily: 0.001, titleFontSize: 0.001, titleFontWeight: true, topInsetEnabled: "/assets/.cache/intl/ZGVzaWdu", disableTopInsetApplication: null, disableLeftInsetApplication: "ecc045078c789c6ed4f029d53d356e3f", disableRightInsetApplication: "da.messages.ecc045078c789c6ed4f029d53d356e3f.compiled.messages", disableBottomInsetApplication: "jsona", translucent: "abajo", children: "flecha", headerLeftBarButtonItems: "flecha esquina izquierda", headerRightBarButtonItems: "flecha hacia esquina izquierda abajo", experimental_userInterfaceStyle: "izquierda" };
+  const obj16 = { backButtonInCustomView: tmp24, backgroundColor, backTitle: headerBackTitle, backTitleVisible: "minimal" !== headerBackButtonDisplayMode, backButtonDisplayMode: "fill", backTitleFontFamily: tmp10, backTitleFontSize: fontSize, blurEffect: headerBlurEffect, color: text, direction: obj.useLocale().direction, disableBackButtonMenu: false === headerBackButtonMenuEnabled, hidden: false === headerShown, hideBackButton: false === headerBackVisible, hideShadow: true, largeTitle: true, largeTitleBackgroundColor: true, largeTitleColor: true, largeTitleFontFamily: true, largeTitleFontSize: true, largeTitleFontWeight: true, largeTitleHideShadow: "man_gesturing_no", title: 17088321, titleColor: 16732416, titleFontFamily: 17088322, titleFontSize: 17088256, titleFontWeight: 16732416, topInsetEnabled: 28962, disableTopInsetApplication: 18939904, disableLeftInsetApplication: 113, disableRightInsetApplication: -1086258944, disableBottomInsetApplication: 50331908, translucent: 113, children: 7406080, headerLeftBarButtonItems: 50331648, headerRightBarButtonItems: 3211793, experimental_userInterfaceStyle: 0 };
   let tmp50 = false === headerShadowVisible;
   tmp32Result = closure_12(closure_11, { children: items7 });
   if (!tmp50) {
