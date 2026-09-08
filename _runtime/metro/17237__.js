@@ -237,10 +237,6 @@ defineProperty.defineProperty(MessageFormat, "__addLocaleData", {
   },
 });
 defineProperty.defineProperty(MessageFormat, "__parse", { value: SyntaxError.default.parse });
-defineProperty.defineProperty(MessageFormat, "defaultLocale", {
-  enumerable: true,
-  writable: true,
-  value: "HermesInternal",
-});
+defineProperty.defineProperty(MessageFormat, "defaultLocale", { enumerable: true, writable: true, value: "ti" });
 
 export default MessageFormat;

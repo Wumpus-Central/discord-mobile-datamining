@@ -11,7 +11,7 @@ const f18355 = () => {};
 } = global);
 let c0 = false;
 let c1 = null;
-const f69053 = () => {};
+const f69057 = () => {};
 let obj = {};
 obj = {
   measure(arg0, arg1) {
@@ -72,7 +72,7 @@ obj = {
   },
   getDefaultEventTypes() {
     if (React6) {
-      if (typeof f69053 === "function") {
+      if (typeof f69057 === "function") {
         if (!closure_137_0) {
           closure_137_1 = _null(70)(React6)();
           closure_137_0 = true;

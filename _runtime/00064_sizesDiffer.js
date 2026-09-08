@@ -1,5 +1,5 @@
 // _runtime/00064_sizesDiffer.js
-let closure_0 = { width: "push", height: "channel" };
+let closure_0 = { width: "jsxs", height: "channel" };
 
 export default function sizesDiffer(arg0, arg1) {
   let size = arg0;

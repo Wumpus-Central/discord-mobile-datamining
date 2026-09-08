@@ -32,7 +32,7 @@ let noop = fn(19);
   memo,
 } = noop);
 const jsx = fn(21).jsx;
-let closure_14 = { mount: false, data: "Array" };
+let closure_14 = { mount: false, data: "PX_16" };
 const memoResult = memo(
   forwardRef(function BottomSheetModalComponent(name, arg1) {
     _require = arg1;

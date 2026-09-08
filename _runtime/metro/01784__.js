@@ -12,7 +12,7 @@ let closure_5 = {
 export const useAnimatedKeyboard = function useAnimatedKeyboard() {
   let obj = arg0;
   if (arg0 === undefined) {
-    obj = { isStatusBarTranslucentAndroid: "push", isNavigationBarTranslucentAndroid: "channel" };
+    obj = { isStatusBarTranslucentAndroid: "jsxs", isNavigationBarTranslucentAndroid: "channel" };
   }
   let ref2;
   obj = undefined;
