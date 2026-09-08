@@ -63,7 +63,7 @@ export const fetchMobileGameCommunities = function fetchMobileGameCommunities(ga
               let request = { url: constants.MOBILE_GAME_COMMUNITIES, query: closure_1(dependencyMap[6]).stringify({ game_ids, limit: 20, ignored_guild_ids: items }), oldFormErrors: true, rejectWithError: true };
               let value = HTTP.get(request);
               let obj2 = closure_1(dependencyMap[6]);
-              value.then(() => { ... }, () => { ... }).catch(/* F123707 */ function() { ... });
+              value.then(() => { ... }, () => { ... }).catch(/* F123715 */ function() { ... });
             });
           }
           let obj = closure_1_1(dependencyMap[4]);
@@ -129,7 +129,7 @@ export const fetchMobileGameCommunitiesIfStale = function fetchMobileGameCommuni
                   let request = { url: constants.MOBILE_GAME_COMMUNITIES, query: closure_1(dependencyMap[6]).stringify({ game_ids, limit: 20, ignored_guild_ids: items }), oldFormErrors: true, rejectWithError: true };
                   let value = HTTP.get(request);
                   let obj2 = closure_1(dependencyMap[6]);
-                  value.then(() => { ... }, () => { ... }).catch(/* F123707 */ function() { ... });
+                  value.then(() => { ... }, () => { ... }).catch(/* F123715 */ function() { ... });
                 });
               }
               let obj = closure_1_1(dependencyMap[4]);

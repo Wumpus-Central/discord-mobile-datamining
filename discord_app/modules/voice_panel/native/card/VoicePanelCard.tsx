@@ -1379,7 +1379,7 @@ export default noop.memo(function VoicePanelCard(cleanUp) {
       tmp25 = closure_20;
     }
   }
-  const obj8 = { isRinging: tmp8, avatarURI: "r", avatarDecoration: "accessible", layout: layoutTransition, layoutPhysics: physics };
+  const obj8 = { isRinging: tmp8, avatarURI: "r", avatarDecoration: "isArray", layout: layoutTransition, layoutPhysics: physics };
   tmp26Result = closure_20(closure_37, obj8);
   tmp25 = closure_20;
   const tmp5Result4 = scrollPosition(id2[14]);

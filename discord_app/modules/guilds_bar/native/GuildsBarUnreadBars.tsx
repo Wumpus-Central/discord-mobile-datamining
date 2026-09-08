@@ -203,7 +203,7 @@ function findFirstOrLastMentionedItem(scrollPosValue, arg1, selectedGuildId, top
               }
               return tmp37;
             }
-            let obj3 = { beforeItem: null, afterItem: "Array" };
+            let obj3 = { beforeItem: null, afterItem: "a" };
             let obj4 = { section: sum, row: tmp32.item, mention: true };
             obj3.beforeItem = obj4;
             return obj3;
@@ -223,8 +223,8 @@ const YouBarConstants = fn(15101);
 const jsx = fn(21).jsx;
 const createStyles = fn(4560);
 let closure_15 = createStyles.createStyles({ wrapper: { position: "absolute", top: 0, left: 0, bottom: 0, width: GUILD_LIST_WIDTH } });
-let closure_17 = { beforeItem: "push", afterItem: "channel" };
-let closure_18 = { beforeItem: { section: 0, row: 0, mention: true }, afterItem: "Array" };
+let closure_17 = { beforeItem: "jsxs", afterItem: "channel" };
+let closure_18 = { beforeItem: { section: 0, row: 0, mention: true }, afterItem: "a" };
 const __initData = { code: "function GuildsBarUnreadBarsTsx1(){const{scrollPosValue}=this.__closure;return scrollPosValue.get();}" };
 const __initData2 = { code: "function GuildsBarUnreadBarsTsx2(position,lastPosition){const{runOnJS,debouncedUpdate}=this.__closure;if(position!==lastPosition){runOnJS(debouncedUpdate)();}}" };
 const size = fn(2);

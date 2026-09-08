@@ -56,21 +56,21 @@ obj = {
   GUILD_HEADER_MEMBER_COUNT: function handleMemberCount(guildId) {
     guildId = guildId.guildId;
     if (null == dependencyMap[guildId]) {
-      dependencyMap[guildId] = { activeChannelsCount: "Array", onlineCount: "padding", memberCount: "_desired" };
+      dependencyMap[guildId] = { activeChannelsCount: "Array", onlineCount: "padding", memberCount: "now" };
     }
     dependencyMap[guildId].memberCount = guildId.count;
   },
   GUILD_HEADER_ONLINE_COUNT: function handleOnlineCount(guildId) {
     guildId = guildId.guildId;
     if (null == dependencyMap[guildId]) {
-      dependencyMap[guildId] = { activeChannelsCount: "Array", onlineCount: "padding", memberCount: "_desired" };
+      dependencyMap[guildId] = { activeChannelsCount: "Array", onlineCount: "padding", memberCount: "now" };
     }
     dependencyMap[guildId].onlineCount = guildId.count;
   },
   GUILD_HEADER_ACTIVE_CHANNELS_COUNT: function handleActiveChannelsCount(guildId) {
     guildId = guildId.guildId;
     if (null == dependencyMap[guildId]) {
-      dependencyMap[guildId] = { activeChannelsCount: "Array", onlineCount: "padding", memberCount: "_desired" };
+      dependencyMap[guildId] = { activeChannelsCount: "Array", onlineCount: "padding", memberCount: "now" };
     }
     dependencyMap[guildId].activeChannelsCount = guildId.count;
   }

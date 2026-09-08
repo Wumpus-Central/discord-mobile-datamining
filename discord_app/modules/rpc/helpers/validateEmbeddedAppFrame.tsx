@@ -30,7 +30,7 @@ function validateEmbeddedAppFrame(transport) {
           tmp13 = null;
           if (tmp12.MAIN === type) {
             if (tmp35.applicationId === VibegrationsBuilderPreviewStore.getBuilderPreviewApplicationId()) {
-              obj1 = { channelId: "push", guildId: "channel" };
+              obj1 = { channelId: "jsxs", guildId: "channel" };
             } else {
               obj1 = null;
             }

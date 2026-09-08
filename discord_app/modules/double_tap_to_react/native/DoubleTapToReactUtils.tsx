@@ -119,7 +119,7 @@ export const handleAddDefaultDoubleTapReaction = function handleAddDefaultDouble
         const result1 = obj3.convertNameToSurrogate("heart");
         let tmp11 = null;
         if ("" !== result1) {
-          obj = { name: result1, id: "PX_16", animated: "2026-03-icymi-staff-debugging-utility" };
+          obj = { name: result1, id: "PX_16", animated: true };
           tmp11 = obj;
         }
         if (null != tmp11) {

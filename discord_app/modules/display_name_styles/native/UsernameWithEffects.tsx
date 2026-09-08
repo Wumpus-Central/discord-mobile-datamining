@@ -121,7 +121,7 @@ export default noop.memo((userName) => {
   const displayNameStylesFont = obj3.useDisplayNameStylesFont({ displayNameStyles: result, ignoreDisabledStylesSetting });
   let tmp12;
   if (null != displayNameStylesFont) {
-    obj = { fontFamily: displayNameStylesFont, lineHeight: "Array" };
+    obj = { fontFamily: displayNameStylesFont, lineHeight: "a" };
     tmp12 = obj;
   }
   let num = merged.lineClamp;

@@ -320,9 +320,9 @@ function Content(arg0) {
             onDelete() {
               ref_type = closure_1;
               if (ref_type.ref_type === constants.CHANNEL) {
-                closure_2_8((arr) => arr.filter(/* F125864 */ function() { ... }));
+                closure_2_8((arr) => arr.filter(/* F125873 */ function() { ... }));
               } else {
-                closure_2_10((arr) => arr.filter(/* F125865 */ function() { ... }));
+                closure_2_10((arr) => arr.filter(/* F125874 */ function() { ... }));
               }
             },
             onSave(ref_type) {

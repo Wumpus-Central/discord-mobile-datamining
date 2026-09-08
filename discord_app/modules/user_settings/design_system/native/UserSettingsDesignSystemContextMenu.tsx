@@ -49,7 +49,7 @@ function DemoContextMenu(align) {
         obj = { length };
         const obj2 = text(num[13]);
         return Array.from(obj).map((item, index) => {
-          const obj = { label: length[index % length.length], IconComponent: "a", iconSource: length2[index % length2.length], variant: "h\u1EB9n h\u00F2", action: "n\u1EE5 h\u00F4n" };
+          const obj = { label: length[index % length.length], IconComponent: "a", iconSource: length2[index % length2.length], variant: 12801, action: 12804 };
           let str = "default";
           if (index === closure_0 - 1) {
             str = "destructive";
@@ -69,7 +69,7 @@ function DemoContextMenu(align) {
       obj = { length: num };
       arr = Array.from(obj);
       mapped = arr.map((item, index) => {
-        const obj = { label: length[index % length.length], IconComponent: "a", iconSource: length2[index % length2.length], variant: "h\u1EB9n h\u00F2", action: "n\u1EE5 h\u00F4n" };
+        const obj = { label: length[index % length.length], IconComponent: "a", iconSource: length2[index % length2.length], variant: 12801, action: 12804 };
         let str = "default";
         if (index === closure_0 - 1) {
           str = "destructive";

@@ -39,7 +39,7 @@ export default noop.memo(function GuildsBarMessages() {
   });
   ({ badge, cutouts } = useGuildsBarBottomRightBadgeDefault({ mentionCount: 0 }));
   const colors = nativeDefault.colors;
-  obj = { selected: stateFromStores, circle: false, unread: false, styles: guildsBarAnimatedWrapperStyles, cutouts, config, overState: "y", label: "eyebrow", externalChildren: "interactive-text-default", expandedChildren: null, children: false };
+  obj = { selected: stateFromStores, circle: false, unread: false, styles: guildsBarAnimatedWrapperStyles, cutouts, config, overState: "y", label: "heading-lg/semibold", externalChildren: "text-default", expandedChildren: null, children: 1 };
   const tmp6 = useGuildsBarBottomRightBadgeDefault({ mentionCount: 0 });
   const tmp7 = stateFromStores ? colors.WHITE : colors.MOBILE_GUILDBAR_ICON_DEFAULT;
   const intl = util.intl;
@@ -47,5 +47,5 @@ export default noop.memo(function GuildsBarMessages() {
   obj.externalChildren = badge;
   obj.expandedChildren = jsx(HomeDrawerDirectMessagesRowDefault, {});
   obj.children = jsx(ChatIcon.ChatIcon, { color: tmp7 });
-  return jsx(GuildsBarAnimatedItemWrapperDefault, { selected: stateFromStores, circle: false, unread: false, styles: guildsBarAnimatedWrapperStyles, cutouts, config, overState: "y", label: "eyebrow", externalChildren: "interactive-text-default", expandedChildren: null, children: false });
+  return jsx(GuildsBarAnimatedItemWrapperDefault, { selected: stateFromStores, circle: false, unread: false, styles: guildsBarAnimatedWrapperStyles, cutouts, config, overState: "y", label: "heading-lg/semibold", externalChildren: "text-default", expandedChildren: null, children: 1 });
 });

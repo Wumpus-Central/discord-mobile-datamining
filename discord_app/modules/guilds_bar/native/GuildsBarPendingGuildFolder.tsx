@@ -57,7 +57,7 @@ export default noop.memo(function GuildsBarPendingGuildFolder(id) {
       const result1 = closure_1(5520).toggleGuildFolderExpand(closure_1_0);
     }
   }), items2);
-  obj = { id: null, accessibilityActions: null, onAccessibilityAction: null, selected: null, unread: false, circle: false, styles: null, label: null, sharedId: null, cutouts: "a", overState: "call", config: "a", externalChildren: "Array", children: "call" };
+  obj = { id: null, accessibilityActions: null, onAccessibilityAction: null, selected: null, unread: false, circle: false, styles: null, label: null, sharedId: null, cutouts: "a", overState: "channel", config: false, externalChildren: false, children: false };
   const obj3 = id(4296);
   obj.id = "" + id;
   obj.accessibilityActions = accessibilityActions;
@@ -75,5 +75,5 @@ export default noop.memo(function GuildsBarPendingGuildFolder(id) {
   }
   obj.externalChildren = tmp8Result;
   obj.children = jsx(id(9035).HourglassIcon, {});
-  return jsx(GuildsBarAnimatedItemWrapperDefault, { id: null, accessibilityActions: null, onAccessibilityAction: null, selected: null, unread: false, circle: false, styles: null, label: null, sharedId: null, cutouts: "a", overState: "call", config: "a", externalChildren: "Array", children: "call" });
+  return jsx(GuildsBarAnimatedItemWrapperDefault, { id: null, accessibilityActions: null, onAccessibilityAction: null, selected: null, unread: false, circle: false, styles: null, label: null, sharedId: null, cutouts: "a", overState: "channel", config: false, externalChildren: false, children: false });
 });

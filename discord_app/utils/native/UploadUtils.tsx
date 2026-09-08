@@ -1263,7 +1263,7 @@ function convertVideo(videoMetadata) {
                   } else {
                     isVideo2 = null != uri.match(/^assets-library:\/\/.+&ext=mp4$/i);
                     if (isVideo2) {
-                      const obj4 = { uri, overrideType: "Array" };
+                      const obj4 = { uri, overrideType: "a" };
                       isVideo2 = UploadUtils.getFile(obj4).isVideo;
                       const tmp12Result3 = UploadUtils;
                     }
@@ -1281,7 +1281,7 @@ function convertVideo(videoMetadata) {
               } else {
                 isVideo = null != uri.match(/^assets-library:\/\/.+&ext=(mov|qt)$/i);
                 if (isVideo) {
-                  const obj5 = { uri, overrideType: "Array" };
+                  const obj5 = { uri, overrideType: "a" };
                   isVideo = UploadUtils.getFile(obj5).isVideo;
                   const tmp12Result5 = UploadUtils;
                 }

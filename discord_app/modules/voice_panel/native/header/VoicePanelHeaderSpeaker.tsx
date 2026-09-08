@@ -219,7 +219,7 @@ export default noop.memo(function VoicePanelHeaderSpeaker(isConnectedToVoiceChan
     function renderButton(arg0) {
       let tmp = arg0;
       if (arg0 == null) {
-        let obj = { onPress, ref: "Array" };
+        let obj = { onPress, ref: "a" };
         tmp = obj;
       }
       obj = { targetRef: ref, canShowTooltip: null };

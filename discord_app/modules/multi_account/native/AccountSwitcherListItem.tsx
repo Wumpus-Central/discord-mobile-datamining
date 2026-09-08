@@ -107,7 +107,7 @@ export default function AccountSwitcherListItem(arg0) {
     const merged = Object.assign(sortHandlers);
     const items2 = [leading, , ];
     obj2 = { style: tmp.accountInfo, children: null };
-    const obj3 = { user: obj2, guildId: "Array" };
+    const obj3 = { user: obj2, guildId: "a" };
     const items3 = [React7(native.Avatar, obj3), ];
     const obj4 = { style: tmp.accountListTag, children: null };
     const obj5 = { style: tmp.tagContainer, children: null };

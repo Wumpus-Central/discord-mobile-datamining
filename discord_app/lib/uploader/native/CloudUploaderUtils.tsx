@@ -10,7 +10,7 @@ import DeveloperOptionsStore from "DeveloperOptionsStore" /* 1347 */;
 
 require = fn;
 function getUploadPayload(self) {
-  const obj = { filename: self.filename, file_size: self.currentSize, id: _modDef12.uniqueId(), original_content_type: "Array" };
+  const obj = { filename: self.filename, file_size: self.currentSize, id: _modDef12.uniqueId(), original_content_type: "a" };
   return obj;
 }
 const size = fn(2);

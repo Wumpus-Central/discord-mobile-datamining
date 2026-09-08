@@ -428,7 +428,7 @@ export const createActivityRichPresenceInviteEmbed = function createActivityRich
                       obj7.label = intl11.string(intl(1114).t.KC26NR);
                       obj11 = obj7;
                     } else if (isAskToJoin) {
-                      const obj8 = { label: "PX_16", disabled: null, footerLabel: "braintreeunionpayhostedfields" };
+                      const obj8 = { label: "PX_16", disabled: null, footerLabel: "biolog" };
                       const intl10 = intl(1114).intl;
                       const obj9 = { username: message.author.globalName, appName: name_override };
                       obj8.footerLabel = intl10.formatToPlainString(intl(1114).t.gYVkSW, obj9);
@@ -442,7 +442,7 @@ export const createActivityRichPresenceInviteEmbed = function createActivityRich
                           obj11 = obj10;
                         }
                       }
-                      obj11 = { label: "PX_16", disabled: null, footerLabel: "braintreeunionpayhostedfields" };
+                      obj11 = { label: "PX_16", disabled: null, footerLabel: "biolog" };
                       const intl8 = intl(1114).intl;
                       obj11.footerLabel = intl8.string(intl(1114).t.OAB5TK);
                     }
@@ -572,7 +572,7 @@ export const createActivityRichPresenceInviteEmbed = function createActivityRich
               return null;
             }
           }
-          const obj15 = { displayType: obj.BLOCKED, headerText: null, subtitle: null, ctaButtonEnabled: false, ctaButtonText: "PX_16", ctaButtonIsLoading: "Array", footerLabel: "flex", gradientColors: 0, iconSrc: null, isPlatformSupported: "Array", isSpotifyParty: "accessible", maxPartySize: "to", partyMemberAvatarURIs: "loadJsonAsset", partySizeText: null, platformIconKeys: "user", coverImageUrl: null, detailsText: null, title: 68 };
+          const obj15 = { displayType: obj.BLOCKED, headerText: null, subtitle: null, ctaButtonEnabled: false, ctaButtonText: "PX_16", ctaButtonIsLoading: "Array", footerLabel: "flex", gradientColors: 0, iconSrc: null, isPlatformSupported: "Array", isSpotifyParty: "disabled", maxPartySize: "colors", partyMemberAvatarURIs: "withSpring", partySizeText: -480, platformIconKeys: 9662722, coverImageUrl: 1895890944, detailsText: 1, title: 20796993 };
           const intl2 = intl(1114).intl;
           obj15.headerText = intl2.string(intl(1114).t.pkq6Vq);
           if (contentClassificationVisibility === intl(11945).ContentClassificationVisibility.BLOCK_UNDERAGE) {

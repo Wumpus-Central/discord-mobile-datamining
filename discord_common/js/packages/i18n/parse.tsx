@@ -34,7 +34,7 @@ prototype["format"] = function format(arg0) {
     const first = tmp2[0];
     const intlMessage2 = self.intlMessage;
     const formatResult = intlMessage2.format(first);
-    if (typeof f119306 === "function") {
+    if (typeof f119314 === "function") {
       const hasItem = formatResult.includes("\n\n");
       let text = formatResult;
       if (hasItem) {
@@ -54,7 +54,7 @@ prototype["format"] = function format(arg0) {
 };
 prototype["astFormat"] = function astFormat(arg0) {
   const tmp = _slicedToArray(this.getContext(arg0), 2);
-  if (typeof f119307 === "function") {
+  if (typeof f119315 === "function") {
     const obj = { inline: false, context: tmp[0], unsafeContext: tmp[1] };
     return closure_132_0(tmp2 + "\n\n", obj);
   } else {
@@ -98,7 +98,7 @@ export const setUpdateRules = function setUpdateRules(fn) {
   _modDef4257.parserFor(fn(rules));
   const obj2 = _modDef4257;
   closure_1 = obj2.reactFor(_modDef4257.ruleOutput(rules, "react"));
-  f119306 = (arr, context, unsafeContext) => {
+  f119314 = (arr, context, unsafeContext) => {
     const hasItem = arr.includes("\n\n");
     let text = arr;
     if (hasItem) {
@@ -109,19 +109,19 @@ export const setUpdateRules = function setUpdateRules(fn) {
     return closure_1(closure_0(text, { inline: !hasItem, context, unsafeContext }));
   };
   closure_0 = _modDef4257.parserFor(markdownRules.rules);
-  f119307 = (arg0, context, unsafeContext) => closure_0(arg0 + "\n\n", { inline: false, context, unsafeContext });
+  f119315 = (arg0, context, unsafeContext) => closure_0(arg0 + "\n\n", { inline: false, context, unsafeContext });
 };
 export const getMessage = function getMessage(str, arg1) {
   if (null == str) {
     return "";
   } else {
-    if (null == f119306) {
+    if (null == f119314) {
       const rules = markdownRules.rules;
       let obj = _modDef4257;
       obj.parserFor(i18n_updateRules.default(rules));
       const obj2 = _modDef4257;
       closure_1 = obj2.reactFor(_modDef4257.ruleOutput(rules, "react"));
-      f119306 = (arr, context, unsafeContext) => {
+      f119314 = (arr, context, unsafeContext) => {
         const hasItem = arr.includes("\n\n");
         let text = arr;
         if (hasItem) {
@@ -132,7 +132,7 @@ export const getMessage = function getMessage(str, arg1) {
         return closure_1(closure_0(text, { inline: !hasItem, context, unsafeContext }));
       };
       closure_0 = _modDef4257.parserFor(markdownRules.rules);
-      f119307 = (arg0, context, unsafeContext) => closure_0(arg0 + "\n\n", { inline: false, context, unsafeContext });
+      f119315 = (arg0, context, unsafeContext) => closure_0(arg0 + "\n\n", { inline: false, context, unsafeContext });
     }
     const str2 = "".replace(/^\n+|\n+$/g, "");
     const isMatch = regex.test(str2);

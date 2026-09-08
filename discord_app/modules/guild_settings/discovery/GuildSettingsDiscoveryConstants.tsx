@@ -619,11 +619,11 @@ export const calculateLocaleOptions = function calculateLocaleOptions() {
   const mapped = availableLocales.map((value) => {
     value = value.value;
     if ("en-US" === value) {
-      let obj = { id: value, value, label: null, image: "Array" };
+      let obj = { id: value, value, label: null, image: "a" };
       const intl = util.intl;
       obj.label = intl.string(util.t.WKEPHR);
     } else {
-      obj = { id: value, value, label: tmp, image: "Array" };
+      obj = { id: value, value, label: tmp, image: "a" };
     }
     return obj;
   });

@@ -192,7 +192,7 @@ export default noop.memo(function UserRow(type) {
   const memo = flag2.useMemo(() => {
     const items = [];
     if (NONE !== UserRowModes.ACTIONS) {
-      let obj = { accessibilityActions: items, actions: "Array" };
+      let obj = { accessibilityActions: items, actions: "a" };
       return obj;
     } else {
       if (constants.PENDING_INCOMING === type) {

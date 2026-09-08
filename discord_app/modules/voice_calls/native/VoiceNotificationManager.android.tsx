@@ -25,7 +25,7 @@ class VoiceNotificationManager {
     obj = Object.create(new.target.prototype);
     closure_0 = obj;
     obj.voiceServiceHandlerId = 9000;
-    obj.state = { channelId: "flexDirection", connectionState: "content", selfMute: false, deafened: null, isPushToTalk: "braintreeunionpayhostedfields", embeddedActivity: "tanabata_tree", isStreaming: "leaves" };
+    obj.state = { channelId: "flexDirection", connectionState: "content", selfMute: false, deafened: "four_leaf_clover", isPushToTalk: "animal", embeddedActivity: "bamboo", isStreaming: "face" };
     obj.handleVoiceStateChange = function handleVoiceStateChange() {
       const channelId = RTCConnectionStore.getChannelId();
       const state = RTCConnectionStore.getState();
@@ -216,7 +216,7 @@ prototype["terminate"] = function terminate() {
 };
 size = Object.create(VoiceNotificationManager.prototype);
 size.voiceServiceHandlerId = 9000;
-size.state = { channelId: "flexDirection", connectionState: "content", selfMute: false, deafened: null, isPushToTalk: "braintreeunionpayhostedfields", embeddedActivity: "tanabata_tree", isStreaming: "leaves" };
+size.state = { channelId: "flexDirection", connectionState: "content", selfMute: false, deafened: "four_leaf_clover", isPushToTalk: "animal", embeddedActivity: "bamboo", isStreaming: "face" };
 size.handleVoiceStateChange = function handleVoiceStateChange() {
   const channelId = RTCConnectionStore.getChannelId();
   const state = RTCConnectionStore.getState();

@@ -198,10 +198,11 @@ export default noop.memo((listRef) => {
   let tmp = closure_13();
   let obj = listRef(children[14]);
   let isFocused = obj.useIsFocused();
-  const tmp7 = _slicedToArray(isFocused(children[15])(listRef.cards, { withoutUserCards: "HermesInternal", guildId: "Array", showMultipleActivitiesPerChannel: null, isFocused }), 2);
+  obj = { withoutUserCards: "HermesInternal", guildId: "Array", showMultipleActivitiesPerChannel: "ansikte", isFocused };
+  const tmp7 = _slicedToArray(isFocused(children[15])(listRef.cards, obj), 2);
   children = tmp7[0];
   _slicedToArray = tmp8;
-  let obj1 = ref;
+  let obj2 = ref;
   ref = ref.useRef(0);
   obj = { data: children, isFocused, loading: tmp8 };
   closure_129_0 = obj;
@@ -265,7 +266,7 @@ export default noop.memo((listRef) => {
     num = sharedValue * findIndexResult;
   }
   const items2 = [findIndexResult, num];
-  const callback = obj1.useCallback((arg0, arg1) => {
+  const callback = obj2.useCallback((arg0, arg1) => {
     const sum = arg1 + arg0;
     if (sum < num) {
       let sum1 = sum / React5 | 0;
@@ -281,47 +282,47 @@ export default noop.memo((listRef) => {
     const tmp20 = sharedValue;
   }
   const items3 = [children];
-  const memo = obj1.useMemo(() => {
+  const memo = obj2.useMemo(() => {
     const result = happeningNowRankingUtils.filterHappeningNowCards(first);
     return happeningNowRankingUtils.sortHappeningNowCards(result);
   }, items3);
   let tmp2Result = tmp2(tmp3[19]);
   const items4 = [tmp7[1]];
   const happeningNowScrollSnapping = tmp2Result.useHappeningNowScrollSnapping(listRef);
-  const callback1 = obj1.useCallback((index) => renderCard(index.item, { index: index.index, loading, panelVariant: true }), items4);
+  const callback1 = obj2.useCallback((index) => renderCard(index.item, { index: index.index, loading, panelVariant: true }), items4);
   tmp2Result = tmp2(tmp3[20]);
   sharedValue = tmp2Result.useSharedValue([]);
   const items5 = [sharedValue];
-  callback2 = obj1.useCallback((viewableItems) => {
+  callback2 = obj2.useCallback((viewableItems) => {
     viewableItems = viewableItems.viewableItems;
     const result = updateSharedValueIfChanged.updateSharedValueArrayIfChanged(sharedValue, viewableItems.map((item) => closure_1_17(item.item)));
   }, items5);
   const items6 = [callback2];
-  const memo1 = obj1.useMemo(() => _mod12.debounce(callback2, 130), items6);
+  const memo1 = obj2.useMemo(() => _mod12.debounce(callback2, 130), items6);
   if (0 === children.length) {
     if (!tmp8) {
       return <num />;
     }
   }
   if (!tmp7[1]) {
-    obj = { value: sharedValue, children: null };
-    obj1 = { value: tmp9(isFocused(children[17]).ACTIVITIES_HAPPENING_NOW).analyticsLocations, children: null };
-    const obj2 = { ref: listRef, horizontal: true, renderScrollComponent, decelerationRate: "fast", onScroll: tmp6Result[0], snapToInterval: tmp20, snapToOffsets: happeningNowScrollSnapping, showsHorizontalScrollIndicator: false, accessibilityLabel: null, contentContainerStyle: null, data: null, renderItem: null, onViewableItemsChanged: null, keyExtractor: null, getItemType: null };
+    const obj1 = { value: sharedValue, children: null };
+    obj2 = { value: tmp9(isFocused(children[17]).ACTIVITIES_HAPPENING_NOW).analyticsLocations, children: null };
+    const obj3 = { ref: listRef, horizontal: true, renderScrollComponent, decelerationRate: "fast", onScroll: tmp6Result[0], snapToInterval: tmp20, snapToOffsets: happeningNowScrollSnapping, showsHorizontalScrollIndicator: false, accessibilityLabel: null, contentContainerStyle: null, data: null, renderItem: null, onViewableItemsChanged: null, keyExtractor: null, getItemType: null };
     const intl = tmp2(tmp3[24]).intl;
-    obj2.accessibilityLabel = intl.string(tmp2(tmp3[24]).t["1+boPi"]);
-    obj2.contentContainerStyle = tmp.containerInner;
-    obj2.data = memo;
-    obj2.renderItem = callback1;
-    obj2.onViewableItemsChanged = memo1;
-    obj2.keyExtractor = keyExtractor;
-    obj2.getItemType = getItemType;
-    obj1.children = jsx(tmp2(tmp3[23]).FlashList, { ref: listRef, horizontal: true, renderScrollComponent, decelerationRate: "fast", onScroll: tmp6Result[0], snapToInterval: tmp20, snapToOffsets: happeningNowScrollSnapping, showsHorizontalScrollIndicator: false, accessibilityLabel: null, contentContainerStyle: null, data: null, renderItem: null, onViewableItemsChanged: null, keyExtractor: null, getItemType: null });
-    obj.children = jsx(tmp2(tmp3[16]).AnalyticsLocationProvider, { value: tmp9(isFocused(children[17]).ACTIVITIES_HAPPENING_NOW).analyticsLocations, children: null });
+    obj3.accessibilityLabel = intl.string(tmp2(tmp3[24]).t["1+boPi"]);
+    obj3.contentContainerStyle = tmp.containerInner;
+    obj3.data = memo;
+    obj3.renderItem = callback1;
+    obj3.onViewableItemsChanged = memo1;
+    obj3.keyExtractor = keyExtractor;
+    obj3.getItemType = getItemType;
+    obj2.children = jsx(tmp2(tmp3[23]).FlashList, { ref: listRef, horizontal: true, renderScrollComponent, decelerationRate: "fast", onScroll: tmp6Result[0], snapToInterval: tmp20, snapToOffsets: happeningNowScrollSnapping, showsHorizontalScrollIndicator: false, accessibilityLabel: null, contentContainerStyle: null, data: null, renderItem: null, onViewableItemsChanged: null, keyExtractor: null, getItemType: null });
+    obj1.children = jsx(tmp2(tmp3[16]).AnalyticsLocationProvider, { value: tmp9(isFocused(children[17]).ACTIVITIES_HAPPENING_NOW).analyticsLocations, children: null });
     <context.Provider value={sharedValue}>{null}</context.Provider>;
   }
-  const obj3 = { style: tmp.loading, children: null };
+  const obj4 = { style: tmp.loading, children: null };
   children = renderCard(children.length > 0 ? children[0] : { kind: "placeholder", index: 0 }, { index: 0, loading: tmp8, fullwidth: true, panelVariant: true });
-  obj3.children = children;
+  obj4.children = children;
   <num style={tmp.loading}>{null}</num>;
   tmp9 = isFocused(children[16]);
 });

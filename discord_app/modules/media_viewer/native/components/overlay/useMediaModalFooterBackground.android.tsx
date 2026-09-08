@@ -13,6 +13,6 @@ const result = size.fileFinishedImporting("modules/media_viewer/native/component
 export default function useMediaModalFooterBackground() {
   let obj = useToken;
   const tmp2 = _slicedToArray(_modDef672(obj.useToken(nativeDefault.colors.THEME_LOCKED_BLUR_FALLBACK)).rgba(), 4);
-  obj = { mediaModalFooterBackgroundColorRgba: { r: tmp2[0], g: tmp2[1], b: tmp2[2], a: tmp2[3] }, MediaModalFooterUnderlay: "Array" };
+  obj = { mediaModalFooterBackgroundColorRgba: { r: tmp2[0], g: tmp2[1], b: tmp2[2], a: tmp2[3] }, MediaModalFooterUnderlay: "a" };
   return obj;
 };

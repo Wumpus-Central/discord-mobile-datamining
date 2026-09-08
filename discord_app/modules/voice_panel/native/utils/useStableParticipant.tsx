@@ -38,7 +38,7 @@ export default function useStableParticipant(id, arg1, arg2) {
       if (null == participant) {
         const user = UserStore.getUser(id);
         if (null != user) {
-          let obj = { type: ParticipantTypes.USER, id, user, selfVideo: false, canRenderVideo: false, userNick: null, userAvatarDecoration: null, streamId: "flex", ringing: null, hasVideo: 0.272, isSelf: 0.331 };
+          let obj = { type: ParticipantTypes.USER, id, user, selfVideo: false, canRenderVideo: false, userNick: null, userAvatarDecoration: null, streamId: "flex", ringing: null, hasVideo: 0.959, isSelf: 0.987 };
           id = AuthenticationStore.getId();
           obj.userNick = NicknameUtils.getName(closure_2, closure_1, user);
           obj.userAvatarDecoration = useAvatarDecoration.getAvatarDecoration(user, closure_2);

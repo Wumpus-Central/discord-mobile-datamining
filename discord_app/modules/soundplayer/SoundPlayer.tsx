@@ -22,8 +22,8 @@ import SortedVoiceStateStore from "SortedVoiceStateStore" /* 4584 */;
 require = fn;
 function MuteDeafen() {
   const items = [MediaEngineStore, SelectedChannelStore];
-  const f104015 = () => ({ inVoiceChannel: null != voiceChannelId.getVoiceChannelId(), selfMute: MediaEngineStore.isSelfMute(), selfDeaf: MediaEngineStore.isSelfDeaf(), audioPermissionReady: MediaEngineStore.isNativeAudioPermissionReady(), shouldSkipMuteUnmuteSound: MediaEngineStore.shouldSkipMuteUnmuteSound() });
-  const f104016 = (selfDeaf, arg1) => {
+  const f104021 = () => ({ inVoiceChannel: null != voiceChannelId.getVoiceChannelId(), selfMute: MediaEngineStore.isSelfMute(), selfDeaf: MediaEngineStore.isSelfDeaf(), audioPermissionReady: MediaEngineStore.isNativeAudioPermissionReady(), shouldSkipMuteUnmuteSound: MediaEngineStore.shouldSkipMuteUnmuteSound() });
+  const f104022 = (selfDeaf, arg1) => {
     ({ inVoiceChannel, selfMute, selfDeaf } = arg1);
     if (inVoiceChannel) {
       if (selfDeaf.selfDeaf !== selfDeaf) {
@@ -46,11 +46,11 @@ function MuteDeafen() {
       }
     }
   };
-  const effect = f104016.useEffect(() => {
+  const effect = f104022.useEffect(() => {
     closure_0 = batchedStoreListener();
-    batchedStoreListener = new items(f104033[20]).BatchedStoreListener(closure_0, () => {
-      const tmp = f104033();
-      const tmp2 = f104034(closure_0, tmp);
+    batchedStoreListener = new items(f104039[20]).BatchedStoreListener(closure_0, () => {
+      const tmp = f104039();
+      const tmp2 = f104040(closure_0, tmp);
       let isSoundDisabledResult = null == tmp2;
       if (!isSoundDisabledResult) {
         isSoundDisabledResult = NotificationSettingsStore.isSoundDisabled(tmp2);
@@ -67,8 +67,8 @@ function MuteDeafen() {
 }
 function Camera() {
   const items = [MediaEngineStore, SelectedChannelStore];
-  const f104017 = () => ({ videoEnabled: videoEnabled.isVideoEnabled(), inVoiceChannel: null != voiceChannelId.getVoiceChannelId() });
-  const f104018 = (videoEnabled, videoEnabled2) => {
+  const f104023 = () => ({ videoEnabled: videoEnabled.isVideoEnabled(), inVoiceChannel: null != voiceChannelId.getVoiceChannelId() });
+  const f104024 = (videoEnabled, videoEnabled2) => {
     videoEnabled = videoEnabled2.videoEnabled;
     if (videoEnabled.videoEnabled !== videoEnabled) {
       if (videoEnabled.inVoiceChannel) {
@@ -82,11 +82,11 @@ function Camera() {
       }
     }
   };
-  const effect = f104018.useEffect(() => {
+  const effect = f104024.useEffect(() => {
     closure_0 = batchedStoreListener();
-    batchedStoreListener = new items(f104033[20]).BatchedStoreListener(closure_0, () => {
-      const tmp = f104033();
-      const tmp2 = f104034(closure_0, tmp);
+    batchedStoreListener = new items(f104039[20]).BatchedStoreListener(closure_0, () => {
+      const tmp = f104039();
+      const tmp2 = f104040(closure_0, tmp);
       let isSoundDisabledResult = null == tmp2;
       if (!isSoundDisabledResult) {
         isSoundDisabledResult = NotificationSettingsStore.isSoundDisabled(tmp2);
@@ -103,7 +103,7 @@ function Camera() {
 }
 function RTCConnect() {
   const items = [ChannelStore, RTCConnectionStore, SelectedChannelStore, GameConsoleStore];
-  const f104019 = () => {
+  const f104025 = () => {
     channel = channel.getChannel(voiceChannelId.getVoiceChannelId());
     let type;
     if (channel != null) {
@@ -128,7 +128,7 @@ function RTCConnect() {
     obj.connectedRemote = null != GameConsoleStore.getRemoteSessionId();
     return obj;
   };
-  const f104020 = (channelType, arg1) => {
+  const f104026 = (channelType, arg1) => {
     ({ channelType, connectedRemote } = arg1);
     const channelType2 = channelType.channelType;
     if (channelType.connectHasStarted) {
@@ -144,11 +144,11 @@ function RTCConnect() {
     }
     return "user_join";
   };
-  const effect = f104020.useEffect(() => {
+  const effect = f104026.useEffect(() => {
     closure_0 = batchedStoreListener();
-    batchedStoreListener = new items(f104033[20]).BatchedStoreListener(closure_0, () => {
-      const tmp = f104033();
-      const tmp2 = f104034(closure_0, tmp);
+    batchedStoreListener = new items(f104039[20]).BatchedStoreListener(closure_0, () => {
+      const tmp = f104039();
+      const tmp2 = f104040(closure_0, tmp);
       let isSoundDisabledResult = null == tmp2;
       if (!isSoundDisabledResult) {
         isSoundDisabledResult = NotificationSettingsStore.isSoundDisabled(tmp2);
@@ -165,8 +165,8 @@ function RTCConnect() {
 }
 function Speaking() {
   const items = [SpeakingStore];
-  const f104021 = () => currentUserPTTActive.isCurrentUserPTTActive();
-  const f104022 = (arg0, arg1) => {
+  const f104027 = () => currentUserPTTActive.isCurrentUserPTTActive();
+  const f104028 = (arg0, arg1) => {
     if (arg0 !== arg1) {
       if (MediaEngineStore.getMode() === constants.PUSH_TO_TALK) {
         if (!isSelfMuteResult) {
@@ -180,11 +180,11 @@ function Speaking() {
       isSelfMuteResult = MediaEngineStore.isSelfMute();
     }
   };
-  const effect = f104022.useEffect(() => {
+  const effect = f104028.useEffect(() => {
     closure_0 = batchedStoreListener();
-    batchedStoreListener = new items(f104033[20]).BatchedStoreListener(closure_0, () => {
-      const tmp = f104033();
-      const tmp2 = f104034(closure_0, tmp);
+    batchedStoreListener = new items(f104039[20]).BatchedStoreListener(closure_0, () => {
+      const tmp = f104039();
+      const tmp2 = f104040(closure_0, tmp);
       let isSoundDisabledResult = null == tmp2;
       if (!isSoundDisabledResult) {
         isSoundDisabledResult = NotificationSettingsStore.isSoundDisabled(tmp2);
@@ -201,8 +201,8 @@ function Speaking() {
 }
 function SelfMutedTemporarily() {
   const items = [MediaEngineStore];
-  const f104023 = () => MediaEngineStore.isSelfMutedTemporarily();
-  const f104024 = (arg0, arg1) => {
+  const f104029 = () => MediaEngineStore.isSelfMutedTemporarily();
+  const f104030 = (arg0, arg1) => {
     if (arg0 !== arg1) {
       if (MediaEngineStore.getMode() === constants.VOICE_ACTIVITY) {
         if (!isSelfMuteResult) {
@@ -216,11 +216,11 @@ function SelfMutedTemporarily() {
       isSelfMuteResult = MediaEngineStore.isSelfMute();
     }
   };
-  const effect = f104024.useEffect(() => {
+  const effect = f104030.useEffect(() => {
     closure_0 = batchedStoreListener();
-    batchedStoreListener = new items(f104033[20]).BatchedStoreListener(closure_0, () => {
-      const tmp = f104033();
-      const tmp2 = f104034(closure_0, tmp);
+    batchedStoreListener = new items(f104039[20]).BatchedStoreListener(closure_0, () => {
+      const tmp = f104039();
+      const tmp2 = f104040(closure_0, tmp);
       let isSoundDisabledResult = null == tmp2;
       if (!isSoundDisabledResult) {
         isSoundDisabledResult = NotificationSettingsStore.isSoundDisabled(tmp2);
@@ -237,8 +237,8 @@ function SelfMutedTemporarily() {
 }
 function PriorityVAD() {
   const items = [SpeakingStore];
-  const f104025 = () => currentUserPrioritySpeaker.isCurrentUserPrioritySpeaker();
-  const f104026 = (arg0, arg1) => {
+  const f104031 = () => currentUserPrioritySpeaker.isCurrentUserPrioritySpeaker();
+  const f104032 = (arg0, arg1) => {
     if (arg0 !== arg1) {
       if (MediaEngineStore.getMode() === constants.VOICE_ACTIVITY) {
         if (!isSelfMuteResult) {
@@ -252,11 +252,11 @@ function PriorityVAD() {
       isSelfMuteResult = MediaEngineStore.isSelfMute();
     }
   };
-  const effect = f104026.useEffect(() => {
+  const effect = f104032.useEffect(() => {
     closure_0 = batchedStoreListener();
-    batchedStoreListener = new items(f104033[20]).BatchedStoreListener(closure_0, () => {
-      const tmp = f104033();
-      const tmp2 = f104034(closure_0, tmp);
+    batchedStoreListener = new items(f104039[20]).BatchedStoreListener(closure_0, () => {
+      const tmp = f104039();
+      const tmp2 = f104040(closure_0, tmp);
       let isSoundDisabledResult = null == tmp2;
       if (!isSoundDisabledResult) {
         isSoundDisabledResult = NotificationSettingsStore.isSoundDisabled(tmp2);
@@ -273,17 +273,17 @@ function PriorityVAD() {
 }
 function UserHasBeenMoved() {
   const items = [VoiceStateStore];
-  const f104027 = () => VoiceStateStore.userHasBeenMovedVersion;
-  const f104028 = (arg0, arg1) => {
+  const f104033 = () => VoiceStateStore.userHasBeenMovedVersion;
+  const f104034 = (arg0, arg1) => {
     if (arg0 !== arg1) {
       return "user_moved";
     }
   };
-  const effect = f104028.useEffect(() => {
+  const effect = f104034.useEffect(() => {
     closure_0 = batchedStoreListener();
-    batchedStoreListener = new items(f104033[20]).BatchedStoreListener(closure_0, () => {
-      const tmp = f104033();
-      const tmp2 = f104034(closure_0, tmp);
+    batchedStoreListener = new items(f104039[20]).BatchedStoreListener(closure_0, () => {
+      const tmp = f104039();
+      const tmp2 = f104040(closure_0, tmp);
       let isSoundDisabledResult = null == tmp2;
       if (!isSoundDisabledResult) {
         isSoundDisabledResult = NotificationSettingsStore.isSoundDisabled(tmp2);
@@ -300,27 +300,27 @@ function UserHasBeenMoved() {
 }
 function UserInvitedToSpeak() {
   const items = [SelectedChannelStore, VoiceStateStore];
-  const f104029 = () => {
+  const f104035 = () => {
     voiceChannelId = voiceChannelId.getVoiceChannelId();
     if (null == voiceChannelId) {
-      return items(f104029[22]).RequestToSpeakStates.NONE;
+      return items(f104035[22]).RequestToSpeakStates.NONE;
     } else {
       voiceStateForChannel = voiceStateForChannel.getVoiceStateForChannel(voiceChannelId);
-      return items(f104029[22]).getAudienceRequestToSpeakState(voiceStateForChannel);
+      return items(f104035[22]).getAudienceRequestToSpeakState(voiceStateForChannel);
     }
   };
-  const f104030 = (arg0, arg1) => {
+  const f104036 = (arg0, arg1) => {
     if (arg0 !== arg1) {
-      if (arg1 === items(f104029[22]).RequestToSpeakStates.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK) {
+      if (arg1 === items(f104035[22]).RequestToSpeakStates.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK) {
         return "reconnect";
       }
     }
   };
-  const effect = f104030.useEffect(() => {
+  const effect = f104036.useEffect(() => {
     closure_0 = batchedStoreListener();
-    batchedStoreListener = new items(f104033[20]).BatchedStoreListener(closure_0, () => {
-      const tmp = f104033();
-      const tmp2 = f104034(closure_0, tmp);
+    batchedStoreListener = new items(f104039[20]).BatchedStoreListener(closure_0, () => {
+      const tmp = f104039();
+      const tmp2 = f104040(closure_0, tmp);
       let isSoundDisabledResult = null == tmp2;
       if (!isSoundDisabledResult) {
         isSoundDisabledResult = NotificationSettingsStore.isSoundDisabled(tmp2);
@@ -337,7 +337,7 @@ function UserInvitedToSpeak() {
 }
 function VoiceChannel() {
   let items = [SelectedChannelStore, ApplicationStreamingStore, AuthenticationStore, VoiceStateStore, ChannelStore];
-  const f104031 = () => {
+  const f104037 = () => {
     voiceChannelId = voiceChannelId.getVoiceChannelId();
     const currentUserId = id.getId();
     items = [];
@@ -375,17 +375,17 @@ function VoiceChannel() {
     let singleActiveStreamViewerCount = 0;
     let singleActiveStreamKey = null;
     if (null != first) {
-      const encodeStreamKeyResult = items(f104031[23]).encodeStreamKey(first);
+      const encodeStreamKeyResult = items(f104037[23]).encodeStreamKey(first);
       const viewerIds = obj.getViewerIds(encodeStreamKeyResult);
       singleActiveStreamViewerCount = viewerIds.filter((item) => item !== currentUserId).length;
       singleActiveStreamKey = encodeStreamKeyResult;
-      const obj2 = items(f104031[23]);
+      const obj2 = items(f104037[23]);
     }
     return { channelType, voiceChannelId, voiceChannelUserCount, streamingUserIds, singleActiveStreamKey, singleActiveStreamViewerCount, currentUserId, allActiveStreams };
   };
-  const f104032 = (voiceChannelId, arg1) => {
+  const f104038 = (voiceChannelId, arg1) => {
     ({ channelType, voiceChannelId, voiceChannelUserCount, streamingUserIds } = arg1);
-    ({ singleActiveStreamKey, singleActiveStreamViewerCount, currentUserId: f104032 } = arg1);
+    ({ singleActiveStreamKey, singleActiveStreamViewerCount, currentUserId: f104038 } = arg1);
     closure_3 = undefined;
     if (voiceChannelId.voiceChannelId === voiceChannelId) {
       if (null != voiceChannelId) {
@@ -447,11 +447,11 @@ function VoiceChannel() {
       }
     }
   };
-  const effect = f104032.useEffect(() => {
+  const effect = f104038.useEffect(() => {
     closure_0 = batchedStoreListener();
-    batchedStoreListener = new items(f104033[20]).BatchedStoreListener(closure_0, () => {
-      const tmp = f104033();
-      const tmp2 = f104034(closure_0, tmp);
+    batchedStoreListener = new items(f104039[20]).BatchedStoreListener(closure_0, () => {
+      const tmp = f104039();
+      const tmp2 = f104040(closure_0, tmp);
       let isSoundDisabledResult = null == tmp2;
       if (!isSoundDisabledResult) {
         isSoundDisabledResult = NotificationSettingsStore.isSoundDisabled(tmp2);
@@ -468,32 +468,32 @@ function VoiceChannel() {
 }
 function ActivitySounds() {
   const items = [SelectedChannelStore, EmbeddedActivitiesStore, FramesStore, AuthenticationStore, ChannelStore, VibegrationsProjectStore];
-  const f104033 = () => {
+  const f104039 = () => {
     const voiceChannelId = SelectedChannelStore.getVoiceChannelId();
     const channelId = SelectedChannelStore.getChannelId();
     let obj = connectedActivityLocation;
     connectedActivityLocation = connectedActivityLocation.getConnectedActivityLocation();
-    const embeddedActivityLocationChannelId = items(f104033[24]).getEmbeddedActivityLocationChannelId(connectedActivityLocation);
+    const embeddedActivityLocationChannelId = items(f104039[24]).getEmbeddedActivityLocationChannelId(connectedActivityLocation);
     id = id.getId();
-    const obj2 = items(f104033[24]);
+    const obj2 = items(f104039[24]);
     if (obj3.isNotNullish(channelId)) {
       let embeddedActivitiesForChannel = obj.getEmbeddedActivitiesForChannel(channelId);
     } else {
       embeddedActivitiesForChannel = NO_ACTIVITIES;
     }
-    let tmp4Result = items(f104033[25]);
+    let tmp4Result = items(f104039[25]);
     if (tmp4Result.isNotNullish(voiceChannelId)) {
       let embeddedActivitiesForChannel1 = obj.getEmbeddedActivitiesForChannel(voiceChannelId);
     } else {
       embeddedActivitiesForChannel1 = NO_ACTIVITIES;
     }
-    tmp4Result = items(f104033[25]);
+    tmp4Result = items(f104039[25]);
     if (tmp4Result.isNotNullish(embeddedActivityLocationChannelId)) {
       let embeddedActivitiesForChannel2 = obj.getEmbeddedActivitiesForChannel(embeddedActivityLocationChannelId);
     } else {
       embeddedActivitiesForChannel2 = NO_ACTIVITIES;
     }
-    obj3 = items(f104033[25]);
+    obj3 = items(f104039[25]);
     let selfEmbeddedActivityForLocation = null;
     if (tmp4Result1.isNotNullish(connectedActivityLocation)) {
       selfEmbeddedActivityForLocation = obj.getSelfEmbeddedActivityForLocation(connectedActivityLocation);
@@ -514,8 +514,8 @@ function ActivitySounds() {
     }
     let result1 = null != tmp13Result;
     if (result1) {
-      result1 = items(f104033[26]).isVibegrationsChannelCandidate(channel.getChannel(tmp13Result), "ActivitySounds");
-      const tmp4Result2 = items(f104033[26]);
+      result1 = items(f104039[26]).isVibegrationsChannelCandidate(channel.getChannel(tmp13Result), "ActivitySounds");
+      const tmp4Result2 = items(f104039[26]);
     }
     if (!result1) {
       result1 = result;
@@ -523,7 +523,7 @@ function ActivitySounds() {
     obj = { connectedActivityLocation, voiceChannelId, currentUserId: id, channelActivities: embeddedActivitiesForChannel, connectedChannelActivities: embeddedActivitiesForChannel2, userConnectedActivity: selfEmbeddedActivityForLocation, voiceChannelActivities: embeddedActivitiesForChannel1, hasFrame: closure_1_24(mainFrame), inVibegrationsChannel: result1 };
     return obj;
   };
-  const f104034 = (voiceChannelActivities, arg1) => {
+  const f104040 = (voiceChannelActivities, arg1) => {
     ({ connectedActivityLocation, currentUserId: items, userConnectedActivity } = arg1);
     ({ voiceChannelActivities, hasFrame, voiceChannelId, channelActivities, connectedChannelActivities, inVibegrationsChannel } = arg1);
     const someResult = voiceChannelActivities.some((applicationId) => {
@@ -546,7 +546,7 @@ function ActivitySounds() {
       });
       let isNotNullishResult = voiceChannelActivities.voiceChannelActivities.length < voiceChannelActivities.length;
       if (isNotNullishResult) {
-        let tmp2Result = items(f104033[25]);
+        let tmp2Result = items(f104039[25]);
         isNotNullishResult = tmp2Result.isNotNullish(voiceChannelActivities.voiceChannelId);
       }
       let str2;
@@ -555,7 +555,7 @@ function ActivitySounds() {
       }
       let isNotNullishResult1 = undefined === found1;
       if (isNotNullishResult1) {
-        tmp2Result = items(f104033[25]);
+        tmp2Result = items(f104039[25]);
         isNotNullishResult1 = tmp2Result.isNotNullish(found);
       }
       if (isNotNullishResult1) {
@@ -563,8 +563,8 @@ function ActivitySounds() {
       }
       let isNotNullishResult2 = undefined === found;
       if (isNotNullishResult2) {
-        isNotNullishResult2 = items(f104033[25]).isNotNullish(found1);
-        const tmp2Result1 = items(f104033[25]);
+        isNotNullishResult2 = items(f104039[25]).isNotNullish(found1);
+        const tmp2Result1 = items(f104039[25]);
       }
       if (isNotNullishResult2) {
         isNotNullishResult2 = found1.userIds.size > 1;
@@ -572,10 +572,10 @@ function ActivitySounds() {
       if (isNotNullishResult2) {
         str2 = "activity_user_join";
       }
-      let isNotNullishResult3 = items(f104033[25]).isNotNullish(found1);
+      let isNotNullishResult3 = items(f104039[25]).isNotNullish(found1);
       if (isNotNullishResult3) {
-        isNotNullishResult3 = items(f104033[25]).isNotNullish(found);
-        const tmp2Result3 = items(f104033[25]);
+        isNotNullishResult3 = items(f104039[25]).isNotNullish(found);
+        const tmp2Result3 = items(f104039[25]);
       }
       str = str2;
       if (isNotNullishResult3) {
@@ -587,7 +587,7 @@ function ActivitySounds() {
         }
         str = str2;
       }
-      const tmp2Result2 = items(f104033[25]);
+      const tmp2Result2 = items(f104039[25]);
     }
     let str3 = str;
     if (!someResult) {
@@ -597,16 +597,16 @@ function ActivitySounds() {
       const userConnectedActivity2 = voiceChannelActivities.userConnectedActivity;
       let isNotNullishResult4 = null == userConnectedActivity;
       if (isNotNullishResult4) {
-        isNotNullishResult4 = items(f104033[25]).isNotNullish(userConnectedActivity2);
-        const tmp2Result4 = items(f104033[25]);
+        isNotNullishResult4 = items(f104039[25]).isNotNullish(userConnectedActivity2);
+        const tmp2Result4 = items(f104039[25]);
       }
       if (isNotNullishResult4) {
         str = "activity_end";
       }
-      let isNotNullishResult5 = items(f104033[25]).isNotNullish(userConnectedActivity);
+      let isNotNullishResult5 = items(f104039[25]).isNotNullish(userConnectedActivity);
       if (isNotNullishResult5) {
-        isNotNullishResult5 = items(f104033[25]).isNotNullish(userConnectedActivity2);
-        const tmp2Result6 = items(f104033[25]);
+        isNotNullishResult5 = items(f104039[25]).isNotNullish(userConnectedActivity2);
+        const tmp2Result6 = items(f104039[25]);
       }
       str3 = str;
       if (isNotNullishResult5) {
@@ -619,7 +619,7 @@ function ActivitySounds() {
         str3 = str;
       }
       tmp10 = voiceChannelActivities.connectedChannelActivities.length < connectedChannelActivities.length && voiceChannelActivities.channelActivities.length < channelActivities.length;
-      const tmp2Result5 = items(f104033[25]);
+      const tmp2Result5 = items(f104039[25]);
     }
     let tmp14 = null != str3;
     if (!tmp14) {
@@ -680,11 +680,11 @@ function ActivitySounds() {
     }
     return tmp20;
   };
-  const effect = f104034.useEffect(() => {
+  const effect = f104040.useEffect(() => {
     closure_0 = batchedStoreListener();
-    batchedStoreListener = new items(f104033[20]).BatchedStoreListener(closure_0, () => {
-      const tmp = f104033();
-      const tmp2 = f104034(closure_0, tmp);
+    batchedStoreListener = new items(f104039[20]).BatchedStoreListener(closure_0, () => {
+      const tmp = f104039();
+      const tmp2 = f104040(closure_0, tmp);
       let isSoundDisabledResult = null == tmp2;
       if (!isSoundDisabledResult) {
         isSoundDisabledResult = NotificationSettingsStore.isSoundDisabled(tmp2);
