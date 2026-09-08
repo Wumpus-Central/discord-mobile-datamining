@@ -149,6 +149,24 @@ prototype["sendDebugStatusRequest"] = function sendDebugStatusRequest() {
   const error = new Error("WebSocket not open");
   throw error;
 };
+prototype["sendForceCompaction"] = function sendForceCompaction() {
+  if (flag === undefined) {
+    flag = false;
+  }
+  const self = this;
+  if (null != this.socket) {
+    const _WebSocket = WebSocket;
+    if (self.socket.readyState === WebSocket.OPEN) {
+      const socket = self.socket;
+      const tmp2 = flag ? { settle_pending: true } : {};
+      const obj = { type: "force_compaction" };
+      const merged = Object.assign(tmp2);
+      socket.send(JSON.stringify(obj));
+    }
+  }
+  const error = new Error("WebSocket not open");
+  throw error;
+};
 prototype["sendCaptureAck"] = function sendCaptureAck(id, accepted, code, message) {
   const self = this;
   if (null != this.socket) {

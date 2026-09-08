@@ -41,8 +41,8 @@ function FavoritesGuildCoachmarkMenuItemContent(arg0) {
       onDismiss: null,
       renderImgComponent: "r",
       buttonLabel:
-        "M15 4h-1v5h1V4ZM14 9h-1v2h1V9ZM3 9H2v2h1V9ZM13 11h-2v1h2v-1ZM11 12H9v1h2v-1ZM9 13H7v1h2v-1ZM7 12H5v1h2v-1ZM5 11H3v1h2v-1Z",
-      onButtonPress: null,
+        "M3 1v1h4V1H3ZM2 2v1h1V2H2ZM1 3v1h1V3H1ZM0 4v5h1V4H0ZM1 9v2h1V9H1ZM2 11v1h1v-1H2ZM3 12v1h2v-1H3ZM5 13v1h2v-1H5Z",
+      onButtonPress: "#000",
     };
     const intl = util.intl;
     const tmp4 = _modDef3225;

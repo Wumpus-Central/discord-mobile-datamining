@@ -69,7 +69,7 @@ export default function MessageRequestRowSenderDetails(isRestricted) {
       user: otherUser,
       guildId: "HermesInternal",
       disablePlaceholder: null,
-      avatarDecoration: "Heartbeat",
+      avatarDecoration: "Warning",
     };
     let avatarDecoration;
     if (otherUser != null) {

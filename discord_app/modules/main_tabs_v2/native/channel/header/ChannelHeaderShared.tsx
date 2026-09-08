@@ -127,10 +127,10 @@ function UserAvatar(user) {
     guildId: "Boolean",
     size: native.AvatarSizes.REFRESH_MEDIUM_32,
     status: false,
-    isMobileOnline: null,
-    isVROnline: true,
-    style: null,
-    autoStatusCutout: false,
+    isMobileOnline: "done",
+    isVROnline: "flowing",
+    style: "hourglass",
+    autoStatusCutout: "hours",
   };
   let tmp3 = null;
   if (!user.isSystemUser()) {

@@ -77,7 +77,7 @@ export default function InteractionIframeModal(children) {
       referrerPolicy: "origin",
       isPipOrGridMode: false,
       webViewKey: "PX_16",
-      ignoreSilentHardwareSwitch: "jente",
+      ignoreSilentHardwareSwitch: "ansikt",
     };
     ({ channel_id: obj2.channelId, guild_id: obj2.guildId } = queryParams);
     obj.activityUrl = iframeModalState.iframeUrl;

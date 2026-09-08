@@ -273,8 +273,8 @@ class ChatPreviewBase extends PureComponent {
             jumpTargetId,
             jumpType: "flex",
             shouldInitialScroll: "Array",
-            animated: 1065.6,
-            scrollPosition: -236.8,
+            animated: 0,
+            scrollPosition: 2,
             focusTargetId: 0,
           };
           tmp23 = computeScrollDataDefault(obj);

@@ -94,10 +94,10 @@ class YouBarButtonIcon {
         position: "absolute",
         left: size2 - badgeSize + num3,
         top: size2 - badgeSize + num4,
-        right: "id",
-        bottom: "jsx",
-        padding: "justifyContent",
-        minWidth: "enumerable",
+        right: "call",
+        bottom: "body",
+        padding: "fileFinishedImporting",
+        minWidth: "accessible",
       };
       return rect;
     }, items1);

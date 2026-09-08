@@ -55,8 +55,9 @@ function NameplateUser(arg0) {
       avatarDecoration,
       animate: !stateFromStores,
       autoStatusCutout:
+        "function changeEventCalculator_Pnpm_rotationGestureTs1(current,previous){let changePayload;if(previous===undefined){changePayload={rotationChange:current.rotation};}else{changePayload={rotationChange:current.rotation-previous.rotation};}return{...current,...changePayload};}",
+      "aria-hidden":
         "function changeEventCalculator_Pnpm_forceTouchGestureTs1(current,previous){let changePayload;if(previous===undefined){changePayload={forceChange:current.force};}else{changePayload={forceChange:current.force-previous.force};}return{...current,...changePayload};}",
-      "aria-hidden": "function changeEventCalculator_Pnpm_manualGestureTs1(current,_previous){return current;}",
     };
     return timestampProducer(native.Avatar, obj);
   }, items1);

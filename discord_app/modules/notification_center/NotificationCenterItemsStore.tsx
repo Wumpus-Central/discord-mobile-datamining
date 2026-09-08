@@ -214,8 +214,8 @@ let obj = {
   notifCenterLocalItems: [],
   paginationHasMore: true,
   paginationCursor: "flex",
-  notifCenterActive: "balra",
-  notifCenterTabFocused: "balra tol\u00F3 k\u00E9z",
+  notifCenterActive: "onTapSummaryJump",
+  notifCenterTabFocused: 0.00000000000000000000000000000000000000000000000000000012273576812576707,
 };
 const PersistedStore = initializeDefault.PersistedStore;
 class NotificationCenterItemsStore extends PersistedStore {}
@@ -398,8 +398,8 @@ obj = {
       notifCenterLocalItems: null,
       paginationHasMore: true,
       paginationCursor: "flex",
-      notifCenterActive: "balra",
-      notifCenterTabFocused: "balra tol\u00F3 k\u00E9z",
+      notifCenterActive: "onTapSummaryJump",
+      notifCenterTabFocused: 0.00000000000000000000000000000000000000000000000000000012273576812576707,
     };
     if (flag) {
       let prop = obj.notifCenterLocalItems;
@@ -540,8 +540,8 @@ obj = {
       notifCenterLocalItems: null,
       paginationHasMore: true,
       paginationCursor: "flex",
-      notifCenterActive: "balra",
-      notifCenterTabFocused: "balra tol\u00F3 k\u00E9z",
+      notifCenterActive: "onTapSummaryJump",
+      notifCenterTabFocused: 0.00000000000000000000000000000000000000000000000000000012273576812576707,
     };
     if (flag) {
       let prop = obj.notifCenterLocalItems;
@@ -711,8 +711,8 @@ obj = {
       notifCenterLocalItems: null,
       paginationHasMore: true,
       paginationCursor: "flex",
-      notifCenterActive: "balra",
-      notifCenterTabFocused: "balra tol\u00F3 k\u00E9z",
+      notifCenterActive: "onTapSummaryJump",
+      notifCenterTabFocused: 0.00000000000000000000000000000000000000000000000000000012273576812576707,
     };
     if (flag) {
       let prop = obj.notifCenterLocalItems;

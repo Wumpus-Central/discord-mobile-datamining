@@ -10,10 +10,10 @@ const items = [
   { id: "claude-opus-5", label: "Claude Opus 5", provider: "anthropic" },
   { id: "claude-sonnet-5", label: "Claude Sonnet 5", provider: "anthropic" },
   { id: "claude-haiku-4-5", label: "Claude Haiku 4.5", provider: "anthropic" },
-  { id: "gpt-5.6-sol", label: "GPT-5.6 Sol", provider: "openai" },
-  { id: "gpt-5.6-terra", label: "GPT-5.6 Terra", provider: "openai" },
-  { id: "gpt-5.6-luna", label: "GPT-5.6 Luna", provider: "openai" },
-  { id: "gpt-6-astra", label: "GPT-6 Astra", provider: "openai" },
+  { id: "gpt-5.6-sol", label: "GPT-5.6 Sol", provider: "openai", supports_fast: true },
+  { id: "gpt-5.6-terra", label: "GPT-5.6 Terra", provider: "openai", supports_fast: true },
+  { id: "gpt-5.6-luna", label: "GPT-5.6 Luna", provider: "openai", supports_fast: true },
+  { id: "gpt-6-astra", label: "GPT-6 Astra", provider: "openai", supports_fast: true },
 ];
 let obj = { main: items, subagent: items, thinking: ["low", "medium", "high", "xhigh", "max"] };
 const items1 = [

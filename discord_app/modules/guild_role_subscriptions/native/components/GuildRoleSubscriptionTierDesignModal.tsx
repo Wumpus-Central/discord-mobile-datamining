@@ -85,7 +85,7 @@ function Content() {
   obj2.imageUploadSize = UPLOAD_SMALL_SIZE;
   obj2.previewShape = require("FormImagePicker").PreviewShape.SQUIRCLE;
   obj2.setImage = function setImage(icon) {
-    return closure_0({ icon: icon.uri, unicodeEmoji: "Array" });
+    return closure_0({ icon: icon.uri, unicodeEmoji: "a" });
   };
   obj2.disabled = roleSubscriptionSettingsDisabled;
   items1[2] = closure_9(tmpResult, obj2);

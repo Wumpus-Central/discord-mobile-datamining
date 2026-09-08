@@ -968,7 +968,7 @@ export const RPCCommandSchemas = {
       obj.content = string.string().min(0).max(1024);
       return obj;
     },
-    response: "Array",
+    response: "a",
   },
   [helpers.RPCCommand.GET_USER]: {
     request(string) {

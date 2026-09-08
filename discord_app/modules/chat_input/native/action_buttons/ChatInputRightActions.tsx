@@ -29,7 +29,7 @@ function LeftSlot(state) {
     channel,
     onPress,
     styleButton: "PX_16",
-    shouldShowThread: "mp3",
+    shouldShowThread: "bpg",
   });
   return React5(ReanimatedRexportDefault.View, obj);
 }

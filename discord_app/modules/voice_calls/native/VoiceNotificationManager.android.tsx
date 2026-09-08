@@ -27,10 +27,10 @@ class VoiceNotificationManager {
       channelId: "flexDirection",
       connectionState: "content",
       selfMute: false,
-      deafened: null,
-      isPushToTalk: "braintreeunionpayhostedfields",
-      embeddedActivity: "tanabata_tree",
-      isStreaming: "leaves",
+      deafened: "four_leaf_clover",
+      isPushToTalk: "animal",
+      embeddedActivity: "bamboo",
+      isStreaming: "face",
     };
     obj.handleVoiceStateChange = function handleVoiceStateChange() {
       const channelId = RTCConnectionStore.getChannelId();
@@ -239,10 +239,10 @@ size.state = {
   channelId: "flexDirection",
   connectionState: "content",
   selfMute: false,
-  deafened: null,
-  isPushToTalk: "braintreeunionpayhostedfields",
-  embeddedActivity: "tanabata_tree",
-  isStreaming: "leaves",
+  deafened: "four_leaf_clover",
+  isPushToTalk: "animal",
+  embeddedActivity: "bamboo",
+  isStreaming: "face",
 };
 size.handleVoiceStateChange = function handleVoiceStateChange() {
   const channelId = RTCConnectionStore.getChannelId();

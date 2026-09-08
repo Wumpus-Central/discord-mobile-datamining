@@ -55,7 +55,7 @@ function RegisterIdentityBase(inputMode) {
             obj1.actionType = constants2.SUBMITTED;
             React7(obj1);
             if (inputMode === tmp3(tmp31[18]).PhoneOrEmailSelectorForceMode.EMAIL) {
-              const obj2 = { email, phoneToken: "Array" };
+              const obj2 = { email, phoneToken: "a" };
               closure_1_10(obj2);
               const tmp26 = React5();
               if (null != tmp26) {

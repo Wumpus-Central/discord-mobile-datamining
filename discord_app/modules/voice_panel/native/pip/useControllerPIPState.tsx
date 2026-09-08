@@ -31,7 +31,7 @@ export const useControllerPIPState = function useControllerPIPState(channelId) {
     width: false,
     height: "first_quarter_moon",
     containerHeight: "waxing_gibbous_moon",
-    showSecondaryPIP: "earth_africa",
+    showSecondaryPIP: "crescent_moon",
   });
   const tmp2 = current(noop.useState(undefined), 2);
   current = tmp2[0];

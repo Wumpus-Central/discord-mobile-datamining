@@ -369,7 +369,8 @@ export const chatInputHandleSendText = function chatInputHandleSendText(text) {
             let intl2 = util.intl;
             obj.confirmText = intl2.string(util.t.KJnHq3);
             obj.onConfirm = function onConfirm() {
-              chatInputSendMessage({ text, parsedMessage, tts: "accessible", source: "IFD_TYPE_GPS", params });
+              const obj = { text, parsedMessage, tts: "accessible", source: false, params };
+              chatInputSendMessage(obj);
             };
             let intl3 = util.intl;
             obj.cancelText = intl3.string(util.t.fsBWmS);
@@ -384,7 +385,7 @@ export const chatInputHandleSendText = function chatInputHandleSendText(text) {
               threadId: channel.id,
               attachments: uploads,
               sendMessage() {
-                const obj = { text, parsedMessage, tts: "accessible", source: 16777815, params };
+                const obj = { text, parsedMessage, tts: "accessible", source: false, params };
                 chatInputSendMessage(obj);
               },
             };
@@ -395,7 +396,13 @@ export const chatInputHandleSendText = function chatInputHandleSendText(text) {
           tmp19 = require;
           tmp20 = dependencyMap;
         }
-        obj1 = { text, parsedMessage: tmp2, tts: "accessible", source: "<string:16777692>", params };
+        obj1 = {
+          text,
+          parsedMessage: tmp2,
+          tts: "accessible",
+          source: 21834253042856050000000000000000000000000000000000000000000000000000000000000000000,
+          params,
+        };
         chatInputSendMessage(obj1);
       }
     }

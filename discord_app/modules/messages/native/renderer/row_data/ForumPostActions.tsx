@@ -24,13 +24,7 @@ export const createDefaultReaction = function createDefaultReaction(arg0) {
         if (str2 == null) {
           str2 = "";
         }
-        let obj = {
-          id: emojiId,
-          name: "a",
-          animated: customGuildEmoji.animated,
-          src: "h\u1EB9n h\u00F2",
-          displayName: "n\u1EE5 h\u00F4n",
-        };
+        let obj = { id: emojiId, name: "a", animated: customGuildEmoji.animated, src: 12801, displayName: 12804 };
         obj = { id: emojiId, animated: customGuildEmoji.animated, size: 48 };
         obj.src = emojiId(str2[10]).getEmojiURL(obj);
         const obj6 = emojiId(str2[10]);

@@ -125,10 +125,10 @@ export default noop.memo(function MessagesItemChannelAvatar(channel) {
         isVROnline: stateFromStores4,
         status: true,
         streaming: true,
-        style: "imagebutton",
-        size: null,
-        animate: "Double tap to focus",
-        typing: null,
+        style: "no-hide-descendants",
+        size: "redux.action",
+        animate: null,
+        typing: "info",
         autoStatusCutout: null,
       };
       let tmp12 = null;
@@ -149,10 +149,10 @@ export default noop.memo(function MessagesItemChannelAvatar(channel) {
         isVROnline: stateFromStores4,
         status: true,
         streaming: true,
-        style: "imagebutton",
-        size: null,
-        animate: "Double tap to focus",
-        typing: null,
+        style: "no-hide-descendants",
+        size: "redux.action",
+        animate: null,
+        typing: "info",
         autoStatusCutout: null,
       });
     }

@@ -22,7 +22,7 @@ const fn = function u(get, arg1) {
     obj.runOnUI(fn)(get, arg1);
   }
 };
-let obj = { runOnUI: ReanimatedRexport.runOnUI, updateSharedValueIfChanged: "Array" };
+let obj = { runOnUI: ReanimatedRexport.runOnUI, updateSharedValueIfChanged: "a" };
 fn.__closure = obj;
 fn.__workletHash = 6367316923455;
 fn.__initData = {
@@ -50,7 +50,7 @@ const fn2 = function u(get, arg1) {
     const obj = closure_0(4296);
   }
 };
-obj = { runOnUI: ReanimatedRexport.runOnUI, updateSharedValueArrayIfChanged: "Array" };
+obj = { runOnUI: ReanimatedRexport.runOnUI, updateSharedValueArrayIfChanged: "a" };
 fn2.__closure = obj;
 fn2.__workletHash = 10682766507787;
 fn2.__initData = {

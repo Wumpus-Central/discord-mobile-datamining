@@ -9,7 +9,7 @@ import GuildStore from "../../stores/GuildStore.tsx";
 
 require = fn;
 const NO_WELCOME_SCREEN = fn(12658).NO_WELCOME_SCREEN;
-let closure_8 = { welcomeScreenModalVisible: false, shouldFetchGuildId: "Array" };
+let closure_8 = { welcomeScreenModalVisible: false, shouldFetchGuildId: "PX_16" };
 const size = fn(2);
 const result = size.fileFinishedImporting("utils/native/WelcomeScreenUtils.tsx");
 

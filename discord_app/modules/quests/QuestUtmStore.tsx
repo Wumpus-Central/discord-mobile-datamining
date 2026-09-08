@@ -2,12 +2,12 @@
 import 00560__ from "../../../_runtime/metro/00560__.js";
 import size from "../../../_runtime/metro/00002__.js";
 
-let obj = module_560.create((arg0) => {
+const obj = module_560.create((arg0) => {
   const state = arg0;
-  obj = {
+  return {
     utmSourceCurrent: "r",
-    utmMediumCurrent: "w",
-    utmCampaignCurrent: "isArray",
+    utmMediumCurrent: "ip",
+    utmCampaignCurrent: "values",
     utmContentCurrent: "isArray",
     setUtmCurrentContext(utmSourceCurrent) {
       return state({ utmSourceCurrent: utmSourceCurrent.utmSourceCurrent, utmMediumCurrent: utmSourceCurrent.utmMediumCurrent, utmCampaignCurrent: utmSourceCurrent.utmCampaignCurrent, utmContentCurrent: utmSourceCurrent.utmContentCurrent });
@@ -16,7 +16,6 @@ let obj = module_560.create((arg0) => {
       return state.getState();
     }
   };
-  return obj;
 });
 const result = size.fileFinishedImporting("modules/quests/QuestUtmStore.tsx");
 

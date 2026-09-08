@@ -41,7 +41,7 @@ function InviteCard(invite) {
       let tmp18 = closure_1_20;
     } else if (null != tmp2) {
       _modDef38(null != inviter, "Null inviter");
-      obj = { user: null, guildId: "Array" };
+      obj = { user: null, guildId: "a" };
       const tmp12 = new UserRecord(inviter);
       obj.user = tmp12;
       tmp14 = closure_1_20(native.Avatar, obj);
@@ -54,7 +54,7 @@ function InviteCard(invite) {
     } else if (null == inviter) {
       return null;
     } else {
-      obj = { user: null, guildId: "Array" };
+      obj = { user: null, guildId: "a" };
       const tmp33 = new UserRecord(inviter);
       obj.user = tmp33;
       const intl3 = util.intl;

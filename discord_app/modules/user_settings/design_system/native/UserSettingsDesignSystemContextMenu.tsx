@@ -51,8 +51,8 @@ function DemoContextMenu(align) {
             label: length[index % length.length],
             IconComponent: "a",
             iconSource: length2[index % length2.length],
-            variant: "h\u1EB9n h\u00F2",
-            action: "n\u1EE5 h\u00F4n",
+            variant: 12801,
+            action: 12804,
           };
           let str = "default";
           if (index === closure_0 - 1) {
@@ -75,8 +75,8 @@ function DemoContextMenu(align) {
           label: length[index % length.length],
           IconComponent: "a",
           iconSource: length2[index % length2.length],
-          variant: "h\u1EB9n h\u00F2",
-          action: "n\u1EE5 h\u00F4n",
+          variant: 12801,
+          action: 12804,
         };
         let str = "default";
         if (index === closure_0 - 1) {

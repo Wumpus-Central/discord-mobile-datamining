@@ -151,9 +151,9 @@ export default noop.memo(function GuildsBarCreateJoinButton() {
     styles: obj.useGuildsBarAnimatedWrapperStyles(),
     overState: "y",
     config: memo,
-    label: "header",
+    label: "interactive-text-default",
     expandedChildren: null,
-    children: "guilds-bar-drag-preview",
+    children: "Array",
   };
   const guildsBarAnimatedWrapperStyles = obj.useGuildsBarAnimatedWrapperStyles();
   const intl = tmp2(1114).intl;
@@ -172,9 +172,9 @@ export default noop.memo(function GuildsBarCreateJoinButton() {
     styles: obj.useGuildsBarAnimatedWrapperStyles(),
     overState: "y",
     config: memo,
-    label: "header",
+    label: "interactive-text-default",
     expandedChildren: null,
-    children: "guilds-bar-drag-preview",
+    children: "Array",
   });
   return (
     <View
@@ -184,10 +184,10 @@ export default noop.memo(function GuildsBarCreateJoinButton() {
       styles={obj.useGuildsBarAnimatedWrapperStyles()}
       overState="y"
       config={memo}
-      label="header"
+      label="interactive-text-default"
       expandedChildren={null}
     >
-      {"guilds-bar-drag-preview"}
+      {"Array"}
     </View>
   );
 });

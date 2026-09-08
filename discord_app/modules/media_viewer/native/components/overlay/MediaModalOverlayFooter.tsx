@@ -14,7 +14,7 @@ const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
 fn(4560);
 let createStyles = {
-  drawerContainer: { overflow: "hidden", backgroundColor: "call" },
+  drawerContainer: { overflow: "hidden", backgroundColor: "WireType" },
   drawerHeaderTab: null,
   drawerHeader: null,
   messagePreviewContainer: null,

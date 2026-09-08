@@ -278,7 +278,7 @@ export const optimisticallyMarkGameServerResizing = function optimisticallyMarkG
   const gameServers = OwnedGameServersStore.getGameServers();
   const found = gameServers.find((subscription_id) => subscription_id.subscription_id === closure_0);
   if (null != found) {
-    let obj = { type: "GAME_SERVER_UPDATE", guildId: "Array", gameServer: "METHOD_CALLED_AFTER_TEARDOWN" };
+    let obj = { type: "GAME_SERVER_UPDATE", guildId: "Array", gameServer: "FRAME_SERVICE_FRAME_OPEN_FAILED" };
     obj = {};
     const merged = Object.assign(found);
     obj.status = GameServerStatus.GameServerStatus.STARTING;
@@ -293,7 +293,7 @@ export const updateMyGameServerName = function updateMyGameServerName(arg0, name
   if (null == found) {
     let resolved = Promise.resolve();
   } else {
-    let obj = { type: "GAME_SERVER_UPDATE", guildId: "Array", gameServer: "METHOD_CALLED_AFTER_TEARDOWN" };
+    let obj = { type: "GAME_SERVER_UPDATE", guildId: "Array", gameServer: "FRAME_SERVICE_FRAME_OPEN_FAILED" };
     obj = {};
     const merged = Object.assign(found);
     obj.name = name;
@@ -374,7 +374,7 @@ export const wakeMyGameServer = function wakeMyGameServer(arg0) {
   const gameServers = OwnedGameServersStore.getGameServers();
   const found = gameServers.find((id) => id.id === closure_0);
   if (null != found) {
-    let obj = { type: "GAME_SERVER_UPDATE", guildId: "Array", gameServer: "METHOD_CALLED_AFTER_TEARDOWN" };
+    let obj = { type: "GAME_SERVER_UPDATE", guildId: "Array", gameServer: "FRAME_SERVICE_FRAME_OPEN_FAILED" };
     obj = {};
     let merged = Object.assign(found);
     obj.status = require("GameServerStatus").GameServerStatus.STARTING;

@@ -19,12 +19,12 @@ const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
     dragRegion: require("ReanimatedRexport").makeMutable({ min: 0, max: 0 }),
     gestureState: null,
     dragDropInProgress: null,
-    listInsets: true,
-    scrollPosition: "none",
-    windowSize: null,
+    listInsets: "Success",
+    scrollPosition: "oO.O",
+    windowSize: "success",
     setStateShallow: null,
-    dropStart: null,
-    dropComplete: "bindJoinStream",
+    dropStart: 0,
+    dropComplete: "No Video Devices",
   };
   const obj2 = require("ReanimatedRexport");
   obj.gestureState = require("ReanimatedRexport").makeMutable(obj);

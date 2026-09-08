@@ -1664,7 +1664,7 @@ export default noop.memo(function VoicePanelCard(cleanUp) {
   const obj8 = {
     isRinging: tmp8,
     avatarURI: "r",
-    avatarDecoration: "accessible",
+    avatarDecoration: "isArray",
     layout: layoutTransition,
     layoutPhysics: physics,
   };

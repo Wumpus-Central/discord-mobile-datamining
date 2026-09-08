@@ -445,7 +445,7 @@ export default function GuildSettingsRolesEditConnectionsControls(guild) {
         connectionType,
         connectionMetadataField: "Array",
         applicationId,
-        operator: "end",
+        operator: "loadJsonAsset",
         value: 1090584578,
       };
       items.push(obj);

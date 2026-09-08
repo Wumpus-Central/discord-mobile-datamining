@@ -9,7 +9,7 @@ const Constants = fn(1074);
 ({ EMPTY_STRING_SNOWFLAKE_ID: closure_7, RTCConnectionStates: closure_8 } = Constants);
 const ParticipantTypes = fn(4581).ParticipantTypes;
 let obj = {};
-const merged = Object.assign({ initialized: false, callId: "Array" });
+const merged = Object.assign({ initialized: false, callId: "PX_16" });
 obj = {
   DISCONNECTED: "disconneted",
   DISCONNECTING: "disconnecting",

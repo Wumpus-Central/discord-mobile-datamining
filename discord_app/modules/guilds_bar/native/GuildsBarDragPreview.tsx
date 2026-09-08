@@ -147,7 +147,7 @@ function PreviewItem(dragRegion) {
           id: -1,
           parentId: "PX_16",
           name: "Array",
-          color: "displayName",
+          color: "padding",
           expanded: false,
           children: false,
         };
@@ -430,12 +430,12 @@ export default noop.memo(function GuildsBarDragPreview() {
             overState: null,
             overNode: null,
             dropPosition: "o",
-            gestureState: "text-xxs/semibold",
-            scrollPosition: "text-muted",
-            dragRegion: null,
-            windowSize: "GuildPowerupsManager",
-            dropComplete: "heading-sm/bold",
-            listInsets: "mobile-text-heading-primary",
+            gestureState: "short",
+            scrollPosition: "2-digit",
+            dragRegion: 6,
+            windowSize: 0,
+            dropComplete: 1,
+            listInsets: 2,
           };
           ({ node: obj.draggedNode, itemSize: obj.draggedHeight } = dragSpecs);
           obj.overState = state;

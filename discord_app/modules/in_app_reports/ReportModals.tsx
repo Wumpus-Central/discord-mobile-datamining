@@ -254,7 +254,7 @@ export const showUnauthenticatedReportModalForMessage = function showUnauthentic
   onClose,
 ) {
   let obj = { report_type: MenuTypes.UnauthenticatedReportNames.MESSAGE };
-  const merged = Object.assign({ message_id: "push", channel_id: "channel" });
+  const merged = Object.assign({ message_id: "jsxs", channel_id: "channel" });
   obj.trackWithMetadata(AnalyticEvents.IAR_MODAL_OPEN, obj);
   const tmp = new MessageRecord({});
   obj = { name: MenuTypes.UnauthenticatedReportNames.MESSAGE, record: tmp };

@@ -72,10 +72,10 @@ export default noop.memo(function GuildsBarPendingGuildFolder(id) {
     label: null,
     sharedId: null,
     cutouts: "a",
-    overState: "call",
-    config: "a",
-    externalChildren: "Array",
-    children: "call",
+    overState: "channel",
+    config: false,
+    externalChildren: false,
+    children: false,
   };
   const obj3 = id(4296);
   obj.id = "" + id;
@@ -105,9 +105,9 @@ export default noop.memo(function GuildsBarPendingGuildFolder(id) {
     label: null,
     sharedId: null,
     cutouts: "a",
-    overState: "call",
-    config: "a",
-    externalChildren: "Array",
-    children: "call",
+    overState: "channel",
+    config: false,
+    externalChildren: false,
+    children: false,
   });
 });

@@ -42,6 +42,7 @@ const items = [
   dismissible_content.DismissibleContent.GUILD_POWERUPS_OVERVIEW_SIDEBAR_COACHMARK,
   dismissible_content.DismissibleContent.GUILD_POWERUPS_OVERVIEW_SIDEBAR_VIDEO_CARD,
   dismissible_content.DismissibleContent.GUILD_POWERUP_NEW_PERK_AVAILABLE_BADGE,
+  dismissible_content.DismissibleContent.GUILD_BOOST_TAB_BANNER,
   dismissible_content.DismissibleContent.REPORT_TO_MOD_NEW_TAG,
   dismissible_content.DismissibleContent.VIRTUAL_CURRENCY_MOBILE_ONBOARDING_PILL,
   dismissible_content.DismissibleContent.OVERLAY_OOP_SETTINGS_NUX,

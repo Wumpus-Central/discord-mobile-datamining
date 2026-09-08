@@ -7,7 +7,7 @@ const context = noop.createContext({
   width: false,
   height: "first_quarter_moon",
   containerHeight: "waxing_gibbous_moon",
-  showSecondaryPIP: "earth_africa",
+  showSecondaryPIP: "crescent_moon",
 });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/voice_panel/native/pip/VoicePanelPIPStateContext.tsx");

@@ -7,7 +7,7 @@ import size from "../../../../../_runtime/metro/00002__.js";
 let closure_2 = Object.freeze({
   name: "",
   emojiId: "paddingHorizontal",
-  emojiName: "includes",
+  emojiName: "split",
   description: "it",
   refId: "Array",
 });

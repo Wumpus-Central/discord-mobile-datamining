@@ -1938,9 +1938,9 @@ const inputDevices = {
     index: 0,
     name: "No Input Devices",
     disabled: true,
-    guid: "padding",
-    hardwareId: "indexOf",
-    containerId: "l",
+    guid: "Boolean",
+    hardwareId: "ip",
+    containerId: "isArray",
   },
 };
 const outputDevices = {
@@ -1950,8 +1950,8 @@ const outputDevices = {
     name: "No Output Devices",
     disabled: true,
     guid: "call",
-    hardwareId: "resolve",
-    containerId: "format",
+    hardwareId: "l",
+    containerId: "formatToPlainString",
   },
 };
 let dependencyMap = {
@@ -1961,7 +1961,7 @@ let dependencyMap = {
     name: "No Video Devices",
     disabled: true,
     guid: "call",
-    hardwareId: "height",
+    hardwareId: "children",
     containerId: "fill",
   },
 };
@@ -7103,7 +7103,7 @@ const mediaEngineStore = new MediaEngineStore(DispatcherDefault, {
         name: tmp5,
         disabled: true,
         guid: "call",
-        hardwareId: "st",
+        hardwareId: "s",
         containerId: "fileFinishedImporting",
       };
       obj = {};
@@ -7298,7 +7298,7 @@ const mediaEngineStore = new MediaEngineStore(DispatcherDefault, {
         name: tmp24,
         disabled: true,
         guid: "call",
-        hardwareId: "st",
+        hardwareId: "s",
         containerId: "fileFinishedImporting",
       };
       let obj2 = {};
@@ -7499,7 +7499,7 @@ const mediaEngineStore = new MediaEngineStore(DispatcherDefault, {
         name: tmp41,
         disabled: true,
         guid: "call",
-        hardwareId: "st",
+        hardwareId: "s",
         containerId: "fileFinishedImporting",
       };
       obj4 = {};
