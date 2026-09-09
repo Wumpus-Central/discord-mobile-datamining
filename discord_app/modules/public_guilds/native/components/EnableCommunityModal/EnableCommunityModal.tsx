@@ -28,10 +28,10 @@ const result = size.fileFinishedImporting(
 export default function EnableCommunityModal() {
   const memo = noop.useMemo(() => {
     function headerRight() {
-      const obj = { source: closure_1_1(6992), onPress, accessibilityLabel: null };
+      const obj = { source: closure_1_1(7006), onPress, accessibilityLabel: null };
       const intl = closure_1_0(1114).intl;
       obj.accessibilityLabel = intl.string(closure_1_0(1114).t.cpT0Cq);
-      return closure_1_4(closure_1_0(7377).HeaderActionButton, obj);
+      return closure_1_4(closure_1_0(7391).HeaderActionButton, obj);
     }
     let obj = {
       headerRight,
@@ -40,7 +40,7 @@ export default function EnableCommunityModal() {
         return null;
       },
       render() {
-        return closure_1_4(closure_1_1(17667), {});
+        return closure_1_4(closure_1_1(17700), {});
       },
     };
     obj = {
@@ -49,7 +49,7 @@ export default function EnableCommunityModal() {
         return null;
       },
       render() {
-        return closure_1_4(closure_1_1(17679), {});
+        return closure_1_4(closure_1_1(17712), {});
       },
     };
     obj = {
@@ -58,7 +58,7 @@ export default function EnableCommunityModal() {
         return null;
       },
       render() {
-        return closure_1_4(closure_1_1(17680), {});
+        return closure_1_4(closure_1_1(17713), {});
       },
     };
     return {

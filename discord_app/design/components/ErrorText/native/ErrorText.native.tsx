@@ -11,7 +11,7 @@ const result = size.fileFinishedImporting("design/components/ErrorText/native/Er
 export const ErrorText = function ErrorText(children) {
   children = children.children;
   let nodeText;
-  let obj = nodeText(4264);
+  let obj = nodeText(4277);
   nodeText = obj.getNodeText(children);
   const items = [nodeText];
   const effect = noop.useEffect(() => {
@@ -26,9 +26,9 @@ export const ErrorText = function ErrorText(children) {
   }, items);
   obj = { direction: "horizontal", spacing: 4, align: "flex-start", style: children.style, children: null };
   const items1 = [
-    closure_3(nodeText(6610).CircleErrorIcon, { size: "xs", color: "text-feedback-critical" }),
-    closure_3(nodeText(4556).Text, { variant: "text-xs/medium", color: "text-feedback-critical", children }),
+    closure_3(nodeText(6624).CircleErrorIcon, { size: "xs", color: "text-feedback-critical" }),
+    closure_3(nodeText(4570).Text, { variant: "text-xs/medium", color: "text-feedback-critical", children }),
   ];
   obj.children = items1;
-  return closure_4(nodeText(4973).Stack, obj);
+  return closure_4(nodeText(4987).Stack, obj);
 };

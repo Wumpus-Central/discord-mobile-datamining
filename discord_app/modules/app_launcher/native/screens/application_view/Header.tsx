@@ -24,7 +24,7 @@ const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 const xl = nativeDefault.radii.xl;
 let c11 = 105;
-fn(4560);
+fn(4574);
 const createStyles = {
   headerContainer: { position: "absolute", top: -16, left: 0, right: 0, minHeight: 161 },
   expandedHeaderBanner: { height: 105 },
@@ -106,10 +106,10 @@ export default function Header(application) {
   const tmp3 = closure_12();
   let appLauncherIconSource = null;
   if (null != application) {
-    let tmpResult = tmp(12055);
+    let tmpResult = tmp(12081);
     appLauncherIconSource = tmpResult.getAppLauncherIconSource(application);
   }
-  tmpResult = tmp(4262);
+  tmpResult = tmp(4275);
   let str = tmpResult.useToken(nativeDefault.colors.BACKGROUND_BASE_LOW);
   let tmp7 = appLauncherIconSource;
   if (typeof appLauncherIconSource !== "number") {
@@ -125,7 +125,7 @@ export default function Header(application) {
   const tmp6Result = useAvatarColorDefault(tmp7, str);
   if (null != appLauncherIconSource) {
     obj = { iconSource: appLauncherIconSource, iconBorderRadius: xl, iconSize: 72 };
-    let tmp12 = closure_8(tmp5(12060), obj);
+    let tmp12 = closure_8(tmp5(12086), obj);
     let tmp13 = closure_8;
   } else {
     obj = { style: tmp3.loadingIcon };
@@ -142,13 +142,13 @@ export default function Header(application) {
     obj.transform = items1;
     return obj;
   };
-  const tmpResult1 = application(4296);
-  fn.__closure = { interpolate: application(4296).interpolate, scrollOffsetY, HEADER_SCROLL_RANGE };
+  const tmpResult1 = application(4310);
+  fn.__closure = { interpolate: application(4310).interpolate, scrollOffsetY, HEADER_SCROLL_RANGE };
   fn.__workletHash = 2572905048492;
   fn.__initData = __initData;
   closure_130_0 = scrollOffsetY;
   const animatedStyle = tmpResult1.useAnimatedStyle(fn);
-  let obj1 = { interpolate: application(4296).interpolate, scrollOffsetY, HEADER_SCROLL_RANGE };
+  let obj1 = { interpolate: application(4310).interpolate, scrollOffsetY, HEADER_SCROLL_RANGE };
   const fn2 = function n() {
     let obj = { transform: null };
     obj = { translateY: null };
@@ -159,12 +159,12 @@ export default function Header(application) {
     obj.transform = items2;
     return obj;
   };
-  const tmpResult2 = application(4296);
-  fn2.__closure = { interpolate: application(4296).interpolate, scrollOffsetY, HEADER_SCROLL_RANGE };
+  const tmpResult2 = application(4310);
+  fn2.__closure = { interpolate: application(4310).interpolate, scrollOffsetY, HEADER_SCROLL_RANGE };
   fn2.__workletHash = 8190094903650;
   fn2.__initData = __initData2;
   const animatedStyle1 = tmpResult2.useAnimatedStyle(fn2);
-  const obj2 = { interpolate: application(4296).interpolate, scrollOffsetY, HEADER_SCROLL_RANGE };
+  const obj2 = { interpolate: application(4310).interpolate, scrollOffsetY, HEADER_SCROLL_RANGE };
   const fn3 = function o() {
     let obj = { transform: null, opacity: null };
     obj = { translateY: null };
@@ -176,36 +176,36 @@ export default function Header(application) {
     obj.opacity = ReanimatedRexport.interpolate(application.get(), items2, [0, 1], "clamp");
     return obj;
   };
-  const tmpResult3 = application(4296);
-  fn3.__closure = { interpolate: application(4296).interpolate, scrollOffsetY, HEADER_SCROLL_RANGE };
+  const tmpResult3 = application(4310);
+  fn3.__closure = { interpolate: application(4310).interpolate, scrollOffsetY, HEADER_SCROLL_RANGE };
   fn3.__workletHash = 14190901941859;
   fn3.__initData = __initData3;
   closure_131_0 = scrollOffsetY;
   const animatedStyle2 = tmpResult3.useAnimatedStyle(fn3);
-  let obj3 = { interpolate: application(4296).interpolate, scrollOffsetY, HEADER_SCROLL_RANGE };
+  let obj3 = { interpolate: application(4310).interpolate, scrollOffsetY, HEADER_SCROLL_RANGE };
   const fn4 = function n() {
     const obj = { opacity: null };
     const items = [52.5, c11];
     obj.opacity = ReanimatedRexport.interpolate(application.get(), items, [0, 0.5], "clamp");
     return obj;
   };
-  const tmpResult4 = application(4296);
-  fn4.__closure = { interpolate: application(4296).interpolate, scrollOffsetY, HEADER_SCROLL_RANGE };
+  const tmpResult4 = application(4310);
+  fn4.__closure = { interpolate: application(4310).interpolate, scrollOffsetY, HEADER_SCROLL_RANGE };
   fn4.__workletHash = 9589752719246;
   fn4.__initData = __initData4;
   let str2 = "";
   const animatedStyle3 = tmpResult4.useAnimatedStyle(fn4);
   if (null != application) {
-    str2 = tmp(9294).getSectionName(application);
-    const tmpResult5 = tmp(9294);
+    str2 = tmp(9321).getSectionName(application);
+    const tmpResult5 = tmp(9321);
   }
   let hasApplicationFlagResult = null != application;
   if (hasApplicationFlagResult) {
     hasApplicationFlagResult = "flags" in application;
   }
   if (hasApplicationFlagResult) {
-    hasApplicationFlagResult = tmp(8861).hasApplicationFlag(application, constants2.EMBEDDED);
-    const tmpResult6 = tmp(8861);
+    hasApplicationFlagResult = tmp(8888).hasApplicationFlag(application, constants2.EMBEDDED);
+    const tmpResult6 = tmp(8888);
   }
   dependencyMap = hasApplicationFlagResult;
   id = UserStore.getCurrentUser();
@@ -231,13 +231,13 @@ export default function Header(application) {
     tmp13(AppLauncherBackButtonDefault, { onPress: onPressBack }),
     ,
   ];
-  let obj4 = { interpolate: application(4296).interpolate, scrollOffsetY, HEADER_SCROLL_RANGE };
+  let obj4 = { interpolate: application(4310).interpolate, scrollOffsetY, HEADER_SCROLL_RANGE };
   const obj7 = { style: tmp3.appIconMask, children: tmp12 };
   const tmp23 = id;
   items6[2] = tmp13(ReanimatedRexportDefault.View, {
     style: animatedStyle2,
     pointerEvents: "none",
-    children: tmp13(application(4556).Heading, {
+    children: tmp13(application(4570).Heading, {
       variant: "heading-lg/bold",
       color: "text-overlay-light",
       children: str2,
@@ -254,7 +254,7 @@ export default function Header(application) {
       const obj12 = {
         size: "sm",
         variant: "secondary-overlay",
-        icon: tmp5(4504),
+        icon: tmp5(4518),
         onPress() {
           let obj = { application_id: application.id, source };
           obj.track(constants.APP_LAUNCHER_APPLICATION_LINK_COPIED, obj);
@@ -282,13 +282,13 @@ export default function Header(application) {
       };
       const intl = tmp(1114).intl;
       obj12.accessibilityLabel = intl.string(tmp(1114).t.XWDihq);
-      const items7 = [tmp13(tmp(8097).IconButton, obj12)];
+      const items7 = [tmp13(tmp(8113).IconButton, obj12)];
       const obj13 = { application, onAddAppMenuClick };
-      items7[1] = tmp13(tmp5(12137), obj13);
+      items7[1] = tmp13(tmp5(12163), obj13);
       obj11.children = items7;
       tmp22Result = closure_9(tmp23, obj11);
     }
-    tmpResult7 = tmp(9294);
+    tmpResult7 = tmp(9321);
   }
   items3[2] = tmp22Result;
   obj5.children = items3;

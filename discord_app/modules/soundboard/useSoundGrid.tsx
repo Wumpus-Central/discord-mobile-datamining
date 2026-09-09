@@ -48,7 +48,7 @@ function addTopSoundsSection(items, stateFromStores3, arg2) {
     items.push(obj);
   }
 }
-const SoundboardConstants = fn(5014);
+const SoundboardConstants = fn(5028);
 ({ DEFAULT_SOUND_GUILD_ID: closure_11, EMPTY_SOUND_LIST: closure_12 } = SoundboardConstants);
 const PremiumTypes = fn(1373).PremiumTypes;
 const size = fn(2);

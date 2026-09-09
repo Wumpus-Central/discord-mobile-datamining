@@ -1,7 +1,7 @@
 // discord_app/modules/content_inventory/memberlist/useHeroColors.tsx
 import _modDef672 from "../../../../_runtime/metro/00672__.js";
 import utils_ColorUtils from "../../../../discord_common/js/shared/utils/ColorUtils.tsx";
-import tinycolorDefault from "../../../../_runtime/07552_tinycolor.js";
+import tinycolorDefault from "../../../../_runtime/07566_tinycolor.js";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 import AccessibilityStore from "../../a11y/AccessibilityStore.tsx";
@@ -19,9 +19,9 @@ export default function useHeroColors(pendingAvatarSrc) {
   const items1 = [ThemeStore];
   const stateFromStores1 = first(504).useStateFromStores(items1, () => theme.theme);
   let obj2 = first(504);
-  const fallbackHeroColor = first(8134).getFallbackHeroColor(stateFromStores1, stateFromStores);
-  let obj3 = first(8134);
-  let tmp4 = _slicedToArray(first(8132).useAvatarColors(pendingAvatarSrc, fallbackHeroColor), 2);
+  const fallbackHeroColor = first(8160).getFallbackHeroColor(stateFromStores1, stateFromStores);
+  let obj3 = first(8160);
+  let tmp4 = _slicedToArray(first(8158).useAvatarColors(pendingAvatarSrc, fallbackHeroColor), 2);
   first = tmp4[0];
   closure_1 = tmp6;
   const items2 = [first, tmp4[1]];
@@ -76,13 +76,13 @@ export default function useHeroColors(pendingAvatarSrc) {
   }, items2);
 }
 export const getHeroColors = function getHeroColors(game_name) {
-  let obj = num(8134);
+  let obj = num(8160);
   const fallbackHeroColor = obj.getFallbackHeroColor(ThemeStore.theme, AccessibilityStore.saturation);
   num = 1;
   if (AccessibilityStore.desaturateUserColors) {
     num = AccessibilityStore.saturation;
   }
-  const useColorStore = tmp2(8132).useColorStore;
+  const useColorStore = tmp2(8158).useColorStore;
   const arr = useColorStore.getState().palette[game_name];
   let mapped;
   if (arr != null) {

@@ -8,7 +8,7 @@ import noop from "../../../../_runtime/metro/00019__.js";
 const require = fn;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-fn(4560);
+fn(4574);
 let createStyles = { container: null, title: null, body: null };
 createStyles = { padding: nativeDefault.space.PX_12 };
 createStyles.container = createStyles;
@@ -26,7 +26,7 @@ export default function SuspiciousDownloadActionSheet(href) {
   const items = [tmp.container, { paddingBottom: useSafeAreaInsetsDefault().bottom }];
   obj.style = items;
   obj = { spacing: 8, justify: "center", align: "center", children: null };
-  const items1 = [closure_3(href(5692).TrafficConeSpotIllustration, {}), ,];
+  const items1 = [closure_3(href(5706).TrafficConeSpotIllustration, {}), ,];
   const obj1 = {
     style: tmp.title,
     accessibilityRole: "header",
@@ -36,13 +36,13 @@ export default function SuspiciousDownloadActionSheet(href) {
   };
   const intl = href(1114).intl;
   obj1.children = intl.string(href(1114).t.XtDo9Z);
-  items1[1] = closure_3(href(4556).Text, obj1);
+  items1[1] = closure_3(href(4570).Text, obj1);
   const obj2 = { style: tmp.body, variant: "text-md/medium", children: null };
   const intl2 = href(1114).intl;
   obj2.children = intl2.string(href(1114).t.L9yFko);
-  items1[2] = closure_3(href(4556).Text, obj2);
+  items1[2] = closure_3(href(4570).Text, obj2);
   obj.children = items1;
-  const items2 = [closure_4(href(4973).Stack, obj)];
+  const items2 = [closure_4(href(4987).Stack, obj)];
   const obj3 = { spacing: 8, children: null };
   const obj4 = { text: null, onPress: null };
   const intl3 = href(1114).intl;
@@ -50,7 +50,7 @@ export default function SuspiciousDownloadActionSheet(href) {
   obj4.onPress = function onPress() {
     return ActionSheetActionCreatorsDefault.hideActionSheet();
   };
-  const items3 = [closure_3(href(4975).Button, obj4)];
+  const items3 = [closure_3(href(4989).Button, obj4)];
   const obj5 = { text: null, onPress: null, variant: "secondary" };
   const intl4 = href(1114).intl;
   obj5.text = intl4.string(href(1114).t["/bHu89"]);
@@ -58,10 +58,10 @@ export default function SuspiciousDownloadActionSheet(href) {
     ActionSheetActionCreatorsDefault.hideActionSheet();
     openURLDefault(href, true);
   };
-  items3[1] = closure_3(href(4975).Button, obj5);
+  items3[1] = closure_3(href(4989).Button, obj5);
   obj3.children = items3;
-  items2[1] = closure_4(href(4973).Stack, obj3);
+  items2[1] = closure_4(href(4987).Stack, obj3);
   obj.children = items2;
-  obj.children = closure_4(href(4973).Stack, obj);
-  return closure_3(href(7150).BottomSheet, obj);
+  obj.children = closure_4(href(4987).Stack, obj);
+  return closure_3(href(7164).BottomSheet, obj);
 }

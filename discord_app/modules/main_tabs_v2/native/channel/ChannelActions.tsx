@@ -403,7 +403,7 @@ function WrappedChannelNavButtons(channelId) {
   let obj = channelId(504);
   const items = [ChannelStore];
   const stateFromStores = obj.useStateFromStores(items, () => ChannelStore.getChannel(channelId));
-  channelId(4771);
+  channelId(4785);
   let tmp4 = null;
   if (null != stateFromStores) {
     tmp4 = null;
@@ -419,13 +419,13 @@ function WrappedChannelNavButtons(channelId) {
 }
 const View = fn(17).View;
 const THREADED_CHANNEL_TYPES = fn(1961).THREADED_CHANNEL_TYPES;
-let closure_8 = fn(7876).setIsChannelDetailsSearchActive;
+let closure_8 = fn(7890).setIsChannelDetailsSearchActive;
 const Constants = fn(1074);
 ({ ChannelTypes: closure_9, ChannelTypesSets: c10, ComponentActions: closure_11 } = Constants);
-let closure_12 = fn(7877).SearchEntrypointAnalyticsLocations;
+let closure_12 = fn(7891).SearchEntrypointAnalyticsLocations;
 const jsx = fn(21).jsx;
 const createElement = fn(19).createElement;
-const createStyles = fn(4560);
+const createStyles = fn(4574);
 let closure_15 = createStyles.createStyles({
   actionWrapper: { flexShrink: 0, flexDirection: "row", alignItems: "center" },
 });
@@ -461,11 +461,11 @@ export default function ChannelActions(channelId) {
     return obj;
   });
   ({ isMultiUserDM, isDM } = stateFromStoresObject);
-  let obj1 = channelId(7885);
+  let obj1 = channelId(7899);
   obj = { style: containerStyle, children: null };
   if (obj1.useHasForumSearchQuery(channelId)) {
     obj = { channelId };
-    let tmp4Result = jsx(channelId(13261).ForumChannelCloseSearchButton, { channelId });
+    let tmp4Result = jsx(channelId(13284).ForumChannelCloseSearchButton, { channelId });
   } else {
     if (!isDM) {
       if (!isMultiUserDM) {

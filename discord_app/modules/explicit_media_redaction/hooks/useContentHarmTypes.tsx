@@ -62,10 +62,10 @@ function useEnabledHarmTypesBitmaskForChannelAndAuthorId(channelId, authorId) {
     }
   }, items4);
   if (0 === memo.length) {
-    let NONE = tmp(7295).ContentHarmTypeBitMask.NONE;
+    let NONE = tmp(7309).ContentHarmTypeBitMask.NONE;
   } else {
-    NONE = tmp(7292).contentHarmTypesToFlags(memo);
-    const tmpResult = tmp(7292);
+    NONE = tmp(7306).contentHarmTypesToFlags(memo);
+    const tmpResult = tmp(7306);
   }
   return NONE;
 }

@@ -10,25 +10,24 @@ require = fn;
 const jsx = fn(21).jsx;
 let module_560 = fn(560);
 module_560 = module_560.create(() => ({ controls: "PX_16", paused: true }));
-const createStyles = fn(4560);
+const createStyles = fn(4574);
 let closure_8 = createStyles.createStyles({ slider: { marginBottom: 8 } });
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/media_viewer/native/useVideoControls.tsx");
 
-export default function useVideoControls(arg0, portal, controls) {
-  _require = arg0;
+export default function useVideoControls(index, portal, controls) {
+  _require = index;
   importDefault = controls;
   let obj = require("initialize");
   const items = [useReducedMotion];
   stateFromStores = obj.useStateFromStores(items, () => useReducedMotion.useReducedMotion);
-  const tmp5 = _slicedToArray(state.useState(false), 2);
+  const tmp5 = _slicedToArray(mediaItemHasSpoiler.useState(false), 2);
   _slicedToArray = tmp6;
-  const MediaViewerSourcesStore = require("useMediaViewerSources").MediaViewerSourcesStore;
-  state = MediaViewerSourcesStore.useState((spoilerIndexes) => {
-    spoilerIndexes = spoilerIndexes.spoilerIndexes;
-    return spoilerIndexes.has(closure_0);
-  });
-  const tmp9 = require("usePrevious")(arg0);
+  const obj2 = mediaItemHasSpoiler;
+  const tmp = closure_8();
+  const tmp2 = _require;
+  mediaItemHasSpoiler = require("useMediaItemHasSpoiler").useMediaItemHasSpoiler(index);
+  const tmp9 = require("usePrevious")(index);
   useReducedMotion = tmp9;
   let result = null != controls;
   if (result) {
@@ -41,15 +40,15 @@ export default function useVideoControls(arg0, portal, controls) {
   }
   const tmp11 = require("usePrevious")(videoURI);
   closure_7 = tmp11;
-  const items1 = [controls, videoURI, stateFromStores, tmp11, state, tmp9, arg0];
-  const effect = state.useEffect(() => {
+  const items1 = [controls, videoURI, stateFromStores, tmp11, mediaItemHasSpoiler, tmp9, index];
+  const effect = obj2.useEffect(() => {
     if (closure_5 !== closure_0) {
       if (null != tmp) {
         if (null != videoURI) {
           if (closure_7 !== tmp3) {
             controls.seek(0);
-            let tmp6 = state;
-            if (!state) {
+            let tmp6 = mediaItemHasSpoiler;
+            if (!mediaItemHasSpoiler) {
               tmp6 = stateFromStores;
             }
             controls.pause(tmp6);
@@ -59,13 +58,12 @@ export default function useVideoControls(arg0, portal, controls) {
       }
     }
   }, items1);
-  [][0] = arg0;
+  [][0] = index;
   if (result) {
     obj = { style: tmp.slider, controls, paused: tmp5[0], setPaused: tmp6, onPlayPress: tmp13 };
-    return videoURI(tmp8(tmp3[12]), obj, videoURI);
+    return videoURI(tmp8(tmp3[13]), obj, videoURI);
   }
-  tmp = closure_8();
-  tmp2 = _require;
+  const obj3 = require("useMediaItemHasSpoiler");
 }
 export const useVideoStateStore = module_560;
 export const initVideoStateStore = function initVideoStateStore() {

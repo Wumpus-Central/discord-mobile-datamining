@@ -27,7 +27,7 @@ const View = fn(17).View;
 const ThemeTypes = fn(1074).ThemeTypes;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-fn(4560);
+fn(4574);
 let createStyles = { headerButton: null, disabledOpacity: null, chatIconContainer: null, chatIcon: null, badge: null };
 let size = {
   width: 32,
@@ -39,7 +39,7 @@ let size = {
 };
 createStyles.headerButton = size;
 createStyles.disabledOpacity = { opacity: 0.6 };
-createStyles = { marginRight: 12, height: fn(5682).NAV_BAR_HEIGHT, flexDirection: "row", alignItems: "center" };
+createStyles = { marginRight: 12, height: fn(5696).NAV_BAR_HEIGHT, flexDirection: "row", alignItems: "center" };
 createStyles.chatIconContainer = createStyles;
 createStyles.chatIcon = { marginHorizontal: 0, width: 32, height: 32 };
 createStyles.badge = { backgroundColor: nativeDefault.colors.ICON_STRONG };

@@ -29,15 +29,15 @@ function LeftSlot(state) {
     channel,
     onPress,
     styleButton: "PX_16",
-    shouldShowThread: "bpg",
+    shouldShowThread: 0.787,
   });
   return React5(ReanimatedRexportDefault.View, obj);
 }
 const View = fn(17).View;
-const enterDelayMs = fn(11966).CHAT_INPUT_FLOATING_BOUNCE_ENTER_DELAY_MS;
+const enterDelayMs = fn(11992).CHAT_INPUT_FLOATING_BOUNCE_ENTER_DELAY_MS;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4560);
+const createStyles = fn(4574);
 let closure_9 = createStyles.createStyles(() => {
   let obj = { container: null, leftSlot: null };
   obj = { flexDirection: "row", alignItems: "center", gap: nativeDefault.modules.mobile.CHAT_INPUT_ACTION_BUTTON_GAP };
@@ -50,9 +50,9 @@ const forwardRefResult = noop.forwardRef((channel, arg1) => {
   const onPressAction = channel.onPressAction;
   noop = undefined;
   ({ keyboardType, showKeyboardIcon, shouldShowGiftButton, onPressExpression } = channel);
-  let obj = channel(4262);
+  let obj = channel(4275);
   const token = obj.useToken(onPressAction(576).modules.mobile.CHAT_INPUT_ACTION_BUTTON_SIZE);
-  let obj1 = channel(4262);
+  let obj1 = channel(4275);
   const sum = token + 2 * obj1.useToken(onPressAction(576).modules.mobile.CHAT_INPUT_ACTION_BUTTON_MARGIN);
   dependencyMap = sum;
   const tmp6 = closure_9();
@@ -81,7 +81,7 @@ const forwardRefResult = noop.forwardRef((channel, arg1) => {
       tmp15 = memo;
     }
     obj = { item: tmp15, renderItem: tmp10 };
-    tmp14Result = closure_7(tmp(4271).TransitionItem, obj);
+    tmp14Result = closure_7(tmp(4284).TransitionItem, obj);
   }
   const items1 = [tmp14Result];
   obj1 = {
@@ -89,7 +89,7 @@ const forwardRefResult = noop.forwardRef((channel, arg1) => {
     showKeyboardIcon,
     onPress: onPressExpression,
   };
-  items1[1] = closure_7(onPressAction(12178), obj1);
+  items1[1] = closure_7(onPressAction(12204), obj1);
   obj.children = items1;
   return closure_8(View, obj);
 });

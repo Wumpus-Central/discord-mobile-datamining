@@ -1,5 +1,5 @@
 // discord_app/modules/markup/native/SpoilerIcon.tsx
-import inlineStyles from "../../../../_runtime/08456_inlineStyles.js";
+import inlineStyles from "../../../../_runtime/08484_inlineStyles.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;

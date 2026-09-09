@@ -5,7 +5,7 @@ import SentryInitUtils from "../../../../modules/errors/native/SentryInitUtils.t
 import Link from "../../../../../_runtime/01484_Link.js";
 import NavigatorHeader from "NavigatorHeader.native.tsx";
 import useNavigatorShouldCrossfade from "useNavigatorShouldCrossfade.native.tsx";
-import StackNavigator from "../../../../../_runtime/07002_StackNavigator.js";
+import StackNavigator from "../../../../../_runtime/07016_StackNavigator.js";
 import NavigatorScreen from "NavigatorScreen.native.tsx";
 import useNavigationTheme from "useNavigationTheme.native.tsx";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
@@ -252,7 +252,7 @@ function WrappedNavigationStack(arg0) {
     1,
   )[0];
   let obj1 = useNavigationTheme;
-  navigationTheme = obj1.useNavigationTheme(navigationContainerRef(4495)());
+  navigationTheme = obj1.useNavigationTheme(navigationContainerRef(4509)());
   obj = {
     ref: navigationContainerRef,
     theme: navigationTheme,
@@ -302,7 +302,7 @@ function WrappedNavigationStack(arg0) {
 get_ActivityIndicator = fn(17);
 ({ StyleSheet, View: hasOwnProperty } = get_ActivityIndicator);
 const jsx = fn(21).jsx;
-fn(4560);
+fn(4574);
 let createStyles = { container: null, navbar: null, headerLeftContainerStyle: null, headerRightContainerStyle: null };
 createStyles = {};
 let merged = Object.assign(StyleSheet.absoluteFillObject);

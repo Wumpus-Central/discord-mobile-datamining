@@ -199,8 +199,8 @@ get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, FlatList: metroRequire } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10, Fragment: closure_11 } = jsxProd);
-let closure_12 = apply.throttle(fn(10341).fetchEmoji, 1000);
-fn(4560);
+let closure_12 = apply.throttle(fn(10368).fetchEmoji, 1000);
+fn(4574);
 let obj = {
   loadingContainer: { flex: 1, paddingTop: 40 },
   emptyState: { paddingTop: 30 },

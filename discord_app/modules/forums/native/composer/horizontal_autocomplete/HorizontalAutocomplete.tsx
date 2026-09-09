@@ -8,9 +8,9 @@ import Text_Text from "../../../../../design/components/Text/native/Text.tsx";
 import timing from "../../../../../design/animation/reanimated/timing/timing.tsx";
 import useMountEffectDefault from "../../../../../hooks/useMountEffect.tsx";
 import FastImageDefault from "../../../../../components_native/common/FastImage.tsx";
-import guild_boosting_RoleIconUtils from "../../../../guild_boosting/RoleIconUtils.tsx";
+import RoleIconUtils from "../../../../guild_boosting/RoleIconUtils.tsx";
 import RoleIconDefault from "../../../../roles/native/RoleIcon.tsx";
-import _modDef8124 from "../../../../../../_runtime/metro/08124__.js";
+import _modDef8150 from "../../../../../../_runtime/metro/08150__.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 import AccessibilityStore from "../../../../a11y/AccessibilityStore.tsx";
 import GuildRoleStore from "../../../../../stores/GuildRoleStore.tsx";
@@ -23,7 +23,7 @@ require = fn;
 function HorizontalAutocompleteOption(arg0) {
   let sharedValue;
   ({ children, onPress } = arg0);
-  let obj = sharedValue(4296);
+  let obj = sharedValue(4310);
   sharedValue = obj.useSharedValue(0);
   useMountEffectDefault(() => {
     const result = sharedValue.set(timing.withTiming(1));
@@ -36,7 +36,7 @@ function HorizontalAutocompleteOption(arg0) {
   fn.__workletHash = 14159604656069;
   fn.__initData = __initData;
   obj = { onPress, children: null };
-  const animatedStyle = sharedValue(4296).useAnimatedStyle(fn);
+  const animatedStyle = sharedValue(4310).useAnimatedStyle(fn);
   obj = { style: null, children };
   const items = [tmp.horizontalAutocompleteOption, animatedStyle];
   obj.style = items;
@@ -49,7 +49,7 @@ const Constants = fn(1074);
 ({ ChannelTypes: c10, Fonts } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
-fn(4560);
+fn(4574);
 let createStyles = {
   emoji: { width: 32, height: 32 },
   emojiImage: { resizeMode: "contain" },
@@ -125,32 +125,26 @@ export default {
     const stateFromStores = obj.useStateFromStores(items, () => GuildRoleStore.getRole(require, importDefault));
     let roleIconData = null;
     if (null != stateFromStores) {
-      roleIconData = guild_boosting_RoleIconUtils.getRoleIconData(stateFromStores, 30);
-      const tmp2Result = guild_boosting_RoleIconUtils;
+      roleIconData = RoleIconUtils.getRoleIconData(stateFromStores, 30);
+      const tmp2Result = RoleIconUtils;
     }
     obj = { onPress: onPress.onPress, children: null };
-    let tmp9Result = null;
+    let tmp8 = null;
     if (null != roleIconData) {
       obj = { style: tmp.roleIcon, children: null };
-      const obj1 = { name, source: null, unicodeEmoji: null, size: 24 };
-      let tmp13;
-      if (null != roleIconData.customIconSrc) {
-        const obj2 = { uri: roleIconData.customIconSrc };
-        tmp13 = obj2;
-      }
-      obj1.source = tmp13;
-      obj1.unicodeEmoji = roleIconData.unicodeEmoji;
+      const obj1 = { name, src: null, unicodeEmoji: null, size: 24 };
+      ({ customIconSrc: obj5.src, unicodeEmoji: obj5.unicodeEmoji } = roleIconData);
       obj.children = closure_11(RoleIconDefault, obj1);
-      tmp9Result = closure_11(closure_4, obj);
+      tmp8 = closure_11(closure_4, obj);
     }
-    const items1 = [tmp9Result];
+    const items1 = [tmp8];
     const items2 = [tmp.nickname];
-    let tmp15;
+    let tmp13;
     if (null != colorString) {
-      const obj3 = { color: colorString };
-      tmp15 = obj3;
+      const obj2 = { color: colorString };
+      tmp13 = obj2;
     }
-    items2[1] = tmp15;
+    items2[1] = tmp13;
     items1[1] = closure_11(native.LegacyText, { style: items2, children: "@" + name });
     obj.children = items1;
     return closure_12(HorizontalAutocompleteOption, obj);
@@ -160,18 +154,18 @@ export default {
     channel(504);
     [][0] = channel;
     if (channel.type === constants.GUILD_CATEGORY) {
-      let channelIconWithGuild = _modDef8124;
+      let channelIconWithGuild = _modDef8150;
     } else {
-      let tmp2Result = tmp2(5028);
+      let tmp2Result = tmp2(5042);
       channelIconWithGuild = tmp2Result.getChannelIconWithGuild(channel, tmp5);
     }
     const tmp = closure_13();
-    tmp2Result = tmp2(4713);
+    tmp2Result = tmp2(4727);
     let obj = { onPress: channel.onPress, children: null };
     const items = [closure_11(channel(1178).Icon, { source: channelIconWithGuild })];
     const channelName = tmp2Result.computeChannelName(channel, UserStore, RelationshipStore);
     obj = { style: tmp.channelName, variant: "text-sm/semibold", children: channelName };
-    items[1] = closure_11(channel(4556).Text, obj);
+    items[1] = closure_11(channel(4570).Text, obj);
     obj.children = items;
     return closure_12(HorizontalAutocompleteOption, obj);
   },

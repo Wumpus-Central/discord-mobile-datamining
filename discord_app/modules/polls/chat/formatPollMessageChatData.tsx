@@ -5,7 +5,7 @@ import CommunicationDisabledUtils from "../../guild_communication_disabled/Commu
 import AutomodPermissionUtils from "../../guild_automod/AutomodPermissionUtils.tsx";
 import UnicodeEmojisDefault from "../../emojis/UnicodeEmojis.tsx";
 import EmojiUtilsDefault from "../../../utils/EmojiUtils.tsx";
-import _mod4745 from "module_4745" /* 4745 */;
+import _mod4759 from "module_4759" /* 4759 */;
 import useFormattedExpirationLabel from "useFormattedExpirationLabel.tsx";
 import PollLayoutTypes from "../../../../discord_common/js/shared/shared-constants/PollLayoutTypes.tsx";
 import AccessibilityStore from "../../a11y/AccessibilityStore.tsx";
@@ -179,7 +179,7 @@ function computeBasicPollChatData(message, arg1) {
     return obj;
   }
 }
-const getPollState = fn(11432).getPollState;
+const getPollState = fn(11459).getPollState;
 const Constants = fn(1074);
 const MessageStates = Constants.MessageStates;
 let pollMedia = {
@@ -307,7 +307,7 @@ export default function formatPollMessageChatData(poll, arg1) {
           }
           pollMedia = { didSelfVote: tmp6, hasVoted, isExpired, isSelected: hasItem, isLeader: tmp4, showResults };
           let tmp7 = isExpired;
-          const match = _mod4745.match(pollMedia);
+          const match = _mod4759.match(pollMedia);
           const withResult = match.with({ isExpired: true, isLeader: true, didSelfVote: true }, () => "victorSelected");
           const withResult1 = match
             .with({ isExpired: true, isLeader: true, didSelfVote: true }, () => "victorSelected")
@@ -392,7 +392,7 @@ export default function formatPollMessageChatData(poll, arg1) {
             pollMedia.shouldAnimateTransition = tmp20;
             const _Math = Math;
             pollMedia.votesPercentage = Math.round(100 * num2);
-            const match1 = _mod4745.match(layout_type);
+            const match1 = _mod4759.match(layout_type);
             pollMedia.votes = match1
               .with(PollLayoutTypes.PollLayoutTypes.IMAGE_ONLY_ANSWERS, () => "(" + num.toLocaleString() + ")")
               .otherwise(() => {

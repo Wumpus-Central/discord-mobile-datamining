@@ -67,7 +67,7 @@ function BaseBadge(accessibilityLabel) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7, Fragment: closure_8 } = jsxProd);
-fn(4560);
+fn(4574);
 let createStyles = { icon: { width: 16, height: 16 }, badgeContainer: null, text: null };
 createStyles = {
   display: "flex",

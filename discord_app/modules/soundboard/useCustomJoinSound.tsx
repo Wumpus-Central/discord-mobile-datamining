@@ -2,7 +2,7 @@
 import UserSettingsProtoStore from "../user_settings/UserSettingsProtoStore.tsx";
 
 const require = fn;
-let closure_3 = fn(5014).CUSTOM_CALL_SOUND_GLOBAL_GUILD_ID;
+let closure_3 = fn(5028).CUSTOM_CALL_SOUND_GLOBAL_GUILD_ID;
 const CustomSoundType = { GLOBAL: 0, [0]: "GLOBAL", GUILD: 1, [1]: "GUILD" };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/soundboard/useCustomJoinSound.tsx");

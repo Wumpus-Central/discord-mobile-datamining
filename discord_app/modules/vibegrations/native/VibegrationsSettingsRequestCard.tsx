@@ -12,7 +12,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-fn(4560);
+fn(4574);
 let createStyles = { card: null, chips: null, chip: null };
 createStyles = {
   backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE,
@@ -62,14 +62,14 @@ export default function VibegrationsSettingsRequestCard(projectId) {
   obj = { style: tmp.card, children: null };
   const callback = noop.useCallback(() => {
     let obj = { content: null, key: VibegrationsSettingsSheet.VIBEGRATIONS_SETTINGS_SHEET_KEY };
-    obj = { projectId, scopeKeys: request.keys, note: request.note, notifyAgent: true };
+    obj = { projectId, scopeKeys: request.keys, note: request.note, notifyAgent: true, isPreview: true };
     obj.content = timestampProducer(VibegrationsSettingsSheetDefault, obj);
     obj.showActionSheet(obj);
   }, items1);
   obj = { variant: "text-xs/semibold", color: "text-muted", children: null };
   const intl = tmp2(1114).intl;
-  obj.children = intl.string(request(3547).wgDhiQ);
-  const items2 = [closure_6(projectId(4556).Text, obj), , ,];
+  obj.children = intl.string(request(3560).wgDhiQ);
+  const items2 = [closure_6(projectId(4570).Text, obj), , ,];
   if (null != request.note) {
     if ("" !== request.note) {
       let note = request.note;
@@ -92,11 +92,11 @@ export default function VibegrationsSettingsRequestCard(projectId) {
     items2[2] = tmp7Result;
     const obj3 = { variant: "secondary", size: "sm", onPress: callback, text: null };
     const intl3 = tmp2(1114).intl;
-    obj3.text = intl3.string(tmp8(3547)["KO2xN+"]);
-    items2[3] = closure_6(tmp2(4975).Button, obj3);
+    obj3.text = intl3.string(tmp8(3560)["KO2xN+"]);
+    items2[3] = closure_6(tmp2(4989).Button, obj3);
     obj.children = items2;
     return closure_7(View, obj);
   }
   const intl2 = tmp2(1114).intl;
-  note = intl2.string(tmp8(3547)["V+DBhs"]);
+  note = intl2.string(tmp8(3560)["V+DBhs"]);
 }

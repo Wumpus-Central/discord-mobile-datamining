@@ -5,7 +5,7 @@ import util from "../../../../intl/index.native.tsx";
 import native from "../../../../design/void/native.tsx";
 import ColorUtils from "../../../../utils/ColorUtils.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
-import LinearGradientDefault from "../../../../../_runtime/04987_LinearGradient.js";
+import LinearGradientDefault from "../../../../../_runtime/05001_LinearGradient.js";
 import ColorConstants from "../../../colors/native/ColorConstants.tsx";
 import PremiumGroupWordmarkDefault from "PremiumGroupWordmark.tsx";
 import usePremiumGroupFeaturesTableCardTextDefault from "../hooks/usePremiumGroupFeaturesTableCardText.tsx";

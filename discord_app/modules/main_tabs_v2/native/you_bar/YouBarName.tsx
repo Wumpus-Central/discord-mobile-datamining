@@ -53,7 +53,7 @@ const View = fn(17).View;
 const ActivityTypes = fn(1074).ActivityTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1, Fragment: closure_14 } = jsxProd);
-const createStyles = fn(4560);
+const createStyles = fn(4574);
 let obj = {
   userText: { flexDirection: "column", justifyContent: "center", height: "100%", gap: 1 },
   statusRow: null,

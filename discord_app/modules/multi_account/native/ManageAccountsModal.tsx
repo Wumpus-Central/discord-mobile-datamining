@@ -63,7 +63,7 @@ function RemoveMultiAccountUserButton(user) {
             obj1.cancelText = intl4.string(tmp2(1114).t["ETE/oC"]);
             v1 = 1;
             v3 = 1;
-            const obj3 = { value: v1(4905).confirm(obj1), done: false };
+            const obj3 = { value: v1(4919).confirm(obj1), done: false };
             return obj3;
           }
         } else if (arg0 === 1) {
@@ -75,7 +75,7 @@ function RemoveMultiAccountUserButton(user) {
           return obj4;
         } else {
           if (value) {
-            obj = v3(12421);
+            obj = v3(12447);
             obj.removeAccount(closure_128_0.id);
           }
           v3 = 3;
@@ -122,8 +122,8 @@ function RemoveMultiAccountUserButton(user) {
       return applyArgumentsResult;
     };
     obj = { color: nativeDefault.colors.ICON_FEEDBACK_CRITICAL };
-    obj.children = closure_18(tmp(15315).CircleMinusIcon, obj);
-    return closure_18(tmp(5123).PressableOpacity, obj);
+    obj.children = closure_18(tmp(15344).CircleMinusIcon, obj);
+    return closure_18(tmp(5137).PressableOpacity, obj);
   }
   let obj2 = user(504);
 }
@@ -289,21 +289,21 @@ function ManageAccounts(isEditing) {
   return closure_18(isEditing(multiAccountUsers[27]).SafeAreaPaddingView, obj);
 }
 const View = fn(17).View;
-const MultiAccountTokenStatus = fn(12417).MultiAccountTokenStatus;
-let Constants = fn(12418);
+const MultiAccountTokenStatus = fn(12443).MultiAccountTokenStatus;
+let Constants = fn(12444);
 ({
   MANAGE_EDIT_TRANSITION_DURATION: closure_12,
   MAX_ACCOUNTS: map1,
   MultiAccountSwitchLocation: closure_14,
 } = Constants);
-const ManageAccountsScreens = fn(16379).ManageAccountsScreens;
+const ManageAccountsScreens = fn(16410).ManageAccountsScreens;
 Constants = fn(1074);
 ({ AnalyticEvents: closure_16, AuthStates: closure_17 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_18, jsxs: closure_19 } = jsxProd);
-let NativeStackNavigator = fn(7913);
+let NativeStackNavigator = fn(7927);
 let closure_20 = NativeStackNavigator.createNativeStackNavigator();
-fn(4560);
+fn(4574);
 let obj = {
   container: null,
   sortableListView: null,
@@ -393,14 +393,14 @@ export default noop.memo(function ManageAccountsModal(initialRouteName) {
         return obj;
       },
       children() {
-        return closure_1_18(isEditing(15980), {
+        return closure_1_18(isEditing(16010), {
           handleLogin(login, password, undelete) {
-            isEditing(6593);
+            isEditing(6607);
             const obj = { login, password, undelete };
             obj.login(obj);
           },
           onReset() {
-            isEditing(6593).loginReset(true);
+            isEditing(6607).loginReset(true);
           },
         });
       },
@@ -411,7 +411,7 @@ export default noop.memo(function ManageAccountsModal(initialRouteName) {
         return { headerShown: false };
       },
       children() {
-        return closure_1_18(isEditing(6942), { isMultiAccount: true });
+        return closure_1_18(isEditing(6956), { isMultiAccount: true });
       },
     }),
     closure_18(closure_20.Screen, {
@@ -420,7 +420,7 @@ export default noop.memo(function ManageAccountsModal(initialRouteName) {
         return { headerShown: false };
       },
       children() {
-        return closure_1_18(isEditing(15979), { isMultiAccount: true });
+        return closure_1_18(isEditing(16009), { isMultiAccount: true });
       },
     }),
   ];

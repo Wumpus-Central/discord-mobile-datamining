@@ -11,7 +11,7 @@ import UserStore from "../stores/UserStore.tsx";
 import VoiceStateStore from "../stores/VoiceStateStore.tsx";
 
 require = fn;
-const STAGE_BOOSTING_SHEET_KEY = fn(5414).STAGE_BOOSTING_SHEET_KEY;
+const STAGE_BOOSTING_SHEET_KEY = fn(5428).STAGE_BOOSTING_SHEET_KEY;
 const size = fn(2);
 const result = size.fileFinishedImporting("actions/SelectedChannelActionCreatorsAdditional.native.tsx");
 

@@ -1,5 +1,6 @@
 // discord_app/modules/launchpad/native/shared/renderChannelItem.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import util from "../../../../intl/index.native.tsx";
 import useChannelName from "../../../channel/useChannelName.tsx";
 import GuildIconDefault from "../../../guild/native/GuildIcon.tsx";
 import NotificationCenterUtils from "../../../notification_center/NotificationCenterUtils.tsx";
@@ -29,16 +30,16 @@ function LaunchpadChannelIcon(channel) {
   });
   const items1 = [
     closure_8(View, obj),
-    closure_8(channel(12195).ChannelIcon, { channel, size: "sm", wrapperSize: 32 }),
+    closure_8(channel(12221).ChannelIcon, { channel, size: "sm", wrapperSize: 32 }),
   ];
   obj.children = items1;
   return closure_10(closure_9, obj);
 }
 const View = fn(17).View;
-const UnreadSetting = fn(4742).UnreadSetting;
+const UnreadSetting = fn(4756).UnreadSetting;
 const jsxProd = fn(21);
 ({ jsx: closure_8, Fragment: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(4560);
+const createStyles = fn(4574);
 let closure_11 = createStyles.createStyles(() => {
   const obj = { guildBadgeIcon: null };
   const rect = {
@@ -147,9 +148,9 @@ export default function renderChannelItem(unread) {
   children[3] = tmp11Result;
   return tmp8(closure_1_10(React7, { children }), { fontScale });
 }
-export const getChannelAccessibilityProps = function getChannelAccessibilityProps(arg0) {
-  ({ channel, unread, mentionCount, voiceStates, embeddedActivitiesCount } = arg0);
-  return {
+export const getChannelAccessibilityProps = function getChannelAccessibilityProps(channel) {
+  channel = channel.channel;
+  const obj = {
     accessible: true,
     accessibilityRole: "button",
     accessibilityLabel: getChannelA11yLabelDefault({
@@ -159,5 +160,13 @@ export const getChannelAccessibilityProps = function getChannelAccessibilityProp
       voiceStates,
       embeddedActivitiesCount,
     }),
+    accessibilityHint: null,
   };
+  ({ unread, mentionCount, voiceStates, embeddedActivitiesCount } = channel);
+  if (channel.isGuildVoice()) {
+    const intl = util.intl;
+    const stringResult = intl.string(util.t["9C444m"]);
+  }
+  obj.accessibilityHint = stringResult;
+  return obj;
 };

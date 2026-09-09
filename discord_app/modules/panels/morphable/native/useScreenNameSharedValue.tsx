@@ -7,8 +7,8 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/panels/morphable/native/useScreenNameSharedValue.tsx");
 
 export default function useScreenNameSharedValue() {
-  let rootNavigationRef = sharedValue(4418).getRootNavigationRef();
-  let obj = sharedValue(4418);
+  let rootNavigationRef = sharedValue(4432).getRootNavigationRef();
+  let obj = sharedValue(4432);
   let isReadyResult;
   if (rootNavigationRef != null) {
     isReadyResult = rootNavigationRef.isReady();
@@ -26,7 +26,7 @@ export default function useScreenNameSharedValue() {
   } else {
     tmp2 = unknown;
   }
-  sharedValue = sharedValue(4296).useSharedValue(tmp2);
+  sharedValue = sharedValue(4310).useSharedValue(tmp2);
   const items = [sharedValue];
   const effect = noop.useEffect(() => {
     function handleStateChange() {

@@ -82,7 +82,7 @@ class BugCreateScreen {
               closure_128_1 = undefined;
               closure_128_2 = undefined;
               closure_128_3 = undefined;
-              let obj1 = tmp5(5150);
+              let obj1 = tmp5(5164);
               dependencyMap = 1;
               c3 = 1;
               obj1 = { value: null, done: false };
@@ -105,10 +105,10 @@ class BugCreateScreen {
               const merged = Object.assign(closure_128_1);
               obj2.uri = closure_128_1.uri;
               obj2.originalUri = closure_128_1.uri;
-              obj2.platform = tmp2(5128).UploadPlatform.REACT_NATIVE;
+              obj2.platform = tmp2(5142).UploadPlatform.REACT_NATIVE;
               obj2.filename = closure_128_1.fileName;
               closure_128_2 = obj2;
-              const tmp34 = new tmp5(5128)(closure_128_2);
+              const tmp34 = new tmp5(5142)(closure_128_2);
               closure_128_3 = tmp34;
               closure_129_23.current = closure_129_7.length;
               closure_129_8((arg0) => {
@@ -321,10 +321,10 @@ class BugCreateScreen {
                             if (closure_131_5 >= 20) {
                               if (closure_131_4) {
                                 closure_131_3.succeed();
-                                let obj5 = closure_2_1(4259);
+                                let obj5 = closure_2_1(4272);
                                 const obj1 = {
                                   key: "BUG_REPORT_BUG_SUBMITTED",
-                                  icon: closure_2_1(9571),
+                                  icon: closure_2_1(9598),
                                   content: null,
                                   toastDurationMs: null,
                                 };
@@ -333,10 +333,10 @@ class BugCreateScreen {
                                 obj1.toastDurationMs = toastDurationMs;
                                 obj5.open(obj1);
                               } else {
-                                let obj3 = closure_2_1(4259);
+                                let obj3 = closure_2_1(4272);
                                 const obj2 = {
                                   key: "BUG_REPORT_FAILED_TO_SUBMIT",
-                                  icon: closure_2_1(6992),
+                                  icon: closure_2_1(7006),
                                   content: null,
                                 };
                                 const intl = closure_2_0(1114).intl;
@@ -387,7 +387,7 @@ class BugCreateScreen {
                         c5 = 1;
                         c6 = 1;
                         obj5 = {
-                          value: closure_2_0(10192).submitReport(closure_131_0, closure_131_1, closure_131_2),
+                          value: closure_2_0(10219).submitReport(closure_131_0, closure_131_1, closure_131_2),
                           done: false,
                         };
                         return obj5;
@@ -410,24 +410,24 @@ class BugCreateScreen {
                   if (first5) {
                     let obj1 = {
                       key: "BUG_REPORT_SUBMITTING_BUG",
-                      icon: screenshot(6992),
+                      icon: screenshot(7006),
                       content: null,
                       toastDurationMs: null,
                     };
                     let intl2 = handleSubmit(1114).intl;
                     obj1.content = intl2.string(handleSubmit(1114).t.Uuqbcm);
                     obj1.toastDurationMs = toastDurationMs;
-                    screenshot(4259).open(obj1);
+                    screenshot(4272).open(obj1);
                     closure_1_16(true);
                     first8();
-                    const obj9 = screenshot(4259);
+                    const obj9 = screenshot(4272);
                   }
                   priority = 3;
                 } else {
                   callback(true);
                   if (null == priority) {
-                    let obj5 = screenshot(4259);
-                    let obj2 = { key: "BUG_REPORT_FAILED_TO_SUBMIT", icon: screenshot(6992), content: null };
+                    let obj5 = screenshot(4272);
+                    let obj2 = { key: "BUG_REPORT_FAILED_TO_SUBMIT", icon: screenshot(7006), content: null };
                     let intl = handleSubmit(1114).intl;
                     obj2.content = intl.string(handleSubmit(1114).t["4t1o0u"]);
                     obj5.open(obj2);
@@ -436,7 +436,7 @@ class BugCreateScreen {
                     let obj3 = { value: undefined, done: true };
                     return obj3;
                   } else {
-                    obj3 = handleSubmit(10191);
+                    obj3 = handleSubmit(10218);
                     description = 1;
                     priority = 1;
                     let obj4 = { value: obj3.getAttachments(first3), done: false };
@@ -799,7 +799,7 @@ class BugCreateScreen {
       obj15.disabled = null == first7;
       obj15.onPress = function onPress() {
         const obj = { features: null != first7 ? first7.features : [], feature: first8, setFeature };
-        return obj.openLazy(asyncRequireImpl(10216, dependencyMap.paths), "BugReporterFeatureActionSheet", obj);
+        return obj.openLazy(asyncRequireImpl(10243, dependencyMap.paths), "BugReporterFeatureActionSheet", obj);
       };
       if (null != first8) {
         name = first8.name;
@@ -820,7 +820,7 @@ get_ActivityIndicator = fn(17);
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11, Fragment: closure_12 } = jsxProd);
 let closure_13 = Object.freeze({ id: "749049128012742676", format_type: 3, name: "Wumpus zipping by on a monowheel" });
-fn(4560);
+fn(4574);
 const createStyles = {
   container: { padding: 16 },
   attachmentCarousel: { justifyContent: "center", minWidth: "100%" },
@@ -885,6 +885,6 @@ export default function BugReportModal(screenshotUri) {
     obj.BUG_REPORT_CREATE = obj;
     return obj;
   }, items);
-  return closure_10(screenshotUri(7000).Navigator, { screens, initialRouteName: "BUG_REPORT_CREATE" });
+  return closure_10(screenshotUri(7014).Navigator, { screens, initialRouteName: "BUG_REPORT_CREATE" });
 }
 export { BugCreateScreen };

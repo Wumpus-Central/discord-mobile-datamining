@@ -10,8 +10,8 @@ import FastImageDefault from "../../../components_native/common/FastImage.tsx";
 import APNGDecorationNativeComponentDefault from "../../../../discord_common/js/packages/rtn-codegen/js/APNGDecorationNativeComponent.tsx";
 import PromoSheet from "../../../design/components/Sheet/native/PromoSheet.native.tsx";
 import WindowLaunchIcon from "../../../design/components/Icon/native/redesign/generated/WindowLaunchIcon.tsx";
-import _modDef15835 from "../../../../discord_assets/assets/orbs/orb_coachmark_asset_2x.png.js";
-import _modDef15836 from "../../../../discord_assets/assets/orbs/orb_coachmark_asset_2x_animated.png.js";
+import _modDef15865 from "../../../../discord_assets/assets/orbs/orb_coachmark_asset_2x.png.js";
+import _modDef15866 from "../../../../discord_assets/assets/orbs/orb_coachmark_asset_2x_animated.png.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 import AccessibilityStore from "../../a11y/AccessibilityStore.tsx";
 
@@ -30,18 +30,18 @@ export default function IncentivizedAccountLinkConfirmationBottomSheet() {
   const items = [AccessibilityStore];
   if (obj.useStateFromStores(items, () => useReducedMotion.useReducedMotion)) {
     obj = { source: null, style: null };
-    obj = { uri: _modDef15835 };
+    obj = { uri: _modDef15865 };
     obj.source = obj;
     const size = { width: v150, height: v150 };
     obj.style = size;
-    let tmp3Result = <Image uri={_modDef15835} />;
+    let tmp3Result = <Image uri={_modDef15865} />;
     let tmp8 = importDefault;
     let tmp9 = jsx;
   } else {
     if (tmpResult.isAndroid()) {
       const obj1 = { url: null, style: null };
       let tmp4Result = APNGDecorationNativeComponentDefault;
-      obj1.url = _modDef15836;
+      obj1.url = _modDef15866;
       const size1 = { width: v150, height: v150 };
       obj1.style = size1;
       tmp3Result = <tmp4Result url={null} style={null} />;
@@ -51,7 +51,7 @@ export default function IncentivizedAccountLinkConfirmationBottomSheet() {
       let obj2 = { source: null, resizeMode: "contain", style: null };
       const obj3 = { uri: null };
       tmp4Result = FastImageDefault;
-      obj3.uri = _modDef15836;
+      obj3.uri = _modDef15866;
       obj2.source = obj3;
       const size2 = { width: v150, height: v150 };
       obj2.style = size2;
@@ -73,9 +73,9 @@ export default function IncentivizedAccountLinkConfirmationBottomSheet() {
   const obj5 = { size: "sm", color: tmp8(576).colors.WHITE };
   const obj6 = { title: null, description: null, actions: null, illustration: null, onDismiss: null };
   const intl2 = util.intl;
-  obj6.title = intl2.string(tmp8(3127).ublzTG);
+  obj6.title = intl2.string(tmp8(3138).ublzTG);
   const intl3 = util.intl;
-  obj6.description = intl3.string(tmp8(3127).JgM2xu);
+  obj6.description = intl3.string(tmp8(3138).JgM2xu);
   obj6.actions = tmp9(components_Button_Button.Button, obj4);
   obj6.illustration = tmp3Result;
   obj6.onDismiss = function onDismiss() {

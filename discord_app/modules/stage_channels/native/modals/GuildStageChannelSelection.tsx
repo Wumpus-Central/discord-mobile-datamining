@@ -10,7 +10,7 @@ import UserStore from "../../../../stores/UserStore.tsx";
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(4560);
+const createStyles = fn(4574);
 let closure_7 = createStyles.createStyles({ channelText: { marginTop: 8, flexDirection: "row" } });
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/stage_channels/native/modals/GuildStageChannelSelection.tsx");
@@ -47,7 +47,7 @@ export default function GuildStageChannelSelection(channel) {
       id = channel.id;
     }
     obj.selectedItem = id;
-    obj2.openLazy(asyncRequireImpl(9431, dependencyMap.paths), "SelectUpdatesChannel", obj);
+    obj2.openLazy(asyncRequireImpl(9458, dependencyMap.paths), "SelectUpdatesChannel", obj);
   }
   function renderChannelHook(children, key) {
     return jsx(

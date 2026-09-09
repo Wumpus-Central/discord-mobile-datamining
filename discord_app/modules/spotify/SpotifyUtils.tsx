@@ -108,7 +108,7 @@ let closure_13 = async function _getSpotifyMetadataFromActivity(arg0) {
     }
   }
 };
-const SpotifyConstants = fn(8340);
+const SpotifyConstants = fn(8368);
 ({
   SPOTIFY_APP_PROTOCOL: closure_7,
   SpotifyResourceTypes: closure_8,
@@ -136,7 +136,7 @@ export const ensureSpotifyPlayable = function ensureSpotifyPlayable() {
     if (RunningGameStore.isObservedAppRunning(obj2.get(PlatformTypes.SPOTIFY).name)) {
       if (playableComputerDevices.length > 0) {
         ({ socket, device } = playableComputerDevices[0]);
-        playableComputerDevices(11756).setActiveDevice(socket.accountId, device.id);
+        playableComputerDevices(11782).setActiveDevice(socket.accountId, device.id);
         obj = { socket, device };
         return Promise.resolve(obj);
       }

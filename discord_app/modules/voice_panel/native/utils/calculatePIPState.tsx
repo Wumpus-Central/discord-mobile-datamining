@@ -5,8 +5,8 @@ import ChannelRTCStore from "../../../calls/ChannelRTCStore.tsx";
 import ApplicationStreamingStore from "../../../../stores/ApplicationStreamingStore.tsx";
 
 require = fn;
-const VoicePanelModes = fn(12277).VoicePanelModes;
-const ParticipantTypes = fn(4581).ParticipantTypes;
+const VoicePanelModes = fn(12303).VoicePanelModes;
+const ParticipantTypes = fn(4595).ParticipantTypes;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/voice_panel/native/utils/calculatePIPState.tsx");
 

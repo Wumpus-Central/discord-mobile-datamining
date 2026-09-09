@@ -17,9 +17,9 @@ export default function usePIPAvoidanceSpecs(safeArea) {
   _require = safeArea;
   let obj = require("ReanimatedRexport");
   const sharedValue = obj.useSharedValue({ top: 0, bottom: 0 });
-  const tmp2 = sharedValue(16692)();
+  const tmp2 = sharedValue(16729)();
   dependencyMap = tmp2;
-  const tmp3 = sharedValue(17014)();
+  const tmp3 = sharedValue(17045)();
   __initData = tmp3;
   const fn = function n() {
     return { keyboardHeight: closure_2.get(), safeAreaBottom: safeArea.bottom, screenName: closure_3.get() };
@@ -40,9 +40,9 @@ export default function usePIPAvoidanceSpecs(safeArea) {
   };
   obj = {
     cheapWorkletShallowEqual: require("cheapWorkletShallowEqual").cheapWorkletShallowEqual,
-    getPIPBottomOffsetForPIPMode: sharedValue(16913),
-    getAdjustedBottomOffsets: sharedValue(17015),
-    updateSharedValueIfChanged: sharedValue(11359),
+    getPIPBottomOffsetForPIPMode: sharedValue(16950),
+    getAdjustedBottomOffsets: sharedValue(17046),
+    updateSharedValueIfChanged: sharedValue(11386),
     pipAvoidanceSpecs: sharedValue,
   };
   fn2.__closure = obj;

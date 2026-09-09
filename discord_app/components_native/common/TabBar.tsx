@@ -63,7 +63,7 @@ get_ActivityIndicator = fn(17);
 ({ View: closure_4, TouchableWithoutFeedback: hasOwnProperty, FlatList: metroRequire } = get_ActivityIndicator);
 const NOOP = fn(1074).NOOP;
 const jsx = fn(21).jsx;
-fn(4560);
+fn(4574);
 let createStyles = {
   innerContainer: { flexDirection: "row", alignItems: "stretch" },
   tab: {

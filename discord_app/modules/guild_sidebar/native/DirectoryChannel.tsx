@@ -7,11 +7,11 @@ import ChannelStore from "../../../stores/ChannelStore.tsx";
 import GuildChannelStore from "../../../stores/GuildChannelStore.tsx";
 
 require = fn;
-const UnreadSetting = fn(4742).UnreadSetting;
+const UnreadSetting = fn(4756).UnreadSetting;
 const jsx = fn(21).jsx;
-const createStyles = fn(4560);
+const createStyles = fn(4574);
 let obj = { container: null };
-obj = { marginVertical: fn(10123).CHANNEL_MARGIN_VERTICAL, marginHorizontal: 8, borderRadius: nativeDefault.radii.md };
+obj = { marginVertical: fn(10150).CHANNEL_MARGIN_VERTICAL, marginHorizontal: 8, borderRadius: nativeDefault.radii.md };
 obj.container = obj;
 let closure_8 = createStyles.createStyles(obj);
 const size = fn(2);
@@ -57,14 +57,14 @@ export default noop.memo((guildId) => {
       resolvedUnreadSetting: null,
     };
     obj = { channel: stateFromStores };
-    obj.accessibilityLabel = id(9775)(obj);
+    obj.accessibilityLabel = id(9802)(obj);
     const obj1 = { selected };
     obj.accessibilityState = obj1;
     obj.channel = stateFromStores;
     obj.selected = selected;
     obj.resolvedUnreadSetting = UnreadSetting.ONLY_MENTIONS;
-    tmp7 = jsx(id(16119), { channel: stateFromStores });
-    const tmp10 = id(16119);
+    tmp7 = jsx(id(16149), { channel: stateFromStores });
+    const tmp10 = id(16149);
   }
   return tmp7;
 });

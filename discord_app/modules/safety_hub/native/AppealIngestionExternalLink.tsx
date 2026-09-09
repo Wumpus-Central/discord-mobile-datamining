@@ -4,14 +4,14 @@ import native from "../../../design/void/native.tsx";
 import LinkingDefault from "../../../lib/native/Linking.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import Pressables from "../../../design/void/Pressables/native/Pressables.tsx";
-import _mod8644 from "../../../../_runtime/metro/08644__.js";
+import _mod8672 from "../../../../_runtime/metro/08672__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-fn(4560);
+fn(4574);
 let createStyles = { childButton: null, childContainer: null, childButtonText: null, chevron: null };
 createStyles = { marginBottom: 8, borderRadius: nativeDefault.radii.xs };
 createStyles.childButton = createStyles;
@@ -66,7 +66,7 @@ export default function AppealIngestionExternalLink(children) {
   };
   const items = [
     closure_4(Text_Text.Text, obj),
-    closure_4(native.Icon, { source: _mod8644, color: tmp.chevron.color }),
+    closure_4(native.Icon, { source: _mod8672, color: tmp.chevron.color }),
   ];
   obj.children = items;
   obj.children = closure_5(View, obj);

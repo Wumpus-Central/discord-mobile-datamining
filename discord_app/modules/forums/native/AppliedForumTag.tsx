@@ -93,7 +93,7 @@ const View = fn(17).View;
 const EMOJI_URL_BASE_SIZE = fn(1374).EMOJI_URL_BASE_SIZE;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-fn(4560);
+fn(4574);
 let createStyles = { pill: null, disableEndMargin: null, emoji: null, textEmoji: null, tagName: null, container: null };
 createStyles = {
   height: 24,

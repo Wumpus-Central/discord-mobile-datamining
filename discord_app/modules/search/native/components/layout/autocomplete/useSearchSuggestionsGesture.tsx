@@ -1,5 +1,5 @@
 // discord_app/modules/search/native/components/layout/autocomplete/useSearchSuggestionsGesture.tsx
-import LegacyBaseButton from "../../../../../../../_runtime/06655_LegacyBaseButton.js";
+import LegacyBaseButton from "../../../../../../../_runtime/06669_LegacyBaseButton.js";
 import SearchPlatformUtilsDefault from "../../../SearchPlatformUtils.tsx";
 import noop from "../../../../../../../_runtime/metro/00019__.js";
 

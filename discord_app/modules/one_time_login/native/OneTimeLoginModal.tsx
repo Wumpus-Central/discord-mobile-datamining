@@ -21,7 +21,7 @@ const Constants = fn(1074);
 let closure_12 = fn(1230).BACKGROUND_GRADIENT_PRESETS_MOBILE;
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
-fn(4560);
+fn(4574);
 let createStyles = {
   container: null,
   centerContent: null,
@@ -229,18 +229,18 @@ export default function OneTimeLoginModal(token) {
     angleOverride: 0,
     mixAmount: null,
   };
-  obj = { dark: token(4378).OverlayOpacity.LEVEL_1 };
+  obj = { dark: token(4392).OverlayOpacity.LEVEL_1 };
   obj.mixAmount = obj;
   const items6 = [closure_13(ThemedGradientDefault, obj)];
   let obj1 = { style: tmp.container, children: null };
   let obj2 = { style: tmp.centerContent, children: null };
-  const items7 = [closure_13(callback3, { source: token(13865), style: tmp.logo })];
+  const items7 = [closure_13(callback3, { source: token(13888), style: tmp.logo })];
   let obj4 = { style: tmp.loadingContainer, children: null };
   const items8 = [closure_13(callback2, {})];
   const obj5 = { variant: "text-lg/semibold", children: null };
   let intl = token(1114).intl;
   obj5.children = intl.string(token(1114).t.W9uNdG);
-  items8[1] = closure_13(token(4556).Text, obj5);
+  items8[1] = closure_13(token(4570).Text, obj5);
   obj4.children = items8;
   items7[1] = closure_14(callback1, obj4);
   obj2.children = items7;
@@ -249,13 +249,13 @@ export default function OneTimeLoginModal(token) {
   const obj7 = { variant: "text-sm/normal", children: null };
   let intl2 = token(1114).intl;
   obj7.children = intl2.string(token(1114).t["ZXe5/Y"]);
-  const items10 = [closure_13(token(4556).Text, obj7)];
+  const items10 = [closure_13(token(4570).Text, obj7)];
   const obj8 = { textColor: "text-default", text: null, variant: "text-sm/medium", onPress: null, textStyle: null };
   let intl3 = token(1114).intl;
   obj8.text = intl3.string(token(1114).t.FIEwfG);
   obj8.onPress = onPress;
   obj8.textStyle = tmp.link;
-  items10[1] = closure_13(token(6942).LinkButton, obj8);
+  items10[1] = closure_13(token(6956).LinkButton, obj8);
   obj6.children = items10;
   items9[1] = closure_14(callback1, obj6);
   obj1.children = items9;

@@ -28,7 +28,7 @@ const Constants = fn(1074);
 const FractionalPremiumStates = fn(1373).FractionalPremiumStates;
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
-fn(4560);
+fn(4574);
 let createStyles = {
   upsellSection: { position: "relative" },
   background: { position: "absolute", width: "100%" },
@@ -39,7 +39,7 @@ let createStyles = {
   boostingUnavailablePill: null,
   externalManagement: null,
 };
-createStyles = { flex: 1, backgroundColor: fn(5441).DARK_TRANSPARENT_LIGHT_WHITE_500, marginTop: 16 };
+createStyles = { flex: 1, backgroundColor: fn(5455).DARK_TRANSPARENT_LIGHT_WHITE_500, marginTop: 16 };
 createStyles.scroller = createStyles;
 createStyles.subscriptionHeader = { paddingHorizontal: 16, paddingBottom: 32 };
 createStyles.blurb = { lineHeight: 18 };
@@ -158,7 +158,7 @@ prototype["render"] = function render() {
   obj.children = items;
   return __initData(hasOwnProperty, obj);
 };
-UserSettingsPremiumGuildSubscriptions.contextType = fn(4271).ThemeContext;
+UserSettingsPremiumGuildSubscriptions.contextType = fn(4284).ThemeContext;
 const size = fn(2);
 let result = size.fileFinishedImporting(
   "modules/user_settings/premium/native/UserSettingsPremiumGuildSubscriptions.tsx",
@@ -182,11 +182,11 @@ export default function ConnectedUserSettingsPremiumGuildSubscriptions(route) {
   if (flag == null) {
     flag = true;
   }
-  ({ fractionalState: c2, endsAt } = flag(7393)({ forceFetch: true }));
-  let tmpResult = tmp(8065);
+  ({ fractionalState: c2, endsAt } = flag(7407)({ forceFetch: true }));
+  let tmpResult = tmp(8080);
   isInReverseTrial = tmpResult.useIsInReverseTrial();
-  const tmp3 = flag(7393)({ forceFetch: true });
-  fpDurationText = flag(13465)(endsAt, tmp(13465).CountDownMessageTypes.LONG_TIME_LEFT);
+  const tmp3 = flag(7407)({ forceFetch: true });
+  fpDurationText = flag(13488)(endsAt, tmp(13488).CountDownMessageTypes.LONG_TIME_LEFT);
   tmpResult = tmp(504);
   const items = [GuildBoostSlotStore, BillingInfoStore, SubscriptionPlanStore, UserStore];
   const stateFromStoresObject = tmpResult.useStateFromStoresObject(items, () => {
@@ -220,7 +220,7 @@ export default function ConnectedUserSettingsPremiumGuildSubscriptions(route) {
     obj.premiumGroupRole = premiumGroupRole;
     return obj;
   });
-  const tmp4 = flag(13465);
+  const tmp4 = flag(13488);
   const items1 = [SubscriptionStore];
   const stateFromStores = require("initialize").useStateFromStores(items1, () =>
     premiumTypeSubscription.getPremiumTypeSubscription(),

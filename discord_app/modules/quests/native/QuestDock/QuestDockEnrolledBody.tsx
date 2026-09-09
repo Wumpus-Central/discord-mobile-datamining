@@ -79,10 +79,10 @@ function EnrolledBodyWatchTask(quest) {
                 tmp12 = tmp16;
               }
               if (tmp12) {
-                const obj1 = { questId: tmp2.id, sourceQuestContent: quest(5447).QuestContent.QUEST_BAR_MOBILE };
+                const obj1 = { questId: tmp2.id, sourceQuestContent: quest(5461).QuestContent.QUEST_BAR_MOBILE };
                 v1 = 1;
                 c2 = 1;
-                const obj2 = { value: setRestingQuestDockMode(15127)(obj1), done: false };
+                const obj2 = { value: setRestingQuestDockMode(15154)(obj1), done: false };
                 return obj2;
               } else {
                 c2 = 3;
@@ -209,14 +209,14 @@ function EnrolledBodyPlayStreamTask(quest) {
   return closure_1_14(map1, obj);
 }
 const View = fn(17).View;
-const QuestConstants = fn(5444);
+const QuestConstants = fn(5458);
 ({ QuestDockMode: closure_8, QuestsExperimentLocations: closure_9 } = QuestConstants);
-const QuestDockConstants = fn(15098);
+const QuestDockConstants = fn(15125);
 ({ QUEST_DOCK_EXPANDED_HEIGHT: c10, QUEST_DOCK_EXPANDED_PADDING_BOTTOM } = QuestDockConstants);
 ({ QUEST_DOCK_EXPANDED_PADDING_HORIZONTAL, QUEST_DOCK_EXPANDED_ENROLLED_PADDING_TOP } = QuestDockConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_12, Fragment: map1, jsxs: closure_14 } = jsxProd);
-fn(4560);
+fn(4574);
 let obj = {
   wrapper: {
     flexGrow: 0,
@@ -249,10 +249,10 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/quests/native/QuestDock/QuestDockEnrolledBody.tsx");
 
 export default noop.memo(function QuestDockEnrolledBody() {
-  let obj = minExpandedContentHeight(15105);
+  let obj = minExpandedContentHeight(15132);
   const questDockQuest = obj.useQuestDockQuest();
   minExpandedContentHeight = noop.useContext(
-    minExpandedContentHeight(15099).QuestDockGestureContext,
+    minExpandedContentHeight(15126).QuestDockGestureContext,
   ).minExpandedContentHeight;
   const items = [minExpandedContentHeight];
   const items1 = [minExpandedContentHeight];

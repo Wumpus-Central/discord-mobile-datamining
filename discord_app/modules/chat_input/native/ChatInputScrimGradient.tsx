@@ -3,7 +3,7 @@ import nativeDefault from "../../../../discord_common/js/packages/tokens/native.
 import utils_ColorUtils from "../../../../discord_common/js/shared/utils/ColorUtils.tsx";
 import useToken from "../../../design/tokens/native/useToken.tsx";
 import client_themes_ClientThemesUtils from "../../client_themes/native/ClientThemesUtils.tsx";
-import LinearGradientDefault from "../../../../_runtime/04987_LinearGradient.js";
+import LinearGradientDefault from "../../../../_runtime/05001_LinearGradient.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;

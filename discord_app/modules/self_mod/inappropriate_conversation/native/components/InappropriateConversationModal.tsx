@@ -102,16 +102,16 @@ function CrisisTextLineScreen(trackAnalyticsEvent) {
   trackAnalyticsEvent = trackAnalyticsEvent.trackAnalyticsEvent;
   const tmp = closure_15();
   let obj = { style: tmp.container, children: null };
-  const items = [closure_13(trackAnalyticsEvent(5692).SafetyChatSpotIllustration, {}), ,];
+  const items = [closure_13(trackAnalyticsEvent(5706).SafetyChatSpotIllustration, {}), ,];
   obj = { style: tmp.warningText, children: null };
   obj = { variant: "heading-xl/semibold", style: tmp.takeoverHeader, accessibilityRole: "header", children: null };
   const intl = trackAnalyticsEvent(1114).intl;
   obj.children = intl.string(trackAnalyticsEvent(1114).t.NUMAsF);
-  const items1 = [closure_13(trackAnalyticsEvent(4556).Text, obj)];
+  const items1 = [closure_13(trackAnalyticsEvent(4570).Text, obj)];
   const obj1 = { variant: "text-md/medium", style: tmp.takeoverDescription, children: null };
   const intl2 = trackAnalyticsEvent(1114).intl;
   obj1.children = intl2.string(trackAnalyticsEvent(1114).t.uicS5l);
-  items1[1] = closure_13(trackAnalyticsEvent(4556).Text, obj1);
+  items1[1] = closure_13(trackAnalyticsEvent(4570).Text, obj1);
   obj.children = items1;
   items[1] = closure_14(closure_7, obj);
   const obj2 = { style: tmp.ctaContainer, children: null };
@@ -122,7 +122,7 @@ function CrisisTextLineScreen(trackAnalyticsEvent) {
     timestampProducer.openURL(React7);
     trackAnalyticsEvent(SafetyWarningUtils.CtaEventTypes.USER_TAKEOVER_MODAL_CTL_SMS);
   };
-  const items2 = [closure_13(trackAnalyticsEvent(4975).Button, obj3)];
+  const items2 = [closure_13(trackAnalyticsEvent(4989).Button, obj3)];
   const obj4 = { variant: "secondary", size: "lg", text: null, grow: true, onPress: null };
   const intl4 = trackAnalyticsEvent(1114).intl;
   obj4.text = intl4.string(trackAnalyticsEvent(1114).t.ogLlvy);
@@ -130,7 +130,7 @@ function CrisisTextLineScreen(trackAnalyticsEvent) {
     timestampProducer.openURL(closure_2_10);
     trackAnalyticsEvent(SafetyWarningUtils.CtaEventTypes.USER_TAKEOVER_MODAL_CTL_WEB);
   };
-  items2[1] = closure_13(trackAnalyticsEvent(4975).Button, obj4);
+  items2[1] = closure_13(trackAnalyticsEvent(4989).Button, obj4);
   obj2.children = items2;
   items[2] = closure_14(closure_7, obj2);
   obj.children = items;
@@ -139,7 +139,7 @@ function CrisisTextLineScreen(trackAnalyticsEvent) {
 const useState = fn(19).useState;
 get_ActivityIndicator = fn(17);
 ({ Linking: metroRequire, View: closure_7 } = get_ActivityIndicator);
-const Constants = fn(11368);
+const Constants = fn(11395);
 ({
   CRISIS_TEXT_LINE_SMS_URI: closure_9,
   CRISIS_TEXT_LINE_URL: c10,
@@ -148,7 +148,7 @@ const Constants = fn(11368);
 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
-fn(4560);
+fn(4574);
 let createStyles = {
   container: null,
   warningText: null,

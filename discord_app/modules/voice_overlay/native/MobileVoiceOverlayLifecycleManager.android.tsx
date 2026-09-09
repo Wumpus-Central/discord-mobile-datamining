@@ -22,15 +22,15 @@ require = fn;
 const GUILD_VOCAL_CHANNELS_KEY = fn(2012).GUILD_VOCAL_CHANNELS_KEY;
 const Constants = fn(1074);
 ({ AnalyticEvents: closure_14, Permissions: closure_15 } = Constants);
-fn(14532);
-fn(14533);
-fn(14534);
-fn(14535);
-fn(6992);
-fn(13790);
-fn(14536);
-fn(14537);
-const registerAsset = fn(8628);
+fn(14557);
+fn(14558);
+fn(14559);
+fn(14560);
+fn(7006);
+fn(13813);
+fn(14561);
+fn(14562);
+const registerAsset = fn(8656);
 let items = [VoiceStateStore, RTCConnectionStore, MediaEngineStore];
 const constants3 = {
   DISABLED: 0,

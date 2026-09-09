@@ -17,18 +17,18 @@ import DisplayedInviteStore from "../../../../stores/native/DisplayedInviteStore
 const require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: metroRequire, ScrollView: closure_7 } = get_ActivityIndicator);
-const RegistrationUIStore = fn(15949);
+const RegistrationUIStore = fn(15979);
 ({
   setRegistrationErrors: closure_11,
   updateRegistrationOptions: closure_12,
   useRegistrationUIStore: map1,
 } = RegistrationUIStore);
-const RegistrationConstants = fn(15950);
+const RegistrationConstants = fn(15980);
 ({ RegisterTransitionSteps: closure_14, RegistrationTransitionActionTypes: closure_15 } = RegistrationConstants);
 const AuthStates = fn(1074).AuthStates;
 const jsxProd = fn(21);
 ({ jsx: closure_17, jsxs: closure_18 } = jsxProd);
-let createStyles = fn(4560);
+let createStyles = fn(4574);
 let closure_19 = createStyles.createStyles((arg0) => {
   let obj = { container: null, password: null, button: null, errors: null, page: null };
   obj = { marginTop: nativeDefault.space.PX_24 };
@@ -44,9 +44,9 @@ let closure_19 = createStyles.createStyles((arg0) => {
   return obj;
 });
 createStyles = { layout: null };
-const LinearTransition = fn(4296).LinearTransition;
-const Easing = fn(4296).Easing;
-createStyles.layout = LinearTransition.easing(Easing.inOut(fn(4296).Easing.quad)).duration(300);
+const LinearTransition = fn(4310).LinearTransition;
+const Easing = fn(4310).Easing;
+createStyles.layout = LinearTransition.easing(Easing.inOut(fn(4310).Easing.quad)).duration(300);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/auth/native/components/RegisterAccountInformation.tsx");
 
@@ -145,7 +145,7 @@ export default function RegisterAccountInformation() {
   };
   const tmp3 = useWideAuthViewDefault();
   const tmp4 = closure_19(tmp3);
-  context = noop.useContext(context(15946).TrackRegistrationContext);
+  context = noop.useContext(context(15976).TrackRegistrationContext);
   let tmp8 = closure_13((submitting) => submitting.submitting);
   const tmp7 = closure_13((registrationOptions) => registrationOptions.registrationOptions);
   [tmp10, importDefault] = _slicedToArray(noop.useState(false), 2);
@@ -163,7 +163,7 @@ export default function RegisterAccountInformation() {
     return invite;
   });
   const tmp9 = _slicedToArray(noop.useState(false), 2);
-  let obj3 = context(15972);
+  let obj3 = context(16002);
   const passwordRegistrationStep = obj3.usePasswordRegistrationStep();
   ({
     password,
@@ -172,7 +172,7 @@ export default function RegisterAccountInformation() {
     passwordScore,
     preventSubmitPassword,
   } = passwordRegistrationStep);
-  let obj4 = context(15974);
+  let obj4 = context(16004);
   const usernameRegistrationStep = obj4.useUsernameRegistrationStep(AuthStates.REGISTER_ACCOUNT_INFORMATION);
   ({
     transitionToNextStepOrSubmit: noop,
@@ -193,7 +193,7 @@ export default function RegisterAccountInformation() {
   let tmp5Result = tmp5(504);
   const items2 = [ConsentStore];
   const stateFromStores1 = tmp5Result.useStateFromStores(items2, () => result.getAuthenticationConsentRequired());
-  tmp5Result = tmp5(15957);
+  tmp5Result = tmp5(15987);
   obj = { isConsentRequired: true === stateFromStores1 };
   const result = tmp5Result.hasAllRegistrationFieldsCompleted(obj, obj);
   ConsentStore = result;
@@ -217,7 +217,7 @@ export default function RegisterAccountInformation() {
   }
   let tmpResult = useAuthFlowBackHandlerDefault;
   const ref = noop.useRef(null);
-  tmpResult(context(15948).getPreviousRegistrationTransitionStep(AuthStates.REGISTER_ACCOUNT_INFORMATION));
+  tmpResult(context(15978).getPreviousRegistrationTransitionStep(AuthStates.REGISTER_ACCOUNT_INFORMATION));
   useInitialRegistrationStepDefault(AuthStates.REGISTER_ACCOUNT_INFORMATION);
   const items3 = [context];
   const effect = obj.useEffect(() => {
@@ -236,7 +236,7 @@ export default function RegisterAccountInformation() {
   obj2 = { contentContainerStyle: { flexGrow: 1 }, keyboardShouldPersistTaps: "handled", children: null };
   obj3 = {
     style: tmp4.container,
-    children: closure_17(tmp5(15975).RegisterUsernameInput, {
+    children: closure_17(tmp5(16005).RegisterUsernameInput, {
       username,
       setUsername,
       onSubmitEditing: callback,
@@ -261,7 +261,7 @@ export default function RegisterAccountInformation() {
     str = "done";
   }
   obj5.returnKeyType = str;
-  obj4.children = closure_17(context(15976).RegisterPasswordInput, obj5);
+  obj4.children = closure_17(context(16006).RegisterPasswordInput, obj5);
   items4[1] = closure_17(ReanimatedRexportDefault.View, obj4);
   const obj6 = { style: tmp4.button };
   const merged2 = Object.assign(createStyles);
@@ -273,7 +273,7 @@ export default function RegisterAccountInformation() {
     preventSubmitUsername = preventSubmitPassword;
   }
   obj7.disabled = preventSubmitUsername;
-  const items5 = [closure_17(context(4975).Button, obj7)];
+  const items5 = [closure_17(context(4989).Button, obj7)];
   let tmp27Result = null;
   if (null != tmp11.message) {
     tmp27Result = null;

@@ -7,7 +7,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4, Fragment: hasOwnProperty } = jsxProd);
-fn(4560);
+fn(4574);
 let createStyles = {
   pillTagsContainer: { display: "flex", flexDirection: "row", alignItems: "center" },
   tag: null,
@@ -54,7 +54,7 @@ export const ForumPostAppliedTagPills = function ForumPostAppliedTagPills(additi
     obj.tag = obj;
     obj.containerStyle = tmp.tag;
     obj.hasUnreads = hasUnreads;
-    tmp4 = closure_3(hasUnreads(10632).AppliedForumTagPill, obj);
+    tmp4 = closure_3(hasUnreads(10659).AppliedForumTagPill, obj);
   }
   items1[1] = tmp4;
   obj.children = items1;

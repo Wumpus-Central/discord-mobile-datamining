@@ -5,7 +5,7 @@ import size from "../../../_runtime/metro/00002__.js";
 let obj = {
   name: "2026-03-overlay-default-keybind",
   kind: "user",
-  defaultConfig: { keybindOverride: "Array" },
+  defaultConfig: { keybindOverride: "disabled" },
   variations: null,
 };
 obj = { 1: null, 2: { keybindOverride: "ctrl+tab" }, 3: { keybindOverride: "alt+x" } };

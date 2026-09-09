@@ -19,7 +19,7 @@ import SessionsStore from "../../../../stores/SessionsStore.tsx";
 require = fn;
 let closure_3 = ["ref"];
 const NativeModules = fn(17).NativeModules;
-const setVoiceUpsellDismissed = fn(17122).setVoiceUpsellDismissed;
+const setVoiceUpsellDismissed = fn(17153).setVoiceUpsellDismissed;
 const PlatformTypes = fn(1074).PlatformTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_14, Fragment: closure_15, jsxs: closure_16 } = jsxProd);

@@ -10,7 +10,7 @@ import MetricEvents from "../../../../../discord_common/js/shared/shared-constan
 import useSortedSpamMessageRequestsDefault from "../../hooks/useSortedSpamMessageRequests.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
-const MessageRequestEmptyDefault = tmp2(16889);
+const MessageRequestEmptyDefault = tmp2(16926);
 require = fn;
 function PendingSpamMessageRequestRow(isLastRow) {
   ({ messageRequest, goToMessageRequestPreview: require, hasSingleMessageRequest } = isLastRow);
@@ -199,7 +199,7 @@ get_ActivityIndicator = fn(17);
 const AnalyticEvents = fn(1074).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-fn(4560);
+fn(4574);
 let createStyles = {
   sectionContainer: null,
   rowContainer: null,
@@ -260,10 +260,10 @@ export default function SpamMessageList(goToMessageRequestPreview) {
   const tmp = closure_10();
   importDefault = tmp;
   const bottom = useSafeAreaInsetsDefault().bottom;
-  let obj = goToMessageRequestPreview(16888);
+  let obj = goToMessageRequestPreview(16925);
   dependencyMap = obj.useSpamMessageRequestCount();
   const arr = useSortedSpamMessageRequestsDefault();
-  let obj1 = goToMessageRequestPreview(16886);
+  let obj1 = goToMessageRequestPreview(16923);
   const hasSingleMessageRequest = obj1.useListHasSingleSpamMessageRequest();
   useMountEffectDefault(() => {
     let obj = { num_spam_message_requests };

@@ -3,11 +3,11 @@ import spring from "../../../../design/animation/reanimated/spring/spring.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const QuestDockMode = fn(5444).QuestDockMode;
-const QuestDockConstants = fn(15098);
+const QuestDockMode = fn(5458).QuestDockMode;
+const QuestDockConstants = fn(15125);
 ({ QUEST_DOCK_MODE_CHANGE_PHYSICS: hasOwnProperty, QUEST_DOCK_EXPANDED_HEIGHT: metroRequire } = QuestDockConstants);
 const jsx = fn(21).jsx;
-const createStyles = fn(4560);
+const createStyles = fn(4574);
 let obj = { wrapper: null };
 obj = {};
 const merged = Object.assign(fn(17).StyleSheet.absoluteFillObject);

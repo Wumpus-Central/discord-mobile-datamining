@@ -117,7 +117,7 @@ get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: metroRequire, View: closure_7, StyleSheet: closure_8 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
-const createStyles = fn(4560);
+const createStyles = fn(4574);
 createStyles.createStyles({
   container: { flex: 1, justifyContent: "center", alignItems: "center" },
   title: { textAlign: "center" },

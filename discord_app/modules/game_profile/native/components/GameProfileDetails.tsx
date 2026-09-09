@@ -28,10 +28,10 @@ function GameProfileWebsiteButton(action) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, Pressable: metroRequire } = get_ActivityIndicator);
-const IGDB_ATTRIBUTION_LINK = fn(8358).IGDB_ATTRIBUTION_LINK;
+const IGDB_ATTRIBUTION_LINK = fn(8386).IGDB_ATTRIBUTION_LINK;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-fn(4560);
+fn(4574);
 let createStyles = {
   container: null,
   headerText: null,
@@ -162,7 +162,7 @@ export default function GameProfileDetails(game) {
               if (obj != null) {
                 const websites = obj.websites;
                 if (websites != null) {
-                  const mapped3 = websites.map((item) => trackAction(8890)(item, trackAction(576).colors.ICON_SUBTLE));
+                  const mapped3 = websites.map((item) => trackAction(8917)(item, trackAction(576).colors.ICON_SUBTLE));
                   found = mapped3.filter((item) => null != item);
                 }
               }
@@ -214,7 +214,7 @@ export default function GameProfileDetails(game) {
                 style: closure_2.platformsContainer,
                 children: platforms.map((platform) =>
                   closure_1_8(
-                    game(8883).GameUpdatePlatformIcon,
+                    game(8910).GameUpdatePlatformIcon,
                     { platform, size: "md", color: trackAction(576).colors.ICON_SUBTLE },
                     platform,
                   ),

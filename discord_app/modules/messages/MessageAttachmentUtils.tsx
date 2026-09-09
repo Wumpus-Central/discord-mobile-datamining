@@ -172,8 +172,8 @@ export const useShouldObscure = function useShouldObscure(channel) {
   const RenderSpoilers = channel(1935).RenderSpoilers;
   const setting = RenderSpoilers.useSetting();
   const obj = channel(563);
-  const enabledHarmTypesBitmaskForChannelType = channel(7292).getEnabledHarmTypesBitmaskForChannelType(
-    channel(7297).ContentHarmTypeChannel.GUILD,
+  const enabledHarmTypesBitmaskForChannelType = channel(7306).getEnabledHarmTypesBitmaskForChannelType(
+    channel(7311).ContentHarmTypeChannel.GUILD,
   );
   return getForumPostShouldObscure(
     channel.media,
@@ -181,11 +181,11 @@ export const useShouldObscure = function useShouldObscure(channel) {
     enabledHarmTypesBitmaskForChannelType,
   );
 };
-export const getObscuredAlt = function getObscuredAlt(obscureReason) {
-  if (ObscureMediaModels.ObscureReason.EXPLICIT_CONTENT !== obscureReason) {
-    if (ObscureMediaModels.ObscureReason.GORE_CONTENT !== obscureReason) {
-      if (ObscureMediaModels.ObscureReason.SELF_HARM_CONTENT !== obscureReason) {
-        if (ObscureMediaModels.ObscureReason.SPOILER === obscureReason) {
+export const getObscuredAlt = function getObscuredAlt(arg0) {
+  if (ObscureMediaModels.ObscureReason.EXPLICIT_CONTENT !== arg0) {
+    if (ObscureMediaModels.ObscureReason.GORE_CONTENT !== arg0) {
+      if (ObscureMediaModels.ObscureReason.SELF_HARM_CONTENT !== arg0) {
+        if (ObscureMediaModels.ObscureReason.SPOILER === arg0) {
           const intl = util.intl;
           return intl.string(util.t["XpfDH+"]);
         }

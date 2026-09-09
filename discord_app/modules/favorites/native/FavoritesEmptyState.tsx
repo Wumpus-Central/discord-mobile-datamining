@@ -1,7 +1,7 @@
 // discord_app/modules/favorites/native/FavoritesEmptyState.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../intl/index.native.tsx";
-import _modDef3225 from "../intl/FavoritesGuild.messages.js";
+import _modDef3236 from "../intl/FavoritesGuild.messages.js";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import Stack_Stack from "../../../design/components/Stack/native/Stack.native.tsx";
 import components_Button_Button from "../../../design/components/Button/native/Button.native.tsx";
@@ -14,7 +14,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-fn(4560);
+fn(4574);
 let createStyles = { container: null, text: null };
 createStyles = {
   flex: 1,
@@ -47,25 +47,25 @@ export default function FavoritesEmptyState() {
   obj = { spacing: nativeDefault.space.PX_8, align: "center", children: null };
   const obj1 = { variant: "heading-md/bold", color: "mobile-text-heading-primary", style: tmp.text, children: null };
   const intl = util.intl;
-  obj1.children = intl.string(_modDef3225["wh+Rz1"]);
+  obj1.children = intl.string(_modDef3236["wh+Rz1"]);
   const items1 = [hasOwnProperty(Text_Text.Heading, obj1)];
   const obj2 = { variant: "text-md/medium", color: "text-default", style: tmp.text, children: null };
   const intl2 = util.intl;
-  obj2.children = intl2.string(_modDef3225["+SuGKb"]);
+  obj2.children = intl2.string(_modDef3236["+SuGKb"]);
   items1[1] = hasOwnProperty(Text_Text.Text, obj2);
   obj.children = items1;
   items[1] = timestampProducer(Stack_Stack.Stack, obj);
   if (obj.useFavoritesAccess("favorites_empty_state").hasAccess) {
     const obj3 = { variant: "primary", text: null, icon: null, onPress: null };
     const intl4 = util.intl;
-    obj3.text = intl4.string(_modDef3225["6kk0gM"]);
+    obj3.text = intl4.string(_modDef3236["6kk0gM"]);
     obj3.icon = hasOwnProperty(PlusMediumIcon.PlusMediumIcon, {});
     obj3.onPress = callback;
     let obj4 = obj3;
   } else {
     obj4 = { variant: "primary", text: null, onPress: null };
     const intl3 = util.intl;
-    obj4.text = intl3.string(_modDef3225.yYVbdv);
+    obj4.text = intl3.string(_modDef3236.yYVbdv);
     obj4.onPress = callback1;
   }
   items[2] = hasOwnProperty(components_Button_Button.Button, obj4);

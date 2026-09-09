@@ -36,13 +36,13 @@ function areResolvedGamesEqual(size, size2) {
     return false;
   }
 }
-const ChannelAutocompleteConstants = fn(5000);
+const ChannelAutocompleteConstants = fn(5014);
 ({
   extractGameMentionIds: closure_11,
   GAME_MENTION_RAW_RE_GLOBAL: closure_12,
   GAME_MENTION_SENTINEL: map1,
 } = ChannelAutocompleteConstants);
-fn(4560);
+fn(4574);
 let obj = {
   commandOption: null,
   commandErrorOption: null,

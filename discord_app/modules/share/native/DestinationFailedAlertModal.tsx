@@ -50,11 +50,11 @@ function FailedUserRow(user) {
       user,
       guildId: "Boolean",
       status: true,
-      isMobileOnline: null,
-      isVROnline: null,
-      size: 189.518,
-      avatarDecoration: null,
-      autoStatusCutout: "\u{1F9D1}\u{1F3FB}\u200D\u{1F3EB}",
+      isMobileOnline: "done",
+      isVROnline: true,
+      size: null,
+      avatarDecoration: "primary",
+      autoStatusCutout: null,
     };
     let tmp13 = null;
     if (StatusTypes.OFFLINE !== status) {
@@ -71,7 +71,7 @@ function FailedUserRow(user) {
       stateFromStores = UserUtilsDefault.getName(user);
     }
     obj1.children = stateFromStores;
-    items2[1] = closure_10(tmp2(4556).Text, obj1);
+    items2[1] = closure_10(tmp2(4570).Text, obj1);
     obj.children = items2;
     tmp9Result = closure_11(View, obj);
   }
@@ -94,11 +94,11 @@ function FailedChannelRow(channel) {
     "aria-label": "",
     guild: stateFromStores,
     channel,
-    size: channel(11004).GuildIconWithChannelTypeSizes.SMALL_32,
+    size: channel(11031).GuildIconWithChannelTypeSizes.SMALL_32,
   };
-  const items1 = [closure_10(channel(11004).GuildIconWithChannelType, obj)];
+  const items1 = [closure_10(channel(11031).GuildIconWithChannelType, obj)];
   const tmp3 = useChannelNameDefault(channel);
-  items1[1] = closure_10(channel(4556).Text, {
+  items1[1] = closure_10(channel(4570).Text, {
     style: tmp.label,
     variant: "text-md/medium",
     lineClamp: 1,
@@ -149,7 +149,7 @@ const View = fn(17).View;
 const StatusTypes = fn(1085).StatusTypes;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11, Fragment: closure_12 } = jsxProd);
-fn(4560);
+fn(4574);
 let createStyles = { container: null, row: null, label: null };
 createStyles = {
   borderWidth: 1,

@@ -2,7 +2,7 @@
 import _mod17 from "../../../../../_runtime/metro/00017__.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
-import _modDef3063 from "../PremiumGroup.messages.js";
+import _modDef3074 from "../PremiumGroup.messages.js";
 import PremiumGroupConstants from "../PremiumGroupConstants.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import CircleErrorIcon from "../../../../design/components/Icon/native/redesign/generated/CircleErrorIcon.tsx";
@@ -55,7 +55,7 @@ export default function PremiumGroupEducationActionSheet(children) {
   const items1 = [timestampProducer(View, obj)];
   const obj3 = { variant: "text-sm/medium", color: "text-overlay-light", style: tmp.helpdeskText, children: null };
   const intl = util.intl;
-  obj3.children = intl.format(_modDef3063.ah1Ecm, { helpCenterLink: HELP_CENTER_LINK });
+  obj3.children = intl.format(_modDef3074.ah1Ecm, { helpCenterLink: HELP_CENTER_LINK });
   items1[1] = hasOwnProperty(Text_Text.Text, obj3);
   obj.children = items1;
   obj.children = timestampProducer(View, obj);

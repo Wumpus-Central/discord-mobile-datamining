@@ -125,12 +125,12 @@ function GiftPurchaseSKUView(selectedSkuId) {
   dependencyMap = tmp4[1];
   const currentUser = memo1.getCurrentUser();
   _slicedToArray = noop.useRef({});
-  let obj1 = selectedSkuId(10704);
+  let obj1 = selectedSkuId(10731);
   const giftStyle = obj1.useNativeGiftContext().giftStyle;
   let obj2 = selectedSkuId(504);
   let items = [closure_8];
   const stateFromStores = obj2.useStateFromStores(items, () => SKUStore.get(selectedSkuId));
-  let obj3 = selectedSkuId(11047);
+  let obj3 = selectedSkuId(11074);
   const fetchCollectiblesProduct = obj3.useFetchCollectiblesProduct(selectedSkuId);
   const product = fetchCollectiblesProduct.product;
   noop = product;
@@ -279,7 +279,7 @@ function GiftPurchaseSKUView(selectedSkuId) {
     options: { recipient_id: giftRecipientId, custom_message: giftMessage, gift_style: giftStyle },
   };
   obj.giftParams = obj1;
-  closure_8 = tmp(11019)(obj);
+  closure_8 = tmp(11046)(obj);
   const items5 = [product];
   [tmp16, tmp17] = _slicedToArray(
     obj.useMemo(() => {
@@ -334,7 +334,7 @@ function GiftPurchaseSKUView(selectedSkuId) {
   }
   items6[14] = str;
   const items7 = [
-    closure_11(selectedSkuId(4556).Text, { variant: "text-md/medium", color: "text-overlay-light", children: items6 }),
+    closure_11(selectedSkuId(4570).Text, { variant: "text-md/medium", color: "text-overlay-light", children: items6 }),
     ,
   ];
   let str4 = "Send Gift";
@@ -342,7 +342,7 @@ function GiftPurchaseSKUView(selectedSkuId) {
     str4 = "Loading...";
   }
   obj3 = {
-    children: closure_12(selectedSkuId(4975).Button, {
+    children: closure_12(selectedSkuId(4989).Button, {
       variant: "primary",
       text: str4,
       onPress: function submitGiftPurchase() {
@@ -358,16 +358,16 @@ function GiftPurchaseSKUView(selectedSkuId) {
       disabled: isFetching,
     }),
   };
-  items7[1] = closure_12(selectedSkuId(5607).Card, obj3);
+  items7[1] = closure_12(selectedSkuId(5621).Card, obj3);
   const obj5 = { children: null };
   const obj6 = { variant: "text-md/medium", color: "text-overlay-light", children: null };
   const items8 = ["Select style: ", giftStyle];
   obj6.children = items8;
-  const items9 = [closure_11(selectedSkuId(4556).Text, obj6), closure_12(first(10834), {})];
+  const items9 = [closure_11(selectedSkuId(4570).Text, obj6), closure_12(first(10861), {})];
   obj5.children = items9;
-  items7[2] = closure_11(selectedSkuId(5607).Card, obj5);
+  items7[2] = closure_11(selectedSkuId(5621).Card, obj5);
   obj2.children = items7;
-  return closure_11(selectedSkuId(4973).Stack, obj2);
+  return closure_11(selectedSkuId(4987).Stack, obj2);
 }
 function SimpleRequestOTPActionSheet(giftMessage) {
   ({ selectedSkuId, requestType, giftRecipientId } = giftMessage);
@@ -387,11 +387,11 @@ function SimpleRequestOTPActionSheet(giftMessage) {
         };
         obj = { selectedSkuId, giftRecipientId, giftMessage: giftMessage.giftMessage };
         obj.children = closure_12(GiftPurchaseSKUView, obj);
-        let tmp6Result = closure_12(tmp(10704).NativeGiftContextProvider, obj);
+        let tmp6Result = closure_12(tmp(10731).NativeGiftContextProvider, obj);
         let tmp8 = closure_12;
       }
       const obj1 = { children: tmp6Result };
-      return tmp8(tmp(7150).BottomSheet, obj1);
+      return tmp8(tmp(7164).BottomSheet, obj1);
     }
   }
   tmp8 = closure_12;

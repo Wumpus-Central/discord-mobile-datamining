@@ -3,7 +3,7 @@ import PlatformUtils from "../../../utils/PlatformUtils.tsx";
 import ReactBatchUpdates from "../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx";
 import DeviceUtils from "../../../utils/native/DeviceUtils.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
-import get_ActivityIndicator from "../../../../_runtime/metro/08333__.js";
+import get_ActivityIndicator from "../../../../_runtime/metro/08361__.js";
 
 require = fn;
 function handleOrientationChange(initialOrientation) {

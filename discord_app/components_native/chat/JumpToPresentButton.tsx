@@ -8,10 +8,10 @@ import MessageStore from "../../stores/MessageStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-let useChatBottomManagerUIStore = fn(9490);
+let useChatBottomManagerUIStore = fn(9517);
 ({ useChatInputContainerHeight: closure_4, useSmallSuggestionBarHeight: hasOwnProperty } = useChatBottomManagerUIStore);
 const jsx = fn(21).jsx;
-fn(4560);
+fn(4574);
 let createStyles = { container: null, containerIOS: null };
 createStyles = {
   borderRadius: nativeDefault.radii.round,
@@ -61,10 +61,10 @@ export default function JumpToPresentButton(channelId) {
     }
     return tmp;
   });
-  const isVoicePanelMounted = channelId(9686).useIsVoicePanelMounted(channelId);
-  const obj2 = channelId(9686);
-  const isVoicePanelOpen = channelId(9686).useIsVoicePanelOpen(channelId);
-  const obj3 = channelId(9686);
+  const isVoicePanelMounted = channelId(9713).useIsVoicePanelMounted(channelId);
+  const obj2 = channelId(9713);
+  const isVoicePanelOpen = channelId(9713).useIsVoicePanelOpen(channelId);
+  const obj3 = channelId(9713);
   const items1 = [MessageStore];
   const stateFromStores = channelId(504).useStateFromStores(
     items1,
@@ -91,15 +91,15 @@ export default function JumpToPresentButton(channelId) {
   const items3 = [tmp.container, tmp10];
   obj.style = items3;
   if (tmp5) {
-    obj = { accessibilityLabel: stringResult, icon: screenIndex(12273), onPress: channelId.onJumpToPresent };
-    let tmp12Result = jsx(screenIndex(12272), {
+    obj = { accessibilityLabel: stringResult, icon: screenIndex(12299), onPress: channelId.onJumpToPresent };
+    let tmp12Result = jsx(screenIndex(12298), {
       accessibilityLabel: stringResult,
-      icon: screenIndex(12273),
+      icon: screenIndex(12299),
       onPress: channelId.onJumpToPresent,
     });
-    const tmp16 = screenIndex(12272);
+    const tmp16 = screenIndex(12298);
   } else {
-    tmp12Result = jsx(tmp3(12274).MemoedVoicePanelDismissChatButton, {});
+    tmp12Result = jsx(tmp3(12300).MemoedVoicePanelDismissChatButton, {});
   }
   obj.children = tmp12Result;
   return <View style={null}>{null}</View>;

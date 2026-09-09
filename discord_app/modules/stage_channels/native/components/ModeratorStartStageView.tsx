@@ -18,13 +18,13 @@ export default function ModeratorStartStageView(channel) {
   const items = [GuildStore];
   const items1 = [guild_id];
   const stateFromStores = obj.useStateFromStores(items, () => GuildStore.getGuild(guild_id), items1);
-  let obj1 = guild_id(9667);
+  let obj1 = guild_id(9694);
   const first = _slicedToArray(obj1.useGuildChannelScheduledEvents(channel.id), 1)[0];
-  let obj2 = guild_id(9676);
+  let obj2 = guild_id(9703);
   const canManageGuildEventResult = obj2.useManageResourcePermissions(channel).canManageGuildEvent(first);
-  let obj3 = guild_id(9679);
+  let obj3 = guild_id(9706);
   const isLive = obj3.useStageChannelStartEvent(channel.id).isLive;
-  let obj4 = guild_id(9670);
+  let obj4 = guild_id(9697);
   const nextRecurrenceIdInEvent = obj4.getNextRecurrenceIdInEvent(first);
   let tmp10Result2 = null;
   if (null != stateFromStores) {
@@ -38,25 +38,25 @@ export default function ModeratorStartStageView(channel) {
       tmp10Result = null;
       if (null != first) {
         obj = { channel, event: first, isLive, guild: stateFromStores, recurrenceId: nextRecurrenceIdInEvent };
-        tmp10Result = closure_5(tmp(9702).StartEventPrompt, obj);
+        tmp10Result = closure_5(tmp(9729).StartEventPrompt, obj);
       }
     }
     const items2 = [tmp10Result, , ,];
     tmp10Result = null;
     if (useCurrentUserStageRolesDefault(channel.id, true).moderator) {
       obj1 = { channel, isLive };
-      tmp10Result = closure_5(tmp(9903).StartStagePrompt, obj1);
+      tmp10Result = closure_5(tmp(9930).StartStagePrompt, obj1);
     }
     items2[1] = tmp10Result;
     let tmp10Result1 = null;
     if (tmp7) {
       obj2 = { channel, isLive, guild: stateFromStores };
-      tmp10Result1 = closure_5(tmp(9702).ScheduleEventPrompt, obj2);
+      tmp10Result1 = closure_5(tmp(9729).ScheduleEventPrompt, obj2);
     }
     obj3 = { children: null };
     items2[2] = tmp10Result1;
     obj4 = { onContinue: channel.onSkip };
-    items2[3] = closure_5(tmp(9903).ContinueToStagePrompt, obj4);
+    items2[3] = closure_5(tmp(9930).ContinueToStagePrompt, obj4);
     obj3.children = items2;
     obj.children = closure_7(closure_6, obj3);
     tmp10Result2 = closure_5(StageViewWithPromptsDefault, obj);

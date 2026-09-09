@@ -6,7 +6,7 @@ import GuildBoostingUtils from "../../../../utils/GuildBoostingUtils.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const GUILD_FEATURE_TO_PERK = fn(4450).GUILD_FEATURE_TO_PERK;
+const GUILD_FEATURE_TO_PERK = fn(4464).GUILD_FEATURE_TO_PERK;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/powerups/hooks/useGuildPowerupLevelPerks.tsx");
 

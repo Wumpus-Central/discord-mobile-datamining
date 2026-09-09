@@ -2,7 +2,7 @@
 import util from "../../../intl/index.native.tsx";
 import native from "../../../design/void/native.tsx";
 import asyncRequireImpl from "../../../../_runtime/01896_asyncRequireImpl.js";
-import _modDef3225 from "../intl/FavoritesGuild.messages.js";
+import _modDef3236 from "../intl/FavoritesGuild.messages.js";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import NitroWheelIcon from "../../../design/components/Icon/native/redesign/generated/NitroWheelIcon.tsx";
 import openFavoritesGuildLimitUpsell from "../utils/openFavoritesGuildLimitUpsell.native.tsx";
@@ -116,7 +116,7 @@ let closure_6 = async function _removeChannelFromFavorites(arg0) {
 };
 function openNoAccessUpsell() {
   const obj = ActionSheetActionCreatorsDefault;
-  obj.openLazy(asyncRequireImpl(10233, dependencyMap.paths), openFavoritesGuildLimitUpsell.FAVORITES_UPSELL_SHEET_KEY, {
+  obj.openLazy(asyncRequireImpl(10260, dependencyMap.paths), openFavoritesGuildLimitUpsell.FAVORITES_UPSELL_SHEET_KEY, {
     source: "channel_context_menu",
   });
 }
@@ -133,14 +133,14 @@ export default function buildFavoritesSectionButtons(isExperimentEnabled) {
       if (!tmp) {
         let obj = { label: null, IconComponent: null, onPress: null };
         const intl = util.intl;
-        obj.label = intl.string(_modDef3225.G9fGlP);
+        obj.label = intl.string(_modDef3236.G9fGlP);
         obj.IconComponent = NitroWheelIcon.NitroWheelIcon;
         obj.onPress = openNoAccessUpsell;
       }
       if (tmp3) {
         obj = { label: null, IconComponent: null, isDestructive: true, onPress: null };
         const intl3 = util.intl;
-        obj.label = intl3.string(_modDef3225.TN4nAX);
+        obj.label = intl3.string(_modDef3236.TN4nAX);
         obj.IconComponent = StarIcon.StarIcon;
         obj.onPress = function onPress() {
           return (function removeChannelFromFavorites() {
@@ -157,7 +157,7 @@ export default function buildFavoritesSectionButtons(isExperimentEnabled) {
       } else if (!tmp4) {
         obj = { label: null, IconComponent: null, trailing: null, onPress: null };
         const intl2 = util.intl;
-        obj.label = intl2.string(_modDef3225.G9fGlP);
+        obj.label = intl2.string(_modDef3236.G9fGlP);
         obj.IconComponent = StarOutlineIcon.StarOutlineIcon;
         let tmp15;
         if (tmp5) {

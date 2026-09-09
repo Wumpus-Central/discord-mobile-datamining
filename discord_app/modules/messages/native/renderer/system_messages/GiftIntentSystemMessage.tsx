@@ -1,7 +1,7 @@
 // discord_app/modules/messages/native/renderer/system_messages/GiftIntentSystemMessage.tsx
 import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
 import renderer_EmbedUtils from "../EmbedUtils.tsx";
-import _modDef7949 from "../../../../../../_runtime/metro/07949__.js";
+import _modDef7963 from "../../../../../../_runtime/metro/07963__.js";
 import createCommonMessageDefault from "createCommonMessage.tsx";
 import GiftIntentEmbed from "../row_data/embeds/GiftIntentEmbed.tsx";
 import EphemeralIndication from "../row_data/EphemeralIndication.tsx";
@@ -29,7 +29,7 @@ export const createGiftIntentSystemMessage = function createGiftIntentSystemMess
     let tmpResult = EphemeralIndication;
     obj.ephemeralIndication = tmpResult.createEphemeralIndication(message);
     tmpResult = renderer_EmbedUtils;
-    obj.iconUrl = tmpResult.getAssetUriForEmbed(_modDef7949);
+    obj.iconUrl = tmpResult.getAssetUriForEmbed(_modDef7963);
     ({ iconTintColor: obj2.iconTintColor, iconDividerColor: obj2.iconDividerColor } = closure_3(theme));
     return obj;
   }

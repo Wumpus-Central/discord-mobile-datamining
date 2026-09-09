@@ -34,7 +34,7 @@ export const installApplication = function installApplication(arg0) {
         LinkingDefault.openURL(customInstallUrl);
       },
     };
-    return customInstallUrl(8370).handleClick(obj);
+    return customInstallUrl(8398).handleClick(obj);
   } else {
     if (null != integrationTypesConfig) {
       const _Object = Object;
@@ -83,8 +83,8 @@ export const installApplication = function installApplication(arg0) {
           }
           ModalActionCreatorsDefault.popWithKey(closure_5);
         };
-        obj9.pushLazy(customInstallUrl(1896)(9583, dependencyMap.paths), obj3, closure_5);
-        const tmp22 = customInstallUrl(1896)(9583, dependencyMap.paths);
+        obj9.pushLazy(customInstallUrl(1896)(9610, dependencyMap.paths), obj3, closure_5);
+        const tmp22 = customInstallUrl(1896)(9610, dependencyMap.paths);
       }
     }
     if (null != installParams) {
@@ -137,8 +137,8 @@ export const installApplication = function installApplication(arg0) {
         }
         ModalActionCreatorsDefault.popWithKey(closure_5);
       };
-      tmp32Result.pushLazy(customInstallUrl(1896)(9583, dependencyMap.paths), obj6, closure_5);
-      const tmp10 = customInstallUrl(1896)(9583, dependencyMap.paths);
+      tmp32Result.pushLazy(customInstallUrl(1896)(9610, dependencyMap.paths), obj6, closure_5);
+      const tmp10 = customInstallUrl(1896)(9610, dependencyMap.paths);
     }
   }
 };
@@ -156,7 +156,7 @@ export const openOAuth2Modal = function openOAuth2Modal(arg0) {
     }
     ModalActionCreatorsDefault.popWithKey(closure_5);
   };
-  obj2.pushLazy(require("asyncRequireImpl")(9583, dependencyMap.paths), obj, closure_5);
+  obj2.pushLazy(require("asyncRequireImpl")(9610, dependencyMap.paths), obj, closure_5);
 };
 export const installPrivateChannelIntegration = function installPrivateChannelIntegration(arg0) {
   ({ applicationId, channelId, callback } = arg0);
@@ -175,5 +175,5 @@ export const installPrivateChannelIntegration = function installPrivateChannelIn
     return ModalActionCreatorsDefault.popWithKey(closure_1_5);
   };
   obj.callback = callback;
-  obj.pushLazy(asyncRequireImpl(9583, dependencyMap.paths), obj, closure_5);
+  obj.pushLazy(asyncRequireImpl(9610, dependencyMap.paths), obj, closure_5);
 };

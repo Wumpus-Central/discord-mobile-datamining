@@ -141,16 +141,6 @@ const obj20 = {
   },
 };
 const apexExperiment10 = ApexExperiment.createApexExperiment(obj20);
-const apexExperiment11 = ApexExperiment.createApexExperiment({
-  name: "2026-07-quest-bar-secondary-cta",
-  kind: "user",
-  defaultConfig: { enabled: false, showPlayInstantlyLabel: false },
-  variations: {
-    0: { enabled: false, showPlayInstantlyLabel: false },
-    1: { enabled: true, showPlayInstantlyLabel: false },
-    2: { enabled: true, showPlayInstantlyLabel: true },
-  },
-});
 const result = size.fileFinishedImporting("modules/quests/experiments/index.tsx");
 
 export const VideoEndCardV2Experiment = apexExperiment;
@@ -179,4 +169,3 @@ export const QuestHomeTileRedesignExperiment = apexExperiment8;
 export const BountyStaleRefreshQuestHomeExperiment = apexExperiment9;
 export const QuestHomeLayoutVisualTweakVariant = obj19;
 export const QuestHomeLayoutVisualTweaksExperiment = apexExperiment10;
-export const QuestBarSecondaryCtaExperiment = apexExperiment11;

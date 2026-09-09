@@ -30,7 +30,7 @@ const Constants = fn(1074);
 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12, Fragment: map1 } = jsxProd);
-fn(4560);
+fn(4574);
 let createStyles = { form: null, trailingWrapper: null, platformIcon: null };
 createStyles = { paddingTop: nativeDefault.space.PX_16 };
 createStyles.form = createStyles;
@@ -200,7 +200,7 @@ export default function GuildSettingsModalIntegrationPlatform(platformType) {
       obj.saveGuild(guild.id, obj);
     }
   }
-  let obj = platformType(4262);
+  let obj = platformType(4275);
   const token = obj.useToken(closeGuildSettings(576).modules.mobile.TABLE_ROW_PADDING);
   const tmp5 = closure_14();
   dependencyMap = tmp5;
@@ -215,7 +215,7 @@ export default function GuildSettingsModalIntegrationPlatform(platformType) {
   }));
   const submitting = stateFromStoresObject.submitting;
   ({ hasChanges: c5, guild } = stateFromStoresObject);
-  const theme = closeGuildSettings(4495)();
+  const theme = closeGuildSettings(4509)();
   let obj4 = platformType(504);
   const items1 = [guild];
   const stateFromStores = obj4.useStateFromStores(items1, () => guild.getProps().integrations);
@@ -230,7 +230,7 @@ export default function GuildSettingsModalIntegrationPlatform(platformType) {
       fn = () => null;
     }
     obj = { headerLeft: fn, title: null, headerRight: null };
-    let tmp3Result = tmp3(5283);
+    let tmp3Result = tmp3(5297);
     value = tmp3Result.get(platformType);
     let name;
     if (value != null) {
@@ -297,10 +297,10 @@ export default function GuildSettingsModalIntegrationPlatform(platformType) {
     const obj5 = { children: null };
     const items2 = [mapped];
     const obj6 = { variant: "text-sm/medium", color: "text-muted", children: formatResult };
-    items2[1] = closure_11(tmp(4556).Text, obj6);
+    items2[1] = closure_11(tmp(4570).Text, obj6);
     obj3.children = items2;
-    obj2.children = closure_12(tmp(4973).Stack, obj3);
-    const items3 = [closure_11(tmp(8598).Form, obj2), closure_11(tmp(7040).NavScrim, {})];
+    obj2.children = closure_12(tmp(4987).Stack, obj3);
+    const items3 = [closure_11(tmp(8626).Form, obj2), closure_11(tmp(7054).NavScrim, {})];
     obj5.children = items3;
     return closure_12(closure_13, obj5);
   }

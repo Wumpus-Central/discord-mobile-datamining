@@ -17,10 +17,10 @@ export default function computeGlobalSpoilerDisplay(arg0, arg1) {
     return false;
   }
 }
-export const useShouldDisplaySpoilerObscurity = function useShouldDisplaySpoilerObscurity(channel) {
-  _require = channel;
+export const useShouldDisplaySpoilerObscurity = function useShouldDisplaySpoilerObscurity(stateFromStores) {
+  _require = stateFromStores;
   const items = [PermissionStore];
-  const stateFromStores = require("useStateFromStores").useStateFromStores(items, () =>
+  stateFromStores = require("useStateFromStores").useStateFromStores(items, () =>
     PermissionStore.can(constants.MANAGE_MESSAGES, closure_0),
   );
   const RenderSpoilers = require("UserSettings").RenderSpoilers;

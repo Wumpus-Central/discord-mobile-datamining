@@ -13,7 +13,7 @@ import AccessibilityStore from "../../../../a11y/AccessibilityStore.tsx";
 
 require = fn;
 let jsx = fn(21).jsx;
-fn(4560);
+fn(4574);
 let createStyles = { iconWrapper: null };
 createStyles = { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE };
 createStyles.iconWrapper = createStyles;
@@ -99,7 +99,7 @@ export default function AppLauncherUserOption(option) {
       onActionSheetDismiss,
     };
     obj2.openLazy(
-      asyncRequireImpl(12189, dependencyMap.paths),
+      asyncRequireImpl(12215, dependencyMap.paths),
       AppLauncherUserListActionSheet.APP_LAUNCHER_USER_LIST_ACTION_SHEET_KEY,
       obj,
     );
@@ -109,7 +109,7 @@ export default function AppLauncherUserOption(option) {
     let tmp9Result = tmp9(tmp2(1178).Avatar, obj);
   } else {
     const obj1 = {
-      icon: tmp9(tmp2(10922).UserCircleIcon, { size: "sm", color: "interactive-text-default" }),
+      icon: tmp9(tmp2(10949).UserCircleIcon, { size: "sm", color: "interactive-text-default" }),
       wrapperStyle: tmp.iconWrapper,
     };
     tmp9Result = tmp9(AppLauncherOptionIconDefault, obj1);
@@ -123,7 +123,7 @@ export default function AppLauncherUserOption(option) {
     tmp9Result = null;
     if (null != tmp6) {
       const obj3 = { variant: "text-md/medium", color: "text-default", children: tmp6 };
-      tmp9Result = tmp9(tmp2(4556).Text, obj3);
+      tmp9Result = tmp9(tmp2(4570).Text, obj3);
     }
   }
   obj.selectedItemName = tmp9Result;

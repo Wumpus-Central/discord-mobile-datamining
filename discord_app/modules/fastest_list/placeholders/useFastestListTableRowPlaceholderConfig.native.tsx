@@ -4,7 +4,7 @@ import FastestListPropsPlaceholder from "../props/FastestListPropsPlaceholder.ts
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
-fn(4560);
+fn(4574);
 let createStyles = { placeholder: null, placeholderAvatar: null, placeholderUsername: null, placeholderDivider: null };
 createStyles = { backgroundColor: nativeDefault.colors.CARD_BACKGROUND_DEFAULT };
 createStyles.placeholder = createStyles;
@@ -25,7 +25,7 @@ const obj1 = {
   borderRadius: nativeDefault.radii.md,
   backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED,
 };
-createStyles.placeholderDivider = { backgroundColor: fn(5441).DIVIDER_BACKGROUND };
+createStyles.placeholderDivider = { backgroundColor: fn(5455).DIVIDER_BACKGROUND };
 createStyles = createStyles.createStyles(createStyles);
 size = fn(2);
 const result = size.fileFinishedImporting(

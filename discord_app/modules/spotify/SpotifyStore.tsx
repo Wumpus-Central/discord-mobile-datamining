@@ -76,7 +76,7 @@ function upsertAccount(accountId, accessToken) {
     }, closure_29);
     obj.accountId = accountId;
     obj.accessToken = accessToken;
-    const interval = new obj(4447).Interval();
+    const interval = new obj(4461).Interval();
     obj.pingInterval = interval;
     const tmp14 = new BackoffDefault(undefined, MINUTE);
     obj.backoff = tmp14;
@@ -528,7 +528,7 @@ function updatePlayerState(accountId, arg1, device) {
     }
   }
 }
-const SpotifyConstants = fn(8340);
+const SpotifyConstants = fn(8368);
 ({
   getSpotifyResourceType: map1,
   isSpotifyParty: closure_14,
@@ -553,11 +553,11 @@ const message = "message";
 const ping = "ping";
 const single = "single";
 const logger = new LoggerDefault("Spotify");
-const timeout = new fn(4447).Timeout();
-const timeout1 = new fn(4447).Timeout();
-const timeout2 = new fn(4447).Timeout();
-const timeout3 = new fn(4447).Timeout();
-const timeout4 = new fn(4447).Timeout();
+const timeout = new fn(4461).Timeout();
+const timeout1 = new fn(4461).Timeout();
+const timeout2 = new fn(4461).Timeout();
+const timeout3 = new fn(4461).Timeout();
+const timeout4 = new fn(4461).Timeout();
 const dependencyMap = {};
 const dependencyMap2 = {};
 const dependencyMap3 = {};
@@ -646,7 +646,7 @@ prototype["connect"] = function connect() {
     ({ accountId, accessToken } = self);
     closure_129_0 = accountId;
     closure_129_1 = accessToken;
-    const SpotifyAPI = self(11756).SpotifyAPI;
+    const SpotifyAPI = self(11782).SpotifyAPI;
     const request = { url: constants.PLAYER, query: null, onlyRetryOnAuthorizationErrors: true };
     const obj = { additional_types: null };
     const _HermesInternal = HermesInternal;
@@ -1335,7 +1335,7 @@ const spotifyStore = new SpotifyStore(DispatcherDefault, {
           }
         }
         timeout1.start(100, () => closure_1_35.stop(), false);
-        obj9 = device(9483);
+        obj9 = device(9510);
       }
       if (null != tmp10) {
         if (!tmp22) {

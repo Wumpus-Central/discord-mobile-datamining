@@ -8,7 +8,7 @@ import ChangeNicknameActionCreatorsDefault from "../../actions/ChangeNicknameAct
 import _slicedToArray from "../../../_runtime/metro/00032__.js";
 import EmojiStore from "../emojis/EmojiStore.tsx";
 import MessageStore from "../../stores/MessageStore.tsx";
-import t from "../../../_runtime/metro/04257__.js";
+import t from "../../../_runtime/metro/04270__.js";
 
 require = fn;
 const Constants = fn(1074);

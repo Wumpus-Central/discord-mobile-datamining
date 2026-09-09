@@ -157,8 +157,8 @@ function EditSection(navigateToProfileCustomization) {
 get_ActivityIndicator = fn(17);
 ({ ScrollView: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
 const useIsContentShown = fn(1949).useIsContentShown;
-let UserProfileSections = fn(8183).UserProfileSections;
-const UserProfileThemeTypes = fn(7208).UserProfileThemeTypes;
+let UserProfileSections = fn(8209).UserProfileSections;
+const UserProfileThemeTypes = fn(7222).UserProfileThemeTypes;
 const ContentDismissActionType = fn(1954).ContentDismissActionType;
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14, Fragment: closure_15 } = jsxProd);
@@ -449,7 +449,7 @@ export default function YouScreenUserProfileContent(user) {
             initialTab === UserProfileSections.WISHLIST ? UserProfileSections.WISHLIST : UserProfileSections.MAIN,
           );
           ref.current(num, false, true);
-          navigation.setParams({ initialTab: "Array" });
+          navigation.setParams({ initialTab: "disabled" });
         }, 80);
       }
       return () => {

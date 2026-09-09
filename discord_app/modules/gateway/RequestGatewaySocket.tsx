@@ -133,7 +133,7 @@ export const startBridgeTo = function startBridgeTo(arg0) {
     num = 0;
   }
   let result = map.set(combined, num + 1);
-  combined(7472).requestSafeIdleCallback(
+  combined(7486).requestSafeIdleCallback(
     () => {
       let obj = map;
       if (map.has(combined)) {
@@ -156,7 +156,7 @@ export const startBridgeTo = function startBridgeTo(arg0) {
     },
     { timeout: 5000 },
   );
-  let obj2 = combined(7472);
+  let obj2 = combined(7486);
 };
 export { stopRequest };
 export const withRequest = function withRequest() {

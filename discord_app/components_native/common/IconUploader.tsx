@@ -3,7 +3,7 @@ import util from "../../intl/index.native.tsx";
 import AvatarUtils from "../../utils/AvatarUtils.tsx";
 import Pressables from "../../design/void/Pressables/native/Pressables.tsx";
 import GuildIcon from "../../modules/guild/native/GuildIcon.tsx";
-import _modDef10934 from "../../../_runtime/metro/10934__.js";
+import _modDef10961 from "../../../_runtime/metro/10961__.js";
 import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
 import noop from "../../../_runtime/metro/00019__.js";
 
@@ -15,7 +15,7 @@ get_ActivityIndicator = fn(17);
 const UPLOAD_MEDIUM_SIZE = fn(1074).UPLOAD_MEDIUM_SIZE;
 const jsxProd = fn(21);
 ({ jsx: closure_8, Fragment: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(4560);
+const createStyles = fn(4574);
 let closure_11 = createStyles.createStyles({
   uploadIcon: { position: "absolute", right: -7, top: -7 },
   avatar: { height: 64, width: 64, borderRadius: 32 },
@@ -125,7 +125,7 @@ export default function IconUploader(disabled) {
   const items1 = [tmp7];
   let tmp16 = null;
   if (!flag) {
-    obj1 = { style: tmp.uploadIcon, source: _modDef10934 };
+    obj1 = { style: tmp.uploadIcon, source: _modDef10961 };
     tmp16 = closure_8(closure_6, obj1);
   }
   items1[1] = tmp16;

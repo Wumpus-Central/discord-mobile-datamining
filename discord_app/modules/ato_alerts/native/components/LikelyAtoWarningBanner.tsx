@@ -96,13 +96,13 @@ class LikelyAtoWarningBanner {
       };
       const intl = util.intl;
       obj.description = intl.string(util.t["/uid3p"]);
-      const tmp = asyncRequireImpl(11380, dependencyMap.paths);
+      const tmp = asyncRequireImpl(11407, dependencyMap.paths);
       obj.safetyTips = hasOwnProperty().map((children, index) => {
         let obj = { children: null };
         obj = { variant: "text-md/medium", color: "mobile-text-heading-primary", children: children.title };
-        const items = [closure_1_10(channelId(4556).Text, obj, index)];
+        const items = [closure_1_10(channelId(4570).Text, obj, index)];
         obj = { variant: "text-xs/medium", color: "text-subtle", children: children.description };
-        items[1] = closure_1_10(channelId(4556).Text, obj, index);
+        items[1] = closure_1_10(channelId(4570).Text, obj, index);
         obj.children = items;
         return closure_1_12(closure_1_11, obj);
       });
@@ -142,8 +142,8 @@ class LikelyAtoWarningBanner {
     return jsx(tmp3, obj);
   }
 }
-const SafetyWarningTypes = fn(10920).SafetyWarningTypes;
-const Constants = fn(11374);
+const SafetyWarningTypes = fn(10947).SafetyWarningTypes;
+const Constants = fn(11401);
 ({
   getLikelyAtoMoreTips: hasOwnProperty,
   LIKELY_ATO_MORE_TIPS_MODAL_KEY: metroRequire,
@@ -153,7 +153,7 @@ const AnalyticEvents = fn(1074).AnalyticEvents;
 const MuteUntilSeconds = fn(1084).MuteUntilSeconds;
 const jsxProd = fn(21);
 ({ jsx: c10, Fragment: closure_11, jsxs: closure_12 } = jsxProd);
-fn(4560);
+fn(4574);
 let createStyles = { moreTipsHeader: null };
 createStyles = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, shadowColor: "transparent" };
 createStyles.moreTipsHeader = createStyles;

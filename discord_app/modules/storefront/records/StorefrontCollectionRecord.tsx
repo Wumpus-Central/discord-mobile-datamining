@@ -2,7 +2,7 @@
 import CollectiblesStoreListingStylesRecord from "../../collectibles/records/CollectiblesStoreListingStylesRecord.tsx";
 import StorefrontProductRecord from "StorefrontProductRecord.tsx";
 
-const AssetDisplayConfigRecord = fn(7555).AssetDisplayConfigRecord;
+const AssetDisplayConfigRecord = fn(7569).AssetDisplayConfigRecord;
 const prototype = function StorefrontCollectionRecord(arg0) {
   ({
     id: tmp.id,

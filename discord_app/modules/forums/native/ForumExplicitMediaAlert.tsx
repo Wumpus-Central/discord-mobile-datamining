@@ -7,7 +7,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-fn(4560);
+fn(4574);
 let createStyles = { container: null, title: null, body: null, buttonContainer: null, text: null };
 createStyles = { padding: nativeDefault.space.PX_16, alignItems: "stretch" };
 createStyles.container = createStyles;

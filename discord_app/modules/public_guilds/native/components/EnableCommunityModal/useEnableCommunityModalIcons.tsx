@@ -17,9 +17,9 @@ const prototype = EnableCommunityModalIcons.prototype;
 Object.defineProperty(prototype, "safetyCheck", {
   get: function safetyCheck() {
     if (obj.isThemeDark(this.theme)) {
-      let tmpResult = require("../../../../../../_runtime/metro/17670__.js");
+      let tmpResult = require("../../../../../../_runtime/metro/17703__.js");
     } else {
-      tmpResult = require("../../../../../../_runtime/metro/17671__.js");
+      tmpResult = require("../../../../../../_runtime/metro/17704__.js");
     }
     return tmpResult;
   },
@@ -34,9 +34,9 @@ Object.defineProperty(prototype, "channelSetup", {
 Object.defineProperty(prototype, "finishingTouches", {
   get: function finishingTouches() {
     if (obj.isThemeDark(this.theme)) {
-      let tmpResult = require("../../../../../../_runtime/metro/17676__.js");
+      let tmpResult = require("../../../../../../_runtime/metro/17709__.js");
     } else {
-      tmpResult = require("../../../../../../_runtime/metro/17677__.js");
+      tmpResult = require("../../../../../../_runtime/metro/17710__.js");
     }
     return tmpResult;
   },
@@ -44,7 +44,7 @@ Object.defineProperty(prototype, "finishingTouches", {
 });
 Object.defineProperty(prototype, "close", {
   get: function close() {
-    return require("../../../../../../_runtime/metro/06992__.js");
+    return require("../../../../../../_runtime/metro/07006__.js");
   },
   set: undefined,
 });

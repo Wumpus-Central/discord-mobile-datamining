@@ -591,11 +591,11 @@ prototype["scheduleSaveFromOfflineEdit"] = function scheduleSaveFromOfflineEdit(
 };
 function updateUserAllGuildSettings(arg0, INFREQUENT_USER_ACTION) {
   closure_0 = arg0;
-  return obj.updateAsync("guilds", async (arg0) => f74627(arg0), INFREQUENT_USER_ACTION);
+  return obj.updateAsync("guilds", async (arg0) => f74742(arg0), INFREQUENT_USER_ACTION);
 }
 function setGuildThemeSourcePreferenceOverride(id, arg1) {
   closure_0 = id;
-  const f74617 = (arg0) => {
+  const f74732 = (arg0) => {
     arg0.guildThemeSourcePreference = guildThemeSourcePreference;
   };
   return obj.updateAsync(
@@ -971,7 +971,7 @@ export const clearGuildThemeSourcePreferenceOverride = function clearGuildThemeS
   guildThemeSourcePreference,
 ) {
   guildThemeSourcePreference = guildThemeSourcePreference(1187).GuildThemeSourcePreference.UNSPECIFIED;
-  const f74617 = (arg0) => {
+  const f74732 = (arg0) => {
     arg0.guildThemeSourcePreference = guildThemeSourcePreference;
   };
   return obj.updateAsync(
@@ -1070,7 +1070,7 @@ export const removeDismissedRecurringContent = function removeDismissedRecurring
   });
 };
 export const clearGuildDismissedContents = function clearGuildDismissedContents() {
-  const f74627 = (guilds) => {
+  const f74742 = (guilds) => {
     if (null != guilds.guilds) {
       const _Object = Object;
       const values = Object.values(guilds.guilds);
@@ -1087,7 +1087,7 @@ export const clearGuildDismissedContents = function clearGuildDismissedContents(
       }
     }
   };
-  return obj.updateAsync("guilds", async (arg0) => f74627(arg0), UserSettingsDelay.INFREQUENT_USER_ACTION);
+  return obj.updateAsync("guilds", async (arg0) => f74742(arg0), UserSettingsDelay.INFREQUENT_USER_ACTION);
 };
 export const clearDismissedContents = function clearDismissedContents() {
   return obj.updateAsync(

@@ -4,17 +4,17 @@ import router_utils from "../../../routing/router_utils.tsx";
 import asyncRequireImpl from "../../../../../_runtime/01896_asyncRequireImpl.js";
 import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import BaseChannelItemDefault from "../../../guild_sidebar/native/BaseChannelItem.tsx";
-import _modDef12783 from "../../../../../_runtime/metro/12783__.js";
+import _modDef12809 from "../../../../../_runtime/metro/12809__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const Routes = fn(1074).Routes;
 const StaticChannelRoute = fn(1964).StaticChannelRoute;
 const jsx = fn(21).jsx;
-fn(4560);
+fn(4574);
 let createStyles = { container: null };
 createStyles = {
-  marginVertical: fn(10123).CHANNEL_MARGIN_VERTICAL,
+  marginVertical: fn(10150).CHANNEL_MARGIN_VERTICAL,
   marginHorizontal: 8,
   borderRadius: nativeDefault.radii.md,
 };
@@ -41,9 +41,9 @@ export default function GuildRoleSubscriptionsRow(selected) {
         c1(dependencyMap[8]).hideActionSheet(closure_1_1);
       },
     };
-    obj.openLazy(asyncRequireImpl(16209, dependencyMap.paths), c1, obj);
+    obj.openLazy(asyncRequireImpl(16239, dependencyMap.paths), c1, obj);
   }, items1);
-  const ChannelModes = id(12383).ChannelModes;
+  const ChannelModes = id(12409).ChannelModes;
   if (selected) {
     let DEFAULT = ChannelModes.SELECTED;
     let tmp6 = tmp4;
@@ -71,8 +71,8 @@ export default function GuildRoleSubscriptionsRow(selected) {
   const intl2 = tmp6(1114).intl;
   obj.name = intl2.string(tmp6(1114).t["KzCF/6"]);
   obj.mode = DEFAULT;
-  obj.name = jsx(tmp6(12383).BaseChannelName, { name: null, mode: null });
-  obj = { disableColor: true, mode: DEFAULT, source: _modDef12783 };
-  obj.icon = jsx(tmp6(12383).BaseChannelIcon, { disableColor: true, mode: DEFAULT, source: _modDef12783 });
-  return jsx(BaseChannelItemDefault, { disableColor: true, mode: DEFAULT, source: _modDef12783 });
+  obj.name = jsx(tmp6(12409).BaseChannelName, { name: null, mode: null });
+  obj = { disableColor: true, mode: DEFAULT, source: _modDef12809 };
+  obj.icon = jsx(tmp6(12409).BaseChannelIcon, { disableColor: true, mode: DEFAULT, source: _modDef12809 });
+  return jsx(BaseChannelItemDefault, { disableColor: true, mode: DEFAULT, source: _modDef12809 });
 }

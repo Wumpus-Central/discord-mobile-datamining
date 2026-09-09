@@ -12,7 +12,7 @@ require = fn;
 const Constants = fn(1074);
 ({ HelpdeskArticles: c3, MarketingURLs: closure_4 } = Constants);
 const jsx = fn(21).jsx;
-fn(4560);
+fn(4574);
 let createStyles = { disclaimer: null };
 createStyles = { marginTop: nativeDefault.space.PX_12, textAlign: "center" };
 createStyles.disclaimer = createStyles;
@@ -59,7 +59,7 @@ export default function BuyNitroPurchaseButtonLegalDisclaimer(arg0) {
         const tmp6 = tmp3Result.isAndroid() ? t.COObWR : t["7wpqfj"];
       }
       const obj1 = { style: tmp.disclaimer, variant: "text-xxs/medium", children: formatResult };
-      jsx(tmp10(4556).Text, { style: tmp.disclaimer, variant: "text-xxs/medium", children: formatResult });
+      jsx(tmp10(4570).Text, { style: tmp.disclaimer, variant: "text-xxs/medium", children: formatResult });
     }
     const tmp3Result1 = PlatformUtils;
     const isAndroidResult1 = PlatformUtils.isAndroid();

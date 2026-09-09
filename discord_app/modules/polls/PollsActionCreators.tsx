@@ -187,7 +187,7 @@ let closure_23 = async function _optimisticallySetAnswers(arg0) {
           obj = { id, name: id };
           obj.emoji = obj;
           obj.userId = userId;
-          obj.reactionType = channelId(7763).ReactionTypes.VOTE;
+          obj.reactionType = channelId(7777).ReactionTypes.VOTE;
           dispatchResult = obj.dispatch(obj);
           continue;
         }
@@ -745,7 +745,7 @@ let closure_28 = async function _createPoll(arg0) {
               tmp2 = items;
             }
             poll_media = { attachment_ids: tmp2 };
-            if (closure_1_5 === guildId(11725).PollLayoutTypes.DEFAULT) {
+            if (closure_1_5 === guildId(11751).PollLayoutTypes.DEFAULT) {
               let trimmed;
               if (text.text != null) {
                 trimmed = str2.trim();
@@ -781,7 +781,7 @@ let closure_28 = async function _createPoll(arg0) {
             attachmentsToUpload: uploads,
             scheduledTimestamp: closure_129_7,
             onAttachmentUploadError(file, code, reason) {
-              guildId(9314);
+              guildId(9341);
               const obj = { file, guildId: guildId.getGuildId(), analyticsLocations: [], code, reason };
               const result = obj.handleUploadMessageAttachmentsErrors(obj);
             },
@@ -877,8 +877,8 @@ let closure_29 = async function _endPollEarly(arg0) {
   ({ channelId: closure_129_0, messageId: closure_129_1 } = closure_0);
   return "PX_16";
 };
-const DraftType = fn(4901).DraftType;
-const PollsInteractionStore = fn(11432);
+const DraftType = fn(4915).DraftType;
+const PollsInteractionStore = fn(11459);
 ({ getPollState: map1, updatePollState: closure_14 } = PollsInteractionStore);
 const Constants = fn(1074);
 ({ AnalyticEvents: closure_15, JoinGuildSources: closure_16 } = Constants);

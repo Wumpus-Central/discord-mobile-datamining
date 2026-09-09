@@ -12,7 +12,7 @@ get_ActivityIndicator = fn(17);
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
 let closure_6 = {};
-fn(4560);
+fn(4574);
 let createStyles = {
   fill: StyleSheet.absoluteFillObject,
   backdrop: null,

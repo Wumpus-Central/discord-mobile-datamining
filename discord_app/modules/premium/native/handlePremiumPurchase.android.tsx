@@ -126,7 +126,7 @@ let closure_15 = async function _validatePurchase(arg0) {
   }
 };
 let closure_3 = ["succeededOnlyFields"];
-const setGPlayAnalytics = fn(9373).setGPlayAnalytics;
+const setGPlayAnalytics = fn(9400).setGPlayAnalytics;
 const Constants = fn(1074);
 ({ AnalyticEvents: closure_11, Endpoints: closure_12 } = Constants);
 const PaymentGateways = fn(1085).PaymentGateways;
@@ -218,14 +218,14 @@ export const useHandlePremiumPurchase = function useHandlePremiumPurchase() {
           }
           if (null != offerIds) {
             if (null != arg2) {
-              const tmp13 = premiumSubscription(7240).TrialIdToProductOfferId[arg2.trialId];
+              const tmp13 = premiumSubscription(7254).TrialIdToProductOfferId[arg2.trialId];
               let tmp14;
               if (tmp13 != null) {
                 tmp14 = tmp13[arg0];
               }
               return tmp14;
             } else if (null != dependencyMap) {
-              const tmp9 = premiumSubscription(7240).DiscountIdToProductOfferId[dependencyMap.discountId];
+              const tmp9 = premiumSubscription(7254).DiscountIdToProductOfferId[dependencyMap.discountId];
               let tmp10;
               if (tmp9 != null) {
                 tmp10 = tmp9[arg0];
@@ -236,8 +236,8 @@ export const useHandlePremiumPurchase = function useHandlePremiumPurchase() {
           let BOGO_OFFER_ID = null;
           if (arg1) {
             BOGO_OFFER_ID = null;
-            if (arg0 === premiumSubscription(7240).ProductIds.PREMIUM_TIER_2_MONTHLY) {
-              BOGO_OFFER_ID = premiumSubscription(7240).BOGO_OFFER_ID;
+            if (arg0 === premiumSubscription(7254).ProductIds.PREMIUM_TIER_2_MONTHLY) {
+              BOGO_OFFER_ID = premiumSubscription(7254).BOGO_OFFER_ID;
             }
           }
           return BOGO_OFFER_ID;
@@ -339,16 +339,16 @@ export const useHandlePremiumPurchase = function useHandlePremiumPurchase() {
       const result1 = obj11.captureBillingException(closure_130_23);
       (function showPurchaseErrorModal(combined) {
         let billingError = combined;
-        if (!(combined instanceof premiumSubscription(4461).BillingError)) {
-          billingError = new premiumSubscription(4461).BillingError(combined);
+        if (!(combined instanceof premiumSubscription(4475).BillingError)) {
+          billingError = new premiumSubscription(4475).BillingError(combined);
         }
-        let tmpResult = premiumSubscription(10710);
+        let tmpResult = premiumSubscription(10737);
         if (tmpResult.isSpendingLimitError(billingError)) {
-          tmpResult = premiumSubscription(10710);
+          tmpResult = premiumSubscription(10737);
           const result = tmpResult.showSpendingLimitReachedAlert();
         } else {
           const intl = premiumSubscription(1114).intl;
-          let tmp8 = billingError.code !== premiumSubscription(4240).ErrorCodes.UNKNOWN;
+          let tmp8 = billingError.code !== premiumSubscription(4253).ErrorCodes.UNKNOWN;
           if (tmp8) {
             tmp8 = -1 !== billingError.code;
           }
@@ -364,8 +364,8 @@ export const useHandlePremiumPurchase = function useHandlePremiumPurchase() {
           const intl2 = premiumSubscription(1114).intl;
           obj.title = intl2.string(premiumSubscription(1114).t["U+H+kd"]);
           obj.body = message;
-          closure_1_1(4904).show(obj);
-          const obj2 = closure_1_1(4904);
+          closure_1_1(4918).show(obj);
+          const obj2 = closure_1_1(4918);
         }
       })(closure_130_23);
       if (closure_130_23 instanceof premiumTrialOffer(premiumDiscountOffer[10])) {

@@ -8,7 +8,7 @@ let result = size.fileFinishedImporting("modules/user_profile/native/openUserCon
 export default function openUserContextMenuCommands(analyticsLocations) {
   analyticsLocations = analyticsLocations.analyticsLocations;
   ({ userId, selectedChannel, showUserProfile } = analyticsLocations);
-  let obj = analyticsLocations(8191);
+  let obj = analyticsLocations(8217);
   const result = obj.trackUserProfileAction({ action: "PRESS_VIEW_APP_COMMANDS", analyticsLocations });
   ActionSheetActionCreatorsDefault.hideAllActionSheets();
   obj = {
@@ -21,5 +21,5 @@ export default function openUserContextMenuCommands(analyticsLocations) {
       return obj.trackUserProfileAction(obj);
     },
   };
-  const result1 = analyticsLocations(4417).navigateToContextMenuCommands(obj);
+  const result1 = analyticsLocations(4431).navigateToContextMenuCommands(obj);
 }

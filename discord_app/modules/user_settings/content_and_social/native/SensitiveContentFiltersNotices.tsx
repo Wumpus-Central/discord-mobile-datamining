@@ -7,7 +7,7 @@ import SafetySettingsNoticeDefault from "../../../safety_common/native/SafetySet
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const SafetySettingsNoticeType = fn(8399).SafetySettingsNoticeType;
+const SafetySettingsNoticeType = fn(8427).SafetySettingsNoticeType;
 const jsx = fn(21).jsx;
 const size = fn(2);
 let result = size.fileFinishedImporting(

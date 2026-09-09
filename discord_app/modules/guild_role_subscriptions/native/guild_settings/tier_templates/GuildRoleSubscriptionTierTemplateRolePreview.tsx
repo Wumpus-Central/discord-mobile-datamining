@@ -15,7 +15,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-fn(4560);
+fn(4574);
 let createStyles = { container: null, avatar: null, content: null, contextRow: null };
 createStyles = {
   flexDirection: "row",
@@ -63,7 +63,7 @@ export const GuildRoleSubscriptionRolePreview = function GuildRoleSubscriptionRo
   const items3 = [
     timestampProducer(Text_Text.Text, obj3),
     timestampProducer(native.Spacer, { size: 4 }),
-    timestampProducer(RoleIconDefault, { name: roleName, source: { uri: roleImage }, size: 16 }),
+    timestampProducer(RoleIconDefault, { name: roleName, src: roleImage, size: 16 }),
     timestampProducer(native.Spacer, { size: 8 }),
     timestampProducer(Text_Text.Text, { variant: "text-xs/medium", color: "text-muted", children: "4:20 PM" }),
   ];

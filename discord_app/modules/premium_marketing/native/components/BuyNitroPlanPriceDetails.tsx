@@ -10,7 +10,7 @@ const PremiumConstants = fn(1373);
 const CurrencyCodes = fn(1085).CurrencyCodes;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-fn(4560);
+fn(4574);
 let createStyles = { container: null, centeredText: null };
 createStyles = { gap: nativeDefault.space.PX_4 };
 createStyles.container = createStyles;
@@ -47,7 +47,7 @@ export default function BuyNitroPlanPriceDetails(centered) {
   value = priceStringByProductId.get(item.productId);
   if (null != trialTier) {
     if (item.premiumTier === trialTier) {
-      let tmp2Result = item(7234);
+      let tmp2Result = item(7248);
       obj = { style: tmp.container, children: null };
       obj = { variant: "text-xs/semibold", color: "text-default", style: centeredText, children: null };
       const intl3 = item(1114).intl;
@@ -55,7 +55,7 @@ export default function BuyNitroPlanPriceDetails(centered) {
         price: tmp2Result.formatPrice(0, stateFromStores, { minimumFractionDigits: 0, maximumFractionDigits: 0 }),
       };
       obj.children = intl3.formatToPlainString(item(1114).t.hXcaLT, obj1);
-      const items1 = [closure_7(item(4556).Text, obj)];
+      const items1 = [closure_7(item(4570).Text, obj)];
       if (null == value) {
         items1[1] = tmp17;
         obj.children = items1;
@@ -71,7 +71,7 @@ export default function BuyNitroPlanPriceDetails(centered) {
         const obj3 = { price: value };
         formatToPlainStringResult = intl4.formatToPlainString(v9QeON, obj3);
         obj2.children = formatToPlainStringResult;
-        closure_7(item(4556).Text, obj2);
+        closure_7(item(4570).Text, obj2);
       }
       const formatPriceResult = tmp2Result.formatPrice(0, stateFromStores, {
         minimumFractionDigits: 0,
@@ -88,11 +88,11 @@ export default function BuyNitroPlanPriceDetails(centered) {
       if (num == null) {
         num = 1;
       }
-      tmp2Result = item(7234);
+      tmp2Result = item(7248);
       let formatRateResult1 = null;
       if (null != value) {
-        formatRateResult1 = item(7234).formatRate(value, item.interval, num);
-        const tmp2Result1 = item(7234);
+        formatRateResult1 = item(7248).formatRate(value, item.interval, num);
+        const tmp2Result1 = item(7248);
       }
       const obj4 = { style: tmp.container, children: null };
       const obj5 = { variant: "text-xs/semibold", color: "text-default", style: centeredText, children: null };
@@ -102,14 +102,14 @@ export default function BuyNitroPlanPriceDetails(centered) {
         numMonths: discounted.numMonths,
       };
       obj5.children = intl.formatToPlainString(item(1114).t["02Gmgm"], obj6);
-      const items2 = [closure_7(item(4556).Text, obj5)];
+      const items2 = [closure_7(item(4570).Text, obj5)];
       let tmp11Result = null != formatRateResult1;
       if (tmp11Result) {
         const obj7 = { variant: "text-xs/medium", color: "text-subtle", style: centeredText, children: null };
         const intl2 = item(1114).intl;
         const obj8 = { regularPrice: formatRateResult1, numMonths: discounted.numMonths };
         obj7.children = intl2.formatToPlainString(item(1114).t["vZk+c/"], obj8);
-        tmp11Result = closure_7(item(4556).Text, obj7);
+        tmp11Result = closure_7(item(4570).Text, obj7);
       }
       items2[1] = tmp11Result;
       obj4.children = items2;

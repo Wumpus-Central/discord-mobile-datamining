@@ -17,7 +17,7 @@ const Constants = fn(1074);
 ({ AnalyticEvents: c10, AnalyticsObjects: closure_11 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1, Fragment: closure_14 } = jsxProd);
-fn(4560);
+fn(4574);
 let createStyles = {
   soundPresentation: null,
   soundPresentationPlaying: null,

@@ -20,7 +20,7 @@ export default {
     obj = { type, guild_id: guildId };
     AnalyticsUtilsDefault.track(AnalyticEvents.OPEN_MODAL, obj);
     obj = { guildId, onClose: connect };
-    ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(5571, dependencyMap.paths), obj, React4);
+    ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(5585, dependencyMap.paths), obj, React4);
   },
   closeMemberVerificationModal() {
     let flag = arg0;

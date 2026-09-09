@@ -11,7 +11,7 @@ import ModalActionCreatorsDefault from "../../../actions/ModalActionCreators.tsx
 import setAccessibilityFocus from "../../a11y/native/setAccessibilityFocus.android.tsx";
 import Pressables from "../../../design/void/Pressables/native/Pressables.tsx";
 import NavigatorHeader from "../../../design/components/Navigator/native/NavigatorHeader.native.tsx";
-import _modDef6940 from "../../../../_runtime/metro/06940__.js";
+import _modDef6954 from "../../../../_runtime/metro/06954__.js";
 import maybeShowDiscardChangesAlertDefault from "../../user_settings/profiles/native/maybeShowDiscardChangesAlert.tsx";
 import setCustomStatusDefault from "../setCustomStatus.tsx";
 import removeCustomStatusDefault from "../utils/removeCustomStatus.tsx";
@@ -35,7 +35,7 @@ function ClearInputButton(onPress) {
   obj.accessibilityLabel = intl.string(util.t.VkKicb);
   obj.onPress = onPress.onPress;
   obj.hitSlop = { top: 8, bottom: 8, right: 8 };
-  obj = { source: _modDef6940, style: closure_15().closeIcon, size: native.Icon.Sizes.SMALL };
+  obj = { source: _modDef6954, style: closure_15().closeIcon, size: native.Icon.Sizes.SMALL };
   obj.children = map1(native.Icon, obj);
   return map1(Pressables.PressableOpacity, obj);
 }
@@ -122,7 +122,7 @@ function EditCustomStatusWithPreview(navigation) {
   const callback1 = obj.useCallback(() => {
     removeCustomStatusDefault();
     const timerId = setTimeout(() => {
-      const AccessibilityAnnouncer = navigation(4411).AccessibilityAnnouncer;
+      const AccessibilityAnnouncer = navigation(4425).AccessibilityAnnouncer;
       const intl = navigation(1114).intl;
       AccessibilityAnnouncer.announce(intl.string(navigation(1114).t.YdUwBS));
     }, 300);
@@ -303,7 +303,7 @@ function EditCustomStatusWithPreview(navigation) {
       obj.dismissKeyboard();
       obj = { initialValue: first2, onChange };
       ActionSheetActionCreatorsDefault.openLazy(
-        asyncRequireImpl(11206, dependencyMap.paths),
+        asyncRequireImpl(11233, dependencyMap.paths),
         "ClearAfterOptionsActionSheet",
         obj,
       );
@@ -344,13 +344,13 @@ function EditCustomStatusWithPreview(navigation) {
 }
 get_ActivityIndicator = fn(17);
 ({ ScrollView: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-const STATUS_MAX_LENGTH = fn(11120).STATUS_MAX_LENGTH;
+const STATUS_MAX_LENGTH = fn(11147).STATUS_MAX_LENGTH;
 const Constants = fn(1074);
 ({ AnalyticEvents: closure_9, AnalyticsSections: c10, NOOP: closure_11, Fonts } = Constants);
 const EmojiIntention = fn(1374).EmojiIntention;
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
-fn(4560);
+fn(4574);
 let createStyles = {
   container: { flexGrow: 1, padding: 16, rowGap: 24 },
   statusSection: { rowGap: 8 },
@@ -430,7 +430,7 @@ export default function EditCustomStatusWithPreviewModal(analyticsLocations) {
       const obj = { title: null };
       const intl = analyticsLocations(1114).intl;
       obj.title = intl.string(analyticsLocations(1114).t.Iuzg8R);
-      return closure_1_13(analyticsLocations(7863).GenericHeaderTitle, obj);
+      return closure_1_13(analyticsLocations(7877).GenericHeaderTitle, obj);
     };
     obj.headerLeft = NavigatorHeader.getHeaderCloseButton(ModalActionCreatorsDefault.pop);
     obj.render = function render(arg0, navigation) {
@@ -452,5 +452,5 @@ export default function EditCustomStatusWithPreviewModal(analyticsLocations) {
     obj = { height: 56 };
   }
   obj.headerStyle = obj;
-  return closure_13(analyticsLocations(7000).Navigator, obj);
+  return closure_13(analyticsLocations(7014).Navigator, obj);
 }

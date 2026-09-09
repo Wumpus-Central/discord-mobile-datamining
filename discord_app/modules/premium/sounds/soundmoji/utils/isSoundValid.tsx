@@ -4,7 +4,7 @@ import ChannelStore from "../../../../../stores/ChannelStore.tsx";
 import PermissionStore from "../../../../../stores/PermissionStore.tsx";
 import UserStore from "../../../../../stores/UserStore.tsx";
 
-const DEFAULT_SOUND_GUILD_ID = fn(5014).DEFAULT_SOUND_GUILD_ID;
+const DEFAULT_SOUND_GUILD_ID = fn(5028).DEFAULT_SOUND_GUILD_ID;
 const Permissions = fn(1085).Permissions;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/premium/sounds/soundmoji/utils/isSoundValid.tsx");

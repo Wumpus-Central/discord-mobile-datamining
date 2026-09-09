@@ -8,7 +8,7 @@ import UserSettingSearchStore from "../../../user_settings/UserSettingSearchStor
 require = fn;
 const StyleSheet = fn(17).StyleSheet;
 const jsx = fn(21).jsx;
-const createStyles = fn(4560);
+const createStyles = fn(4574);
 let obj = { background: null };
 obj = { backgroundColor: nativeDefault.colors.INTERACTIVE_TEXT_HOVER };
 obj.background = obj;

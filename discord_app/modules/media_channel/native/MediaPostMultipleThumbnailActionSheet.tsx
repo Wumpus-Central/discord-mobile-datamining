@@ -8,7 +8,7 @@ const View = fn(17).View;
 const ContentDismissActionType = fn(1954).ContentDismissActionType;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-fn(4560);
+fn(4574);
 let createStyles = {
   container: null,
   topContainer: null,
@@ -72,7 +72,7 @@ export default function MediaPostThumbnailActionSheet(markAsDismissed) {
   const intl = markAsDismissed(1114).intl;
   obj3.children = intl.string(markAsDismissed(1114).t.ews2pj);
   const items1 = [
-    closure_5(markAsDismissed(4556).Text, obj3),
+    closure_5(markAsDismissed(4570).Text, obj3),
     closure_5(markAsDismissed(1178).Checkbox, { selected: true }),
   ];
   obj2.children = items1;
@@ -86,12 +86,12 @@ export default function MediaPostThumbnailActionSheet(markAsDismissed) {
   };
   const intl2 = markAsDismissed(1114).intl;
   obj4.children = intl2.string(markAsDismissed(1114).t.WJisip);
-  items2[1] = closure_5(markAsDismissed(4556).Text, obj4);
+  items2[1] = closure_5(markAsDismissed(4570).Text, obj4);
   items2[2] = closure_5(markAsDismissed(1178).Spacer, { size: 12 });
   const obj5 = { variant: "text-md/normal", color: "text-default", style: tmp.description, children: null };
   const intl3 = markAsDismissed(1114).intl;
   obj5.children = intl3.string(markAsDismissed(1114).t.X6ZH6d);
-  items2[3] = closure_5(markAsDismissed(4556).Text, obj5);
+  items2[3] = closure_5(markAsDismissed(4570).Text, obj5);
   items2[4] = closure_5(markAsDismissed(1178).Spacer, { size: 48 });
   const obj6 = { text: null, grow: true, onPress: null };
   const intl4 = markAsDismissed(1114).intl;
@@ -99,9 +99,9 @@ export default function MediaPostThumbnailActionSheet(markAsDismissed) {
   obj6.onPress = function onPress() {
     return markAsDismissed(ContentDismissActionType.UNKNOWN);
   };
-  items2[5] = closure_5(markAsDismissed(4975).Button, obj6);
+  items2[5] = closure_5(markAsDismissed(4989).Button, obj6);
   obj.children = items2;
-  obj.children = closure_6(markAsDismissed(6627).BottomSheetScrollView, obj);
+  obj.children = closure_6(markAsDismissed(6641).BottomSheetScrollView, obj);
   obj.children = closure_5(View, obj);
-  return closure_5(markAsDismissed(7150).BottomSheet, obj);
+  return closure_5(markAsDismissed(7164).BottomSheet, obj);
 }

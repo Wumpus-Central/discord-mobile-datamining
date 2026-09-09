@@ -21,7 +21,7 @@ function QuestActivityButtonInner(quest) {
   let sharedValue1;
   let ref;
   let confetti;
-  let obj = quest(11488);
+  let obj = quest(11515);
   let obj1 = quest(504);
   let items = [sharedValue];
   const stateFromStores = obj1.useStateFromStores(items, () => sharedValue.useReducedMotion);
@@ -45,13 +45,13 @@ function QuestActivityButtonInner(quest) {
     if (null == enrolledAt) {
       let obj = { questId: quest.id };
       ModalActionCreatorsDefault.pushLazy(
-        asyncRequireImpl(17036, dependencyMap.paths),
+        asyncRequireImpl(17067, dependencyMap.paths),
         obj,
         QUEST_ACTIVITY_UNENROLLED_MODAL_KEY,
       );
     } else {
       obj = { questId: quest.id };
-      obj.openLazy(asyncRequireImpl(17037, dependencyMap.paths), "QuestProgressBottomSheet", obj);
+      obj.openLazy(asyncRequireImpl(17068, dependencyMap.paths), "QuestProgressBottomSheet", obj);
     }
   }, items1);
   if (quest != null) {
@@ -83,9 +83,9 @@ function QuestActivityButtonInner(quest) {
     tmp9 = null != completedAt;
   }
   closure_4 = tmp9;
-  let tmpResult = tmp(4296);
+  let tmpResult = tmp(4310);
   sharedValue = tmpResult.useSharedValue(num);
-  tmpResult = tmp(4296);
+  tmpResult = tmp(4310);
   let num2 = 0;
   if (tmp9) {
     num2 = 1;
@@ -101,7 +101,7 @@ function QuestActivityButtonInner(quest) {
   fn.__workletHash = 4459043613798;
   fn.__initData = __initData;
   const items2 = [tmp14.confetti];
-  const animatedStyle = quest(4296).useAnimatedStyle(fn);
+  const animatedStyle = quest(4310).useAnimatedStyle(fn);
   const memo = obj2.useMemo(() => {
     const obj = {};
     const merged = Object.assign(confetti.confetti);
@@ -111,7 +111,7 @@ function QuestActivityButtonInner(quest) {
     obj.transform = items;
     return obj;
   }, items2);
-  const tmpResult1 = quest(4296);
+  const tmpResult1 = quest(4310);
   const fn2 = function l() {
     return { strokeDashoffset: c2 - c2 * sharedValue.get() };
   };
@@ -119,7 +119,7 @@ function QuestActivityButtonInner(quest) {
   fn2.__workletHash = 3373122453897;
   fn2.__initData = __initData2;
   const items3 = [sharedValue, num, stateFromStores];
-  const animatedProps = quest(4296).useAnimatedProps(fn2);
+  const animatedProps = quest(4310).useAnimatedProps(fn2);
   const effect = obj2.useEffect(() => {
     num = 500;
     if (stateFromStores) {
@@ -154,23 +154,23 @@ function QuestActivityButtonInner(quest) {
   obj.style = items5;
   obj = { style: memo, pointerEvents: "none", children: null };
   obj1 = { ref, source: null, autoPlay: false, loop: false };
-  const tmpResult2 = quest(4296);
-  obj1.source = quest(15135);
-  obj.children = closure_9(stateFromStores(5529), obj1);
+  const tmpResult2 = quest(4310);
+  obj1.source = quest(15162);
+  obj.children = closure_9(stateFromStores(5543), obj1);
   const items6 = [closure_9(closure_4, obj), , ,];
   obj2 = { style: tmp14.buttonWrapper, children: null };
   let obj3 = { icon: null, onPress: null, accessibilityLabel: null };
-  const tmp20 = stateFromStores(5529);
-  obj3.icon = stateFromStores(14998);
+  const tmp20 = stateFromStores(5543);
+  obj3.icon = stateFromStores(15024);
   obj3.onPress = callback;
   const intl = tmp(1114).intl;
   obj3.accessibilityLabel = intl.string(quest(1114).t.JALI2K);
-  obj2.children = closure_9(stateFromStores(17038), obj3);
+  obj2.children = closure_9(stateFromStores(17069), obj3);
   items6[1] = closure_9(closure_4, obj2);
   const obj4 = { pointerEvents: "none", style: tmp14.canvas, children: null };
   const size = { height: v32, width: v32, children: null };
-  const tmp21 = stateFromStores(17038);
-  size.children = closure_9(quest(8456).Circle, {
+  const tmp21 = stateFromStores(17069);
+  size.children = closure_9(quest(8484).Circle, {
     cx: 16,
     cy: 16,
     r: 14.3,
@@ -179,7 +179,7 @@ function QuestActivityButtonInner(quest) {
     strokeWidth: 3.4,
     strokeDasharray: result,
   });
-  obj4.children = closure_9(quest(8456).Svg, size);
+  obj4.children = closure_9(quest(8484).Svg, size);
   items6[2] = closure_9(closure_4, obj4);
   const obj6 = { pointerEvents: "none", style: tmp14.canvas, children: null };
   const size1 = {
@@ -196,18 +196,18 @@ function QuestActivityButtonInner(quest) {
       animatedProps,
     }),
   };
-  obj6.children = closure_9(quest(8456).Svg, size1);
+  obj6.children = closure_9(quest(8484).Svg, size1);
   items6[3] = closure_9(closure_4, obj6);
   obj.children = items6;
-  return closure_10(stateFromStores(4296).View, obj);
+  return closure_10(stateFromStores(4310).View, obj);
 }
 const View = fn(17).View;
-const QuestVariants = fn(5444).QuestVariants;
+const QuestVariants = fn(5458).QuestVariants;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
 let c11 = 32;
-let closure_12 = ReanimatedRexport.createAnimatedComponent(fn(8456).Circle);
-const createStyles = fn(4560);
+let closure_12 = ReanimatedRexport.createAnimatedComponent(fn(8484).Circle);
+const createStyles = fn(4574);
 let obj = {
   container: { position: "relative", width: 32, height: 32, justifyContent: "center", alignItems: "center" },
   completionGlow: {
@@ -290,7 +290,7 @@ export default noop.memo(function QuestActivityButton(applicationId) {
     }
     if (!tmp2) {
       const obj = { questId: memo.id };
-      obj.pushLazy(asyncRequireImpl(17036, dependencyMap.paths), obj, QUEST_ACTIVITY_UNENROLLED_MODAL_KEY);
+      obj.pushLazy(asyncRequireImpl(17067, dependencyMap.paths), obj, QUEST_ACTIVITY_UNENROLLED_MODAL_KEY);
     }
   }, items4);
   let tmp6 = null;

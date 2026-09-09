@@ -24,15 +24,15 @@ let prototype = function PushNotificationCacheManager() {
   applyArgumentsResult.handleUserUpdate = function handleUserUpdate() {
     currentUser = currentUser.getCurrentUser();
     if (null != currentUser) {
-      applyArgumentsResult(9692).setCurrentUser(currentUser.username, currentUser.id);
-      const obj2 = applyArgumentsResult(9692);
+      applyArgumentsResult(9719).setCurrentUser(currentUser.username, currentUser.id);
+      const obj2 = applyArgumentsResult(9719);
     } else {
-      applyArgumentsResult(9692).setCurrentUser(null, null);
-      const obj = applyArgumentsResult(9692);
+      applyArgumentsResult(9719).setCurrentUser(null, null);
+      const obj = applyArgumentsResult(9719);
     }
   };
   applyArgumentsResult.syncMultiAccountUsers = function syncMultiAccountUsers() {
-    obj(9692);
+    obj(9719);
     obj = undefined;
     if (validUsers.canUseMultiAccountNotifications) {
       validUsers = validUsers.getValidUsers();
@@ -41,7 +41,7 @@ let prototype = function PushNotificationCacheManager() {
       } else {
         obj = {};
         const item = validUsers.forEach((id) => {
-          obj = applyArgumentsResult(4404);
+          obj = applyArgumentsResult(4418);
           obj[id.id] = obj.getUserTag(id, { identifiable: "always" });
         });
       }

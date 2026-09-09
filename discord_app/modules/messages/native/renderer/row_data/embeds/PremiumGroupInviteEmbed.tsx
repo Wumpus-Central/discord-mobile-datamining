@@ -1,10 +1,10 @@
 // discord_app/modules/messages/native/renderer/row_data/embeds/PremiumGroupInviteEmbed.tsx
 import nativeDefault from "../../../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../../../intl/index.native.tsx";
-import _modDef3063 from "../../../../../premium/premium_group/PremiumGroup.messages.js";
+import _modDef3074 from "../../../../../premium/premium_group/PremiumGroup.messages.js";
 import createStyles from "../../../../../../design/components/Styles/native/createStyles.tsx";
 import renderer_EmbedUtils from "../../EmbedUtils.tsx";
-import _modDef8048 from "../../../../../../../_runtime/metro/08048__.js";
+import _modDef8063 from "../../../../../../../_runtime/metro/08063__.js";
 import PremiumGroupUtils from "../../../../../premium/premium_group/PremiumGroupUtils.native.tsx";
 import PremiumGroupConstants from "../../../../../premium/premium_group/PremiumGroupConstants.tsx";
 import size from "../../../../../../../_runtime/metro/00002__.js";
@@ -28,7 +28,7 @@ export const createPremiumGroupInviteEmbed = function createPremiumGroupInviteEm
       createStyles.createNativeStyleProperties(obj)(theme));
     const tmp9 = createStyles.createNativeStyleProperties(obj)(theme);
     const author = message.author;
-    const assetUriForEmbed = renderer_EmbedUtils.getAssetUriForEmbed(_modDef8048);
+    const assetUriForEmbed = renderer_EmbedUtils.getAssetUriForEmbed(_modDef8063);
     obj = { sender: author, channel, isSender: id === author.id, inviteState: constants.UNKNOWN };
     const premiumGroupInviteEmbedText = PremiumGroupUtils.getPremiumGroupInviteEmbedText(obj);
     if (null != premiumGroupInviteEmbedText) {
@@ -51,7 +51,7 @@ export const createPremiumGroupInviteEmbed = function createPremiumGroupInviteEm
         learnMoreLink: null,
       };
       const intl2 = util.intl;
-      const formatToPartsResult = intl.formatToParts(_modDef3063["9VTnfI"], obj);
+      const formatToPartsResult = intl.formatToParts(_modDef3074["9VTnfI"], obj);
       obj2.betaPillText = intl2.string(util.t.oW0eUd).toUpperCase();
       obj2.betaPillTextColor = betaPillTextColor;
       obj2.betaPillBackgroundColor = betaPillBackgroundColor;

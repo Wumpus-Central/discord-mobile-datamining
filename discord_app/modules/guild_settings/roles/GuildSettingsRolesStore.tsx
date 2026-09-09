@@ -216,6 +216,8 @@ const dependencyMap = {
     "colors",
     "colorString",
     "colorStrings",
+    "icon",
+    "unicodeEmoji",
   ],
   [GuildSettingsRoleEditSections.PERMISSIONS]: ["permissions"],
   [GuildSettingsRoleEditSections.MEMBERS]: [],

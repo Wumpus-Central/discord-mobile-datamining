@@ -34,8 +34,8 @@ import AuthenticationStore from "../../../stores/AuthenticationStore.tsx";
 
 require = fn;
 let closure_4 = ["code", "state"];
-fn(5558).addPostConnectionCallback;
-let closure_9 = fn(7421).handleMobileWebCheckoutStatus;
+fn(5572).addPostConnectionCallback;
+let closure_9 = fn(7435).handleMobileWebCheckoutStatus;
 const Constants = fn(1074);
 ({
   AnalyticEvents: closure_12,
@@ -46,13 +46,13 @@ const Constants = fn(1074);
   ME: closure_17,
 } = Constants);
 const StaticChannelRoute = fn(1964).StaticChannelRoute;
-const StreamTypes = fn(4602).StreamTypes;
-const NativePermissionTypes = fn(4770).NativePermissionTypes;
-let closure_21 = fn(9579).OAUTH2_AUTHORIZE_MODAL_KEY;
-let closure_22 = fn(7538).FAMILY_CENTER_LINK_REQUEST_REGEX;
-let closure_23 = fn(4542).MobileWebRedirectCheckoutDeepLinkActions;
-const SHARE_SCREEN_MODAL_KEY = fn(13854).SHARE_SCREEN_MODAL_KEY;
-const MobileUserSettings = fn(7975).MobileUserSettings;
+const StreamTypes = fn(4616).StreamTypes;
+const NativePermissionTypes = fn(4784).NativePermissionTypes;
+let closure_21 = fn(9606).OAUTH2_AUTHORIZE_MODAL_KEY;
+let closure_22 = fn(7552).FAMILY_CENTER_LINK_REQUEST_REGEX;
+let closure_23 = fn(4556).MobileWebRedirectCheckoutDeepLinkActions;
+const SHARE_SCREEN_MODAL_KEY = fn(13877).SHARE_SCREEN_MODAL_KEY;
+const MobileUserSettings = fn(7989).MobileUserSettings;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/links/native/handleSupportedURL.tsx");
 
@@ -295,7 +295,7 @@ export default function handleSupportedURL(payload) {
             null != remoteAuthFingerprint
               ? () => {
                   const obj = { remoteAuthFingerprint };
-                  obj.pushLazy(asyncRequireImpl(13866, dependencyMap.paths), obj, "REMOTE_AUTH_MODAL");
+                  obj.pushLazy(asyncRequireImpl(13889, dependencyMap.paths), obj, "REMOTE_AUTH_MODAL");
                 }
               : () => {
                   let obj = payload(inviteCode[39]);
@@ -648,15 +648,15 @@ export default function handleSupportedURL(payload) {
                         if (null != tmp19) {
                           obj1.openid_params = tmp19;
                         }
-                        let obj4 = closure_1(4763);
+                        let obj4 = closure_1(4777);
                         obj4.popAll();
                         const obj3 = { screen: constants.CONNECTIONS };
-                        dependencyMap(7382).openUserSettings(obj3);
-                        const obj6 = dependencyMap(7382);
+                        dependencyMap(7396).openUserSettings(obj3);
+                        const obj6 = dependencyMap(7396);
                         tmp10 = tmp50;
                         c7 = 1;
                         c8 = 1;
-                        obj4 = { value: closure_1(5406).callback(payload.provider, obj1), done: false };
+                        obj4 = { value: closure_1(5420).callback(payload.provider, obj1), done: false };
                         return obj4;
                       } else {
                         c8 = 3;
@@ -674,8 +674,8 @@ export default function handleSupportedURL(payload) {
                     }
                     closure_133_1 = closure_1(1365).toURLSafe(redirect);
                     if (null != closure_133_1) {
-                      closure_1(4255).openURL(closure_133_1.toString());
-                      const obj13 = closure_1(4255);
+                      closure_1(4268).openURL(closure_133_1.toString());
+                      const obj13 = closure_1(4268);
                     }
                     const obj12 = closure_1(1365);
                   }

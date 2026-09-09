@@ -10,9 +10,9 @@ import NewUserStore from "../NewUserStore.tsx";
 import AutomaticLifecycleManager from "../../../lib/AutomaticLifecycleManager.tsx";
 
 require = fn;
-const NewUserTypes = fn(12709).NewUserTypes;
+const NewUserTypes = fn(12735).NewUserTypes;
 const PlatformTypes = fn(1074).PlatformTypes;
-let closure_10 = fn(12723).HUBS_IN_ONBOARDING_COUNTRIES;
+let closure_10 = fn(12749).HUBS_IN_ONBOARDING_COUNTRIES;
 let obj = {
   REGISTRATION: "Registration",
   ADD_AVATAR: "Add Avatar",
@@ -33,7 +33,7 @@ obj = {
     }
     return null == avatar;
   },
-  transitionToStep: fn(17436).openAddAvatarModal,
+  transitionToStep: fn(17467).openAddAvatarModal,
 };
 obj = {
   key: obj.CONTACT_SYNC,
@@ -54,7 +54,7 @@ obj = {
     }
     return tmp3;
   },
-  transitionToStep: fn(12680).openContactSyncModalOnboarding,
+  transitionToStep: fn(12706).openContactSyncModalOnboarding,
 };
 const items = [
   obj,
@@ -63,7 +63,7 @@ const items = [
     shouldShowStep() {
       return null == ConnectedAccountsStore.getLocalAccount(PlatformTypes.CONTACTS);
     },
-    transitionToStep: fn(12708).openDiscoverabilityModal,
+    transitionToStep: fn(12734).openDiscoverabilityModal,
   },
   obj,
   {
@@ -99,11 +99,11 @@ let obj1 = {
   shouldShowStep() {
     return null == ConnectedAccountsStore.getLocalAccount(PlatformTypes.CONTACTS);
   },
-  transitionToStep: fn(12708).openDiscoverabilityModal,
+  transitionToStep: fn(12734).openDiscoverabilityModal,
 };
 items[5] = {
   key: obj.ACCEPT_INVITE,
-  shouldShowStep: fn(9825).hasDeferredInvite,
+  shouldShowStep: fn(9852).hasDeferredInvite,
   transitionToStep() {
     DispatcherDefault.dispatch({ type: "DEFERRED_INVITE_SHOW" });
   },

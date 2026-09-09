@@ -4,9 +4,9 @@ import AnalyticsUtilsDefault from "../../utils/AnalyticsUtils.tsx";
 import UserSettings from "../user_settings/UserSettings.tsx";
 import SelfPresenceStore from "../../stores/SelfPresenceStore.tsx";
 
-const AlertActionCreatorsDefault = tmp5(4904);
+const AlertActionCreatorsDefault = tmp5(4918);
 require = fn;
-const constants = fn(4212).NotificationSettingsUpdateType;
+const constants = fn(4225).NotificationSettingsUpdateType;
 const Constants = fn(1074);
 ({ AnalyticEvents: hasOwnProperty, StatusTypes: metroRequire } = Constants);
 const size = fn(2);

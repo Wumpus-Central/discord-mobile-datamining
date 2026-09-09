@@ -10,9 +10,9 @@ import HomeDrawerStore from "HomeDrawerStore.tsx";
 import HomeDrawerSubtitleStore from "HomeDrawerSubtitleStore.tsx";
 
 require = fn;
-const computeMaxX = fn(16026).computeMaxX;
+const computeMaxX = fn(16056).computeMaxX;
 const AnalyticEvents = fn(1074).AnalyticEvents;
-const LaunchPadTypes = fn(11469).LaunchPadTypes;
+const LaunchPadTypes = fn(11496).LaunchPadTypes;
 let c10 = 144;
 let c11 = 96.00000000000001;
 let closure_12 = { PEEK: "PEEK", OPEN: "OPEN" };
@@ -69,14 +69,14 @@ let obj = {
   panelTranslateX: null,
   guildsBarDrawerStyle: null,
 };
-let Gesture = fn(6655).Gesture;
+let Gesture = fn(6669).Gesture;
 obj.gesture = Gesture.Pan();
 obj.panelStyles = {};
-let ReanimatedHelperTypes = fn(7074);
+let ReanimatedHelperTypes = fn(7088);
 obj.gestureState = ReanimatedHelperTypes.createFakeSharedValue({ active: false, initialX: 0, initialY: 0, panelX: 0 });
-ReanimatedHelperTypes = fn(7074);
+ReanimatedHelperTypes = fn(7088);
 obj.panelX = ReanimatedHelperTypes.createFakeSharedValue(0);
-ReanimatedHelperTypes = fn(7074);
+ReanimatedHelperTypes = fn(7088);
 obj.panelTranslateX = ReanimatedHelperTypes.createFakeSharedValue(0);
 obj.guildsBarDrawerStyle = {};
 const context = noop.createContext({ homeDrawerState: obj, enableHome: false });

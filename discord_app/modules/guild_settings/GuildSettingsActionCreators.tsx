@@ -286,7 +286,7 @@ let obj = {
     body(573).dispatch({ type: "GUILD_SETTINGS_SUBMIT" });
     const pendingOriginalMd5s = GuildSettingsStore.getPendingOriginalMd5s();
     const obj5 = body(573);
-    const obj6 = body(5169);
+    const obj6 = body(5183);
     const headersForMd5 = obj6.buildHeadersForMd5({
       [closure_0(closure_2[14]).SafetyScannedUploadSurface.GUILD_ICON]: pendingOriginalMd5s.icon,
       [closure_0(closure_2[14]).SafetyScannedUploadSurface.GUILD_BANNER]: pendingOriginalMd5s.banner,
@@ -453,7 +453,7 @@ let obj = {
               c3 = 1;
               const obj2 = {
                 value: HTTP.del(request).then(() => {
-                  const AccessibilityAnnouncer = closure_1_0(4412).AccessibilityAnnouncer;
+                  const AccessibilityAnnouncer = closure_1_0(4426).AccessibilityAnnouncer;
                   const intl = closure_1_0(1114).intl;
                   AccessibilityAnnouncer.announce(intl.string(closure_1_0(1114).t["7iPyVW"]));
                 }),

@@ -10,7 +10,7 @@ import GuildStore from "../../../stores/GuildStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-let useStickerPickerStore = fn(10395).useStickerPickerStore;
+let useStickerPickerStore = fn(10422).useStickerPickerStore;
 const Constants = fn(1074);
 ({
   AnalyticEvents: closure_8,
@@ -23,7 +23,7 @@ const NODE_SIZE = Constants.NODE_SIZE;
 const ExpressionPickerViewType = fn(1219).ExpressionPickerViewType;
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
-fn(4560);
+fn(4574);
 let obj = {
   list: { flex: 1, height: EXPRESSION_FOOTER_HEIGHT },
   item: {
@@ -37,6 +37,8 @@ let obj = {
   activeItem: null,
   guildIcon: null,
   guildItemPlaceholder: null,
+  lockContainer: null,
+  lock: null,
 };
 let size = {
   justifyContent: "center",
@@ -51,12 +53,26 @@ obj.activeItem = obj;
 obj.guildIcon = { height: CATEGORY_ICON_SIZE, width: CATEGORY_ICON_SIZE, borderRadius: CATEGORY_ICON_SIZE / 2 };
 const createStyles = { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED };
 obj.guildItemPlaceholder = createStyles;
+const size1 = {
+  width: 12,
+  height: 12,
+  position: "absolute",
+  bottom: 0,
+  end: 0,
+  backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW,
+  borderRadius: nativeDefault.radii.round,
+  alignItems: "center",
+  justifyContent: "center",
+};
+obj.lockContainer = size1;
+const size2 = { width: 7.5, height: 7.5, tintColor: nativeDefault.colors.TEXT_DEFAULT };
+obj.lock = size2;
 let closure_16 = createStyles.createStyles(obj);
 let closure_17 = noop.memo((category) => {
   category = category.category;
   const onPressCategory = category.onPressCategory;
   const index = category.index;
-  const isActive = category.isActive;
+  ({ isActive, locked } = category);
   const tmp = closure_16();
   const AnimateStickers = category(index[10]).AnimateStickers;
   const setting = AnimateStickers.useSetting();
@@ -126,7 +142,7 @@ let closure_17 = noop.memo((category) => {
       style: tmp.guildIcon,
     };
     tmp9Result = closure_14(onPressCategory(tmp3[17]), obj2);
-    const tmp17 = onPressCategory(tmp3[17]);
+    const tmp18 = onPressCategory(tmp3[17]);
   } else {
     if ("previewSticker" in category) {
       if (null != category.previewSticker) {
@@ -138,12 +154,20 @@ let closure_17 = noop.memo((category) => {
       }
       obj3.animated = shouldAnimateStickerResult;
       obj3.size = CATEGORY_ICON_SIZE;
-      tmp9Result = closure_14(tmp13, obj3);
+      tmp9Result = closure_14(tmp14, obj3);
     }
     previewSticker = category.stickers[0];
   }
-  obj.children = tmp9Result;
-  obj.children = closure_14(View, obj);
+  const items2 = [tmp9Result];
+  if (locked) {
+    const obj4 = { style: tmp.lockContainer, children: null };
+    const obj5 = { style: tmp.lock };
+    obj4.children = closure_14(tmp2(tmp3[19]).LockIcon, obj5);
+    locked = closure_14(View, obj4);
+  }
+  items2[1] = locked;
+  obj.children = items2;
+  obj.children = closure_15(View, obj);
   return closure_14(category(index[14]).PressableOpacity, obj);
 });
 size = fn(2);
@@ -245,13 +269,14 @@ export default function _default(categories) {
         category: categories[index],
         index,
         isActive: index === categoryIndex,
+        locked: categories[index].isNitroLocked,
         onPressCategory: callback2,
       }),
     items8,
   );
   let obj = { portalHostName: "expression-footer", style: categories.style, children: null };
   const tmp17 = categoryIndex;
-  const tmp19 = categoryIndex(10363)();
+  const tmp19 = categoryIndex(10390)();
   obj = {
     estimatedListSize: "windowSize",
     horizontal: true,
@@ -268,7 +293,7 @@ export default function _default(categories) {
     showsHorizontalScrollIndicator: false,
     style: tmp.list,
   };
-  const items9 = [closure_14(categoryIndex(7055), obj)];
+  const items9 = [closure_14(categoryIndex(7069), obj)];
   let tmp22Result = null != first && first1;
   if (tmp22Result) {
     obj = { onPress: callback3, accessibilityRole: "button", accessibilityLabel: null, children: null };
@@ -278,12 +303,12 @@ export default function _default(categories) {
     const items10 = [,];
     ({ item: arr11[0], fadedItem: arr11[1] } = tmp);
     obj1.style = items10;
-    const obj2 = { style: tmp.guildIcon, source: tmp17(10425) };
+    const obj2 = { style: tmp.guildIcon, source: tmp17(10452) };
     obj1.children = closure_14(categories(1178).Icon, obj2);
     obj.children = closure_14(closure_5, obj1);
-    tmp22Result = closure_14(categories(5123).PressableOpacity, obj);
+    tmp22Result = closure_14(categories(5137).PressableOpacity, obj);
   }
   items9[1] = tmp22Result;
   obj.children = items9;
-  return closure_15(categoryIndex(10364), obj);
+  return closure_15(categoryIndex(10391), obj);
 }

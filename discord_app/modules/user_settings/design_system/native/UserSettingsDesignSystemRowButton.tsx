@@ -2,7 +2,7 @@
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import Stack_Stack from "../../../../design/components/Stack/native/Stack.native.tsx";
-import _modDef7381 from "../../../../../_runtime/metro/07381__.js";
+import _modDef7395 from "../../../../../_runtime/metro/07395__.js";
 import Form from "../../../../design/void/Form/native/index.tsx";
 import RowButton from "../../../../design/components/TableRow/native/RowButton.native.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
@@ -41,7 +41,7 @@ export default function UserSettingsDesignSystemRowButton() {
   const items2 = [
     hasOwnProperty(RowButton.RowButton, {
       variant: "primary",
-      icon: _modDef7381,
+      icon: _modDef7395,
       label: "Primary Row Button",
       onPress() {},
     }),
@@ -53,50 +53,50 @@ export default function UserSettingsDesignSystemRowButton() {
   ];
   const obj4 = {
     variant: "primary",
-    icon: _modDef7381,
+    icon: _modDef7395,
     label: "Primary Row Button",
     onPress() {},
   };
   items2[1] = hasOwnProperty(RowButton.RowButton, {
     variant: "primary",
-    icon: _modDef7381,
+    icon: _modDef7395,
     label: "Primary Row Button",
     subLabel: "I am a high emphasis button with a subLabel",
     onPress() {},
   });
   const obj5 = {
     variant: "primary",
-    icon: _modDef7381,
+    icon: _modDef7395,
     label: "Primary Row Button",
     subLabel: "I am a high emphasis button with a subLabel",
     onPress() {},
   };
   items2[2] = hasOwnProperty(RowButton.RowButton, {
     variant: "secondary",
-    icon: _modDef7381,
+    icon: _modDef7395,
     label: "Secondary Row Button",
     onPress() {},
   });
   const obj6 = {
     variant: "secondary",
-    icon: _modDef7381,
+    icon: _modDef7395,
     label: "Secondary Row Button",
     onPress() {},
   };
   items2[3] = hasOwnProperty(RowButton.RowButton, {
-    icon: _modDef7381,
+    icon: _modDef7395,
     label: "Secondary Row Button",
     subLabel: "I am a high emphasis button with a subLabel",
     onPress() {},
   });
   const obj7 = {
-    icon: _modDef7381,
+    icon: _modDef7395,
     label: "Secondary Row Button",
     subLabel: "I am a high emphasis button with a subLabel",
     onPress() {},
   };
   items2[4] = hasOwnProperty(RowButton.RowButton, {
-    icon: _modDef7381,
+    icon: _modDef7395,
     label: "Secondary Row Button",
     subLabel:
       "I am a high-emphasis button with more text. You can fit quite a lot of text in a row button. The text will continue to wrap",
@@ -104,18 +104,18 @@ export default function UserSettingsDesignSystemRowButton() {
   });
   const obj9 = { icon: null, label: "Row Button", subLabel: "With a custom RowButton.Icon", onPress: null };
   const obj8 = {
-    icon: _modDef7381,
+    icon: _modDef7395,
     label: "Secondary Row Button",
     subLabel:
       "I am a high-emphasis button with more text. You can fit quite a lot of text in a row button. The text will continue to wrap",
     onPress() {},
   };
-  obj9.icon = hasOwnProperty(RowButton.RowButton.Icon, { source: _modDef7381 });
+  obj9.icon = hasOwnProperty(RowButton.RowButton.Icon, { source: _modDef7395 });
   obj9.onPress = function onPress() {};
   items2[5] = hasOwnProperty(RowButton.RowButton, obj9);
-  const obj10 = { source: _modDef7381 };
+  const obj10 = { source: _modDef7395 };
   items2[6] = hasOwnProperty(RowButton.RowButton, {
-    icon: _modDef7381,
+    icon: _modDef7395,
     label: "Row Button",
     subLabel: "I am disabled",
     onPress() {},

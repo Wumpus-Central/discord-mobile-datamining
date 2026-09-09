@@ -11,10 +11,10 @@ import UserStore from "../../../stores/UserStore.tsx";
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ Image: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-const GuildTagBadgeSize = fn(7944).GuildTagBadgeSize;
+const GuildTagBadgeSize = fn(7958).GuildTagBadgeSize;
 const jsxProd = fn(21);
 ({ jsx: closure_8, Fragment: closure_9, jsxs: c10 } = jsxProd);
-let createStyles = fn(4560);
+let createStyles = fn(4574);
 let obj = { container: null, tag: null };
 obj = {
   flexDirection: "row",

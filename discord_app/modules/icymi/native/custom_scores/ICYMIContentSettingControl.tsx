@@ -5,9 +5,9 @@ import native from "../../../../design/void/native.tsx";
 import ICYMIUtils from "../../ICYMIUtils.tsx";
 import SegmentedControlState from "../../../../design/components/SegmentedControl/native/SegmentedControlState.native.tsx";
 import SegmentedControl from "../../../../design/components/SegmentedControl/native/SegmentedControl.native.tsx";
-import _modDef16463 from "../../../../../_runtime/metro/16463__.js";
-import _modDef16464 from "../../../../../_runtime/metro/16464__.js";
-import _modDef16465 from "../../../../../_runtime/metro/16465__.js";
+import _modDef16494 from "../../../../../_runtime/metro/16494__.js";
+import _modDef16495 from "../../../../../_runtime/metro/16495__.js";
+import _modDef16496 from "../../../../../_runtime/metro/16496__.js";
 import NativeICYMIActionCreatorsDefault from "../NativeICYMIActionCreators.tsx";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
@@ -23,7 +23,7 @@ function ContentSettingsControl(initialValue) {
   let obj = { label: null, id: "-1", icon: null, page: null };
   const intl = util.intl;
   obj.label = intl.string(util.t.rdt65I);
-  obj = { source: _modDef16463, style: null };
+  obj = { source: _modDef16494, style: null };
   const items = [tmp.icon];
   let iconSelected = null;
   if (tmp3 === ICYMIUtils.ICYMICustomScore.LESS) {
@@ -36,7 +36,7 @@ function ContentSettingsControl(initialValue) {
   obj = { label: null, id: "0", icon: null, page: null };
   const intl2 = util.intl;
   obj.label = intl2.string(util.t.SnrG00);
-  const obj1 = { source: _modDef16464, style: null };
+  const obj1 = { source: _modDef16495, style: null };
   const items2 = [tmp.icon];
   let iconSelected1 = null;
   if (tmp3 === ICYMIUtils.ICYMICustomScore.DEFAULT) {
@@ -49,7 +49,7 @@ function ContentSettingsControl(initialValue) {
   const obj2 = { label: null, id: "1", icon: null, page: null };
   const intl3 = util.intl;
   obj2.label = intl3.string(util.t.Rxe3jF);
-  const obj3 = { source: _modDef16465, style: null };
+  const obj3 = { source: _modDef16496, style: null };
   const items3 = [tmp.icon];
   let iconSelected2 = null;
   if (tmp3 === ICYMIUtils.ICYMICustomScore.MORE) {
@@ -103,7 +103,7 @@ function ContentSettingsControl(initialValue) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-fn(4560);
+fn(4574);
 let createStyles = { customScoreWrapper: null, warningText: null, icon: null, iconSelected: null, muted: null };
 createStyles = { marginVertical: nativeDefault.space.PX_16 };
 createStyles.customScoreWrapper = createStyles;
@@ -124,10 +124,10 @@ export const GuildScoreSettings = function GuildScoreSettings(guild) {
   let obj = id(504);
   const items = [ICYMIStore];
   const stateFromStores = obj.useStateFromStores(items, () => ICYMIStore.getCustomGuildScore(id));
-  let obj1 = id(8350);
+  let obj1 = id(8378);
   const numberToCustomScoreResult = obj1.numberToCustomScore(stateFromStores);
   c1 = numberToCustomScoreResult;
-  const tmp5 = numberToCustomScoreResult === id(8350).ICYMICustomScore.MUTED;
+  const tmp5 = numberToCustomScoreResult === id(8378).ICYMICustomScore.MUTED;
   const items1 = [id];
   const items2 = [numberToCustomScoreResult, id];
   const callback = noop.useCallback((arg0) => {
@@ -152,12 +152,12 @@ export const GuildScoreSettings = function GuildScoreSettings(guild) {
   obj = { variant: "text-sm/semibold", color: "text-default", children: null };
   const intl = id(1114).intl;
   obj.children = intl.string(id(1114).t.Clq6km);
-  const items3 = [closure_8(id(4556).Text, obj), , , ,];
+  const items3 = [closure_8(id(4570).Text, obj), , , ,];
   obj = { variant: "text-xs/normal", color: "text-default", children: null };
   const intl2 = id(1114).intl;
   obj1 = { guildName: guild.name };
   obj.children = intl2.format(id(1114).t["0DhU2P"], obj1);
-  items3[1] = closure_8(id(4556).Text, obj);
+  items3[1] = closure_8(id(4570).Text, obj);
   let tmp11Result = null;
   if (!tmp5) {
     const obj2 = { style: tmp8.customScoreWrapper, children: null };
@@ -175,12 +175,12 @@ export const GuildScoreSettings = function GuildScoreSettings(guild) {
   const obj6 = { value: !tmp5, onValueChange: callback, label: null, start: true, end: true };
   const intl3 = tmp(1114).intl;
   obj6.label = intl3.string(id(1114).t.oujX73);
-  obj5.children = closure_8(id(7201).TableSwitchRow, obj6);
+  obj5.children = closure_8(id(7214).TableSwitchRow, obj6);
   items3[3] = closure_8(View, obj5);
   const obj7 = { variant: "text-xs/normal", color: "text-muted", style: tmp8.warningText, children: null };
   const intl4 = tmp(1114).intl;
   obj7.children = intl4.string(id(1114).t.vRVs07);
-  items3[4] = closure_8(id(4556).Text, obj7);
+  items3[4] = closure_8(id(4570).Text, obj7);
   obj4.children = items3;
   return closure_9(View, obj4);
 };

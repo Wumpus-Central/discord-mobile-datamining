@@ -3,7 +3,7 @@ import ApplicationIntegrationType from "../../../../discord_common/js/shared/sha
 import ApplicationCommandIndexStore from "../../application_commands/ApplicationCommandIndexStore.tsx";
 
 require = fn;
-const BuiltInSectionId = fn(4999).BuiltInSectionId;
+const BuiltInSectionId = fn(5013).BuiltInSectionId;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/applications/utils/ApplicationInstallUtils.tsx");
 

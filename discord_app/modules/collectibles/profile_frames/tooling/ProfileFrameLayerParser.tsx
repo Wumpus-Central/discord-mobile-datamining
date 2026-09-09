@@ -7,19 +7,19 @@ require = fn;
 const preview = "preview";
 const responsive = "responsive";
 let PARSE_ERROR_LABELS = {
-  foreground: fn(8207).ProfileFrameLayerOrder.FRONT,
-  background: fn(8207).ProfileFrameLayerOrder.BACK,
+  foreground: fn(8233).ProfileFrameLayerOrder.FRONT,
+  background: fn(8233).ProfileFrameLayerOrder.BACK,
 };
 const items = [
-  fn(8208).ProfileFrameLayerType.STAPLE,
-  fn(8208).ProfileFrameLayerType.RAIL,
-  fn(8208).ProfileFrameLayerType.BORDER,
+  fn(8234).ProfileFrameLayerType.STAPLE,
+  fn(8234).ProfileFrameLayerType.RAIL,
+  fn(8234).ProfileFrameLayerType.BORDER,
 ];
 const set = new Set(items);
 const items1 = [
-  fn(8209).ProfileFrameLayerAnchor.TOP,
-  fn(8209).ProfileFrameLayerAnchor.BOTTOM,
-  fn(8209).ProfileFrameLayerAnchor.CENTER,
+  fn(8235).ProfileFrameLayerAnchor.TOP,
+  fn(8235).ProfileFrameLayerAnchor.BOTTOM,
+  fn(8235).ProfileFrameLayerAnchor.CENTER,
 ];
 const set1 = new Set(items1);
 PARSE_ERROR_LABELS = {
@@ -40,7 +40,7 @@ const items3 = [...set1];
 PARSE_ERROR_LABELS[PARSE_ERROR_LABELS.INVALID_ANCHOR] = "invalid anchor (expected: " + items3.join(", ") + ")";
 PARSE_ERROR_LABELS[PARSE_ERROR_LABELS.INVALID_RESPONSIVE] = "invalid suffix (expected '" + "responsive" + "')";
 PARSE_ERROR_LABELS[PARSE_ERROR_LABELS.BORDER_HAS_ANCHOR] = "border layers must omit the anchor";
-const dependencyMap = { [fn(8207).ProfileFrameLayerOrder.FRONT]: 0, [fn(8207).ProfileFrameLayerOrder.BACK]: 1 };
+const dependencyMap = { [fn(8233).ProfileFrameLayerOrder.FRONT]: 0, [fn(8233).ProfileFrameLayerOrder.BACK]: 1 };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/collectibles/profile_frames/tooling/ProfileFrameLayerParser.tsx");
 

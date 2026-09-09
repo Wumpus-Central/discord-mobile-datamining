@@ -4,6 +4,7 @@ import ToastUtils from "../../toast/native/ToastUtils.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import ClipboardUtils from "../../../utils/ClipboardUtils.native.tsx";
 import VerifiedRoleIconDefault from "../../connections/native/VerifiedRoleIcon.tsx";
+import RoleIconDefault from "../../roles/native/RoleIcon.tsx";
 import UserProfileRoleUtils from "../UserProfileRoleUtils.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 import GuildMemberStore from "../../../stores/GuildMemberStore.tsx";
@@ -48,8 +49,8 @@ class RoleItem {
     tmp5 = closure_2;
     obj = role(closure_2[8]);
     obj = { guildId, roleId: role.id, size: 12 };
-    roleIcon = obj.useRoleIcon(obj);
-    closure_4 = roleIcon;
+    roleIconProps = obj.useRoleIconProps(obj);
+    closure_4 = roleIconProps;
     tags = role.tags;
     guild_connections = undefined;
     if (tags != null) {
@@ -70,10 +71,17 @@ class RoleItem {
         tmp3Result = React7(RoleDot, obj);
         tmp8 = React7;
       }
-      obj = { children: null };
-      const items = [tmp3Result, tmp8(Text_Text.Text, { variant: "text-xs/medium", children: name }), roleIcon];
-      obj.children = items;
-      return closure_2_11(closure_2_10, obj);
+      const children = [tmp3Result, ,];
+      obj = { variant: "text-xs/medium", children: name };
+      children[1] = tmp8(Text_Text.Text, obj);
+      let tmp8Result = null;
+      if (null != roleIconProps) {
+        const obj1 = {};
+        const merged = Object.assign(roleIconProps);
+        tmp8Result = tmp8(RoleIconDefault, obj1);
+      }
+      children[2] = tmp8Result;
+      return closure_2_11(closure_2_10, { children });
     };
     closure_5 = undefined !== guild_connections;
     DeveloperMode = tmp4(tmp5[9]).DeveloperMode;
@@ -85,7 +93,7 @@ class RoleItem {
     items1 = [, ,];
     items1[0] = role;
     items1[1] = name;
-    items1[2] = roleIcon;
+    items1[2] = roleIconProps;
     callback = colorString.useCallback(() => {
       ClipboardUtils.copy(role.id);
       ToastUtils.roleIdCopied(name);
@@ -115,7 +123,7 @@ class RoleItem {
       obj1.style = tmp.role;
       num3 = 0;
       obj1.children = renderContent();
-      tmp11Result = tmp11(tmp4(tmp5[18]).PressableHighlight, obj1);
+      tmp11Result = tmp11(tmp4(tmp5[19]).PressableHighlight, obj1);
     } else {
       tmp12 = closure_4;
       obj2 = { style: null, children: null };
@@ -156,7 +164,7 @@ const Constants = fn(1074);
 ({ DEFAULT_ROLE_COLOR_HEX: closure_7, MAX_VISUAL_ROLE_LENGTH: closure_8 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_9, Fragment: c10, jsxs: closure_11 } = jsxProd);
-fn(4560);
+fn(4574);
 let createStyles = { roleContainer: { flexDirection: "row", gap: 8, flexWrap: "wrap" }, role: null, roleDot: null };
 createStyles = {
   flexDirection: "row",
@@ -195,8 +203,8 @@ export default function UserProfileRolesCard(userId) {
     obj.style = userId.style;
     obj = { guildId, guildMemberRoleIds: roles };
     obj.children = closure_9(RolesList, obj);
-    tmp4 = closure_9(guildId(7207), obj);
-    const tmp7 = guildId(7207);
+    tmp4 = closure_9(guildId(7221), obj);
+    const tmp7 = guildId(7221);
   }
   return tmp4;
 }

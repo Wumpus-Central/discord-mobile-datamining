@@ -318,7 +318,7 @@ function apiRequest(fn, arg1, arg2, headers) {
     return Promise.reject(error);
   });
 }
-const SpotifyConstants = fn(8340);
+const SpotifyConstants = fn(8368);
 ({ SPOTIFY_APP_PROTOCOL: closure_4, SpotifyEndpoints: hasOwnProperty } = SpotifyConstants);
 const Constants = fn(1074);
 ({ AbortCodes: metroRequire, Endpoints: closure_7, PlatformTypes: closure_8 } = Constants);

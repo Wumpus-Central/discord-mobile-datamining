@@ -8,13 +8,13 @@ import BuildOverrideStore from "../../../build_overrides/BuildOverrideStore.tsx"
 
 require = fn;
 const jsx = fn(21).jsx;
-fn(11473);
+fn(11500);
 let SettingBuilders = {
   useTitle() {
     return "Build Override Active";
   },
   parent: null,
-  IconComponent: fn(15161).RefreshIcon,
+  IconComponent: fn(15188).RefreshIcon,
   useDescription: function useBuildOverrideActiveDescription() {
     let obj = initialize;
     const items = [BuildOverrideStore];

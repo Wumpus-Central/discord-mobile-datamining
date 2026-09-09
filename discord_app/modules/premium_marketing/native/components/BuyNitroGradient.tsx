@@ -1,7 +1,7 @@
 // discord_app/modules/premium_marketing/native/components/BuyNitroGradient.tsx
 import timing from "../../../../design/animation/reanimated/timing/timing.tsx";
 import timingPresets from "../../../../design/animation/reanimated/timing/timingPresets.tsx";
-import LinearGradientDefault from "../../../../../_runtime/04987_LinearGradient.js";
+import LinearGradientDefault from "../../../../../_runtime/05001_LinearGradient.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import ReanimatedRexport from "../../../reanimated/ReanimatedRexport.tsx";
 
@@ -20,7 +20,7 @@ export default function BuyNitroGradient(selectedTier) {
   selectedTier = selectedTier.selectedTier;
   ({ start, end, style } = selectedTier);
   ({ nitroColors, basicColors } = selectedTier);
-  selectedTier(4296);
+  selectedTier(4310);
   const fn = function f() {
     let obj = timing;
     let num = 0;
@@ -31,10 +31,10 @@ export default function BuyNitroGradient(selectedTier) {
     return obj;
   };
   let obj = {
-    withTiming: selectedTier(4561).withTiming,
+    withTiming: selectedTier(4575).withTiming,
     selectedTier,
     PremiumTypes,
-    timingStandard: selectedTier(4564).timingStandard,
+    timingStandard: selectedTier(4578).timingStandard,
   };
   fn.__closure = obj;
   fn.__workletHash = 14014615431537;

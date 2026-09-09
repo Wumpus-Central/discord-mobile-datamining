@@ -5,7 +5,7 @@ import util from "../../../intl/index.native.tsx";
 import LinkingDefault from "../../../lib/native/Linking.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import AuthenticationActionCreatorsDefault from "../../../actions/AuthenticationActionCreators.tsx";
-import _modDef6992 from "../../../../_runtime/metro/06992__.js";
+import _modDef7006 from "../../../../_runtime/metro/07006__.js";
 import common_SafeAreaView from "../../../components_native/common/SafeAreaView.tsx";
 import IconButton from "../../../design/components/Button/native/IconButton.native.tsx";
 import SafetyHubPageDefault from "SafetyHubPage.tsx";
@@ -14,11 +14,11 @@ import SafetyHubStore from "../SafetyHubStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-const SafetyHubConstants = fn(8419);
+const SafetyHubConstants = fn(8447);
 ({ AgeCheckStatus: hasOwnProperty, SafetyHubLinks: metroRequire } = SafetyHubConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-fn(4560);
+fn(4574);
 let createStyles = { container: null, header: null, text: null, link: null };
 createStyles = {
   backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW,
@@ -59,7 +59,7 @@ export default function SuspendedUserSafetyHubPage() {
     obj1.onPress = function onPress() {
       AuthenticationActionCreatorsDefault.closeSuspendedUser();
     };
-    obj1.icon = _modDef6992;
+    obj1.icon = _modDef7006;
     const items1 = [React5(IconButton.IconButton, obj1)];
     const obj2 = {
       style: tmp.text,

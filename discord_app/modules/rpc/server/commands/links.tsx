@@ -1,16 +1,206 @@
 // discord_app/modules/rpc/server/commands/links.tsx
+import PlatformUtils from "../../../../utils/PlatformUtils.tsx";
+import AnalyticsUtilsDefault from "../../../../utils/AnalyticsUtils.tsx";
+import embeddedActivityLocationUtils from "../../../activities/utils/embeddedActivityLocationUtils.tsx";
+import CrossPlatformNativeUtilsDefault from "../../../../utils/CrossPlatformNativeUtils.native.tsx";
 import openUserSettings from "../../../user_settings/core/native/openUserSettings.tsx";
 import ApplicationFlagUtils from "../../../applications/utils/ApplicationFlagUtils.tsx";
+import ActivityPopoutUtils from "../../../activities/ActivityPopoutUtils.native.tsx";
 import RPCErrorDefault from "../../RPCError.tsx";
 import createRpcJoiSchemaObjectDefault from "../../helpers/createRpcJoiSchemaObject.tsx";
 import RPCHelpers from "../../RPCHelpers.tsx";
+import validateEmbeddedAppFrame from "../../helpers/validateEmbeddedAppFrame.tsx";
+import internalDeepLinks from "../../helpers/internalDeepLinks.tsx";
+import fetchIsLinkTrusted from "../../../activities/utils/fetchIsLinkTrusted.tsx";
 import openActivityShareLinkModal from "../../../activities/openActivityShareLinkModal.native.tsx";
 import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
 import EmbeddedActivitiesStore from "../../../activities/EmbeddedActivitiesStore.tsx";
 import ApplicationStore from "../../../applications/ApplicationStore.tsx";
 
 require = fn;
-let Constants = fn(4465);
+let closure_13 = async function _openExternalLink(arg0) {
+  closure_0 = arg0;
+  c6 = 0;
+  c7 = 0;
+  c5 = 0;
+  return (async (arg0, value) => {
+    if (c7 === 2) {
+      c7 = 3;
+      throw new TypeError("Generator functions may not be called on executing generators");
+    } else if (tmp7 === 3) {
+      if (arg0 === 1) {
+        throw value;
+      } else if (arg0 === 2) {
+        let obj = { value, done: true };
+        return obj;
+      } else {
+        return { value: "HermesInternal", done: null };
+      }
+    } else {
+      try {
+        c7 = 2;
+        if (0 === c6) {
+          if (arg0 === 1) {
+            c7 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c7 = 3;
+            obj = { value, done: true };
+            return obj;
+          } else {
+            application = tmp3;
+            dependencyMap = tmp5;
+            closure_130_0 = closure_0;
+            closure_130_1 = url;
+            closure_130_2 = undefined;
+            closure_130_3 = undefined;
+            let embeddedActivityLocationChannelId;
+            let internalDeepLink = null;
+            if (null != obj18.tryValidateEmbeddedAppFrame(closure_0)) {
+              let tmp84Result = internalDeepLinks;
+              internalDeepLink = tmp84Result.resolveInternalDeepLink(url);
+            }
+            if (null != internalDeepLink) {
+              if (PlatformUtils.isPlatformEmbedded) {
+                let obj5 = CrossPlatformNativeUtilsDefault;
+                obj5.focus(null, true);
+              }
+              tmp84Result = internalDeepLinks;
+              if (tmp84Result.openInternalDeepLink(internalDeepLink)) {
+                const application3 = closure_0.application;
+                let id;
+                if (application3 != null) {
+                  id = application3.id;
+                }
+                const obj1 = { application_id: id, url, opened: true };
+                AnalyticsUtilsDefault.track(constants2.RPC_OPEN_EXTERNAL_LINK_CALLED, obj1);
+                c7 = 3;
+                const obj2 = { value: { opened: true }, done: true };
+                return obj2;
+              }
+            }
+            currentEmbeddedActivity = currentEmbeddedActivity.getCurrentEmbeddedActivity();
+            c5 = 1;
+            const _URL = URL;
+            let str = new URL(url);
+            str = str.toString();
+            closure_130_2 = str;
+            if (PlatformUtils.isPlatformEmbedded) {
+              let ACTIVITY_POPOUT = null;
+              if (tmp84Result1.shouldOpenActivityInPopoutWindow()) {
+                ACTIVITY_POPOUT = constants.ACTIVITY_POPOUT;
+              }
+              tmp84Result1 = ActivityPopoutUtils;
+              CrossPlatformNativeUtilsDefault.focus(ACTIVITY_POPOUT, true);
+            }
+            const application2 = closure_0.application;
+            let id1;
+            if (application2 != null) {
+              id1 = application2.id;
+            }
+            application = application.getApplication(id1);
+            closure_130_3 = application;
+            obj18 = validateEmbeddedAppFrame;
+            let _location;
+            if (currentEmbeddedActivity != null) {
+              _location = currentEmbeddedActivity.location;
+            }
+            embeddedActivityLocationChannelId =
+              embeddedActivityLocationUtils.getEmbeddedActivityLocationChannelId(_location);
+            const tmp84Result2 = embeddedActivityLocationUtils;
+            let id2;
+            if (application != null) {
+              id2 = application.id;
+            }
+            c6 = 2;
+            c7 = 1;
+            const obj3 = { value: fetchIsLinkTrusted.fetchIsLinkTrusted(id2, str), done: false };
+            return obj3;
+          }
+        } else if (1 === tmp8) {
+          c5 = 0;
+          const obj4 = { errorCode: closure_131_8.INVALID_COMMAND };
+          const _HermesInternal = HermesInternal;
+          let tmp31 = closure_131_1(closure_131_2[17]);
+          tmp31 = new tmp31(obj4, "Invalid URL: " + closure_130_1);
+          throw tmp31;
+        } else if (arg0 === 1) {
+          c7 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c5 = 0;
+          c7 = 3;
+          obj5 = { value, done: true };
+          return obj5;
+        } else {
+          if (value) {
+            closure_131_1(closure_131_2[14])(closure_130_2);
+            obj = closure_131_1(closure_131_2[10]);
+            application = closure_130_0.application;
+            let id3;
+            if (application != null) {
+              id3 = application.id;
+            }
+            const obj6 = { application_id: id3, url: closure_130_2, opened: true };
+            obj.track(closure_131_10.RPC_OPEN_EXTERNAL_LINK_CALLED, obj6);
+            const resolved = Promise.resolve({ opened: true });
+          } else {
+            new Promise((arg0) => {
+              closure_0 = arg0;
+              closure_1_0(8398);
+              let obj = {
+                href: dependencyMap,
+                shouldConfirm: true,
+                onClick() {
+                  return false;
+                },
+                onConfirm() {
+                  closure_1(4262)(dependencyMap);
+                  application = closure_2_0.application;
+                  let id;
+                  if (application != null) {
+                    id = application.id;
+                  }
+                  closure_1(1242).track(constants.RPC_OPEN_EXTERNAL_LINK_CALLED, {
+                    application_id: id,
+                    url: dependencyMap,
+                    opened: true,
+                  });
+                  closure_0({ opened: true });
+                  const obj = closure_1(1242);
+                },
+                onCancel() {
+                  let obj = closure_1(1242);
+                  application = closure_2_0.application;
+                  let id;
+                  if (application != null) {
+                    id = application.id;
+                  }
+                  obj = { application_id: id, url: dependencyMap, opened: false };
+                  obj.track(constants.RPC_OPEN_EXTERNAL_LINK_CALLED, obj);
+                  closure_0({ opened: false });
+                },
+              };
+              obj = { application, channelId };
+              return obj.handleClick(obj, undefined, undefined, closure_1_0(14512).getActivitiesModalContextKey(obj));
+            });
+          }
+          c5 = 0;
+          c7 = 3;
+        }
+      } catch (tmp72) {
+        const channelId = tmp72;
+        if (tmp4 === c5) {
+          c7 = tmp2;
+          throw tmp72;
+        } else {
+          c6 = tmp;
+        }
+      }
+    }
+  })();
+};
+let Constants = fn(4479);
 ({ RPC_AUTHENTICATED_SCOPE, RPC_SCOPE_CONFIG, RPC_EMBEDDED_APP_SCOPE } = Constants);
 Constants = fn(1074);
 ({
@@ -25,6 +215,7 @@ Constants = fn(1920);
 const items = [,];
 ({ AM_HARMONY_PRD_APPLICATION_ID: arr[0], AM_HARMONY_STG_APPLICATION_ID: arr[1] } = Constants);
 const set = new Set(items);
+const weakMap = new WeakMap();
 obj = { [RPCCommands.OPEN_EXTERNAL_LINK]: obj, [RPCCommands.NAVIGATE_TO_CONNECTIONS]: obj };
 obj = {
   scope: null,
@@ -39,10 +230,10 @@ obj = {
     socket = socket.socket;
     const url = socket.args.url;
     return (async () => {
-      if (application === 2) {
-        application = 3;
+      if (c5 === 2) {
+        c5 = 3;
         throw new TypeError("Generator functions may not be called on executing generators");
-      } else if (tmp7 === 3) {
+      } else if (tmp5 === 3) {
         if (arg0 === 1) {
           throw value;
         } else if (arg0 === 2) {
@@ -53,161 +244,86 @@ obj = {
         }
       } else {
         try {
-          application = 2;
-          if (0 === currentEmbeddedActivity) {
+          c5 = 2;
+          if (0 === c2) {
             if (arg0 === 1) {
-              application = 3;
+              c5 = 3;
               throw value;
             } else if (arg0 === 2) {
-              application = 3;
+              c5 = 3;
               obj = { value, done: true };
               return obj;
             } else {
-              closure_128_0 = undefined;
-              closure_128_1 = undefined;
-              let embeddedActivityLocationChannelId;
-              const result = tmp5(tmp75[7]).validatePostMessageTransport(socket.transport);
-              const obj18 = tmp5(tmp75[7]);
-              let internalDeepLink = null;
-              if (null != obj19.tryValidateEmbeddedAppFrame(socket)) {
-                let tmp85Result = tmp5(tmp75[9]);
-                internalDeepLink = tmp85Result.resolveInternalDeepLink(url);
+              closure_1 = tmp6;
+              closure_129_0 = undefined;
+              const result = socket(c2[19]).validatePostMessageTransport(socket.transport);
+              value = weakMap.get(socket);
+              socket = value;
+              if (value == null) {
+                socket = { inFlight: false, readyAt: 0 };
               }
-              if (null != internalDeepLink) {
-                if (tmp5(tmp75[10]).isPlatformEmbedded) {
-                  let obj5 = tmp3(tmp75[11]);
-                  obj5.focus(null, true);
+              closure_129_0 = socket;
+              if (!socket.inFlight) {
+                const _Date4 = Date;
+                if (Date.now() >= tmp18.readyAt) {
+                  tmp18.inFlight = true;
+                  const result1 = weakMap.set(socket, tmp18);
+                  c4 = 1;
+                  c2 = 2;
+                  c5 = 1;
+                  const obj1 = {
+                    value: (function openExternalLink() {
+                      const self = this;
+                      const apply = closure_1_13.apply;
+                      if (typeof apply === "unknown") {
+                        let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+                      } else {
+                        applyArgumentsResult = apply(self, arguments);
+                      }
+                      return applyArgumentsResult;
+                    })(socket, url),
+                    done: false,
+                  };
+                  return obj1;
                 }
-                tmp85Result = tmp5(tmp75[9]);
-                if (tmp85Result.openInternalDeepLink(internalDeepLink)) {
-                  const application3 = socket.application;
-                  let id;
-                  if (application3 != null) {
-                    id = application3.id;
-                  }
-                  const obj1 = { application_id: id, url, opened: true };
-                  tmp3(tmp75[12]).track(constants3.RPC_OPEN_EXTERNAL_LINK_CALLED, obj1);
-                  application = 3;
-                  const obj2 = { value: { opened: true }, done: true };
-                  return obj2;
-                }
               }
-              currentEmbeddedActivity = currentEmbeddedActivity.getCurrentEmbeddedActivity();
-              c3 = 1;
-              const _URL = URL;
-              let str = new URL(url);
-              str = str.toString();
-              closure_128_0 = str;
-              if (tmp5(tmp75[10]).isPlatformEmbedded) {
-                let ACTIVITY_POPOUT = null;
-                if (tmp85Result1.shouldOpenActivityInPopoutWindow()) {
-                  ACTIVITY_POPOUT = constants.ACTIVITY_POPOUT;
-                }
-                tmp85Result1 = tmp5(tmp75[13]);
-                tmp3(tmp75[11]).focus(ACTIVITY_POPOUT, true);
-                const obj9 = tmp3(tmp75[11]);
-              }
-              const application2 = socket.application;
-              let id1;
-              if (application2 != null) {
-                id1 = application2.id;
-              }
-              application = application.getApplication(id1);
-              closure_128_1 = application;
-              obj19 = tmp5(tmp75[8]);
-              let _location;
-              if (currentEmbeddedActivity != null) {
-                _location = currentEmbeddedActivity.location;
-              }
-              embeddedActivityLocationChannelId = tmp5(tmp75[14]).getEmbeddedActivityLocationChannelId(_location);
-              const tmp85Result2 = tmp5(tmp75[14]);
-              let id2;
-              if (application != null) {
-                id2 = application.id;
-              }
-              currentEmbeddedActivity = 2;
-              application = 1;
-              const obj3 = { value: tmp5(tmp75[15]).fetchIsLinkTrusted(id2, str), done: false };
-              return obj3;
+              c5 = 3;
+              const obj2 = { value: { opened: false }, done: true };
+              return obj2;
             }
-          } else if (1 === tmp8) {
-            c3 = 0;
-            const obj4 = { errorCode: constants2.INVALID_COMMAND };
-            const _HermesInternal = HermesInternal;
-            let tmp30 = tmp3(tmp75[19]);
-            tmp30 = new tmp30(obj4, "Invalid URL: " + closure_129_1);
-            throw tmp30;
+          } else if (1 === tmp6) {
+            c4 = 0;
+            closure_129_0.inFlight = false;
+            const _Date3 = Date;
+            closure_129_0.readyAt = Date.now() + 1000;
+            throw closure_3;
           } else if (arg0 === 1) {
-            application = 3;
+            c5 = 3;
             throw value;
           } else if (arg0 === 2) {
-            c3 = 0;
-            application = 3;
-            obj5 = { value, done: true };
-            return obj5;
+            c4 = 0;
+            closure_129_0.inFlight = false;
+            const _Date2 = Date;
+            closure_129_0.readyAt = Date.now() + 1000;
+            c5 = 3;
+            const obj3 = { value, done: true };
+            return obj3;
           } else {
-            if (value) {
-              tmp3(tmp75[16])(closure_128_0);
-              obj = tmp3(tmp75[12]);
-              application = closure_129_0.application;
-              let id3;
-              if (application != null) {
-                id3 = application.id;
-              }
-              const obj6 = { application_id: id3, url: closure_128_0, opened: true };
-              obj.track(constants3.RPC_OPEN_EXTERNAL_LINK_CALLED, obj6);
-              const resolved = Promise.resolve({ opened: true });
-            } else {
-              new Promise((arg0) => {
-                const href = arg0;
-                href(channelId[17]);
-                let obj = {
-                  href,
-                  shouldConfirm: true,
-                  onClick() {
-                    return false;
-                  },
-                  onConfirm() {
-                    url(4249)(url);
-                    application = closure_0.application;
-                    let id;
-                    if (application != null) {
-                      id = application.id;
-                    }
-                    url(1242).track(constants.RPC_OPEN_EXTERNAL_LINK_CALLED, { application_id: id, url, opened: true });
-                    closure_0({ opened: true });
-                    const obj = url(1242);
-                  },
-                  onCancel() {
-                    let obj = url(1242);
-                    application = closure_0.application;
-                    let id;
-                    if (application != null) {
-                      id = application.id;
-                    }
-                    obj = { application_id: id, url, opened: false };
-                    obj.track(constants.RPC_OPEN_EXTERNAL_LINK_CALLED, obj);
-                    closure_0({ opened: false });
-                  },
-                };
-                obj = { application, channelId };
-                return obj.handleClick(
-                  obj,
-                  undefined,
-                  undefined,
-                  href(channelId[18]).getActivitiesModalContextKey(obj),
-                );
-              });
-            }
-            c3 = 0;
-            application = 3;
+            c4 = 0;
+            closure_129_0.inFlight = false;
+            const _Date = Date;
+            closure_129_0.readyAt = Date.now() + 1000;
+            c5 = 3;
+            obj = { value, done: true };
+            return obj;
           }
-        } catch (tmp75) {
-          if (tmp4 === c3) {
-            application = tmp2;
-            throw tmp75;
+        } catch (tmp21) {
+          closure_3 = tmp21;
+          if (tmp3 === c4) {
+            c5 = tmp2;
+            throw tmp21;
           } else {
-            currentEmbeddedActivity = tmp;
+            c2 = tmp;
           }
         }
       }
@@ -238,7 +354,7 @@ obj = {
 };
 const items2 = [RPC_AUTHENTICATED_SCOPE];
 obj.scope = { [RPC_SCOPE_CONFIG.ANY]: items2 };
-const CONTEXT_MENU_ICON_NAMES = fn(14479);
+const CONTEXT_MENU_ICON_NAMES = fn(14504);
 let obj1 = {
   scope: null,
   handler(arg0) {

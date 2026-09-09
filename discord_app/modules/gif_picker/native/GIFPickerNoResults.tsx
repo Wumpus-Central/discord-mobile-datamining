@@ -2,7 +2,7 @@
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../intl/index.native.tsx";
 import native from "../../../design/void/native.tsx";
-import BottomSheetModal from "../../../../_runtime/06627_BottomSheetModal.js";
+import BottomSheetModal from "../../../../_runtime/06641_BottomSheetModal.js";
 import useExpressionPickerInsetsDefault from "../../expression_picker/native/useExpressionPickerInsets.tsx";
 import SearchEmpty from "../../../design/components/Illustration/native/redesign/generated/SearchEmpty.tsx";
 import useModalDismissGuardRefreshControl from "../../keyboard/native/useModalDismissGuardRefreshControl.tsx";
@@ -12,7 +12,7 @@ require = fn;
 const ScrollView = fn(17).ScrollView;
 fn(1074).GIFPickerResultTypes;
 const jsx = fn(21).jsx;
-fn(4560);
+fn(4574);
 let obj = { emptyStateContainer: { padding: 0, flex: 1 }, emptyStateBody: null, emptyStateImage: null };
 obj = { color: nativeDefault.colors.TEXT_SUBTLE };
 obj.emptyStateBody = obj;

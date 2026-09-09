@@ -5,14 +5,14 @@ import components_Button_Button from "../../../../design/components/Button/nativ
 import FastImageDefault from "../../../../components_native/common/FastImage.tsx";
 import AnalyticsLocationDefault from "../../../app_analytics/AnalyticsLocation.tsx";
 import useOpenPremiumMarketingPaymentDefault from "useOpenPremiumMarketingPayment.tsx";
-import _modDef13499 from "../../../../../_runtime/metro/13499__.js";
+import _modDef13522 from "../../../../../_runtime/metro/13522__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, Fragment: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4560);
+const createStyles = fn(4574);
 let closure_7 = createStyles.createStyles({
   container: { flex: 1, flexDirection: "column", alignItems: "center", width: "100%" },
   footerText: { marginBottom: 24 },
@@ -54,7 +54,7 @@ export default function Footer(showSubscribeButton) {
     easterEggSpacing = tmp.easterEggSpacing;
   }
   const tmp2Result = FastImageDefault;
-  items2[1] = React4(tmp2Result, { style: easterEggSpacing, source: _modDef13499 });
+  items2[1] = React4(tmp2Result, { style: easterEggSpacing, source: _modDef13522 });
   obj.children = items2;
   return timestampProducer(View, obj);
 }

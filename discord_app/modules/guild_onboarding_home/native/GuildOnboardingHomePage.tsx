@@ -13,13 +13,13 @@ function GuildOnboardingHomePage(guildId) {
   guildId = guildId.guildId;
   dependencyMap = undefined;
   let tmp = dependencyMap;
-  let obj = guildId(4296);
+  let obj = guildId(4310);
   const sharedValue = obj.useSharedValue(-999);
   let obj1 = guildId(504);
   const items = [GuildOnboardingHomeSettingsStore];
   const stateFromStores = obj1.useStateFromStores(items, () => GuildOnboardingHomeSettingsStore.getSettings(guildId));
   let tmp4 = stateFromStores;
-  const tmp5 = stateFromStores(7223)(guildId);
+  const tmp5 = stateFromStores(7237)(guildId);
   let tmp6 = !tmp5;
   if (!tmp5) {
     let num;
@@ -84,14 +84,14 @@ function GuildOnboardingHomePage(guildId) {
   } else {
     obj = { guildId, scrollValue: sharedValue, children: null };
     obj = { guildId, hideDescription: tmp5 };
-    const items3 = [closure_9(tmp4(16555), obj)];
+    const items3 = [closure_9(tmp4(16586), obj)];
     if (tmp5) {
       obj1 = { children: null };
       let obj2 = { guildId };
-      const items4 = [closure_9(tmp4(16560), obj2), ,];
+      const items4 = [closure_9(tmp4(16591), obj2), ,];
       let obj3 = { guildId };
-      items4[1] = closure_9(tmp4(16564), obj3);
-      tmp4 = tmp4(16565);
+      items4[1] = closure_9(tmp4(16595), obj3);
+      tmp4 = tmp4(16596);
       const obj4 = { guildId };
       tmp = closure_9(tmp4, obj4);
       items4[2] = tmp;
@@ -99,15 +99,15 @@ function GuildOnboardingHomePage(guildId) {
       let tmp12Result = closure_11(closure_10, obj1);
     } else {
       let obj5 = { guildId };
-      tmp12Result = closure_9(tmp4(16568), obj5);
+      tmp12Result = closure_9(tmp4(16599), obj5);
     }
     items3[1] = tmp12Result;
     obj.children = items3;
-    closure_11(tmp4(16554), obj);
-    const tmp4Result = tmp4(16554);
+    closure_11(tmp4(16585), obj);
+    const tmp4Result = tmp4(16585);
   }
 }
-const NO_SETTINGS = fn(4747).NO_SETTINGS;
+const NO_SETTINGS = fn(4761).NO_SETTINGS;
 const AnalyticEvents = fn(1074).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: closure_9, Fragment: c10, jsxs: closure_11 } = jsxProd);

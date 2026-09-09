@@ -832,7 +832,7 @@ function enqueueCommandInteraction(interactionLifecycleOptions) {
     };
     let nonce = interactionLifecycleOptions.nonce;
     if (nonce == null) {
-      let obj1 = onMessageSuccess(7753);
+      let obj1 = onMessageSuccess(7767);
       nonce = obj1.createNonce();
     }
     message.nonce = nonce;
@@ -909,8 +909,8 @@ function enqueueCommandInteraction(interactionLifecycleOptions) {
     }
     closure_129_0 = message;
     closure_129_1 = onMessageSuccess;
-    obj1 = { type: onMessageSuccess(7834).MessageDataType.COMMAND, message };
-    message(7834).enqueue(obj1, (ok) => {
+    obj1 = { type: onMessageSuccess(7848).MessageDataType.COMMAND, message };
+    message(7848).enqueue(obj1, (ok) => {
       ({ nonce, applicationId, channelId, guildId } = closure_0);
       if (guildId == null) {
         guildId = null;
@@ -931,7 +931,7 @@ function enqueueCommandInteraction(interactionLifecycleOptions) {
       }
       obj = onMessageSuccess(dependencyMap[26]);
     });
-    const obj6 = message(7834);
+    const obj6 = message(7848);
   }
 }
 function displayInteractionLifecycleInChat() {
@@ -1273,15 +1273,15 @@ let closure_24 = async function _stageAttachments(arg0) {
             if (closure_1_2 != null) {
               tmp(dependencyMap, arg0);
             }
-            closure_2(8117);
+            closure_2(8143);
             const intl = closure_0(1114).intl;
-            const obj = { maxSize: closure_0(5134).sizeString(dependencyMap) };
+            const obj = { maxSize: closure_0(5148).sizeString(dependencyMap) };
             obj.setFailed(
               closure_1_1,
               constants.ENTITY_TOO_LARGE,
               intl.formatToPlainString(closure_0(1114).t.fxEKdS, obj),
             );
-            const obj3 = closure_0(5134);
+            const obj3 = closure_0(5148);
           };
           closure_132_3 = FileUtils.maxFileSize(closure_2);
           maxTotalAttachmentSize = UploadUtils.getMaxTotalAttachmentSize({
@@ -1385,7 +1385,7 @@ const Constants = fn(1074);
   MessageTypes: map1,
   NON_USER_BOT_DISCRIMINATOR: closure_14,
 } = Constants);
-let closure_15 = fn(4553).DEFAULT_MOBILE_PRE_COMPRESSION_MAX_ATTACHMENT_SIZE;
+let closure_15 = fn(4567).DEFAULT_MOBILE_PRE_COMPRESSION_MAX_ATTACHMENT_SIZE;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/application_commands/executeCommand.tsx");
 

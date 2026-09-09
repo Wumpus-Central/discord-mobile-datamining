@@ -1,7 +1,7 @@
 // discord_app/modules/user_settings/premium/native/utils/usePremiumFeatures.tsx
 import util from "../../../../../intl/index.native.tsx";
 import user from "../../../../../../discord_common/js/packages/protos/discord_protos/users/v1/user.tsx";
-import _modDef3063 from "../../../../premium/premium_group/PremiumGroup.messages.js";
+import _modDef3074 from "../../../../premium/premium_group/PremiumGroup.messages.js";
 import PremiumUtils from "../../../../../utils/PremiumUtils.tsx";
 import FriendsIcon from "../../../../../design/components/Icon/native/redesign/generated/FriendsIcon.tsx";
 import NitroWheelIcon from "../../../../../design/components/Icon/native/redesign/generated/NitroWheelIcon.tsx";
@@ -16,7 +16,7 @@ import noop from "../../../../../../_runtime/metro/00019__.js";
 require = fn;
 const PremiumConstants = fn(1373);
 ({ NUM_FREE_GUILD_BOOSTS_WITH_PREMIUM: closure_4, PremiumTypes: hasOwnProperty } = PremiumConstants);
-const TOTAL_PREMIUM_GROUP_USERS = fn(4232).TOTAL_PREMIUM_GROUP_USERS;
+const TOTAL_PREMIUM_GROUP_USERS = fn(4245).TOTAL_PREMIUM_GROUP_USERS;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/premium/native/utils/usePremiumFeatures.tsx");
 
@@ -41,7 +41,7 @@ export default function usePremiumFeatures(arg0) {
     };
     const intl = util.intl;
     obj = { totalSeats: TOTAL_PREMIUM_GROUP_USERS };
-    obj.label = intl.formatToPlainString(_modDef3063.gsE005, obj);
+    obj.label = intl.formatToPlainString(_modDef3074.gsE005, obj);
     const items = [hasOwnProperty.TIER_2];
     obj.premiumTypes = new Set(items);
     const items1 = [user.PremiumSubscriptionGroupRole.PRIMARY];
@@ -55,7 +55,7 @@ export default function usePremiumFeatures(arg0) {
       availableOnFractional: false,
     };
     const intl2 = util.intl;
-    obj.label = intl2.string(_modDef3063["G6K/+s"]);
+    obj.label = intl2.string(_modDef3074["G6K/+s"]);
     const items3 = [hasOwnProperty.TIER_2];
     const set = new Set(items);
     obj.premiumTypes = new Set(items3);
@@ -162,7 +162,7 @@ export default function usePremiumFeatures(arg0) {
       availableOnFractional: false,
     };
     const intl8 = util.intl;
-    obj7.label = intl8.formatToPlainString(_modDef3063.HVCRVf, { numBoosts });
+    obj7.label = intl8.formatToPlainString(_modDef3074.HVCRVf, { numBoosts });
     const items15 = [hasOwnProperty.TIER_2];
     const obj8 = { numBoosts };
     const set6 = new Set(items13);

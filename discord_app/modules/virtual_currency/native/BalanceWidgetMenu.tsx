@@ -9,7 +9,7 @@ import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import ButtonEllipsis from "../../../design/components/Button/native/ButtonEllipsis.native.tsx";
 import Pressables from "../../../design/void/Pressables/native/Pressables.tsx";
 import AnalyticsLocationDefault from "../../app_analytics/AnalyticsLocation.tsx";
-import _mod8855 from "../hooks/index.tsx";
+import _mod8882 from "../hooks/index.tsx";
 import SelectedDismissibleContentDefault from "../../dismissible_content/native/SelectedDismissibleContent.tsx";
 import BalanceWidgetPillButtonDefault from "BalanceWidgetPillButton.tsx";
 import OrbOnboardingPillDefault from "OrbOnboardingPill.tsx";
@@ -61,9 +61,9 @@ class OrbsOnboardingMenuDismissibleContent {
           obj.track(constants.USER_PROFILE_ACTION, { profile_action: "ORBS_BALANCE_PRESSED" });
           obj = {
             filter: constants3.VIRTUAL_CURRENCY,
-            fromContent: style(5447).QuestContent.MOBILE_ORBS_ONBOARDING_DC,
+            fromContent: style(5461).QuestContent.MOBILE_ORBS_ONBOARDING_DC,
           };
-          style(11772).openQuestHome(obj);
+          style(11798).openQuestHome(obj);
         }
         let obj = { onPress: handleOnboardingPress, style, accessibilityLabel: null, children: null };
         const intl = util.intl;
@@ -80,7 +80,7 @@ class OrbsOnboardingMenuDismissibleContent {
 }
 function BalanceWidgetMenu(style) {
   let str;
-  let obj = str(8855);
+  let obj = str(8882);
   str = obj.useFetchVirtualCurrencyBalance().balance;
   let items = [str];
   const callback = noop.useCallback(() => {
@@ -99,7 +99,7 @@ function BalanceWidgetMenu(style) {
       obj.analyticsLocations = items;
       obj.analyticsSource = AnalyticsLocationDefault.COLLECTIBLES_SHOP;
       obj.screen = constants2.ORBS;
-      const result = str(7541).openCollectiblesShopMobile(obj);
+      const result = str(7555).openCollectiblesShopMobile(obj);
     };
     obj.primaryButtonConfig = obj;
     const obj1 = { buttonText: null, onButtonPress: null };
@@ -112,9 +112,9 @@ function BalanceWidgetMenu(style) {
       obj = {
         mergeExistingRoutes: true,
         filter: constants3.VIRTUAL_CURRENCY,
-        fromContent: str(5447).QuestContent.ORBS_BALANCE_MENU,
+        fromContent: str(5461).QuestContent.ORBS_BALANCE_MENU,
       };
-      str(11772).openQuestHome(obj);
+      str(11798).openQuestHome(obj);
     };
     obj.secondaryButtonConfig = obj1;
     obj.source = AnalyticsLocationDefault.YOU_SCREEN;
@@ -142,10 +142,10 @@ const AnalyticEvents = fn(1074).AnalyticEvents;
 let closure_6 = fn(1076).CollectiblesMobileShopScreen;
 const DismissibleContentConstants = fn(1954);
 ({ ContentDismissActionType: closure_7, DismissibleContentGroupName: closure_8 } = DismissibleContentConstants);
-const RewardFilterTypes = fn(5444).RewardFilterTypes;
+const RewardFilterTypes = fn(5458).RewardFilterTypes;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(4560);
+const createStyles = fn(4574);
 let closure_15 = createStyles.createStyles(() => {
   let obj = { pressable: null, label: null, pill: null, loadingContainer: null };
   obj = {
@@ -168,7 +168,7 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/virtual_currency/native/BalanceWidgetMenu.tsx");
 
 export default function BalanceWidgetMenuWrapper(style) {
-  let obj = _mod8855;
+  let obj = _mod8882;
   const balance = obj.useFetchVirtualCurrencyBalance().balance;
   DismissibleContentUnsafeUtils;
   if (null == balance) {

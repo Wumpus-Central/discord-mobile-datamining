@@ -182,7 +182,7 @@ const Constants = fn(1074);
 ({ Permissions: closure_16, GuildFeatures: closure_17, GuildSettingsSections: closure_18 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_19, jsxs: closure_20, Fragment: closure_21 } = jsxProd);
-fn(4560);
+fn(4574);
 let createStyles = {
   form: { flex: 1 },
   formContent: { paddingTop: 16 },
@@ -493,7 +493,7 @@ prototype["updateNavigator"] = function updateNavigator(submitting) {
         return closure_2_19(HeaderActionButton.HeaderActionButton, obj);
       };
     } else if (null != onClose) {
-      let setOptionsResult = self(5624);
+      let setOptionsResult = self(5638);
       fn = setOptionsResult.getHeaderCloseButton(onClose);
     }
     setOptionsResult = { headerLeft: fn, headerRight: null, headerTitle: null };
@@ -699,7 +699,7 @@ prototype["render"] = function render() {
     }
   }
 };
-GuildSettingsModalMemberEdit.contextType = fn(4271).ThemeContext;
+GuildSettingsModalMemberEdit.contextType = fn(4284).ThemeContext;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/guild_settings/native/GuildSettingsModalMemberEdit.tsx");
 
@@ -707,7 +707,7 @@ export default function MemberModalEdit(onClose) {
   onClose = onClose.onClose;
   const onRemove = onClose.onRemove;
   ({ guildId, userId } = onClose);
-  const tmp = onRemove(5598)(guildId);
+  const tmp = onRemove(5612)(guildId);
   closure_2 = tmp;
   const items = [onClose, onRemove, tmp];
   const memo = noop.useMemo(() => {
@@ -731,7 +731,7 @@ export default function MemberModalEdit(onClose) {
         const merged = Object.assign(arg0);
         obj.guildId = guildId;
         obj.onKick = onKick;
-        return closure_2_19(onRemove(11854), obj);
+        return closure_2_19(onRemove(11880), obj);
       },
     };
     obj = {
@@ -743,7 +743,7 @@ export default function MemberModalEdit(onClose) {
         const merged = Object.assign(arg0);
         obj.guildId = guildId;
         obj.onBan = onBan;
-        return closure_2_19(onRemove(11856), obj);
+        return closure_2_19(onRemove(11882), obj);
       },
     };
     return { [closure_2_18.MEMBER_EDIT]: obj, [closure_2_18.MEMBER_KICK]: obj, [closure_2_18.MEMBER_BAN]: obj };
@@ -752,6 +752,6 @@ export default function MemberModalEdit(onClose) {
   obj = { name: constants3.MEMBER_EDIT, params: { userId } };
   const items1 = [obj];
   obj.initialRouteStack = items1;
-  return closure_19(onClose(7000).Navigator, obj);
+  return closure_19(onClose(7014).Navigator, obj);
 }
 export { GuildSettingsModalMemberEditScene };

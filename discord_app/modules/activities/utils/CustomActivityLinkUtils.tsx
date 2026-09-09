@@ -156,7 +156,7 @@ let closure_8 = async function _getCustomActivityLinkParams(arg0) {
       } else if (1 === tmp6) {
         c6 = 0;
         c7 = 3;
-        const obj6 = { value: { customId: "Array" }, done: true };
+        const obj6 = { value: { customId: "disabled" }, done: true };
         return obj6;
       } else if (arg0 === 1) {
         c7 = 3;
@@ -169,7 +169,7 @@ let closure_8 = async function _getCustomActivityLinkParams(arg0) {
       } else {
         closure_132_0 = value;
         if (null == closure_132_0) {
-          obj = { customId: "Array" };
+          obj = { customId: "disabled" };
         } else {
           { customId: null }[0] = closure_132_0.custom_id;
         }

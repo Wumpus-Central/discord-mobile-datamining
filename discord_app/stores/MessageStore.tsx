@@ -1009,7 +1009,7 @@ const messageStore = new MessageStore(DispatcherDefault, {
   MESSAGE_DELETE_BULK: function handleMessageDeleteBulk(ids) {
     ids = ids.ids;
     let mutation;
-    let obj = mutation(5272);
+    let obj = mutation(5286);
     const orCreate = obj.getOrCreate(ids.channelId);
     if (null == orCreate) {
       return false;
@@ -1059,7 +1059,7 @@ const messageStore = new MessageStore(DispatcherDefault, {
             mutation = removeManyResult.mutate(obj);
           }
         }
-        tmpResult = tmp(5272);
+        tmpResult = tmp(5286);
         tmpResult.commit(tmp3);
         const item1 = ids.forEach((item) => {
           set.delete(item);

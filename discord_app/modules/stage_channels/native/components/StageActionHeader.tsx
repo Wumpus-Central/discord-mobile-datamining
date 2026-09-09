@@ -7,17 +7,17 @@ import AppAnalyticsUtils from "../../../app_analytics/AppAnalyticsUtils.tsx";
 import ChannelRTCActionCreatorsDefault from "../../../../actions/ChannelRTCActionCreators.tsx";
 import ModalActionCreatorsDefault from "../../../../actions/ModalActionCreators.tsx";
 import PrivateChannelCallUtils from "../../../../utils/native/PrivateChannelCallUtils.tsx";
-import LinearGradientDefault from "../../../../../_runtime/04987_LinearGradient.js";
+import LinearGradientDefault from "../../../../../_runtime/05001_LinearGradient.js";
 import StageChannelActionCreatorExtras from "../../StageChannelActionCreatorExtras.native.tsx";
-import _modDef8624 from "../../../../../_runtime/metro/08624__.js";
-import _modDef8627 from "../../../../../_runtime/metro/08627__.js";
+import _modDef8652 from "../../../../../_runtime/metro/08652__.js";
+import _modDef8655 from "../../../../../_runtime/metro/08655__.js";
 import StatusBarDefault from "../../../status_bar/native/components/StatusBar.android.tsx";
 import instant_invite_InstantInviteUtils from "../../../instant_invite/native/InstantInviteUtils.tsx";
 import StageMusicActionCreators from "../../StageMusicActionCreators.tsx";
 import ChannelCallNavigatorIconDefault from "../../../video_calls/native/components/ChannelCallNavigatorIcon.tsx";
-import _modDef10033 from "../../../../../_runtime/metro/10033__.js";
-import _modDef10034 from "../../../../../_runtime/metro/10034__.js";
-import _modDef10035 from "../../../../../_runtime/metro/10035__.js";
+import _modDef10060 from "../../../../../_runtime/metro/10060__.js";
+import _modDef10061 from "../../../../../_runtime/metro/10061__.js";
+import _modDef10062 from "../../../../../_runtime/metro/10062__.js";
 import useMyCurrentStageChannelRoleDefault from "../../useMyCurrentStageChannelRole.tsx";
 import ChannelCallHeaderButtons from "../../../video_calls/native/components/ChannelCallHeaderButtons.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
@@ -302,7 +302,7 @@ const Constants = fn(1074);
 ({ AnalyticEvents: c10, InstantInviteSources: closure_11 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
-fn(4560);
+fn(4574);
 let obj = {
   header: null,
   leftTitleContainer: null,
@@ -316,7 +316,7 @@ let obj = {
   icon: null,
 };
 obj = {
-  height: fn(5682).NAV_BAR_HEIGHT,
+  height: fn(5696).NAV_BAR_HEIGHT,
   flexDirection: "row",
   alignItems: "center",
   paddingHorizontal: 12,
@@ -327,11 +327,11 @@ obj.leftTitleContainer = { marginLeft: 12, flex: 1 };
 obj.titleWrapper = { position: "relative", flex: 1, justifyContent: "center" };
 obj.linearGradient = { position: "absolute", zIndex: 1, left: 0, right: 0, top: 0, bottom: 0 };
 const createStyles = { backgroundColor: null };
-let ColorUtils = fn(4409);
+let ColorUtils = fn(4423);
 createStyles.backgroundColor = ColorUtils.hexWithOpacity(nativeDefault.unsafe_rawColors.WHITE, 0.1);
 obj.iconBackground = createStyles;
 let obj2 = { backgroundColor: null };
-ColorUtils = fn(4409);
+ColorUtils = fn(4423);
 obj2.backgroundColor = ColorUtils.hexWithOpacity(nativeDefault.unsafe_rawColors.WHITE, 0.1);
 obj.iconContainer = obj2;
 obj.settingsButton = { marginRight: 4 };
@@ -403,7 +403,7 @@ export const HideChannelCallButton = function HideChannelCallButton(channel) {
     children: null,
   };
   const tmp = closure_14();
-  obj.source = _modDef10033;
+  obj.source = _modDef10060;
   const intl = channel(1114).intl;
   obj.accessibilityLabel = intl.string(channel(1114).t.cpT0Cq);
   obj.onPress = function onPress() {

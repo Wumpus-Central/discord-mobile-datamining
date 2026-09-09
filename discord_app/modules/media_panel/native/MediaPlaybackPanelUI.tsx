@@ -15,12 +15,12 @@ import SafeAreaDisabledStore from "../../panels/morphable/native/SafeAreaDisable
 
 require = fn;
 const useContext = fn(19).useContext;
-const MediaPlaybackPanelConstants = fn(14540);
+const MediaPlaybackPanelConstants = fn(14565);
 ({ MEDIA_PLAYBACK_PANEL_LAYOUT_PHYSICS: closure_7, MediaPlaybackPanelModes: closure_8 } = MediaPlaybackPanelConstants);
-const IS_IOS = fn(12278).IS_IOS;
-const BORDER_RADIUS_PHYSICS = fn(12277).BORDER_RADIUS_PHYSICS;
+const IS_IOS = fn(12304).IS_IOS;
+const BORDER_RADIUS_PHYSICS = fn(12303).BORDER_RADIUS_PHYSICS;
 const jsx = fn(21).jsx;
-fn(4560);
+fn(4574);
 let createStyles = {
   wrapperAnimationPresets: { opacity: 0 },
   wrapper: { position: "absolute", top: 0, left: 0, zIndex: 1 },
@@ -309,7 +309,7 @@ export default function MediaPlaybackPanelUI() {
         const maskElevation = tmp8.maskElevation;
       }
       closure_129_15 = maskElevation;
-      let tmp6Result = tmp6(4296);
+      let tmp6Result = tmp6(4310);
       class L {
         constructor() {
           tmp = closure_0;
@@ -356,11 +356,11 @@ export default function MediaPlaybackPanelUI() {
         }
       }
       obj1 = {
-        withTiming: tmp6(4561).withTiming,
+        withTiming: tmp6(4575).withTiming,
         wrapperOpacity: sharedValue2,
-        timingFast: tmp6(4564).timingFast,
+        timingFast: tmp6(4578).timingFast,
         animateWrapperTranslation: sharedValue3,
-        withSpring: tmp6(4974).withSpring,
+        withSpring: tmp6(4988).withSpring,
         wrapperTranslationX: sharedValue,
         MEDIA_PLAYBACK_PANEL_LAYOUT_PHYSICS,
         wrapperTranslationY: sharedValue1,
@@ -374,7 +374,7 @@ export default function MediaPlaybackPanelUI() {
       closure_129_16 = animatedStyle1;
       const xl = tmp2(576).radii.xl;
       closure_129_17 = xl;
-      tmp6Result = tmp6(4296);
+      tmp6Result = tmp6(4310);
       class B {
         constructor() {
           obj = { borderRadius: null };
@@ -385,7 +385,7 @@ export default function MediaPlaybackPanelUI() {
         }
       }
       obj2 = {
-        withSpring: tmp6(4974).withSpring,
+        withSpring: tmp6(4988).withSpring,
         borderRadius: xl,
         BORDER_RADIUS_PHYSICS,
         maskElevationStyles: maskElevation,
@@ -425,28 +425,28 @@ export default function MediaPlaybackPanelUI() {
       fn4.__closure = obj3;
       fn4.__workletHash = 8557652955267;
       fn4.__initData = __initData7;
-      const animatedStyle3 = tmp6(4296).useAnimatedStyle(fn4);
-      const context1 = obj1.useContext(tmp2(17226));
+      const animatedStyle3 = tmp6(4310).useAnimatedStyle(fn4);
+      const context1 = obj1.useContext(tmp2(17257));
       ({ wrapperOffset: wrapperOffset2, pipState: pipState2 } = context1);
       obj4 = { panGestureEnabled: true, mode: null, pipState: null, wrapperOffset: null };
-      const tmp6Result1 = tmp6(4296);
-      obj4.mode = tmp6(17024).MorphablePanelModes.PIP;
+      const tmp6Result1 = tmp6(4310);
+      obj4.mode = tmp6(17055).MorphablePanelModes.PIP;
       obj4.pipState = pipState2;
       obj4.wrapperOffset = wrapperOffset2;
-      const tmp2Result = tmp2(17024);
+      const tmp2Result = tmp2(17055);
       obj5 = { children: null };
       obj6 = { style: animatedStyle, pointerEvents: "box-none", children: null };
       obj7 = { style: tmp30, children: null };
-      const View = tmp2(4296).View;
+      const View = tmp2(4310).View;
       obj8 = { style: tmp31, children: null };
-      const obj9 = { gesture: tmp2(17024)(obj4), children: null };
+      const obj9 = { gesture: tmp2(17055)(obj4), children: null };
       const obj10 = { style: null, children: null };
       const items3 = [tmp.content, animatedStyle3];
       obj10.style = items3;
-      obj10.children = jsx(tmp2(17228), {});
-      obj9.children = jsx(tmp2(4296).View, { style: null, children: null });
-      obj8.children = jsx(tmp6(6655).GestureDetector, { gesture: tmp2(17024)(obj4), children: null });
-      obj7.children = jsx(tmp2(4296).View, { style: tmp31, children: null });
+      obj10.children = jsx(tmp2(17259), {});
+      obj9.children = jsx(tmp2(4310).View, { style: null, children: null });
+      obj8.children = jsx(tmp6(6669).GestureDetector, { gesture: tmp2(17055)(obj4), children: null });
+      obj7.children = jsx(tmp2(4310).View, { style: tmp31, children: null });
       class R {
         constructor() {
           obj = {
@@ -461,8 +461,8 @@ export default function MediaPlaybackPanelUI() {
           return obj;
         }
       }
-      obj5.children = jsx(tmp2(4296).View, { style: animatedStyle, pointerEvents: "box-none", children: null });
-      return jsx(tmp6(7156).LayerScope, { children: null });
+      obj5.children = jsx(tmp2(4310).View, { style: animatedStyle, pointerEvents: "box-none", children: null });
+      return jsx(tmp6(7170).LayerScope, { children: null });
     }
   }
   maskEmptyElevation = tmp8.maskEmptyElevation;

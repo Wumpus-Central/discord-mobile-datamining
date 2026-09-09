@@ -29,7 +29,7 @@ export default function ChannelVoiceChatModal(channel) {
     <tmp5
       screenKey="StageVoiceChat"
       title={str}
-      titleIcon={jsx(channel(5097).StageIcon, { size: "sm" })}
+      titleIcon={jsx(channel(5111).StageIcon, { size: "sm" })}
       render={function render() {
         let guild_id = channel.guild_id;
         if (guild_id == null) {

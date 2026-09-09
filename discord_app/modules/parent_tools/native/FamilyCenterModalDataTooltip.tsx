@@ -74,18 +74,18 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
 let row = {
-  [USER_INTERACTION]: fn(5071).ChatIcon,
-  [USER_CALLED]: fn(11925).PhoneIcon,
-  [USER_ADD]: fn(4260).FriendsIcon,
-  [GUILD_ADD]: fn(13379).ServerGridIcon,
-  [GUILD_INTERACTION]: fn(5073).ThreadIcon,
-  [PURCHASES]: fn(11927).CreditCardIcon,
-  [TOTAL_VOICE_MINUTES]: fn(4523).ClockIcon,
-  [GIFTS]: fn(11035).GiftIcon,
+  [USER_INTERACTION]: fn(5085).ChatIcon,
+  [USER_CALLED]: fn(11951).PhoneIcon,
+  [USER_ADD]: fn(4273).FriendsIcon,
+  [GUILD_ADD]: fn(13402).ServerGridIcon,
+  [GUILD_INTERACTION]: fn(5087).ThreadIcon,
+  [PURCHASES]: fn(11953).CreditCardIcon,
+  [TOTAL_VOICE_MINUTES]: fn(4537).ClockIcon,
+  [GIFTS]: fn(11062).GiftIcon,
 };
 ({ USER_INTERACTION, USER_CALLED, USER_ADD, GUILD_ADD, GUILD_INTERACTION, PURCHASES, TOTAL_VOICE_MINUTES, GIFTS } =
-  fn(7538).TeenActionDisplayType);
-fn(4560);
+  fn(7552).TeenActionDisplayType);
+fn(4574);
 row = { row: null, content: null, iconContainer: null, header: null, icon: null };
 row = {
   display: "flex",
@@ -116,7 +116,7 @@ let createStyles = { marginBottom: nativeDefault.space.PX_4 };
 row.header = createStyles;
 row.icon = { tintColor: nativeDefault.colors.TEXT_BRAND };
 let closure_8 = createStyles.createStyles(row);
-createStyles = fn(4560);
+createStyles = fn(4574);
 let obj3 = { container: null, groupHeader: null };
 const obj2 = { tintColor: nativeDefault.colors.TEXT_BRAND };
 obj3.container = { display: "flex", alignItems: "center", paddingHorizontal: nativeDefault.space.PX_16, width: "100%" };

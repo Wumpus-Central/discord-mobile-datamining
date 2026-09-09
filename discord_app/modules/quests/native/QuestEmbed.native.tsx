@@ -14,7 +14,7 @@ import Constants2 from "../../instant_invite/Constants.tsx";
 import getEmbedThemeColorsDefault from "../../messages/native/renderer/row_data/embeds/getEmbedThemeColors.tsx";
 import AssetUtils from "../lib/AssetUtils.tsx";
 import QuestCopyHooks from "../hooks/QuestCopyHooks.tsx";
-import _modDef13228 from "../../../../_runtime/metro/13228__.js";
+import _modDef13251 from "../../../../_runtime/metro/13251__.js";
 import ThemeStore from "../../user_settings/ThemeStore.tsx";
 import QuestStore from "../QuestStore.tsx";
 import QuestConstants from "../QuestConstants.tsx";
@@ -46,7 +46,7 @@ export const createQuestsEmbed = function createQuestsEmbed(questId) {
       bodyTextColor: obj25.subtitleColor,
       bodyTextColor: obj25.bodyTextColor,
     } = colors5);
-    obj.thumbnailUrl = Image.resolveAssetSource(_modDef13228).uri;
+    obj.thumbnailUrl = Image.resolveAssetSource(_modDef13251).uri;
     obj.embedCanBeTapped = true;
     obj.canBeAccepted = true;
     obj.type = InviteTypes.GUILD;
@@ -126,7 +126,7 @@ export const createQuestsEmbed = function createQuestsEmbed(questId) {
           bodyTextColor: obj34.subtitleColor,
           bodyTextColor: obj34.bodyTextColor,
         } = colors6);
-        obj4.thumbnailUrl = Image.resolveAssetSource(_modDef13228).uri;
+        obj4.thumbnailUrl = Image.resolveAssetSource(_modDef13251).uri;
         obj4.embedCanBeTapped = true;
         obj4.canBeAccepted = true;
         obj4.type = InviteTypes.GUILD;
@@ -158,7 +158,7 @@ export const createQuestsEmbed = function createQuestsEmbed(questId) {
         bodyTextColor: obj18.subtitleColor,
         bodyTextColor: obj18.bodyTextColor,
       } = colors3);
-      obj6.thumbnailUrl = Image.resolveAssetSource(_modDef13228).uri;
+      obj6.thumbnailUrl = Image.resolveAssetSource(_modDef13251).uri;
       obj6.embedCanBeTapped = true;
       obj6.canBeAccepted = true;
       obj6.type = InviteTypes.GUILD;
@@ -286,7 +286,7 @@ export const createQuestsEmbed = function createQuestsEmbed(questId) {
           bodyTextColor: obj4.subtitleColor,
           bodyTextColor: obj4.bodyTextColor,
         } = colors);
-        obj14.thumbnailUrl = Image.resolveAssetSource(_modDef13228).uri;
+        obj14.thumbnailUrl = Image.resolveAssetSource(_modDef13251).uri;
         obj14.embedCanBeTapped = true;
         obj14.canBeAccepted = true;
         obj14.type = InviteTypes.GUILD;

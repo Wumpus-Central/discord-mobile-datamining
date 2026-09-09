@@ -3,7 +3,7 @@ import _modDef12 from "../../../../_runtime/metro/00012__.js";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import native from "../../../../discord_common/js/packages/design/native.tsx";
 
-const SemanticColorContext = obj(4263);
+const SemanticColorContext = obj(4276);
 require = fn;
 const map = new Map();
 const keys = Object.keys(nativeDefault.colors);

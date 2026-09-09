@@ -17,7 +17,7 @@ let result = size.fileFinishedImporting("modules/quests/native/BountiesModal/Bou
 
 export default function BountiesAutoScrollOverlayNuxGradient(active) {
   active = active.active;
-  let obj = active(4296);
+  let obj = active(4310);
   const sharedValue = obj.useSharedValue(0);
   const items = [active, sharedValue];
   const effect = noop.useEffect(() => {
@@ -27,7 +27,7 @@ export default function BountiesAutoScrollOverlayNuxGradient(active) {
     }
     const result = sharedValue.set(timing.withTiming(num, timingPresets.timingSlow));
   }, items);
-  let obj1 = active(4296);
+  let obj1 = active(4310);
   const fn = function _() {
     return { opacity: sharedValue.get() };
   };
@@ -44,7 +44,7 @@ export default function BountiesAutoScrollOverlayNuxGradient(active) {
   obj.locations = [0, 1];
   obj.start = { x: 0.5, y: 1 };
   obj.end = { x: 0.5, y: 0 };
-  const items3 = [closure_5(sharedValue(4987), obj)];
+  const items3 = [closure_5(sharedValue(5001), obj)];
   obj1 = {
     style: StyleSheet.absoluteFillObject,
     colors: ["rgba(0,0,0,0.4)", "rgba(0,0,0,0)"],
@@ -52,7 +52,7 @@ export default function BountiesAutoScrollOverlayNuxGradient(active) {
     start: { x: 0.5, y: 1 },
     end: { x: 0.5, y: 0 },
   };
-  items3[1] = closure_5(sharedValue(4987), obj1);
+  items3[1] = closure_5(sharedValue(5001), obj1);
   obj.children = items3;
-  return closure_6(sharedValue(4296).View, obj);
+  return closure_6(sharedValue(4310).View, obj);
 }

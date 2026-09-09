@@ -4,7 +4,7 @@ import util from "../../../../../intl/index.native.tsx";
 import native from "../../../../../design/void/native.tsx";
 import LinkingDefault from "../../../../../lib/native/Linking.tsx";
 import Text_Text from "../../../../../design/components/Text/native/Text.tsx";
-import _modDef10307 from "../../../../../../_runtime/metro/10307__.js";
+import _modDef10334 from "../../../../../../_runtime/metro/10334__.js";
 import EmojiIconDefault from "../../components/EmojiIcon.tsx";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
@@ -28,7 +28,7 @@ function GuildServerSubscriberCount(arg0) {
     size: native.Icon.Sizes.SMALL,
     color: nativeDefault.unsafe_rawColors.WHITE,
     style: tmp.subscriberCountIcon,
-    source: _modDef10307,
+    source: _modDef10334,
   };
   items1[1] = timestampProducer(native.Icon, obj);
   const obj1 = { variant: "text-sm/normal", color: "text-overlay-light", children: null };
@@ -45,12 +45,12 @@ function CreatorGuildCard(highlightedCreatorGuild) {
   const guild_id = highlightedCreatorGuild.guild_id;
   let quote_attribution_title = highlightedCreatorGuild.quote_attribution_title;
   ({ quote, quote_attribution } = highlightedCreatorGuild);
-  const tmp4 = guild_id(17711)(guild_id, 3, 60);
+  const tmp4 = guild_id(17744)(guild_id, 3, 60);
   dependencyMap = tmp4;
   const hasAllImperativeDetails = tmp4.hasAllImperativeDetails;
   let items = [hasAllImperativeDetails, tmp4];
   if (tmp4.isLoading) {
-    let obj = { style: tmp.cardContainer, children: closure_6(tmp2(17683), {}) };
+    let obj = { style: tmp.cardContainer, children: closure_6(tmp2(17716), {}) };
     return closure_6(closure_4, obj);
   } else if (hasAllImperativeDetails) {
     const details = tmp4.details;
@@ -61,7 +61,7 @@ function CreatorGuildCard(highlightedCreatorGuild) {
     const obj1 = { style: tmp.guildIcon, source: null };
     const obj2 = { uri: guildAvatarUrl };
     obj1.source = obj2;
-    const items1 = [closure_6(tmp2(5587), obj1)];
+    const items1 = [closure_6(tmp2(5601), obj1)];
     const obj3 = { style: tmp.cardHeaderContainer, children: null };
     const obj4 = {
       variant: "heading-md/extrabold",
@@ -114,7 +114,7 @@ function CreatorGuildCard(highlightedCreatorGuild) {
       };
       const intl3 = tmp10(1114).intl;
       obj10.children = intl3.string(tmp10(1114).t.wg53L8);
-      const items4 = [closure_6(tmp10(4556).Text, obj10)];
+      const items4 = [closure_6(tmp10(4570).Text, obj10)];
       const obj11 = { style: null, children: null };
       const items5 = [,];
       ({ horizontalContainer: arr6[0], emojiContainer: arr6[1] } = tmp);
@@ -133,7 +133,7 @@ function CreatorGuildCard(highlightedCreatorGuild) {
         const obj12 = { style: tmp.emojiListItem, variant: "text-sm/semibold", color: "text-default", children: null };
         const _HermesInternal = HermesInternal;
         obj12.children = "+" + notShownEmojiCount;
-        tmp9Result = closure_6(tmp10(4556).Text, obj12);
+        tmp9Result = closure_6(tmp10(4570).Text, obj12);
       }
       items6[1] = tmp9Result;
       obj11.children = items6;
@@ -159,7 +159,7 @@ get_ActivityIndicator = fn(17);
 ({ View: closure_4, FlatList: hasOwnProperty } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-fn(4560);
+fn(4574);
 let createStyles = {
   horizontalContainer: { flexDirection: "row" },
   serverSubscriberCount: { marginTop: 8 },

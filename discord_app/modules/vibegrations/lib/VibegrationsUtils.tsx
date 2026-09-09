@@ -5,14 +5,15 @@ import GuildChannelStore from "../../../stores/GuildChannelStore.tsx";
 import GuildStore from "../../../stores/GuildStore.tsx";
 import PermissionStore from "../../../stores/PermissionStore.tsx";
 import SelectedGuildStore from "../../../stores/SelectedGuildStore.tsx";
+import Constants from "../../../Constants.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
-require = fn;
 function vibegrationsAppIdFromTopic(topic) {
   if (null != topic) {
-    if (topic.startsWith(c10)) {
+    if (topic.startsWith(c11)) {
       const substr = topic.slice(28);
       let tmp4 = null;
-      if (re11.test(substr)) {
+      if (re12.test(substr)) {
         tmp4 = substr;
       }
       return tmp4;
@@ -21,18 +22,51 @@ function vibegrationsAppIdFromTopic(topic) {
   return null;
 }
 function vibegrationsTextChannelsIn(guildId) {
-  return GuildChannelStore.getChannels(guildId)[closure_3].filter(
+  return GuildChannelStore.getChannels(guildId)[React2].filter(
     (channel) => channel.channel.type === constants.GUILD_TEXT,
   );
 }
-let closure_3 = fn(2012).GUILD_SELECTABLE_CHANNELS_KEY;
-const Constants = fn(1074);
-({ Permissions: closure_7, ChannelTypes: closure_8, GuildFeatures: closure_9 } = Constants);
-let c10 = "vibegrations_application_id=";
-const re11 = /^\d{17,20}$/;
-const size = fn(2);
+({ GUILD_SELECTABLE_CHANNELS_KEY: c2, GUILD_VOCAL_CHANNELS_KEY: c3 } = GuildChannelStore);
+({ Permissions: closure_8, ChannelTypes: closure_9, GuildFeatures: c10 } = Constants);
+let c11 = "vibegrations_application_id=";
+const re12 = /^\d{17,20}$/;
 let result = size.fileFinishedImporting("modules/vibegrations/lib/VibegrationsUtils.tsx");
 
+export const vibegrationsSettingsGuildId = function vibegrationsSettingsGuildId(project, isPreview) {
+  let tmp = null;
+  if (null != project) {
+    tmp = null;
+    if ("user" !== project.install_scope) {
+      let preview_guild_id = null;
+      if (isPreview) {
+        preview_guild_id = project.preview_guild_id;
+      }
+      if (preview_guild_id == null) {
+        preview_guild_id = project.guild_id;
+      }
+      if (preview_guild_id == null) {
+        preview_guild_id = null;
+      }
+      tmp = preview_guild_id;
+    }
+  }
+  return tmp;
+};
+export const vibegrationsSettingChannels = function vibegrationsSettingChannels(stateFromStores1, channel_filter) {
+  if ("voice" === channel_filter) {
+    let items = [];
+  } else {
+    items = stateFromStores1[React2];
+  }
+  const items1 = [...items];
+  if ("text" === channel_filter) {
+    let items2 = [];
+  } else {
+    items2 = stateFromStores1[React3];
+  }
+  HermesBuiltin.arraySpread(items2, tmp2);
+  return items1.map((channel) => channel.channel);
+};
 export const getVibegrationsProjectAccessSettings = function getVibegrationsProjectAccessSettings(first1) {
   return {
     isPublic: first1 & VibegrationsTypes.VibegrationsProjectFlags.PUBLIC,
@@ -41,7 +75,7 @@ export const getVibegrationsProjectAccessSettings = function getVibegrationsProj
 };
 export { vibegrationsAppIdFromTopic };
 export const vibegrationsTopicForApp = function vibegrationsTopicForApp(arg0) {
-  return "" + c10 + arg0;
+  return "" + c11 + arg0;
 };
 export const isVibegrationsProjectInGuild = function isVibegrationsProjectInGuild(guild_id, arg1) {
   let tmp = null != guild_id;
@@ -147,11 +181,11 @@ export const resolveVibegrationsWorkspaceGuildId = function resolveVibegrationsW
     id = null;
   }
 };
-export const canAccessVibegrations = function canAccessVibegrations(guildId, isAccessibleChannelOrThreadPath) {
-  const obj = { guildId: guildId.id, location: isAccessibleChannelOrThreadPath };
+export const canAccessVibegrations = function canAccessVibegrations(guild, getChannelIdForGuildTransition) {
+  const obj = { guildId: guild.id, location: getChannelIdForGuildTransition };
   let result = obj.isVibegrationsGuildEnabled(obj);
   if (result) {
-    const features = guildId.features;
+    const features = guild.features;
     result = !features.has(constants3.INTERNAL_EMPLOYEE_ONLY);
   }
   return result;
@@ -196,10 +230,10 @@ export const isVibegrationsChannelCandidate = function isVibegrationsChannelCand
     let tmp6 = null;
     if (null != topic) {
       tmp6 = null;
-      if (topic.startsWith(c10)) {
+      if (topic.startsWith(c11)) {
         const substr = topic.slice(28);
         let tmp10 = null;
-        if (re11.test(substr)) {
+        if (re12.test(substr)) {
           tmp10 = substr;
         }
         tmp6 = tmp10;
@@ -252,7 +286,7 @@ export const useIsVibegrationsChannelCandidate = function useIsVibegrationsChann
     let tmp6 = null;
     if (null != topic) {
       tmp6 = null;
-      if (topic.startsWith(c10)) {
+      if (topic.startsWith(c11)) {
         const substr = topic.slice(28);
         let tmp10 = null;
         if (regex.test(substr)) {

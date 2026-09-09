@@ -11,7 +11,7 @@ const ReanimatedRexport = ReanimatedRexport2;
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(4560);
+const createStyles = fn(4574);
 let closure_4 = createStyles.createStyles((arg0, arg1) => {
   if ("sm" === arg1) {
     let obj = {
@@ -63,7 +63,7 @@ export const BaseIconButton = noop.forwardRef((variant, ref) => {
   let obj = ReanimatedRexport2;
   const sharedValue = obj.useSharedValue(0);
   let obj1 = ButtonHooks;
-  const iconTintStyles = obj1.useIconTintStyles(str);
+  const iconTintStyles = obj1.useIconTintStyles(str, sharedValue);
   const iconSizeStyles = ButtonHooks.useIconSizeStyles(DEFAULT_BUTTON_SIZE, true, maxFontSizeMultiplier);
   let MEDIUM_BUTTON_HEIGHT = ButtonConstants.LARGE_BUTTON_HEIGHT;
   if ("sm" === DEFAULT_BUTTON_SIZE) {

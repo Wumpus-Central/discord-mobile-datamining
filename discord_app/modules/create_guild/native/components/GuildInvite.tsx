@@ -65,8 +65,8 @@ function GuildInviteSuggestionRows(openInviteSheet) {
 }
 get_ActivityIndicator = fn(17);
 ({ Image: hasOwnProperty, View: metroRequire, FlatList: closure_7, StyleSheet } = get_ActivityIndicator);
-let closure_8 = fn(9899).useInstantInviteSendStates;
-const CreateGuildModalStates = fn(6980).CreateGuildModalStates;
+let closure_8 = fn(9926).useInstantInviteSendStates;
+const CreateGuildModalStates = fn(6994).CreateGuildModalStates;
 const Constants = fn(1074);
 ({
   AnalyticEvents: closure_14,
@@ -77,7 +77,7 @@ const Constants = fn(1074);
 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_19, jsxs: closure_20 } = jsxProd);
-fn(4560);
+fn(4574);
 let createStyles = {
   container: null,
   header: null,
@@ -94,7 +94,7 @@ let createStyles = {
   separator: null,
 };
 createStyles = {
-  marginTop: fn(5682).NAV_BAR_HEIGHT,
+  marginTop: fn(5696).NAV_BAR_HEIGHT,
   flex: 1,
   backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER,
   alignItems: "center",

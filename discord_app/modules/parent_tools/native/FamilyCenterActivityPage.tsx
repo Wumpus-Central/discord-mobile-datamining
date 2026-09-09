@@ -14,7 +14,7 @@ get_ActivityIndicator = fn(17);
 ({ View: c3, ScrollView: closure_4 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, Fragment: metroRequire, jsxs: closure_7 } = jsxProd);
-fn(4560);
+fn(4574);
 let createStyles = { scrollView: { flex: 1 }, dataConfirmation: null, container: null };
 createStyles = { marginTop: nativeDefault.space.PX_8 };
 createStyles.dataConfirmation = createStyles;

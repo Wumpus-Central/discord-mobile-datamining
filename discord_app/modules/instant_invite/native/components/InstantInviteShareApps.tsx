@@ -6,10 +6,10 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 const require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, ScrollView: metroRequire } = get_ActivityIndicator);
-const InstantInviteConstants = fn(9861);
+const InstantInviteConstants = fn(9888);
 ({ SHARE_ITEMS: closure_7, SHARE_ITEMS_DEFAULT: closure_8 } = InstantInviteConstants);
 const jsx = fn(21).jsx;
-const createStyles = fn(4560);
+const createStyles = fn(4574);
 let obj = { contentContainer: null };
 obj = { padding: nativeDefault.space.PX_16, gap: nativeDefault.space.PX_12, alignItems: "center" };
 obj.contentContainer = obj;
@@ -20,12 +20,12 @@ const result = size.fileFinishedImporting("modules/instant_invite/native/compone
 export default noop.memo(function InstantInviteShareApps(onItemPressed) {
   onItemPressed = onItemPressed.onItemPressed;
   dependencyMap = undefined;
-  let obj = onItemPressed(4982);
+  let obj = onItemPressed(4996);
   closure_1 = obj.useFontScale();
   const tmp = closure_10();
   [arr, c2] = _slicedToArray(noop.useState(closure_8), 2);
   const tmp2 = _slicedToArray(noop.useState(closure_8), 2);
-  const gesture = onItemPressed(6655).useNativeGesture({ disallowInterruption: true });
+  const gesture = onItemPressed(6669).useNativeGesture({ disallowInterruption: true });
   const effect = noop.useEffect(() => {
     Promise.all(React5.map((isAvailable) => isAvailable.isAvailable)).then((arr) => {
       const items = [];
@@ -150,5 +150,5 @@ export default noop.memo(function InstantInviteShareApps(onItemPressed) {
       })}
     </closure_6>
   );
-  return jsx(onItemPressed(6655).GestureDetector, { gesture, children });
+  return jsx(onItemPressed(6669).GestureDetector, { gesture, children });
 });

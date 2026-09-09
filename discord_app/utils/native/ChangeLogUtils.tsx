@@ -1,6 +1,6 @@
 // discord_app/utils/native/ChangeLogUtils.tsx
 import nativeDefault from "../../../discord_common/js/packages/tokens/native.tsx";
-import _modDef4257 from "../../../_runtime/metro/04257__.js";
+import _modDef4270 from "../../../_runtime/metro/04270__.js";
 import Text_Text from "../../design/components/Text/native/Text.tsx";
 import ManaTypeConsolidationExperiment from "../../modules/design/ManaTypeConsolidationExperiment.tsx";
 import MarkupRulesUtils from "../../modules/markup/MarkupRulesUtils.tsx";
@@ -120,9 +120,9 @@ function ChangeLogStrong(arg0) {
 function ChangeLogImage(arg0) {
   ({ node, state } = arg0);
   let obj = { style: closure_6().image, source: null };
-  obj = { uri: _modDef4257.sanitizeUrl(node.target) };
+  obj = { uri: _modDef4270.sanitizeUrl(node.target) };
   obj.source = obj;
-  return <React4 key={state.key} uri={_modDef4257.sanitizeUrl(node.target)} />;
+  return <React4 key={state.key} uri={_modDef4270.sanitizeUrl(node.target)} />;
 }
 function ChangeLogBlockQuote(state) {
   state = state.state;
@@ -144,7 +144,7 @@ function ChangeLogBlockQuote(state) {
 get_ActivityIndicator = fn(17);
 ({ View: c3, Image: closure_4 } = get_ActivityIndicator);
 const jsx = fn(21).jsx;
-fn(4560);
+fn(4574);
 let createStyles = { link: null, list: null, image: null, container: null, text: null };
 createStyles = { color: nativeDefault.colors.TEXT_LINK };
 createStyles.link = createStyles;
@@ -154,13 +154,13 @@ createStyles.container = {
   borderLeftWidth: 2,
   paddingLeft: 8,
   marginBottom: 10,
-  borderLeftColor: fn(5441).DARK_PRIMARY_500_LIGHT_PRIMARY_300,
+  borderLeftColor: fn(5455).DARK_PRIMARY_500_LIGHT_PRIMARY_300,
 };
 const obj1 = {
   borderLeftWidth: 2,
   paddingLeft: 8,
   marginBottom: 10,
-  borderLeftColor: fn(5441).DARK_PRIMARY_500_LIGHT_PRIMARY_300,
+  borderLeftColor: fn(5455).DARK_PRIMARY_500_LIGHT_PRIMARY_300,
 };
 createStyles.text = { fontSize: 14, lineHeight: 18, marginBottom: 8, color: nativeDefault.colors.TEXT_MUTED };
 let closure_6 = createStyles.createStyles(createStyles);

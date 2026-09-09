@@ -75,9 +75,9 @@ export const useHereMentionCallback = function useHereMentionCallback(arg0, arg1
             if (!(arr.length < 5 || arr.length > closure_1_3)) {
               let flag = -1 !== arr.indexOf(memo);
               if (flag) {
-                closure_0(7312).subscribeChannel(closure_1_1, dependencyMap, closure_0(7286).DEFAULT_RANGES);
+                closure_0(7326).subscribeChannel(closure_1_1, dependencyMap, closure_0(7300).DEFAULT_RANGES);
                 flag = true;
-                const obj = closure_0(7312);
+                const obj = closure_0(7326);
               }
               tmp9 = flag;
             }

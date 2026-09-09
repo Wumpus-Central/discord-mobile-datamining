@@ -5,7 +5,7 @@ import noop from "../../../_runtime/metro/00019__.js";
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4560);
+const createStyles = fn(4574);
 let closure_4 = createStyles.createLegacyClassComponentStyles({
   container: { flex: 1, alignItems: "center", justifyContent: "center" },
 });
@@ -40,7 +40,7 @@ prototype["render"] = function render() {
   }
   return tmp2;
 };
-UntouchableAlert.contextType = fn(4271).ThemeContext;
+UntouchableAlert.contextType = fn(4284).ThemeContext;
 const size = fn(2);
 const result = size.fileFinishedImporting("components_native/common/UntouchableAlert.tsx");
 

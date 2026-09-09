@@ -201,7 +201,7 @@ function handleRelationshipAddOrUpdate(relationship) {
   }
   tmp14 = type === RelationshipTypes.BLOCKED || userIgnored;
 }
-const isGuildEventEnded = fn(7526).isGuildEventEnded;
+const isGuildEventEnded = fn(7540).isGuildEventEnded;
 const RelationshipTypes = fn(1074).RelationshipTypes;
 let obj = {
   loading: false,
@@ -214,8 +214,8 @@ let obj = {
   notifCenterLocalItems: [],
   paginationHasMore: true,
   paginationCursor: "flex",
-  notifCenterActive: "onTapSummaryJump",
-  notifCenterTabFocused: 0.00000000000000000000000000000000000000000000000000000012273576812576707,
+  notifCenterActive: "CONNECTION_OPEN",
+  notifCenterTabFocused: "WRITE_CACHES",
 };
 const PersistedStore = initializeDefault.PersistedStore;
 class NotificationCenterItemsStore extends PersistedStore {}
@@ -398,8 +398,8 @@ obj = {
       notifCenterLocalItems: null,
       paginationHasMore: true,
       paginationCursor: "flex",
-      notifCenterActive: "onTapSummaryJump",
-      notifCenterTabFocused: 0.00000000000000000000000000000000000000000000000000000012273576812576707,
+      notifCenterActive: "CONNECTION_OPEN",
+      notifCenterTabFocused: "WRITE_CACHES",
     };
     if (flag) {
       let prop = obj.notifCenterLocalItems;
@@ -540,8 +540,8 @@ obj = {
       notifCenterLocalItems: null,
       paginationHasMore: true,
       paginationCursor: "flex",
-      notifCenterActive: "onTapSummaryJump",
-      notifCenterTabFocused: 0.00000000000000000000000000000000000000000000000000000012273576812576707,
+      notifCenterActive: "CONNECTION_OPEN",
+      notifCenterTabFocused: "WRITE_CACHES",
     };
     if (flag) {
       let prop = obj.notifCenterLocalItems;
@@ -599,7 +599,7 @@ obj = {
       const user = UserStore.getUser(id);
       if (tmp6) {
         const items = [];
-        obj = id(7641);
+        obj = id(7655);
         items[HermesBuiltin.arraySpread(obj.notifCenterLocalItems, 0)] = obj.incomingGameFriendRequestLocalItem(
           user,
           since,
@@ -711,8 +711,8 @@ obj = {
       notifCenterLocalItems: null,
       paginationHasMore: true,
       paginationCursor: "flex",
-      notifCenterActive: "onTapSummaryJump",
-      notifCenterTabFocused: 0.00000000000000000000000000000000000000000000000000000012273576812576707,
+      notifCenterActive: "CONNECTION_OPEN",
+      notifCenterTabFocused: "WRITE_CACHES",
     };
     if (flag) {
       let prop = obj.notifCenterLocalItems;

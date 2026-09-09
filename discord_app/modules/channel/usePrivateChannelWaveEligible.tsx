@@ -61,10 +61,10 @@ export const usePrivateChannelWaveEligible = function usePrivateChannelWaveEligi
   const obj5 = recipientId(11);
   const extractTimestampResult = recipientId(11).extractTimestamp(isDM.id);
   const obj6 = require("DateUtils");
-  const tmp9 = recipientId(4153)();
+  const tmp9 = recipientId(4166)();
   const isWithinIntervalResult = obj6.isWithinInterval(
-    recipientId(4153)(),
-    recipientId(4153)(extractTimestampResult),
+    recipientId(4166)(),
+    recipientId(4166)(extractTimestampResult),
     1814400000,
   );
   const strangerDangerWarning = require("useStrangerDangerWarning").useStrangerDangerWarning(isDM.id);

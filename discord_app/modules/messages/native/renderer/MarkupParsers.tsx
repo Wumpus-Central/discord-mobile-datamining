@@ -1,12 +1,26 @@
 // discord_app/modules/messages/native/renderer/MarkupParsers.tsx
 import Constants from "../../../../Constants.tsx";
 import DurationsDefault from "../../../../utils/Durations.tsx";
+import SentryUtilsDefault from "../../../../utils/SentryUtils.native.tsx";
 import MarkupUtilsDefault from "../../../markup/MarkupUtils.tsx";
 import renderMessageMarkup from "../../renderMessageMarkup.tsx";
-import ChangeLogStandardTemplate from "../../../../components_native/ChangeLogStandardTemplate.tsx";
+import NativeMarkdownExperiment2 from "../../../markup_v2/NativeMarkdownExperiment.tsx";
+import parseNativeMarkupDefault from "../../../markup_v2/native/parseNativeMarkup.tsx";
 import priv from "../../../../../_runtime/01437_priv.js";
 import size from "../../../../../_runtime/metro/00002__.js";
 
+const ChangeLogStandardTemplate = changelogRules(8106);
+function parseMessageContentToAST(message, result, enabled) {
+  if (!enabled) {
+    return renderMessageMarkup.renderMessageMarkupToAST(message, result);
+  } else {
+    try {
+      return renderMessageMarkup.renderMessageMarkupToASTWithParser(parseNativeMarkupDefault, message, result);
+    } catch (tmp4) {
+      SentryUtilsDefault.captureException(tmp4);
+    }
+  }
+}
 const MessageTypes = Constants.MessageTypes;
 let obj = { max: Infinity, maxAge: 15 * DurationsDefault.Millis.MINUTE, updateAgeOnGet: true };
 let closure_4 = new priv(obj);
@@ -101,11 +115,17 @@ export const parseMessageMarkup = function parseMessageMarkup(message, message2,
   if (result2 === undefined) {
     flag3 = false;
   }
+  let changelogRules = require;
+  let astParserForResultResult = dependencyMap;
+  const NativeMarkdownExperiment = NativeMarkdownExperiment2.NativeMarkdownExperiment;
+  let enabled = NativeMarkdownExperiment.getConfig({ location: "parseMessageMarkup" }).enabled;
   let obj1 = closure_7;
   value = closure_7.get(message);
   if (null != value) {
     if (value.isInlineReplyPreview === flag) {
-      return value;
+      if (value.nativeMarkdownEnabled === enabled) {
+        return value;
+      }
     }
   }
   if (message.type !== MessageTypes.CHANGELOG) {
@@ -129,11 +149,13 @@ export const parseMessageMarkup = function parseMessageMarkup(message, message2,
       tmp6 = obj;
     }
     obj = { allowList: tmp6, allowLinks: flag3, previewLinkTarget: flag3 };
-    const merged = Object.assign(renderMessageMarkup.renderMessageMarkupToAST(message, obj));
+    const merged = Object.assign(parseMessageContentToAST(message, obj, enabled));
     obj.isInlineReplyPreview = flag;
+    obj.nativeMarkdownEnabled = enabled;
     result = obj1.set(message, obj);
   }
-  const obj6 = MarkupUtilsDefault;
+  const obj5 = MarkupUtilsDefault;
+  changelogRules = ChangeLogStandardTemplate.changelogRules;
   obj1 = {
     hideSimpleEmbedContent: forceHideSimpleEmbedContent,
     formatInline: flag,
@@ -143,6 +165,7 @@ export const parseMessageMarkup = function parseMessageMarkup(message, message2,
     previewLinkTarget: null,
   };
   flag = flag2;
+  const changelogRulesResult = ChangeLogStandardTemplate;
   if (!flag2) {
     flag = obj;
   }
@@ -151,18 +174,18 @@ export const parseMessageMarkup = function parseMessageMarkup(message, message2,
     flag2 = obj;
   }
   obj = {
-    content: obj6.astParserFor(ChangeLogStandardTemplate.changelogRules(message.changelogId, true))(
-      message.content,
-      false,
-      obj1,
-    ),
+    content: null,
     isInlineReplyPreview: false,
     hasSpoilerEmbeds: false,
     hasBailedAst: false,
+    nativeMarkdownEnabled: null,
   };
   obj1.allowList = flag2;
   obj1.allowLinks = flag3;
   obj1.previewLinkTarget = flag3;
-  const result1 = obj1.set(message, obj);
-  const astParserForResult = obj6.astParserFor(ChangeLogStandardTemplate.changelogRules(message.changelogId, true));
+  astParserForResultResult = obj5.astParserFor(changelogRules(message.changelogId, true))(message.content, false, obj1);
+  obj.content = astParserForResultResult;
+  obj.nativeMarkdownEnabled = enabled;
+  enabled = obj1.set(message, obj);
+  const astParserForResult = obj5.astParserFor(changelogRules(message.changelogId, true));
 };

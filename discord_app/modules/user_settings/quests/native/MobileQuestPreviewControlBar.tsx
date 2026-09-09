@@ -418,7 +418,7 @@ const View = fn(17).View;
 const AppRoutes = fn(1085).AppRoutes;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-fn(4560);
+fn(4574);
 let createStyles = {
   container: { overflow: "visible", zIndex: 1 },
   questInputContainer: null,

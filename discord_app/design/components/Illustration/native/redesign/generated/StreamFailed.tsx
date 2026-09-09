@@ -1,6 +1,6 @@
 // discord_app/design/components/Illustration/native/redesign/generated/StreamFailed.tsx
 import shared from "../../../../../shared.tsx";
-import _mod8233 from "../../index.tsx";
+import _mod8259 from "../../index.tsx";
 import noop from "../../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -12,10 +12,10 @@ const result = size.fileFinishedImporting("design/components/Illustration/native
 export const getStreamFailedSource = function getStreamFailedSource(theme) {
   const obj = {
     dark() {
-      return require("../../../../../../../_runtime/metro/09607__.js");
+      return require("../../../../../../../_runtime/metro/09634__.js");
     },
     darker() {
-      return require("../../../../../../../_runtime/metro/09608__.js");
+      return require("../../../../../../../_runtime/metro/09635__.js");
     },
   };
   return obj.getIllustrationSource(theme, obj);
@@ -23,25 +23,25 @@ export const getStreamFailedSource = function getStreamFailedSource(theme) {
 export const useStreamFailedSource = function useStreamFailedSource() {
   const obj = {
     dark() {
-      return require("../../../../../../../_runtime/metro/09607__.js");
+      return require("../../../../../../../_runtime/metro/09634__.js");
     },
     darker() {
-      return require("../../../../../../../_runtime/metro/09608__.js");
+      return require("../../../../../../../_runtime/metro/09635__.js");
     },
   };
-  return _mod8233.getIllustrationSource(obj.useThemeContext().theme, obj);
+  return _mod8259.getIllustrationSource(obj.useThemeContext().theme, obj);
 };
 export const StreamFailed = function StreamFailed(arg0) {
   let obj = {
     dark() {
-      return require("../../../../../../../_runtime/metro/09607__.js");
+      return require("../../../../../../../_runtime/metro/09634__.js");
     },
     darker() {
-      return require("../../../../../../../_runtime/metro/09608__.js");
+      return require("../../../../../../../_runtime/metro/09635__.js");
     },
   };
   obj = {};
-  const illustrationSource = _mod8233.getIllustrationSource(obj.useThemeContext().theme, obj);
+  const illustrationSource = _mod8259.getIllustrationSource(obj.useThemeContext().theme, obj);
   const merged = Object.assign(arg0);
   obj.source = illustrationSource;
   return <Image />;

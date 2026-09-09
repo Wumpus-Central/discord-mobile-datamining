@@ -44,13 +44,13 @@ prototype["areAllBountiesCompleted"] = function areAllBountiesCompleted() {
   return closure_1.every((id) => set.has(id.id));
 };
 prototype["getAdDecisionByPlacementAndAdCreativeId"] = function getAdDecisionByPlacementAndAdCreativeId(
-  arg0,
-  adContentId,
+  questPlacementFromQuestContent,
+  bountyId,
 ) {
-  map.get(arg0);
+  map.get(questPlacementFromQuestContent);
   value = undefined;
   if (value != null) {
-    value = value.get(adContentId);
+    value = value.get(bountyId);
   }
   if (value == null) {
     value = null;

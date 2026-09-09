@@ -155,6 +155,16 @@ export const renderMessageMarkupToAST = function renderMessageMarkupToAST(messag
   obj.toAST = true;
   return render(obj.formatInline ? tmp2.parseInlineReplyToAST : tmp2.parseToAST, message, obj);
 };
+export const renderMessageMarkupToASTWithParser = function renderMessageMarkupToASTWithParser(arg0, message) {
+  let obj = result;
+  if (result === undefined) {
+    obj = {};
+  }
+  obj = {};
+  const merged = Object.assign(obj);
+  obj.toAST = true;
+  return render(arg0, message, obj);
+};
 export const renderMessageContentMarkup = function renderMessageContentMarkup(
   notifCenterV2MessagePreviewParser,
   guildId,

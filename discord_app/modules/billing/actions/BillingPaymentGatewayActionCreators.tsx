@@ -5,7 +5,7 @@ import DispatcherDefault from "../../../Dispatcher.tsx";
 import util from "../../../intl/index.native.tsx";
 import HTTPUtils from "../../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
 import BillingSharedActionCreators from "BillingSharedActionCreators.tsx";
-import _mod4888 from "../../../../_runtime/metro/04888__.js";
+import _mod4902 from "../../../../_runtime/metro/04902__.js";
 import StripeActionCreators from "StripeActionCreators.tsx";
 import StripeUtilsAll from "../../../utils/StripeUtils.tsx";
 import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
@@ -68,7 +68,7 @@ let closure_14 = async function _createCardToken(arg0, arg1) {
             let error;
             if (null != closure_0) {
               if (null != element) {
-                element = element.getElement(_mod4888.CardNumberElement);
+                element = element.getElement(_mod4902.CardNumberElement);
                 if (null == element) {
                   throw BillingSharedActionCreators.dispatchConfirmationError(
                     "Unable to load card elements from Stripe",
@@ -613,7 +613,7 @@ let closure_26 = async function _confirmPaymentElementSource() {
                       }
                       setupIntent2 = closure_137_17(closure_136_10.setupIntent, closure_136_10.error, (type) => {
                         const intl = dependencyMap(1114).intl;
-                        dependencyMap(4885);
+                        dependencyMap(4899);
                         const obj = { tags: { source: "payment_elements" } };
                         return obj.dispatchConfirmationError(
                           type,

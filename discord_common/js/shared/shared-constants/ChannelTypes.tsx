@@ -44,6 +44,7 @@ const obj = {
   POLLS: null,
   ACTIVITY_LAUNCHABLE: null,
   APPLICATION_MANAGEABLE: null,
+  APPLICATION_BINDABLE: null,
   ALL: null,
 };
 const set = new Set([1, 3]);
@@ -129,6 +130,8 @@ obj.ACTIVITY_LAUNCHABLE = new Set([0, 1, 2, 3, 20, 21]);
 const set40 = new Set([0, 1, 2, 3, 20, 21]);
 obj.APPLICATION_MANAGEABLE = new Set([3, 18]);
 const set41 = new Set([3, 18]);
+obj.APPLICATION_BINDABLE = new Set([2, 21]);
+const set42 = new Set([2, 21]);
 obj.ALL = new Set([0, 1, 2, 3, 4, 5, 6, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21]);
 const result = size.fileFinishedImporting("../discord_common/js/shared/shared-constants/ChannelTypes.tsx");
 

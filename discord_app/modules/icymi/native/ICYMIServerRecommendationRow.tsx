@@ -40,7 +40,7 @@ function CutoutGuildBanner(guild) {
   obj = { style: tmp.bannerImage, children: null };
   const memo = noop.useMemo(() => GuildRecordUtils.fromClientDiscoverableGuild(guild), items1);
   obj = { cutouts: null, children: null };
-  const size = { shape: guild(8818).CutoutShape.RoundedRect, x: 8, y: 46, width: 56, height: 56, cornerRadius: 20 };
+  const size = { shape: guild(8847).CutoutShape.RoundedRect, x: 8, y: 46, width: 56, height: 56, cornerRadius: 20 };
   const items2 = [size];
   obj.cutouts = items2;
   if (null != guild.banner) {
@@ -56,7 +56,7 @@ function CutoutGuildBanner(guild) {
   obj.children = tmp12Result;
   const items4 = [closure_14(ClipViewDefault, obj)];
   const obj3 = { style: tmp.guildIcon, guild: memo, size: null, animate: null };
-  obj3.size = guild(5584).GuildIconSizes.LARGE;
+  obj3.size = guild(5598).GuildIconSizes.LARGE;
   obj3.animate = !stateFromStores;
   items4[1] = closure_14(GuildIconDefault, obj3);
   obj.children = items4;
@@ -98,8 +98,8 @@ function FeaturedServer(guild) {
               closure_1 = tmp5;
               closure_128_0 = undefined;
               closure_1(true);
-              closure_1(8351).itemInteracted("recommended_guilds", "recommended_guilds", "press_join_guild");
-              const obj17 = closure_1(8351);
+              closure_1(8379).itemInteracted("recommended_guilds", "recommended_guilds", "press_join_guild");
+              const obj17 = closure_1(8379);
               let obj1 = {
                 itemId: guild.id,
                 itemType: "recommended_guilds",
@@ -110,12 +110,12 @@ function FeaturedServer(guild) {
                   actionDestinationType: "guild",
                 },
               };
-              closure_1(8351).feedItemActioned(obj1);
-              const obj18 = closure_1(8351);
+              closure_1(8379).feedItemActioned(obj1);
+              const obj18 = closure_1(8379);
               const items = [guild.id];
               dependencyMap = 1;
               c3 = 1;
-              let obj2 = { value: closure_1(8351).gravityJoinGuild(items, "recommended_guilds"), done: false };
+              let obj2 = { value: closure_1(8379).gravityJoinGuild(items, "recommended_guilds"), done: false };
               return obj2;
             }
           } else if (1 === tmp5) {
@@ -137,9 +137,9 @@ function FeaturedServer(guild) {
               obj5.analyticsSource = obj6;
               obj4.state = obj5;
               closure_128_0 = obj4;
-              let obj7 = closure_1(8351);
+              let obj7 = closure_1(8379);
               const result = obj7.addedRecommendedGuild();
-              let obj8 = closure_1(8351);
+              let obj8 = closure_1(8379);
               const dehydrated = obj8.fetchDehydrated({ isReloading: true, forceRefresh: true });
               dehydrated.then(
                 asyncGeneratorStep(async () => {
@@ -170,7 +170,7 @@ function FeaturedServer(guild) {
                           closure_0 = tmp4;
                           v2 = 1;
                           dependencyMap = 1;
-                          const obj1 = { value: v2(8351).reloadICYMITab(), done: false };
+                          const obj1 = { value: v2(8379).reloadICYMITab(), done: false };
                           return obj1;
                         }
                       } else if (1 === tmp4) {
@@ -182,7 +182,7 @@ function FeaturedServer(guild) {
                           let obj2 = { value, done: true };
                           return obj2;
                         } else {
-                          obj2 = v2(8351);
+                          obj2 = v2(8379);
                           v2 = 2;
                           dependencyMap = 1;
                           const obj3 = { value: obj2.getGuildChannelScores(), done: false };
@@ -196,7 +196,7 @@ function FeaturedServer(guild) {
                         const obj4 = { value, done: true };
                         return obj4;
                       } else {
-                        obj = v2(8351);
+                        obj = v2(8379);
                         const recommendedGuilds = obj.getRecommendedGuilds();
                         dependencyMap = 3;
                         return { value: "HermesInternal", done: null };
@@ -208,7 +208,7 @@ function FeaturedServer(guild) {
                   }
                 }),
               );
-              let obj9 = closure_1(5520);
+              let obj9 = closure_1(5534);
               obj7 = {};
               const merged = Object.assign(closure_128_0);
               dependencyMap = 2;
@@ -217,7 +217,7 @@ function FeaturedServer(guild) {
               return obj8;
             } else {
               closure_129_1(false);
-              obj1 = closure_1(4259);
+              obj1 = closure_1(4272);
               obj9 = { key: "RecommeendedServersRow", content: null };
               const intl = tmp2(1114).intl;
               obj9.content = intl.string(tmp2(1114).t.CG4Hks);
@@ -252,7 +252,7 @@ function FeaturedServer(guild) {
   const items2 = [closure_14(CutoutGuildBanner, { guild }), ,];
   obj = { style: tmp.featuredServerInnerContainer, children: null };
   const items3 = [
-    closure_14(guild(4556).Text, {
+    closure_14(guild(4570).Text, {
       maxFontSizeMultiplier: 1,
       lineClamp: 1,
       style: tmp.featuredServerTitle,
@@ -260,7 +260,7 @@ function FeaturedServer(guild) {
       color: "mobile-text-heading-primary",
       children: guild.name,
     }),
-    closure_14(guild(4556).Text, {
+    closure_14(guild(4570).Text, {
       maxFontSizeMultiplier: 1,
       lineClamp: 3,
       variant: "text-xs/normal",
@@ -282,7 +282,7 @@ function FeaturedServer(guild) {
   }
   obj4.text = stringResult;
   obj4.onPress = callback;
-  obj3.children = closure_14(guild(4975).Button, obj4);
+  obj3.children = closure_14(guild(4989).Button, obj4);
   items2[2] = closure_14(View, obj3);
   obj.children = items2;
   return closure_15(View, obj);
@@ -316,7 +316,7 @@ const Constants = fn(1074);
 ({ AnalyticsObjects: c10, AnalyticsPages: closure_11, AnalyticsSections: closure_12, GuildFeatures: map1 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15, Fragment: closure_16 } = jsxProd);
-const createICYMIStyles = fn(16455);
+const createICYMIStyles = fn(16486);
 let closure_17 = createICYMIStyles.createICYMIStyles((marginHorizontal) => {
   let obj = {
     container: null,

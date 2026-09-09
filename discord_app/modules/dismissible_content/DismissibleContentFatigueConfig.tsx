@@ -118,6 +118,7 @@ const items = [
   dismissible_content.DismissibleContent.TINY_BRONCO,
   dismissible_content.DismissibleContent.TINY_BRONCO_SETTINGS,
   dismissible_content.DismissibleContent.TINY_BRONCO_NOTICE,
+  dismissible_content.DismissibleContent.PREMIUM_GIFT_QUANTITY_STEPPER_NEW_BADGE,
 ];
 const result = size.fileFinishedImporting("modules/dismissible_content/DismissibleContentFatigueConfig.tsx");
 

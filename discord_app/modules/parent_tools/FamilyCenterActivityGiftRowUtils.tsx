@@ -1,7 +1,7 @@
 // discord_app/modules/parent_tools/FamilyCenterActivityGiftRowUtils.tsx
 import util from "../../intl/index.native.tsx";
 import _modDef2396 from "FamilyCenter.messages.js";
-import _mod3796 from "../../../_runtime/metro/03796__.js";
+import _mod3809 from "../../../_runtime/metro/03809__.js";
 import PriceUtils from "../../utils/PriceUtils.tsx";
 import size from "../../../_runtime/metro/00002__.js";
 
@@ -20,7 +20,7 @@ export const getGiftRowDisplayInfo = function getGiftRowDisplayInfo(giftInfo) {
 };
 export const formatGiftDate = function formatGiftDate(claimedAt) {
   const dateTimeFormat = new Intl.DateTimeFormat(util.intl.currentLocale, { month: "short", day: "numeric" });
-  return dateTimeFormat.format(_mod3796.parseISO(claimedAt));
+  return dateTimeFormat.format(_mod3809.parseISO(claimedAt));
 };
 export const getGiftSubtext = function getGiftSubtext(claimed) {
   ({ price, gifterName, offeredAt, claimedAt } = claimed);
@@ -46,14 +46,14 @@ export const getGiftSubtext = function getGiftSubtext(claimed) {
       obj = { date: null };
       const _Intl2 = Intl;
       const dateTimeFormat = new Intl.DateTimeFormat(util.intl.currentLocale, { month: "short", day: "numeric" });
-      let tmp8Result = _mod3796;
+      let tmp8Result = _mod3809;
       obj.date = dateTimeFormat.format(tmp8Result.parseISO(claimedAt));
       let formatToPlainStringResult1 = formatToPlainString(tmp11.kDyllq, obj);
     } else {
       const obj1 = { date: null };
       const _Intl = Intl;
       const dateTimeFormat1 = new Intl.DateTimeFormat(util.intl.currentLocale, { month: "short", day: "numeric" });
-      tmp8Result = _mod3796;
+      tmp8Result = _mod3809;
       obj1.date = dateTimeFormat1.format(tmp8Result.parseISO(offeredAt));
       formatToPlainStringResult1 = formatToPlainString(tmp11.gAG45y, obj1);
     }

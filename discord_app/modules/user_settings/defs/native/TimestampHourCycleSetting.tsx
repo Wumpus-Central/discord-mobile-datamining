@@ -5,13 +5,13 @@ import UserSettings from "../../UserSettings.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-fn(11473);
+fn(11500);
 let SettingBuilders = {
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.dyamEI);
   },
-  parent: fn(7975).MobileUserSettings.APPEARANCE,
+  parent: fn(7989).MobileUserSettings.APPEARANCE,
   useValue: fn(1935).TimestampHourCycle.useSetting,
   onValueChange: function onTimestampHourCycleChange(arg0) {
     const TimestampHourCycle = UserSettings.TimestampHourCycle;
@@ -37,7 +37,7 @@ let SettingBuilders = {
       return items;
     }, []);
   },
-  usePredicate: fn(4245).supportsSystemDateFormatter,
+  usePredicate: fn(4258).supportsSystemDateFormatter,
 };
 SettingBuilders = SettingBuilders.createRadio(SettingBuilders);
 const size = fn(2);

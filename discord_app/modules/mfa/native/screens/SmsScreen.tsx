@@ -205,11 +205,11 @@ export default function SmsScreen(mfaChallenge) {
       }
     }
   };
-  let obj = finish(15674);
-  const screenStyles = obj.useScreenStyles(finish(6944)());
+  let obj = finish(15704);
+  const screenStyles = obj.useScreenStyles(finish(6958)());
   const tmp4 = first(noop.useState(null), 2);
   dependencyMap = tmp4[1];
-  const tmp2 = finish(6944)();
+  const tmp2 = finish(6958)();
   [tmp6, c3] = first(noop.useState(false), 2);
   const tmp7 = first(noop.useState(""), 2);
   first = tmp7[0];
@@ -259,7 +259,7 @@ export default function SmsScreen(mfaChallenge) {
   let obj1 = {
     autoFocus: true,
     autoCapitalize: "characters",
-    maxLength: mfaChallenge(15678).SMS_CODE_LENGTH,
+    maxLength: mfaChallenge(15708).SMS_CODE_LENGTH,
     autoComplete: "sms-otp",
     textContentType: "oneTimeCode",
     keyboardType: "number-pad",
@@ -273,7 +273,7 @@ export default function SmsScreen(mfaChallenge) {
   const intl4 = mfaChallenge(1114).intl;
   obj1.placeholder = intl4.string(mfaChallenge(1114).t.tARzgo);
   obj1.errorMessage = tmp4[0];
-  const items1 = [handleChange(mfaChallenge(6606).TextInput, obj1)];
+  const items1 = [handleChange(mfaChallenge(6620).TextInput, obj1)];
   let obj2 = { text: null, variant: "secondary", size: "sm", onPress: null };
   const intl5 = mfaChallenge(1114).intl;
   obj2.text = intl5.string(mfaChallenge(1114).t.WbaP3r);
@@ -287,11 +287,11 @@ export default function SmsScreen(mfaChallenge) {
     }
     return applyArgumentsResult;
   };
-  items1[1] = handleChange(mfaChallenge(4975).Button, obj2);
+  items1[1] = handleChange(mfaChallenge(4989).Button, obj2);
   obj.children = items1;
   obj.input = closure_9(c6, obj);
   let obj3 = { variant: "primary", text: null, loading: null, onPress: null, disabled: null };
-  const tmp15 = finish(15673);
+  const tmp15 = finish(15703);
   const intl6 = mfaChallenge(1114).intl;
   obj3.text = intl6.string(mfaChallenge(1114).t.geKm7t);
   let tmp17 = tmp6;
@@ -306,10 +306,10 @@ export default function SmsScreen(mfaChallenge) {
     tmp6 = tmp12;
   }
   if (!tmp6) {
-    tmp6 = first.length !== tmp8(15678).SMS_CODE_LENGTH;
+    tmp6 = first.length !== tmp8(15708).SMS_CODE_LENGTH;
   }
   obj3.disabled = tmp6;
-  obj.submit = handleChange(finish(15676), obj3);
+  obj.submit = handleChange(finish(15706), obj3);
   obj.screenProps = { mfaChallenge, finish };
   return handleChange(tmp15, obj);
 }

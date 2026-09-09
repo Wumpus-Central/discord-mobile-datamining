@@ -1,5 +1,5 @@
 // discord_app/lib/Histogram.tsx
-import TDigest from "../../_runtime/07743_TDigest.js";
+import TDigest from "../../_runtime/07757_TDigest.js";
 import size from "../../_runtime/metro/00002__.js";
 
 const result = size.fileFinishedImporting("lib/Histogram.tsx");

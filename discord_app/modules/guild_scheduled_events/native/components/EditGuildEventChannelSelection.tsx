@@ -17,7 +17,7 @@ const Constants = fn(1074);
 ({ ChannelTypes: closure_9, Permissions: c10 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
-fn(4560);
+fn(4574);
 let createStyles = {
   container: { flexDirection: "column" },
   channelSelectorButton: null,
@@ -47,14 +47,14 @@ export default function EditGuildEventChannelSelection(guild) {
   const guildEventId = guild.guildEventId;
   ({ recurrenceId: dependencyMap, onChangeChannel: View } = guild);
   const tmp = closure_13();
-  let obj = guild(6621);
+  let obj = guild(6635);
   const inputStyles = obj.useInputStyles({ hasLeadingIcon: true });
   closure_5 = tmp5;
-  let obj1 = guild(9731);
+  let obj1 = guild(9758);
   closure_6 = obj1.useGetEventChannelsByType(guild.id, channelType);
-  let obj2 = guild(9717);
+  let obj2 = guild(9744);
   obj2.useChannelsUserCanStartStageIn(guild);
-  const tmp7 = channel(4713)(channel);
+  const tmp7 = channel(4727)(channel);
   let obj3 = guild(504);
   const items = [closure_5];
   closure_8 = obj3.useStateFromStores(items, () => PermissionStore.can(constants2.MANAGE_CHANNELS, guild));
@@ -67,16 +67,16 @@ export default function EditGuildEventChannelSelection(guild) {
     items2,
   );
   if (null != channel) {
-    let tmp2Result = tmp2(5028);
+    let tmp2Result = tmp2(5042);
     let channelIcon = tmp2Result.getChannelIcon(channel);
   } else {
-    channelIcon = channel(9719);
+    channelIcon = channel(9746);
   }
   if (null != channel) {
-    tmp2Result = tmp2(5028);
+    tmp2Result = tmp2(5042);
     let LocationIcon = tmp2Result.getChannelIconComponent(channel);
   } else {
-    LocationIcon = tmp2(9720).LocationIcon;
+    LocationIcon = tmp2(9747).LocationIcon;
   }
   let intl = tmp2(1114).intl;
   let string = intl.string;
@@ -90,7 +90,7 @@ export default function EditGuildEventChannelSelection(guild) {
   const items3 = [tmp.container, guild.style];
   obj.style = items3;
   obj = { style: tmp.channelTypeText, variant: "text-sm/semibold", color: "text-subtle", children: stringResult };
-  const items4 = [closure_11(guild(4556).Heading, obj)];
+  const items4 = [closure_11(guild(4570).Heading, obj)];
   obj1 = {
     accessibilityLabel: stringResult,
     accessibilityHint: null,
@@ -121,7 +121,7 @@ export default function EditGuildEventChannelSelection(guild) {
         obj = {
           guildId: guild.id,
           onCreate(channel) {
-            guild(9703);
+            guild(9730);
             const obj = { channel, guildEvent, recurrenceId };
             const result = obj.openCreateOrEditGuildEventModal(closure_1_0, obj);
           },
@@ -148,8 +148,8 @@ export default function EditGuildEventChannelSelection(guild) {
         if (null != found) {
           closure_1_4(found);
         }
-        channel(4527).hideActionSheet();
-        const obj = channel(4527);
+        channel(4541).hideActionSheet();
+        const obj = channel(4541);
       },
       selectedItem: null,
       hasIcons: false,
@@ -159,8 +159,8 @@ export default function EditGuildEventChannelSelection(guild) {
       id = channel.id;
     }
     obj.selectedItem = id;
-    obj3.openLazy(asyncRequireImpl(9431, dependencyMap.paths), "SelectUpdatesChannel", obj);
-    const tmp9 = asyncRequireImpl(9431, dependencyMap.paths);
+    obj3.openLazy(asyncRequireImpl(9458, dependencyMap.paths), "SelectUpdatesChannel", obj);
+    const tmp9 = asyncRequireImpl(9458, dependencyMap.paths);
   };
   if (null != LocationIcon) {
     obj2 = { style: tmp.channelIcon };
@@ -171,10 +171,10 @@ export default function EditGuildEventChannelSelection(guild) {
   }
   const items6 = [tmp12Result, ,];
   obj4 = { style: tmp.channelNameText, variant: "text-md/medium", color: "interactive-text-active", children: tmp7 };
-  items6[1] = closure_11(guild(4556).Text, obj4);
-  items6[2] = closure_11(guild(1178).Icon, { source: channel(9716) });
+  items6[1] = closure_11(guild(4570).Text, obj4);
+  items6[2] = closure_11(guild(1178).Icon, { source: channel(9743) });
   obj1.children = items6;
-  items4[1] = closure_12(guild(5123).PressableOpacity, obj1);
+  items4[1] = closure_12(guild(5137).PressableOpacity, obj1);
   obj.children = items4;
   return closure_12(View, obj);
 }

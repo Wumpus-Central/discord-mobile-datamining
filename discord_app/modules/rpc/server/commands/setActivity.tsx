@@ -6,7 +6,7 @@ import StatusDisplayTypes from "../../../../../discord_common/js/shared/shared-c
 import ApplicationStore from "../../../applications/ApplicationStore.tsx";
 
 require = fn;
-let Constants = fn(4465);
+let Constants = fn(4479);
 const RPC_LOCAL_SCOPE = Constants.RPC_LOCAL_SCOPE;
 ({ TransportTypes: hasOwnProperty, RPC_SCOPE_CONFIG, RPC_EMBEDDED_APP_SCOPE } = Constants);
 Constants = fn(1074);
@@ -22,8 +22,8 @@ let obj = {};
 obj = { scope: null, validation: null, handler: null };
 obj = {};
 let items = [
-  fn(8339).OAuth2Scopes.RPC,
-  fn(8339).OAuth2Scopes.RPC_ACTIVITIES_WRITE,
+  fn(8367).OAuth2Scopes.RPC,
+  fn(8367).OAuth2Scopes.RPC_ACTIVITIES_WRITE,
   RPC_LOCAL_SCOPE,
   RPC_EMBEDDED_APP_SCOPE,
 ];

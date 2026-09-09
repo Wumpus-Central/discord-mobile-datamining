@@ -11,11 +11,11 @@ import EmbeddedActivitiesStore from "../../activities/EmbeddedActivitiesStore.ts
 import apply from "../../../../_runtime/metro/00012__.js";
 
 require = fn;
-const ChannelCallConstants = fn(9473);
+const ChannelCallConstants = fn(9500);
 ({ VoiceCallOverlayType, VoiceChatDrawerState } = ChannelCallConstants);
 const OrientationLockState = fn(1920).OrientationLockState;
-const ParticipantTypes = fn(4581).ParticipantTypes;
-const timeout = new fn(4447).Timeout();
+const ParticipantTypes = fn(4595).ParticipantTypes;
+const timeout = new fn(4461).Timeout();
 let useChannelCallStore = {
   focus: true,
   pipFocus: false,
@@ -29,7 +29,7 @@ let size = {
   y: "flexDirection",
   width: "y",
   height: "HermesInternal",
-  screenOrientation: fn(8332).OrientationType.PORTRAIT,
+  screenOrientation: fn(8360).OrientationType.PORTRAIT,
   hasUserInteractedSinceOrientationChange: true,
   isInitialized: true,
   isVisible: null,
@@ -40,7 +40,7 @@ const size1 = {
   y: "flexDirection",
   width: "y",
   height: "HermesInternal",
-  screenOrientation: fn(8332).OrientationType.PORTRAIT,
+  screenOrientation: fn(8360).OrientationType.PORTRAIT,
   hasUserInteractedSinceOrientationChange: true,
   isInitialized: true,
   isVisible: null,

@@ -1472,8 +1472,8 @@ const defineProtoSettingResult71 = UserSettingDefinitions.defineProtoSetting(
     return BoolValue.create({ value });
   },
 );
-items[1] = fn(7879).ChannelListLayoutTypes.COZY;
-items[2] = fn(7879).ChannelListLayoutTypes.COMPACT;
+items[1] = fn(7893).ChannelListLayoutTypes.COZY;
+items[2] = fn(7893).ChannelListLayoutTypes.COMPACT;
 const set1 = new Set(items);
 UserSettingDefinitions = fn(1939);
 const defineProtoSettingResult72 = UserSettingDefinitions.defineProtoSetting(
@@ -1499,9 +1499,9 @@ const defineProtoSettingResult72 = UserSettingDefinitions.defineProtoSetting(
   },
 );
 const items1 = [
-  fn(7879).MessagePreviewTypes.ALL,
-  fn(7879).MessagePreviewTypes.UNREADS,
-  fn(7879).MessagePreviewTypes.NONE,
+  fn(7893).MessagePreviewTypes.ALL,
+  fn(7893).MessagePreviewTypes.UNREADS,
+  fn(7893).MessagePreviewTypes.NONE,
 ];
 const set2 = new Set(items1);
 UserSettingDefinitions = fn(1939);

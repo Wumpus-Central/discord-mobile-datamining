@@ -10,7 +10,7 @@ import UserStore from "../../../../../stores/UserStore.tsx";
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-fn(4560);
+fn(4574);
 let obj = { searchBarContainer: null, header: null, showSearchButton: null };
 obj = {
   paddingHorizontal: nativeDefault.space.PX_16,

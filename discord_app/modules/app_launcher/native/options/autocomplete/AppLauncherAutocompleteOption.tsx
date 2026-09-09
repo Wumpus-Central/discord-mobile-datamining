@@ -11,7 +11,7 @@ import noop from "../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const jsx = fn(21).jsx;
-fn(4560);
+fn(4574);
 let createStyles = { container: null, hasError: null, inputText: null };
 createStyles = {
   width: "100%",
@@ -69,7 +69,7 @@ export default function AppLauncherAutocompleteOption(arg0) {
       optionValues: ref.current,
     };
     ActionSheetActionCreatorsDefault.openLazy(
-      asyncRequireImpl(12175, dependencyMap.paths),
+      asyncRequireImpl(12201, dependencyMap.paths),
       "AppLauncherAutocompleteActionSheet",
       obj,
     );

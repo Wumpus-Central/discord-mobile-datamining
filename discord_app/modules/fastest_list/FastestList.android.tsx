@@ -9,9 +9,9 @@ const jsxProd = fn(21);
 ({ jsx: closure_4, Fragment: hasOwnProperty, jsxs: metroRequire } = jsxProd);
 ReanimatedRexport.createAnimatedComponent(FastestListNativeComponentDefault);
 const FastestListNativeComponent = ReanimatedRexport.createAnimatedComponent(FastestListNativeComponentDefault);
-const BottomSheetModal = fn(6627);
+const BottomSheetModal = fn(6641);
 let closure_8 = BottomSheetModal.createBottomSheetScrollableComponent(
-  fn(6627).SCROLLABLE_TYPE.SCROLLVIEW,
+  fn(6641).SCROLLABLE_TYPE.SCROLLVIEW,
   FastestListNativeComponent,
 );
 let closure_9 = 0;

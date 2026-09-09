@@ -25,21 +25,21 @@ export default function MessagePreviewReactions(emoji) {
     },
     items1,
   );
-  obj = { value: messageId(7162)(messageId(7182).MESSAGE_PREVIEW_REACTIONS).analyticsLocations, children: null };
+  obj = { value: messageId(7176)(messageId(7196).MESSAGE_PREVIEW_REACTIONS).analyticsLocations, children: null };
   if (stateFromStores.length > 0) {
     obj = { channelId, messageId, emoji: emoji.emoji, reactions: stateFromStores };
-    let tmp4Result = jsx(channelId(11261).MessageReactionsContent, {
+    let tmp4Result = jsx(channelId(11288).MessageReactionsContent, {
       channelId,
       messageId,
       emoji: emoji.emoji,
       reactions: stateFromStores,
     });
   } else {
-    tmp4Result = jsx(channelId(11261).MessageReactionsEmpty, {});
+    tmp4Result = jsx(channelId(11288).MessageReactionsEmpty, {});
   }
   obj.children = tmp4Result;
-  return jsx(channelId(7162).AnalyticsLocationProvider, {
-    value: messageId(7162)(messageId(7182).MESSAGE_PREVIEW_REACTIONS).analyticsLocations,
+  return jsx(channelId(7176).AnalyticsLocationProvider, {
+    value: messageId(7176)(messageId(7196).MESSAGE_PREVIEW_REACTIONS).analyticsLocations,
     children: null,
   });
 }

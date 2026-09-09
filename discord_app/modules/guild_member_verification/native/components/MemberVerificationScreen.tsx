@@ -100,7 +100,7 @@ const View = fn(17).View;
 const Constants = fn(1074);
 ({ ME: closure_9, Routes: c10 } = Constants);
 const jsx = fn(21).jsx;
-fn(4560);
+fn(4574);
 let createStyles = { flex: { flex: 1 }, flexLoading: null };
 createStyles = {
   flex: 1,
@@ -110,7 +110,7 @@ createStyles = {
 };
 createStyles.flexLoading = createStyles;
 let closure_12 = createStyles.createStyles(createStyles);
-const makeAuthenticated = fn(16747);
+const makeAuthenticated = fn(16784);
 const authenticated = makeAuthenticated.makeAuthenticated(function MemberVerificationRouteContainer(navigation) {
   navigation = navigation.navigation;
   guildId = navigation.route.params.guildId;

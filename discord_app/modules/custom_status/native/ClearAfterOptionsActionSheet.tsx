@@ -12,10 +12,10 @@ import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-const ClearAfterOptions = fn(11120).ClearAfterOptions;
+const ClearAfterOptions = fn(11147).ClearAfterOptions;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-fn(4560);
+fn(4574);
 let createStyles = { content: null, buttonWrapper: null };
 createStyles = { paddingHorizontal: nativeDefault.space.PX_16 };
 createStyles.content = createStyles;
@@ -39,7 +39,7 @@ export default function ClearAfterOptionsActionSheet(arg0) {
   obj.title = intl2.string(util.t.E45wvP);
   obj.defaultValue = initialValue;
   obj.children = ClearAfterOptions.map((value) =>
-    closure_1_7(TableRadioRow.TableRadioRow, { value, label: closure_1(11207)(value) }, value),
+    closure_1_7(TableRadioRow.TableRadioRow, { value, label: closure_1(11234)(value) }, value),
   );
   const items = [closure_7(TableRadioGroup.TableRadioGroup, obj)];
   const obj1 = { style: tmp.buttonWrapper, children: null };

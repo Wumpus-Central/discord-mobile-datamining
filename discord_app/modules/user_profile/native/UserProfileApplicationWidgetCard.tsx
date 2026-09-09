@@ -10,7 +10,7 @@ get_ActivityIndicator = fn(17);
 ({ Image: closure_4, Pressable: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-fn(4560);
+fn(4574);
 let createStyles = { appIcon: null, header: null, divider: null, stillSyncing: null };
 let size = { width: 16, height: 16, borderRadius: nativeDefault.radii.xs, overflow: "hidden" };
 createStyles.appIcon = size;
@@ -48,13 +48,13 @@ export default function UserProfileApplicationWidgetCard(userId) {
   let obj1 = userId(504);
   const items2 = [AuthenticationStore];
   const stateFromStores1 = obj1.useStateFromStores(items2, () => AuthenticationStore.getId() === userId);
-  let obj2 = userId(7168);
+  let obj2 = userId(7182);
   const getOrFetchApplication = obj2.useGetOrFetchApplication(widget.applicationId);
   let iconURL;
   if (getOrFetchApplication != null) {
     iconURL = getOrFetchApplication.getIconURL(16);
   }
-  let tmp2Result = tmp2(7309);
+  let tmp2Result = tmp2(7323);
   let canonicalGameId;
   if (getOrFetchApplication != null) {
     canonicalGameId = getOrFetchApplication.getCanonicalGameId();
@@ -67,20 +67,20 @@ export default function UserProfileApplicationWidgetCard(userId) {
   obj = {
     location: "UserProfileApplicationWidgetCard",
     applicationId: id,
-    source: tmp2(8691).GameProfileSources.UserProfileApplicationWidget,
+    source: tmp2(8719).GameProfileSources.UserProfileApplicationWidget,
     sourceUserId: userId,
     trackEntryPointImpression: true,
     stackingBehavior: "stack",
   };
-  const tmp10Result = stateFromStores(8680)(obj);
+  const tmp10Result = stateFromStores(8708)(obj);
   dependencyMap = tmp10Result;
-  const tmp10 = stateFromStores(8680);
-  ({ surfaceConfigs, resolutionContext, isLoading, hasIdentity } = stateFromStores(9026)(userId, widget.applicationId));
-  const tmp14 = stateFromStores(7165)(getOrFetchApplication);
+  const tmp10 = stateFromStores(8708);
+  ({ surfaceConfigs, resolutionContext, isLoading, hasIdentity } = stateFromStores(9053)(userId, widget.applicationId));
+  const tmp14 = stateFromStores(7179)(getOrFetchApplication);
   token = tmp14.token;
   ({ fetched, canStartAuthorization } = tmp14);
-  const tmp15 = surfaceConfigs[userId(undefined, 9014).ApplicationWidgetConfigSurface.WIDGET_TOP];
-  const tmp16 = surfaceConfigs[userId(undefined, 9014).ApplicationWidgetConfigSurface.WIDGET_BOTTOM];
+  const tmp15 = surfaceConfigs[userId(undefined, 9041).ApplicationWidgetConfigSurface.WIDGET_TOP];
+  const tmp16 = surfaceConfigs[userId(undefined, 9041).ApplicationWidgetConfigSurface.WIDGET_BOTTOM];
   let tmp17 = null;
   if (null != iconURL) {
     obj = { source: null, style: null };
@@ -95,20 +95,20 @@ export default function UserProfileApplicationWidgetCard(userId) {
         let tmp20 = null != token;
         if (tmp20) {
           const _Array = Array;
-          let someResult = Array.from(tmp2(8339).OAuth2ScopesSets.APPLICATION_IDENTITIES_SCOPES).some((item) => {
+          let someResult = Array.from(tmp2(8367).OAuth2ScopesSets.APPLICATION_IDENTITIES_SCOPES).some((item) => {
             const scopes = token.scopes;
             return scopes.includes(item);
           });
           if (!someResult) {
             let scopes = token.scopes;
-            someResult = scopes.includes(tmp2(8339).OAuth2Scopes.SDK_SOCIAL_LAYER);
+            someResult = scopes.includes(tmp2(8367).OAuth2Scopes.SDK_SOCIAL_LAYER);
           }
           if (!someResult) {
             const scopes2 = token.scopes;
-            someResult = scopes2.includes(tmp2(8339).OAuth2Scopes.SDK_SOCIAL_LAYER_PRESENCE);
+            someResult = scopes2.includes(tmp2(8367).OAuth2Scopes.SDK_SOCIAL_LAYER_PRESENCE);
           }
           tmp20 = someResult;
-          const arr = Array.from(tmp2(8339).OAuth2ScopesSets.APPLICATION_IDENTITIES_SCOPES);
+          const arr = Array.from(tmp2(8367).OAuth2ScopesSets.APPLICATION_IDENTITIES_SCOPES);
         }
         if (fetched) {
           if (canStartAuthorization) {
@@ -117,25 +117,25 @@ export default function UserProfileApplicationWidgetCard(userId) {
           return tmp23;
         }
         obj2 = { style: cardStyle, title: null, titleLeadingIcon: null, children: null };
-        let tmp9Result = tmp9(7207);
-        tmp2Result = tmp2(7624);
+        let tmp9Result = tmp9(7221);
+        tmp2Result = tmp2(7638);
         obj2.title = tmp2Result.getWidgetTitle(widget);
         obj2.titleLeadingIcon = tmp17;
         const obj3 = { style: tmp.stillSyncing, children: null };
         const obj4 = { size: "xs", color: tmp9(576).colors.TEXT_MUTED };
-        const items3 = [closure_9(tmp2(9035).HourglassIcon, obj4)];
+        const items3 = [closure_9(tmp2(9062).HourglassIcon, obj4)];
         const obj5 = { variant: "text-sm/medium", color: "text-muted", children: null };
         const intl = tmp2(1114).intl;
         obj5.children = intl.string(tmp2(1114).t.z5K4Uv);
-        items3[1] = closure_9(tmp2(4556).Text, obj5);
+        items3[1] = closure_9(tmp2(4570).Text, obj5);
         obj3.children = items3;
         obj2.children = closure_10(closure_6, obj3);
         tmp23 = closure_9(tmp9Result, obj2);
       }
     }
   }
-  const tmp13 = stateFromStores(9026)(userId, widget.applicationId);
-  const result = userId(8931).bindResolveFieldValue(resolutionContext);
+  const tmp13 = stateFromStores(9053)(userId, widget.applicationId);
+  const result = userId(8958).bindResolveFieldValue(resolutionContext);
   const obj6 = {
     style: tmp.header,
     onPress() {
@@ -150,13 +150,13 @@ export default function UserProfileApplicationWidgetCard(userId) {
     accessibilityLabel: null,
     children: null,
   };
-  const tmp2Result1 = userId(8931);
-  obj6.accessibilityLabel = userId(7624).getWidgetTitle(widget);
+  const tmp2Result1 = userId(8958);
+  obj6.accessibilityLabel = userId(7638).getWidgetTitle(widget);
   const items4 = [tmp17];
   const obj7 = { variant: "text-sm/medium", color: "text-strong", lineClamp: 1, children: null };
-  const tmp2Result2 = userId(7624);
-  obj7.children = userId(7624).getWidgetTitle(widget);
-  items4[1] = closure_9(userId(4556).Text, obj7);
+  const tmp2Result2 = userId(7638);
+  obj7.children = userId(7638).getWidgetTitle(widget);
+  items4[1] = closure_9(userId(4570).Text, obj7);
   obj6.children = items4;
   const tmp31 = closure_10(closure_5, obj6);
   if (tmp15 != null) {
@@ -164,14 +164,14 @@ export default function UserProfileApplicationWidgetCard(userId) {
   }
   let tmp30Result = null;
   if (null != tmp15) {
-    if (tmp2(8929).ApplicationWidgetLayoutName.WIDGET_TOP_HERO === layout) {
+    if (tmp2(8956).ApplicationWidgetLayoutName.WIDGET_TOP_HERO === layout) {
       const obj8 = { header: tmp31, topConfig: tmp15, resolveFieldValue: result, numberFormat: memo };
-      tmp30Result = closure_9(tmp9(8930), obj8);
+      tmp30Result = closure_9(tmp9(8957), obj8);
     } else {
       tmp30Result = null;
-      if (tmp2(8929).ApplicationWidgetLayoutName.WIDGET_TOP_CONTAINED === layout) {
+      if (tmp2(8956).ApplicationWidgetLayoutName.WIDGET_TOP_CONTAINED === layout) {
         const obj9 = { header: tmp31, topConfig: tmp15, resolveFieldValue: result, numberFormat: memo };
-        tmp30Result = closure_9(tmp9(9022), obj9);
+        tmp30Result = closure_9(tmp9(9049), obj9);
       }
     }
   }
@@ -180,17 +180,17 @@ export default function UserProfileApplicationWidgetCard(userId) {
   }
   tmp30Result = null;
   if (null != tmp16) {
-    if (tmp2(8929).ApplicationWidgetLayoutName.WIDGET_BOTTOM_STATS === layout2) {
+    if (tmp2(8956).ApplicationWidgetLayoutName.WIDGET_BOTTOM_STATS === layout2) {
       const obj10 = { bottomConfig: tmp16, resolveFieldValue: result, numberFormat: memo };
-      tmp30Result = closure_9(tmp9(9023), obj10);
-    } else if (tmp2(8929).ApplicationWidgetLayoutName.WIDGET_BOTTOM_PROGRESS === layout2) {
+      tmp30Result = closure_9(tmp9(9050), obj10);
+    } else if (tmp2(8956).ApplicationWidgetLayoutName.WIDGET_BOTTOM_PROGRESS === layout2) {
       const obj11 = { bottomConfig: tmp16, resolveFieldValue: result };
-      tmp30Result = closure_9(tmp9(9024), obj11);
+      tmp30Result = closure_9(tmp9(9051), obj11);
     } else {
       tmp30Result = null;
-      if (tmp2(8929).ApplicationWidgetLayoutName.WIDGET_BOTTOM_COLLECTION === layout2) {
+      if (tmp2(8956).ApplicationWidgetLayoutName.WIDGET_BOTTOM_COLLECTION === layout2) {
         const obj12 = { bottomConfig: tmp16, resolveFieldValue: result };
-        tmp30Result = closure_9(tmp9(9025), obj12);
+        tmp30Result = closure_9(tmp9(9052), obj12);
       }
     }
   }
@@ -201,7 +201,7 @@ export default function UserProfileApplicationWidgetCard(userId) {
       const obj13 = { style: cardStyle, children: null };
       const items5 = [tmp30Result, ,];
       const obj14 = { style: tmp.divider };
-      tmp9Result = tmp9(7207);
+      tmp9Result = tmp9(7221);
       items5[1] = closure_9(closure_6, obj14);
       items5[2] = tmp30Result;
       obj13.children = items5;

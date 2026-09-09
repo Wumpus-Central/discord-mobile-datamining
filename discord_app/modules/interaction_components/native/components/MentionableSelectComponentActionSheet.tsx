@@ -3,7 +3,7 @@ import nativeDefault from "../../../../../discord_common/js/packages/tokens/nati
 import native from "../../../../design/void/native.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import InteractionComponentTypes from "../../InteractionComponentTypes.tsx";
-import guild_boosting_RoleIconUtils from "../../../guild_boosting/RoleIconUtils.tsx";
+import RoleIconUtils from "../../../guild_boosting/RoleIconUtils.tsx";
 import RoleIconDefault from "../../../roles/native/RoleIcon.tsx";
 import SearchableSelectActionComponentUtils from "../../SearchableSelectActionComponentUtils.tsx";
 import ShieldUserIcon from "../../../../design/components/Icon/native/redesign/generated/ShieldUserIcon.tsx";
@@ -21,7 +21,7 @@ const Constants = fn(1074);
 ({ Fonts, DEFAULT_ROLE_COLOR_HEX: closure_9 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-fn(4560);
+fn(4574);
 let createStyles = { name: null, discriminator: null, roleCountContainer: null, roleCountText: null };
 createStyles = {
   color: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT,
@@ -98,21 +98,16 @@ export default function MentionableSelectComponentActionSheet(selectionActionCom
       }
       if (null != guild) {
         if (null != role) {
-          let tmpResult = guild_boosting_RoleIconUtils;
+          let tmpResult = RoleIconUtils;
           if (tmpResult.canGuildUseRoleIcons(guild, role)) {
-            tmpResult = guild_boosting_RoleIconUtils;
-            let roleIconData = tmpResult.getRoleIconData(role);
-            if (roleIconData == null) {
-              roleIconData = {};
+            tmpResult = RoleIconUtils;
+            const roleIconData = tmpResult.getRoleIconData(role);
+            if (null != roleIconData) {
+              obj = { src: null, unicodeEmoji: null, size: 24, name: null };
+              ({ customIconSrc: obj3.src, unicodeEmoji: obj3.unicodeEmoji } = roleIconData);
+              obj.name = role.name;
+              return closure_2_10(RoleIconDefault, obj);
             }
-            ({ customIconSrc, unicodeEmoji } = roleIconData);
-            let tmp7;
-            if (null != customIconSrc) {
-              obj = { uri: customIconSrc };
-              tmp7 = obj;
-            }
-            const obj1 = { source: tmp7, unicodeEmoji, size: 24, name: role.name };
-            return closure_2_10(RoleIconDefault, obj1);
           }
           let colorString;
           if (role != null) {
@@ -121,8 +116,8 @@ export default function MentionableSelectComponentActionSheet(selectionActionCom
           if (colorString == null) {
             colorString = React7;
           }
-          const obj2 = { color: colorString };
-          return closure_2_10(ShieldUserIcon.ShieldUserIcon, obj2);
+          const obj1 = { color: colorString };
+          return closure_2_10(ShieldUserIcon.ShieldUserIcon, obj1);
         }
       }
       return null;

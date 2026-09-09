@@ -10,7 +10,7 @@ import UserStore from "../../../../stores/UserStore.tsx";
 const require = fn;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(4560);
+const createStyles = fn(4574);
 let obj = {
   container: null,
   avatarContainer: null,

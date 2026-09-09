@@ -6,9 +6,9 @@ import ReanimatedRexportDefault from "../../../../reanimated/ReanimatedRexport.t
 import VisualEffectViewDefault from "../../../../visual_effect_view/native/VisualEffectView.tsx";
 import common_SafeAreaView from "../../../../../components_native/common/SafeAreaView.tsx";
 import useMediaViewerSources from "../../useMediaViewerSources.tsx";
-import MediaSourceUtil from "../../MediaSourceUtil.tsx";
 import useVideoControls from "../../useVideoControls.tsx";
 import MediaPlayerMuteManager from "../../MediaPlayerMuteManager.tsx";
+import MediaSourceUtil from "../../MediaSourceUtil.tsx";
 import MediaViewerDimensionsContext from "../../MediaViewerDimensionsContext.tsx";
 import TouchableHitBoxDefault from "../../../../../design/void/TouchableHitBox/native/TouchableHitBox.tsx";
 import useMediaModalFooterAction from "../../useMediaModalFooterAction.tsx";
@@ -37,7 +37,7 @@ function OverlayMuteButton(arg0) {
   const intl = util.intl;
   obj.accessibilityLabel = intl.string(util.t.w4m945);
   const rect = { left: true, right: true, children: null };
-  obj.source = importDefault(isMuted ? 12963 : 10016);
+  obj.source = importDefault(isMuted ? 12989 : 10043);
   obj.color = nativeDefault.unsafe_rawColors.WHITE;
   obj.onPress = onToggleMute;
   ({ overlayButton: obj.style, overlayButtonIcon: obj.iconStyle } = tmp);
@@ -59,7 +59,7 @@ function OverlayObscureToggleButton(arg0) {
   const intl = util.intl;
   obj.accessibilityLabel = intl.string(util.t.UIsxUw);
   const rect = { left: true, right: true, children: null };
-  obj.source = importDefault(spoilerActive ? 12964 : 12965);
+  obj.source = importDefault(spoilerActive ? 12990 : 12991);
   obj.color = nativeDefault.unsafe_rawColors.WHITE;
   obj.onPress = onToggleObscure;
   ({ overlayButton: obj.style, overlayButtonIcon: obj.iconStyle } = tmp);
@@ -69,7 +69,7 @@ function OverlayObscureToggleButton(arg0) {
 function MediaModalOverlay(getVideoControls) {
   ({ source, index } = getVideoControls);
   const videoControls = getVideoControls.getVideoControls(index, source);
-  index(12968);
+  index(12994);
   const items = [index];
   const items1 = [videoControls];
   const callback = noop.useCallback(() => useMediaViewerSources.toggleSpoiler(index), items);
@@ -78,7 +78,7 @@ function MediaModalOverlay(getVideoControls) {
   }, items1);
   const obj = {};
   const merged = Object.assign(getVideoControls);
-  obj.slider = videoControls(8270)(index, source, videoControls);
+  obj.slider = videoControls(8290)(index, source, videoControls);
   obj.source = source;
   let flag = source.obscure;
   if (flag == null) {
@@ -94,7 +94,7 @@ const StyleSheet = get_ActivityIndicator.StyleSheet;
 const View = get_ActivityIndicator.View;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8, Fragment: closure_9 } = jsxProd);
-fn(4560);
+fn(4574);
 let obj = {
   portraitFooterButtons: null,
   invisibleFooter: null,

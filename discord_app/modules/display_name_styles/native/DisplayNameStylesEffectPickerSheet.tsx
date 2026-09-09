@@ -65,7 +65,7 @@ get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, Pressable: metroRequire } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-fn(4560);
+fn(4574);
 let createStyles = {
   header: { paddingTop: 4 },
   headerTrailing: { justifyContent: "center", alignItems: "center" },
@@ -118,10 +118,10 @@ export default function DisplayNameStylesEffectPickerSheet(userId) {
   _slicedToArray = undefined;
   let first;
   const tmp = closure_9();
-  let obj = userId(8170);
-  let obj1 = userId(15341);
+  let obj = userId(8196);
+  let obj1 = userId(15370);
   const visibleEffectOrder = obj1.useVisibleEffectOrder();
-  let obj2 = userId(15342);
+  let obj2 = userId(15371);
   const displayNameStylesNewEffects = obj2.useDisplayNameStylesNewEffects(visibleEffectOrder);
   ({ dotEffectIds: c2, dismissEffectDot: c3 } = displayNameStylesNewEffects);
   const tmp5 = _slicedToArray(first.useState(selectedEffectId), 2);
@@ -145,9 +145,9 @@ export default function DisplayNameStylesEffectPickerSheet(userId) {
     const intl2 = tmp2(1114).intl;
     obj3.text = intl2.string(tmp2(1114).t.XqMe3N);
     obj3.onPress = tmp8;
-    obj2.children = closure_7(tmp2(4975).Button, obj3);
+    obj2.children = closure_7(tmp2(4989).Button, obj3);
     obj1.trailing = closure_7(closure_5, obj2);
-    obj.children = closure_7(tmp2(7149).BottomSheetTitleHeader, obj1);
+    obj.children = closure_7(tmp2(7163).BottomSheetTitleHeader, obj1);
     obj.header = closure_7(closure_5, obj);
     const obj4 = { style: tmp.container, children: null };
     const obj5 = { style: tmp.contentContainer, children: null };
@@ -175,10 +175,10 @@ export default function DisplayNameStylesEffectPickerSheet(userId) {
         );
       }),
     };
-    obj5.children = closure_7(tmp2(4973).Stack, obj6);
+    obj5.children = closure_7(tmp2(4987).Stack, obj6);
     obj4.children = closure_7(closure_5, obj5);
     obj.children = closure_7(closure_5, obj4);
-    tmp9 = closure_7(tmp2(7150).BottomSheet, obj);
+    tmp9 = closure_7(tmp2(7164).BottomSheet, obj);
   }
   return tmp9;
 }

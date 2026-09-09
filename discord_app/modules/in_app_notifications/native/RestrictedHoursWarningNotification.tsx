@@ -7,11 +7,11 @@ import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-const lineClamp = fn(10100).NOTIFICATION_PREVIEW_LINE_CLAMP;
+const lineClamp = fn(10127).NOTIFICATION_PREVIEW_LINE_CLAMP;
 const Constants = fn(1074);
 ({ InAppNotificationTypes: metroRequire, UserSettingsSections: closure_7 } = Constants);
 const jsx = fn(21).jsx;
-const createStyles = fn(4560);
+const createStyles = fn(4574);
 let obj = { iconContainer: null };
 let size = {
   width: 48,
@@ -31,7 +31,7 @@ export default noop.memo(function RestrictedHoursWarningNotification(notificatio
   const type = notification.type;
   let obj = { style: closure_9().iconContainer, children: null };
   obj = { size: "sm", color: type(576).colors.WHITE };
-  obj.children = jsx(notification(11325).ThemeDarkIcon, { size: "sm", color: type(576).colors.WHITE });
+  obj.children = jsx(notification(11352).ThemeDarkIcon, { size: "sm", color: type(576).colors.WHITE });
   const items = [notification.title];
   const items1 = [type];
   const memo = noop.useMemo(() => ({ type: "simple", text: notification.title }), items);
@@ -47,7 +47,7 @@ export default noop.memo(function RestrictedHoursWarningNotification(notificatio
   obj = {
     icon: <View size="sm" color={type(576).colors.WHITE} />,
     header: memo,
-    children: jsx(notification(4556).Text, {
+    children: jsx(notification(4570).Text, {
       variant: "redesign/message-preview/medium",
       color: "text-subtle",
       lineClamp,
@@ -56,10 +56,10 @@ export default noop.memo(function RestrictedHoursWarningNotification(notificatio
     onPress: callback,
     notification,
   };
-  return jsx(notification(10175).NotificationPressable, {
+  return jsx(notification(10202).NotificationPressable, {
     icon: <View size="sm" color={type(576).colors.WHITE} />,
     header: memo,
-    children: jsx(notification(4556).Text, {
+    children: jsx(notification(4570).Text, {
       variant: "redesign/message-preview/medium",
       color: "text-subtle",
       lineClamp,

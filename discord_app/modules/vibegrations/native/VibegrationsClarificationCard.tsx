@@ -8,7 +8,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-fn(4560);
+fn(4574);
 let createStyles = { card: null, optionHeader: null, footer: null, customField: null };
 createStyles = {
   backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE,
@@ -113,12 +113,12 @@ export default function VibegrationsClarificationCard(clarification) {
     obj = { variant: "text-xs/semibold", color: "text-muted", children: null };
     let intl = clarification(1114).intl;
     const obj1 = { index: bound + 1, total: length };
-    obj.children = intl.formatToPlainString(onSubmit(3547)["7bypa+"], obj1);
-    tmp14 = closure_6(clarification(4556).Text, obj);
+    obj.children = intl.formatToPlainString(onSubmit(3560)["7bypa+"], obj1);
+    tmp14 = closure_6(clarification(4570).Text, obj);
   }
   const items4 = [
     tmp14,
-    closure_6(clarification(4556).Text, {
+    closure_6(clarification(4570).Text, {
       variant: "text-md/semibold",
       color: "text-default",
       children: clarification.questions[bound].question,
@@ -180,9 +180,9 @@ export default function VibegrationsClarificationCard(clarification) {
     if (!tmp6) {
       const obj4 = { variant: "secondary", size: "sm", text: null, onPress: null };
       let intl2 = tmp20(1114).intl;
-      obj4.text = intl2.string(onSubmit(3547).yKdgqw);
+      obj4.text = intl2.string(onSubmit(3560).yKdgqw);
       obj4.onPress = callback1;
-      tmp19Result = tmp19(tmp20(4975).Button, obj4);
+      tmp19Result = tmp19(tmp20(4989).Button, obj4);
     }
   }
   const items5 = [tmp19Result];
@@ -197,7 +197,7 @@ export default function VibegrationsClarificationCard(clarification) {
     returnKeyType: "send",
   };
   const intl3 = tmp20(1114).intl;
-  obj6.placeholder = intl3.string(onSubmit(3547).qifsdL);
+  obj6.placeholder = intl3.string(onSubmit(3560).qifsdL);
   obj6.value = str;
   obj6.onChange = function onChange(arg0) {
     closure_0 = arg0;
@@ -209,7 +209,7 @@ export default function VibegrationsClarificationCard(clarification) {
     });
   };
   obj6.onSubmitEditing = callback2;
-  obj5.children = closure_6(clarification(14173).GhostInput, obj6);
+  obj5.children = closure_6(clarification(14198).GhostInput, obj6);
   items5[1] = closure_6(closure_5, obj5);
   obj3.children = items5;
   items4[3] = closure_7(closure_5, obj3);

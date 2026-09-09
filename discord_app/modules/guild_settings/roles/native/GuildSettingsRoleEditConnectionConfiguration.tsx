@@ -130,7 +130,7 @@ function BooleanConfigRule(metadataField) {
     }
     _slicedToArray(tmp, num);
   };
-  return closure_12(metadataField(7201).TableSwitchRow, obj, metadataField);
+  return closure_12(metadataField(7214).TableSwitchRow, obj, metadataField);
 }
 function NumericalConfigRule(existingPendingConfiguration) {
   ({ fieldText, fieldTextHook, metadataField } = existingPendingConfiguration);
@@ -184,7 +184,7 @@ function NumericalConfigRule(existingPendingConfiguration) {
   if (num == null) {
     num = -1;
   }
-  let obj = metadataField(17640);
+  let obj = metadataField(17673);
   const realizedOperatorForResult = obj.realizedOperatorFor(existingPendingConfiguration.operator);
   c7 = realizedOperatorForResult;
   value = undefined;
@@ -193,7 +193,7 @@ function NumericalConfigRule(existingPendingConfiguration) {
       value = iter.value;
     }
   }
-  let tmpResult = metadataField(17640);
+  let tmpResult = metadataField(17673);
   str = tmpResult.displayedValueFor(value, realizedOperatorForResult);
   str = str.toString();
   let mapped = noop;
@@ -280,7 +280,7 @@ function NumericalConfigRule(existingPendingConfiguration) {
       obj2.children = onInputValueChange(metadataField(1178).TextInput, obj3, metadataField);
       let items1 = [onInputValueChange(map, obj2, "_numericalInputContainer")];
       const obj4 = { variant: "text-md/semibold", style: map.appNumericalInputText, children: fieldText };
-      items1[1] = onInputValueChange(metadataField(4556).Text, obj4);
+      items1[1] = onInputValueChange(metadataField(4570).Text, obj4);
       obj1.children = items1;
       tmp21Result = closure_13(tmp22, obj1);
     }
@@ -322,7 +322,7 @@ function NumericalConfigRule(existingPendingConfiguration) {
         _slicedToArray(tmp3, num);
       },
     };
-    return onInputValueChange(metadataField(7201).TableSwitchRow, obj5, metadataField);
+    return onInputValueChange(metadataField(7214).TableSwitchRow, obj5, metadataField);
   }
 }
 function BlueskyMetadataRules(arg0) {
@@ -820,7 +820,7 @@ function ApplicationMetadataRules(arg0) {
 }
 const View = fn(17).View;
 const PlatformTypes = fn(1074).PlatformTypes;
-const Constants = fn(5408);
+const Constants = fn(5422);
 ({
   MetadataFields: closure_7,
   OperatorTypes: closure_8,
@@ -830,7 +830,7 @@ const Constants = fn(5408);
 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1, Fragment: closure_14 } = jsxProd);
-fn(4560);
+fn(4574);
 let createStyles = {
   numericalInputContainerIOSInline: { marginTop: -2 },
   numericalInputContainerAndroidInline: null,

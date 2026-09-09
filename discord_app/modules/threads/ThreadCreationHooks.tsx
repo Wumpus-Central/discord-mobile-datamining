@@ -433,8 +433,8 @@ let closure_27 = async function _createThread_(arg0, arg1, arg2, arg3) {
     return value;
   })();
 };
-const DraftType = fn(4901).DraftType;
-const SlowmodeType = fn(7687).SlowmodeType;
+const DraftType = fn(4915).DraftType;
+const SlowmodeType = fn(7701).SlowmodeType;
 const ThreadConstants = fn(1113);
 ({ FORUM_POST_CREATION_AUTOMOD_ERRORS: map1, FORUM_POST_CREATION_UPLOAD_ERRORS: closure_14 } = ThreadConstants);
 const Constants = fn(1074);
@@ -447,7 +447,7 @@ const Constants = fn(1074);
   MAX_MESSAGES_PER_CHANNEL: closure_20,
   MessageFlags: closure_21,
 } = Constants);
-const MessageSendLocation = fn(4553).MessageSendLocation;
+const MessageSendLocation = fn(4567).MessageSendLocation;
 const PrivateThreadMode = {
   Disabled: 1,
   [1]: "Disabled",
@@ -610,18 +610,18 @@ export const useCreateThreadCommon = function useCreateThreadCommon(parentChanne
                 }
                 if (null != items1) {
                   if (items1.length > 0) {
-                    const obj4 = closure_1_1(7456);
+                    const obj4 = closure_1_1(7470);
                     id = id.id;
                     obj = { location: constants.THREAD_CREATION };
-                    let sendStickersResult = obj4.sendStickers(id, items1, closure_1_1(7682).parse(id, arg1), obj);
-                    const obj5 = closure_1_1(7682);
+                    let sendStickersResult = obj4.sendStickers(id, items1, closure_1_1(7696).parse(id, arg1), obj);
+                    const obj5 = closure_1_1(7696);
                   }
                   return sendStickersResult;
                 }
-                closure_1_1(7456);
+                closure_1_1(7470);
                 obj = { location: constants.THREAD_CREATION };
-                sendStickersResult = obj.sendMessage(id.id, closure_1_1(7682).parse(id, arg1), undefined, obj);
-                const obj2 = closure_1_1(7682);
+                sendStickersResult = obj.sendMessage(id.id, closure_1_1(7696).parse(id, arg1), undefined, obj);
+                const obj2 = closure_1_1(7696);
               })(closure_132_8, closure_132_0, closure_132_1, closure_132_2, c7);
               const obj10 = parentMessageId(threadSettings[19]);
             }

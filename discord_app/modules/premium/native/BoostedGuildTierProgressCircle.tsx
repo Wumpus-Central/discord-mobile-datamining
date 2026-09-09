@@ -4,9 +4,9 @@ import GuildBoostingUtils from "../../../utils/GuildBoostingUtils.tsx";
 import useGuildPowerupsBoostCountDefault from "../powerups/hooks/useGuildPowerupsBoostCount.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import Tier048Px from "../../../design/components/Illustration/native/redesign/generated/Tier048Px.tsx";
-import _modDef13516 from "../../../../_runtime/metro/13516__.js";
-import _modDef13517 from "../../../../_runtime/metro/13517__.js";
-import _modDef13518 from "../../../../_runtime/metro/13518__.js";
+import _modDef13539 from "../../../../_runtime/metro/13539__.js";
+import _modDef13540 from "../../../../_runtime/metro/13540__.js";
+import _modDef13541 from "../../../../_runtime/metro/13541__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -16,7 +16,7 @@ const Constants = fn(1074);
 ({ AppliedGuildBoostsRequiredForBoostedGuildTier: hasOwnProperty, BoostedGuildTiers: metroRequire } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-fn(4560);
+fn(4574);
 const createStyles = {
   guildTierProgressCircle: { position: "relative", width: 70, height: 70 },
   guildTierBackground: null,
@@ -76,11 +76,11 @@ export default function BoostedGuildTierProgressCircle(arg0) {
       if (guild.premiumTier !== constants.NONE) {
         const premiumTier = guild.premiumTier;
         if (constants.TIER_1 === premiumTier) {
-          let tier048PxSource = _modDef13516;
+          let tier048PxSource = _modDef13539;
         } else if (constants.TIER_2 === premiumTier) {
-          tier048PxSource = _modDef13517;
+          tier048PxSource = _modDef13540;
         } else if (constants.TIER_3 === premiumTier) {
-          tier048PxSource = _modDef13518;
+          tier048PxSource = _modDef13541;
         }
       }
       const obj2 = {

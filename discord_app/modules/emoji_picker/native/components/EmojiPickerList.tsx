@@ -18,7 +18,7 @@ import EmojiPickerPremiumSearchUpsell from "EmojiPickerPremiumSearchUpsell.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const IMAGE_SIZE = fn(10295).IMAGE_SIZE;
+const IMAGE_SIZE = fn(10322).IMAGE_SIZE;
 const Constants = fn(1074);
 ({
   AnalyticsObjects: hasOwnProperty,
@@ -308,6 +308,7 @@ export default noop.memo(function EmojiPickerList(analyticsObject) {
     return useTier0UpsellContent(tmp(tmp2[34]), obj1);
   } else {
     let hasSearchUpsell = tmp16.hasSearchUpsell;
+    let tmpResult = tmp(tmp8 ? tmp2[35] : tmp2[36]);
     if (hasSearchUpsell) {
       hasSearchUpsell = tmp9(tmp2[37]).getMobileEmojiPickerUpsellRestyleEnabledForFeature(
         tmp9(tmp2[17]).EntitlementFeatureNames.EMOJIS_EVERYWHERE,
@@ -349,11 +350,15 @@ export default noop.memo(function EmojiPickerList(analyticsObject) {
     obj2.ref = emojiPickerListRef;
     obj2.renderItem = callback2;
     obj2.useTier0UpsellContent = useTier0UpsellContent;
-    const items4 = [useTier0UpsellContent(tmp(tmp8 ? tmp2[35] : tmp2[36]), obj2)];
+    const items4 = [useTier0UpsellContent(tmpResult, obj2)];
     let tmp25Result = !hasSearchUpsell;
     if (!hasSearchUpsell) {
-      let obj3 = { bottomSheetIndex, inPortalKeyboard: flag, shouldShow: tmp20 };
-      tmp25Result = tmp25(tmp(tmp2[38]), obj3);
+      let obj3 = { bottomSheetIndex, featureName: null, inPortalKeyboard: null, shouldShow: null };
+      tmpResult = tmp(tmp2[38]);
+      obj3.featureName = tmp9(tmp2[17]).EntitlementFeatureNames.EMOJIS_EVERYWHERE;
+      obj3.inPortalKeyboard = flag;
+      obj3.shouldShow = tmp20;
+      tmp25Result = tmp25(tmpResult, obj3);
     }
     let obj4 = { children: null };
     items4[1] = tmp25Result;

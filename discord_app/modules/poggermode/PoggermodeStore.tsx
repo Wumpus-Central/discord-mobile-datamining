@@ -43,7 +43,7 @@ function updateCombo(userId) {
     decayInterval = iter.decayInterval;
   }
   if (decayInterval == null) {
-    decayInterval = new obj(4447).Interval();
+    decayInterval = new obj(4461).Interval();
   }
   obj.decayInterval = decayInterval;
   const result = obj.set("" + userId.userId + "-" + userId.channelId, obj);
@@ -80,11 +80,11 @@ function updateCombo(userId) {
     }
   }
 }
-const PoggermodeConstants = fn(7679);
+const PoggermodeConstants = fn(7693);
 ({ ShakeLevel: hasOwnProperty, ShakeLocation: metroRequire } = PoggermodeConstants);
 const ComponentActions = fn(1074).ComponentActions;
 const set = new Set();
-const secondaryIndexMap = new fn(4195).SecondaryIndexMap(
+const secondaryIndexMap = new fn(4208).SecondaryIndexMap(
   (arg0) => {
     const items = [,];
     ({ userId: arr[0], channelId: arr[1] } = arg0);
@@ -92,7 +92,7 @@ const secondaryIndexMap = new fn(4195).SecondaryIndexMap(
   },
   (channelId) => "" + channelId.channelId + "-" + channelId.userId,
 );
-const secondaryIndexMap1 = new fn(4195).SecondaryIndexMap(
+const secondaryIndexMap1 = new fn(4208).SecondaryIndexMap(
   (combo) => {
     const items = [, ,];
     ({ messageId: arr[0], channelId: arr[1] } = combo);

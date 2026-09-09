@@ -2,7 +2,7 @@
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../intl/index.native.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
-import LegacyBaseButton from "../../../../_runtime/06655_LegacyBaseButton.js";
+import LegacyBaseButton from "../../../../_runtime/06669_LegacyBaseButton.js";
 import CollectiblesUtils from "../CollectiblesUtils.tsx";
 import IndividualProductPreview from "IndividualProductPreview.tsx";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
@@ -15,7 +15,7 @@ get_ActivityIndicator = fn(17);
 const ShopCtaEnum = fn(1076).ShopCtaEnum;
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
-fn(4560);
+fn(4574);
 let createStyles = {
   previewContainer: null,
   bundleThumbnail: null,

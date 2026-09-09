@@ -9,7 +9,7 @@ const View = fn(17).View;
 const EMOJI_URL_BASE_SIZE = fn(1374).EMOJI_URL_BASE_SIZE;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-fn(4560);
+fn(4574);
 const createStyles = {
   upsell: { flexDirection: "row", alignItems: "center", justifyContent: "space-between" },
   title: { lineHeight: 16, flex: 1 },

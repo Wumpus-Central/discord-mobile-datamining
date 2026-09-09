@@ -1,5 +1,5 @@
 // discord_app/modules/self_mod/inappropriate_conversation/InappropriateConversationsManager.tsx
-import _modDef4684 from "../../../../_runtime/metro/04684__.js";
+import _modDef4698 from "../../../../_runtime/metro/04698__.js";
 import SoundUtils from "../../sound_playback/SoundUtils.tsx";
 import AutomaticLifecycleManager from "../../../lib/AutomaticLifecycleManager.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
@@ -18,7 +18,7 @@ function fadeIn() {
     const rounded2 = Math.round(100 * closure_3);
     if (rounded <= 0) {
       closure_3 = (rounded2 + rounded) / 100;
-      closure_2.volume = _modDef4684(closure_3, 0, 0.5);
+      closure_2.volume = _modDef4698(closure_3, 0, 0.5);
     }
     clearInterval(c5);
     if (tmp9) {
@@ -43,7 +43,7 @@ function handlePauseMusic() {
     const rounded2 = Math.round(100 * closure_3);
     if (rounded <= 0) {
       closure_3 = (rounded2 + rounded) / 100;
-      closure_2.volume = _modDef4684(closure_3, 0, 0.5);
+      closure_2.volume = _modDef4698(closure_3, 0, 0.5);
     }
     clearInterval(c5);
     let tmp10 = 0 === rounded1;
@@ -71,7 +71,7 @@ function handleStopMusic() {
     const rounded2 = Math.round(100 * closure_3);
     if (rounded <= 0) {
       closure_3 = (rounded2 + rounded) / 100;
-      closure_2.volume = _modDef4684(closure_3, 0, 0.5);
+      closure_2.volume = _modDef4698(closure_3, 0, 0.5);
     }
     clearInterval(c5);
     let tmp10 = 0 === rounded1;

@@ -8,14 +8,14 @@ import UserStore from "../../../../stores/UserStore.tsx";
 
 require = fn;
 const jsx = fn(21).jsx;
-fn(11473);
+fn(11500);
 let SettingBuilders = {
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.s9h22P);
   },
   parent: null,
-  IconComponent: fn(8667).NitroWheelIcon,
+  IconComponent: fn(8695).NitroWheelIcon,
   onPress: function handleNitroRestoreSettingPress() {
     let obj = BillingActionCreatorsDefault;
     const result = obj.restoreAndApplyPurchases(true);

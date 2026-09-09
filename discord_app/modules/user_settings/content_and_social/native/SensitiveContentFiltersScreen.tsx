@@ -8,7 +8,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 const SettingsScreenNoticesDefault = SettingsScreenNotices;
 
 require = fn;
-const MobileUserSettings = fn(7975).MobileUserSettings;
+const MobileUserSettings = fn(7989).MobileUserSettings;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, Fragment: metroRequire, jsxs: closure_7 } = jsxProd);
 const size = fn(2);

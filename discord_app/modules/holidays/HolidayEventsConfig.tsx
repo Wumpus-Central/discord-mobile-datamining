@@ -2,8 +2,8 @@
 import util from "../../intl/index.native.tsx";
 import dismissible_content from "../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx";
 import Constants from "../soundpacks/Constants.tsx";
-import _modDef17385 from "../../../_runtime/metro/17385__.js";
-import _modDef17386 from "../../../_runtime/metro/17386__.js";
+import _modDef17416 from "../../../_runtime/metro/17416__.js";
+import _modDef17417 from "../../../_runtime/metro/17417__.js";
 import size from "../../../_runtime/metro/00002__.js";
 
 let obj = {
@@ -23,7 +23,7 @@ let obj = {
   coachmarkDismissibleContent: null,
   coachmarkBackgroundColor: "#1170ed",
 };
-obj = { webmDark: _modDef17385, webmLight: _modDef17386 };
+obj = { webmDark: _modDef17416, webmLight: _modDef17417 };
 obj.appSpinnerSources = obj;
 obj.coachmarkDismissibleContent = dismissible_content.DismissibleContent.HOLIDAY_COACHMARK_WINTER_2025;
 const result = size.fileFinishedImporting("modules/holidays/HolidayEventsConfig.tsx");

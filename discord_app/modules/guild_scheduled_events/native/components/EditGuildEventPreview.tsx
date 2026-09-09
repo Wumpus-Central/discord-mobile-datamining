@@ -20,7 +20,7 @@ function PreviewBody(event) {
   let items = [eventLocationIconSource];
   const items1 = [channel_id];
   const stateFromStores = obj.useStateFromStores(items, () => ChannelStore.getChannel(channel_id), items1);
-  const tmp6 = channel_id(4713)(stateFromStores);
+  const tmp6 = channel_id(4727)(stateFromStores);
   dependencyMap = tmp6;
   let obj1 = require("EntityUtils");
   let locationFromEvent = obj1.getLocationFromEvent(event);
@@ -47,7 +47,7 @@ function PreviewBody(event) {
     const intl2 = tmp2(1114).intl;
     const obj2 = { channelName: null };
     const obj3 = { channel: stateFromStores };
-    obj2.channelName = channel_id(9775)(obj3);
+    obj2.channelName = channel_id(9802)(obj3);
     formatToPlainStringResult = intl2.formatToPlainString(tmp2(1114).t.sxcQPE, obj2);
   }
   obj1.accessibilityLabel = formatToPlainStringResult;
@@ -102,7 +102,7 @@ function PreviewBody(event) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-fn(4560);
+fn(4574);
 let createStyles = {
   container: null,
   centered: null,

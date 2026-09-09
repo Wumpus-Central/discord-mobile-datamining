@@ -22,7 +22,7 @@ function Code(arg0) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9, Fragment: c10 } = jsxProd);
-fn(4560);
+fn(4574);
 let createStyles = { wrap: null, code: null, border: null };
 createStyles = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flex: 1 };
 createStyles.wrap = createStyles;
@@ -92,7 +92,7 @@ export default function UserSettingsStartupTimings() {
             } else {
               closure_128_0 = undefined;
               closure_128_1 = undefined;
-              let obj3 = tmp5(4424);
+              let obj3 = tmp5(4438);
               dependencyMap = 1;
               c3 = 1;
               const obj1 = { value: obj3.getAppFirstVisibleTimestamp(), done: false };
@@ -107,8 +107,8 @@ export default function UserSettingsStartupTimings() {
             return obj2;
           } else {
             closure_128_0 = value;
-            closure_128_1 = tmp5(10198)(closure_128_0);
-            obj = tmp2(8361);
+            closure_128_1 = tmp5(10225)(closure_128_0);
+            obj = tmp2(8389);
             obj3 = { message: closure_128_1 };
             obj.showShareActionSheet(obj3, "Startup Timing");
             c3 = 3;

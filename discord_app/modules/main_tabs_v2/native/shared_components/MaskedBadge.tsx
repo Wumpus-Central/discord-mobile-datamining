@@ -6,9 +6,9 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const jsx = fn(21).jsx;
-fn(4560);
+fn(4574);
 let createStyles = {
-  maskStyle: { position: "relative", right: "HermesInternal" },
+  maskStyle: { position: "relative", right: "padding" },
   unreadDot: { width: 0, height: 0 },
   badgeStyle: { flexGrow: 1, flexShrink: 0 },
   unreadBadge: { position: "relative", bottom: -3 },

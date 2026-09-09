@@ -29,7 +29,7 @@ export const isPublicSystemMessage = function isPublicSystemMessage(message) {
   return tmp;
 };
 export const getPublicSystemMessageAvatar = function getPublicSystemMessageAvatar() {
-  return require("../../../_runtime/metro/08037__.js");
+  return require("../../../_runtime/metro/08052__.js");
 };
 export const trackEnableCommunityFlow = function trackEnableCommunityFlow(fromStep) {
   const obj = { flow_type, from_step: fromStep.fromStep, to_step: fromStep.toStep };

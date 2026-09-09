@@ -9,59 +9,59 @@ require = fn;
 function FavoritesGuildCategoryActionSheetConnected(category) {
   category = category.category;
   const onClose = category.onClose;
-  const tmp3 = onClose(10980)(category);
+  const tmp3 = onClose(11007)(category);
   dependencyMap = tmp3;
   const DeveloperMode = category(1935).DeveloperMode;
   const setting = DeveloperMode.useSetting();
   let obj = {
-    header: closure_5(category(7149).BottomSheetTitleHeader, { title: onClose(4713)(category, true) }),
+    header: closure_5(category(7163).BottomSheetTitleHeader, { title: onClose(4727)(category, true) }),
     children: null,
   };
   let tmp7Result = null;
   if (null != tmp3) {
     obj = { hasIcons: true, children: null };
     obj = { label: tmp3.label, icon: null, onPress: null };
-    const obj1 = { IconComponent: tmp4(10956).PlusLargeIcon };
-    obj.icon = closure_5(tmp4(7200).ActionSheetRow.Icon, obj1);
+    const obj1 = { IconComponent: tmp4(10983).PlusLargeIcon };
+    obj.icon = closure_5(tmp4(7213).ActionSheetRow.Icon, obj1);
     obj.onPress = function onPress() {
       closure_2.perform();
       onClose();
     };
-    obj.children = closure_5(tmp4(7200).ActionSheetRow, obj);
-    tmp7Result = closure_5(tmp4(7200).ActionSheetRow.Group, obj);
+    obj.children = closure_5(tmp4(7213).ActionSheetRow, obj);
+    tmp7Result = closure_5(tmp4(7213).ActionSheetRow.Group, obj);
   }
   const items = [tmp7Result, ,];
   const obj2 = { hasIcons: true, children: null };
   const obj3 = { label: null, icon: null, onPress: null };
   const intl = tmp4(1114).intl;
   obj3.label = intl.string(category(1114).t.zdPFs9);
-  const tmp2 = onClose(4713)(category, true);
-  obj3.icon = closure_5(category(7200).ActionSheetRow.Icon, { IconComponent: category(7380).SettingsIcon });
+  const tmp2 = onClose(4727)(category, true);
+  obj3.icon = closure_5(category(7213).ActionSheetRow.Icon, { IconComponent: category(7394).SettingsIcon });
   obj3.onPress = function onPress() {
     openFavoritesGuildCategorySettingsModalDefault(category.id);
     onClose();
   };
-  obj2.children = closure_5(category(7200).ActionSheetRow, obj3);
-  items[1] = closure_5(category(7200).ActionSheetRow.Group, obj2);
+  obj2.children = closure_5(category(7213).ActionSheetRow, obj3);
+  items[1] = closure_5(category(7213).ActionSheetRow.Group, obj2);
   tmp7Result = null;
   if (setting) {
     const obj5 = { hasIcons: true, children: null };
     const obj6 = { label: null, icon: null, onPress: null };
     const intl2 = tmp4(1114).intl;
     obj6.label = intl2.string(tmp4(1114).t["2visC6"]);
-    const obj7 = { IconComponent: tmp4(10634).IdIcon };
-    obj6.icon = closure_5(tmp4(7200).ActionSheetRow.Icon, obj7);
+    const obj7 = { IconComponent: tmp4(10661).IdIcon };
+    obj6.icon = closure_5(tmp4(7213).ActionSheetRow.Icon, obj7);
     obj6.onPress = function onPress() {
       ClipboardUtils.copy(category.id);
       ToastUtils.presentIdCopied();
       onClose();
     };
-    obj5.children = closure_5(tmp4(7200).ActionSheetRow, obj6);
-    tmp7Result = closure_5(tmp4(7200).ActionSheetRow.Group, obj5);
+    obj5.children = closure_5(tmp4(7213).ActionSheetRow, obj6);
+    tmp7Result = closure_5(tmp4(7213).ActionSheetRow.Group, obj5);
   }
   items[2] = tmp7Result;
   obj.children = items;
-  return closure_6(category(7198).ActionSheet, obj);
+  return closure_6(category(7211).ActionSheet, obj);
 }
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);

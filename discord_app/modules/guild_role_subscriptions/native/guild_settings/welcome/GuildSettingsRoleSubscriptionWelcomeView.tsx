@@ -114,7 +114,7 @@ function StartEarningButton(isTermsAccepted) {
       },
     };
     return obj.openLazy(
-      asyncRequireImpl(17689, dependencyMap.paths),
+      asyncRequireImpl(17722, dependencyMap.paths),
       EligibilityActionSheet.ELIGIBILITY_ACTION_SHEET_KEY,
       obj,
     );
@@ -178,7 +178,7 @@ function StartEarningButton(isTermsAccepted) {
     const intl = tmp5(tmp3[10]).intl;
     obj6.text = intl.string(tmp5(tmp3[10]).t.NL5ZNS);
     const obj7 = {
-      source: require("../../../../../../_runtime/metro/09630__.js"),
+      source: require("../../../../../../_runtime/metro/09657__.js"),
       color: require("native").unsafe_rawColors.WHITE,
       size: tmp5(tmp3[21]).Icon.Sizes.SMALL_20,
     };
@@ -253,12 +253,12 @@ class MarketingSections {
 }
 get_ActivityIndicator = fn(17);
 ({ View: metroRequire, ScrollView: closure_7 } = get_ActivityIndicator);
-const React6 = fn(15208).CREATOR_REVENUE_PORTAL_URL;
+const React6 = fn(15237).CREATOR_REVENUE_PORTAL_URL;
 const GuildSettingsSections = fn(1074).GuildSettingsSections;
-const constants = fn(17685).CreatorMonetizationOnboardingMarketingSection;
+const constants = fn(17718).CreatorMonetizationOnboardingMarketingSection;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12, Fragment: map1 } = jsxProd);
-fn(4560);
+fn(4574);
 let createStyles = {
   container: { flex: 1 },
   contentContainer: { flex: 1, padding: 24 },

@@ -63,8 +63,8 @@ function GuildTemplatesJoinFooter(trigger) {
   const intl3 = tmp2(1114).intl;
   obj1.children = intl3.string(trigger(1114).t["N+Mi/U"]);
   const items2 = [
-    closure_14(trigger(4556).Text, obj1),
-    closure_14(trigger(4975).Button, {
+    closure_14(trigger(4570).Text, obj1),
+    closure_14(trigger(4989).Button, {
       variant: "primary",
       grow: true,
       text: stringResult,
@@ -99,9 +99,9 @@ function GuildTemplatesItem(guildTemplate) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, ScrollView: metroRequire } = get_ActivityIndicator);
-let CreateGuildConstants = fn(12711);
+let CreateGuildConstants = fn(12737);
 ({ getGuildTemplatesMap: closure_7, GuildTemplateId: closure_8 } = CreateGuildConstants);
-CreateGuildConstants = fn(6980);
+CreateGuildConstants = fn(6994);
 ({
   CreateGuildModalStates: closure_9,
   GuildTemplateTriggers: c10,
@@ -111,7 +111,7 @@ const Constants = fn(1074);
 ({ AnalyticEvents: closure_12, AnalyticsLocations: map1 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
-fn(4560);
+fn(4574);
 let createStyles = {
   flex: { flex: 1 },
   contentContainer: null,
@@ -124,7 +124,7 @@ let createStyles = {
   footerContainer: null,
   footerTitle: null,
 };
-createStyles = { marginTop: fn(5682).NAV_BAR_HEIGHT };
+createStyles = { marginTop: fn(5696).NAV_BAR_HEIGHT };
 createStyles.contentContainer = createStyles;
 createStyles.scrollContainer = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER };
 let obj1 = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER };

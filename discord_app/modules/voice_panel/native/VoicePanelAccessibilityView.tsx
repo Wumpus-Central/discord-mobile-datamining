@@ -3,9 +3,9 @@ import VoicePanelPIPStateContext from "pip/VoicePanelPIPStateContext.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const VoicePanelPIPModes = fn(17091).VoicePanelPIPModes;
+const VoicePanelPIPModes = fn(17122).VoicePanelPIPModes;
 const jsx = fn(21).jsx;
-let closure_4 = noop.memo(fn(4959).AccessibilityViewAnimated);
+let closure_4 = noop.memo(fn(4973).AccessibilityViewAnimated);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/voice_panel/native/VoicePanelAccessibilityView.tsx");
 

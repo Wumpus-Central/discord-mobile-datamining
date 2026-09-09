@@ -7,12 +7,12 @@ import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-const COLLECTIBLES_PREVIEW_SIZE = fn(7208).COLLECTIBLES_PREVIEW_SIZE;
+const COLLECTIBLES_PREVIEW_SIZE = fn(7222).COLLECTIBLES_PREVIEW_SIZE;
 const ContentDismissActionType = fn(1954).ContentDismissActionType;
 const NOOP = fn(1085).NOOP;
 const jsx = fn(21).jsx;
 const PX_4 = nativeDefault.space.PX_4;
-fn(4560);
+fn(4574);
 let createStyles = { previewContainer: null, noneIcon: null };
 let size = {
   height: COLLECTIBLES_PREVIEW_SIZE,
@@ -36,14 +36,14 @@ export default function UserProfileFrameEditButton(arg0) {
   ({ pendingProfileFrame, guildId } = arg0);
   let userProfileFrame;
   const tmp = closure_11();
-  let obj = user(8835);
+  let obj = user(14659);
   const canViewProfileFramesInCollectiblesShop =
     obj.useCanViewProfileFramesInCollectiblesShop("UserProfileFrameEditButton");
-  let obj1 = user(7388);
+  let obj1 = user(7402);
   const items = [user(1943).DismissibleContent.PROFILE_FRAME_USER_PROFILE_NEW_BADGE];
   const tmp5 = userProfileFrame(obj1.useSelectedDismissibleContent(items), 2);
   dependencyMap = tmp6;
-  let obj2 = user(8166);
+  let obj2 = user(8192);
   obj = { pendingValue: pendingProfileFrame, userValue: null, guildValue: null, guildId: null };
   let profileFrame;
   if (displayProfile != null) {
@@ -63,7 +63,7 @@ export default function UserProfileFrameEditButton(arg0) {
   obj.guildValue = profileFrame1;
   obj.guildId = guildId;
   const profilePreviewValue = obj2.getProfilePreviewValue(obj);
-  let tmp2Result = user(11047);
+  let tmp2Result = user(11074);
   let skuId;
   if (profilePreviewValue != null) {
     skuId = profilePreviewValue.skuId;
@@ -80,7 +80,7 @@ export default function UserProfileFrameEditButton(arg0) {
   if (type === user(1889).CollectiblesItemType.PROFILE_FRAME) {
     const first1 = product.items[0];
   }
-  tmp2Result = user(8166);
+  tmp2Result = user(8192);
   userProfileFrame = tmp2Result.useUserProfileFrame({ user, guildId });
   if (undefined !== pendingProfileFrame) {
     userProfileFrame = pendingProfileFrame;
@@ -119,7 +119,7 @@ export default function UserProfileFrameEditButton(arg0) {
       const intl5 = user(1114).intl;
       obj1.buttonText = intl5.string(user(1114).t.MKDeyL);
       obj1.onPress = NOOP;
-      obj1.leading = jsx(user(5577).ActivityIndicator, { animating: true, size: "large" });
+      obj1.leading = jsx(user(5591).ActivityIndicator, { animating: true, size: "large" });
       obj2 = obj1;
     } else {
       obj2 = {
@@ -133,7 +133,7 @@ export default function UserProfileFrameEditButton(arg0) {
       const intl3 = user(1114).intl;
       obj2.label = intl3.string(user(1114).t.GWrZOd);
       const obj3 = { showNewBadge: tmp5[0] === user(1943).DismissibleContent.PROFILE_FRAME_USER_PROFILE_NEW_BADGE };
-      obj2.labelTrailing = jsx(user(14621).UserProfileEditFormLabelBadges, {
+      obj2.labelTrailing = jsx(user(14646).UserProfileEditFormLabelBadges, {
         showNewBadge: tmp5[0] === user(1943).DismissibleContent.PROFILE_FRAME_USER_PROFILE_NEW_BADGE,
       });
       obj2.buttonText = formatToPlainStringResult;
@@ -148,21 +148,21 @@ export default function UserProfileFrameEditButton(arg0) {
           previewHeight: COLLECTIBLES_PREVIEW_SIZE - 2 * PX_4,
           profileBackgroundColor: guildId(576).colors.BACKGROUND_SURFACE_HIGH,
         };
-        obj5.children = jsx(guildId(8827), {
+        obj5.children = jsx(guildId(8856), {
           profileFrame: first1,
           previewWidth: COLLECTIBLES_PREVIEW_SIZE - 2 * guildId(576).space.PX_8,
           previewHeight: COLLECTIBLES_PREVIEW_SIZE - 2 * PX_4,
           profileBackgroundColor: guildId(576).colors.BACKGROUND_SURFACE_HIGH,
         });
         let tmp19Result = <View style={tmp.previewContainer}>{null}</View>;
-        const tmp24 = guildId(8827);
+        const tmp24 = guildId(8856);
       } else {
-        const obj7 = { source: guildId(13176), style: tmp.noneIcon };
-        tmp19Result = jsx(user(1178).Icon, { source: guildId(13176), style: tmp.noneIcon });
+        const obj7 = { source: guildId(13199), style: tmp.noneIcon };
+        tmp19Result = jsx(user(1178).Icon, { source: guildId(13199), style: tmp.noneIcon });
       }
       obj2.leading = tmp19Result;
     }
-    return jsx(user(14621).UserProfileEditFormButton, obj2);
+    return jsx(user(14646).UserProfileEditFormButton, obj2);
   } else {
     return null;
   }

@@ -2,13 +2,13 @@
 import initialize from "../../../../../discord_common/js/packages/flux/index.tsx";
 import util from "../../../../intl/index.native.tsx";
 import user from "../../../../../discord_common/js/packages/protos/discord_protos/users/v1/user.tsx";
-import _modDef3063 from "../PremiumGroup.messages.js";
+import _modDef3074 from "../PremiumGroup.messages.js";
 import PremiumGroupUtils from "../PremiumGroupUtils.native.tsx";
 import usePremiumGroupPrimaryNameDefault from "usePremiumGroupPrimaryName.tsx";
 import SubscriptionStore from "../../../../stores/billing/SubscriptionStore.tsx";
 
 require = fn;
-const PremiumGroupConstants = fn(4232);
+const PremiumGroupConstants = fn(4245);
 ({ getPremiumGroupProductName: closure_4, HELP_CENTER_LINK: hasOwnProperty } = PremiumGroupConstants);
 const size = fn(2);
 const result = size.fileFinishedImporting(
@@ -32,7 +32,7 @@ export default function usePremiumGroupFeaturesTableCardText(arg0, arg1) {
       if (null != tmp4) {
         const intl = util.intl;
         obj = { primaryName: tmp4, premiumGroupProductName: React4() };
-        priceString = intl.format(_modDef3063.Nu9LNm, obj);
+        priceString = intl.format(_modDef3074.Nu9LNm, obj);
       }
     }
     let str = "...";
@@ -42,10 +42,10 @@ export default function usePremiumGroupFeaturesTableCardText(arg0, arg1) {
     if (arg0 === user.PremiumSubscriptionGroupRole.PRIMARY) {
       const intl3 = util.intl;
       obj = { helpCenterLink, premiumGroupProductName: React4() };
-      let formatResult = intl3.format(_modDef3063["+R/K74"], obj);
+      let formatResult = intl3.format(_modDef3074["+R/K74"], obj);
     } else {
       const intl2 = util.intl;
-      const tmp3Result = _modDef3063;
+      const tmp3Result = _modDef3074;
       obj1 = { helpCenterLink };
       formatResult = intl2.format(arg1 ? tmp3Result["xF+upx"] : tmp3Result.qqfnOm, obj1);
     }

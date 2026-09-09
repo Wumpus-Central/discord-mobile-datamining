@@ -295,8 +295,8 @@ const size = fn(2);
 const result = size.fileFinishedImporting("lib/uploader/heicConversion.tsx");
 
 export { HeicConversionFailureReason };
-export const isHeicFile = fn(5171).isHeicFile;
-export const renameToJpegExtension = fn(5171).renameToJpegExtension;
+export const isHeicFile = fn(5185).isHeicFile;
+export const renameToJpegExtension = fn(5185).renameToJpegExtension;
 export const preConvertHeicForUpload = function preConvertHeicForUpload() {
   const self = this;
   const apply = closure_6.apply;

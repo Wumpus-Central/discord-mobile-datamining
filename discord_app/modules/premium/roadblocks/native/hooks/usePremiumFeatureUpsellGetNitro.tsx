@@ -79,7 +79,7 @@ export default function usePremiumFeatureUpsellGetNitro(arg0, arg1, page, arg3) 
           })
           .catch(() => {
             const intl = closure_1_0(1114).intl;
-            page(4258).presentFailedToast(intl.string(closure_1_0(1114).t.R0RpRX));
+            page(4271).presentFailedToast(intl.string(closure_1_0(1114).t.R0RpRX));
           })
           .finally(() => closure_1_4(false));
         const catchPromise = Promise.all(items)
@@ -89,7 +89,7 @@ export default function usePremiumFeatureUpsellGetNitro(arg0, arg1, page, arg3) 
           })
           .catch(() => {
             const intl = closure_1_0(1114).intl;
-            page(4258).presentFailedToast(intl.string(closure_1_0(1114).t.R0RpRX));
+            page(4271).presentFailedToast(intl.string(closure_1_0(1114).t.R0RpRX));
           });
       }
     }

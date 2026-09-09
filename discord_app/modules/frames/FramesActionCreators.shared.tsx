@@ -123,6 +123,7 @@ let closure_11 = async function _launchFrame(arg0) {
             applicationId: closure_129_0,
             frameId: closure_129_5,
             error: closure_129_10,
+            analyticsContext: closure_129_4,
           };
           obj2.dispatch(obj8);
           throw closure_129_10;
@@ -153,11 +154,11 @@ let closure_11 = async function _launchFrame(arg0) {
         obj = { value: closure_129_5, done: true };
         return obj;
       }
-    } catch (tmp65) {
-      closure_3 = tmp65;
+    } catch (tmp66) {
+      closure_3 = tmp66;
       if (tmp4 === c4) {
         c6 = tmp2;
-        throw tmp65;
+        throw tmp66;
       } else {
         c5 = tmp;
       }
@@ -396,7 +397,7 @@ let closure_16 = async function _refreshProxyTicket() {
     }
   })();
 };
-const FramesConstants = fn(9516);
+const FramesConstants = fn(9543);
 ({
   FrameIntent: hasOwnProperty,
   FrameLayoutModes: metroRequire,
@@ -404,7 +405,7 @@ const FramesConstants = fn(9516);
   getFrameIntentForSurface: closure_8,
   makeFrameId: closure_9,
 } = FramesConstants);
-const ActivityPanelModes = fn(9510).ActivityPanelModes;
+const ActivityPanelModes = fn(9537).ActivityPanelModes;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/frames/FramesActionCreators.shared.tsx");
 

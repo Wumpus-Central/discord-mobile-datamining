@@ -1,7 +1,7 @@
 // discord_app/design/components/Icon/native/redesign/generated/ChannelsFollowedIcon.tsx
 import nativeDefault from "../../../../../../../discord_common/js/packages/tokens/native.tsx";
 import BaseIconImage from "../../BaseIconImage.tsx";
-import _mod16843 from "../../../../../../../_runtime/metro/16843__.js";
+import _mod16880 from "../../../../../../../_runtime/metro/16880__.js";
 import noop from "../../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -16,5 +16,5 @@ export const ChannelsFollowedIcon = function ChannelsFollowedIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod16843, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod16880, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 };

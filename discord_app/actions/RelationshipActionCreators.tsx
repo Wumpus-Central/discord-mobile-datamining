@@ -87,7 +87,7 @@ function handleRelationshipAddError(error, SHOW_ALWAYS, userTag) {
 }
 const Constants = fn(1074);
 ({ Endpoints: metroRequire, AbortCodes: closure_7, RelationshipTypes: closure_8 } = Constants);
-const ClearFriendRequestFilters = fn(9048).ClearFriendRequestFilters;
+const ClearFriendRequestFilters = fn(9075).ClearFriendRequestFilters;
 let obj = { SHOW_ALWAYS: 0, [0]: "SHOW_ALWAYS", SHOW_ONLY_IF_ACTION_NEEDED: 1, [1]: "SHOW_ONLY_IF_ACTION_NEEDED" };
 obj = {
   sendRequest(discordTag) {
@@ -205,7 +205,7 @@ obj = {
         }
       })
       .catch(() => {
-        const AccessibilityAnnouncer = closure_0(4411).AccessibilityAnnouncer;
+        const AccessibilityAnnouncer = closure_0(4425).AccessibilityAnnouncer;
         const intl = closure_0(1114).intl;
         AccessibilityAnnouncer.announce(intl.string(closure_0(1114).t.n6Jo3E));
       });
@@ -298,8 +298,8 @@ obj = {
         DispatcherDefault.dispatch(obj);
       })
       .catch(() => {
-        channelId(8404).showFailedToast();
-        const AccessibilityAnnouncer = userId(4411).AccessibilityAnnouncer;
+        channelId(8432).showFailedToast();
+        const AccessibilityAnnouncer = userId(4425).AccessibilityAnnouncer;
         const intl = userId(1114).intl;
         AccessibilityAnnouncer.announce(intl.string(userId(1114).t.n6Jo3E));
       });
@@ -321,8 +321,8 @@ obj = {
         AccessibilityAnnouncer.announce(intl.string(util.t.QlH5w6));
       })
       .catch(() => {
-        id2(8404).showFailedToast();
-        const AccessibilityAnnouncer = id(4411).AccessibilityAnnouncer;
+        id2(8432).showFailedToast();
+        const AccessibilityAnnouncer = id(4425).AccessibilityAnnouncer;
         const intl = id(1114).intl;
         AccessibilityAnnouncer.announce(intl.string(id(1114).t.n6Jo3E));
       });

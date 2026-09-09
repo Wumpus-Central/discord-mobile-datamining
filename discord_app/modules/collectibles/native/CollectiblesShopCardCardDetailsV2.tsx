@@ -1,16 +1,14 @@
 // discord_app/modules/collectibles/native/CollectiblesShopCardCardDetailsV2.tsx
 import initialize from "../../../../discord_common/js/packages/flux/index.tsx";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import CollectiblesItemType from "../../../../discord_common/js/shared/shared-constants/CollectiblesItemType.tsx";
 import PremiumUtilsDefault from "../../../utils/PremiumUtils.tsx";
 import useToken from "../../../design/tokens/native/useToken.tsx";
 import ColorUtils from "../../../utils/ColorUtils.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
-import LinearGradientDefault from "../../../../_runtime/04987_LinearGradient.js";
+import LinearGradientDefault from "../../../../_runtime/05001_LinearGradient.js";
 import CollectiblesProductUtils from "../utils/CollectiblesProductUtils.tsx";
 import CollectiblesUtils from "../CollectiblesUtils.tsx";
 import useCurrentUser from "../hooks/useCurrentUser.tsx";
-import useCanPurchaseFrames from "../hooks/useCanPurchaseFrames.tsx";
 import getProductName from "../utils/getProductName.tsx";
 import CollectiblesShopCardVariantsDefault from "CollectiblesShopCardVariants.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
@@ -22,7 +20,7 @@ const Constants = fn(1074);
 ({ CurrencyCodes: metroRequire, VerticalGradient: closure_7 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(4560);
+const createStyles = fn(4574);
 let obj = {
   regularMetadataContainer: null,
   assetName: null,
@@ -306,27 +304,17 @@ export default noop.memo(function CardDetailsV2(arg0) {
   const tmp = closure_10();
   let obj = useCurrentUser;
   const currentUser = obj.useCurrentUser();
-  let obj1 = useCanPurchaseFrames;
-  let isProfileFramesEarlyAccessPhase = obj1.useIsProfileFramesEarlyAccessPhase("CollectiblesShopCardCardDetailsV2");
-  if (isProfileFramesEarlyAccessPhase) {
-    let tmp2Result = CollectiblesProductUtils;
-    const productType = tmp2Result.getProductType(product);
-    isProfileFramesEarlyAccessPhase = productType === CollectiblesItemType.CollectiblesItemType.PROFILE_FRAME;
-  }
-  let obj3 = PremiumUtilsDefault;
-  tmp2Result = CollectiblesUtils;
-  const shopDiscountSource = tmp2Result.getShopDiscountSource(currentUser);
-  const tmp8 = obj3.canUseShopDiscounts(currentUser) || isProfileFramesEarlyAccessPhase;
-  const token = useToken.useToken(nativeDefault.colors.BACKGROUND_BASE_LOW);
-  const tmp2Result1 = useToken;
-  const tmp2Result2 = ColorUtils;
-  const tmp2Result3 = ColorUtils;
-  const hexToRgbaStringResult = tmp2Result2.hexToRgbaString(ColorUtils.hexWithOpacity(token, 0.9));
-  const tmp2Result4 = ColorUtils;
-  const tmp2Result5 = ColorUtils;
-  const hexToRgbaStringResult1 = tmp2Result4.hexToRgbaString(ColorUtils.hexWithOpacity(token, 0));
+  let obj1 = PremiumUtilsDefault;
+  let obj2 = CollectiblesUtils;
+  const shopDiscountSource = obj2.getShopDiscountSource(currentUser);
+  let obj3 = useToken;
+  const token = obj3.useToken(nativeDefault.colors.BACKGROUND_BASE_LOW);
+  const canUseShopDiscountsResult = obj1.canUseShopDiscounts(currentUser);
+  const obj5 = ColorUtils;
+  const hexToRgbaStringResult = obj5.hexToRgbaString(ColorUtils.hexWithOpacity(token, 0.9));
+  const obj7 = ColorUtils;
+  const hexToRgbaStringResult1 = obj7.hexToRgbaString(ColorUtils.hexWithOpacity(token, 0));
   const cardProductName = getProductName.getCardProductName(product);
-  const tmp2Result6 = getProductName;
   const items = [IAPStore];
   const stateFromStores = initialize.useStateFromStores(items, () => fetchingGoogleSkus.isFetchingGoogleSkus());
   obj = {
@@ -341,7 +329,6 @@ export default noop.memo(function CardDetailsV2(arg0) {
   obj.style = items1;
   const items2 = [hexToRgbaStringResult1, hexToRgbaStringResult, token];
   obj.colors = items2;
-  const tmp2Result7 = initialize;
   obj = {
     style: tmp.assetName,
     variant: "heading-sm/bold",
@@ -351,12 +338,12 @@ export default noop.memo(function CardDetailsV2(arg0) {
     children: cardProductName,
   };
   const items3 = [React6(Text_Text.Text, obj)];
-  let tmp15Result = !hidePrice;
+  let tmp12Result = !hidePrice;
   if (!hidePrice) {
     obj1 = { style: tmp.priceVariantsContainer, children: null };
-    const obj2 = {
+    obj2 = {
       product,
-      hasShopDiscount: tmp8,
+      hasShopDiscount: canUseShopDiscountsResult,
       discountSource: shopDiscountSource,
       styles: tmp,
       collectibleProductState,
@@ -368,9 +355,9 @@ export default noop.memo(function CardDetailsV2(arg0) {
     obj3 = { product };
     items4[1] = React6(CollectiblesShopCardVariantsDefault, obj3);
     obj1.children = items4;
-    tmp15Result = React7(View, obj1);
+    tmp12Result = React7(View, obj1);
   }
-  items3[1] = tmp15Result;
+  items3[1] = tmp12Result;
   obj.children = items3;
   return React7(LinearGradientDefault, obj);
 });

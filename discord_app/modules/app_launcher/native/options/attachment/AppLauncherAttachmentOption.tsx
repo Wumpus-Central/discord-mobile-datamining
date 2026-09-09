@@ -30,9 +30,9 @@ function AttachmentPreviewAppLauncher(arg0) {
   });
 }
 const View = fn(17).View;
-const DraftType = fn(4901).DraftType;
+const DraftType = fn(4915).DraftType;
 const jsx = fn(21).jsx;
-fn(4560);
+fn(4574);
 const createStyles = { imageIconWrapper: null, selectedImage: null };
 let size = {
   justifyContent: "center",

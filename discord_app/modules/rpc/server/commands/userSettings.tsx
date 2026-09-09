@@ -3,7 +3,7 @@ import LocaleStore from "../../../user_settings/LocaleStore.tsx";
 
 let obj = {};
 obj = {
-  scope: fn(8339).OAuth2Scopes.IDENTIFY,
+  scope: fn(8367).OAuth2Scopes.IDENTIFY,
   handler() {
     return { locale: LocaleStore.locale };
   },

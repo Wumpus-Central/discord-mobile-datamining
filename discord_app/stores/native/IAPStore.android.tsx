@@ -99,6 +99,9 @@ prototype["getProduct"] = function getProduct(arg0) {
 prototype["isBusy"] = function isBusy() {
   return set1.size > 0 || isDowngrading;
 };
+prototype["isInCheckout"] = function isInCheckout() {
+  return false;
+};
 prototype["isPurchasingProduct"] = function isPurchasingProduct(GENERIC_CONSUMABLE) {
   return set1.has(GENERIC_CONSUMABLE);
 };

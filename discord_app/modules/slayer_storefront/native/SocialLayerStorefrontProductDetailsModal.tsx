@@ -259,7 +259,7 @@ function SocialLayerStorefrontProductDetailsModal(skuId) {
   const tmp = closure_19();
   dependencyMap = tmp;
   const rect = analyticsLocations(1611)();
-  let obj = analyticsLocations(9371);
+  let obj = analyticsLocations(9398);
   const storeFront = obj.useNativeIAPPayments().storeFront;
   let obj1 = skuId(504);
   let items = [trackPDPClick];
@@ -270,14 +270,14 @@ function SocialLayerStorefrontProductDetailsModal(skuId) {
     items1,
     () => SKUStore.isFetching(skuId) || SKUStore.didFetchingSkuFail(skuId),
   );
-  let obj3 = skuId(7168);
+  let obj3 = skuId(7182);
   let applicationId;
   if (stateFromStores != null) {
     applicationId = stateFromStores.applicationId;
   }
   const getOrFetchApplication = obj3.useGetOrFetchApplication(applicationId);
   let tmp10 = getOrFetchApplication;
-  let tmp2Result = tmp2(7165);
+  let tmp2Result = tmp2(7179);
   if (getOrFetchApplication == null) {
     tmp10 = null;
   }
@@ -298,7 +298,7 @@ function SocialLayerStorefrontProductDetailsModal(skuId) {
     const items1 = [...items, AnalyticsLocationDefault.SLAYER_STOREFRONT_NATIVE_PDP];
     return items1;
   }, items4);
-  analyticsLocations(4992)(() => {
+  analyticsLocations(5006)(() => {
     const obj = {
       location_stack: memo1,
       type: SocialLayerStorefrontNativeActionCreators.SOCIAL_LAYER_STOREFRONT_PRODUCT_DETAILS_MODAL_KEY,
@@ -325,10 +325,8 @@ function SocialLayerStorefrontProductDetailsModal(skuId) {
       sku_id: skuId,
       guild_id: true,
       application_id: true,
-      cta_type:
-        "function changeEventCalculator_Pnpm_pinchGestureTs1(current,previous){let changePayload;if(previous===undefined){changePayload={scaleChange:current.scale};}else{changePayload={scaleChange:current.scale/previous.scale};}return{...current,...changePayload};}",
-      location_stack:
-        "function changeEventCalculator_Pnpm_rotationGestureTs1(current,previous){let changePayload;if(previous===undefined){changePayload={rotationChange:current.rotation};}else{changePayload={rotationChange:current.rotation-previous.rotation};}return{...current,...changePayload};}",
+      cta_type: "SOURCE",
+      location_stack: null,
     };
     let applicationId;
     if (stateFromStores != null) {
@@ -502,7 +500,7 @@ function SocialLayerStorefrontProductDetailsModal(skuId) {
       const tmp4Result = redirectToSlayerStorefrontWebDefault(obj);
     }
   }, items9);
-  const OTPACOMOrderExperiment = tmp4(9370).OTPACOMOrderExperiment;
+  const OTPACOMOrderExperiment = tmp4(9397).OTPACOMOrderExperiment;
   let enabled = OTPACOMOrderExperiment.useConfig({ location: "SocialLayerStorefrontProductDetailsModal" }).enabled;
   tmp4Result = tmp4(1115);
   if (tmp4Result.isIOS()) {
@@ -525,14 +523,14 @@ function SocialLayerStorefrontProductDetailsModal(skuId) {
       checkoutAnalyticsFields: null,
       children: null,
     };
-    tmp2Result = tmp2(10809);
+    tmp2Result = tmp2(10836);
     if (enabled) {
       enabled = GOOGLE === tmp39.APPLE_ADVANCED_COMMERCE;
     }
     obj.orderRequired = enabled;
     const items10 = [skuId];
     obj.skuIds = items10;
-    obj.onOrderRetryCancellation = tmp4(10802).closeSocialLayerStorefrontProductDetailsModal;
+    obj.onOrderRetryCancellation = tmp4(10829).closeSocialLayerStorefrontProductDetailsModal;
     obj = {
       is_gift: false,
       location_stack: memo1,
@@ -566,20 +564,20 @@ function SocialLayerStorefrontProductDetailsModal(skuId) {
       onPurchaseComplete: callback2,
       onPurchaseError: callback1,
     };
-    obj.children = closure_14(tmp4(10818).HeadlessSlayerStorefrontPurchaseRunner, obj1);
+    obj.children = closure_14(tmp4(10845).HeadlessSlayerStorefrontPurchaseRunner, obj1);
     tmp41Result = closure_14(tmp2Result, obj, skuId);
   }
   const items11 = [skuId, memo1, trackPDPClick];
   if (null == stateFromStores) {
     return null;
   } else {
-    let result = tmp4(7231).isSlayerSkuAvailableOnThisPlatform(stateFromStores);
+    let result = tmp4(7245).isSlayerSkuAvailableOnThisPlatform(stateFromStores);
     const intl4 = tmp4(1114).intl;
     const stringResult = intl4.string(tmp4(1114).t.boqtTA);
-    const tmp4Result1 = tmp4(7231);
-    let result1 = tmp4(4231).isSocialLayerStorefrontGiftingSupported();
+    const tmp4Result1 = tmp4(7245);
+    let result1 = tmp4(4244).isSocialLayerStorefrontGiftingSupported();
     const items12 = [tmp.container];
-    const tmp4Result2 = tmp4(4231);
+    const tmp4Result2 = tmp4(4244);
     let num3 = 0;
     if (!tmp4Result3.isIOS()) {
       num3 = rect.top;
@@ -591,7 +589,7 @@ function SocialLayerStorefrontProductDetailsModal(skuId) {
     const items13 = [tmp41Result, , ,];
     const obj4 = { style: tmp.header, children: null };
     obj5 = {
-      onPress: tmp4(10802).closeSocialLayerStorefrontProductDetailsModal,
+      onPress: tmp4(10829).closeSocialLayerStorefrontProductDetailsModal,
       backImage() {
         return closure_2_14(XSmallIcon.XSmallIcon, { size: "md", style: closeButtonIcon.closeButtonIcon });
       },
@@ -600,7 +598,7 @@ function SocialLayerStorefrontProductDetailsModal(skuId) {
     };
     const intl = tmp4(1114).intl;
     obj5.accessibilityLabel = intl.string(tmp4(1114).t.cpT0Cq);
-    const items14 = [closure_14(tmp4(5631).HeaderBackButton, obj5)];
+    const items14 = [closure_14(tmp4(5645).HeaderBackButton, obj5)];
     const obj6 = {
       variant: "heading-lg/bold",
       color: "mobile-text-heading-primary",
@@ -612,7 +610,7 @@ function SocialLayerStorefrontProductDetailsModal(skuId) {
       name = getOrFetchApplication.name;
     }
     obj6.children = name;
-    items14[1] = closure_14(tmp4(4556).Heading, obj6);
+    items14[1] = closure_14(tmp4(4570).Heading, obj6);
     obj4.children = items14;
     items13[1] = closure_15(memo1, obj4);
     const obj7 = { style: tmp.scrollContainer, children: null };
@@ -621,7 +619,7 @@ function SocialLayerStorefrontProductDetailsModal(skuId) {
       const obj8 = { style: stateFromStores2.absoluteFill, colors: null, pointerEvents: "none" };
       const items15 = [closure_17, closure_18];
       obj8.colors = items15;
-      exclusive = closure_14(tmp2(4987), obj8);
+      exclusive = closure_14(tmp2(5001), obj8);
     }
     const items16 = [exclusive];
     const obj9 = { contentContainerStyle: tmp.scrollContent, children: null };
@@ -632,13 +630,13 @@ function SocialLayerStorefrontProductDetailsModal(skuId) {
       tmp47Result = null != memo;
       if (tmp47Result) {
         const obj11 = { sku: stateFromStores };
-        tmp47Result = closure_14(tmp2(8830), obj11);
+        tmp47Result = closure_14(tmp2(8859), obj11);
       }
     }
     const items17 = [tmp47Result, ,];
     let exclusive2 = stateFromStores.exclusive;
     if (exclusive2) {
-      const obj12 = { style: tmp.exclusiveBadgeContainer, children: closure_14(tmp4(10822).ExclusiveBadge, {}) };
+      const obj12 = { style: tmp.exclusiveBadgeContainer, children: closure_14(tmp4(10849).ExclusiveBadge, {}) };
       exclusive2 = closure_14(tmp70, obj12);
     }
     items17[1] = exclusive2;
@@ -676,8 +674,8 @@ function SocialLayerStorefrontProductDetailsModal(skuId) {
     if (!result) {
       const obj21 = { variant: "text-xs/normal", color: "text-muted", style: tmp.availabilityCopy, children: null };
       const intl2 = tmp4(1114).intl;
-      obj21.children = intl2.string(tmp2(3417).gndWN7);
-      tmp47Result2 = closure_14(tmp4(4556).Text, obj21);
+      obj21.children = intl2.string(tmp2(3430).gndWN7);
+      tmp47Result2 = closure_14(tmp4(4570).Text, obj21);
     }
     items20[1] = tmp47Result2;
     const obj22 = { style: tmp.footerButtonRow, children: null };
@@ -689,11 +687,11 @@ function SocialLayerStorefrontProductDetailsModal(skuId) {
     }
     obj24.disabled = tmp64;
     obj24.onPress = callback3;
-    obj23.children = closure_14(tmp4(4975).Button, obj24);
+    obj23.children = closure_14(tmp4(4989).Button, obj24);
     const items21 = [closure_14(memo1, obj23)];
     if (result1) {
       const obj25 = {
-        icon: tmp2(8083),
+        icon: tmp2(8098),
         variant: "primary",
         size: "lg",
         disabled: tmp26,
@@ -703,7 +701,7 @@ function SocialLayerStorefrontProductDetailsModal(skuId) {
       const intl3 = tmp4(1114).intl;
       obj25.accessibilityLabel = intl3.string(tmp4(1114).t.QAZA5f);
       obj25.onPress = tmp46;
-      result1 = closure_14(tmp4(8097).IconButton, obj25);
+      result1 = closure_14(tmp4(8113).IconButton, obj25);
     }
     items21[1] = result1;
     obj22.children = items21;
@@ -711,7 +709,7 @@ function SocialLayerStorefrontProductDetailsModal(skuId) {
     if (result) {
       const obj26 = { style: tmp.legalCopy, children: null };
       const obj27 = { shouldAppendDisclaimer: false === tmp2Result(tmp10).hasAlreadyLinked };
-      const mobileFinePrintMessageForApplication = tmp4(10825).getMobileFinePrintMessageForApplication(
+      const mobileFinePrintMessageForApplication = tmp4(10852).getMobileFinePrintMessageForApplication(
         getOrFetchApplication,
         stringResult,
         obj27,
@@ -724,7 +722,7 @@ function SocialLayerStorefrontProductDetailsModal(skuId) {
         ),
       );
       result = closure_14(tmp70, obj26);
-      const tmp4Result4 = tmp4(10825);
+      const tmp4Result4 = tmp4(10852);
     }
     items20[3] = result;
     obj18.children = items20;
@@ -736,7 +734,7 @@ function SocialLayerStorefrontProductDetailsModal(skuId) {
 }
 get_ActivityIndicator = fn(17);
 ({ ScrollView: hasOwnProperty, StyleSheet: metroRequire, View: closure_7 } = get_ActivityIndicator);
-const SlayerShopPDPCTAType = fn(10805).SlayerShopPDPCTAType;
+const SlayerShopPDPCTAType = fn(10832).SlayerShopPDPCTAType;
 const Constants = fn(1074);
 ({ AnalyticEvents: closure_11, PaymentGateways: closure_12, PriceSetAssignmentPurchaseTypes: map1 } = Constants);
 const jsxProd = fn(21);
@@ -746,7 +744,7 @@ let closure_17 = n(nativeDefault.unsafe_rawColors.BRAND_500).alpha(0.25).hex();
 const alphaResult = n(nativeDefault.unsafe_rawColors.BRAND_500).alpha(0.25);
 const importDefaultResult1Result = n(nativeDefault.unsafe_rawColors.BRAND_500);
 let closure_18 = n(nativeDefault.unsafe_rawColors.BRAND_500).alpha(0).hex();
-fn(4560);
+fn(4574);
 let obj = {
   container: { flex: 1 },
   header: null,
@@ -775,7 +773,7 @@ let obj = {
   exclusiveBadgeContainer: null,
 };
 obj = {
-  height: fn(5682).NAV_BAR_HEIGHT,
+  height: fn(5696).NAV_BAR_HEIGHT,
   flexDirection: "row",
   alignItems: "center",
   paddingHorizontal: nativeDefault.space.PX_8,
@@ -836,14 +834,14 @@ obj.legalCopy = { display: "flex", flexDirection: "column", gap: nativeDefault.s
 let obj12 = { display: "flex", flexDirection: "column", gap: nativeDefault.space.PX_4 };
 obj.hero = {
   marginHorizontal: nativeDefault.space.PX_16,
-  height: fn(10806).MOBILE_HERO_HEIGHT_PX,
+  height: fn(10833).MOBILE_HERO_HEIGHT_PX,
   borderRadius: nativeDefault.radii.md,
   overflow: "hidden",
   backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH,
 };
 let obj13 = {
   marginHorizontal: nativeDefault.space.PX_16,
-  height: fn(10806).MOBILE_HERO_HEIGHT_PX,
+  height: fn(10833).MOBILE_HERO_HEIGHT_PX,
   borderRadius: nativeDefault.radii.md,
   overflow: "hidden",
   backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH,

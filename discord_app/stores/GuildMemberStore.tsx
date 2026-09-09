@@ -90,7 +90,7 @@ function computeDerivedMemberState(unsafeMutableRoles, roles) {
       colorString: null,
       colorStrings: null,
       colorRoleId: "call",
-      hoistRoleId: "body",
+      hoistRoleId: "memo",
       iconRoleId: "fileFinishedImporting",
       highestRoleId: "accessible",
     };

@@ -54,7 +54,7 @@ const Constants = fn(1074);
 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
-fn(4560);
+fn(4574);
 let createStyles = {
   container: { marginHorizontal: 8, marginVertical: 4, borderRadius: 3 },
   rowContainer: { flex: 1, flexDirection: "row", alignItems: "center" },
@@ -649,7 +649,7 @@ prototype["render"] = function render() {
   obj1.border = str3;
   obj1.onPress = onHeaderClick;
   const obj2 = { style: tmp.rowContainer, children: null };
-  const items2 = [closure_14(user(17550), { action: log.action }), , ,];
+  const items2 = [closure_14(user(17581), { action: log.action }), , ,];
   const obj4 = {
     accessibilityRole: "button",
     accessibilityLabel: null,
@@ -678,15 +678,15 @@ prototype["render"] = function render() {
       if (log.action !== constants2.AUTO_MODERATION_USER_COMMUNICATION_DISABLED) {
         if (log.action !== constants2.AUTO_MODERATION_QUARANTINE_USER) {
           if (null != log.options.integration_type) {
-            value = tmp18(5283).get(log.options.integration_type);
+            value = tmp18(5297).get(log.options.integration_type);
             if (null != value) {
-              tmp9(4411);
+              tmp9(4425);
               const icon = value.icon;
               const tmp9Result = tmp9(1396);
               let source = tmp9Result.makeSource(tmp9Result.isThemeDark(theme) ? icon.darkPNG : icon.lightPNG);
               const tmp25 = tmp9Result.isThemeDark(theme) ? icon.darkPNG : icon.lightPNG;
             }
-            const tmp18Result = tmp18(5283);
+            const tmp18Result = tmp18(5297);
           }
           if (null != guildId) {
             const user2 = log.user;
@@ -700,7 +700,7 @@ prototype["render"] = function render() {
         obj5.source = source;
         obj5.size = tmp10(1178).AvatarSizes.SMALL;
         obj4.children = closure_14(tmp20, obj5);
-        items2[1] = closure_14(tmp10(5123).PressableOpacity, obj4);
+        items2[1] = closure_14(tmp10(5137).PressableOpacity, obj4);
         obj6 = {
           accessibilityRole: "button",
           accessibilityState: null,
@@ -716,14 +716,14 @@ prototype["render"] = function render() {
         obj6.disabled = !checkChangesToRenderResult;
         const items3 = [self.renderTitle(), tmp8];
         obj6.children = items3;
-        items2[2] = closure_15(tmp10(5123).PressableOpacity, obj6);
+        items2[2] = closure_15(tmp10(5137).PressableOpacity, obj6);
         let tmp17Result = null;
         if (checkChangesToRenderResult) {
           const obj8 = { style: null, size: null, source: null };
           const items4 = [tmp.arrow, rotate90];
           obj8.style = items4;
           obj8.size = tmp10(1178).Icon.Sizes.CUSTOM;
-          obj8.source = tmp18(14605);
+          obj8.source = tmp18(14630);
           tmp17Result = closure_14(tmp10(1178).Icon, obj8);
         }
         items2[3] = tmp17Result;
@@ -735,7 +735,7 @@ prototype["render"] = function render() {
         }
         items5[1] = renderChangeSummaryResult;
         obj1.children = items5;
-        return closure_15(tmp10(5607).Card, obj1);
+        return closure_15(tmp10(5621).Card, obj1);
       }
     }
   }
@@ -745,7 +745,7 @@ prototype["render"] = function render() {
   source = tmp9Result1.ensureAvatarSource(tmp9Result2.makeSource(tmp9(1399).getAutomodAvatarURL()));
   const tmp9Result3 = tmp9(1399);
 };
-AuditLog.contextType = fn(4271).ThemeContext;
+AuditLog.contextType = fn(4284).ThemeContext;
 let items3 = [ThemeStore];
 let obj4 = { color: nativeDefault.unsafe_rawColors.PRIMARY_400, alignItems: "baseline", fontSize: 14 };
 size = fn(2);

@@ -12,7 +12,7 @@ import UserSettingsAccountActionCreatorsAll from "../../../../actions/UserSettin
 import UserSettingsModalActionCreatorsDefault from "../../../../actions/UserSettingsModalActionCreators.tsx";
 import showInvalidUsernameToastNative from "showInvalidUsernameToastNative.tsx";
 import UserSettingsAccountUnverifiedHeader from "UserSettingsAccountUnverifiedHeader.tsx";
-import _modDef14781 from "../../../../../_runtime/metro/14781__.js";
+import _modDef14807 from "../../../../../_runtime/metro/14807__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import LoginRequiredActionStore from "../../../auth/LoginRequiredActionStore.tsx";
 import UserSettingsAccountStore from "../../../../stores/UserSettingsAccountStore.tsx";
@@ -27,8 +27,8 @@ const Constants = fn(1074);
 ({ AnalyticEvents: c10, LoginRequiredActions: closure_11 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
-const state = { newPassword: "call", password: 17088321 };
-fn(4560);
+const state = { newPassword: "call", password: 17076033 };
+fn(4574);
 let createStyles = {
   onePass: { width: 20, height: 20 },
   unverifiedWrapper: null,
@@ -164,7 +164,7 @@ prototype["render"] = function render() {
   let tmp4Result = showForcedPasswordUpdate;
   if (showForcedPasswordUpdate) {
     obj = { style: tmp.header, children: null };
-    const obj1 = { source: _modDef14781, style: tmp.image };
+    const obj1 = { source: _modDef14807, style: tmp.image };
     const items1 = [closure_1_12(React4, obj1), ,];
     const obj2 = {
       style: tmp.requiredActionsTitle,
@@ -266,12 +266,12 @@ prototype["render"] = function render() {
   obj10.children = map1(hasOwnProperty, obj);
   return closure_1_12(timestampProducer, obj10);
 };
-EditPassword.contextType = fn(4271).ThemeContext;
+EditPassword.contextType = fn(4284).ThemeContext;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_settings/account/native/UserSettingsAccountEditPassword.tsx");
 
 export default function EditPasswordWrapper() {
-  let obj = flag(6994);
+  let obj = flag(7008);
   const params = obj.useSettingNavigationRoute().params;
   flag = undefined;
   if (params != null) {

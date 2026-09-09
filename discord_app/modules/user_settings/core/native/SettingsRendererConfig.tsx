@@ -129,6 +129,7 @@ import EmbedAndLinkPreviewsSettingDefault from "../../defs/native/EmbedAndLinkPr
 import EmojiReactionsOnMessagesSettingDefault from "../../defs/native/EmojiReactionsOnMessagesSetting.tsx";
 import ChatEmojiEmoticonsSettingDefault from "../../defs/native/ChatEmojiEmoticonsSetting.tsx";
 import StickerAutocompleteSettingDefault from "../../defs/native/StickerAutocompleteSetting.tsx";
+import ShowSpoilersSettingDefault from "../../defs/native/ShowSpoilersSetting.tsx";
 import TextAndMediaSyncSettingDefault from "../../defs/native/TextAndMediaSyncSetting.tsx";
 import TimestampHourCycleSettingDefault from "../../defs/native/TimestampHourCycleSetting.tsx";
 import SwipeRightToLeftSettingDefault from "../../defs/native/SwipeRightToLeftSetting.tsx";
@@ -390,6 +391,7 @@ const UseDataForQuests3PSettingDefault = UseDataForQuests3PSetting;
   EMOJI_REACTIONS_ON_MESSAGES,
   CHAT_EMOJI_EMOTICONS,
   STICKER_AUTOCOMPLETE,
+  SHOW_SPOILERS,
   TEXT_AND_MEDIA_SYNC,
   TIMESTAMP_HOUR_CYCLE,
   SWIPE_RIGHT_TO_LEFT,
@@ -650,6 +652,7 @@ const frozen = Object.freeze({
   [EMOJI_REACTIONS_ON_MESSAGES]: EmojiReactionsOnMessagesSettingDefault,
   [CHAT_EMOJI_EMOTICONS]: ChatEmojiEmoticonsSettingDefault,
   [STICKER_AUTOCOMPLETE]: StickerAutocompleteSettingDefault,
+  [SHOW_SPOILERS]: ShowSpoilersSettingDefault,
   [TEXT_AND_MEDIA_SYNC]: TextAndMediaSyncSettingDefault,
   [TIMESTAMP_HOUR_CYCLE]: TimestampHourCycleSettingDefault,
   [SWIPE_RIGHT_TO_LEFT]: SwipeRightToLeftSettingDefault,

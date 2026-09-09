@@ -8,6 +8,6 @@ const result = size.fileFinishedImporting("modules/blocked_domains/BlockedDomain
 export default {
   show(url) {
     const obj = { url };
-    obj.openLazy(asyncRequireImpl(12953, dependencyMap.paths), "blocked-domain", obj);
+    obj.openLazy(asyncRequireImpl(12979, dependencyMap.paths), "blocked-domain", obj);
   },
 };

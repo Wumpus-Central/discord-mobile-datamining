@@ -7,10 +7,10 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-const GuildTagBadgeSize = fn(7944).GuildTagBadgeSize;
+const GuildTagBadgeSize = fn(7958).GuildTagBadgeSize;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4560);
+const createStyles = fn(4574);
 let obj = {
   titleContainer: { paddingHorizontal: 16, flexDirection: "row", alignItems: "center", justifyContent: "center" },
   guildIcon: { marginLeft: 4 },
@@ -137,9 +137,9 @@ export default function UserPrimaryGuildListBottomSheet(availableGuilds) {
   };
   const intl = availableGuilds(1114).intl;
   obj.children = intl.string(availableGuilds(1114).t.Fo0g9x);
-  obj.children = closure_6(availableGuilds(4556).Text, obj);
+  obj.children = closure_6(availableGuilds(4570).Text, obj);
   obj.header = closure_6(memo, obj);
-  obj.children = closure_6(availableGuilds(8879).BottomSheetFlashList, {
+  obj.children = closure_6(availableGuilds(8906).BottomSheetFlashList, {
     ItemSeparatorComponent() {
       return timestampProducer(Form.FormDivider, { iconPush: true, style: divider.divider });
     },
@@ -171,5 +171,5 @@ export default function UserPrimaryGuildListBottomSheet(availableGuilds) {
       return timestampProducer(closure_9, obj);
     },
   });
-  return closure_6(availableGuilds(7150).BottomSheet, obj);
+  return closure_6(availableGuilds(7164).BottomSheet, obj);
 }

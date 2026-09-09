@@ -9,7 +9,7 @@ get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, ScrollView: metroRequire } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsxs: closure_7, jsx: closure_8 } = jsxProd);
-fn(4560);
+fn(4574);
 let createStyles = { container: { margin: 16, flex: 1, alignItems: "center" }, item: null };
 createStyles = {
   backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST,
@@ -90,7 +90,7 @@ export default function UserSettingsDesignSystemTabs() {
   let tmp20Result = first2;
   if (first2) {
     obj = { state: segmentedControlState, colors: items1 };
-    tmp20Result = closure_8(first(12763), obj);
+    tmp20Result = closure_8(first(12789), obj);
   }
   obj1 = { children: null };
   obj2 = { spacing: 24, children: null };

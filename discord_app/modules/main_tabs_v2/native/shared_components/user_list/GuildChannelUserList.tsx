@@ -20,7 +20,7 @@ const sortByMatchScoreDefault = sortByMatchScore;
 
 require = fn;
 const View = fn(17).View;
-let ChannelMemberStore = fn(7279);
+let ChannelMemberStore = fn(7293);
 ({ EVERYONE_CHANNEL_ID: closure_7, MemberListRowTypes: closure_8 } = ChannelMemberStore);
 const Constants = fn(1074);
 ({ RelationshipTypes: closure_15, StatusTypes: closure_16 } = Constants);

@@ -14,13 +14,13 @@ function onImageDescriptionSettingValueChange(viewImageDescriptions) {
   };
   obj.setImageDescriptions(obj);
 }
-fn(11473);
+fn(11500);
 let SettingBuilders = {
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t["w8j+yW"]);
   },
-  parent: fn(7975).MobileUserSettings.CHAT,
+  parent: fn(7989).MobileUserSettings.CHAT,
   useValue: function useImageDescriptionSettingValue() {
     const ViewImageDescriptions = UserSettings.ViewImageDescriptions;
     return ViewImageDescriptions.useSetting();

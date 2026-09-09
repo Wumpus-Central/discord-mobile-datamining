@@ -7,11 +7,11 @@ import DevSettingsStore from "../../devtools/dev_settings/DevSettingsStore.tsx";
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: c3, ScrollView: closure_4, TouchableOpacity: hasOwnProperty } = get_ActivityIndicator);
-const CollectiblesDebugStore = fn(7557);
+const CollectiblesDebugStore = fn(7571);
 ({ useCollectiblesDebugStore: closure_7, addDebugLog: closure_8 } = CollectiblesDebugStore);
 const jsxProd = fn(21);
 ({ jsxs: closure_9, jsx: c10 } = jsxProd);
-fn(4560);
+fn(4574);
 let createStyles = {
   debugLogContainer: {
     backgroundColor: "rgba(0, 0, 0, 0.8)",
@@ -71,7 +71,7 @@ export default function DebugLogView() {
       obj1.style = obj2;
       const items2 = ["Debug Log (", arr.length, " entries)"];
       obj1.children = items2;
-      const items3 = [closure_9(tmp2(4556).Text, obj1)];
+      const items3 = [closure_9(tmp2(4570).Text, obj1)];
       const obj3 = {
         onPress() {
           closure_1();
@@ -80,7 +80,7 @@ export default function DebugLogView() {
         children: null,
       };
       const obj4 = { variant: "text-xs/bold", style: tmp.clearButtonText, children: "Clear" };
-      obj3.children = closure_10(tmp2(4556).Text, obj4);
+      obj3.children = closure_10(tmp2(4570).Text, obj4);
       items3[1] = closure_10(closure_5, obj3);
       obj.children = items3;
       const items4 = [closure_9(stateFromStores, obj)];

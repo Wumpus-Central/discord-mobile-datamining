@@ -32,7 +32,7 @@ function GuildDirectoryEditDescription(entry) {
             obj = { value, done: true };
             return obj;
           } else {
-            let obj2 = tmp4(12320);
+            let obj2 = tmp4(12346);
             dependencyMap = 1;
             c4 = 1;
             const obj1 = {
@@ -49,7 +49,7 @@ function GuildDirectoryEditDescription(entry) {
           obj2 = { value, done: true };
           return obj2;
         } else {
-          obj = closure_1(12318);
+          obj = closure_1(12344);
           obj.close();
           c4 = 3;
           return { value: "HermesInternal", done: null };
@@ -73,7 +73,7 @@ function GuildDirectoryEditDescription(entry) {
   };
   const intl = entry(1114).intl;
   obj1.children = intl.format(entry(1114).t.w9tsNk, { guildName: entry.name });
-  obj.children = closure_7(entry(4556).Text, obj1);
+  obj.children = closure_7(entry(4570).Text, obj1);
   const items = [closure_7(closure_5, obj)];
   const obj3 = {
     onSubmit(arg0, arg1) {
@@ -97,15 +97,15 @@ function GuildDirectoryEditDescription(entry) {
   items[1] = closure_7(GuildDirectoryEditDescriptionTemplateDefault, obj3);
   obj.children = items;
   obj.children = closure_8(closure_6, obj);
-  return closure_7(entry(7123).SafeAreaPaddingView, obj);
+  return closure_7(entry(7137).SafeAreaPaddingView, obj);
 }
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, ScrollView: metroRequire } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-fn(4560);
+fn(4574);
 let createStyles = { safeArea: null, container: null, title: null, header: null };
-createStyles = { marginTop: fn(5682).NAV_BAR_HEIGHT, flex: 1 };
+createStyles = { marginTop: fn(5696).NAV_BAR_HEIGHT, flex: 1 };
 createStyles.safeArea = createStyles;
 createStyles.container = { flex: 1 };
 createStyles.title = { marginBottom: 8, textAlign: "center" };

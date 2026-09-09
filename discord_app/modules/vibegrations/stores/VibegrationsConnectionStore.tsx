@@ -441,7 +441,7 @@ function handleEvent(projectId, pendingEvents, type) {
         const obj62 = attachment_id(573);
       } else {
         const intl2 = require("util").intl;
-        sendFailedStep(projectId, intl2.string(attachment_id(3547).Z8Eo8I), obj);
+        sendFailedStep(projectId, intl2.string(attachment_id(3560).Z8Eo8I), obj);
       }
     } else if ("announcement" === type.kind) {
       let str29 = type.message;
@@ -581,7 +581,7 @@ function handleEvent(projectId, pendingEvents, type) {
         obj44.dispatch(obj19);
       } else {
         const intl = require("util").intl;
-        sendFailedStep(projectId, intl.string(attachment_id(3547).IHCafX), obj);
+        sendFailedStep(projectId, intl.string(attachment_id(3560).IHCafX), obj);
       }
     } else if ("ideas" === type.kind) {
       let tmp100 = null != type.ideas;
@@ -847,10 +847,10 @@ function handleEvent(projectId, pendingEvents, type) {
       if ("capture_claim" !== type.type) {
         if ("preview_operation" === type.type) {
           if ("begin" === type.phase) {
-            obj17 = attachment_id(16591);
+            obj17 = attachment_id(16622);
             const result3 = obj17.beginPreviewOperation(projectId);
           } else {
-            obj16 = attachment_id(16591);
+            obj16 = attachment_id(16622);
             obj16.endPreviewOperation(projectId);
           }
         } else if ("model_settings" === type.type) {
@@ -979,9 +979,9 @@ function handleEvent(projectId, pendingEvents, type) {
                     value.add(combined);
                     ({ location: obj3.location, code: obj3.code } = tmp2);
                     ({ message: obj3.message, source: obj3.details } = historical);
-                    const result1 = pendingEvents(16593).trackVibegrationErrored(projectId, { location: null, code: null, message: null, details: null });
+                    const result1 = pendingEvents(16624).trackVibegrationErrored(projectId, { location: null, code: null, message: null, details: null });
                     obj = { location: null, code: null, message: null, details: null };
-                    const obj2 = pendingEvents(16593);
+                    const obj2 = pendingEvents(16624);
                   }
                 }
               }
@@ -1540,6 +1540,387 @@ let closure_43 = async function _restoreSourceHistoryEntry(arg0) {
     }
   }
 };
+let closure_44 = async function _fetchDatabaseRestorePoints(arg0) {
+  if (c4 === 2) {
+    c4 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp4 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      obj = { value, done: true };
+      return obj;
+    } else {
+      return { value: "HermesInternal", done: null };
+    }
+  } else {
+    try {
+      c4 = 2;
+      if (0 === c3) {
+        if (arg0 === 1) {
+          c4 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c4 = 3;
+          obj = { value, done: true };
+          return obj;
+        } else {
+          closure_2 = tmp2;
+          closure_130_0 = closure_1;
+          closure_130_1 = undefined;
+          let ticket;
+          let baseUrl;
+          closure_130_4 = undefined;
+          closure_130_5 = undefined;
+          closure_130_6 = undefined;
+          let obj5 = require("VibegrationsWorkerTickets");
+          c3 = 1;
+          c4 = 1;
+          const obj1 = { value: obj5.mintWorkerTicket(closure_0), done: false };
+          return obj1;
+        }
+      } else if (1 === tmp5) {
+        if (arg0 === 1) {
+          c4 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c4 = 3;
+          const obj2 = { value, done: true };
+          return obj2;
+        } else {
+          closure_130_1 = value;
+          ticket = closure_130_1.ticket;
+          baseUrl = closure_130_1.baseUrl;
+          const _URLSearchParams = URLSearchParams;
+          const obj3 = { ticket, environment: closure_130_0 };
+          const uRLSearchParams = new URLSearchParams(obj3);
+          closure_130_4 = uRLSearchParams;
+          const _fetch = fetch;
+          const _HermesInternal2 = HermesInternal;
+          c3 = 2;
+          c4 = 1;
+          obj4 = { value: fetch("" + baseUrl + "/agent/database/restore-points?" + closure_130_4), done: false };
+          return obj4;
+        }
+      } else if (2 === tmp5) {
+        if (arg0 === 1) {
+          c4 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c4 = 3;
+          obj5 = { value, done: true };
+          return obj5;
+        } else {
+          closure_130_5 = value;
+          if (closure_130_5.ok) {
+            c3 = 3;
+            c4 = 1;
+            const obj6 = { value: closure_130_5.json(), done: false };
+            return obj6;
+          } else {
+            const _Error = Error;
+            const _HermesInternal = HermesInternal;
+            const error = new Error("restore points failed (" + closure_130_5.status + ")");
+            throw error;
+          }
+        }
+      } else if (arg0 === 1) {
+        c4 = 3;
+        throw value;
+      } else if (arg0 === 2) {
+        c4 = 3;
+        obj = { value, done: true };
+        return obj;
+      } else {
+        closure_130_6 = value;
+        const _Array = Array;
+        if (Array.isArray(closure_130_6.restorePoints)) {
+          const restorePoints = closure_130_6.restorePoints;
+        } else {
+          const items = [];
+        }
+        c4 = 3;
+      }
+    } catch (tmp22) {
+      c4 = tmp;
+      throw tmp22;
+    }
+  }
+};
+let closure_45 = async function _fetchDatabaseRestoreWindow() {
+  closure_2 = tmp2;
+  closure_130_0 = closure_1;
+  await require("VibegrationsWorkerTickets").mintWorkerTicket(closure_0);
+  closure_130_1 = value;
+  const ticket = closure_130_1.ticket;
+  const baseUrl = closure_130_1.baseUrl;
+  const _URLSearchParams = URLSearchParams;
+  const uRLSearchParams = new URLSearchParams({ ticket, environment: closure_130_0 });
+  closure_130_4 = uRLSearchParams;
+  const _fetch = fetch;
+  const _HermesInternal2 = HermesInternal;
+  await fetch("" + baseUrl + "/agent/database/restore-window?" + closure_130_4);
+  closure_130_5 = value;
+  if (!closure_130_5.ok) {
+    const _Error = Error;
+    const _HermesInternal = HermesInternal;
+    const error = new Error("restore window failed (" + closure_130_5.status + ")");
+    throw error;
+  }
+  await closure_130_5.json();
+  return value;
+};
+let closure_46 = async function _createDatabaseRestorePoint(arg0) {
+  if (c5 === 2) {
+    c5 = 3;
+    throw new TypeError("Generator functions may not be called on executing generators");
+  } else if (tmp4 === 3) {
+    if (arg0 === 1) {
+      throw value;
+    } else if (arg0 === 2) {
+      obj = { value, done: true };
+      return obj;
+    } else {
+      return { value: "HermesInternal", done: null };
+    }
+  } else {
+    try {
+      c5 = 2;
+      if (0 === c4) {
+        if (arg0 === 1) {
+          c5 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c5 = 3;
+          obj = { value, done: true };
+          return obj;
+        } else {
+          closure_3 = tmp2;
+          closure_131_0 = closure_1;
+          closure_131_1 = closure_2;
+          closure_131_2 = undefined;
+          let ticket;
+          let baseUrl;
+          closure_131_5 = undefined;
+          closure_131_6 = undefined;
+          closure_131_7 = undefined;
+          let obj7 = require("VibegrationsWorkerTickets");
+          c4 = 1;
+          c5 = 1;
+          const obj1 = { value: obj7.mintWorkerTicket(closure_0), done: false };
+          return obj1;
+        }
+      } else if (1 === tmp5) {
+        if (arg0 === 1) {
+          c5 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c5 = 3;
+          const obj2 = { value, done: true };
+          return obj2;
+        } else {
+          closure_131_2 = value;
+          ticket = closure_131_2.ticket;
+          baseUrl = closure_131_2.baseUrl;
+          const _URLSearchParams = URLSearchParams;
+          const obj3 = { ticket };
+          const uRLSearchParams = new URLSearchParams(obj3);
+          closure_131_5 = uRLSearchParams;
+          const _HermesInternal2 = HermesInternal;
+          const request = { method: "POST", headers: { "content-type": "application/json" }, body: null };
+          if (null == closure_131_1) {
+            obj4 = { environment: closure_131_0 };
+            request.body = tmp58(obj4);
+            const response = fetch(tmp56, request);
+            c4 = 2;
+            c5 = 1;
+          }
+          const obj5 = { environment: closure_131_0, label: closure_131_1 };
+          obj4 = obj5;
+        }
+      } else if (2 === tmp5) {
+        if (arg0 === 1) {
+          c5 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c5 = 3;
+          const obj6 = { value, done: true };
+          return obj6;
+        } else {
+          closure_131_6 = value;
+          if (closure_131_6.ok) {
+            c4 = 3;
+            c5 = 1;
+            obj7 = { value: closure_131_6.json(), done: false };
+            return obj7;
+          } else {
+            const _Error2 = Error;
+            const _HermesInternal = HermesInternal;
+            const error = new Error("restore point create failed (" + closure_131_6.status + ")");
+            throw error;
+          }
+        }
+      } else if (arg0 === 1) {
+        c5 = 3;
+        throw value;
+      } else if (arg0 === 2) {
+        c5 = 3;
+        const obj8 = { value, done: true };
+        return obj8;
+      } else {
+        closure_131_7 = value;
+        if (null == closure_131_7.restorePoint) {
+          const _Error = Error;
+          const error1 = new Error("restore point create returned nothing");
+          throw error1;
+        } else {
+          c5 = 3;
+          obj = { value: closure_131_7.restorePoint, done: true };
+          return obj;
+        }
+      }
+    } catch (tmp36) {
+      c5 = tmp;
+      throw tmp36;
+    }
+  }
+};
+function settleDatabaseRestore() {
+  const self = this;
+  const apply = closure_48.apply;
+  if (typeof apply === "unknown") {
+    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+  } else {
+    applyArgumentsResult = apply(self, arguments);
+  }
+  return applyArgumentsResult;
+}
+let closure_48 = async function _settleDatabaseRestore(arg0, arg1) {
+  closure_0 = arg0;
+  let ok = arg1;
+  c6 = 0;
+  c7 = 0;
+  c5 = 0;
+  return (async (arg0, value) => {
+    if (c7 === 2) {
+      c7 = 3;
+      throw new TypeError("Generator functions may not be called on executing generators");
+    } else if (tmp6 === 3) {
+      if (arg0 === 1) {
+        throw value;
+      } else if (arg0 === 2) {
+        obj = { value, done: true };
+        return obj;
+      } else {
+        return { value: "HermesInternal", done: null };
+      }
+    } else {
+      try {
+        c7 = 2;
+        if (0 === c6) {
+          if (arg0 === 1) {
+            c7 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c7 = 3;
+            obj = { value, done: true };
+            return obj;
+          } else {
+            closure_3 = tmp3;
+            closure_2 = tmp7;
+            closure_130_0 = closure_0;
+            closure_130_1 = ok;
+            closure_130_2 = undefined;
+            closure_130_3 = undefined;
+            if (ok.ok) {
+              let str = "";
+              if (202 !== ok.status) {
+                closure_130_2 = str;
+                closure_130_3 = closure_131_0(closure_131_2[16]).databaseRestoreResultFromStatus(closure_130_1.status, closure_130_2);
+                if (closure_130_3.ok) {
+                  c5 = 1;
+                  const result = closure_131_0(closure_131_2[12]).reloadVibegrationsProjectFrames(closure_130_0);
+                  c5 = 0;
+                  obj4 = closure_131_0(closure_131_2[12]);
+                }
+                c7 = 3;
+                const obj3 = closure_131_0(closure_131_2[16]);
+              }
+            }
+            c6 = 1;
+            c7 = 1;
+            const obj1 = { value: ok.text(), done: false };
+            return obj1;
+          }
+        } else if (1 !== tmp7) {
+          c5 = 0;
+        }
+        if (arg0 === 1) {
+          c7 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c7 = 3;
+          obj = { value, done: true };
+          return obj;
+        } else {
+          str = value.trim();
+        }
+      } catch (tmp24) {
+        closure_4 = tmp24;
+        if (tmp4 === c5) {
+          c7 = tmp2;
+          throw tmp24;
+        } else {
+          c6 = tmp;
+        }
+      }
+    }
+  })();
+};
+let closure_49 = async function _restoreDatabaseToPoint() {
+  closure_5 = tmp2;
+  closure_133_0 = closure_0;
+  closure_133_1 = closure_1;
+  await require("VibegrationsWorkerTickets").mintWorkerTicket(closure_0);
+  closure_133_2 = value;
+  const ticket = closure_133_2.ticket;
+  const baseUrl = closure_133_2.baseUrl;
+  const _URLSearchParams = URLSearchParams;
+  const uRLSearchParams = new URLSearchParams({ ticket });
+  closure_133_5 = uRLSearchParams;
+  _slicedToArray = closure_132_47;
+  closure_2 = closure_133_0;
+  const _fetch = fetch;
+  const _encodeURIComponent = encodeURIComponent;
+  const _HermesInternal = HermesInternal;
+  await fetch("" + baseUrl + "/agent/database/restore-points/" + encodeURIComponent(closure_133_1) + "/restore?" + closure_133_5, { method: "POST" });
+  return _slicedToArray(closure_2, value);
+};
+let closure_50 = async function _restoreDatabaseToTimestamp() {
+  closure_6 = tmp2;
+  closure_134_0 = closure_0;
+  closure_134_1 = closure_1;
+  closure_134_2 = closure_2;
+  obj4 = require("VibegrationsWorkerTickets");
+  await obj4.mintWorkerTicket(closure_0);
+  closure_134_3 = value;
+  const ticket = closure_134_3.ticket;
+  const baseUrl = closure_134_3.baseUrl;
+  const _URLSearchParams = URLSearchParams;
+  const uRLSearchParams = new URLSearchParams({ ticket });
+  closure_134_6 = uRLSearchParams;
+  asyncGeneratorStep = closure_133_47;
+  closure_3 = closure_134_0;
+  const _fetch = fetch;
+  const _HermesInternal = HermesInternal;
+  const request = { method: "POST", headers: { "content-type": "application/json" }, body: null };
+  const _JSON = JSON;
+  obj4 = { environment: closure_134_1, timestampMs: closure_134_2 };
+  const combined = "" + baseUrl + "/agent/database/restore?" + closure_134_6;
+  request.body = JSON.stringify(obj4);
+  await fetch(combined, request);
+  return asyncGeneratorStep(closure_3, value);
+};
 function attachmentEndpoint(arg0, arg1) {
   if (null == arg1) {
     const _HermesInternal2 = HermesInternal;
@@ -1553,7 +1934,7 @@ function attachmentEndpoint(arg0, arg1) {
 }
 function uploadAttachmentBytes() {
   const self = this;
-  const apply = closure_46.apply;
+  const apply = closure_53.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -1561,7 +1942,7 @@ function uploadAttachmentBytes() {
   }
   return applyArgumentsResult;
 }
-let closure_46 = async function _uploadAttachmentBytes() {
+let closure_53 = async function _uploadAttachmentBytes() {
   closure_4 = tmp2;
   closure_132_0 = closure_1;
   closure_132_1 = closure_2;
@@ -1575,7 +1956,7 @@ let closure_46 = async function _uploadAttachmentBytes() {
   closure_132_6 = uRLSearchParams;
   const _HermesInternal2 = HermesInternal;
   let str3 = "application/octet-stream";
-  const combined = "" + closure_133_44(baseUrl) + "?" + closure_132_6;
+  const combined = "" + closure_133_51(baseUrl) + "?" + closure_132_6;
   if ("" !== closure_132_2) {
     str3 = closure_132_2;
   }
@@ -1591,7 +1972,7 @@ let closure_46 = async function _uploadAttachmentBytes() {
   await closure_132_7.json();
   return value;
 };
-let closure_48 = async function _exportProjectArchive() {
+let closure_55 = async function _exportProjectArchive() {
   closure_2 = tmp2;
   closure_130_0 = closure_1;
   await require("VibegrationsWorkerTickets").mintWorkerTicket(closure_0);
@@ -1606,12 +1987,12 @@ let closure_48 = async function _exportProjectArchive() {
   await fetch("" + baseUrl + "/agent/export?" + closure_130_4);
   closure_130_5 = value;
   if (!closure_130_5.ok) {
-    throw new closure_131_47(closure_130_5.status);
+    throw new closure_131_54(closure_130_5.status);
   }
   await closure_130_5.blob();
   return value;
 };
-let closure_50 = async function _remixProjectWorkspace(arg0) {
+let closure_57 = async function _remixProjectWorkspace(arg0) {
   if (c5 === 2) {
     c5 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -1694,7 +2075,7 @@ let closure_50 = async function _remixProjectWorkspace(arg0) {
           c5 = 3;
           return { value: "HermesInternal", done: null };
         } else {
-          throw new closure_131_49(closure_130_5.status);
+          throw new closure_131_56(closure_130_5.status);
         }
       }
     } catch (tmp13) {
@@ -1703,7 +2084,7 @@ let closure_50 = async function _remixProjectWorkspace(arg0) {
     }
   }
 };
-let closure_51 = async function _submitProjectSecrets(arg0) {
+let closure_58 = async function _submitProjectSecrets(arg0) {
   if (c4 === 2) {
     c4 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -1793,7 +2174,7 @@ let closure_51 = async function _submitProjectSecrets(arg0) {
     }
   }
 };
-let closure_52 = async function _submitProjectSettings() {
+let closure_59 = async function _submitProjectSettings() {
   closure_2 = tmp2;
   closure_130_0 = closure_1;
   await require("VibegrationsWorkerTickets").mintWorkerTicket(closure_0);
@@ -1825,7 +2206,7 @@ let closure_52 = async function _submitProjectSettings() {
   }
   return { rebuildRequired: true === rebuild_required };
 };
-let closure_53 = async function _fetchProjectMcpConnection(arg0) {
+let closure_60 = async function _fetchProjectMcpConnection(arg0) {
   if (c5 === 2) {
     c5 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -1956,7 +2337,7 @@ let closure_53 = async function _fetchProjectMcpConnection(arg0) {
     }
   }
 };
-let closure_54 = async function _requestExternalAuthorizeUrl(arg0) {
+let closure_61 = async function _requestExternalAuthorizeUrl(arg0) {
   if (c8 === 2) {
     c8 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -2052,7 +2433,7 @@ let closure_54 = async function _requestExternalAuthorizeUrl(arg0) {
           } else {
             closure_132_6 = null;
             c6 = 2;
-            const tmp30 = closure_133_0(closure_133_2[16]);
+            const tmp30 = closure_133_0(closure_133_2[17]);
             closure_3 = tmp30;
             const externalAuthErrorCode = tmp30.externalAuthErrorCode;
             c7 = 6;
@@ -2064,7 +2445,7 @@ let closure_54 = async function _requestExternalAuthorizeUrl(arg0) {
       } else {
         if (4 === tmp10) {
           c6 = 0;
-          obj6 = closure_133_0(closure_133_2[16]);
+          obj6 = closure_133_0(closure_133_2[17]);
           { type: "error", error: null }.error = obj6.externalAuthErrorFor(closure_132_1.status, closure_132_6);
           c8 = 3;
           const obj9 = { type: "error", error: null };
@@ -2125,7 +2506,7 @@ let closure_54 = async function _requestExternalAuthorizeUrl(arg0) {
     }
   }
 };
-let closure_55 = async function _deleteStagedAttachment(arg0) {
+let closure_62 = async function _deleteStagedAttachment(arg0) {
   if (c5 === 2) {
     c5 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -2184,7 +2565,7 @@ let closure_55 = async function _deleteStagedAttachment(arg0) {
           const _HermesInternal2 = HermesInternal;
           c4 = 2;
           c5 = 1;
-          obj4 = { value: fetch("" + closure_131_44(baseUrl, closure_130_0) + "?" + closure_130_4, { method: "DELETE", keepalive: true }), done: false };
+          obj4 = { value: fetch("" + closure_131_51(baseUrl, closure_130_0) + "?" + closure_130_4, { method: "DELETE", keepalive: true }), done: false };
           return obj4;
         }
       } else if (arg0 === 1) {
@@ -2212,7 +2593,7 @@ let closure_55 = async function _deleteStagedAttachment(arg0) {
     }
   }
 };
-let closure_56 = async function _getPreviewScreenshotUrl() {
+let closure_63 = async function _getPreviewScreenshotUrl() {
   closure_2 = tmp2;
   closure_130_0 = closure_1;
   await getMediaTicket(closure_0);
@@ -2228,7 +2609,7 @@ let closure_56 = async function _getPreviewScreenshotUrl() {
 };
 function getAttachmentUrl(arg0, arg1) {
   const self = this;
-  const apply = closure_58.apply;
+  const apply = closure_65.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -2236,7 +2617,7 @@ function getAttachmentUrl(arg0, arg1) {
   }
   return applyArgumentsResult;
 }
-let closure_58 = async function _getAttachmentUrl(arg0) {
+let closure_65 = async function _getAttachmentUrl(arg0) {
   if (c6 === 2) {
     c6 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -2317,7 +2698,7 @@ let closure_58 = async function _getAttachmentUrl(arg0) {
         }
         const _HermesInternal = HermesInternal;
         c6 = 3;
-        obj = { value: "" + closure_132_44(baseUrl, closure_131_1) + "?" + closure_131_6, done: true };
+        obj = { value: "" + closure_132_51(baseUrl, closure_131_1) + "?" + closure_131_6, done: true };
         return obj;
       }
     } catch (tmp21) {
@@ -2326,7 +2707,7 @@ let closure_58 = async function _getAttachmentUrl(arg0) {
     }
   }
 };
-let closure_59 = async function _isAttachmentAvailable(arg0) {
+let closure_66 = async function _isAttachmentAvailable(arg0) {
   if (c5 === 2) {
     c5 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -2371,7 +2752,7 @@ let closure_59 = async function _isAttachmentAvailable(arg0) {
             const self = this;
             const tmp = c4(function*() {
               const _fetch = fetch;
-              yield closure_1_57(closure_2_0, closure_2_1);
+              yield closure_1_64(closure_2_0, closure_2_1);
               return fetch(value, { method: "HEAD" });
             });
             closure_3 = tmp;
@@ -2447,27 +2828,27 @@ function closeAllConnections() {
   map8.clear();
   tmp2 = Array.from(map.keys())[Symbol.iterator]();
 }
-const getOlderHistoryCursor = fn(16589).getOlderHistoryCursor;
+const getOlderHistoryCursor = fn(16620).getOlderHistoryCursor;
 const map = new Map();
 const map1 = new Map();
 const map2 = new Map();
 let set = new Set();
 const map3 = new Map();
 const map4 = new Map();
-let obj = { location: "connection", code: fn(16593).VibegrationErrorCodes.SEND_FAILED };
-obj = { location: "agent", code: fn(16593).VibegrationErrorCodes.AGENT_ERROR };
+let obj = { location: "connection", code: fn(16624).VibegrationErrorCodes.SEND_FAILED };
+obj = { location: "agent", code: fn(16624).VibegrationErrorCodes.AGENT_ERROR };
 const map5 = new Map();
 let closure_24 = { steered: true, queued: true, restarting: true, answered: true };
-obj = { build_error: { location: "build", code: fn(16593).VibegrationErrorCodes.BUILD_FAILED }, healthcheck_failed: null, error: null };
-let obj1 = { location: "build", code: fn(16593).VibegrationErrorCodes.BUILD_FAILED };
-obj.healthcheck_failed = { location: "healthcheck", code: fn(16593).VibegrationErrorCodes.HEALTHCHECK_FAILED };
-let obj2 = { location: "healthcheck", code: fn(16593).VibegrationErrorCodes.HEALTHCHECK_FAILED };
-obj.error = { location: "agent", code: fn(16593).VibegrationErrorCodes.AGENT_ERROR };
+obj = { build_error: { location: "build", code: fn(16624).VibegrationErrorCodes.BUILD_FAILED }, healthcheck_failed: null, error: null };
+let obj1 = { location: "build", code: fn(16624).VibegrationErrorCodes.BUILD_FAILED };
+obj.healthcheck_failed = { location: "healthcheck", code: fn(16624).VibegrationErrorCodes.HEALTHCHECK_FAILED };
+let obj2 = { location: "healthcheck", code: fn(16624).VibegrationErrorCodes.HEALTHCHECK_FAILED };
+obj.error = { location: "agent", code: fn(16624).VibegrationErrorCodes.AGENT_ERROR };
 let obj4 = { web: null, preview: null };
-let obj3 = { location: "agent", code: fn(16593).VibegrationErrorCodes.AGENT_ERROR };
-obj4.web = { location: "runtime_frame", code: fn(16593).VibegrationErrorCodes.RUNTIME_FRAME_ERROR };
-let obj5 = { location: "runtime_frame", code: fn(16593).VibegrationErrorCodes.RUNTIME_FRAME_ERROR };
-obj4.preview = { location: "runtime_worker", code: fn(16593).VibegrationErrorCodes.RUNTIME_WORKER_ERROR };
+let obj3 = { location: "agent", code: fn(16624).VibegrationErrorCodes.AGENT_ERROR };
+obj4.web = { location: "runtime_frame", code: fn(16624).VibegrationErrorCodes.RUNTIME_FRAME_ERROR };
+let obj5 = { location: "runtime_frame", code: fn(16624).VibegrationErrorCodes.RUNTIME_FRAME_ERROR };
+obj4.preview = { location: "runtime_worker", code: fn(16624).VibegrationErrorCodes.RUNTIME_WORKER_ERROR };
 const map6 = new Map();
 const map7 = new Map();
 const map8 = new Map();
@@ -2528,11 +2909,11 @@ prototype3["getDeclaredConnections"] = function getDeclaredConnections(arg0) {
     connections = value.connections;
   }
   if (connections == null) {
-    connections = closure_61;
+    connections = closure_68;
   }
   return connections;
 };
-let closure_61 = [];
+let closure_68 = [];
 const vibegrationsConnectionStore = new VibegrationsConnectionStore(DispatcherDefault, {
   VIBEGRATIONS_CHAT_CONN_STATE: function handleChatConnState(arg0) {
     ({ projectId, connState } = arg0);
@@ -2874,6 +3255,56 @@ export const restoreSourceHistoryEntry = function restoreSourceHistoryEntry() {
   }
   return applyArgumentsResult;
 };
+export const fetchDatabaseRestorePoints = function fetchDatabaseRestorePoints() {
+  const self = this;
+  const apply = closure_44.apply;
+  if (typeof apply === "unknown") {
+    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+  } else {
+    applyArgumentsResult = apply(self, arguments);
+  }
+  return applyArgumentsResult;
+};
+export const fetchDatabaseRestoreWindow = function fetchDatabaseRestoreWindow() {
+  const self = this;
+  const apply = closure_45.apply;
+  if (typeof apply === "unknown") {
+    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+  } else {
+    applyArgumentsResult = apply(self, arguments);
+  }
+  return applyArgumentsResult;
+};
+export const createDatabaseRestorePoint = function createDatabaseRestorePoint() {
+  const self = this;
+  const apply = closure_46.apply;
+  if (typeof apply === "unknown") {
+    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+  } else {
+    applyArgumentsResult = apply(self, arguments);
+  }
+  return applyArgumentsResult;
+};
+export const restoreDatabaseToPoint = function restoreDatabaseToPoint() {
+  const self = this;
+  const apply = closure_49.apply;
+  if (typeof apply === "unknown") {
+    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+  } else {
+    applyArgumentsResult = apply(self, arguments);
+  }
+  return applyArgumentsResult;
+};
+export const restoreDatabaseToTimestamp = function restoreDatabaseToTimestamp() {
+  const self = this;
+  const apply = closure_50.apply;
+  if (typeof apply === "unknown") {
+    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+  } else {
+    applyArgumentsResult = apply(self, arguments);
+  }
+  return applyArgumentsResult;
+};
 export const uploadAttachment = function uploadAttachment(arg0, name) {
   return uploadAttachmentBytes(arg0, name, name.name, name.type);
 };
@@ -2881,7 +3312,7 @@ export { uploadAttachmentBytes };
 export const VibegrationsExportError = prototype;
 export const exportProjectArchive = function exportProjectArchive() {
   const self = this;
-  const apply = closure_48.apply;
+  const apply = closure_55.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -2892,7 +3323,7 @@ export const exportProjectArchive = function exportProjectArchive() {
 export const VibegrationsRemixError = prototype2;
 export const remixProjectWorkspace = function remixProjectWorkspace() {
   const self = this;
-  const apply = closure_50.apply;
+  const apply = closure_57.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -2902,7 +3333,7 @@ export const remixProjectWorkspace = function remixProjectWorkspace() {
 };
 export const submitProjectSecrets = function submitProjectSecrets() {
   const self = this;
-  const apply = closure_51.apply;
+  const apply = closure_58.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -2912,7 +3343,7 @@ export const submitProjectSecrets = function submitProjectSecrets() {
 };
 export const submitProjectSettings = function submitProjectSettings() {
   const self = this;
-  const apply = closure_52.apply;
+  const apply = closure_59.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -3013,7 +3444,7 @@ export const requestProjectRebuild = function requestProjectRebuild(arg0) {
 };
 export const fetchProjectMcpConnection = function fetchProjectMcpConnection(arg0) {
   const self = this;
-  const apply = closure_53.apply;
+  const apply = closure_60.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -3023,7 +3454,7 @@ export const fetchProjectMcpConnection = function fetchProjectMcpConnection(arg0
 };
 export const requestExternalAuthorizeUrl = function requestExternalAuthorizeUrl(arg0, arg1) {
   const self = this;
-  const apply = closure_54.apply;
+  const apply = closure_61.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -3033,7 +3464,7 @@ export const requestExternalAuthorizeUrl = function requestExternalAuthorizeUrl(
 };
 export const deleteStagedAttachment = function deleteStagedAttachment(arg0, arg1) {
   const self = this;
-  const apply = closure_55.apply;
+  const apply = closure_62.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -3043,7 +3474,7 @@ export const deleteStagedAttachment = function deleteStagedAttachment(arg0, arg1
 };
 export const getPreviewScreenshotUrl = function getPreviewScreenshotUrl(arg0, arg1) {
   const self = this;
-  const apply = closure_56.apply;
+  const apply = closure_63.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -3054,7 +3485,7 @@ export const getPreviewScreenshotUrl = function getPreviewScreenshotUrl(arg0, ar
 export { getAttachmentUrl };
 export const isAttachmentAvailable = function isAttachmentAvailable(arg0, arg1) {
   const self = this;
-  const apply = closure_59.apply;
+  const apply = closure_66.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {

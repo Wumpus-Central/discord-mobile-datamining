@@ -17,20 +17,20 @@ function GuildRow(guildActivity) {
   if (null == stateFromStores) {
     return null;
   } else {
-    const topUserOrGuildDescription = tmp2(7593).getTopUserOrGuildDescription(
+    const topUserOrGuildDescription = tmp2(7607).getTopUserOrGuildDescription(
       guildActivity.messages_sent,
       guildActivity.call_count,
     );
     obj = { label: stateFromStores.name, subLabel: topUserOrGuildDescription, icon: null };
     obj = { guild: stateFromStores, style: tmp.guildIcon };
     obj.icon = closure_4(GuildIconDefault, obj);
-    return closure_4(tmp2(5605).TableRow, obj);
+    return closure_4(tmp2(5619).TableRow, obj);
   }
   tmp = closure_6();
 }
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-fn(4560);
+fn(4574);
 let createStyles = { header: { textAlign: "center" }, guildIcon: null };
 createStyles = {
   borderRadius: nativeDefault.radii.md,

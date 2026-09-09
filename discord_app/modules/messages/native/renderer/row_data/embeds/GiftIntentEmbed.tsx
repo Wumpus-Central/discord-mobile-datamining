@@ -2,17 +2,17 @@
 import nativeDefault from "../../../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../../../intl/index.native.tsx";
 import UserUtilsDefault from "../../../../../../utils/UserUtils.tsx";
-import _modDef4496 from "../../../../../../../_runtime/metro/04496__.js";
+import _modDef4510 from "../../../../../../../_runtime/metro/04510__.js";
 import renderer_EmbedUtils from "../../EmbedUtils.tsx";
 import PremiumGiftingUtils from "../../../../../premium/PremiumGiftingUtils.tsx";
-import _modDef8083 from "../../../../../../../_runtime/metro/08083__.js";
-import _modDef8084 from "../../../../../../../_runtime/metro/08084__.js";
+import _modDef8098 from "../../../../../../../_runtime/metro/08098__.js";
+import _modDef8099 from "../../../../../../../_runtime/metro/08099__.js";
 import PremiumGiftingIntentStore from "../../../../../premium/gifting/PremiumGiftingIntentStore.tsx";
 import UserStore from "../../../../../../stores/UserStore.tsx";
 
 require = fn;
 const GiftIntentType = fn(1373).GiftIntentType;
-fn(4560);
+fn(4574);
 const createStyles = {
   headerTextColor: nativeDefault.colors.TEXT_STRONG,
   subHeaderTextColor: nativeDefault.colors.TEXT_SUBTLE,
@@ -91,11 +91,11 @@ export const createGiftIntentEmbed = function createGiftIntentEmbed(message, the
           borderColor: obj4.borderColor,
         } = closure_6(theme));
         const tmp6 = closure_6(theme);
-        obj1.subHeaderIconUrl = renderer_EmbedUtils.getAssetUriForEmbed(_modDef4496);
+        obj1.subHeaderIconUrl = renderer_EmbedUtils.getAssetUriForEmbed(_modDef4510);
         const intl3 = util.intl;
         obj1.primaryCtaLabel = intl3.string(util.t.ilhtIa);
-        obj1.primaryCtaIconUrl = renderer_EmbedUtils.getAssetUriForEmbed(_modDef8083);
-        obj1.secondaryCtaIconUrl = renderer_EmbedUtils.getAssetUriForEmbed(_modDef8084);
+        obj1.primaryCtaIconUrl = renderer_EmbedUtils.getAssetUriForEmbed(_modDef8098);
+        obj1.secondaryCtaIconUrl = renderer_EmbedUtils.getAssetUriForEmbed(_modDef8099);
         const intl4 = util.intl;
         obj1.secondaryCtaAccessibilityLabel = intl4.string(util.t.I5gL2H);
         return obj1;

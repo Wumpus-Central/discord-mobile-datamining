@@ -3,7 +3,7 @@ import Powerups from "../../../../../discord_common/js/shared/shared-constants/P
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 
 require = fn;
-let closure_3 = fn(4451).GAME_SERVER_POWERUP_SKU_ID;
+let closure_3 = fn(4465).GAME_SERVER_POWERUP_SKU_ID;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/powerups/utils/orderMarketablePerksForDisplay.tsx");
 

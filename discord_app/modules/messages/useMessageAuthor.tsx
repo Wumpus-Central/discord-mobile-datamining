@@ -185,21 +185,17 @@ function useNullableUserAuthor(author, channel) {
     return nickname;
   });
   const obj2 = require("initialize");
+  const name = id(guild_id[8]).useName(author);
   obj = {
     user: author,
     channel,
     guild: stateFromStores1,
     memberColorRole: stateFromStores2,
     member: stateFromStores,
-    userName: id(guild_id[8]).useName(author),
+    userName: name,
     friendNickname: stateFromStores3,
-    displayNameStyles: null,
+    displayNameStyles: id(tmp4[9])({ userId: id, guildId: guild_id }),
   };
-  let displayNameStyles;
-  if (author != null) {
-    displayNameStyles = author.displayNameStyles;
-  }
-  obj.displayNameStyles = displayNameStyles;
   return computeMessageAuthor(obj);
 }
 function getUserAuthor(user, channel) {

@@ -597,7 +597,7 @@ function handleAck(channelId) {
   }
   arr8 = getNewUnreadItems(_slicedToArray(items6, 2)[0], channelId);
 }
-let GuildScheduledEventStore = fn(7526);
+let GuildScheduledEventStore = fn(7540);
 ({
   eventScheduledToStartWithin: metroRequire,
   isGuildEventEnded: closure_7,
@@ -605,7 +605,7 @@ let GuildScheduledEventStore = fn(7526);
 } = GuildScheduledEventStore);
 const Constants = fn(1074);
 ({ ChannelTypes: closure_21, GuildFeatures: closure_22, Permissions: closure_23 } = Constants);
-const ContentInventoryFeedKey = fn(8358).ContentInventoryFeedKey;
+const ContentInventoryFeedKey = fn(8386).ContentInventoryFeedKey;
 const DAY = DurationsDefault.Millis.DAY;
 let closure_26 = 3 * DurationsDefault.Millis.DAY;
 let dehydratedItems = [];
@@ -967,7 +967,7 @@ obj = {
     items = items.items;
     let set1;
     ({ loadId, startTime, isInitialLoad, isReloading } = items);
-    set1 = new Set(set1(8348).SUPPORTED_ITEM_TYPES);
+    set1 = new Set(set1(8376).SUPPORTED_ITEM_TYPES);
     const found = items.filter((type) => set1.has(type.type));
     const found1 = found.filter(filterStaffGuild);
     closure_30 = found1.map((type) => {
@@ -1064,7 +1064,7 @@ obj = {
     });
     const items4 = [...items2];
     const items5 = [items4, items1.sort((id, id2) => set1(dependencyMap[18]).compareGravityUnreadIds(id.id, id2.id))];
-    set = new Set(set1(8348).SUPPORTED_ITEM_TYPES);
+    set = new Set(set1(8376).SUPPORTED_ITEM_TYPES);
     [arr9, arr10] = _slicedToArray(items5, 2);
     let tmp6 = _slicedToArray(items5, 2);
     if (c41) {
@@ -1073,20 +1073,20 @@ obj = {
           if (c38 > 0) {
             c43 = null;
           }
-          const tmp8 = arr11.length > tmp(8348).MIN_ITEMS_FOR_NEW_PILL;
+          const tmp8 = arr11.length > tmp(8376).MIN_ITEMS_FOR_NEW_PILL;
           if (!isReloading) {
             hasNewContent = tmp8;
           }
           if (tmp8) {
             const items6 = [];
             HermesBuiltin.arraySpread(arr10, HermesBuiltin.arraySpread(arr9, 0));
-            tmp(8350).hydrateItems(items6, 0, tmp(8348).ICYMI_PAGE_SIZE);
+            tmp(8378).hydrateItems(items6, 0, tmp(8376).ICYMI_PAGE_SIZE);
             if (arr9.length + arr10.length === 0) {
               c54 = true;
             }
-            const tmpResult = tmp(8350);
+            const tmpResult = tmp(8378);
           }
-          const ICYMIAnalytics = tmp(8359).ICYMIAnalytics;
+          const ICYMIAnalytics = tmp(8387).ICYMIAnalytics;
           newTrackingProps = {
             newTrackingProps: null,
             hasNewContent: null,

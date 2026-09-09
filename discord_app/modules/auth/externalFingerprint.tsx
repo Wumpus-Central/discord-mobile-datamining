@@ -1,6 +1,6 @@
 // discord_app/modules/auth/externalFingerprint.tsx
 import DispatcherDefault from "../../Dispatcher.tsx";
-import keysSorter from "../../../_runtime/05456_keysSorter.js";
+import keysSorter from "../../../_runtime/05470_keysSorter.js";
 import AuthenticationStore from "../../stores/AuthenticationStore.tsx";
 
 require = fn;

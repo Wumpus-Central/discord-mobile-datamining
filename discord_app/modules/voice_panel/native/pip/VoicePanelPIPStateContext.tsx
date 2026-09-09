@@ -5,9 +5,9 @@ const context = noop.createContext({
   id: "sa",
   mode: "isArray",
   width: false,
-  height: "first_quarter_moon",
-  containerHeight: "waxing_gibbous_moon",
-  showSecondaryPIP: "crescent_moon",
+  height: "level_slider",
+  containerHeight: "control_knobs",
+  showSecondaryPIP: "compass",
 });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/voice_panel/native/pip/VoicePanelPIPStateContext.tsx");

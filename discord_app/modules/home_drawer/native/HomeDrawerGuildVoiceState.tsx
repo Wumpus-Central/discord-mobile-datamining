@@ -4,7 +4,7 @@ import nativeDefault from "../../../../discord_common/js/packages/tokens/native.
 import util from "../../../intl/index.native.tsx";
 import native from "../../../design/void/native.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
-import LinearGradientDefault from "../../../../_runtime/04987_LinearGradient.js";
+import LinearGradientDefault from "../../../../_runtime/05001_LinearGradient.js";
 import FastImageDefault from "../../../components_native/common/FastImage.tsx";
 import useFetchStreamPreviewDefault from "../../go_live/useFetchStreamPreview.tsx";
 import AvatarPile from "../../../design/components/Pile/native/AvatarPile.native.tsx";
@@ -39,7 +39,12 @@ function VoiceUsers(arg0) {
 }
 function LiveTag() {
   const tmp = closure_15();
-  let obj = { style: tmp.tag, children: null };
+  let obj = {
+    style: tmp.tag,
+    importantForAccessibility: "no-hide-descendants",
+    accessibilityElementsHidden: true,
+    children: null,
+  };
   obj = { variant: "text-xxs/bold", style: tmp.tagText, lineClamp: 1, children: null };
   const intl = util.intl;
   obj.children = intl.string(util.t.dI3q4h).toUpperCase();
@@ -51,7 +56,7 @@ const GUILD_VOCAL_CHANNELS_KEY = fn(2012).GUILD_VOCAL_CHANNELS_KEY;
 const ChannelTypes = fn(1074).ChannelTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
-fn(4560);
+fn(4574);
 let createStyles = {
   voiceContainer: { paddingRight: 8, height: 40, gap: 4, justifyContent: "center" },
   streamPreviewShadow: null,
@@ -79,7 +84,7 @@ const rect = {
 };
 createStyles.streamPreviewBorder = rect;
 let closure_13 = createStyles.createStyles(createStyles);
-createStyles = fn(4560);
+createStyles = fn(4574);
 let obj1 = { tag: null, tagText: null };
 const rect1 = {
   paddingHorizontal: 4,

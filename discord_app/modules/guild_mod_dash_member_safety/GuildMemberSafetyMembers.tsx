@@ -1,6 +1,6 @@
 // discord_app/modules/guild_mod_dash_member_safety/GuildMemberSafetyMembers.tsx
 import SecondaryIndexMap from "../../../discord_common/js/packages/secondary-index-map/SecondaryIndexMap.tsx";
-import _modDef4679 from "../../../_runtime/metro/04679__.js";
+import _modDef4693 from "../../../_runtime/metro/04693__.js";
 import MemberSafetyElasticSearchQueryTypes from "MemberSafetyElasticSearchQueryTypes.tsx";
 import guild_mod_dash_member_safety_DateUtils from "DateUtils.tsx";
 import SortUtils from "SortUtils.tsx";
@@ -218,7 +218,7 @@ prototype["updateMember"] = function updateMember(userId, arg1) {
       flag2 = flag;
       while (keys[tmp] !== undefined) {
         let tmp15 = obj[tmp6];
-        if (_modDef4679(tmp15, obj[tmp6])) {
+        if (_modDef4693(tmp15, obj[tmp6])) {
           continue;
         } else {
           obj[tmp6] = tmp15;

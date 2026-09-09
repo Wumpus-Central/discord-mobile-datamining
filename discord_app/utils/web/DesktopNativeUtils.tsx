@@ -827,7 +827,7 @@ obj.copyImage = function copyImage(arg0, arg1) {
             return obj2;
           } else {
             closure_129_0 = value;
-            closure_129_1 = closure_0(5568).decideFileExtension(closure_130_0, closure_130_1);
+            closure_129_1 = closure_0(5582).decideFileExtension(closure_130_0, closure_130_1);
             if (null != closure_129_1) {
               if (set2.has(closure_129_1)) {
                 closure_0 = closure_130_1;
@@ -863,7 +863,7 @@ obj.copyImage = function copyImage(arg0, arg1) {
             }
             const _HermesInternal = HermesInternal;
             combined = "image." + closure_129_1;
-            const obj8 = closure_0(5568);
+            const obj8 = closure_0(5582);
           }
         } else if (arg0 === 1) {
           c4 = 3;
@@ -1022,7 +1022,7 @@ obj.saveImage = function saveImage(arg0, arg1, arg2) {
                 }
                 const str3 = str2.replace(closure_1_22, "");
               } else if (!str.includes(".")) {
-                let obj8 = unknown(5568);
+                let obj8 = unknown(5582);
                 const decideFileExtensionResult = obj8.decideFileExtension(tmp54, closure_1);
                 dependencyMap = decideFileExtensionResult;
                 png = dependencyMap;

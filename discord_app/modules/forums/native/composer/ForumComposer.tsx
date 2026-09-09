@@ -126,7 +126,7 @@ function ActionBar(channel) {
       const items5 = [,];
       ({ actionButton: arr9[0], mediaButton: arr9[1] } = tmp);
       obj2.style = items5;
-      obj2.IconComponent = tmp2(8867).TagIcon;
+      obj2.IconComponent = tmp2(8894).TagIcon;
       obj2.onPress = function onPress() {
         timestampProducer.dismiss();
         const obj = {
@@ -155,12 +155,12 @@ function ActionBar(channel) {
             closure_1_7 !== channel(1609).KeyboardTypes.SYSTEM &&
             closure_1_7 !== channel(1609).KeyboardTypes.EXPRESSION;
         };
-        obj.openLazy(asyncRequireImpl(11253, dependencyMap.paths), "ForumPostTagsActionSheet", obj);
+        obj.openLazy(asyncRequireImpl(11280, dependencyMap.paths), "ForumPostTagsActionSheet", obj);
       };
-      tmp10 = closure_29(tmp2(7377).HeaderActionButton, obj2);
+      tmp10 = closure_29(tmp2(7391).HeaderActionButton, obj2);
     }
     items4[1] = tmp10;
-    let tmp18 = lastInput === tmp2(10264).PostComposerInputs.CONTENT;
+    let tmp18 = lastInput === tmp2(10291).PostComposerInputs.CONTENT;
     if (tmp18) {
       const obj3 = {
         accessibilityLabel: null,
@@ -172,9 +172,9 @@ function ActionBar(channel) {
       const intl3 = tmp2(1114).intl;
       obj3.accessibilityLabel = intl3.string(tmp2(1114).t.iZ7Mz9);
       obj3.style = tmp.actionButton;
-      obj3.IconComponent = tmp2(8762).ReactionIcon;
+      obj3.IconComponent = tmp2(8790).ReactionIcon;
       obj3.onPress = onShowExpressionPicker;
-      tmp18 = closure_29(tmp2(7377).HeaderActionButton, obj3);
+      tmp18 = closure_29(tmp2(7391).HeaderActionButton, obj3);
     }
     items4[2] = tmp18;
     const obj4 = { style: tmp.postButtonWrapper, children: null };
@@ -192,13 +192,13 @@ function ActionBar(channel) {
     }
     obj5.disabled = submitting;
     const obj6 = { size: "sm", color: nativeDefault.colors.WHITE };
-    obj5.icon = closure_29(tmp2(5071).ChatIcon, obj6);
+    obj5.icon = closure_29(tmp2(5085).ChatIcon, obj6);
     obj5.onPress = function onPress() {
       if (canPost) {
         _slicedToArray({});
       }
     };
-    obj4.children = closure_29(tmp2(4975).Button, obj5);
+    obj4.children = closure_29(tmp2(4989).Button, obj5);
     items4[3] = closure_29(closure_9, obj4);
     obj1.children = items4;
     items3[1] = closure_30(closure_9, obj1);
@@ -212,9 +212,9 @@ function ActionBar(channel) {
     ({ actionButton: arr7[0], mediaButton: arr7[1] } = tmp);
     obj7.style = items6;
     if (tmp8) {
-      let ImageIcon = tmp2(11251).KeyboardIcon;
+      let ImageIcon = tmp2(11278).KeyboardIcon;
     } else {
-      ImageIcon = tmp2(5087).ImageIcon;
+      ImageIcon = tmp2(5101).ImageIcon;
     }
     obj7.IconComponent = ImageIcon;
     obj7.onPress = function onPress() {
@@ -226,7 +226,7 @@ function ActionBar(channel) {
       }
       const result1 = tracking_Tracking.trackForumChannelMediaUploaderClicked({ isMobile: true });
     };
-    closure_29(tmp2(7377).HeaderActionButton, obj7);
+    closure_29(tmp2(7391).HeaderActionButton, obj7);
   }
 }
 get_ActivityIndicator = fn(17);
@@ -237,8 +237,8 @@ get_ActivityIndicator = fn(17);
   Text: closure_8,
   View: closure_9,
 } = get_ActivityIndicator);
-const DraftType = fn(4901).DraftType;
-const SlowmodeType = fn(7687).SlowmodeType;
+const DraftType = fn(4915).DraftType;
+const SlowmodeType = fn(7701).SlowmodeType;
 let Constants = fn(1074);
 ({ AbortCodes: closure_21, MAX_CHANNEL_NAME_LENGTH: closure_22, Permissions: closure_23 } = Constants);
 const ChannelFlags = fn(1964).ChannelFlags;
@@ -250,7 +250,7 @@ Constants = fn(1085);
 const jsxProd = fn(21);
 ({ jsx: closure_29, jsxs: closure_30, Fragment: items } = jsxProd);
 const re32 = /(#"[^"]*"|[@#]\S+|:[\w+-]+:)/g;
-fn(4560);
+fn(4574);
 let createStyles = {
   container: null,
   scrollViewContentContainer: null,

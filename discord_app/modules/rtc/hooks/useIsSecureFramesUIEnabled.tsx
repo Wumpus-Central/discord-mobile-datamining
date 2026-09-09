@@ -3,7 +3,7 @@ import ChannelStore from "../../../stores/ChannelStore.tsx";
 import RTCConnectionStore from "../../../stores/RTCConnectionStore.tsx";
 
 const require = fn;
-let closure_4 = fn(9157).END_TO_END_ENCRYPTION_DISABLED;
+let closure_4 = fn(9184).END_TO_END_ENCRYPTION_DISABLED;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/rtc/hooks/useIsSecureFramesUIEnabled.tsx");
 

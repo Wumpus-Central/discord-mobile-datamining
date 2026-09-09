@@ -53,7 +53,7 @@ const Constants = fn(1074);
   NULL_STRING_GUILD_ID: closure_21,
   BasicPermissions: closure_22,
 } = Constants);
-const StreamTypes = fn(4602).StreamTypes;
+const StreamTypes = fn(4616).StreamTypes;
 const selfStreamParticipantsHidden = {};
 let intent = null;
 let closure_27 = 10 * DurationsDefault.Millis.SECOND;
@@ -701,7 +701,7 @@ const applicationStreamingStore = new ApplicationStreamingStore(DispatcherDefaul
   STREAM_START: function handleStreamStart(arg0) {
     ({ streamType, guildId, channelId, pid, sourceId } = arg0);
     ({ sourceName, sourceIcon, previewDisabled } = arg0);
-    sourceId(4612);
+    sourceId(4626);
     let obj = { streamType, guildId, channelId, ownerId: AuthenticationStore.getId() };
     const encodeStreamKeyResult = obj.encodeStreamKey(obj);
     let startsWithResult;
@@ -789,11 +789,11 @@ const applicationStreamingStore = new ApplicationStreamingStore(DispatcherDefaul
       } else if (reason === constants3.SAFETY_GUILD_RATE_LIMITED) {
         let obj = StreamKeyUtils;
         guildId = obj.decodeStreamKey(streamKey).guildId;
-        asyncRequireImpl(13833, dependencyMap.paths).then((result) => {
+        asyncRequireImpl(13856, dependencyMap.paths).then((result) => {
           result.default(guildId);
         });
         FAILED = constants.ENDED;
-        const promise = asyncRequireImpl(13833, dependencyMap.paths);
+        const promise = asyncRequireImpl(13856, dependencyMap.paths);
       } else {
         if (tmp9) {
           FAILED = constants.FAILED;

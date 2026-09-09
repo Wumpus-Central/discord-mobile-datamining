@@ -51,7 +51,7 @@ export default function NUFChannelsActionSheet(markAsDismissed) {
     CTALabel: null,
     onCTAPress: null,
   });
-  return jsx(markAsDismissed(7150).BottomSheet, {
+  return jsx(markAsDismissed(7164).BottomSheet, {
     illustration: jsx(NUFChannelIllustrationDefault, {}),
     title: null,
     description: null,

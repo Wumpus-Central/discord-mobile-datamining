@@ -42,18 +42,18 @@ function SettingsEmoji(emoji) {
 const AnalyticEvents = fn(1074).AnalyticEvents;
 const EmojiIntention = fn(1374).EmojiIntention;
 const jsx = fn(21).jsx;
-fn(4560);
+fn(4574);
 let createStyles = { textEmoji: null };
 createStyles = { color: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT };
 createStyles.textEmoji = createStyles;
 let closure_7 = createStyles.createStyles(createStyles);
-const SettingBuilders = fn(11473);
+const SettingBuilders = fn(11500);
 const pressable = SettingBuilders.createPressable({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t["96WKNB"]);
   },
-  parent: fn(7975).MobileUserSettings.CHAT,
+  parent: fn(7989).MobileUserSettings.CHAT,
   useTrailing: function useDoubleTapEmojiSettingTrailing() {
     const DoubleTapReactionEmoji = UserSettings.DoubleTapReactionEmoji;
     const setting = DoubleTapReactionEmoji.useSetting();

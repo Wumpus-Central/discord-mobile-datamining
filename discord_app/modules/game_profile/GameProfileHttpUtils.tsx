@@ -177,7 +177,7 @@ let closure_10 = async function _getGameAnnouncements() {
   })();
 };
 const Endpoints = fn(1074).Endpoints;
-let closure_7 = fn(8766).SIMILAR_GAMES_BLOCKED_GAME_IDS;
+let closure_7 = fn(8794).SIMILAR_GAMES_BLOCKED_GAME_IDS;
 fn(504);
 const initialize = {
   getQueryId(arg0, arg1) {

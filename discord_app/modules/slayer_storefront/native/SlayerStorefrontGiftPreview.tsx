@@ -20,7 +20,7 @@ function WarningBox(application) {
     let obj = { look: InfoBox.InfoBoxLooks.WARNING, style: tmp.warningBox, children: null };
     const intl = util.intl;
     if (mobileAccountLinkingDisabled) {
-      BMMo2K = name(3417).BMMo2K;
+      BMMo2K = name(3430).BMMo2K;
       tmp2 = application == tmp2;
       name = undefined;
       if (!tmp2) {
@@ -49,7 +49,7 @@ function WarningBox(application) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4560);
+const createStyles = fn(4574);
 let closure_6 = createStyles.createStyles({
   container: { alignItems: "center", justifyContent: "center", gap: 16, marginTop: 20 },
   text: { textAlign: "center", paddingHorizontal: 32 },

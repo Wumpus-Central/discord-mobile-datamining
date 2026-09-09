@@ -117,7 +117,7 @@ let closure_16 = async function _getOrRefreshPushSyncToken(arg0) {
 };
 const Constants = fn(1074);
 ({ DEVICE_TOKEN: closure_7, DEVICE_VOIP_TOKEN: closure_8, Endpoints: closure_9 } = Constants);
-const PushNotificationConstants = fn(6596);
+const PushNotificationConstants = fn(6610);
 ({
   BUNDLE_ID: c10,
   DEVICE_PUSH_VOIP_PROVIDER: closure_11,
@@ -243,8 +243,8 @@ export default {
       } else if (arg0 !== 2) {
         closure_128_2 = value;
         if (closure_128_2.body.invalid_push_sync_tokens.length > 0) {
-          const result = v2(12421).invalidatePushSyncTokens(closure_128_2.body.invalid_push_sync_tokens);
-          v2(12421);
+          const result = v2(12447).invalidatePushSyncTokens(closure_128_2.body.invalid_push_sync_tokens);
+          v2(12447);
         }
       }
       return value;

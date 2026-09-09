@@ -1,6 +1,6 @@
 // discord_app/modules/media_viewer/native/components/MediaViewerItem.tsx
 import PlatformUtils2 from "../../../../utils/PlatformUtils.tsx";
-import LegacyBaseButton from "../../../../../_runtime/06655_LegacyBaseButton.js";
+import LegacyBaseButton from "../../../../../_runtime/06669_LegacyBaseButton.js";
 import useMediaViewerSources from "../useMediaViewerSources.tsx";
 import useEntranceAnimation from "../useEntranceAnimation.tsx";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
@@ -26,9 +26,8 @@ export const MediaViewerItem = noop.memo((index) => {
   c10 = undefined;
   c13 = undefined;
   let obscure;
-  let field;
-  let memo;
-  closure_19 = undefined;
+  let mediaItemHasSpoiler;
+  closure_18 = undefined;
   let callback3;
   let callback4;
   let callback5;
@@ -115,30 +114,28 @@ export const MediaViewerItem = noop.memo((index) => {
     flattenSourceResult = {};
   }
   obscure = flattenSourceResult.obscure;
-  const MediaViewerSourcesStore = tmp16(tmp8[9]).MediaViewerSourcesStore;
-  field = MediaViewerSourcesStore.useField("spoilerIndexes");
-  const items2 = [index, field];
-  memo = obj.useMemo(() => field.has(index), items2);
-  const tmp19 = onLongPress(panGestureConfig[10])(flattenSourceResult.channelId);
-  closure_19 = tmp19;
-  const items3 = [memo, index, onLongPress, tmp19];
+  const tmp11 = panGesture(zoomed.useState(false), 2);
+  mediaItemHasSpoiler = index(panGestureConfig[9]).useMediaItemHasSpoiler(index);
+  const tmp18 = onLongPress(panGestureConfig[10])(flattenSourceResult.channelId);
+  closure_18 = tmp18;
+  const items2 = [mediaItemHasSpoiler, index, onLongPress, tmp18];
   callback3 = obj.useCallback(() => {
-    if (memo) {
+    if (mediaItemHasSpoiler) {
       useMediaViewerSources.removeSpoiler(index);
-    } else if (!closure_19) {
+    } else if (!closure_18) {
       if (onLongPress != null) {
         tmp2();
       }
     }
-  }, items3);
-  const items4 = [zoomed, panGestureConfig];
+  }, items2);
+  const items3 = [zoomed, panGestureConfig];
   callback4 = obj.useCallback(() => {
     if (!zoomed.get()) {
       ({ overlayEnabled, overlayEnabled: overlayEnabled2 } = panGestureConfig);
       const result = overlayEnabled.set(!overlayEnabled2.get());
     }
-  }, items4);
-  const items5 = [callback1, callback, zoomed];
+  }, items3);
+  const items4 = [callback1, callback, zoomed];
   callback5 = obj.useCallback((arg0) => {
     ({ absoluteX, absoluteY } = arg0);
     if (zoomed.get()) {
@@ -146,18 +143,18 @@ export const MediaViewerItem = noop.memo((index) => {
     } else if (!zoomed.get()) {
       callback(absoluteX, absoluteY);
     }
-  }, items5);
-  const items6 = [index];
+  }, items4);
+  const items5 = [index];
   callback6 = obj.useCallback(() => {
     useMediaViewerSources.removeSpoiler(index);
-  }, items6);
-  const items7 = [callback5, callback3, callback6, memo, obscure, panGesture, callback4];
-  const memo1 = obj.useMemo(() => {
+  }, items5);
+  const items6 = [callback5, callback3, callback6, mediaItemHasSpoiler, obscure, panGesture, callback4];
+  const memo = obj.useMemo(() => {
     const Gesture = LegacyBaseButton.Gesture;
     const TapResult = Gesture.Tap();
     const runOnJSResult = Gesture.Tap().runOnJS(true);
-    const enabledResult = Gesture.Tap().runOnJS(true).enabled(!memo);
-    const numberOfTapsResult = Gesture.Tap().runOnJS(true).enabled(!memo).numberOfTaps(2);
+    const enabledResult = Gesture.Tap().runOnJS(true).enabled(!mediaItemHasSpoiler);
+    const numberOfTapsResult = Gesture.Tap().runOnJS(true).enabled(!mediaItemHasSpoiler).numberOfTaps(2);
     let num = 10;
     let num2 = 10;
     if (obj5.isAndroid()) {
@@ -169,24 +166,28 @@ export const MediaViewerItem = noop.memo((index) => {
     const onStartResult = numberOfTapsResult.maxDistance(num2).onStart(callback5);
     const TapResult1 = Gesture2.Tap();
     const runOnJSResult1 = Gesture2.Tap().runOnJS(true);
-    const enabledResult1 = Gesture2.Tap().runOnJS(true).enabled(!memo);
+    const enabledResult1 = Gesture2.Tap().runOnJS(true).enabled(!mediaItemHasSpoiler);
     let tmpResult = PlatformUtils2;
     let num3 = num;
     if (tmpResult.isAndroid()) {
       num3 = 20;
     }
-    const numberOfTapsResult1 = Gesture2.Tap().runOnJS(true).enabled(!memo).numberOfTaps(1);
-    const maxDistanceResult1 = Gesture2.Tap().runOnJS(true).enabled(!memo).numberOfTaps(1).maxDistance(num3);
+    const numberOfTapsResult1 = Gesture2.Tap().runOnJS(true).enabled(!mediaItemHasSpoiler).numberOfTaps(1);
+    const maxDistanceResult1 = Gesture2.Tap()
+      .runOnJS(true)
+      .enabled(!mediaItemHasSpoiler)
+      .numberOfTaps(1)
+      .maxDistance(num3);
     const Gesture3 = LegacyBaseButton.Gesture;
     const onStartResult1 = Gesture2.Tap()
       .runOnJS(true)
-      .enabled(!memo)
+      .enabled(!mediaItemHasSpoiler)
       .numberOfTaps(1)
       .maxDistance(num3)
       .onStart(callback4);
     const TapResult2 = Gesture3.Tap();
-    let tmp6 = memo;
-    if (memo) {
+    let tmp6 = mediaItemHasSpoiler;
+    if (mediaItemHasSpoiler) {
       tmp6 = !obscure;
     }
     const runOnJSResult2 = Gesture3.Tap().runOnJS(true);
@@ -212,26 +213,26 @@ export const MediaViewerItem = noop.memo((index) => {
     );
     const LongPressResult = Gesture5.LongPress();
     const runOnJSResult3 = Gesture5.LongPress().runOnJS(true);
-    const enabledResult3 = Gesture5.LongPress().runOnJS(true).enabled(!memo);
+    const enabledResult3 = Gesture5.LongPress().runOnJS(true).enabled(!mediaItemHasSpoiler);
     const Gesture6 = LegacyBaseButton.Gesture;
     return Gesture6.Simultaneous(
       ExclusiveResult,
-      Gesture5.LongPress().runOnJS(true).enabled(!memo).onStart(callback3),
+      Gesture5.LongPress().runOnJS(true).enabled(!mediaItemHasSpoiler).onStart(callback3),
       panGesture,
     );
-  }, items7);
+  }, items6);
   obj.useRef(false);
-  const items8 = [callback1, tmp2, tmp4];
+  const items7 = [callback1, tmp2, tmp4];
   const effect2 = obj.useEffect(() => {
     if (ref3.current) {
       callback1(false);
     } else {
       tmp.current = true;
     }
-  }, items8);
+  }, items7);
   obj = {
-    gesture: memo1,
-    children: windowHeight(tmp7(tmp8[12]), {
+    gesture: memo,
+    children: windowHeight(tmp7(tmp8[13]), {
       entranceAnimationDriver,
       index,
       originLayout,
@@ -243,15 +244,15 @@ export const MediaViewerItem = noop.memo((index) => {
       useItemVisible,
     }),
   };
-  const tmp27 = windowHeight(index(panGestureConfig[11]).GestureDetector, obj);
+  const tmp26 = windowHeight(index(panGestureConfig[12]).GestureDetector, obj);
   if (ref) {
     obj = { ref: ref1, style: null, minimumZoomScale: 1, maximumZoomScale: null, onZoomChanged: null, children: null };
     let size = { width: tmp2, height: tmp4 };
     obj.style = size;
     obj.maximumZoomScale = maximumZoomScale;
     obj.onZoomChanged = callback2;
-    obj.children = tmp27;
-    let tmp26Result = tmp26(tmp7(tmp8[13]), obj);
+    obj.children = tmp26;
+    let tmp25Result = tmp25(tmp7(tmp8[14]), obj);
   } else {
     obj1 = {
       ref,
@@ -276,8 +277,8 @@ export const MediaViewerItem = noop.memo((index) => {
       str = "none";
     }
     obj1.pointerEvents = str;
-    obj1.children = tmp27;
-    tmp26Result = tmp26(windowWidth, obj1);
+    obj1.children = tmp26;
+    tmp25Result = tmp25(windowWidth, obj1);
   }
-  return tmp26Result;
+  return tmp25Result;
 });

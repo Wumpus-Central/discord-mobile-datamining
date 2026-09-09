@@ -7,7 +7,7 @@ import noop from "../../../../../../_runtime/metro/00019__.js";
 require = fn;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-fn(4560);
+fn(4574);
 let createStyles = { container: { flex: 1, alignItems: "center", justifyContent: "center" }, copy: null };
 createStyles = { color: nativeDefault.colors.TEXT_BRAND };
 createStyles.copy = createStyles;
@@ -25,7 +25,7 @@ export default function TwoFASetupScan(totpSecret) {
     closure_1(true);
     ClipboardUtils.copy(totpSecret.replace(/[^a-zA-Z0-9]/g, ""));
   }, items);
-  let obj = totpSecret(14789);
+  let obj = totpSecret(14815);
   const twoFASetupStyles = obj.useTwoFASetupStyles();
   obj = { bottom: true, style: tmp.container, children: null };
   obj = { style: null, children: null };
@@ -42,7 +42,7 @@ export default function TwoFASetupScan(totpSecret) {
   const intl2 = totpSecret(1114).intl;
   obj1.children = intl2.string(totpSecret(1114).t["UQR+Qy"]);
   items2[1] = closure_4(totpSecret(1178).LegacyText, obj1);
-  items2[2] = closure_4(totpSecret(4556).Text, {
+  items2[2] = closure_4(totpSecret(4570).Text, {
     variant: "text-md/bold",
     style: { textAlign: "center" },
     children: totpSecret,
@@ -60,8 +60,8 @@ export default function TwoFASetupScan(totpSecret) {
   const obj4 = { children: null };
   obj3.children = stringResult;
   obj2.children = closure_4(totpSecret(1178).LegacyText, obj3);
-  items2[3] = closure_4(totpSecret(5123).PressableOpacity, obj2);
+  items2[3] = closure_4(totpSecret(5137).PressableOpacity, obj2);
   obj.children = items2;
-  obj4.children = closure_5(totpSecret(7123).SafeAreaPaddingView, obj);
-  return closure_4(totpSecret(14785).TwoFASetupModalScreen, obj4);
+  obj4.children = closure_5(totpSecret(7137).SafeAreaPaddingView, obj);
+  return closure_4(totpSecret(14811).TwoFASetupModalScreen, obj4);
 }

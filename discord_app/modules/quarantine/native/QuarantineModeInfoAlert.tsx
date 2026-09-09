@@ -10,7 +10,7 @@ import TextStyles from "../../rebrand/native/TextStyles.tsx";
 require = fn;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-fn(4560);
+fn(4574);
 let createStyles = { header: null, text: null };
 createStyles = {};
 const merged = Object.assign(

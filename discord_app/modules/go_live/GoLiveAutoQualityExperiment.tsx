@@ -6,7 +6,7 @@ import ApplicationStreamingSettingsStore from "../../stores/ApplicationStreaming
 import ApexExperiment from "../experiments/apex/ApexExperiment.tsx";
 
 require = fn;
-const ApplicationStreamPresets = fn(4607).ApplicationStreamPresets;
+const ApplicationStreamPresets = fn(4621).ApplicationStreamPresets;
 let obj = { allowAutoQuality: false, defaultAutoQuality: false, migrateAutoQuality: false };
 const GoLiveAutoQualityMigrationVersion = "GoLiveAutoQualityMigrationVersion";
 obj = { name: "2025-10-go-live-auto-quality", kind: "user", defaultConfig: obj, variations: null };

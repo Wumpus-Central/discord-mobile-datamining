@@ -11,13 +11,13 @@ function TabItemCount(arg0) {
   ({ index, activeIndex, pressed } = arg0);
   let sharedValue;
   ({ count, variant } = arg0);
-  let obj = sharedValue(4296);
+  let obj = sharedValue(4310);
   sharedValue = obj.useSharedValue(0);
   let items = [sharedValue];
   const layoutEffect = noop.useLayoutEffect(() => {
     const result = sharedValue.set(1);
   }, items);
-  let obj1 = sharedValue(4296);
+  let obj1 = sharedValue(4310);
   class T {
     constructor() {
       obj = { opacity: null, transform: null };
@@ -34,10 +34,10 @@ function TabItemCount(arg0) {
     }
   }
   obj = {
-    withSpring: sharedValue(4974).withSpring,
+    withSpring: sharedValue(4988).withSpring,
     countAnimationState: sharedValue,
     COUNT_SPRING_CONFIG,
-    interpolate: sharedValue(4296).interpolate,
+    interpolate: sharedValue(4310).interpolate,
   };
   T.__closure = obj;
   T.__workletHash = 16666672974627;
@@ -68,14 +68,14 @@ function TabItemCount(arg0) {
     obj.color = spring.withSpring(active, closure_7, "animate-always");
     return obj;
   };
-  obj = { colors: tmp7, pressed, index, activeIndex, withSpring: tmp2(4974).withSpring, TEXT_SPRING_CONFIG };
+  obj = { colors: tmp7, pressed, index, activeIndex, withSpring: tmp2(4988).withSpring, TEXT_SPRING_CONFIG };
   fn.__closure = obj;
   fn.__workletHash = 11643476765161;
   fn.__initData = __initData;
-  const animatedStyle1 = sharedValue(4296).useAnimatedStyle(fn);
+  const animatedStyle1 = sharedValue(4310).useAnimatedStyle(fn);
   obj1 = {
     style: null,
-    children: closure_4(tmp2(4556).Text, {
+    children: closure_4(tmp2(4570).Text, {
       animated: true,
       variant: "text-sm/medium",
       style: animatedStyle1,
@@ -92,7 +92,7 @@ const jsxProd = fn(21);
 let closure_6 = ReanimatedRexport.createAnimatedComponent(fn(17).Pressable);
 const TEXT_SPRING_CONFIG = { mass: 0.3, damping: 13, stiffness: 250, overshootClamping: true };
 const COUNT_SPRING_CONFIG = { mass: 2, damping: 30, stiffness: 300, overshootClamping: true };
-let createStyles = fn(4560);
+let createStyles = fn(4574);
 let obj = {
   item: { flexShrink: 0, flexBasis: 0, paddingBottom: 14, flexDirection: "row", justifyContent: "center" },
   count: null,
@@ -100,14 +100,14 @@ let obj = {
 obj = { marginLeft: nativeDefault.space.PX_8 };
 obj.count = obj;
 let closure_9 = createStyles.createStyles(obj);
-fn(4560);
+fn(4574);
 createStyles = {
   inactive: nativeDefault.colors.TEXT_MUTED,
   active: nativeDefault.colors.TEXT_BRAND,
   pressed: nativeDefault.colors.TEXT_BRAND,
 };
 let closure_10 = createStyles.createStyleProperties(createStyles);
-createStyles = fn(4560);
+createStyles = fn(4574);
 let closure_11 = createStyles.createStyleProperties({
   inactive: nativeDefault.colors.TEXT_MUTED,
   active: nativeDefault.colors.TEXT_STRONG,

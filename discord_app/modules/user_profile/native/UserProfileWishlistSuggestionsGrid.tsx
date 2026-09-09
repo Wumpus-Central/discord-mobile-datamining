@@ -62,7 +62,7 @@ function WishlistSuggestionsGridContents(arg0) {
   ({ userId, wishlist, isDismissible } = arg0);
   let trackUserProfileWishlistAction;
   ({ wishlistId, containerWidth, maxWidth, markAsDismissed } = arg0);
-  let obj = trackUserProfileWishlistAction(8190);
+  let obj = trackUserProfileWishlistAction(8216);
   trackUserProfileWishlistAction = obj.useUserProfileAnalyticsContext().trackUserProfileWishlistAction;
   const tmp3 = closure_15();
   let obj1 = trackUserProfileWishlistAction(504);
@@ -87,13 +87,13 @@ function WishlistSuggestionsGridContents(arg0) {
   }, items1);
   obj = { minCardSize: 80, maxCardSize: 120, containerWidth, maxWidth, sidePadding: closure_8 + PX_16 + 1, gap };
   const analyticsLocations = useAnalyticsLocationsDefault().analyticsLocations;
-  let obj3 = trackUserProfileWishlistAction(13096);
+  let obj3 = trackUserProfileWishlistAction(13122);
   obj = {
     userId,
     wishlist,
     numWishlistItemsToRecommend: 15,
     maxWishlistItemsToShow: 9,
-    source: trackUserProfileWishlistAction(8781).WishlistFetchSource.USER_PROFILE,
+    source: trackUserProfileWishlistAction(8809).WishlistFetchSource.USER_PROFILE,
   };
   const items2 = obj3.useAddToWishlistGridItems(obj).items;
   const items3 = [trackUserProfileWishlistAction];
@@ -115,14 +115,14 @@ function WishlistSuggestionsGridContents(arg0) {
     let obj2 = {
       size: "md",
       variant: "secondary",
-      icon: closure_12(tmp(12142).ShopIcon, { size: "sm" }),
+      icon: closure_12(tmp(12168).ShopIcon, { size: "sm" }),
       text: null,
       onPress: null,
     };
     const intl3 = tmp(1114).intl;
     obj2.text = intl3.string(tmp(1114).t.RSyoZu);
     obj2.onPress = callback;
-    obj1.children = closure_12(tmp(4975).Button, obj2);
+    obj1.children = closure_12(tmp(4989).Button, obj2);
     let tmp12Result = closure_12(View, obj1);
   } else {
     obj3 = { newValue: null, children: null };
@@ -146,7 +146,7 @@ function WishlistSuggestionsGridContents(arg0) {
     };
     const intl4 = tmp(1114).intl;
     obj7.children = intl4.string(tmp(1114).t["+GB8Kt"]);
-    const items4 = [closure_12(tmp(4556).Text, obj7)];
+    const items4 = [closure_12(tmp(4570).Text, obj7)];
     const items5 = [tmp3.dismissButton];
     let hiddenDismissButton = !isDismissible;
     if (!isDismissible) {
@@ -174,11 +174,11 @@ function WishlistSuggestionsGridContents(arg0) {
     obj8.importantForAccessibility = str2;
     const obj9 = { size: "sm", variant: "icon-only", icon: null, onPress: null, accessibilityLabel: null };
     const obj10 = { size: "sm", color: nativeDefault.colors.CONTROL_ICON_ONLY_ICON_DEFAULT };
-    obj9.icon = closure_12(tmp(5680).XSmallIcon, obj10);
+    obj9.icon = closure_12(tmp(5694).XSmallIcon, obj10);
     obj9.onPress = markAsDismissed;
     const intl = tmp(1114).intl;
     obj9.accessibilityLabel = intl.string(tmp(1114).t.WAI6xu);
-    obj8.children = closure_12(tmp(8097).IconButton, obj9);
+    obj8.children = closure_12(tmp(8113).IconButton, obj9);
     items4[1] = closure_12(View, obj8);
     obj6.children = items4;
     const items6 = [closure_13(View, obj6), ,];
@@ -188,31 +188,31 @@ function WishlistSuggestionsGridContents(arg0) {
     const obj13 = {
       size: "md",
       variant: "secondary",
-      icon: closure_12(tmp(12142).ShopIcon, { size: "sm" }),
+      icon: closure_12(tmp(12168).ShopIcon, { size: "sm" }),
       text: null,
       onPress: null,
     };
     const intl2 = tmp(1114).intl;
     obj13.text = intl2.string(tmp(1114).t.RSyoZu);
     obj13.onPress = callback;
-    obj12.children = closure_12(tmp(4975).Button, obj13);
+    obj12.children = closure_12(tmp(4989).Button, obj13);
     items6[2] = closure_12(View, obj12);
     obj5.children = items6;
     obj3.children = closure_13(ReanimatedRexportDefault.View, obj5);
-    tmp12Result = closure_12(tmp(13097).WishlistAnalyticsProvider, obj3);
+    tmp12Result = closure_12(tmp(13123).WishlistAnalyticsProvider, obj3);
   }
   return tmp12Result;
 }
 const View = fn(17).View;
-let closure_7 = fn(8183).TrackUserProfileWishlistActions;
-const Constants = fn(7208);
+let closure_7 = fn(8209).TrackUserProfileWishlistActions;
+const Constants = fn(7222);
 ({ PROFILE_SIDE_PADDING: closure_8, WISHLIST_SUGGESTION_CARD_GAP: closure_9 } = Constants);
 const SKUProductLines = fn(1074).SKUProductLines;
 let closure_11 = fn(1076).CollectiblesMobileShopScreen;
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
 const PX_16 = nativeDefault.space.PX_16;
-fn(4560);
+fn(4574);
 let createStyles = {
   container: null,
   headerRow: null,

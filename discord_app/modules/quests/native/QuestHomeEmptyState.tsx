@@ -5,9 +5,9 @@ import PlatformUtils from "../../../utils/PlatformUtils.tsx";
 import useToken from "../../../design/tokens/native/useToken.tsx";
 import useChatLayoutDefault from "../../chat/native/useChatLayout.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
-import LinearGradientDefault from "../../../../_runtime/04987_LinearGradient.js";
+import LinearGradientDefault from "../../../../_runtime/05001_LinearGradient.js";
 import common_SafeAreaView from "../../../components_native/common/SafeAreaView.tsx";
-import _modDef15067 from "../../../../_runtime/metro/15067__.js";
+import _modDef15094 from "../../../../_runtime/metro/15094__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -16,7 +16,7 @@ get_ActivityIndicator = fn(17);
 const VerticalGradient = fn(1074).VerticalGradient;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7, Fragment: closure_8 } = jsxProd);
-fn(4560);
+fn(4574);
 let createStyles = {
   container: { flex: 1 },
   emptyStateContainer: { justifyContent: "center", alignItems: "center", flex: 1 },
@@ -92,7 +92,7 @@ export default function QuestHomeEmptyState(subtitle) {
   let tmp11Result = null;
   if (!useChatLayoutDefault().isChatLockedOpen) {
     const obj6 = { children: null };
-    const obj7 = { style: tmp5.emptyImage, source: _modDef15067, resizeMode: "cover" };
+    const obj7 = { style: tmp5.emptyImage, source: _modDef15094, resizeMode: "cover" };
     const items2 = [timestampProducer(React4, obj7)];
     const obj8 = { style: tmp5.gradient, end: null, start: null, colors: null };
     ({ END: obj12.end, START: obj12.start } = VerticalGradient);

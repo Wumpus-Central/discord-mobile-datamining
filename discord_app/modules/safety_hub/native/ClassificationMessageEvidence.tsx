@@ -15,7 +15,7 @@ get_ActivityIndicator = fn(17);
   Image: closure_7,
   ActivityIndicator: closure_8,
 } = get_ActivityIndicator);
-const SafetyHubConstants = fn(8419);
+const SafetyHubConstants = fn(8447);
 ({
   DEFAULT_MEDIA_MAX_WIDTH: closure_12,
   DEFAULT_MEDIA_MAX_HEIGHT: map1,
@@ -27,7 +27,7 @@ const MessageTypes = fn(1074).MessageTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_18, jsxs: closure_19 } = jsxProd);
 const rowGenerator = new RowGeneratorDefault();
-const createStyles = fn(4560);
+const createStyles = fn(4574);
 let closure_21 = createStyles.createStyles({ dummyVideoAttachments: { width: 0, height: 0 } });
 let size = fn(2);
 const result = size.fileFinishedImporting("modules/safety_hub/native/ClassificationMessageEvidence.tsx");
@@ -48,11 +48,11 @@ export default function ClassificationEvidence(arg0) {
   let obj2 = ref(504);
   const items1 = [id];
   const resolveAssetSource = first3.resolveAssetSource;
-  if (obj2.useStateFromStores(items1, () => ref(4411).isThemeLight(id.theme))) {
-    let assetSource = resolveAssetSource(tmp11(11897));
+  if (obj2.useStateFromStores(items1, () => ref(4425).isThemeLight(id.theme))) {
+    let assetSource = resolveAssetSource(tmp11(11923));
     let tmp13 = tmp11;
   } else {
-    assetSource = resolveAssetSource(tmp11(11898));
+    assetSource = resolveAssetSource(tmp11(11924));
     tmp13 = tmp11;
   }
   let first2 = arg0.flaggedContent[0];
@@ -74,10 +74,10 @@ export default function ClassificationEvidence(arg0) {
         str = "";
       }
       obj.filename = str;
-      obj.flags = ref(8418).getSpoilerFlagsForAttachment(filename);
+      obj.flags = ref(8446).getSpoilerFlagsForAttachment(filename);
       obj.size = 0;
       obj.proxy_url = filename.url;
-      const obj2 = ref(8418);
+      const obj2 = ref(8446);
       if (obj3.isImageFile(filename.filename)) {
         obj = {};
         const merged1 = Object.assign(obj);
@@ -109,7 +109,7 @@ export default function ClassificationEvidence(arg0) {
           obj.filename = filename;
           tmp4 = obj;
         }
-        tmp2Result = ref(4710);
+        tmp2Result = ref(4724);
       }
       return tmp4;
     });
@@ -231,11 +231,11 @@ export default function ClassificationEvidence(arg0) {
     const items8 = [closure_18(closure_8, {})];
     obj = { style: attachments.dummyVideoAttachments, children: null };
     attachments = first2.attachments;
-    first2 = attachments.filter((filename) => ref(4710).isVideoFile(filename.filename));
+    first2 = attachments.filter((filename) => ref(4724).isVideoFile(filename.filename));
     obj.children = first2.map((uri, index) => {
       closure_0 = uri;
       return closure_1_18(
-        first(8308),
+        first(8336),
         {
           source: { uri: uri.url },
           onLoad(arg0) {
@@ -261,10 +261,10 @@ export default function ClassificationEvidence(arg0) {
     let obj5 = obj;
   } else {
     obj1 = { ref, onTapImage: callback, inverted: false };
-    const items9 = [closure_18(tmp13(11899), obj1)];
+    const items9 = [closure_18(tmp13(11925), obj1)];
     obj2 = { rowGenerator, message: null, modifyRow: null, pointerEvents: "none" };
-    tmp13(8657);
-    tmpResult = tmp(4783);
+    tmp13(8685);
+    tmpResult = tmp(4797);
     const obj3 = {
       id: first2.id,
       timestamp: null,

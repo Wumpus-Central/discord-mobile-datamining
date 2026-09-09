@@ -7,7 +7,7 @@ import ChannelStore from "../../../../stores/ChannelStore.tsx";
 const require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4560);
+const createStyles = fn(4574);
 let closure_6 = createStyles.createStyles((arg0) => {
   const container = {
     flex: 1,
@@ -44,7 +44,7 @@ export default function ConversationNavigatorHeader(channelId) {
     variant: "heading-lg/semibold",
     subtitleColor: "text-muted",
   };
-  obj.children = jsx(channelId(7863).GenericHeaderTitle, {
+  obj.children = jsx(channelId(7877).GenericHeaderTitle, {
     title: channelId.title,
     subtitle: useChannelNameDefault(stateFromStores, true),
     variant: "heading-lg/semibold",

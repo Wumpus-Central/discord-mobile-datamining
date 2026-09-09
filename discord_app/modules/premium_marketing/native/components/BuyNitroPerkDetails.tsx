@@ -17,7 +17,7 @@ const Image = fn(17).Image;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
 const BuyNitroPerkDetailsActionSheet = "BuyNitroPerkDetailsActionSheet";
-const createStyles = fn(4560);
+const createStyles = fn(4574);
 let closure_7 = createStyles.createStyles({ illustration: { width: "100%", height: 180 } });
 let closure_8 = noop.memo((perk) => {
   perk = perk.perk;
@@ -28,8 +28,13 @@ let closure_8 = noop.memo((perk) => {
   let tmp6Result = null;
   if (null != detail) {
     obj = { title: perk.label, description: null, illustration: null, actions: null };
-    const intl = util.intl;
-    obj.description = intl.string(detail.description);
+    if (typeof detail.description === "string") {
+      let description = detail.description;
+    } else {
+      const intl = util.intl;
+      description = intl.string(detail.description);
+    }
+    obj.description = description;
     obj = { source: detail.image, style: tmp.illustration, resizeMode: "contain" };
     obj.illustration = React4(Image, obj);
     const obj1 = { spacing: nativeDefault.space.PX_12, children: null };

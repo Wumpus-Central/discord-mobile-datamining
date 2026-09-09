@@ -11,8 +11,8 @@ import Pressables from "../../../design/void/Pressables/native/Pressables.tsx";
 import GuildIconDefault from "../../guild/native/GuildIcon.tsx";
 import TrophyIcon from "../../../design/components/Icon/native/redesign/generated/TrophyIcon.tsx";
 import PremiumFeatureUpsellUtils from "../../premium/roadblocks/native/utils/PremiumFeatureUpsellUtils.tsx";
-import _modDef10396 from "../../../../_runtime/metro/10396__.js";
-import _modDef17080 from "../../../../_runtime/metro/17080__.js";
+import _modDef10423 from "../../../../_runtime/metro/10423__.js";
+import _modDef17111 from "../../../../_runtime/metro/17111__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 import UserStore from "../../../stores/UserStore.tsx";
 
@@ -34,7 +34,7 @@ function SoundCategoryItem(style) {
   } else if (SoundboardTypes.SoundboardSoundGridSectionType.FAVORITES === type) {
     const intl4 = util.intl;
     name = intl4.string(util.t.y3LQCG);
-    tmp6 = _modDef10396;
+    tmp6 = _modDef10423;
     tmp7 = null;
     tmp14Result = null;
   } else if (SoundboardTypes.SoundboardSoundGridSectionType.FREQUENTLY_USED === type) {
@@ -47,13 +47,13 @@ function SoundCategoryItem(style) {
   } else if (SoundboardTypes.SoundboardSoundGridSectionType.DEFAULTS === type) {
     const intl2 = util.intl;
     name = intl2.string(util.t.Rtvk9X);
-    tmp6 = _modDef17080;
+    tmp6 = _modDef17111;
     tmp7 = null;
     tmp14Result = null;
   } else if (SoundboardTypes.SoundboardSoundGridSectionType.SEARCH === type) {
     const intl = util.intl;
     name = intl.string(util.t.sKt3xS);
-    tmp6 = _modDef17080;
+    tmp6 = _modDef17111;
     tmp7 = null;
     tmp14Result = null;
   } else {
@@ -107,12 +107,12 @@ function getItemLayout(arg0, index) {
 get_ActivityIndicator = fn(17);
 const StyleSheet = get_ActivityIndicator.StyleSheet;
 ({ View: hasOwnProperty, FlatList: metroRequire } = get_ActivityIndicator);
-const setSearchQuery = fn(17064).setSearchQuery;
+const setSearchQuery = fn(17095).setSearchQuery;
 const Constants = fn(1074);
 ({ CATEGORY_ICON_SIZE, EXPRESSION_FOOTER_HEIGHT: closure_9, NODE_SIZE, NODE_MARGIN } = Constants);
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-fn(4560);
+fn(4574);
 let obj = {
   container: null,
   item: null,
@@ -251,13 +251,18 @@ export default noop.memo(function SoundboardSoundPickerCategories(guildId) {
     }
     fadedItem = closure_3.fadedItem;
   }, items3);
+  const memo = noop.useMemo(() => {
+    const Gesture = guildId(listRef[24]).Gesture;
+    return Gesture.Native().disallowInterruption(true);
+  }, []);
   obj = { hostName: "soundboard-footer", children: null };
   obj = { style: null, children: null };
   const items4 = [tmp.container, { paddingBottom: categoryIndex(listRef[23])().bottom }, style];
   obj.style = items4;
-  const items5 = [
-    closure_10(categoryIndex(listRef[25]), { style: ref.absoluteFill }),
-    closure_10(closure_14, {
+  const items5 = [closure_10(categoryIndex(listRef[26]), { style: ref.absoluteFill })];
+  let obj2 = {
+    gesture: memo,
+    children: closure_10(closure_14, {
       ref,
       getItemLayout,
       onLayout: callback,
@@ -271,8 +276,9 @@ export default noop.memo(function SoundboardSoundPickerCategories(guildId) {
       renderItem: callback3,
       showsHorizontalScrollIndicator: false,
     }),
-  ];
+  };
+  items5[1] = closure_10(guildId(listRef[24]).GestureDetector, obj2);
   obj.children = items5;
   obj.children = closure_11(ref, obj);
-  return closure_10(guildId(listRef[24]).Portal, obj);
+  return closure_10(guildId(listRef[25]).Portal, obj);
 });

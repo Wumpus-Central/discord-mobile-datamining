@@ -19,7 +19,7 @@ export default function PasswordlessUpsellPromoSheet() {
     const result1 = setRegistering(onRegisterSuccess[6]).openPasskeyUpsellPromoModal(merged);
   }
   let obj = {
-    source: require("../../../../_runtime/metro/14669__.js"),
+    source: require("../../../../_runtime/metro/14695__.js"),
     style: { height: 190, width: 220, resizeMode: "contain" },
   };
   const tmp4 = closure_7(Image, obj);

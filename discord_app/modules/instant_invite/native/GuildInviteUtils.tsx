@@ -2,7 +2,7 @@
 import AnalyticsUtilsDefault from "../../../utils/AnalyticsUtils.tsx";
 import asyncRequireImpl from "../../../../_runtime/01896_asyncRequireImpl.js";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
-import fuzzysearchDefault from "../../../../_runtime/05517_fuzzysearch.js";
+import fuzzysearchDefault from "../../../../_runtime/05531_fuzzysearch.js";
 import InstantInviteActionCreatorsDefault from "../../../actions/InstantInviteActionCreators.tsx";
 import InstantInviteUtilsDefault from "../../../utils/InstantInviteUtils.tsx";
 import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
@@ -63,7 +63,7 @@ let closure_16 = async function _sendGuildInvite(arg0) {
     obj3.inviteAnalyticsMetadata = obj4;
     obj4.enqueue(obj3, () => {
       closure_2_12(closure_1_0, closure_1_1, constants.SENT);
-      const AccessibilityAnnouncer = closure_0(4272).AccessibilityAnnouncer;
+      const AccessibilityAnnouncer = closure_0(4285).AccessibilityAnnouncer;
       const intl = closure_0(1114).intl;
       AccessibilityAnnouncer.announce(intl.string(closure_0(1114).t.PuLLzP));
     });
@@ -71,8 +71,8 @@ let closure_16 = async function _sendGuildInvite(arg0) {
   }
   return value;
 };
-const setSendState = fn(13103).setSendState;
-const InviteSendStates = fn(7736).InviteSendStates;
+const setSendState = fn(13129).setSendState;
+const InviteSendStates = fn(7750).InviteSendStates;
 const Constants = fn(1074);
 ({ Permissions: closure_14, AnalyticEvents: closure_15 } = Constants);
 const size = fn(2);
@@ -83,7 +83,7 @@ export const showGuildInviteActionSheet = function showGuildInviteActionSheet(id
   obj.track(constants2.OPEN_POPOUT, obj);
   const obj3 = ActionSheetActionCreatorsDefault;
   obj = { recipientId: id, source: newestAnalyticsLocation };
-  obj3.openLazy(asyncRequireImpl(13104, dependencyMap.paths), "invite-to-guilds-" + id, obj);
+  obj3.openLazy(asyncRequireImpl(13130, dependencyMap.paths), "invite-to-guilds-" + id, obj);
 };
 export const useServerInviteRows = function useServerInviteRows(id, query) {
   _require = id;

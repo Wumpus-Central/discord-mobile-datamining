@@ -9,14 +9,14 @@ require = fn;
 const ContentDismissActionType = fn(1954).ContentDismissActionType;
 const jsx = fn(21).jsx;
 let items = [fn(1943).DismissibleContent.MOBILE_ACCESSIBILITY_COLOR_SETTINGS];
-fn(11473);
+fn(11500);
 let SettingBuilders = {
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.G0neg7);
   },
   parent: null,
-  IconComponent: fn(15330).AccessibilityIcon,
+  IconComponent: fn(15359).AccessibilityIcon,
   useTrailing() {
     let obj = useSelectedDismissibleContent;
     [tmp4, r10012] = _slicedToArray(obj.useSelectedDismissibleContent(items), 2);
@@ -37,7 +37,7 @@ let SettingBuilders = {
     return tmp5;
   },
   usePreNavigationAction() {
-    const tmp = _slicedToArray(first(7388).useSelectedDismissibleContent(items), 2);
+    const tmp = _slicedToArray(first(7402).useSelectedDismissibleContent(items), 2);
     first = tmp[0];
     dependencyMap = tmp3;
     items = [tmp[1], first];

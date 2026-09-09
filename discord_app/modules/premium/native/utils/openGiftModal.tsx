@@ -8,7 +8,7 @@ const result = size.fileFinishedImporting("modules/premium/native/utils/openGift
 export const openGiftModal = function openGiftModal(navigationParams) {
   const merged = Object.assign(navigationParams, Object.assign({ navigationParams: 0 }));
   ModalActionCreatorsDefault.pushLazy(
-    asyncRequireImpl(10667, dependencyMap.paths),
+    asyncRequireImpl(10694, dependencyMap.paths),
     merged,
     "gift_modal_key",
     navigationParams.navigationParams,

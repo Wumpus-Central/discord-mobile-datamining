@@ -1024,7 +1024,7 @@ prototype["upload"] = function upload() {
                     }
                     if (tmp130) {
                       closure_3 = closure_133_0;
-                      let obj13 = status(5157);
+                      let obj13 = status(5171);
                       c8 = 3;
                       c9 = 1;
                       const obj4 = { value: obj13.fromBlob(file).catch(() => null), done: false };
@@ -1074,10 +1074,10 @@ prototype["upload"] = function upload() {
                     }
                     closure_133_0.uploadAnalytics.timing.compressTimeMs = closure_132_4.compressTimeMs;
                   }
-                  const uploadPayload = v0(5173).default.getUploadPayload(closure_133_0);
+                  const uploadPayload = v0(5187).default.getUploadPayload(closure_133_0);
                   c8 = 5;
                   c9 = 1;
-                  const _default = v0(5173).default;
+                  const _default = v0(5187).default;
                 }
               } else if (5 === tmp9) {
                 if (arg0 === 1) {
@@ -1089,14 +1089,14 @@ prototype["upload"] = function upload() {
                   return obj6;
                 } else {
                   closure_132_5 = value;
-                  uploadTarget = v0(5174).getUploadTarget(closure_133_0.item.target);
+                  uploadTarget = v0(5188).getUploadTarget(closure_133_0.item.target);
                   if (null != closure_132_5.filename) {
                     if ("" !== closure_132_5.filename) {
                       const currentSize2 = closure_133_0.currentSize;
                       if (0 !== closure_133_0.currentSize) {
-                        obj5 = v0(5179);
+                        obj5 = v0(5193);
                         kestrelConfig = obj5.getKestrelConfig({ location: "CloudUpload.upload.postCompressionCheck" });
-                        obj6 = v0(5179);
+                        obj6 = v0(5193);
                         effectiveKestrelLimit = obj6.getEffectiveKestrelLimit(kestrelConfig, uploadTarget.getMaxFileSize(closure_133_0.channelId));
                         const currentSize = closure_133_0.currentSize;
                         v0 = currentSize;
@@ -1239,14 +1239,14 @@ prototype["upload"] = function upload() {
               tmp141 = tmp144;
             }
             if (!tmp141) {
-              obj12 = v0(5171);
+              obj12 = v0(5185);
               closure_133_0.mimeType = obj12.heicMimeType(file);
             }
           }
           if (closure_133_0.isCancelled()) {
             closure_133_0.handleComplete(closure_133_0.id);
           } else if (closure_133_0.allowOptimization) {
-            if (closure_133_0.item.platform === v0(5128).UploadPlatform.WEB) {
+            if (closure_133_0.item.platform === v0(5142).UploadPlatform.WEB) {
               if (!closure_132_0) {
                 if (true !== closure_133_0.item.heicConversionEvaluated) {
                   c8 = 4;
@@ -1263,11 +1263,11 @@ prototype["upload"] = function upload() {
         } else {
           closure_132_0 = false;
           if (closure_133_0.allowOptimization) {
-            if (closure_133_0.item.platform === v0(5128).UploadPlatform.WEB) {
+            if (closure_133_0.item.platform === v0(5142).UploadPlatform.WEB) {
               if (true !== closure_133_0.item.heicConversionEvaluated) {
                 if (null != closure_133_0.item.file) {
                   if (obj25.isHeicFile(closure_133_0.item.file)) {
-                    const HeicUploadConversionExperiment = v0(5172).HeicUploadConversionExperiment;
+                    const HeicUploadConversionExperiment = v0(5186).HeicUploadConversionExperiment;
                     config = HeicUploadConversionExperiment.getConfig({ location: "CloudUpload.tryConvertHeicToJpeg" });
                     if (config.enabled) {
                       file = closure_133_0.item.file;
@@ -1277,7 +1277,7 @@ prototype["upload"] = function upload() {
                       return obj14;
                     }
                   }
-                  obj25 = v0(5171);
+                  obj25 = v0(5185);
                 }
               }
             }
@@ -1365,7 +1365,7 @@ prototype["reactNativeCompressAndExtractData"] = function reactNativeCompressAnd
               const obj3 = { value: self, done: true };
               return obj3;
             }
-            obj17 = size(5174);
+            obj17 = size(5188);
           }
         } else {
           if (1 === tmp5) {
@@ -1440,7 +1440,7 @@ prototype["reactNativeCompressAndExtractData"] = function reactNativeCompressAnd
                         const fileSize = closure_129_0.fileSize;
                         size = fileSize;
                         if (fileSize == null) {
-                          obj2 = size(5129);
+                          obj2 = size(5143);
                           c3 = 2;
                           c4 = 1;
                           const obj5 = { value: obj2.getFileData(uri), done: false };
@@ -1883,7 +1883,7 @@ prototype["delete"] = function delete() {
             obj = { value, done: true };
             return obj;
           } else if (null != self.uploadedFilename) {
-            let obj1 = v3(5174);
+            let obj1 = v3(5188);
             const uploadTarget = obj1.getUploadTarget(self.item.target);
             dependencyMap = 1;
             const deleteUploadURL = uploadTarget.getDeleteUploadURL(self.uploadedFilename);

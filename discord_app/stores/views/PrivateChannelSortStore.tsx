@@ -2,7 +2,7 @@
 import SnowflakeUtilsDefault from "../../utils/SnowflakeUtils.tsx";
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
 import DispatcherDefault from "../../Dispatcher.tsx";
-import _modDef4153 from "../../../_runtime/metro/04153__.js";
+import _modDef4166 from "../../../_runtime/metro/04166__.js";
 import FakePlaceholderPrivateChannel from "../../modules/channel/FakePlaceholderPrivateChannel.tsx";
 import MessageRequestStore from "../../modules/message_request/MessageRequestStore.tsx";
 import SpamMessageRequestStore from "../../modules/message_request/SpamMessageRequestStore.tsx";
@@ -26,7 +26,7 @@ function makeSortedChannel(channel) {
     const isMessageRequestTimestamp = channel.isMessageRequestTimestamp;
     let tmp2 = id;
     if (null != isMessageRequestTimestamp) {
-      let obj = _modDef4153(isMessageRequestTimestamp);
+      let obj = _modDef4166(isMessageRequestTimestamp);
       const valueOfResult = obj.valueOf();
       let fromTimestampResult = SnowflakeUtilsDefault.fromTimestamp(valueOfResult);
       if (obj3.compare(id, fromTimestampResult) > 0) {
@@ -66,7 +66,7 @@ function handleCacheLoaded() {
 }
 const isPrivate = fn(1961).isPrivate;
 const constants = { DEFAULT: "DEFAULT", FAVORITE: "FAVORITE" };
-const secondaryIndexMap = new fn(4195).SecondaryIndexMap(
+const secondaryIndexMap = new fn(4208).SecondaryIndexMap(
   function indexBy(value) {
     if (value.isRequest) {
       let items = [];
@@ -82,7 +82,7 @@ const secondaryIndexMap = new fn(4195).SecondaryIndexMap(
 let values = [];
 values = [];
 let closure_17 = [];
-const f38618 = () => {};
+const f38667 = () => {};
 const Store = initializeDefault.Store;
 class PrivateChannelSortStore extends Store {}
 const prototype = PrivateChannelSortStore.prototype;
@@ -100,7 +100,7 @@ prototype["initialize"] = function initialize() {
   this.syncWith(items, handleConnectionOpen);
 };
 prototype["getPrivateChannelIds"] = function getPrivateChannelIds() {
-  if (typeof f38618 === "function") {
+  if (typeof f38667 === "function") {
     secondaryIndexMap.values(constants.FAVORITE);
     values = secondaryIndexMap.values(constants.DEFAULT);
     let tmp4 = values === values;

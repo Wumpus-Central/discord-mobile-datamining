@@ -8,7 +8,7 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
 let closure_6 = Object.freeze({ direction: fn(1178).CutoutDirection.RIGHT, inset: -2 });
-const createStyles = fn(4560);
+const createStyles = fn(4574);
 let closure_7 = createStyles.createStyles({
   container: { flexDirection: "row", alignItems: "center", paddingHorizontal: 16, height: 40 },
   containerNoPadding: { flexDirection: "row", alignItems: "center", height: 40 },
@@ -36,13 +36,13 @@ export default noop.memo((guildId) => {
   if (useIsUsingClientThemeDefault()) {
     transparentBorder = tmp.transparentBorder;
   }
-  guildId(7872);
+  guildId(7886);
   let obj = { style: null, children: null };
   const items = [noPadding ? tmp.containerNoPadding : tmp.container, obj.useClientThemesOverride()];
   obj.style = items;
   if (renderIcon) {
     if (stageIcon) {
-      let VoiceNormalIcon = tmp4(5097).StageIcon;
+      let VoiceNormalIcon = tmp4(5111).StageIcon;
     }
     obj = { size: "sm", color: "channel-icon", style: tmp.redesignChannelIcon };
     const items1 = [closure_4(VoiceNormalIcon, obj)];
@@ -73,6 +73,6 @@ export default noop.memo((guildId) => {
     obj.children = items1;
     return tmp5(tmp6, obj);
   }
-  VoiceNormalIcon = tmp4(5101).VoiceNormalIcon;
+  VoiceNormalIcon = tmp4(5115).VoiceNormalIcon;
 });
 export const VOICE_USER_SUMMARY_HEIGHT = 40;

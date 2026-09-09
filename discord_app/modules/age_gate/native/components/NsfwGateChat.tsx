@@ -2,7 +2,7 @@
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
-import _modDef12668 from "../../../../../_runtime/metro/12668__.js";
+import _modDef12694 from "../../../../../_runtime/metro/12694__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -10,7 +10,7 @@ get_ActivityIndicator = fn(17);
 ({ View: c3, Image: closure_4, StyleSheet } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire, Fragment: closure_7 } = jsxProd);
-fn(4560);
+fn(4574);
 let createStyles = { container: null, border: null, description: null };
 createStyles = {
   flex: 1,
@@ -34,7 +34,7 @@ export default function NsfwGateChat() {
   obj = { style: tmp.border };
   const items = [hasOwnProperty(React3, obj)];
   obj = { style: tmp.container, children: null };
-  const items1 = [hasOwnProperty(React4, { source: _modDef12668 })];
+  const items1 = [hasOwnProperty(React4, { source: _modDef12694 })];
   const obj2 = { style: tmp.description, variant: "text-md/medium", color: "text-muted", children: null };
   const intl = util.intl;
   obj2.children = intl.string(util.t.W4Qyxr);

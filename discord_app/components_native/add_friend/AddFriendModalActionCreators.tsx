@@ -9,12 +9,12 @@ const result = size.fileFinishedImporting("components_native/add_friend/AddFrien
 
 export default {
   openAddFriendModalDeeplink() {
-    ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(13856, dependencyMap.paths));
+    ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(13879, dependencyMap.paths));
   },
   openAddFriendModal(sourceMetadata) {
     if (null != UserStore.getCurrentUser()) {
       const obj = { sourceMetadata };
-      obj.pushLazy(asyncRequireImpl(13856, dependencyMap.paths), obj);
+      obj.pushLazy(asyncRequireImpl(13879, dependencyMap.paths), obj);
     }
   },
 };

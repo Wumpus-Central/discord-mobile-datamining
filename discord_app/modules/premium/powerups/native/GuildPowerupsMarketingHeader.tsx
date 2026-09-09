@@ -20,7 +20,7 @@ function PerkText(children) {
 }
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-fn(4560);
+fn(4574);
 let createStyles = { container: null, text: null };
 createStyles = { padding: nativeDefault.space.PX_12, backgroundColor: null };
 let obj4 = _modDef672("#000000");
@@ -80,7 +80,7 @@ export default function GuildPowerupsMarketingHeader(guild) {
       }
       const obj4 = { perks: str2 };
       obj.children = intl.format(_modDef2428["7lwpzR"], obj4);
-      obj.children = jsx(guild(4556).Text, { style: tmp.text, variant: "text-sm/semibold", children: null });
+      obj.children = jsx(guild(4570).Text, { style: tmp.text, variant: "text-sm/semibold", children: null });
       return (
         <View style={tmp.text} variant="text-sm/semibold">
           {null}

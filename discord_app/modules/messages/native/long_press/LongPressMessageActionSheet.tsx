@@ -18,8 +18,8 @@ import GuildStore from "../../../../stores/GuildStore.tsx";
 import PermissionStore from "../../../../stores/PermissionStore.tsx";
 
 require = fn;
-let isMessageComponentsV2 = fn(4210).isMessageComponentsV2;
-const FileUploadErrorTypes = fn(4553).FileUploadErrorTypes;
+let isMessageComponentsV2 = fn(4223).isMessageComponentsV2;
+const FileUploadErrorTypes = fn(4567).FileUploadErrorTypes;
 const Constants = fn(1074);
 ({
   AnalyticEvents: map1,

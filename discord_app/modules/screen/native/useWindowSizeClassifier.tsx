@@ -29,6 +29,9 @@ export default function useWindowSizeClassifier() {
   }
   return XLARGE;
 }
+export const WINDOW_SIZE_THRESHOLD_SMALL = 360;
+export const WINDOW_SIZE_THRESHOLD_LARGE = 600;
+export const WINDOW_SIZE_THRESHOLD_XLARGE = 840;
 export { WindowSizeClassifier };
 export const getWindowSizeClassifier = function getWindowSizeClassifier() {
   const obj = useBaseAppContainerDimensions;

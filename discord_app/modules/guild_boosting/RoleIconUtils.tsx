@@ -12,19 +12,14 @@ let closure_6 = "" + location.protocol + window.GLOBAL_ENV.API_ENDPOINT;
 let closure_7 = PlatformUtils.isAndroid();
 const result = size.fileFinishedImporting("modules/guild_boosting/RoleIconUtils.tsx");
 
-export const getRoleIconData = function getRoleIconData(role, arg1) {
+export const getRoleIconData = function getRoleIconData(role, size) {
   if (null == role) {
     return null;
   } else {
-    let byName;
-    if (null != role.unicodeEmoji) {
-      let obj = UnicodeEmojisDefault;
-      byName = obj.getByName(UnicodeEmojisDefault.convertSurrogateToName(role.unicodeEmoji, false));
-    }
     ({ id, icon } = role);
-    let tmp4;
+    let combined;
     if (null != icon) {
-      tmp4 = icon;
+      combined = icon;
       if (!icon.startsWith("data:")) {
         let str2 = "png";
         if (AvatarUtils.SUPPORTS_WEBP) {
@@ -32,30 +27,38 @@ export const getRoleIconData = function getRoleIconData(role, arg1) {
         }
         let str3 = "quality=lossless";
         let str5 = "";
-        if (null != arg1) {
+        if (null != size) {
           ImageLoaderUtils;
           ImageLoaderUtils;
           let str7 = "";
-          const text = `size=${tmp9(arg1 * obj3.getDevicePixelRatio())}`;
+          const text = `size=${tmp6(size * obj.getDevicePixelRatio())}`;
           if (!closure_7) {
             str7 = "&quality=lossless";
           }
           str3 = str7;
           str5 = text;
         }
-        let str8 = globalThis;
         const _window = window;
         if (null != window.GLOBAL_ENV.CDN_HOST) {
-          str8 = "/";
-          let combined = "" + closure_5 + "/" + id + "/" + icon + "." + str2 + "?" + str5 + str3;
+          const _HermesInternal2 = HermesInternal;
+          combined = "" + closure_5 + "/" + id + "/" + icon + "." + str2 + "?" + str5 + str3;
         } else {
           const _HermesInternal = HermesInternal;
           combined = "" + closure_6 + React3.ROLE_ICON(id, icon) + "?" + str5;
         }
       }
     }
-    obj = { customIconSrc: tmp4, unicodeEmoji: byName };
-    return obj;
+    if (null != role.unicodeEmoji) {
+      const obj2 = UnicodeEmojisDefault;
+      const byName = obj2.getByName(UnicodeEmojisDefault.convertSurrogateToName(role.unicodeEmoji, false));
+    }
+    if (null != combined) {
+      obj = { customIconSrc: combined, unicodeEmoji: byName };
+      let tmp23 = obj;
+    } else {
+      tmp23 = null;
+    }
+    return tmp23;
   }
 };
 export const replaceRoleIconSourceSize = function replaceRoleIconSourceSize(str, arg1) {

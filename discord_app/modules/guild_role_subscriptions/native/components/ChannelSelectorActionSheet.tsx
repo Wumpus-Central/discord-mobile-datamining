@@ -5,7 +5,7 @@ import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/Actio
 import ModalActionCreatorsDefault from "../../../../actions/ModalActionCreators.tsx";
 import useCreateChannelSubmit from "../../../channel/useCreateChannelSubmit.tsx";
 import CreateChannelModalActionCreatorsDefault from "../../../../actions/native/CreateChannelModalActionCreators.tsx";
-import _modDef13609 from "../../../../../_runtime/metro/13609__.js";
+import _modDef13632 from "../../../../../_runtime/metro/13632__.js";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import ChannelStore from "../../../../stores/ChannelStore.tsx";
@@ -34,16 +34,16 @@ function ChannelRow(channel) {
     disableHighlightOnPress: true,
     resolvedUnreadSetting: null,
   };
-  const tmp4 = onChannelSelected(4713)(channel);
+  const tmp4 = onChannelSelected(4727)(channel);
   obj.accessibilityLabel = tmp4;
   obj.channel = channel;
   obj.selected = selected;
   obj.resolvedUnreadSetting = UnreadSetting.ONLY_MENTIONS;
-  const children = [closure_11(onChannelSelected(16119), obj)];
+  const children = [closure_11(onChannelSelected(16149), obj)];
   if (selected) {
-    obj = { style: tmp.selectedIcon, source: tmp2(17695) };
-    selected = closure_11(tmp2(5587), obj);
-    const tmp2Result = tmp2(5587);
+    obj = { style: tmp.selectedIcon, source: tmp2(17728) };
+    selected = closure_11(tmp2(5601), obj);
+    const tmp2Result = tmp2(5601);
   }
   children[1] = selected;
   return closure_13(closure_12, { children });
@@ -51,10 +51,10 @@ function ChannelRow(channel) {
 const View = fn(17).View;
 const Constants = fn(1074);
 ({ Permissions: closure_9, Fonts } = Constants);
-const UnreadSetting = fn(4742).UnreadSetting;
+const UnreadSetting = fn(4756).UnreadSetting;
 const jsxProd = fn(21);
 ({ jsx: closure_11, Fragment: closure_12, jsxs: map1 } = jsxProd);
-fn(4560);
+fn(4574);
 let createStyles = {
   titleContainer: null,
   searchContainer: null,
@@ -147,7 +147,7 @@ export default function ChannelSelectorActionSheet(guildId) {
     const intl = tmp5(1114).intl;
     title = intl.string(tmp5(1114).t.PDn2fR);
   }
-  obj.children = closure_11(guildId(4556).Text, {
+  obj.children = closure_11(guildId(4570).Text, {
     accessibilityRole: "header",
     variant: "text-md/bold",
     color: "mobile-text-heading-primary",
@@ -167,7 +167,7 @@ export default function ChannelSelectorActionSheet(guildId) {
     }
     return expandActionSheetResult;
   };
-  obj1.children = closure_11(guildId(7050).SearchField, obj2);
+  obj1.children = closure_11(guildId(7064).SearchField, obj2);
   items2[1] = closure_11(View, obj1);
   let tmp9Result = !hideCreateChannel;
   if (!hideCreateChannel) {
@@ -189,7 +189,7 @@ export default function ChannelSelectorActionSheet(guildId) {
           const obj = onChannelSelected(dependencyMap[27]);
         };
         obj2.pushLazy(
-          asyncRequireImpl(9737, dependencyMap.paths),
+          asyncRequireImpl(9764, dependencyMap.paths),
           obj,
           CreateChannelModalActionCreatorsDefault.CREATE_CHANNEL_MODAL_KEY,
         );
@@ -200,18 +200,18 @@ export default function ChannelSelectorActionSheet(guildId) {
     if (str != null) {
       str = str.toString();
     }
-    const obj4 = { color: str, source: _modDef13609 };
+    const obj4 = { color: str, source: _modDef13632 };
     const items3 = [closure_11(tmp5(1178).Icon, obj4)];
     const obj5 = { style: tmp.createChannelLabel, variant: "text-md/medium", color: "text-link", children: null };
     const intl3 = tmp5(1114).intl;
     obj5.children = intl3.string(tmp5(1114).t.d7AN7W);
-    items3[1] = closure_11(tmp5(4556).Text, obj5);
+    items3[1] = closure_11(tmp5(4570).Text, obj5);
     obj3.children = items3;
-    tmp9Result = closure_13(tmp5(5123).PressableOpacity, obj3);
+    tmp9Result = closure_13(tmp5(5137).PressableOpacity, obj3);
   }
   items2[2] = tmp9Result;
   obj.header = closure_13(closure_12, { children: items2 });
-  obj.children = closure_11(guildId(6627).BottomSheetFlatList, {
+  obj.children = closure_11(guildId(6641).BottomSheetFlatList, {
     style: tmp.bodyContainer,
     data: stateFromStoresArray,
     keyExtractor(id) {
@@ -222,5 +222,5 @@ export default function ChannelSelectorActionSheet(guildId) {
       return closure_2_11(ChannelRow, { channel: item, onChannelSelected, selected: item.id === dependencyMap });
     },
   });
-  return closure_11(guildId(7198).ActionSheet, obj);
+  return closure_11(guildId(7211).ActionSheet, obj);
 }

@@ -34,7 +34,7 @@ function serverGuildRoomObjectToClient(object_type) {
   }
   return obj;
 }
-let closure_3 = fn(4722).GUILD_ROOM_BACKGROUND_CONFIG;
+let closure_3 = fn(4736).GUILD_ROOM_BACKGROUND_CONFIG;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/guild_rooms/GuildRoomUtils.tsx");
 

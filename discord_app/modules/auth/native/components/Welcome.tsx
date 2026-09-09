@@ -11,8 +11,8 @@ import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import useIsWindowLargeDefault from "../../../screen/native/useIsWindowLarge.tsx";
 import TTIAnalyticsUtils from "../../../tti_analytics/native/TTIAnalyticsUtils.tsx";
 import GuildInviteIconDefault from "../../../guild/native/GuildInviteIcon.tsx";
-import _modDef13223 from "../../../../../_runtime/metro/13223__.js";
-import _mod13865 from "../../../../../_runtime/metro/13865__.js";
+import _modDef13246 from "../../../../../_runtime/metro/13246__.js";
+import _mod13888 from "../../../../../_runtime/metro/13888__.js";
 import RegistrationStepsUtils from "../RegistrationStepsUtils.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import AgeGateStore from "../../../age_gate/AgeGateStore.tsx";
@@ -71,9 +71,9 @@ function InviteCard(invite) {
     const items1 = [tmp14];
     const obj2 = { style: tmp.text, children: null };
     const obj3 = { variant: "text-sm/medium", color: "text-subtle", children: stringResult };
-    const items2 = [tmp18(tmp17(4556).Text, obj3)];
+    const items2 = [tmp18(tmp17(4570).Text, obj3)];
     const obj4 = { variant: "text-md/semibold", color: "mobile-text-heading-primary", children: name };
-    items2[1] = tmp18(tmp17(4556).Text, obj4);
+    items2[1] = tmp18(tmp17(4570).Text, obj4);
     obj2.children = items2;
     items1[1] = __initData(React4, obj2);
     obj1.children = items1;
@@ -86,7 +86,7 @@ function GuildTemplateCard(arg0) {
   let obj = { style: null, children: null };
   const items = [tmp.container, style];
   obj.style = items;
-  obj = { source: _modDef13223 };
+  obj = { source: _modDef13246 };
   const items1 = [closure_1_20(hasOwnProperty, obj)];
   obj = { style: tmp.text, children: null };
   const obj1 = { variant: "text-sm/medium", color: "text-subtle", children: null };
@@ -117,7 +117,7 @@ function Centerpiece(inlineButtons) {
   const items = [tmp3.centerpieceContainer];
   obj.style = items;
   obj = { alwaysBounceVertical: false, contentContainerStyle: tmp3.scrollViewContainer, children: null };
-  obj = { style: tmp3.logo, source: _mod13865 };
+  obj = { style: tmp3.logo, source: _mod13888 };
   const items1 = [closure_1_20(hasOwnProperty, obj), ,];
   const obj1 = {
     style: tmp3.header,
@@ -174,11 +174,11 @@ get_ActivityIndicator = fn(17);
 ({ View: closure_4, Image: hasOwnProperty, ScrollView: metroRequire } = get_ActivityIndicator);
 const Constants = fn(1074);
 ({ AnalyticEvents: closure_14, StorageKeys: closure_15, AuthStates: closure_16, InviteStates: closure_17 } = Constants);
-const GuildTemplateStates = fn(7326).GuildTemplateStates;
-const InviteTypes = fn(7736).InviteTypes;
+const GuildTemplateStates = fn(7340).GuildTemplateStates;
+const InviteTypes = fn(7750).InviteTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_20, jsxs: closure_21 } = jsxProd);
-let createStyles = fn(4560);
+let createStyles = fn(4574);
 let closure_22 = createStyles.createStyles((arg0) => {
   const obj = {
     container: { height: "100%", flex: 1, padding: 16 },
@@ -207,7 +207,7 @@ let closure_22 = createStyles.createStyles((arg0) => {
   obj.buttonContainer = { paddingHorizontal: 28, maxWidth: 480, alignSelf: "center", width: "100%" };
   return obj;
 });
-fn(4560);
+fn(4574);
 createStyles = { container: null, text: null };
 createStyles = {
   backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST,

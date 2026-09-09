@@ -14,7 +14,7 @@ const Constants = fn(1074);
 ({ GuildFeatures: c10, MFALevels: closure_11 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1, Fragment: closure_14 } = jsxProd);
-fn(4560);
+fn(4574);
 let createStyles = {
   wrapper: { flex: 1, justifyContent: "space-between", paddingTop: 99 },
   center: null,
@@ -78,7 +78,7 @@ export default function GuildSettingsModalSecurity(guildId) {
   obj1 = { style: tmp.label, variant: "text-md/medium", color: "mobile-text-heading-primary", children: null };
   const intl = tmp2(1114).intl;
   obj1.children = intl.string(guildId(1114).t.Wi9LEV);
-  const items4 = [closure_12(guildId(4556).Text, obj1), ,];
+  const items4 = [closure_12(guildId(4570).Text, obj1), ,];
   const obj2 = { style: tmp.button, children: null };
   const intl2 = tmp2(1114).intl;
   const string = intl2.string;
@@ -95,7 +95,7 @@ export default function GuildSettingsModalSecurity(guildId) {
   }
   obj3.variant = str;
   obj3.onPress = callback;
-  obj2.children = closure_12(guildId(4975).Button, obj3);
+  obj2.children = closure_12(guildId(4989).Button, obj3);
   items4[1] = closure_12(closure_4, obj2);
   let hasItem;
   if (stateFromStores != null) {
@@ -107,24 +107,24 @@ export default function GuildSettingsModalSecurity(guildId) {
     const obj4 = { variant: "text-sm/normal", color: "text-feedback-critical", children: null };
     const intl3 = tmp2(1114).intl;
     obj4.children = intl3.string(tmp2(1114).t["KG1V/E"]);
-    tmp17Result = closure_12(tmp2(4556).Text, obj4);
+    tmp17Result = closure_12(tmp2(4570).Text, obj4);
   }
   const obj5 = { children: null };
   items4[2] = tmp17Result;
   obj.children = items4;
   const items5 = [closure_13(closure_4, obj)];
   const obj6 = { style: tmp.center, children: null };
-  const items6 = [closure_12(closure_5, { source: stateFromStores(14795), style: tmp.image, resizeMode: "contain" })];
+  const items6 = [closure_12(closure_5, { source: stateFromStores(14821), style: tmp.image, resizeMode: "contain" })];
   const obj8 = { style: tmp.infoWrapper, children: null };
   const obj9 = { variant: "text-sm/medium", color: "text-muted", children: null };
   const intl4 = tmp2(1114).intl;
   obj9.children = intl4.format(guildId(1114).t["FK0+iX"], {});
-  obj8.children = closure_12(guildId(4556).Text, obj9);
+  obj8.children = closure_12(guildId(4570).Text, obj9);
   items6[1] = closure_12(closure_4, obj8);
   obj6.children = items6;
   items5[1] = closure_13(closure_4, obj6);
   obj.children = items5;
-  const items7 = [closure_13(closure_4, obj), closure_12(guildId(7040).NavScrim, {})];
+  const items7 = [closure_13(closure_4, obj), closure_12(guildId(7054).NavScrim, {})];
   obj5.children = items7;
   return closure_13(closure_14, obj5);
 }

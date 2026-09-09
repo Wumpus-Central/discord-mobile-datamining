@@ -8,7 +8,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-fn(4560);
+fn(4574);
 let createStyles = { container: null, promoDetails: null };
 createStyles = { flexDirection: "column", alignItems: "center", gap: nativeDefault.space.PX_16 };
 createStyles.container = createStyles;

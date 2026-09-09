@@ -38,11 +38,11 @@ export function makeSizeStyle(size) {
 export const isLayoutCompact = function isLayoutCompact(layout) {
   return layout === ChannelListLayoutTypes2.ChannelListLayoutTypes.COMPACT;
 };
-export const isLayoutCozy = function isLayoutCozy(layout) {
+export const isLayoutCozy = function isLayoutCozy(messagesTabLayout) {
   return (
-    layout === ChannelListLayoutTypes2.ChannelListLayoutTypes.COZY ||
-    layout === ChannelListLayoutTypes2.ChannelListLayoutTypes.COZY_DRAWER ||
-    layout === ChannelListLayoutTypes2.ChannelListLayoutTypes.COZY_DRAWER_SMOL
+    messagesTabLayout === ChannelListLayoutTypes2.ChannelListLayoutTypes.COZY ||
+    messagesTabLayout === ChannelListLayoutTypes2.ChannelListLayoutTypes.COZY_DRAWER ||
+    messagesTabLayout === ChannelListLayoutTypes2.ChannelListLayoutTypes.COZY_DRAWER_SMOL
   );
 };
 export const useMessagesTabLayout = function useMessagesTabLayout(panelVariant) {

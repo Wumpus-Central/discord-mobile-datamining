@@ -38,7 +38,7 @@ function GroupDmMemberCount(channel) {
     }, 0);
   });
   const obj = channel(504);
-  return channel(13273).renderMemberCountText(stateFromStores, channel.recipients.length);
+  return channel(13296).renderMemberCountText(stateFromStores, channel.recipients.length);
 }
 const View = fn(17).View;
 const Constants = fn(1074);
@@ -46,7 +46,7 @@ const Constants = fn(1074);
 const jsxProd = fn(21);
 ({ jsx: closure_11, Fragment: closure_12, jsxs: map1 } = jsxProd);
 let closure_14 = fn(1178).AVATAR_SIZE_MAP[fn(undefined, 1178).AvatarSizes.REFRESH_MEDIUM_32];
-const createStyles = fn(4560);
+const createStyles = fn(4574);
 let obj = { activityStatusText: null, groupDMIconAnchor: null };
 obj = { color: nativeDefault.colors.TEXT_MUTED };
 obj.activityStatusText = obj;

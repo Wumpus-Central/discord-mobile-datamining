@@ -5,10 +5,10 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 
 const require = fn;
 const View = fn(17).View;
-const useIsVoiceChatFocused = fn(9472).useIsVoiceChatFocused;
+const useIsVoiceChatFocused = fn(9499).useIsVoiceChatFocused;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-fn(4560);
+fn(4574);
 let obj = {
   chat: null,
   chatHeaderSpacer: null,
@@ -61,7 +61,7 @@ export default noop.memo((channel) => {
   const tmp6 = guild_id(1611)();
   const top = tmp6.top;
   ({ left, right } = tmp6);
-  let obj1 = id(9594);
+  let obj1 = id(9621);
   const voiceChatNavigationContext = obj1.useVoiceChatNavigationContext();
   let openVoice;
   if (voiceChatNavigationContext != null) {
@@ -70,10 +70,10 @@ export default noop.memo((channel) => {
   if (openVoice == null) {
     openVoice = tmp4(12).noop;
   }
-  const isConnectedToVoiceChannel = id(9476).useIsConnectedToVoiceChannel(channel.channel);
-  const tmp7Result = id(9476);
+  const isConnectedToVoiceChannel = id(9503).useIsConnectedToVoiceChannel(channel.channel);
+  const tmp7Result = id(9503);
   let str = "no-hide-descendants";
-  guild_id(4495)();
+  guild_id(4509)();
   if (tmp2) {
     str = "yes";
   }
@@ -86,7 +86,7 @@ export default noop.memo((channel) => {
   }
   items1[1] = tmp15;
   obj.style = items1;
-  const items2 = [closure_6(guild_id(5125), { absolute: true, tall: true })];
+  const items2 = [closure_6(guild_id(5139), { absolute: true, tall: true })];
   obj1 = { guildId: guild_id, channelId: id, children: null };
   let tmp16Result = null;
   if (!flag) {
@@ -97,9 +97,9 @@ export default noop.memo((channel) => {
       str2 = "dark-content";
     }
     obj2.barStyle = str2;
-    tmp16Result = closure_6(tmp4(9486), obj2);
+    tmp16Result = closure_6(tmp4(9513), obj2);
     const tmp19 = !tmp2;
-    const tmp4Result = tmp4(9486);
+    const tmp4Result = tmp4(9513);
   }
   const items3 = [tmp16Result, , , ,];
   const items4 = [tmp.safeAreaTop];
@@ -118,7 +118,7 @@ export default noop.memo((channel) => {
   }
   items5[1] = { display: str5 };
   items3[2] = closure_6(View, { style: items5 });
-  items3[3] = closure_6(guild_id(11345), {
+  items3[3] = closure_6(guild_id(11372), {
     guildId: guild_id,
     channelId: id,
     chatInputRef: obj.useRef(null),
@@ -144,17 +144,17 @@ export default noop.memo((channel) => {
   obj6.accessibilityLabel = intl.string(id(1114).t["13/7kX"]);
   obj6.style = tmp.chatHeaderBackIconContainer;
   const ref = obj.useRef(null);
-  obj6.children = closure_6(id(1178).Icon, { source: guild_id(11584), size: id(1178).Icon.Sizes.MEDIUM });
-  const items7 = [closure_6(id(5123).PressableOpacity, obj6)];
-  const obj7 = { source: guild_id(11584), size: id(1178).Icon.Sizes.MEDIUM };
+  obj6.children = closure_6(id(1178).Icon, { source: guild_id(11610), size: id(1178).Icon.Sizes.MEDIUM });
+  const items7 = [closure_6(id(5137).PressableOpacity, obj6)];
+  const obj7 = { source: guild_id(11610), size: id(1178).Icon.Sizes.MEDIUM };
   items7[1] = closure_6(View, {
     style: tmp.chatHeaderTitleContainer,
-    children: closure_6(id(12778).ChannelTitle, { guildId: guild_id, channelId: id }),
+    children: closure_6(id(12804).ChannelTitle, { guildId: guild_id, channelId: id }),
   });
   obj5.children = items7;
   items3[4] = closure_7(View, obj5);
   obj1.children = items3;
-  items2[1] = closure_7(id(10082).ChannelContainer, obj1);
+  items2[1] = closure_7(id(10109).ChannelContainer, obj1);
   obj.children = items2;
   return closure_7(View, obj);
 });

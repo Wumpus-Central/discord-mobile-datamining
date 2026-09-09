@@ -5,7 +5,7 @@ import CollectiblesBundledProductRecord from "CollectiblesBundledProductRecord.t
 import CollectiblesStoreListingRecord from "CollectiblesStoreListingRecord.tsx";
 
 const require = fn;
-const CollectiblesItemRecord = fn(7546);
+const CollectiblesItemRecord = fn(7560);
 ({ createCollectiblesItemsFromServerResponse: hasOwnProperty, transformSKUToCollectiblesItem: metroRequire } =
   CollectiblesItemRecord);
 let closure_7 = fn(1076).REWARD_CATEGORY_AND_REWARD_SKU_IDS;
@@ -255,17 +255,17 @@ CollectiblesProductRecord["fromStorefrontProductRecord"] = function fromStorefro
                 summary: null,
                 styles: "Button",
                 type: "Array",
-                premiumType: "call",
-                items: "coc",
-                categorySkuId: "appSharingSettings",
-                isCategoryReward: "trackThreadBrowserTab",
-                prices: "as",
-                previewAssets: "isArray",
-                googleSkuIds: "burst",
-                eligibleOffers: "isArray",
-                variants: "office_worker_tone2",
-                bundledProducts: "r",
-                isFirstParty: "onLeave",
+                premiumType: "accessible",
+                items: false,
+                categorySkuId: false,
+                isCategoryReward: false,
+                prices: false,
+                previewAssets: false,
+                googleSkuIds: false,
+                eligibleOffers: false,
+                variants: false,
+                bundledProducts: false,
+                isFirstParty: false,
               };
               let str;
               if (first != null) {

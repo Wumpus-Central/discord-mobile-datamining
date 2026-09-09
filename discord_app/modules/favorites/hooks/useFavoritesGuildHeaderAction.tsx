@@ -1,7 +1,7 @@
 // discord_app/modules/favorites/hooks/useFavoritesGuildHeaderAction.tsx
 import router_utils from "../../routing/router_utils.tsx";
 import util from "../../../intl/index.native.tsx";
-import _modDef3225 from "../intl/FavoritesGuild.messages.js";
+import _modDef3236 from "../intl/FavoritesGuild.messages.js";
 import FavoritesHooks from "../FavoritesHooks.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
@@ -19,7 +19,7 @@ export default function useFavoritesGuildHeaderAction() {
   }, []);
   const intl = util.intl;
   if (hasAccess) {
-    let ojM1xJ = _modDef3225.G9fGlP;
+    let ojM1xJ = _modDef3236.G9fGlP;
   } else {
     ojM1xJ = util.t.ojM1xJ;
   }

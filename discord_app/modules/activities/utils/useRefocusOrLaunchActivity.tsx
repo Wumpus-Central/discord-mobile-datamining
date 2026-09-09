@@ -5,7 +5,7 @@ import FramesStore from "../../frames/FramesStore.tsx";
 import EmbeddedActivitiesStore from "../EmbeddedActivitiesStore.tsx";
 
 const require = fn;
-const FramesConstants = fn(9516);
+const FramesConstants = fn(9543);
 ({ MAIN_SURFACE: closure_7, FrameLayoutModes: closure_8 } = FramesConstants);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/activities/utils/useRefocusOrLaunchActivity.tsx");
@@ -75,8 +75,8 @@ export default function useRefocusOrLaunchActivity(applicationId) {
                   if (null != stateFromStores1) {
                     if (stateFromStores1.applicationId === applicationId) {
                       const obj1 = { frameId: stateFromStores1.id, layoutMode: constants.FOCUSED };
-                      const result = tmp3(9512).updateFrameLayoutMode(obj1);
-                      const obj10 = tmp3(9512);
+                      const result = tmp3(9539).updateFrameLayoutMode(obj1);
+                      const obj10 = tmp3(9539);
                     }
                   }
                   if (tmp9) {
@@ -85,15 +85,15 @@ export default function useRefocusOrLaunchActivity(applicationId) {
                     if ("guild_id" in _location) {
                       guild_id = _location.guild_id;
                     }
-                    tmp3(9540)(guild_id, _location);
-                    const tmp26 = tmp3(9540);
+                    tmp3(9567)(guild_id, _location);
+                    const tmp26 = tmp3(9567);
                   } else {
                     if (runBeforeLaunchAttempt != null) {
                       runBeforeLaunchAttempt();
                     }
                     c4 = 1;
                     if (c7) {
-                      let obj5 = tmp3(9512);
+                      let obj5 = tmp3(9539);
                       let obj2 = { applicationId, surface, analyticsContext: null };
                       const obj3 = { isStart: true, analyticsLocations };
                       obj2.analyticsContext = obj3;
@@ -114,7 +114,7 @@ export default function useRefocusOrLaunchActivity(applicationId) {
                       }
                     }
                   }
-                  obj2 = analyticsLocations(11524);
+                  obj2 = analyticsLocations(11551);
                   obj5 = { appId: applicationId, botId: null, analyticsLocations: null };
                   let id1;
                   if (data != null) {

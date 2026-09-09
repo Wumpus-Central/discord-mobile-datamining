@@ -4,20 +4,6 @@ import AvatarUtilsDefault from "../../utils/AvatarUtils.tsx";
 import ImageLoaderUtils from "../image_upload/ImageLoaderUtils.tsx";
 import UnicodeEmojisDefault from "../emojis/UnicodeEmojis.tsx";
 import EmojiUtilsDefault from "../../utils/EmojiUtils.tsx";
-import _modDef7350 from "../../../_runtime/metro/07350__.js";
-import _modDef7351 from "../../../_runtime/metro/07351__.js";
-import _modDef7352 from "../../../_runtime/metro/07352__.js";
-import _modDef7353 from "../../../_runtime/metro/07353__.js";
-import _modDef7354 from "../../../_runtime/metro/07354__.js";
-import _modDef7355 from "../../../_runtime/metro/07355__.js";
-import _modDef7356 from "../../../_runtime/metro/07356__.js";
-import _modDef7357 from "../../../_runtime/metro/07357__.js";
-import _modDef7358 from "../../../_runtime/metro/07358__.js";
-import _modDef7359 from "../../../_runtime/metro/07359__.js";
-import _modDef7360 from "../../../_runtime/metro/07360__.js";
-import _modDef7361 from "../../../_runtime/metro/07361__.js";
-import _modDef7362 from "../../../_runtime/metro/07362__.js";
-import _modDef7363 from "../../../_runtime/metro/07363__.js";
 import _modDef7364 from "../../../_runtime/metro/07364__.js";
 import _modDef7365 from "../../../_runtime/metro/07365__.js";
 import _modDef7366 from "../../../_runtime/metro/07366__.js";
@@ -26,28 +12,28 @@ import _modDef7368 from "../../../_runtime/metro/07368__.js";
 import _modDef7369 from "../../../_runtime/metro/07369__.js";
 import _modDef7370 from "../../../_runtime/metro/07370__.js";
 import _modDef7371 from "../../../_runtime/metro/07371__.js";
+import _modDef7372 from "../../../_runtime/metro/07372__.js";
+import _modDef7373 from "../../../_runtime/metro/07373__.js";
+import _modDef7374 from "../../../_runtime/metro/07374__.js";
+import _modDef7375 from "../../../_runtime/metro/07375__.js";
+import _modDef7376 from "../../../_runtime/metro/07376__.js";
+import _modDef7377 from "../../../_runtime/metro/07377__.js";
+import _modDef7378 from "../../../_runtime/metro/07378__.js";
+import _modDef7379 from "../../../_runtime/metro/07379__.js";
+import _modDef7380 from "../../../_runtime/metro/07380__.js";
+import _modDef7381 from "../../../_runtime/metro/07381__.js";
+import _modDef7382 from "../../../_runtime/metro/07382__.js";
+import _modDef7383 from "../../../_runtime/metro/07383__.js";
+import _modDef7384 from "../../../_runtime/metro/07384__.js";
+import _modDef7385 from "../../../_runtime/metro/07385__.js";
 import UserStore from "../../stores/UserStore.tsx";
 import apply from "../../../_runtime/metro/00012__.js";
 
 require = fn;
-const VoiceChannelEffectsConstants = fn(7348);
+const VoiceChannelEffectsConstants = fn(7362);
 ({ EMOJI_SIZE: closure_4, VoiceChannelEffectAnimationType } = VoiceChannelEffectsConstants);
-const items = [_modDef7350];
+const items = [_modDef7364];
 const items1 = [
-  _modDef7351,
-  _modDef7352,
-  _modDef7353,
-  _modDef7354,
-  _modDef7355,
-  _modDef7356,
-  _modDef7357,
-  _modDef7358,
-  _modDef7359,
-  _modDef7360,
-  _modDef7361,
-  _modDef7362,
-  _modDef7363,
-  _modDef7364,
   _modDef7365,
   _modDef7366,
   _modDef7367,
@@ -55,6 +41,20 @@ const items1 = [
   _modDef7369,
   _modDef7370,
   _modDef7371,
+  _modDef7372,
+  _modDef7373,
+  _modDef7374,
+  _modDef7375,
+  _modDef7376,
+  _modDef7377,
+  _modDef7378,
+  _modDef7379,
+  _modDef7380,
+  _modDef7381,
+  _modDef7382,
+  _modDef7383,
+  _modDef7384,
+  _modDef7385,
 ];
 const AnimationTypeToAnimations = {
   [VoiceChannelEffectAnimationType.BASIC]: items,

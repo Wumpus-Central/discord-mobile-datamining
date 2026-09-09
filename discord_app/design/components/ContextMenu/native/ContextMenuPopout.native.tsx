@@ -5,7 +5,7 @@ import native from "../../../../../discord_common/js/packages/design/native.tsx"
 import ReanimatedRexport from "../../../../modules/reanimated/ReanimatedRexport.tsx";
 import useIsScreenReaderEnabled from "../../../../modules/a11y/native/useIsScreenReaderEnabled.native.tsx";
 import spring from "../../../animation/reanimated/spring/spring.tsx";
-import LegacyBaseButton from "../../../../../_runtime/06655_LegacyBaseButton.js";
+import LegacyBaseButton from "../../../../../_runtime/06669_LegacyBaseButton.js";
 import ContextMenuState from "ContextMenuState.native.tsx";
 import ContextMenuConstants from "ContextMenuConstants.native.tsx";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
@@ -17,14 +17,14 @@ function ContextMenuDivider() {
 }
 function ContextMenuBackdrop(onDismiss) {
   const visible = onDismiss.visible;
-  visible(4296);
+  visible(4310);
   const fn = function n() {
     const obj = { opacity: null };
     value = visible.get();
     obj.opacity = spring.withSpring(value, ContextMenuConstants.CONTEXT_MENU_SPRING);
     return obj;
   };
-  let obj = { withSpring: visible(4974).withSpring, visible, CONTEXT_MENU_SPRING: visible(8673).CONTEXT_MENU_SPRING };
+  let obj = { withSpring: visible(4988).withSpring, visible, CONTEXT_MENU_SPRING: visible(8701).CONTEXT_MENU_SPRING };
   fn.__closure = obj;
   fn.__workletHash = 6862317967896;
   fn.__initData = __initData2;
@@ -47,13 +47,13 @@ function ContextMenuBackdrop(onDismiss) {
     stringResult = string(t.xs0juG);
   }
   obj.accessibilityLabel = stringResult;
-  return closure_6(visible(4963).Backdrop, obj);
+  return closure_6(visible(4977).Backdrop, obj);
 }
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, StyleSheet } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, Fragment: closure_7, jsxs: closure_8 } = jsxProd);
-fn(4560);
+fn(4574);
 let createStyles = { container: null, titleContainer: null, divider: null };
 createStyles = {
   position: "absolute",
@@ -61,14 +61,14 @@ createStyles = {
   borderWidth: 1,
   borderColor: nativeDefault.colors.BORDER_SUBTLE,
   borderRadius: nativeDefault.radii.lg,
-  minWidth: fn(8673).CONTEXT_MENU_MIN_WIDTH,
+  minWidth: fn(8701).CONTEXT_MENU_MIN_WIDTH,
 };
 const merged = Object.assign(nativeDefault.shadows.SHADOW_HIGH);
 createStyles.container = createStyles;
-createStyles.titleContainer = { padding: fn(8673).CONTEXT_MENU_ITEM_PADDING };
-let obj1 = { padding: fn(8673).CONTEXT_MENU_ITEM_PADDING };
+createStyles.titleContainer = { padding: fn(8701).CONTEXT_MENU_ITEM_PADDING };
+let obj1 = { padding: fn(8701).CONTEXT_MENU_ITEM_PADDING };
 createStyles.divider = {
-  borderBottomWidth: fn(8673).CONTEXT_MENU_DIVIDER_HEIGHT,
+  borderBottomWidth: fn(8701).CONTEXT_MENU_DIVIDER_HEIGHT,
   borderBottomColor: nativeDefault.colors.BORDER_SUBTLE,
 };
 let closure_9 = createStyles.createStyles(createStyles);
@@ -84,7 +84,7 @@ let closure_12 = {
 let closure_13 = {
   code: "function ContextMenuPopoutNativeTsx4(){const{state,runOnJS,requestClose}=this.__closure;const{activeIndex:activeIndex}=state;const isDismiss=activeIndex.get()===-1;runOnJS(requestClose)(isDismiss);}",
 };
-createStyles = fn(4560);
+createStyles = fn(4574);
 let obj3 = { accessibleDismiss: null };
 let obj4 = {};
 const merged1 = Object.assign(StyleSheet.absoluteFillObject);

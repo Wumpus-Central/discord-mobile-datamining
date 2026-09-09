@@ -15,7 +15,7 @@ const View = fn(17).View;
 const AnalyticsSections = fn(1074).AnalyticsSections;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-fn(4560);
+fn(4574);
 let createStyles = {
   actionBarContainer: null,
   actionRow: null,
@@ -65,7 +65,7 @@ export default function ForumPostActionBar(channel) {
   let obj = channel(504);
   const items = [ChannelStore];
   const stateFromStores = obj.useStateFromStores(items, () => ChannelStore.getChannel(channel.parent_id));
-  let obj1 = channel(7304);
+  let obj1 = channel(7318);
   const firstMessage = obj1.useFirstForumPostMessage(channel).firstMessage;
   let obj2 = channel(504);
   const items1 = [JoinedThreadsStore];
@@ -87,7 +87,7 @@ export default function ForumPostActionBar(channel) {
   const callback = noop.useCallback((nativeEvent) => {
     closure_4(width - nativeEvent.nativeEvent.layout.width - 40);
   }, items3);
-  let obj4 = channel(7872);
+  let obj4 = channel(7886);
   obj = { style: null, children: null };
   const items4 = [tmp.actionBarContainer, obj4.useGradientTop()];
   obj.style = items4;
@@ -95,7 +95,7 @@ export default function ForumPostActionBar(channel) {
   if (tmp11) {
     obj = { style: tmp.reactionRow, children: null };
     obj1 = { thread: channel, parentChannel: stateFromStores, firstMessage, containerWidth: tmp7[0] };
-    obj.children = closure_10(tmp2(11419).ForumPostActionBarReactions, obj1);
+    obj.children = closure_10(tmp2(11446).ForumPostActionBarReactions, obj1);
     tmp11 = closure_10(View, obj);
   }
   const items5 = [tmp11];
@@ -116,8 +116,8 @@ export default function ForumPostActionBar(channel) {
         const result = obj.handleCopyLinkForumPost(guildId, channel.id, obj);
       }
     };
-    obj3.children = closure_10(tmp2(4503).LinkIcon, { size: "xs" });
-    items7[1] = closure_10(tmp2(5123).PressableOpacity, obj3);
+    obj3.children = closure_10(tmp2(4517).LinkIcon, { size: "xs" });
+    items7[1] = closure_10(tmp2(5137).PressableOpacity, obj3);
     obj4 = { accessible: true, accessibilityLabel: null, style: null, onPress: null, children: null };
     const intl5 = tmp2(1114).intl;
     obj4.accessibilityLabel = intl5.string(tmp2(1114).t.nFP4oa);
@@ -133,8 +133,8 @@ export default function ForumPostActionBar(channel) {
       };
       obj.jumpToMessage(obj);
     };
-    obj4.children = closure_10(tmp2(11420).ArrowLargeUpIcon, { size: "xs" });
-    items7[2] = closure_10(tmp2(5123).PressableOpacity, obj4);
+    obj4.children = closure_10(tmp2(11447).ArrowLargeUpIcon, { size: "xs" });
+    items7[2] = closure_10(tmp2(5137).PressableOpacity, obj4);
     obj2.children = items7;
     items5[1] = closure_11(View, obj2);
     obj.children = items5;
@@ -152,8 +152,8 @@ export default function ForumPostActionBar(channel) {
       obj5.style = tmp.actionButton;
       obj5.onPress = items9;
       intl = closure_10;
-      items9 = [closure_10(tmp2(4511).CheckmarkLargeIcon, { size: "xs", color: "text-brand" })];
-      Text = tmp2(4556).Text;
+      items9 = [closure_10(tmp2(4525).CheckmarkLargeIcon, { size: "xs", color: "text-brand" })];
+      Text = tmp2(4570).Text;
       const obj6 = { style: null, variant: "text-sm/semibold", color: "text-brand", children: null };
       const items10 = [tmp.buttonText];
       obj6.style = items10;
@@ -167,7 +167,7 @@ export default function ForumPostActionBar(channel) {
       obj5.accessibilityLabel = Text(t["DjZ+6E"]);
       obj5.style = tmp.actionButton;
       obj5.onPress = items9;
-      const items11 = [closure_10(tmp2(9781).BellIcon, { size: "xs" })];
+      const items11 = [closure_10(tmp2(9808).BellIcon, { size: "xs" })];
       const obj7 = {
         style: tmp.buttonText,
         variant: "text-sm/semibold",
@@ -176,10 +176,10 @@ export default function ForumPostActionBar(channel) {
       };
       const intl2 = tmp2(1114).intl;
       obj7.children = intl2.string(tmp2(1114).t["0rQinA"]);
-      items11[1] = closure_10(tmp2(4556).Text, obj7);
+      items11[1] = closure_10(tmp2(4570).Text, obj7);
       obj5.children = items11;
       tmp15 = obj5;
     }
-    closure_11(tmp2(5123).PressableOpacity, tmp15);
+    closure_11(tmp2(5137).PressableOpacity, tmp15);
   }
 }

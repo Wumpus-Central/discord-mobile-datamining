@@ -7,7 +7,7 @@ import noop from "../../../../_runtime/metro/00019__.js";
 require = fn;
 const jsx = fn(21).jsx;
 const constants = { CLASSIFICATION_DETAIL: "CLASSIFICATION_DETAIL" };
-fn(4560);
+fn(4574);
 let createStyles = { headerStyle: null };
 createStyles = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER };
 createStyles.headerStyle = createStyles;
@@ -24,7 +24,7 @@ export default function ClassificationDetailModal(classificationId) {
   }
   const tmp = closure_7();
   dependencyMap = tmp;
-  let obj = classificationId(11915);
+  let obj = classificationId(11941);
   const safetyHubInitialized = obj.useSafetyHubInitialized();
   const items = [safetyHubInitialized];
   const effect = safetyHubInitialized.useEffect(() => {
@@ -43,24 +43,24 @@ export default function ClassificationDetailModal(classificationId) {
         return null;
       },
       headerLeft: NavigatorHeader.getHeaderCloseButton(function closeModal() {
-        return closure_1(4763).pop();
+        return closure_1(4777).pop();
       }),
       render() {
-        return jsx(source(11884), {
+        return jsx(source(11910), {
           classificationId,
           source,
           onClose() {
-            let arr = closure_1(4763);
+            let arr = closure_1(4777);
             arr = arr.pop();
             if (closure_1_1) {
-              closure_0(11914).openAccountStanding();
-              const obj = closure_0(11914);
+              closure_0(11940).openAccountStanding();
+              const obj = closure_0(11940);
             }
           },
           onError() {
-            let arr = closure_1_1(4763);
+            let arr = closure_1_1(4777);
             arr = arr.pop();
-            classificationId(11914).openAccountStanding();
+            classificationId(11940).openAccountStanding();
           },
         });
       },
@@ -71,7 +71,7 @@ export default function ClassificationDetailModal(classificationId) {
   obj = { screens: memo, initialRouteName: constants.CLASSIFICATION_DETAIL, headerBackTitle: null };
   const intl = classificationId(1114).intl;
   obj.headerBackTitle = intl.string(classificationId(1114).t["13/7kX"]);
-  return jsx(classificationId(7000).Navigator, {
+  return jsx(classificationId(7014).Navigator, {
     screens: memo,
     initialRouteName: constants.CLASSIFICATION_DETAIL,
     headerBackTitle: null,

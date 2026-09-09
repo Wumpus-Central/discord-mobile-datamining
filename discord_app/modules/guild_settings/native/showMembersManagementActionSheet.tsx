@@ -15,11 +15,11 @@ export default function showMembersManagementActionSheet(guild) {
   obj.label = intl.string(guild(1114).t.pEasFX);
   obj.onPress = function onPress() {
     const obj = { guild, selectedRoleId, onFilterRoleId };
-    obj.openLazy(asyncRequireImpl(16576, dependencyMap.paths), "MembersFilter", obj);
+    obj.openLazy(asyncRequireImpl(16607, dependencyMap.paths), "MembersFilter", obj);
   };
   const items = [obj];
   if (canPrune == null) {
-    let tmpResult = tmp(7265);
+    let tmpResult = tmp(7279);
     canPrune = tmpResult.canPruneGuildMembers(guild, UserStore.getCurrentUser());
   }
   if (canPrune) {
@@ -28,11 +28,11 @@ export default function showMembersManagementActionSheet(guild) {
     obj.label = intl2.string(tmp(1114).t["2mIlKQ"]);
     obj.onPress = function onPress() {
       const obj = { guild };
-      obj.openLazy(asyncRequireImpl(16577, dependencyMap.paths), "MembersPrune", obj);
+      obj.openLazy(asyncRequireImpl(16608, dependencyMap.paths), "MembersPrune", obj);
     };
     items.push(obj);
   }
-  tmpResult = tmp(7195);
+  tmpResult = tmp(7208);
   const result = tmpResult.showSimpleActionSheet({ key: "GuildSettingsMembersMore", options: items, hasIcons: false });
 }
 export const getMembersManagementActions = function getMembersManagementActions(guild) {
@@ -43,12 +43,12 @@ export const getMembersManagementActions = function getMembersManagementActions(
   obj.label = intl.string(guild(1114).t.pEasFX);
   obj.action = function action() {
     const obj = { guild, selectedRoleId, onFilterRoleId };
-    obj.openLazy(asyncRequireImpl(16576, dependencyMap.paths), "MembersFilter", obj);
+    obj.openLazy(asyncRequireImpl(16607, dependencyMap.paths), "MembersFilter", obj);
   };
   const items = [obj];
   if (canPrune == null) {
-    canPrune = tmp(7265).canPruneGuildMembers(guild, UserStore.getCurrentUser());
-    const tmpResult = tmp(7265);
+    canPrune = tmp(7279).canPruneGuildMembers(guild, UserStore.getCurrentUser());
+    const tmpResult = tmp(7279);
   }
   if (canPrune) {
     obj = { label: null, action: null, variant: "destructive" };
@@ -56,7 +56,7 @@ export const getMembersManagementActions = function getMembersManagementActions(
     obj.label = intl2.string(tmp(1114).t["2mIlKQ"]);
     obj.action = function action() {
       const obj = { guild };
-      obj.openLazy(asyncRequireImpl(16577, dependencyMap.paths), "MembersPrune", obj);
+      obj.openLazy(asyncRequireImpl(16608, dependencyMap.paths), "MembersPrune", obj);
     };
     items.push(obj);
   }

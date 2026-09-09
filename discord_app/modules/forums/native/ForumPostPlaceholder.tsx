@@ -8,7 +8,7 @@ import AccessibilityStore from "../../a11y/AccessibilityStore.tsx";
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(4560);
+const createStyles = fn(4574);
 let obj = { postPlaceholder: null };
 obj = { height: 2 * nativeDefault.space.PX_64, marginBottom: nativeDefault.space.PX_12 };
 obj.postPlaceholder = obj;
@@ -28,14 +28,14 @@ export default noop.memo(() => {
     noop.useState(() => {
       let obj = { timingConfig: null };
       obj = { duration: 1000 + 500 * Math.random(), easing: null };
-      const Easing = stateFromStores(4296).Easing;
-      obj.easing = Easing.inOut(stateFromStores(4296).Easing.sin);
+      const Easing = stateFromStores(4310).Easing;
+      obj.easing = Easing.inOut(stateFromStores(4310).Easing.sin);
       obj.timingConfig = obj;
       return obj;
     }),
     1,
   )[0].timingConfig;
-  let obj1 = stateFromStores(4296);
+  let obj1 = stateFromStores(4310);
   const fn = function _() {
     const obj = { opacity: null };
     if (stateFromStores) {
@@ -57,11 +57,11 @@ export default noop.memo(() => {
   obj = {
     reducedMotion: stateFromStores,
     ROW_OPACITY_END,
-    withDelay: stateFromStores(4296).withDelay,
+    withDelay: stateFromStores(4310).withDelay,
     INITIAL_DELAY_MS: 1000,
-    withRepeat: stateFromStores(4296).withRepeat,
-    withSequence: stateFromStores(4296).withSequence,
-    withTiming: stateFromStores(4561).withTiming,
+    withRepeat: stateFromStores(4310).withRepeat,
+    withSequence: stateFromStores(4310).withSequence,
+    withTiming: stateFromStores(4575).withTiming,
     timingConfig,
   };
   fn.__closure = obj;
@@ -70,6 +70,6 @@ export default noop.memo(() => {
   const animatedStyle = obj1.useAnimatedStyle(fn);
   obj = { style: animatedStyle, pointerEvents: "none", children: null };
   obj1 = { variant: "secondary", style: closure_7().postPlaceholder };
-  obj.children = jsx(stateFromStores(5607).Card, { variant: "secondary", style: closure_7().postPlaceholder });
-  return jsx(timingConfig(4296).View, { style: animatedStyle, pointerEvents: "none", children: null });
+  obj.children = jsx(stateFromStores(5621).Card, { variant: "secondary", style: closure_7().postPlaceholder });
+  return jsx(timingConfig(4310).View, { style: animatedStyle, pointerEvents: "none", children: null });
 });

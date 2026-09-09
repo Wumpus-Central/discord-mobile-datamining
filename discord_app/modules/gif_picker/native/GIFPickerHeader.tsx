@@ -133,21 +133,21 @@ const View = fn(17).View;
 fn(1074).GIFPickerResultTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_7, Fragment: closure_8, jsxs: closure_9 } = jsxProd);
-fn(4560);
+fn(4574);
 let obj = { container: null, headerContainer: null, header: null, favoritesSearch: null };
 obj = { paddingVertical: nativeDefault.space.PX_8 };
 obj.container = obj;
 const createStyles = {
   flexDirection: "row",
   justifyContent: "space-between",
-  gap: fn(10374).GIF_PICKER_GUTTER_SPACING,
+  gap: fn(10401).GIF_PICKER_GUTTER_SPACING,
 };
 obj.headerContainer = createStyles;
 obj.header = {
   borderWidth: 1,
   borderColor: "transparent",
   paddingHorizontal: nativeDefault.space.PX_8,
-  height: fn(6622).InputHeights.MD,
+  height: fn(6636).InputHeights.MD,
   flexDirection: "row",
   alignItems: "center",
   gap: nativeDefault.space.PX_8,
@@ -164,7 +164,7 @@ let obj2 = {
   borderWidth: 1,
   borderColor: "transparent",
   paddingHorizontal: nativeDefault.space.PX_8,
-  height: fn(6622).InputHeights.MD,
+  height: fn(6636).InputHeights.MD,
   flexDirection: "row",
   alignItems: "center",
   gap: nativeDefault.space.PX_8,

@@ -50,7 +50,7 @@ function handleLogout(source) {
   }
   const dispatchResult = tmp2Result.dispatch(obj);
 }
-const setPromoEmailConsentState = fn(6594).setPromoEmailConsentState;
+const setPromoEmailConsentState = fn(6608).setPromoEmailConsentState;
 const Constants = fn(1074);
 ({
   Endpoints: closure_9,
@@ -59,7 +59,7 @@ const Constants = fn(1074);
   AbortCodes: closure_12,
   Routes: map1,
 } = Constants);
-const PushNotificationConstants = fn(6596);
+const PushNotificationConstants = fn(6610);
 ({ DEVICE_PUSH_VOIP_PROVIDER: closure_14, getDevicePushProvider: closure_15 } = PushNotificationConstants);
 const logger = new LoggerDefault("AuthenticationActionCreators");
 let PasswordResetResult = { MFA: "MFA", SUCCESS: "SUCCESS" };
@@ -99,7 +99,7 @@ PasswordResetResult = {
     } else {
       obj1 = {};
     }
-    const merged = Object.assign(obj1);
+    let merged = Object.assign(obj1);
     request.rejectWithError = isMultiAccount(self[14]).rejectWithMigratedError();
     const tmp3Result = isMultiAccount(self[14]);
     return obj1.post(request).then(
@@ -130,6 +130,21 @@ PasswordResetResult = {
             suspended_user_token = body.suspended_user_token;
           }
           if (null != suspended_user_token) {
+            if (isMultiAccount) {
+              const result = CrossPlatformNativeUtilsDefault.clearNavigationHistory();
+              const id = AuthenticationStore.getId();
+              obj = { type: "LOGOUT", userId: id };
+              const merged = Object.assign({ isSwitchingAccount: true });
+              const tmp21Result = DispatcherDefault;
+              DispatcherDefault.dispatch(obj).catch((error) => {
+                logger.error("Error while dispatching LOGOUT", error);
+                if (DiscordErrors != null) {
+                  DiscordErrors.softCrash(error);
+                }
+                throw error;
+              });
+              const dispatchResult = DispatcherDefault.dispatch(obj);
+            }
             const body3 = body.body;
             let suspended_user_token1;
             if (body3 != null) {
@@ -148,10 +163,10 @@ PasswordResetResult = {
         if (code === constants.ACCOUNT_SCHEDULED_FOR_DELETION) {
           if (null != password) {
             if ("" !== password) {
-              obj = { type: "LOGIN_ACCOUNT_SCHEDULED_FOR_DELETION", credentials: null };
-              const obj1 = { login, password };
-              obj.credentials = obj1;
-              DispatcherDefault.dispatch(obj);
+              const obj1 = { type: "LOGIN_ACCOUNT_SCHEDULED_FOR_DELETION", credentials: null };
+              let obj2 = { login, password };
+              obj1.credentials = obj2;
+              DispatcherDefault.dispatch(obj1);
             }
             throw v6OrEarlierAPIError;
           }
@@ -160,23 +175,23 @@ PasswordResetResult = {
           if (null != password) {
             if ("" !== password) {
               let obj5 = DispatcherDefault;
-              let obj2 = { type: "LOGIN_ACCOUNT_DISABLED", credentials: null };
-              const obj3 = { login, password };
-              obj2.credentials = obj3;
-              obj5.dispatch(obj2);
+              const obj3 = { type: "LOGIN_ACCOUNT_DISABLED", credentials: null };
+              const obj4 = { login, password };
+              obj3.credentials = obj4;
+              obj5.dispatch(obj3);
             }
           }
         }
         if (code === constants.PHONE_VERIFICATION_REQUIRED) {
           obj2 = DispatcherDefault;
-          const obj4 = { type: "LOGIN_PHONE_IP_AUTHORIZATION_REQUIRED", credentials: null };
-          obj5 = { login, password };
-          obj4.credentials = obj5;
-          obj2.dispatch(obj4);
+          obj5 = { type: "LOGIN_PHONE_IP_AUTHORIZATION_REQUIRED", credentials: null };
+          const obj6 = { login, password };
+          obj5.credentials = obj6;
+          obj2.dispatch(obj5);
         } else {
           obj = DispatcherDefault;
-          const obj6 = { type: "LOGIN_FAILURE", error: v6OrEarlierAPIError };
-          obj.dispatch(obj6);
+          const obj7 = { type: "LOGIN_FAILURE", error: v6OrEarlierAPIError };
+          obj.dispatch(obj7);
         }
       },
     );
@@ -185,7 +200,7 @@ PasswordResetResult = {
     const self = this;
     ({ isMultiAccount: require, loginInstanceId } = arg0);
     ({ code, ticket, source, giftCodeSKUId, mfaType } = arg0);
-    self(4753);
+    self(4767);
     const request = {
       url: closure_9.LOGIN_MFA(mfaType),
       body: null,
@@ -288,7 +303,7 @@ PasswordResetResult = {
               const obj12 = tmp3(573);
               c4 = 2;
               c5 = 1;
-              const obj1 = { value: closure_0(6597).fetchWebAuthnPasswordlessChallenge(), done: false };
+              const obj1 = { value: closure_0(6611).fetchWebAuthnPasswordlessChallenge(), done: false };
               return obj1;
             }
           } else if (1 === tmp8) {
@@ -344,7 +359,7 @@ PasswordResetResult = {
             if (4 === tmp8) {
               dependencyMap = 1;
               closure_128_4 = closure_2;
-              let tmp16 = closure_128_4 instanceof closure_0(4461).APIError;
+              let tmp16 = closure_128_4 instanceof closure_0(4475).APIError;
               if (tmp16) {
                 tmp16 = null != closure_128_4.status;
               }
@@ -355,7 +370,7 @@ PasswordResetResult = {
                 tmp16 = closure_128_4.status < 500;
               }
               if (tmp16) {
-                obj2 = tmp3(6598);
+                obj2 = tmp3(6612);
                 c4 = 6;
                 c5 = 1;
                 const obj8 = { value: obj2.signalUnknownCredential(closure_128_3), done: false };
@@ -404,7 +419,7 @@ PasswordResetResult = {
     const self = this;
     isMultiAccount = isMultiAccount.isMultiAccount;
     ({ ticket, credential, source, giftCodeSKUId } = isMultiAccount);
-    self(4753);
+    self(4767);
     const request = {
       url: closure_9.WEBAUTHN_CONDITIONAL_UI_LOGIN,
       body: { credential, ticket, source, giftCodeSKUId },
@@ -511,7 +526,7 @@ PasswordResetResult = {
               request.trackedActionData = obj2;
               c4 = 2;
               c5 = 1;
-              const obj3 = { value: tmp3(4753).post(request), done: false };
+              const obj3 = { value: tmp3(4767).post(request), done: false };
               return obj3;
             }
           } else if (1 === tmp7) {
@@ -519,7 +534,7 @@ PasswordResetResult = {
             closure_128_1 = closure_2;
             let obj4 = tmp3(573);
             obj4 = { type: "LOGIN_FAILURE", error: null };
-            const v6OrEarlierAPIError = new ticket(4461).V6OrEarlierAPIError(closure_128_1);
+            const v6OrEarlierAPIError = new ticket(4475).V6OrEarlierAPIError(closure_128_1);
             obj4.error = v6OrEarlierAPIError;
             obj4.dispatch(obj4);
             throw closure_128_1;
@@ -601,7 +616,7 @@ PasswordResetResult = {
       DEFAULT_LOGGED_OUT = constants2.DEFAULT_LOGGED_OUT;
     }
     importAll = id;
-    DEFAULT_LOGGED_OUT(4753);
+    DEFAULT_LOGGED_OUT(4767);
     const request = { url: closure_9.LOGOUT, body: null, oldFormErrors: true, trackedActionData: null };
     let trackedActionData = { provider: closure_15(), token: null, voip_provider: null, voip_token: null };
     const Storage = require("Storage").Storage;
@@ -694,7 +709,7 @@ PasswordResetResult = {
         event: token(1250).NetworkActionNames.USER_VERIFY;
       }
       request.rejectWithError = token(1272).rejectWithMigratedError();
-      await tmp2(4753).post(request);
+      await tmp2(4767).post(request);
       closure_128_0 = value;
       tmp2(573).dispatch({ type: "LOGIN_SUCCESS", token: closure_128_0.body.token });
       return closure_128_0.body.user_id;
@@ -792,7 +807,7 @@ PasswordResetResult = {
                 obj1.push_voip_token = value;
               }
               dependencyMap = 1;
-              let obj4 = password(4753);
+              let obj4 = password(4767);
               const request = {
                 url: constants.RESET_PASSWORD,
                 body: obj1,
@@ -812,7 +827,7 @@ PasswordResetResult = {
           } else if (1 === tmp7) {
             dependencyMap = 0;
             closure_128_9 = source;
-            const v6OrEarlierAPIError = new token(4461).V6OrEarlierAPIError(closure_128_9);
+            const v6OrEarlierAPIError = new token(4475).V6OrEarlierAPIError(closure_128_9);
             closure_128_8 = v6OrEarlierAPIError;
             obj2 = password(573);
             obj4 = { type: "LOGIN_FAILURE", error: closure_128_8 };
@@ -877,7 +892,7 @@ PasswordResetResult = {
         trackedActionData: { event: v3(1250).NetworkActionNames.USER_RESET_PASSWORD, properties: { mfa: true } },
         rejectWithError: true,
       };
-      await v1(4753).post(request);
+      await v1(4767).post(request);
       return value.body.token;
     })();
   },
@@ -925,7 +940,7 @@ PasswordResetResult = {
               request.body = obj1;
               const obj2 = { event: login(1250).NetworkActionNames.FORGOT_PASSWORD };
               request.trackedActionData = obj2;
-              const obj13 = tmp3(4753);
+              const obj13 = tmp3(4767);
               request.rejectWithError = login(1272).rejectWithMigratedError();
               c4 = 2;
               c5 = 1;
@@ -935,7 +950,7 @@ PasswordResetResult = {
           } else if (1 === tmp7) {
             dependencyMap = 0;
             closure_128_2 = closure_2;
-            const v6OrEarlierAPIError = new login(4461).V6OrEarlierAPIError(closure_128_2);
+            const v6OrEarlierAPIError = new login(4475).V6OrEarlierAPIError(closure_128_2);
             closure_128_1 = v6OrEarlierAPIError;
             if (closure_128_1.code === constants2.PHONE_VERIFICATION_REQUIRED) {
               let obj5 = tmp3(573);

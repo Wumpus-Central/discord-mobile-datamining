@@ -7,11 +7,11 @@ import Stack_Stack from "../../../design/components/Stack/native/Stack.native.ts
 import TableRow from "../../../design/components/TableRow/native/TableRow.native.tsx";
 import TableRowGroup from "../../../design/components/TableRow/native/TableRowGroup.native.tsx";
 import EyeIcon from "../../../design/components/Icon/native/redesign/generated/EyeIcon.tsx";
-import _modDef9866 from "../../../../_runtime/metro/09866__.js";
+import _modDef9893 from "../../../../_runtime/metro/09893__.js";
 import useAgeSpecificText from "../hooks/useAgeSpecificText.tsx";
-import _modDef12380 from "../../../../_runtime/metro/12380__.js";
+import _modDef12406 from "../../../../_runtime/metro/12406__.js";
 import QrCodeIcon from "../../../design/components/Icon/native/redesign/generated/QrCodeIcon.tsx";
-import _modDef14889 from "../../../../_runtime/metro/14889__.js";
+import _modDef14915 from "../../../../_runtime/metro/14915__.js";
 import ChatCheckIcon from "../../../design/components/Icon/native/redesign/generated/ChatCheckIcon.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
@@ -19,7 +19,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-fn(4560);
+fn(4574);
 let createStyles = { tableGroup: null };
 createStyles = { marginTop: 20, marginBottom: nativeDefault.space.PX_24 };
 createStyles.tableGroup = createStyles;
@@ -50,18 +50,18 @@ export default function FamilyCenterFeatureRows() {
     intl5.string(_modDef2396["+pi4Yt"]),
     intl6.string(_modDef2396["1xPTwE"]),
   );
-  obj.icon = _modDef14889;
+  obj.icon = _modDef14915;
   obj.IconComponent = ChatCheckIcon.ChatCheckIcon;
   const intl7 = util.intl;
   obj.header = intl7.string(_modDef2396["001l3m"]);
   obj.description = ageSpecificText;
   const items = [obj, ,];
-  obj = { icon: _modDef12380, IconComponent: EyeIcon.EyeIcon, header: null, description: null };
+  obj = { icon: _modDef12406, IconComponent: EyeIcon.EyeIcon, header: null, description: null };
   const intl8 = util.intl;
   obj.header = intl8.string(_modDef2396.yipAeP);
   obj.description = ageSpecificText1;
   items[1] = obj;
-  obj1 = { icon: _modDef9866, IconComponent: QrCodeIcon.QrCodeIcon, header: null, description: null };
+  obj1 = { icon: _modDef9893, IconComponent: QrCodeIcon.QrCodeIcon, header: null, description: null };
   const intl9 = util.intl;
   obj1.header = intl9.string(_modDef2396.hhOuMe);
   obj1.description = ageSpecificText2;

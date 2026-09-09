@@ -15,7 +15,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-fn(4560);
+fn(4574);
 let createStyles = { container: null, title: null, description: null };
 createStyles = {
   flex: 1,
@@ -137,7 +137,7 @@ export default function AddFriendNicknameModal(arg0) {
   const tmp = closure_11();
   let obj = noop;
   [c2, c3] = _slicedToArray(noop.useState(false), 2);
-  _slicedToArray = showUserProfile(10932)();
+  _slicedToArray = showUserProfile(10959)();
   let obj1 = initialize;
   const items = [closure_7];
   const stateFromStores = obj1.useStateFromStores(items, () => RelationshipStore.getNickname(require));
@@ -169,9 +169,9 @@ export default function AddFriendNicknameModal(arg0) {
   }, items2);
   obj = { style: tmp.container, children: null };
   obj = { children: null };
-  showUserProfile(5578);
+  showUserProfile(5592);
   obj1 = { confirmText: null, onConfirm: null, cancelText: null, onCancel: null, children: null };
-  const tmp3Result = showUserProfile(4994);
+  const tmp3Result = showUserProfile(5008);
   const intl3 = util.intl;
   obj1.confirmText = intl3.string(util.t["R3BPH+"]);
   obj1.onConfirm = function handleSubmit() {
@@ -220,7 +220,7 @@ export default function AddFriendNicknameModal(arg0) {
     children: stringResult,
   };
   const tmp5Result = initialize;
-  obj4.placeholder = showUserProfile(4404).getName(stateFromStores1);
+  obj4.placeholder = showUserProfile(4418).getName(stateFromStores1);
   obj4.defaultValue = stateFromStores;
   items3[2] = closure_9(TextField.TextField, obj4);
   obj1.children = items3;

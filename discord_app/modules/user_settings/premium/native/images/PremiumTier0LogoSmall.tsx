@@ -1,7 +1,7 @@
 // discord_app/modules/user_settings/premium/native/images/PremiumTier0LogoSmall.tsx
 import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
 import useToken from "../../../../../design/tokens/native/useToken.tsx";
-import inlineStyles from "../../../../../../_runtime/08456_inlineStyles.js";
+import inlineStyles from "../../../../../../_runtime/08484_inlineStyles.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
 const inlineStylesDefault = inlineStyles;

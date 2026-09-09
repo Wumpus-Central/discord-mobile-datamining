@@ -18,4 +18,6 @@ export const AutomodTriggerType = {
   [6]: "USER_PROFILE",
   SERVER_POLICY: 7,
   [7]: "SERVER_POLICY",
+  APPLICATION: 8,
+  [8]: "APPLICATION",
 };

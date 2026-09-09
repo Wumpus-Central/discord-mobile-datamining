@@ -3,7 +3,7 @@ import LoggerDefault from "../debug/Logger.tsx";
 import Storage3 from "../../../discord_common/js/packages/storage/Storage.tsx";
 import DispatcherDefault from "../../Dispatcher.tsx";
 import DurationsDefault from "../../utils/Durations.tsx";
-import _modDef4153 from "../../../_runtime/metro/04153__.js";
+import _modDef4166 from "../../../_runtime/metro/04166__.js";
 import DateUtils from "../../utils/DateUtils.tsx";
 import UploadActionCreatorsDefault from "../../actions/native/UploadActionCreators.tsx";
 import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
@@ -40,8 +40,8 @@ function getAllCachedMessages() {
 }
 function messageTimestampIsInInterval(arg0, arg1) {
   if (null != arg0) {
-    const tmp4 = _modDef4153();
-    const tmp5 = _modDef4153(arg0);
+    const tmp4 = _modDef4166();
+    const tmp5 = _modDef4166(arg0);
     return DateUtils.isWithinInterval(tmp4, tmp5, arg1);
   } else {
     return false;
@@ -51,16 +51,16 @@ function createFailedMessage(channel_id) {
   channel_id = channel_id.channel_id;
   ({ content, tts, state } = channel_id);
   let obj = { channelId: channel_id, content, tts, state: MessageStates.SEND_FAILED };
-  const tmp3 = file(7752)(obj);
+  const tmp3 = file(7766)(obj);
   const id = tmp3;
   ({ timestamp: tmp3.timestamp, file } = channel_id);
   obj = { isHydratingExpiredPendingMessage: state === MessageStates.SENDING };
-  file(7456).receiveMessage(channel_id, tmp3, true, obj);
+  file(7470).receiveMessage(channel_id, tmp3, true, obj);
   if (null != file) {
     file(573).wait(() => UploadActionCreatorsDefault.restoreFailedUpload(id.id, file));
     const tmpResult = file(573);
   }
-  const obj2 = file(7456);
+  const obj2 = file(7470);
 }
 function resumeSendingMessage() {
   const self = this;
@@ -241,7 +241,7 @@ let closure_25 = async function _rehydrateFailedMessages(arg0) {
   }
 };
 const MessageStates = fn(1074).MessageStates;
-const MutexUtils = fn(14554);
+const MutexUtils = fn(14579);
 let closure_10 = MutexUtils.createLock();
 let closure_11 = new LoggerDefault("LocalMessageCacheManager");
 const LocalMessageCacheManagerMessageCacheKey = "LocalMessageCacheManagerMessageCacheKey";
@@ -969,7 +969,7 @@ prototype["_initialize"] = function _initialize() {
                 c6 = 1;
                 closure_131_1 = tmp10;
                 channel_id = closure_131_1.channel_id;
-                let obj9 = values(5272);
+                let obj9 = values(5286);
                 value = obj9.get(channel_id);
                 dependencyMap = value;
                 if (value == null) {

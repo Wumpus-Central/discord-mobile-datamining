@@ -5,7 +5,7 @@ import util from "../../../../intl/index.native.tsx";
 import ToastActionCreatorsDefault from "../../../toast/native/ToastActionCreators.tsx";
 import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import components_Button_Button from "../../../../design/components/Button/native/Button.native.tsx";
-import _modDef5597 from "../../../../../_runtime/metro/05597__.js";
+import _modDef5611 from "../../../../../_runtime/metro/05611__.js";
 import BottomSheetTitleHeader from "../../../../design/components/Sheet/native/BottomSheetTitleHeader.native.tsx";
 import Sheet_BottomSheet from "../../../../design/components/Sheet/native/BottomSheet.native.tsx";
 import ActionSheetCloseButton from "../../../../design/components/Sheet/native/ActionSheetCloseButton.native.tsx";
@@ -19,7 +19,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-fn(4560);
+fn(4574);
 let createStyles = { header: null, container: null, buttonContainer: null, switch: null };
 createStyles = { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH };
 createStyles.header = createStyles;
@@ -50,7 +50,7 @@ export default function SpamMessageRequestHamActionSheet(arg0) {
       const obj = { key: "MESSAGE_REQUEST_REQUEST_ERROR_ALERT_TITLE", content: null, icon: null };
       const intl = recipientId(1114).intl;
       obj.content = intl.string(recipientId(1114).t["EDYbS+"]);
-      obj.icon = _modDef5597;
+      obj.icon = _modDef5611;
       obj.open(obj);
     },
     onAcceptSuccess() {

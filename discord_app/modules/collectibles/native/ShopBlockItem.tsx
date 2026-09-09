@@ -7,7 +7,7 @@ import CollectiblesCategoryStore from "../CollectiblesCategoryStore.tsx";
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-fn(4560);
+fn(4574);
 let createStyles = { shopBlockSpacing: null };
 createStyles = { marginTop: nativeDefault.space.PX_16 };
 createStyles.shopBlockSpacing = createStyles;

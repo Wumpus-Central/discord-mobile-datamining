@@ -16,7 +16,7 @@ export default function AppLauncherBackButton(onPress) {
   obj = {
     size: "sm",
     variant: "secondary-overlay",
-    icon: importDefault(canGoBackResult ? 5629 : 5681),
+    icon: importDefault(canGoBackResult ? 5643 : 5695),
     onPress: onPress.onPress,
     accessibilityLabel: null,
     maxFontSizeMultiplier: 1.5,
@@ -27,7 +27,7 @@ export default function AppLauncherBackButton(onPress) {
   return jsx(IconButton.IconButton, {
     size: "sm",
     variant: "secondary-overlay",
-    icon: importDefault(canGoBackResult ? 5629 : 5681),
+    icon: importDefault(canGoBackResult ? 5643 : 5695),
     onPress: onPress.onPress,
     accessibilityLabel: null,
     maxFontSizeMultiplier: 1.5,

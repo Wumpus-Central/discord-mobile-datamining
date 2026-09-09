@@ -59,7 +59,7 @@ let closure_12 = async function _fetchUserOffer(arg0) {
           closure_136_1 = flag;
           let obj1 = closure_2;
           if (closure_2 === undefined) {
-            obj1 = { offerId: "jsxs", paymentGatewayOverride: "channel" };
+            obj1 = { offerId: "Array", paymentGatewayOverride: "PX_16" };
           }
           closure_136_2 = obj1;
           closure_136_3 = closure_3;

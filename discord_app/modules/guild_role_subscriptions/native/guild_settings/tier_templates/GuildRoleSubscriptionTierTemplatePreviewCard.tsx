@@ -7,7 +7,7 @@ import asyncRequireImpl from "../../../../../../_runtime/01896_asyncRequireImpl.
 import ActionSheetActionCreatorsDefault from "../../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import Text_Text from "../../../../../design/components/Text/native/Text.tsx";
 import AppAnalyticsUtils from "../../../../app_analytics/AppAnalyticsUtils.tsx";
-import _modDef7158 from "../../../../../../_runtime/metro/07158__.js";
+import _modDef7172 from "../../../../../../_runtime/metro/07172__.js";
 import GuildRoleSubscriptionTierTemplateUtils from "GuildRoleSubscriptionTierTemplateUtils.tsx";
 import GuildRoleSubscriptionTierTemplateActionCreators from "../../../tier_templates/GuildRoleSubscriptionTierTemplateActionCreators.tsx";
 import noop from "../../../../../../_runtime/metro/00019__.js";
@@ -72,7 +72,7 @@ function ViewEntireTemplateFooter() {
   obj.children = items;
   const items1 = [closure_1_10(timestampProducer, obj)];
   const obj2 = { children: null };
-  const obj3 = { size: native.Icon.Sizes.REFRESH_SMALL_16, source: _modDef7158, style: null };
+  const obj3 = { size: native.Icon.Sizes.REFRESH_SMALL_16, source: _modDef7172, style: null };
   const obj4 = { transform: null };
   const items2 = [{ rotate: "180deg" }];
   obj4.transform = items2;
@@ -88,7 +88,7 @@ const Constants = fn(1074);
 ({ AnalyticEvents: closure_7, GuildSettingsSections: closure_8 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-fn(4560);
+fn(4574);
 let createStyles = {
   container: null,
   subscriptionPlanTextStyle: null,
@@ -205,7 +205,7 @@ export default function GuildRoleSubscriptionTierTemplatePreviewCard(template) {
   callback1 = obj2.useCallback((selectedTemplate, arg1) => {
     if (closure_7) {
       const obj = { selectedTemplate, handleCreateFromTemplate, newPricesToPick: suggestedUnusedPrices };
-      obj.openLazy(asyncRequireImpl(17791, dependencyMap.paths), "TierTemplatePriceReselectionCard", obj);
+      obj.openLazy(asyncRequireImpl(17824, dependencyMap.paths), "TierTemplatePriceReselectionCard", obj);
     } else {
       handleCreateFromTemplate(selectedTemplate, arg1);
     }
@@ -224,7 +224,7 @@ export default function GuildRoleSubscriptionTierTemplatePreviewCard(template) {
     style: tmp.contentContainer,
     onPress() {
       const obj = { template, guildId, handleSelectTemplateInPreview: callback1 };
-      obj.openLazy(asyncRequireImpl(17787, dependencyMap.paths), "TierTemplateCard", obj);
+      obj.openLazy(asyncRequireImpl(17820, dependencyMap.paths), "TierTemplateCard", obj);
     },
     children: null,
   };

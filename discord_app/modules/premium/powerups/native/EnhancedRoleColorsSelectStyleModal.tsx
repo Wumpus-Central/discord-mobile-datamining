@@ -12,7 +12,7 @@ import BottomSheetTitleHeader from "../../../../design/components/Sheet/native/B
 import Sheet_BottomSheet from "../../../../design/components/Sheet/native/BottomSheet.native.tsx";
 import RowGeneratorDefault from "../../../messages/native/renderer/RowGenerator.tsx";
 import enhanced_role_colors_EnhancedRoleColorUtils from "../../enhanced_role_colors/native/EnhancedRoleColorUtils.tsx";
-import _modDef13297 from "../../../../../discord_assets/assets/premium/wumpus-avatar.png.js";
+import _modDef13320 from "../../../../../discord_assets/assets/premium/wumpus-avatar.png.js";
 import GuildSettingsRoleConstants from "../../../guild_settings/roles/GuildSettingsRoleConstants.tsx";
 import GuildSettingsRolesStore from "../../../guild_settings/roles/GuildSettingsRolesStore.tsx";
 import EnhancedRoleColorConstants from "../constants/EnhancedRoleColorConstants.tsx";
@@ -168,7 +168,7 @@ export default function EnhancedRoleColorsSelectStyleModal(arg0) {
             const result = EnhancedRoleColorUtils.extractColorStringsFromServerColors(id.colors);
             message.message.roleColors = enhanced_role_colors_EnhancedRoleColorUtils.processColorStrings(result);
             message.message.shouldShowRoleOnName = true;
-            message.message.avatarURL = _modDef13297;
+            message.message.avatarURL = _modDef13320;
           },
         };
         const items1 = [closure_1_9(require("ChatItem"), obj)];

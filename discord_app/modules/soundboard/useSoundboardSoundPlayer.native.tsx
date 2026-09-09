@@ -4,7 +4,7 @@ import noop from "../../../_runtime/metro/00019__.js";
 import SoundboardStore from "SoundboardStore.tsx";
 
 require = fn;
-const SoundOutputChannel = fn(9096).SoundOutputChannel;
+const SoundOutputChannel = fn(9123).SoundOutputChannel;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/soundboard/useSoundboardSoundPlayer.native.tsx");
 

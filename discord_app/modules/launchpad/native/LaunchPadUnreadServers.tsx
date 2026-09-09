@@ -25,7 +25,7 @@ get_ActivityIndicator = fn(17);
 const ChannelTypes = fn(1074).ChannelTypes;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(4560);
+const createStyles = fn(4574);
 let obj = {
   listWrapper: { marginTop: 8 },
   list: { marginBottom: 4, flexShrink: 0 },
@@ -79,7 +79,7 @@ let closure_13 = noop.memo(function GuildItemInner(guildId) {
     onLongPress: callback1,
     backgroundColor: tmp.maskStrokeStyle.backgroundColor,
   };
-  obj.children = closure_10(onGuildSelect(16973), obj);
+  obj.children = closure_10(onGuildSelect(17010), obj);
   return closure_10(closure_5, obj);
 });
 let closure_14 = noop.memo(function PrivateChannelItemInner(channelId) {

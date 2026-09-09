@@ -18,7 +18,7 @@ const fn = function u(get, arg1) {
       break;
     }
   } else {
-    obj = fn2(4296);
+    obj = fn2(4310);
     obj.runOnUI(fn)(get, arg1);
   }
 };
@@ -46,8 +46,8 @@ const fn2 = function u(get, arg1) {
       }
     }
   } else {
-    closure_0(4296).runOnUI(fn2)(get, arg1);
-    const obj = closure_0(4296);
+    closure_0(4310).runOnUI(fn2)(get, arg1);
+    const obj = closure_0(4310);
   }
 };
 obj = { runOnUI: ReanimatedRexport.runOnUI, updateSharedValueArrayIfChanged: "a" };

@@ -37,11 +37,11 @@ import UserStore from "../../stores/UserStore.tsx";
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, StyleSheet } = get_ActivityIndicator);
-const RowGeneratorConstants = fn(7933);
+const RowGeneratorConstants = fn(7947);
 ({ Changeset: c10, RowType: closure_11, SeparatorType: closure_12 } = RowGeneratorConstants);
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
-fn(4560);
+fn(4574);
 let createStyles = {
   chat: { flex: 1, overflow: "hidden" },
   containerInner: null,
@@ -303,7 +303,7 @@ class ChatPreviewBase extends PureComponent {
       if (null != jumpTargetId) {
         const resolved = Promise.resolve();
         resolved.then(() => {
-          applyArgumentsResult(4571).transitionToMessage(closure_1_0, jumpTargetId, { navigationReplace: true });
+          applyArgumentsResult(4585).transitionToMessage(closure_1_0, jumpTargetId, { navigationReplace: true });
         });
       }
     };
@@ -335,7 +335,7 @@ class ChatPreviewBase extends PureComponent {
           }
           channel = channel.getChannel(arg1);
           if (null != channel) {
-            applyArgumentsResult(4571);
+            applyArgumentsResult(4585);
             const obj = { source, navigationReplace: true };
             obj.transitionToThread(channel, obj);
           }
@@ -606,7 +606,7 @@ prototype["render"] = function render() {
   };
   tmp9Result = PlatformUtils;
 };
-ChatPreviewBase.contextType = fn(4271).ThemeContext;
+ChatPreviewBase.contextType = fn(4284).ThemeContext;
 ChatPreviewBase.defaultProps = { withSafeArea: true };
 const size = fn(2);
 let result = size.fileFinishedImporting("components_native/common/ChatPreview.tsx");
@@ -625,10 +625,10 @@ export const ChatPreview = function ChatPreview(channelId) {
   const items1 = [ChannelStore];
   const stateFromStores1 = channelId(504).useStateFromStores(items1, () => ChannelStore.getChannel(channelId));
   const obj2 = channelId(504);
-  const isChannelSpoilerGated = channelId(7329).useIsChannelSpoilerGated(stateFromStores1);
-  const obj3 = channelId(7329);
-  const isChannelContentGated = channelId(4771).useIsChannelContentGated(stateFromStores1);
-  const obj4 = channelId(4771);
+  const isChannelSpoilerGated = channelId(7343).useIsChannelSpoilerGated(stateFromStores1);
+  const obj3 = channelId(7343);
+  const isChannelContentGated = channelId(4785).useIsChannelContentGated(stateFromStores1);
+  const obj4 = channelId(4785);
   const items2 = [ActionSheetStore];
   obj = {};
   const stateFromStores2 = channelId(504).useStateFromStores(items2, () => null != content.getContent());

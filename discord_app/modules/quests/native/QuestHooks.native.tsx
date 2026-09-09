@@ -80,9 +80,9 @@ function useDeliveredDockCreative() {
   }, items3);
 }
 function useIsMobileQuestDockRenderedBase(mobileQuestDock) {
-  const deliveredQuest = deliveredAdCreativeId(15105).getDeliveredQuest(mobileQuestDock);
+  const deliveredQuest = deliveredAdCreativeId(15132).getDeliveredQuest(mobileQuestDock);
   const tmp4 = useIsWindowLargeDefault();
-  const obj = deliveredAdCreativeId(15105);
+  const obj = deliveredAdCreativeId(15132);
   const items = [QuestStore];
   let userStatus;
   const stateFromStores = deliveredAdCreativeId(504).useStateFromStores(
@@ -99,8 +99,8 @@ function useIsMobileQuestDockRenderedBase(mobileQuestDock) {
   }
   let isDismissedResult = null != userStatus;
   if (isDismissedResult) {
-    let tmpResult = tmp(7699);
-    isDismissedResult = tmpResult.isDismissed(deliveredQuest.userStatus, tmp(5447).QuestContent.QUEST_BAR_MOBILE);
+    let tmpResult = tmp(7713);
+    isDismissedResult = tmpResult.isDismissed(deliveredQuest.userStatus, tmp(5461).QuestContent.QUEST_BAR_MOBILE);
   }
   let claimedAt;
   if (deliveredQuest != null) {
@@ -109,13 +109,13 @@ function useIsMobileQuestDockRenderedBase(mobileQuestDock) {
       claimedAt = userStatus.claimedAt;
     }
   }
-  tmpResult = tmp(11488);
+  tmpResult = tmp(11515);
   const isQuestExpired = tmpResult.useIsQuestExpired(deliveredQuest);
   const obj2 = deliveredAdCreativeId(504);
-  let isEligibleForQuests = deliveredAdCreativeId(11489).getIsEligibleForQuests();
-  const tmpResult1 = deliveredAdCreativeId(11489);
-  deliveredAdCreativeId = deliveredAdCreativeId(15105).getDeliveredAdCreativeId(mobileQuestDock);
-  const tmpResult2 = deliveredAdCreativeId(15105);
+  let isEligibleForQuests = deliveredAdCreativeId(11516).getIsEligibleForQuests();
+  const tmpResult1 = deliveredAdCreativeId(11516);
+  deliveredAdCreativeId = deliveredAdCreativeId(15132).getDeliveredAdCreativeId(mobileQuestDock);
+  const tmpResult2 = deliveredAdCreativeId(15132);
   const items1 = [QuestStore];
   const items2 = [deliveredAdCreativeId];
   const type = mobileQuestDock.type;
@@ -130,9 +130,9 @@ function useIsMobileQuestDockRenderedBase(mobileQuestDock) {
     },
     items2,
   );
-  if (deliveredAdCreativeId(5451).AdCreativeType.NO_FILL === type) {
+  if (deliveredAdCreativeId(5465).AdCreativeType.NO_FILL === type) {
     return false;
-  } else if (tmp(5451).AdCreativeType.BOUNTY === type) {
+  } else if (tmp(5465).AdCreativeType.BOUNTY === type) {
     if (isEligibleForQuests) {
       isEligibleForQuests = !stateFromStores1;
     }
@@ -140,7 +140,7 @@ function useIsMobileQuestDockRenderedBase(mobileQuestDock) {
       isEligibleForQuests = !tmp4;
     }
     return isEligibleForQuests;
-  } else if (tmp(5451).AdCreativeType.QUEST === type) {
+  } else if (tmp(5465).AdCreativeType.QUEST === type) {
     if (stateFromStores) {
       if (!tmp10) {
         let tmp15 = null != deliveredQuest && !tmp4;
@@ -153,10 +153,10 @@ function useIsMobileQuestDockRenderedBase(mobileQuestDock) {
   }
   const tmpResult3 = deliveredAdCreativeId(504);
 }
-const QuestConstants = fn(5444);
+const QuestConstants = fn(5458);
 ({ QUEST_REWARD_CODE_CLAIM_BOTTOM_SHEET_KEY: closure_8, QuestVariants: closure_9 } = QuestConstants);
-const CAPTCHA_MODAL_KEY = fn(11284).CAPTCHA_MODAL_KEY;
-const MAIN_SURFACE = fn(9516).MAIN_SURFACE;
+const CAPTCHA_MODAL_KEY = fn(11311).CAPTCHA_MODAL_KEY;
+const MAIN_SURFACE = fn(9543).MAIN_SURFACE;
 const ThemeTypes = fn(1085).ThemeTypes;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/quests/native/QuestHooks.native.tsx");
@@ -346,7 +346,7 @@ export const useMobileActivityQuest = function useMobileActivityQuest(quest) {
                 return obj;
               } else if (canLaunchActivityResult) {
                 if (canLaunchFrameResult) {
-                  let obj5 = v2(9512);
+                  let obj5 = v2(9539);
                   const obj1 = { applicationId: stateFromStores.id, surface, analyticsContext: null };
                   let obj2 = { isStart: true, analyticsLocations };
                   obj1.analyticsContext = obj2;
@@ -363,7 +363,7 @@ export const useMobileActivityQuest = function useMobileActivityQuest(quest) {
                     }
                   }
                   if (null != id) {
-                    obj2 = v3(11524);
+                    obj2 = v3(11551);
                     const obj4 = { appId: stateFromStores.id, botId: stateFromStores.bot.id, analyticsLocations: [] };
                     v2 = 2;
                     v3 = 1;

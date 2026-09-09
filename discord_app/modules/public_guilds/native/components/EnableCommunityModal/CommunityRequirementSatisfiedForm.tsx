@@ -13,7 +13,7 @@ let result = size.fileFinishedImporting(
 
 export default function CommunityRequirementSatisfiedForm(formSwitchDisabled) {
   formSwitchDisabled = formSwitchDisabled.formSwitchDisabled;
-  let obj = formSwitchDisabled(17668);
+  let obj = formSwitchDisabled(17701);
   const enableCommunitySharedStyles = obj.useEnableCommunitySharedStyles();
   obj = { style: enableCommunitySharedStyles.communityRequirementSatisfiedFormWrapper, children: null };
   const items = [formSwitchDisabled.children];
@@ -28,7 +28,7 @@ export default function CommunityRequirementSatisfiedForm(formSwitchDisabled) {
         }
       },
     };
-    tmp6 = closure_3(formSwitchDisabled(5123).PressableOpacity, obj);
+    tmp6 = closure_3(formSwitchDisabled(5137).PressableOpacity, obj);
   }
   items[1] = tmp6;
   obj.children = items;

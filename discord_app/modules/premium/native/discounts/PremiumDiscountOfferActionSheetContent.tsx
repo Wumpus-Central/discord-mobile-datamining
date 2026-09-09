@@ -1,9 +1,11 @@
 // discord_app/modules/premium/native/discounts/PremiumDiscountOfferActionSheetContent.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
+import PremiumUtils from "../../../../utils/PremiumUtils.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import components_Button_Button from "../../../../design/components/Button/native/Button.native.tsx";
 import FolderIcon from "../../../../design/components/Icon/native/redesign/generated/FolderIcon.tsx";
+import NitroFileUploadExperiments from "../../experiments/NitroFileUploadExperiments.tsx";
 import native from "../../../../design/assets/native.tsx";
 import NitroWheelIcon from "../../../../design/components/Icon/native/redesign/generated/NitroWheelIcon.tsx";
 import ChatSmileIcon from "../../../../design/components/Icon/native/redesign/generated/ChatSmileIcon.tsx";
@@ -13,9 +15,10 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
+const PremiumTypes = fn(1373).PremiumTypes;
 const jsxProd = fn(21);
-({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4560);
+({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+const createStyles = fn(4574);
 let obj = { contentContainer: null, buttonContainer: null, title: null, heroIllustrationContainer: null };
 obj = {
   paddingHorizontal: 36,
@@ -32,7 +35,7 @@ obj.contentContainer = obj;
 obj.buttonContainer = { marginVertical: 6, width: "100%", height: 48 };
 obj.title = { width: "100%", textAlign: "center" };
 obj.heroIllustrationContainer = { alignItems: "center", justifyContent: "center", height: 188, width: "100%" };
-let closure_6 = createStyles.createStyles(obj);
+let closure_7 = createStyles.createStyles(obj);
 const size = fn(2);
 const result = size.fileFinishedImporting(
   "modules/premium/native/discounts/PremiumDiscountOfferActionSheetContent.tsx",
@@ -40,7 +43,7 @@ const result = size.fileFinishedImporting(
 
 export default noop.memo(function PremiumDiscountOfferActionSheetContent(arg0) {
   ({ discountOffer, onConfirm } = arg0);
-  const tmp = closure_6();
+  const tmp = closure_7();
   let obj = { IconComponent: UserIcon.UserIcon, label: null, description: null };
   const intl = util.intl;
   obj.label = intl.string(util.t.kpMomJ);
@@ -56,36 +59,47 @@ export default noop.memo(function PremiumDiscountOfferActionSheetContent(arg0) {
   obj = { IconComponent: FolderIcon.FolderIcon, label: null, description: null };
   const intl5 = util.intl;
   obj.label = intl5.string(util.t["u/NJKc"]);
+  let obj3 = NitroFileUploadExperiments;
+  const obj1 = { legacyCopy: null, rolloutCopy: null };
   const intl6 = util.intl;
-  obj.description = intl6.string(util.t.i1UuMk);
+  obj1.legacyCopy = intl6.string(util.t.i1UuMk);
+  const intl7 = util.intl;
+  const obj2 = { maxFileSize: null };
+  let obj6 = PremiumUtils;
+  obj2.maxFileSize = obj6.getMaxFileSizeForPremiumType(PremiumTypes.TIER_2, { useSpace: false });
+  obj1.rolloutCopy = intl7.formatToPlainString(util.t.PvqncD, obj2);
+  obj.description = obj3.getNitroFileUploadRolloutCopy(obj1);
   items[2] = obj;
   const amount = discountOffer.discount.amount;
-  const obj1 = { style: tmp.contentContainer, children: null };
+  obj3 = { style: tmp.contentContainer, children: null };
   const items1 = [
-    React4(View, {
+    hasOwnProperty(View, {
       style: tmp.heroIllustrationContainer,
-      children: React4(native.NitroWumpusFlightRight3dIllustration, { width: 180, height: 180 }),
+      children: hasOwnProperty(native.NitroWumpusFlightRight3dIllustration, { width: 180, height: 180 }),
     }),
     ,
     ,
   ];
-  const obj3 = { variant: "heading-xl/bold", color: "mobile-text-heading-primary", style: tmp.title, children: null };
-  const intl7 = util.intl;
-  obj3.children = intl7.formatToPlainString(util.t.qowbUk, { percent: amount });
-  items1[1] = React4(Text_Text.Text, obj3);
-  items1[2] = React4(PremiumPerksListDefault, { perks: items });
-  const obj4 = { style: tmp.buttonContainer, children: null };
-  const obj5 = { size: "lg", text: null, onPress: null, grow: true, icon: null };
+  const obj5 = { variant: "heading-xl/bold", color: "mobile-text-heading-primary", style: tmp.title, children: null };
   const intl8 = util.intl;
-  obj5.text = intl8.formatToPlainString(util.t.bkQ4bH, { percent: amount });
-  obj5.onPress = onConfirm;
-  const obj2 = {
+  obj5.children = intl8.formatToPlainString(util.t.qowbUk, { percent: amount });
+  items1[1] = hasOwnProperty(Text_Text.Text, obj5);
+  items1[2] = hasOwnProperty(PremiumPerksListDefault, { perks: items });
+  obj6 = { style: tmp.buttonContainer, children: null };
+  const obj7 = { size: "lg", text: null, onPress: null, grow: true, icon: null };
+  const intl9 = util.intl;
+  obj7.text = intl9.formatToPlainString(util.t.bkQ4bH, { percent: amount });
+  obj7.onPress = onConfirm;
+  const obj4 = {
     style: tmp.heroIllustrationContainer,
-    children: React4(native.NitroWumpusFlightRight3dIllustration, { width: 180, height: 180 }),
+    children: hasOwnProperty(native.NitroWumpusFlightRight3dIllustration, { width: 180, height: 180 }),
   };
-  obj5.icon = React4(NitroWheelIcon.NitroWheelIcon, { size: "md", color: nativeDefault.unsafe_rawColors.WHITE });
-  obj4.children = React4(components_Button_Button.Button, obj5);
-  items1[3] = React4(View, obj4);
-  obj1.children = items1;
-  return hasOwnProperty(View, obj1);
+  obj7.icon = hasOwnProperty(NitroWheelIcon.NitroWheelIcon, {
+    size: "md",
+    color: nativeDefault.unsafe_rawColors.WHITE,
+  });
+  obj6.children = hasOwnProperty(components_Button_Button.Button, obj7);
+  items1[3] = hasOwnProperty(View, obj6);
+  obj3.children = items1;
+  return timestampProducer(View, obj3);
 });

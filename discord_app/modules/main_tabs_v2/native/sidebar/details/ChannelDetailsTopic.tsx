@@ -234,7 +234,7 @@ function PrivateChannelDetailsTopic(channel) {
     obj = { textAlign: channel.textAlign };
     obj.style = obj;
     obj.children = stateFromStores;
-    tmp4 = closure_11(channel(4556).Text, obj);
+    tmp4 = closure_11(channel(4570).Text, obj);
   }
   return tmp4;
 }
@@ -251,19 +251,19 @@ function GroupDMChannelDetailsTopic(channel) {
     obj = { textAlign: channel.textAlign };
     obj.style = obj;
     obj.children = stateFromStores;
-    tmp4 = closure_11(channel(4556).Text, obj);
+    tmp4 = closure_11(channel(4570).Text, obj);
   }
   return tmp4;
 }
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, StyleSheet: metroRequire } = get_ActivityIndicator);
-const ChannelDetailsConstants = fn(10921);
+const ChannelDetailsConstants = fn(10948);
 ({ CHANNEL_TOPIC_LINE_CLAMP: closure_8, SPRING_CHANNEL_DETAILS: closure_9 } = ChannelDetailsConstants);
 const VerticalGradient = fn(1074).VerticalGradient;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12, Fragment: map1 } = jsxProd);
 const PlatformUtils = fn(1115);
-const createStyles = fn(4560);
+const createStyles = fn(4574);
 let closure_15 = createStyles.createStyles({
   hidden: { flex: 1, flexGrow: 1, position: "absolute", opacity: 0 },
   topic: { overflow: "hidden" },

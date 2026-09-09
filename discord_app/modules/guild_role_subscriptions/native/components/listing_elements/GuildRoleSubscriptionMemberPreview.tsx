@@ -8,7 +8,7 @@ import AvatarUtilsDefault from "../../../../../utils/AvatarUtils.tsx";
 import Text_Text from "../../../../../design/components/Text/native/Text.tsx";
 import NicknameUtilsDefault from "../../../../../utils/NicknameUtils.tsx";
 import FastImageDefault from "../../../../../components_native/common/FastImage.tsx";
-import guild_boosting_RoleIconUtils from "../../../../guild_boosting/RoleIconUtils.tsx";
+import RoleIconUtils from "../../../../guild_boosting/RoleIconUtils.tsx";
 import RoleIconDefault from "../../../../roles/native/RoleIcon.tsx";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 import UserStore from "../../../../../stores/UserStore.tsx";
@@ -17,7 +17,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, Fragment: closure_7, jsxs: closure_8 } = jsxProd);
-fn(4560);
+fn(4574);
 let createStyles = { container: null, avatar: null, content: null, contextRow: null };
 createStyles = {
   flexDirection: "row",
@@ -63,7 +63,7 @@ export const GuildRoleSubscriptionMemberPreview = function GuildRoleSubscription
       avatarURL = tmp6Result.getDefaultAvatarURL(undefined, undefined);
     }
     const source = tmp6Result.makeSource(avatarURL);
-    const roleIconData = guild_boosting_RoleIconUtils.getRoleIconData(role, 16);
+    const roleIconData = RoleIconUtils.getRoleIconData(role, 16);
     obj = { style: null, children: null };
     const items1 = [tmp3.container, style];
     obj.style = items1;
@@ -73,27 +73,20 @@ export const GuildRoleSubscriptionMemberPreview = function GuildRoleSubscription
     const obj2 = { style: tmp3.contextRow, children: null };
     const obj3 = { variant: "text-md/semibold", color: "interactive-text-active", style: null, children: null };
     const obj4 = { color: null };
-    const tmp4Result = guild_boosting_RoleIconUtils;
+    const tmp4Result = RoleIconUtils;
     obj4.color = utils_ColorUtilsAll.int2hex(role.color);
     obj3.style = obj4;
     obj3.children = tmp8;
     const items3 = [timestampProducer(Text_Text.Text, obj3), , ,];
     let tmp12Result = null;
     if (null != roleIconData) {
+      const obj5 = { children: null };
       const items4 = [timestampProducer(native.Spacer, { size: 4 })];
-      const obj5 = { name: role.name, source: null, unicodeEmoji: null, size: 16 };
-      let tmp19;
-      if (null != roleIconData.customIconSrc) {
-        const obj6 = { uri: roleIconData.customIconSrc };
-        tmp19 = obj6;
-      }
-      const obj7 = { children: null };
-      obj5.source = tmp19;
-      obj5.unicodeEmoji = roleIconData.unicodeEmoji;
-      items4[1] = timestampProducer(RoleIconDefault, obj5);
-      obj7.children = items4;
-      tmp12Result = React6(React5, obj7);
-      const tmp6Result1 = RoleIconDefault;
+      const obj6 = { name: role.name, src: null, unicodeEmoji: null, size: 16 };
+      ({ customIconSrc: obj13.src, unicodeEmoji: obj13.unicodeEmoji } = roleIconData);
+      items4[1] = timestampProducer(RoleIconDefault, obj6);
+      obj5.children = items4;
+      tmp12Result = React6(React5, obj5);
     }
     items3[1] = tmp12Result;
     items3[2] = timestampProducer(native.Spacer, { size: 8 });
@@ -104,8 +97,8 @@ export const GuildRoleSubscriptionMemberPreview = function GuildRoleSubscription
     });
     obj2.children = items3;
     const items5 = [React6(View, obj2)];
-    const obj8 = { variant: "text-md/normal", color: "text-default", style: textStyle, children: content };
-    items5[1] = timestampProducer(Text_Text.Text, obj8);
+    const obj7 = { variant: "text-md/normal", color: "text-default", style: textStyle, children: content };
+    items5[1] = timestampProducer(Text_Text.Text, obj7);
     obj1.children = items5;
     items2[1] = React6(View, obj1);
     obj.children = items2;

@@ -4,7 +4,7 @@ import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep
 import ConnectedAccountsStore from "../../../../stores/ConnectedAccountsStore.tsx";
 
 const require = fn;
-let Constants = fn(4465);
+let Constants = fn(4479);
 ({ RPC_AUTHENTICATED_SCOPE, RPC_SCOPE_CONFIG } = Constants);
 Constants = fn(1074);
 ({ AnalyticsLocations: metroRequire, ComponentActions: closure_7, PlatformTypes: closure_8 } = Constants);
@@ -34,17 +34,17 @@ obj = {
     const result = obj.validatePostMessageTransport(socket.transport);
     let obj1 = require("RPCHelpers");
     const validateApplicationResult = obj1.validateApplication(socket.application);
-    value = connection_redirect(5283).get(provider);
+    value = connection_redirect(5297).get(provider);
     dependencyMap = value;
     if (null == value) {
       obj = { errorCode: constants2.INVALID_PROVIDER };
       const _HermesInternal = HermesInternal;
-      let tmp4Result = tmp4(9559);
+      let tmp4Result = tmp4(9586);
       tmp4Result = new tmp4Result(obj, 'Platform not found for provider "' + provider + '"');
       throw tmp4Result;
     } else if (provider !== constants.AMAZON_MUSIC) {
       obj = { errorCode: constants2.UNAUTHORIZED_FOR_APPLICATION };
-      const tmp22 = new tmp4(9559)(obj, "Command not available for this application");
+      const tmp22 = new tmp4(9586)(obj, "Command not available for this application");
       throw tmp22;
     } else if (set.has(validateApplicationResult)) {
       _require = asyncGeneratorStep(async (arg0, successRedirect) => {
@@ -103,7 +103,7 @@ obj = {
                     }
                     closure_130_3 = handleConnectionsUpdate;
                     function handleConnectionsCallbackError() {
-                      let tmp = connection_redirect(9559);
+                      let tmp = connection_redirect(9586);
                       tmp = new tmp(
                         { errorCode: closure_3_9.OAUTH2_ERROR },
                         'OAuth2 setup for "' + closure_0 + '" failed',
@@ -192,10 +192,10 @@ obj = {
       return promise;
     } else {
       obj1 = { errorCode: constants2.UNAUTHORIZED_FOR_APPLICATION };
-      const tmp10 = new tmp4(9559)(obj1, "Command not available for this application");
+      const tmp10 = new tmp4(9586)(obj1, "Command not available for this application");
       throw tmp10;
     }
-    let obj3 = connection_redirect(5283);
+    let obj3 = connection_redirect(5297);
   },
 };
 const items1 = [RPC_AUTHENTICATED_SCOPE];

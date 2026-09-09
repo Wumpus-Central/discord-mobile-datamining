@@ -1,5 +1,5 @@
 // discord_app/modules/guilds_bar/native/GuildsBarDragPreview.tsx
-import _mod4184 from "../../../../_runtime/metro/04184__.js";
+import _mod4197 from "../../../../_runtime/metro/04197__.js";
 import native from "../../../../discord_common/js/packages/design/native.tsx";
 import ReanimatedRexport from "../../reanimated/ReanimatedRexport.tsx";
 import spring from "../../../design/animation/reanimated/spring/spring.tsx";
@@ -147,9 +147,9 @@ function PreviewItem(dragRegion) {
           id: -1,
           parentId: "PX_16",
           name: "Array",
-          color: "padding",
-          expanded: false,
-          children: false,
+          color: "applicationId",
+          expanded: "<string:2435842049>",
+          children: "<string:2842689538>",
         };
         const items = [tmp2];
         element.children = items;
@@ -337,16 +337,16 @@ function AnimatedItemPreview(cleanUp) {
   obj.children = tmp12Result;
   return <tmp4Result style={items}>{null}</tmp4Result>;
 }
-const GuildsNodeType = fn(5438).GuildsNodeType;
-const GUILD_ITEM_INSET_LEFT = fn(16288).GUILD_ITEM_INSET_LEFT;
+const GuildsNodeType = fn(5452).GuildsNodeType;
+const GUILD_ITEM_INSET_LEFT = fn(16318).GUILD_ITEM_INSET_LEFT;
 const jsx = fn(21).jsx;
-let createStyles = fn(4560);
+let createStyles = fn(4574);
 let closure_8 = createStyles.createStyles({
   dragPreview: { position: "absolute", left: 0 },
   animatedPreviewStyle: { position: "absolute" },
   dragPreviewHome: { right: 0 },
 });
-createStyles = fn(4560);
+createStyles = fn(4574);
 let closure_9 = createStyles.createStyles((arg0) => {
   const obj = { animatedPreviewStyleHome: null };
   const rect = { left: 0, right: 0, transformOrigin: null };
@@ -430,12 +430,12 @@ export default noop.memo(function GuildsBarDragPreview() {
             overState: null,
             overNode: null,
             dropPosition: "o",
-            gestureState: "short",
-            scrollPosition: "2-digit",
-            dragRegion: 6,
-            windowSize: 0,
-            dropComplete: 1,
-            listInsets: 2,
+            gestureState: null,
+            scrollPosition: null,
+            dragRegion: null,
+            windowSize: null,
+            dropComplete: null,
+            listInsets: null,
           };
           ({ node: obj.draggedNode, itemSize: obj.draggedHeight } = dragSpecs);
           obj.overState = state;
@@ -455,7 +455,7 @@ export default noop.memo(function GuildsBarDragPreview() {
       }
       return null;
     }
-  }, _mod4184.shallow);
+  }, _mod4197.shallow);
   let tmp2 = null;
   if (null != tmp) {
     let obj = {};

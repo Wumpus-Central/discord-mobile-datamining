@@ -44,14 +44,14 @@ function Footer(arg0) {
   items[1] = obj;
   obj.style = items;
   obj = { loading: submitting, disabled: !canProceedToNextStep, text: stringResult, onPress: onProceed };
-  obj.children = timestampProducer(tmp5(4975).Button, obj);
+  obj.children = timestampProducer(tmp5(4989).Button, obj);
   return timestampProducer(React4, obj);
 }
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, ScrollView: hasOwnProperty } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-fn(4560);
+fn(4574);
 let createStyles = {
   container: null,
   scrollContainer: null,

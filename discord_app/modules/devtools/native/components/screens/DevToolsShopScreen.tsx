@@ -17,7 +17,7 @@ require = fn;
 const ScrollView = fn(17).ScrollView;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-fn(4560);
+fn(4574);
 let createStyles = { wrap: null };
 createStyles = {
   backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW,

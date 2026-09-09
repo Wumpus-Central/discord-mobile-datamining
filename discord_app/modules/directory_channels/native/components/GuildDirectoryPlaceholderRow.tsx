@@ -6,7 +6,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-const createStyles = fn(4560);
+const createStyles = fn(4574);
 let obj = {
   row: { flexDirection: "row", padding: 16 },
   rowInner: { flex: 1 },
@@ -20,10 +20,10 @@ let size = {
   borderRadius: nativeDefault.radii.sm,
   overflow: "hidden",
   marginRight: 16,
-  backgroundColor: fn(5441).DARK_PRIMARY_500_LIGHT_PRIMARY_230,
+  backgroundColor: fn(5455).DARK_PRIMARY_500_LIGHT_PRIMARY_230,
 };
 obj.placeholderAvatar = size;
-obj = { height: 15, borderRadius: 5, backgroundColor: fn(5441).DARK_PRIMARY_500_LIGHT_PRIMARY_230 };
+obj = { height: 15, borderRadius: 5, backgroundColor: fn(5455).DARK_PRIMARY_500_LIGHT_PRIMARY_230 };
 obj.placeholderText = obj;
 obj.placeholderBody = { width: "100%", marginTop: 10 };
 let closure_5 = createStyles.createStyles(obj);

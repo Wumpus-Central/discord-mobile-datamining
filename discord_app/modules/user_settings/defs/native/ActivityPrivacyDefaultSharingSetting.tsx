@@ -9,13 +9,13 @@ import ActivityPrivacyMatchingExperiment from "../../../activity_privacy/Activit
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-fn(11473);
+fn(11500);
 let SettingBuilders = {
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.vpgck1);
   },
-  parent: fn(7975).MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
+  parent: fn(7989).MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
   usePredicate() {
     return ActivityPrivacyMatchingExperiment.useIsInActivityPrivacyCopyExperiment(
       "ActivityPrivacyDefaultSharingSetting",
@@ -71,7 +71,7 @@ let SettingBuilders = {
         ({ direction: obj5.direction, affectedGuildIds: obj5.affectedGuildIds } = affectedGuilds);
         obj.settingName = activityRestrictionSettingName;
         ActionSheetActionCreatorsDefault.openLazy(
-          asyncRequireImpl(15911, dependencyMap.paths),
+          asyncRequireImpl(15941, dependencyMap.paths),
           "ActivityPrivacyUpsellActionSheet",
           obj,
         );

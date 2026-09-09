@@ -7,7 +7,7 @@ const require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-fn(4560);
+fn(4574);
 let createStyles = { applicationHeaderWrapper: null, applicationIcon: null };
 createStyles = {
   flexDirection: "row",
@@ -40,7 +40,7 @@ export default function ApplicationSectionHeader(section) {
       }
     }
   });
-  const applicationCommandsIconSource = section(12235).getApplicationCommandsIconSource(section, stateFromStores);
+  const applicationCommandsIconSource = section(12261).getApplicationCommandsIconSource(section, stateFromStores);
   let nick;
   if (stateFromStores != null) {
     nick = stateFromStores.nick;
@@ -56,11 +56,11 @@ export default function ApplicationSectionHeader(section) {
   let tmp9 = null != applicationCommandsIconSource;
   if (tmp9) {
     obj = { style: tmp.applicationIcon, source: applicationCommandsIconSource };
-    tmp9 = closure_5(guildId(5587), obj);
+    tmp9 = closure_5(guildId(5601), obj);
   }
   const items1 = [
     tmp9,
-    closure_5(section(4556).Text, { variant: "eyebrow", color: "interactive-text-default", children: name }),
+    closure_5(section(4570).Text, { variant: "eyebrow", color: "interactive-text-default", children: name }),
   ];
   obj.children = items1;
   return closure_6(View, obj);

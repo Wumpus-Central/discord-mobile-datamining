@@ -332,7 +332,7 @@ let closure_13 = async function _updateGuildJoinRequest() {
       body = error.body.code === constants.REQUEST_TO_JOIN_USER_INELIGIBLE;
     }
     if (body) {
-      closure_1_1(4904);
+      closure_1_1(4918);
       const obj = { title: null, body: null };
       const intl = closure_1_0(1114).intl;
       obj.title = intl.string(closure_1_0(1114).t.DxJj4e);
@@ -577,7 +577,7 @@ let closure_17 = async function _createOrEnterJoinRequestInterview(arg0) {
   }
 };
 let closure_4 = fn(1961).createChannelRecordFromServer;
-const joinRequestFromServer = fn(4382).joinRequestFromServer;
+const joinRequestFromServer = fn(4396).joinRequestFromServer;
 const Constants = fn(1074);
 ({ AbortCodes: closure_7, Endpoints: closure_8 } = Constants);
 const size = fn(2);

@@ -2,7 +2,7 @@
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../intl/index.native.tsx";
 import asyncRequireImpl from "../../../../_runtime/01896_asyncRequireImpl.js";
-import _modDef3225 from "../intl/FavoritesGuild.messages.js";
+import _modDef3236 from "../intl/FavoritesGuild.messages.js";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import Stack_Stack from "../../../design/components/Stack/native/Stack.native.tsx";
@@ -32,7 +32,7 @@ function EmptyBody() {
   }, []);
   let obj = { variant: "text-sm/medium", color: "text-muted", children: null };
   const intl = util.intl;
-  obj.children = intl.format(_modDef3225.Z3Hdr5, { onClick: callback });
+  obj.children = intl.format(_modDef3236.Z3Hdr5, { onClick: callback });
   return timestampProducer(Text_Text.Text, obj);
 }
 function PlaceholderRows() {
@@ -78,10 +78,10 @@ function PlaceholderRows() {
   return React5(View, obj);
 }
 const View = fn(17).View;
-let closure_5 = fn(16205).useHasFavoritesGuildSuggestions;
+let closure_5 = fn(16235).useHasFavoritesGuildSuggestions;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7, Fragment: closure_8 } = jsxProd);
-fn(4560);
+fn(4574);
 let createStyles = {
   copy: null,
   divider: null,
@@ -151,7 +151,7 @@ export default function FavoritesGuildSidebarHeader() {
   obj = { spacing: nativeDefault.space.PX_8, style: tmp.copy, children: null };
   const obj1 = { variant: "heading-md/semibold", color: "mobile-text-heading-primary", children: null };
   const intl = util.intl;
-  obj1.children = intl.string(_modDef3225["1n0TGE"]);
+  obj1.children = intl.string(_modDef3236["1n0TGE"]);
   const items1 = [timestampProducer(Text_Text.Heading, obj1), timestampProducer(EmptyBody, {})];
   obj.children = items1;
   items[1] = React5(Stack_Stack.Stack, obj);

@@ -2,7 +2,7 @@
 import ZustandStore from "../../../../lib/ZustandStore.tsx";
 import size from "../../../../../_runtime/metro/00002__.js";
 
-const zustandStore = ZustandStore.createZustandStore(() => ({ scrollToSectionId: "Array" }));
+const zustandStore = ZustandStore.createZustandStore(() => ({ scrollToSectionId: "disabled" }));
 const result = size.fileFinishedImporting("modules/user_settings/premium/native/PremiumNitroNavigationStore.tsx");
 
 export default zustandStore;

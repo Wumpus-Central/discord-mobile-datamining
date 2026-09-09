@@ -112,11 +112,11 @@ function UserCalloutAvatars(userIds) {
       obj.size = REFRESH_MEDIUM_32;
       let tmp6 = closure_11(tmp(1178).Avatar, obj);
     } else {
-      tmp6 = closure_11(tmp(11830).UserIcon, {});
+      tmp6 = closure_11(tmp(11856).UserIcon, {});
     }
   } else {
     obj = { users: found, size: tmp(1178).AvatarSizes.REFRESH_MEDIUM_32 };
-    return closure_11(tmp(10915).FacepileGroupDMAvatar, obj);
+    return closure_11(tmp(10942).FacepileGroupDMAvatar, obj);
   }
 }
 function BlockedUserInGDMDescription(arg0) {
@@ -158,12 +158,12 @@ function BlockedUserInGDMDescription(arg0) {
 }
 get_ActivityIndicator = fn(17);
 ({ Image: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-const SharedSpaceWarningConstants = fn(13741);
+const SharedSpaceWarningConstants = fn(13764);
 ({ BlockWarningEngagements: closure_8, GdmWarningMedium: closure_9 } = SharedSpaceWarningConstants);
 const AnalyticEvents = fn(1074).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: closure_11, Fragment: closure_12, jsxs: map1 } = jsxProd);
-fn(4560);
+fn(4574);
 let createStyles = {
   container: null,
   headerImage: null,

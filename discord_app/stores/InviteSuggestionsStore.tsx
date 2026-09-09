@@ -38,7 +38,7 @@ function _computeRows(query) {
   if (!tmp) {
     id = guild.id;
   }
-  const mostRecentDMedUser = set1(9827).getMostRecentDMedUser(set, id);
+  const mostRecentDMedUser = set1(9854).getMostRecentDMedUser(set, id);
   let isBlockedOrIgnoredResult = null == mostRecentDMedUser;
   if (!isBlockedOrIgnoredResult) {
     isBlockedOrIgnoredResult = RelationshipStore.isBlockedOrIgnored(mostRecentDMedUser.id);
@@ -61,8 +61,8 @@ function _computeRows(query) {
     const substr = found2.slice(0, 3);
     const item = substr.forEach((id) => set1.add(id.id));
   }
-  const obj2 = set1(9827);
-  return set1(9827).generateRowsForQuery({
+  const obj2 = set1(9854);
+  return set1(9854).generateRowsForQuery({
     query,
     omitUserIds: set,
     suggestedUserIds: set,
@@ -74,7 +74,7 @@ function _computeRows(query) {
 }
 const Constants = fn(1074);
 ({ ChannelTypes: closure_14, Permissions: closure_15 } = Constants);
-const InviteTargetTypes = fn(7736).InviteTargetTypes;
+const InviteTargetTypes = fn(7750).InviteTargetTypes;
 let set = new Set();
 let rows = [];
 let map = new Map();

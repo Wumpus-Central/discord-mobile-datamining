@@ -15,6 +15,7 @@ import captureAdUserAction from "../../ads/analytics/captureAdUserAction.tsx";
 import captureAdUserActionTypes from "../../ads/analytics/captureAdUserActionTypes.tsx";
 import AnalyticsHooks from "../lib/analytics/AnalyticsHooks.tsx";
 import BountiesModalActionCreatorsDefault from "BountiesModal/BountiesModalActionCreators.tsx";
+import BountiesModalTypes from "BountiesModal/BountiesModalTypes.tsx";
 import openBountiesNuxPromoSheetDefault from "openBountiesNuxPromoSheet.tsx";
 import BountyCard from "BountyCard.tsx";
 import BountiesCtaHeaderDefault from "BountiesCtaHeader.tsx";
@@ -300,10 +301,18 @@ function QuestHomeBountiesCarousel(bounties) {
     closure_9.current = BountyStore.isBountyCompleted(bountyId.id);
     closure_7(true);
     const obj6 = BountiesModalActionCreatorsDefault;
-    obj6.showModal({ bountyId: bountyId.id, sourceQuestContent: QuestTypes.QuestContent.QUEST_HOME_MOBILE_CAROUSEL });
-    const obj1 = { bountyId: bountyId.id, sourceQuestContent: QuestTypes.QuestContent.QUEST_HOME_MOBILE_CAROUSEL };
+    obj6.showModal({
+      bountyId: bountyId.id,
+      sourceQuestContent: QuestTypes.QuestContent.QUEST_HOME_MOBILE_CAROUSEL,
+      variant: BountiesModalTypes.BountiesModalVariant.SINGLE_VIDEO,
+    });
+    const obj1 = {
+      bountyId: bountyId.id,
+      sourceQuestContent: QuestTypes.QuestContent.QUEST_HOME_MOBILE_CAROUSEL,
+      variant: BountiesModalTypes.BountiesModalVariant.SINGLE_VIDEO,
+    };
   }, []);
-  const tmp20 = ref(first[29])();
+  const tmp20 = ref(first[30])();
   const isInView = tmp20.isInView;
   const items6 = [first1, callback7, isInView, first2];
   const items7 = [bounties, callback];
@@ -311,7 +320,7 @@ function QuestHomeBountiesCarousel(bounties) {
     item = item.item;
     const index = item.index;
     return closure_9(
-      bounties(first[30]).BillableAdPlacementImpressionTrackerNative,
+      bounties(first[31]).BillableAdPlacementImpressionTrackerNative,
       {
         adContentId: item.id,
         adCreativeType: bounties(first[28]).AdCreativeType.BOUNTY,
@@ -375,18 +384,18 @@ function QuestHomeBountiesCarousel(bounties) {
     extraData: memo1,
     CellRendererComponent: callback9,
   };
-  obj.children = closure_9(bounties(first[31]).FlashList, obj);
+  obj.children = closure_9(bounties(first[32]).FlashList, obj);
   obj.children = closure_9(closure_5, obj);
   return closure_9(closure_5, obj);
 }
 const View = fn(17).View;
-const constants = fn(5444).BountyCarouselEmptyStateReason;
+const constants = fn(5458).BountyCarouselEmptyStateReason;
 const ContentDismissActionType = fn(1954).ContentDismissActionType;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
 const PX_16 = nativeDefault.space.PX_16;
-let closure_13 = fn(15071).CARD_WIDTH + PX_16;
-const createStyles = fn(4560);
+let closure_13 = fn(15098).CARD_WIDTH + PX_16;
+const createStyles = fn(4574);
 let closure_14 = createStyles.createStyles(() => {
   let obj = { container: null, listContentContainer: null, emptyState: null, emptyStateText: null };
   obj = { marginBottom: nativeDefault.space.PX_48 };
@@ -418,7 +427,7 @@ export default noop.memo(function QuestHomeBounties(shopCarouselConfig) {
   if (showOrbShopPlaceholderCarousel === undefined) {
     showOrbShopPlaceholderCarousel = false;
   }
-  let obj = first(11488);
+  let obj = first(11515);
   const questHomeBounties = obj.useQuestHomeBounties().questHomeBounties;
   const tmp3 = closure_14();
   first = undefined;
@@ -430,7 +439,7 @@ export default noop.memo(function QuestHomeBounties(shopCarouselConfig) {
   } else {
     items1 = [];
   }
-  let tmpResult = tmp(7388);
+  let tmpResult = tmp(7402);
   const tmp4 = _slicedToArray(tmpResult.useSelectedDismissibleContent(items1), 2);
   first = tmp4[0];
   importDefault = tmp6;
@@ -474,9 +483,9 @@ export default noop.memo(function QuestHomeBounties(shopCarouselConfig) {
         let tmp14 = "none" !== placement && obtainableOrbRewards > 0;
         if (tmp14) {
           tmp14 =
-            orbShopProducts.length >= tmp(15072).MIN_PRODUCTS_FOR_ORB_SHOP_CAROUSEL || showOrbShopPlaceholderCarousel;
+            orbShopProducts.length >= tmp(15099).MIN_PRODUCTS_FOR_ORB_SHOP_CAROUSEL || showOrbShopPlaceholderCarousel;
           const tmp15 =
-            orbShopProducts.length >= tmp(15072).MIN_PRODUCTS_FOR_ORB_SHOP_CAROUSEL || showOrbShopPlaceholderCarousel;
+            orbShopProducts.length >= tmp(15099).MIN_PRODUCTS_FOR_ORB_SHOP_CAROUSEL || showOrbShopPlaceholderCarousel;
         }
         if (!tmp14) {
           obj = { style: tmp3.container, children: null };

@@ -10,7 +10,7 @@ import GIFPickerViewStore from "../../../stores/views/GIFPickerViewStore.tsx";
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4560);
+const createStyles = fn(4574);
 let closure_7 = createStyles.createStyles((height) => {
   let obj = { item: null, placeholder: null };
   obj = {

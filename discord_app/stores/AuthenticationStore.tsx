@@ -492,6 +492,7 @@ const authenticationStore = new AuthenticationStore(
         items.push({ type: "sms" });
       }
       c35 = false;
+      c34 = null;
     },
     LOGIN_FAILURE: function handleLoginFailure(error) {
       c28 = "";

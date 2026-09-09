@@ -13,7 +13,7 @@ const MessagesItemSeparatorDefault = MessagesItemSeparator;
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(4560);
+const createStyles = fn(4574);
 let closure_5 = createStyles.createStyles(() => {
   let obj = { placeholder: null };
   obj = { backgroundColor: nativeDefault.colors.BORDER_SUBTLE };

@@ -8,14 +8,14 @@ import ApplicationStreamingStore from "../../../../stores/ApplicationStreamingSt
 import AuthenticationStore from "../../../../stores/AuthenticationStore.tsx";
 
 require = fn;
-const VoicePanelConstants = fn(12277);
+const VoicePanelConstants = fn(12303);
 ({ SECONDARY_PIP_TOP_MARGIN: hasOwnProperty, VoicePanelModes: metroRequire } = VoicePanelConstants);
-const VoicePanelPIPConstants = fn(17091);
+const VoicePanelPIPConstants = fn(17122);
 ({ VoicePanelPIPModes: closure_7, PIPReferenceDimensions } = VoicePanelPIPConstants);
 const SquarePIPReferenceDimensions = VoicePanelPIPConstants.SquarePIPReferenceDimensions;
 const SquareActivityPIPReferenceDimensions = VoicePanelPIPConstants.SquareActivityPIPReferenceDimensions;
-const ParticipantTypes = fn(4581).ParticipantTypes;
-const MorphablePanelConstants = fn(12278);
+const ParticipantTypes = fn(4595).ParticipantTypes;
+const MorphablePanelConstants = fn(12304);
 const MIN_PIP_TOSS_VELOCITY = MorphablePanelConstants.MIN_PIP_TOSS_VELOCITY;
 const PIP_WINDOW_OFFSET = MorphablePanelConstants.PIP_WINDOW_OFFSET;
 const set = new Set();
@@ -43,7 +43,7 @@ function layoutTransition(originX) {
   };
   return obj;
 }
-PIP_LAYOUT_PHYSICS = { withSpring: fn(4974).withSpring, PIP_LAYOUT_PHYSICS };
+PIP_LAYOUT_PHYSICS = { withSpring: fn(4988).withSpring, PIP_LAYOUT_PHYSICS };
 layoutTransition.__closure = PIP_LAYOUT_PHYSICS;
 layoutTransition.__workletHash = 16735009420384;
 layoutTransition.__initData = {

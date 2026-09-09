@@ -7,11 +7,11 @@ import transitionToGuild from "../../routing/transitionToGuild.native.tsx";
 import sortByMatchScore from "../../autocompleter/index.tsx";
 import RedesignCategory from "../../channel_list_v2/native/items/RedesignCategory.tsx";
 import getLayoutStylesDefault from "shared/getLayoutStyles.tsx";
-import renderChannelPressableWrapperDefault from "shared/renderChannelPressableWrapper.tsx";
 import renderChannelWrapperDefault from "shared/renderChannelWrapper.tsx";
 import getScaledChannelRowHeightDefault from "shared/getScaledChannelRowHeight.tsx";
-import UnreadBadgeDefault from "shared/UnreadBadge.tsx";
 import renderChannelContentDefault from "shared/renderChannelContent.tsx";
+import renderChannelPressableWrapperDefault from "shared/renderChannelPressableWrapper.tsx";
+import UnreadBadgeDefault from "shared/UnreadBadge.tsx";
 import shared_renderChannelBadgeDefault from "shared/renderChannelBadge.tsx";
 import shared_TextChannelDefault from "shared/TextChannel.tsx";
 import shared_DMChannelDefault from "shared/DMChannel.tsx";
@@ -60,11 +60,11 @@ function renderSearchResultsSection() {
   return React7(closure_16, obj);
 }
 const View = fn(17).View;
-const UnreadSetting = fn(4742).UnreadSetting;
+const UnreadSetting = fn(4756).UnreadSetting;
 const jsxProd = fn(21);
 ({ jsx: closure_9, Fragment: c10, jsxs: closure_11 } = jsxProd);
 const scrollIndicatorInsets = { bottom: 24 };
-fn(4560);
+fn(4574);
 let obj = {
   listContainer: { minHeight: 16 },
   list: { flex: -1, marginTop: 8 },
@@ -96,7 +96,7 @@ let closure_14 = noop.memo((guild) => {
     isMentionLowImportance: GuildReadStateStore.getIsMentionLowImportance(guild.id),
   }));
   ({ unread, mentionCount, isMentionLowImportance } = stateFromStoresObject);
-  let obj1 = guild(4982);
+  let obj1 = guild(4996);
   const fontScale = obj1.useFontScale();
   let obj2 = guild(504);
   const items2 = [LocaleStore];
@@ -122,7 +122,7 @@ let closure_14 = noop.memo((guild) => {
   items4[2] = renderChannelContentDefault(obj3);
   obj.children = items4;
   obj.children = tmp8(closure_11(closure_10, obj), { fontScale });
-  return tmp7(closure_9(guild(5123).PressableHighlight, obj));
+  return tmp7(closure_9(guild(5137).PressableHighlight, obj));
 });
 let closure_16 = noop.memo((arg0) => {
   ({ name, onPress, note } = arg0);

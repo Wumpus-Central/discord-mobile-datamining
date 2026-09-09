@@ -13,7 +13,7 @@ function recomputeAffinities() {
     }),
   );
 }
-const USER_AFFINITY_TTL = fn(7660).USER_AFFINITY_TTL;
+const USER_AFFINITY_TTL = fn(7674).USER_AFFINITY_TTL;
 let map = new Map();
 let c3 = false;
 const frozen = Object.freeze({ userAffinities: [], lastFetched: 0 });

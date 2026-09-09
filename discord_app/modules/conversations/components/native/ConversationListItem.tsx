@@ -115,12 +115,12 @@ function ConversationListItemBase(conversation) {
   return closure_9(conversation(token[15]).Card, obj);
 }
 const View = fn(17).View;
-let closure_6 = fn(7598).MOBILE_PREVIEW_MESSAGE_COUNT;
+let closure_6 = fn(7612).MOBILE_PREVIEW_MESSAGE_COUNT;
 const VerticalGradient = fn(1074).VerticalGradient;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 const locations = [0, 0.8];
-fn(4560);
+fn(4574);
 let obj = { card: null, title: null, timestamp: null, headerContainer: null, previews: null, bottomFade: null };
 obj = {
   marginBottom: nativeDefault.space.PX_12,

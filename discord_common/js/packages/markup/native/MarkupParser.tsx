@@ -1,5 +1,5 @@
 // discord_common/js/packages/markup/native/MarkupParser.tsx
-import _modDef4257 from "../../../../../_runtime/metro/04257__.js";
+import _modDef4270 from "../../../../../_runtime/metro/04270__.js";
 import MarkupASTUtils from "../MarkupASTUtils.tsx";
 import size from "../../../../../_runtime/metro/00002__.js";
 
@@ -31,11 +31,11 @@ function saferParse(fn, value, inline, arg3, arg4) {
     hasBailedAst = false;
   }
 }
-const result = size.fileFinishedImporting("../discord_common/js/packages/markup/native/MarkupParser.tsx");
+let result = size.fileFinishedImporting("../discord_common/js/packages/markup/native/MarkupParser.tsx");
 
 export default {
   astParserFor(importDefaultResultResult) {
-    closure_0 = _modDef4257.parserFor(importDefaultResultResult);
+    closure_0 = _modDef4270.parserFor(importDefaultResultResult);
     return () => {
       let str = value;
       if (value === undefined) {
@@ -51,13 +51,22 @@ export default {
       }
       obj = { inline };
       const merged = Object.assign(obj);
-      return saferParse(closure_0, str, obj, tmp, !inline);
+      const tmp3 = saferParse(closure_0, str, obj, tmp, !inline);
+      let result = tmp3;
+      if (!obj.formatInline) {
+        const _Array = Array;
+        result = tmp3;
+        if (Array.isArray(tmp3)) {
+          result = MarkupASTUtils.reinsertConsumedListSeparators(tmp3);
+        }
+      }
+      return result;
     };
   },
   reactParserFor(importDefaultResultResult) {
-    closure_0 = _modDef4257.parserFor(importDefaultResultResult);
-    const obj2 = _modDef4257;
-    importDefault = obj2.reactFor(_modDef4257.ruleOutput(importDefaultResultResult, "react"));
+    closure_0 = _modDef4270.parserFor(importDefaultResultResult);
+    const obj2 = _modDef4270;
+    importDefault = obj2.reactFor(_modDef4270.ruleOutput(importDefaultResultResult, "react"));
     return () => {
       let str = value;
       if (value === undefined) {

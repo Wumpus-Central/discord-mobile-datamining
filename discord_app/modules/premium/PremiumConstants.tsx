@@ -1032,6 +1032,7 @@ export const PremiumUpsellTypes = {
   BADGE_REORDERING_UPSELL: "badge_reordering_upsell",
   EMOJI_EVERYWHERE_INLINE_UPSELL: "emoji_everywhere_inline_upsell",
   EMOJI_EVERYWHERE_UPSELL: "emoji_everywhere_upsell",
+  STICKERS_EVERYWHERE_INLINE_UPSELL: "stickers_everywhere_inline_upsell",
   STICKERS_EVERYWHERE_UPSELL: "stickers_everywhere_upsell",
   SOUNDBOARD_EVERYWHERE_INLINE_UPSELL: "soundboard_everywhere_inline_upsell",
   SOUNDBOARD_EVERYWHERE_UPSELL: "soundboard_everywhere_upsell",

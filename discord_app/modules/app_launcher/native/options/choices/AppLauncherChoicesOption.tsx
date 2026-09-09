@@ -8,7 +8,7 @@ import noop from "../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const jsx = fn(21).jsx;
-fn(4560);
+fn(4574);
 let createStyles = { container: null };
 createStyles = {
   backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH,
@@ -71,7 +71,7 @@ export default function AppLauncherChoicesOption(option) {
       onSelect(choice);
     };
     obj.onDismiss = onDismissChoicesSheet;
-    obj2.openLazy(asyncRequireImpl(12169, dependencyMap.paths), "AppLauncherChoicesActionSheet", obj);
+    obj2.openLazy(asyncRequireImpl(12195, dependencyMap.paths), "AppLauncherChoicesActionSheet", obj);
   }, items);
   let obj = option(onSelect[9]);
   const animationDelayedAutoFocus = obj.useAnimationDelayedAutoFocus(autoFocus, callback);

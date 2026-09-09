@@ -113,7 +113,7 @@ get_ActivityIndicator = fn(17);
   AppState: closure_7,
 } = get_ActivityIndicator);
 const jsx = fn(21).jsx;
-fn(4560);
+fn(4574);
 let createStyles = { container: null, video: null };
 createStyles = {
   flex: 1,
@@ -278,7 +278,7 @@ prototype["render"] = function render() {
     self.renderImage();
   }
 };
-Video.contextType = fn(4271).ThemeContext;
+Video.contextType = fn(4284).ThemeContext;
 let size = fn(2);
 const result = size.fileFinishedImporting("components_native/common/Video.tsx");
 

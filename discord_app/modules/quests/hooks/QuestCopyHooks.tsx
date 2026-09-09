@@ -20,8 +20,8 @@ import LocaleStore from "../../user_settings/LocaleStore.tsx";
 import UserStore from "../../../stores/UserStore.tsx";
 
 const util = v1votF6(1114);
-const utils_QuestUtils = v1votF6(7722);
-const SponsoredQuestUtils = v1votF6(11781);
+const utils_QuestUtils = v1votF6(7736);
+const SponsoredQuestUtils = v1votF6(11807);
 require = fn;
 function _getQuestsInstructionsToWinReward(arg0) {
   ({ quest, taskDetails, thirdPartyTaskDetails, withoutMarkdown, currentUser, onGameTitleClick } = arg0);
@@ -493,7 +493,7 @@ function useQuestsInstructionsToWinReward(arg0) {
   obj.needsToConnect = false === inGameQuestConnectState;
   return _getQuestsInstructionsToWinReward(obj);
 }
-const QuestConstants = fn(5444);
+const QuestConstants = fn(5458);
 ({ QuestsExperimentLocations: closure_8, ORBS_INTRO_QUEST_ID: closure_9, QuestVariants: c10 } = QuestConstants);
 const HelpdeskArticles = fn(1074).HelpdeskArticles;
 const PremiumTypes = fn(1373).PremiumTypes;
@@ -835,14 +835,10 @@ export const useQuestBarTitle = function useQuestBarTitle(questDockQuest, arg1) 
     return stringResult;
   }
 };
-export const usePrimaryCtaCopy = function usePrimaryCtaCopy(showPlayInstantlyLabel) {
-  ({ quest, application, shortText } = showPlayInstantlyLabel);
+export const usePrimaryCtaCopy = function usePrimaryCtaCopy(arg0) {
+  ({ quest, application, shortText } = arg0);
   if (shortText === undefined) {
     shortText = false;
-  }
-  let flag = showPlayInstantlyLabel.showPlayInstantlyLabel;
-  if (flag === undefined) {
-    flag = false;
   }
   const items = [quest];
   const memo = noop.useMemo(() => {
@@ -868,7 +864,7 @@ export const usePrimaryCtaCopy = function usePrimaryCtaCopy(showPlayInstantlyLab
     }
     PLAY = constants.PLAY;
   }, items);
-  quest(11488);
+  quest(11515);
   if (constants3.PLAY === memo) {
     const features2 = quest.config.features;
     let hasItem = features2.includes(constants2.MOBILE_ACTIVITY_QUEST);
@@ -890,10 +886,9 @@ export const usePrimaryCtaCopy = function usePrimaryCtaCopy(showPlayInstantlyLab
       const features3 = quest.config.features;
       if (features3.includes(constants2.CLOUD_GAMING_ACTIVITY)) {
         const intl6 = quest(1114).intl;
-        const t3 = quest(1114).t;
-        return intl6.string(flag ? t3.V5Qt9D : t3["+qoymD"]);
+        return intl6.string(quest(1114).t["+qoymD"]);
       } else {
-        let tmp2Result = quest(7722);
+        let tmp2Result = quest(7736);
         if (tmp2Result.canLaunchActivity(quest)) {
           const intl5 = quest(1114).intl;
           const t2 = quest(1114).t;
@@ -907,7 +902,7 @@ export const usePrimaryCtaCopy = function usePrimaryCtaCopy(showPlayInstantlyLab
     const intl3 = quest(1114).intl;
     return intl3.string(quest(1114).t.l7E81v);
   } else if (constants3.WATCH_VIDEO === memo) {
-    tmp2Result = quest(11518);
+    tmp2Result = quest(11545);
     return tmp2Result.getVideoQuestWatchCtaText(tmp5);
   } else if (constants3.IN_GAME === memo) {
     if (tmp2Result1.canLaunchActivity(quest)) {
@@ -1056,7 +1051,7 @@ export const useModalCtaConfig = function useModalCtaConfig(quest) {
         } else {
           const obj2 = {
             content: closure_128_1,
-            ctaContent: tmp4(7728).QuestContentCTA.OPEN_GAME_LINK,
+            ctaContent: tmp4(7742).QuestContentCTA.OPEN_GAME_LINK,
             impressionId: null,
             sourceQuestContent: null,
           };
@@ -1066,7 +1061,7 @@ export const useModalCtaConfig = function useModalCtaConfig(quest) {
           }
           obj2.impressionId = tmp5;
           obj2.sourceQuestContent = closure_128_4;
-          tmp4(11501).openGameLinkDirectly(closure_128_0, obj2);
+          tmp4(11528).openGameLinkDirectly(closure_128_0, obj2);
           dependencyMap = 3;
           return { value: "HermesInternal", done: null };
         }
@@ -1117,7 +1112,7 @@ export const useModalCtaConfig = function useModalCtaConfig(quest) {
       obj3 = QuestTaskUtils;
     }
   }, items);
-  obj.ctaText = quest(11300).getExternalCtaLabel(quest);
+  obj.ctaText = quest(11327).getExternalCtaLabel(quest);
   obj.onClickCta = function defaultOnClickCta() {
     const self = this;
     const apply = closure_5.apply;

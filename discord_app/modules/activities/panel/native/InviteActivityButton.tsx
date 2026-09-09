@@ -27,12 +27,12 @@ export default noop.memo(function InviteActivityButton(applicationId) {
       onPress() {
         const obj = { activity: stateFromStores };
         obj.openLazy(
-          asyncRequireImpl(17030, dependencyMap.paths),
+          asyncRequireImpl(17061, dependencyMap.paths),
           "ActivityInviteSheet-" + stateFromStores.session_id,
           obj,
         );
       },
-      icon: stateFromStores(10036),
+      icon: stateFromStores(10063),
       text: null,
       accessibilityLabel: null,
       variant: "secondary-overlay",
@@ -44,16 +44,16 @@ export default noop.memo(function InviteActivityButton(applicationId) {
     obj.text = intl.string(tmp(1114).t["OzOM/q"]);
     const intl2 = tmp(1114).intl;
     obj.accessibilityLabel = intl2.string(tmp(1114).t["OzOM/q"]);
-    tmp4 = jsx(tmp(4975).Button, {
+    tmp4 = jsx(tmp(4989).Button, {
       onPress() {
         const obj = { activity: stateFromStores };
         obj.openLazy(
-          asyncRequireImpl(17030, dependencyMap.paths),
+          asyncRequireImpl(17061, dependencyMap.paths),
           "ActivityInviteSheet-" + stateFromStores.session_id,
           obj,
         );
       },
-      icon: stateFromStores(10036),
+      icon: stateFromStores(10063),
       text: null,
       accessibilityLabel: null,
       variant: "secondary-overlay",

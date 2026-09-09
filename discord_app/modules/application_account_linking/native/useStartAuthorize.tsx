@@ -5,7 +5,7 @@ import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js
 import noop from "../../../../_runtime/metro/00019__.js";
 
 const require = fn;
-const AuthorizeFlow = fn(7166).AuthorizeFlow;
+const AuthorizeFlow = fn(7180).AuthorizeFlow;
 const AnalyticEvents = fn(1074).AnalyticEvents;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/application_account_linking/native/useStartAuthorize.tsx");
@@ -114,7 +114,7 @@ export default function useStartAuthorize(getOfficialApplicationId) {
             flow_type: constants.WEB,
           };
           obj.track(constants2.ON_PLATFORM_ACCOUNT_LINK_FLOW_STARTED, obj3);
-          obj2 = closure_0(7171);
+          obj2 = closure_0(7185);
           const obj4 = { onSuccess: closure_129_0.onSuccess, onError: closure_129_0.onError };
           const result = obj2.accountLinkAuthorizationStarted(closure_0.id, obj4);
           c4 = 0;

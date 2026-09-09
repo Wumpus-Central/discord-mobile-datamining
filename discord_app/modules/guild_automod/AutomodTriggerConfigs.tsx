@@ -4,7 +4,7 @@ import guild_automod_ExperimentUtils from "ExperimentUtils.tsx";
 import noop from "../../../_runtime/metro/00019__.js";
 
 require = fn;
-const Constants = fn(11867);
+const Constants = fn(11893);
 ({ AutomodActionType, AutomodEventType, AutomodTriggerType } = Constants);
 const mentionTotalLimit = Constants.MENTION_SPAM_LIMIT_DEFAULT;
 let triggerConfigs = { NEW: "new", RECOMMENDED: "recommended", BETA: "beta", ALPHA: "alpha" };
@@ -157,8 +157,22 @@ obj6.flags = new Set(items11);
 const set19 = new Set(items11);
 obj6.defaultActionTypes = new Set();
 triggerConfigs[AutomodTriggerType.SERVER_POLICY] = obj6;
-const obj7 = { MEMBERS: "members", CONTENT: "content" };
-const obj8 = { [obj7.MEMBERS]: items12, [obj7.CONTENT]: items13 };
+const obj7 = {
+  type: AutomodTriggerType.APPLICATION,
+  perGuildMaxCount: 0,
+  availableActionTypes: null,
+  flags: null,
+  defaultActionTypes: null,
+};
+const set20 = new Set();
+obj7.availableActionTypes = new Set();
+const set21 = new Set();
+obj7.flags = new Set();
+const set22 = new Set();
+obj7.defaultActionTypes = new Set();
+triggerConfigs[AutomodTriggerType.APPLICATION] = obj7;
+const obj8 = { MEMBERS: "members", CONTENT: "content" };
+const obj9 = { [obj8.MEMBERS]: items12, [obj8.CONTENT]: items13 };
 items12 = [triggerConfigs[AutomodTriggerType.USER_PROFILE]];
 items13 = [
   triggerConfigs[AutomodTriggerType.SERVER_POLICY],
@@ -172,8 +186,8 @@ const result = size.fileFinishedImporting("modules/guild_automod/AutomodTriggerC
 
 export const AutomodTriggerConfigFlags = triggerConfigs;
 export { triggerConfigs };
-export const AutomodTriggerCategory = obj7;
-export const AUTOMOD_RULE_CONFIGS_BY_CATEGORY = obj8;
+export const AutomodTriggerCategory = obj8;
+export const AUTOMOD_RULE_CONFIGS_BY_CATEGORY = obj9;
 export const checkTriggerTypeForFlag = function checkTriggerTypeForFlag(arg0, arg1) {
   const flags = obj[arg0].flags;
   return flags.has(arg1);
@@ -214,13 +228,13 @@ export const validateRuleByTriggerConfigOrThrow = function validateRuleByTrigger
   }
 };
 export const useAvailableTriggerTypes = function useAvailableTriggerTypes(arg0) {
-  isUserProfileRuleEnabled = isUserProfileRuleEnabled(16836).useIsUserProfileRuleEnabled(arg0);
+  isUserProfileRuleEnabled = isUserProfileRuleEnabled(16873).useIsUserProfileRuleEnabled(arg0);
   const items = [isUserProfileRuleEnabled];
   return noop.useMemo(() => {
-    const keys = Object.keys(obj8);
+    const keys = Object.keys(obj9);
     return keys.reduce(
       (acc, item) => {
-        const found = obj8[item].filter((type) => {
+        const found = obj9[item].filter((type) => {
           let tmp2 = type.type !== constants.SERVER_POLICY;
           if (tmp2) {
             let tmp3 = type.type === tmp.USER_PROFILE;

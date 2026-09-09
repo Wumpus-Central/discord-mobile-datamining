@@ -2,7 +2,7 @@
 import AvatarUtilsDefault from "../../../../utils/AvatarUtils.tsx";
 import FastImageDefault from "../../../../components_native/common/FastImage.tsx";
 import EmojiDefault from "../../../emojis/native/Emoji.tsx";
-import _modDef10307 from "../../../../../_runtime/metro/10307__.js";
+import _modDef10334 from "../../../../../_runtime/metro/10334__.js";
 import useEmojiByIdOrName from "../../useEmojiByIdOrName.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
@@ -33,7 +33,7 @@ export default function EmojiIcon(size) {
       obj = { resizeMode: "contain", style: null, source: null };
       size = { width: num, height: num };
       obj.style = size;
-      obj.source = _modDef10307;
+      obj.source = _modDef10334;
       tmp4 = jsx(FastImageDefault, { resizeMode: "contain", style: null, source: null });
     }
     let tmp8Result = tmp4;

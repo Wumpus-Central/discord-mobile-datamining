@@ -11,7 +11,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-fn(4560);
+fn(4574);
 let obj = { container: null, headerRow: null, icon: null, description: null, divider: null };
 obj = { backgroundColor: nativeDefault.colors.MOBILE_FLOATING_ACCESSORY_BACKGROUND };
 obj.container = obj;
@@ -19,15 +19,15 @@ const createStyles = {
   flexDirection: "row",
   alignItems: "center",
   paddingHorizontal: 16,
-  paddingVertical: fn(12392).GAME_MENTION_SEARCH_BAR_HEADER_PADDING_VERTICAL,
+  paddingVertical: fn(12418).GAME_MENTION_SEARCH_BAR_HEADER_PADDING_VERTICAL,
 };
 obj.headerRow = createStyles;
 obj.icon = { marginRight: 12 };
 obj.description = {
   paddingHorizontal: 16,
-  paddingBottom: fn(12392).GAME_MENTION_SEARCH_BAR_DESCRIPTION_PADDING_BOTTOM,
+  paddingBottom: fn(12418).GAME_MENTION_SEARCH_BAR_DESCRIPTION_PADDING_BOTTOM,
 };
-const obj2 = { paddingHorizontal: 16, paddingBottom: fn(12392).GAME_MENTION_SEARCH_BAR_DESCRIPTION_PADDING_BOTTOM };
+const obj2 = { paddingHorizontal: 16, paddingBottom: fn(12418).GAME_MENTION_SEARCH_BAR_DESCRIPTION_PADDING_BOTTOM };
 obj.divider = { marginLeft: 0, backgroundColor: nativeDefault.colors.MOBILE_COMMAND_BAR_DIVIDER };
 let closure_5 = createStyles.createStyles(obj);
 let obj3 = { marginLeft: 0, backgroundColor: nativeDefault.colors.MOBILE_COMMAND_BAR_DIVIDER };

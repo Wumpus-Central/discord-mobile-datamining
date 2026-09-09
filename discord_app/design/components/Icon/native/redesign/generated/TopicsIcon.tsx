@@ -1,7 +1,7 @@
 // discord_app/design/components/Icon/native/redesign/generated/TopicsIcon.tsx
 import nativeDefault from "../../../../../../../discord_common/js/packages/tokens/native.tsx";
 import BaseIconImage from "../../BaseIconImage.tsx";
-import _mod11659 from "../../../../../../../_runtime/metro/11659__.js";
+import _mod11685 from "../../../../../../../_runtime/metro/11685__.js";
 import noop from "../../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -16,5 +16,5 @@ export const TopicsIcon = function TopicsIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod11659, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod11685, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 };

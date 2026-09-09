@@ -152,6 +152,7 @@ export const QuestTaskPlatform = { CONSOLE: "CONSOLE", DESKTOP: "DESKTOP" };
 export const QuestAuthMethod = { IN_GAME: "in_game", WEB: "web" };
 export const QUEST_SPLIT_MODAL_PANEL_WIDTH = 454;
 export const QUEST_HERO_ASSET_ASPECT_RATIO = 3.5675675675675675;
+export const DEFAULT_PORTRAIT_ASPECT_RATIO = 0.5625;
 export const CDN_URL_BASE = str2;
 export const QUESTS_CDN_URL_BASE = text;
 export const QuestDockMode = {

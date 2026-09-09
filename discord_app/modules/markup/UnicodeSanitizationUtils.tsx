@@ -403,36 +403,36 @@ export const sanitizeUnicodeConfusables = function sanitizeUnicodeConfusables(sa
   });
   return closure_0;
 };
-export const safelyMakeUrlHumanReadable = function safelyMakeUrlHumanReadable(origin) {
-  let startsWithResult = "null" === origin.origin;
+export const safelyMakeUrlHumanReadable = function safelyMakeUrlHumanReadable(uRL) {
+  let startsWithResult = "null" === uRL.origin;
   if (startsWithResult) {
-    const pathname = origin.pathname;
+    const pathname = uRL.pathname;
     startsWithResult = pathname.startsWith("//");
   }
   if (startsWithResult) {
-    let protocol = origin.protocol;
+    let protocol = uRL.protocol;
   } else {
     let str3 = "";
-    if ("" !== origin.username) {
-      str3 = `${origin.username}`;
+    if ("" !== uRL.username) {
+      str3 = `${uRL.username}`;
     }
     let text = str3;
-    if ("" !== origin.password) {
-      text = `${str3}:${origin.password}`;
+    if ("" !== uRL.password) {
+      text = `${str3}:${uRL.password}`;
     }
     let text1 = text;
     if ("" !== text) {
       text1 = `${tmp2}@`;
     }
     let str8 = "";
-    if ("//" === str6.substr(origin.protocol.length, 2)) {
+    if ("//" === str6.substr(uRL.protocol.length, 2)) {
       str8 = "//";
     }
     const _HermesInternal = HermesInternal;
-    protocol = "" + origin.protocol + str8 + text1 + origin.host;
-    str6 = origin.href;
+    protocol = "" + uRL.protocol + str8 + text1 + uRL.host;
+    str6 = uRL.href;
   }
-  const sum = protocol + safelyPartiallyDecodeURIComponent(origin.pathname);
-  const sum1 = sum + safelyPartiallyDecodeURIComponent(origin.search);
-  return sum1 + safelyPartiallyDecodeURIComponent(origin.hash);
+  const sum = protocol + safelyPartiallyDecodeURIComponent(uRL.pathname);
+  const sum1 = sum + safelyPartiallyDecodeURIComponent(uRL.search);
+  return sum1 + safelyPartiallyDecodeURIComponent(uRL.hash);
 };

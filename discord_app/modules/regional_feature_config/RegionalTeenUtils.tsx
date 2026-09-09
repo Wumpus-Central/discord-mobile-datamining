@@ -5,7 +5,7 @@ import RegionalFeatureConfigStore from "RegionalFeatureConfigStore.tsx";
 
 require = fn;
 let items = ["GB", "AU"];
-HermesBuiltin.arraySpread(fn(4778).CountryCodesSets.EU_COUNTRIES, 2);
+HermesBuiltin.arraySpread(fn(4792).CountryCodesSets.EU_COUNTRIES, 2);
 const set = new Set(items);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/regional_feature_config/RegionalTeenUtils.tsx");
@@ -31,7 +31,7 @@ export const useIsTeenInCountrySet = function useIsTeenInCountrySet(set) {
     }
   }, items1);
   const obj = stateFromStores(504);
-  let userIsTeen = stateFromStores(8649).useUserIsTeen();
+  let userIsTeen = stateFromStores(8677).useUserIsTeen();
   if (userIsTeen) {
     userIsTeen = null != stateFromStores;
   }
@@ -50,7 +50,7 @@ export const useIsTeenInStrictCountry = function useIsTeenInStrictCountry() {
     }
   }, items1);
   const obj2 = stateFromStores(504);
-  let userIsTeen = stateFromStores(8649).useUserIsTeen();
+  let userIsTeen = stateFromStores(8677).useUserIsTeen();
   if (userIsTeen) {
     userIsTeen = null != stateFromStores;
   }

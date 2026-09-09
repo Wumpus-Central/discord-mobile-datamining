@@ -12,7 +12,7 @@ const jsxProd = fn(21);
 const src = {
   videoURI: "https://cdn.discordapp.com/assets/activities/platform/activities_pipfab_tutorial_redesign.mp4",
 };
-fn(4560);
+fn(4574);
 let createStyles = { videoContainer: null, bottomSheetWrapper: null, contentContainer: null, title: null, body: null };
 createStyles = { borderRadius: nativeDefault.radii.sm, overflow: "hidden" };
 createStyles.videoContainer = createStyles;

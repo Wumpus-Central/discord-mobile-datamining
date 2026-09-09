@@ -3,7 +3,7 @@ import Storage3 from "../../../../discord_common/js/packages/storage/Storage.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import router_utils from "../../routing/router_utils.tsx";
 import util from "../../../intl/index.native.tsx";
-import _modDef3547 from "../intl/VibegrationsUntranslated.messages.js";
+import _modDef3560 from "../intl/VibegrationsUntranslated.messages.js";
 import ActionSheetActionCreators from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import VibegrationsUtils from "../lib/VibegrationsUtils.tsx";
 import ChannelPickerActionSheetDefault from "../../channel/native/ChannelPickerActionSheet.tsx";
@@ -20,13 +20,13 @@ get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: metroRequire, View: closure_7 } = get_ActivityIndicator);
 let closure_9 = fn(2012).GUILD_SELECTABLE_CHANNELS_KEY;
 const Routes = fn(1074).Routes;
-const MessageSendLocation = fn(4553).MessageSendLocation;
+const MessageSendLocation = fn(4567).MessageSendLocation;
 const jsxProd = fn(21);
 ({ jsx: closure_15, jsxs: closure_16 } = jsxProd);
 const VibegrationsPublishNotesSheet = "VibegrationsPublishNotesSheet";
 let closure_18 = "<#" + "9".repeat(20) + ">";
 const VibegrationsPatchNotesLastChannels = "VibegrationsPatchNotesLastChannels";
-const createStyles = fn(4560);
+const createStyles = fn(4574);
 let closure_20 = createStyles.createStyles((paddingBottom) => {
   let obj = { container: null, section: null, notesSection: null, statusRow: null, actions: null };
   obj = { gap: nativeDefault.space.PX_16, paddingHorizontal: nativeDefault.space.PX_16, paddingBottom };
@@ -218,7 +218,7 @@ export default function VibegrationsPublishNotesSheet(guildId) {
     obj = { header: null, guild: null, channels: null, selectedChannel: null, onSelect: null };
     const obj1 = { title: null };
     const intl = util.intl;
-    obj1.title = intl.string(_modDef3547.IcSdnu);
+    obj1.title = intl.string(_modDef3560.IcSdnu);
     obj.header = obj1;
     obj.guild = GuildStore.getGuild(guildId);
     obj.channels = stateFromStores;
@@ -277,14 +277,14 @@ export default function VibegrationsPublishNotesSheet(guildId) {
                   _undefined(true);
                   _undefined2(false);
                   dependencyMap = 1;
-                  let obj2 = tmp3(7682);
+                  let obj2 = tmp3(7696);
                   let combined = trimmed;
                   if (null != combined1) {
                     const _HermesInternal = HermesInternal;
                     combined = "" + trimmed + tmp38;
                   }
                   const parsed = obj2.parse(found, combined);
-                  const tmp35Result = tmp3(7456);
+                  const tmp35Result = tmp3(7470);
                   const obj1 = { location: _undefined2.VIBEGRATIONS_PATCH_NOTES };
                   c3 = 2;
                   c4 = 1;

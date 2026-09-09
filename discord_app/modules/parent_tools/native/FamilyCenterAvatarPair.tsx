@@ -9,7 +9,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-fn(4560);
+fn(4574);
 let createStyles = { avatars: null, icon: null };
 createStyles = {
   backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH,

@@ -7,7 +7,7 @@ import isForwardMessageDefault from "../../forwarding/isForwardMessage.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const REACTION_MILESTONE_COUNTS = fn(10100).REACTION_MILESTONE_COUNTS;
+const REACTION_MILESTONE_COUNTS = fn(10127).REACTION_MILESTONE_COUNTS;
 const Constants = fn(1074);
 ({
   AnalyticEvents: hasOwnProperty,

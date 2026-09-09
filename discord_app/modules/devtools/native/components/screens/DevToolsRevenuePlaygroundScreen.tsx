@@ -659,7 +659,7 @@ function FriendAnniversary() {
   return closure_18(closure_19, obj9);
 }
 function TrialOfferSheetExample() {
-  let obj = premiumTrialOffer(7447);
+  let obj = premiumTrialOffer(7461);
   premiumTrialOffer = obj.usePremiumTrialOffer();
   obj = {
     label: "Trial Offer Nitro Basic",
@@ -672,13 +672,13 @@ function TrialOfferSheetExample() {
           userTrialOffer: tmp2,
           markAsDismissed() {},
         };
-        obj.openLazy(asyncRequireImpl(15690, dependencyMap.paths), "PremiumTrialOfferActionSheet", obj);
+        obj.openLazy(asyncRequireImpl(15720, dependencyMap.paths), "PremiumTrialOfferActionSheet", obj);
       }
     },
   };
-  items = [closure_17(premiumTrialOffer(5605).TableRow, obj)];
+  items = [closure_17(premiumTrialOffer(5619).TableRow, obj)];
   obj = { title: "Trial Offers", hasIcons: false, children: null };
-  items[1] = closure_17(premiumTrialOffer(5605).TableRow, {
+  items[1] = closure_17(premiumTrialOffer(5619).TableRow, {
     label: "Trial Offer Nitro",
     subLabel: "No trial offer in store",
     disabled: null == premiumTrialOffer,
@@ -689,12 +689,12 @@ function TrialOfferSheetExample() {
           userTrialOffer: tmp2,
           markAsDismissed() {},
         };
-        obj.openLazy(asyncRequireImpl(15690, dependencyMap.paths), "PremiumTrialOfferActionSheet", obj);
+        obj.openLazy(asyncRequireImpl(15720, dependencyMap.paths), "PremiumTrialOfferActionSheet", obj);
       }
     },
   });
   obj.children = items;
-  return closure_18(premiumTrialOffer(5687).TableRowGroup, obj);
+  return closure_18(premiumTrialOffer(5701).TableRowGroup, obj);
 }
 function PremiumToggles() {
   let obj = useStateFromStores;
@@ -715,7 +715,7 @@ function PremiumToggles() {
     children: stateFromStores.map((item) => {
       [tmp, tmp2] = item;
       return closure_17(
-        closure_0(7201).TableSwitchRow,
+        closure_0(7214).TableSwitchRow,
         {
           label: tmp3,
           subLabel: tmp,
@@ -821,7 +821,7 @@ function GuildTagBadges() {
   return closure_1_17(TableRowGroup.TableRowGroup, obj);
 }
 const ScrollView = fn(17).ScrollView;
-const DevSettingsCategory = fn(4559).DevSettingsCategory;
+const DevSettingsCategory = fn(4573).DevSettingsCategory;
 const PremiumConstants = fn(1373);
 ({ GiftIntentType: closure_15, PremiumTypes: closure_16 } = PremiumConstants);
 const jsxProd = fn(21);
@@ -838,7 +838,7 @@ let items = [
 ];
 let c21 = "/users/@me/gift-intents/dismissals";
 const FRIEND_ANNIVERSARY = "FRIEND_ANNIVERSARY";
-fn(4560);
+fn(4574);
 let createStyles = { container: null, scrollContainer: null };
 createStyles = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flex: 1 };
 createStyles.container = createStyles;

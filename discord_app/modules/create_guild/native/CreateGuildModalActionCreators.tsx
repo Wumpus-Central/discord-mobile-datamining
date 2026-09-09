@@ -11,7 +11,7 @@ const result = size.fileFinishedImporting("modules/create_guild/native/CreateGui
 export default {
   openCreateGuildModal(onSuccess) {
     const obj = { onSuccess };
-    obj.pushLazy(asyncRequireImpl(12713, dependencyMap.paths), obj, React4);
+    obj.pushLazy(asyncRequireImpl(12739, dependencyMap.paths), obj, React4);
   },
   closeCreateGuildModal() {
     ModalActionCreatorsDefault.popWithKey(React4);
@@ -22,10 +22,10 @@ export default {
   },
   openGuildInviteScreen(channel) {
     const obj = { channel };
-    obj.pushLazy(asyncRequireImpl(12713, dependencyMap.paths), obj, React4);
+    obj.pushLazy(asyncRequireImpl(12739, dependencyMap.paths), obj, React4);
   },
   openGuildJoinServerScreen() {
     const obj = { initialState: constants.JOIN_SERVER };
-    obj.pushLazy(asyncRequireImpl(12713, dependencyMap.paths), obj, React4);
+    obj.pushLazy(asyncRequireImpl(12739, dependencyMap.paths), obj, React4);
   },
 };

@@ -2,7 +2,7 @@
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
 import HelpdeskUtilsDefault from "../../../../utils/HelpdeskUtils.tsx";
-import _modDef13609 from "../../../../../_runtime/metro/13609__.js";
+import _modDef13632 from "../../../../../_runtime/metro/13632__.js";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
@@ -11,7 +11,7 @@ const View = fn(17).View;
 const HelpdeskArticles = fn(1074).HelpdeskArticles;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-fn(4560);
+fn(4574);
 let createStyles = {
   wrapper: null,
   content: null,
@@ -28,7 +28,7 @@ let createStyles = {
 createStyles = {
   alignSelf: "center",
   marginTop: 50,
-  marginBottom: fn(7401).VISIBILITY_OFFSET,
+  marginBottom: fn(7415).VISIBILITY_OFFSET,
   maxWidth: 800,
   paddingHorizontal: 16,
   width: "100%",
@@ -202,8 +202,8 @@ export default function GuildBoostingMarketingFaq() {
         str = "interactive-text-active";
       }
       obj = { color: str, style: tmp4.question, variant: "text-md/normal", children: getQuestion.getQuestion() };
-      items1 = [closure_1_7(closure_0(4556).Text, obj)];
-      const obj1 = { source: _modDef13609, style: null };
+      items1 = [closure_1_7(closure_0(4570).Text, obj)];
+      const obj1 = { source: _modDef13632, style: null };
       const items2 = [closure_0.questionIcon];
       let questionIconExpanded = tmp;
       if (tmp) {
@@ -213,7 +213,7 @@ export default function GuildBoostingMarketingFaq() {
       obj1.style = items2;
       items1[1] = closure_1_7(closure_0(1178).Icon, obj1);
       obj.children = items1;
-      const items3 = [closure_1_8(closure_0(5123).PressableOpacity, obj)];
+      const items3 = [closure_1_8(closure_0(5137).PressableOpacity, obj)];
       if (tmp) {
         const obj2 = {
           style: tmp4.answer,
@@ -221,7 +221,7 @@ export default function GuildBoostingMarketingFaq() {
           variant: "text-sm/normal",
           children: getQuestion.getAnswer(),
         };
-        tmp = closure_1_7(tmp5(4556).Text, obj2);
+        tmp = closure_1_7(tmp5(4570).Text, obj2);
       }
       items3[1] = tmp;
       obj.children = items3;

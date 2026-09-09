@@ -7,7 +7,7 @@ import AccessibilityStore from "../../../a11y/AccessibilityStore.tsx";
 require = fn;
 const useRef = fn(19).useRef;
 const jsx = fn(21).jsx;
-const createStyles = fn(4560);
+const createStyles = fn(4574);
 let closure_7 = createStyles.createStyles((width, marginHorizontal) => {
   const obj = { containerRefresh: null, animationRefresh: null };
   const size = {
@@ -63,7 +63,7 @@ export const PremiumAnimatedGiftButton = function PremiumAnimatedGiftButton(arg0
   }, items1);
   let FadeOut;
   if (!stateFromStores) {
-    FadeOut = tmp(4296).FadeOut;
+    FadeOut = tmp(4310).FadeOut;
   }
   obj = { exiting: FadeOut, children: null };
   const items2 = [tmp7.containerRefresh, style];
@@ -92,7 +92,7 @@ export const PremiumAnimatedGiftButton = function PremiumAnimatedGiftButton(arg0
     autoPlay: false,
     onAnimationFinish: onAnimationFinished,
   };
-  obj.children = jsx(stateFromStores(5529), {
+  obj.children = jsx(stateFromStores(5543), {
     ref: tmp9,
     style: tmp7.animationRefresh,
     source: { uri: animationDataUrl },
@@ -106,7 +106,7 @@ export const PremiumAnimatedGiftButton = function PremiumAnimatedGiftButton(arg0
     accessibilityRole: "button",
     accessibilityState: null,
   });
-  return jsx(stateFromStores(4296).View, {
+  return jsx(stateFromStores(4310).View, {
     style: items2,
     hitSlop: null,
     accessibilityRole: "button",

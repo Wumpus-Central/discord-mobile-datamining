@@ -49,10 +49,10 @@ export const useModalState = function useModalState(url) {
     if (first) {
       trustUrl(str);
     }
-    if (onClose != null) {
-      tmp4();
-    }
     onConfirm();
+    if (onClose != null) {
+      onClose();
+    }
   }, items1);
   url = {
     protocol,
@@ -63,10 +63,10 @@ export const useModalState = function useModalState(url) {
     setShouldTrustUrl: tmp[1],
     handleConfirm: callback,
     handleCancel: obj.useCallback(() => {
-      if (onClose != null) {
-        tmp();
-      }
       onCancel();
+      if (onClose != null) {
+        onClose();
+      }
     }, items2),
   };
   return url;

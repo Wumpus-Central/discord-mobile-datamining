@@ -12,7 +12,7 @@ const Constants = fn(1074);
 ({ InstantInviteSources: metroRequire, Fonts } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-fn(4560);
+fn(4574);
 let createStyles = { container: null, header: null, title: null, description: null, ctaContainer: null };
 createStyles = {
   flex: 1,
@@ -43,7 +43,7 @@ export default function GuildDirectoryEmpty(guild) {
   let obj = guild(504);
   const items = [GuildChannelStore];
   dependencyMap = obj.useStateFromStores(items, () => GuildChannelStore.getChannels(guild.id));
-  guild(12311);
+  guild(12337);
   obj = { contentContainerStyle: null, children: null };
   const items1 = [tmp.container];
   obj = { paddingBottom: channel(1611)().bottom + 16 };
@@ -51,7 +51,7 @@ export default function GuildDirectoryEmpty(guild) {
   obj.contentContainerStyle = items1;
   const obj1 = { source: null, style: null };
   const canCreateOrAddGuildInDirectory = obj1.useCanCreateOrAddGuildInDirectory(channel);
-  obj1.source = channel(12759);
+  obj1.source = channel(12785);
   obj1.style = tmp.header;
   const items2 = [closure_7(closure_3, obj1), , , ,];
   const obj2 = { style: tmp.title, accessibilityRole: "header", children: null };
@@ -61,7 +61,7 @@ export default function GuildDirectoryEmpty(guild) {
   const obj4 = { style: tmp.description, variant: "text-sm/medium", color: "text-default", children: null };
   const intl2 = guild(1114).intl;
   obj4.children = intl2.string(guild(1114).t.WypE0i);
-  items2[2] = closure_7(guild(4556).Text, obj4);
+  items2[2] = closure_7(guild(4570).Text, obj4);
   let tmp8Result = null;
   if (canCreateOrAddGuildInDirectory) {
     const obj5 = {
@@ -70,12 +70,12 @@ export default function GuildDirectoryEmpty(guild) {
         const obj = { directoryGuildName: guild.name, directoryGuildId: guild.id, directoryChannelId: channel.id };
         return obj.open(obj);
       },
-      iconSource: tmp2(12760),
+      iconSource: tmp2(12786),
       title: null,
     };
     const intl3 = tmp4(1114).intl;
     obj5.title = intl3.string(tmp4(1114).t.hyK15i);
-    tmp8Result = closure_7(tmp4(8598).FormCTA, obj5);
+    tmp8Result = closure_7(tmp4(8626).FormCTA, obj5);
   }
   items2[3] = tmp8Result;
   const obj6 = {
@@ -88,12 +88,12 @@ export default function GuildDirectoryEmpty(guild) {
         constants.HUB_EMPTY_STATE,
       );
     },
-    iconSource: channel(12761),
+    iconSource: channel(12787),
     title: null,
   };
   const intl4 = tmp4(1114).intl;
   obj6.title = intl4.string(guild(1114).t.L4bwJ9);
-  items2[4] = closure_7(guild(8598).FormCTA, obj6);
+  items2[4] = closure_7(guild(8626).FormCTA, obj6);
   obj.children = items2;
   return closure_8(closure_4, obj);
 }

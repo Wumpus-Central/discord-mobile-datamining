@@ -1,5 +1,5 @@
 // discord_app/modules/activate_device/native/ActivateDeviceModal.tsx
-import _modDef6992 from "../../../../_runtime/metro/06992__.js";
+import _modDef7006 from "../../../../_runtime/metro/07006__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 const require = fn;
@@ -23,11 +23,11 @@ export default function ActivateDeviceModal(userCode) {
           return null;
         },
         headerLeft() {
-          const obj = { source: _modDef6992, onPress: onClose, accessibilityLabel: null };
+          const obj = { source: _modDef7006, onPress: onClose, accessibilityLabel: null };
           const intl = userCode(1114).intl;
           obj.accessibilityLabel = intl.string(userCode(1114).t.cpT0Cq);
-          return jsx(userCode(7377).HeaderActionButton, {
-            source: _modDef6992,
+          return jsx(userCode(7391).HeaderActionButton, {
+            source: _modDef7006,
             onPress: onClose,
             accessibilityLabel: null,
           });
@@ -36,7 +36,7 @@ export default function ActivateDeviceModal(userCode) {
           return null;
         },
         render() {
-          return jsx(userCode(13878).ActivateDevice, { onClose, prefilledUserCode });
+          return jsx(userCode(13901).ActivateDevice, { onClose, prefilledUserCode });
         },
       },
     };
@@ -44,7 +44,7 @@ export default function ActivateDeviceModal(userCode) {
   let obj = { screens: memo, initialRouteName: constants.ACTIVATE_DEVICE, headerBackTitle: null };
   let intl = userCode(1114).intl;
   obj.headerBackTitle = intl.string(userCode(1114).t["13/7kX"]);
-  return jsx(userCode(7000).Navigator, {
+  return jsx(userCode(7014).Navigator, {
     screens: memo,
     initialRouteName: constants.ACTIVATE_DEVICE,
     headerBackTitle: null,

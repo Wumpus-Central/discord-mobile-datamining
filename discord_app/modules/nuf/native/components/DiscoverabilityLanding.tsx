@@ -9,10 +9,10 @@ import TextStyles from "../../../rebrand/native/TextStyles.tsx";
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, ScrollView: hasOwnProperty } = get_ActivityIndicator);
-const useContactSyncModalStore = fn(12681).useContactSyncModalStore;
+const useContactSyncModalStore = fn(12707).useContactSyncModalStore;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-fn(4560);
+fn(4574);
 let createStyles = {
   container: null,
   headerContainer: null,
@@ -54,7 +54,7 @@ export default function DiscoverabilityLanding(onNext) {
   const items = [allowPhone, allowEmail];
   noop = noop.useCallback(() => {
     const obj = { allowPhone, allowEmail };
-    obj.openLazy(asyncRequireImpl(12753, dependencyMap.paths), "Discoverability Landing", obj);
+    obj.openLazy(asyncRequireImpl(12779, dependencyMap.paths), "Discoverability Landing", obj);
   }, items);
   let obj = { style: tmp.container, contentContainerStyle: null, children: null };
   obj = {

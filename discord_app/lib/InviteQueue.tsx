@@ -32,8 +32,8 @@ function drain(location, sum) {
   if (self.GROUP_DM !== type) {
     if (tmp.CHANNEL !== type) {
       if (tmp.USER === type) {
-        const obj = inviteAnalyticsMetadata(4573);
-        inviteAnalyticsMetadata(4573)
+        const obj = inviteAnalyticsMetadata(4587);
+        inviteAnalyticsMetadata(4587)
           .ensurePrivateChannel(location.user.id)
           .then(
             (result) => {
@@ -46,7 +46,7 @@ function drain(location, sum) {
             },
             () => sum(null, false),
           );
-        const ensurePrivateChannelResult = inviteAnalyticsMetadata(4573).ensurePrivateChannel(location.user.id);
+        const ensurePrivateChannelResult = inviteAnalyticsMetadata(4587).ensurePrivateChannel(location.user.id);
       }
     }
   }

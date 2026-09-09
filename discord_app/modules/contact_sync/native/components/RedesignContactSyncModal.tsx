@@ -101,7 +101,7 @@ function ContactSyncLandingScreen(openSettingsSheet) {
                 obj = { value, done: true };
                 return obj;
               } else if (!currentUser) {
-                let obj2 = tmp2(12688);
+                let obj2 = tmp2(12714);
                 let tmp12 = discoverabilityEnabled;
                 if (tmp12) {
                   let email;
@@ -146,7 +146,7 @@ function ContactSyncLandingScreen(openSettingsSheet) {
             }
             dependencyMap = 1;
             c3 = 1;
-            const obj4 = { value: tmp2(12680).startContactSync(closure_129_3), done: false };
+            const obj4 = { value: tmp2(12706).startContactSync(closure_129_3), done: false };
             return obj4;
           } catch (tmp2) {
             c3 = tmp;
@@ -177,7 +177,7 @@ function ContactSyncLandingScreen(openSettingsSheet) {
       const obj = { type: "Contact Sync", location: { page: "Contact Sync" } };
       obj.track(AnalyticEvents.OPEN_POPOUT, obj);
       ActionSheetActionCreatorsDefault.openLazy(
-        asyncRequireImpl(12691, dependencyMap.paths),
+        asyncRequireImpl(12717, dependencyMap.paths),
         "Contact Sync Info Settings",
       );
     }
@@ -209,7 +209,7 @@ function ContactSyncLandingScreen(openSettingsSheet) {
               obj = { value, done: true };
               return obj;
             } else {
-              let obj3 = v1(5139);
+              let obj3 = v1(5153);
               v1 = 1;
               dependencyMap = 1;
               const obj1 = { value: obj3.requestPermission(constants.CONTACTS), done: false };
@@ -226,7 +226,7 @@ function ContactSyncLandingScreen(openSettingsSheet) {
             if (value) {
               closure_128_8();
             } else {
-              obj = tmp4(12680);
+              obj = tmp4(12706);
               obj3 = { onComplete: closure_128_2, skip: true };
               const result = obj.closeContactSyncModal(obj3);
             }
@@ -302,7 +302,7 @@ function ContactSyncNameInputScreen(navigateToLandingPage) {
   const tmp5 = closure_10();
   const name = tmp5.name;
   ({ isNameFromContactBook, error } = tmp5);
-  loading(12699)(navigation, navigateToLandingPage.navigateToLandingPage);
+  loading(12725)(navigation, navigateToLandingPage.navigateToLandingPage);
   _require = onNext(function* (arg0) {
     if (c3 === 2) {
       c3 = 3;
@@ -331,7 +331,7 @@ function ContactSyncNameInputScreen(navigateToLandingPage) {
             closure_1 = tmp2;
             dependencyMap(true);
             React7(options);
-            let obj1 = options(12680);
+            let obj1 = options(12706);
             dependencyMap = 1;
             c3 = 1;
             obj1 = { value: null, done: false };
@@ -398,7 +398,7 @@ function ContactSyncNameInputScreen(navigateToLandingPage) {
     tmp12 = isNameFromContactBook;
   }
   obj.prefilledFromContactBook = tmp12;
-  obj.children = closure_16(loading(12701), obj);
+  obj.children = closure_16(loading(12727), obj);
   return closure_16(View, obj);
 }
 function ContactSyncSuggestionScreen(onComplete) {
@@ -647,21 +647,21 @@ class ContactSyncModal {
   }
 }
 const View = fn(17).View;
-const ContactSyncModalStore = fn(12681);
+const ContactSyncModalStore = fn(12707);
 ({ setName: closure_9, useContactSyncModalStore: c10, useIsOnboarding: closure_11 } = ContactSyncModalStore);
-const ContactSyncConstants = fn(12682);
+const ContactSyncConstants = fn(12708);
 ({ ContactPermissions: closure_12, ContactSyncScenes: map1 } = ContactSyncConstants);
 const AnalyticEvents = fn(1074).AnalyticEvents;
-const NativePermissionTypes = fn(4770).NativePermissionTypes;
+const NativePermissionTypes = fn(4784).NativePermissionTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_16, Fragment: closure_17, jsxs: closure_18 } = jsxProd);
-fn(4560);
+fn(4574);
 let createStyles = { container: null, landingTrailing: null };
 createStyles = {
   flex: 1,
   backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW,
   justifyContent: "center",
-  paddingTop: fn(5682).NAV_BAR_HEIGHT + 32,
+  paddingTop: fn(5696).NAV_BAR_HEIGHT + 32,
 };
 createStyles.container = createStyles;
 createStyles.landingTrailing = { textAlign: "center" };

@@ -13,10 +13,10 @@ import useFetchStreamPreviewDefault from "../../../../go_live/useFetchStreamPrev
 import isListeningOnSpotifyDefault from "../../../../activities/utils/isListeningOnSpotify.tsx";
 import isOnXboxDefault from "../../../../activities/utils/isOnXbox.tsx";
 import useLiveStageData from "useLiveStageData.tsx";
-import _modDef16077 from "../../../../../../_runtime/metro/16077__.js";
-import _modDef16078 from "../../../../../../_runtime/metro/16078__.js";
+import _modDef16107 from "../../../../../../_runtime/metro/16107__.js";
+import _modDef16108 from "../../../../../../_runtime/metro/16108__.js";
 import HappeningNowAvatarStack from "HappeningNowAvatarStack.tsx";
-import _modDef16087 from "../../../../../../_runtime/metro/16087__.js";
+import _modDef16117 from "../../../../../../_runtime/metro/16117__.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 import StageInstanceStore from "../../../../stage_channels/StageInstanceStore.tsx";
 import UserStore from "../../../../../stores/UserStore.tsx";
@@ -171,7 +171,7 @@ function IconOrPreview(arg0) {
       userId = substr.charCodeAt(0);
       tmp2Result = items[userId % items.length];
     } else {
-      tmp2Result = _modDef16087;
+      tmp2Result = _modDef16117;
     }
   }
 }
@@ -193,7 +193,7 @@ function StageStreamAvatars(stage) {
 }
 get_ActivityIndicator = fn(17);
 ({ PixelRatio, View: closure_4 } = get_ActivityIndicator);
-const HappeningNowConstants = fn(15297);
+const HappeningNowConstants = fn(15326);
 ({
   HAPPENING_NOW_CONTENT_HEIGHT,
   HappeningNowCardTrackingType: closure_7,
@@ -205,8 +205,8 @@ const Constants = fn(1074);
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12, Fragment: map1 } = jsxProd);
 const pixelSizeForLayoutSize = PixelRatio.getPixelSizeForLayoutSize(HAPPENING_NOW_CONTENT_HEIGHT);
-let items = [_modDef16077, _modDef16078];
-fn(4560);
+let items = [_modDef16107, _modDef16108];
+fn(4574);
 let obj = {
   content: { flexShrink: 1, gap: 2 },
   avatarStackContainer: null,
@@ -365,13 +365,13 @@ export default noop.memo((userId) => {
     obj.destination_channel_id = channelId;
     obj.track(constants3.ACTIVITY_CARD_CLICKED, obj);
     if (null != stream) {
-      asyncRequireImpl(9541, dependencyMap.paths).then((result) => result.default(channelId.channelId, true));
-      const promise2 = asyncRequireImpl(9541, dependencyMap.paths);
+      asyncRequireImpl(9568, dependencyMap.paths).then((result) => result.default(channelId.channelId, true));
+      const promise2 = asyncRequireImpl(9568, dependencyMap.paths);
     } else {
-      asyncRequireImpl(8179, dependencyMap.paths).then((result) =>
+      asyncRequireImpl(8205, dependencyMap.paths).then((result) =>
         result.default({ userId, localUser, sourceAnalyticsLocations }),
       );
-      const promise = asyncRequireImpl(8179, dependencyMap.paths);
+      const promise = asyncRequireImpl(8205, dependencyMap.paths);
     }
   }, items2);
   if (null == stateFromStores) {

@@ -7,7 +7,7 @@ import AutomaticLifecycleManager from "../../lib/AutomaticLifecycleManager.tsx";
 let require = fn;
 const Constants = fn(1074);
 ({ AnalyticEvents: closure_4, RPCCloseCodes: hasOwnProperty } = Constants);
-const TransportTypes = fn(4465).TransportTypes;
+const TransportTypes = fn(4479).TransportTypes;
 class FramesManager extends tmp3 {
   constructor() {
     applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
@@ -18,13 +18,14 @@ class FramesManager extends tmp3 {
       },
       FRAME_LAUNCH(arg0) {
         ({ applicationId, analyticsContext } = arg0);
-        const result = applyArgumentsResult(9523).trackFrameSessionStart(applicationId, analyticsContext);
+        const result = applyArgumentsResult(9550).trackFrameSessionStart(applicationId, analyticsContext);
       },
-      FRAME_LAUNCH_FAIL(applicationId) {
-        const result = applyArgumentsResult(9529).discardPendingFrameLaunch(applicationId.applicationId);
+      FRAME_LAUNCH_FAIL(arg0) {
+        ({ applicationId, error, analyticsContext } = arg0);
+        const result = applyArgumentsResult(9550).trackFrameSessionStartFailed(applicationId, error, analyticsContext);
       },
       FRAME_STOP(applicationId) {
-        applyArgumentsResult(9523).trackFrameSessionEnd(applicationId.applicationId);
+        applyArgumentsResult(9550).trackFrameSessionEnd(applicationId.applicationId);
       },
     };
     applyArgumentsResult.handleRPCDisconnect = function handleRPCDisconnect(arg0) {

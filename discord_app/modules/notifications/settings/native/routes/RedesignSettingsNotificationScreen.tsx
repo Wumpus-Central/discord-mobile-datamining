@@ -8,7 +8,7 @@ import MobileNotifSettingsRouteBuilders from "../MobileNotifSettingsRouteBuilder
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-let closure_4 = fn(15483).initializeAndroidNotificationSettingsStore;
+let closure_4 = fn(15513).initializeAndroidNotificationSettingsStore;
 const jsx = fn(21).jsx;
 const size = fn(2);
 const result = size.fileFinishedImporting(

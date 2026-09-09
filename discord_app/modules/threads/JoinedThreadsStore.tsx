@@ -301,7 +301,14 @@ obj = {
       if (null === guildId) {
         tmp3 = tmp5;
       } else if (isJoining) {
-        obj = { threadId: id, guildId, flags: 0, muted: true, muteConfig: { end_time: "Array" }, joinTimestamp: null };
+        obj = {
+          threadId: id,
+          guildId,
+          flags: 0,
+          muted: true,
+          muteConfig: { end_time: "disabled" },
+          joinTimestamp: null,
+        };
         const _Date = Date;
         const date = new Date();
         guildId = date;

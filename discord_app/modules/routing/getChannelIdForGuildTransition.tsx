@@ -2,6 +2,7 @@
 import FavoritesUtils from "../favorites/FavoritesUtils.tsx";
 import OnboardingHomeUtils from "../guild_onboarding_home/OnboardingHomeUtils.tsx";
 import SlayerStorefrontUtils from "../slayer_storefront/SlayerStorefrontUtils.tsx";
+import VibegrationsUtils from "../vibegrations/lib/VibegrationsUtils.tsx";
 import FavoriteStore from "../favorites/FavoriteStore.tsx";
 import GuildOnboardingStore from "../guild_onboarding/GuildOnboardingStore.tsx";
 import ChannelStore from "../../stores/ChannelStore.tsx";
@@ -47,7 +48,7 @@ export const getChannelIdForGuildTransition = function getChannelIdForGuildTrans
     obj = OnboardingHomeUtils;
   }
   if (channelId === StaticChannelRoute.GUILD_SPACE) {
-    if (obj5.canUseGuildSpace(GuildStore.getGuild(guildId), "getChannelIdForGuildTransition")) {
+    if (obj6.canUseGuildSpace(GuildStore.getGuild(guildId), "getChannelIdForGuildTransition")) {
       id = channelId;
     }
     return id;
@@ -58,17 +59,30 @@ export const getChannelIdForGuildTransition = function getChannelIdForGuildTrans
       }
       obj2 = SlayerStorefrontUtils;
     }
-    const channel = ChannelStore.getChannel(channelId);
-    if (null != channel) {
-      if (!channel.isGuildVocal()) {
-        let tmp17 = channelId;
-        if (obj4.isFavoritesGuildId(guildId)) {
-          tmp17 = channelId;
+    if (channelId === StaticChannelRoute.VIBEGRATIONS) {
+      const guild = GuildStore.getGuild(guildId);
+      let tmp21 = id;
+      if (null != guild) {
+        tmp21 = id;
+        if (obj5.canAccessVibegrations(guild, "getChannelIdForGuildTransition")) {
+          tmp21 = channelId;
         }
-        obj4 = FavoritesUtils;
+        obj5 = VibegrationsUtils;
       }
-      return tmp17;
+      return tmp21;
+    } else {
+      const channel = ChannelStore.getChannel(channelId);
+      if (null != channel) {
+        if (!channel.isGuildVocal()) {
+          let tmp17 = channelId;
+          if (obj4.isFavoritesGuildId(guildId)) {
+            tmp17 = channelId;
+          }
+          obj4 = FavoritesUtils;
+        }
+        return tmp17;
+      }
+      tmp17 = id;
     }
-    tmp17 = id;
   }
 };

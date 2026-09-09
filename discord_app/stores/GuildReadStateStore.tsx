@@ -1029,7 +1029,7 @@ function handleRecentMentionsSuccess(messages) {
 const ChannelRecord = fn(1961);
 ({ getBasicAccessPermissions: closure_7, isGuildVocalChannelType: closure_8, isThread: closure_9 } = ChannelRecord);
 const ChannelFlags = fn(1964).ChannelFlags;
-const ReadStateConstants = fn(4742);
+const ReadStateConstants = fn(4756);
 ({ ReadStateTypes: closure_19, UnreadSetting: closure_20 } = ReadStateConstants);
 const NULL_STRING_GUILD_ID = fn(1074).NULL_STRING_GUILD_ID;
 let guilds = {};

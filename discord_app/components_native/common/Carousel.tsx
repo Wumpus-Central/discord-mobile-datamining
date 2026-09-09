@@ -8,7 +8,7 @@ get_ActivityIndicator = fn(17);
 ({ View: c2, ScrollView: c3 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-fn(4560);
+fn(4574);
 let createStyles = {
   container: { alignItems: "center" },
   carouselContentWrapper: { flexDirection: "row" },
@@ -45,7 +45,7 @@ PageIndicator.prototype["render"] = function render() {
   obj.style = items2;
   return React4(React2, obj);
 };
-PageIndicator.contextType = fn(4271).ThemeContext;
+PageIndicator.contextType = fn(4284).ThemeContext;
 PageIndicator.defaultProps = { indicatorSpace: 10, indicatorSize: 20 };
 const Component2 = noop.Component;
 class Carousel extends Component2 {
@@ -105,7 +105,7 @@ Carousel.prototype["render"] = function render() {
   obj.children = items1;
   return hasOwnProperty(React2, obj);
 };
-Carousel.contextType = fn(4271).ThemeContext;
+Carousel.contextType = fn(4284).ThemeContext;
 Carousel.defaultProps = { pageIndictor: true, width: 375 };
 const size = fn(2);
 const result = size.fileFinishedImporting("components_native/common/Carousel.tsx");

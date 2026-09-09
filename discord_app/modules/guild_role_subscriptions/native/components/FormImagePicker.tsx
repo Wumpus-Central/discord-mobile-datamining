@@ -192,7 +192,7 @@ class ImagePickerIcon {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-fn(4560);
+fn(4574);
 let createStyles = {
   imageSelectionRow: { flexDirection: "row", justifyContent: "space-between", marginHorizontal: 16 },
   buttonColumn: { flex: 1, flexDirection: "column", marginEnd: 16 },
@@ -256,8 +256,8 @@ export default function FormImagePicker(children) {
     children: children.description,
   };
   const items = [
-    closure_6(tmp6(4556).Text, obj),
-    closure_6(tmp6(4975).Button, {
+    closure_6(tmp6(4570).Text, obj),
+    closure_6(tmp6(4989).Button, {
       text: stringResult,
       variant: "secondary",
       onPress() {

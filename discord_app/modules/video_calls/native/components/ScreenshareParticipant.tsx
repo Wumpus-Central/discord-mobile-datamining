@@ -3,9 +3,9 @@ import nativeDefault from "../../../../../discord_common/js/packages/tokens/nati
 import util from "../../../../intl/index.native.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import components_Button_Button from "../../../../design/components/Button/native/Button.native.tsx";
-import LegacyBaseButton from "../../../../../_runtime/06655_LegacyBaseButton.js";
+import LegacyBaseButton from "../../../../../_runtime/06669_LegacyBaseButton.js";
 import useParticipantTileTapGestureDefault from "../useParticipantTileTapGesture.tsx";
-import _modDef9598 from "../../../../../_runtime/metro/09598__.js";
+import _modDef9625 from "../../../../../_runtime/metro/09625__.js";
 import useScreenshareUtils from "../useScreenshareUtils.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
@@ -14,7 +14,7 @@ get_ActivityIndicator = fn(17);
 ({ View: closure_4, Image: hasOwnProperty } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-fn(4560);
+fn(4574);
 let createStyles = { container: null, image: null, title: null, description: null };
 createStyles = {
   alignItems: "center",
@@ -58,7 +58,7 @@ export default function ScreenshareParticipant(participant) {
   obj = { style: null, children: null };
   const items2 = [tmp4.container, participant.containerStyle];
   obj.style = items2;
-  obj = { source: _modDef9598, style: tmp4.image };
+  obj = { source: _modDef9625, style: tmp4.image };
   const items3 = [timestampProducer(hasOwnProperty, obj), , ,];
   const obj1 = {
     style: tmp4.title,

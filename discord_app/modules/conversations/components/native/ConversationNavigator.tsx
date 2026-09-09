@@ -21,7 +21,7 @@ function HeaderWithBorder(arg0) {
 }
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-const NativeStackNavigator = fn(7913);
+const NativeStackNavigator = fn(7927);
 const Screen = NativeStackNavigator.createNativeStackNavigator();
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conversations/components/native/ConversationNavigator.tsx");
@@ -29,11 +29,11 @@ const result = size.fileFinishedImporting("modules/conversations/components/nati
 export default function ConversationNavigator(route) {
   const params = route.route.params;
   const channelId = params.channelId;
-  let obj = channelId(7000);
+  let obj = channelId(7014);
   obj = { id: "conversation-navigator", screenOptions: obj.useAccessibilityNativeStackOptions(), children: null };
   obj = {
     initialParams: { channelId, guildId: params.guildId },
-    name: channelId(7923).ConversationNavigatorScreens.LIST,
+    name: channelId(7937).ConversationNavigatorScreens.LIST,
     options(navigation) {
       let obj = {
         header(arg0) {
@@ -51,14 +51,14 @@ export default function ConversationNavigator(route) {
       return obj;
     },
     getComponent() {
-      return channelId(7925).default;
+      return channelId(7939).default;
     },
   };
   ({ Navigator, Screen } = Screen);
   const items = [
     closure_3(Screen, obj),
     closure_3(Screen.Screen, {
-      name: channelId(7923).ConversationNavigatorScreens.FOCUS,
+      name: channelId(7937).ConversationNavigatorScreens.FOCUS,
       options(route) {
         route = route.route;
         const obj = {
@@ -66,7 +66,7 @@ export default function ConversationNavigator(route) {
             const merged = Object.assign(arg0);
             return closure_1_3(closure_1_5, {});
           },
-          headerLeft: route(7863).getRenderBackImage(route.navigation),
+          headerLeft: route(7877).getRenderBackImage(route.navigation),
           headerTitle() {
             return closure_2_3(ConversationNavigatorHeaderDefault, {
               channelId: route.params.channelId,
@@ -84,7 +84,7 @@ export default function ConversationNavigator(route) {
         return obj;
       },
       getComponent() {
-        return channelId(13255).default;
+        return channelId(13278).default;
       },
     }),
   ];

@@ -811,7 +811,7 @@ const items = [
   {
     name: "experimental/display-xs",
     fontStack: "nitro",
-    uppercase: false,
+    uppercase: true,
     italic: false,
     size: 16,
     lineHeight: 18,
@@ -820,7 +820,7 @@ const items = [
   {
     name: "experimental/display-sm",
     fontStack: "nitro",
-    uppercase: false,
+    uppercase: true,
     italic: false,
     size: 24,
     lineHeight: 26,
@@ -829,7 +829,7 @@ const items = [
   {
     name: "experimental/display-md",
     fontStack: "nitro",
-    uppercase: false,
+    uppercase: true,
     italic: false,
     size: 32,
     lineHeight: 34,
@@ -838,7 +838,7 @@ const items = [
   {
     name: "experimental/display-lg",
     fontStack: "nitro",
-    uppercase: false,
+    uppercase: true,
     italic: false,
     size: 44,
     lineHeight: 44,

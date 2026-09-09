@@ -89,7 +89,7 @@ function ReportModal(onSubmit) {
   return closure_10(View, obj);
 }
 const View = fn(17).View;
-const GuildReportRaidModalConstants = fn(13968);
+const GuildReportRaidModalConstants = fn(13991);
 ({
   getReportRaidHelpArticleURL: metroRequire,
   getReportRaidTypeLabel: closure_7,
@@ -98,7 +98,7 @@ const GuildReportRaidModalConstants = fn(13968);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
 const REPORT_RAID = "REPORT_RAID";
-fn(4560);
+fn(4574);
 let createStyles = {
   container: null,
   headerSubtitle: null,

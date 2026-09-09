@@ -17,21 +17,21 @@ export const showSharePreparingModal = function showSharePreparingModal(onCancel
           _true = true;
           const _clearTimeout = clearTimeout;
           clearTimeout(dependencyMap);
-          _true(4763).popWithKey(SHARE_PREPARING_MODAL_KEY);
+          _true(4777).popWithKey(SHARE_PREPARING_MODAL_KEY);
           onCancel();
-          const obj = _true(4763);
+          const obj = _true(4777);
         }
       },
     };
     obj
-      .pushLazy(asyncRequireImpl(8367, dependencyMap.paths), obj, SHARE_PREPARING_MODAL_KEY, {
+      .pushLazy(asyncRequireImpl(8395, dependencyMap.paths), obj, SHARE_PREPARING_MODAL_KEY, {
         animation: "fade",
         presentation: "transparentModal",
       })
       .then(() => {
         if (_true) {
-          _true(4763).popWithKey(SHARE_PREPARING_MODAL_KEY);
-          const obj = _true(4763);
+          _true(4777).popWithKey(SHARE_PREPARING_MODAL_KEY);
+          const obj = _true(4777);
         }
       });
   }, 1000);

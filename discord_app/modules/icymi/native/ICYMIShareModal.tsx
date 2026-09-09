@@ -14,7 +14,7 @@ import ClientThemesOverrides from "../../client_themes/native/ClientThemesOverri
 import ShareEventUtils from "../../guild_scheduled_events/utils/ShareEventUtils.tsx";
 import useShareChatInputActions from "../../share/native/useShareChatInputActions.tsx";
 import ShareChatInputDefault from "../../share/native/ShareChatInput.tsx";
-import _modDef16507 from "../../../../_runtime/metro/16507__.js";
+import _modDef16538 from "../../../../_runtime/metro/16538__.js";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
 import noop from "../../../../_runtime/metro/00019__.js";
@@ -53,7 +53,7 @@ function Screenshot(setUri) {
   const tmp4 = useColorThemeBackgroundDefault();
   const obj3 = { absolute: true, wide: true, tall: true, mix: true, mixAmount: null };
   const obj4 = { dark: null, light: null };
-  const tmp6 = _modDef16507;
+  const tmp6 = _modDef16538;
   obj4.dark = client_themes_ClientThemesUtils.OverlayOpacity.LEVEL_7;
   obj4.light = client_themes_ClientThemesUtils.OverlayOpacity.LEVEL_8;
   obj3.mixAmount = obj4;
@@ -408,13 +408,13 @@ class ICYMIShareModal {
   }
 }
 const View = fn(17).View;
-const DraftType = fn(4901).DraftType;
+const DraftType = fn(4915).DraftType;
 const AbortCodes = fn(1074).AbortCodes;
-const UserRowModes = fn(10865).UserRowModes;
-const MessageSendLocation = fn(4553).MessageSendLocation;
+const UserRowModes = fn(10892).UserRowModes;
+const MessageSendLocation = fn(4567).MessageSendLocation;
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
-fn(4560);
+fn(4574);
 let createStyles = {
   headerLeftContainer: null,
   headerRightContainer: null,
@@ -508,7 +508,7 @@ export const GameShareModal = function GameShareModal(content) {
             closure_1 = tmp7;
             closure_129_0 = undefined;
             c4 = 1;
-            let obj3 = entry(16506);
+            let obj3 = entry(16537);
             let obj1 = {
               channel: entry,
               content: "",

@@ -3,7 +3,7 @@ import markUnreadDefault from "../messages/markUnread.tsx";
 import ReadStateStore from "../../stores/ReadStateStore.tsx";
 
 const require = fn;
-const ReadState = fn(4575).ReadState;
+const ReadState = fn(4589).ReadState;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/channel/markChannelUnread.tsx");
 

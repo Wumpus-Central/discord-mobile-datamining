@@ -9,7 +9,7 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/favorites/hooks/useFavoritesGuildAutoAddedThreadsAction.tsx");
 
 export default function useFavoritesGuildAutoAddedThreadsAction() {
-  let obj = hasAccess(10229);
+  let obj = hasAccess(10256);
   hasAccess = obj.useFavoritesAccess("useFavoritesGuildAutoAddedThreadsAction").hasAccess;
   const items = [UserStore];
   if (hasAccess) {
@@ -36,9 +36,9 @@ export default function useFavoritesGuildAutoAddedThreadsAction() {
     }
   }, items2);
   const intl = tmp(1114).intl;
-  obj.label = intl.string(stateFromStores(3225).DIyQIF);
+  obj.label = intl.string(stateFromStores(3236).DIyQIF);
   const intl2 = tmp(1114).intl;
-  obj.subLabel = intl2.string(stateFromStores(3225).g2vHYJ);
+  obj.subLabel = intl2.string(stateFromStores(3236).g2vHYJ);
   obj.toggle = callback;
   return obj;
 }

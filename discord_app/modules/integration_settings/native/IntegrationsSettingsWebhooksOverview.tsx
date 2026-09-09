@@ -201,7 +201,7 @@ const Constants = fn(1074);
 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_18, Fragment: closure_19, jsxs: closure_20 } = jsxProd);
-fn(4560);
+fn(4574);
 let createStyles = { form: null, content: null, hint: null };
 createStyles = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER };
 createStyles.form = createStyles;
@@ -237,7 +237,7 @@ prototype["renderWebhooks"] = function renderWebhooks() {
   let dkHRkE = dependencyMap;
   const helpText = self.getHelpText();
   const items = [
-    closure_18(webhookType(4556).Text, { variant: "text-sm/medium", color: "text-muted", children: helpText }),
+    closure_18(webhookType(4570).Text, { variant: "text-sm/medium", color: "text-muted", children: helpText }),
     ,
   ];
   let tmp4Result = webhookType === constants3.INCOMING;
@@ -247,7 +247,7 @@ prototype["renderWebhooks"] = function renderWebhooks() {
   }
   items[1] = tmp4Result;
   if (0 === found.length) {
-    obj = { Illustration: webhookType(16849).WebhookEmpty, title: null };
+    obj = { Illustration: webhookType(16886).WebhookEmpty, title: null };
     if (webhookType === constants3.CHANNEL_FOLLOWER) {
       const intl2 = webhookType(1114).intl;
       dkHRkE = webhookType(1114).t.dkHRkE;
@@ -278,7 +278,7 @@ prototype["renderWebhooks"] = function renderWebhooks() {
       }),
     };
     const obj1 = { children: null };
-    items[2] = closure_18(webhookType(5687).TableRowGroup, obj);
+    items[2] = closure_18(webhookType(5701).TableRowGroup, obj);
     obj1.children = items;
     return closure_20(closure_19, obj1);
   }
@@ -293,7 +293,7 @@ prototype["render"] = function render() {
   obj.children = items;
   return closure_1_20(closure_1_19, obj);
 };
-WebhooksOverview.contextType = fn(4271).ThemeContext;
+WebhooksOverview.contextType = fn(4284).ThemeContext;
 let closure_26 = [];
 const size = fn(2);
 const result = size.fileFinishedImporting(

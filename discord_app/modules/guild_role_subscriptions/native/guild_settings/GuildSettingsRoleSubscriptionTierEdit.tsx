@@ -18,7 +18,7 @@ import EditStateContextProvider from "../../edit_state/EditStateContextProvider.
 import GuildRoleSubscriptionTierBenefitsModal from "../components/GuildRoleSubscriptionTierBenefitsModal.tsx";
 import GuildRoleSubscriptionTierDesignModal from "../components/GuildRoleSubscriptionTierDesignModal.tsx";
 import GuildRoleSubscriptionTierDetailsModal from "../components/GuildRoleSubscriptionTierDetailsModal.tsx";
-import _modDef17778 from "../../../../../_runtime/metro/17778__.js";
+import _modDef17811 from "../../../../../_runtime/metro/17811__.js";
 import ActionableNoticeDefault from "../components/ActionableNotice.tsx";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
@@ -51,7 +51,7 @@ function ArchiveOrDeleteTierSection() {
   obj1 = { style: tmp.actionButton, children: null };
   obj2 = { variant: "destructive", grow: true, icon: null, onPress: null, disabled: null, text: null };
   const tmp4 = useArchiveOrDeleteDefault(guildId, groupListingId, editStateId, navigation);
-  obj2.icon = closure_1_14(native.Icon, { size: native.Icon.Sizes.SMALL, disableColor: true, source: _modDef17778 });
+  obj2.icon = closure_1_14(native.Icon, { size: native.Icon.Sizes.SMALL, disableColor: true, source: _modDef17811 });
   obj2.onPress = handleArchiveOrDelete;
   let tmp9 = !allowSelfRemoveMonetization;
   if (allowSelfRemoveMonetization) {
@@ -100,13 +100,13 @@ function TabContent(selectedTab) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: metroRequire, ScrollView: closure_7 } = get_ActivityIndicator);
-const FetchState = fn(4193).FetchState;
-const GuildRoleSubscriptionsTierScenes = fn(15208).GuildRoleSubscriptionsTierScenes;
+const FetchState = fn(4206).FetchState;
+const GuildRoleSubscriptionsTierScenes = fn(15237).GuildRoleSubscriptionsTierScenes;
 const GuildSettingsSections = fn(1074).GuildSettingsSections;
 const ContentDismissActionType = fn(1954).ContentDismissActionType;
 const jsxProd = fn(21);
 ({ jsx: closure_14, Fragment: closure_15, jsxs: closure_16 } = jsxProd);
-fn(4560);
+fn(4574);
 let createStyles = {
   container: { flex: 1 },
   tabsContainer: null,

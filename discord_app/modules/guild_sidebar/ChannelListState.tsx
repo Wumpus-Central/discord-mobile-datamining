@@ -239,7 +239,7 @@ const ChannelRecord = fn(1961);
   isThread: closure_16,
   THREADED_CHANNEL_TYPES: closure_17,
 } = ChannelRecord);
-const ChannelListGuildActionRow = fn(7534).ChannelListGuildActionRow;
+const ChannelListGuildActionRow = fn(7548).ChannelListGuildActionRow;
 const Constants = fn(1074);
 ({ ChannelTypes: closure_30, GuildFeatures: items } = Constants);
 const ChannelFlags = fn(1964).ChannelFlags;

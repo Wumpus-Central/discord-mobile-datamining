@@ -4,7 +4,7 @@ import util from "../../../../intl/index.native.tsx";
 import native from "../../../../../discord_common/js/packages/design/native.tsx";
 import AccessibilityAnnouncer2 from "../../../../../discord_common/js/packages/design/components/AccessibilityAnnouncer/AccessibilityAnnouncer.android.tsx";
 import ReanimatedRexport from "../../../reanimated/ReanimatedRexport.tsx";
-import Suspender from "../../../../../_runtime/04923_Suspender.js";
+import Suspender from "../../../../../_runtime/04937_Suspender.js";
 import spring from "../../../../design/animation/reanimated/spring/spring.tsx";
 import ReanimatedNativeViewDefault from "../../../core/native/ReanimatedNativeView.tsx";
 import cheapWorkletShallowEqual from "../../../reanimated/native/cheapWorkletShallowEqual.tsx";
@@ -191,17 +191,17 @@ function CardContentFreezer(children) {
 }
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-const VoicePanelConstants = fn(12277);
+const VoicePanelConstants = fn(12303);
 ({
   LAYOUT_PHYSICS: closure_8,
   VoicePanelModes: closure_9,
   UI_SHOW_HIDE_PHYSICS,
   VOICE_PANEL_CHUNK_DIVISOR,
 } = VoicePanelConstants);
-const VoicePanelControlsModes = fn(12275).VoicePanelControlsModes;
-const VoicePanelPIPModes = fn(17091).VoicePanelPIPModes;
-const EDGE_GUTTER = fn(12280).EDGE_GUTTER;
-const isUserParticipant = fn(4581).isUserParticipant;
+const VoicePanelControlsModes = fn(12301).VoicePanelControlsModes;
+const VoicePanelPIPModes = fn(17122).VoicePanelPIPModes;
+const EDGE_GUTTER = fn(12306).EDGE_GUTTER;
+const isUserParticipant = fn(4595).isUserParticipant;
 const jsx = fn(21).jsx;
 let obj = {};
 const merged = Object.assign(UI_SHOW_HIDE_PHYSICS);

@@ -27,7 +27,7 @@ function useStateFromStores(items, getCurrentRestrictedHoursState, items1) {
       areStatesEqual: tmp,
       getStateFromStores: getCurrentRestrictedHoursState,
       prevDeps: "Boolean",
-      state: "padding",
+      state: "accessible",
     };
     tmp2.current = obj;
   }

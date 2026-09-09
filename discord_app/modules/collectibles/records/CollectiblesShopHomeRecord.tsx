@@ -3,16 +3,16 @@ import ShopBlockType from "../../../../discord_common/js/shared/shared-constants
 import CollectiblesCategoryRecord from "CollectiblesCategoryRecord.tsx";
 
 require = fn;
-const CountdownTimerBlockRecord = fn(7572).CountdownTimerBlockRecord;
-const FeaturedBlockRecord = fn(7574).FeaturedBlockRecord;
-const FeedBlockRecord = fn(7577).FeedBlockRecord;
-let closure_6 = fn(7578).GameServerHostingBannerBlockRecord;
-const HeroBlockRecord = fn(7579).HeroBlockRecord;
-let closure_8 = fn(7580).ImmersiveBannerBlockRecord;
-const RewardHeroBlockRecord = fn(7581).RewardHeroBlockRecord;
-const ShelfBlockRecord = fn(7582).ShelfBlockRecord;
-let closure_11 = fn(7583).SocialLayerStorefrontPromotionalBannerBlockRecord;
-const WideBannerBlockRecord = fn(7584).WideBannerBlockRecord;
+const CountdownTimerBlockRecord = fn(7586).CountdownTimerBlockRecord;
+const FeaturedBlockRecord = fn(7588).FeaturedBlockRecord;
+const FeedBlockRecord = fn(7591).FeedBlockRecord;
+let closure_6 = fn(7592).GameServerHostingBannerBlockRecord;
+const HeroBlockRecord = fn(7593).HeroBlockRecord;
+let closure_8 = fn(7594).ImmersiveBannerBlockRecord;
+const RewardHeroBlockRecord = fn(7595).RewardHeroBlockRecord;
+const ShelfBlockRecord = fn(7596).ShelfBlockRecord;
+let closure_11 = fn(7597).SocialLayerStorefrontPromotionalBannerBlockRecord;
+const WideBannerBlockRecord = fn(7598).WideBannerBlockRecord;
 const prototype = function CollectiblesShopHomeRecord(shop_blocks) {
   const obj = Object.create(new.target.prototype);
   shop_blocks = shop_blocks.shop_blocks;

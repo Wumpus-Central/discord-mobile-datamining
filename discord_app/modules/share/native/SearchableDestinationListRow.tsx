@@ -20,23 +20,23 @@ export default function SearchableDestinationListRow(result) {
     if (null != onPressDestination) {
       const fn = () => onPressDestination(formatResults.getDestinationIdFromResult(result));
     }
-    if (tmp2(9840).AutocompleterResultTypes.USER === type) {
+    if (tmp2(9867).AutocompleterResultTypes.USER === type) {
       let obj = {};
       const merged1 = Object.assign(merged);
       obj.user = record;
-      let tmp2Result = tmp2(7661);
+      let tmp2Result = tmp2(7675);
       obj.type = tmp2Result.getRelationshipType(record.id);
       obj.onPress = fn;
-      return jsx(onPressDestination(10873), {});
-    } else if (tmp2(9840).AutocompleterResultTypes.GROUP_DM === type) {
+      return jsx(onPressDestination(10900), {});
+    } else if (tmp2(9867).AutocompleterResultTypes.GROUP_DM === type) {
       obj = {};
       const merged2 = Object.assign(merged);
       obj.channel = record;
       obj.onPress = fn;
-      return jsx(onPressDestination(10914), {});
+      return jsx(onPressDestination(10941), {});
     } else {
-      if (tmp2(9840).AutocompleterResultTypes.TEXT_CHANNEL !== type) {
-        if (tmp2(9840).AutocompleterResultTypes.VOICE_CHANNEL !== type) {
+      if (tmp2(9867).AutocompleterResultTypes.TEXT_CHANNEL !== type) {
+        if (tmp2(9867).AutocompleterResultTypes.VOICE_CHANNEL !== type) {
           tmp2Result = tmp2(1369);
           return tmp2Result.assertNever(type);
         }
@@ -45,7 +45,7 @@ export default function SearchableDestinationListRow(result) {
       const merged3 = Object.assign(merged);
       obj1.channel = record;
       obj1.onPress = fn;
-      return jsx(onPressDestination(10917), {});
+      return jsx(onPressDestination(10944), {});
     }
   }
 }

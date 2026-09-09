@@ -10,7 +10,7 @@ const View = fn(17).View;
 const Permissions = fn(1074).Permissions;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-fn(4560);
+fn(4574);
 let createStyles = {
   selectorGroup: { display: "flex", flexDirection: "column", gap: 8 },
   select: null,
@@ -46,15 +46,15 @@ export default function GuildSelector(disabled) {
       onGuildChange(dependencyMap[6]).hideActionSheet(GuildSelector);
     };
     obj.selectedItem = selectedGuildId;
-    obj.openLazy(asyncRequireImpl(9431, dependencyMap.paths), GuildSelector, obj);
-    const tmp = asyncRequireImpl(9431, dependencyMap.paths);
+    obj.openLazy(asyncRequireImpl(9458, dependencyMap.paths), GuildSelector, obj);
+    const tmp = asyncRequireImpl(9458, dependencyMap.paths);
   }, items);
   let found = guilds.find((id) => id.id === selectedGuildId);
   let obj = { style: tmp.selectorGroup, children: null };
   obj = { variant: "eyebrow", color: "text-default", children: null };
   let intl = selectedGuildId(1114).intl;
   obj.children = intl.string(selectedGuildId(1114).t["1DXFFd"]);
-  const items1 = [closure_7(selectedGuildId(4556).Text, obj), , ,];
+  const items1 = [closure_7(selectedGuildId(4570).Text, obj), , ,];
   let tmp6Result = null;
   if (null != error) {
     tmp6Result = null;
@@ -72,10 +72,10 @@ export default function GuildSelector(disabled) {
     const intl2 = selectedGuildId(1114).intl;
     name = intl2.string(selectedGuildId(1114).t.oM4E1A);
   }
-  items1[2] = closure_7(selectedGuildId(8598).FormRow, {
+  items1[2] = closure_7(selectedGuildId(8626).FormRow, {
     label: name,
     disabled: disabled.disabled,
-    trailing: closure_7(selectedGuildId(8598).FormRow.Arrow, {}),
+    trailing: closure_7(selectedGuildId(8626).FormRow.Arrow, {}),
     DEPRECATED_style: tmp.select,
     onPress: callback,
   });

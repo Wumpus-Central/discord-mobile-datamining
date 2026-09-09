@@ -13,6 +13,3 @@ export const consumePendingFrameLaunch = function consumePendingFrameLaunch(appl
     return tmp3;
   }
 };
-export const discardPendingFrameLaunch = function discardPendingFrameLaunch(applicationId) {
-  delete tmp2[tmp];
-};

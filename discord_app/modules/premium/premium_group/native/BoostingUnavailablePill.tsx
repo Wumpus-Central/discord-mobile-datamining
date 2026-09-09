@@ -3,7 +3,7 @@ import jsxProd from "../../../../../_runtime/react/00021_jsxProd.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
 import asyncRequireImpl from "../../../../../_runtime/01896_asyncRequireImpl.js";
-import _modDef3063 from "../PremiumGroup.messages.js";
+import _modDef3074 from "../PremiumGroup.messages.js";
 import PremiumGroupConstants from "../PremiumGroupConstants.tsx";
 import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
@@ -15,8 +15,8 @@ function handlePress() {
   let obj = { aboutText: null };
   const intl = util.intl;
   obj = { premiumGroupProductName: closure_5() };
-  obj.aboutText = intl.formatToPlainString(_modDef3063["5xN/C1"], obj);
-  obj.openLazy(asyncRequireImpl(13520, dependencyMap.paths), "PremiumGroupEducationActionSheet", obj);
+  obj.aboutText = intl.formatToPlainString(_modDef3074["5xN/C1"], obj);
+  obj.openLazy(asyncRequireImpl(13543, dependencyMap.paths), "PremiumGroupEducationActionSheet", obj);
 }
 ({ TouchableOpacity: c3, View: closure_4 } = get_ActivityIndicator);
 let closure_5 = PremiumGroupConstants.getPremiumGroupProductName;

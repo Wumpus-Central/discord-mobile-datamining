@@ -215,11 +215,11 @@ let closure_3 = [
 ];
 let closure_4 = ["settingData"];
 const View = fn(17).View;
-const SettingRendererConstants = fn(11474);
+const SettingRendererConstants = fn(11501);
 ({ GUILD_SELECT_ALL_SERVERS_OPTION_ID: closure_12, NodeType: map1 } = SettingRendererConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_14, Fragment: closure_15, jsxs: closure_16 } = jsxProd);
-fn(4560);
+fn(4574);
 let obj = {
   slider: null,
   sliderTitle: null,
@@ -513,7 +513,7 @@ let closure_25 = noop.memo((arg0) => {
   ({ variant, useTrailing, useIsDisabled, useDescription, start, end, IconComponent } = arg0);
   let trailing;
   ({ setting, useTitle } = arg0);
-  let obj = trailing(14698);
+  let obj = trailing(14724);
   let highlightSettingItem = obj.useHighlightSettingItem(setting);
   trailing = undefined;
   const title = useTitle();
@@ -556,18 +556,18 @@ let closure_25 = noop.memo((arg0) => {
   let tmp11Result = null;
   if (null != IconComponent) {
     obj = { IconComponent, variant };
-    tmp11Result = closure_14(tmp(5605).TableRow.Icon, obj);
+    tmp11Result = closure_14(tmp(5619).TableRow.Icon, obj);
   }
   obj.icon = tmp11Result;
   tmp11Result = null;
   if (null != trailing) {
     const obj1 = { text: trailing };
-    tmp11Result = closure_14(tmp(5605).TableRow.TrailingText, obj1);
+    tmp11Result = closure_14(tmp(5619).TableRow.TrailingText, obj1);
   }
   obj.trailing = tmp11Result;
   obj.start = start;
   obj.end = end;
-  const children = [closure_14(trailing(5605).TableRow, obj)];
+  const children = [closure_14(trailing(5619).TableRow, obj)];
   if (highlightSettingItem) {
     let obj2 = { start, end };
     highlightSettingItem = closure_14(SettingListItemHighlightDefault, obj2);

@@ -12,9 +12,9 @@ const View = fn(17).View;
 const Constants = fn(1074);
 ({ Permissions: c10, AnalyticsSections: closure_11, InstantInviteSources: closure_12 } = Constants);
 const jsx = fn(21).jsx;
-let closure_14 = { listActionRenderer: "jsxs", listActionHeight: "channel" };
-fn(4560);
-const createStyles = { wrapper: { paddingTop: fn(10218).USERS_LIST_PADDING_BETWEEN_SECTIONS } };
+let closure_14 = { listActionRenderer: "Array", listActionHeight: "PX_16" };
+fn(4574);
+const createStyles = { wrapper: { paddingTop: fn(10245).USERS_LIST_PADDING_BETWEEN_SECTIONS } };
 let closure_15 = createStyles.createStyles(createStyles);
 const size = fn(2);
 let result = size.fileFinishedImporting(

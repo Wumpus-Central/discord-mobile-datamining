@@ -153,8 +153,8 @@ function convertCustomBackgroundGradientToAnimatedTheme(theme, prop, prop1) {
     obj = { hex: null, stop: null };
     const hexToRgbResult = obj.hexToRgb(item);
     const tmp16Result = ColorUtils;
-    const tmp18 = new tmp12(4410)(r, g, b, num8);
-    obj.hex = tmp16Result.mixColors(tmp7, new tmp12(4410)(r, g, b, num8)).toHexString();
+    const tmp18 = new tmp12(4424)(r, g, b, num8);
+    obj.hex = tmp16Result.mixColors(tmp7, new tmp12(4424)(r, g, b, num8)).toHexString();
     let num9 = 0;
     if (theme.customThemeSettings.colors.length > 1) {
       num9 = index * (100 / (theme.customThemeSettings.colors.length - 1));
@@ -217,7 +217,7 @@ export const convertThemesToAnimatedThemes = function convertThemesToAnimatedThe
 };
 export const useLaunchWelcomeSystemTheme = function useLaunchWelcomeSystemTheme() {
   const tmp4 = getSystemThemeDefault() === ThemeTypes.LIGHT ? ThemeTypes.LIGHT : ThemeTypes.DARKER;
-  token = token(4262).useToken(nativeDefault.colors.BACKGROUND_BASE_LOW, tmp4);
+  token = token(4275).useToken(nativeDefault.colors.BACKGROUND_BASE_LOW, tmp4);
   let items = [token];
   return noop.useMemo(() => {
     let obj = { theme: "system", name: null, midpointPercentage: 50, angle: 0, colors: null };
