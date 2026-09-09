@@ -1,7 +1,7 @@
-// === Module 8695: useSteamWebsiteUrl ===
+// === Module 8723: useSteamWebsiteUrl ===
 
-// Module 8695 (useSteamWebsiteUrl)
-import SteamReleaseStatus from "SteamReleaseStatus" /* 8696 */;
+// Module 8723 (useSteamWebsiteUrl)
+import SteamReleaseStatus from "SteamReleaseStatus" /* 8724 */;
 import GameStore from "GameStore" /* 1916 */;
 
 require = fn;
@@ -27,7 +27,7 @@ export const useSteamWebsiteUrl = function useSteamWebsiteUrl(id) {
         return null;
       } else {
         const websites = game.websites;
-        const found = websites.find((category) => category.category === id(8694).ThirdPartyGameApplicationWebsiteCategory.STEAM);
+        const found = websites.find((category) => category.category === id(8722).ThirdPartyGameApplicationWebsiteCategory.STEAM);
         if (found != null) {
           const url = found.url;
         }

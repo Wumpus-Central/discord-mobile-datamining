@@ -1,10 +1,10 @@
-// === Module 6591: ResendEmail ===
+// === Module 6605: ResendEmail ===
 
-// Module 6591 (ResendEmail)
+// Module 6605 (ResendEmail)
 import util from "util" /* 1114 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 4259 */;
-import EmailVerificationModalActionCreatorsDefault from "EmailVerificationModalActionCreators" /* 5621 */;
-import AuthenticationActionCreatorsDefault from "AuthenticationActionCreators" /* 6593 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 4272 */;
+import EmailVerificationModalActionCreatorsDefault from "EmailVerificationModalActionCreators" /* 5635 */;
+import AuthenticationActionCreatorsDefault from "AuthenticationActionCreators" /* 6607 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import UserRequiredActionStore from "UserRequiredActionStore" /* 1951 */;
@@ -15,7 +15,7 @@ const View = fn(17).View;
 const VerificationModalScenes = fn(1074).VerificationModalScenes;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(4560);
+const createStyles = fn(4574);
 let closure_11 = createStyles.createStyles({ container: { flex: 1, padding: 16, justifyContent: "center", alignItems: "center" }, title: { marginTop: 16, textAlign: "center" }, body: { marginTop: 8, lineHeight: 18, textAlign: "center" }, resend: { marginTop: 16, width: "100%" }, change: { marginTop: 8, width: "100%" } });
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/verification/native/components/ResendEmail.tsx");
@@ -35,7 +35,7 @@ export default function ResendEmail() {
   let obj2 = navigation(504);
   const items1 = [UserRequiredActionStore];
   const stateFromStores1 = obj2.useStateFromStores(items1, () => action.getAction());
-  let obj3 = verified(6592);
+  let obj3 = verified(6606);
   const result = obj3.isEmailReverification(stateFromStores1);
   let tmp16Result = !result;
   [tmp10, dependencyMap] = _slicedToArray(noop.useState(false), 2);
@@ -58,11 +58,11 @@ export default function ResendEmail() {
   const callback = noop.useCallback(() => {
     navigation.push(VerificationModalScenes.ENTER_EMAIL);
   }, items3);
-  const items4 = [closure_9(navigation(5692).EnvelopeOpenSpotIllustration, { scale: 0.75 }), , , , ];
+  const items4 = [closure_9(navigation(5706).EnvelopeOpenSpotIllustration, { scale: 0.75 }), , , , ];
   obj = { style: tmp.title, accessibilityRole: "header", variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: null };
   let intl = navigation(1114).intl;
   obj.children = intl.string(navigation(1114).t.fUtddV);
-  items4[1] = closure_9(navigation(4556).Text, obj);
+  items4[1] = closure_9(navigation(4570).Text, obj);
   obj1 = { style: tmp.body, variant: "text-sm/medium", color: "text-default", children: null };
   const intl2 = navigation(1114).intl;
   if (tmp10) {
@@ -72,7 +72,7 @@ export default function ResendEmail() {
     formatResult = intl2.string(tmp2(1114).t.tSXg8O);
   }
   obj1.children = formatResult;
-  items4[2] = closure_9(navigation(4556).Text, obj1);
+  items4[2] = closure_9(navigation(4570).Text, obj1);
   obj3 = { style: tmp.resend, children: null };
   const obj4 = { text: null, variant: "primary", onPress: null, grow: true };
   const intl3 = tmp2(1114).intl;
@@ -86,7 +86,7 @@ export default function ResendEmail() {
     obj.content = intl.string(util.t["84yeoz"]);
     ToastActionCreatorsDefault.open(obj);
   };
-  obj3.children = closure_9(navigation(4975).Button, obj4);
+  obj3.children = closure_9(navigation(4989).Button, obj4);
   items4[3] = closure_9(View, obj3);
   if (!result) {
     const obj5 = { style: tmp.change, children: null };
@@ -94,7 +94,7 @@ export default function ResendEmail() {
     const intl4 = tmp2(1114).intl;
     obj6.text = intl4.string(tmp2(1114).t.Vm8akB);
     obj6.onPress = callback;
-    obj5.children = closure_9(tmp2(4975).Button, obj6);
+    obj5.children = closure_9(tmp2(4989).Button, obj6);
     tmp16Result = closure_9(View, obj5);
   }
   items4[4] = tmp16Result;

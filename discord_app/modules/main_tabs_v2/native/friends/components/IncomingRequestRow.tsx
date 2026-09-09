@@ -1,13 +1,13 @@
-// === Module 16772: IncomingRequestRow ===
+// === Module 16809: IncomingRequestRow ===
 
-// Module 16772 (IncomingRequestRow)
+// Module 16809 (IncomingRequestRow)
 import util from "util" /* 1114 */;
-import UserUtilsDefault from "UserUtils" /* 4404 */;
-import ApplicationIconAndNameDefault from "ApplicationIconAndName" /* 12632 */;
-import AddFriendsScreenUtils from "AddFriendsScreenUtils" /* 16047 */;
+import UserUtilsDefault from "UserUtils" /* 4418 */;
+import ApplicationIconAndNameDefault from "ApplicationIconAndName" /* 12658 */;
+import AddFriendsScreenUtils from "AddFriendsScreenUtils" /* 16077 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4552 */;
-import ApplicationStore from "ApplicationStore" /* 4788 */;
+import AccessibilityStore from "AccessibilityStore" /* 4566 */;
+import ApplicationStore from "ApplicationStore" /* 4802 */;
 
 require = fn;
 function IncomingRequestRow(user) {
@@ -123,7 +123,7 @@ function IncomingGameFriendRequestRow(arg0) {
     return jsx(ApplicationIconAndNameDefault, { application, textVariant: "text-xs/medium", iconSize: 12 }, application.id);
   }} />;
 }
-const UserRowModes = fn(10865).UserRowModes;
+const UserRowModes = fn(10892).UserRowModes;
 const RelationshipTypes = fn(1074).RelationshipTypes;
 const jsx = fn(21).jsx;
 let closure_9 = { ACCEPT: "accept", DECLINE: "decline", WAVE: "wave" };

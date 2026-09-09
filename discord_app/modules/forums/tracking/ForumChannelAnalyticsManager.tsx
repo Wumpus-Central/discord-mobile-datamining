@@ -1,6 +1,6 @@
-// === Module 7772: ForumChannelAnalyticsManager ===
+// === Module 7786: ForumChannelAnalyticsManager ===
 
-// Module 7772 (ForumChannelAnalyticsManager)
+// Module 7786 (ForumChannelAnalyticsManager)
 import "ChannelStore";
 
 let size = Object.create(function ForumChannelAnalyticsManager() {

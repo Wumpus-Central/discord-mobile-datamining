@@ -1,17 +1,17 @@
-// === Module 8589: AgeVerificationMethodsContainer ===
+// === Module 8617: AgeVerificationMethodsContainer ===
 
-// Module 8589 (AgeVerificationMethodsContainer)
+// Module 8617 (AgeVerificationMethodsContainer)
 import nativeDefault from "native" /* 576 */;
-import MonitoringAgentDefault from "MonitoringAgent" /* 7602 */;
-import MetricEvents from "MetricEvents" /* 7607 */;
+import MonitoringAgentDefault from "MonitoringAgent" /* 7616 */;
+import MetricEvents from "MetricEvents" /* 7621 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const VerificationMethod = fn(8412).VerificationMethod;
-const SafetyHubLinks = fn(8419).SafetyHubLinks;
+const VerificationMethod = fn(8440).VerificationMethod;
+const SafetyHubLinks = fn(8447).SafetyHubLinks;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-fn(4560);
+fn(4574);
 let createStyles = { content: null, errorContainer: null, noMethodsText: null, buttonGroup: null };
 createStyles = { marginTop: nativeDefault.space.PX_8 };
 createStyles.content = createStyles;
@@ -27,7 +27,7 @@ export const AgeVerificationMethodsContainer = function AgeVerificationMethodsCo
   const prop = ageVerificationMethods.ageVerificationMethods;
   const modalSessionId = ageVerificationMethods.modalSessionId;
   const tmp = closure_8();
-  let obj = prop(8418);
+  let obj = prop(8446);
   const isSuspendedUser = obj.useIsSuspendedUser();
   const items = [prop];
   const effect = noop.useEffect(() => {
@@ -48,7 +48,7 @@ export const AgeVerificationMethodsContainer = function AgeVerificationMethodsCo
   const items1 = [closure_6(prop(1178).HelpMessage, obj), ];
   if (null != prop) {
     if (0 !== prop.length) {
-      let mapped = prop.map((label) => closure_1_6(prop(5605).TableRow, {
+      let mapped = prop.map((label) => closure_1_6(prop(5619).TableRow, {
         label: label.title,
         subLabel: label.description,
         onPress() {
@@ -60,36 +60,36 @@ export const AgeVerificationMethodsContainer = function AgeVerificationMethodsCo
     const obj1 = { hasIcons: false, children: mapped };
     items1[1] = closure_6(tmp8, obj1);
     obj.children = items1;
-    const items2 = [closure_7(prop(4973).Stack, obj), ];
+    const items2 = [closure_7(prop(4987).Stack, obj), ];
     let tmp7Result = isSuspendedUser;
     if (isSuspendedUser) {
       let obj2 = { variant: "text-xs/medium", children: null };
       const intl4 = tmp2(1114).intl;
       const obj3 = {
         handleOnHelpUrlHook() {
-              modalSessionId(8411).openUrl(constants.LEARN_MORE_UU_APPEAL_LINK);
+              modalSessionId(8439).openUrl(constants.LEARN_MORE_UU_APPEAL_LINK);
             }
       };
       obj2.children = intl4.format(modalSessionId(2946).htWh1G, obj3);
-      tmp7Result = closure_6(tmp2(4556).Text, obj2);
+      tmp7Result = closure_6(tmp2(4570).Text, obj2);
     }
     const obj4 = { spacing: 8, align: "center", children: null };
     items2[1] = tmp7Result;
     obj4.children = items2;
-    return closure_7(prop(4973).Stack, obj4);
+    return closure_7(prop(4987).Stack, obj4);
   }
   const obj5 = { direction: "vertical", align: "center", spacing: 16, style: tmp.errorContainer, children: null };
   const obj6 = { variant: "text-sm/medium", color: "text-subtle", style: tmp.noMethodsText, children: null };
   const intl2 = tmp2(1114).intl;
   obj6.children = intl2.string(modalSessionId(2946).cR6336);
-  const items3 = [closure_6(prop(4556).Text, obj6), ];
+  const items3 = [closure_6(prop(4570).Text, obj6), ];
   const obj7 = { style: tmp.buttonGroup, children: null };
   const obj8 = { variant: "primary", size: "lg", text: null, onPress: null };
   const intl3 = tmp2(1114).intl;
   obj8.text = intl3.string(modalSessionId(2946).hDvmYP);
-  obj8.onPress = prop(8417).getAgeVerificationMethods;
-  obj7.children = closure_6(prop(4975).Button, obj8);
-  items3[1] = closure_6(prop(5433).ButtonGroup, obj7);
+  obj8.onPress = prop(8445).getAgeVerificationMethods;
+  obj7.children = closure_6(prop(4989).Button, obj8);
+  items3[1] = closure_6(prop(5447).ButtonGroup, obj7);
   obj5.children = items3;
-  mapped = closure_7(tmp2(4973).Stack, obj5);
+  mapped = closure_7(tmp2(4987).Stack, obj5);
 };

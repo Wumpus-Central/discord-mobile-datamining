@@ -1,11 +1,11 @@
-// === Module 13973: useGuildHeaderCounts ===
+// === Module 13996: useGuildHeaderCounts ===
 
-// Module 13973 (useGuildHeaderCounts)
+// Module 13996 (useGuildHeaderCounts)
 import _mod12 from "module_12" /* 12 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import noop from "module_19" /* 19 */;
-import GuildMemberCountStore from "GuildMemberCountStore" /* 4480 */;
-import GuildHeaderCountsStore from "GuildHeaderCountsStore" /* 13974 */;
+import GuildMemberCountStore from "GuildMemberCountStore" /* 4494 */;
+import GuildHeaderCountsStore from "GuildHeaderCountsStore" /* 13997 */;
 
 require = fn;
 const size = fn(2);

@@ -1,10 +1,10 @@
-// === Module 15471: EmojiReactionsOnMessagesSetting ===
+// === Module 15500: EmojiReactionsOnMessagesSetting ===
 
-// Module 15471 (EmojiReactionsOnMessagesSetting)
+// Module 15500 (EmojiReactionsOnMessagesSetting)
 import util from "util" /* 1114 */;
 import UserSettings from "UserSettings" /* 1935 */;
-import SettingsConstants from "SettingsConstants" /* 7975 */;
-import SettingBuilders from "SettingBuilders" /* 11473 */;
+import SettingsConstants from "SettingsConstants" /* 7989 */;
+import SettingBuilders from "SettingBuilders" /* 11500 */;
 import size from "module_2" /* 2 */;
 
 const toggle = SettingBuilders.createToggle({

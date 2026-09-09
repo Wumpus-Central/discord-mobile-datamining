@@ -1,20 +1,20 @@
-// === Module 12379: UpcomingEventsLongPressActionSheet ===
+// === Module 12405: UpcomingEventsLongPressActionSheet ===
 
-// Module 12379 (UpcomingEventsLongPressActionSheet)
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4527 */;
-import ReadStateActionCreators from "ReadStateActionCreators" /* 7110 */;
-import NotificationSettingsUtils from "NotificationSettingsUtils" /* 7114 */;
-import NotificationSettingsModalActionCreatorsDefault from "NotificationSettingsModalActionCreators" /* 7119 */;
+// Module 12405 (UpcomingEventsLongPressActionSheet)
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4541 */;
+import ReadStateActionCreators from "ReadStateActionCreators" /* 7124 */;
+import NotificationSettingsUtils from "NotificationSettingsUtils" /* 7128 */;
+import NotificationSettingsModalActionCreatorsDefault from "NotificationSettingsModalActionCreators" /* 7133 */;
 import noop from "module_19" /* 19 */;
 import GuildStore from "GuildStore" /* 1979 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 4741 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 4755 */;
 
 require = fn;
 const View = fn(17).View;
-const ReadStateTypes = fn(4742).ReadStateTypes;
+const ReadStateTypes = fn(4756).ReadStateTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4560);
+const createStyles = fn(4574);
 let closure_9 = createStyles.createStyles({ headerIcon: { marginRight: 16 } });
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/guild_scheduled_events/native/components/UpcomingEventsLongPressActionSheet.tsx");
@@ -32,27 +32,27 @@ export default function UpcomingEventsLongPressActionSheet(guildId) {
   obj1 = { guild: stateFromStores, size: null };
   const tmp = closure_9();
   const tmp8 = stateFromStores1;
-  obj1.size = guildId(5584).GuildIconSizes.LARGE;
-  obj.children = closure_7(stateFromStores1(5584), obj1);
+  obj1.size = guildId(5598).GuildIconSizes.LARGE;
+  obj.children = closure_7(stateFromStores1(5598), obj1);
   obj.leading = closure_7(View, obj);
   const intl = guildId(1114).intl;
   obj.title = intl.string(guildId(1114).t.tlopTM);
-  const items2 = [closure_7(guildId(7149).BottomSheetTitleHeader, obj), , ];
+  const items2 = [closure_7(guildId(7163).BottomSheetTitleHeader, obj), , ];
   const obj2 = { leading: null, label: null, onPress: null };
-  const tmp9 = stateFromStores1(5584);
-  obj2.leading = closure_7(guildId(1178).Icon, { source: stateFromStores1(12380) });
+  const tmp9 = stateFromStores1(5598);
+  obj2.leading = closure_7(guildId(1178).Icon, { source: stateFromStores1(12406) });
   const obj4 = { text: null };
   const intl2 = guildId(1114).intl;
   obj4.text = intl2.string(guildId(1114).t.e6RscS);
-  obj2.label = closure_7(guildId(8598).FormLabel, obj4);
+  obj2.label = closure_7(guildId(8626).FormLabel, obj4);
   obj2.onPress = function onPress() {
     ReadStateActionCreators.ackGuildFeature(guildId, ReadStateTypes.GUILD_EVENT);
     ActionSheetActionCreatorsDefault.hideActionSheet();
   };
-  items2[1] = closure_7(guildId(8598).FormRow, obj2);
+  items2[1] = closure_7(guildId(8626).FormRow, obj2);
   const obj5 = { leading: null, label: null, onPress: null };
-  const obj3 = { source: stateFromStores1(12380) };
-  obj5.leading = closure_7(guildId(1178).Icon, { source: tmp8(stateFromStores1 ? 12381 : 12382) });
+  const obj3 = { source: stateFromStores1(12406) };
+  obj5.leading = closure_7(guildId(1178).Icon, { source: tmp8(stateFromStores1 ? 12407 : 12408) });
   const intl3 = tmp2(1114).intl;
   const string = intl3.string;
   const t = tmp2(1114).t;
@@ -62,13 +62,13 @@ export default function UpcomingEventsLongPressActionSheet(guildId) {
     stringResult = string(t.ONG3Yz);
   }
   const obj7 = { children: null };
-  obj5.label = closure_7(guildId(8598).FormLabel, { text: stringResult });
+  obj5.label = closure_7(guildId(8626).FormLabel, { text: stringResult });
   obj5.onPress = function onPress() {
     const obj = { mute_scheduled_events: !stateFromStores1 };
     const NotificationLabel = NotificationSettingsUtils.NotificationLabel;
     const result = obj.updateGuildNotificationSettings(guildId, obj, NotificationLabel.mutedEvents(!stateFromStores1));
   };
-  items2[2] = closure_7(guildId(8598).FormRow, obj5);
+  items2[2] = closure_7(guildId(8626).FormRow, obj5);
   obj7.children = items2;
-  return closure_8(guildId(7198).ActionSheet, obj7);
+  return closure_8(guildId(7211).ActionSheet, obj7);
 };

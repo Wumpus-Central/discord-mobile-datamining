@@ -1,9 +1,9 @@
-// === Module 7574: FeaturedBlockRecord ===
+// === Module 7588: FeaturedBlockRecord ===
 
-// Module 7574 (FeaturedBlockRecord)
-import ShopBlockType from "ShopBlockType" /* 7573 */;
-import FeaturedCategorySubblockRecord from "FeaturedCategorySubblockRecord" /* 7575 */;
-import FeaturedSubblockType from "FeaturedSubblockType" /* 7576 */;
+// Module 7588 (FeaturedBlockRecord)
+import ShopBlockType from "ShopBlockType" /* 7587 */;
+import FeaturedCategorySubblockRecord from "FeaturedCategorySubblockRecord" /* 7589 */;
+import FeaturedSubblockType from "FeaturedSubblockType" /* 7590 */;
 import size from "module_2" /* 2 */;
 
 let closure_2 = FeaturedCategorySubblockRecord.FeaturedCategorySubblockRecord;

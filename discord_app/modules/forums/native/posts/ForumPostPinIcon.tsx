@@ -1,15 +1,15 @@
-// === Module 12007: ForumPostPinIcon ===
+// === Module 12033: ForumPostPinIcon ===
 
-// Module 12007 (ForumPostPinIcon)
+// Module 12033 (ForumPostPinIcon)
 import nativeDefault from "native" /* 576 */;
 import native from "native" /* 1178 */;
-import _modDef12008 from "module_12008" /* 12008 */;
+import _modDef12034 from "module_12034" /* 12034 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-fn(4560);
+fn(4574);
 const createStyles = { pin: null, pinIcon: null };
 let size = { display: "flex", flexDirection: "row", alignItems: "center", justifyContent: "center", borderRadius: nativeDefault.radii.round, width: 23, height: 23, marginEnd: 4, backgroundColor: nativeDefault.colors.BACKGROUND_BRAND };
 createStyles.pin = size;
@@ -24,7 +24,7 @@ export default function ForumPostPinIcon(containerStyle) {
   let obj = { style: null, children: null };
   const items = [tmp.pin, containerStyle.containerStyle];
   obj.style = items;
-  obj = { source: _modDef12008, style: tmp.pinIcon };
-  obj.children = jsx(native.Icon, { source: _modDef12008, style: tmp.pinIcon });
-  return <View source={_modDef12008} style={tmp.pinIcon} />;
+  obj = { source: _modDef12034, style: tmp.pinIcon };
+  obj.children = jsx(native.Icon, { source: _modDef12034, style: tmp.pinIcon });
+  return <View source={_modDef12034} style={tmp.pinIcon} />;
 };

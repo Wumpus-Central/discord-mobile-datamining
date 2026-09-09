@@ -1,9 +1,9 @@
-// === Module 15044: BountiesModalTimer ===
+// === Module 15071: BountiesModalTimer ===
 
-// Module 15044 (BountiesModalTimer)
+// Module 15071 (BountiesModalTimer)
 import nativeDefault from "native" /* 576 */;
-import ReanimatedRexport2 from "ReanimatedRexport" /* 4296 */;
-import timing from "timing" /* 4561 */;
+import ReanimatedRexport2 from "ReanimatedRexport" /* 4310 */;
+import timing from "timing" /* 4575 */;
 import noop from "module_19" /* 19 */;
 
 const ReanimatedRexport = ReanimatedRexport2;
@@ -13,18 +13,18 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
 let c7 = "#2ECC71";
-let result = (fn(4980).SMALL_BUTTON_HEIGHT - 4) / 2;
+let result = (fn(4994).SMALL_BUTTON_HEIGHT - 4) / 2;
 let closure_9 = 2 * Math.PI * result;
-const Easing = fn(4296).Easing;
+const Easing = fn(4310).Easing;
 let closure_10 = Easing.bezier(0.15, 0.21, 0.58, 1);
-const Easing2 = fn(4296).Easing;
+const Easing2 = fn(4310).Easing;
 let closure_11 = Easing2.bezier(0.61, 0, 0.58, 1);
-const Easing3 = fn(4296).Easing;
+const Easing3 = fn(4310).Easing;
 let closure_12 = Easing3.bezier(0.42, 0, 0.58, 1);
-let closure_13 = ReanimatedRexport.createAnimatedComponent(fn(8456).Circle);
-fn(4560);
+let closure_13 = ReanimatedRexport.createAnimatedComponent(fn(8484).Circle);
+fn(4574);
 let obj = { progress: null, ring: null, trackPath: null, countdownText: null, checkmarkLayer: null, checkmarkBackground: null, checkmarkIcon: null };
-let size = { alignItems: "center", justifyContent: "center", backgroundColor: nativeDefault.colors.CONTROL_OVERLAY_SECONDARY_BACKGROUND_DEFAULT, borderRadius: nativeDefault.radii.round, width: fn(4980).SMALL_BUTTON_HEIGHT, height: fn(4980).SMALL_BUTTON_HEIGHT };
+let size = { alignItems: "center", justifyContent: "center", backgroundColor: nativeDefault.colors.CONTROL_OVERLAY_SECONDARY_BACKGROUND_DEFAULT, borderRadius: nativeDefault.radii.round, width: fn(4994).SMALL_BUTTON_HEIGHT, height: fn(4994).SMALL_BUTTON_HEIGHT };
 obj.progress = size;
 obj = { position: "absolute", transform: null };
 let items = [{ rotate: "-90deg" }];

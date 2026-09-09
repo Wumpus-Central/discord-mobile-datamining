@@ -1,18 +1,18 @@
-// === Module 9763: TagListInputTag ===
+// === Module 9790: TagListInputTag ===
 
-// Module 9763 (TagListInputTag)
+// Module 9790 (TagListInputTag)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import Text_Text from "Text/Text" /* 4556 */;
-import Pressables from "Pressables" /* 5123 */;
-import useAccessibilityPressDefault from "useAccessibilityPress" /* 9764 */;
+import Text_Text from "Text/Text" /* 4570 */;
+import Pressables from "Pressables" /* 5137 */;
+import useAccessibilityPressDefault from "useAccessibilityPress" /* 9791 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4560);
+const createStyles = fn(4574);
 let closure_6 = createStyles.createStyles(() => {
   let obj = { tagWrapper: null, tagText: null, highlightedTagWrapper: null, tagIcon: null, start: null, end: null };
   obj = { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE, marginHorizontal: 2, borderRadius: nativeDefault.radii.xs, borderWidth: 1, borderColor: nativeDefault.colors.BORDER_SUBTLE, paddingHorizontal: nativeDefault.space.PX_8, paddingVertical: nativeDefault.space.PX_4, overflow: "hidden", flexDirection: "row", alignItems: "center", flexShrink: 1 };

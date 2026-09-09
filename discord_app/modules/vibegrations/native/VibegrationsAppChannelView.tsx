@@ -1,21 +1,21 @@
-// === Module 16616: VibegrationsAppChannelView ===
+// === Module 16648: VibegrationsAppChannelView ===
 
-// Module 16616 (VibegrationsAppChannelView)
+// Module 16648 (VibegrationsAppChannelView)
 import nativeDefault from "native" /* 576 */;
-import FramesActionCreatorsDefault from "FramesActionCreators" /* 9512 */;
-import FramesNativeManagerDefault from "FramesNativeManager" /* 9573 */;
+import FramesActionCreatorsDefault from "FramesActionCreators" /* 9539 */;
+import FramesNativeManagerDefault from "FramesNativeManager" /* 9600 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import FramesStore from "FramesStore" /* 9515 */;
+import FramesStore from "FramesStore" /* 9542 */;
 
 const require = fn;
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-const FramesConstants = fn(9516);
+const FramesConstants = fn(9543);
 ({ EmbeddedSurfaceType: closure_8, FrameLayoutModes: closure_9, isLaunched: c10 } = FramesConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
-const createStyles = fn(4560);
+const createStyles = fn(4574);
 let closure_13 = createStyles.createStyles((paddingBottom) => {
   let obj = { container: null, centered: null, copy: null };
   obj = { flex: 1, paddingBottom };

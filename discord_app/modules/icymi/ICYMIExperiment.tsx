@@ -1,8 +1,8 @@
-// === Module 8352: ICYMIExperiment ===
+// === Module 8380: ICYMIExperiment ===
 
-// Module 8352 (ICYMIExperiment)
-import useLabFeatureDefault from "useLabFeature" /* 8355 */;
-import LabFeatureStore from "LabFeatureStore" /* 8353 */;
+// Module 8380 (ICYMIExperiment)
+import useLabFeatureDefault from "useLabFeature" /* 8383 */;
+import LabFeatureStore from "LabFeatureStore" /* 8381 */;
 
 const hide_icymi_tab = "hide_icymi_tab";
 fn(1433);

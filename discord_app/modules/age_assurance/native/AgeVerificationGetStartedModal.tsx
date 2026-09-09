@@ -1,14 +1,14 @@
-// === Module 8579: AgeVerificationGetStartedModal ===
+// === Module 8607: AgeVerificationGetStartedModal ===
 
-// Module 8579 (AgeVerificationGetStartedModal)
+// Module 8607 (AgeVerificationGetStartedModal)
 import nativeDefault from "native" /* 576 */;
-import NavigatorHeader from "NavigatorHeader" /* 5624 */;
-import AgeVerificationAnalyticsUtils from "AgeVerificationAnalyticsUtils" /* 8413 */;
+import NavigatorHeader from "NavigatorHeader" /* 5638 */;
+import AgeVerificationAnalyticsUtils from "AgeVerificationAnalyticsUtils" /* 8441 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-fn(4560);
+fn(4574);
 let createStyles = { headerStyle: null };
 createStyles = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, shadowColor: "transparent" };
 createStyles.headerStyle = createStyles;

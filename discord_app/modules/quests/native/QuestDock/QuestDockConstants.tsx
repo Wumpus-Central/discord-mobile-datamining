@@ -1,6 +1,6 @@
-// === Module 15098: QuestDockConstants ===
+// === Module 15125: QuestDockConstants ===
 
-// Module 15098 (QuestDockConstants)
+// Module 15125 (QuestDockConstants)
 import nativeDefault from "native" /* 576 */;
 import size from "module_2" /* 2 */;
 

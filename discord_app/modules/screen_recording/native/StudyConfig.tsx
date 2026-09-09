@@ -1,6 +1,6 @@
-// === Module 15938: StudyConfig ===
+// === Module 15968: StudyConfig ===
 
-// Module 15938 (StudyConfig)
+// Module 15968 (StudyConfig)
 import size from "module_2" /* 2 */;
 
 const SURVEY_CONFIGS = {};

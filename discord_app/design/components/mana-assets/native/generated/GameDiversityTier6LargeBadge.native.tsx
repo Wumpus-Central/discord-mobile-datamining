@@ -1,9 +1,9 @@
-// === Module 6073: GameDiversityTier6LargeBadge ===
+// === Module 6087: GameDiversityTier6LargeBadge ===
 
-// Module 6073 (GameDiversityTier6LargeBadge)
+// Module 6087 (GameDiversityTier6LargeBadge)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5587 */;
-import _modDef6074 from "module_6074" /* 6074 */;
+import FastImageDefault from "FastImage" /* 5601 */;
+import _modDef6088 from "module_6088" /* 6088 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -24,7 +24,7 @@ export const GameDiversityTier6LargeBadge = function GameDiversityTier6LargeBadg
     num3 = 1;
   }
   let obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  obj = { uri: _modDef6074 };
+  obj = { uri: _modDef6088 };
   obj.source = obj;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];
@@ -32,5 +32,5 @@ export const GameDiversityTier6LargeBadge = function GameDiversityTier6LargeBadg
   obj.accessible = accessible;
   obj.accessibilityLabel = accessibilityLabel;
   obj.resizeMode = resizeMode;
-  return jsx(FastImageDefault, { uri: _modDef6074 });
+  return jsx(FastImageDefault, { uri: _modDef6088 });
 };

@@ -1,20 +1,20 @@
-// === Module 11389: IgnoreConfirmationActionSheet ===
+// === Module 11416: IgnoreConfirmationActionSheet ===
 
-// Module 11389 (IgnoreConfirmationActionSheet)
+// Module 11416 (IgnoreConfirmationActionSheet)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import native from "native" /* 1178 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
 import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1250 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
-import _modDef4517 from "module_4517" /* 4517 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4527 */;
-import TableRow from "TableRow" /* 5605 */;
-import TableRowGroup from "TableRowGroup" /* 5687 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 7182 */;
-import UserActionCreators from "UserActionCreators" /* 8181 */;
-import _modDef8185 from "module_8185" /* 8185 */;
-import RelationshipActionCreatorsDefault from "RelationshipActionCreators" /* 9047 */;
+import _modDef4531 from "module_4531" /* 4531 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4541 */;
+import TableRow from "TableRow" /* 5619 */;
+import TableRowGroup from "TableRowGroup" /* 5701 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 7196 */;
+import UserActionCreators from "UserActionCreators" /* 8207 */;
+import _modDef8211 from "module_8211" /* 8211 */;
+import RelationshipActionCreatorsDefault from "RelationshipActionCreators" /* 9074 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
@@ -36,14 +36,14 @@ function IgnoredInformationTable() {
   });
 }
 const View = fn(17).View;
-const UserRemediationAction = fn(9048).UserRemediationAction;
-const RestrictionConfirmationConstants = fn(11387);
+const UserRemediationAction = fn(9075).UserRemediationAction;
+const RestrictionConfirmationConstants = fn(11414);
 ({ BLOCK_CONFIRMATION_ACTION_SHEET_KEY: closure_9, RESTRICTION_CONFIRMATION_ACTION_SHEET_HEIGHT: c10 } = RestrictionConfirmationConstants);
 const Constants = fn(1074);
 ({ AnalyticEvents: closure_11, HelpdeskArticles: closure_12 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
-fn(4560);
+fn(4574);
 let obj = { button: { alignContent: "center", textAlign: "center" }, tableContainer: null, otherOptions: null, subTitle: null, title: null, container: null, header: null, avatarContainer: null, avatarIconContainer: null, avatar: null, destructiveIcon: null };
 obj = { marginBottom: nativeDefault.space.PX_16 };
 obj.tableContainer = obj;
@@ -66,7 +66,7 @@ let closure_15 = createStyles.createStyles(obj);
 let obj6 = { color: nativeDefault.colors.TEXT_FEEDBACK_CRITICAL };
 let items = [
   {
-    icon: _modDef8185,
+    icon: _modDef8211,
     text() {
       const intl = util.intl;
       return intl.string(util.t.ruhGkg);
@@ -84,7 +84,7 @@ let items = [
 
 ];
 let obj7 = {
-  icon: _modDef8185,
+  icon: _modDef8211,
   text() {
     const intl = util.intl;
     return intl.string(util.t.ruhGkg);
@@ -99,7 +99,7 @@ let obj7 = {
   }
 };
 items[1] = {
-  icon: _modDef8185,
+  icon: _modDef8211,
   text() {
     const intl = util.intl;
     return intl.string(util.t.N9v3eq);
@@ -114,7 +114,7 @@ items[1] = {
   }
 };
 let obj8 = {
-  icon: _modDef8185,
+  icon: _modDef8211,
   text() {
     const intl = util.intl;
     return intl.string(util.t.N9v3eq);
@@ -129,7 +129,7 @@ let obj8 = {
   }
 };
 items[2] = {
-  icon: _modDef4517,
+  icon: _modDef4531,
   text() {
     const intl = util.intl;
     return intl.string(util.t["4ycGE0"]);
@@ -144,7 +144,7 @@ items[2] = {
   }
 };
 let obj9 = {
-  icon: _modDef4517,
+  icon: _modDef4531,
   text() {
     const intl = util.intl;
     return intl.string(util.t["4ycGE0"]);
@@ -170,7 +170,7 @@ export default noop.memo(function IgnoreConfirmationActionSheet(userId) {
   [tmp3, c4] = _slicedToArray(noop.useState(false), 2);
   const bottom = channelId(1611)().bottom;
   const tmp2 = _slicedToArray(noop.useState(false), 2);
-  items = [channelId(7182).IGNORE_CONFIRMATION_ACTION_SHEET];
+  items = [channelId(7196).IGNORE_CONFIRMATION_ACTION_SHEET];
   let obj = userId(504);
   const items1 = [UserStore];
   const items2 = [userId];
@@ -213,20 +213,20 @@ export default noop.memo(function IgnoreConfirmationActionSheet(userId) {
     const obj5 = { guildId: stateFromStores1, user: stateFromStores, animate: false, size: tmp7(1178).AvatarSizes.XLARGE, style: tmp.avatar };
     const items6 = [closure_13(tmp7(1178).Avatar, obj5), ];
     const obj6 = { style: tmp.avatarIconContainer, children: null };
-    const obj7 = { size: tmp7(1178).Icon.Sizes.MEDIUM, source: tmp4(6969) };
+    const obj7 = { size: tmp7(1178).Icon.Sizes.MEDIUM, source: tmp4(6983) };
     obj6.children = closure_13(tmp7(1178).Icon, obj7);
     items6[1] = closure_13(stateFromStores, obj6);
     obj3.children = items6;
     const items7 = [closure_14(stateFromStores, obj3), , ];
     const obj8 = { style: tmp.title, variant: "heading-xl/bold", color: "mobile-text-heading-primary", accessibilityRole: "header", children: null };
     const intl = tmp7(1114).intl;
-    const obj9 = { username: tmp4(4712).getName(stateFromStores1, channelId, stateFromStores) };
+    const obj9 = { username: tmp4(4726).getName(stateFromStores1, channelId, stateFromStores) };
     obj8.children = intl.format(tmp7(1114).t["WrQD/Y"], obj9);
-    items7[1] = closure_13(tmp7(4556).Text, obj8);
+    items7[1] = closure_13(tmp7(4570).Text, obj8);
     const obj10 = { style: tmp.subTitle, variant: "heading-md/medium", color: "text-default", accessibilityRole: "header", children: null };
     const intl2 = tmp7(1114).intl;
     obj10.children = intl2.string(tmp7(1114).t.JKL1u1);
-    items7[2] = closure_13(tmp7(4556).Text, obj10);
+    items7[2] = closure_13(tmp7(4570).Text, obj10);
     obj2.children = items7;
     const items8 = [closure_14(stateFromStores, obj2), , , ];
     const obj11 = { style: tmp.tableContainer, children: closure_13(IgnoredInformationTable, {}) };
@@ -236,14 +236,14 @@ export default noop.memo(function IgnoreConfirmationActionSheet(userId) {
     const intl3 = tmp7(1114).intl;
     obj13.title = intl3.string(tmp7(1114).t["1v01gh"]);
     const obj14 = { icon: null, label: null, variant: "danger", subLabel: null, accessibilityLabel: null, onPress: null, arrow: true };
-    const obj15 = { size: tmp7(1178).Icon.Sizes.MEDIUM, source: tmp4(7930), color: tmp.destructiveIcon.color };
+    const obj15 = { size: tmp7(1178).Icon.Sizes.MEDIUM, source: tmp4(7944), color: tmp.destructiveIcon.color };
     obj14.icon = closure_13(tmp7(1178).Icon, obj15);
     const intl4 = tmp7(1114).intl;
     obj14.label = intl4.string(tmp7(1114).t.bwxY30);
     const obj16 = { variant: "text-xs/medium", color: "text-feedback-critical", children: null };
     const intl5 = tmp7(1114).intl;
     obj16.children = intl5.string(tmp7(1114).t.NTnf1T);
-    obj14.subLabel = closure_13(tmp7(4556).Text, obj16);
+    obj14.subLabel = closure_13(tmp7(4570).Text, obj16);
     const intl6 = tmp7(1114).intl;
     obj14.accessibilityLabel = intl6.string(tmp7(1114).t["fZ+p9C"]);
     obj14.onPress = function onPress() {
@@ -251,10 +251,10 @@ export default noop.memo(function IgnoreConfirmationActionSheet(userId) {
       obj.track(constants.USER_REMEDIATION_ACTION, obj);
       const obj3 = ActionSheetActionCreatorsDefault;
       obj = { userId, channelId, onSuccess, impressionName: discord_common_AnalyticsUtils.ImpressionNames.BLOCK_USER_CONFIRMATION };
-      obj3.openLazy(asyncRequireImpl(11388, dependencyMap.paths), React7, obj, "replaceTopSheet");
+      obj3.openLazy(asyncRequireImpl(11415, dependencyMap.paths), React7, obj, "replaceTopSheet");
     };
-    obj13.children = closure_13(tmp7(5605).TableRow, obj14);
-    obj12.children = closure_13(tmp7(5687).TableRowGroup, obj13);
+    obj13.children = closure_13(tmp7(5619).TableRow, obj14);
+    obj12.children = closure_13(tmp7(5701).TableRowGroup, obj13);
     items8[2] = closure_13(stateFromStores, obj12);
     const obj17 = { style: tmp.button, children: null };
     const obj18 = { size: "lg", text: null, onPress: null, disabled: null, loading: null };
@@ -266,7 +266,7 @@ export default noop.memo(function IgnoreConfirmationActionSheet(userId) {
         if (onSuccess != null) {
           tmp();
         }
-        channelId(4527).hideActionSheet();
+        channelId(4541).hideActionSheet();
       });
       if (dependencyMap != null) {
         dependencyMap();
@@ -277,29 +277,29 @@ export default noop.memo(function IgnoreConfirmationActionSheet(userId) {
     };
     obj18.disabled = tmp3;
     obj18.loading = tmp3;
-    const items9 = [closure_13(tmp7(4975).Button, obj18), ];
+    const items9 = [closure_13(tmp7(4989).Button, obj18), ];
     const obj19 = { onPress: handleClose, style: null, variant: "text-sm/normal", color: "text-default", children: null };
     const obj20 = { textAlign: "center", marginTop: tmp4(576).space.PX_12, paddingBottom: tmp4(576).space.PX_4 };
     obj19.style = obj20;
     const intl8 = tmp7(1114).intl;
     const obj21 = {
       articleLink() {
-          channelId(4527).hideActionSheet();
-          const obj = channelId(4527);
+          channelId(4541).hideActionSheet();
+          const obj = channelId(4541);
           const articleURL = channelId(2024).getArticleURL(constants3.STEALTH_REMEDIATION_FEATURE_GUIDE);
           const obj2 = channelId(2024);
-          channelId(4255).openURL(articleURL);
+          channelId(4268).openURL(articleURL);
         }
     };
     obj19.children = intl8.format(tmp7(1114).t.iX9qtL, obj21);
-    items9[1] = closure_13(tmp7(4556).Text, obj19);
+    items9[1] = closure_13(tmp7(4570).Text, obj19);
     obj17.children = items9;
     items8[3] = closure_14(stateFromStores, obj17);
     obj4.children = items8;
-    obj.children = closure_14(tmp7(6627).BottomSheetScrollView, obj4);
-    obj.children = closure_13(tmp7(7150).BottomSheet, obj);
-    tmp12Result = closure_13(tmp7(7162).AnalyticsLocationProvider, obj);
-    const tmp4Result = tmp4(4712);
+    obj.children = closure_14(tmp7(6641).BottomSheetScrollView, obj4);
+    obj.children = closure_13(tmp7(7164).BottomSheet, obj);
+    tmp12Result = closure_13(tmp7(7176).AnalyticsLocationProvider, obj);
+    const tmp4Result = tmp4(4726);
   }
   return tmp12Result;
 });

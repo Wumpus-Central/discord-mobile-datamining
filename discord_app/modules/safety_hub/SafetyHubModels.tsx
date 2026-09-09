@@ -1,6 +1,6 @@
-// === Module 8420: SafetyHubModels ===
+// === Module 8448: SafetyHubModels ===
 
-// Module 8420 (SafetyHubModels)
+// Module 8448 (SafetyHubModels)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/safety_hub/SafetyHubModels.tsx");

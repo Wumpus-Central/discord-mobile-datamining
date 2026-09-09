@@ -1,17 +1,17 @@
-// === Module 15009: BountiesScrollPromptFooter ===
+// === Module 15036: BountiesScrollPromptFooter ===
 
-// Module 15009 (BountiesScrollPromptFooter)
+// Module 15036 (BountiesScrollPromptFooter)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 576 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1611 */;
-import ReanimatedRexportDefault from "ReanimatedRexport" /* 4296 */;
-import timing from "timing" /* 4561 */;
-import timingPresets from "timingPresets" /* 4564 */;
-import AnimatedEnterExitItemDefault from "AnimatedEnterExitItem" /* 9974 */;
-import BountiesModalTransitionsRefactorExperiment from "BountiesModalTransitionsRefactorExperiment" /* 15010 */;
-import useVisibilityTransition from "useVisibilityTransition" /* 15011 */;
+import ReanimatedRexportDefault from "ReanimatedRexport" /* 4310 */;
+import timing from "timing" /* 4575 */;
+import timingPresets from "timingPresets" /* 4578 */;
+import AnimatedEnterExitItemDefault from "AnimatedEnterExitItem" /* 10001 */;
+import BountiesModalTransitionsRefactorExperiment from "BountiesModalTransitionsRefactorExperiment" /* 15037 */;
+import useVisibilityTransition from "useVisibilityTransition" /* 15038 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4552 */;
+import AccessibilityStore from "AccessibilityStore" /* 4566 */;
 
 require = fn;
 function BountiesScrollPromptFooterContent(zIndex) {
@@ -45,7 +45,7 @@ function BountiesScrollPromptFooterContent(zIndex) {
   if (stateFromStores) {
     str = "halt";
   }
-  obj.children = closure_7(zIndex(4271).BountiesScrollGradientRive, { stateMachine: "State Machine 1", fit: "fill", alignment: "bottom-center", withReducedMotion: str });
+  obj.children = closure_7(zIndex(4284).BountiesScrollGradientRive, { stateMachine: "State Machine 1", fit: "fill", alignment: "bottom-center", withReducedMotion: str });
   const items5 = [closure_7(ReanimatedRexportDefault.View, obj), ];
   const obj1 = { style: null, onLayout: onContentLayout, children };
   const items6 = [tmp.content, memo1, opacityStyle];
@@ -55,10 +55,10 @@ function BountiesScrollPromptFooterContent(zIndex) {
   return closure_8(ReanimatedRexportDefault.View, obj);
 }
 const StyleSheet = fn(17).StyleSheet;
-const QuestsExperimentLocations = fn(5444).QuestsExperimentLocations;
+const QuestsExperimentLocations = fn(5458).QuestsExperimentLocations;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-let createStyles = fn(4560);
+let createStyles = fn(4574);
 let closure_9 = createStyles.createStyles(() => {
   let obj = { root: { position: "absolute", bottom: 0, left: 0, right: 0 }, content: null, gradient: null };
   obj = { flex: 1, minHeight: 97, alignItems: "center", justifyContent: "center", paddingHorizontal: nativeDefault.space.PX_16 };
@@ -72,7 +72,7 @@ const entering = function t(value) {
   const obj = { opacity: timing.withTiming(value, timingPresets.timingStandard, "respect-motion-settings") };
   return obj;
 };
-createStyles = { withTiming: fn(4561).withTiming, timingStandard: fn(4564).timingStandard };
+createStyles = { withTiming: fn(4575).withTiming, timingStandard: fn(4578).timingStandard };
 entering.__closure = createStyles;
 entering.__workletHash = 11416950434629;
 entering.__initData = { code: "function BountiesScrollPromptFooterTsx1(visible){const{withTiming,timingStandard}=this.__closure;return{opacity:withTiming(visible,timingStandard,'respect-motion-settings')};}" };
@@ -80,7 +80,7 @@ const fn2 = function n(value, fn) {
   const obj = { opacity: timing.withTiming(value, timingPresets.timingStandard, "respect-motion-settings", fn) };
   return obj;
 };
-createStyles = { withTiming: fn(4561).withTiming, timingStandard: fn(4564).timingStandard };
+createStyles = { withTiming: fn(4575).withTiming, timingStandard: fn(4578).timingStandard };
 fn2.__closure = createStyles;
 fn2.__workletHash = 9928471408966;
 fn2.__initData = { code: "function BountiesScrollPromptFooterTsx2(visible,cleanUp){const{withTiming,timingStandard}=this.__closure;return{opacity:withTiming(visible,timingStandard,'respect-motion-settings',cleanUp)};}" };

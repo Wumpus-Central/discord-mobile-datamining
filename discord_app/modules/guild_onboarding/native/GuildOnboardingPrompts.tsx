@@ -1,28 +1,28 @@
-// === Module 7122: GuildOnboardingPrompts ===
+// === Module 7136: GuildOnboardingPrompts ===
 
-// Module 7122 (GuildOnboardingPrompts)
+// Module 7136 (GuildOnboardingPrompts)
 import nativeDefault from "native" /* 576 */;
 import ConstantsIOS from "ConstantsIOS" /* 1093 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
 import ImageUtils from "ImageUtils" /* 1474 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4296 */;
-import ColorUtils from "ColorUtils" /* 4409 */;
-import timing from "timing" /* 4561 */;
-import AppAnalyticsUtils from "AppAnalyticsUtils" /* 4740 */;
-import LinearGradientDefault from "LinearGradient" /* 4987 */;
-import FastImageDefault from "FastImage" /* 5587 */;
-import NavigatorHeader from "NavigatorHeader" /* 5624 */;
-import GuildOnboardingActionCreatorsDefault from "GuildOnboardingActionCreators" /* 7105 */;
-import GuildOnboardingUtils from "GuildOnboardingUtils" /* 7106 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4310 */;
+import ColorUtils from "ColorUtils" /* 4423 */;
+import timing from "timing" /* 4575 */;
+import AppAnalyticsUtils from "AppAnalyticsUtils" /* 4754 */;
+import LinearGradientDefault from "LinearGradient" /* 5001 */;
+import FastImageDefault from "FastImage" /* 5601 */;
+import NavigatorHeader from "NavigatorHeader" /* 5638 */;
+import GuildOnboardingActionCreatorsDefault from "GuildOnboardingActionCreators" /* 7119 */;
+import GuildOnboardingUtils from "GuildOnboardingUtils" /* 7120 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4552 */;
-import MemberVerificationFormStore from "MemberVerificationFormStore" /* 5572 */;
+import AccessibilityStore from "AccessibilityStore" /* 4566 */;
+import MemberVerificationFormStore from "MemberVerificationFormStore" /* 5586 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 import GuildStore from "GuildStore" /* 1979 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2011 */;
-import GuildOnboardingPromptsStore from "GuildOnboardingPromptsStore" /* 7100 */;
+import GuildOnboardingPromptsStore from "GuildOnboardingPromptsStore" /* 7114 */;
 
 require = fn;
 let closure_23 = async function _getBackgroundGradientColor() {
@@ -54,15 +54,15 @@ function BackgroundImageGradient(uri) {
 }
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: metroRequire, View: closure_7 } = get_ActivityIndicator);
-const OnboardingPromptType = fn(7101).OnboardingPromptType;
-let closure_15 = fn(7097).GuildOnboardingModalStates;
+const OnboardingPromptType = fn(7115).OnboardingPromptType;
+let closure_15 = fn(7111).GuildOnboardingModalStates;
 const Constants = fn(1074);
 ({ AnalyticEvents: closure_16, MarketingURLs: closure_17, Routes: closure_18 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_19, Fragment: closure_20, jsxs: closure_21 } = jsxProd);
-fn(4560);
+fn(4574);
 let createStyles = { flex: { flex: 1 }, container: null, subtitle: null, onboardingTitle: null, onboardingPolicy: null, onboardingPolicyText: null, landingOverlay: null, artWrapper: null, landingBody: null, backgroundImage: null, backgroundColorGradient: null, darkColorGradient: null };
-createStyles = { display: "flex", flex: 1, flexGrow: 1, marginTop: fn(5682).NAV_BAR_HEIGHT, marginBottom: nativeDefault.space.PX_16, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER };
+createStyles = { display: "flex", flex: 1, flexGrow: 1, marginTop: fn(5696).NAV_BAR_HEIGHT, marginBottom: nativeDefault.space.PX_16, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER };
 createStyles.container = createStyles;
 createStyles.subtitle = { marginBottom: nativeDefault.space.PX_16, opacity: 0.8 };
 createStyles.onboardingTitle = { textAlign: "center" };

@@ -1,6 +1,6 @@
-// === Module 7702: BountyStore ===
+// === Module 7716: BountyStore ===
 
-// Module 7702 (BountyStore)
+// Module 7716 (BountyStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 
@@ -46,11 +46,11 @@ prototype["isClaimingBountyReward"] = function isClaimingBountyReward(bountyId) 
 prototype["areAllBountiesCompleted"] = function areAllBountiesCompleted() {
   return closure_1.every((id) => set.has(id.id));
 };
-prototype["getAdDecisionByPlacementAndAdCreativeId"] = function getAdDecisionByPlacementAndAdCreativeId(arg0, adContentId) {
-  map.get(arg0);
+prototype["getAdDecisionByPlacementAndAdCreativeId"] = function getAdDecisionByPlacementAndAdCreativeId(questPlacementFromQuestContent, bountyId) {
+  map.get(questPlacementFromQuestContent);
   value = undefined;
   if (value != null) {
-    value = value.get(adContentId);
+    value = value.get(bountyId);
   }
   if (value == null) {
     value = null;

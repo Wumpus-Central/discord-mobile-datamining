@@ -1,6 +1,6 @@
-// === Module 11200: SidebarVisibilityMethodStore ===
+// === Module 11227: SidebarVisibilityMethodStore ===
 
-// Module 11200 (SidebarVisibilityMethodStore)
+// Module 11227 (SidebarVisibilityMethodStore)
 import module_560 from "module_560" /* 560 */;
 import size from "module_2" /* 2 */;
 

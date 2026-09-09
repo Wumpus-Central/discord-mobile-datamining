@@ -1,12 +1,12 @@
-// === Module 11321: AnimatedCounter ===
+// === Module 11348: AnimatedCounter ===
 
-// Module 11321 (AnimatedCounter)
-import native from "native" /* 4271 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4296 */;
-import Text_Text from "Text/Text" /* 4556 */;
-import spring from "spring" /* 4974 */;
-import springPresets from "springPresets" /* 4978 */;
-import AnimatedCounterUtils from "AnimatedCounterUtils" /* 11322 */;
+// Module 11348 (AnimatedCounter)
+import native from "native" /* 4284 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4310 */;
+import Text_Text from "Text/Text" /* 4570 */;
+import spring from "spring" /* 4988 */;
+import springPresets from "springPresets" /* 4992 */;
+import AnimatedCounterUtils from "AnimatedCounterUtils" /* 11349 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -168,7 +168,7 @@ get_ActivityIndicator = fn(17);
 ({ StyleSheet: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4560);
+const createStyles = fn(4574);
 let closure_9 = createStyles.createStyles({ container: { flex: 0, flexGrow: 0, flexShrink: 0, justifyContent: "flex-start", alignItems: "flex-start", overflow: "hidden" }, hidden: { opacity: 0 } });
 let __closure = { ABOVE: -1, [-1]: "ABOVE", NEUTRAL: 0, [0]: "NEUTRAL", BELOW: 1, [1]: "BELOW" };
 let items = [, , ];

@@ -1,22 +1,22 @@
-// === Module 17324: background_sync/BackgroundSync ===
+// === Module 17355: background_sync/BackgroundSync ===
 
-// Module 17324 (background_sync/BackgroundSync)
+// Module 17355 (background_sync/BackgroundSync)
 import LoggerDefault from "Logger" /* 3 */;
 import _modDef12 from "module_12" /* 12 */;
 import Storage4 from "Storage" /* 510 */;
 import DurationsDefault from "Durations" /* 1090 */;
 import HTTPUtils from "HTTPUtils" /* 1272 */;
 import DatabaseDaosDefault from "DatabaseDaos" /* 1986 */;
-import modules_Messages from "modules/Messages" /* 7477 */;
-import GuildVersionsDefault from "GuildVersions" /* 7653 */;
-import KvCacheVersionDefault from "KvCacheVersion" /* 7654 */;
-import NonGuildVersionsDefault from "NonGuildVersions" /* 7656 */;
+import modules_Messages from "modules/Messages" /* 7491 */;
+import GuildVersionsDefault from "GuildVersions" /* 7667 */;
+import KvCacheVersionDefault from "KvCacheVersion" /* 7668 */;
+import NonGuildVersionsDefault from "NonGuildVersions" /* 7670 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import "ChannelStore";
-import ReadStateStore from "ReadStateStore" /* 4575 */;
+import ReadStateStore from "ReadStateStore" /* 4589 */;
 import AppStateStore from "AppStateStore" /* 1895 */;
-import FileSystemStore from "FileSystemStore" /* 7479 */;
+import FileSystemStore from "FileSystemStore" /* 7493 */;
 
 require = fn;
 let closure_17 = async function _backgroundSync(arg0) {
@@ -1031,9 +1031,9 @@ const ChannelRecord = fn(1961);
 ({ isPrivate: hasOwnProperty, isThread: metroRequire } = ChannelRecord);
 const Constants = fn(1074);
 ({ AnalyticEvents: closure_11, Endpoints: closure_12, MAX_MESSAGES_PER_CHANNEL: map1 } = Constants);
-const StickersStore = fn(5502);
+const StickersStore = fn(5516);
 const ChannelStore = fn(1957);
-const EmojiStore = fn(5459);
+const EmojiStore = fn(5473);
 const GuildStore = fn(1979);
 let closure_14 = new LoggerDefault("BackgroundSync");
 let closure_15 = 4 * DurationsDefault.Millis.HOUR;

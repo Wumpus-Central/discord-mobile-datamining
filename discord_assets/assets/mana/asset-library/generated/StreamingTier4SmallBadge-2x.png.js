@@ -1,6 +1,6 @@
-// === Module 6508: ? ===
+// === Module 6522: ? ===
 
-// Module 6508
+// Module 6522
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/StreamingTier4SmallBadge-2x.png.js");

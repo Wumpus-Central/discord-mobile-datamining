@@ -1,16 +1,16 @@
-// === Module 13112: useCollectiblesShopProducts ===
+// === Module 13138: useCollectiblesShopProducts ===
 
-// Module 13112 (useCollectiblesShopProducts)
-import CollectiblesActionCreators from "CollectiblesActionCreators" /* 7541 */;
-import StorefrontProductActionCreators from "StorefrontProductActionCreators" /* 8219 */;
-import CollectiblesShopManager2 from "CollectiblesShopManager" /* 13114 */;
-import StorefrontCollectionActionCreators from "StorefrontCollectionActionCreators" /* 13115 */;
+// Module 13138 (useCollectiblesShopProducts)
+import CollectiblesActionCreators from "CollectiblesActionCreators" /* 7555 */;
+import StorefrontProductActionCreators from "StorefrontProductActionCreators" /* 8245 */;
+import CollectiblesShopManager2 from "CollectiblesShopManager" /* 13140 */;
+import StorefrontCollectionActionCreators from "StorefrontCollectionActionCreators" /* 13141 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import StorefrontCollectionStore from "StorefrontCollectionStore" /* 13113 */;
-import StorefrontProductStore from "StorefrontProductStore" /* 8220 */;
-import CollectiblesCategoryRecord from "CollectiblesCategoryRecord" /* 7543 */;
-import CollectiblesProductRecord from "CollectiblesProductRecord" /* 7544 */;
+import StorefrontCollectionStore from "StorefrontCollectionStore" /* 13139 */;
+import StorefrontProductStore from "StorefrontProductStore" /* 8246 */;
+import CollectiblesCategoryRecord from "CollectiblesCategoryRecord" /* 7557 */;
+import CollectiblesProductRecord from "CollectiblesProductRecord" /* 7558 */;
 
 require = fn;
 function computeEntryState(arg0) {

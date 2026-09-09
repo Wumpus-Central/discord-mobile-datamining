@@ -1,26 +1,26 @@
-// === Module 15870: ContentAndSocialScreen ===
+// === Module 15900: ContentAndSocialScreen ===
 
-// Module 15870 (ContentAndSocialScreen)
+// Module 15900 (ContentAndSocialScreen)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2024 */;
-import Text_Text from "Text/Text" /* 4556 */;
-import SettingBuilders from "SettingBuilders" /* 11473 */;
-import ContactSyncUtils from "ContactSyncUtils" /* 12684 */;
-import SettingLayoutDefault from "SettingLayout" /* 14692 */;
-import SafetyGuildSettingGuildSelect from "SafetyGuildSettingGuildSelect" /* 15871 */;
-import useAuthorizedSlayerApplicationsDefault from "useAuthorizedSlayerApplications" /* 15875 */;
+import Text_Text from "Text/Text" /* 4570 */;
+import SettingBuilders from "SettingBuilders" /* 11500 */;
+import ContactSyncUtils from "ContactSyncUtils" /* 12710 */;
+import SettingLayoutDefault from "SettingLayout" /* 14718 */;
+import SafetyGuildSettingGuildSelect from "SafetyGuildSettingGuildSelect" /* 15901 */;
+import useAuthorizedSlayerApplicationsDefault from "useAuthorizedSlayerApplications" /* 15905 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-const MobileUserSettings = fn(7975).MobileUserSettings;
+const MobileUserSettings = fn(7989).MobileUserSettings;
 const HelpdeskArticles = fn(1074).HelpdeskArticles;
 const jsxProd = fn(21);
 ({ jsx: closure_9, Fragment: c10, jsxs: closure_11 } = jsxProd);
-fn(4560);
+fn(4574);
 let createStyles = { loadingIndicator: null, emptyContainer: null };
 createStyles = { marginTop: nativeDefault.space.PX_32 };
 createStyles.loadingIndicator = createStyles;

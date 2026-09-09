@@ -1,12 +1,12 @@
-// === Module 16141: useFavoritesGuildHideAction ===
+// === Module 16171: useFavoritesGuildHideAction ===
 
-// Module 16141 (useFavoritesGuildHideAction)
+// Module 16171 (useFavoritesGuildHideAction)
 import router_utils from "router_utils" /* 1100 */;
 import FavoritesUtils from "FavoritesUtils" /* 1982 */;
-import _modDef3225 from "module_3225" /* 3225 */;
-import FavoritesActionCreators from "FavoritesActionCreators" /* 10228 */;
+import _modDef3236 from "module_3236" /* 3236 */;
+import FavoritesActionCreators from "FavoritesActionCreators" /* 10255 */;
 import noop from "module_19" /* 19 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 4381 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 4395 */;
 
 require = fn;
 const Routes = fn(1074).Routes;
@@ -14,7 +14,7 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/favorites/hooks/useFavoritesGuildHideAction.tsx");
 
 export default function useFavoritesGuildHideAction() {
-  let obj = hasAccess(10229);
+  let obj = hasAccess(10256);
   hasAccess = obj.useFavoritesAccess().hasAccess;
   const items = [hasAccess];
   obj = { isPreview: !hasAccess, label: null, subLabel: null, perform: null };
@@ -29,7 +29,7 @@ export default function useFavoritesGuildHideAction() {
   }, items);
   const intl = hasAccess(1114).intl;
   if (hasAccess) {
-    let ojM1xJ = _modDef3225["8FO0y9"];
+    let ojM1xJ = _modDef3236["8FO0y9"];
   } else {
     ojM1xJ = tmp(1114).t.ojM1xJ;
   }
@@ -37,7 +37,7 @@ export default function useFavoritesGuildHideAction() {
   let stringResult;
   if (hasAccess) {
     const intl2 = tmp(1114).intl;
-    stringResult = intl2.string(_modDef3225.FaHxWl);
+    stringResult = intl2.string(_modDef3236.FaHxWl);
   }
   obj.subLabel = stringResult;
   obj.perform = callback;

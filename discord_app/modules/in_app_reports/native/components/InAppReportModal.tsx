@@ -1,18 +1,18 @@
-// === Module 8639: InAppReportModal ===
+// === Module 8667: InAppReportModal ===
 
-// Module 8639 (InAppReportModal)
+// Module 8667 (InAppReportModal)
 import util from "util" /* 1114 */;
-import Navigator from "Navigator" /* 7000 */;
-import HeaderActionButton2 from "HeaderActionButton" /* 7377 */;
-import FamilyCenterUtils from "FamilyCenterUtils" /* 7593 */;
-import showReportModal from "showReportModal" /* 8636 */;
-import in_app_reports_ReportUtils from "in_app_reports/ReportUtils" /* 8638 */;
+import Navigator from "Navigator" /* 7014 */;
+import HeaderActionButton2 from "HeaderActionButton" /* 7391 */;
+import FamilyCenterUtils from "FamilyCenterUtils" /* 7607 */;
+import showReportModal from "showReportModal" /* 8664 */;
+import in_app_reports_ReportUtils from "in_app_reports/ReportUtils" /* 8666 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const IN_APP_REPORTS_NODE = fn(8640).IN_APP_REPORTS_NODE;
+const IN_APP_REPORTS_NODE = fn(8668).IN_APP_REPORTS_NODE;
 let jsx = fn(21).jsx;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/in_app_reports/native/components/InAppReportModal.tsx");
@@ -56,7 +56,7 @@ export default function InAppReportModal(arg0) {
   [c12, c13] = _slicedToArray(noop.useState([]), 2);
   const tmp4 = _slicedToArray(noop.useState([]), 2);
   [c14, c15] = _slicedToArray(noop.useState([]), 2);
-  menu(4992)(() => {
+  menu(5006)(() => {
     const orFetchLinkedUsers = FamilyCenterUtils.getOrFetchLinkedUsers();
   });
   let items = [closeModal, first];
@@ -178,7 +178,7 @@ export default function InAppReportModal(arg0) {
       const obj2 = {};
       const obj3 = {
         headerRight() {
-            const obj = { source: menu(6992), onPress, accessibilityLabel: null };
+            const obj = { source: menu(7006), onPress, accessibilityLabel: null };
             const intl = util.intl;
             obj.accessibilityLabel = intl.string(util.t.cpT0Cq);
             return addOnCloseCallback(HeaderActionButton2.HeaderActionButton, obj);

@@ -1,13 +1,13 @@
-// === Module 8882: GameProfileDetails ===
+// === Module 8909: GameProfileDetails ===
 
-// Module 8882 (GameProfileDetails)
+// Module 8909 (GameProfileDetails)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import Server from "Server" /* 1894 */;
-import DateUtilsAll from "DateUtils" /* 4242 */;
-import LinkingDefault from "Linking" /* 4255 */;
-import Text_Text from "Text/Text" /* 4556 */;
-import SKUUtils from "SKUUtils" /* 8720 */;
+import DateUtilsAll from "DateUtils" /* 4255 */;
+import LinkingDefault from "Linking" /* 4268 */;
+import Text_Text from "Text/Text" /* 4570 */;
+import SKUUtils from "SKUUtils" /* 8748 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -30,10 +30,10 @@ function GameProfileWebsiteButton(action) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, Pressable: metroRequire } = get_ActivityIndicator);
-const IGDB_ATTRIBUTION_LINK = fn(8358).IGDB_ATTRIBUTION_LINK;
+const IGDB_ATTRIBUTION_LINK = fn(8386).IGDB_ATTRIBUTION_LINK;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-fn(4560);
+fn(4574);
 let createStyles = { container: null, headerText: null, detailsContainer: null, detailsRow: null, detailsRowValue: null, detailsRowBottomBorder: null, platformsContainer: null, linksContainer: null };
 createStyles = { gap: nativeDefault.space.PX_8 };
 createStyles.container = createStyles;
@@ -133,7 +133,7 @@ export default function GameProfileDetails(game) {
               if (obj != null) {
                 const websites = obj.websites;
                 if (websites != null) {
-                  const mapped3 = websites.map((item) => trackAction(8890)(item, trackAction(576).colors.ICON_SUBTLE));
+                  const mapped3 = websites.map((item) => trackAction(8917)(item, trackAction(576).colors.ICON_SUBTLE));
                   found = mapped3.filter((item) => null != item);
                 }
               }
@@ -177,7 +177,7 @@ export default function GameProfileDetails(game) {
                 stringResult = intl8.string(util.t["UxAag+"]);
               }
               const obj4 = { label: stringResult, value: null };
-              const obj5 = { style: closure_2.platformsContainer, children: platforms.map((platform) => closure_1_8(game(8883).GameUpdatePlatformIcon, { platform, size: "md", color: trackAction(576).colors.ICON_SUBTLE }, platform)) };
+              const obj5 = { style: closure_2.platformsContainer, children: platforms.map((platform) => closure_1_8(game(8910).GameUpdatePlatformIcon, { platform, size: "md", color: trackAction(576).colors.ICON_SUBTLE }, platform)) };
               obj4.value = React6(hasOwnProperty, obj5);
               items.push(obj4);
             }

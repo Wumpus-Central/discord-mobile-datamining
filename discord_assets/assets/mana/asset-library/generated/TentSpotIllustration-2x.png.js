@@ -1,6 +1,6 @@
-// === Module 6542: ? ===
+// === Module 6556: ? ===
 
-// Module 6542
+// Module 6556
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/TentSpotIllustration-2x.png.js");

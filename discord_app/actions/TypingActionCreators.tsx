@@ -1,6 +1,6 @@
-// === Module 11994: TypingActionCreators ===
+// === Module 12020: TypingActionCreators ===
 
-// Module 11994 (TypingActionCreators)
+// Module 12020 (TypingActionCreators)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import size from "module_2" /* 2 */;
 

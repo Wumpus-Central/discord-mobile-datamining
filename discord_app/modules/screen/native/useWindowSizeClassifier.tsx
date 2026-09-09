@@ -1,7 +1,7 @@
-// === Module 4421: useWindowSizeClassifier ===
+// === Module 4435: useWindowSizeClassifier ===
 
-// Module 4421 (useWindowSizeClassifier)
-import useBaseAppContainerDimensions from "useBaseAppContainerDimensions" /* 4422 */;
+// Module 4435 (useWindowSizeClassifier)
+import useBaseAppContainerDimensions from "useBaseAppContainerDimensions" /* 4436 */;
 import size from "module_2" /* 2 */;
 
 const useBaseAppContainerDimensionsDefault = useBaseAppContainerDimensions;
@@ -22,6 +22,9 @@ export default function useWindowSizeClassifier() {
   }
   return XLARGE;
 };
+export const WINDOW_SIZE_THRESHOLD_SMALL = 360;
+export const WINDOW_SIZE_THRESHOLD_LARGE = 600;
+export const WINDOW_SIZE_THRESHOLD_XLARGE = 840;
 export { WindowSizeClassifier };
 export const getWindowSizeClassifier = function getWindowSizeClassifier() {
   const obj = useBaseAppContainerDimensions;

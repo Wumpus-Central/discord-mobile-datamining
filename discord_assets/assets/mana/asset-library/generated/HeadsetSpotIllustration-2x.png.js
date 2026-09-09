@@ -1,6 +1,6 @@
-// === Module 6192: ? ===
+// === Module 6206: ? ===
 
-// Module 6192
+// Module 6206
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/HeadsetSpotIllustration-2x.png.js");

@@ -1,115 +1,146 @@
-// === Module 4981: ButtonHooks ===
+// === Module 4995: ButtonHooks ===
 
-// Module 4981 (ButtonHooks)
+// Module 4995 (ButtonHooks)
 import nativeDefault from "native" /* 576 */;
 import PlatformUtils from "PlatformUtils" /* 1115 */;
-import useToken from "useToken" /* 4262 */;
-import native from "native" /* 4271 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4296 */;
-import shared from "shared" /* 4411 */;
-import Text_Text from "Text/Text" /* 4556 */;
-import spring from "spring" /* 4974 */;
-import Icon from "Icon" /* 4977 */;
-import springPresets from "springPresets" /* 4978 */;
-import ButtonConstants from "ButtonConstants" /* 4980 */;
+import useToken from "useToken" /* 4275 */;
+import native from "native" /* 4284 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4310 */;
+import shared from "shared" /* 4425 */;
+import Text_Text from "Text/Text" /* 4570 */;
+import spring from "spring" /* 4988 */;
+import Icon from "Icon" /* 4991 */;
+import springPresets from "springPresets" /* 4992 */;
+import ButtonConstants from "ButtonConstants" /* 4994 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-let c4 = "rgba(0,0,0,0.001)";
-let createStyles = fn(4560);
-const backgroundInactive = createStyles.experimental_createToken(() => "#161CBB");
-createStyles = fn(4560);
-const backgroundPressed = createStyles.experimental_createToken(() => "#1318A0");
-createStyles = { primary: nativeDefault.colors.CONTROL_PRIMARY_TEXT_DEFAULT, "experimental_welcome-secondary": nativeDefault.unsafe_rawColors.WHITE, secondary: nativeDefault.colors.CONTROL_SECONDARY_TEXT_DEFAULT, tertiary: nativeDefault.colors.REDESIGN_BUTTON_TERTIARY_TEXT, destructive: nativeDefault.colors.CONTROL_CRITICAL_PRIMARY_TEXT_DEFAULT, "critical-primary": nativeDefault.colors.CONTROL_CRITICAL_PRIMARY_TEXT_DEFAULT, "critical-secondary": nativeDefault.colors.CONTROL_CRITICAL_SECONDARY_TEXT_DEFAULT, active: nativeDefault.colors.CONTROL_CONNECTED_TEXT_DEFAULT, "primary-overlay": nativeDefault.colors.CONTROL_OVERLAY_PRIMARY_TEXT_DEFAULT, "secondary-overlay": nativeDefault.colors.CONTROL_OVERLAY_SECONDARY_TEXT_DEFAULT, "experimental_premium-primary": nativeDefault.colors.WHITE, "experimental_premium-basic": nativeDefault.colors.WHITE, "experimental_premium-secondary": nativeDefault.colors.TEXT_BRAND, "icon-only": nativeDefault.colors.CONTROL_ICON_ONLY_ICON_DEFAULT, expressive: nativeDefault.colors.CONTROL_EXPRESSIVE_TEXT_DEFAULT };
-createStyles = fn(4560);
-const styleProperties = createStyles.createStyleProperties((arg0) => {
-  switch (arg0) {
+function getButtonColorTokens(variant) {
+  switch (variant) {
     case "primary":
-      let obj = { backgroundInactive: nativeDefault.colors.CONTROL_PRIMARY_BACKGROUND_DEFAULT, backgroundPressed: nativeDefault.colors.CONTROL_PRIMARY_BACKGROUND_ACTIVE, borderInactive: nativeDefault.colors.CONTROL_PRIMARY_BORDER_DEFAULT, borderPressed: nativeDefault.colors.CONTROL_PRIMARY_BORDER_ACTIVE };
+      let obj = { foregroundInactive: nativeDefault.colors.CONTROL_PRIMARY_TEXT_DEFAULT, foregroundPressed: nativeDefault.colors.CONTROL_PRIMARY_TEXT_DEFAULT, backgroundInactive: nativeDefault.colors.CONTROL_PRIMARY_BACKGROUND_DEFAULT, backgroundPressed: nativeDefault.colors.CONTROL_PRIMARY_BACKGROUND_ACTIVE, borderInactive: nativeDefault.colors.CONTROL_PRIMARY_BORDER_DEFAULT, borderPressed: nativeDefault.colors.CONTROL_PRIMARY_BORDER_ACTIVE };
       return obj;
     case "secondary":
-      obj = { backgroundInactive: nativeDefault.colors.CONTROL_SECONDARY_BACKGROUND_DEFAULT, backgroundPressed: nativeDefault.colors.CONTROL_SECONDARY_BACKGROUND_ACTIVE, borderInactive: nativeDefault.colors.CONTROL_SECONDARY_BORDER_DEFAULT, borderPressed: nativeDefault.colors.CONTROL_SECONDARY_BORDER_ACTIVE };
+      obj = { foregroundInactive: nativeDefault.colors.CONTROL_SECONDARY_TEXT_DEFAULT, foregroundPressed: nativeDefault.colors.CONTROL_SECONDARY_TEXT_DEFAULT, backgroundInactive: nativeDefault.colors.CONTROL_SECONDARY_BACKGROUND_DEFAULT, backgroundPressed: nativeDefault.colors.CONTROL_SECONDARY_BACKGROUND_ACTIVE, borderInactive: nativeDefault.colors.CONTROL_SECONDARY_BORDER_DEFAULT, borderPressed: nativeDefault.colors.CONTROL_SECONDARY_BORDER_ACTIVE };
       return obj;
-    case "tertiary":
-      const obj1 = { backgroundInactive: nativeDefault.colors.REDESIGN_BUTTON_TERTIARY_BACKGROUND, backgroundPressed: nativeDefault.colors.REDESIGN_BUTTON_TERTIARY_PRESSED_BACKGROUND, borderInactive: rgba0000001, borderPressed: rgba0000001 };
+    case "toggle-off":
+      const obj1 = { foregroundInactive: nativeDefault.colors.CONTROL_SECONDARY_TEXT_DEFAULT, foregroundPressed: nativeDefault.colors.CONTROL_SECONDARY_TEXT_DEFAULT, backgroundInactive: nativeDefault.colors.CONTROL_SECONDARY_BACKGROUND_DEFAULT, backgroundPressed: nativeDefault.colors.CONTROL_SECONDARY_BACKGROUND_ACTIVE, borderInactive: nativeDefault.colors.CONTROL_SECONDARY_BORDER_DEFAULT, borderPressed: nativeDefault.colors.TOGGLEBUTTON_BORDER_SELECTED };
       return obj1;
-    case "critical-primary":
-      let obj2 = { backgroundInactive: null, backgroundPressed: null, borderInactive: null, borderPressed: null };
-      let tmp26 = nativeDefault;
-      obj2.backgroundInactive = tmp26.colors.CONTROL_CRITICAL_PRIMARY_BACKGROUND_DEFAULT;
-      let tmp27 = nativeDefault;
-      obj2.backgroundPressed = tmp27.colors.CONTROL_CRITICAL_PRIMARY_BACKGROUND_ACTIVE;
-      let tmp28 = nativeDefault;
-      obj2.borderInactive = tmp28.colors.CONTROL_CRITICAL_PRIMARY_BORDER_DEFAULT;
-      let tmp29 = nativeDefault;
-      obj2.borderPressed = tmp29.colors.CONTROL_CRITICAL_PRIMARY_BORDER_ACTIVE;
+    case "toggle-on":
+      const obj2 = { foregroundInactive: nativeDefault.colors.CONTROL_SECONDARY_TEXT_DEFAULT, foregroundPressed: nativeDefault.colors.CONTROL_SECONDARY_TEXT_DEFAULT, backgroundInactive: nativeDefault.colors.TOGGLEBUTTON_BACKGROUND_SELECTED, backgroundPressed: nativeDefault.colors.TOGGLEBUTTON_BACKGROUND_SELECTED_ACTIVE, borderInactive: nativeDefault.colors.TOGGLEBUTTON_BORDER_SELECTED, borderPressed: nativeDefault.colors.TOGGLEBUTTON_BORDER_SELECTED };
       return obj2;
-    case "destructive":
-      obj2 = { backgroundInactive: null, backgroundPressed: null, borderInactive: null, borderPressed: null };
-      tmp26 = nativeDefault;
-      obj2.backgroundInactive = tmp26.colors.CONTROL_CRITICAL_PRIMARY_BACKGROUND_DEFAULT;
-      tmp27 = nativeDefault;
-      obj2.backgroundPressed = tmp27.colors.CONTROL_CRITICAL_PRIMARY_BACKGROUND_ACTIVE;
-      tmp28 = nativeDefault;
-      obj2.borderInactive = tmp28.colors.CONTROL_CRITICAL_PRIMARY_BORDER_DEFAULT;
-      tmp29 = nativeDefault;
-      obj2.borderPressed = tmp29.colors.CONTROL_CRITICAL_PRIMARY_BORDER_ACTIVE;
-      return obj2;
-    case "critical-secondary":
-      const obj3 = { backgroundInactive: nativeDefault.colors.CONTROL_CRITICAL_SECONDARY_BACKGROUND_DEFAULT, backgroundPressed: nativeDefault.colors.CONTROL_CRITICAL_SECONDARY_BACKGROUND_ACTIVE, borderInactive: nativeDefault.colors.CONTROL_CRITICAL_SECONDARY_BORDER_DEFAULT, borderPressed: nativeDefault.colors.CONTROL_CRITICAL_SECONDARY_BORDER_ACTIVE };
+    case "toggle-icon-default-off":
+      const obj3 = { foregroundInactive: nativeDefault.colors.TOGGLEBUTTON_ICON_DEFAULT, foregroundPressed: nativeDefault.colors.TOGGLEBUTTON_ICON_ACTIVE, backgroundInactive: rgba0000001, backgroundPressed: nativeDefault.colors.CONTROL_SECONDARY_BACKGROUND_ACTIVE, borderInactive: rgba0000001, borderPressed: nativeDefault.colors.TOGGLEBUTTON_BORDER_ACTIVE };
       return obj3;
-    case "active":
-      const obj4 = { backgroundInactive: nativeDefault.colors.CONTROL_CONNECTED_BACKGROUND_DEFAULT, backgroundPressed: nativeDefault.colors.CONTROL_CONNECTED_BACKGROUND_ACTIVE, borderInactive: nativeDefault.colors.CONTROL_CONNECTED_BORDER_DEFAULT, borderPressed: nativeDefault.colors.CONTROL_CONNECTED_BORDER_ACTIVE };
+    case "toggle-icon-default-on":
+      const obj4 = { foregroundInactive: nativeDefault.colors.TOGGLEBUTTON_ICON_SELECTED, foregroundPressed: nativeDefault.colors.TOGGLEBUTTON_ICON_ACTIVE, backgroundInactive: nativeDefault.colors.TOGGLEBUTTON_BACKGROUND_SELECTED, backgroundPressed: nativeDefault.colors.TOGGLEBUTTON_BACKGROUND_SELECTED_HOVER, borderInactive: nativeDefault.colors.TOGGLEBUTTON_BORDER_SELECTED, borderPressed: nativeDefault.colors.TOGGLEBUTTON_BORDER_ACTIVE };
       return obj4;
-    case "experimental_premium-secondary":
-      let obj5 = { backgroundInactive: null, backgroundPressed: null, borderInactive: null, borderPressed: null };
-      let tmp17 = nativeDefault;
-      obj5.backgroundInactive = tmp17.colors.CONTROL_OVERLAY_PRIMARY_BACKGROUND_DEFAULT;
-      let tmp18 = nativeDefault;
-      obj5.backgroundPressed = tmp18.colors.CONTROL_OVERLAY_PRIMARY_BACKGROUND_ACTIVE;
-      obj5.borderInactive = rgba0000001;
-      obj5.borderPressed = rgba0000001;
+    case "toggle-icon-critical-off":
+      const obj5 = { foregroundInactive: nativeDefault.colors.TOGGLEBUTTON_CRITICAL_ICON_DEFAULT, foregroundPressed: nativeDefault.colors.TOGGLEBUTTON_CRITICAL_ICON_ACTIVE, backgroundInactive: rgba0000001, backgroundPressed: nativeDefault.colors.CONTROL_SECONDARY_BACKGROUND_ACTIVE, borderInactive: rgba0000001, borderPressed: nativeDefault.colors.TOGGLEBUTTON_CRITICAL_BORDER_ACTIVE };
       return obj5;
-    case "primary-overlay":
-      obj5 = { backgroundInactive: null, backgroundPressed: null, borderInactive: null, borderPressed: null };
-      tmp17 = nativeDefault;
-      obj5.backgroundInactive = tmp17.colors.CONTROL_OVERLAY_PRIMARY_BACKGROUND_DEFAULT;
-      tmp18 = nativeDefault;
-      obj5.backgroundPressed = tmp18.colors.CONTROL_OVERLAY_PRIMARY_BACKGROUND_ACTIVE;
-      obj5.borderInactive = rgba0000001;
-      obj5.borderPressed = rgba0000001;
-      return obj5;
-    case "secondary-overlay":
-      const obj6 = { backgroundInactive: nativeDefault.colors.CONTROL_OVERLAY_SECONDARY_BACKGROUND_DEFAULT, backgroundPressed: nativeDefault.colors.CONTROL_OVERLAY_SECONDARY_BACKGROUND_ACTIVE, borderInactive: rgba0000001, borderPressed: rgba0000001 };
+    case "toggle-icon-critical-on":
+      const obj6 = { foregroundInactive: nativeDefault.colors.TOGGLEBUTTON_CRITICAL_ICON_SELECTED, foregroundPressed: nativeDefault.colors.TOGGLEBUTTON_CRITICAL_ICON_ACTIVE, backgroundInactive: nativeDefault.colors.TOGGLEBUTTON_CRITICAL_BACKGROUND_SELECTED, backgroundPressed: nativeDefault.colors.TOGGLEBUTTON_CRITICAL_BACKGROUND_SELECTED_HOVER, borderInactive: rgba0000001, borderPressed: nativeDefault.colors.TOGGLEBUTTON_CRITICAL_BORDER_ACTIVE };
       return obj6;
-    case "experimental_welcome-secondary":
-      const obj7 = { backgroundInactive, backgroundPressed, borderInactive: rgba0000001, borderPressed: rgba0000001 };
+    case "toggle-icon-only-off":
+      const obj7 = { foregroundInactive: nativeDefault.colors.TOGGLEBUTTON_ICON_ONLY_ICON_DEFAULT, foregroundPressed: nativeDefault.colors.TOGGLEBUTTON_ICON_ONLY_ICON_ACTIVE, backgroundInactive: rgba0000001, backgroundPressed: nativeDefault.colors.CONTROL_ICON_ONLY_BACKGROUND_ACTIVE, borderInactive: rgba0000001, borderPressed: nativeDefault.colors.CONTROL_ICON_ONLY_BORDER_ACTIVE };
       return obj7;
-    case "experimental_premium-primary":
-      let obj8 = { backgroundInactive: rgba0000001, backgroundPressed: null, borderInactive: null, borderPressed: null };
-      let tmp8 = nativeDefault;
-      obj8.backgroundPressed = tmp8.colors.REDESIGN_BUTTON_PREMIUM_PRIMARY_PRESSED_BACKGROUND;
-      obj8.borderInactive = rgba0000001;
-      obj8.borderPressed = rgba0000001;
+    case "toggle-icon-only-on":
+      const obj8 = { foregroundInactive: nativeDefault.colors.TOGGLEBUTTON_ICON_ONLY_ICON_SELECTED, foregroundPressed: nativeDefault.colors.TOGGLEBUTTON_ICON_ONLY_ICON_ACTIVE, backgroundInactive: rgba0000001, backgroundPressed: nativeDefault.colors.CONTROL_ICON_ONLY_BACKGROUND_ACTIVE, borderInactive: rgba0000001, borderPressed: nativeDefault.colors.CONTROL_ICON_ONLY_BORDER_ACTIVE };
       return obj8;
-    case "experimental_premium-basic":
-      obj8 = { backgroundInactive: rgba0000001, backgroundPressed: null, borderInactive: null, borderPressed: null };
-      tmp8 = nativeDefault;
-      obj8.backgroundPressed = tmp8.colors.REDESIGN_BUTTON_PREMIUM_PRIMARY_PRESSED_BACKGROUND;
-      obj8.borderInactive = rgba0000001;
-      obj8.borderPressed = rgba0000001;
-      return obj8;
-    case "icon-only":
-      const obj9 = { backgroundInactive: rgba0000001, backgroundPressed: nativeDefault.colors.CONTROL_ICON_ONLY_BACKGROUND_ACTIVE, borderInactive: rgba0000001, borderPressed: rgba0000001 };
+    case "tertiary":
+      const obj9 = { foregroundInactive: nativeDefault.colors.REDESIGN_BUTTON_TERTIARY_TEXT, foregroundPressed: nativeDefault.colors.REDESIGN_BUTTON_TERTIARY_TEXT, backgroundInactive: nativeDefault.colors.REDESIGN_BUTTON_TERTIARY_BACKGROUND, backgroundPressed: nativeDefault.colors.REDESIGN_BUTTON_TERTIARY_PRESSED_BACKGROUND, borderInactive: rgba0000001, borderPressed: rgba0000001 };
       return obj9;
+    case "critical-primary":
+      let obj10 = { foregroundInactive: null, foregroundPressed: null, backgroundInactive: null, backgroundPressed: null, borderInactive: null, borderPressed: null };
+      let tmp33 = nativeDefault;
+      obj10.foregroundInactive = tmp33.colors.CONTROL_CRITICAL_PRIMARY_TEXT_DEFAULT;
+      let tmp34 = nativeDefault;
+      obj10.foregroundPressed = tmp34.colors.CONTROL_CRITICAL_PRIMARY_TEXT_DEFAULT;
+      let tmp35 = nativeDefault;
+      obj10.backgroundInactive = tmp35.colors.CONTROL_CRITICAL_PRIMARY_BACKGROUND_DEFAULT;
+      let tmp36 = nativeDefault;
+      obj10.backgroundPressed = tmp36.colors.CONTROL_CRITICAL_PRIMARY_BACKGROUND_ACTIVE;
+      let tmp37 = nativeDefault;
+      obj10.borderInactive = tmp37.colors.CONTROL_CRITICAL_PRIMARY_BORDER_DEFAULT;
+      let tmp38 = nativeDefault;
+      obj10.borderPressed = tmp38.colors.CONTROL_CRITICAL_PRIMARY_BORDER_ACTIVE;
+      return obj10;
+    case "destructive":
+      obj10 = { foregroundInactive: null, foregroundPressed: null, backgroundInactive: null, backgroundPressed: null, borderInactive: null, borderPressed: null };
+      tmp33 = nativeDefault;
+      obj10.foregroundInactive = tmp33.colors.CONTROL_CRITICAL_PRIMARY_TEXT_DEFAULT;
+      tmp34 = nativeDefault;
+      obj10.foregroundPressed = tmp34.colors.CONTROL_CRITICAL_PRIMARY_TEXT_DEFAULT;
+      tmp35 = nativeDefault;
+      obj10.backgroundInactive = tmp35.colors.CONTROL_CRITICAL_PRIMARY_BACKGROUND_DEFAULT;
+      tmp36 = nativeDefault;
+      obj10.backgroundPressed = tmp36.colors.CONTROL_CRITICAL_PRIMARY_BACKGROUND_ACTIVE;
+      tmp37 = nativeDefault;
+      obj10.borderInactive = tmp37.colors.CONTROL_CRITICAL_PRIMARY_BORDER_DEFAULT;
+      tmp38 = nativeDefault;
+      obj10.borderPressed = tmp38.colors.CONTROL_CRITICAL_PRIMARY_BORDER_ACTIVE;
+      return obj10;
+    case "critical-secondary":
+      const obj11 = { foregroundInactive: nativeDefault.colors.CONTROL_CRITICAL_SECONDARY_TEXT_DEFAULT, foregroundPressed: nativeDefault.colors.CONTROL_CRITICAL_SECONDARY_TEXT_DEFAULT, backgroundInactive: nativeDefault.colors.CONTROL_CRITICAL_SECONDARY_BACKGROUND_DEFAULT, backgroundPressed: nativeDefault.colors.CONTROL_CRITICAL_SECONDARY_BACKGROUND_ACTIVE, borderInactive: nativeDefault.colors.CONTROL_CRITICAL_SECONDARY_BORDER_DEFAULT, borderPressed: nativeDefault.colors.CONTROL_CRITICAL_SECONDARY_BORDER_ACTIVE };
+      return obj11;
+    case "active":
+      const obj12 = { foregroundInactive: nativeDefault.colors.CONTROL_CONNECTED_TEXT_DEFAULT, foregroundPressed: nativeDefault.colors.CONTROL_CONNECTED_TEXT_DEFAULT, backgroundInactive: nativeDefault.colors.CONTROL_CONNECTED_BACKGROUND_DEFAULT, backgroundPressed: nativeDefault.colors.CONTROL_CONNECTED_BACKGROUND_ACTIVE, borderInactive: nativeDefault.colors.CONTROL_CONNECTED_BORDER_DEFAULT, borderPressed: nativeDefault.colors.CONTROL_CONNECTED_BORDER_ACTIVE };
+      return obj12;
+    case "experimental_premium-secondary":
+      const obj13 = { foregroundInactive: nativeDefault.colors.TEXT_BRAND, foregroundPressed: nativeDefault.colors.TEXT_BRAND, backgroundInactive: nativeDefault.colors.CONTROL_OVERLAY_PRIMARY_BACKGROUND_DEFAULT, backgroundPressed: nativeDefault.colors.CONTROL_OVERLAY_PRIMARY_BACKGROUND_ACTIVE, borderInactive: rgba0000001, borderPressed: rgba0000001 };
+      return obj13;
+    case "primary-overlay":
+      const obj14 = { foregroundInactive: nativeDefault.colors.CONTROL_OVERLAY_PRIMARY_TEXT_DEFAULT, foregroundPressed: nativeDefault.colors.CONTROL_OVERLAY_PRIMARY_TEXT_DEFAULT, backgroundInactive: nativeDefault.colors.CONTROL_OVERLAY_PRIMARY_BACKGROUND_DEFAULT, backgroundPressed: nativeDefault.colors.CONTROL_OVERLAY_PRIMARY_BACKGROUND_ACTIVE, borderInactive: rgba0000001, borderPressed: rgba0000001 };
+      return obj14;
+    case "secondary-overlay":
+      const obj15 = { foregroundInactive: nativeDefault.colors.CONTROL_OVERLAY_SECONDARY_TEXT_DEFAULT, foregroundPressed: nativeDefault.colors.CONTROL_OVERLAY_SECONDARY_TEXT_DEFAULT, backgroundInactive: nativeDefault.colors.CONTROL_OVERLAY_SECONDARY_BACKGROUND_DEFAULT, backgroundPressed: nativeDefault.colors.CONTROL_OVERLAY_SECONDARY_BACKGROUND_ACTIVE, borderInactive: rgba0000001, borderPressed: rgba0000001 };
+      return obj15;
+    case "experimental_welcome-secondary":
+      const obj16 = { foregroundInactive: nativeDefault.unsafe_rawColors.WHITE, foregroundPressed: nativeDefault.unsafe_rawColors.WHITE, backgroundInactive, backgroundPressed, borderInactive: rgba0000001, borderPressed: rgba0000001 };
+      return obj16;
+    case "experimental_premium-primary":
+      let obj17 = { foregroundInactive: null, foregroundPressed: null, backgroundInactive: null, backgroundPressed: null, borderInactive: null, borderPressed: null };
+      let tmp9 = nativeDefault;
+      obj17.foregroundInactive = tmp9.colors.WHITE;
+      let tmp10 = nativeDefault;
+      obj17.foregroundPressed = tmp10.colors.WHITE;
+      obj17.backgroundInactive = rgba0000001;
+      let tmp12 = nativeDefault;
+      obj17.backgroundPressed = tmp12.colors.REDESIGN_BUTTON_PREMIUM_PRIMARY_PRESSED_BACKGROUND;
+      obj17.borderInactive = rgba0000001;
+      obj17.borderPressed = rgba0000001;
+      return obj17;
+    case "experimental_premium-basic":
+      obj17 = { foregroundInactive: null, foregroundPressed: null, backgroundInactive: null, backgroundPressed: null, borderInactive: null, borderPressed: null };
+      tmp9 = nativeDefault;
+      obj17.foregroundInactive = tmp9.colors.WHITE;
+      tmp10 = nativeDefault;
+      obj17.foregroundPressed = tmp10.colors.WHITE;
+      obj17.backgroundInactive = rgba0000001;
+      tmp12 = nativeDefault;
+      obj17.backgroundPressed = tmp12.colors.REDESIGN_BUTTON_PREMIUM_PRIMARY_PRESSED_BACKGROUND;
+      obj17.borderInactive = rgba0000001;
+      obj17.borderPressed = rgba0000001;
+      return obj17;
+    case "icon-only":
+      const obj18 = { foregroundInactive: nativeDefault.colors.CONTROL_ICON_ONLY_ICON_DEFAULT, foregroundPressed: nativeDefault.colors.CONTROL_ICON_ONLY_ICON_DEFAULT, backgroundInactive: rgba0000001, backgroundPressed: nativeDefault.colors.CONTROL_ICON_ONLY_BACKGROUND_ACTIVE, borderInactive: rgba0000001, borderPressed: rgba0000001 };
+      return obj18;
     case "expressive":
-      obj = { backgroundInactive: rgba0000001, backgroundPressed: rgba0000001, borderInactive: rgba0000001, borderPressed: rgba0000001 };
+      obj = { foregroundInactive: nativeDefault.colors.CONTROL_EXPRESSIVE_TEXT_DEFAULT, foregroundPressed: nativeDefault.colors.CONTROL_EXPRESSIVE_TEXT_DEFAULT, backgroundInactive: rgba0000001, backgroundPressed: rgba0000001, borderInactive: rgba0000001, borderPressed: rgba0000001 };
       return obj;
     default:
   }
-});
-const __initData = { code: "function ButtonHooksNativeTsx1(){const{themedStyles,colors,interpolateColor,pressed}=this.__closure;var _themedStyles$backgro,_themedStyles,_themedStyles$borderC,_themedStyles2;const backgroundColor=(_themedStyles$backgro=(_themedStyles=themedStyles)===null||_themedStyles===void 0?void 0:_themedStyles.backgroundColor)!==null&&_themedStyles$backgro!==void 0?_themedStyles$backgro:[colors.backgroundInactive,colors.backgroundPressed];const borderColor=(_themedStyles$borderC=(_themedStyles2=themedStyles)===null||_themedStyles2===void 0?void 0:_themedStyles2.borderColor)!==null&&_themedStyles$borderC!==void 0?_themedStyles$borderC:[colors.borderInactive,colors.borderPressed];return{backgroundColor:interpolateColor(pressed.get(),[0,1],backgroundColor),borderColor:interpolateColor(pressed.get(),[0,1],borderColor)};}" };
-const __initData2 = { code: "function ButtonHooksNativeTsx2(){const{width,scaleAmountInPx,withSpring,interpolate,pressed,ON_PRESS_SPRING}=this.__closure;const scale=width.get()>0?(width.get()-scaleAmountInPx)/width.get():1;return{transform:[{scale:withSpring(interpolate(pressed.get(),[0,1],[1,scale]),ON_PRESS_SPRING,'animate-always')}]};}" };
+}
+let c4 = "rgba(0,0,0,0.001)";
+let createStyles = fn(4574);
+const backgroundInactive = createStyles.experimental_createToken(() => "#161CBB");
+createStyles = fn(4574);
+const backgroundPressed = createStyles.experimental_createToken(() => "#1318A0");
+createStyles = fn(4574);
+const styleProperties = createStyles.createStyleProperties(getButtonColorTokens);
+const __initData = { code: "function ButtonHooksNativeTsx1(){const{interpolateColor,pressed,inactiveColor,pressedColor}=this.__closure;return{tintColor:interpolateColor(pressed.get(),[0,1],[inactiveColor,pressedColor])};}" };
+const __initData2 = { code: "function ButtonHooksNativeTsx2(){const{themedStyles,colors,interpolateColor,pressed}=this.__closure;var _themedStyles$backgro,_themedStyles,_themedStyles$borderC,_themedStyles2;const backgroundColor=(_themedStyles$backgro=(_themedStyles=themedStyles)===null||_themedStyles===void 0?void 0:_themedStyles.backgroundColor)!==null&&_themedStyles$backgro!==void 0?_themedStyles$backgro:[colors.backgroundInactive,colors.backgroundPressed];const borderColor=(_themedStyles$borderC=(_themedStyles2=themedStyles)===null||_themedStyles2===void 0?void 0:_themedStyles2.borderColor)!==null&&_themedStyles$borderC!==void 0?_themedStyles$borderC:[colors.borderInactive,colors.borderPressed];return{backgroundColor:interpolateColor(pressed.get(),[0,1],backgroundColor),borderColor:interpolateColor(pressed.get(),[0,1],borderColor)};}" };
+const __initData3 = { code: "function ButtonHooksNativeTsx3(){const{width,scaleAmountInPx,withSpring,interpolate,pressed,ON_PRESS_SPRING}=this.__closure;const scale=width.get()>0?(width.get()-scaleAmountInPx)/width.get():1;return{transform:[{scale:withSpring(interpolate(pressed.get(),[0,1],[1,scale]),ON_PRESS_SPRING,'animate-always')}]};}" };
 const size = fn(2);
 let result = size.fileFinishedImporting("design/components/Button/native/ButtonHooks.native.tsx");
 
@@ -186,7 +217,7 @@ export const useProfileThemedButtonStyles = function useProfileThemedButtonStyle
   }, items);
 };
 export const useForegroundColor = function useForegroundColor(variant) {
-  return useToken.useToken(createStyles[variant]);
+  return useToken.useToken(getButtonColorTokens(variant).foregroundInactive);
 };
 export const useButtonColorStyles = styleProperties;
 export const useButtonTextColorStyles = function useButtonTextColorStyles(active) {
@@ -261,7 +292,7 @@ export const useButtonTextColorStyles = function useButtonTextColorStyles(active
   }, items);
   const obj = require("native");
   let color;
-  const token = require("useToken").useToken(createStyles[active]);
+  const token = require("useToken").useToken(getButtonColorTokens(active).foregroundInactive);
   if (memo != null) {
     color = memo.color;
   }
@@ -270,12 +301,16 @@ export const useButtonTextColorStyles = function useButtonTextColorStyles(active
   }
   return { color };
 };
-export const useIconTintStyles = function useIconTintStyles(variant) {
-  _require = variant;
-  const themeContext = require("native").useThemeContext();
+export const useIconTintStyles = function useIconTintStyles(variant, sharedValue) {
+  _require = sharedValue;
+  closure_129_0 = variant;
+  let obj = require("native");
+  const themeContext = obj.useThemeContext();
   const primaryColor = themeContext.primaryColor;
-  theme = themeContext.theme;
-  const items = [theme, primaryColor, variant];
+  closure_129_1 = primaryColor;
+  const theme = themeContext.theme;
+  closure_129_2 = theme;
+  let items = [theme, primaryColor, variant];
   const memo = noop.useMemo(() => {
     if (null == memo) {
       return null;
@@ -340,16 +375,28 @@ export const useIconTintStyles = function useIconTintStyles(variant) {
       return null;
     }
   }, items);
-  const obj = require("native");
-  let tintColor;
-  const token = require("useToken").useToken(createStyles[variant]);
+  let color;
+  const token = require("useToken").useToken(getButtonColorTokens(variant).foregroundInactive);
   if (memo != null) {
-    tintColor = memo.color;
+    color = memo.color;
   }
-  if (tintColor == null) {
-    tintColor = token;
+  if (color == null) {
+    color = token;
   }
-  return { tintColor };
+  let tmpResult = tmp(tmp2[5]);
+  token1 = tmpResult.useToken(getButtonColorTokens(variant).foregroundPressed);
+  tmpResult = tmp(tmp2[6]);
+  const fn = function t() {
+    const obj = { tintColor: null };
+    const items = [color, token1];
+    obj.tintColor = ReanimatedRexport.interpolateColor(sharedValue.get(), [0, 1], items);
+    return obj;
+  };
+  obj = { interpolateColor: tmp(tmp2[6]).interpolateColor, pressed: sharedValue, inactiveColor: color, pressedColor: token1 };
+  fn.__closure = obj;
+  fn.__workletHash = 10122935395765;
+  fn.__initData = __initData;
+  return tmpResult.useAnimatedStyle(fn);
 };
 export const useGradientPillStyles = function useGradientPillStyles(variant) {
   return { borderColor: styleProperties(variant).borderInactive };
@@ -430,7 +477,7 @@ export const useButtonPillStyles = function useButtonPillStyles(variant, pressed
   }, items);
   const tmp3 = styleProperties(variant);
   dependencyMap = tmp3;
-  const fn = function s() {
+  const fn = function t() {
     let backgroundColor;
     if (memo != null) {
       backgroundColor = memo.backgroundColor;
@@ -455,8 +502,8 @@ export const useButtonPillStyles = function useButtonPillStyles(variant, pressed
   };
   obj = { themedStyles: memo, colors: tmp3, interpolateColor: require("ReanimatedRexport").interpolateColor, pressed };
   fn.__closure = obj;
-  fn.__workletHash = 2383933325137;
-  fn.__initData = __initData;
+  fn.__workletHash = 6773022706866;
+  fn.__initData = __initData2;
   return require("ReanimatedRexport").useAnimatedStyle(fn);
 };
 export const useButtonScaleStyles = function useButtonScaleStyles(pressed, width, scaleAmountInPx) {
@@ -482,8 +529,8 @@ export const useButtonScaleStyles = function useButtonScaleStyles(pressed, width
   };
   const obj = { width, scaleAmountInPx, withSpring: require("spring").withSpring, interpolate: require("ReanimatedRexport").interpolate, pressed, ON_PRESS_SPRING: require("springPresets").ON_PRESS_SPRING };
   fn.__closure = obj;
-  fn.__workletHash = 17256006845494;
-  fn.__initData = __initData2;
+  fn.__workletHash = 11512187496215;
+  fn.__initData = __initData3;
   return obj.useAnimatedStyle(fn);
 };
 export const useButtonPressAnimationProps = function useButtonPressAnimationProps(sharedValue) {
@@ -538,8 +585,8 @@ export const useButtonPressAnimationProps = function useButtonPressAnimationProp
   };
   obj = { width: sharedValue1, scaleAmountInPx: num, withSpring: tmp(tmp2[7]).withSpring, interpolate: tmp(tmp2[6]).interpolate, pressed: sharedValue, ON_PRESS_SPRING: tmp(tmp2[8]).ON_PRESS_SPRING };
   fn.__closure = obj;
-  fn.__workletHash = 17256006845494;
-  fn.__initData = __initData2;
+  fn.__workletHash = 11512187496215;
+  fn.__initData = __initData3;
   obj.style = tmpResult.useAnimatedStyle(fn);
   return obj;
 };

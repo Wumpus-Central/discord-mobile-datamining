@@ -1,8 +1,8 @@
-// === Module 14100: SummarizedIconRow ===
+// === Module 14123: SummarizedIconRow ===
 
-// Module 14100 (SummarizedIconRow)
+// Module 14123 (SummarizedIconRow)
 import nativeDefault from "native" /* 576 */;
-import Text_Text from "Text/Text" /* 4556 */;
+import Text_Text from "Text/Text" /* 4570 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -20,7 +20,7 @@ function OverflowSquircle(arg0) {
 }
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-fn(4560);
+fn(4574);
 let createStyles = { container: { flexDirection: "row", alignItems: "center" }, iconWrapper: { alignItems: "center", justifyContent: "center" }, overflowSquircleWrap: null, overflowSquircle: null, overflowTextOnly: null, overflowCircleWrap: null, overflowCircle: null };
 createStyles = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, borderRadius: nativeDefault.radii.md };
 createStyles.overflowSquircleWrap = createStyles;

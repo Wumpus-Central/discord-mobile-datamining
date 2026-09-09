@@ -1,6 +1,6 @@
-// === Module 5420: ProportionalVadIndicatorExperiment ===
+// === Module 5434: ProportionalVadIndicatorExperiment ===
 
-// Module 5420 (ProportionalVadIndicatorExperiment)
+// Module 5434 (ProportionalVadIndicatorExperiment)
 import apex_ApexExperimentDefault from "apex/ApexExperiment" /* 1434 */;
 
 let obj = { kind: "user", name: "2025-12-proportional-vad-indicator", defaultConfig: { enabled: false }, variations: null };

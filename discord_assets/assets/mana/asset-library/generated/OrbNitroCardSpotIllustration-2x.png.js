@@ -1,6 +1,6 @@
-// === Module 6334: ? ===
+// === Module 6348: ? ===
 
-// Module 6334
+// Module 6348
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/OrbNitroCardSpotIllustration-2x.png.js");

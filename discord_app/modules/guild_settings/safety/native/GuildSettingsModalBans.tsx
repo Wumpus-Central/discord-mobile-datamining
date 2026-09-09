@@ -1,23 +1,23 @@
-// === Module 17653: GuildSettingsModalBans ===
+// === Module 17686: GuildSettingsModalBans ===
 
-// Module 17653 (GuildSettingsModalBans)
+// Module 17686 (GuildSettingsModalBans)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import fuzzysearchDefault from "fuzzysearch" /* 5517 */;
-import GuildActionCreatorsDefault from "GuildActionCreators" /* 5520 */;
-import showSimpleActionSheet from "showSimpleActionSheet" /* 7195 */;
+import fuzzysearchDefault from "fuzzysearch" /* 5531 */;
+import GuildActionCreatorsDefault from "GuildActionCreators" /* 5534 */;
+import showSimpleActionSheet from "showSimpleActionSheet" /* 7208 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import GuildStore from "GuildStore" /* 1979 */;
 import UserStore from "UserStore" /* 1371 */;
-import GuildSettingsStore from "GuildSettingsStore" /* 9069 */;
+import GuildSettingsStore from "GuildSettingsStore" /* 9096 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, StyleSheet: metroRequire } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11, Fragment: closure_12 } = jsxProd);
-fn(4560);
+fn(4574);
 let createStyles = { containerInner: null, searchField: null };
 createStyles = { paddingHorizontal: nativeDefault.space.PX_12, flex: 1 };
 createStyles.containerInner = createStyles;

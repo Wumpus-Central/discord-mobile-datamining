@@ -1,10 +1,10 @@
-// === Module 13994: clipPOVOverlap ===
+// === Module 14017: clipPOVOverlap ===
 
-// Module 13994 (clipPOVOverlap)
+// Module 14017 (clipPOVOverlap)
 import Constants from "Constants" /* 1074 */;
 import FlagUtils from "FlagUtils" /* 1384 */;
-import ClipsConstants from "ClipsConstants" /* 5132 */;
-import getPOVExportTargetDefault from "getPOVExportTarget" /* 13995 */;
+import ClipsConstants from "ClipsConstants" /* 5146 */;
+import getPOVExportTargetDefault from "getPOVExportTarget" /* 14018 */;
 import size from "module_2" /* 2 */;
 
 const ClipType = ClipsConstants.ClipType;
@@ -43,12 +43,12 @@ export const getClipAttachmentPOVWindow = function getClipAttachmentPOVWindow(ne
   }
   hasFlagResult = obj.hasFlag(num, MessageAttachmentFlags.IS_CLIP);
 };
-export const getClipPOVOverlapMilliseconds = function getClipPOVOverlapMilliseconds(applicationId, applicationId2) {
-  if (applicationId.applicationId === applicationId2.applicationId) {
+export const getClipPOVOverlapMilliseconds = function getClipPOVOverlapMilliseconds(applicationId, nextResult1) {
+  if (applicationId.applicationId === nextResult1.applicationId) {
     const _Math = Math;
     const _Math2 = Math;
-    const bound = Math.min(applicationId.endTimestamp, applicationId2.endTimestamp);
-    const diff = bound - Math.max(applicationId.startTimestamp, applicationId2.startTimestamp);
+    const bound = Math.min(applicationId.endTimestamp, nextResult1.endTimestamp);
+    const diff = bound - Math.max(applicationId.startTimestamp, nextResult1.startTimestamp);
     let tmp4;
     if (diff > 5000) {
       tmp4 = diff;

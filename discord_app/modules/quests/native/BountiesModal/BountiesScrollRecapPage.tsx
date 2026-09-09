@@ -1,21 +1,21 @@
-// === Module 15052: BountiesScrollRecapPage ===
+// === Module 15079: BountiesScrollRecapPage ===
 
-// Module 15052 (BountiesScrollRecapPage)
+// Module 15079 (BountiesScrollRecapPage)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import PlatformUtils from "PlatformUtils" /* 1115 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1611 */;
-import Text_Text from "Text/Text" /* 4556 */;
-import components_Button_Button from "components/Button/Button" /* 4975 */;
-import common_Video from "common/Video" /* 8307 */;
-import APNGPlayer from "APNGPlayer" /* 8813 */;
-import OrbsIcon from "OrbsIcon" /* 8842 */;
-import _modDef15053 from "module_15053" /* 15053 */;
-import _modDef15054 from "module_15054" /* 15054 */;
-import _modDef15055 from "module_15055" /* 15055 */;
+import Text_Text from "Text/Text" /* 4570 */;
+import components_Button_Button from "components/Button/Button" /* 4989 */;
+import common_Video from "common/Video" /* 8335 */;
+import APNGPlayer from "APNGPlayer" /* 8842 */;
+import OrbsIcon from "OrbsIcon" /* 8869 */;
+import _modDef15080 from "module_15080" /* 15080 */;
+import _modDef15081 from "module_15081" /* 15081 */;
+import _modDef15082 from "module_15082" /* 15082 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4552 */;
+import AccessibilityStore from "AccessibilityStore" /* 4566 */;
 
 require = fn;
 function BountiesRecapOrbsBackground(arg0) {
@@ -23,12 +23,12 @@ function BountiesRecapOrbsBackground(arg0) {
   let obj = PlatformUtils;
   if (obj.isAndroid()) {
     obj = { style, needsOffscreenAlphaCompositing: true, renderToHardwareTextureAndroid: true, pointerEvents: "none", children: null };
-    obj = { url: _modDef15053, style: React3.absoluteFillObject, autoplay: !reducedMotion };
+    obj = { url: _modDef15080, style: React3.absoluteFillObject, autoplay: !reducedMotion };
     obj.children = timestampProducer(APNGPlayer.APNGPlayer, obj);
     let tmp3Result = timestampProducer(React4, obj);
   } else {
     const obj1 = { source: null, style: null, resizeMode: "contain", paused: null, disableFocus: true, preventsDisplaySleepDuringVideoPlayback: false, importantForAccessibility: "no-hide-descendants" };
-    const obj2 = { uri: _modDef15054 };
+    const obj2 = { uri: _modDef15081 };
     obj1.source = obj2;
     obj1.style = style;
     obj1.paused = reducedMotion;
@@ -41,7 +41,7 @@ get_ActivityIndicator = fn(17);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
 const lg = nativeDefault.radii.lg;
-const createStyles = fn(4560);
+const createStyles = fn(4574);
 let closure_9 = createStyles.createStyles(() => {
   let obj = { root: null, content: null, centeredCopy: null, orbsBackground: null, headerLabel: null, titleRow: null, actions: null, orbAmount: null };
   obj = { overflow: "hidden", borderRadius: lg, backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND };
@@ -79,7 +79,7 @@ export const BountiesScrollRecapPage = function BountiesScrollRecapPage(orbAmoun
   obj = { style: React3.absoluteFillObject, pointerEvents: "none", children: null };
   const obj1 = { source: null, style: null, resizeMode: "cover", paused: null, disableFocus: true, preventsDisplaySleepDuringVideoPlayback: false, importantForAccessibility: "no-hide-descendants" };
   const tmp2 = useSafeAreaInsetsDefault();
-  obj1.source = { uri: _modDef15055 };
+  obj1.source = { uri: _modDef15082 };
   obj1.style = React3.absoluteFillObject;
   obj1.paused = stateFromStores;
   const items2 = [timestampProducer(common_Video.VideoComponent, obj1), timestampProducer(BountiesRecapOrbsBackground, { style: tmp.orbsBackground, reducedMotion: stateFromStores })];
@@ -94,7 +94,7 @@ export const BountiesScrollRecapPage = function BountiesScrollRecapPage(orbAmoun
   const obj7 = { accessible: true, accessibilityRole: "text", accessibilityLabel: "+" + orbAmount, children: null };
   const obj8 = { style: tmp.titleRow, children: null };
   const items5 = [timestampProducer(OrbsIcon.OrbsIcon, { size: "lg", color: "icon-strong", accessible: false }), ];
-  const obj2 = { uri: _modDef15055 };
+  const obj2 = { uri: _modDef15082 };
   const obj3 = { style: tmp.orbsBackground, reducedMotion: stateFromStores };
   items5[1] = timestampProducer(Text_Text.Text, { variant: "display-lg", color: "text-strong", accessible: false, style: tmp.orbAmount, children: "+" + orbAmount });
   obj8.children = items5;

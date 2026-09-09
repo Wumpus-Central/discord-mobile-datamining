@@ -1,16 +1,16 @@
-// === Module 13275: GuildActionSheetMemberCount ===
+// === Module 13298: GuildActionSheetMemberCount ===
 
-// Module 13275 (GuildActionSheetMemberCount)
+// Module 13298 (GuildActionSheetMemberCount)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import Text_Text from "Text/Text" /* 4556 */;
+import Text_Text from "Text/Text" /* 4570 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-fn(4560);
+fn(4574);
 let obj = { wrapper: { flexDirection: "row", alignItems: "center" }, dot: null, dotContainer: null, onlineDot: null, offlineDot: null, refreshText: null };
 let size = { width: 8, height: 8, borderRadius: nativeDefault.radii.sm };
 obj.dot = size;

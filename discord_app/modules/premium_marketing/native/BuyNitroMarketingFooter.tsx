@@ -1,13 +1,13 @@
-// === Module 13412: BuyNitroMarketingFooter ===
+// === Module 13435: BuyNitroMarketingFooter ===
 
-// Module 13412 (BuyNitroMarketingFooter)
+// Module 13435 (BuyNitroMarketingFooter)
 import jsxProd from "jsxProd" /* 21 */;
 import nativeDefault from "native" /* 576 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 6655 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 7182 */;
-import BuyNitroPurchaseButtonDefault from "BuyNitroPurchaseButton" /* 13391 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 6669 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 7196 */;
+import BuyNitroPurchaseButtonDefault from "BuyNitroPurchaseButton" /* 13414 */;
 import get_ActivityIndicator from "module_17" /* 17 */;
-import createStyles from "createStyles" /* 4560 */;
+import createStyles from "createStyles" /* 4574 */;
 import size from "module_2" /* 2 */;
 
 ({ Platform, View: c3 } = get_ActivityIndicator);

@@ -3,7 +3,7 @@
 // Module 1227 (resolveTheme)
 import preloaded_user_settings from "preloaded_user_settings" /* 1187 */;
 import ClientThemesUtils from "ClientThemesUtils" /* 1229 */;
-import AuthenticationUtils from "AuthenticationUtils" /* 7668 */;
+import AuthenticationUtils from "AuthenticationUtils" /* 7682 */;
 import CustomThemeMobileStore from "CustomThemeMobileStore" /* 1228 */;
 import SelectivelySyncedUserSettingsStore from "SelectivelySyncedUserSettingsStore" /* 1184 */;
 import UnsyncedUserSettingsStore from "UnsyncedUserSettingsStore" /* 1185 */;

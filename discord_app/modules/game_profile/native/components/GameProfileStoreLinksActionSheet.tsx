@@ -1,23 +1,23 @@
-// === Module 8715: GameProfileStoreLinksActionSheet ===
+// === Module 8743: GameProfileStoreLinksActionSheet ===
 
-// Module 8715 (GameProfileStoreLinksActionSheet)
+// Module 8743 (GameProfileStoreLinksActionSheet)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1611 */;
-import LinkingDefault from "Linking" /* 4255 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4527 */;
-import Text_Text from "Text/Text" /* 4556 */;
-import components_Button_Button from "components/Button/Button" /* 4975 */;
-import BottomSheetModal from "BottomSheetModal" /* 6627 */;
-import ActionSheet from "ActionSheet" /* 7198 */;
-import useOpenExternalUrlFromGameProfileDefault from "useOpenExternalUrlFromGameProfile" /* 8688 */;
+import LinkingDefault from "Linking" /* 4268 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4541 */;
+import Text_Text from "Text/Text" /* 4570 */;
+import components_Button_Button from "components/Button/Button" /* 4989 */;
+import BottomSheetModal from "BottomSheetModal" /* 6641 */;
+import ActionSheet from "ActionSheet" /* 7211 */;
+import useOpenExternalUrlFromGameProfileDefault from "useOpenExternalUrlFromGameProfile" /* 8716 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-fn(4560);
+fn(4574);
 let createStyles = { header: null, headerText: null, buttons: null };
 createStyles = { gap: nativeDefault.space.PX_8, paddingTop: nativeDefault.space.PX_8, paddingHorizontal: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_24 };
 createStyles.header = createStyles;

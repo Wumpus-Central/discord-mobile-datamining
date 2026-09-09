@@ -1,14 +1,14 @@
-// === Module 16538: GuildRoleSubscriptionPurchasePage ===
+// === Module 16569: GuildRoleSubscriptionPurchasePage ===
 
-// Module 16538 (GuildRoleSubscriptionPurchasePage)
+// Module 16569 (GuildRoleSubscriptionPurchasePage)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import native from "native" /* 1178 */;
-import LinkingDefault from "Linking" /* 4255 */;
-import Text_Text from "Text/Text" /* 4556 */;
-import utils_ChannelUtils from "utils/ChannelUtils" /* 5028 */;
-import _modDef9944 from "module_9944" /* 9944 */;
-import GuildRoleSubscriptionPurchasePreviewCardDefault from "GuildRoleSubscriptionPurchasePreviewCard" /* 16548 */;
+import LinkingDefault from "Linking" /* 4268 */;
+import Text_Text from "Text/Text" /* 4570 */;
+import utils_ChannelUtils from "utils/ChannelUtils" /* 5042 */;
+import _modDef9971 from "module_9971" /* 9971 */;
+import GuildRoleSubscriptionPurchasePreviewCardDefault from "GuildRoleSubscriptionPurchasePreviewCard" /* 16579 */;
 import noop from "module_19" /* 19 */;
 import ThemeStore from "ThemeStore" /* 1183 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
@@ -40,7 +40,7 @@ function SocialBadge(onPress) {
   obj = { source: iconSource, style: tmp.socialBadgeIcon, resizeMode: "contain", disableColor: true };
   const items = [closure_1_14(native.Icon, obj), closure_1_14(Text_Text.Text, { variant: "text-sm/medium", color: "text-default", children: text }), ];
   if (tmp5Result) {
-    obj = { source: _modDef9944, style: tmp.socialBadgeArrow };
+    obj = { source: _modDef9971, style: tmp.socialBadgeArrow };
     tmp5Result = closure_1_14(native.Icon, obj);
   }
   items[2] = tmp5Result;
@@ -53,7 +53,7 @@ const Constants = fn(1074);
 ({ AnalyticsLocations: closure_11, GuildFeatures: closure_12, MarketingURLs: map1 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15, Fragment: closure_16 } = jsxProd);
-fn(4560);
+fn(4574);
 let createStyles = { container: null, heroImage: null, guildIconContainer: null, guildIcon: null, contentCard: null, loadingContainer: null, socialContainer: null, socialBadge: null, socialBadgeIcon: null, socialBadgeArrow: null, separator: null, moneyBirbPlaceholder: null, gatedChannel: null, gatedChannelIcon: null };
 createStyles = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH };
 createStyles.container = createStyles;

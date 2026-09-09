@@ -1,8 +1,8 @@
-// === Module 7734: QuestHomeSearchSession ===
+// === Module 7748: QuestHomeSearchSession ===
 
-// Module 7734 (QuestHomeSearchSession)
+// Module 7748 (QuestHomeSearchSession)
 import v1 from "v1" /* 1256 */;
-import SessionUtils from "SessionUtils" /* 7471 */;
+import SessionUtils from "SessionUtils" /* 7485 */;
 import size from "module_2" /* 2 */;
 
 let c2 = null;

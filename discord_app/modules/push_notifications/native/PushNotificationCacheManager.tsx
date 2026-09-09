@@ -1,10 +1,10 @@
-// === Module 17475: PushNotificationCacheManager ===
+// === Module 17506: PushNotificationCacheManager ===
 
-// Module 17475 (PushNotificationCacheManager)
-import PushNotificationDefault from "PushNotification" /* 9692 */;
-import MultiAccountStore from "MultiAccountStore" /* 12417 */;
+// Module 17506 (PushNotificationCacheManager)
+import PushNotificationDefault from "PushNotification" /* 9719 */;
+import MultiAccountStore from "MultiAccountStore" /* 12443 */;
 import UserStore from "UserStore" /* 1371 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7118 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7132 */;
 
 let prototype = function PushNotificationCacheManager() {
   const applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
@@ -26,15 +26,15 @@ let prototype = function PushNotificationCacheManager() {
   applyArgumentsResult.handleUserUpdate = function handleUserUpdate() {
     currentUser = currentUser.getCurrentUser();
     if (null != currentUser) {
-      applyArgumentsResult(9692).setCurrentUser(currentUser.username, currentUser.id);
-      const obj2 = applyArgumentsResult(9692);
+      applyArgumentsResult(9719).setCurrentUser(currentUser.username, currentUser.id);
+      const obj2 = applyArgumentsResult(9719);
     } else {
-      applyArgumentsResult(9692).setCurrentUser(null, null);
-      const obj = applyArgumentsResult(9692);
+      applyArgumentsResult(9719).setCurrentUser(null, null);
+      const obj = applyArgumentsResult(9719);
     }
   };
   applyArgumentsResult.syncMultiAccountUsers = function syncMultiAccountUsers() {
-    obj(9692);
+    obj(9719);
     obj = undefined;
     if (validUsers.canUseMultiAccountNotifications) {
       validUsers = validUsers.getValidUsers();
@@ -43,7 +43,7 @@ let prototype = function PushNotificationCacheManager() {
       } else {
         obj = {};
         const item = validUsers.forEach((id) => {
-          obj = applyArgumentsResult(4404);
+          obj = applyArgumentsResult(4418);
           obj[id.id] = obj.getUserTag(id, { identifiable: "always" });
         });
       }

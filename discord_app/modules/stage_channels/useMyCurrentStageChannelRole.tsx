@@ -1,9 +1,9 @@
-// === Module 10038: useMyCurrentStageChannelRole ===
+// === Module 10065: useMyCurrentStageChannelRole ===
 
-// Module 10038 (useMyCurrentStageChannelRole)
+// Module 10065 (useMyCurrentStageChannelRole)
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2011 */;
-import StageChannelRoleStore from "StageChannelRoleStore" /* 5421 */;
+import StageChannelRoleStore from "StageChannelRoleStore" /* 5435 */;
 
 const require = fn;
 const size = fn(2);

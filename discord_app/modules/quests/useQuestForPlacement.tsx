@@ -1,13 +1,13 @@
-// === Module 15119: useQuestForPlacement ===
+// === Module 15146: useQuestForPlacement ===
 
-// Module 15119 (useQuestForPlacement)
+// Module 15146 (useQuestForPlacement)
 import DurationsDefault from "Durations" /* 1090 */;
-import QuestActionCreators from "QuestActionCreators" /* 11281 */;
-import DiscordAppStateDefault from "DiscordAppState" /* 11305 */;
-import QuestsEligibility from "QuestsEligibility" /* 11489 */;
+import QuestActionCreators from "QuestActionCreators" /* 11308 */;
+import DiscordAppStateDefault from "DiscordAppState" /* 11332 */;
+import QuestsEligibility from "QuestsEligibility" /* 11516 */;
 import noop from "module_19" /* 19 */;
-import AdDeliveryStore from "AdDeliveryStore" /* 7700 */;
-import QuestStore from "QuestStore" /* 7703 */;
+import AdDeliveryStore from "AdDeliveryStore" /* 7714 */;
+import QuestStore from "QuestStore" /* 7717 */;
 import size from "module_2" /* 2 */;
 
 function maybeRefreshAd(fetchedAt, MOBILE_HOME_DOCK_AREA, arg2) {

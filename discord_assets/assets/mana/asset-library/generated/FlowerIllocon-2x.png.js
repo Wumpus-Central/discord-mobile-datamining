@@ -1,6 +1,6 @@
-// === Module 6002: ? ===
+// === Module 6016: ? ===
 
-// Module 6002
+// Module 6016
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/FlowerIllocon-2x.png.js");

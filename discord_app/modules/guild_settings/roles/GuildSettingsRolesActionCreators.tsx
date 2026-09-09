@@ -1,6 +1,6 @@
-// === Module 17627: GuildSettingsRolesActionCreators ===
+// === Module 17658: GuildSettingsRolesActionCreators ===
 
-// Module 17627 (GuildSettingsRolesActionCreators)
+// Module 17658 (GuildSettingsRolesActionCreators)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
@@ -717,8 +717,8 @@ export const toggleRoleSettings = function toggleRoleSettings(id, hoist, mention
   const obj = { type: "GUILD_SETTINGS_ROLES_UPDATE_SETTINGS", id, hoist, mentionable };
   obj.dispatch(obj);
 };
-export const updateRoleIcon = function updateRoleIcon(id, icon, unicodeEmoji) {
-  const obj = { type: "GUILD_SETTINGS_ROLES_UPDATE_ROLE_ICON", id, icon, unicodeEmoji };
+export const updateRoleIcon = function updateRoleIcon(roleId, icon, unicodeEmoji) {
+  const obj = { type: "GUILD_SETTINGS_ROLES_UPDATE_ROLE_ICON", id: roleId, icon, unicodeEmoji };
   obj.dispatch(obj);
 };
 export const updateRoleConnectionConfigurations = function updateRoleConnectionConfigurations(id, roleConnectionConfigurations) {

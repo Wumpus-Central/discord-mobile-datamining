@@ -283,8 +283,8 @@ export { getPalette };
 export const getPaletteForAvatar = function getPaletteForAvatar(automodAvatarURL) {
   return utils_ImageUtils.default.getPaletteForAvatarMobile(automodAvatarURL);
 };
-export const readFileAsBase64 = function readFileAsBase64(result) {
-  closure_0 = result;
+export const readFileAsBase64 = function readFileAsBase64(value) {
+  closure_0 = value;
   return new Promise((data, arg1) => {
     closure_1 = arg1;
     const fileReader = new FileReader();

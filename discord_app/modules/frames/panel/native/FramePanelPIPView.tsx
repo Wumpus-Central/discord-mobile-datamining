@@ -1,16 +1,16 @@
-// === Module 17046: FramePanelPIPView ===
+// === Module 17077: FramePanelPIPView ===
 
-// Module 17046 (FramePanelPIPView)
-import FrameViewDefault from "FrameView" /* 16618 */;
-import ActivityPanelPIPView from "ActivityPanelPIPView" /* 17020 */;
-import FramePanelStateContextDefault from "FramePanelStateContext" /* 17044 */;
+// Module 17077 (FramePanelPIPView)
+import FrameViewDefault from "FrameView" /* 16650 */;
+import ActivityPanelPIPView from "ActivityPanelPIPView" /* 17051 */;
+import FramePanelStateContextDefault from "FramePanelStateContext" /* 17075 */;
 import noop from "module_19" /* 19 */;
-import FramesStore from "FramesStore" /* 9515 */;
+import FramesStore from "FramesStore" /* 9542 */;
 
 require = fn;
-const FramesConstants = fn(9516);
+const FramesConstants = fn(9543);
 ({ asLaunched: hasOwnProperty, FrameLayoutModes: metroRequire, getPipOrientationLockStateForFrame: closure_7 } = FramesConstants);
-let closure_8 = fn(17021).DEFAULT_PORTRAIT_LETTERBOX_CONFIG;
+let closure_8 = fn(17052).DEFAULT_PORTRAIT_LETTERBOX_CONFIG;
 const jsx = fn(21).jsx;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/frames/panel/native/FramePanelPIPView.tsx");

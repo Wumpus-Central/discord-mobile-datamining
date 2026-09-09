@@ -1,17 +1,17 @@
-// === Module 11826: StringSelectComponentActionSheet ===
+// === Module 11852: StringSelectComponentActionSheet ===
 
-// Module 11826 (StringSelectComponentActionSheet)
+// Module 11852 (StringSelectComponentActionSheet)
 import nativeDefault from "native" /* 576 */;
 import Server from "Server" /* 1894 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4527 */;
-import Text_Text from "Text/Text" /* 4556 */;
-import EmojiDefault from "Emoji" /* 7130 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4541 */;
+import Text_Text from "Text/Text" /* 4570 */;
+import EmojiDefault from "Emoji" /* 7144 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-fn(4560);
+fn(4574);
 let createStyles = { selectionOptionItemWithDescription: { minHeight: 64 }, selectionOptionItemDescription: { marginTop: 2 }, emojiWrapper: null, textEmoji: null, fastImageEmoji: null };
 createStyles = { flexShrink: 0, borderRadius: nativeDefault.radii.xs, overflow: "hidden" };
 createStyles.emojiWrapper = createStyles;
@@ -30,7 +30,7 @@ export default function StringSelectComponentActionSheet(selectionActionComponen
   ({ labelComponent, channelId, containerId, allowEmpty } = selectionActionComponent);
   let tmp = callback();
   dependencyMap = tmp;
-  let obj = selectionActionComponent(8119);
+  let obj = selectionActionComponent(8145);
   let tmp3 = first(noop.useState(new Set(obj.getInitialStringSelectOptions(selectionActionComponent, containerId))), 2);
   first = tmp3[0];
   noop = tmp3[1];
@@ -141,5 +141,5 @@ export default function StringSelectComponentActionSheet(selectionActionComponen
   };
   obj.channelId = channelId;
   obj.allowEmpty = allowEmpty;
-  return tmp9(onSubmit(11827), obj);
+  return tmp9(onSubmit(11853), obj);
 };

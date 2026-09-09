@@ -1,7 +1,7 @@
-// === Module 5121: AgeRestrictionUtils ===
+// === Module 5135: AgeRestrictionUtils ===
 
-// Module 5121 (AgeRestrictionUtils)
-import AgeRestrictionStatus from "AgeRestrictionStatus" /* 5115 */;
+// Module 5135 (AgeRestrictionUtils)
+import AgeRestrictionStatus from "AgeRestrictionStatus" /* 5129 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_common/js/shared/modules/content_classification/lib/AgeRestrictionUtils.tsx");

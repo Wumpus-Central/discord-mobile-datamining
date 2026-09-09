@@ -1,19 +1,19 @@
-// === Module 17488: StageBoostUpsellManager ===
+// === Module 17519: StageBoostUpsellManager ===
 
-// Module 17488 (StageBoostUpsellManager)
+// Module 17519 (StageBoostUpsellManager)
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
 import StageChannelPermissions from "StageChannelPermissions" /* 1965 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4527 */;
-import StageMediaHooks from "StageMediaHooks" /* 5417 */;
-import useChannelVideoLimit from "useChannelVideoLimit" /* 9093 */;
-import ActionSheetStore from "ActionSheetStore" /* 4251 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4541 */;
+import StageMediaHooks from "StageMediaHooks" /* 5431 */;
+import useChannelVideoLimit from "useChannelVideoLimit" /* 9120 */;
+import ActionSheetStore from "ActionSheetStore" /* 4264 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
-import PermissionStore from "PermissionStore" /* 4199 */;
+import PermissionStore from "PermissionStore" /* 4212 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2011 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7118 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7132 */;
 
 require = fn;
-const STAGE_BOOSTING_SHEET_KEY = fn(5414).STAGE_BOOSTING_SHEET_KEY;
+const STAGE_BOOSTING_SHEET_KEY = fn(5428).STAGE_BOOSTING_SHEET_KEY;
 let c8 = false;
 class StageBoostUpsellManager extends tmp2 {
   constructor() {
@@ -48,7 +48,7 @@ prototype["handleVoiceStateUpdates"] = function handleVoiceStateUpdates() {
             if (tmp5Result.getChannelVideoLimit(channel).reachedLimit) {
               if (PermissionStore.can(StageChannelPermissions.MODERATE_STAGE_CHANNEL_PERMISSIONS, channel)) {
                 obj = { channel };
-                ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(5430, dependencyMap.paths), STAGE_BOOSTING_SHEET_KEY, obj);
+                ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(5444, dependencyMap.paths), STAGE_BOOSTING_SHEET_KEY, obj);
                 c8 = true;
               }
             }

@@ -1,15 +1,15 @@
-// === Module 13798: CallStateHooks ===
+// === Module 13821: CallStateHooks ===
 
-// Module 13798 (CallStateHooks)
-import ChannelRTCStore from "ChannelRTCStore" /* 4576 */;
+// Module 13821 (CallStateHooks)
+import ChannelRTCStore from "ChannelRTCStore" /* 4590 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import CallStore from "CallStore" /* 5278 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 4583 */;
+import CallStore from "CallStore" /* 5292 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 4597 */;
 
 const require = fn;
 const Constants = fn(1074);
 ({ EMPTY_STRING_SNOWFLAKE_ID: closure_7, RTCConnectionStates: closure_8 } = Constants);
-const ParticipantTypes = fn(4581).ParticipantTypes;
+const ParticipantTypes = fn(4595).ParticipantTypes;
 let obj = {};
 const merged = Object.assign({ initialized: false, callId: "PX_16" });
 obj = { DISCONNECTED: "disconneted", DISCONNECTING: "disconnecting", CONNECTING: "connecting", RINGING: "ringing", CONNECTED: "connected" };
@@ -58,7 +58,7 @@ export default function _default() {
     }
     return tmp;
   });
-  const tmp3 = id(9220)();
+  const tmp3 = id(9247)();
   dependencyMap = tmp3;
   const items2 = [RTCConnectionStore];
   stateFromStores = require("initialize").useStateFromStores(items2, RTCConnectionStore.getRTCConnectionId, []);

@@ -13,9 +13,9 @@ import mappers from "mappers" /* 1882 */;
 import isActivityParticipantValidGuildMemberDefault from "isActivityParticipantValidGuildMember" /* 1893 */;
 import GuildRoleUtils from "GuildRoleUtils" /* 2019 */;
 import useCommunicationDisabledNoticeStore from "useCommunicationDisabledNoticeStore" /* 2022 */;
-import GuildMemberConstants from "GuildMemberConstants" /* 4187 */;
-import CommunicationDisabledUtils from "CommunicationDisabledUtils" /* 4188 */;
-import embeddedActivityLocationUtils from "embeddedActivityLocationUtils" /* 4189 */;
+import GuildMemberConstants from "GuildMemberConstants" /* 4200 */;
+import CommunicationDisabledUtils from "CommunicationDisabledUtils" /* 4201 */;
+import embeddedActivityLocationUtils from "embeddedActivityLocationUtils" /* 4202 */;
 import ImpersonateStore from "ImpersonateStore" /* 2014 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
@@ -88,7 +88,7 @@ function computeDerivedMemberState(unsafeMutableRoles, roles) {
   let tmp3;
   let tmp4;
   if (0 === roles.length) {
-    return { colorString: null, colorStrings: null, colorRoleId: "call", hoistRoleId: "body", iconRoleId: "fileFinishedImporting", highestRoleId: "accessible" };
+    return { colorString: null, colorStrings: null, colorRoleId: "call", hoistRoleId: "memo", iconRoleId: "fileFinishedImporting", highestRoleId: "accessible" };
   } else {
     const iter = roles[Symbol.iterator]();
     while (iter !== undefined) {

@@ -1,14 +1,14 @@
-// === Module 12099: LearnMoreAboutAppsSection ===
+// === Module 12125: LearnMoreAboutAppsSection ===
 
-// Module 12099 (LearnMoreAboutAppsSection)
+// Module 12125 (LearnMoreAboutAppsSection)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2024 */;
-import LinkingDefault from "Linking" /* 4255 */;
-import Text_Text from "Text/Text" /* 4556 */;
-import Pressables from "Pressables" /* 5123 */;
-import AppLauncherTypes from "AppLauncherTypes" /* 9414 */;
-import TrackSectionHeaderDefault from "TrackSectionHeader" /* 12100 */;
+import LinkingDefault from "Linking" /* 4268 */;
+import Text_Text from "Text/Text" /* 4570 */;
+import Pressables from "Pressables" /* 5137 */;
+import AppLauncherTypes from "AppLauncherTypes" /* 9441 */;
+import TrackSectionHeaderDefault from "TrackSectionHeader" /* 12126 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -16,7 +16,7 @@ const View = fn(17).View;
 const HelpdeskArticles = fn(1074).HelpdeskArticles;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-fn(4560);
+fn(4574);
 let createStyles = { container: null, body: null, divider: null, linkButton: null };
 createStyles = { marginTop: nativeDefault.space.PX_32, borderRadius: nativeDefault.radii.lg, alignItems: "center", backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED, paddingHorizontal: nativeDefault.space.PX_64 };
 createStyles.container = createStyles;

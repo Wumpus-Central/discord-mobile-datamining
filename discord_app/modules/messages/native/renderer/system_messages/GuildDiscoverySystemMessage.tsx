@@ -1,8 +1,8 @@
-// === Module 8008: GuildDiscoverySystemMessage ===
+// === Module 8022: GuildDiscoverySystemMessage ===
 
-// Module 8008 (GuildDiscoverySystemMessage)
+// Module 8022 (GuildDiscoverySystemMessage)
 import util from "util" /* 1114 */;
-import createCommonMessageDefault from "createCommonMessage" /* 7964 */;
+import createCommonMessageDefault from "createCommonMessage" /* 7978 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/messages/native/renderer/system_messages/GuildDiscoverySystemMessage.tsx");

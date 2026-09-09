@@ -1,19 +1,19 @@
-// === Module 9804: GuildEventRecurrence ===
+// === Module 9831: GuildEventRecurrence ===
 
-// Module 9804 (GuildEventRecurrence)
+// Module 9831 (GuildEventRecurrence)
 import nativeDefault from "native" /* 576 */;
-import ScheduleUtils from "ScheduleUtils" /* 9670 */;
-import GuildScheduledEventModalActionCreators from "GuildScheduledEventModalActionCreators" /* 9703 */;
+import ScheduleUtils from "ScheduleUtils" /* 9697 */;
+import GuildScheduledEventModalActionCreators from "GuildScheduledEventModalActionCreators" /* 9730 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 import GuildStore from "GuildStore" /* 1979 */;
-import GuildScheduledEventStore from "GuildScheduledEventStore" /* 7526 */;
+import GuildScheduledEventStore from "GuildScheduledEventStore" /* 7540 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-fn(4560);
+fn(4574);
 let createStyles = { container: { alignSelf: "stretch", flexDirection: "row", justifyContent: "space-between", alignItems: "center" }, eventHeader: { marginStart: 8, flexShrink: 0, flexGrow: 1 }, active: null, actions: null, secondarySmallButton: null, secondarySmallIcon: null };
 createStyles = { backgroundColor: nativeDefault.colors.INTERACTIVE_BACKGROUND_SELECTED, borderRadius: nativeDefault.radii.xs };
 createStyles.active = createStyles;
@@ -41,7 +41,7 @@ export default function GuildEventRecurrence(recurrenceId) {
   if (stateFromStores != null) {
     id = stateFromStores.id;
   }
-  obj = guildEventId(9674)(recurrenceId, id);
+  obj = guildEventId(9701)(recurrenceId, id);
   let tmp2Result = tmp2(504);
   const items1 = [c6];
   stateFromStores1 = tmp2Result.useStateFromStores(items1, () => {
@@ -61,13 +61,13 @@ export default function GuildEventRecurrence(recurrenceId) {
     return ChannelStore.getChannel(channel_id);
   });
   const tmp5 = guildEventId;
-  const tmp6 = guildEventId(9674);
+  const tmp6 = guildEventId(9701);
   if (stateFromStores2 == null) {
     stateFromStores2 = stateFromStores1;
   }
-  closure_5 = recurrenceId(9676).useManageResourcePermissions(stateFromStores2).canManageGuildEvent(stateFromStores);
-  const tmp2Result1 = recurrenceId(9676);
-  const eventScheduleById = recurrenceId(9673).useEventScheduleById(guildEventId, recurrenceId);
+  closure_5 = recurrenceId(9703).useManageResourcePermissions(stateFromStores2).canManageGuildEvent(stateFromStores);
+  const tmp2Result1 = recurrenceId(9703);
+  const eventScheduleById = recurrenceId(9700).useEventScheduleById(guildEventId, recurrenceId);
   let toISOStringResult;
   if (eventScheduleById != null) {
     const startTime = eventScheduleById.startTime;
@@ -128,14 +128,14 @@ export default function GuildEventRecurrence(recurrenceId) {
       children: null
     };
     const obj2 = { isActive, event: stateFromStores, showUserCount: false, showCreator: false, recurrenceId };
-    obj1.children = closure_8(tmp2(9777).GuildEventCardHeader, obj2);
-    const items5 = [closure_8(tmp2(5123).PressableOpacity, obj1), ];
+    obj1.children = closure_8(tmp2(9804).GuildEventCardHeader, obj2);
+    const items5 = [closure_8(tmp2(5137).PressableOpacity, obj1), ];
     const obj3 = { style: tmp.actions, children: null };
     if (tmp21Result) {
       const obj4 = { variant: "text-sm/semibold", color: "text-feedback-critical", children: null };
       const intl2 = tmp2(1114).intl;
       obj4.children = intl2.string(tmp2(1114).t.fyBVRm);
-      tmp21Result = closure_8(tmp2(4556).Text, obj4);
+      tmp21Result = closure_8(tmp2(4570).Text, obj4);
     }
     const items6 = [tmp21Result, ];
     const obj5 = { accessible: true, accessibilityRole: "button", accessibilityLabel: null, onPress: null, style: null, children: null };
@@ -151,13 +151,13 @@ export default function GuildEventRecurrence(recurrenceId) {
       }
     };
     obj5.style = tmp.secondarySmallButton;
-    const obj6 = { source: tmp5(9805), size: tmp2(1178).Icon.Sizes.REFRESH_SMALL_16, style: tmp.secondarySmallIcon };
+    const obj6 = { source: tmp5(9832), size: tmp2(1178).Icon.Sizes.REFRESH_SMALL_16, style: tmp.secondarySmallIcon };
     obj5.children = closure_8(tmp2(1178).Icon, obj6);
-    items6[1] = closure_8(tmp2(5123).PressableOpacity, obj5);
+    items6[1] = closure_8(tmp2(5137).PressableOpacity, obj5);
     obj3.children = items6;
     items5[1] = closure_9(stateFromStores1, obj3);
     obj.children = items5;
     return closure_9(stateFromStores1, obj);
   }
-  const tmp2Result2 = recurrenceId(9673);
+  const tmp2Result2 = recurrenceId(9700);
 };

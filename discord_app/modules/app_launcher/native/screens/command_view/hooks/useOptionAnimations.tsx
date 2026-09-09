@@ -1,8 +1,8 @@
-// === Module 12165: useOptionAnimations ===
+// === Module 12191: useOptionAnimations ===
 
-// Module 12165 (useOptionAnimations)
-import ReanimatedRexport from "ReanimatedRexport" /* 4296 */;
-import timing from "timing" /* 4561 */;
+// Module 12191 (useOptionAnimations)
+import ReanimatedRexport from "ReanimatedRexport" /* 4310 */;
+import timing from "timing" /* 4575 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -18,7 +18,7 @@ class LayoutAnimation {
     return obj1;
   }
 }
-let obj = { withTiming: fn(4561).withTiming, OPTION_ENTRY_EXIT_LAYOUT_SHIFT_DURATION: 300 };
+let obj = { withTiming: fn(4575).withTiming, OPTION_ENTRY_EXIT_LAYOUT_SHIFT_DURATION: 300 };
 LayoutAnimation.__closure = obj;
 LayoutAnimation.__workletHash = 16804895997501;
 LayoutAnimation.__initData = { code: "function LayoutAnimation_useOptionAnimationsTsx1(values){const{withTiming,OPTION_ENTRY_EXIT_LAYOUT_SHIFT_DURATION}=this.__closure;const animations={originY:withTiming(values.targetOriginY,{duration:OPTION_ENTRY_EXIT_LAYOUT_SHIFT_DURATION})};const initialValues={originY:values.currentOriginY};return{initialValues:initialValues,animations:animations};}" };
@@ -36,7 +36,7 @@ class ExitingAnimation {
     return obj2;
   }
 }
-obj = { withTiming: fn(4561).withTiming, OPTION_ENTRY_EXIT_LAYOUT_SHIFT_DURATION: 300 };
+obj = { withTiming: fn(4575).withTiming, OPTION_ENTRY_EXIT_LAYOUT_SHIFT_DURATION: 300 };
 ExitingAnimation.__closure = obj;
 ExitingAnimation.__workletHash = 8977480282966;
 ExitingAnimation.__initData = { code: "function ExitingAnimation_useOptionAnimationsTsx2(values){const{withTiming,OPTION_ENTRY_EXIT_LAYOUT_SHIFT_DURATION}=this.__closure;const offScreenX=Math.min(values.currentOriginX-values.windowWidth,-values.windowWidth);const animations={opacity:withTiming(0,{duration:OPTION_ENTRY_EXIT_LAYOUT_SHIFT_DURATION}),originX:withTiming(offScreenX,{duration:OPTION_ENTRY_EXIT_LAYOUT_SHIFT_DURATION})};const initialValues={originX:values.currentOriginX,opacity:1};return{initialValues:initialValues,animations:animations};}" };
@@ -48,7 +48,7 @@ export const OPTION_ENTRY_EXIT_LAYOUT_SHIFT_DURATION = 300;
 export { LayoutAnimation };
 export { ExitingAnimation };
 export const useOptionEnteringAnimation = function useOptionEnteringAnimation() {
-  let obj = sharedValue(4296);
+  let obj = sharedValue(4310);
   sharedValue = obj.useSharedValue(false);
   dependencyMap = noop.useRef([]);
   let items = [sharedValue];
@@ -62,19 +62,19 @@ export const useOptionEnteringAnimation = function useOptionEnteringAnimation() 
   obj = {
     EnteringAnimation: _slicedToArray(noop.useState(() => {
       const fn = function n() {
-        sharedValue(4561);
+        sharedValue(4575);
         let obj = { duration: 250, easing: null };
-        const Easing = sharedValue(4296).Easing;
+        const Easing = sharedValue(4310).Easing;
         obj.easing = Easing.bezier(0.25, 1.75, 0.25, 1.25);
-        let obj2 = sharedValue(4561);
+        let obj2 = sharedValue(4575);
         obj = { animations: null, initialValues: null, callback: null };
         const obj1 = { opacity: null, transform: null };
         const withTimingResult = obj.withTiming(1, obj);
         const withTimingResult1 = obj2.withTiming(1, { duration: 200 });
-        obj1.opacity = sharedValue(4296).withDelay(200, withTimingResult1);
+        obj1.opacity = sharedValue(4310).withDelay(200, withTimingResult1);
         obj2 = { scale: null };
-        const obj6 = sharedValue(4296);
-        obj2.scale = sharedValue(4296).withDelay(200, withTimingResult);
+        const obj6 = sharedValue(4310);
+        obj2.scale = sharedValue(4310).withDelay(200, withTimingResult);
         const items = [obj2];
         obj1.transform = items;
         obj.animations = obj1;
@@ -83,7 +83,7 @@ export const useOptionEnteringAnimation = function useOptionEnteringAnimation() 
         obj3.transform = items1;
         obj.initialValues = obj3;
         obj.callback = function callback() {
-          sharedValue(4296).runOnJS(closure_1_2)();
+          sharedValue(4310).runOnJS(closure_1_2)();
         };
         return obj;
       };

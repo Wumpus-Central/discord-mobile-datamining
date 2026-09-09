@@ -1,12 +1,12 @@
-// === Module 15193: QuestDockEnrolledHeader ===
+// === Module 15220: QuestDockEnrolledHeader ===
 
-// Module 15193 (QuestDockEnrolledHeader)
-import Text_Text from "Text/Text" /* 4556 */;
-import QuestTypes from "QuestTypes" /* 5447 */;
-import hooks_QuestHooks from "hooks/QuestHooks" /* 11488 */;
-import QuestCopyHooks from "QuestCopyHooks" /* 11780 */;
-import QuestDockCreativeContext from "QuestDockCreativeContext" /* 15105 */;
-import QuestProgressIndicatorDefault from "QuestProgressIndicator" /* 15134 */;
+// Module 15220 (QuestDockEnrolledHeader)
+import Text_Text from "Text/Text" /* 4570 */;
+import QuestTypes from "QuestTypes" /* 5461 */;
+import hooks_QuestHooks from "hooks/QuestHooks" /* 11515 */;
+import QuestCopyHooks from "QuestCopyHooks" /* 11806 */;
+import QuestDockCreativeContext from "QuestDockCreativeContext" /* 15132 */;
+import QuestProgressIndicatorDefault from "QuestProgressIndicator" /* 15161 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -14,7 +14,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4560);
+const createStyles = fn(4574);
 let closure_7 = createStyles.createStyles({ wrapper: { alignItems: "center", display: "flex", flexDirection: "row", flexGrow: 1, flexShrink: 1, gap: 8, justifyContent: "center", padding: 8 }, progressIndicatorWrapper: { flexGrow: 0, flexShrink: 0 }, copy: { flexGrow: 1, flexShrink: 1 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/quests/native/QuestDock/QuestDockEnrolledHeader.tsx");

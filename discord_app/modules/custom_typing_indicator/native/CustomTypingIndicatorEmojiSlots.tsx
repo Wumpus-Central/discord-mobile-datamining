@@ -1,14 +1,14 @@
-// === Module 15363: CustomTypingIndicatorEmojiSlots ===
+// === Module 15392: CustomTypingIndicatorEmojiSlots ===
 
-// Module 15363 (CustomTypingIndicatorEmojiSlots)
+// Module 15392 (CustomTypingIndicatorEmojiSlots)
 import CustomTypingIndicatorTypes from "CustomTypingIndicatorTypes" /* 1392 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1396 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4296 */;
-import Stack_Stack from "Stack/Stack" /* 4973 */;
-import spring from "spring" /* 4974 */;
-import springPresets from "springPresets" /* 4978 */;
-import EmojiDefault from "Emoji" /* 7130 */;
-import openEmojiPickerActionSheet from "openEmojiPickerActionSheet" /* 11126 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4310 */;
+import Stack_Stack from "Stack/Stack" /* 4987 */;
+import spring from "spring" /* 4988 */;
+import springPresets from "springPresets" /* 4992 */;
+import EmojiDefault from "Emoji" /* 7144 */;
+import openEmojiPickerActionSheet from "openEmojiPickerActionSheet" /* 11153 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -38,7 +38,7 @@ function EmojiGlyph(emoji) {
 }
 function PlaceholderEmojiGlyph(pressed) {
   pressed = pressed.pressed;
-  pressed(4296);
+  pressed(4310);
   const fn = function t() {
     value = pressed.get();
     let obj = { opacity: null, transform: null };
@@ -52,7 +52,7 @@ function PlaceholderEmojiGlyph(pressed) {
     obj.transform = items;
     return obj;
   };
-  let obj = { pressed, withSpring: pressed(4974).withSpring, interpolate: pressed(4296).interpolate, PLACEHOLDER_EMOJI_RESTING_OPACITY: 0.4, ON_PRESS_SPRING: pressed(4978).ON_PRESS_SPRING, PLACEHOLDER_EMOJI_ACTIVE_SCALE: 1.14 };
+  let obj = { pressed, withSpring: pressed(4988).withSpring, interpolate: pressed(4310).interpolate, PLACEHOLDER_EMOJI_RESTING_OPACITY: 0.4, ON_PRESS_SPRING: pressed(4992).ON_PRESS_SPRING, PLACEHOLDER_EMOJI_ACTIVE_SCALE: 1.14 };
   fn.__closure = obj;
   fn.__workletHash = 16574219123934;
   fn.__initData = __initData;
@@ -123,8 +123,8 @@ function CustomTypingIndicatorEmojiSlot(index) {
 const EmojiIntention = fn(1374).EmojiIntention;
 const jsx = fn(21).jsx;
 let c7 = 28;
-let items = [fn(15364).EmojiAngryFaceWithHornsIcon, fn(15366).EmojiColdFaceIcon, fn(15368).EmojiCowboyHatFaceIcon, fn(15370).EmojiCryingFaceIcon, fn(15372).EmojiDisguisedFaceIcon, fn(15374).EmojiFaceVomitingIcon, fn(15376).EmojiFaceWithMonocleIcon, fn(15378).EmojiFaceWithSpiralEyesIcon, fn(15380).EmojiMeltingFaceIcon, fn(15382).EmojiMoneyMouthFaceIcon, fn(15384).EmojiNerdFaceIcon, fn(15386).EmojiPartyingFaceIcon, fn(15388).EmojiSalutingFaceIcon, fn(15390).EmojiSkullIcon, fn(15392).EmojiSmilingFaceWithHornsIcon, fn(15394).EmojiSmilingFaceWithSunglassesIcon, fn(15396).EmojiSquintingFaceWithTongueIcon, fn(15398).EmojiUpsideDownFaceIcon, fn(15400).EmojiWoozyFaceIcon, fn(15402).EmojiZanyFaceIcon, fn(15404).EmojiRollingOnTheFloorLaughingIcon, fn(15406).EmojiSmilingFaceWithHeartsIcon];
-const createStyles = fn(4560);
+let items = [fn(15393).EmojiAngryFaceWithHornsIcon, fn(15395).EmojiColdFaceIcon, fn(15397).EmojiCowboyHatFaceIcon, fn(15399).EmojiCryingFaceIcon, fn(15401).EmojiDisguisedFaceIcon, fn(15403).EmojiFaceVomitingIcon, fn(15405).EmojiFaceWithMonocleIcon, fn(15407).EmojiFaceWithSpiralEyesIcon, fn(15409).EmojiMeltingFaceIcon, fn(15411).EmojiMoneyMouthFaceIcon, fn(15413).EmojiNerdFaceIcon, fn(15415).EmojiPartyingFaceIcon, fn(15417).EmojiSalutingFaceIcon, fn(15419).EmojiSkullIcon, fn(15421).EmojiSmilingFaceWithHornsIcon, fn(15423).EmojiSmilingFaceWithSunglassesIcon, fn(15425).EmojiSquintingFaceWithTongueIcon, fn(15427).EmojiUpsideDownFaceIcon, fn(15429).EmojiWoozyFaceIcon, fn(15431).EmojiZanyFaceIcon, fn(15433).EmojiRollingOnTheFloorLaughingIcon, fn(15435).EmojiSmilingFaceWithHeartsIcon];
+const createStyles = fn(4574);
 let closure_9 = createStyles.createStyles({ slot: { flex: 1, height: 64, alignItems: "center", justifyContent: "center" } });
 const __initData = { code: "function CustomTypingIndicatorEmojiSlotsTsx1(){const{pressed,withSpring,interpolate,PLACEHOLDER_EMOJI_RESTING_OPACITY,ON_PRESS_SPRING,PLACEHOLDER_EMOJI_ACTIVE_SCALE}=this.__closure;const value=pressed.get();return{opacity:withSpring(interpolate(value,[0,1],[PLACEHOLDER_EMOJI_RESTING_OPACITY,1]),ON_PRESS_SPRING),transform:[{scale:withSpring(interpolate(value,[0,1],[1,PLACEHOLDER_EMOJI_ACTIVE_SCALE]),ON_PRESS_SPRING)}]};}" };
 let size = fn(2);

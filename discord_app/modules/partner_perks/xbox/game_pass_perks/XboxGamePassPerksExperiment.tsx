@@ -1,6 +1,6 @@
-// === Module 7556: XboxGamePassPerksExperiment ===
+// === Module 7570: XboxGamePassPerksExperiment ===
 
-// Module 7556 (XboxGamePassPerksExperiment)
+// Module 7570 (XboxGamePassPerksExperiment)
 import ApexExperiment from "ApexExperiment" /* 1433 */;
 import size from "module_2" /* 2 */;
 

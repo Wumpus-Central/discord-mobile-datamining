@@ -1,6 +1,6 @@
-// === Module 7905: ConversationExperiments ===
+// === Module 7919: ConversationExperiments ===
 
-// Module 7905 (ConversationExperiments)
+// Module 7919 (ConversationExperiments)
 import GuildStore from "GuildStore" /* 1979 */;
 
 const require = fn;

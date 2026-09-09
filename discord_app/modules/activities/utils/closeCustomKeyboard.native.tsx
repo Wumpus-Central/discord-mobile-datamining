@@ -1,7 +1,7 @@
-// === Module 9552: closeCustomKeyboard ===
+// === Module 9579: closeCustomKeyboard ===
 
-// Module 9552 (closeCustomKeyboard)
-import ChatInputUtils from "ChatInputUtils" /* 4425 */;
+// Module 9579 (closeCustomKeyboard)
+import ChatInputUtils from "ChatInputUtils" /* 4439 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/activities/utils/closeCustomKeyboard.native.tsx");

@@ -1,19 +1,19 @@
-// === Module 12321: GuildDirectoryEditDescriptionTemplate ===
+// === Module 12347: GuildDirectoryEditDescriptionTemplate ===
 
-// Module 12321 (GuildDirectoryEditDescriptionTemplate)
+// Module 12347 (GuildDirectoryEditDescriptionTemplate)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GuildDirectoryStore from "GuildDirectoryStore" /* 12316 */;
+import GuildDirectoryStore from "GuildDirectoryStore" /* 12342 */;
 
 const require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: metroRequire, Keyboard: closure_7 } = get_ActivityIndicator);
-const GuildDirectoryConstants = fn(12309);
+const GuildDirectoryConstants = fn(12335);
 ({ DirectoryEntryCategories: closure_9, getHubCategories: c10 } = GuildDirectoryConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
-const createStyles = fn(4560);
+const createStyles = fn(4574);
 let closure_13 = createStyles.createStyles({ container: { marginHorizontal: 16, gap: 24 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/directory_channels/native/components/GuildDirectoryEditDescriptionTemplate.tsx");

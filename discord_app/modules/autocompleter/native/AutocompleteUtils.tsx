@@ -1,14 +1,14 @@
-// === Module 10267: autocompleter/AutocompleteUtils ===
+// === Module 10294: autocompleter/AutocompleteUtils ===
 
-// Module 10267 (autocompleter/AutocompleteUtils)
+// Module 10294 (autocompleter/AutocompleteUtils)
 import nativeDefault from "native" /* 576 */;
-import UserUtilsDefault from "UserUtils" /* 4404 */;
-import useChannelName from "useChannelName" /* 4713 */;
-import TimestampUtils from "TimestampUtils" /* 5022 */;
-import FormDividerDefault from "FormDivider" /* 8604 */;
+import UserUtilsDefault from "UserUtils" /* 4418 */;
+import useChannelName from "useChannelName" /* 4727 */;
+import TimestampUtils from "TimestampUtils" /* 5036 */;
+import FormDividerDefault from "FormDivider" /* 8632 */;
 import noop from "module_19" /* 19 */;
 import GuildChannelStore from "GuildChannelStore" /* 2012 */;
-import RelationshipStore from "RelationshipStore" /* 4209 */;
+import RelationshipStore from "RelationshipStore" /* 4222 */;
 import UserStore from "UserStore" /* 1371 */;
 
 require = fn;
@@ -19,13 +19,13 @@ function AutocompleteFormDivider() {
 let closure_3 = fn(1961).isGuildSelectableChannelType;
 const Constants = fn(1074);
 ({ AutoCompleteResultTypes: closure_7, WHITESPACE_RE: closure_8 } = Constants);
-const ApplicationCommandsConstants = fn(10268);
+const ApplicationCommandsConstants = fn(10295);
 ({ AUTOCOMPLETE_EMOJI_ROW_HEIGHT: closure_9, AUTOCOMPLETE_ROW_HEIGHT: c10 } = ApplicationCommandsConstants);
-const ChannelAutocompleteConstants = fn(5000);
+const ChannelAutocompleteConstants = fn(5014);
 ({ CHANNEL_SENTINEL: closure_11, EMOJI_SENTINEL: closure_12, GAME_MENTION_SENTINEL: map1, MENTION_SENTINEL: closure_14 } = ChannelAutocompleteConstants);
 const jsx = fn(21).jsx;
 const hairlineWidth = fn(17).StyleSheet.hairlineWidth;
-fn(4560);
+fn(4574);
 let createStyles = { itemDivider: null };
 createStyles = { marginLeft: 16, backgroundColor: nativeDefault.colors.BORDER_SUBTLE };
 createStyles.itemDivider = createStyles;

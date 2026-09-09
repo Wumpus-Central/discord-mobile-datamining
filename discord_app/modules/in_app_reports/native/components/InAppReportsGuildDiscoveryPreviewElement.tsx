@@ -1,21 +1,21 @@
-// === Module 9043: InAppReportsGuildDiscoveryPreviewElement ===
+// === Module 9070: InAppReportsGuildDiscoveryPreviewElement ===
 
-// Module 9043 (InAppReportsGuildDiscoveryPreviewElement)
+// Module 9070 (InAppReportsGuildDiscoveryPreviewElement)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import GuildRecordUtils from "GuildRecordUtils" /* 1971 */;
-import ColorUtils from "ColorUtils" /* 4409 */;
-import Text_Text from "Text/Text" /* 4556 */;
-import GuildIconDefault from "GuildIcon" /* 5584 */;
+import ColorUtils from "ColorUtils" /* 4423 */;
+import Text_Text from "Text/Text" /* 4570 */;
+import GuildIconDefault from "GuildIcon" /* 5598 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4552 */;
+import AccessibilityStore from "AccessibilityStore" /* 4566 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-fn(4560);
+fn(4574);
 let createStyles = { container: { alignSelf: "stretch", marginHorizontal: 16, marginBottom: 16 }, borderColor: null, title: null, itemContainer: null, guildInfo: null, guildName: null, guildIcon: null };
 createStyles = { color: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY };
 createStyles.borderColor = createStyles;

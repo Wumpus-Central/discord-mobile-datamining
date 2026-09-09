@@ -1,22 +1,22 @@
-// === Module 13003: ContentInventoryActivityImageUtils ===
+// === Module 13029: ContentInventoryActivityImageUtils ===
 
-// Module 13003 (ContentInventoryActivityImageUtils)
+// Module 13029 (ContentInventoryActivityImageUtils)
 import _mod19 from "module_19" /* 19 */;
 import util from "util" /* 1114 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1396 */;
 import Constants2 from "Constants" /* 1920 */;
-import PlatformsDefault from "Platforms" /* 5283 */;
-import useGetOrFetchApplications from "useGetOrFetchApplications" /* 7168 */;
-import useGame from "useGame" /* 7309 */;
-import ApplicationAssetUtils from "ApplicationAssetUtils" /* 8139 */;
-import ContentInventoryTypes from "ContentInventoryTypes" /* 8341 */;
-import isCrunchyrollActivityDefault from "isCrunchyrollActivity" /* 8344 */;
-import StageChannelRichPresenceUtils from "StageChannelRichPresenceUtils" /* 10897 */;
-import useEntryActivityAndApplicationDefault from "useEntryActivityAndApplication" /* 13004 */;
-import isOnXboxDefault from "isOnXbox" /* 13006 */;
-import isOnPlayStationDefault from "isOnPlayStation" /* 13007 */;
-import ApplicationStore from "ApplicationStore" /* 4788 */;
+import PlatformsDefault from "Platforms" /* 5297 */;
+import useGetOrFetchApplications from "useGetOrFetchApplications" /* 7182 */;
+import useGame from "useGame" /* 7323 */;
+import ApplicationAssetUtils from "ApplicationAssetUtils" /* 8165 */;
+import ContentInventoryTypes from "ContentInventoryTypes" /* 8369 */;
+import isCrunchyrollActivityDefault from "isCrunchyrollActivity" /* 8372 */;
+import StageChannelRichPresenceUtils from "StageChannelRichPresenceUtils" /* 10924 */;
+import useEntryActivityAndApplicationDefault from "useEntryActivityAndApplication" /* 13030 */;
+import isOnXboxDefault from "isOnXbox" /* 13032 */;
+import isOnPlayStationDefault from "isOnPlayStation" /* 13033 */;
+import ApplicationStore from "ApplicationStore" /* 4802 */;
 import Constants from "Constants" /* 1074 */;
 import size from "module_2" /* 2 */;
 
@@ -192,7 +192,7 @@ function useRichImageForActivity(activity, activityApplication) {
     const application_id = activity.application_id;
   }
   if (null == activity) {
-    return { largeImage: "jsxs", smallImage: "channel" };
+    return { largeImage: "Array", smallImage: "PX_16" };
   } else {
     let large_image;
     if (activity != null) {

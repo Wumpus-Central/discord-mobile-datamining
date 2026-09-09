@@ -1,15 +1,15 @@
-// === Module 15712: DevToolsAgeVerificationScreen ===
+// === Module 15742: DevToolsAgeVerificationScreen ===
 
-// Module 15712 (DevToolsAgeVerificationScreen)
+// Module 15742 (DevToolsAgeVerificationScreen)
 import nativeDefault from "native" /* 576 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1611 */;
-import TableRow from "TableRow" /* 5605 */;
-import TableRowArrow from "TableRowArrow" /* 5612 */;
-import TableRowGroup from "TableRowGroup" /* 5687 */;
-import KeyIcon from "KeyIcon" /* 6958 */;
-import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 8411 */;
-import AgeVerificationAnalyticsUtils from "AgeVerificationAnalyticsUtils" /* 8413 */;
-import AgeVerificationURLActionCreators from "AgeVerificationURLActionCreators" /* 8417 */;
+import TableRow from "TableRow" /* 5619 */;
+import TableRowArrow from "TableRowArrow" /* 5626 */;
+import TableRowGroup from "TableRowGroup" /* 5701 */;
+import KeyIcon from "KeyIcon" /* 6972 */;
+import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 8439 */;
+import AgeVerificationAnalyticsUtils from "AgeVerificationAnalyticsUtils" /* 8441 */;
+import AgeVerificationURLActionCreators from "AgeVerificationURLActionCreators" /* 8445 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 
@@ -57,7 +57,7 @@ let closure_9 = async function _showAgeVerificationTestModal() {
 const ScrollView = fn(17).ScrollView;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-fn(4560);
+fn(4574);
 let createStyles = { container: null, content: null };
 createStyles = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 createStyles.container = createStyles;

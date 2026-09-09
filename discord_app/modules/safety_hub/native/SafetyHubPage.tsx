@@ -1,23 +1,23 @@
-// === Module 14771: SafetyHubPage ===
+// === Module 14797: SafetyHubPage ===
 
-// Module 14771 (SafetyHubPage)
+// Module 14797 (SafetyHubPage)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 576 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4527 */;
-import Text_Text from "Text/Text" /* 4556 */;
-import AuthenticationActionCreatorsDefault from "AuthenticationActionCreators" /* 6593 */;
-import MonitoringAgentDefault from "MonitoringAgent" /* 7602 */;
-import MetricEvents from "MetricEvents" /* 7607 */;
-import SafetyHubActionCreatorsAll from "SafetyHubActionCreators" /* 11886 */;
-import AutomatedUnderageAppealModalActionCreatorsDefault from "AutomatedUnderageAppealModalActionCreators" /* 11888 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4541 */;
+import Text_Text from "Text/Text" /* 4570 */;
+import AuthenticationActionCreatorsDefault from "AuthenticationActionCreators" /* 6607 */;
+import MonitoringAgentDefault from "MonitoringAgent" /* 7616 */;
+import MetricEvents from "MetricEvents" /* 7621 */;
+import SafetyHubActionCreatorsAll from "SafetyHubActionCreators" /* 11912 */;
+import AutomatedUnderageAppealModalActionCreatorsDefault from "AutomatedUnderageAppealModalActionCreators" /* 11914 */;
 import noop from "module_19" /* 19 */;
-import SafetyHubStore from "SafetyHubStore" /* 8430 */;
+import SafetyHubStore from "SafetyHubStore" /* 8458 */;
 
 const util = hyh4ls(1114);
 const native = hyh4ls(1178);
-const components_Button_Button = hyh4ls(4975);
+const components_Button_Button = hyh4ls(4989);
 require = fn;
 function handleLogInClick() {
   AuthenticationActionCreatorsDefault.closeSuspendedUser();
@@ -109,12 +109,12 @@ function AutomatedUnderageAppealStatus() {
 }
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, ActivityIndicator: metroRequire, ScrollView: closure_7 } = get_ActivityIndicator);
-const AgeCheckStatus = fn(8419).AgeCheckStatus;
+const AgeCheckStatus = fn(8447).AgeCheckStatus;
 const Constants = fn(1074);
 ({ AnalyticEvents: c10, Routes: closure_11 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
-fn(4560);
+fn(4574);
 let createStyles = { container: null, loadingIndicator: null, body: null };
 createStyles = { paddingHorizontal: nativeDefault.space.PX_12, paddingVertical: nativeDefault.space.PX_12 };
 createStyles.container = createStyles;
@@ -150,7 +150,7 @@ export default function SafetyHubPage(visible) {
   const effect = noop.useEffect(() => {
     if (visible) {
       if (null != safetyHubFetchError) {
-        ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(14773, dependencyMap.paths), "SafetyHubErrorActionSheet", {});
+        ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(14799, dependencyMap.paths), "SafetyHubErrorActionSheet", {});
       }
     }
     ActionSheetActionCreatorsDefault.hideActionSheet("SafetyHubErrorActionSheet");

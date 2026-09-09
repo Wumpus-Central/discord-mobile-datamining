@@ -1,12 +1,12 @@
-// === Module 8033: getTagProperties ===
+// === Module 8048: getTagProperties ===
 
-// Module 8033 (getTagProperties)
+// Module 8048 (getTagProperties)
 import _mod17 from "module_17" /* 17 */;
 import util from "util" /* 1114 */;
-import MessageConstants from "MessageConstants" /* 4553 */;
-import PublicGuildsUtils from "PublicGuildsUtils" /* 8034 */;
-import isCrosspostDefault from "isCrosspost" /* 8036 */;
-import _modDef8038 from "module_8038" /* 8038 */;
+import MessageConstants from "MessageConstants" /* 4567 */;
+import PublicGuildsUtils from "PublicGuildsUtils" /* 8049 */;
+import isCrosspostDefault from "isCrosspost" /* 8051 */;
+import _modDef8053 from "module_8053" /* 8053 */;
 import size from "module_2" /* 2 */;
 
 const Image = _mod17.Image;
@@ -36,7 +36,7 @@ export default function getTagProperties(arg0) {
           const intl = util.intl;
           let uri;
           if (isVerifiedBotResult) {
-            uri = Image.resolveAssetSource(_modDef8038).uri;
+            uri = Image.resolveAssetSource(_modDef8053).uri;
           }
           flag = isVerifiedBotResult;
           stringResult = intl.string(util.t["9RNkeF"]);
@@ -63,7 +63,7 @@ export default function getTagProperties(arg0) {
         const intl6 = util.intl;
         stringResult2 = intl6.string(util.t.fyE8sH);
       }
-      obj = { tagText: stringResult, tagAccessibilityLabel: null, tagVerified: flag, tagTextColor: "Boolean", tagBackgroundColor: "padding", tagType: SYSTEM_DM_TAG_SYSTEM_TYPE, tagIconUrl: tmp5, opTagText: stringResult2, opTagTextColor: "_abortController", opTagBackgroundColor: "INTERACTION_MODAL_SUBMIT" };
+      obj = { tagText: stringResult, tagAccessibilityLabel: null, tagVerified: flag, tagTextColor: "Boolean", tagBackgroundColor: "accessible", tagType: SYSTEM_DM_TAG_SYSTEM_TYPE, tagIconUrl: tmp5, opTagText: stringResult2, opTagTextColor: false, opTagBackgroundColor: false };
       ({ opTagTextColor: obj3.opTagTextColor, opTagBackgroundColor: obj3.opTagBackgroundColor } = colors);
       return obj;
     } else {

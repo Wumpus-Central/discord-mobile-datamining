@@ -1,8 +1,8 @@
-// === Module 13069: useIsGameFriends ===
+// === Module 13095: useIsGameFriends ===
 
-// Module 13069 (useIsGameFriends)
+// Module 13095 (useIsGameFriends)
 import _slicedToArray from "module_32" /* 32 */;
-import GameRelationshipStore from "GameRelationshipStore" /* 7658 */;
+import GameRelationshipStore from "GameRelationshipStore" /* 7672 */;
 
 const require = fn;
 const RelationshipTypes = fn(1074).RelationshipTypes;

@@ -1,6 +1,6 @@
-// === Module 5606: TableRowGroupContext ===
+// === Module 5620: TableRowGroupContext ===
 
-// Module 5606 (TableRowGroupContext)
+// Module 5620 (TableRowGroupContext)
 import _mod19 from "module_19" /* 19 */;
 import size from "module_2" /* 2 */;
 

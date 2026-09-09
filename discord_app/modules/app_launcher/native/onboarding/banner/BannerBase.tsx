@@ -1,12 +1,12 @@
-// === Module 12065: BannerBase ===
+// === Module 12091: BannerBase ===
 
-// Module 12065 (BannerBase)
+// Module 12091 (BannerBase)
 import nativeDefault from "native" /* 576 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4296 */;
-import spring from "spring" /* 4974 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4310 */;
+import spring from "spring" /* 4988 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4552 */;
+import AccessibilityStore from "AccessibilityStore" /* 4566 */;
 
 require = fn;
 const View = fn(17).View;
@@ -14,9 +14,9 @@ const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
 const PX_12 = nativeDefault.space.PX_12;
 const SPRING_CONFIG = { mass: 1, stiffness: 100, damping: 15 };
-fn(4560);
+fn(4574);
 let createStyles = { banner: null, bannerGradientColor: null, bannerBackgroundGradient: null, imageContainer: null, trinketsLottie: null, bannerTextContainer: null, bannerText: null };
-const rect = { backgroundColor: nativeDefault.colors.BACKGROUND_BRAND, position: "absolute", borderRadius: nativeDefault.radii.lg, paddingHorizontal: nativeDefault.space.PX_16, paddingVertical: PX_12, flexDirection: "row", minHeight: fn(12054).APP_ICON_SIZE + 2 * PX_12 + 4, bottom: nativeDefault.space.PX_16, left: nativeDefault.space.PX_16 };
+const rect = { backgroundColor: nativeDefault.colors.BACKGROUND_BRAND, position: "absolute", borderRadius: nativeDefault.radii.lg, paddingHorizontal: nativeDefault.space.PX_16, paddingVertical: PX_12, flexDirection: "row", minHeight: fn(12080).APP_ICON_SIZE + 2 * PX_12 + 4, bottom: nativeDefault.space.PX_16, left: nativeDefault.space.PX_16 };
 createStyles.banner = rect;
 createStyles.bannerGradientColor = { backgroundColor: "#7eaaff" };
 const rect1 = { position: "absolute", top: 0, left: 0, borderRadius: nativeDefault.radii.lg };
@@ -95,17 +95,17 @@ export default function BannerBase(arg0) {
   obj1 = { start: { x: 0, y: 0 }, end: { x: 0, y: 1 }, colors: items, style: null };
   const items3 = [tmp.bannerBackgroundGradient, { height: tmp3, width: diff }];
   obj1.style = items3;
-  const items4 = [closure_7(sharedValue(4987), obj1), , ];
+  const items4 = [closure_7(sharedValue(5001), obj1), , ];
   obj2 = { style: tmp.imageContainer, children: null };
   obj3 = { style: tmp.trinketsLottie, source: null, autoPlay: null };
   const tmp2 = _slicedToArray(noop.useState(0), 2);
-  obj3.source = require("module_12066");
+  obj3.source = require("module_12092");
   obj3.autoPlay = !stateFromStores;
-  const items5 = [closure_7(sharedValue(5529), obj3), image];
+  const items5 = [closure_7(sharedValue(5543), obj3), image];
   obj2.children = items5;
   items4[1] = closure_8(View, obj2);
   obj4 = { style: tmp.bannerTextContainer, children: closure_7(require("Text/Text").Text, { variant: "text-md/semibold", color: "text-overlay-light", style: tmp.bannerText, children: text }) };
   items4[2] = closure_7(View, obj4);
   obj.children = items4;
-  return closure_8(sharedValue(4296).View, obj);
+  return closure_8(sharedValue(4310).View, obj);
 };

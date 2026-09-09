@@ -1,16 +1,16 @@
-// === Module 12235: application_commands/ApplicationCommandUtils ===
+// === Module 12261: application_commands/ApplicationCommandUtils ===
 
-// Module 12235 (application_commands/ApplicationCommandUtils)
+// Module 12261 (application_commands/ApplicationCommandUtils)
 import AvatarUtilsDefault from "AvatarUtils" /* 1396 */;
 import _modDef1884 from "module_1884" /* 1884 */;
-import DraftStore from "DraftStore" /* 4901 */;
-import ApplicationCommandConstants from "ApplicationCommandConstants" /* 4999 */;
-import ApplicationCommandTypes from "ApplicationCommandTypes" /* 7523 */;
-import UploadAttachmentActionCreatorsDefault from "UploadAttachmentActionCreators" /* 9312 */;
-import showUploadPreviewActionSheetDefault from "showUploadPreviewActionSheet" /* 10638 */;
-import _modDef12236 from "module_12236" /* 12236 */;
-import _modDef12237 from "module_12237" /* 12237 */;
-import UploadAttachmentStore from "UploadAttachmentStore" /* 4900 */;
+import DraftStore from "DraftStore" /* 4915 */;
+import ApplicationCommandConstants from "ApplicationCommandConstants" /* 5013 */;
+import ApplicationCommandTypes from "ApplicationCommandTypes" /* 7537 */;
+import UploadAttachmentActionCreatorsDefault from "UploadAttachmentActionCreators" /* 9339 */;
+import showUploadPreviewActionSheetDefault from "showUploadPreviewActionSheet" /* 10665 */;
+import _modDef12262 from "module_12262" /* 12262 */;
+import _modDef12263 from "module_12263" /* 12263 */;
+import UploadAttachmentStore from "UploadAttachmentStore" /* 4914 */;
 import size from "module_2" /* 2 */;
 
 const DraftType = DraftStore.DraftType;
@@ -23,9 +23,9 @@ export const getApplicationCommandsIconSource = function getApplicationCommandsI
   } else {
     const id = section.id;
     if (BuiltInSectionId.BUILT_IN === id) {
-      return AvatarUtilsDefault.makeSource(_modDef12236);
+      return AvatarUtilsDefault.makeSource(_modDef12262);
     } else if (tmp10.FRECENCY === id) {
-      return AvatarUtilsDefault.makeSource(_modDef12237);
+      return AvatarUtilsDefault.makeSource(_modDef12263);
     } else {
       if (section.type === ApplicationCommandTypes.ApplicationCommandSectionType.APPLICATION) {
         const obj = { id: null, icon: null, bot: null, botIconFirst: true, guildMember: null };

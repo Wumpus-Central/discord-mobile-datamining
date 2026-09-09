@@ -1,10 +1,10 @@
-// === Module 15226: useManageSubscriptionCardData ===
+// === Module 15255: useManageSubscriptionCardData ===
 
-// Module 15226 (useManageSubscriptionCardData)
+// Module 15255 (useManageSubscriptionCardData)
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import GuildStore from "GuildStore" /* 1979 */;
-import GuildRoleSubscriptionsStore from "GuildRoleSubscriptionsStore" /* 4193 */;
+import GuildRoleSubscriptionsStore from "GuildRoleSubscriptionsStore" /* 4206 */;
 
 const require = fn;
 const SubscriptionStatusTypes = fn(1074).SubscriptionStatusTypes;

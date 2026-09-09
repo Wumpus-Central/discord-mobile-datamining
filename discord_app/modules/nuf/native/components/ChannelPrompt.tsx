@@ -1,8 +1,8 @@
-// === Module 12749: ChannelPrompt ===
+// === Module 12775: ChannelPrompt ===
 
-// Module 12749 (ChannelPrompt)
+// Module 12775 (ChannelPrompt)
 import util from "util" /* 1114 */;
-import NavigatorHeader from "NavigatorHeader" /* 5624 */;
+import NavigatorHeader from "NavigatorHeader" /* 5638 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -14,9 +14,9 @@ get_ActivityIndicator = fn(17);
 ({ ScrollView: metroRequire, View: closure_7 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-fn(4560);
+fn(4574);
 let createStyles = { flex: { flex: 1 }, safePadding: null, contentContainer: null, guildIcon: null, guildName: null, title: null, subTitle: null, topicInput: null, buttonWrapper: null, error: null };
-createStyles = { marginTop: fn(5682).NAV_BAR_HEIGHT, flex: 1 };
+createStyles = { marginTop: fn(5696).NAV_BAR_HEIGHT, flex: 1 };
 createStyles.safePadding = createStyles;
 createStyles.contentContainer = { paddingHorizontal: 16 };
 createStyles.guildIcon = { alignSelf: "center" };

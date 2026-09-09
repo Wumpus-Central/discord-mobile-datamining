@@ -1,10 +1,10 @@
-// === Module 15130: QuestModalContentCloudBackground ===
+// === Module 15157: QuestModalContentCloudBackground ===
 
-// Module 15130 (QuestModalContentCloudBackground)
-import themes from "themes" /* 4269 */;
-import useTheme from "useTheme" /* 4495 */;
-import LinearGradientDefault from "LinearGradient" /* 4987 */;
-import FastImageDefault from "FastImage" /* 5587 */;
+// Module 15157 (QuestModalContentCloudBackground)
+import themes from "themes" /* 4282 */;
+import useTheme from "useTheme" /* 4509 */;
+import LinearGradientDefault from "LinearGradient" /* 5001 */;
+import FastImageDefault from "FastImage" /* 5601 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -12,18 +12,18 @@ get_ActivityIndicator = fn(17);
 ({ View: c3, StyleSheet: closure_4 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4560);
+const createStyles = fn(4574);
 let closure_7 = createStyles.createStyles((arg0) => {
   let obj = {};
   const merged = Object.assign(absoluteFillObject.absoluteFillObject);
   obj = { wrapper: null, cloudsImage: null, cloudsImageLight: null, gradient: null, solidBackground: null };
-  const merged1 = Object.assign(arg0 ? { top: "Array" } : { bottom: "Array" });
+  const merged1 = Object.assign(arg0 ? { top: "disabled" } : { bottom: "disabled" });
   obj.height = 380;
   obj.zIndex = 1;
   obj.wrapper = obj;
   obj = {};
   const merged2 = Object.assign(absoluteFillObject.absoluteFillObject);
-  const merged3 = Object.assign(arg0 ? { top: "Array" } : { bottom: "Array" });
+  const merged3 = Object.assign(arg0 ? { top: "disabled" } : { bottom: "disabled" });
   if (arg0) {
     let obj1 = {};
   } else {
@@ -81,7 +81,7 @@ export default function QuestModalContentCloudBackground(align) {
     const obj2 = { style: null, source: null, resizeMode: null };
     const items2 = [isThemeDarkResult ? tmp.cloudsImage : tmp.cloudsImageLight, imgStyle];
     obj2.style = items2;
-    obj2.source = importDefault(isThemeDarkResult ? 15131 : 15132);
+    obj2.source = importDefault(isThemeDarkResult ? 15158 : 15159);
     obj2.resizeMode = str2;
     items1[1] = hasOwnProperty(FastImageDefault, obj2);
     obj.children = items1;

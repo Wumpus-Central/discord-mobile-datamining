@@ -1,14 +1,14 @@
-// === Module 7840: UploaderBase ===
+// === Module 7854: UploaderBase ===
 
-// Module 7840 (UploaderBase)
+// Module 7854 (UploaderBase)
 import LoggerDefault from "Logger" /* 3 */;
 import _modDef12 from "module_12" /* 12 */;
-import uploader_UploadUtils from "uploader/UploadUtils" /* 5136 */;
+import uploader_UploadUtils from "uploader/UploadUtils" /* 5150 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
 const AbortCodes = fn(1074).AbortCodes;
-const FileUploadErrorTypes = fn(4553).FileUploadErrorTypes;
+const FileUploadErrorTypes = fn(4567).FileUploadErrorTypes;
 const logger = new LoggerDefault("UploaderBase.tsx");
 const EventEmitter = fn(568).EventEmitter;
 class UploaderBase extends EventEmitter {
@@ -80,7 +80,7 @@ class UploaderBase extends EventEmitter {
     };
     obj = closure_1(closure_2[5]);
     tmp3.id = obj.uniqueId("Uploader");
-    tmp3._file = { id: tmp3.id, currentSize: 0, totalPreCompressionSize: 0, compressionProgress: 0, progress: 0, rate: 0, hasImage: false, hasVideo: false, attachmentsCount: 0, items: "channel" };
+    tmp3._file = { id: tmp3.id, currentSize: 0, totalPreCompressionSize: 0, compressionProgress: 0, progress: 0, rate: 0, hasImage: false, hasVideo: false, attachmentsCount: 0, items: "accessible" };
     return tmp3;
   }
 }
@@ -134,7 +134,7 @@ prototype["compressAndCheckFileSize"] = function compressAndCheckFileSize() {
                 target = item.target;
               }
             }
-            const uploadTarget = _self(5174).getUploadTarget(target);
+            const uploadTarget = _self(5188).getUploadTarget(target);
             closure_132_0 = uploadTarget;
             if (self.files.length > uploadTarget.getMaxAttachmentsCount()) {
               const _HermesInternal2 = HermesInternal;
@@ -144,14 +144,14 @@ prototype["compressAndCheckFileSize"] = function compressAndCheckFileSize() {
               c9 = 3;
               return { value: false, done: true };
             } else {
-              kestrelConfig = _self(5179).getKestrelConfig({ location: "UploaderBase.compressAndCheckFileSize" });
+              kestrelConfig = _self(5193).getKestrelConfig({ location: "UploaderBase.compressAndCheckFileSize" });
               const _HermesInternal3 = HermesInternal;
               tmp65.log("compressing files for " + self.id);
               const files = self.files;
               _self = files[Symbol.iterator]();
-              const obj15 = _self(5179);
+              const obj15 = _self(5193);
             }
-            const obj14 = _self(5174);
+            const obj14 = _self(5188);
           }
         } else if (1 === tmp9) {
           c7 = 0;
@@ -192,7 +192,7 @@ prototype["compressAndCheckFileSize"] = function compressAndCheckFileSize() {
             c9 = 3;
             return { value: false, done: true };
           } else {
-            effectiveKestrelLimit = _self(5179).getEffectiveKestrelLimit(kestrelConfig, closure_132_0.getMaxFileSize(closure_132_2.channelId));
+            effectiveKestrelLimit = _self(5193).getEffectiveKestrelLimit(kestrelConfig, closure_132_0.getMaxFileSize(closure_132_2.channelId));
             const currentSize2 = closure_132_2.currentSize;
             c3 = currentSize2;
             if (currentSize2 == null) {
@@ -210,7 +210,7 @@ prototype["compressAndCheckFileSize"] = function compressAndCheckFileSize() {
             } else {
               c7 = 0;
             }
-            const obj13 = _self(5179);
+            const obj13 = _self(5193);
           }
         }
         if (_self === undefined) {

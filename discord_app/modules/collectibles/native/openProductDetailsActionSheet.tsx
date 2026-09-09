@@ -1,10 +1,10 @@
-// === Module 8176: openProductDetailsActionSheet ===
+// === Module 8202: openProductDetailsActionSheet ===
 
-// Module 8176 (openProductDetailsActionSheet)
+// Module 8202 (openProductDetailsActionSheet)
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4527 */;
-import CollectiblesActionCreators from "CollectiblesActionCreators" /* 7541 */;
-import CollectiblesProductUtils from "CollectiblesProductUtils" /* 7553 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4541 */;
+import CollectiblesActionCreators from "CollectiblesActionCreators" /* 7555 */;
+import CollectiblesProductUtils from "CollectiblesProductUtils" /* 7567 */;
 import size from "module_2" /* 2 */;
 
 let c3 = "Shop Product Preview";
@@ -34,7 +34,7 @@ export const openProductDetailsActionSheet = function openProductDetailsActionSh
   CollectiblesActionCreators.productDetailsOpened(skuId);
   const tmpResult = CollectiblesActionCreators;
   obj = { product, initialVariantIndex: num, analyticsLocations, shopAnalyticsContext };
-  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(8177, dependencyMap.paths), c3, obj, stack);
+  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(8203, dependencyMap.paths), c3, obj, stack);
 };
 export const openProductDetailsActionSheetForSku = function openProductDetailsActionSheetForSku(skuId, stack) {
   skuId = skuId.skuId;
@@ -42,5 +42,5 @@ export const openProductDetailsActionSheetForSku = function openProductDetailsAc
   let obj = CollectiblesActionCreators;
   obj.productDetailsOpened(skuId);
   obj = { skuId, initialVariantIndex, analyticsLocations, shopAnalyticsContext, stageCollectibleChangeForEditProfile };
-  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(8177, dependencyMap.paths), c3, obj, stack);
+  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(8203, dependencyMap.paths), c3, obj, stack);
 };

@@ -1,20 +1,20 @@
-// === Module 11212: UserProfileAboutMeCard ===
+// === Module 11239: UserProfileAboutMeCard ===
 
-// Module 11212 (UserProfileAboutMeCard)
+// Module 11239 (UserProfileAboutMeCard)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import native from "native" /* 1178 */;
 import KeyboardTypes from "KeyboardTypes" /* 1609 */;
-import useToken from "useToken" /* 4262 */;
-import ChatInputUtils from "ChatInputUtils" /* 4425 */;
-import Text_Text from "Text/Text" /* 4556 */;
-import GuildIconDefault from "GuildIcon" /* 5584 */;
-import UserProfileCardDefault from "UserProfileCard" /* 7207 */;
-import MaskedLinkUtils from "MaskedLinkUtils" /* 8370 */;
-import BioTextDefault from "BioText" /* 11213 */;
-import useFriendsSinceDate from "useFriendsSinceDate" /* 11214 */;
-import UserProfileAboutMeCardCommandDefault from "UserProfileAboutMeCardCommand" /* 11216 */;
+import useToken from "useToken" /* 4275 */;
+import ChatInputUtils from "ChatInputUtils" /* 4439 */;
+import Text_Text from "Text/Text" /* 4570 */;
+import GuildIconDefault from "GuildIcon" /* 5598 */;
+import UserProfileCardDefault from "UserProfileCard" /* 7221 */;
+import MaskedLinkUtils from "MaskedLinkUtils" /* 8398 */;
+import BioTextDefault from "BioText" /* 11240 */;
+import useFriendsSinceDate from "useFriendsSinceDate" /* 11241 */;
+import UserProfileAboutMeCardCommandDefault from "UserProfileAboutMeCardCommand" /* 11243 */;
 import noop from "module_19" /* 19 */;
 import LocaleStore from "LocaleStore" /* 2025 */;
 import GuildMemberStore from "GuildMemberStore" /* 2021 */;
@@ -119,10 +119,10 @@ function MemberJoinDates(userId) {
     }
     return member;
   });
-  let obj3 = userId(5407);
+  let obj3 = userId(5421);
   let obj4 = SnowflakeUtilsDefault;
   const createdAtDate = obj3.getCreatedAtDate(obj4.extractTimestamp(userId), stateFromStores);
-  let obj5 = userId(5407);
+  let obj5 = userId(5421);
   let joinedAt;
   if (stateFromStores2 != null) {
     joinedAt = stateFromStores2.joinedAt;
@@ -135,7 +135,7 @@ function MemberJoinDates(userId) {
   obj = { style: null, children: null };
   const items4 = [closure_16().memberJoinDates, { columnGap }];
   obj.style = items4;
-  obj1 = { themeType, icon: closure_11(tmp4(10823).ClydeIcon, { size: "xs" }), accessibilityLabel: null, children: null };
+  obj1 = { themeType, icon: closure_11(tmp4(10850).ClydeIcon, { size: "xs" }), accessibilityLabel: null, children: null };
   const intl2 = tmp4(1114).intl;
   obj1.accessibilityLabel = intl2.formatToPlainString(userId(1114).t["9t7w53"], { date: createdAtDate });
   obj1.children = createdAtDate;
@@ -144,9 +144,9 @@ function MemberJoinDates(userId) {
   if (tmp13Result) {
     obj2 = { children: null };
     obj3 = { variant: textVariant, color: "text-default", accessibilityElementsHidden: true, importantForAccessibility: "no-hide-descendants", children };
-    const items6 = [closure_11(tmp4(4556).Text, obj3), ];
+    const items6 = [closure_11(tmp4(4570).Text, obj3), ];
     obj4 = { themeType, icon: null, accessibilityLabel: null, children: null };
-    obj5 = { guild: stateFromStores1, size: tmp4(5584).GuildIconSizes.XXSMALL };
+    obj5 = { guild: stateFromStores1, size: tmp4(5598).GuildIconSizes.XXSMALL };
     obj4.icon = closure_11(GuildIconDefault, obj5);
     const intl3 = tmp4(1114).intl;
     const obj6 = { guildName: stateFromStores1.name, date: createdAtDate1 };
@@ -285,7 +285,7 @@ function BotSlashCommands(channel) {
   return tmp8Result;
 }
 const View = fn(17).View;
-const Constants = fn(7208);
+const Constants = fn(7222);
 ({ DIVIDER_DOT: closure_8, UserProfileThemeTypes } = Constants);
 const Routes = fn(1074).Routes;
 const AppLauncherRouteName = fn(1482).AppLauncherRouteName;
@@ -293,7 +293,7 @@ const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12, Fragment: map1 } = jsxProd);
 let closure_14 = { headingVariant: "text-sm/semibold", textVariant: "text-md/normal", headingSpacing: 8, rowGap: 24, columnGap: 6 };
 const dependencyMap = { [UserProfileThemeTypes.PREVIEW]: { headingVariant: "text-xs/semibold", textVariant: "text-sm/normal", headingSpacing: 4, rowGap: 12, columnGap: 3 } };
-const createStyles = fn(4560);
+const createStyles = fn(4574);
 let closure_16 = createStyles.createStyles({ card: { flexDirection: "column" }, textWithIcon: { flexDirection: "row", alignItems: "center" }, memberJoinDates: { flexDirection: "row", flexWrap: "wrap" }, slashCommands: { flex: 1, flexDirection: "row", flexWrap: "wrap", marginBottom: 12 }, policyLinks: { rowGap: 8 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_profile/native/UserProfileAboutMeCard.tsx");

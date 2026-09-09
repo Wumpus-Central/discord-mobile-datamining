@@ -1,15 +1,15 @@
-// === Module 17789: GuildRoleSubscriptionTierTemplateRolePreview ===
+// === Module 17822: GuildRoleSubscriptionTierTemplateRolePreview ===
 
-// Module 17789 (GuildRoleSubscriptionTierTemplateRolePreview)
+// Module 17822 (GuildRoleSubscriptionTierTemplateRolePreview)
 import useStateFromStores from "useStateFromStores" /* 563 */;
 import nativeDefault from "native" /* 576 */;
 import utils_ColorUtilsAll from "utils/ColorUtils" /* 1091 */;
 import util from "util" /* 1114 */;
 import native from "native" /* 1178 */;
-import Text_Text from "Text/Text" /* 4556 */;
-import NicknameUtilsDefault from "NicknameUtils" /* 4712 */;
-import FastImageDefault from "FastImage" /* 5587 */;
-import RoleIconDefault from "RoleIcon" /* 7188 */;
+import Text_Text from "Text/Text" /* 4570 */;
+import NicknameUtilsDefault from "NicknameUtils" /* 4726 */;
+import FastImageDefault from "FastImage" /* 5601 */;
+import RoleIconDefault from "RoleIcon" /* 7219 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1371 */;
 
@@ -17,7 +17,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-fn(4560);
+fn(4574);
 let createStyles = { container: null, avatar: null, content: null, contextRow: null };
 createStyles = { flexDirection: "row", padding: 16, borderRadius: nativeDefault.radii.xs, borderWidth: 1, borderColor: nativeDefault.colors.BORDER_SUBTLE, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 createStyles.container = createStyles;
@@ -53,7 +53,7 @@ export const GuildRoleSubscriptionRolePreview = function GuildRoleSubscriptionRo
   const obj4 = { color: utils_ColorUtilsAll.int2hex(roleColor) };
   obj3.style = obj4;
   obj3.children = name;
-  const items3 = [timestampProducer(Text_Text.Text, obj3), timestampProducer(native.Spacer, { size: 4 }), timestampProducer(RoleIconDefault, { name: roleName, source: { uri: roleImage }, size: 16 }), timestampProducer(native.Spacer, { size: 8 }), timestampProducer(Text_Text.Text, { variant: "text-xs/medium", color: "text-muted", children: "4:20 PM" })];
+  const items3 = [timestampProducer(Text_Text.Text, obj3), timestampProducer(native.Spacer, { size: 4 }), timestampProducer(RoleIconDefault, { name: roleName, src: roleImage, size: 16 }), timestampProducer(native.Spacer, { size: 8 }), timestampProducer(Text_Text.Text, { variant: "text-xs/medium", color: "text-muted", children: "4:20 PM" })];
   obj2.children = items3;
   const items4 = [React5(View, obj2), timestampProducer(Text_Text.Text, { variant: "text-md/normal", color: "text-default", style: textStyle, children: content })];
   obj1.children = items4;

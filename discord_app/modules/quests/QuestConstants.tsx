@@ -1,13 +1,13 @@
-// === Module 5444: QuestConstants ===
+// === Module 5458: QuestConstants ===
 
-// Module 5444 (QuestConstants)
+// Module 5458 (QuestConstants)
 import DurationsDefault from "Durations" /* 1090 */;
-import QuestVariants from "QuestVariants" /* 5445 */;
-import Quests from "Quests" /* 5446 */;
-import QuestTypes from "QuestTypes" /* 5447 */;
-import AdCreativeType from "AdCreativeType" /* 5451 */;
-import FirstPartyQuestTaskTypes from "FirstPartyQuestTaskTypes" /* 5452 */;
-import DismissibleQuestContentFlags from "DismissibleQuestContentFlags" /* 5453 */;
+import QuestVariants from "QuestVariants" /* 5459 */;
+import Quests from "Quests" /* 5460 */;
+import QuestTypes from "QuestTypes" /* 5461 */;
+import AdCreativeType from "AdCreativeType" /* 5465 */;
+import FirstPartyQuestTaskTypes from "FirstPartyQuestTaskTypes" /* 5466 */;
+import DismissibleQuestContentFlags from "DismissibleQuestContentFlags" /* 5467 */;
 import HTTPUtils from "HTTPUtils" /* 1272 */;
 import apply from "module_12" /* 12 */;
 import size from "module_2" /* 2 */;
@@ -66,6 +66,7 @@ export const QuestTaskPlatform = { CONSOLE: "CONSOLE", DESKTOP: "DESKTOP" };
 export const QuestAuthMethod = { IN_GAME: "in_game", WEB: "web" };
 export const QUEST_SPLIT_MODAL_PANEL_WIDTH = 454;
 export const QUEST_HERO_ASSET_ASPECT_RATIO = 3.5675675675675675;
+export const DEFAULT_PORTRAIT_ASPECT_RATIO = 0.5625;
 export const CDN_URL_BASE = str2;
 export const QUESTS_CDN_URL_BASE = text;
 export const QuestDockMode = { COLLAPSED: "collapsed", EXPANDED: "expanded", CLOSED: "closed", SOFT_DISMISSED: "soft-dismissed", RESET_TO_PREVIOUS: "reset-to-previous" };

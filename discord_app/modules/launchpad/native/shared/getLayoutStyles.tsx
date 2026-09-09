@@ -1,10 +1,10 @@
-// === Module 16980: getLayoutStyles ===
+// === Module 16698: getLayoutStyles ===
 
-// Module 16980 (getLayoutStyles)
+// Module 16698 (getLayoutStyles)
 import nativeDefault from "native" /* 576 */;
 import native from "native" /* 1178 */;
-import GuildIcon from "GuildIcon" /* 5584 */;
-import GameIcon from "GameIcon" /* 7172 */;
+import GuildIcon from "GuildIcon" /* 5598 */;
+import GameIcon from "GameIcon" /* 7186 */;
 import size from "module_2" /* 2 */;
 
 let voiceOrStageSummaryRow = { layout: { margin: { marginLeft: 8, marginRight: 8, marginVertical: 0 } }, container: null, voiceUsers: null, voiceOrStageSummaryRow: null, channelName: null, messagePreview: null, timestamp: null, inviteRow: null, icon: null, unreadBadge: null, mentionBadge: null, category: null, typing: null, activeThreadCount: null, joinVoiceButton: null, threadSpine: null, happeningNow: null, separator: null, searchButton: null };

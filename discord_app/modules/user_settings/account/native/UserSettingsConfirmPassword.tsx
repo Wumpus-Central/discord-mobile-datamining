@@ -1,16 +1,16 @@
-// === Module 6993: UserSettingsConfirmPassword ===
+// === Module 7007: UserSettingsConfirmPassword ===
 
-// Module 6993 (UserSettingsConfirmPassword)
+// Module 7007 (UserSettingsConfirmPassword)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import Text_Text from "Text/Text" /* 4556 */;
-import components_Button_Button from "components/Button/Button" /* 4975 */;
-import FreeFormInputGroupDefault from "FreeFormInputGroup" /* 6605 */;
-import FreeFormErrorLabelDefault from "FreeFormErrorLabel" /* 6941 */;
-import useSettingNavigationRoute from "useSettingNavigationRoute" /* 6994 */;
-import UserSettingsUtils from "UserSettingsUtils" /* 6995 */;
-import UserSettingsAccountUnverifiedHeaderDefault from "UserSettingsAccountUnverifiedHeader" /* 6998 */;
+import Text_Text from "Text/Text" /* 4570 */;
+import components_Button_Button from "components/Button/Button" /* 4989 */;
+import FreeFormInputGroupDefault from "FreeFormInputGroup" /* 6619 */;
+import FreeFormErrorLabelDefault from "FreeFormErrorLabel" /* 6955 */;
+import useSettingNavigationRoute from "useSettingNavigationRoute" /* 7008 */;
+import UserSettingsUtils from "UserSettingsUtils" /* 7009 */;
+import UserSettingsAccountUnverifiedHeaderDefault from "UserSettingsAccountUnverifiedHeader" /* 7012 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -22,7 +22,7 @@ get_ActivityIndicator = fn(17);
 const UserSettingsSections = fn(1074).UserSettingsSections;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-fn(4560);
+fn(4574);
 let obj = { background: null, container: null, title: null, prompt: null, input: null, redesignInput: null, button: null, hint: null };
 obj = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 obj.background = obj;

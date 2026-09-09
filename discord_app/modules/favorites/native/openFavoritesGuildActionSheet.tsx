@@ -1,8 +1,8 @@
-// === Module 16139: openFavoritesGuildActionSheet ===
+// === Module 16169: openFavoritesGuildActionSheet ===
 
-// Module 16139 (openFavoritesGuildActionSheet)
+// Module 16169 (openFavoritesGuildActionSheet)
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4527 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4541 */;
 import size from "module_2" /* 2 */;
 
 const FavoritesGuildActionSheet = "FavoritesGuildActionSheet";
@@ -14,5 +14,5 @@ export default function openFavoritesGuildActionSheet() {
       ActionSheetActionCreatorsDefault.hideActionSheet(FavoritesGuildActionSheet);
     }
   };
-  obj.openLazy(asyncRequireImpl(16140, dependencyMap.paths), FavoritesGuildActionSheet, obj);
+  obj.openLazy(asyncRequireImpl(16170, dependencyMap.paths), FavoritesGuildActionSheet, obj);
 };

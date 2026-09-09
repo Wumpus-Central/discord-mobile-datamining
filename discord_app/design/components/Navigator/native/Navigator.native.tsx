@@ -1,15 +1,15 @@
-// === Module 7000: Navigator ===
+// === Module 7014: Navigator ===
 
-// Module 7000 (Navigator)
+// Module 7014 (Navigator)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import SentryInitUtils from "SentryInitUtils" /* 1233 */;
 import Link from "Link" /* 1484 */;
-import NavigatorHeader from "NavigatorHeader" /* 5624 */;
-import useNavigatorShouldCrossfade from "useNavigatorShouldCrossfade" /* 7001 */;
-import StackNavigator from "StackNavigator" /* 7002 */;
-import NavigatorScreen from "NavigatorScreen" /* 7035 */;
-import useNavigationTheme from "useNavigationTheme" /* 7041 */;
+import NavigatorHeader from "NavigatorHeader" /* 5638 */;
+import useNavigatorShouldCrossfade from "useNavigatorShouldCrossfade" /* 7015 */;
+import StackNavigator from "StackNavigator" /* 7016 */;
+import NavigatorScreen from "NavigatorScreen" /* 7049 */;
+import useNavigationTheme from "useNavigationTheme" /* 7055 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -220,7 +220,7 @@ function WrappedNavigationStack(arg0) {
     return tmp2;
   }), 1)[0];
   let obj1 = useNavigationTheme;
-  navigationTheme = obj1.useNavigationTheme(navigationContainerRef(4495)());
+  navigationTheme = obj1.useNavigationTheme(navigationContainerRef(4509)());
   obj = { ref: navigationContainerRef, theme: navigationTheme, initialState: null, onReady: null, onStateChange: null, children: null };
   if (null == initialRouteState) {
     let tmp7;
@@ -263,7 +263,7 @@ function WrappedNavigationStack(arg0) {
 get_ActivityIndicator = fn(17);
 ({ StyleSheet, View: hasOwnProperty } = get_ActivityIndicator);
 const jsx = fn(21).jsx;
-fn(4560);
+fn(4574);
 let createStyles = { container: null, navbar: null, headerLeftContainerStyle: null, headerRightContainerStyle: null };
 createStyles = {};
 let merged = Object.assign(StyleSheet.absoluteFillObject);

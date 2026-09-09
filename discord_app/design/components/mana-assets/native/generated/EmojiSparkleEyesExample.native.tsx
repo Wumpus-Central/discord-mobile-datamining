@@ -1,9 +1,9 @@
-// === Module 5955: EmojiSparkleEyesExample ===
+// === Module 5969: EmojiSparkleEyesExample ===
 
-// Module 5955 (EmojiSparkleEyesExample)
+// Module 5969 (EmojiSparkleEyesExample)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5587 */;
-import _modDef5956 from "module_5956" /* 5956 */;
+import FastImageDefault from "FastImage" /* 5601 */;
+import _modDef5970 from "module_5970" /* 5970 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -24,7 +24,7 @@ export const EmojiSparkleEyesExample = function EmojiSparkleEyesExample(width) {
     num3 = 1;
   }
   let obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  obj = { uri: _modDef5956 };
+  obj = { uri: _modDef5970 };
   obj.source = obj;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];
@@ -32,5 +32,5 @@ export const EmojiSparkleEyesExample = function EmojiSparkleEyesExample(width) {
   obj.accessible = accessible;
   obj.accessibilityLabel = accessibilityLabel;
   obj.resizeMode = resizeMode;
-  return jsx(FastImageDefault, { uri: _modDef5956 });
+  return jsx(FastImageDefault, { uri: _modDef5970 });
 };

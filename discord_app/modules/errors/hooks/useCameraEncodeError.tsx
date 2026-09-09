@@ -1,9 +1,9 @@
-// === Module 17140: useCameraEncodeError ===
+// === Module 17171: useCameraEncodeError ===
 
-// Module 17140 (useCameraEncodeError)
-import AVError from "AVError" /* 9115 */;
+// Module 17171 (useCameraEncodeError)
+import AVError from "AVError" /* 9142 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import AVErrorStore from "AVErrorStore" /* 9601 */;
+import AVErrorStore from "AVErrorStore" /* 9628 */;
 
 require = fn;
 const size = fn(2);

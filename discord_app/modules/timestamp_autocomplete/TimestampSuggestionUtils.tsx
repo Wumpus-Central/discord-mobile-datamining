@@ -1,27 +1,27 @@
-// === Module 10430: TimestampSuggestionUtils ===
+// === Module 10457: TimestampSuggestionUtils ===
 
-// Module 10430 (TimestampSuggestionUtils)
+// Module 10457 (TimestampSuggestionUtils)
 import util from "util" /* 1114 */;
-import _modDef4153 from "module_4153" /* 4153 */;
-import _mod10431 from "module_10431" /* 10431 */;
+import _modDef4166 from "module_4166" /* 4166 */;
+import _mod10458 from "module_10458" /* 10458 */;
 import _slicedToArray from "module_32" /* 32 */;
 import LocaleStore from "LocaleStore" /* 2025 */;
 
 require = fn;
 let items = ["h:mm:ssa", "h:mm:ss a", "H:mm:ss", "h:mma", "h:mm a", "H:mm", "HHmm", "ha", "h a", "H", "LT", "LTS"];
-let items1 = [_modDef4153.ISO_8601];
+let items1 = [_modDef4166.ISO_8601];
 const items2 = [...items];
 HermesBuiltin.arraySpread(new Set(items2), 1);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/timestamp_autocomplete/TimestampSuggestionUtils.tsx");
 
 export const preloadTimestampParser = function preloadTimestampParser() {
-  _mod10431;
+  _mod10458;
 };
 export const queryTimestampSuggestions = function queryTimestampSuggestions(arg0) {
   let obj = cloneResult1;
   if (cloneResult1 === undefined) {
-    obj = _modDef4153();
+    obj = _modDef4166();
   }
   if ("" === arg0) {
     let parsed;
@@ -48,7 +48,7 @@ export const queryTimestampSuggestions = function queryTimestampSuggestions(arg0
     if (tmp14) {
       tmp14 = first.text === arg0;
     }
-    let obj1 = _modDef4153;
+    let obj1 = _modDef4166;
     if (tmp14) {
       start = first.start;
       let invalidResult = obj1(start.date());
@@ -76,7 +76,7 @@ export const queryTimestampSuggestions = function queryTimestampSuggestions(arg0
           if (!start2.isCertain("hour")) {
             const _Math = Math;
             const result = Math.round(cloneResult.valueOf() / 900000) * 900000;
-            obj4 = tmp20(4153)(result);
+            obj4 = tmp20(4166)(result);
           }
         }
         if (tmp14) {
@@ -215,7 +215,7 @@ export const queryTimestampSuggestions = function queryTimestampSuggestions(arg0
     }
     return items1;
   } else {
-    const tmp6 = _mod10431;
+    const tmp6 = _mod10458;
     locale = LocaleStore.locale;
     str = "en-US";
     if ("en-US" === locale) {

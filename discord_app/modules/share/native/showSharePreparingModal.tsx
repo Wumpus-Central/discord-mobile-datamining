@@ -1,9 +1,9 @@
-// === Module 8366: showSharePreparingModal ===
+// === Module 8394: showSharePreparingModal ===
 
-// Module 8366 (showSharePreparingModal)
+// Module 8394 (showSharePreparingModal)
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 4763 */;
-import SharePreparingModalConstants from "SharePreparingModalConstants" /* 8364 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 4777 */;
+import SharePreparingModalConstants from "SharePreparingModalConstants" /* 8392 */;
 import size from "module_2" /* 2 */;
 
 const SHARE_PREPARING_MODAL_KEY = SharePreparingModalConstants.SHARE_PREPARING_MODAL_KEY;
@@ -19,16 +19,16 @@ export const showSharePreparingModal = function showSharePreparingModal(onCancel
           _true = true;
           const _clearTimeout = clearTimeout;
           clearTimeout(dependencyMap);
-          _true(4763).popWithKey(SHARE_PREPARING_MODAL_KEY);
+          _true(4777).popWithKey(SHARE_PREPARING_MODAL_KEY);
           onCancel();
-          const obj = _true(4763);
+          const obj = _true(4777);
         }
       }
     };
-    obj.pushLazy(asyncRequireImpl(8367, dependencyMap.paths), obj, SHARE_PREPARING_MODAL_KEY, { animation: "fade", presentation: "transparentModal" }).then(() => {
+    obj.pushLazy(asyncRequireImpl(8395, dependencyMap.paths), obj, SHARE_PREPARING_MODAL_KEY, { animation: "fade", presentation: "transparentModal" }).then(() => {
       if (_true) {
-        _true(4763).popWithKey(SHARE_PREPARING_MODAL_KEY);
-        const obj = _true(4763);
+        _true(4777).popWithKey(SHARE_PREPARING_MODAL_KEY);
+        const obj = _true(4777);
       }
     });
   }, 1000);

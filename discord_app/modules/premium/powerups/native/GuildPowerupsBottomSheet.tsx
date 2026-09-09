@@ -1,39 +1,39 @@
-// === Module 12522: GuildPowerupsBottomSheet ===
+// === Module 12548: GuildPowerupsBottomSheet ===
 
-// Module 12522 (GuildPowerupsBottomSheet)
+// Module 12548 (GuildPowerupsBottomSheet)
 import _mod17 from "module_17" /* 17 */;
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import _modDef2428 from "module_2428" /* 2428 */;
-import native from "native" /* 4271 */;
-import GameServerConstants from "GameServerConstants" /* 4451 */;
-import Powerups from "Powerups" /* 4453 */;
-import CircleInformationIcon from "CircleInformationIcon" /* 4515 */;
-import Text_Text from "Text/Text" /* 4556 */;
-import components_Button_Button from "components/Button/Button" /* 4975 */;
-import Sheet_BottomSheet from "Sheet/BottomSheet" /* 7150 */;
-import GuildSettingsServerTagUtils from "GuildSettingsServerTagUtils" /* 9072 */;
-import useGuildPowerupRollbackEnabledDefault from "useGuildPowerupRollbackEnabled" /* 12500 */;
-import usePowerupActiveStatusDefault from "usePowerupActiveStatus" /* 12503 */;
-import useHasAllocateBoostPermissionDefault from "useHasAllocateBoostPermission" /* 12517 */;
-import useCalculatePowerupCardStatus from "useCalculatePowerupCardStatus" /* 12523 */;
-import useGetGuildPowerupBannerImageDefault from "useGetGuildPowerupBannerImage" /* 12524 */;
-import GuildPowerupsBoostGemDefault from "GuildPowerupsBoostGem" /* 12525 */;
-import GuildPowerupsImageDefault from "GuildPowerupsImage" /* 12527 */;
-import GuildPowerupsCardFooter from "GuildPowerupsCardFooter" /* 12528 */;
-import useGuildPowerupLevelPerksDefault from "useGuildPowerupLevelPerks" /* 12530 */;
-import GuildBoostingMarketingUtils from "GuildBoostingMarketingUtils" /* 12531 */;
-import useGuildPowerupCardFooterConfigDefault from "useGuildPowerupCardFooterConfig" /* 12537 */;
-import useCanGuildPowerupBeToggledDefault from "useCanGuildPowerupBeToggled" /* 12538 */;
-import useGuildPowerupOnActivateDefault from "useGuildPowerupOnActivate" /* 12539 */;
-import useGuildPowerupOnShowDeactivateDefault from "useGuildPowerupOnShowDeactivate" /* 12543 */;
-import GuildPowerupAnalytics from "GuildPowerupAnalytics" /* 12547 */;
-import GuildPowerupsDisabledWarningDefault from "GuildPowerupsDisabledWarning" /* 12549 */;
-import AccessibilityStore from "AccessibilityStore" /* 4552 */;
-import GuildPowerupsConstants from "GuildPowerupsConstants" /* 4450 */;
+import native from "native" /* 4284 */;
+import GameServerConstants from "GameServerConstants" /* 4465 */;
+import Powerups from "Powerups" /* 4467 */;
+import CircleInformationIcon from "CircleInformationIcon" /* 4529 */;
+import Text_Text from "Text/Text" /* 4570 */;
+import components_Button_Button from "components/Button/Button" /* 4989 */;
+import Sheet_BottomSheet from "Sheet/BottomSheet" /* 7164 */;
+import GuildSettingsServerTagUtils from "GuildSettingsServerTagUtils" /* 9099 */;
+import useGuildPowerupRollbackEnabledDefault from "useGuildPowerupRollbackEnabled" /* 12526 */;
+import usePowerupActiveStatusDefault from "usePowerupActiveStatus" /* 12529 */;
+import useHasAllocateBoostPermissionDefault from "useHasAllocateBoostPermission" /* 12543 */;
+import useCalculatePowerupCardStatus from "useCalculatePowerupCardStatus" /* 12549 */;
+import useGetGuildPowerupBannerImageDefault from "useGetGuildPowerupBannerImage" /* 12550 */;
+import GuildPowerupsBoostGemDefault from "GuildPowerupsBoostGem" /* 12551 */;
+import GuildPowerupsImageDefault from "GuildPowerupsImage" /* 12553 */;
+import GuildPowerupsCardFooter from "GuildPowerupsCardFooter" /* 12554 */;
+import useGuildPowerupLevelPerksDefault from "useGuildPowerupLevelPerks" /* 12556 */;
+import GuildBoostingMarketingUtils from "GuildBoostingMarketingUtils" /* 12557 */;
+import useGuildPowerupCardFooterConfigDefault from "useGuildPowerupCardFooterConfig" /* 12563 */;
+import useCanGuildPowerupBeToggledDefault from "useCanGuildPowerupBeToggled" /* 12564 */;
+import useGuildPowerupOnActivateDefault from "useGuildPowerupOnActivate" /* 12565 */;
+import useGuildPowerupOnShowDeactivateDefault from "useGuildPowerupOnShowDeactivate" /* 12569 */;
+import GuildPowerupAnalytics from "GuildPowerupAnalytics" /* 12573 */;
+import GuildPowerupsDisabledWarningDefault from "GuildPowerupsDisabledWarning" /* 12575 */;
+import AccessibilityStore from "AccessibilityStore" /* 4566 */;
+import GuildPowerupsConstants from "GuildPowerupsConstants" /* 4464 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createStyles from "createStyles" /* 4560 */;
+import createStyles from "createStyles" /* 4574 */;
 import size from "module_2" /* 2 */;
 
 function GuildPowerupsBottomSheetHeader(arg0) {

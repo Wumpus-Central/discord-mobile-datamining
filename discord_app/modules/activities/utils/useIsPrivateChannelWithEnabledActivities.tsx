@@ -1,6 +1,6 @@
-// === Module 9508: useIsPrivateChannelWithEnabledActivities ===
+// === Module 9535: useIsPrivateChannelWithEnabledActivities ===
 
-// Module 9508 (useIsPrivateChannelWithEnabledActivities)
+// Module 9535 (useIsPrivateChannelWithEnabledActivities)
 import ChannelStore from "ChannelStore" /* 1957 */;
 
 const require = fn;

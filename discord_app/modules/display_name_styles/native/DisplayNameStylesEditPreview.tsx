@@ -1,18 +1,18 @@
-// === Module 15356: DisplayNameStylesEditPreview ===
+// === Module 15385: DisplayNameStylesEditPreview ===
 
-// Module 15356 (DisplayNameStylesEditPreview)
+// Module 15385 (DisplayNameStylesEditPreview)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import native from "native" /* 1178 */;
 import utils from "utils" /* 1886 */;
 import _modDef2786 from "module_2786" /* 2786 */;
-import DateUtils from "DateUtils" /* 4242 */;
-import Text_Text from "Text/Text" /* 4556 */;
-import ProfileCustomizationUtils from "ProfileCustomizationUtils" /* 8166 */;
-import UsernameWithEffectsDefault from "UsernameWithEffects" /* 10904 */;
-import types from "types" /* 10905 */;
-import UserProfilePreviewDefault from "UserProfilePreview" /* 11114 */;
-import NameplatePreview from "NameplatePreview" /* 11225 */;
+import DateUtils from "DateUtils" /* 4255 */;
+import Text_Text from "Text/Text" /* 4570 */;
+import ProfileCustomizationUtils from "ProfileCustomizationUtils" /* 8192 */;
+import UsernameWithEffectsDefault from "UsernameWithEffects" /* 10931 */;
+import types from "types" /* 10932 */;
+import UserProfilePreviewDefault from "UserProfilePreview" /* 11141 */;
+import NameplatePreview from "NameplatePreview" /* 11252 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -45,7 +45,7 @@ function ChatPreview(arg0) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-fn(4560);
+fn(4574);
 let createStyles = { previewSection: null, chatPreviewWrapper: null, nameplatePreviewWrapper: null, chatContainer: null, chatContent: null, chatHeader: null, chatUsername: null, chatTimestamp: null, chatMessageText: null };
 createStyles = { marginBottom: nativeDefault.space.PX_24, alignItems: "center", alignSelf: "center", width: "100%", maxWidth: 360 };
 createStyles.previewSection = createStyles;

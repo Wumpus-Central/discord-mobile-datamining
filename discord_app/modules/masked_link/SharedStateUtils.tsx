@@ -1,7 +1,7 @@
-// === Module 12955: SharedStateUtils ===
+// === Module 12981: SharedStateUtils ===
 
-// Module 12955 (SharedStateUtils)
-import MaskedLinkStoreMethodsAdditional from "MaskedLinkStoreMethodsAdditional" /* 8373 */;
+// Module 12981 (SharedStateUtils)
+import MaskedLinkStoreMethodsAdditional from "MaskedLinkStoreMethodsAdditional" /* 8401 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -51,10 +51,10 @@ export const useModalState = function useModalState(url) {
     if (first) {
       trustUrl(str);
     }
-    if (onClose != null) {
-      tmp4();
-    }
     onConfirm();
+    if (onClose != null) {
+      onClose();
+    }
   }, items1);
   url = {
     protocol,
@@ -65,10 +65,10 @@ export const useModalState = function useModalState(url) {
     setShouldTrustUrl: tmp[1],
     handleConfirm: callback,
     handleCancel: obj.useCallback(() => {
-      if (onClose != null) {
-        tmp();
-      }
       onCancel();
+      if (onClose != null) {
+        onClose();
+      }
     }, items2)
   };
   return url;

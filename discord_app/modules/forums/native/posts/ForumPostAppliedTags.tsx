@@ -1,15 +1,15 @@
-// === Module 12017: ForumPostAppliedTags ===
+// === Module 12043: ForumPostAppliedTags ===
 
-// Module 12017 (ForumPostAppliedTags)
+// Module 12043 (ForumPostAppliedTags)
 import nativeDefault from "native" /* 576 */;
-import AppliedForumTag from "AppliedForumTag" /* 10632 */;
+import AppliedForumTag from "AppliedForumTag" /* 10659 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4, Fragment: hasOwnProperty } = jsxProd);
-fn(4560);
+fn(4574);
 let createStyles = { pillTagsContainer: { display: "flex", flexDirection: "row", alignItems: "center" }, tag: null, tagsContainer: null, dot: null };
 createStyles = { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH };
 createStyles.tag = createStyles;
@@ -41,7 +41,7 @@ export const ForumPostAppliedTagPills = function ForumPostAppliedTagPills(additi
     obj.tag = obj;
     obj.containerStyle = tmp.tag;
     obj.hasUnreads = hasUnreads;
-    tmp4 = closure_3(hasUnreads(10632).AppliedForumTagPill, obj);
+    tmp4 = closure_3(hasUnreads(10659).AppliedForumTagPill, obj);
   }
   items1[1] = tmp4;
   obj.children = items1;

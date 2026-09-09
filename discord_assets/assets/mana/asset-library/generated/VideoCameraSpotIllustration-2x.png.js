@@ -1,6 +1,6 @@
-// === Module 6558: ? ===
+// === Module 6572: ? ===
 
-// Module 6558
+// Module 6572
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/VideoCameraSpotIllustration-2x.png.js");

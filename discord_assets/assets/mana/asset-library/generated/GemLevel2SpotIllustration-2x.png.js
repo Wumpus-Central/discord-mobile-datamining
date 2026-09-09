@@ -1,6 +1,6 @@
-// === Module 6114: ? ===
+// === Module 6128: ? ===
 
-// Module 6114
+// Module 6128
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/GemLevel2SpotIllustration-2x.png.js");

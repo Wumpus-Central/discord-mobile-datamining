@@ -1,13 +1,13 @@
-// === Module 10834: PremiumGiftBackgroundSelect ===
+// === Module 10861: PremiumGiftBackgroundSelect ===
 
-// Module 10834 (PremiumGiftBackgroundSelect)
+// Module 10861 (PremiumGiftBackgroundSelect)
 import nativeDefault from "native" /* 576 */;
 import native from "native" /* 1178 */;
-import timing from "timing" /* 4561 */;
-import NativeGiftContext from "NativeGiftContext" /* 10704 */;
+import timing from "timing" /* 4575 */;
+import NativeGiftContext from "NativeGiftContext" /* 10731 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4296 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4310 */;
 
 require = fn;
 class GiftBackgroundSelect {
@@ -95,7 +95,7 @@ class GiftBackgroundSelect {
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, Fragment: metroRequire, jsxs: closure_7 } = jsxProd);
 let closure_8 = ReanimatedRexport.createAnimatedComponent(fn(17).ScrollView);
-const createStyles = fn(4560);
+const createStyles = fn(4574);
 let obj = { scrollView: null, contentContainer: null };
 obj = { flex: 1, marginTop: nativeDefault.space.PX_24 };
 obj.scrollView = obj;

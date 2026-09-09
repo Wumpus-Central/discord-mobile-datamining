@@ -1,15 +1,15 @@
-// === Module 4475: createExperiment ===
+// === Module 4489: createExperiment ===
 
-// Module 4475 (createExperiment)
-import ExperimentManager from "ExperimentManager" /* 4481 */;
+// Module 4489 (createExperiment)
+import ExperimentManager from "ExperimentManager" /* 4495 */;
 import _slicedToArray from "module_32" /* 32 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ExperimentStore from "ExperimentStore" /* 4476 */;
+import ExperimentStore from "ExperimentStore" /* 4490 */;
 
 require = fn;
 const noop = fn(19);
 ({ useState: closure_4, useEffect: hasOwnProperty } = noop);
-const ExperimentConstants = fn(4477);
+const ExperimentConstants = fn(4491);
 ({ ExperimentBuckets: closure_8, ExposureTypes: closure_9 } = ExperimentConstants);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/experiments/createExperiment.tsx");

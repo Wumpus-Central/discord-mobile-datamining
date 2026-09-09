@@ -6,12 +6,12 @@ import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import FlagUtils from "FlagUtils" /* 1384 */;
 import MediaEngineStore from "MediaEngineStore" /* 1908 */;
-import DiscordNativeDefault from "DiscordNative" /* 4182 */;
-import StreamKeyUtils from "StreamKeyUtils" /* 4612 */;
-import isClipsEnabled from "isClipsEnabled" /* 13678 */;
-import clipPOVOverlap from "clipPOVOverlap" /* 13994 */;
-import DistributedClipsExperimentDefault from "DistributedClipsExperiment" /* 13996 */;
-import AutoclippingDefaultOverrideExperiment2 from "AutoclippingDefaultOverrideExperiment" /* 13997 */;
+import DiscordNativeDefault from "DiscordNative" /* 4195 */;
+import StreamKeyUtils from "StreamKeyUtils" /* 4626 */;
+import isClipsEnabled from "isClipsEnabled" /* 13701 */;
+import clipPOVOverlap from "clipPOVOverlap" /* 14017 */;
+import DistributedClipsExperimentDefault from "DistributedClipsExperiment" /* 14019 */;
+import AutoclippingDefaultOverrideExperiment2 from "AutoclippingDefaultOverrideExperiment" /* 14020 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import RunningGameStore from "RunningGameStore" /* 1915 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
@@ -108,36 +108,28 @@ let closure_39 = async function _migrateDefaultStorage() {
     }
   }
 };
-function recordPOVMatches(found, found2) {
+function recordPOVMatches(items, value1) {
   let flag = false;
-  const iter = found[Symbol.iterator]();
+  const iter = items[Symbol.iterator]();
   const nextResult = iter.next();
   while (iter !== undefined) {
     let tmp2 = nextResult;
-    obj = clipPOVOverlap;
-    let clipAttachmentPOVWindow = obj.getClipAttachmentPOVWindow(nextResult);
-    if (null != clipAttachmentPOVWindow) {
-      let iter2 = found2[Symbol.iterator]();
-      let nextResult1 = iter2.next();
-      while (iter2 !== undefined) {
-        let tmp12 = nextResult1;
-        let obj2 = clipPOVOverlap;
-        let clipAttachmentPOVWindow1 = obj2.getClipAttachmentPOVWindow(nextResult1);
-        if (null != clipAttachmentPOVWindow1) {
-          let tmp14Result = clipPOVOverlap;
-          if (null != tmp14Result.getClipPOVOverlapMilliseconds(tmp8, tmp18)) {
-            let items = map.get(tmp2.id);
-            if (items == null) {
-              items = [];
-            }
-            items = [];
-            items[HermesBuiltin.arraySpread(items, 0)] = tmp12;
-            let result = map.set(tmp2.id, items);
-            flag = true;
-          }
+    let iter2 = value1[Symbol.iterator]();
+    let nextResult1 = iter2.next();
+    while (iter2 !== undefined) {
+      let tmp7 = nextResult1;
+      obj = clipPOVOverlap;
+      if (null != obj.getClipPOVOverlapMilliseconds(tmp2, nextResult1)) {
+        items = map.get(tmp2.attachmentId);
+        if (items == null) {
+          items = [];
         }
-        continue;
+        items = [];
+        items[HermesBuiltin.arraySpread(items, 0)] = tmp7;
+        let result = map.set(tmp2.attachmentId, items);
+        flag = true;
       }
+      continue;
     }
     continue;
   }
@@ -164,7 +156,26 @@ function trackClipMessage(message) {
     } else if (map1.has(message.id)) {
       return false;
     } else {
-      const result = map1.set(message.id, found);
+      const tmp3 = (function getClipPOVReferences(message, found) {
+        const items = [];
+        const iter = found[Symbol.iterator]();
+        const nextResult = iter.next();
+        while (iter !== undefined) {
+          let tmp2 = nextResult;
+          obj = clipPOVOverlap;
+          let clipAttachmentPOVWindow = obj.getClipAttachmentPOVWindow(nextResult);
+          if (null != clipAttachmentPOVWindow) {
+            obj = {};
+            let merged = Object.assign(tmp6);
+            ({ id: obj2.messageId, channel_id: obj2.channelId } = message);
+            obj.attachmentId = tmp2.id;
+            let arr = items.push(obj);
+          }
+          continue;
+        }
+        return items;
+      })(message, found);
+      const result = map1.set(message.id, tmp3);
       const message_reference = message.message_reference;
       let message_id;
       if (message_reference != null) {
@@ -203,27 +214,27 @@ function trackClipMessage(message) {
           value = [];
         }
         items = [];
-        HermesBuiltin.arraySpread(found, HermesBuiltin.arraySpread(value, 0));
+        HermesBuiltin.arraySpread(tmp3, HermesBuiltin.arraySpread(value, 0));
         const result1 = map2.set(message_id1, items);
-        flag3 = recordPOVMatches(items, found);
-        const tmp12Result = recordPOVMatches(items, found);
+        flag3 = recordPOVMatches(items, tmp3);
+        const tmp13Result = recordPOVMatches(items, tmp3);
       }
       let value1 = map2.get(message.id);
       if (value1 == null) {
         value1 = [];
       }
-      return recordPOVMatches(found, value1) || flag3 || flag2;
+      return recordPOVMatches(tmp3, value1) || flag3 || flag2;
     }
   } else {
     return false;
   }
   obj = DistributedClipsExperimentDefault;
 }
-const ClipsConstants = fn(5132);
+const ClipsConstants = fn(5146);
 ({ CLIPS_HARDWARE_CLASSIFICATION_VERSION: metroRequire, ClipSaveTypes: closure_7, ClipsUserEducationType: closure_8, ClipsLogger: closure_9, MAX_SIMULTANEOUS_SAVE_CLIP_OPERATIONS: c10, ClipsHardwareClassification: closure_11, ClipsSaveNoOpReason: closure_12, ClipsLengthSettings, DEFAULT_CLIPS_BITRATE_PERCENT } = ClipsConstants);
 const Constants = fn(1074);
 ({ MessageAttachmentFlags: map1, MessageReferenceTypes: closure_14, VoiceFlags: closure_15 } = Constants);
-const StreamSettingsConstants = fn(4607);
+const StreamSettingsConstants = fn(4621);
 let c16 = "default";
 let c17 = "Discord Clips";
 const dependencyMap = {};
@@ -377,7 +388,7 @@ prototype["isAutoStashEnabled"] = function isAutoStashEnabled() {
 prototype["hasRepliedWithClip"] = function hasRepliedWithClip(arg0) {
   return set1.has(arg0);
 };
-prototype["getMatchingPOVAttachments"] = function getMatchingPOVAttachments(arg0) {
+prototype["getMatchingPOVReferences"] = function getMatchingPOVReferences(arg0) {
   value = map.get(arg0);
   if (value == null) {
     value = closure_36;

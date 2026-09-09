@@ -1,9 +1,9 @@
-// === Module 11494: apexExperiment ===
+// === Module 11521: apexExperiment ===
 
-// Module 11494 (apexExperiment)
-import QuestOrbMultiplierHooks from "QuestOrbMultiplierHooks" /* 11297 */;
-import QuestOrbMultiplierUtils from "QuestOrbMultiplierUtils" /* 11298 */;
-import QuestOrbsMultiplier from "QuestOrbsMultiplier" /* 11495 */;
+// Module 11521 (apexExperiment)
+import QuestOrbMultiplierHooks from "QuestOrbMultiplierHooks" /* 11324 */;
+import QuestOrbMultiplierUtils from "QuestOrbMultiplierUtils" /* 11325 */;
+import QuestOrbsMultiplier from "QuestOrbsMultiplier" /* 11522 */;
 import ApexExperiment from "ApexExperiment" /* 1433 */;
 import size from "module_2" /* 2 */;
 
@@ -45,7 +45,6 @@ const obj19 = { CONTROL: 0, [0]: "CONTROL", NEW_LAYOUT_WITH_SEARCH: 1, [1]: "NEW
 const apexExperiment9 = ApexExperiment.createApexExperiment({ name: "2026-05-bounty-stale-refresh-quest-home", kind: "user", defaultConfig: { enabled: false }, variations: { 0: { enabled: false }, 1: { enabled: true } } });
 const obj20 = { name: "2026-06-quest-home-layout-visual-tweaks", kind: "user", defaultConfig: { enabled: false, variant: obj19.CONTROL }, variations: { 0: { enabled: false, variant: obj19.CONTROL }, 1: { enabled: true, variant: obj19.NEW_LAYOUT_WITH_SEARCH }, 2: { enabled: true, variant: obj19.LARGE_MASK_MARGIN }, 3: { enabled: true, variant: obj19.REMOVE_QUEST_TITLE_SUFFIX }, 4: { enabled: true, variant: obj19.REPLACE_QUEST_NAME_WITH_GAME_PUBLISHER } } };
 const apexExperiment10 = ApexExperiment.createApexExperiment(obj20);
-const apexExperiment11 = ApexExperiment.createApexExperiment({ name: "2026-07-quest-bar-secondary-cta", kind: "user", defaultConfig: { enabled: false, showPlayInstantlyLabel: false }, variations: { 0: { enabled: false, showPlayInstantlyLabel: false }, 1: { enabled: true, showPlayInstantlyLabel: false }, 2: { enabled: true, showPlayInstantlyLabel: true } } });
 const result = size.fileFinishedImporting("modules/quests/experiments/index.tsx");
 
 export const VideoEndCardV2Experiment = apexExperiment;
@@ -68,4 +67,3 @@ export const QuestHomeTileRedesignExperiment = apexExperiment8;
 export const BountyStaleRefreshQuestHomeExperiment = apexExperiment9;
 export const QuestHomeLayoutVisualTweakVariant = obj19;
 export const QuestHomeLayoutVisualTweaksExperiment = apexExperiment10;
-export const QuestBarSecondaryCtaExperiment = apexExperiment11;

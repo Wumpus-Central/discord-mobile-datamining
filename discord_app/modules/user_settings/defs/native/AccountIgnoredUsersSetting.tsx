@@ -1,14 +1,14 @@
-// === Module 14810: AccountIgnoredUsersSetting ===
+// === Module 14836: AccountIgnoredUsersSetting ===
 
-// Module 14810 (AccountIgnoredUsersSetting)
+// Module 14836 (AccountIgnoredUsersSetting)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1114 */;
-import RelationshipStore from "RelationshipStore" /* 4209 */;
+import RelationshipStore from "RelationshipStore" /* 4222 */;
 
 require = fn;
-fn(11473);
+fn(11500);
 let SettingBuilders = {
-  IconComponent: fn(6968).EyeSlashIcon,
+  IconComponent: fn(6982).EyeSlashIcon,
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t["93ZDWE"]);
@@ -21,7 +21,7 @@ let SettingBuilders = {
     obj = { numberOfIgnoredUsers: stateFromStoresArray.length };
     return intl.format(util.t.rXUeOl, obj);
   },
-  parent: fn(7975).MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
+  parent: fn(7989).MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
   screen: {
     route: fn(1074).UserSettingsSections.IGNORED_USERS,
     getComponent() {

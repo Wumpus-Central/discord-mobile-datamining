@@ -1,9 +1,9 @@
-// === Module 10870: useScaledActionHeight ===
+// === Module 10897: useScaledActionHeight ===
 
-// Module 10870 (useScaledActionHeight)
+// Module 10897 (useScaledActionHeight)
 import nativeDefault from "native" /* 576 */;
-import useToken from "useToken" /* 4262 */;
-import useFontScale from "useFontScale" /* 4982 */;
+import useToken from "useToken" /* 4275 */;
+import useFontScale from "useFontScale" /* 4996 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/main_tabs_v2/native/shared_components/user_list/useScaledActionHeight.tsx");

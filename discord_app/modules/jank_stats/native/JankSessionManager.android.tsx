@@ -1,11 +1,11 @@
-// === Module 17411: JankSessionManager ===
+// === Module 17442: JankSessionManager ===
 
-// Module 17411 (JankSessionManager)
+// Module 17442 (JankSessionManager)
 import LoggerDefault from "Logger" /* 3 */;
 import clientLaunchId from "clientLaunchId" /* 1340 */;
-import NativeJankSessionModuleDefault from "NativeJankSessionModule" /* 17412 */;
-import AnalyticsTrackingStore from "stores/AnalyticsTrackingStore" /* 7460 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7118 */;
+import NativeJankSessionModuleDefault from "NativeJankSessionModule" /* 17443 */;
+import AnalyticsTrackingStore from "stores/AnalyticsTrackingStore" /* 7474 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7132 */;
 
 require = fn;
 const Constants = fn(1074);
@@ -45,7 +45,7 @@ prototype["handleAppStateUpdate"] = function handleAppStateUpdate(state) {
 prototype["deliverPendingSessions"] = function deliverPendingSessions() {
   const self = this;
   if (!this._isDelivering) {
-    let properties = self(17412);
+    let properties = self(17443);
     if (null != properties) {
       tmp._isDelivering = true;
       const pendingReports = properties.getPendingReports();

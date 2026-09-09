@@ -1,24 +1,24 @@
-// === Module 11119: EditCustomStatusWithPreview ===
+// === Module 11146: EditCustomStatusWithPreview ===
 
-// Module 11119 (EditCustomStatusWithPreview)
+// Module 11146 (EditCustomStatusWithPreview)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import native from "native" /* 1178 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
-import shared from "shared" /* 4411 */;
-import ChatInputUtils from "ChatInputUtils" /* 4425 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4527 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 4763 */;
-import setAccessibilityFocus from "setAccessibilityFocus" /* 4971 */;
-import Pressables from "Pressables" /* 5123 */;
-import NavigatorHeader from "NavigatorHeader" /* 5624 */;
-import _modDef6940 from "module_6940" /* 6940 */;
-import maybeShowDiscardChangesAlertDefault from "maybeShowDiscardChangesAlert" /* 10928 */;
-import setCustomStatusDefault from "setCustomStatus" /* 11123 */;
-import removeCustomStatusDefault from "removeCustomStatus" /* 11125 */;
-import openEmojiPickerActionSheet from "openEmojiPickerActionSheet" /* 11126 */;
-import CustomStatusPreviewDefault from "CustomStatusPreview" /* 11153 */;
+import shared from "shared" /* 4425 */;
+import ChatInputUtils from "ChatInputUtils" /* 4439 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4541 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 4777 */;
+import setAccessibilityFocus from "setAccessibilityFocus" /* 4985 */;
+import Pressables from "Pressables" /* 5137 */;
+import NavigatorHeader from "NavigatorHeader" /* 5638 */;
+import _modDef6954 from "module_6954" /* 6954 */;
+import maybeShowDiscardChangesAlertDefault from "maybeShowDiscardChangesAlert" /* 10955 */;
+import setCustomStatusDefault from "setCustomStatus" /* 11150 */;
+import removeCustomStatusDefault from "removeCustomStatus" /* 11152 */;
+import openEmojiPickerActionSheet from "openEmojiPickerActionSheet" /* 11153 */;
+import CustomStatusPreviewDefault from "CustomStatusPreview" /* 11180 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1371 */;
@@ -30,7 +30,7 @@ function ClearInputButton(onPress) {
   obj.accessibilityLabel = intl.string(util.t.VkKicb);
   obj.onPress = onPress.onPress;
   obj.hitSlop = { top: 8, bottom: 8, right: 8 };
-  obj = { source: _modDef6940, style: closure_15().closeIcon, size: native.Icon.Sizes.SMALL };
+  obj = { source: _modDef6954, style: closure_15().closeIcon, size: native.Icon.Sizes.SMALL };
   obj.children = map1(native.Icon, obj);
   return map1(Pressables.PressableOpacity, obj);
 }
@@ -117,7 +117,7 @@ function EditCustomStatusWithPreview(navigation) {
   const callback1 = obj.useCallback(() => {
     removeCustomStatusDefault();
     const timerId = setTimeout(() => {
-      const AccessibilityAnnouncer = navigation(4411).AccessibilityAnnouncer;
+      const AccessibilityAnnouncer = navigation(4425).AccessibilityAnnouncer;
       const intl = navigation(1114).intl;
       AccessibilityAnnouncer.announce(intl.string(navigation(1114).t.YdUwBS));
     }, 300);
@@ -270,7 +270,7 @@ function EditCustomStatusWithPreview(navigation) {
       let obj = ChatInputUtils;
       obj.dismissKeyboard();
       obj = { initialValue: first2, onChange };
-      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(11206, dependencyMap.paths), "ClearAfterOptionsActionSheet", obj);
+      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(11233, dependencyMap.paths), "ClearAfterOptionsActionSheet", obj);
     };
     const obj14 = { variant: "text-sm/medium", children: tmp10(tmp7[39])(first2) };
     obj13.trailing = ref1(tmp6(tmp7[31]).Text, obj14);
@@ -308,13 +308,13 @@ function EditCustomStatusWithPreview(navigation) {
 }
 get_ActivityIndicator = fn(17);
 ({ ScrollView: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-const STATUS_MAX_LENGTH = fn(11120).STATUS_MAX_LENGTH;
+const STATUS_MAX_LENGTH = fn(11147).STATUS_MAX_LENGTH;
 const Constants = fn(1074);
 ({ AnalyticEvents: closure_9, AnalyticsSections: c10, NOOP: closure_11, Fonts } = Constants);
 const EmojiIntention = fn(1374).EmojiIntention;
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
-fn(4560);
+fn(4574);
 let createStyles = { container: { flexGrow: 1, padding: 16, rowGap: 24 }, statusSection: { rowGap: 8 }, statusInput: null, statusInputRow: null, emoji: null, status: null, statusText: null, inputPlaceholder: null, previewContainer: null, closeIcon: null, statusSectionHeader: null };
 createStyles = { flexDirection: "column", rowGap: 4, backgroundColor: nativeDefault.colors.INPUT_BACKGROUND_DEFAULT, borderRadius: nativeDefault.radii.lg, padding: 12 };
 createStyles.statusInput = createStyles;
@@ -348,7 +348,7 @@ export default function EditCustomStatusWithPreviewModal(analyticsLocations) {
       const obj = { title: null };
       const intl = analyticsLocations(1114).intl;
       obj.title = intl.string(analyticsLocations(1114).t.Iuzg8R);
-      return closure_1_13(analyticsLocations(7863).GenericHeaderTitle, obj);
+      return closure_1_13(analyticsLocations(7877).GenericHeaderTitle, obj);
     };
     obj.headerLeft = NavigatorHeader.getHeaderCloseButton(ModalActionCreatorsDefault.pop);
     obj.render = function render(arg0, navigation) {
@@ -365,5 +365,5 @@ export default function EditCustomStatusWithPreviewModal(analyticsLocations) {
     obj = { height: 56 };
   }
   obj.headerStyle = obj;
-  return closure_13(analyticsLocations(7000).Navigator, obj);
+  return closure_13(analyticsLocations(7014).Navigator, obj);
 };

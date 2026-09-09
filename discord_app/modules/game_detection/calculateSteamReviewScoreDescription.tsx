@@ -1,6 +1,6 @@
-// === Module 8728: calculateSteamReviewScoreDescription ===
+// === Module 8756: calculateSteamReviewScoreDescription ===
 
-// Module 8728 (calculateSteamReviewScoreDescription)
+// Module 8756 (calculateSteamReviewScoreDescription)
 import GameDetectionTypes from "GameDetectionTypes" /* 1934 */;
 import size from "module_2" /* 2 */;
 

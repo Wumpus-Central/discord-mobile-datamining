@@ -1,16 +1,16 @@
-// === Module 9897: InstantInviteFriendsList ===
+// === Module 9924: InstantInviteFriendsList ===
 
-// Module 9897 (InstantInviteFriendsList)
+// Module 9924 (InstantInviteFriendsList)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import native from "native" /* 1178 */;
-import RootNavigationRef from "RootNavigationRef" /* 4418 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4527 */;
-import Text_Text from "Text/Text" /* 4556 */;
-import Pressables from "Pressables" /* 5123 */;
-import InstantInviteRowDefault from "InstantInviteRow" /* 9898 */;
+import RootNavigationRef from "RootNavigationRef" /* 4432 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4541 */;
+import Text_Text from "Text/Text" /* 4570 */;
+import Pressables from "Pressables" /* 5137 */;
+import InstantInviteRowDefault from "InstantInviteRow" /* 9925 */;
 import noop from "module_19" /* 19 */;
-import TextStyles from "TextStyles" /* 5524 */;
+import TextStyles from "TextStyles" /* 5538 */;
 
 require = fn;
 function keyExtractor(item) {
@@ -57,7 +57,7 @@ function FriendsEmptyComponent() {
 const Fonts = fn(1074).Fonts;
 const jsxProd = fn(21);
 ({ jsx: closure_4, Fragment: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-fn(4560);
+fn(4574);
 let createStyles = { emptyTitle: null, emptyBody: null, goToFriendsLink: null };
 createStyles = {};
 const merged = Object.assign(TextStyles(Fonts.DISPLAY_EXTRABOLD, nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY, 18));

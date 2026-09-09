@@ -1,10 +1,10 @@
-// === Module 9024: UserProfileApplicationWidgetBottomProgressLayout ===
+// === Module 9051: UserProfileApplicationWidgetBottomProgressLayout ===
 
-// Module 9024 (UserProfileApplicationWidgetBottomProgressLayout)
+// Module 9051 (UserProfileApplicationWidgetBottomProgressLayout)
 import nativeDefault from "native" /* 576 */;
-import Text_Text from "Text/Text" /* 4556 */;
-import resolvedValuesFromUserApplicationIdentityProfile from "resolvedValuesFromUserApplicationIdentityProfile" /* 8931 */;
-import UserProfileApplicationWidgetSkeletons from "UserProfileApplicationWidgetSkeletons" /* 9019 */;
+import Text_Text from "Text/Text" /* 4570 */;
+import resolvedValuesFromUserApplicationIdentityProfile from "resolvedValuesFromUserApplicationIdentityProfile" /* 8958 */;
+import UserProfileApplicationWidgetSkeletons from "UserProfileApplicationWidgetSkeletons" /* 9046 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -12,7 +12,7 @@ get_ActivityIndicator = fn(17);
 ({ Image: c2, View: c3 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-fn(4560);
+fn(4574);
 let createStyles = { root: null, image: null, content: null, progressContainer: null, progress: null, textContent: null, textLeft: null, progressText: null };
 createStyles = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_12 };
 createStyles.root = createStyles;

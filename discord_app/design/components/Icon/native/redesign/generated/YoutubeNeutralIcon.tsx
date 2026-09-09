@@ -1,9 +1,9 @@
-// === Module 8893: YoutubeNeutralIcon ===
+// === Module 8920: YoutubeNeutralIcon ===
 
-// Module 8893 (YoutubeNeutralIcon)
+// Module 8920 (YoutubeNeutralIcon)
 import nativeDefault from "native" /* 576 */;
-import BaseIconImage from "BaseIconImage" /* 4261 */;
-import _mod8894 from "module_8894" /* 8894 */;
+import BaseIconImage from "BaseIconImage" /* 4274 */;
+import _mod8921 from "module_8921" /* 8921 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export const YoutubeNeutralIcon = function YoutubeNeutralIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod8894, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod8921, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 };

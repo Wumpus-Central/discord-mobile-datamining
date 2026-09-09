@@ -1,6 +1,6 @@
-// === Module 8608: FormTitle ===
+// === Module 8636: FormTitle ===
 
-// Module 8608 (FormTitle)
+// Module 8636 (FormTitle)
 import nativeDefault from "native" /* 576 */;
 import native from "native" /* 1178 */;
 import noop from "module_19" /* 19 */;
@@ -20,7 +20,7 @@ let num2 = 48;
 if (PlatformUtils.isAndroid()) {
   num2 = 56;
 }
-const createStyles = fn(4560);
+const createStyles = fn(4574);
 PlatformUtils = { titleWrapper: { flexDirection: "row", justifyContent: "space-between", paddingTop: 16, paddingBottom: 16 }, horizontalPadding: { paddingHorizontal: 16 }, thinTitle: { paddingTop: 26 }, titleText: null, error: null };
 PlatformUtils = { fontFamily: fn(1074).Fonts.PRIMARY_SEMIBOLD, fontSize: 13, color: nativeDefault.colors.TEXT_SUBTLE };
 PlatformUtils.titleText = PlatformUtils;

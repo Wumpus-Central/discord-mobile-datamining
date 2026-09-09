@@ -1,10 +1,10 @@
-// === Module 10405: StickerPackInformationPopout ===
+// === Module 10432: StickerPackInformationPopout ===
 
-// Module 10405 (StickerPackInformationPopout)
+// Module 10432 (StickerPackInformationPopout)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import Text_Text from "Text/Text" /* 4556 */;
-import StickersUtils from "StickersUtils" /* 4899 */;
+import Text_Text from "Text/Text" /* 4570 */;
+import StickersUtils from "StickersUtils" /* 4913 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -12,7 +12,7 @@ get_ActivityIndicator = fn(17);
 ({ View: c2, FlatList: c3 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-fn(4560);
+fn(4574);
 let createStyles = { informationContainer: null, headerContainer: null, informationHeader: null, informationContentContainer: null, informationContent: null, informationContentDescription: null };
 createStyles = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, width: "90%", marginHorizontal: "5%", padding: 16, borderRadius: nativeDefault.radii.xs, shadowColor: nativeDefault.colors.BLACK, shadowOffset: { width: 2, height: 2 }, shadowOpacity: 0.25, shadowRadius: 5 };
 createStyles.informationContainer = createStyles;

@@ -1,9 +1,9 @@
-// === Module 9313: heicPreConvert ===
+// === Module 9340: heicPreConvert ===
 
-// Module 9313 (heicPreConvert)
+// Module 9340 (heicPreConvert)
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
-import Upload from "Upload" /* 5128 */;
-import heicFilename from "heicFilename" /* 5171 */;
+import Upload from "Upload" /* 5142 */;
+import heicFilename from "heicFilename" /* 5185 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 

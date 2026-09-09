@@ -1,6 +1,6 @@
-// === Module 6556: ? ===
+// === Module 6570: ? ===
 
-// Module 6556
+// Module 6570
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/VibingWumpusSpotIllustration-2x.png.js");

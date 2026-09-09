@@ -1,9 +1,9 @@
-// === Module 10096: setUserStatus ===
+// === Module 10123: setUserStatus ===
 
-// Module 10096 (setUserStatus)
+// Module 10123 (setUserStatus)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import LastMentionTimestampStore from "LastMentionTimestampStore" /* 7115 */;
-import SelfPresenceStore from "SelfPresenceStore" /* 5279 */;
+import LastMentionTimestampStore from "LastMentionTimestampStore" /* 7129 */;
+import SelfPresenceStore from "SelfPresenceStore" /* 5293 */;
 
 const require = fn;
 let closure_7 = async function _setUserStatus() {
@@ -34,14 +34,14 @@ let closure_7 = async function _setUserStatus() {
     statusCreatedAtMs = UInt64Value.create(obj);
   }, closure_130_0(closure_130_2[7]).UserSettingsDelay.INFREQUENT_USER_ACTION);
   closure_129_6 = (function getStatusUpdateAnnouncement(DND, arg1) {
-    let obj = value(4404);
+    let obj = value(4418);
     const humanizeStatusResult = obj.humanizeStatus(DND);
     if ("0" === arg1) {
       const intl3 = value(1114).intl;
       obj = { statusLabel: humanizeStatusResult };
       return intl3.formatToPlainString(value(1114).t.dO2aLi, obj);
     } else {
-      const statusExpiryParts = value(10097).getStatusExpiryParts(arg1);
+      const statusExpiryParts = value(10124).getStatusExpiryParts(arg1);
       const timeString = statusExpiryParts.timeString;
       if ("today" === statusExpiryParts.kind) {
         const intl2 = value(1114).intl;

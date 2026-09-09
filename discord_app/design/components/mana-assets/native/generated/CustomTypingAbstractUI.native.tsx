@@ -1,9 +1,9 @@
-// === Module 5883: CustomTypingAbstractUI ===
+// === Module 5897: CustomTypingAbstractUI ===
 
-// Module 5883 (CustomTypingAbstractUI)
+// Module 5897 (CustomTypingAbstractUI)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5587 */;
-import _modDef5884 from "module_5884" /* 5884 */;
+import FastImageDefault from "FastImage" /* 5601 */;
+import _modDef5898 from "module_5898" /* 5898 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -24,7 +24,7 @@ export const CustomTypingAbstractUI = function CustomTypingAbstractUI(width) {
     num3 = 1;
   }
   let obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  obj = { uri: _modDef5884 };
+  obj = { uri: _modDef5898 };
   obj.source = obj;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];
@@ -32,5 +32,5 @@ export const CustomTypingAbstractUI = function CustomTypingAbstractUI(width) {
   obj.accessible = accessible;
   obj.accessibilityLabel = accessibilityLabel;
   obj.resizeMode = resizeMode;
-  return jsx(FastImageDefault, { uri: _modDef5884 });
+  return jsx(FastImageDefault, { uri: _modDef5898 });
 };

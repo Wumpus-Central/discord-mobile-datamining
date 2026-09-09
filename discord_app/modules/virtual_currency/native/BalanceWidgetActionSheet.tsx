@@ -1,15 +1,15 @@
-// === Module 11106: BalanceWidgetActionSheet ===
+// === Module 11133: BalanceWidgetActionSheet ===
 
-// Module 11106 (BalanceWidgetActionSheet)
+// Module 11133 (BalanceWidgetActionSheet)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import PlatformUtils from "PlatformUtils" /* 1115 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
 import dismissible_content from "dismissible_content" /* 1943 */;
-import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 4380 */;
-import _mod11107 from "module_11107" /* 11107 */;
-import _mod11108 from "module_11108" /* 11108 */;
-import _mod11109 from "module_11109" /* 11109 */;
+import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 4394 */;
+import _mod11134 from "module_11134" /* 11134 */;
+import _mod11135 from "module_11135" /* 11135 */;
+import _mod11136 from "module_11136" /* 11136 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -20,7 +20,7 @@ const Constants = fn(1074);
 const ContentDismissActionType = fn(1954).ContentDismissActionType;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(4560);
+const createStyles = fn(4574);
 let closure_12 = createStyles.createStyles((color) => {
   let obj = { actions: null, balanceHeader: null, balanceText: null, content: null, header: null, infoIconBackground: null, infoIconContainer: null, promotionalBackground: null, promotionalBackgroundContainer: null, promotionalBannerAsset: null, promotionalBannerContainer: null, promotionalBannerText: null };
   obj = { flex: 1, flexDirection: "column", gap: nativeDefault.space.PX_12, minWidth: "100%", paddingTop: nativeDefault.space.PX_12, paddingHorizontal: nativeDefault.space.PX_16 };
@@ -68,7 +68,7 @@ export default function _default(balance) {
   const memo = noop.useMemo(() => {
     let tmp = null;
     if (num > 4100) {
-      const obj = { backgroundVideo: _mod11107.default, backgroundImage: _mod11108.default, bannerImage: _mod11109.default, bannerText: null };
+      const obj = { backgroundVideo: _mod11134.default, backgroundImage: _mod11135.default, bannerImage: _mod11136.default, bannerText: null };
       const intl = util.intl;
       obj.bannerText = intl.string(util.t.LaMEFL);
       tmp = obj;

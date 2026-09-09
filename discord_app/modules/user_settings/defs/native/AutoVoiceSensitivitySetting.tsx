@@ -1,19 +1,19 @@
-// === Module 15252: AutoVoiceSensitivitySetting ===
+// === Module 15281: AutoVoiceSensitivitySetting ===
 
-// Module 15252 (AutoVoiceSensitivitySetting)
+// Module 15281 (AutoVoiceSensitivitySetting)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1114 */;
-import AudioActionCreatorsDefault from "AudioActionCreators" /* 9094 */;
+import AudioActionCreatorsDefault from "AudioActionCreators" /* 9121 */;
 import MediaEngineStore from "MediaEngineStore" /* 1908 */;
 
 require = fn;
-fn(11473);
+fn(11500);
 let SettingBuilders = {
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.Z4oaN0);
   },
-  parent: fn(7975).MobileUserSettings.VOICE,
+  parent: fn(7989).MobileUserSettings.VOICE,
   useValue: function useAutoVoiceSensitivitySettingValue() {
     const items = [MediaEngineStore];
     return initialize.useStateFromStores(items, () => modeOptions.getModeOptions().autoThreshold);

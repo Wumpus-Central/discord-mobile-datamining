@@ -1,8 +1,8 @@
-// === Module 7889: MarkupPostProcessors ===
+// === Module 7903: MarkupPostProcessors ===
 
-// Module 7889 (MarkupPostProcessors)
-import findCodedLinks from "findCodedLinks" /* 4543 */;
-import EmbedUtils from "EmbedUtils" /* 4897 */;
+// Module 7903 (MarkupPostProcessors)
+import findCodedLinks from "findCodedLinks" /* 4557 */;
+import EmbedUtils from "EmbedUtils" /* 4911 */;
 import Constants from "Constants" /* 1074 */;
 import size from "module_2" /* 2 */;
 
@@ -40961,28 +40961,6 @@ function containsMatchingNode(content, fn) {
     }
   }
 }
-function reinsertConsumedListSeparators(content) {
-  const items = [];
-  const iter = content[Symbol.iterator]();
-  const nextResult = iter.next();
-  while (iter !== undefined) {
-    let tmp2 = nextResult;
-    let tmp3 = "list" === nextResult.type;
-    if (tmp3) {
-      tmp3 = true === tmp2.consumedLeadingNewline;
-    }
-    if (tmp3) {
-      let arr = items.push({ type: "text", content: "\n" });
-    }
-    let _Array = Array;
-    if (Array.isArray(tmp2.content)) {
-      tmp2.content = reinsertConsumedListSeparators(tmp2.content);
-    }
-    arr = items.push(tmp2);
-    continue;
-  }
-  return items;
-}
 ({ MessageEmbedTypes, MessageTypes: c3 } = Constants);
 let items = [, ];
 ({ IMAGE: arr[0], GIFV: arr[1] } = MessageEmbedTypes);
@@ -41027,8 +41005,8 @@ export const removeExperimentLinks = function removeExperimentLinks(arr) {
   return arr.filter((type) => {
     let tmp = "link" !== type.type;
     if (!tmp) {
-      tmp = !closure_0(7890).isExperimentEmbedURL(type.target);
-      const obj = closure_0(7890);
+      tmp = !closure_0(7904).isExperimentEmbedURL(type.target);
+      const obj = closure_0(7904);
     }
     return tmp;
   });
@@ -41057,7 +41035,6 @@ export const removeGameServerShareLinks = function removeGameServerShareLinks(ar
     return !("link" === target.type && tmp);
   });
 };
-export { reinsertConsumedListSeparators };
 export const convertNewlinesInContent = function convertNewlinesInContent(arr) {
   const item = arr.forEach((type) => {
     let hasItem = closure_1_5.has(type.type);
@@ -41143,8 +41120,8 @@ export const convertNewlinesInContent = function convertNewlinesInContent(arr) {
   return arr;
 };
 export const runMessageMarkupPostProcessors = function runMessageMarkupPostProcessors(arg0) {
-  ({ ast, inline, message, contentMessage, messageContent, formatInline, toAST } = arg0);
-  ({ hasBailedAst, hideSimpleEmbedContent } = arg0);
+  ({ ast, inline, message, contentMessage, messageContent, formatInline } = arg0);
+  ({ hasBailedAst, hideSimpleEmbedContent, toAST } = arg0);
   let arr = ast;
   if (!Array.isArray(ast)) {
     const items = [ast];
@@ -41288,21 +41265,14 @@ export const runMessageMarkupPostProcessors = function runMessageMarkupPostProce
     found1 = found.filter((type) => {
       let tmp = "link" !== type.type;
       if (!tmp) {
-        tmp = !closure_0(7890).isExperimentEmbedURL(type.target);
-        const obj = closure_0(7890);
+        tmp = !closure_0(7904).isExperimentEmbedURL(type.target);
+        const obj = closure_0(7904);
       }
       return tmp;
     });
   }
-  if (toAST) {
-    toAST = !formatInline;
-  }
-  let arr9 = found1;
-  if (toAST) {
-    arr9 = reinsertConsumedListSeparators(found1);
-  }
-  _require = arr9.some((type) => "link" !== type.type);
-  ast = arr9.filter((target) => {
+  _require = found1.some((type) => "link" !== type.type);
+  ast = found1.filter((target) => {
     let parseQuestsEmbedCodeResult = null;
     if (null != target.target) {
       parseQuestsEmbedCodeResult = findCodedLinks.parseQuestsEmbedCode(target.target);

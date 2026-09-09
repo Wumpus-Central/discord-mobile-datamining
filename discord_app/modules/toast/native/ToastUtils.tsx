@@ -1,24 +1,24 @@
-// === Module 4258: ToastUtils ===
+// === Module 4271: ToastUtils ===
 
-// Module 4258 (ToastUtils)
+// Module 4271 (ToastUtils)
 import Constants from "Constants" /* 1074 */;
 import util from "util" /* 1114 */;
 import v1 from "v1" /* 1256 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1396 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 4259 */;
-import FriendsIcon from "FriendsIcon" /* 4260 */;
-import UserPlatformIcon from "UserPlatformIcon" /* 4499 */;
-import UserMinusIcon from "UserMinusIcon" /* 4501 */;
-import LinkIcon from "LinkIcon" /* 4503 */;
-import SendMessageIcon from "SendMessageIcon" /* 4505 */;
-import CopyIcon from "CopyIcon" /* 4507 */;
-import DownloadIcon from "DownloadIcon" /* 4509 */;
-import CheckmarkLargeIcon from "CheckmarkLargeIcon" /* 4511 */;
-import XLargeIcon2 from "XLargeIcon" /* 4513 */;
-import CircleInformationIcon from "CircleInformationIcon" /* 4515 */;
-import TrashIcon from "TrashIcon" /* 4518 */;
-import CircleCheckIcon from "CircleCheckIcon" /* 4520 */;
-import ClockIcon from "ClockIcon" /* 4523 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 4272 */;
+import FriendsIcon from "FriendsIcon" /* 4273 */;
+import UserPlatformIcon from "UserPlatformIcon" /* 4513 */;
+import UserMinusIcon from "UserMinusIcon" /* 4515 */;
+import LinkIcon from "LinkIcon" /* 4517 */;
+import SendMessageIcon from "SendMessageIcon" /* 4519 */;
+import CopyIcon from "CopyIcon" /* 4521 */;
+import DownloadIcon from "DownloadIcon" /* 4523 */;
+import CheckmarkLargeIcon from "CheckmarkLargeIcon" /* 4525 */;
+import XLargeIcon2 from "XLargeIcon" /* 4527 */;
+import CircleInformationIcon from "CircleInformationIcon" /* 4529 */;
+import TrashIcon from "TrashIcon" /* 4532 */;
+import CircleCheckIcon from "CircleCheckIcon" /* 4534 */;
+import ClockIcon from "ClockIcon" /* 4537 */;
 import size from "module_2" /* 2 */;
 
 const VerificationCriteria = Constants.VerificationCriteria;
@@ -43,7 +43,7 @@ export const presentFriendRequestAcceptedToast = function presentFriendRequestAc
     obj = { username: dependencyMap.username };
     stringResult = intl.formatToPlainString(util.t.b3eoD4, obj);
   }
-  obj = { key: "TOAST_FRIEND_REQUEST_ACCEPTED", content: stringResult, IconComponent: tmp2(4497).UserPlusIcon, iconColor: "status-positive" };
+  obj = { key: "TOAST_FRIEND_REQUEST_ACCEPTED", content: stringResult, IconComponent: tmp2(4511).UserPlusIcon, iconColor: "status-positive" };
   obj.open(obj);
 };
 export const presentGameFriendRequestAcceptedToast = function presentGameFriendRequestAcceptedToast() {
@@ -164,9 +164,9 @@ export const presentNoiseCancellation = function presentNoiseCancellation(arg0) 
   }
   obj = { key: "NOISE_CANCELLATION_TOGGLE", content: stringResult, IconComponent: null, iconColor: null };
   if (arg0) {
-    let XLargeIcon = tmp4(4511).CheckmarkLargeIcon;
+    let XLargeIcon = tmp4(4525).CheckmarkLargeIcon;
   } else {
-    XLargeIcon = tmp4(4513).XLargeIcon;
+    XLargeIcon = tmp4(4527).XLargeIcon;
   }
   obj.IconComponent = XLargeIcon;
   let str = "icon-feedback-critical";

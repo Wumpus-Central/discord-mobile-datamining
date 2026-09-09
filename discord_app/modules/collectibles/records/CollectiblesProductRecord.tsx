@@ -1,13 +1,13 @@
-// === Module 7544: CollectiblesProductRecord ===
+// === Module 7558: CollectiblesProductRecord ===
 
-// Module 7544 (CollectiblesProductRecord)
-import getPricesFromServerDefault from "getPricesFromServer" /* 5513 */;
+// Module 7558 (CollectiblesProductRecord)
+import getPricesFromServerDefault from "getPricesFromServer" /* 5527 */;
 import _slicedToArray from "module_32" /* 32 */;
-import CollectiblesBundledProductRecord from "CollectiblesBundledProductRecord" /* 7545 */;
-import CollectiblesStoreListingRecord from "CollectiblesStoreListingRecord" /* 7551 */;
+import CollectiblesBundledProductRecord from "CollectiblesBundledProductRecord" /* 7559 */;
+import CollectiblesStoreListingRecord from "CollectiblesStoreListingRecord" /* 7565 */;
 
 const require = fn;
-const CollectiblesItemRecord = fn(7546);
+const CollectiblesItemRecord = fn(7560);
 ({ createCollectiblesItemsFromServerResponse: hasOwnProperty, transformSKUToCollectiblesItem: metroRequire } = CollectiblesItemRecord);
 let closure_7 = fn(1076).REWARD_CATEGORY_AND_REWARD_SKU_IDS;
 const Constants = fn(1074);
@@ -171,7 +171,7 @@ CollectiblesProductRecord["fromStorefrontProductRecord"] = function fromStorefro
               }
               ({ items, item } = obj);
               first = _slicedToArray(tenantMetadata.selectedOptions, 1)[0];
-              obj = { baseVariantName: skus.name, baseVariantSkuId: first.id, variantLabel: null, variantValue: null, storeListingId: null, skuId: null, name: null, summary: null, styles: "Button", type: "Array", premiumType: "call", items: "coc", categorySkuId: "appSharingSettings", isCategoryReward: "trackThreadBrowserTab", prices: "as", previewAssets: "isArray", googleSkuIds: "burst", eligibleOffers: "isArray", variants: "office_worker_tone2", bundledProducts: "r", isFirstParty: "onLeave" };
+              obj = { baseVariantName: skus.name, baseVariantSkuId: first.id, variantLabel: null, variantValue: null, storeListingId: null, skuId: null, name: null, summary: null, styles: "Button", type: "Array", premiumType: "accessible", items: false, categorySkuId: false, isCategoryReward: false, prices: false, previewAssets: false, googleSkuIds: false, eligibleOffers: false, variants: false, bundledProducts: false, isFirstParty: false };
               let str;
               if (first != null) {
                 str = first.optionValue;

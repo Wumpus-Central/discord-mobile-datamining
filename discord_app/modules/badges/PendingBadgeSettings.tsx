@@ -1,13 +1,13 @@
-// === Module 13071: PendingBadgeSettings ===
+// === Module 13097: PendingBadgeSettings ===
 
-// Module 13071 (PendingBadgeSettings)
+// Module 13097 (PendingBadgeSettings)
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import BadgeId from "BadgeId" /* 8184 */;
-import BadgeIdResolution from "BadgeIdResolution" /* 8193 */;
-import BadgeUtils from "BadgeUtils" /* 11204 */;
+import BadgeId from "BadgeId" /* 8210 */;
+import BadgeIdResolution from "BadgeIdResolution" /* 8219 */;
+import BadgeUtils from "BadgeUtils" /* 11231 */;
 import _slicedToArray from "module_32" /* 32 */;
 import UserStore from "UserStore" /* 1371 */;
-import BadgeDirectoryStore from "BadgeDirectoryStore" /* 8192 */;
+import BadgeDirectoryStore from "BadgeDirectoryStore" /* 8218 */;
 
 require = fn;
 function getSavedBadgeSettings() {
@@ -82,11 +82,11 @@ function applyPendingBadgeSettingsToProfileBadges(items, arg1) {
     const map = new Map();
     for (const item10027 of found) {
       let tmp12 = set;
-      let obj = set(8193);
+      let obj = set(8219);
       let profileBadgeId = obj.resolveProfileBadgeId(item10027.id);
       let tmp15 = profileBadgeId;
       if (null != profileBadgeId) {
-        let tmp12Result = tmp12(11204);
+        let tmp12Result = tmp12(11231);
         if (!tmp12Result.isPinnedBadge(tmp15)) {
           if (!map.has(tmp15)) {
             let result = map.set(tmp15, item10027);
@@ -252,7 +252,7 @@ export const applyPendingBadgeSettings = function applyPendingBadgeSettings(stat
     const _Map = Map;
     const map = new Map();
     for (const item10026 of mapped) {
-      let obj = set(11204);
+      let obj = set(11231);
       if (obj.isPinnedBadge(item10026.badge_id)) {
         let arr = items1.push(item10026);
       } else {

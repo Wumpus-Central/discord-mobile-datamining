@@ -1,23 +1,23 @@
-// === Module 15618: DevToolsDismissableContentsScreen ===
+// === Module 15648: DevToolsDismissableContentsScreen ===
 
-// Module 15618 (DevToolsDismissableContentsScreen)
+// Module 15648 (DevToolsDismissableContentsScreen)
 import nativeDefault from "native" /* 576 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1611 */;
 import UserSettingsProtoActionCreators from "UserSettingsProtoActionCreators" /* 1940 */;
 import dismissible_content from "dismissible_content" /* 1943 */;
-import TrashIcon from "TrashIcon" /* 4518 */;
-import Text_Text from "Text/Text" /* 4556 */;
-import fuzzysearchDefault from "fuzzysearch" /* 5517 */;
-import TableRow from "TableRow" /* 5605 */;
-import TableRowArrow from "TableRowArrow" /* 5612 */;
-import TableRowGroup from "TableRowGroup" /* 5687 */;
-import SearchField from "SearchField" /* 7050 */;
-import TableSwitchRow from "TableSwitchRow" /* 7201 */;
-import DismissibleContentFrameworkActionCreators from "DismissibleContentFrameworkActionCreators" /* 10242 */;
-import SearchEmpty from "SearchEmpty" /* 10322 */;
-import useBountiesAutoScroll from "useBountiesAutoScroll" /* 15015 */;
-import toggleDismissibleContentDismissStateDefault from "toggleDismissibleContentDismissState" /* 15619 */;
-import DoubleCheckmarkIcon from "DoubleCheckmarkIcon" /* 15620 */;
+import TrashIcon from "TrashIcon" /* 4532 */;
+import Text_Text from "Text/Text" /* 4570 */;
+import fuzzysearchDefault from "fuzzysearch" /* 5531 */;
+import TableRow from "TableRow" /* 5619 */;
+import TableRowArrow from "TableRowArrow" /* 5626 */;
+import TableRowGroup from "TableRowGroup" /* 5701 */;
+import SearchField from "SearchField" /* 7064 */;
+import TableSwitchRow from "TableSwitchRow" /* 7214 */;
+import DismissibleContentFrameworkActionCreators from "DismissibleContentFrameworkActionCreators" /* 10269 */;
+import SearchEmpty from "SearchEmpty" /* 10349 */;
+import useBountiesAutoScroll from "useBountiesAutoScroll" /* 15042 */;
+import toggleDismissibleContentDismissStateDefault from "toggleDismissibleContentDismissState" /* 15649 */;
+import DoubleCheckmarkIcon from "DoubleCheckmarkIcon" /* 15650 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import DismissibleContentFrameworkStore from "DismissibleContentFrameworkStore" /* 1947 */;
@@ -35,7 +35,7 @@ function DismissableContentsEmpty() {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8, Fragment: closure_9 } = jsxProd);
-fn(4560);
+fn(4574);
 let obj = { container: null, contentContainer: null, headerSection: null, search: null, sectionHeader: null, emptyState: null };
 obj = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flex: 1 };
 obj.container = obj;
@@ -92,7 +92,7 @@ export default function DevToolsDismissableContentsScreen() {
   const tmp = closure_10();
   const ref = initialSearchQuery.useRef(null);
   importDefault = initialSearchQuery.useRef(0);
-  let obj = ref(9936);
+  let obj = ref(9963);
   const tmp2 = useSafeAreaInsetsDefault();
   [dependencyMap, tmp5] = _slicedToArray(obj.useLocalStorageState("devtools-dc-search", ""), 2);
   _slicedToArray = tmp5;
@@ -140,7 +140,7 @@ export default function DevToolsDismissableContentsScreen() {
   const dailyCapOverridden = stateFromStoresObject.dailyCapOverridden;
   const newUserMinAgeRequiredOverridden = stateFromStoresObject.newUserMinAgeRequiredOverridden;
   let tmp4 = _slicedToArray(obj.useLocalStorageState("devtools-dc-search", ""), 2);
-  const tmp9 = _slicedToArray(ref(15014).useForceBountiesSwipeUpNux(), 2);
+  const tmp9 = _slicedToArray(ref(15041).useForceBountiesSwipeUpNux(), 2);
   const first2 = tmp9[0];
   closure_10 = tmp11;
   const items1 = [tmp9[1]];
@@ -211,6 +211,6 @@ export default function DevToolsDismissableContentsScreen() {
   };
   obj.renderItem = callback4;
   obj.onScroll = callback3;
-  obj.children = dailyCapOverridden(ref(8879).FlashList, obj);
+  obj.children = dailyCapOverridden(ref(8906).FlashList, obj);
   return dailyCapOverridden(first1, obj);
 };

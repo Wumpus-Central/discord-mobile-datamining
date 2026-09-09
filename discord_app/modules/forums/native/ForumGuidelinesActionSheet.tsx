@@ -1,22 +1,22 @@
-// === Module 10272: ForumGuidelinesActionSheet ===
+// === Module 10299: ForumGuidelinesActionSheet ===
 
-// Module 10272 (ForumGuidelinesActionSheet)
+// Module 10299 (ForumGuidelinesActionSheet)
 import nativeDefault from "native" /* 576 */;
 import PlatformUtils from "PlatformUtils" /* 1115 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4527 */;
-import LinkUtils from "LinkUtils" /* 4714 */;
-import ChannelSettingsActionCreatorsDefault from "ChannelSettingsActionCreators" /* 8630 */;
-import ForumGuidelinesManagerDefault from "ForumGuidelinesManager" /* 10274 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4541 */;
+import LinkUtils from "LinkUtils" /* 4728 */;
+import ChannelSettingsActionCreatorsDefault from "ChannelSettingsActionCreators" /* 8658 */;
+import ForumGuidelinesManagerDefault from "ForumGuidelinesManager" /* 10301 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-let closure_6 = fn(7273).FORUM_GUIDELINES_ACTION_SHEET;
+let closure_6 = fn(7287).FORUM_GUIDELINES_ACTION_SHEET;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8, Fragment: closure_9 } = jsxProd);
-fn(4560);
+fn(4574);
 let createStyles = { scrollContainer: { paddingHorizontal: 16 }, header: { alignItems: "center", paddingTop: 20, paddingBottom: 24 }, headerTitle: { marginTop: 8 }, guidelinesContainer: null, footer: null, buttonWrapper: null, buttonPill: null, floatingButtonContainer: null, editButton: null, editText: null, editIcon: null };
 createStyles = { padding: 16, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: nativeDefault.radii.sm };
 createStyles.guidelinesContainer = createStyles;
@@ -185,5 +185,5 @@ export default function ForumGuidelinesActionSheet(channel) {
 export const openForumGuidelinesActionSheet = function openForumGuidelinesActionSheet(arg0) {
   const obj = {};
   const merged = Object.assign(arg0);
-  obj.openLazy(asyncRequireImpl(10272, dependencyMap.paths), closure_6, obj);
+  obj.openLazy(asyncRequireImpl(10299, dependencyMap.paths), closure_6, obj);
 };

@@ -1,6 +1,6 @@
-// === Module 7554: CollectiblesUtils ===
+// === Module 7568: CollectiblesUtils ===
 
-// Module 7554 (CollectiblesUtils)
+// Module 7568 (CollectiblesUtils)
 import _mod12 from "module_12" /* 12 */;
 import Constants2 from "Constants" /* 1085 */;
 import util from "util" /* 1114 */;
@@ -9,14 +9,14 @@ import PerksStateUtils from "PerksStateUtils" /* 1377 */;
 import user from "user" /* 1379 */;
 import NameplateRecord from "NameplateRecord" /* 1887 */;
 import CollectiblesItemType from "CollectiblesItemType" /* 1889 */;
-import PremiumUtilsDefault from "PremiumUtils" /* 4218 */;
-import PriceUtils from "PriceUtils" /* 7234 */;
-import AvatarDecorationRecord from "AvatarDecorationRecord" /* 7547 */;
-import ProfileEffectRecord from "ProfileEffectRecord" /* 7548 */;
-import ProfileFrameRecord from "ProfileFrameRecord" /* 7549 */;
-import CollectiblesProductUtils from "CollectiblesProductUtils" /* 7553 */;
-import ShopAssetConfigRecord from "ShopAssetConfigRecord" /* 7555 */;
-import XboxGamePassPerksExperiment from "XboxGamePassPerksExperiment" /* 7556 */;
+import PremiumUtilsDefault from "PremiumUtils" /* 4231 */;
+import PriceUtils from "PriceUtils" /* 7248 */;
+import AvatarDecorationRecord from "AvatarDecorationRecord" /* 7561 */;
+import ProfileEffectRecord from "ProfileEffectRecord" /* 7562 */;
+import ProfileFrameRecord from "ProfileFrameRecord" /* 7563 */;
+import CollectiblesProductUtils from "CollectiblesProductUtils" /* 7567 */;
+import ShopAssetConfigRecord from "ShopAssetConfigRecord" /* 7569 */;
+import XboxGamePassPerksExperiment from "XboxGamePassPerksExperiment" /* 7570 */;
 import CollectiblesShopConstants from "CollectiblesShopConstants" /* 1076 */;
 import Constants from "Constants" /* 1074 */;
 import size from "module_2" /* 2 */;

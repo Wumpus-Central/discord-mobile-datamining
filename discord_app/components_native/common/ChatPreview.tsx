@@ -1,49 +1,49 @@
-// === Module 13256: ChatPreview ===
+// === Module 13279: ChatPreview ===
 
-// Module 13256 (ChatPreview)
+// Module 13279 (ChatPreview)
 import _modDef12 from "module_12" /* 12 */;
 import nativeDefault from "native" /* 576 */;
 import PlatformUtils from "PlatformUtils" /* 1115 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1477 */;
 import KeyboardManagerUtilsAll from "KeyboardManagerUtils" /* 1874 */;
-import Text_Text from "Text/Text" /* 4556 */;
-import transitionToChannel from "transitionToChannel" /* 4571 */;
-import InteractionComponentTypes from "InteractionComponentTypes" /* 4792 */;
-import Pressables from "Pressables" /* 5123 */;
-import common_SafeAreaView from "common/SafeAreaView" /* 7123 */;
-import ReactionActionCreators from "ReactionActionCreators" /* 7764 */;
-import RowGeneratorDefault from "RowGenerator" /* 7932 */;
-import canAddNewReactionsDefault from "canAddNewReactions" /* 7971 */;
-import messages_MessagesUtils from "messages/MessagesUtils" /* 11257 */;
-import reactions_ReactionUtils from "reactions/ReactionUtils" /* 11259 */;
-import computeScrollDataDefault from "computeScrollData" /* 11275 */;
-import NativeChatUtilsDefault from "NativeChatUtils" /* 11276 */;
-import ChatManagerDefault from "ChatManager" /* 11543 */;
-import handleMessagesTapImage from "handleMessagesTapImage" /* 11551 */;
-import MessageDataSnowflakeUtils from "MessageDataSnowflakeUtils" /* 11552 */;
-import handleMessagesTapChannel from "handleMessagesTapChannel" /* 11553 */;
-import handleMessagesLongPressChannel from "handleMessagesLongPressChannel" /* 11588 */;
-import showLongPressURLActionSheetDefault from "showLongPressURLActionSheet" /* 11589 */;
-import handleMessagesTapLink from "handleMessagesTapLink" /* 11621 */;
-import showLongPressMessageActionSheet from "showLongPressMessageActionSheet" /* 11662 */;
-import ChatDefault from "Chat" /* 11899 */;
-import isNewMessageGroupDefault from "isNewMessageGroup" /* 11956 */;
-import GuildNSFWDefault from "GuildNSFW" /* 12669 */;
-import ChannelSpoilerDefault from "ChannelSpoiler" /* 12671 */;
+import Text_Text from "Text/Text" /* 4570 */;
+import transitionToChannel from "transitionToChannel" /* 4585 */;
+import InteractionComponentTypes from "InteractionComponentTypes" /* 4806 */;
+import Pressables from "Pressables" /* 5137 */;
+import common_SafeAreaView from "common/SafeAreaView" /* 7137 */;
+import ReactionActionCreators from "ReactionActionCreators" /* 7778 */;
+import RowGeneratorDefault from "RowGenerator" /* 7946 */;
+import canAddNewReactionsDefault from "canAddNewReactions" /* 7985 */;
+import messages_MessagesUtils from "messages/MessagesUtils" /* 11284 */;
+import reactions_ReactionUtils from "reactions/ReactionUtils" /* 11286 */;
+import computeScrollDataDefault from "computeScrollData" /* 11302 */;
+import NativeChatUtilsDefault from "NativeChatUtils" /* 11303 */;
+import ChatManagerDefault from "ChatManager" /* 11569 */;
+import handleMessagesTapImage from "handleMessagesTapImage" /* 11577 */;
+import MessageDataSnowflakeUtils from "MessageDataSnowflakeUtils" /* 11578 */;
+import handleMessagesTapChannel from "handleMessagesTapChannel" /* 11579 */;
+import handleMessagesLongPressChannel from "handleMessagesLongPressChannel" /* 11614 */;
+import showLongPressURLActionSheetDefault from "showLongPressURLActionSheet" /* 11615 */;
+import handleMessagesTapLink from "handleMessagesTapLink" /* 11647 */;
+import showLongPressMessageActionSheet from "showLongPressMessageActionSheet" /* 11688 */;
+import ChatDefault from "Chat" /* 11925 */;
+import isNewMessageGroupDefault from "isNewMessageGroup" /* 11982 */;
+import GuildNSFWDefault from "GuildNSFW" /* 12695 */;
+import ChannelSpoilerDefault from "ChannelSpoiler" /* 12697 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4552 */;
-import ActionSheetStore from "ActionSheetStore" /* 4251 */;
+import AccessibilityStore from "AccessibilityStore" /* 4566 */;
+import ActionSheetStore from "ActionSheetStore" /* 4264 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 import UserStore from "UserStore" /* 1371 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, StyleSheet } = get_ActivityIndicator);
-const RowGeneratorConstants = fn(7933);
+const RowGeneratorConstants = fn(7947);
 ({ Changeset: c10, RowType: closure_11, SeparatorType: closure_12 } = RowGeneratorConstants);
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
-fn(4560);
+fn(4574);
 let createStyles = { chat: { flex: 1, overflow: "hidden" }, containerInner: null, jumpToChatButtonContainer: null, jumpToChatButton: null, jumpToChatText: null };
 createStyles = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 createStyles.containerInner = createStyles;
@@ -242,7 +242,7 @@ class ChatPreviewBase extends PureComponent {
       if (null != jumpTargetId) {
         const resolved = Promise.resolve();
         resolved.then(() => {
-          applyArgumentsResult(4571).transitionToMessage(closure_1_0, jumpTargetId, { navigationReplace: true });
+          applyArgumentsResult(4585).transitionToMessage(closure_1_0, jumpTargetId, { navigationReplace: true });
         });
       }
     };
@@ -272,7 +272,7 @@ class ChatPreviewBase extends PureComponent {
           }
           channel = channel.getChannel(arg1);
           if (null != channel) {
-            applyArgumentsResult(4571);
+            applyArgumentsResult(4585);
             const obj = { source, navigationReplace: true };
             obj.transitionToThread(channel, obj);
           }
@@ -493,7 +493,7 @@ prototype["render"] = function render() {
   const obj4 = { style: tmp.jumpToChatText, variant: "text-md/medium", color: "interactive-text-default", children: self.props.jumpToChatProps.jumpToChatText };
   tmp9Result = PlatformUtils;
 };
-ChatPreviewBase.contextType = fn(4271).ThemeContext;
+ChatPreviewBase.contextType = fn(4284).ThemeContext;
 ChatPreviewBase.defaultProps = { withSafeArea: true };
 const size = fn(2);
 let result = size.fileFinishedImporting("components_native/common/ChatPreview.tsx");
@@ -512,10 +512,10 @@ export const ChatPreview = function ChatPreview(channelId) {
   const items1 = [ChannelStore];
   const stateFromStores1 = channelId(504).useStateFromStores(items1, () => ChannelStore.getChannel(channelId));
   const obj2 = channelId(504);
-  const isChannelSpoilerGated = channelId(7329).useIsChannelSpoilerGated(stateFromStores1);
-  const obj3 = channelId(7329);
-  const isChannelContentGated = channelId(4771).useIsChannelContentGated(stateFromStores1);
-  const obj4 = channelId(4771);
+  const isChannelSpoilerGated = channelId(7343).useIsChannelSpoilerGated(stateFromStores1);
+  const obj3 = channelId(7343);
+  const isChannelContentGated = channelId(4785).useIsChannelContentGated(stateFromStores1);
+  const obj4 = channelId(4785);
   const items2 = [ActionSheetStore];
   obj = {};
   const stateFromStores2 = channelId(504).useStateFromStores(items2, () => null != content.getContent());

@@ -1,13 +1,13 @@
-// === Module 11553: handleMessagesTapChannel ===
+// === Module 11579: handleMessagesTapChannel ===
 
-// Module 11553 (handleMessagesTapChannel)
-import GuildDiscoveryUtilsAll from "GuildDiscoveryUtils" /* 7341 */;
+// Module 11579 (handleMessagesTapChannel)
+import GuildDiscoveryUtilsAll from "GuildDiscoveryUtils" /* 7355 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 import GuildMemberStore from "GuildMemberStore" /* 2021 */;
 import GuildRoleStore from "GuildRoleStore" /* 2015 */;
 import GuildStore from "GuildStore" /* 1979 */;
-import PermissionStore from "PermissionStore" /* 4199 */;
+import PermissionStore from "PermissionStore" /* 4212 */;
 
 const require = fn;
 function maybeStartLurking() {
@@ -373,8 +373,8 @@ const isGuildLurker = fn(1975).isGuildLurker;
 const Constants = fn(1074);
 ({ ChannelTypes: closure_12, GuildFeatures: map1, Permissions: closure_14, Routes: closure_15 } = Constants);
 const StaticChannelRoute = fn(1964).StaticChannelRoute;
-const GuildOnboardingTab = fn(7101).GuildOnboardingTab;
-let closure_18 = fn(7097).CHANNELS_AND_ROLES_MODAL_KEY;
+const GuildOnboardingTab = fn(7115).GuildOnboardingTab;
+let closure_18 = fn(7111).CHANNELS_AND_ROLES_MODAL_KEY;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/messages/native/handlers/handleMessagesTapChannel.tsx");
 

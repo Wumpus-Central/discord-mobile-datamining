@@ -1,7 +1,7 @@
-// === Module 11401: useShouldShowInitialSafetyToolsButtonTooltip ===
+// === Module 11428: useShouldShowInitialSafetyToolsButtonTooltip ===
 
-// Module 11401 (useShouldShowInitialSafetyToolsButtonTooltip)
-import ChannelSafetyWarningsStore from "ChannelSafetyWarningsStore" /* 10920 */;
+// Module 11428 (useShouldShowInitialSafetyToolsButtonTooltip)
+import ChannelSafetyWarningsStore from "ChannelSafetyWarningsStore" /* 10947 */;
 
 const require = fn;
 const size = fn(2);

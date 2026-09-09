@@ -1,11 +1,11 @@
-// === Module 13124: FriendRequestNote ===
+// === Module 13150: FriendRequestNote ===
 
-// Module 13124 (FriendRequestNote)
+// Module 13150 (FriendRequestNote)
 import nativeDefault from "native" /* 576 */;
-import PeopleListTracking from "PeopleListTracking" /* 13126 */;
+import PeopleListTracking from "PeopleListTracking" /* 13152 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import RelationshipStore from "RelationshipStore" /* 4209 */;
+import RelationshipStore from "RelationshipStore" /* 4222 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
@@ -13,7 +13,7 @@ get_ActivityIndicator = fn(17);
 const RelationshipTypes = fn(1074).RelationshipTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-fn(4560);
+fn(4574);
 let createStyles = { container: null, spoiler: null, hidden: null };
 createStyles = { width: "100%", position: "relative", padding: nativeDefault.space.PX_12, borderRadius: nativeDefault.radii.md, minHeight: 56, flexDirection: "row", alignItems: "center" };
 createStyles.container = createStyles;

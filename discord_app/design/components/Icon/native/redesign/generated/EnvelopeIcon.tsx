@@ -1,9 +1,9 @@
-// === Module 7081: EnvelopeIcon ===
+// === Module 7095: EnvelopeIcon ===
 
-// Module 7081 (EnvelopeIcon)
+// Module 7095 (EnvelopeIcon)
 import nativeDefault from "native" /* 576 */;
-import BaseIconImage from "BaseIconImage" /* 4261 */;
-import _mod7082 from "module_7082" /* 7082 */;
+import BaseIconImage from "BaseIconImage" /* 4274 */;
+import _mod7096 from "module_7096" /* 7096 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export const EnvelopeIcon = function EnvelopeIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod7082, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod7096, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 };

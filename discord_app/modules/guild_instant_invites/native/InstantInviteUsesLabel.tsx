@@ -1,7 +1,7 @@
-// === Module 10953: InstantInviteUsesLabel ===
+// === Module 10980: InstantInviteUsesLabel ===
 
-// Module 10953 (InstantInviteUsesLabel)
-import Text_Text from "Text/Text" /* 4556 */;
+// Module 10980 (InstantInviteUsesLabel)
+import Text_Text from "Text/Text" /* 4570 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

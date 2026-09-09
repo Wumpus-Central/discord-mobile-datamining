@@ -1,6 +1,6 @@
-// === Module 5854: ? ===
+// === Module 5868: ? ===
 
-// Module 5854
+// Module 5868
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/ClydeAnnouncementSpotIllustration-2x.png.js");

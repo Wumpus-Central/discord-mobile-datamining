@@ -1,17 +1,17 @@
-// === Module 7269: ThreadHooks ===
+// === Module 7283: ThreadHooks ===
 
-// Module 7269 (ThreadHooks)
+// Module 7283 (ThreadHooks)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import _modDef12 from "module_12" /* 12 */;
 import BigFlagUtilsAll from "BigFlagUtils" /* 1086 */;
-import isSystemMessageDefault from "isSystemMessage" /* 7270 */;
-import useIsRemoteDefault from "useIsRemote" /* 7271 */;
+import isSystemMessageDefault from "isSystemMessage" /* 7284 */;
+import useIsRemoteDefault from "useIsRemote" /* 7285 */;
 import _slicedToArray from "module_32" /* 32 */;
-import createExperiment from "createExperiment" /* 4475 */;
+import createExperiment from "createExperiment" /* 4489 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
-import PermissionStore from "PermissionStore" /* 4199 */;
-import ActiveJoinedThreadsStore from "ActiveJoinedThreadsStore" /* 5506 */;
+import PermissionStore from "PermissionStore" /* 4212 */;
+import ActiveJoinedThreadsStore from "ActiveJoinedThreadsStore" /* 5520 */;
 
 const require = fn;
 function useCanStartPrivateThread(type) {
@@ -513,13 +513,13 @@ export const useCanJoinThreadVoice = function useCanJoinThreadVoice(channel) {
   }
   obj = { guildId: channel.guild_id, location: "e791ea_1" };
   let enabled = importDefaultResultResult.useExperiment(obj, { autoTrackExposure: false }).enabled;
-  let tmp3Result = tmp3(7272);
+  let tmp3Result = tmp3(7286);
   const isGameInvitesPost = tmp3Result.useIsGameInvitesPost(channel);
-  tmp3Result = tmp3(4771);
+  tmp3Result = tmp3(4785);
   let shouldAgeVerifyForAgeGate = tmp3Result.useShouldAgeVerifyForAgeGate();
   if (shouldAgeVerifyForAgeGate) {
-    shouldAgeVerifyForAgeGate = tmp3(4771).shouldShowAgeGateForChannelId(channel.id);
-    const tmp3Result1 = tmp3(4771);
+    shouldAgeVerifyForAgeGate = tmp3(4785).shouldShowAgeGateForChannelId(channel.id);
+    const tmp3Result1 = tmp3(4785);
   }
   let isVocalThreadResult = !tmp2;
   if (!tmp2) {

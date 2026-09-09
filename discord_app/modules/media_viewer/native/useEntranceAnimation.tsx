@@ -1,9 +1,9 @@
-// === Module 12988: useEntranceAnimation ===
+// === Module 13014: useEntranceAnimation ===
 
-// Module 12988 (useEntranceAnimation)
+// Module 13014 (useEntranceAnimation)
 import ReactBatchUpdates from "ReactBatchUpdates" /* 1249 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4296 */;
-import timing from "timing" /* 4561 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4310 */;
+import timing from "timing" /* 4575 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -46,9 +46,9 @@ export const useEntranceAnimation = function useEntranceAnimation(entranceAnimat
       ReactBatchUpdates.batchUpdates(() => state.setState({ isComplete: false }));
       const obj3 = timing;
       const fn = function t() {
-        closure_0(4296).runOnJS(setUseEntranceAnimationState)({ isComplete: true });
-        obj = closure_0(4296);
-        closure_0(4296).runOnJS(incrementLoads)();
+        closure_0(4310).runOnJS(setUseEntranceAnimationState)({ isComplete: true });
+        obj = closure_0(4310);
+        closure_0(4310).runOnJS(incrementLoads)();
       };
       obj = { runOnJS: ReanimatedRexport.runOnJS, setUseEntranceAnimationState, incrementLoads };
       fn.__closure = obj;

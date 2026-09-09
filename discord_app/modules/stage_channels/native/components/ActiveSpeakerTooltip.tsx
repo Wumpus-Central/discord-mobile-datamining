@@ -1,19 +1,19 @@
-// === Module 10079: ActiveSpeakerTooltip ===
+// === Module 10106: ActiveSpeakerTooltip ===
 
-// Module 10079 (ActiveSpeakerTooltip)
+// Module 10106 (ActiveSpeakerTooltip)
 import nativeDefault from "native" /* 576 */;
-import UserSummaryItemDefault from "UserSummaryItem" /* 10059 */;
+import UserSummaryItemDefault from "UserSummaryItem" /* 10086 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ChannelRTCStore from "ChannelRTCStore" /* 4576 */;
+import ChannelRTCStore from "ChannelRTCStore" /* 4590 */;
 
 const require = fn;
 const View = fn(17).View;
-const StageChannelListStore = fn(10050);
+const StageChannelListStore = fn(10077);
 ({ useActiveSpeakerPillScrollHandler: metroRequire, useActiveSpeakerPillState: closure_7 } = StageChannelListStore);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-fn(4560);
+fn(4574);
 let obj = { container: { width: "100%", flexDirection: "column", alignItems: "center", justifyContent: "center" }, participantItemContainer: null, participantAvatarContainer: null, participantAvatarText: null, participantNameplateContainer: null, participantNameplateSpeakingText: null };
 obj = { padding: 10, flexDirection: "row", alignItems: "center", justifyContent: "center", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, borderRadius: nativeDefault.radii.round };
 obj.participantItemContainer = obj;
@@ -37,7 +37,7 @@ export default noop.memo((channel) => {
     const speakingParticipants = ChannelRTCStore.getSpeakingParticipants(channel.id);
     const items = [speakingParticipants.map((user) => user.user), ChannelRTCStore.getParticipantsVersion(channel.id)];
     return items;
-  }, items1, channel(5432).isVersionEqual), 1)[0];
+  }, items1, channel(5446).isVersionEqual), 1)[0];
   let tmp5 = null;
   if (0 !== first.length) {
     tmp5 = null;
@@ -53,11 +53,11 @@ export default noop.memo((channel) => {
       const intl = tmp2(1114).intl;
       const obj5 = { count: first.length };
       obj4.children = intl.format(tmp2(1114).t["+dia6l"], obj5);
-      obj3.children = closure_8(tmp2(4556).Text, obj4);
+      obj3.children = closure_8(tmp2(4570).Text, obj4);
       items2[1] = closure_8(View, obj3);
       obj.children = items2;
       obj.children = closure_9(View, obj);
-      tmp5 = closure_8(tmp2(5123).PressableOpacity, obj);
+      tmp5 = closure_8(tmp2(5137).PressableOpacity, obj);
     }
   }
   return tmp5;

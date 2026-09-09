@@ -1,18 +1,18 @@
-// === Module 8686: GameProfileScreen ===
+// === Module 8714: GameProfileScreen ===
 
-// Module 8686 (GameProfileScreen)
+// Module 8714 (GameProfileScreen)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4296 */;
-import ActionSheetActionCreators from "ActionSheetActionCreators" /* 4527 */;
-import timing from "timing" /* 4561 */;
-import components_Button_Button from "components/Button/Button" /* 4975 */;
-import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 8691 */;
-import getGameProfileStoreWebsiteDataDefault from "getGameProfileStoreWebsiteData" /* 8698 */;
-import GameProfileStoreLinksActionSheet from "GameProfileStoreLinksActionSheet" /* 8715 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4310 */;
+import ActionSheetActionCreators from "ActionSheetActionCreators" /* 4541 */;
+import timing from "timing" /* 4575 */;
+import components_Button_Button from "components/Button/Button" /* 4989 */;
+import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 8719 */;
+import getGameProfileStoreWebsiteDataDefault from "getGameProfileStoreWebsiteData" /* 8726 */;
+import GameProfileStoreLinksActionSheet from "GameProfileStoreLinksActionSheet" /* 8743 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GameProfileStore from "GameProfileStore" /* 8687 */;
+import GameProfileStore from "GameProfileStore" /* 8715 */;
 
 const GameProfileStoreLinksActionSheetDefault = GameProfileStoreLinksActionSheet;
 
@@ -30,7 +30,7 @@ get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, ActivityIndicator: metroRequire } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-fn(4560);
+fn(4574);
 let createStyles = { loadingContainer: null, scrollView: null, stickyHeader: null };
 createStyles = { flex: 1, justifyContent: "center", alignItems: "center", minHeight: 300, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST };
 createStyles.loadingContainer = createStyles;

@@ -1,9 +1,9 @@
-// === Module 16400: ConnectionUnknownIcon ===
+// === Module 16431: ConnectionUnknownIcon ===
 
-// Module 16400 (ConnectionUnknownIcon)
+// Module 16431 (ConnectionUnknownIcon)
 import nativeDefault from "native" /* 576 */;
-import BaseIconImage from "BaseIconImage" /* 4261 */;
-import _mod16401 from "module_16401" /* 16401 */;
+import BaseIconImage from "BaseIconImage" /* 4274 */;
+import _mod16432 from "module_16432" /* 16432 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export const ConnectionUnknownIcon = function ConnectionUnknownIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod16401, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod16432, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 };

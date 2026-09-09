@@ -1,19 +1,19 @@
-// === Module 8098: BaseIconButton ===
+// === Module 8114: BaseIconButton ===
 
-// Module 8098 (BaseIconButton)
-import ReanimatedRexport2 from "ReanimatedRexport" /* 4296 */;
-import IconDefault from "Icon" /* 4977 */;
-import ButtonConstants from "ButtonConstants" /* 4980 */;
-import ButtonHooks from "ButtonHooks" /* 4981 */;
-import Button_BaseButton from "Button/BaseButton" /* 4983 */;
-import ButtonPill from "ButtonPill" /* 4985 */;
+// Module 8114 (BaseIconButton)
+import ReanimatedRexport2 from "ReanimatedRexport" /* 4310 */;
+import IconDefault from "Icon" /* 4991 */;
+import ButtonConstants from "ButtonConstants" /* 4994 */;
+import ButtonHooks from "ButtonHooks" /* 4995 */;
+import Button_BaseButton from "Button/BaseButton" /* 4997 */;
+import ButtonPill from "ButtonPill" /* 4999 */;
 import noop from "module_19" /* 19 */;
 
 const ReanimatedRexport = ReanimatedRexport2;
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(4560);
+const createStyles = fn(4574);
 let closure_4 = createStyles.createStyles((arg0, arg1) => {
   if ("sm" === arg1) {
     let obj = { paddingHorizontal: ButtonConstants.SMALL_BUTTON_PADDING, paddingVertical: ButtonConstants.SMALL_BUTTON_PADDING };
@@ -56,7 +56,7 @@ export const BaseIconButton = noop.forwardRef((variant, ref) => {
   let obj = ReanimatedRexport2;
   const sharedValue = obj.useSharedValue(0);
   let obj1 = ButtonHooks;
-  const iconTintStyles = obj1.useIconTintStyles(str);
+  const iconTintStyles = obj1.useIconTintStyles(str, sharedValue);
   const iconSizeStyles = ButtonHooks.useIconSizeStyles(DEFAULT_BUTTON_SIZE, true, maxFontSizeMultiplier);
   let MEDIUM_BUTTON_HEIGHT = ButtonConstants.LARGE_BUTTON_HEIGHT;
   if ("sm" === DEFAULT_BUTTON_SIZE) {

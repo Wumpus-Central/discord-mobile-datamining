@@ -1,25 +1,25 @@
-// === Module 17885: ParentalConsentConnectionScreen ===
+// === Module 17918: ParentalConsentConnectionScreen ===
 
-// Module 17885 (ParentalConsentConnectionScreen)
+// Module 17918 (ParentalConsentConnectionScreen)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
 import _modDef2690 from "module_2690" /* 2690 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4527 */;
-import shareGuardianConnectLink from "shareGuardianConnectLink" /* 14881 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4541 */;
+import shareGuardianConnectLink from "shareGuardianConnectLink" /* 14907 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import FamilyCenterStore from "FamilyCenterStore" /* 7537 */;
+import FamilyCenterStore from "FamilyCenterStore" /* 7551 */;
 import UserStore from "UserStore" /* 1371 */;
 
 require = fn;
 const View = fn(17).View;
-let closure_9 = fn(7538).CONNECT_GUARDIAN_BOTTOM_SHEET_KEY;
+let closure_9 = fn(7552).CONNECT_GUARDIAN_BOTTOM_SHEET_KEY;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
 let c12 = "https://support.discord.com/hc/articles/14155060633623";
-fn(4560);
+fn(4574);
 let createStyles = { body: null, cardSection: null, cardTitle: null };
 createStyles = { marginTop: nativeDefault.space.PX_24 };
 createStyles.body = createStyles;
@@ -197,7 +197,7 @@ export default function ParentalConsentConnectionScreen() {
     const intl2 = util.intl;
     obj = { link };
     obj.body = intl2.format(_modDef2690["6GaRTu"], obj);
-    obj.openLazy(asyncRequireImpl(14882, dependencyMap.paths), closure_9, obj);
+    obj.openLazy(asyncRequireImpl(14908, dependencyMap.paths), closure_9, obj);
   }, items7);
   obj = { title: null, subtitle: null, subtitleColor: "text-muted", submitting: null, footer: null, children: null };
   tmp5(tmp3[27]);

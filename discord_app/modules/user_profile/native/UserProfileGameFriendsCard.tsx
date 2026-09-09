@@ -1,14 +1,14 @@
-// === Module 13082: UserProfileGameFriendsCard ===
+// === Module 13108: UserProfileGameFriendsCard ===
 
-// Module 13082 (UserProfileGameFriendsCard)
-import useGetOrFetchApplicationsDefault from "useGetOrFetchApplications" /* 7168 */;
-import ApplicationIconAndNameDefault from "ApplicationIconAndName" /* 12632 */;
+// Module 13108 (UserProfileGameFriendsCard)
+import useGetOrFetchApplicationsDefault from "useGetOrFetchApplications" /* 7182 */;
+import ApplicationIconAndNameDefault from "ApplicationIconAndName" /* 12658 */;
 import noop from "module_19" /* 19 */;
 
-const UserProfileCardDefault = tmp2(7207);
+const UserProfileCardDefault = tmp2(7221);
 const require = fn;
 let jsx = fn(21).jsx;
-const createStyles = fn(4560);
+const createStyles = fn(4574);
 let closure_4 = createStyles.createStyles({ card: { flexDirection: "column" } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_profile/native/UserProfileGameFriendsCard.tsx");
@@ -66,7 +66,7 @@ export default function UserProfileGameFriendsCard(arg0) {
     const intl3 = tmp6(1114).intl;
     obj1.title = intl3.string(tmp6(1114).t["Uv/eTx"]);
     const obj2 = { variant: "text-md/normal", color: "text-default", children: formatResult };
-    obj1.children = jsx(tmp6(4556).Text, { variant: "text-md/normal", color: "text-default", children: formatResult });
+    obj1.children = jsx(tmp6(4570).Text, { variant: "text-md/normal", color: "text-default", children: formatResult });
     return jsx(UserProfileCardDefault, { style: null, title: null, children: null });
   }
   const arr = useGetOrFetchApplicationsDefault(applicationIds);

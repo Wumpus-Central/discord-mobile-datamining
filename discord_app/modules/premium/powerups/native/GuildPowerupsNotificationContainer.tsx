@@ -1,17 +1,17 @@
-// === Module 12559: GuildPowerupsNotificationContainer ===
+// === Module 12585: GuildPowerupsNotificationContainer ===
 
-// Module 12559 (GuildPowerupsNotificationContainer)
+// Module 12585 (GuildPowerupsNotificationContainer)
 import _mod17 from "module_17" /* 17 */;
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import _modDef2428 from "module_2428" /* 2428 */;
-import Text_Text from "Text/Text" /* 4556 */;
-import ManaTypeConsolidationExperiment from "ManaTypeConsolidationExperiment" /* 8095 */;
-import useGuildPowerupTier3OverrideConfigDefault from "useGuildPowerupTier3OverrideConfig" /* 12560 */;
-import useGuildPowerupExpiringNotificationsConfigDefault from "useGuildPowerupExpiringNotificationsConfig" /* 12561 */;
-import GuildPowerupsWarningDefault from "GuildPowerupsWarning" /* 12564 */;
+import Text_Text from "Text/Text" /* 4570 */;
+import ManaTypeConsolidationExperiment from "ManaTypeConsolidationExperiment" /* 8111 */;
+import useGuildPowerupTier3OverrideConfigDefault from "useGuildPowerupTier3OverrideConfig" /* 12586 */;
+import useGuildPowerupExpiringNotificationsConfigDefault from "useGuildPowerupExpiringNotificationsConfig" /* 12587 */;
+import GuildPowerupsWarningDefault from "GuildPowerupsWarning" /* 12590 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createStyles from "createStyles" /* 4560 */;
+import createStyles from "createStyles" /* 4574 */;
 import size from "module_2" /* 2 */;
 
 function Tier3OverrideNotice(children) {

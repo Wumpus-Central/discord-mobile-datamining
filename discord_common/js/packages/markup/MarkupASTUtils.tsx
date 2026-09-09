@@ -1,6 +1,6 @@
-// === Module 7989: MarkupASTUtils ===
+// === Module 8003: MarkupASTUtils ===
 
-// Module 7989 (MarkupASTUtils)
+// Module 8003 (MarkupASTUtils)
 import size from "module_2" /* 2 */;
 
 function collectAst(content) {
@@ -487,6 +487,28 @@ function walkAst(content, fn) {
     }
   }
 }
+function reinsertConsumedListSeparators(content) {
+  const items = [];
+  const iter = content[Symbol.iterator]();
+  const nextResult = iter.next();
+  while (iter !== undefined) {
+    let tmp2 = nextResult;
+    let tmp3 = "list" === nextResult.type;
+    if (tmp3) {
+      tmp3 = true === tmp2.consumedLeadingNewline;
+    }
+    if (tmp3) {
+      let arr = items.push({ type: "text", content: "\n" });
+    }
+    let _Array = Array;
+    if (Array.isArray(tmp2.content)) {
+      tmp2.content = reinsertConsumedListSeparators(tmp2.content);
+    }
+    arr = items.push(tmp2);
+    continue;
+  }
+  return items;
+}
 function flattenAst(isSlate, content) {
   closure_0 = isSlate;
   let tmp3 = content;
@@ -603,6 +625,7 @@ function constrainAst(content, arg1) {
 
 export const NUM_MAX_AST_NODES = 200;
 export { walkAst };
+export { reinsertConsumedListSeparators };
 export const astToString = function astToString(applicationSubscriptionSystemMessageASTContent) {
   const items = [];
   if (Array.isArray(applicationSubscriptionSystemMessageASTContent)) {

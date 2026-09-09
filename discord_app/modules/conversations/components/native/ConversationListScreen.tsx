@@ -1,15 +1,15 @@
-// === Module 7925: ConversationListScreen ===
+// === Module 7939: ConversationListScreen ===
 
-// Module 7925 (ConversationListScreen)
+// Module 7939 (ConversationListScreen)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import Text_Text from "Text/Text" /* 4556 */;
-import ConversationsAnalytics2 from "ConversationsAnalytics" /* 7909 */;
-import ConversationListItemDefault from "ConversationListItem" /* 7926 */;
+import Text_Text from "Text/Text" /* 4570 */;
+import ConversationsAnalytics2 from "ConversationsAnalytics" /* 7923 */;
+import ConversationListItemDefault from "ConversationListItem" /* 7940 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ConversationsStore from "ConversationsStore" /* 7596 */;
+import ConversationsStore from "ConversationsStore" /* 7610 */;
 
 require = fn;
 function renderItem(item) {
@@ -21,11 +21,11 @@ function keyExtractor(conversationId) {
 }
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: metroRequire, View: closure_7 } = get_ActivityIndicator);
-const ConversationConstants = fn(7598);
+const ConversationConstants = fn(7612);
 ({ MAX_CONVERSATIONS_PER_CHANNEL: closure_9, MOBILE_FETCH_LIMIT: c10, MOBILE_PREVIEW_MESSAGE_COUNT: closure_11 } = ConversationConstants);
 const jsx = fn(21).jsx;
 const viewabilityConfig = { waitForInteraction: false, itemVisiblePercentThreshold: 50, minimumViewTime: 1000 };
-fn(4560);
+fn(4574);
 let obj = { container: null, content: null, spinner: null };
 obj = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 obj.container = obj;
@@ -33,7 +33,7 @@ let createStyles = { paddingHorizontal: nativeDefault.space.PX_16, paddingTop: n
 obj.content = createStyles;
 obj.spinner = { paddingVertical: nativeDefault.space.PX_16, alignItems: "center" };
 let closure_14 = createStyles.createStyles(obj);
-createStyles = fn(4560);
+createStyles = fn(4574);
 let obj3 = { empty: null };
 let obj2 = { paddingVertical: nativeDefault.space.PX_16, alignItems: "center" };
 obj3.empty = { paddingVertical: nativeDefault.space.PX_24, paddingHorizontal: nativeDefault.space.PX_16 };

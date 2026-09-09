@@ -1,20 +1,20 @@
-// === Module 16230: ChannelInfo ===
+// === Module 16260: ChannelInfo ===
 
-// Module 16230 (ChannelInfo)
-import StageMediaHooks from "StageMediaHooks" /* 5417 */;
-import useEmbeddedAppsForChannelDefault from "useEmbeddedAppsForChannel" /* 12063 */;
-import Badges from "Badges" /* 13012 */;
-import GuildRoleSubscriptionGatedChannelIconDefault from "GuildRoleSubscriptionGatedChannelIcon" /* 16121 */;
-import showChannelBadgeDefault from "showChannelBadge" /* 16231 */;
-import ChannelBadgeDefault from "ChannelBadge" /* 16232 */;
-import ChannelItemEmbeddedActivitiesDefault from "ChannelItemEmbeddedActivities" /* 16235 */;
-import useVoiceChannelStartTime from "useVoiceChannelStartTime" /* 16236 */;
+// Module 16260 (ChannelInfo)
+import StageMediaHooks from "StageMediaHooks" /* 5431 */;
+import useEmbeddedAppsForChannelDefault from "useEmbeddedAppsForChannel" /* 12089 */;
+import Badges from "Badges" /* 13038 */;
+import GuildRoleSubscriptionGatedChannelIconDefault from "GuildRoleSubscriptionGatedChannelIcon" /* 16151 */;
+import showChannelBadgeDefault from "showChannelBadge" /* 16261 */;
+import ChannelBadgeDefault from "ChannelBadge" /* 16262 */;
+import ChannelItemEmbeddedActivitiesDefault from "ChannelItemEmbeddedActivities" /* 16265 */;
+import useVoiceChannelStartTime from "useVoiceChannelStartTime" /* 16266 */;
 import noop from "module_19" /* 19 */;
-import NewChannelsStore from "NewChannelsStore" /* 7532 */;
+import NewChannelsStore from "NewChannelsStore" /* 7546 */;
 import GuildStore from "GuildStore" /* 1979 */;
-import PermissionStore from "PermissionStore" /* 4199 */;
-import ReadStateStore from "ReadStateStore" /* 4575 */;
-import VoiceStateStore from "VoiceStateStore" /* 4579 */;
+import PermissionStore from "PermissionStore" /* 4212 */;
+import ReadStateStore from "ReadStateStore" /* 4589 */;
+import VoiceStateStore from "VoiceStateStore" /* 4593 */;
 
 require = fn;
 function LimitAndDurationInfo(channel) {
@@ -46,7 +46,7 @@ function LimitAndDurationInfo(channel) {
     }
     obj.video = hasVideo;
     obj.channel = channel;
-    let tmp6Result = jsx(channel(16122).ConnectedUserLimit, { userCount: voiceStatesCount, video: null, channel: null });
+    let tmp6Result = jsx(channel(16152).ConnectedUserLimit, { userCount: voiceStatesCount, video: null, channel: null });
   } else {
     const obj1 = { channel };
     tmp6Result = <DurationInfo channel={channel} />;
@@ -69,7 +69,7 @@ function DurationInfo(channel) {
 const Constants = fn(1074);
 ({ GuildFeatures: closure_8, Permissions: closure_9, Fonts } = Constants);
 const jsx = fn(21).jsx;
-fn(4560);
+fn(4574);
 const createStyles = { activeTimestamp: { fontFamily: Fonts.CODE_NORMAL, fontSize: 12, lineHeight: 16 } };
 let closure_11 = createStyles.createStyles(createStyles);
 const size = fn(2);
@@ -83,7 +83,7 @@ export default function ChannelInfo(channel) {
   const stateFromStoresObject = obj.useStateFromStoresObject(items, () => ({ guild: GuildStore.getGuild(channel.guild_id), mentionsCount: ReadStateStore.getMentionCount(channel.id), isMentionLowImportance: ReadStateStore.getIsMentionLowImportance(channel.id), isNewChannel: NewChannelsStore.shouldIndicateNewChannel(channel.guild_id, channel.id) }));
   ({ guild, mentionsCount, isNewChannel } = stateFromStoresObject);
   const tmp5 = useEmbeddedAppsForChannelDefault(channel);
-  let obj1 = channel(7885);
+  let obj1 = channel(7899);
   const postsWithUnreadsCount = obj1.useUnreadThreadsCountForParent(channel.guild_id, channel.id);
   if (showChannelBadgeDefault({ mentionsCount, isNewChannel, postsWithUnreadsCount, muted })) {
     obj = { mentionCount: mentionsCount, isMentionLowImportance: stateFromStoresObject.isMentionLowImportance, isNewChannel, postsWithUnreadsCount: null, muted: null };
@@ -104,7 +104,7 @@ export default function ChannelInfo(channel) {
           hasItem = features.has(constants.COMMUNITY);
         }
         if (hasItem) {
-          let tmpResult = tmp(4706);
+          let tmpResult = tmp(4720);
           if (tmpResult.hasStream(voiceStates)) {
             tmp11Result = jsx(tmp(1178).LiveTag, {});
           }
@@ -113,7 +113,7 @@ export default function ChannelInfo(channel) {
     }
     if (null != enableActivities) {
       if (enableActivities) {
-        tmpResult = tmp(16234);
+        tmpResult = tmp(16264);
         if (tmpResult.showChannelItemEmbeddedActivities(tmp5)) {
           obj = { embeddedApps: tmp5, muted };
           tmp11Result = jsx(ChannelItemEmbeddedActivitiesDefault, { embeddedApps: tmp5, muted });

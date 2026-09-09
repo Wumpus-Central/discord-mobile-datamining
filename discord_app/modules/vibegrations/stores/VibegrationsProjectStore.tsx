@@ -1,9 +1,9 @@
-// === Module 16590: VibegrationsProjectStore ===
+// === Module 16621: VibegrationsProjectStore ===
 
-// Module 16590 (VibegrationsProjectStore)
+// Module 16621 (VibegrationsProjectStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import VibegrationsTypes from "VibegrationsTypes" /* 7248 */;
+import VibegrationsTypes from "VibegrationsTypes" /* 7259 */;
 import _slicedToArray from "module_32" /* 32 */;
 import UserStore from "UserStore" /* 1371 */;
 

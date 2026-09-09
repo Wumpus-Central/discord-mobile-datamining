@@ -1,10 +1,10 @@
-// === Module 15934: ScreenRecordingPip ===
+// === Module 15964: ScreenRecordingPip ===
 
-// Module 15934 (ScreenRecordingPip)
+// Module 15964 (ScreenRecordingPip)
 import nativeDefault from "native" /* 576 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4296 */;
-import spring from "spring" /* 4974 */;
-import springPresets from "springPresets" /* 4978 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4310 */;
+import spring from "spring" /* 4988 */;
+import springPresets from "springPresets" /* 4992 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -202,11 +202,11 @@ function ScreenRecordingPip(surveyConfig) {
   tmp5 = useScreenRecordingStore((isRecording) => isRecording.isRecording);
 }
 const View = fn(17).View;
-const useScreenRecordingStore = fn(15935).useScreenRecordingStore;
+const useScreenRecordingStore = fn(15965).useScreenRecordingStore;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8, Fragment: closure_9 } = jsxProd);
 let c10 = 100;
-fn(4560);
+fn(4574);
 let createStyles = { widgetContainer: { position: "absolute" }, widget: null, stepText: null, stopButton: null, doneButton: null };
 let size = { backgroundColor: nativeDefault.colors.BACKGROUND_BRAND, justifyContent: "center", alignItems: "center", height: 100, width: 100, gap: nativeDefault.space.PX_8, padding: nativeDefault.space.PX_8, borderRadius: nativeDefault.radii.xl };
 const merged = Object.assign(nativeDefault.shadows.SHADOW_MOBILE_NAVIGATOR_X);

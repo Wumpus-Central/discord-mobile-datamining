@@ -1,6 +1,6 @@
-// === Module 16234: showChannelItemEmbeddedActivities ===
+// === Module 16264: showChannelItemEmbeddedActivities ===
 
-// Module 16234 (showChannelItemEmbeddedActivities)
+// Module 16264 (showChannelItemEmbeddedActivities)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/guild_sidebar/showChannelItemEmbeddedActivities.tsx");

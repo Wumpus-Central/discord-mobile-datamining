@@ -1,20 +1,20 @@
-// === Module 15050: BountiesScrollRecapFooter ===
+// === Module 15077: BountiesScrollRecapFooter ===
 
-// Module 15050 (BountiesScrollRecapFooter)
+// Module 15077 (BountiesScrollRecapFooter)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import native from "native" /* 4271 */;
-import Text_Text from "Text/Text" /* 4556 */;
-import OrbsIcon from "OrbsIcon" /* 8842 */;
+import native from "native" /* 4284 */;
+import Text_Text from "Text/Text" /* 4570 */;
+import OrbsIcon from "OrbsIcon" /* 8869 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4552 */;
+import AccessibilityStore from "AccessibilityStore" /* 4566 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4560);
+const createStyles = fn(4574);
 let closure_7 = createStyles.createStyles(() => {
   let obj = { container: null, headerLabel: null, orbRow: null, rive: null, orbAmount: null };
   obj = { flex: 1, alignItems: "center", justifyContent: "center", gap: nativeDefault.space.PX_4 };

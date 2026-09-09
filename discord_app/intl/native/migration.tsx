@@ -1,14 +1,14 @@
-// === Module 14187: migration ===
+// === Module 14212: migration ===
 
-// Module 14187 (migration)
+// Module 14212 (migration)
 import nativeDefault from "native" /* 576 */;
-import LinkingDefault from "Linking" /* 4255 */;
-import _modDef4257 from "module_4257" /* 4257 */;
+import LinkingDefault from "Linking" /* 4268 */;
+import _modDef4270 from "module_4270" /* 4270 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(4560);
+const createStyles = fn(4574);
 let closure_5 = createStyles.createStyles((arg0) => {
   const link = { color: nativeDefault.colors.TEXT_LINK, textDecorationLine: null };
   let str = "none";
@@ -26,7 +26,7 @@ export const IntlLink = function IntlLink(children) {
   if (typeof target === "string") {
     let fn = () => {
       const obj = LinkingDefault;
-      return obj.openURL(_modDef4257.sanitizeUrl(target));
+      return obj.openURL(_modDef4270.sanitizeUrl(target));
     };
   } else {
     fn = target;
@@ -38,6 +38,6 @@ export const IntlLink = function IntlLink(children) {
     }
   }
   const tmp = target;
-  const tmp3 = closure_5(noop.useContext(target(4279).AccessibilityPreferencesContext).alwaysShowLinkDecorations);
-  return jsx(tmp(1178).LegacyText, { accessible: true, accessibilityRole: "link", onPress: fn, style: closure_5(noop.useContext(target(4279).AccessibilityPreferencesContext).alwaysShowLinkDecorations).link, children: children.children });
+  const tmp3 = closure_5(noop.useContext(target(4294).AccessibilityPreferencesContext).alwaysShowLinkDecorations);
+  return jsx(tmp(1178).LegacyText, { accessible: true, accessibilityRole: "link", onPress: fn, style: closure_5(noop.useContext(target(4294).AccessibilityPreferencesContext).alwaysShowLinkDecorations).link, children: children.children });
 };

@@ -1,9 +1,9 @@
-// === Module 5897: DevQuestsWideAbstractUI ===
+// === Module 5911: DevQuestsWideAbstractUI ===
 
-// Module 5897 (DevQuestsWideAbstractUI)
+// Module 5911 (DevQuestsWideAbstractUI)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5587 */;
-import _modDef5898 from "module_5898" /* 5898 */;
+import FastImageDefault from "FastImage" /* 5601 */;
+import _modDef5912 from "module_5912" /* 5912 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -24,7 +24,7 @@ export const DevQuestsWideAbstractUI = function DevQuestsWideAbstractUI(width) {
     num3 = 1;
   }
   let obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  obj = { uri: _modDef5898 };
+  obj = { uri: _modDef5912 };
   obj.source = obj;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];
@@ -32,5 +32,5 @@ export const DevQuestsWideAbstractUI = function DevQuestsWideAbstractUI(width) {
   obj.accessible = accessible;
   obj.accessibilityLabel = accessibilityLabel;
   obj.resizeMode = resizeMode;
-  return jsx(FastImageDefault, { uri: _modDef5898 });
+  return jsx(FastImageDefault, { uri: _modDef5912 });
 };

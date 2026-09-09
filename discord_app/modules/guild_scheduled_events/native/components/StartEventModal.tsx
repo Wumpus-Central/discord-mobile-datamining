@@ -1,14 +1,14 @@
-// === Module 9814: StartEventModal ===
+// === Module 9841: StartEventModal ===
 
-// Module 9814 (StartEventModal)
+// Module 9841 (StartEventModal)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import native from "native" /* 1178 */;
-import Text_Text from "Text/Text" /* 4556 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 4763 */;
-import Pressables from "Pressables" /* 5123 */;
-import _modDef7089 from "module_7089" /* 7089 */;
-import GuildEventCardDefault from "GuildEventCard" /* 9813 */;
+import Text_Text from "Text/Text" /* 4570 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 4777 */;
+import Pressables from "Pressables" /* 5137 */;
+import _modDef7103 from "module_7103" /* 7103 */;
+import GuildEventCardDefault from "GuildEventCard" /* 9840 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -25,7 +25,7 @@ function NavigationBar(onClose) {
   obj.onPress = function onPress() {
     return onClose();
   };
-  obj = { source: _modDef7089 };
+  obj = { source: _modDef7103 };
   obj.children = closure_1_12(native.Icon, obj);
   obj.children = closure_1_12(Pressables.PressableOpacity, obj);
   return closure_1_12(View, obj);
@@ -52,10 +52,10 @@ class PreviewEventCard {
 const View = fn(17).View;
 const GuildScheduledEventsConstants = fn(1963);
 ({ AGE_VERIFICATION_STAGE_CHANNEL_TYPES: closure_9, GuildScheduledEventEntityTypes: c10 } = GuildScheduledEventsConstants);
-const START_EVENT_MODAL_KEY = fn(9704).START_EVENT_MODAL_KEY;
+const START_EVENT_MODAL_KEY = fn(9731).START_EVENT_MODAL_KEY;
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
-fn(4560);
+fn(4574);
 let createStyles = { mainContainer: null, container: null, headerContainer: null, footerContainer: null, header: null, headerTitle: null, buttonContainer: null, previewCard: null, headerPrivacyLevel: null };
 createStyles = { flex: 1, padding: nativeDefault.space.PX_16, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 createStyles.mainContainer = createStyles;

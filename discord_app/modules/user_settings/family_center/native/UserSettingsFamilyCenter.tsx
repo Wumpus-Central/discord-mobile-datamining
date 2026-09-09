@@ -1,17 +1,17 @@
-// === Module 14872: UserSettingsFamilyCenter ===
+// === Module 14898: UserSettingsFamilyCenter ===
 
-// Module 14872 (UserSettingsFamilyCenter)
+// Module 14898 (UserSettingsFamilyCenter)
 import nativeDefault from "native" /* 576 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
 import dismissible_content from "dismissible_content" /* 1943 */;
-import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 4380 */;
-import Stack_Stack from "Stack/Stack" /* 4973 */;
-import FamilyCenterActionCreatorsDefault from "FamilyCenterActionCreators" /* 7539 */;
-import MonitoringAgentDefault from "MonitoringAgent" /* 7602 */;
-import MetricEvents from "MetricEvents" /* 7607 */;
+import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 4394 */;
+import Stack_Stack from "Stack/Stack" /* 4987 */;
+import FamilyCenterActionCreatorsDefault from "FamilyCenterActionCreators" /* 7553 */;
+import MonitoringAgentDefault from "MonitoringAgent" /* 7616 */;
+import MetricEvents from "MetricEvents" /* 7621 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import FamilyCenterStore from "FamilyCenterStore" /* 7537 */;
+import FamilyCenterStore from "FamilyCenterStore" /* 7551 */;
 import UserStore from "UserStore" /* 1371 */;
 
 require = fn;
@@ -21,11 +21,11 @@ function FamilyCenterLoading() {
 }
 function FamilyCenter() {
   const tmp = closure_19();
-  let obj = familyCenterInitialized(8650);
+  let obj = familyCenterInitialized(8678);
   const acceptedRequestsCount = obj.useAcceptedRequestsCount();
-  const tmp6 = isLoading(14873)();
-  const selectedTab = isLoading(14874)().selectedTab;
-  let obj1 = familyCenterInitialized(8652);
+  const tmp6 = isLoading(14899)();
+  const selectedTab = isLoading(14900)().selectedTab;
+  let obj1 = familyCenterInitialized(8680);
   const selectedTeenId = obj1.useSelectedTeenId();
   let obj2 = familyCenterInitialized(563);
   items = [FamilyCenterStore];
@@ -34,24 +34,24 @@ function FamilyCenter() {
   isLoading = stateFromStoresObject.isLoading;
   dependencyMap = tmp10;
   const currentUser = UserStore.getCurrentUser();
-  const tmp3 = isLoading(7162);
+  const tmp3 = isLoading(7176);
   [tmp12, _slicedToArray] = _slicedToArray(obj2.useState(0), 2);
   const callback = obj2.useCallback((nativeEvent) => {
     _slicedToArray(nativeEvent.nativeEvent.layout.width);
   }, []);
-  let obj3 = familyCenterInitialized(9797);
+  let obj3 = familyCenterInitialized(9824);
   obj = { items: null, onPageChange: null, pageWidth: null, defaultIndex: null };
   obj = { label: null, id: null, page: null };
   const intl = familyCenterInitialized(1114).intl;
   obj.label = intl.string(isLoading(2396).bdBmqy);
   obj.id = FamilyCenterSubPages.ACTIVITY;
-  obj.page = closure_15(isLoading(14875), {});
+  obj.page = closure_15(isLoading(14901), {});
   const items1 = [obj, ];
   obj1 = { label: null, id: null, page: null };
   const intl2 = familyCenterInitialized(1114).intl;
   obj1.label = intl2.string(isLoading(2396)["gVWG+6"]);
   obj1.id = FamilyCenterSubPages.REQUESTS;
-  obj1.page = closure_15(isLoading(14915), {});
+  obj1.page = closure_15(isLoading(14941), {});
   items1[1] = obj1;
   obj.items = items1;
   obj.onPageChange = function onPageChange(arg0) {
@@ -77,7 +77,7 @@ function FamilyCenter() {
       }
     }
   }, items2);
-  isLoading(4992)(() => {
+  isLoading(5006)(() => {
     const obj = { dismissAction: ContentDismissActionType.AUTO, forceTrack: true };
     const result = obj.UNSAFE_markDismissibleContentAsDismissed(dismissible_content.DismissibleContent.FAMILY_CENTER_NEW_BADGE, obj);
     let canRefetchResult = !isLoading;
@@ -91,21 +91,21 @@ function FamilyCenter() {
   if (familyCenterInitialized) {
     if (null != currentUser) {
       if (!tmp10) {
-        tmp4(7211).openAgeGateModal(AgeGateSource.FAMILY_CENTER);
+        tmp4(7225).openAgeGateModal(AgeGateSource.FAMILY_CENTER);
         return null;
       }
     }
   }
-  obj3 = { value: tmp3(isLoading(7182).FAMILY_CENTER).analyticsLocations, children: null };
+  obj3 = { value: tmp3(isLoading(7196).FAMILY_CENTER).analyticsLocations, children: null };
   let obj4 = { style: tmp.container, onLayout: callback, children: null };
   const tmp11 = _slicedToArray(obj2.useState(0), 2);
-  const items3 = [closure_15(ref, { style: tmp.segmentedControlContainer, children: closure_15(familyCenterInitialized(9798).SegmentedControl, { state: segmentedControlState }) }), ];
+  const items3 = [closure_15(ref, { style: tmp.segmentedControlContainer, children: closure_15(familyCenterInitialized(9825).SegmentedControl, { state: segmentedControlState }) }), ];
   let obj6 = { style: tmp.container, children: null };
   if (isLoading) {
     let tmp14Result = closure_15(FamilyCenterLoading, {});
   } else {
     const obj7 = { state: segmentedControlState };
-    tmp14Result = closure_15(tmp4(12620).SegmentedControlPages, obj7);
+    tmp14Result = closure_15(tmp4(12646).SegmentedControlPages, obj7);
   }
   obj6.children = tmp14Result;
   obj6 = closure_15(tmp23, obj6);
@@ -113,21 +113,21 @@ function FamilyCenter() {
   obj4.children = items3;
   obj4 = closure_16(tmp23, obj4);
   obj3.children = obj4;
-  tmp14Result = closure_15(tmp4(7162).AnalyticsLocationProvider, obj3);
-  const obj5 = { style: tmp.segmentedControlContainer, children: closure_15(familyCenterInitialized(9798).SegmentedControl, { state: segmentedControlState }) };
+  tmp14Result = closure_15(tmp4(7176).AnalyticsLocationProvider, obj3);
+  const obj5 = { style: tmp.segmentedControlContainer, children: closure_15(familyCenterInitialized(9825).SegmentedControl, { state: segmentedControlState }) };
 }
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, ActivityIndicator: metroRequire } = get_ActivityIndicator);
 const AnalyticEvents = fn(1074).AnalyticEvents;
 const AgeGateSource = fn(1098).AgeGateSource;
 const ContentDismissActionType = fn(1954).ContentDismissActionType;
-const FamilyCenterConstants = fn(7538);
+const FamilyCenterConstants = fn(7552);
 ({ FamilyCenterPageLocationAnalyticsIds: closure_12, FamilyCenterSubPageAnalyticsIds: map1, FamilyCenterSubPages } = FamilyCenterConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_15, jsxs: closure_16 } = jsxProd);
 let items = [, ];
 ({ ACTIVITY: arr[0], REQUESTS: arr[1] } = FamilyCenterSubPages);
-fn(4560);
+fn(4574);
 let createStyles = { container: { display: "flex", flex: 1 }, segmentedControlContainer: null, loadingContainer: null };
 createStyles = { paddingTop: nativeDefault.space.PX_16, paddingHorizontal: nativeDefault.space.PX_16 };
 createStyles.segmentedControlContainer = createStyles;

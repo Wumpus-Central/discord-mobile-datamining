@@ -1,20 +1,20 @@
-// === Module 13158: OrbCheckoutModalComponents ===
+// === Module 13183: OrbCheckoutModalComponents ===
 
-// Module 13158 (OrbCheckoutModalComponents)
+// Module 13183 (OrbCheckoutModalComponents)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import shared from "shared" /* 4411 */;
-import useThemeDefault from "useTheme" /* 4495 */;
-import Text_Text from "Text/Text" /* 4556 */;
-import Stack_Stack from "Stack/Stack" /* 4973 */;
-import components_Button_Button from "components/Button/Button" /* 4975 */;
-import CircleErrorIcon from "CircleErrorIcon" /* 6610 */;
-import OrbCheckoutUtils from "OrbCheckoutUtils" /* 7241 */;
-import OrbsIcon from "OrbsIcon" /* 8842 */;
-import CollectiblesShopCheckoutDetailsDefault from "CollectiblesShopCheckoutDetails" /* 11015 */;
-import OrbCheckoutAmountTagDefault from "OrbCheckoutAmountTag" /* 11017 */;
-import OrbCheckoutModalContext from "OrbCheckoutModalContext" /* 13157 */;
-import useVirtualCurrencyBalance from "useVirtualCurrencyBalance" /* 13159 */;
+import shared from "shared" /* 4425 */;
+import useThemeDefault from "useTheme" /* 4509 */;
+import Text_Text from "Text/Text" /* 4570 */;
+import Stack_Stack from "Stack/Stack" /* 4987 */;
+import components_Button_Button from "components/Button/Button" /* 4989 */;
+import CircleErrorIcon from "CircleErrorIcon" /* 6624 */;
+import OrbCheckoutUtils from "OrbCheckoutUtils" /* 7255 */;
+import OrbsIcon from "OrbsIcon" /* 8869 */;
+import CollectiblesShopCheckoutDetailsDefault from "CollectiblesShopCheckoutDetails" /* 11042 */;
+import OrbCheckoutAmountTagDefault from "OrbCheckoutAmountTag" /* 11044 */;
+import OrbCheckoutModalContext from "OrbCheckoutModalContext" /* 13182 */;
+import useVirtualCurrencyBalance from "useVirtualCurrencyBalance" /* 13184 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -22,7 +22,7 @@ get_ActivityIndicator = fn(17);
 ({ View: closure_4, ActivityIndicator: hasOwnProperty } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-fn(4560);
+fn(4574);
 let createStyles = { topRowWrapper: { width: "100%", marginBottom: 10 }, rowWrapper: { width: "100%", marginVertical: 10 }, rowDetailsContainer: null, orbPaymentSourceDetails: null, sectionTitle: null, spinner: null, disclaimer: null, errorCard: null };
 createStyles = { borderRadius: nativeDefault.radii.lg, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE, padding: nativeDefault.space.PX_16 };
 createStyles.rowDetailsContainer = createStyles;
@@ -90,12 +90,12 @@ export const OrbCheckoutPaymentSourceDetails = function OrbCheckoutPaymentSource
   return React5(React4, obj);
 };
 export const OrbCheckoutLegalFinePrint = function OrbCheckoutLegalFinePrint() {
-  let obj = skuId(13157);
+  let obj = skuId(13182);
   skuId = obj.useOrbCheckoutModalContext().skuId;
   const items = [skuId];
   const memo = noop.useMemo(() => OrbCheckoutUtils.getOrbCheckoutDisclaimerMessage(skuId), items);
   obj = { style: closure_8().disclaimer, variant: "text-xxs/normal", color: "interactive-text-active", children: memo };
-  return closure_6(skuId(4556).Text, obj);
+  return closure_6(skuId(4570).Text, obj);
 };
 export const OrbCheckoutPurchaseButton = function OrbCheckoutPurchaseButton(onPress) {
   const tmp2 = useThemeDefault();

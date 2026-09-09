@@ -1,9 +1,9 @@
-// === Module 6221: LeafIllocon ===
+// === Module 6235: LeafIllocon ===
 
-// Module 6221 (LeafIllocon)
+// Module 6235 (LeafIllocon)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5587 */;
-import _modDef6222 from "module_6222" /* 6222 */;
+import FastImageDefault from "FastImage" /* 5601 */;
+import _modDef6236 from "module_6236" /* 6236 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -16,12 +16,12 @@ export const LeafIllocon = function LeafIllocon(size) {
     num = 64;
   }
   let obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  obj = { uri: _modDef6222 };
+  obj = { uri: _modDef6236 };
   obj.source = obj;
   const items = [{ width: num, height: num }];
   obj.style = items;
   obj.accessible = accessible;
   obj.accessibilityLabel = accessibilityLabel;
   obj.resizeMode = resizeMode;
-  return jsx(FastImageDefault, { uri: _modDef6222 });
+  return jsx(FastImageDefault, { uri: _modDef6236 });
 };

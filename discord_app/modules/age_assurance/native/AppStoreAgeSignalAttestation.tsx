@@ -1,9 +1,9 @@
-// === Module 8571: AppStoreAgeSignalAttestation ===
+// === Module 8599: AppStoreAgeSignalAttestation ===
 
-// Module 8571 (AppStoreAgeSignalAttestation)
+// Module 8599 (AppStoreAgeSignalAttestation)
 import PlatformUtils from "PlatformUtils" /* 1115 */;
-import NativePlayIntegrityModuleDefault from "NativePlayIntegrityModule" /* 8572 */;
-import AppStoreAgeSignalActionCreators from "AppStoreAgeSignalActionCreators" /* 8573 */;
+import NativePlayIntegrityModuleDefault from "NativePlayIntegrityModule" /* 8600 */;
+import AppStoreAgeSignalActionCreators from "AppStoreAgeSignalActionCreators" /* 8601 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;

@@ -1,31 +1,31 @@
-// === Module 4998: MarkupRules ===
+// === Module 5012: MarkupRules ===
 
-// Module 4998 (MarkupRules)
+// Module 5012 (MarkupRules)
 import util from "util" /* 1114 */;
 import EnhancedRoleColorUtils from "EnhancedRoleColorUtils" /* 2018 */;
-import UnicodeEmojisDefault from "UnicodeEmojis" /* 4213 */;
-import UserUtilsDefault from "UserUtils" /* 4404 */;
-import NicknameUtilsDefault from "NicknameUtils" /* 4712 */;
-import MarkupLinkRule from "MarkupLinkRule" /* 5001 */;
-import useHasEnhancedRoleColors from "useHasEnhancedRoleColors" /* 5004 */;
-import MarkupTextRuleDefault from "MarkupTextRule" /* 5005 */;
-import MarkupChannelMentionRuleDefault from "MarkupChannelMentionRule" /* 5006 */;
-import MarkupAttachmentLinkRuleDefault from "MarkupAttachmentLinkRule" /* 5009 */;
-import getSoundmojiASTFromString from "getSoundmojiASTFromString" /* 5011 */;
-import TimestampUtils from "TimestampUtils" /* 5022 */;
-import StaticRouteRendering from "StaticRouteRendering" /* 5023 */;
-import MarkupHeadingRuleDefault from "MarkupHeadingRule" /* 5024 */;
-import MarkupListRuleDefault from "MarkupListRule" /* 5025 */;
-import MarkupSubtextRuleDefault from "MarkupSubtextRule" /* 5026 */;
-import PlatformMarkupRulesDefault from "PlatformMarkupRules" /* 5027 */;
+import UnicodeEmojisDefault from "UnicodeEmojis" /* 4226 */;
+import UserUtilsDefault from "UserUtils" /* 4418 */;
+import NicknameUtilsDefault from "NicknameUtils" /* 4726 */;
+import MarkupLinkRule from "MarkupLinkRule" /* 5015 */;
+import useHasEnhancedRoleColors from "useHasEnhancedRoleColors" /* 5018 */;
+import MarkupTextRuleDefault from "MarkupTextRule" /* 5019 */;
+import MarkupChannelMentionRuleDefault from "MarkupChannelMentionRule" /* 5020 */;
+import MarkupAttachmentLinkRuleDefault from "MarkupAttachmentLinkRule" /* 5023 */;
+import getSoundmojiASTFromString from "getSoundmojiASTFromString" /* 5025 */;
+import TimestampUtils from "TimestampUtils" /* 5036 */;
+import StaticRouteRendering from "StaticRouteRendering" /* 5037 */;
+import MarkupHeadingRuleDefault from "MarkupHeadingRule" /* 5038 */;
+import MarkupListRuleDefault from "MarkupListRule" /* 5039 */;
+import MarkupSubtextRuleDefault from "MarkupSubtextRule" /* 5040 */;
+import PlatformMarkupRulesDefault from "PlatformMarkupRules" /* 5041 */;
 import _slicedToArray from "module_32" /* 32 */;
 import _toArray from "_toArray" /* 718 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 import GuildRoleStore from "GuildRoleStore" /* 2015 */;
 import GuildStore from "GuildStore" /* 1979 */;
 import UserStore from "UserStore" /* 1371 */;
-import t from "module_4257" /* 4257 */;
-import combineMarkupRules from "combineMarkupRules" /* 4997 */;
+import t from "module_4270" /* 4270 */;
+import combineMarkupRules from "combineMarkupRules" /* 5011 */;
 import "module_12";
 import apply from "module_12" /* 12 */;
 
@@ -177,8 +177,8 @@ function hydrateUserMention(everyoneOrHere, channelId) {
 }
 const Constants = fn(1074);
 ({ ID_REGEX: closure_9, MARKDOWN_SPOILER_REGEXP: c10, MARKDOWN_STATIC_ROUTE_NAME_REGEXP: closure_11 } = Constants);
-const SUB_COMMAND_KEY_SEPARATOR = fn(4999).SUB_COMMAND_KEY_SEPARATOR;
-const GAME_MENTION_RAW_RE = fn(5000).GAME_MENTION_RAW_RE;
+const SUB_COMMAND_KEY_SEPARATOR = fn(5013).SUB_COMMAND_KEY_SEPARATOR;
+const GAME_MENTION_RAW_RE = fn(5014).GAME_MENTION_RAW_RE;
 const re14 = /^( *>>> +([\s\S]*))|^( *>(?!>>) +[^\n]*(\n *>(?!>>) +[^\n]*)*\n?)/;
 const re15 = /^$|\n *$/;
 const re16 = /^ *>>> ?/;
@@ -1177,11 +1177,11 @@ let result = size.fileFinishedImporting("modules/markup/MarkupRules.tsx");
 export default { RULES: importDefaultResult3Result, CHANNEL_TOPIC_RULES: omitResult, VOICE_CHANNEL_STATUS_RULES: omitResult1, EMBED_TITLE_RULES: omitResult2, INLINE_REPLY_RULES: omitResult3, GUILD_VERIFICATION_FORM_RULES: omitResult4, GUILD_EVENT_RULES: omitResult6, PROFILE_BIO_RULES: omitResult5, AUTO_MODERATION_SYSTEM_MESSAGE_RULES: combineMarkupRules(items2), NATIVE_SEARCH_RESULT_LINK_RULES: apply.omit(importDefaultResult3Result, ["codeBlock", "br", "inlineCode"]) };
 export { hydrateRoleMention };
 export { hydrateUserMention };
-export const hydrateCommandMention = function hydrateCommandMention(commandName, commandId, channelId) {
-  const items = [..._toArray(commandName.split(" ")).slice(1)];
+export const hydrateCommandMention = function hydrateCommandMention(name, commandId, channelId) {
+  const items = [..._toArray(name.split(" ")).slice(1)];
   const mapped = items.map((item) => "" + SUB_COMMAND_KEY_SEPARATOR + item);
-  let obj = { type: "commandMention", channelId: channelId.channelId, commandId, commandName, commandKey: "" + commandId + mapped.join(""), content: null };
-  obj = { type: "text", content: "" + commandName };
+  let obj = { type: "commandMention", channelId: channelId.channelId, commandId, commandName: name, commandKey: "" + commandId + mapped.join(""), content: null };
+  obj = { type: "text", content: "" + name };
   const items1 = [obj];
   obj.content = items1;
   return obj;

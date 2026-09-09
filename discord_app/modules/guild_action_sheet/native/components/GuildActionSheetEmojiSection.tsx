@@ -1,16 +1,16 @@
-// === Module 13980: GuildActionSheetEmojiSection ===
+// === Module 14003: GuildActionSheetEmojiSection ===
 
-// Module 13980 (GuildActionSheetEmojiSection)
+// Module 14003 (GuildActionSheetEmojiSection)
 import nativeDefault from "native" /* 576 */;
-import PremiumUtilsDefault from "PremiumUtils" /* 4218 */;
-import ToastUtils from "ToastUtils" /* 4258 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4527 */;
-import HapticUtils from "HapticUtils" /* 4528 */;
-import haptics_HapticFeedbackTypesDefault from "haptics/HapticFeedbackTypes" /* 4529 */;
-import PremiumUpsellUtilsDefault from "PremiumUpsellUtils" /* 9318 */;
+import PremiumUtilsDefault from "PremiumUtils" /* 4231 */;
+import ToastUtils from "ToastUtils" /* 4271 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4541 */;
+import HapticUtils from "HapticUtils" /* 4542 */;
+import haptics_HapticFeedbackTypesDefault from "haptics/HapticFeedbackTypes" /* 4543 */;
+import PremiumUpsellUtilsDefault from "PremiumUpsellUtils" /* 9345 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import EmojiStore from "EmojiStore" /* 5459 */;
+import EmojiStore from "EmojiStore" /* 5473 */;
 import ThemeStore from "ThemeStore" /* 1183 */;
 import UserStore from "UserStore" /* 1371 */;
 
@@ -20,7 +20,7 @@ const Constants = fn(1074);
 ({ UpsellTypes: closure_9, AnalyticsSections: c10, Fonts } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
-fn(4560);
+fn(4574);
 let createStyles = { header: { flexDirection: "row", alignItems: "center", flexWrap: "wrap" }, dotSeparator: null, premiumTitle: null, emojiContainer: null, emoji: null, emojiCount: null };
 let size = { width: 4, height: 4, borderRadius: nativeDefault.radii.xs, marginRight: 8, marginLeft: 8, backgroundColor: nativeDefault.colors.TEXT_SUBTLE };
 createStyles.dotSeparator = size;

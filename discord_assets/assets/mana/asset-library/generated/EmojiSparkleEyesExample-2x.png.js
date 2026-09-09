@@ -1,6 +1,6 @@
-// === Module 5956: ? ===
+// === Module 5970: ? ===
 
-// Module 5956
+// Module 5970
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/EmojiSparkleEyesExample-2x.png.js");

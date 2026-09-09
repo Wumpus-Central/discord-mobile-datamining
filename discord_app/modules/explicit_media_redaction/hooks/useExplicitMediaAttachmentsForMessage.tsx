@@ -1,9 +1,9 @@
-// === Module 11683: useExplicitMediaAttachmentsForMessage ===
+// === Module 11709: useExplicitMediaAttachmentsForMessage ===
 
-// Module 11683 (useExplicitMediaAttachmentsForMessage)
-import ObscuredMediaUtils from "ObscuredMediaUtils" /* 7292 */;
-import ExplicitMediaRedactionModels from "ExplicitMediaRedactionModels" /* 7297 */;
-import MessageStore from "MessageStore" /* 4781 */;
+// Module 11709 (useExplicitMediaAttachmentsForMessage)
+import ObscuredMediaUtils from "ObscuredMediaUtils" /* 7306 */;
+import ExplicitMediaRedactionModels from "ExplicitMediaRedactionModels" /* 7311 */;
+import MessageStore from "MessageStore" /* 4795 */;
 
 require = fn;
 const size = fn(2);

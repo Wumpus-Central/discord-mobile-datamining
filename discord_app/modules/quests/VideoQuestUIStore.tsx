@@ -1,6 +1,6 @@
-// === Module 7705: VideoQuestUIStore ===
+// === Module 7719: VideoQuestUIStore ===
 
-// Module 7705 (VideoQuestUIStore)
+// Module 7719 (VideoQuestUIStore)
 import ReactBatchUpdates from "ReactBatchUpdates" /* 1249 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 
@@ -39,14 +39,14 @@ function _toPropertyKey(obj) {
 let VideoProgressState = { UNKNOWN: "UNKNOWN", NOT_STARTED: "NOT_STARTED", IN_PROGRESS: "IN_PROGRESS", COMPLETED: "COMPLETED" };
 let identity = fn(1244);
 identity = identity.createWithEqualityFn();
-fn(4430);
+fn(4444);
 VideoProgressState = { name: "videoQuestUIState", storage: null, partialize: null, version: 0 };
-const module_4430 = fn(4430);
-VideoProgressState.storage = module_4430.createJSONStorage(() => require("LocalStorageWrapper"));
+const module_4444 = fn(4444);
+VideoProgressState.storage = module_4444.createJSONStorage(() => require("LocalStorageWrapper"));
 VideoProgressState.partialize = function partialize(volume) {
   return { volume: volume.volume, muted: volume.muted, videoProgress: volume.videoProgress };
 };
-const withEqualityFnResult = identity(module_4430.persist((arg0, arg1) => {
+const withEqualityFnResult = identity(module_4444.persist((arg0, arg1) => {
   _require = arg0;
   closure_1 = arg1;
   return {

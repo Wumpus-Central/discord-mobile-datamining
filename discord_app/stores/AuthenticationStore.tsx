@@ -10,15 +10,15 @@ import SentryUtilsDefault from "SentryUtils" /* 1232 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
 import FingerprintUtils from "FingerprintUtils" /* 1255 */;
 import Server from "Server" /* 1894 */;
-import APIErrorDefault from "APIError" /* 4462 */;
-import getAuthenticationErrorsFromAPIError from "getAuthenticationErrorsFromAPIError" /* 6948 */;
-import AuthenticationUtils from "AuthenticationUtils" /* 7668 */;
-import ApexActionCreators from "ApexActionCreators" /* 11487 */;
-import isStaffFromRawUserDefault from "isStaffFromRawUser" /* 12419 */;
-import fetchExperiments from "fetchExperiments" /* 14193 */;
-import awaitExperiments from "awaitExperiments" /* 14194 */;
-import TrackingConsentUtilsDefault from "TrackingConsentUtils" /* 14195 */;
-import ClientStateStoreStorage from "ClientStateStoreStorage" /* 14196 */;
+import APIErrorDefault from "APIError" /* 4476 */;
+import getAuthenticationErrorsFromAPIError from "getAuthenticationErrorsFromAPIError" /* 6962 */;
+import AuthenticationUtils from "AuthenticationUtils" /* 7682 */;
+import ApexActionCreators from "ApexActionCreators" /* 11514 */;
+import isStaffFromRawUserDefault from "isStaffFromRawUser" /* 12445 */;
+import fetchExperiments from "fetchExperiments" /* 14218 */;
+import awaitExperiments from "awaitExperiments" /* 14219 */;
+import TrackingConsentUtilsDefault from "TrackingConsentUtils" /* 14220 */;
+import ClientStateStoreStorage from "ClientStateStoreStorage" /* 14221 */;
 import BrowserHandoffStore from "BrowserHandoffStore" /* 503 */;
 import MobileCacheSnapshotStore from "MobileCacheSnapshotStore" /* 1073 */;
 import Dispatcher from "Dispatcher" /* 573 */;
@@ -462,6 +462,7 @@ const authenticationStore = new AuthenticationStore(Dispatcher, {
       items.push({ type: "sms" });
     }
     c35 = false;
+    c34 = null;
   },
   LOGIN_FAILURE: function handleLoginFailure(error) {
     c28 = "";

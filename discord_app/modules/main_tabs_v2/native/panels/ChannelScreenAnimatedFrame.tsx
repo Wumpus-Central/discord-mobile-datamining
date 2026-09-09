@@ -1,22 +1,22 @@
-// === Module 16012: ChannelScreenAnimatedFrame ===
+// === Module 16042: ChannelScreenAnimatedFrame ===
 
-// Module 16012 (ChannelScreenAnimatedFrame)
+// Module 16042 (ChannelScreenAnimatedFrame)
 import nativeDefault from "native" /* 576 */;
 import native from "native" /* 1178 */;
-import timing from "timing" /* 4561 */;
-import PanelsConfig from "PanelsConfig" /* 16010 */;
+import timing from "timing" /* 4575 */;
+import PanelsConfig from "PanelsConfig" /* 16040 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-fn(4560);
+fn(4574);
 let createStyles = { container: null, splitDivider: null, additionalHeight: null };
 createStyles = { position: "absolute", zIndex: 1, top: 0, width: "100%", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 createStyles.container = createStyles;
 createStyles.splitDivider = { borderLeftColor: nativeDefault.colors.APP_FRAME_BORDER, borderLeftWidth: nativeDefault.modules.mobile.CHANNEL_DRAWER_DIVIDER_WIDTH };
-createStyles.additionalHeight = { height: fn(7864).HEADER_CORNER_RADIUS };
+createStyles.additionalHeight = { height: fn(7878).HEADER_CORNER_RADIUS };
 let closure_6 = createStyles.createStyles(createStyles);
 const __initData = { code: "function ChannelScreenAnimatedFrameTsx1(){const{translateX,maxWidth,isChatLockedOpen,withTiming,STANDARD_EASING,SIDE_PANEL_CLOSE_DURATION_MS,SIDE_PANEL_OPEN_DURATION_MS}=this.__closure;const hide=translateX.get()===maxWidth||isChatLockedOpen;return{opacity:withTiming(hide?0:1,{easing:STANDARD_EASING,duration:hide?SIDE_PANEL_CLOSE_DURATION_MS:SIDE_PANEL_OPEN_DURATION_MS})};}" };
 const size = fn(2);

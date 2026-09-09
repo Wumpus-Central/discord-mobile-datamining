@@ -1,17 +1,17 @@
-// === Module 11680: ChannelPinsStore ===
+// === Module 11706: ChannelPinsStore ===
 
-// Module 11680 (ChannelPinsStore)
+// Module 11706 (ChannelPinsStore)
 import _modDef12 from "module_12" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import MessageRecordUtils from "MessageRecordUtils" /* 4783 */;
-import ExplicitMediaRedactionUtils from "ExplicitMediaRedactionUtils" /* 7600 */;
+import MessageRecordUtils from "MessageRecordUtils" /* 4797 */;
+import ExplicitMediaRedactionUtils from "ExplicitMediaRedactionUtils" /* 7614 */;
 import LocaleStore from "LocaleStore" /* 2025 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 import GuildMemberStore from "GuildMemberStore" /* 2021 */;
 import GuildStore from "GuildStore" /* 1979 */;
-import MessageStore from "MessageStore" /* 4781 */;
-import RelationshipStore from "RelationshipStore" /* 4209 */;
+import MessageStore from "MessageStore" /* 4795 */;
+import RelationshipStore from "RelationshipStore" /* 4222 */;
 import UserStore from "UserStore" /* 1371 */;
 
 require = fn;

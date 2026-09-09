@@ -1,6 +1,6 @@
-// === Module 5023: StaticRouteRendering ===
+// === Module 5037: StaticRouteRendering ===
 
-// Module 5023 (StaticRouteRendering)
+// Module 5037 (StaticRouteRendering)
 import util from "util" /* 1114 */;
 import GuildRoleStore from "GuildRoleStore" /* 2015 */;
 

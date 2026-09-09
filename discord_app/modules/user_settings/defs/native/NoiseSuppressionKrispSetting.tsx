@@ -1,20 +1,20 @@
-// === Module 15258: NoiseSuppressionKrispSetting ===
+// === Module 15287: NoiseSuppressionKrispSetting ===
 
-// Module 15258 (NoiseSuppressionKrispSetting)
+// Module 15287 (NoiseSuppressionKrispSetting)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1114 */;
-import UserSettingsVoiceUtils from "UserSettingsVoiceUtils" /* 9998 */;
-import NoiseCancellationUtils from "NoiseCancellationUtils" /* 9999 */;
+import UserSettingsVoiceUtils from "UserSettingsVoiceUtils" /* 10025 */;
+import NoiseCancellationUtils from "NoiseCancellationUtils" /* 10026 */;
 import MediaEngineStore from "MediaEngineStore" /* 1908 */;
 
 require = fn;
-fn(11473);
+fn(11500);
 let SettingBuilders = {
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.t8Qhib);
   },
-  parent: fn(7975).MobileUserSettings.VOICE,
+  parent: fn(7989).MobileUserSettings.VOICE,
   useValue() {
     return UserSettingsVoiceUtils.useSelectedNoiseSuppressionOption();
   },

@@ -1,12 +1,12 @@
-// === Module 16662: GuildChannelRow ===
+// === Module 16694: GuildChannelRow ===
 
-// Module 16662 (GuildChannelRow)
+// Module 16694 (GuildChannelRow)
 import nativeDefault from "native" /* 576 */;
-import useChannelNameDefault from "useChannelName" /* 4713 */;
-import utils_ChannelUtils from "utils/ChannelUtils" /* 5028 */;
-import SearchListRow from "SearchListRow" /* 16655 */;
-import ChannelContent from "ChannelContent" /* 16663 */;
-import guild_channels_ChannelItem from "guild_channels/ChannelItem" /* 16665 */;
+import useChannelNameDefault from "useChannelName" /* 4727 */;
+import utils_ChannelUtils from "utils/ChannelUtils" /* 5042 */;
+import SearchListRow from "SearchListRow" /* 16687 */;
+import ChannelContent from "ChannelContent" /* 16695 */;
+import renderChannelItem from "renderChannelItem" /* 16697 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -21,9 +21,9 @@ function GuildChannelLabel(channel) {
 }
 get_ActivityIndicator = fn(17);
 ({ Image: c3, View: closure_4 } = get_ActivityIndicator);
-const layout = fn(7878).CHANNEL_LIST_SEARCH_LAYOUT;
+const layout = fn(7892).CHANNEL_LIST_SEARCH_LAYOUT;
 const jsx = fn(21).jsx;
-const createStyles = fn(4560);
+const createStyles = fn(4574);
 let obj = { container: { paddingVertical: 10 }, content: { flexDirection: "row", alignItems: "center" }, iconContainer: { marginRight: 0 }, simpleIcon: null };
 let size = { width: 20, height: 20, marginRight: 8, tintColor: nativeDefault.colors.TEXT_MUTED };
 obj.simpleIcon = size;
@@ -36,7 +36,7 @@ export default noop.memo(function GuildChannelRow(channel) {
   ({ subtitle, trailing, extras, onPress, voiceStates } = channel);
   const merged = Object.assign(channel, Object.assign({ channel: 0, subtitle: 0, trailing: 0, extras: 0, onPress: 0, voiceStates: 0 }));
   const tmp2 = closure_7();
-  let obj = guild_channels_ChannelItem;
+  let obj = renderChannelItem;
   const channelAccessibilityProps = obj.getChannelAccessibilityProps({ channel, unread: false, mentionCount: 0, voiceStates });
   obj = { style: tmp2.simpleIcon, source: utils_ChannelUtils.getSimpleChannelIcon(channel) };
   obj = {};

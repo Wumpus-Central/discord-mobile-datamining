@@ -1,19 +1,19 @@
-// === Module 17538: GuildSettingsModalAuditLog ===
+// === Module 17569: GuildSettingsModalAuditLog ===
 
-// Module 17538 (GuildSettingsModalAuditLog)
+// Module 17569 (GuildSettingsModalAuditLog)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import showSimpleActionSheet from "showSimpleActionSheet" /* 7195 */;
-import AuditLogUtilsAll from "AuditLogUtils" /* 17541 */;
-import AuditLogActionCreators from "AuditLogActionCreators" /* 17549 */;
-import AuditLogDefault from "AuditLog" /* 17558 */;
+import showSimpleActionSheet from "showSimpleActionSheet" /* 7208 */;
+import AuditLogUtilsAll from "AuditLogUtils" /* 17572 */;
+import AuditLogActionCreators from "AuditLogActionCreators" /* 17580 */;
+import AuditLogDefault from "AuditLog" /* 17589 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 import GuildStore from "GuildStore" /* 1979 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2011 */;
 import UserStore from "UserStore" /* 1371 */;
-import GuildSettingsAuditLogStore from "GuildSettingsAuditLogStore" /* 17539 */;
+import GuildSettingsAuditLogStore from "GuildSettingsAuditLogStore" /* 17570 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
@@ -22,7 +22,7 @@ const Constants = fn(1074);
 ({ GuildSettingsSections: map1, AuditLogFilterTypes: closure_14 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_15, jsxs: closure_16, Fragment: closure_17 } = jsxProd);
-fn(4560);
+fn(4574);
 let createStyles = { listView: { marginVertical: 12 }, spinner: { marginTop: 40 }, filterTextWrapper: null, filtersWrapper: null, firstAuditRow: null, lastAuditRow: null, filterTrailing: null };
 createStyles = { borderRadius: nativeDefault.radii.md, paddingVertical: 6, paddingHorizontal: 8, backgroundColor: nativeDefault.colors.INPUT_BACKGROUND_DEFAULT };
 createStyles.filterTextWrapper = createStyles;

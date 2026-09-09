@@ -1,21 +1,21 @@
-// === Module 16029: useHomeDrawerPeekHint ===
+// === Module 16059: useHomeDrawerPeekHint ===
 
-// Module 16029 (useHomeDrawerPeekHint)
-import ReanimatedRexport from "ReanimatedRexport" /* 4296 */;
-import timing from "timing" /* 4561 */;
-import spring from "spring" /* 4974 */;
-import useHomeDrawerGesture from "useHomeDrawerGesture" /* 16025 */;
+// Module 16059 (useHomeDrawerPeekHint)
+import ReanimatedRexport from "ReanimatedRexport" /* 4310 */;
+import timing from "timing" /* 4575 */;
+import spring from "spring" /* 4988 */;
+import useHomeDrawerGesture from "useHomeDrawerGesture" /* 16055 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4552 */;
-import HomeDrawerStore from "HomeDrawerStore" /* 16026 */;
+import AccessibilityStore from "AccessibilityStore" /* 4566 */;
+import HomeDrawerStore from "HomeDrawerStore" /* 16056 */;
 
 require = fn;
 const ME = fn(1074).ME;
 const ContentDismissActionType = fn(1954).ContentDismissActionType;
 let c8 = 2000;
-const Easing = fn(4296).Easing;
-let closure_9 = Easing.inOut(fn(4296).Easing.cubic);
+const Easing = fn(4310).Easing;
+let closure_9 = Easing.inOut(fn(4310).Easing.cubic);
 let closure_10 = [];
 let items = [fn(1943).DismissibleContent.HOME_DRAWER_SWIPE_PEEK_NUX];
 let __initData = { code: "function useHomeDrawerPeekHintTsx1(){const{gestureState,panelX,PEEK_HINT_DRAWER_DRAG_THRESHOLD}=this.__closure;return gestureState.get().active&&panelX.get()>PEEK_HINT_DRAWER_DRAG_THRESHOLD;}" };

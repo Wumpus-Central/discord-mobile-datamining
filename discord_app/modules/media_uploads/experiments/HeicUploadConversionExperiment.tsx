@@ -1,6 +1,6 @@
-// === Module 5172: HeicUploadConversionExperiment ===
+// === Module 5186: HeicUploadConversionExperiment ===
 
-// Module 5172 (HeicUploadConversionExperiment)
+// Module 5186 (HeicUploadConversionExperiment)
 import ApexExperiment from "ApexExperiment" /* 1433 */;
 import size from "module_2" /* 2 */;
 

@@ -1,19 +1,19 @@
-// === Module 9991: VolumeSlider ===
+// === Module 10018: VolumeSlider ===
 
-// Module 9991 (VolumeSlider)
+// Module 10018 (VolumeSlider)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import PlatformUtils2 from "PlatformUtils" /* 1115 */;
-import useToken from "useToken" /* 4262 */;
-import PerceptualVolumeUtils from "PerceptualVolumeUtils" /* 5015 */;
-import VoiceNormalIcon from "VoiceNormalIcon" /* 5101 */;
-import _modDef8278 from "module_8278" /* 8278 */;
-import VoiceXIcon from "VoiceXIcon" /* 9992 */;
+import useToken from "useToken" /* 4275 */;
+import PerceptualVolumeUtils from "PerceptualVolumeUtils" /* 5029 */;
+import VoiceNormalIcon from "VoiceNormalIcon" /* 5115 */;
+import _modDef8306 from "module_8306" /* 8306 */;
+import VoiceXIcon from "VoiceXIcon" /* 10019 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-let closure_4 = fn(4585).MAX_EMBEDDED_VOLUME_PERCEPTUAL;
+let closure_4 = fn(4599).MAX_EMBEDDED_VOLUME_PERCEPTUAL;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
 let PlatformUtils = fn(1115);
@@ -21,7 +21,7 @@ let num = 16;
 if (PlatformUtils.isAndroid()) {
   num = 0;
 }
-const createStyles = fn(4560);
+const createStyles = fn(4574);
 PlatformUtils = { volumerSlider: { flexDirection: "row", alignItems: "center" }, leftIcon: { marginRight: num }, rightIcon: { marginLeft: num }, volumerSliderNative: { flex: 1, marginVertical: -10, backgroundColor: "transparent" } };
 let closure_7 = createStyles.createStyles(PlatformUtils);
 const size = fn(2);
@@ -72,7 +72,7 @@ export default function VolumeSlider(maxTrackTintColor) {
     onResponderGrant = fn;
   }
   obj1.onResponderGrant = onResponderGrant;
-  items1[1] = closure_5(_modDef8278, obj1);
+  items1[1] = closure_5(_modDef8306, obj1);
   items1[2] = closure_5(VoiceNormalIcon.VoiceNormalIcon, { style: tmp4.rightIcon });
   obj.children = items1;
   return closure_6(View, obj);

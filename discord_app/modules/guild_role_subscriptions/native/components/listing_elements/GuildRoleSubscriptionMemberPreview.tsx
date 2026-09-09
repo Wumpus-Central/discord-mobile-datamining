@@ -1,17 +1,17 @@
-// === Module 15241: GuildRoleSubscriptionMemberPreview ===
+// === Module 15270: GuildRoleSubscriptionMemberPreview ===
 
-// Module 15241 (GuildRoleSubscriptionMemberPreview)
+// Module 15270 (GuildRoleSubscriptionMemberPreview)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 576 */;
 import utils_ColorUtilsAll from "utils/ColorUtils" /* 1091 */;
 import util from "util" /* 1114 */;
 import native from "native" /* 1178 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1396 */;
-import Text_Text from "Text/Text" /* 4556 */;
-import NicknameUtilsDefault from "NicknameUtils" /* 4712 */;
-import FastImageDefault from "FastImage" /* 5587 */;
-import guild_boosting_RoleIconUtils from "guild_boosting/RoleIconUtils" /* 7187 */;
-import RoleIconDefault from "RoleIcon" /* 7188 */;
+import Text_Text from "Text/Text" /* 4570 */;
+import NicknameUtilsDefault from "NicknameUtils" /* 4726 */;
+import FastImageDefault from "FastImage" /* 5601 */;
+import RoleIconUtils from "RoleIconUtils" /* 7201 */;
+import RoleIconDefault from "RoleIcon" /* 7219 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1371 */;
 
@@ -19,7 +19,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, Fragment: closure_7, jsxs: closure_8 } = jsxProd);
-fn(4560);
+fn(4574);
 let createStyles = { container: null, avatar: null, content: null, contextRow: null };
 createStyles = { flexDirection: "row", padding: 16, borderRadius: nativeDefault.radii.xs, borderWidth: 1, borderColor: nativeDefault.colors.BORDER_SUBTLE, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 createStyles.container = createStyles;
@@ -56,7 +56,7 @@ export const GuildRoleSubscriptionMemberPreview = function GuildRoleSubscription
       avatarURL = tmp6Result.getDefaultAvatarURL(undefined, undefined);
     }
     const source = tmp6Result.makeSource(avatarURL);
-    const roleIconData = guild_boosting_RoleIconUtils.getRoleIconData(role, 16);
+    const roleIconData = RoleIconUtils.getRoleIconData(role, 16);
     obj = { style: null, children: null };
     const items1 = [tmp3.container, style];
     obj.style = items1;
@@ -66,35 +66,28 @@ export const GuildRoleSubscriptionMemberPreview = function GuildRoleSubscription
     const obj2 = { style: tmp3.contextRow, children: null };
     const obj3 = { variant: "text-md/semibold", color: "interactive-text-active", style: null, children: null };
     const obj4 = { color: null };
-    const tmp4Result = guild_boosting_RoleIconUtils;
+    const tmp4Result = RoleIconUtils;
     obj4.color = utils_ColorUtilsAll.int2hex(role.color);
     obj3.style = obj4;
     obj3.children = tmp8;
     const items3 = [timestampProducer(Text_Text.Text, obj3), , , ];
     let tmp12Result = null;
     if (null != roleIconData) {
+      const obj5 = { children: null };
       const items4 = [timestampProducer(native.Spacer, { size: 4 }), ];
-      const obj5 = { name: role.name, source: null, unicodeEmoji: null, size: 16 };
-      let tmp19;
-      if (null != roleIconData.customIconSrc) {
-        const obj6 = { uri: roleIconData.customIconSrc };
-        tmp19 = obj6;
-      }
-      const obj7 = { children: null };
-      obj5.source = tmp19;
-      obj5.unicodeEmoji = roleIconData.unicodeEmoji;
-      items4[1] = timestampProducer(RoleIconDefault, obj5);
-      obj7.children = items4;
-      tmp12Result = React6(React5, obj7);
-      const tmp6Result1 = RoleIconDefault;
+      const obj6 = { name: role.name, src: null, unicodeEmoji: null, size: 16 };
+      ({ customIconSrc: obj13.src, unicodeEmoji: obj13.unicodeEmoji } = roleIconData);
+      items4[1] = timestampProducer(RoleIconDefault, obj6);
+      obj5.children = items4;
+      tmp12Result = React6(React5, obj5);
     }
     items3[1] = tmp12Result;
     items3[2] = timestampProducer(native.Spacer, { size: 8 });
     items3[3] = timestampProducer(Text_Text.Text, { variant: "text-xs/medium", color: "text-muted", children: "4:20 PM" });
     obj2.children = items3;
     const items5 = [React6(View, obj2), ];
-    const obj8 = { variant: "text-md/normal", color: "text-default", style: textStyle, children: content };
-    items5[1] = timestampProducer(Text_Text.Text, obj8);
+    const obj7 = { variant: "text-md/normal", color: "text-default", style: textStyle, children: content };
+    items5[1] = timestampProducer(Text_Text.Text, obj7);
     obj1.children = items5;
     items2[1] = React6(View, obj1);
     obj.children = items2;

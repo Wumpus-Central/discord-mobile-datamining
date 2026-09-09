@@ -1,19 +1,19 @@
-// === Module 17333: ChannelResyncManager ===
+// === Module 17364: ChannelResyncManager ===
 
-// Module 17333 (ChannelResyncManager)
+// Module 17364 (ChannelResyncManager)
 import LoggerDefault from "Logger" /* 3 */;
 import DurationsDefault from "Durations" /* 1090 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
 import FlagUtils from "FlagUtils" /* 1384 */;
-import GuildsRequiringChannelSyncDefault from "GuildsRequiringChannelSync" /* 7652 */;
-import PrivateChannelHidingExperiment from "PrivateChannelHidingExperiment" /* 13672 */;
+import GuildsRequiringChannelSyncDefault from "GuildsRequiringChannelSync" /* 7666 */;
+import PrivateChannelHidingExperiment from "PrivateChannelHidingExperiment" /* 13695 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
-import GuildAvailabilityStore from "GuildAvailabilityStore" /* 4902 */;
+import GuildAvailabilityStore from "GuildAvailabilityStore" /* 4916 */;
 import GuildStore from "GuildStore" /* 1979 */;
-import GatewayConnectionStore from "GatewayConnectionStore" /* 5277 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7118 */;
+import GatewayConnectionStore from "GatewayConnectionStore" /* 5291 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7132 */;
 
 require = fn;
 function handleGuildCreate(guild) {
@@ -313,7 +313,7 @@ let closure_30 = async function _scheduleGuildResyncs(arg0) {
               let _setTimeout = setTimeout;
               dependencyMap[id] = setTimeout(() => {
                 delete tmp3[tmp2];
-                let obj = closure_2_0(13672);
+                let obj = closure_2_0(13695);
                 if (obj.isChannelMetadataObfuscationEnabled("triggerGuildChannelResync")) {
                   let str;
                   if (closure_2_17[id] != null) {

@@ -1,20 +1,20 @@
-// === Module 16768: NewGroupDMScreen ===
+// === Module 16805: NewGroupDMScreen ===
 
-// Module 16768 (NewGroupDMScreen)
+// Module 16805 (NewGroupDMScreen)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
-import ToastUtils from "ToastUtils" /* 4258 */;
-import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 4573 */;
-import HeaderShared from "HeaderShared" /* 7863 */;
-import openGroupDMNitroCapLimitSheetDefault from "openGroupDMNitroCapLimitSheet" /* 11600 */;
-import GroupDMRecipientLimitTitleDefault from "GroupDMRecipientLimitTitle" /* 16758 */;
+import ToastUtils from "ToastUtils" /* 4271 */;
+import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 4587 */;
+import HeaderShared from "HeaderShared" /* 7877 */;
+import openGroupDMNitroCapLimitSheetDefault from "openGroupDMNitroCapLimitSheet" /* 11626 */;
+import GroupDMRecipientLimitTitleDefault from "GroupDMRecipientLimitTitle" /* 16795 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
-import PrivateChannelRecipientsInviteStore from "PrivateChannelRecipientsInviteStore" /* 13758 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 4583 */;
+import PrivateChannelRecipientsInviteStore from "PrivateChannelRecipientsInviteStore" /* 13781 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 4597 */;
 import UserStore from "UserStore" /* 1371 */;
 
 require = fn;
@@ -148,7 +148,7 @@ let closure_22 = async function _handleInviteUsers(arg0) {
                               const obj1 = { value: closure_1_20(length, closure_2_2), done: false };
                               return obj1;
                             } else {
-                              let obj5 = v3(4573);
+                              let obj5 = v3(4587);
                               v3 = 1;
                               dependencyMap = 1;
                               let obj2 = { value: obj5.addRecipients(id.id, length, undefined, closure_2_2), done: false };
@@ -182,19 +182,19 @@ let closure_22 = async function _handleInviteUsers(arg0) {
                             obj = { value, done: true };
                             return obj;
                           } else {
-                            const tmp8 = v3(9187);
+                            const tmp8 = v3(9214);
                             const call = tmp8.call;
                             if (typeof call === "unknown") {
                               tmp8(false, true);
                             } else {
                               call(tmp9, false, true);
                             }
-                            v3(9541)(closure_128_3);
+                            v3(9568)(closure_128_3);
                             dependencyMap = 3;
                             tmp9 = closure_128_3;
                           }
                           closure_128_3 = value;
-                          obj2 = id(4767);
+                          obj2 = id(4781);
                           v3 = 3;
                           dependencyMap = 1;
                           obj5 = { value: obj2.monkeyPatchCall(), done: false };
@@ -279,12 +279,12 @@ let closure_22 = async function _handleInviteUsers(arg0) {
 };
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: metroRequire, View: closure_7 } = get_ActivityIndicator);
-const UserRowModes = fn(10865).UserRowModes;
+const UserRowModes = fn(10892).UserRowModes;
 const Constants = fn(1074);
 ({ InstantInviteSources: map1, AnalyticEvents: closure_14, AnalyticsSections: closure_15, NEW_GROUP_DM_POPOUT_ID: closure_16 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_17, jsxs: closure_18 } = jsxProd);
-fn(4560);
+fn(4574);
 let createStyles = { button: null, container: null, instantInviteView: null, nameInputContainer: null, nameInput: null };
 createStyles = { color: nativeDefault.colors.INTERACTIVE_TEXT_ACTIVE };
 createStyles.button = createStyles;

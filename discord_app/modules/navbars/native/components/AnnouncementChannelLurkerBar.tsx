@@ -1,8 +1,8 @@
-// === Module 11329: AnnouncementChannelLurkerBar ===
+// === Module 11356: AnnouncementChannelLurkerBar ===
 
-// Module 11329 (AnnouncementChannelLurkerBar)
+// Module 11356 (AnnouncementChannelLurkerBar)
 import nativeDefault from "native" /* 576 */;
-import showChannelFollowingActionSheet from "showChannelFollowingActionSheet" /* 11330 */;
+import showChannelFollowingActionSheet from "showChannelFollowingActionSheet" /* 11357 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -38,7 +38,7 @@ class AnnouncementChannelLurkerBar {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-fn(4560);
+fn(4574);
 let createStyles = { wrapper: null, text: null };
 createStyles = { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, padding: 16, paddingTop: 8 };
 createStyles.wrapper = createStyles;

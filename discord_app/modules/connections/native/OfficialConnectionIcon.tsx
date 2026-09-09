@@ -1,12 +1,13 @@
-// === Module 11571: OfficialConnectionIcon ===
+// === Module 11597: OfficialConnectionIcon ===
 
-// Module 11571 (OfficialConnectionIcon)
+// Module 11597 (OfficialConnectionIcon)
 import nativeDefault from "native" /* 576 */;
 import utils_ColorUtils from "utils/ColorUtils" /* 1091 */;
 import native from "native" /* 1178 */;
-import RoleIconUtils from "RoleIconUtils" /* 7186 */;
-import _modDef11572 from "module_11572" /* 11572 */;
-import _modDef11573 from "module_11573" /* 11573 */;
+import useRoleIconProps from "useRoleIconProps" /* 7200 */;
+import RoleIconDefault from "RoleIcon" /* 7219 */;
+import _modDef11598 from "module_11598" /* 11598 */;
+import _modDef11599 from "module_11599" /* 11599 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -15,7 +16,7 @@ const Constants = fn(1074);
 ({ DEFAULT_ROLE_COLOR_HEX: closure_4, EMPTY_STRING_SNOWFLAKE_ID: hasOwnProperty } = Constants);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4560);
+const createStyles = fn(4574);
 let closure_8 = createStyles.createStyles({ verifiedCheck: { position: "absolute", left: 0, top: 0 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/connections/native/OfficialConnectionIcon.tsx");
@@ -25,7 +26,7 @@ export default function OfficialConnectionIcon(arg0) {
   ({ guildId, displayRoleIcon } = arg0);
   const tmp = closure_8();
   size = { width: size, height: size };
-  let obj1 = RoleIconUtils;
+  let obj1 = useRoleIconProps;
   let obj = { guildId, roleId: null, size: null };
   if (roleId == null) {
     let id;
@@ -39,13 +40,15 @@ export default function OfficialConnectionIcon(arg0) {
   }
   obj.roleId = roleId;
   obj.size = size;
-  const roleIcon = obj1.useRoleIcon(obj);
+  const roleIconProps = obj1.useRoleIconProps(obj);
   if (false !== displayRoleIcon) {
-    if (null != roleIcon) {
+    if (null != roleIconProps) {
       obj = { style: null, children: null };
       const items = [style, size];
       obj.style = items;
-      obj.children = roleIcon;
+      obj1 = {};
+      const merged = Object.assign(roleIconProps);
+      obj.children = timestampProducer(RoleIconDefault, obj1);
       return timestampProducer(View, obj);
     }
   }
@@ -64,17 +67,17 @@ export default function OfficialConnectionIcon(arg0) {
   if (tmp2Result.getDarkness(hex2intResult) < 0.3) {
     PRIMARY_630 = nativeDefault.unsafe_rawColors.PRIMARY_630;
   }
-  obj1 = { style: null, children: null };
+  const obj2 = { style: null, children: null };
   const items1 = [style, size];
-  obj1.style = items1;
-  const obj2 = { style: null, size: native.Icon.Sizes.CUSTOM, source: _modDef11572, color: roleColor };
+  obj2.style = items1;
+  const obj3 = { style: null, size: native.Icon.Sizes.CUSTOM, source: _modDef11598, color: roleColor };
   const items2 = [tmp.verifiedCheck, size];
-  obj2.style = items2;
-  const items3 = [timestampProducer(native.Icon, obj2), ];
-  const obj3 = { style: null, size: native.Icon.Sizes.CUSTOM, source: _modDef11573, color: PRIMARY_630 };
+  obj3.style = items2;
+  const items3 = [timestampProducer(native.Icon, obj3), ];
+  const obj4 = { style: null, size: native.Icon.Sizes.CUSTOM, source: _modDef11599, color: PRIMARY_630 };
   const items4 = [tmp.verifiedCheck, size];
-  obj3.style = items4;
-  items3[1] = timestampProducer(native.Icon, obj3);
-  obj1.children = items3;
-  return React5(View, obj1);
+  obj4.style = items4;
+  items3[1] = timestampProducer(native.Icon, obj4);
+  obj2.children = items3;
+  return React5(View, obj2);
 };

@@ -1,6 +1,6 @@
-// === Module 7273: ForumConstants ===
+// === Module 7287: ForumConstants ===
 
-// Module 7273 (ForumConstants)
+// Module 7287 (ForumConstants)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/forums/ForumConstants.tsx");

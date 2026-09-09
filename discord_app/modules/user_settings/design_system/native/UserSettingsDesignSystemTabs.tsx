@@ -1,8 +1,8 @@
-// === Module 15778: UserSettingsDesignSystemTabs ===
+// === Module 15808: UserSettingsDesignSystemTabs ===
 
-// Module 15778 (UserSettingsDesignSystemTabs)
+// Module 15808 (UserSettingsDesignSystemTabs)
 import nativeDefault from "native" /* 576 */;
-import Text_Text from "Text/Text" /* 4556 */;
+import Text_Text from "Text/Text" /* 4570 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -11,7 +11,7 @@ get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, ScrollView: metroRequire } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsxs: closure_7, jsx: closure_8 } = jsxProd);
-fn(4560);
+fn(4574);
 let createStyles = { container: { margin: 16, flex: 1, alignItems: "center" }, item: null };
 createStyles = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, borderWidth: 2, borderColor: nativeDefault.colors.BORDER_STRONG, flex: 1, alignItems: "center", justifyContent: "center", height: 400 };
 createStyles.item = createStyles;
@@ -82,7 +82,7 @@ export default function UserSettingsDesignSystemTabs() {
   let tmp20Result = first2;
   if (first2) {
     obj = { state: segmentedControlState, colors: items1 };
-    tmp20Result = closure_8(first(12763), obj);
+    tmp20Result = closure_8(first(12789), obj);
   }
   obj1 = { children: null };
   obj2 = { spacing: 24, children: null };

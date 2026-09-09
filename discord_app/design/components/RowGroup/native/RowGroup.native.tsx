@@ -1,16 +1,16 @@
-// === Module 13981: RowGroup ===
+// === Module 14004: RowGroup ===
 
-// Module 13981 (RowGroup)
+// Module 14004 (RowGroup)
 import nativeDefault from "native" /* 576 */;
-import Stack_Stack from "Stack/Stack" /* 4973 */;
-import TableRowGroup from "TableRowGroup" /* 5687 */;
+import Stack_Stack from "Stack/Stack" /* 4987 */;
+import TableRowGroup from "TableRowGroup" /* 5701 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-fn(4560);
+fn(4574);
 let createStyles = { container: { overflow: "hidden" }, content: null };
 createStyles = { backgroundColor: nativeDefault.colors.TABLEROW_BACKGROUND_DEFAULT, borderRadius: nativeDefault.modules.mobile.TABLE_ROW_BORDER_RADIUS, padding: nativeDefault.modules.mobile.TABLE_ROW_PADDING };
 createStyles.content = createStyles;

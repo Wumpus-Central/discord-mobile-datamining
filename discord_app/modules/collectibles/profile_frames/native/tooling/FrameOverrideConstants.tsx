@@ -1,6 +1,6 @@
-// === Module 8204: FrameOverrideConstants ===
+// === Module 8230: FrameOverrideConstants ===
 
-// Module 8204 (FrameOverrideConstants)
+// Module 8230 (FrameOverrideConstants)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/collectibles/profile_frames/native/tooling/FrameOverrideConstants.tsx");

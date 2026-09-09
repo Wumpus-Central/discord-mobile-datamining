@@ -1,12 +1,12 @@
-// === Module 16499: ICYMIMessageRowPreview ===
+// === Module 16530: ICYMIMessageRowPreview ===
 
-// Module 16499 (ICYMIMessageRowPreview)
+// Module 16530 (ICYMIMessageRowPreview)
 import util from "util" /* 1114 */;
 import UserSettings from "UserSettings" /* 1935 */;
-import createStyles from "createStyles" /* 4560 */;
-import ChannelListLayoutTypes from "ChannelListLayoutTypes" /* 7879 */;
-import RowGeneratorDefault from "RowGenerator" /* 7932 */;
-import RowGeneratorTypes from "RowGeneratorTypes" /* 8126 */;
+import createStyles from "createStyles" /* 4574 */;
+import ChannelListLayoutTypes from "ChannelListLayoutTypes" /* 7893 */;
+import RowGeneratorDefault from "RowGenerator" /* 7946 */;
+import RowGeneratorTypes from "RowGeneratorTypes" /* 8152 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,7 +18,7 @@ function ICYMIMessageRowPreview(pointerEvents) {
     str = "none";
   }
   let obj = { seeMoreLabelColor: messageOptions(576).colors.TEXT_DEFAULT };
-  dependencyMap = obj.createNativeStyleProperties(obj)(messageOptions(4495)());
+  dependencyMap = obj.createNativeStyleProperties(obj)(messageOptions(4509)());
   const RenderEmbeds = UserSettings.RenderEmbeds;
   const setting = RenderEmbeds.getSetting();
   const InlineEmbedMedia = UserSettings.InlineEmbedMedia;
@@ -51,7 +51,7 @@ function ICYMIMessageRowPreview(pointerEvents) {
     messageSizeCacheRef,
     maxHeight
   };
-  return setting2(messageOptions(8657), obj);
+  return setting2(messageOptions(8685), obj);
 }
 const MessageEmbedTypes = fn(1074).MessageEmbedTypes;
 const jsx = fn(21).jsx;
@@ -162,11 +162,11 @@ export const MessageRowPreview = noop.memo((message) => {
     obj.pointerEvents = merged.pointerEvents;
     return obj;
   }, items);
-  const tmp3 = merged(7302)(message);
+  const tmp3 = merged(7316)(message);
   let obj = {};
   const merged1 = Object.assign(memo);
   obj = {};
-  const merged2 = Object.assign(message(7934).DEFAULT_OPTIONS);
+  const merged2 = Object.assign(message(7948).DEFAULT_OPTIONS);
   obj.ignoreMentioned = true;
   obj.renderReplies = false;
   obj.renderThreadEmbeds = false;

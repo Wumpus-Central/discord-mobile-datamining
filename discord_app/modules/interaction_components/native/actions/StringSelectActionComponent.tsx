@@ -1,9 +1,9 @@
-// === Module 15714: StringSelectActionComponent ===
+// === Module 15744: StringSelectActionComponent ===
 
-// Module 15714 (StringSelectActionComponent)
+// Module 15744 (StringSelectActionComponent)
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4527 */;
-import InteractionComponentUtils from "InteractionComponentUtils" /* 4785 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4541 */;
+import InteractionComponentUtils from "InteractionComponentUtils" /* 4799 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -78,7 +78,7 @@ export default function StringSelectActionComponent(type) {
   obj.onTap = function onTap() {
     const obj = { selectionActionComponent, labelComponent, channelId: componentStateContext.channelId, containerId: customId, onSubmit: executeStateUpdate, allowEmpty: null };
     const combined = "StringSelectComponentActionSheet:" + customId;
-    const tmp = asyncRequireImpl(11826, dependencyMap.paths);
+    const tmp = asyncRequireImpl(11852, dependencyMap.paths);
     obj.allowEmpty = InteractionComponentUtils.canSelectBeEmpty(selectionActionComponent, "modal");
     obj.openLazy(tmp, combined, obj);
   };

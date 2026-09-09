@@ -1,9 +1,9 @@
-// === Module 6281: NitroPlatinumBadgeLargeBadge ===
+// === Module 6295: NitroPlatinumBadgeLargeBadge ===
 
-// Module 6281 (NitroPlatinumBadgeLargeBadge)
+// Module 6295 (NitroPlatinumBadgeLargeBadge)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5587 */;
-import _modDef6282 from "module_6282" /* 6282 */;
+import FastImageDefault from "FastImage" /* 5601 */;
+import _modDef6296 from "module_6296" /* 6296 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -24,7 +24,7 @@ export const NitroPlatinumBadgeLargeBadge = function NitroPlatinumBadgeLargeBadg
     num3 = 1;
   }
   let obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  obj = { uri: _modDef6282 };
+  obj = { uri: _modDef6296 };
   obj.source = obj;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];
@@ -32,5 +32,5 @@ export const NitroPlatinumBadgeLargeBadge = function NitroPlatinumBadgeLargeBadg
   obj.accessible = accessible;
   obj.accessibilityLabel = accessibilityLabel;
   obj.resizeMode = resizeMode;
-  return jsx(FastImageDefault, { uri: _modDef6282 });
+  return jsx(FastImageDefault, { uri: _modDef6296 });
 };

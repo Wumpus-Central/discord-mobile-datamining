@@ -1,15 +1,15 @@
-// === Module 16532: MainTabsChannelScreenStack ===
+// === Module 16563: MainTabsChannelScreenStack ===
 
-// Module 16532 (MainTabsChannelScreenStack)
+// Module 16563 (MainTabsChannelScreenStack)
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import native from "native" /* 4271 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4296 */;
-import useChatLayout from "useChatLayout" /* 4420 */;
-import FramesNativeManagerDefault from "FramesNativeManager" /* 9573 */;
-import useChannelScreensFromNavigation from "useChannelScreensFromNavigation" /* 16008 */;
+import native from "native" /* 4284 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4310 */;
+import useChatLayout from "useChatLayout" /* 4434 */;
+import FramesNativeManagerDefault from "FramesNativeManager" /* 9600 */;
+import useChannelScreensFromNavigation from "useChannelScreensFromNavigation" /* 16038 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import FramesStore from "FramesStore" /* 9515 */;
+import FramesStore from "FramesStore" /* 9542 */;
 
 require = fn;
 function getKey(index) {
@@ -17,15 +17,15 @@ function getKey(index) {
 }
 get_ActivityIndicator = fn(17);
 ({ NativeModules: hasOwnProperty, StyleSheet: metroRequire, View: closure_7 } = get_ActivityIndicator);
-const MIDNIGHT_BORDER_WIDTH = fn(7864).MIDNIGHT_BORDER_WIDTH;
+const MIDNIGHT_BORDER_WIDTH = fn(7878).MIDNIGHT_BORDER_WIDTH;
 const Constants = fn(1074);
 ({ AnalyticsObjectTypes: closure_9, AnalyticsObjects: c10, AnalyticsSections: closure_11 } = Constants);
-const FramesConstants = fn(9516);
+const FramesConstants = fn(9543);
 ({ FrameIntent: closure_12, getChannelIdForSurface: map1 } = FramesConstants);
 const ThemeTypes = fn(1085).ThemeTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_15, jsxs: closure_16 } = jsxProd);
-const createStyles = fn(4560);
+const createStyles = fn(4574);
 let closure_17 = createStyles.createStyles({ midnightContainerStyles: { marginTop: -MIDNIGHT_BORDER_WIDTH, marginLeft: -MIDNIGHT_BORDER_WIDTH } });
 const __initData = { code: "function MainTabsChannelScreenStackTsx1(){const{translateX}=this.__closure;return translateX.get()>0;}" };
 const __initData2 = { code: "function MainTabsChannelScreenStackTsx2(isVisibleBeneath,wasVisibleBeneath){const{highestFullyRenderedScreenIndex,index}=this.__closure;if(isVisibleBeneath===wasVisibleBeneath)return;if(isVisibleBeneath){if(highestFullyRenderedScreenIndex.get()>=index){highestFullyRenderedScreenIndex.set(index-1);}return;}if(highestFullyRenderedScreenIndex.get()<index){highestFullyRenderedScreenIndex.set(index);}}" };

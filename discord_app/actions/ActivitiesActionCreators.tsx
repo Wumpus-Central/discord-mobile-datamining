@@ -1,18 +1,18 @@
-// === Module 11477: ActivitiesActionCreators ===
+// === Module 11504: ActivitiesActionCreators ===
 
-// Module 11477 (ActivitiesActionCreators)
+// Module 11504 (ActivitiesActionCreators)
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 4573 */;
-import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 4740 */;
-import getActivitySessionKey from "getActivitySessionKey" /* 11478 */;
-import RichPresenceInviteBarActionCreators from "RichPresenceInviteBarActionCreators" /* 11479 */;
+import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 4587 */;
+import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 4754 */;
+import getActivitySessionKey from "getActivitySessionKey" /* 11505 */;
+import RichPresenceInviteBarActionCreators from "RichPresenceInviteBarActionCreators" /* 11506 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 
 require = fn;
 const Constants = fn(1074);
 ({ Endpoints: hasOwnProperty, ActivityTypes: metroRequire, AnalyticEvents: closure_7, LoggingInviteTypes: closure_8 } = Constants);
-const MessageSendLocation = fn(4553).MessageSendLocation;
+const MessageSendLocation = fn(4567).MessageSendLocation;
 const size = fn(2);
 const result = size.fileFinishedImporting("actions/ActivitiesActionCreators.tsx");
 

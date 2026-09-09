@@ -1,11 +1,11 @@
-// === Module 13402: MarketingPageBannerTile ===
+// === Module 13425: MarketingPageBannerTile ===
 
-// Module 13402 (MarketingPageBannerTile)
+// Module 13425 (MarketingPageBannerTile)
 import nativeDefault from "native" /* 576 */;
-import LinkingDefault from "Linking" /* 4255 */;
-import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7162 */;
-import useTrackImpressionDefault from "useTrackImpression" /* 8773 */;
-import NitroUpsellButtonDefault from "NitroUpsellButton" /* 9975 */;
+import LinkingDefault from "Linking" /* 4268 */;
+import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7176 */;
+import useTrackImpressionDefault from "useTrackImpression" /* 8801 */;
+import NitroUpsellButtonDefault from "NitroUpsellButton" /* 10002 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
@@ -13,7 +13,7 @@ get_ActivityIndicator = fn(17);
 ({ Image: c3, View: closure_4 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-fn(4560);
+fn(4574);
 let createStyles = { container: { width: "100%" }, card: null, image: null, bodyText: null, ctaButton: null };
 createStyles = { display: "flex", width: "100%", flexDirection: "column", justifyContent: "flex-start", padding: nativeDefault.space.PX_16, borderRadius: nativeDefault.radii.lg, backgroundColor: nativeDefault.colors.BACKGROUND_SECONDARY_ALT, overflow: "hidden" };
 createStyles.card = createStyles;
@@ -31,7 +31,7 @@ export default function MarketingPageBannerTile(bannerFields) {
   let helpArticleLinkProps;
   ({ style, cardStyle, componentId, promotionId, analyticsPage, onPaymentSuccess, onPaymentDismiss } = bannerFields);
   const tmp = closure_7();
-  let obj = helpArticleLinkProps(13403);
+  let obj = helpArticleLinkProps(13426);
   const button = bannerFields.button;
   let buttonAction;
   if (button != null) {
@@ -55,11 +55,11 @@ export default function MarketingPageBannerTile(bannerFields) {
   obj.type = helpArticleLinkProps(1250).ImpressionTypes.VIEW;
   obj.name = helpArticleLinkProps(1250).ImpressionNames.PREMIUM_MARKETING_COMPONENT;
   const tmp2Result = useTrackImpressionDefault;
-  obj.properties = { component_type: helpArticleLinkProps(10747).MarketingComponentType.MARKETING_PAGE_BANNER, component_id: componentId, promotion_id: promotionId };
+  obj.properties = { component_type: helpArticleLinkProps(10774).MarketingComponentType.MARKETING_PAGE_BANNER, component_id: componentId, promotion_id: promotionId };
   tmp2Result(obj);
-  let tmp4Result = tmp4(13406);
+  let tmp4Result = tmp4(13429);
   const formatStringWithCommonPremiumParams = tmp4Result.useFormatStringWithCommonPremiumParams(bannerFields.body);
-  tmp4Result = tmp4(13406);
+  tmp4Result = tmp4(13429);
   helpArticleLinkProps = tmp4Result.getHelpArticleLinkProps(bannerFields.helpArticle, bannerFields.helpArticleId);
   const obj2 = { style: null, children: null };
   const items = [tmp.container, style];
@@ -75,7 +75,7 @@ export default function MarketingPageBannerTile(bannerFields) {
     obj4.style = tmp.image;
     tmp12Result = closure_5(closure_3, obj4);
   }
-  const items2 = [tmp12Result, closure_5(helpArticleLinkProps(4556).Text, { color: "mobile-text-heading-primary", variant: "text-lg/bold", children: bannerFields.header }), , ];
+  const items2 = [tmp12Result, closure_5(helpArticleLinkProps(4570).Text, { color: "mobile-text-heading-primary", variant: "text-lg/bold", children: bannerFields.header }), , ];
   const obj7 = { color: "mobile-text-heading-primary", variant: "text-sm/medium", style: tmp.bodyText, children: null };
   const items3 = [formatStringWithCommonPremiumParams, " ", ];
   tmp12Result = null != helpArticleLinkProps;
@@ -89,11 +89,11 @@ export default function MarketingPageBannerTile(bannerFields) {
         },
       children: helpArticleLinkProps.linkText
     };
-    tmp12Result = closure_5(tmp4(4556).Text, obj8);
+    tmp12Result = closure_5(tmp4(4570).Text, obj8);
   }
   items3[2] = tmp12Result;
   obj7.children = items3;
-  items2[2] = closure_6(helpArticleLinkProps(4556).Text, obj7);
+  items2[2] = closure_6(helpArticleLinkProps(4570).Text, obj7);
   let tmp12Result1 = null != bannerFields.button;
   if (tmp12Result1) {
     const obj9 = { style: tmp.ctaButton, children: null };

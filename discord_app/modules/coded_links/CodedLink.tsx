@@ -1,6 +1,6 @@
-// === Module 4548: CodedLink ===
+// === Module 4562: CodedLink ===
 
-// Module 4548 (CodedLink)
+// Module 4562 (CodedLink)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/coded_links/CodedLink.tsx");

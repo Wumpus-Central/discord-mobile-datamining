@@ -1,19 +1,19 @@
-// === Module 9086: EndStageActionSheet ===
+// === Module 9113: EndStageActionSheet ===
 
-// Module 9086 (EndStageActionSheet)
+// Module 9113 (EndStageActionSheet)
 import nativeDefault from "native" /* 576 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4527 */;
-import StageChannelActionCreators from "StageChannelActionCreators" /* 8398 */;
-import ScrollHandlingActionSheetDefault from "ScrollHandlingActionSheet" /* 8596 */;
-import CallsUtils from "CallsUtils" /* 9087 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4541 */;
+import StageChannelActionCreators from "StageChannelActionCreators" /* 8426 */;
+import ScrollHandlingActionSheetDefault from "ScrollHandlingActionSheet" /* 8624 */;
+import CallsUtils from "CallsUtils" /* 9114 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-let closure_4 = fn(5414).EXPLICIT_END_STAGE_SHEET_KEY;
+let closure_4 = fn(5428).EXPLICIT_END_STAGE_SHEET_KEY;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-fn(4560);
+fn(4574);
 let createStyles = { container: { paddingVertical: 24, paddingHorizontal: 16, alignItems: "center" }, title: null, subtitle: null, cancelButton: null, confirmButton: null };
 createStyles = { fontSize: 24, fontFamily: fn(1074).Fonts.PRIMARY_BOLD, textAlign: "center", color: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY };
 createStyles.title = createStyles;
@@ -36,7 +36,7 @@ export default function EndStageActionSheet(channel) {
   const obj1 = { style: tmp.subtitle, variant: "text-md/medium", color: "text-default", children: null };
   const intl2 = channel(1114).intl;
   obj1.children = intl2.string(channel(1114).t.mT7jwN);
-  items[1] = closure_5(channel(4556).Text, obj1);
+  items[1] = closure_5(channel(4570).Text, obj1);
   let obj2 = { style: tmp.cancelButton, children: null };
   const obj3 = { variant: "secondary", text: null, onPress: null };
   const intl3 = channel(1114).intl;
@@ -45,7 +45,7 @@ export default function EndStageActionSheet(channel) {
     ActionSheetActionCreatorsDefault.hideActionSheet(closure_4);
     CallsUtils.handleDisconnect(channel);
   };
-  obj2.children = closure_5(channel(4975).Button, obj3);
+  obj2.children = closure_5(channel(4989).Button, obj3);
   items[2] = closure_5(View, obj2);
   const obj4 = { style: tmp.confirmButton, children: null };
   const obj5 = { variant: "destructive", text: null, onPress: null };
@@ -56,7 +56,7 @@ export default function EndStageActionSheet(channel) {
     ActionSheetActionCreatorsDefault.hideActionSheet(closure_4);
     CallsUtils.handleDisconnect(channel);
   };
-  obj4.children = closure_5(channel(4975).Button, obj5);
+  obj4.children = closure_5(channel(4989).Button, obj5);
   items[3] = closure_5(View, obj4);
   obj.children = items;
   obj.children = closure_6(View, obj);

@@ -1,6 +1,6 @@
-// === Module 6252: ? ===
+// === Module 6266: ? ===
 
-// Module 6252
+// Module 6266
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/MushroomSpotIllustration-2x.png.js");

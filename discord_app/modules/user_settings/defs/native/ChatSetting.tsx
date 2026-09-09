@@ -1,10 +1,10 @@
-// === Module 15459: ChatSetting ===
+// === Module 15488: ChatSetting ===
 
-// Module 15459 (ChatSetting)
+// Module 15488 (ChatSetting)
 import Constants from "Constants" /* 1074 */;
 import util from "util" /* 1114 */;
-import ImageTextIcon from "ImageTextIcon" /* 15460 */;
-import SettingBuilders from "SettingBuilders" /* 11473 */;
+import ImageTextIcon from "ImageTextIcon" /* 15489 */;
+import SettingBuilders from "SettingBuilders" /* 11500 */;
 import size from "module_2" /* 2 */;
 
 const route = SettingBuilders.createRoute({

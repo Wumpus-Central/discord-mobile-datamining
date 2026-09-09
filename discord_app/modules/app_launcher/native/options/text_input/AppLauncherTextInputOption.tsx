@@ -1,10 +1,10 @@
-// === Module 12176: AppLauncherTextInputOption ===
+// === Module 12202: AppLauncherTextInputOption ===
 
-// Module 12176 (AppLauncherTextInputOption)
+// Module 12202 (AppLauncherTextInputOption)
 import nativeDefault from "native" /* 576 */;
 import KeyboardManagerUtils from "KeyboardManagerUtils" /* 1874 */;
-import TopEmojisUtils from "TopEmojisUtils" /* 10283 */;
-import openEmojiPickerActionSheet from "openEmojiPickerActionSheet" /* 11126 */;
+import TopEmojisUtils from "TopEmojisUtils" /* 10310 */;
+import openEmojiPickerActionSheet from "openEmojiPickerActionSheet" /* 11153 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -13,7 +13,7 @@ const View = fn(17).View;
 const EmojiIntention = fn(1374).EmojiIntention;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-fn(4560);
+fn(4574);
 let createStyles = { container: null, hasError: null, stringOptionInput: null, expressionButton: null };
 createStyles = { width: "100%", backgroundColor: nativeDefault.colors.INPUT_BACKGROUND_DEFAULT, borderRadius: nativeDefault.radii.lg, padding: 14, borderWidth: 2, borderColor: "transparent", flexDirection: "row", alignItems: "center" };
 createStyles.container = createStyles;
@@ -46,7 +46,7 @@ export default function AppLauncherTextInputOption(guildId) {
   }), 2);
   value = tmp2[0];
   noop = tmp2[1];
-  let obj = onChangeText(11220);
+  let obj = onChangeText(11247);
   noop.useRef({ start: 0, end: 0 });
   const ref = noop.useRef(null);
   let tmp14Result = option.type === onChangeText(1894).ApplicationCommandOptionType.STRING;
@@ -99,17 +99,17 @@ export default function AppLauncherTextInputOption(guildId) {
       const result = TopEmojisUtils.maybeFetchTopEmojisByGuild(guildId);
     }
   }, items2);
-  let obj1 = onChangeText(12173);
+  let obj1 = onChangeText(12199);
   const animationDelayedAutoFocus = obj1.useAnimationDelayedAutoFocus(autoFocus, () => {
     const current = ref.current;
     if (current != null) {
       current.focus();
     }
   });
-  if (obj.useAppLauncherContext().entrypoint === onChangeText(9414).AppLauncherEntrypoint.VOICE) {
+  if (obj.useAppLauncherContext().entrypoint === onChangeText(9441).AppLauncherEntrypoint.VOICE) {
     let TextInput = tmp4(1178).TextInput;
   } else {
-    TextInput = guildId(12177);
+    TextInput = guildId(12203);
   }
   const items3 = [tmp.container, , ];
   if (hasError) {
@@ -153,7 +153,7 @@ export default function AppLauncherTextInputOption(guildId) {
           const result1 = openEmojiPickerActionSheet.openEmojiPickerActionSheet(obj);
         }
     };
-    tmp14Result = tmp14(guildId(12178), obj1);
+    tmp14Result = tmp14(guildId(12204), obj1);
   }
   items4[1] = tmp14Result;
   obj.children = items4;

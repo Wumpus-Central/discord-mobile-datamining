@@ -1,14 +1,14 @@
-// === Module 8442: AgeVerificationExpressiveV2Modal ===
+// === Module 8470: AgeVerificationExpressiveV2Modal ===
 
-// Module 8442 (AgeVerificationExpressiveV2Modal)
+// Module 8470 (AgeVerificationExpressiveV2Modal)
 import nativeDefault from "native" /* 576 */;
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2024 */;
-import AgeVerificationUtils from "AgeVerificationUtils" /* 4773 */;
-import NavigatorHeader from "NavigatorHeader" /* 5624 */;
-import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 8411 */;
-import AgeVerificationAnalyticsUtils from "AgeVerificationAnalyticsUtils" /* 8413 */;
-import AgeVerificationCustomTab from "AgeVerificationCustomTab" /* 8424 */;
-import AgeVerificationAuthSession from "AgeVerificationAuthSession" /* 8425 */;
+import AgeVerificationUtils from "AgeVerificationUtils" /* 4787 */;
+import NavigatorHeader from "NavigatorHeader" /* 5638 */;
+import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 8439 */;
+import AgeVerificationAnalyticsUtils from "AgeVerificationAnalyticsUtils" /* 8441 */;
+import AgeVerificationCustomTab from "AgeVerificationCustomTab" /* 8452 */;
+import AgeVerificationAuthSession from "AgeVerificationAuthSession" /* 8453 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -368,11 +368,11 @@ function MethodsScreen(onClose) {
   return tmp19Result;
 }
 const ActivityIndicator = fn(17).ActivityIndicator;
-const TRUSTED_PROVIDERS_URL = fn(8412).TRUSTED_PROVIDERS_URL;
+const TRUSTED_PROVIDERS_URL = fn(8440).TRUSTED_PROVIDERS_URL;
 const HelpdeskArticles = fn(1074).HelpdeskArticles;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-fn(4560);
+fn(4574);
 let createStyles = { headerStyle: null, container: null, header: null, loadingContainer: null, emptyContainer: null, footer: null };
 createStyles = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, shadowColor: "transparent" };
 createStyles.headerStyle = createStyles;

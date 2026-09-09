@@ -1,13 +1,13 @@
-// === Module 13459: ProgressWheel ===
+// === Module 13482: ProgressWheel ===
 
-// Module 13459 (ProgressWheel)
+// Module 13482 (ProgressWheel)
 import nativeDefault from "native" /* 576 */;
-import useToken from "useToken" /* 4262 */;
-import FastImageDefault from "FastImage" /* 5587 */;
-import inlineStyles from "inlineStyles" /* 8456 */;
-import useReferralProgramBannerDetails from "useReferralProgramBannerDetails" /* 13449 */;
-import _modDef13460 from "module_13460" /* 13460 */;
-import _modDef13461 from "module_13461" /* 13461 */;
+import useToken from "useToken" /* 4275 */;
+import FastImageDefault from "FastImage" /* 5601 */;
+import inlineStyles from "inlineStyles" /* 8484 */;
+import useReferralProgramBannerDetails from "useReferralProgramBannerDetails" /* 13472 */;
+import _modDef13483 from "module_13483" /* 13483 */;
+import _modDef13484 from "module_13484" /* 13484 */;
 import noop from "module_19" /* 19 */;
 
 const inlineStylesDefault = inlineStyles;
@@ -18,7 +18,7 @@ const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
 let c6 = 160;
 const strokeDasharray = 2 * Math.PI * 77;
-const createStyles = fn(4560);
+const createStyles = fn(4574);
 let closure_8 = createStyles.createStyles({ progressCircleContainer: { width: 160, height: 160, alignItems: "center", justifyContent: "center", marginTop: 24 }, progressCircleImage: { position: "absolute", width: 93, height: 93, borderRadius: 46.5 }, glowImage: { position: "absolute", width: 180, height: 180 } });
 let size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/referral_program/native/ProgressWheel.tsx");
@@ -35,7 +35,7 @@ export default function ProgressWheel(arg0) {
   if (tmp9) {
     obj = { source: null, style: null };
     let tmp4Result = FastImageDefault;
-    obj.source = _modDef13460;
+    obj.source = _modDef13483;
     obj.style = tmp.glowImage;
     tmp9 = React4(tmp4Result, obj);
   }
@@ -48,7 +48,7 @@ export default function ProgressWheel(arg0) {
   size.children = items1;
   items[1] = hasOwnProperty(tmp4Result, size);
   if (altImage == null) {
-    altImage = _modDef13461;
+    altImage = _modDef13484;
   }
   items[2] = React4(FastImageDefault, { source: { uri: altImage }, style: tmp.progressCircleImage });
   obj.children = items;

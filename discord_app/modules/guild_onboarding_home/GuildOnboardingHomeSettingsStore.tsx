@@ -1,6 +1,6 @@
-// === Module 4747: GuildOnboardingHomeSettingsStore ===
+// === Module 4761: GuildOnboardingHomeSettingsStore ===
 
-// Module 4747 (GuildOnboardingHomeSettingsStore)
+// Module 4761 (GuildOnboardingHomeSettingsStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 

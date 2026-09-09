@@ -1,12 +1,12 @@
-// === Module 15567: UserSettingsDebugLogs ===
+// === Module 15597: UserSettingsDebugLogs ===
 
-// Module 15567 (UserSettingsDebugLogs)
+// Module 15597 (UserSettingsDebugLogs)
 import LogAggregator from "LogAggregator" /* 7 */;
 import Storage2 from "Storage" /* 510 */;
 import nativeDefault from "native" /* 576 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 4259 */;
-import Text_Text from "Text/Text" /* 4556 */;
-import UserSettingsDebugLogsActionSheet from "UserSettingsDebugLogsActionSheet" /* 15568 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 4272 */;
+import Text_Text from "Text/Text" /* 4570 */;
+import UserSettingsDebugLogsActionSheet from "UserSettingsDebugLogsActionSheet" /* 15598 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -15,13 +15,13 @@ get_ActivityIndicator = fn(17);
 ({ RefreshControl: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsxs: closure_7, jsx: closure_8 } = jsxProd);
-fn(4560);
+fn(4574);
 let createStyles = { wrap: null, searchWrap: null, searchField: null, shareButton: null, list: null, log: null, code: null };
 createStyles = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flex: 1 };
 createStyles.wrap = createStyles;
 createStyles.searchWrap = { padding: nativeDefault.space.PX_16, flexDirection: "row", alignItems: "center" };
 createStyles.searchField = { flex: 1 };
-let size = { backgroundColor: nativeDefault.colors.INPUT_BACKGROUND_DEFAULT, marginLeft: nativeDefault.space.PX_8, borderRadius: nativeDefault.radii.md, height: fn(6622).InputHeights.MD, width: fn(6622).InputHeights.MD, justifyContent: "center", alignItems: "center" };
+let size = { backgroundColor: nativeDefault.colors.INPUT_BACKGROUND_DEFAULT, marginLeft: nativeDefault.space.PX_8, borderRadius: nativeDefault.radii.md, height: fn(6636).InputHeights.MD, width: fn(6636).InputHeights.MD, justifyContent: "center", alignItems: "center" };
 createStyles.shareButton = size;
 let obj1 = { padding: nativeDefault.space.PX_16, flexDirection: "row", alignItems: "center" };
 createStyles.list = { paddingHorizontal: nativeDefault.space.PX_16 };
@@ -151,7 +151,7 @@ export default function UserSettingsDebugLogs() {
   obj5.data = tmp4Result1[0];
   obj5.renderItem = callback1;
   obj5.refreshControl = closure_8(closure_5, { refreshing: false, onRefresh });
-  items4[1] = closure_8(require("module_8879").FlashList, obj5);
+  items4[1] = closure_8(require("module_8906").FlashList, obj5);
   obj.children = items4;
   return first1(memo, obj);
 };

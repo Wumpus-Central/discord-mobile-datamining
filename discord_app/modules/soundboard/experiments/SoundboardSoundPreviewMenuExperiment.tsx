@@ -1,6 +1,6 @@
-// === Module 17077: SoundboardSoundPreviewMenuExperiment ===
+// === Module 17108: SoundboardSoundPreviewMenuExperiment ===
 
-// Module 17077 (SoundboardSoundPreviewMenuExperiment)
+// Module 17108 (SoundboardSoundPreviewMenuExperiment)
 import ApexExperiment from "ApexExperiment" /* 1433 */;
 import size from "module_2" /* 2 */;
 

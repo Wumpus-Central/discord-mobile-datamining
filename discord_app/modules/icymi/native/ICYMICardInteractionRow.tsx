@@ -1,32 +1,32 @@
-// === Module 16502: ICYMICardInteractionRow ===
+// === Module 16533: ICYMICardInteractionRow ===
 
-// Module 16502 (ICYMICardInteractionRow)
+// Module 16533 (ICYMICardInteractionRow)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import PlatformUtils from "PlatformUtils" /* 1115 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1396 */;
-import ReactionUtils from "ReactionUtils" /* 4211 */;
-import ColorUtils from "ColorUtils" /* 4409 */;
-import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 4573 */;
-import Pressables from "Pressables" /* 5123 */;
-import MessageActionCreatorsDefault from "MessageActionCreators" /* 7456 */;
-import MessageReactionsTypes from "MessageReactionsTypes" /* 7763 */;
-import ReactionActionCreators from "ReactionActionCreators" /* 7764 */;
-import canAddNewReactionsDefault from "canAddNewReactions" /* 7971 */;
-import ICYMIActionCreatorsDefault from "ICYMIActionCreators" /* 8351 */;
-import openEmojiPickerActionSheet from "openEmojiPickerActionSheet" /* 11126 */;
-import messages_MessagesUtils from "messages/MessagesUtils" /* 11257 */;
-import PendingReplyActionCreators from "PendingReplyActionCreators" /* 11674 */;
-import ForwardModalUtils from "ForwardModalUtils" /* 11685 */;
-import ForwardingIconDefault from "ForwardingIcon" /* 11693 */;
-import ArrowAngleLeftUpIcon from "ArrowAngleLeftUpIcon" /* 11739 */;
-import ICYMIShared from "ICYMIShared" /* 16494 */;
+import ReactionUtils from "ReactionUtils" /* 4224 */;
+import ColorUtils from "ColorUtils" /* 4423 */;
+import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 4587 */;
+import Pressables from "Pressables" /* 5137 */;
+import MessageActionCreatorsDefault from "MessageActionCreators" /* 7470 */;
+import MessageReactionsTypes from "MessageReactionsTypes" /* 7777 */;
+import ReactionActionCreators from "ReactionActionCreators" /* 7778 */;
+import canAddNewReactionsDefault from "canAddNewReactions" /* 7985 */;
+import ICYMIActionCreatorsDefault from "ICYMIActionCreators" /* 8379 */;
+import openEmojiPickerActionSheet from "openEmojiPickerActionSheet" /* 11153 */;
+import messages_MessagesUtils from "messages/MessagesUtils" /* 11284 */;
+import PendingReplyActionCreators from "PendingReplyActionCreators" /* 11700 */;
+import ForwardModalUtils from "ForwardModalUtils" /* 11711 */;
+import ForwardingIconDefault from "ForwardingIcon" /* 11719 */;
+import ArrowAngleLeftUpIcon from "ArrowAngleLeftUpIcon" /* 11765 */;
+import ICYMIShared from "ICYMIShared" /* 16525 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ThreadMessageStore from "ThreadMessageStore" /* 7306 */;
+import ThreadMessageStore from "ThreadMessageStore" /* 7320 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
-import GuildVerificationStore from "GuildVerificationStore" /* 5413 */;
-import PermissionStore from "PermissionStore" /* 4199 */;
+import GuildVerificationStore from "GuildVerificationStore" /* 5427 */;
+import PermissionStore from "PermissionStore" /* 4212 */;
 
 require = fn;
 function AddEmojiButton(channel) {
@@ -301,7 +301,7 @@ const EmojiIntention = fn(1374).EmojiIntention;
 const jsxProd = fn(21);
 ({ jsx: closure_16, jsxs: closure_17, Fragment: closure_18 } = jsxProd);
 let c19 = 20;
-const createStyles = fn(4560);
+const createStyles = fn(4574);
 let closure_20 = createStyles.createStyles(() => {
   let obj = { container: { flexDirection: "row", alignItems: "center", flexWrap: "wrap", justifyContent: "space-between" }, replyForwardButtonContainer: { flexDirection: "row", alignItems: "center", flexWrap: "wrap", gap: 6 }, emojisRowContainer: { position: "relative", flexDirection: "row", alignItems: "center", flexWrap: "wrap", gap: 6 }, emojisContainer: { position: "relative", flexDirection: "row", alignItems: "center", flexWrap: "wrap", gap: 6 }, emojiContainer: null, innerEmojiContainer: null, selectedInnerEmojiContainer: null, addEmojiContainer: null, disabled: null, defaultEmoji: null, emojiText: null, selectedInnerTextContainer: null, innerTextContainer: null, emojiImage: null, selected: null, gradient: null, overflowChevron: null, comments: null, commentCount: null, commentsIcon: null };
   obj = { flexDirection: "row", backgroundColor: nativeDefault.colors.REDESIGN_BUTTON_TERTIARY_BACKGROUND, borderRadius: nativeDefault.radii.sm, flexShrink: 3, paddingHorizontal: 8, gap: 6 };

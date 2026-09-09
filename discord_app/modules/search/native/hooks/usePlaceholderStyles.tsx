@@ -1,14 +1,14 @@
-// === Module 16649: usePlaceholderStyles ===
+// === Module 16681: usePlaceholderStyles ===
 
-// Module 16649 (usePlaceholderStyles)
+// Module 16681 (usePlaceholderStyles)
 import native from "native" /* 1178 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1477 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4296 */;
-import timing from "timing" /* 4561 */;
-import AccessibilityStore from "AccessibilityStore" /* 4552 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4310 */;
+import timing from "timing" /* 4575 */;
+import AccessibilityStore from "AccessibilityStore" /* 4566 */;
 
 require = fn;
-const duration = fn(7878).FADE_LAYOUT_ANIMATION_DURATION;
+const duration = fn(7892).FADE_LAYOUT_ANIMATION_DURATION;
 const __initData = { code: "function usePlaceholderStylesTsx1(){const{useReducedMotion,visible,withRepeat,withSequence,withTiming,STANDARD_EASING,FADE_LAYOUT_ANIMATION_DURATION}=this.__closure;if(useReducedMotion){return{opacity:visible?1:0};}if(visible){return{opacity:withRepeat(withSequence(withTiming(0.5,{duration:0}),withTiming(1,{duration:1300,easing:STANDARD_EASING}),withTiming(0.5,{duration:1300,easing:STANDARD_EASING})),-1)};}return{opacity:withTiming(0,{duration:FADE_LAYOUT_ANIMATION_DURATION})};}" };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/search/native/hooks/usePlaceholderStyles.tsx");

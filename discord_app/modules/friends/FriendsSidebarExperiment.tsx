@@ -1,6 +1,6 @@
-// === Module 7283: FriendsSidebarExperiment ===
+// === Module 7297: FriendsSidebarExperiment ===
 
-// Module 7283 (FriendsSidebarExperiment)
+// Module 7297 (FriendsSidebarExperiment)
 import ApexExperiment from "ApexExperiment" /* 1433 */;
 import size from "module_2" /* 2 */;
 

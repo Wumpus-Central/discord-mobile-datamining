@@ -1,27 +1,27 @@
-// === Module 12437: ChatInputGuardWrapper ===
+// === Module 12463: ChatInputGuardWrapper ===
 
-// Module 12437 (ChatInputGuardWrapper)
-import CommunicationDisabledUtils from "CommunicationDisabledUtils" /* 4188 */;
-import AutomodPermissionUtils from "AutomodPermissionUtils" /* 4205 */;
-import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 4740 */;
-import MemberVerificationUtils from "MemberVerificationUtils" /* 5058 */;
-import RelationshipActionCreatorsDefault from "RelationshipActionCreators" /* 9047 */;
-import navigateToThreadCreation from "navigateToThreadCreation" /* 11227 */;
-import GuildRoleConnectionsModalActionCreators from "GuildRoleConnectionsModalActionCreators" /* 11574 */;
+// Module 12463 (ChatInputGuardWrapper)
+import CommunicationDisabledUtils from "CommunicationDisabledUtils" /* 4201 */;
+import AutomodPermissionUtils from "AutomodPermissionUtils" /* 4218 */;
+import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 4754 */;
+import MemberVerificationUtils from "MemberVerificationUtils" /* 5072 */;
+import RelationshipActionCreatorsDefault from "RelationshipActionCreators" /* 9074 */;
+import navigateToThreadCreation from "navigateToThreadCreation" /* 11254 */;
+import GuildRoleConnectionsModalActionCreators from "GuildRoleConnectionsModalActionCreators" /* 11600 */;
 import noop from "module_19" /* 19 */;
-import LurkingStore from "LurkingStore" /* 4200 */;
+import LurkingStore from "LurkingStore" /* 4213 */;
 import GuildMemberStore from "GuildMemberStore" /* 2021 */;
 import GuildStore from "GuildStore" /* 1979 */;
-import GuildVerificationStore from "GuildVerificationStore" /* 5413 */;
-import RelationshipStore from "RelationshipStore" /* 4209 */;
+import GuildVerificationStore from "GuildVerificationStore" /* 5427 */;
+import RelationshipStore from "RelationshipStore" /* 4222 */;
 import UserStore from "UserStore" /* 1371 */;
 
 require = fn;
 const isThread = fn(1961).isThread;
-const TextAreaCta = fn(11966).TextAreaCta;
+const TextAreaCta = fn(11992).TextAreaCta;
 const Constants = fn(1074);
 ({ AnalyticEvents: closure_11, ChannelTypes: closure_12, VerificationCriteria: map1 } = Constants);
-let closure_14 = fn(7043).PHONE_VERIFICATION_MODAL_KEY;
+let closure_14 = fn(7057).PHONE_VERIFICATION_MODAL_KEY;
 const jsx = fn(21).jsx;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/chat_input/native/guard/ChatInputGuardWrapper.tsx");

@@ -1,6 +1,6 @@
-// === Module 6462: ? ===
+// === Module 6476: ? ===
 
-// Module 6462
+// Module 6476
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/SkullIllocon-2x.png.js");

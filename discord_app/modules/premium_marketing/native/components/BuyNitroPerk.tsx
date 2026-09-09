@@ -1,9 +1,9 @@
-// === Module 13397: BuyNitroPerk ===
+// === Module 13420: BuyNitroPerk ===
 
-// Module 13397 (BuyNitroPerk)
+// Module 13420 (BuyNitroPerk)
 import nativeDefault from "native" /* 576 */;
-import TableRow from "TableRow" /* 5605 */;
-import BuyNitroGradientDefault from "BuyNitroGradient" /* 13398 */;
+import TableRow from "TableRow" /* 5619 */;
+import BuyNitroGradientDefault from "BuyNitroGradient" /* 13421 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -13,7 +13,7 @@ const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
 const start = { x: 0, y: 0 };
 const end = { x: 1, y: 1 };
-fn(4560);
+fn(4574);
 const createStyles = { iconTile: null };
 let size = { width: nativeDefault.modules.mobile.TABLE_ROW_ICON_SIZE, height: nativeDefault.modules.mobile.TABLE_ROW_ICON_SIZE, borderRadius: nativeDefault.radii.round, alignItems: "center", justifyContent: "center", overflow: "hidden" };
 createStyles.iconTile = size;

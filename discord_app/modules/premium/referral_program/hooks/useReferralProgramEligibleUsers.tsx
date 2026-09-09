@@ -1,10 +1,10 @@
-// === Module 13454: useReferralProgramEligibleUsers ===
+// === Module 13477: useReferralProgramEligibleUsers ===
 
-// Module 13454 (useReferralProgramEligibleUsers)
+// Module 13477 (useReferralProgramEligibleUsers)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ReferralTrialStore from "ReferralTrialStore" /* 7452 */;
+import ReferralTrialStore from "ReferralTrialStore" /* 7466 */;
 
 const require = fn;
 const size = fn(2);
@@ -155,7 +155,7 @@ export const useReferralProgramEligibleUsers = function useReferralProgramEligib
                     stateFromStores = dependencyMap;
                     closure_3 = dependencyMap[Symbol.iterator]();
                     if (closure_3 === undefined) {
-                      let obj5 = searchQuery(7453);
+                      let obj5 = searchQuery(7467);
                       c9 = 4;
                       c10 = 1;
                       let obj1 = { value: obj5.fetchReferralEligibleUsers(closure_133_0, closure_134_0, closure_133_1), done: false };
@@ -165,9 +165,9 @@ export const useReferralProgramEligibleUsers = function useReferralProgramEligib
                       closure_133_3 = tmp44;
                       closure_133_4 = stateFromStores(closure_133_3, 2);
                       closure_133_5 = closure_133_4[0];
-                      if (closure_133_4[1] === searchQuery(7453).ReferralOfferStatus.PENDING) {
+                      if (closure_133_4[1] === searchQuery(7467).ReferralOfferStatus.PENDING) {
                         if (!closure_134_12.has(closure_133_5)) {
-                          searchQuery(8181);
+                          searchQuery(8207);
                           c9 = 5;
                           c10 = 1;
                           let obj2 = { value: null, done: false };

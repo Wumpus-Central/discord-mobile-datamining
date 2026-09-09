@@ -1,6 +1,6 @@
-// === Module 5932: ? ===
+// === Module 5946: ? ===
 
-// Module 5932
+// Module 5946
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/DollarSignIllocon-2x.png.js");

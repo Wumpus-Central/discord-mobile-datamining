@@ -1,8 +1,8 @@
-// === Module 7888: renderMessageMarkup ===
+// === Module 7902: renderMessageMarkup ===
 
-// Module 7888 (renderMessageMarkup)
-import MarkupUtilsDefault from "MarkupUtils" /* 4550 */;
-import MarkupPostProcessors from "MarkupPostProcessors" /* 7889 */;
+// Module 7902 (renderMessageMarkup)
+import MarkupUtilsDefault from "MarkupUtils" /* 4564 */;
+import MarkupPostProcessors from "MarkupPostProcessors" /* 7903 */;
 import size from "module_2" /* 2 */;
 
 function getInitialParserState(channelId) {
@@ -118,6 +118,16 @@ export const renderMessageMarkupToAST = function renderMessageMarkupToAST(messag
   const merged = Object.assign(obj);
   obj.toAST = true;
   return render(obj.formatInline ? tmp2.parseInlineReplyToAST : tmp2.parseToAST, message, obj);
+};
+export const renderMessageMarkupToASTWithParser = function renderMessageMarkupToASTWithParser(arg0, message) {
+  let obj = result;
+  if (result === undefined) {
+    obj = {};
+  }
+  obj = {};
+  const merged = Object.assign(obj);
+  obj.toAST = true;
+  return render(arg0, message, obj);
 };
 export const renderMessageContentMarkup = function renderMessageContentMarkup(notifCenterV2MessagePreviewParser, guildId, arg2) {
   let obj = arg2;

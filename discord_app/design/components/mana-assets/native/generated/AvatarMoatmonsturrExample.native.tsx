@@ -1,9 +1,9 @@
-// === Module 5771: AvatarMoatmonsturrExample ===
+// === Module 5785: AvatarMoatmonsturrExample ===
 
-// Module 5771 (AvatarMoatmonsturrExample)
+// Module 5785 (AvatarMoatmonsturrExample)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5587 */;
-import _modDef5772 from "module_5772" /* 5772 */;
+import FastImageDefault from "FastImage" /* 5601 */;
+import _modDef5786 from "module_5786" /* 5786 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -24,7 +24,7 @@ export const AvatarMoatmonsturrExample = function AvatarMoatmonsturrExample(widt
     num3 = 1;
   }
   let obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  obj = { uri: _modDef5772 };
+  obj = { uri: _modDef5786 };
   obj.source = obj;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];
@@ -32,5 +32,5 @@ export const AvatarMoatmonsturrExample = function AvatarMoatmonsturrExample(widt
   obj.accessible = accessible;
   obj.accessibilityLabel = accessibilityLabel;
   obj.resizeMode = resizeMode;
-  return jsx(FastImageDefault, { uri: _modDef5772 });
+  return jsx(FastImageDefault, { uri: _modDef5786 });
 };

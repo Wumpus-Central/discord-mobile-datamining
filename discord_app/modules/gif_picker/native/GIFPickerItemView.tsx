@@ -1,18 +1,18 @@
-// === Module 10384: GIFPickerItemView ===
+// === Module 10411: GIFPickerItemView ===
 
-// Module 10384 (GIFPickerItemView)
+// Module 10411 (GIFPickerItemView)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import KeyboardManagerUtils from "KeyboardManagerUtils" /* 1874 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4527 */;
-import gif_picker_GIFPickerUtils from "gif_picker/GIFPickerUtils" /* 10374 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4541 */;
+import gif_picker_GIFPickerUtils from "gif_picker/GIFPickerUtils" /* 10401 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4560);
+const createStyles = fn(4574);
 let closure_6 = createStyles.createStyles((height) => {
   let obj = { container: null, gifImage: null, gifImageSelected: null };
   const size = { paddingBottom: gif_picker_GIFPickerUtils.GIF_PICKER_GUTTER_SPACING, paddingHorizontal: gif_picker_GIFPickerUtils.GIF_PICKER_GUTTER_SPACING / 2, borderRadius: nativeDefault.radii.xs, width: "100%", height, flex: 1 };
@@ -41,7 +41,7 @@ export default function GIFPickerItemView(onPressGIF) {
   const items2 = [index, item.src];
   const callback1 = noop.useCallback(() => {
     const obj = { item };
-    obj.openLazy(asyncRequireImpl(10385, dependencyMap.paths), "GIFPickerItemActionSheet", obj, "stack");
+    obj.openLazy(asyncRequireImpl(10412, dependencyMap.paths), "GIFPickerItemActionSheet", obj, "stack");
     const result = KeyboardManagerUtils.dismissGlobalKeyboard();
   }, items1);
   const memo = noop.useMemo(() => {

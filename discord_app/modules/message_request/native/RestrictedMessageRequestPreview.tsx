@@ -1,11 +1,11 @@
-// === Module 16898: RestrictedMessageRequestPreview ===
+// === Module 16935: RestrictedMessageRequestPreview ===
 
-// Module 16898 (RestrictedMessageRequestPreview)
+// Module 16935 (RestrictedMessageRequestPreview)
 import nativeDefault from "native" /* 576 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
-import MessageStore from "MessageStore" /* 4781 */;
+import MessageStore from "MessageStore" /* 4795 */;
 import UserStore from "UserStore" /* 1371 */;
 
 const require = fn;
@@ -13,7 +13,7 @@ get_ActivityIndicator = fn(17);
 ({ ScrollView: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-fn(4560);
+fn(4574);
 let createStyles = { container: null, scroll: null, hidden: null, scrollContent: null, footer: null };
 createStyles = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 createStyles.container = createStyles;
@@ -103,9 +103,9 @@ export default function RestrictedMessageRequestPreview(channelId) {
         }
       };
       obj1 = { channel: stateFromStores, user: stateFromStores1 };
-      const items8 = [closure_10(tmp2(16899), obj1), ];
+      const items8 = [closure_10(tmp2(16936), obj1), ];
       obj2 = { channelId };
-      items8[1] = closure_10(tmp2(16901), obj2);
+      items8[1] = closure_10(tmp2(16938), obj2);
       obj.children = items8;
       const items9 = [closure_11(closure_5, obj), ];
       const obj3 = { style: null, children: null };
@@ -114,7 +114,7 @@ export default function RestrictedMessageRequestPreview(channelId) {
       items10[1] = obj4;
       obj3.style = items10;
       const obj5 = { channel: stateFromStores };
-      obj3.children = closure_10(tmp2(12443), obj5);
+      obj3.children = closure_10(tmp2(12469), obj5);
       items9[1] = closure_10(first1, obj3);
       obj.children = items9;
       tmp13Result = closure_11(tmp14, obj);

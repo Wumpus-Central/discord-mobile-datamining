@@ -1,15 +1,15 @@
-// === Module 17456: RedesignDiscoverabilityLanding ===
+// === Module 17487: RedesignDiscoverabilityLanding ===
 
-// Module 17456 (RedesignDiscoverabilityLanding)
+// Module 17487 (RedesignDiscoverabilityLanding)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1611 */;
-import Text_Text from "Text/Text" /* 4556 */;
-import components_Button_Button from "components/Button/Button" /* 4975 */;
-import FastImageDefault from "FastImage" /* 5587 */;
-import NavigatorConstants from "NavigatorConstants" /* 5682 */;
-import ContactSyncUtils from "ContactSyncUtils" /* 12684 */;
-import _modDef12754 from "module_12754" /* 12754 */;
+import Text_Text from "Text/Text" /* 4570 */;
+import components_Button_Button from "components/Button/Button" /* 4989 */;
+import FastImageDefault from "FastImage" /* 5601 */;
+import NavigatorConstants from "NavigatorConstants" /* 5696 */;
+import ContactSyncUtils from "ContactSyncUtils" /* 12710 */;
+import _modDef12780 from "module_12780" /* 12780 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -17,7 +17,7 @@ get_ActivityIndicator = fn(17);
 ({ View: c3, ScrollView: closure_4 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-fn(4560);
+fn(4574);
 let createStyles = { container: null, topContainer: null, growContainer: null, image: null, title: null, subtitle: null, info: null };
 createStyles = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 createStyles.container = createStyles;
@@ -49,7 +49,7 @@ export default function RedesignDiscoverabilityLanding(onNext) {
   const intl2 = util.intl;
   obj2.children = intl2.string(util.t.KMW0kP);
   items[2] = hasOwnProperty(Text_Text.Text, obj2);
-  const obj3 = { resizeMode: "contain", style: tmp.image, source: _modDef12754 };
+  const obj3 = { resizeMode: "contain", style: tmp.image, source: _modDef12780 };
   items[3] = hasOwnProperty(FastImageDefault, obj3);
   const obj4 = { style: tmp.info, variant: "text-sm/medium", color: "text-default", children: null };
   const intl3 = util.intl;

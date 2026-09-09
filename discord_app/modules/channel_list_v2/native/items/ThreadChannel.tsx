@@ -1,20 +1,20 @@
-// === Module 16116: ThreadChannel ===
+// === Module 16146: ThreadChannel ===
 
-// Module 16116 (ThreadChannel)
+// Module 16146 (ThreadChannel)
 import nativeDefault from "native" /* 576 */;
-import transitionToChannel from "transitionToChannel" /* 4571 */;
-import inlineStyles from "inlineStyles" /* 8456 */;
-import showLongPressForumPostActionSheetDefault from "showLongPressForumPostActionSheet" /* 10225 */;
-import showThreadLongPressActionSheetDefault from "showThreadLongPressActionSheet" /* 16117 */;
+import transitionToChannel from "transitionToChannel" /* 4585 */;
+import inlineStyles from "inlineStyles" /* 8484 */;
+import showLongPressForumPostActionSheetDefault from "showLongPressForumPostActionSheet" /* 10252 */;
+import showThreadLongPressActionSheetDefault from "showThreadLongPressActionSheet" /* 16147 */;
 import noop from "module_19" /* 19 */;
-import JoinedThreadsStore from "JoinedThreadsStore" /* 4201 */;
+import JoinedThreadsStore from "JoinedThreadsStore" /* 4214 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
-import PermissionStore from "PermissionStore" /* 4199 */;
-import ReadStateStore from "ReadStateStore" /* 4575 */;
+import PermissionStore from "PermissionStore" /* 4212 */;
+import ReadStateStore from "ReadStateStore" /* 4589 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2011 */;
 import UserStore from "UserStore" /* 1371 */;
-import VoiceStateStore from "VoiceStateStore" /* 4579 */;
-import SortedVoiceStateStore from "SortedVoiceStateStore" /* 4584 */;
+import VoiceStateStore from "VoiceStateStore" /* 4593 */;
+import SortedVoiceStateStore from "SortedVoiceStateStore" /* 4598 */;
 
 const inlineStylesDefault = inlineStyles;
 
@@ -190,14 +190,14 @@ function ThreadChannel(channel) {
   tmp9 = threadIndex(obj[20])({ channel, locked: isLocked, video: hasVideo, selected });
 }
 const View = fn(17).View;
-const RedesignChannelListConstants = fn(10123);
+const RedesignChannelListConstants = fn(10150);
 ({ getScaledChannelRowHeight: map1, CHANNEL_MARGIN_VERTICAL } = RedesignChannelListConstants);
 const Permissions = fn(1074).Permissions;
-const UnreadSetting = fn(4742).UnreadSetting;
+const UnreadSetting = fn(4756).UnreadSetting;
 let closure_16 = fn(1113).OpenThreadAnalyticsLocations;
 const jsxProd = fn(21);
 ({ jsx: closure_17, jsxs: closure_18, Fragment: closure_19 } = jsxProd);
-fn(4560);
+fn(4574);
 let obj = { container: null, threadRow: null, unreadContainer: null, spineSpacer: null, unreadIcon: null, threadLineSegment: null };
 obj = { marginVertical: CHANNEL_MARGIN_VERTICAL, marginStart: 2, marginEnd: 8, borderRadius: nativeDefault.radii.md, flex: 1 };
 obj.container = obj;

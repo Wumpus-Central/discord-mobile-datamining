@@ -1,20 +1,20 @@
-// === Module 16632: SearchBarActivityIcon ===
+// === Module 16664: SearchBarActivityIcon ===
 
-// Module 16632 (SearchBarActivityIcon)
+// Module 16664 (SearchBarActivityIcon)
 import nativeDefault from "native" /* 576 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4296 */;
-import timing from "timing" /* 4561 */;
-import SearchUtils from "SearchUtils" /* 12344 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4310 */;
+import timing from "timing" /* 4575 */;
+import SearchUtils from "SearchUtils" /* 12370 */;
 import noop from "module_19" /* 19 */;
-import SearchMessageStore from "SearchMessageStore" /* 7281 */;
-import SearchQueryStore from "SearchQueryStore" /* 12343 */;
+import SearchMessageStore from "SearchMessageStore" /* 7295 */;
+import SearchQueryStore from "SearchQueryStore" /* 12369 */;
 
 require = fn;
 const ActivityIndicator = fn(17).ActivityIndicator;
-let closure_7 = fn(7878).SEARCH_MESSAGE_TAB_SENTINEL;
+let closure_7 = fn(7892).SEARCH_MESSAGE_TAB_SENTINEL;
 const jsxProd = fn(21);
 ({ jsx: closure_8, Fragment: closure_9, jsxs: c10 } = jsxProd);
-let createStyles = fn(4560);
+let createStyles = fn(4574);
 let obj = { spinnerColor: null, spinner: null, icon: null };
 obj = { color: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT };
 obj.spinnerColor = obj;

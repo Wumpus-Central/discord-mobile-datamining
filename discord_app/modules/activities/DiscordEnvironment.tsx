@@ -1,12 +1,12 @@
-// === Module 9642: DiscordEnvironment ===
+// === Module 9669: DiscordEnvironment ===
 
-// Module 9642 (DiscordEnvironment)
+// Module 9669 (DiscordEnvironment)
 import UserSettings from "UserSettings" /* 1935 */;
-import AccessibilityStore from "AccessibilityStore" /* 4552 */;
+import AccessibilityStore from "AccessibilityStore" /* 4566 */;
 import ThemeStore from "ThemeStore" /* 1183 */;
 
 require = fn;
-const UIDensityConstants = fn(9643);
+const UIDensityConstants = fn(9670);
 ({ RESPONSIVE_DENSITY_FALLBACK: closure_4, RESPONSIVE_DENSITY_MEDIA_QUERY: hasOwnProperty, resolveUIDensity: metroRequire } = UIDensityConstants);
 const frozen = Object.freeze({ baseTheme: "dark", customTheme: null, uiDensity: "default", messageDisplayCompact: false, fontScale: 100, reducedMotion: false, highContrast: false, forcedColors: false, underlineLinks: false });
 let closure_8 = ["custom-theme-background", "custom-client-theme"];

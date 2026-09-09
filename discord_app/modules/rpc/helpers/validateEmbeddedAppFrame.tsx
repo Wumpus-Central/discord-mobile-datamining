@@ -1,11 +1,11 @@
-// === Module 14465: validateEmbeddedAppFrame ===
+// === Module 14490: validateEmbeddedAppFrame ===
 
-// Module 14465 (validateEmbeddedAppFrame)
-import ApplicationFlagUtils from "ApplicationFlagUtils" /* 8861 */;
-import RPCErrorDefault from "RPCError" /* 9559 */;
-import RPCHelpers from "RPCHelpers" /* 9564 */;
-import FramesStore from "FramesStore" /* 9515 */;
-import VibegrationsBuilderPreviewStore from "VibegrationsBuilderPreviewStore" /* 14466 */;
+// Module 14490 (validateEmbeddedAppFrame)
+import ApplicationFlagUtils from "ApplicationFlagUtils" /* 8888 */;
+import RPCErrorDefault from "RPCError" /* 9586 */;
+import RPCHelpers from "RPCHelpers" /* 9591 */;
+import FramesStore from "FramesStore" /* 9542 */;
+import VibegrationsBuilderPreviewStore from "VibegrationsBuilderPreviewStore" /* 14491 */;
 
 require = fn;
 function validateEmbeddedAppFrame(transport) {
@@ -30,7 +30,7 @@ function validateEmbeddedAppFrame(transport) {
           tmp13 = null;
           if (tmp12.MAIN === type) {
             if (tmp35.applicationId === VibegrationsBuilderPreviewStore.getBuilderPreviewApplicationId()) {
-              obj1 = { channelId: "jsxs", guildId: "channel" };
+              obj1 = { channelId: "Array", guildId: "PX_16" };
             } else {
               obj1 = null;
             }
@@ -55,18 +55,18 @@ function validateEmbeddedAppFrame(transport) {
   }
   validateApplicationResult = obj1.validateApplication(transport.application);
 }
-const TransportTypes = fn(4465).TransportTypes;
+const TransportTypes = fn(4479).TransportTypes;
 const Constants = fn(1074);
 ({ ApplicationFlags: metroRequire, RPCErrors: closure_7 } = Constants);
-const FramesConstants = fn(9516);
+const FramesConstants = fn(9543);
 ({ asLaunched: closure_8, EmbeddedSurfaceType: closure_9 } = FramesConstants);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/rpc/helpers/validateEmbeddedAppFrame.tsx");
 
 export default validateEmbeddedAppFrame;
-export const tryValidateEmbeddedAppFrame = function tryValidateEmbeddedAppFrame(socket) {
+export const tryValidateEmbeddedAppFrame = function tryValidateEmbeddedAppFrame(transport) {
   try {
-    return validateEmbeddedAppFrame(socket);
+    return validateEmbeddedAppFrame(transport);
   } catch (tmp3) {
     if (tmp3 instanceof RPCErrorDefault) {
       return null;

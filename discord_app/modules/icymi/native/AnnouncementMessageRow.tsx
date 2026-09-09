@@ -1,25 +1,25 @@
-// === Module 16492: AnnouncementMessageRow ===
+// === Module 16523: AnnouncementMessageRow ===
 
-// Module 16492 (AnnouncementMessageRow)
+// Module 16523 (AnnouncementMessageRow)
 import nativeDefault from "native" /* 576 */;
-import GuildActionCreatorsDefault from "GuildActionCreators" /* 5520 */;
-import ICYMIActionCreatorsDefault from "ICYMIActionCreators" /* 8351 */;
-import openChannelLongPressActionSheet from "openChannelLongPressActionSheet" /* 10918 */;
-import showLongPressMessageActionSheet from "showLongPressMessageActionSheet" /* 11662 */;
-import ICYMIShared from "ICYMIShared" /* 16494 */;
+import GuildActionCreatorsDefault from "GuildActionCreators" /* 5534 */;
+import ICYMIActionCreatorsDefault from "ICYMIActionCreators" /* 8379 */;
+import openChannelLongPressActionSheet from "openChannelLongPressActionSheet" /* 10945 */;
+import showLongPressMessageActionSheet from "showLongPressMessageActionSheet" /* 11688 */;
+import ICYMIShared from "ICYMIShared" /* 16525 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 import GuildStore from "GuildStore" /* 1979 */;
-import RelationshipStore from "RelationshipStore" /* 4209 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 4741 */;
+import RelationshipStore from "RelationshipStore" /* 4222 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 4755 */;
 import UserStore from "UserStore" /* 1371 */;
 
 require = fn;
 const View = fn(17).View;
-const ITEM_PADDING = fn(16493).ITEM_PADDING;
+const ITEM_PADDING = fn(16524).ITEM_PADDING;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
-const createICYMIStyles = fn(16455);
+const createICYMIStyles = fn(16486);
 let closure_13 = createICYMIStyles.createICYMIStyles((paddingLeft) => {
   let obj = { pressable: { flex: 1, paddingLeft: paddingLeft.inset }, footer: null };
   obj = { marginVertical: paddingLeft.margin, gap: nativeDefault.space.PX_8, paddingHorizontal: ITEM_PADDING, marginLeft: paddingLeft.inset };

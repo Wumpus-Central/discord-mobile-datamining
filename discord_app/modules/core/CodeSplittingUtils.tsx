@@ -1,8 +1,8 @@
-// === Module 4236: core/CodeSplittingUtils ===
+// === Module 4249: core/CodeSplittingUtils ===
 
-// Module 4236 (core/CodeSplittingUtils)
+// Module 4249 (core/CodeSplittingUtils)
 import NetworkUtilsDefault from "NetworkUtils" /* 1461 */;
-import CodeSplittingUtils from "CodeSplittingUtils" /* 4237 */;
+import CodeSplittingUtils from "CodeSplittingUtils" /* 4250 */;
 import size from "module_2" /* 2 */;
 
 CodeSplittingUtils.setAwaitOnline(NetworkUtilsDefault.awaitOnline);

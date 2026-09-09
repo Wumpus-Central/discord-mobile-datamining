@@ -1,21 +1,21 @@
-// === Module 13175: CollectiblesEditUserProfileListItems ===
+// === Module 13198: CollectiblesEditUserProfileListItems ===
 
-// Module 13175 (CollectiblesEditUserProfileListItems)
+// Module 13198 (CollectiblesEditUserProfileListItems)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import native from "native" /* 1178 */;
-import PremiumUtilsDefault from "PremiumUtils" /* 4218 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4527 */;
-import HapticUtils from "HapticUtils" /* 4528 */;
-import haptics_HapticFeedbackTypesDefault from "haptics/HapticFeedbackTypes" /* 4529 */;
-import Text_Text from "Text/Text" /* 4556 */;
-import Pressables from "Pressables" /* 5123 */;
-import CollectiblesActionCreators from "CollectiblesActionCreators" /* 7541 */;
-import CollectiblesUtils from "CollectiblesUtils" /* 7554 */;
-import useCollectiblesDataDefault from "useCollectiblesData" /* 8173 */;
-import CollectiblesBadges from "CollectiblesBadges" /* 8837 */;
-import _modDef13176 from "module_13176" /* 13176 */;
+import PremiumUtilsDefault from "PremiumUtils" /* 4231 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4541 */;
+import HapticUtils from "HapticUtils" /* 4542 */;
+import haptics_HapticFeedbackTypesDefault from "haptics/HapticFeedbackTypes" /* 4543 */;
+import Text_Text from "Text/Text" /* 4570 */;
+import Pressables from "Pressables" /* 5137 */;
+import CollectiblesActionCreators from "CollectiblesActionCreators" /* 7555 */;
+import CollectiblesUtils from "CollectiblesUtils" /* 7568 */;
+import useCollectiblesDataDefault from "useCollectiblesData" /* 8199 */;
+import CollectiblesBadges from "CollectiblesBadges" /* 8864 */;
+import _modDef13199 from "module_13199" /* 13199 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1371 */;
 
@@ -60,7 +60,7 @@ const View = fn(17).View;
 let closure_6 = fn(1076).CollectiblesMobileShopScreen;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-fn(4560);
+fn(4574);
 let createStyles = { pressable: null, item: null, selected: null, optionCell: null, optionCellText: null, newIcon: null, lockIcon: null };
 createStyles = { marginTop: 10, borderRadius: nativeDefault.radii.sm };
 createStyles.pressable = createStyles;
@@ -80,7 +80,7 @@ export const EditCollectiblesListItemNone = function EditCollectiblesListItemNon
   const tmp = closure_9();
   let obj = { style: tmp.optionCell };
   const merged = Object.assign(asDefault);
-  obj = { source: _modDef13176, size: native.IconSizes.LARGE };
+  obj = { source: _modDef13199, size: native.IconSizes.LARGE };
   const items = [React5(native.Icon, obj), ];
   obj = { variant: "text-sm/medium", color: "mobile-text-heading-primary", style: tmp.optionCellText, children: null };
   const intl = util.intl;
@@ -101,7 +101,7 @@ export const EditCollectiblesListItemShop = function EditCollectiblesListItemSho
   const merged = Object.assign(analyticsSource, Object.assign({ analyticsSource: 0 }));
   let analyticsLocations;
   const tmp2 = closure_9();
-  analyticsLocations = analyticsLocations(7162)(analyticsSource).analyticsLocations;
+  analyticsLocations = analyticsLocations(7176)(analyticsSource).analyticsLocations;
   const items = [analyticsLocations, analyticsSource];
   let obj = {
     style: tmp2.optionCell,
@@ -113,13 +113,13 @@ export const EditCollectiblesListItemShop = function EditCollectiblesListItemSho
     }, items)
   };
   const merged1 = Object.assign(merged);
-  obj = { source: analyticsLocations(13177), size: analyticsSource(1178).IconSizes.LARGE };
+  obj = { source: analyticsLocations(13200), size: analyticsSource(1178).IconSizes.LARGE };
   const items1 = [closure_7(analyticsSource(1178).Icon, obj), , ];
   obj = { variant: "text-sm/medium", color: "mobile-text-heading-primary", style: tmp2.optionCellText, children: null };
   const intl = analyticsSource(1114).intl;
   obj.children = intl.string(analyticsSource(1114).t.pWG4ze);
-  items1[1] = closure_7(analyticsSource(4556).Text, obj);
-  items1[2] = closure_7(analyticsSource(8837).NewBadge, { style: tmp2.newIcon });
+  items1[1] = closure_7(analyticsSource(4570).Text, obj);
+  items1[2] = closure_7(analyticsSource(8864).NewBadge, { style: tmp2.newIcon });
   obj.children = items1;
   return closure_8(EditCollectibleListItem, obj);
 };

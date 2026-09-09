@@ -1,14 +1,14 @@
-// === Module 15058: BountiesAutoScrollIndicator ===
+// === Module 15085: BountiesAutoScrollIndicator ===
 
-// Module 15058 (BountiesAutoScrollIndicator)
+// Module 15085 (BountiesAutoScrollIndicator)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import useToken from "useToken" /* 4262 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4296 */;
-import Text_Text from "Text/Text" /* 4556 */;
-import timing from "timing" /* 4561 */;
-import ArrowSmallUpIcon from "ArrowSmallUpIcon" /* 15059 */;
-import CircularProgress from "CircularProgress" /* 15061 */;
+import useToken from "useToken" /* 4275 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4310 */;
+import Text_Text from "Text/Text" /* 4570 */;
+import timing from "timing" /* 4575 */;
+import ArrowSmallUpIcon from "ArrowSmallUpIcon" /* 15086 */;
+import CircularProgress from "CircularProgress" /* 15088 */;
 import noop from "module_19" /* 19 */;
 
 const ReanimatedRexportDefault = ReanimatedRexport;
@@ -16,7 +16,7 @@ const ReanimatedRexportDefault = ReanimatedRexport;
 require = fn;
 function BouncingArrow(children) {
   let sharedValue;
-  sharedValue = sharedValue(4296).useSharedValue(0);
+  sharedValue = sharedValue(4310).useSharedValue(0);
   let items = [sharedValue];
   const effect = noop.useEffect(() => {
     const obj2 = ReanimatedRexport;
@@ -30,7 +30,7 @@ function BouncingArrow(children) {
     const result = sharedValue.set(obj.withRepeat(obj2.withSequence(withTimingResult, timing.withTiming(0, obj)), -1));
     return () => sharedValue(dependencyMap[3]).cancelAnimation(closure_1_0);
   }, items);
-  let obj = sharedValue(4296);
+  let obj = sharedValue(4310);
   const fn = function l() {
     let obj = { transform: null };
     obj = { translateY: sharedValue.get() };
@@ -41,14 +41,14 @@ function BouncingArrow(children) {
   fn.__closure = { translateY: sharedValue };
   fn.__workletHash = 10126349088819;
   fn.__initData = __initData;
-  const style = sharedValue(4296).useAnimatedStyle(fn);
+  const style = sharedValue(4310).useAnimatedStyle(fn);
   return closure_5(ReanimatedRexportDefault.View, { style, children: children.children });
 }
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
 const __initData = { code: "function BountiesAutoScrollIndicatorTsx1(){const{translateY}=this.__closure;return{transform:[{translateY:translateY.get()}]};}" };
-fn(4560);
+fn(4574);
 let createStyles = { root: null, ringContainer: null };
 createStyles = { alignItems: "center", gap: nativeDefault.space.PX_8 };
 createStyles.root = createStyles;

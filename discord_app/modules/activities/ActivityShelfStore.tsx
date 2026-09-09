@@ -1,6 +1,6 @@
-// === Module 9524: ActivityShelfStore ===
+// === Module 9551: ActivityShelfStore ===
 
-// Module 9524 (ActivityShelfStore)
+// Module 9551 (ActivityShelfStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 

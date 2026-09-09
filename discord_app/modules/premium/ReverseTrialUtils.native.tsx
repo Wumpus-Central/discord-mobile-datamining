@@ -1,6 +1,6 @@
-// === Module 8065: ReverseTrialUtils ===
+// === Module 8080: ReverseTrialUtils ===
 
-// Module 8065 (ReverseTrialUtils)
+// Module 8080 (ReverseTrialUtils)
 import initialize from "initialize" /* 504 */;
 import UserStore from "UserStore" /* 1371 */;
 

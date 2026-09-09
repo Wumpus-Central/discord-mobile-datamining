@@ -1,47 +1,59 @@
-// === Module 14623: CustomizeBadgesSheet ===
+// === Module 14648: CustomizeBadgesSheet ===
 
-// Module 14623 (CustomizeBadgesSheet)
+// Module 14648 (CustomizeBadgesSheet)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 4259 */;
-import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 4272 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4296 */;
-import CircleInformationIcon from "CircleInformationIcon" /* 4515 */;
-import HapticUtils from "HapticUtils" /* 4528 */;
-import timing from "timing" /* 4561 */;
-import timingPresets from "timingPresets" /* 4564 */;
-import Card from "Card" /* 5607 */;
-import EyeSlashIcon from "EyeSlashIcon" /* 6968 */;
-import IconButton from "IconButton" /* 8097 */;
-import BadgeDirectoryActionCreators from "BadgeDirectoryActionCreators" /* 8197 */;
-import ContextMenu from "ContextMenu" /* 8671 */;
-import ContextMenuConstants from "ContextMenuConstants" /* 8673 */;
-import PremiumFeaturesCards from "PremiumFeaturesCards" /* 9367 */;
-import openPremiumModalDefault from "openPremiumModal" /* 9397 */;
-import roundToNearestPixelDefault from "roundToNearestPixel" /* 10998 */;
-import BadgeCatalogIconDefault from "BadgeCatalogIcon" /* 11195 */;
-import BadgeUtils from "BadgeUtils" /* 11204 */;
-import PendingBadgeSettings from "PendingBadgeSettings" /* 13071 */;
-import BadgeGrid from "BadgeGrid" /* 14624 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 4272 */;
+import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 4285 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4310 */;
+import CircleInformationIcon from "CircleInformationIcon" /* 4529 */;
+import HapticUtils from "HapticUtils" /* 4542 */;
+import timing from "timing" /* 4575 */;
+import timingPresets from "timingPresets" /* 4578 */;
+import Card from "Card" /* 5621 */;
+import EyeSlashIcon from "EyeSlashIcon" /* 6982 */;
+import IconButton from "IconButton" /* 8113 */;
+import BadgeDirectoryActionCreators from "BadgeDirectoryActionCreators" /* 8223 */;
+import ContextMenu from "ContextMenu" /* 8699 */;
+import ContextMenuConstants from "ContextMenuConstants" /* 8701 */;
+import PremiumFeaturesCards from "PremiumFeaturesCards" /* 9394 */;
+import openPremiumModalDefault from "openPremiumModal" /* 9424 */;
+import roundToNearestPixelDefault from "roundToNearestPixel" /* 11025 */;
+import BadgeCatalogIconDefault from "BadgeCatalogIcon" /* 11222 */;
+import BadgeUtils from "BadgeUtils" /* 11231 */;
+import PendingBadgeSettings from "PendingBadgeSettings" /* 13097 */;
+import BadgeGrid from "BadgeGrid" /* 14649 */;
 import noop from "module_19" /* 19 */;
-import UserProfileSettingsStore from "UserProfileSettingsStore" /* 8160 */;
+import UserProfileSettingsStore from "UserProfileSettingsStore" /* 8186 */;
 import UserStore from "UserStore" /* 1371 */;
-import BadgeDirectoryStore from "BadgeDirectoryStore" /* 8192 */;
+import BadgeDirectoryStore from "BadgeDirectoryStore" /* 8218 */;
 
 require = fn;
-function HideBadgeMenu(children) {
-  ({ badge: require, onHide: importDefault } = children);
-  let obj = { items: null, disableGesture: true, triggerOnLongPress: true, children: null };
-  obj = { label: null, action: null };
+function HideBadgeMenu(arg0) {
+  ({ badge: require, onHide: importDefault } = arg0);
+  ({ index, children } = arg0);
+  let obj = { items: null, align: null, disableGesture: true, triggerOnLongPress: true, children: null };
+  obj = { label: null, trailingIndicator: null, action: null };
   const intl = util.intl;
   obj.label = intl.string(util.t.xSWJPo);
+  obj.trailingIndicator = EyeSlashIcon.EyeSlashIcon;
   obj.action = function action() {
     return importDefault(_require);
   };
   const items = [obj];
   obj.items = items;
-  obj.children = children.children;
+  const result = index % BadgeGrid.BADGE_GRID_COLUMNS;
+  let str = "right";
+  if (0 !== result) {
+    let str2 = "above";
+    if (result === BadgeGrid.BADGE_GRID_COLUMNS - 1) {
+      str2 = "left";
+    }
+    str = str2;
+  }
+  obj.align = str;
+  obj.children = children;
   return __initData(ContextMenu.ContextMenu, obj);
 }
 function BadgeTileContent(arg0) {
@@ -96,13 +108,13 @@ get_ActivityIndicator = fn(17);
 ({ Platform, Pressable: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
 const Constants = fn(1074);
 ({ AnalyticEvents: closure_9, AnalyticsObjects: c10, AnalyticsPages: closure_11, AnalyticsSections: closure_12 } = Constants);
-let closure_13 = fn(7151).ACTION_SHEET_MINIMUM_BOTTOM_PADDING;
+let closure_13 = fn(7165).ACTION_SHEET_MINIMUM_BOTTOM_PADDING;
 const PremiumUpsellTypes = fn(1373).PremiumUpsellTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_15, jsxs: closure_16 } = jsxProd);
 let c17 = 80;
 let c18 = 16.666666666666668;
-fn(4560);
+fn(4574);
 let obj = { gridInset: null, grid: null, upsell: null, upsellCard: null, upsellContent: null, upsellCta: null, upsellText: null, message: null, messageText: null };
 obj = { paddingHorizontal: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_16 };
 obj.gridInset = obj;
@@ -120,7 +132,7 @@ let obj5 = { marginTop: nativeDefault.space.PX_12, borderRadius: nativeDefault.r
 obj.message = { alignItems: "center", justifyContent: "center", paddingHorizontal: nativeDefault.space.PX_16, paddingVertical: nativeDefault.space.PX_32 };
 obj.messageText = { textAlign: "center" };
 let closure_19 = createStyles.createStyles(obj);
-createStyles = fn(4560);
+createStyles = fn(4574);
 let obj7 = { position: { position: "absolute" }, fill: { flex: 1 }, card: { flex: 1, alignItems: "center", justifyContent: "center", padding: 0 }, indicator: null, indicatorButton: null, iconHidden: null };
 let size = { position: "absolute", top: nativeDefault.space.PX_8, end: nativeDefault.space.PX_8, width: 32, height: 32, alignItems: "flex-end", justifyContent: "flex-start" };
 obj7.indicator = size;
@@ -136,7 +148,7 @@ function getSlotOffset(arg0, arg1) {
   return point;
 }
 let obj6 = { alignItems: "center", justifyContent: "center", paddingHorizontal: nativeDefault.space.PX_16, paddingVertical: nativeDefault.space.PX_32 };
-getSlotOffset.__closure = { BADGE_GRID_COLUMNS: fn(14624).BADGE_GRID_COLUMNS, BADGE_GRID_GAP: fn(14624).BADGE_GRID_GAP };
+getSlotOffset.__closure = { BADGE_GRID_COLUMNS: fn(14649).BADGE_GRID_COLUMNS, BADGE_GRID_GAP: fn(14649).BADGE_GRID_GAP };
 getSlotOffset.__workletHash = 8647997879684;
 getSlotOffset.__initData = { code: "function getSlotOffset_CustomizeBadgesSheetTsx1(index,tileSize){const{BADGE_GRID_COLUMNS,BADGE_GRID_GAP}=this.__closure;const column=index%BADGE_GRID_COLUMNS;return{x:column*(tileSize+BADGE_GRID_GAP),y:Math.floor(index/BADGE_GRID_COLUMNS)*(tileSize+BADGE_GRID_GAP)};}" };
 let closure_24 = noop.memo((badge) => {
@@ -148,12 +160,12 @@ let closure_24 = noop.memo((badge) => {
   let onShowPress;
   let items1;
   if (typeof getSlotOffset === "function") {
-    let result = index % badge(alwaysVisible[15]).BADGE_GRID_COLUMNS;
+    let result = index % badge(alwaysVisible[13]).BADGE_GRID_COLUMNS;
     const _Math = Math;
-    const result1 = result * (tileSize + badge(alwaysVisible[15]).BADGE_GRID_GAP);
-    const rounded = Math.floor(index / badge(alwaysVisible[15]).BADGE_GRID_COLUMNS);
+    const result1 = result * (tileSize + badge(alwaysVisible[13]).BADGE_GRID_GAP);
+    const rounded = Math.floor(index / badge(alwaysVisible[13]).BADGE_GRID_COLUMNS);
     const items = [badge, onPress];
-    const result2 = rounded * (tileSize + badge(alwaysVisible[15]).BADGE_GRID_GAP);
+    const result2 = rounded * (tileSize + badge(alwaysVisible[13]).BADGE_GRID_GAP);
     onShowPress = onPress.useCallback(() => {
       onPress(badge);
     }, items);
@@ -163,8 +175,8 @@ let closure_24 = noop.memo((badge) => {
     if (badge.hidden) {
       let obj = { style: items1, children: null };
       obj = { badge, alwaysVisible, showAccessibilityLabel: null, onShowPress: null };
-      let intl = tmp2(alwaysVisible[14]).intl;
-      let t = tmp2(alwaysVisible[14]).t;
+      let intl = tmp2(alwaysVisible[15]).intl;
+      let t = tmp2(alwaysVisible[15]).t;
       let obj1 = { badgeName: badge.name, position: index + 1 };
       obj.showAccessibilityLabel = intl.formatToPlainString(badge.hidden ? t["dXg/Dl"] : t["21W3EN"], obj1);
       obj.onShowPress = onShowPress;
@@ -227,7 +239,7 @@ let closure_24 = noop.memo((badge) => {
       }
       if (!alwaysVisible) {
         if (null != onHide) {
-          const obj2 = { badge, onHide, children: renderTile };
+          const obj2 = { badge, index, onHide, children: renderTile };
           let renderTileResult = closure_15(HideBadgeMenu, obj2);
         }
         return renderTileResult;
@@ -284,11 +296,11 @@ let closure_37 = noop.memo((badge) => {
   const sharedValue1 = obj1.useSharedValue(null);
   if (typeof closure_22 === "function") {
     let point = { x: null, y: null };
-    let result = index % tmp2(tmp[15]).BADGE_GRID_COLUMNS;
-    point.x = result * (tileSize + tmp2(tmp[15]).BADGE_GRID_GAP);
+    let result = index % tmp2(tmp[13]).BADGE_GRID_COLUMNS;
+    point.x = result * (tileSize + tmp2(tmp[13]).BADGE_GRID_GAP);
     let _Math = Math;
-    let rounded = Math.floor(index / tmp2(tmp[15]).BADGE_GRID_COLUMNS);
-    point.y = rounded * (tileSize + tmp2(tmp[15]).BADGE_GRID_GAP);
+    let rounded = Math.floor(index / tmp2(tmp[13]).BADGE_GRID_COLUMNS);
+    point.y = rounded * (tileSize + tmp2(tmp[13]).BADGE_GRID_GAP);
     let tmp2Result = tmp2(tmp[23]);
     sharedValue2 = tmp2Result.useSharedValue(point.x);
     tmp2Result = tmp2(tmp[23]);
@@ -371,13 +383,13 @@ let closure_37 = noop.memo((badge) => {
         value = orderShared.get();
         tmp = closure_0;
         tmp2 = closure_2;
-        sum = tileSize + closure_0(closure_2[15]).BADGE_GRID_GAP;
+        sum = tileSize + closure_0(closure_2[13]).BADGE_GRID_GAP;
         obj2 = closure_0(closure_2[23]);
         rounded = Math.floor((closure_17.get() + tileSize / 2) / sum);
-        clampResult = obj2.clamp(rounded, 0, closure_0(closure_2[15]).BADGE_GRID_COLUMNS - 1);
+        clampResult = obj2.clamp(rounded, 0, closure_0(closure_2[13]).BADGE_GRID_COLUMNS - 1);
         bound = Math.max(Math.floor((closure_18.get() + tileSize / 2) / sum), 0);
         obj3 = closure_0(closure_2[23]);
-        clampResult1 = obj3.clamp(bound * closure_0(closure_2[15]).BADGE_GRID_COLUMNS + clampResult - slotOffset, 0, value.length - 1);
+        clampResult1 = obj3.clamp(bound * closure_0(closure_2[13]).BADGE_GRID_COLUMNS + clampResult - slotOffset, 0, value.length - 1);
         obj4 = closure_0(closure_2[26]);
         result = obj4.moveBadgeInDisplayOrder(value, value.indexOf(badge_id), clampResult1);
         if (result !== value) {
@@ -389,7 +401,7 @@ let closure_37 = noop.memo((badge) => {
         return;
       }
     }
-    obj1 = { orderShared, tileSize, BADGE_GRID_GAP: tmp2(tmp[15]).BADGE_GRID_GAP, clamp: tmp2(tmp[23]).clamp, positionX: sharedValue2, BADGE_GRID_COLUMNS: tmp2(tmp[15]).BADGE_GRID_COLUMNS, positionY: sharedValue3, slotOffset, moveBadgeInDisplayOrder: tmp2(tmp[26]).moveBadgeInDisplayOrder, badgeId: badge_id, runOnJS: tmp2(tmp[23]).runOnJS, triggerHapticFeedback: tmp2(tmp[11]).triggerHapticFeedback, HapticFeedbackTypes: tmp2(tmp[11]).HapticFeedbackTypes };
+    obj1 = { orderShared, tileSize, BADGE_GRID_GAP: tmp2(tmp[13]).BADGE_GRID_GAP, clamp: tmp2(tmp[23]).clamp, positionX: sharedValue2, BADGE_GRID_COLUMNS: tmp2(tmp[13]).BADGE_GRID_COLUMNS, positionY: sharedValue3, slotOffset, moveBadgeInDisplayOrder: tmp2(tmp[26]).moveBadgeInDisplayOrder, badgeId: badge_id, runOnJS: tmp2(tmp[23]).runOnJS, triggerHapticFeedback: tmp2(tmp[11]).triggerHapticFeedback, HapticFeedbackTypes: tmp2(tmp[11]).HapticFeedbackTypes };
     Q.__closure = obj1;
     Q.__workletHash = 1083237242858;
     Q.__initData = __initData2;
@@ -483,11 +495,11 @@ let closure_37 = noop.memo((badge) => {
           if (index >= 0) {
             const sum = index + slotOffset;
             if (typeof closure_22 === "function") {
-              const result2 = sum % badge(tileSize[15]).BADGE_GRID_COLUMNS;
+              const result2 = sum % badge(tileSize[13]).BADGE_GRID_COLUMNS;
               const _Math = Math;
-              const result3 = result2 * (handleFinalize + badge(tileSize[15]).BADGE_GRID_GAP);
-              const rounded = Math.floor(sum / badge(tileSize[15]).BADGE_GRID_COLUMNS);
-              const result4 = rounded * (handleFinalize + badge(tileSize[15]).BADGE_GRID_GAP);
+              const result3 = result2 * (handleFinalize + badge(tileSize[13]).BADGE_GRID_GAP);
+              const rounded = Math.floor(sum / badge(tileSize[13]).BADGE_GRID_COLUMNS);
+              const result4 = rounded * (handleFinalize + badge(tileSize[13]).BADGE_GRID_GAP);
               const result5 = sharedValue2.set(badge(tileSize[24]).withTiming(result3, badge(tileSize[25]).timingStandard));
               const obj2 = badge(tileSize[24]);
               const result6 = sharedValue3.set(badge(tileSize[24]).withTiming(result4, badge(tileSize[25]).timingStandard));
@@ -603,14 +615,14 @@ let closure_37 = noop.memo((badge) => {
     items3 = [];
     if (!isFirst) {
       let obj5 = { name: "moveup", label: null };
-      let intl = tmp2(tmp[14]).intl;
-      obj5.label = intl.string(tmp2(tmp[14]).t.eR2XSh);
+      let intl = tmp2(tmp[15]).intl;
+      obj5.label = intl.string(tmp2(tmp[15]).t.eR2XSh);
       items3.push(obj5);
     }
     if (!isLast) {
       let obj6 = { name: "movedown", label: null };
-      let intl2 = tmp2(tmp[14]).intl;
-      obj6.label = intl2.string(tmp2(tmp[14]).t.wWi0DL);
+      let intl2 = tmp2(tmp[15]).intl;
+      obj6.label = intl2.string(tmp2(tmp[15]).t.wWi0DL);
       items3.push(obj6);
     }
     function renderTile(ref) {
@@ -627,8 +639,8 @@ let closure_37 = noop.memo((badge) => {
         ref = ref.ref;
       }
       obj = { ref, accessible: true, accessibilityLabel: null };
-      const intl = tmp2(tileSize[14]).intl;
-      const t = tmp2(tileSize[14]).t;
+      const intl = tmp2(tileSize[15]).intl;
+      const t = tmp2(tileSize[15]).t;
       obj.accessibilityLabel = intl.formatToPlainString(badge.hidden ? t["dXg/Dl"] : t["21W3EN"], { badgeName: badge.name, position: index + 1 });
       if (!alwaysVisible) {
         const obj2 = { accessibilityRole: "button", accessibilityHint: undefined };
@@ -682,9 +694,9 @@ let closure_37 = noop.memo((badge) => {
         obj.children = sharedValue(index(tileSize[23]).View, obj);
         return sharedValue(badge(tileSize[28]).GestureDetector, obj);
       } else {
-        const intl2 = tmp2(tileSize[14]).intl;
+        const intl2 = tmp2(tileSize[15]).intl;
         const tmp2Result = tmp2(tileSize[21]);
-        const t2 = tmp2(tileSize[14]).t;
+        const t2 = tmp2(tileSize[15]).t;
         intl2.string(tmp2(tileSize[21]).isPinnedBadge(tmp10) ? t2.t3udZb : t2.nPQVxb);
         const isPinnedBadgeResult = tmp2(tileSize[21]).isPinnedBadge(tmp10);
       }
@@ -693,7 +705,7 @@ let closure_37 = noop.memo((badge) => {
     if (alwaysVisible) {
       let renderTileResult = renderTile(null);
     } else {
-      const obj7 = { badge, onHide, children: renderTile };
+      const obj7 = { badge, index, onHide, children: renderTile };
       renderTileResult = sharedValue(sharedValue5, obj7);
     }
     return renderTileResult;
@@ -872,16 +884,16 @@ export default function CustomizeBadgesSheet(analyticsLocations) {
     AccessibilityAnnouncer.announce(intl.formatToPlainString(util.t.q3t0Ht, { count: 1 }));
   });
   const tmp5Result3 = tenureBadgeHideable(stateFromStores1[23]);
-  badgeTileSize = tenureBadgeHideable(stateFromStores1[15]).getBadgeTileSize(tmp2(tmp3[42])().width);
+  badgeTileSize = tenureBadgeHideable(stateFromStores1[13]).getBadgeTileSize(tmp2(tmp3[42])().width);
   const sum1 = fixedBadges.length + reorderableBadges.length + hiddenBadges.length;
-  const rounded = Math.ceil(sum1 / tmp5(tmp3[15]).BADGE_GRID_COLUMNS);
+  const rounded = Math.ceil(sum1 / tmp5(tmp3[13]).BADGE_GRID_COLUMNS);
   let num = 0;
   if (rounded > 0) {
     let result = rounded * badgeTileSize;
     const diff = rounded - 1;
-    num = result + diff * tmp5(tmp3[15]).BADGE_GRID_GAP;
+    num = result + diff * tmp5(tmp3[13]).BADGE_GRID_GAP;
   }
-  const tmp5Result4 = tenureBadgeHideable(stateFromStores1[15]);
+  const tmp5Result4 = tenureBadgeHideable(stateFromStores1[13]);
   animatedRef = tenureBadgeHideable(stateFromStores1[23]).useAnimatedRef();
   const tmp5Result5 = tenureBadgeHideable(stateFromStores1[23]);
   scrollViewOffset = tenureBadgeHideable(stateFromStores1[23]).useScrollViewOffset(animatedRef);
@@ -941,13 +953,13 @@ export default function CustomizeBadgesSheet(analyticsLocations) {
     let tmp39 = !stateFromStores1;
     if (!stateFromStores1) {
       obj2 = { style: tmp.upsell, ctaText: null, cardStyle: null, contentStyle: null, ctaStyle: null, showLinearGradient: true, onPress: null, children: null };
-      let intl2 = tmp5(tmp3[14]).intl;
-      obj2.ctaText = intl2.string(tmp5(tmp3[14]).t.pj0XBN);
+      let intl2 = tmp5(tmp3[15]).intl;
+      obj2.ctaText = intl2.string(tmp5(tmp3[15]).t.pj0XBN);
       ({ upsellCard: obj23.cardStyle, upsellContent: obj23.contentStyle, upsellCta: obj23.ctaStyle } = tmp);
       obj2.onPress = callback;
       obj3 = { variant: "text-sm/normal", style: tmp.upsellText, children: null };
-      const intl3 = tmp5(tmp3[14]).intl;
-      obj3.children = intl3.string(tmp5(tmp3[14]).t.JrOki0);
+      const intl3 = tmp5(tmp3[15]).intl;
+      obj3.children = intl3.string(tmp5(tmp3[15]).t.JrOki0);
       obj2.children = sharedValue(tmp5(tmp3[45]).Text, obj3);
       tmp39 = sharedValue(tmp2(tmp3[44]), obj2);
       const tmp2Result = tmp2(tmp3[44]);
@@ -980,8 +992,8 @@ export default function CustomizeBadgesSheet(analyticsLocations) {
     if (stateFromStoresObject.hasCatalogError) {
       const obj6 = { style: tmp.message, accessibilityRole: "alert", children: null };
       const obj7 = { variant: "text-md/normal", color: "text-muted", style: tmp.messageText, children: null };
-      let intl = tmp5(tmp3[14]).intl;
-      obj7.children = intl.string(tmp5(tmp3[14]).t["rTU7/z"]);
+      let intl = tmp5(tmp3[15]).intl;
+      obj7.children = intl.string(tmp5(tmp3[15]).t["rTU7/z"]);
       obj6.children = tmp34(tmp5(tmp3[45]).Text, obj7);
       let obj8 = obj6;
     } else {
@@ -990,13 +1002,13 @@ export default function CustomizeBadgesSheet(analyticsLocations) {
     tmp34Result = tmp34(stateFromStoresArray, obj8);
   }
   const obj9 = { startExpanded: true, scrollable: true, dismissAccessibilityLabel: null, header: null, children: null };
-  const intl4 = tmp5(tmp3[14]).intl;
-  obj9.dismissAccessibilityLabel = intl4.string(tenureBadgeHideable(stateFromStores1[14]).t.x5SfWU);
+  const intl4 = tmp5(tmp3[15]).intl;
+  obj9.dismissAccessibilityLabel = intl4.string(tenureBadgeHideable(stateFromStores1[15]).t.x5SfWU);
   const obj10 = { title: null, subtitle: null };
-  const intl5 = tmp5(tmp3[14]).intl;
-  obj10.title = intl5.string(tenureBadgeHideable(stateFromStores1[14]).t.x5SfWU);
-  const intl6 = tmp5(tmp3[14]).intl;
-  let t = tmp5(tmp3[14]).t;
+  const intl5 = tmp5(tmp3[15]).intl;
+  obj10.title = intl5.string(tenureBadgeHideable(stateFromStores1[15]).t.x5SfWU);
+  const intl6 = tmp5(tmp3[15]).intl;
+  let t = tmp5(tmp3[15]).t;
   obj10.subtitle = intl6.string(stateFromStores1 ? t["Vzc4+8"] : t.ZuXSRp);
   obj9.header = sharedValue(tenureBadgeHideable(stateFromStores1[48]).BottomSheetTitleHeader, obj10);
   obj9.children = sharedValue(tenureBadgeHideable(stateFromStores1[49]).BottomSheetScrollView, { ref: animatedRef, contentContainerStyle: { paddingBottom: sum }, children: tmp34Result });

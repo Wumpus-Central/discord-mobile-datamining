@@ -1,6 +1,6 @@
-// === Module 5752: ? ===
+// === Module 5766: ? ===
 
-// Module 5752
+// Module 5766
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/AvatarCamExample-2x.png.js");

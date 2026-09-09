@@ -1,25 +1,25 @@
-// === Module 15027: BountyVideo ===
+// === Module 15054: BountyVideo ===
 
-// Module 15027 (BountyVideo)
+// Module 15054 (BountyVideo)
 import nativeDefault from "native" /* 576 */;
-import timing from "timing" /* 4561 */;
-import timingPresets from "timingPresets" /* 4564 */;
-import AssetUtils from "AssetUtils" /* 11290 */;
-import useBountiesAutoScroll from "useBountiesAutoScroll" /* 15015 */;
-import BountiesModalProgress from "BountiesModalProgress" /* 15028 */;
+import timing from "timing" /* 4575 */;
+import timingPresets from "timingPresets" /* 4578 */;
+import AssetUtils from "AssetUtils" /* 11317 */;
+import useBountiesAutoScroll from "useBountiesAutoScroll" /* 15042 */;
+import BountiesModalProgress from "BountiesModalProgress" /* 15055 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, StyleSheet: metroRequire, ActivityIndicator: closure_7, Pressable: closure_8 } = get_ActivityIndicator);
-const QuestsExperimentLocations = fn(5444).QuestsExperimentLocations;
+const QuestsExperimentLocations = fn(5458).QuestsExperimentLocations;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11, Fragment: closure_12 } = jsxProd);
 const PlatformUtils = fn(1116);
 let closure_14 = { top: 48, bottom: 16, left: 16, right: 16 };
 const lg = nativeDefault.radii.lg;
-const createStyles = fn(4560);
+const createStyles = fn(4574);
 let closure_16 = createStyles.createStyles(() => {
   let obj = { videoContainer: null, leftRow: null, progress: null, poster: null };
   obj = {};

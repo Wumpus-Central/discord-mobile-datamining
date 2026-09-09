@@ -1,16 +1,16 @@
-// === Module 5617: FormCheckbox ===
+// === Module 5631: FormCheckbox ===
 
-// Module 5617 (FormCheckbox)
+// Module 5631 (FormCheckbox)
 import nativeDefault from "native" /* 576 */;
-import spring from "spring" /* 4974 */;
-import IconDefault from "Icon" /* 4977 */;
-import springPresets from "springPresets" /* 4978 */;
+import spring from "spring" /* 4988 */;
+import IconDefault from "Icon" /* 4991 */;
+import springPresets from "springPresets" /* 4992 */;
 import noop from "module_19" /* 19 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4296 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4310 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-fn(4560);
+fn(4574);
 let createStyles = { checkbox: null, unselected: null, selected: null, checkmark: null };
 let size = { width: nativeDefault.modules.mobile.CONTROL_CHECKBOX_SIZE_DEFAULT, height: nativeDefault.modules.mobile.CONTROL_CHECKBOX_SIZE_DEFAULT, flexGrow: 0, flexShrink: 0, alignItems: "center", justifyContent: "center", borderRadius: nativeDefault.modules.mobile.CONTROL_CHECKBOX_BORDER_RADIUS, borderWidth: nativeDefault.modules.mobile.CONTROL_CHECKBOX_BORDER_WIDTH, borderColor: nativeDefault.colors.CHECKBOX_BORDER_DEFAULT };
 createStyles.checkbox = size;

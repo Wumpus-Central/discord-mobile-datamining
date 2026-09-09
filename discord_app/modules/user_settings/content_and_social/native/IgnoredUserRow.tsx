@@ -1,8 +1,8 @@
-// === Module 14812: IgnoredUserRow ===
+// === Module 14838: IgnoredUserRow ===
 
-// Module 14812 (IgnoredUserRow)
-import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8179 */;
-import RelationshipActionCreatorsDefault from "RelationshipActionCreators" /* 9047 */;
+// Module 14838 (IgnoredUserRow)
+import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8205 */;
+import RelationshipActionCreatorsDefault from "RelationshipActionCreators" /* 9074 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1371 */;
 
@@ -10,7 +10,7 @@ const require = fn;
 function IgnoredUserRow(userRecord) {
   userRecord = userRecord.userRecord;
   let analyticsLocations;
-  analyticsLocations = analyticsLocations(7162)().analyticsLocations;
+  analyticsLocations = analyticsLocations(7176)().analyticsLocations;
   let obj = { icon: null, label: null, subLabel: null, labelLineClamp: 1, subLabelLineClamp: 1, accessibilityRole: "button", accessibilityActions: null, onAccessibilityAction: null, onPress: null, trailing: null };
   obj = { source: userRecord.getAvatarSource(undefined), size: userRecord(1178).AvatarSizes.REFRESH_MEDIUM_32 };
   obj.icon = jsx(userRecord(1178).Avatar, { source: userRecord.getAvatarSource(undefined), size: userRecord(1178).AvatarSizes.REFRESH_MEDIUM_32 });
@@ -55,8 +55,8 @@ function IgnoredUserRow(userRecord) {
   obj1.onPress = function onPress() {
     RelationshipActionCreatorsDefault.unignoreUser(userRecord.id, "ignored-users-list-mobile");
   };
-  obj.trailing = jsx(userRecord(4975).Button, { size: "sm", variant: "secondary", text: null, onPress: null });
-  return jsx(userRecord(5605).TableRow, { name: "unignore", label: null });
+  obj.trailing = jsx(userRecord(4989).Button, { size: "sm", variant: "secondary", text: null, onPress: null });
+  return jsx(userRecord(5619).TableRow, { name: "unignore", label: null });
 }
 const jsx = fn(21).jsx;
 const size = fn(2);

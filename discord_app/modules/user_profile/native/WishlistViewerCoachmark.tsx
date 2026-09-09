@@ -1,8 +1,8 @@
-// === Module 13133: WishlistViewerCoachmark ===
+// === Module 13159: WishlistViewerCoachmark ===
 
-// Module 13133 (WishlistViewerCoachmark)
+// Module 13159 (WishlistViewerCoachmark)
 import util from "util" /* 1114 */;
-import _modDef13134 from "module_13134" /* 13134 */;
+import _modDef13160 from "module_13160" /* 13160 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -10,17 +10,17 @@ function CoachmarkImage() {
   const tmp = closure_8();
   let obj = { style: tmp.imageContainer, children: null };
   obj = { source: null, style: null };
-  obj = { uri: _modDef13134 };
+  obj = { uri: _modDef13160 };
   obj.source = obj;
   obj.style = tmp.image;
-  obj.children = <hasOwnProperty uri={_modDef13134} />;
-  return <React4 uri={_modDef13134} />;
+  obj.children = <hasOwnProperty uri={_modDef13160} />;
+  return <React4 uri={_modDef13160} />;
 }
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, Image: hasOwnProperty } = get_ActivityIndicator);
 const ContentDismissActionType = fn(1954).ContentDismissActionType;
 const jsx = fn(21).jsx;
-const createStyles = fn(4560);
+const createStyles = fn(4574);
 let closure_8 = createStyles.createStyles({ imageContainer: { alignItems: "center", justifyContent: "center" }, image: { width: 160, height: 106 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_profile/native/WishlistViewerCoachmark.tsx");

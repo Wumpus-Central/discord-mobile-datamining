@@ -1,11 +1,11 @@
-// === Module 16110: useFavoritesGuildCategoryFullNotice ===
+// === Module 16140: useFavoritesGuildCategoryFullNotice ===
 
-// Module 16110 (useFavoritesGuildCategoryFullNotice)
+// Module 16140 (useFavoritesGuildCategoryFullNotice)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1114 */;
 import FavoritesUtils from "FavoritesUtils" /* 1982 */;
-import _modDef3225 from "module_3225" /* 3225 */;
-import FavoritesHooks from "FavoritesHooks" /* 10229 */;
+import _modDef3236 from "module_3236" /* 3236 */;
+import FavoritesHooks from "FavoritesHooks" /* 10256 */;
 import FavoriteStore from "FavoriteStore" /* 1960 */;
 
 require = fn;
@@ -35,9 +35,9 @@ export default function useFavoritesGuildCategoryFullNotice(getGuildId, str) {
             if (formatted === closure_4.toLowerCase()) {
               obj = { label: null, tooltip: null };
               const intl = util.intl;
-              obj.label = intl.string(_modDef3225.WsUrMD);
+              obj.label = intl.string(_modDef3236.WsUrMD);
               const intl2 = util.intl;
-              obj.tooltip = intl2.string(_modDef3225.dW9Kov);
+              obj.tooltip = intl2.string(_modDef3236.dW9Kov);
               tmp6 = obj;
             }
           }

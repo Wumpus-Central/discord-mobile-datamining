@@ -1,17 +1,17 @@
-// === Module 16331: useGuildsBarBadges ===
+// === Module 16362: useGuildsBarBadges ===
 
-// Module 16331 (useGuildsBarBadges)
+// Module 16362 (useGuildsBarBadges)
 import native from "native" /* 1178 */;
-import GuildJoinRequestUtils from "GuildJoinRequestUtils" /* 4383 */;
-import computeGuildsBarCutoutDefault from "computeGuildsBarCutout" /* 16300 */;
-import GuildsBarActivityIndicator from "GuildsBarActivityIndicator" /* 16336 */;
+import GuildJoinRequestUtils from "GuildJoinRequestUtils" /* 4397 */;
+import computeGuildsBarCutoutDefault from "computeGuildsBarCutout" /* 16331 */;
+import GuildsBarActivityIndicator from "GuildsBarActivityIndicator" /* 16367 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
-import GuildIncidentsStore from "GuildIncidentsStore" /* 10085 */;
-import UserGuildJoinRequestStore from "UserGuildJoinRequestStore" /* 4382 */;
+import GuildIncidentsStore from "GuildIncidentsStore" /* 10112 */;
+import UserGuildJoinRequestStore from "UserGuildJoinRequestStore" /* 4396 */;
 import GuildMemberStore from "GuildMemberStore" /* 2021 */;
 import GuildStore from "GuildStore" /* 1979 */;
-import PermissionStore from "PermissionStore" /* 4199 */;
+import PermissionStore from "PermissionStore" /* 4212 */;
 import UserStore from "UserStore" /* 1371 */;
 
 require = fn;
@@ -19,7 +19,7 @@ let closure_3 = ["guildActivityIndicatorSource"];
 const Constants = fn(1074);
 ({ GuildFeatures: closure_12, Permissions: map1 } = Constants);
 const jsx = fn(21).jsx;
-const createStyles = fn(4560);
+const createStyles = fn(4574);
 let closure_15 = createStyles.createStyles({ topRightBadge: { position: "absolute", right: 9, backgroundColor: "transparent", borderColor: "transparent" } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guilds_bar/native/hooks/useGuildsBarBadges.tsx");

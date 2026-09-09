@@ -1,7 +1,7 @@
-// === Module 17491: StaffMemberPreloaderManager ===
+// === Module 17522: StaffMemberPreloaderManager ===
 
-// Module 17491 (StaffMemberPreloaderManager)
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7118 */;
+// Module 17522 (StaffMemberPreloaderManager)
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7132 */;
 
 let require = fn;
 let prototype = function StaffMemberPreloaderManager() {

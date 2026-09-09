@@ -1,10 +1,10 @@
-// === Module 12044: useActivityShelfData ===
+// === Module 12070: useActivityShelfData ===
 
-// Module 12044 (useActivityShelfData)
+// Module 12070 (useActivityShelfData)
 import GlobalUtils from "GlobalUtils" /* 1369 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1371 */;
-import TestModeStore from "TestModeStore" /* 8862 */;
+import TestModeStore from "TestModeStore" /* 8889 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 1956 */;
 
 require = fn;
@@ -72,7 +72,7 @@ export const useActivityShelfData = function useActivityShelfData(guildId) {
       if (supported_platforms == null) {
         supported_platforms = [];
       }
-      const tmp = stateFromStores(9415);
+      const tmp = stateFromStores(9442);
       return supported_platforms.includes(tmp(guildId(1115).getOS()));
     });
     const found1 = found.filter((activity) => {

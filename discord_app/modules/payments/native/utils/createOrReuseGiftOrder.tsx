@@ -1,13 +1,13 @@
-// === Module 10751: createOrReuseGiftOrder ===
+// === Module 10778: createOrReuseGiftOrder ===
 
-// Module 10751 (createOrReuseGiftOrder)
+// Module 10778 (createOrReuseGiftOrder)
 import LoggerDefault from "Logger" /* 3 */;
-import _modDef4153 from "module_4153" /* 4153 */;
+import _modDef4166 from "module_4166" /* 4166 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
-const ItemPurchaseType = fn(4542).ItemPurchaseType;
+const ItemPurchaseType = fn(4556).ItemPurchaseType;
 const SubscriptionPlanInfo = fn(1373).SubscriptionPlanInfo;
 const PaymentGateways = fn(1085).PaymentGateways;
 let closure_8 = new LoggerDefault("createOrReuseGiftOrder");
@@ -70,9 +70,9 @@ export const useCreateOrReuseGiftOrder = function useCreateOrReuseGiftOrder(Gift
             } else {
               skuId = closure_129_3.skuId;
               c4 = 1;
-              let getOrCreateOrder = _location(7429).getOrCreateOrder;
+              let getOrCreateOrder = _location(7443).getOrCreateOrder;
               const obj2 = { skuId, paymentGateway: null, recipientUserId: null, purchaseType: null, isGift: true, createdAfter: null, subscriptionPlanId: null, externalGatewayFacet: null };
-              const tmp60 = _location(7429);
+              const tmp60 = _location(7443);
               let obj3 = PaymentGateways;
               if (obj16.isAndroid()) {
                 let APPLE = obj3.GOOGLE;
@@ -82,10 +82,10 @@ export const useCreateOrReuseGiftOrder = function useCreateOrReuseGiftOrder(Gift
               obj2.paymentGateway = APPLE;
               obj2.recipientUserId = closure_129_1;
               obj2.purchaseType = constants.ONE_TIME;
-              let obj6 = _modDef4153();
+              let obj6 = _modDef4166();
               obj16 = _location(1115);
               const utcResult = obj6.utc();
-              obj2.createdAfter = obj6.utc().subtract(_location(7429).DRAFT_ORDER_LOOKBACK_DAYS, "days").toISOString();
+              obj2.createdAfter = obj6.utc().subtract(_location(7443).DRAFT_ORDER_LOOKBACK_DAYS, "days").toISOString();
               obj2.subscriptionPlanId = closure_129_0;
               obj3 = { line_items: null };
               const obj4 = { external_product_id: closure_129_2 };
@@ -95,7 +95,7 @@ export const useCreateOrReuseGiftOrder = function useCreateOrReuseGiftOrder(Gift
               getOrCreateOrder = getOrCreateOrder(obj2);
               c5 = 3;
               c6 = 1;
-              const subtractResult = obj6.utc().subtract(_location(7429).DRAFT_ORDER_LOOKBACK_DAYS, "days");
+              const subtractResult = obj6.utc().subtract(_location(7443).DRAFT_ORDER_LOOKBACK_DAYS, "days");
             }
           }
         } else if (2 === tmp7) {
@@ -103,7 +103,7 @@ export const useCreateOrReuseGiftOrder = function useCreateOrReuseGiftOrder(Gift
           closure_129_5 = closure_3;
           const obj5 = { error: closure_129_5, skuId, location: _location };
           logger.error("Failed to create order for gift purchase", obj5);
-          obj3 = _location(4233);
+          obj3 = _location(4246);
           obj6 = { tags: null };
           const obj7 = { skuId, source: null };
           const _HermesInternal = HermesInternal;

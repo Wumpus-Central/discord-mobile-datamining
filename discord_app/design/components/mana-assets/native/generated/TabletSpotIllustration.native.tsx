@@ -1,9 +1,9 @@
-// === Module 6537: TabletSpotIllustration ===
+// === Module 6551: TabletSpotIllustration ===
 
-// Module 6537 (TabletSpotIllustration)
+// Module 6551 (TabletSpotIllustration)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5587 */;
-import _modDef6538 from "module_6538" /* 6538 */;
+import FastImageDefault from "FastImage" /* 5601 */;
+import _modDef6552 from "module_6552" /* 6552 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -24,7 +24,7 @@ export const TabletSpotIllustration = function TabletSpotIllustration(width) {
     num3 = 1;
   }
   let obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  obj = { uri: _modDef6538 };
+  obj = { uri: _modDef6552 };
   obj.source = obj;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];
@@ -32,5 +32,5 @@ export const TabletSpotIllustration = function TabletSpotIllustration(width) {
   obj.accessible = accessible;
   obj.accessibilityLabel = accessibilityLabel;
   obj.resizeMode = resizeMode;
-  return jsx(FastImageDefault, { uri: _modDef6538 });
+  return jsx(FastImageDefault, { uri: _modDef6552 });
 };

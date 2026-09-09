@@ -1,23 +1,23 @@
-// === Module 10753: GiftingBadgeInfoActionSheet ===
+// === Module 10780: GiftingBadgeInfoActionSheet ===
 
-// Module 10753 (GiftingBadgeInfoActionSheet)
+// Module 10780 (GiftingBadgeInfoActionSheet)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1611 */;
 import _modDef2492 from "module_2492" /* 2492 */;
-import Text_Text from "Text/Text" /* 4556 */;
-import GiftingBadgeIconDefault from "GiftingBadgeIcon" /* 10754 */;
+import Text_Text from "Text/Text" /* 4570 */;
+import GiftingBadgeIconDefault from "GiftingBadgeIcon" /* 10781 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4552 */;
-import BadgeDirectoryStore from "BadgeDirectoryStore" /* 8192 */;
+import AccessibilityStore from "AccessibilityStore" /* 4566 */;
+import BadgeDirectoryStore from "BadgeDirectoryStore" /* 8218 */;
 
 require = fn;
 const View = fn(17).View;
-let closure_7 = fn(8192).getSingleRequirementThreshold;
+let closure_7 = fn(8218).getSingleRequirementThreshold;
 const AnalyticEvents = fn(1074).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-fn(4560);
+fn(4574);
 let createStyles = { container: null, headerContainer: null, title: null, description: null, tierCards: null, tierCard: null, iconWrapper: null };
 createStyles = { alignItems: "center", paddingTop: nativeDefault.space.PX_16, paddingHorizontal: nativeDefault.space.PX_16 };
 createStyles.container = createStyles;
@@ -41,7 +41,7 @@ export default function GiftingBadgeInfoActionSheet() {
   _require = tmp;
   let obj = require("initialize");
   let items = [BadgeDirectoryStore];
-  const stateFromStores = obj.useStateFromStores(items, () => badgeById.getBadgeById(closure_0(8184).BadgeId.GIFTING));
+  const stateFromStores = obj.useStateFromStores(items, () => badgeById.getBadgeById(closure_0(8210).BadgeId.GIFTING));
   let obj1 = require("initialize");
   const items1 = [AccessibilityStore];
   importDefault = obj1.useStateFromStores(items1, () => useReducedMotion.useReducedMotion);

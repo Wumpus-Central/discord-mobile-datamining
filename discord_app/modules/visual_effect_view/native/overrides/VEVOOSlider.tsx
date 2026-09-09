@@ -1,13 +1,13 @@
-// === Module 15931: VEVOOSlider ===
+// === Module 15961: VEVOOSlider ===
 
-// Module 15931 (VEVOOSlider)
+// Module 15961 (VEVOOSlider)
 import nativeDefault from "native" /* 576 */;
-import _modDef8278 from "module_8278" /* 8278 */;
+import _modDef8306 from "module_8306" /* 8306 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(4560);
+const createStyles = fn(4574);
 const PlatformUtils = fn(1115);
 let num = 0;
 if (PlatformUtils.isAndroid()) {

@@ -1,11 +1,11 @@
-// === Module 7972: DoubleTapErrorToast ===
+// === Module 7986: DoubleTapErrorToast ===
 
-// Module 7972 (DoubleTapErrorToast)
+// Module 7986 (DoubleTapErrorToast)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 4259 */;
-import Text_Text from "Text/Text" /* 4556 */;
-import XSmallBoldIcon from "XSmallBoldIcon" /* 7973 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 4272 */;
+import Text_Text from "Text/Text" /* 4570 */;
+import XSmallBoldIcon from "XSmallBoldIcon" /* 7987 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,7 +18,7 @@ function DoubleTapErrorToastIcon() {
 const View = fn(17).View;
 const EmojiDisabledReasons = fn(1374).EmojiDisabledReasons;
 const jsx = fn(21).jsx;
-fn(4560);
+fn(4574);
 let createStyles = { icon: null };
 createStyles = { backgroundColor: nativeDefault.colors.BACKGROUND_FEEDBACK_CRITICAL, borderRadius: nativeDefault.radii.round, padding: nativeDefault.space.PX_4, marginLeft: nativeDefault.space.PX_4 };
 createStyles.icon = createStyles;

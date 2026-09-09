@@ -1,12 +1,12 @@
-// === Module 12251: useChatInputFloatingBounce ===
+// === Module 12277: useChatInputFloatingBounce ===
 
-// Module 12251 (useChatInputFloatingBounce)
-import ReanimatedRexport from "ReanimatedRexport" /* 4296 */;
+// Module 12277 (useChatInputFloatingBounce)
+import ReanimatedRexport from "ReanimatedRexport" /* 4310 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const ChatInputConstants = fn(11966);
+const ChatInputConstants = fn(11992);
 ({ CHAT_INPUT_FLOATING_BOUNCE_SPRING_CONFIG: closure_4, CHAT_INPUT_FLOATING_COLLAPSED_SCALE: hasOwnProperty, CHAT_INPUT_FLOATING_ENTER_OPACITY_TIMING_CONFIG: metroRequire, CHAT_INPUT_FLOATING_EXIT_TIMING_CONFIG: closure_7 } = ChatInputConstants);
 let closure_8 = { code: "function useChatInputFloatingBounceTsx1(finished){const{runOnJS,setEnterFinished}=this.__closure;if(finished===true){runOnJS(setEnterFinished)(true);}}" };
 let closure_9 = { code: "function useChatInputFloatingBounceTsx2(finished){const{runOnJS,handleExitFinished}=this.__closure;if(finished===true){runOnJS(handleExitFinished)();}}" };

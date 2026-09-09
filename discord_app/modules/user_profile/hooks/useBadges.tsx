@@ -1,10 +1,10 @@
-// === Module 8242: useBadges ===
+// === Module 8268: useBadges ===
 
-// Module 8242 (useBadges)
+// Module 8268 (useBadges)
 import useStateFromStores from "useStateFromStores" /* 563 */;
 import util from "util" /* 1114 */;
 import UserSettings from "UserSettings" /* 1935 */;
-import StreamerModeStore from "StreamerModeStore" /* 4405 */;
+import StreamerModeStore from "StreamerModeStore" /* 4419 */;
 import UserStore from "UserStore" /* 1371 */;
 
 require = fn;

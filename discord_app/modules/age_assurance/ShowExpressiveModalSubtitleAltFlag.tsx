@@ -1,9 +1,9 @@
-// === Module 8451: ShowExpressiveModalSubtitleAltFlag ===
+// === Module 8479: ShowExpressiveModalSubtitleAltFlag ===
 
-// Module 8451 (ShowExpressiveModalSubtitleAltFlag)
+// Module 8479 (ShowExpressiveModalSubtitleAltFlag)
 import initialize from "initialize" /* 504 */;
-import SafetyHubUtils from "SafetyHubUtils" /* 8418 */;
-import SafetyHubStore from "SafetyHubStore" /* 8430 */;
+import SafetyHubUtils from "SafetyHubUtils" /* 8446 */;
+import SafetyHubStore from "SafetyHubStore" /* 8458 */;
 
 require = fn;
 fn(1433);

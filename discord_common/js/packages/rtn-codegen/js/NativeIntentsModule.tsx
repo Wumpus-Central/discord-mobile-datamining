@@ -1,6 +1,6 @@
-// === Module 4694: NativeIntentsModule ===
+// === Module 4708: NativeIntentsModule ===
 
-// Module 4694 (NativeIntentsModule)
+// Module 4708 (NativeIntentsModule)
 import _mod17 from "module_17" /* 17 */;
 import size from "module_2" /* 2 */;
 

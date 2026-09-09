@@ -1,10 +1,10 @@
-// === Module 14940: AuthorizedAppsSetting ===
+// === Module 14966: AuthorizedAppsSetting ===
 
-// Module 14940 (AuthorizedAppsSetting)
+// Module 14966 (AuthorizedAppsSetting)
 import Constants from "Constants" /* 1074 */;
 import util from "util" /* 1114 */;
-import KeyIcon from "KeyIcon" /* 6958 */;
-import SettingBuilders from "SettingBuilders" /* 11473 */;
+import KeyIcon from "KeyIcon" /* 6972 */;
+import SettingBuilders from "SettingBuilders" /* 11500 */;
 import size from "module_2" /* 2 */;
 
 const route = SettingBuilders.createRoute({

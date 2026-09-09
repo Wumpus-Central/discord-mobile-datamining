@@ -1,10 +1,10 @@
-// === Module 14945: AuthorizedAppPermissionsSetting ===
+// === Module 14971: AuthorizedAppPermissionsSetting ===
 
-// Module 14945 (AuthorizedAppPermissionsSetting)
+// Module 14971 (AuthorizedAppPermissionsSetting)
 import Constants from "Constants" /* 1074 */;
 import util from "util" /* 1114 */;
-import SettingsConstants from "SettingsConstants" /* 7975 */;
-import SettingBuilders from "SettingBuilders" /* 11473 */;
+import SettingsConstants from "SettingsConstants" /* 7989 */;
+import SettingBuilders from "SettingBuilders" /* 11500 */;
 import size from "module_2" /* 2 */;
 
 const route = SettingBuilders.createRoute({

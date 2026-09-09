@@ -1,16 +1,16 @@
-// === Module 16438: ForYouReadSectionHeader ===
+// === Module 16469: ForYouReadSectionHeader ===
 
-// Module 16438 (ForYouReadSectionHeader)
+// Module 16469 (ForYouReadSectionHeader)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import Text_Text from "Text/Text" /* 4556 */;
+import Text_Text from "Text/Text" /* 4570 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: c2, StyleSheet } = get_ActivityIndicator);
 const jsx = fn(21).jsx;
-fn(4560);
+fn(4574);
 let createStyles = { container: null, textHeader: null };
 createStyles = { borderTopWidth: StyleSheet.hairlineWidth, borderTopColor: nativeDefault.colors.BORDER_SUBTLE, marginVertical: 8, paddingHorizontal: 24 };
 createStyles.container = createStyles;

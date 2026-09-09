@@ -1,13 +1,13 @@
-// === Module 17736: GuildRoleSubscriptionTierEditStep ===
+// === Module 17769: GuildRoleSubscriptionTierEditStep ===
 
-// Module 17736 (GuildRoleSubscriptionTierEditStep)
+// Module 17769 (GuildRoleSubscriptionTierEditStep)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import useNavigation from "useNavigation" /* 1483 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1611 */;
-import Text_Text from "Text/Text" /* 4556 */;
-import common_SafeAreaView from "common/SafeAreaView" /* 7123 */;
-import FormSeparatorDefault from "FormSeparator" /* 15220 */;
+import Text_Text from "Text/Text" /* 4570 */;
+import common_SafeAreaView from "common/SafeAreaView" /* 7137 */;
+import FormSeparatorDefault from "FormSeparator" /* 15249 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -40,14 +40,14 @@ function Footer(arg0) {
   items[1] = obj;
   obj.style = items;
   obj = { loading: submitting, disabled: !canProceedToNextStep, text: stringResult, onPress: onProceed };
-  obj.children = timestampProducer(tmp5(4975).Button, obj);
+  obj.children = timestampProducer(tmp5(4989).Button, obj);
   return timestampProducer(React4, obj);
 }
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, ScrollView: hasOwnProperty } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-fn(4560);
+fn(4574);
 let createStyles = { container: null, scrollContainer: null, headerContainer: null, title: null, subtitle: null, separator: null, footerContainer: null };
 createStyles = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, height: "100%" };
 createStyles.container = createStyles;

@@ -1,13 +1,13 @@
-// === Module 17864: NavigationTTIDispatcherManager ===
+// === Module 17897: NavigationTTIDispatcherManager ===
 
-// Module 17864 (NavigationTTIDispatcherManager)
+// Module 17897 (NavigationTTIDispatcherManager)
 import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1250 */;
-import navigationTTIEnabled from "navigationTTIEnabled" /* 17865 */;
-import NavigationSpanTrackerDefault from "NavigationSpanTracker" /* 17866 */;
+import navigationTTIEnabled from "navigationTTIEnabled" /* 17898 */;
+import NavigationSpanTrackerDefault from "NavigationSpanTracker" /* 17899 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
-import MessageStore from "MessageStore" /* 4781 */;
+import MessageStore from "MessageStore" /* 4795 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2011 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7118 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7132 */;
 
 require = fn;
 function handleChannelSelect(opensChannel) {

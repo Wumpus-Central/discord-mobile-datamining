@@ -1,9 +1,9 @@
-// === Module 16741: trackGuildViewedClickstream ===
+// === Module 16778: trackGuildViewedClickstream ===
 
-// Module 16741 (trackGuildViewedClickstream)
+// Module 16778 (trackGuildViewedClickstream)
 import Constants from "Constants" /* 1074 */;
-import RouteUtils from "RouteUtils" /* 4399 */;
-import Clickstream from "Clickstream" /* 7465 */;
+import RouteUtils from "RouteUtils" /* 4413 */;
+import Clickstream from "Clickstream" /* 7479 */;
 import size from "module_2" /* 2 */;
 
 const AnalyticEvents = Constants.AnalyticEvents;

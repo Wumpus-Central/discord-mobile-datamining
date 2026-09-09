@@ -1,9 +1,9 @@
-// === Module 5847: CloudKeypadSpotIllustration ===
+// === Module 5861: CloudKeypadSpotIllustration ===
 
-// Module 5847 (CloudKeypadSpotIllustration)
+// Module 5861 (CloudKeypadSpotIllustration)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5587 */;
-import _modDef5848 from "module_5848" /* 5848 */;
+import FastImageDefault from "FastImage" /* 5601 */;
+import _modDef5862 from "module_5862" /* 5862 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -24,7 +24,7 @@ export const CloudKeypadSpotIllustration = function CloudKeypadSpotIllustration(
     num3 = 1;
   }
   let obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  obj = { uri: _modDef5848 };
+  obj = { uri: _modDef5862 };
   obj.source = obj;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];
@@ -32,5 +32,5 @@ export const CloudKeypadSpotIllustration = function CloudKeypadSpotIllustration(
   obj.accessible = accessible;
   obj.accessibilityLabel = accessibilityLabel;
   obj.resizeMode = resizeMode;
-  return jsx(FastImageDefault, { uri: _modDef5848 });
+  return jsx(FastImageDefault, { uri: _modDef5862 });
 };

@@ -1,20 +1,20 @@
-// === Module 9806: EventDetailRsvpSheet ===
+// === Module 9833: EventDetailRsvpSheet ===
 
-// Module 9806 (EventDetailRsvpSheet)
+// Module 9833 (EventDetailRsvpSheet)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import Text_Text from "Text/Text" /* 4556 */;
-import FastImageDefault from "FastImage" /* 5587 */;
-import BottomSheetModal from "BottomSheetModal" /* 6627 */;
-import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8179 */;
-import StageSparkleDefault from "StageSparkle" /* 8407 */;
-import Form from "Form" /* 8598 */;
-import _modDef9807 from "module_9807" /* 9807 */;
-import EventDetailTypes from "EventDetailTypes" /* 9809 */;
+import Text_Text from "Text/Text" /* 4570 */;
+import FastImageDefault from "FastImage" /* 5601 */;
+import BottomSheetModal from "BottomSheetModal" /* 6641 */;
+import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8205 */;
+import StageSparkleDefault from "StageSparkle" /* 8435 */;
+import Form from "Form" /* 8626 */;
+import _modDef9834 from "module_9834" /* 9834 */;
+import EventDetailTypes from "EventDetailTypes" /* 9836 */;
 import noop from "module_19" /* 19 */;
-import PresenceStore from "PresenceStore" /* 4600 */;
+import PresenceStore from "PresenceStore" /* 4614 */;
 import UserStore from "UserStore" /* 1371 */;
-import TextStyles from "TextStyles" /* 5524 */;
+import TextStyles from "TextStyles" /* 5538 */;
 
 require = fn;
 function EmptyDisplay(arg0) {
@@ -22,7 +22,7 @@ function EmptyDisplay(arg0) {
   let obj = { style: null, children: null };
   const items = [closure_9().emptyDisplayContainer, style];
   obj.style = items;
-  obj = { icon: _modDef9807 };
+  obj = { icon: _modDef9834 };
   const items1 = [React5(StageSparkleDefault, obj), children];
   obj.children = items1;
   return React6(View, obj);
@@ -47,7 +47,7 @@ function RemainingUsersRow(remainingUsersGroup) {
   const tmp = closure_9();
   let obj = { DEPRECATED_style: tmp.userListRow, leading: null, label: null };
   obj = { style: tmp.remainingUsersIconContainer, children: null };
-  obj = { source: _modDef9807, style: tmp.remainingUsersIcon };
+  obj = { source: _modDef9834, style: tmp.remainingUsersIcon };
   obj.children = React5(FastImageDefault, obj);
   obj.leading = React5(View, obj);
   const intl = util.intl;
@@ -216,7 +216,7 @@ const View = fn(17).View;
 const Fonts = fn(1085).Fonts;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-fn(4560);
+fn(4574);
 let obj = { staticMessageContentContainer: { flex: 1, padding: 16 }, userList: { paddingTop: 16 }, userListRow: { paddingVertical: 8 }, userName: null, emptyDisplayContainer: null, staticMessageContent: null, emptyDisplayTitle: null, remainingUsersIcon: null, remainingUsersIconContainer: null };
 obj = { color: nativeDefault.colors.TEXT_DEFAULT, fontFamily: Fonts.PRIMARY_SEMIBOLD, fontSize: 16 };
 obj.userName = obj;
@@ -235,7 +235,7 @@ const memoResult = noop.memo((eventUser) => {
   eventUser = eventUser.eventUser;
   let analyticsLocations;
   const tmp = closure_9();
-  analyticsLocations = analyticsLocations(7162)().analyticsLocations;
+  analyticsLocations = analyticsLocations(7176)().analyticsLocations;
   let obj = eventUser(504);
   const items = [UserStore];
   const stateFromStores = obj.useStateFromStores(items, () => UserStore.getUser(eventUser.user_id));
@@ -254,12 +254,12 @@ const memoResult = noop.memo((eventUser) => {
   obj1 = { user: stateFromStores, nick: null, usernameStyle: null, nicknameStyle: null };
   const member = eventUser.member;
   let nick;
-  let tmp2Result = tmp2(9808);
+  let tmp2Result = tmp2(9835);
   if (member != null) {
     nick = member.nick;
   }
   if (nick == null) {
-    tmp2Result = tmp2(4404);
+    tmp2Result = tmp2(4418);
     nick = tmp2Result.getName(eventUser.user);
   }
   obj1.nick = nick;
@@ -268,7 +268,7 @@ const memoResult = noop.memo((eventUser) => {
   obj.onPress = function onPress() {
     showUserProfileActionSheetDefault({ userId: eventUser.user_id, sourceAnalyticsLocations: analyticsLocations });
   };
-  return closure_7(eventUser(8598).FormRow, obj, eventUser.user_id);
+  return closure_7(eventUser(8626).FormRow, obj, eventUser.user_id);
 });
 EventDetailRsvpSheet.displayName = "EventDetailRsvpSheet";
 size = fn(2);

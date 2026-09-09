@@ -1,15 +1,15 @@
-// === Module 13352: PremiumAccountCredit ===
+// === Module 13375: PremiumAccountCredit ===
 
-// Module 13352 (PremiumAccountCredit)
+// Module 13375 (PremiumAccountCredit)
 import _modDef12 from "module_12" /* 12 */;
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import _modDef3063 from "module_3063" /* 3063 */;
-import PremiumUtils from "PremiumUtils" /* 4218 */;
-import Text_Text from "Text/Text" /* 4556 */;
-import GameIcon from "GameIcon" /* 7172 */;
+import _modDef3074 from "module_3074" /* 3074 */;
+import PremiumUtils from "PremiumUtils" /* 4231 */;
+import Text_Text from "Text/Text" /* 4570 */;
+import GameIcon from "GameIcon" /* 7186 */;
 import noop from "module_19" /* 19 */;
-import EntitlementStore from "EntitlementStore" /* 7394 */;
+import EntitlementStore from "EntitlementStore" /* 7408 */;
 
 const PremiumUtilsDefault = PremiumUtils;
 const GameIconDefault = GameIcon;
@@ -26,7 +26,7 @@ function AccountCreditTier(arg0) {
   const tierDisplayNameByPlanId = obj2.getTierDisplayNameByPlanId(planId);
   if (hasPremiumGroup) {
     const intl3 = util.intl;
-    let stringResult = intl3.string(_modDef3063["5asczk"]);
+    let stringResult = intl3.string(_modDef3074["5asczk"]);
   } else {
     if (null != currentSubscription) {
       if (currentSubscription.planId === planId) {
@@ -85,7 +85,7 @@ const View = fn(17).View;
 const SubscriptionStatusTypes = fn(1074).SubscriptionStatusTypes;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-fn(4560);
+fn(4574);
 let createStyles = { title: { marginBottom: 12 }, creditList: null, creditItem: null, textContainer: null, headerText: null, subText: null, timeText: null, divider: null, creditDescription: null };
 createStyles = { borderRadius: nativeDefault.radii.xs, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH };
 createStyles.creditList = createStyles;
@@ -130,7 +130,7 @@ export default function PremiumAccountCredit(currentSubscription) {
       obj = { style: tmp.title, accessibilityRole: "header", variant: "eyebrow", color: "text-default", children: null };
       const intl = tmp2(1114).intl;
       obj.children = intl.string(tmp2(1114).t.YugZY0);
-      const items1 = [closure_6(tmp2(4556).Text, obj), , , ];
+      const items1 = [closure_6(tmp2(4570).Text, obj), , , ];
       const obj1 = { style: null, children: null };
       const items2 = [tmp.creditList, creditListContainerStyle];
       obj1.style = items2;
@@ -144,7 +144,7 @@ export default function PremiumAccountCredit(currentSubscription) {
       const obj2 = { style: tmp.creditDescription, variant: "text-sm/medium", children: null };
       const intl2 = tmp2(1114).intl;
       obj2.children = intl2.string(tmp2(1114).t.kNEjGm);
-      items1[2] = closure_6(tmp2(4556).Text, obj2);
+      items1[2] = closure_6(tmp2(4570).Text, obj2);
       let tmp9Result = null;
       if (null != currentSubscription) {
         tmp9Result = null;
@@ -152,7 +152,7 @@ export default function PremiumAccountCredit(currentSubscription) {
           const obj3 = { style: tmp.creditDescription, variant: "text-sm/medium", children: null };
           const intl3 = tmp2(1114).intl;
           obj3.children = intl3.string(tmp2(1114).t.azRP0E);
-          tmp9Result = closure_6(tmp2(4556).Text, obj3);
+          tmp9Result = closure_6(tmp2(4570).Text, obj3);
         }
       }
       items1[3] = tmp9Result;

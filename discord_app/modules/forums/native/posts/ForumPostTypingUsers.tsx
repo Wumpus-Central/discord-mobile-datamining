@@ -1,16 +1,16 @@
-// === Module 12023: ForumPostTypingUsers ===
+// === Module 12049: ForumPostTypingUsers ===
 
-// Module 12023 (ForumPostTypingUsers)
+// Module 12049 (ForumPostTypingUsers)
 import nativeDefault from "native" /* 576 */;
 import native from "native" /* 1178 */;
-import ReanimatedRexportDefault from "ReanimatedRexport" /* 4296 */;
+import ReanimatedRexportDefault from "ReanimatedRexport" /* 4310 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-fn(4560);
+fn(4574);
 let createStyles = { container: { display: "flex", flexDirection: "row", alignItems: "center", flex: 1 }, lastTypingUser: { marginEnd: 0 }, typingUser: null, dots: null, typingText: null, borderColor: null, borderColorPressed: null };
 createStyles = { marginEnd: -8, borderWidth: 2, borderRadius: nativeDefault.radii.round };
 createStyles.typingUser = createStyles;

@@ -1,7 +1,7 @@
-// === Module 11330: showChannelFollowingActionSheet ===
+// === Module 11357: showChannelFollowingActionSheet ===
 
-// Module 11330 (showChannelFollowingActionSheet)
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4527 */;
+// Module 11357 (showChannelFollowingActionSheet)
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4541 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
@@ -117,5 +117,5 @@ export const showChannelFollowingActionSheet = function showChannelFollowingActi
       return closure_1(dependencyMap[2]).hideActionSheet();
     }
   };
-  obj.openLazy(require("asyncRequireImpl")(11331, dependencyMap.paths), "NewChannelFollower." + id, obj);
+  obj.openLazy(require("asyncRequireImpl")(11358, dependencyMap.paths), "NewChannelFollower." + id, obj);
 };

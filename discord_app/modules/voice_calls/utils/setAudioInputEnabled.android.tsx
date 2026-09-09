@@ -1,6 +1,6 @@
-// === Module 17321: setAudioInputEnabled ===
+// === Module 17352: setAudioInputEnabled ===
 
-// Module 17321 (setAudioInputEnabled)
+// Module 17352 (setAudioInputEnabled)
 import NativeMediaEngineModuleDefault from "NativeMediaEngineModule" /* 1913 */;
 import size from "module_2" /* 2 */;
 

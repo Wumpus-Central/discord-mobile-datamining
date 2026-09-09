@@ -1,16 +1,16 @@
-// === Module 13490: usePremiumGroupFeaturesTableCardText ===
+// === Module 13513: usePremiumGroupFeaturesTableCardText ===
 
-// Module 13490 (usePremiumGroupFeaturesTableCardText)
+// Module 13513 (usePremiumGroupFeaturesTableCardText)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1114 */;
 import user from "user" /* 1379 */;
-import _modDef3063 from "module_3063" /* 3063 */;
-import PremiumGroupUtils from "PremiumGroupUtils" /* 8049 */;
-import usePremiumGroupPrimaryNameDefault from "usePremiumGroupPrimaryName" /* 13491 */;
-import SubscriptionStore from "SubscriptionStore" /* 4224 */;
+import _modDef3074 from "module_3074" /* 3074 */;
+import PremiumGroupUtils from "PremiumGroupUtils" /* 8064 */;
+import usePremiumGroupPrimaryNameDefault from "usePremiumGroupPrimaryName" /* 13514 */;
+import SubscriptionStore from "SubscriptionStore" /* 4237 */;
 
 require = fn;
-const PremiumGroupConstants = fn(4232);
+const PremiumGroupConstants = fn(4245);
 ({ getPremiumGroupProductName: closure_4, HELP_CENTER_LINK: hasOwnProperty } = PremiumGroupConstants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/premium_group/hooks/usePremiumGroupFeaturesTableCardText.tsx");
@@ -32,7 +32,7 @@ export default function usePremiumGroupFeaturesTableCardText(arg0, arg1) {
       if (null != tmp4) {
         const intl = util.intl;
         obj = { primaryName: tmp4, premiumGroupProductName: React4() };
-        priceString = intl.format(_modDef3063.Nu9LNm, obj);
+        priceString = intl.format(_modDef3074.Nu9LNm, obj);
       }
     }
     let str = "...";
@@ -42,10 +42,10 @@ export default function usePremiumGroupFeaturesTableCardText(arg0, arg1) {
     if (arg0 === user.PremiumSubscriptionGroupRole.PRIMARY) {
       const intl3 = util.intl;
       obj = { helpCenterLink, premiumGroupProductName: React4() };
-      let formatResult = intl3.format(_modDef3063["+R/K74"], obj);
+      let formatResult = intl3.format(_modDef3074["+R/K74"], obj);
     } else {
       const intl2 = util.intl;
-      const tmp3Result = _modDef3063;
+      const tmp3Result = _modDef3074;
       obj1 = { helpCenterLink };
       formatResult = intl2.format(arg1 ? tmp3Result["xF+upx"] : tmp3Result.qqfnOm, obj1);
     }

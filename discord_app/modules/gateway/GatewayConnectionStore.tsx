@@ -1,26 +1,26 @@
-// === Module 5277: GatewayConnectionStore ===
+// === Module 5291: GatewayConnectionStore ===
 
-// Module 5277 (GatewayConnectionStore)
+// Module 5291 (GatewayConnectionStore)
 import LoggerDefault from "Logger" /* 3 */;
 import _modDef12 from "module_12" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import PlatformUtils from "PlatformUtils" /* 1115 */;
-import GatewaySocketSingleton from "GatewaySocketSingleton" /* 13632 */;
-import ConnectionStateDefault from "ConnectionState" /* 13649 */;
-import PauseGatewaySocketAll from "PauseGatewaySocket" /* 13670 */;
-import dispatchSocketMessageDefault from "dispatchSocketMessage" /* 13681 */;
+import GatewaySocketSingleton from "GatewaySocketSingleton" /* 13655 */;
+import ConnectionStateDefault from "ConnectionState" /* 13672 */;
+import PauseGatewaySocketAll from "PauseGatewaySocket" /* 13693 */;
+import dispatchSocketMessageDefault from "dispatchSocketMessage" /* 13704 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1221 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import CallStore from "CallStore" /* 5278 */;
+import CallStore from "CallStore" /* 5292 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 import MediaEngineStore from "MediaEngineStore" /* 1908 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 4583 */;
-import RTCRegionStore from "RTCRegionStore" /* 4610 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 4597 */;
+import RTCRegionStore from "RTCRegionStore" /* 4624 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2011 */;
-import SelfPresenceStore from "SelfPresenceStore" /* 5279 */;
-import StreamRTCConnectionStore from "StreamRTCConnectionStore" /* 4599 */;
+import SelfPresenceStore from "SelfPresenceStore" /* 5293 */;
+import StreamRTCConnectionStore from "StreamRTCConnectionStore" /* 4613 */;
 
 require = fn;
 let closure_25 = async function _handleConnectionOpen(arg0) {
@@ -172,7 +172,7 @@ function handleLocalPresenceChange() {
 const Constants = fn(1074);
 ({ RTCConnectionStates: closure_15, AppStates: closure_16 } = Constants);
 const UserSettingsTypes = fn(1084).UserSettingsTypes;
-fn(13632).socket.dispatcher.getDispatchHandler = dispatchSocketMessageDefault;
+fn(13655).socket.dispatcher.getDispatchHandler = dispatchSocketMessageDefault;
 let closure_19 = new LoggerDefault("ConnectionStore");
 let closure_20 = 0;
 let c21 = null;
@@ -489,13 +489,13 @@ const gatewayConnectionStore = new GatewayConnectionStore(DispatcherDefault, {
     if (socket.isSessionEstablished()) {
       if (!allowMultiple) {
         const allActiveStreamKeys = StreamRTCConnectionStore.getAllActiveStreamKeys();
-        _require = allActiveStreamKeys.find((item) => closure_0(4612).decodeStreamKey(item).ownerId === id.getId());
+        _require = allActiveStreamKeys.find((item) => closure_0(4626).decodeStreamKey(item).ownerId === id.getId());
         const allActiveStreamKeys1 = StreamRTCConnectionStore.getAllActiveStreamKeys();
         const found = allActiveStreamKeys1.filter((item) => item !== closure_0);
         const item = found.forEach((item) => {
-          const socket = closure_0(13632).socket;
+          const socket = closure_0(13655).socket;
           if (socket.isSessionEstablished()) {
-            const socket2 = closure_0(13632).socket;
+            const socket2 = closure_0(13655).socket;
             socket2.streamDelete(item);
           }
         });

@@ -1,24 +1,24 @@
-// === Module 11266: ReactionEmojiOptionsActionSheet ===
+// === Module 11293: ReactionEmojiOptionsActionSheet ===
 
-// Module 11266 (ReactionEmojiOptionsActionSheet)
+// Module 11293 (ReactionEmojiOptionsActionSheet)
 import nativeDefault from "native" /* 576 */;
-import ToastUtils from "ToastUtils" /* 4258 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 4259 */;
-import ClipboardUtils from "ClipboardUtils" /* 7190 */;
-import ReactionActionCreatorsAll from "ReactionActionCreators" /* 7764 */;
-import StarIcon from "StarIcon" /* 10240 */;
-import StarOutlineIcon2 from "StarOutlineIcon" /* 10246 */;
-import EmojiActionCreators from "EmojiActionCreators" /* 10341 */;
+import ToastUtils from "ToastUtils" /* 4271 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 4272 */;
+import ClipboardUtils from "ClipboardUtils" /* 7203 */;
+import ReactionActionCreatorsAll from "ReactionActionCreators" /* 7778 */;
+import StarIcon from "StarIcon" /* 10267 */;
+import StarOutlineIcon2 from "StarOutlineIcon" /* 10273 */;
+import EmojiActionCreators from "EmojiActionCreators" /* 10368 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4552 */;
-import EmojiStore from "EmojiStore" /* 5459 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 4381 */;
+import AccessibilityStore from "AccessibilityStore" /* 4566 */;
+import EmojiStore from "EmojiStore" /* 5473 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 4395 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-fn(4560);
+fn(4574);
 let createStyles = { header: null, reactionPill: null, emoji: null, emojiText: null, reactionText: null, starIcon: null, starIconSelected: null, starIconUnselected: null };
 createStyles = { alignItems: "center", paddingTop: nativeDefault.space.PX_8, gap: nativeDefault.space.PX_16 };
 createStyles.header = createStyles;

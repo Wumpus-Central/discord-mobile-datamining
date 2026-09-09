@@ -1,37 +1,39 @@
-// === Module 15691: PremiumTrialOfferActionSheetContent ===
+// === Module 15721: PremiumTrialOfferActionSheetContent ===
 
-// Module 15691 (PremiumTrialOfferActionSheetContent)
+// Module 15721 (PremiumTrialOfferActionSheetContent)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import PremiumUtils from "PremiumUtils" /* 4218 */;
-import Text_Text from "Text/Text" /* 4556 */;
-import components_Button_Button from "components/Button/Button" /* 4975 */;
-import FolderIcon from "FolderIcon" /* 5074 */;
-import native from "native" /* 5692 */;
-import NitroWheelIcon from "NitroWheelIcon" /* 8667 */;
-import ChatSmileIcon from "ChatSmileIcon" /* 9426 */;
-import UserIcon from "UserIcon" /* 11830 */;
-import PremiumPerksListDefault from "PremiumPerksList" /* 15692 */;
+import PremiumUtils from "PremiumUtils" /* 4231 */;
+import Text_Text from "Text/Text" /* 4570 */;
+import components_Button_Button from "components/Button/Button" /* 4989 */;
+import FolderIcon from "FolderIcon" /* 5088 */;
+import NitroFileUploadExperiments from "NitroFileUploadExperiments" /* 5144 */;
+import native from "native" /* 5706 */;
+import NitroWheelIcon from "NitroWheelIcon" /* 8695 */;
+import ChatSmileIcon from "ChatSmileIcon" /* 9453 */;
+import UserIcon from "UserIcon" /* 11856 */;
+import PremiumPerksListDefault from "PremiumPerksList" /* 15722 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
+const PremiumTypes = fn(1373).PremiumTypes;
 const jsxProd = fn(21);
-({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4560);
+({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
+const createStyles = fn(4574);
 let obj = { contentContainer: null, buttonContainer: null, title: null, heroIllustrationContainer: null };
 obj = { paddingHorizontal: 36, paddingTop: 18, paddingBottom: 36, width: "100%", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, alignItems: "flex-start", display: "flex", flexDirection: "column", gap: 0 };
 obj.contentContainer = obj;
 obj.buttonContainer = { marginVertical: 6, width: "100%", height: 48 };
 obj.title = { width: "100%", textAlign: "center" };
 obj.heroIllustrationContainer = { alignItems: "center", justifyContent: "center", height: 188, width: "100%" };
-let closure_6 = createStyles.createStyles(obj);
+let closure_7 = createStyles.createStyles(obj);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/native/trials/PremiumTrialOfferActionSheetContent.tsx");
 
 export default noop.memo(function PremiumTrialOfferActionSheetContent(onConfirm) {
   ({ trialOffer, intervalDuration } = onConfirm);
-  const tmp = closure_6();
+  const tmp = closure_7();
   let subscriptionTrial;
   if (trialOffer != null) {
     subscriptionTrial = trialOffer.subscriptionTrial;
@@ -51,13 +53,21 @@ export default noop.memo(function PremiumTrialOfferActionSheetContent(onConfirm)
   obj = { IconComponent: FolderIcon.FolderIcon, label: null, description: null };
   const intl5 = util.intl;
   obj.label = intl5.string(util.t["u/NJKc"]);
+  let obj3 = NitroFileUploadExperiments;
+  const obj1 = { legacyCopy: null, rolloutCopy: null };
   const intl6 = util.intl;
-  obj.description = intl6.string(util.t.i1UuMk);
-  items[2] = obj;
-  const obj1 = { style: tmp.contentContainer, children: null };
-  const items1 = [React4(View, { style: tmp.heroIllustrationContainer, children: React4(native.NitroWumpusFlightRight3dIllustration, { width: 180, height: 180 }) }), , , ];
-  const obj3 = { variant: "heading-xl/bold", color: "mobile-text-heading-primary", style: tmp.title, children: null };
+  obj1.legacyCopy = intl6.string(util.t.i1UuMk);
   const intl7 = util.intl;
+  const obj2 = { maxFileSize: null };
+  let obj6 = PremiumUtils;
+  obj2.maxFileSize = obj6.getMaxFileSizeForPremiumType(PremiumTypes.TIER_2, { useSpace: false });
+  obj1.rolloutCopy = intl7.formatToPlainString(util.t.PvqncD, obj2);
+  obj.description = obj3.getNitroFileUploadRolloutCopy(obj1);
+  items[2] = obj;
+  obj3 = { style: tmp.contentContainer, children: null };
+  const items1 = [hasOwnProperty(View, { style: tmp.heroIllustrationContainer, children: hasOwnProperty(native.NitroWumpusFlightRight3dIllustration, { width: 180, height: 180 }) }), , , ];
+  const obj5 = { variant: "heading-xl/bold", color: "mobile-text-heading-primary", style: tmp.title, children: null };
+  const intl8 = util.intl;
   let skuId;
   if (subscriptionTrial != null) {
     skuId = subscriptionTrial.skuId;
@@ -71,18 +81,18 @@ export default noop.memo(function PremiumTrialOfferActionSheetContent(onConfirm)
     displayNameFromSku = PremiumUtils.getDisplayNameFromSku(skuId1);
     const tmp3Result = PremiumUtils;
   }
-  obj3.children = intl7.formatToPlainString(util.t.q8eMc0, { displayName: displayNameFromSku, duration: intervalDuration });
-  items1[1] = React4(Text_Text.Text, obj3);
-  items1[2] = React4(PremiumPerksListDefault, { perks: items });
-  const obj4 = { style: tmp.buttonContainer, children: null };
-  const obj5 = { size: "lg", text: null, onPress: null, grow: true, icon: null };
-  const intl8 = util.intl;
-  obj5.text = intl8.formatToPlainString(util.t.xASjq5, { duration: intervalDuration });
-  obj5.onPress = onConfirm.onConfirm;
-  const obj2 = { style: tmp.heroIllustrationContainer, children: React4(native.NitroWumpusFlightRight3dIllustration, { width: 180, height: 180 }) };
-  obj5.icon = React4(NitroWheelIcon.NitroWheelIcon, { size: "md", color: nativeDefault.unsafe_rawColors.WHITE });
-  obj4.children = React4(components_Button_Button.Button, obj5);
-  items1[3] = React4(View, obj4);
-  obj1.children = items1;
-  return hasOwnProperty(View, obj1);
+  obj5.children = intl8.formatToPlainString(util.t.q8eMc0, { displayName: displayNameFromSku, duration: intervalDuration });
+  items1[1] = hasOwnProperty(Text_Text.Text, obj5);
+  items1[2] = hasOwnProperty(PremiumPerksListDefault, { perks: items });
+  obj6 = { style: tmp.buttonContainer, children: null };
+  const obj7 = { size: "lg", text: null, onPress: null, grow: true, icon: null };
+  const intl9 = util.intl;
+  obj7.text = intl9.formatToPlainString(util.t.xASjq5, { duration: intervalDuration });
+  obj7.onPress = onConfirm.onConfirm;
+  const obj4 = { style: tmp.heroIllustrationContainer, children: hasOwnProperty(native.NitroWumpusFlightRight3dIllustration, { width: 180, height: 180 }) };
+  obj7.icon = hasOwnProperty(NitroWheelIcon.NitroWheelIcon, { size: "md", color: nativeDefault.unsafe_rawColors.WHITE });
+  obj6.children = hasOwnProperty(components_Button_Button.Button, obj7);
+  items1[3] = hasOwnProperty(View, obj6);
+  obj3.children = items1;
+  return timestampProducer(View, obj3);
 });

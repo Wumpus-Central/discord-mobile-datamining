@@ -1,24 +1,24 @@
-// === Module 11010: SocialLayerStorefrontPoductPurchaseSuccessModal ===
+// === Module 11037: SocialLayerStorefrontPoductPurchaseSuccessModal ===
 
-// Module 11010 (SocialLayerStorefrontPoductPurchaseSuccessModal)
+// Module 11037 (SocialLayerStorefrontPoductPurchaseSuccessModal)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
-import _modDef3417 from "module_3417" /* 3417 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4296 */;
-import UserUtilsDefault from "UserUtils" /* 4404 */;
-import HapticUtils from "HapticUtils" /* 4528 */;
-import timing from "timing" /* 4561 */;
-import spring from "spring" /* 4974 */;
-import XSmallIcon from "XSmallIcon" /* 5680 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 7182 */;
-import SlayerStorefrontUtils from "SlayerStorefrontUtils" /* 7226 */;
-import SocialLayerStorefrontNativeActionCreators from "SocialLayerStorefrontNativeActionCreators" /* 10802 */;
+import _modDef3430 from "module_3430" /* 3430 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4310 */;
+import UserUtilsDefault from "UserUtils" /* 4418 */;
+import HapticUtils from "HapticUtils" /* 4542 */;
+import timing from "timing" /* 4575 */;
+import spring from "spring" /* 4988 */;
+import XSmallIcon from "XSmallIcon" /* 5694 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 7196 */;
+import SlayerStorefrontUtils from "SlayerStorefrontUtils" /* 7240 */;
+import SocialLayerStorefrontNativeActionCreators from "SocialLayerStorefrontNativeActionCreators" /* 10829 */;
 import _slicedToArray from "module_32" /* 32 */;
 import _toArray from "_toArray" /* 718 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4552 */;
-import SKUStore from "SKUStore" /* 5510 */;
+import AccessibilityStore from "AccessibilityStore" /* 4566 */;
+import SKUStore from "SKUStore" /* 5524 */;
 
 require = fn;
 function PurchaseSuccessModalBase(sku) {
@@ -309,12 +309,12 @@ function PurchaseSuccessModalBase(sku) {
 }
 get_ActivityIndicator = fn(17);
 ({ Image: metroRequire, ScrollView: closure_7, View: closure_8 } = get_ActivityIndicator);
-const numDays = fn(7229).SOCIAL_LAYER_DAYS_TO_CLAIM_ITEM;
+const numDays = fn(7243).SOCIAL_LAYER_DAYS_TO_CLAIM_ITEM;
 const Constants = fn(1074);
 ({ AnalyticEvents: closure_12, HorizontalGradient: map1, VerticalGradient: closure_14 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_15, jsxs: closure_16 } = jsxProd);
-fn(4560);
+fn(4574);
 let createStyles = { root: null, backdropImage: null, backdropGradient: null, curtain: null, main: null, header: null, closeButtonIcon: null, scroll: null, body: null, bodyLandscape: null, preview: null, previewLandscape: null, messages: null, messagesLandscape: null, contentColumnLandscape: null, title: null, description: null, textLandscape: null, footer: null, footerLandscape: null, cta: null, ctaLandscape: null, finePrint: null };
 createStyles = { flex: 1, backgroundColor: nativeDefault.colors.BLACK };
 createStyles.root = createStyles;
@@ -352,7 +352,7 @@ createStyles.ctaLandscape = { marginHorizontal: nativeDefault.space.PX_16 };
 let obj11 = { marginHorizontal: nativeDefault.space.PX_16 };
 createStyles.finePrint = { textAlign: "center", marginHorizontal: nativeDefault.space.PX_24, marginBottom: nativeDefault.space.PX_12 };
 let closure_17 = createStyles.createStyles(createStyles);
-createStyles = fn(4560);
+createStyles = fn(4574);
 let obj13 = { linkAccountIcon: null };
 let obj12 = { textAlign: "center", marginHorizontal: nativeDefault.space.PX_24, marginBottom: nativeDefault.space.PX_12 };
 obj13.linkAccountIcon = { marginRight: nativeDefault.space.PX_4 };
@@ -531,7 +531,7 @@ export const SocialLayerStorefrontProductSelfPurchaseSuccessModal = function Soc
           str = "";
         }
         obj = { applicationName: str };
-        formatToPlainStringResult = formatToPlainString(_modDef3417.eNNnIG, obj);
+        formatToPlainStringResult = formatToPlainString(_modDef3430.eNNnIG, obj);
       }
     }
     return formatToPlainStringResult;

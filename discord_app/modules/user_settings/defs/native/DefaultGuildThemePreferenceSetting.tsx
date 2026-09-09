@@ -1,20 +1,20 @@
-// === Module 15313: DefaultGuildThemePreferenceSetting ===
+// === Module 15342: DefaultGuildThemePreferenceSetting ===
 
-// Module 15313 (DefaultGuildThemePreferenceSetting)
+// Module 15342 (DefaultGuildThemePreferenceSetting)
 import util from "util" /* 1114 */;
 import preloaded_user_settings from "preloaded_user_settings" /* 1187 */;
 import UserSettings from "UserSettings" /* 1935 */;
-import ServerThemeUserExperiment from "ServerThemeUserExperiment" /* 4488 */;
+import ServerThemeUserExperiment from "ServerThemeUserExperiment" /* 4502 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-fn(11473);
+fn(11500);
 let SettingBuilders = {
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.Q7mm4g);
   },
-  parent: fn(7975).MobileUserSettings.APPEARANCE,
+  parent: fn(7989).MobileUserSettings.APPEARANCE,
   useValue: fn(1935).DefaultGuildThemePreference.useSetting,
   onValueChange: function onDefaultGuildThemePreferenceChange(arg0) {
     const DefaultGuildThemePreference = UserSettings.DefaultGuildThemePreference;

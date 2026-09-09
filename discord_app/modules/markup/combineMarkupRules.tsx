@@ -1,6 +1,6 @@
-// === Module 4997: combineMarkupRules ===
+// === Module 5011: combineMarkupRules ===
 
-// Module 4997 (combineMarkupRules)
+// Module 5011 (combineMarkupRules)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/markup/combineMarkupRules.tsx");

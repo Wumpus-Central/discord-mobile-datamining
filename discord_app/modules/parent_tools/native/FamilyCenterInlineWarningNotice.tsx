@@ -1,16 +1,16 @@
-// === Module 14877: FamilyCenterInlineWarningNotice ===
+// === Module 14903: FamilyCenterInlineWarningNotice ===
 
-// Module 14877 (FamilyCenterInlineWarningNotice)
+// Module 14903 (FamilyCenterInlineWarningNotice)
 import nativeDefault from "native" /* 576 */;
-import Text_Text from "Text/Text" /* 4556 */;
-import WarningIcon from "WarningIcon" /* 8593 */;
+import Text_Text from "Text/Text" /* 4570 */;
+import WarningIcon from "WarningIcon" /* 8621 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-fn(4560);
+fn(4574);
 let createStyles = { container: null, text: null };
 createStyles = { flexDirection: "row", alignItems: "flex-start", gap: nativeDefault.space.PX_8, padding: nativeDefault.space.PX_12, borderWidth: 1, borderColor: nativeDefault.colors.BORDER_FEEDBACK_WARNING, borderRadius: nativeDefault.radii.lg, backgroundColor: nativeDefault.colors.BACKGROUND_FEEDBACK_WARNING };
 createStyles.container = createStyles;

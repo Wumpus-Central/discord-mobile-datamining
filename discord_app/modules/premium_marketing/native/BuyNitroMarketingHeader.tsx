@@ -1,21 +1,21 @@
-// === Module 13399: BuyNitroMarketingHeader ===
+// === Module 13422: BuyNitroMarketingHeader ===
 
-// Module 13399 (BuyNitroMarketingHeader)
+// Module 13422 (BuyNitroMarketingHeader)
 import nativeDefault from "native" /* 576 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4296 */;
-import timing from "timing" /* 4561 */;
-import reanimated_AccessibilityPreferencesSharedValue from "reanimated/AccessibilityPreferencesSharedValue" /* 4563 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4310 */;
+import timing from "timing" /* 4575 */;
+import reanimated_AccessibilityPreferencesSharedValue from "reanimated/AccessibilityPreferencesSharedValue" /* 4577 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ Platform, StyleSheet: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-const Gradients = fn(7432).Gradients;
+const Gradients = fn(7446).Gradients;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
 let PX_8 = nativeDefault.space.PX_8;
 const PX_12 = nativeDefault.space.PX_12;
-const createStyles = fn(4560);
+const createStyles = fn(4574);
 let closure_11 = createStyles.createStyles((arg0, arg1, arg2) => {
   let num = 0;
   if (arg1) {
@@ -57,7 +57,7 @@ let closure_11 = createStyles.createStyles((arg0, arg1, arg2) => {
   }
   obj.borderRadius = sm;
   obj.background = obj;
-  const rect = { position: "absolute", top: -nativeDefault.space.PX_16, right: "call", left: "padding", alignSelf: 0.000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001291986827686718 };
+  const rect = { position: "absolute", top: -nativeDefault.space.PX_16, right: "call", left: "options", alignSelf: 0.000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000007445693852992177 };
   obj.clouds = rect;
   const rect1 = { position: "absolute", top: arg0 + nativeDefault.space.PX_20, right: nativeDefault.space.PX_4 };
   obj.wumpus = rect1;

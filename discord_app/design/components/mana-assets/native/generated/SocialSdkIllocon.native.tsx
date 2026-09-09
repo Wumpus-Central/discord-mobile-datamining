@@ -1,9 +1,9 @@
-// === Module 6473: SocialSdkIllocon ===
+// === Module 6487: SocialSdkIllocon ===
 
-// Module 6473 (SocialSdkIllocon)
+// Module 6487 (SocialSdkIllocon)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5587 */;
-import _modDef6474 from "module_6474" /* 6474 */;
+import FastImageDefault from "FastImage" /* 5601 */;
+import _modDef6488 from "module_6488" /* 6488 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -16,12 +16,12 @@ export const SocialSdkIllocon = function SocialSdkIllocon(size) {
     num = 64;
   }
   let obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  obj = { uri: _modDef6474 };
+  obj = { uri: _modDef6488 };
   obj.source = obj;
   const items = [{ width: num, height: num }];
   obj.style = items;
   obj.accessible = accessible;
   obj.accessibilityLabel = accessibilityLabel;
   obj.resizeMode = resizeMode;
-  return jsx(FastImageDefault, { uri: _modDef6474 });
+  return jsx(FastImageDefault, { uri: _modDef6488 });
 };

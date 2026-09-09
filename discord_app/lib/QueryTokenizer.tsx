@@ -1,6 +1,6 @@
-// === Module 12350: QueryTokenizer ===
+// === Module 12376: QueryTokenizer ===
 
-// Module 12350 (QueryTokenizer)
+// Module 12376 (QueryTokenizer)
 import size from "module_2" /* 2 */;
 
 function getMatch(str, arg1, index) {

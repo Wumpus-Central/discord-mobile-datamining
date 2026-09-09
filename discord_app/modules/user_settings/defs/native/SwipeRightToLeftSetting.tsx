@@ -1,12 +1,12 @@
-// === Module 15476: SwipeRightToLeftSetting ===
+// === Module 15506: SwipeRightToLeftSetting ===
 
-// Module 15476 (SwipeRightToLeftSetting)
+// Module 15506 (SwipeRightToLeftSetting)
 import Constants from "Constants" /* 1074 */;
 import util from "util" /* 1114 */;
 import preloaded_user_settings from "preloaded_user_settings" /* 1187 */;
 import UserSettings from "UserSettings" /* 1935 */;
-import SettingsConstants from "SettingsConstants" /* 7975 */;
-import SettingBuilders from "SettingBuilders" /* 11473 */;
+import SettingsConstants from "SettingsConstants" /* 7989 */;
+import SettingBuilders from "SettingBuilders" /* 11500 */;
 import size from "module_2" /* 2 */;
 
 const route = SettingBuilders.createRoute({

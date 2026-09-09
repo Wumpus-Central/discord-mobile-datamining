@@ -1,7 +1,7 @@
-// === Module 11072: StorekitIAPQueue ===
+// === Module 11099: StorekitIAPQueue ===
 
-// Module 11072 (StorekitIAPQueue)
-import utils_PriceUtils from "utils/PriceUtils" /* 7235 */;
+// Module 11099 (StorekitIAPQueue)
+import utils_PriceUtils from "utils/PriceUtils" /* 7249 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -58,7 +58,7 @@ function productSK2ToIAPProduct(subscription) {
     str2 = "PAYASYOUGO";
   }
 }
-const convertToAlpha2 = fn(4776).convertToAlpha2;
+const convertToAlpha2 = fn(4790).convertToAlpha2;
 const RNIapIosSk2 = fn(17).NativeModules.RNIapIosSk2;
 class StorekitIAPQueueClass {
   constructor() {

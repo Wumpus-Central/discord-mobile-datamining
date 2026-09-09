@@ -1,16 +1,16 @@
-// === Module 8830: SlayerStorefrontItemCard ===
+// === Module 8859: SlayerStorefrontItemCard ===
 
-// Module 8830 (SlayerStorefrontItemCard)
+// Module 8859 (SlayerStorefrontItemCard)
 import nativeDefault from "native" /* 576 */;
-import SlayerStorefrontUtils from "SlayerStorefrontUtils" /* 7226 */;
-import tinycolorDefault from "tinycolor" /* 7552 */;
+import SlayerStorefrontUtils from "SlayerStorefrontUtils" /* 7240 */;
+import tinycolorDefault from "tinycolor" /* 7566 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ ImageBackground: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
 const jsx = fn(21).jsx;
-fn(4560);
+fn(4574);
 let createStyles = { cardContainer: null, cardImageBackground: null, cardImage: null };
 createStyles = { borderRadius: nativeDefault.radii.md, overflow: "hidden", shadowColor: "#000", shadowOffset: { width: 0, height: 4 }, shadowOpacity: 0.3, shadowRadius: 8, elevation: 8 };
 createStyles.cardContainer = createStyles;

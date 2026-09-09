@@ -1,20 +1,20 @@
-// === Module 7280: ChannelSectionStore ===
+// === Module 7294: ChannelSectionStore ===
 
-// Module 7280 (ChannelSectionStore)
+// Module 7294 (ChannelSectionStore)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1109 */;
 import ApexExperiment from "ApexExperiment" /* 1433 */;
-import SidebarActionTypes from "SidebarActionTypes" /* 7282 */;
-import FriendsSidebarExperimentDefault from "FriendsSidebarExperiment" /* 7283 */;
-import ExperimentStore from "ExperimentStore" /* 4476 */;
-import SearchMessageStore from "SearchMessageStore" /* 7281 */;
+import SidebarActionTypes from "SidebarActionTypes" /* 7296 */;
+import FriendsSidebarExperimentDefault from "FriendsSidebarExperiment" /* 7297 */;
+import ExperimentStore from "ExperimentStore" /* 4490 */;
+import SearchMessageStore from "SearchMessageStore" /* 7295 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 import GuildStore from "GuildStore" /* 1979 */;
-import PermissionStore from "PermissionStore" /* 4199 */;
+import PermissionStore from "PermissionStore" /* 4212 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2011 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 4381 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 4395 */;
 import UserStore from "UserStore" /* 1371 */;
 
 require = fn;

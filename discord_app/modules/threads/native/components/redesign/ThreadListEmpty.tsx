@@ -1,19 +1,19 @@
-// === Module 16710: ThreadListEmpty ===
+// === Module 16747: ThreadListEmpty ===
 
-// Module 16710 (ThreadListEmpty)
+// Module 16747 (ThreadListEmpty)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import native from "native" /* 1178 */;
-import Text_Text from "Text/Text" /* 4556 */;
-import components_Button_Button from "components/Button/Button" /* 4975 */;
-import _modDef12242 from "module_12242" /* 12242 */;
+import Text_Text from "Text/Text" /* 4570 */;
+import components_Button_Button from "components/Button/Button" /* 4989 */;
+import _modDef12268 from "module_12268" /* 12268 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4560);
+const createStyles = fn(4574);
 let obj = { container: { flex: 1, justifyContent: "center", alignItems: "center" }, iconWrapper: null, title: null, subtext: null };
 obj = { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE, borderRadius: nativeDefault.radii.round, padding: 12 };
 obj.iconWrapper = obj;
@@ -28,7 +28,7 @@ export default noop.memo((onCreateThreadPress) => {
   const tmp = closure_6();
   let obj = { style: tmp.container, children: null };
   obj = { style: tmp.iconWrapper, children: null };
-  obj = { source: _modDef12242, size: native.Icon.Sizes.MEDIUM };
+  obj = { source: _modDef12268, size: native.Icon.Sizes.MEDIUM };
   obj.children = React4(native.Icon, obj);
   const items = [React4(View, obj), , , ];
   const obj1 = { style: tmp.title, accessibilityRole: "header", maxFontSizeMultiplier: 2, variant: "heading-lg/semibold", color: "mobile-text-heading-primary", children: null };

@@ -1,20 +1,20 @@
-// === Module 17132: VoicePanelHeaderChatButton ===
+// === Module 17163: VoicePanelHeaderChatButton ===
 
-// Module 17132 (VoicePanelHeaderChatButton)
+// Module 17163 (VoicePanelHeaderChatButton)
 import nativeDefault from "native" /* 576 */;
 import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1109 */;
 import util from "util" /* 1114 */;
-import ChatIcon from "ChatIcon" /* 5071 */;
-import NativeViewDefault from "NativeView" /* 5589 */;
-import VoicePanelIconButtonDefault from "VoicePanelIconButton" /* 17038 */;
-import useChatBadgeDefault from "useChatBadge" /* 17133 */;
+import ChatIcon from "ChatIcon" /* 5085 */;
+import NativeViewDefault from "NativeView" /* 5603 */;
+import VoicePanelIconButtonDefault from "VoicePanelIconButton" /* 17069 */;
+import useChatBadgeDefault from "useChatBadge" /* 17164 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const ComponentActions = fn(1074).ComponentActions;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-fn(4560);
+fn(4574);
 let createStyles = { badgeContainer: { position: "absolute", top: -2, right: -2 }, badge: null, notificationBadge: null };
 let size = { width: 8, height: 8, borderRadius: nativeDefault.radii.round };
 createStyles.badge = size;

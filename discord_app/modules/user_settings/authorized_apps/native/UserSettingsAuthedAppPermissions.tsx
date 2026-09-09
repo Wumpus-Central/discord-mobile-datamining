@@ -1,9 +1,9 @@
-// === Module 14947: UserSettingsAuthedAppPermissions ===
+// === Module 14973: UserSettingsAuthedAppPermissions ===
 
-// Module 14947 (UserSettingsAuthedAppPermissions)
-import Text_Text from "Text/Text" /* 4556 */;
-import disclosures from "disclosures" /* 9245 */;
-import UserSettingsAuthedApps from "UserSettingsAuthedApps" /* 14941 */;
+// Module 14973 (UserSettingsAuthedAppPermissions)
+import Text_Text from "Text/Text" /* 4570 */;
+import disclosures from "disclosures" /* 9272 */;
+import UserSettingsAuthedApps from "UserSettingsAuthedApps" /* 14967 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -11,7 +11,7 @@ get_ActivityIndicator = fn(17);
 ({ ScrollView: c3, View: closure_4 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4560);
+const createStyles = fn(4574);
 let closure_7 = createStyles.createStyles({ container: { paddingHorizontal: 16, paddingVertical: 24 }, permissionContainer: { flexDirection: "row", marginTop: 8 }, permissionIcon: { marginTop: 1 }, permissionText: { flexShrink: 1, marginLeft: 12 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/authorized_apps/native/UserSettingsAuthedAppPermissions.tsx");
@@ -51,9 +51,9 @@ export default function UserSettingsAuthedAppPermissions(oauth2Token) {
         let obj = { style: items.permissionContainer, children: null };
         obj = { style: items.permissionIcon, size: "xs", color: c1(576).colors.STATUS_POSITIVE };
         items = [, ];
-        items[0] = closure_2_5(items(4520).CircleCheckIcon, obj);
+        items[0] = closure_2_5(items(4534).CircleCheckIcon, obj);
         obj = { style: items.permissionText, variant: "text-sm/normal", color: "text-default", children };
-        items[1] = closure_2_5(items(4556).Text, obj);
+        items[1] = closure_2_5(items(4570).Text, obj);
         obj.children = items;
         return closure_2_6(closure_2_4, obj, index);
       });

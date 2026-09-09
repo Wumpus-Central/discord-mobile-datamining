@@ -1,6 +1,6 @@
-// === Module 9529: pendingFrameLaunch ===
+// === Module 9556: pendingFrameLaunch ===
 
-// Module 9529 (pendingFrameLaunch)
+// Module 9556 (pendingFrameLaunch)
 import size from "module_2" /* 2 */;
 
 let closure_0 = {};
@@ -14,7 +14,4 @@ export const consumePendingFrameLaunch = function consumePendingFrameLaunch(appl
     delete tmp[tmp2];
     return tmp3;
   }
-};
-export const discardPendingFrameLaunch = function discardPendingFrameLaunch(applicationId) {
-  delete tmp2[tmp];
 };

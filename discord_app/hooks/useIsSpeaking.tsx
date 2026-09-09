@@ -1,10 +1,10 @@
-// === Module 9483: useIsSpeaking ===
+// === Module 9510: useIsSpeaking ===
 
-// Module 9483 (useIsSpeaking)
-import SoundboardStore from "SoundboardStore" /* 5012 */;
+// Module 9510 (useIsSpeaking)
+import SoundboardStore from "SoundboardStore" /* 5026 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2011 */;
-import SpeakingStore from "SpeakingStore" /* 5419 */;
-import VoiceStateStore from "VoiceStateStore" /* 4579 */;
+import SpeakingStore from "SpeakingStore" /* 5433 */;
+import VoiceStateStore from "VoiceStateStore" /* 4593 */;
 
 const require = fn;
 const size = fn(2);

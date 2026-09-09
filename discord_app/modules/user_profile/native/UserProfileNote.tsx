@@ -1,13 +1,13 @@
-// === Module 13055: UserProfileNote ===
+// === Module 13081: UserProfileNote ===
 
-// Module 13055 (UserProfileNote)
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4527 */;
-import openEditNoteModalDefault from "openEditNoteModal" /* 13060 */;
+// Module 13081 (UserProfileNote)
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4541 */;
+import openEditNoteModalDefault from "openEditNoteModal" /* 13086 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(4560);
+const createStyles = fn(4574);
 let closure_4 = createStyles.createStyles({ title: { justifyContent: "space-between" } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_profile/native/UserProfileNote.tsx");

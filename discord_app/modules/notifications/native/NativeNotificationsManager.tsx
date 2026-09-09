@@ -1,13 +1,13 @@
-// === Module 17808: NativeNotificationsManager ===
+// === Module 17841: NativeNotificationsManager ===
 
-// Module 17808 (NativeNotificationsManager)
+// Module 17841 (NativeNotificationsManager)
 import LoggerDefault from "Logger" /* 3 */;
-import PushNotificationDefault from "PushNotification" /* 9692 */;
-import ClearChannelNotificationsOnAppForegroundExperiment from "ClearChannelNotificationsOnAppForegroundExperiment" /* 17809 */;
+import PushNotificationDefault from "PushNotification" /* 9719 */;
+import ClearChannelNotificationsOnAppForegroundExperiment from "ClearChannelNotificationsOnAppForegroundExperiment" /* 17842 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import GuildReadStateStore from "GuildReadStateStore" /* 7636 */;
-import ReadStateStore from "ReadStateStore" /* 4575 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7118 */;
+import GuildReadStateStore from "GuildReadStateStore" /* 7650 */;
+import ReadStateStore from "ReadStateStore" /* 4589 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7132 */;
 
 require = fn;
 function getDeliveredNotifications() {
@@ -409,7 +409,7 @@ let prototype = function NativeNotificationsManager() {
             let obj5 = { value, done: true };
             return obj5;
           }
-          obj1 = applyArgumentsResult(8205);
+          obj1 = applyArgumentsResult(8231);
           c7 = 6;
           logger = 1;
           const obj6 = { value: obj1.removeFile(closure_131_0, closure_131_2), done: false };

@@ -1,12 +1,12 @@
-// === Module 7237: IAPStore ===
+// === Module 7251: IAPStore ===
 
-// Module 7237 (IAPStore)
+// Module 7251 (IAPStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import Constants2 from "Constants" /* 1085 */;
-import BillingUtils from "BillingUtils" /* 4233 */;
-import PriceUtils from "PriceUtils" /* 7234 */;
-import Constants from "Constants" /* 7238 */;
+import BillingUtils from "BillingUtils" /* 4246 */;
+import PriceUtils from "PriceUtils" /* 7248 */;
+import Constants from "Constants" /* 7252 */;
 import size from "module_2" /* 2 */;
 
 function updateProduct(currencyCode) {
@@ -101,6 +101,9 @@ prototype["getProduct"] = function getProduct(arg0) {
 };
 prototype["isBusy"] = function isBusy() {
   return set1.size > 0 || isDowngrading;
+};
+prototype["isInCheckout"] = function isInCheckout() {
+  return false;
 };
 prototype["isPurchasingProduct"] = function isPurchasingProduct(GENERIC_CONSUMABLE) {
   return set1.has(GENERIC_CONSUMABLE);

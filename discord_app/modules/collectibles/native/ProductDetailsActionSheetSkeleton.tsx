@@ -1,9 +1,9 @@
-// === Module 13171: ProductDetailsActionSheetSkeleton ===
+// === Module 13194: ProductDetailsActionSheetSkeleton ===
 
-// Module 13171 (ProductDetailsActionSheetSkeleton)
+// Module 13194 (ProductDetailsActionSheetSkeleton)
 import nativeDefault from "native" /* 576 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4296 */;
-import timing from "timing" /* 4561 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4310 */;
+import timing from "timing" /* 4575 */;
 import noop from "module_19" /* 19 */;
 
 const ReanimatedRexportDefault = ReanimatedRexport;
@@ -12,7 +12,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-fn(4560);
+fn(4574);
 let createStyles = { container: { flex: 1 }, scrollArea: { flex: 1 }, block: null, preview: null, info: null, title: null, description: null, price: null, purchaseSection: null, purchaseButton: null };
 createStyles = { backgroundColor: nativeDefault.colors.BORDER_SUBTLE };
 createStyles.block = createStyles;
@@ -28,7 +28,7 @@ createStyles.price = size2;
 let obj2 = { marginTop: nativeDefault.space.PX_24, marginHorizontal: nativeDefault.space.PX_16, gap: nativeDefault.space.PX_8 };
 createStyles.purchaseSection = { paddingHorizontal: nativeDefault.space.PX_16, paddingTop: nativeDefault.space.PX_8, paddingBottom: nativeDefault.space.PX_16 };
 let obj3 = { paddingHorizontal: nativeDefault.space.PX_16, paddingTop: nativeDefault.space.PX_8, paddingBottom: nativeDefault.space.PX_16 };
-createStyles.purchaseButton = { height: fn(4980).LARGE_BUTTON_HEIGHT, borderRadius: nativeDefault.radii.round };
+createStyles.purchaseButton = { height: fn(4994).LARGE_BUTTON_HEIGHT, borderRadius: nativeDefault.radii.round };
 let closure_7 = createStyles.createStyles(createStyles);
 const __initData = { code: "function ProductDetailsActionSheetSkeletonTsx1(){const{opacity}=this.__closure;return{opacity:opacity.get()};}" };
 size = fn(2);
@@ -37,14 +37,14 @@ let result = size.fileFinishedImporting("modules/collectibles/native/ProductDeta
 export default function ProductDetailsActionSheetSkeleton() {
   const tmp = closure_7();
   let sharedValue;
-  let obj = sharedValue(4296);
+  let obj = sharedValue(4310);
   sharedValue = obj.useSharedValue(0.3);
   const items = [sharedValue];
   const effect = noop.useEffect(() => {
     const obj = ReanimatedRexport;
     const result = sharedValue.set(obj.withRepeat(timing.withTiming(1, { duration: 650 }), -1, true));
   }, items);
-  let obj1 = sharedValue(4296);
+  let obj1 = sharedValue(4310);
   const fn = function o() {
     return { opacity: sharedValue.get() };
   };

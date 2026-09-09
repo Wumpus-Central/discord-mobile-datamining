@@ -1,18 +1,18 @@
-// === Module 15196: QuestDockBlurredHeaderPlaceholder ===
+// === Module 15223: QuestDockBlurredHeaderPlaceholder ===
 
-// Module 15196 (QuestDockBlurredHeaderPlaceholder)
-import thumbHashToRGBA from "thumbHashToRGBA" /* 15197 */;
+// Module 15223 (QuestDockBlurredHeaderPlaceholder)
+import thumbHashToRGBA from "thumbHashToRGBA" /* 15224 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ StyleSheet, View: closure_4 } = get_ActivityIndicator);
-const QuestDockMode = fn(5444).QuestDockMode;
-const QuestDockConstants = fn(15098);
+const QuestDockMode = fn(5458).QuestDockMode;
+const QuestDockConstants = fn(15125);
 ({ QUEST_DOCK_EXPANDED_HEIGHT, QUEST_DOCK_UNENROLLED_HEADER_INSET_EXPANDED } = QuestDockConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_7, Fragment: closure_8, jsxs: closure_9 } = jsxProd);
-fn(4560);
+fn(4574);
 let obj = { image: null, overlay: null };
 obj = {};
 const merged = Object.assign(StyleSheet.absoluteFillObject);

@@ -1,20 +1,20 @@
-// === Module 16025: useHomeDrawerGesture ===
+// === Module 16055: useHomeDrawerGesture ===
 
-// Module 16025 (useHomeDrawerGesture)
-import ReanimatedRexport from "ReanimatedRexport" /* 4296 */;
-import NavigationRouteUtils from "NavigationRouteUtils" /* 4417 */;
-import HapticUtils from "HapticUtils" /* 4528 */;
-import timing from "timing" /* 4561 */;
-import HomeDrawerAnimations from "HomeDrawerAnimations" /* 16027 */;
+// Module 16055 (useHomeDrawerGesture)
+import ReanimatedRexport from "ReanimatedRexport" /* 4310 */;
+import NavigationRouteUtils from "NavigationRouteUtils" /* 4431 */;
+import HapticUtils from "HapticUtils" /* 4542 */;
+import timing from "timing" /* 4575 */;
+import HomeDrawerAnimations from "HomeDrawerAnimations" /* 16057 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import HomeDrawerStore from "HomeDrawerStore" /* 16026 */;
-import HomeDrawerSubtitleStore from "HomeDrawerSubtitleStore" /* 16028 */;
+import HomeDrawerStore from "HomeDrawerStore" /* 16056 */;
+import HomeDrawerSubtitleStore from "HomeDrawerSubtitleStore" /* 16058 */;
 
 require = fn;
-const computeMaxX = fn(16026).computeMaxX;
+const computeMaxX = fn(16056).computeMaxX;
 const AnalyticEvents = fn(1074).AnalyticEvents;
-const LaunchPadTypes = fn(11469).LaunchPadTypes;
+const LaunchPadTypes = fn(11496).LaunchPadTypes;
 let c10 = 144;
 let c11 = 96.00000000000001;
 let closure_12 = { PEEK: "PEEK", OPEN: "OPEN" };
@@ -34,14 +34,14 @@ let closure_25 = { code: "function useHomeDrawerGestureTsx13(event){const{gestur
 let closure_26 = { code: "function useHomeDrawerGestureTsx14(event,manager){const{gestureState,isOpenTarget,ACTIVATION_MIN_DISTANCE,beginDrag}=this.__closure;if(gestureState.get().active)return;const touchX=event.changedTouches[0].absoluteX;const touchY=event.changedTouches[0].absoluteY;const absoluteXDiff=Math.abs(touchX-gestureState.get().initialX);const absoluteYDiff=Math.abs(touchY-gestureState.get().initialY);const isOpen=isOpenTarget.get();if(absoluteYDiff>absoluteXDiff||!isOpen&&touchX<gestureState.get().initialX||isOpen&&touchX>gestureState.get().initialX){manager.fail();return;}if(absoluteXDiff<ACTIVATION_MIN_DISTANCE){return;}beginDrag(touchX);manager.activate();}" };
 let closure_27 = { code: "function useHomeDrawerGestureTsx15(event){const{isPanelTouchActive,didSettle,gestureState,panelX,snapX}=this.__closure;isPanelTouchActive.set(true);didSettle.set(false);gestureState.set({active:false,initialX:event.absoluteX,initialY:event.absoluteY,panelX:panelX.get()+snapX.get()});}" };
 let obj = { gesture: null, panelStyles: null, gestureState: null, panelX: null, panelTranslateX: null, guildsBarDrawerStyle: null };
-let Gesture = fn(6655).Gesture;
+let Gesture = fn(6669).Gesture;
 obj.gesture = Gesture.Pan();
 obj.panelStyles = {};
-let ReanimatedHelperTypes = fn(7074);
+let ReanimatedHelperTypes = fn(7088);
 obj.gestureState = ReanimatedHelperTypes.createFakeSharedValue({ active: false, initialX: 0, initialY: 0, panelX: 0 });
-ReanimatedHelperTypes = fn(7074);
+ReanimatedHelperTypes = fn(7088);
 obj.panelX = ReanimatedHelperTypes.createFakeSharedValue(0);
-ReanimatedHelperTypes = fn(7074);
+ReanimatedHelperTypes = fn(7088);
 obj.panelTranslateX = ReanimatedHelperTypes.createFakeSharedValue(0);
 obj.guildsBarDrawerStyle = {};
 const context = noop.createContext({ homeDrawerState: obj, enableHome: false });

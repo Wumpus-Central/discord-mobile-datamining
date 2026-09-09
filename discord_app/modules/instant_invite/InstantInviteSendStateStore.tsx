@@ -1,6 +1,6 @@
-// === Module 9899: InstantInviteSendStateStore ===
+// === Module 9926: InstantInviteSendStateStore ===
 
-// Module 9899 (InstantInviteSendStateStore)
+// Module 9926 (InstantInviteSendStateStore)
 import module_560 from "module_560" /* 560 */;
 import size from "module_2" /* 2 */;
 

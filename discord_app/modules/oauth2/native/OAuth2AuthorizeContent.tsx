@@ -1,11 +1,11 @@
-// === Module 9586: OAuth2AuthorizeContent ===
+// === Module 9613: OAuth2AuthorizeContent ===
 
-// Module 9586 (OAuth2AuthorizeContent)
+// Module 9613 (OAuth2AuthorizeContent)
 import nativeDefault from "native" /* 576 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1477 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1611 */;
-import KeyboardAwareViewDefault from "KeyboardAwareView" /* 5578 */;
-import ObscuredSurfaceDefault from "ObscuredSurface" /* 8716 */;
+import KeyboardAwareViewDefault from "KeyboardAwareView" /* 5592 */;
+import ObscuredSurfaceDefault from "ObscuredSurface" /* 8744 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -13,7 +13,7 @@ get_ActivityIndicator = fn(17);
 ({ View: closure_4, ScrollView: hasOwnProperty } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, Fragment: closure_7, jsxs: closure_8 } = jsxProd);
-fn(4560);
+fn(4574);
 let createStyles = { fill: { flex: 1 }, scrollView: null, scrollViewContentLandscape: null, scrollViewContentPortrait: null, header: null, bodyContainer: null, bodyContainerBackground: null, footerPortrait: null, separator: null };
 createStyles = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, paddingHorizontal: 16 };
 createStyles.scrollView = createStyles;

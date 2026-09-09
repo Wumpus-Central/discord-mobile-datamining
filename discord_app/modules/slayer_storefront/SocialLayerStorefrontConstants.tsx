@@ -1,6 +1,6 @@
-// === Module 7229: SocialLayerStorefrontConstants ===
+// === Module 7243: SocialLayerStorefrontConstants ===
 
-// Module 7229 (SocialLayerStorefrontConstants)
+// Module 7243 (SocialLayerStorefrontConstants)
 import UserStoreConstants from "UserStoreConstants" /* 1383 */;
 import size from "module_2" /* 2 */;
 

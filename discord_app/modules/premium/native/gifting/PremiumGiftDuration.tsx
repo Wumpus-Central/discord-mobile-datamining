@@ -1,14 +1,14 @@
-// === Module 11050: PremiumGiftDuration ===
+// === Module 11077: PremiumGiftDuration ===
 
-// Module 11050 (PremiumGiftDuration)
+// Module 11077 (PremiumGiftDuration)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import useA11yRolesNative from "useA11yRolesNative" /* 4277 */;
-import Text_Text from "Text/Text" /* 4556 */;
-import TableRow from "TableRow" /* 5605 */;
-import RowButton2 from "RowButton" /* 8600 */;
-import NativeGiftContext from "NativeGiftContext" /* 10704 */;
-import usePremiumProductPricingStringDefault from "usePremiumProductPricingString" /* 10756 */;
+import useA11yRolesNative from "useA11yRolesNative" /* 4292 */;
+import Text_Text from "Text/Text" /* 4570 */;
+import TableRow from "TableRow" /* 5619 */;
+import RowButton2 from "RowButton" /* 8628 */;
+import NativeGiftContext from "NativeGiftContext" /* 10731 */;
+import usePremiumProductPricingStringDefault from "usePremiumProductPricingString" /* 10783 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -81,7 +81,7 @@ const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
 let items = [, ];
 ({ YEAR: arr[0], MONTH: arr[1] } = SubscriptionIntervalTypes);
-fn(4560);
+fn(4574);
 let createStyles = { container: null, containerSelected: null, labelContainer: null, labelPromo: null };
 createStyles = { marginTop: nativeDefault.space.PX_8 };
 createStyles.container = createStyles;
@@ -90,7 +90,7 @@ createStyles.labelContainer = { flexDirection: "row" };
 let obj1 = { borderColor: nativeDefault.colors.BACKGROUND_BRAND, borderRadius: nativeDefault.radii.lg, borderWidth: 2 };
 createStyles.labelPromo = { marginStart: nativeDefault.space.PX_8, backgroundColor: nativeDefault.colors.STATUS_POSITIVE_BACKGROUND, paddingHorizontal: nativeDefault.space.PX_8, borderRadius: nativeDefault.radii.round };
 let closure_9 = createStyles.createStyles(createStyles);
-fn(4560);
+fn(4574);
 let obj3 = { durationContainer: null, durationTitle: null };
 let obj2 = { marginStart: nativeDefault.space.PX_8, backgroundColor: nativeDefault.colors.STATUS_POSITIVE_BACKGROUND, paddingHorizontal: nativeDefault.space.PX_8, borderRadius: nativeDefault.radii.round };
 obj3.durationContainer = { marginHorizontal: nativeDefault.space.PX_16 };
@@ -102,13 +102,13 @@ const result = size.fileFinishedImporting("modules/premium/native/gifting/Premiu
 
 export default function PremiumGiftDuration() {
   const tmp = closure_11();
-  let obj = planInterval(10704);
+  let obj = planInterval(10731);
   planInterval = obj.useNativeGiftContext().planInterval;
   obj = { style: tmp.durationContainer, children: null };
   obj = { style: tmp.durationTitle, variant: "text-sm/semibold", children: null };
   const intl = planInterval(1114).intl;
   obj.children = intl.string(planInterval(1114).t["8XT6Nf"]);
-  items = [closure_6(planInterval(4556).Text, obj), ];
+  items = [closure_6(planInterval(4570).Text, obj), ];
   items[1] = items.map((planInterval, index) => timestampProducer(PremiumGiftDurationButton, { selected: planInterval === planInterval, planInterval }, index));
   obj.children = items;
   return closure_7(View, obj);

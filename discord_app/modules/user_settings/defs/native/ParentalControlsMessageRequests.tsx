@@ -1,18 +1,18 @@
-// === Module 15896: ParentalControlsMessageRequests ===
+// === Module 15926: ParentalControlsMessageRequests ===
 
-// Module 15896 (ParentalControlsMessageRequests)
+// Module 15926 (ParentalControlsMessageRequests)
 import util from "util" /* 1114 */;
 import _modDef2396 from "module_2396" /* 2396 */;
-import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 8411 */;
-import AgeVerificationAnalyticsUtils from "AgeVerificationAnalyticsUtils" /* 8413 */;
-import useSelectedTeen from "useSelectedTeen" /* 8652 */;
-import useParentalControlSettings from "useParentalControlSettings" /* 14827 */;
-import ParentalControlledUserSettings from "ParentalControlledUserSettings" /* 14828 */;
-import DefaultDMSettingsExperiment from "DefaultDMSettingsExperiment" /* 15882 */;
-import FamilyCenterStore from "FamilyCenterStore" /* 7537 */;
+import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 8439 */;
+import AgeVerificationAnalyticsUtils from "AgeVerificationAnalyticsUtils" /* 8441 */;
+import useSelectedTeen from "useSelectedTeen" /* 8680 */;
+import useParentalControlSettings from "useParentalControlSettings" /* 14853 */;
+import ParentalControlledUserSettings from "ParentalControlledUserSettings" /* 14854 */;
+import DefaultDMSettingsExperiment from "DefaultDMSettingsExperiment" /* 15912 */;
+import FamilyCenterStore from "FamilyCenterStore" /* 7551 */;
 
 require = fn;
-fn(11473);
+fn(11500);
 let SettingBuilders = {
   useTitle() {
     const intl = util.intl;
@@ -22,7 +22,7 @@ let SettingBuilders = {
     const intl = util.intl;
     return intl.string(_modDef2396["7aYkh1"]);
   },
-  parent: fn(7975).MobileUserSettings.FAMILY_CENTER_PARENTAL_CONTROLS_SETTINGS,
+  parent: fn(7989).MobileUserSettings.FAMILY_CENTER_PARENTAL_CONTROLS_SETTINGS,
   useValue() {
     const defaultGuildsRestricted = useParentalControlSettings.useDefaultGuildsRestricted();
     const selectedTeenId = useSelectedTeen.useSelectedTeenId();

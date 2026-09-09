@@ -1,17 +1,17 @@
-// === Module 13599: GuildBoostingMarketingBoosterRecognitionCards ===
+// === Module 13622: GuildBoostingMarketingBoosterRecognitionCards ===
 
-// Module 13599 (GuildBoostingMarketingBoosterRecognitionCards)
+// Module 13622 (GuildBoostingMarketingBoosterRecognitionCards)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import Text_Text from "Text/Text" /* 4556 */;
-import HeartIcon from "HeartIcon" /* 8779 */;
-import BoostGemIcon from "BoostGemIcon" /* 9380 */;
-import ShieldUserIcon from "ShieldUserIcon" /* 9757 */;
-import BoostTier3Icon from "BoostTier3Icon" /* 13529 */;
-import _modDef13600 from "module_13600" /* 13600 */;
-import _modDef13601 from "module_13601" /* 13601 */;
-import _modDef13602 from "module_13602" /* 13602 */;
-import _modDef13603 from "module_13603" /* 13603 */;
+import Text_Text from "Text/Text" /* 4570 */;
+import HeartIcon from "HeartIcon" /* 8807 */;
+import BoostGemIcon from "BoostGemIcon" /* 9407 */;
+import ShieldUserIcon from "ShieldUserIcon" /* 9784 */;
+import BoostTier3Icon from "BoostTier3Icon" /* 13552 */;
+import _modDef13623 from "module_13623" /* 13623 */;
+import _modDef13624 from "module_13624" /* 13624 */;
+import _modDef13625 from "module_13625" /* 13625 */;
+import _modDef13626 from "module_13626" /* 13626 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -29,14 +29,14 @@ function Card(arg0) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-fn(4560);
+fn(4574);
 let createStyles = { card: null, description: null, iconContainer: null };
 createStyles = { minHeight: 124, width: 172, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, display: "flex", flexDirection: "column", alignItems: "center", margin: 5, borderRadius: nativeDefault.radii.sm, paddingHorizontal: 13, paddingVertical: 16 };
 createStyles.card = createStyles;
 createStyles.description = { textAlign: "center" };
 createStyles.iconContainer = { height: 30, marginBottom: 10 };
 let closure_6 = createStyles.createStyles(createStyles);
-createStyles = fn(4560);
+createStyles = fn(4574);
 let closure_8 = createStyles.createStyles({ container: { marginTop: 50, display: "flex", flexDirection: "column", alignItems: "center" }, title: { textAlign: "center", marginHorizontal: 34 }, recognitionCardsContainer: { marginTop: 15, display: "flex", flexDirection: "row", justifyContent: "center", flexWrap: "wrap" } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_boosting/native/marketing_redesign/GuildBoostingMarketingBoosterRecognitionCards.tsx");
@@ -49,19 +49,19 @@ export default function GuildBoostingMarketingBoosterRecognitionCards() {
   obj.children = intl.string(util.t.IzKs3o);
   const items = [React4(Text_Text.Heading, obj), ];
   obj = { style: tmp.recognitionCardsContainer, children: null };
-  const obj1 = { icon: _modDef13600, IconComponent: BoostGemIcon.BoostGemIcon, children: null };
+  const obj1 = { icon: _modDef13623, IconComponent: BoostGemIcon.BoostGemIcon, children: null };
   const intl2 = util.intl;
   obj1.children = intl2.string(util.t.TZigSO);
   const items1 = [React4(Card, obj1), , , ];
-  const obj2 = { icon: _modDef13601, IconComponent: BoostTier3Icon.BoostTier3Icon, children: null };
+  const obj2 = { icon: _modDef13624, IconComponent: BoostTier3Icon.BoostTier3Icon, children: null };
   const intl3 = util.intl;
   obj2.children = intl3.string(util.t.hjQuV2);
   items1[1] = React4(Card, obj2);
-  const obj3 = { icon: _modDef13602, IconComponent: ShieldUserIcon.ShieldUserIcon, children: null };
+  const obj3 = { icon: _modDef13625, IconComponent: ShieldUserIcon.ShieldUserIcon, children: null };
   const intl4 = util.intl;
   obj3.children = intl4.string(util.t["2RUcaM"]);
   items1[2] = React4(Card, obj3);
-  const obj4 = { icon: _modDef13603, IconComponent: HeartIcon.HeartIcon, children: null };
+  const obj4 = { icon: _modDef13626, IconComponent: HeartIcon.HeartIcon, children: null };
   const intl5 = util.intl;
   obj4.children = intl5.string(util.t.bJoZKV);
   items1[3] = React4(Card, obj4);

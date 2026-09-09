@@ -1,9 +1,9 @@
-// === Module 5739: AgeVerificationSpotIllustration ===
+// === Module 5753: AgeVerificationSpotIllustration ===
 
-// Module 5739 (AgeVerificationSpotIllustration)
+// Module 5753 (AgeVerificationSpotIllustration)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5587 */;
-import _modDef5740 from "module_5740" /* 5740 */;
+import FastImageDefault from "FastImage" /* 5601 */;
+import _modDef5754 from "module_5754" /* 5754 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -24,7 +24,7 @@ export const AgeVerificationSpotIllustration = function AgeVerificationSpotIllus
     num3 = 1;
   }
   let obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  obj = { uri: _modDef5740 };
+  obj = { uri: _modDef5754 };
   obj.source = obj;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];
@@ -32,5 +32,5 @@ export const AgeVerificationSpotIllustration = function AgeVerificationSpotIllus
   obj.accessible = accessible;
   obj.accessibilityLabel = accessibilityLabel;
   obj.resizeMode = resizeMode;
-  return jsx(FastImageDefault, { uri: _modDef5740 });
+  return jsx(FastImageDefault, { uri: _modDef5754 });
 };

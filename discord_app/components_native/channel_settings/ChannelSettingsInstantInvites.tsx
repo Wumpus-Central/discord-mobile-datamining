@@ -1,26 +1,26 @@
-// === Module 16822: ChannelSettingsInstantInvites ===
+// === Module 16859: ChannelSettingsInstantInvites ===
 
-// Module 16822 (ChannelSettingsInstantInvites)
+// Module 16859 (ChannelSettingsInstantInvites)
 import nativeDefault from "native" /* 576 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1611 */;
-import InstantInvite from "InstantInvite" /* 10937 */;
+import InstantInvite from "InstantInvite" /* 10964 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ChannelSettingsStore from "ChannelSettingsStore" /* 8631 */;
+import ChannelSettingsStore from "ChannelSettingsStore" /* 8659 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 
 const InstantInviteDefault = InstantInvite;
 
-const FastestListDefault = tmp2(7055);
-const _modDef10954 = tmp2(10954);
-const _modDef10955 = tmp2(10955);
-const InstantInviteSelfMeasurerDefault = tmp2(16823);
+const FastestListDefault = tmp2(7069);
+const _modDef10981 = tmp2(10981);
+const _modDef10982 = tmp2(10982);
+const InstantInviteSelfMeasurerDefault = tmp2(16860);
 require = fn;
 const View = fn(17).View;
 const ChannelSettingsSections = fn(1074).ChannelSettingsSections;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-fn(4560);
+fn(4574);
 let createStyles = { content: null, gap: null };
 createStyles = { paddingHorizontal: nativeDefault.space.PX_16, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, flex: 1 };
 createStyles.content = createStyles;
@@ -105,7 +105,7 @@ export default function ConnectedChannelSettingsInstantInvites() {
   }, items7);
   if (!loading) {
     if (0 === memo1.length) {
-      obj = { lightSource: _modDef10954, darkSource: _modDef10955, title: null, body: null };
+      obj = { lightSource: _modDef10981, darkSource: _modDef10982, title: null, body: null };
       const intl = tmpResult(1114).intl;
       obj.title = intl.string(tmpResult(1114).t["+nLJkZ"]);
       const intl2 = tmpResult(1114).intl;
@@ -123,7 +123,7 @@ export default function ConnectedChannelSettingsInstantInvites() {
   }
   obj2 = { style: tmp.content, children: null };
   tmp = closure_9;
-  const items8 = [closure_9(tmpResult(7039).SceneLoadingIndicator, {}), ];
+  const items8 = [closure_9(tmpResult(7053).SceneLoadingIndicator, {}), ];
   tmpResult = null;
   if (memo1.length > 0) {
     tmp2 = InstantInviteSelfMeasurerDefault;

@@ -1,9 +1,9 @@
-// === Module 7120: GuildMemberActionCreators ===
+// === Module 7134: GuildMemberActionCreators ===
 
-// Module 7120 (GuildMemberActionCreators)
+// Module 7134 (GuildMemberActionCreators)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import HTTPUtils from "HTTPUtils" /* 1272 */;
-import ImpersonateActionCreators from "ImpersonateActionCreators" /* 5552 */;
+import ImpersonateActionCreators from "ImpersonateActionCreators" /* 5566 */;
 import ImpersonateStore from "ImpersonateStore" /* 2014 */;
 
 require = fn;

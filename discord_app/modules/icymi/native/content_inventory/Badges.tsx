@@ -1,20 +1,20 @@
-// === Module 13012: Badges ===
+// === Module 13038: Badges ===
 
-// Module 13012 (Badges)
+// Module 13038 (Badges)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 576 */;
 import DurationsDefault from "Durations" /* 1090 */;
 import util from "util" /* 1114 */;
-import Text_Text from "Text/Text" /* 4556 */;
-import utils from "utils" /* 8135 */;
-import TrophyIcon from "TrophyIcon" /* 8722 */;
-import FireIcon from "FireIcon" /* 9203 */;
-import GameControllerIcon from "GameControllerIcon" /* 9228 */;
-import RetryIcon from "RetryIcon" /* 10185 */;
-import TimerIcon from "TimerIcon" /* 11610 */;
-import NewUserIcon from "NewUserIcon" /* 13013 */;
-import FlashIcon from "FlashIcon" /* 13015 */;
-import TrendingType from "TrendingType" /* 13017 */;
+import Text_Text from "Text/Text" /* 4570 */;
+import utils from "utils" /* 8161 */;
+import TrophyIcon from "TrophyIcon" /* 8750 */;
+import FireIcon from "FireIcon" /* 9230 */;
+import GameControllerIcon from "GameControllerIcon" /* 9255 */;
+import RetryIcon from "RetryIcon" /* 10212 */;
+import TimerIcon from "TimerIcon" /* 11636 */;
+import NewUserIcon from "NewUserIcon" /* 13039 */;
+import FlashIcon from "FlashIcon" /* 13041 */;
+import TrendingType from "TrendingType" /* 13043 */;
 import noop from "module_19" /* 19 */;
 import LocaleStore from "LocaleStore" /* 2025 */;
 
@@ -63,7 +63,7 @@ function BaseBadge(accessibilityLabel) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7, Fragment: closure_8 } = jsxProd);
-fn(4560);
+fn(4574);
 let createStyles = { icon: { width: 16, height: 16 }, badgeContainer: null, text: null };
 createStyles = { display: "flex", flexDirection: "row", alignItems: "center", gap: 4, backgroundColor: "rgba(255, 255, 255, 0.08)", paddingVertical: nativeDefault.space.PX_4, paddingLeft: nativeDefault.space.PX_8, paddingRight: 10, borderRadius: nativeDefault.radii.sm };
 createStyles.badgeContainer = createStyles;

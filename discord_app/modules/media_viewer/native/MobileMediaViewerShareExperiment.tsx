@@ -1,6 +1,6 @@
-// === Module 8365: MobileMediaViewerShareExperiment ===
+// === Module 8393: MobileMediaViewerShareExperiment ===
 
-// Module 8365 (MobileMediaViewerShareExperiment)
+// Module 8393 (MobileMediaViewerShareExperiment)
 import ApexExperiment from "ApexExperiment" /* 1433 */;
 import size from "module_2" /* 2 */;
 

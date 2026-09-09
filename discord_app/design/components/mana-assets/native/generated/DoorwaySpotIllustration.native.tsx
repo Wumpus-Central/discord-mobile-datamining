@@ -1,9 +1,9 @@
-// === Module 5933: DoorwaySpotIllustration ===
+// === Module 5947: DoorwaySpotIllustration ===
 
-// Module 5933 (DoorwaySpotIllustration)
+// Module 5947 (DoorwaySpotIllustration)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5587 */;
-import _modDef5934 from "module_5934" /* 5934 */;
+import FastImageDefault from "FastImage" /* 5601 */;
+import _modDef5948 from "module_5948" /* 5948 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -24,7 +24,7 @@ export const DoorwaySpotIllustration = function DoorwaySpotIllustration(width) {
     num3 = 1;
   }
   let obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  obj = { uri: _modDef5934 };
+  obj = { uri: _modDef5948 };
   obj.source = obj;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];
@@ -32,5 +32,5 @@ export const DoorwaySpotIllustration = function DoorwaySpotIllustration(width) {
   obj.accessible = accessible;
   obj.accessibilityLabel = accessibilityLabel;
   obj.resizeMode = resizeMode;
-  return jsx(FastImageDefault, { uri: _modDef5934 });
+  return jsx(FastImageDefault, { uri: _modDef5948 });
 };

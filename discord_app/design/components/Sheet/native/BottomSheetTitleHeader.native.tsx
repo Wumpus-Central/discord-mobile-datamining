@@ -1,11 +1,11 @@
-// === Module 7149: BottomSheetTitleHeader ===
+// === Module 7163: BottomSheetTitleHeader ===
 
-// Module 7149 (BottomSheetTitleHeader)
+// Module 7163 (BottomSheetTitleHeader)
 import nativeDefault from "native" /* 576 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1477 */;
-import useToken from "useToken" /* 4262 */;
-import Text_Text from "Text/Text" /* 4556 */;
-import HeaderDebugOverlayDefault from "HeaderDebugOverlay" /* 5625 */;
+import useToken from "useToken" /* 4275 */;
+import Text_Text from "Text/Text" /* 4570 */;
+import HeaderDebugOverlayDefault from "HeaderDebugOverlay" /* 5639 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -113,7 +113,7 @@ function Subtitle(children) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-let createStyles = fn(4560);
+let createStyles = fn(4574);
 let closure_8 = createStyles.createStyles(() => {
   let obj = { container: null, titles: null, subtitle: null, title: null };
   obj = { paddingHorizontal: nativeDefault.modules.mobile.SHEET_HEADER_PADDING_HORIZONTAL, flexDirection: "row", gap: 4, position: "relative" };
@@ -123,9 +123,9 @@ let closure_8 = createStyles.createStyles(() => {
   obj.title = { textAlign: "center" };
   return obj;
 });
-createStyles = fn(4560);
+createStyles = fn(4574);
 let closure_10 = createStyles.createStyles(() => ({ container: { flexDirection: "column" }, accessories: { flexDirection: "row", justifyContent: "space-between" }, item: { flexShrink: 0 } }));
-createStyles = fn(4560);
+createStyles = fn(4574);
 let closure_12 = createStyles.createStyles(() => {
   let obj = { accessory: { position: "absolute", top: 0, bottom: 0, flexShrink: 0, flexDirection: "row", flexGrow: 1 }, leading: null, trailing: null };
   obj = { left: nativeDefault.space.PX_16, justifyContent: "flex-start" };

@@ -1,18 +1,18 @@
-// === Module 13355: useBuyNitroMarketingLifecycleHooks ===
+// === Module 13378: useBuyNitroMarketingLifecycleHooks ===
 
-// Module 13355 (useBuyNitroMarketingLifecycleHooks)
+// Module 13378 (useBuyNitroMarketingLifecycleHooks)
 import nativeDefault from "native" /* 576 */;
 import dismissible_content from "dismissible_content" /* 1943 */;
 import DismissibleContentUtilsAll from "DismissibleContentUtils" /* 1945 */;
-import DismissibleContentUnsafeUtilsAll from "DismissibleContentUnsafeUtils" /* 4380 */;
-import useBuyNitroPurchaseLock from "useBuyNitroPurchaseLock" /* 13360 */;
+import DismissibleContentUnsafeUtilsAll from "DismissibleContentUnsafeUtils" /* 4394 */;
+import useBuyNitroPurchaseLock from "useBuyNitroPurchaseLock" /* 13383 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const PremiumPlanPurchasedStore = fn(7421);
+const PremiumPlanPurchasedStore = fn(7435);
 ({ reset: closure_4, usePremiumPlanPurchasedStore: hasOwnProperty } = PremiumPlanPurchasedStore);
 const ContentDismissActionType = fn(1954).ContentDismissActionType;
-fn(4560);
+fn(4574);
 let createStyles = { navigator: null };
 createStyles = { backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND, borderTopWidth: 0 };
 createStyles.navigator = createStyles;
@@ -50,11 +50,11 @@ export const useBuyNitroMarketingLifecycleHooks = function useBuyNitroMarketingL
     BuyNitroPurchaseLock.end();
     let result = nativeStackNavigation(_navigator[11]).resetBuyNitroTrialAndPriceOverrides();
     return () => {
-      const BuyNitroPurchaseLock = nativeStackNavigation(13360).BuyNitroPurchaseLock;
+      const BuyNitroPurchaseLock = nativeStackNavigation(13383).BuyNitroPurchaseLock;
       BuyNitroPurchaseLock.end();
-      const BuyNitroPurchaseLock2 = nativeStackNavigation(13360).BuyNitroPurchaseLock;
+      const BuyNitroPurchaseLock2 = nativeStackNavigation(13383).BuyNitroPurchaseLock;
       const result = BuyNitroPurchaseLock2.setInitialLoadComplete(false);
-      const result1 = nativeStackNavigation(13361).resetBuyNitroTrialAndPriceOverrides();
+      const result1 = nativeStackNavigation(13384).resetBuyNitroTrialAndPriceOverrides();
     };
   }, []);
   const items1 = [initialLoadCompleted];

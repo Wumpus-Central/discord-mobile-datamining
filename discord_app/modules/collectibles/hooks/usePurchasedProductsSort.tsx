@@ -1,8 +1,8 @@
-// === Module 15080: usePurchasedProductsSort ===
+// === Module 15107: usePurchasedProductsSort ===
 
-// Module 15080 (usePurchasedProductsSort)
+// Module 15107 (usePurchasedProductsSort)
 import _mod19 from "module_19" /* 19 */;
-import CollectiblesPurchaseStore from "CollectiblesPurchaseStore" /* 7558 */;
+import CollectiblesPurchaseStore from "CollectiblesPurchaseStore" /* 7572 */;
 import size from "module_2" /* 2 */;
 
 let useMemo = _mod19.useMemo;

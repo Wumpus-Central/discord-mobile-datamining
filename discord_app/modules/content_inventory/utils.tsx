@@ -1,13 +1,13 @@
-// === Module 8135: utils ===
+// === Module 8161: utils ===
 
-// Module 8135 (utils)
+// Module 8161 (utils)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import DurationsDefault from "Durations" /* 1090 */;
 import util from "util" /* 1114 */;
-import _mod3796 from "module_3796" /* 3796 */;
-import _modDef4153 from "module_4153" /* 4153 */;
-import ContentInventoryEntryType from "ContentInventoryEntryType" /* 8130 */;
-import ContentInventoryTraitType from "ContentInventoryTraitType" /* 8136 */;
+import _mod3809 from "module_3809" /* 3809 */;
+import _modDef4166 from "module_4166" /* 4166 */;
+import ContentInventoryEntryType from "ContentInventoryEntryType" /* 8156 */;
+import ContentInventoryTraitType from "ContentInventoryTraitType" /* 8162 */;
 import size from "module_2" /* 2 */;
 
 function calculateTimestampDurations(end, now) {
@@ -97,8 +97,8 @@ function formatEndedTimestamp(entry, arg1, timestamp, arg3) {
   if (formatSet === undefined) {
     formatSet = closure_6;
   }
-  const obj2 = _modDef4153(timestamp);
-  const tmp3 = _modDef4153;
+  const obj2 = _modDef4166(timestamp);
+  const tmp3 = _modDef4166;
   const diffResult = obj2.diff(tmp3(SnowflakeUtilsDefault.extractTimestamp(entry.id)), "s");
   const absolute = Math.abs(diffResult);
   if (absolute < DurationsDefault.Seconds.MINUTE) {

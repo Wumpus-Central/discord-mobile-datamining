@@ -1,9 +1,9 @@
-// === Module 5426: GuildMemberRequesterStore ===
+// === Module 5440: GuildMemberRequesterStore ===
 
-// Module 5426 (GuildMemberRequesterStore)
+// Module 5440 (GuildMemberRequesterStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import GuildMemberRequesterDefault from "GuildMemberRequester" /* 5427 */;
+import GuildMemberRequesterDefault from "GuildMemberRequester" /* 5441 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 import GuildMemberStore from "GuildMemberStore" /* 2021 */;
 

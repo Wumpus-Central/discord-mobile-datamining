@@ -1,6 +1,6 @@
-// === Module 10422: StickerPickerListEmptyState ===
+// === Module 10449: StickerPickerListEmptyState ===
 
-// Module 10422 (StickerPickerListEmptyState)
+// Module 10449 (StickerPickerListEmptyState)
 import nativeDefault from "native" /* 576 */;
 import noop from "module_19" /* 19 */;
 
@@ -8,7 +8,7 @@ const require = fn;
 const ScrollView = fn(17).ScrollView;
 const EXPRESSION_FOOTER_HEIGHT = fn(1074).EXPRESSION_FOOTER_HEIGHT;
 const jsx = fn(21).jsx;
-fn(4560);
+fn(4574);
 let obj = { emptyStateContainer: { padding: 0, flex: 1 }, emptyStateBody: null, emptyStateImage: null };
 obj = { color: nativeDefault.colors.TEXT_SUBTLE };
 obj.emptyStateBody = obj;
@@ -23,10 +23,10 @@ export default noop.memo(function StickerPickerListEmptyState(insetBottom) {
   insetBottom = insetBottom.insetBottom;
   const items = [insetBottom, insetTop];
   const memo = noop.useMemo(() => ({ marginBottom: insetBottom + EXPRESSION_FOOTER_HEIGHT, marginTop: insetTop, flex: 1 }), items);
-  let obj = insetTop(10326);
+  let obj = insetTop(10353);
   const modalDismissGuardRefreshControl = obj.useModalDismissGuardRefreshControl();
   if (inActionSheet) {
-    let BottomSheetScrollView = insetTop(6627).BottomSheetScrollView;
+    let BottomSheetScrollView = insetTop(6641).BottomSheetScrollView;
   } else {
     BottomSheetScrollView = ScrollView;
   }
@@ -40,7 +40,7 @@ export default noop.memo(function StickerPickerListEmptyState(insetBottom) {
   const intl = insetTop(1114).intl;
   obj.body = intl.string(insetTop(1114).t.jyiGfc);
   ({ emptyStateBody: obj3.bodyStyle, emptyStateContainer: obj3.containerStyle, emptyStateImage: obj3.imageStyle } = closure_7());
-  obj.source = insetBottom(10423);
+  obj.source = insetBottom(10450);
   obj.titleStyle = { marginBottom: 0 };
   obj.children = jsx(insetTop(1178).RefreshEmptyState, { body: null, bodyStyle: null, containerStyle: null, imageStyle: null, source: null, titleStyle: null });
   return <BottomSheetScrollView body={null} bodyStyle={null} containerStyle={null} imageStyle={null} source={null} titleStyle={null} />;

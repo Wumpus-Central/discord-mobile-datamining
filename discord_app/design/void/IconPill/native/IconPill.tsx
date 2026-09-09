@@ -1,15 +1,15 @@
-// === Module 14096: IconPill ===
+// === Module 14119: IconPill ===
 
-// Module 14096 (IconPill)
+// Module 14119 (IconPill)
 import nativeDefault from "native" /* 576 */;
-import IconDefault from "Icon" /* 4977 */;
-import LegacyText_LegacyTextDefault from "LegacyText/LegacyText" /* 8617 */;
+import IconDefault from "Icon" /* 4991 */;
+import LegacyText_LegacyTextDefault from "LegacyText/LegacyText" /* 8645 */;
 import noop from "module_19" /* 19 */;
 
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-fn(4560);
+fn(4574);
 let createStyles = { pillContainer: null, pillIcon: null, pillText: null };
 createStyles = { flexDirection: "row", alignItems: "center", backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: nativeDefault.radii.md, height: 20, paddingHorizontal: 8 };
 createStyles.pillContainer = createStyles;

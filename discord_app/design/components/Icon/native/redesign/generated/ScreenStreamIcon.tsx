@@ -1,9 +1,9 @@
-// === Module 9226: ScreenStreamIcon ===
+// === Module 9253: ScreenStreamIcon ===
 
-// Module 9226 (ScreenStreamIcon)
+// Module 9253 (ScreenStreamIcon)
 import nativeDefault from "native" /* 576 */;
-import BaseIconImage from "BaseIconImage" /* 4261 */;
-import _mod9227 from "module_9227" /* 9227 */;
+import BaseIconImage from "BaseIconImage" /* 4274 */;
+import _mod9254 from "module_9254" /* 9254 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export const ScreenStreamIcon = function ScreenStreamIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod9227, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod9254, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 };

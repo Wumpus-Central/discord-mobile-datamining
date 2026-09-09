@@ -1,6 +1,6 @@
-// === Module 4581: CallConstants ===
+// === Module 4595: CallConstants ===
 
-// Module 4581 (CallConstants)
+// Module 4595 (CallConstants)
 import size from "module_2" /* 2 */;
 
 let PictureInPictureTypes = { STREAM: 0, [0]: "STREAM", HIDDEN_STREAM: 1, [1]: "HIDDEN_STREAM", USER: 2, [2]: "USER", ACTIVITY: 3, [3]: "ACTIVITY" };

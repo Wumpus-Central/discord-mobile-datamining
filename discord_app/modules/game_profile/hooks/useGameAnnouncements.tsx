@@ -1,9 +1,9 @@
-// === Module 8764: useGameAnnouncements ===
+// === Module 8792: useGameAnnouncements ===
 
-// Module 8764 (useGameAnnouncements)
+// Module 8792 (useGameAnnouncements)
 import _mod19 from "module_19" /* 19 */;
-import GameProfileHttpUtils from "GameProfileHttpUtils" /* 8765 */;
-import GameProfileStore from "GameProfileStore" /* 8687 */;
+import GameProfileHttpUtils from "GameProfileHttpUtils" /* 8793 */;
+import GameProfileStore from "GameProfileStore" /* 8715 */;
 import size from "module_2" /* 2 */;
 
 const useEffect = _mod19.useEffect;

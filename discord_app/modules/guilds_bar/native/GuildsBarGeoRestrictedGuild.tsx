@@ -1,23 +1,23 @@
-// === Module 16349: GuildsBarGeoRestrictedGuild ===
+// === Module 16380: GuildsBarGeoRestrictedGuild ===
 
-// Module 16349 (GuildsBarGeoRestrictedGuild)
+// Module 16380 (GuildsBarGeoRestrictedGuild)
 import nativeDefault from "native" /* 576 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1396 */;
-import AlertActionCreatorsDefault from "AlertActionCreators" /* 4904 */;
-import GuildIcon from "GuildIcon" /* 5584 */;
-import FastImageDefault from "FastImage" /* 5587 */;
-import GuildsBarAnimatedItemWrapperDefault from "GuildsBarAnimatedItemWrapper" /* 16297 */;
-import computeGuildsBarCutoutDefault from "computeGuildsBarCutout" /* 16300 */;
-import HomeDrawerGuildRowDefault from "HomeDrawerGuildRow" /* 16319 */;
-import GuildsBarGeoRestrictedBadgeDefault from "GuildsBarGeoRestrictedBadge" /* 16350 */;
+import AlertActionCreatorsDefault from "AlertActionCreators" /* 4918 */;
+import GuildIcon from "GuildIcon" /* 5598 */;
+import FastImageDefault from "FastImage" /* 5601 */;
+import GuildsBarAnimatedItemWrapperDefault from "GuildsBarAnimatedItemWrapper" /* 16327 */;
+import computeGuildsBarCutoutDefault from "computeGuildsBarCutout" /* 16331 */;
+import HomeDrawerGuildRowDefault from "HomeDrawerGuildRow" /* 16350 */;
+import GuildsBarGeoRestrictedBadgeDefault from "GuildsBarGeoRestrictedBadge" /* 16381 */;
 import noop from "module_19" /* 19 */;
 
 const GuildIconDefault = GuildIcon;
 
 require = fn;
-const GUILD_ITEM_BADGE_SIZE = fn(16288).GUILD_ITEM_BADGE_SIZE;
+const GUILD_ITEM_BADGE_SIZE = fn(16318).GUILD_ITEM_BADGE_SIZE;
 const jsx = fn(21).jsx;
-const createStyles = fn(4560);
+const createStyles = fn(4574);
 let obj = { guildIcon: null, geoRestrictedBadge: null };
 let size = { width: nativeDefault.modules.mobile.GUILD_BAR_ITEM_SIZE, height: nativeDefault.modules.mobile.GUILD_BAR_ITEM_SIZE };
 obj.guildIcon = size;
@@ -30,7 +30,7 @@ const result = size.fileFinishedImporting("modules/guilds_bar/native/GuildsBarGe
 export default noop.memo(function GuildsBarGeoRestrictedGuild(restrictedGuild) {
   restrictedGuild = restrictedGuild.restrictedGuild;
   const tmp = closure_5();
-  let obj = restrictedGuild(16297);
+  let obj = restrictedGuild(16327);
   let animatableSourceWithFallback = null;
   if (null != restrictedGuild.icon) {
     let obj1 = AvatarUtilsDefault;
@@ -57,7 +57,7 @@ export default noop.memo(function GuildsBarGeoRestrictedGuild(restrictedGuild) {
       obj.show(obj);
     }
   }), items);
-  obj = { selected: false, unread: false, circle: false, styles: obj.useGuildsBarAnimatedWrapperStyles({ disableSelectedColor: true, disableBGColor: true }), label: restrictedGuild.name, isDragTarget: false, config: memo, cutouts: items, overState: "a", externalChildren: -0.038, expandedChildren: 0.029, children: -3.91 };
+  obj = { selected: false, unread: false, circle: false, styles: obj.useGuildsBarAnimatedWrapperStyles({ disableSelectedColor: true, disableBGColor: true }), label: restrictedGuild.name, isDragTarget: false, config: memo, cutouts: items, overState: "a", externalChildren: 0.658, expandedChildren: "2026-02-pubsub-bulk-ban-users", children: "user" };
   const guildsBarAnimatedWrapperStyles = obj.useGuildsBarAnimatedWrapperStyles({ disableSelectedColor: true, disableBGColor: true });
   const tmp2 = restrictedGuild;
   obj = { style: tmp.geoRestrictedBadge };
@@ -68,8 +68,8 @@ export default noop.memo(function GuildsBarGeoRestrictedGuild(restrictedGuild) {
     const obj2 = { source: animatableSourceWithFallback, style: tmp.guildIcon, fadeDuration: 0 };
     let tmp8Result = jsx(FastImageDefault, { source: animatableSourceWithFallback, style: tmp.guildIcon, fadeDuration: 0 });
   } else {
-    const obj3 = { value: restrictedGuild.name, selected: false, animate: false, size: tmp2(5584).GuildIconSizes.LARGE };
-    tmp8Result = jsx(GuildIconDefault, { value: restrictedGuild.name, selected: false, animate: false, size: tmp2(5584).GuildIconSizes.LARGE });
+    const obj3 = { value: restrictedGuild.name, selected: false, animate: false, size: tmp2(5598).GuildIconSizes.LARGE };
+    tmp8Result = jsx(GuildIconDefault, { value: restrictedGuild.name, selected: false, animate: false, size: tmp2(5598).GuildIconSizes.LARGE });
     const tmp9Result = GuildIconDefault;
   }
   obj.children = tmp8Result;

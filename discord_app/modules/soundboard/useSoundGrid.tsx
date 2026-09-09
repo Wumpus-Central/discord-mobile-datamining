@@ -1,19 +1,19 @@
-// === Module 17066: useSoundGrid ===
+// === Module 17097: useSoundGrid ===
 
-// Module 17066 (useSoundGrid)
-import GuildBoostingUtils from "GuildBoostingUtils" /* 4454 */;
-import SoundboardTypes from "SoundboardTypes" /* 5020 */;
-import useManageResourcePermissions from "useManageResourcePermissions" /* 9676 */;
-import useSoundOrganizer from "useSoundOrganizer" /* 17067 */;
-import TopSoundboardSoundsActionCreators from "TopSoundboardSoundsActionCreators" /* 17070 */;
+// Module 17097 (useSoundGrid)
+import GuildBoostingUtils from "GuildBoostingUtils" /* 4468 */;
+import SoundboardTypes from "SoundboardTypes" /* 5034 */;
+import useManageResourcePermissions from "useManageResourcePermissions" /* 9703 */;
+import useSoundOrganizer from "useSoundOrganizer" /* 17098 */;
+import TopSoundboardSoundsActionCreators from "TopSoundboardSoundsActionCreators" /* 17101 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 import GuildStore from "GuildStore" /* 1979 */;
-import PermissionStore from "PermissionStore" /* 4199 */;
+import PermissionStore from "PermissionStore" /* 4212 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2011 */;
 import UserStore from "UserStore" /* 1371 */;
-import SoundboardStore from "SoundboardStore" /* 5012 */;
+import SoundboardStore from "SoundboardStore" /* 5026 */;
 
 require = fn;
 function createSoundItems(items, fn) {
@@ -50,7 +50,7 @@ function addTopSoundsSection(items, stateFromStores3, arg2) {
     items.push(obj);
   }
 }
-const SoundboardConstants = fn(5014);
+const SoundboardConstants = fn(5028);
 ({ DEFAULT_SOUND_GUILD_ID: closure_11, EMPTY_SOUND_LIST: closure_12 } = SoundboardConstants);
 const PremiumTypes = fn(1373).PremiumTypes;
 const size = fn(2);

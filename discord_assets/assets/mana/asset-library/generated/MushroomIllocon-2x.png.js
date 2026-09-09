@@ -1,6 +1,6 @@
-// === Module 6250: ? ===
+// === Module 6264: ? ===
 
-// Module 6250
+// Module 6264
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/MushroomIllocon-2x.png.js");

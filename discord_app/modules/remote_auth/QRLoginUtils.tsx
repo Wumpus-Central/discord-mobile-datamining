@@ -1,6 +1,6 @@
-// === Module 13851: QRLoginUtils ===
+// === Module 13874: QRLoginUtils ===
 
-// Module 13851 (QRLoginUtils)
+// Module 13874 (QRLoginUtils)
 import URLUtilsDefault from "URLUtils" /* 1365 */;
 import size from "module_2" /* 2 */;
 

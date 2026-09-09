@@ -1,19 +1,19 @@
-// === Module 5596: MemberVerificationForm ===
+// === Module 5610: MemberVerificationForm ===
 
-// Module 5596 (MemberVerificationForm)
-import MemberVerificationTypes from "MemberVerificationTypes" /* 4384 */;
+// Module 5610 (MemberVerificationForm)
+import MemberVerificationTypes from "MemberVerificationTypes" /* 4398 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import MemberVerificationFormStore from "MemberVerificationFormStore" /* 5572 */;
+import MemberVerificationFormStore from "MemberVerificationFormStore" /* 5586 */;
 
 require = fn;
 const View = fn(17).View;
-let closure_8 = fn(5572).NO_MEMBER_VERIFICATION_FORM;
+let closure_8 = fn(5586).NO_MEMBER_VERIFICATION_FORM;
 const VerificationLevels = fn(1074).VerificationLevels;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(4560);
+const createStyles = fn(4574);
 let closure_12 = createStyles.createStyles({ container: { flex: 1, flexDirection: "column", alignItems: "stretch", paddingHorizontal: 16, paddingVertical: 0 }, submitButton: { marginTop: 12, marginBottom: 12 }, error: { alignSelf: "center", paddingVertical: 16, fontSize: 16 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_member_verification/native/components/MemberVerificationForm.tsx");
@@ -58,11 +58,11 @@ export default function MemberVerificationForm(guild) {
             if (null != first) {
               if (memo1) {
                 (function showIncompleteToast() {
-                  closure_1_1(4259);
+                  closure_1_1(4272);
                   const obj = { key: "MEMBER_VERIFICATION_FORM_INCOMPLETE", content: null, icon: null };
                   const intl = closure_1_0(1114).intl;
                   obj.content = intl.string(closure_1_0(1114).t.StC497);
-                  obj.icon = closure_1_1(5597);
+                  obj.icon = closure_1_1(5611);
                   obj.open(obj);
                 })();
                 c6 = 3;

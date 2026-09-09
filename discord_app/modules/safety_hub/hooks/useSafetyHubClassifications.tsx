@@ -1,14 +1,14 @@
-// === Module 11885: useSafetyHubClassifications ===
+// === Module 11911: useSafetyHubClassifications ===
 
-// Module 11885 (useSafetyHubClassifications)
+// Module 11911 (useSafetyHubClassifications)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import initialize from "initialize" /* 504 */;
-import SafetyHubActionCreatorsAll from "SafetyHubActionCreators" /* 11886 */;
+import SafetyHubActionCreatorsAll from "SafetyHubActionCreators" /* 11912 */;
 import noop from "module_19" /* 19 */;
-import SafetyHubStore from "SafetyHubStore" /* 8430 */;
+import SafetyHubStore from "SafetyHubStore" /* 8458 */;
 
 require = fn;
-const ViolationType = fn(8419).ViolationType;
+const ViolationType = fn(8447).ViolationType;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/safety_hub/hooks/useSafetyHubClassifications.tsx");
 
@@ -41,7 +41,7 @@ export const useSafetyHubClassification = function useSafetyHubClassification(cl
     if (guild_metadata != null) {
       member_type = guild_metadata.member_type;
     }
-    if (member_type === tmp(8420).MemberType.OWNER) {
+    if (member_type === tmp(8448).MemberType.OWNER) {
       let GUILD_MEMBER = ViolationType.GUILD_OWNER;
     } else {
       GUILD_MEMBER = ViolationType.GUILD_MEMBER;

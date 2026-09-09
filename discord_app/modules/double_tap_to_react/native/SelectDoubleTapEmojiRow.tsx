@@ -1,22 +1,22 @@
-// === Module 12386: SelectDoubleTapEmojiRow ===
+// === Module 12412: SelectDoubleTapEmojiRow ===
 
-// Module 12386 (SelectDoubleTapEmojiRow)
+// Module 12412 (SelectDoubleTapEmojiRow)
 import nativeDefault from "native" /* 576 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1396 */;
-import EmojiDefault from "Emoji" /* 7130 */;
-import MessageReactionsTypes from "MessageReactionsTypes" /* 7763 */;
-import openEmojiPickerActionSheet from "openEmojiPickerActionSheet" /* 11126 */;
+import EmojiDefault from "Emoji" /* 7144 */;
+import MessageReactionsTypes from "MessageReactionsTypes" /* 7777 */;
+import openEmojiPickerActionSheet from "openEmojiPickerActionSheet" /* 11153 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4552 */;
+import AccessibilityStore from "AccessibilityStore" /* 4566 */;
 
 require = fn;
 const View = fn(17).View;
-const ACTION_SHEET_MAX_WIDTH = fn(7151).ACTION_SHEET_MAX_WIDTH;
+const ACTION_SHEET_MAX_WIDTH = fn(7165).ACTION_SHEET_MAX_WIDTH;
 const EmojiConstants = fn(1374);
 ({ EMOJI_URL_BASE_SIZE: closure_7, EmojiIntention: closure_8 } = EmojiConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_9, Fragment: c10, jsxs: closure_11 } = jsxProd);
-let createStyles = fn(4560);
+let createStyles = fn(4574);
 let obj = { emoji: { width: 24, height: 24 }, customEmoji: { width: 24, height: 24 }, textEmoji: null, emojiRow: null, emojiPressable: null, selectedEmojiPressable: null, emojiWrapper: null, selectedEmojiWrapper: null, chooseEmojiButton: null, customReactionOverlay: null, selectedCustomReactionIcon: null };
 let PlatformUtils = fn(1115);
 let num = 20;
@@ -100,7 +100,7 @@ let closure_13 = noop.memo((emoji) => {
   obj1.src = url;
   obj.children = closure_9(EmojiDefault, obj1);
   obj.children = closure_9(View, obj);
-  return closure_9(emoji(5123).PressableOpacity, obj);
+  return closure_9(emoji(5137).PressableOpacity, obj);
 });
 let obj6 = { color: nativeDefault.colors.REDESIGN_BUTTON_TERTIARY_TEXT };
 size = fn(2);

@@ -1,7 +1,7 @@
-// === Module 12999: useIsUserProfileObfuscated ===
+// === Module 13025: useIsUserProfileObfuscated ===
 
-// Module 12999 (useIsUserProfileObfuscated)
-import UserProfileStore from "UserProfileStore" /* 7621 */;
+// Module 13025 (useIsUserProfileObfuscated)
+import UserProfileStore from "UserProfileStore" /* 7635 */;
 
 const require = fn;
 const size = fn(2);

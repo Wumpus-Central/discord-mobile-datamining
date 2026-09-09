@@ -1,8 +1,8 @@
-// === Module 14596: ProfilePendingImageUtils ===
+// === Module 14621: ProfilePendingImageUtils ===
 
-// Module 14596 (ProfilePendingImageUtils)
+// Module 14621 (ProfilePendingImageUtils)
 import GlobalUtils from "GlobalUtils" /* 1369 */;
-import ProfilePendingImageTypes from "ProfilePendingImageTypes" /* 6989 */;
+import ProfilePendingImageTypes from "ProfilePendingImageTypes" /* 7003 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/profile_customization/ProfilePendingImageUtils.tsx");

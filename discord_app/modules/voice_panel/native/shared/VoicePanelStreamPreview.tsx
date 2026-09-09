@@ -1,13 +1,13 @@
-// === Module 13042: VoicePanelStreamPreview ===
+// === Module 13068: VoicePanelStreamPreview ===
 
-// Module 13042 (VoicePanelStreamPreview)
+// Module 13068 (VoicePanelStreamPreview)
 import nativeDefault from "native" /* 576 */;
-import timing from "timing" /* 4561 */;
-import StreamKeyUtils from "StreamKeyUtils" /* 4612 */;
+import timing from "timing" /* 4575 */;
+import StreamKeyUtils from "StreamKeyUtils" /* 4626 */;
 import noop from "module_19" /* 19 */;
-import ApplicationStreamingStore from "ApplicationStreamingStore" /* 4582 */;
+import ApplicationStreamingStore from "ApplicationStreamingStore" /* 4596 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 4296 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 4310 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
@@ -15,9 +15,9 @@ get_ActivityIndicator = fn(17);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
 let closure_8 = ReanimatedRexport.createAnimatedComponent(Pressable);
-let closure_9 = ReanimatedRexport.createAnimatedComponent(fn(4975).Button);
+let closure_9 = ReanimatedRexport.createAnimatedComponent(fn(4989).Button);
 const OPACITY_TIMING = { duration: 200 };
-const createStyles = fn(4560);
+const createStyles = fn(4574);
 let obj = { roundedCard: null, streamPreviewImage: null, ownStreamTextContainer: null, ownStreamText: null };
 let size = { position: "absolute", alignItems: "center", justifyContent: "center", width: "100%", height: "100%", backgroundColor: nativeDefault.colors.VOICE_VIDEO_VIDEO_TILE_BACKGROUND };
 obj.roundedCard = size;
@@ -47,7 +47,7 @@ export const VoicePanelStreamPreview = function VoicePanelStreamPreview(mode) {
   if (stream != null) {
     ownerId = stream.ownerId;
   }
-  const previewUrl = stream(10067)(guildId, channelId, ownerId).previewUrl;
+  const previewUrl = stream(10094)(guildId, channelId, ownerId).previewUrl;
   let obj = mode(504);
   const items = [ApplicationStreamingStore, AuthenticationStore];
   const items1 = [stream];
@@ -61,7 +61,7 @@ export const VoicePanelStreamPreview = function VoicePanelStreamPreview(mode) {
     }
     return tmp2;
   }, items1);
-  let obj1 = mode(4296);
+  let obj1 = mode(4310);
   class T {
     constructor() {
       obj = mode;
@@ -83,7 +83,7 @@ export const VoicePanelStreamPreview = function VoicePanelStreamPreview(mode) {
       return obj;
     }
   }
-  obj = { mode, withTiming: mode(4561).withTiming, OPACITY_TIMING };
+  obj = { mode, withTiming: mode(4575).withTiming, OPACITY_TIMING };
   T.__closure = obj;
   T.__workletHash = 15496474861955;
   T.__initData = __initData;
@@ -100,17 +100,17 @@ export const VoicePanelStreamPreview = function VoicePanelStreamPreview(mode) {
     let obj2 = { uri: previewUrl };
     obj1.source = obj2;
     obj1.style = tmp.streamPreviewImage;
-    tmp14 = closure_6(tmp2(4296).Image, obj1);
+    tmp14 = closure_6(tmp2(4310).Image, obj1);
   }
   const items2 = [tmp14, ];
   const obj3 = { style: animatedStyle, layout, children: null };
-  const tmp4 = stream(10067);
+  const tmp4 = stream(10094);
   if (stateFromStores) {
     const obj4 = { style: tmp.ownStreamTextContainer, children: null };
     const obj5 = { variant: "text-sm/semibold", color: "text-overlay-light", style: tmp.ownStreamText, children: null };
     const intl2 = tmp8(1114).intl;
     obj5.children = intl2.string(tmp8(1114).t["ro/HN8"]);
-    obj4.children = closure_6(tmp8(4556).Text, obj5);
+    obj4.children = closure_6(tmp8(4570).Text, obj5);
     let tmp16Result = closure_6(closure_3, obj4);
   } else {
     const obj6 = { layout, disabled, text: null, size: "sm", variant: "primary-overlay", onPress: null };
@@ -120,7 +120,7 @@ export const VoicePanelStreamPreview = function VoicePanelStreamPreview(mode) {
     tmp16Result = closure_6(closure_9, obj6);
   }
   obj3.children = tmp16Result;
-  items2[1] = closure_6(stream(7073), obj3);
+  items2[1] = closure_6(stream(7087), obj3);
   obj.children = items2;
   return closure_7(closure_8, obj);
 };

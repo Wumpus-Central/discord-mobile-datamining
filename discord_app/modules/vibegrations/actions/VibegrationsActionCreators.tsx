@@ -1,14 +1,14 @@
-// === Module 16597: VibegrationsActionCreators ===
+// === Module 16628: VibegrationsActionCreators ===
 
-// Module 16597 (VibegrationsActionCreators)
+// Module 16628 (VibegrationsActionCreators)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import HTTPUtils from "HTTPUtils" /* 1272 */;
-import VibegrationsTypes from "VibegrationsTypes" /* 7248 */;
-import FramesActionCreatorsDefault from "FramesActionCreators" /* 9512 */;
-import VibegrationsAnalytics from "VibegrationsAnalytics" /* 16593 */;
+import VibegrationsTypes from "VibegrationsTypes" /* 7259 */;
+import FramesActionCreatorsDefault from "FramesActionCreators" /* 9539 */;
+import VibegrationsAnalytics from "VibegrationsAnalytics" /* 16624 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import FramesStore from "FramesStore" /* 9515 */;
-import VibegrationsProjectStore from "VibegrationsProjectStore" /* 16590 */;
+import FramesStore from "FramesStore" /* 9542 */;
+import VibegrationsProjectStore from "VibegrationsProjectStore" /* 16621 */;
 
 require = fn;
 function reloadVibegrationsAppFrames(application_id) {
@@ -482,7 +482,7 @@ let closure_20 = async function _refreshPublishedProject(arg0, arg1) {
   return iter;
 };
 const Endpoints = fn(1074).Endpoints;
-const isLaunched = fn(9516).isLaunched;
+const isLaunched = fn(9543).isLaunched;
 let c9 = null;
 let c10 = null;
 const size = fn(2);

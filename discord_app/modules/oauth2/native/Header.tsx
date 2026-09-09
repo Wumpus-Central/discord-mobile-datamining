@@ -1,13 +1,13 @@
-// === Module 9442: oauth2/Header ===
+// === Module 9469: oauth2/Header ===
 
-// Module 9442 (oauth2/Header)
+// Module 9469 (oauth2/Header)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import native from "native" /* 1178 */;
 import FlagUtils from "FlagUtils" /* 1384 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1396 */;
-import Text_Text from "Text/Text" /* 4556 */;
-import BotTagDefault from "BotTag" /* 9443 */;
+import Text_Text from "Text/Text" /* 4570 */;
+import BotTagDefault from "BotTag" /* 9470 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -15,7 +15,7 @@ const View = fn(17).View;
 const UserFlags = fn(1074).UserFlags;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-fn(4560);
+fn(4574);
 let createStyles = { header: null, applicationNameWrapper: null, headerIcons: null, ellipseGroup: null, ellipse: null, botTag: null };
 createStyles = { paddingBottom: 16, marginHorizontal: 16, borderTopLeftRadius: nativeDefault.radii.sm, borderTopRightRadius: nativeDefault.radii.sm, flexDirection: "column", justifyContent: "center", alignItems: "center" };
 createStyles.header = createStyles;

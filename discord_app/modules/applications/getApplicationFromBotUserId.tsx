@@ -1,7 +1,7 @@
-// === Module 12604: getApplicationFromBotUserId ===
+// === Module 12630: getApplicationFromBotUserId ===
 
-// Module 12604 (getApplicationFromBotUserId)
-import UserProfileStore from "UserProfileStore" /* 7621 */;
+// Module 12630 (getApplicationFromBotUserId)
+import UserProfileStore from "UserProfileStore" /* 7635 */;
 
 const require = fn;
 const EMPTY_STRING_SNOWFLAKE_ID = fn(1074).EMPTY_STRING_SNOWFLAKE_ID;

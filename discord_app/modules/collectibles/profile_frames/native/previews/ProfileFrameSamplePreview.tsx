@@ -1,13 +1,13 @@
-// === Module 8827: ProfileFrameSamplePreview ===
+// === Module 8856: ProfileFrameSamplePreview ===
 
-// Module 8827 (ProfileFrameSamplePreview)
+// Module 8856 (ProfileFrameSamplePreview)
 import nativeDefault from "native" /* 576 */;
-import useToken from "useToken" /* 4262 */;
-import FastImageDefault from "FastImage" /* 5587 */;
-import ProfileFrameLayerOrder from "ProfileFrameLayerOrder" /* 8207 */;
-import ProfileFrameDefault from "ProfileFrame" /* 8221 */;
-import scaleProfileFrameDefault from "scaleProfileFrame" /* 8224 */;
-import _modDef8828 from "module_8828" /* 8828 */;
+import useToken from "useToken" /* 4275 */;
+import FastImageDefault from "FastImage" /* 5601 */;
+import ProfileFrameLayerOrder from "ProfileFrameLayerOrder" /* 8233 */;
+import ProfileFrameDefault from "ProfileFrame" /* 8247 */;
+import scaleProfileFrameDefault from "scaleProfileFrame" /* 8250 */;
+import _modDef8857 from "module_8857" /* 8857 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -16,14 +16,14 @@ function filterLayer(responsive) {
 }
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: c3, View: closure_4 } = get_ActivityIndicator);
-const UserProfileThemeTypes = fn(7208).UserProfileThemeTypes;
+const UserProfileThemeTypes = fn(7222).UserProfileThemeTypes;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-fn(4560);
+fn(4574);
 let createStyles = { profileFrameContainer: { flex: 1 }, profileContainer: null, sampleProfile: null };
 createStyles = { flex: 1, overflow: "hidden", borderWidth: 1, borderColor: nativeDefault.colors.BORDER_NORMAL, borderRadius: nativeDefault.radii.xs };
 createStyles.profileContainer = createStyles;
-createStyles.sampleProfile = { width: "100%", aspectRatio: fn(8803).SAMPLE_PROFILE_ASPECT_RATIO };
+createStyles.sampleProfile = { width: "100%", aspectRatio: fn(8832).SAMPLE_PROFILE_ASPECT_RATIO };
 let closure_9 = createStyles.createStyles(createStyles);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/collectibles/profile_frames/native/previews/ProfileFrameSamplePreview.tsx");
@@ -68,7 +68,7 @@ export default function ProfileFrameSamplePreview(previewWidth) {
   const obj14 = { source: null, style: null, resizeMode: "cover" };
   const obj15 = { uri: null };
   let tmp3Result = FastImageDefault;
-  obj15.uri = _modDef8828;
+  obj15.uri = _modDef8857;
   obj14.source = obj15;
   obj14.style = tmp.sampleProfile;
   obj13.children = timestampProducer(tmp3Result, obj14);

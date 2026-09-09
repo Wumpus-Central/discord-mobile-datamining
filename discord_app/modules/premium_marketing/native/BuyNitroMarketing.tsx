@@ -1,10 +1,10 @@
-// === Module 13353: BuyNitroMarketing ===
+// === Module 13376: BuyNitroMarketing ===
 
-// Module 13353 (BuyNitroMarketing)
+// Module 13376 (BuyNitroMarketing)
 import nativeDefault from "native" /* 576 */;
-import BuyNitroPerkDetails from "BuyNitroPerkDetails" /* 13389 */;
-import BuyNitroSectionHeaderDefault from "BuyNitroSectionHeader" /* 13396 */;
-import BuyNitroPerkDefault from "BuyNitroPerk" /* 13397 */;
+import BuyNitroPerkDetails from "BuyNitroPerkDetails" /* 13412 */;
+import BuyNitroSectionHeaderDefault from "BuyNitroSectionHeader" /* 13419 */;
+import BuyNitroPerkDefault from "BuyNitroPerk" /* 13420 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -12,7 +12,7 @@ const View = fn(17).View;
 const PremiumTypes = fn(1373).PremiumTypes;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7, Fragment: closure_8 } = jsxProd);
-fn(4560);
+fn(4574);
 let createStyles = { container: null, list: null, listContent: null, listHeader: null, sectionHeader: null, disabled: null };
 createStyles = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER };
 createStyles.container = createStyles;

@@ -1,6 +1,6 @@
-// === Module 6300: ? ===
+// === Module 6314: ? ===
 
-// Module 6300
+// Module 6314
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/NitroStarterBadgeSmallBadge-2x.png.js");

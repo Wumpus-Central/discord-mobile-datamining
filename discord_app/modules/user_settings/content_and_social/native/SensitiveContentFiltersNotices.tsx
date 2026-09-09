@@ -1,15 +1,15 @@
-// === Module 14820: SensitiveContentFiltersNotices ===
+// === Module 14846: SensitiveContentFiltersNotices ===
 
-// Module 14820 (SensitiveContentFiltersNotices)
+// Module 14846 (SensitiveContentFiltersNotices)
 import util from "util" /* 1114 */;
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2024 */;
-import LinkingDefault from "Linking" /* 4255 */;
-import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 8411 */;
-import SafetySettingsNoticeDefault from "SafetySettingsNotice" /* 14690 */;
+import LinkingDefault from "Linking" /* 4268 */;
+import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 8439 */;
+import SafetySettingsNoticeDefault from "SafetySettingsNotice" /* 14716 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const SafetySettingsNoticeType = fn(8399).SafetySettingsNoticeType;
+const SafetySettingsNoticeType = fn(8427).SafetySettingsNoticeType;
 const jsx = fn(21).jsx;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_settings/content_and_social/native/SensitiveContentFiltersNotices.tsx");

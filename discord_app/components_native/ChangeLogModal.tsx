@@ -1,18 +1,18 @@
-// === Module 15545: ChangeLogModal ===
+// === Module 15575: ChangeLogModal ===
 
-// Module 15545 (ChangeLogModal)
+// Module 15575 (ChangeLogModal)
 import nativeDefault from "native" /* 576 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 4763 */;
-import FastImageDefault from "FastImage" /* 5587 */;
-import NavigatorHeader from "NavigatorHeader" /* 5624 */;
-import Navigator from "Navigator" /* 7000 */;
-import ChangeLogStandardTemplateDefault from "ChangeLogStandardTemplate" /* 8090 */;
-import openMediaModal from "openMediaModal" /* 8261 */;
-import common_VideoDefault from "common/Video" /* 8307 */;
-import TouchableHitBoxDefault from "TouchableHitBox" /* 9055 */;
-import _modDef10402 from "module_10402" /* 10402 */;
-import _modDef15546 from "module_15546" /* 15546 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 4777 */;
+import FastImageDefault from "FastImage" /* 5601 */;
+import NavigatorHeader from "NavigatorHeader" /* 5638 */;
+import Navigator from "Navigator" /* 7014 */;
+import ChangeLogStandardTemplateDefault from "ChangeLogStandardTemplate" /* 8106 */;
+import openMediaModal from "openMediaModal" /* 8287 */;
+import common_VideoDefault from "common/Video" /* 8335 */;
+import TouchableHitBoxDefault from "TouchableHitBox" /* 9082 */;
+import _modDef10429 from "module_10429" /* 10429 */;
+import _modDef15576 from "module_15576" /* 15576 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -137,7 +137,7 @@ const CHANGELOG_MODAL_KEY = fn(2010).CHANGELOG_MODAL_KEY;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
 let c9 = 0.5625;
-fn(4560);
+fn(4574);
 let createStyles = { video: { alignSelf: "center" }, videoWrapper: { marginBottom: 8 }, videoSpecial: null, videoOverlay: null, playButton: null, playIcon: null, empty: null };
 createStyles = { borderRadius: nativeDefault.radii.xs, overflow: "hidden" };
 createStyles.videoSpecial = createStyles;
@@ -147,7 +147,7 @@ createStyles.playButton = size;
 createStyles.playIcon = { width: 21, height: 21 };
 createStyles.empty = { width: "100%", height: 240, alignItems: "center", paddingTop: 48 };
 let closure_10 = createStyles.createLegacyClassComponentStyles(createStyles);
-createStyles = fn(4560);
+createStyles = fn(4574);
 let obj1 = { bulletPoint: null, listItem: null, listText: null, listItemContent: null };
 const size1 = { width: 7, height: 7, borderRadius: 3.5, marginRight: 13, marginTop: 7, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_STRONG };
 obj1.bulletPoint = size1;
@@ -175,7 +175,7 @@ ListItem.prototype["render"] = function render() {
   obj.children = items;
   return React6(View, obj);
 };
-ListItem.contextType = fn(4271).ThemeContext;
+ListItem.contextType = fn(4284).ThemeContext;
 const PureComponent2 = noop.PureComponent;
 class ChangeLog extends PureComponent2 {
   constructor() {
@@ -276,7 +276,7 @@ prototype["renderVideo"] = function renderVideo() {
             },
         useLocalHTML: true
       };
-      const items = [closure_7(_modDef15546, obj1), ];
+      const items = [closure_7(_modDef15576, obj1), ];
       let tmp6Result = null;
       if (!tmp2) {
         const obj2 = { style: tmp.videoOverlay, source: null };
@@ -307,9 +307,9 @@ prototype["renderVideo"] = function renderVideo() {
   let tmp12Result = null;
   if (null != video) {
     const obj6 = { accessibilityLabel: "Play Video", accessibilityRole: "button", style: tmp.videoOverlay, onPress: self.playVideo, children: null };
-    const obj7 = { accessibilityLabel: "Play Video", accessibilityRole: "button", source: _modDef10402, onPress: self.playVideo, style: tmp.playButton, iconSize: tmp18(1178).IconSizes.CUSTOM, iconStyle: tmp.playIcon };
+    const obj7 = { accessibilityLabel: "Play Video", accessibilityRole: "button", source: _modDef10429, onPress: self.playVideo, style: tmp.playButton, iconSize: tmp18(1178).IconSizes.CUSTOM, iconStyle: tmp.playIcon };
     obj6.children = closure_7(TouchableHitBoxDefault, obj7);
-    tmp12Result = closure_7(tmp18(5123).PressableOpacity, obj6);
+    tmp12Result = closure_7(tmp18(5137).PressableOpacity, obj6);
     const tmp15Result = TouchableHitBoxDefault;
   }
   items1[1] = tmp12Result;
@@ -324,7 +324,7 @@ prototype["render"] = function render() {
   obj.onScroll = this.handleScroll;
   return React5(ChangeLogStandardTemplateDefault, obj);
 };
-ChangeLog.contextType = fn(4271).ThemeContext;
+ChangeLog.contextType = fn(4284).ThemeContext;
 size = fn(2);
 let result = size.fileFinishedImporting("components_native/ChangeLogModal.tsx");
 

@@ -1,11 +1,11 @@
-// === Module 7177: ConnectionCardView ===
+// === Module 7191: ConnectionCardView ===
 
-// Module 7177 (ConnectionCardView)
+// Module 7191 (ConnectionCardView)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import CircleCheckIcon from "CircleCheckIcon" /* 4520 */;
-import Text_Text from "Text/Text" /* 4556 */;
-import components_Button_Button from "components/Button/Button" /* 4975 */;
+import CircleCheckIcon from "CircleCheckIcon" /* 4534 */;
+import Text_Text from "Text/Text" /* 4570 */;
+import components_Button_Button from "components/Button/Button" /* 4989 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -13,7 +13,7 @@ get_ActivityIndicator = fn(17);
 ({ View: c2, ActivityIndicator: c3 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-fn(4560);
+fn(4574);
 let createStyles = { card: null, leftContent: null, icon: null, textContent: null, connectedStatus: null };
 createStyles = { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: nativeDefault.radii.md, borderWidth: 1, borderColor: nativeDefault.colors.BORDER_SUBTLE, padding: nativeDefault.space.PX_16, marginBottom: nativeDefault.space.PX_12, flexDirection: "row", alignItems: "center", justifyContent: "space-between" };
 createStyles.card = createStyles;

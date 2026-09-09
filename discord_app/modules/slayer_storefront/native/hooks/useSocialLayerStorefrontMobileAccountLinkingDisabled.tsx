@@ -1,7 +1,7 @@
-// === Module 11011: useSocialLayerStorefrontMobileAccountLinkingDisabled ===
+// === Module 11038: useSocialLayerStorefrontMobileAccountLinkingDisabled ===
 
-// Module 11011 (useSocialLayerStorefrontMobileAccountLinkingDisabled)
-import SocialLayerStorefrontStore from "SocialLayerStorefrontStore" /* 7228 */;
+// Module 11038 (useSocialLayerStorefrontMobileAccountLinkingDisabled)
+import SocialLayerStorefrontStore from "SocialLayerStorefrontStore" /* 7242 */;
 
 const require = fn;
 const size = fn(2);

@@ -1,11 +1,11 @@
-// === Module 17203: VoicePanelScreenshareButton ===
+// === Module 17234: VoicePanelScreenshareButton ===
 
-// Module 17203 (VoicePanelScreenshareButton)
+// Module 17234 (VoicePanelScreenshareButton)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
-import useAlertStore from "useAlertStore" /* 4906 */;
-import VoicePanelVideoGuardErrorAlert from "VoicePanelVideoGuardErrorAlert" /* 13266 */;
+import useAlertStore from "useAlertStore" /* 4920 */;
+import VoicePanelVideoGuardErrorAlert from "VoicePanelVideoGuardErrorAlert" /* 13289 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 
@@ -17,11 +17,11 @@ const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
 let MetaQuestUtils = fn(1608);
 if (MetaQuestUtils.isMetaQuest()) {
-  let MobilePhoneShareIcon = fn(12536).ScreenArrowIcon;
+  let MobilePhoneShareIcon = fn(12562).ScreenArrowIcon;
 } else {
-  MobilePhoneShareIcon = fn(17204).MobilePhoneShareIcon;
+  MobilePhoneShareIcon = fn(17235).MobilePhoneShareIcon;
 }
-const createStyles = fn(4560);
+const createStyles = fn(4574);
 MetaQuestUtils = { circle: null, iconContainer: null };
 let size = { width: "100%", height: "100%", borderRadius: nativeDefault.radii.round };
 MetaQuestUtils.circle = size;

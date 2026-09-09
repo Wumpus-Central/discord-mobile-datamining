@@ -1,8 +1,8 @@
-// === Module 13087: useUserProfileApplicationRoleConnections ===
+// === Module 13113: useUserProfileApplicationRoleConnections ===
 
-// Module 13087 (useUserProfileApplicationRoleConnections)
+// Module 13113 (useUserProfileApplicationRoleConnections)
 import _mod19 from "module_19" /* 19 */;
-import UserProfileStore from "UserProfileStore" /* 7621 */;
+import UserProfileStore from "UserProfileStore" /* 7635 */;
 import size from "module_2" /* 2 */;
 
 const useMemo = _mod19.useMemo;

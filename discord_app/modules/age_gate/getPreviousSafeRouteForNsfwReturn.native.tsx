@@ -1,10 +1,10 @@
-// === Module 7327: getPreviousSafeRouteForNsfwReturn ===
+// === Module 7341: getPreviousSafeRouteForNsfwReturn ===
 
-// Module 7327 (getPreviousSafeRouteForNsfwReturn)
+// Module 7341 (getPreviousSafeRouteForNsfwReturn)
 import Constants from "Constants" /* 1074 */;
-import AgeGateUtils from "AgeGateUtils" /* 4771 */;
-import SpoilerChannelUtils from "SpoilerChannelUtils" /* 7329 */;
-import NavigationHistoryStore from "NavigationHistoryStore" /* 7328 */;
+import AgeGateUtils from "AgeGateUtils" /* 4785 */;
+import SpoilerChannelUtils from "SpoilerChannelUtils" /* 7343 */;
+import NavigationHistoryStore from "NavigationHistoryStore" /* 7342 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 import GuildChannelStore from "GuildChannelStore" /* 2012 */;
 import size from "module_2" /* 2 */;

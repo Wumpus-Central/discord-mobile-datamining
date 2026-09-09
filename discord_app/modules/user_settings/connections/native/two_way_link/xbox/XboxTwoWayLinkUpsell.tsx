@@ -1,20 +1,20 @@
-// === Module 14968: XboxTwoWayLinkUpsell ===
+// === Module 14994: XboxTwoWayLinkUpsell ===
 
-// Module 14968 (XboxTwoWayLinkUpsell)
+// Module 14994 (XboxTwoWayLinkUpsell)
 import util from "util" /* 1114 */;
 import dismissible_content from "dismissible_content" /* 1943 */;
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2024 */;
-import FastImageDefault from "FastImage" /* 5587 */;
-import XboxLinkModalActionCreatorsDefault from "XboxLinkModalActionCreators" /* 9222 */;
-import OneWayToTwoWayLinkUpsell from "OneWayToTwoWayLinkUpsell" /* 14969 */;
-import _modDef14970 from "module_14970" /* 14970 */;
+import FastImageDefault from "FastImage" /* 5601 */;
+import XboxLinkModalActionCreatorsDefault from "XboxLinkModalActionCreators" /* 9249 */;
+import OneWayToTwoWayLinkUpsell from "OneWayToTwoWayLinkUpsell" /* 14995 */;
+import _modDef14996 from "module_14996" /* 14996 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const Constants = fn(1074);
 ({ HelpdeskArticles: c3, AnalyticsLocations: closure_4 } = Constants);
 const jsx = fn(21).jsx;
-const createStyles = fn(4560);
+const createStyles = fn(4574);
 let closure_6 = createStyles.createStyles({ upsellImage: { alignSelf: "center", width: 84, marginLeft: 16 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/connections/native/two_way_link/xbox/XboxTwoWayLinkUpsell.tsx");
@@ -29,7 +29,7 @@ export const XboxTwoWayLinkUpsell = function XboxTwoWayLinkUpsell() {
   obj.body = intl2.format(util.t.OnERSS, { help_article: articleURL });
   obj = { style: closure_6().upsellImage, source: null, resizeMode: "contain" };
   const tmp = closure_6();
-  obj.source = _modDef14970;
+  obj.source = _modDef14996;
   obj.img = jsx(FastImageDefault, { style: closure_6().upsellImage, source: null, resizeMode: "contain" });
   obj.newIndicatorDismissibleContent = dismissible_content.DismissibleContent.XBOX_ONE_WAY_RECONNECT;
   obj.onPress = function onPress() {

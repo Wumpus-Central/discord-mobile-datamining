@@ -1,11 +1,11 @@
-// === Module 10333: openEmojiActionSheet ===
+// === Module 10360: openEmojiActionSheet ===
 
-// Module 10333 (openEmojiActionSheet)
+// Module 10360 (openEmojiActionSheet)
 import EmojiConstants from "EmojiConstants" /* 1374 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1396 */;
 import KeyboardManagerUtils from "KeyboardManagerUtils" /* 1874 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4527 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4541 */;
 import size from "module_2" /* 2 */;
 
 const EMOJI_URL_BASE_SIZE = EmojiConstants.EMOJI_URL_BASE_SIZE;
@@ -26,7 +26,7 @@ export const openEmojiActionSheet = function openEmojiActionSheet(uniqueName) {
       const obj6 = ActionSheetActionCreatorsDefault;
       obj = { emojiNode: null };
       obj.emojiNode = obj;
-      obj6.openLazy(asyncRequireImpl(10334, dependencyMap.paths), "MessageEmojiActionSheet", obj, "stack");
+      obj6.openLazy(asyncRequireImpl(10361, dependencyMap.paths), "MessageEmojiActionSheet", obj, "stack");
     }
     obj = { id: uniqueName.id, alt: name, src: null };
     if (null != uniqueName.id) {

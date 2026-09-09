@@ -1,15 +1,15 @@
-// === Module 13098: AddToWishlistGrid ===
+// === Module 13124: AddToWishlistGrid ===
 
-// Module 13098 (AddToWishlistGrid)
-import WishlistAnalyticsContext from "WishlistAnalyticsContext" /* 13097 */;
-import AddToWishlistItemCardDefault from "AddToWishlistItemCard" /* 13099 */;
+// Module 13124 (AddToWishlistGrid)
+import WishlistAnalyticsContext from "WishlistAnalyticsContext" /* 13123 */;
+import AddToWishlistItemCardDefault from "AddToWishlistItemCard" /* 13125 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-fn(4560);
-const createStyles = { itemsContainer: { flexDirection: "row", flexWrap: "wrap", gap: fn(7208).WISHLIST_SUGGESTION_CARD_GAP, justifyContent: "flex-start" } };
+fn(4574);
+const createStyles = { itemsContainer: { flexDirection: "row", flexWrap: "wrap", gap: fn(7222).WISHLIST_SUGGESTION_CARD_GAP, justifyContent: "flex-start" } };
 let closure_5 = createStyles.createStyles(createStyles);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/wishlists/native/AddToWishlistGrid.tsx");

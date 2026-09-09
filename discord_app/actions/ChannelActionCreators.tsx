@@ -1,21 +1,21 @@
-// === Module 4573: ChannelActionCreators ===
+// === Module 4587: ChannelActionCreators ===
 
-// Module 4573 (ChannelActionCreators)
+// Module 4587 (ChannelActionCreators)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import router_utils from "router_utils" /* 1100 */;
 import util from "util" /* 1114 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
 import HTTPUtils from "HTTPUtils" /* 1272 */;
-import shared from "shared" /* 4411 */;
-import RootNavigationRef from "RootNavigationRef" /* 4418 */;
-import transitionToChannel from "transitionToChannel" /* 4571 */;
-import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 5411 */;
-import isChangelogChannelDefault from "isChangelogChannel" /* 8374 */;
+import shared from "shared" /* 4425 */;
+import RootNavigationRef from "RootNavigationRef" /* 4432 */;
+import transitionToChannel from "transitionToChannel" /* 4585 */;
+import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 5425 */;
+import isChangelogChannelDefault from "isChangelogChannel" /* 8402 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ChangelogStore from "ChangelogStore" /* 4574 */;
+import ChangelogStore from "ChangelogStore" /* 4588 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
-import ReadStateStore from "ReadStateStore" /* 4575 */;
+import ReadStateStore from "ReadStateStore" /* 4589 */;
 
 require = fn;
 let closure_6 = fn(1961).createChannelRecordFromServer;
@@ -401,7 +401,7 @@ export default {
       tmpResult.track(constants.CHANGE_LOG_DM_REMOVED, obj);
     }
     tmpResult = DispatcherDefault;
-    obj = { type: "CHANNEL_DELETE", channel: { id, guild_id: "Array", parent_id: "options" }, silent: flag2 };
+    obj = { type: "CHANNEL_DELETE", channel: { id, guild_id: "r", parent_id: "isArray" }, silent: flag2 };
     tmpResult.dispatch(obj);
     if (flag) {
       router_utils.transitionTo(constants2.FRIENDS);
@@ -522,7 +522,7 @@ export default {
         obj = channel2;
       }
       if (!tmp10) {
-        obj1 = name(7323);
+        obj1 = name(7337);
         const result = obj1.checkGuildTemplateDirty(closure_128_2);
       }
       return closure_128_1;

@@ -1,24 +1,24 @@
-// === Module 13797: VoiceChannelHeader ===
+// === Module 13820: VoiceChannelHeader ===
 
-// Module 13797 (VoiceChannelHeader)
+// Module 13820 (VoiceChannelHeader)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import native from "native" /* 1178 */;
-import Text_Text from "Text/Text" /* 4556 */;
-import useChannelNameDefault from "useChannelName" /* 4713 */;
-import isRoleRequiredDefault from "isRoleRequired" /* 5062 */;
-import Pressables from "Pressables" /* 5123 */;
-import instant_invite_InstantInviteUtils from "instant_invite/InstantInviteUtils" /* 9825 */;
-import useIsVoiceChannelFullDefault from "useIsVoiceChannelFull" /* 9942 */;
-import _modDef10036 from "module_10036" /* 10036 */;
-import openGroupDMAddMembersDefault from "openGroupDMAddMembers" /* 11595 */;
-import CallStateHooks from "CallStateHooks" /* 13798 */;
-import OngoingCallStatusLabelDefault from "OngoingCallStatusLabel" /* 13799 */;
-import OngoingCallTimerDefault from "OngoingCallTimer" /* 13800 */;
+import Text_Text from "Text/Text" /* 4570 */;
+import useChannelNameDefault from "useChannelName" /* 4727 */;
+import isRoleRequiredDefault from "isRoleRequired" /* 5076 */;
+import Pressables from "Pressables" /* 5137 */;
+import instant_invite_InstantInviteUtils from "instant_invite/InstantInviteUtils" /* 9852 */;
+import useIsVoiceChannelFullDefault from "useIsVoiceChannelFull" /* 9969 */;
+import _modDef10063 from "module_10063" /* 10063 */;
+import openGroupDMAddMembersDefault from "openGroupDMAddMembers" /* 11621 */;
+import CallStateHooks from "CallStateHooks" /* 13821 */;
+import OngoingCallStatusLabelDefault from "OngoingCallStatusLabel" /* 13822 */;
+import OngoingCallTimerDefault from "OngoingCallTimer" /* 13823 */;
 import noop from "module_19" /* 19 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 1956 */;
 import GuildStore from "GuildStore" /* 1979 */;
-import PermissionStore from "PermissionStore" /* 4199 */;
+import PermissionStore from "PermissionStore" /* 4212 */;
 
 const CallStateHooksDefault = CallStateHooks;
 
@@ -149,7 +149,7 @@ class VoiceChannelHeader {
   }
 }
 function AddMemberButton(onPress) {
-  const obj = { onPress: onPress.onPress, iconSource: _modDef10036, iconStyle: closure_12().icons, accessibilityLabel: null };
+  const obj = { onPress: onPress.onPress, iconSource: _modDef10063, iconStyle: closure_12().icons, accessibilityLabel: null };
   const intl = util.intl;
   obj.accessibilityLabel = intl.string(util.t["6Qgrev"]);
   return closure_1_10(IconButton, obj);
@@ -166,7 +166,7 @@ const Constants = fn(1074);
 ({ Permissions: closure_7, AnalyticsPages: closure_8, InstantInviteSources: closure_9 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-fn(4560);
+fn(4574);
 let createStyles = { container: { alignSelf: "stretch", flexDirection: "row", paddingVertical: 10, paddingHorizontal: 16, alignItems: "center" }, middle: { flex: 1, justifyContent: "space-around", marginHorizontal: 16 }, icons: null, subtitle: null, subtitleWrapper: null };
 createStyles = { flexDirection: "row", tintColor: nativeDefault.colors.WHITE };
 createStyles.icons = createStyles;

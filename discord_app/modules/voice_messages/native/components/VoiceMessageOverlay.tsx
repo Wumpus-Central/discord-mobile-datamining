@@ -1,19 +1,19 @@
-// === Module 12649: VoiceMessageOverlay ===
+// === Module 12675: VoiceMessageOverlay ===
 
-// Module 12649 (VoiceMessageOverlay)
+// Module 12675 (VoiceMessageOverlay)
 import nativeDefault from "native" /* 576 */;
 import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1109 */;
 import util from "util" /* 1114 */;
-import ReanimatedRexport2 from "ReanimatedRexport" /* 4296 */;
-import timing from "timing" /* 4561 */;
-import useIsScreenReaderEnabled from "useIsScreenReaderEnabled" /* 4962 */;
-import setAccessibilityFocus from "setAccessibilityFocus" /* 4971 */;
-import LegacyTokens from "LegacyTokens" /* 5441 */;
-import useRefValueDefault from "useRefValue" /* 5586 */;
-import inlineStyles from "inlineStyles" /* 8456 */;
+import ReanimatedRexport2 from "ReanimatedRexport" /* 4310 */;
+import timing from "timing" /* 4575 */;
+import useIsScreenReaderEnabled from "useIsScreenReaderEnabled" /* 4976 */;
+import setAccessibilityFocus from "setAccessibilityFocus" /* 4985 */;
+import LegacyTokens from "LegacyTokens" /* 5455 */;
+import useRefValueDefault from "useRefValue" /* 5600 */;
+import inlineStyles from "inlineStyles" /* 8484 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4552 */;
+import AccessibilityStore from "AccessibilityStore" /* 4566 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 import apply from "module_12" /* 12 */;
 
@@ -234,18 +234,18 @@ function LockPill(safeAreaBottom) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, AppState: metroRequire } = get_ActivityIndicator);
-const useVoiceMessagesUIStore = fn(11964).useVoiceMessagesUIStore;
-const VoiceMessageAnimationState = fn(11965).VoiceMessageAnimationState;
+const useVoiceMessagesUIStore = fn(11990).useVoiceMessagesUIStore;
+const VoiceMessageAnimationState = fn(11991).VoiceMessageAnimationState;
 const ComponentActionsKeyed = fn(1074).ComponentActionsKeyed;
-const CHAT_INPUT_HEIGHT = fn(11966).CHAT_INPUT_HEIGHT;
+const CHAT_INPUT_HEIGHT = fn(11992).CHAT_INPUT_HEIGHT;
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14, Fragment: closure_15 } = jsxProd);
 let closure_16 = ReanimatedRexport.createAnimatedComponent(fn(1178).Icon);
-let closure_17 = ReanimatedRexport.createAnimatedComponent(fn(4556).Text);
+let closure_17 = ReanimatedRexport.createAnimatedComponent(fn(4570).Text);
 let closure_18 = apply.memoize(() => ReanimatedRexport.createAnimatedComponent(inlineStyles.Ellipse));
 let c19 = 68;
 let c20 = 56;
-const createStyles = fn(4560);
+const createStyles = fn(4574);
 let closure_21 = createStyles.createStyles(() => {
   let obj = { innerContainer: null, contentContainer: null, contentContainerFloating: null, floatingSendButton: null, floatingSendButtonActive: null, floatingSendButtonIconActive: null, voiceChatContainer: null, lockContainer: null, lockParentContainer: null, chevon: null };
   obj = { flexDirection: "row", alignItems: "flex-end", paddingTop: 8, paddingHorizontal: nativeDefault.modules.mobile.VOICE_MESSAGE_RECORDING_CONTAINER_PADDING_HORIZONTAL, paddingBottom: nativeDefault.modules.mobile.VOICE_MESSAGE_RECORDING_CONTAINER_PADDING_BOTTOM };

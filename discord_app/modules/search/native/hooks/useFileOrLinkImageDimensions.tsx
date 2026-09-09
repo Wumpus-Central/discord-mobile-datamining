@@ -1,9 +1,9 @@
-// === Module 16704: useFileOrLinkImageDimensions ===
+// === Module 16741: useFileOrLinkImageDimensions ===
 
-// Module 16704 (useFileOrLinkImageDimensions)
+// Module 16741 (useFileOrLinkImageDimensions)
 import noop from "module_19" /* 19 */;
 
-const SearchConstants = fn(7878);
+const SearchConstants = fn(7892);
 ({ FILES_OR_LINKS_GAP_WIDTH: closure_1, FILES_OR_LINKS_NUM_COLUMNS: c2, FILE_OR_LINK_IMAGE_RATIO: c3, SEARCH_LIST_HORIZONTAL_PADDING: closure_4 } = SearchConstants);
 let size = fn(2);
 let result = size.fileFinishedImporting("modules/search/native/hooks/useFileOrLinkImageDimensions.tsx");

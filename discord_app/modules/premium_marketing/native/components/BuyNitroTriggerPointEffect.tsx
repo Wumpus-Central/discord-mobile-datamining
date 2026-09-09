@@ -1,8 +1,8 @@
-// === Module 13413: BuyNitroTriggerPointEffect ===
+// === Module 13436: BuyNitroTriggerPointEffect ===
 
-// Module 13413 (BuyNitroTriggerPointEffect)
-import useCommonTriggerPoint from "useCommonTriggerPoint" /* 13414 */;
-import OpenNitroTriggerPoint from "OpenNitroTriggerPoint" /* 13415 */;
+// Module 13436 (BuyNitroTriggerPointEffect)
+import useCommonTriggerPoint from "useCommonTriggerPoint" /* 13437 */;
+import OpenNitroTriggerPoint from "OpenNitroTriggerPoint" /* 13438 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/premium_marketing/native/components/BuyNitroTriggerPointEffect.tsx");

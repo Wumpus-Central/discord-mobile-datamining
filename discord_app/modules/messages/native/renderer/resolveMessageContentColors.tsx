@@ -1,9 +1,9 @@
-// === Module 7953: resolveMessageContentColors ===
+// === Module 7967: resolveMessageContentColors ===
 
-// Module 7953 (resolveMessageContentColors)
+// Module 7967 (resolveMessageContentColors)
 import nativeDefault from "native" /* 576 */;
-import shared from "shared" /* 4411 */;
-import createStyles from "createStyles" /* 4560 */;
+import shared from "shared" /* 4425 */;
+import createStyles from "createStyles" /* 4574 */;
 import size from "module_2" /* 2 */;
 
 const result = createStyles.experimental_createToken((theme) => {

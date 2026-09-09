@@ -1,18 +1,18 @@
-// === Module 15804: UserSettingsDesignSystemHaptics ===
+// === Module 15834: UserSettingsDesignSystemHaptics ===
 
-// Module 15804 (UserSettingsDesignSystemHaptics)
-import HapticUtils from "HapticUtils" /* 4528 */;
-import haptics_HapticFeedbackTypesDefault from "haptics/HapticFeedbackTypes" /* 4529 */;
-import Patterns from "Patterns" /* 4530 */;
-import Text_Text from "Text/Text" /* 4556 */;
-import Stack_Stack from "Stack/Stack" /* 4973 */;
-import Card from "Card" /* 5607 */;
+// Module 15834 (UserSettingsDesignSystemHaptics)
+import HapticUtils from "HapticUtils" /* 4542 */;
+import haptics_HapticFeedbackTypesDefault from "haptics/HapticFeedbackTypes" /* 4543 */;
+import Patterns from "Patterns" /* 4544 */;
+import Text_Text from "Text/Text" /* 4570 */;
+import Stack_Stack from "Stack/Stack" /* 4987 */;
+import Card from "Card" /* 5621 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 function HapticButton(text) {
   const type = text.type;
-  return closure_3(type(4975).Button, {
+  return closure_3(type(4989).Button, {
     variant: "secondary",
     onPress() {
       return HapticUtils.triggerHapticFeedback(type);
@@ -23,7 +23,7 @@ function HapticButton(text) {
 const ScrollView = fn(17).ScrollView;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-let createStyles = fn(4560);
+let createStyles = fn(4574);
 let closure_5 = createStyles.createStyles({ container: { padding: 16, alignItems: "center" } });
 createStyles = { type: haptics_HapticFeedbackTypesDefault.IMPACT_LIGHT, label: "IMPACT_LIGHT" };
 let items = [createStyles, , , , , , , , ];
@@ -153,7 +153,7 @@ export default function UserSettingsDesignSystemHaptics() {
     React3(Text_Text.Text, { variant: "text-md/medium", color: "text-subtle", children: "Built-in haptic sequences using triggerPattern(). Each preset uses a compact notation (o=soft, O=strong, .=short gap, -=medium gap, ==long gap)." }),
     items4.map((description) => {
       ({ label, pattern: closure_0 } = description);
-      return closure_3(closure_0(4975).Button, {
+      return closure_3(closure_0(4989).Button, {
         variant: "secondary",
         onPress() {
           return Patterns.triggerPattern(Patterns.Patterns[closure_1_0]);

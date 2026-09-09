@@ -1,6 +1,6 @@
-// === Module 17426: setupLoadFromMessageManagerHandlers ===
+// === Module 17457: setupLoadFromMessageManagerHandlers ===
 
-// Module 17426 (setupLoadFromMessageManagerHandlers)
+// Module 17457 (setupLoadFromMessageManagerHandlers)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/messages/setupLoadFromMessageManagerHandlers.tsx");

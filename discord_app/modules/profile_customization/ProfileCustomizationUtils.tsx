@@ -1,12 +1,12 @@
-// === Module 8166: ProfileCustomizationUtils ===
+// === Module 8192: ProfileCustomizationUtils ===
 
-// Module 8166 (ProfileCustomizationUtils)
+// Module 8192 (ProfileCustomizationUtils)
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1114 */;
-import shared from "shared" /* 4411 */;
+import shared from "shared" /* 4425 */;
 import noop from "module_19" /* 19 */;
-import UserProfileSettingsStore from "UserProfileSettingsStore" /* 8160 */;
-import UserProfileStore from "UserProfileStore" /* 7621 */;
+import UserProfileSettingsStore from "UserProfileSettingsStore" /* 8186 */;
+import UserProfileStore from "UserProfileStore" /* 7635 */;
 import GuildMemberStore from "GuildMemberStore" /* 2021 */;
 
 require = fn;

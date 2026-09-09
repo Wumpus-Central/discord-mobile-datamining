@@ -1,10 +1,10 @@
-// === Module 16294: RoleColorPickerActionSheet ===
+// === Module 16324: RoleColorPickerActionSheet ===
 
-// Module 16294 (RoleColorPickerActionSheet)
+// Module 16324 (RoleColorPickerActionSheet)
 import nativeDefault from "native" /* 576 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4527 */;
-import showCustomColorPickerActionSheetDefault from "showCustomColorPickerActionSheet" /* 14598 */;
-import ColorBlockDefault from "ColorBlock" /* 14600 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4541 */;
+import showCustomColorPickerActionSheetDefault from "showCustomColorPickerActionSheet" /* 14623 */;
+import ColorBlockDefault from "ColorBlock" /* 14625 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -16,7 +16,7 @@ const Constants = fn(1074);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 let items = [...ROLE_COLORS.slice(0, 5), ...ROLE_COLORS.slice(10, 15), ...ROLE_COLORS.slice(5, 10), ...ROLE_COLORS.slice(15, 18)];
-fn(4560);
+fn(4574);
 let createStyles = { body: null, colorWrap: null };
 createStyles = { paddingVertical: nativeDefault.space.PX_16, flexGrow: 1, justifyContent: "center", alignItems: "center" };
 createStyles.body = createStyles;

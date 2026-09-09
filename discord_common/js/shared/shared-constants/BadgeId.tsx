@@ -1,6 +1,6 @@
-// === Module 8184: BadgeId ===
+// === Module 8210: BadgeId ===
 
-// Module 8184 (BadgeId)
+// Module 8210 (BadgeId)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_common/js/shared/shared-constants/BadgeId.tsx");

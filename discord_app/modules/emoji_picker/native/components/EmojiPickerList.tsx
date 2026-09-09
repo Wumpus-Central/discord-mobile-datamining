@@ -1,26 +1,26 @@
-// === Module 10294: EmojiPickerList ===
+// === Module 10321: EmojiPickerList ===
 
-// Module 10294 (EmojiPickerList)
+// Module 10321 (EmojiPickerList)
 import util from "util" /* 1114 */;
-import EmojiUtilsDefault from "EmojiUtils" /* 4217 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 4259 */;
-import ChatInputUtils from "ChatInputUtils" /* 4425 */;
-import HapticUtils from "HapticUtils" /* 4528 */;
-import haptics_HapticFeedbackTypesDefault from "haptics/HapticFeedbackTypes" /* 4529 */;
-import PremiumUpsellUtilsDefault from "PremiumUpsellUtils" /* 9318 */;
-import TopEmojisActionCreators from "TopEmojisActionCreators" /* 10284 */;
-import EmojiPickerUtils from "EmojiPickerUtils" /* 10290 */;
-import RoleSubscriptionUpsellUtilsDefault from "RoleSubscriptionUpsellUtils" /* 10303 */;
-import useEmojiPickerData from "useEmojiPickerData" /* 10308 */;
-import PremiumUpsellSectionDividerDefault from "PremiumUpsellSectionDivider" /* 10311 */;
-import PremiumUpsellGradientBackground from "PremiumUpsellGradientBackground" /* 10312 */;
-import EmojiPickerListComponents from "EmojiPickerListComponents" /* 10314 */;
-import EmojiPickerListRow from "EmojiPickerListRow" /* 10315 */;
-import EmojiPickerPremiumSearchUpsell from "EmojiPickerPremiumSearchUpsell" /* 10318 */;
+import EmojiUtilsDefault from "EmojiUtils" /* 4230 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 4272 */;
+import ChatInputUtils from "ChatInputUtils" /* 4439 */;
+import HapticUtils from "HapticUtils" /* 4542 */;
+import haptics_HapticFeedbackTypesDefault from "haptics/HapticFeedbackTypes" /* 4543 */;
+import PremiumUpsellUtilsDefault from "PremiumUpsellUtils" /* 9345 */;
+import TopEmojisActionCreators from "TopEmojisActionCreators" /* 10311 */;
+import EmojiPickerUtils from "EmojiPickerUtils" /* 10317 */;
+import RoleSubscriptionUpsellUtilsDefault from "RoleSubscriptionUpsellUtils" /* 10330 */;
+import useEmojiPickerData from "useEmojiPickerData" /* 10335 */;
+import PremiumUpsellSectionDividerDefault from "PremiumUpsellSectionDivider" /* 10338 */;
+import PremiumUpsellGradientBackground from "PremiumUpsellGradientBackground" /* 10339 */;
+import EmojiPickerListComponents from "EmojiPickerListComponents" /* 10341 */;
+import EmojiPickerListRow from "EmojiPickerListRow" /* 10342 */;
+import EmojiPickerPremiumSearchUpsell from "EmojiPickerPremiumSearchUpsell" /* 10345 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const IMAGE_SIZE = fn(10295).IMAGE_SIZE;
+const IMAGE_SIZE = fn(10322).IMAGE_SIZE;
 const Constants = fn(1074);
 ({ AnalyticsObjects: hasOwnProperty, AnalyticsPages: metroRequire, AnalyticsSections: closure_7, UpsellTypes: closure_8 } = Constants);
 const EmojiConstants = fn(1374);
@@ -259,6 +259,7 @@ export default noop.memo(function EmojiPickerList(analyticsObject) {
     return useTier0UpsellContent(tmp(tmp2[34]), obj1);
   } else {
     let hasSearchUpsell = tmp16.hasSearchUpsell;
+    let tmpResult = tmp(tmp8 ? tmp2[35] : tmp2[36]);
     if (hasSearchUpsell) {
       hasSearchUpsell = tmp9(tmp2[37]).getMobileEmojiPickerUpsellRestyleEnabledForFeature(tmp9(tmp2[17]).EntitlementFeatureNames.EMOJIS_EVERYWHERE, "native.EmojiPickerList");
       const tmp9Result1 = tmp9(tmp2[37]);
@@ -281,11 +282,15 @@ export default noop.memo(function EmojiPickerList(analyticsObject) {
     obj2.ref = emojiPickerListRef;
     obj2.renderItem = callback2;
     obj2.useTier0UpsellContent = useTier0UpsellContent;
-    const items4 = [useTier0UpsellContent(tmp(tmp8 ? tmp2[35] : tmp2[36]), obj2), ];
+    const items4 = [useTier0UpsellContent(tmpResult, obj2), ];
     let tmp25Result = !hasSearchUpsell;
     if (!hasSearchUpsell) {
-      let obj3 = { bottomSheetIndex, inPortalKeyboard: flag, shouldShow: tmp20 };
-      tmp25Result = tmp25(tmp(tmp2[38]), obj3);
+      let obj3 = { bottomSheetIndex, featureName: null, inPortalKeyboard: null, shouldShow: null };
+      tmpResult = tmp(tmp2[38]);
+      obj3.featureName = tmp9(tmp2[17]).EntitlementFeatureNames.EMOJIS_EVERYWHERE;
+      obj3.inPortalKeyboard = flag;
+      obj3.shouldShow = tmp20;
+      tmp25Result = tmp25(tmpResult, obj3);
     }
     let obj4 = { children: null };
     items4[1] = tmp25Result;

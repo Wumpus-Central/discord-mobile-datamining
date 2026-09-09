@@ -1,10 +1,10 @@
-// === Module 7643: NUFStore ===
+// === Module 7657: NUFStore ===
 
-// Module 7643 (NUFStore)
+// Module 7657 (NUFStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import GuildStore from "GuildStore" /* 1979 */;
-import RelationshipStore from "RelationshipStore" /* 4209 */;
+import RelationshipStore from "RelationshipStore" /* 4222 */;
 
 function handleCacheOrSocketLoaded() {
   let flag = false;

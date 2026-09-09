@@ -1,6 +1,6 @@
-// === Module 10916: useRecipientsLabel ===
+// === Module 10943: useRecipientsLabel ===
 
-// Module 10916 (useRecipientsLabel)
+// Module 10943 (useRecipientsLabel)
 import util from "util" /* 1114 */;
 import GlobalUtils from "GlobalUtils" /* 1369 */;
 import noop from "module_19" /* 19 */;

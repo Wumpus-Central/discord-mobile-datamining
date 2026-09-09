@@ -1,18 +1,18 @@
-// === Module 11413: SafetyToolsSafetyTipsActionSheet ===
+// === Module 11440: SafetyToolsSafetyTipsActionSheet ===
 
-// Module 11413 (SafetyToolsSafetyTipsActionSheet)
+// Module 11440 (SafetyToolsSafetyTipsActionSheet)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import Text_Text from "Text/Text" /* 4556 */;
-import SafetyTipsSectionDefault from "SafetyTipsSection" /* 11381 */;
-import SafetyToolsActionSheetWrapperDefault from "SafetyToolsActionSheetWrapper" /* 11404 */;
+import Text_Text from "Text/Text" /* 4570 */;
+import SafetyTipsSectionDefault from "SafetyTipsSection" /* 11408 */;
+import SafetyToolsActionSheetWrapperDefault from "SafetyToolsActionSheetWrapper" /* 11431 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-let closure_4 = fn(11368).getInappropriateConversationsSafetyTips;
+let closure_4 = fn(11395).getInappropriateConversationsSafetyTips;
 const jsx = fn(21).jsx;
-fn(4560);
+fn(4574);
 let createStyles = { safetyTipsContainer: null };
 createStyles = { marginHorizontal: nativeDefault.space.PX_16 };
 createStyles.safetyTipsContainer = createStyles;

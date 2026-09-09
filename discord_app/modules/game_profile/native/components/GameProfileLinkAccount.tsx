@@ -1,8 +1,8 @@
-// === Module 8738: GameProfileLinkAccount ===
+// === Module 8766: GameProfileLinkAccount ===
 
-// Module 8738 (GameProfileLinkAccount)
+// Module 8766 (GameProfileLinkAccount)
 import nativeDefault from "native" /* 576 */;
-import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 8691 */;
+import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 8719 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1371 */;
 
@@ -10,7 +10,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-fn(4560);
+fn(4574);
 let createStyles = { container: null, headerText: null, card: null, cardImagesContainer: null, ellipseGroup: null, ellipse: null, cardImageApplication: null, cardContent: null, cardText: null };
 createStyles = { gap: nativeDefault.space.PX_8 };
 createStyles.container = createStyles;

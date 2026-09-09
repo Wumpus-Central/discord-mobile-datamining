@@ -1,8 +1,8 @@
-// === Module 6947: OneTimeLoginForgotPasswordConfirmAlertModal ===
+// === Module 6961: OneTimeLoginForgotPasswordConfirmAlertModal ===
 
-// Module 6947 (OneTimeLoginForgotPasswordConfirmAlertModal)
+// Module 6961 (OneTimeLoginForgotPasswordConfirmAlertModal)
 import util from "util" /* 1114 */;
-import AlertModal from "AlertModal" /* 4910 */;
+import AlertModal from "AlertModal" /* 4924 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

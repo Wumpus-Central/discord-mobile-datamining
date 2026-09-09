@@ -1,15 +1,15 @@
-// === Module 17636: RolePermissionTemplatesActionSheet ===
+// === Module 17669: RolePermissionTemplatesActionSheet ===
 
-// Module 17636 (RolePermissionTemplatesActionSheet)
+// Module 17669 (RolePermissionTemplatesActionSheet)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
-import ToastUtils from "ToastUtils" /* 4258 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4527 */;
-import AlertActionCreatorsDefault from "AlertActionCreators" /* 4904 */;
-import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7149 */;
-import ActionSheet from "ActionSheet" /* 7198 */;
-import GuildSettingsRoleTemplateDefault from "GuildSettingsRoleTemplate" /* 17616 */;
+import ToastUtils from "ToastUtils" /* 4271 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4541 */;
+import AlertActionCreatorsDefault from "AlertActionCreators" /* 4918 */;
+import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7163 */;
+import ActionSheet from "ActionSheet" /* 7211 */;
+import GuildSettingsRoleTemplateDefault from "GuildSettingsRoleTemplate" /* 17647 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -17,7 +17,7 @@ const View = fn(17).View;
 const Constants = fn(1074);
 ({ AnalyticEvents: hasOwnProperty, AnalyticsSections: metroRequire } = Constants);
 const jsx = fn(21).jsx;
-fn(4560);
+fn(4574);
 let createStyles = { templateContainer: null };
 createStyles = { paddingVertical: 16, flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER };
 createStyles.templateContainer = createStyles;
@@ -53,12 +53,12 @@ export default function RolePermissionTemplatesActionSheet(guildId) {
           obj.confirmText = intl4.string(util.t.p89ACt);
           obj.onConfirm = function onConfirm() {
             importDefault(closure_0);
-            closure_1_1(4527).hideActionSheet();
-            const obj = closure_1_1(4527);
-            const result = closure_0(4258).roleTemplateAppliedToast();
+            closure_1_1(4541).hideActionSheet();
+            const obj = closure_1_1(4541);
+            const result = closure_0(4271).roleTemplateAppliedToast();
           };
           obj.onCancel = function onCancel() {
-            closure_1_1(4527).hideActionSheet();
+            closure_1_1(4541).hideActionSheet();
           };
           AlertActionCreatorsDefault.show(obj);
         } else {
@@ -87,12 +87,12 @@ export default function RolePermissionTemplatesActionSheet(guildId) {
         obj.confirmText = intl4.string(util.t.p89ACt);
         obj.onConfirm = function onConfirm() {
           importDefault(closure_0);
-          closure_1_1(4527).hideActionSheet();
-          const obj = closure_1_1(4527);
-          const result = closure_0(4258).roleTemplateAppliedToast();
+          closure_1_1(4541).hideActionSheet();
+          const obj = closure_1_1(4541);
+          const result = closure_0(4271).roleTemplateAppliedToast();
         };
         obj.onCancel = function onCancel() {
-          closure_1_1(4527).hideActionSheet();
+          closure_1_1(4541).hideActionSheet();
         };
         AlertActionCreatorsDefault.show(obj);
       } else {
@@ -122,12 +122,12 @@ export default function RolePermissionTemplatesActionSheet(guildId) {
           obj.confirmText = intl4.string(util.t.p89ACt);
           obj.onConfirm = function onConfirm() {
             importDefault(closure_0);
-            closure_1_1(4527).hideActionSheet();
-            const obj = closure_1_1(4527);
-            const result = closure_0(4258).roleTemplateAppliedToast();
+            closure_1_1(4541).hideActionSheet();
+            const obj = closure_1_1(4541);
+            const result = closure_0(4271).roleTemplateAppliedToast();
           };
           obj.onCancel = function onCancel() {
-            closure_1_1(4527).hideActionSheet();
+            closure_1_1(4541).hideActionSheet();
           };
           AlertActionCreatorsDefault.show(obj);
         } else {

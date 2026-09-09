@@ -1,12 +1,12 @@
-// === Module 13298: ForLaterNitroUpsellBar ===
+// === Module 13321: ForLaterNitroUpsellBar ===
 
-// Module 13298 (ForLaterNitroUpsellBar)
-import openForLaterLimitUpsellDefault from "openForLaterLimitUpsell" /* 11711 */;
+// Module 13321 (ForLaterNitroUpsellBar)
+import openForLaterLimitUpsellDefault from "openForLaterLimitUpsell" /* 11737 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
 const PremiumTypes = fn(1373).PremiumTypes;
-const SavedMessagesConstants = fn(7852);
+const SavedMessagesConstants = fn(7866);
 ({ SAVED_BOOKMARKS_MAX: hasOwnProperty, SAVED_REMINDERS_MAX: metroRequire } = SavedMessagesConstants);
 const jsx = fn(21).jsx;
 const size = fn(2);
@@ -16,10 +16,10 @@ export default function ForLaterNitroUpsellBar(isReminder) {
   isReminder = isReminder.isReminder;
   const isAtLimit = isReminder.isAtLimit;
   let analyticsLocations;
-  analyticsLocations = analyticsLocations(7162)().analyticsLocations;
+  analyticsLocations = analyticsLocations(7176)().analyticsLocations;
   const items = [isReminder, analyticsLocations];
   const callback = noop.useCallback(() => openForLaterLimitUpsellDefault(isReminder, analyticsLocations), items);
-  let obj = isReminder(4218);
+  let obj = isReminder(4231);
   const premiumTypeDisplayName = obj.getPremiumTypeDisplayName(PremiumTypes.TIER_2);
   const intl = isReminder(1114).intl;
   const formatToPlainString = intl.formatToPlainString;
@@ -32,5 +32,5 @@ export default function ForLaterNitroUpsellBar(isReminder) {
     const obj1 = { text: formatToPlainString(isReminder ? t["W+ZaoS"] : t["0hoV2D"], obj), isAtLimit, onPress: callback };
     return <tmp3 text={formatToPlainString(isReminder ? t["W+ZaoS"] : t["0hoV2D"], obj)} isAtLimit={isAtLimit} onPress={callback} />;
   }
-  const tmp3 = analyticsLocations(12225);
+  const tmp3 = analyticsLocations(12251);
 };

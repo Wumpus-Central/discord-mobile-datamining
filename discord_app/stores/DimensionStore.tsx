@@ -1,6 +1,6 @@
-// === Module 5271: DimensionStore ===
+// === Module 5285: DimensionStore ===
 
-// Module 5271 (DimensionStore)
+// Module 5285 (DimensionStore)
 import initializeDefault from "initialize" /* 504 */;
 import discord_common_shallowEqualDefault from "discord_common/shallowEqual" /* 558 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;

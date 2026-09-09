@@ -1,6 +1,6 @@
-// === Module 13361: useBuyNitroTrialAndPriceOverrides ===
+// === Module 13384: useBuyNitroTrialAndPriceOverrides ===
 
-// Module 13361 (useBuyNitroTrialAndPriceOverrides)
+// Module 13384 (useBuyNitroTrialAndPriceOverrides)
 import module_560 from "module_560" /* 560 */;
 import size from "module_2" /* 2 */;
 

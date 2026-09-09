@@ -1,9 +1,9 @@
-// === Module 6511: StreamingTier5SmallBadge ===
+// === Module 6525: StreamingTier5SmallBadge ===
 
-// Module 6511 (StreamingTier5SmallBadge)
+// Module 6525 (StreamingTier5SmallBadge)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5587 */;
-import _modDef6512 from "module_6512" /* 6512 */;
+import FastImageDefault from "FastImage" /* 5601 */;
+import _modDef6526 from "module_6526" /* 6526 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -24,7 +24,7 @@ export const StreamingTier5SmallBadge = function StreamingTier5SmallBadge(width)
     num3 = 1;
   }
   let obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  obj = { uri: _modDef6512 };
+  obj = { uri: _modDef6526 };
   obj.source = obj;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];
@@ -32,5 +32,5 @@ export const StreamingTier5SmallBadge = function StreamingTier5SmallBadge(width)
   obj.accessible = accessible;
   obj.accessibilityLabel = accessibilityLabel;
   obj.resizeMode = resizeMode;
-  return jsx(FastImageDefault, { uri: _modDef6512 });
+  return jsx(FastImageDefault, { uri: _modDef6526 });
 };

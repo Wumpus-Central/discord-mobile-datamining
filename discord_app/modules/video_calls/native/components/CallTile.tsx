@@ -1,22 +1,22 @@
-// === Module 10062: CallTile ===
+// === Module 10089: CallTile ===
 
-// Module 10062 (CallTile)
+// Module 10089 (CallTile)
 import nativeDefault from "native" /* 576 */;
 import native from "native" /* 1178 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1611 */;
-import ReanimatedRexportDefault from "ReanimatedRexport" /* 4296 */;
-import timing from "timing" /* 4561 */;
-import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 4761 */;
-import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8179 */;
-import _modDef9447 from "module_9447" /* 9447 */;
-import _modDef9469 from "module_9469" /* 9469 */;
-import TouchableStreamPreviewDefault from "TouchableStreamPreview" /* 10063 */;
-import _modDef10068 from "module_10068" /* 10068 */;
-import _modDef10069 from "module_10069" /* 10069 */;
-import _modDef10070 from "module_10070" /* 10070 */;
-import ParticipantTitleDefault from "ParticipantTitle" /* 10071 */;
+import ReanimatedRexportDefault from "ReanimatedRexport" /* 4310 */;
+import timing from "timing" /* 4575 */;
+import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 4775 */;
+import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8205 */;
+import _modDef9474 from "module_9474" /* 9474 */;
+import _modDef9496 from "module_9496" /* 9496 */;
+import TouchableStreamPreviewDefault from "TouchableStreamPreview" /* 10090 */;
+import _modDef10095 from "module_10095" /* 10095 */;
+import _modDef10096 from "module_10096" /* 10096 */;
+import _modDef10097 from "module_10097" /* 10097 */;
+import ParticipantTitleDefault from "ParticipantTitle" /* 10098 */;
 import noop from "module_19" /* 19 */;
-import ApplicationStreamingStore from "ApplicationStreamingStore" /* 4582 */;
+import ApplicationStreamingStore from "ApplicationStreamingStore" /* 4596 */;
 import UserStore from "UserStore" /* 1371 */;
 
 require = fn;
@@ -44,17 +44,17 @@ class StreamPreviewTile {
 function ParticipantIcon(participant) {
   participant = participant.participant;
   if (participant.type === constants.STREAM) {
-    let tmp3 = _modDef10068;
+    let tmp3 = _modDef10095;
   } else if (participant.type === tmp2.USER) {
     const voicePlatform = participant.voicePlatform;
     if (constants2.MOBILE === voicePlatform) {
-      tmp3 = _modDef10069;
+      tmp3 = _modDef10096;
     } else if (constants2.XBOX === voicePlatform) {
-      tmp3 = _modDef9447;
+      tmp3 = _modDef9474;
     } else if (constants2.PLAYSTATION === voicePlatform) {
-      tmp3 = _modDef9469;
+      tmp3 = _modDef9496;
     } else if (constants2.QUEST === voicePlatform) {
-      tmp3 = _modDef10070;
+      tmp3 = _modDef10097;
     }
   }
   let tmp14 = null;
@@ -148,16 +148,16 @@ class TileOverlay {
 }
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-const ChannelCallStore = fn(9472);
+const ChannelCallStore = fn(9499);
 ({ resetFocus: closure_8, toggleFocus: closure_9 } = ChannelCallStore);
-const CallConstants = fn(4581);
+const CallConstants = fn(4595);
 ({ ParticipantTypes: c10, isStreamParticipant: closure_11, VoicePlatforms: closure_12 } = CallConstants);
 const jsxProd = fn(21);
 ({ jsx: map1, Fragment: closure_14, jsxs: closure_15 } = jsxProd);
-fn(4560);
+fn(4574);
 let obj = { liveContainer: { position: "absolute", top: 8, right: 8 }, titleIcon: { marginRight: 6 }, usernameContainer: null, usernamePosition: null, streamPreview: null, screenshareContainer: null, stageStreamContainer: null };
 obj = { flexDirection: "row", alignItems: "center", alignSelf: "flex-start", backgroundColor: null, borderRadius: null, paddingHorizontal: 8, paddingVertical: 4 };
-const ColorUtils = fn(4409);
+const ColorUtils = fn(4423);
 obj.backgroundColor = ColorUtils.hexOpacityToRgba(nativeDefault.unsafe_rawColors.PRIMARY_700, 0.5);
 obj.borderRadius = nativeDefault.radii.sm;
 obj.usernameContainer = obj;

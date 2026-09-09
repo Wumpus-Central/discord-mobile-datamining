@@ -1,14 +1,14 @@
-// === Module 8582: SafetyTipsRow ===
+// === Module 8610: SafetyTipsRow ===
 
-// Module 8582 (SafetyTipsRow)
+// Module 8610 (SafetyTipsRow)
 import nativeDefault from "native" /* 576 */;
-import Text_Text from "Text/Text" /* 4556 */;
+import Text_Text from "Text/Text" /* 4570 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-fn(4560);
+fn(4574);
 const createStyles = { indexContainer: null };
 let size = { width: 32, height: 32, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE, borderRadius: nativeDefault.radii.round, alignItems: "center", justifyContent: "center", marginRight: nativeDefault.space.PX_4 };
 createStyles.indexContainer = size;

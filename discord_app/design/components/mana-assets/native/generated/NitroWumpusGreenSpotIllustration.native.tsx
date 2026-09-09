@@ -1,9 +1,9 @@
-// === Module 6317: NitroWumpusGreenSpotIllustration ===
+// === Module 6331: NitroWumpusGreenSpotIllustration ===
 
-// Module 6317 (NitroWumpusGreenSpotIllustration)
+// Module 6331 (NitroWumpusGreenSpotIllustration)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5587 */;
-import _modDef6318 from "module_6318" /* 6318 */;
+import FastImageDefault from "FastImage" /* 5601 */;
+import _modDef6332 from "module_6332" /* 6332 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -24,7 +24,7 @@ export const NitroWumpusGreenSpotIllustration = function NitroWumpusGreenSpotIll
     num3 = 1;
   }
   let obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  obj = { uri: _modDef6318 };
+  obj = { uri: _modDef6332 };
   obj.source = obj;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];
@@ -32,5 +32,5 @@ export const NitroWumpusGreenSpotIllustration = function NitroWumpusGreenSpotIll
   obj.accessible = accessible;
   obj.accessibilityLabel = accessibilityLabel;
   obj.resizeMode = resizeMode;
-  return jsx(FastImageDefault, { uri: _modDef6318 });
+  return jsx(FastImageDefault, { uri: _modDef6332 });
 };

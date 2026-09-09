@@ -1,10 +1,10 @@
-// === Module 12701: ContactSyncNameInput ===
+// === Module 12727: ContactSyncNameInput ===
 
-// Module 12701 (ContactSyncNameInput)
+// Module 12727 (ContactSyncNameInput)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 6981 */;
-import ContactSyncErrorDefault from "ContactSyncError" /* 12698 */;
+import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 6995 */;
+import ContactSyncErrorDefault from "ContactSyncError" /* 12724 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -12,7 +12,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-fn(4560);
+fn(4574);
 let createStyles = { flex: { flex: 1 }, content: { flex: 1, padding: 16, paddingBottom: 0 }, title: { marginBottom: 8, textAlign: "center" }, subtitle: { lineHeight: 18, textAlign: "center", marginBottom: 16 }, input: null, formSubtitle: null, button: null, error: null };
 createStyles = { width: "100%", marginTop: 8, marginBottom: 12, padding: 12, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, borderRadius: nativeDefault.radii.lg };
 createStyles.input = createStyles;
@@ -57,7 +57,7 @@ export default function ContactSyncNameInput(prefilledFromContactBook) {
     string2Result = string2(t2["sO+NI5"]);
   }
   obj.children = string2Result;
-  const items1 = [timestampProducer(tmp9(4556).Text, obj), , , , ];
+  const items1 = [timestampProducer(tmp9(4570).Text, obj), , , , ];
   const obj1 = { style: tmp.subtitle, variant: "text-sm/medium", color: "text-default", children: null };
   const intl3 = tmp9(1114).intl;
   const string3 = intl3.string;
@@ -68,18 +68,18 @@ export default function ContactSyncNameInput(prefilledFromContactBook) {
     string3Result = string3(t3.xI496M);
   }
   obj1.children = string3Result;
-  items1[1] = timestampProducer(tmp9(4556).Text, obj1);
+  items1[1] = timestampProducer(tmp9(4570).Text, obj1);
   const obj2 = { variant: "eyebrow", color: "interactive-text-default", children: null };
   const intl4 = tmp9(1114).intl;
   obj2.children = intl4.string(tmp9(1114).t["42/D2U"]);
-  items1[2] = timestampProducer(tmp9(4556).Text, obj2);
+  items1[2] = timestampProducer(tmp9(4570).Text, obj2);
   items1[3] = timestampProducer(tmp9(1178).InputView, { value, onChangeText: tmp2[1], style: tmp.input, autoFocus: true, showBorder: false, showTopContainer: false, clearButtonVisibility: tmp9(1178).ClearButtonVisibility.WITH_CONTENT, autoCorrect: true, autoComplete: "name", textContentType: "name" });
   let tmp12Result = null;
   if (flag) {
     const obj4 = { style: tmp.formSubtitle, variant: "text-xs/medium", color: "text-default", children: null };
     const intl5 = tmp9(1114).intl;
     obj4.children = intl5.string(tmp9(1114).t.bCQt9K);
-    tmp12Result = timestampProducer(tmp9(4556).Text, obj4);
+    tmp12Result = timestampProducer(tmp9(4570).Text, obj4);
   }
   items1[4] = tmp12Result;
   obj.children = items1;
@@ -88,7 +88,7 @@ export default function ContactSyncNameInput(prefilledFromContactBook) {
   if (null != onRemoveName) {
     str = "md";
   }
-  items2[1] = timestampProducer(tmp9(4975).Button, {
+  items2[1] = timestampProducer(tmp9(4989).Button, {
     variant: "primary",
     size: str,
     text: stringResult,
@@ -111,7 +111,7 @@ export default function ContactSyncNameInput(prefilledFromContactBook) {
       }
       return tmp;
     };
-    obj6.children = timestampProducer(tmp9(4975).Button, obj7);
+    obj6.children = timestampProducer(tmp9(4989).Button, obj7);
     tmp12Result = timestampProducer(View, obj6);
   }
   items2[2] = tmp12Result;

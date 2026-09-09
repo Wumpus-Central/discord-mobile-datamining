@@ -1,6 +1,6 @@
-// === Module 7934: RenderMessageOptionsContext ===
+// === Module 7948: RenderMessageOptionsContext ===
 
-// Module 7934 (RenderMessageOptionsContext)
+// Module 7948 (RenderMessageOptionsContext)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/messages/native/renderer/RenderMessageOptionsContext.tsx");

@@ -1,10 +1,10 @@
-// === Module 7382: openUserSettings ===
+// === Module 7396: openUserSettings ===
 
-// Module 7382 (openUserSettings)
+// Module 7396 (openUserSettings)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import Constants from "Constants" /* 1074 */;
-import RootNavigationRef from "RootNavigationRef" /* 4418 */;
-import UserSettingsAccountStore from "UserSettingsAccountStore" /* 7383 */;
+import RootNavigationRef from "RootNavigationRef" /* 4432 */;
+import UserSettingsAccountStore from "UserSettingsAccountStore" /* 7397 */;
 import size from "module_2" /* 2 */;
 
 const UserSettingsSections = Constants.UserSettingsSections;

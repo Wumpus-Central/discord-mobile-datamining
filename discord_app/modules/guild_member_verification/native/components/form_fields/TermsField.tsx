@@ -1,16 +1,16 @@
-// === Module 5600: TermsField ===
+// === Module 5614: TermsField ===
 
-// Module 5600 (TermsField)
+// Module 5614 (TermsField)
 import util from "util" /* 1114 */;
-import TermsFieldListDefault from "TermsFieldList" /* 5601 */;
-import TableCheckboxRow from "TableCheckboxRow" /* 5604 */;
+import TermsFieldListDefault from "TermsFieldList" /* 5615 */;
+import TableCheckboxRow from "TableCheckboxRow" /* 5618 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4560);
+const createStyles = fn(4574);
 let closure_6 = createStyles.createStyles({ container: { marginVertical: 12, flexDirection: "column" } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_member_verification/native/components/form_fields/TermsField.tsx");

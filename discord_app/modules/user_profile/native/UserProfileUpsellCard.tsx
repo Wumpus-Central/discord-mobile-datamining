@@ -1,25 +1,25 @@
-// === Module 14625: UserProfileUpsellCard ===
+// === Module 14650: UserProfileUpsellCard ===
 
-// Module 14625 (UserProfileUpsellCard)
+// Module 14650 (UserProfileUpsellCard)
 import nativeDefault from "native" /* 576 */;
 import ConstantsIOS from "ConstantsIOS" /* 1093 */;
-import LinearGradientDefault from "LinearGradient" /* 4987 */;
+import LinearGradientDefault from "LinearGradient" /* 5001 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: c3, ScrollView: closure_4 } = get_ActivityIndicator);
-const Gradients = fn(7432).Gradients;
+const Gradients = fn(7446).Gradients;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-fn(4560);
+fn(4574);
 let createStyles = { upsellButton: null, titleContainer: null, linearGradient: null, outer: null, scroll: null, inner: null };
 createStyles = { marginTop: 8, flexShrink: 0, borderRadius: nativeDefault.radii.round, gap: 4 };
 createStyles.upsellButton = createStyles;
 createStyles.titleContainer = { flexDirection: "row", alignItems: "center", gap: 4, marginBottom: 4 };
 createStyles.linearGradient = { width: "100%", height: "100%", position: "absolute", overflow: "hidden" };
-createStyles.outer = { marginHorizontal: fn(7208).PROFILE_SIDE_PADDING - 1 };
-let obj1 = { marginHorizontal: fn(7208).PROFILE_SIDE_PADDING - 1 };
+createStyles.outer = { marginHorizontal: fn(7222).PROFILE_SIDE_PADDING - 1 };
+let obj1 = { marginHorizontal: fn(7222).PROFILE_SIDE_PADDING - 1 };
 createStyles.scroll = { borderRadius: nativeDefault.radii.lg, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH };
 createStyles.inner = { paddingVertical: 12, paddingHorizontal: 14 };
 let closure_8 = createStyles.createStyles(createStyles);
@@ -43,9 +43,9 @@ export default function UserProfileUpsellCard(headerText) {
   if (null != headerText) {
     obj = { style: tmp.titleContainer, children: null };
     const obj1 = { color: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY, size: "xs" };
-    const items3 = [closure_6(tmp3(8667).NitroWheelIcon, obj1), ];
+    const items3 = [closure_6(tmp3(8695).NitroWheelIcon, obj1), ];
     const obj2 = { variant: "heading-sm/bold", children: headerText };
-    items3[1] = closure_6(tmp3(4556).Text, obj2);
+    items3[1] = closure_6(tmp3(4570).Text, obj2);
     obj.children = items3;
     tmp6Result = closure_7(closure_3, obj);
   }

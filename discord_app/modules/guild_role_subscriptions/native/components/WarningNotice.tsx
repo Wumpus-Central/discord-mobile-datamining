@@ -1,18 +1,18 @@
-// === Module 17686: WarningNotice ===
+// === Module 17719: WarningNotice ===
 
-// Module 17686 (WarningNotice)
+// Module 17719 (WarningNotice)
 import nativeDefault from "native" /* 576 */;
-import Text_Text from "Text/Text" /* 4556 */;
-import components_Button_Button from "components/Button/Button" /* 4975 */;
-import FastImageDefault from "FastImage" /* 5587 */;
-import _modDef5597 from "module_5597" /* 5597 */;
+import Text_Text from "Text/Text" /* 4570 */;
+import components_Button_Button from "components/Button/Button" /* 4989 */;
+import FastImageDefault from "FastImage" /* 5601 */;
+import _modDef5611 from "module_5611" /* 5611 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-fn(4560);
+fn(4574);
 let createStyles = { container: null, horizontalContainer: null, message: null, actionButtonWrapper: null, containerYellow: null, textYellow: null, alertIcon: null };
 createStyles = { borderRadius: nativeDefault.radii.xs, borderWidth: 1, padding: 12 };
 createStyles.container = createStyles;
@@ -36,7 +36,7 @@ export default function WarningNotice(arg0) {
   ({ container: arr[1], containerYellow: arr[2] } = tmp);
   obj.style = items;
   obj = { style: tmp.horizontalContainer, children: null };
-  obj = { style: tmp.alertIcon, source: _modDef5597 };
+  obj = { style: tmp.alertIcon, source: _modDef5611 };
   const items1 = [React4(FastImageDefault, obj), ];
   const obj1 = { style: null, variant: "text-sm/medium", color: "interactive-text-active", children: notice };
   const items2 = [, ];

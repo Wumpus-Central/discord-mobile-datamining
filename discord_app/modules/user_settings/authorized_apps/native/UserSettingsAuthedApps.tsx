@@ -1,29 +1,29 @@
-// === Module 14941: UserSettingsAuthedApps ===
+// === Module 14967: UserSettingsAuthedApps ===
 
-// Module 14941 (UserSettingsAuthedApps)
+// Module 14967 (UserSettingsAuthedApps)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import CircleInformationIcon from "CircleInformationIcon" /* 4515 */;
-import Text_Text from "Text/Text" /* 4556 */;
-import TableRowGroup from "TableRowGroup" /* 5687 */;
-import UserSettingsModalActionCreatorsDefault from "UserSettingsModalActionCreators" /* 6990 */;
-import UserSettingsUtils from "UserSettingsUtils" /* 6995 */;
-import GlobeEarthIcon from "GlobeEarthIcon" /* 8891 */;
-import applications from "applications" /* 9246 */;
-import EmbedIcon from "EmbedIcon" /* 9436 */;
+import CircleInformationIcon from "CircleInformationIcon" /* 4529 */;
+import Text_Text from "Text/Text" /* 4570 */;
+import TableRowGroup from "TableRowGroup" /* 5701 */;
+import UserSettingsModalActionCreatorsDefault from "UserSettingsModalActionCreators" /* 7004 */;
+import UserSettingsUtils from "UserSettingsUtils" /* 7009 */;
+import GlobeEarthIcon from "GlobeEarthIcon" /* 8918 */;
+import applications from "applications" /* 9273 */;
+import EmbedIcon from "EmbedIcon" /* 9463 */;
 import noop from "module_19" /* 19 */;
-import AuthorizedAppsStore from "AuthorizedAppsStore" /* 7107 */;
+import AuthorizedAppsStore from "AuthorizedAppsStore" /* 7121 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, ActivityIndicator: hasOwnProperty, FlatList: metroRequire } = get_ActivityIndicator);
-const FetchState = fn(7107).FetchState;
+const FetchState = fn(7121).FetchState;
 const Constants = fn(1074);
 ({ AnalyticsPages: closure_9, UserSettingsSections: c10 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12, Fragment: map1 } = jsxProd);
 const PX_24 = nativeDefault.space.PX_24;
-fn(4560);
+fn(4574);
 let createStyles = { spinner: { padding: 16 }, emptyText: { marginTop: 24 }, emptyContainer: { padding: 16 }, container: null, headerDescription: null, appListHeader: null };
 createStyles = { paddingHorizontal: 16, paddingTop: nativeDefault.space.PX_24 };
 createStyles.container = createStyles;

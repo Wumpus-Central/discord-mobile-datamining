@@ -1,21 +1,21 @@
-// === Module 16988: shared/TextChannel ===
+// === Module 17020: shared/TextChannel ===
 
-// Module 16988 (shared/TextChannel)
+// Module 17020 (shared/TextChannel)
 import nativeDefault from "native" /* 576 */;
-import ChannelItemEmbeddedActivitiesDefault from "ChannelItemEmbeddedActivities" /* 16235 */;
-import getLayoutStylesDefault from "getLayoutStyles" /* 16980 */;
+import ChannelItemEmbeddedActivitiesDefault from "ChannelItemEmbeddedActivities" /* 16265 */;
+import getLayoutStylesDefault from "getLayoutStyles" /* 16698 */;
 import noop from "module_19" /* 19 */;
-import ActiveJoinedThreadsStore from "ActiveJoinedThreadsStore" /* 5506 */;
+import ActiveJoinedThreadsStore from "ActiveJoinedThreadsStore" /* 5520 */;
 import LocaleStore from "LocaleStore" /* 2025 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 
 const require = fn;
 const View = fn(17).View;
 const getThemedRippleConfig = fn(1182).getThemedRippleConfig;
-const UnreadSetting = fn(4742).UnreadSetting;
+const UnreadSetting = fn(4756).UnreadSetting;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(4560);
+const createStyles = fn(4574);
 let closure_12 = createStyles.createStyles(() => {
   let obj = { pressable: null, selectedBorder: null, rowSelected: null };
   obj = { flex: 1, borderRadius: getLayoutStylesDefault().container.borderRadius, marginBottom: 1 };
@@ -46,45 +46,45 @@ export default noop.memo(function TextChannel(subtitle) {
   let arr4;
   dependencyMap = undefined;
   const isForumLikeChannelResult = channel.isForumLikeChannel();
-  let obj = channel(16346);
+  let obj = channel(16377);
   const channelUnreadBadgeState = obj.useChannelUnreadBadgeState(channel, flag);
   ({ newChannel, unread, resolvedUnreadSetting, mentionCount } = channelUnreadBadgeState);
   ({ optInEnabled, isMentionLowImportance } = channelUnreadBadgeState);
   const tmp5 = closure_12(flag, unread);
-  let obj1 = channel(7269);
+  let obj1 = channel(7283);
   let obj2 = channel(504);
   const items = [ActiveJoinedThreadsStore];
   const stateFromStores = obj2.useStateFromStores(items, () => ActiveJoinedThreadsStore.getNewThreadCount(channel.guild_id, channel.id));
   let obj3 = channel(504);
   const items1 = [ChannelStore];
   const stateFromStores1 = obj3.useStateFromStores(items1, () => ChannelStore.getChannel(channel.parent_id));
-  let tmp2Result = tmp2(7885);
+  let tmp2Result = tmp2(7899);
   const unreadThreadsCountForParent = tmp2Result.useUnreadThreadsCountForParent(channel.guild_id, channel.id);
   let tmp12 = unread;
-  let tmp8Result = tmp8(15320);
+  let tmp8Result = tmp8(15349);
   if (unread) {
     tmp12 = !flag;
   }
   const tmp8ResultResult = tmp8Result(channel, { unread: tmp12 });
-  tmp2Result = tmp2(7329);
+  tmp2Result = tmp2(7343);
   const isChannelSpoilerGated = tmp2Result.useIsChannelSpoilerGated(channel);
-  const tmp9 = arr4(4713)(stateFromStores1);
-  const fontScale = channel(4982).useFontScale();
-  const tmp2Result1 = channel(4982);
+  const tmp9 = arr4(4727)(stateFromStores1);
+  const fontScale = channel(4996).useFontScale();
+  const tmp2Result1 = channel(4996);
   const items2 = [LocaleStore];
   const stateFromStores2 = channel(504).useStateFromStores(items2, () => locale.locale);
-  const tmp17 = arr4(16989)();
+  const tmp17 = arr4(17021)();
   const tmp2Result2 = channel(504);
-  ({ isSubscriptionGated, needSubscriptionToAccess } = arr4(5007)(channel.id));
-  arr4 = tmp8(12063)(channel);
+  ({ isSubscriptionGated, needSubscriptionToAccess } = arr4(5021)(channel.id));
+  arr4 = tmp8(12089)(channel);
   if (null != tmp8ResultResult) {
     if (!isChannelSpoilerGated) {
-      obj = { channel, message: tmp8ResultResult, color: "text-muted", muted: flag, layout: tmp2(7879).ChannelListLayoutTypes.COMPACT };
-      let result = closure_10(tmp2(10114).ChannelRowPreview, obj);
+      obj = { channel, message: tmp8ResultResult, color: "text-muted", muted: flag, layout: tmp2(7893).ChannelListLayoutTypes.COMPACT };
+      let result = closure_10(tmp2(10141).ChannelRowPreview, obj);
     }
     dependencyMap = tmp22;
     const items3 = [arr4.length > 0, arr4];
-    const isActivitiesInTextEnabled = tmp2(9551).useIsActivitiesInTextEnabled(channel.id);
+    const isActivitiesInTextEnabled = tmp2(9578).useIsActivitiesInTextEnabled(channel.id);
     const memo = noop.useMemo(() => {
       let tmp = null;
       if (closure_2) {
@@ -93,7 +93,7 @@ export default noop.memo(function TextChannel(subtitle) {
       }
       return tmp;
     }, items3);
-    tmp8Result = tmp8(16981);
+    tmp8Result = tmp8(17017);
     const items4 = [tmp5.pressable, ];
     let rowSelected;
     if (selected) {
@@ -105,21 +105,21 @@ export default noop.memo(function TextChannel(subtitle) {
     obj.underlayColor = tmp17;
     obj1 = { color: tmp17 };
     obj.androidRippleConfig = getThemedRippleConfig(obj1);
-    const tmp2Result3 = tmp2(9551);
-    const merged = Object.assign(tmp2(16992).useTextChannelPressEvents(channel, flag2));
-    const tmp2Result4 = tmp2(16992);
+    const tmp2Result3 = tmp2(9578);
+    const merged = Object.assign(tmp2(17024).useTextChannelPressEvents(channel, flag2));
+    const tmp2Result4 = tmp2(17024);
     obj2 = { channel, unread, mentionCount };
-    const merged1 = Object.assign(tmp2(16993).getChannelAccessibilityProps(obj2));
+    const merged1 = Object.assign(tmp2(16697).getChannelAccessibilityProps(obj2));
     if (selected) {
       obj3 = { style: tmp5.selectedBorder, pointerEvents: "none" };
       selected = closure_10(View, obj3);
     }
     const items5 = [selected, ];
     const obj4 = { channel, channelCategoryName: tmp9, subtitle: result, hasActiveThreads: obj1.useHasActiveThreads(channel).hasActiveThreads, unreadBadge: null, mentionBadge: null, unread: null, resolvedUnreadSetting: null, mentionCount: null, muted: null, channelName: null, fontScale: null, isSubscriptionGated: null, needSubscriptionToAccess: null, showGuildBadgeIcon: null, end: null };
-    const tmp2Result5 = tmp2(16993);
+    const tmp2Result5 = tmp2(16697);
     const obj5 = { unread, resolvedUnreadSetting, muted: flag };
-    obj4.unreadBadge = closure_10(tmp8(16984), obj5);
-    const tmp8Result1 = tmp8(16993);
+    obj4.unreadBadge = closure_10(tmp8(17018), obj5);
+    const tmp8Result1 = tmp8(16697);
     if (newChannel) {
       newChannel = optInEnabled;
     }
@@ -145,12 +145,12 @@ export default noop.memo(function TextChannel(subtitle) {
     }
     obj6.newPostCount = tmp40;
     obj6.locale = stateFromStores2;
-    obj4.mentionBadge = tmp8(16987)(obj6);
+    obj4.mentionBadge = tmp8(17019)(obj6);
     obj4.unread = unread;
     obj4.resolvedUnreadSetting = resolvedUnreadSetting;
     obj4.mentionCount = mentionCount;
     obj4.muted = flag;
-    obj4.channelName = tmp8(4713)(channel);
+    obj4.channelName = tmp8(4727)(channel);
     obj4.fontScale = fontScale;
     obj4.isSubscriptionGated = isSubscriptionGated;
     obj4.needSubscriptionToAccess = needSubscriptionToAccess;
@@ -162,9 +162,9 @@ export default noop.memo(function TextChannel(subtitle) {
     obj4.end = tmp41;
     items5[1] = tmp8Result1(obj4);
     obj.children = items5;
-    return tmp8Result(closure_11(tmp2(5123).PressableHighlight, obj));
+    return tmp8Result(closure_11(tmp2(5137).PressableHighlight, obj));
   }
-  const tmp18 = arr4(5007)(channel.id);
-  result = channel(16991).renderChannelSubtitle({ subtitle: subtitle.subtitle, muted: flag, channelId: channel.id, guildId: channel.guild_id });
-  const tmp2Result6 = channel(16991);
+  const tmp18 = arr4(5021)(channel.id);
+  result = channel(17023).renderChannelSubtitle({ subtitle: subtitle.subtitle, muted: flag, channelId: channel.id, guildId: channel.guild_id });
+  const tmp2Result6 = channel(17023);
 });

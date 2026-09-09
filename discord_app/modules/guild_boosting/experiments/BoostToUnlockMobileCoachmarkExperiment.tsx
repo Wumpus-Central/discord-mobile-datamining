@@ -1,6 +1,6 @@
-// === Module 12506: BoostToUnlockMobileCoachmarkExperiment ===
+// === Module 12532: BoostToUnlockMobileCoachmarkExperiment ===
 
-// Module 12506 (BoostToUnlockMobileCoachmarkExperiment)
+// Module 12532 (BoostToUnlockMobileCoachmarkExperiment)
 import apex_ApexExperimentDefault from "apex/ApexExperiment" /* 1434 */;
 
 const size = fn(2);

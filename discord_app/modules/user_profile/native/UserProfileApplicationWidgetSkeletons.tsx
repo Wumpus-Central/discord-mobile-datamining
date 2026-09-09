@@ -1,14 +1,14 @@
-// === Module 9019: UserProfileApplicationWidgetSkeletons ===
+// === Module 9046: UserProfileApplicationWidgetSkeletons ===
 
-// Module 9019 (UserProfileApplicationWidgetSkeletons)
+// Module 9046 (UserProfileApplicationWidgetSkeletons)
 import nativeDefault from "native" /* 576 */;
-import Text_Text from "Text/Text" /* 4556 */;
+import Text_Text from "Text/Text" /* 4570 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-fn(4560);
+fn(4574);
 let createStyles = { skeleton: null };
 createStyles = { borderRadius: nativeDefault.radii.sm, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_NORMAL };
 createStyles.skeleton = createStyles;

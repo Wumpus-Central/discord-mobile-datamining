@@ -1,8 +1,8 @@
-// === Module 14199: polyfills ===
+// === Module 14224: polyfills ===
 
-// Module 14199 (polyfills)
-import module_14200 from "module_14200" /* 14200 */;
-import polyfillsNative from "polyfillsNative" /* 14296 */;
+// Module 14224 (polyfills)
+import module_14225 from "module_14225" /* 14225 */;
+import polyfillsNative from "polyfillsNative" /* 14321 */;
 import size from "module_2" /* 2 */;
 
 String.prototype.toLocaleLowerCase = function toLocaleLowerCase() {

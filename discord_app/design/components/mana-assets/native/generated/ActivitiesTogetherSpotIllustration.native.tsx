@@ -1,9 +1,9 @@
-// === Module 5737: ActivitiesTogetherSpotIllustration ===
+// === Module 5751: ActivitiesTogetherSpotIllustration ===
 
-// Module 5737 (ActivitiesTogetherSpotIllustration)
+// Module 5751 (ActivitiesTogetherSpotIllustration)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5587 */;
-import _modDef5738 from "module_5738" /* 5738 */;
+import FastImageDefault from "FastImage" /* 5601 */;
+import _modDef5752 from "module_5752" /* 5752 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -24,7 +24,7 @@ export const ActivitiesTogetherSpotIllustration = function ActivitiesTogetherSpo
     num3 = 1;
   }
   let obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  obj = { uri: _modDef5738 };
+  obj = { uri: _modDef5752 };
   obj.source = obj;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];
@@ -32,5 +32,5 @@ export const ActivitiesTogetherSpotIllustration = function ActivitiesTogetherSpo
   obj.accessible = accessible;
   obj.accessibilityLabel = accessibilityLabel;
   obj.resizeMode = resizeMode;
-  return jsx(FastImageDefault, { uri: _modDef5738 });
+  return jsx(FastImageDefault, { uri: _modDef5752 });
 };

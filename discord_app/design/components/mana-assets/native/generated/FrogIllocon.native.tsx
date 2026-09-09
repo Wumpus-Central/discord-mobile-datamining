@@ -1,9 +1,9 @@
-// === Module 6005: FrogIllocon ===
+// === Module 6019: FrogIllocon ===
 
-// Module 6005 (FrogIllocon)
+// Module 6019 (FrogIllocon)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5587 */;
-import _modDef6006 from "module_6006" /* 6006 */;
+import FastImageDefault from "FastImage" /* 5601 */;
+import _modDef6020 from "module_6020" /* 6020 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -16,12 +16,12 @@ export const FrogIllocon = function FrogIllocon(size) {
     num = 64;
   }
   let obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  obj = { uri: _modDef6006 };
+  obj = { uri: _modDef6020 };
   obj.source = obj;
   const items = [{ width: num, height: num }];
   obj.style = items;
   obj.accessible = accessible;
   obj.accessibilityLabel = accessibilityLabel;
   obj.resizeMode = resizeMode;
-  return jsx(FastImageDefault, { uri: _modDef6006 });
+  return jsx(FastImageDefault, { uri: _modDef6020 });
 };

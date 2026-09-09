@@ -1,12 +1,12 @@
-// === Module 16098: MessagesItemEmptyState ===
+// === Module 16128: MessagesItemEmptyState ===
 
-// Module 16098 (MessagesItemEmptyState)
+// Module 16128 (MessagesItemEmptyState)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import RootNavigationRef from "RootNavigationRef" /* 4418 */;
-import Text_Text from "Text/Text" /* 4556 */;
-import components_Button_Button from "components/Button/Button" /* 4975 */;
-import _modDef16057 from "module_16057" /* 16057 */;
+import RootNavigationRef from "RootNavigationRef" /* 4432 */;
+import Text_Text from "Text/Text" /* 4570 */;
+import components_Button_Button from "components/Button/Button" /* 4989 */;
+import _modDef16087 from "module_16087" /* 16087 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -14,7 +14,7 @@ get_ActivityIndicator = fn(17);
 ({ Image: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-fn(4560);
+fn(4574);
 let obj = { container: null, containerImage: null, image: null, body: null, title: null };
 obj = { padding: nativeDefault.space.PX_16, flex: 1, height: 325 };
 obj.container = obj;
@@ -44,7 +44,7 @@ export default noop.memo(function MessagesItemEmptyState() {
       }
     }
   }, []);
-  obj.source = _modDef16057;
+  obj.source = _modDef16087;
   obj.style = tmp.image;
   obj.children = timestampProducer(React4, obj);
   const items = [timestampProducer(hasOwnProperty, obj), , , ];

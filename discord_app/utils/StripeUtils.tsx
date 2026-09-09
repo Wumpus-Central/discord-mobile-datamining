@@ -1,10 +1,10 @@
-// === Module 4890: StripeUtils ===
+// === Module 4904: StripeUtils ===
 
-// Module 4890 (StripeUtils)
+// Module 4904 (StripeUtils)
 import LoggerDefault from "Logger" /* 3 */;
 import initialize from "initialize" /* 504 */;
 import HTTPUtils from "HTTPUtils" /* 1272 */;
-import _mod4891 from "module_4891" /* 4891 */;
+import _mod4905 from "module_4905" /* 4905 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import LocaleStore from "LocaleStore" /* 2025 */;
@@ -14,7 +14,7 @@ function getStripe() {
   if (null != React2) {
     let resolved = Promise.resolve(React2);
   } else {
-    const stripe = _mod4891.loadStripe(constants.STRIPE.KEY);
+    const stripe = _mod4905.loadStripe(constants.STRIPE.KEY);
     resolved = stripe.then((result) => {
       closure_2 = result;
       return result;

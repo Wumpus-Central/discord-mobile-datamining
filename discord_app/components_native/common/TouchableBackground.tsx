@@ -1,6 +1,6 @@
-// === Module 12384: TouchableBackground ===
+// === Module 12410: TouchableBackground ===
 
-// Module 12384 (TouchableBackground)
+// Module 12410 (TouchableBackground)
 import nativeDefault from "native" /* 576 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -8,7 +8,7 @@ import noop from "module_19" /* 19 */;
 get_ActivityIndicator = fn(17);
 ({ View: c2, Pressable: c3 } = get_ActivityIndicator);
 const jsx = fn(21).jsx;
-fn(4560);
+fn(4574);
 let createStyles = { default: null };
 createStyles = { backgroundColor: nativeDefault.colors.INTERACTIVE_BACKGROUND_ACTIVE };
 createStyles.default = createStyles;

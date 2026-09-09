@@ -1,7 +1,7 @@
-// === Module 11359: updateSharedValueIfChanged ===
+// === Module 11386: updateSharedValueIfChanged ===
 
-// Module 11359 (updateSharedValueIfChanged)
-import ReanimatedRexport from "ReanimatedRexport" /* 4296 */;
+// Module 11386 (updateSharedValueIfChanged)
+import ReanimatedRexport from "ReanimatedRexport" /* 4310 */;
 import size from "module_2" /* 2 */;
 
 const fn = function u(get, arg1) {
@@ -20,7 +20,7 @@ const fn = function u(get, arg1) {
       break;
     }
   } else {
-    obj = fn2(4296);
+    obj = fn2(4310);
     obj.runOnUI(fn)(get, arg1);
   }
 };
@@ -44,8 +44,8 @@ const fn2 = function u(get, arg1) {
       }
     }
   } else {
-    closure_0(4296).runOnUI(fn2)(get, arg1);
-    const obj = closure_0(4296);
+    closure_0(4310).runOnUI(fn2)(get, arg1);
+    const obj = closure_0(4310);
   }
 };
 obj = { runOnUI: ReanimatedRexport.runOnUI, updateSharedValueArrayIfChanged: "a" };

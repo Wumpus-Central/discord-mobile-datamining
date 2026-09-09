@@ -1,9 +1,9 @@
-// === Module 9443: BotTag ===
+// === Module 9470: BotTag ===
 
-// Module 9443 (BotTag)
+// Module 9470 (BotTag)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import CheckmarkSmallBoldIcon from "CheckmarkSmallBoldIcon" /* 9444 */;
+import CheckmarkSmallBoldIcon from "CheckmarkSmallBoldIcon" /* 9471 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -115,7 +115,7 @@ const View = fn(17).View;
 const BotTagTypes = fn(1350).BotTagTypes;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-fn(4560);
+fn(4574);
 let createStyles = { tag: null, verifiedTagLeftPadding: null, tagNormal: null, tagInverted: null, tagTextNormal: null, tagTextInverted: null };
 createStyles = { paddingLeft: 4, paddingRight: 4, borderRadius: nativeDefault.radii.xs, display: "flex", flexDirection: "row", justifyContent: "center", alignItems: "center", gap: 1 };
 createStyles.tag = createStyles;

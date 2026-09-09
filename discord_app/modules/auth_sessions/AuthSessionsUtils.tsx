@@ -1,11 +1,11 @@
-// === Module 14674: AuthSessionsUtils ===
+// === Module 14700: AuthSessionsUtils ===
 
-// Module 14674 (AuthSessionsUtils)
+// Module 14700 (AuthSessionsUtils)
 import util from "util" /* 1114 */;
-import _modDef4153 from "module_4153" /* 4153 */;
+import _modDef4166 from "module_4166" /* 4166 */;
 import noop from "module_19" /* 19 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import AuthSessionsStore from "AuthSessionsStore" /* 14675 */;
+import AuthSessionsStore from "AuthSessionsStore" /* 14701 */;
 
 require = fn;
 const size = fn(2);
@@ -40,8 +40,8 @@ export const formatDate = function formatDate(arg0) {
     const intl = util.intl;
     let stringResult = intl.string(util.t.TXCmfL);
   } else {
-    stringResult = _modDef4153(arg0).fromNow();
-    const obj = _modDef4153(arg0);
+    stringResult = _modDef4166(arg0).fromNow();
+    const obj = _modDef4166(arg0);
   }
   return stringResult;
 };

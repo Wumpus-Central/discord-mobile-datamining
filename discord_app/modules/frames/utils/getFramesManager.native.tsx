@@ -1,6 +1,6 @@
-// === Module 9572: getFramesManager ===
+// === Module 9599: getFramesManager ===
 
-// Module 9572 (getFramesManager)
+// Module 9599 (getFramesManager)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/frames/utils/getFramesManager.native.tsx");

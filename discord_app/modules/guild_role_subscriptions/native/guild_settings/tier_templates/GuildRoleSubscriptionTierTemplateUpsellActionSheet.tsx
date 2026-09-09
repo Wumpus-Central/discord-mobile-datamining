@@ -1,17 +1,17 @@
-// === Module 16252: GuildRoleSubscriptionTierTemplateUpsellActionSheet ===
+// === Module 16282: GuildRoleSubscriptionTierTemplateUpsellActionSheet ===
 
-// Module 16252 (GuildRoleSubscriptionTierTemplateUpsellActionSheet)
+// Module 16282 (GuildRoleSubscriptionTierTemplateUpsellActionSheet)
 import useStateFromStores from "useStateFromStores" /* 563 */;
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import Text_Text from "Text/Text" /* 4556 */;
-import components_Button_Button from "components/Button/Button" /* 4975 */;
-import useIsScreenLandscape from "useIsScreenLandscape" /* 5126 */;
-import Sheet_BottomSheet from "Sheet/BottomSheet" /* 7150 */;
-import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 9068 */;
+import Text_Text from "Text/Text" /* 4570 */;
+import components_Button_Button from "components/Button/Button" /* 4989 */;
+import useIsScreenLandscape from "useIsScreenLandscape" /* 5140 */;
+import Sheet_BottomSheet from "Sheet/BottomSheet" /* 7164 */;
+import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 9095 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4552 */;
+import AccessibilityStore from "AccessibilityStore" /* 4566 */;
 
 require = fn;
 const View = fn(17).View;
@@ -21,7 +21,7 @@ const ContentDismissActionType = fn(1954).ContentDismissActionType;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
 const src = { videoURI: "https://cdn.discordapp.com/assets/server-subscription-tier-template/upsell.mov" };
-fn(4560);
+fn(4574);
 let createStyles = { container: null, videoContainer: null, info: null, title: null, subtitle: null, footer: null, button: null };
 createStyles = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, padding: 16, paddingTop: 24, justifyContent: "center" };
 createStyles.container = createStyles;
@@ -65,7 +65,7 @@ export default function GuildRoleSubscriptionTierTemplateUpsellActionSheet(arg0)
   const intl = util.intl;
   obj1.accessibilityLabel = intl.string(util.t.gCgirr);
   const size = { style: tmp.videoContainer, src, width: tmp3, height: tmp3 / 1.7289156626506024, muted: true, paused: stateFromStores, ariaHidden: true };
-  obj1.children = closure_10(markAsDismissed(8307), size);
+  obj1.children = closure_10(markAsDismissed(8335), size);
   const items2 = [closure_10(View, obj1), , ];
   const obj2 = { style: tmp.info, children: null };
   const obj3 = { variant: "heading-lg/semibold", style: tmp.title, color: "mobile-text-heading-primary", children: null };

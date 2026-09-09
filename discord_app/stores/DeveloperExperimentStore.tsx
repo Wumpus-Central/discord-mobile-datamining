@@ -1,6 +1,6 @@
-// === Module 7720: DeveloperExperimentStore ===
+// === Module 7734: DeveloperExperimentStore ===
 
-// Module 7720 (DeveloperExperimentStore)
+// Module 7734 (DeveloperExperimentStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import UserStoreUtils from "UserStoreUtils" /* 1382 */;
@@ -8,7 +8,7 @@ import GuildStore from "GuildStore" /* 1979 */;
 import UserStore from "UserStore" /* 1371 */;
 
 require = fn;
-const ExperimentBuckets = fn(4477).ExperimentBuckets;
+const ExperimentBuckets = fn(4491).ExperimentBuckets;
 const Environments = fn(1383).Environments;
 let tmp2 = "production" === Environments.DEVELOPMENT;
 if (!tmp2) {

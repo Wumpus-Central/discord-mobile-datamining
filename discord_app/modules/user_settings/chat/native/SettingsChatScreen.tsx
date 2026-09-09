@@ -1,15 +1,15 @@
-// === Module 15462: SettingsChatScreen ===
+// === Module 15491: SettingsChatScreen ===
 
-// Module 15462 (SettingsChatScreen)
+// Module 15491 (SettingsChatScreen)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import UserSettingsModalActionCreatorsDefault from "UserSettingsModalActionCreators" /* 6990 */;
-import _modDef10403 from "module_10403" /* 10403 */;
-import SettingBuilders from "SettingBuilders" /* 11473 */;
-import SettingLayoutDefault from "SettingLayout" /* 14692 */;
+import UserSettingsModalActionCreatorsDefault from "UserSettingsModalActionCreators" /* 7004 */;
+import _modDef10430 from "module_10430" /* 10430 */;
+import SettingBuilders from "SettingBuilders" /* 11500 */;
+import SettingLayoutDefault from "SettingLayout" /* 14718 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1371 */;
-import SubscriptionStore from "SubscriptionStore" /* 4224 */;
+import SubscriptionStore from "SubscriptionStore" /* 4237 */;
 
 require = fn;
 function VideoUploadQualityNitroUpsell() {
@@ -32,7 +32,7 @@ function VideoUploadQualityNitroUpsell() {
     obj = { style: tmp3.card, children: null };
     obj1 = { border: "none", shadow: "none", children: null };
     const obj2 = { style: tmp3.cardContent, children: null };
-    const obj3 = { style: tmp3.cardIcon, source: _modDef10403, size: tmp(1178).Icon.Sizes.SMALL, color: nativeDefault.unsafe_rawColors.PRIMARY_400 };
+    const obj3 = { style: tmp3.cardIcon, source: _modDef10430, size: tmp(1178).Icon.Sizes.SMALL, color: nativeDefault.unsafe_rawColors.PRIMARY_400 };
     const items2 = [closure_9(tmp(1178).Icon, obj3), ];
     const obj4 = { variant: "text-sm/medium", color: "text-muted", children: null };
     const intl2 = tmp(1114).intl;
@@ -43,21 +43,21 @@ function VideoUploadQualityNitroUpsell() {
         }
     };
     obj4.children = intl2.format(tmp(1114).t.uW1zul, obj5);
-    items2[1] = closure_9(tmp(4556).Text, obj4);
+    items2[1] = closure_9(tmp(4570).Text, obj4);
     obj2.children = items2;
     obj1.children = closure_10(View, obj2);
-    obj.children = closure_9(tmp(5607).Card, obj1);
+    obj.children = closure_9(tmp(5621).Card, obj1);
     tmp7Result = closure_9(View, obj);
   }
   children[1] = tmp7Result;
   return closure_10(View, { children });
 }
 const View = fn(17).View;
-const MobileUserSettings = fn(7975).MobileUserSettings;
+const MobileUserSettings = fn(7989).MobileUserSettings;
 const UserSettingsSections = fn(1074).UserSettingsSections;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-fn(4560);
+fn(4574);
 let createStyles = { card: null, cardContent: null, cardIcon: null };
 createStyles = { marginTop: 8, borderColor: nativeDefault.colors.REDESIGN_INPUT_CONTROL_SELECTED, borderWidth: 1, borderRadius: nativeDefault.radii.lg };
 createStyles.card = createStyles;
@@ -87,7 +87,7 @@ export default function SettingsChatScreen(route) {
     obj.settings = items;
     const intl2 = util.intl;
     obj.subLabel = intl2.string(util.t.T0rbtM);
-    const items1 = [obj, , , , , , , , ];
+    const items1 = [obj, , , , , , , , , ];
     const obj1 = { label: null, settings: null, subLabel: null };
     const intl3 = util.intl;
     obj1.label = intl3.string(util.t.YTnrbV);
@@ -127,29 +127,33 @@ export default function SettingsChatScreen(route) {
       }
     });
     items1[5] = obj5;
-    const obj7 = { label: null, settings: null, subLabel: null };
-    const intl10 = util.intl;
-    obj7.label = intl10.string(util.t["29xPVZ"]);
-    const items7 = [MobileUserSettings.STICKER_AUTOCOMPLETE];
+    const obj7 = { settings: null };
+    const items7 = [MobileUserSettings.SHOW_SPOILERS];
     obj7.settings = items7;
-    const intl11 = util.intl;
-    obj7.subLabel = intl11.string(util.t["/eVrj8"]);
     items1[6] = obj7;
-    const obj8 = { label: null, settings: null };
-    const intl12 = util.intl;
-    obj8.label = intl12.string(util.t["4NDJgM"]);
-    const items8 = [, , ];
-    ({ SWIPE_RIGHT_TO_LEFT: arr9[0], DOUBLE_TAP_TO_REACT_ENABLED: arr9[1], DOUBLE_TAP_EMOJI: arr9[2] } = MobileUserSettings);
+    const obj8 = { label: null, settings: null, subLabel: null };
+    const intl10 = util.intl;
+    obj8.label = intl10.string(util.t["29xPVZ"]);
+    const items8 = [MobileUserSettings.STICKER_AUTOCOMPLETE];
     obj8.settings = items8;
+    const intl11 = util.intl;
+    obj8.subLabel = intl11.string(util.t["/eVrj8"]);
     items1[7] = obj8;
-    const obj9 = { label: null, settings: null, subLabel: null };
-    const intl13 = util.intl;
-    obj9.label = intl13.string(util.t.BkuOO6);
-    const items9 = [MobileUserSettings.TEXT_AND_MEDIA_SYNC];
+    const obj9 = { label: null, settings: null };
+    const intl12 = util.intl;
+    obj9.label = intl12.string(util.t["4NDJgM"]);
+    const items9 = [, , ];
+    ({ SWIPE_RIGHT_TO_LEFT: arr10[0], DOUBLE_TAP_TO_REACT_ENABLED: arr10[1], DOUBLE_TAP_EMOJI: arr10[2] } = MobileUserSettings);
     obj9.settings = items9;
-    const intl14 = util.intl;
-    obj9.subLabel = intl14.string(util.t.p4IKE9);
     items1[8] = obj9;
+    const obj10 = { label: null, settings: null, subLabel: null };
+    const intl13 = util.intl;
+    obj10.label = intl13.string(util.t.BkuOO6);
+    const items10 = [MobileUserSettings.TEXT_AND_MEDIA_SYNC];
+    obj10.settings = items10;
+    const intl14 = util.intl;
+    obj10.subLabel = intl14.string(util.t.p4IKE9);
+    items1[9] = obj10;
     obj.sections = items1;
     let initialSetting;
     if (route != null) {

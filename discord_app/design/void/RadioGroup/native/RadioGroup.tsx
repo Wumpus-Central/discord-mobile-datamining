@@ -1,9 +1,9 @@
-// === Module 14098: RadioGroup ===
+// === Module 14121: RadioGroup ===
 
-// Module 14098 (RadioGroup)
+// Module 14121 (RadioGroup)
 import nativeDefault from "native" /* 576 */;
-import useA11yRolesNative from "useA11yRolesNative" /* 4277 */;
-import FormRowDefault from "FormRow" /* 7137 */;
+import useA11yRolesNative from "useA11yRolesNative" /* 4292 */;
+import FormRowDefault from "FormRow" /* 7151 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -266,7 +266,7 @@ const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
 let Sizes = { SMALL: 8, [8]: "SMALL", MEDIUM: 10, [10]: "MEDIUM", LARGE: 12, [12]: "LARGE" };
 const dependencyMap = { [Sizes.SMALL]: 2, [Sizes.MEDIUM]: 3, [Sizes.LARGE]: 4 };
-fn(4560);
+fn(4574);
 Sizes = { radioIcon: null, radioIconSelected: null, radioTick: null, disabled: null, divider: null, collapsibleStyle: null, collapsibleBackgroundSelected: null, collapsibleBackground: null, collapsibleContainer: null };
 Sizes = { flex: 0, marginRight: 8, borderRadius: nativeDefault.radii.round, borderColor: nativeDefault.colors.TEXT_MUTED, borderWidth: 2 };
 Sizes.radioIcon = Sizes;

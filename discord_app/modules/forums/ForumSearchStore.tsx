@@ -1,6 +1,6 @@
-// === Module 7768: ForumSearchStore ===
+// === Module 7782: ForumSearchStore ===
 
-// Module 7768 (ForumSearchStore)
+// Module 7782 (ForumSearchStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import ChannelStore from "ChannelStore" /* 1957 */;

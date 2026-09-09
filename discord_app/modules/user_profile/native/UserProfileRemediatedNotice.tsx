@@ -1,18 +1,18 @@
-// === Module 13127: UserProfileRemediatedNotice ===
+// === Module 13153: UserProfileRemediatedNotice ===
 
-// Module 13127 (UserProfileRemediatedNotice)
+// Module 13153 (UserProfileRemediatedNotice)
 import nativeDefault from "native" /* 576 */;
-import Text_Text from "Text/Text" /* 4556 */;
-import RelationshipActionCreatorsDefault from "RelationshipActionCreators" /* 9047 */;
+import Text_Text from "Text/Text" /* 4570 */;
+import RelationshipActionCreatorsDefault from "RelationshipActionCreators" /* 9074 */;
 import noop from "module_19" /* 19 */;
-import RelationshipStore from "RelationshipStore" /* 4209 */;
+import RelationshipStore from "RelationshipStore" /* 4222 */;
 
 require = fn;
 const View = fn(17).View;
 const RelationshipTypes = fn(1074).RelationshipTypes;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, Fragment: closure_7, jsxs: closure_8 } = jsxProd);
-fn(4560);
+fn(4574);
 let createStyles = { container: null };
 createStyles = { padding: nativeDefault.space.PX_12, gap: nativeDefault.space.PX_8, flexDirection: "row", alignItems: "center" };
 createStyles.container = createStyles;
@@ -35,7 +35,7 @@ export default function RemediatedUserNotice(user) {
       obj = { variant: "text-sm/semibold", color: "text-default", lineClamp: 1, children: null };
       const intl = tmp4(1114).intl;
       obj.children = intl.string(tmp4(1114).t["oC/fU6"]);
-      isBlocked = closure_6(tmp4(4556).Text, obj);
+      isBlocked = closure_6(tmp4(4570).Text, obj);
     }
     const items2 = [isBlocked, ];
     if (isIgnored) {
@@ -43,7 +43,7 @@ export default function RemediatedUserNotice(user) {
       const obj2 = { variant: "text-sm/semibold", color: "text-default", lineClamp: 1, children: null };
       const intl2 = tmp4(1114).intl;
       obj2.children = intl2.string(tmp4(1114).t.HXz5An);
-      const items3 = [closure_6(tmp4(4556).Text, obj2), closure_6(tmp4(4556).Text, { variant: "text-sm/semibold", color: "text-default", accessibilityElementsHidden: true, importantForAccessibility: "no", children: "\u2022" }), ];
+      const items3 = [closure_6(tmp4(4570).Text, obj2), closure_6(tmp4(4570).Text, { variant: "text-sm/semibold", color: "text-default", accessibilityElementsHidden: true, importantForAccessibility: "no", children: "\u2022" }), ];
       const intl3 = tmp4(1114).intl;
       const obj3 = {
         unignoreHook(children) {

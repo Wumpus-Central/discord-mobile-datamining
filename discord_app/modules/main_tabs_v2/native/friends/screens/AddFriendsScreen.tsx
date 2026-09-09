@@ -1,20 +1,20 @@
-// === Module 16770: AddFriendsScreen ===
+// === Module 16807: AddFriendsScreen ===
 
-// Module 16770 (AddFriendsScreen)
+// Module 16807 (AddFriendsScreen)
 import _modDef12 from "module_12" /* 12 */;
 import nativeDefault from "native" /* 576 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
-import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8179 */;
-import InstantInviteActionCreatorsDefault from "InstantInviteActionCreators" /* 8378 */;
-import ContactSyncModalActionCreators from "ContactSyncModalActionCreators" /* 12680 */;
-import ContactSyncUtils from "ContactSyncUtils" /* 12684 */;
-import IncomingRequestRow from "IncomingRequestRow" /* 16772 */;
-import ContactSuggestionRow from "ContactSuggestionRow" /* 16774 */;
+import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8205 */;
+import InstantInviteActionCreatorsDefault from "InstantInviteActionCreators" /* 8406 */;
+import ContactSyncModalActionCreators from "ContactSyncModalActionCreators" /* 12706 */;
+import ContactSyncUtils from "ContactSyncUtils" /* 12710 */;
+import IncomingRequestRow from "IncomingRequestRow" /* 16809 */;
+import ContactSuggestionRow from "ContactSuggestionRow" /* 16811 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import GameRelationshipStore from "GameRelationshipStore" /* 7658 */;
-import RelationshipStore from "RelationshipStore" /* 4209 */;
+import GameRelationshipStore from "GameRelationshipStore" /* 7672 */;
+import RelationshipStore from "RelationshipStore" /* 4222 */;
 import UserStore from "UserStore" /* 1371 */;
 
 require = fn;
@@ -59,14 +59,14 @@ function areHydratedGameFriendRequestRowStatesEqual(arr, arg1) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: metroRequire, ScrollView: closure_7 } = get_ActivityIndicator);
-const Sections = fn(12703).Sections;
+const Sections = fn(12729).Sections;
 const Constants = fn(1074);
 ({ AnalyticEvents: closure_12, AnalyticsSections: map1, InstantInviteSources: closure_14, RelationshipTypes: closure_15 } = Constants);
-const ContactPermissions = fn(12682).ContactPermissions;
+const ContactPermissions = fn(12708).ContactPermissions;
 const jsxProd = fn(21);
 ({ jsx: closure_17, jsxs: closure_18 } = jsxProd);
 let closure_19 = { FIND_FRIENDS: 0, [0]: "FIND_FRIENDS", INCOMING_FRIEND_REQUESTS: 1, [1]: "INCOMING_FRIEND_REQUESTS", INCOMING_GAME_FRIEND_REQUESTS: 2, [2]: "INCOMING_GAME_FRIEND_REQUESTS", CONTACT_SUGGESTIONS: 3, [3]: "CONTACT_SUGGESTIONS" };
-fn(4560);
+fn(4574);
 let createStyles = { container: { flex: 1 }, inviteAppsContainerNonSticky: null, inviteAppsContentContainer: null, emptyContainer: null, emptyActionContainer: null, loading: null };
 createStyles = { backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND, paddingVertical: nativeDefault.space.PX_16 };
 createStyles.inviteAppsContainerNonSticky = createStyles;
@@ -183,9 +183,9 @@ export default function AddFriendsScreen(navigation) {
       }
     });
     return _modDef12.unionBy(items1, items, (id) => id.id).sort((arg0, arg1) => {
-      const name = source_page(4404).getName(arg0);
-      const obj = source_page(4404);
-      return name.localeCompare(source_page(4404).getName(arg1));
+      const name = source_page(4418).getName(arg0);
+      const obj = source_page(4418);
+      return name.localeCompare(source_page(4418).getName(arg1));
     });
   });
   let obj3 = navigation(analyticsLocations[25]);
@@ -221,9 +221,9 @@ export default function AddFriendsScreen(navigation) {
     });
     let obj = source_page(analyticsLocations[26]);
     return source_page(analyticsLocations[26]).unionBy(items1, items, (user) => user.user.id).sort((user, user2) => {
-      const name = items1(4404).getName(user.user);
-      const obj = items1(4404);
-      return name.localeCompare(items1(4404).getName(user2.user));
+      const name = items1(4418).getName(user.user);
+      const obj = items1(4418);
+      return name.localeCompare(items1(4418).getName(user2.user));
     });
   }, items4, areHydratedGameFriendRequestRowStatesEqual);
   let tmp6 = _slicedToArray(noop.useState([]), 2);

@@ -1,9 +1,9 @@
-// === Module 11858: ClockWarningIcon ===
+// === Module 11884: ClockWarningIcon ===
 
-// Module 11858 (ClockWarningIcon)
+// Module 11884 (ClockWarningIcon)
 import nativeDefault from "native" /* 576 */;
-import BaseIconImage from "BaseIconImage" /* 4261 */;
-import _mod11859 from "module_11859" /* 11859 */;
+import BaseIconImage from "BaseIconImage" /* 4274 */;
+import _mod11885 from "module_11885" /* 11885 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export const ClockWarningIcon = function ClockWarningIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod11859, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod11885, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 };

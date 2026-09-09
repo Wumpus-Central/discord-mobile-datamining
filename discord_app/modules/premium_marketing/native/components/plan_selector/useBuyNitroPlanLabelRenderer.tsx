@@ -1,11 +1,11 @@
-// === Module 13408: useBuyNitroPlanLabelRenderer ===
+// === Module 13431: useBuyNitroPlanLabelRenderer ===
 
-// Module 13408 (useBuyNitroPlanLabelRenderer)
+// Module 13431 (useBuyNitroPlanLabelRenderer)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import NumberUtils from "NumberUtils" /* 1880 */;
-import PremiumUtils from "PremiumUtils" /* 4218 */;
-import Text_Text from "Text/Text" /* 4556 */;
+import PremiumUtils from "PremiumUtils" /* 4231 */;
+import Text_Text from "Text/Text" /* 4570 */;
 import noop from "module_19" /* 19 */;
 import LocaleStore from "LocaleStore" /* 2025 */;
 
@@ -15,7 +15,7 @@ const PremiumConstants = fn(1373);
 ({ DISCOUNTS: metroRequire, SubscriptionPlans: closure_7 } = PremiumConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-fn(4560);
+fn(4574);
 let createStyles = { labelRow: null, discountBadge: null, discountBadgeText: null };
 createStyles = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_8 };
 createStyles.labelRow = createStyles;

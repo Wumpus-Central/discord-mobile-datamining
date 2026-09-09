@@ -1,30 +1,30 @@
-// === Module 10673: premium_marketing_component_properties ===
+// === Module 10700: premium_marketing_component_properties ===
 
-// Module 10673 (premium_marketing_component_properties)
+// Module 10700 (premium_marketing_component_properties)
 import _mod1188 from "module_1188" /* 1188 */;
-import announcement_modal_variant_1_properties from "announcement_modal_variant_1_properties" /* 10674 */;
-import premium_tab from "premium_tab" /* 10678 */;
-import marketing_page_banner from "marketing_page_banner" /* 10679 */;
-import payment_modal_banner from "payment_modal_banner" /* 10680 */;
-import mobile_bottom_sheet from "mobile_bottom_sheet" /* 10681 */;
-import gift_icon from "gift_icon" /* 10682 */;
-import gift_icon_coachmark from "gift_icon_coachmark" /* 10684 */;
-import gift_plan_selection_card_banner from "gift_plan_selection_card_banner" /* 10686 */;
-import gift_customization_banner from "gift_customization_banner" /* 10687 */;
-import billing_settings_nitro_gift_banner from "billing_settings_nitro_gift_banner" /* 10688 */;
-import gift_reminder_nagbar from "gift_reminder_nagbar" /* 10689 */;
-import gift_reminder_coachmark from "gift_reminder_coachmark" /* 10690 */;
-import premium_tab_tooltip from "premium_tab_tooltip" /* 10691 */;
-import premium_tab_popover from "premium_tab_popover" /* 10692 */;
-import nagbar from "nagbar" /* 10693 */;
-import plan_select_card_banner from "plan_select_card_banner" /* 10694 */;
-import billing_settings_banner from "billing_settings_banner" /* 10695 */;
-import shop_nagbar from "shop_nagbar" /* 10696 */;
-import admin_editor_test_component from "admin_editor_test_component" /* 10697 */;
-import guild_header_coachmark from "guild_header_coachmark" /* 10698 */;
-import guild_boost_checkout_banner from "guild_boost_checkout_banner" /* 10699 */;
-import guild_boost_marketing_page_banner from "guild_boost_marketing_page_banner" /* 10700 */;
-import guild_boost_tab_banner from "guild_boost_tab_banner" /* 10701 */;
+import announcement_modal_variant_1_properties from "announcement_modal_variant_1_properties" /* 10701 */;
+import premium_tab from "premium_tab" /* 10705 */;
+import marketing_page_banner from "marketing_page_banner" /* 10706 */;
+import payment_modal_banner from "payment_modal_banner" /* 10707 */;
+import mobile_bottom_sheet from "mobile_bottom_sheet" /* 10708 */;
+import gift_icon from "gift_icon" /* 10709 */;
+import gift_icon_coachmark from "gift_icon_coachmark" /* 10711 */;
+import gift_plan_selection_card_banner from "gift_plan_selection_card_banner" /* 10713 */;
+import gift_customization_banner from "gift_customization_banner" /* 10714 */;
+import billing_settings_nitro_gift_banner from "billing_settings_nitro_gift_banner" /* 10715 */;
+import gift_reminder_nagbar from "gift_reminder_nagbar" /* 10716 */;
+import gift_reminder_coachmark from "gift_reminder_coachmark" /* 10717 */;
+import premium_tab_tooltip from "premium_tab_tooltip" /* 10718 */;
+import premium_tab_popover from "premium_tab_popover" /* 10719 */;
+import nagbar from "nagbar" /* 10720 */;
+import plan_select_card_banner from "plan_select_card_banner" /* 10721 */;
+import billing_settings_banner from "billing_settings_banner" /* 10722 */;
+import shop_nagbar from "shop_nagbar" /* 10723 */;
+import admin_editor_test_component from "admin_editor_test_component" /* 10724 */;
+import guild_header_coachmark from "guild_header_coachmark" /* 10725 */;
+import guild_boost_checkout_banner from "guild_boost_checkout_banner" /* 10726 */;
+import guild_boost_marketing_page_banner from "guild_boost_marketing_page_banner" /* 10727 */;
+import guild_boost_tab_banner from "guild_boost_tab_banner" /* 10728 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;
@@ -247,7 +247,7 @@ class PremiumMarketingComponentProperties$Type extends MessageType {
 }
 const prototype = PremiumMarketingComponentProperties$Type.prototype;
 prototype["create"] = function create(arr) {
-  let obj = { properties: { oneofKind: "Array" }, contentIdentifier: "", isDefaultBase: false };
+  let obj = { properties: { oneofKind: "disabled" }, contentIdentifier: "", isDefaultBase: false };
   const _Object = Object;
   obj = { enumerable: false, value: this };
   _Object.defineProperty(obj, _mod1188.MESSAGE_TYPE, obj);

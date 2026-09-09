@@ -1,6 +1,6 @@
-// === Module 6182: ? ===
+// === Module 6196: ? ===
 
-// Module 6182
+// Module 6196
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/GuidelinesIllocon-2x.png.js");

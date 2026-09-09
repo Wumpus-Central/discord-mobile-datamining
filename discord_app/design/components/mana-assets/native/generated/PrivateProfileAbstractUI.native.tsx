@@ -1,9 +1,9 @@
-// === Module 6365: PrivateProfileAbstractUI ===
+// === Module 6379: PrivateProfileAbstractUI ===
 
-// Module 6365 (PrivateProfileAbstractUI)
+// Module 6379 (PrivateProfileAbstractUI)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5587 */;
-import _modDef6366 from "module_6366" /* 6366 */;
+import FastImageDefault from "FastImage" /* 5601 */;
+import _modDef6380 from "module_6380" /* 6380 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -24,7 +24,7 @@ export const PrivateProfileAbstractUI = function PrivateProfileAbstractUI(width)
     num3 = 1;
   }
   let obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  obj = { uri: _modDef6366 };
+  obj = { uri: _modDef6380 };
   obj.source = obj;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];
@@ -32,5 +32,5 @@ export const PrivateProfileAbstractUI = function PrivateProfileAbstractUI(width)
   obj.accessible = accessible;
   obj.accessibilityLabel = accessibilityLabel;
   obj.resizeMode = resizeMode;
-  return jsx(FastImageDefault, { uri: _modDef6366 });
+  return jsx(FastImageDefault, { uri: _modDef6380 });
 };

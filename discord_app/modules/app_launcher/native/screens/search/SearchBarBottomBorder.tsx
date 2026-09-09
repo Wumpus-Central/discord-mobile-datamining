@@ -1,14 +1,14 @@
-// === Module 12101: SearchBarBottomBorder ===
+// === Module 12127: SearchBarBottomBorder ===
 
-// Module 12101 (SearchBarBottomBorder)
+// Module 12127 (SearchBarBottomBorder)
 import nativeDefault from "native" /* 576 */;
-import spring from "spring" /* 4974 */;
-import springPresets from "springPresets" /* 4978 */;
+import spring from "spring" /* 4988 */;
+import springPresets from "springPresets" /* 4992 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-fn(4560);
+fn(4574);
 let createStyles = { border: null };
 createStyles = { borderBottomColor: nativeDefault.colors.BORDER_SUBTLE, borderBottomWidth: 1 };
 createStyles.border = createStyles;
@@ -22,7 +22,7 @@ export const usePinnedSearchBarBottomBorder = function usePinnedSearchBarBottomB
   if (triggerScrollHeight === undefined) {
     triggerScrollHeight = 1;
   }
-  let obj = triggerScrollHeight(4296);
+  let obj = triggerScrollHeight(4310);
   const sharedValue = obj.useSharedValue(0);
   const items = [key, sharedValue];
   const effect = noop.useEffect(() => {
@@ -32,7 +32,7 @@ export const usePinnedSearchBarBottomBorder = function usePinnedSearchBarBottomB
   const callback = noop.useCallback((offset) => {
     const result = sharedValue.set(offset.offset);
   }, items1);
-  let obj1 = triggerScrollHeight(4296);
+  let obj1 = triggerScrollHeight(4310);
   const fn = function u() {
     let obj = spring;
     let num = 0;
@@ -42,7 +42,7 @@ export const usePinnedSearchBarBottomBorder = function usePinnedSearchBarBottomB
     obj = { opacity: obj.withSpring(num, springPresets.springStandard) };
     return obj;
   };
-  obj = { withSpring: triggerScrollHeight(4974).withSpring, scrollPosition: sharedValue, triggerScrollHeight, springStandard: triggerScrollHeight(4978).springStandard };
+  obj = { withSpring: triggerScrollHeight(4988).withSpring, scrollPosition: sharedValue, triggerScrollHeight, springStandard: triggerScrollHeight(4992).springStandard };
   fn.__closure = obj;
   fn.__workletHash = 5466161440826;
   fn.__initData = __initData;
@@ -51,6 +51,6 @@ export const usePinnedSearchBarBottomBorder = function usePinnedSearchBarBottomB
   obj1 = { style: null };
   const items2 = [closure_5().border, animatedStyle];
   obj1.style = items2;
-  obj.bottomBorderComponent = jsx(sharedValue(4296).View, { style: null }, key);
+  obj.bottomBorderComponent = jsx(sharedValue(4310).View, { style: null }, key);
   return obj;
 };

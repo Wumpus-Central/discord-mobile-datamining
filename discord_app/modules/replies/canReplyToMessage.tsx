@@ -1,11 +1,11 @@
-// === Module 7976: canReplyToMessage ===
+// === Module 7990: canReplyToMessage ===
 
-// Module 7976 (canReplyToMessage)
+// Module 7990 (canReplyToMessage)
 import MessageTypes from "MessageTypes" /* 1089 */;
-import ThreadHooks from "ThreadHooks" /* 7269 */;
-import useUserCommunicationDisabled from "useUserCommunicationDisabled" /* 7977 */;
+import ThreadHooks from "ThreadHooks" /* 7283 */;
+import useUserCommunicationDisabled from "useUserCommunicationDisabled" /* 7991 */;
 import _slicedToArray from "module_32" /* 32 */;
-import PermissionStore from "PermissionStore" /* 4199 */;
+import PermissionStore from "PermissionStore" /* 4212 */;
 import UserStore from "UserStore" /* 1371 */;
 
 require = fn;

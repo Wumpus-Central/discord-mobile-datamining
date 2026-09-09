@@ -1,7 +1,7 @@
-// === Module 11531: computeGlobalSpoilerDisplay ===
+// === Module 8299: computeGlobalSpoilerDisplay ===
 
-// Module 11531 (computeGlobalSpoilerDisplay)
-import PermissionStore from "PermissionStore" /* 4199 */;
+// Module 8299 (computeGlobalSpoilerDisplay)
+import PermissionStore from "PermissionStore" /* 4212 */;
 
 const require = fn;
 const Constants = fn(1074);
@@ -19,10 +19,10 @@ export default function computeGlobalSpoilerDisplay(arg0, arg1) {
     return false;
   }
 };
-export const useShouldDisplaySpoilerObscurity = function useShouldDisplaySpoilerObscurity(channel) {
-  _require = channel;
+export const useShouldDisplaySpoilerObscurity = function useShouldDisplaySpoilerObscurity(stateFromStores) {
+  _require = stateFromStores;
   const items = [PermissionStore];
-  const stateFromStores = require("useStateFromStores").useStateFromStores(items, () => PermissionStore.can(constants.MANAGE_MESSAGES, closure_0));
+  stateFromStores = require("useStateFromStores").useStateFromStores(items, () => PermissionStore.can(constants.MANAGE_MESSAGES, closure_0));
   const RenderSpoilers = require("UserSettings").RenderSpoilers;
   const setting = RenderSpoilers.useSetting();
   let flag = true;

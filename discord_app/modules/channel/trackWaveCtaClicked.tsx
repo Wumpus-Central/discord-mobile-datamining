@@ -1,6 +1,6 @@
-// === Module 12269: trackWaveCtaClicked ===
+// === Module 12295: trackWaveCtaClicked ===
 
-// Module 12269 (trackWaveCtaClicked)
+// Module 12295 (trackWaveCtaClicked)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 

@@ -1,28 +1,28 @@
-// === Module 17658: GuildSettingsModalCommunity ===
+// === Module 17691: GuildSettingsModalCommunity ===
 
-// Module 17658 (GuildSettingsModalCommunity)
+// Module 17691 (GuildSettingsModalCommunity)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4527 */;
-import HeaderActionButton from "HeaderActionButton" /* 7377 */;
-import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 9068 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4541 */;
+import HeaderActionButton from "HeaderActionButton" /* 7391 */;
+import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 9095 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 import GuildChannelStore from "GuildChannelStore" /* 2012 */;
-import PermissionStore from "PermissionStore" /* 4199 */;
-import RelationshipStore from "RelationshipStore" /* 4209 */;
+import PermissionStore from "PermissionStore" /* 4212 */;
+import RelationshipStore from "RelationshipStore" /* 4222 */;
 import UserStore from "UserStore" /* 1371 */;
-import GuildSettingsStore from "GuildSettingsStore" /* 9069 */;
+import GuildSettingsStore from "GuildSettingsStore" /* 9096 */;
 
 require = fn;
 let closure_6 = fn(2012).GUILD_SELECTABLE_CHANNELS_KEY;
-const calculateLocaleOptions = fn(16480).calculateLocaleOptions;
+const calculateLocaleOptions = fn(16511).calculateLocaleOptions;
 const Constants = fn(1074);
 ({ ChannelTypes: closure_12, GuildFeatures: map1, GuildSettingsSections: closure_14, Permissions: closure_15 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_16, jsxs: closure_17 } = jsxProd);
-fn(4560);
+fn(4574);
 let createStyles = { overview: { flex: 1 }, overviewContent: null };
 createStyles = { paddingTop: nativeDefault.space.PX_16 };
 createStyles.overviewContent = createStyles;
@@ -179,17 +179,17 @@ export default function GuildSettingsModalCommunity(guildId) {
     obj.title = intl.string(util.t.Yr6nGx);
     obj.items = callback1();
     obj.onItemSelect = function onItemSelect(rulesChannelId) {
-      onClose(9068);
+      onClose(9095);
       const obj = { rulesChannelId };
       obj.updateGuild(obj);
-      onClose(4527).hideActionSheet();
+      onClose(4541).hideActionSheet();
     };
     let id;
     if (rulesChannel != null) {
       id = rulesChannel.id;
     }
     obj.selectedItem = id;
-    obj.openLazy(asyncRequireImpl(9431, dependencyMap.paths), "SelectRulesChannel", obj);
+    obj.openLazy(asyncRequireImpl(9458, dependencyMap.paths), "SelectRulesChannel", obj);
   }, items7);
   preferredLocale = undefined;
   const callback3 = obj5.useCallback(() => {
@@ -198,17 +198,17 @@ export default function GuildSettingsModalCommunity(guildId) {
     obj.title = intl.string(util.t.VqhxxN);
     obj.items = callback1();
     obj.onItemSelect = function onItemSelect(publicUpdatesChannelId) {
-      onClose(9068);
+      onClose(9095);
       const obj = { publicUpdatesChannelId };
       obj.updateGuild(obj);
-      onClose(4527).hideActionSheet();
+      onClose(4541).hideActionSheet();
     };
     let id;
     if (publicUpdatesChannel != null) {
       id = publicUpdatesChannel.id;
     }
     obj.selectedItem = id;
-    obj.openLazy(asyncRequireImpl(9431, dependencyMap.paths), "SelectUpdatesChannel", obj);
+    obj.openLazy(asyncRequireImpl(9458, dependencyMap.paths), "SelectUpdatesChannel", obj);
   }, items8);
   if (guild != null) {
     preferredLocale = guild.preferredLocale;

@@ -1,16 +1,16 @@
-// === Module 16793: YouBannerDecorations ===
+// === Module 16830: YouBannerDecorations ===
 
-// Module 16793 (YouBannerDecorations)
+// Module 16830 (YouBannerDecorations)
 import nativeDefault from "native" /* 576 */;
 import _modDef672 from "module_672" /* 672 */;
 import utils_PlatformUtils from "utils/PlatformUtils" /* 1116 */;
 import dismissible_content from "dismissible_content" /* 1943 */;
-import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 4380 */;
-import QuestTypes from "QuestTypes" /* 5447 */;
-import useTrialOffer from "useTrialOffer" /* 7449 */;
-import QuestUtils from "QuestUtils" /* 11772 */;
-import PromotionsHooks from "PromotionsHooks" /* 13472 */;
-import you_tracking_Tracking from "you/tracking/Tracking" /* 16796 */;
+import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 4394 */;
+import QuestTypes from "QuestTypes" /* 5461 */;
+import useTrialOffer from "useTrialOffer" /* 7463 */;
+import QuestUtils from "QuestUtils" /* 11798 */;
+import PromotionsHooks from "PromotionsHooks" /* 13495 */;
+import you_tracking_Tracking from "you/tracking/Tracking" /* 16833 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1371 */;
 
@@ -21,7 +21,7 @@ const ContentDismissActionType = fn(1954).ContentDismissActionType;
 let closure_9 = fn(1373).PREMIUM_TIER_2_TRIAL_FOR_EVERYONE_TRIAL_ID;
 const jsxProd = fn(21);
 ({ jsx: c10, Fragment: closure_11, jsxs: closure_12 } = jsxProd);
-const createStyles = fn(4560);
+const createStyles = fn(4574);
 let closure_13 = createStyles.createStyles((arg0, arg1, color, borderColor) => {
   let obj = { containerFloatingWrap: null, containerFloatingGradient: null, containerFloating: null, buttonsFloating: null, loading: null };
   obj = {};

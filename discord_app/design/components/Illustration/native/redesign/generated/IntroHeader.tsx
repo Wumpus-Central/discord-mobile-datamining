@@ -1,8 +1,8 @@
-// === Module 17660: IntroHeader ===
+// === Module 17693: IntroHeader ===
 
-// Module 17660 (IntroHeader)
-import shared from "shared" /* 4411 */;
-import _mod8233 from "module_8233" /* 8233 */;
+// Module 17693 (IntroHeader)
+import shared from "shared" /* 4425 */;
+import _mod8259 from "module_8259" /* 8259 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -14,13 +14,13 @@ const result = size.fileFinishedImporting("design/components/Illustration/native
 export const getIntroHeaderSource = function getIntroHeaderSource(theme) {
   const obj = {
     dark() {
-      return require("module_17661");
+      return require("module_17694");
     },
     darker() {
-      return require("module_17662");
+      return require("module_17695");
     },
     light() {
-      return require("module_17663");
+      return require("module_17696");
     }
   };
   return obj.getIllustrationSource(theme, obj);
@@ -28,31 +28,31 @@ export const getIntroHeaderSource = function getIntroHeaderSource(theme) {
 export const useIntroHeaderSource = function useIntroHeaderSource() {
   const obj = {
     dark() {
-      return require("module_17661");
+      return require("module_17694");
     },
     darker() {
-      return require("module_17662");
+      return require("module_17695");
     },
     light() {
-      return require("module_17663");
+      return require("module_17696");
     }
   };
-  return _mod8233.getIllustrationSource(obj.useThemeContext().theme, obj);
+  return _mod8259.getIllustrationSource(obj.useThemeContext().theme, obj);
 };
 export const IntroHeader = function IntroHeader(arg0) {
   let obj = {
     dark() {
-      return require("module_17661");
+      return require("module_17694");
     },
     darker() {
-      return require("module_17662");
+      return require("module_17695");
     },
     light() {
-      return require("module_17663");
+      return require("module_17696");
     }
   };
   obj = {};
-  const illustrationSource = _mod8233.getIllustrationSource(obj.useThemeContext().theme, obj);
+  const illustrationSource = _mod8259.getIllustrationSource(obj.useThemeContext().theme, obj);
   const merged = Object.assign(arg0);
   obj.source = illustrationSource;
   return <Image />;

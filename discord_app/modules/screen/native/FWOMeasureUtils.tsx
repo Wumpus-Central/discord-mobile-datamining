@@ -1,7 +1,7 @@
-// === Module 8675: FWOMeasureUtils ===
+// === Module 8703: FWOMeasureUtils ===
 
-// Module 8675 (FWOMeasureUtils)
-import NativeFWOMeasureModule from "NativeFWOMeasureModule" /* 8676 */;
+// Module 8703 (FWOMeasureUtils)
+import NativeFWOMeasureModule from "NativeFWOMeasureModule" /* 8704 */;
 import size from "module_2" /* 2 */;
 
 const __measureInWindowForFWO = global.__measureInWindowForFWO;

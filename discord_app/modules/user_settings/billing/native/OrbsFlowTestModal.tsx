@@ -1,17 +1,17 @@
-// === Module 15697: OrbsFlowTestModal ===
+// === Module 15727: OrbsFlowTestModal ===
 
-// Module 15697 (OrbsFlowTestModal)
+// Module 15727 (OrbsFlowTestModal)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4527 */;
-import Text_Text from "Text/Text" /* 4556 */;
-import Stack_Stack from "Stack/Stack" /* 4973 */;
-import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 6981 */;
-import LayerScope from "LayerScope" /* 7156 */;
-import HeaderShared from "HeaderShared" /* 7863 */;
-import getNavigationModalPresentationDefault from "getNavigationModalPresentation" /* 10930 */;
-import BalanceWidgetMenuDefault from "BalanceWidgetMenu" /* 15698 */;
-import OrbCheckoutMenuDefault from "OrbCheckoutMenu" /* 15700 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4541 */;
+import Text_Text from "Text/Text" /* 4570 */;
+import Stack_Stack from "Stack/Stack" /* 4987 */;
+import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 6995 */;
+import LayerScope from "LayerScope" /* 7170 */;
+import HeaderShared from "HeaderShared" /* 7877 */;
+import getNavigationModalPresentationDefault from "getNavigationModalPresentation" /* 10957 */;
+import BalanceWidgetMenuDefault from "BalanceWidgetMenu" /* 15728 */;
+import OrbCheckoutMenuDefault from "OrbCheckoutMenu" /* 15730 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -89,9 +89,9 @@ get_ActivityIndicator = fn(17);
 ({ ScrollView: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-let NativeStackNavigator = fn(7913);
+let NativeStackNavigator = fn(7927);
 let closure_9 = NativeStackNavigator.createNativeStackNavigator();
-fn(4560);
+fn(4574);
 let obj = { wrap: null, container: null, title: null, balancePillContainer: null };
 obj = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 obj.wrap = obj;

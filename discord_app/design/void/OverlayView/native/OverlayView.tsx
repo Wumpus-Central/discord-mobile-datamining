@@ -1,7 +1,7 @@
-// === Module 4911: OverlayView ===
+// === Module 4925: OverlayView ===
 
-// Module 4911 (OverlayView)
-import _modDef4946 from "module_4946" /* 4946 */;
+// Module 4925 (OverlayView)
+import _modDef4960 from "module_4960" /* 4960 */;
 import noop from "module_19" /* 19 */;
 
 get_ActivityIndicator = fn(17);
@@ -11,11 +11,11 @@ const jsx = fn(21).jsx;
 let PlatformUtils = fn(1115);
 let FullWindowOverlay = View;
 if (PlatformUtils.isIOS()) {
-  FullWindowOverlay = fn(4912).FullWindowOverlay;
+  FullWindowOverlay = fn(4926).FullWindowOverlay;
 }
 PlatformUtils = fn(1115);
 if (PlatformUtils.isIOS()) {
-  View = _modDef4946;
+  View = _modDef4960;
 }
 const size = fn(2);
 const result = size.fileFinishedImporting("design/void/OverlayView/native/OverlayView.tsx");

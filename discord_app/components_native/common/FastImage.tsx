@@ -1,7 +1,7 @@
-// === Module 5587: FastImage ===
+// === Module 5601: FastImage ===
 
-// Module 5587 (FastImage)
-import FastImageNativeComponentDefault from "FastImageNativeComponent" /* 5588 */;
+// Module 5601 (FastImage)
+import FastImageNativeComponentDefault from "FastImageNativeComponent" /* 5602 */;
 import noop from "module_19" /* 19 */;
 
 class FastImageAndroid {
@@ -16,7 +16,7 @@ class FastImageAndroid {
 get_ActivityIndicator = fn(17);
 ({ Image: c2, NativeModules: c3 } = get_ActivityIndicator);
 const jsx = fn(21).jsx;
-const createStyles = fn(4560);
+const createStyles = fn(4574);
 let closure_5 = createStyles.createStyles({ base: { overflow: "hidden" } });
 let merged = Object.assign(noop.memo((fade) => {
   ({ placeholder, enableAnimation } = fade);

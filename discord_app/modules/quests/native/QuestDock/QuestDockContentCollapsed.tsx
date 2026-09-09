@@ -1,14 +1,14 @@
-// === Module 15189: QuestDockContentCollapsed ===
+// === Module 15216: QuestDockContentCollapsed ===
 
-// Module 15189 (QuestDockContentCollapsed)
-import spring from "spring" /* 4974 */;
+// Module 15216 (QuestDockContentCollapsed)
+import spring from "spring" /* 4988 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const QuestDockMode = fn(5444).QuestDockMode;
-const QUEST_DOCK_MODE_CHANGE_PHYSICS = fn(15098).QUEST_DOCK_MODE_CHANGE_PHYSICS;
+const QuestDockMode = fn(5458).QuestDockMode;
+const QUEST_DOCK_MODE_CHANGE_PHYSICS = fn(15125).QUEST_DOCK_MODE_CHANGE_PHYSICS;
 const jsx = fn(21).jsx;
-const createStyles = fn(4560);
+const createStyles = fn(4574);
 let obj = { questDockContentCollapsed: null };
 obj = {};
 const merged = Object.assign(fn(17).StyleSheet.absoluteFillObject);
@@ -28,8 +28,8 @@ export default noop.memo(function QuestDockContentCollapsed(children) {
     tmp = hideOnExpand;
   }
   hideOnExpand = tmp;
-  const activeQuestDockMode = noop.useContext(hideOnExpand(15099).QuestDockGestureContext).activeQuestDockMode;
-  hideOnExpand(4296);
+  const activeQuestDockMode = noop.useContext(hideOnExpand(15126).QuestDockGestureContext).activeQuestDockMode;
+  hideOnExpand(4310);
   const fn = function l() {
     let obj = spring;
     let num = 1;
@@ -42,7 +42,7 @@ export default noop.memo(function QuestDockContentCollapsed(children) {
     obj = { opacity: obj.withSpring(num, closure_5) };
     return obj;
   };
-  let obj = { withSpring: hideOnExpand(4974).withSpring, activeQuestDockMode, QuestDockMode, hideOnExpand: tmp, QUEST_DOCK_MODE_CHANGE_PHYSICS };
+  let obj = { withSpring: hideOnExpand(4988).withSpring, activeQuestDockMode, QuestDockMode, hideOnExpand: tmp, QUEST_DOCK_MODE_CHANGE_PHYSICS };
   fn.__closure = obj;
   fn.__workletHash = 13361221764426;
   fn.__initData = __initData;
@@ -64,9 +64,9 @@ export default noop.memo(function QuestDockContentCollapsed(children) {
   C.__closure = { activeQuestDockMode, QuestDockMode, hideOnExpand: tmp };
   C.__workletHash = 14339269503421;
   C.__initData = __initData2;
-  const animatedProps = hideOnExpand(4296).useAnimatedProps(C);
+  const animatedProps = hideOnExpand(4310).useAnimatedProps(C);
   obj = { style: null, animatedProps, children: children.children };
   const items = [tmp2.questDockContentCollapsed, animatedStyle];
   obj.style = items;
-  return jsx(activeQuestDockMode(7073), { style: null, animatedProps, children: children.children });
+  return jsx(activeQuestDockMode(7087), { style: null, animatedProps, children: children.children });
 });

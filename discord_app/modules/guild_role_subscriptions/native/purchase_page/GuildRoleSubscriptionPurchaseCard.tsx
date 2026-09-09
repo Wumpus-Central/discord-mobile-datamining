@@ -1,17 +1,17 @@
-// === Module 16549: GuildRoleSubscriptionPurchaseCard ===
+// === Module 16580: GuildRoleSubscriptionPurchaseCard ===
 
-// Module 16549 (GuildRoleSubscriptionPurchaseCard)
+// Module 16580 (GuildRoleSubscriptionPurchaseCard)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import native from "native" /* 1178 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1611 */;
-import Text_Text from "Text/Text" /* 4556 */;
-import BottomSheetModal from "BottomSheetModal" /* 6627 */;
-import Sheet_BottomSheet from "Sheet/BottomSheet" /* 7150 */;
-import GuildRoleSubscriptionListingEditStateUtilsAll from "GuildRoleSubscriptionListingEditStateUtils" /* 15230 */;
-import GuildRoleSubscriptionCard from "GuildRoleSubscriptionCard" /* 15240 */;
-import Elements from "Elements" /* 16544 */;
-import SubscribeButtonDefault from "SubscribeButton" /* 16550 */;
+import Text_Text from "Text/Text" /* 4570 */;
+import BottomSheetModal from "BottomSheetModal" /* 6641 */;
+import Sheet_BottomSheet from "Sheet/BottomSheet" /* 7164 */;
+import GuildRoleSubscriptionListingEditStateUtilsAll from "GuildRoleSubscriptionListingEditStateUtils" /* 15259 */;
+import GuildRoleSubscriptionCard from "GuildRoleSubscriptionCard" /* 15269 */;
+import Elements from "Elements" /* 16575 */;
+import SubscribeButtonDefault from "SubscribeButton" /* 16581 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -19,7 +19,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-fn(4560);
+fn(4574);
 let createStyles = { container: null, header: null, content: null, headerText: null, headerDot: null, seperator: null };
 createStyles = { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, flex: 1 };
 createStyles.container = createStyles;

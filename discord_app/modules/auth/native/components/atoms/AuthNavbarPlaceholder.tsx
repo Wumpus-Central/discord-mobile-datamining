@@ -1,13 +1,13 @@
-// === Module 6978: AuthNavbarPlaceholder ===
+// === Module 6992: AuthNavbarPlaceholder ===
 
-// Module 6978 (AuthNavbarPlaceholder)
+// Module 6992 (AuthNavbarPlaceholder)
 import nativeDefault from "native" /* 576 */;
-import NavigatorHeader from "NavigatorHeader" /* 5624 */;
+import NavigatorHeader from "NavigatorHeader" /* 5638 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-fn(4560);
+fn(4574);
 let createStyles = { navBar: null };
 createStyles = { backgroundColor: nativeDefault.unsafe_rawColors.TRANSPARENT, borderBottomWidth: 0 };
 createStyles.navBar = createStyles;

@@ -1,10 +1,10 @@
-// === Module 16904: RestrictedBlockedMessageGroup ===
+// === Module 16941: RestrictedBlockedMessageGroup ===
 
-// Module 16904 (RestrictedBlockedMessageGroup)
+// Module 16941 (RestrictedBlockedMessageGroup)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import Text_Text from "Text/Text" /* 4556 */;
-import Pressables from "Pressables" /* 5123 */;
+import Text_Text from "Text/Text" /* 4570 */;
+import Pressables from "Pressables" /* 5137 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -12,9 +12,9 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-fn(4560);
+fn(4574);
 let createStyles = { toggle: null };
-createStyles = { marginLeft: fn(16902).RESTRICTED_CONTENT_INSET, marginVertical: nativeDefault.space.PX_8 };
+createStyles = { marginLeft: fn(16939).RESTRICTED_CONTENT_INSET, marginVertical: nativeDefault.space.PX_8 };
 createStyles.toggle = createStyles;
 let closure_7 = createStyles.createStyles(createStyles);
 const size = fn(2);

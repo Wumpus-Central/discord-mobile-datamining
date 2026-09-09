@@ -1,10 +1,10 @@
-// === Module 17056: trackActivityThermalStateNoticeShown ===
+// === Module 17087: trackActivityThermalStateNoticeShown ===
 
-// Module 17056 (trackActivityThermalStateNoticeShown)
+// Module 17087 (trackActivityThermalStateNoticeShown)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
-import embeddedActivityLocationUtils from "embeddedActivityLocationUtils" /* 4189 */;
+import embeddedActivityLocationUtils from "embeddedActivityLocationUtils" /* 4202 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 4583 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 4597 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 1956 */;
 
 require = fn;

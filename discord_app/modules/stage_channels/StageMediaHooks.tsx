@@ -1,10 +1,10 @@
-// === Module 5417: StageMediaHooks ===
+// === Module 5431: StageMediaHooks ===
 
-// Module 5417 (StageMediaHooks)
-import StageChannelParticipants from "StageChannelParticipants" /* 5425 */;
+// Module 5431 (StageMediaHooks)
+import StageChannelParticipants from "StageChannelParticipants" /* 5439 */;
 import GuildStore from "GuildStore" /* 1979 */;
-import VoiceStateStore from "VoiceStateStore" /* 4579 */;
-import StageChannelParticipantStore from "StageChannelParticipantStore" /* 5418 */;
+import VoiceStateStore from "VoiceStateStore" /* 4593 */;
+import StageChannelParticipantStore from "StageChannelParticipantStore" /* 5432 */;
 
 require = fn;
 const size = fn(2);

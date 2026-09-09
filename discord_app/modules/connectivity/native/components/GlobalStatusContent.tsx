@@ -1,27 +1,27 @@
-// === Module 9690: GlobalStatusContent ===
+// === Module 9717: GlobalStatusContent ===
 
-// Module 9690 (GlobalStatusContent)
+// Module 9717 (GlobalStatusContent)
 import nativeDefault from "native" /* 576 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1611 */;
-import useVoiceStateForRemoteSessionDefault from "useVoiceStateForRemoteSession" /* 9220 */;
-import ChannelCallModalDefault from "ChannelCallModal" /* 9471 */;
-import StatusBarDefault from "StatusBar" /* 9486 */;
-import useCanSpeakInChannelDefault from "useCanSpeakInChannel" /* 9588 */;
-import useIsInvitedToSpeakDefault from "useIsInvitedToSpeak" /* 9683 */;
-import GlobalStageChannelStatusDefault from "GlobalStageChannelStatus" /* 9691 */;
+import useVoiceStateForRemoteSessionDefault from "useVoiceStateForRemoteSession" /* 9247 */;
+import ChannelCallModalDefault from "ChannelCallModal" /* 9498 */;
+import StatusBarDefault from "StatusBar" /* 9513 */;
+import useCanSpeakInChannelDefault from "useCanSpeakInChannel" /* 9615 */;
+import useIsInvitedToSpeakDefault from "useIsInvitedToSpeak" /* 9710 */;
+import GlobalStageChannelStatusDefault from "GlobalStageChannelStatus" /* 9718 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 import GuildStore from "GuildStore" /* 1979 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 4583 */;
-import SessionsStore from "SessionsStore" /* 4578 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 4597 */;
+import SessionsStore from "SessionsStore" /* 4592 */;
 
 const require = fn;
 const View = fn(17).View;
-const RTC_PANEL_HEIGHT = fn(9685).RTC_PANEL_HEIGHT;
+const RTC_PANEL_HEIGHT = fn(9712).RTC_PANEL_HEIGHT;
 const RTCConnectionStates = fn(1074).RTCConnectionStates;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-fn(4560);
+fn(4574);
 let createStyles = { bgNeutral: null, bg: null, container: null };
 createStyles = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST };
 createStyles.bgNeutral = createStyles;
@@ -91,7 +91,7 @@ export default function ConnectivityGlobalStatusContent() {
   }
   let tmp2ResultResult = useCanSpeakInChannelDefault(id);
   const tmp2Result = useCanSpeakInChannelDefault;
-  let tmp5Result = tmp5(4411);
+  let tmp5Result = tmp5(4425);
   let tmp14 = tmp12;
   const tmp11 = useIsInvitedToSpeakDefault();
   if (isGuildStageVoiceResult) {
@@ -100,11 +100,11 @@ export default function ConnectivityGlobalStatusContent() {
     }
     tmp14 = tmp2ResultResult;
   }
-  tmp5Result = tmp5(5126);
+  tmp5Result = tmp5(5140);
   let isScreenLandscape = tmp5Result.useIsScreenLandscape();
   if (isScreenLandscape) {
-    isScreenLandscape = tmp5(4417).isModalOpen(ChannelCallModalDefault);
-    const tmp5Result1 = tmp5(4417);
+    isScreenLandscape = tmp5(4431).isModalOpen(ChannelCallModalDefault);
+    const tmp5Result1 = tmp5(4431);
   }
   if (isScreenLandscape) {
     isScreenLandscape = tmp5(1115).isAndroid();

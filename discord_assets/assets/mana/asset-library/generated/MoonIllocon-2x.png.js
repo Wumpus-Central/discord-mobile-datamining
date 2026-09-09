@@ -1,6 +1,6 @@
-// === Module 6248: ? ===
+// === Module 6262: ? ===
 
-// Module 6248
+// Module 6262
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/MoonIllocon-2x.png.js");

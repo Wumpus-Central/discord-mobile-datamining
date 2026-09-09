@@ -1,23 +1,24 @@
-// === Module 15082: BountiesCtaHeader ===
+// === Module 15109: BountiesCtaHeader ===
 
-// Module 15082 (BountiesCtaHeader)
+// Module 15109 (BountiesCtaHeader)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import components_Button_Button from "components/Button/Button" /* 4975 */;
-import QuestTypes from "QuestTypes" /* 5447 */;
-import AdCreativeType from "AdCreativeType" /* 5451 */;
-import AnalyticsActions from "AnalyticsActions" /* 7718 */;
-import AnalyticsTypes from "AnalyticsTypes" /* 7728 */;
-import common_Video from "common/Video" /* 8307 */;
-import BountiesModalActionCreatorsDefault from "BountiesModalActionCreators" /* 15005 */;
-import _modDef15055 from "module_15055" /* 15055 */;
-import openBountiesNuxPromoSheetDefault from "openBountiesNuxPromoSheet" /* 15068 */;
-import BountiesBannerBackgroundDefault from "BountiesBannerBackground" /* 15085 */;
-import _modDef15086 from "module_15086" /* 15086 */;
+import components_Button_Button from "components/Button/Button" /* 4989 */;
+import QuestTypes from "QuestTypes" /* 5461 */;
+import AdCreativeType from "AdCreativeType" /* 5465 */;
+import AnalyticsActions from "AnalyticsActions" /* 7732 */;
+import AnalyticsTypes from "AnalyticsTypes" /* 7742 */;
+import common_Video from "common/Video" /* 8335 */;
+import BountiesModalActionCreatorsDefault from "BountiesModalActionCreators" /* 15031 */;
+import BountiesModalTypes from "BountiesModalTypes" /* 15033 */;
+import _modDef15082 from "module_15082" /* 15082 */;
+import openBountiesNuxPromoSheetDefault from "openBountiesNuxPromoSheet" /* 15095 */;
+import BountiesBannerBackgroundDefault from "BountiesBannerBackground" /* 15112 */;
+import _modDef15113 from "module_15113" /* 15113 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4552 */;
-import AdContentSeenStore from "AdContentSeenStore" /* 15083 */;
+import AccessibilityStore from "AccessibilityStore" /* 4566 */;
+import AdContentSeenStore from "AdContentSeenStore" /* 15110 */;
 
 require = fn;
 function StarfieldBackground() {
@@ -25,11 +26,11 @@ function StarfieldBackground() {
   const items = [AccessibilityStore];
   const stateFromStores = obj.useStateFromStores(items, () => useReducedMotion.useReducedMotion);
   obj = { source: null, style: null, resizeMode: "cover", muted: true, disableFocus: true, paused: null, importantForAccessibility: "no-hide-descendants" };
-  obj = { uri: _modDef15055 };
+  obj = { uri: _modDef15082 };
   obj.source = obj;
   obj.style = absoluteFillObject.absoluteFillObject;
   obj.paused = stateFromStores;
-  return closure_1_11(common_Video.VideoComponent, obj);
+  return closure_1_10(common_Video.VideoComponent, obj);
 }
 function StartEarningOrbsButton(arg0) {
   ({ variant, onPress } = arg0);
@@ -37,7 +38,7 @@ function StartEarningOrbsButton(arg0) {
   const intl = util.intl;
   obj.text = intl.string(util.t["1kkbKw"]);
   obj.onPress = onPress;
-  return closure_1_11(components_Button_Button.Button, obj);
+  return closure_1_10(components_Button_Button.Button, obj);
 }
 function BountiesCtaDescription(arg0) {
   ({ isEmptyOrCompleted, inlineLearnMore } = arg0);
@@ -59,7 +60,7 @@ function BountiesCtaDescription(arg0) {
   let obj = { variant: "text-sm/medium", color: str, children: null };
   const intl = tmp5(1114).intl;
   obj.children = intl.string(AZGGo1);
-  const tmp7 = closure_1_11(tmp5(4556).Text, obj);
+  const tmp7 = closure_1_10(tmp5(4570).Text, obj);
   const intl2 = tmp5(1114).intl;
   obj = { onClick: openBountiesNuxPromoSheetDefault };
   const formatResult = intl2.format(tmp5(1114).t.fjSvsC, obj);
@@ -68,17 +69,17 @@ function BountiesCtaDescription(arg0) {
       obj = { style: tmp.description, children: null };
       const items = [tmp7, ];
       const obj1 = { variant: "text-sm/medium", children: formatResult };
-      items[1] = closure_1_11(tmp5(4556).Text, obj1);
+      items[1] = closure_1_10(tmp5(4570).Text, obj1);
       obj.children = items;
-      let tmp11 = closure_1_12(hasOwnProperty, obj);
+      let tmp11 = closure_1_11(hasOwnProperty, obj);
     }
     return tmp11;
   }
   const obj2 = { variant: "text-sm/medium", children: null };
   const items1 = [tmp7, " ", formatResult];
   obj2.children = items1;
-  tmp11 = closure_1_12(tmp5(4556).Text, obj2);
-  tmp = closure_17();
+  tmp11 = closure_1_11(tmp5(4570).Text, obj2);
+  tmp = closure_16();
 }
 function BountiesCtaHeaderInner(bounties) {
   bounties = bounties.bounties;
@@ -90,103 +91,99 @@ function BountiesCtaHeaderInner(bounties) {
   if (shopCarouselButtonVariant === undefined) {
     shopCarouselButtonVariant = "default";
   }
-  const tmp = closure_17();
-  let tmp10Result = null != footer;
-  let tmp12Result3 = !flag;
-  let obj = bounties(15084);
+  const tmp = closure_16();
+  let tmp9Result = null != footer;
+  let tmp11Result3 = !flag;
+  let obj = bounties(15111);
   const bountiesEntryPointButtonVariant = obj.getBountiesEntryPointButtonVariant(shopCarouselButtonVariant);
   let obj1 = bounties(504);
   const items = [AdContentSeenStore];
   const items1 = [bounties];
   const stateFromStores = obj1.useStateFromStores(items, () => bounties.some((id) => !closure_1_7.hasSeen(bounties(closure_1_2[17]).AdCreativeType.BOUNTY, id.id)), items1);
-  let obj2 = bounties(11525);
-  const QuestContent = bounties(5447).QuestContent;
-  const tmp8 = obj2.useBountiesExperience(constants2.QUEST_HOME_MOBILE).verticalScrollEnabled ? QuestContent.VIDEO_MODAL_MOBILE : QuestContent.QUEST_HOME_MOBILE_CAROUSEL;
-  importDefault = tmp8;
-  const items2 = [bounties, tmp8];
+  const items2 = [bounties];
   const callback = noop.useCallback(() => {
     let obj = { adContentId, adCreativeType: AdCreativeType.AdCreativeType.BOUNTY, questContent: QuestTypes.QuestContent.QUEST_HOME_ENTRYPOINT_MOBILE, questContentCTA: AnalyticsTypes.QuestContentCTA.START_BOUNTY, sourceQuestContent: QuestTypes.QuestContent.QUEST_HOME_ENTRYPOINT_MOBILE, questContentPosition: 0 };
     const result = obj.trackAdContentClicked(obj);
-    obj = { bountyId: bounties[0].id, sourceQuestContent };
+    obj = { bountyId: bounties[0].id, sourceQuestContent: QuestTypes.QuestContent.VIDEO_MODAL_MOBILE, variant: BountiesModalTypes.BountiesModalVariant.VERTICAL_SCROLL };
     BountiesModalActionCreatorsDefault.showModal(obj);
   }, items2);
   obj = { ref: containerRef, style: tmp.container, children: null };
   const items3 = [tmp.bannerClip, ];
-  let headerRoundedBottom = tmp13;
-  if (!tmp10Result) {
+  let headerRoundedBottom = tmp12;
+  if (!tmp9Result) {
     headerRoundedBottom = tmp.headerRoundedBottom;
   }
   obj = { style: items3, children: null };
   items3[1] = headerRoundedBottom;
   if (null != replaceHeaderMediaWith) {
     const items4 = [tmp.headerReplaceMedia, ];
-    let headerRoundedBottom3 = tmp13;
-    if (!tmp10Result) {
+    let headerRoundedBottom3 = tmp12;
+    if (!tmp9Result) {
       headerRoundedBottom3 = tmp.headerRoundedBottom;
     }
     obj1 = { style: null, children: null };
     items4[1] = headerRoundedBottom3;
     obj1.style = items4;
-    const items5 = [closure_11(StarfieldBackground, {}), , , ];
-    obj2 = { style: tmp.headerTitleSection, children: null };
+    const items5 = [closure_10(StarfieldBackground, {}), , , ];
+    const obj2 = { style: tmp.headerTitleSection, children: null };
     const obj3 = { style: tmp.headerHeadingGroup, children: null };
-    let tmp12Result = stateFromStores;
+    let tmp11Result = stateFromStores;
     if (stateFromStores) {
-      ({ newPillInline: obj14.containerStyle, newPillText: obj14.textStyle } = tmp);
-      tmp12Result = closure_11(tmp4(1178).NewTag, { variant: "text-xs/bold", containerStyle: null, textStyle: null });
+      ({ newPillInline: obj13.containerStyle, newPillText: obj13.textStyle } = tmp);
+      tmp11Result = closure_10(tmp4(1178).NewTag, { variant: "text-xs/bold", containerStyle: null, textStyle: null });
       const obj4 = { variant: "text-xs/bold", containerStyle: null, textStyle: null };
     }
-    const items6 = [tmp12Result, ];
+    const items6 = [tmp11Result, ];
     const obj5 = { style: tmp.headerHeadingContent, children: null };
     const obj6 = { variant: "text-lg/semibold", color: "text-strong", children: null };
     const intl2 = tmp4(1114).intl;
     obj6.children = intl2.string(tmp4(1114).t.qetVDw);
-    const items7 = [closure_11(tmp4(4556).Text, obj6), ];
+    const items7 = [closure_10(tmp4(4570).Text, obj6), ];
     const obj7 = { isEmptyOrCompleted: flag, inlineLearnMore: true };
-    items7[1] = closure_11(BountiesCtaDescription, obj7);
+    items7[1] = closure_10(BountiesCtaDescription, obj7);
     obj5.children = items7;
-    items6[1] = closure_12(closure_5, obj5);
+    items6[1] = closure_11(closure_5, obj5);
     obj3.children = items6;
-    obj2.children = closure_12(closure_5, obj3);
-    items5[1] = closure_11(closure_5, obj2);
+    obj2.children = closure_11(closure_5, obj3);
+    items5[1] = closure_10(closure_5, obj2);
     items5[2] = replaceHeaderMediaWith;
-    tmp12Result = tmp12Result3;
+    tmp11Result = tmp11Result3;
     if (!flag) {
-      tmp12Result = tmp13;
+      tmp11Result = tmp12;
     }
-    if (tmp12Result) {
+    if (tmp11Result) {
       const obj8 = { style: tmp.headerReplaceMediaCta, children: null };
       const obj9 = { variant: bountiesEntryPointButtonVariant, onPress: callback };
-      obj8.children = closure_11(StartEarningOrbsButton, obj9);
-      tmp12Result = closure_11(closure_5, obj8);
+      obj8.children = closure_10(StartEarningOrbsButton, obj9);
+      tmp11Result = closure_10(closure_5, obj8);
     }
-    items5[3] = tmp12Result;
+    items5[3] = tmp11Result;
     obj1.children = items5;
-    tmp10Result = closure_12(closure_5, obj1);
+    tmp9Result = closure_11(closure_5, obj1);
   } else {
-    const obj10 = { uri: _modDef15086, style: null, children: null };
+    const obj10 = { uri: _modDef15113, style: null, children: null };
     const items8 = [tmp.header, , ];
-    let headerWithFooter = tmp10Result;
-    if (tmp10Result) {
+    let headerWithFooter = tmp9Result;
+    if (tmp9Result) {
       headerWithFooter = tmp.headerWithFooter;
     }
     items8[1] = headerWithFooter;
-    let headerRoundedBottom2 = tmp13;
-    if (!tmp10Result) {
+    let headerRoundedBottom2 = tmp12;
+    if (!tmp9Result) {
       headerRoundedBottom2 = tmp.headerRoundedBottom;
     }
     items8[2] = headerRoundedBottom2;
     obj10.style = items8;
-    let tmp12Result1 = stateFromStores;
+    let tmp11Result1 = stateFromStores;
     if (stateFromStores) {
-      ({ newPill: obj6.containerStyle, newPillText: obj6.textStyle } = tmp);
-      tmp12Result1 = closure_11(tmp4(1178).NewTag, { variant: "text-xs/bold", containerStyle: null, textStyle: null });
+      ({ newPill: obj5.containerStyle, newPillText: obj5.textStyle } = tmp);
+      tmp11Result1 = closure_10(tmp4(1178).NewTag, { variant: "text-xs/bold", containerStyle: null, textStyle: null });
       const obj11 = { variant: "text-xs/bold", containerStyle: null, textStyle: null };
     }
-    const items9 = [tmp12Result1, ];
+    const items9 = [tmp11Result1, ];
     const items10 = [tmp.headerTextBox, ];
-    let headerTextBoxWithFooter = tmp10Result;
-    if (tmp10Result) {
+    let headerTextBoxWithFooter = tmp9Result;
+    if (tmp9Result) {
       headerTextBoxWithFooter = tmp.headerTextBoxWithFooter;
     }
     const obj12 = { style: null, children: null };
@@ -195,54 +192,54 @@ function BountiesCtaHeaderInner(bounties) {
     const obj13 = { variant: "text-lg/semibold", color: "text-strong", children: null };
     const intl = tmp4(1114).intl;
     obj13.children = intl.string(tmp4(1114).t.qetVDw);
-    const items11 = [closure_11(tmp4(4556).Text, obj13), , ];
+    const items11 = [closure_10(tmp4(4570).Text, obj13), , ];
     const obj14 = { isEmptyOrCompleted: flag };
-    items11[1] = closure_11(BountiesCtaDescription, obj14);
-    let tmp12Result2 = tmp12Result3;
+    items11[1] = closure_10(BountiesCtaDescription, obj14);
+    let tmp11Result2 = tmp11Result3;
     if (!flag) {
-      tmp12Result2 = tmp13;
+      tmp11Result2 = tmp12;
     }
-    if (tmp12Result2) {
+    if (tmp11Result2) {
       const obj15 = { variant: bountiesEntryPointButtonVariant, onPress: callback };
-      tmp12Result2 = closure_11(StartEarningOrbsButton, obj15);
+      tmp11Result2 = closure_10(StartEarningOrbsButton, obj15);
     }
-    items11[2] = tmp12Result2;
+    items11[2] = tmp11Result2;
     obj12.children = items11;
-    items9[1] = closure_12(closure_5, obj12);
+    items9[1] = closure_11(closure_5, obj12);
     obj10.children = items9;
-    tmp10Result = closure_12(BountiesBannerBackgroundDefault, obj10);
+    tmp9Result = closure_11(BountiesBannerBackgroundDefault, obj10);
   }
-  obj.children = tmp10Result;
-  const items12 = [closure_11(closure_5, obj), ];
-  if (tmp10Result) {
+  obj.children = tmp9Result;
+  const items12 = [closure_10(closure_5, obj), ];
+  if (tmp9Result) {
     const obj16 = { style: tmp.footerClip, children: null };
-    const items13 = [closure_11(StarfieldBackground, {}), footer, ];
+    const items13 = [closure_10(StarfieldBackground, {}), footer, ];
     if (!flag) {
       const obj17 = { style: tmp.footerCta, children: null };
       const obj18 = { variant: bountiesEntryPointButtonVariant, onPress: callback };
-      obj17.children = closure_11(StartEarningOrbsButton, obj18);
-      tmp12Result3 = closure_11(closure_5, obj17);
+      obj17.children = closure_10(StartEarningOrbsButton, obj18);
+      tmp11Result3 = closure_10(closure_5, obj17);
     }
-    items13[2] = tmp12Result3;
+    items13[2] = tmp11Result3;
     obj16.children = items13;
-    tmp10Result = closure_12(closure_5, obj16);
+    tmp9Result = closure_11(closure_5, obj16);
   }
-  items12[1] = tmp10Result;
+  items12[1] = tmp9Result;
   obj.children = items12;
-  return closure_12(closure_5, obj);
+  return closure_11(closure_5, obj);
 }
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-const QuestConstants = fn(5444);
-({ BountyCarouselEmptyStateReason: closure_8, DEFAULT_PLACEHOLDER_ENTRYPOINT_BOUNTY_ID: closure_9, QuestsExperimentLocations: c10 } = QuestConstants);
+const QuestConstants = fn(5458);
+({ BountyCarouselEmptyStateReason: closure_8, DEFAULT_PLACEHOLDER_ENTRYPOINT_BOUNTY_ID: closure_9 } = QuestConstants);
 const jsxProd = fn(21);
-({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
+({ jsx: c10, jsxs: closure_11 } = jsxProd);
 const PX_16 = nativeDefault.space.PX_16;
 const PX_20 = nativeDefault.space.PX_20;
 const sum = 26 + nativeDefault.space.PX_8 + PX_16;
-const minHeight = 472 - (sum + fn(4980).MEDIUM_BUTTON_HEIGHT + PX_20 + 170);
-const createStyles = fn(4560);
-let closure_17 = createStyles.createStyles(() => {
+const minHeight = 472 - (sum + fn(4994).MEDIUM_BUTTON_HEIGHT + PX_20 + 170);
+const createStyles = fn(4574);
+let closure_16 = createStyles.createStyles(() => {
   let obj = { container: null, bannerClip: null, footerClip: null, header: null, headerWithFooter: null, headerReplaceMedia: null, headerTitleSection: null, headerHeadingGroup: null, headerHeadingContent: null, headerReplaceMediaCta: null, headerRoundedBottom: null, newPill: null, newPillInline: null, newPillText: null, headerTextBox: null, headerTextBoxWithFooter: null, description: null, footerCta: null };
   obj = { width: "100%", backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, borderLeftWidth: 1, borderRightWidth: 1, borderBottomWidth: 1, borderColor: nativeDefault.colors.BORDER_MUTED, borderBottomLeftRadius: nativeDefault.radii.xxl, borderBottomRightRadius: nativeDefault.radii.xxl, overflow: "hidden" };
   obj.container = obj;
@@ -283,7 +280,7 @@ let result = size.fileFinishedImporting("modules/quests/native/BountiesCtaHeader
 
 export default noop.memo(function BountiesCtaHeader(isEmptyOrCompleted) {
   _require = isEmptyOrCompleted;
-  const tmp2 = containerRef(15081)();
+  const tmp2 = containerRef(15108)();
   containerRef = tmp2.containerRef;
   isEmptyOrCompleted = isEmptyOrCompleted.isEmptyOrCompleted;
   let tmp3 = undefined !== isEmptyOrCompleted;
@@ -298,26 +295,26 @@ export default noop.memo(function BountiesCtaHeader(isEmptyOrCompleted) {
       obj = {};
       let merged = Object.assign(isEmptyOrCompleted);
       obj.containerRef = containerRef;
-      let tmp9Result = closure_11(BountiesCtaHeaderInner, obj);
+      let tmp9Result = closure_10(BountiesCtaHeaderInner, obj);
     } else {
       const obj1 = {
         adContentId,
-        adCreativeType: tmp7(5451).AdCreativeType.BOUNTY,
-        questContent: tmp7(5447).QuestContent.QUEST_HOME_ENTRYPOINT_MOBILE,
+        adCreativeType: tmp7(5465).AdCreativeType.BOUNTY,
+        questContent: tmp7(5461).QuestContent.QUEST_HOME_ENTRYPOINT_MOBILE,
         questContentPosition: 0,
         overrideVisibility: tmp2.isInView,
-        sourceQuestContent: tmp7(5447).QuestContent.QUEST_HOME_ENTRYPOINT_MOBILE,
+        sourceQuestContent: tmp7(5461).QuestContent.QUEST_HOME_ENTRYPOINT_MOBILE,
         children() {
               const obj = {};
               const merged = Object.assign(closure_0);
               obj.containerRef = containerRef;
-              return closure_2_11(BountiesCtaHeaderInner, obj);
+              return closure_2_10(BountiesCtaHeaderInner, obj);
             }
       };
-      tmp9Result = closure_11(tmp7(11783).QuestContentImpressionTrackerNative, obj1);
+      tmp9Result = closure_10(tmp7(11809).QuestContentImpressionTrackerNative, obj1);
     }
     obj.children = tmp9Result;
-    return closure_11(require("native").ThemeContextProvider, obj);
+    return closure_10(require("native").ThemeContextProvider, obj);
   } else if (0 === isEmptyOrCompleted.bounties.length) {
     let COMPLETED = constants.EMPTY;
   } else {

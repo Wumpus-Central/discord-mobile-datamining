@@ -1,19 +1,19 @@
-// === Module 15157: VideoQuestTranscriptActionSheet ===
+// === Module 15184: VideoQuestTranscriptActionSheet ===
 
-// Module 15157 (VideoQuestTranscriptActionSheet)
+// Module 15184 (VideoQuestTranscriptActionSheet)
 import nativeDefault from "native" /* 576 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1611 */;
-import QuestActionCreators from "QuestActionCreators" /* 11281 */;
-import AssetUtils from "AssetUtils" /* 11290 */;
+import QuestActionCreators from "QuestActionCreators" /* 11308 */;
+import AssetUtils from "AssetUtils" /* 11317 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const ActivityIndicator = fn(17).ActivityIndicator;
-const VideoQuestUIStore = fn(7705);
+const VideoQuestUIStore = fn(7719);
 ({ FetchStatus: hasOwnProperty, useVideoQuestUIStore: metroRequire } = VideoQuestUIStore);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-fn(4560);
+fn(4574);
 let createStyles = { content: null, loadingSpinner: null };
 createStyles = { paddingBottom: nativeDefault.space.PX_8 };
 createStyles.content = createStyles;
@@ -73,7 +73,7 @@ export default function VideoQuestTranscriptActionSheet(quest) {
   obj = { title: null };
   const intl = quest(1114).intl;
   obj.title = intl.string(quest(1114).t["1YS80z"]);
-  obj.header = closure_7(quest(7149).BottomSheetTitleHeader, obj);
+  obj.header = closure_7(quest(7163).BottomSheetTitleHeader, obj);
   obj = { contentContainerStyle: { paddingBottom: useSafeAreaInsetsDefault().bottom }, children: null };
   const obj1 = { spacing: 16, style: tmp.content, children: null };
   let fetchStatus;
@@ -87,7 +87,7 @@ export default function VideoQuestTranscriptActionSheet(quest) {
   }
   const items2 = [tmp7Result, memo.length > 0 && memo.map((children, index) => closure_1_7(quest(dependencyMap[14]).Text, { variant: "heading-md/normal", color: "text-muted", children }, index))];
   obj1.children = items2;
-  obj.children = closure_8(quest(4973).Stack, obj1);
-  obj.children = closure_7(quest(6627).BottomSheetScrollView, obj);
-  return closure_7(quest(7198).ActionSheet, obj);
+  obj.children = closure_8(quest(4987).Stack, obj1);
+  obj.children = closure_7(quest(6641).BottomSheetScrollView, obj);
+  return closure_7(quest(7211).ActionSheet, obj);
 };

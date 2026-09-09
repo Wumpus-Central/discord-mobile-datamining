@@ -1,21 +1,21 @@
-// === Module 14989: PremiumManageSubscriptionsSetting ===
+// === Module 15015: PremiumManageSubscriptionsSetting ===
 
-// Module 14989 (PremiumManageSubscriptionsSetting)
+// Module 15015 (PremiumManageSubscriptionsSetting)
 import util from "util" /* 1114 */;
-import PremiumUtils from "PremiumUtils" /* 4218 */;
-import BlockedPaymentsCountryExperiment from "BlockedPaymentsCountryExperiment" /* 7417 */;
-import openBlockedPaymentsCountryActionSheetDefault from "openBlockedPaymentsCountryActionSheet" /* 11438 */;
+import PremiumUtils from "PremiumUtils" /* 4231 */;
+import BlockedPaymentsCountryExperiment from "BlockedPaymentsCountryExperiment" /* 7431 */;
+import openBlockedPaymentsCountryActionSheetDefault from "openBlockedPaymentsCountryActionSheet" /* 11465 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-fn(11473);
+fn(11500);
 let SettingBuilders = {
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t["z5YcJ+"]);
   },
   parent: null,
-  IconComponent: fn(14990).SubscriptionIcon,
+  IconComponent: fn(15016).SubscriptionIcon,
   usePreNavigationAction: function useCanNavigateToPaymentSetting() {
     return noop.useCallback(() => {
       const isPaymentsBlocked = BlockedPaymentsCountryExperiment.getIsPaymentsBlocked();

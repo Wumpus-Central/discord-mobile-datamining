@@ -1,9 +1,9 @@
-// === Module 5785: BadgePacksAbstractUI ===
+// === Module 5799: BadgePacksAbstractUI ===
 
-// Module 5785 (BadgePacksAbstractUI)
+// Module 5799 (BadgePacksAbstractUI)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5587 */;
-import _modDef5786 from "module_5786" /* 5786 */;
+import FastImageDefault from "FastImage" /* 5601 */;
+import _modDef5800 from "module_5800" /* 5800 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -24,7 +24,7 @@ export const BadgePacksAbstractUI = function BadgePacksAbstractUI(width) {
     num3 = 1;
   }
   let obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  obj = { uri: _modDef5786 };
+  obj = { uri: _modDef5800 };
   obj.source = obj;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];
@@ -32,5 +32,5 @@ export const BadgePacksAbstractUI = function BadgePacksAbstractUI(width) {
   obj.accessible = accessible;
   obj.accessibilityLabel = accessibilityLabel;
   obj.resizeMode = resizeMode;
-  return jsx(FastImageDefault, { uri: _modDef5786 });
+  return jsx(FastImageDefault, { uri: _modDef5800 });
 };

@@ -1,7 +1,7 @@
-// === Module 13147: NitroIcon ===
+// === Module 13172: NitroIcon ===
 
-// Module 13147 (NitroIcon)
-import inlineStyles from "inlineStyles" /* 8456 */;
+// Module 13172 (NitroIcon)
+import inlineStyles from "inlineStyles" /* 8484 */;
 import noop from "module_19" /* 19 */;
 
 const inlineStylesDefault = inlineStyles;

@@ -1,16 +1,16 @@
-// === Module 13261: ForumChannelSearch ===
+// === Module 13284: ForumChannelSearch ===
 
-// Module 13261 (ForumChannelSearch)
-import tracking_Tracking from "tracking/Tracking" /* 7767 */;
-import ForumActionCreatorsDefault from "ForumActionCreators" /* 7898 */;
+// Module 13284 (ForumChannelSearch)
+import tracking_Tracking from "tracking/Tracking" /* 7781 */;
+import ForumActionCreatorsDefault from "ForumActionCreators" /* 7912 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
-import ForumSearchStore from "ForumSearchStore" /* 7768 */;
+import ForumSearchStore from "ForumSearchStore" /* 7782 */;
 
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4560);
+const createStyles = fn(4574);
 let closure_8 = createStyles.createStyles({ inputContainer: { flexGrow: 1, marginLeft: 8 }, cancelButtonContainer: { paddingLeft: 8 } });
 const memoResult = noop.memo((channelId) => {
   channelId = channelId.channelId;
@@ -51,7 +51,7 @@ export const ForumChannelCloseSearchButton = memoResult;
 export const ForumChannelSearchInput = noop.memo((channelId) => {
   channelId = channelId.channelId;
   ({ guildId: importDefault, placeholder } = channelId);
-  let obj = channelId(13262);
+  let obj = channelId(13285);
   const canSearchForumPostsByChannelId = obj.useCanSearchForumPostsByChannelId(channelId);
   const tmp = closure_8();
   const items = [ForumSearchStore];

@@ -1,19 +1,19 @@
-// === Module 15482: SettingsNotificationScreen ===
+// === Module 15512: SettingsNotificationScreen ===
 
-// Module 15482 (SettingsNotificationScreen)
+// Module 15512 (SettingsNotificationScreen)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import Text_Text from "Text/Text" /* 4556 */;
-import Card from "Card" /* 5607 */;
-import CircleErrorIcon from "CircleErrorIcon" /* 6610 */;
-import ManaTypeConsolidationExperiment from "ManaTypeConsolidationExperiment" /* 8095 */;
-import SettingBuilders from "SettingBuilders" /* 11473 */;
-import NotificationPermissionUtil from "NotificationPermissionUtil" /* 12415 */;
-import SettingLayoutDefault from "SettingLayout" /* 14692 */;
-import ContextualOptInNudgeHoldoutExperimentDefault from "ContextualOptInNudgeHoldoutExperiment" /* 15484 */;
-import SettingsNotificationUtils from "SettingsNotificationUtils" /* 15485 */;
-import NotificationPermissionSettingsHeaderDefault from "NotificationPermissionSettingsHeader" /* 15486 */;
-import FamilyCenterAgeGroupPrefetch from "FamilyCenterAgeGroupPrefetch" /* 15487 */;
+import Text_Text from "Text/Text" /* 4570 */;
+import Card from "Card" /* 5621 */;
+import CircleErrorIcon from "CircleErrorIcon" /* 6624 */;
+import ManaTypeConsolidationExperiment from "ManaTypeConsolidationExperiment" /* 8111 */;
+import SettingBuilders from "SettingBuilders" /* 11500 */;
+import NotificationPermissionUtil from "NotificationPermissionUtil" /* 12441 */;
+import SettingLayoutDefault from "SettingLayout" /* 14718 */;
+import ContextualOptInNudgeHoldoutExperimentDefault from "ContextualOptInNudgeHoldoutExperiment" /* 15514 */;
+import SettingsNotificationUtils from "SettingsNotificationUtils" /* 15515 */;
+import NotificationPermissionSettingsHeaderDefault from "NotificationPermissionSettingsHeader" /* 15516 */;
+import FamilyCenterAgeGroupPrefetch from "FamilyCenterAgeGroupPrefetch" /* 15517 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -61,11 +61,11 @@ function SystemNotificationsSubLabel() {
   return React6(React7, { children });
 }
 const View = fn(17).View;
-let closure_5 = fn(15483).initializeAndroidNotificationSettingsStore;
-const MobileUserSettings = fn(7975).MobileUserSettings;
+let closure_5 = fn(15513).initializeAndroidNotificationSettingsStore;
+const MobileUserSettings = fn(7989).MobileUserSettings;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8, Fragment: closure_9 } = jsxProd);
-const createStyles = fn(4560);
+const createStyles = fn(4574);
 let obj = { card: null, cardContent: null, text: null };
 obj = { marginBottom: 8, borderColor: nativeDefault.unsafe_rawColors.YELLOW_300, borderWidth: 1, borderRadius: nativeDefault.radii.lg };
 obj.card = obj;
@@ -76,8 +76,8 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_settings/notifications/native/SettingsNotificationScreen.tsx");
 
 export default noop.memo(() => {
-  isFamilyCenterV3Enabled = isFamilyCenterV3Enabled(7594).useIsFamilyCenterV3Enabled({ location: "SettingsNotificationsScreen" });
-  let obj = isFamilyCenterV3Enabled(7594);
+  isFamilyCenterV3Enabled = isFamilyCenterV3Enabled(7608).useIsFamilyCenterV3Enabled({ location: "SettingsNotificationsScreen" });
+  let obj = isFamilyCenterV3Enabled(7608);
   let tmp2 = !ContextualOptInNudgeHoldoutExperimentDefault.useConfig({ location: "SettingsNotificationsScreen" }).inHoldout;
   importDefault = tmp2;
   let items = [tmp2];

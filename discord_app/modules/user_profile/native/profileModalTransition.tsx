@@ -1,6 +1,6 @@
-// === Module 16787: profileModalTransition ===
+// === Module 16824: profileModalTransition ===
 
-// Module 16787 (profileModalTransition)
+// Module 16824 (profileModalTransition)
 import noop from "module_19" /* 19 */;
 
 const require = fn;

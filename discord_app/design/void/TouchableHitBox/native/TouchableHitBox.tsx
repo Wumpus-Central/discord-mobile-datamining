@@ -1,15 +1,15 @@
-// === Module 9055: TouchableHitBox ===
+// === Module 9082: TouchableHitBox ===
 
-// Module 9055 (TouchableHitBox)
+// Module 9082 (TouchableHitBox)
 import nativeDefault from "native" /* 576 */;
 import native from "native" /* 1178 */;
-import Pressables from "Pressables" /* 5123 */;
+import Pressables from "Pressables" /* 5137 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const ActivityIndicator = fn(17).ActivityIndicator;
 const jsx = fn(21).jsx;
-fn(4560);
+fn(4574);
 let createStyles = { button: null, buttonText: null, buttonIcon: null, buttonSpinner: null, buttonDisabled: null };
 createStyles = { flexGrow: 0, flexShrink: 1, justifyContent: "center", alignItems: "center", backgroundColor: "transparent", alignSelf: "flex-start", borderRadius: nativeDefault.radii.sm };
 createStyles.button = createStyles;
@@ -96,7 +96,7 @@ TouchableHitBox.prototype["render"] = function render() {
   obj3.children = tmp8Result;
   return jsx(Pressables.PressableOpacity, { accessibilityRole, accessibilityLabel, accessibilityState, onPress, onLongPress, activeOpacity, style: null, disabled: null, children: null });
 };
-TouchableHitBox.contextType = fn(4271).ThemeContext;
+TouchableHitBox.contextType = fn(4284).ThemeContext;
 TouchableHitBox.defaultProps = {
   onPress() {
 

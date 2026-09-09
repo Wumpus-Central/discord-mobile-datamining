@@ -1,17 +1,17 @@
-// === Module 5438: SortedGuildStore ===
+// === Module 5452: SortedGuildStore ===
 
-// Module 5438 (SortedGuildStore)
+// Module 5452 (SortedGuildStore)
 import _modDef38 from "module_38" /* 38 */;
 import _modDef1332 from "module_1332" /* 1332 */;
-import UserGuildJoinRequestStore from "UserGuildJoinRequestStore" /* 4382 */;
-import LurkingStore from "LurkingStore" /* 4200 */;
+import UserGuildJoinRequestStore from "UserGuildJoinRequestStore" /* 4396 */;
+import LurkingStore from "LurkingStore" /* 4213 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1221 */;
-import ExpandedGuildFolderStore from "ExpandedGuildFolderStore" /* 5439 */;
-import GuildAvailabilityStore from "GuildAvailabilityStore" /* 4902 */;
+import ExpandedGuildFolderStore from "ExpandedGuildFolderStore" /* 5453 */;
+import GuildAvailabilityStore from "GuildAvailabilityStore" /* 4916 */;
 import GuildMemberStore from "GuildMemberStore" /* 2021 */;
 import GuildStore from "GuildStore" /* 1979 */;
 import MobileCacheSnapshotStore from "MobileCacheSnapshotStore" /* 1073 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 4741 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 4755 */;
 import UserStore from "UserStore" /* 1371 */;
 
 function insertUnsortedGuilds(fn, fn2) {
@@ -33,12 +33,12 @@ function insertUnsortedGuilds(fn, fn2) {
 }
 function convertNodeToGuildFolder(type) {
   type = type.type;
-  if (FunctionUtils(5440).GuildsNodeType.FOLDER === type) {
+  if (FunctionUtils(5454).GuildsNodeType.FOLDER === type) {
     let obj = { folderId: null, folderName: null, folderColor: null, expanded: null, guildIds: null };
     ({ id: obj2.folderId, name: obj2.folderName, color: obj2.folderColor, expanded: obj2.expanded, children } = type);
     obj.guildIds = children.map((id) => id.id);
     return obj;
-  } else if (FunctionUtils(5440).GuildsNodeType.GUILD === type) {
+  } else if (FunctionUtils(5454).GuildsNodeType.GUILD === type) {
     obj = { folderId: "Array", guildIds: 0 };
     const items = [type.id];
     obj.guildIds = items;
@@ -49,12 +49,12 @@ function convertNodeToGuildFolder(type) {
   }
 }
 function rebuildTree(guildFolders, guildPositions) {
-  guildsTree = new FunctionUtils(5440).GuildsTree();
+  guildsTree = new FunctionUtils(5454).GuildsTree();
   if (0 === guildFolders.length) {
     if (guildPositions.length > 0) {
       const tmp18 = guildPositions[Symbol.iterator]();
       while (tmp18 !== undefined) {
-        let obj3 = FunctionUtils(5440);
+        let obj3 = FunctionUtils(5454);
         let addNodeResult = guildsTree.addNode(obj3.createGuildNode(tmp20));
         continue;
       }
@@ -64,7 +64,7 @@ function rebuildTree(guildFolders, guildPositions) {
     const nextResult = iter2.next();
     while (iter2 !== undefined) {
       let tmp33 = nextResult;
-      let tmp36 = nextResult.type === FunctionUtils(5440).GuildsNodeType.GUILD;
+      let tmp36 = nextResult.type === FunctionUtils(5454).GuildsNodeType.GUILD;
       if (tmp36) {
         let isLurkingResult = LurkingStore.isLurking(tmp33.id);
         if (!isLurkingResult) {
@@ -87,7 +87,7 @@ function rebuildTree(guildFolders, guildPositions) {
     const _Object = Object;
     const values = Object.values(guildsTree.nodes);
     for (const item10123 of values) {
-      let tmp58 = item10123.type === FunctionUtils(5440).GuildsNodeType.FOLDER;
+      let tmp58 = item10123.type === FunctionUtils(5454).GuildsNodeType.FOLDER;
       if (tmp58) {
         tmp58 = 0 === item10123.children.length;
       }
@@ -112,16 +112,16 @@ function rebuildTree(guildFolders, guildPositions) {
     let tmp5 = nextResult1;
     if (0 !== nextResult1.guildIds.length) {
       if (null == tmp5.folderId) {
-        let obj2 = FunctionUtils(5440);
+        let obj2 = FunctionUtils(5454);
         let addNodeResult1 = guildsTree.addNode(obj2.createGuildNode(tmp5.guildIds[0]));
       } else {
-        let obj4 = FunctionUtils(5440);
+        let obj4 = FunctionUtils(5454);
         let folderNode = obj4.createFolderNode(tmp5, undefined, ExpandedGuildFolderStore.isFolderExpanded(tmp5.folderId));
         let tmp77 = folderNode;
         let addNodeResult2 = guildsTree.addNode(folderNode);
         let guildIds = tmp5.guildIds;
         for (const item10030 of guildIds) {
-          let obj = FunctionUtils(5440);
+          let obj = FunctionUtils(5454);
           let addNodeResult3 = guildsTree.addNode(obj.createGuildNode(item10030), tmp77);
           continue;
         }
@@ -175,7 +175,7 @@ function handleMoveById(sourceId) {
     if (null != node1) {
       let tmp4 = combine;
       if (combine) {
-        tmp4 = node.type === FunctionUtils(5440).GuildsNodeType.FOLDER;
+        tmp4 = node.type === FunctionUtils(5454).GuildsNodeType.FOLDER;
       }
       const _HermesInternal = HermesInternal;
       _modDef38(!tmp4, "[SORTED GUILDS] Can't combine a folder " + node.id + " with another guilds list item");
@@ -190,17 +190,17 @@ function handleMoveById(sourceId) {
       const tmp10 = !tmp9;
       const tmp5 = !tmp4;
       const _HermesInternal3 = HermesInternal;
-      tmp22Result(!(node.type === FunctionUtils(5440).GuildsNodeType.FOLDER && null != node1.parentId), "[SORTED GUILDS] Can't move a folder " + node.id + " to inside of another folder " + node1.parentId);
+      tmp22Result(!(node.type === FunctionUtils(5454).GuildsNodeType.FOLDER && null != node1.parentId), "[SORTED GUILDS] Can't move a folder " + node.id + " to inside of another folder " + node1.parentId);
       if (combine) {
         let convertToFolderResult = node1;
-        if (node1.type !== FunctionUtils(5440).GuildsNodeType.FOLDER) {
+        if (node1.type !== FunctionUtils(5454).GuildsNodeType.FOLDER) {
           convertToFolderResult = guildsTree.convertToFolder(node1);
         }
         guildsTree.moveInto(node, convertToFolderResult, moveToBelow);
       } else {
         guildsTree.moveNextTo(node, node1, moveToBelow);
       }
-      const tmp14 = node.type === FunctionUtils(5440).GuildsNodeType.FOLDER && null != node1.parentId;
+      const tmp14 = node.type === FunctionUtils(5454).GuildsNodeType.FOLDER && null != node1.parentId;
     }
   }
   return false;
@@ -288,7 +288,7 @@ function handleGuildFolderDeleteLocal(targetId) {
   const element = guildsTree.getNode(targetId.targetId);
   let tmp = null != element;
   if (tmp) {
-    const tmp4 = element.type === element(5440).GuildsNodeType.FOLDER;
+    const tmp4 = element.type === element(5454).GuildsNodeType.FOLDER;
     if (tmp4) {
       const children = element.children;
       const mapped = children.map((id) => id.id);
@@ -347,7 +347,7 @@ function handleGuildFolderExpand(folderId) {
   const node = guildsTree.getNode(folderId);
   const isFolderExpandedResult = ExpandedGuildFolderStore.isFolderExpanded(folderId);
   if (null != node) {
-    if (node.type === FunctionUtils(5440).GuildsNodeType.FOLDER) {
+    if (node.type === FunctionUtils(5454).GuildsNodeType.FOLDER) {
       if (node.expanded !== isFolderExpandedResult) {
         const cloneNodeResult = guildsTree.cloneNode(node);
         _modDef38(cloneNodeResult.id === node.id, "[SORTED GUILDS] setNodeExpanded: Replacement folder node must have same id.");
@@ -362,7 +362,7 @@ function handleFolderExpanded(expanded) {
   expanded = expanded.expanded;
   const node = guildsTree.getNode(expanded.folderId);
   if (null != node) {
-    if (node.type === FunctionUtils(5440).GuildsNodeType.FOLDER) {
+    if (node.type === FunctionUtils(5454).GuildsNodeType.FOLDER) {
       if (node.expanded !== expanded) {
         const cloneNodeResult = guildsTree.cloneNode(node);
         _modDef38(cloneNodeResult.id === node.id, "[SORTED GUILDS] setNodeExpanded: Replacement folder node must have same id.");
@@ -378,7 +378,7 @@ function handleCollapseAll() {
   const nextResult = iter.next();
   while (iter !== undefined) {
     let tmp3 = nextResult;
-    let expanded = nextResult.type === FunctionUtils(5440).GuildsNodeType.FOLDER;
+    let expanded = nextResult.type === FunctionUtils(5454).GuildsNodeType.FOLDER;
     if (expanded) {
       expanded = tmp3.expanded;
     }
@@ -395,7 +395,7 @@ function setNodeExpanded(id, arg1) {
   cloneNodeResult.expanded = false;
   guildsTree.replaceNode(id, cloneNodeResult);
 }
-let guildsTree = new fn(5440).GuildsTree();
+let guildsTree = new fn(5454).GuildsTree();
 let FunctionUtils = fn(1933);
 let closure_28 = FunctionUtils.cachedFunction((sortedGuildNodes) => sortedGuildNodes.sortedGuildNodes().map((id) => id.id));
 FunctionUtils = fn(1933);
@@ -408,7 +408,7 @@ let closure_30 = FunctionUtils.cachedFunction((root) => {
   const items = [];
   function flattenNodes(root) {
     const type = root.type;
-    if (FunctionUtils(5440).GuildsNodeType.FOLDER === type) {
+    if (FunctionUtils(5454).GuildsNodeType.FOLDER === type) {
       items.push(root);
     }
     while (tmp5 !== undefined) {
@@ -456,11 +456,11 @@ class SortedGuildStore extends tmp4 {
         tree = snapshot.tree;
       }
       if (null != tree) {
-        guildsTree = new FunctionUtils(5440).GuildsTree();
+        guildsTree = new FunctionUtils(5454).GuildsTree();
         const snapshot1 = guildsTree.loadSnapshot(tree);
         const allNodesResult = guildsTree.allNodes();
         for (const item10011 of allNodesResult) {
-          if (item10011.type === FunctionUtils(5440).GuildsNodeType.FOLDER) {
+          if (item10011.type === FunctionUtils(5454).GuildsNodeType.FOLDER) {
             item10011.expanded = ExpandedGuildFolderStore.isFolderExpanded(item10011.id);
           }
           continue;
@@ -533,11 +533,11 @@ FunctionUtils.loadCache = function loadCache() {
     tree = snapshot.tree;
   }
   if (null != tree) {
-    guildsTree = new FunctionUtils(5440).GuildsTree();
+    guildsTree = new FunctionUtils(5454).GuildsTree();
     const snapshot1 = guildsTree.loadSnapshot(tree);
     const allNodesResult = guildsTree.allNodes();
     for (const item10011 of allNodesResult) {
-      if (item10011.type === FunctionUtils(5440).GuildsNodeType.FOLDER) {
+      if (item10011.type === FunctionUtils(5454).GuildsNodeType.FOLDER) {
         item10011.expanded = ExpandedGuildFolderStore.isFolderExpanded(item10011.id);
       }
       continue;
@@ -548,5 +548,5 @@ const size = fn(2);
 const result = size.fileFinishedImporting("stores/SortedGuildStore.tsx");
 
 export default FunctionUtils;
-export const GuildsNodeType = fn(5440).GuildsNodeType;
+export const GuildsNodeType = fn(5454).GuildsNodeType;
 export { insertUnsortedGuilds };

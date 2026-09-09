@@ -1,8 +1,8 @@
-// === Module 11466: PresenceActivityFiltering ===
+// === Module 11493: PresenceActivityFiltering ===
 
-// Module 11466 (PresenceActivityFiltering)
+// Module 11493 (PresenceActivityFiltering)
 import Server from "Server" /* 1894 */;
-import ApplicationStore from "ApplicationStore" /* 4788 */;
+import ApplicationStore from "ApplicationStore" /* 4802 */;
 
 require = fn;
 const size = fn(2);

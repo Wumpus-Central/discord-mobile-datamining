@@ -1,8 +1,8 @@
-// === Module 17866: NavigationSpanTracker ===
+// === Module 17899: NavigationSpanTracker ===
 
-// Module 17866 (NavigationSpanTracker)
+// Module 17899 (NavigationSpanTracker)
 import v1 from "v1" /* 1256 */;
-import NavigationSpanTypes from "NavigationSpanTypes" /* 17867 */;
+import NavigationSpanTypes from "NavigationSpanTypes" /* 17900 */;
 import size from "module_2" /* 2 */;
 
 class NavigationSpanTracker {

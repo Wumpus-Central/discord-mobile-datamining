@@ -1,18 +1,18 @@
-// === Module 5027: PlatformMarkupRules ===
+// === Module 5041: PlatformMarkupRules ===
 
-// Module 5027 (PlatformMarkupRules)
+// Module 5041 (PlatformMarkupRules)
 import _mod17 from "module_17" /* 17 */;
 import util from "util" /* 1114 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1396 */;
 import getGameMediaRefURLDefault from "getGameMediaRefURL" /* 1924 */;
-import UnicodeEmojisDefault from "UnicodeEmojis" /* 4213 */;
-import _modDef4257 from "module_4257" /* 4257 */;
-import MarkupTextRuleDefault from "MarkupTextRule" /* 5005 */;
-import MarkupChannelMentionRuleDefault from "MarkupChannelMentionRule" /* 5006 */;
-import MarkupAttachmentLinkRuleDefault from "MarkupAttachmentLinkRule" /* 5009 */;
-import utils_ChannelUtils from "utils/ChannelUtils" /* 5028 */;
-import useGameMentionData from "useGameMentionData" /* 5107 */;
-import MarkupInvisibleUnicode from "MarkupInvisibleUnicode" /* 5122 */;
+import UnicodeEmojisDefault from "UnicodeEmojis" /* 4226 */;
+import _modDef4270 from "module_4270" /* 4270 */;
+import MarkupTextRuleDefault from "MarkupTextRule" /* 5019 */;
+import MarkupChannelMentionRuleDefault from "MarkupChannelMentionRule" /* 5020 */;
+import MarkupAttachmentLinkRuleDefault from "MarkupAttachmentLinkRule" /* 5023 */;
+import utils_ChannelUtils from "utils/ChannelUtils" /* 5042 */;
+import useGameMentionData from "useGameMentionData" /* 5121 */;
+import MarkupInvisibleUnicode from "MarkupInvisibleUnicode" /* 5136 */;
 import size from "module_2" /* 2 */;
 
 const Image = _mod17.Image;
@@ -51,7 +51,7 @@ let obj = {
   silentPrefix: null
 };
 obj = {};
-let merged = Object.assign(_modDef4257.defaultRules.escape);
+let merged = Object.assign(_modDef4270.defaultRules.escape);
 obj.requiredFirstCharacters = undefined;
 obj.match = function match(arg0) {
   const INVISIBLE_CHAR_REGEX = MarkupInvisibleUnicode.INVISIBLE_CHAR_REGEX;
@@ -355,15 +355,15 @@ obj.silentPrefix = {
 let result = size.fileFinishedImporting("modules/markup/PlatformMarkupRules.native.tsx");
 
 export default obj;
-export const decorateWithIcon = function decorateWithIcon(str) {
-  let mapped = str;
-  if (null != str) {
-    mapped = str;
-    if (typeof str !== "string") {
+export const decorateWithIcon = function decorateWithIcon(content) {
+  let mapped = content;
+  if (null != content) {
+    mapped = content;
+    if (typeof content !== "string") {
       const _Array = Array;
-      let arr2 = str;
-      if (!(str instanceof Array)) {
-        const items = [str];
+      let arr2 = content;
+      if (!(content instanceof Array)) {
+        const items = [content];
         arr2 = items;
       }
       mapped = arr2.map((type) => {

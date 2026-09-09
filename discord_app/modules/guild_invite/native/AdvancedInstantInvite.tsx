@@ -1,20 +1,20 @@
-// === Module 17798: AdvancedInstantInvite ===
+// === Module 17831: AdvancedInstantInvite ===
 
-// Module 17798 (AdvancedInstantInvite)
+// Module 17831 (AdvancedInstantInvite)
 import util from "util" /* 1114 */;
 import FlagUtils from "FlagUtils" /* 1384 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4527 */;
-import GuildInviteFlags from "GuildInviteFlags" /* 8392 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4541 */;
+import GuildInviteFlags from "GuildInviteFlags" /* 8420 */;
 import noop from "module_19" /* 19 */;
-import RelationshipStore from "RelationshipStore" /* 4209 */;
+import RelationshipStore from "RelationshipStore" /* 4222 */;
 import UserStore from "UserStore" /* 1371 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4560);
+const createStyles = fn(4574);
 let closure_9 = createStyles.createStyles({ container: { flexGrow: 1 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_invite/native/AdvancedInstantInvite.tsx");
@@ -66,13 +66,13 @@ export default function AdvancedInstantInvite(maxAge) {
     }
     if (tmp) {
       const obj = { assignableRoles, selectedRoleIds: roleIds, onSave: onChangeRoleIds };
-      obj.openLazy(asyncRequireImpl(17801, dependencyMap.paths), "SelectInviteRolesActionSheet", obj, "stack");
+      obj.openLazy(asyncRequireImpl(17834, dependencyMap.paths), "SelectInviteRolesActionSheet", obj, "stack");
     }
   }, items);
   const items2 = [maxUses, maxUsesOptions, onChangeMaxUses];
   const callback1 = maxUsesOptions.useCallback(() => {
     if (null != onChangeMaxAge) {
-      const tmp5 = asyncRequireImpl(17802, dependencyMap.paths);
+      const tmp5 = asyncRequireImpl(17835, dependencyMap.paths);
       const obj = { title: null, options: null, value: null, onChange: null };
       const intl = util.intl;
       obj.title = intl.string(util.t.gKmKP0);
@@ -85,7 +85,7 @@ export default function AdvancedInstantInvite(maxAge) {
   const items3 = [tmp16Result, roleIds];
   const callback2 = maxUsesOptions.useCallback(() => {
     if (null != onChangeMaxUses) {
-      const tmp5 = asyncRequireImpl(17802, dependencyMap.paths);
+      const tmp5 = asyncRequireImpl(17835, dependencyMap.paths);
       const obj = { title: null, options: null, value: null, onChange: null };
       const intl = util.intl;
       obj.title = intl.string(util.t["+3vH1h"]);

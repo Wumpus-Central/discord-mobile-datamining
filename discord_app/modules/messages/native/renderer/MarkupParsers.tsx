@@ -1,14 +1,28 @@
-// === Module 8089: MarkupParsers ===
+// === Module 8104: MarkupParsers ===
 
-// Module 8089 (MarkupParsers)
+// Module 8104 (MarkupParsers)
 import Constants from "Constants" /* 1074 */;
 import DurationsDefault from "Durations" /* 1090 */;
-import MarkupUtilsDefault from "MarkupUtils" /* 4550 */;
-import renderMessageMarkup from "renderMessageMarkup" /* 7888 */;
-import ChangeLogStandardTemplate from "ChangeLogStandardTemplate" /* 8090 */;
+import SentryUtilsDefault from "SentryUtils" /* 1232 */;
+import MarkupUtilsDefault from "MarkupUtils" /* 4564 */;
+import renderMessageMarkup from "renderMessageMarkup" /* 7902 */;
+import NativeMarkdownExperiment2 from "NativeMarkdownExperiment" /* 8105 */;
+import parseNativeMarkupDefault from "parseNativeMarkup" /* 8121 */;
 import priv from "priv" /* 1437 */;
 import size from "module_2" /* 2 */;
 
+const ChangeLogStandardTemplate = changelogRules(8106);
+function parseMessageContentToAST(message, result, enabled) {
+  if (!enabled) {
+    return renderMessageMarkup.renderMessageMarkupToAST(message, result);
+  } else {
+    try {
+      return renderMessageMarkup.renderMessageMarkupToASTWithParser(parseNativeMarkupDefault, message, result);
+    } catch (tmp4) {
+      SentryUtilsDefault.captureException(tmp4);
+    }
+  }
+}
 const MessageTypes = Constants.MessageTypes;
 let obj = { max: Infinity, maxAge: 15 * DurationsDefault.Millis.MINUTE, updateAgeOnGet: true };
 let closure_4 = new priv(obj);
@@ -95,11 +109,17 @@ export const parseMessageMarkup = function parseMessageMarkup(message, message2,
   if (result2 === undefined) {
     flag3 = false;
   }
+  let changelogRules = require;
+  let astParserForResultResult = dependencyMap;
+  const NativeMarkdownExperiment = NativeMarkdownExperiment2.NativeMarkdownExperiment;
+  let enabled = NativeMarkdownExperiment.getConfig({ location: "parseMessageMarkup" }).enabled;
   let obj1 = closure_7;
   value = closure_7.get(message);
   if (null != value) {
     if (value.isInlineReplyPreview === flag) {
-      return value;
+      if (value.nativeMarkdownEnabled === enabled) {
+        return value;
+      }
     }
   }
   if (message.type !== MessageTypes.CHANGELOG) {
@@ -114,13 +134,16 @@ export const parseMessageMarkup = function parseMessageMarkup(message, message2,
       tmp6 = obj;
     }
     obj = { allowList: tmp6, allowLinks: flag3, previewLinkTarget: flag3 };
-    const merged = Object.assign(renderMessageMarkup.renderMessageMarkupToAST(message, obj));
+    const merged = Object.assign(parseMessageContentToAST(message, obj, enabled));
     obj.isInlineReplyPreview = flag;
+    obj.nativeMarkdownEnabled = enabled;
     result = obj1.set(message, obj);
   }
-  const obj6 = MarkupUtilsDefault;
+  const obj5 = MarkupUtilsDefault;
+  changelogRules = ChangeLogStandardTemplate.changelogRules;
   obj1 = { hideSimpleEmbedContent: forceHideSimpleEmbedContent, formatInline: flag, allowHeading: null, allowList: null, allowLinks: null, previewLinkTarget: null };
   flag = flag2;
+  const changelogRulesResult = ChangeLogStandardTemplate;
   if (!flag2) {
     flag = obj;
   }
@@ -128,10 +151,13 @@ export const parseMessageMarkup = function parseMessageMarkup(message, message2,
   if (!flag2) {
     flag2 = obj;
   }
-  obj = { content: obj6.astParserFor(ChangeLogStandardTemplate.changelogRules(message.changelogId, true))(message.content, false, obj1), isInlineReplyPreview: false, hasSpoilerEmbeds: false, hasBailedAst: false };
+  obj = { content: null, isInlineReplyPreview: false, hasSpoilerEmbeds: false, hasBailedAst: false, nativeMarkdownEnabled: null };
   obj1.allowList = flag2;
   obj1.allowLinks = flag3;
   obj1.previewLinkTarget = flag3;
-  const result1 = obj1.set(message, obj);
-  const astParserForResult = obj6.astParserFor(ChangeLogStandardTemplate.changelogRules(message.changelogId, true));
+  astParserForResultResult = obj5.astParserFor(changelogRules(message.changelogId, true))(message.content, false, obj1);
+  obj.content = astParserForResultResult;
+  obj.nativeMarkdownEnabled = enabled;
+  enabled = obj1.set(message, obj);
+  const astParserForResult = obj5.astParserFor(changelogRules(message.changelogId, true));
 };

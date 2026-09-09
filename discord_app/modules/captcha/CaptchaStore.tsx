@@ -1,9 +1,9 @@
-// === Module 11283: CaptchaStore ===
+// === Module 11310: CaptchaStore ===
 
-// Module 11283 (CaptchaStore)
+// Module 11310 (CaptchaStore)
 import ReactBatchUpdates from "ReactBatchUpdates" /* 1249 */;
-import MonitoringAgentDefault from "MonitoringAgent" /* 7602 */;
-import MetricEvents from "MetricEvents" /* 7607 */;
+import MonitoringAgentDefault from "MonitoringAgent" /* 7616 */;
+import MetricEvents from "MetricEvents" /* 7621 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;

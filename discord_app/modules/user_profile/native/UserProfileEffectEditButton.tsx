@@ -1,22 +1,22 @@
-// === Module 14629: UserProfileEffectEditButton ===
+// === Module 14654: UserProfileEffectEditButton ===
 
-// Module 14629 (UserProfileEffectEditButton)
+// Module 14654 (UserProfileEffectEditButton)
 import nativeDefault from "native" /* 576 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4527 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4541 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-const COLLECTIBLES_PREVIEW_SIZE = fn(7208).COLLECTIBLES_PREVIEW_SIZE;
+const COLLECTIBLES_PREVIEW_SIZE = fn(7222).COLLECTIBLES_PREVIEW_SIZE;
 const NOOP = fn(1085).NOOP;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-fn(4560);
+fn(4574);
 let createStyles = { profileEffectPreviewContainer: null, sampleProfile: null, noneIcon: null };
 let size = { height: COLLECTIBLES_PREVIEW_SIZE, width: COLLECTIBLES_PREVIEW_SIZE, borderRadius: nativeDefault.radii.xs, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED, overflow: "hidden" };
 createStyles.profileEffectPreviewContainer = size;
-createStyles.sampleProfile = { aspectRatio: fn(8803).SAMPLE_PROFILE_ASPECT_RATIO, width: "100%" };
+createStyles.sampleProfile = { aspectRatio: fn(8832).SAMPLE_PROFILE_ASPECT_RATIO, width: "100%" };
 createStyles = { tintColor: nativeDefault.colors.TEXT_SUBTLE };
 createStyles.noneIcon = createStyles;
 let closure_8 = createStyles.createStyles(createStyles);
@@ -65,7 +65,7 @@ export default function UserProfileEffectEditButton(isTryItOut) {
   let name;
   const callback = userProfileEffect.useCallback(() => {
     const obj = { user, currentProfileEffect: userProfileEffect, guildId, isTryItOut };
-    obj.openLazy(asyncRequireImpl(14630, dependencyMap.paths), "Profile Effect", obj);
+    obj.openLazy(asyncRequireImpl(14655, dependencyMap.paths), "Profile Effect", obj);
   }, items);
   if (product != null) {
     name = product.name;

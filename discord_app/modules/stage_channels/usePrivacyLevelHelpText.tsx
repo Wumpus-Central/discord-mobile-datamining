@@ -1,10 +1,10 @@
-// === Module 9820: usePrivacyLevelHelpText ===
+// === Module 9847: usePrivacyLevelHelpText ===
 
-// Module 9820 (usePrivacyLevelHelpText)
+// Module 9847 (usePrivacyLevelHelpText)
 import BigFlagUtilsAll from "BigFlagUtils" /* 1086 */;
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2024 */;
-import PermissionUtilsAll from "PermissionUtils" /* 4204 */;
-import PermissionStore from "PermissionStore" /* 4199 */;
+import PermissionUtilsAll from "PermissionUtils" /* 4217 */;
+import PermissionStore from "PermissionStore" /* 4212 */;
 
 const require = fn;
 const HelpdeskArticles = fn(1074).HelpdeskArticles;

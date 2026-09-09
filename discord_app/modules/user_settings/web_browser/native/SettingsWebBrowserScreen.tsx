@@ -1,12 +1,12 @@
-// === Module 15480: SettingsWebBrowserScreen ===
+// === Module 15510: SettingsWebBrowserScreen ===
 
-// Module 15480 (SettingsWebBrowserScreen)
-import SettingBuilders from "SettingBuilders" /* 11473 */;
-import SettingLayoutDefault from "SettingLayout" /* 14692 */;
+// Module 15510 (SettingsWebBrowserScreen)
+import SettingBuilders from "SettingBuilders" /* 11500 */;
+import SettingLayoutDefault from "SettingLayout" /* 14718 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const MobileUserSettings = fn(7975).MobileUserSettings;
+const MobileUserSettings = fn(7989).MobileUserSettings;
 const jsx = fn(21).jsx;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/web_browser/native/SettingsWebBrowserScreen.tsx");

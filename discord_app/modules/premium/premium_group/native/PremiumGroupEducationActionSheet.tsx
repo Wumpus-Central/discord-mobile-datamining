@@ -1,16 +1,16 @@
-// === Module 13520: PremiumGroupEducationActionSheet ===
+// === Module 13543: PremiumGroupEducationActionSheet ===
 
-// Module 13520 (PremiumGroupEducationActionSheet)
+// Module 13543 (PremiumGroupEducationActionSheet)
 import _mod17 from "module_17" /* 17 */;
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import _modDef3063 from "module_3063" /* 3063 */;
-import PremiumGroupConstants from "PremiumGroupConstants" /* 4232 */;
-import Text_Text from "Text/Text" /* 4556 */;
-import CircleErrorIcon from "CircleErrorIcon" /* 6610 */;
-import Sheet_BottomSheet from "Sheet/BottomSheet" /* 7150 */;
+import _modDef3074 from "module_3074" /* 3074 */;
+import PremiumGroupConstants from "PremiumGroupConstants" /* 4245 */;
+import Text_Text from "Text/Text" /* 4570 */;
+import CircleErrorIcon from "CircleErrorIcon" /* 6624 */;
+import Sheet_BottomSheet from "Sheet/BottomSheet" /* 7164 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createStyles from "createStyles" /* 4560 */;
+import createStyles from "createStyles" /* 4574 */;
 import size from "module_2" /* 2 */;
 
 const View = _mod17.View;
@@ -35,7 +35,7 @@ export default function PremiumGroupEducationActionSheet(children) {
   const items1 = [timestampProducer(View, obj), ];
   const obj3 = { variant: "text-sm/medium", color: "text-overlay-light", style: tmp.helpdeskText, children: null };
   const intl = util.intl;
-  obj3.children = intl.format(_modDef3063.ah1Ecm, { helpCenterLink: HELP_CENTER_LINK });
+  obj3.children = intl.format(_modDef3074.ah1Ecm, { helpCenterLink: HELP_CENTER_LINK });
   items1[1] = hasOwnProperty(Text_Text.Text, obj3);
   obj.children = items1;
   obj.children = timestampProducer(View, obj);

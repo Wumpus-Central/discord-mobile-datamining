@@ -1,9 +1,9 @@
-// === Module 6393: SafetyBookletEmailSpotIllustration ===
+// === Module 6407: SafetyBookletEmailSpotIllustration ===
 
-// Module 6393 (SafetyBookletEmailSpotIllustration)
+// Module 6407 (SafetyBookletEmailSpotIllustration)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5587 */;
-import _modDef6394 from "module_6394" /* 6394 */;
+import FastImageDefault from "FastImage" /* 5601 */;
+import _modDef6408 from "module_6408" /* 6408 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -24,7 +24,7 @@ export const SafetyBookletEmailSpotIllustration = function SafetyBookletEmailSpo
     num3 = 1;
   }
   let obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  obj = { uri: _modDef6394 };
+  obj = { uri: _modDef6408 };
   obj.source = obj;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];
@@ -32,5 +32,5 @@ export const SafetyBookletEmailSpotIllustration = function SafetyBookletEmailSpo
   obj.accessible = accessible;
   obj.accessibilityLabel = accessibilityLabel;
   obj.resizeMode = resizeMode;
-  return jsx(FastImageDefault, { uri: _modDef6394 });
+  return jsx(FastImageDefault, { uri: _modDef6408 });
 };

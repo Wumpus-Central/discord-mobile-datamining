@@ -1,15 +1,15 @@
-// === Module 17757: FormChannelPicker ===
+// === Module 17790: FormChannelPicker ===
 
-// Module 17757 (FormChannelPicker)
+// Module 17790 (FormChannelPicker)
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4527 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4541 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 
 require = fn;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4560);
+const createStyles = fn(4574);
 let closure_6 = createStyles.createStyles({ container: { alignItems: "center", flexDirection: "row" }, content: { marginStart: 8, flexGrow: 1 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_role_subscriptions/native/components/FormChannelPicker.tsx");
@@ -41,7 +41,7 @@ export default function FormChannelPicker(channelId) {
       }
       obj.selectedChannelId = id;
       obj.onChannelSelected = onChange;
-      obj.openLazy(asyncRequireImpl(17758, dependencyMap.paths), "ChannelSelectorActionSheet", obj);
+      obj.openLazy(asyncRequireImpl(17791, dependencyMap.paths), "ChannelSelectorActionSheet", obj);
     },
     children: null
   };
@@ -71,7 +71,7 @@ export default function FormChannelPicker(channelId) {
   obj.children = stringResult;
   items3[1] = closure_4(channelId(stateFromStores[13]).Text, obj);
   const tmpResult = require("TouchableHitBox");
-  items3[2] = closure_4(channelId(stateFromStores[15]).Icon, { size: channelId(stateFromStores[15]).Icon.Sizes.MEDIUM, source: require("module_9944") });
+  items3[2] = closure_4(channelId(stateFromStores[15]).Icon, { size: channelId(stateFromStores[15]).Icon.Sizes.MEDIUM, source: require("module_9971") });
   obj.children = items3;
   return closure_5(tmpResult, obj);
 };

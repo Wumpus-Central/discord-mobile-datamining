@@ -1,9 +1,9 @@
-// === Module 11675: PublishModal ===
+// === Module 11701: PublishModal ===
 
-// Module 11675 (PublishModal)
+// Module 11701 (PublishModal)
 import util from "util" /* 1114 */;
 import native from "native" /* 1178 */;
-import useChannelFollowerStatsDefault from "useChannelFollowerStats" /* 11676 */;
+import useChannelFollowerStatsDefault from "useChannelFollowerStats" /* 11702 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -11,9 +11,9 @@ require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, ActivityIndicator: hasOwnProperty } = get_ActivityIndicator);
 const jsx = fn(21).jsx;
-fn(4560);
+fn(4574);
 let createStyles = { alertContainer: { paddingTop: 16 }, alertLoading: { paddingTop: 62, paddingBottom: 46 }, alertBodyText: null };
-createStyles = { marginBottom: 16, fontSize: 16, lineHeight: 24, color: fn(5441).DARK_PRIMARY_300_LIGHT_PRIMARY_400 };
+createStyles = { marginBottom: 16, fontSize: 16, lineHeight: 24, color: fn(5455).DARK_PRIMARY_300_LIGHT_PRIMARY_400 };
 createStyles.alertBodyText = createStyles;
 let closure_7 = createStyles.createStyles(createStyles);
 const size = fn(2);

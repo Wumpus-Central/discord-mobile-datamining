@@ -1,11 +1,11 @@
-// === Module 10126: ChannelListLayout ===
+// === Module 10153: ChannelListLayout ===
 
-// Module 10126 (ChannelListLayout)
+// Module 10153 (ChannelListLayout)
 import UserSettings from "UserSettings" /* 1935 */;
-import ChannelListLayoutTypes2 from "ChannelListLayoutTypes" /* 7879 */;
-import CozyDrawer from "CozyDrawer" /* 10127 */;
-import Compact from "Compact" /* 10129 */;
-import Cozy from "Cozy" /* 10130 */;
+import ChannelListLayoutTypes2 from "ChannelListLayoutTypes" /* 7893 */;
+import CozyDrawer from "CozyDrawer" /* 10154 */;
+import Compact from "Compact" /* 10156 */;
+import Cozy from "Cozy" /* 10157 */;
 import size from "module_2" /* 2 */;
 
 function getLayoutStyles(layout) {
@@ -38,8 +38,8 @@ export function makeSizeStyle(size) {
 export const isLayoutCompact = function isLayoutCompact(layout) {
   return layout === ChannelListLayoutTypes2.ChannelListLayoutTypes.COMPACT;
 };
-export const isLayoutCozy = function isLayoutCozy(layout) {
-  return layout === ChannelListLayoutTypes2.ChannelListLayoutTypes.COZY || layout === ChannelListLayoutTypes2.ChannelListLayoutTypes.COZY_DRAWER || layout === ChannelListLayoutTypes2.ChannelListLayoutTypes.COZY_DRAWER_SMOL;
+export const isLayoutCozy = function isLayoutCozy(messagesTabLayout) {
+  return messagesTabLayout === ChannelListLayoutTypes2.ChannelListLayoutTypes.COZY || messagesTabLayout === ChannelListLayoutTypes2.ChannelListLayoutTypes.COZY_DRAWER || messagesTabLayout === ChannelListLayoutTypes2.ChannelListLayoutTypes.COZY_DRAWER_SMOL;
 };
 export const useMessagesTabLayout = function useMessagesTabLayout(panelVariant) {
   const ChannelListLayoutSetting = UserSettings.ChannelListLayoutSetting;

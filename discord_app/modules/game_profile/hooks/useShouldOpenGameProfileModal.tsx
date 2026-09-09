@@ -1,11 +1,11 @@
-// === Module 8681: useShouldOpenGameProfileModal ===
+// === Module 8709: useShouldOpenGameProfileModal ===
 
-// Module 8681 (useShouldOpenGameProfileModal)
+// Module 8709 (useShouldOpenGameProfileModal)
 import _modDef38 from "module_38" /* 38 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
 import FlagUtilsAll from "FlagUtils" /* 1384 */;
-import utils from "utils" /* 5112 */;
-import GameFlags from "GameFlags" /* 8682 */;
+import utils from "utils" /* 5126 */;
+import GameFlags from "GameFlags" /* 8710 */;
 import noop from "module_19" /* 19 */;
 import GameStore from "GameStore" /* 1916 */;
 

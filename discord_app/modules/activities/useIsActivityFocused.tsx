@@ -1,8 +1,8 @@
-// === Module 9480: useIsActivityFocused ===
+// === Module 9507: useIsActivityFocused ===
 
-// Module 9480 (useIsActivityFocused)
-import ChannelRTCParticipants from "ChannelRTCParticipants" /* 9481 */;
-import ChannelRTCStore from "ChannelRTCStore" /* 4576 */;
+// Module 9507 (useIsActivityFocused)
+import ChannelRTCParticipants from "ChannelRTCParticipants" /* 9508 */;
+import ChannelRTCStore from "ChannelRTCStore" /* 4590 */;
 import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 1956 */;
 
 require = fn;

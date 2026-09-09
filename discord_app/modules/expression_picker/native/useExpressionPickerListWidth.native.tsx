@@ -1,10 +1,10 @@
-// === Module 10296: useExpressionPickerListWidth ===
+// === Module 10323: useExpressionPickerListWidth ===
 
-// Module 10296 (useExpressionPickerListWidth)
+// Module 10323 (useExpressionPickerListWidth)
 import ExpressionPickerConstants from "ExpressionPickerConstants" /* 1219 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1477 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1611 */;
-import ActionSheetConstants from "ActionSheetConstants" /* 7151 */;
+import ActionSheetConstants from "ActionSheetConstants" /* 7165 */;
 import size from "module_2" /* 2 */;
 
 const PADDING_HORIZONTAL = ExpressionPickerConstants.PADDING_HORIZONTAL;

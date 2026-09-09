@@ -1,6 +1,6 @@
-// === Module 13904: useFetchShareEmbed ===
+// === Module 13927: useFetchShareEmbed ===
 
-// Module 13904 (useFetchShareEmbed)
+// Module 13927 (useFetchShareEmbed)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -61,7 +61,7 @@ export default function useFetchShareEmbed(arg0) {
                   const items = [current];
                   c4 = 3;
                   c5 = 1;
-                  let obj1 = { value: current(11880).unfurlEmbedUrl(items), done: false };
+                  let obj1 = { value: current(11906).unfurlEmbedUrl(items), done: false };
                   return obj1;
                 } else {
                   c5 = 3;

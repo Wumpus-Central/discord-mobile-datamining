@@ -1,9 +1,9 @@
-// === Module 12266: ChatInputAccessibilityDivider ===
+// === Module 12292: ChatInputAccessibilityDivider ===
 
-// Module 12266 (ChatInputAccessibilityDivider)
+// Module 12292 (ChatInputAccessibilityDivider)
 import util from "util" /* 1114 */;
 import PlatformUtils from "PlatformUtils" /* 1115 */;
-import useIsScreenReaderEnabled from "useIsScreenReaderEnabled" /* 4962 */;
+import useIsScreenReaderEnabled from "useIsScreenReaderEnabled" /* 4976 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

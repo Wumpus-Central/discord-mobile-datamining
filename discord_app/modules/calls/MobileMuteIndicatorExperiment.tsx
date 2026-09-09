@@ -1,6 +1,6 @@
-// === Module 17054: MobileMuteIndicatorExperiment ===
+// === Module 17085: MobileMuteIndicatorExperiment ===
 
-// Module 17054 (MobileMuteIndicatorExperiment)
+// Module 17085 (MobileMuteIndicatorExperiment)
 import apex_ApexExperimentDefault from "apex/ApexExperiment" /* 1434 */;
 
 let obj = { kind: "user", name: "2026-02-mobile-mute-indicator", defaultConfig: { enableMuteWarning: false }, variations: null };

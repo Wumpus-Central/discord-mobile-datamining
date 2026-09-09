@@ -1,22 +1,22 @@
-// === Module 13610: SubscribeModalConfirmation ===
+// === Module 13633: SubscribeModalConfirmation ===
 
-// Module 13610 (SubscribeModalConfirmation)
+// Module 13633 (SubscribeModalConfirmation)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
-import GuildBoostingUtils from "GuildBoostingUtils" /* 4454 */;
-import Text_Text from "Text/Text" /* 4556 */;
-import components_Button_Button from "components/Button/Button" /* 4975 */;
-import _modDef5597 from "module_5597" /* 5597 */;
-import _modDef13611 from "module_13611" /* 13611 */;
-import PremiumGuildPreviewDefault from "PremiumGuildPreview" /* 13612 */;
+import GuildBoostingUtils from "GuildBoostingUtils" /* 4468 */;
+import Text_Text from "Text/Text" /* 4570 */;
+import components_Button_Button from "components/Button/Button" /* 4989 */;
+import _modDef5611 from "module_5611" /* 5611 */;
+import _modDef13634 from "module_13634" /* 13634 */;
+import PremiumGuildPreviewDefault from "PremiumGuildPreview" /* 13635 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import AppliedGuildBoostStore from "AppliedGuildBoostStore" /* 12566 */;
+import AppliedGuildBoostStore from "AppliedGuildBoostStore" /* 12592 */;
 import GuildStore from "GuildStore" /* 1979 */;
-import GuildBoostSlotStore from "GuildBoostSlotStore" /* 4455 */;
-import SubscriptionStore from "SubscriptionStore" /* 4224 */;
+import GuildBoostSlotStore from "GuildBoostSlotStore" /* 4469 */;
+import SubscriptionStore from "SubscriptionStore" /* 4237 */;
 
 require = fn;
 function PendingCancellationWarning(slots) {
@@ -31,7 +31,7 @@ function PendingCancellationWarning(slots) {
     tmp5 = null;
     if (null != stateFromStores) {
       obj = { style: tmp.pendingCancellation, children: null };
-      obj = { style: tmp.pendingCancellationIcon, source: _modDef5597 };
+      obj = { style: tmp.pendingCancellationIcon, source: _modDef5611 };
       const items1 = [closure_1_19(timestampProducer, obj), ];
       const obj1 = { style: tmp.pendingCancellationMessage, variant: "text-sm/medium", children: null };
       const intl = util.intl;
@@ -49,7 +49,7 @@ function SubscribeConfirmation(arg0) {
   ({ guild, isModifyingSubscription } = arg0);
   const tmp = closure_22();
   let obj = { children: null };
-  obj = { style: tmp.subscribeImage, source: _modDef13611 };
+  obj = { style: tmp.subscribeImage, source: _modDef13634 };
   const items = [closure_1_19(timestampProducer, obj), , , , , ];
   obj = { style: tmp.header, variant: "heading-lg/extrabold", color: "mobile-text-heading-primary", children: null };
   const intl = util.intl;
@@ -82,7 +82,7 @@ function TransferConfirmation(previousGuildSubscriptionSlots) {
   const onPremiumGuildSubscribe = previousGuildSubscriptionSlots.onPremiumGuildSubscribe;
   ({ guild, isModifyingSubscription } = previousGuildSubscriptionSlots);
   const tmp = closure_22();
-  let obj = prop(13621);
+  let obj = prop(13644);
   const guildSubscriptionRemovalSource = obj.useGuildSubscriptionRemovalSource();
   let obj1 = prop(504);
   const items = [GuildStore];
@@ -107,24 +107,24 @@ function TransferConfirmation(previousGuildSubscriptionSlots) {
     const obj2 = { style: tmp.header, variant: "heading-lg/extrabold", color: "mobile-text-heading-primary", children: null };
     const intl = tmp2(1114).intl;
     obj2.children = intl.string(tmp2(1114).t.h92jfS);
-    items1[1] = closure_19(tmp2(4556).Text, obj2);
+    items1[1] = closure_19(tmp2(4570).Text, obj2);
     const obj3 = { style: tmp.blurb, variant: "text-sm/medium", children: null };
     const intl2 = tmp2(1114).intl;
     const obj4 = { slotCount: prop.length, guildCount: 1 };
     obj3.children = intl2.format(tmp2(1114).t.SSA2lu, obj4);
-    items1[2] = closure_19(tmp2(4556).Text, obj3);
+    items1[2] = closure_19(tmp2(4570).Text, obj3);
     const obj5 = { style: tmp.transferPreviews, children: null };
     const obj6 = { style: tmp.previewHeader, variant: "eyebrow", color: "text-default", children: null };
     const intl3 = tmp2(1114).intl;
     obj6.children = intl3.format(tmp2(1114).t["5zQYEz"], { guildCount: 1 });
-    const items2 = [closure_19(tmp2(4556).Text, obj6), , , ];
+    const items2 = [closure_19(tmp2(4570).Text, obj6), , , ];
     const obj7 = { style: tmp.guildPreview, guild: stateFromStores };
-    items2[1] = closure_19(onPremiumGuildSubscribe(13612), obj7);
+    items2[1] = closure_19(onPremiumGuildSubscribe(13635), obj7);
     const obj8 = { style: tmp.previewHeader, variant: "eyebrow", color: "text-default", children: null };
     const intl4 = tmp2(1114).intl;
     const obj9 = { slotCount: prop.length };
     obj8.children = intl4.format(tmp2(1114).t.ct6oxD, obj9);
-    items2[2] = closure_19(tmp2(4556).Text, obj8);
+    items2[2] = closure_19(tmp2(4570).Text, obj8);
     const obj10 = { style: null, start: null, end: null, colors: null, children: null };
     const items3 = [, ];
     ({ guildPreview: arr5[0], activeTransferGuildCardBorder: arr5[1] } = tmp);
@@ -133,8 +133,8 @@ function TransferConfirmation(previousGuildSubscriptionSlots) {
     obj10.end = tmp2(1093).HorizontalGradient.END;
     obj10.colors = Gradients.PREMIUM_GUILD;
     const obj11 = { guild };
-    obj10.children = closure_19(onPremiumGuildSubscribe(13612), obj11);
-    items2[3] = closure_19(onPremiumGuildSubscribe(4987), obj10);
+    obj10.children = closure_19(onPremiumGuildSubscribe(13635), obj11);
+    items2[3] = closure_19(onPremiumGuildSubscribe(5001), obj10);
     obj5.children = items2;
     items1[3] = closure_20(closure_7, obj5);
     const obj12 = { slots: prop };
@@ -148,11 +148,11 @@ function TransferConfirmation(previousGuildSubscriptionSlots) {
       return onPremiumGuildSubscribe(true);
     };
     obj14.loading = isModifyingSubscription;
-    obj13.children = closure_19(tmp2(4975).Button, obj14);
+    obj13.children = closure_19(tmp2(4989).Button, obj14);
     items1[5] = closure_19(closure_7, obj13);
     obj.children = items1;
     tmp8 = closure_20(closure_21, obj);
-    const tmp15 = onPremiumGuildSubscribe(4987);
+    const tmp15 = onPremiumGuildSubscribe(5001);
   }
   return tmp8;
 }
@@ -160,14 +160,14 @@ get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: hasOwnProperty, Image: metroRequire, View: closure_7, ScrollView: closure_8, StyleSheet } = get_ActivityIndicator);
 const Constants = fn(1074);
 ({ AnalyticEvents: map1, AnalyticsObjects: closure_14, AnalyticsSections: closure_15, GUILD_BOOST_APPLY_COOLDOWN_DAYS: closure_16 } = Constants);
-const Gradients = fn(7432).Gradients;
-const BoostPurchaseIntent = fn(4450).BoostPurchaseIntent;
+const Gradients = fn(7446).Gradients;
+const BoostPurchaseIntent = fn(4464).BoostPurchaseIntent;
 const jsxProd = fn(21);
 ({ jsx: closure_19, jsxs: closure_20, Fragment: closure_21 } = jsxProd);
-fn(4560);
+fn(4574);
 let createStyles = { content: { paddingHorizontal: 24, marginBottom: 24 }, scrollableContent: { alignItems: "center", width: "100%" }, subscribeImage: { marginTop: 105, alignSelf: "center" }, transferImage: { marginTop: 65, alignSelf: "center" }, header: { marginTop: 32, marginBottom: 8 }, transferPreviews: { marginTop: 16, width: "100%" }, previewHeader: { lineHeight: 16, marginTop: 16, letterSpacing: 0.2 }, guildPreview: { marginTop: 8, width: "100%" }, blurb: { lineHeight: 18, textAlign: "center" }, warning: { marginTop: 16 }, pendingCancellation: null, pendingCancellationMessage: null, pendingCancellationIcon: null, loading: null, confirmButton: null, activeTransferGuildCardBorder: null };
 createStyles = { marginTop: 16, padding: 16, backgroundColor: null, alignItems: "center", flexDirection: "row", borderRadius: null, borderColor: null, borderWidth: null, width: "100%" };
-const ColorUtils = fn(4409);
+const ColorUtils = fn(4423);
 createStyles.backgroundColor = ColorUtils.hexWithOpacity(nativeDefault.unsafe_rawColors.YELLOW_300, 0.1);
 createStyles.borderRadius = nativeDefault.radii.xs;
 createStyles.borderColor = nativeDefault.unsafe_rawColors.YELLOW_300;

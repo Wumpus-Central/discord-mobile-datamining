@@ -1,8 +1,8 @@
-// === Module 16543: GuildRoleSubscriptionSettingsUtils ===
+// === Module 16574: GuildRoleSubscriptionSettingsUtils ===
 
-// Module 16543 (GuildRoleSubscriptionSettingsUtils)
-import StoreUtils from "StoreUtils" /* 4802 */;
-import GuildRoleSubscriptionsStore from "GuildRoleSubscriptionsStore" /* 4193 */;
+// Module 16574 (GuildRoleSubscriptionSettingsUtils)
+import StoreUtils from "StoreUtils" /* 4816 */;
+import GuildRoleSubscriptionsStore from "GuildRoleSubscriptionsStore" /* 4206 */;
 
 require = fn;
 const size = fn(2);

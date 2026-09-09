@@ -1,9 +1,9 @@
-// === Module 5929: DogIllocon ===
+// === Module 5943: DogIllocon ===
 
-// Module 5929 (DogIllocon)
+// Module 5943 (DogIllocon)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5587 */;
-import _modDef5930 from "module_5930" /* 5930 */;
+import FastImageDefault from "FastImage" /* 5601 */;
+import _modDef5944 from "module_5944" /* 5944 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -16,12 +16,12 @@ export const DogIllocon = function DogIllocon(size) {
     num = 64;
   }
   let obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  obj = { uri: _modDef5930 };
+  obj = { uri: _modDef5944 };
   obj.source = obj;
   const items = [{ width: num, height: num }];
   obj.style = items;
   obj.accessible = accessible;
   obj.accessibilityLabel = accessibilityLabel;
   obj.resizeMode = resizeMode;
-  return jsx(FastImageDefault, { uri: _modDef5930 });
+  return jsx(FastImageDefault, { uri: _modDef5944 });
 };

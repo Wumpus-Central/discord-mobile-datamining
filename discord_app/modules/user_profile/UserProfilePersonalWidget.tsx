@@ -1,13 +1,13 @@
-// === Module 7630: UserProfilePersonalWidget ===
+// === Module 7644: UserProfilePersonalWidget ===
 
-// Module 7630 (UserProfilePersonalWidget)
+// Module 7644 (UserProfilePersonalWidget)
 import _modDef1332 from "module_1332" /* 1332 */;
 import GlobalUtils from "GlobalUtils" /* 1369 */;
 import PremiumTypeUtils from "PremiumTypeUtils" /* 1885 */;
 import dismissible_content from "dismissible_content" /* 1943 */;
-import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 4380 */;
-import WidgetType from "WidgetType" /* 7622 */;
-import PersonalWidgetSectionType from "PersonalWidgetSectionType" /* 7631 */;
+import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 4394 */;
+import WidgetType from "WidgetType" /* 7636 */;
+import PersonalWidgetSectionType from "PersonalWidgetSectionType" /* 7645 */;
 import UserStore from "UserStore" /* 1371 */;
 
 require = fn;
@@ -91,18 +91,18 @@ function serializeSection(type) {
   type = type.type;
   if (PersonalWidgetSectionType.PersonalWidgetSectionType.COVER === type) {
     let obj = { type: null, title: null, subtitle: null, image: null };
-    ({ type: obj2.type, title: obj2.title, subtitle: obj2.subtitle, image } = type);
-    if (null == image) {
+    ({ type: obj2.type, title: obj2.title, subtitle: obj2.subtitle, image: originalHash } = type);
+    if (null == originalHash) {
       obj.image = undefined;
       return obj;
-    } else if ("localDataUri" in image) {
-      obj = { filename: null };
-      image = image.filename;
-      obj.filename = image;
+    } else if ("localDataUri" in originalHash) {
+      obj = { filename: null, original_hash: null };
+      ({ filename: obj4.filename, originalHash } = originalHash);
+      obj.original_hash = originalHash;
       let size = obj;
     } else {
       size = { file_id: null, width: null, height: null, is_animated: null };
-      ({ fileId: obj3.file_id, width: obj3.width, height: obj3.height, isAnimated: obj3.is_animated } = image);
+      ({ fileId: obj3.file_id, width: obj3.width, height: obj3.height, isAnimated: obj3.is_animated } = originalHash);
     }
   } else if (PersonalWidgetSectionType.PersonalWidgetSectionType.FIELDS === type) {
     const fields = type.fields;
@@ -120,18 +120,18 @@ function serializeSection(type) {
       type: type.type,
       fields: found.map((title) => {
           let obj = { title: title.title, description: title.description, image: null };
-          let filename = title.image;
-          if (null == filename) {
+          originalHash = title.image;
+          if (null == originalHash) {
             obj.image = undefined;
             return obj;
-          } else if ("localDataUri" in filename) {
-            obj = { filename: null };
-            filename = filename.filename;
-            obj.filename = filename;
+          } else if ("localDataUri" in originalHash) {
+            obj = { filename: null, original_hash: null };
+            ({ filename: obj3.filename, originalHash } = originalHash);
+            obj.original_hash = originalHash;
             let size = obj;
           } else {
             size = { file_id: null, width: null, height: null, is_animated: null };
-            ({ fileId: obj2.file_id, width: obj2.width, height: obj2.height, isAnimated: obj2.is_animated } = filename);
+            ({ fileId: obj2.file_id, width: obj2.width, height: obj2.height, isAnimated: obj2.is_animated } = originalHash);
           }
         })
     };

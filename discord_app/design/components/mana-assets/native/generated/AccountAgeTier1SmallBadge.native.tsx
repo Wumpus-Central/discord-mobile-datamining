@@ -1,9 +1,9 @@
-// === Module 5699: AccountAgeTier1SmallBadge ===
+// === Module 5713: AccountAgeTier1SmallBadge ===
 
-// Module 5699 (AccountAgeTier1SmallBadge)
+// Module 5713 (AccountAgeTier1SmallBadge)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5587 */;
-import _modDef5700 from "module_5700" /* 5700 */;
+import FastImageDefault from "FastImage" /* 5601 */;
+import _modDef5714 from "module_5714" /* 5714 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -24,7 +24,7 @@ export const AccountAgeTier1SmallBadge = function AccountAgeTier1SmallBadge(widt
     num3 = 1;
   }
   let obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  obj = { uri: _modDef5700 };
+  obj = { uri: _modDef5714 };
   obj.source = obj;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];
@@ -32,5 +32,5 @@ export const AccountAgeTier1SmallBadge = function AccountAgeTier1SmallBadge(widt
   obj.accessible = accessible;
   obj.accessibilityLabel = accessibilityLabel;
   obj.resizeMode = resizeMode;
-  return jsx(FastImageDefault, { uri: _modDef5700 });
+  return jsx(FastImageDefault, { uri: _modDef5714 });
 };

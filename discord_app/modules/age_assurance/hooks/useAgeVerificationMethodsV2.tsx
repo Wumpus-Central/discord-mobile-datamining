@@ -1,11 +1,11 @@
-// === Module 8452: useAgeVerificationMethodsV2 ===
+// === Module 8480: useAgeVerificationMethodsV2 ===
 
-// Module 8452 (useAgeVerificationMethodsV2)
+// Module 8480 (useAgeVerificationMethodsV2)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AgeVerificationStore from "AgeVerificationStore" /* 8453 */;
+import AgeVerificationStore from "AgeVerificationStore" /* 8481 */;
 
 const require = fn;
 const size = fn(2);
@@ -76,9 +76,9 @@ export const useAgeVerificationMethodsV2 = function useAgeVerificationMethodsV2(
             tmp75(true);
             v0(false);
             v0 = 2;
-            let obj5 = closure_0(8418);
+            let obj5 = closure_0(8446);
             const result = obj5.isCurrentUserSuspended();
-            const obj7 = closure_0(8437);
+            const obj7 = closure_0(8465);
             if (result) {
               c5 = 4;
               c6 = 1;

@@ -1,21 +1,21 @@
-// === Module 12188: AppLauncherUserOption ===
+// === Module 12214: AppLauncherUserOption ===
 
-// Module 12188 (AppLauncherUserOption)
+// Module 12214 (AppLauncherUserOption)
 import nativeDefault from "native" /* 576 */;
 import KeyboardManagerUtils from "KeyboardManagerUtils" /* 1874 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4527 */;
-import AppLauncherSelectOptionFormRowDefault from "AppLauncherSelectOptionFormRow" /* 12180 */;
-import AppLauncherOptionIconDefault from "AppLauncherOptionIcon" /* 12183 */;
-import UsernameTextDefault from "UsernameText" /* 12186 */;
-import AppLauncherUserListActionSheet from "AppLauncherUserListActionSheet" /* 12189 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4541 */;
+import AppLauncherSelectOptionFormRowDefault from "AppLauncherSelectOptionFormRow" /* 12206 */;
+import AppLauncherOptionIconDefault from "AppLauncherOptionIcon" /* 12209 */;
+import UsernameTextDefault from "UsernameText" /* 12212 */;
+import AppLauncherUserListActionSheet from "AppLauncherUserListActionSheet" /* 12215 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4552 */;
+import AccessibilityStore from "AccessibilityStore" /* 4566 */;
 
 require = fn;
 let jsx = fn(21).jsx;
-fn(4560);
+fn(4574);
 let createStyles = { iconWrapper: null };
 createStyles = { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE };
 createStyles.iconWrapper = createStyles;
@@ -85,13 +85,13 @@ export default function AppLauncherUserOption(option) {
       },
       onActionSheetDismiss
     };
-    obj2.openLazy(asyncRequireImpl(12189, dependencyMap.paths), AppLauncherUserListActionSheet.APP_LAUNCHER_USER_LIST_ACTION_SHEET_KEY, obj);
+    obj2.openLazy(asyncRequireImpl(12215, dependencyMap.paths), AppLauncherUserListActionSheet.APP_LAUNCHER_USER_LIST_ACTION_SHEET_KEY, obj);
   };
   if (null != tmp8) {
     obj = { user: tmp8, guildId: guild_id, animate: !stateFromStores, size: tmp2(1178).AvatarSizes.REFRESH_MEDIUM_32 };
     let tmp9Result = tmp9(tmp2(1178).Avatar, obj);
   } else {
-    const obj1 = { icon: tmp9(tmp2(10922).UserCircleIcon, { size: "sm", color: "interactive-text-default" }), wrapperStyle: tmp.iconWrapper };
+    const obj1 = { icon: tmp9(tmp2(10949).UserCircleIcon, { size: "sm", color: "interactive-text-default" }), wrapperStyle: tmp.iconWrapper };
     tmp9Result = tmp9(AppLauncherOptionIconDefault, obj1);
     const tmp10Result = AppLauncherOptionIconDefault;
   }
@@ -103,7 +103,7 @@ export default function AppLauncherUserOption(option) {
     tmp9Result = null;
     if (null != tmp6) {
       const obj3 = { variant: "text-md/medium", color: "text-default", children: tmp6 };
-      tmp9Result = tmp9(tmp2(4556).Text, obj3);
+      tmp9Result = tmp9(tmp2(4570).Text, obj3);
     }
   }
   obj.selectedItemName = tmp9Result;

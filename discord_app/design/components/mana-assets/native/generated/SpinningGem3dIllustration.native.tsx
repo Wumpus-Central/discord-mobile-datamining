@@ -1,9 +1,9 @@
-// === Module 6483: SpinningGem3dIllustration ===
+// === Module 6497: SpinningGem3dIllustration ===
 
-// Module 6483 (SpinningGem3dIllustration)
+// Module 6497 (SpinningGem3dIllustration)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5587 */;
-import _modDef6484 from "module_6484" /* 6484 */;
+import FastImageDefault from "FastImage" /* 5601 */;
+import _modDef6498 from "module_6498" /* 6498 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -24,7 +24,7 @@ export const SpinningGem3dIllustration = function SpinningGem3dIllustration(widt
     num3 = 1;
   }
   let obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  obj = { uri: _modDef6484 };
+  obj = { uri: _modDef6498 };
   obj.source = obj;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];
@@ -32,5 +32,5 @@ export const SpinningGem3dIllustration = function SpinningGem3dIllustration(widt
   obj.accessible = accessible;
   obj.accessibilityLabel = accessibilityLabel;
   obj.resizeMode = resizeMode;
-  return jsx(FastImageDefault, { uri: _modDef6484 });
+  return jsx(FastImageDefault, { uri: _modDef6498 });
 };

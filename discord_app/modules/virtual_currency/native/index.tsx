@@ -1,10 +1,10 @@
-// === Module 11095: BalanceWidgetPill ===
+// === Module 11122: BalanceWidgetPill ===
 
-// Module 11095 (BalanceWidgetPill)
-import virtual_currency_BalanceWidgetPill from "virtual_currency/BalanceWidgetPill" /* 11096 */;
-import BalanceCounter from "BalanceCounter" /* 11103 */;
-import BalanceWidgetPillButton from "BalanceWidgetPillButton" /* 11105 */;
-import BalanceWidgetActionSheetDefault from "BalanceWidgetActionSheet" /* 11106 */;
+// Module 11122 (BalanceWidgetPill)
+import virtual_currency_BalanceWidgetPill from "virtual_currency/BalanceWidgetPill" /* 11123 */;
+import BalanceCounter from "BalanceCounter" /* 11130 */;
+import BalanceWidgetPillButton from "BalanceWidgetPillButton" /* 11132 */;
+import BalanceWidgetActionSheetDefault from "BalanceWidgetActionSheet" /* 11133 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/virtual_currency/native/index.tsx");

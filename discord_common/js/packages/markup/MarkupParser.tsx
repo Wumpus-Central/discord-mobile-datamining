@@ -1,7 +1,7 @@
-// === Module 7987: MarkupParser ===
+// === Module 8001: MarkupParser ===
 
-// Module 7987 (MarkupParser)
-import markup_MarkupParser from "markup/MarkupParser" /* 7988 */;
+// Module 8001 (MarkupParser)
+import markup_MarkupParser from "markup/MarkupParser" /* 8002 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_common/js/packages/markup/MarkupParser.tsx");

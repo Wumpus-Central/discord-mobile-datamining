@@ -1,9 +1,9 @@
-// === Module 6573: WiltedFlowerIllocon ===
+// === Module 6587: WiltedFlowerIllocon ===
 
-// Module 6573 (WiltedFlowerIllocon)
+// Module 6587 (WiltedFlowerIllocon)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5587 */;
-import _modDef6574 from "module_6574" /* 6574 */;
+import FastImageDefault from "FastImage" /* 5601 */;
+import _modDef6588 from "module_6588" /* 6588 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -16,12 +16,12 @@ export const WiltedFlowerIllocon = function WiltedFlowerIllocon(size) {
     num = 64;
   }
   let obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  obj = { uri: _modDef6574 };
+  obj = { uri: _modDef6588 };
   obj.source = obj;
   const items = [{ width: num, height: num }];
   obj.style = items;
   obj.accessible = accessible;
   obj.accessibilityLabel = accessibilityLabel;
   obj.resizeMode = resizeMode;
-  return jsx(FastImageDefault, { uri: _modDef6574 });
+  return jsx(FastImageDefault, { uri: _modDef6588 });
 };

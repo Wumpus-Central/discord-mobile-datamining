@@ -1,6 +1,6 @@
-// === Module 15484: ContextualOptInNudgeHoldoutExperiment ===
+// === Module 15514: ContextualOptInNudgeHoldoutExperiment ===
 
-// Module 15484 (ContextualOptInNudgeHoldoutExperiment)
+// Module 15514 (ContextualOptInNudgeHoldoutExperiment)
 import ApexExperiment from "ApexExperiment" /* 1433 */;
 import size from "module_2" /* 2 */;
 

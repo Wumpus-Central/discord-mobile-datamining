@@ -1,43 +1,43 @@
-// === Module 11621: handleMessagesTapLink ===
+// === Module 11647: handleMessagesTapLink ===
 
-// Module 11621 (handleMessagesTapLink)
+// Module 11647 (handleMessagesTapLink)
 import router_utils from "router_utils" /* 1100 */;
 import ThreadConstants from "ThreadConstants" /* 1113 */;
 import AppLauncherNativeConstants from "AppLauncherNativeConstants" /* 1482 */;
 import KeyboardTypes from "KeyboardTypes" /* 1609 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1896 */;
 import ChannelConstants from "ChannelConstants" /* 1964 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4527 */;
-import parseURLDefault from "parseURL" /* 4540 */;
-import StreamActionCreators from "StreamActionCreators" /* 4702 */;
-import useMessageAuthor from "useMessageAuthor" /* 4793 */;
-import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 5411 */;
-import PushNotificationConstants from "PushNotificationConstants" /* 6596 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 7182 */;
-import MessageActionCreatorsDefault from "MessageActionCreators" /* 7456 */;
-import InviteTypeUtils from "InviteTypeUtils" /* 7735 */;
-import GuildRoleSubscriptionSystemMessageUtils from "GuildRoleSubscriptionSystemMessageUtils" /* 7992 */;
-import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8179 */;
-import MaskedLinkUtils from "MaskedLinkUtils" /* 8370 */;
-import GameProfileActionCreators from "GameProfileActionCreators" /* 8685 */;
-import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 8691 */;
-import ApplicationCommandIndexStore from "ApplicationCommandIndexStore" /* 9295 */;
-import showChatGDMCustomizeActionSheetDefault from "showChatGDMCustomizeActionSheet" /* 10924 */;
-import isAlertOrActionSheetOpen from "isAlertOrActionSheetOpen" /* 11549 */;
-import MarkupReactLinkUtils from "MarkupReactLinkUtils" /* 11619 */;
-import handleAcceptEventInstantInviteDefault from "handleAcceptEventInstantInvite" /* 11620 */;
-import openPinnedMessagesDefault from "openPinnedMessages" /* 11622 */;
-import GuildAutomodMessageActionCreators from "GuildAutomodMessageActionCreators" /* 11623 */;
-import ApplicationInteractionInfoUtils from "ApplicationInteractionInfoUtils" /* 11624 */;
-import showExecutedApplicationCommandPopoutDefault from "showExecutedApplicationCommandPopout" /* 11625 */;
-import GuildHighlightsNotificationsActionCreators from "GuildHighlightsNotificationsActionCreators" /* 11628 */;
-import ApplicationStore from "ApplicationStore" /* 4788 */;
-import GuildAutomodMessageStore from "GuildAutomodMessageStore" /* 7938 */;
-import SummaryStore from "SummaryStore" /* 11350 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4541 */;
+import parseURLDefault from "parseURL" /* 4554 */;
+import StreamActionCreators from "StreamActionCreators" /* 4716 */;
+import useMessageAuthor from "useMessageAuthor" /* 4807 */;
+import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 5425 */;
+import PushNotificationConstants from "PushNotificationConstants" /* 6610 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 7196 */;
+import MessageActionCreatorsDefault from "MessageActionCreators" /* 7470 */;
+import InviteTypeUtils from "InviteTypeUtils" /* 7749 */;
+import GuildRoleSubscriptionSystemMessageUtils from "GuildRoleSubscriptionSystemMessageUtils" /* 8006 */;
+import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8205 */;
+import MaskedLinkUtils from "MaskedLinkUtils" /* 8398 */;
+import GameProfileActionCreators from "GameProfileActionCreators" /* 8713 */;
+import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 8719 */;
+import ApplicationCommandIndexStore from "ApplicationCommandIndexStore" /* 9322 */;
+import showChatGDMCustomizeActionSheetDefault from "showChatGDMCustomizeActionSheet" /* 10951 */;
+import isAlertOrActionSheetOpen from "isAlertOrActionSheetOpen" /* 11575 */;
+import MarkupReactLinkUtils from "MarkupReactLinkUtils" /* 11645 */;
+import handleAcceptEventInstantInviteDefault from "handleAcceptEventInstantInvite" /* 11646 */;
+import openPinnedMessagesDefault from "openPinnedMessages" /* 11648 */;
+import GuildAutomodMessageActionCreators from "GuildAutomodMessageActionCreators" /* 11649 */;
+import ApplicationInteractionInfoUtils from "ApplicationInteractionInfoUtils" /* 11650 */;
+import showExecutedApplicationCommandPopoutDefault from "showExecutedApplicationCommandPopout" /* 11651 */;
+import GuildHighlightsNotificationsActionCreators from "GuildHighlightsNotificationsActionCreators" /* 11654 */;
+import ApplicationStore from "ApplicationStore" /* 4802 */;
+import GuildAutomodMessageStore from "GuildAutomodMessageStore" /* 7952 */;
+import SummaryStore from "SummaryStore" /* 11377 */;
 import UserRecord from "UserRecord" /* 1385 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
-import InviteStore from "InviteStore" /* 4544 */;
-import MessageStore from "MessageStore" /* 4781 */;
+import InviteStore from "InviteStore" /* 4558 */;
+import MessageStore from "MessageStore" /* 4795 */;
 import UserStore from "UserStore" /* 1371 */;
 import Constants from "Constants" /* 1074 */;
 import size from "module_2" /* 2 */;
@@ -148,8 +148,8 @@ export const handleMessagesTapLink = function handleMessagesTapLink(tapLinkData)
                 const _HermesInternal = HermesInternal;
                 const obj19 = ActionSheetActionCreatorsDefault;
                 obj = { guildId: guild_id };
-                obj19.openLazy(asyncRequireImpl(9190, dependencyMap.paths), "GuildProfileActionSheet:" + guild_id, obj);
-                const tmp97 = asyncRequireImpl(9190, dependencyMap.paths);
+                obj19.openLazy(asyncRequireImpl(9217, dependencyMap.paths), "GuildProfileActionSheet:" + guild_id, obj);
+                const tmp97 = asyncRequireImpl(9217, dependencyMap.paths);
               }
             }
           break;
@@ -344,7 +344,7 @@ export const handleMessagesTapLink = function handleMessagesTapLink(tapLinkData)
                 obj1 = GuildHighlightsNotificationsActionCreators;
                 const result5 = obj1.openGuildHighlightNotificationForPush(guild_id1, data.message, data.notificationType, constants.MESSAGE_EMBED);
               } else {
-                const tmp106 = asyncRequireImpl(11651, dependencyMap.paths);
+                const tmp106 = asyncRequireImpl(11677, dependencyMap.paths);
                 const obj15 = { location: constants.MESSAGE_EMBED, messageId: data.message.id, notificationType: null };
                 let TOP_MESSAGE_PUSH = data.notificationType;
                 if (TOP_MESSAGE_PUSH == null) {

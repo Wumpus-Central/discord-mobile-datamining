@@ -1,15 +1,15 @@
-// === Module 15045: BountiesScrollEndCard ===
+// === Module 15072: BountiesScrollEndCard ===
 
-// Module 15045 (BountiesScrollEndCard)
+// Module 15072 (BountiesScrollEndCard)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 576 */;
-import timing from "timing" /* 4561 */;
-import timingPresets from "timingPresets" /* 4564 */;
-import AnimatedEnterExitItemDefault from "AnimatedEnterExitItem" /* 9974 */;
-import BountiesModalTransitionsRefactorExperiment from "BountiesModalTransitionsRefactorExperiment" /* 15010 */;
-import useVisibilityTransition from "useVisibilityTransition" /* 15011 */;
+import timing from "timing" /* 4575 */;
+import timingPresets from "timingPresets" /* 4578 */;
+import AnimatedEnterExitItemDefault from "AnimatedEnterExitItem" /* 10001 */;
+import BountiesModalTransitionsRefactorExperiment from "BountiesModalTransitionsRefactorExperiment" /* 15037 */;
+import useVisibilityTransition from "useVisibilityTransition" /* 15038 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4552 */;
+import AccessibilityStore from "AccessibilityStore" /* 4566 */;
 
 require = fn;
 function BountiesScrollEndCardContent(isScrollingInBoundsSharedValue) {
@@ -18,13 +18,13 @@ function BountiesScrollEndCardContent(isScrollingInBoundsSharedValue) {
   const sourceQuestContent = isScrollingInBoundsSharedValue.sourceQuestContent;
   ({ visible, onReplay, opacityStyle } = isScrollingInBoundsSharedValue);
   const tmp = closure_11();
-  let obj = isActive(11526);
+  let obj = isActive(11553);
   const isBountiesVerticalScrollExperimentEnabled = obj.useIsBountiesVerticalScrollExperimentEnabled("BountiesScrollEndCard");
-  let obj1 = isActive(15043);
+  let obj1 = isActive(15070);
   const bountyCtaInfo = obj1.getBountyCtaInfo(bounty);
   const intl = isActive(1114).intl;
   const stringResult = intl.string(isActive(1114).t["9UtZAY"]);
-  let obj2 = isActive(4296);
+  let obj2 = isActive(4310);
   const fn = function y() {
     let obj = isScrollingInBoundsSharedValue;
     if (isScrollingInBoundsSharedValue != null) {
@@ -40,7 +40,7 @@ function BountiesScrollEndCardContent(isScrollingInBoundsSharedValue) {
     obj = { opacity: timing.withTiming(num, timingPresets.timingStandard) };
     return obj;
   };
-  obj = { isScrollingInBoundsSharedValue, withTiming: isActive(4561).withTiming, isActive, timingStandard: isActive(4564).timingStandard };
+  obj = { isScrollingInBoundsSharedValue, withTiming: isActive(4575).withTiming, isActive, timingStandard: isActive(4578).timingStandard };
   fn.__closure = obj;
   fn.__workletHash = 4903386092677;
   fn.__initData = __initData;
@@ -51,13 +51,13 @@ function BountiesScrollEndCardContent(isScrollingInBoundsSharedValue) {
   obj1 = { style: tmp.backdropTint, pointerEvents: "none" };
   const items1 = [closure_9(closure_6, obj1), , ];
   obj2 = { colors: ["rgba(0, 0, 0, 0.48)", "rgba(0, 0, 0, 0.8)"], style: tmp.backdropGradient, pointerEvents: "none" };
-  items1[1] = closure_9(isScrollingInBoundsSharedValue(4987), obj2);
+  items1[1] = closure_9(isScrollingInBoundsSharedValue(5001), obj2);
   if (isBountiesVerticalScrollExperimentEnabled) {
     const obj3 = { style: null, pointerEvents: "box-none", children: null };
     const items2 = [tmp.overlayContent, animatedStyle];
     obj3.style = items2;
     const obj4 = { bounty, sourceQuestContent, disabled: !isActive };
-    const items3 = [closure_9(tmp9(15046), obj4), ];
+    const items3 = [closure_9(tmp9(15073), obj4), ];
     const obj5 = { style: tmp.endedCtaButtonsContainer, pointerEvents: "box-none", children: null };
     const obj6 = {
       bounty,
@@ -69,10 +69,10 @@ function BountiesScrollEndCardContent(isScrollingInBoundsSharedValue) {
       showCloseButton: false,
       disabled: !isActive
     };
-    obj5.children = closure_9(tmp9(15048), obj6);
+    obj5.children = closure_9(tmp9(15075), obj6);
     items3[1] = closure_9(closure_6, obj5);
     obj3.children = items3;
-    let tmp10Result = closure_10(tmp9(4296).View, obj3);
+    let tmp10Result = closure_10(tmp9(4310).View, obj3);
   } else {
     let tmp13;
     if (isActive) {
@@ -84,27 +84,27 @@ function BountiesScrollEndCardContent(isScrollingInBoundsSharedValue) {
     obj8.style = items4;
     const obj9 = { style: tmp.textBlock, children: null };
     const obj10 = { variant: "heading-md/semibold", color: "text-strong", children: bountyCtaInfo.label };
-    const items5 = [closure_9(isActive(4556).Text, obj10), ];
+    const items5 = [closure_9(isActive(4570).Text, obj10), ];
     const obj11 = { variant: "heading-sm/medium", color: "text-default", children: stringResult };
-    items5[1] = closure_9(isActive(4556).Text, obj11);
+    items5[1] = closure_9(isActive(4570).Text, obj11);
     obj9.children = items5;
     const items6 = [closure_10(closure_6, obj9), ];
     const obj12 = { accessible: false, color: tmp9(576).colors.CONTROL_OVERLAY_SECONDARY_TEXT_DEFAULT, style: tmp.replayIcon };
-    items6[1] = closure_9(isActive(10185).RetryIcon, obj12);
+    items6[1] = closure_9(isActive(10212).RetryIcon, obj12);
     obj8.children = items6;
-    obj7.children = closure_10(tmp9(4296).View, obj8);
+    obj7.children = closure_10(tmp9(4310).View, obj8);
     tmp10Result = closure_9(closure_4, obj7);
   }
   items1[2] = tmp10Result;
   obj.children = items1;
-  return closure_10(isScrollingInBoundsSharedValue(4296).View, obj);
+  return closure_10(isScrollingInBoundsSharedValue(4310).View, obj);
 }
 get_ActivityIndicator = fn(17);
 ({ Pressable: closure_4, StyleSheet: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-const QuestsExperimentLocations = fn(5444).QuestsExperimentLocations;
+const QuestsExperimentLocations = fn(5458).QuestsExperimentLocations;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-let createStyles = fn(4560);
+let createStyles = fn(4574);
 let closure_11 = createStyles.createStyles(() => {
   let obj = { container: null, backdropTint: null, backdropGradient: null, overlayContent: null, pressable: null, textBlock: null, replayIcon: null, endedCtaButtonsContainer: null };
   obj = {};
@@ -138,7 +138,7 @@ const entering = function t(value) {
   const obj = { opacity: timing.withTiming(value, timingPresets.timingStandard, "respect-motion-settings") };
   return obj;
 };
-createStyles = { withTiming: fn(4561).withTiming, timingStandard: fn(4564).timingStandard };
+createStyles = { withTiming: fn(4575).withTiming, timingStandard: fn(4578).timingStandard };
 entering.__closure = createStyles;
 entering.__workletHash = 12127714049951;
 entering.__initData = { code: "function BountiesScrollEndCardTsx1(visible){const{withTiming,timingStandard}=this.__closure;return{opacity:withTiming(visible,timingStandard,'respect-motion-settings')};}" };
@@ -146,7 +146,7 @@ const fn2 = function n(value, fn) {
   const obj = { opacity: timing.withTiming(value, timingPresets.timingStandard, "respect-motion-settings", fn) };
   return obj;
 };
-createStyles = { withTiming: fn(4561).withTiming, timingStandard: fn(4564).timingStandard };
+createStyles = { withTiming: fn(4575).withTiming, timingStandard: fn(4578).timingStandard };
 fn2.__closure = createStyles;
 fn2.__workletHash = 7470211880124;
 fn2.__initData = { code: "function BountiesScrollEndCardTsx2(visible,cleanUp){const{withTiming,timingStandard}=this.__closure;return{opacity:withTiming(visible,timingStandard,'respect-motion-settings',cleanUp)};}" };

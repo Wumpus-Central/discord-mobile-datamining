@@ -1,14 +1,14 @@
-// === Module 10862: SelectedUserField ===
+// === Module 10889: SelectedUserField ===
 
-// Module 10862 (SelectedUserField)
+// Module 10889 (SelectedUserField)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import native from "native" /* 1178 */;
-import UserUtilsDefault from "UserUtils" /* 4404 */;
-import Text_Text from "Text/Text" /* 4556 */;
-import CircleXIcon from "CircleXIcon" /* 6616 */;
-import InputFieldContainer from "InputFieldContainer" /* 6621 */;
-import MagnifyingGlassIcon from "MagnifyingGlassIcon" /* 7051 */;
+import UserUtilsDefault from "UserUtils" /* 4418 */;
+import Text_Text from "Text/Text" /* 4570 */;
+import CircleXIcon from "CircleXIcon" /* 6630 */;
+import InputFieldContainer from "InputFieldContainer" /* 6635 */;
+import MagnifyingGlassIcon from "MagnifyingGlassIcon" /* 7065 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -16,7 +16,7 @@ get_ActivityIndicator = fn(17);
 ({ Pressable: c3, View: closure_4 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-fn(4560);
+fn(4574);
 let createStyles = { container: null, content: null, opener: null, openerWithClearButton: null, searchIcon: null, userPill: null, userPillText: null, clearButton: null };
 createStyles = { marginHorizontal: nativeDefault.space.PX_16 };
 createStyles.container = createStyles;

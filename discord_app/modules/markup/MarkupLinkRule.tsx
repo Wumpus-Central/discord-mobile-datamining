@@ -1,15 +1,15 @@
-// === Module 5001: MarkupLinkRule ===
+// === Module 5015: MarkupLinkRule ===
 
-// Module 5001 (MarkupLinkRule)
+// Module 5015 (MarkupLinkRule)
 import _modDef12 from "module_12" /* 12 */;
 import URLUtilsDefault from "URLUtils" /* 1365 */;
 import GlobalUtils from "GlobalUtils" /* 1369 */;
 import privDefault from "priv" /* 1437 */;
-import _modDef4257 from "module_4257" /* 4257 */;
-import findCodedLinks from "findCodedLinks" /* 4543 */;
-import MarkupTypes from "MarkupTypes" /* 4996 */;
-import UnicodeSanitizationUtils from "UnicodeSanitizationUtils" /* 5002 */;
-import errorDefault from "error" /* 5003 */;
+import _modDef4270 from "module_4270" /* 4270 */;
+import findCodedLinks from "findCodedLinks" /* 4557 */;
+import MarkupTypes from "MarkupTypes" /* 5010 */;
+import UnicodeSanitizationUtils from "UnicodeSanitizationUtils" /* 5016 */;
+import errorDefault from "error" /* 5017 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 const findCodedLinksDefault = findCodedLinks;
@@ -187,13 +187,13 @@ function punycodeLink(url) {
 }
 let closure_4 = new privDefault({ max: 50 });
 let items = ["http:", "https:", "discord:", "tel:", "sms:", "mailto:"];
-let items1 = [fn(4996).AST_KEY.TEXT, fn(4996).AST_KEY.UNDERLINE, fn(4996).AST_KEY.STRONG, fn(4996).AST_KEY.ITALICS, fn(4996).AST_KEY.STRIKETHROUGH, fn(4996).AST_KEY.INLINE_CODE, fn(4996).AST_KEY.SPOILER, fn(4996).AST_KEY.LINE_BREAK, fn(4996).AST_KEY.TIMESTAMP];
-let items2 = [...items1, fn(4996).AST_KEY.EMOJI, fn(4996).AST_KEY.CUSTOM_EMOJI];
-let items3 = [fn(4996).AST_KEY.LIST, fn(4996).AST_KEY.HEADING, fn(4996).AST_KEY.BLOCK_QUOTE, fn(4996).AST_KEY.SUBTEXT];
-const items4 = [fn(4996).AST_KEY.TEXT];
-const items5 = [fn(4996).AST_KEY.UNDERLINE, fn(4996).AST_KEY.STRONG, fn(4996).AST_KEY.ITALICS, fn(4996).AST_KEY.STRIKETHROUGH, fn(4996).AST_KEY.INLINE_CODE, fn(4996).AST_KEY.SPOILER, fn(4996).AST_KEY.LINE_BREAK, fn(4996).AST_KEY.TIMESTAMP, fn(4996).AST_KEY.EMOJI, fn(4996).AST_KEY.CUSTOM_EMOJI, fn(4996).AST_KEY.LIST, fn(4996).AST_KEY.HEADING, fn(4996).AST_KEY.BLOCK_QUOTE, fn(4996).AST_KEY.SUBTEXT];
+let items1 = [fn(5010).AST_KEY.TEXT, fn(5010).AST_KEY.UNDERLINE, fn(5010).AST_KEY.STRONG, fn(5010).AST_KEY.ITALICS, fn(5010).AST_KEY.STRIKETHROUGH, fn(5010).AST_KEY.INLINE_CODE, fn(5010).AST_KEY.SPOILER, fn(5010).AST_KEY.LINE_BREAK, fn(5010).AST_KEY.TIMESTAMP];
+let items2 = [...items1, fn(5010).AST_KEY.EMOJI, fn(5010).AST_KEY.CUSTOM_EMOJI];
+let items3 = [fn(5010).AST_KEY.LIST, fn(5010).AST_KEY.HEADING, fn(5010).AST_KEY.BLOCK_QUOTE, fn(5010).AST_KEY.SUBTEXT];
+const items4 = [fn(5010).AST_KEY.TEXT];
+const items5 = [fn(5010).AST_KEY.UNDERLINE, fn(5010).AST_KEY.STRONG, fn(5010).AST_KEY.ITALICS, fn(5010).AST_KEY.STRIKETHROUGH, fn(5010).AST_KEY.INLINE_CODE, fn(5010).AST_KEY.SPOILER, fn(5010).AST_KEY.LINE_BREAK, fn(5010).AST_KEY.TIMESTAMP, fn(5010).AST_KEY.EMOJI, fn(5010).AST_KEY.CUSTOM_EMOJI, fn(5010).AST_KEY.LIST, fn(5010).AST_KEY.HEADING, fn(5010).AST_KEY.BLOCK_QUOTE, fn(5010).AST_KEY.SUBTEXT];
 let obj = {};
-let merged = Object.assign(_modDef4257.defaultRules.link);
+let merged = Object.assign(_modDef4270.defaultRules.link);
 obj.match = function match(arr, allowLinks, arg2) {
   if (allowLinks.allowLinks) {
     if (-1 === arr.indexOf("](")) {
@@ -244,7 +244,7 @@ obj.match = function match(arr, allowLinks, arg2) {
         }
         return null;
       }
-      return _modDef4257.defaultRules.link.match(arr, allowLinks, arg2);
+      return _modDef4270.defaultRules.link.match(arr, allowLinks, arg2);
     }
   } else {
     return null;
@@ -294,7 +294,7 @@ obj.parse = function parse(arg0, rules, allowEmojiLinks) {
     const trimmed = str3.trim();
     if (0 !== str2.trim().length) {
       if (0 !== trimmed.length) {
-        const tmp48 = punycodeLink(_modDef4257.unescapeUrl(tmp4));
+        const tmp48 = punycodeLink(_modDef4270.unescapeUrl(tmp4));
         if (null != tmp48) {
           if (findCodedLinksDefault(tmp5).length <= 0) {
             obj3 = {};
@@ -333,7 +333,7 @@ obj.parse = function parse(arg0, rules, allowEmojiLinks) {
                       const arraySpreadResult1 = HermesBuiltin.arraySpread(items, 0);
                     }
                   }
-                  const tmp46Result = _modDef4257;
+                  const tmp46Result = _modDef4270;
                   const obj8 = { content: tmp46Result.parserFor(tmp46Result.pick(rules.rules, tmp23))(value.whitespaceSanitized, obj3), target: tmp48.target, title: value1.whitespaceSanitized };
                   return obj8;
                 }

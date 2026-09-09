@@ -1,6 +1,6 @@
-// === Module 6306: ? ===
+// === Module 6320: ? ===
 
-// Module 6306
+// Module 6320
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/NitroWishlistTileAbstractUI-2x.png.js");

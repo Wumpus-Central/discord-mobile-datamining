@@ -1,17 +1,17 @@
-// === Module 10103: GuildAntiRaidHooks ===
+// === Module 10130: GuildAntiRaidHooks ===
 
-// Module 10103 (GuildAntiRaidHooks)
+// Module 10130 (GuildAntiRaidHooks)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import BigFlagUtilsAll from "BigFlagUtils" /* 1086 */;
-import PermissionUtilsAll from "PermissionUtils" /* 4204 */;
-import GuildAntiRaidUtils from "GuildAntiRaidUtils" /* 8015 */;
-import GuildAntiRaidPermissionsUtils from "GuildAntiRaidPermissionsUtils" /* 10104 */;
+import PermissionUtilsAll from "PermissionUtils" /* 4217 */;
+import GuildAntiRaidUtils from "GuildAntiRaidUtils" /* 8029 */;
+import GuildAntiRaidPermissionsUtils from "GuildAntiRaidPermissionsUtils" /* 10131 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1221 */;
 import GuildStore from "GuildStore" /* 1979 */;
-import PermissionStore from "PermissionStore" /* 4199 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 4381 */;
+import PermissionStore from "PermissionStore" /* 4212 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 4395 */;
 import UserStore from "UserStore" /* 1371 */;
-import GuildIncidentsStore from "GuildIncidentsStore" /* 10085 */;
+import GuildIncidentsStore from "GuildIncidentsStore" /* 10112 */;
 
 require = fn;
 function getFirstGuildIncidentId(guildId) {
@@ -50,7 +50,7 @@ function getFirstGuildIncidentId(guildId) {
   }
   return null;
 }
-let closure_10 = fn(8016).IncidentAlertModeratorPermissions;
+let closure_10 = fn(8030).IncidentAlertModeratorPermissions;
 const Constants = fn(1074);
 ({ EMPTY_STRING_SNOWFLAKE_ID: closure_11, GuildFeatures: closure_12 } = Constants);
 const size = fn(2);
@@ -77,7 +77,7 @@ export const useFirstGuildIncidentId = function useFirstGuildIncidentId() {
       let tmp16 = tmp15;
       if (null != tmp15) {
         let tmp18 = stateFromStores1;
-        let obj8 = stateFromStores1(8015);
+        let obj8 = stateFromStores1(8029);
         if (obj8.hasDetectedActivity(tmp16)) {
           let obj5 = BigFlagUtilsAll;
           let obj6 = PermissionUtilsAll;
@@ -88,7 +88,7 @@ export const useFirstGuildIncidentId = function useFirstGuildIncidentId() {
             return nextResult.id;
           }
         } else {
-          let tmp18Result = tmp18(8015);
+          let tmp18Result = tmp18(8029);
         }
       }
     }

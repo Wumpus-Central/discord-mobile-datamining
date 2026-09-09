@@ -1,6 +1,6 @@
-// === Module 5004: useHasEnhancedRoleColors ===
+// === Module 5018: useHasEnhancedRoleColors ===
 
-// Module 5004 (useHasEnhancedRoleColors)
+// Module 5018 (useHasEnhancedRoleColors)
 import GuildStore from "GuildStore" /* 1979 */;
 
 const require = fn;

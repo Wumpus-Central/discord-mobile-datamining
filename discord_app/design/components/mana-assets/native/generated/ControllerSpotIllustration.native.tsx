@@ -1,9 +1,9 @@
-// === Module 5875: ControllerSpotIllustration ===
+// === Module 5889: ControllerSpotIllustration ===
 
-// Module 5875 (ControllerSpotIllustration)
+// Module 5889 (ControllerSpotIllustration)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5587 */;
-import _modDef5876 from "module_5876" /* 5876 */;
+import FastImageDefault from "FastImage" /* 5601 */;
+import _modDef5890 from "module_5890" /* 5890 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -24,7 +24,7 @@ export const ControllerSpotIllustration = function ControllerSpotIllustration(wi
     num3 = 1;
   }
   let obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  obj = { uri: _modDef5876 };
+  obj = { uri: _modDef5890 };
   obj.source = obj;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];
@@ -32,5 +32,5 @@ export const ControllerSpotIllustration = function ControllerSpotIllustration(wi
   obj.accessible = accessible;
   obj.accessibilityLabel = accessibilityLabel;
   obj.resizeMode = resizeMode;
-  return jsx(FastImageDefault, { uri: _modDef5876 });
+  return jsx(FastImageDefault, { uri: _modDef5890 });
 };

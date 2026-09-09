@@ -1,7 +1,7 @@
-// === Module 11395: useLastChannelMessage ===
+// === Module 11422: useLastChannelMessage ===
 
-// Module 11395 (useLastChannelMessage)
-import MessageStore from "MessageStore" /* 4781 */;
+// Module 11422 (useLastChannelMessage)
+import MessageStore from "MessageStore" /* 4795 */;
 
 const require = fn;
 const size = fn(2);

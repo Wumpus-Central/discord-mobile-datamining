@@ -1,14 +1,14 @@
-// === Module 9741: CreateChannelActionCreators ===
+// === Module 9768: CreateChannelActionCreators ===
 
-// Module 9741 (CreateChannelActionCreators)
+// Module 9768 (CreateChannelActionCreators)
 import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1250 */;
 import HTTPUtils from "HTTPUtils" /* 1272 */;
 import TypeUtils from "TypeUtils" /* 1969 */;
-import TrackedHTTPUtilsDefault from "TrackedHTTPUtils" /* 4753 */;
-import NotificationSettingsUtils from "NotificationSettingsUtils" /* 7114 */;
-import NotificationSettingsModalActionCreatorsDefault from "NotificationSettingsModalActionCreators" /* 7119 */;
-import GuildTemplateTooltipActionCreatorsDefault from "GuildTemplateTooltipActionCreators" /* 7323 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 4741 */;
+import TrackedHTTPUtilsDefault from "TrackedHTTPUtils" /* 4767 */;
+import NotificationSettingsUtils from "NotificationSettingsUtils" /* 7128 */;
+import NotificationSettingsModalActionCreatorsDefault from "NotificationSettingsModalActionCreators" /* 7133 */;
+import GuildTemplateTooltipActionCreatorsDefault from "GuildTemplateTooltipActionCreators" /* 7337 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 4755 */;
 
 require = fn;
 const Constants = fn(1074);
@@ -102,7 +102,7 @@ export default {
       }
     };
     request.trackedActionData = obj;
-    const tmpResult = permissionOverwrites(4753);
+    const tmpResult = permissionOverwrites(4767);
     request.rejectWithError = guildId(1272).rejectWithMigratedError();
     const obj6 = guildId(1272);
     return tmpResult.post(request).then((body) => {

@@ -1,6 +1,6 @@
-// === Module 7770: ThreadMembersStore ===
+// === Module 7784: ThreadMembersStore ===
 
-// Module 7770 (ThreadMembersStore)
+// Module 7784 (ThreadMembersStore)
 import _modDef12 from "module_12" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;

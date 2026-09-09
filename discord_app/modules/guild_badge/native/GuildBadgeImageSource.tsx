@@ -1,32 +1,32 @@
-// === Module 8746: GuildBadgeImageSource ===
+// === Module 8774: GuildBadgeImageSource ===
 
-// Module 8746 (GuildBadgeImageSource)
-import shared from "shared" /* 4411 */;
-import _modDef5591 from "module_5591" /* 5591 */;
-import _modDef5592 from "module_5592" /* 5592 */;
-import BadgeCategory from "BadgeCategory" /* 8747 */;
-import GuildTraits from "GuildTraits" /* 8748 */;
-import _modDef8749 from "module_8749" /* 8749 */;
-import _modDef8750 from "module_8750" /* 8750 */;
-import _modDef8751 from "module_8751" /* 8751 */;
-import _modDef8752 from "module_8752" /* 8752 */;
-import _modDef8753 from "module_8753" /* 8753 */;
-import _modDef8754 from "module_8754" /* 8754 */;
+// Module 8774 (GuildBadgeImageSource)
+import shared from "shared" /* 4425 */;
+import _modDef5605 from "module_5605" /* 5605 */;
+import _modDef5606 from "module_5606" /* 5606 */;
+import BadgeCategory from "BadgeCategory" /* 8775 */;
+import GuildTraits from "GuildTraits" /* 8776 */;
+import _modDef8777 from "module_8777" /* 8777 */;
+import _modDef8778 from "module_8778" /* 8778 */;
+import _modDef8779 from "module_8779" /* 8779 */;
+import _modDef8780 from "module_8780" /* 8780 */;
+import _modDef8781 from "module_8781" /* 8781 */;
+import _modDef8782 from "module_8782" /* 8782 */;
 
 require = fn;
 let badgeVariants = {};
-badgeVariants = { imageSource: _modDef5591 };
-badgeVariants[fn(8747).BadgeCategory.STAFF] = badgeVariants;
-badgeVariants = { imageSource: _modDef5592 };
-badgeVariants[fn(8747).BadgeCategory.PARTNERED] = badgeVariants;
-badgeVariants[fn(8747).BadgeCategory.VERIFIED] = { imageSource: _modDef5591 };
-const obj1 = { imageSource: _modDef5591 };
-badgeVariants[fn(8747).BadgeCategory.COMMUNITY] = { imageSource: _modDef8749, imageSourceLight: _modDef8750, premiumImageSource: _modDef8751 };
-let obj2 = { imageSource: _modDef8749, imageSourceLight: _modDef8750, premiumImageSource: _modDef8751 };
-badgeVariants[fn(8747).BadgeCategory.DISCOVERABLE] = { imageSource: _modDef8752, imageSourceLight: _modDef8753, premiumImageSource: _modDef8754 };
-const obj3 = { imageSource: _modDef8752, imageSourceLight: _modDef8753, premiumImageSource: _modDef8754 };
-badgeVariants[fn(8747).BadgeCategory.VERIFIED_AND_PARTNERED] = { imageSource: _modDef5591 };
-badgeVariants[fn(8747).BadgeCategory.NONE] = {};
+badgeVariants = { imageSource: _modDef5605 };
+badgeVariants[fn(8775).BadgeCategory.STAFF] = badgeVariants;
+badgeVariants = { imageSource: _modDef5606 };
+badgeVariants[fn(8775).BadgeCategory.PARTNERED] = badgeVariants;
+badgeVariants[fn(8775).BadgeCategory.VERIFIED] = { imageSource: _modDef5605 };
+const obj1 = { imageSource: _modDef5605 };
+badgeVariants[fn(8775).BadgeCategory.COMMUNITY] = { imageSource: _modDef8777, imageSourceLight: _modDef8778, premiumImageSource: _modDef8779 };
+let obj2 = { imageSource: _modDef8777, imageSourceLight: _modDef8778, premiumImageSource: _modDef8779 };
+badgeVariants[fn(8775).BadgeCategory.DISCOVERABLE] = { imageSource: _modDef8780, imageSourceLight: _modDef8781, premiumImageSource: _modDef8782 };
+const obj3 = { imageSource: _modDef8780, imageSourceLight: _modDef8781, premiumImageSource: _modDef8782 };
+badgeVariants[fn(8775).BadgeCategory.VERIFIED_AND_PARTNERED] = { imageSource: _modDef5605 };
+badgeVariants[fn(8775).BadgeCategory.NONE] = {};
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_badge/native/GuildBadgeImageSource.tsx");
 

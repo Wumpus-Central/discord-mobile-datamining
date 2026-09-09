@@ -1,10 +1,10 @@
-// === Module 9970: PremiumFeatureUpsellUtils ===
+// === Module 9997: PremiumFeatureUpsellUtils ===
 
-// Module 9970 (PremiumFeatureUpsellUtils)
+// Module 9997 (PremiumFeatureUpsellUtils)
 import _modDef38 from "module_38" /* 38 */;
 import ConstantsIOS from "ConstantsIOS" /* 1093 */;
-import SoundboardTypes from "SoundboardTypes" /* 5020 */;
-import EntitlementFeatureNames from "EntitlementFeatureNames" /* 7853 */;
+import SoundboardTypes from "SoundboardTypes" /* 5034 */;
+import EntitlementFeatureNames from "EntitlementFeatureNames" /* 7867 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/premium/roadblocks/native/utils/PremiumFeatureUpsellUtils.tsx");

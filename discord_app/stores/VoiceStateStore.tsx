@@ -1,12 +1,12 @@
-// === Module 4579: VoiceStateStore ===
+// === Module 4593: VoiceStateStore ===
 
-// Module 4579 (VoiceStateStore)
+// Module 4593 (VoiceStateStore)
 import _modDef12 from "module_12" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import MetaQuestUtils from "MetaQuestUtils" /* 1608 */;
 import _slicedToArray from "module_32" /* 32 */;
-import VoiceStateRecord from "VoiceStateRecord" /* 4580 */;
+import VoiceStateRecord from "VoiceStateRecord" /* 4594 */;
 
 require = fn;
 function updateVoiceState(arg0, arg1, fn) {
@@ -147,7 +147,7 @@ function handleGuildCreateOrDelete(guild) {
   delete tmp2[tmp];
 }
 const ME = fn(1074).ME;
-const VoicePlatforms = fn(4581).VoicePlatforms;
+const VoicePlatforms = fn(4595).VoicePlatforms;
 let c9 = 0;
 let closure_10 = 0;
 const dependencyMap = {};

@@ -1,9 +1,9 @@
-// === Module 13912: useMessageRequestPrivacyOption ===
+// === Module 13935: useMessageRequestPrivacyOption ===
 
-// Module 13912 (useMessageRequestPrivacyOption)
+// Module 13935 (useMessageRequestPrivacyOption)
 import UserSettings from "UserSettings" /* 1935 */;
-import UserSettingsUtils from "UserSettingsUtils" /* 6995 */;
-import useIsStricterMessageRequestsDefault from "useIsStricterMessageRequests" /* 12449 */;
+import UserSettingsUtils from "UserSettingsUtils" /* 7009 */;
+import useIsStricterMessageRequestsDefault from "useIsStricterMessageRequests" /* 12475 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -39,7 +39,7 @@ function MessageRequestRestrictedGuildPrivacyOption(guild) {
   obj.value = tmp5;
   obj.onValueChange = callback;
   obj.disabled = hasItem1;
-  return jsx(id(7200).ActionSheetSwitchRow, { label: null, subLabel: null, value: null, onValueChange: null, disabled: null });
+  return jsx(id(7213).ActionSheetSwitchRow, { label: null, subLabel: null, value: null, onValueChange: null, disabled: null });
 }
 const jsx = fn(21).jsx;
 const size = fn(2);

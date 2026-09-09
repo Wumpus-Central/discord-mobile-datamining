@@ -1,11 +1,11 @@
-// === Module 17384: HolidayEventsConfig ===
+// === Module 17415: HolidayEventsConfig ===
 
-// Module 17384 (HolidayEventsConfig)
+// Module 17415 (HolidayEventsConfig)
 import util from "util" /* 1114 */;
 import dismissible_content from "dismissible_content" /* 1943 */;
-import Constants from "Constants" /* 9909 */;
-import _modDef17385 from "module_17385" /* 17385 */;
-import _modDef17386 from "module_17386" /* 17386 */;
+import Constants from "Constants" /* 9936 */;
+import _modDef17416 from "module_17416" /* 17416 */;
+import _modDef17417 from "module_17417" /* 17417 */;
 import size from "module_2" /* 2 */;
 
 let obj = {
@@ -25,7 +25,7 @@ let obj = {
   coachmarkDismissibleContent: null,
   coachmarkBackgroundColor: "#1170ed"
 };
-obj = { webmDark: _modDef17385, webmLight: _modDef17386 };
+obj = { webmDark: _modDef17416, webmLight: _modDef17417 };
 obj.appSpinnerSources = obj;
 obj.coachmarkDismissibleContent = dismissible_content.DismissibleContent.HOLIDAY_COACHMARK_WINTER_2025;
 const result = size.fileFinishedImporting("modules/holidays/HolidayEventsConfig.tsx");

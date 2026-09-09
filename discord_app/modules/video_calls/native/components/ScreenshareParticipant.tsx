@@ -1,14 +1,14 @@
-// === Module 10029: ScreenshareParticipant ===
+// === Module 10056: ScreenshareParticipant ===
 
-// Module 10029 (ScreenshareParticipant)
+// Module 10056 (ScreenshareParticipant)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import Text_Text from "Text/Text" /* 4556 */;
-import components_Button_Button from "components/Button/Button" /* 4975 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 6655 */;
-import useParticipantTileTapGestureDefault from "useParticipantTileTapGesture" /* 9597 */;
-import _modDef9598 from "module_9598" /* 9598 */;
-import useScreenshareUtils from "useScreenshareUtils" /* 9956 */;
+import Text_Text from "Text/Text" /* 4570 */;
+import components_Button_Button from "components/Button/Button" /* 4989 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 6669 */;
+import useParticipantTileTapGestureDefault from "useParticipantTileTapGesture" /* 9624 */;
+import _modDef9625 from "module_9625" /* 9625 */;
+import useScreenshareUtils from "useScreenshareUtils" /* 9983 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -16,7 +16,7 @@ get_ActivityIndicator = fn(17);
 ({ View: closure_4, Image: hasOwnProperty } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-fn(4560);
+fn(4574);
 let createStyles = { container: null, image: null, title: null, description: null };
 createStyles = { alignItems: "center", justifyContent: "center", flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 createStyles.container = createStyles;
@@ -52,7 +52,7 @@ export default function ScreenshareParticipant(participant) {
   obj = { style: null, children: null };
   const items2 = [tmp4.container, participant.containerStyle];
   obj.style = items2;
-  obj = { source: _modDef9598, style: tmp4.image };
+  obj = { source: _modDef9625, style: tmp4.image };
   const items3 = [timestampProducer(hasOwnProperty, obj), , , ];
   const obj1 = { style: tmp4.title, accessibilityRole: "header", variant: "heading-lg/extrabold", color: "mobile-text-heading-primary", children: null };
   const intl = util.intl;

@@ -1,11 +1,11 @@
-// === Module 14635: useProfileFrameSections ===
+// === Module 14661: useProfileFrameSections ===
 
-// Module 14635 (useProfileFrameSections)
+// Module 14661 (useProfileFrameSections)
 import util from "util" /* 1114 */;
-import CollectiblesUtils from "CollectiblesUtils" /* 7554 */;
+import CollectiblesUtils from "CollectiblesUtils" /* 7568 */;
 import _slicedToArray from "module_32" /* 32 */;
-import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7542 */;
-import CollectiblesPurchaseStore from "CollectiblesPurchaseStore" /* 7558 */;
+import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7556 */;
+import CollectiblesPurchaseStore from "CollectiblesPurchaseStore" /* 7572 */;
 
 require = fn;
 const useMemo = fn(19).useMemo;
@@ -27,20 +27,18 @@ export default function useProfileFrameSections() {
   }), 2);
   first = tmp2[0];
   _slicedToArray = tmp4;
-  let obj2 = stateFromStores(first[4]);
-  const isProfileFramesEarlyAccessPhase = stateFromStores(first[5]).useIsProfileFramesEarlyAccessPhase("useProfileFrameSections");
-  const items2 = [first, tmp2[1], stateFromStores, isProfileFramesEarlyAccessPhase];
-  return isProfileFramesEarlyAccessPhase(() => {
+  const items2 = [first, tmp2[1], stateFromStores];
+  return useMemo(() => {
     obj = CollectiblesUtils;
     const profileFrames = obj.getProfileFrames(stateFromStores, first);
     const reduced = profileFrames.reduce((premium_purchase, skuId) => {
       value = closure_1_0.get(skuId.skuId);
       if (null != value) {
-        let result = stateFromStores(first[6]).isPremiumCollectiblesPurchase(value);
-        const obj2 = stateFromStores(first[6]);
+        let result = stateFromStores(first[5]).isPremiumCollectiblesPurchase(value);
+        const obj2 = stateFromStores(first[5]);
       } else {
-        result = stateFromStores(first[6]).isPremiumCollectiblesProduct(closure_1_2.get(skuId.skuId));
-        obj = stateFromStores(first[6]);
+        result = stateFromStores(first[5]).isPremiumCollectiblesProduct(closure_1_2.get(skuId.skuId));
+        obj = stateFromStores(first[5]);
       }
       if (result) {
         premium_purchase = premium_purchase.premium_purchase;
@@ -55,19 +53,16 @@ export default function useProfileFrameSections() {
       return premium_purchase;
     }, { purchase: [], premium_purchase: [], preview: [] });
     const intl = util.intl;
-    let stringResult = intl.string(util.t.TiLCgw);
     obj = { section: obj.PURCHASE, items: null, height: 12, header: null };
-    const items = [obj, obj, ...reduced.purchase];
+    const items = [obj, obj];
+    HermesBuiltin.arraySpread(reduced.purchase, 2);
     obj.items = items;
     const intl2 = util.intl;
     obj.header = intl2.string(util.t["9eZ4aO"]);
-    const items1 = [obj, { section: obj.PREMIUM_PURCHASE, items: reduced.premium_purchase, height: 12, header: stringResult }, ];
+    const items1 = [obj, { section: obj.PREMIUM_PURCHASE, items: reduced.premium_purchase, height: 12, header: intl.string(util.t.TiLCgw) }, ];
     obj = { section: obj.PREVIEW, items: reduced.preview, height: 12, header: null };
-    if (!isProfileFramesEarlyAccessPhase) {
-      const intl3 = util.intl;
-      stringResult = intl3.string(util.t["1vbbee"]);
-    }
-    obj.header = stringResult;
+    const intl3 = util.intl;
+    obj.header = intl3.string(util.t["1vbbee"]);
     items1[2] = obj;
     return items1.filter((items) => items.items.length > 0);
   }, items2);

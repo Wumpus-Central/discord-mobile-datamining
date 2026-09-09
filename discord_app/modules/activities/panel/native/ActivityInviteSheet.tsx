@@ -1,14 +1,14 @@
-// === Module 17030: ActivityInviteSheet ===
+// === Module 17061: ActivityInviteSheet ===
 
-// Module 17030 (ActivityInviteSheet)
+// Module 17061 (ActivityInviteSheet)
 import nativeDefault from "native" /* 576 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4527 */;
-import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8179 */;
-import UserPlaceholderRowDefault from "UserPlaceholderRow" /* 9834 */;
-import InviteSuggestionsActionCreators from "InviteSuggestionsActionCreators" /* 9852 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4541 */;
+import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8205 */;
+import UserPlaceholderRowDefault from "UserPlaceholderRow" /* 9861 */;
+import InviteSuggestionsActionCreators from "InviteSuggestionsActionCreators" /* 9879 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import InviteSuggestionsStore from "InviteSuggestionsStore" /* 9838 */;
+import InviteSuggestionsStore from "InviteSuggestionsStore" /* 9865 */;
 
 require = fn;
 function Loading() {
@@ -27,15 +27,15 @@ function Loading() {
   return __initData(closure_1_14, obj);
 }
 const View = fn(17).View;
-const InstantInviteSendStateStore = fn(9899);
+const InstantInviteSendStateStore = fn(9926);
 ({ setSendState: metroRequire, useInstantInviteSendStates: closure_7 } = InstantInviteSendStateStore);
 const ActivityActionTypes = fn(1074).ActivityActionTypes;
-const Constants = fn(7736);
+const Constants = fn(7750);
 ({ InviteSendStates: c10, InviteTargetTypes: closure_11 } = Constants);
 const NOOP_NULL = fn(1085).NOOP_NULL;
 const jsxProd = fn(21);
 ({ jsx: map1, Fragment: closure_14, jsxs: closure_15 } = jsxProd);
-fn(4560);
+fn(4574);
 let createStyles = { placeholderHeader: null, placeholderLabel: null, emptyState: null, searchAndShareContainer: null };
 let size = { height: 16, width: "80%", margin: 16, marginBottom: 8, borderRadius: nativeDefault.radii.sm, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED };
 createStyles.placeholderHeader = size;
@@ -55,9 +55,9 @@ export default function ActivityInviteSheet(activity) {
   _slicedToArray = undefined;
   noop = undefined;
   const tmp = closure_16();
-  analyticsLocations = analyticsLocations(7162)(analyticsLocations(7182).ACTIVITY_INVITE_SHEET).analyticsLocations;
+  analyticsLocations = analyticsLocations(7176)(analyticsLocations(7196).ACTIVITY_INVITE_SHEET).analyticsLocations;
   const tmp2 = analyticsLocations;
-  const tmp4 = analyticsLocations(7162);
+  const tmp4 = analyticsLocations(7176);
   [tmp6, c2] = _slicedToArray(noop.useState(null), 2);
   const tmp7 = closure_7((arg0) => arg0);
   _slicedToArray = tmp7;
@@ -154,19 +154,19 @@ export default function ActivityInviteSheet(activity) {
   const obj1 = { title: null };
   const intl = tmp11(1114).intl;
   obj1.title = intl.string(activity(1114).t["OzOM/q"]);
-  obj.header = closure_13(activity(7149).BottomSheetTitleHeader, obj1);
+  obj.header = closure_13(activity(7163).BottomSheetTitleHeader, obj1);
   if (null != tmp6) {
-    const obj2 = { style: tmp.emptyState, Illustration: tmp11(9854).AppCrash, title: tmp6 };
+    const obj2 = { style: tmp.emptyState, Illustration: tmp11(9881).AppCrash, title: tmp6 };
     let tmp19Result = closure_13(tmp11(1178).EmptyState, obj2);
   } else if (tmp15) {
     tmp19Result = closure_13(Loading, {});
   } else {
     let obj3 = { children: null };
     const obj4 = { style: tmp.searchAndShareContainer, children: null };
-    const obj5 = { size: "md", isRound: true, onChange: tmp11(9852).searchInviteSuggestions, placeholder: null };
+    const obj5 = { size: "md", isRound: true, onChange: tmp11(9879).searchInviteSuggestions, placeholder: null };
     const intl2 = tmp11(1114).intl;
     obj5.placeholder = intl2.string(tmp11(1114).t.iI1gMg);
-    obj4.children = closure_13(tmp11(7050).SearchField, obj5);
+    obj4.children = closure_13(tmp11(7064).SearchField, obj5);
     obj3.children = closure_13(View, obj4);
     const items4 = [closure_13(View, obj3), ];
     if (tmp16) {
@@ -176,7 +176,7 @@ export default function ActivityInviteSheet(activity) {
       let tmp17Result = closure_13(tmp11(1178).EmptyState, obj6);
     } else {
       const obj7 = { data: stateFromStores, error: tmp6, getSendState: callback, onInviteSent: callback2, onPressAvatar: callback1 };
-      tmp17Result = closure_13(tmp2(17031), obj7);
+      tmp17Result = closure_13(tmp2(17062), obj7);
     }
     const obj8 = { children: null };
     items4[1] = tmp17Result;
@@ -184,6 +184,6 @@ export default function ActivityInviteSheet(activity) {
     tmp19Result = closure_15(closure_14, obj8);
   }
   obj.children = tmp19Result;
-  obj.children = closure_13(activity(7150).BottomSheet, obj);
-  return closure_13(activity(7162).AnalyticsLocationProvider, obj);
+  obj.children = closure_13(activity(7164).BottomSheet, obj);
+  return closure_13(activity(7176).AnalyticsLocationProvider, obj);
 };

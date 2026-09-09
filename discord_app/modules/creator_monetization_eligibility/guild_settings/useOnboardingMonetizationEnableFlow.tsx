@@ -1,6 +1,6 @@
-// === Module 17713: useOnboardingMonetizationEnableFlow ===
+// === Module 17746: useOnboardingMonetizationEnableFlow ===
 
-// Module 17713 (useOnboardingMonetizationEnableFlow)
+// Module 17746 (useOnboardingMonetizationEnableFlow)
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1371 */;
 
@@ -36,18 +36,18 @@ export default function useOnboardingMonetizationEnableFlow(features) {
   if (features != null) {
     id = features.id;
   }
-  const tmp10 = refresh(17714);
-  ({ submittedRequest, error, loading, createEnableRequest } = refresh(17714)(id));
+  const tmp10 = refresh(17747);
+  ({ submittedRequest, error, loading, createEnableRequest } = refresh(17747)(id));
   let id1;
-  let tmp9Result = tmp9(17715);
+  let tmp9Result = tmp9(17748);
   if (features != null) {
     id1 = features.id;
   }
   const tmp9ResultResult = tmp9Result(id1);
   refresh = tmp9ResultResult.refresh;
   ({ eligibility, loading: loading2, error: error2 } = tmp9ResultResult);
-  const tmp10Result = refresh(17714)(id);
-  ({ isApplicationRejected, requestCooldownDuration } = refresh(17716)(eligibility));
+  const tmp10Result = refresh(17747)(id);
+  ({ isApplicationRejected, requestCooldownDuration } = refresh(17749)(eligibility));
   let hasItem2;
   if (features != null) {
     const features3 = features.features;
@@ -62,7 +62,7 @@ export default function useOnboardingMonetizationEnableFlow(features) {
     }
     tmp19 = true === hasItem3;
   }
-  tmpResult = tmp(7253);
+  tmpResult = tmp(7267);
   let id2;
   if (features != null) {
     id2 = features.id;
@@ -83,7 +83,7 @@ export default function useOnboardingMonetizationEnableFlow(features) {
   obj = { faqUrl: null };
   tmp9Result = tmp9(2024);
   obj.faqUrl = tmp9Result.getArticleURL(constants2.CREATOR_FAQ);
-  const tmp16 = refresh(17716)(eligibility);
+  const tmp16 = refresh(17749)(eligibility);
   if (isApplicationRejected) {
     if (tmpResult.useIsMonetizationReapplicationDisabled(id2).isMonetizationReapplicationDisabled) {
       if (true === hasItem) {

@@ -1,18 +1,18 @@
-// === Module 16674: PollBadge ===
+// === Module 16711: PollBadge ===
 
-// Module 16674 (PollBadge)
+// Module 16711 (PollBadge)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import native from "native" /* 1178 */;
-import Text_Text from "Text/Text" /* 4556 */;
-import _modDef16675 from "module_16675" /* 16675 */;
+import Text_Text from "Text/Text" /* 4570 */;
+import _modDef16712 from "module_16712" /* 16712 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-fn(4560);
+fn(4574);
 let createStyles = { container: null, text: null };
 createStyles = { borderRadius: nativeDefault.radii.round, paddingHorizontal: 8, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, color: nativeDefault.colors.TEXT_MUTED, flexDirection: "row", alignItems: "center" };
 createStyles.container = createStyles;
@@ -26,7 +26,7 @@ export default function PollBadge(style) {
   let obj = { style: null, children: null };
   const items = [tmp.container, style.style];
   obj.style = items;
-  obj = { size: native.IconSizes.EXTRA_SMALL_10, source: _modDef16675 };
+  obj = { size: native.IconSizes.EXTRA_SMALL_10, source: _modDef16712 };
   const items1 = [React4(native.Icon, obj), ];
   obj = { style: tmp.text, variant: "text-xs/semibold", children: null };
   const intl = util.intl;

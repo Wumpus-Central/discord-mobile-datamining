@@ -1,6 +1,6 @@
-// === Module 13649: ConnectionState ===
+// === Module 13672: ConnectionState ===
 
-// Module 13649 (ConnectionState)
+// Module 13672 (ConnectionState)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/gateway/ConnectionState.tsx");

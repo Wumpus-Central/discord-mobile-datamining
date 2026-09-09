@@ -1,9 +1,9 @@
-// === Module 6181: GuidelinesIllocon ===
+// === Module 6195: GuidelinesIllocon ===
 
-// Module 6181 (GuidelinesIllocon)
+// Module 6195 (GuidelinesIllocon)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5587 */;
-import _modDef6182 from "module_6182" /* 6182 */;
+import FastImageDefault from "FastImage" /* 5601 */;
+import _modDef6196 from "module_6196" /* 6196 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -16,12 +16,12 @@ export const GuidelinesIllocon = function GuidelinesIllocon(size) {
     num = 64;
   }
   let obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  obj = { uri: _modDef6182 };
+  obj = { uri: _modDef6196 };
   obj.source = obj;
   const items = [{ width: num, height: num }];
   obj.style = items;
   obj.accessible = accessible;
   obj.accessibilityLabel = accessibilityLabel;
   obj.resizeMode = resizeMode;
-  return jsx(FastImageDefault, { uri: _modDef6182 });
+  return jsx(FastImageDefault, { uri: _modDef6196 });
 };

@@ -1,20 +1,20 @@
-// === Module 11828: MentionableSelectComponentActionSheet ===
+// === Module 11854: MentionableSelectComponentActionSheet ===
 
-// Module 11828 (MentionableSelectComponentActionSheet)
+// Module 11854 (MentionableSelectComponentActionSheet)
 import nativeDefault from "native" /* 576 */;
 import native from "native" /* 1178 */;
-import Text_Text from "Text/Text" /* 4556 */;
-import InteractionComponentTypes from "InteractionComponentTypes" /* 4792 */;
-import guild_boosting_RoleIconUtils from "guild_boosting/RoleIconUtils" /* 7187 */;
-import RoleIconDefault from "RoleIcon" /* 7188 */;
-import SearchableSelectActionComponentUtils from "SearchableSelectActionComponentUtils" /* 8120 */;
-import ShieldUserIcon from "ShieldUserIcon" /* 9757 */;
-import DiscordTagDefault from "DiscordTag" /* 9808 */;
-import UserIcon from "UserIcon" /* 11830 */;
+import Text_Text from "Text/Text" /* 4570 */;
+import InteractionComponentTypes from "InteractionComponentTypes" /* 4806 */;
+import RoleIconUtils from "RoleIconUtils" /* 7201 */;
+import RoleIconDefault from "RoleIcon" /* 7219 */;
+import SearchableSelectActionComponentUtils from "SearchableSelectActionComponentUtils" /* 8146 */;
+import ShieldUserIcon from "ShieldUserIcon" /* 9784 */;
+import DiscordTagDefault from "DiscordTag" /* 9835 */;
+import UserIcon from "UserIcon" /* 11856 */;
 import noop from "module_19" /* 19 */;
 import GuildRoleStore from "GuildRoleStore" /* 2015 */;
 import GuildStore from "GuildStore" /* 1979 */;
-import PresenceStore from "PresenceStore" /* 4600 */;
+import PresenceStore from "PresenceStore" /* 4614 */;
 import UserStore from "UserStore" /* 1371 */;
 
 require = fn;
@@ -23,7 +23,7 @@ const Constants = fn(1074);
 ({ Fonts, DEFAULT_ROLE_COLOR_HEX: closure_9 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-fn(4560);
+fn(4574);
 let createStyles = { name: null, discriminator: null, roleCountContainer: null, roleCountText: null };
 createStyles = { color: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT, fontFamily: Fonts.PRIMARY_MEDIUM, fontSize: 12, lineHeight: 16 };
 createStyles.name = createStyles;
@@ -70,21 +70,16 @@ export default function MentionableSelectComponentActionSheet(selectionActionCom
       }
       if (null != guild) {
         if (null != role) {
-          let tmpResult = guild_boosting_RoleIconUtils;
+          let tmpResult = RoleIconUtils;
           if (tmpResult.canGuildUseRoleIcons(guild, role)) {
-            tmpResult = guild_boosting_RoleIconUtils;
-            let roleIconData = tmpResult.getRoleIconData(role);
-            if (roleIconData == null) {
-              roleIconData = {};
+            tmpResult = RoleIconUtils;
+            const roleIconData = tmpResult.getRoleIconData(role);
+            if (null != roleIconData) {
+              obj = { src: null, unicodeEmoji: null, size: 24, name: null };
+              ({ customIconSrc: obj3.src, unicodeEmoji: obj3.unicodeEmoji } = roleIconData);
+              obj.name = role.name;
+              return closure_2_10(RoleIconDefault, obj);
             }
-            ({ customIconSrc, unicodeEmoji } = roleIconData);
-            let tmp7;
-            if (null != customIconSrc) {
-              obj = { uri: customIconSrc };
-              tmp7 = obj;
-            }
-            const obj1 = { source: tmp7, unicodeEmoji, size: 24, name: role.name };
-            return closure_2_10(RoleIconDefault, obj1);
           }
           let colorString;
           if (role != null) {
@@ -93,8 +88,8 @@ export default function MentionableSelectComponentActionSheet(selectionActionCom
           if (colorString == null) {
             colorString = React7;
           }
-          const obj2 = { color: colorString };
-          return closure_2_10(ShieldUserIcon.ShieldUserIcon, obj2);
+          const obj1 = { color: colorString };
+          return closure_2_10(ShieldUserIcon.ShieldUserIcon, obj1);
         }
       }
       return null;

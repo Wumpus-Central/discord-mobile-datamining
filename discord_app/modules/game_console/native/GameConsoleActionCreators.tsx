@@ -1,7 +1,7 @@
-// === Module 9460: game_console/GameConsoleActionCreators ===
+// === Module 9487: game_console/GameConsoleActionCreators ===
 
-// Module 9460 (game_console/GameConsoleActionCreators)
-import GameConsoleActionCreators from "GameConsoleActionCreators" /* 9453 */;
+// Module 9487 (game_console/GameConsoleActionCreators)
+import GameConsoleActionCreators from "GameConsoleActionCreators" /* 9480 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;

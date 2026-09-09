@@ -11,10 +11,10 @@ import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
 import DesignIds from "DesignIds" /* 1345 */;
 import ClientInfoUtilsAll from "ClientInfoUtils" /* 1364 */;
 import MetaQuestUtils from "MetaQuestUtils" /* 1608 */;
-import DeviceUtils from "DeviceUtils" /* 4539 */;
-import ReleaseChannelUtils from "ReleaseChannelUtils" /* 7603 */;
-import MetricEvents from "MetricEvents" /* 7607 */;
-import AppCrashedReasons2 from "AppCrashedReasons" /* 14085 */;
+import DeviceUtils from "DeviceUtils" /* 4553 */;
+import ReleaseChannelUtils from "ReleaseChannelUtils" /* 7617 */;
+import MetricEvents from "MetricEvents" /* 7621 */;
+import AppCrashedReasons2 from "AppCrashedReasons" /* 14108 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -553,8 +553,8 @@ function trackCrash(event, hint, arg2) {
   }
   items[1] = "level:" + level;
   obj1.tags = items;
-  tmp26(7602).increment(obj1, true);
-  const tmp26Result = tmp26(7602);
+  tmp26(7616).increment(obj1, true);
+  const tmp26Result = tmp26(7616);
 }
 const NativeModules = fn(17).NativeModules;
 const Constants = fn(1074);
@@ -635,7 +635,7 @@ export const initSentry = function initSentry() {
           if (tmp14Result2.isAndroid()) {
             str2 = "android";
           }
-          obj = { tunnel: `/error-reporting-proxy/${str2}`, autoInitializeNativeSdk: false, beforeSend, dist: "6379", dsn: SentryStaffDsn, environment: ReleaseChannel, tracesSampleRate: 0, sampleRate: 1, ignoreErrors, release: "discord_android@346.1.0-2+346201", tracePropagationTargets: null, integrations: null, beforeBreadcrumb: null };
+          obj = { tunnel: `/error-reporting-proxy/${str2}`, autoInitializeNativeSdk: false, beforeSend, dist: "6385", dsn: SentryStaffDsn, environment: ReleaseChannel, tracesSampleRate: 0, sampleRate: 1, ignoreErrors, release: "discord_android@346.2.0-2+346202", tracePropagationTargets: null, integrations: null, beforeBreadcrumb: null };
           items = [PRIMARY_DOMAIN];
           obj.tracePropagationTargets = items;
           const items1 = [registerSpanErrorInstrumentation, , ];
@@ -666,7 +666,7 @@ export const initSentry = function initSentry() {
           };
           tmp14Result1.init(obj);
           const tmp14Result4 = _mod675;
-          _mod675.setTag("buildNumber", "6379");
+          _mod675.setTag("buildNumber", "6385");
           const tmp14Result5 = _mod675;
           _mod675.setTag("appVersion", constants.Version);
           const tmp14Result6 = _mod675;

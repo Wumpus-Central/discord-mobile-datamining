@@ -1,16 +1,16 @@
-// === Module 15881: SafetyGuildSettingMessageRequests ===
+// === Module 15911: SafetyGuildSettingMessageRequests ===
 
-// Module 15881 (SafetyGuildSettingMessageRequests)
+// Module 15911 (SafetyGuildSettingMessageRequests)
 import util from "util" /* 1114 */;
 import UserSettings from "UserSettings" /* 1935 */;
-import AlertActionCreatorsDefault from "AlertActionCreators" /* 4904 */;
-import common_AlertDefault from "common/Alert" /* 4994 */;
-import UserSettingsUtils from "UserSettingsUtils" /* 6995 */;
-import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 8411 */;
-import AgeVerificationAnalyticsUtils from "AgeVerificationAnalyticsUtils" /* 8413 */;
-import useParentalControlSettings from "useParentalControlSettings" /* 14827 */;
-import DefultGuildsRestrictedSetting from "DefultGuildsRestrictedSetting" /* 15879 */;
-import DefaultDMSettingsExperiment from "DefaultDMSettingsExperiment" /* 15882 */;
+import AlertActionCreatorsDefault from "AlertActionCreators" /* 4918 */;
+import common_AlertDefault from "common/Alert" /* 5008 */;
+import UserSettingsUtils from "UserSettingsUtils" /* 7009 */;
+import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 8439 */;
+import AgeVerificationAnalyticsUtils from "AgeVerificationAnalyticsUtils" /* 8441 */;
+import useParentalControlSettings from "useParentalControlSettings" /* 14853 */;
+import DefultGuildsRestrictedSetting from "DefultGuildsRestrictedSetting" /* 15909 */;
+import DefaultDMSettingsExperiment from "DefaultDMSettingsExperiment" /* 15912 */;
 import GuildStore from "GuildStore" /* 1979 */;
 
 require = fn;
@@ -43,10 +43,10 @@ function showMessageRequestRestrictionModal(arg0) {
   };
   obj.show(obj);
 }
-const UserSettingsSafetySelectedGuildStore = fn(15872);
+const UserSettingsSafetySelectedGuildStore = fn(15902);
 ({ getSelectedGuildId: closure_4, useUserSafetySettingsSelectedGuildStore: hasOwnProperty } = UserSettingsSafetySelectedGuildStore);
-let closure_6 = fn(11474).GUILD_SELECT_ALL_SERVERS_OPTION_ID;
-fn(11473);
+let closure_6 = fn(11501).GUILD_SELECT_ALL_SERVERS_OPTION_ID;
+fn(11500);
 let SettingBuilders = {
   useTitle() {
     const intl = util.intl;
@@ -56,7 +56,7 @@ let SettingBuilders = {
     const intl = util.intl;
     return intl.string(util.t.o5fjz6);
   },
-  parent: fn(7975).MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
+  parent: fn(7989).MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
   useValue() {
     const selectedGuildId = hasOwnProperty().selectedGuildId;
     const defaultGuildsRestricted = DefultGuildsRestrictedSetting.useDefaultGuildsRestricted();

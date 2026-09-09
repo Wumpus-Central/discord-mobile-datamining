@@ -1,6 +1,6 @@
-// === Module 5564: LanguageDetector ===
+// === Module 5578: LanguageDetector ===
 
-// Module 5564 (LanguageDetector)
+// Module 5578 (LanguageDetector)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("lib/spellcheck/LanguageDetector.tsx");

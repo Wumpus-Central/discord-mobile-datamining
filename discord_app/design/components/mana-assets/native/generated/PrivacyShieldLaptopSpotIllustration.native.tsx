@@ -1,9 +1,9 @@
-// === Module 6363: PrivacyShieldLaptopSpotIllustration ===
+// === Module 6377: PrivacyShieldLaptopSpotIllustration ===
 
-// Module 6363 (PrivacyShieldLaptopSpotIllustration)
+// Module 6377 (PrivacyShieldLaptopSpotIllustration)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5587 */;
-import _modDef6364 from "module_6364" /* 6364 */;
+import FastImageDefault from "FastImage" /* 5601 */;
+import _modDef6378 from "module_6378" /* 6378 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -24,7 +24,7 @@ export const PrivacyShieldLaptopSpotIllustration = function PrivacyShieldLaptopS
     num3 = 1;
   }
   let obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  obj = { uri: _modDef6364 };
+  obj = { uri: _modDef6378 };
   obj.source = obj;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];
@@ -32,5 +32,5 @@ export const PrivacyShieldLaptopSpotIllustration = function PrivacyShieldLaptopS
   obj.accessible = accessible;
   obj.accessibilityLabel = accessibilityLabel;
   obj.resizeMode = resizeMode;
-  return jsx(FastImageDefault, { uri: _modDef6364 });
+  return jsx(FastImageDefault, { uri: _modDef6378 });
 };

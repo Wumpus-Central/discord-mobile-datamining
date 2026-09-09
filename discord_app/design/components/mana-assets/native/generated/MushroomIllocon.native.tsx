@@ -1,9 +1,9 @@
-// === Module 6249: MushroomIllocon ===
+// === Module 6263: MushroomIllocon ===
 
-// Module 6249 (MushroomIllocon)
+// Module 6263 (MushroomIllocon)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5587 */;
-import _modDef6250 from "module_6250" /* 6250 */;
+import FastImageDefault from "FastImage" /* 5601 */;
+import _modDef6264 from "module_6264" /* 6264 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -16,12 +16,12 @@ export const MushroomIllocon = function MushroomIllocon(size) {
     num = 64;
   }
   let obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  obj = { uri: _modDef6250 };
+  obj = { uri: _modDef6264 };
   obj.source = obj;
   const items = [{ width: num, height: num }];
   obj.style = items;
   obj.accessible = accessible;
   obj.accessibilityLabel = accessibilityLabel;
   obj.resizeMode = resizeMode;
-  return jsx(FastImageDefault, { uri: _modDef6250 });
+  return jsx(FastImageDefault, { uri: _modDef6264 });
 };

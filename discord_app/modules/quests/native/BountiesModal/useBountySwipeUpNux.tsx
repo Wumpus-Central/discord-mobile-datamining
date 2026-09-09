@@ -1,10 +1,10 @@
-// === Module 15013: useBountySwipeUpNux ===
+// === Module 15040: useBountySwipeUpNux ===
 
-// Module 15013 (useBountySwipeUpNux)
+// Module 15040 (useBountySwipeUpNux)
 import dismissible_content from "dismissible_content" /* 1943 */;
-import useSelectedDismissibleContent from "useSelectedDismissibleContent" /* 7388 */;
-import BountiesVerticalScrollExperiment2 from "BountiesVerticalScrollExperiment" /* 11526 */;
-import bountiesSwipeUpNuxDevTools from "bountiesSwipeUpNuxDevTools" /* 15014 */;
+import useSelectedDismissibleContent from "useSelectedDismissibleContent" /* 7402 */;
+import BountiesVerticalScrollExperiment2 from "BountiesVerticalScrollExperiment" /* 11553 */;
+import bountiesSwipeUpNuxDevTools from "bountiesSwipeUpNuxDevTools" /* 15041 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;

@@ -1,23 +1,23 @@
-// === Module 8580: AgeVerificationIntroScreen ===
+// === Module 8608: AgeVerificationIntroScreen ===
 
-// Module 8580 (AgeVerificationIntroScreen)
+// Module 8608 (AgeVerificationIntroScreen)
 import nativeDefault from "native" /* 576 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1611 */;
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2024 */;
-import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 8411 */;
-import AgeVerificationAnalyticsUtils from "AgeVerificationAnalyticsUtils" /* 8413 */;
+import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 8439 */;
+import AgeVerificationAnalyticsUtils from "AgeVerificationAnalyticsUtils" /* 8441 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ ScrollView: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-let closure_6 = fn(8412).getAgeVerificationGetStartedSteps;
+let closure_6 = fn(8440).getAgeVerificationGetStartedSteps;
 const HelpdeskArticles = fn(1074).HelpdeskArticles;
-const SafetyHubLinks = fn(8419).SafetyHubLinks;
+const SafetyHubLinks = fn(8447).SafetyHubLinks;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10, Fragment: closure_11 } = jsxProd);
-fn(4560);
+fn(4574);
 let createStyles = { getStartedContainer: null, getStartedHeaderContainer: null, ageGroupLearnMoreContainer: null, getStartedHeaderText: null, getStartedRequestTextContainer: null, getStartedFooterContainer: null, getStartedRequestText: null, getStartedFooterButtonsContainer: null };
 createStyles = { paddingHorizontal: nativeDefault.space.PX_16, gap: nativeDefault.space.PX_16, flex: 1 };
 createStyles.getStartedContainer = createStyles;
@@ -41,40 +41,40 @@ export default function GetStartedScreen(onComplete) {
   const entryPoint = onComplete.entryPoint;
   importDefault = undefined;
   const tmp = closure_12();
-  let obj = modalSessionId(4773);
+  let obj = modalSessionId(4787);
   const initiateAgeVerification = obj.useInitiateAgeVerification({ onComplete: onComplete.onClose, entryPoint });
   ({ initiateAgeVerification: c1, loading } = initiateAgeVerification);
-  let obj1 = modalSessionId(8581);
+  let obj1 = modalSessionId(8609);
   const isManualAgeVerificationHidden = obj1.useIsManualAgeVerificationHidden("age_verification_get_started_modal");
   obj = { children: null };
   obj = { style: tmp.getStartedContainer, children: null };
   obj1 = { style: tmp.getStartedHeaderContainer, children: null };
-  const items = [closure_9(modalSessionId(5692).ShieldSpotIllustration, {}), , ];
+  const items = [closure_9(modalSessionId(5706).ShieldSpotIllustration, {}), , ];
   let obj2 = { variant: "heading-xl/bold", color: "mobile-text-heading-primary", style: tmp.getStartedHeaderText, children: null };
-  let obj6 = modalSessionId(4773);
+  let obj6 = modalSessionId(4787);
   obj2.children = obj6.getAgeVerificationGetStartedTitle(entryPoint);
-  items[1] = closure_9(modalSessionId(4556).Text, obj2);
+  items[1] = closure_9(modalSessionId(4570).Text, obj2);
   const obj3 = { variant: "heading-md/medium", color: "text-default", style: tmp.getStartedHeaderText, children: null };
-  let obj8 = modalSessionId(4773);
+  let obj8 = modalSessionId(4787);
   obj3.children = obj8.getAgeVerificationGetStartedSubtitle(entryPoint);
-  items[2] = closure_9(modalSessionId(4556).Text, obj3);
+  items[2] = closure_9(modalSessionId(4570).Text, obj3);
   obj1.children = items;
   const items1 = [closure_10(closure_5, obj1), , ];
   const obj4 = {
     hasIcons: true,
     children: closure_6(modalSessionId).map((children, index) => {
       const description = children.description;
-      let obj = { index: index + 1, tip: closure_1_9(modalSessionId(4556).Text, { variant: "text-md/medium", color: "mobile-text-heading-primary", children: children.title }), description: null };
+      let obj = { index: index + 1, tip: closure_1_9(modalSessionId(4570).Text, { variant: "text-md/medium", color: "mobile-text-heading-primary", children: children.title }), description: null };
       let tmpResult = null;
       if (null != description) {
         obj = { variant: "text-xs/medium", color: "text-subtle", children: description };
-        tmpResult = closure_1_9(modalSessionId(4556).Text, obj);
+        tmpResult = closure_1_9(modalSessionId(4570).Text, obj);
       }
       obj.description = tmpResult;
-      return closure_1_9(_undefined(8582), obj, index);
+      return closure_1_9(_undefined(8610), obj, index);
     })
   };
-  items1[1] = closure_9(modalSessionId(5687).TableRowGroup, obj4);
+  items1[1] = closure_9(modalSessionId(5701).TableRowGroup, obj4);
   const obj5 = { style: tmp.ageGroupLearnMoreContainer, children: null };
   obj6 = { variant: "text-xs/medium", color: "text-muted", children: null };
   const intl = modalSessionId(1114).intl;
@@ -85,7 +85,7 @@ export default function GetStartedScreen(onComplete) {
       const result = AgeVerificationAnalyticsUtils.trackAgeVerificationModalClicked(modalSessionId, AgeVerificationAnalyticsUtils.AgeVerificationModalVersion.PRIMARY, AgeVerificationAnalyticsUtils.AgeVerificationModalCta.LEARN_MORE);
     }
   });
-  obj5.children = closure_9(modalSessionId(4556).Text, obj6);
+  obj5.children = closure_9(modalSessionId(4570).Text, obj6);
   items1[2] = closure_9(closure_5, obj5);
   obj.children = items1;
   obj.children = closure_10(closure_5, obj);
@@ -105,7 +105,7 @@ export default function GetStartedScreen(onComplete) {
         }
     };
     obj10.children = intl2.format(tmp4(1114).t.pJAxgQ, obj11);
-    obj9.children = closure_9(tmp4(4556).Text, obj10);
+    obj9.children = closure_9(tmp4(4570).Text, obj10);
     tmp9Result = closure_9(closure_5, obj9);
   }
   const obj12 = { children: null };
@@ -139,8 +139,8 @@ export default function GetStartedScreen(onComplete) {
             obj = { value, done: true };
             return obj;
           } else {
-            let obj1 = v3(8413);
-            const result = obj1.trackAgeVerificationModalClicked(modalSessionId, v3(8413).AgeVerificationModalVersion.PRIMARY, v3(8413).AgeVerificationModalCta.GET_STARTED);
+            let obj1 = v3(8441);
+            const result = obj1.trackAgeVerificationModalClicked(modalSessionId, v3(8441).AgeVerificationModalVersion.PRIMARY, v3(8441).AgeVerificationModalCta.GET_STARTED);
             v1 = 1;
             v3 = 1;
             obj1 = { value: v1(), done: false };
@@ -171,9 +171,9 @@ export default function GetStartedScreen(onComplete) {
       const result = AgeVerificationAnalyticsUtils.trackAgeVerificationModalClicked(modalSessionId, AgeVerificationAnalyticsUtils.AgeVerificationModalVersion.PRIMARY, AgeVerificationAnalyticsUtils.AgeVerificationModalCta.LEARN_MORE);
     }
   };
-  obj14.icon = closure_9(modalSessionId(8583).LinkExternalSmallIcon, { color: nativeDefault.colors.WHITE });
+  obj14.icon = closure_9(modalSessionId(8611).LinkExternalSmallIcon, { color: nativeDefault.colors.WHITE });
   obj14.loading = loading;
-  obj13.children = closure_9(modalSessionId(4975).Button, obj14);
+  obj13.children = closure_9(modalSessionId(4989).Button, obj14);
   items4[1] = closure_9(closure_5, obj13);
   obj8.children = items4;
   items2[1] = closure_10(closure_5, obj8);

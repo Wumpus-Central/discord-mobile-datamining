@@ -1,9 +1,9 @@
-// === Module 9785: useGuildScheduledEventUserCount ===
+// === Module 9812: useGuildScheduledEventUserCount ===
 
-// Module 9785 (useGuildScheduledEventUserCount)
+// Module 9812 (useGuildScheduledEventUserCount)
 import _mod19 from "module_19" /* 19 */;
-import GuildScheduledEventManagerDefault from "GuildScheduledEventManager" /* 9786 */;
-import GuildScheduledEventStore from "GuildScheduledEventStore" /* 7526 */;
+import GuildScheduledEventManagerDefault from "GuildScheduledEventManager" /* 9813 */;
+import GuildScheduledEventStore from "GuildScheduledEventStore" /* 7540 */;
 import size from "module_2" /* 2 */;
 
 const useEffect = _mod19.useEffect;

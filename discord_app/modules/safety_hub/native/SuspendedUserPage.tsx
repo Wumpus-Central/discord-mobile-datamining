@@ -1,26 +1,26 @@
-// === Module 16910: SuspendedUserPage ===
+// === Module 16947: SuspendedUserPage ===
 
-// Module 16910 (SuspendedUserPage)
+// Module 16947 (SuspendedUserPage)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import LinkingDefault from "Linking" /* 4255 */;
-import Text_Text from "Text/Text" /* 4556 */;
-import AuthenticationActionCreatorsDefault from "AuthenticationActionCreators" /* 6593 */;
-import _modDef6992 from "module_6992" /* 6992 */;
-import common_SafeAreaView from "common/SafeAreaView" /* 7123 */;
-import IconButton from "IconButton" /* 8097 */;
-import SafetyHubPageDefault from "SafetyHubPage" /* 14771 */;
+import LinkingDefault from "Linking" /* 4268 */;
+import Text_Text from "Text/Text" /* 4570 */;
+import AuthenticationActionCreatorsDefault from "AuthenticationActionCreators" /* 6607 */;
+import _modDef7006 from "module_7006" /* 7006 */;
+import common_SafeAreaView from "common/SafeAreaView" /* 7137 */;
+import IconButton from "IconButton" /* 8113 */;
+import SafetyHubPageDefault from "SafetyHubPage" /* 14797 */;
 import noop from "module_19" /* 19 */;
-import SafetyHubStore from "SafetyHubStore" /* 8430 */;
+import SafetyHubStore from "SafetyHubStore" /* 8458 */;
 
 require = fn;
 const View = fn(17).View;
-const SafetyHubConstants = fn(8419);
+const SafetyHubConstants = fn(8447);
 ({ AgeCheckStatus: hasOwnProperty, SafetyHubLinks: metroRequire } = SafetyHubConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-fn(4560);
+fn(4574);
 let createStyles = { container: null, header: null, text: null, link: null };
 createStyles = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, display: "flex", flexDirection: "column", height: "100%" };
 createStyles.container = createStyles;
@@ -46,7 +46,7 @@ export default function SuspendedUserSafetyHubPage() {
     obj1.onPress = function onPress() {
       AuthenticationActionCreatorsDefault.closeSuspendedUser();
     };
-    obj1.icon = _modDef6992;
+    obj1.icon = _modDef7006;
     const items1 = [React5(IconButton.IconButton, obj1), ];
     const obj2 = {
       style: tmp.text,

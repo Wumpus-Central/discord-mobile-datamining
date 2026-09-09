@@ -1,8 +1,8 @@
-// === Module 4356: CheckpointFriendsRive ===
+// === Module 4370: CheckpointFriendsRive ===
 
-// Module 4356 (CheckpointFriendsRive)
-import BaseRive from "BaseRive" /* 4290 */;
-import RiveErrorBoundary from "RiveErrorBoundary" /* 4345 */;
+// Module 4370 (CheckpointFriendsRive)
+import BaseRive from "BaseRive" /* 4304 */;
+import RiveErrorBoundary from "RiveErrorBoundary" /* 4359 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 

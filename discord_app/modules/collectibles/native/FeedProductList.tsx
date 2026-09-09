@@ -1,7 +1,7 @@
-// === Module 15827: FeedProductList ===
+// === Module 15857: FeedProductList ===
 
-// Module 15827 (FeedProductList)
-import CollectiblesShopCardsGridDefault from "CollectiblesShopCardsGrid" /* 15829 */;
+// Module 15857 (FeedProductList)
+import CollectiblesShopCardsGridDefault from "CollectiblesShopCardsGrid" /* 15859 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
@@ -9,7 +9,7 @@ function SkeletonGrid(accessibilityLabel) {
   const loadingCardsNum = accessibilityLabel.loadingCardsNum;
   num = undefined;
   const tmp = closure_5();
-  let obj = num(15828);
+  let obj = num(15858);
   const cardLayout = obj.useCardLayout();
   ({ columns, cardWidth: num } = cardLayout);
   const items = [];
@@ -26,9 +26,9 @@ function SkeletonGrid(accessibilityLabel) {
     obj.style = items1;
     obj.children = arr.map((item, index) => {
       let obj = { width: require, style: null };
-      obj = { marginBottom: num(8769).COLLECTIBLES_SHOP_CARD_GAP };
+      obj = { marginBottom: num(8797).COLLECTIBLES_SHOP_CARD_GAP };
       obj.style = obj;
-      return closure_4(closure_1(15088), obj, "" + num + "-" + index);
+      return closure_4(closure_1(15115), obj, "" + num + "-" + index);
     });
     let _HermesInternal = HermesInternal;
     arr = items.push(<View key={"row-" + num} style={null}>{null}</View>);
@@ -37,9 +37,9 @@ function SkeletonGrid(accessibilityLabel) {
 }
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-fn(4560);
+fn(4574);
 let createStyles = { skeletonGrid: { flex: 1, alignItems: "center" }, skeletonRow: null };
-createStyles = { flexDirection: "row", gap: fn(8769).COLLECTIBLES_SHOP_CARD_GAP, paddingBottom: fn(8769).COLLECTIBLES_SHOP_CARD_GAP };
+createStyles = { flexDirection: "row", gap: fn(8797).COLLECTIBLES_SHOP_CARD_GAP, paddingBottom: fn(8797).COLLECTIBLES_SHOP_CARD_GAP };
 createStyles.skeletonRow = createStyles;
 let closure_5 = createStyles.createStyles(createStyles);
 const size = fn(2);

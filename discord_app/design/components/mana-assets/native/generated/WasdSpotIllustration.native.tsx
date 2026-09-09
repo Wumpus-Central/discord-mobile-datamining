@@ -1,9 +1,9 @@
-// === Module 6563: WasdSpotIllustration ===
+// === Module 6577: WasdSpotIllustration ===
 
-// Module 6563 (WasdSpotIllustration)
+// Module 6577 (WasdSpotIllustration)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5587 */;
-import _modDef6564 from "module_6564" /* 6564 */;
+import FastImageDefault from "FastImage" /* 5601 */;
+import _modDef6578 from "module_6578" /* 6578 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -24,7 +24,7 @@ export const WasdSpotIllustration = function WasdSpotIllustration(width) {
     num3 = 1;
   }
   let obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  obj = { uri: _modDef6564 };
+  obj = { uri: _modDef6578 };
   obj.source = obj;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];
@@ -32,5 +32,5 @@ export const WasdSpotIllustration = function WasdSpotIllustration(width) {
   obj.accessible = accessible;
   obj.accessibilityLabel = accessibilityLabel;
   obj.resizeMode = resizeMode;
-  return jsx(FastImageDefault, { uri: _modDef6564 });
+  return jsx(FastImageDefault, { uri: _modDef6578 });
 };

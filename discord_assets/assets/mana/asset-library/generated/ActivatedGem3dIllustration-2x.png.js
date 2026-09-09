@@ -1,6 +1,6 @@
-// === Module 5734: ? ===
+// === Module 5748: ? ===
 
-// Module 5734
+// Module 5748
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/ActivatedGem3dIllustration-2x.png.js");

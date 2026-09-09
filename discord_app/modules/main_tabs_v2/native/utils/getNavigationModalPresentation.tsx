@@ -1,9 +1,9 @@
-// === Module 10930: getNavigationModalPresentation ===
+// === Module 10957: getNavigationModalPresentation ===
 
-// Module 10930 (getNavigationModalPresentation)
-import DeviceUtils from "DeviceUtils" /* 4539 */;
-import useIsWindowLarge from "useIsWindowLarge" /* 6945 */;
-import DeviceOrientation from "DeviceOrientation" /* 8332 */;
+// Module 10957 (getNavigationModalPresentation)
+import DeviceUtils from "DeviceUtils" /* 4553 */;
+import useIsWindowLarge from "useIsWindowLarge" /* 6959 */;
+import DeviceOrientation from "DeviceOrientation" /* 8360 */;
 import PlatformUtils from "PlatformUtils" /* 1115 */;
 import size from "module_2" /* 2 */;
 

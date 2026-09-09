@@ -1,13 +1,13 @@
-// === Module 9712: EditGuildEventModalNavbar ===
+// === Module 9739: EditGuildEventModalNavbar ===
 
-// Module 9712 (EditGuildEventModalNavbar)
+// Module 9739 (EditGuildEventModalNavbar)
 import util from "util" /* 1114 */;
 import GlobalUtils from "GlobalUtils" /* 1369 */;
-import Text_Text from "Text/Text" /* 4556 */;
-import _modDef6992 from "module_6992" /* 6992 */;
-import common_SafeAreaView from "common/SafeAreaView" /* 7123 */;
-import HeaderActionButton from "HeaderActionButton" /* 7377 */;
-import EditGuildEventUtils from "EditGuildEventUtils" /* 9709 */;
+import Text_Text from "Text/Text" /* 4570 */;
+import _modDef7006 from "module_7006" /* 7006 */;
+import common_SafeAreaView from "common/SafeAreaView" /* 7137 */;
+import HeaderActionButton from "HeaderActionButton" /* 7391 */;
+import EditGuildEventUtils from "EditGuildEventUtils" /* 9736 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -15,7 +15,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4560);
+const createStyles = fn(4574);
 let closure_7 = createStyles.createStyles({ header: { flexDirection: "row", alignItems: "center", justifyContent: "space-between", paddingHorizontal: 4, paddingVertical: 8 }, headerTitle: { lineHeight: 28, textTransform: "uppercase" }, buttonContainer: { width: 60 }, rightButton: { marginLeft: 12 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_scheduled_events/native/components/EditGuildEventModalNavbar.tsx");
@@ -46,7 +46,7 @@ export default function EditGuildEventModalNavbar(screen) {
   const intl2 = util.intl;
   obj3.accessibilityLabel = intl2.string(util.t.cpT0Cq);
   obj3.onPress = screen.onClose;
-  obj3.source = _modDef6992;
+  obj3.source = _modDef7006;
   obj3.style = tmp.rightButton;
   obj2.children = hasOwnProperty(HeaderActionButton.HeaderActionButton, obj3);
   items1[2] = hasOwnProperty(View, obj2);

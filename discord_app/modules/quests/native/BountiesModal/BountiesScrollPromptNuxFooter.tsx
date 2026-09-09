@@ -1,11 +1,11 @@
-// === Module 15049: BountiesScrollPromptNuxFooter ===
+// === Module 15076: BountiesScrollPromptNuxFooter ===
 
-// Module 15049 (BountiesScrollPromptNuxFooter)
+// Module 15076 (BountiesScrollPromptNuxFooter)
 import _mod17 from "module_17" /* 17 */;
 import util from "util" /* 1114 */;
-import Text_Text from "Text/Text" /* 4556 */;
+import Text_Text from "Text/Text" /* 4570 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createStyles from "createStyles" /* 4560 */;
+import createStyles from "createStyles" /* 4574 */;
 import size from "module_2" /* 2 */;
 
 const View = _mod17.View;

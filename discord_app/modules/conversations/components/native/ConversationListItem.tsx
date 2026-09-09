@@ -1,15 +1,15 @@
-// === Module 7926: ConversationListItem ===
+// === Module 7940: ConversationListItem ===
 
-// Module 7926 (ConversationListItem)
+// Module 7940 (ConversationListItem)
 import nativeDefault from "native" /* 576 */;
 import _modDef672 from "module_672" /* 672 */;
-import ConversationsActionCreators from "ConversationsActionCreators" /* 7907 */;
-import ConversationsAnalytics2 from "ConversationsAnalytics" /* 7909 */;
-import ConversationNavigatorUtils from "ConversationNavigatorUtils" /* 7923 */;
-import ConversationPreviewBlockedMessageDefault from "ConversationPreviewBlockedMessage" /* 7928 */;
-import ConversationPreviewMessageDefault from "ConversationPreviewMessage" /* 7931 */;
+import ConversationsActionCreators from "ConversationsActionCreators" /* 7921 */;
+import ConversationsAnalytics2 from "ConversationsAnalytics" /* 7923 */;
+import ConversationNavigatorUtils from "ConversationNavigatorUtils" /* 7937 */;
+import ConversationPreviewBlockedMessageDefault from "ConversationPreviewBlockedMessage" /* 7942 */;
+import ConversationPreviewMessageDefault from "ConversationPreviewMessage" /* 7945 */;
 import noop from "module_19" /* 19 */;
-import ConversationsStore from "ConversationsStore" /* 7596 */;
+import ConversationsStore from "ConversationsStore" /* 7610 */;
 
 require = fn;
 function ConversationListItemBase(conversation) {
@@ -91,12 +91,12 @@ function ConversationListItemBase(conversation) {
   return closure_9(conversation(token[15]).Card, obj);
 }
 const View = fn(17).View;
-let closure_6 = fn(7598).MOBILE_PREVIEW_MESSAGE_COUNT;
+let closure_6 = fn(7612).MOBILE_PREVIEW_MESSAGE_COUNT;
 const VerticalGradient = fn(1074).VerticalGradient;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 const locations = [0, 0.8];
-fn(4560);
+fn(4574);
 let obj = { card: null, title: null, timestamp: null, headerContainer: null, previews: null, bottomFade: null };
 obj = { marginBottom: nativeDefault.space.PX_12, borderWidth: 1, borderColor: nativeDefault.colors.BORDER_MUTED, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, height: 232, overflow: "hidden" };
 obj.card = obj;

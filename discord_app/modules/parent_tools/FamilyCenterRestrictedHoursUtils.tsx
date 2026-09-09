@@ -1,6 +1,6 @@
-// === Module 10088: FamilyCenterRestrictedHoursUtils ===
+// === Module 10115: FamilyCenterRestrictedHoursUtils ===
 
-// Module 10088 (FamilyCenterRestrictedHoursUtils)
+// Module 10115 (FamilyCenterRestrictedHoursUtils)
 import util from "util" /* 1114 */;
 import user from "user" /* 1379 */;
 import _modDef2396 from "module_2396" /* 2396 */;

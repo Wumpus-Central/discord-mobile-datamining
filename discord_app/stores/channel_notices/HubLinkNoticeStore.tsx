@@ -1,9 +1,9 @@
-// === Module 13762: HubLinkNoticeStore ===
+// === Module 13785: HubLinkNoticeStore ===
 
-// Module 13762 (HubLinkNoticeStore)
+// Module 13785 (HubLinkNoticeStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
-import HotspotStore from "hotspot/HotspotStore" /* 7214 */;
+import HotspotStore from "hotspot/HotspotStore" /* 7228 */;
 import GuildStore from "GuildStore" /* 1979 */;
 
 function checkGuildIsHub(id) {

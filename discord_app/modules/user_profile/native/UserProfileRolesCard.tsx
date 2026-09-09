@@ -1,12 +1,13 @@
-// === Module 7185: UserProfileRolesCard ===
+// === Module 7199: UserProfileRolesCard ===
 
-// Module 7185 (UserProfileRolesCard)
+// Module 7199 (UserProfileRolesCard)
 import nativeDefault from "native" /* 576 */;
-import ToastUtils from "ToastUtils" /* 4258 */;
-import Text_Text from "Text/Text" /* 4556 */;
-import ClipboardUtils from "ClipboardUtils" /* 7190 */;
-import VerifiedRoleIconDefault from "VerifiedRoleIcon" /* 7204 */;
-import UserProfileRoleUtils from "UserProfileRoleUtils" /* 7206 */;
+import ToastUtils from "ToastUtils" /* 4271 */;
+import Text_Text from "Text/Text" /* 4570 */;
+import ClipboardUtils from "ClipboardUtils" /* 7203 */;
+import VerifiedRoleIconDefault from "VerifiedRoleIcon" /* 7217 */;
+import RoleIconDefault from "RoleIcon" /* 7219 */;
+import UserProfileRoleUtils from "UserProfileRoleUtils" /* 7220 */;
 import noop from "module_19" /* 19 */;
 import GuildMemberStore from "GuildMemberStore" /* 2021 */;
 import GuildRoleStore from "GuildRoleStore" /* 2015 */;
@@ -50,8 +51,8 @@ class RoleItem {
     tmp5 = closure_2;
     obj = role(closure_2[8]);
     obj = { guildId, roleId: role.id, size: 12 };
-    roleIcon = obj.useRoleIcon(obj);
-    closure_4 = roleIcon;
+    roleIconProps = obj.useRoleIconProps(obj);
+    closure_4 = roleIconProps;
     tags = role.tags;
     guild_connections = undefined;
     if (tags != null) {
@@ -72,10 +73,17 @@ class RoleItem {
         tmp3Result = React7(RoleDot, obj);
         tmp8 = React7;
       }
-      obj = { children: null };
-      const items = [tmp3Result, tmp8(Text_Text.Text, { variant: "text-xs/medium", children: name }), roleIcon];
-      obj.children = items;
-      return closure_2_11(closure_2_10, obj);
+      const children = [tmp3Result, , ];
+      obj = { variant: "text-xs/medium", children: name };
+      children[1] = tmp8(Text_Text.Text, obj);
+      let tmp8Result = null;
+      if (null != roleIconProps) {
+        const obj1 = {};
+        const merged = Object.assign(roleIconProps);
+        tmp8Result = tmp8(RoleIconDefault, obj1);
+      }
+      children[2] = tmp8Result;
+      return closure_2_11(closure_2_10, { children });
     };
     closure_5 = undefined !== guild_connections;
     DeveloperMode = tmp4(tmp5[9]).DeveloperMode;
@@ -87,7 +95,7 @@ class RoleItem {
     items1 = [, , ];
     items1[0] = role;
     items1[1] = name;
-    items1[2] = roleIcon;
+    items1[2] = roleIconProps;
     callback = colorString.useCallback(() => {
       ClipboardUtils.copy(role.id);
       ToastUtils.roleIdCopied(name);
@@ -109,7 +117,7 @@ class RoleItem {
       obj1.style = tmp.role;
       num3 = 0;
       obj1.children = renderContent();
-      tmp11Result = tmp11(tmp4(tmp5[18]).PressableHighlight, obj1);
+      tmp11Result = tmp11(tmp4(tmp5[19]).PressableHighlight, obj1);
     } else {
       tmp12 = closure_4;
       obj2 = { style: null, children: null };
@@ -143,7 +151,7 @@ const Constants = fn(1074);
 ({ DEFAULT_ROLE_COLOR_HEX: closure_7, MAX_VISUAL_ROLE_LENGTH: closure_8 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_9, Fragment: c10, jsxs: closure_11 } = jsxProd);
-fn(4560);
+fn(4574);
 let createStyles = { roleContainer: { flexDirection: "row", gap: 8, flexWrap: "wrap" }, role: null, roleDot: null };
 createStyles = { flexDirection: "row", alignItems: "center", columnGap: 4, padding: 6, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED, borderRadius: nativeDefault.radii.sm };
 createStyles.role = createStyles;
@@ -175,8 +183,8 @@ export default function UserProfileRolesCard(userId) {
     obj.style = userId.style;
     obj = { guildId, guildMemberRoleIds: roles };
     obj.children = closure_9(RolesList, obj);
-    tmp4 = closure_9(guildId(7207), obj);
-    const tmp7 = guildId(7207);
+    tmp4 = closure_9(guildId(7221), obj);
+    const tmp7 = guildId(7221);
   }
   return tmp4;
 };

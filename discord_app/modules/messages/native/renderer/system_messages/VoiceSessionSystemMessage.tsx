@@ -1,10 +1,10 @@
-// === Module 8070: VoiceSessionSystemMessage ===
+// === Module 8085: VoiceSessionSystemMessage ===
 
-// Module 8070 (VoiceSessionSystemMessage)
-import useAuthorWithProcessedColor from "useAuthorWithProcessedColor" /* 7960 */;
-import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 7962 */;
-import createCommonMessageDefault from "createCommonMessage" /* 7964 */;
-import getHumanizedCallDurationDefault from "getHumanizedCallDuration" /* 7980 */;
+// Module 8085 (VoiceSessionSystemMessage)
+import useAuthorWithProcessedColor from "useAuthorWithProcessedColor" /* 7974 */;
+import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 7976 */;
+import createCommonMessageDefault from "createCommonMessage" /* 7978 */;
+import getHumanizedCallDurationDefault from "getHumanizedCallDuration" /* 7994 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
 
 require = fn;

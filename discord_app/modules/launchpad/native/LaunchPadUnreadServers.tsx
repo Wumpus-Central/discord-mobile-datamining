@@ -1,14 +1,14 @@
-// === Module 16972: LaunchPadUnreadServers ===
+// === Module 17009: LaunchPadUnreadServers ===
 
-// Module 16972 (LaunchPadUnreadServers)
+// Module 17009 (LaunchPadUnreadServers)
 import nativeDefault from "native" /* 576 */;
-import transitionToChannel from "transitionToChannel" /* 4571 */;
-import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 4573 */;
-import transitionToGuild from "transitionToGuild" /* 7342 */;
-import isGuildSelectableDefault from "isGuildSelectable" /* 16978 */;
+import transitionToChannel from "transitionToChannel" /* 4585 */;
+import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 4587 */;
+import transitionToGuild from "transitionToGuild" /* 7356 */;
+import isGuildSelectableDefault from "isGuildSelectable" /* 17015 */;
 import noop from "module_19" /* 19 */;
 import ChannelStore from "ChannelStore" /* 1957 */;
-import ReadStateStore from "ReadStateStore" /* 4575 */;
+import ReadStateStore from "ReadStateStore" /* 4589 */;
 import UserStore from "UserStore" /* 1371 */;
 
 require = fn;
@@ -27,7 +27,7 @@ get_ActivityIndicator = fn(17);
 const ChannelTypes = fn(1074).ChannelTypes;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(4560);
+const createStyles = fn(4574);
 let obj = { listWrapper: { marginTop: 8 }, list: { marginBottom: 4, flexShrink: 0 }, maskStrokeStyle: null, privateChannelWrapper: null, privateChannelIcon: null, badgeWrapper: null, guildWrapper: null, guildHistorySeparatorWrapper: null, guildHistorySeparator: null };
 obj = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 obj.maskStrokeStyle = obj;
@@ -53,7 +53,7 @@ let closure_13 = noop.memo(function GuildItemInner(guildId) {
     transitionToGuild.transitionToGuild(guildId);
   }, items1);
   obj = { size: 48, borderRadius: 16, guildId, selected: guildId.selected, onPress: callback, onLongPress: callback1, backgroundColor: tmp.maskStrokeStyle.backgroundColor };
-  obj.children = closure_10(onGuildSelect(16973), obj);
+  obj.children = closure_10(onGuildSelect(17010), obj);
   return closure_10(closure_5, obj);
 });
 let closure_14 = noop.memo(function PrivateChannelItemInner(channelId) {

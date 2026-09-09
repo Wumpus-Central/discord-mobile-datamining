@@ -1,11 +1,11 @@
-// === Module 9018: UserProfileApplicationWidgetFieldUtils ===
+// === Module 9045: UserProfileApplicationWidgetFieldUtils ===
 
-// Module 9018 (UserProfileApplicationWidgetFieldUtils)
+// Module 9045 (UserProfileApplicationWidgetFieldUtils)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import Text_Text from "Text/Text" /* 4556 */;
-import UserProfileApplicationWidgetSkeletons from "UserProfileApplicationWidgetSkeletons" /* 9019 */;
-import ApplicationWidgetMarkupUtils from "ApplicationWidgetMarkupUtils" /* 9020 */;
+import Text_Text from "Text/Text" /* 4570 */;
+import UserProfileApplicationWidgetSkeletons from "UserProfileApplicationWidgetSkeletons" /* 9046 */;
+import ApplicationWidgetMarkupUtils from "ApplicationWidgetMarkupUtils" /* 9047 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -13,7 +13,7 @@ get_ActivityIndicator = fn(17);
 ({ Image: c2, View: c3 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-fn(4560);
+fn(4574);
 let createStyles = { fieldTextRow: null, fieldIcon: null };
 createStyles = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_4 };
 createStyles.fieldTextRow = createStyles;

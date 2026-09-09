@@ -1,7 +1,7 @@
-// === Module 10106: AutomodExperiment ===
+// === Module 10133: AutomodExperiment ===
 
-// Module 10106 (AutomodExperiment)
-import createExperiment from "module_4474" /* 4474 */;
+// Module 10133 (AutomodExperiment)
+import createExperiment from "module_4488" /* 4488 */;
 import size from "module_2" /* 2 */;
 
 const obj = { kind: "guild", id: "2022-12_mention_raid_limit", label: "Automod Mention Raid Limit", defaultConfig: { enabled: false }, treatments: null };

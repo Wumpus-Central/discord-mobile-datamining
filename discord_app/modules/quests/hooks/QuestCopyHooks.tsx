@@ -1,20 +1,20 @@
-// === Module 11780: QuestCopyHooks ===
+// === Module 11806: QuestCopyHooks ===
 
-// Module 11780 (QuestCopyHooks)
+// Module 11806 (QuestCopyHooks)
 import initialize from "initialize" /* 504 */;
 import NumberUtils from "NumberUtils" /* 1880 */;
 import PremiumTypeUtils from "PremiumTypeUtils" /* 1885 */;
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2024 */;
-import QuestTypes from "QuestTypes" /* 5447 */;
-import QuestTaskUtils from "QuestTaskUtils" /* 7724 */;
-import QuestType from "QuestType" /* 7727 */;
-import useOpenGameProfileModalDefault from "useOpenGameProfileModal" /* 8680 */;
-import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 8691 */;
-import isActivitySupportedOnClientPlatformDefault from "isActivitySupportedOnClientPlatform" /* 9534 */;
-import QuestRewardUtils from "QuestRewardUtils" /* 11295 */;
-import QuestCopyUtils from "QuestCopyUtils" /* 11300 */;
-import hooks_QuestHooks from "hooks/QuestHooks" /* 11488 */;
-import useInGameQuestConnectState from "useInGameQuestConnectState" /* 11782 */;
+import QuestTypes from "QuestTypes" /* 5461 */;
+import QuestTaskUtils from "QuestTaskUtils" /* 7738 */;
+import QuestType from "QuestType" /* 7741 */;
+import useOpenGameProfileModalDefault from "useOpenGameProfileModal" /* 8708 */;
+import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 8719 */;
+import isActivitySupportedOnClientPlatformDefault from "isActivitySupportedOnClientPlatform" /* 9561 */;
+import QuestRewardUtils from "QuestRewardUtils" /* 11322 */;
+import QuestCopyUtils from "QuestCopyUtils" /* 11327 */;
+import hooks_QuestHooks from "hooks/QuestHooks" /* 11515 */;
+import useInGameQuestConnectState from "useInGameQuestConnectState" /* 11808 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -22,8 +22,8 @@ import LocaleStore from "LocaleStore" /* 2025 */;
 import UserStore from "UserStore" /* 1371 */;
 
 const util = v1votF6(1114);
-const utils_QuestUtils = v1votF6(7722);
-const SponsoredQuestUtils = v1votF6(11781);
+const utils_QuestUtils = v1votF6(7736);
+const SponsoredQuestUtils = v1votF6(11807);
 require = fn;
 function _getQuestsInstructionsToWinReward(arg0) {
   ({ quest, taskDetails, thirdPartyTaskDetails, withoutMarkdown, currentUser, onGameTitleClick } = arg0);
@@ -435,7 +435,7 @@ function useQuestsInstructionsToWinReward(arg0) {
   obj.needsToConnect = false === inGameQuestConnectState;
   return _getQuestsInstructionsToWinReward(obj);
 }
-const QuestConstants = fn(5444);
+const QuestConstants = fn(5458);
 ({ QuestsExperimentLocations: closure_8, ORBS_INTRO_QUEST_ID: closure_9, QuestVariants: c10 } = QuestConstants);
 const HelpdeskArticles = fn(1074).HelpdeskArticles;
 const PremiumTypes = fn(1373).PremiumTypes;
@@ -723,14 +723,10 @@ export const useQuestBarTitle = function useQuestBarTitle(questDockQuest, arg1) 
     return stringResult;
   }
 };
-export const usePrimaryCtaCopy = function usePrimaryCtaCopy(showPlayInstantlyLabel) {
-  ({ quest, application, shortText } = showPlayInstantlyLabel);
+export const usePrimaryCtaCopy = function usePrimaryCtaCopy(arg0) {
+  ({ quest, application, shortText } = arg0);
   if (shortText === undefined) {
     shortText = false;
-  }
-  let flag = showPlayInstantlyLabel.showPlayInstantlyLabel;
-  if (flag === undefined) {
-    flag = false;
   }
   const items = [quest];
   const memo = noop.useMemo(() => {
@@ -756,7 +752,7 @@ export const usePrimaryCtaCopy = function usePrimaryCtaCopy(showPlayInstantlyLab
     }
     PLAY = constants.PLAY;
   }, items);
-  quest(11488);
+  quest(11515);
   if (constants3.PLAY === memo) {
     const features2 = quest.config.features;
     let hasItem = features2.includes(constants2.MOBILE_ACTIVITY_QUEST);
@@ -778,10 +774,9 @@ export const usePrimaryCtaCopy = function usePrimaryCtaCopy(showPlayInstantlyLab
       const features3 = quest.config.features;
       if (features3.includes(constants2.CLOUD_GAMING_ACTIVITY)) {
         const intl6 = quest(1114).intl;
-        const t3 = quest(1114).t;
-        return intl6.string(flag ? t3.V5Qt9D : t3["+qoymD"]);
+        return intl6.string(quest(1114).t["+qoymD"]);
       } else {
-        let tmp2Result = quest(7722);
+        let tmp2Result = quest(7736);
         if (tmp2Result.canLaunchActivity(quest)) {
           const intl5 = quest(1114).intl;
           const t2 = quest(1114).t;
@@ -795,7 +790,7 @@ export const usePrimaryCtaCopy = function usePrimaryCtaCopy(showPlayInstantlyLab
     const intl3 = quest(1114).intl;
     return intl3.string(quest(1114).t.l7E81v);
   } else if (constants3.WATCH_VIDEO === memo) {
-    tmp2Result = quest(11518);
+    tmp2Result = quest(11545);
     return tmp2Result.getVideoQuestWatchCtaText(tmp5);
   } else if (constants3.IN_GAME === memo) {
     if (tmp2Result1.canLaunchActivity(quest)) {
@@ -937,14 +932,14 @@ export const useModalCtaConfig = function useModalCtaConfig(quest) {
           obj = { value, done: true };
           return obj;
         } else {
-          const obj2 = { content: closure_128_1, ctaContent: tmp4(7728).QuestContentCTA.OPEN_GAME_LINK, impressionId: null, sourceQuestContent: null };
+          const obj2 = { content: closure_128_1, ctaContent: tmp4(7742).QuestContentCTA.OPEN_GAME_LINK, impressionId: null, sourceQuestContent: null };
           let tmp5;
           if (closure_128_3 != null) {
             tmp5 = closure_128_3();
           }
           obj2.impressionId = tmp5;
           obj2.sourceQuestContent = closure_128_4;
-          tmp4(11501).openGameLinkDirectly(closure_128_0, obj2);
+          tmp4(11528).openGameLinkDirectly(closure_128_0, obj2);
           dependencyMap = 3;
           return { value: "HermesInternal", done: null };
         }
@@ -988,7 +983,7 @@ export const useModalCtaConfig = function useModalCtaConfig(quest) {
       obj3 = QuestTaskUtils;
     }
   }, items);
-  obj.ctaText = quest(11300).getExternalCtaLabel(quest);
+  obj.ctaText = quest(11327).getExternalCtaLabel(quest);
   obj.onClickCta = function defaultOnClickCta() {
     const self = this;
     const apply = closure_5.apply;

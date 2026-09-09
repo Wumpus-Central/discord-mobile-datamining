@@ -1,13 +1,13 @@
-// === Module 10645: MediaKeyboardBottomSheetHeaderSimple ===
+// === Module 10672: MediaKeyboardBottomSheetHeaderSimple ===
 
-// Module 10645 (MediaKeyboardBottomSheetHeaderSimple)
+// Module 10672 (MediaKeyboardBottomSheetHeaderSimple)
 import nativeDefault from "native" /* 576 */;
-import MediaKeyboardBottomSheetHandleDefault from "MediaKeyboardBottomSheetHandle" /* 10646 */;
+import MediaKeyboardBottomSheetHandleDefault from "MediaKeyboardBottomSheetHandle" /* 10673 */;
 import noop from "module_19" /* 19 */;
 
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4560);
+const createStyles = fn(4574);
 let obj = { headerHandleOnlyWrap: null };
 obj = { height: fn(1607).HEADER_HANDLE_HEIGHT, paddingBottom: nativeDefault.space.PX_4 };
 obj.headerHandleOnlyWrap = obj;

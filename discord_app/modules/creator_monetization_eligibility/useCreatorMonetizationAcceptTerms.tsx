@@ -1,6 +1,6 @@
-// === Module 17687: useCreatorMonetizationAcceptTerms ===
+// === Module 17720: useCreatorMonetizationAcceptTerms ===
 
-// Module 17687 (useCreatorMonetizationAcceptTerms)
+// Module 17720 (useCreatorMonetizationAcceptTerms)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -70,10 +70,10 @@ export default function useCreateCreatorMonetizationAcceptTermsRequest(arg0, arg
               if (null != tmp4) {
                 c4 = 4;
                 c5 = 1;
-                const obj1 = { value: tmp47(17688).acceptCreatorMonetizationTerms(tmp55, tmp42), done: false };
+                const obj1 = { value: tmp47(17721).acceptCreatorMonetizationTerms(tmp55, tmp42), done: false };
                 return obj1;
               } else {
-                let obj2 = tmp47(17688);
+                let obj2 = tmp47(17721);
                 c4 = 3;
                 c5 = 1;
                 obj2 = { value: null, done: false };
@@ -87,7 +87,7 @@ export default function useCreateCreatorMonetizationAcceptTermsRequest(arg0, arg
           if (2 === tmp8) {
             dependencyMap = 1;
             closure_128_0 = tmp47;
-            const tmp25 = new tmp4(4462)(closure_128_0);
+            const tmp25 = new tmp4(4476)(closure_128_0);
             closure_129_3(tmp25);
           } else {
             if (3 === tmp8) {

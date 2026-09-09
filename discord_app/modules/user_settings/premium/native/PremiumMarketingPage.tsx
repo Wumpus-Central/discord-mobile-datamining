@@ -1,11 +1,11 @@
-// === Module 13468: PremiumMarketingPage ===
+// === Module 13491: PremiumMarketingPage ===
 
-// Module 13468 (PremiumMarketingPage)
+// Module 13491 (PremiumMarketingPage)
 import nativeDefault from "native" /* 576 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
 import dismissible_content from "dismissible_content" /* 1943 */;
 import DismissibleContentUtils from "DismissibleContentUtils" /* 1945 */;
-import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 4380 */;
+import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 4394 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -17,7 +17,7 @@ const ContentDismissActionType = fn(1954).ContentDismissActionType;
 let FractionalPremiumStates = fn(1373).FractionalPremiumStates;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-fn(4560);
+fn(4574);
 let createStyles = { container: { display: "flex" }, scrollContainer: { flexDirection: "column", alignItems: "center", marginTop: 16 }, arrowIcon: null, backButton: null, sectionWithTopMargin: null, sectionWithPadding: null, sectionWidth: null, accountCreditContainer: null, accountCreditContainerWithSpacing: null, themedBackground: null, backButtonBackground: null, promotionCardHeader: null };
 createStyles = { tintColor: nativeDefault.colors.TEXT_DEFAULT };
 createStyles.arrowIcon = createStyles;
@@ -30,9 +30,9 @@ createStyles.sectionWithPadding = { paddingHorizontal: 12 };
 createStyles.sectionWidth = { maxWidth: 464 };
 createStyles.accountCreditContainer = { width: "100%" };
 createStyles.accountCreditContainerWithSpacing = { marginTop: 24, marginBottom: 20 };
-createStyles.themedBackground = { backgroundColor: fn(5441).DARK_PRIMARY_700_LIGHT_WHITE_500 };
-let obj2 = { backgroundColor: fn(5441).DARK_PRIMARY_700_LIGHT_WHITE_500 };
-createStyles.backButtonBackground = { backgroundColor: fn(5441).TIER_0_MARKETING_PAGE_BACK_BUTTON_BG };
+createStyles.themedBackground = { backgroundColor: fn(5455).DARK_PRIMARY_700_LIGHT_WHITE_500 };
+let obj2 = { backgroundColor: fn(5455).DARK_PRIMARY_700_LIGHT_WHITE_500 };
+createStyles.backButtonBackground = { backgroundColor: fn(5455).TIER_0_MARKETING_PAGE_BACK_BUTTON_BG };
 createStyles.promotionCardHeader = { marginBottom: 16, marginHorizontal: "auto", textAlign: "center" };
 let closure_12 = createStyles.createStyles(createStyles);
 const size = fn(2);

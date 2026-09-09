@@ -1,9 +1,9 @@
-// === Module 5100: VoiceNormalSpoilerIcon ===
+// === Module 5114: VoiceNormalSpoilerIcon ===
 
-// Module 5100 (VoiceNormalSpoilerIcon)
+// Module 5114 (VoiceNormalSpoilerIcon)
 import nativeDefault from "native" /* 576 */;
-import BaseIconImage from "BaseIconImage" /* 4261 */;
-import _mod5042 from "module_5042" /* 5042 */;
+import BaseIconImage from "BaseIconImage" /* 4274 */;
+import _mod5056 from "module_5056" /* 5056 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,5 +18,5 @@ export const VoiceNormalSpoilerIcon = function VoiceNormalSpoilerIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod5042, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod5056, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 };

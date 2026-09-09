@@ -1,21 +1,21 @@
-// === Module 16589: VibegrationsChatStore ===
+// === Module 16620: VibegrationsChatStore ===
 
-// Module 16589 (VibegrationsChatStore)
+// Module 16620 (VibegrationsChatStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import util from "util" /* 1114 */;
 import UserSettings from "UserSettings" /* 1935 */;
-import _modDef3547 from "module_3547" /* 3547 */;
-import SoundUtils from "SoundUtils" /* 9907 */;
-import VibegrationsPlatformUtilsDefault from "VibegrationsPlatformUtils" /* 16591 */;
+import _modDef3560 from "module_3560" /* 3560 */;
+import SoundUtils from "SoundUtils" /* 9934 */;
+import VibegrationsPlatformUtilsDefault from "VibegrationsPlatformUtils" /* 16622 */;
 import _slicedToArray from "module_32" /* 32 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
-import FamilyCenterStore from "FamilyCenterStore" /* 7537 */;
-import NotificationSettingsStore from "NotificationSettingsStore" /* 10086 */;
+import FamilyCenterStore from "FamilyCenterStore" /* 7551 */;
+import NotificationSettingsStore from "NotificationSettingsStore" /* 10113 */;
 import SelectedChannelStore from "SelectedChannelStore" /* 2011 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 4381 */;
-import SelfPresenceStore from "SelfPresenceStore" /* 5279 */;
-import VibegrationsProjectStore from "VibegrationsProjectStore" /* 16590 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 4395 */;
+import SelfPresenceStore from "SelfPresenceStore" /* 5293 */;
+import VibegrationsProjectStore from "VibegrationsProjectStore" /* 16621 */;
 
 require = fn;
 function newMessage(assistant, content, arg2) {
@@ -384,7 +384,7 @@ function recordThinkingTransition(projectId) {
                     if ("terminal_error" !== tmp47.kind) {
                       if ("preview_ready" === tmp47.kind) {
                         let intl = util.intl;
-                        content = intl.string(_modDef3547["78YNh7"]);
+                        content = intl.string(_modDef3560["78YNh7"]);
                       } else {
                         diff3 = diff3 - 1;
                         content = null;
@@ -1063,7 +1063,7 @@ const vibegrationsChatStore = new VibegrationsChatStore(DispatcherDefault, {
                 const items = [];
                 obj = { type: "step", kind: "terminal_error", message: null };
                 const intl = util.intl;
-                obj.message = intl.string(_modDef3547["wjWm+/"]);
+                obj.message = intl.string(_modDef3560["wjWm+/"]);
                 items[HermesBuiltin.arraySpread(disposition.steps, 0)] = obj;
                 obj.steps = items;
                 tmp2 = obj;

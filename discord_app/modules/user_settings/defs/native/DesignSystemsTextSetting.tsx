@@ -1,9 +1,9 @@
-// === Module 15754: DesignSystemsTextSetting ===
+// === Module 15784: DesignSystemsTextSetting ===
 
-// Module 15754 (DesignSystemsTextSetting)
+// Module 15784 (DesignSystemsTextSetting)
 import Constants from "Constants" /* 1074 */;
-import SettingsConstants from "SettingsConstants" /* 7975 */;
-import SettingBuilders from "SettingBuilders" /* 11473 */;
+import SettingsConstants from "SettingsConstants" /* 7989 */;
+import SettingBuilders from "SettingBuilders" /* 11500 */;
 import size from "module_2" /* 2 */;
 
 const route = SettingBuilders.createRoute({

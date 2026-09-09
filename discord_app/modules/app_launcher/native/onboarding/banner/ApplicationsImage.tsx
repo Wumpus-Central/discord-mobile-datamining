@@ -1,16 +1,16 @@
-// === Module 12054: ApplicationsImage ===
+// === Module 12080: ApplicationsImage ===
 
-// Module 12054 (ApplicationsImage)
+// Module 12080 (ApplicationsImage)
 import nativeDefault from "native" /* 576 */;
-import FastImageDefault from "FastImage" /* 5587 */;
-import AppLauncherNativeUtils from "AppLauncherNativeUtils" /* 12055 */;
+import FastImageDefault from "FastImage" /* 5601 */;
+import AppLauncherNativeUtils from "AppLauncherNativeUtils" /* 12081 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, Fragment: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-fn(4560);
+fn(4574);
 let createStyles = { appIconContainer: null, appIconLeftContainer: null, appIconRightContainer: null, appIcon: null };
 createStyles = { backgroundColor: nativeDefault.colors.BACKGROUND_BRAND, borderRadius: nativeDefault.radii.sm + 3, position: "absolute", padding: 3 };
 createStyles.appIconContainer = createStyles;

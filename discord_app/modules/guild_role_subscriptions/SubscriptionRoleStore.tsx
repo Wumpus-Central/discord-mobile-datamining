@@ -1,11 +1,11 @@
-// === Module 5460: SubscriptionRoleStore ===
+// === Module 5474: SubscriptionRoleStore ===
 
-// Module 5460 (SubscriptionRoleStore)
+// Module 5474 (SubscriptionRoleStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import GuildRecord from "GuildRecord" /* 1975 */;
 import GuildRoleRecord from "GuildRoleRecord" /* 2016 */;
-import PremiumRoleUtils from "PremiumRoleUtils" /* 4190 */;
+import PremiumRoleUtils from "PremiumRoleUtils" /* 4203 */;
 import GuildMemberStore from "GuildMemberStore" /* 2021 */;
 import GuildRoleStore from "GuildRoleStore" /* 2015 */;
 import GuildStore from "GuildStore" /* 1979 */;

@@ -1,6 +1,6 @@
-// === Module 5445: QuestVariants ===
+// === Module 5459: QuestVariants ===
 
-// Module 5445 (QuestVariants)
+// Module 5459 (QuestVariants)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_common/js/shared/shared-constants/QuestVariants.tsx");

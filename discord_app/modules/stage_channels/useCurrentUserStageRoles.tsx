@@ -1,8 +1,8 @@
-// === Module 9675: useCurrentUserStageRoles ===
+// === Module 9702: useCurrentUserStageRoles ===
 
-// Module 9675 (useCurrentUserStageRoles)
+// Module 9702 (useCurrentUserStageRoles)
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import StageChannelRoleStore from "StageChannelRoleStore" /* 5421 */;
+import StageChannelRoleStore from "StageChannelRoleStore" /* 5435 */;
 
 const require = fn;
 const size = fn(2);

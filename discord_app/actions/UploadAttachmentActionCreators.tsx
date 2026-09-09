@@ -1,6 +1,6 @@
-// === Module 9312: UploadAttachmentActionCreators ===
+// === Module 9339: UploadAttachmentActionCreators ===
 
-// Module 9312 (UploadAttachmentActionCreators)
+// Module 9339 (UploadAttachmentActionCreators)
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import size from "module_2" /* 2 */;
 
@@ -14,13 +14,13 @@ export default {
   addFiles(draftType) {
     ({ files, channelId } = draftType);
     draftType = draftType.draftType;
-    if (files.some(channelId(9313).itemNeedsHeicPreConversion)) {
+    if (files.some(channelId(9340).itemNeedsHeicPreConversion)) {
       function dispatch(files) {
         const obj = { type: "UPLOAD_ATTACHMENT_ADD_FILES", channelId, files, draftType };
         obj.dispatch(obj);
       }
-      Promise.all(files.map(channelId(9313).maybePreConvertHeicItem)).then(dispatch);
-      const allPromises = Promise.all(files.map(channelId(9313).maybePreConvertHeicItem));
+      Promise.all(files.map(channelId(9340).maybePreConvertHeicItem)).then(dispatch);
+      const allPromises = Promise.all(files.map(channelId(9340).maybePreConvertHeicItem));
     } else {
       draftType(573);
       let obj = { type: "UPLOAD_ATTACHMENT_ADD_FILES", channelId, files, draftType };

@@ -1,13 +1,13 @@
-// === Module 7424: NativeCheckoutStore ===
+// === Module 7438: NativeCheckoutStore ===
 
-// Module 7424 (NativeCheckoutStore)
+// Module 7438 (NativeCheckoutStore)
 import _mod1244 from "module_1244" /* 1244 */;
-import _mod4184 from "module_4184" /* 4184 */;
-import ContextUtilsDefault from "ContextUtils" /* 7428 */;
+import _mod4197 from "module_4197" /* 4197 */;
+import ContextUtilsDefault from "ContextUtils" /* 7442 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import OrderRecord from "OrderRecord" /* 7425 */;
+import OrderRecord from "OrderRecord" /* 7439 */;
 
 require = fn;
 const importDefaultResultResult = _slicedToArray(ContextUtilsDefault(), 2);
@@ -20,14 +20,14 @@ export const NativeCheckoutStoreContextOrNull = context;
 export const useNativeCheckoutStore = function useNativeCheckoutStore(arg0) {
   let shallow = arg1;
   if (arg1 === undefined) {
-    shallow = _mod4184.shallow;
+    shallow = _mod4197.shallow;
   }
   return closure_6()(arg0, shallow);
 };
 export const useNativeCheckoutStoreOrNull = function useNativeCheckoutStoreOrNull(arg0) {
   let shallow = arg1;
   if (arg1 === undefined) {
-    shallow = _mod4184.shallow;
+    shallow = _mod4197.shallow;
   }
   context = noop.useContext(context);
   let contextResult = null;
@@ -446,6 +446,6 @@ export const createNativeStore = function createNativeStore(arg0) {
     };
     obj.onOrderRetryCancellation = onOrderRetryCancellation;
     return obj;
-  }, _mod4184.shallow);
+  }, _mod4197.shallow);
 };
 export const NativeCheckoutStoreContext = importDefaultResultResult[0];

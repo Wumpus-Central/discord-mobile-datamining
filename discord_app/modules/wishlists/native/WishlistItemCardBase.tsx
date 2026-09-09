@@ -1,16 +1,16 @@
-// === Module 8778: WishlistItemCardBase ===
+// === Module 8806: WishlistItemCardBase ===
 
-// Module 8778 (WishlistItemCardBase)
+// Module 8806 (WishlistItemCardBase)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
 import GlobalUtils from "GlobalUtils" /* 1369 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 4259 */;
-import useToken from "useToken" /* 4262 */;
-import native from "native" /* 4271 */;
-import LockIcon from "LockIcon" /* 5095 */;
-import useUserProfileColors from "useUserProfileColors" /* 8238 */;
-import useWishlistHooks from "useWishlistHooks" /* 8781 */;
-import CheckmarkLargeBoldIcon from "CheckmarkLargeBoldIcon" /* 8800 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 4272 */;
+import useToken from "useToken" /* 4275 */;
+import native from "native" /* 4284 */;
+import LockIcon from "LockIcon" /* 5109 */;
+import useUserProfileColors from "useUserProfileColors" /* 8264 */;
+import useWishlistHooks from "useWishlistHooks" /* 8809 */;
+import CheckmarkLargeBoldIcon from "CheckmarkLargeBoldIcon" /* 8829 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -28,7 +28,7 @@ function SourceIcon(toastText) {
     children: null
   };
   obj = { color: nativeDefault.colors.INTERACTIVE_ICON_DEFAULT, size: "md" };
-  obj.children = closure_5(toastText(8779).HeartIcon, obj);
+  obj.children = closure_5(toastText(8807).HeartIcon, obj);
   return closure_5(closure_3, obj);
 }
 get_ActivityIndicator = fn(17);
@@ -36,7 +36,7 @@ get_ActivityIndicator = fn(17);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, Fragment: metroRequire, jsxs: closure_7 } = jsxProd);
 const rect = { position: "absolute", top: nativeDefault.space.PX_8, right: nativeDefault.space.PX_8 };
-fn(4560);
+fn(4574);
 let obj = { card: null, overlayContainer: null, previewWrap: null, dimmedPreview: null, sourceIcon: null, lockBadge: null };
 obj = { borderWidth: 1, borderRadius: nativeDefault.radii.lg, borderColor: nativeDefault.colors.BORDER_MUTED, justifyContent: "center", alignItems: "center", overflow: "hidden" };
 obj.card = obj;

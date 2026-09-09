@@ -1,28 +1,28 @@
-// === Module 9315: showUploadFileSizeError ===
+// === Module 9342: showUploadFileSizeError ===
 
-// Module 9315 (showUploadFileSizeError)
+// Module 9342 (showUploadFileSizeError)
 import ConstantsIOS from "ConstantsIOS" /* 1093 */;
 import util from "util" /* 1114 */;
 import PremiumTypeUtils from "PremiumTypeUtils" /* 1885 */;
-import FileSizeUtils from "FileSizeUtils" /* 4457 */;
-import AppAnalyticsUtils from "AppAnalyticsUtils" /* 4740 */;
-import AlertActionCreatorsDefault from "AlertActionCreators" /* 4904 */;
-import UploadUtils from "UploadUtils" /* 5129 */;
-import NitroFileUploadExperiments from "NitroFileUploadExperiments" /* 5130 */;
-import utils_UploadUtils from "utils/UploadUtils" /* 5138 */;
-import KestrelExperiment from "KestrelExperiment" /* 5179 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 7182 */;
-import logMessageSendFailure from "logMessageSendFailure" /* 7843 */;
-import buildFileSizeLimitEventProperties from "buildFileSizeLimitEventProperties" /* 9316 */;
-import getUploaderFileSizeMetrics from "getUploaderFileSizeMetrics" /* 9317 */;
-import PremiumUpsellUtilsDefault from "PremiumUpsellUtils" /* 9318 */;
+import FileSizeUtils from "FileSizeUtils" /* 4471 */;
+import AppAnalyticsUtils from "AppAnalyticsUtils" /* 4754 */;
+import AlertActionCreatorsDefault from "AlertActionCreators" /* 4918 */;
+import UploadUtils from "UploadUtils" /* 5143 */;
+import NitroFileUploadExperiments from "NitroFileUploadExperiments" /* 5144 */;
+import utils_UploadUtils from "utils/UploadUtils" /* 5152 */;
+import KestrelExperiment from "KestrelExperiment" /* 5193 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 7196 */;
+import logMessageSendFailure from "logMessageSendFailure" /* 7857 */;
+import buildFileSizeLimitEventProperties from "buildFileSizeLimitEventProperties" /* 9343 */;
+import getUploaderFileSizeMetrics from "getUploaderFileSizeMetrics" /* 9344 */;
+import PremiumUpsellUtilsDefault from "PremiumUpsellUtils" /* 9345 */;
 import UnsyncedUserSettingsStore from "UnsyncedUserSettingsStore" /* 1185 */;
 import UserStore from "UserStore" /* 1371 */;
 
 require = fn;
 const Constants = fn(1074);
 ({ AnalyticEvents: hasOwnProperty, AnalyticsSections: metroRequire } = Constants);
-const FileUploadErrorTypes = fn(4553).FileUploadErrorTypes;
+const FileUploadErrorTypes = fn(4567).FileUploadErrorTypes;
 const PremiumConstants = fn(1373);
 ({ PremiumTypes: closure_8, PremiumUpsellTypes: closure_9 } = PremiumConstants);
 const constants = { NITRO_UPSELL: "Nitro Upsell", OVER_MAX_SIZE: "Over Max Size" };

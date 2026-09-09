@@ -1,6 +1,6 @@
-// === Module 6530: ? ===
+// === Module 6544: ? ===
 
-// Module 6530
+// Module 6544
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/SunIllocon-2x.png.js");

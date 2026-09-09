@@ -1,10 +1,10 @@
-// === Module 5136: uploader/UploadUtils ===
+// === Module 5150: uploader/UploadUtils ===
 
-// Module 5136 (uploader/UploadUtils)
+// Module 5150 (uploader/UploadUtils)
 import HTTPUtils from "HTTPUtils" /* 1272 */;
 import js_shim_shim from "js_shim/shim" /* 1351 */;
-import Upload from "Upload" /* 5128 */;
-import AttachmentFile from "AttachmentFile" /* 5137 */;
+import Upload from "Upload" /* 5142 */;
+import AttachmentFile from "AttachmentFile" /* 5151 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("lib/uploader/UploadUtils.tsx");

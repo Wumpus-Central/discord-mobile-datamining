@@ -1,9 +1,9 @@
-// === Module 6003: ForceIllocon ===
+// === Module 6017: ForceIllocon ===
 
-// Module 6003 (ForceIllocon)
+// Module 6017 (ForceIllocon)
 import jsxProd from "jsxProd" /* 21 */;
-import FastImageDefault from "FastImage" /* 5587 */;
-import _modDef6004 from "module_6004" /* 6004 */;
+import FastImageDefault from "FastImage" /* 5601 */;
+import _modDef6018 from "module_6018" /* 6018 */;
 import size from "module_2" /* 2 */;
 
 const jsx = jsxProd.jsx;
@@ -16,12 +16,12 @@ export const ForceIllocon = function ForceIllocon(size) {
     num = 64;
   }
   let obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  obj = { uri: _modDef6004 };
+  obj = { uri: _modDef6018 };
   obj.source = obj;
   const items = [{ width: num, height: num }];
   obj.style = items;
   obj.accessible = accessible;
   obj.accessibilityLabel = accessibilityLabel;
   obj.resizeMode = resizeMode;
-  return jsx(FastImageDefault, { uri: _modDef6004 });
+  return jsx(FastImageDefault, { uri: _modDef6018 });
 };

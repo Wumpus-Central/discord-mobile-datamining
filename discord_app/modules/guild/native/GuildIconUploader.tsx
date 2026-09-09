@@ -1,15 +1,15 @@
-// === Module 11803: GuildIconUploader ===
+// === Module 11829: GuildIconUploader ===
 
-// Module 11803 (GuildIconUploader)
+// Module 11829 (GuildIconUploader)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import shared from "shared" /* 4411 */;
-import Text_Text from "Text/Text" /* 4556 */;
-import Pressables from "Pressables" /* 5123 */;
-import _modDef11804 from "module_11804" /* 11804 */;
-import _modDef11805 from "module_11805" /* 11805 */;
-import _modDef11806 from "module_11806" /* 11806 */;
-import _modDef11807 from "module_11807" /* 11807 */;
+import shared from "shared" /* 4425 */;
+import Text_Text from "Text/Text" /* 4570 */;
+import Pressables from "Pressables" /* 5137 */;
+import _modDef11830 from "module_11830" /* 11830 */;
+import _modDef11831 from "module_11831" /* 11831 */;
+import _modDef11832 from "module_11832" /* 11832 */;
+import _modDef11833 from "module_11833" /* 11833 */;
 import noop from "module_19" /* 19 */;
 import ThemeStore from "ThemeStore" /* 1183 */;
 
@@ -18,7 +18,7 @@ get_ActivityIndicator = fn(17);
 ({ View: c3, Image: closure_4 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-fn(4560);
+fn(4574);
 let createStyles = { container: { width: 82, height: 82, marginTop: 4 }, guildPlaceholder: null, guildIcon: null, iconWrapperBorder: null, filledIconWrapper: null, emptyIconWrapper: null, emptyGuildIcon: null, emptyGuildIconText: null, uploadIcon: null };
 createStyles = { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH };
 createStyles.guildPlaceholder = createStyles;
@@ -53,9 +53,9 @@ prototype["renderIcon"] = function renderIcon() {
     ({ guildIcon: arr3[0], emptyGuildIcon: arr3[1] } = tmp);
     obj1.style = items1;
     if (obj6.isThemeDark(ThemeStore.theme)) {
-      let tmp13Result = _modDef11804;
+      let tmp13Result = _modDef11830;
     } else {
-      tmp13Result = _modDef11805;
+      tmp13Result = _modDef11831;
     }
     obj = { source: tmp13Result };
     const items2 = [timestampProducer(React4, obj), ];
@@ -86,12 +86,12 @@ prototype["renderUpload"] = function renderUpload() {
     const obj3 = { tintColor: iconBackgroundColor };
     items1[1] = obj3;
     obj2.style = items1;
-    obj2.source = _modDef11806;
+    obj2.source = _modDef11832;
     obj1.children = timestampProducer(React4, obj2);
     obj.children = timestampProducer(React3, obj1);
   } else {
     obj = { style: tmp.emptyIconWrapper, children: null };
-    const obj4 = { source: _modDef11807 };
+    const obj4 = { source: _modDef11833 };
     obj.children = timestampProducer(React4, obj4);
   }
   return timestampProducer(React3, obj);
@@ -117,7 +117,7 @@ prototype["render"] = function render() {
   obj.children = React5(React3, obj);
   return timestampProducer(Pressables.PressableOpacity, obj);
 };
-GuildIconUploader.contextType = fn(4271).ThemeContext;
+GuildIconUploader.contextType = fn(4284).ThemeContext;
 size = fn(2);
 const result = size.fileFinishedImporting("modules/guild/native/GuildIconUploader.tsx");
 

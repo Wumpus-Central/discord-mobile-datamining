@@ -1,12 +1,12 @@
-// === Module 12549: GuildPowerupsDisabledWarning ===
+// === Module 12575: GuildPowerupsDisabledWarning ===
 
-// Module 12549 (GuildPowerupsDisabledWarning)
+// Module 12575 (GuildPowerupsDisabledWarning)
 import _mod17 from "module_17" /* 17 */;
 import nativeDefault from "native" /* 576 */;
-import Text_Text from "Text/Text" /* 4556 */;
-import WarningIcon from "WarningIcon" /* 8593 */;
+import Text_Text from "Text/Text" /* 4570 */;
+import WarningIcon from "WarningIcon" /* 8621 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createStyles from "createStyles" /* 4560 */;
+import createStyles from "createStyles" /* 4574 */;
 import size from "module_2" /* 2 */;
 
 const View = _mod17.View;

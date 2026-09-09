@@ -1,13 +1,13 @@
-// === Module 5011: getSoundmojiASTFromString ===
+// === Module 5025: getSoundmojiASTFromString ===
 
-// Module 5011 (getSoundmojiASTFromString)
+// Module 5025 (getSoundmojiASTFromString)
 import AvatarUtils from "AvatarUtils" /* 1396 */;
-import SoundmojiRenderingExperiment from "SoundmojiRenderingExperiment" /* 5017 */;
-import isSoundValidDefault from "isSoundValid" /* 5018 */;
-import getSoundFromMessageDefault from "getSoundFromMessage" /* 5019 */;
-import getSoundStringDefault from "getSoundString" /* 5021 */;
-import SoundboardStore from "SoundboardStore" /* 5012 */;
-import MessageStore from "MessageStore" /* 4781 */;
+import SoundmojiRenderingExperiment from "SoundmojiRenderingExperiment" /* 5031 */;
+import isSoundValidDefault from "isSoundValid" /* 5032 */;
+import getSoundFromMessageDefault from "getSoundFromMessage" /* 5033 */;
+import getSoundStringDefault from "getSoundString" /* 5035 */;
+import SoundboardStore from "SoundboardStore" /* 5026 */;
+import MessageStore from "MessageStore" /* 4795 */;
 
 require = fn;
 const MessageStates = fn(1074).MessageStates;

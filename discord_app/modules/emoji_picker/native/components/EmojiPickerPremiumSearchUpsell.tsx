@@ -1,12 +1,12 @@
-// === Module 10318: EmojiPickerPremiumSearchUpsell ===
+// === Module 10345: EmojiPickerPremiumSearchUpsell ===
 
-// Module 10318 (EmojiPickerPremiumSearchUpsell)
+// Module 10345 (EmojiPickerPremiumSearchUpsell)
 import nativeDefault from "native" /* 576 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1242 */;
-import PremiumUtilsDefault from "PremiumUtils" /* 4218 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4527 */;
-import PremiumFeaturesCards from "PremiumFeaturesCards" /* 9367 */;
-import openPremiumModalDefault from "openPremiumModal" /* 9397 */;
+import PremiumUtilsDefault from "PremiumUtils" /* 4231 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 4541 */;
+import PremiumFeaturesCards from "PremiumFeaturesCards" /* 9394 */;
+import openPremiumModalDefault from "openPremiumModal" /* 9424 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1371 */;
 
@@ -18,7 +18,7 @@ const PremiumConstants = fn(1373);
 ({ PremiumSubscriptionSKUs: closure_9, PremiumUpsellTypes: c10, SubscriptionPlans: closure_11 } = PremiumConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
-fn(4560);
+fn(4574);
 let obj = { container: null, premiumSearchUpsell: null, premiumSearchUpsellContent: null, nitroIcon: null };
 obj = { paddingTop: nativeDefault.space.PX_8 };
 obj.container = obj;

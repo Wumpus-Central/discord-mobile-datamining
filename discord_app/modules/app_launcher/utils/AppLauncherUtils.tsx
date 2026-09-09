@@ -1,20 +1,20 @@
-// === Module 9294: AppLauncherUtils ===
+// === Module 9321: AppLauncherUtils ===
 
-// Module 9294 (AppLauncherUtils)
+// Module 9321 (AppLauncherUtils)
 import util from "util" /* 1114 */;
 import PlatformUtils from "PlatformUtils" /* 1115 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1396 */;
 import Server from "Server" /* 1894 */;
-import ApplicationCommandUtils from "ApplicationCommandUtils" /* 7521 */;
-import ApplicationFlagUtils from "ApplicationFlagUtils" /* 8861 */;
-import AppLauncherTypes from "AppLauncherTypes" /* 9414 */;
-import getPlatformDefault from "getPlatform" /* 9415 */;
-import ApplicationInstallUtils from "ApplicationInstallUtils" /* 9423 */;
+import ApplicationCommandUtils from "ApplicationCommandUtils" /* 7535 */;
+import ApplicationFlagUtils from "ApplicationFlagUtils" /* 8888 */;
+import AppLauncherTypes from "AppLauncherTypes" /* 9441 */;
+import getPlatformDefault from "getPlatform" /* 9442 */;
+import ApplicationInstallUtils from "ApplicationInstallUtils" /* 9450 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ApplicationCommandIndexStore from "ApplicationCommandIndexStore" /* 9295 */;
+import ApplicationCommandIndexStore from "ApplicationCommandIndexStore" /* 9322 */;
 import ApplicationRecord from "ApplicationRecord" /* 1918 */;
-import AppLauncherStore from "AppLauncherStore" /* 9413 */;
+import AppLauncherStore from "AppLauncherStore" /* 9440 */;
 
 require = fn;
 function getShelfBadgeTypeIfActive(application) {
@@ -63,8 +63,8 @@ function getShelfBadgeTypeIfActive(application) {
 }
 let closure_3 = ["fakeAppIconURL"];
 const ApplicationFlags = fn(1074).ApplicationFlags;
-const BuiltInSectionId = fn(4999).BuiltInSectionId;
-const MessageSendLocation = fn(4553).MessageSendLocation;
+const BuiltInSectionId = fn(5013).BuiltInSectionId;
+const MessageSendLocation = fn(4567).MessageSendLocation;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/app_launcher/utils/AppLauncherUtils.tsx");
 

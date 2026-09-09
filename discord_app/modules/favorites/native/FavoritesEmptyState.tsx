@@ -1,22 +1,22 @@
-// === Module 16738: FavoritesEmptyState ===
+// === Module 16775: FavoritesEmptyState ===
 
-// Module 16738 (FavoritesEmptyState)
+// Module 16775 (FavoritesEmptyState)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import _modDef3225 from "module_3225" /* 3225 */;
-import Text_Text from "Text/Text" /* 4556 */;
-import Stack_Stack from "Stack/Stack" /* 4973 */;
-import components_Button_Button from "components/Button/Button" /* 4975 */;
-import native from "native" /* 5692 */;
-import FavoritesHooks from "FavoritesHooks" /* 10229 */;
-import PlusMediumIcon from "PlusMediumIcon" /* 12757 */;
+import _modDef3236 from "module_3236" /* 3236 */;
+import Text_Text from "Text/Text" /* 4570 */;
+import Stack_Stack from "Stack/Stack" /* 4987 */;
+import components_Button_Button from "components/Button/Button" /* 4989 */;
+import native from "native" /* 5706 */;
+import FavoritesHooks from "FavoritesHooks" /* 10256 */;
+import PlusMediumIcon from "PlusMediumIcon" /* 12783 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-fn(4560);
+fn(4574);
 let createStyles = { container: null, text: null };
 createStyles = { flex: 1, alignItems: "center", justifyContent: "center", gap: nativeDefault.space.PX_16, paddingHorizontal: nativeDefault.space.PX_48 };
 createStyles.container = createStyles;
@@ -39,25 +39,25 @@ export default function FavoritesEmptyState() {
   obj = { spacing: nativeDefault.space.PX_8, align: "center", children: null };
   const obj1 = { variant: "heading-md/bold", color: "mobile-text-heading-primary", style: tmp.text, children: null };
   const intl = util.intl;
-  obj1.children = intl.string(_modDef3225["wh+Rz1"]);
+  obj1.children = intl.string(_modDef3236["wh+Rz1"]);
   const items1 = [hasOwnProperty(Text_Text.Heading, obj1), ];
   const obj2 = { variant: "text-md/medium", color: "text-default", style: tmp.text, children: null };
   const intl2 = util.intl;
-  obj2.children = intl2.string(_modDef3225["+SuGKb"]);
+  obj2.children = intl2.string(_modDef3236["+SuGKb"]);
   items1[1] = hasOwnProperty(Text_Text.Text, obj2);
   obj.children = items1;
   items[1] = timestampProducer(Stack_Stack.Stack, obj);
   if (obj.useFavoritesAccess("favorites_empty_state").hasAccess) {
     const obj3 = { variant: "primary", text: null, icon: null, onPress: null };
     const intl4 = util.intl;
-    obj3.text = intl4.string(_modDef3225["6kk0gM"]);
+    obj3.text = intl4.string(_modDef3236["6kk0gM"]);
     obj3.icon = hasOwnProperty(PlusMediumIcon.PlusMediumIcon, {});
     obj3.onPress = callback;
     let obj4 = obj3;
   } else {
     obj4 = { variant: "primary", text: null, onPress: null };
     const intl3 = util.intl;
-    obj4.text = intl3.string(_modDef3225.yYVbdv);
+    obj4.text = intl3.string(_modDef3236.yYVbdv);
     obj4.onPress = callback1;
   }
   items[2] = hasOwnProperty(components_Button_Button.Button, obj4);

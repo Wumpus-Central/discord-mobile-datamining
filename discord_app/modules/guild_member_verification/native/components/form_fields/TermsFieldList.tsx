@@ -1,11 +1,11 @@
-// === Module 5601: TermsFieldList ===
+// === Module 5615: TermsFieldList ===
 
-// Module 5601 (TermsFieldList)
+// Module 5615 (TermsFieldList)
 import nativeDefault from "native" /* 576 */;
 import util from "util" /* 1114 */;
-import MarkupUtilsDefault from "MarkupUtils" /* 4550 */;
-import Text_Text from "Text/Text" /* 4556 */;
-import TableRowDivider from "TableRowDivider" /* 5602 */;
+import MarkupUtilsDefault from "MarkupUtils" /* 4564 */;
+import Text_Text from "Text/Text" /* 4570 */;
+import TableRowDivider from "TableRowDivider" /* 5616 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -27,7 +27,7 @@ function TermsFieldListItem(rowNumber) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire, Fragment: closure_7 } = jsxProd);
-fn(4560);
+fn(4574);
 let createStyles = { termsContainer: null, firstItem: null, lastItem: null, termsRow: null, termsRowContent: null, termsRowNumber: null, title: null };
 createStyles = { padding: 16, flexDirection: "column", justifyContent: "space-between", backgroundColor: nativeDefault.colors.CARD_BACKGROUND_DEFAULT };
 createStyles.termsContainer = createStyles;
@@ -51,7 +51,7 @@ export default function TermsFieldList(rules) {
   obj = { style: tmp.title, accessibilityRole: "header", variant: "heading-md/semibold", color: "mobile-text-heading-primary", children: null };
   const intl = rules(1114).intl;
   obj.children = intl.string(rules(1114).t.prJqwT);
-  let items = [closure_5(rules(4556).Text, obj), ];
+  let items = [closure_5(rules(4570).Text, obj), ];
   obj = {
     accessibilityRole: "list",
     children: rules.map((rule, index) => {

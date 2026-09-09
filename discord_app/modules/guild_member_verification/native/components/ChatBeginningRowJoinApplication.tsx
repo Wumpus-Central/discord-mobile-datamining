@@ -1,11 +1,11 @@
-// === Module 12635: ChatBeginningRowJoinApplication ===
+// === Module 12661: ChatBeginningRowJoinApplication ===
 
-// Module 12635 (ChatBeginningRowJoinApplication)
+// Module 12661 (ChatBeginningRowJoinApplication)
 import nativeDefault from "native" /* 576 */;
-import MemberVerificationTypes from "MemberVerificationTypes" /* 4384 */;
-import Text_Text from "Text/Text" /* 4556 */;
+import MemberVerificationTypes from "MemberVerificationTypes" /* 4398 */;
+import Text_Text from "Text/Text" /* 4570 */;
 import noop from "module_19" /* 19 */;
-import PermissionStore from "PermissionStore" /* 4199 */;
+import PermissionStore from "PermissionStore" /* 4212 */;
 import UserStore from "UserStore" /* 1371 */;
 
 require = fn;
@@ -13,7 +13,7 @@ const View = fn(17).View;
 const Permissions = fn(1074).Permissions;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8, Fragment: closure_9 } = jsxProd);
-fn(4560);
+fn(4574);
 let createStyles = { container: null, guildInfoRow: null, divider: null, formQuestion: null };
 createStyles = { width: "100%", marginTop: 12, display: "flex", flexDirection: "column", alignSelf: "flex-start", padding: 16, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, borderColor: nativeDefault.colors.BORDER_SUBTLE, borderWidth: 1, borderRadius: nativeDefault.radii.lg };
 createStyles.container = createStyles;

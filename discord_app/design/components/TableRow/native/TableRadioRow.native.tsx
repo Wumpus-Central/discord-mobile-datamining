@@ -1,10 +1,10 @@
-// === Module 5688: TableRadioRow ===
+// === Module 5702: TableRadioRow ===
 
-// Module 5688 (TableRadioRow)
-import useA11yRolesNative from "useA11yRolesNative" /* 4277 */;
-import TableRow from "TableRow" /* 5605 */;
-import TableRadioGroup from "TableRadioGroup" /* 5685 */;
-import FormRadio from "FormRadio" /* 5689 */;
+// Module 5702 (TableRadioRow)
+import useA11yRolesNative from "useA11yRolesNative" /* 4292 */;
+import TableRow from "TableRow" /* 5619 */;
+import TableRadioGroup from "TableRadioGroup" /* 5699 */;
+import FormRadio from "FormRadio" /* 5703 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -26,9 +26,9 @@ export const TableRadioRow = function TableRadioRow(value) {
   if (legacyCompat_selected == null) {
     legacyCompat_selected = context.selectedValue === value;
   }
-  let tmp2Result = tmp2(4264);
+  let tmp2Result = tmp2(4277);
   const nodeText = tmp2Result.getNodeText(label);
-  tmp2Result = tmp2(4264);
+  tmp2Result = tmp2(4277);
   const nodeText1 = tmp2Result.getNodeText(subLabel);
   const radioA11yNative = useA11yRolesNative.useRadioA11yNative({ selected: legacyCompat_selected, disabled });
   ({ accessibilityRole, accessibilityState } = radioA11yNative);

@@ -1,14 +1,14 @@
-// === Module 11559: useBatchUpdateSelectOption ===
+// === Module 11585: useBatchUpdateSelectOption ===
 
-// Module 11559 (useBatchUpdateSelectOption)
+// Module 11585 (useBatchUpdateSelectOption)
 import _modDef12 from "module_12" /* 12 */;
 import DispatcherDefault from "Dispatcher" /* 573 */;
 import GlobalUtils from "GlobalUtils" /* 1369 */;
-import GuildOnboardingActionCreatorsDefault from "GuildOnboardingActionCreators" /* 7105 */;
-import OptInOnboardingUtils from "OptInOnboardingUtils" /* 11560 */;
+import GuildOnboardingActionCreatorsDefault from "GuildOnboardingActionCreators" /* 7119 */;
+import OptInOnboardingUtils from "OptInOnboardingUtils" /* 11586 */;
 import noop from "module_19" /* 19 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 4741 */;
-import GuildOnboardingPromptsStore from "GuildOnboardingPromptsStore" /* 7100 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 4755 */;
+import GuildOnboardingPromptsStore from "GuildOnboardingPromptsStore" /* 7114 */;
 
 require = fn;
 let closure_6 = fn(1084).ChannelNotificationSettingsFlags;

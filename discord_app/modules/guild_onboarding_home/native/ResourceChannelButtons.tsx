@@ -1,8 +1,8 @@
-// === Module 12286: ResourceChannelButtons ===
+// === Module 12312: ResourceChannelButtons ===
 
-// Module 12286 (ResourceChannelButtons)
+// Module 12312 (ResourceChannelButtons)
 import nativeDefault from "native" /* 576 */;
-import GuildOnboardingHomeActionCreators from "GuildOnboardingHomeActionCreators" /* 12288 */;
+import GuildOnboardingHomeActionCreators from "GuildOnboardingHomeActionCreators" /* 12314 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -10,7 +10,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-fn(4560);
+fn(4574);
 let createStyles = { wrapper: null, buttonWrapper: null, spacer: null, iconColor: null };
 createStyles = { display: "flex", flexDirection: "row", padding: 12, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 createStyles.wrapper = createStyles;

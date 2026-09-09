@@ -1,18 +1,18 @@
-// === Module 8058: PremiumSubscriptionOfferUtil ===
+// === Module 8073: PremiumSubscriptionOfferUtil ===
 
-// Module 8058 (PremiumSubscriptionOfferUtil)
+// Module 8073 (PremiumSubscriptionOfferUtil)
 import initialize from "initialize" /* 504 */;
 import Server from "Server" /* 1894 */;
-import _modDef4153 from "module_4153" /* 4153 */;
-import usePremiumTrialOffer from "usePremiumTrialOffer" /* 7447 */;
-import PremiumSubscriptionTrialUtil from "PremiumSubscriptionTrialUtil" /* 8059 */;
-import usePremiumDiscountOffer from "usePremiumDiscountOffer" /* 8060 */;
-import useDiscountOfferDefault from "useDiscountOffer" /* 8061 */;
-import UserOfferActionCreators from "UserOfferActionCreators" /* 8062 */;
-import ReverseTrialUtils from "ReverseTrialUtils" /* 8065 */;
+import _modDef4166 from "module_4166" /* 4166 */;
+import usePremiumTrialOffer from "usePremiumTrialOffer" /* 7461 */;
+import PremiumSubscriptionTrialUtil from "PremiumSubscriptionTrialUtil" /* 8074 */;
+import usePremiumDiscountOffer from "usePremiumDiscountOffer" /* 8075 */;
+import useDiscountOfferDefault from "useDiscountOffer" /* 8076 */;
+import UserOfferActionCreators from "UserOfferActionCreators" /* 8077 */;
+import ReverseTrialUtils from "ReverseTrialUtils" /* 8080 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import SubscriptionStore from "SubscriptionStore" /* 4224 */;
+import SubscriptionStore from "SubscriptionStore" /* 4237 */;
 
 require = fn;
 const PremiumConstants = fn(1373);
@@ -30,8 +30,8 @@ function useHasDiscountApplied() {
   let tmp4 = null != prop;
   if (tmp4) {
     const _Date = Date;
-    tmp4 = _modDef4153(Date.now()) <= _modDef4153(prop);
-    const tmp6Result = _modDef4153(Date.now());
+    tmp4 = _modDef4166(Date.now()) <= _modDef4166(prop);
+    const tmp6Result = _modDef4166(Date.now());
   }
   return tmp4;
 }
@@ -56,8 +56,8 @@ export const useIsInPremiumOfferExperience = function useIsInPremiumOfferExperie
     let tmp12 = null != prop;
     if (tmp12) {
       const _Date = Date;
-      tmp12 = _modDef4153(Date.now()) <= _modDef4153(prop);
-      const tmp14Result = _modDef4153(Date.now());
+      tmp12 = _modDef4166(Date.now()) <= _modDef4166(prop);
+      const tmp14Result = _modDef4166(Date.now());
     }
     return null != premiumTrialOffer || hasActiveTrial || null != premiumDiscountOffer || null != tmp7 || tmp12;
   } else {
@@ -180,8 +180,8 @@ export const useShouldFetchChurnOffer = function useShouldFetchChurnOffer() {
     let tmp8 = null != prop;
     if (tmp8) {
       const _Date = Date;
-      tmp8 = _modDef4153(Date.now()) <= _modDef4153(prop);
-      const tmp10Result = _modDef4153(Date.now());
+      tmp8 = _modDef4166(Date.now()) <= _modDef4166(prop);
+      const tmp10Result = _modDef4166(Date.now());
     }
     let tmp13 = null !== stateFromStores && stateFromStores.hasPremiumNitroMonthly && !tmp8;
     if (tmp13) {

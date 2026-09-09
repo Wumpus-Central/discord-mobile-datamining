@@ -1,6 +1,6 @@
-// === Module 12420: DragAndDropUtils ===
+// === Module 12446: DragAndDropUtils ===
 
-// Module 12420 (DragAndDropUtils)
+// Module 12446 (DragAndDropUtils)
 import LoggerDefault from "Logger" /* 3 */;
 import _modDef12 from "module_12" /* 12 */;
 

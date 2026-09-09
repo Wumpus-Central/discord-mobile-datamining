@@ -1,10 +1,10 @@
-// === Module 13735: useHasXboxMonthlyOrbsPerk ===
+// === Module 13758: useHasXboxMonthlyOrbsPerk ===
 
-// Module 13735 (useHasXboxMonthlyOrbsPerk)
+// Module 13758 (useHasXboxMonthlyOrbsPerk)
 import initialize from "initialize" /* 504 */;
 import PerksStateUtils from "PerksStateUtils" /* 1377 */;
 import user from "user" /* 1379 */;
-import PremiumUtils from "PremiumUtils" /* 4218 */;
+import PremiumUtils from "PremiumUtils" /* 4231 */;
 import UserStore from "UserStore" /* 1371 */;
 
 require = fn;

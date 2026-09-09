@@ -1,24 +1,24 @@
-// === Module 15255: StreamOutputVolumeSetting ===
+// === Module 15284: StreamOutputVolumeSetting ===
 
-// Module 15255 (StreamOutputVolumeSetting)
+// Module 15284 (StreamOutputVolumeSetting)
 import _modDef38 from "module_38" /* 38 */;
 import initialize from "initialize" /* 504 */;
 import util from "util" /* 1114 */;
-import BaseConnectionEvent from "BaseConnectionEvent" /* 4615 */;
-import AudioActionCreatorsDefault from "AudioActionCreators" /* 9094 */;
-import MobileAudioOutputExperimentDefault from "MobileAudioOutputExperiment" /* 9987 */;
-import ApplicationStreamingStore from "ApplicationStreamingStore" /* 4582 */;
+import BaseConnectionEvent from "BaseConnectionEvent" /* 4629 */;
+import AudioActionCreatorsDefault from "AudioActionCreators" /* 9121 */;
+import MobileAudioOutputExperimentDefault from "MobileAudioOutputExperiment" /* 10014 */;
+import ApplicationStreamingStore from "ApplicationStreamingStore" /* 4596 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import MediaEngineStore from "MediaEngineStore" /* 1908 */;
 
 require = fn;
-fn(11473);
+fn(11500);
 let SettingBuilders = {
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.pEAl4b);
   },
-  parent: fn(7975).MobileUserSettings.VOICE,
+  parent: fn(7989).MobileUserSettings.VOICE,
   maximum: 200,
   useValue: function useStreamVolumeSettingValue() {
     let items = [ApplicationStreamingStore, AuthenticationStore, MediaEngineStore];

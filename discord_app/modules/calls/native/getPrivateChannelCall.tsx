@@ -1,8 +1,8 @@
-// === Module 10874: getPrivateChannelCall ===
+// === Module 10901: getPrivateChannelCall ===
 
-// Module 10874 (getPrivateChannelCall)
-import CallsUtils from "CallsUtils" /* 9087 */;
-import VoiceStateStore from "VoiceStateStore" /* 4579 */;
+// Module 10901 (getPrivateChannelCall)
+import CallsUtils from "CallsUtils" /* 9114 */;
+import VoiceStateStore from "VoiceStateStore" /* 4593 */;
 
 require = fn;
 const NOOP_NULL = fn(1074).NOOP_NULL;

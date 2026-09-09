@@ -1,9 +1,9 @@
-// === Module 10411: getStickerDiscoverableGuild ===
+// === Module 10438: getStickerDiscoverableGuild ===
 
-// Module 10411 (getStickerDiscoverableGuild)
+// Module 10438 (getStickerDiscoverableGuild)
 import Constants from "Constants" /* 1074 */;
 import HTTPUtils from "HTTPUtils" /* 1272 */;
-import GuildDiscoveryUtils from "GuildDiscoveryUtils" /* 7341 */;
+import GuildDiscoveryUtils from "GuildDiscoveryUtils" /* 7355 */;
 import size from "module_2" /* 2 */;
 
 const Endpoints = Constants.Endpoints;

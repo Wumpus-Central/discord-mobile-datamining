@@ -1,6 +1,6 @@
-// === Module 5806: ? ===
+// === Module 5820: ? ===
 
-// Module 5806
+// Module 5820
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/BountiesPosterIllocon-2x.png.js");

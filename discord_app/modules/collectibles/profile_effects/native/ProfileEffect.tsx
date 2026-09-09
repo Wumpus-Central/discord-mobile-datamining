@@ -1,16 +1,16 @@
-// === Module 8806: ProfileEffect ===
+// === Module 8835: ProfileEffect ===
 
-// Module 8806 (ProfileEffect)
+// Module 8835 (ProfileEffect)
 import initialize from "initialize" /* 504 */;
 import ConstantsIOS from "ConstantsIOS" /* 1093 */;
-import useProfileEffectDefault from "useProfileEffect" /* 8226 */;
-import utils from "utils" /* 8807 */;
-import constants from "constants" /* 8808 */;
-import ProfileEffectUtils from "ProfileEffectUtils" /* 8809 */;
-import ProfileEffectLayerDefault from "ProfileEffectLayer" /* 8812 */;
+import useProfileEffectDefault from "useProfileEffect" /* 8252 */;
+import utils from "utils" /* 8836 */;
+import constants from "constants" /* 8837 */;
+import ProfileEffectUtils from "ProfileEffectUtils" /* 8838 */;
+import ProfileEffectLayerDefault from "ProfileEffectLayer" /* 8841 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4552 */;
+import AccessibilityStore from "AccessibilityStore" /* 4566 */;
 import AppStateStore from "AppStateStore" /* 1895 */;
 
 require = fn;
@@ -66,15 +66,15 @@ function StaticEffect(useThumbnail) {
     const size1 = { width: tmp3, height: tmp8, top: 0 - bannerAdjustment };
     items1[1] = size1;
     size.style = items1;
-    obj.children = jsx(tmp4(5587), { resizeMode: "cover", resizeMethod: "resize", enableAnimation: true, source: null, alt: null, height: null, width: null, style: null });
-    const tmp4Result = tmp4(5587);
+    obj.children = jsx(tmp4(5601), { resizeMode: "cover", resizeMethod: "resize", enableAnimation: true, source: null, alt: null, height: null, width: null, style: null });
+    const tmp4Result = tmp4(5601);
   }
   return <closure_5 {...obj} />;
 }
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, Image: metroRequire } = get_ActivityIndicator);
 let jsx = fn(21).jsx;
-const createStyles = fn(4560);
+const createStyles = fn(4574);
 let closure_10 = createStyles.createStyles({ profileEffects: { position: "absolute", width: "100%", top: 0, bottom: 0, left: 0, right: 0, flex: 1, justifyContent: "flex-start" }, effect: { position: "absolute" } });
 function ProfileEffect(profileEffect) {
   profileEffect = profileEffect.profileEffect;
@@ -113,7 +113,7 @@ function ProfileEffect(profileEffect) {
       }
     }
   }, []);
-  jsx = noop.useRef(-memo(8808).PROFILE_EFFECT_INTRO_DELAY);
+  jsx = noop.useRef(-memo(8837).PROFILE_EFFECT_INTRO_DELAY);
   [c10, c11] = ref(noop.useState([]), 2);
   noop.useRef([]);
   noop.useRef(false);
@@ -129,7 +129,7 @@ function ProfileEffect(profileEffect) {
   }, items3);
   const items4 = [ref];
   const tmp7 = ref(noop.useState([]), 2);
-  const tmp9Result = memo1(8811)(noop.useCallback((arg0) => {
+  const tmp9Result = memo1(8840)(noop.useCallback((arg0) => {
     if (ref.current) {
       if (!ref3.current) {
         tmp.current = true;
