@@ -4,4 +4,4 @@
 import registerAsset from "module_1122" /* 1122 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/contact_sync/native/images", width: 156.5, height: 118, scales: [2, 3], hash: "273d7cc721dbd2991c78c1e8d926e220", name: "empty-suggestions-header", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/icons/empty_channel", width: 32, height: 32, scales: [2, 3], hash: "9a47d778a0b93e08af7ca2a5a0e14da1", name: "add_friend_32px", type: "png" });

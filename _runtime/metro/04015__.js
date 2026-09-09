@@ -1,16 +1,16 @@
 // === Module 4015: ? ===
 
 // Module 4015
-import module_3831 from "module_3831" /* 3831 */;
-import requiredArgs from "requiredArgs" /* 3651 */;
+import startOfQuarter from "startOfQuarter" /* 3875 */;
+import requiredArgs from "requiredArgs" /* 3664 */;
 
-if (!module_3831) {
-  let obj = { default: module_3831 };
+if (!startOfQuarter) {
+  let obj = { default: startOfQuarter };
   let tmp3 = obj;
 } else {
-  tmp3 = module_3831;
+  tmp3 = startOfQuarter;
 }
-module_3831 = tmp3;
+startOfQuarter = tmp3;
 if (!requiredArgs) {
   obj = { default: requiredArgs };
   let tmp5 = obj;
@@ -19,8 +19,10 @@ if (!requiredArgs) {
 }
 requiredArgs = tmp5;
 
-export default function isToday(arg0) {
-  requiredArgs.default(1, arguments);
-  return module_3831.default(arg0, Date.now());
+export default function isSameQuarter(arg0, arg1) {
+  requiredArgs.default(2, arguments);
+  const defaultResult1 = startOfQuarter.default(arg0);
+  const time = defaultResult1.getTime();
+  return time === startOfQuarter.default(arg1).getTime();
 };
 export default exports.default;

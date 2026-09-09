@@ -1,8 +1,16 @@
 // === Module 6814: ? ===
 
 // Module 6814
-import _mod17 from "module_17" /* 17 */;
+import _mod19 from "module_19" /* 19 */;
+import _mod6653 from "module_6653" /* 6653 */;
 
-const StyleSheet = _mod17.StyleSheet;
+const useContext = _mod19.useContext;
 
-export const styles = StyleSheet.create({ container: { flexDirection: "column-reverse", position: "absolute", top: 0, left: 0, right: 0 } });
+export const useBottomSheetGestureHandlers = () => {
+  const tmp = useContext(_mod6653.BottomSheetGestureHandlersContext);
+  if (null === tmp) {
+    throw "'useBottomSheetGestureHandlers' cannot be used out of the BottomSheet!";
+  } else {
+    return tmp;
+  }
+};

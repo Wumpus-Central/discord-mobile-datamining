@@ -1,11 +1,19 @@
 // === Module 5652: ? ===
 
 // Module 5652
-import get_ActivityIndicator from "module_17" /* 17 */;
+import Link from "Link" /* 1484 */;
+import noop from "module_19" /* 19 */;
 
-({ PixelRatio, Platform } = get_ActivityIndicator);
+require = fn;
+const Animated = fn(17).Animated;
+const jsx = fn(21).jsx;
 
-export const getDefaultHeaderHeight = function getDefaultHeaderHeight(layout, modal, headerStatusBarHeight) {
-  ({ width, height } = layout);
-  return 64 + headerStatusBarHeight;
+export const Background = function Background(style) {
+  const merged = Object.assign(style, Object.assign({ style: 0 }));
+  let obj = {};
+  const merged1 = Object.assign(merged);
+  obj = { flex: 1, backgroundColor: obj.useTheme().colors.background };
+  const items = [obj, style.style];
+  obj.style = items;
+  return <Animated.View flex={1} backgroundColor={obj.useTheme().colors.background} />;
 };

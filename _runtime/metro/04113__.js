@@ -1,70 +1,81 @@
 // === Module 4113: ? ===
 
 // Module 4113
-import module_2035 from "module_2035" /* 2035 */;
-import module_2036 from "module_2036" /* 2036 */;
+import module_2033 from "module_2033" /* 2033 */;
 
-if (!module_2035) {
-  let obj = { default: module_2035 };
+if (!module_2033) {
+  let obj = { default: module_2033 };
 } else {
-  obj = module_2035;
-}
-if (!module_2036) {
-  obj = { default: module_2036 };
-  let obj2 = obj;
-} else {
-  obj2 = module_2036;
+  obj = module_2033;
 }
 const date = {
-  ordinalNumber: obj2.default({
-    matchPattern: /^(第\s*)?\d+(日|時|分|秒)?/i,
-    parsePattern: /\d+/i,
-    valueCallback(match) {
-      return parseInt(match, 10);
+  ordinalNumber(arg0, unit) {
+    const NumberResult = Number(arg0);
+    unit = undefined;
+    if (null != unit) {
+      unit = unit.unit;
     }
-  }),
+    if ("quarter" === unit) {
+      if (1 === NumberResult) {
+        return "I";
+      } else if (2 === NumberResult) {
+        return "II";
+      } else if (3 === NumberResult) {
+        return "III";
+      } else if (4 === NumberResult) {
+        return "IV";
+      }
+    } else if ("day" === unit) {
+      if (1 === NumberResult) {
+        return "th\u1EE9 2";
+      } else if (2 === NumberResult) {
+        return "th\u1EE9 3";
+      } else if (3 === NumberResult) {
+        return "th\u1EE9 4";
+      } else if (4 === NumberResult) {
+        return "th\u1EE9 5";
+      } else if (5 === NumberResult) {
+        return "th\u1EE9 6";
+      } else if (6 === NumberResult) {
+        return "th\u1EE9 7";
+      } else if (7 === NumberResult) {
+        return "ch\u1EE7 nh\u1EADt";
+      }
+    } else if ("week" === unit) {
+      let str5 = "th\u1EE9 nh\u1EA5t";
+      if (1 !== NumberResult) {
+        str5 = `thứ ${tmp}`;
+      }
+      return str5;
+    } else if ("dayOfYear" === unit) {
+      let str4 = "\u0111\u1EA7u ti\u00EAn";
+      if (1 !== NumberResult) {
+        str4 = `thứ ${tmp}`;
+      }
+      return str4;
+    }
+    return String(NumberResult);
+  },
   era: null,
   quarter: null,
   month: null,
   day: null,
   dayPeriod: null
 };
-obj2 = { matchPatterns: { narrow: /^(前)/i, abbreviated: /^(前)/i, wide: /^(公元前|公元)/i }, defaultMatchWidth: "wide", parsePatterns: null, defaultParseWidth: "any" };
-const obj3 = { any: null };
-const items = [/^(前)/i, /^(公元)/i];
-obj3.any = items;
-obj2.parsePatterns = obj3;
-date.era = obj.default(obj2);
-const obj4 = {
-  matchPatterns: { narrow: /^[1234]/i, abbreviated: /^第[一二三四]刻/i, wide: /^第[一二三四]刻鐘/i },
-  defaultMatchWidth: "wide",
-  parsePatterns: null,
-  defaultParseWidth: "any",
-  valueCallback(arg0) {
-    return arg0 + 1;
+obj = { values: { narrow: ["TCN", "SCN"], abbreviated: ["tr\u01B0\u1EDBc CN", "sau CN"], wide: ["tr\u01B0\u1EDBc C\u00F4ng Nguy\u00EAn", "sau C\u00F4ng Nguy\u00EAn"] }, defaultWidth: "wide" };
+date.era = obj.default(obj);
+date.quarter = obj.default({
+  values: { narrow: ["1", "2", "3", "4"], abbreviated: ["Q1", "Q2", "Q3", "Q4"], wide: ["Qu\u00FD 1", "Qu\u00FD 2", "Qu\u00FD 3", "Qu\u00FD 4"] },
+  defaultWidth: "wide",
+  formattingValues: { narrow: ["1", "2", "3", "4"], abbreviated: ["Q1", "Q2", "Q3", "Q4"], wide: ["qu\u00FD I", "qu\u00FD II", "qu\u00FD III", "qu\u00FD IV"] },
+  defaultFormattingWidth: "wide",
+  argumentCallback(arg0) {
+    return arg0 - 1;
   }
-};
-const obj5 = { any: null };
-const items1 = [/(1|一)/i, /(2|二)/i, /(3|三)/i, /(4|四)/i];
-obj5.any = items1;
-obj4.parsePatterns = obj5;
-date.quarter = obj.default(obj4);
-const obj6 = { matchPatterns: { narrow: /^(一|二|三|四|五|六|七|八|九|十[二一])/i, abbreviated: /^(一|二|三|四|五|六|七|八|九|十[二一]|\d|1[12])月/i, wide: /^(一|二|三|四|五|六|七|八|九|十[二一])月/i }, defaultMatchWidth: "wide", parsePatterns: null, defaultParseWidth: "any" };
-const obj7 = { narrow: null, any: null };
-const items2 = [/^一/i, /^二/i, /^三/i, /^四/i, /^五/i, /^六/i, /^七/i, /^八/i, /^九/i, /^十(?!(一|二))/i, /^十一/i, /^十二/i];
-obj7.narrow = items2;
-const items3 = [/^一|1/i, /^二|2/i, /^三|3/i, /^四|4/i, /^五|5/i, /^六|6/i, /^七|7/i, /^八|8/i, /^九|9/i, /^十(?!(一|二))|10/i, /^十一|11/i, /^十二|12/i];
-obj7.any = items3;
-obj6.parsePatterns = obj7;
-date.month = obj.default(obj6);
-const obj8 = { matchPatterns: { narrow: /^[一二三四五六日]/i, short: /^[一二三四五六日]/i, abbreviated: /^週[一二三四五六日]/i, wide: /^星期[一二三四五六日]/i }, defaultMatchWidth: "wide", parsePatterns: null, defaultParseWidth: "any" };
-const obj9 = { any: null };
-const items4 = [/日/i, /一/i, /二/i, /三/i, /四/i, /五/i, /六/i];
-obj9.any = items4;
-obj8.parsePatterns = obj9;
-date.day = obj.default(obj8);
-const obj10 = { matchPatterns: { any: /^(上午?|下午?|午夜|[中正]午|早上?|下午|晚上?|凌晨)/i }, defaultMatchWidth: "any", parsePatterns: { any: { am: /^上午?/i, pm: /^下午?/i, midnight: /^午夜/i, noon: /^[中正]午/i, morning: /^早上/i, afternoon: /^下午/i, evening: /^晚上?/i, night: /^凌晨/i } }, defaultParseWidth: "any" };
-date.dayPeriod = obj.default(obj10);
+});
+date.month = obj.default({ values: { narrow: ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12"], abbreviated: ["Thg 1", "Thg 2", "Thg 3", "Thg 4", "Thg 5", "Thg 6", "Thg 7", "Thg 8", "Thg 9", "Thg 10", "Thg 11", "Thg 12"], wide: ["Th\u00E1ng M\u1ED9t", "Th\u00E1ng Hai", "Th\u00E1ng Ba", "Th\u00E1ng T\u01B0", "Th\u00E1ng N\u0103m", "Th\u00E1ng S\u00E1u", "Th\u00E1ng B\u1EA3y", "Th\u00E1ng T\u00E1m", "Th\u00E1ng Ch\u00EDn", "Th\u00E1ng M\u01B0\u1EDDi", "Th\u00E1ng M\u01B0\u1EDDi M\u1ED9t", "Th\u00E1ng M\u01B0\u1EDDi Hai"] }, defaultWidth: "wide", formattingValues: { narrow: ["01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12"], abbreviated: ["thg 1", "thg 2", "thg 3", "thg 4", "thg 5", "thg 6", "thg 7", "thg 8", "thg 9", "thg 10", "thg 11", "thg 12"], wide: ["th\u00E1ng 01", "th\u00E1ng 02", "th\u00E1ng 03", "th\u00E1ng 04", "th\u00E1ng 05", "th\u00E1ng 06", "th\u00E1ng 07", "th\u00E1ng 08", "th\u00E1ng 09", "th\u00E1ng 10", "th\u00E1ng 11", "th\u00E1ng 12"] }, defaultFormattingWidth: "wide" });
+date.day = obj.default({ values: { narrow: ["CN", "T2", "T3", "T4", "T5", "T6", "T7"], short: ["CN", "Th 2", "Th 3", "Th 4", "Th 5", "Th 6", "Th 7"], abbreviated: ["CN", "Th\u1EE9 2", "Th\u1EE9 3", "Th\u1EE9 4", "Th\u1EE9 5", "Th\u1EE9 6", "Th\u1EE9 7"], wide: ["Ch\u1EE7 Nh\u1EADt", "Th\u1EE9 Hai", "Th\u1EE9 Ba", "Th\u1EE9 T\u01B0", "Th\u1EE9 N\u0103m", "Th\u1EE9 S\u00E1u", "Th\u1EE9 B\u1EA3y"] }, defaultWidth: "wide" });
+date.dayPeriod = obj.default({ values: { narrow: { am: "am", pm: "pm", midnight: "n\u1EEDa \u0111\u00EAm", noon: "tr", morning: "sg", afternoon: "ch", evening: "t\u1ED1i", night: "\u0111\u00EAm" }, abbreviated: { am: "AM", pm: "PM", midnight: "n\u1EEDa \u0111\u00EAm", noon: "tr\u01B0a", morning: "s\u00E1ng", afternoon: "chi\u1EC1u", evening: "t\u1ED1i", night: "\u0111\u00EAm" }, wide: { am: "SA", pm: "CH", midnight: "n\u1EEDa \u0111\u00EAm", noon: "tr\u01B0a", morning: "s\u00E1ng", afternoon: "chi\u1EC1u", evening: "t\u1ED1i", night: "\u0111\u00EAm" } }, defaultWidth: "wide", formattingValues: { narrow: { am: "am", pm: "pm", midnight: "n\u1EEDa \u0111\u00EAm", noon: "tr", morning: "sg", afternoon: "ch", evening: "t\u1ED1i", night: "\u0111\u00EAm" }, abbreviated: { am: "AM", pm: "PM", midnight: "n\u1EEDa \u0111\u00EAm", noon: "tr\u01B0a", morning: "s\u00E1ng", afternoon: "chi\u1EC1u", evening: "t\u1ED1i", night: "\u0111\u00EAm" }, wide: { am: "SA", pm: "CH", midnight: "n\u1EEDa \u0111\u00EAm", noon: "gi\u1EEFa tr\u01B0a", morning: "v\u00E0o bu\u1ED5i s\u00E1ng", afternoon: "v\u00E0o bu\u1ED5i chi\u1EC1u", evening: "v\u00E0o bu\u1ED5i t\u1ED1i", night: "v\u00E0o ban \u0111\u00EAm" } }, defaultFormattingWidth: "wide" });
 
 export default date;
 export default exports.default;

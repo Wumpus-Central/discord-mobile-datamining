@@ -1,16 +1,16 @@
 // === Module 4006: ? ===
 
 // Module 4006
-import module_3995 from "module_3995" /* 3995 */;
-import requiredArgs from "requiredArgs" /* 3651 */;
+import _typeof from "module_3663" /* 3663 */;
+import requiredArgs from "requiredArgs" /* 3664 */;
 
-if (!module_3995) {
-  let obj = { default: module_3995 };
+if (!_typeof) {
+  let obj = { default: _typeof };
   let tmp3 = obj;
 } else {
-  tmp3 = module_3995;
+  tmp3 = _typeof;
 }
-module_3995 = tmp3;
+_typeof = tmp3;
 if (!requiredArgs) {
   obj = { default: requiredArgs };
   let tmp5 = obj;
@@ -19,8 +19,8 @@ if (!requiredArgs) {
 }
 requiredArgs = tmp5;
 
-export default function isThisHour(arg0) {
+export default function isMonday(arg0) {
   requiredArgs.default(1, arguments);
-  return module_3995.default(Date.now(), arg0);
+  return 1 === _typeof.default(arg0).getDay();
 };
 export default exports.default;

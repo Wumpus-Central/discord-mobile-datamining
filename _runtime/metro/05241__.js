@@ -1,16 +1,22 @@
 // === Module 5241: ? ===
 
 // Module 5241
-import _mod5238 from "module_5238" /* 5238 */;
+import _mod5227 from "module_5227" /* 5227 */;
 
 require = arg1;
 const dependencyMap = arg6;
-const obj = { 45056: null, 45057: "NumberOfImages", 45058: "MPEntry", 45059: "ImageUIDList", 45060: "TotalFrames" };
-obj[45056] = {
-  name: "MPFVersion",
-  description(value) {
-    return _mod5238.getStringValue(value);
+let c2 = 6;
+let closure_3 = ["GIF87a", "GIF89a"];
+
+export default {
+  isGifFile(dataView) {
+    let hasItem = dataView;
+    if (hasItem) {
+      hasItem = closure_3.includes(_mod5227.getStringFromDataView(dataView, 0, c2));
+    }
+    return hasItem;
+  },
+  findOffsets() {
+    return { gifHeaderOffset: 0 };
   }
 };
-
-export default obj;

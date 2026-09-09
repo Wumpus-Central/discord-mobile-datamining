@@ -1,8 +1,10 @@
 // === Module 3989: ? ===
 
 // Module 3989
-import Parser2 from "Parser" /* 3956 */;
+import Parser2 from "Parser" /* 3969 */;
+import module_3987 from "module_3987" /* 3987 */;
 
+let _createSuperInternal = require;
 function _typeof(arg0) {
   if (typeof Symbol === "function") {
     let _Symbol = Symbol;
@@ -28,15 +30,15 @@ function _typeof(arg0) {
     str = typeof arg0;
   };
 }
-function _setPrototypeOf(ISOTimezoneWithZParser, Parser) {
+function _setPrototypeOf(StandAloneLocalDayParser, Parser) {
   _setPrototypeOf = Object.setPrototypeOf;
   if (!_setPrototypeOf) {
-    _setPrototypeOf = function _setPrototypeOf(ISOTimezoneWithZParser, Parser) {
-      ISOTimezoneWithZParser.__proto__ = Parser;
-      return ISOTimezoneWithZParser;
+    _setPrototypeOf = function _setPrototypeOf(StandAloneLocalDayParser, Parser) {
+      StandAloneLocalDayParser.__proto__ = Parser;
+      return StandAloneLocalDayParser;
     };
   }
-  return _setPrototypeOf(ISOTimezoneWithZParser, Parser);
+  return _setPrototypeOf(StandAloneLocalDayParser, Parser);
 }
 function _getPrototypeOf(arg0) {
   if (Object.setPrototypeOf) {
@@ -54,9 +56,16 @@ function _getPrototypeOf(arg0) {
   }
   return _getPrototypeOf(arg0);
 }
+if (!module_3987) {
+  let obj = { default: module_3987 };
+  let tmp3 = obj;
+} else {
+  tmp3 = module_3987;
+}
+module_3987 = tmp3;
 const Parser = Parser2.Parser;
-let _createSuperInternal;
-class ISOTimezoneWithZParser {
+_createSuperInternal = undefined;
+class StandAloneLocalDayParser {
   constructor() {
     if (this instanceof closure_1) {
       length = arguments.length;
@@ -92,10 +101,10 @@ class ISOTimezoneWithZParser {
         str2 = "priority";
         if ("priority" in applyResult) {
           _Object = Object;
-          definePropertyResult = Object.defineProperty(applyResult, "priority", { value: 10, enumerable: true, configurable: true, writable: true });
+          definePropertyResult = Object.defineProperty(applyResult, "priority", { value: 90, enumerable: true, configurable: true, writable: true });
         } else {
-          num3 = 10;
-          applyResult.priority = 10;
+          num3 = 90;
+          applyResult.priority = 90;
         }
         if (tmp13) {
           _ReferenceError = ReferenceError;
@@ -106,7 +115,7 @@ class ISOTimezoneWithZParser {
           tmp19 = referenceError1;
           throw referenceError1;
         } else {
-          items1 = ["t", "T", "x"];
+          items1 = ["y", "R", "u", "q", "Q", "M", "L", "I", "d", "D", "E", "i", "e", "t", "T"];
           str3 = "incompatibleTokens";
           if ("incompatibleTokens" in applyResult) {
             _Object2 = Object;
@@ -130,7 +139,7 @@ class ISOTimezoneWithZParser {
     }
   }
 }
-let dependencyMap = ISOTimezoneWithZParser;
+let dependencyMap = StandAloneLocalDayParser;
 if (typeof Parser !== "function") {
   if (null !== Parser) {
     let _TypeError = TypeError;
@@ -142,9 +151,10 @@ let prototype = Parser;
 if (Parser) {
   prototype = Parser.prototype;
 }
-ISOTimezoneWithZParser.prototype = Object.create(prototype, { constructor: { value: ISOTimezoneWithZParser, writable: true, configurable: true } });
+obj = { constructor: { value: StandAloneLocalDayParser, writable: true, configurable: true } };
+StandAloneLocalDayParser.prototype = Object.create(prototype, obj);
 if (Parser) {
-  _setPrototypeOf(ISOTimezoneWithZParser, Parser);
+  _setPrototypeOf(StandAloneLocalDayParser, Parser);
 }
 let num = 0;
 dependencyMap = (function _isNativeReflectConstruct() {
@@ -181,10 +191,10 @@ dependencyMap = (function _isNativeReflectConstruct() {
 })();
 _createSuperInternal = function _createSuperInternal() {
   const self = this;
-  const obj = _getPrototypeOf(_createSuperInternal);
+  const obj = hasOwnProperty(_createSuperInternal);
   if (closure_1) {
     const _Reflect = Reflect;
-    let constructResult = Reflect.construct(obj, arguments, _getPrototypeOf(self).constructor);
+    let constructResult = Reflect.construct(obj, arguments, hasOwnProperty(self).constructor);
   } else {
     constructResult = obj(...arguments);
   }
@@ -205,50 +215,66 @@ _createSuperInternal = function _createSuperInternal() {
 };
 const entry = {
   key: "parse",
-  value: function parse(arg0, arg1) {
-    if ("X" === arg1) {
-      return _createSuperInternal(3958).parseTimezonePattern(_createSuperInternal(3959).timezonePatterns.basicOptionalMinutes, arg0);
-    } else if ("XX" === arg1) {
-      return _createSuperInternal(3958).parseTimezonePattern(_createSuperInternal(3959).timezonePatterns.basic, arg0);
-    } else if ("XXXX" === arg1) {
-      return _createSuperInternal(3958).parseTimezonePattern(_createSuperInternal(3959).timezonePatterns.basicOptionalSeconds, arg0);
-    } else if ("XXXXX" === arg1) {
-      return _createSuperInternal(3958).parseTimezonePattern(_createSuperInternal(3959).timezonePatterns.extendedOptionalSeconds, arg0);
-    } else {
-      return _createSuperInternal(3958).parseTimezonePattern(_createSuperInternal(3959).timezonePatterns.extended, arg0);
+  value: function parse(arg0, arg1, ordinalNumber, arg3) {
+    const weekStartsOn = arg3;
+    function valueCallback(arg0) {
+      return (arg0 + weekStartsOn.weekStartsOn + 6) % 7 + 7 * Math.floor((arg0 - 1) / 7);
     }
+    if ("c" !== arg1) {
+      if ("cc" !== arg1) {
+        if ("co" === arg1) {
+          return _createSuperInternal(3971).mapValue(ordinalNumber.ordinalNumber(arg0, { unit: "day" }), valueCallback);
+        } else if ("ccc" === arg1) {
+          return ordinalNumber.day(arg0, { width: "abbreviated", context: "standalone" }) || ordinalNumber.day(arg0, { width: "short", context: "standalone" }) || ordinalNumber.day(arg0, { width: "narrow", context: "standalone" });
+        } else if ("ccccc" === arg1) {
+          return ordinalNumber.day(arg0, { width: "narrow", context: "standalone" });
+        } else if ("cccccc" === arg1) {
+          return ordinalNumber.day(arg0, { width: "short", context: "standalone" }) || ordinalNumber.day(arg0, { width: "narrow", context: "standalone" });
+        } else {
+          return ordinalNumber.day(arg0, { width: "wide", context: "standalone" }) || ordinalNumber.day(arg0, { width: "abbreviated", context: "standalone" }) || ordinalNumber.day(arg0, { width: "short", context: "standalone" }) || ordinalNumber.day(arg0, { width: "narrow", context: "standalone" });
+        }
+      }
+    }
+    return _createSuperInternal(3971).mapValue(_createSuperInternal(3971).parseNDigits(arg1.length, arg0), valueCallback);
   }
 };
 let items = [
   entry,
   {
-    key: "set",
-    value: function set(getTime, timestampIsSet, arg2) {
-      let date = getTime;
-      if (!timestampIsSet.timestampIsSet) {
-        const _Date = Date;
-        date = new Date(getTime.getTime() - arg2);
+    key: "validate",
+    value: function validate(arg0, arg1) {
+      let tmp = arg1 >= 0;
+      if (tmp) {
+        tmp = arg1 <= 6;
       }
-      return date;
+      return tmp;
+    }
+  },
+  {
+    key: "set",
+    value: function set(arg0, arg1, arg2, arg3) {
+      const defaultResult = module_3987.default(arg0, arg2, arg3);
+      defaultResult.setUTCHours(0, 0, 0, 0);
+      return defaultResult;
     }
   }
 ];
 if (0 < items.length) {
   do {
-    let tmp5 = items[num];
-    let flag = tmp5.enumerable;
+    let tmp7 = items[num];
+    let flag = tmp7.enumerable;
     if (!flag) {
       flag = false;
     }
-    tmp5.enumerable = flag;
-    tmp5.configurable = true;
-    if ("value" in tmp5) {
-      tmp5.writable = true;
+    tmp7.enumerable = flag;
+    tmp7.configurable = true;
+    if ("value" in tmp7) {
+      tmp7.writable = true;
     }
     let _Object = Object;
-    let definePropertyResult1 = Object.defineProperty(tmp4, tmp5.key, tmp5);
+    let definePropertyResult1 = Object.defineProperty(tmp6, tmp7.key, tmp7);
     num = num + 1;
   } while (num < items.length);
 }
 
-export { ISOTimezoneWithZParser };
+export { StandAloneLocalDayParser };

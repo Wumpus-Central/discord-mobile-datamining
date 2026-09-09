@@ -1,16 +1,16 @@
 // === Module 4011: ? ===
 
 // Module 4011
-import module_4003 from "module_4003" /* 4003 */;
-import requiredArgs from "requiredArgs" /* 3651 */;
+import startOfWeek from "startOfWeek" /* 3822 */;
+import requiredArgs from "requiredArgs" /* 3664 */;
 
-if (!module_4003) {
-  let obj = { default: module_4003 };
+if (!startOfWeek) {
+  let obj = { default: startOfWeek };
   let tmp3 = obj;
 } else {
-  tmp3 = module_4003;
+  tmp3 = startOfWeek;
 }
-module_4003 = tmp3;
+startOfWeek = tmp3;
 if (!requiredArgs) {
   obj = { default: requiredArgs };
   let tmp5 = obj;
@@ -19,8 +19,10 @@ if (!requiredArgs) {
 }
 requiredArgs = tmp5;
 
-export default function isThisSecond(arg0) {
-  requiredArgs.default(1, arguments);
-  return module_4003.default(Date.now(), arg0);
+export default function isSameWeek(arg0, arg1, arg2) {
+  requiredArgs.default(2, arguments);
+  const defaultResult1 = startOfWeek.default(arg0, arg2);
+  const time = defaultResult1.getTime();
+  return time === startOfWeek.default(arg1, arg2).getTime();
 };
 export default exports.default;

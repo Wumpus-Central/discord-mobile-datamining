@@ -1,113 +1,25 @@
 // === Module 3800: ? ===
 
 // Module 3800
-import module_3801 from "module_3801" /* 3801 */;
-import _typeof from "module_3650" /* 3650 */;
-import module_3654 from "module_3654" /* 3654 */;
-import requiredArgs from "requiredArgs" /* 3651 */;
-import module_3802 from "module_3802" /* 3802 */;
-import module_3803 from "module_3803" /* 3803 */;
+let closure_0 = { lessThanXSeconds: { one: "bir saniyeden az", other: "{{count}} saniyeden az" }, xSeconds: { one: "1 saniye", other: "{{count}} saniye" }, halfAMinute: "yar\u0131m dakika", lessThanXMinutes: { one: "bir dakikadan az", other: "{{count}} dakikadan az" }, xMinutes: { one: "1 dakika", other: "{{count}} dakika" }, aboutXHours: { one: "yakla\u015F\u0131k 1 saat", other: "yakla\u015F\u0131k {{count}} saat" }, xHours: { one: "1 saat", other: "{{count}} saat" }, xDays: { one: "1 g\u00FCn", other: "{{count}} g\u00FCn" }, aboutXWeeks: { one: "yakla\u015F\u0131k 1 hafta", other: "yakla\u015F\u0131k {{count}} hafta" }, xWeeks: { one: "1 hafta", other: "{{count}} hafta" }, aboutXMonths: { one: "yakla\u015F\u0131k 1 ay", other: "yakla\u015F\u0131k {{count}} ay" }, xMonths: { one: "1 ay", other: "{{count}} ay" }, aboutXYears: { one: "yakla\u015F\u0131k 1 y\u0131l", other: "yakla\u015F\u0131k {{count}} y\u0131l" }, xYears: { one: "1 y\u0131l", other: "{{count}} y\u0131l" }, overXYears: { one: "1 y\u0131ldan fazla", other: "{{count}} y\u0131ldan fazla" }, almostXYears: { one: "neredeyse 1 y\u0131l", other: "neredeyse {{count}} y\u0131l" } };
 
-if (!module_3801) {
-  let obj = { default: module_3801 };
-  let tmp3 = obj;
-} else {
-  tmp3 = module_3801;
-}
-module_3801 = tmp3;
-if (!_typeof) {
-  obj = { default: _typeof };
-  let tmp5 = obj;
-} else {
-  tmp5 = _typeof;
-}
-_typeof = tmp5;
-if (!module_3654) {
-  obj = { default: module_3654 };
-  let tmp7 = obj;
-} else {
-  tmp7 = module_3654;
-}
-module_3654 = tmp7;
-if (!requiredArgs) {
-  const obj1 = { default: requiredArgs };
-  let tmp9 = obj1;
-} else {
-  tmp9 = requiredArgs;
-}
-requiredArgs = tmp9;
-if (!module_3802) {
-  let obj2 = { default: module_3802 };
-  let tmp11 = obj2;
-} else {
-  tmp11 = module_3802;
-}
-module_3802 = tmp11;
-if (!module_3803) {
-  const obj3 = { default: module_3803 };
-  let tmp13 = obj3;
-} else {
-  tmp13 = module_3803;
-}
-module_3803 = tmp13;
-
-export default function addBusinessDays(arg0, arg1) {
-  let diff;
-  requiredArgs.default(2, arguments);
-  const defaultResult1 = _typeof.default(arg0);
-  let obj2 = module_3801;
-  let defaultResult2 = module_3801.default(defaultResult1);
-  const defaultResult3 = module_3654.default(arg1);
-  if (isNaN(defaultResult3)) {
-    const _Date = Date;
-    const date = new Date(NaN);
-    return date;
+export default function formatDistance(arg0, arg1, addSuffix) {
+  if (typeof closure_0[arg0] === "string") {
+    let tmp5 = tmp;
+    if (null != addSuffix) {
+      tmp5 = tmp;
+      if (addSuffix.addSuffix) {
+        if (!addSuffix.comparison) {
+          let text = `${tmp} önce`;
+        }
+        text = `${tmp} sonra`;
+      }
+    }
+    return tmp5;
+  } else if (1 === arg1) {
+    let one = tmp.one;
   } else {
-    let num3 = 1;
-    const hours = defaultResult1.getHours();
-    if (defaultResult3 < 0) {
-      num3 = -1;
-    }
-    defaultResult1.setDate(defaultResult1.getDate() + 7 * module_3654.default(defaultResult3 / 5));
-    const _Math = Math;
-    let absolute = Math.abs(defaultResult3 % 5);
-    if (absolute > 0) {
-      do {
-        let setDateResult1 = defaultResult1.setDate(defaultResult1.getDate() + num3);
-        diff = absolute;
-        if (!module_3801.default(defaultResult1)) {
-          diff = absolute - 1;
-        }
-        absolute = diff;
-        obj2 = module_3801;
-      } while (diff > 0);
-    }
-    if (defaultResult2) {
-      defaultResult2 = obj2.default(defaultResult1);
-    }
-    if (defaultResult2) {
-      defaultResult2 = 0 !== defaultResult3;
-    }
-    if (defaultResult2) {
-      if (module_3803.default(defaultResult1)) {
-        let num6 = -1;
-        if (num3 < 0) {
-          num6 = 2;
-        }
-        defaultResult1.setDate(defaultResult1.getDate() + num6);
-        const date1 = defaultResult1.getDate();
-      }
-      if (module_3802.default(defaultResult1)) {
-        let num7 = -2;
-        if (num3 < 0) {
-          num7 = 1;
-        }
-        defaultResult1.setDate(defaultResult1.getDate() + num7);
-        const date2 = defaultResult1.getDate();
-      }
-    }
-    defaultResult1.setHours(hours);
-    return defaultResult1;
+    one = tmp.other.replace("{{count}}", arg1.toString());
   }
 };
 export default exports.default;

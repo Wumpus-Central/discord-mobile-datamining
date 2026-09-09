@@ -1,16 +1,16 @@
 // === Module 3915: ? ===
 
 // Module 3915
-import _typeof from "module_3650" /* 3650 */;
-import requiredArgs from "requiredArgs" /* 3651 */;
+import module_3911 from "module_3911" /* 3911 */;
+import requiredArgs from "requiredArgs" /* 3664 */;
 
-if (!_typeof) {
-  let obj = { default: _typeof };
+if (!module_3911) {
+  let obj = { default: module_3911 };
   let tmp3 = obj;
 } else {
-  tmp3 = _typeof;
+  tmp3 = module_3911;
 }
-_typeof = tmp3;
+module_3911 = tmp3;
 if (!requiredArgs) {
   obj = { default: requiredArgs };
   let tmp5 = obj;
@@ -19,14 +19,8 @@ if (!requiredArgs) {
 }
 requiredArgs = tmp5;
 
-export default function getDaysInMonth(arg0) {
+export default function formatDistanceToNow(arg0, arg1) {
   requiredArgs.default(1, arguments);
-  const defaultResult1 = _typeof.default(arg0);
-  const fullYear = defaultResult1.getFullYear();
-  const month = defaultResult1.getMonth();
-  const date = new Date(0);
-  date.setFullYear(fullYear, month + 1, 0);
-  date.setHours(0, 0, 0, 0);
-  return date.getDate();
+  return module_3911.default(arg0, Date.now(), arg1);
 };
 export default exports.default;

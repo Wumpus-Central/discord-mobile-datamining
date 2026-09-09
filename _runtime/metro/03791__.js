@@ -1,78 +1,41 @@
 // === Module 3791: ? ===
 
 // Module 3791
-import module_2035 from "module_2035" /* 2035 */;
-import module_2036 from "module_2036" /* 2036 */;
+import module_2033 from "module_2033" /* 2033 */;
 
-if (!module_2035) {
-  let obj = { default: module_2035 };
+if (!module_2033) {
+  let obj = { default: module_2033 };
 } else {
-  obj = module_2035;
-}
-if (!module_2036) {
-  obj = { default: module_2036 };
-  let obj2 = obj;
-} else {
-  obj2 = module_2036;
+  obj = module_2033;
 }
 const date = {
-  ordinalNumber: obj2.default({
-    matchPattern: /^(\d+)(\.)?/i,
-    parsePattern: /\d+/i,
-    valueCallback(match) {
-      return parseInt(match, 10);
+  ordinalNumber(arg0, arg1) {
+    const NumberResult = Number(arg0);
+    const result = NumberResult % 100;
+    if (20 < result) {
+      const result1 = result % 10;
+      return NumberResult + ":a";
     }
-  }),
+    return NumberResult + ":e";
+  },
   era: null,
   quarter: null,
   month: null,
   day: null,
   dayPeriod: null
 };
-obj2 = { matchPatterns: { narrow: /^(mö|ms)/i, abbreviated: /^(mö|ms)/i, wide: /^(milattan önce|milattan sonra)/i }, defaultMatchWidth: "wide", parsePatterns: null, defaultParseWidth: "any" };
-const obj3 = { any: null };
-const items = [/(^mö|^milattan önce)/i, /(^ms|^milattan sonra)/i];
-obj3.any = items;
-obj2.parsePatterns = obj3;
-date.era = obj.default(obj2);
-const obj4 = {
-  matchPatterns: { narrow: /^[1234]/i, abbreviated: /^[1234]ç/i, wide: /^((i|İ)lk|(i|İ)kinci|üçüncü|son) çeyrek/i },
-  defaultMatchWidth: "wide",
-  parsePatterns: null,
-  defaultParseWidth: "any",
-  valueCallback(arg0) {
-    return arg0 + 1;
+obj = { values: { narrow: ["f.Kr.", "e.Kr."], abbreviated: ["f.Kr.", "e.Kr."], wide: ["f\u00F6re Kristus", "efter Kristus"] }, defaultWidth: "wide" };
+date.era = obj.default(obj);
+date.quarter = obj.default({
+  values: { narrow: ["1", "2", "3", "4"], abbreviated: ["Q1", "Q2", "Q3", "Q4"], wide: ["1:a kvartalet", "2:a kvartalet", "3:e kvartalet", "4:e kvartalet"] },
+  defaultWidth: "wide",
+  argumentCallback(arg0) {
+    return arg0 - 1;
   }
-};
-const obj5 = { any: null, abbreviated: null, wide: null };
-const items1 = [/1/i, /2/i, /3/i, /4/i];
-obj5.any = items1;
-const items2 = [/1ç/i, /2ç/i, /3ç/i, /4ç/i];
-obj5.abbreviated = items2;
-const items3 = [/^(i|İ)lk çeyrek/i, /(i|İ)kinci çeyrek/i, /üçüncü çeyrek/i, /son çeyrek/i];
-obj5.wide = items3;
-obj4.parsePatterns = obj5;
-date.quarter = obj.default(obj4);
-const obj6 = { matchPatterns: { narrow: /^[oşmnhtaek]/i, abbreviated: /^(oca|şub|mar|nis|may|haz|tem|ağu|eyl|eki|kas|ara)/i, wide: /^(ocak|şubat|mart|nisan|mayıs|haziran|temmuz|ağustos|eylül|ekim|kasım|aralık)/i }, defaultMatchWidth: "wide", parsePatterns: null, defaultParseWidth: "any" };
-const obj7 = { narrow: null, any: null };
-const items4 = [/^o/i, /^ş/i, /^m/i, /^n/i, /^m/i, /^h/i, /^t/i, /^a/i, /^e/i, /^e/i, /^k/i, /^a/i];
-obj7.narrow = items4;
-const items5 = [/^o/i, /^ş/i, /^mar/i, /^n/i, /^may/i, /^h/i, /^t/i, /^ağ/i, /^ey/i, /^ek/i, /^k/i, /^ar/i];
-obj7.any = items5;
-obj6.parsePatterns = obj7;
-date.month = obj.default(obj6);
-const obj8 = { matchPatterns: { narrow: /^[psçc]/i, short: /^(pz|pt|sa|ça|pe|cu|ct)/i, abbreviated: /^(paz|pzt|sal|çar|per|cum|cts)/i, wide: /^(pazar(?!tesi)|pazartesi|salı|çarşamba|perşembe|cuma(?!rtesi)|cumartesi)/i }, defaultMatchWidth: "wide", parsePatterns: null, defaultParseWidth: "any" };
-const obj9 = { narrow: null, any: null, wide: null };
-const items6 = [/^p/i, /^p/i, /^s/i, /^ç/i, /^p/i, /^c/i, /^c/i];
-obj9.narrow = items6;
-const items7 = [/^pz/i, /^pt/i, /^sa/i, /^ça/i, /^pe/i, /^cu/i, /^ct/i];
-obj9.any = items7;
-const items8 = [/^pazar(?!tesi)/i, /^pazartesi/i, /^salı/i, /^çarşamba/i, /^perşembe/i, /^cuma(?!rtesi)/i, /^cumartesi/i];
-obj9.wide = items8;
-obj8.parsePatterns = obj9;
-date.day = obj.default(obj8);
-const obj10 = { matchPatterns: { narrow: /^(öö|ös|gy|ö|sa|ös|ak|ge)/i, any: /^(ö\.?\s?[ös]\.?|öğleden sonra|gece yarısı|öğle|(sabah|öğ|akşam|gece)(leyin))/i }, defaultMatchWidth: "any", parsePatterns: { any: { am: /^ö\.?ö\.?/i, pm: /^ö\.?s\.?/i, midnight: /^(gy|gece yarısı)/i, noon: /^öğ/i, morning: /^sa/i, afternoon: /^öğleden sonra/i, evening: /^ak/i, night: /^ge/i } }, defaultParseWidth: "any" };
-date.dayPeriod = obj.default(obj10);
+});
+date.month = obj.default({ values: { narrow: ["J", "F", "M", "A", "M", "J", "J", "A", "S", "O", "N", "D"], abbreviated: ["jan.", "feb.", "mars", "apr.", "maj", "juni", "juli", "aug.", "sep.", "okt.", "nov.", "dec."], wide: ["januari", "februari", "mars", "april", "maj", "juni", "juli", "augusti", "september", "oktober", "november", "december"] }, defaultWidth: "wide" });
+date.day = obj.default({ values: { narrow: ["S", "M", "T", "O", "T", "F", "L"], short: ["s\u00F6", "m\u00E5", "ti", "on", "to", "fr", "l\u00F6"], abbreviated: ["s\u00F6n", "m\u00E5n", "tis", "ons", "tors", "fre", "l\u00F6r"], wide: ["s\u00F6ndag", "m\u00E5ndag", "tisdag", "onsdag", "torsdag", "fredag", "l\u00F6rdag"] }, defaultWidth: "wide" });
+date.dayPeriod = obj.default({ values: { narrow: { am: "fm", pm: "em", midnight: "midnatt", noon: "middag", morning: "morg.", afternoon: "efterm.", evening: "kv\u00E4ll", night: "natt" }, abbreviated: { am: "f.m.", pm: "e.m.", midnight: "midnatt", noon: "middag", morning: "morgon", afternoon: "efterm.", evening: "kv\u00E4ll", night: "natt" }, wide: { am: "f\u00F6rmiddag", pm: "eftermiddag", midnight: "midnatt", noon: "middag", morning: "morgon", afternoon: "eftermiddag", evening: "kv\u00E4ll", night: "natt" } }, defaultWidth: "wide", formattingValues: { narrow: { am: "fm", pm: "em", midnight: "midnatt", noon: "middag", morning: "p\u00E5 morg.", afternoon: "p\u00E5 efterm.", evening: "p\u00E5 kv\u00E4llen", night: "p\u00E5 natten" }, abbreviated: { am: "fm", pm: "em", midnight: "midnatt", noon: "middag", morning: "p\u00E5 morg.", afternoon: "p\u00E5 efterm.", evening: "p\u00E5 kv\u00E4llen", night: "p\u00E5 natten" }, wide: { am: "fm", pm: "em", midnight: "midnatt", noon: "middag", morning: "p\u00E5 morgonen", afternoon: "p\u00E5 eftermiddagen", evening: "p\u00E5 kv\u00E4llen", night: "p\u00E5 natten" } }, defaultFormattingWidth: "wide" });
 
 export default date;
 export default exports.default;

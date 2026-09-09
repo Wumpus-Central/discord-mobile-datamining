@@ -1,18 +1,17 @@
 // === Module 7033: ? ===
 
 // Module 7033
-import CardAnimationContext from "CardAnimationContext" /* 7027 */;
-import noop from "module_19" /* 19 */;
+import _mod7034 from "module_7034" /* 7034 */;
 
 require = arg1;
+const dependencyMap = arg6;
 
-export const useCardAnimation = function useCardAnimation() {
-  const context = noop.useContext(CardAnimationContext.CardAnimationContext);
-  if (undefined === context) {
-    const _Error = Error;
-    const error = new Error("Couldn't find values for card animation. Are you inside a screen in Stack?");
-    throw error;
-  } else {
-    return context;
+export const getDistanceForDirection = function getDistanceForDirection(layout, gestureDirection, arg2) {
+  const invertedMultiplier = _mod7034.getInvertedMultiplier(gestureDirection, arg2);
+  if ("vertical" !== gestureDirection) {
+    if ("vertical-inverted" !== gestureDirection) {
+      return layout.width * invertedMultiplier;
+    }
   }
+  return layout.height * invertedMultiplier;
 };

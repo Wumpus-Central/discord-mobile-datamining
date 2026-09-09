@@ -1,14 +1,17 @@
 // === Module 6649: ? ===
 
 // Module 6649
-const fn = function o() {
+import _mod19 from "module_19" /* 19 */;
+import _mod6650 from "module_6650" /* 6650 */;
 
+const useContext = _mod19.useContext;
+
+export const useBottomSheetInternal = function useBottomSheetInternal(arg0) {
+  const tmp = useContext(_mod6650.BottomSheetInternalContext);
+  if (true !== arg0) {
+    if (null === tmp) {
+      throw "'useBottomSheetInternal' cannot be used out of the BottomSheet!";
+    }
+  }
+  return tmp;
 };
-fn.__closure = {};
-fn.__workletHash = 16791771801238;
-fn.__initData = { code: "function pnpm_noopTs1(){}" };
-
-export () => {
-
-}
-export const workletNoop = fn;

@@ -1,17 +1,14 @@
 // === Module 14335: ? ===
 
 // Module 14335
-import _mod14304 from "module_14304" /* 14304 */;
-import element from "element" /* 14336 */;
-import getOwnPropertyDescriptor from "module_14303" /* 14303 */;
+import _mod14336 from "module_14336" /* 14336 */;
 
-let tmp2 = !getOwnPropertyDescriptor;
-if (!getOwnPropertyDescriptor) {
-  tmp2 = !_mod14304(() => 7 !== Object.defineProperty(element("div"), "a", {
-    get() {
-      return 7;
-    }
-  }).a);
-}
 
-export default tmp2;
+export default (arg0) => {
+  if (_mod14336(arg0)) {
+    const tmp4 = new TypeError("Can't call method on " + arg0);
+    throw tmp4;
+  } else {
+    return arg0;
+  }
+};

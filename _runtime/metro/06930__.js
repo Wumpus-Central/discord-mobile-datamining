@@ -1,7 +1,9 @@
 // === Module 6930: ? ===
 
 // Module 6930
-import _modDef6931 from "module_6931" /* 6931 */;
+import _mod17 from "module_17" /* 17 */;
+import FlashList from "FlashList" /* 6869 */;
 
+const Animated = _mod17.Animated;
 
-export default _modDef6931;
+export default Animated.createAnimatedComponent(FlashList.FlashList);

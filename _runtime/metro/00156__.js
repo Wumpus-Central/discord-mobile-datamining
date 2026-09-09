@@ -14,8 +14,8 @@ const Performance = fn;
 let closure_6 = ["mark", "measure"];
 const NativePerformanceCxx = nullthrows(_modDef154);
 ({ reportMark: closure_8, reportMeasure: closure_9, getMarkTime: c10, clearMarks: closure_11, clearMeasures: closure_12 } = NativePerformanceCxx);
-let closure_13 = { startTime: 0, detail: "channel" };
-let closure_14 = { name: "", startTime: 0, duration: 0, detail: "disabled" };
+let closure_13 = { startTime: 0, detail: "accessible" };
+let closure_14 = { name: "", startTime: 0, duration: 0, detail: "ip" };
 function getMarkTimeForMeasure(arg0) {
 
 }

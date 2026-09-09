@@ -1,26 +1,17 @@
 // === Module 12914: ? ===
 
 // Module 12914
-import _mod12802 from "module_12802" /* 12802 */;
-import _mod12915 from "module_12915" /* 12915 */;
 
-require = arg1;
-const dependencyMap = arg6;
-
-export const isBrowser = function isBrowser() {
-  let tmp = typeof window !== "undefined";
-  if (typeof window !== "undefined") {
-    const isNodeEnvResult = _mod12915.isNodeEnv();
-    let tmp3 = !isNodeEnvResult;
-    if (isNodeEnvResult) {
-      const _process = _mod12802.GLOBAL_OBJ.process;
-      let tmp2 = _process;
-      if (tmp2) {
-        tmp2 = "renderer" === _process.type;
-      }
-      tmp3 = tmp2;
+export const severityLevelFromString = function severityLevelFromString(arg0) {
+  let str = "warning";
+  if ("warn" !== arg0) {
+    const items = ["fatal", "error", "warning", "log", "info", "debug"];
+    let str2 = "log";
+    if (items.includes(arg0)) {
+      str2 = arg0;
     }
-    tmp = tmp3;
+    str = str2;
   }
-  return tmp;
+  return str;
 };
+export const validSeverityLevels = ["fatal", "error", "warning", "log", "info", "debug"];

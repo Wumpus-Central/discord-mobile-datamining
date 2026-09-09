@@ -1,32 +1,32 @@
 // === Module 3935: ? ===
 
 // Module 3935
-import differenceInCalendarWeeks from "differenceInCalendarWeeks" /* 3839 */;
-import lastDayOfMonth from "lastDayOfMonth" /* 3936 */;
-import startOfMonth from "startOfMonth" /* 3866 */;
-import requiredArgs from "requiredArgs" /* 3651 */;
+import _typeof from "module_3663" /* 3663 */;
+import startOfISOWeek from "startOfISOWeek" /* 3821 */;
+import startOfISOWeekYear from "startOfISOWeekYear" /* 3824 */;
+import requiredArgs from "requiredArgs" /* 3664 */;
 
-if (!differenceInCalendarWeeks) {
-  let obj = { default: differenceInCalendarWeeks };
+if (!_typeof) {
+  let obj = { default: _typeof };
   let tmp3 = obj;
 } else {
-  tmp3 = differenceInCalendarWeeks;
+  tmp3 = _typeof;
 }
-differenceInCalendarWeeks = tmp3;
-if (!lastDayOfMonth) {
-  obj = { default: lastDayOfMonth };
+_typeof = tmp3;
+if (!startOfISOWeek) {
+  obj = { default: startOfISOWeek };
   let tmp5 = obj;
 } else {
-  tmp5 = lastDayOfMonth;
+  tmp5 = startOfISOWeek;
 }
-lastDayOfMonth = tmp5;
-if (!startOfMonth) {
-  obj = { default: startOfMonth };
+startOfISOWeek = tmp5;
+if (!startOfISOWeekYear) {
+  obj = { default: startOfISOWeekYear };
   let tmp7 = obj;
 } else {
-  tmp7 = startOfMonth;
+  tmp7 = startOfISOWeekYear;
 }
-startOfMonth = tmp7;
+startOfISOWeekYear = tmp7;
 if (!requiredArgs) {
   const obj1 = { default: requiredArgs };
   let tmp9 = obj1;
@@ -34,9 +34,13 @@ if (!requiredArgs) {
   tmp9 = requiredArgs;
 }
 requiredArgs = tmp9;
+let c4 = 604800000;
 
-export default function getWeeksInMonth(arg0, arg1) {
+export default function getISOWeek(arg0) {
   requiredArgs.default(1, arguments);
-  return differenceInCalendarWeeks.default(lastDayOfMonth.default(arg0), startOfMonth.default(arg0), arg1) + 1;
+  const defaultResult1 = _typeof.default(arg0);
+  const time = startOfISOWeek.default(defaultResult1).getTime();
+  const defaultResult2 = startOfISOWeek.default(defaultResult1);
+  return Math.round((time - startOfISOWeekYear.default(defaultResult1).getTime()) / c4) + 1;
 };
 export default exports.default;

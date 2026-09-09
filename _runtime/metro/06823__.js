@@ -1,70 +1,29 @@
 // === Module 6823: ? ===
 
 // Module 6823
-import jsxProd from "jsxProd" /* 21 */;
-import GESTURE_SOURCE from "GESTURE_SOURCE" /* 6628 */;
-import _mod6824 from "module_6824" /* 6824 */;
+import cancelAnimation from "cancelAnimation" /* 1636 */;
+import GESTURE_SOURCE from "GESTURE_SOURCE" /* 6642 */;
+import _mod6646 from "module_6646" /* 6646 */;
+import BottomSheetContext from "BottomSheetContext" /* 6652 */;
 import noop from "module_19" /* 19 */;
 
-({ useCallback: c3, useMemo: closure_4, useRef: hasOwnProperty, memo } = noop);
-const jsx = jsxProd.jsx;
-const __initData = { code: "function pnpm_BottomSheetFooterTsx1(){const{animatedFooterPosition,animatedKeyboardState,KEYBOARD_STATE,bottomInset}=this.__closure;let footerTranslateY=animatedFooterPosition.get();if(animatedKeyboardState.get()!==KEYBOARD_STATE.SHOWN){footerTranslateY=footerTranslateY-bottomInset;}return{transform:[{translateY:Math.max(0,footerTranslateY)}]};}" };
-const memoResult = memo(function BottomSheetFooterComponent(animatedFooterPosition) {
-  animatedFooterPosition = animatedFooterPosition.animatedFooterPosition;
-  let num = animatedFooterPosition.bottomInset;
-  if (num === undefined) {
-    num = 0;
-  }
-  const style = animatedFooterPosition.style;
-  const children = animatedFooterPosition.children;
-  let animatedStyle;
-  const tmp = animatedStyle(null);
-  let obj = animatedFooterPosition(style[2]);
-  const bottomSheetInternal = obj.useBottomSheetInternal();
-  const animatedFooterHeight = bottomSheetInternal.animatedFooterHeight;
-  const animatedKeyboardState = bottomSheetInternal.animatedKeyboardState;
-  const fn = function c() {
-    animatedFooterPosition.get();
-    value = animatedKeyboardState.get();
-    let diff = value;
-    if (value !== GESTURE_SOURCE.KEYBOARD_STATE.SHOWN) {
-      diff = value - num;
-    }
-    let obj = { transform: null };
-    obj = { translateY: Math.max(0, diff) };
-    const items = [obj];
-    obj.transform = items;
-    return obj;
-  };
-  obj = { animatedFooterPosition, animatedKeyboardState, KEYBOARD_STATE: animatedFooterPosition(style[4]).KEYBOARD_STATE, bottomInset: num };
-  fn.__closure = obj;
-  fn.__workletHash = 5322275157644;
-  fn.__initData = __initData;
-  let items = [num, animatedKeyboardState, animatedFooterPosition];
-  animatedStyle = animatedFooterPosition(style[3]).useAnimatedStyle(fn, items);
-  const items1 = [style, animatedStyle];
-  const items2 = [animatedFooterHeight];
-  const obj2 = animatedFooterPosition(style[3]);
-  const tmp2 = style;
-  const items3 = [animatedFooterHeight];
-  const tmp5 = animatedKeyboardState(() => {
-    const items = [_mod6824.styles.container, style, animatedStyle];
-    return items;
-  }, items1);
-  const tmp6 = animatedFooterHeight((nativeEvent) => {
-    const result = animatedFooterHeight.set(nativeEvent.nativeEvent.layout.height);
-  }, items2);
-  const tmp7 = animatedFooterHeight((height) => {
-    const result = animatedFooterHeight.set(height.height);
-  }, items3);
-  const boundingClientRect = animatedFooterPosition(style[2]).useBoundingClientRect(tmp, tmp7);
-  let tmp9 = null;
-  if (null !== children) {
-    obj = { ref: tmp, onLayout: tmp6, style: tmp5, children };
-    tmp9 = jsx(num(tmp2[3]).View, { ref: tmp, onLayout: tmp6, style: tmp5, children });
-  }
-  return tmp9;
-});
-memoResult.displayName = "BottomSheetFooter";
+require = fn;
+const useMemo = fn(19).useMemo;
+const jsx = fn(21).jsx;
 
-export const BottomSheetFooter = memoResult;
+export default function _default(children) {
+  let useGestureEventsHandlersDefault = children.gestureEventsHandlersHook;
+  if (useGestureEventsHandlersDefault === undefined) {
+    useGestureEventsHandlersDefault = _mod6646.useGestureEventsHandlersDefault;
+  }
+  const sharedValue = cancelAnimation.useSharedValue(GESTURE_SOURCE.GESTURE_SOURCE.UNDETERMINED);
+  const bottomSheetInternal = _mod6646.useBottomSheetInternal();
+  ({ animatedHandleGestureState, animatedContentGestureState } = bottomSheetInternal);
+  ({ handleOnStart, handleOnChange, handleOnEnd, handleOnFinalize } = useGestureEventsHandlersDefault());
+  const gestureEventsHandlersDefault = useGestureEventsHandlersDefault();
+  const gestureHandler = _mod6646.useGestureHandler(GESTURE_SOURCE.GESTURE_SOURCE.CONTENT, animatedContentGestureState, sharedValue, handleOnStart, handleOnChange, handleOnEnd, handleOnFinalize);
+  const gestureHandler1 = _mod6646.useGestureHandler(GESTURE_SOURCE.GESTURE_SOURCE.HANDLE, animatedHandleGestureState, sharedValue, handleOnStart, handleOnChange, handleOnEnd, handleOnFinalize);
+  const items = [gestureHandler, gestureHandler1, sharedValue];
+  value = useMemo(() => ({ contentPanGestureHandler: gestureHandler, handlePanGestureHandler: gestureHandler1, animatedGestureSource: sharedValue }), items);
+  return jsx(BottomSheetContext.BottomSheetGestureHandlersContext.Provider, { value, children: children.children });
+};

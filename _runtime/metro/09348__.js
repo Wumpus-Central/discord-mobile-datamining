@@ -4,4 +4,4 @@
 import registerAsset from "module_1122" /* 1122 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/custom_app_icons/CircuitIcon", width: 60, height: 60, scales: [2, 3], hash: "68832d737c55ed046c40e8d11571a54e", name: "CircuitIcon", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/premium/upsell", width: 120, height: 80, scales: [2, 3], hash: "0e96bcd2b2f1118c31b249938bd6d191", name: "img_nitro_animated_avatar", type: "png" });

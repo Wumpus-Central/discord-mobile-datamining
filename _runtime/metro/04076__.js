@@ -1,106 +1,49 @@
 // === Module 4076: ? ===
 
 // Module 4076
-import _mod3655 from "module_3655" /* 3655 */;
-import differenceInCalendarDays from "differenceInCalendarDays" /* 3812 */;
-import startOfWeekYear from "startOfWeekYear" /* 3932 */;
-import _typeof from "module_3650" /* 3650 */;
-import module_3654 from "module_3654" /* 3654 */;
-import requiredArgs from "requiredArgs" /* 3651 */;
+import module_3667 from "module_3667" /* 3667 */;
+import _typeof from "module_3663" /* 3663 */;
+import module_3928 from "module_3928" /* 3928 */;
+import requiredArgs from "requiredArgs" /* 3664 */;
 
-if (!differenceInCalendarDays) {
-  let obj = { default: differenceInCalendarDays };
+if (!module_3667) {
+  let obj = { default: module_3667 };
   let tmp3 = obj;
 } else {
-  tmp3 = differenceInCalendarDays;
+  tmp3 = module_3667;
 }
-differenceInCalendarDays = tmp3;
-if (!startOfWeekYear) {
-  obj = { default: startOfWeekYear };
-  let tmp5 = obj;
-} else {
-  tmp5 = startOfWeekYear;
-}
-startOfWeekYear = tmp5;
+module_3667 = tmp3;
 if (!_typeof) {
   obj = { default: _typeof };
+  let tmp5 = obj;
+} else {
+  tmp5 = _typeof;
+}
+_typeof = tmp5;
+if (!module_3928) {
+  obj = { default: module_3928 };
   let tmp7 = obj;
 } else {
-  tmp7 = _typeof;
+  tmp7 = module_3928;
 }
-_typeof = tmp7;
-if (!module_3654) {
-  const obj1 = { default: module_3654 };
+module_3928 = tmp7;
+if (!requiredArgs) {
+  const obj1 = { default: requiredArgs };
   let tmp9 = obj1;
 } else {
-  tmp9 = module_3654;
+  tmp9 = requiredArgs;
 }
-module_3654 = tmp9;
-if (!requiredArgs) {
-  const obj2 = { default: requiredArgs };
-  let tmp11 = obj2;
-} else {
-  tmp11 = requiredArgs;
-}
-requiredArgs = tmp11;
+requiredArgs = tmp9;
 
-export default function setWeekYear(arg0, arg1, firstWeekContainsDate) {
+export default function setMonth(arg0, arg1) {
   requiredArgs.default(2, arguments);
-  const defaultOptions = _mod3655.getDefaultOptions();
-  let prop;
-  if (null != firstWeekContainsDate) {
-    prop = firstWeekContainsDate.firstWeekContainsDate;
-  }
-  if (null === prop) {
-    let prop1;
-    if (null != firstWeekContainsDate) {
-      locale = firstWeekContainsDate.locale;
-      if (null !== locale) {
-        if (undefined !== locale) {
-          const options = locale.options;
-          if (null !== options) {
-            if (undefined !== options) {
-              prop1 = options.firstWeekContainsDate;
-            }
-          }
-        }
-      }
-    }
-    prop = prop1;
-  }
-  if (null === prop) {
-    prop = defaultOptions.firstWeekContainsDate;
-  }
-  if (null === prop) {
-    const locale2 = defaultOptions.locale;
-    let prop2;
-    if (null !== locale2) {
-      if (undefined !== locale2) {
-        const options2 = locale2.options;
-        if (null !== options2) {
-          if (undefined !== options2) {
-            prop2 = options2.firstWeekContainsDate;
-          }
-        }
-      }
-    }
-    prop = prop2;
-  }
-  let num = 1;
-  if (null !== prop) {
-    num = 1;
-    if (undefined !== prop) {
-      num = prop;
-    }
-  }
-  const defaultResult2 = _typeof.default(arg0);
-  const defaultResult1 = module_3654.default(num);
-  const defaultResult3 = module_3654.default(arg1);
-  const date = new Date(0);
-  date.setFullYear(defaultResult3, 0, defaultResult1);
-  date.setHours(0, 0, 0, 0);
-  const defaultResult5 = startOfWeekYear.default(date, firstWeekContainsDate);
-  defaultResult5.setDate(defaultResult5.getDate() + differenceInCalendarDays.default(defaultResult2, startOfWeekYear.default(defaultResult2, firstWeekContainsDate)));
-  return defaultResult5;
+  const defaultResult1 = _typeof.default(arg0);
+  const defaultResult2 = module_3667.default(arg1);
+  const fullYear = defaultResult1.getFullYear();
+  const date1 = new Date(0);
+  date1.setFullYear(fullYear, defaultResult2, 15);
+  date1.setHours(0, 0, 0, 0);
+  defaultResult1.setMonth(defaultResult2, Math.min(defaultResult1.getDate(), module_3928.default(date1)));
+  return defaultResult1;
 };
 export default exports.default;

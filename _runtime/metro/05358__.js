@@ -4,4 +4,4 @@
 import registerAsset from "module_1122" /* 1122 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/platforms", width: 255, height: 255, scales: [1], hash: "f0c9d04e77af1368c39d93a975075c0b", name: "img_account_sync_epic_dark_and_white", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/platforms", width: 255, height: 255, scales: [1], hash: "108517ec1c0ebdbb7171adf1b1ef15b7", name: "img_account_sync_xbox_custom", type: "png" });

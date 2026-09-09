@@ -1,9 +1,7 @@
 // === Module 6858: ? ===
 
 // Module 6858
+import _modDef6859 from "module_6859" /* 6859 */;
 
-export default function _arrayWithHoles(arg0) {
-  if (Array.isArray(arg0)) {
-    return arg0;
-  }
-};
+
+export default _modDef6859;

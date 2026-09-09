@@ -1,84 +1,12 @@
 // === Module 8496: ? ===
 
 // Module 8496
-import _possibleConstructorReturnDefault from "_possibleConstructorReturn" /* 93 */;
-import _modDef8495 from "module_8495" /* 8495 */;
-import _modDef8497 from "module_8497" /* 8497 */;
-import _classCallCheck from "_classCallCheck" /* 41 */;
-import _createClass from "_createClass" /* 42 */;
-import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
-import _inherits from "_inherits" /* 98 */;
-import noop from "module_19" /* 19 */;
+import _mod26 from "module_26" /* 26 */;
+import module_65 from "module_65" /* 65 */;
 
-const FeColorMatrix = fn;
-function _isNativeReflectConstruct() {
-  try {
-    const _Boolean = Boolean;
-    const call = valueOf.call;
-    const _Reflect = Reflect;
-    const _Boolean2 = Boolean;
-    if (typeof call === "unknown") {
-      let callResult = valueOf();
-    } else {
-      callResult = call(constructResult);
-    }
-    closure_0 = !callResult;
-    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
-      return closure_0;
-    };
-    return _isNativeReflectConstruct();
-  } catch (err) {
-  }
-}
-_possibleConstructorReturnDefault;
-const jsx = fn(21).jsx;
-class FeColorMatrix {
-  constructor() {
-    self = this;
-    tmp = closure_3(this, FeColorMatrix);
-    tmp2 = hasOwnProperty;
-    obj = hasOwnProperty(FeColorMatrix);
-    tmp3 = closure_4;
-    if (closure_7()) {
-      tmp7 = globalThis;
-      _Reflect = Reflect;
-      tmp8 = arguments;
-      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
-    } else {
-      tmp4 = arguments;
-      tmp5 = arguments;
-      constructResult = obj(...arguments);
-    }
-    return tmp3(self, constructResult);
-  }
-}
-_inherits(FeColorMatrix, _modDef8495);
-const entry = {
-  key: "render",
-  value: function render() {
-    const self = this;
-    const obj = {
-      ref(arg0) {
-        return self.refMethod(arg0);
-      }
-    };
-    const merged = Object.assign(FeColorMatrix(8494).extractFilter(this.props));
-    const obj2 = FeColorMatrix(8494);
-    const merged1 = Object.assign(FeColorMatrix(8494).extractIn(this.props));
-    const obj3 = FeColorMatrix(8494);
-    const merged2 = Object.assign(FeColorMatrix(8494).extractFeColorMatrix(this.props));
-    return <tmp ref={function ref(arg0) {
-      return self.refMethod(arg0);
-    }} />;
-  }
-};
-const items = [entry];
-const importDefaultResultResult = _createClass(FeColorMatrix, items);
-importDefaultResultResult.displayName = "FeColorMatrix";
-let obj = {};
-let merged = Object.assign(importDefaultResultResult.defaultPrimitiveProps);
-obj.type = "matrix";
-obj.values = "";
-importDefaultResultResult.defaultProps = obj;
+let __INTERNAL_VIEW_CONFIG = { uiViewClassName: "RNSVGSvgViewAndroid", validAttributes: null };
+__INTERNAL_VIEW_CONFIG = { bbWidth: true, bbHeight: true, minX: true, minY: true, vbWidth: true, vbHeight: true, align: true, meetOrSlice: true, color: _mod26.colorAttribute, pointerEvents: true, hasTVPreferredFocus: true, borderBottomColor: _mod26.colorAttribute, nextFocusDown: true, borderRightColor: _mod26.colorAttribute, nextFocusRight: true, borderLeftColor: _mod26.colorAttribute, borderColor: _mod26.colorAttribute, removeClippedSubviews: true, nextFocusForward: true, nextFocusUp: true, accessible: true, borderStartColor: _mod26.colorAttribute, borderEndColor: _mod26.colorAttribute, focusable: true, nativeBackgroundAndroid: true, nativeForegroundAndroid: true, backfaceVisibility: true, borderStyle: true, needsOffscreenAlphaCompositing: true, hitSlop: true, borderTopColor: _mod26.colorAttribute, nextFocusLeft: true, borderBlockColor: _mod26.colorAttribute, borderBlockEndColor: _mod26.colorAttribute, borderBlockStartColor: _mod26.colorAttribute, borderRadius: true, borderTopLeftRadius: true, borderTopRightRadius: true, borderBottomRightRadius: true, borderBottomLeftRadius: true, borderTopStartRadius: true, borderTopEndRadius: true, borderBottomStartRadius: true, borderBottomEndRadius: true, borderEndEndRadius: true, borderEndStartRadius: true, borderStartEndRadius: true, borderStartStartRadius: true };
+__INTERNAL_VIEW_CONFIG.validAttributes = __INTERNAL_VIEW_CONFIG;
 
-export default importDefaultResultResult;
+export default module_65.get("RNSVGSvgViewAndroid", () => obj);
+export { __INTERNAL_VIEW_CONFIG };

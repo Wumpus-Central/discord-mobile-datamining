@@ -1,11 +1,25 @@
 // === Module 4942: ? ===
 
 // Module 4942
-import _mod17 from "module_17" /* 17 */;
-import module_65 from "module_65" /* 65 */;
+import noop from "module_19" /* 19 */;
 
-const codegenNativeComponent = _mod17.codegenNativeComponent;
-const __INTERNAL_VIEW_CONFIG = { uiViewClassName: "RNSScreenContentWrapper", validAttributes: {} };
+let context = noop.createContext({ leftDisabled: false, rightDisabled: false, bottomDisabled: false });
 
-export default module_65.get("RNSScreenContentWrapper", () => obj);
-export { __INTERNAL_VIEW_CONFIG };
+export const EdgeInsetApplicationContext = context;
+export const useEdgeInsetApplication = function useEdgeInsetApplication(flag, flag2, flag3) {
+  let obj = noop;
+  context = noop.useContext(context);
+  ({ leftDisabled, rightDisabled, bottomDisabled } = context);
+  if (!leftDisabled) {
+    leftDisabled = flag;
+  }
+  if (!rightDisabled) {
+    rightDisabled = flag2;
+  }
+  if (!bottomDisabled) {
+    bottomDisabled = flag3;
+  }
+  const items = [leftDisabled, rightDisabled, bottomDisabled];
+  obj = { consumeLeftInset: !leftDisabled, consumeRightInset: !rightDisabled, consumeBottomInset: !bottomDisabled, nextContextValue: obj.useMemo(() => ({ leftDisabled, rightDisabled, bottomDisabled }), items) };
+  return obj;
+};

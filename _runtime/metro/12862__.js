@@ -1,34 +1,40 @@
 // === Module 12862: ? ===
 
 // Module 12862
-import _mod12807 from "module_12807" /* 12807 */;
-import _mod12845 from "module_12845" /* 12845 */;
-import _mod12848 from "module_12848" /* 12848 */;
+import _mod12834 from "module_12834" /* 12834 */;
 
 require = arg1;
 const dependencyMap = arg6;
 
-export const createCheckInEnvelope = function createCheckInEnvelope(arg0, contexts, sdk, arg3, url) {
-  let obj = { sent_at: new Date().toISOString() };
-  if (sdk) {
-    sdk = sdk.sdk;
+export const handleCallbackErrors = function handleCallbackErrors(fn, arg1) {
+  fn = arg2;
+  if (arg2 === undefined) {
+    fn = function t() {
+
+    };
   }
-  if (sdk) {
-    obj = { name: sdk.sdk.name, version: sdk.sdk.version };
-    obj.sdk = obj;
+  try {
+    return (function maybeHandlePromiseRejection(promise, arg1, fn) {
+      closure_0 = arg1;
+      closure_1 = fn;
+      if (obj.isThenable(promise)) {
+        return promise.then((result) => {
+          closure_1();
+          return result;
+        }, (arg0) => {
+          closure_0(arg0);
+          closure_1();
+          throw arg0;
+        });
+      } else {
+        fn();
+        return promise;
+      }
+      obj = _mod12834;
+    })(fn(), arg1, fn);
+  } catch (tmp5) {
+    tmp3(tmp5);
+    tmp2();
+    throw tmp5;
   }
-  let tmp = arg3;
-  if (arg3) {
-    tmp = url;
-  }
-  if (tmp) {
-    obj.dsn = _mod12848.dsnToString(url);
-  }
-  if (contexts) {
-    obj.trace = _mod12807.dropUndefinedKeys(contexts);
-  }
-  const items = [{ type: "check_in" }, arg0];
-  const date = new Date();
-  const items1 = [items];
-  return _mod12845.createEnvelope(obj, items1);
 };

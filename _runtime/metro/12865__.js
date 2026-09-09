@@ -1,79 +1,95 @@
 // === Module 12865: ? ===
 
 // Module 12865
-import _mod12825 from "module_12825" /* 12825 */;
+import _mod12827 from "module_12827" /* 12827 */;
+import spanTimeInputToSeconds from "spanTimeInputToSeconds" /* 12832 */;
+import _mod12855 from "module_12855" /* 12855 */;
 
 require = arg1;
 const dependencyMap = arg6;
 
-export function makePromiseBuffer(bufferSize) {
-  const items = [];
-  return {
-    $: items,
-    add(fn) {
-      let tmp2 = undefined === promise;
-      if (!tmp2) {
-        tmp2 = items.length < tmp;
-      }
-      if (tmp2) {
-        promise = fn();
-        let arr = items;
-        if (-1 === items.indexOf(promise)) {
-          arr = arr.push(promise);
-        }
-        promise.then(() => {
-          let first = items.splice(items.indexOf(promise), 1)[0];
-          if (!first) {
-            first = Promise.resolve(undefined);
-          }
-          return first;
-        }).then(null, () => {
-          let first = items.splice(items.indexOf(promise), 1)[0];
-          if (!first) {
-            first = Promise.resolve(undefined);
-          }
-          return first.then(null, () => {
-
-          });
-        });
-        return promise;
-      } else {
-        const sentryError = new bufferSize(items[1]).SentryError("Not adding Promise because buffer limit was reached.");
-        return bufferSize(items[0]).rejectedSyncPromise(sentryError);
-      }
-    },
-    drain(arg0) {
-      bufferSize = arg0;
-      return new bufferSize(items[0]).SyncPromise((fn, arg1) => {
-        closure_0 = fn;
-        closure_1 = arg1;
-        length = length.length;
-        if (length) {
-          const _setTimeout = setTimeout;
-          const timeout = setTimeout(() => {
-            let tmp2 = closure_0;
-            if (closure_0) {
-              tmp2 = tmp > 0;
-            }
-            if (tmp2) {
-              closure_0(false);
-            }
-          }, closure_0);
-          const item = arr.forEach((item) => {
-            _mod12825.resolvedSyncPromise(item).then(() => {
-              diff = diff - 1;
-              if (!diff) {
-                const _clearTimeout = clearTimeout;
-                clearTimeout(closure_1_3);
-                fn(true);
-              }
-            }, closure_1);
-          });
-        } else {
-          return fn(true);
-        }
-        arr = length;
-      });
+export const logSpanEnd = function logSpanEnd(spanContext) {
+  if (_mod12855.DEBUG_BUILD) {
+    let tmpResult = spanTimeInputToSeconds;
+    const spanToJSONResult = tmpResult.spanToJSON(spanContext);
+    const description = spanToJSONResult.description;
+    let str = "< unknown name >";
+    if (undefined !== description) {
+      str = description;
     }
-  };
-}
+    const op = spanToJSONResult.op;
+    let str2 = "< unknown op >";
+    if (undefined !== op) {
+      str2 = op;
+    }
+    const spanId = spanContext.spanContext().spanId;
+    tmpResult = spanTimeInputToSeconds;
+    let str3 = "";
+    if (tmpResult.getRootSpan(spanContext) === spanContext) {
+      str3 = "root ";
+    }
+    const _HermesInternal = HermesInternal;
+    const combined = "[Tracing] Finishing \"" + str2 + "\" " + str3 + "span \"" + str + "\" with ID " + spanId;
+    const logger = _mod12827.logger;
+    logger.log(combined);
+  }
+};
+export const logSpanStart = function logSpanStart(spanContext) {
+  if (_mod12855.DEBUG_BUILD) {
+    let tmpResult = spanTimeInputToSeconds;
+    const spanToJSONResult = tmpResult.spanToJSON(spanContext);
+    const description = spanToJSONResult.description;
+    let str = "< unknown name >";
+    if (undefined !== description) {
+      str = description;
+    }
+    const op = spanToJSONResult.op;
+    let str2 = "< unknown op >";
+    if (undefined !== op) {
+      str2 = op;
+    }
+    const parent_span_id = spanToJSONResult.parent_span_id;
+    tmpResult = spanTimeInputToSeconds;
+    const spanIsSampledResult = tmpResult.spanIsSampled(spanContext);
+    const rootSpan = spanTimeInputToSeconds.getRootSpan(spanContext);
+    let str3 = "unsampled";
+    if (spanIsSampledResult) {
+      str3 = "sampled";
+    }
+    let str5 = "";
+    if (rootSpan === spanContext) {
+      str5 = "root ";
+    }
+    const _HermesInternal = HermesInternal;
+    const _HermesInternal2 = HermesInternal;
+    const combined = "[Tracing] Starting " + str3 + " " + str5 + "span";
+    const items = ["op: " + str2, , ];
+    const _HermesInternal3 = HermesInternal;
+    items[1] = "name: " + str;
+    const _HermesInternal4 = HermesInternal;
+    items[2] = "ID: " + spanContext.spanContext().spanId;
+    if (parent_span_id) {
+      const _HermesInternal5 = HermesInternal;
+      items.push("parent ID: " + parent_span_id);
+    }
+    if (rootSpan !== spanContext) {
+      const tmpResult2 = spanTimeInputToSeconds;
+      ({ op: op2, description: description2 } = spanTimeInputToSeconds.spanToJSON(rootSpan));
+      const _HermesInternal6 = HermesInternal;
+      items.push("root ID: " + rootSpan.spanContext().spanId);
+      if (op2) {
+        const _HermesInternal7 = HermesInternal;
+        items.push("root op: " + op2);
+      }
+      if (description2) {
+        const _HermesInternal8 = HermesInternal;
+        items.push("root description: " + description2);
+      }
+      const spanToJSONResult1 = spanTimeInputToSeconds.spanToJSON(rootSpan);
+    }
+    const logger = _mod12827.logger;
+    const _HermesInternal9 = HermesInternal;
+    logger.log("" + combined + "\n  " + items.join("\n  "));
+    const tmpResult1 = spanTimeInputToSeconds;
+  }
+};

@@ -4,4 +4,4 @@
 import registerAsset from "module_1122" /* 1122 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/.cache/intl/bW9kdWxlcy9pbnRs", scales: [1], hash: "5e84f9eca1bcd2b0b2019b6de2f79246", name: "hi.messages.5e84f9eca1bcd2b0b2019b6de2f79246.compiled.messages", type: "jsona" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "9e0f7ca920e7d55418409ccf322d663c", name: "BurgerIcon", type: "png" });

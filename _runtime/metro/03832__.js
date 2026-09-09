@@ -1,20 +1,24 @@
 // === Module 3832: ? ===
 
 // Module 3832
-import _typeof from "module_3833" /* 3833 */;
-import _typeof from "module_3650" /* 3650 */;
-import requiredArgs from "requiredArgs" /* 3651 */;
+import module_3667 from "module_3667" /* 3667 */;
+import module_3812 from "module_3812" /* 3812 */;
+import requiredArgs from "requiredArgs" /* 3664 */;
 
-if (!_typeof) {
-  let obj = { default: _typeof };
+if (!module_3667) {
+  let obj = { default: module_3667 };
+  let tmp3 = obj;
+} else {
+  tmp3 = module_3667;
 }
-if (!_typeof) {
-  obj = { default: _typeof };
+module_3667 = tmp3;
+if (!module_3812) {
+  obj = { default: module_3812 };
   let tmp5 = obj;
 } else {
-  tmp5 = _typeof;
+  tmp5 = module_3812;
 }
-_typeof = tmp5;
+module_3812 = tmp5;
 if (!requiredArgs) {
   obj = { default: requiredArgs };
   let tmp7 = obj;
@@ -23,13 +27,8 @@ if (!requiredArgs) {
 }
 requiredArgs = tmp7;
 
-export default function isValid(num) {
-  requiredArgs.default(1, arguments);
-  if (!_typeof.default(num)) {
-    if (typeof num !== "number") {
-      return false;
-    }
-  }
-  return !isNaN(Number(_typeof.default(num)));
+export default function addYears(interval, arg1) {
+  requiredArgs.default(2, arguments);
+  return module_3812.default(interval, 12 * module_3667.default(arg1));
 };
 export default exports.default;

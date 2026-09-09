@@ -1,36 +1,32 @@
 // === Module 6877: ? ===
 
 // Module 6877
-import RecyclerViewManager from "RecyclerViewManager" /* 6878 */;
-import _slicedToArray from "module_6857" /* 6857 */;
+import _mod6878 from "module_6878" /* 6878 */;
 
-require = fn;
-const noop = fn(19);
-({ useEffect: c3, useMemo: closure_4, useState: hasOwnProperty } = noop);
 
-export const useRecyclerViewManager = (data) => {
-  let recyclerViewManager = velocityTracker(closure_5(() => {
-    recyclerViewManager = new RecyclerViewManager.RecyclerViewManager(closure_0);
-    return recyclerViewManager;
-  }), 1)[0];
-  velocityTracker = velocityTracker(closure_5(() => {
-    velocityTracker = new data(recyclerViewManager[3]).VelocityTracker();
-    return velocityTracker;
-  }), 1)[0];
-  const items = [data];
-  closure_4(() => {
-    recyclerViewManager.updateProps(closure_0);
-  }, items);
-  const items1 = [data.data];
-  closure_4(() => {
-    recyclerViewManager.processDataUpdate();
-  }, items1);
-  closure_3(() => {
-    recyclerViewManager.restoreIfNeeded();
-    return () => {
-      recyclerViewManager.dispose();
-      velocityTracker.cleanUp();
-    };
-  }, []);
-  return { recyclerViewManager, velocityTracker };
+export default function _objectWithoutProperties(arg0, arr) {
+  if (null == arg0) {
+    return {};
+  } else {
+    const tmp8 = _mod6878(arg0, arr);
+    const _Object2 = Object;
+    if (Object.getOwnPropertySymbols) {
+      const _Object = Object;
+      const ownPropertySymbols = Object.getOwnPropertySymbols(arg0);
+      let num = 0;
+      if (0 < ownPropertySymbols.length) {
+        const tmp2 = -1 === arr.indexOf(ownPropertySymbols[num]);
+        while (!tmp2) {
+          if (tmp2) {
+            tmp8[tmp] = arg0[tmp];
+          }
+          num = num + 1;
+        }
+        const propertyIsEnumerable = {}.propertyIsEnumerable;
+        const call = propertyIsEnumerable.call;
+        typeof call === "unknown" ? propertyIsEnumerable(ownPropertySymbols[num]) : call(arg0, ownPropertySymbols[num]);
+      }
+    }
+    return tmp8;
+  }
 };

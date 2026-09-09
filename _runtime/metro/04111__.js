@@ -1,9 +1,14 @@
 // === Module 4111: ? ===
 
 // Module 4111
-let closure_0 = { lastWeek: "'\u4E0A\u500B'eeee p", yesterday: "'\u6628\u5929' p", today: "'\u4ECA\u5929' p", tomorrow: "'\u660E\u5929' p", nextWeek: "'\u4E0B\u500B'eeee p", other: "P" };
+import module_2030 from "module_2030" /* 2030 */;
 
-export default function formatRelative(arg0, arg1, arg2, arg3) {
-  return closure_0[arg0];
-};
+if (!module_2030) {
+  let obj = { default: module_2030 };
+} else {
+  obj = module_2030;
+}
+obj = { date: obj.default({ formats: { full: "EEEE, 'ng\u00E0y' d MMMM 'n\u0103m' y", long: "'ng\u00E0y' d MMMM 'n\u0103m' y", medium: "d MMM 'n\u0103m' y", short: "dd/MM/y" }, defaultWidth: "full" }), time: obj.default({ formats: { full: "HH:mm:ss zzzz", long: "HH:mm:ss z", medium: "HH:mm:ss", short: "HH:mm" }, defaultWidth: "full" }), dateTime: obj.default({ formats: { full: "{{date}} {{time}}", long: "{{date}} {{time}}", medium: "{{date}} {{time}}", short: "{{date}} {{time}}" }, defaultWidth: "full" }) };
+
+export default obj;
 export default exports.default;

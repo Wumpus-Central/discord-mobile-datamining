@@ -1,13 +1,11 @@
 // === Module 6812: ? ===
 
 // Module 6812
-import _mod17 from "module_17" /* 17 */;
+const fn = function n(sum1, initialPosition, value) {
+  return Math.min(Math.max(initialPosition, sum1), value);
+};
+fn.__closure = {};
+fn.__workletHash = 4405247003092;
+fn.__initData = { code: "function pnpm_clampTs1(value,lowerBound,upperBound){return Math.min(Math.max(lowerBound,value),upperBound);}" };
 
-const StyleSheet = _mod17.StyleSheet;
-let obj = { container: null };
-obj = {};
-const merged = Object.assign(StyleSheet.absoluteFillObject);
-obj.pointerEvents = "box-none";
-obj.container = obj;
-
-export const styles = StyleSheet.create(obj);
+export const clamp = fn;

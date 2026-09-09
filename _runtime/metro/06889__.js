@@ -1,32 +1,33 @@
 // === Module 6889: ? ===
 
 // Module 6889
-import _mod6887 from "module_6887" /* 6887 */;
+import _mod6890 from "module_6890" /* 6890 */;
+import _slicedToArray from "module_6871" /* 6871 */;
 
+require = fn;
+const noop = fn(19);
+({ useState: c3, useCallback: closure_4 } = noop);
 
-export default function _superPropBase(arg0, key10009) {
-  hasOwnProperty = {}.hasOwnProperty;
-  const call = hasOwnProperty.call;
-  let tmp = arg0;
-  if (!(typeof call === "unknown" ? hasOwnProperty(key10009) : call(arg0, key10009))) {
-    let tmp4 = _mod6887(arg0);
-    tmp = tmp4;
-    if (null !== tmp4) {
-      while (true) {
-        let hasOwnProperty2 = {}.hasOwnProperty;
-        let call2 = hasOwnProperty2.call;
-        tmp = tmp4;
-        if (typeof call2 === "unknown" ? hasOwnProperty2(key10009) : call2(tmp4, key10009)) {
-          break;
-        } else {
-          tmp4 = _mod6887(tmp4);
-          tmp = tmp4;
-          if (null === tmp4) {
-            break;
-          }
-        }
+export const useLayoutState = function useLayoutState(arg0) {
+  const tmp = _slicedToArray(React3(arg0), 2);
+  closure_0 = tmp[1];
+  const recyclerViewContext = _mod6890.useRecyclerViewContext();
+  const items = [tmp[0], ];
+  const items1 = [recyclerViewContext];
+  items[1] = React4((arg0, arg1) => {
+    closure_0 = arg0;
+    closure_0((arg0) => {
+      let tmpResult = closure_0;
+      if (typeof closure_0 === "function") {
+        tmpResult = tmp(arg0);
+      }
+      return tmpResult;
+    });
+    if (!arg1) {
+      if (recyclerViewContext != null) {
+        recyclerViewContext.layout();
       }
     }
-  }
-  return tmp;
+  }, items1);
+  return items;
 };

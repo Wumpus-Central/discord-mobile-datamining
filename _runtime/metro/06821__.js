@@ -1,98 +1,94 @@
 // === Module 6821: ? ===
 
 // Module 6821
-import jsxProd from "jsxProd" /* 21 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 6655 */;
-import noop from "module_19" /* 19 */;
+import cancelAnimation from "cancelAnimation" /* 1636 */;
+import _slicedToArray from "module_32" /* 32 */;
 
-({ useMemo: c3, memo } = noop);
-const jsx = jsxProd.jsx;
-const memoResult = memo((nativeGestureRef) => {
-  nativeGestureRef = nativeGestureRef.nativeGestureRef;
-  const refreshControlGestureRef = nativeGestureRef.refreshControlGestureRef;
-  ({ style, children } = nativeGestureRef);
-  const merged = Object.assign(nativeGestureRef, Object.assign({ nativeGestureRef: 0, refreshControlGestureRef: 0, style: 0, children: 0 }));
-  let enableContentPanningGesture;
-  let obj = nativeGestureRef(enableContentPanningGesture[2]);
+require = fn;
+const noop = fn(19);
+({ useMemo: c3, useState: closure_4 } = noop);
+get_ActivityIndicator = fn(17);
+({ Platform: hasOwnProperty, StyleSheet: metroRequire } = get_ActivityIndicator);
+const __initData = { code: "function pnpm_useBottomSheetContentContainerStyleTs1(){const{animatedFooterHeight}=this.__closure;return animatedFooterHeight.get();}" };
+const __initData2 = { code: "function pnpm_useBottomSheetContentContainerStyleTs2(result,previousFooterHeight){const{enableFooterMarginAdjustment,runOnJS,setFooterHeight,Platform,animatedContentHeight}=this.__closure;if(!enableFooterMarginAdjustment){return;}runOnJS(setFooterHeight)(result);if(Platform.OS==='web'){if(result&&!previousFooterHeight){const contentHeight=animatedContentHeight.get();animatedContentHeight.set(contentHeight+result);}}}" };
+
+export const useBottomSheetContentContainerStyle = function useBottomSheetContentContainerStyle(flag, contentContainerStyle) {
+  _require = flag;
+  dependencyMap = contentContainerStyle;
+  const tmp = first(animatedFooterHeight(0), 2);
+  first = tmp[0];
+  closure_3 = tmp3;
+  let obj = require("module_6649");
   const bottomSheetInternal = obj.useBottomSheetInternal();
-  enableContentPanningGesture = bottomSheetInternal.enableContentPanningGesture;
-  const simultaneousHandlers = bottomSheetInternal.simultaneousHandlers;
-  const waitFor = bottomSheetInternal.waitFor;
-  const activeOffsetX = bottomSheetInternal.activeOffsetX;
-  const activeOffsetY = bottomSheetInternal.activeOffsetY;
-  const failOffsetX = bottomSheetInternal.failOffsetX;
-  const failOffsetY = bottomSheetInternal.failOffsetY;
-  let obj1 = nativeGestureRef(enableContentPanningGesture[2]);
-  const contentPanGestureHandler = obj1.useBottomSheetGestureHandlers().contentPanGestureHandler;
-  let items = [simultaneousHandlers, nativeGestureRef, refreshControlGestureRef];
-  const tmp3 = simultaneousHandlers(() => {
-    const items = [];
-    if (nativeGestureRef) {
-      items.push(tmp);
-    }
-    if (refreshControlGestureRef) {
-      items.push(tmp3);
-    }
-    if (simultaneousHandlers) {
+  animatedFooterHeight = bottomSheetInternal.animatedFooterHeight;
+  const animatedContentHeight = bottomSheetInternal.animatedContentHeight;
+  let items = [contentContainerStyle];
+  const tmp5 = closure_3(() => {
+    if (closure_1) {
       const _Array = Array;
-      const push = items.push;
-      if (Array.isArray(simultaneousHandlers)) {
-        const items1 = [];
-        HermesBuiltin.arraySpread(simultaneousHandlers, 0);
-        HermesBuiltin.apply(items1, items);
-      } else {
-        push(simultaneousHandlers);
+      let applyResult = closure_1;
+      if (Array.isArray(closure_1)) {
+        compose = compose.compose;
+        const items = [];
+        HermesBuiltin.arraySpread(closure_1, 0);
+        applyResult = HermesBuiltin.apply(items, compose);
       }
+      let obj = applyResult;
+    } else {
+      obj = {};
     }
-    return items;
+    return obj;
   }, items);
-  closure_10 = tmp3;
-  let items1 = [activeOffsetX, activeOffsetY, enableContentPanningGesture, failOffsetX, failOffsetY, tmp3, waitFor, , , , ];
-  ({ handleOnChange: arr2[7], handleOnEnd: arr2[8], handleOnFinalize: arr2[9], handleOnStart: arr2[10] } = contentPanGestureHandler);
-  const tmp4 = simultaneousHandlers(() => {
-    const Gesture = LegacyBaseButton.Gesture;
-    const PanResult = Gesture.Pan();
-    const result = Gesture.Pan().enabled(enableContentPanningGesture).shouldCancelWhenOutside(false);
-    const enabledResult = Gesture.Pan().enabled(enableContentPanningGesture);
-    const runOnJSResult = result.runOnJS(false);
-    const onStartResult = result.runOnJS(false).onStart(contentPanGestureHandler.handleOnStart);
-    const onChangeResult = result.runOnJS(false).onStart(contentPanGestureHandler.handleOnStart).onChange(contentPanGestureHandler.handleOnChange);
-    const onFinalizeResult = result.runOnJS(false).onStart(contentPanGestureHandler.handleOnStart).onChange(contentPanGestureHandler.handleOnChange).onEnd(contentPanGestureHandler.handleOnEnd).onFinalize(contentPanGestureHandler.handleOnFinalize);
-    let result1 = onFinalizeResult;
-    if (waitFor) {
-      result1 = onFinalizeResult.requireExternalGestureToFail(tmp);
+  Platform = tmp5;
+  const items1 = [first, flag, tmp5];
+  const tmp6 = closure_3(() => {
+    if (closure_0) {
+      let num = 0;
+      if (closure_5) {
+        num = 0;
+        if (typeof closure_5 === "object") {
+          ({ paddingBottom, padding, paddingVertical } = closure_5);
+          if (undefined === paddingBottom) {
+            if (undefined === paddingVertical) {
+              num = 0;
+              if (tmp2) {
+                num = padding;
+              }
+              tmp2 = undefined !== padding && typeof padding === "number";
+            } else {
+              num = paddingVertical;
+            }
+          } else {
+            num = paddingBottom;
+          }
+        }
+      }
+      const items = [closure_5, ];
+      const obj = { paddingBottom: num + first, overflow: "visible" };
+      items[1] = obj;
+      return items;
+    } else {
+      return closure_5;
     }
-    let result2 = result1;
-    if (closure_10) {
-      result2 = result1.simultaneousWithExternalGesture(tmp2);
-    }
-    let activeOffsetXResult = result2;
-    if (activeOffsetX) {
-      activeOffsetXResult = result2.activeOffsetX(tmp3);
-    }
-    let activeOffsetYResult = activeOffsetXResult;
-    if (activeOffsetY) {
-      activeOffsetYResult = activeOffsetXResult.activeOffsetY(tmp4);
-    }
-    let failOffsetXResult = activeOffsetYResult;
-    if (failOffsetX) {
-      failOffsetXResult = activeOffsetYResult.failOffsetX(tmp5);
-    }
-    let failOffsetYResult = failOffsetXResult;
-    if (failOffsetY) {
-      failOffsetYResult = failOffsetXResult.failOffsetY(tmp6);
-    }
-    return failOffsetYResult;
   }, items1);
-  obj = { gesture: tmp4, children: null };
-  obj = { value: tmp4, children: null };
-  obj1 = { style };
-  const merged1 = Object.assign(merged);
-  obj1.children = children;
-  obj.children = waitFor(refreshControlGestureRef(enableContentPanningGesture[5]).View, obj1);
-  obj.children = waitFor(nativeGestureRef(enableContentPanningGesture[4]).BottomSheetDraggableContext.Provider, obj);
-  return waitFor(nativeGestureRef(enableContentPanningGesture[3]).GestureDetector, obj);
-});
-memoResult.displayName = "BottomSheetDraggableView";
-
-export default memoResult;
+  class H {
+    constructor() {
+      return animatedFooterHeight.get();
+    }
+  }
+  H.__closure = { animatedFooterHeight };
+  H.__workletHash = 10172145694310;
+  H.__initData = __initData;
+  const fn = function f(arg0, arg1) {
+    if (closure_0) {
+      cancelAnimation.runOnJS(closure_3)(arg0);
+    }
+  };
+  obj = { enableFooterMarginAdjustment: flag, runOnJS: require("cancelAnimation").runOnJS, setFooterHeight: tmp3, Platform, animatedContentHeight };
+  fn.__closure = obj;
+  fn.__workletHash = 1149497927090;
+  fn.__initData = __initData2;
+  const items2 = [animatedFooterHeight, animatedContentHeight, flag];
+  const animatedReaction = require("cancelAnimation").useAnimatedReaction(H, fn, items2);
+  return tmp6;
+};

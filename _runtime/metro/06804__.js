@@ -1,116 +1,122 @@
 // === Module 6804: ? ===
 
 // Module 6804
-import DEFAULT_HANDLE_HEIGHT from "DEFAULT_HANDLE_HEIGHT" /* 6631 */;
+import _modDef6802 from "module_6802" /* 6802 */;
+import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
+import _classCallCheck from "_classCallCheck" /* 41 */;
+import _createClass from "_createClass" /* 42 */;
+import metroRequire from "_possibleConstructorReturn" /* 93 */;
+import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
+import _inherits from "_inherits" /* 98 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-let dependencyMap = arg6;
-let __initData = { code: "function pnpm_useAnimatedSnapPointsTs1(){const{containerHeight,INITIAL_CONTAINER_HEIGHT,INITIAL_SNAP_POINT,snapPoints,normalizeSnapPoint,enableDynamicSizing,handleHeight,INITIAL_HANDLE_HEIGHT,contentHeight,maxDynamicContentSize,dynamicSnapPointIndex}=this.__closure;const isContainerLayoutReady=containerHeight.value!==INITIAL_CONTAINER_HEIGHT;if(!isContainerLayoutReady){return[INITIAL_SNAP_POINT];}const _snapPoints=snapPoints?'value'in snapPoints?snapPoints.value:snapPoints:[];let _normalizedSnapPoints=_snapPoints.map(function(snapPoint){return normalizeSnapPoint(snapPoint,containerHeight.value);});if(!enableDynamicSizing){return _normalizedSnapPoints;}if(handleHeight.value===INITIAL_HANDLE_HEIGHT){return[INITIAL_SNAP_POINT];}if(contentHeight.value===INITIAL_CONTAINER_HEIGHT){return[INITIAL_SNAP_POINT];}const dynamicSnapPoint=containerHeight.value-Math.min(contentHeight.value+handleHeight.value,maxDynamicContentSize!==undefined?maxDynamicContentSize:containerHeight.value);if(!_normalizedSnapPoints.includes(dynamicSnapPoint)){_normalizedSnapPoints.push(dynamicSnapPoint);}_normalizedSnapPoints=_normalizedSnapPoints.sort(function(a,b){return b-a;});dynamicSnapPointIndex.value=_normalizedSnapPoints.indexOf(dynamicSnapPoint);return _normalizedSnapPoints;}" };
-let __initData2 = { code: "function pnpm_useAnimatedSnapPointsTs2(){const{enableDynamicSizing,snapPoints}=this.__closure;if(enableDynamicSizing){return true;}const _snapPoints=snapPoints?'value'in snapPoints?snapPoints.value:snapPoints:[];if(_snapPoints.length&&_snapPoints.find(function(snapPoint){return typeof snapPoint==='string';})){return true;}return false;}" };
-
-export const useAnimatedSnapPoints = (snapPoints, derivedValue, sharedValue1, reactiveSharedValue2, sharedValue, DEFAULT_DYNAMIC_SIZING, maxDynamicContentSize) => {
-  _require = snapPoints;
-  dependencyMap = derivedValue;
-  __initData = sharedValue1;
-  __initData2 = reactiveSharedValue2;
-  closure_4 = DEFAULT_DYNAMIC_SIZING;
-  closure_5 = maxDynamicContentSize;
-  let obj = require("cancelAnimation");
-  sharedValue = obj.useSharedValue(-1);
-  class P {
-    constructor() {
-      iter = closure_1;
-      tmp = closure_0;
-      tmp2 = closure_1;
-      if (closure_1.value === closure_0(closure_1[1]).INITIAL_CONTAINER_HEIGHT) {
-        items = [];
-        items[0] = tmp(tmp2[1]).INITIAL_SNAP_POINT;
-        return items;
-      } else {
-        iter3 = closure_0;
-        if (closure_0) {
-          str = "value";
-          value = iter3;
-          if ("value" in iter3) {
-            value = iter3.value;
-          }
-          items1 = value;
-        } else {
-          items1 = [];
-        }
-        mapped = items1.map(() => { ... });
-        tmp3 = closure_4;
-        if (closure_4) {
-          iter2 = closure_3;
-          if (closure_3.value === tmp(tmp2[1]).INITIAL_HANDLE_HEIGHT) {
-            items2 = [];
-            items2[0] = tmp(tmp2[1]).INITIAL_SNAP_POINT;
-            return items2;
-          } else {
-            iter4 = closure_2;
-            if (closure_2.value === tmp(tmp2[1]).INITIAL_CONTAINER_HEIGHT) {
-              items3 = [];
-              items3[0] = tmp(tmp2[1]).INITIAL_SNAP_POINT;
-              return items3;
-            } else {
-              tmp4 = globalThis;
-              value = closure_5;
-              sum = iter4.value + iter2.value;
-              if (undefined === closure_5) {
-                value = iter.value;
-              }
-              diff = iter.value - Math.min(sum, value);
-              if (!mapped.includes(diff)) {
-                arr = mapped.push(diff);
-              }
-              sorted = mapped.sort(() => { ... });
-              tmp8 = closure_6;
-              closure_6.value = sorted.indexOf(diff);
-              return sorted;
-            }
-          }
-        } else {
-          return mapped;
-        }
-      }
+const TouchableOpacity = fn;
+function _isNativeReflectConstruct() {
+  try {
+    const _Boolean = Boolean;
+    const call = valueOf.call;
+    const _Reflect = Reflect;
+    const _Boolean2 = Boolean;
+    if (typeof call === "unknown") {
+      let callResult = valueOf();
+    } else {
+      callResult = call(constructResult);
     }
+    closure_0 = !callResult;
+    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
+      return closure_0;
+    };
+    return _isNativeReflectConstruct();
+  } catch (err) {
   }
-  obj = { containerHeight: derivedValue, INITIAL_CONTAINER_HEIGHT: require("DEFAULT_HANDLE_HEIGHT").INITIAL_CONTAINER_HEIGHT, INITIAL_SNAP_POINT: require("DEFAULT_HANDLE_HEIGHT").INITIAL_SNAP_POINT, snapPoints, normalizeSnapPoint: require("normalizeSnapPoint").normalizeSnapPoint, enableDynamicSizing: DEFAULT_DYNAMIC_SIZING, handleHeight: reactiveSharedValue2, INITIAL_HANDLE_HEIGHT: require("DEFAULT_HANDLE_HEIGHT").INITIAL_HANDLE_HEIGHT, contentHeight: sharedValue1, maxDynamicContentSize, dynamicSnapPointIndex: sharedValue };
-  P.__closure = obj;
-  P.__workletHash = 15015207820492;
-  P.__initData = __initData;
-  let items = [snapPoints, derivedValue, reactiveSharedValue2, sharedValue1, sharedValue, DEFAULT_DYNAMIC_SIZING, maxDynamicContentSize, sharedValue];
-  derivedValue = require("cancelAnimation").useDerivedValue(P, items);
-  const obj2 = require("cancelAnimation");
-  class N {
-    constructor() {
-      if (closure_4) {
+}
+let closure_3 = ["style"];
+get_ActivityIndicator = fn(17);
+({ Animated: closure_8, Easing: closure_9, StyleSheet: c10, View: closure_11 } = get_ActivityIndicator);
+const jsx = fn(21).jsx;
+class TouchableOpacity {
+  constructor() {
+    self = this;
+    items = [...arguments];
+    closure_0 = undefined;
+    tmp = hasOwnProperty(this, TouchableOpacity);
+    items1 = [...items];
+    tmp2 = closure_7;
+    obj = closure_7(TouchableOpacity);
+    tmp3 = metroRequire;
+    if (closure_13()) {
+      tmp5 = globalThis;
+      _Reflect = Reflect;
+      constructResult = Reflect.construct(obj, items1, tmp2(self).constructor);
+    } else {
+      constructResult = obj.apply(self, items1);
+    }
+    tmp3Result = tmp3(self, constructResult);
+    closure_0 = tmp3Result;
+    tmp3Result.getChildStyleOpacityWithDefault = () => {
+      const tmp = closure_2_10.flatten(closure_0.props.style) || {};
+      let num = 1;
+      if (null != tmp.opacity) {
+        const opacity = tmp.opacity;
+        num = opacity.valueOf();
+      }
+      return num;
+    };
+    value = new closure_8.Value(tmp3Result.getChildStyleOpacityWithDefault());
+    tmp3Result.opacity = value;
+    tmp3Result.setOpacityTo = (toValue, duration) => {
+      const obj = { toValue, duration, easing: React7.inOut(React7.quad), useNativeDriver: null };
+      let flag = closure_0.props.useNativeAnimations;
+      if (flag == null) {
         flag = true;
-        return true;
-      } else {
-        iter = closure_0;
-        if (closure_0) {
-          str = "value";
-          value = iter;
-          if ("value" in iter) {
-            value = iter.value;
-          }
-          items = value;
-        } else {
-          items = [];
-        }
-        length = items.length;
-        tmp = !length;
-        if (length) {
-          tmp = !items.find(/* F110823 */ function() { ... });
-        }
-        return !tmp;
       }
-    }
+      obj.useNativeDriver = flag;
+      React6.timing(closure_0.opacity, obj).start();
+      const timingResult = React6.timing(closure_0.opacity, obj);
+    };
+    tmp3Result.onStateChange = (arg0, arg1) => {
+      if (arg1 === TouchableOpacity(6802).TOUCHABLE_STATE.BEGAN) {
+        closure_0.setOpacityTo(closure_0.props.activeOpacity, 0);
+      } else {
+        if (!tmp3) {
+          closure_0.setOpacityTo(closure_0.getChildStyleOpacityWithDefault(), 150);
+        }
+        tmp3 = arg1 !== TouchableOpacity(6802).TOUCHABLE_STATE.UNDETERMINED && arg1 !== TouchableOpacity(6802).TOUCHABLE_STATE.MOVED_OUTSIDE;
+      }
+    };
+    return tmp3Result;
   }
-  N.__closure = { enableDynamicSizing: DEFAULT_DYNAMIC_SIZING, snapPoints };
-  N.__workletHash = 4816362093278;
-  N.__initData = __initData2;
-  let items1 = [derivedValue, sharedValue, require("cancelAnimation").useDerivedValue(N)];
-  return items1;
+}
+_inherits(TouchableOpacity, fn(19).Component);
+const entry = {
+  key: "render",
+  value: function render() {
+    const self = this;
+    const props = this.props;
+    let style = props.style;
+    if (undefined === style) {
+      style = {};
+    }
+    const obj = {};
+    const tmp = _objectWithoutProperties(props, closure_3);
+    const merged = Object.assign(tmp);
+    const items = [style, { opacity: self.opacity }];
+    obj.style = items;
+    obj.onStateChange = self.onStateChange;
+    if (self.props.children) {
+      let children = self.props.children;
+    } else {
+      children = <closure_1_11 />;
+    }
+    obj.children = children;
+    return jsx(_modDef6802, {});
+  }
 };
+let items = [entry];
+const importDefaultResultResult = _createClass(TouchableOpacity, items);
+let obj = {};
+let merged = Object.assign(_modDef6802.defaultProps);
+obj.activeOpacity = 0.2;
+importDefaultResultResult.defaultProps = obj;
+
+export default importDefaultResultResult;

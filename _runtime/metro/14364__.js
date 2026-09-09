@@ -1,42 +1,44 @@
 // === Module 14364: ? ===
 
 // Module 14364
-import _mod14303 from "module_14303" /* 14303 */;
-import _mod14304 from "module_14304" /* 14304 */;
-import _mod14306 from "module_14306" /* 14306 */;
-import _mod14307 from "module_14307" /* 14307 */;
-import _mod14324 from "module_14324" /* 14324 */;
-import _mod14333 from "module_14333" /* 14333 */;
-import _mod14353 from "module_14353" /* 14353 */;
-import _mod14365 from "module_14365" /* 14365 */;
+import _mod14329 from "module_14329" /* 14329 */;
+import _mod14351 from "module_14351" /* 14351 */;
 
-let closure_4 = _mod14307([].concat);
-if (!assign) {
-  assign = function assign(arg0, arg1) {
-    const tmp = _mod14324(arg0);
-    const f = _mod14353.f;
-    for (let num = 1; length > num; num = num + 1) {
-      let tmp5 = _mod14306(arguments[num]);
-      if (f) {
-        let tmp8 = _mod14365(tmp5);
-        let arr = closure_4(tmp8, f(tmp5));
+const re2 = /#|\.prototype\./;
+function isForced(arg0, arg1) {
+  if (typeof fn === "function") {
+    const _String = String;
+    const str3 = String(arg0).replace(re2, ".");
+    const tmp5 = tmp[str3.toLowerCase(str3)];
+    let tmp7 = tmp5 === P;
+    if (!tmp7) {
+      if (tmp5 === N) {
+        tmp7 = tmp9;
       } else {
-        arr = _mod14365(tmp5);
-      }
-      let length2 = arr.length;
-      for (let num2 = 0; length2 > num2; num2 = num2 + 1) {
-        let tmp9 = arr[num2];
-        let tmp12 = _mod14303;
-        if (tmp12) {
-          tmp12 = !_mod14333(tmp2, tmp5, tmp9);
-        }
-        if (!tmp12) {
-          tmp[tmp9] = tmp5[tmp9];
+        let tmp11Result = dependencyMap;
+        if (_mod14351(arg1)) {
+          tmp11Result = _mod14329;
+          let tmp11ResultResult = tmp11Result(arg1);
+        } else {
+          tmp11ResultResult = arg1;
         }
       }
     }
-    return tmp;
-  };
+    return tmp7;
+  } else {
+    throw new TypeError("Trying to call a non-function");
+  }
 }
+const normalize = (arg0) => {
+  const str = String(arg0);
+  return String(arg0).replace(re2, ".").toLowerCase();
+};
+isForced.normalize = normalize;
+const data = {};
+isForced.data = data;
+isForced.NATIVE = "N";
+const N = "N";
+isForced.POLYFILL = "P";
+const P = "P";
 
-export default assign;
+export default isForced;

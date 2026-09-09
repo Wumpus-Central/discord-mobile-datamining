@@ -1,93 +1,99 @@
 // === Module 6667: ? ===
 
 // Module 6667
-import GestureDetectorType from "GestureDetectorType" /* 6668 */;
-import NativeDetector2 from "NativeDetector" /* 6710 */;
-import VirtualDetector from "VirtualDetector" /* 6734 */;
-import transformLongPressProps from "transformLongPressProps" /* 6736 */;
-import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
-import noop from "module_19" /* 19 */;
+import cancelAnimation from "cancelAnimation" /* 1636 */;
 
-require = fn;
-let closure_2 = ["ref", "onGestureUpdate_CAN_CAUSE_INFINITE_RERENDER"];
-const useEffect = fn(19).useEffect;
-const jsx = fn(21).jsx;
+require = arg1;
+let dependencyMap = arg6;
+let __initData = { code: "function pnpm_useScrollHandlerTs1(event,context){const{handleOnScroll,onScroll,runOnJS}=this.__closure;handleOnScroll(event,context);if(onScroll){runOnJS(onScroll)({nativeEvent:event});}}" };
+let closure_3 = { code: "function pnpm_useScrollHandlerTs2(event,context){const{handleOnBeginDrag,onScrollBeginDrag,runOnJS}=this.__closure;handleOnBeginDrag(event,context);if(onScrollBeginDrag){runOnJS(onScrollBeginDrag)({nativeEvent:event});}}" };
+let closure_4 = { code: "function pnpm_useScrollHandlerTs3(event,context){const{handleOnEndDrag,onScrollEndDrag,runOnJS}=this.__closure;handleOnEndDrag(event,context);if(onScrollEndDrag){runOnJS(onScrollEndDrag)({nativeEvent:event});}}" };
 
-export default function createNativeWrapper(displayName) {
-  _require = displayName;
-  if (gestureHandlerProps === undefined) {
-    gestureHandlerProps = {};
+export const useScrollHandler = () => {
+  let useScrollEventsHandlersDefault = scrollEventsHandlersHook;
+  if (scrollEventsHandlersHook === undefined) {
+    useScrollEventsHandlersDefault = require("module_6668").useScrollEventsHandlersDefault;
   }
-  let Native = Intercepting;
-  if (Intercepting === undefined) {
-    Native = require("GestureDetectorType").GestureDetectorType.Native;
+  _require = onScroll;
+  dependencyMap = onScrollBeginDrag;
+  __initData = onScrollEndDrag;
+  let workletNoop2;
+  let workletNoop3;
+  let obj = require("cancelAnimation");
+  const animatedRef = obj.useAnimatedRef();
+  let obj1 = require("cancelAnimation");
+  const sharedValue = obj1.useSharedValue(0);
+  const scrollEventsHandlersDefault = useScrollEventsHandlersDefault(animatedRef, sharedValue, lockableScrollableContentOffsetY);
+  let workletNoop = scrollEventsHandlersDefault.handleOnScroll;
+  if (undefined === workletNoop) {
+    workletNoop = tmp3(6658).workletNoop;
   }
-  let str;
-  if (displayName != null) {
-    str = displayName.displayName;
+  workletNoop2 = scrollEventsHandlersDefault.handleOnBeginDrag;
+  if (undefined === workletNoop2) {
+    workletNoop2 = tmp3(6658).workletNoop;
   }
-  if (!str) {
-    let name;
-    if (displayName != null) {
-      const render = displayName.render;
-      if (render != null) {
-        name = render.name;
-      }
+  workletNoop3 = scrollEventsHandlersDefault.handleOnEndDrag;
+  if (undefined === workletNoop3) {
+    workletNoop3 = tmp3(6658).workletNoop;
+  }
+  let workletNoop4 = scrollEventsHandlersDefault.handleOnMomentumEnd;
+  if (undefined === workletNoop4) {
+    workletNoop4 = tmp3(6658).workletNoop;
+  }
+  let workletNoop5 = scrollEventsHandlersDefault.handleOnMomentumBegin;
+  if (undefined === workletNoop5) {
+    workletNoop5 = tmp3(6658).workletNoop;
+  }
+  obj = { scrollHandler: null, scrollableRef: null, scrollableContentOffsetY: null };
+  obj = { onScroll: null, onBeginDrag: null, onEndDrag: null, onMomentumBegin: null, onMomentumEnd: null };
+  const fn = function v(nativeEvent, arg1) {
+    workletNoop(nativeEvent, arg1);
+    if (closure_0) {
+      const obj = { nativeEvent };
+      obj.runOnJS(tmp2)(obj);
     }
-    str = name;
-  }
-  if (!str) {
-    let tmp4 = typeof displayName === "string";
-    if (typeof displayName === "string") {
-      tmp4 = displayName;
+  };
+  obj1 = { handleOnScroll: workletNoop, onScroll, runOnJS: tmp3(1636).runOnJS };
+  fn.__closure = obj1;
+  fn.__workletHash = 13105350120634;
+  fn.__initData = __initData;
+  obj.onScroll = fn;
+  const fn2 = function _(nativeEvent, arg1) {
+    workletNoop2(nativeEvent, arg1);
+    if (closure_1) {
+      const obj = { nativeEvent };
+      obj.runOnJS(tmp2)(obj);
     }
-    str = tmp4;
-  }
-  if (!str) {
-    str = "ComponentWrapper";
-  }
-  class ComponentWrapper {
-    constructor(arg0) {
-      closure_0 = displayName;
-      onGestureUpdate_CAN_CAUSE_INFINITE_RERENDER = displayName.onGestureUpdate_CAN_CAUSE_INFINITE_RERENDER;
-      closure_1 = onGestureUpdate_CAN_CAUSE_INFINITE_RERENDER;
-      keys = Object.keys(closure_3(displayName, closure_2));
-      obj = { gestureHandlerProps: null, childProps: null };
-      obj = {};
-      merged = Object.assign(closure_1);
-      obj.gestureHandlerProps = obj;
-      obj.childProps = { enabled: displayName.enabled, hitSlop: displayName.hitSlop, testID: displayName.testID };
-      reduced = keys.reduce(() => { ... }, obj);
-      ({ gestureHandlerProps, childProps } = reduced);
-      if (undefined === gestureHandlerProps.disableReanimated) {
-        flag = true;
-        gestureHandlerProps.disableReanimated = true;
+  };
+  const tmp3Result = require("cancelAnimation");
+  fn2.__closure = { handleOnBeginDrag: workletNoop2, onScrollBeginDrag, runOnJS: require("cancelAnimation").runOnJS };
+  fn2.__workletHash = 803385440782;
+  fn2.__initData = workletNoop;
+  obj.onBeginDrag = fn2;
+  class O {
+    constructor(arg0, arg1) {
+      tmp = workletNoop(scrollEventsHandlersHook, onScroll);
+      if (closure_2) {
+        tmp3 = closure_0;
+        tmp4 = closure_1;
+        obj = closure_0(closure_1[1]);
+        obj = { nativeEvent: null };
+        obj.nativeEvent = scrollEventsHandlersHook;
+        tmp5 = obj.runOnJS(tmp2)(obj);
       }
-      tmp3 = closure_0;
-      tmp4 = closure_1;
-      obj3 = closure_0(closure_1[5]);
-      nativeGesture = obj3.useNativeGesture(gestureHandlerProps);
-      closure_2 = nativeGesture;
-      items = [, ];
-      items[0] = nativeGesture;
-      items[1] = onGestureUpdate_CAN_CAUSE_INFINITE_RERENDER;
-      tmp6 = useEffect(() => { ... }, items);
-      tmp7 = Native;
-      if (Native === closure_0(closure_1[3]).GestureDetectorType.Intercepting) {
-        NativeDetector = tmp3(tmp4[3]).InterceptingGestureDetector;
-      } else if (tmp7 === tmp3(tmp4[3]).GestureDetectorType.Virtual) {
-        NativeDetector = tmp3(tmp4[6]).VirtualDetector;
-      } else {
-        NativeDetector = tmp3(tmp4[7]).NativeDetector;
-      }
-      obj1 = { gesture: nativeGesture, children: null };
-      obj2 = {};
-      merged1 = Object.assign(childProps);
-      obj2.ref = displayName.ref;
-      obj1.children = jsx(closure_0, obj2);
-      return jsx(NativeDetector, obj1);
+      return;
     }
   }
-  ComponentWrapper.displayName = str;
-  return ComponentWrapper;
+  const obj2 = { handleOnBeginDrag: workletNoop2, onScrollBeginDrag, runOnJS: require("cancelAnimation").runOnJS };
+  O.__closure = { handleOnEndDrag: workletNoop3, onScrollEndDrag, runOnJS: require("cancelAnimation").runOnJS };
+  O.__workletHash = 3274737678599;
+  O.__initData = workletNoop2;
+  obj.onEndDrag = O;
+  obj.onMomentumBegin = workletNoop5;
+  obj.onMomentumEnd = workletNoop4;
+  const items = [workletNoop, workletNoop2, workletNoop3, workletNoop5, workletNoop4, onScroll, onScrollBeginDrag, onScrollEndDrag];
+  obj.scrollHandler = tmp3Result.useAnimatedScrollHandler(obj, items);
+  obj.scrollableRef = animatedRef;
+  obj.scrollableContentOffsetY = sharedValue;
+  return obj;
 };

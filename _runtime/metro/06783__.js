@@ -1,70 +1,73 @@
 // === Module 6783: ? ===
 
 // Module 6783
-import _possibleConstructorReturnDefault from "_possibleConstructorReturn" /* 93 */;
-import _classCallCheck from "_classCallCheck" /* 41 */;
-import _createClass from "_createClass" /* 42 */;
-import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
-import _inherits from "_inherits" /* 98 */;
+import nativeViewGestureHandlerProps from "nativeViewGestureHandlerProps" /* 6711 */;
+import "module_19";
 
-function _isNativeReflectConstruct() {
-  try {
-    const _Boolean = Boolean;
-    const call = valueOf.call;
-    const _Reflect = Reflect;
-    const _Boolean2 = Boolean;
-    if (typeof call === "unknown") {
-      let callResult = valueOf();
-    } else {
-      callResult = call(constructResult);
+require = fn;
+const noop = fn(19);
+({ useImperativeHandle: c2, useRef: c3 } = noop);
+const jsx = fn(21).jsx;
+let items = [...fn(6711).nativeViewProps, "onGestureHandlerEvent", "onGestureHandlerStateChange"];
+
+export default function createNativeWrapper(displayName) {
+  _require = displayName;
+  if (gestureHandlerProps === undefined) {
+    gestureHandlerProps = {};
+  }
+  let str;
+  if (displayName != null) {
+    str = displayName.displayName;
+  }
+  if (!str) {
+    let name;
+    if (displayName != null) {
+      const render = displayName.render;
+      if (render != null) {
+        name = render.name;
+      }
     }
-    closure_0 = !callResult;
-    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
-      return closure_0;
-    };
-    return _isNativeReflectConstruct();
-  } catch (err) {
+    str = name;
   }
-}
-_possibleConstructorReturnDefault;
-class NativeGesture {
-  constructor() {
-    self = this;
-    tmp = closure_0(this, NativeGesture);
-    tmp2 = c2;
-    obj = c2(NativeGesture);
-    tmp3 = closure_1;
-    if (closure_3()) {
-      tmp5 = globalThis;
-      _Reflect = Reflect;
-      constructResult = Reflect.construct(obj, [], tmp2(self).constructor);
-    } else {
-      constructResult = obj.apply(self, undefined);
+  if (!str) {
+    let tmp2 = typeof displayName === "string";
+    if (typeof displayName === "string") {
+      tmp2 = displayName;
     }
-    tmp3Result = tmp3(self, constructResult);
-    tmp3Result.config = {};
-    tmp3Result.handlerName = "NativeViewGestureHandler";
-    return tmp3Result;
+    str = tmp2;
   }
-}
-_classCallCheck = NativeGesture;
-_inherits(NativeGesture, fn(6676).BaseGesture);
-const entry = {
-  key: "shouldActivateOnStart",
-  value: function shouldActivateOnStart(shouldActivateOnStart) {
-    this.config.shouldActivateOnStart = shouldActivateOnStart;
-    return this;
+  if (!str) {
+    str = "ComponentWrapper";
   }
+  class ComponentWrapper {
+    constructor(arg0) {
+      closure_0 = displayName;
+      keys = Object.keys(displayName);
+      obj = { gestureHandlerProps: null, childProps: null };
+      obj = {};
+      merged = Object.assign(closure_1);
+      obj.gestureHandlerProps = obj;
+      obj.childProps = { enabled: displayName.enabled, hitSlop: displayName.hitSlop, testID: displayName.testID };
+      reduced = keys.reduce(() => { ... }, obj);
+      ({ gestureHandlerProps, childProps } = reduced);
+      tmp3 = useRef(null);
+      closure_1 = tmp3;
+      tmp4 = useRef(null);
+      closure_2 = tmp4;
+      items = [, ];
+      items[0] = tmp3;
+      items[1] = tmp4;
+      tmp5 = useImperativeHandle(displayName.ref, () => { ... }, items);
+      obj1 = {};
+      merged1 = Object.assign(gestureHandlerProps);
+      obj1.ref = tmp4;
+      obj2 = {};
+      merged2 = Object.assign(childProps);
+      obj2.ref = tmp3;
+      obj1.children = jsx(closure_0, obj2);
+      return jsx(closure_0(closure_1[2]).NativeViewGestureHandler, obj1);
+    }
+  }
+  ComponentWrapper.displayName = str;
+  return ComponentWrapper;
 };
-const items = [
-  entry,
-  {
-    key: "disallowInterruption",
-    value: function disallowInterruption(disallowInterruption) {
-      this.config.disallowInterruption = disallowInterruption;
-      return this;
-    }
-  }
-];
-
-export const NativeGesture = _createClass(NativeGesture, items);

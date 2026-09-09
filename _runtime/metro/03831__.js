@@ -1,28 +1,34 @@
 // === Module 3831: ? ===
 
 // Module 3831
-import startOfDay from "startOfDay" /* 3814 */;
-import requiredArgs from "requiredArgs" /* 3651 */;
+import module_3667 from "module_3667" /* 3667 */;
+import module_3811 from "module_3811" /* 3811 */;
+import requiredArgs from "requiredArgs" /* 3664 */;
 
-if (!startOfDay) {
-  let obj = { default: startOfDay };
+if (!module_3667) {
+  let obj = { default: module_3667 };
   let tmp3 = obj;
 } else {
-  tmp3 = startOfDay;
+  tmp3 = module_3667;
 }
-startOfDay = tmp3;
-if (!requiredArgs) {
-  obj = { default: requiredArgs };
+module_3667 = tmp3;
+if (!module_3811) {
+  obj = { default: module_3811 };
   let tmp5 = obj;
 } else {
-  tmp5 = requiredArgs;
+  tmp5 = module_3811;
 }
-requiredArgs = tmp5;
+module_3811 = tmp5;
+if (!requiredArgs) {
+  obj = { default: requiredArgs };
+  let tmp7 = obj;
+} else {
+  tmp7 = requiredArgs;
+}
+requiredArgs = tmp7;
 
-export default function isSameDay(arg0, arg1) {
+export default function addWeeks(arg0, arg1) {
   requiredArgs.default(2, arguments);
-  const defaultResult1 = startOfDay.default(arg0);
-  const time = defaultResult1.getTime();
-  return time === startOfDay.default(arg1).getTime();
+  return module_3811.default(arg0, 7 * module_3667.default(arg1));
 };
 export default exports.default;

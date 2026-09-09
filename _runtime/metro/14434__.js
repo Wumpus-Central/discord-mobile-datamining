@@ -1,33 +1,19 @@
 // === Module 14434: ? ===
 
 // Module 14434
-import emptyPromise from "emptyPromise" /* 14417 */;
+import _mod14435 from "module_14435" /* 14435 */;
+import get_ActivityIndicator from "module_17" /* 17 */;
 
-require = arg1;
-const dependencyMap = arg6;
 
-export default () => (log) => {
-  const result = emptyPromise.assertHasLoggerPlugin(log);
-  closure_0 = log;
-  return {
-    onConnect() {
-      log = console.log;
-      console.log = () => {
-        const items = [...arguments];
-        log(...items);
-        const items1 = [...items];
-        log.log.apply(items1);
-      };
-      console.warn = () => {
-        const items = [...arguments];
-        warn(...items);
-        log.warn(items[0]);
-      };
-      console.debug = () => {
-        const items = [...arguments];
-        debug(...items);
-        log.debug(items[0]);
-      };
+export default function getReactNativeDimensions() {
+  try {
+    const Dimensions = get_ActivityIndicator.Dimensions;
+    try {
+      const Dimensions2 = get_ActivityIndicator.Dimensions;
+      value = Dimensions2.get("window");
+      return _mod14435.getReactNativeDimensionsWithDimensions(tmp2, value);
+    } catch (err) {
     }
-  };
+  } catch (err) {
+  }
 };

@@ -1,13 +1,14 @@
 // === Module 10615: ? ===
 
 // Module 10615
-import _possibleConstructorReturn from "_possibleConstructorReturn" /* 93 */;
-import _mod10455 from "module_10455" /* 10455 */;
+import AbstractParserWithWordBoundaryChecking from "AbstractParserWithWordBoundaryChecking" /* 10471 */;
 import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
+import c3 from "_possibleConstructorReturn" /* 93 */;
 import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
 
+const ESTimeUnitWithinFormatParser = require;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -27,30 +28,14 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-_possibleConstructorReturn;
-let fn = this;
-if (this) {
-  fn = this.__importDefault;
-}
-if (!fn) {
-  fn = (__esModule) => {
-    if (!__esModule) {
-      const obj = { default: __esModule };
-      let tmp = obj;
-    } else {
-      tmp = __esModule;
-    }
-    return tmp;
-  };
-}
-class ENMergeDateRangeRefiner {
+class ESTimeUnitWithinFormatParser {
   constructor() {
     self = this;
-    tmp = closure_0(this, ENMergeDateRangeRefiner);
-    tmp2 = c2;
-    obj = c2(ENMergeDateRangeRefiner);
-    tmp3 = closure_1;
-    if (closure_3()) {
+    tmp = c2(this, ESTimeUnitWithinFormatParser);
+    tmp2 = closure_4;
+    obj = closure_4(ESTimeUnitWithinFormatParser);
+    tmp3 = closure_3;
+    if (hasOwnProperty()) {
       tmp7 = globalThis;
       _Reflect = Reflect;
       tmp8 = arguments;
@@ -63,14 +48,23 @@ class ENMergeDateRangeRefiner {
     return tmp3(self, constructResult);
   }
 }
-_classCallCheck = ENMergeDateRangeRefiner;
-_inherits(ENMergeDateRangeRefiner, fn(_mod10455).default);
+_inherits(ESTimeUnitWithinFormatParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
 const entry = {
-  key: "patternBetween",
-  value: function patternBetween() {
-    return /^\s*(to|-)\s*$/i;
+  key: "innerPattern",
+  value: function innerPattern() {
+    const regExp = new RegExp("(?:en|por|durante|de|dentro de)\\s*(" + ESTimeUnitWithinFormatParser(10608).TIME_UNITS_PATTERN + ")(?=\\W|$)", "i");
+    return regExp;
   }
 };
-const items = [entry];
+const items = [
+  entry,
+  {
+    key: "innerExtract",
+    value: function innerExtract(reference, arg1) {
+      const ParsingComponents = ESTimeUnitWithinFormatParser(10467).ParsingComponents;
+      return ParsingComponents.createRelativeFromReference(reference.reference, ESTimeUnitWithinFormatParser(10608).parseDuration(arg1[1]));
+    }
+  }
+];
 
-export default _createClass(ENMergeDateRangeRefiner, items);
+export default _createClass(ESTimeUnitWithinFormatParser, items);

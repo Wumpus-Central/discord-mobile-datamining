@@ -1,8 +1,8 @@
 // === Module 4018: ? ===
 
 // Module 4018
-import _typeof from "module_3650" /* 3650 */;
-import requiredArgs from "requiredArgs" /* 3651 */;
+import _typeof from "module_3663" /* 3663 */;
+import requiredArgs from "requiredArgs" /* 3664 */;
 
 if (!_typeof) {
   let obj = { default: _typeof };
@@ -19,8 +19,10 @@ if (!requiredArgs) {
 }
 requiredArgs = tmp5;
 
-export default function isWednesday(arg0) {
-  requiredArgs.default(1, arguments);
-  return 3 === _typeof.default(arg0).getDay();
+export default function isSameYear(arg0, arg1) {
+  requiredArgs.default(2, arguments);
+  const defaultResult1 = _typeof.default(arg0);
+  const fullYear = defaultResult1.getFullYear();
+  return fullYear === _typeof.default(arg1).getFullYear();
 };
 export default exports.default;

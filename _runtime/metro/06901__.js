@@ -1,18 +1,23 @@
 // === Module 6901: ? ===
 
 // Module 6901
-import noop from "module_19" /* 19 */;
-
-({ useRef: closure_0, useLayoutEffect: closure_1 } = noop);
-
-export const useUnmountFlag = () => {
-  const tmp = React(false);
-  closure_0 = tmp;
-  framebus(() => {
-    closure_0.current = false;
-    return () => {
-      closure_1_0.current = true;
+function _getPrototypeOf(arg0) {
+  if (Object.setPrototypeOf) {
+    let _Object = Object;
+    exports = getPrototypeOf.bind();
+  } else {
+    exports = (arg0) => {
+      let __proto__ = arg0.__proto__;
+      if (!__proto__) {
+        const _Object = Object;
+        __proto__ = Object.getPrototypeOf(arg0);
+      }
+      return __proto__;
     };
-  }, []);
-  return tmp;
-};
+  }
+  module.exports = exports;
+  return exports(arg0);
+}
+let exports = _getPrototypeOf;
+
+export default _getPrototypeOf;

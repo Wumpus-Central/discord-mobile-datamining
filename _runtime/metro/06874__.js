@@ -1,12 +1,33 @@
 // === Module 6874: ? ===
 
 // Module 6874
-import PlatformConfig2 from "PlatformConfig" /* 6872 */;
+import _mod6875 from "module_6875" /* 6875 */;
 
-require = arg1;
-const dependencyMap = arg6;
 
-export const getInvertedTransformStyle = function getInvertedTransformStyle(horizontal) {
-  const PlatformConfig = PlatformConfig2.PlatformConfig;
-  return horizontal ? PlatformConfig.invertedTransformStyleHorizontal : PlatformConfig.invertedTransformStyle;
+export default function _unsupportedIterableToArray(str, arg1) {
+  if (str) {
+    if (typeof str === "string") {
+      return _mod6875(str, arg1);
+    } else {
+      const toString = {}.toString;
+      const call = toString.call;
+      let arr = typeof call === "unknown" ? toString() : call(str);
+      const substr = arr.slice(8, -1);
+      let name = substr;
+      if (tmp3) {
+        name = str.constructor.name;
+      }
+      if ("Map" !== name) {
+        if ("Set" !== name) {
+          if ("Arguments" === name) {
+            arr = _mod6875(str, arg1);
+          }
+        }
+        return arr;
+      }
+      const _Array = Array;
+      arr = Array.from(str);
+      tmp3 = "Object" === substr && "Object".constructor;
+    }
+  }
 };

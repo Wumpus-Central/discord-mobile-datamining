@@ -1,99 +1,105 @@
 // === Module 6796: ? ===
 
 // Module 6796
-import GESTURE_SOURCE from "GESTURE_SOURCE" /* 6628 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 6655 */;
+import _possibleConstructorReturnDefault from "_possibleConstructorReturn" /* 93 */;
+import _classCallCheck from "_classCallCheck" /* 41 */;
+import _createClass from "_createClass" /* 42 */;
+import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
+import _get from "_get" /* 96 */;
+import _inherits from "_inherits" /* 98 */;
 
-require = arg1;
-let dependencyMap = arg6;
-let __initData = { code: "function pnpm_useGestureHandlerTs1(event){const{state,State,gestureSource,source,onStart}=this.__closure;state.value=State.BEGAN;gestureSource.value=source;onStart(source,event);return;}" };
-let __initData2 = { code: "function pnpm_useGestureHandlerTs2(event){const{gestureSource,source,state,onChange}=this.__closure;if(gestureSource.value!==source){return;}state.value=event.state;onChange(source,event);}" };
-let __initData3 = { code: "function pnpm_useGestureHandlerTs3(event){const{gestureSource,source,state,GESTURE_SOURCE,onEnd}=this.__closure;if(gestureSource.value!==source){return;}state.value=event.state;gestureSource.value=GESTURE_SOURCE.UNDETERMINED;onEnd(source,event);}" };
-let __initData4 = { code: "function pnpm_useGestureHandlerTs4(event){const{gestureSource,source,state,GESTURE_SOURCE,onFinalize}=this.__closure;if(gestureSource.value!==source){return;}state.value=event.state;gestureSource.value=GESTURE_SOURCE.UNDETERMINED;onFinalize(source,event);}" };
-
-export const useGestureHandler = (CONTENT, animatedContentGestureState, sharedValue, handleOnStart, handleOnChange, handleOnEnd, handleOnFinalize) => {
-  const _require = CONTENT;
-  dependencyMap = animatedContentGestureState;
-  __initData = sharedValue;
-  __initData2 = handleOnStart;
-  __initData3 = handleOnChange;
-  __initData4 = handleOnEnd;
-  let obj = { handleOnStart: null, handleOnChange: null, handleOnEnd: null, handleOnFinalize: null };
-  let obj1 = require("cancelAnimation");
-  class R {
-    constructor(arg0) {
-      closure_1.value = closure_0(closure_1[1]).State.BEGAN;
-      closure_2.value = closure_0;
-      tmp = closure_3(closure_0, CONTENT);
-      return;
+function _isNativeReflectConstruct() {
+  try {
+    const _Boolean = Boolean;
+    const call = valueOf.call;
+    const _Reflect = Reflect;
+    const _Boolean2 = Boolean;
+    if (typeof call === "unknown") {
+      let callResult = valueOf();
+    } else {
+      callResult = call(constructResult);
     }
+    closure_0 = !callResult;
+    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
+      return closure_0;
+    };
+    return _isNativeReflectConstruct();
+  } catch (err) {
   }
-  obj = { state: animatedContentGestureState, State: require("LegacyBaseButton").State, gestureSource: sharedValue, source: CONTENT, onStart: handleOnStart };
-  R.__closure = obj;
-  R.__workletHash = 16113572067379;
-  R.__initData = __initData;
-  const items = [animatedContentGestureState, sharedValue, CONTENT, handleOnStart];
-  obj.handleOnStart = obj1.useWorkletCallback(R, items);
-  class U {
-    constructor(arg0) {
-      if (closure_2.value === closure_0) {
-        tmp2 = CONTENT;
-        tmp3 = closure_1;
-        closure_1.value = CONTENT.state;
-        tmp4 = closure_4;
-        tmp5 = closure_4(tmp, CONTENT);
-      }
-      return;
-    }
+}
+_possibleConstructorReturnDefault;
+function changeEventCalculator(force, force2) {
+  if (undefined === force2) {
+    let obj = { forceChange: force.force };
+  } else {
+    obj = { forceChange: force.force - force2.force };
   }
-  U.__closure = { gestureSource: sharedValue, source: CONTENT, state: animatedContentGestureState, onChange: handleOnChange };
-  U.__workletHash = 9050442757159;
-  U.__initData = __initData2;
-  const items1 = [animatedContentGestureState, sharedValue, CONTENT, handleOnChange];
-  obj.handleOnChange = require("cancelAnimation").useWorkletCallback(U, items1);
-  const obj4 = require("cancelAnimation");
-  class C {
-    constructor(arg0) {
-      if (closure_2.value === closure_0) {
-        tmp3 = CONTENT;
-        tmp4 = closure_1;
-        closure_1.value = CONTENT.state;
-        tmp5 = closure_0;
-        tmp6 = closure_1;
-        tmp.value = closure_0(closure_1[2]).GESTURE_SOURCE.UNDETERMINED;
-        tmp7 = closure_5;
-        tmp8 = closure_5(tmp2, CONTENT);
-      }
-      return;
-    }
-  }
-  obj = { gestureSource: sharedValue, source: CONTENT, state: animatedContentGestureState, GESTURE_SOURCE: require("GESTURE_SOURCE").GESTURE_SOURCE, onEnd: handleOnEnd };
-  C.__closure = obj;
-  C.__workletHash = 10682034812271;
-  C.__initData = __initData3;
-  const items2 = [animatedContentGestureState, sharedValue, CONTENT, handleOnEnd];
-  obj.handleOnEnd = require("cancelAnimation").useWorkletCallback(C, items2);
-  const obj5 = require("cancelAnimation");
-  class T {
-    constructor(arg0) {
-      if (closure_2.value === closure_0) {
-        tmp3 = CONTENT;
-        tmp4 = closure_1;
-        closure_1.value = CONTENT.state;
-        tmp5 = closure_0;
-        tmp6 = closure_1;
-        tmp.value = closure_0(closure_1[2]).GESTURE_SOURCE.UNDETERMINED;
-        tmp7 = closure_6;
-        tmp8 = closure_6(tmp2, CONTENT);
-      }
-      return;
-    }
-  }
-  obj1 = { gestureSource: sharedValue, source: CONTENT, state: animatedContentGestureState, GESTURE_SOURCE: require("GESTURE_SOURCE").GESTURE_SOURCE, onFinalize: handleOnFinalize };
-  T.__closure = obj1;
-  T.__workletHash = 9696716573416;
-  T.__initData = __initData4;
-  const items3 = [animatedContentGestureState, sharedValue, CONTENT, handleOnFinalize];
-  obj.handleOnFinalize = require("cancelAnimation").useWorkletCallback(T, items3);
+  obj = {};
+  const merged = Object.assign(force);
+  const merged1 = Object.assign(obj);
   return obj;
+}
+changeEventCalculator.__closure = {};
+changeEventCalculator.__workletHash = 11365193947542;
+changeEventCalculator.__initData = { code: "function changeEventCalculator_Pnpm_forceTouchGestureTs1(current,previous){let changePayload;if(previous===undefined){changePayload={forceChange:current.force};}else{changePayload={forceChange:current.force-previous.force};}return{...current,...changePayload};}" };
+class ForceTouchGesture {
+  constructor() {
+    self = this;
+    tmp = closure_0(this, ForceTouchGesture);
+    tmp2 = c2;
+    obj = c2(ForceTouchGesture);
+    tmp3 = closure_1;
+    if (closure_4()) {
+      tmp5 = globalThis;
+      _Reflect = Reflect;
+      constructResult = Reflect.construct(obj, [], tmp2(self).constructor);
+    } else {
+      constructResult = obj.apply(self, undefined);
+    }
+    tmp3Result = tmp3(self, constructResult);
+    tmp3Result.config = {};
+    tmp3Result.handlerName = "ForceTouchGestureHandler";
+    return tmp3Result;
+  }
+}
+_classCallCheck = ForceTouchGesture;
+_inherits(ForceTouchGesture, fn(6690).ContinousBaseGesture);
+const entry = {
+  key: "minForce",
+  value: function minForce(minForce) {
+    this.config.minForce = minForce;
+    return this;
+  }
 };
+let items = [
+  entry,
+  {
+    key: "maxForce",
+    value: function maxForce(maxForce) {
+      this.config.maxForce = maxForce;
+      return this;
+    }
+  },
+  {
+    key: "feedbackOnActivation",
+    value: function feedbackOnActivation(feedbackOnActivation) {
+      this.config.feedbackOnActivation = feedbackOnActivation;
+      return this;
+    }
+  },
+  {
+    key: "onChange",
+    value: function onChange(arg0) {
+      this.handlers.changeEventCalculator = hasOwnProperty;
+      const self = this;
+      let fn = _get(_getPrototypeOf(_classCallCheck.prototype), "onChange", this);
+      if (typeof fn === "function") {
+        fn = (items) => fn.apply(self, items);
+      }
+      const items = [arg0];
+      return fn(items);
+    }
+  }
+];
+
+export const ForceTouchGesture = _createClass(ForceTouchGesture, items);

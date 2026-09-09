@@ -1,42 +1,70 @@
 // === Module 3670: ? ===
 
 // Module 3670
-import module_3671 from "module_3671" /* 3671 */;
-import module_3672 from "module_3672" /* 3672 */;
-import module_3673 from "module_3673" /* 3673 */;
-import date from "module_3674" /* 3674 */;
-import date from "module_3675" /* 3675 */;
+import module_2035 from "module_2035" /* 2035 */;
+import module_2036 from "module_2036" /* 2036 */;
 
-if (!module_3671) {
-  let obj = { default: module_3671 };
-  let tmp3 = obj;
+if (!module_2035) {
+  let obj = { default: module_2035 };
 } else {
-  tmp3 = module_3671;
+  obj = module_2035;
 }
-if (!module_3672) {
-  obj = { default: module_3672 };
-  let tmp5 = obj;
+if (!module_2036) {
+  obj = { default: module_2036 };
+  let obj2 = obj;
 } else {
-  tmp5 = module_3672;
+  obj2 = module_2036;
 }
-if (!module_3673) {
-  obj = { default: module_3673 };
-  let tmp7 = obj;
-} else {
-  tmp7 = module_3673;
-}
-if (!date) {
-  const obj1 = { default: date };
-  let tmp9 = obj1;
-} else {
-  tmp9 = date;
-}
-if (!date) {
-  const obj2 = { default: date };
-  let tmp11 = obj2;
-} else {
-  tmp11 = date;
-}
+const date = {
+  ordinalNumber: obj2.default({
+    matchPattern: /^(\d+)(-?[врмт][аи]|-?т?(ен|на)|-?(ев|ева))?/i,
+    parsePattern: /\d+/i,
+    valueCallback(match) {
+      return parseInt(match, 10);
+    }
+  }),
+  era: null,
+  quarter: null,
+  month: null,
+  day: null,
+  dayPeriod: null
+};
+obj2 = { matchPatterns: { narrow: /^((пр)?н\.?\s?е\.?)/i, abbreviated: /^((пр)?н\.?\s?е\.?)/i, wide: /^(преди новата ера|новата ера|нова ера)/i }, defaultMatchWidth: "wide", parsePatterns: null, defaultParseWidth: "any" };
+const obj3 = { any: null };
+const items = [/^п/i, /^н/i];
+obj3.any = items;
+obj2.parsePatterns = obj3;
+date.era = obj.default(obj2);
+const obj4 = {
+  matchPatterns: { narrow: /^[1234]/i, abbreviated: /^[1234](-?[врт]?o?)? тримес.?/i, wide: /^[1234](-?[врт]?о?)? тримесечие/i },
+  defaultMatchWidth: "wide",
+  parsePatterns: null,
+  defaultParseWidth: "any",
+  valueCallback(arg0) {
+    return arg0 + 1;
+  }
+};
+const obj5 = { any: null };
+const items1 = [/1/i, /2/i, /3/i, /4/i];
+obj5.any = items1;
+obj4.parsePatterns = obj5;
+date.quarter = obj.default(obj4);
+const obj6 = { matchPatterns: { abbreviated: /^(яну|фев|мар|апр|май|юни|юли|авг|сеп|окт|ное|дек)/i, wide: /^(януари|февруари|март|април|май|юни|юли|август|септември|октомври|ноември|декември)/i }, defaultMatchWidth: "wide", parsePatterns: null, defaultParseWidth: "any" };
+const obj7 = { any: null };
+const items2 = [/^я/i, /^ф/i, /^мар/i, /^ап/i, /^май/i, /^юн/i, /^юл/i, /^ав/i, /^се/i, /^окт/i, /^но/i, /^де/i];
+obj7.any = items2;
+obj6.parsePatterns = obj7;
+date.month = obj.default(obj6);
+const obj8 = { matchPatterns: { narrow: /^[нпвсч]/i, short: /^(нд|пн|вт|ср|чт|пт|сб)/i, abbreviated: /^(нед|пон|вто|сря|чет|пет|съб)/i, wide: /^(неделя|понеделник|вторник|сряда|четвъртък|петък|събота)/i }, defaultMatchWidth: "wide", parsePatterns: null, defaultParseWidth: "any" };
+const obj9 = { narrow: null, any: null };
+const items3 = [/^н/i, /^п/i, /^в/i, /^с/i, /^ч/i, /^п/i, /^с/i];
+obj9.narrow = items3;
+const items4 = [/^н[ед]/i, /^п[он]/i, /^вт/i, /^ср/i, /^ч[ет]/i, /^п[ет]/i, /^с[ъб]/i];
+obj9.any = items4;
+obj8.parsePatterns = obj9;
+date.day = obj.default(obj8);
+const obj10 = { matchPatterns: { any: /^(преди о|след о|в по|на о|през|веч|сут|следо)/i }, defaultMatchWidth: "any", parsePatterns: { any: { am: /^преди о/i, pm: /^след о/i, midnight: /^в пол/i, noon: /^на об/i, morning: /^сут/i, afternoon: /^следо/i, evening: /^веч/i, night: /^през н/i } }, defaultParseWidth: "any" };
+date.dayPeriod = obj.default(obj10);
 
-export default { code: "de", formatDistance: tmp3.default, formatLong: tmp5.default, formatRelative: tmp7.default, localize: tmp9.default, match: tmp11.default, options: { weekStartsOn: 1, firstWeekContainsDate: 4 } };
+export default date;
 export default exports.default;

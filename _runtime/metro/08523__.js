@@ -1,15 +1,12 @@
 // === Module 8523: ? ===
 
 // Module 8523
-import _modDef8480 from "module_8480" /* 8480 */;
-import _classCallCheck from "_classCallCheck" /* 41 */;
+import _possibleConstructorReturnDefault from "_possibleConstructorReturn" /* 93 */;
 import _createClass from "_createClass" /* 42 */;
-import c3 from "_possibleConstructorReturn" /* 93 */;
+import _classCallCheck from "_classCallCheck" /* 41 */;
 import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
-import noop from "module_19" /* 19 */;
 
-const Filter = importDefault;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -29,51 +26,42 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-const jsx = fn(21).jsx;
-class Filter {
+_possibleConstructorReturnDefault;
+class FilterPrimitive {
   constructor() {
     self = this;
-    tmp = c2(this, Filter);
-    tmp2 = closure_4;
-    obj = closure_4(Filter);
-    tmp3 = closure_3;
-    if (metroRequire()) {
-      tmp7 = globalThis;
+    items = [...arguments];
+    closure_0 = undefined;
+    tmp = closure_0(this, FilterPrimitive);
+    items1 = [...items];
+    tmp2 = c2;
+    obj = c2(FilterPrimitive);
+    tmp3 = closure_1;
+    if (closure_3()) {
+      tmp5 = globalThis;
       _Reflect = Reflect;
-      tmp8 = arguments;
-      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
+      constructResult = Reflect.construct(obj, items1, tmp2(self).constructor);
     } else {
-      tmp4 = arguments;
-      tmp5 = arguments;
-      constructResult = obj(...arguments);
+      constructResult = obj.apply(self, items1);
     }
-    return tmp3(self, constructResult);
-  }
-}
-_inherits(Filter, _modDef8480);
-const entry = {
-  key: "render",
-  value: function render() {
-    const self = this;
-    const props = this.props;
-    const size = { name: props.id, x: props.x, y: props.y, width: props.width, height: props.height, filterUnits: props.filterUnits, primitiveUnits: props.primitiveUnits };
-    const obj = {
-      ref(arg0) {
-        return self.refMethod(arg0);
+    tmp3Result = tmp3(self, constructResult);
+    closure_0 = tmp3Result;
+    tmp3Result.root = null;
+    tmp3Result.refMethod = (root) => {
+      closure_0.root = root;
+    };
+    tmp3Result.setNativeProps = (arg0) => {
+      root = root.root;
+      if (root != null) {
+        root.setNativeProps(arg0);
       }
     };
-    const merged = Object.assign(size);
-    obj.children = this.props.children;
-    return jsx(Filter(8524), {
-      ref(arg0) {
-        return self.refMethod(arg0);
-      }
-    });
+    return tmp3Result;
   }
-};
-const items = [entry];
-const importDefaultResultResult = _createClass(Filter, items);
-importDefaultResultResult.displayName = "Filter";
-importDefaultResultResult.defaultProps = { x: "-10%", y: "-10%", width: "120%", height: "120%", filterUnits: "objectBoundingBox", primitiveUnits: "userSpaceOnUse" };
+}
+_classCallCheck = FilterPrimitive;
+_inherits(FilterPrimitive, fn(19).Component);
+const importDefaultResultResult = _createClass(FilterPrimitive);
+importDefaultResultResult.defaultPrimitiveProps = {};
 
 export default importDefaultResultResult;

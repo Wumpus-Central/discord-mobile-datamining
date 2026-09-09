@@ -1,31 +1,14 @@
 // === Module 3801: ? ===
 
 // Module 3801
-import _typeof from "module_3650" /* 3650 */;
-import requiredArgs from "requiredArgs" /* 3651 */;
+import module_2030 from "module_2030" /* 2030 */;
 
-if (!_typeof) {
-  let obj = { default: _typeof };
-  let tmp3 = obj;
+if (!module_2030) {
+  let obj = { default: module_2030 };
 } else {
-  tmp3 = _typeof;
+  obj = module_2030;
 }
-_typeof = tmp3;
-if (!requiredArgs) {
-  obj = { default: requiredArgs };
-  let tmp5 = obj;
-} else {
-  tmp5 = requiredArgs;
-}
-requiredArgs = tmp5;
+obj = { date: obj.default({ formats: { full: "d MMMM y EEEE", long: "d MMMM y", medium: "d MMM y", short: "dd.MM.yyyy" }, defaultWidth: "full" }), time: obj.default({ formats: { full: "HH:mm:ss zzzz", long: "HH:mm:ss z", medium: "HH:mm:ss", short: "HH:mm" }, defaultWidth: "full" }), dateTime: obj.default({ formats: { full: "{{date}} 'saat' {{time}}", long: "{{date}} 'saat' {{time}}", medium: "{{date}}, {{time}}", short: "{{date}}, {{time}}" }, defaultWidth: "full" }) };
 
-export default function isWeekend(arg0) {
-  requiredArgs.default(1, arguments);
-  const day = _typeof.default(arg0).getDay();
-  let tmp3 = 0 === day;
-  if (!tmp3) {
-    tmp3 = 6 === day;
-  }
-  return tmp3;
-};
+export default obj;
 export default exports.default;

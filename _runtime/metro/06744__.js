@@ -1,27 +1,33 @@
 // === Module 6744: ? ===
 
 // Module 6744
-import ComposedGestureName from "ComposedGestureName" /* 6714 */;
-import DEFAULT_PROPS_TRANSFORMER from "DEFAULT_PROPS_TRANSFORMER" /* 6723 */;
-import _mod6738 from "module_6738" /* 6738 */;
+import traverseAndConfigureRelations from "traverseAndConfigureRelations" /* 6743 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-const dependencyMap = arg6;
-function transformLongPressProps(shouldCancelWhenOutside) {
-  if (undefined === shouldCancelWhenOutside.shouldCancelWhenOutside) {
-    shouldCancelWhenOutside.shouldCancelWhenOutside = true;
-  }
-  return shouldCancelWhenOutside;
-}
-const items = [["minDuration", "minDurationMs"], ["maxDistance", "maxDist"]];
-const map = new Map(items);
-let closure_4 = {};
+({ useEffect: c2, useMemo: c3 } = noop);
 
-export const useLongPressGesture = function useLongPressGesture() {
-  let tmp = gestureHandlerProps;
-  if (gestureHandlerProps === undefined) {
-    tmp = closure_4;
-  }
-  const clonedAndRemappedConfig = DEFAULT_PROPS_TRANSFORMER.useClonedAndRemappedConfig(tmp, map, transformLongPressProps);
-  return _mod6738.useGesture(ComposedGestureName.SingleGestureName.LongPress, clonedAndRemappedConfig);
+export const useGestureRelationsUpdater = function useGestureRelationsUpdater(gesture) {
+  closure_0 = gesture;
+  const items = [gesture];
+  const tmp = closure_3(() => {
+    let configureRelationsResult = null;
+    if (closure_0) {
+      configureRelationsResult = traverseAndConfigureRelations.configureRelations(tmp);
+    }
+    return configureRelationsResult;
+  }, items);
+  closure_1 = tmp;
+  const items1 = [tmp];
+  closure_2(() => {
+    if (closure_1) {
+      const _requestAnimationFrame = requestAnimationFrame;
+      closure_0 = requestAnimationFrame(() => {
+        const item = closure_1_1.forEach((item, index) => {
+          const NativeProxy = closure_1_0(closure_1_1[2]).NativeProxy;
+          NativeProxy.configureRelations(index, item);
+        });
+      });
+      return () => cancelAnimationFrame(closure_0);
+    }
+  }, items1);
 };

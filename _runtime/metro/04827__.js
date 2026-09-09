@@ -2,29 +2,23 @@
 
 // Module 4827
 import callBoundIntrinsic from "callBoundIntrinsic" /* 1316 */;
-import _mod1444 from "module_1444" /* 1444 */;
+import properlyBoxed from "properlyBoxed" /* 4828 */;
+import _mod4830 from "module_4830" /* 4830 */;
+import RequireObjectCoercible from "RequireObjectCoercible" /* 4832 */;
+import shimArrayPrototypeMap from "shimArrayPrototypeMap" /* 4893 */;
+import callBind from "callBind" /* 1454 */;
+import defineProperty from "defineProperty" /* 4847 */;
 
-let closure_0 = callBoundIntrinsic("Date.prototype.getDay");
-let closure_1 = callBoundIntrinsic("Object.prototype.toString");
-let closure_2 = _mod1444();
+let closure_2 = callBind.apply(properlyBoxed());
+let closure_3 = callBoundIntrinsic("Array.prototype.slice");
+function map(arg0, arg1) {
+  RequireObjectCoercible(arg0);
+  return closure_2(arg0, closure_3(arguments, 1));
+}
+const obj = { getPolyfill: null, implementation: null, shim: null };
+obj.getPolyfill = properlyBoxed;
+obj.implementation = _mod4830;
+obj.shim = shimArrayPrototypeMap;
+defineProperty(map, obj);
 
-export default function isDateObject(obj) {
-  let tmp = typeof obj === "object";
-  if (typeof obj === "object") {
-    tmp = null !== obj;
-  }
-  if (!tmp) {
-    return tmp;
-  } else if (closure_2) {
-    let tmp4 = (function tryDateGetDayCall(arg0) {
-      try {
-        closure_1_0(arg0);
-        return true;
-      } catch (err) {
-        return false;
-      }
-    })(obj);
-  } else {
-    tmp4 = "[object Date]" === closure_1(obj);
-  }
-};
+export default map;

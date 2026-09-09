@@ -1,57 +1,106 @@
 // === Module 10475: ? ===
 
 // Module 10475
+import _mod10463 from "module_10463" /* 10463 */;
+import repeatedTimeunitPattern from "repeatedTimeunitPattern" /* 10464 */;
+import AbstractParserWithWordBoundaryChecking from "AbstractParserWithWordBoundaryChecking" /* 10471 */;
 import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
+import c3 from "_possibleConstructorReturn" /* 93 */;
+import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
+import _inherits from "_inherits" /* 98 */;
 
-const regExp = new RegExp("^\\s*(?:\\(?(?:GMT|UTC)\\s?)?([+-])(\\d{1,2})(?::?(\\d{2}))?\\)?", "i");
-class ExtractTimezoneOffsetRefiner {
-  constructor() {
-    tmp = closure_0(this, ExtractTimezoneOffsetRefiner);
-    return;
+const ENYearMonthDayParser = require;
+function _isNativeReflectConstruct() {
+  try {
+    const _Boolean = Boolean;
+    const call = valueOf.call;
+    const _Reflect = Reflect;
+    const _Boolean2 = Boolean;
+    if (typeof call === "unknown") {
+      let callResult = valueOf();
+    } else {
+      callResult = call(constructResult);
+    }
+    closure_0 = !callResult;
+    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
+      return closure_0;
+    };
+    return _isNativeReflectConstruct();
+  } catch (err) {
   }
 }
-_classCallCheck = ExtractTimezoneOffsetRefiner;
+const regExp = new RegExp("([0-9]{4})[-\\.\\/\\s](?:(" + repeatedTimeunitPattern.matchAnyPattern(_mod10463.MONTH_DICTIONARY) + ")|([0-9]{1,2}))[-\\.\\/\\s]([0-9]{1,2})(?=\\W|$)", "i");
+class ENYearMonthDayParser {
+  constructor(arg0) {
+    self = this;
+    tmp = c2(this, ENYearMonthDayParser);
+    tmp2 = closure_4;
+    obj = closure_4(ENYearMonthDayParser);
+    tmp3 = closure_3;
+    if (hasOwnProperty()) {
+      tmp5 = globalThis;
+      _Reflect = Reflect;
+      constructResult = Reflect.construct(obj, [], tmp2(self).constructor);
+    } else {
+      constructResult = obj.apply(self, undefined);
+    }
+    tmp3Result = tmp3(self, constructResult);
+    tmp3Result.strictMonthDateOrder = global;
+    return tmp3Result;
+  }
+}
+_inherits(ENYearMonthDayParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
 const entry = {
-  key: "refine",
-  value: function refine(arg0, arr) {
-    let text = arg0;
-    const item = arr.forEach((start) => {
-      text = start;
-      start = start.start;
-      if (!start.isCertain("timezoneOffset")) {
-        let obj = text;
-        const match = regExp.exec(text.text.substring(start.index + start.text.length));
-        if (match) {
-          obj.debug(() => {
-            console.log("Extracting timezone: '" + match[0] + "' into : " + closure_0);
-          });
-          const _parseInt = parseInt;
-          let str2 = match[3];
-          const result = 60 * parseInt(match[2]);
-          if (!str2) {
-            str2 = "0";
-          }
-          const sum = result + parseInt(str2);
-          if (sum <= 840) {
-            let tmp7 = sum;
-            if ("-" === match[1]) {
-              tmp7 = -sum;
-            }
-            if (null != start.end) {
-              const end = start.end;
-              obj = end.assign("timezoneOffset", tmp7);
-            }
-            const start2 = start.start;
-            obj = start2.assign("timezoneOffset", tmp7);
-            start.text = start.text + match[0];
-          }
-        }
-      }
-    });
-    return arr;
+  key: "innerPattern",
+  value: function innerPattern() {
+    return regExp;
   }
 };
-const items = [entry];
+let items = [
+  entry,
+  {
+    key: "innerExtract",
+    value: function innerExtract(arg0, arg1) {
+      const parsed = parseInt(arg1[1]);
+      const parsed1 = parseInt(arg1[4]);
+      if (arg1[3]) {
+        const _parseInt = parseInt;
+        let parsed2 = parseInt(arg1[3]);
+      } else {
+        parsed2 = ENYearMonthDayParser(10463).MONTH_DICTIONARY[str.toLowerCase(str)];
+      }
+      if (parsed2 < 1) {
+        const self = this;
+        if (this.strictMonthDateOrder) {
+          return null;
+        } else {
+          tmp6 = parsed2;
+          tmp7 = parsed1;
+          if (parsed1 >= 1) {
+            tmp6 = parsed2;
+            tmp7 = parsed1;
+            if (parsed1 <= 12) {
+              const items = [parsed1, parsed2];
+              [tmp6, tmp7] = items;
+            }
+          }
+        }
+      } else {
+        tmp6 = parsed2;
+        tmp7 = parsed1;
+      }
+      let tmp8 = null;
+      if (tmp7 >= 1) {
+        tmp8 = null;
+        if (tmp7 <= 31) {
+          const date = { day: tmp7, month: tmp6, year: parsed };
+          tmp8 = date;
+        }
+      }
+      return tmp8;
+    }
+  }
+];
 
-export default _createClass(ExtractTimezoneOffsetRefiner, items);
+export default _createClass(ENYearMonthDayParser, items);

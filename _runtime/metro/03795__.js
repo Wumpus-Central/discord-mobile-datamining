@@ -1,67 +1,14 @@
 // === Module 3795: ? ===
 
 // Module 3795
-import _mod3796 from "module_3796" /* 3796 */;
-import module_3652 from "module_3652" /* 3652 */;
+import module_2030 from "module_2030" /* 2030 */;
 
-if (!module_3652) {
-  const obj = { default: module_3652 };
-  let tmp3 = obj;
+if (!module_2030) {
+  let obj = { default: module_2030 };
 } else {
-  tmp3 = module_3652;
+  obj = module_2030;
 }
-module_3652 = tmp3;
-const dependencyMap = ["\u043D\u0435\u0434\u0456\u043B\u044E", "\u043F\u043E\u043D\u0435\u0434\u0456\u043B\u043E\u043A", "\u0432\u0456\u0432\u0442\u043E\u0440\u043E\u043A", "\u0441\u0435\u0440\u0435\u0434\u0443", "\u0447\u0435\u0442\u0432\u0435\u0440", "\u043F\u2019\u044F\u0442\u043D\u0438\u0446\u044E", "\u0441\u0443\u0431\u043E\u0442\u0443"];
-let closure_4 = {
-  lastWeek: function lastWeekFormat(arg0, arg1, arg2) {
-    const toDateResult = _mod3796.toDate(arg0);
-    const uTCDay = toDateResult.getUTCDay();
-    if (module_3652.default(toDateResult, arg1, arg2)) {
-      let text = `${"'\u0443 " + tmp2} о' p`;
-    } else {
-      if (0 !== uTCDay) {
-        if (3 !== uTCDay) {
-          if (5 !== uTCDay) {
-            if (6 !== uTCDay) {
-              text = `${"'\u0443 \u043C\u0438\u043D\u0443\u043B\u0438\u0439 " + tmp2} о' p`;
-            }
-          }
-        }
-      }
-      text = `${"'\u0443 \u043C\u0438\u043D\u0443\u043B\u0443 " + tmp2} о' p`;
-    }
-    return text;
-  },
-  yesterday: "'\u0432\u0447\u043E\u0440\u0430 \u043E' p",
-  today: "'\u0441\u044C\u043E\u0433\u043E\u0434\u043D\u0456 \u043E' p",
-  tomorrow: "'\u0437\u0430\u0432\u0442\u0440\u0430 \u043E' p",
-  nextWeek: function nextWeekFormat(arg0, arg1, arg2) {
-    const toDateResult = _mod3796.toDate(arg0);
-    const uTCDay = toDateResult.getUTCDay();
-    if (module_3652.default(toDateResult, arg1, arg2)) {
-      let text = `${"'\u0443 " + tmp2} о' p`;
-    } else {
-      if (0 !== uTCDay) {
-        if (3 !== uTCDay) {
-          if (5 !== uTCDay) {
-            if (6 !== uTCDay) {
-              text = `${"'\u0443 \u043D\u0430\u0441\u0442\u0443\u043F\u043D\u0438\u0439 " + tmp2} о' p`;
-            }
-          }
-        }
-      }
-      text = `${"'\u0443 \u043D\u0430\u0441\u0442\u0443\u043F\u043D\u0443 " + tmp2} о' p`;
-    }
-    return text;
-  },
-  other: "P"
-};
+obj = { date: obj.default({ formats: { full: "\u0E27\u0E31\u0E19EEEE\u0E17\u0E35\u0E48 do MMMM y", long: "do MMMM y", medium: "d MMM y", short: "dd/MM/yyyy" }, defaultWidth: "full" }), time: obj.default({ formats: { full: "H:mm:ss \u0E19. zzzz", long: "H:mm:ss \u0E19. z", medium: "H:mm:ss \u0E19.", short: "H:mm \u0E19." }, defaultWidth: "medium" }), dateTime: obj.default({ formats: { full: "{{date}} '\u0E40\u0E27\u0E25\u0E32' {{time}}", long: "{{date}} '\u0E40\u0E27\u0E25\u0E32' {{time}}", medium: "{{date}}, {{time}}", short: "{{date}}, {{time}}" }, defaultWidth: "full" }) };
 
-export default function formatRelative(arg0, arg1, arg2, arg3) {
-  let tmpResult = tmp;
-  if (typeof closure_4[arg0] === "function") {
-    tmpResult = tmp(arg1, arg2, arg3);
-  }
-  return tmpResult;
-};
+export default obj;
 export default exports.default;

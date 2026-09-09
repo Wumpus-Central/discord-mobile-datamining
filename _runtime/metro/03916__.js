@@ -1,44 +1,26 @@
 // === Module 3916: ? ===
 
 // Module 3916
-import _typeof from "module_3650" /* 3650 */;
-import module_3917 from "module_3917" /* 3917 */;
-import requiredArgs from "requiredArgs" /* 3651 */;
+import module_3914 from "module_3914" /* 3914 */;
+import requiredArgs from "requiredArgs" /* 3664 */;
 
-if (!_typeof) {
-  let obj = { default: _typeof };
+if (!module_3914) {
+  let obj = { default: module_3914 };
   let tmp3 = obj;
 } else {
-  tmp3 = _typeof;
+  tmp3 = module_3914;
 }
-_typeof = tmp3;
-if (!module_3917) {
-  obj = { default: module_3917 };
-  let tmp5 = obj;
-} else {
-  tmp5 = module_3917;
-}
-module_3917 = tmp5;
+module_3914 = tmp3;
 if (!requiredArgs) {
   obj = { default: requiredArgs };
-  let tmp7 = obj;
+  let tmp5 = obj;
 } else {
-  tmp7 = requiredArgs;
+  tmp5 = requiredArgs;
 }
-requiredArgs = tmp7;
+requiredArgs = tmp5;
 
-export default function getDaysInYear(arg0) {
+export default function formatDistanceToNowStrict(arg0, arg1) {
   requiredArgs.default(1, arguments);
-  const defaultResult1 = _typeof.default(arg0);
-  if ("Invalid Date" === String(date)) {
-    return NaN;
-  } else {
-    let num = 365;
-    if (module_3917.default(defaultResult1)) {
-      num = 366;
-    }
-    return num;
-  }
-  date = new Date(defaultResult1);
+  return module_3914.default(arg0, Date.now(), arg1);
 };
 export default exports.default;

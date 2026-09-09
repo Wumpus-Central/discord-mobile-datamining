@@ -1,70 +1,35 @@
 // === Module 3675: ? ===
 
 // Module 3675
-import module_2035 from "module_2035" /* 2035 */;
-import module_2036 from "module_2036" /* 2036 */;
+import module_2033 from "module_2033" /* 2033 */;
 
-if (!module_2035) {
-  let obj = { default: module_2035 };
+if (!module_2033) {
+  let obj = { default: module_2033 };
 } else {
-  obj = module_2035;
-}
-if (!module_2036) {
-  obj = { default: module_2036 };
-  let obj2 = obj;
-} else {
-  obj2 = module_2036;
+  obj = module_2033;
 }
 const date = {
-  ordinalNumber: obj2.default({
-    matchPattern: /^(\d+)(\.)?/i,
-    parsePattern: /\d+/i,
-    valueCallback(match) {
-      return parseInt(match);
-    }
-  }),
+  ordinalNumber(arg0, arg1) {
+    return Number(arg0) + ".";
+  },
   era: null,
   quarter: null,
   month: null,
   day: null,
   dayPeriod: null
 };
-obj2 = { matchPatterns: { narrow: /^(v\.? ?Chr\.?|n\.? ?Chr\.?)/i, abbreviated: /^(v\.? ?Chr\.?|n\.? ?Chr\.?)/i, wide: /^(vor Christus|vor unserer Zeitrechnung|nach Christus|unserer Zeitrechnung)/i }, defaultMatchWidth: "wide", parsePatterns: null, defaultParseWidth: "any" };
-const obj3 = { any: null };
-const items = [/^v/i, /^n/i];
-obj3.any = items;
-obj2.parsePatterns = obj3;
-date.era = obj.default(obj2);
-const obj4 = {
-  matchPatterns: { narrow: /^[1234]/i, abbreviated: /^q[1234]/i, wide: /^[1234](\.)? Quartal/i },
-  defaultMatchWidth: "wide",
-  parsePatterns: null,
-  defaultParseWidth: "any",
-  valueCallback(arg0) {
-    return arg0 + 1;
+obj = { values: { narrow: ["p\u0159. n. l.", "n. l."], abbreviated: ["p\u0159. n. l.", "n. l."], wide: ["p\u0159ed na\u0161\u00EDm letopo\u010Dtem", "na\u0161eho letopo\u010Dtu"] }, defaultWidth: "wide" };
+date.era = obj.default(obj);
+date.quarter = obj.default({
+  values: { narrow: ["1", "2", "3", "4"], abbreviated: ["1. \u010Dtvrtlet\u00ED", "2. \u010Dtvrtlet\u00ED", "3. \u010Dtvrtlet\u00ED", "4. \u010Dtvrtlet\u00ED"], wide: ["1. \u010Dtvrtlet\u00ED", "2. \u010Dtvrtlet\u00ED", "3. \u010Dtvrtlet\u00ED", "4. \u010Dtvrtlet\u00ED"] },
+  defaultWidth: "wide",
+  argumentCallback(arg0) {
+    return arg0 - 1;
   }
-};
-const obj5 = { any: null };
-const items1 = [/1/i, /2/i, /3/i, /4/i];
-obj5.any = items1;
-obj4.parsePatterns = obj5;
-date.quarter = obj.default(obj4);
-const obj6 = { matchPatterns: { narrow: /^[jfmasond]/i, abbreviated: /^(j[aä]n|feb|mär[z]?|apr|mai|jun[i]?|jul[i]?|aug|sep|okt|nov|dez)\.?/i, wide: /^(januar|februar|märz|april|mai|juni|juli|august|september|oktober|november|dezember)/i }, defaultMatchWidth: "wide", parsePatterns: null, defaultParseWidth: "any" };
-const obj7 = { narrow: null, any: null };
-const items2 = [/^j/i, /^f/i, /^m/i, /^a/i, /^m/i, /^j/i, /^j/i, /^a/i, /^s/i, /^o/i, /^n/i, /^d/i];
-obj7.narrow = items2;
-const items3 = [/^j[aä]/i, /^f/i, /^mär/i, /^ap/i, /^mai/i, /^jun/i, /^jul/i, /^au/i, /^s/i, /^o/i, /^n/i, /^d/i];
-obj7.any = items3;
-obj6.parsePatterns = obj7;
-date.month = obj.default(obj6);
-const obj8 = { matchPatterns: { narrow: /^[smdmf]/i, short: /^(so|mo|di|mi|do|fr|sa)/i, abbreviated: /^(son?|mon?|die?|mit?|don?|fre?|sam?)\.?/i, wide: /^(sonntag|montag|dienstag|mittwoch|donnerstag|freitag|samstag)/i }, defaultMatchWidth: "wide", parsePatterns: null, defaultParseWidth: "any" };
-const obj9 = { any: null };
-const items4 = [/^so/i, /^mo/i, /^di/i, /^mi/i, /^do/i, /^f/i, /^sa/i];
-obj9.any = items4;
-obj8.parsePatterns = obj9;
-date.day = obj.default(obj8);
-const obj10 = { matchPatterns: { narrow: /^(vm\.?|nm\.?|Mitternacht|Mittag|morgens|nachm\.?|abends|nachts)/i, abbreviated: /^(vorm\.?|nachm\.?|Mitternacht|Mittag|morgens|nachm\.?|abends|nachts)/i, wide: /^(vormittags|nachmittags|Mitternacht|Mittag|morgens|nachmittags|abends|nachts)/i }, defaultMatchWidth: "wide", parsePatterns: { any: { am: /^v/i, pm: /^n/i, midnight: /^Mitte/i, noon: /^Mitta/i, morning: /morgens/i, afternoon: /nachmittags/i, evening: /abends/i, night: /nachts/i } }, defaultParseWidth: "any" };
-date.dayPeriod = obj.default(obj10);
+});
+date.month = obj.default({ values: { narrow: ["L", "\u00DA", "B", "D", "K", "\u010C", "\u010C", "S", "Z", "\u0158", "L", "P"], abbreviated: ["led", "\u00FAno", "b\u0159e", "dub", "kv\u011B", "\u010Dvn", "\u010Dvc", "srp", "z\u00E1\u0159", "\u0159\u00EDj", "lis", "pro"], wide: ["leden", "\u00FAnor", "b\u0159ezen", "duben", "kv\u011Bten", "\u010Derven", "\u010Dervenec", "srpen", "z\u00E1\u0159\u00ED", "\u0159\u00EDjen", "listopad", "prosinec"] }, defaultWidth: "wide", formattingValues: { narrow: ["L", "\u00DA", "B", "D", "K", "\u010C", "\u010C", "S", "Z", "\u0158", "L", "P"], abbreviated: ["led", "\u00FAno", "b\u0159e", "dub", "kv\u011B", "\u010Dvn", "\u010Dvc", "srp", "z\u00E1\u0159", "\u0159\u00EDj", "lis", "pro"], wide: ["ledna", "\u00FAnora", "b\u0159ezna", "dubna", "kv\u011Btna", "\u010Dervna", "\u010Dervence", "srpna", "z\u00E1\u0159\u00ED", "\u0159\u00EDjna", "listopadu", "prosince"] }, defaultFormattingWidth: "wide" });
+date.day = obj.default({ values: { narrow: ["ne", "po", "\u00FAt", "st", "\u010Dt", "p\u00E1", "so"], short: ["ne", "po", "\u00FAt", "st", "\u010Dt", "p\u00E1", "so"], abbreviated: ["ned", "pon", "\u00FAte", "st\u0159", "\u010Dtv", "p\u00E1t", "sob"], wide: ["ned\u011Ble", "pond\u011Bl\u00ED", "\u00FAter\u00FD", "st\u0159eda", "\u010Dtvrtek", "p\u00E1tek", "sobota"] }, defaultWidth: "wide" });
+date.dayPeriod = obj.default({ values: { narrow: { am: "dop.", pm: "odp.", midnight: "p\u016Flnoc", noon: "poledne", morning: "r\u00E1no", afternoon: "odpoledne", evening: "ve\u010Der", night: "noc" }, abbreviated: { am: "dop.", pm: "odp.", midnight: "p\u016Flnoc", noon: "poledne", morning: "r\u00E1no", afternoon: "odpoledne", evening: "ve\u010Der", night: "noc" }, wide: { am: "dopoledne", pm: "odpoledne", midnight: "p\u016Flnoc", noon: "poledne", morning: "r\u00E1no", afternoon: "odpoledne", evening: "ve\u010Der", night: "noc" } }, defaultWidth: "wide", formattingValues: { narrow: { am: "dop.", pm: "odp.", midnight: "p\u016Flnoc", noon: "poledne", morning: "r\u00E1no", afternoon: "odpoledne", evening: "ve\u010Der", night: "noc" }, abbreviated: { am: "dop.", pm: "odp.", midnight: "p\u016Flnoc", noon: "poledne", morning: "r\u00E1no", afternoon: "odpoledne", evening: "ve\u010Der", night: "noc" }, wide: { am: "dopoledne", pm: "odpoledne", midnight: "p\u016Flnoc", noon: "poledne", morning: "r\u00E1no", afternoon: "odpoledne", evening: "ve\u010Der", night: "noc" } }, defaultFormattingWidth: "wide" });
 
 export default date;
 export default exports.default;

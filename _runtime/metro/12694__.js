@@ -4,4 +4,4 @@
 import registerAsset from "module_1122" /* 1122 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/contact_sync/native/images", width: 102, height: 106, scales: [1, 2, 3], hash: "22ff64f3c42212e7404d5af41f019eda", name: "mallow", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/age_gate/native/images", width: 274.5, height: 110, scales: [2, 3], hash: "43e5ff0d9ea5f04fe209ebfd15e2d439", name: "nsfw_gate_unavailable", type: "png" });

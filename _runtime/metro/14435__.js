@@ -1,24 +1,33 @@
 // === Module 14435: ? ===
 
 // Module 14435
-import get_ActivityIndicator from "module_17" /* 17 */;
 
-
-export default function getReactNativePlatformConstants() {
-  let obj = { osRelease: "", model: "", serverHost: "", uiMode: "", serial: "", forceTouch: false, interfaceIdiom: "", systemName: "" };
-  if ("android" === get_ActivityIndicator.Platform.OS) {
+export const getReactNativeDimensionsWithDimensions = function getReactNativeDimensionsWithDimensions(width, value) {
+  try {
+    let obj = {};
     obj = {};
+    if (width) {
+      obj = { screenWidth: null, screenHeight: null, screenScale: null, screenFontScale: null };
+      const _Math = Math;
+      obj.screenWidth = Math.ceil(width.width);
+      const _Math2 = Math;
+      obj.screenHeight = Math.ceil(width.height);
+      ({ scale: obj3.screenScale, fontScale: obj3.screenFontScale } = width);
+    }
+    if (value) {
+      const obj1 = { windowWidth: null, windowHeight: null, windowScale: null, windowFontScale: null };
+      const _Math3 = Math;
+      obj1.windowWidth = Math.ceil(value.width);
+      const _Math4 = Math;
+      obj1.windowHeight = Math.ceil(value.height);
+      ({ scale: obj4.windowScale, fontScale: obj4.windowFontScale } = value);
+      obj = obj1;
+    }
+    const obj2 = {};
     const merged = Object.assign(obj);
-    ({ Release: obj3.osRelease, Model: obj3.model, ServerHost: obj3.serverHost, uiMode: obj3.uiMode, Serial: obj3.serial } = get_ActivityIndicator.Platform.constants);
-    return obj;
-  } else if ("ios" === get_ActivityIndicator.Platform.OS) {
-    constants = get_ActivityIndicator.Platform.constants;
-    obj = {};
     const merged1 = Object.assign(obj);
-    obj.forceTouch = constants.forceTouchAvailable || false;
-    ({ interfaceIdiom: obj2.interfaceIdiom, systemName: obj2.systemName } = constants);
-    return obj;
-  } else {
-    return obj;
+    return obj2;
+  } catch (err) {
+    return null;
   }
 };

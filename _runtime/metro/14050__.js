@@ -1,14 +1,24 @@
 // === Module 14050: ? ===
 
 // Module 14050
-import _mod14048 from "module_14048" /* 14048 */;
+import _mod14042 from "module_14042" /* 14042 */;
 
 
-export default (arg0, arg1, arg2) => {
+export default (version, pre, major2, major2, major22) => {
+  let tmp = major22;
+  let tmp2 = major2;
+  if (typeof major2 === "string") {
+    tmp = major2;
+    tmp2 = major2;
+  }
   try {
-    const tmp7 = new _mod14048(arg1, arg2);
-    return tmp7.test(arg0);
+    let tmp7 = _mod14042;
+    if (version instanceof _mod14042) {
+      version = version.version;
+    }
+    tmp7 = new tmp7(version, tmp3);
+    return tmp7.inc(pre, tmp2, tmp).version;
   } catch (err) {
-    return false;
+    return null;
   }
 };

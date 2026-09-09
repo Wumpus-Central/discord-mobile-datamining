@@ -4,4 +4,4 @@
 import registerAsset from "module_1122" /* 1122 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/custom_app_icons/HoloWavesIcon", width: 60, height: 60, scales: [2, 3], hash: "88fd60fc6961a4cc52d32c54b3209f38", name: "HoloWavesIcon", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/premium/upsell", width: 120, height: 80, scales: [2, 3], hash: "17353b23aadfbe0d3f7b9982ef6491bf", name: "img_nitro_file_upload", type: "png" });

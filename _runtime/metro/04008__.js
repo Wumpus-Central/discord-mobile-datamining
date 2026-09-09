@@ -1,16 +1,16 @@
 // === Module 4008: ? ===
 
 // Module 4008
-import module_4000 from "module_4000" /* 4000 */;
-import requiredArgs from "requiredArgs" /* 3651 */;
+import startOfHour from "startOfHour" /* 4009 */;
+import requiredArgs from "requiredArgs" /* 3664 */;
 
-if (!module_4000) {
-  let obj = { default: module_4000 };
+if (!startOfHour) {
+  let obj = { default: startOfHour };
   let tmp3 = obj;
 } else {
-  tmp3 = module_4000;
+  tmp3 = startOfHour;
 }
-module_4000 = tmp3;
+startOfHour = tmp3;
 if (!requiredArgs) {
   obj = { default: requiredArgs };
   let tmp5 = obj;
@@ -19,8 +19,10 @@ if (!requiredArgs) {
 }
 requiredArgs = tmp5;
 
-export default function isThisMinute(arg0) {
-  requiredArgs.default(1, arguments);
-  return module_4000.default(Date.now(), arg0);
+export default function isSameHour(arg0, arg1) {
+  requiredArgs.default(2, arguments);
+  const defaultResult1 = startOfHour.default(arg0);
+  const time = defaultResult1.getTime();
+  return time === startOfHour.default(arg1).getTime();
 };
 export default exports.default;

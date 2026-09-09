@@ -1,34 +1,26 @@
 // === Module 3816: ? ===
 
 // Module 3816
-import module_3654 from "module_3654" /* 3654 */;
-import module_3799 from "module_3799" /* 3799 */;
-import requiredArgs from "requiredArgs" /* 3651 */;
+import _typeof from "module_3663" /* 3663 */;
+import requiredArgs from "requiredArgs" /* 3664 */;
 
-if (!module_3654) {
-  let obj = { default: module_3654 };
+if (!_typeof) {
+  let obj = { default: _typeof };
   let tmp3 = obj;
 } else {
-  tmp3 = module_3654;
+  tmp3 = _typeof;
 }
-module_3654 = tmp3;
-if (!module_3799) {
-  obj = { default: module_3799 };
-  let tmp5 = obj;
-} else {
-  tmp5 = module_3799;
-}
-module_3799 = tmp5;
+_typeof = tmp3;
 if (!requiredArgs) {
   obj = { default: requiredArgs };
-  let tmp7 = obj;
+  let tmp5 = obj;
 } else {
-  tmp7 = requiredArgs;
+  tmp5 = requiredArgs;
 }
-requiredArgs = tmp7;
+requiredArgs = tmp5;
 
-export default function addQuarters(arg0, arg1) {
-  requiredArgs.default(2, arguments);
-  return module_3799.default(arg0, 3 * module_3654.default(arg1));
+export default function isSaturday(arg0) {
+  requiredArgs.default(1, arguments);
+  return 6 === _typeof.default(arg0).getDay();
 };
 export default exports.default;

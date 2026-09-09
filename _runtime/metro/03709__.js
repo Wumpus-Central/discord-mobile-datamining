@@ -1,40 +1,42 @@
 // === Module 3709: ? ===
 
 // Module 3709
-let closure_0 = { about: "k\u00F6r\u00FClbel\u00FCl", over: "t\u00F6bb mint", almost: "majdnem", lessthan: "kevesebb mint" };
-let closure_1 = { xseconds: " m\u00E1sodperc", halfaminute: "f\u00E9l perc", xminutes: " perc", xhours: " \u00F3ra", xdays: " nap", xweeks: " h\u00E9t", xmonths: " h\u00F3nap", xyears: " \u00E9v" };
-let closure_2 = { xseconds: { "-1": " m\u00E1sodperccel ezel\u0151tt", 1: " m\u00E1sodperc m\u00FAlva", 0: " m\u00E1sodperce" }, halfaminute: { "-1": "f\u00E9l perccel ezel\u0151tt", 1: "f\u00E9l perc m\u00FAlva", 0: "f\u00E9l perce" }, xminutes: { "-1": " perccel ezel\u0151tt", 1: " perc m\u00FAlva", 0: " perce" }, xhours: { "-1": " \u00F3r\u00E1val ezel\u0151tt", 1: " \u00F3ra m\u00FAlva", 0: " \u00F3r\u00E1ja" }, xdays: { "-1": " nappal ezel\u0151tt", 1: " nap m\u00FAlva", 0: " napja" }, xweeks: { "-1": " h\u00E9ttel ezel\u0151tt", 1: " h\u00E9t m\u00FAlva", 0: " hete" }, xmonths: { "-1": " h\u00F3nappal ezel\u0151tt", 1: " h\u00F3nap m\u00FAlva", 0: " h\u00F3napja" }, xyears: { "-1": " \u00E9vvel ezel\u0151tt", 1: " \u00E9v m\u00FAlva", 0: " \u00E9ve" } };
+import module_3710 from "module_3710" /* 3710 */;
+import module_3711 from "module_3711" /* 3711 */;
+import module_3712 from "module_3712" /* 3712 */;
+import date from "module_3713" /* 3713 */;
+import date from "module_3714" /* 3714 */;
 
-export default function formatDistance(str, arg1, addSuffix) {
-  const match = str.match(/about|over|almost|lessthan/i);
-  if (match) {
-    str = str.replace(match[0], "");
-  }
-  addSuffix = undefined;
-  if (null != addSuffix) {
-    addSuffix = addSuffix.addSuffix;
-  }
-  const formatted = str.toLowerCase();
-  let num;
-  if (null != addSuffix) {
-    num = addSuffix.comparison;
-  }
-  if (!num) {
-    num = 0;
-  }
-  if (true === addSuffix) {
-    let tmp5 = closure_2[formatted][num];
-  } else {
-    tmp5 = closure_1[formatted];
-  }
-  let sum = tmp5;
-  if ("halfaminute" !== formatted) {
-    sum = arg1 + tmp5;
-  }
-  let text = sum;
-  if (match) {
-    text = `${closure_0[str3.toLowerCase(str3)]} ${tmp7}`;
-  }
-  return text;
-};
+if (!module_3710) {
+  let obj = { default: module_3710 };
+  let tmp3 = obj;
+} else {
+  tmp3 = module_3710;
+}
+if (!module_3711) {
+  obj = { default: module_3711 };
+  let tmp5 = obj;
+} else {
+  tmp5 = module_3711;
+}
+if (!module_3712) {
+  obj = { default: module_3712 };
+  let tmp7 = obj;
+} else {
+  tmp7 = module_3712;
+}
+if (!date) {
+  const obj1 = { default: date };
+  let tmp9 = obj1;
+} else {
+  tmp9 = date;
+}
+if (!date) {
+  const obj2 = { default: date };
+  let tmp11 = obj2;
+} else {
+  tmp11 = date;
+}
+
+export default { code: "fr", formatDistance: tmp3.default, formatLong: tmp5.default, formatRelative: tmp7.default, localize: tmp9.default, match: tmp11.default, options: { weekStartsOn: 1, firstWeekContainsDate: 4 } };
 export default exports.default;

@@ -1,72 +1,74 @@
 // === Module 3663: ? ===
 
 // Module 3663
-import module_2035 from "module_2035" /* 2035 */;
-import module_2036 from "module_2036" /* 2036 */;
+import requiredArgs from "requiredArgs" /* 3664 */;
 
-if (!module_2035) {
-  let obj = { default: module_2035 };
-} else {
-  obj = module_2035;
-}
-if (!module_2036) {
-  obj = { default: module_2036 };
-  let obj2 = obj;
-} else {
-  obj2 = module_2036;
-}
-const date = {
-  ordinalNumber: obj2.default({
-    matchPattern: /^(\d+)\.?/i,
-    parsePattern: /\d+/i,
-    valueCallback(match) {
-      return parseInt(match, 10);
+function _typeof(arg0) {
+  if (typeof Symbol === "function") {
+    let _Symbol = Symbol;
+    if (typeof Symbol.iterator === "symbol") {
+      _typeof = function _typeof(arg0) {
+        return typeof arg0;
+      };
     }
-  }),
-  era: null,
-  quarter: null,
-  month: null,
-  day: null,
-  dayPeriod: null
-};
-obj2 = { matchPatterns: { narrow: /^(p[řr](\.|ed) Kr\.|p[řr](\.|ed) n\. l\.|po Kr\.|n\. l\.)/i, abbreviated: /^(p[řr](\.|ed) Kr\.|p[řr](\.|ed) n\. l\.|po Kr\.|n\. l\.)/i, wide: /^(p[řr](\.|ed) Kristem|p[řr](\.|ed) na[šs][íi]m letopo[čc]tem|po Kristu|na[šs]eho letopo[čc]tu)/i }, defaultMatchWidth: "wide", parsePatterns: null, defaultParseWidth: "any" };
-const obj3 = { any: null };
-const items = [/^p[řr]/i, /^(po|n)/i];
-obj3.any = items;
-obj2.parsePatterns = obj3;
-date.era = obj.default(obj2);
-const obj4 = {
-  matchPatterns: { narrow: /^[1234]/i, abbreviated: /^[1234]\. [čc]tvrtlet[íi]/i, wide: /^[1234]\. [čc]tvrtlet[íi]/i },
-  defaultMatchWidth: "wide",
-  parsePatterns: null,
-  defaultParseWidth: "any",
-  valueCallback(arg0) {
-    return arg0 + 1;
+    return _typeof(arg0);
   }
-};
-const obj5 = { any: null };
-const items1 = [/1/i, /2/i, /3/i, /4/i];
-obj5.any = items1;
-obj4.parsePatterns = obj5;
-date.quarter = obj.default(obj4);
-const obj6 = { matchPatterns: { narrow: /^[lúubdkčcszřrlp]/i, abbreviated: /^(led|[úu]no|b[řr]e|dub|kv[ěe]|[čc]vn|[čc]vc|srp|z[áa][řr]|[řr][íi]j|lis|pro)/i, wide: /^(leden|ledna|[úu]nora?|b[řr]ezen|b[řr]ezna|duben|dubna|kv[ěe]ten|kv[ěe]tna|[čc]erven(ec|ce)?|[čc]ervna|srpen|srpna|z[áa][řr][íi]|[řr][íi]jen|[řr][íi]jna|listopad(a|u)?|prosinec|prosince)/i }, defaultMatchWidth: "wide", parsePatterns: null, defaultParseWidth: "any" };
-const obj7 = { narrow: null, any: null };
-const items2 = [/^l/i, /^[úu]/i, /^b/i, /^d/i, /^k/i, /^[čc]/i, /^[čc]/i, /^s/i, /^z/i, /^[řr]/i, /^l/i, /^p/i];
-obj7.narrow = items2;
-const items3 = [/^led/i, /^[úu]n/i, /^b[řr]e/i, /^dub/i, /^kv[ěe]/i, /^[čc]vn|[čc]erven(?!\w)|[čc]ervna/i, /^[čc]vc|[čc]erven(ec|ce)/i, /^srp/i, /^z[áa][řr]/i, /^[řr][íi]j/i, /^lis/i, /^pro/i];
-obj7.any = items3;
-obj6.parsePatterns = obj7;
-date.month = obj.default(obj6);
-const obj8 = { matchPatterns: { narrow: /^[npuúsčps]/i, short: /^(ne|po|[úu]t|st|[čc]t|p[áa]|so)/i, abbreviated: /^(ned|pon|[úu]te|st[rř]|[čc]tv|p[áa]t|sob)/i, wide: /^(ned[ěe]le|pond[ěe]l[íi]|[úu]ter[ýy]|st[řr]eda|[čc]tvrtek|p[áa]tek|sobota)/i }, defaultMatchWidth: "wide", parsePatterns: null, defaultParseWidth: "any" };
-const obj9 = { narrow: null, any: null };
-const items4 = [/^n/i, /^p/i, /^[úu]/i, /^s/i, /^[čc]/i, /^p/i, /^s/i];
-obj9.narrow = items4;
-const items5 = [/^ne/i, /^po/i, /^[úu]t/i, /^st/i, /^[čc]t/i, /^p[áa]/i, /^so/i];
-obj9.any = items5;
-obj8.parsePatterns = obj9;
-date.day = obj.default(obj8);
-const obj10 = { matchPatterns: { any: /^dopoledne|dop\.?|odpoledne|odp\.?|p[ůu]lnoc|poledne|r[áa]no|odpoledne|ve[čc]er|(v )?noci?/i }, defaultMatchWidth: "any", parsePatterns: { any: { am: /^dop/i, pm: /^odp/i, midnight: /^p[ůu]lnoc/i, noon: /^poledne/i, morning: /r[áa]no/i, afternoon: /odpoledne/i, evening: /ve[čc]er/i, night: /noc/i } }, defaultParseWidth: "any" };
-date.dayPeriod = obj.default(obj10);
+  _typeof = function _typeof(arg0) {
+    if (arg0) {
+      const _Symbol = Symbol;
+      if (typeof Symbol === "function") {
+        const _Symbol3 = Symbol;
+        if (arg0.constructor === Symbol) {
+          const _Symbol2 = Symbol;
+          let str = "symbol";
+        }
+        return str;
+      }
+    }
+    str = typeof arg0;
+  };
+}
+if (!requiredArgs) {
+  const obj = { default: requiredArgs };
+  let tmp3 = obj;
+} else {
+  tmp3 = requiredArgs;
+}
+requiredArgs = tmp3;
 
-export default date;
+export default function toDate(getTime) {
+  requiredArgs.default(1, arguments);
+  const call = toString.call;
+  const tmp2 = typeof call === "unknown" ? toString() : call(getTime);
+  if (!(getTime instanceof Date)) {
+    if ("object" === _typeof(getTime)) {
+      return date;
+    }
+    if (typeof getTime !== "number") {
+      if ("[object Number]" !== tmp2) {
+        let tmp4 = typeof getTime !== "string";
+        if (typeof getTime !== "string") {
+          tmp4 = "[object String]" !== tmp2;
+        }
+        if (!tmp4) {
+          const _console = console;
+          tmp4 = typeof console === "undefined";
+        }
+        if (!tmp4) {
+          const _console2 = console;
+          console.warn("Starting with v2.0.0-beta.1 date-fns doesn't accept strings as date arguments. Please use `parseISO` to parse strings. See: https://github.com/date-fns/date-fns/blob/master/docs/upgradeGuide.md#string-arguments");
+          const _console3 = console;
+          const _Error = Error;
+          const error = new Error();
+          console.warn(error.stack);
+        }
+        const _Date = Date;
+        date = new Date(NaN);
+      }
+    }
+    const _Date2 = Date;
+    date = new Date(getTime);
+  }
+  date = new Date(getTime.getTime());
+};
 export default exports.default;

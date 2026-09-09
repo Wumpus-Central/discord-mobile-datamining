@@ -1,16 +1,14 @@
 // === Module 8549: ? ===
 
 // Module 8549
-import _possibleConstructorReturnDefault from "_possibleConstructorReturn" /* 93 */;
-import _modDef8480 from "module_8480" /* 8480 */;
-import _modDef8550 from "module_8550" /* 8550 */;
+import _modDef8523 from "module_8523" /* 8523 */;
 import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
+import c3 from "_possibleConstructorReturn" /* 93 */;
 import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
-import noop from "module_19" /* 19 */;
 
-const Rect = fn;
+const FeTile = arg1;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -30,16 +28,14 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-_possibleConstructorReturnDefault;
-const jsx = fn(21).jsx;
-class Rect {
+class FeTile {
   constructor() {
     self = this;
-    tmp = closure_3(this, Rect);
-    tmp2 = hasOwnProperty;
-    obj = hasOwnProperty(Rect);
-    tmp3 = closure_4;
-    if (closure_7()) {
+    tmp = c2(this, FeTile);
+    tmp2 = closure_4;
+    obj = closure_4(FeTile);
+    tmp3 = closure_3;
+    if (hasOwnProperty()) {
       tmp7 = globalThis;
       _Reflect = Reflect;
       tmp8 = arguments;
@@ -52,28 +48,18 @@ class Rect {
     return tmp3(self, constructResult);
   }
 }
-_inherits(Rect, _modDef8480);
+_inherits(FeTile, _modDef8523);
 const entry = {
   key: "render",
   value: function render() {
-    const self = this;
-    const props = this.props;
-    const size = { x: props.x, y: props.y, width: props.width, height: props.height, rx: props.rx, ry: props.ry };
-    const obj = {
-      ref(arg0) {
-        return self.refMethod(arg0);
-      }
-    };
-    const merged = Object.assign(Rect(8471).withoutXY(this, props));
-    const merged1 = Object.assign(size);
-    return <tmp ref={function ref(arg0) {
-      return self.refMethod(arg0);
-    }} />;
+    const result = FeTile(8500).warnUnimplementedFilter();
+    return null;
   }
 };
 const items = [entry];
-const importDefaultResultResult = _createClass(Rect, items);
-importDefaultResultResult.displayName = "Rect";
-importDefaultResultResult.defaultProps = { x: 0, y: 0, width: 0, height: 0 };
+const importDefaultResultResult = _createClass(FeTile, items);
+importDefaultResultResult.displayName = "FeTile";
+const merged = Object.assign(importDefaultResultResult.defaultPrimitiveProps);
+importDefaultResultResult.defaultProps = {};
 
 export default importDefaultResultResult;

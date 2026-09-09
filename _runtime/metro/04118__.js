@@ -1,9 +1,34 @@
 // === Module 4118: ? ===
 
 // Module 4118
-let closure_0 = { lastWeek: "'\u092A\u093F\u091B\u0932\u0947' eeee p", yesterday: "'\u0915\u0932' p", today: "'\u0906\u091C' p", tomorrow: "'\u0915\u0932' p", nextWeek: "eeee '\u0915\u094B' p", other: "P" };
+import module_3665 from "module_3665" /* 3665 */;
+
+if (!module_3665) {
+  const obj = { default: module_3665 };
+  let tmp3 = obj;
+} else {
+  tmp3 = module_3665;
+}
+function checkWeek(getTime, getTime2, arg2) {
+  let str = "eeee p";
+  if (!module_3665.default(getTime, getTime2, arg2)) {
+    const time = getTime.getTime();
+    let str2 = "'\u4E0A\u4E2A'eeee p";
+    if (time > getTime2.getTime()) {
+      str2 = "'\u4E0B\u4E2A'eeee p";
+    }
+    str = str2;
+  }
+  return str;
+}
+module_3665 = tmp3;
+let closure_1 = { lastWeek: checkWeek, yesterday: "'\u6628\u5929' p", today: "'\u4ECA\u5929' p", tomorrow: "'\u660E\u5929' p", nextWeek: checkWeek, other: "PP p" };
 
 export default function formatRelative(arg0, arg1, arg2, arg3) {
-  return closure_0[arg0];
+  let tmpResult = tmp;
+  if (typeof closure_1[arg0] === "function") {
+    tmpResult = tmp(arg1, arg2, arg3);
+  }
+  return tmpResult;
 };
 export default exports.default;

@@ -1,16 +1,16 @@
 // === Module 4007: ? ===
 
 // Module 4007
-import module_3997 from "module_3997" /* 3997 */;
-import requiredArgs from "requiredArgs" /* 3651 */;
+import _typeof from "module_3663" /* 3663 */;
+import requiredArgs from "requiredArgs" /* 3664 */;
 
-if (!module_3997) {
-  let obj = { default: module_3997 };
+if (!_typeof) {
+  let obj = { default: _typeof };
   let tmp3 = obj;
 } else {
-  tmp3 = module_3997;
+  tmp3 = _typeof;
 }
-module_3997 = tmp3;
+_typeof = tmp3;
 if (!requiredArgs) {
   obj = { default: requiredArgs };
   let tmp5 = obj;
@@ -19,8 +19,9 @@ if (!requiredArgs) {
 }
 requiredArgs = tmp5;
 
-export default function isThisISOWeek(arg0) {
+export default function isPast(date) {
   requiredArgs.default(1, arguments);
-  return module_3997.default(arg0, Date.now());
+  const time = _typeof.default(date).getTime();
+  return time < Date.now();
 };
 export default exports.default;

@@ -1,15 +1,21 @@
 // === Module 14351: ? ===
 
 // Module 14351
-import _mod14349 from "module_14349" /* 14349 */;
-
-
-export default (arg0, arg1) => {
-  const tmp = _mod14349(arg0);
-  if (tmp < 0) {
-    let tmp3 = max(tmp + arg1, 0);
-  } else {
-    tmp3 = min(tmp, arg1);
+let all = typeof document === "object";
+if (typeof document === "object") {
+  const _document = document;
+  all = document.all;
+}
+if (undefined === all) {
+  if (undefined !== all) {
+    let fn = (fn) => {
+      let tmp = typeof fn === "function";
+      if (typeof fn !== "function") {
+        tmp = fn === all;
+      }
+      return tmp;
+    };
   }
-  return tmp3;
-};
+  module.exports = fn;
+}
+fn = (fn) => typeof fn === "function";

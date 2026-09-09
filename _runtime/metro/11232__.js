@@ -1,12 +1,7 @@
 // === Module 11232: ? ===
 
 // Module 11232
-import _mod11231 from "module_11231" /* 11231 */;
+import registerAsset from "module_1122" /* 1122 */;
 
-require = arg1;
-const dependencyMap = arg6;
 
-export const keepLocalCopy = function keepLocalCopy(arg0) {
-  const NativeDocumentPicker = _mod11231.NativeDocumentPicker;
-  return NativeDocumentPicker.keepLocalCopy(arg0);
-};
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/badge", width: 30, height: 30, scales: [2, 3], hash: "581374036ac67fb316291b50b3effd2f", name: "ic_badge_nitro", type: "png" });

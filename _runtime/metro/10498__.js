@@ -1,85 +1,49 @@
 // === Module 10498: ? ===
 
 // Module 10498
-import repeatedTimeunitPattern from "repeatedTimeunitPattern" /* 10437 */;
-import AbstractParserWithWordBoundaryChecking from "AbstractParserWithWordBoundaryChecking" /* 10444 */;
-import _mod10499 from "module_10499" /* 10499 */;
+import _mod10463 from "module_10463" /* 10463 */;
 import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
-import c3 from "_possibleConstructorReturn" /* 93 */;
-import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
-import _inherits from "_inherits" /* 98 */;
 
-const FRWeekdayParser = require;
-function _isNativeReflectConstruct() {
-  try {
-    const _Boolean = Boolean;
-    const call = valueOf.call;
-    const _Reflect = Reflect;
-    const _Boolean2 = Boolean;
-    if (typeof call === "unknown") {
-      let callResult = valueOf();
-    } else {
-      callResult = call(constructResult);
-    }
-    closure_0 = !callResult;
-    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
-      return closure_0;
-    };
-    return _isNativeReflectConstruct();
-  } catch (err) {
-  }
-}
-const regExp = new RegExp("(?:(?:\\,|\\(|\\\uFF08)\\s*)?(?:(?:ce)\\s*)?(" + repeatedTimeunitPattern.matchAnyPattern(_mod10499.WEEKDAY_DICTIONARY) + ")(?:\\s*(?:\\,|\\)|\\\uFF09))?(?:\\s*(dernier|prochain)\\s*)?(?=\\W|\\d|$)", "i");
-class FRWeekdayParser {
+const ENExtractYearSuffixRefiner = require;
+const regExp = new RegExp("^\\s*(" + _mod10463.YEAR_PATTERN + ")", "i");
+class ENExtractYearSuffixRefiner {
   constructor() {
-    self = this;
-    tmp = c2(this, FRWeekdayParser);
-    tmp2 = closure_4;
-    obj = closure_4(FRWeekdayParser);
-    tmp3 = closure_3;
-    if (hasOwnProperty()) {
-      tmp7 = globalThis;
-      _Reflect = Reflect;
-      tmp8 = arguments;
-      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
-    } else {
-      tmp4 = arguments;
-      tmp5 = arguments;
-      constructResult = obj(...arguments);
-    }
-    return tmp3(self, constructResult);
+    tmp = c2(this, ENExtractYearSuffixRefiner);
+    return;
   }
 }
-_inherits(FRWeekdayParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
 const entry = {
-  key: "innerPattern",
-  value: function innerPattern() {
-    return regExp;
+  key: "refine",
+  value: function refine(arg0, arr) {
+    let text = arg0;
+    const item = arr.forEach((start) => {
+      text = start;
+      start = start.start;
+      if (start.isDateWithUnknownYear()) {
+        let obj = text;
+        const match = regExp.exec(text.text.substring(start.index + start.text.length));
+        if (match) {
+          if (str2.trim().length > 3) {
+            obj.debug(() => {
+              console.log("Extracting year: '" + match[0] + "' into : " + closure_0);
+            });
+            const parseYearResult = ENExtractYearSuffixRefiner(10463).parseYear(match[1]);
+            if (null != start.end) {
+              const end = start.end;
+              obj = end.assign("year", parseYearResult);
+            }
+            const start2 = start.start;
+            obj = start2.assign("year", parseYearResult);
+            start.text = start.text + match[0];
+          }
+          str2 = match[0];
+        }
+      }
+    });
+    return arr;
   }
 };
-const items = [
-  entry,
-  {
-    key: "innerExtract",
-    value: function innerExtract(reference, arg1) {
-      const formatted = arg1[1].toLowerCase();
-      const tmp4 = FRWeekdayParser(10499).WEEKDAY_DICTIONARY[formatted];
-      if (undefined === tmp4) {
-        return null;
-      } else {
-        const formatted1 = arg1[2] || "".toLowerCase();
-        let str4 = "last";
-        if ("dernier" != formatted1) {
-          str4 = null;
-          if ("prochain" == formatted1) {
-            str4 = "next";
-          }
-        }
-        return FRWeekdayParser(10464).createParsingComponentsAtWeekday(reference.reference, tmp4, str4);
-      }
-    }
-  }
-];
+const items = [entry];
 
-export default _createClass(FRWeekdayParser, items);
+export default _createClass(ENExtractYearSuffixRefiner, items);

@@ -1,70 +1,37 @@
 // === Module 3725: ? ===
 
 // Module 3725
-import module_2036 from "module_2036" /* 2036 */;
-import module_2035 from "module_2035" /* 2035 */;
+import module_2033 from "module_2033" /* 2033 */;
 
-if (!module_2036) {
-  let obj = { default: module_2036 };
+if (!module_2033) {
+  let obj = { default: module_2033 };
 } else {
-  obj = module_2036;
-}
-if (!module_2035) {
-  obj = { default: module_2035 };
-  let obj2 = obj;
-} else {
-  obj2 = module_2035;
+  obj = module_2033;
 }
 const date = {
-  ordinalNumber: obj.default({
-    matchPattern: /^第?\d+(年|四半期|月|週|日|時|分|秒)?/i,
-    parsePattern: /\d+/i,
-    valueCallback(match) {
-      return parseInt(match, 10);
-    }
-  }),
+  ordinalNumber(arg0, arg1) {
+    return Number(arg0) + ".";
+  },
   era: null,
   quarter: null,
   month: null,
   day: null,
   dayPeriod: null
 };
-obj2 = { matchPatterns: { narrow: /^(B\.?C\.?|A\.?D\.?)/i, abbreviated: /^(紀元[前後]|西暦)/i, wide: /^(紀元[前後]|西暦)/i }, defaultMatchWidth: "wide", parsePatterns: null, defaultParseWidth: "any" };
-const obj3 = { narrow: null, any: null };
-const items = [/^B/i, /^A/i];
-obj3.narrow = items;
-const items1 = [/^(紀元前)/i, /^(西暦|紀元後)/i];
-obj3.any = items1;
-obj2.parsePatterns = obj3;
-date.era = obj2.default(obj2);
-const obj4 = {
-  matchPatterns: { narrow: /^[1234]/i, abbreviated: /^Q[1234]/i, wide: /^第[1234一二三四１２３４]四半期/i },
-  defaultMatchWidth: "wide",
-  parsePatterns: null,
-  defaultParseWidth: "any",
-  valueCallback(arg0) {
-    return arg0 + 1;
-  }
-};
-const obj5 = { any: null };
-const items2 = [/(1|一|１)/i, /(2|二|２)/i, /(3|三|３)/i, /(4|四|４)/i];
-obj5.any = items2;
-obj4.parsePatterns = obj5;
-date.quarter = obj2.default(obj4);
-const obj6 = { matchPatterns: { narrow: /^([123456789]|1[012])/, abbreviated: /^([123456789]|1[012])月/i, wide: /^([123456789]|1[012])月/i }, defaultMatchWidth: "wide", parsePatterns: null, defaultParseWidth: "any" };
-const obj7 = { any: null };
-const items3 = [/^1\D/, /^2/, /^3/, /^4/, /^5/, /^6/, /^7/, /^8/, /^9/, /^10/, /^11/, /^12/];
-obj7.any = items3;
-obj6.parsePatterns = obj7;
-date.month = obj2.default(obj6);
-const obj8 = { matchPatterns: { narrow: /^[日月火水木金土]/, short: /^[日月火水木金土]/, abbreviated: /^[日月火水木金土]/, wide: /^[日月火水木金土]曜日/ }, defaultMatchWidth: "wide", parsePatterns: null, defaultParseWidth: "any" };
-const obj9 = { any: null };
-const items4 = [/^日/, /^月/, /^火/, /^水/, /^木/, /^金/, /^土/];
-obj9.any = items4;
-obj8.parsePatterns = obj9;
-date.day = obj2.default(obj8);
-const obj10 = { matchPatterns: { any: /^(AM|PM|午前|午後|正午|深夜|真夜中|夜|朝)/i }, defaultMatchWidth: "any", parsePatterns: { any: { am: /^(A|午前)/i, pm: /^(P|午後)/i, midnight: /^深夜|真夜中/i, noon: /^正午/i, morning: /^朝/i, afternoon: /^午後/i, evening: /^夜/i, night: /^深夜/i } }, defaultParseWidth: "any" };
-date.dayPeriod = obj2.default(obj10);
+obj = { values: { narrow: ["ie.", "isz."], abbreviated: ["i. e.", "i. sz."], wide: ["Krisztus el\u0151tt", "id\u0151sz\u00E1m\u00EDt\u00E1sunk szerint"] }, defaultWidth: "wide" };
+date.era = obj.default(obj);
+date.quarter = obj.default({
+  values: { narrow: ["1.", "2.", "3.", "4."], abbreviated: ["1. n.\u00E9v", "2. n.\u00E9v", "3. n.\u00E9v", "4. n.\u00E9v"], wide: ["1. negyed\u00E9v", "2. negyed\u00E9v", "3. negyed\u00E9v", "4. negyed\u00E9v"] },
+  defaultWidth: "wide",
+  argumentCallback(arg0) {
+    return arg0 - 1;
+  },
+  formattingValues: { narrow: ["I.", "II.", "III.", "IV."], abbreviated: ["I. n.\u00E9v", "II. n.\u00E9v", "III. n.\u00E9v", "IV. n.\u00E9v"], wide: ["I. negyed\u00E9v", "II. negyed\u00E9v", "III. negyed\u00E9v", "IV. negyed\u00E9v"] },
+  defaultFormattingWidth: "wide"
+});
+date.month = obj.default({ values: { narrow: ["J", "F", "M", "\u00C1", "M", "J", "J", "A", "Sz", "O", "N", "D"], abbreviated: ["jan.", "febr.", "m\u00E1rc.", "\u00E1pr.", "m\u00E1j.", "j\u00FAn.", "j\u00FAl.", "aug.", "szept.", "okt.", "nov.", "dec."], wide: ["janu\u00E1r", "febru\u00E1r", "m\u00E1rcius", "\u00E1prilis", "m\u00E1jus", "j\u00FAnius", "j\u00FAlius", "augusztus", "szeptember", "okt\u00F3ber", "november", "december"] }, defaultWidth: "wide" });
+date.day = obj.default({ values: { narrow: ["V", "H", "K", "Sz", "Cs", "P", "Sz"], short: ["V", "H", "K", "Sze", "Cs", "P", "Szo"], abbreviated: ["V", "H", "K", "Sze", "Cs", "P", "Szo"], wide: ["vas\u00E1rnap", "h\u00E9tf\u0151", "kedd", "szerda", "cs\u00FCt\u00F6rt\u00F6k", "p\u00E9ntek", "szombat"] }, defaultWidth: "wide" });
+date.dayPeriod = obj.default({ values: { narrow: { am: "de.", pm: "du.", midnight: "\u00E9jf\u00E9l", noon: "d\u00E9l", morning: "reggel", afternoon: "du.", evening: "este", night: "\u00E9jjel" }, abbreviated: { am: "de.", pm: "du.", midnight: "\u00E9jf\u00E9l", noon: "d\u00E9l", morning: "reggel", afternoon: "du.", evening: "este", night: "\u00E9jjel" }, wide: { am: "de.", pm: "du.", midnight: "\u00E9jf\u00E9l", noon: "d\u00E9l", morning: "reggel", afternoon: "d\u00E9lut\u00E1n", evening: "este", night: "\u00E9jjel" } }, defaultWidth: "wide" });
 
 export default date;
 export default exports.default;

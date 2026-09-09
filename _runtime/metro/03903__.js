@@ -1,26 +1,46 @@
 // === Module 3903: ? ===
 
 // Module 3903
-import module_3901 from "module_3901" /* 3901 */;
-import requiredArgs from "requiredArgs" /* 3651 */;
+import _typeof from "module_3663" /* 3663 */;
+import startOfUTCWeek from "startOfUTCWeek" /* 3666 */;
+import startOfUTCWeekYear from "startOfUTCWeekYear" /* 3904 */;
+import requiredArgs from "requiredArgs" /* 3664 */;
 
-if (!module_3901) {
-  let obj = { default: module_3901 };
+if (!_typeof) {
+  let obj = { default: _typeof };
   let tmp3 = obj;
 } else {
-  tmp3 = module_3901;
+  tmp3 = _typeof;
 }
-module_3901 = tmp3;
-if (!requiredArgs) {
-  obj = { default: requiredArgs };
+_typeof = tmp3;
+if (!startOfUTCWeek) {
+  obj = { default: startOfUTCWeek };
   let tmp5 = obj;
 } else {
-  tmp5 = requiredArgs;
+  tmp5 = startOfUTCWeek;
 }
-requiredArgs = tmp5;
+startOfUTCWeek = tmp5;
+if (!startOfUTCWeekYear) {
+  obj = { default: startOfUTCWeekYear };
+  let tmp7 = obj;
+} else {
+  tmp7 = startOfUTCWeekYear;
+}
+startOfUTCWeekYear = tmp7;
+if (!requiredArgs) {
+  const obj1 = { default: requiredArgs };
+  let tmp9 = obj1;
+} else {
+  tmp9 = requiredArgs;
+}
+requiredArgs = tmp9;
+let c4 = 604800000;
 
-export default function formatDistanceToNowStrict(arg0, arg1) {
+export default function getUTCWeek(arg0, arg1) {
   requiredArgs.default(1, arguments);
-  return module_3901.default(arg0, Date.now(), arg1);
+  const defaultResult1 = _typeof.default(arg0);
+  const time = startOfUTCWeek.default(defaultResult1, arg1).getTime();
+  const defaultResult2 = startOfUTCWeek.default(defaultResult1, arg1);
+  return Math.round((time - startOfUTCWeekYear.default(defaultResult1, arg1).getTime()) / c4) + 1;
 };
 export default exports.default;

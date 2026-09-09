@@ -1,5 +1,7 @@
 // === Module 8331: ? ===
 
 // Module 8331
+import _mod17 from "module_17" /* 17 */;
 
-export default { SRT: "application/x-subrip", TTML: "application/ttml+xml", VTT: "text/vtt" };
+
+export default _mod17.requireNativeComponent("RNCWebViewContainer");

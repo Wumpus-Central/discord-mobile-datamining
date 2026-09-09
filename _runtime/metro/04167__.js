@@ -1,107 +1,263 @@
 // === Module 4167: ? ===
 
 // Module 4167
-import _mod4153 from "module_4153" /* 4153 */;
+import _mod4166 from "module_4166" /* 4166 */;
 
-const fn = function n(moment) {
-  function translateSingular(arg0, arg1, arg2, arg3) {
-    const parts = dependencyMap[arg2].split("_");
-    if (arg1) {
-      let first = parts[0];
-    } else {
-      first = arg3 ? parts[1] : parts[2];
-    }
-    return first;
-  }
+const fn = function t(moment) {
   function translate(arg0, arg1, arg2, arg3) {
     const text = `${arg0} `;
-    if (1 === arg0) {
-      const parts = dependencyMap[arg2[0]].split("_");
-      if (arg1) {
-        let first = parts[0];
-      } else {
-        first = arg3 ? parts[1] : parts[2];
-      }
-      const sum = text + first;
-    } else if (arg1) {
-      const result = arg0 % 10;
-      let tmp10 = result === 0;
-      if (result !== 0) {
-        let tmp11 = arg0 > 10;
-        if (tmp11) {
-          tmp11 = arg0 < 20;
+    switch (arg2) {
+      case "s":
+        if (arg1) {
+          let str20 = "p\u00E1r sekund";
+        } else {
+          str20 = "p\u00E1r sekundami";
         }
-        tmp10 = tmp11;
-      }
-      const parts1 = dependencyMap[arg2].split("_");
-      const sum1 = text + (tmp10 ? parts1[1] : parts1[0]);
-    } else {
-      if (arg3) {
-        let sum2 = text + dependencyMap[arg2].split("_")[1];
-      } else {
-        const result1 = arg0 % 10;
-        let tmp3 = result1 === 0;
-        if (result1 !== 0) {
-          let tmp4 = arg0 > 10;
-          if (tmp4) {
-            tmp4 = arg0 < 20;
+        return str20;
+      case "ss":
+        if (!arg1) {
+          if (!arg3) {
+            let text1 = `${tmp}sekundami`;
           }
-          tmp3 = tmp4;
+          return text1;
         }
-        const parts2 = dependencyMap[arg2].split("_");
-        sum2 = text + (tmp3 ? parts2[1] : parts2[2]);
-      }
-      return sum2;
+        let tmp13 = arg0 > 1;
+        if (tmp13) {
+          tmp13 = arg0 < 5;
+        }
+        if (tmp13) {
+          tmp13 = 1 !== ~~arg0 / 10;
+        }
+        let str19 = "sekund";
+        if (tmp13) {
+          str19 = "sekundy";
+        }
+        text1 = text + str19;
+      break;
+      case "m":
+        let str16 = "minuta";
+        if (!arg1) {
+          let str17 = "minutou";
+          if (arg3) {
+            str17 = "minutu";
+          }
+          str16 = str17;
+        }
+        return str16;
+      case "mm":
+        if (!arg1) {
+          if (!arg3) {
+            let text2 = `${tmp}minutami`;
+          }
+          return text2;
+        }
+        let tmp11 = arg0 > 1;
+        if (tmp11) {
+          tmp11 = arg0 < 5;
+        }
+        if (tmp11) {
+          tmp11 = 1 !== ~~arg0 / 10;
+        }
+        let str15 = "minut";
+        if (tmp11) {
+          str15 = "minuty";
+        }
+        text2 = text + str15;
+      break;
+      case "h":
+        let str12 = "hodina";
+        if (!arg1) {
+          let str13 = "hodinou";
+          if (arg3) {
+            str13 = "hodinu";
+          }
+          str12 = str13;
+        }
+        return str12;
+      case "hh":
+        if (!arg1) {
+          if (!arg3) {
+            let text3 = `${tmp}hodinami`;
+          }
+          return text3;
+        }
+        let tmp9 = arg0 > 1;
+        if (tmp9) {
+          tmp9 = arg0 < 5;
+        }
+        if (tmp9) {
+          tmp9 = 1 !== ~~arg0 / 10;
+        }
+        let str11 = "hodin";
+        if (tmp9) {
+          str11 = "hodiny";
+        }
+        text3 = text + str11;
+      break;
+      case "d":
+        if (arg1) {
+          let str9 = "den";
+        } else {
+          str9 = "dnem";
+        }
+        return str9;
+      case "dd":
+        if (!arg1) {
+          if (!arg3) {
+            let text4 = `${tmp}dny`;
+          }
+          return text4;
+        }
+        let tmp7 = arg0 > 1;
+        if (tmp7) {
+          tmp7 = arg0 < 5;
+        }
+        if (tmp7) {
+          tmp7 = 1 !== ~~arg0 / 10;
+        }
+        let str8 = "dn\u00ED";
+        if (tmp7) {
+          str8 = "dny";
+        }
+        text4 = text + str8;
+      break;
+      case "M":
+        if (arg1) {
+          let str6 = "m\u011Bs\u00EDc";
+        } else {
+          str6 = "m\u011Bs\u00EDcem";
+        }
+        return str6;
+      case "MM":
+        if (!arg1) {
+          if (!arg3) {
+            let text5 = `${tmp}měsíci`;
+          }
+          return text5;
+        }
+        let tmp5 = arg0 > 1;
+        if (tmp5) {
+          tmp5 = arg0 < 5;
+        }
+        if (tmp5) {
+          tmp5 = 1 !== ~~arg0 / 10;
+        }
+        let str5 = "m\u011Bs\u00EDc\u016F";
+        if (tmp5) {
+          str5 = "m\u011Bs\u00EDce";
+        }
+        text5 = text + str5;
+      break;
+      case "y":
+        if (arg1) {
+          let str3 = "rok";
+        } else {
+          str3 = "rokem";
+        }
+        return str3;
+      case "yy":
+        if (!arg1) {
+          if (!arg3) {
+            let text6 = `${tmp}lety`;
+          }
+          return text6;
+        }
+        let tmp3 = arg0 > 1;
+        if (tmp3) {
+          tmp3 = arg0 < 5;
+        }
+        if (tmp3) {
+          tmp3 = 1 !== ~~arg0 / 10;
+        }
+        let str2 = "let";
+        if (tmp3) {
+          str2 = "roky";
+        }
+        text6 = text + str2;
+      break;
+      default:
     }
   }
-  dependencyMap = { ss: "sekund\u0117_sekund\u017Ei\u0173_sekundes", m: "minut\u0117_minut\u0117s_minut\u0119", mm: "minut\u0117s_minu\u010Di\u0173_minutes", h: "valanda_valandos_valand\u0105", hh: "valandos_valand\u0173_valandas", d: "diena_dienos_dien\u0105", dd: "dienos_dien\u0173_dienas", M: "m\u0117nuo_m\u0117nesio_m\u0117nes\u012F", MM: "m\u0117nesiai_m\u0117nesi\u0173_m\u0117nesius", y: "metai_met\u0173_metus", yy: "metai_met\u0173_metus" };
-  let obj = { months: null, monthsShort: null, weekdays: null, weekdaysShort: null, weekdaysMin: null, weekdaysParseExact: true, longDateFormat: null, calendar: null, relativeTime: null, dayOfMonthOrdinalParse: null, ordinal: null, week: null };
-  obj = { format: "sausio_vasario_kovo_baland\u017Eio_gegu\u017E\u0117s_bir\u017Eelio_liepos_rugpj\u016B\u010Dio_rugs\u0117jo_spalio_lapkri\u010Dio_gruod\u017Eio".split("_"), standalone: "sausis_vasaris_kovas_balandis_gegu\u017E\u0117_bir\u017Eelis_liepa_rugpj\u016Btis_rugs\u0117jis_spalis_lapkritis_gruodis".split("_"), isFormat: /D[oD]?(\[[^\[\]]*\]|\s)+MMMM?|MMMM?(\[[^\[\]]*\]|\s)+D[oD]?/ };
-  obj.months = obj;
-  obj.monthsShort = "sau_vas_kov_bal_geg_bir_lie_rgp_rgs_spa_lap_grd".split("_");
-  obj = { format: "sekmadien\u012F_pirmadien\u012F_antradien\u012F_tre\u010Diadien\u012F_ketvirtadien\u012F_penktadien\u012F_\u0161e\u0161tadien\u012F".split("_"), standalone: "sekmadienis_pirmadienis_antradienis_tre\u010Diadienis_ketvirtadienis_penktadienis_\u0161e\u0161tadienis".split("_"), isFormat: /dddd HH:mm/ };
-  obj.weekdays = obj;
-  obj.weekdaysShort = "Sek_Pir_Ant_Tre_Ket_Pen_\u0160e\u0161".split("_");
-  obj.weekdaysMin = "S_P_A_T_K_Pn_\u0160".split("_");
-  obj.longDateFormat = { LT: "HH:mm", LTS: "HH:mm:ss", L: "YYYY-MM-DD", LL: "YYYY [m.] MMMM D [d.]", LLL: "YYYY [m.] MMMM D [d.], HH:mm [val.]", LLLL: "YYYY [m.] MMMM D [d.], dddd, HH:mm [val.]", l: "YYYY-MM-DD", ll: "YYYY [m.] MMMM D [d.]", lll: "YYYY [m.] MMMM D [d.], HH:mm [val.]", llll: "YYYY [m.] MMMM D [d.], ddd, HH:mm [val.]" };
-  obj.calendar = { sameDay: "[\u0160iandien] LT", nextDay: "[Rytoj] LT", nextWeek: "dddd LT", lastDay: "[Vakar] LT", lastWeek: "[Pra\u0117jus\u012F] dddd LT", sameElse: "L" };
-  obj.relativeTime = {
-    future: "po %s",
-    past: "prie\u0161 %s",
-    s: function translateSeconds(arg0, arg1, arg2, arg3) {
-      let str = "kelios sekund\u0117s";
-      if (!arg1) {
-        let str2 = "kelias sekundes";
-        if (arg3) {
-          str2 = "keli\u0173 sekund\u017Ei\u0173";
+  let obj = { standalone: "leden_\u00FAnor_b\u0159ezen_duben_kv\u011Bten_\u010Derven_\u010Dervenec_srpen_z\u00E1\u0159\u00ED_\u0159\u00EDjen_listopad_prosinec".split("_"), format: "ledna_\u00FAnora_b\u0159ezna_dubna_kv\u011Btna_\u010Dervna_\u010Dervence_srpna_z\u00E1\u0159\u00ED_\u0159\u00EDjna_listopadu_prosince".split("_"), isFormat: /DD?[o.]?(\[[^\[\]]*\]|\s)+MMMM/ };
+  const items = [/^led/i, /^úno/i, /^bře/i, /^dub/i, /^kvě/i, /^(čvn|červen$|června)/i, /^(čvc|červenec|července)/i, /^srp/i, /^zář/i, /^říj/i, /^lis/i, /^pro/i];
+  const tmp = /^(leden|únor|březen|duben|květen|červenec|července|červen|června|srpen|září|říjen|listopad|prosinec|led|úno|bře|dub|kvě|čvn|čvc|srp|zář|říj|lis|pro)/i;
+  obj = {
+    months: obj,
+    monthsShort: "led_\u00FAno_b\u0159e_dub_kv\u011B_\u010Dvn_\u010Dvc_srp_z\u00E1\u0159_\u0159\u00EDj_lis_pro".split("_"),
+    monthsRegex: tmp,
+    monthsShortRegex: tmp,
+    monthsStrictRegex: /^(leden|ledna|února|únor|březen|března|duben|dubna|květen|května|červenec|července|červen|června|srpen|srpna|září|říjen|října|listopadu|listopad|prosinec|prosince)/i,
+    monthsShortStrictRegex: /^(led|úno|bře|dub|kvě|čvn|čvc|srp|zář|říj|lis|pro)/i,
+    monthsParse: items,
+    longMonthsParse: items,
+    shortMonthsParse: items,
+    weekdays: "ned\u011Ble_pond\u011Bl\u00ED_\u00FAter\u00FD_st\u0159eda_\u010Dtvrtek_p\u00E1tek_sobota".split("_"),
+    weekdaysShort: "ne_po_\u00FAt_st_\u010Dt_p\u00E1_so".split("_"),
+    weekdaysMin: "ne_po_\u00FAt_st_\u010Dt_p\u00E1_so".split("_"),
+    longDateFormat: { LT: "H:mm", LTS: "H:mm:ss", L: "DD.MM.YYYY", LL: "D. MMMM YYYY", LLL: "D. MMMM YYYY H:mm", LLLL: "dddd D. MMMM YYYY H:mm", l: "D. M. YYYY" },
+    calendar: {
+      sameDay: "[dnes v] LT",
+      nextDay: "[z\u00EDtra v] LT",
+      nextWeek() {
+        const dayResult = this.day();
+        if (0 === dayResult) {
+          return "[v ned\u011Bli v] LT";
+        } else {
+          if (1 !== dayResult) {
+            if (2 !== dayResult) {
+              if (3 === dayResult) {
+                return "[ve st\u0159edu v] LT";
+              } else if (4 === dayResult) {
+                return "[ve \u010Dtvrtek v] LT";
+              } else if (5 === dayResult) {
+                return "[v p\u00E1tek v] LT";
+              } else if (6 === dayResult) {
+                return "[v sobotu v] LT";
+              }
+            }
+          }
+          return "[v] dddd [v] LT";
         }
-        str = str2;
-      }
-      return str;
+      },
+      lastDay: "[v\u010Dera v] LT",
+      lastWeek() {
+        const dayResult = this.day();
+        if (0 === dayResult) {
+          return "[minulou ned\u011Bli v] LT";
+        } else {
+          if (1 !== dayResult) {
+            if (2 !== dayResult) {
+              if (3 === dayResult) {
+                return "[minulou st\u0159edu v] LT";
+              } else {
+                if (4 !== dayResult) {
+                  if (5 !== dayResult) {
+                    if (6 === dayResult) {
+                      return "[minulou sobotu v] LT";
+                    }
+                  }
+                }
+                return "[minul\u00FD] dddd [v] LT";
+              }
+            }
+          }
+          return "[minul\u00E9] dddd [v] LT";
+        }
+      },
+      sameElse: "L"
     },
-    ss: translate,
-    m: translateSingular,
-    mm: translate,
-    h: translateSingular,
-    hh: translate,
-    d: translateSingular,
-    dd: translate,
-    M: translateSingular,
-    MM: translate,
-    y: translateSingular,
-    yy: translate
+    relativeTime: { future: "za %s", past: "p\u0159ed %s", s: translate, ss: translate, m: translate, mm: translate, h: translate, hh: translate, d: translate, dd: translate, M: translate, MM: translate, y: translate, yy: translate },
+    dayOfMonthOrdinalParse: /\d{1,2}\./,
+    ordinal: "%d.",
+    week: { dow: 1, doy: 4 }
   };
-  obj.dayOfMonthOrdinalParse = /\d{1,2}-oji/;
-  obj.ordinal = function ordinal(arg0) {
-    return arg0 + "-oji";
-  };
-  obj.week = { dow: 1, doy: 4 };
-  return moment.defineLocale("lt", obj);
+  ({ split, split: split2 } = "ne_po_\u00FAt_st_\u010Dt_p\u00E1_so");
+  return moment.defineLocale("cs", obj);
 };
 if (typeof exports === "object") {
   if (undefined !== module) {
     if (typeof require === "function") {
-      fn(_mod4153);
+      fn(_mod4166);
     }
   }
 }

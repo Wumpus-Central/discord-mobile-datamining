@@ -1,53 +1,62 @@
 // === Module 12843: ? ===
 
 // Module 12843
-import _mod12801 from "module_12801" /* 12801 */;
-import spanTimeInputToSeconds from "spanTimeInputToSeconds" /* 12806 */;
-import _mod12816 from "module_12816" /* 12816 */;
-import _mod12829 from "module_12829" /* 12829 */;
+import _mod12833 from "module_12833" /* 12833 */;
+import _slicedToArray from "module_32" /* 32 */;
 
-require = arg1;
-const dependencyMap = arg6;
+const _sentryMetrics = "_sentryMetrics";
 
-export const setMeasurement = function setMeasurement(arg0, arg1, arg2) {
-  if (activeSpan === undefined) {
-    let obj = spanTimeInputToSeconds;
-    activeSpan = obj.getActiveSpan();
-  }
-  let rootSpan = activeSpan;
-  if (activeSpan) {
-    rootSpan = spanTimeInputToSeconds.getRootSpan(activeSpan);
-  }
-  if (rootSpan) {
-    if (_mod12829.DEBUG_BUILD) {
-      const logger = _mod12801.logger;
-      const _HermesInternal = HermesInternal;
-      logger.log("[Measurement] Setting measurement on root span: " + arg0 + " = " + arg1 + " " + arg2);
+export const getMetricSummaryJsonForSpan = function getMetricSummaryJsonForSpan(self) {
+  if (self[_sentryMetrics]) {
+    const obj = {};
+    const tmp3 = tmp[Symbol.iterator]();
+    while (tmp3 !== undefined) {
+      let tmp8 = _slicedToArray(_slicedToArray(tmp5, 2)[1], 2);
+      [tmp9, tmp11] = tmp8;
+      let arr = obj[tmp9];
+      if (!arr) {
+        let items = [];
+        obj[tmp10] = items;
+        arr = items;
+      }
+      let obj2 = _mod12833;
+      arr = arr.push(obj2.dropUndefinedKeys(tmp11));
+      continue;
     }
-    obj = {};
-    obj[_mod12816.SEMANTIC_ATTRIBUTE_SENTRY_MEASUREMENT_VALUE] = arg1;
-    obj[_mod12816.SEMANTIC_ATTRIBUTE_SENTRY_MEASUREMENT_UNIT] = arg2;
-    rootSpan.addEvent(arg0, obj);
+    return obj;
   }
 };
-export const timedEventsToMeasurements = function timedEventsToMeasurements(arr) {
-  if (arr) {
-    if (0 !== arr.length) {
-      let obj = {};
-      const item = arr.forEach((attributes) => {
-        const tmp = attributes.attributes || {};
-        const tmp2 = tmp[_mod12816.SEMANTIC_ATTRIBUTE_SENTRY_MEASUREMENT_UNIT];
-        const tmp3 = tmp[_mod12816.SEMANTIC_ATTRIBUTE_SENTRY_MEASUREMENT_VALUE];
-        let tmp4 = typeof tmp2 === "string";
-        if (typeof tmp2 === "string") {
-          tmp4 = typeof tmp3 === "number";
-        }
-        if (tmp4) {
-          obj = { value: tmp3, unit: tmp2 };
-          obj[attributes.name] = obj;
-        }
-      });
-      return obj;
-    }
+export const updateMetricSummaryOnSpan = function updateMetricSummaryOnSpan(activeSpan, metricType, sanitizeMetricKeyResult, min, sanitizeUnitResult, tags, bucketKey) {
+  let obj = activeSpan[_sentryMetrics];
+  if (!obj) {
+    const _Map = Map;
+    const map = new Map();
+    activeSpan[tmp] = map;
+    obj = map;
+  }
+  const combined = "" + metricType + ":" + sanitizeMetricKeyResult + "@" + sanitizeUnitResult;
+  value = obj.get(bucketKey);
+  if (value) {
+    _slicedToArray(value, 2)[1];
+    const items = [combined, ];
+    const range = { min: null, max: null, count: null, sum: null, tags: null };
+    const _Math = Math;
+    range.min = Math.min(range.min, min);
+    const _Math2 = Math;
+    range.max = Math.max(range.max, min);
+    const sum = range.count + 1;
+    range.count = sum;
+    range.count = sum;
+    const sum1 = range.sum + min;
+    range.sum = sum1;
+    range.sum = sum1;
+    range.tags = range.tags;
+    items[1] = range;
+    const result = obj.set(bucketKey, items);
+  } else {
+    const items1 = [combined, ];
+    const range1 = { min, max: min, count: 1, sum: min, tags };
+    items1[1] = range1;
+    const result1 = obj.set(bucketKey, items1);
   }
 };

@@ -1,12 +1,9 @@
 // === Module 6648: ? ===
 
 // Module 6648
-function print() {
+import _mod19 from "module_19" /* 19 */;
 
-}
-const frozen = Object.freeze(print);
+const context = _mod19.createContext(null);
 
-export { print };
-export const enableLogging = (arg0) => {
-  console.warn("[BottomSheet] could not enable logging on production!");
-};
+export const BottomSheetContext = context;
+export const BottomSheetProvider = context.Provider;

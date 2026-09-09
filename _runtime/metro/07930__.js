@@ -1,7 +1,16 @@
 // === Module 7930: ? ===
 
 // Module 7930
-import registerAsset from "module_1122" /* 1122 */;
 
-
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "be0ebbe0444cf9ea073becdc22f65ec9", name: "DenyIcon", type: "png" });
+export function debounce(arg0, arg1) {
+  closure_0 = arg0;
+  closure_1 = arg1;
+  return function() {
+    const self = this;
+    closure_0 = [...arguments];
+    clearTimeout(timeout);
+    timeout = setTimeout(() => {
+      closure_0.apply(self, closure_0);
+    }, self);
+  };
+}

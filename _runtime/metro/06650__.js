@@ -1,12 +1,9 @@
 // === Module 6650: ? ===
 
 // Module 6650
-const global = arg0;
+import _mod19 from "module_19" /* 19 */;
 
-export const isFabricInstalled = function isFabricInstalled() {
-  let prop;
-  if (global != null) {
-    prop = global.nativeFabricUIManager;
-  }
-  return null != prop;
-};
+const context = _mod19.createContext(null);
+
+export const BottomSheetInternalContext = context;
+export const BottomSheetInternalProvider = context.Provider;

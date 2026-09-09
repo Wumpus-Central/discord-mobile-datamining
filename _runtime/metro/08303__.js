@@ -1,7 +1,7 @@
 // === Module 8303: ? ===
 
 // Module 8303
-import _mod17 from "module_17" /* 17 */;
+import registerAsset from "module_1122" /* 1122 */;
 
 
-export default _mod17.requireNativeComponent("RNCWebViewContainer");
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "1a98a09be102b24c083fe11e00ab3c2d", name: "PlayIcon", type: "png" });

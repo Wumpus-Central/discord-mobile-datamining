@@ -1,33 +1,7 @@
 // === Module 12798: ? ===
 
 // Module 12798
-import _mod12799 from "module_12799" /* 12799 */;
-import _mod12802 from "module_12802" /* 12802 */;
+import registerAsset from "module_1122" /* 1122 */;
 
-require = arg1;
-const dependencyMap = arg6;
-function instrumentError() {
-  onerror = _mod12802.GLOBAL_OBJ.onerror;
-  _mod12802.GLOBAL_OBJ.onerror = function(msg, url, line, column, error) {
-    _mod12799.triggerHandlers("error", { column, error, line, msg, url });
-    if (!onerror) {
-      return onerror;
-    } else {
-      const self = this;
-      const apply = onerror.apply;
-      if (typeof apply === "unknown") {
-        let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-      } else {
-        applyArgumentsResult = apply(self, arguments);
-      }
-    }
-    const obj = { column, error, line, msg, url };
-  };
-  _mod12802.GLOBAL_OBJ.onerror.__SENTRY_INSTRUMENTED__ = true;
-}
-let onerror = null;
 
-export const addGlobalErrorInstrumentationHandler = function addGlobalErrorInstrumentationHandler(errorCallback) {
-  _mod12799.addHandler("error", errorCallback);
-  _mod12799.maybeInstrument("error", instrumentError);
-};
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/forums/native/images", width: 120, height: 80, scales: [2, 3], hash: "78be237a71ac693684ba99bcd912e5ac", name: "img_forum_empty_state_dark", type: "png" });

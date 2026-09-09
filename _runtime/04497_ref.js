@@ -1,0 +1,23 @@
+// === Module 4497: ref ===
+
+// Module 4497 (ref)
+import noop from "module_19" /* 19 */;
+import shallowEqual from "shallowEqual" /* 4498 */;
+
+if (shallowEqual) {
+  if (typeof shallowEqual === "object") {
+    if ("default" in shallowEqual) {
+      shallowEqual = shallowEqual.default;
+    }
+  }
+}
+let closure_2 = {};
+
+export default (current, arg1) => {
+  const ref = noop.useRef(closure_2);
+  current = ref.current;
+  const effect = noop.useEffect(() => {
+    ref.current = current;
+  });
+  return current;
+};

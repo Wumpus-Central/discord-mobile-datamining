@@ -1,12 +1,15 @@
 // === Module 14356: ? ===
 
 // Module 14356
-import _mod14303 from "module_14303" /* 14303 */;
-import _mod14337 from "module_14337" /* 14337 */;
-import _mod14354 from "module_14354" /* 14354 */;
+import _mod14351 from "module_14351" /* 14351 */;
+import _mod14357 from "module_14357" /* 14357 */;
 
 
-export default _mod14303 ? ((arg0, arg1, arg2) => _mod14354.f(arg0, arg1, _mod14337(1, arg2))) : ((arg0, arg1, arg2) => {
-  arg0[arg1] = arg2;
-  return arg0;
-});
+export default (arg0) => {
+  if (_mod14351(arg0)) {
+    return arg0;
+  } else {
+    const tmp6 = new TypeError(_mod14357(arg0) + " is not a function");
+    throw tmp6;
+  }
+};
