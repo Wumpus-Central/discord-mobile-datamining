@@ -1,31 +1,45 @@
 // _runtime/metro/14410__.js
+import _typeof from "14411__.js";
 
-export const getReactNativeDimensionsWithDimensions = function getReactNativeDimensionsWithDimensions(width, value) {
-  try {
-    let obj = {};
-    obj = {};
-    if (width) {
-      obj = { screenWidth: null, screenHeight: null, screenScale: null, screenFontScale: null };
-      const _Math = Math;
-      obj.screenWidth = Math.ceil(width.width);
-      const _Math2 = Math;
-      obj.screenHeight = Math.ceil(width.height);
-      ({ scale: obj3.screenScale, fontScale: obj3.screenFontScale } = width);
-    }
-    if (value) {
-      const obj1 = { windowWidth: null, windowHeight: null, windowScale: null, windowFontScale: null };
-      const _Math3 = Math;
-      obj1.windowWidth = Math.ceil(value.width);
-      const _Math4 = Math;
-      obj1.windowHeight = Math.ceil(value.height);
-      ({ scale: obj4.windowScale, fontScale: obj4.windowFontScale } = value);
-      obj = obj1;
-    }
-    const obj2 = {};
-    const merged = Object.assign(obj);
-    const merged1 = Object.assign(obj);
-    return obj2;
-  } catch (err) {
-    return null;
+if (_typeof) {
+  if (typeof _typeof === "object") {
+    let _default = _typeof;
   }
-};
+  let obj = globalThis;
+  const _Intl = Intl;
+  if (typeof Intl === "undefined") {
+    if (undefined !== global) {
+      obj = { PluralRules: _default.default };
+      global.Intl = obj;
+      _default = _default.default;
+      _default.polyfill = true;
+    } else {
+      const _window = window;
+      if (typeof window === "undefined") {
+        const self = this;
+        obj = { PluralRules: _default.default };
+        this.Intl = obj;
+      }
+    }
+    obj = { PluralRules: _default.default };
+    obj.window.Intl = obj;
+  } else {
+    const _Intl5 = Intl;
+    if (Intl.PluralRules) {
+      const _Intl2 = Intl;
+      if (Intl.PluralRules.prototype.selectRange) {
+        const items = ["en", "es", "ru", "zh"];
+        const _Intl4 = Intl;
+        if (PluralRules.supportedLocalesOf(items).length < items.length) {
+          const _Intl6 = Intl;
+          Intl.PluralRules = _default.default;
+          _default.default.polyfill = true;
+        }
+      }
+    }
+    const _Intl3 = Intl;
+    Intl.PluralRules = _default.default;
+    _default.default.polyfill = true;
+  }
+}
+_default = { default: _typeof };

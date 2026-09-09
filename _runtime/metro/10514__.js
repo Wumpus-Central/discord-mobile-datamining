@@ -1,11 +1,15 @@
 // _runtime/metro/10514__.js
-import _possibleConstructorReturn from "00093__possibleConstructorReturn.js";
-import Filter from "../10456_Filter.js";
+import AbstractParserWithWordBoundaryChecking from "../10471_AbstractParserWithWordBoundaryChecking.js";
+import now from "../10488_now.js";
+import _mod10515 from "10515__.js";
 import _classCallCheck from "00041__classCallCheck.js";
 import _createClass from "00042__createClass.js";
+import c3 from "00093__possibleConstructorReturn.js";
 import _getPrototypeOf from "../00095__getPrototypeOf.js";
 import _inherits from "../00098__inherits.js";
 
+let self = this;
+const DECasualDateParser = require;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -24,66 +28,180 @@ function _isNativeReflectConstruct() {
     return _isNativeReflectConstruct();
   } catch (err) {}
 }
-_possibleConstructorReturn;
-class JPMergeWeekdayComponentRefiner {
-  constructor() {
-    self = this;
-    tmp = closure_0(this, JPMergeWeekdayComponentRefiner);
-    tmp2 = c2;
-    obj = c2(JPMergeWeekdayComponentRefiner);
-    tmp3 = closure_1;
-    if (closure_3()) {
-      tmp7 = globalThis;
-      _Reflect = Reflect;
-      tmp8 = arguments;
-      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
-    } else {
-      tmp4 = arguments;
-      tmp5 = arguments;
-      constructResult = obj(...arguments);
-    }
-    return tmp3(self, constructResult);
-  }
+let self2 = this;
+if (this) {
+  self2 = self.__createBinding;
 }
-_classCallCheck = JPMergeWeekdayComponentRefiner;
-_inherits(JPMergeWeekdayComponentRefiner, Filter.MergingRefiner);
-const entry = {
-  key: "mergeResults",
-  value: function mergeResults(arg0, clone, text) {
-    const cloneResult = clone.clone();
-    cloneResult.text = clone.text + arg0 + text.text;
-    const start = cloneResult.start;
-    const start2 = text.start;
-    start.assign("weekday", start2.get("weekday"));
-    if (cloneResult.end) {
-      const end = cloneResult.end;
-      const start3 = text.start;
-      end.assign("weekday", start3.get("weekday"));
+if (self2) {
+  let __setModuleDefault = self;
+  if (self) {
+    __setModuleDefault = self.__setModuleDefault;
+  }
+  if (__setModuleDefault) {
+    let fn = self;
+    if (self) {
+      fn = self.__importStar;
     }
-    return cloneResult;
-  },
-};
-const items = [
-  entry,
-  {
-    key: "shouldMergeResults",
-    value: function shouldMergeResults(str, start, start2) {
-      start = start.start;
-      let isCertainResult = start.isCertain("day");
-      if (isCertainResult) {
-        start2 = start2.start;
-        isCertainResult = start2.isOnlyWeekdayComponent();
+    if (!fn) {
+      fn = function u(arg0) {
+        fn = Object.getOwnPropertyNames;
+        if (!fn) {
+          fn = (obj) => {
+            const items = [];
+            for (const key10005 in arg0) {
+              let _Object = Object;
+              hasOwnProperty = Object.prototype.hasOwnProperty;
+              let call = hasOwnProperty.call;
+              if (typeof call === "unknown") {
+                let hasOwnPropertyResult = hasOwnProperty(key10005);
+              } else {
+                hasOwnPropertyResult = call(arg0, key10005);
+              }
+              if (!hasOwnPropertyResult) {
+                continue;
+              } else {
+                items[items.length] = key10005;
+                continue;
+              }
+              continue;
+            }
+            return items;
+          };
+        }
+        return fn(arg0);
+      };
+      fn = (__esModule) => {
+        if (__esModule) {
+          if (__esModule.__esModule) {
+            return __esModule;
+          }
+        }
+        const obj = {};
+        if (null != __esModule) {
+          const arr = fn(__esModule);
+          for (let num = 0; num < arr.length; num = num + 1) {
+            if ("default" !== arr[num]) {
+              let tmp4 = self2(obj, __esModule, arr[num]);
+            }
+          }
+        }
+        __setModuleDefault(obj, __esModule);
+        return obj;
+      };
+    }
+    let fn2 = self;
+    if (self) {
+      fn2 = self.__importDefault;
+    }
+    if (!fn2) {
+      fn2 = (__esModule) => {
+        if (!__esModule) {
+          const obj = { default: __esModule };
+          let tmp = obj;
+        } else {
+          tmp = __esModule;
+        }
+        return tmp;
+      };
+    }
+    const _Object3 = Object;
+    let closure_9 = fn2(_mod10515);
+    let closure_10 = fn(now);
+    const _RegExp = RegExp;
+    const regExp = new RegExp(
+      "(jetzt|heute|morgen|\u00FCbermorgen|uebermorgen|gestern|vorgestern|letzte\\s*nacht)(?:\\s*(morgen|vormittag|mittags?|nachmittag|abend|nacht|mitternacht))?(?=\\W|$)",
+      "i",
+    );
+    class DECasualDateParser {
+      constructor() {
+        self = this;
+        tmp = c2(this, DECasualDateParser);
+        tmp2 = closure_4;
+        obj = closure_4(DECasualDateParser);
+        tmp3 = closure_3;
+        if (hasOwnProperty()) {
+          tmp7 = globalThis;
+          _Reflect = Reflect;
+          tmp8 = arguments;
+          constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
+        } else {
+          tmp4 = arguments;
+          tmp5 = arguments;
+          constructResult = obj(...arguments);
+        }
+        return tmp3(self, constructResult);
       }
-      if (isCertainResult) {
-        const start3 = start2.start;
-        isCertainResult = !start3.isCertain("hour");
-      }
-      if (isCertainResult) {
-        isCertainResult = null !== str.match(/^[,、の]?\s*$/);
-      }
-      return isCertainResult;
-    },
-  },
-];
-
-export default _createClass(JPMergeWeekdayComponentRefiner, items);
+    }
+    _inherits(DECasualDateParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
+    const entry = {
+      key: "innerPattern",
+      value: function innerPattern(arg0) {
+        return regExp;
+      },
+    };
+    let items = [entry];
+    const entry1 = {
+      key: "innerExtract",
+      value: function innerExtract(reference, arg1) {
+        reference = reference.reference;
+        const dateWithAdjustedTimezone = reference.getDateWithAdjustedTimezone();
+        const str2 = arg1[1] || "".toLowerCase();
+        const formatted = arg1[2] || "".toLowerCase();
+        const parsingComponents = reference.createParsingComponents();
+        if ("jetzt" === str2) {
+          let nowResult = closure_10.now(reference.reference);
+        } else if ("heute" === str2) {
+          nowResult = closure_10.today(reference.reference);
+        } else if ("morgen" === str2) {
+          const addDurationResult = DECasualDateParser(10466).addDuration(dateWithAdjustedTimezone, { day: 1 });
+          DECasualDateParser(10470).assignSimilarDate(parsingComponents, addDurationResult);
+          DECasualDateParser(10470).implySimilarTime(parsingComponents, addDurationResult);
+          nowResult = parsingComponents;
+        } else {
+          if ("\u00FCbermorgen" !== str2) {
+            if ("uebermorgen" !== str2) {
+              if ("gestern" === str2) {
+                const addDurationResult1 = DECasualDateParser(10466).addDuration(dateWithAdjustedTimezone, { day: -1 });
+                DECasualDateParser(10470).assignSimilarDate(parsingComponents, addDurationResult1);
+                DECasualDateParser(10470).implySimilarTime(parsingComponents, addDurationResult1);
+                nowResult = parsingComponents;
+              } else if ("vorgestern" === str2) {
+                const addDurationResult2 = DECasualDateParser(10466).addDuration(dateWithAdjustedTimezone, { day: -2 });
+                DECasualDateParser(10470).assignSimilarDate(parsingComponents, addDurationResult2);
+                DECasualDateParser(10470).implySimilarTime(parsingComponents, addDurationResult2);
+                nowResult = parsingComponents;
+              } else {
+                nowResult = parsingComponents;
+                if (str2.match(/letzte\s*nacht/)) {
+                  let addDurationResult3 = dateWithAdjustedTimezone;
+                  if (dateWithAdjustedTimezone.getHours() > 6) {
+                    addDurationResult3 = DECasualDateParser(10466).addDuration(dateWithAdjustedTimezone, { day: -1 });
+                  }
+                  DECasualDateParser(10470).assignSimilarDate(parsingComponents, addDurationResult3);
+                  parsingComponents.imply("hour", 0);
+                  nowResult = parsingComponents;
+                }
+              }
+            }
+          }
+          const addDurationResult4 = DECasualDateParser(10466).addDuration(dateWithAdjustedTimezone, { day: 2 });
+          DECasualDateParser(10470).assignSimilarDate(parsingComponents, addDurationResult4);
+          DECasualDateParser(10470).implySimilarTime(parsingComponents, addDurationResult4);
+          nowResult = parsingComponents;
+        }
+        let result = nowResult;
+        if (formatted) {
+          result = closure_9.default.extractTimeComponents(nowResult, formatted);
+          const _default = closure_9.default;
+        }
+        return result;
+      },
+    };
+    items[1] = entry1;
+    exports.default = _createClass(DECasualDateParser, items);
+  } else {
+    const _Object2 = Object;
+  }
+} else {
+  let _Object = Object;
+}

@@ -3,9 +3,11 @@ import registerAsset from "01122__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/.cache/intl/bW9kdWxlcy9pbnRs",
-  scales: [1],
-  hash: "15e2770ff873ff5fbea525f59a114fa0",
-  name: "es-419.messages.15e2770ff873ff5fbea525f59a114fa0.compiled.messages",
-  type: "jsona",
+  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
+  width: 24,
+  height: 24,
+  scales: [2, 3],
+  hash: "86b0ae9df4171f2e8aa096878111249c",
+  name: "TeacupIcon",
+  type: "png",
 });

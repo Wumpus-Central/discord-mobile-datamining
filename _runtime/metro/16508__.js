@@ -1,4 +1,13 @@
 // _runtime/metro/16508__.js
-import _mod17 from "00017__.js";
+import registerAsset from "01122__.js";
 
-export default _mod17.NativeModules.RNViewShot;
+export default registerAsset.registerAsset({
+  __packager_asset: true,
+  httpServerLocation: "/assets/modules/icymi/native/images",
+  width: 77,
+  height: 95.5,
+  scales: [2, 3],
+  hash: "ebbb7db0461de915440e3bdd6a8249c9",
+  name: "flash",
+  type: "png",
+});

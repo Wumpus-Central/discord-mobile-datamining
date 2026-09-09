@@ -1,9 +1,28 @@
 // _runtime/metro/04942__.js
-import _mod17 from "00017__.js";
-import 00065__ from "00065__.js";
+import noop from "00019__.js";
 
-const codegenNativeComponent = _mod17.codegenNativeComponent;
-const __INTERNAL_VIEW_CONFIG = { uiViewClassName: "RNSScreenContentWrapper", validAttributes: {} };
+let context = noop.createContext({ leftDisabled: false, rightDisabled: false, bottomDisabled: false });
 
-export default module_65.get("RNSScreenContentWrapper", () => obj);
-export { __INTERNAL_VIEW_CONFIG };
+export const EdgeInsetApplicationContext = context;
+export const useEdgeInsetApplication = function useEdgeInsetApplication(flag, flag2, flag3) {
+  let obj = noop;
+  context = noop.useContext(context);
+  ({ leftDisabled, rightDisabled, bottomDisabled } = context);
+  if (!leftDisabled) {
+    leftDisabled = flag;
+  }
+  if (!rightDisabled) {
+    rightDisabled = flag2;
+  }
+  if (!bottomDisabled) {
+    bottomDisabled = flag3;
+  }
+  const items = [leftDisabled, rightDisabled, bottomDisabled];
+  obj = {
+    consumeLeftInset: !leftDisabled,
+    consumeRightInset: !rightDisabled,
+    consumeBottomInset: !bottomDisabled,
+    nextContextValue: obj.useMemo(() => ({ leftDisabled, rightDisabled, bottomDisabled }), items),
+  };
+  return obj;
+};

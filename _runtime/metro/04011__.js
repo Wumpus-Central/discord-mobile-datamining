@@ -1,14 +1,14 @@
 // _runtime/metro/04011__.js
-import 04003__ from "04003__.js";
-import requiredArgs from "../03651_requiredArgs.js";
+import startOfWeek from "../03822_startOfWeek.js";
+import requiredArgs from "../03664_requiredArgs.js";
 
-if (!module_4003) {
-  let obj = { default: module_4003 };
+if (!startOfWeek) {
+  let obj = { default: startOfWeek };
   let tmp3 = obj;
 } else {
-  tmp3 = module_4003;
+  tmp3 = startOfWeek;
 }
-module_4003 = tmp3;
+startOfWeek = tmp3;
 if (!requiredArgs) {
   obj = { default: requiredArgs };
   let tmp5 = obj;
@@ -17,8 +17,10 @@ if (!requiredArgs) {
 }
 requiredArgs = tmp5;
 
-export default function isThisSecond(arg0) {
-  requiredArgs.default(1, arguments);
-  return module_4003.default(Date.now(), arg0);
+export default function isSameWeek(arg0, arg1, arg2) {
+  requiredArgs.default(2, arguments);
+  const defaultResult1 = startOfWeek.default(arg0, arg2);
+  const time = defaultResult1.getTime();
+  return time === startOfWeek.default(arg1, arg2).getTime();
 };
 export default exports.default;

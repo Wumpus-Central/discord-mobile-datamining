@@ -1,67 +1,22 @@
 // _runtime/metro/06904__.js
-import _mod6902 from "06902__.js";
-import _slicedToArray from "06857__.js";
+import _mod6905 from "06905__.js";
 
-require = fn;
-const noop = fn(19);
-({ useEffect: c3, useMemo: closure_4, useRef: hasOwnProperty, useState: metroRequire } = noop);
-function useOnLoad(arg0, arg1) {
-  closure_0 = arg0;
-  closure_1 = arg1;
-  closure_2 = hasOwnProperty(false);
-  React3(() => {
-    isFirstLayoutComplete = isFirstLayoutComplete.getIsFirstLayoutComplete();
-    if (isFirstLayoutComplete) {
-      isFirstLayoutComplete = !ref.current;
+export default function _inherits(value, fn) {
+  if (typeof fn !== "function") {
+    if (null !== fn) {
+      const _TypeError = TypeError;
+      const typeError = new TypeError("Super expression must either be null or a function");
+      throw typeError;
     }
-    if (isFirstLayoutComplete) {
-      ref.current = true;
-      f80816();
-    }
-  });
-}
-
-export const useOnListLoad = (recyclerViewManager, onLoad) => {
-  let isFirstLayoutComplete = recyclerViewManager;
-  let f80816 = onLoad;
-  hasOwnProperty(Date.now());
-  [tmp3, closure_3] = _slicedToArray(timestampProducer(false), 2);
-  const dataLength = recyclerViewManager.getDataLength();
-  let obj = _mod6902;
-  const requestAnimationFrame = obj.useUnmountAwareAnimationFrame().requestAnimationFrame;
-  const items = [dataLength];
-  React4(() => {
-    closure_2.current = Date.now();
-  }, items);
-  if (typeof useOnLoad === "function") {
-    isFirstLayoutComplete = recyclerViewManager;
-    f80816 = () => {
-      const elapsedTimeInMs = Date.now() - ref.current;
-      requestAnimationFrame(() => {
-        elapsedTimeInMs.isFirstPaintOnUiComplete = true;
-        if (f80816 != null) {
-          const obj = { elapsedTimeInMs };
-          tmp(obj);
-        }
-        closure_2_3(true);
-      });
-    };
-    hasOwnProperty(false);
-    React3(() => {
-      isFirstLayoutComplete = isFirstLayoutComplete.getIsFirstLayoutComplete();
-      if (isFirstLayoutComplete) {
-        isFirstLayoutComplete = !ref.current;
-      }
-      if (isFirstLayoutComplete) {
-        ref.current = true;
-        f80816();
-      }
-    });
-    obj = { isLoaded: tmp3 };
-    return obj;
-  } else {
-    throw new TypeError("Trying to call a non-function");
   }
-  const tmp2 = _slicedToArray(timestampProducer(false), 2);
-};
-export { useOnLoad };
+  let prototype = fn;
+  if (fn) {
+    prototype = fn.prototype;
+  }
+  value.prototype = Object.create(prototype, { constructor: { value, writable: true, configurable: true } });
+  Object.defineProperty(value, "prototype", { writable: false });
+  if (fn) {
+    _mod6905(value, fn);
+  }
+  const obj = { constructor: { value, writable: true, configurable: true } };
+}

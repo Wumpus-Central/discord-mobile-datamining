@@ -4,10 +4,10 @@ import registerAsset from "01122__.js";
 export default registerAsset.registerAsset({
   __packager_asset: true,
   httpServerLocation: "/assets/modules/video_calls/native/images",
-  width: 18,
-  height: 18,
+  width: 20,
+  height: 20,
   scales: [2, 3],
-  hash: "ade8732f10573e5215aa029a138cb853",
-  name: "watch",
+  hash: "680bf4fd0485a160338f41e352ddc0a6",
+  name: "grid",
   type: "png",
 });

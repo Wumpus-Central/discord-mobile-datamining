@@ -3,11 +3,11 @@ import registerAsset from "01122__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/stickers/native/images",
-  width: 250,
-  height: 120,
+  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
+  width: 24,
+  height: 24,
   scales: [2, 3],
-  hash: "97335968179b868ec33c96b39450902f",
-  name: "img_premium_canvas_mobile",
+  hash: "1699074ac253625e6b37940d47094c82",
+  name: "AnalyticsIcon",
   type: "png",
 });

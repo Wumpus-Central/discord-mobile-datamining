@@ -1,67 +1,32 @@
 // _runtime/metro/14433__.js
-import get_ActivityIndicator from "00017__.js";
 
-function getDevMenu() {}
-
-export default () => () => ({
-  onCommand(type) {
-    if ("devtools.open" === type.type) {
-      if ("devtools.open" === type.type) {
-        if (typeof closure_1_1 === "function") {
-          let obj = {
-            reload() {
-              console.warn("DevMenu." + "reload" + "() not available in this environment");
-            },
-            show() {
-              console.warn("DevMenu." + "show" + "() not available in this environment");
-            },
-            getConstants() {
-              return {};
-            },
-            debugRemotely() {
-              console.warn("DevMenu." + "debugRemotely" + "() not available in this environment");
-            },
-            setHotLoadingEnabled() {
-              console.warn("DevMenu." + "setHotLoadingEnabled" + "() not available in this environment");
-            },
-            setProfilingEnabled() {
-              console.warn("DevMenu." + "setProfilingEnabled" + "() not available in this environment");
-            },
-          };
-          const OS = Platform.Platform.OS;
-          obj.show();
+export const getReactNativeVersionWithModules = function getReactNativeVersionWithModules(constants) {
+  try {
+    if (constants) {
+      if (constants.reactNativeVersion) {
+        const major = constants.reactNativeVersion.major;
+        const minor = constants.reactNativeVersion.minor;
+        const patch = constants.reactNativeVersion.patch;
+        const prerelease = constants.reactNativeVersion.prerelease;
+        if (typeof major !== "number") {
+          return null;
         } else {
-          throw new TypeError("Trying to call a non-function");
+          const items = [];
+          const _HermesInternal2 = HermesInternal;
+          items.push("" + tmp4 + "." + minor + "." + patch);
+          if (prerelease) {
+            const _HermesInternal = HermesInternal;
+            arr2.push("-" + prerelease);
+          }
+          return items.join("");
         }
+      } else {
+        return null;
       }
-      if ("devtools.reload" === type.type) {
-        if (typeof closure_1_1 === "function") {
-          obj = {
-            reload() {
-              console.warn("DevMenu." + "reload" + "() not available in this environment");
-            },
-            show() {
-              console.warn("DevMenu." + "show" + "() not available in this environment");
-            },
-            getConstants() {
-              return {};
-            },
-            debugRemotely() {
-              console.warn("DevMenu." + "debugRemotely" + "() not available in this environment");
-            },
-            setHotLoadingEnabled() {
-              console.warn("DevMenu." + "setHotLoadingEnabled" + "() not available in this environment");
-            },
-            setProfilingEnabled() {
-              console.warn("DevMenu." + "setProfilingEnabled" + "() not available in this environment");
-            },
-          };
-          const OS2 = Platform.Platform.OS;
-          obj.reload();
-        } else {
-          throw new TypeError("Trying to call a non-function");
-        }
-      }
+    } else {
+      return null;
     }
-  },
-});
+  } catch (err) {
+    return null;
+  }
+};

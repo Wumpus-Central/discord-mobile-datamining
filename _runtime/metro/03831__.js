@@ -1,26 +1,32 @@
 // _runtime/metro/03831__.js
-import startOfDay from "../03814_startOfDay.js";
-import requiredArgs from "../03651_requiredArgs.js";
+import 03667__ from "03667__.js";
+import 03811__ from "03811__.js";
+import requiredArgs from "../03664_requiredArgs.js";
 
-if (!startOfDay) {
-  let obj = { default: startOfDay };
+if (!module_3667) {
+  let obj = { default: module_3667 };
   let tmp3 = obj;
 } else {
-  tmp3 = startOfDay;
+  tmp3 = module_3667;
 }
-startOfDay = tmp3;
-if (!requiredArgs) {
-  obj = { default: requiredArgs };
+module_3667 = tmp3;
+if (!module_3811) {
+  obj = { default: module_3811 };
   let tmp5 = obj;
 } else {
-  tmp5 = requiredArgs;
+  tmp5 = module_3811;
 }
-requiredArgs = tmp5;
+module_3811 = tmp5;
+if (!requiredArgs) {
+  obj = { default: requiredArgs };
+  let tmp7 = obj;
+} else {
+  tmp7 = requiredArgs;
+}
+requiredArgs = tmp7;
 
-export default function isSameDay(arg0, arg1) {
+export default function addWeeks(arg0, arg1) {
   requiredArgs.default(2, arguments);
-  const defaultResult1 = startOfDay.default(arg0);
-  const time = defaultResult1.getTime();
-  return time === startOfDay.default(arg1).getTime();
+  return module_3811.default(arg0, 7 * module_3667.default(arg1));
 };
 export default exports.default;

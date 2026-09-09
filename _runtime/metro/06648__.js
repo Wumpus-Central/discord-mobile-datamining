@@ -1,8 +1,7 @@
 // _runtime/metro/06648__.js
-function print() {}
-const frozen = Object.freeze(print);
+import _mod19 from "00019__.js";
 
-export { print };
-export const enableLogging = (arg0) => {
-  console.warn("[BottomSheet] could not enable logging on production!");
-};
+const context = _mod19.createContext(null);
+
+export const BottomSheetContext = context;
+export const BottomSheetProvider = context.Provider;

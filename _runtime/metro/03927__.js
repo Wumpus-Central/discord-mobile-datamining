@@ -1,6 +1,8 @@
 // _runtime/metro/03927__.js
-import _typeof from "03650__.js";
-import requiredArgs from "../03651_requiredArgs.js";
+import _typeof from "03663__.js";
+import startOfYear from "../03882_startOfYear.js";
+import differenceInCalendarDays from "../03825_differenceInCalendarDays.js";
+import requiredArgs from "../03664_requiredArgs.js";
 
 if (!_typeof) {
   let obj = { default: _typeof };
@@ -9,50 +11,31 @@ if (!_typeof) {
   tmp3 = _typeof;
 }
 _typeof = tmp3;
-if (!requiredArgs) {
-  obj = { default: requiredArgs };
+if (!startOfYear) {
+  obj = { default: startOfYear };
   let tmp5 = obj;
 } else {
-  tmp5 = requiredArgs;
+  tmp5 = startOfYear;
 }
-requiredArgs = tmp5;
-let c2 = 86400000;
+startOfYear = tmp5;
+if (!differenceInCalendarDays) {
+  obj = { default: differenceInCalendarDays };
+  let tmp7 = obj;
+} else {
+  tmp7 = differenceInCalendarDays;
+}
+differenceInCalendarDays = tmp7;
+if (!requiredArgs) {
+  const obj1 = { default: requiredArgs };
+  let tmp9 = obj1;
+} else {
+  tmp9 = requiredArgs;
+}
+requiredArgs = tmp9;
 
-export default function getOverlappingDaysInIntervals(arg0, arg1) {
-  let obj = arg0;
-  requiredArgs.default(2, arguments);
-  if (!arg0) {
-    obj = {};
-  }
-  obj = arg1;
-  if (!arg1) {
-    obj = {};
-  }
-  const time = _typeof.default(obj.start).getTime();
-  const defaultResult1 = _typeof.default(obj.start);
-  const time1 = _typeof.default(obj.end).getTime();
-  const defaultResult2 = _typeof.default(obj.end);
-  let time2 = _typeof.default(obj.start).getTime();
-  const defaultResult3 = _typeof.default(obj.start);
-  let time3 = _typeof.default(obj.end).getTime();
-  if (time <= time1) {
-    if (time2 <= time3) {
-      if (time < time3) {
-        if (time2 < time1) {
-          if (time3 > time1) {
-            time3 = time1;
-          }
-          if (time2 < time) {
-            time2 = time;
-          }
-          const _Math = Math;
-          return Math.ceil((time3 - time2) / c2);
-        }
-      }
-      return 0;
-    }
-  }
-  const rangeError = new RangeError("Invalid interval");
-  throw rangeError;
+export default function getDayOfYear(arg0) {
+  requiredArgs.default(1, arguments);
+  const defaultResult1 = _typeof.default(arg0);
+  return differenceInCalendarDays.default(defaultResult1, startOfYear.default(defaultResult1)) + 1;
 };
 export default exports.default;

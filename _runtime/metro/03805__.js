@@ -1,34 +1,40 @@
 // _runtime/metro/03805__.js
-import 03654__ from "03654__.js";
-import _typeof from "03650__.js";
-import requiredArgs from "../03651_requiredArgs.js";
+import 03806__ from "03806__.js";
+import 03807__ from "03807__.js";
+import 03808__ from "03808__.js";
+import date from "04107__.js";
+import date from "04108__.js";
 
-if (!module_3654) {
-  let obj = { default: module_3654 };
+if (!module_3806) {
+  let obj = { default: module_3806 };
   let tmp3 = obj;
 } else {
-  tmp3 = module_3654;
+  tmp3 = module_3806;
 }
-module_3654 = tmp3;
-if (!_typeof) {
-  obj = { default: _typeof };
+if (!module_3807) {
+  obj = { default: module_3807 };
   let tmp5 = obj;
 } else {
-  tmp5 = _typeof;
+  tmp5 = module_3807;
 }
-_typeof = tmp5;
-if (!requiredArgs) {
-  obj = { default: requiredArgs };
+if (!module_3808) {
+  obj = { default: module_3808 };
   let tmp7 = obj;
 } else {
-  tmp7 = requiredArgs;
+  tmp7 = module_3808;
 }
-requiredArgs = tmp7;
+if (!date) {
+  const obj1 = { default: date };
+  let tmp9 = obj1;
+} else {
+  tmp9 = date;
+}
+if (!date) {
+  const obj2 = { default: date };
+  let tmp11 = obj2;
+} else {
+  tmp11 = date;
+}
 
-export default function addMilliseconds(arg0, arg1) {
-  requiredArgs.default(2, arguments);
-  const time = _typeof.default(arg0).getTime();
-  const defaultResult1 = _typeof.default(arg0);
-  return new Date(time + module_3654.default(arg1));
-};
+export default { code: "uk", formatDistance: tmp3.default, formatLong: tmp5.default, formatRelative: tmp7.default, localize: tmp9.default, match: tmp11.default, options: { weekStartsOn: 1, firstWeekContainsDate: 1 } };
 export default exports.default;

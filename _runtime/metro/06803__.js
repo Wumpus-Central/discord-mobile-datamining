@@ -1,91 +1,117 @@
 // _runtime/metro/06803__.js
-import _mod19 from "00019__.js";
-import _modDef38 from "00038__.js";
+import _modDef6802 from "06802__.js";
+import _objectWithoutProperties from "00109__objectWithoutProperties.js";
+import _classCallCheck from "00041__classCallCheck.js";
+import _createClass from "00042__createClass.js";
+import hasOwnProperty from "00093__possibleConstructorReturn.js";
+import _getPrototypeOf from "../00095__getPrototypeOf.js";
+import _inherits from "../00098__inherits.js";
+import noop from "00019__.js";
 
-const useMemo = _mod19.useMemo;
-
-export const usePropsValidator = (index) => {
-  index = index.index;
-  const snapPoints = index.snapPoints;
-  const enableDynamicSizing = index.enableDynamicSizing;
-  const topInset = index.topInset;
-  const bottomInset = index.bottomInset;
-  let items = [index, snapPoints, topInset, bottomInset, enableDynamicSizing];
-  topInset(() => {
-    if (snapPoints) {
-      value = snapPoints;
-      if ("get" in snapPoints) {
-        value = snapPoints.get();
-      }
-      let items = value;
+const TouchableNativeFeedback = importDefault;
+function _isNativeReflectConstruct() {
+  try {
+    const _Boolean = Boolean;
+    const call = valueOf.call;
+    const _Reflect = Reflect;
+    const _Boolean2 = Boolean;
+    if (typeof call === "unknown") {
+      let callResult = valueOf();
     } else {
-      items = [];
+      callResult = call(constructResult);
     }
-    let tmp5 = items;
-    if (!items) {
-      tmp5 = enableDynamicSizing;
+    closure_0 = !callResult;
+    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
+      return closure_0;
+    };
+    return _isNativeReflectConstruct();
+  } catch (err) {}
+}
+let closure_2 = ["style"];
+const Platform = fn(17).Platform;
+const jsx = fn(21).jsx;
+class TouchableNativeFeedback {
+  constructor() {
+    self = this;
+    tmp = closure_4(this, TouchableNativeFeedback);
+    tmp2 = metroRequire;
+    obj = metroRequire(TouchableNativeFeedback);
+    tmp3 = hasOwnProperty;
+    if (closure_9()) {
+      tmp7 = globalThis;
+      _Reflect = Reflect;
+      tmp8 = arguments;
+      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
+    } else {
+      tmp4 = arguments;
+      tmp5 = arguments;
+      constructResult = obj(...arguments);
     }
-    _modDef38(tmp5, "'snapPoints' was not provided! please provide at least one snap point.");
-    const mapped = items.map((item) => {
-      let parsed = item;
-      if (typeof item !== "number") {
-        const _Number = Number;
-        parsed = Number.parseInt(item.replace("%", ""), 10);
+    return tmp3(self, constructResult);
+  }
+}
+_inherits(TouchableNativeFeedback, fn(19).Component);
+const entry = {
+  key: "getExtraButtonProps",
+  value: function getExtraButtonProps() {
+    const obj = {};
+    let rippleRadius = this.props.background;
+    if (!rippleRadius) {
+      obj.foreground = this.props.useForeground;
+      return obj;
+    } else {
+      if ("RippleAndroid" === rippleRadius.type) {
+        ({ borderless: obj.borderless, color: obj.rippleColor } = rippleRadius);
+      } else if ("ThemeAttrAndroid" === rippleRadius.type) {
+        obj.borderless = "selectableItemBackgroundBorderless" === rippleRadius.attribute;
       }
-      let tmp4 = parsed > 0;
-      if (!tmp4) {
-        tmp4 = parsed === index(enableDynamicSizing[2]).INITIAL_SNAP_POINT;
-      }
-      snapPoints(enableDynamicSizing[1])(
-        tmp4,
-        "Snap point '" +
-          item +
-          "' is invalid. if you want to allow user to close the sheet, Please use 'enablePanDownToClose' prop.",
-      );
-      const tmp3 = snapPoints(enableDynamicSizing[1]);
-    });
-    let tmp9 = "value" in items;
-    let tmp2Result = _modDef38;
-    if (!tmp9) {
-      tmp9 = items.length > 0;
+      rippleRadius = rippleRadius.rippleRadius;
+      obj.rippleRadius = rippleRadius;
     }
-    if (!tmp9) {
-      tmp9 = enableDynamicSizing;
-    }
-    tmp2Result(tmp9, "'snapPoints' was provided with no points! please provide at least one snap point.");
-    let tmp13 = typeof index === "number";
-    tmp2Result = _modDef38;
-    if (typeof index !== "number") {
-      tmp13 = undefined === index;
-    }
-    tmp2Result(tmp13, "'index' was provided but with wrong type ! expected type is a number.");
-    let tmp16 = enableDynamicSizing;
-    if (!enableDynamicSizing) {
-      tmp16 = typeof index !== "number";
-    }
-    if (!tmp16) {
-      let tmp17 = index >= -1;
-      if (tmp17) {
-        tmp17 = index <= items.length - 1;
-      }
-      tmp16 = tmp17;
-    }
-    _modDef38(
-      tmp16,
-      `'index' was provided but out of the provided snap points range! expected value to be between -1, ${arr.length - 1}`,
-    );
-    let tmp20 = typeof topInset === "number";
-    const tmp2Result1 = _modDef38;
-    if (typeof topInset !== "number") {
-      tmp20 = undefined === topInset;
-    }
-    _modDef38(tmp20, "'topInset' was provided but with wrong type ! expected type is a number.");
-    let tmp23 = typeof bottomInset === "number";
-    const tmp2Result2 = _modDef38;
-    if (typeof bottomInset !== "number") {
-      tmp23 = undefined === bottomInset;
-    }
-    _modDef38(tmp23, "'bottomInset' was provided but with wrong type ! expected type is a number.");
-    const tmp2Result3 = _modDef38;
-  }, items);
+  },
 };
+const items = [
+  entry,
+  {
+    key: "render",
+    value: function render() {
+      const self = this;
+      const props = this.props;
+      let style = props.style;
+      if (undefined === style) {
+        style = {};
+      }
+      const obj = {};
+      const tmp = _objectWithoutProperties(props, closure_2);
+      const merged = Object.assign(tmp);
+      obj.style = style;
+      obj.extraButtonProps = self.getExtraButtonProps();
+      return jsx(TouchableNativeFeedback(6802), {});
+    },
+  },
+];
+const importDefaultResultResult = _createClass(TouchableNativeFeedback, items);
+let obj = {};
+let merged = Object.assign(_modDef6802.defaultProps);
+obj.useForeground = true;
+obj.extraButtonProps = { rippleColor: null };
+importDefaultResultResult.defaultProps = obj;
+importDefaultResultResult.SelectableBackground = (rippleRadius) => ({
+  type: "ThemeAttrAndroid",
+  attribute: "selectableItemBackground",
+  rippleRadius,
+});
+importDefaultResultResult.SelectableBackgroundBorderless = (rippleRadius) => ({
+  type: "ThemeAttrAndroid",
+  attribute: "selectableItemBackgroundBorderless",
+  rippleRadius,
+});
+importDefaultResultResult.Ripple = (color, borderless, rippleRadius) => ({
+  type: "RippleAndroid",
+  color,
+  borderless,
+  rippleRadius,
+});
+importDefaultResultResult.canUseNativeForeground = () => Platform.Version >= 23;
+
+export default importDefaultResultResult;

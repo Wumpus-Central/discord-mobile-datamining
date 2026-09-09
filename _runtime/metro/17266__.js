@@ -1,7 +1,8 @@
 // _runtime/metro/17266__.js
-globalThis.IntlMessageFormat.__addLocaleData({
-  locale: "th",
-  pluralRuleFunction(arg0, arg1) {
-    return "other";
-  },
-});
+import MessageFormat from "../17267_MessageFormat.js";
+import 01318__ from "01318__.js";
+
+const _default = MessageFormat.default;
+_default.default = _default;
+
+export default _default;

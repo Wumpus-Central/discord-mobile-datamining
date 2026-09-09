@@ -4,10 +4,10 @@ import registerAsset from "01122__.js";
 export default registerAsset.registerAsset({
   __packager_asset: true,
   httpServerLocation: "/assets/images/platforms",
-  width: 24,
-  height: 24,
+  width: 255,
+  height: 255,
   scales: [1],
-  hash: "5e997bb5d78793341cb727497a38fe6f",
-  name: "img_account_sync_bluesky_light_and_dark",
-  type: "svg",
+  hash: "d9ea4c0baebc914200caf39582084fac",
+  name: "img_account_sync_twitch_light_and_dark",
+  type: "png",
 });

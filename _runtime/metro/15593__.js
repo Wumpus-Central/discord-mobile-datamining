@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "3e998a340948f95ab4885c3644b255dc",
-  name: "AchievementsIcon",
+  hash: "e0471dd70c51b44f6fe3c89ec72a7182",
+  name: "MobilePhoneSettingsIcon",
   type: "png",
 });

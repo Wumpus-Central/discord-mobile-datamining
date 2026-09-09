@@ -1,9 +1,24 @@
 // _runtime/metro/14332__.js
+import 14333__ from "14333__.js";
 
-export default (arg0) => {
-  try {
-    return String(arg0);
-  } catch (err) {
-    return "Object";
-  }
-};
+const call = prototype.call;
+if (module_14333) {
+  const bind = prototype.bind;
+  module_14333 = bind.bind(call, call);
+}
+if (!module_14333) {
+  module_14333 = (arg0) => {
+    closure_0 = arg0;
+    return () => {
+      const apply = call.apply;
+      if (typeof apply === "unknown") {
+        let applyArgumentsResult = HermesBuiltin.applyArguments(closure_0);
+      } else {
+        applyArgumentsResult = apply(closure_0, arguments);
+      }
+      return applyArgumentsResult;
+    };
+  };
+}
+
+export default module_14333;

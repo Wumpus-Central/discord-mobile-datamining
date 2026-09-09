@@ -1,7 +1,9 @@
 // _runtime/metro/03905__.js
-import _typeof from "03650__.js";
-import 03893__ from "03893__.js";
-import requiredArgs from "../03651_requiredArgs.js";
+import _mod3668 from "03668__.js";
+import _typeof from "03663__.js";
+import requiredArgs from "../03664_requiredArgs.js";
+import startOfUTCWeek from "../03666_startOfUTCWeek.js";
+import 03667__ from "03667__.js";
 
 if (!_typeof) {
   let obj = { default: _typeof };
@@ -10,119 +12,105 @@ if (!_typeof) {
   tmp3 = _typeof;
 }
 _typeof = tmp3;
-if (!module_3893) {
-  obj = { default: module_3893 };
-  let tmp5 = obj;
-} else {
-  tmp5 = module_3893;
-}
-module_3893 = tmp5;
 if (!requiredArgs) {
   obj = { default: requiredArgs };
+  let tmp5 = obj;
+} else {
+  tmp5 = requiredArgs;
+}
+requiredArgs = tmp5;
+if (!startOfUTCWeek) {
+  obj = { default: startOfUTCWeek };
   let tmp7 = obj;
 } else {
-  tmp7 = requiredArgs;
+  tmp7 = startOfUTCWeek;
 }
-requiredArgs = tmp7;
+startOfUTCWeek = tmp7;
+if (!module_3667) {
+  const obj1 = { default: module_3667 };
+  let tmp9 = obj1;
+} else {
+  tmp9 = module_3667;
+}
+module_3667 = tmp9;
 
-export default function formatISO(arg0, format) {
+export default function getUTCWeekYear(arg0, firstWeekContainsDate) {
   requiredArgs.default(1, arguments);
   const defaultResult1 = _typeof.default(arg0);
-  if (isNaN(defaultResult1.getTime())) {
-    const _RangeError3 = RangeError;
-    const rangeError = new RangeError("Invalid time value");
-    throw rangeError;
-  } else {
-    format = undefined;
-    if (null != format) {
-      format = format.format;
-    }
-    let str2 = "extended";
-    if (null !== format) {
-      str2 = "extended";
-      if (undefined !== format) {
-        str2 = format;
-      }
-    }
-    const StringResult = String(str2);
-    let representation;
-    if (null != format) {
-      representation = format.representation;
-    }
-    let str4 = "complete";
-    if (null !== representation) {
-      str4 = "complete";
-      if (undefined !== representation) {
-        str4 = representation;
-      }
-    }
-    const StringResult1 = String(str4);
-    if ("extended" !== StringResult) {
-      if ("basic" !== StringResult) {
-        const _RangeError2 = RangeError;
-        const rangeError1 = new RangeError("format must be 'extended' or 'basic'");
-        throw rangeError1;
-      }
-    }
-    if ("date" !== StringResult1) {
-      if ("time" !== StringResult1) {
-        if ("complete" !== StringResult1) {
-          const _RangeError = RangeError;
-          const rangeError2 = new RangeError("representation must be 'date', 'time', or 'complete'");
-          throw rangeError2;
-        }
-      }
-    }
-    let str9 = "";
-    if ("extended" === StringResult) {
-      str9 = "-";
-    }
-    let str10 = "";
-    if ("extended" === StringResult) {
-      str10 = ":";
-    }
-    let str12 = "";
-    if ("time" !== StringResult1) {
-      const defaultResult2 = module_3893.default(defaultResult1.getDate(), 2);
-      const concat2 = "".concat;
-      const combined = "".concat(module_3893.default(defaultResult1.getFullYear(), 4));
-      const combined1 = combined.concat(str9);
-      const combined2 = combined1.concat(module_3893.default(defaultResult1.getMonth() + 1, 2));
-      const combined3 = combined2.concat(str9);
-      str12 = combined3.concat(defaultResult2);
-      const defaultResult3 = module_3893.default(defaultResult1.getMonth() + 1, 2);
-    }
-    let combined9 = str12;
-    if ("date" !== StringResult1) {
-      const timezoneOffset = defaultResult1.getTimezoneOffset();
-      let str13 = "Z";
-      if (0 !== timezoneOffset) {
-        const _Math = Math;
-        const absolute = Math.abs(timezoneOffset);
-        const _Math2 = Math;
-        let str14 = "-";
-        const defaultResult4 = module_3893.default(Math.floor(absolute / 60), 2);
-        if (timezoneOffset < 0) {
-          str14 = "+";
-        }
-        const combined4 = "".concat(str14);
-        const combined5 = combined4.concat(defaultResult4, ":");
-        str13 = combined5.concat(module_3893.default(absolute % 60, 2));
-        const defaultResult5 = module_3893.default(absolute % 60, 2);
-      }
-      let str16 = "T";
-      if ("" === str12) {
-        str16 = "";
-      }
-      const items = [module_3893.default(defaultResult1.getHours(), 2), module_3893.default(defaultResult1.getMinutes(), 2), module_3893.default(defaultResult1.getSeconds(), 2)];
-      const concat = "".concat;
-      const joined = items.join(str10);
-      const combined6 = "".concat(str12);
-      const combined7 = combined6.concat(str16);
-      const combined8 = combined7.concat(joined);
-      combined9 = combined8.concat(str13);
-    }
-    return combined9;
+  const uTCFullYear = defaultResult1.getUTCFullYear();
+  const defaultOptions = _mod3668.getDefaultOptions();
+  let prop;
+  if (null != firstWeekContainsDate) {
+    prop = firstWeekContainsDate.firstWeekContainsDate;
   }
+  if (null === prop) {
+    let prop1;
+    if (null != firstWeekContainsDate) {
+      locale = firstWeekContainsDate.locale;
+      if (null !== locale) {
+        if (undefined !== locale) {
+          const options = locale.options;
+          if (null !== options) {
+            if (undefined !== options) {
+              prop1 = options.firstWeekContainsDate;
+            }
+          }
+        }
+      }
+    }
+    prop = prop1;
+  }
+  if (null === prop) {
+    prop = defaultOptions.firstWeekContainsDate;
+  }
+  if (null === prop) {
+    const locale2 = defaultOptions.locale;
+    let prop2;
+    if (null !== locale2) {
+      if (undefined !== locale2) {
+        const options2 = locale2.options;
+        if (null !== options2) {
+          if (undefined !== options2) {
+            prop2 = options2.firstWeekContainsDate;
+          }
+        }
+      }
+    }
+    prop = prop2;
+  }
+  let num = 1;
+  if (null !== prop) {
+    num = 1;
+    if (undefined !== prop) {
+      num = prop;
+    }
+  }
+  const defaultResult2 = module_3667.default(num);
+  if (defaultResult2 >= 1) {
+    if (defaultResult2 <= 7) {
+      const _Date = Date;
+      const date = new Date(0);
+      date.setUTCFullYear(uTCFullYear + 1, 0, defaultResult2);
+      date.setUTCHours(0, 0, 0, 0);
+      const _Date2 = Date;
+      const date1 = new Date(0);
+      date1.setUTCFullYear(uTCFullYear, 0, defaultResult2);
+      date1.setUTCHours(0, 0, 0, 0);
+      const defaultResult3 = startOfUTCWeek.default(date, firstWeekContainsDate);
+      const time = defaultResult1.getTime();
+      if (time >= defaultResult3.getTime()) {
+        let sum = uTCFullYear + 1;
+      } else {
+        const time1 = defaultResult1.getTime();
+        sum = uTCFullYear;
+        if (time1 < defaultResult4.getTime()) {
+          sum = uTCFullYear - 1;
+        }
+      }
+      return sum;
+    }
+  }
+  const rangeError = new RangeError("firstWeekContainsDate must be between 1 and 7 inclusively");
+  throw rangeError;
 };
 export default exports.default;

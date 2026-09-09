@@ -1,4 +1,16 @@
 // _runtime/metro/14043__.js
-import _mod14033 from "14033__.js";
+let closure_0 = Object.freeze({ loose: true });
+let closure_1 = Object.freeze({});
 
-export default (arg0, arg1, arg2) => _mod14033(arg0, arg1, arg2) >= 0;
+export default (arg0) => {
+  let tmp = arg0;
+  if (arg0) {
+    if (typeof tmp !== "object") {
+      tmp = closure_0;
+    }
+    let tmp2 = tmp;
+  } else {
+    tmp2 = closure_1;
+  }
+  return tmp2;
+};

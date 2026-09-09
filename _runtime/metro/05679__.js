@@ -1,105 +1,88 @@
 // _runtime/metro/05679__.js
-import _mod5652 from "05652__.js";
-import _slicedToArray from "00032__.js";
+import _objectWithoutProperties from "00109__objectWithoutProperties.js";
+import _classCallCheck from "00041__classCallCheck.js";
+import _createClass from "00042__createClass.js";
+import c3 from "00093__possibleConstructorReturn.js";
+import _getPrototypeOf from "../00095__getPrototypeOf.js";
+import _inherits from "../00098__inherits.js";
 import noop from "00019__.js";
 
-require = fn;
-get_ActivityIndicator = fn(17);
-({ StyleSheet, View: closure_4 } = get_ActivityIndicator);
-const jsxProd = fn(21);
-({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const container = StyleSheet.create({
-  container: { flex: 1 },
-  content: { flex: 1 },
-  header: { zIndex: 1 },
-  absolute: { position: "absolute", top: 0, start: 0, end: 0 },
-});
-
-export const Screen = function Screen(aria_hidden) {
-  let obj = modal(headerStatusBarHeight[4]);
-  let obj1 = noop;
-  const safeAreaInsets = obj.useSafeAreaInsets();
-  const context = noop.useContext(modal(headerStatusBarHeight[5]).HeaderShownContext);
-  let num = noop.useContext(modal(headerStatusBarHeight[6]).HeaderHeightContext);
-  modal = aria_hidden.modal;
-  let tmp5 = undefined !== modal;
-  if (tmp5) {
-    tmp5 = modal;
-  }
-  modal = tmp5;
-  const headerShown = aria_hidden.headerShown;
-  let tmp6 = undefined === headerShown;
-  if (!tmp6) {
-    tmp6 = headerShown;
-  }
-  ({ headerStatusBarHeight, headerTransparent } = aria_hidden);
-  if (undefined === headerStatusBarHeight) {
-    let num2 = 0;
-    if (!context) {
-      num2 = safeAreaInsets.top;
+function _isNativeReflectConstruct() {
+  try {
+    const _Boolean = Boolean;
+    const call = valueOf.call;
+    const _Reflect = Reflect;
+    const _Boolean2 = Boolean;
+    if (typeof call === "unknown") {
+      let callResult = valueOf();
+    } else {
+      callResult = call(constructResult);
     }
-    headerStatusBarHeight = num2;
-  }
-  ({ route, navigation, children, style } = aria_hidden);
-  const frameSize = modal(headerStatusBarHeight[7]).useFrameSize((layout) =>
-    _mod5652.getDefaultHeaderHeight(layout, modal, headerStatusBarHeight),
-  );
-  const ref = obj1.useRef(null);
-  const tmpResult = modal(headerStatusBarHeight[7]);
-  [tmp10, noop] = ref(obj1.useState(frameSize), 2);
-  const items = [route.name];
-  const layoutEffect = obj1.useLayoutEffect(() => {
-    const current = ref.current;
-    if (current != null) {
-      current.measure((arg0, arg1, arg2, arg3) => {
-        closure_1_3(arg3);
-      });
-    }
-  }, items);
-  obj = { "aria-hidden": !aria_hidden.focused, style: null, collapsable: false, children: null };
-  const items1 = [container.container, style];
-  obj.style = items1;
-  let tmp15Result = null;
-  if (tmp6) {
-    obj = { route, navigation, children: null };
-    const items2 = [container.header];
-    let tmp17 = null;
-    if (headerTransparent) {
-      const items3 = [container.absolute];
-      obj1 = { minHeight: tmp10 };
-      items3[1] = obj1;
-      tmp17 = items3;
-    }
-    const obj2 = { style: null, children: null };
-    items2[1] = tmp17;
-    obj2.style = items2;
-    const obj3 = {
-      ref,
-      pointerEvents: "box-none",
-      onLayout(nativeEvent) {
-        noop(nativeEvent.nativeEvent.layout.height);
-      },
-      children: aria_hidden.header,
+    closure_0 = !callResult;
+    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
+      return closure_0;
     };
-    obj2.children = closure_5(closure_4, obj3);
-    obj.children = closure_5(closure_4, obj2);
-    tmp15Result = closure_5(tmp(tmp2[10]).NavigationProvider, obj);
-  }
-  const items4 = [tmp15Result];
-  const obj4 = { style: container.content, children: null };
-  let tmp20 = context;
-  if (!context) {
-    tmp20 = false !== tmp6;
-  }
-  const obj5 = { value: tmp20, children: null };
-  if (!tmp6) {
-    if (num == null) {
-      num = 0;
+    return _isNativeReflectConstruct();
+  } catch (err) {}
+}
+const MaskedView = ["maskElement", "children"];
+get_ActivityIndicator = fn(17);
+({ View: metroRequire, StyleSheet: closure_7, requireNativeComponent } = get_ActivityIndicator);
+const jsxProd = fn(21);
+({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
+let closure_11 = requireNativeComponent("RNCMaskedView");
+class MaskedView {
+  constructor() {
+    self = this;
+    items = [...arguments];
+    tmp = c2(this, MaskedView);
+    items1 = [...items];
+    tmp2 = closure_4;
+    obj = closure_4(MaskedView);
+    tmp3 = closure_3;
+    if (c10()) {
+      tmp5 = globalThis;
+      _Reflect = Reflect;
+      constructResult = Reflect.construct(obj, items1, tmp2(self).constructor);
+    } else {
+      constructResult = obj.apply(self, items1);
     }
+    tmp3Result = tmp3(self, constructResult);
+    tmp3Result._hasWarnedInvalidRenderMask = false;
+    return tmp3Result;
   }
-  obj5.children = closure_5(modal(headerStatusBarHeight[6]).HeaderHeightContext.Provider, { value: tmp10, children });
-  obj4.children = closure_5(modal(headerStatusBarHeight[5]).HeaderShownContext.Provider, obj5);
-  items4[1] = closure_5(closure_4, obj4);
-  obj.children = items4;
-  return closure_6(modal(headerStatusBarHeight[9]).Background, obj);
+}
+_inherits(MaskedView, noop.Component);
+const entry = {
+  key: "render",
+  value: function render() {
+    const self = this;
+    const props = this.props;
+    ({ maskElement, children } = props);
+    const tmp = _objectWithoutProperties(props, MaskedView);
+    if (noop.isValidElement(maskElement)) {
+      let obj = {};
+      const merged = Object.assign(tmp);
+      obj = { pointerEvents: "none", style: absoluteFill.absoluteFill, children: maskElement };
+      const items = [React6(timestampProducer, obj), children];
+      obj.children = items;
+      let tmp9 = React7(closure_11, obj);
+    } else {
+      if (!self._hasWarnedInvalidRenderMask) {
+        const _console = console;
+        console.warn(
+          "MaskedView: Invalid `maskElement` prop was passed to MaskedView. Expected a React Element. No mask will render.",
+        );
+        self._hasWarnedInvalidRenderMask = true;
+      }
+      obj = {};
+      const merged1 = Object.assign(tmp);
+      obj.children = children;
+      tmp9 = React6(timestampProducer, obj);
+    }
+    return tmp9;
+  },
 };
+let items = [entry];
+
+export default _createClass(MaskedView, items);

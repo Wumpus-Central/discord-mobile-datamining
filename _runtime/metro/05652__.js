@@ -1,9 +1,17 @@
 // _runtime/metro/05652__.js
-import get_ActivityIndicator from "00017__.js";
+import Link from "../01484_Link.js";
+import noop from "00019__.js";
 
-({ PixelRatio, Platform } = get_ActivityIndicator);
+require = fn;
+const Animated = fn(17).Animated;
+const jsx = fn(21).jsx;
 
-export const getDefaultHeaderHeight = function getDefaultHeaderHeight(layout, modal, headerStatusBarHeight) {
-  ({ width, height } = layout);
-  return 64 + headerStatusBarHeight;
+export const Background = function Background(style) {
+  const merged = Object.assign(style, Object.assign({ style: 0 }));
+  let obj = {};
+  const merged1 = Object.assign(merged);
+  obj = { flex: 1, backgroundColor: obj.useTheme().colors.background };
+  const items = [obj, style.style];
+  obj.style = items;
+  return <Animated.View flex={1} backgroundColor={obj.useTheme().colors.background} />;
 };

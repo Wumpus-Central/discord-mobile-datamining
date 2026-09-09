@@ -3,11 +3,11 @@ import registerAsset from "01122__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
-  width: 24,
-  height: 24,
+  httpServerLocation: "/assets/images/native/custom_app_icons/MushroomIcon",
+  width: 60,
+  height: 60,
   scales: [2, 3],
-  hash: "30bd17a4fc8d423d981d2ea586a3ca6e",
-  name: "BoostGemIcon",
+  hash: "d0258153ad64bd0da42bc5243da496aa",
+  name: "MushroomIcon",
   type: "png",
 });

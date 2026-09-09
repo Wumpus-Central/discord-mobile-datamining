@@ -1,12 +1,13 @@
 // _runtime/metro/10592__.js
-import _mod10593 from "10593__.js";
+import AbstractParserWithWordBoundaryChecking from "../10471_AbstractParserWithWordBoundaryChecking.js";
+import REGEX_PARTS from "../10593_REGEX_PARTS.js";
 import _classCallCheck from "00041__classCallCheck.js";
 import _createClass from "00042__createClass.js";
 import c3 from "00093__possibleConstructorReturn.js";
 import _getPrototypeOf from "../00095__getPrototypeOf.js";
 import _inherits from "../00098__inherits.js";
 
-const UKMonthNameLittleEndianParser = require;
+const RUTimeUnitWithinFormatParser = require;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -25,12 +26,17 @@ function _isNativeReflectConstruct() {
     return _isNativeReflectConstruct();
   } catch (err) {}
 }
-class UKMonthNameLittleEndianParser {
+let closure_6 =
+  "(?:(?:\u043E\u043A\u043E\u043B\u043E|\u043F\u0440\u0438\u043C\u0435\u0440\u043D\u043E)\\s*(?:~\\s*)?)?(" +
+  REGEX_PARTS.TIME_UNITS_PATTERN +
+  ")" +
+  REGEX_PARTS.REGEX_PARTS.rightBoundary;
+class RUTimeUnitWithinFormatParser {
   constructor() {
     self = this;
-    tmp = c2(this, UKMonthNameLittleEndianParser);
+    tmp = c2(this, RUTimeUnitWithinFormatParser);
     tmp2 = closure_4;
-    obj = closure_4(UKMonthNameLittleEndianParser);
+    obj = closure_4(RUTimeUnitWithinFormatParser);
     tmp3 = closure_3;
     if (hasOwnProperty()) {
       tmp7 = globalThis;
@@ -45,64 +51,41 @@ class UKMonthNameLittleEndianParser {
     return tmp3(self, constructResult);
   }
 }
-_inherits(UKMonthNameLittleEndianParser, _mod10593.AbstractParserWithLeftRightBoundaryChecking);
+_inherits(RUTimeUnitWithinFormatParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
 const entry = {
-  key: "innerPatternString",
-  value: function innerPatternString(arg0) {
-    return (
-      "(?:\u0437|\u0456\u0437)?\\s*(" +
-      UKMonthNameLittleEndianParser(10591).ORDINAL_NUMBER_PATTERN +
-      ")(?:\\s{0,3}(?:\u043F\u043E|-|\u2013|\u0434\u043E)?\\s{0,3}(" +
-      UKMonthNameLittleEndianParser(10591).ORDINAL_NUMBER_PATTERN +
-      "))?(?:-|\\/|\\s{0,3}(?:of)?\\s{0,3})(" +
-      UKMonthNameLittleEndianParser(10437).matchAnyPattern(UKMonthNameLittleEndianParser(10591).MONTH_DICTIONARY) +
-      ")(?:(?:-|\\/|,?\\s{0,3})(" +
-      UKMonthNameLittleEndianParser(10591).YEAR_PATTERN +
-      "(?![^\\s]\\d)))?"
-    );
+  key: "patternLeftBoundary",
+  value: function patternLeftBoundary() {
+    return RUTimeUnitWithinFormatParser(10593).REGEX_PARTS.leftBoundary;
   },
 };
 const items = [
   entry,
   {
-    key: "innerExtract",
-    value: function innerExtract(createParsingResult, index) {
-      const parsingResult = createParsingResult.createParsingResult(index.index, index[0]);
-      const tmp4 = UKMonthNameLittleEndianParser(10591).MONTH_DICTIONARY[index[3].toLowerCase(index[3])];
-      const result = UKMonthNameLittleEndianParser(10591).parseOrdinalNumberPattern(index[1]);
-      if (result > 31) {
-        index.index = index.index + index[1].length;
-        return null;
+    key: "innerPattern",
+    value: function innerPattern(option) {
+      let _RegExp = RegExp;
+      if (option.option.forwardDate) {
+        _RegExp = new _RegExp(closure_6, RUTimeUnitWithinFormatParser(10593).REGEX_PARTS.flags);
       } else {
-        const start4 = parsingResult.start;
-        start4.assign("month", tmp4);
-        const start5 = parsingResult.start;
-        start5.assign("day", result);
-        if (index[4]) {
-          const start2 = parsingResult.start;
-          start2.assign("year", UKMonthNameLittleEndianParser(10591).parseYearPattern(index[4]));
-        } else {
-          const start = parsingResult.start;
-          start.imply(
-            "year",
-            UKMonthNameLittleEndianParser(10438).findYearClosestToRef(
-              createParsingResult.reference.instant,
-              result,
-              tmp4,
-            ),
-          );
-        }
-        if (index[2]) {
-          const start3 = parsingResult.start;
-          const result1 = UKMonthNameLittleEndianParser(10591).parseOrdinalNumberPattern(index[2]);
-          parsingResult.end = start3.clone();
-          const end = parsingResult.end;
-          end.assign("day", result1);
-        }
-        return parsingResult;
+        const _HermesInternal = HermesInternal;
+        const combined =
+          "(?:\u0432 \u0442\u0435\u0447\u0435\u043D\u0438\u0435|\u0432 \u0442\u0435\u0447\u0435\u043D\u0438\u0438)\\s*" +
+          closure_6;
+        _RegExp = new _RegExp(combined, RUTimeUnitWithinFormatParser(10593).REGEX_PARTS.flags);
       }
+      return _RegExp;
+    },
+  },
+  {
+    key: "innerExtract",
+    value: function innerExtract(reference, arg1) {
+      const ParsingComponents = RUTimeUnitWithinFormatParser(10467).ParsingComponents;
+      return ParsingComponents.createRelativeFromReference(
+        reference.reference,
+        RUTimeUnitWithinFormatParser(10593).parseDuration(arg1[1]),
+      );
     },
   },
 ];
 
-export default _createClass(UKMonthNameLittleEndianParser, items);
+export default _createClass(RUTimeUnitWithinFormatParser, items);

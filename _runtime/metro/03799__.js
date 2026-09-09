@@ -1,52 +1,40 @@
 // _runtime/metro/03799__.js
-import 03654__ from "03654__.js";
-import _typeof from "03650__.js";
-import requiredArgs from "../03651_requiredArgs.js";
+import 03800__ from "03800__.js";
+import 03801__ from "03801__.js";
+import 03802__ from "03802__.js";
+import date from "03803__.js";
+import date from "03804__.js";
 
-if (!module_3654) {
-  let obj = { default: module_3654 };
+if (!module_3800) {
+  let obj = { default: module_3800 };
   let tmp3 = obj;
 } else {
-  tmp3 = module_3654;
+  tmp3 = module_3800;
 }
-module_3654 = tmp3;
-if (!_typeof) {
-  obj = { default: _typeof };
+if (!module_3801) {
+  obj = { default: module_3801 };
   let tmp5 = obj;
 } else {
-  tmp5 = _typeof;
+  tmp5 = module_3801;
 }
-_typeof = tmp5;
-if (!requiredArgs) {
-  obj = { default: requiredArgs };
+if (!module_3802) {
+  obj = { default: module_3802 };
   let tmp7 = obj;
 } else {
-  tmp7 = requiredArgs;
+  tmp7 = module_3802;
 }
-requiredArgs = tmp7;
+if (!date) {
+  const obj1 = { default: date };
+  let tmp9 = obj1;
+} else {
+  tmp9 = date;
+}
+if (!date) {
+  const obj2 = { default: date };
+  let tmp11 = obj2;
+} else {
+  tmp11 = date;
+}
 
-export default function addMonths(interval, arg1) {
-  requiredArgs.default(2, arguments);
-  const defaultResult1 = _typeof.default(interval);
-  const defaultResult2 = module_3654.default(arg1);
-  if (isNaN(defaultResult2)) {
-    const _Date2 = Date;
-    const date = new Date(NaN);
-    return date;
-  } else if (defaultResult2) {
-    const date1 = defaultResult1.getDate();
-    const _Date = Date;
-    const date2 = new Date(defaultResult1.getTime());
-    date2.setMonth(defaultResult1.getMonth() + defaultResult2 + 1, 0);
-    let tmp8 = date2;
-    if (date1 < date2.getDate()) {
-      const fullYear = date2.getFullYear();
-      defaultResult1.setFullYear(fullYear, date2.getMonth(), date1);
-      tmp8 = defaultResult1;
-    }
-    return tmp8;
-  } else {
-    return defaultResult1;
-  }
-};
+export default { code: "tr", formatDistance: tmp3.default, formatLong: tmp5.default, formatRelative: tmp7.default, localize: tmp9.default, match: tmp11.default, options: { weekStartsOn: 1, firstWeekContainsDate: 1 } };
 export default exports.default;

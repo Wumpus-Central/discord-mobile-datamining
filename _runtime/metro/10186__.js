@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "8b4b2bddd719de3088e180cf9d96ecec",
-  name: "RetryIcon",
+  hash: "bbba3abb9f8c7848e1476bd19131aa3a",
+  name: "MagicWandIcon",
   type: "png",
 });

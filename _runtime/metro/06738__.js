@@ -1,89 +1,143 @@
 // _runtime/metro/06738__.js
-import handlerIDToTag from "../06659_handlerIDToTag.js";
-import transformIntoHandlerTags from "../06686_transformIntoHandlerTags.js";
-import _mod6699 from "06699__.js";
-import DEFAULT_PROPS_TRANSFORMER from "../06723_DEFAULT_PROPS_TRANSFORMER.js";
-import noop from "00019__.js";
+import tagMessage from "../06674_tagMessage.js";
+import _mod6712 from "06712__.js";
+import hash from "../06726_hash.js";
+import allowedNativeProps2 from "../06727_allowedNativeProps.js";
+import _mod6739 from "06739__.js";
+import _slicedToArray from "00032__.js";
 
-({ useEffect: c2, useMemo: c3 } = noop);
-
-export const useGesture = function useGesture(Fling, clonedAndRemappedConfig) {
-  _require = Fling;
-  dependencyMap = clonedAndRemappedConfig;
-  const tmp2 = jsEventHandler(() => type(config[1]).getNextHandlerTag(), []);
-  const handlerTag = tmp2;
-  if (clonedAndRemappedConfig.disableReanimated !== jsEventHandler(() => config.disableReanimated, [])) {
-    const _Error2 = Error;
-    const error = new Error(
-      require("tagMessage").tagMessage(
-        'The "disableReanimated" property must not be changed after the handler is created.',
-      ),
-    );
-    throw error;
+require = fn;
+const useMemo = fn(19).useMemo;
+const map = new Map();
+function DEFAULT_PROPS_TRANSFORMER(arg0) {
+  return arg0;
+}
+function isGestureEnabled(gestures) {
+  if (obj.isComposedGesture(gestures)) {
+    gestures = gestures.gestures;
+    let someResult = gestures.some(isGestureEnabled);
   } else {
-    const gestureCallbacks = require("06739__.js").useGestureCallbacks(tmp2, clonedAndRemappedConfig);
-    jsEventHandler = gestureCallbacks.jsEventHandler;
-    const reanimatedEventHandler = gestureCallbacks.reanimatedEventHandler;
-    const animatedEventHandler = gestureCallbacks.animatedEventHandler;
-    if (clonedAndRemappedConfig.shouldUseReanimatedDetector) {
-      if (!reanimatedEventHandler) {
-        const _Error = Error;
-        const error1 = new Error(require("tagMessage").tagMessage("Failed to create reanimated event handlers."));
-        throw error1;
+    someResult = false !== hash.maybeUnpackValue(gestures.config.enabled);
+    const tmpResult = hash;
+  }
+  return someResult;
+}
+
+export { isGestureEnabled };
+export const resolveInternalConfigProps = function resolveInternalConfigProps(useAnimated) {
+  useAnimated = useAnimated.useAnimated;
+  if (!useAnimated) {
+    useAnimated = _mod6739.isNativeAnimatedEvent(useAnimated.onUpdate);
+  }
+  useAnimated.dispatchesAnimatedEvents = useAnimated;
+  if (useAnimated.dispatchesAnimatedEvents) {
+    useAnimated.disableReanimated = true;
+  }
+  const disableReanimated = useAnimated.disableReanimated;
+  let result = !disableReanimated;
+  if (!disableReanimated) {
+    result = undefined !== _mod6712.Reanimated;
+  }
+  if (result) {
+    result = hash.hasWorkletEventHandlers(useAnimated);
+  }
+  if (result) {
+    result = !useAnimated.dispatchesAnimatedEvents;
+  }
+  useAnimated.shouldUseReanimatedDetector = result;
+  useAnimated.needsPointerData = _mod6739.shouldHandleTouchEvents(useAnimated);
+};
+export const prepareConfigForNativeSide = function prepareConfigForNativeSide(arg0, shouldUseReanimatedDetector) {
+  shouldUseReanimatedDetector = shouldUseReanimatedDetector.shouldUseReanimatedDetector;
+  if (shouldUseReanimatedDetector) {
+    let obj = hash;
+    shouldUseReanimatedDetector = !obj.maybeUnpackValue(shouldUseReanimatedDetector.runOnJS);
+  }
+  obj = { dispatchesReanimatedEvents: shouldUseReanimatedDetector };
+  const PropsWhiteLists = allowedNativeProps2.PropsWhiteLists;
+  let EMPTY_WHITE_LIST = PropsWhiteLists.get(arg0);
+  if (EMPTY_WHITE_LIST == null) {
+    EMPTY_WHITE_LIST = allowedNativeProps2.EMPTY_WHITE_LIST;
+  }
+  const entries = Object.entries(shouldUseReanimatedDetector);
+  while (tmp12 !== undefined) {
+    let tmp15 = _slicedToArray(tmp13, 2);
+    let first = tmp15[0];
+    let tmp17 = first;
+    let iter = tmp15[1];
+    let allowedNativeProps = allowedNativeProps2.allowedNativeProps;
+    if (!allowedNativeProps.has(first)) {
+      if (!EMPTY_WHITE_LIST.has(tmp17)) {
+        let PropsToFilter = allowedNativeProps2.PropsToFilter;
+        if (PropsToFilter.has(tmp17)) {
+          continue;
+        } else {
+          let _console = console;
+          let tmp19Result = tagMessage;
+          let _HermesInternal = HermesInternal;
+          let str = "";
+          let str2 = " is not a valid property for ";
+          let str3 = " and will be ignored.";
+          let warnResult = console.warn(
+            tmp19Result.tagMessage("" + tmp17 + " is not a valid property for " + arg0 + " and will be ignored."),
+          );
+          continue;
+        }
+        continue;
       }
     }
-    const items = [tmp2, , ,];
-    ({ simultaneousWith: arr[1], requireToFail: arr[2], block: arr[3] } = clonedAndRemappedConfig);
-    let tmpResult = tmp(() => {
-      const obj = {
-        simultaneousWith: config.simultaneousWith,
-        requireToFail: config.requireToFail,
-        block: config.block,
-      };
-      return obj.prepareRelations(obj, closure_2);
-    }, items);
-    const gestureRelations = tmpResult;
-    const items1 = [
-      tmp2,
-      Fling,
-      clonedAndRemappedConfig,
-      jsEventHandler,
-      reanimatedEventHandler,
-      animatedEventHandler,
-      tmpResult,
-    ];
-    tmpResult = tmp(() => {
-      let obj = { handlerTag, type, config, detectorCallbacks: null, gestureRelations };
-      obj = { jsEventHandler, animatedEventHandler, reanimatedEventHandler };
-      obj.detectorCallbacks = obj;
-      return obj;
-    }, items1);
-    closure_7 = tmpResult;
-    const items2 = [Fling, tmp2];
-    handlerTag(() => {
-      let NativeProxy = _mod6699.NativeProxy;
-      NativeProxy.createGestureHandler(closure_0, closure_2, {});
-      let result = transformIntoHandlerTags.scheduleFlushOperations();
-      return () => {
-        const NativeProxy = closure_0(6699).NativeProxy;
-        NativeProxy.dropGestureHandler(handlerTag);
-        const result = closure_0(6686).scheduleFlushOperations();
-      };
-    }, items2);
-    const items3 = [tmp2, clonedAndRemappedConfig, Fling, tmpResult];
-    handlerTag(() => {
-      const result = DEFAULT_PROPS_TRANSFORMER.prepareConfigForNativeSide(closure_0, dependencyMap);
-      const NativeProxy = _mod6699.NativeProxy;
-      const result1 = NativeProxy.setGestureHandlerConfig(closure_2, result);
-      const result2 = transformIntoHandlerTags.scheduleFlushOperations();
-      DEFAULT_PROPS_TRANSFORMER.bindSharedValues(dependencyMap, closure_2);
-      handlerIDToTag.registerGesture(closure_2, closure_7);
-      return () => {
-        closure_0(6723).unbindSharedValues(dependencyMap, handlerTag);
-        const obj = closure_0(6723);
-        closure_0(6659).unregisterGesture(handlerTag);
-      };
-    }, items3);
-    return tmpResult;
+    let Reanimated = _mod6712.Reanimated;
+    let isSharedValueResult;
+    if (Reanimated != null) {
+      isSharedValueResult = Reanimated.isSharedValue(iter);
+    }
+    obj[tmp17] = isSharedValueResult ? iter.value : iter;
   }
+  return obj;
+};
+export const useClonedAndRemappedConfig = function useClonedAndRemappedConfig(gestureHandlerProps) {
+  closure_0 = gestureHandlerProps;
+  let tmp = map;
+  if (map === undefined) {
+    tmp = map;
+  }
+  closure_1 = tmp;
+  let tmp2 = transformHoverProps;
+  if (transformHoverProps === undefined) {
+    tmp2 = DEFAULT_PROPS_TRANSFORMER;
+  }
+  closure_2 = tmp2;
+  const items = [gestureHandlerProps, tmp, tmp2];
+  return useMemo(() => {
+    const merged = Object.assign(closure_0);
+    const item = closure_1.forEach((item, index) => {
+      if (index in obj) {
+        obj[item] = obj[index];
+        delete tmp[tmp2];
+      }
+    });
+    const tmp3 = closure_2({});
+    let useAnimated = tmp3.useAnimated;
+    if (!useAnimated) {
+      useAnimated = _mod6739.isNativeAnimatedEvent(tmp3.onUpdate);
+    }
+    tmp3.dispatchesAnimatedEvents = useAnimated;
+    if (tmp3.dispatchesAnimatedEvents) {
+      tmp3.disableReanimated = true;
+    }
+    const disableReanimated = tmp3.disableReanimated;
+    let result = !disableReanimated;
+    if (!disableReanimated) {
+      result = undefined !== _mod6712.Reanimated;
+    }
+    if (result) {
+      result = hash.hasWorkletEventHandlers(tmp3);
+    }
+    if (result) {
+      result = !tmp3.dispatchesAnimatedEvents;
+    }
+    tmp3.shouldUseReanimatedDetector = result;
+    tmp3.needsPointerData = _mod6739.shouldHandleTouchEvents(tmp3);
+    return tmp3;
+  }, items);
 };

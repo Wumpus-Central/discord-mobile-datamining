@@ -1,16 +1,15 @@
 // _runtime/metro/07033__.js
-import CardAnimationContext from "../07027_CardAnimationContext.js";
-import noop from "00019__.js";
+import _mod7034 from "07034__.js";
 
 require = arg1;
+const dependencyMap = arg6;
 
-export const useCardAnimation = function useCardAnimation() {
-  const context = noop.useContext(CardAnimationContext.CardAnimationContext);
-  if (undefined === context) {
-    const _Error = Error;
-    const error = new Error("Couldn't find values for card animation. Are you inside a screen in Stack?");
-    throw error;
-  } else {
-    return context;
+export const getDistanceForDirection = function getDistanceForDirection(layout, gestureDirection, arg2) {
+  const invertedMultiplier = _mod7034.getInvertedMultiplier(gestureDirection, arg2);
+  if ("vertical" !== gestureDirection) {
+    if ("vertical-inverted" !== gestureDirection) {
+      return layout.width * invertedMultiplier;
+    }
   }
+  return layout.height * invertedMultiplier;
 };

@@ -1,85 +1,40 @@
 // _runtime/metro/04121__.js
-if (Intl.ListFormat) {
-  const _Intl = Intl;
-  if (typeof Intl.ListFormat.__addLocaleData === "function") {
-    const _Intl2 = Intl;
-    let obj = { data: null, locale: "bg" };
-    obj = { conjunction: null, disjunction: null, unit: null };
-    const obj1 = {
-      long: { end: "{0} \u0438 {1}", middle: "{0}, {1}", pair: "{0} \u0438 {1}", start: "{0}, {1}" },
-      narrow: { end: "{0} \u0438 {1}", middle: "{0}, {1}", pair: "{0}, {1}", start: "{0}, {1}" },
-      short: { end: "{0} \u0438 {1}", middle: "{0}, {1}", pair: "{0} \u0438 {1}", start: "{0}, {1}" },
-    };
-    obj.conjunction = obj1;
-    const obj2 = {
-      long: {
-        end: "{0} \u0438\u043B\u0438 {1}",
-        middle: "{0}, {1}",
-        pair: "{0} \u0438\u043B\u0438 {1}",
-        start: "{0}, {1}",
-      },
-      narrow: {
-        end: "{0} \u0438\u043B\u0438 {1}",
-        middle: "{0}, {1}",
-        pair: "{0} \u0438\u043B\u0438 {1}",
-        start: "{0}, {1}",
-      },
-      short: {
-        end: "{0} \u0438\u043B\u0438 {1}",
-        middle: "{0}, {1}",
-        pair: "{0} \u0438\u043B\u0438 {1}",
-        start: "{0}, {1}",
-      },
-    };
-    obj.disjunction = obj2;
-    const obj3 = {
-      long: { end: "{0} \u0438 {1}", middle: "{0}, {1}", pair: "{0} \u0438 {1}", start: "{0}, {1}" },
-      narrow: { end: "{0}, {1}", middle: "{0}, {1}", pair: "{0} \u0438 {1}", start: "{0}, {1}" },
-      short: { end: "{0}, {1}", middle: "{0}, {1}", pair: "{0} \u0438 {1}", start: "{0}, {1}" },
-    };
-    obj.unit = obj3;
-    obj.data = obj;
-    ListFormat.__addLocaleData(obj);
-  }
+import 04122__ from "04122__.js";
+import 04123__ from "04123__.js";
+import 04124__ from "04124__.js";
+import date from "04125__.js";
+import date from "04126__.js";
+
+if (!module_4122) {
+  let obj = { default: module_4122 };
+  let tmp3 = obj;
+} else {
+  tmp3 = module_4122;
 }
-let prop = globalThis.__FORMATJS_LISTFORMAT_DATA__;
-if (!prop) {
-  prop = [];
+if (!module_4123) {
+  obj = { default: module_4123 };
+  let tmp5 = obj;
+} else {
+  tmp5 = module_4123;
 }
-globalThis.__FORMATJS_LISTFORMAT_DATA__ = prop;
-obj = {
-  data: {
-    conjunction: {
-      long: { end: "{0} \u0438 {1}", middle: "{0}, {1}", pair: "{0} \u0438 {1}", start: "{0}, {1}" },
-      narrow: { end: "{0} \u0438 {1}", middle: "{0}, {1}", pair: "{0}, {1}", start: "{0}, {1}" },
-      short: { end: "{0} \u0438 {1}", middle: "{0}, {1}", pair: "{0} \u0438 {1}", start: "{0}, {1}" },
-    },
-    disjunction: {
-      long: {
-        end: "{0} \u0438\u043B\u0438 {1}",
-        middle: "{0}, {1}",
-        pair: "{0} \u0438\u043B\u0438 {1}",
-        start: "{0}, {1}",
-      },
-      narrow: {
-        end: "{0} \u0438\u043B\u0438 {1}",
-        middle: "{0}, {1}",
-        pair: "{0} \u0438\u043B\u0438 {1}",
-        start: "{0}, {1}",
-      },
-      short: {
-        end: "{0} \u0438\u043B\u0438 {1}",
-        middle: "{0}, {1}",
-        pair: "{0} \u0438\u043B\u0438 {1}",
-        start: "{0}, {1}",
-      },
-    },
-    unit: {
-      long: { end: "{0} \u0438 {1}", middle: "{0}, {1}", pair: "{0} \u0438 {1}", start: "{0}, {1}" },
-      narrow: { end: "{0}, {1}", middle: "{0}, {1}", pair: "{0} \u0438 {1}", start: "{0}, {1}" },
-      short: { end: "{0}, {1}", middle: "{0}, {1}", pair: "{0} \u0438 {1}", start: "{0}, {1}" },
-    },
-  },
-  locale: "bg",
-};
-prop.push(obj);
+if (!module_4124) {
+  obj = { default: module_4124 };
+  let tmp7 = obj;
+} else {
+  tmp7 = module_4124;
+}
+if (!date) {
+  const obj1 = { default: date };
+  let tmp9 = obj1;
+} else {
+  tmp9 = date;
+}
+if (!date) {
+  const obj2 = { default: date };
+  let tmp11 = obj2;
+} else {
+  tmp11 = date;
+}
+
+export default { code: "zh-TW", formatDistance: tmp3.default, formatLong: tmp5.default, formatRelative: tmp7.default, localize: tmp9.default, match: tmp11.default, options: { weekStartsOn: 1, firstWeekContainsDate: 4 } };
+export default exports.default;

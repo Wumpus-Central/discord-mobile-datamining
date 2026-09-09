@@ -3,11 +3,11 @@ import registerAsset from "01122__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/icymi/native/images",
-  width: 24.5,
+  httpServerLocation: "/assets/images/native/main_tabs",
+  width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "684bf0782561b9ed2466dcb8144cf582",
-  name: "emoji-neutral",
+  hash: "afec4e7bfe67c8da93450ca26af6a62e",
+  name: "NotificationCenter",
   type: "png",
 });

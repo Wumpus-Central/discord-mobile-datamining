@@ -4,10 +4,10 @@ import registerAsset from "01122__.js";
 export default registerAsset.registerAsset({
   __packager_asset: true,
   httpServerLocation: "/assets/images/native/premium/illustrations",
-  width: 180,
-  height: 101.5,
+  width: 51,
+  height: 36,
   scales: [2, 3],
-  hash: "e7c47aa4983bcda8af147e4a2811c93e",
-  name: "img_what_you_lose_boost",
+  hash: "f2d705f9d582bb6c65065afe8639e152",
+  name: "img_classic_error_mobile",
   type: "png",
 });

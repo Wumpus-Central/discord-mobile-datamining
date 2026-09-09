@@ -1,13 +1,11 @@
 // _runtime/metro/06861__.js
+import cancelAnimation from "../01636_cancelAnimation.js";
 
-export default function _arrayLikeToArray(arg0, arg1) {
-  let length = arg1;
-  if (tmp) {
-    length = arg0.length;
-  }
-  const ArrayResult = Array(length);
-  for (let num = 0; num < length; num = num + 1) {
-    ArrayResult[num] = arg0[num];
-  }
-  return ArrayResult;
-}
+const animatedComponent = cancelAnimation.createAnimatedComponent(fn(17).SectionList);
+const module_6854 = fn(6854);
+const memoResult = fn(19).memo(
+  module_6854.createBottomSheetScrollableComponent(fn(6642).SCROLLABLE_TYPE.SECTIONLIST, animatedComponent),
+);
+memoResult.displayName = "BottomSheetSectionList";
+
+export default memoResult;

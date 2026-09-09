@@ -1,22 +1,13 @@
 // _runtime/metro/06890__.js
-import _mod6891 from "06891__.js";
+import noop from "00019__.js";
 
-export default function _inherits(value, fn) {
-  if (typeof fn !== "function") {
-    if (null !== fn) {
-      const _TypeError = TypeError;
-      const typeError = new TypeError("Super expression must either be null or a function");
-      throw typeError;
-    }
-  }
-  let prototype = fn;
-  if (fn) {
-    prototype = fn.prototype;
-  }
-  value.prototype = Object.create(prototype, { constructor: { value, writable: true, configurable: true } });
-  Object.defineProperty(value, "prototype", { writable: false });
-  if (fn) {
-    _mod6891(value, fn);
-  }
-  const obj = { constructor: { value, writable: true, configurable: true } };
-}
+const useContext = noop.useContext;
+const context = noop.createContext(undefined);
+
+export const RecyclerViewContextProvider = context.Provider;
+export const useRecyclerViewContext = function useRecyclerViewContext() {
+  return useContext(context);
+};
+export const useFlashListContext = function useFlashListContext() {
+  return useContext(context);
+};

@@ -1,13 +1,8 @@
 // _runtime/metro/06876__.js
-import noop from "00019__.js";
 
-const useContext = noop.useContext;
-const context = noop.createContext(undefined);
-
-export const RecyclerViewContextProvider = context.Provider;
-export const useRecyclerViewContext = function useRecyclerViewContext() {
-  return useContext(context);
-};
-export const useFlashListContext = function useFlashListContext() {
-  return useContext(context);
-};
+export default function _nonIterableRest() {
+  const typeError = new TypeError(
+    "Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.",
+  );
+  throw typeError;
+}

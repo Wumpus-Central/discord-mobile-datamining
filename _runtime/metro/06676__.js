@@ -1,371 +1,160 @@
 // _runtime/metro/06676__.js
-import c2 from "00093__possibleConstructorReturn.js";
-import _getPrototypeOf from "../00095__getPrototypeOf.js";
-import _inherits from "../00098__inherits.js";
-import _createClass from "00042__createClass.js";
-import _classCallCheck from "00041__classCallCheck.js";
+import tagMessage from "../06674_tagMessage.js";
+import _mod6675 from "06675__.js";
 
-let ContinousBaseGesture = arg1;
-function _isNativeReflectConstruct() {
-  try {
-    const _Boolean = Boolean;
-    const call = valueOf.call;
-    const _Reflect = Reflect;
-    const _Boolean2 = Boolean;
-    if (typeof call === "unknown") {
-      let callResult = valueOf();
-    } else {
-      callResult = call(constructResult);
-    }
-    closure_0 = !callResult;
-    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
-      return closure_0;
-    };
-    return _isNativeReflectConstruct();
-  } catch (err) {}
-}
-const CALLBACK_TYPE = {
-  UNDEFINED: 0,
-  BEGAN: 1,
-  START: 2,
-  UPDATE: 3,
-  CHANGE: 4,
-  END: 5,
-  FINALIZE: 6,
-  TOUCHES_DOWN: 7,
-  TOUCHES_MOVE: 8,
-  TOUCHES_UP: 9,
-  TOUCHES_CANCEL: 10,
-};
-class Gesture {
-  constructor() {
-    tmp = closure_4(this, Gesture);
-    return;
+require = fn;
+const dependencyMap = arg6;
+let wrappedSetGestureState = function t(arg0, arg1) {
+  const _globalThis = globalThis;
+  if (globalThis._setGestureStateSync) {
+    _globalThis._setGestureStateSync(arg0, arg1);
+  } else if (_globalThis._setGestureStateAsync) {
+    const _globalThis2 = globalThis;
+    const result = globalThis._setGestureStateAsync(arg0, arg1);
+  } else {
+    const _Error = Error;
+    const error = new Error(tagMessage.tagMessage("Failed to set gesture state"));
+    throw error;
   }
-}
-const importDefaultResult1Result = _createClass(Gesture);
-let c7 = 0;
-class BaseGesture {
-  constructor() {
-    self = this;
-    tmp = closure_4(this, ContinousBaseGesture);
-    tmp2 = closure_3;
-    obj = closure_3(ContinousBaseGesture);
-    tmp3 = c2;
-    if (hasOwnProperty()) {
-      tmp5 = globalThis;
-      _Reflect = Reflect;
-      constructResult = Reflect.construct(obj, [], tmp2(self).constructor);
-    } else {
-      constructResult = obj.apply(self, undefined);
-    }
-    tmp3Result = tmp3(self, constructResult);
-    tmp3Result.gestureId = -1;
-    tmp3Result.handlerTag = -1;
-    tmp3Result.handlerName = "";
-    tmp3Result.config = {};
-    tmp3Result.handlers = { gestureId: -1, handlerTag: -1, isWorklet: [] };
-    tmp7 = +closure_7;
-    closure_7 = tmp7 + 1;
-    tmp3Result.gestureId = tmp7;
-    tmp3Result.handlers.gestureId = tmp3Result.gestureId;
-    return tmp3Result;
-  }
-}
-ContinousBaseGesture = BaseGesture;
-_inherits(BaseGesture, importDefaultResult1Result);
-const entry = {
-  key: "addDependency",
-  value: function addDependency(arg0, arg1) {
-    if (this.config[arg0]) {
-      const _Array = Array;
-      let combined = Array().concat(tmp, arg1);
-      const ArrayResult = Array();
-    } else {
-      combined = [arg1];
-    }
-    this.config[arg0] = combined;
-  },
 };
-let items = [
-  entry,
-  {
-    key: "withRef",
-    value: function withRef(ref) {
-      this.config.ref = ref;
-      return this;
-    },
-  },
-  {
-    key: "isWorklet",
-    value: function isWorklet(__workletHash) {
-      return undefined !== __workletHash.__workletHash;
-    },
-  },
-  {
-    key: "onBegin",
-    value: function onBegin(onBegin) {
-      this.handlers.onBegin = onBegin;
-      this.handlers.isWorklet[obj.BEGAN] = this.isWorklet(onBegin);
-      return this;
-    },
-  },
-  {
-    key: "onStart",
-    value: function onStart(onStart) {
-      this.handlers.onStart = onStart;
-      this.handlers.isWorklet[obj.START] = this.isWorklet(onStart);
-      return this;
-    },
-  },
-  {
-    key: "onEnd",
-    value: function onEnd(onEnd) {
-      this.handlers.onEnd = onEnd;
-      this.handlers.isWorklet[obj.END] = this.isWorklet(onEnd);
-      return this;
-    },
-  },
-  {
-    key: "onFinalize",
-    value: function onFinalize(onFinalize) {
-      this.handlers.onFinalize = onFinalize;
-      this.handlers.isWorklet[obj.FINALIZE] = this.isWorklet(onFinalize);
-      return this;
-    },
-  },
-  {
-    key: "onTouchesDown",
-    value: function onTouchesDown(onTouchesDown) {
-      this.config.needsPointerData = true;
-      this.handlers.onTouchesDown = onTouchesDown;
-      this.handlers.isWorklet[obj.TOUCHES_DOWN] = this.isWorklet(onTouchesDown);
-      return this;
-    },
-  },
-  {
-    key: "onTouchesMove",
-    value: function onTouchesMove(fn2) {
-      this.config.needsPointerData = true;
-      this.handlers.onTouchesMove = fn2;
-      this.handlers.isWorklet[obj.TOUCHES_MOVE] = this.isWorklet(fn2);
-      return this;
-    },
-  },
-  {
-    key: "onTouchesUp",
-    value: function onTouchesUp(onTouchesUp) {
-      this.config.needsPointerData = true;
-      this.handlers.onTouchesUp = onTouchesUp;
-      this.handlers.isWorklet[obj.TOUCHES_UP] = this.isWorklet(onTouchesUp);
-      return this;
-    },
-  },
-  {
-    key: "onTouchesCancelled",
-    value: function onTouchesCancelled(fn5) {
-      this.config.needsPointerData = true;
-      this.handlers.onTouchesCancelled = fn5;
-      this.handlers.isWorklet[obj.TOUCHES_CANCEL] = this.isWorklet(fn5);
-      return this;
-    },
-  },
-  {
-    key: "enabled",
-    value: function enabled(enabled) {
-      this.config.enabled = enabled;
-      return this;
-    },
-  },
-  {
-    key: "shouldCancelWhenOutside",
-    value: function shouldCancelWhenOutside(shouldCancelWhenOutside) {
-      this.config.shouldCancelWhenOutside = shouldCancelWhenOutside;
-      return this;
-    },
-  },
-  {
-    key: "hitSlop",
-    value: function hitSlop(pressRetentionOffset) {
-      this.config.hitSlop = pressRetentionOffset;
-      return this;
-    },
-  },
-  {
-    key: "activeCursor",
-    value: function activeCursor(activeCursor) {
-      this.config.activeCursor = activeCursor;
-      return this;
-    },
-  },
-  {
-    key: "mouseButton",
-    value: function mouseButton(mouseButton) {
-      this.config.mouseButton = mouseButton;
-      return this;
-    },
-  },
-  {
-    key: "runOnJS",
-    value: function runOnJS(runOnJS) {
-      this.config.runOnJS = runOnJS;
-      return this;
-    },
-  },
-  {
-    key: "simultaneousWithExternalGesture",
-    value: function simultaneousWithExternalGesture() {
-      const self = this;
-      const items = [...arguments];
-      const iter = items[Symbol.iterator]();
-      const nextResult = iter.next();
-      while (iter !== undefined) {
-        if (nextResult) {
-          let addDependencyResult = self.addDependency("simultaneousWith", tmp2);
-        }
-        continue;
-      }
-      return self;
-    },
-  },
-  {
-    key: "requireExternalGestureToFail",
-    value: function requireExternalGestureToFail() {
-      const self = this;
-      const items = [...arguments];
-      const iter = items[Symbol.iterator]();
-      const nextResult = iter.next();
-      while (iter !== undefined) {
-        if (nextResult) {
-          let addDependencyResult = self.addDependency("requireToFail", tmp2);
-        }
-        continue;
-      }
-      return self;
-    },
-  },
-  {
-    key: "blocksExternalGesture",
-    value: function blocksExternalGesture() {
-      const self = this;
-      const items = [...arguments];
-      const iter = items[Symbol.iterator]();
-      const nextResult = iter.next();
-      while (iter !== undefined) {
-        if (nextResult) {
-          let addDependencyResult = self.addDependency("blocksHandlers", tmp2);
-        }
-        continue;
-      }
-      return self;
-    },
-  },
-  {
-    key: "withTestId",
-    value: function withTestId(testId) {
-      this.config.testId = testId;
-      return this;
-    },
-  },
-  {
-    key: "cancelsTouchesInView",
-    value: function cancelsTouchesInView(cancelsTouchesInView) {
-      this.config.cancelsTouchesInView = cancelsTouchesInView;
-      return this;
-    },
-  },
-  {
-    key: "initialize",
-    value: function initialize() {
-      const self = this;
-      let handlers = ContinousBaseGesture(6677);
-      this.handlerTag = handlers.getNextHandlerTag();
-      handlers = {};
-      const merged = Object.assign(this.handlers);
-      handlers.handlerTag = this.handlerTag;
-      this.handlers = handlers;
-      if (this.config.ref) {
-        self.config.ref.current = self;
-      }
-    },
-  },
-  {
-    key: "toGestureArray",
-    value: function toGestureArray() {
-      const items = [this];
-      return items;
-    },
-  },
-  {
-    key: "prepare",
-    value: function prepare() {},
-  },
-  {
-    key: "shouldUseReanimated",
-    get() {
-      let tmp = true !== this.config.runOnJS;
-      if (tmp) {
-        const isWorklet = this.handlers.isWorklet;
-        tmp = !isWorklet.includes(false);
-      }
-      if (tmp) {
-        tmp = !ContinousBaseGesture(6660).isRemoteDebuggingEnabled();
-        obj = ContinousBaseGesture(6660);
-      }
-      return tmp;
-    },
-  },
-];
-const importDefaultResult1Result1 = _createClass(BaseGesture, items);
-class ContinousBaseGesture {
-  constructor() {
-    self = this;
-    tmp = closure_4(this, ContinousBaseGesture);
-    tmp2 = closure_3;
-    obj = closure_3(ContinousBaseGesture);
-    tmp3 = c2;
-    if (hasOwnProperty()) {
-      tmp7 = globalThis;
-      _Reflect = Reflect;
-      tmp8 = arguments;
-      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
-    } else {
-      tmp4 = arguments;
-      tmp5 = arguments;
-      constructResult = obj(...arguments);
-    }
-    return tmp3(self, constructResult);
-  }
-}
-_inherits(ContinousBaseGesture, importDefaultResult1Result1);
-const entry1 = {
-  key: "onUpdate",
-  value: function onUpdate(onUpdate) {
-    this.handlers.onUpdate = onUpdate;
-    this.handlers.isWorklet[obj.UPDATE] = this.isWorklet(onUpdate);
-    return this;
-  },
+let obj = { tagMessage: fn(6674).tagMessage };
+wrappedSetGestureState.__closure = obj;
+wrappedSetGestureState.__workletHash = 727405139747;
+wrappedSetGestureState.__initData = {
+  code: "function pnpm_gestureStateManagerTs1(handlerTag,state){const{tagMessage}=this.__closure;if(globalThis._setGestureStateSync){globalThis._setGestureStateSync(handlerTag,state);}else if(globalThis._setGestureStateAsync){globalThis._setGestureStateAsync(handlerTag,state);}else{throw new Error(tagMessage('Failed to set gesture state'));}}",
 };
-const items1 = [
-  entry1,
-  {
-    key: "onChange",
-    value: function onChange(onChange) {
-      this.handlers.onChange = onChange;
-      this.handlers.isWorklet[obj.CHANGE] = this.isWorklet(onChange);
-      return this;
-    },
-  },
-  {
-    key: "manualActivation",
-    value: function manualActivation(tmp4Result) {
-      this.config.manualActivation = tmp4Result;
-      return this;
-    },
-  },
-];
+const __initData = {
+  code: "function pnpm_gestureStateManagerTs3(){const{wrappedSetGestureState,handlerTag,State}=this.__closure;wrappedSetGestureState(handlerTag,State.BEGAN);}",
+};
+const __initData2 = {
+  code: "function pnpm_gestureStateManagerTs4(){const{wrappedSetGestureState,handlerTag,State}=this.__closure;wrappedSetGestureState(handlerTag,State.ACTIVE);}",
+};
+const __initData3 = {
+  code: "function pnpm_gestureStateManagerTs5(){const{wrappedSetGestureState,handlerTag,State}=this.__closure;wrappedSetGestureState(handlerTag,State.FAILED);}",
+};
+const __initData4 = {
+  code: "function pnpm_gestureStateManagerTs6(){const{wrappedSetGestureState,handlerTag,State}=this.__closure;wrappedSetGestureState(handlerTag,State.END);}",
+};
+obj = { create: null };
+function create(handlerTag) {
+  _require = handlerTag;
+  let obj = { handlerTag, begin: null, activate: null, fail: null, end: null };
+  const wrappedSetGestureState = function p() {
+    const BEGAN = _mod6675.State.BEGAN;
+    if (typeof fn === "function") {
+      const _globalThis = globalThis;
+      const _globalThis2 = globalThis;
+      if (globalThis._setGestureStateSync) {
+        _globalThis2._setGestureStateSync(closure_0, BEGAN);
+      } else if (_globalThis2._setGestureStateAsync) {
+        const _globalThis3 = globalThis;
+        const result = globalThis._setGestureStateAsync(closure_0, BEGAN);
+      } else {
+        const _Error = Error;
+        const error = new Error(tagMessage.tagMessage("Failed to set gesture state"));
+        throw error;
+      }
+    } else {
+      throw new TypeError("Trying to call a non-function");
+    }
+  };
+  obj = { wrappedSetGestureState, handlerTag, State: require("06675__.js").State };
+  wrappedSetGestureState.__closure = obj;
+  wrappedSetGestureState.__workletHash = 15218261064802;
+  wrappedSetGestureState.__initData = __initData;
+  obj.begin = wrappedSetGestureState;
+  const fn2 = function c() {
+    const ACTIVE = _mod6675.State.ACTIVE;
+    if (typeof fn === "function") {
+      const _globalThis = globalThis;
+      const _globalThis2 = globalThis;
+      if (globalThis._setGestureStateSync) {
+        _globalThis2._setGestureStateSync(closure_0, ACTIVE);
+      } else if (_globalThis2._setGestureStateAsync) {
+        const _globalThis3 = globalThis;
+        const result = globalThis._setGestureStateAsync(closure_0, ACTIVE);
+      } else {
+        const _Error = Error;
+        const error = new Error(tagMessage.tagMessage("Failed to set gesture state"));
+        throw error;
+      }
+    } else {
+      throw new TypeError("Trying to call a non-function");
+    }
+  };
+  obj = { wrappedSetGestureState, handlerTag, State: require("06675__.js").State };
+  fn2.__closure = obj;
+  fn2.__workletHash = 4587865373510;
+  fn2.__initData = __initData2;
+  obj.activate = fn2;
+  class S {
+    constructor() {
+      tmp = closure_0;
+      tmp2 = closure_0;
+      tmp3 = closure_1;
+      FAILED = closure_0(closure_1[1]).State.FAILED;
+      if (typeof t === "function") {
+        tmp4 = globalThis;
+        _globalThis = globalThis;
+        _globalThis2 = globalThis;
+        if (globalThis._setGestureStateSync) {
+          _setGestureStateSyncResult = _globalThis2._setGestureStateSync(tmp, FAILED);
+        } else if (_globalThis2._setGestureStateAsync) {
+          _globalThis3 = globalThis;
+          result = globalThis._setGestureStateAsync(tmp, FAILED);
+        } else {
+          _Error = Error;
+          tmp2Result = tmp2(tmp3[0]);
+          str = "Failed to set gesture state";
+          tmp5 = new.target;
+          tmp6 = new.target;
+          error = new Error(tmp2Result.tagMessage("Failed to set gesture state"));
+          tmp8 = error;
+          throw error;
+        }
+        return;
+      } else {
+        str2 = "Trying to call a non-function";
+        throw new TypeError("Trying to call a non-function");
+      }
+    }
+  }
+  S.__closure = { wrappedSetGestureState, handlerTag, State: require("06675__.js").State };
+  S.__workletHash = 12634480855880;
+  S.__initData = __initData3;
+  obj.fail = S;
+  const fn3 = function s() {
+    const END = _mod6675.State.END;
+    if (typeof fn === "function") {
+      const _globalThis = globalThis;
+      const _globalThis2 = globalThis;
+      if (globalThis._setGestureStateSync) {
+        _globalThis2._setGestureStateSync(closure_0, END);
+      } else if (_globalThis2._setGestureStateAsync) {
+        const _globalThis3 = globalThis;
+        const result = globalThis._setGestureStateAsync(closure_0, END);
+      } else {
+        const _Error = Error;
+        const error = new Error(tagMessage.tagMessage("Failed to set gesture state"));
+        throw error;
+      }
+    } else {
+      throw new TypeError("Trying to call a non-function");
+    }
+  };
+  const obj1 = { wrappedSetGestureState, handlerTag, State: require("06675__.js").State };
+  fn3.__closure = { wrappedSetGestureState, handlerTag, State: require("06675__.js").State };
+  fn3.__workletHash = 6198601582791;
+  fn3.__initData = __initData4;
+  obj.end = fn3;
+  return obj;
+}
+obj = { wrappedSetGestureState, State: fn(6675).State };
+create.__closure = obj;
+create.__workletHash = 1974124167608;
+create.__initData = {
+  code: "function create_Pnpm_gestureStateManagerTs2(handlerTag){const{wrappedSetGestureState,State}=this.__closure;return{handlerTag:handlerTag,begin:function(){'worklet';wrappedSetGestureState(handlerTag,State.BEGAN);},activate:function(){'worklet';wrappedSetGestureState(handlerTag,State.ACTIVE);},fail:function(){'worklet';wrappedSetGestureState(handlerTag,State.FAILED);},end:function(){'worklet';wrappedSetGestureState(handlerTag,State.END);}};}",
+};
+obj.create = create;
 
-export { CALLBACK_TYPE };
-export const Gesture = importDefaultResult1Result;
-export const BaseGesture = importDefaultResult1Result1;
-export const ContinousBaseGesture = _createClass(ContinousBaseGesture, items1);
+export const GestureStateManager = obj;

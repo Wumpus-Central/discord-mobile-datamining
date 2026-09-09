@@ -1,36 +1,14 @@
 // _runtime/metro/05647__.js
+import registerAsset from "01122__.js";
 
-export default function isArrayish(str) {
-  let tmp = !str;
-  if (str) {
-    tmp = typeof str === "string";
-  }
-  let tmp2 = !tmp;
-  if (!tmp) {
-    const _Array = Array;
-    let isArray = str instanceof Array;
-    if (!isArray) {
-      const _Array2 = Array;
-      isArray = Array.isArray(str);
-    }
-    if (!isArray) {
-      let tmp5 = str.length >= 0;
-      if (tmp5) {
-        const _Function = Function;
-        let tmp6 = str.splice instanceof Function;
-        if (!tmp6) {
-          const _Object = Object;
-          let ownPropertyDescriptor = Object.getOwnPropertyDescriptor(str, str.length - 1);
-          if (ownPropertyDescriptor) {
-            ownPropertyDescriptor = "String" !== str.constructor.name;
-          }
-          tmp6 = ownPropertyDescriptor;
-        }
-        tmp5 = tmp6;
-      }
-      isArray = tmp5;
-    }
-    tmp2 = isArray;
-  }
-  return tmp2;
-}
+export default registerAsset.registerAsset({
+  __packager_asset: true,
+  httpServerLocation:
+    "/assets/../node_modules/.pnpm/@react-navigation+elements@2.9.34_542eyc77l7xc6yrt372p7kkeyi/node_modules/@react-navigation/elements/lib/module/assets",
+  width: 50,
+  height: 85,
+  scales: [1],
+  hash: "0a328cd9c1afd0afe8e3b1ec5165b1b4",
+  name: "back-icon-mask",
+  type: "png",
+});

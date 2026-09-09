@@ -1,6 +1,6 @@
 // _runtime/metro/03950__.js
-import _typeof from "03650__.js";
-import requiredArgs from "../03651_requiredArgs.js";
+import _typeof from "03663__.js";
+import requiredArgs from "../03664_requiredArgs.js";
 
 if (!_typeof) {
   let obj = { default: _typeof };
@@ -17,9 +17,8 @@ if (!requiredArgs) {
 }
 requiredArgs = tmp5;
 
-export default function isFuture(arg0) {
+export default function getYear(arg0) {
   requiredArgs.default(1, arguments);
-  const time = _typeof.default(arg0).getTime();
-  return time > Date.now();
+  return _typeof.default(arg0).getFullYear();
 };
 export default exports.default;

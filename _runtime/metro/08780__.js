@@ -3,11 +3,11 @@ import registerAsset from "01122__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
+  httpServerLocation: "/assets/images/native/icons",
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "ab7bfd0490af9a9d0729fca1ff2529c0",
-  name: "HeartIcon",
+  hash: "da49fe1fcc1d15f812a95db2869d9ae7",
+  name: "ic_discoverable_guild_badge_dark_24px",
   type: "png",
 });

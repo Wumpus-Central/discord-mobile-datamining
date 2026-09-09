@@ -1,40 +1,12 @@
 // _runtime/metro/03705__.js
-let closure_0 = {
-  lastWeek(getUTCDay) {
-    const uTCDay = getUTCDay.getUTCDay();
-    if (0 === uTCDay) {
-      return "'pro\u0161lu nedjelju u' p";
-    } else if (3 === uTCDay) {
-      return "'pro\u0161lu srijedu u' p";
-    } else if (6 === uTCDay) {
-      return "'pro\u0161lu subotu u' p";
-    } else {
-      return "'pro\u0161li' EEEE 'u' p";
-    }
-  },
-  yesterday: "'ju\u010Der u' p",
-  today: "'danas u' p",
-  tomorrow: "'sutra u' p",
-  nextWeek(getUTCDay) {
-    const uTCDay = getUTCDay.getUTCDay();
-    if (0 === uTCDay) {
-      return "'idu\u0107u nedjelju u' p";
-    } else if (3 === uTCDay) {
-      return "'idu\u0107u srijedu u' p";
-    } else if (6 === uTCDay) {
-      return "'idu\u0107u subotu u' p";
-    } else {
-      return "'pro\u0161li' EEEE 'u' p";
-    }
-  },
-  other: "P"
-};
+import 02030__ from "02030__.js";
 
-export default function formatRelative(arg0, arg1, arg2, arg3) {
-  let tmpResult = tmp;
-  if (typeof closure_0[arg0] === "function") {
-    tmpResult = tmp(arg1);
-  }
-  return tmpResult;
-};
+if (!module_2030) {
+  let obj = { default: module_2030 };
+} else {
+  obj = module_2030;
+}
+obj = { date: obj.default({ formats: { full: "eeee d. MMMM y", long: "d. MMMM y", medium: "d. MMM y", short: "d.M.y" }, defaultWidth: "full" }), time: obj.default({ formats: { full: "HH.mm.ss zzzz", long: "HH.mm.ss z", medium: "HH.mm.ss", short: "HH.mm" }, defaultWidth: "full" }), dateTime: obj.default({ formats: { full: "{{date}} 'klo' {{time}}", long: "{{date}} 'klo' {{time}}", medium: "{{date}} {{time}}", short: "{{date}} {{time}}" }, defaultWidth: "full" }) };
+
+export default obj;
 export default exports.default;

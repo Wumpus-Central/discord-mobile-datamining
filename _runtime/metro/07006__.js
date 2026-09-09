@@ -1,19 +1,13 @@
 // _runtime/metro/07006__.js
-import LegacyBaseButton from "../06655_LegacyBaseButton.js";
-import GestureHandlerRefContext from "../07007_GestureHandlerRefContext.js";
-import noop from "00019__.js";
+import registerAsset from "01122__.js";
 
-require = fn;
-const jsx = fn(21).jsx;
-
-export const PanGestureHandler = function PanGestureHandler(arg0) {
-  const ref = noop.useRef(null);
-  let obj = { value: ref, children: null };
-  obj = {};
-  const merged = Object.assign(arg0);
-  obj.ref = ref;
-  obj.children = jsx(LegacyBaseButton.PanGestureHandler, {});
-  return jsx(GestureHandlerRefContext.GestureHandlerRefContext.Provider, {});
-};
-export const GestureHandlerRootView = fn(6655).GestureHandlerRootView;
-export const GestureState = fn(6655).State;
+export default registerAsset.registerAsset({
+  __packager_asset: true,
+  httpServerLocation: "/assets/images/native/icons",
+  width: 24,
+  height: 24,
+  scales: [2, 3],
+  hash: "133f082cc6a7642a4a6e08e490a58839",
+  name: "ic_close_24px",
+  type: "png",
+});

@@ -1,54 +1,41 @@
 // _runtime/metro/06902__.js
-import _slicedToArray from "06857__.js";
+import _mod6903 from "06903__.js";
 
-const noop = fn(19);
-({ useCallback: c2, useEffect: c3, useState: closure_4 } = noop);
+function _get() {
+  if (typeof Reflect !== "undefined") {
+    const _Reflect2 = Reflect;
+    if (Reflect.get) {
+      const _Reflect = Reflect;
+      exports = get.bind();
+    }
+    module.exports = exports;
+    const apply = exports.apply;
+    if (typeof apply === "unknown") {
+      let applyArgumentsResult = HermesBuiltin.applyArguments(null);
+    } else {
+      applyArgumentsResult = apply(null, arguments);
+    }
+    return applyArgumentsResult;
+  }
+  exports = (arg0, arg1, arg2) => {
+    const tmp = _mod6903(arg0, arg1);
+    if (tmp) {
+      const _Object = Object;
+      const iter = Object.getOwnPropertyDescriptor(tmp, arg1);
+      if (iter.get) {
+        let tmp3 = arg2;
+        const get = iter.get;
+        const call = get.call;
+        if (arguments.length < 3) {
+          tmp3 = arg0;
+        }
+        typeof call === "unknown" ? get() : call(tmp3);
+      } else {
+        return iter.value;
+      }
+    }
+  };
+}
+let exports = _get;
 
-export const useUnmountAwareTimeout = function useUnmountAwareTimeout() {
-  const first = _slicedToArray(
-    closure_4(() => new Set()),
-    1,
-  )[0];
-  const items = [first];
-  closure_3(
-    () => () => {
-      const item = set.forEach((item) => closure_1_0.clearTimeout(item));
-      set.clear();
-    },
-    items,
-  );
-  const obj = { setTimeout: null };
-  const items1 = [first];
-  obj.setTimeout = closure_2((arg0, arg1) => {
-    const timerId = first.setTimeout(() => {
-      first.delete(timerId);
-      closure_0();
-    }, arg1);
-    arg0.add(timerId);
-  }, items1);
-  return obj;
-};
-export const useUnmountAwareAnimationFrame = function useUnmountAwareAnimationFrame() {
-  const first = _slicedToArray(
-    closure_4(() => new Set()),
-    1,
-  )[0];
-  const items = [first];
-  closure_3(
-    () => () => {
-      const item = set.forEach((item) => cancelAnimationFrame(item));
-      set.clear();
-    },
-    items,
-  );
-  const obj = { requestAnimationFrame: null };
-  const items1 = [first];
-  obj.requestAnimationFrame = closure_2((arg0) => {
-    const animationFrame = first.requestAnimationFrame((arg0) => {
-      first.delete(animationFrame);
-      closure_0(arg0);
-    });
-    arg0.add(animationFrame);
-  }, items1);
-  return obj;
-};
+export default _get;

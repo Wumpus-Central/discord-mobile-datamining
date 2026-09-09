@@ -1,50 +1,48 @@
 // _runtime/metro/04307__.js
-import _mod4299 from "04299__.js";
+import installWorkletsSupport from "../04308_installWorkletsSupport.js";
 
-require = arg1;
-const dependencyMap = arg6;
-const map = new Map();
-
-export const getHybridObjectConstructor = function getHybridObjectConstructor(arg0) {
-  closure_0 = arg0;
-  let obj = map;
-  if (map.has(arg0)) {
-    return obj.get(arg0);
-  } else {
-    function constructorFunc() {
-      const NitroModules = _mod4299.NitroModules;
-      const hybridObject = NitroModules.createHybridObject(closure_0);
-      const prototypeOf = Object.getPrototypeOf(hybridObject);
-      if (constructorFunc.prototype !== prototypeOf) {
-        constructorFunc.prototype = prototypeOf;
-        constructorFunc.prototypeInitialized = true;
-      }
-      return hybridObject;
-    }
-    constructorFunc.prototypeInitialized = false;
-    let _Object = Object;
-    const _Symbol = Symbol;
-    obj = {
-      value(arg0) {
-        if (!constructorFunc.prototypeInitialized) {
-          const NitroModules = _mod4299.NitroModules;
-          const _Object = Object;
-          constructorFunc.prototype = Object.getPrototypeOf(NitroModules.createHybridObject(closure_0));
-          constructorFunc.prototypeInitialized = true;
-        }
-        let prototypeOf = Object.getPrototypeOf(arg0);
-        if (null != prototypeOf) {
-          while (prototypeOf !== constructorFunc.prototype) {
-            let _Object2 = Object;
-            prototypeOf = Object.getPrototypeOf(prototypeOf);
-          }
-          return true;
-        }
-        return false;
-      },
-    };
-    Object.defineProperty(constructorFunc, Symbol.hasInstance, obj);
-    const result = obj.set(arg0, constructorFunc);
-    return constructorFunc;
-  }
-};
+installWorkletsSupport = installWorkletsSupport.installWorkletsSupport();
+for (const key10017 in require("04317__.js")) {
+  arg5[key10017] = require("04317__.js")[key10017];
+  continue;
+}
+for (const key10021 in require("04318__.js")) {
+  arg5[key10021] = require("04318__.js")[key10021];
+  continue;
+}
+for (const key10025 in require("04319__.js")) {
+  arg5[key10025] = require("04319__.js")[key10025];
+  continue;
+}
+for (const key10029 in require("04320__.js")) {
+  arg5[key10029] = require("04320__.js")[key10029];
+  continue;
+}
+for (const key10033 in require("04321__.js")) {
+  arg5[key10033] = require("04321__.js")[key10033];
+  continue;
+}
+for (const key10037 in require("04322__.js")) {
+  arg5[key10037] = require("04322__.js")[key10037];
+  continue;
+}
+for (const key10041 in require("04313__.js")) {
+  arg5[key10041] = require("04313__.js")[key10041];
+  continue;
+}
+for (const key10045 in require("04323__.js")) {
+  arg5[key10045] = require("04323__.js")[key10045];
+  continue;
+}
+for (const key10049 in require("04324__.js")) {
+  arg5[key10049] = require("04324__.js")[key10049];
+  continue;
+}
+for (const key10053 in require("04325__.js")) {
+  arg5[key10053] = require("04325__.js")[key10053];
+  continue;
+}
+for (const key10057 in require("04326__.js")) {
+  arg5[key10057] = require("04326__.js")[key10057];
+  continue;
+}

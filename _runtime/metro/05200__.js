@@ -1,5 +1,7 @@
 // _runtime/metro/05200__.js
-import _mod5201 from "05201__.js";
+import FILE_TYPES_REQUIRED_ADDITIONAL_CHECK from "../05201_FILE_TYPES_REQUIRED_ADDITIONAL_CHECK.js";
+import _mod5213 from "05213__.js";
+import _mod5221 from "05221__.js";
 
 const self = this;
 let self2 = this;
@@ -37,7 +39,9 @@ if (self2) {
     };
   }
   const _Object2 = Object;
-  fn(_mod5201, exports);
+  fn(FILE_TYPES_REQUIRED_ADDITIONAL_CHECK, exports);
+  fn(_mod5213, exports);
+  fn(_mod5221, exports);
 } else {
   let _Object = Object;
 }

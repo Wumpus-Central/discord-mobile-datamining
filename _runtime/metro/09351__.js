@@ -3,11 +3,11 @@ import registerAsset from "01122__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/custom_app_icons/AngryIcon",
-  width: 60,
-  height: 60,
+  httpServerLocation: "/assets/images/native/premium/upsell",
+  width: 49,
+  height: 48.5,
   scales: [2, 3],
-  hash: "f576bb59fd8aa7b768b785da00a17a1a",
-  name: "AngryIcon",
+  hash: "6922badb2f007833b3becc6f00bcb5a4",
+  name: "img_custom_app_icons",
   type: "png",
 });

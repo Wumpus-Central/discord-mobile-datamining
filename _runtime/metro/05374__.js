@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 255,
   height: 255,
   scales: [1],
-  hash: "65690d7389997bdd64f7d1687ed64321",
-  name: "img_account_sync_paypal_light_and_dark",
+  hash: "604528a3bb006839cd94a191736eec62",
+  name: "img_account_sync_epic_dark_and_white",
   type: "svg",
 });

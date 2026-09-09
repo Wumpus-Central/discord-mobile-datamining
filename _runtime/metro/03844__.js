@@ -1,26 +1,26 @@
 // _runtime/metro/03844__.js
-const obj = {
-  ceil: Math.ceil,
-  round: Math.round,
-  floor: Math.floor,
-  trunc(endImportTime) {
-    if (endImportTime < 0) {
-      const _Math2 = Math;
-      let rounded = Math.ceil(endImportTime);
-    } else {
-      const _Math = Math;
-      rounded = Math.floor(endImportTime);
-    }
-    return rounded;
-  },
-};
-const trunc = "trunc";
+import startOfDay from "../03827_startOfDay.js";
+import requiredArgs from "../03664_requiredArgs.js";
 
-export const getRoundingMethod = function getRoundingMethod(roundingMethod) {
-  if (roundingMethod) {
-    let tmp3 = obj[roundingMethod];
-  } else {
-    tmp3 = obj[trunc];
-  }
-  return tmp3;
+if (!startOfDay) {
+  let obj = { default: startOfDay };
+  let tmp3 = obj;
+} else {
+  tmp3 = startOfDay;
+}
+startOfDay = tmp3;
+if (!requiredArgs) {
+  obj = { default: requiredArgs };
+  let tmp5 = obj;
+} else {
+  tmp5 = requiredArgs;
+}
+requiredArgs = tmp5;
+
+export default function isSameDay(arg0, arg1) {
+  requiredArgs.default(2, arguments);
+  const defaultResult1 = startOfDay.default(arg0);
+  const time = defaultResult1.getTime();
+  return time === startOfDay.default(arg1).getTime();
 };
+export default exports.default;

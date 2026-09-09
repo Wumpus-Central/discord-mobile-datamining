@@ -3,11 +3,11 @@ import registerAsset from "01122__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native",
-  width: 18,
-  height: 18,
+  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
+  width: 24,
+  height: 24,
   scales: [2, 3],
-  hash: "b979d6fc20f59ff3d9b456c0fcc05d95",
-  name: "ic_add_super_reaction",
+  hash: "8d2a9da7873a6a1912be7bfb3d52eaf6",
+  name: "SpoilerIcon",
   type: "png",
 });

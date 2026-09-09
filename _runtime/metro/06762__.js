@@ -1,12 +1,17 @@
 // _runtime/metro/06762__.js
-import ComposedGestureName from "../06714_ComposedGestureName.js";
-import _mod6763 from "06763__.js";
+import ComposedGestureName from "../06728_ComposedGestureName.js";
+import DEFAULT_PROPS_TRANSFORMER from "../06737_DEFAULT_PROPS_TRANSFORMER.js";
+import _mod6752 from "06752__.js";
 
 require = arg1;
 const dependencyMap = arg6;
+let closure_2 = {};
 
-export const useCompetingGestures = function useCompetingGestures() {
-  const items = [...arguments];
-  const items1 = [ComposedGestureName.ComposedGestureName.Race, ...items];
-  return _mod6763.useComposedGesture.apply(items1);
+export const useManualGesture = function useManualGesture() {
+  let tmp = gestureHandlerProps;
+  if (gestureHandlerProps === undefined) {
+    tmp = closure_2;
+  }
+  const clonedAndRemappedConfig = DEFAULT_PROPS_TRANSFORMER.useClonedAndRemappedConfig(tmp);
+  return _mod6752.useGesture(ComposedGestureName.SingleGestureName.Manual, clonedAndRemappedConfig);
 };

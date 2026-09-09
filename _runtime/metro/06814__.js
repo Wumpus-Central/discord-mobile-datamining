@@ -1,8 +1,14 @@
 // _runtime/metro/06814__.js
-import _mod17 from "00017__.js";
+import _mod19 from "00019__.js";
+import _mod6653 from "06653__.js";
 
-const StyleSheet = _mod17.StyleSheet;
+const useContext = _mod19.useContext;
 
-export const styles = StyleSheet.create({
-  container: { flexDirection: "column-reverse", position: "absolute", top: 0, left: 0, right: 0 },
-});
+export const useBottomSheetGestureHandlers = () => {
+  const tmp = useContext(_mod6653.BottomSheetGestureHandlersContext);
+  if (null === tmp) {
+    throw "'useBottomSheetGestureHandlers' cannot be used out of the BottomSheet!";
+  } else {
+    return tmp;
+  }
+};

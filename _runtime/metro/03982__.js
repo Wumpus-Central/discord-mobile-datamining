@@ -1,6 +1,9 @@
 // _runtime/metro/03982__.js
-import Parser2 from "../03956_Parser.js";
+import Parser2 from "../03969_Parser.js";
+import 03983__ from "03983__.js";
+import startOfUTCISOWeek from "../03900_startOfUTCISOWeek.js";
 
+let _createSuperInternal = require;
 function _typeof(arg0) {
   if (typeof Symbol === "function") {
     let _Symbol = Symbol;
@@ -26,15 +29,15 @@ function _typeof(arg0) {
     str = typeof arg0;
   };
 }
-function _setPrototypeOf(Hour1to12Parser, Parser) {
+function _setPrototypeOf(ISOWeekParser, Parser) {
   _setPrototypeOf = Object.setPrototypeOf;
   if (!_setPrototypeOf) {
-    _setPrototypeOf = function _setPrototypeOf(Hour1to12Parser, Parser) {
-      Hour1to12Parser.__proto__ = Parser;
-      return Hour1to12Parser;
+    _setPrototypeOf = function _setPrototypeOf(ISOWeekParser, Parser) {
+      ISOWeekParser.__proto__ = Parser;
+      return ISOWeekParser;
     };
   }
-  return _setPrototypeOf(Hour1to12Parser, Parser);
+  return _setPrototypeOf(ISOWeekParser, Parser);
 }
 function _getPrototypeOf(arg0) {
   if (Object.setPrototypeOf) {
@@ -52,9 +55,23 @@ function _getPrototypeOf(arg0) {
   }
   return _getPrototypeOf(arg0);
 }
+if (!module_3983) {
+  let obj = { default: module_3983 };
+  let tmp3 = obj;
+} else {
+  tmp3 = module_3983;
+}
+module_3983 = tmp3;
+if (!startOfUTCISOWeek) {
+  obj = { default: startOfUTCISOWeek };
+  let tmp5 = obj;
+} else {
+  tmp5 = startOfUTCISOWeek;
+}
+startOfUTCISOWeek = tmp5;
 const Parser = Parser2.Parser;
-let _createSuperInternal;
-class Hour1to12Parser {
+_createSuperInternal = undefined;
+class ISOWeekParser {
   constructor() {
     if (this instanceof closure_1) {
       length = arguments.length;
@@ -90,15 +107,10 @@ class Hour1to12Parser {
         str2 = "priority";
         if ("priority" in applyResult) {
           _Object = Object;
-          definePropertyResult = Object.defineProperty(applyResult, "priority", {
-            value: 70,
-            enumerable: true,
-            configurable: true,
-            writable: true,
-          });
+          definePropertyResult = Object.defineProperty(applyResult, "priority", { value: 100, enumerable: true, configurable: true, writable: true });
         } else {
-          num3 = 70;
-          applyResult.priority = 70;
+          num3 = 100;
+          applyResult.priority = 100;
         }
         if (tmp13) {
           _ReferenceError = ReferenceError;
@@ -109,7 +121,7 @@ class Hour1to12Parser {
           tmp19 = referenceError1;
           throw referenceError1;
         } else {
-          items1 = ["H", "K", "k", "t", "T"];
+          items1 = ["y", "Y", "u", "q", "Q", "M", "L", "w", "d", "D", "e", "c", "t", "T"];
           str3 = "incompatibleTokens";
           if ("incompatibleTokens" in applyResult) {
             _Object2 = Object;
@@ -133,7 +145,7 @@ class Hour1to12Parser {
     }
   }
 }
-let dependencyMap = Hour1to12Parser;
+let dependencyMap = ISOWeekParser;
 if (typeof Parser !== "function") {
   if (null !== Parser) {
     let _TypeError = TypeError;
@@ -145,11 +157,10 @@ let prototype = Parser;
 if (Parser) {
   prototype = Parser.prototype;
 }
-Hour1to12Parser.prototype = Object.create(prototype, {
-  constructor: { value: Hour1to12Parser, writable: true, configurable: true },
-});
+obj = { constructor: { value: ISOWeekParser, writable: true, configurable: true } };
+ISOWeekParser.prototype = Object.create(prototype, obj);
 if (Parser) {
-  _setPrototypeOf(Hour1to12Parser, Parser);
+  _setPrototypeOf(ISOWeekParser, Parser);
 }
 let num = 0;
 dependencyMap = (function _isNativeReflectConstruct() {
@@ -186,10 +197,10 @@ dependencyMap = (function _isNativeReflectConstruct() {
 })();
 _createSuperInternal = function _createSuperInternal() {
   const self = this;
-  const obj = _getPrototypeOf(_createSuperInternal);
+  const obj = metroRequire(_createSuperInternal);
   if (closure_1) {
     const _Reflect = Reflect;
-    let constructResult = Reflect.construct(obj, arguments, _getPrototypeOf(self).constructor);
+    let constructResult = Reflect.construct(obj, arguments, metroRequire(self).constructor);
   } else {
     constructResult = obj(...arguments);
   }
@@ -211,14 +222,14 @@ _createSuperInternal = function _createSuperInternal() {
 const entry = {
   key: "parse",
   value: function parse(arg0, arg1, ordinalNumber) {
-    if ("h" === arg1) {
-      return _createSuperInternal(3958).parseNumericPattern(_createSuperInternal(3959).numericPatterns.hour12h, arg0);
-    } else if ("ho" === arg1) {
-      return ordinalNumber.ordinalNumber(arg0, { unit: "hour" });
+    if ("I" === arg1) {
+      return _createSuperInternal(3971).parseNumericPattern(_createSuperInternal(3972).numericPatterns.week, arg0);
+    } else if ("Io" === arg1) {
+      return ordinalNumber.ordinalNumber(arg0, { unit: "week" });
     } else {
-      return _createSuperInternal(3958).parseNDigits(arg1.length, arg0);
+      return _createSuperInternal(3971).parseNDigits(arg1.length, arg0);
     }
-  },
+  }
 };
 let items = [
   entry,
@@ -227,46 +238,34 @@ let items = [
     value: function validate(arg0, arg1) {
       let tmp = arg1 >= 1;
       if (tmp) {
-        tmp = arg1 <= 12;
+        tmp = arg1 <= 53;
       }
       return tmp;
-    },
+    }
   },
   {
     key: "set",
-    value: function set(getUTCHours, arg1, arg2) {
-      const tmp = getUTCHours.getUTCHours() >= 12;
-      if (tmp) {
-        if (arg2 < 12) {
-          getUTCHours.setUTCHours(arg2 + 12, 0, 0, 0);
-        }
-        return getUTCHours;
-      }
-      if (!tmp) {
-        if (12 === arg2) {
-          getUTCHours.setUTCHours(0, 0, 0, 0);
-        }
-      }
-      getUTCHours.setUTCHours(arg2, 0, 0, 0);
-    },
-  },
+    value: function set(arg0, arg1, arg2) {
+      return startOfUTCISOWeek.default(module_3983.default(arg0, arg2));
+    }
+  }
 ];
 if (0 < items.length) {
   do {
-    let tmp5 = items[num];
-    let flag = tmp5.enumerable;
+    let tmp9 = items[num];
+    let flag = tmp9.enumerable;
     if (!flag) {
       flag = false;
     }
-    tmp5.enumerable = flag;
-    tmp5.configurable = true;
-    if ("value" in tmp5) {
-      tmp5.writable = true;
+    tmp9.enumerable = flag;
+    tmp9.configurable = true;
+    if ("value" in tmp9) {
+      tmp9.writable = true;
     }
     let _Object = Object;
-    let definePropertyResult1 = Object.defineProperty(tmp4, tmp5.key, tmp5);
+    let definePropertyResult1 = Object.defineProperty(tmp8, tmp9.key, tmp9);
     num = num + 1;
   } while (num < items.length);
 }
 
-export { Hour1to12Parser };
+export { ISOWeekParser };

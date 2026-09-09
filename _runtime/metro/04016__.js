@@ -1,32 +1,26 @@
 // _runtime/metro/04016__.js
-import 03798__ from "03798__.js";
-import 03831__ from "03831__.js";
-import requiredArgs from "../03651_requiredArgs.js";
+import startOfSecond from "../04017_startOfSecond.js";
+import requiredArgs from "../03664_requiredArgs.js";
 
-if (!module_3798) {
-  let obj = { default: module_3798 };
+if (!startOfSecond) {
+  let obj = { default: startOfSecond };
   let tmp3 = obj;
 } else {
-  tmp3 = module_3798;
+  tmp3 = startOfSecond;
 }
-module_3798 = tmp3;
-if (!module_3831) {
-  obj = { default: module_3831 };
-  let tmp5 = obj;
-} else {
-  tmp5 = module_3831;
-}
-module_3831 = tmp5;
+startOfSecond = tmp3;
 if (!requiredArgs) {
   obj = { default: requiredArgs };
-  let tmp7 = obj;
+  let tmp5 = obj;
 } else {
-  tmp7 = requiredArgs;
+  tmp5 = requiredArgs;
 }
-requiredArgs = tmp7;
+requiredArgs = tmp5;
 
-export default function isTomorrow(arg0) {
-  requiredArgs.default(1, arguments);
-  return module_3831.default(arg0, module_3798.default(Date.now(), 1));
+export default function isSameSecond(arg0, arg1) {
+  requiredArgs.default(2, arguments);
+  const defaultResult1 = startOfSecond.default(arg0);
+  const time = defaultResult1.getTime();
+  return time === startOfSecond.default(arg1).getTime();
 };
 export default exports.default;

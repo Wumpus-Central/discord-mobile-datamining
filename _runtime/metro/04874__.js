@@ -1,18 +1,46 @@
 // _runtime/metro/04874__.js
-import _mod1282 from "01282__.js";
-import _mod4822 from "04822__.js";
+import _mod1283 from "01283__.js";
+import _mod1315 from "01315__.js";
 
-let closure_2 = _mod1282("%Object.isExtensible%", true);
+let closure_2 = Object.assign({
+  "[[Configurable]]": true,
+  "[[Enumerable]]": true,
+  "[[Get]]": true,
+  "[[Set]]": true,
+  "[[Value]]": true,
+  "[[Writable]]": true,
+});
 
-export default _mod1282("%Object.preventExtensions%", true)
-  ? function IsExtensible(arg0) {
-      const tmp = _mod4822(arg0);
-      let tmp2 = !tmp;
-      if (!tmp) {
-        tmp2 = closure_2(arg0);
+export default function isPropertyDescriptor(obj) {
+  if (obj) {
+    if (typeof obj === "object") {
+      for (const key10001 in arg0) {
+        if (!_mod1315(arg0, key10001)) {
+          continue;
+        } else if (closure_2[key10001]) {
+          continue;
+        } else {
+          let flag = false;
+          return false;
+        }
+        continue;
       }
-      return tmp2;
+      let tmp4 = _mod1315(obj, "[[Value]]");
+      if (!tmp4) {
+        tmp4 = _mod1315(obj, "[[Writable]]");
+      }
+      let tmp5 = _mod1315(obj, "[[Get]]");
+      if (!tmp5) {
+        tmp5 = _mod1315(obj, "[[Set]]");
+      }
+      if (tmp4) {
+        if (tmp5) {
+          const tmp8 = new _mod1283("Property Descriptors may not be both accessor and data descriptors");
+          throw tmp8;
+        }
+      }
+      return true;
     }
-  : function IsExtensible(arg0) {
-      return !_mod4822(arg0);
-    };
+  }
+  return false;
+}

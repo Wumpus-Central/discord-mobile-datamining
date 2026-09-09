@@ -3,11 +3,11 @@ import registerAsset from "01122__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native",
-  width: 184,
-  height: 152,
+  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
+  width: 24,
+  height: 24,
   scales: [2, 3],
-  hash: "55e19295e229a1848ac31993707c2b78",
-  name: "img_ban",
+  hash: "dadf5e8629c7ac90f77087c81be9e773",
+  name: "UserIcon",
   type: "png",
 });

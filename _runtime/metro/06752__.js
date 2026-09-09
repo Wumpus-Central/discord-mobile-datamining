@@ -1,10 +1,89 @@
 // _runtime/metro/06752__.js
-import _mod26 from "00026__.js";
-import 00065__ from "00065__.js";
+import handlerIDToTag from "../06673_handlerIDToTag.js";
+import transformIntoHandlerTags from "../06700_transformIntoHandlerTags.js";
+import _mod6713 from "06713__.js";
+import DEFAULT_PROPS_TRANSFORMER from "../06737_DEFAULT_PROPS_TRANSFORMER.js";
+import noop from "00019__.js";
 
-let __INTERNAL_VIEW_CONFIG = { uiViewClassName: "RNGestureHandlerButton", validAttributes: null };
-__INTERNAL_VIEW_CONFIG = { exclusive: true, foreground: true, borderless: true, enabled: true, rippleColor: _mod26.colorAttribute, rippleRadius: true, touchSoundDisabled: true, pointerEvents: true, tapAnimationInDuration: true, tapAnimationOutDuration: true, longPressDuration: true, longPressAnimationOutDuration: true, needsOffscreenAlphaCompositing: true, activeOpacity: true, activeScale: true, activeUnderlayOpacity: true, hoverOpacity: true, hoverScale: true, hoverUnderlayOpacity: true, hoverAnimationInDuration: true, hoverAnimationOutDuration: true, defaultOpacity: true, defaultScale: true, defaultUnderlayOpacity: true, underlayColor: _mod26.colorAttribute, borderWidth: true, borderColor: _mod26.colorAttribute, borderStyle: true, overflow: true, borderLeftWidth: true, borderRightWidth: true, borderTopWidth: true, borderBottomWidth: true, borderStartWidth: true, borderEndWidth: true, borderLeftColor: _mod26.colorAttribute, borderRightColor: _mod26.colorAttribute, borderTopColor: _mod26.colorAttribute, borderBottomColor: _mod26.colorAttribute, borderStartColor: _mod26.colorAttribute, borderEndColor: _mod26.colorAttribute, borderBlockColor: _mod26.colorAttribute, borderBlockEndColor: _mod26.colorAttribute, borderBlockStartColor: _mod26.colorAttribute, borderRadius: true, borderTopLeftRadius: true, borderTopRightRadius: true, borderBottomLeftRadius: true, borderBottomRightRadius: true, borderTopStartRadius: true, borderTopEndRadius: true, borderBottomStartRadius: true, borderBottomEndRadius: true, borderEndEndRadius: true, borderEndStartRadius: true, borderStartEndRadius: true, borderStartStartRadius: true };
-__INTERNAL_VIEW_CONFIG.validAttributes = __INTERNAL_VIEW_CONFIG;
+({ useEffect: c2, useMemo: c3 } = noop);
 
-export default module_65.get("RNGestureHandlerButton", () => obj);
-export { __INTERNAL_VIEW_CONFIG };
+export const useGesture = function useGesture(Fling, clonedAndRemappedConfig) {
+  _require = Fling;
+  dependencyMap = clonedAndRemappedConfig;
+  const tmp2 = jsEventHandler(() => type(config[1]).getNextHandlerTag(), []);
+  const handlerTag = tmp2;
+  if (clonedAndRemappedConfig.disableReanimated !== jsEventHandler(() => config.disableReanimated, [])) {
+    const _Error2 = Error;
+    const error = new Error(
+      require("tagMessage").tagMessage(
+        'The "disableReanimated" property must not be changed after the handler is created.',
+      ),
+    );
+    throw error;
+  } else {
+    const gestureCallbacks = require("06753__.js").useGestureCallbacks(tmp2, clonedAndRemappedConfig);
+    jsEventHandler = gestureCallbacks.jsEventHandler;
+    const reanimatedEventHandler = gestureCallbacks.reanimatedEventHandler;
+    const animatedEventHandler = gestureCallbacks.animatedEventHandler;
+    if (clonedAndRemappedConfig.shouldUseReanimatedDetector) {
+      if (!reanimatedEventHandler) {
+        const _Error = Error;
+        const error1 = new Error(require("tagMessage").tagMessage("Failed to create reanimated event handlers."));
+        throw error1;
+      }
+    }
+    const items = [tmp2, , ,];
+    ({ simultaneousWith: arr[1], requireToFail: arr[2], block: arr[3] } = clonedAndRemappedConfig);
+    let tmpResult = tmp(() => {
+      const obj = {
+        simultaneousWith: config.simultaneousWith,
+        requireToFail: config.requireToFail,
+        block: config.block,
+      };
+      return obj.prepareRelations(obj, closure_2);
+    }, items);
+    const gestureRelations = tmpResult;
+    const items1 = [
+      tmp2,
+      Fling,
+      clonedAndRemappedConfig,
+      jsEventHandler,
+      reanimatedEventHandler,
+      animatedEventHandler,
+      tmpResult,
+    ];
+    tmpResult = tmp(() => {
+      let obj = { handlerTag, type, config, detectorCallbacks: null, gestureRelations };
+      obj = { jsEventHandler, animatedEventHandler, reanimatedEventHandler };
+      obj.detectorCallbacks = obj;
+      return obj;
+    }, items1);
+    closure_7 = tmpResult;
+    const items2 = [Fling, tmp2];
+    handlerTag(() => {
+      let NativeProxy = _mod6713.NativeProxy;
+      NativeProxy.createGestureHandler(closure_0, closure_2, {});
+      let result = transformIntoHandlerTags.scheduleFlushOperations();
+      return () => {
+        const NativeProxy = closure_0(6713).NativeProxy;
+        NativeProxy.dropGestureHandler(handlerTag);
+        const result = closure_0(6700).scheduleFlushOperations();
+      };
+    }, items2);
+    const items3 = [tmp2, clonedAndRemappedConfig, Fling, tmpResult];
+    handlerTag(() => {
+      const result = DEFAULT_PROPS_TRANSFORMER.prepareConfigForNativeSide(closure_0, dependencyMap);
+      const NativeProxy = _mod6713.NativeProxy;
+      const result1 = NativeProxy.setGestureHandlerConfig(closure_2, result);
+      const result2 = transformIntoHandlerTags.scheduleFlushOperations();
+      DEFAULT_PROPS_TRANSFORMER.bindSharedValues(dependencyMap, closure_2);
+      handlerIDToTag.registerGesture(closure_2, closure_7);
+      return () => {
+        closure_0(6737).unbindSharedValues(dependencyMap, handlerTag);
+        const obj = closure_0(6737);
+        closure_0(6673).unregisterGesture(handlerTag);
+      };
+    }, items3);
+    return tmpResult;
+  }
+};

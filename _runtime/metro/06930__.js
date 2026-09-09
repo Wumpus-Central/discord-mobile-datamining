@@ -1,4 +1,7 @@
 // _runtime/metro/06930__.js
-import _modDef6931 from "06931__.js";
+import _mod17 from "00017__.js";
+import FlashList from "../06869_FlashList.js";
 
-export default _modDef6931;
+const Animated = _mod17.Animated;
+
+export default Animated.createAnimatedComponent(FlashList.FlashList);

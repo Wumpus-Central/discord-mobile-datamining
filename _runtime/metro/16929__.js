@@ -3,11 +3,11 @@ import registerAsset from "01122__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/app_icons/images",
-  width: 259,
-  height: 93,
+  httpServerLocation: "/assets/design/components/Illustration/native/redesign/generated/images",
+  width: 414,
+  height: 200,
   scales: [2, 3],
-  hash: "b6b1b6176f7b7fe50aec94892b5609a1",
-  name: "app_icon_marketing",
+  hash: "f00fcaea4a34903a201c81fe65a7bcce",
+  name: "pending_darker",
   type: "png",
 });

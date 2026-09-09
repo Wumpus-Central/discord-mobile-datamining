@@ -4,10 +4,10 @@ import registerAsset from "01122__.js";
 export default registerAsset.registerAsset({
   __packager_asset: true,
   httpServerLocation: "/assets/images/platforms",
-  width: 24,
-  height: 24,
+  width: 255,
+  height: 255,
   scales: [1],
-  hash: "18792494d95a201efe70aee5f49c4a4a",
-  name: "img_account_sync_github_light",
-  type: "svg",
+  hash: "e618f82890b6b33b5975b62fe527e027",
+  name: "img_account_sync_spotify_white",
+  type: "png",
 });

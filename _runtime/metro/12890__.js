@@ -1,191 +1,146 @@
 // _runtime/metro/12890__.js
-import _mod12801 from "12801__.js";
-import stackParserFromStackParserOptions from "../12804_stackParserFromStackParserOptions.js";
-import _mod12829 from "12829__.js";
-import setupIntegration from "12857__.js";
+import _mod12827 from "12827__.js";
+import _mod12851 from "12851__.js";
+import _mod12855 from "12855__.js";
+import _mod12871 from "12871__.js";
+import _mod12884 from "12884__.js";
+import _mod12892 from "12892__.js";
 
-function _shouldDropEvent(message, message2) {
-  let tmp = message2;
-  if (tmp) {
-    message = message.message;
-    message2 = message2.message;
-    if (message) {
-      if (!message) {
-        if (message) {
-          let flag = false;
-          if (message === message2) {
-            flag = false;
-            if (_isSameFingerprint(message, message2)) {
-              const framesFromEvent = stackParserFromStackParserOptions.getFramesFromEvent(message);
-              const framesFromEvent1 = stackParserFromStackParserOptions.getFramesFromEvent(message2);
-              if (framesFromEvent) {
-                if (!framesFromEvent) {
-                  if (framesFromEvent) {
-                    let flag2 = false;
-                    if (framesFromEvent1.length === framesFromEvent.length) {
-                      let num = 0;
-                      flag2 = true;
-                      if (0 < framesFromEvent1.length) {
-                        flag2 = false;
-                        while (framesFromEvent1[num].filename === framesFromEvent[num].filename) {
-                          flag2 = false;
-                          if (tmp5.lineno !== tmp6.lineno) {
-                            break;
-                          } else {
-                            flag2 = false;
-                            if (tmp5.colno !== tmp6.colno) {
-                              break;
-                            } else {
-                              flag2 = false;
-                              if (tmp5.function !== tmp6.function) {
-                                break;
-                              } else {
-                                let sum = num + 1;
-                                num = sum;
-                                flag2 = true;
-                                if (sum >= framesFromEvent1.length) {
-                                  break;
-                                }
-                              }
-                            }
-                          }
-                        }
-                      }
-                    }
-                  } else {
-                    flag2 = false;
+require = arg1;
+let dependencyMap = arg6;
+
+export const DEFAULT_TRANSPORT_BUFFER_SIZE = 64;
+export const createTransport = function createTransport(bufferSize, arg1) {
+  _require = bufferSize;
+  dependencyMap = arg1;
+  let promiseBuffer = arg2;
+  if (arg2 === undefined) {
+    let obj = require("12891__.js");
+    let num = bufferSize.bufferSize;
+    if (!num) {
+      num = 64;
+    }
+    promiseBuffer = obj.makePromiseBuffer(num);
+  }
+  closure_3 = {};
+  obj = {
+    send(arg0) {
+      const items = [];
+      bufferSize(dependencyMap[1]).forEachEnvelopeItem(arg0, (arg0, arg1) => {
+        const result = _mod12871.envelopeItemTypeToDataCategory(arg1);
+        if (obj2.isRateLimited(closure_3, result)) {
+          if ("event" === arg1) {
+            const _Array = Array;
+            let tmp6;
+            if (Array.isArray(arg0)) {
+              tmp6 = arg0[1];
+            }
+            const tmp4 = tmp6;
+          }
+          items.recordDroppedEvent("ratelimit_backoff", result, tmp4);
+        } else {
+          items.push(arg0);
+        }
+        obj2 = _mod12892;
+      });
+      if (0 === items.length) {
+        let tmpResult = bufferSize(tmp2[3]);
+        return tmpResult.resolvedSyncPromise({});
+      } else {
+        tmpResult = bufferSize(tmp2[1]);
+        dependencyMap = tmpResult.createEnvelope(arg0[0], items);
+        function recordEnvelopeLoss(arg0) {}
+        return recordEnvelopeLoss
+          .add(() => {
+            const obj = { body: _mod12871.serializeEnvelope(dependencyMap) };
+            return dependencyMap(obj).then(
+              (statusCode) => {
+                let DEBUG_BUILD = undefined !== statusCode.statusCode;
+                if (DEBUG_BUILD) {
+                  let tmp = statusCode.statusCode < 200;
+                  if (!tmp) {
+                    tmp = statusCode.statusCode >= 300;
                   }
+                  DEBUG_BUILD = tmp;
+                }
+                if (DEBUG_BUILD) {
+                  DEBUG_BUILD = items(12855).DEBUG_BUILD;
+                }
+                if (DEBUG_BUILD) {
+                  const logger = items(12827).logger;
+                  const _HermesInternal = HermesInternal;
+                  logger.warn("Sentry responded with status code " + statusCode.statusCode + " to sent event.");
+                }
+                closure_3 = items(12892).updateRateLimits(closure_3, statusCode);
+                return statusCode;
+              },
+              (arg0) => {
+                if (typeof recordEnvelopeLoss === "function") {
+                  const network_error = "network_error";
+                  closure_0(12871).forEachEnvelopeItem(dependencyMap, (arg0, arg1) => {
+                    if ("event" === arg1) {
+                      const _Array = Array;
+                      let tmp4;
+                      if (Array.isArray(arg0)) {
+                        tmp4 = arg0[1];
+                      }
+                      const tmp = tmp4;
+                    }
+                    closure_2_0.recordDroppedEvent(
+                      network_error,
+                      items(closure_1[1]).envelopeItemTypeToDataCategory(arg1),
+                      tmp,
+                    );
+                  });
+                  throw arg0;
                 } else {
-                  flag2 = false;
+                  throw new TypeError("Trying to call a non-function");
+                }
+              },
+            );
+          })
+          .then(
+            (result) => result,
+            (arg0) => {
+              if (arg0 instanceof _mod12884.SentryError) {
+                if (_mod12855.DEBUG_BUILD) {
+                  const logger = _mod12827.logger;
+                  logger.error("Skipped sending event because buffer is full.");
+                }
+                if (typeof recordEnvelopeLoss === "function") {
+                  const queue_overflow = "queue_overflow";
+                  let tmpResult = _mod12871;
+                  tmpResult.forEachEnvelopeItem(closure_1, (arg0, arg1) => {
+                    if ("event" === arg1) {
+                      const _Array = Array;
+                      let tmp4;
+                      if (Array.isArray(arg0)) {
+                        tmp4 = arg0[1];
+                      }
+                      const tmp = tmp4;
+                    }
+                    closure_2_0.recordDroppedEvent(
+                      network_error,
+                      items(closure_1[1]).envelopeItemTypeToDataCategory(arg1),
+                      tmp,
+                    );
+                  });
+                  tmpResult = _mod12851;
+                  return tmpResult.resolvedSyncPromise({});
+                } else {
+                  throw new TypeError("Trying to call a non-function");
                 }
               } else {
-                flag2 = true;
+                throw arg0;
               }
-              flag = false;
-              if (flag2) {
-                flag = true;
-              }
-            }
-          }
-        } else {
-          flag = false;
-        }
-      } else {
-        flag = false;
+            },
+          );
       }
-    } else {
-      flag = false;
-    }
-    let tmp9 = flag;
-    if (!tmp9) {
-      let flag3 = false;
-      if (message2.exception && message2.exception.values && message2.exception.values[0]) {
-        flag3 = false;
-        if (iter2) {
-          flag3 = false;
-          if (iter.type === iter2.type) {
-            flag3 = false;
-            if (iter.value === iter2.value) {
-              flag3 = false;
-              if (_isSameFingerprint(message, message2)) {
-                const framesFromEvent2 = stackParserFromStackParserOptions.getFramesFromEvent(message);
-                const framesFromEvent3 = stackParserFromStackParserOptions.getFramesFromEvent(message2);
-                if (framesFromEvent2) {
-                  if (!framesFromEvent2) {
-                    if (framesFromEvent2) {
-                      let flag4 = false;
-                      if (framesFromEvent3.length === framesFromEvent2.length) {
-                        let num2 = 0;
-                        flag4 = true;
-                        if (0 < framesFromEvent3.length) {
-                          flag4 = false;
-                          while (framesFromEvent3[num2].filename === framesFromEvent2[num2].filename) {
-                            flag4 = false;
-                            if (tmp12.lineno !== tmp13.lineno) {
-                              break;
-                            } else {
-                              flag4 = false;
-                              if (tmp12.colno !== tmp13.colno) {
-                                break;
-                              } else {
-                                flag4 = false;
-                                if (tmp12.function !== tmp13.function) {
-                                  break;
-                                } else {
-                                  let sum1 = num2 + 1;
-                                  num2 = sum1;
-                                  flag4 = true;
-                                  if (sum1 >= framesFromEvent3.length) {
-                                    break;
-                                  }
-                                }
-                              }
-                            }
-                          }
-                        }
-                      }
-                    } else {
-                      flag4 = false;
-                    }
-                  } else {
-                    flag4 = false;
-                  }
-                } else {
-                  flag4 = true;
-                }
-                flag3 = false;
-                if (flag4) {
-                  flag3 = true;
-                }
-              }
-            }
-          }
-        }
-      }
-      tmp9 = flag3;
-    }
-    tmp = tmp9;
-  }
-  return tmp;
-}
-function _isSameFingerprint(fingerprint, fingerprint2) {
-  fingerprint = fingerprint.fingerprint;
-  fingerprint2 = fingerprint2.fingerprint;
-  if (!fingerprint) {
-    if (!fingerprint2) {
-      return true;
-    }
-  }
-  if (!fingerprint) {
-    try {
-      const joined = fingerprint.join("");
-      return joined === fingerprint2.join("");
-    } catch (err) {
-      return false;
-    }
-  }
-  return false;
-}
-
-export { _shouldDropEvent };
-export const dedupeIntegration = setupIntegration.defineIntegration(() => ({
-  name: "Dedupe",
-  processEvent(type) {
-    if (type.type) {
-      return type;
-    } else {
-      try {
-        if (_shouldDropEvent(type, closure_0)) {
-          if (_mod12829.DEBUG_BUILD) {
-            const logger = _mod12801.logger;
-            logger.warn("Event dropped due to being a duplicate of previously captured event.");
-          }
-          return null;
-        } else {
-          closure_0 = type;
-          return type;
-        }
-      } catch (err) {}
-    }
-  },
-}));
+      let obj = bufferSize(dependencyMap[1]);
+    },
+    flush(arg0) {
+      return promiseBuffer.drain(arg0);
+    },
+  };
+  return obj;
+};

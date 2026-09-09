@@ -1,15 +1,15 @@
 // _runtime/metro/04077__.js
-import 03654__ from "03654__.js";
-import _typeof from "03650__.js";
-import requiredArgs from "../03651_requiredArgs.js";
+import 03667__ from "03667__.js";
+import _typeof from "03663__.js";
+import requiredArgs from "../03664_requiredArgs.js";
 
-if (!module_3654) {
-  let obj = { default: module_3654 };
+if (!module_3667) {
+  let obj = { default: module_3667 };
   let tmp3 = obj;
 } else {
-  tmp3 = module_3654;
+  tmp3 = module_3667;
 }
-module_3654 = tmp3;
+module_3667 = tmp3;
 if (!_typeof) {
   obj = { default: _typeof };
   let tmp5 = obj;
@@ -25,17 +25,10 @@ if (!requiredArgs) {
 }
 requiredArgs = tmp7;
 
-export default function setYear(date, arg1) {
+export default function setDate(module_3667, arg1) {
   requiredArgs.default(2, arguments);
-  const defaultResult1 = _typeof.default(date);
-  if (isNaN(defaultResult1.getTime())) {
-    const _Date = Date;
-    date = new Date(NaN);
-    return date;
-  } else {
-    defaultResult1.setFullYear(defaultResult2);
-    return defaultResult1;
-  }
-  defaultResult2 = module_3654.default(arg1);
+  const defaultResult1 = _typeof.default(module_3667);
+  defaultResult1.setDate(module_3667.default(arg1));
+  return defaultResult1;
 };
 export default exports.default;

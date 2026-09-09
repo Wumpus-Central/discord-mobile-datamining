@@ -1,14 +1,14 @@
 // _runtime/metro/04013__.js
-import 04005__ from "04005__.js";
-import requiredArgs from "../03651_requiredArgs.js";
+import startOfMinute from "../03872_startOfMinute.js";
+import requiredArgs from "../03664_requiredArgs.js";
 
-if (!module_4005) {
-  let obj = { default: module_4005 };
+if (!startOfMinute) {
+  let obj = { default: startOfMinute };
   let tmp3 = obj;
 } else {
-  tmp3 = module_4005;
+  tmp3 = startOfMinute;
 }
-module_4005 = tmp3;
+startOfMinute = tmp3;
 if (!requiredArgs) {
   obj = { default: requiredArgs };
   let tmp5 = obj;
@@ -17,8 +17,10 @@ if (!requiredArgs) {
 }
 requiredArgs = tmp5;
 
-export default function isThisYear(arg0) {
-  requiredArgs.default(1, arguments);
-  return module_4005.default(arg0, Date.now());
+export default function isSameMinute(arg0, arg1) {
+  requiredArgs.default(2, arguments);
+  const defaultResult1 = startOfMinute.default(arg0);
+  const time = defaultResult1.getTime();
+  return time === startOfMinute.default(arg1).getTime();
 };
 export default exports.default;

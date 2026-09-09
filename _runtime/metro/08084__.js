@@ -3,11 +3,11 @@ import registerAsset from "01122__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
-  width: 24,
-  height: 24,
+  httpServerLocation: "/assets/images/native/premium/backgrounds",
+  width: 195,
+  height: 95,
   scales: [2, 3],
-  hash: "a333b4d54b908efbf29afe6221422e97",
-  name: "GifIcon",
+  hash: "6767aee50457385555e7e15b59dff5c6",
+  name: "img_nitro_ticket_bg",
   type: "png",
 });

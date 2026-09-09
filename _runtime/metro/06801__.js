@@ -1,126 +1,140 @@
 // _runtime/metro/06801__.js
-import _mod19 from "00019__.js";
-import GESTURE_SOURCE from "../06628_GESTURE_SOURCE.js";
-import get_ActivityIndicator from "00017__.js";
+import _modDef6802 from "06802__.js";
+import _objectWithoutProperties from "00109__objectWithoutProperties.js";
+import _classCallCheck from "00041__classCallCheck.js";
+import _createClass from "00042__createClass.js";
+import metroRequire from "00093__possibleConstructorReturn.js";
+import _getPrototypeOf from "../00095__getPrototypeOf.js";
+import _inherits from "../00098__inherits.js";
+import noop from "00019__.js";
 
-const useEffect = _mod19.useEffect;
-({ Keyboard: c3, Platform } = get_ActivityIndicator);
-const keyboardDidShow = "keyboardDidShow";
-const keyboardDidHide = "keyboardDidHide";
-let closure_6 = {
-  code: "function pnpm_useKeyboardTs1(state,height,duration,easing,bottomOffset){const{KEYBOARD_STATE,shouldHandleKeyboardEvents,temporaryCachedKeyboardEvent,keyboardHeight,includeBottomOffset,keyboardAnimationDuration,keyboardAnimationEasing,keyboardState}=this.__closure;if(state===KEYBOARD_STATE.SHOWN&&!shouldHandleKeyboardEvents.value){temporaryCachedKeyboardEvent.value=[state,height,duration,easing];return;}keyboardHeight.value=state===KEYBOARD_STATE.SHOWN?height:keyboardHeight.value;if(bottomOffset&&includeBottomOffset){keyboardHeight.value=keyboardHeight.value+bottomOffset;}keyboardAnimationDuration.value=duration;keyboardAnimationEasing.value=easing;keyboardState.value=state;temporaryCachedKeyboardEvent.value=[];}",
-};
-let closure_7 = {
-  code: "function pnpm_useKeyboardTs2(){const{shouldHandleKeyboardEvents}=this.__closure;return shouldHandleKeyboardEvents.value;}",
-};
-const __initData = {
-  code: "function pnpm_useKeyboardTs3(result){const{temporaryCachedKeyboardEvent,handleKeyboardEvent}=this.__closure;const params=temporaryCachedKeyboardEvent.value;if(result&&params.length>0){handleKeyboardEvent(params[0],params[1],params[2],params[3]);}}",
-};
-
-export const useKeyboard = (includeBottomOffset) => {
-  includeBottomOffset = includeBottomOffset.includeBottomOffset;
-  let shouldHandleKeyboardEvents;
-  let obj = includeBottomOffset(shouldHandleKeyboardEvents[2]);
-  shouldHandleKeyboardEvents = obj.useSharedValue(false);
-  const state = includeBottomOffset(shouldHandleKeyboardEvents[2]).useSharedValue(
-    includeBottomOffset(shouldHandleKeyboardEvents[3]).KEYBOARD_STATE.UNDETERMINED,
-  );
-  const obj2 = includeBottomOffset(shouldHandleKeyboardEvents[2]);
-  const height = includeBottomOffset(shouldHandleKeyboardEvents[2]).useSharedValue(0);
-  const obj3 = includeBottomOffset(shouldHandleKeyboardEvents[2]);
-  const animationEasing = includeBottomOffset(shouldHandleKeyboardEvents[2]).useSharedValue("keyboard");
-  const obj4 = includeBottomOffset(shouldHandleKeyboardEvents[2]);
-  const animationDuration = includeBottomOffset(shouldHandleKeyboardEvents[2]).useSharedValue(500);
-  const obj5 = includeBottomOffset(shouldHandleKeyboardEvents[2]);
-  const sharedValue5 = includeBottomOffset(shouldHandleKeyboardEvents[2]).useSharedValue([]);
-  const obj6 = includeBottomOffset(shouldHandleKeyboardEvents[2]);
-  const fn = function v(value, arg1, value2, value3, arg4) {
-    value = arg1;
-    if (value === GESTURE_SOURCE.KEYBOARD_STATE.SHOWN) {
-      if (!shouldHandleKeyboardEvents.value) {
-        const items = [value, value, value2, value3];
-        sharedValue5.value = items;
-      }
+const TouchableHighlight = fn;
+function _isNativeReflectConstruct() {
+  try {
+    const _Boolean = Boolean;
+    const call = valueOf.call;
+    const _Reflect = Reflect;
+    const _Boolean2 = Boolean;
+    if (typeof call === "unknown") {
+      let callResult = valueOf();
+    } else {
+      callResult = call(constructResult);
     }
-    if (value !== GESTURE_SOURCE.KEYBOARD_STATE.SHOWN) {
-      value = height.value;
-    }
-    height.value = value;
-    let tmp5 = arg4;
-    if (arg4) {
-      tmp5 = includeBottomOffset;
-    }
-    if (tmp5) {
-      height.value = height.value + arg4;
-    }
-    animationDuration.value = value2;
-    animationEasing.value = value3;
-    state.value = value;
-    sharedValue5.value = [];
-  };
-  obj = {
-    KEYBOARD_STATE: includeBottomOffset(shouldHandleKeyboardEvents[3]).KEYBOARD_STATE,
-    shouldHandleKeyboardEvents,
-    temporaryCachedKeyboardEvent: sharedValue5,
-    keyboardHeight: height,
-    includeBottomOffset,
-    keyboardAnimationDuration: animationDuration,
-    keyboardAnimationEasing: animationEasing,
-    keyboardState: state,
-  };
-  fn.__closure = obj;
-  fn.__workletHash = 7905199978020;
-  fn.__initData = sharedValue5;
-  const workletCallback = includeBottomOffset(shouldHandleKeyboardEvents[2]).useWorkletCallback(fn, []);
-  let items = [workletCallback];
-  state(() => {
-    closure_0 = height.addListener(animationEasing, (endCoordinates) => {
-      const obj = includeBottomOffset(shouldHandleKeyboardEvents[2]);
-      ({ duration, easing } = endCoordinates);
-      includeBottomOffset(shouldHandleKeyboardEvents[2]).runOnUI(workletCallback)(
-        includeBottomOffset(shouldHandleKeyboardEvents[3]).KEYBOARD_STATE.SHOWN,
-        endCoordinates.endCoordinates.height,
-        duration,
-        easing,
-        includeBottomOffset(shouldHandleKeyboardEvents[3]).SCREEN_HEIGHT -
-          endCoordinates.endCoordinates.height -
-          endCoordinates.endCoordinates.screenY,
-      );
-    });
-    closure_1 = height.addListener(animationDuration, (endCoordinates) => {
-      const obj = includeBottomOffset(shouldHandleKeyboardEvents[2]);
-      includeBottomOffset(shouldHandleKeyboardEvents[2]).runOnUI(workletCallback)(
-        includeBottomOffset(shouldHandleKeyboardEvents[3]).KEYBOARD_STATE.HIDDEN,
-        endCoordinates.endCoordinates.height,
-        endCoordinates.duration,
-        endCoordinates.easing,
-      );
-    });
-    return () => {
-      closure_0.remove();
-      closure_1.remove();
+    closure_0 = !callResult;
+    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
+      return closure_0;
     };
-  }, items);
-  const obj7 = includeBottomOffset(shouldHandleKeyboardEvents[2]);
-  const fn2 = function b() {
-    return shouldHandleKeyboardEvents.value;
-  };
-  fn2.__closure = { shouldHandleKeyboardEvents };
-  fn2.__workletHash = 11615500623565;
-  fn2.__initData = workletCallback;
-  const fn3 = function y(arg0) {
-    let tmp = arg0;
-    value = sharedValue5.value;
-    if (arg0) {
-      tmp = value.length > 0;
+    return _isNativeReflectConstruct();
+  } catch (err) {}
+}
+let closure_3 = ["style"];
+get_ActivityIndicator = fn(17);
+({ StyleSheet: closure_9, View: c10 } = get_ActivityIndicator);
+const jsx = fn(21).jsx;
+class TouchableHighlight {
+  constructor(arg0) {
+    self = this;
+    tmp = hasOwnProperty(this, TouchableHighlight);
+    items = [];
+    items[0] = global;
+    tmp2 = closure_7;
+    obj = closure_7(TouchableHighlight);
+    tmp3 = metroRequire;
+    if (closure_12()) {
+      tmp5 = globalThis;
+      _Reflect = Reflect;
+      constructResult = Reflect.construct(obj, items, tmp2(self).constructor);
+    } else {
+      constructResult = obj.apply(self, items);
     }
-    if (tmp) {
-      workletCallback(value[0], value[1], value[2], value[3]);
+    tmp3Result = tmp3(self, constructResult);
+    closure_0 = tmp3Result;
+    tmp3Result.showUnderlay = () => {
+      let obj = closure_0;
+      if (closure_0.hasPressHandler()) {
+        obj = { extraChildStyle: null, extraUnderlayStyle: null };
+        obj = { opacity: null };
+        obj.opacity = obj.props.activeOpacity;
+        obj.extraChildStyle = obj;
+        const obj1 = { backgroundColor: obj.props.underlayColor };
+        obj.extraUnderlayStyle = obj1;
+        obj.setState(obj);
+        const props = obj.props;
+        const onShowUnderlay = props.onShowUnderlay;
+        if (onShowUnderlay != null) {
+          onShowUnderlay();
+        }
+      }
+    };
+    tmp3Result.hasPressHandler = () =>
+      closure_0.props.onPress || closure_0.props.onPressIn || closure_0.props.onPressOut || closure_0.props.onLongPress;
+    tmp3Result.hideUnderlay = () => {
+      closure_0.setState({ extraChildStyle: null, extraUnderlayStyle: null });
+      const props = closure_0.props;
+      const onHideUnderlay = props.onHideUnderlay;
+      if (onHideUnderlay != null) {
+        onHideUnderlay();
+      }
+    };
+    tmp3Result.onStateChange = (arg0, arg1) => {
+      if (arg1 === TouchableHighlight(6802).TOUCHABLE_STATE.BEGAN) {
+        closure_0.showUnderlay();
+      } else {
+        if (!tmp3) {
+          closure_0.hideUnderlay();
+        }
+        tmp3 =
+          arg1 !== TouchableHighlight(6802).TOUCHABLE_STATE.UNDETERMINED &&
+          arg1 !== TouchableHighlight(6802).TOUCHABLE_STATE.MOVED_OUTSIDE;
+      }
+    };
+    tmp3Result.state = { extraChildStyle: null, extraUnderlayStyle: null };
+    return tmp3Result;
+  }
+}
+_inherits(TouchableHighlight, fn(19).Component);
+const entry = {
+  key: "renderChildren",
+  value: function renderChildren() {
+    const self = this;
+    if (this.props.children) {
+      const Children = noop.Children;
+      const onlyResult = Children.only(self.props.children);
+      const obj = { style: React7.compose(onlyResult.props.style, self.state.extraChildStyle) };
+      return noop.cloneElement(onlyResult, obj);
+    } else {
+      return <closure_1_10 />;
     }
-  };
-  fn3.__closure = { temporaryCachedKeyboardEvent: sharedValue5, handleKeyboardEvent: workletCallback };
-  fn3.__workletHash = 16636741173520;
-  fn3.__initData = __initData;
-  const animatedReaction = includeBottomOffset(shouldHandleKeyboardEvents[2]).useAnimatedReaction(fn2, fn3, []);
-  return { state, height, animationEasing, animationDuration, shouldHandleKeyboardEvents };
+  },
 };
+let items = [
+  entry,
+  {
+    key: "render",
+    value: function render() {
+      const self = this;
+      const props = this.props;
+      let style = props.style;
+      if (undefined === style) {
+        style = {};
+      }
+      const obj = {};
+      const tmp = _objectWithoutProperties(props, closure_3);
+      const merged = Object.assign(tmp);
+      const items = [style, self.state.extraUnderlayStyle];
+      obj.style = items;
+      obj.onStateChange = self.onStateChange;
+      obj.children = self.renderChildren();
+      return jsx(_modDef6802, {});
+    },
+  },
+];
+const importDefaultResultResult = _createClass(TouchableHighlight, items);
+let obj = {};
+let merged = Object.assign(_modDef6802.defaultProps);
+obj.activeOpacity = 0.85;
+obj.delayPressOut = 100;
+obj.underlayColor = "black";
+importDefaultResultResult.defaultProps = obj;
+
+export default importDefaultResultResult;
