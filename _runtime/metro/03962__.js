@@ -1,24 +1,16 @@
 // _runtime/metro/03962__.js
-import _typeof from "03663__.js";
-import requiredArgs from "../03664_requiredArgs.js";
+import _mod3698 from "03698__.js";
+import assign from "../03943_assign.js";
 
-if (!_typeof) {
-  let obj = { default: _typeof };
+if (!assign) {
+  const obj = { default: assign };
   let tmp3 = obj;
 } else {
-  tmp3 = _typeof;
+  tmp3 = assign;
 }
-_typeof = tmp3;
-if (!requiredArgs) {
-  obj = { default: requiredArgs };
-  let tmp5 = obj;
-} else {
-  tmp5 = requiredArgs;
-}
-requiredArgs = tmp5;
+assign = tmp3;
 
-export default function isFriday(arg0) {
-  requiredArgs.default(1, arguments);
-  return 5 === _typeof.default(arg0).getDay();
+export default function getDefaultOptions() {
+  return assign.default({}, _mod3698.getDefaultOptions());
 };
 export default exports.default;

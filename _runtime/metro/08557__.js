@@ -1,14 +1,14 @@
 // _runtime/metro/08557__.js
 import _possibleConstructorReturnDefault from "00093__possibleConstructorReturn.js";
-import _modDef8508 from "08508__.js";
 import _modDef8558 from "08558__.js";
+import _modDef8560 from "08560__.js";
 import _classCallCheck from "00041__classCallCheck.js";
 import _createClass from "00042__createClass.js";
 import _getPrototypeOf from "../00095__getPrototypeOf.js";
 import _inherits from "../00098__inherits.js";
 import noop from "00019__.js";
 
-const Line = fn;
+const FeBlend = fn;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -29,12 +29,12 @@ function _isNativeReflectConstruct() {
 }
 _possibleConstructorReturnDefault;
 const jsx = fn(21).jsx;
-class Line {
+class FeBlend {
   constructor() {
     self = this;
-    tmp = closure_3(this, Line);
+    tmp = closure_3(this, FeBlend);
     tmp2 = hasOwnProperty;
-    obj = hasOwnProperty(Line);
+    obj = hasOwnProperty(FeBlend);
     tmp3 = closure_4;
     if (closure_7()) {
       tmp7 = globalThis;
@@ -49,36 +49,36 @@ class Line {
     return tmp3(self, constructResult);
   }
 }
-_inherits(Line, _modDef8508);
+_inherits(FeBlend, _modDef8560);
 const entry = {
   key: "render",
   value: function render() {
     const self = this;
-    const props = this.props;
-    let obj = {};
-    ({ x1, y1, x2, y2 } = props);
-    const merged = Object.assign(Line(8499).extract(this, props));
-    obj.x1 = x1;
-    obj.y1 = y1;
-    obj.x2 = x2;
-    obj.y2 = y2;
-    obj = {
+    const obj = {
       ref(arg0) {
         return self.refMethod(arg0);
       },
     };
-    const obj2 = Line(8499);
-    const merged1 = Object.assign(obj);
-    return jsx(_modDef8558, {
-      ref(arg0) {
-        return self.refMethod(arg0);
-      },
-    });
+    const merged = Object.assign(FeBlend(8559).extractFilter(this.props));
+    const obj2 = FeBlend(8559);
+    const merged1 = Object.assign(FeBlend(8559).extractIn(this.props));
+    const obj3 = FeBlend(8559);
+    const merged2 = Object.assign(FeBlend(8559).extractFeBlend(this.props));
+    return (
+      <tmp
+        ref={function ref(arg0) {
+          return self.refMethod(arg0);
+        }}
+      />
+    );
   },
 };
 const items = [entry];
-const importDefaultResultResult = _createClass(Line, items);
-importDefaultResultResult.displayName = "Line";
-importDefaultResultResult.defaultProps = { x1: 0, y1: 0, x2: 0, y2: 0 };
+const importDefaultResultResult = _createClass(FeBlend, items);
+importDefaultResultResult.displayName = "FeBlend";
+let obj = {};
+let merged = Object.assign(importDefaultResultResult.defaultPrimitiveProps);
+obj.mode = "normal";
+importDefaultResultResult.defaultProps = obj;
 
 export default importDefaultResultResult;

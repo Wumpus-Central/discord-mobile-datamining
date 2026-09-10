@@ -3,11 +3,11 @@ import registerAsset from "01122__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/stage_channels/native/images",
-  width: 24,
-  height: 24,
-  scales: [1, 2, 3],
-  hash: "a9e66a93023e2550ab4df6fac50c261a",
-  name: "ic_move_to_speaker",
+  httpServerLocation: "/assets/modules/instant_invite/native/images",
+  width: 60,
+  height: 60,
+  scales: [2, 3],
+  hash: "a07985aa2246ccd4facb50f3c745ccda",
+  name: "twitter",
   type: "png",
 });

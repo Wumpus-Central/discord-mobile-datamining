@@ -3,11 +3,11 @@ import registerAsset from "01122__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/icons",
-  width: 16,
-  height: 16,
-  scales: [2, 3],
-  hash: "31757ea45ee4fb60779fd700caf7d93e",
-  name: "ic_nitro_wheel_gradient_purple",
+  httpServerLocation: "/assets/modules/stage_channels/native/images",
+  width: 24,
+  height: 24,
+  scales: [1, 2, 3],
+  hash: "a9e66a93023e2550ab4df6fac50c261a",
+  name: "ic_move_to_speaker",
   type: "png",
 });

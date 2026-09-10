@@ -1,8 +1,13 @@
 // _runtime/metro/06662__.js
-function print() {}
-const frozen = Object.freeze(print);
+import registerAsset from "01122__.js";
 
-export { print };
-export const enableLogging = (arg0) => {
-  console.warn("[BottomSheet] could not enable logging on production!");
-};
+export default registerAsset.registerAsset({
+  __packager_asset: true,
+  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
+  width: 24,
+  height: 24,
+  scales: [2, 3],
+  hash: "db11ea9da81d79144310eac53428fbe9",
+  name: "CircleErrorIcon-primary",
+  type: "png",
+});

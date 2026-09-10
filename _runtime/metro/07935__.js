@@ -1,39 +1,13 @@
 // _runtime/metro/07935__.js
-import Link from "../01484_Link.js";
-import noop from "00019__.js";
+import registerAsset from "01122__.js";
 
-require = arg1;
-
-export const useInvalidPreventRemoveError = function useInvalidPreventRemoveError(descriptors) {
-  const first = Object.keys(Link.usePreventRemoveContext().preventedRoutes)[0];
-  let prop;
-  if (descriptors[first] != null) {
-    const options = tmp2.options;
-    if (options != null) {
-      prop = options.headerBackButtonMenuEnabled;
-    }
-  }
-  let name;
-  if (descriptors[first] != null) {
-    const route = tmp2.route;
-    if (route != null) {
-      name = route.name;
-    }
-  }
-  const items = [first, prop, name];
-  const effect = noop.useEffect(() => {
-    if (null != first) {
-      if (prop) {
-        const _HermesInternal = HermesInternal;
-        const _console = console;
-        console.error(
-          "The screen " +
-            name +
-            " uses 'usePreventRemove' hook alongside 'headerBackButtonMenuEnabled: true', which is not supported. \n\nConsider removing 'headerBackButtonMenuEnabled: true' from " +
-            name +
-            " screen to get rid of this error.",
-        );
-      }
-    }
-  }, items);
-};
+export default registerAsset.registerAsset({
+  __packager_asset: true,
+  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
+  width: 24,
+  height: 24,
+  scales: [2, 3],
+  hash: "b5ac530e11705d268a2dd9d0cf020b0a",
+  name: "PhoneHangUpIcon",
+  type: "png",
+});

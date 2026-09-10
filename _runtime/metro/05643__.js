@@ -3,11 +3,11 @@ import registerAsset from "01122__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
+  httpServerLocation: "/assets/images/native/icons",
   width: 24,
-  height: 24,
+  height: 23,
   scales: [2, 3],
-  hash: "24def842b7fc85d108b018aef0f23eb6",
-  name: "ArrowLargeLeftIcon",
+  hash: "dad967f4b91a8b9097664b2a63d76758",
+  name: "ic_verified_guild_icon_black_24px",
   type: "png",
 });

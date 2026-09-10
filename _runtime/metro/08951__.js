@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "dc76a43601a93031b91e3ad463d63b85",
-  name: "ThumbsDownIcon",
+  hash: "36a084fbace40e0af86aab037df7e8b7",
+  name: "PlaystationNeutralIcon",
   type: "png",
 });

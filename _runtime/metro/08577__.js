@@ -1,6 +1,6 @@
 // _runtime/metro/08577__.js
 import _possibleConstructorReturnDefault from "00093__possibleConstructorReturn.js";
-import _modDef8508 from "08508__.js";
+import _modDef8560 from "08560__.js";
 import _modDef8578 from "08578__.js";
 import _classCallCheck from "00041__classCallCheck.js";
 import _createClass from "00042__createClass.js";
@@ -8,7 +8,7 @@ import _getPrototypeOf from "../00095__getPrototypeOf.js";
 import _inherits from "../00098__inherits.js";
 import noop from "00019__.js";
 
-const Rect = fn;
+const FeMerge = fn;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -29,12 +29,12 @@ function _isNativeReflectConstruct() {
 }
 _possibleConstructorReturnDefault;
 const jsx = fn(21).jsx;
-class Rect {
+class FeMerge {
   constructor() {
     self = this;
-    tmp = closure_3(this, Rect);
+    tmp = closure_3(this, FeMerge);
     tmp2 = hasOwnProperty;
-    obj = hasOwnProperty(Rect);
+    obj = hasOwnProperty(FeMerge);
     tmp3 = closure_4;
     if (closure_7()) {
       tmp7 = globalThis;
@@ -49,20 +49,19 @@ class Rect {
     return tmp3(self, constructResult);
   }
 }
-_inherits(Rect, _modDef8508);
+_inherits(FeMerge, _modDef8560);
 const entry = {
   key: "render",
   value: function render() {
     const self = this;
-    const props = this.props;
-    const size = { x: props.x, y: props.y, width: props.width, height: props.height, rx: props.rx, ry: props.ry };
     const obj = {
       ref(arg0) {
         return self.refMethod(arg0);
       },
     };
-    const merged = Object.assign(Rect(8499).withoutXY(this, props));
-    const merged1 = Object.assign(size);
+    const merged = Object.assign(FeMerge(8559).extractFilter(this.props));
+    const obj2 = FeMerge(8559);
+    const merged1 = Object.assign(FeMerge(8559).extractFeMerge(this.props, this));
     return (
       <tmp
         ref={function ref(arg0) {
@@ -73,8 +72,9 @@ const entry = {
   },
 };
 const items = [entry];
-const importDefaultResultResult = _createClass(Rect, items);
-importDefaultResultResult.displayName = "Rect";
-importDefaultResultResult.defaultProps = { x: 0, y: 0, width: 0, height: 0 };
+const importDefaultResultResult = _createClass(FeMerge, items);
+importDefaultResultResult.displayName = "FeMerge";
+let merged = Object.assign(importDefaultResultResult.defaultPrimitiveProps);
+importDefaultResultResult.defaultProps = {};
 
 export default importDefaultResultResult;

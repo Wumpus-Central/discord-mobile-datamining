@@ -4,10 +4,10 @@ import registerAsset from "01122__.js";
 export default registerAsset.registerAsset({
   __packager_asset: true,
   httpServerLocation: "/assets/images/native/premium/illustrations",
-  width: 324,
-  height: 187,
+  width: 51,
+  height: 36,
   scales: [2, 3],
-  hash: "c300172c07e69fb8041898afe2aa282d",
-  name: "img_tier_0_marketing_boosting",
+  hash: "6a44051f0a6b82f14b7f681cb1af8576",
+  name: "img_classic_mobile",
   type: "png",
 });

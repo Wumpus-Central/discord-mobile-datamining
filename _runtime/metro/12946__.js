@@ -1,88 +1,73 @@
 // _runtime/metro/12946__.js
-import _readOnlyError from "00377__readOnlyError.js";
-import _classCallCheck from "00041__classCallCheck.js";
-import _createClass from "00042__createClass.js";
+import _mod12868 from "12868__.js";
 
-class LRUMap {
-  constructor(arg0) {
-    tmp = closure_0(this, LRUMap);
-    this._maxSize = global;
-    map = new Map();
-    this._cache = map;
-    return;
-  }
+require = arg1;
+const dependencyMap = arg6;
+function getMetadataForUrl(fn, arg1) {
+  (function ensureMetadataStacksAreParsed(fn) {
+    if (_mod12868.GLOBAL_OBJ._sentryModuleMetadata) {
+      const _Object = Object;
+      const keys = Object.keys(_mod12868.GLOBAL_OBJ._sentryModuleMetadata);
+      for (const item10026 of keys) {
+        let tmp16 = _mod12868.GLOBAL_OBJ._sentryModuleMetadata[item10026];
+        if (!set.has(item10026)) {
+          let addResult = set.add(item10026);
+          let obj2 = arg0(item10026);
+          let reversed = obj2.reverse();
+          for (const item10050 of reversed) {
+            if (item10050.filename) {
+              let result = map.set(tmp22.filename, tmp16);
+              obj3.return();
+              break;
+            }
+            continue;
+          }
+        }
+        continue;
+      }
+    }
+  })(fn);
+  return map.get(arg1);
 }
-_classCallCheck = LRUMap;
-let items = [
-  {
-    key: "size",
-    get() {
-      return this._cache.size;
-    },
-  },
-  {
-    key: "get",
-    value: function get(arg0) {
-      const self = this;
-      const _cache = this._cache;
-      value = _cache.get(arg0);
-      if (undefined !== value) {
-        const _cache2 = self._cache;
-        _cache2.delete(arg0);
-        const _cache3 = self._cache;
-        const result = _cache3.set(arg0, value);
-        return value;
-      }
-    },
-  },
-  {
-    key: "set",
-    value: function set(arg0, arg1) {
-      const self = this;
-      if (this._cache.size >= this._maxSize) {
-        ({ _cache, _cache: _cache2 } = self);
-        _cache.delete(_cache2.keys().next().value);
-        const iter = _cache2.keys();
-      }
-      const _cache3 = self._cache;
-      const result = _cache3.set(arg0, arg1);
-    },
-  },
-  {
-    key: "remove",
-    value: function remove(arg0) {
-      const _cache = this._cache;
-      value = _cache.get(arg0);
-      if (value) {
-        const _cache2 = this._cache;
-        _cache2.delete(arg0);
-      }
-      return value;
-    },
-  },
-  {
-    key: "clear",
-    value: function clear() {
-      const _cache = this._cache;
-      _cache.clear();
-    },
-  },
-  {
-    key: "keys",
-    value: function keys() {
-      const _cache = this._cache;
-      return Array.from(_cache.keys());
-    },
-  },
-  {
-    key: "values",
-    value: function values() {
-      const items = [];
-      const _cache = this._cache;
-      const item = _cache.forEach((item) => items.push(item));
-      return items;
-    },
-  },
-];
+const map = new Map();
+const set = new Set();
 
-export const LRUMap = _createClass(LRUMap, items);
+export const addMetadataToStackFrames = function addMetadataToStackFrames(arg0, exception) {
+  closure_0 = arg0;
+  try {
+    const values = exception.exception.values;
+    const item = values.forEach((stacktrace) => {
+      if (stacktrace.stacktrace) {
+        const tmp = stacktrace.stacktrace.frames || [];
+        for (const item10010 of tmp) {
+          if (item10010.filename) {
+            if (!item10010.module_metadata) {
+              let tmp9 = getMetadataForUrl(closure_0, item10010.filename);
+              if (tmp9) {
+                item10010.module_metadata = tmp10;
+              }
+            }
+          }
+          continue;
+        }
+      }
+    });
+  } catch (err) {}
+};
+export { getMetadataForUrl };
+export const stripMetadataFromStackFrames = function stripMetadataFromStackFrames(exception) {
+  try {
+    const values = exception.exception.values;
+    const item = values.forEach((stacktrace) => {
+      if (stacktrace.stacktrace) {
+        const tmp3 = stacktrace.stacktrace.frames || [];
+        const iter = tmp3[Symbol.iterator]();
+        iter.next();
+        while (iter !== undefined) {
+          delete tmp2[tmp];
+          continue;
+        }
+      }
+    });
+  } catch (err) {}
+};

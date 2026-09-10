@@ -3,9 +3,11 @@ import registerAsset from "01122__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/design/components/LottieIcon/native/generated/lotties",
-  scales: [1],
-  hash: "5f77547974eb8f3f02aedbb78b4b73bc",
-  name: "NitroGem12",
-  type: "lottie",
+  httpServerLocation: "/assets/images/native/status",
+  width: 36,
+  height: 24,
+  scales: [2, 3],
+  hash: "48a492306912f6e40271e3f606596ed0",
+  name: "StatusVROnline",
+  type: "png",
 });

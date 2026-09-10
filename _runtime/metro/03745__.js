@@ -1,15 +1,15 @@
 // _runtime/metro/03745__.js
-import translateSeconds from "../03746_translateSeconds.js";
+import 03746__ from "03746__.js";
 import 03747__ from "03747__.js";
 import 03748__ from "03748__.js";
 import date from "03749__.js";
 import date from "03750__.js";
 
-if (!translateSeconds) {
-  let obj = { default: translateSeconds };
+if (!module_3746) {
+  let obj = { default: module_3746 };
   let tmp3 = obj;
 } else {
-  tmp3 = translateSeconds;
+  tmp3 = module_3746;
 }
 if (!module_3747) {
   obj = { default: module_3747 };
@@ -36,5 +36,5 @@ if (!date) {
   tmp11 = date;
 }
 
-export default { code: "lt", formatDistance: tmp3.default, formatLong: tmp5.default, formatRelative: tmp7.default, localize: tmp9.default, match: tmp11.default, options: { weekStartsOn: 1, firstWeekContainsDate: 4 } };
+export default { code: "hr", formatDistance: tmp3.default, formatLong: tmp5.default, formatRelative: tmp7.default, localize: tmp9.default, match: tmp11.default, options: { weekStartsOn: 1, firstWeekContainsDate: 1 } };
 export default exports.default;

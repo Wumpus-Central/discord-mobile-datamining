@@ -1,17 +1,17 @@
 // _runtime/metro/04891__.js
-import _mod4874 from "04874__.js";
+import _mod1307 from "01307__.js";
+import _mod1308 from "01308__.js";
+import _mod1314 from "01314__.js";
+import _mod4883 from "04883__.js";
 
-export default function isFullyPopulatedPropertyDescriptor(IsAccessorDescriptor, arg1) {
-  let tmp = _mod4874(arg1);
-  if (tmp) {
-    tmp = "[[Enumerable]]" in arg1;
+export default function isInteger(num) {
+  if (typeof num === "number") {
+    if (!_mod1314(num)) {
+      if (_mod4883(num)) {
+        const tmp = _mod1307(num);
+        return _mod1308(tmp) === tmp;
+      }
+    }
   }
-  if (tmp) {
-    tmp = "[[Configurable]]" in arg1;
-  }
-  if (tmp) {
-    tmp = IsAccessorDescriptor.IsAccessorDescriptor(arg1) || IsAccessorDescriptor.IsDataDescriptor(arg1);
-    const tmp3 = IsAccessorDescriptor.IsAccessorDescriptor(arg1) || IsAccessorDescriptor.IsDataDescriptor(arg1);
-  }
-  return tmp;
+  return false;
 }

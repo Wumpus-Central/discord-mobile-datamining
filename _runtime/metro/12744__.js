@@ -3,11 +3,11 @@ import registerAsset from "01122__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/create_guild/native/images",
-  width: 161,
-  height: 105,
-  scales: [1, 2, 3],
-  hash: "15df55e98006c5e50dacb86d466b47d8",
-  name: "invite-wumpus-ticket",
+  httpServerLocation: "/assets/images/native/icons/empty_channel",
+  width: 48,
+  height: 48,
+  scales: [2, 3],
+  hash: "8d7c88bf2a3c70b7581717d42e9c4ec1",
+  name: "send_message_32px",
   type: "png",
 });

@@ -1,12 +1,11 @@
 // _runtime/metro/03673__.js
-import 02030__ from "02030__.js";
+import registerAsset from "01122__.js";
 
-if (!module_2030) {
-  let obj = { default: module_2030 };
-} else {
-  obj = module_2030;
-}
-obj = { date: obj.default({ formats: { full: "EEEE, d. MMMM yyyy", long: "d. MMMM yyyy", medium: "d. M. yyyy", short: "dd.MM.yyyy" }, defaultWidth: "full" }), time: obj.default({ formats: { full: "H:mm:ss zzzz", long: "H:mm:ss z", medium: "H:mm:ss", short: "H:mm" }, defaultWidth: "full" }), dateTime: obj.default({ formats: { full: "{{date}} 'v' {{time}}", long: "{{date}} 'v' {{time}}", medium: "{{date}}, {{time}}", short: "{{date}}, {{time}}" }, defaultWidth: "full" }) };
-
-export default obj;
-export default exports.default;
+export default registerAsset.registerAsset({
+  __packager_asset: true,
+  httpServerLocation: "/assets/.cache/intl/bW9kdWxlcw==",
+  scales: [1],
+  hash: "278d5539472ddcb921d337331a347cf6",
+  name: "lt.messages.278d5539472ddcb921d337331a347cf6.compiled.messages",
+  type: "jsona",
+});

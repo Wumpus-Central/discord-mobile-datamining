@@ -3,11 +3,11 @@ import registerAsset from "01122__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
-  width: 24,
-  height: 24,
+  httpServerLocation: "/assets/modules/opt_in_channels/native/images",
+  width: 192,
+  height: 108,
   scales: [2, 3],
-  hash: "2ec8d4d40c93ceea32933ae4e505df6e",
-  name: "ChatPlusIcon",
+  hash: "980015ffe7387bf43c649905ee978399",
+  name: "nux",
   type: "png",
 });

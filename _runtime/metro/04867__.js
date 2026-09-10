@@ -1,4 +1,13 @@
 // _runtime/metro/04867__.js
-import _mod1291 from "01291__.js";
 
-export default _mod1291.setPrototypeOf || null;
+export default function isPrimitive(fn) {
+  let tmp = null === fn;
+  if (!tmp) {
+    let tmp2 = typeof fn !== "function";
+    if (typeof fn !== "function") {
+      tmp2 = typeof fn !== "object";
+    }
+    tmp = tmp2;
+  }
+  return tmp;
+}

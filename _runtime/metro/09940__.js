@@ -1,13 +1,3 @@
 // _runtime/metro/09940__.js
-import registerAsset from "01122__.js";
 
-export default registerAsset.registerAsset({
-  __packager_asset: true,
-  httpServerLocation: "/assets/modules/stage_channels/native/images",
-  width: 24,
-  height: 24,
-  scales: [1, 2, 3],
-  hash: "1f11c88bfa9d7d98913e00d032cd6bd3",
-  name: "ic_stage_music",
-  type: "png",
-});
+export default { L: 1, M: 0, Q: 3, H: 2 };

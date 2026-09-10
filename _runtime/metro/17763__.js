@@ -3,11 +3,11 @@ import registerAsset from "01122__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/guild_role_subscriptions/native/images",
-  width: 24,
-  height: 24,
+  httpServerLocation: "/assets/images/native/guild_settings/community_settings",
+  width: 88,
+  height: 80,
   scales: [2, 3],
-  hash: "ed13dc1c27325d7ffd6ba2403047329c",
-  name: "ic_full_server_gating_24px",
+  hash: "1c24dd3dd196a8ef2977a4e0d877d187",
+  name: "safety_check",
   type: "png",
 });

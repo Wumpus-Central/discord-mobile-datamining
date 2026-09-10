@@ -3,11 +3,11 @@ import registerAsset from "01122__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/premium/illustrations",
-  width: 271,
-  height: 163,
+  httpServerLocation: "/assets/modules/guild_identity/images",
+  width: 295,
+  height: 190,
   scales: [2, 3],
-  hash: "37b687db1cd86ac8059d1a0342f2319c",
-  name: "img_tier_2_clouds_bigger",
+  hash: "977038e35a08043eb799ac3c20093988",
+  name: "guild_identity_education_dark",
   type: "png",
 });

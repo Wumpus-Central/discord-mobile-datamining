@@ -1,40 +1,20 @@
 // _runtime/metro/06891__.js
-import RecyclerViewManager from "../06892_RecyclerViewManager.js";
-import _slicedToArray from "06871__.js";
+import _mod19 from "00019__.js";
+import _mod6682 from "06682__.js";
 
-require = fn;
-const noop = fn(19);
-({ useEffect: c3, useMemo: closure_4, useState: hasOwnProperty } = noop);
+_mod19.useCallback;
 
-export const useRecyclerViewManager = (data) => {
-  let recyclerViewManager = velocityTracker(
-    closure_5(() => {
-      recyclerViewManager = new RecyclerViewManager.RecyclerViewManager(closure_0);
-      return recyclerViewManager;
-    }),
-    1,
-  )[0];
-  velocityTracker = velocityTracker(
-    closure_5(() => {
-      velocityTracker = new data(recyclerViewManager[3]).VelocityTracker();
-      return velocityTracker;
-    }),
-    1,
-  )[0];
-  const items = [data];
-  closure_4(() => {
-    recyclerViewManager.updateProps(closure_0);
+export const useBottomSheetContentSizeSetter = function useBottomSheetContentSizeSetter() {
+  let obj = _mod6682;
+  const bottomSheetInternal = obj.useBottomSheetInternal();
+  const enableDynamicSizing = bottomSheetInternal.enableDynamicSizing;
+  const animatedContentHeight = bottomSheetInternal.animatedContentHeight;
+  obj = { setContentSize: null };
+  const items = [enableDynamicSizing, animatedContentHeight];
+  obj.setContentSize = useCallback((arg0) => {
+    if (enableDynamicSizing) {
+      const result = animatedContentHeight.set(arg0);
+    }
   }, items);
-  const items1 = [data.data];
-  closure_4(() => {
-    recyclerViewManager.processDataUpdate();
-  }, items1);
-  closure_3(() => {
-    recyclerViewManager.restoreIfNeeded();
-    return () => {
-      recyclerViewManager.dispose();
-      velocityTracker.cleanUp();
-    };
-  }, []);
-  return { recyclerViewManager, velocityTracker };
+  return obj;
 };

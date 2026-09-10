@@ -3,11 +3,11 @@ import registerAsset from "01122__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/icons",
-  width: 16,
-  height: 16,
+  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
+  width: 24,
+  height: 24,
   scales: [2, 3],
-  hash: "e71bfb9b43d4bbd3706e078113315f40",
-  name: "ic_image",
+  hash: "80a1b67e775ddb8de80fde27e63a5302",
+  name: "CirclePlusIcon-secondary",
   type: "png",
 });

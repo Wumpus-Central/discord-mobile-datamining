@@ -3,11 +3,11 @@ import registerAsset from "01122__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
-  width: 24,
-  height: 24,
+  httpServerLocation: "/assets/images/native/oauth2",
+  width: 92,
+  height: 92,
   scales: [2, 3],
-  hash: "5bfdb70bf70b33af737927fefb52cdba",
-  name: "ServerIcon",
+  hash: "118e914321321b15506a73d46c214571",
+  name: "failure-header",
   type: "png",
 });

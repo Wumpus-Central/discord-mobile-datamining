@@ -1,139 +1,190 @@
 // _runtime/metro/14454__.js
+import Buffer from "../01253_Buffer.js";
+import _mod14453 from "14453__.js";
 import _slicedToArray from "00032__.js";
 
-const re3 = /^(image)\/.*$/i;
-let closure_4 = {};
-
-export default () => {
-  if (arg0 === undefined) {
-    let obj = {};
+function replaceByteInByteSequence(arr, arg1, arg2) {
+  let index = arr.indexOf(43);
+  if (index >= 0) {
+    do {
+      arr[index] = 32;
+      index = arr.indexOf(43, index + 1);
+    } while (index >= 0);
   }
-  return (arg0) => {
-    closure_0 = arg0;
-    function onSend(data, _url) {
-      if (merged.ignoreUrls) {
-        const ignoreUrls = merged.ignoreUrls;
-        if (ignoreUrls.test(_url._url)) {
-          _url._skipReactotron = true;
+  return arr;
+}
+function percentEncode(arr) {
+  const formatted = arr.toString(16).toUpperCase();
+  let text = formatted;
+  if (1 === formatted.length) {
+    text = `0${arr}`;
+  }
+  return "%" + text;
+}
+function percentDecode(_Buffer) {
+  _Buffer = Buffer.Buffer;
+  const allocResult = _Buffer.alloc(_Buffer.byteLength);
+  let num = 0;
+  let num2 = 0;
+  let num3 = 0;
+  if (0 < _Buffer.length) {
+    while (true) {
+      if (37 === _Buffer[num]) {
+        let obj = _mod14453;
+        let sum = num + 1;
+        if (obj.isASCIIHex(_Buffer[sum])) {
+          let tmp3Result = _mod14453;
+          let sum1 = num + 2;
+          if (tmp3Result.isASCIIHex(_Buffer[sum1])) {
+            let sum2 = num2 + 1;
+            let _parseInt = parseInt;
+            let str = _Buffer.slice(sum, num + 3);
+            allocResult[num2] = parseInt(str.toString(), 16);
+            let tmp8 = sum1;
+            num = tmp8 + 1;
+            num2 = sum2;
+            num3 = sum2;
+            if (num >= _Buffer.length) {
+              break;
+            }
+          }
         }
       }
-      const sum = c3 + 1;
-      c3 = sum;
-      _url._trackingName = sum;
-      closure_4[c3] = { data, xhr: _url, stopTimer: closure_0.startTimer() };
+      sum2 = num2 + 1;
+      allocResult[num2] = _Buffer[num];
+      tmp8 = num;
     }
-    function onResponse(status, arg1, _bodyBlob, arg3, arg4, _skipReactotron) {
-      closure_1 = _bodyBlob;
-      regex = _skipReactotron;
-      if (!_skipReactotron._skipReactotron) {
-        let _url = arg3;
-        obj = null;
-        let num2 = -1;
-        if (arg3) {
-          num2 = _url.indexOf("?");
-        }
-        let tmp2 = null;
-        if (num2 > -1) {
-          obj = {};
-          const parts = _url.substr(num2 + 1).split("&");
-          const item = parts.forEach((item) => {
-            [tmp2, str] = _slicedToArray(item.split("="), 2);
-            let tmp3 = tmp2;
-            if (tmp2) {
-              tmp3 = undefined !== str;
-            }
-            if (tmp3) {
-              const _decodeURIComponent = decodeURIComponent;
-              obj[tmp2] = decodeURIComponent(str.replace(/\+/g, " "));
-            }
-            const tmp = _slicedToArray(item.split("="), 2);
-          });
-          tmp2 = obj;
-          const str2 = _url.substr(num2 + 1);
-        }
-        const _trackingName = _skipReactotron._trackingName;
-        let tmp5 = closure_4[_trackingName];
-        if (!tmp5) {
-          obj = { xhr: _skipReactotron };
-          tmp5 = obj;
-        }
-        closure_4[_trackingName] = null;
-        ({ stopTimer: closure_4, data } = tmp5);
-        if (!_url) {
-          _url = tmp5.xhr._url;
-        }
-        const request = {
-          url: _url,
-          method: _skipReactotron._method || null,
-          data,
-          headers: _skipReactotron._headers || null,
-          params: tmp2,
-        };
-        let str4 = _skipReactotron.responseHeaders && _skipReactotron.responseHeaders["content-type"];
-        if (!str4) {
-          str4 = _skipReactotron.responseHeaders && _skipReactotron.responseHeaders["Content-Type"];
-          const tmp6 = _skipReactotron.responseHeaders && _skipReactotron.responseHeaders["Content-Type"];
-        }
-        if (!str4) {
-          str4 = "";
-        }
-        function sendResponse(result) {
-          let str = "~~~ skipped ~~~";
-          if (result) {
-            try {
-              const _JSON = JSON;
-              str = JSON.parse(result);
-            } catch (err) {
-              str = closure_1;
-            }
-          }
-          const response = { body: str, status, headers: responseHeaders.responseHeaders || null };
-          let tmp4Result = null;
-          if (closure_1_4) {
-            tmp4Result = tmp4();
-          }
-          status.apiResponse(request, response, tmp4Result);
-        }
-        if (typeof _bodyBlob === "string") {
-          if (!str4) {
-            str4 = "";
-          }
-          if (!regex.test(str4)) {
-            if ("blob" === arg4) {
-              const _FileReader = FileReader;
-              if (typeof FileReader !== "undefined") {
-                if (_bodyBlob) {
-                  const _FileReader2 = FileReader;
-                  const fileReader = new FileReader();
-                  function brListener() {
-                    sendResponse(fileReader.result);
-                    const removed = fileReader.removeEventListener("loadend", brListener);
+  }
+  return allocResult.slice(0, num3);
+}
+function serializeUrlencodedByte(_Buffer) {
+  let str = "";
+  const iter = _Buffer[Symbol.iterator]();
+  const nextResult = iter.next();
+  while (iter !== undefined) {
+    let tmp2 = nextResult;
+    let str2 = "+";
+    if (32 === nextResult) {
+      str = `+`;
+      continue;
+    } else {
+      if (42 !== tmp2) {
+        if (45 !== tmp2) {
+          if (46 !== tmp2) {
+            if (tmp2 < 48) {
+              if (tmp2 < 65) {
+                if (95 !== tmp2) {
+                  if (tmp2 < 97) {
+                    let fromCodePointResult = percentEncode(tmp2);
                   }
-                  const listener = fileReader.addEventListener("loadend", brListener);
-                  const asText = fileReader.readAsText(_bodyBlob);
                 }
               }
             }
-            sendResponse(_bodyBlob);
           }
         }
-        sendResponse("");
       }
+      let _String = String;
+      fromCodePointResult = String.fromCodePoint(tmp2);
     }
-    const merged = Object.assign({}, closure_4, obj);
-    let regex = merged.ignoreContentTypes || re3;
-    c3 = 1000;
-    closure_4 = {};
-    obj = {
-      onConnect() {
-        const XHRInterceptor = obj(14455).XHRInterceptor;
-        XHRInterceptor.setSendCallback(onSend);
-        const XHRInterceptor2 = obj(14455).XHRInterceptor;
-        XHRInterceptor2.setResponseCallback(onResponse);
-        const XHRInterceptor3 = obj(14455).XHRInterceptor;
-        XHRInterceptor3.enableInterception();
-      },
-    };
-    return obj;
-  };
+  }
+  return str;
+}
+
+export default {
+  percentEncode,
+  percentDecode,
+  parseUrlencoded(arg0) {
+    let _Buffer = Buffer.Buffer;
+    return (function parseUrlencoded(_Buffer) {
+      let items = [];
+      const iter = (function strictlySplitByteSequence(arr, arg1) {
+        const items = [];
+        const index = arr.indexOf(38);
+        let index1 = index;
+        let num = 0;
+        let num2 = 0;
+        if (index >= 0) {
+          do {
+            arr = items.push(arr.slice(num, index1));
+            let sum = index1 + 1;
+            index1 = arr.indexOf(38, sum);
+            num = sum;
+            num2 = sum;
+          } while (index1 >= 0);
+        }
+        if (num2 !== arr.length) {
+          arr = items.push(arr.slice(num2));
+        }
+        return items;
+      })(_Buffer, 38)[Symbol.iterator]();
+      const nextResult = iter.next();
+      while (iter !== undefined) {
+        let arr3 = nextResult;
+        if (0 === nextResult.length) {
+          continue;
+        } else {
+          let index = arr3.indexOf(61);
+          let tmp23 = index;
+          if (index >= 0) {
+            let substr = arr3.slice(0, tmp23);
+            let substr1 = arr3.slice(tmp23 + 1);
+          } else {
+            substr = nextResult;
+            _Buffer = Buffer.Buffer;
+            substr1 = _Buffer.alloc(0);
+          }
+          let _Buffer2 = Buffer.Buffer;
+          let fromResult = _Buffer2.from(substr);
+          let tmp13 = replaceByteInByteSequence(fromResult, 43, 32);
+          let _Buffer3 = Buffer.Buffer;
+          let fromResult1 = _Buffer3.from(substr1);
+          let tmp17 = replaceByteInByteSequence(fromResult1, 43, 32);
+          let str = percentDecode(fromResult);
+          let items1 = [str.toString()];
+          let str2 = percentDecode(fromResult1);
+          items1[1] = str2.toString();
+          let arr = items.push(items1);
+        }
+      }
+      return items;
+    })(_Buffer.from(arg0));
+  },
+  serializeUrlencoded(_list) {
+    let str = "utf-8";
+    if (undefined !== arg1) {
+      str = tmp;
+    }
+    let str2 = "";
+    const entries = _list.entries();
+    while (tmp3 !== undefined) {
+      let tmp6 = _slicedToArray(tmp4, 2);
+      [tmp7, arr] = tmp6;
+      let _Buffer = Buffer.Buffer;
+      let tmp12 = serializeUrlencodedByte(_Buffer.from(arr[0]));
+      let name = arr[1];
+      let tmp13 = arr.length > 2;
+      if (tmp13) {
+        tmp13 = undefined !== arr[2];
+      }
+      if (tmp13) {
+        if ("hidden" === arr[2]) {
+          if ("_charset_" === tmp12) {
+            name = str;
+          }
+        }
+        if ("file" === arr[2]) {
+          name = name.name;
+        }
+      }
+      if (0 !== tmp7) {
+        str2 = `${str2}&`;
+      }
+      let _Buffer2 = Buffer.Buffer;
+      let tmp9Result = serializeUrlencodedByte(_Buffer2.from(name));
+      let _HermesInternal = HermesInternal;
+      str2 = str2 + "" + tmp12 + "=" + tmp9Result;
+      continue;
+    }
+    return str2;
+  },
 };

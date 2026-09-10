@@ -1,21 +1,17 @@
 // _runtime/metro/06719__.js
-import _mod19 from "00019__.js";
-import _modDef6704 from "06704__.js";
+import _modDef6720 from "06720__.js";
+import get_ActivityIndicator from "00017__.js";
 
-_mod19.useCallback;
+({ Animated, StyleSheet } = get_ActivityIndicator);
+const animatedComponent = Animated.createAnimatedComponent(_modDef6720);
 
-export const useViewRefHandler = function useViewRefHandler(current, detectorUpdater) {
-  const previousViewTag = current;
-  const items = [current, detectorUpdater];
-  return useCallback((viewRef) => {
-    if (null !== viewRef) {
-      previousViewTag.viewRef = viewRef;
-      if (-1 === previousViewTag.previousViewTag) {
-        previousViewTag.previousViewTag = _modDef6704(previousViewTag.viewRef);
-      }
-      if (!previousViewTag.firstRender) {
-        detectorUpdater(true);
-      }
-    }
-  }, items);
+export const GestureDetectorType = {
+  Native: 0,
+  [0]: "Native",
+  Virtual: 1,
+  [1]: "Virtual",
+  Intercepting: 2,
+  [2]: "Intercepting",
 };
+export const AnimatedNativeDetector = animatedComponent;
+export const nativeDetectorStyles = StyleSheet.create({ detector: { display: "contents" } });

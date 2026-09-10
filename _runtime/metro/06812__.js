@@ -1,11 +1,12 @@
 // _runtime/metro/06812__.js
-const fn = function n(sum1, initialPosition, value) {
-  return Math.min(Math.max(initialPosition, sum1), value);
-};
-fn.__closure = {};
-fn.__workletHash = 4405247003092;
-fn.__initData = {
-  code: "function pnpm_clampTs1(value,lowerBound,upperBound){return Math.min(Math.max(lowerBound,value),upperBound);}",
-};
+import ComposedGestureName from "../06764_ComposedGestureName.js";
+import _mod6813 from "06813__.js";
 
-export const clamp = fn;
+require = arg1;
+const dependencyMap = arg6;
+
+export const useCompetingGestures = function useCompetingGestures() {
+  const items = [...arguments];
+  const items1 = [ComposedGestureName.ComposedGestureName.Race, ...items];
+  return _mod6813.useComposedGesture.apply(items1);
+};

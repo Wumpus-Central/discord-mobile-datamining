@@ -1,5 +1,6 @@
 // _runtime/metro/08579__.js
 import _possibleConstructorReturnDefault from "00093__possibleConstructorReturn.js";
+import _modDef8560 from "08560__.js";
 import _classCallCheck from "00041__classCallCheck.js";
 import _createClass from "00042__createClass.js";
 import _getPrototypeOf from "../00095__getPrototypeOf.js";
@@ -24,15 +25,15 @@ function _isNativeReflectConstruct() {
   } catch (err) {}
 }
 _possibleConstructorReturnDefault;
-class Stop {
+class FeMergeNode {
   constructor() {
     self = this;
     items = [...arguments];
     closure_0 = undefined;
-    tmp = closure_0(this, Stop);
+    tmp = closure_0(this, FeMergeNode);
     items1 = [...items];
     tmp2 = c2;
-    obj = c2(Stop);
+    obj = c2(FeMergeNode);
     tmp3 = closure_1;
     if (closure_3()) {
       tmp5 = globalThis;
@@ -52,8 +53,8 @@ class Stop {
     return tmp3Result;
   }
 }
-_classCallCheck = Stop;
-_inherits(Stop, fn(19).Component);
+_classCallCheck = FeMergeNode;
+_inherits(FeMergeNode, _modDef8560);
 const entry = {
   key: "render",
   value: function render() {
@@ -61,7 +62,7 @@ const entry = {
   },
 };
 let items = [entry];
-const importDefaultResultResult = _createClass(Stop, items);
-importDefaultResultResult.displayName = "Stop";
+const importDefaultResultResult = _createClass(FeMergeNode, items);
+importDefaultResultResult.displayName = "FeMergeNode";
 
 export default importDefaultResultResult;

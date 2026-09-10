@@ -3,11 +3,11 @@ import registerAsset from "01122__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
-  width: 24,
-  height: 24,
+  httpServerLocation: "/assets/images/native/premium/logos",
+  width: 605.5,
+  height: 244.5,
   scales: [2, 3],
-  hash: "805fda450615a79e013d34cae4b4a783",
-  name: "PaintPaletteIcon",
+  hash: "fdaf8ab7fb8f1ab3047aef93e706bcc1",
+  name: "img_discord_nitro_logo_left_light",
   type: "png",
 });

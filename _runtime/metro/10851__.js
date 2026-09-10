@@ -1,13 +1,15 @@
 // _runtime/metro/10851__.js
-import registerAsset from "01122__.js";
+import _mod19 from "00019__.js";
 
-export default registerAsset.registerAsset({
-  __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
-  width: 24,
-  height: 24,
-  scales: [2, 3],
-  hash: "9dd37f954b23d7c3c7ed4428be93436f",
-  name: "ClydeIcon",
-  type: "png",
-});
+const useEffect = _mod19.useEffect;
+
+export const useUpdateGestureConfig = (arg0, options) => {
+  closure_0 = arg0;
+  const enabled = options.enabled;
+  const items = [enabled, arg0];
+  useEffect(() => {
+    if (undefined !== enabled) {
+      closure_0.enabled(tmp);
+    }
+  }, items);
+};

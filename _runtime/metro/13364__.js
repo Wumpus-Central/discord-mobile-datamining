@@ -3,11 +3,11 @@ import registerAsset from "01122__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Illustration/native/redesign/generated/images",
-  width: 180,
-  height: 108,
+  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
+  width: 24,
+  height: 24,
   scales: [2, 3],
-  hash: "b78926d791a6ae551c895470cfd808a1",
-  name: "img_what_you_lose_profile_tier1_darker",
+  hash: "ce5302624e28acc38af07d238a4e16fe",
+  name: "BellZIcon",
   type: "png",
 });

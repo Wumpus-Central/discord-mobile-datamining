@@ -4,10 +4,10 @@ import registerAsset from "01122__.js";
 export default registerAsset.registerAsset({
   __packager_asset: true,
   httpServerLocation: "/assets/images/platforms",
-  width: 255,
-  height: 255,
+  width: 228,
+  height: 60,
   scales: [1],
-  hash: "c79a547370020e3c89b0c02086f0c3fe",
-  name: "img_account_sync_tiktok_dark",
+  hash: "0bb27de2f1b5a855e060166d68a98581",
+  name: "img_account_sync_samsung_light_and_dark",
   type: "png",
 });

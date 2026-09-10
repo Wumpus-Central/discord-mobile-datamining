@@ -1,172 +1,129 @@
 // _runtime/metro/12923__.js
-import errorCallback from "../12823_errorCallback.js";
-import _mod12827 from "12827__.js";
-import _mod12828 from "12828__.js";
-import spanTimeInputToSeconds from "../12832_spanTimeInputToSeconds.js";
-import _mod12841 from "12841__.js";
-import _mod12854 from "12854__.js";
-import _mod12855 from "12855__.js";
-import COUNTER_METRIC_TYPE from "../12924_COUNTER_METRIC_TYPE.js";
-import __SENTRY_DEBUG__ from "12826__.js";
+import _mod12867 from "12867__.js";
+import _mod12894 from "12894__.js";
+import _mod12895 from "12895__.js";
+import _slicedToArray from "00032__.js";
 
-function addToMetricsAggregator(arg0, SET_METRIC_TYPE, arg2, parsed, arg4) {
-  let obj = arg4;
-  if (arg4 === undefined) {
-    obj = {};
-  }
-  let client = obj.client;
-  if (!client) {
-    client = _mod12854.getClient();
-  }
-  if (client) {
-    const activeSpan = spanTimeInputToSeconds.getActiveSpan();
-    let rootSpan;
-    if (activeSpan) {
-      let tmp3Result = spanTimeInputToSeconds;
-      rootSpan = tmp3Result.getRootSpan(activeSpan);
+function setupIntegration(on, name, arg2) {
+  closure_0 = on;
+  if (arg2[name.name]) {
+    if (_mod12895.DEBUG_BUILD) {
+      const logger2 = _mod12867.logger;
+      const _HermesInternal2 = HermesInternal;
+      logger2.log("Integration skipped because it was already installed: " + name.name);
     }
-    let description = rootSpan;
-    if (rootSpan) {
-      tmp3Result = spanTimeInputToSeconds;
-      description = tmp3Result.spanToJSON(rootSpan).description;
+  } else {
+    arg2[name.name] = name;
+    let arr = items;
+    if (tmp) {
+      name.setupOnce();
+      arr = arr.push(name.name);
     }
-    ({ unit, tags, timestamp } = obj);
-    const options = client.getOptions();
-    ({ release, environment } = options);
-    obj = {};
-    if (release) {
-      obj.release = release;
+    if (tmp4) {
+      name.setup(on);
     }
-    if (environment) {
-      obj.environment = environment;
+    if (typeof name.preprocessEvent === "function") {
+      const preprocessEvent = name.preprocessEvent;
+      closure_1 = preprocessEvent.bind(name);
+      on.on("preprocessEvent", (arg0, arg1) => closure_1(arg0, arg1, closure_0));
     }
-    if (description) {
-      obj.transaction = description;
+    if (typeof name.processEvent === "function") {
+      const processEvent = name.processEvent;
+      closure_2 = processEvent.bind(name);
+      const _Object = Object;
+      const obj = { id: name.name };
+      on.addEventProcessor(Object.assign((arg0, arg1) => closure_2(arg0, arg1, closure_0), obj));
     }
-    if (_mod12855.DEBUG_BUILD) {
-      const logger = _mod12827.logger;
+    if (_mod12895.DEBUG_BUILD) {
+      const logger = _mod12867.logger;
       const _HermesInternal = HermesInternal;
-      logger.log("Adding value of " + parsed + " to " + SET_METRIC_TYPE + " metric " + arg2);
+      logger.log("Integration installed: " + name.name);
     }
-    const globalSingleton = _mod12828.getGlobalSingleton("globalMetricsAggregators", () => {
-      const weakMap = new WeakMap();
-      return weakMap;
-    });
-    value = globalSingleton.get(client);
-    if (!value) {
-      const tmp20 = new arg0(client);
-      closure_0 = tmp20;
-      client.on("flush", () => closure_0.flush());
-      client.on("close", () => closure_0.close());
-      const result = globalSingleton.set(client, tmp20);
-      value = tmp20;
-    }
-    obj = {};
-    const merged = Object.assign(obj);
-    const merged1 = Object.assign(tags);
-    value.add(SET_METRIC_TYPE, arg2, parsed, unit, obj, timestamp);
-    const tmp3Result1 = _mod12828;
+    tmp = -1 === items.indexOf(name.name) && typeof name.setupOnce === "function";
+    tmp4 = name.setup && typeof name.setup === "function";
   }
 }
-errorCallback;
+let items = [];
 
-export const metrics = {
-  increment(arg0, arg1) {
-    let num = match;
-    if (match === undefined) {
-      num = 1;
+export const addIntegration = function addIntegration(name) {
+  const client = _mod12894.getClient();
+  if (client) {
+    client.addIntegration(name);
+  } else if (_mod12895.DEBUG_BUILD) {
+    const logger = _mod12867.logger;
+    const _HermesInternal = HermesInternal;
+    logger.warn('Cannot add integration "' + name.name + '" because no SDK Client is available.');
+  }
+};
+export const afterSetupIntegrations = function afterSetupIntegrations(arg0, arg1) {
+  const iter = arg1[Symbol.iterator]();
+  const nextResult = iter.next();
+  while (iter !== undefined) {
+    let obj = nextResult;
+    if (nextResult) {
+      let afterAllSetup = obj.afterAllSetup;
     }
-    let parsed = num;
-    if (typeof num === "string") {
-      const _parseInt = parseInt;
-      parsed = parseInt(num);
+    if (nextResult) {
+      let afterAllSetupResult = obj.afterAllSetup(arg0);
     }
-    addToMetricsAggregator(arg0, COUNTER_METRIC_TYPE.COUNTER_METRIC_TYPE, arg1, parsed, arg3);
-  },
-  distribution(arg0, arg1, match, arg3) {
-    let parsed = match;
-    if (typeof match === "string") {
-      const _parseInt = parseInt;
-      parsed = parseInt(match);
-    }
-    addToMetricsAggregator(arg0, COUNTER_METRIC_TYPE.DISTRIBUTION_METRIC_TYPE, arg1, parsed, arg3);
-  },
-  set(arg0, arg1, parsed, arg3) {
-    addToMetricsAggregator(arg0, COUNTER_METRIC_TYPE.SET_METRIC_TYPE, arg1, parsed, arg3);
-  },
-  gauge(arg0, arg1, match, arg3) {
-    let parsed = match;
-    if (typeof match === "string") {
-      const _parseInt = parseInt;
-      parsed = parseInt(match);
-    }
-    addToMetricsAggregator(arg0, COUNTER_METRIC_TYPE.GAUGE_METRIC_TYPE, arg1, parsed, arg3);
-  },
-  timing(arg0, name, fn) {
-    _require = arg0;
-    dependencyMap = name;
-    addToMetricsAggregator = fn;
-    let str = arg3;
-    if (arg3 === undefined) {
-      str = "second";
-    }
-    closure_3 = arg4;
-    c4 = undefined;
-    if (typeof fn === "function") {
-      let obj = require("12841__.js");
-      let timestampInSecondsResult = obj.timestampInSeconds();
-      c4 = timestampInSecondsResult;
-      obj = { op: "metrics.timing", name, startTime: timestampInSecondsResult, onlyIfParent: true };
-      return require("12861__.js").startSpanManual(obj, (arg0) => {
-        closure_0 = arg0;
-        return closure_0(name[10]).handleCallbackErrors(
-          () => fn(),
-          () => {},
-          () => {
-            let obj = _mod12841;
-            const timestampInSecondsResult = obj.timestampInSeconds();
-            const diff = timestampInSecondsResult - c4;
-            obj = {};
-            const merged = Object.assign(closure_3);
-            obj.unit = "second";
-            let parsed = diff;
-            if (typeof diff === "string") {
-              const _parseInt = parseInt;
-              parsed = parseInt(diff);
-            }
-            addToMetricsAggregator(closure_0, COUNTER_METRIC_TYPE.DISTRIBUTION_METRIC_TYPE, closure_1, parsed, obj);
-            closure_0.end(timestampInSecondsResult);
-          },
-        );
-      });
-    } else {
-      obj = {};
-      let merged = Object.assign(arg4);
-      obj.unit = str;
-      const DISTRIBUTION_METRIC_TYPE = require("COUNTER_METRIC_TYPE").DISTRIBUTION_METRIC_TYPE;
-      let parsed = fn;
-      if (typeof fn === "string") {
-        let _parseInt = parseInt;
-        parsed = parseInt(fn);
+    continue;
+  }
+};
+export function defineIntegration(arg0) {
+  return arg0;
+}
+export const getIntegrationsToSetup = function getIntegrationsToSetup(defaultIntegrations) {
+  let arr = defaultIntegrations.defaultIntegrations || [];
+  const integrations = defaultIntegrations.integrations;
+  const item = arr.forEach((item) => {
+    item.isDefaultInstance = true;
+  });
+  if (Array.isArray(integrations)) {
+    items = [];
+    HermesBuiltin.arraySpread(integrations, HermesBuiltin.arraySpread(arr, 0));
+    let arr2 = items;
+  } else {
+    arr2 = arr;
+    if (typeof integrations === "function") {
+      const integrationsResult = integrations(arr);
+      const _Array = Array;
+      let tmp2 = integrationsResult;
+      if (!Array.isArray(integrationsResult)) {
+        const items1 = [integrationsResult];
+        tmp2 = items1;
       }
-      addToMetricsAggregator(arg0, DISTRIBUTION_METRIC_TYPE, name, parsed, obj);
+      arr2 = tmp2;
     }
-  },
-  getMetricsAggregatorForClient(on, arg1) {
-    const globalSingleton = _mod12828.getGlobalSingleton("globalMetricsAggregators", () => {
-      const weakMap = new WeakMap();
-      return weakMap;
-    });
-    value = globalSingleton.get(on);
-    if (value) {
-      return value;
-    } else {
-      const tmp6 = new arg1(on);
-      closure_0 = tmp6;
-      on.on("flush", () => closure_0.flush());
-      on.on("close", () => closure_0.close());
-      const result = globalSingleton.set(on, tmp6);
-      return tmp6;
+  }
+  const item1 = arr2.forEach((name) => {
+    name = name.name;
+    let isDefaultInstance = tmp2;
+    if (obj[name]) {
+      isDefaultInstance = !tmp2.isDefaultInstance;
     }
-  },
+    if (isDefaultInstance) {
+      isDefaultInstance = name.isDefaultInstance;
+    }
+    if (!isDefaultInstance) {
+      obj[name] = name;
+    }
+  });
+  const values = Object.values({});
+  const findIndexResult = values.findIndex((name) => "Debug" === name.name);
+  if (findIndexResult > -1) {
+    arr = values.push(_slicedToArray(values.splice(findIndexResult, 1), 1)[0]);
+  }
+  return values;
+};
+export const installedIntegrations = items;
+export { setupIntegration };
+export const setupIntegrations = function setupIntegrations(arg0, arr) {
+  closure_0 = arg0;
+  const obj = {};
+  const item = arr.forEach((item) => {
+    if (item) {
+      setupIntegration(closure_0, item, obj);
+    }
+  });
+  return obj;
 };

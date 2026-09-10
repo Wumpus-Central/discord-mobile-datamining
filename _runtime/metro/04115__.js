@@ -1,40 +1,34 @@
 // _runtime/metro/04115__.js
-import 04116__ from "04116__.js";
-import 04117__ from "04117__.js";
-import 04118__ from "04118__.js";
-import date from "04119__.js";
-import date from "04120__.js";
+import 03697__ from "03697__.js";
+import _typeof from "03693__.js";
+import requiredArgs from "../03694_requiredArgs.js";
 
-if (!module_4116) {
-  let obj = { default: module_4116 };
+if (!module_3697) {
+  let obj = { default: module_3697 };
   let tmp3 = obj;
 } else {
-  tmp3 = module_4116;
+  tmp3 = module_3697;
 }
-if (!module_4117) {
-  obj = { default: module_4117 };
+module_3697 = tmp3;
+if (!_typeof) {
+  obj = { default: _typeof };
   let tmp5 = obj;
 } else {
-  tmp5 = module_4117;
+  tmp5 = _typeof;
 }
-if (!module_4118) {
-  obj = { default: module_4118 };
+_typeof = tmp5;
+if (!requiredArgs) {
+  obj = { default: requiredArgs };
   let tmp7 = obj;
 } else {
-  tmp7 = module_4118;
+  tmp7 = requiredArgs;
 }
-if (!date) {
-  const obj1 = { default: date };
-  let tmp9 = obj1;
-} else {
-  tmp9 = date;
-}
-if (!date) {
-  const obj2 = { default: date };
-  let tmp11 = obj2;
-} else {
-  tmp11 = date;
-}
+requiredArgs = tmp7;
 
-export default { code: "zh-CN", formatDistance: tmp3.default, formatLong: tmp5.default, formatRelative: tmp7.default, localize: tmp9.default, match: tmp11.default, options: { weekStartsOn: 1, firstWeekContainsDate: 4 } };
+export default function setMinutes(module_3697, arg1) {
+  requiredArgs.default(2, arguments);
+  const defaultResult1 = _typeof.default(module_3697);
+  defaultResult1.setMinutes(module_3697.default(arg1));
+  return defaultResult1;
+};
 export default exports.default;

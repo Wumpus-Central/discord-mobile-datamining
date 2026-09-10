@@ -1,6 +1,13 @@
 // _runtime/metro/14392__.js
-import _mod17 from "00017__.js";
-import setupURLPolyfill from "../14393_setupURLPolyfill.js";
+import prop from "14393__.js";
 
-const Platform = _mod17.Platform;
-setupURLPolyfill = setupURLPolyfill.setupURLPolyfill();
+if (prop) {
+  const _Symbol = Symbol;
+  prop = !Symbol.sham;
+}
+if (prop) {
+  const _Symbol2 = Symbol;
+  prop = typeof Symbol.iterator === "symbol";
+}
+
+export default prop;

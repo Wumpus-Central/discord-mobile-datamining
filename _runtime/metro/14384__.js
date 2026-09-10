@@ -1,11 +1,11 @@
 // _runtime/metro/14384__.js
-import _mod14332 from "14332__.js";
-import _mod14341 from "14341__.js";
-import all from "14351__.js";
+import _mod14385 from "14385__.js";
 
-let closure_0 = _mod14332(Function.toString);
-if (!all(_mod14341.inspectSource)) {
-  _mod14341.inspectSource = (arg0) => closure_0(arg0);
-}
-
-export default _mod14341.inspectSource;
+export default (arg0) => {
+  if (_mod14385(arg0)) {
+    const tmp4 = new TypeError("Can't call method on " + arg0);
+    throw tmp4;
+  } else {
+    return arg0;
+  }
+};

@@ -3,11 +3,11 @@ import registerAsset from "01122__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/empties",
-  width: 181,
-  height: 141,
-  scales: [2, 3],
-  hash: "ed03b4a3566d0ff2258e5577eb7c05bd",
-  name: "empty_server_settings_emoji_dark",
+  httpServerLocation: "/assets/images/native/verification",
+  width: 180,
+  height: 160,
+  scales: [1],
+  hash: "39e83a7f9fd6f4ad0c8041d592ca008c",
+  name: "img_verify_phone_dark_theme",
   type: "png",
 });

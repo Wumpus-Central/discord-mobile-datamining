@@ -1,19 +1,23 @@
 // _runtime/metro/14366__.js
-import _mod14332 from "14332__.js";
-import _mod14353 from "14353__.js";
-import f2 from "../14367_f.js";
-import _mod14377 from "14377__.js";
-import _mod14378 from "14378__.js";
+const require = arg1;
+const dependencyMap = arg6;
 
-let closure_2 = _mod14332([].concat);
-
-export default _mod14353("Reflect", "ownKeys") ||
-  function ownKeys(arg0) {
-    const fResult = f2.f(_mod14377(arg0));
-    const f = _mod14378.f;
-    let tmp2 = fResult;
-    if (f) {
-      tmp2 = closure_2(fResult, f(arg0));
-    }
-    return tmp2;
-  };
+export const getSupportedUnits = function getSupportedUnits(locale) {
+  _require = locale;
+  const units = require("14367__.js").units;
+  return units.filter((item) =>
+    (function isSupported(unit, arg1) {
+      let str = arg1;
+      if (undefined === arg1) {
+        str = "en";
+      }
+      try {
+        const obj = { style: "unit", unit };
+        const memoizedNumberFormat = locale(closure_1_1[0]).createMemoizedNumberFormat(str, obj);
+        return memoizedNumberFormat.resolvedOptions().unit === unit;
+      } catch (err) {
+        return false;
+      }
+    })(item, closure_0),
+  );
+};

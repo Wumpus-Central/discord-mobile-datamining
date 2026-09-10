@@ -3,9 +3,9 @@ import registerAsset from "01122__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/private_channels/clean_up_inactive_gdms",
+  httpServerLocation: "/assets/.cache/intl/bW9kdWxlcy9wcml2YXRlX2NoYW5uZWxzL2NsZWFuX3VwX2luYWN0aXZlX2dkbXM=",
   scales: [1],
-  hash: "130e925e8a424a9b43d870d884dca58e",
-  name: "CleanUpInactiveGDMs.compiled.messages",
+  hash: "194a922b09a4a650265381a803d59e74",
+  name: "bg.messages.194a922b09a4a650265381a803d59e74.compiled.messages",
   type: "jsona",
 });

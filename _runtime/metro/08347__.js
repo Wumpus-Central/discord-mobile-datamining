@@ -1,86 +1,20 @@
 // _runtime/metro/08347__.js
-function flattenStyle(obj) {
-  if (null !== obj) {
-    if (typeof obj === "object") {
-      const _Array = Array;
-      if (Array.isArray(obj)) {
-        obj = {};
-        for (let num3 = 0; num3 < length; num3 = num3 + 1) {
-          let tmp3 = flattenStyle(obj[num3]);
-          if (tmp3) {
-            for (const key10019 in tmp3) {
-              obj[key10019] = tmp3[key10019];
-              continue;
-            }
-          }
-        }
-        return obj;
-      } else {
-        return obj;
-      }
-    }
-  }
-}
+import _mod17 from "00017__.js";
 
-export default function DeprecatedStyleSheetPropType(arg0) {
-  _require = require("deprecatedCreateStrictShapeTypeChecker")(arg0);
-  return (arg0, arg1, arg2, arg3) => {
-    const substr = [...arguments].slice();
-    if (arg0[arg1]) {
-      let tmp4;
-      if (null !== arg0[arg1]) {
-        if (typeof arr === "object") {
-          const _Array = Array;
-          tmp4 = arr;
-          if (Array.isArray(arr)) {
-            let obj = {};
-            let num3 = 0;
-            tmp4 = obj;
-            if (0 < arr.length) {
-              do {
-                let arr2 = arr[num3];
-                let tmp6;
-                if (null !== arr2) {
-                  if (typeof arr2 === "object") {
-                    let _Array2 = Array;
-                    tmp6 = arr2;
-                    if (Array.isArray(arr2)) {
-                      obj = {};
-                      let length2 = arr2.length;
-                      let num4 = 0;
-                      tmp6 = obj;
-                      if (0 < length2) {
-                        do {
-                          let tmp8 = flattenStyle(arr2[num4]);
-                          if (tmp8) {
-                            for (const key10029 in tmp8) {
-                              obj[key10029] = tmp8[key10029];
-                              continue;
-                            }
-                          }
-                          num4 = num4 + 1;
-                          tmp6 = obj;
-                        } while (num4 < length2);
-                      }
-                    }
-                  }
-                }
-                if (tmp6) {
-                  for (const key10032 in tmp6) {
-                    obj[key10032] = tmp6[key10032];
-                    continue;
-                  }
-                }
-                num3 = num3 + 1;
-                tmp4 = obj;
-              } while (num3 < length);
-            }
-          }
-        }
-      }
-      obj = {};
-      obj[arg1] = tmp4;
-    }
-    return closure_0(arg1, arg2, arg3, ...substr);
-  };
+const obj = {
+  SLIDER_DEFAULT_INITIAL_VALUE: 0,
+  MARGIN_HORIZONTAL_PADDING: 0.05,
+  THUMB_SIZE: 20,
+  STEP_NUMBER_TEXT_FONT_SMALL: 8,
+  STEP_NUMBER_TEXT_FONT_BIG: 12,
+  LIMIT_MIN_VALUE: Number.MIN_SAFE_INTEGER,
+  LIMIT_MAX_VALUE: Number.MAX_SAFE_INTEGER,
+  DEFAULT_STEP_RESOLUTION: null,
+};
+let num = 1000;
+if ("android" === _mod17.Platform.OS) {
+  num = 128;
 }
+obj.DEFAULT_STEP_RESOLUTION = num;
+
+export const constants = obj;

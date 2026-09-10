@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "aa6654f8bc64e9c09fd740f0157dd47b",
-  name: "ClipboardCheckIcon",
+  hash: "88d061a76594f03187e4bf612ecd1256",
+  name: "RecordPlayerIcon",
   type: "png",
 });

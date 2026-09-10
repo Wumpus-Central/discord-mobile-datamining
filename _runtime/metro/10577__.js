@@ -1,11 +1,13 @@
 // _runtime/metro/10577__.js
-import _possibleConstructorReturn from "00093__possibleConstructorReturn.js";
-import AbstractParserWithWordBoundaryChecking from "../10471_AbstractParserWithWordBoundaryChecking.js";
+import AbstractParserWithWordBoundaryChecking from "../10509_AbstractParserWithWordBoundaryChecking.js";
+import alphaNum from "../10572_alphaNum.js";
 import _classCallCheck from "00041__classCallCheck.js";
 import _createClass from "00042__createClass.js";
+import c3 from "00093__possibleConstructorReturn.js";
 import _getPrototypeOf from "../00095__getPrototypeOf.js";
 import _inherits from "../00098__inherits.js";
 
+const JPTimeExpressionParser = require;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -24,15 +26,122 @@ function _isNativeReflectConstruct() {
     return _isNativeReflectConstruct();
   } catch (err) {}
 }
-_possibleConstructorReturn;
-class ZHHantCasualDateParser {
+function createTimeComponents(createParsingComponents, match, match2, match3, match4) {
+  const parsingComponents = createParsingComponents.createParsingComponents();
+  let parsed = parseInt(JPTimeExpressionParser(10572).toHankaku(match));
+  if (isNaN(parsed)) {
+    parsed = JPTimeExpressionParser(10572).jaStringToNumber(match);
+  }
+  if (parsed > 24) {
+    return null;
+  } else {
+    if (match2) {
+      let num = 30;
+      if ("\u534A" !== match2) {
+        const _parseInt = parseInt;
+        const parsed1 = parseInt(JPTimeExpressionParser(10572).toHankaku(match2));
+        const _isNaN = isNaN;
+        num = parsed1;
+        if (isNaN(parsed1)) {
+          num = JPTimeExpressionParser(10572).jaStringToNumber(match2);
+        }
+      }
+      if (num >= 60) {
+        return null;
+      } else {
+        parsingComponents.assign("minute", num);
+      }
+    }
+    if (match3) {
+      const _parseInt2 = parseInt;
+      let parsed2 = parseInt(JPTimeExpressionParser(10572).toHankaku(match3));
+      const _isNaN2 = isNaN;
+      if (isNaN(parsed2)) {
+        parsed2 = JPTimeExpressionParser(10572).jaStringToNumber(match3);
+      }
+      if (parsed2 >= 60) {
+        return null;
+      } else {
+        parsingComponents.assign("second", parsed2);
+      }
+    }
+    let num5 = -1;
+    let num6 = parsed;
+    if (match4) {
+      if (parsed > 12) {
+        return null;
+      } else {
+        if ("\u5348\u524D" !== match4) {
+          if ("a" !== str2.toLowerCase()) {
+            let tmp8 = "\u5348\u5F8C" !== match4;
+            if (tmp8) {
+              tmp8 = "p" !== match4[0].toLowerCase();
+            }
+            num5 = -1;
+            num6 = parsed;
+            if (!tmp8) {
+              let sum = parsed;
+              if (12 != parsed) {
+                sum = parsed + 12;
+              }
+              num6 = sum;
+              num5 = JPTimeExpressionParser(10507).Meridiem.PM;
+            }
+          }
+          str2 = match4[0];
+        }
+        const AM = JPTimeExpressionParser(10507).Meridiem.AM;
+        num5 = AM;
+        num6 = parsed;
+        if (12 === parsed) {
+          num6 = 0;
+          num5 = AM;
+        }
+      }
+    }
+    parsingComponents.assign("hour", num6);
+    if (num5 >= 0) {
+      parsingComponents.assign("meridiem", num5);
+    } else if (num6 < 12) {
+      parsingComponents.imply("meridiem", JPTimeExpressionParser(10507).Meridiem.AM);
+    } else {
+      parsingComponents.imply("meridiem", JPTimeExpressionParser(10507).Meridiem.PM);
+    }
+    return parsingComponents;
+  }
+}
+const keys = Object.keys(alphaNum.NUMBER);
+const text = `(?:(午前|午後|A.M.|P.M.|AM|PM))?(?:[\\s,，、]*)(?:([0-9０-９]+|[${obj.join("")}`;
+const keys1 = Object.keys(alphaNum.NUMBER);
+const text1 = `${`(?:(午前|午後|A.M.|P.M.|AM|PM))?(?:[\\s,，、]*)(?:([0-9０-９]+|[${obj.join("")}`}]+)(?:\\s*)(?:時(?!間)|:|：)(?:\\s*)([0-9０-９]+|半|[${obj2.join("")}`;
+const keys2 = Object.keys(alphaNum.NUMBER);
+const regExp = new RegExp(
+  text1 +
+    "]+)?(?:\\s*)(?:\u5206|:|\uFF1A)?(?:\\s*)([0-9\uFF10-\uFF19]+|[" +
+    keys2.join("") +
+    "]+)?(?:\\s*)(?:\u79D2)?)(?:\\s*(A.M.|P.M.|AM?|PM?))?",
+  "i",
+);
+const keys3 = Object.keys(alphaNum.NUMBER);
+const text2 = `(?:^\\s*(?:から|\\-|\\–|\\－|\\~|\\〜)\\s*)(?:(午前|午後|A.M.|P.M.|AM|PM))?(?:[\\s,，、]*)(?:([0-9０-９]+|[${obj4.join("")}`;
+const keys4 = Object.keys(alphaNum.NUMBER);
+const text3 = `${`(?:^\\s*(?:から|\\-|\\–|\\－|\\~|\\〜)\\s*)(?:(午前|午後|A.M.|P.M.|AM|PM))?(?:[\\s,，、]*)(?:([0-9０-９]+|[${obj4.join("")}`}]+)(?:\\s*)(?:時|:|：)(?:\\s*)([0-9０-９]+|半|[${obj5.join("")}`;
+const keys5 = Object.keys(alphaNum.NUMBER);
+const regExp1 = new RegExp(
+  text3 +
+    "]+)?(?:\\s*)(?:\u5206|:|\uFF1A)?(?:\\s*)([0-9\uFF10-\uFF19]+|[" +
+    keys5.join("") +
+    "]+)?(?:\\s*)(?:\u79D2)?)(?:\\s*(A.M.|P.M.|AM?|PM?))?",
+  "i",
+);
+class JPTimeExpressionParser {
   constructor() {
     self = this;
-    tmp = closure_0(this, ZHHantCasualDateParser);
-    tmp2 = c2;
-    obj = c2(ZHHantCasualDateParser);
-    tmp3 = closure_1;
-    if (closure_3()) {
+    tmp = c2(this, JPTimeExpressionParser);
+    tmp2 = closure_4;
+    obj = closure_4(JPTimeExpressionParser);
+    tmp3 = closure_3;
+    if (hasOwnProperty()) {
       tmp7 = globalThis;
       _Reflect = Reflect;
       tmp8 = arguments;
@@ -45,15 +154,10 @@ class ZHHantCasualDateParser {
     return tmp3(self, constructResult);
   }
 }
-_classCallCheck = ZHHantCasualDateParser;
-_inherits(ZHHantCasualDateParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
+_inherits(JPTimeExpressionParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
 const entry = {
   key: "innerPattern",
-  value: function innerPattern(arg0) {
-    const regExp = new RegExp(
-      "(\u800C\u5BB6|\u7ACB(?:\u523B|\u5373)|\u5373\u523B)|(\u4ECA|\u660E|\u524D|\u5927\u524D|\u5F8C|\u5927\u5F8C|\u807D|\u6628|\u5C0B|\u7434)(\u65E9|\u671D|\u665A)|(\u4E0A(?:\u5348|\u665D)|\u671D(?:\u65E9)|\u65E9(?:\u4E0A)|\u4E0B(?:\u5348|\u665D)|\u664F(?:\u665D)|\u665A(?:\u4E0A)|\u591C(?:\u665A)?|\u4E2D(?:\u5348)|\u51CC(?:\u6668))|(\u4ECA|\u660E|\u524D|\u5927\u524D|\u5F8C|\u5927\u5F8C|\u807D|\u6628|\u5C0B|\u7434)(?:\u65E5|\u5929)(?:[\\s|,|\uFF0C]*)(?:(\u4E0A(?:\u5348|\u665D)|\u671D(?:\u65E9)|\u65E9(?:\u4E0A)|\u4E0B(?:\u5348|\u665D)|\u664F(?:\u665D)|\u665A(?:\u4E0A)|\u591C(?:\u665A)?|\u4E2D(?:\u5348)|\u51CC(?:\u6668)))?",
-      "i",
-    );
+  value: function innerPattern() {
     return regExp;
   },
 };
@@ -62,163 +166,80 @@ const items = [
   {
     key: "innerExtract",
     value: function innerExtract(createParsingResult, index) {
-      const parsingResult = createParsingResult.createParsingResult(index.index, index[0]);
-      const refDate = createParsingResult.refDate;
-      const date = new Date(refDate.getTime());
-      if (index[1]) {
-        const start16 = parsingResult.start;
-        start16.imply("hour", refDate.getHours());
-        const start17 = parsingResult.start;
-        start17.imply("minute", refDate.getMinutes());
-        const start18 = parsingResult.start;
-        start18.imply("second", refDate.getSeconds());
-        const start19 = parsingResult.start;
-        start19.imply("millisecond", refDate.getMilliseconds());
-      } else if (index[2]) {
-        if ("\u660E" != index[2]) {
-          if ("\u807D" != tmp25) {
-            if ("\u6628" != tmp25) {
-              if ("\u5C0B" != tmp25) {
-                if ("\u7434" != tmp25) {
-                  if ("\u524D" == tmp25) {
-                    date.setDate(date.getDate() - 2);
-                  } else if ("\u5927\u524D" == tmp25) {
-                    date.setDate(date.getDate() - 3);
-                  } else if ("\u5F8C" == tmp25) {
-                    date.setDate(date.getDate() + 2);
-                  } else if ("\u5927\u5F8C" == tmp25) {
-                    date.setDate(date.getDate() + 3);
-                  }
-                }
-              }
-            }
-            date.setDate(date.getDate() - 1);
-          }
-          if ("\u65E9" != tmp26) {
-            if ("\u671D" != tmp26) {
-              if ("\u665A" == tmp26) {
-                const start25 = parsingResult.start;
-                start25.imply("hour", 22);
-                const start26 = parsingResult.start;
-                start26.imply("meridiem", 1);
-              }
-            }
-          }
-          const start15 = parsingResult.start;
-          start15.imply("hour", 6);
+      if (index.index > 0) {
+        if (str.match(/\w/)) {
+          return null;
         }
-        if (refDate.getHours() > 1) {
-          date.setDate(date.getDate() + 1);
-        }
-      } else if (index[4]) {
-        const first = index[4][0];
-        if ("\u65E9" != first) {
-          if ("\u671D" != first) {
-            if ("\u4E0A" != first) {
-              if ("\u4E0B" != first) {
-                if ("\u664F" != first) {
-                  if ("\u4E2D" == first) {
-                    const start10 = parsingResult.start;
-                    start10.imply("hour", 12);
-                    const start11 = parsingResult.start;
-                    start11.imply("meridiem", 1);
-                  } else {
-                    if ("\u591C" != first) {
-                      if ("\u665A" != first) {
-                        if ("\u51CC" == first) {
-                          const start24 = parsingResult.start;
-                          start24.imply("hour", 0);
-                        }
-                      }
-                    }
-                    const start8 = parsingResult.start;
-                    start8.imply("hour", 22);
-                    const start9 = parsingResult.start;
-                    start9.imply("meridiem", 1);
-                  }
-                }
-              }
-              const start12 = parsingResult.start;
-              start12.imply("hour", 15);
-              const start13 = parsingResult.start;
-              start13.imply("meridiem", 1);
-            }
-          }
-        }
-        const start14 = parsingResult.start;
-        start14.imply("hour", 6);
-      } else if (index[5]) {
-        if ("\u660E" != index[5]) {
-          if ("\u807D" != tmp2) {
-            if ("\u6628" != tmp2) {
-              if ("\u5C0B" != tmp2) {
-                if ("\u7434" != tmp2) {
-                  if ("\u524D" == tmp2) {
-                    date.setDate(date.getDate() - 2);
-                  } else if ("\u5927\u524D" == tmp2) {
-                    date.setDate(date.getDate() - 3);
-                  } else if ("\u5F8C" == tmp2) {
-                    date.setDate(date.getDate() + 2);
-                  } else if ("\u5927\u5F8C" == tmp2) {
-                    date.setDate(date.getDate() + 3);
-                  }
-                }
-              }
-            }
-            date.setDate(date.getDate() - 1);
-          }
-          if (index[6]) {
-            const first1 = tmp8[0];
-            if ("\u65E9" != first1) {
-              if ("\u671D" != first1) {
-                if ("\u4E0A" != first1) {
-                  if ("\u4E0B" != first1) {
-                    if ("\u664F" != first1) {
-                      if ("\u4E2D" == first1) {
-                        const start3 = parsingResult.start;
-                        start3.imply("hour", 12);
-                        const start4 = parsingResult.start;
-                        start4.imply("meridiem", 1);
-                      } else {
-                        if ("\u591C" != first1) {
-                          if ("\u665A" != first1) {
-                            if ("\u51CC" == first1) {
-                              const start23 = parsingResult.start;
-                              start23.imply("hour", 0);
-                            }
-                          }
-                        }
-                        const start = parsingResult.start;
-                        start.imply("hour", 22);
-                        const start2 = parsingResult.start;
-                        start2.imply("meridiem", 1);
-                      }
-                    }
-                  }
-                  const start5 = parsingResult.start;
-                  start5.imply("hour", 15);
-                  const start6 = parsingResult.start;
-                  start6.imply("meridiem", 1);
-                }
-              }
-            }
-            const start7 = parsingResult.start;
-            start7.imply("hour", 6);
-          }
-        }
-        if (refDate.getHours() > 1) {
-          date.setDate(date.getDate() + 1);
-        }
+        str = createParsingResult.text[index.index - 1];
       }
-      const start20 = parsingResult.start;
-      start20.assign("day", date.getDate());
-      const start21 = parsingResult.start;
-      start21.assign("month", date.getMonth() + 1);
-      const start22 = parsingResult.start;
-      start22.assign("year", date.getFullYear());
-      return parsingResult;
+      const parsingResult = createParsingResult.createParsingResult(index.index, index[0]);
+      let tmp3 = index[1];
+      if (null === tmp3) {
+        tmp3 = index[5];
+      }
+      parsingResult.start = createTimeComponents(createParsingResult, index[2], index[3], index[4], tmp3);
+      if (parsingResult.start) {
+        const match = regExp1.exec(createParsingResult.text.substring(parsingResult.index + parsingResult.text.length));
+        let tmp7 = parsingResult;
+        if (match) {
+          parsingResult.text = parsingResult.text + match[0];
+          let tmp11 = match[1];
+          if (null === tmp11) {
+            tmp11 = match[5];
+          }
+          parsingResult.end = createTimeComponents(createParsingResult, match[2], match[3], match[4], tmp11);
+          let tmp17 = null;
+          if (parsingResult.end) {
+            const end = parsingResult.end;
+            const isCertainResult = end.isCertain("meridiem");
+            let isCertainResult1 = !isCertainResult;
+            if (!isCertainResult) {
+              const start = parsingResult.start;
+              isCertainResult1 = start.isCertain("meridiem");
+            }
+            if (isCertainResult1) {
+              ({ end: end2, start: start2 } = parsingResult);
+              end2.imply("meridiem", start2.get("meridiem"));
+              const start3 = parsingResult.start;
+              value = start3.get("meridiem");
+              if (value === JPTimeExpressionParser(10507).Meridiem.PM) {
+                const start5 = parsingResult.start;
+                const end10 = parsingResult.end;
+                const diff = start5.get("hour") - 12;
+                if (diff > end10.get("hour")) {
+                  const end6 = parsingResult.end;
+                  end6.imply("meridiem", JPTimeExpressionParser(10507).Meridiem.AM);
+                } else {
+                  const end3 = parsingResult.end;
+                  if (end3.get("hour") < 12) {
+                    ({ end: end4, end: end5 } = parsingResult);
+                    end4.assign("hour", end5.get("hour") + 12);
+                  }
+                }
+              }
+            }
+            const end7 = parsingResult.end;
+            const start4 = parsingResult.start;
+            const time = end7.date().getTime();
+            const dateResult = end7.date();
+            tmp17 = parsingResult;
+            if (time < dateResult1.getTime()) {
+              ({ end: end8, end: end9 } = parsingResult);
+              end8.imply("day", end9.get("day") + 1);
+              tmp17 = parsingResult;
+            }
+            dateResult1 = start4.date();
+          }
+          tmp7 = tmp17;
+        }
+        let tmp4 = tmp7;
+      } else {
+        index.index = index.index + index[0].length;
+        tmp4 = null;
+      }
+      return tmp4;
     },
   },
 ];
 
-export default _createClass(ZHHantCasualDateParser, items);
+export default _createClass(JPTimeExpressionParser, items);

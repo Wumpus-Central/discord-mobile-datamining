@@ -1,13 +1,11 @@
 // _runtime/metro/06985__.js
-import registerAsset from "01122__.js";
+import _mod17 from "00017__.js";
 
-export default registerAsset.registerAsset({
-  __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
-  width: 24,
-  height: 24,
-  scales: [2, 3],
-  hash: "1b06201c0ce237bba30c4db64f994263",
-  name: "EyeIcon",
-  type: "png",
-});
+const StyleSheet = _mod17.StyleSheet;
+let obj = { backdrop: null };
+obj = {};
+const merged = Object.assign(StyleSheet.absoluteFillObject);
+obj.backgroundColor = "black";
+obj.backdrop = obj;
+
+export const styles = StyleSheet.create(obj);

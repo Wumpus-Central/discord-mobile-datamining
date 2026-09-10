@@ -1,14 +1,15 @@
 // _runtime/metro/04021__.js
-import 04013__ from "04013__.js";
-import requiredArgs from "../03664_requiredArgs.js";
+import _typeof from "03693__.js";
+import requiredArgs from "../03694_requiredArgs.js";
+import 03697__ from "03697__.js";
 
-if (!module_4013) {
-  let obj = { default: module_4013 };
+if (!_typeof) {
+  let obj = { default: _typeof };
   let tmp3 = obj;
 } else {
-  tmp3 = module_4013;
+  tmp3 = _typeof;
 }
-module_4013 = tmp3;
+_typeof = tmp3;
 if (!requiredArgs) {
   obj = { default: requiredArgs };
   let tmp5 = obj;
@@ -16,9 +17,29 @@ if (!requiredArgs) {
   tmp5 = requiredArgs;
 }
 requiredArgs = tmp5;
+if (!module_3697) {
+  obj = { default: module_3697 };
+  let tmp7 = obj;
+} else {
+  tmp7 = module_3697;
+}
+module_3697 = tmp7;
 
-export default function isThisMinute(arg0) {
-  requiredArgs.default(1, arguments);
-  return module_4013.default(Date.now(), arg0);
+export default function setUTCISODay(arg0, arg1) {
+  requiredArgs.default(2, arguments);
+  const defaultResult1 = module_3697.default(arg1);
+  let diff = defaultResult1;
+  if (defaultResult1 % 7 === 0) {
+    diff = defaultResult1 - 7;
+  }
+  const defaultResult2 = _typeof.default(arg0);
+  let num = 0;
+  const uTCDay = defaultResult2.getUTCDay();
+  if ((diff % 7 + 7) % 7 < 1) {
+    num = 7;
+  }
+  const diff1 = num + diff - uTCDay;
+  defaultResult2.setUTCDate(defaultResult2.getUTCDate() + diff1);
+  return defaultResult2;
 };
 export default exports.default;

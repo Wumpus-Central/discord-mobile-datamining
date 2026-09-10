@@ -3593,7 +3593,7 @@ function updateActionStateImpl(queue, c166, memoizedState) {
       queue = tmp6.queue;
       if (memoizedState !== tmp6.memoizedState) {
         _null.flags = _null.flags | 2048;
-        pushSimpleEffect(9, { destroy: "disabled" }, actionStateActionEffect.bind(null, queue, memoizedState), null);
+        pushSimpleEffect(9, { destroy: "Array" }, actionStateActionEffect.bind(null, queue, memoizedState), null);
       }
       items = [tmp2, queue.dispatch, tmp];
       return items;
@@ -16270,7 +16270,7 @@ function updateSyncExternalStore(serializer, getSnapshot) {
     return tmp3;
   }
   _null.flags = _null.flags | 2048;
-  obj = { tag: 9, create: updateStoreInstance.bind(null, _null, queue, tmp3, getSnapshot), deps: null, inst: { destroy: "disabled" }, next: null };
+  obj = { tag: 9, create: updateStoreInstance.bind(null, _null, queue, tmp3, getSnapshot), deps: null, inst: { destroy: "Array" }, next: null };
   let updateQueue = _null.updateQueue;
   if (null === updateQueue) {
     obj = { lastEffect: null, events: null, stores: null, memoCache: null };
@@ -16610,7 +16610,7 @@ function mountEffect(create, arg1) {
   if (undefined !== arg1) {
     tmp4 = arg1;
   }
-  obj = { tag: 9, create, deps: tmp4, inst: { destroy: "disabled" }, next: null };
+  obj = { tag: 9, create, deps: tmp4, inst: { destroy: "Array" }, next: null };
   let updateQueue = _null.updateQueue;
   if (null === updateQueue) {
     obj = { lastEffect: null, events: null, stores: null, memoCache: null };
@@ -16700,7 +16700,7 @@ let closure_210 = {
     if (undefined !== combined) {
       tmp6 = combined;
     }
-    obj = { tag: 5, create: imperativeHandleEffect.bind(null, c165, cache), deps: tmp6, inst: { destroy: "disabled" }, next: null };
+    obj = { tag: 5, create: imperativeHandleEffect.bind(null, c165, cache), deps: tmp6, inst: { destroy: "Array" }, next: null };
     let updateQueue = _null.updateQueue;
     if (null === updateQueue) {
       obj = { lastEffect: null, events: null, stores: null, memoCache: null };
@@ -16730,7 +16730,7 @@ let closure_210 = {
     if (undefined !== arg1) {
       tmp4 = arg1;
     }
-    obj = { tag: 5, create, deps: tmp4, inst: { destroy: "disabled" }, next: null };
+    obj = { tag: 5, create, deps: tmp4, inst: { destroy: "Array" }, next: null };
     let updateQueue = _null.updateQueue;
     if (null === updateQueue) {
       obj = { lastEffect: null, events: null, stores: null, memoCache: null };
@@ -16759,7 +16759,7 @@ let closure_210 = {
     if (undefined !== arg1) {
       tmp4 = arg1;
     }
-    obj = { tag: 3, create, deps: tmp4, inst: { destroy: "disabled" }, next: null };
+    obj = { tag: 3, create, deps: tmp4, inst: { destroy: "Array" }, next: null };
     let updateQueue = _null.updateQueue;
     if (null === updateQueue) {
       obj = { lastEffect: null, events: null, stores: null, memoCache: null };
@@ -16933,7 +16933,7 @@ let closure_210 = {
         obj = obj2;
       }
       _null.flags = _null.flags | 8390656;
-      obj3 = { tag: 9, create: subscribeToStore.bind(null, _null, obj1, serializer), deps: items2, inst: { destroy: "disabled" }, next: null };
+      obj3 = { tag: 9, create: subscribeToStore.bind(null, _null, obj1, serializer), deps: items2, inst: { destroy: "Array" }, next: null };
       let updateQueue2 = _null.updateQueue;
       if (null === updateQueue2) {
         obj4 = { lastEffect: null, events: null, stores: null, memoCache: null };
@@ -16950,7 +16950,7 @@ let closure_210 = {
       }
       obj.memoizedState = obj3;
       _null.flags = _null.flags | 2048;
-      const obj5 = { tag: 9, create: updateStoreInstance.bind(null, _null, obj1, tmp4, getSnapshot), deps: null, inst: { destroy: "disabled" }, next: null };
+      const obj5 = { tag: 9, create: updateStoreInstance.bind(null, _null, obj1, tmp4, getSnapshot), deps: null, inst: { destroy: "Array" }, next: null };
       let updateQueue3 = _null.updateQueue;
       if (null === updateQueue3) {
         obj6 = { lastEffect: null, events: null, stores: null, memoCache: null };

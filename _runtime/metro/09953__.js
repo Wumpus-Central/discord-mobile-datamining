@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "da62561340ac0cea2169f7776825bdc0",
-  name: "ic_channel_arrow_collapsed_24px",
+  hash: "31fe21f79423d8afd3dcadd61d04938b",
+  name: "ic_mail",
   type: "png",
 });

@@ -1,28 +1,44 @@
 // _runtime/metro/14341__.js
-import _mod14325 from "14325__.js";
-import _mod14326 from "14326__.js";
-import _mod14342 from "14342__.js";
+import emitUnicodeLanguageId from "../14342_emitUnicodeLanguageId.js";
+import compareKV from "../14343_compareKV.js";
+import likelySubtags from "../14346_likelySubtags.js";
+import _mod14347 from "14347__.js";
+import e from "../01162_e.js";
 
-let prop = _mod14325["__core-js_shared__"];
-if (!prop) {
-  prop = _mod14326("__core-js_shared__", {});
-}
-let versions = prop.versions;
-if (!versions) {
-  const items = [];
-  prop.versions = items;
-  versions = items;
-}
-let str2 = "global";
-if (_mod14342) {
-  str2 = "pure";
-}
-versions.push({
-  version: "3.41.0",
-  mode: str2,
-  copyright: "\u00A9 2014-2025 Denis Pushkarev (zloirock.ru)",
-  license: "https://github.com/zloirock/core-js/blob/v3.41.0/LICENSE",
-  source: "https://github.com/zloirock/core-js",
-});
+e.__exportStar(emitUnicodeLanguageId, exports);
+e.__exportStar(_mod14347, exports);
+e.__exportStar(likelySubtags, exports);
 
-export default prop;
+export const getCanonicalLocales = function getCanonicalLocales(items) {
+  if (undefined === items) {
+    items = [];
+  } else {
+    let arr3 = items;
+    if (typeof items === "string") {
+      const items1 = [items];
+      arr3 = items1;
+    }
+    const items2 = [];
+    let num3 = 0;
+    items = items2;
+    if (0 < arr3.length) {
+      do {
+        let emitUnicodeLocaleIdResult = emitUnicodeLanguageId.emitUnicodeLocaleId(
+          compareKV.CanonicalizeUnicodeLocaleId(require("14345__.js").parseUnicodeLocaleId(arr3[num3])),
+        );
+        if (items2.indexOf(emitUnicodeLocaleIdResult) < 0) {
+          let arr = items2.push(emitUnicodeLocaleIdResult);
+        }
+        num3 = num3 + 1;
+        items = items2;
+      } while (num3 < arr3.length);
+    }
+  }
+  return items;
+};
+export const isStructurallyValidLanguageTag = require("14345__.js").isUnicodeLanguageSubtag;
+export const isUnicodeLanguageSubtag = require("14345__.js").isUnicodeLanguageSubtag;
+export const isUnicodeRegionSubtag = require("14345__.js").isUnicodeRegionSubtag;
+export const isUnicodeScriptSubtag = require("14345__.js").isUnicodeScriptSubtag;
+export const parseUnicodeLanguageId = require("14345__.js").parseUnicodeLanguageId;
+export const parseUnicodeLocaleId = require("14345__.js").parseUnicodeLocaleId;

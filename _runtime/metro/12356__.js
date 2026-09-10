@@ -3,11 +3,11 @@ import registerAsset from "01122__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/create_guild/native/images",
-  width: 48,
-  height: 48,
+  httpServerLocation: "/assets/images/native/icons",
+  width: 24,
+  height: 24,
   scales: [2, 3],
-  hash: "ddab91eeff97f71a819bf48cb718a6b3",
-  name: "img_create_my_own",
+  hash: "340e4913b9379af519610c863fe359dc",
+  name: "ic_arrow_forward_24px",
   type: "png",
 });

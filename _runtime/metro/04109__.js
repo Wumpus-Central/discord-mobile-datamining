@@ -1,40 +1,35 @@
 // _runtime/metro/04109__.js
-import 04110__ from "04110__.js";
-import 04111__ from "04111__.js";
-import 04112__ from "04112__.js";
-import date from "04113__.js";
-import date from "04114__.js";
+import 03697__ from "03697__.js";
+import _typeof from "03693__.js";
+import requiredArgs from "../03694_requiredArgs.js";
 
-if (!module_4110) {
-  let obj = { default: module_4110 };
+if (!module_3697) {
+  let obj = { default: module_3697 };
   let tmp3 = obj;
 } else {
-  tmp3 = module_4110;
+  tmp3 = module_3697;
 }
-if (!module_4111) {
-  obj = { default: module_4111 };
+module_3697 = tmp3;
+if (!_typeof) {
+  obj = { default: _typeof };
   let tmp5 = obj;
 } else {
-  tmp5 = module_4111;
+  tmp5 = _typeof;
 }
-if (!module_4112) {
-  obj = { default: module_4112 };
+_typeof = tmp5;
+if (!requiredArgs) {
+  obj = { default: requiredArgs };
   let tmp7 = obj;
 } else {
-  tmp7 = module_4112;
+  tmp7 = requiredArgs;
 }
-if (!date) {
-  const obj1 = { default: date };
-  let tmp9 = obj1;
-} else {
-  tmp9 = date;
-}
-if (!date) {
-  const obj2 = { default: date };
-  let tmp11 = obj2;
-} else {
-  tmp11 = date;
-}
+requiredArgs = tmp7;
 
-export default { code: "vi", formatDistance: tmp3.default, formatLong: tmp5.default, formatRelative: tmp7.default, localize: tmp9.default, match: tmp11.default, options: { weekStartsOn: 1, firstWeekContainsDate: 1 } };
+export default function setDayOfYear(arg0, arg1) {
+  requiredArgs.default(2, arguments);
+  const defaultResult1 = _typeof.default(arg0);
+  defaultResult1.setMonth(0);
+  defaultResult1.setDate(module_3697.default(arg1));
+  return defaultResult1;
+};
 export default exports.default;

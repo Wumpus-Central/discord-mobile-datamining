@@ -1,11 +1,24 @@
 // _runtime/metro/14381__.js
-import _mod14328 from "14328__.js";
-import _mod14362 from "14362__.js";
-import _mod14379 from "14379__.js";
+import 14382__ from "14382__.js";
 
-export default _mod14328
-  ? (arg0, arg1, arg2) => _mod14379.f(arg0, arg1, _mod14362(1, arg2))
-  : (arg0, arg1, arg2) => {
-      arg0[arg1] = arg2;
-      return arg0;
+const call = prototype.call;
+if (module_14382) {
+  const bind = prototype.bind;
+  module_14382 = bind.bind(call, call);
+}
+if (!module_14382) {
+  module_14382 = (arg0) => {
+    closure_0 = arg0;
+    return () => {
+      const apply = call.apply;
+      if (typeof apply === "unknown") {
+        let applyArgumentsResult = HermesBuiltin.applyArguments(closure_0);
+      } else {
+        applyArgumentsResult = apply(closure_0, arguments);
+      }
+      return applyArgumentsResult;
     };
+  };
+}
+
+export default module_14382;

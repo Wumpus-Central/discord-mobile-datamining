@@ -3,11 +3,11 @@ import registerAsset from "01122__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/premium/native/images/perks",
-  width: 300,
-  height: 175,
+  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
+  width: 24,
+  height: 24,
   scales: [2, 3],
-  hash: "9fd167b3326279649df94a86f059e292",
-  name: "large_uploads",
+  hash: "805fda450615a79e013d34cae4b4a783",
+  name: "PaintPaletteIcon",
   type: "png",
 });

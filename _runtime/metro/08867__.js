@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "0272dced0f6c0fbc37cda949ecb8a378",
-  name: "DiceIcon",
+  hash: "6d493c91631ba30b8d8c55fe48d43780",
+  name: "CheckmarkLargeBoldIcon",
   type: "png",
 });

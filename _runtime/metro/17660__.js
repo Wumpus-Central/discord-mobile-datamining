@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "cbab82e40d604a026003b3db68edd6bb",
-  name: "ic_icon_upload",
+  hash: "e34464fbaad016de0cccce358d754f22",
+  name: "ic_overflow_android",
   type: "png",
 });

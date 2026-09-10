@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "348e12a01e4923ab4918827c81373de7",
-  name: "BellIcon",
+  hash: "94a3ac930e81037e0d0d694987ad1d50",
+  name: "PaperIcon",
   type: "png",
 });

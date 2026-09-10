@@ -4,10 +4,10 @@ import registerAsset from "01122__.js";
 export default registerAsset.registerAsset({
   __packager_asset: true,
   httpServerLocation: "/assets/images/native",
-  width: 78,
-  height: 15,
+  width: 50,
+  height: 50,
   scales: [2, 3],
-  hash: "6686c0dca54e6176e93ab454fcbd7545",
-  name: "img_transfer_arrow",
+  hash: "9fa4b907ff6d9b977fcf6802f2937622",
+  name: "img_poop_dark",
   type: "png",
 });

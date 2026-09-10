@@ -3,11 +3,11 @@ import registerAsset from "01122__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
-  width: 24,
-  height: 24,
+  httpServerLocation: "/assets/modules/stage_channels/native/images",
+  width: 88,
+  height: 80,
   scales: [2, 3],
-  hash: "48354bca4647923912a0392de88da6fa",
-  name: "IdCardIcon",
+  hash: "cdacc9b330d74f767eb28d253e6930f0",
+  name: "stage-sparkles",
   type: "png",
 });

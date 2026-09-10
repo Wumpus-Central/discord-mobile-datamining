@@ -1,5 +1,5 @@
 // _runtime/00079_insetsDiffer.js
-let closure_0 = { top: "Array", left: "flexDirection", right: "y", bottom: "HermesInternal" };
+let closure_0 = { top: "call", left: "header", right: "rejectWithError", bottom: "Array" };
 
 export default function insetsDiffer(arg0, arg1) {
   let rect = arg0;

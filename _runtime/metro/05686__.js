@@ -1,16 +1,14 @@
 // _runtime/metro/05686__.js
-import HeaderHeightContext from "../05685_HeaderHeightContext.js";
-import noop from "00019__.js";
+import registerAsset from "01122__.js";
 
-require = arg1;
-
-export const useHeaderHeight = function useHeaderHeight() {
-  const context = noop.useContext(HeaderHeightContext.HeaderHeightContext);
-  if (undefined === context) {
-    const _Error = Error;
-    const error = new Error("Couldn't find the header height. Are you inside a screen in a navigator with a header?");
-    throw error;
-  } else {
-    return context;
-  }
-};
+export default registerAsset.registerAsset({
+  __packager_asset: true,
+  httpServerLocation:
+    "/assets/../node_modules/.pnpm/@react-navigation+elements@2.9.34_542eyc77l7xc6yrt372p7kkeyi/node_modules/@react-navigation/elements/lib/module/assets",
+  width: 64,
+  height: 64,
+  scales: [1, 1, 2, 3, 4],
+  hash: "61378328a719f21f093de82dd89ecfb0",
+  name: "clear-icon",
+  type: "png",
+});

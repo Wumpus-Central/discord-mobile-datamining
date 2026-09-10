@@ -1,75 +1,140 @@
 // _runtime/metro/06837__.js
-import jsxProd from "../react/00021_jsxProd.js";
-import GESTURE_SOURCE from "../06642_GESTURE_SOURCE.js";
-import _mod6838 from "06838__.js";
+import _modDef6838 from "06838__.js";
+import _objectWithoutProperties from "00109__objectWithoutProperties.js";
+import _classCallCheck from "00041__classCallCheck.js";
+import _createClass from "00042__createClass.js";
+import metroRequire from "00093__possibleConstructorReturn.js";
+import _getPrototypeOf from "../00095__getPrototypeOf.js";
+import _inherits from "../00098__inherits.js";
 import noop from "00019__.js";
 
-({ useCallback: c3, useMemo: closure_4, useRef: hasOwnProperty, memo } = noop);
-const jsx = jsxProd.jsx;
-const __initData = {
-  code: "function pnpm_BottomSheetFooterTsx1(){const{animatedFooterPosition,animatedKeyboardState,KEYBOARD_STATE,bottomInset}=this.__closure;let footerTranslateY=animatedFooterPosition.get();if(animatedKeyboardState.get()!==KEYBOARD_STATE.SHOWN){footerTranslateY=footerTranslateY-bottomInset;}return{transform:[{translateY:Math.max(0,footerTranslateY)}]};}",
-};
-const memoResult = memo(function BottomSheetFooterComponent(animatedFooterPosition) {
-  animatedFooterPosition = animatedFooterPosition.animatedFooterPosition;
-  let num = animatedFooterPosition.bottomInset;
-  if (num === undefined) {
-    num = 0;
-  }
-  const style = animatedFooterPosition.style;
-  const children = animatedFooterPosition.children;
-  let animatedStyle;
-  const tmp = animatedStyle(null);
-  let obj = animatedFooterPosition(style[2]);
-  const bottomSheetInternal = obj.useBottomSheetInternal();
-  const animatedFooterHeight = bottomSheetInternal.animatedFooterHeight;
-  const animatedKeyboardState = bottomSheetInternal.animatedKeyboardState;
-  const fn = function c() {
-    animatedFooterPosition.get();
-    value = animatedKeyboardState.get();
-    let diff = value;
-    if (value !== GESTURE_SOURCE.KEYBOARD_STATE.SHOWN) {
-      diff = value - num;
+const TouchableHighlight = fn;
+function _isNativeReflectConstruct() {
+  try {
+    const _Boolean = Boolean;
+    const call = valueOf.call;
+    const _Reflect = Reflect;
+    const _Boolean2 = Boolean;
+    if (typeof call === "unknown") {
+      let callResult = valueOf();
+    } else {
+      callResult = call(constructResult);
     }
-    let obj = { transform: null };
-    obj = { translateY: Math.max(0, diff) };
-    const items = [obj];
-    obj.transform = items;
-    return obj;
-  };
-  obj = {
-    animatedFooterPosition,
-    animatedKeyboardState,
-    KEYBOARD_STATE: animatedFooterPosition(style[4]).KEYBOARD_STATE,
-    bottomInset: num,
-  };
-  fn.__closure = obj;
-  fn.__workletHash = 5322275157644;
-  fn.__initData = __initData;
-  let items = [num, animatedKeyboardState, animatedFooterPosition];
-  animatedStyle = animatedFooterPosition(style[3]).useAnimatedStyle(fn, items);
-  const items1 = [style, animatedStyle];
-  const items2 = [animatedFooterHeight];
-  const obj2 = animatedFooterPosition(style[3]);
-  const tmp2 = style;
-  const items3 = [animatedFooterHeight];
-  const tmp5 = animatedKeyboardState(() => {
-    const items = [_mod6838.styles.container, style, animatedStyle];
-    return items;
-  }, items1);
-  const tmp6 = animatedFooterHeight((nativeEvent) => {
-    const result = animatedFooterHeight.set(nativeEvent.nativeEvent.layout.height);
-  }, items2);
-  const tmp7 = animatedFooterHeight((height) => {
-    const result = animatedFooterHeight.set(height.height);
-  }, items3);
-  const boundingClientRect = animatedFooterPosition(style[2]).useBoundingClientRect(tmp, tmp7);
-  let tmp9 = null;
-  if (null !== children) {
-    obj = { ref: tmp, onLayout: tmp6, style: tmp5, children };
-    tmp9 = jsx(num(tmp2[3]).View, { ref: tmp, onLayout: tmp6, style: tmp5, children });
+    closure_0 = !callResult;
+    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
+      return closure_0;
+    };
+    return _isNativeReflectConstruct();
+  } catch (err) {}
+}
+let closure_3 = ["style"];
+get_ActivityIndicator = fn(17);
+({ StyleSheet: closure_9, View: c10 } = get_ActivityIndicator);
+const jsx = fn(21).jsx;
+class TouchableHighlight {
+  constructor(arg0) {
+    self = this;
+    tmp = hasOwnProperty(this, TouchableHighlight);
+    items = [];
+    items[0] = global;
+    tmp2 = closure_7;
+    obj = closure_7(TouchableHighlight);
+    tmp3 = metroRequire;
+    if (closure_12()) {
+      tmp5 = globalThis;
+      _Reflect = Reflect;
+      constructResult = Reflect.construct(obj, items, tmp2(self).constructor);
+    } else {
+      constructResult = obj.apply(self, items);
+    }
+    tmp3Result = tmp3(self, constructResult);
+    closure_0 = tmp3Result;
+    tmp3Result.showUnderlay = () => {
+      let obj = closure_0;
+      if (closure_0.hasPressHandler()) {
+        obj = { extraChildStyle: null, extraUnderlayStyle: null };
+        obj = { opacity: null };
+        obj.opacity = obj.props.activeOpacity;
+        obj.extraChildStyle = obj;
+        const obj1 = { backgroundColor: obj.props.underlayColor };
+        obj.extraUnderlayStyle = obj1;
+        obj.setState(obj);
+        const props = obj.props;
+        const onShowUnderlay = props.onShowUnderlay;
+        if (onShowUnderlay != null) {
+          onShowUnderlay();
+        }
+      }
+    };
+    tmp3Result.hasPressHandler = () =>
+      closure_0.props.onPress || closure_0.props.onPressIn || closure_0.props.onPressOut || closure_0.props.onLongPress;
+    tmp3Result.hideUnderlay = () => {
+      closure_0.setState({ extraChildStyle: null, extraUnderlayStyle: null });
+      const props = closure_0.props;
+      const onHideUnderlay = props.onHideUnderlay;
+      if (onHideUnderlay != null) {
+        onHideUnderlay();
+      }
+    };
+    tmp3Result.onStateChange = (arg0, arg1) => {
+      if (arg1 === TouchableHighlight(6838).TOUCHABLE_STATE.BEGAN) {
+        closure_0.showUnderlay();
+      } else {
+        if (!tmp3) {
+          closure_0.hideUnderlay();
+        }
+        tmp3 =
+          arg1 !== TouchableHighlight(6838).TOUCHABLE_STATE.UNDETERMINED &&
+          arg1 !== TouchableHighlight(6838).TOUCHABLE_STATE.MOVED_OUTSIDE;
+      }
+    };
+    tmp3Result.state = { extraChildStyle: null, extraUnderlayStyle: null };
+    return tmp3Result;
   }
-  return tmp9;
-});
-memoResult.displayName = "BottomSheetFooter";
+}
+_inherits(TouchableHighlight, fn(19).Component);
+const entry = {
+  key: "renderChildren",
+  value: function renderChildren() {
+    const self = this;
+    if (this.props.children) {
+      const Children = noop.Children;
+      const onlyResult = Children.only(self.props.children);
+      const obj = { style: React7.compose(onlyResult.props.style, self.state.extraChildStyle) };
+      return noop.cloneElement(onlyResult, obj);
+    } else {
+      return <closure_1_10 />;
+    }
+  },
+};
+let items = [
+  entry,
+  {
+    key: "render",
+    value: function render() {
+      const self = this;
+      const props = this.props;
+      let style = props.style;
+      if (undefined === style) {
+        style = {};
+      }
+      const obj = {};
+      const tmp = _objectWithoutProperties(props, closure_3);
+      const merged = Object.assign(tmp);
+      const items = [style, self.state.extraUnderlayStyle];
+      obj.style = items;
+      obj.onStateChange = self.onStateChange;
+      obj.children = self.renderChildren();
+      return jsx(_modDef6838, {});
+    },
+  },
+];
+const importDefaultResultResult = _createClass(TouchableHighlight, items);
+let obj = {};
+let merged = Object.assign(_modDef6838.defaultProps);
+obj.activeOpacity = 0.85;
+obj.delayPressOut = 100;
+obj.underlayColor = "black";
+importDefaultResultResult.defaultProps = obj;
 
-export const BottomSheetFooter = memoResult;
+export default importDefaultResultResult;
