@@ -4,7 +4,7 @@ import util from "../../../../intl/index.native.tsx";
 import native from "../../../../design/void/native.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import common_AlertDefault from "../../../../components_native/common/Alert.tsx";
-import _modDef15251 from "../../../../../_runtime/metro/15251__.js";
+import _modDef15300 from "../../../../../_runtime/metro/15300__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -12,7 +12,7 @@ get_ActivityIndicator = fn(17);
 ({ View: c3, Image: closure_4 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-fn(4574);
+fn(4605);
 let createStyles = { container: null, body: null, centerText: null, headerImage: null };
 createStyles = { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_NORMAL };
 createStyles.container = createStyles;
@@ -33,7 +33,7 @@ export default function ResubscribedAlert(onClose) {
   obj.onConfirm = onClose.onClose;
   obj.style = tmp.container;
   obj = { style: tmp.body, children: null };
-  obj = { source: _modDef15251, style: tmp.headerImage };
+  obj = { source: _modDef15300, style: tmp.headerImage };
   const items = [hasOwnProperty(React4, obj), hasOwnProperty(native.Spacer, { size: 27 }), , ,];
   const obj1 = {
     variant: "text-lg/semibold",

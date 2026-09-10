@@ -36,7 +36,7 @@ function ExternalPipViewVideoUnavailable(wasStream) {
     result = intl.string(tmp10(1114).t.Nzo5nz);
   }
   obj.children = result;
-  items[1] = tmp8(tmp10(4570).Text, obj);
+  items[1] = tmp8(tmp10(4601).Text, obj);
   obj.children = items;
   return closure_1_12(timestampProducer, obj);
 }
@@ -65,7 +65,7 @@ function ExternalPipViewVideoUser(arg0) {
 }
 function ExternalPipViewVideoStream(streamId) {
   streamId = streamId.streamId;
-  let obj = streamId(9637);
+  let obj = streamId(9675);
   _slicedToArray = undefined;
   noop = undefined;
   const surfaceDirectRendererExperiment = obj.useSurfaceDirectRendererExperiment(streamId.userId, {
@@ -104,7 +104,7 @@ function ExternalPipViewVideoStream(streamId) {
     items[1] = { opacity: num };
     return items;
   }, items2);
-  const token = streamId(4275).useToken(first(576).colors.TEXT_FEEDBACK_INFO);
+  const token = streamId(4306).useToken(first(576).colors.TEXT_FEEDBACK_INFO);
   value = closure_7.get();
   _slicedToArray = value;
   const items3 = [streamId, value];
@@ -116,7 +116,7 @@ function ExternalPipViewVideoStream(streamId) {
     }
   }, items3);
   const children = [
-    closure_11(first(9648), {
+    closure_11(first(9686), {
       useSurfaceDirectRenderer: surfaceDirectRendererExperiment,
       style: memo,
       streamId,
@@ -139,10 +139,10 @@ function ExternalPipViewVideoStream(streamId) {
 }
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: hasOwnProperty, StyleSheet, View: metroRequire, PixelRatio: closure_7 } = get_ActivityIndicator);
-const ParticipantTypes = fn(4595).ParticipantTypes;
+const ParticipantTypes = fn(4626).ParticipantTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12, Fragment: map1 } = jsxProd);
-fn(4574);
+fn(4605);
 let obj = {
   container: null,
   video: null,

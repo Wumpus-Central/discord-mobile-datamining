@@ -3,7 +3,7 @@ import AvatarUtilsDefault from "../../utils/AvatarUtils.tsx";
 import getDevicePixelRatioDefault from "../../utils/getDevicePixelRatio.native.tsx";
 import asyncRequireImpl from "../../../_runtime/01896_asyncRequireImpl.js";
 import ModalActionCreatorsDefault from "../../actions/ModalActionCreators.tsx";
-import _mod7112 from "../../../_runtime/metro/07112__.js";
+import _mod7150 from "../../../_runtime/metro/07150__.js";
 import GuildOnboardingActionCreatorsDefault from "GuildOnboardingActionCreators.tsx";
 import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
 import SelectedGuildStore from "../../stores/SelectedGuildStore.tsx";
@@ -11,7 +11,7 @@ import GuildOnboardingStore from "GuildOnboardingStore.tsx";
 
 require = fn;
 function getBaseAnimationData() {
-  return JSON.parse(JSON.stringify(_mod7112));
+  return JSON.parse(JSON.stringify(_mod7150));
 }
 let closure_13 = async function _doGuildOnboarding(arg0) {
   let guildId = arg0;
@@ -218,17 +218,17 @@ function openAndWaitForOnboarding(guildId) {
       landingAnimation: closure_12[guildId],
       isFirstOpen: true,
     };
-    obj.pushLazy(asyncRequireImpl(7135, dependencyMap.paths), obj, closure_7).then(() => {
+    obj.pushLazy(asyncRequireImpl(7173, dependencyMap.paths), obj, closure_7).then(() => {
       if (guildId.getGuildId() !== closure_1_0) {
         closure_0(dependencyMap[18]).transitionTo(closure_2_9.CHANNEL(tmp));
         const obj = closure_0(dependencyMap[18]);
       }
     });
-    const pushLazyResult = obj.pushLazy(asyncRequireImpl(7135, dependencyMap.paths), obj, closure_7);
+    const pushLazyResult = obj.pushLazy(asyncRequireImpl(7173, dependencyMap.paths), obj, closure_7);
   });
 }
 const NativeModules = fn(17).NativeModules;
-let closure_7 = fn(7111).GUILD_ONBOARDING_MODAL_KEY;
+let closure_7 = fn(7149).GUILD_ONBOARDING_MODAL_KEY;
 const Constants = fn(1074);
 ({ GuildFeatures: closure_8, Routes: closure_9 } = Constants);
 let closure_11 = {};

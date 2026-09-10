@@ -7,7 +7,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-fn(4574);
+fn(4605);
 let createStyles = { pillContainer: null, pillIcon: null, pillText: null };
 createStyles = {
   flexDirection: "row",

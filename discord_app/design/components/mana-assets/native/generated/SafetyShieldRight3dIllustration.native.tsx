@@ -1,7 +1,7 @@
 // discord_app/design/components/mana-assets/native/generated/SafetyShieldRight3dIllustration.native.tsx
 import jsxProd from "../../../../../../_runtime/react/00021_jsxProd.js";
 import FastImageDefault from "../../../../../components_native/common/FastImage.tsx";
-import _modDef6420 from "../../../../../../discord_assets/assets/mana/asset-library/generated/SafetyShieldRight3dIllustration-2x.png.js";
+import _modDef6456 from "../../../../../../discord_assets/assets/mana/asset-library/generated/SafetyShieldRight3dIllustration-2x.png.js";
 import size from "../../../../../../_runtime/metro/00002__.js";
 
 const jsx = jsxProd.jsx;
@@ -31,7 +31,7 @@ export const SafetyShieldRight3dIllustration = function SafetyShieldRight3dIllus
     accessibilityLabel: null,
     resizeMode: null,
   };
-  obj = { uri: _modDef6420 };
+  obj = { uri: _modDef6456 };
   obj.source = obj;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];
@@ -39,5 +39,5 @@ export const SafetyShieldRight3dIllustration = function SafetyShieldRight3dIllus
   obj.accessible = accessible;
   obj.accessibilityLabel = accessibilityLabel;
   obj.resizeMode = resizeMode;
-  return jsx(FastImageDefault, { uri: _modDef6420 });
+  return jsx(FastImageDefault, { uri: _modDef6456 });
 };

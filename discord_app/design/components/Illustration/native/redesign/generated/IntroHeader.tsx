@@ -1,6 +1,6 @@
 // discord_app/design/components/Illustration/native/redesign/generated/IntroHeader.tsx
 import shared from "../../../../../shared.tsx";
-import _mod8259 from "../../index.tsx";
+import _mod8296 from "../../index.tsx";
 import noop from "../../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -12,13 +12,13 @@ const result = size.fileFinishedImporting("design/components/Illustration/native
 export const getIntroHeaderSource = function getIntroHeaderSource(theme) {
   const obj = {
     dark() {
-      return require("../../../../../../../_runtime/metro/17694__.js");
+      return require("../../../../../../../_runtime/metro/17753__.js");
     },
     darker() {
-      return require("../../../../../../../_runtime/metro/17695__.js");
+      return require("../../../../../../../_runtime/metro/17754__.js");
     },
     light() {
-      return require("../../../../../../../_runtime/metro/17696__.js");
+      return require("../../../../../../../_runtime/metro/17755__.js");
     },
   };
   return obj.getIllustrationSource(theme, obj);
@@ -26,31 +26,31 @@ export const getIntroHeaderSource = function getIntroHeaderSource(theme) {
 export const useIntroHeaderSource = function useIntroHeaderSource() {
   const obj = {
     dark() {
-      return require("../../../../../../../_runtime/metro/17694__.js");
+      return require("../../../../../../../_runtime/metro/17753__.js");
     },
     darker() {
-      return require("../../../../../../../_runtime/metro/17695__.js");
+      return require("../../../../../../../_runtime/metro/17754__.js");
     },
     light() {
-      return require("../../../../../../../_runtime/metro/17696__.js");
+      return require("../../../../../../../_runtime/metro/17755__.js");
     },
   };
-  return _mod8259.getIllustrationSource(obj.useThemeContext().theme, obj);
+  return _mod8296.getIllustrationSource(obj.useThemeContext().theme, obj);
 };
 export const IntroHeader = function IntroHeader(arg0) {
   let obj = {
     dark() {
-      return require("../../../../../../../_runtime/metro/17694__.js");
+      return require("../../../../../../../_runtime/metro/17753__.js");
     },
     darker() {
-      return require("../../../../../../../_runtime/metro/17695__.js");
+      return require("../../../../../../../_runtime/metro/17754__.js");
     },
     light() {
-      return require("../../../../../../../_runtime/metro/17696__.js");
+      return require("../../../../../../../_runtime/metro/17755__.js");
     },
   };
   obj = {};
-  const illustrationSource = _mod8259.getIllustrationSource(obj.useThemeContext().theme, obj);
+  const illustrationSource = _mod8296.getIllustrationSource(obj.useThemeContext().theme, obj);
   const merged = Object.assign(arg0);
   obj.source = illustrationSource;
   return <Image />;

@@ -379,9 +379,9 @@ let closure_11 = async function _getStoreKitCredential(arg0) {
 };
 let viewThroughSpec = {};
 viewThroughSpec = { viewThroughSpec: null };
-viewThroughSpec = { kind: fn(11526).IosAttributionFramework.AD_ATTRIBUTION_KIT };
+viewThroughSpec = { kind: fn(11566).IosAttributionFramework.AD_ATTRIBUTION_KIT };
 viewThroughSpec.viewThroughSpec = viewThroughSpec;
-viewThroughSpec[fn(11526).IosAttributionFramework.AD_ATTRIBUTION_KIT] = viewThroughSpec;
+viewThroughSpec[fn(11566).IosAttributionFramework.AD_ATTRIBUTION_KIT] = viewThroughSpec;
 let closure_4 = new LoggerDefault("IosAttribution");
 const map = new Map();
 const size = fn(2);

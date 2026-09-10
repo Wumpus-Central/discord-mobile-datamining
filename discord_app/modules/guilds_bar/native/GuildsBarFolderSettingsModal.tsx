@@ -33,10 +33,10 @@ function GuildFolderSettingsScene(color) {
       tmp3 = defaultColor;
     }
     obj = { color: tmp3, defaultColor, onSelect: onColorChange };
-    obj.openLazy(asyncRequireImpl(16324, dependencyMap.paths), "RoleColorPicker", obj);
+    obj.openLazy(asyncRequireImpl(16373, dependencyMap.paths), "RoleColorPicker", obj);
   }, items);
   obj.padding = onColorChange(576).space.PX_16;
-  obj.paddingBottom = 38 + onColorChange(6995)().insets.bottom;
+  obj.paddingBottom = 38 + onColorChange(7033)().insets.bottom;
   obj.contentContainerStyle = obj;
   obj = { spacing: onColorChange(576).space.PX_16, children: null };
   const obj1 = {
@@ -54,7 +54,7 @@ function GuildFolderSettingsScene(color) {
   obj1.placeholder = intl2.string(color(1114).t.xV9hVh);
   obj1.value = name;
   obj1.onChange = onNameChange;
-  const items1 = [closure_10(color(6620).TextInput, obj1)];
+  const items1 = [closure_10(color(6656).TextInput, obj1)];
   const obj2 = { label: null, subLabel: null, onPress: null, arrow: true, trailing: null };
   const intl3 = color(1114).intl;
   obj2.label = intl3.string(color(1114).t.xpurRF);
@@ -72,20 +72,20 @@ function GuildFolderSettingsScene(color) {
     tmp11 = closure_8;
   }
   const obj3 = { hasIcons: false, children: null };
-  obj2.trailing = closure_10(onColorChange(14625), { color: tmp11, style: tmp.colorBlock });
-  obj3.children = closure_10(color(5619).TableRow, obj2);
-  items1[1] = closure_10(color(5701).TableRowGroup, obj3);
+  obj2.trailing = closure_10(onColorChange(14674), { color: tmp11, style: tmp.colorBlock });
+  obj3.children = closure_10(color(5655).TableRow, obj2);
+  items1[1] = closure_10(color(5737).TableRowGroup, obj3);
   obj.children = items1;
-  obj.children = closure_11(color(4987).Stack, obj);
+  obj.children = closure_11(color(5023).Stack, obj);
   return closure_10(closure_6, obj);
 }
 get_ActivityIndicator = fn(17);
 ({ Keyboard: hasOwnProperty, ScrollView: metroRequire } = get_ActivityIndicator);
-const GuildsBarConstants = fn(16323);
+const GuildsBarConstants = fn(16372);
 ({ DEFAULT_FOLDER_COLOR: closure_8, normalizeFolderColor: closure_9 } = GuildsBarConstants);
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(4574);
+const createStyles = fn(4605);
 let closure_12 = createStyles.createStyles({
   scrollView: { flex: 1 },
   colorBlock: { marginHorizontal: 0, marginVertical: 0, minWidth: 24, height: 24, borderRadius: 3 },
@@ -192,5 +192,5 @@ export default function GuildFolderSettingsModal(folderId) {
     return { [c14]: obj };
   }, items3);
   obj = { screens: memo, initialRouteName };
-  return closure_10(folderId(7014).Navigator, obj);
+  return closure_10(folderId(7052).Navigator, obj);
 }

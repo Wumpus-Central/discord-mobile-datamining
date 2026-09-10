@@ -1,7 +1,7 @@
 // discord_app/modules/emoji_picker/hooks/useEmojiHotrail.tsx
 import noop from "../../../../_runtime/metro/00019__.js";
 
-const EMOJI_ROW_SIZE = fn(5477).EMOJI_ROW_SIZE;
+const EMOJI_ROW_SIZE = fn(5513).EMOJI_ROW_SIZE;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/emoji_picker/hooks/useEmojiHotrail.tsx");
 

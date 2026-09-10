@@ -8,7 +8,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-fn(4574);
+fn(4605);
 let createStyles = { author: null };
 createStyles = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_8 };
 createStyles.author = createStyles;
@@ -34,14 +34,14 @@ export default function VibegrationsMessageAuthor(userId) {
     },
     items2,
   );
-  userId(4418);
+  userId(4449);
   let tmp8 = null;
   if (null != stateFromStores) {
     obj = { style: tmp.author, children: null };
     obj = { size: tmp3(1178).AvatarSizes.SIZE_16, user: stateFromStores, guildId: "Array" };
     const items3 = [closure_5(tmp3(1178).Avatar, obj)];
     const obj1 = { variant: "text-xs/semibold", color: "text-muted", children: tmp7 };
-    items3[1] = closure_5(tmp3(4570).Text, obj1);
+    items3[1] = closure_5(tmp3(4601).Text, obj1);
     obj.children = items3;
     tmp8 = closure_6(View, obj);
   }

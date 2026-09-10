@@ -5,7 +5,7 @@ import AlertModal from "../../../../design/components/AlertModal/native/AlertMod
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const reset = fn(7435).reset;
+const reset = fn(7473).reset;
 const PremiumTypes = fn(1373).PremiumTypes;
 const jsx = fn(21).jsx;
 const size = fn(2);

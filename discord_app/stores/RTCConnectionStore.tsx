@@ -19,8 +19,8 @@ function createRTCConnection(guildId, channelId, createdTime) {
   } else {
     const id = AuthenticationStore.getId();
     obj = { userId: id, sessionId, guildId, channelId, joinVoiceId, createdTime };
-    _default = new _default(4601).default(obj);
-    _default.on(_default(4628).RTCConnectionEvent.State, (state, arg1, arg2) => {
+    _default = new _default(4632).default(obj);
+    _default.on(_default(4659).RTCConnectionEvent.State, (state, arg1, arg2) => {
       closure_1 = arg1;
       dependencyMap = arg2;
       closure_1(573).wait(() => {
@@ -30,7 +30,7 @@ function createRTCConnection(guildId, channelId, createdTime) {
         return obj.dispatch(obj);
       });
     });
-    _default.on(_default(4628).RTCConnectionEvent.Video, (guildId, channelId, userId, streamId, rtcServerId) => {
+    _default.on(_default(4659).RTCConnectionEvent.Video, (guildId, channelId, userId, streamId, rtcServerId) => {
       DispatcherDefault.wait(() => {
         obj = {
           type: "RTC_CONNECTION_VIDEO",
@@ -45,24 +45,24 @@ function createRTCConnection(guildId, channelId, createdTime) {
         return obj.dispatch(obj);
       });
     });
-    _default.on(_default(4628).RTCConnectionEvent.Ping, (pings, quality) => {
+    _default.on(_default(4659).RTCConnectionEvent.Ping, (pings, quality) => {
       quality(573).wait(() => {
         obj = { type: "RTC_CONNECTION_PING", pings, quality };
         return obj.dispatch(obj);
       });
     });
-    _default.on(_default(4628).RTCConnectionEvent.OutboundLossRate, (lossRate) => {
+    _default.on(_default(4659).RTCConnectionEvent.OutboundLossRate, (lossRate) => {
       closure_1(573).wait(() => {
         obj = { type: "RTC_CONNECTION_LOSS_RATE", lossRate };
         return obj.dispatch(obj);
       });
     });
-    _default.on(_default(4628).RTCConnectionEvent.Speaking, (userId, speaking) => {
+    _default.on(_default(4659).RTCConnectionEvent.Speaking, (userId, speaking) => {
       if (speaking != null) {
         speaking.setSpeaking(userId, speaking);
       }
     });
-    _default.on(_default(4628).RTCConnectionEvent.Flags, (userId, flags) => {
+    _default.on(_default(4659).RTCConnectionEvent.Flags, (userId, flags) => {
       DispatcherDefault.wait(() => {
         obj = {
           type: "RTC_CONNECTION_FLAGS",
@@ -75,11 +75,11 @@ function createRTCConnection(guildId, channelId, createdTime) {
         obj.dispatch(obj);
       });
     });
-    _default.on(_default(4628).RTCConnectionEvent.UsersMerged, (userIds, context) => {
+    _default.on(_default(4659).RTCConnectionEvent.UsersMerged, (userIds, context) => {
       obj = { type: "RTC_CONNECTION_USERS_MERGED", userIds, context };
       obj.dispatch(obj);
     });
-    _default.on(_default(4628).RTCConnectionEvent.ClientConnect, (userIds) => {
+    _default.on(_default(4659).RTCConnectionEvent.ClientConnect, (userIds) => {
       DispatcherDefault.wait(() => {
         obj = {
           type: "RTC_CONNECTION_CLIENT_CONNECT",
@@ -91,7 +91,7 @@ function createRTCConnection(guildId, channelId, createdTime) {
         obj.dispatch(obj);
       });
     });
-    _default.on(_default(4628).RTCConnectionEvent.ClientDisconnect, (userId) => {
+    _default.on(_default(4659).RTCConnectionEvent.ClientDisconnect, (userId) => {
       DispatcherDefault.wait(() => {
         obj = {
           type: "RTC_CONNECTION_CLIENT_DISCONNECT",
@@ -103,19 +103,19 @@ function createRTCConnection(guildId, channelId, createdTime) {
         obj.dispatch(obj);
       });
     });
-    _default.on(_default(4628).RTCConnectionEvent.Platform, (userId, platform, channelId) => {
+    _default.on(_default(4659).RTCConnectionEvent.Platform, (userId, platform, channelId) => {
       dependencyMap = channelId;
       platform(573).wait(() => {
         obj = { type: "RTC_CONNECTION_PLATFORM", platform, userId, channelId };
         obj.dispatch(obj);
       });
     });
-    _default.on(_default(4628).RTCConnectionEvent.SecureFramesUpdate, () => {
+    _default.on(_default(4659).RTCConnectionEvent.SecureFramesUpdate, () => {
       DispatcherDefault.wait(() => {
         closure_1_1(dependencyMap[8]).dispatch({ type: "RTC_CONNECTION_SECURE_FRAMES_UPDATE" });
       });
     });
-    _default.on(_default(4628).RTCConnectionEvent.RosterMapUpdate, (userIds) => {
+    _default.on(_default(4659).RTCConnectionEvent.RosterMapUpdate, (userIds) => {
       closure_1(573).wait(() => {
         obj = { type: "RTC_CONNECTION_ROSTER_MAP_UPDATE", userIds };
         obj.dispatch(obj);
@@ -187,7 +187,7 @@ function handleRtcAction() {
 }
 const Constants = fn(1074);
 ({ RTCConnectionStates: closure_8, AppStates: closure_9, RTCConnectionQuality: c10 } = Constants);
-const MediaEngineContextTypes = fn(4599).MediaEngineContextTypes;
+const MediaEngineContextTypes = fn(4630).MediaEngineContextTypes;
 let closure_12 = new LoggerDefault("RTCConnectionStore");
 let closure_13 = [];
 let c14 = null;

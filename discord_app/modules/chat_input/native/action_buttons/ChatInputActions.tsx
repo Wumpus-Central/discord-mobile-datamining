@@ -17,12 +17,12 @@ import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const ChatInputConstants = fn(11992);
+const ChatInputConstants = fn(12032);
 ({ ChatInputActionType: hasOwnProperty, ChatInputOmniButtonActionType: metroRequire } = ChatInputConstants);
 const AnalyticEvents = fn(1074).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: closure_8, Fragment: closure_9 } = jsxProd);
-fn(4574);
+fn(4605);
 let obj = {
   actions: { flexDirection: "row", alignItems: "center" },
   themedChatInput: null,
@@ -31,7 +31,7 @@ let obj = {
 };
 obj = { backgroundColor: nativeDefault.colors.CARD_SECONDARY_BG };
 obj.themedChatInput = obj;
-const createStyles = { maxHeight: fn(4994).SMALL_BUTTON_HEIGHT + fn(4994).SMALL_BUTTON_PADDING };
+const createStyles = { maxHeight: fn(5030).SMALL_BUTTON_HEIGHT + fn(5030).SMALL_BUTTON_PADDING };
 obj.buttonWrapper = createStyles;
 obj.activeBrand = { tintColor: nativeDefault.colors.CHAT_INPUT_ACTION_ICON_ACTIVE_TINT };
 let closure_10 = createStyles.createStyles(obj);
@@ -62,7 +62,9 @@ const forwardRefResult = noop.forwardRef((canStartThreads, arg1) => {
   closure_15 = tmp6;
   let obj3 = canStartThreads(isAppLauncherEnabled[11]);
   const tmp4 = channel;
-  const canUseScheduledMessages = canStartThreads(isAppLauncherEnabled[14]).useCanUseScheduledMessages();
+  const canSendScheduledMessagesInChannel = canStartThreads(
+    isAppLauncherEnabled[14],
+  ).useCanSendScheduledMessagesInChannel(channel);
   let obj4 = canStartThreads(isAppLauncherEnabled[14]);
   [c17, c18] = onPressAction(noop.useState(false), 2);
   const tmp9 = onPressAction(noop.useState(true), 2);
@@ -99,7 +101,7 @@ const forwardRefResult = noop.forwardRef((canStartThreads, arg1) => {
     isAppLauncherEnabled,
     canUpload,
     tmp6,
-    canUseScheduledMessages,
+    canSendScheduledMessagesInChannel,
     channel.id,
     onPressAction,
     onPollsPress,
@@ -171,7 +173,7 @@ const forwardRefResult = noop.forwardRef((canStartThreads, arg1) => {
       obj4.action = onAttachPress;
       items.push(obj4);
     }
-    if (canUseScheduledMessages) {
+    if (canSendScheduledMessagesInChannel) {
       const obj5 = { label: null, IconComponent: null, action: null };
       const intl7 = util.intl;
       obj5.label = intl7.string(util.t["3+ii4F"]);

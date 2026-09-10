@@ -5,8 +5,8 @@ import utils_AvatarUtils from "../../../utils/native/AvatarUtils.tsx";
 import InteractionComponentTypes from "../InteractionComponentTypes.tsx";
 import utils_ChannelUtils from "../../../utils/native/ChannelUtils.tsx";
 import RoleIconUtils from "../../guild_boosting/RoleIconUtils.tsx";
-import _modDef8149 from "../../../../_runtime/metro/08149__.js";
-import _modDef8150 from "../../../../_runtime/metro/08150__.js";
+import _modDef8186 from "../../../../_runtime/metro/08186__.js";
+import _modDef8187 from "../../../../_runtime/metro/08187__.js";
 import ChannelStore from "../../../stores/ChannelStore.tsx";
 import GuildRoleStore from "../../../stores/GuildRoleStore.tsx";
 import GuildStore from "../../../stores/GuildStore.tsx";
@@ -57,7 +57,7 @@ export const transformSearchableSelectOptions = function transformSearchableSele
           if (null == roleIconData) {
             obj = {};
             const merged1 = Object.assign(type);
-            obj.iconSrc = utils_AvatarUtils.ensureAvatarSource(_modDef8149).uri;
+            obj.iconSrc = utils_AvatarUtils.ensureAvatarSource(_modDef8186).uri;
             if (null != role.colorString) {
               let hex2intResult = utils_ColorUtils.hex2int(role.colorString);
               const tmpResult3 = utils_ColorUtils;
@@ -102,7 +102,7 @@ export const transformSearchableSelectOptions = function transformSearchableSele
         let tmpResult4 = utils_AvatarUtils;
         let hex2int = tmpResult4.ensureAvatarSource;
         if (channel.type === constants.GUILD_CATEGORY) {
-          let channelIconWithGuild = _modDef8150;
+          let channelIconWithGuild = _modDef8187;
         } else {
           channelIconWithGuild = utils_ChannelUtils.getChannelIconWithGuild(channel, id);
           const tmpResult5 = utils_ChannelUtils;
@@ -120,7 +120,7 @@ export const transformSearchableSelectOptions = function transformSearchableSele
 };
 export const getChannelIconData = function getChannelIconData(channel, guild) {
   if (channel.type === constants.GUILD_CATEGORY) {
-    let channelIconWithGuild = _modDef8150;
+    let channelIconWithGuild = _modDef8187;
   } else {
     channelIconWithGuild = utils_ChannelUtils.getChannelIconWithGuild(channel, guild);
   }

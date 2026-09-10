@@ -68,12 +68,12 @@ function AddDescription(id) {
         const renderHeaderTextButton = obj.getRenderHeaderTextButton(
           intl.string(channelId(stateFromStores[14]).t["R3BPH+"]),
           () => {
-            id(9339);
+            id(9376);
             const obj = {};
             const merged = Object.assign(dependencyMap);
             obj.description = ref.current;
             obj.update(closure_1_0, closure_1_1, ChannelMessage.ChannelMessage, obj);
-            id(11271).close();
+            id(11311).close();
           },
         );
         let merged = Object.assign(arg0);
@@ -116,10 +116,10 @@ function AddDescription(id) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, Image: metroRequire, ScrollView: closure_7 } = get_ActivityIndicator);
-const DraftType = fn(4915).DraftType;
+const DraftType = fn(4946).DraftType;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-fn(4574);
+fn(4605);
 let createStyles = { contentContainer: null, imageContainer: null, image: null, placeholderText: null };
 createStyles = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 createStyles.contentContainer = createStyles;

@@ -1,7 +1,7 @@
 // discord_app/design/components/mana-assets/native/generated/MapleIllocon.native.tsx
 import jsxProd from "../../../../../../_runtime/react/00021_jsxProd.js";
 import FastImageDefault from "../../../../../components_native/common/FastImage.tsx";
-import _modDef6250 from "../../../../../../discord_assets/assets/mana/asset-library/generated/MapleIllocon-2x.png.js";
+import _modDef6286 from "../../../../../../discord_assets/assets/mana/asset-library/generated/MapleIllocon-2x.png.js";
 import size from "../../../../../../_runtime/metro/00002__.js";
 
 const jsx = jsxProd.jsx;
@@ -21,12 +21,12 @@ export const MapleIllocon = function MapleIllocon(size) {
     accessibilityLabel: null,
     resizeMode: null,
   };
-  obj = { uri: _modDef6250 };
+  obj = { uri: _modDef6286 };
   obj.source = obj;
   const items = [{ width: num, height: num }];
   obj.style = items;
   obj.accessible = accessible;
   obj.accessibilityLabel = accessibilityLabel;
   obj.resizeMode = resizeMode;
-  return jsx(FastImageDefault, { uri: _modDef6250 });
+  return jsx(FastImageDefault, { uri: _modDef6286 });
 };

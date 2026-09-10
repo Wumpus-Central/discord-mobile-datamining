@@ -1,7 +1,7 @@
 // discord_app/design/components/Icon/native/redesign/generated/MagnifyingGlassIcon.tsx
 import nativeDefault from "../../../../../../../discord_common/js/packages/tokens/native.tsx";
 import BaseIconImage from "../../BaseIconImage.tsx";
-import _mod7066 from "../../../../../../../_runtime/metro/07066__.js";
+import _mod7104 from "../../../../../../../_runtime/metro/07104__.js";
 import noop from "../../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -16,5 +16,5 @@ export const MagnifyingGlassIcon = function MagnifyingGlassIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod7066, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod7104, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 };

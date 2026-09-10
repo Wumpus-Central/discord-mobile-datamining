@@ -18,7 +18,7 @@ export const openAcceptFriendRequestConfirmModal = function openAcceptFriendRequ
   obj.track(AnalyticEvents.OPEN_MODAL, obj);
   obj = {
     importer() {
-      return asyncRequireImpl(10907, dependencyMap.paths).then((result) => {
+      return asyncRequireImpl(10945, dependencyMap.paths).then((result) => {
         closure_0 = result.default;
         return (View) => {
           const obj = {};

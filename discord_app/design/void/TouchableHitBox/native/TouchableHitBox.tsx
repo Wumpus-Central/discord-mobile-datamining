@@ -7,7 +7,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 require = fn;
 const ActivityIndicator = fn(17).ActivityIndicator;
 const jsx = fn(21).jsx;
-fn(4574);
+fn(4605);
 let createStyles = { button: null, buttonText: null, buttonIcon: null, buttonSpinner: null, buttonDisabled: null };
 createStyles = {
   flexGrow: 0,
@@ -121,7 +121,7 @@ TouchableHitBox.prototype["render"] = function render() {
     children: null,
   });
 };
-TouchableHitBox.contextType = fn(4284).ThemeContext;
+TouchableHitBox.contextType = fn(4315).ThemeContext;
 TouchableHitBox.defaultProps = {
   onPress() {},
 };

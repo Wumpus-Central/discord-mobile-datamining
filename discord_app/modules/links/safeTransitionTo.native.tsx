@@ -118,7 +118,7 @@ let closure_6 = async function _safeTransitionTo(arg0) {
       obj7 = closure_132_1(closure_132_2[11]);
       closure_2 = closure_131_2;
       if (closure_131_2 == null) {
-        closure_2 = { guildId: "disabled" };
+        closure_2 = { guildId: "Array" };
       }
       c5 = 2;
       c6 = 1;

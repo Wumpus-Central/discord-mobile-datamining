@@ -16,7 +16,7 @@ function DoubleTapErrorToastIcon() {
 const View = fn(17).View;
 const EmojiDisabledReasons = fn(1374).EmojiDisabledReasons;
 const jsx = fn(21).jsx;
-fn(4574);
+fn(4605);
 let createStyles = { icon: null };
 createStyles = {
   backgroundColor: nativeDefault.colors.BACKGROUND_FEEDBACK_CRITICAL,

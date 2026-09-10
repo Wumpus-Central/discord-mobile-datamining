@@ -3,7 +3,7 @@ import noop from "../../../../../../_runtime/metro/00019__.js";
 import UserSettingSearchStore from "../../../../user_settings/UserSettingSearchStore.tsx";
 
 const require = fn;
-const NodeType = fn(11501).NodeType;
+const NodeType = fn(11541).NodeType;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/settings/native/renderer/hooks/useAutoScrollToSetting.tsx");
 
@@ -19,14 +19,14 @@ export const useAutoScrollToSearchResultSetting = function useAutoScrollToSearch
   let flag = false;
   if (null != current) {
     flag = false;
-    if (tmp(14612).SETTING_RENDERER_CONFIG[current].type !== current.ROUTE) {
-      let initialScrollIndex = tmp(14722).getInitialScrollIndex(current, memo);
+    if (tmp(14661).SETTING_RENDERER_CONFIG[current].type !== current.ROUTE) {
+      let initialScrollIndex = tmp(14771).getInitialScrollIndex(current, memo);
       let tmp7 = 0 !== initialScrollIndex;
       if (tmp7) {
         tmp7 = 1 !== initialScrollIndex;
       }
       flag = tmp7;
-      const tmpResult = tmp(14722);
+      const tmpResult = tmp(14771);
     }
   }
   const items = [memo, flag, ref, navigation, current];

@@ -16,7 +16,7 @@ import TableRowArrow from "../../../../design/components/TableRow/native/TableRo
 import TableSwitchRow from "../../../../design/components/TableRow/native/TableSwitchRow.native.tsx";
 import showShareActionSheet from "../../../action_sheet/native/showShareActionSheet.tsx";
 import ChannelSettingsActionCreatorsDefault from "../../../../actions/ChannelSettingsActionCreators.tsx";
-import _modDef8660 from "../../../../../_runtime/metro/08660__.js";
+import _modDef8697 from "../../../../../_runtime/metro/08697__.js";
 import FormComponents from "../shared/FormComponents.tsx";
 import useIsSecureFramesVerified from "../../../rtc/hooks/useIsSecureFramesVerified.tsx";
 import SecureFramesPlatformUtilsDefault from "../../../rtc/SecureFramesPlatformUtils.native.tsx";
@@ -135,7 +135,7 @@ function ShareActivityLogsButton() {
     }
   }, []);
   let obj = { onPress: callback, icon: null, label: null, trailing: null };
-  obj = { IconComponent: WrenchIcon.WrenchIcon, source: _modDef8660 };
+  obj = { IconComponent: WrenchIcon.WrenchIcon, source: _modDef8697 };
   obj.icon = collapsedCategories(TableRowIcon.TableRowIcon, obj);
   let intl = util.intl;
   obj.label = intl.string(util.t.iQzQs3);
@@ -153,7 +153,7 @@ function ActivityDebugToggle() {
     obj.dispatch(obj);
   }, []);
   obj = { icon: null, accessibilityHint: null, value: null, onValueChange: null, label: null };
-  obj = { IconComponent: WrenchIcon.WrenchIcon, source: _modDef8660 };
+  obj = { IconComponent: WrenchIcon.WrenchIcon, source: _modDef8697 };
   obj.icon = collapsedCategories(TableRowIcon.TableRowIcon, obj);
   const intl = util.intl;
   obj.accessibilityHint = intl.string(util.t["qv5/SP"]);
@@ -165,11 +165,11 @@ function ActivityDebugToggle() {
 }
 const Constants = fn(1074);
 ({ AnalyticsSections: map1, Permissions: closure_14, RPC_APPLICATION_LOGGING_CATEGORY: closure_15 } = Constants);
-const isStreamParticipant = fn(4595).isStreamParticipant;
-let closure_17 = fn(9184).SECURE_FRAMES_CALL_VERIFICATION_BOTTOM_SHEET_KEY;
+const isStreamParticipant = fn(4626).isStreamParticipant;
+let closure_17 = fn(9221).SECURE_FRAMES_CALL_VERIFICATION_BOTTOM_SHEET_KEY;
 const jsxProd = fn(21);
 ({ jsx: closure_18, jsxs: closure_19, Fragment: closure_20 } = jsxProd);
-const createStyles = fn(4574);
+const createStyles = fn(4605);
 let obj = {
   headerContainer: { alignItems: "center" },
   channelTitleWrapper: { flexDirection: "row", alignItems: "center", justifyContent: "center", marginTop: 8 },
@@ -281,7 +281,7 @@ export default noop.memo(function VoicePanelSettingsOverview(guildId) {
   const items11 = [channelId, stateFromStores4];
   const callback4 = stateFromStores1.useCallback(() => {
     const obj = { channelId };
-    obj.openLazy(asyncRequireImpl(17147, dependencyMap.paths), closure_17, obj);
+    obj.openLazy(asyncRequireImpl(17206, dependencyMap.paths), closure_17, obj);
   }, items10);
   const callback5 = stateFromStores1.useCallback(() => {
     if (null != stateFromStores4) {

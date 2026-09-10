@@ -1,6 +1,6 @@
 // discord_app/modules/chat/native/Chat.android.tsx
 import initialize from "../../../../discord_common/js/packages/flux/index.tsx";
-import LegacyBaseButton from "../../../../_runtime/06669_LegacyBaseButton.js";
+import LegacyBaseButton from "../../../../_runtime/06705_LegacyBaseButton.js";
 import ChatNativeComponentDefault from "../../../../discord_common/js/packages/rtn-codegen/js/ChatNativeComponent.tsx";
 import ChatListNativeComponentDefault from "../../../../discord_common/js/packages/rtn-codegen/js/ChatListNativeComponent.tsx";
 import TTIFirstContentfulPaint from "../../tti_analytics/native/TTIFirstContentfulPaint.tsx";
@@ -23,7 +23,7 @@ function DCDChatList() {
 }
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4574);
+const createStyles = fn(4605);
 let closure_7 = createStyles.createStyles({ chatList: { flex: 1 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/chat/native/Chat.android.tsx");

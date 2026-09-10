@@ -12,7 +12,7 @@ const View = fn(17).View;
 const PremiumTypes = fn(1373).PremiumTypes;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-fn(4574);
+fn(4605);
 let createStyles = {
   badgeTextUppercase: { textTransform: "uppercase" },
   badgeSurfaceDarkMode: null,

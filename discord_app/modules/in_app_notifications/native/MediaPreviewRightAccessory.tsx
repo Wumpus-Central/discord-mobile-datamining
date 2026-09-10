@@ -290,7 +290,7 @@ get_ActivityIndicator = fn(17);
 const View = get_ActivityIndicator.View;
 const jsxProd = fn(21);
 ({ jsx: closure_8, Fragment: closure_9, jsxs: c10 } = jsxProd);
-fn(4574);
+fn(4605);
 let createStyles = { badge: null, icon: null };
 let size = {
   alignItems: "center",
@@ -306,7 +306,7 @@ let size = {
 createStyles.badge = size;
 createStyles.icon = { width: 10, height: 10 };
 let closure_11 = createStyles.createStyles(createStyles);
-fn(4574);
+fn(4605);
 createStyles = { badge: null };
 let size1 = {
   width: 20,
@@ -321,7 +321,7 @@ let size1 = {
 };
 createStyles.badge = size1;
 let closure_12 = createStyles.createStyles(createStyles);
-fn(4574);
+fn(4605);
 let obj1 = {
   mediaThumbnailContainer: { borderRadius: nativeDefault.radii.sm, overflow: "hidden" },
   mediaThumbnail: { width: "100%", height: "100%" },
@@ -355,12 +355,12 @@ createStyles = {
 };
 obj1.spoilerPill = createStyles;
 let closure_13 = createStyles.createStyles(obj1);
-createStyles = fn(4574);
+createStyles = fn(4605);
 let closure_14 = createStyles.createStyles({ container: { overflow: "visible" } });
-createStyles = fn(4574);
+createStyles = fn(4605);
 let obj2 = { borderRadius: nativeDefault.radii.sm, overflow: "hidden" };
 let closure_15 = createStyles.createStyles({
-  rightAccessoryContainer: { marginLeft: fn(10127).RIGHT_ACCESSORY_LEFT_MARGIN },
+  rightAccessoryContainer: { marginLeft: fn(10165).RIGHT_ACCESSORY_LEFT_MARGIN },
 });
 size = fn(2);
 const result = size.fileFinishedImporting("modules/in_app_notifications/native/MediaPreviewRightAccessory.tsx");

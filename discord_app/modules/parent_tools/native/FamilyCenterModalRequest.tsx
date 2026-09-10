@@ -13,13 +13,13 @@ import components_Button_Button from "../../../design/components/Button/native/B
 import ActivityIndicator_ActivityIndicator from "../../../design/components/ActivityIndicator/native/ActivityIndicator.native.tsx";
 import NavigatorHeader2 from "../../../design/components/Navigator/native/NavigatorHeader.native.tsx";
 import native2 from "../../../design/assets/native.tsx";
-import _modDef7006 from "../../../../_runtime/metro/07006__.js";
+import _modDef7044 from "../../../../_runtime/metro/07044__.js";
 import FamilyCenterActionCreatorsDefault from "../FamilyCenterActionCreators.tsx";
 import FamilyCenterUtils from "../FamilyCenterUtils.tsx";
 import ModalScreen from "../../../design/components/Modal/native/ModalScreen.native.tsx";
 import ModalContent from "../../../design/components/Modal/native/ModalContent.native.tsx";
 import useIsInAdultAgeGroupDefault from "../hooks/useIsInAdultAgeGroup.tsx";
-import _modDef11595 from "../../../../_runtime/metro/11595__.js";
+import _modDef11635 from "../../../../_runtime/metro/11635__.js";
 import FamilyCenterModalRequestRouting from "../FamilyCenterModalRequestRouting.tsx";
 import ModalFooter from "../../../design/components/Modal/native/ModalFooter.native.tsx";
 import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
@@ -493,7 +493,7 @@ function FamilyCenterConfirmAgeScreen(teenIdentity) {
     }
     return prop;
   });
-  const tmp7 = stateFromStores(8300)(stateFromStores);
+  const tmp7 = stateFromStores(8337)(stateFromStores);
   dependencyMap = tmp7;
   const items1 = [stateFromStores, tmp7, navigation];
   const effect = noop.useEffect(() => {
@@ -512,12 +512,12 @@ function FamilyCenterConfirmAgeScreen(teenIdentity) {
     }
   }, items1);
   const callback = noop.useCallback(() => {
-    stateFromStores(8439);
-    const obj = { entryPoint: navigation(8441).AgeVerificationModalEntryPoint.FAMILY_CENTER_CONNECTION };
+    stateFromStores(8476);
+    const obj = { entryPoint: navigation(8478).AgeVerificationModalEntryPoint.FAMILY_CENTER_CONNECTION };
     const result = obj.showAgeVerificationGetStartedModal(obj);
   }, []);
   obj = { style: tmp.content, children: null };
-  obj = { style: tmp.art, children: closure_12(navigation(5706).FamilyShieldSpotIllustration, {}) };
+  obj = { style: tmp.art, children: closure_12(navigation(5742).FamilyShieldSpotIllustration, {}) };
   const items2 = [closure_12(closure_6, obj), ,];
   obj1 = { variant: "heading-xl/bold", color: "mobile-text-heading-primary", style: tmp.title, children: null };
   const intl = navigation(1114).intl;
@@ -537,13 +537,13 @@ function FamilyCenterConfirmAgeScreen(teenIdentity) {
   }
   const obj2 = { children: null };
   obj1.children = intl.formatToPlainString(stateFromStores(2396).pQQMJ7, { username: str });
-  items2[1] = closure_12(navigation(4570).Text, obj1);
+  items2[1] = closure_12(navigation(4601).Text, obj1);
   const obj3 = { variant: "text-sm/medium", color: "text-muted", style: tmp.description, children: null };
   const intl2 = tmp2(1114).intl;
   obj3.children = intl2.format(stateFromStores(2396)["0o3yg8"], {
     link: "https://support.discord.com/hc/articles/14155060633623",
   });
-  items2[2] = closure_12(navigation(4570).Text, obj3);
+  items2[2] = closure_12(navigation(4601).Text, obj3);
   obj.children = items2;
   const items3 = [closure_13(closure_6, obj)];
   const obj4 = { children: null };
@@ -552,19 +552,19 @@ function FamilyCenterConfirmAgeScreen(teenIdentity) {
   const intl3 = tmp2(1114).intl;
   obj6.text = intl3.string(stateFromStores(2396)["3oUE4o"]);
   obj6.onPress = callback;
-  const items4 = [closure_12(navigation(4989).Button, obj6)];
+  const items4 = [closure_12(navigation(5025).Button, obj6)];
   const obj7 = { variant: "tertiary", text: null, onPress: null };
   const intl4 = tmp2(1114).intl;
   obj7.text = intl4.string(navigation(1114).t.oEAioF);
   obj7.onPress = function onPress() {
-    return stateFromStores(4777).pop();
+    return stateFromStores(4808).pop();
   };
-  items4[1] = closure_12(navigation(4989).Button, obj7);
+  items4[1] = closure_12(navigation(5025).Button, obj7);
   obj5.children = items4;
-  obj4.children = closure_13(navigation(5447).ButtonGroup, obj5);
-  items3[1] = closure_12(navigation(11957).ModalFooter, obj4);
+  obj4.children = closure_13(navigation(5483).ButtonGroup, obj5);
+  items3[1] = closure_12(navigation(11997).ModalFooter, obj4);
   obj2.children = items3;
-  return closure_13(navigation(8449).ModalScreen, obj2);
+  return closure_13(navigation(8486).ModalScreen, obj2);
 }
 function FamilyCenterVerifyingScreen() {
   let obj = navigation(stateFromStores[8]);
@@ -636,7 +636,7 @@ function FamilyCenterPrereqMustBeAdultScreen() {
     }
     return prop;
   });
-  const tmp3 = stateFromStores(8300)(stateFromStores);
+  const tmp3 = stateFromStores(8337)(stateFromStores);
   dependencyMap = tmp3;
   const items1 = [stateFromStores, tmp3, navigation];
   const effect = noop.useEffect(() => {
@@ -656,8 +656,8 @@ function FamilyCenterPrereqMustBeAdultScreen() {
   }, items1);
   obj = { title: null, description: null, primaryButton: null };
   const callback = noop.useCallback(() => {
-    stateFromStores(8439);
-    const obj = { entryPoint: navigation(8441).AgeVerificationModalEntryPoint.FAMILY_CENTER_CONNECTION };
+    stateFromStores(8476);
+    const obj = { entryPoint: navigation(8478).AgeVerificationModalEntryPoint.FAMILY_CENTER_CONNECTION };
     const result = obj.showAgeVerificationGetStartedModal(obj);
   }, []);
   const intl = navigation(1114).intl;
@@ -668,13 +668,13 @@ function FamilyCenterPrereqMustBeAdultScreen() {
   obj1 = { text: null, onPress: null };
   const intl3 = navigation(1114).intl;
   obj1.text = intl3.string(navigation(1114).t["NX+WJN"]);
-  obj1.onPress = stateFromStores(4777).pop;
+  obj1.onPress = stateFromStores(4808).pop;
   obj.primaryButton = obj1;
   return closure_12(FamilyCenterPrereqScreen, obj);
 }
 get_ActivityIndicator = fn(17);
 ({ Image: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-const FamilyCenterConstants = fn(7552);
+const FamilyCenterConstants = fn(7590);
 ({
   FAMILY_CENTER_AGE_VERIFICATION_RESUME_TIMEOUT: closure_8,
   FAMILY_CENTER_LINK_REQUEST_ERROR_EXPERIENCES: closure_9,
@@ -683,7 +683,7 @@ const FamilyCenterConstants = fn(7552);
 } = FamilyCenterConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1, Fragment: closure_14 } = jsxProd);
-fn(4574);
+fn(4605);
 let createStyles = {
   headerText: null,
   art: null,
@@ -739,7 +739,7 @@ createStyles.consent = {
   paddingHorizontal: nativeDefault.space.PX_16,
 };
 const __initData = createStyles.createStyles(createStyles);
-createStyles = fn(4574);
+createStyles = fn(4605);
 let obj6 = { content: null, textWrapper: null, header: null, description: null, illustration: null };
 let obj5 = { marginTop: nativeDefault.space.PX_8, textAlign: "center", paddingHorizontal: nativeDefault.space.PX_16 };
 obj6.content = {
@@ -769,7 +769,7 @@ const rect = {
 };
 obj6.illustration = rect;
 let closure_17 = createStyles.createStyles(obj6);
-fn(4574);
+fn(4605);
 createStyles = {
   header: { marginBottom: 8, textAlign: "center" },
   description: { textAlign: "center" },
@@ -804,9 +804,9 @@ createStyles.positive = { backgroundColor: nativeDefault.colors.STATUS_POSITIVE 
 let obj10 = { backgroundColor: nativeDefault.colors.STATUS_POSITIVE };
 createStyles.negative = { backgroundColor: nativeDefault.colors.BACKGROUND_FEEDBACK_CRITICAL };
 let closure_19 = createStyles.createStyles(createStyles);
-createStyles = fn(4574);
+createStyles = fn(4605);
 let closure_21 = createStyles.createStyles({ container: { flex: 1, justifyContent: "center", alignItems: "center" } });
-createStyles = fn(4574);
+createStyles = fn(4605);
 let obj12 = {
   content: { flex: 1, flexDirection: "column", alignItems: "center", justifyContent: "center", paddingHorizontal: 32 },
   title: null,
@@ -816,7 +816,7 @@ let obj11 = { backgroundColor: nativeDefault.colors.BACKGROUND_FEEDBACK_CRITICAL
 obj12.title = { textAlign: "center", marginBottom: nativeDefault.space.PX_8 };
 obj12.description = { textAlign: "center" };
 let closure_23 = createStyles.createStyles(obj12);
-fn(4574);
+fn(4605);
 createStyles = {
   content: { flex: 1, flexDirection: "column", alignItems: "center", justifyContent: "center", paddingHorizontal: 32 },
   art: null,
@@ -830,7 +830,7 @@ createStyles.title = { textAlign: "center", marginBottom: nativeDefault.space.PX
 createStyles.description = { textAlign: "center" };
 let closure_25 = createStyles.createStyles(createStyles);
 let obj17 = { headerShown: true, headerLeft: null, headerTitle: null };
-const NavigatorHeader = fn(5638);
+const NavigatorHeader = fn(5674);
 obj17.headerLeft = NavigatorHeader.getHeaderCloseButton(ModalActionCreatorsDefault.pop);
 obj17.headerTitle = function headerTitle() {
   return null;
@@ -841,7 +841,7 @@ let result = size.fileFinishedImporting("modules/parent_tools/native/FamilyCente
 export default function FamilyCenterRequestModal(userId) {
   userId = userId.userId;
   const linkCode = userId.linkCode;
-  const FamilyCenterConnectionPrereqExperiment = userId(11958).FamilyCenterConnectionPrereqExperiment;
+  const FamilyCenterConnectionPrereqExperiment = userId(11998).FamilyCenterConnectionPrereqExperiment;
   const items = [linkCode, userId];
   const memo = noop.useMemo(() => {
     let obj = {};
@@ -923,7 +923,7 @@ export default function FamilyCenterRequestModal(userId) {
     obj[FamilyCenterModalRequestRouting.FamilyCenterModalRequestSections.TEEN_SCAN] = obj7;
     return obj;
   }, items);
-  const FamilyCenterModalRequestSections = userId(11946).FamilyCenterModalRequestSections;
+  const FamilyCenterModalRequestSections = userId(11986).FamilyCenterModalRequestSections;
   if (FamilyCenterConnectionPrereqExperiment.useConfig({ location: "FamilyCenterRequestModal" }).enabled) {
     let PREREQ_LOADING = FamilyCenterModalRequestSections.PREREQ_LOADING;
   } else {
@@ -932,7 +932,7 @@ export default function FamilyCenterRequestModal(userId) {
   let obj = { initialRouteName: PREREQ_LOADING, screens: memo, headerBackTitle: null };
   const intl = tmp3(1114).intl;
   obj.headerBackTitle = intl.string(userId(1114).t["13/7kX"]);
-  return closure_12(userId(11959).Modal, obj);
+  return closure_12(userId(11999).Modal, obj);
 }
 export { FamilyCenterModalRequestConfirm };
 export { FamilyCenterModalRequestSuccess };

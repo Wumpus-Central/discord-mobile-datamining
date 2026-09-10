@@ -8,7 +8,7 @@ import noop from "../../../../../../_runtime/metro/00019__.js";
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ ScrollView: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-const GuildTagConstants = fn(7958);
+const GuildTagConstants = fn(7996);
 ({
   GUILD_TAG_BADGE_NUM_CUSTOMIZABLE_COLORS: metroRequire,
   GUILD_TAG_BADGE_PALETTE_PRESETS,
@@ -34,7 +34,7 @@ let items = [
   })),
 ];
 const dependencyMap = [24, 48, 72];
-fn(4574);
+fn(4605);
 let createStyles = { wrap: null, contentContainer: null, controlRow: null, grid: null, tile: null, badgeBox: null };
 createStyles = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flex: 1 };
 createStyles.wrap = createStyles;

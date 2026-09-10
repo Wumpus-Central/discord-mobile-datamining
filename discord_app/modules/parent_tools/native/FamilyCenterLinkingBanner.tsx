@@ -6,7 +6,7 @@ import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import useIsInAdultAgeGroupDefault from "../hooks/useIsInAdultAgeGroup.tsx";
 import useAgeSpecificText from "../hooks/useAgeSpecificText.tsx";
 import FamilyCenterBannerButton from "FamilyCenterBannerButton.tsx";
-import _modDef14943 from "../../../../_runtime/metro/14943__.js";
+import _modDef14992 from "../../../../_runtime/metro/14992__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -69,7 +69,7 @@ get_ActivityIndicator = fn(17);
 ({ View: c3, Image: closure_4 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-fn(4574);
+fn(4605);
 let createStyles = { container: null, content: null, art: null, header: null };
 createStyles = {
   backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW,
@@ -88,17 +88,17 @@ createStyles.art = size;
 let obj1 = { padding: nativeDefault.space.PX_16 };
 createStyles.header = { marginBottom: nativeDefault.space.PX_8 };
 let closure_7 = createStyles.createStyles(createStyles);
-createStyles = fn(4574);
+createStyles = fn(4605);
 const obj3 = { container: null };
 const obj2 = { marginBottom: nativeDefault.space.PX_8 };
 obj3.container = { marginTop: nativeDefault.space.PX_8, paddingHorizontal: nativeDefault.space.PX_16, width: "100%" };
 let closure_8 = createStyles.createStyles(obj3);
-fn(4574);
+fn(4605);
 const obj5 = { container: null };
 createStyles = { width: "100%", paddingHorizontal: nativeDefault.space.PX_16 };
 obj5.container = createStyles;
 let closure_10 = createStyles.createStyles(obj5);
-createStyles = fn(4574);
+createStyles = fn(4605);
 const obj7 = {
   row: { display: "flex", flexDirection: "row", alignItems: "flex-start" },
   gap: { marginBottom: 12 },
@@ -139,7 +139,7 @@ export default function FamilyCenterLinkingBanner() {
     intl3.format(_modDef2396.yMnoDl, { link: "https://support.discord.com/hc/articles/14155060633623" }),
     intl4.string(_modDef2396.JsAEDi),
   );
-  obj.source = _modDef14943;
+  obj.source = _modDef14992;
   obj.style = tmp.art;
   const items = [hasOwnProperty(React4, obj), ,];
   obj1 = { style: tmp.content, children: null };

@@ -10,7 +10,7 @@ const result = size.fileFinishedImporting(
 export const showGdmBlockedUserModal = function showGdmBlockedUserModal(arg0) {
   ({ channelId, blockedUserIds, ignoredUserIds } = arg0);
   ActionSheetActionCreatorsDefault.openLazy(
-    asyncRequireImpl(13763, dependencyMap.paths),
+    asyncRequireImpl(13812, dependencyMap.paths),
     "gdm_blocked_user_action_sheet",
     { channelId, blockedUserIds, ignoredUserIds },
   );

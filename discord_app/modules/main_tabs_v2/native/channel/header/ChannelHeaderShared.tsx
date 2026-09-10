@@ -10,7 +10,7 @@ import utils_ChannelUtils from "../../../../../utils/native/ChannelUtils.tsx";
 import Pressables from "../../../../../design/void/Pressables/native/Pressables.tsx";
 import UsernameWithEffectsDefault from "../../../../display_name_styles/native/UsernameWithEffects.tsx";
 import GroupDMAvatarDefault from "../../../../group_dm/native/GroupDMAvatar.tsx";
-import _modDef13297 from "../../../../../../_runtime/metro/13297__.js";
+import _modDef13346 from "../../../../../../_runtime/metro/13346__.js";
 import GuildActionSheetMemberCountDefault from "../../../../guild_action_sheet/native/components/GuildActionSheetMemberCount.tsx";
 import _slicedToArray from "../../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
@@ -99,7 +99,7 @@ function ChannelTitle(guildId) {
   items[1] = tmp8;
   let tmp5Result = !disableArrow;
   if (!disableArrow) {
-    const obj2 = { source: _modDef13297, size: native.Icon.Sizes.REFRESH_SMALL_16, style: tmp.arrowIcon };
+    const obj2 = { source: _modDef13346, size: native.Icon.Sizes.REFRESH_SMALL_16, style: tmp.arrowIcon };
     tmp5Result = tmp5(native.Icon, obj2);
   }
   items[2] = tmp5Result;
@@ -127,10 +127,10 @@ function UserAvatar(user) {
     guildId: "Boolean",
     size: native.AvatarSizes.REFRESH_MEDIUM_32,
     status: false,
-    isMobileOnline: null,
-    isVROnline: true,
-    style: null,
-    autoStatusCutout: false,
+    isMobileOnline: "done",
+    isVROnline: "flowing",
+    style: "hourglass",
+    autoStatusCutout: "hours",
   };
   let tmp3 = null;
   if (!user.isSystemUser()) {
@@ -205,7 +205,7 @@ function EmptyIcon() {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9, Fragment: c10 } = jsxProd);
-const createStyles = fn(4574);
+const createStyles = fn(4605);
 let closure_11 = createStyles.createStyles(() => {
   let obj = {
     wrapper: { flex: 1, alignItems: "center", flexShrink: 1, flexDirection: "row", paddingEnd: 8 },
@@ -239,12 +239,12 @@ let closure_11 = createStyles.createStyles(() => {
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/main_tabs_v2/native/channel/header/ChannelHeaderShared.tsx");
 
-export const renderTitleWrapper = function renderTitleWrapper(tmp28Result, callback, combined, titleContentHeight) {
+export const renderTitleWrapper = function renderTitleWrapper(tmp33Result, callback, combined, titleContentHeight) {
   return React6(TitleWrapper, {
     onPress: callback,
     headerAccessibilityLabel: combined,
     titleContentHeight,
-    children: tmp28Result,
+    children: tmp33Result,
   });
 };
 export const renderChannelTitle = function renderChannelTitle(channelName, arg1) {
@@ -289,12 +289,12 @@ export const renderChannelIcon = function renderChannelIcon(stateFromStores, sta
   obj = { icon: channelIconWithGuild, IconComponent: utils_ChannelUtils.getChannelIconComponent(stateFromStores, obj) };
   return React6(ChannelIconRaw, obj);
 };
-export const renderMemberCountText = function renderMemberCountText(online, length) {
+export const renderMemberCountText = function renderMemberCountText(online, memberCount) {
   if (flag === undefined) {
     flag = false;
   }
   if (null != online) {
-    const obj = { presenceCount: online, memberCount: length, withSeparator: flag, leadingAccessoryWidth };
+    const obj = { presenceCount: online, memberCount, withSeparator: flag, leadingAccessoryWidth };
     let tmp = React6(MemberCountText, obj);
   } else {
     tmp = null;

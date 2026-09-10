@@ -11,16 +11,16 @@ import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-const FavoritesGuildSuggestionsStore = fn(16235);
+const FavoritesGuildSuggestionsStore = fn(16284);
 ({ useFavoritesGuildSuggestions: hasOwnProperty, useFavoritesGuildSuggestionsDismissal: metroRequire } =
   FavoritesGuildSuggestionsStore);
 const NOOP = fn(1074).NOOP;
-let closure_8 = fn(10150).getScaledCategoryRowHeight;
+let closure_8 = fn(10188).getScaledCategoryRowHeight;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
 const PX_8 = nativeDefault.space.PX_8;
 const PX_4 = nativeDefault.space.PX_4;
-fn(4574);
+fn(4605);
 const createStyles = {
   container: { marginTop: PX_4 },
   rows: { paddingHorizontal: nativeDefault.space.PX_16, paddingBottom: PX_8 },
@@ -31,7 +31,7 @@ const result = size.fileFinishedImporting("modules/favorites/native/FavoritesGui
 
 export default function FavoritesGuildSuggestedChannels() {
   let tmp = closure_13();
-  let obj = arr(16139);
+  let obj = arr(16188);
   const categoryStyles = obj.useCategoryStyles();
   arr = closure_5();
   const tmp5 = closure_6();
@@ -57,7 +57,7 @@ export default function FavoritesGuildSuggestedChannels() {
     obj.name = intl.string(_modDef3236.oHWnLy);
     obj.styles = categoryStyles;
     obj.trailingAction = memo;
-    const items2 = [tmp2(16139).renderCategoryItem(obj)];
+    const items2 = [tmp2(16188).renderCategoryItem(obj)];
     const obj1 = {
       style: tmp.rows,
       children: arr.map((item, index) => {
@@ -75,8 +75,8 @@ export default function FavoritesGuildSuggestedChannels() {
         const intl = util.intl;
         obj.text = intl.string(util.t.OYkgVk);
         obj.onPress = function onPress() {
-          const tmp = closure_1(16237);
-          return tmp(arr(11013).getDestinationIdFromResult(closure_0));
+          const tmp = closure_1(16286);
+          return tmp(arr(11053).getDestinationIdFromResult(closure_0));
         };
         obj.trailing = React7(components_Button_Button.Button, obj);
         obj.children = React7(SearchableDestinationListRowDefault, obj);
@@ -86,7 +86,7 @@ export default function FavoritesGuildSuggestedChannels() {
     items2[1] = closure_9(View, obj1);
     obj.children = items2;
     tmp9 = closure_10(View, obj);
-    const tmp2Result = tmp2(16139);
+    const tmp2Result = tmp2(16188);
   }
   return tmp9;
 }

@@ -102,7 +102,7 @@ import TooltipConstants from "components/Tooltip/native/TooltipConstants.native.
 import StickyWrapper from "components/Sticky/native/StickyWrapper.native.tsx";
 import ModalFooter from "components/Modal/native/ModalFooter.native.tsx";
 import Modal from "components/Modal/native/Modal.native.tsx";
-import Tabs from "components/Tabs/native/Tabs.native.tsx";
+import Tabs_Tabs from "components/Tabs/native/Tabs.native.tsx";
 import SegmentedControlPages from "components/SegmentedControl/native/SegmentedControlPages.native.tsx";
 import GuildIconPile from "components/Pile/native/GuildIconPile.native.tsx";
 import AvatarPile from "components/Pile/native/AvatarPile.native.tsx";
@@ -352,8 +352,8 @@ export const useSegmentedControlState = SegmentedControlState.useSegmentedContro
 export const SegmentedControlState = SegmentedControlState.SegmentedControlState;
 export const SegmentedControlItem = SegmentedControlState.SegmentedControlItem;
 export const StickyWrapper = StickyWrapper.StickyWrapper;
-export const Tabs = Tabs.Tabs;
-export const TabsProps = Tabs.TabsProps;
+export const Tabs = Tabs_Tabs.Tabs;
+export const TabsProps = Tabs_Tabs.TabsProps;
 export const ContextMenuItemOptions = ContextMenuItem.ContextMenuItemOptions;
 export const ContextMenu = ContextMenu.ContextMenu;
 export const ContextMenuProps = ContextMenu.ContextMenuProps;

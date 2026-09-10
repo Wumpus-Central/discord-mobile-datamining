@@ -9,8 +9,8 @@ import showAudioOutputSelector from "../../../voice_calls/native/audio_output_se
 import useScreenshareUtilsDefault from "../useScreenshareUtils.tsx";
 import VolumeSliderDefault from "../../../../components_native/common/VolumeSlider.tsx";
 import VoiceActionUtils from "../VoiceActionUtils.tsx";
-import _modDef10047 from "../../../../../_runtime/metro/10047__.js";
-import _modDef10048 from "../../../../../_runtime/metro/10048__.js";
+import _modDef10085 from "../../../../../_runtime/metro/10085__.js";
+import _modDef10086 from "../../../../../_runtime/metro/10086__.js";
 import useMuteAwareLocalVolumeDefault from "../../../media_engine/useMuteAwareLocalVolume.tsx";
 import useDeafStatesDefault from "../../useDeafStates.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
@@ -30,9 +30,9 @@ function ExpandedControlItemIcon(iconSource) {
     if (iconSource.showIconSparkle) {
       obj = { children: null };
       const items = [tmp10, , ];
-      obj = { style: tmp.sparkle2, source: _modDef10047 };
+      obj = { style: tmp.sparkle2, source: _modDef10085 };
       items[1] = React6(React4, obj);
-      const obj1 = { style: tmp.sparkle, source: _modDef10048 };
+      const obj1 = { style: tmp.sparkle, source: _modDef10086 };
       items[2] = React6(React4, obj1);
       obj.children = items;
       tmp6 = React7(React3, obj);
@@ -62,10 +62,10 @@ function ExpandedControlItem(iconSource) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: c3, Image: closure_4 } = get_ActivityIndicator);
-const MediaEngineContextTypes = fn(4599).MediaEngineContextTypes;
+const MediaEngineContextTypes = fn(4630).MediaEngineContextTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9, Fragment: c10 } = jsxProd);
-fn(4574);
+fn(4605);
 let createStyles = { formTintColor: null, formColor: null, sparkle: null, sparkle2: null };
 createStyles = { tintColor: nativeDefault.colors.ICON_STRONG };
 createStyles.formTintColor = createStyles;
@@ -149,7 +149,7 @@ export const DeafenButton = function DeafenButton(disabled) {
   }
   let obj = VoiceActionUtils;
   const deafHandler = obj.createDeafHandler(useDeafStatesDefault(disabled.channel));
-  obj = { disabled: flag, onPress: deafHandler.onPress, iconSource: importDefault(deafHandler.deaf ? 10051 : 10052), label: null };
+  obj = { disabled: flag, onPress: deafHandler.onPress, iconSource: importDefault(deafHandler.deaf ? 10089 : 10090), label: null };
   const intl = util.intl;
   obj.label = intl.string(util.t.wjcRFX);
   return React6(ExpandedControlItem, obj);

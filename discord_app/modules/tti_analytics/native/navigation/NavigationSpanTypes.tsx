@@ -8,3 +8,8 @@ export const NavigationSpanStatus = {
   INTERRUPTED: "interrupted",
   DEADLINE_EXCEEDED: "deadline_exceeded",
 };
+export const ComponentMeasurementSource = {
+  ON_LAYOUT: "on_layout",
+  CACHED_SAME_DESTINATION: "cached_same_destination",
+  CACHED_PREVIOUS_DESTINATION: "cached_previous_destination",
+};

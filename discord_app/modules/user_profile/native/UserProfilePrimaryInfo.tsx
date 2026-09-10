@@ -708,16 +708,16 @@ function GuildTag(style) {
 }
 get_ActivityIndicator = fn(17);
 ({ Image: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-const getBadgeName = fn(8209).getBadgeName;
-let Constants = fn(7222);
+const getBadgeName = fn(8246).getBadgeName;
+let Constants = fn(7260);
 ({ DIVIDER_DOT: closure_7, PROFILE_SIDE_PADDING: closure_8, UserProfileThemeTypes } = Constants);
 Constants = fn(1074);
 ({ AnalyticEvents: c10, UserSettingsSections: closure_11 } = Constants);
-const GuildTagBadgeSize = fn(7958).GuildTagBadgeSize;
-const DEFAULT_PREMIUM_BADGE_ID = fn(8220).DEFAULT_PREMIUM_BADGE_ID;
+const GuildTagBadgeSize = fn(7996).GuildTagBadgeSize;
+const DEFAULT_PREMIUM_BADGE_ID = fn(8257).DEFAULT_PREMIUM_BADGE_ID;
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14, Fragment: closure_15 } = jsxProd);
-fn(4574);
+fn(4605);
 let createStyles = {
   container: { flexDirection: "column" },
   displayName: { flexDirection: "row", alignItems: "center", columnGap: 4 },

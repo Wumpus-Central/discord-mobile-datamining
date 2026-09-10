@@ -4,13 +4,13 @@ import utils_ColorUtils from "../../../../discord_common/js/shared/utils/ColorUt
 import native from "../../../design/void/native.tsx";
 import ColorUtils from "../../../utils/ColorUtils.tsx";
 import Pressables from "../../../design/void/Pressables/native/Pressables.tsx";
-import _modDef11595 from "../../../../_runtime/metro/11595__.js";
+import _modDef11635 from "../../../../_runtime/metro/11635__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4574);
+const createStyles = fn(4605);
 let obj = { colorBlock: null };
 obj = {
   minWidth: 44,
@@ -61,7 +61,7 @@ export default noop.memo((color) => {
       obj.children = null;
       let tmp10Result = jsx(Pressables.PressableOpacity, obj);
     } else {
-      const obj2 = { source: _modDef11595, color: null };
+      const obj2 = { source: _modDef11635, color: null };
       if (v < 0.5) {
         unsafe_rawColors = nativeDefault.unsafe_rawColors;
         let BLACK2 = unsafe_rawColors.WHITE;
@@ -69,7 +69,7 @@ export default noop.memo((color) => {
         BLACK2 = nativeDefault.unsafe_rawColors.BLACK;
       }
       obj2.color = BLACK2;
-      jsx(native.Icon, { source: _modDef11595, color: null });
+      jsx(native.Icon, { source: _modDef11635, color: null });
     }
     const tmp2Result1 = utils_ColorUtils;
   } else {
@@ -82,14 +82,14 @@ export default noop.memo((color) => {
       obj3.children = null;
       tmp10Result = <View {...obj3} />;
     } else {
-      const obj5 = { source: _modDef11595, color: null };
+      const obj5 = { source: _modDef11635, color: null };
       if (v < 0.5) {
         let BLACK = nativeDefault.unsafe_rawColors.WHITE;
       } else {
         BLACK = nativeDefault.unsafe_rawColors.BLACK;
       }
       obj5.color = BLACK;
-      tmp10Result = jsx(native.Icon, { source: _modDef11595, color: null });
+      tmp10Result = jsx(native.Icon, { source: _modDef11635, color: null });
     }
     const tmp2Result2 = utils_ColorUtils;
   }

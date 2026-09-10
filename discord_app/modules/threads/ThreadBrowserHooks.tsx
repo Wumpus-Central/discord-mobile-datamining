@@ -13,7 +13,7 @@ import ArchivedThreadsStore from "ArchivedThreadsStore.tsx";
 import JoinedThreadsStore from "JoinedThreadsStore.tsx";
 
 require = fn;
-let closure_5 = fn(12792).useShouldShowResolvedFlagsForChannel;
+let closure_5 = fn(12832).useShouldShowResolvedFlagsForChannel;
 const Permissions = fn(1085).Permissions;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/threads/ThreadBrowserHooks.tsx");

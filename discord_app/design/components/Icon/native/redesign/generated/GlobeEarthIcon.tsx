@@ -1,7 +1,7 @@
 // discord_app/design/components/Icon/native/redesign/generated/GlobeEarthIcon.tsx
 import nativeDefault from "../../../../../../../discord_common/js/packages/tokens/native.tsx";
 import BaseIconImage from "../../BaseIconImage.tsx";
-import _mod8919 from "../../../../../../../_runtime/metro/08919__.js";
+import _mod8956 from "../../../../../../../_runtime/metro/08956__.js";
 import noop from "../../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -17,7 +17,7 @@ export const GlobeEarthIcon = function GlobeEarthIcon(dependencyMap) {
   const merged = Object.assign(dependencyMap, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
   return jsx(BaseIconImage.BaseIconImage, {
-    source: _mod8919,
+    source: _mod8956,
     color: INTERACTIVE_ICON_DEFAULT,
     style: dependencyMap.style,
   });

@@ -10,7 +10,7 @@ const Constants = fn(1074);
 ({ AnalyticEvents: hasOwnProperty, AnalyticsSections: metroRequire } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-fn(4574);
+fn(4605);
 let createStyles = { emptyContainer: null, container: null };
 createStyles = { flex: 1, paddingTop: nativeDefault.space.PX_32 };
 createStyles.emptyContainer = createStyles;

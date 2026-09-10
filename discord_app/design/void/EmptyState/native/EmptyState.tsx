@@ -9,7 +9,8 @@ get_ActivityIndicator = fn(17);
 ({ View: c2, Image: c3 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-fn(4574);
+let closure_6 = { textTransform: "none" };
+fn(4605);
 let createStyles = { container: null, emptyImage: null, emptyTitle: null, emptyBody: null };
 createStyles = {
   flex: 1,
@@ -23,15 +24,24 @@ createStyles.container = createStyles;
 createStyles.emptyImage = { flex: 1, maxWidth: 300, maxHeight: 200 };
 createStyles.emptyTitle = { marginTop: 20, textTransform: "uppercase" };
 createStyles.emptyBody = { textAlign: "center", marginTop: 8 };
-let closure_6 = createStyles.createStyles(createStyles);
+let closure_7 = createStyles.createStyles(createStyles);
 const size = fn(2);
 const result = size.fileFinishedImporting("design/void/EmptyState/native/EmptyState.tsx");
 
 export default function EmptyState(Illustration) {
-  const tmp = closure_6();
-  shared;
+  const tmp = closure_7();
+  let obj = shared;
+  const themeContext = obj.useThemeContext();
+  let hasItem;
+  if (themeContext != null) {
+    const enabledExperiments = themeContext.enabledExperiments;
+    if (enabledExperiments != null) {
+      hasItem = enabledExperiments.includes("mana-type-consolidation");
+    }
+  }
+  let tmp2Result = shared;
   if (null != Illustration.Illustration) {
-    let obj = {
+    obj = {
       accessible: false,
       importantForAccessibility: "no",
       accessibilityRole: "none",
@@ -40,28 +50,28 @@ export default function EmptyState(Illustration) {
     };
     const items = [tmp.emptyImage, Illustration.imageStyle];
     obj.style = items;
-    let tmp8Result = React4(Illustration.Illustration, obj);
+    let tmp11Result = React4(Illustration.Illustration, obj);
   } else {
-    tmp8Result = null;
-    if (tmp6) {
+    tmp11Result = null;
+    if (tmp9) {
+      tmp2Result = shared;
       obj = {
         resizeMode: "contain",
-        source: shared.isThemeLight(tmp5) ? Illustration.lightSource : Illustration.darkSource,
+        source: tmp2Result.isThemeLight(tmp8) ? Illustration.lightSource : Illustration.darkSource,
         style: null,
       };
       const items1 = [tmp.emptyImage, Illustration.imageStyle];
       obj.style = items1;
-      tmp8Result = React4(React3, obj);
-      const tmp2Result = shared;
+      tmp11Result = React4(React3, obj);
     }
-    tmp6 = null != Illustration.lightSource && null != Illustration.darkSource;
+    tmp9 = null != Illustration.lightSource && null != Illustration.darkSource;
   }
   ({ body, title } = Illustration);
   const obj1 = { style: null, accessible: true, children: null };
   const items2 = [tmp.container, Illustration.style];
   obj1.style = items2;
-  const items3 = [tmp8Result, , ,];
-  let tmp14 = null;
+  const items3 = [tmp11Result, , ,];
+  let tmp17 = null;
   ({ children, bodyStyle } = Illustration);
   if (null != title) {
     const obj2 = {
@@ -71,13 +81,13 @@ export default function EmptyState(Illustration) {
       style: null,
       children: null,
     };
-    const items4 = [tmp.emptyTitle, tmp11];
+    const items4 = [tmp.emptyTitle, tmp14, closure_6];
     obj2.style = items4;
     obj2.children = title;
-    tmp14 = React4(Text_Text.Text, obj2);
+    tmp17 = React4(Text_Text.Text, obj2);
   }
-  items3[1] = tmp14;
-  let tmp16 = null;
+  items3[1] = tmp17;
+  let tmp19 = null;
   if (null != body) {
     const obj3 = {
       variant: "text-md/medium",
@@ -89,9 +99,9 @@ export default function EmptyState(Illustration) {
     const items5 = [tmp.emptyBody, bodyStyle];
     obj3.style = items5;
     obj3.children = body;
-    tmp16 = React4(Text_Text.Text, obj3);
+    tmp19 = React4(Text_Text.Text, obj3);
   }
-  items3[2] = tmp16;
+  items3[2] = tmp19;
   items3[3] = children;
   obj1.children = items3;
   return hasOwnProperty(React2, obj1);

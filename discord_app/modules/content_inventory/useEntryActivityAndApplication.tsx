@@ -24,7 +24,7 @@ export default function useEntryActivityAndApplication(extra) {
     application_id1 = extra.extra.application_id;
   }
   items1[1] = application_id1;
-  const tmp7 = _slicedToArray(activityApplication(7182)(items1), 2);
+  const tmp7 = _slicedToArray(activityApplication(7220)(items1), 2);
   activityApplication = tmp7[0];
   obj = {
     activity: stateFromStores,
@@ -33,7 +33,7 @@ export default function useEntryActivityAndApplication(extra) {
     activityApplication: null,
     fallbackApplication: null,
   };
-  const tmp4 = activityApplication(7182);
+  const tmp4 = activityApplication(7220);
   const items2 = [EmbeddedActivitiesStore];
   obj.embeddedActivity = require("initialize").useStateFromStores(items2, () => {
     let id;

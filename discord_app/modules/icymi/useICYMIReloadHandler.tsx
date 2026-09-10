@@ -35,7 +35,7 @@ export const useICYMIReloadHandler = function useICYMIReloadHandler(showDot) {
               obj = { value, done: true };
               return obj;
             } else {
-              const ICYMIAnalytics = tmp2(8387).ICYMIAnalytics;
+              const ICYMIAnalytics = tmp2(8424).ICYMIAnalytics;
               let str = "NoDotShown";
               if (tmp2) {
                 str = "DotShown";
@@ -44,7 +44,7 @@ export const useICYMIReloadHandler = function useICYMIReloadHandler(showDot) {
               ICYMIAnalytics.trackFeedShown(obj1);
               v3 = 1;
               dependencyMap = 1;
-              let obj2 = { value: v3(8379).fetchDehydrated({ isReloading: true }), done: false };
+              let obj2 = { value: v3(8416).fetchDehydrated({ isReloading: true }), done: false };
               return obj2;
             }
           } else if (1 === tmp5) {
@@ -56,7 +56,7 @@ export const useICYMIReloadHandler = function useICYMIReloadHandler(showDot) {
               const obj3 = { value, done: true };
               return obj3;
             } else {
-              let obj5 = v3(8379);
+              let obj5 = v3(8416);
               v3 = 2;
               dependencyMap = 1;
               const obj4 = { value: obj5.reloadICYMITab(), done: false };
@@ -71,7 +71,7 @@ export const useICYMIReloadHandler = function useICYMIReloadHandler(showDot) {
               obj5 = { value, done: true };
               return obj5;
             } else {
-              obj2 = v3(8379);
+              obj2 = v3(8416);
               v3 = 3;
               dependencyMap = 1;
               const obj6 = { value: obj2.getGuildChannelScores(), done: false };
@@ -85,7 +85,7 @@ export const useICYMIReloadHandler = function useICYMIReloadHandler(showDot) {
             const obj7 = { value, done: true };
             return obj7;
           } else {
-            obj = v3(8379);
+            obj = v3(8416);
             const recommendedGuilds = obj.getRecommendedGuilds();
             dependencyMap = 3;
             return { value: "HermesInternal", done: null };

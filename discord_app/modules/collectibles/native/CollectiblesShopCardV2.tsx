@@ -356,7 +356,7 @@ let num = 170;
 if (PixelRatio.getFontScale() >= 1.78) {
   num = 302;
 }
-fn(4574);
+fn(4605);
 let obj = {
   card: null,
   topRowOverlay: null,

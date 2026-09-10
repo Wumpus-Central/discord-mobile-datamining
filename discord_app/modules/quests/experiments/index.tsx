@@ -157,7 +157,7 @@ export const useQuestOrbsMultiplierMarketing = function useQuestOrbsMultiplierMa
   obj = {
     shouldShowBonusOrbsUX:
       questOrbMultiplierEligibility !== QuestOrbMultiplierUtils.QuestOrbMultiplierEligibilityType.INELIGIBLE &&
-      questOrbMultiplierEligibility !== QuestOrbMultiplierUtils.QuestOrbMultiplierEligibilityType.CREPE &&
+      questOrbMultiplierEligibility !== QuestOrbMultiplierUtils.QuestOrbMultiplierEligibilityType.XBOX_GAME_PASS &&
       closure_2.useConfig(obj).enabled,
     multiplier: QuestOrbsMultiplier.QuestOrbsMultiplier.PREMIUM_TIER_2_MULTIPLIER_PERCENTAGE_POINTS / 100,
   };

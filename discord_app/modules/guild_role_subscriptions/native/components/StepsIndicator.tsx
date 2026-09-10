@@ -81,7 +81,7 @@ function StepNode(isCurrent) {
 }
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-fn(4574);
+fn(4605);
 let createStyles = {
   container: { flexDirection: "row", alignItems: "center", justifyContent: "center" },
   node: { width: 20, height: 20, borderRadius: 10, marginHorizontal: -2 },

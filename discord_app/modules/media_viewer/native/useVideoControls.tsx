@@ -10,7 +10,7 @@ require = fn;
 const jsx = fn(21).jsx;
 let module_560 = fn(560);
 module_560 = module_560.create(() => ({ controls: "PX_16", paused: true }));
-const createStyles = fn(4574);
+const createStyles = fn(4605);
 let closure_8 = createStyles.createStyles({ slider: { marginBottom: 8 } });
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/media_viewer/native/useVideoControls.tsx");

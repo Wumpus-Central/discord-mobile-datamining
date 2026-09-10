@@ -3,7 +3,7 @@ import _mod17 from "../../../../../../_runtime/metro/00017__.js";
 import jsxProd from "../../../../../../_runtime/react/00021_jsxProd.js";
 import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
 import useToken from "../../../../tokens/native/useToken.tsx";
-import _modDef5988 from "../../../../../../discord_assets/assets/mana/asset-library/generated/ExperimentalDiscordShopLockupExperiementLogo-2x.png.js";
+import _modDef6024 from "../../../../../../discord_assets/assets/mana/asset-library/generated/ExperimentalDiscordShopLockupExperiementLogo-2x.png.js";
 import size from "../../../../../../_runtime/metro/00002__.js";
 
 const Image = _mod17.Image;
@@ -46,7 +46,7 @@ export const ExperimentalDiscordShopLockupExperiementLogo = function Experimenta
   }
   const obj1 = {
     fadeDuration: 0,
-    source: { uri: _modDef5988 },
+    source: { uri: _modDef6024 },
     style: null,
     accessible,
     accessibilityLabel,
@@ -58,7 +58,7 @@ export const ExperimentalDiscordShopLockupExperiementLogo = function Experimenta
   return (
     <Image
       fadeDuration={0}
-      source={{ uri: _modDef5988 }}
+      source={{ uri: _modDef6024 }}
       style={null}
       accessible={accessible}
       accessibilityLabel={accessibilityLabel}

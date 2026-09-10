@@ -84,6 +84,7 @@ const items2 = [
   dismissible_content.DismissibleContent.PREMIUM_SHOP_NAGBAR_NOTICE,
   dismissible_content.DismissibleContent.GUILD_HEADER_COACHMARK,
   dismissible_content.DismissibleContent.GUILD_BOOST_TAB_BANNER,
+  dismissible_content.DismissibleContent.GUILD_BOOST_TAB_HIGHLIGHT,
 ];
 const items3 = [
   dismissible_content.DismissibleContent.GAME_SHOP_NEW_BADGE,

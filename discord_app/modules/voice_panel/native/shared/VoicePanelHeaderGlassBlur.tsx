@@ -10,7 +10,7 @@ require = fn;
 const StyleSheet = fn(17).StyleSheet;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4574);
+const createStyles = fn(4605);
 let closure_6 = createStyles.createStyles({
   blur: { position: "absolute", top: 0, left: 0, right: 0 },
   strokeContainer: {
@@ -39,7 +39,7 @@ export default noop.memo(function HeaderGlassBlur(shown) {
   shown = shown.shown;
   ({ blurStyle, style } = shown);
   const tmp = closure_6();
-  shown(4310);
+  shown(4341);
   const fn = function k() {
     let opacity = 0;
     if (shown.get()) {
@@ -56,7 +56,7 @@ export default noop.memo(function HeaderGlassBlur(shown) {
   fn.__workletHash = 3451055086565;
   fn.__initData = __initData;
   const animatedStyle = obj.useAnimatedStyle(fn);
-  let obj2 = shown(4310);
+  let obj2 = shown(4341);
   const fn2 = function p() {
     let obj = spring;
     let num = 0;
@@ -66,7 +66,7 @@ export default noop.memo(function HeaderGlassBlur(shown) {
     obj = { blurAmount: obj.withSpring(num) };
     return obj;
   };
-  obj = { withSpring: shown(4988).withSpring, shown };
+  obj = { withSpring: shown(5024).withSpring, shown };
   fn2.__closure = obj;
   fn2.__workletHash = 5642055202507;
   fn2.__initData = __initData2;
@@ -77,7 +77,7 @@ export default noop.memo(function HeaderGlassBlur(shown) {
   obj1.style = items;
   const tmp2 = shown;
   const tmp9 = ReanimatedNativeViewDefault;
-  let obj5 = shown(4425);
+  let obj5 = shown(4456);
   let str = "light";
   if (obj5.isThemeDark(tmp7)) {
     str = "dark";
@@ -90,7 +90,7 @@ export default noop.memo(function HeaderGlassBlur(shown) {
   const items3 = [closure_4(NativeViewDefault, { style: tmp.stroke })];
   const tmp6Result = NativeViewDefault;
   const obj4 = { style: tmp.stroke };
-  obj5 = { style: tmp2(4425).isThemeDark(tmp7) ? tmp.strokeAlt : tmp.strokeAltLight };
+  obj5 = { style: tmp2(4456).isThemeDark(tmp7) ? tmp.strokeAlt : tmp.strokeAltLight };
   items3[1] = closure_4(tmp6Result, obj5);
   obj3.children = items3;
   items2[1] = closure_5(tmp6Result, obj3);

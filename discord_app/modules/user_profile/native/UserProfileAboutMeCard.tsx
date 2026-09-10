@@ -123,10 +123,10 @@ function MemberJoinDates(userId) {
     }
     return member;
   });
-  let obj3 = userId(5421);
+  let obj3 = userId(5457);
   let obj4 = SnowflakeUtilsDefault;
   const createdAtDate = obj3.getCreatedAtDate(obj4.extractTimestamp(userId), stateFromStores);
-  let obj5 = userId(5421);
+  let obj5 = userId(5457);
   let joinedAt;
   if (stateFromStores2 != null) {
     joinedAt = stateFromStores2.joinedAt;
@@ -141,7 +141,7 @@ function MemberJoinDates(userId) {
   obj.style = items4;
   obj1 = {
     themeType,
-    icon: closure_11(tmp4(10850).ClydeIcon, { size: "xs" }),
+    icon: closure_11(tmp4(10888).ClydeIcon, { size: "xs" }),
     accessibilityLabel: null,
     children: null,
   };
@@ -159,9 +159,9 @@ function MemberJoinDates(userId) {
       importantForAccessibility: "no-hide-descendants",
       children,
     };
-    const items6 = [closure_11(tmp4(4570).Text, obj3)];
+    const items6 = [closure_11(tmp4(4601).Text, obj3)];
     obj4 = { themeType, icon: null, accessibilityLabel: null, children: null };
-    obj5 = { guild: stateFromStores1, size: tmp4(5598).GuildIconSizes.XXSMALL };
+    obj5 = { guild: stateFromStores1, size: tmp4(5634).GuildIconSizes.XXSMALL };
     obj4.icon = closure_11(GuildIconDefault, obj5);
     const intl3 = tmp4(1114).intl;
     const obj6 = { guildName: stateFromStores1.name, date: createdAtDate1 };
@@ -305,7 +305,7 @@ function BotSlashCommands(channel) {
   return tmp8Result;
 }
 const View = fn(17).View;
-const Constants = fn(7222);
+const Constants = fn(7260);
 ({ DIVIDER_DOT: closure_8, UserProfileThemeTypes } = Constants);
 const Routes = fn(1074).Routes;
 const AppLauncherRouteName = fn(1482).AppLauncherRouteName;
@@ -327,7 +327,7 @@ const dependencyMap = {
     columnGap: 3,
   },
 };
-const createStyles = fn(4574);
+const createStyles = fn(4605);
 let closure_16 = createStyles.createStyles({
   card: { flexDirection: "column" },
   textWithIcon: { flexDirection: "row", alignItems: "center" },

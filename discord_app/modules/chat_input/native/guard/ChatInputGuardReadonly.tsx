@@ -18,7 +18,7 @@ function sortChannelsByLastMessageId(id, id2) {
 }
 const isTextChannel = fn(1961).isTextChannel;
 let closure_6 = fn(2012).GUILD_SELECTABLE_CHANNELS_KEY;
-const TextAreaCta = fn(11992).TextAreaCta;
+const TextAreaCta = fn(12032).TextAreaCta;
 const Constants = fn(1074);
 ({ AnalyticEvents: closure_12, Permissions: map1 } = Constants);
 const jsx = fn(21).jsx;

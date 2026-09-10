@@ -1,7 +1,7 @@
 // discord_app/design/components/mana-assets/native/generated/SocialSdkIllocon.native.tsx
 import jsxProd from "../../../../../../_runtime/react/00021_jsxProd.js";
 import FastImageDefault from "../../../../../components_native/common/FastImage.tsx";
-import _modDef6488 from "../../../../../../discord_assets/assets/mana/asset-library/generated/SocialSdkIllocon-2x.png.js";
+import _modDef6524 from "../../../../../../discord_assets/assets/mana/asset-library/generated/SocialSdkIllocon-2x.png.js";
 import size from "../../../../../../_runtime/metro/00002__.js";
 
 const jsx = jsxProd.jsx;
@@ -21,12 +21,12 @@ export const SocialSdkIllocon = function SocialSdkIllocon(size) {
     accessibilityLabel: null,
     resizeMode: null,
   };
-  obj = { uri: _modDef6488 };
+  obj = { uri: _modDef6524 };
   obj.source = obj;
   const items = [{ width: num, height: num }];
   obj.style = items;
   obj.accessible = accessible;
   obj.accessibilityLabel = accessibilityLabel;
   obj.resizeMode = resizeMode;
-  return jsx(FastImageDefault, { uri: _modDef6488 });
+  return jsx(FastImageDefault, { uri: _modDef6524 });
 };

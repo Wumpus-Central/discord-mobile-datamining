@@ -111,7 +111,7 @@ export default {
       },
     };
     request.trackedActionData = obj;
-    const tmpResult = permissionOverwrites(4767);
+    const tmpResult = permissionOverwrites(4798);
     request.rejectWithError = guildId(1272).rejectWithMigratedError();
     const obj6 = guildId(1272);
     return tmpResult.post(request).then(

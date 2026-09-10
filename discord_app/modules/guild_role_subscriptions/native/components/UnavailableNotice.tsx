@@ -2,14 +2,14 @@
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import FastImageDefault from "../../../../components_native/common/FastImage.tsx";
-import _modDef16276 from "../../../../../_runtime/metro/16276__.js";
+import _modDef16325 from "../../../../../_runtime/metro/16325__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-fn(4574);
+fn(4605);
 let createStyles = {
   container: null,
   brightTitle: null,
@@ -38,7 +38,7 @@ export default function UnavailableNotice(brightTitle) {
   ({ container: arr[0], unavailableContainer: arr[1] } = tmp);
   obj.style = items;
   obj = { style: tmp.unavailableInfo, children: null };
-  obj = { source: _modDef16276 };
+  obj = { source: _modDef16325 };
   const items1 = [React4(FastImageDefault, obj), ,];
   const items2 = [tmp.joinCtaTitle];
   if (brightTitle) {

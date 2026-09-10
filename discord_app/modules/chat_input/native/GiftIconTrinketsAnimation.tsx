@@ -8,11 +8,11 @@ import noop from "../../../../_runtime/metro/00019__.js";
 import AccessibilityStore from "../../a11y/AccessibilityStore.tsx";
 
 const PlatformUtils = APNGPlayer(1115);
-const APNGPlayer2 = APNGPlayer(8842);
+const APNGPlayer2 = APNGPlayer(8879);
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4574);
+const createStyles = fn(4605);
 let closure_6 = createStyles.createStyles((width) => ({
   containerRefresh: {
     position: "absolute",

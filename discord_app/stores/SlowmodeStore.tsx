@@ -22,7 +22,7 @@ function setCooldown(channel, SendMessage, cooldownMs) {
       const sum = cooldownMs + Date.now();
       dependencyMap = sum;
       obj = { rateLimitPerUser: channel.rateLimitPerUser, cooldownMs, cooldownEndTimestamp: sum, timer: null };
-      const timeout = new tmp6(4461).Timeout();
+      const timeout = new tmp6(4492).Timeout();
       obj.timer = timeout;
       dependencyMap[SendMessage][channel.id] = obj;
       const timer2 = dependencyMap[SendMessage][channel.id].timer;

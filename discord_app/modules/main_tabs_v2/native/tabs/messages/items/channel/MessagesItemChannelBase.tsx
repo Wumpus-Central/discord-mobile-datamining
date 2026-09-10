@@ -16,7 +16,7 @@ const View = fn(17).View;
 const ActivityTypes = fn(1074).ActivityTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
-const createStyles = fn(4574);
+const createStyles = fn(4605);
 let closure_14 = createStyles.createStyles(() => {
   let obj = { pressable: null, nameplate: null, rowActive: null, selectedBorder: null, rowSelected: null };
   obj = {
@@ -98,7 +98,7 @@ export default noop.memo(function MessagesItemChannelBase(channel) {
       obj.status = PresenceStore.getStatus(obj.getRecipientId());
       obj.activities = activities;
     } else {
-      obj = { status: "Array", activities: "PX_16" };
+      obj = { status: "call", activities: "accessibilityLabel" };
     }
     return obj;
   });

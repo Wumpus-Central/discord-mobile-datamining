@@ -22,7 +22,7 @@ let closure_5 = module_560.create((arg0) => {
     } else {
       resolved = Promise.resolve(undefined);
     }
-    tmpResult = tmp(4553);
+    tmpResult = tmp(4584);
   } else {
     const DCDDeviceThermalStateManager = NativeModules.DCDDeviceThermalStateManager;
     const thermalState1 = DCDDeviceThermalStateManager.getThermalState();
@@ -48,7 +48,7 @@ let closure_5 = module_560.create((arg0) => {
         return tmp;
       }));
     });
-    return { rawThermalState: "disabled" };
+    return { rawThermalState: "Array" };
   }
   obj = require("PlatformUtils");
   tmp = _require;

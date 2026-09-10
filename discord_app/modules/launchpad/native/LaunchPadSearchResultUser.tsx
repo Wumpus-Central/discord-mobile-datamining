@@ -48,7 +48,7 @@ function UserResult(user) {
     obj.recipientIds = items;
     obj.openPrivateChannel(obj);
   }, items);
-  let obj = user(4996);
+  let obj = user(5032);
   const fontScale = obj.useFontScale();
   let obj1 = user(504);
   const items1 = [LocaleStore];
@@ -73,8 +73,8 @@ function UserResult(user) {
   }
   let relativeTimestamp = null;
   if (null != extractTimestampResult) {
-    relativeTimestamp = tmp6(7655).getRelativeTimestamp(extractTimestampResult);
-    const tmp6Result = tmp6(7655);
+    relativeTimestamp = tmp6(7692).getRelativeTimestamp(extractTimestampResult);
+    const tmp6Result = tmp6(7692);
   }
   let str = "text-muted";
   if (unread) {
@@ -147,9 +147,9 @@ function UserResult(user) {
         message: lastMessage,
         color: str,
         muted: flag,
-        layout: tmp6(7893).ChannelListLayoutTypes.COMPACT,
+        layout: tmp6(7931).ChannelListLayoutTypes.COMPACT,
       };
-      tmp14Result = closure_12(tmp6(10141).ChannelRowPreview, obj3);
+      tmp14Result = closure_12(tmp6(10179).ChannelRowPreview, obj3);
     }
   }
   const obj4 = { children: null };
@@ -163,7 +163,7 @@ function UserResult(user) {
   items5[2] = renderChannelContentDefault(obj2);
   obj4.children = items5;
   obj.children = tmp2Result1(closure_14(closure_13, obj4), { fontScale });
-  return tmp2Result(closure_12(user(5137).PressableHighlight, obj));
+  return tmp2Result(closure_12(user(5173).PressableHighlight, obj));
 }
 function UserResultWithChannel(arg0) {
   ({ user: require, channel } = arg0);
@@ -182,7 +182,7 @@ function UserResultWithChannel(arg0) {
   obj = {};
   const merged = Object.assign(arg0);
   obj.channel = channel;
-  obj.lastMessage = channel(15349)(channel, { unread });
+  obj.lastMessage = channel(15398)(channel, { unread });
   obj.unread = unread;
   obj.mentionCount = mentionCount;
   obj.muted = stateFromStores;
@@ -190,10 +190,10 @@ function UserResultWithChannel(arg0) {
   return closure_12(UserResult, obj);
 }
 const StatusTypes = fn(1074).StatusTypes;
-const UnreadSetting = fn(4756).UnreadSetting;
+const UnreadSetting = fn(4787).UnreadSetting;
 const jsxProd = fn(21);
 ({ jsx: closure_12, Fragment: map1, jsxs: closure_14 } = jsxProd);
-const createStyles = fn(4574);
+const createStyles = fn(4605);
 let obj = { pressable: { flex: 1 }, pressableUnderlayColor: null };
 obj = { backgroundColor: nativeDefault.colors.INTERACTIVE_BACKGROUND_ACTIVE };
 obj.pressableUnderlayColor = obj;

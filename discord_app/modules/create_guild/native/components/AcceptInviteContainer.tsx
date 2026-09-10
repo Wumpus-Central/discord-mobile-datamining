@@ -8,9 +8,9 @@ import GuildStore from "../../../../stores/GuildStore.tsx";
 import InviteStore from "../../../../stores/InviteStore.tsx";
 
 require = fn;
-const GuildMemberFlags = fn(4200).GuildMemberFlags;
+const GuildMemberFlags = fn(4230).GuildMemberFlags;
 const jsx = fn(21).jsx;
-fn(4574);
+fn(4605);
 let createStyles = { flex: { flex: 1 }, paddingContainer: null };
 createStyles = { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH };
 createStyles.paddingContainer = createStyles;

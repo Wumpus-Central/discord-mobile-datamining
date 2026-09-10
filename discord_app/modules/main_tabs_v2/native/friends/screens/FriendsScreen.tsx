@@ -8,7 +8,7 @@ import TableRow from "../../../../../design/components/TableRow/native/TableRow.
 import native from "../../../../../design/assets/native.tsx";
 import showUserProfileActionSheetDefault from "../../../../user_profile/native/showUserProfileActionSheet.tsx";
 import NoResultsDefault from "../../shared_components/user_list/NoResults.tsx";
-import _modDef16478 from "../../../../../../_runtime/metro/16478__.js";
+import _modDef16527 from "../../../../../../_runtime/metro/16527__.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 import GameRelationshipStore from "../../../../game_relationships/GameRelationshipStore.tsx";
 import RelationshipStore from "../../../../../stores/RelationshipStore.tsx";
@@ -17,7 +17,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-fn(4574);
+fn(4605);
 let createStyles = { container: null, requestsButtonContainer: null, emptyContainer: null, buttonContainer: null };
 createStyles = { paddingTop: nativeDefault.space.PX_8, flex: 1 };
 createStyles.container = createStyles;
@@ -86,7 +86,7 @@ export default function FriendsScreen() {
     const items = [];
     if (tmp2) {
       let obj = {
-        icon: _modDef16478,
+        icon: _modDef16527,
         IconComponent: SendMessageIcon.SendMessageIcon,
         iconVariant: "default",
         label: null,
@@ -135,7 +135,7 @@ export default function FriendsScreen() {
       let v1IEawz = require;
       let obj6 = dependencyMap;
       let obj4 = { start: true, end: true, icon: null, trailing: null, label: null, subLabel: null, onPress: null };
-      const obj5 = { source: _modDef16478 };
+      const obj5 = { source: _modDef16527 };
       obj4.icon = React5(TableRow.TableRow.Icon, obj5);
       obj4.trailing = React5(TableRow.TableRow.Arrow, {});
       const intl5 = util.intl;

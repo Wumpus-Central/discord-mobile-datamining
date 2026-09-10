@@ -6,7 +6,7 @@ import noop from "../../../../_runtime/metro/00019__.js";
 import MediaEngineStore from "../../../stores/MediaEngineStore.tsx";
 
 require = fn;
-let closure_4 = fn(9265).GAME_CONSOLE_ALERT_MODAL_LOCATION;
+let closure_4 = fn(9302).GAME_CONSOLE_ALERT_MODAL_LOCATION;
 const Constants = fn(1074);
 ({ InputModes: hasOwnProperty, PlatformTypes: metroRequire } = Constants);
 const jsx = fn(21).jsx;
@@ -38,7 +38,7 @@ export default {
             const intl = util.intl;
             obj.body = intl.string(util.t.bL21zs);
             obj.onConfirm = function onConfirm() {
-              const result = closure_0(4394).UNSAFE_markDismissibleContentAsDismissed(
+              const result = closure_0(4425).UNSAFE_markDismissibleContentAsDismissed(
                 closure_0(1943).DismissibleContent.CONSOLE_PTT_DISABLE_ALERT,
               );
               closure_0();
@@ -57,7 +57,7 @@ export default {
     ({ title, body, errorCodeMessage } = reconnectPlatformType);
     let obj = { title, body: null, onConfirm: null };
     obj = { body, errorCodeMessage, dismissCallback: actions_AlertActionCreatorsDefault.close };
-    obj.body = jsx(reconnectPlatformType(9485).SelfDismissibleAlertBody, {
+    obj.body = jsx(reconnectPlatformType(9523).SelfDismissibleAlertBody, {
       body,
       errorCodeMessage,
       dismissCallback: actions_AlertActionCreatorsDefault.close,

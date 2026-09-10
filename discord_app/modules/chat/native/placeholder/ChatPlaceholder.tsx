@@ -4,9 +4,9 @@ import getChatPlaceholderRowHeightDefault from "getChatPlaceholderRowHeight.tsx"
 import ChatPlaceholderRowDefault from "ChatPlaceholderRow.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
-let closure_3 = fn(9517).useChatInputContainerHeight;
+let closure_3 = fn(9555).useChatInputContainerHeight;
 const jsx = fn(21).jsx;
-const createStyles = fn(4574);
+const createStyles = fn(4605);
 let obj = { placeholder: null };
 obj = {};
 const merged = Object.assign(fn(17).StyleSheet.absoluteFillObject);

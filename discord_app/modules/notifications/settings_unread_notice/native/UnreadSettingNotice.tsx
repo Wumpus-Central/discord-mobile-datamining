@@ -9,7 +9,7 @@ const View = fn(17).View;
 let closure_4 = fn(1084).ChannelNotificationSettingsFlags;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-fn(4574);
+fn(4605);
 let createStyles = { content: null, informations: null, actions: null, inlineTextWithIcon: null };
 createStyles = {
   display: "flex",

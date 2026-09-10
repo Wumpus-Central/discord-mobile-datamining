@@ -49,7 +49,7 @@ export default function useGameAnnouncements(arg0, limit) {
   if (messages == null) {
     messages = [];
   }
-  obj = { messages, channelId: null, guildId: null, loading: null };
+  obj = { messages, channelId: null, guildId: null, loading: null, hasFetched: null };
   let channelId;
   if (data != null) {
     channelId = data.channelId;
@@ -61,5 +61,6 @@ export default function useGameAnnouncements(arg0, limit) {
   }
   obj.guildId = guildId;
   obj.loading = stateFromStoresObject.isFetching;
+  obj.hasFetched = hasFetched;
   return obj;
 }

@@ -12,5 +12,5 @@ export const openChannelLongPressActionSheet = function openChannelLongPressActi
       ActionSheetActionCreatorsDefault.hideActionSheet(combined);
     },
   };
-  obj.openLazy(combined(1896)(10946, dependencyMap.paths), combined, obj);
+  obj.openLazy(combined(1896)(10986, dependencyMap.paths), combined, obj);
 };

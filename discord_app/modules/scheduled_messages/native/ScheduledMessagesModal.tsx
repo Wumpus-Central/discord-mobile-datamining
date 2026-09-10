@@ -7,7 +7,7 @@ import PremiumUtils from "../../../utils/PremiumUtils.tsx";
 import ReanimatedRexport from "../../reanimated/ReanimatedRexport.tsx";
 import spring from "../../../design/animation/reanimated/spring/spring.tsx";
 import NavigatorHeader from "../../../design/components/Navigator/native/NavigatorHeader.native.tsx";
-import _mod5645 from "../../../../_runtime/metro/05645__.js";
+import _mod5681 from "../../../../_runtime/metro/05681__.js";
 import useAnalyticsLocationsDefault from "../../app_analytics/useAnalyticsLocations.tsx";
 import AnalyticsLocationDefault from "../../app_analytics/AnalyticsLocation.tsx";
 import ScheduledMessageActionCreators from "../ScheduledMessageActionCreators.tsx";
@@ -146,11 +146,11 @@ function ScheduledMessageNitroUpsellBar(isAtLimit) {
 const View = fn(17).View;
 const AnalyticsPages = fn(1074).AnalyticsPages;
 const PremiumTypes = fn(1373).PremiumTypes;
-const premiumMax = fn(7860).MAX_SCHEDULED_MESSAGES_PER_USER;
+const premiumMax = fn(7897).MAX_SCHEDULED_MESSAGES_PER_USER;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11, Fragment: closure_12 } = jsxProd);
 let items = [AnalyticsLocationDefault.SCHEDULED_MESSAGES_LIST];
-fn(4574);
+fn(4605);
 let createStyles = {
   modal: null,
   headerLeftContainer: null,
@@ -223,13 +223,13 @@ export default function ScheduledMessagesModal() {
   }
   obj.headerStatusBarHeight = num + sharedValue(576).space.PX_8;
   obj5 = PlatformUtils;
-  obj.headerLeft = NavigatorHeader.getHeaderCloseButton(sharedValue(4777).pop);
+  obj.headerLeft = NavigatorHeader.getHeaderCloseButton(sharedValue(4808).pop);
   ({ headerLeftContainer: obj4.headerLeftContainerStyle, headerRightContainer: obj4.headerRightContainerStyle } = tmp);
-  const items1 = [closure_10(_mod5645.Header, obj), ,];
+  const items1 = [closure_10(_mod5681.Header, obj), ,];
   obj1 = { style: null };
   const items2 = [tmp.headerBorder, animatedStyle];
   obj1.style = items2;
-  items1[1] = closure_10(sharedValue(4310).View, obj1);
+  items1[1] = closure_10(sharedValue(4341).View, obj1);
   items1[2] = closure_10(ScheduledMessagesPage, { handleScroll: callback });
   obj.children = items1;
   return closure_11(View, obj);

@@ -623,7 +623,7 @@ class EmbeddedActivitiesManager extends tmp3 {
       const iter = values[Symbol.iterator]();
       while (iter !== undefined) {
         ({ location: _location, applicationId } = nextResult);
-        let obj2 = applyArgumentsResult(4202);
+        let obj2 = applyArgumentsResult(4233);
         let embeddedActivityLocationChannelId = obj2.getEmbeddedActivityLocationChannelId(_location);
         let tmp8 = embeddedActivityLocationChannelId;
         let tmp9 = null != embeddedActivityLocationChannelId;
@@ -895,7 +895,7 @@ class EmbeddedActivitiesManager extends tmp3 {
                     if (getChannel !== closure_131_1) {
                       set = 2;
                       c6 = 1;
-                      const obj2 = { value: getChannel(7177).fetchApplication(closure_131_1), done: false };
+                      const obj2 = { value: getChannel(7215).fetchApplication(closure_131_1), done: false };
                       return obj2;
                     }
                   } else {
@@ -918,7 +918,7 @@ class EmbeddedActivitiesManager extends tmp3 {
                   const intl = applyArgumentsResult(1114).intl;
                   closure_132_1.showLaunchErrorModal(intl.string(applyArgumentsResult(1114).t.UXoQTp));
                 }
-                obj25 = applyArgumentsResult(9534);
+                obj25 = applyArgumentsResult(9572);
               }
             } else {
               if (3 === getChannel) {
@@ -934,8 +934,8 @@ class EmbeddedActivitiesManager extends tmp3 {
                   activityConfigs = closure_131_9.activityConfigs;
                   applications = closure_131_9.applications;
                   const obj5 = { applicationId: closure_131_1, activityConfigs, applications };
-                  if (null == getChannel(9552)(obj5)) {
-                    let obj9 = applyArgumentsResult(9536);
+                  if (null == getChannel(9590)(obj5)) {
+                    let obj9 = applyArgumentsResult(9574);
                     let obj6 = { guildId: closure_131_8, force: true };
                     set = 4;
                     c6 = 1;
@@ -958,7 +958,7 @@ class EmbeddedActivitiesManager extends tmp3 {
                     activityConfigs: closure_131_12.activityConfigs,
                     applications: closure_131_12.applications,
                   };
-                  getChannel(9552)(obj9);
+                  getChannel(9590)(obj9);
                 }
               } else if (5 === getChannel) {
                 if (arg0 === 1) {
@@ -991,7 +991,7 @@ class EmbeddedActivitiesManager extends tmp3 {
                 dependencyMap = 0;
               }
               if (dependencyMap > 0) {
-                obj6 = applyArgumentsResult(9562);
+                obj6 = applyArgumentsResult(9600);
                 const obj11 = {
                   channelId: closure_131_0,
                   applicationId: closure_131_1,
@@ -1021,7 +1021,7 @@ class EmbeddedActivitiesManager extends tmp3 {
                 };
                 set = 5;
                 c6 = 1;
-                let obj14 = { value: getChannel(9580)(obj13), done: false };
+                let obj14 = { value: getChannel(9618)(obj13), done: false };
                 return obj14;
               }
             }
@@ -1040,7 +1040,7 @@ class EmbeddedActivitiesManager extends tmp3 {
               }
               getChannel = guildId;
               closure_131_8 = getChannel;
-              obj14 = applyArgumentsResult(9536);
+              obj14 = applyArgumentsResult(9574);
               const obj15 = { guildId: closure_131_8 };
               set = 3;
               c6 = 1;
@@ -1050,7 +1050,7 @@ class EmbeddedActivitiesManager extends tmp3 {
               const intl2 = applyArgumentsResult(1114).intl;
               closure_132_1.showLaunchErrorModal(intl2.string(applyArgumentsResult(1114).t.uGDCcw));
             }
-            tmp56 = getChannel(9561);
+            tmp56 = getChannel(9599);
           }
         } catch (tmp89) {
           c6 = tmp;

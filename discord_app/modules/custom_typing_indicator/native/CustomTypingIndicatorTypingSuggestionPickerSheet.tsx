@@ -1,12 +1,12 @@
 // discord_app/modules/custom_typing_indicator/native/CustomTypingIndicatorTypingSuggestionPickerSheet.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import _modDef3562 from "../intl/CustomTypingIndicator.messages.js";
+import _modDef3592 from "../intl/CustomTypingIndicator.messages.js";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 const require = fn;
 const jsx = fn(21).jsx;
-fn(4574);
+fn(4605);
 let createStyles = { content: null };
 createStyles = { paddingHorizontal: nativeDefault.space.PX_16 };
 createStyles.content = createStyles;
@@ -23,10 +23,10 @@ export default function CustomTypingIndicatorTypingSuggestionPickerSheet(onChang
   let obj = { contentStyles: closure_6().content, header: null, dismissAccessibilityLabel: null, children: null };
   obj = { title: null };
   let intl = onChange(1114).intl;
-  obj.title = intl.string(_modDef3562["X+ijyw"]);
-  obj.header = jsx(onChange(7163).BottomSheetTitleHeader, { title: null });
+  obj.title = intl.string(_modDef3592["X+ijyw"]);
+  obj.header = jsx(onChange(7201).BottomSheetTitleHeader, { title: null });
   const intl2 = onChange(1114).intl;
-  obj.dismissAccessibilityLabel = intl2.string(_modDef3562.hrl2cG);
+  obj.dismissAccessibilityLabel = intl2.string(_modDef3592.hrl2cG);
   obj = {
     value: tmp2[0],
     onChange(arg0) {
@@ -37,14 +37,14 @@ export default function CustomTypingIndicatorTypingSuggestionPickerSheet(onChang
     children: null,
   };
   const tmp = closure_6();
-  const customTypingIndicatorSuggestionPresets = onChange(12001).getCustomTypingIndicatorSuggestionPresets();
+  const customTypingIndicatorSuggestionPresets = onChange(12041).getCustomTypingIndicatorSuggestionPresets();
   obj.children = customTypingIndicatorSuggestionPresets.map((value) => {
     const obj = { value, label: null };
     const intl = onChange(1114).intl;
-    obj.label = intl.string(onChange(12001).getCustomTypingIndicatorSuggestionMessage(value));
-    return jsx(onChange(5702).TableRadioRow, { value, label: null }, value);
+    obj.label = intl.string(onChange(12041).getCustomTypingIndicatorSuggestionMessage(value));
+    return jsx(onChange(5738).TableRadioRow, { value, label: null }, value);
   });
-  obj.children = jsx(onChange(5699).TableRadioGroup, {
+  obj.children = jsx(onChange(5735).TableRadioGroup, {
     value: tmp2[0],
     onChange(arg0) {
       closure_1(arg0);
@@ -53,7 +53,7 @@ export default function CustomTypingIndicatorTypingSuggestionPickerSheet(onChang
     hasIcons: false,
     children: null,
   });
-  return jsx(onChange(7211).ActionSheet, {
+  return jsx(onChange(7249).ActionSheet, {
     value: tmp2[0],
     onChange(arg0) {
       closure_1(arg0);

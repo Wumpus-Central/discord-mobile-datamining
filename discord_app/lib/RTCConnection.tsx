@@ -59,7 +59,7 @@ import TypedEventEmitter from "../../discord_common/js/shared/utils/TypedEventEm
 const RTCControlSocketDefault = RTCControlSocket;
 const VoiceQualityDefault = VoiceQuality;
 
-const RTCBandwidthMonitorDefault = tmp19(7488);
+const RTCBandwidthMonitorDefault = tmp19(7526);
 require = fn;
 function getEventHistoryString() {
   const items = [];
@@ -81,10 +81,10 @@ let Constants = fn(1074);
   RTCConnectionQuality: closure_20,
   BoostedGuildTiers: closure_21,
 } = Constants);
-const StreamSettingsConstants = fn(4621);
+const StreamSettingsConstants = fn(4652);
 ({ ApplicationStreamFPS: closure_22, ApplicationStreamResolutions: closure_23 } = StreamSettingsConstants);
-let closure_24 = fn(13828).BROWSER_SUPPORTS_UNIFIED_PLAN;
-Constants = fn(4599);
+let closure_24 = fn(13877).BROWSER_SUPPORTS_UNIFIED_PLAN;
+Constants = fn(4630);
 ({
   Features: closure_25,
   MediaEngineContextTypes: closure_26,
@@ -1803,7 +1803,7 @@ prototype["_connectMediaEngineWithEndpoint"] = function _connectMediaEngineWithE
   const mediaEngine = MediaEngineStore.getMediaEngine();
   const persistentCodesEnabled = SecureFramesPersistedStore.getPersistentCodesEnabled();
   const staticAuthSessionId = AuthenticationStore.getStaticAuthSessionId();
-  let tmp2Result = tmp2(4603);
+  let tmp2Result = tmp2(4634);
   obj = {
     ssrc,
     address: _sfuEndpoint.address,
@@ -1828,7 +1828,7 @@ prototype["_connectMediaEngineWithEndpoint"] = function _connectMediaEngineWithE
   let merged = Object.assign(self.getExtraConnectionOptions());
   const connectResult = mediaEngine.connect(context, userId, obj);
   dependencyMap = connectResult;
-  tmp2Result = tmp2(4603);
+  tmp2Result = tmp2(4634);
   self._mediaEngineConnectDuration = tmp2Result.now() - tmp2Result.now();
   const nowResult = tmp2Result.now();
   let isWebResult = require("PlatformUtils").isWeb();
@@ -3364,7 +3364,7 @@ prototype["_handleMLSPrepareCommitTransition"] = function _handleMLSPrepareCommi
   const byteLength = arg1;
   let logger = this.logger;
   logger.info("Received MLS commit for transition ID " + arg0);
-  dependencyMap = _connection(4603).now();
+  dependencyMap = _connection(4634).now();
   _connection = this._connection;
   if (_connection != null) {
     let result = _connection.prepareMLSCommitTransition(arg0, arg1, (arg0, protocolVersion, arg2) => {
@@ -3402,7 +3402,7 @@ prototype["_handleMLSWelcome"] = function _handleMLSWelcome(arg0, arg1) {
   const byteLength = arg1;
   const logger = this.logger;
   logger.info("Received MLS welcome for transition ID " + arg0);
-  dependencyMap = _connection(4603).now();
+  dependencyMap = _connection(4634).now();
   _connection = this._connection;
   if (_connection != null) {
     _connection.processMLSWelcome(arg0, arg1, (arg0, protocolVersion, arg2) => {

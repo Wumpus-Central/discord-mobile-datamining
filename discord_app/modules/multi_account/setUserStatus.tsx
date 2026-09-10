@@ -36,14 +36,14 @@ let closure_7 = async function _setUserStatus() {
     closure_130_0(closure_130_2[7]).UserSettingsDelay.INFREQUENT_USER_ACTION,
   );
   closure_129_6 = (function getStatusUpdateAnnouncement(DND, arg1) {
-    let obj = value(4418);
+    let obj = value(4449);
     const humanizeStatusResult = obj.humanizeStatus(DND);
     if ("0" === arg1) {
       const intl3 = value(1114).intl;
       obj = { statusLabel: humanizeStatusResult };
       return intl3.formatToPlainString(value(1114).t.dO2aLi, obj);
     } else {
-      const statusExpiryParts = value(10124).getStatusExpiryParts(arg1);
+      const statusExpiryParts = value(10162).getStatusExpiryParts(arg1);
       const timeString = statusExpiryParts.timeString;
       if ("today" === statusExpiryParts.kind) {
         const intl2 = value(1114).intl;

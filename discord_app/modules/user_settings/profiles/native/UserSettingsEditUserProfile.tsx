@@ -28,7 +28,7 @@ export default function UserSettingsEditUserProfile(arg0) {
     obj = { currentUser: stateFromStores };
     const merged = Object.assign(arg0);
     obj.children = jsx(UserProfileEditFormDefault, { currentUser: stateFromStores });
-    tmp7 = jsx(stateFromStores(7176).AnalyticsLocationProvider, { currentUser: stateFromStores });
+    tmp7 = jsx(stateFromStores(7214).AnalyticsLocationProvider, { currentUser: stateFromStores });
     const tmpResult = UserProfileEditFormDefault;
   }
   return tmp7;

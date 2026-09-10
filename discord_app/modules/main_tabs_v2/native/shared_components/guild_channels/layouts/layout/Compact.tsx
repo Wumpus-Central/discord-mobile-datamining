@@ -56,8 +56,8 @@ const obj1 = {
 };
 CHANNEL_LIST_STYLES_COMPACT.icon = {
   avatarSize: fn(1178).AvatarSizes.REFRESH_MEDIUM_32,
-  guildIconSize: fn(5598).GuildIconSizes.SMALL_32,
-  guildBadgeIconSize: fn(5598).GuildIconSizes.XXSMALL_12,
+  guildIconSize: fn(5634).GuildIconSizes.SMALL_32,
+  guildBadgeIconSize: fn(5634).GuildIconSizes.XXSMALL_12,
   wrapper: { size: 32 },
   channelIcon: { size: 16 },
   margin: { marginRight: 8 },
@@ -68,8 +68,8 @@ CHANNEL_LIST_STYLES_COMPACT.mentionBadge = { position: { top: 28 }, positionThre
 CHANNEL_LIST_STYLES_COMPACT.category = { height: 30, margin: { marginTop: 16 }, text: { size: 14 } };
 const obj2 = {
   avatarSize: fn(1178).AvatarSizes.REFRESH_MEDIUM_32,
-  guildIconSize: fn(5598).GuildIconSizes.SMALL_32,
-  guildBadgeIconSize: fn(5598).GuildIconSizes.XXSMALL_12,
+  guildIconSize: fn(5634).GuildIconSizes.SMALL_32,
+  guildBadgeIconSize: fn(5634).GuildIconSizes.XXSMALL_12,
   wrapper: { size: 32 },
   channelIcon: { size: 16 },
   margin: { marginRight: 8 },
@@ -93,7 +93,7 @@ const obj3 = {
   typingIndicator: { position: { top: 20, left: 10 } },
   avatarSize: fn(1178).AvatarSizes.REFRESH_MEDIUM_32,
 };
-obj4.icon = { size: fn(1178).IconSizes.EXTRA_SMALL, gameSize: fn(7186).GameIconSizes.SIZE_24 };
+obj4.icon = { size: fn(1178).IconSizes.EXTRA_SMALL, gameSize: fn(7224).GameIconSizes.SIZE_24 };
 CHANNEL_LIST_STYLES_COMPACT.joinVoiceButton = obj4;
 const obj6 = { left: 38, startAndEndHeight: 15, transform: null, topOffset: -2 };
 const items = [{ translateY: 10 }];
@@ -102,7 +102,7 @@ CHANNEL_LIST_STYLES_COMPACT.threadSpine = obj6;
 CHANNEL_LIST_STYLES_COMPACT.happeningNow = { margin: { marginTop: 16, marginBottom: 16 } };
 CHANNEL_LIST_STYLES_COMPACT.separator = { margin: { marginVertical: 12 } };
 CHANNEL_LIST_STYLES_COMPACT.searchButton = { margin: { marginHorizontal: 16 }, marginPanels: { marginHorizontal: 12 } };
-const obj5 = { size: fn(1178).IconSizes.EXTRA_SMALL, gameSize: fn(7186).GameIconSizes.SIZE_24 };
+const obj5 = { size: fn(1178).IconSizes.EXTRA_SMALL, gameSize: fn(7224).GameIconSizes.SIZE_24 };
 const obj7 = {
   layout: { marginThread: { marginLeft: 4 } },
   container: { paddingThread: { paddingLeft: 8 } },

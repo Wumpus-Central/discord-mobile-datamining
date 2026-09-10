@@ -80,10 +80,10 @@ function WordTopic(categoryid) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: metroRequire, ScrollView: closure_7, StyleSheet } = get_ActivityIndicator);
-const GuildPrimaryCategory = fn(16511).GuildPrimaryCategory;
+const GuildPrimaryCategory = fn(16560).GuildPrimaryCategory;
 const jsxProd = fn(21);
 ({ jsx: c10, Fragment: closure_11, jsxs: closure_12 } = jsxProd);
-fn(4574);
+fn(4605);
 let createStyles = {
   container: null,
   footer: null,
@@ -251,11 +251,11 @@ export default function ICYMITopicsScreen() {
   obj = { variant: "heading-xl/semibold", color: "mobile-text-heading-primary", style: tmp.title, children: null };
   let intl = first(1114).intl;
   obj.children = intl.string(first(1114).t.Y5d99L);
-  const children = [closure_10(first(4570).Text, obj), , , ,];
+  const children = [closure_10(first(4601).Text, obj), , , ,];
   obj = { variant: "text-sm/normal", color: "text-muted", style: tmp.subtitle, children: null };
   const intl2 = first(1114).intl;
   obj.children = intl2.string(first(1114).t.MGZsfv);
-  children[1] = closure_10(first(4570).Text, obj);
+  children[1] = closure_10(first(4601).Text, obj);
   obj1 = { style: tmp.separator };
   children[2] = closure_10(closure_6, obj1);
   let obj2 = {
@@ -293,7 +293,7 @@ export default function ICYMITopicsScreen() {
     const intl3 = tmp7(1114).intl;
     obj7.text = intl3.string(tmp7(1114).t.PDTjLN);
     obj7.onPress = callback;
-    obj5.children = closure_10(tmp7(4989).Button, obj7);
+    obj5.children = closure_10(tmp7(5025).Button, obj7);
     tmp12Result = closure_10(closure_6, obj5);
   }
   children[4] = tmp12Result;

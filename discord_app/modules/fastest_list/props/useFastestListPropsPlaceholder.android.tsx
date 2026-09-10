@@ -17,32 +17,32 @@ function createNativePlaceholderConfig(listFooter) {
     borderRadius: "Array",
     borderTopLeftRadius: "count",
     borderTopRightRadius: "displayName",
-    borderBottomLeftRadius: "Button",
+    borderBottomLeftRadius: "y",
     borderBottomRightRadius: "e",
     divider: "isArray",
     dividerColor: "isArray",
-    dividerPaddingLeft: "t",
+    dividerPaddingLeft: "Boolean",
     dividerPaddingRight: "e",
     placeholderShape: "isArray",
     placeholderShapeColor: "isArray",
-    placeholderShapeCount: "to",
+    placeholderShapeCount: "o",
     placeholderShapeGap: "e",
     placeholderShapePaddingHorizontal: "isArray",
     placeholderShapePaddingVertical: "isArray",
-    placeholderFeedBackgroundColor: "Date",
+    placeholderFeedBackgroundColor: "l",
     placeholderFeedColor: "e",
     placeholderFeedLabelPadding: "isArray",
     placeholderFeedLabelPaddingInnerRatio: "isArray",
-    placeholderFeedLabelSize: "TypeError",
+    placeholderFeedLabelSize: "e",
     placeholderFeedLabelSecondarySize: "e",
     placeholderFeedPadding: "isArray",
     placeholderFeedShape: "isArray",
     placeholderFeedShapeSize: "call",
     placeholderType: NONE,
-    width: "<string:135200768>",
-    height: "<string:135266304>",
-    verticalAlignment: "<string:135331840>",
-    horizontalAlignment: "<string:135397376>",
+    width: true,
+    height: true,
+    verticalAlignment: true,
+    horizontalAlignment: true,
   };
   if (null == listFooter) {
     return size;
@@ -162,7 +162,7 @@ function createNativePlaceholderConfig(listFooter) {
 }
 const processColor = fn(17).processColor;
 let sectionItem = { sectionItem: null };
-sectionItem = { type: fn(7076).FastestListPropsPlaceholderType.NONE };
+sectionItem = { type: fn(7114).FastestListPropsPlaceholderType.NONE };
 sectionItem.sectionItem = sectionItem;
 let size = fn(2);
 const result = size.fileFinishedImporting("modules/fastest_list/props/useFastestListPropsPlaceholder.android.tsx");

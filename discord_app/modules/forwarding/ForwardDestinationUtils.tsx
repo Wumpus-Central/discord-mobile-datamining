@@ -23,7 +23,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/forwarding/ForwardDestinationUtils.tsx");
 
 export const useSelectedDestinationChannel = function useSelectedDestinationChannel(selectedDestinations) {
-  const mapped = selectedDestinations.map(found(11013).getChannelIdFromDestinationId);
+  const mapped = selectedDestinations.map(found(11053).getChannelIdFromDestinationId);
   found = mapped.find(found(1369).isNotNullish);
   const items = [ChannelStore];
   const items1 = [found];
@@ -64,7 +64,7 @@ export const getDestinationIsUnavailable = function getDestinationIsUnavailable(
       let obj = require("AgeGateUtils");
       if (obj.isChannelOrGuildNSFW(channel)) {
         if (tmp) {
-          let tmp11Result = tmp11(4785);
+          let tmp11Result = tmp11(4816);
         }
         obj = { label: null, lineClamp: 2 };
         const intl = tmp11(1114).intl;
@@ -84,7 +84,7 @@ export const getDestinationIsUnavailable = function getDestinationIsUnavailable(
             const messageSnapshots = components.messageSnapshots;
           }
           if (components.embeds.length > 0) {
-            tmp11Result = tmp11(4911);
+            tmp11Result = tmp11(4942);
             if (!tmp11Result.canEmbedLinks(type, PermissionStore)) {
               if (!tmp11Result1.shouldStripEmbeds(components)) {
                 const obj1 = { label: null };
@@ -92,7 +92,7 @@ export const getDestinationIsUnavailable = function getDestinationIsUnavailable(
                 obj1.label = intl3.string(tmp11(1114).t.Wr4RIX);
                 return obj1;
               }
-              tmp11Result1 = tmp11(4911);
+              tmp11Result1 = tmp11(4942);
             }
           } else {
             const messageSnapshots2 = components.messageSnapshots;
@@ -104,11 +104,11 @@ export const getDestinationIsUnavailable = function getDestinationIsUnavailable(
               obj2.label = intl4.string(tmp11(1114).t.Wr4RIX);
               return obj2;
             }
-            tmp11Result2 = tmp11(4911);
+            tmp11Result2 = tmp11(4942);
           }
           const items = [];
           const messageSnapshots3 = components.messageSnapshots;
-          let arraySpreadResult = HermesBuiltin.arraySpread(tmp11(4913).getMessageStickers(components), 0);
+          let arraySpreadResult = HermesBuiltin.arraySpread(tmp11(4944).getMessageStickers(components), 0);
           arraySpreadResult = HermesBuiltin.arraySpread(
             messageSnapshots3.flatMap((message) => type(dependencyMap[12]).getMessageStickers(message.message)),
             arraySpreadResult,
@@ -146,7 +146,7 @@ export const getDestinationIsUnavailable = function getDestinationIsUnavailable(
           } else {
             const messageSnapshots4 = components.messageSnapshots;
           }
-          const tmp11Result3 = tmp11(4913);
+          const tmp11Result3 = tmp11(4944);
         }
       }
     }
@@ -177,8 +177,8 @@ export const useSelectedDestinationNames = function useSelectedDestinationNames(
           if (null != user) {
             nickname = nickname.getNickname(user.id);
             if (nickname == null) {
-              nickname = closure_1_1(4418).getName(user);
-              const obj2 = closure_1_1(4418);
+              nickname = closure_1_1(4449).getName(user);
+              const obj2 = closure_1_1(4449);
             }
             tmp13 = nickname;
           }
@@ -187,7 +187,7 @@ export const useSelectedDestinationNames = function useSelectedDestinationNames(
           channel = channel.getChannel(id);
           let channelName = null;
           if (null != channel) {
-            const obj = closure_1_0(4727);
+            const obj = closure_1_0(4758);
             channelName = obj.computeChannelName(channel, user, nickname, true);
           }
           return channelName;

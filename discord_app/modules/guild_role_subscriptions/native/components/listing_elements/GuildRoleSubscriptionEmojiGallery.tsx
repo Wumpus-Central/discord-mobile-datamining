@@ -1,5 +1,5 @@
 // discord_app/modules/guild_role_subscriptions/native/components/listing_elements/GuildRoleSubscriptionEmojiGallery.tsx
-import chunkDefault from "../../../../../../_runtime/10376_chunk.js";
+import chunkDefault from "../../../../../../_runtime/10414_chunk.js";
 import LayoutUtils from "../LayoutUtils.tsx";
 import EmojiIconDefault from "../EmojiIcon.tsx";
 import noop from "../../../../../../_runtime/metro/00019__.js";

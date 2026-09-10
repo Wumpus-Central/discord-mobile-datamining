@@ -7,7 +7,7 @@ import noop from "../../../../_runtime/metro/00019__.js";
 get_ActivityIndicator = fn(17);
 ({ ImageBackground: closure_4, View: hasOwnProperty, StyleSheet: metroRequire } = get_ActivityIndicator);
 const jsx = fn(21).jsx;
-fn(4574);
+fn(4605);
 let createStyles = { overlay: null };
 createStyles = { flex: 1, opacity: 0.6, backgroundColor: nativeDefault.colors.BLACK };
 createStyles.overlay = createStyles;

@@ -9,8 +9,8 @@ import createStyles from "../../../../../../design/components/Styles/native/crea
 import ProductIds from "../../../../../premium/native/ProductIds.android.tsx";
 import useTrialOffer from "../../../../../premium/useTrialOffer.tsx";
 import renderer_EmbedUtils from "../../EmbedUtils.tsx";
-import _modDef8066 from "../../../../../../../_runtime/metro/08066__.js";
-import _modDef8069 from "../../../../../../../discord_assets/assets/premium/referral_program/trialExchange.png.js";
+import _modDef8104 from "../../../../../../../_runtime/metro/08104__.js";
+import _modDef8107 from "../../../../../../../discord_assets/assets/premium/referral_program/trialExchange.png.js";
 import ReferralProgramUtils from "../../../../../premium/referral_program/ReferralProgramUtils.tsx";
 import ChannelStore from "../../../../../../stores/ChannelStore.tsx";
 import UserStore from "../../../../../../stores/UserStore.tsx";
@@ -88,7 +88,7 @@ export const createReferralTrialEmbedRedesign = function createReferralTrialEmbe
               learnMoreLink: null,
             };
             const tmp41Result1 = HelpdeskUtilsDefault;
-            obj3.headerImageUrl = _modDef8069;
+            obj3.headerImageUrl = _modDef8107;
             const intl12 = util.intl;
             obj3.headerText = intl12.string(util.t.HtTvXA);
             obj3.headerColor = headerTextColor;
@@ -203,7 +203,7 @@ export const createReferralTrialEmbedRedesign = function createReferralTrialEmbe
                     const intl7 = util.intl;
                     obj10.acceptLabelText = intl7.string(util.t.bXTClc);
                     obj10.acceptLabelColor = acceptLabelColor;
-                    obj10.acceptLabelIconUrl = renderer_EmbedUtils.getAssetUriForEmbed(_modDef8066);
+                    obj10.acceptLabelIconUrl = renderer_EmbedUtils.getAssetUriForEmbed(_modDef8104);
                     tmp31 = obj10;
                     const tmp39Result2 = renderer_EmbedUtils;
                   }
@@ -258,7 +258,7 @@ export const createReferralTrialEmbedRedesign = function createReferralTrialEmbe
         const obj16 = {
           titleText: "",
           titleColor,
-          headerImageUrl: _modDef8069,
+          headerImageUrl: _modDef8107,
           headerText: "",
           headerColor: headerTextColor,
           backgroundColor,

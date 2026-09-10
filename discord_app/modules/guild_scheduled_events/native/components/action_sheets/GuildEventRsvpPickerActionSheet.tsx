@@ -11,7 +11,7 @@ const View = fn(17).View;
 const constants = fn(1963).GuildScheduledEventUserResponses;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-fn(4574);
+fn(4605);
 let createStyles = { container: null, buttonWrapper: null };
 createStyles = { paddingHorizontal: nativeDefault.space.PX_16 };
 createStyles.container = createStyles;
@@ -28,9 +28,9 @@ export default function GuildEventRsvpPickerActionSheet(event) {
   let defaultValue;
   closure_5 = undefined;
   const tmp = closure_9();
-  const tmp4 = _slicedToArray(defaultValue.useState(event(9738).ResponseOptions.SERIES), 2);
+  const tmp4 = _slicedToArray(defaultValue.useState(event(9776).ResponseOptions.SERIES), 2);
   defaultValue = tmp4[0];
-  let obj = event(9738);
+  let obj = event(9776);
   const existingRsvp = obj.getExistingRsvp(event.id, null);
   let response;
   if (existingRsvp != null) {
@@ -45,14 +45,14 @@ export default function GuildEventRsvpPickerActionSheet(event) {
     const intl = tmp2(1114).intl;
     stringResult = intl.string(tmp2(1114).t["8MPCVr"]);
   }
-  obj = { header: closure_7(tmp2(7163).BottomSheetTitleHeader, { title: stringResult }), children: null };
+  obj = { header: closure_7(tmp2(7201).BottomSheetTitleHeader, { title: stringResult }), children: null };
   obj = { bottom: true, style: tmp.container, children: null };
   const obj1 = { defaultValue, onChange: tmp4[1], hasIcons: false, children: null };
-  const responseOptions = event(9738).getResponseOptions();
+  const responseOptions = event(9776).getResponseOptions();
   obj1.children = responseOptions.map((value) =>
     closure_1_7(event(dependencyMap[13]).TableRadioRow, { value: value.value, label: value.name }, value.value),
   );
-  const items = [closure_7(event(5699).TableRadioGroup, obj1)];
+  const items = [closure_7(event(5735).TableRadioGroup, obj1)];
   let obj2 = { style: tmp.buttonWrapper, children: null };
   const obj3 = {
     onPress() {
@@ -71,9 +71,9 @@ export default function GuildEventRsvpPickerActionSheet(event) {
   };
   const intl3 = tmp2(1114).intl;
   obj3.text = intl3.string(event(1114).t.TyCVIq);
-  obj2.children = closure_7(event(4989).Button, obj3);
+  obj2.children = closure_7(event(5025).Button, obj3);
   items[1] = closure_7(closure_5, obj2);
   obj.children = items;
-  obj.children = closure_8(event(7137).SafeAreaPaddingView, obj);
-  return closure_7(event(7164).BottomSheet, obj);
+  obj.children = closure_8(event(7175).SafeAreaPaddingView, obj);
+  return closure_7(event(7202).BottomSheet, obj);
 }

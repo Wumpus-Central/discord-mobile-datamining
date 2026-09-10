@@ -10,11 +10,11 @@ import noop from "../../../../_runtime/metro/00019__.js";
 import AccessibilityStore from "../../a11y/AccessibilityStore.tsx";
 
 require = fn;
-const InAppNotificationConstants = fn(10127);
+const InAppNotificationConstants = fn(10165);
 ({ IN_APP_NOTIFICATION_MAX_HEIGHT: hasOwnProperty, NOTIFICATION_PREVIEW_LINE_CLAMP: metroRequire } =
   InAppNotificationConstants);
 const jsx = fn(21).jsx;
-const createStyles = fn(4574);
+const createStyles = fn(4605);
 let closure_8 = createStyles.createStyles({ newContainerRoleDot: { paddingRight: 4, paddingTop: 0 } });
 let closure_9 = noop.memo((message) =>
   jsx(MessagePreviewTextDefault, { message: message.message, lineClamp, maxHeight }),
@@ -98,7 +98,7 @@ export default noop.memo(function MessageNotification(notification) {
   const items4 = [channel, parentChannel, guild, nullableMessageAuthor, handleDismissNotification];
   const callback1 = guild.useCallback(() => {
     const obj = { channelId: channel.id };
-    return obj.pushLazy(asyncRequireImpl(10174, dependencyMap.paths), obj, "in-app-notification-settings-modal");
+    return obj.pushLazy(asyncRequireImpl(10212, dependencyMap.paths), obj, "in-app-notification-settings-modal");
   }, items3);
   const memo = guild.useMemo(
     () => ({

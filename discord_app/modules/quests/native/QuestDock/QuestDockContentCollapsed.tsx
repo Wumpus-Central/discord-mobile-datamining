@@ -3,10 +3,10 @@ import spring from "../../../../design/animation/reanimated/spring/spring.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const QuestDockMode = fn(5458).QuestDockMode;
-const QUEST_DOCK_MODE_CHANGE_PHYSICS = fn(15125).QUEST_DOCK_MODE_CHANGE_PHYSICS;
+const QuestDockMode = fn(5494).QuestDockMode;
+const QUEST_DOCK_MODE_CHANGE_PHYSICS = fn(15174).QUEST_DOCK_MODE_CHANGE_PHYSICS;
 const jsx = fn(21).jsx;
-const createStyles = fn(4574);
+const createStyles = fn(4605);
 let obj = { questDockContentCollapsed: null };
 obj = {};
 const merged = Object.assign(fn(17).StyleSheet.absoluteFillObject);
@@ -30,8 +30,8 @@ export default noop.memo(function QuestDockContentCollapsed(children) {
     tmp = hideOnExpand;
   }
   hideOnExpand = tmp;
-  const activeQuestDockMode = noop.useContext(hideOnExpand(15126).QuestDockGestureContext).activeQuestDockMode;
-  hideOnExpand(4310);
+  const activeQuestDockMode = noop.useContext(hideOnExpand(15175).QuestDockGestureContext).activeQuestDockMode;
+  hideOnExpand(4341);
   const fn = function l() {
     let obj = spring;
     let num = 1;
@@ -45,7 +45,7 @@ export default noop.memo(function QuestDockContentCollapsed(children) {
     return obj;
   };
   let obj = {
-    withSpring: hideOnExpand(4988).withSpring,
+    withSpring: hideOnExpand(5024).withSpring,
     activeQuestDockMode,
     QuestDockMode,
     hideOnExpand: tmp,
@@ -72,9 +72,9 @@ export default noop.memo(function QuestDockContentCollapsed(children) {
   C.__closure = { activeQuestDockMode, QuestDockMode, hideOnExpand: tmp };
   C.__workletHash = 14339269503421;
   C.__initData = __initData2;
-  const animatedProps = hideOnExpand(4310).useAnimatedProps(C);
+  const animatedProps = hideOnExpand(4341).useAnimatedProps(C);
   obj = { style: null, animatedProps, children: children.children };
   const items = [tmp2.questDockContentCollapsed, animatedStyle];
   obj.style = items;
-  return jsx(activeQuestDockMode(7087), { style: null, animatedProps, children: children.children });
+  return jsx(activeQuestDockMode(7125), { style: null, animatedProps, children: children.children });
 });

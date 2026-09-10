@@ -29,24 +29,26 @@ export default noop.memo(function Messages(style) {
   const youBarTotalHeight = obj1.useYouBarTotalHeight();
   let obj2 = sharedValue(sections[7]);
   const youBarTotalHeight1 = obj2.useYouBarTotalHeight(-16);
+  let obj3 = sharedValue(sections[8]);
+  const doesLandOnHomeDrawer = obj3.useDoesLandOnHomeDrawer();
   const tmp3 = dataKey(sections[4]);
   const tmp4 = sharedValue;
   ({ headerSize, listItemHeight, listItemSizes, listItemSuggestedFriendHeight, listLeft, listTop } = dataKey(
-    sections[8],
+    sections[9],
   )());
-  const tmp9 = dataKey(sections[9])();
-  dataKey = tmp9.dataKey;
-  sections = tmp9.sections;
+  const tmp10 = dataKey(sections[10])();
+  dataKey = tmp10.dataKey;
+  sections = tmp10.sections;
   const ref = externalScrollEventHandler.useRef(null);
   const ref1 = externalScrollEventHandler.useRef(null);
-  let obj3 = dataKey(sections[10]);
-  const config = obj3.useConfig({ location: "Messages Tab" });
+  const tmp9 = dataKey(sections[9])();
+  const config = dataKey(sections[11]).useConfig({ location: "Messages Tab" });
   ({ list, recycleItems } = config);
-  dataKey(sections[11])({ listRef: ref, listRefHappeningNow: ref1 });
-  dataKey(sections[12])();
-  const tmp8 = dataKey(sections[8])();
-  const commonTriggerPoint = sharedValue(sections[13]).useCommonTriggerPoint(
-    sharedValue(sections[14]).DmGdmListRenderTriggerPoint,
+  dataKey(sections[12])({ listRef: ref, listRefHappeningNow: ref1 });
+  dataKey(sections[13])();
+  const obj5 = dataKey(sections[11]);
+  const commonTriggerPoint = sharedValue(sections[14]).useCommonTriggerPoint(
+    sharedValue(sections[15]).DmGdmListRenderTriggerPoint,
   );
   const items = [dataKey];
   const effect = externalScrollEventHandler.useEffect(() => {
@@ -80,19 +82,20 @@ export default noop.memo(function Messages(style) {
     const reduced = sections.reduce((acc, item) => acc + item, 0);
     TTITrackerDefault.recordRender(reduced, GatewayConnectionStore.isConnected());
   });
-  const obj5 = sharedValue(sections[13]);
-  externalScrollEventHandler = sharedValue(sections[21]).useExternalScrollEventHandler({ id: "messages" });
-  const obj6 = sharedValue(sections[21]);
-  class O {
-    constructor(arg0) {
-      result = closure_0.set(style.contentOffset.y);
-      tmp2 = closure_3(style.contentOffset.y, style.contentSize.height, style.layoutMeasurement.height);
-      return;
-    }
-  }
-  O.__closure = { scrollPosition: sharedValue, handleGuildsNavigationScroll: externalScrollEventHandler };
-  O.__workletHash = 5461403437592;
-  O.__initData = __initData;
+  const obj6 = sharedValue(sections[14]);
+  externalScrollEventHandler = sharedValue(sections[22]).useExternalScrollEventHandler({ id: "messages" });
+  let obj7 = sharedValue(sections[22]);
+  const fn = function w(contentOffset) {
+    const result = sharedValue.set(contentOffset.contentOffset.y);
+    externalScrollEventHandler(
+      contentOffset.contentOffset.y,
+      contentOffset.contentSize.height,
+      contentOffset.layoutMeasurement.height,
+    );
+  };
+  fn.__closure = { scrollPosition: sharedValue, handleGuildsNavigationScroll: externalScrollEventHandler };
+  fn.__workletHash = 5461403437592;
+  fn.__initData = __initData;
   obj = {
     accessibilityLabel: null,
     data: null,
@@ -108,11 +111,11 @@ export default noop.memo(function Messages(style) {
     scrollIndicatorInsetBottom: null,
     scrollPosition: null,
   };
-  let obj7 = sharedValue(sections[6]);
-  const intl = sharedValue(sections[22]).intl;
-  obj.accessibilityLabel = intl.string(sharedValue(sections[22]).t.OIgYlQ);
-  obj.data = tmp9;
-  obj.handleScrollAnimated = sharedValue(sections[6]).useAnimatedScrollHandler(O);
+  const obj8 = sharedValue(sections[6]);
+  const intl = sharedValue(sections[23]).intl;
+  obj.accessibilityLabel = intl.string(sharedValue(sections[23]).t.OIgYlQ);
+  obj.data = tmp10;
+  obj.handleScrollAnimated = sharedValue(sections[6]).useAnimatedScrollHandler(fn);
   obj.insetEnd = youBarTotalHeight;
   obj.listItemHeight = listItemHeight;
   obj.listItemSizes = listItemSizes;
@@ -125,26 +128,30 @@ export default noop.memo(function Messages(style) {
   obj.scrollPosition = sharedValue;
   obj = { value: tmp3(dataKey(sections[5]).MESSAGES).analyticsLocations, children: null };
   obj1 = { style: style.style, children: null };
-  const animatedScrollHandler = sharedValue(sections[6]).useAnimatedScrollHandler(O);
-  obj2 = { backgroundColor: dataKey(sections[25]).colors.PANEL_BG, children: null };
-  const items1 = [closure_6(dataKey(sections[26]), { height: headerSize, scrollPosition: sharedValue }), ,];
-  if (tmp9.showFullscreenEmptyState) {
-    let tmp20Result = closure_6(tmp(tmp2[27]), {});
+  const animatedScrollHandler = sharedValue(sections[6]).useAnimatedScrollHandler(fn);
+  obj2 = { backgroundColor: dataKey(sections[26]).colors.PANEL_BG, children: null };
+  const items1 = [closure_6(dataKey(sections[27]), { height: headerSize, scrollPosition: sharedValue }), ,];
+  if (tmp10.showFullscreenEmptyState) {
+    let tmp21Result = closure_6(tmp(tmp2[28]), {});
   } else {
     if ("legend" === list) {
-      let tmp23 = tmp2[28];
+      let tmp24 = tmp2[29];
     } else {
-      tmp23 = "flash" === list ? tmp2[29] : tmp2[30];
+      tmp24 = "flash" === list ? tmp2[30] : tmp2[31];
     }
     obj3 = { ref };
     const merged = Object.assign(obj);
-    tmp20Result = closure_6(tmp(tmp23), obj3);
-    const tmpResult = tmp(tmp23);
+    tmp21Result = closure_6(tmp(tmp24), obj3);
+    const tmpResult = tmp(tmp24);
   }
-  items1[1] = tmp20Result;
-  items1[2] = closure_6(tmp4(sections[31]).TTIFirstContentfulPaint, { label: "messages_tabs" });
+  items1[1] = tmp21Result;
+  tmp21Result = null;
+  if (!doesLandOnHomeDrawer) {
+    tmp21Result = closure_6(tmp4(tmp2[32]).TTIFirstContentfulPaint, { label: "messages_tabs" });
+  }
+  items1[2] = tmp21Result;
   obj2.children = items1;
-  obj1.children = closure_7(sharedValue(sections[24]).CutoutBackgroundProvider, obj2);
-  obj.children = closure_6(dataKey(sections[23]), obj1);
+  obj1.children = closure_7(sharedValue(sections[25]).CutoutBackgroundProvider, obj2);
+  obj.children = closure_6(dataKey(sections[24]), obj1);
   return closure_6(sharedValue(sections[4]).AnalyticsLocationProvider, obj);
 });

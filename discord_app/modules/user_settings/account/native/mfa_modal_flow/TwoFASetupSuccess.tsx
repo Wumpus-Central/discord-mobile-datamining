@@ -5,7 +5,7 @@ import native from "../../../../../design/void/native.tsx";
 import Text_Text from "../../../../../design/components/Text/native/Text.tsx";
 import components_Button_Button from "../../../../../design/components/Button/native/Button.native.tsx";
 import TwoFASetupModal from "TwoFASetupModal.tsx";
-import _mod14821 from "../../../../../../_runtime/metro/14821__.js";
+import _mod14870 from "../../../../../../_runtime/metro/14870__.js";
 import asyncGeneratorStep from "../../../../../../_runtime/00005_asyncGeneratorStep.js";
 import _slicedToArray from "../../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
@@ -15,7 +15,7 @@ get_ActivityIndicator = fn(17);
 ({ View: metroRequire, Image: closure_7 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-fn(4574);
+fn(4605);
 let createStyles = {
   container: {
     alignSelf: "stretch",
@@ -122,7 +122,7 @@ export default function TwoFASetupSuccess() {
               c5 = 3;
               c6 = 1;
               const obj2 = {
-                value: setRegistering(6611).finishRegisterWebAuthnCredential(
+                value: setRegistering(6647).finishRegisterWebAuthnCredential(
                   intl.string(setRegistering(1114).t["8H5RmH"]),
                   closure_129_0,
                   closure_129_1,
@@ -140,7 +140,7 @@ export default function TwoFASetupSuccess() {
               c6 = 3;
               throw value;
             } else if (arg0 !== 2) {
-              obj = setError(14810);
+              obj = setError(14859);
               obj.close();
               c4 = 0;
             }
@@ -180,7 +180,7 @@ export default function TwoFASetupSuccess() {
   let obj = { style: tmp.container, children: null };
   obj = { style: tmp.flex };
   const items = [closure_8(closure_6, obj), , , , , , ,];
-  obj = { source: _mod14821, style: tmp.image };
+  obj = { source: _mod14870, style: tmp.image };
   items[1] = closure_8(closure_7, obj);
   let obj1 = { style: tmp.success, variant: "text-lg/semibold", color: "mobile-text-heading-primary", children: null };
   let intl = util.intl;

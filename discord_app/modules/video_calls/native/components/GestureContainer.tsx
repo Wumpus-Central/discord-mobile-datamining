@@ -8,11 +8,11 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-const useChannelCallStore = fn(9499).useChannelCallStore;
-const Constants = fn(9505);
+const useChannelCallStore = fn(9537).useChannelCallStore;
+const Constants = fn(9543);
 ({ PAN_GESTURE_FAIL_OFFSET_Y: hasOwnProperty, SWIPE_TO_CHAT_ACTIVE_OFFSET: metroRequire } = Constants);
 const jsx = fn(21).jsx;
-fn(4574);
+fn(4605);
 let createStyles = { background: null };
 createStyles = { flex: 1, backgroundColor: nativeDefault.colors.BLACK };
 createStyles.background = createStyles;
@@ -33,9 +33,9 @@ export default function GestureContainer(children) {
   let sharedValue;
   const tmp = closure_8();
   const height = sharedValue(1477)().height;
-  let obj = height(4310);
+  let obj = height(4341);
   sharedValue = obj.useSharedValue(0);
-  const Gesture = height(6669).Gesture;
+  const Gesture = height(6705).Gesture;
   const tmp2 = useChannelCallStore((isGestureEnabled) => isGestureEnabled.isGestureEnabled);
   const PanResult = Gesture.Pan();
   class S {
@@ -61,9 +61,9 @@ export default function GestureContainer(children) {
   obj = {
     position: sharedValue,
     THRESHOLD_VELOCITY: 500,
-    runOnJS: height(4310).runOnJS,
-    ModalActionCreators: sharedValue(4777),
-    withTiming: height(4575).withTiming,
+    runOnJS: height(4341).runOnJS,
+    ModalActionCreators: sharedValue(4808),
+    withTiming: height(4606).withTiming,
     DECELERATED_EASING: height(1178).DECELERATED_EASING,
   };
   fn.__closure = obj;
@@ -87,16 +87,16 @@ export default function GestureContainer(children) {
     obj.transform = items1;
     return obj;
   };
-  obj = { interpolate: height(4310).interpolate, position: sharedValue, height };
+  obj = { interpolate: height(4341).interpolate, position: sharedValue, height };
   fn2.__closure = obj;
   fn2.__workletHash = 16049033434372;
   fn2.__initData = __initData3;
   const obj1 = { style: tmp.background, children: null };
-  const animatedStyle = height(4310).useAnimatedStyle(fn2);
-  const obj8 = height(4310);
-  obj1.children = jsx(height(6669).GestureDetector, {
+  const animatedStyle = height(4341).useAnimatedStyle(fn2);
+  const obj8 = height(4341);
+  obj1.children = jsx(height(6705).GestureDetector, {
     gesture: failOffsetXResult,
-    children: jsx(sharedValue(4310).View, { style: animatedStyle, children: children.children }),
+    children: jsx(sharedValue(4341).View, { style: animatedStyle, children: children.children }),
   });
   return <View style={tmp.background}>{null}</View>;
 }

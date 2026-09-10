@@ -10,9 +10,9 @@ import ChannelStore from "../../../../stores/ChannelStore.tsx";
 import SpeakingStore from "../../../../stores/SpeakingStore.tsx";
 
 require = fn;
-const VoicePanelModes = fn(12303).VoicePanelModes;
-const ActivityPanelModes = fn(9537).ActivityPanelModes;
-const asLaunched = fn(9543).asLaunched;
+const VoicePanelModes = fn(12343).VoicePanelModes;
+const ActivityPanelModes = fn(9575).ActivityPanelModes;
+const asLaunched = fn(9581).asLaunched;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/voice_panel/native/pip/useControllerPIPState.tsx");
 
@@ -29,9 +29,9 @@ export const useControllerPIPState = function useControllerPIPState(channelId) {
     id: "sa",
     mode: "isArray",
     width: false,
-    height: "level_slider",
-    containerHeight: "control_knobs",
-    showSecondaryPIP: "compass",
+    height: 21,
+    containerHeight: null,
+    showSecondaryPIP: null,
   });
   const tmp2 = current(noop.useState(undefined), 2);
   current = tmp2[0];
@@ -42,7 +42,7 @@ export const useControllerPIPState = function useControllerPIPState(channelId) {
   });
   closure_129_0 = channelId;
   closure_129_1 = mode;
-  const tmp7 = ref(17071)(channelId);
+  const tmp7 = ref(17130)(channelId);
   closure_129_2 = tmp7;
   let items = [closure_5, c7, ChannelStore];
   const items1 = [channelId, tmp7, mode];
@@ -94,7 +94,7 @@ export const useControllerPIPState = function useControllerPIPState(channelId) {
     },
     items1,
   );
-  let tmp10 = ref(17119)(channelId);
+  let tmp10 = ref(17178)(channelId);
   const first1 = current(
     noop.useState(() => ref(closure_2[16])((fn) => fn(), 1000, { leading: true })),
     1,
@@ -119,7 +119,7 @@ export const useControllerPIPState = function useControllerPIPState(channelId) {
     noop.useState(() => closure_2.getTargetDimensions(ref)),
     2,
   );
-  ({ participant, dimensions } = ref(17120)(channelId, layoutManager, focusedId, current, current));
+  ({ participant, dimensions } = ref(17179)(channelId, layoutManager, focusedId, current, current));
   current = {};
   const merged = Object.assign(ref.current);
   const merged1 = Object.assign(dimensions);
@@ -129,7 +129,7 @@ export const useControllerPIPState = function useControllerPIPState(channelId) {
   }
   current.id = id;
   current.showSecondaryPIP = stateFromStores;
-  let tmp8Result = tmp8(17121);
+  let tmp8Result = tmp8(17180);
   current.mode = tmp8Result.getPIPMode({
     channelId,
     connected,
@@ -137,7 +137,7 @@ export const useControllerPIPState = function useControllerPIPState(channelId) {
     mode,
     selfHasVideo: tmp10,
   });
-  tmp8Result = tmp8(9527);
+  tmp8Result = tmp8(9565);
   let result = tmp8Result.cheapWorkletShallowEqual(current, ref.current);
   dependencyMap = !result;
   const effect = current.useEffect(() => {
@@ -198,6 +198,6 @@ export const useControllerPIPState = function useControllerPIPState(channelId) {
       });
     });
   }, items4);
-  tmp5(17123)(channelId, layoutManager, focusedId);
+  tmp5(17182)(channelId, layoutManager, focusedId);
   return current;
 };

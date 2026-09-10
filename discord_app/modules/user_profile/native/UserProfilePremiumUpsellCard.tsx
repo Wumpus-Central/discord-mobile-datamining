@@ -13,7 +13,7 @@ const Constants = fn(1074);
   UserSettingsSections: closure_7,
 } = Constants);
 const jsx = fn(21).jsx;
-const createStyles = fn(4574);
+const createStyles = fn(4605);
 let closure_9 = createStyles.createStyles((bottom) => {
   let obj = { container: null };
   obj = { position: "absolute", bottom, start: 0, end: 0 };
@@ -31,11 +31,11 @@ export const UserProfilePremiumUpsellCard = function UserProfilePremiumUpsellCar
   navigation = obj.useNavigation();
   const tmp = analyticsLocations;
   const tmp3 = closure_9(analyticsLocations(1611)().bottom);
-  let nitroTrialCtaOverride = navigation(7460).useNitroTrialCtaOverride("user_profile_premium_upsell_card");
-  const obj2 = navigation(7460);
-  const tmp8 = analyticsLocations(7196);
+  let nitroTrialCtaOverride = navigation(7498).useNitroTrialCtaOverride("user_profile_premium_upsell_card");
+  const obj2 = navigation(7498);
+  const tmp8 = analyticsLocations(7234);
   const items = [isTryItOut ? tmp8.USER_SETTINGS_TRY_OUT_PREMIUM : tmp8.USER_SETTINGS_USER_PROFILE];
-  analyticsLocations = analyticsLocations(7176)(items).analyticsLocations;
+  analyticsLocations = analyticsLocations(7214)(items).analyticsLocations;
   const items1 = [navigation];
   let callback = noop.useCallback(() => {
     UserSettingsModalActionCreatorsDefault.setSection(constants4.PROFILE_CUSTOMIZATION_TRY_IT_OUT);
@@ -54,7 +54,7 @@ export const UserProfilePremiumUpsellCard = function UserProfilePremiumUpsellCar
     openPremiumModalDefault(obj);
   }, items2);
   obj = { style: tmp3.container, ctaText: null, showLinearGradient: true, onPress: null, children: null };
-  const tmp7 = analyticsLocations(7176);
+  const tmp7 = analyticsLocations(7214);
   if (isTryItOut) {
     if (nitroTrialCtaOverride == null) {
       const intl2 = tmp4(1114).intl;
@@ -78,12 +78,12 @@ export const UserProfilePremiumUpsellCard = function UserProfilePremiumUpsellCar
   } else {
     stringResult1 = string(t.Tii53U);
   }
-  obj.children = jsx(navigation(4570).Text, {
+  obj.children = jsx(navigation(4601).Text, {
     variant: "text-sm/normal",
     maxFontSizeMultiplier: 2.5,
     children: stringResult1,
   });
-  return jsx(tmp(14650), {
+  return jsx(tmp(14699), {
     style: tmp3.container,
     ctaText: null,
     showLinearGradient: true,

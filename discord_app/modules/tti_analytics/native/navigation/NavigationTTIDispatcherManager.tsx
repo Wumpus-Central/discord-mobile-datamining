@@ -1,7 +1,7 @@
 // discord_app/modules/tti_analytics/native/navigation/NavigationTTIDispatcherManager.tsx
-import discord_common_AnalyticsUtils from "../../../../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx";
-import navigationTTIEnabled from "navigationTTIEnabled.tsx";
 import NavigationSpanTrackerDefault from "NavigationSpanTracker.tsx";
+import navigationTTIEnabled from "navigationTTIEnabled.tsx";
+import NavigationTTIDefinition from "NavigationTTIDefinition.tsx";
 import ChannelStore from "../../../../stores/ChannelStore.tsx";
 import MessageStore from "../../../../stores/MessageStore.tsx";
 import SelectedChannelStore from "../../../../stores/SelectedChannelStore.tsx";
@@ -36,7 +36,7 @@ function handleChannelSelect(opensChannel) {
           fromGuildId = guildId;
         }
         obj = {
-          spanTtiName: discord_common_AnalyticsUtils.SpanTtiNames.CHANNEL,
+          definition: NavigationTTIDefinition.CHANNEL_NAVIGATION_TTI,
           destinationKey: channelId,
           properties: null,
         };

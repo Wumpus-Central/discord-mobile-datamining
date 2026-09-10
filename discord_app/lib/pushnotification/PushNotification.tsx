@@ -1,6 +1,6 @@
 // discord_app/lib/pushnotification/PushNotification.tsx
 import PlatformUtils from "../../utils/PlatformUtils.tsx";
-import RNCPushNotificationIOSDefault from "../../../_runtime/09720_RNCPushNotificationIOS.js";
+import RNCPushNotificationIOSDefault from "../../../_runtime/09758_RNCPushNotificationIOS.js";
 import NativePushNotificationMonitorModule from "../../../discord_common/js/packages/rtn-codegen/js/NativePushNotificationMonitorModule.tsx";
 import openNotificationSettingsDefault from "../../modules/native_permissions/mobile/openNotificationSettings.native.tsx";
 import get_ActivityIndicator from "../../../_runtime/metro/00017__.js";

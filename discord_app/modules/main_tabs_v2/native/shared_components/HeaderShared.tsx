@@ -5,7 +5,7 @@ import native from "../../../../design/void/native.tsx";
 import useToken from "../../../../design/tokens/native/useToken.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import Pressables from "../../../../design/void/Pressables/native/Pressables.tsx";
-import _mod5645 from "../../../../../_runtime/metro/05645__.js";
+import _mod5681 from "../../../../../_runtime/metro/05681__.js";
 import PressableNavigatorBackIcon from "navigator/PressableNavigatorBackIcon.tsx";
 import PressableNavigatorModalIconDefault from "navigator/PressableNavigatorModalIcon.tsx";
 import ChannelActionsDefault from "../channel/ChannelActions.tsx";
@@ -139,10 +139,10 @@ function HeaderChannelActions(arg0) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, Platform } = get_ActivityIndicator);
-const MIN_HEADER_HEIGHT = fn(7878).MIN_HEADER_HEIGHT;
+const MIN_HEADER_HEIGHT = fn(7915).MIN_HEADER_HEIGHT;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-fn(4574);
+fn(4605);
 let obj = {
   headerRightContainer: { marginRight: 16 },
   headerWrapper: null,
@@ -169,7 +169,7 @@ obj.actionButtonIcon = createStyles;
 obj.headerText = { textAlign: "center", fontSize: 18 };
 obj.subtitleText = { textAlign: "center" };
 const obj2 = {};
-let merged = Object.assign(fn(4570).TextStyleSheet["text-md/semibold"]);
+let merged = Object.assign(fn(4601).TextStyleSheet["text-md/semibold"]);
 obj2.color = nativeDefault.colors.TEXT_BRAND;
 obj.backButtonLabel = obj2;
 obj.titleContainer = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_8 };
@@ -194,6 +194,7 @@ const memoResult = noop.memo(
       fn = (arg0) => {
         const obj = {};
         const merged = Object.assign(arg0);
+        const merged1 = Object.assign(str);
         obj.navigation = navigation;
         return timestampProducer(PressableNavigatorBackIcon.PressableNavigatorBackIcon, obj);
       };
@@ -282,11 +283,13 @@ export const renderHeader = function renderHeader(arg0) {
   const merged = Object.assign(arg0);
   return timestampProducer(memoResult, {});
 };
-export function getRenderBackImage(navigation) {
+export function getRenderBackImage(navigation, arg1) {
   closure_0 = navigation;
+  closure_1 = arg1;
   return (arg0) => {
     const obj = {};
     const merged = Object.assign(arg0);
+    const merged1 = Object.assign(str);
     obj.navigation = navigation;
     return timestampProducer(PressableNavigatorBackIcon.PressableNavigatorBackIcon, obj);
   };
@@ -310,6 +313,7 @@ export function getDefaultStackHeaderProps(navigation) {
     headerLeft: (arg0) => {
       const obj = {};
       const merged = Object.assign(arg0);
+      const merged1 = Object.assign(str);
       obj.navigation = navigation;
       return timestampProducer(PressableNavigatorBackIcon.PressableNavigatorBackIcon, obj);
     },
@@ -325,10 +329,12 @@ export const getDefaultChannelStackHeaderProps = function getDefaultChannelStack
     str = "none";
   }
   closure_129_0 = navigation;
+  closure_129_1 = undefined;
   return {
     headerLeft: (arg0) => {
       const obj = {};
       const merged = Object.assign(arg0);
+      const merged1 = Object.assign(str);
       obj.navigation = navigation;
       return timestampProducer(PressableNavigatorBackIcon.PressableNavigatorBackIcon, obj);
     },

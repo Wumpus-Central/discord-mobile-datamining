@@ -9,7 +9,7 @@ const View = fn(17).View;
 const StatusTypes = fn(1074).StatusTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-fn(4574);
+fn(4605);
 let createStyles = {
   channelItemContainer: null,
   channelItemLeft: null,
@@ -102,13 +102,13 @@ export default function ChannelRowItem(isUnread) {
   obj3 = { style: tmp2.channelItemContent, children: null };
   const obj4 = { style: tmp2.channelItemTop, children: null };
   const items3 = [
-    React4(tmp6(4570).Text, {
+    React4(tmp6(4601).Text, {
       animated: true,
       style: flag ? animatedStyles.textNormal : animatedStyles.textMuted,
       variant: "redesign/channel-title/semibold",
       children: title,
     }),
-    React4(tmp6(4570).Text, {
+    React4(tmp6(4601).Text, {
       animated: true,
       style: animatedStyles.textMuted,
       variant: "text-xs/medium",
@@ -133,7 +133,7 @@ export default function ChannelRowItem(isUnread) {
     };
     animatedStyles.style = flag ? animatedStyles.textNormal : animatedStyles.textMuted;
     animatedStyles.children = preview;
-    tmp5Result = React4(tmp6(4570).Text, animatedStyles);
+    tmp5Result = React4(tmp6(4601).Text, animatedStyles);
     const tmp12 = flag ? animatedStyles.textNormal : animatedStyles.textMuted;
   }
   const obj5 = {

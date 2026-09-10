@@ -16,7 +16,7 @@ const Constants = fn(1074);
 const PremiumTypes = fn(1373).PremiumTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
-fn(4574);
+fn(4605);
 let createStyles = { container: { width: "100%" }, card: null, image: null, nitroWheelIcon: null };
 createStyles = {
   display: "flex",

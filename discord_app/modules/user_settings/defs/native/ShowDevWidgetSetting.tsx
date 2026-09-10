@@ -4,13 +4,13 @@ import DevToolsActionCreators from "../../../devtools/DevToolsActionCreators.tsx
 import DevToolsSettingsStore from "../../../devtools/DevToolsSettingsStore.tsx";
 
 require = fn;
-fn(11500);
+fn(11540);
 let SettingBuilders = {
   useTitle() {
     return "Show Dev Tools Widget";
   },
   parent: null,
-  IconComponent: fn(15608).StaffBadgeIcon,
+  IconComponent: fn(15657).StaffBadgeIcon,
   onValueChange: function handleShowDevWidgetSettingToggle(showDevWidget) {
     const obj = { showDevWidget };
     const result = obj.updateDevToolsSettings(obj);
@@ -19,7 +19,7 @@ let SettingBuilders = {
     const items = [DevToolsSettingsStore];
     return initialize.useStateFromStores(items, () => showDevWidget.showDevWidget);
   },
-  usePredicate: fn(14871).useStaffOrDeveloperSettingPredicate,
+  usePredicate: fn(14920).useStaffOrDeveloperSettingPredicate,
 };
 SettingBuilders = SettingBuilders.createToggle(SettingBuilders);
 const size = fn(2);

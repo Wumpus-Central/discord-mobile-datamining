@@ -1,11 +1,11 @@
 // discord_app/modules/user_settings/connections/native/two_way_link/playstation/PlayStationLinkPreConnect.tsx
-import _modDef9291 from "../../../../../../../discord_assets/assets/connections/ps_discord_link.png.js";
+import _modDef9328 from "../../../../../../../discord_assets/assets/connections/ps_discord_link.png.js";
 import noop from "../../../../../../../_runtime/metro/00019__.js";
 
 const require = fn;
-let closure_4 = fn(9287).PlayStationLinkModalScenes;
+let closure_4 = fn(9324).PlayStationLinkModalScenes;
 const jsx = fn(21).jsx;
-const createStyles = fn(4574);
+const createStyles = fn(4605);
 let closure_6 = createStyles.createStyles({ image: { width: 231, height: 160 } });
 const size = fn(2);
 const result = size.fileFinishedImporting(
@@ -24,7 +24,7 @@ export const PlayStationLinkPreConnect = function PlayStationLinkPreConnect(plat
   const callback1 = noop.useCallback(() => {
     navigation.push(constants.ERROR, {});
   }, items1);
-  const memo = noop.useMemo(() => ({ uri: _modDef9291 }), []);
+  const memo = noop.useMemo(() => ({ uri: _modDef9328 }), []);
   obj = {
     platformType: platformType.platformType,
     onError: callback1,
@@ -38,7 +38,7 @@ export const PlayStationLinkPreConnect = function PlayStationLinkPreConnect(plat
   obj.title = intl.string(navigation(1114).t["6n+UPR"]);
   const intl2 = navigation(1114).intl;
   obj.body = intl2.string(navigation(1114).t.JaaqIf);
-  return jsx(navigation(9262).TwoWayLinkPreConnect, {
+  return jsx(navigation(9299).TwoWayLinkPreConnect, {
     platformType: platformType.platformType,
     onError: callback1,
     onNext: callback,

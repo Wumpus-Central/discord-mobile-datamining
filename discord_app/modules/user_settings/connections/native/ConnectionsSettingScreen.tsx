@@ -5,7 +5,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 function onPress() {
-  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(14986, dependencyMap.paths), "AddConnection");
+  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(15035, dependencyMap.paths), "AddConnection");
 }
 const jsx = fn(21).jsx;
 const size = fn(2);
@@ -15,7 +15,7 @@ export default noop.memo(function ConnectionsSettingScreen() {
   stackNavigation = stackNavigation(1483).useStackNavigation();
   let obj = stackNavigation(1483);
   const tmp = stackNavigation;
-  const params = stackNavigation(7008).useSettingNavigationRoute().params;
+  const params = stackNavigation(7046).useSettingNavigationRoute().params;
   let selectedPlatformType;
   if (params != null) {
     selectedPlatformType = params.selectedPlatformType;
@@ -29,9 +29,9 @@ export default noop.memo(function ConnectionsSettingScreen() {
         obj.onPress = onPress;
         const intl = stackNavigation(1114).intl;
         obj.label = intl.string(stackNavigation(1114).t.OYkgVk);
-        return closure_1_4(stackNavigation(7877).HeaderTextButton, obj);
+        return closure_1_4(stackNavigation(7914).HeaderTextButton, obj);
       },
     });
   }, items);
-  return jsx(tmp(14987).UserSettingsConnections, { selectedPlatformType });
+  return jsx(tmp(15036).UserSettingsConnections, { selectedPlatformType });
 });

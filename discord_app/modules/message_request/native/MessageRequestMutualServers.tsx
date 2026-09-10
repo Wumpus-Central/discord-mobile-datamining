@@ -6,7 +6,7 @@ const require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4574);
+const createStyles = fn(4605);
 let closure_6 = createStyles.createStyles({
   container: { flexDirection: "row", alignItems: "center", gap: 4 },
   label: { flexShrink: 1 },
@@ -18,7 +18,7 @@ export default function MessageRequestMutualServers(textVariant) {
   ({ onPress, iconSize } = textVariant);
   ({ userId, style } = textVariant);
   if (iconSize === undefined) {
-    iconSize = iconSize(5598).GuildIconSizes.XXSMALL_12;
+    iconSize = iconSize(5634).GuildIconSizes.XXSMALL_12;
   }
   let str = textVariant.textVariant;
   if (str === undefined) {
@@ -26,7 +26,7 @@ export default function MessageRequestMutualServers(textVariant) {
   }
   const suffix = textVariant.suffix;
   const tmp3 = closure_6();
-  let obj = iconSize(16920);
+  let obj = iconSize(16977);
   const mutualGuildsForMessageRequests = obj.useMutualGuildsForMessageRequests(userId);
   const substr = mutualGuildsForMessageRequests.slice(0, 3);
   if (mutualGuildsForMessageRequests.length > 0) {
@@ -47,7 +47,7 @@ export default function MessageRequestMutualServers(textVariant) {
       names: substr.map((name) => name.name),
       children: substr.map((guild) => React4(GuildIconDefault, { guild, size: iconSize }, guild.id)),
     };
-    tmp9 = closure_4(tmp4(12648).GuildIconPile, obj1);
+    tmp9 = closure_4(tmp4(12688).GuildIconPile, obj1);
   }
   const items1 = [tmp9];
   const obj2 = { variant: str, color: "text-muted", lineClamp: 1, style: tmp3.label, children: null };
@@ -57,7 +57,7 @@ export default function MessageRequestMutualServers(textVariant) {
     combined = "" + formatResult + " \u00B7 " + suffix;
   }
   obj2.children = combined;
-  items1[1] = closure_4(iconSize(4570).Text, obj2);
+  items1[1] = closure_4(iconSize(4601).Text, obj2);
   obj.children = items1;
   const tmp7Result = closure_5(View, obj);
   let tmp11Result = tmp7Result;
@@ -65,7 +65,7 @@ export default function MessageRequestMutualServers(textVariant) {
     tmp11Result = tmp7Result;
     if (length > 0) {
       const obj3 = { accessibilityRole: "button", onPress, children: tmp7Result };
-      tmp11Result = closure_4(tmp4(5137).PressableOpacity, obj3);
+      tmp11Result = closure_4(tmp4(5173).PressableOpacity, obj3);
     }
   }
   return tmp11Result;

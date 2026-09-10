@@ -99,7 +99,7 @@ prototype["createFromServer"] = function createFromServer(display_name) {
       let obj27 = require;
       let tmp29 = dependencyMap;
       if (collectibles.type !== StorefrontCollectiblesTypes.StorefrontPromotionCollectiblesType.COLLECT_AND_CLAIM) {
-        if (collectibles.type === obj27(8822).StorefrontPromotionCollectiblesType.TARGETED_OFFER) {
+        if (collectibles.type === obj27(8859).StorefrontPromotionCollectiblesType.TARGETED_OFFER) {
           const reward = collectibles.reward;
           let nagbar;
           if (reward != tmp14) {
@@ -134,11 +134,11 @@ prototype["createFromServer"] = function createFromServer(display_name) {
           }
           if (tmp14 == nagbar) {
             if (tmp14 == offer_notice) {
-              const obj1 = { type: obj27(8822).StorefrontPromotionCollectiblesType.TARGETED_OFFER };
+              const obj1 = { type: obj27(8859).StorefrontPromotionCollectiblesType.TARGETED_OFFER };
               let obj2 = obj1;
             }
           }
-          obj2 = { type: obj27(8822).StorefrontPromotionCollectiblesType.TARGETED_OFFER, reward: null };
+          obj2 = { type: obj27(8859).StorefrontPromotionCollectiblesType.TARGETED_OFFER, reward: null };
           let tmp36;
           if (tmp14 != nagbar) {
             const header_text = nagbar.header_text;
@@ -181,8 +181,8 @@ prototype["createFromServer"] = function createFromServer(display_name) {
         }
       }
       const obj10 = {
-        type: obj27(8822).StorefrontPromotionCollectiblesType.COLLECT_AND_CLAIM,
-        subtype: obj27(8822).StorefrontPromotionCollectAndClaimSubtype.TAKEOVER,
+        type: obj27(8859).StorefrontPromotionCollectiblesType.COLLECT_AND_CLAIM,
+        subtype: obj27(8859).StorefrontPromotionCollectAndClaimSubtype.TAKEOVER,
         collectionId: collectibles.collection_id,
         shopHome: null,
         indexPage: null,

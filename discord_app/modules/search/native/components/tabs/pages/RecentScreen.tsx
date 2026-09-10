@@ -34,8 +34,8 @@ function ClearAllHistory(searchContext) {
   obj = { variant: "text-sm/semibold", color: "text-brand", children: null };
   const intl2 = searchContext(1114).intl;
   obj.children = intl2.string(searchContext(1114).t.LFTAUp);
-  obj.children = jsx(searchContext(4570).Text, { variant: "text-sm/semibold", color: "text-brand", children: null });
-  return jsx(searchContext(5137).PressableHighlight, {
+  obj.children = jsx(searchContext(4601).Text, { variant: "text-sm/semibold", color: "text-brand", children: null });
+  return jsx(searchContext(5173).PressableHighlight, {
     variant: "text-sm/semibold",
     color: "text-brand",
     children: null,
@@ -57,14 +57,14 @@ function ViewAll(onJumpToMedia) {
   obj.children = jsx(Text_Text.Text, { variant: "text-sm/semibold", color: "text-brand", children: null });
   return jsx(Pressables.PressableHighlight, { variant: "text-sm/semibold", color: "text-brand", children: null });
 }
-const SearchConstants = fn(7892);
+const SearchConstants = fn(7930);
 ({
   EMPTY_SEARCH_QUERY_STRING: c10,
   MESSAGE_PLACEHOLDER_ITEM_SIZE: closure_11,
   SearchListItemTypes: closure_12,
   SearchTabs: map1,
 } = SearchConstants);
-const EMPTY_MEDIA_RESULTS = fn(12383).EMPTY_MEDIA_RESULTS;
+const EMPTY_MEDIA_RESULTS = fn(12423).EMPTY_MEDIA_RESULTS;
 const SearchTypes = fn(1074).SearchTypes;
 const jsx = fn(21).jsx;
 let closure_19 = noop.memo((searchContext) => {

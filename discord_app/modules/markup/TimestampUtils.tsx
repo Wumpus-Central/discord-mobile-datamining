@@ -1,6 +1,6 @@
 // discord_app/modules/markup/TimestampUtils.tsx
 import DurationsDefault from "../../utils/Durations.tsx";
-import _modDef4166 from "../../../_runtime/metro/04166__.js";
+import _modDef4196 from "../../../_runtime/metro/04196__.js";
 import DateUtils from "../../utils/DateUtils.tsx";
 import size from "../../../_runtime/metro/00002__.js";
 
@@ -30,25 +30,25 @@ const TIMESTAMP_FORMATS = {
     return DateUtils.dateFormat(date, "L LTS");
   },
   R(toDate) {
-    const result = _modDef4166.relativeTimeThreshold("s");
-    const result1 = _modDef4166.relativeTimeThreshold("s", 60);
-    const result2 = _modDef4166.relativeTimeThreshold("ss");
-    const result3 = _modDef4166.relativeTimeThreshold("ss", -1);
-    const result4 = _modDef4166.relativeTimeThreshold("m");
-    const result5 = _modDef4166.relativeTimeThreshold("m", 60);
+    const result = _modDef4196.relativeTimeThreshold("s");
+    const result1 = _modDef4196.relativeTimeThreshold("s", 60);
+    const result2 = _modDef4196.relativeTimeThreshold("ss");
+    const result3 = _modDef4196.relativeTimeThreshold("ss", -1);
+    const result4 = _modDef4196.relativeTimeThreshold("m");
+    const result5 = _modDef4196.relativeTimeThreshold("m", 60);
     try {
-      let tmpResult = _modDef4166;
+      let tmpResult = _modDef4196;
       let fromNowResult = tmpResult(toDate.toDate()).fromNow();
-      tmpResult = _modDef4166;
+      tmpResult = _modDef4196;
       const result6 = tmpResult.relativeTimeThreshold("s", result);
       const tmpResultResult = tmpResult(toDate.toDate());
-      const result7 = _modDef4166.relativeTimeThreshold("ss", result2);
-      const tmpResult1 = _modDef4166;
-      const result8 = _modDef4166.relativeTimeThreshold("m", result4);
+      const result7 = _modDef4196.relativeTimeThreshold("ss", result2);
+      const tmpResult1 = _modDef4196;
+      const result8 = _modDef4196.relativeTimeThreshold("m", result4);
       if (fromNowResult == null) {
-        const tmpResult3 = _modDef4166;
-        fromNowResult = _modDef4166(toDate.toDate()).fromNow();
-        const tmpResult4Result = _modDef4166(toDate.toDate());
+        const tmpResult3 = _modDef4196;
+        fromNowResult = _modDef4196(toDate.toDate()).fromNow();
+        const tmpResult4Result = _modDef4196(toDate.toDate());
       }
       return fromNowResult;
     } catch (err) {}
@@ -64,7 +64,7 @@ export const DEFAULT_TIMESTAMP_FORMAT = "f";
 export const TIMESTAMP_REGEX = regExp;
 export const formatTimestampMention = function formatTimestampMention(mention) {
   ({ timestamp, format } = mention);
-  const tmp = _modDef4166;
+  const tmp = _modDef4196;
   const tmpResult = tmp(Number(timestamp) * DurationsDefault.Millis.SECOND);
   if (tmpResult.isValid()) {
     let f;
@@ -84,7 +84,7 @@ export const formatTimestampMention = function formatTimestampMention(mention) {
   const NumberResult = Number(timestamp);
 };
 export const parseTimestamp = function parseTimestamp(timestamp, format) {
-  const tmp = _modDef4166;
+  const tmp = _modDef4196;
   const tmpResult = tmp(Number(timestamp) * DurationsDefault.Millis.SECOND);
   let tmp3 = null;
   if (tmpResult.isValid()) {

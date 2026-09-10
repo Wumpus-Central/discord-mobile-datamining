@@ -4,7 +4,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 import GuildPowerupsStore from "../GuildPowerupsStore.tsx";
 
 const require = fn;
-const PowerupActiveStatusType = fn(4464).PowerupActiveStatusType;
+const PowerupActiveStatusType = fn(4495).PowerupActiveStatusType;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/powerups/hooks/useCanGuildPowerupBeToggled.tsx");
 

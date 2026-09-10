@@ -29,7 +29,7 @@ function handleQuickSwitcherUpdate() {
   });
   closure_24 = found.map((record) => record.record.id);
 }
-const SUMMARY_POLL_INTERVAL = fn(11378).SUMMARY_POLL_INTERVAL;
+const SUMMARY_POLL_INTERVAL = fn(11418).SUMMARY_POLL_INTERVAL;
 let obj = { FETCHING: "fetching", OK: "ok", ERROR: "error" };
 const dependencyMap2 = {};
 const dependencyMap3 = {};
@@ -571,18 +571,18 @@ obj = {
       const first = tmp[0];
       obj = error(12);
       const chainResult = error(12).chain(
-        tmp[1].map((item) => lastReceivedAt(11380).createSummaryFromServer(item, first)),
+        tmp[1].map((item) => lastReceivedAt(11420).createSummaryFromServer(item, first)),
       );
       const sortByResult = error(12)
-        .chain(tmp[1].map((item) => lastReceivedAt(11380).createSummaryFromServer(item, first)))
+        .chain(tmp[1].map((item) => lastReceivedAt(11420).createSummaryFromServer(item, first)))
         .sortBy((startId) => error(11).extractTimestamp(startId.startId));
       const reversed = error(12)
-        .chain(tmp[1].map((item) => lastReceivedAt(11380).createSummaryFromServer(item, first)))
+        .chain(tmp[1].map((item) => lastReceivedAt(11420).createSummaryFromServer(item, first)))
         .sortBy((startId) => error(11).extractTimestamp(startId.startId))
         .takeRight(75)
         .reverse();
       const takeRightResult = error(12)
-        .chain(tmp[1].map((item) => lastReceivedAt(11380).createSummaryFromServer(item, first)))
+        .chain(tmp[1].map((item) => lastReceivedAt(11420).createSummaryFromServer(item, first)))
         .sortBy((startId) => error(11).extractTimestamp(startId.startId))
         .takeRight(75);
       acc[first] = reversed.filter((item) => Object.keys(item).length > 0).value();

@@ -19,7 +19,7 @@ const alphaResult1 = n(nativeDefault.unsafe_rawColors.BRAND_500).alpha(0.25);
 const hexResult1 = n(nativeDefault.unsafe_rawColors.BRAND_500).alpha(0.25).hex();
 const importDefaultResult2Result = n(nativeDefault.unsafe_rawColors.BRAND_500);
 const alphaResult2 = n(nativeDefault.unsafe_rawColors.BRAND_500).alpha(0.35);
-const createStyles = fn(4574);
+const createStyles = fn(4605);
 let obj = { container: null, gameCard: null, gameImage: null, addCard: null, addIconWrapper: null };
 obj = {
   flexDirection: "row",

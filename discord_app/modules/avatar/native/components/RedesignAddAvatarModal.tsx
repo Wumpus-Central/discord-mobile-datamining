@@ -12,7 +12,7 @@ get_ActivityIndicator = fn(17);
 const UPLOAD_MEDIUM_SIZE = fn(1074).UPLOAD_MEDIUM_SIZE;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-fn(4574);
+fn(4605);
 let createStyles = {
   container: null,
   contentContainer: null,
@@ -74,7 +74,7 @@ export default function RedesignAddAvatarModal(route) {
             const obj1 = { size };
             dependencyMap = 1;
             c3 = 1;
-            let obj2 = { value: tmp2(5152).openImagePicker(obj1), done: false };
+            let obj2 = { value: tmp2(5188).openImagePicker(obj1), done: false };
             return obj2;
           }
         } else if (arg0 === 1) {
@@ -89,17 +89,17 @@ export default function RedesignAddAvatarModal(route) {
           if (null == base64) {
             pendingImage = undefined;
             if (null != base64) {
-              obj = tmp2(14621);
+              obj = tmp2(14670);
               const obj4 = { imageUri: base64, description: null };
-              obj2 = tmp2(8195);
+              obj2 = tmp2(8232);
               obj4.description = obj2.generateAvatarDescription();
               pendingImage = obj.createPendingImage(obj4);
             }
             closure_128_1 = pendingImage;
-            obj3 = tmp2(8190);
+            obj3 = tmp2(8227);
             let obj5 = { avatar: closure_128_1 };
             obj3.setPendingChanges(obj5);
-            obj5 = tmp2(8192);
+            obj5 = tmp2(8229);
             let str = "set";
             if (null == closure_128_1) {
               str = "remove";

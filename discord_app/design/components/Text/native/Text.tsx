@@ -7,7 +7,7 @@ import useManaTextMigrationHighlight2 from "useManaTextMigrationHighlight.tsx";
 import PlainTextExperimentContext from "PlainTextExperimentContext.tsx";
 import useTypographyVariantRemap from "../../../../../discord_common/js/packages/design/components/Text/useTypographyVariantRemap.native.tsx";
 import PlainTextEligibility from "PlainTextEligibility.tsx";
-import _modDef4584 from "../../../../../_runtime/metro/04584__.js";
+import _modDef4615 from "../../../../../_runtime/metro/04615__.js";
 import _objectWithoutProperties from "../../../../../_runtime/metro/00109__objectWithoutProperties.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import ReanimatedRexport from "../../../../modules/reanimated/ReanimatedRexport.tsx";
@@ -59,7 +59,7 @@ obj3[800] = Fonts.GINTO_NORD_EXTRA_BOLD_ITALIC;
 ({ GINTO_DISCORD_NORD_BOLD_ITALIC: obj8[700], GINTO_DISCORD_NORD_BLACK_ITALIC: obj8[900] } = Fonts);
 const dependencyMap = { headline: obj, nitro: obj1, primary: obj, code: { 400: null, 700: null } };
 let closure_14 = { headline: obj3, nitro: { 700: null, 900: null } };
-const TextVariantsFlat = fn(4571).TextVariantsFlat;
+const TextVariantsFlat = fn(4602).TextVariantsFlat;
 const mapped = TextVariantsFlat.map((name) => {
   let tmp = null;
   if ("code" !== name.name) {
@@ -99,9 +99,9 @@ const mapped = TextVariantsFlat.map((name) => {
   return tmp;
 });
 const fromEntriesResult = Object.fromEntries(mapped.filter(Boolean));
-const useManaTextMigrationHighlight = fn(4572);
+const useManaTextMigrationHighlight = fn(4603);
 let result = useManaTextMigrationHighlight.withManaTextMigrationHighlight(fromEntriesResult);
-const createStyles = fn(4574);
+const createStyles = fn(4605);
 let closure_16 = createStyles.createStyles((arg0, arg1) => {
   let tmp;
   if ("none" !== arg0) {
@@ -237,7 +237,7 @@ const forwardRefResult = noop.forwardRef((animated, ref) => {
     }
     obj.ellipsizeMode = ellipsizeMode;
     const merged1 = Object.assign(merged);
-    return jsx(_modDef4584, {
+    return jsx(_modDef4615, {
       text: children,
       color: color2,
       fontSize,

@@ -8,7 +8,7 @@ import ReanimatedRexport from "../../../../../modules/reanimated/ReanimatedRexpo
 require = fn;
 const Pressable = fn(17).Pressable;
 const jsx = fn(21).jsx;
-let closure_6 = ReanimatedRexport.createAnimatedComponent(fn(5137).PressableHighlight);
+let closure_6 = ReanimatedRexport.createAnimatedComponent(fn(5173).PressableHighlight);
 const PlatformUtils = fn(1115);
 const size = fn(2);
 const result = size.fileFinishedImporting(

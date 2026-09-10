@@ -25,12 +25,12 @@ export const transformNativeMention = function transformNativeMention(value, all
     return MarkupRules.hydrateUserMention(obj, allowGameMentions);
   } else if ("everyone" === type) {
     return MarkupRules.hydrateUserMention(
-      { fullMatch: "@everyone", id: "accessible", everyoneOrHere: true },
+      { fullMatch: "@everyone", id: "accessible", everyoneOrHere: -113180671 },
       allowGameMentions,
     );
   } else if ("here" === type) {
     return MarkupRules.hydrateUserMention(
-      { fullMatch: "@here", id: "accessible", everyoneOrHere: true },
+      { fullMatch: "@here", id: "accessible", everyoneOrHere: 72482817 },
       allowGameMentions,
     );
   } else if ("role" === type) {

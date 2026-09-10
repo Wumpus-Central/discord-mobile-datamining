@@ -3,26 +3,26 @@ import ApplicationStreamingStore from "../../stores/ApplicationStreamingStore.ts
 import RelationshipStore from "../../stores/RelationshipStore.tsx";
 
 const require = fn;
-function getDiscoverableApplicationStream(id) {
+function getDiscoverableApplicationStream(userId) {
   let tmp = items;
   if (items === undefined) {
     items = [ApplicationStreamingStore, RelationshipStore];
     tmp = items;
   }
   [obj, obj2] = tmp;
-  if (null != id) {
-    let NONE = obj2.getRelationshipType(id);
+  if (null != userId) {
+    let NONE = obj2.getRelationshipType(userId);
   } else {
     NONE = RelationshipTypes.NONE;
   }
   let anyDiscoverableStreamForUser = null;
-  if (null != id) {
-    anyDiscoverableStreamForUser = obj.getAnyDiscoverableStreamForUser(id);
+  if (null != userId) {
+    anyDiscoverableStreamForUser = obj.getAnyDiscoverableStreamForUser(userId);
   }
   let tmp6 = null;
   if (NONE !== RelationshipTypes.BLOCKED) {
     tmp6 = null;
-    if (null != id) {
+    if (null != userId) {
       tmp6 = anyDiscoverableStreamForUser;
     }
   }

@@ -7,7 +7,7 @@ import Text_Text from "../../../../../../design/components/Text/native/Text.tsx"
 import Stack_Stack from "../../../../../../design/components/Stack/native/Stack.native.tsx";
 import components_Button_Button from "../../../../../../design/components/Button/native/Button.native.tsx";
 import CreateGuildModalActionCreatorsDefault from "../../../../../create_guild/native/CreateGuildModalActionCreators.tsx";
-import _modDef16303 from "../../../../../../../_runtime/metro/16303__.js";
+import _modDef16352 from "../../../../../../../_runtime/metro/16352__.js";
 import _slicedToArray from "../../../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../../../_runtime/metro/00019__.js";
 import AuthenticationStore from "../../../../../../stores/AuthenticationStore.tsx";
@@ -85,7 +85,7 @@ const Constants = fn(1074);
 ({ ME: closure_11, MOBILE_GUILD_UPSELL_LIST: closure_12 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
-fn(4574);
+fn(4605);
 let obj = {
   scrollView: null,
   header: null,
@@ -139,7 +139,7 @@ let obj5 = {
 };
 obj.textWrapper = { marginHorizontal: nativeDefault.space.PX_16, marginVertical: nativeDefault.space.PX_24 };
 let obj7 = {};
-const merged = Object.assign(fn(4570).TextStyleSheet["heading-md/bold"]);
+const merged = Object.assign(fn(4601).TextStyleSheet["heading-md/bold"]);
 obj7.fontSize = 18;
 obj7.marginBottom = 8;
 obj.headerText = obj7;
@@ -165,7 +165,7 @@ export default noop.memo(function GuildsEmpty(arg0) {
   }
   selectedGuildId = tmp6;
   obj = { type: navigation(1250).ImpressionTypes.VIEW, name: navigation(1250).ImpressionNames.GUILDS_EMPTY_NUX };
-  selectedGuildId(8801)(obj);
+  selectedGuildId(8838)(obj);
   const items1 = [tmp6, navigation];
   const effect = noop.useEffect(() => {
     if (null != selectedGuildId) {
@@ -202,9 +202,9 @@ export default noop.memo(function GuildsEmpty(arg0) {
       }
     }
   }, items1);
-  let tmp2Result = tmp2(5140);
+  let tmp2Result = tmp2(5176);
   const isScreenLandscape = tmp2Result.useIsScreenLandscape();
-  tmp2Result = tmp2(15130);
+  tmp2Result = tmp2(15179);
   let tmp14Result = null;
   if (stateFromStores) {
     obj = { style: null, children: null };
@@ -221,7 +221,7 @@ export default noop.memo(function GuildsEmpty(arg0) {
     };
     const intl = tmp2(1114).intl;
     obj3.children = intl.string(tmp2(1114).t["7hB4kg"]);
-    obj2.children = closure_13(tmp2(4570).Text, obj3);
+    obj2.children = closure_13(tmp2(4601).Text, obj3);
     obj1.children = closure_13(closure_6, obj2);
     const items3 = [closure_13(closure_6, obj1)];
     let tmp18;

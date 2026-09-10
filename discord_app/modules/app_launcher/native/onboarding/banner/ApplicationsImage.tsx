@@ -8,7 +8,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, Fragment: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-fn(4574);
+fn(4605);
 let createStyles = { appIconContainer: null, appIconLeftContainer: null, appIconRightContainer: null, appIcon: null };
 createStyles = {
   backgroundColor: nativeDefault.colors.BACKGROUND_BRAND,

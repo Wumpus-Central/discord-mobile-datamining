@@ -4,7 +4,7 @@ import native from "../../../../design/void/native.tsx";
 import UnicodeEmojisDefault from "../../../emojis/UnicodeEmojis.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import utils_ChannelUtils from "../../../../utils/native/ChannelUtils.tsx";
-import _modDef9971 from "../../../../../_runtime/metro/09971__.js";
+import _modDef10009 from "../../../../../_runtime/metro/10009__.js";
 import GuildRoleSubscriptionTierTemplatesUtils from "../../tier_templates/GuildRoleSubscriptionTierTemplatesUtils.tsx";
 import EmojiIconDefault from "EmojiIcon.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
@@ -26,7 +26,7 @@ function BaseBenefitRow(isInteractive) {
   items[1] = hasOwnProperty(View, obj);
   let tmp4Result = true === flag;
   if (tmp4Result) {
-    const obj1 = { source: _modDef9971 };
+    const obj1 = { source: _modDef10009 };
     tmp4Result = hasOwnProperty(native.Icon, obj1);
   }
   items[2] = tmp4Result;
@@ -115,10 +115,10 @@ function EmojiBenefitRow(benefit) {
   return timestampProducer(BaseBenefitRow, obj);
 }
 const View = fn(17).View;
-const constants = fn(15237).GuildRoleSubscriptionBenefitTypes;
+const constants = fn(15286).GuildRoleSubscriptionBenefitTypes;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4574);
+const createStyles = fn(4605);
 let closure_7 = createStyles.createStyles({
   container: { flexDirection: "row", justifyContent: "flex-start" },
   emojiContainer: {

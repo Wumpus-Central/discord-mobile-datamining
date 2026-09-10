@@ -47,7 +47,7 @@ function MusicMuteButton(channelId) {
       }
       obj = {
         accessibilityLabel: stringResult,
-        icon: importDefault(stateFromStores ? 9942 : 9944),
+        icon: importDefault(stateFromStores ? 9980 : 9982),
         onPress() {
           return StageMusicActionCreators.updateStageMusicMuted(!stateFromStores);
         },
@@ -60,21 +60,21 @@ function MusicMuteButton(channelId) {
 }
 get_ActivityIndicator = fn(17);
 const StyleSheet = get_ActivityIndicator.StyleSheet;
-const VoicePanelConstants = fn(12303);
+const VoicePanelConstants = fn(12343);
 const MODE_CHANGE_PHYSICS = VoicePanelConstants.MODE_CHANGE_PHYSICS;
 ({
   UI_SHOW_HIDE_PHYSICS: closure_16,
   VoicePanelModes: closure_17,
   DRAWER_SPRING_PHYSICS_GESTURE_ACTIVE: closure_18,
 } = VoicePanelConstants);
-const EDGE_GUTTER = fn(12306).EDGE_GUTTER;
-const VoicePanelControlsModes = fn(12301).VoicePanelControlsModes;
-const ParticipantTypes = fn(4595).ParticipantTypes;
+const EDGE_GUTTER = fn(12346).EDGE_GUTTER;
+const VoicePanelControlsModes = fn(12341).VoicePanelControlsModes;
+const ParticipantTypes = fn(4626).ParticipantTypes;
 const ThemeTypes = fn(1085).ThemeTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_23, jsxs: closure_24 } = jsxProd);
 const OPACITY_TIMING = { duration: 300 };
-let createStyles = fn(4574);
+let createStyles = fn(4605);
 let obj = {
   headerWrapper: {
     zIndex: 1,

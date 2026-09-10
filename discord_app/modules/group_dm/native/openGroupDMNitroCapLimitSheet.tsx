@@ -7,5 +7,5 @@ const result = size.fileFinishedImporting("modules/group_dm/native/openGroupDMNi
 
 export default function openGroupDMNitroCapLimitSheet(location) {
   const obj = { location };
-  obj.openLazy(asyncRequireImpl(11627, dependencyMap.paths), "GroupDMNitroCapLimitSheet", obj);
+  obj.openLazy(asyncRequireImpl(11667, dependencyMap.paths), "GroupDMNitroCapLimitSheet", obj);
 }

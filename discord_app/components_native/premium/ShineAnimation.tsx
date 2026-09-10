@@ -10,7 +10,7 @@ get_ActivityIndicator = fn(17);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
 const ShineAnimationConfig = Object.freeze({ FLASH_TIME_PERCENT: 0.72, FLASH_DURATION_PERCENT: 0.08 });
-fn(4574);
+fn(4605);
 let obj = { container: { overflow: "hidden" }, shineContainer: null, shine: null, shineInner: null };
 obj = {};
 const merged = Object.assign(StyleSheet.absoluteFillObject);

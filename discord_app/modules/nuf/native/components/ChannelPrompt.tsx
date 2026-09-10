@@ -12,7 +12,7 @@ get_ActivityIndicator = fn(17);
 ({ ScrollView: metroRequire, View: closure_7 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-fn(4574);
+fn(4605);
 let createStyles = {
   flex: { flex: 1 },
   safePadding: null,
@@ -25,7 +25,7 @@ let createStyles = {
   buttonWrapper: null,
   error: null,
 };
-createStyles = { marginTop: fn(5696).NAV_BAR_HEIGHT, flex: 1 };
+createStyles = { marginTop: fn(5732).NAV_BAR_HEIGHT, flex: 1 };
 createStyles.safePadding = createStyles;
 createStyles.contentContainer = { paddingHorizontal: 16 };
 createStyles.guildIcon = { alignSelf: "center" };

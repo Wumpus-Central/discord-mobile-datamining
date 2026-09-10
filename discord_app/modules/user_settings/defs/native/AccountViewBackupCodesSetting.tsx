@@ -6,14 +6,14 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 require = fn;
 const Constants = fn(1074);
 ({ NOOP_NULL: closure_4, UserSettingsSections } = Constants);
-fn(11500);
+fn(11540);
 let SettingBuilders = {
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.xZEzbu);
   },
-  parent: fn(7989).MobileUserSettings.ACCOUNT,
-  usePredicate: fn(14710).useIs2FAEnabled,
+  parent: fn(8027).MobileUserSettings.ACCOUNT,
+  usePredicate: fn(14759).useIs2FAEnabled,
   usePreNavigationAction: function useOnViewBackups() {
     return noop.useCallback((arg0) => {
       closure_0 = arg0;
@@ -45,7 +45,7 @@ let SettingBuilders = {
             const intl4 = onSuccess(1114).intl;
             obj.actionText = intl4.string(onSuccess(1114).t.geKm7t);
             obj.confirmColor = onSuccess(1178).ButtonColors.BRAND;
-            closure_2_1(14825)(obj);
+            closure_2_1(14874)(obj);
           });
         },
         onSuccess,
@@ -63,7 +63,7 @@ let SettingBuilders = {
       let intl3 = closure_0(1114).intl;
       obj.actionText = intl3.string(closure_0(1114).t.PDTjLN);
       obj.confirmColor = closure_0(1178).ButtonColors.BRAND;
-      closure_1(14825)(obj);
+      closure_1(14874)(obj);
       return false;
     }, []);
   },

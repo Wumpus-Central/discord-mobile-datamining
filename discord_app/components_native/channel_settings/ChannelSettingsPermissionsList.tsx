@@ -1,7 +1,7 @@
 // discord_app/components_native/channel_settings/ChannelSettingsPermissionsList.tsx
 import nativeDefault from "../../../discord_common/js/packages/tokens/native.tsx";
 import Server from "../../flow/Server.tsx";
-import fuzzysearchDefault from "../../../_runtime/05531_fuzzysearch.js";
+import fuzzysearchDefault from "../../../_runtime/05567_fuzzysearch.js";
 import _slicedToArray from "../../../_runtime/metro/00032__.js";
 import noop from "../../../_runtime/metro/00019__.js";
 import ChannelStore from "../../stores/ChannelStore.tsx";
@@ -16,7 +16,7 @@ const Constants = fn(1074);
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
 let closure_15 = { rows: [], sections: [] };
-fn(4574);
+fn(4605);
 let obj = { container: null, containerSearchBar: null };
 obj = {
   backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER,

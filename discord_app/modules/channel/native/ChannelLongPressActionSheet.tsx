@@ -368,7 +368,7 @@ function ChannelLongPressActionSheetConnected(channel) {
       obj8.IconComponent = tmp5(tmp2[32]).LinkIcon;
       obj8.onPress = function onPress() {
         const obj = { channelId: channel.id };
-        obj.pushLazy(asyncRequireImpl(10963, dependencyMap.paths), obj);
+        obj.pushLazy(asyncRequireImpl(11003, dependencyMap.paths), obj);
       };
       buttons4.push(obj8);
     }
@@ -703,7 +703,7 @@ function ChannelLongPressActionSheetConnected(channel) {
               let obj = ActionSheetActionCreatorsDefault;
               obj.hideActionSheet();
               obj = { channel };
-              ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(10997, dependencyMap.paths), obj);
+              ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(11037, dependencyMap.paths), obj);
               hideLaunchPadDefault();
             };
             buttons18.push(obj33);
@@ -916,11 +916,11 @@ function ChannelLongPressActionSheetConnected(channel) {
               str = "danger";
             }
             return closure_1_33(
-              channel(7213).ActionSheetRow,
+              channel(7251).ActionSheetRow,
               {
                 variant: str,
                 label,
-                icon: closure_1_33(channel(7213).ActionSheetRow.Icon, {
+                icon: closure_1_33(channel(7251).ActionSheetRow.Icon, {
                   IconComponent,
                   style: iconStyle,
                   disableColor,
@@ -1053,7 +1053,7 @@ function ChannelLongPressActionSheetConnected(channel) {
   }
   const tmp36 = onClose(tmp2[93])(channel, "ChannelLongPressActionSheet");
 }
-const SafetyWarningTypes = fn(10947).SafetyWarningTypes;
+const SafetyWarningTypes = fn(10987).SafetyWarningTypes;
 const ChannelRecord = fn(1961);
 ({
   isGuildTextChannelType: closure_9,
@@ -1073,7 +1073,7 @@ const Constants = fn(1074);
   Permissions: closure_30,
   ZERO_STRING_GUILD_ID: items,
 } = Constants);
-let closure_32 = fn(10948).ChannelDetailsNavigatorScreens;
+let closure_32 = fn(10988).ChannelDetailsNavigatorScreens;
 const jsx = fn(21).jsx;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/channel/native/ChannelLongPressActionSheet.tsx");

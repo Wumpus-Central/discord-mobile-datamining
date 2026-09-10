@@ -3,7 +3,7 @@ import FastImageDefault from "../../../../components_native/common/FastImage.tsx
 import AnalyticsLocationDefault from "../../../app_analytics/AnalyticsLocation.tsx";
 import useProfileEffectDefault from "../useProfileEffect.tsx";
 import ProfileEffectDefault from "ProfileEffect.tsx";
-import _modDef8857 from "../../../../../discord_assets/assets/collectibles/previews/sample_profile_small-2x.png.js";
+import _modDef8894 from "../../../../../discord_assets/assets/collectibles/previews/sample_profile_small-2x.png.js";
 import useCollectibleListLayout from "../../native/useCollectibleListLayout.tsx";
 import CollectiblesEditUserProfileListItems from "../../native/CollectiblesEditUserProfileListItems.tsx";
 import useProfileEffectSections from "../useProfileEffectSections.tsx";
@@ -11,22 +11,22 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-const isProfileEffectRecord = fn(7562).isProfileEffectRecord;
+const isProfileEffectRecord = fn(7600).isProfileEffectRecord;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, Fragment: closure_7, jsxs: closure_8 } = jsxProd);
-fn(4574);
+fn(4605);
 let obj = { row: null, rowSpacer: null, profileEffect: null, sampleProfile: null };
 obj = {
   flexDirection: "row",
   alignItems: "center",
   justifyContent: "space-between",
-  paddingHorizontal: fn(13197).GUTTER_SIZE,
+  paddingHorizontal: fn(13244).GUTTER_SIZE,
 };
 obj.row = obj;
-const createStyles = { height: fn(13197).GUTTER_SIZE };
+const createStyles = { height: fn(13244).GUTTER_SIZE };
 obj.rowSpacer = createStyles;
 obj.profileEffect = { overflow: "hidden", width: "100%", height: "100%" };
-obj.sampleProfile = { aspectRatio: fn(8832).SAMPLE_PROFILE_ASPECT_RATIO, width: "100%" };
+obj.sampleProfile = { aspectRatio: fn(8869).SAMPLE_PROFILE_ASPECT_RATIO, width: "100%" };
 let closure_9 = createStyles.createStyles(obj);
 const memoResult = noop.memo((size) => {
   ({ items, selectedSkuId: require, setSelectedProfileEffect } = size);
@@ -124,7 +124,7 @@ const memoResult1 = noop.memo((isSelected) => {
   const items2 = [tmp.profileEffect, { borderRadius: 6 }];
   obj.style = items2;
   obj = { source: null, style: null, resizeMode: "cover" };
-  const obj1 = { uri: _modDef8857 };
+  const obj1 = { uri: _modDef8894 };
   obj.source = obj1;
   obj.style = tmp.sampleProfile;
   const items3 = [

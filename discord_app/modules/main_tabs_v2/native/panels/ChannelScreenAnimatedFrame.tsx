@@ -9,7 +9,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-fn(4574);
+fn(4605);
 let createStyles = { container: null, splitDivider: null, additionalHeight: null };
 createStyles = {
   position: "absolute",
@@ -23,7 +23,7 @@ createStyles.splitDivider = {
   borderLeftColor: nativeDefault.colors.APP_FRAME_BORDER,
   borderLeftWidth: nativeDefault.modules.mobile.CHANNEL_DRAWER_DIVIDER_WIDTH,
 };
-createStyles.additionalHeight = { height: fn(7878).HEADER_CORNER_RADIUS };
+createStyles.additionalHeight = { height: fn(7915).HEADER_CORNER_RADIUS };
 let closure_6 = createStyles.createStyles(createStyles);
 const __initData = {
   code: "function ChannelScreenAnimatedFrameTsx1(){const{translateX,maxWidth,isChatLockedOpen,withTiming,STANDARD_EASING,SIDE_PANEL_CLOSE_DURATION_MS,SIDE_PANEL_OPEN_DURATION_MS}=this.__closure;const hide=translateX.get()===maxWidth||isChatLockedOpen;return{opacity:withTiming(hide?0:1,{easing:STANDARD_EASING,duration:hide?SIDE_PANEL_CLOSE_DURATION_MS:SIDE_PANEL_OPEN_DURATION_MS})};}",

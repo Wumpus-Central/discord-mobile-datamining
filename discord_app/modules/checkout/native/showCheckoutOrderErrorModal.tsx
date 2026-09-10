@@ -198,6 +198,6 @@ export const showCheckoutOrderErrorModal = function showCheckoutOrderErrorModal(
     obj = {};
     const merged1 = Object.assign(merged);
     obj = { dismissable: obj.dismissable };
-    closure_0(4920).openAlert(key, closure_1_5(SyncedLoadingAlertModal, obj), onCloseCallback, obj);
+    closure_0(4951).openAlert(key, closure_1_5(SyncedLoadingAlertModal, obj), onCloseCallback, obj);
   });
 };

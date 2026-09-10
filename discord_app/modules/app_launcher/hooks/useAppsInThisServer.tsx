@@ -4,8 +4,8 @@ import noop from "../../../../_runtime/metro/00019__.js";
 import UserStore from "../../../stores/UserStore.tsx";
 
 const require = fn;
-const useGuildIndexState = fn(9322).useGuildIndexState;
-const limit = fn(5013).DISCOVERY_COMMANDS_QUERY_LIMIT;
+const useGuildIndexState = fn(9359).useGuildIndexState;
+const limit = fn(5049).DISCOVERY_COMMANDS_QUERY_LIMIT;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/app_launcher/hooks/useAppsInThisServer.tsx");
 

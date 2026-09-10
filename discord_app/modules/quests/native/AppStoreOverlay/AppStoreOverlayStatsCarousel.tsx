@@ -3,7 +3,7 @@ import nativeDefault from "../../../../../discord_common/js/packages/tokens/nati
 import util from "../../../../intl/index.native.tsx";
 import PlatformUtils from "../../../../utils/PlatformUtils.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
-import LegacyBaseButton from "../../../../../_runtime/06669_LegacyBaseButton.js";
+import LegacyBaseButton from "../../../../../_runtime/06705_LegacyBaseButton.js";
 import AppStoreOverlayStatCardUtils from "AppStoreOverlayStatCardUtils.tsx";
 import AppStoreOverlayStarRatingDefault from "AppStoreOverlayStarRating.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
@@ -135,7 +135,7 @@ get_ActivityIndicator = fn(17);
 ({ Pressable: c3, ScrollView: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7, Fragment: closure_8 } = jsxProd);
-fn(4574);
+fn(4605);
 let createStyles = {
   carousel: null,
   carouselContent: null,

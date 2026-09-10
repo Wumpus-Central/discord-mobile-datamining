@@ -18,8 +18,8 @@ function SwitchTiersButton(activeSubscription) {
   activeSubscription = activeSubscription.activeSubscription;
   const activeListingId = activeSubscription.activeListingId;
   const changeToListingId = activeSubscription.changeToListingId;
-  changeToListingId(15259);
-  let obj1 = activeListingId(4166)(activeSubscription.currentPeriodEnd);
+  changeToListingId(15308);
+  let obj1 = activeListingId(4196)(activeSubscription.currentPeriodEnd);
   let obj = { children: null };
   obj = { variant: "text-xs/normal", color: "text-muted", children: null };
   const intl = activeSubscription(1114).intl;
@@ -30,7 +30,7 @@ function SwitchTiersButton(activeSubscription) {
   };
   obj.children = intl.format(activeSubscription(1114).t.lA7ztO, obj1);
   const items = [
-    closure_12(activeSubscription(4570).Text, obj),
+    closure_12(activeSubscription(4601).Text, obj),
     closure_12(activeSubscription(1178).Spacer, { size: 16 }),
   ];
   const obj2 = { text: null, onPress: null };
@@ -38,9 +38,9 @@ function SwitchTiersButton(activeSubscription) {
   obj2.text = intl2.string(activeSubscription(1114).t.SACegK);
   obj2.onPress = function onPress() {
     const obj = { activeSubscription, activeListingId, changeToListingId };
-    obj.openLazy(asyncRequireImpl(16582, dependencyMap.paths), "ChangeSubscriptionCard:" + changeToListingId, obj);
+    obj.openLazy(asyncRequireImpl(16637, dependencyMap.paths), "ChangeSubscriptionCard:" + changeToListingId, obj);
   };
-  items[2] = closure_12(activeSubscription(16575).ArrowButton, obj2);
+  items[2] = closure_12(activeSubscription(16630).ArrowButton, obj2);
   obj.children = items;
   return closure_13(View, obj);
 }

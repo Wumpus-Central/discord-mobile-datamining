@@ -76,7 +76,7 @@ function ReactionNotificationBodyWrapper(arg0) {
   noop = tmp4;
   const AnimateEmoji = message(1935).AnimateEmoji;
   const setting = AnimateEmoji.useSetting();
-  let obj = message(10163);
+  let obj = message(10201);
   const previewableMedia = obj.usePreviewableMedia(message);
   const items = [setting, reaction, , ,];
   ({ imageEmoji: arr[2], textEmoji: arr[3], italic: arr[4] } = tmp4);
@@ -218,9 +218,9 @@ function ReactionNotificationBodyWrapper(arg0) {
     return { text, secondaryText: null };
   }, items1);
   ({ secondaryText, text } = memo);
-  let obj1 = message(10126);
+  let obj1 = message(10164);
   const hasPreviewableMedia = obj1.useHasPreviewableMedia(message);
-  let obj2 = message(10172);
+  let obj2 = message(10210);
   if (hasPreviewableMedia) {
     message = obj2.useGetInitialMessagePreview({ message });
   }
@@ -273,7 +273,7 @@ function ReactorNotificationIcon(notification) {
   tmp = closure_13();
 }
 const View = fn(17).View;
-const InAppNotificationConstants = fn(10127);
+const InAppNotificationConstants = fn(10165);
 ({ IN_APP_NOTIFICATION_MAX_HEIGHT: metroRequire, NOTIFICATION_PREVIEW_LINE_CLAMP: closure_7 } =
   InAppNotificationConstants);
 const Constants = fn(1074);
@@ -281,7 +281,7 @@ const Constants = fn(1074);
 const Fonts = fn(1085).Fonts;
 const jsxProd = fn(21);
 ({ jsx: c10, Fragment: closure_11, jsxs: closure_12 } = jsxProd);
-fn(4574);
+fn(4605);
 let createStyles = {
   newContainerRoleDot: { paddingRight: 4, paddingTop: 0 },
   container: { flexDirection: "column" },
@@ -418,7 +418,7 @@ export default function ReactionNotification(notification) {
   }, items3);
   const callback1 = obj1.useCallback(() => {
     const obj = { channelId: id };
-    return obj.pushLazy(asyncRequireImpl(10174, dependencyMap.paths), obj);
+    return obj.pushLazy(asyncRequireImpl(10212, dependencyMap.paths), obj);
   }, items4);
   obj = {
     icon: closure_10(ReactorNotificationIcon, { notification, isMilestone: result }),

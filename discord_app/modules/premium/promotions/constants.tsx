@@ -1,7 +1,7 @@
 // discord_app/modules/premium/promotions/constants.tsx
 import size from "../../../../_runtime/metro/00002__.js";
 
-const items = ["logitech", "call_of_duty"];
+const items = ["logitech", "call_of_duty", "youtube"];
 const result = size.fileFinishedImporting("modules/premium/promotions/constants.tsx");
 
 export const CountryListMode = { BLOCKLIST: "blocklist", ALLOWLIST: "allowlist" };

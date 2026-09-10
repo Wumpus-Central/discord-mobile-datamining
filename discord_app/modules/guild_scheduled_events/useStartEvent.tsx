@@ -82,14 +82,14 @@ export default function useStartEvent() {
               c6 = 1;
               c7 = 3;
               c8 = 1;
-              const obj2 = { value: closure_1(9843).preStartEventActions(closure_131_0, closure_131_3), done: false };
+              const obj2 = { value: closure_1(9881).preStartEventActions(closure_131_0, closure_131_3), done: false };
               return obj2;
             }
           } else {
             if (2 === tmp7) {
               c6 = 0;
               closure_131_5 = closure_5;
-              const aPIError = new closure_0(4475).APIError(closure_131_5);
+              const aPIError = new closure_0(4506).APIError(closure_131_5);
               closure_131_4 = aPIError;
               closure_132_1(closure_131_4);
               closure_132_0(false);
@@ -105,7 +105,7 @@ export default function useStartEvent() {
                 const obj3 = { value, done: true };
                 return obj3;
               } else {
-                let obj7 = closure_1(9843);
+                let obj7 = closure_1(9881);
                 c7 = 4;
                 c8 = 1;
                 let obj4 = { value: obj7.setEventAsActive(closure_131_0, closure_131_1), done: false };
@@ -121,7 +121,7 @@ export default function useStartEvent() {
                 const obj5 = { value, done: true };
                 return obj5;
               } else {
-                obj4 = closure_0(9844);
+                obj4 = closure_0(9882);
                 c7 = 5;
                 c8 = 1;
                 const obj6 = { value: obj4.navigateToEvent(closure_131_0, closure_131_2), done: false };
@@ -137,7 +137,7 @@ export default function useStartEvent() {
                 obj7 = { value, done: true };
                 return obj7;
               } else {
-                obj1 = closure_0(9844);
+                obj1 = closure_0(9882);
                 c7 = 6;
                 c8 = 1;
                 const obj8 = { value: obj1.postStartActions(closure_131_0, closure_131_2), done: false };

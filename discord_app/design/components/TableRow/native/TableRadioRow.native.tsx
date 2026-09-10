@@ -35,9 +35,9 @@ export const TableRadioRow = function TableRadioRow(value) {
   if (legacyCompat_selected == null) {
     legacyCompat_selected = context.selectedValue === value;
   }
-  let tmp2Result = tmp2(4277);
+  let tmp2Result = tmp2(4308);
   const nodeText = tmp2Result.getNodeText(label);
-  tmp2Result = tmp2(4277);
+  tmp2Result = tmp2(4308);
   const nodeText1 = tmp2Result.getNodeText(subLabel);
   const radioA11yNative = useA11yRolesNative.useRadioA11yNative({ selected: legacyCompat_selected, disabled });
   ({ accessibilityRole, accessibilityState } = radioA11yNative);

@@ -40,11 +40,11 @@ let closure_12 = async function _postMessageToWebView(arg0) {
   }
   return value;
 };
-const isLaunched = fn(9543).isLaunched;
+const isLaunched = fn(9581).isLaunched;
 const ComponentActions = fn(1074).ComponentActions;
 let closure_7 = fn(1920).DISALLOWED_NAVIGATION_ERROR_CLOSE_ACTIVITY;
-const TransportTypes = fn(4479).TransportTypes;
-const WebView = fn(8326);
+const TransportTypes = fn(4510).TransportTypes;
+const WebView = fn(8363);
 const React7 = WebView.getWebViewProxy("FRAME_WEB_VIEW_KEY");
 const PlatformUtils = fn(1116);
 let nativeEventEmitter = null;

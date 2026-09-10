@@ -1,7 +1,7 @@
 // discord_app/modules/collectibles/useCollectiblesShopStyles.native.tsx
 import nativeDefault from "../../../discord_common/js/packages/tokens/native.tsx";
 import createUseCollectiblesShopStylesDefault from "createUseCollectiblesShopStyles.tsx";
-import tinycolor from "../../../_runtime/07566_tinycolor.js";
+import tinycolor from "../../../_runtime/07604_tinycolor.js";
 
 const importDefaultResultResult = tinycolor(nativeDefault.unsafe_rawColors.WHITE);
 const saturateResult = tinycolor(nativeDefault.unsafe_rawColors.WHITE).saturate(1);

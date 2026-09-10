@@ -3,7 +3,7 @@ import noop from "../../../_runtime/metro/00019__.js";
 import ApplicationCommandFrecencyStore from "ApplicationCommandFrecencyStore.tsx";
 
 const require = fn;
-let ApplicationCommandFrecencyStore = fn(9324);
+let ApplicationCommandFrecencyStore = fn(9361);
 ({ getFilteredTopCommands: c3, getTopRealCommands: closure_4 } = ApplicationCommandFrecencyStore);
 const UserSettingsTypes = fn(1084).UserSettingsTypes;
 const size = fn(2);

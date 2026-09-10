@@ -6,8 +6,8 @@ import AnalyticsUtilsDefault from "../../../utils/AnalyticsUtils.tsx";
 import GuildBoostingUtils from "../../../utils/GuildBoostingUtils.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import components_Button_Button from "../../../design/components/Button/native/Button.native.tsx";
-import _modDef5611 from "../../../../_runtime/metro/05611__.js";
-import _modDef13634 from "../../../../_runtime/metro/13634__.js";
+import _modDef5647 from "../../../../_runtime/metro/05647__.js";
+import _modDef13683 from "../../../../_runtime/metro/13683__.js";
 import PremiumGuildPreviewDefault from "PremiumGuildPreview.tsx";
 import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
 import noop from "../../../../_runtime/metro/00019__.js";
@@ -29,7 +29,7 @@ function PendingCancellationWarning(slots) {
     tmp5 = null;
     if (null != stateFromStores) {
       obj = { style: tmp.pendingCancellation, children: null };
-      obj = { style: tmp.pendingCancellationIcon, source: _modDef5611 };
+      obj = { style: tmp.pendingCancellationIcon, source: _modDef5647 };
       const items1 = [closure_1_19(timestampProducer, obj)];
       const obj1 = { style: tmp.pendingCancellationMessage, variant: "text-sm/medium", children: null };
       const intl = util.intl;
@@ -47,7 +47,7 @@ function SubscribeConfirmation(arg0) {
   ({ guild, isModifyingSubscription } = arg0);
   const tmp = closure_22();
   let obj = { children: null };
-  obj = { style: tmp.subscribeImage, source: _modDef13634 };
+  obj = { style: tmp.subscribeImage, source: _modDef13683 };
   const items = [closure_1_19(timestampProducer, obj), , , , ,];
   obj = { style: tmp.header, variant: "heading-lg/extrabold", color: "mobile-text-heading-primary", children: null };
   const intl = util.intl;
@@ -80,7 +80,7 @@ function TransferConfirmation(previousGuildSubscriptionSlots) {
   const onPremiumGuildSubscribe = previousGuildSubscriptionSlots.onPremiumGuildSubscribe;
   ({ guild, isModifyingSubscription } = previousGuildSubscriptionSlots);
   const tmp = closure_22();
-  let obj = prop(13644);
+  let obj = prop(13693);
   const guildSubscriptionRemovalSource = obj.useGuildSubscriptionRemovalSource();
   let obj1 = prop(504);
   const items = [GuildStore];
@@ -110,24 +110,24 @@ function TransferConfirmation(previousGuildSubscriptionSlots) {
     };
     const intl = tmp2(1114).intl;
     obj2.children = intl.string(tmp2(1114).t.h92jfS);
-    items1[1] = closure_19(tmp2(4570).Text, obj2);
+    items1[1] = closure_19(tmp2(4601).Text, obj2);
     const obj3 = { style: tmp.blurb, variant: "text-sm/medium", children: null };
     const intl2 = tmp2(1114).intl;
     const obj4 = { slotCount: prop.length, guildCount: 1 };
     obj3.children = intl2.format(tmp2(1114).t.SSA2lu, obj4);
-    items1[2] = closure_19(tmp2(4570).Text, obj3);
+    items1[2] = closure_19(tmp2(4601).Text, obj3);
     const obj5 = { style: tmp.transferPreviews, children: null };
     const obj6 = { style: tmp.previewHeader, variant: "eyebrow", color: "text-default", children: null };
     const intl3 = tmp2(1114).intl;
     obj6.children = intl3.format(tmp2(1114).t["5zQYEz"], { guildCount: 1 });
-    const items2 = [closure_19(tmp2(4570).Text, obj6), , ,];
+    const items2 = [closure_19(tmp2(4601).Text, obj6), , ,];
     const obj7 = { style: tmp.guildPreview, guild: stateFromStores };
-    items2[1] = closure_19(onPremiumGuildSubscribe(13635), obj7);
+    items2[1] = closure_19(onPremiumGuildSubscribe(13684), obj7);
     const obj8 = { style: tmp.previewHeader, variant: "eyebrow", color: "text-default", children: null };
     const intl4 = tmp2(1114).intl;
     const obj9 = { slotCount: prop.length };
     obj8.children = intl4.format(tmp2(1114).t.ct6oxD, obj9);
-    items2[2] = closure_19(tmp2(4570).Text, obj8);
+    items2[2] = closure_19(tmp2(4601).Text, obj8);
     const obj10 = { style: null, start: null, end: null, colors: null, children: null };
     const items3 = [,];
     ({ guildPreview: arr5[0], activeTransferGuildCardBorder: arr5[1] } = tmp);
@@ -136,8 +136,8 @@ function TransferConfirmation(previousGuildSubscriptionSlots) {
     obj10.end = tmp2(1093).HorizontalGradient.END;
     obj10.colors = Gradients.PREMIUM_GUILD;
     const obj11 = { guild };
-    obj10.children = closure_19(onPremiumGuildSubscribe(13635), obj11);
-    items2[3] = closure_19(onPremiumGuildSubscribe(5001), obj10);
+    obj10.children = closure_19(onPremiumGuildSubscribe(13684), obj11);
+    items2[3] = closure_19(onPremiumGuildSubscribe(5037), obj10);
     obj5.children = items2;
     items1[3] = closure_20(closure_7, obj5);
     const obj12 = { slots: prop };
@@ -151,11 +151,11 @@ function TransferConfirmation(previousGuildSubscriptionSlots) {
       return onPremiumGuildSubscribe(true);
     };
     obj14.loading = isModifyingSubscription;
-    obj13.children = closure_19(tmp2(4989).Button, obj14);
+    obj13.children = closure_19(tmp2(5025).Button, obj14);
     items1[5] = closure_19(closure_7, obj13);
     obj.children = items1;
     tmp8 = closure_20(closure_21, obj);
-    const tmp15 = onPremiumGuildSubscribe(5001);
+    const tmp15 = onPremiumGuildSubscribe(5037);
   }
   return tmp8;
 }
@@ -174,11 +174,11 @@ const Constants = fn(1074);
   AnalyticsSections: closure_15,
   GUILD_BOOST_APPLY_COOLDOWN_DAYS: closure_16,
 } = Constants);
-const Gradients = fn(7446).Gradients;
-const BoostPurchaseIntent = fn(4464).BoostPurchaseIntent;
+const Gradients = fn(7484).Gradients;
+const BoostPurchaseIntent = fn(4495).BoostPurchaseIntent;
 const jsxProd = fn(21);
 ({ jsx: closure_19, jsxs: closure_20, Fragment: closure_21 } = jsxProd);
-fn(4574);
+fn(4605);
 let createStyles = {
   content: { paddingHorizontal: 24, marginBottom: 24 },
   scrollableContent: { alignItems: "center", width: "100%" },
@@ -208,7 +208,7 @@ createStyles = {
   borderWidth: null,
   width: "100%",
 };
-const ColorUtils = fn(4423);
+const ColorUtils = fn(4454);
 createStyles.backgroundColor = ColorUtils.hexWithOpacity(nativeDefault.unsafe_rawColors.YELLOW_300, 0.1);
 createStyles.borderRadius = nativeDefault.radii.xs;
 createStyles.borderColor = nativeDefault.unsafe_rawColors.YELLOW_300;

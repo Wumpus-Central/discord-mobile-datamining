@@ -4,6 +4,7 @@ import size from "../../../_runtime/metro/00002__.js";
 const result = size.fileFinishedImporting("modules/multi_account/Constants.tsx");
 
 export const MAX_ACCOUNTS = 5;
+export const MAX_PUSH_SYNC_ACCOUNTS = 5;
 export const SWITCH_ACCOUNTS_MODAL_KEY = "switch-accounts-modal";
 export const MULTI_ACCOUNT_LOGIN_MODAL_KEY = "multiaccount-login-modal";
 export const MULTIACCOUNT_TOOLTIP_SEEN_KEY = "multiaccount_cta_tooltip_seen";

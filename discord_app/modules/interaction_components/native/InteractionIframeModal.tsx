@@ -11,7 +11,7 @@ const View = fn(17).View;
 const BotTagTypes = fn(1350).BotTagTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-fn(4574);
+fn(4605);
 let createStyles = {
   wrapper: null,
   header: null,
@@ -77,7 +77,7 @@ export default function InteractionIframeModal(children) {
       referrerPolicy: "origin",
       isPipOrGridMode: false,
       webViewKey: "PX_16",
-      ignoreSilentHardwareSwitch: "dyrke",
+      ignoreSilentHardwareSwitch: "gutt",
     };
     ({ channel_id: obj2.channelId, guild_id: obj2.guildId } = queryParams);
     obj.activityUrl = iframeModalState.iframeUrl;

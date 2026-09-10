@@ -4,8 +4,8 @@ import util from "../../../../intl/index.native.tsx";
 import native from "../../../../design/void/native.tsx";
 import useA11yRolesNative from "../../../../../discord_common/js/packages/design/hooks/useA11yRolesNative.tsx";
 import TouchableHitBoxDefault from "../../../../design/void/TouchableHitBox/native/TouchableHitBox.tsx";
-import _modDef17798 from "../../../../../_runtime/metro/17798__.js";
-import _modDef17799 from "../../../../../_runtime/metro/17799__.js";
+import _modDef17857 from "../../../../../_runtime/metro/17857__.js";
+import _modDef17858 from "../../../../../_runtime/metro/17858__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import TextStyles from "../../../rebrand/native/TextStyles.tsx";
 
@@ -46,11 +46,11 @@ function Row(arg0) {
   return timestampProducer(TouchableHitBoxDefault, obj);
 }
 const View = fn(17).View;
-const AllChannelAccessOptions = fn(15260).AllChannelAccessOptions;
+const AllChannelAccessOptions = fn(15309).AllChannelAccessOptions;
 const Fonts = fn(1074).Fonts;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-fn(4574);
+fn(4605);
 let createStyles = {
   container: null,
   row: null,
@@ -90,7 +90,7 @@ export default function AllChannelsSwitch(style) {
   let obj = { style: null, accessibilityRole: "radiogroup", accessibilityState: { disabled }, children: null };
   const items = [tmp.container, style.style];
   obj.style = items;
-  obj = { icon: _modDef17798, label: null, selected: null, onPress: null, disabled: null };
+  obj = { icon: _modDef17857, label: null, selected: null, onPress: null, disabled: null };
   const intl = util.intl;
   obj.label = intl.string(util.t["vs2T+B"]);
   obj.selected = channelAccessFormat === AllChannelAccessOptions.SOME_CHANNELS_ACCESS;
@@ -101,7 +101,7 @@ export default function AllChannelsSwitch(style) {
   const items1 = [closure_5(Row, obj), ,];
   obj = { style: tmp.separator };
   items1[1] = closure_5(View, obj);
-  const obj1 = { icon: _modDef17799, label: null, selected: null, onPress: null, disabled: null };
+  const obj1 = { icon: _modDef17858, label: null, selected: null, onPress: null, disabled: null };
   const intl2 = util.intl;
   obj1.label = intl2.string(util.t.l4Tr7X);
   obj1.selected = channelAccessFormat === AllChannelAccessOptions.ALL_CHANNELS_ACCESS;

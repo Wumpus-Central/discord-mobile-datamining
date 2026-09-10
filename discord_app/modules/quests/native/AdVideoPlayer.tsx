@@ -6,7 +6,7 @@ import timing from "../../../design/animation/reanimated/timing/timing.tsx";
 import timingPresets from "../../../design/animation/reanimated/timing/timingPresets.tsx";
 import spring from "../../../design/animation/reanimated/spring/spring.tsx";
 import springPresets from "../../../design/animation/reanimated/spring/springPresets.tsx";
-import _modDef8336 from "../../../../_runtime/metro/08336__.js";
+import _modDef8373 from "../../../../_runtime/metro/08373__.js";
 import AdsVideoTypes from "AdsVideoTypes.tsx";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
@@ -26,7 +26,7 @@ let rect = {
   top: nativeDefault.space.PX_16,
   bottom: nativeDefault.space.PX_16,
 };
-const _isNativeReflectConstruct = noop.memo(_modDef8336);
+const _isNativeReflectConstruct = noop.memo(_modDef8373);
 function hasVideoEnded(arg0, arg1) {
   return arg0 >= arg1 - 1;
 }
@@ -55,7 +55,7 @@ canSeekForward.__workletHash = 14098132092693;
 canSeekForward.__initData = {
   code: "function canSeekForward_AdVideoPlayerTsx2(currentTime,maxTimestamp,videoDuration,allowUnrestrictedSeeking){const{hasVideoEnded}=this.__closure;return!hasVideoEnded(currentTime,videoDuration)&&(allowUnrestrictedSeeking||currentTime<=maxTimestamp-1);}",
 };
-fn(4574);
+fn(4605);
 let obj = {
   container: null,
   loadingContainer: null,

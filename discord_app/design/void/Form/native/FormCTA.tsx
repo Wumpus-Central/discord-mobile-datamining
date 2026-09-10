@@ -10,7 +10,7 @@ require = fn;
 const View = fn(17).View;
 const Fonts = fn(1085).Fonts;
 const jsx = fn(21).jsx;
-fn(4574);
+fn(4605);
 let createStyles = { form: null, title: null, description: null, icon: null, completedIcon: null, completedText: null };
 createStyles = {
   borderRadius: nativeDefault.radii.xs,
@@ -107,7 +107,7 @@ export default function FormCTA(arg0) {
     obj1.label = jsx(FormRowDefault.Label, { style: null, text: null });
     obj1.subLabel = tmp9Result;
     if (completed) {
-      FormCheckbox = FormCheckbox(5631).FormCheckbox;
+      FormCheckbox = FormCheckbox(5667).FormCheckbox;
       const obj4 = { checked: true };
       trailing = <FormCheckbox checked />;
     } else if (trailing == null) {

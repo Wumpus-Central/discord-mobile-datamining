@@ -16,7 +16,7 @@ function handlePress() {
   const intl = util.intl;
   obj = { premiumGroupProductName: closure_5() };
   obj.aboutText = intl.formatToPlainString(_modDef3074["5xN/C1"], obj);
-  obj.openLazy(asyncRequireImpl(13543, dependencyMap.paths), "PremiumGroupEducationActionSheet", obj);
+  obj.openLazy(asyncRequireImpl(13592, dependencyMap.paths), "PremiumGroupEducationActionSheet", obj);
 }
 ({ TouchableOpacity: c3, View: closure_4 } = get_ActivityIndicator);
 let closure_5 = PremiumGroupConstants.getPremiumGroupProductName;

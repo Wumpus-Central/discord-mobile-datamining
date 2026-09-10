@@ -17,7 +17,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_8, Fragment: closure_9, jsxs: c10 } = jsxProd);
-fn(4574);
+fn(4605);
 const createStyles = {
   description: { paddingHorizontal: 16 },
   coverPhotoContainer: { marginHorizontal: 16 },

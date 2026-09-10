@@ -1,7 +1,7 @@
 // discord_app/design/components/mana-assets/native/generated/AccountAgeTier5SmallBadge.native.tsx
 import jsxProd from "../../../../../../_runtime/react/00021_jsxProd.js";
 import FastImageDefault from "../../../../../components_native/common/FastImage.tsx";
-import _modDef5730 from "../../../../../../discord_assets/assets/mana/asset-library/generated/AccountAgeTier5SmallBadge-2x.png.js";
+import _modDef5766 from "../../../../../../discord_assets/assets/mana/asset-library/generated/AccountAgeTier5SmallBadge-2x.png.js";
 import size from "../../../../../../_runtime/metro/00002__.js";
 
 const jsx = jsxProd.jsx;
@@ -31,7 +31,7 @@ export const AccountAgeTier5SmallBadge = function AccountAgeTier5SmallBadge(widt
     accessibilityLabel: null,
     resizeMode: null,
   };
-  obj = { uri: _modDef5730 };
+  obj = { uri: _modDef5766 };
   obj.source = obj;
   const size = { width: num * num3, height: num2 * num3 };
   const items = [size];
@@ -39,5 +39,5 @@ export const AccountAgeTier5SmallBadge = function AccountAgeTier5SmallBadge(widt
   obj.accessible = accessible;
   obj.accessibilityLabel = accessibilityLabel;
   obj.resizeMode = resizeMode;
-  return jsx(FastImageDefault, { uri: _modDef5730 });
+  return jsx(FastImageDefault, { uri: _modDef5766 });
 };

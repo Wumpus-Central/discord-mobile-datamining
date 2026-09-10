@@ -37,11 +37,11 @@ import UserStore from "../../stores/UserStore.tsx";
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, StyleSheet } = get_ActivityIndicator);
-const RowGeneratorConstants = fn(7947);
+const RowGeneratorConstants = fn(7985);
 ({ Changeset: c10, RowType: closure_11, SeparatorType: closure_12 } = RowGeneratorConstants);
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
-fn(4574);
+fn(4605);
 let createStyles = {
   chat: { flex: 1, overflow: "hidden" },
   containerInner: null,
@@ -274,8 +274,8 @@ class ChatPreviewBase extends PureComponent {
             jumpType: "flex",
             shouldInitialScroll: "Array",
             animated: 0,
-            scrollPosition: 2,
-            focusTargetId: 0,
+            scrollPosition: 45,
+            focusTargetId: 10,
           };
           tmp23 = computeScrollDataDefault(obj);
         }
@@ -303,7 +303,7 @@ class ChatPreviewBase extends PureComponent {
       if (null != jumpTargetId) {
         const resolved = Promise.resolve();
         resolved.then(() => {
-          applyArgumentsResult(4585).transitionToMessage(closure_1_0, jumpTargetId, { navigationReplace: true });
+          applyArgumentsResult(4616).transitionToMessage(closure_1_0, jumpTargetId, { navigationReplace: true });
         });
       }
     };
@@ -335,15 +335,15 @@ class ChatPreviewBase extends PureComponent {
           }
           channel = channel.getChannel(arg1);
           if (null != channel) {
-            applyArgumentsResult(4585);
+            applyArgumentsResult(4616);
             const obj = { source, navigationReplace: true };
             obj.transitionToThread(channel, obj);
           }
         },
         message: applyArgumentsResult.getMessage(data.messageId),
-        messageChannel: "asc",
-        selectedChannelId: "asc",
-        tapLinkData: "isInRestrictedHours",
+        messageChannel: 58.939,
+        selectedChannelId: 4.707,
+        tapLinkData: 88.409,
       };
       channel = applyArgumentsResult.props.channel;
       obj.messageChannel = channel;
@@ -539,10 +539,18 @@ prototype["render"] = function render() {
       ({ guild_id: obj8.guildId, id: obj8.channelId } = channel);
       let tmp14 = map1(GuildNSFWDefault, obj);
     }
-    obj = { style: tmp.containerInner, children: null };
-    const items = [tmp14, tmp6Result];
-    obj.children = items;
-    return closure_1_14(hasOwnProperty, obj);
+    const items = [tmp.containerInner];
+    let tmp24 = null != self.props.backgroundColor;
+    if (tmp24) {
+      obj = { backgroundColor: self.props.backgroundColor };
+      tmp24 = obj;
+    }
+    let obj1 = { style: null, children: null };
+    items[1] = tmp24;
+    obj1.style = items;
+    const items1 = [tmp14, tmp6Result];
+    obj1.children = items1;
+    return closure_1_14(hasOwnProperty, obj1);
   }
   if (isSpoilerHidden) {
     let guild_id1;
@@ -550,9 +558,9 @@ prototype["render"] = function render() {
       guild_id1 = channel.guild_id;
     }
     if (null != guild_id1) {
-      let obj1 = { guildId: null, channelId: null };
       ({ guild_id: obj7.guildId, id: obj7.channelId } = channel);
-      tmp14 = map1(ChannelSpoilerDefault, obj1);
+      tmp14 = map1(ChannelSpoilerDefault, { guildId: null, channelId: null });
+      const obj2 = { guildId: null, channelId: null };
     }
   }
   obj = {
@@ -583,8 +591,8 @@ prototype["render"] = function render() {
   }
   obj.onFirstLayout = prop1;
   map1(tmp8, obj);
-  const obj2 = { bottom: true, style: tmp.jumpToChatButtonContainer, children: null };
-  const obj3 = {
+  const obj3 = { bottom: true, style: tmp.jumpToChatButtonContainer, children: null };
+  const obj4 = {
     accessibilityRole: "button",
     style: tmp.jumpToChatButton,
     onPress: self.handleJumpToChat,
@@ -595,10 +603,10 @@ prototype["render"] = function render() {
       children: self.props.jumpToChatProps.jumpToChatText,
     }),
   };
-  obj2.children = map1(Pressables.PressableOpacity, obj3);
-  tmp6Result = map1(common_SafeAreaView.SafeAreaPaddingView, obj2);
+  obj3.children = map1(Pressables.PressableOpacity, obj4);
+  tmp6Result = map1(common_SafeAreaView.SafeAreaPaddingView, obj3);
   tmp14 = tmp6Result;
-  const obj4 = {
+  const obj5 = {
     style: tmp.jumpToChatText,
     variant: "text-md/medium",
     color: "interactive-text-default",
@@ -606,7 +614,7 @@ prototype["render"] = function render() {
   };
   tmp9Result = PlatformUtils;
 };
-ChatPreviewBase.contextType = fn(4284).ThemeContext;
+ChatPreviewBase.contextType = fn(4315).ThemeContext;
 ChatPreviewBase.defaultProps = { withSafeArea: true };
 const size = fn(2);
 let result = size.fileFinishedImporting("components_native/common/ChatPreview.tsx");
@@ -625,10 +633,10 @@ export const ChatPreview = function ChatPreview(channelId) {
   const items1 = [ChannelStore];
   const stateFromStores1 = channelId(504).useStateFromStores(items1, () => ChannelStore.getChannel(channelId));
   const obj2 = channelId(504);
-  const isChannelSpoilerGated = channelId(7343).useIsChannelSpoilerGated(stateFromStores1);
-  const obj3 = channelId(7343);
-  const isChannelContentGated = channelId(4785).useIsChannelContentGated(stateFromStores1);
-  const obj4 = channelId(4785);
+  const isChannelSpoilerGated = channelId(7381).useIsChannelSpoilerGated(stateFromStores1);
+  const obj3 = channelId(7381);
+  const isChannelContentGated = channelId(4816).useIsChannelContentGated(stateFromStores1);
+  const obj4 = channelId(4816);
   const items2 = [ActionSheetStore];
   obj = {};
   const stateFromStores2 = channelId(504).useStateFromStores(items2, () => null != content.getContent());

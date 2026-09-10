@@ -9,7 +9,7 @@ const ScrollView = fn(17).ScrollView;
 const MarketingURLs = fn(1074).MarketingURLs;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-fn(4574);
+fn(4605);
 let createStyles = {
   flex: { flex: 1 },
   contentContainer: null,
@@ -46,7 +46,7 @@ export default function CreateGuild(arg0) {
   if (currentUser != null) {
     isStaffResult = currentUser.isStaff();
   }
-  let obj1 = isScreenReaderEnabled(4976);
+  let obj1 = isScreenReaderEnabled(5012);
   isScreenReaderEnabled = obj1.useIsScreenReaderEnabled();
   ref = noop.useRef(null);
   const items = [isScreenReaderEnabled];
@@ -82,15 +82,15 @@ export default function CreateGuild(arg0) {
     customTitle = intl.string(tmp4(1114).t.XioBx6);
   }
   obj.children = customTitle;
-  const items1 = [closure_7(isScreenReaderEnabled(4570).Text, obj), , , , , , ,];
+  const items1 = [closure_7(isScreenReaderEnabled(4601).Text, obj), , , , , , ,];
   obj1 = { style: tmp.description, variant: "text-sm/medium", color: "text-default", children: null };
   if (customDescription == null) {
     const intl2 = tmp4(1114).intl;
     customDescription = intl2.string(tmp4(1114).t["/k/L/j"]);
   }
   obj1.children = customDescription;
-  items1[1] = closure_7(isScreenReaderEnabled(4570).Text, obj1);
-  items1[2] = closure_7(ref(11829), {
+  items1[1] = closure_7(isScreenReaderEnabled(4601).Text, obj1);
+  items1[2] = closure_7(ref(11869), {
     iconBackgroundColor: tmp.contentContainer.backgroundColor,
     style: tmp.iconUploader,
     onPress: onIconPress,
@@ -120,7 +120,7 @@ export default function CreateGuild(arg0) {
   }
   let tmp9Result = !!isStaffResult;
   obj3.autoFocus = autoFocus;
-  items1[3] = closure_7(isScreenReaderEnabled(6620).TextInput, obj3);
+  items1[3] = closure_7(isScreenReaderEnabled(6656).TextInput, obj3);
   if (tmp9Result) {
     const obj4 = {
       onValueChange: onStaffOnlyChange,
@@ -132,13 +132,13 @@ export default function CreateGuild(arg0) {
     };
     const intl4 = tmp4(1114).intl;
     obj4.subLabel = intl4.string(tmp4(1114).t.edQ5va);
-    tmp9Result = closure_7(tmp4(7214).TableSwitchRow, obj4);
+    tmp9Result = closure_7(tmp4(7252).TableSwitchRow, obj4);
   }
   items1[4] = tmp9Result;
   const obj5 = { style: tmp.hint, variant: "text-xs/medium", color: "text-muted", children: null };
   const intl5 = tmp4(1114).intl;
   obj5.children = intl5.format(isScreenReaderEnabled(1114).t["2bprXx"], { guidelinesURL: MarketingURLs.GUIDELINES });
-  items1[5] = closure_7(isScreenReaderEnabled(4570).Text, obj5);
+  items1[5] = closure_7(isScreenReaderEnabled(4601).Text, obj5);
   const obj7 = { disabled: "" === guild.name, size: "md", grow: true, text: null, onPress: null, loading: null };
   if (customButtonLabel == null) {
     const intl6 = tmp4(1114).intl;
@@ -147,7 +147,7 @@ export default function CreateGuild(arg0) {
   obj7.text = customButtonLabel;
   obj7.onPress = onCreate;
   obj7.loading = submitting;
-  items1[6] = closure_7(isScreenReaderEnabled(4989).Button, obj7);
+  items1[6] = closure_7(isScreenReaderEnabled(5025).Button, obj7);
   let firstFieldErrorMessage1;
   if (error != null) {
     firstFieldErrorMessage1 = error.getFirstFieldErrorMessage("name");
@@ -171,12 +171,12 @@ export default function CreateGuild(arg0) {
           message2 = error.message;
         }
         const obj8 = { children: message2 };
-        tmp9Result = closure_7(ref(6955), obj8);
-        const tmp12Result = ref(6955);
+        tmp9Result = closure_7(ref(6991), obj8);
+        const tmp12Result = ref(6991);
       }
     }
   }
   items1[7] = tmp9Result;
-  obj.children = closure_8(isScreenReaderEnabled(4987).Stack, { children: items1 });
+  obj.children = closure_8(isScreenReaderEnabled(5023).Stack, { children: items1 });
   return closure_7(ScrollView, obj);
 }

@@ -5,7 +5,7 @@ import noop from "../../../../../../_runtime/metro/00019__.js";
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_1, jsxs: c2 } = jsxProd);
-const createStyles = fn(4574);
+const createStyles = fn(4605);
 let obj = {
   pageMarkerContainer: { flex: 1, alignItems: "center", justifyContent: "space-between", flexDirection: "row" },
   circleIcon: null,

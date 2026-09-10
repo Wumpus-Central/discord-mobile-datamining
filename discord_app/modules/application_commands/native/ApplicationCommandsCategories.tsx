@@ -10,10 +10,10 @@ import GuildMemberStore from "../../../stores/GuildMemberStore.tsx";
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, FlatList: hasOwnProperty } = get_ActivityIndicator);
-const ApplicationCommandsCategoriesConstants = fn(12425);
+const ApplicationCommandsCategoriesConstants = fn(12465);
 ({ ICON_SIZE, NODE_SIZE, NODE_MARGIN, ITEM_WIDTH: closure_7 } = ApplicationCommandsCategoriesConstants);
 const jsx = fn(21).jsx;
-fn(4574);
+fn(4605);
 let obj = { container: null, categoryImage: null, fadedItem: null, activeItem: null, item: null };
 obj = {
   backgroundColor: nativeDefault.colors.MOBILE_COMMAND_CATEGORIES_BACKGROUND,
@@ -89,7 +89,7 @@ let closure_10 = noop.memo((section) => {
   const items2 = [tmp.item, active ? tmp.activeItem : tmp.fadedItem];
   obj.children = <stateFromStores style={items2}>{tmp6}</stateFromStores>;
   return jsx(
-    section(5137).PressableOpacity,
+    section(5173).PressableOpacity,
     {
       onPress() {
         return importDefault(dependencyMap);

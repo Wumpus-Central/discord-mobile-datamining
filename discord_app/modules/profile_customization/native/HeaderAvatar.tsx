@@ -9,7 +9,7 @@ const require = fn;
 const View = fn(17).View;
 const ActivityTypes = fn(1074).ActivityTypes;
 const jsx = fn(21).jsx;
-const createStyles = fn(4574);
+const createStyles = fn(4605);
 let obj = { avatarStatusStyle: null };
 obj = { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH };
 obj.avatarStatusStyle = obj;
@@ -74,7 +74,7 @@ export default noop.forwardRef((animate, ref) => {
   });
   const tmp4 = closure_9();
   const tmp9 = id;
-  let obj4 = guildId(8192);
+  let obj4 = guildId(8229);
   let obj = { pendingValue: pendingAvatarDecoration, userValue: null, guildValue: null, guildId: null };
   let avatarDecoration;
   if (user != null) {
@@ -98,25 +98,25 @@ export default noop.forwardRef((animate, ref) => {
     avatarDecoration: null,
   };
   let tmp14 = null;
-  const tmp10 = id(8284);
+  const tmp10 = id(8321);
   if (!disableStatus) {
     tmp14 = status;
   }
   obj.status = tmp14;
   const items4 = [tmp4.avatarStatusStyle, statusStyle];
   obj.statusStyle = items4;
-  obj.streaming = tmp9(8285)(activities);
+  obj.streaming = tmp9(8322)(activities);
   if (flag) {
     flag = !stateFromStores;
   }
   obj.animate = flag;
-  obj.avatarDecoration = id(8284)(obj4.getProfilePreviewValue(obj));
+  obj.avatarDecoration = id(8321)(obj4.getProfilePreviewValue(obj));
   if (null != onPress) {
     obj1 = { ref, onPress, onLongPress: onPress, style, activeOpacity: 0.8, accessibilityRole: "imagebutton" };
     const merged1 = Object.assign(merged);
     if (undefined !== pendingAvatarSrc) {
       obj2 = { source: null };
-      obj = obj(8273);
+      obj = obj(8310);
       avatarSource = obj.getAvatarSource(user, guildId, pendingAvatarSrc, stateFromStores);
       obj2.source = avatarSource;
       obj = Object.assign(obj);
@@ -126,7 +126,7 @@ export default noop.forwardRef((animate, ref) => {
       const merged2 = Object.assign(obj);
     }
     obj1.children = jsx(obj(1178).Avatar, obj3);
-    jsx(obj(5137).PressableOpacity, {
+    jsx(obj(5173).PressableOpacity, {
       ref,
       onPress,
       onLongPress: onPress,
@@ -139,7 +139,7 @@ export default noop.forwardRef((animate, ref) => {
     const merged3 = Object.assign(merged);
     if (undefined !== pendingAvatarSrc) {
       const obj5 = { source: null };
-      const objResult = obj(8273);
+      const objResult = obj(8310);
       obj5.source = objResult.getAvatarSource(user, guildId, pendingAvatarSrc, stateFromStores);
       const merged4 = Object.assign(obj);
       let obj6 = obj5;
@@ -150,5 +150,5 @@ export default noop.forwardRef((animate, ref) => {
     obj4.children = jsx(obj(1178).Avatar, obj6);
     return <View ref={ref} style={style} accessibilityRole="image" accessible />;
   }
-  const tmp10Result = id(8284)(obj4.getProfilePreviewValue(obj));
+  const tmp10Result = id(8321)(obj4.getProfilePreviewValue(obj));
 });

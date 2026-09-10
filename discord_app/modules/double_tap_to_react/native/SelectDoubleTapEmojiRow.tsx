@@ -9,12 +9,12 @@ import AccessibilityStore from "../../a11y/AccessibilityStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-const ACTION_SHEET_MAX_WIDTH = fn(7165).ACTION_SHEET_MAX_WIDTH;
+const ACTION_SHEET_MAX_WIDTH = fn(7203).ACTION_SHEET_MAX_WIDTH;
 const EmojiConstants = fn(1374);
 ({ EMOJI_URL_BASE_SIZE: closure_7, EmojiIntention: closure_8 } = EmojiConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_9, Fragment: c10, jsxs: closure_11 } = jsxProd);
-let createStyles = fn(4574);
+let createStyles = fn(4605);
 let obj = {
   emoji: { width: 24, height: 24 },
   customEmoji: { width: 24, height: 24 },
@@ -129,7 +129,7 @@ let closure_13 = noop.memo((emoji) => {
   obj1.src = url;
   obj.children = closure_9(EmojiDefault, obj1);
   obj.children = closure_9(View, obj);
-  return closure_9(emoji(5137).PressableOpacity, obj);
+  return closure_9(emoji(5173).PressableOpacity, obj);
 });
 let obj6 = { color: nativeDefault.colors.REDESIGN_BUTTON_TERTIARY_TEXT };
 size = fn(2);

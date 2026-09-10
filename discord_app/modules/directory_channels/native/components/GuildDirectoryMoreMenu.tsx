@@ -23,7 +23,7 @@ export default function GuildDirectoryMoreMenu(entry) {
     let obj = { label: null, IconComponent: null, action: null };
     let intl = entry(1114).intl;
     obj.label = intl.string(entry(1114).t.XnuOvN);
-    obj.IconComponent = entry(10282).PencilIcon;
+    obj.IconComponent = entry(10320).PencilIcon;
     obj.action = function handleEdit() {
       const obj = { entry };
       obj.open(obj);
@@ -34,7 +34,7 @@ export default function GuildDirectoryMoreMenu(entry) {
     obj = { label: null, IconComponent: null, variant: "destructive", action: null };
     let intl2 = entry(1114).intl;
     obj.label = intl2.string(entry(1114).t.KUxYWH);
-    obj.IconComponent = entry(4532).TrashIcon;
+    obj.IconComponent = entry(4563).TrashIcon;
     obj.action = function handleRemove() {
       let obj = {
         title: null,
@@ -69,7 +69,7 @@ export default function GuildDirectoryMoreMenu(entry) {
     obj = { label: null, IconComponent: null, variant: "destructive", action: null };
     let intl3 = entry(1114).intl;
     obj.label = intl3.string(entry(1114).t.Aen9eh);
-    obj.IconComponent = entry(8697).FlagIcon;
+    obj.IconComponent = entry(8734).FlagIcon;
     obj.action = function handleReport() {
       const result = ReportModals.showReportModalForGuildDirectoryEntry(entry);
     };
@@ -88,11 +88,11 @@ export default function GuildDirectoryMoreMenu(entry) {
         const intl = entry(1114).intl;
         obj.accessibilityLabel = intl.string(entry(1114).t.PdRCRg);
         obj = { size: "sm", color: nativeDefault.colors.WHITE };
-        obj.icon = jsx(entry(8705).MoreHorizontalIcon, { size: "sm", color: nativeDefault.colors.WHITE });
-        return jsx(entry(8113).IconButton, { size: "sm", color: nativeDefault.colors.WHITE });
+        obj.icon = jsx(entry(8742).MoreHorizontalIcon, { size: "sm", color: nativeDefault.colors.WHITE });
+        return jsx(entry(8150).IconButton, { size: "sm", color: nativeDefault.colors.WHITE });
       },
     };
-    tmp9 = jsx(entry(8699).ContextMenu, {
+    tmp9 = jsx(entry(8736).ContextMenu, {
       items,
       children(ref) {
         const merged = Object.assign(ref, Object.assign({ ref: 0 }));
@@ -103,8 +103,8 @@ export default function GuildDirectoryMoreMenu(entry) {
         const intl = entry(1114).intl;
         obj.accessibilityLabel = intl.string(entry(1114).t.PdRCRg);
         obj = { size: "sm", color: nativeDefault.colors.WHITE };
-        obj.icon = jsx(entry(8705).MoreHorizontalIcon, { size: "sm", color: nativeDefault.colors.WHITE });
-        return jsx(entry(8113).IconButton, { size: "sm", color: nativeDefault.colors.WHITE });
+        obj.icon = jsx(entry(8742).MoreHorizontalIcon, { size: "sm", color: nativeDefault.colors.WHITE });
+        return jsx(entry(8150).IconButton, { size: "sm", color: nativeDefault.colors.WHITE });
       },
     });
   }

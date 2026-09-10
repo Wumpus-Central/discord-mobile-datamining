@@ -11,7 +11,7 @@ get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, Image: metroRequire } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-fn(4574);
+fn(4605);
 let createStyles = {
   container: {
     width: "100%",
@@ -98,7 +98,7 @@ export default function NUFChannelIllustration() {
           const obj = { name: null, avatar: null, message: null };
           const intl2 = closure_1_0(1114).intl;
           obj.name = intl2.string(closure_1_0(1114).t["9m/HsX"]);
-          obj.avatar = closure_1_1(13797);
+          obj.avatar = closure_1_1(13846);
           obj.message = intl.string(closure_1_0(1114).t["5alrl0"]);
           items[tmp] = obj;
           return items;
@@ -113,7 +113,7 @@ export default function NUFChannelIllustration() {
           const obj = { name: null, avatar: null, message: null };
           const intl2 = closure_1_0(1114).intl;
           obj.name = intl2.string(closure_1_0(1114).t["AW1kM+"]);
-          obj.avatar = closure_1_1(13798);
+          obj.avatar = closure_1_1(13847);
           obj.message = intl.string(closure_1_0(1114).t["5Oo+vS"]);
           items[tmp] = obj;
           return items;
@@ -151,22 +151,22 @@ export default function NUFChannelIllustration() {
   obj = { style: tmp.container, children: null };
   obj1 = { source: null, style: null };
   const animatedStyle = obj2.useAnimatedStyle(fn);
-  obj1.source = first(13799);
+  obj1.source = first(13848);
   const items2 = [,];
   ({ starSmall: arr4[0], starBlue: arr4[1] } = tmp);
   obj1.style = items2;
   const items3 = [closure_7(closure_6, obj1), , , , ,];
-  obj2 = { source: first(13800), style: null };
+  obj2 = { source: first(13849), style: null };
   const items4 = [,];
   ({ starMedium: arr6[0], starPink: arr6[1] } = tmp);
   obj2.style = items4;
   items3[1] = closure_7(closure_6, obj2);
-  const obj3 = { source: first(13801), style: null };
+  const obj3 = { source: first(13850), style: null };
   const items5 = [,];
   ({ starMedium: arr7[0], starGreen: arr7[1] } = tmp);
   obj3.style = items5;
   items3[2] = closure_7(closure_6, obj3);
-  const obj4 = { source: first(13802), style: null };
+  const obj4 = { source: first(13851), style: null };
   const items6 = [,];
   ({ starSmall: arr8[0], starPurple: arr8[1] } = tmp);
   obj4.style = items6;
@@ -184,7 +184,7 @@ export default function NUFChannelIllustration() {
   const items9 = [closure_8(closure_5, obj7)];
   const obj9 = {
     style: tmp.content,
-    children: closure_7(first(4310).View, {
+    children: closure_7(first(4341).View, {
       style: animatedStyle,
       children: first.map((children) => {
         let obj = { style: closure_0.message, children: null };

@@ -98,7 +98,7 @@ function RTCDebugGeneral() {
   }
   obj = { title: "general", children: null };
   obj1 = { obj: null };
-  obj2 = { guild: obj, channel: { id: channelId, name: channelId(4727)(stateFromStores1) } };
+  obj2 = { guild: obj, channel: { id: channelId, name: channelId(4758)(stateFromStores1) } };
   obj.name = name;
   obj1.obj = obj2;
   obj.children = closure_14(ObjectKV, obj1);
@@ -149,15 +149,15 @@ function RTCDebugContext(context) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, ScrollView: metroRequire, StyleSheet } = get_ActivityIndicator);
-const MediaEngineContextTypes = fn(4599).MediaEngineContextTypes;
+const MediaEngineContextTypes = fn(4630).MediaEngineContextTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15, Fragment: closure_16 } = jsxProd);
 function asString(arg0) {}
-fn(4574);
+fn(4605);
 let obj = { container: null, scroller: null, indent: null, row: null, text: null, buttonClose: null };
 obj = {};
 let merged = Object.assign(StyleSheet.absoluteFillObject);
-const ColorUtils = fn(4423);
+const ColorUtils = fn(4454);
 obj.backgroundColor = ColorUtils.hexWithOpacity(nativeDefault.unsafe_rawColors.BLACK, 0.7);
 obj.container = obj;
 obj.scroller = { flex: 1, margin: 8 };
@@ -241,7 +241,7 @@ export default function RTCDebugOverlay(arg0) {
   const tmp = closure_18();
   const effect = noop.useEffect(() => {
     RTCDebugActionCreatorsAll.open();
-    return () => closure_1_1(573).wait(closure_1_2(10071).close);
+    return () => closure_1_1(573).wait(closure_1_2(10109).close);
   }, []);
   const rect = { top: true, left: true, right: true, bottom: true, style: null, children: null };
   const items = [tmp.container, style];

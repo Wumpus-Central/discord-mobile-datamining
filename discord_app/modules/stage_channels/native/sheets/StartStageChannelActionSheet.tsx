@@ -8,14 +8,14 @@ import StageInstanceStore from "../../StageInstanceStore.tsx";
 
 const require = fn;
 const View = fn(17).View;
-const StageChannelsConstants = fn(5428);
+const StageChannelsConstants = fn(5464);
 ({ MAX_STAGE_TOPIC_LENGTH: closure_9, START_STAGE_CHANNEL_EVENT_SHEET_KEY: c10 } = StageChannelsConstants);
 const Constants = fn(1074);
 ({ AnalyticEvents: closure_11, Fonts } = Constants);
 let closure_12 = fn(1963).GuildScheduledEventPrivacyLevel;
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
-fn(4574);
+fn(4605);
 let createStyles = {
   container: { padding: 16 },
   header: { alignItems: "center", paddingBottom: 24 },
@@ -77,13 +77,13 @@ export default function StartStageChannelEventActionSheet(channel) {
               const result = obj3.dismissGlobalKeyboard();
               dependencyMap = 1;
               if (null != stateFromStores) {
-                let tmp33Result = tmp45(8426);
+                let tmp33Result = tmp45(8463);
                 c4 = 3;
                 c5 = 1;
                 let obj1 = { value: tmp33Result.editStage(channel, importAll, constants.GUILD_ONLY), done: false };
                 return obj1;
               } else {
-                tmp33Result = tmp45(8426);
+                tmp33Result = tmp45(8463);
                 c4 = 2;
                 c5 = 1;
                 const obj2 = {
@@ -98,7 +98,7 @@ export default function StartStageChannelEventActionSheet(channel) {
           if (1 === tmp7) {
             dependencyMap = 0;
             closure_128_1 = tmp45;
-            const aPIError = new channel(4475).APIError(closure_128_1);
+            const aPIError = new channel(4506).APIError(closure_128_1);
             closure_128_0 = aPIError;
             closure_129_4(closure_128_0);
             closure_129_3(false);
@@ -117,7 +117,7 @@ export default function StartStageChannelEventActionSheet(channel) {
               obj = { value, done: true };
               return obj;
             }
-            obj1 = tmp3(4541);
+            obj1 = tmp3(4572);
             obj1.hideActionSheet(closure_1_10);
             dependencyMap = 0;
           }
@@ -155,8 +155,8 @@ export default function StartStageChannelEventActionSheet(channel) {
   const tmp7 = _slicedToArray(obj1.useState(false), 2);
   [obj3, c4] = _slicedToArray(obj1.useState(null), 2);
   const tmp9 = _slicedToArray(obj1.useState(null), 2);
-  const shouldAgeVerifyToSpeakForCurrentUser = channel(5436).useShouldAgeVerifyToSpeakForCurrentUser(channel.id);
-  stateFromStores(5006)(() => {
+  const shouldAgeVerifyToSpeakForCurrentUser = channel(5472).useShouldAgeVerifyToSpeakForCurrentUser(channel.id);
+  stateFromStores(5042)(() => {
     let obj = AnalyticsUtilsDefault;
     let id;
     if (stateFromStores != null) {
@@ -166,7 +166,7 @@ export default function StartStageChannelEventActionSheet(channel) {
     obj.track(constants.START_STAGE_OPENED, obj);
   });
   obj = { style: tmp.header, children: null };
-  const items1 = [closure_13(stateFromStores(8435), {}), ,];
+  const items1 = [closure_13(stateFromStores(8472), {}), ,];
   obj = {
     style: tmp.headerTitle,
     accessibilityRole: "header",
@@ -182,7 +182,7 @@ export default function StartStageChannelEventActionSheet(channel) {
     stringResult = intl.string(tmp2(1114).t["5BKP4y"]);
   }
   obj.children = stringResult;
-  items1[1] = closure_13(channel(4570).Text, obj);
+  items1[1] = closure_13(channel(4601).Text, obj);
   obj1 = { style: tmp.headerSubtitle, variant: "text-sm/medium", color: "text-default", children: null };
   if (null == stateFromStores) {
     const intl4 = tmp2(1114).intl;
@@ -192,11 +192,11 @@ export default function StartStageChannelEventActionSheet(channel) {
     stringResult1 = intl3.string(tmp2(1114).t["I+9bLx"]);
   }
   obj1.children = stringResult1;
-  items1[2] = closure_13(channel(4570).Text, obj1);
+  items1[2] = closure_13(channel(4601).Text, obj1);
   obj.children = items1;
   let stringResult2;
   const tmp11 = stateFromStores;
-  const tmp2Result = channel(5436);
+  const tmp2Result = channel(5472);
   if (null == stateFromStores) {
     const intl5 = tmp2(1114).intl;
     stringResult2 = intl5.string(tmp2(1114).t.gR66jX);
@@ -232,8 +232,8 @@ export default function StartStageChannelEventActionSheet(channel) {
   obj3.placeholder = intl7.string(channel(1114).t.ZwWruY);
   obj3.onChange = tmp5[1];
   obj3.onSubmitEditing = handleSave;
-  items2[1] = closure_13(channel(6620).TextInput, obj3);
-  items2[2] = closure_13(tmp11(8438), {
+  items2[1] = closure_13(channel(6656).TextInput, obj3);
+  items2[2] = closure_13(tmp11(8475), {
     onConfirmPress() {
       return stateFromStores(_undefined[17]).hideActionSheet(closure_1_10);
     },
@@ -248,7 +248,7 @@ export default function StartStageChannelEventActionSheet(channel) {
       color: "text-feedback-critical",
       children: obj2.getAnyErrorMessage(),
     };
-    tmp15Result = closure_13(tmp2(4570).Text, obj5);
+    tmp15Result = closure_13(tmp2(4601).Text, obj5);
   }
   items2[3] = tmp15Result;
   const obj6 = { style: tmp.startButton, children: null };
@@ -259,7 +259,7 @@ export default function StartStageChannelEventActionSheet(channel) {
     const intl8 = tmp2(1114).intl;
     stringResult3 = intl8.string(tmp2(1114).t.K344S7);
   }
-  obj6.children = closure_13(channel(4989).Button, {
+  obj6.children = closure_13(channel(5025).Button, {
     text: stringResult3,
     onPress: handleSave,
     disabled: "" === value,
@@ -278,7 +278,7 @@ export default function StartStageChannelEventActionSheet(channel) {
     };
     const intl10 = tmp2(1114).intl;
     obj8.children = intl10.string(tmp2(1114).t.gR66jX);
-    tmp15Result = closure_13(tmp2(4570).Text, obj8);
+    tmp15Result = closure_13(tmp2(4601).Text, obj8);
   }
   const obj4 = {
     onConfirmPress() {
@@ -297,8 +297,8 @@ export default function StartStageChannelEventActionSheet(channel) {
   const tmp13Result = closure_14(View, obj);
   items2[5] = tmp15Result;
   obj2.children = items2;
-  return closure_13(channel(7164).BottomSheet, {
+  return closure_13(channel(7202).BottomSheet, {
     keyboardShouldPersistTaps: "always",
-    children: closure_14(channel(7137).SafeAreaPaddingView, obj2),
+    children: closure_14(channel(7175).SafeAreaPaddingView, obj2),
   });
 }

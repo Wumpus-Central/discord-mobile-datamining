@@ -7,8 +7,8 @@ import ApplicationStreamingSettingsStore from "../../../stores/ApplicationStream
 import ApplicationStreamingManager from "../ApplicationStreamingManager.tsx";
 
 const require = fn;
-const ApplicationStreamPresets = fn(4621).ApplicationStreamPresets;
-const MediaEngineContextTypes = fn(4599).MediaEngineContextTypes;
+const ApplicationStreamPresets = fn(4652).ApplicationStreamPresets;
+const MediaEngineContextTypes = fn(4630).MediaEngineContextTypes;
 const jsx = fn(21).jsx;
 let desktopSettings = new LoggerDefault("ApplicationStreamingManager");
 desktopSettings.enableNativeLogger(true);
@@ -39,7 +39,7 @@ prototype["platformHandleStreamStart"] = function platformHandleStreamStart(sour
       state = { preset: ApplicationStreamPresets.PRESET_CUSTOM, resolution: 720, fps: 30, soundshareEnabled: true };
     }
     ({ preset, resolution, fps, soundshareEnabled } = state);
-    setGoLiveSource = setGoLiveSource(9121).setGoLiveSource;
+    setGoLiveSource = setGoLiveSource(9158).setGoLiveSource;
     desktopSettings = { desktopSettings: null, qualityOptions: null, context: null };
     desktopSettings = { sourceId, sound: soundshareEnabled };
     desktopSettings.desktopSettings = desktopSettings;
@@ -47,7 +47,7 @@ prototype["platformHandleStreamStart"] = function platformHandleStreamStart(sour
     desktopSettings.qualityOptions = obj1;
     desktopSettings.context = MediaEngineContextTypes.STREAM;
     setGoLiveSource(desktopSettings);
-    const setGoLiveSourceResult = setGoLiveSource(9121);
+    const setGoLiveSourceResult = setGoLiveSource(9158);
   } else {
     const _HermesInternal = HermesInternal;
     desktopSettings.warn(

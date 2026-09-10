@@ -10,7 +10,7 @@ get_ActivityIndicator = fn(17);
 ({ Image: c2, View: c3 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-fn(4574);
+fn(4605);
 let createStyles = { contentRow: null, text: null, imageContainer: null, image: null, imageSkeleton: null };
 createStyles = { flexDirection: "row", gap: nativeDefault.space.PX_12, alignItems: "center" };
 createStyles.contentRow = createStyles;

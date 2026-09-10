@@ -10,7 +10,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-fn(4574);
+fn(4605);
 let createStyles = {
   container: { display: "flex", flexDirection: "row", flexGrow: 1, flexShrink: 1 },
   avatar: null,

@@ -10,7 +10,7 @@ const View = fn(17).View;
 const RelationshipTypes = fn(1074).RelationshipTypes;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, Fragment: closure_7, jsxs: closure_8 } = jsxProd);
-fn(4574);
+fn(4605);
 let createStyles = { container: null };
 createStyles = {
   padding: nativeDefault.space.PX_12,
@@ -42,7 +42,7 @@ export default function RemediatedUserNotice(user) {
       obj = { variant: "text-sm/semibold", color: "text-default", lineClamp: 1, children: null };
       const intl = tmp4(1114).intl;
       obj.children = intl.string(tmp4(1114).t["oC/fU6"]);
-      isBlocked = closure_6(tmp4(4570).Text, obj);
+      isBlocked = closure_6(tmp4(4601).Text, obj);
     }
     const items2 = [isBlocked];
     if (isIgnored) {
@@ -51,8 +51,8 @@ export default function RemediatedUserNotice(user) {
       const intl2 = tmp4(1114).intl;
       obj2.children = intl2.string(tmp4(1114).t.HXz5An);
       const items3 = [
-        closure_6(tmp4(4570).Text, obj2),
-        closure_6(tmp4(4570).Text, {
+        closure_6(tmp4(4601).Text, obj2),
+        closure_6(tmp4(4601).Text, {
           variant: "text-sm/semibold",
           color: "text-default",
           accessibilityElementsHidden: true,

@@ -9,9 +9,9 @@ import TypingStore from "../../../../../../../stores/TypingStore.tsx";
 import UserStore from "../../../../../../../stores/UserStore.tsx";
 
 const require = fn;
-const MUTED_OPACITY_CONTENT = fn(10150).MUTED_OPACITY_CONTENT;
+const MUTED_OPACITY_CONTENT = fn(10188).MUTED_OPACITY_CONTENT;
 const jsx = fn(21).jsx;
-const createStyles = fn(4574);
+const createStyles = fn(4605);
 let closure_10 = createStyles.createStyles((arg0) => {
   const avatar = {
     borderRadius: nativeDefault.radii.round,
@@ -125,11 +125,11 @@ export default noop.memo(function MessagesItemChannelAvatar(channel) {
         isVROnline: stateFromStores4,
         status: true,
         streaming: true,
-        style: "none",
-        size: ",",
-        animate: false,
-        typing: false,
-        autoStatusCutout: "redux.action",
+        style: "Volume",
+        size: null,
+        animate: "redux.action",
+        typing: null,
+        autoStatusCutout: "info",
       };
       let tmp12 = null;
       if (!stateFromStores2.isSystemUser()) {
@@ -149,11 +149,11 @@ export default noop.memo(function MessagesItemChannelAvatar(channel) {
         isVROnline: stateFromStores4,
         status: true,
         streaming: true,
-        style: "none",
-        size: ",",
-        animate: false,
-        typing: false,
-        autoStatusCutout: "redux.action",
+        style: "Volume",
+        size: null,
+        animate: "redux.action",
+        typing: null,
+        autoStatusCutout: "info",
       });
     }
   }

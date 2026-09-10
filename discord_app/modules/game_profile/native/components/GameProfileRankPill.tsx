@@ -9,7 +9,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-fn(4574);
+fn(4605);
 let createStyles = { container: { flex: 1, flexDirection: "row", alignItems: "flex-end" }, gameRankPill: null };
 createStyles = {
   flexDirection: "row",

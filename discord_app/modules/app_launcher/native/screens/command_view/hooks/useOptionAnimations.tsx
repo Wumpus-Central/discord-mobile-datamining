@@ -16,7 +16,7 @@ class LayoutAnimation {
     return obj1;
   }
 }
-let obj = { withTiming: fn(4575).withTiming, OPTION_ENTRY_EXIT_LAYOUT_SHIFT_DURATION: 300 };
+let obj = { withTiming: fn(4606).withTiming, OPTION_ENTRY_EXIT_LAYOUT_SHIFT_DURATION: 300 };
 LayoutAnimation.__closure = obj;
 LayoutAnimation.__workletHash = 16804895997501;
 LayoutAnimation.__initData = {
@@ -36,7 +36,7 @@ class ExitingAnimation {
     return obj2;
   }
 }
-obj = { withTiming: fn(4575).withTiming, OPTION_ENTRY_EXIT_LAYOUT_SHIFT_DURATION: 300 };
+obj = { withTiming: fn(4606).withTiming, OPTION_ENTRY_EXIT_LAYOUT_SHIFT_DURATION: 300 };
 ExitingAnimation.__closure = obj;
 ExitingAnimation.__workletHash = 8977480282966;
 ExitingAnimation.__initData = {
@@ -54,7 +54,7 @@ export const OPTION_ENTRY_EXIT_LAYOUT_SHIFT_DURATION = 300;
 export { LayoutAnimation };
 export { ExitingAnimation };
 export const useOptionEnteringAnimation = function useOptionEnteringAnimation() {
-  let obj = sharedValue(4310);
+  let obj = sharedValue(4341);
   sharedValue = obj.useSharedValue(false);
   dependencyMap = noop.useRef([]);
   let items = [sharedValue];
@@ -69,19 +69,19 @@ export const useOptionEnteringAnimation = function useOptionEnteringAnimation() 
     EnteringAnimation: _slicedToArray(
       noop.useState(() => {
         const fn = function n() {
-          sharedValue(4575);
+          sharedValue(4606);
           let obj = { duration: 250, easing: null };
-          const Easing = sharedValue(4310).Easing;
+          const Easing = sharedValue(4341).Easing;
           obj.easing = Easing.bezier(0.25, 1.75, 0.25, 1.25);
-          let obj2 = sharedValue(4575);
+          let obj2 = sharedValue(4606);
           obj = { animations: null, initialValues: null, callback: null };
           const obj1 = { opacity: null, transform: null };
           const withTimingResult = obj.withTiming(1, obj);
           const withTimingResult1 = obj2.withTiming(1, { duration: 200 });
-          obj1.opacity = sharedValue(4310).withDelay(200, withTimingResult1);
+          obj1.opacity = sharedValue(4341).withDelay(200, withTimingResult1);
           obj2 = { scale: null };
-          const obj6 = sharedValue(4310);
-          obj2.scale = sharedValue(4310).withDelay(200, withTimingResult);
+          const obj6 = sharedValue(4341);
+          obj2.scale = sharedValue(4341).withDelay(200, withTimingResult);
           const items = [obj2];
           obj1.transform = items;
           obj.animations = obj1;
@@ -90,7 +90,7 @@ export const useOptionEnteringAnimation = function useOptionEnteringAnimation() 
           obj3.transform = items1;
           obj.initialValues = obj3;
           obj.callback = function callback() {
-            sharedValue(4310).runOnJS(closure_1_2)();
+            sharedValue(4341).runOnJS(closure_1_2)();
           };
           return obj;
         };

@@ -2,7 +2,7 @@
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import ReanimatedRexport from "../../../reanimated/ReanimatedRexport.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
-import LinearGradientDefault from "../../../../../_runtime/05001_LinearGradient.js";
+import LinearGradientDefault from "../../../../../_runtime/05037_LinearGradient.js";
 import SKUUtils from "../../../../utils/SKUUtils.tsx";
 import GameProfileRankPillDefault from "GameProfileRankPill.tsx";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
@@ -15,7 +15,7 @@ get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, Image: metroRequire } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-fn(4574);
+fn(4605);
 let createStyles = {
   container: null,
   artHero: null,

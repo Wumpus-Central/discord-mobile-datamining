@@ -15,7 +15,7 @@ import SafetyHubStore from "../SafetyHubStore.tsx";
 
 const util = hyh4ls(1114);
 const native = hyh4ls(1178);
-const components_Button_Button = hyh4ls(4989);
+const components_Button_Button = hyh4ls(5025);
 require = fn;
 function handleLogInClick() {
   AuthenticationActionCreatorsDefault.closeSuspendedUser();
@@ -107,12 +107,12 @@ function AutomatedUnderageAppealStatus() {
 }
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, ActivityIndicator: metroRequire, ScrollView: closure_7 } = get_ActivityIndicator);
-const AgeCheckStatus = fn(8447).AgeCheckStatus;
+const AgeCheckStatus = fn(8484).AgeCheckStatus;
 const Constants = fn(1074);
 ({ AnalyticEvents: c10, Routes: closure_11 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
-fn(4574);
+fn(4605);
 let createStyles = { container: null, loadingIndicator: null, body: null };
 createStyles = { paddingHorizontal: nativeDefault.space.PX_12, paddingVertical: nativeDefault.space.PX_12 };
 createStyles.container = createStyles;
@@ -149,7 +149,7 @@ export default function SafetyHubPage(visible) {
     if (visible) {
       if (null != safetyHubFetchError) {
         ActionSheetActionCreatorsDefault.openLazy(
-          asyncRequireImpl(14799, dependencyMap.paths),
+          asyncRequireImpl(14848, dependencyMap.paths),
           "SafetyHubErrorActionSheet",
           {},
         );

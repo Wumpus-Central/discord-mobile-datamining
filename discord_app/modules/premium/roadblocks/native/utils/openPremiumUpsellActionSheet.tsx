@@ -8,6 +8,6 @@ const result = size.fileFinishedImporting("modules/premium/roadblocks/native/uti
 
 export default function openPremiumUpsellActionSheet(featureName, subfeatureName, analyticsLocations, onDismiss) {
   const obj = { featureName, subfeatureName, analyticsLocations, onDismiss };
-  obj.openLazy(asyncRequireImpl(7865, dependencyMap.paths), PremiumUpsellActionSheetKey, obj);
+  obj.openLazy(asyncRequireImpl(7902, dependencyMap.paths), PremiumUpsellActionSheetKey, obj);
 }
 export const PREMIUM_UPSELL_ACTION_SHEET_KEY = "PremiumUpsellActionSheetKey";

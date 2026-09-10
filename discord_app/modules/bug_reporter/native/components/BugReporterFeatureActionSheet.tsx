@@ -10,7 +10,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-fn(4574);
+fn(4605);
 let obj = { list: null, searchBar: null, sectionHeader: null };
 obj = { paddingHorizontal: nativeDefault.space.PX_12 };
 obj.list = obj;
@@ -30,9 +30,9 @@ let closure_10 = noop.memo((item) => {
   item = item.item;
   const setFeature = item.setFeature;
   ({ feature, start, end } = item);
-  let obj = item(10219);
+  let obj = item(10257);
   const featureId = obj.getFeatureId(item);
-  const featureId1 = item(10219).getFeatureId(feature);
+  const featureId1 = item(10257).getFeatureId(feature);
   obj = {
     start,
     end,
@@ -44,8 +44,8 @@ let closure_10 = noop.memo((item) => {
     trailing: null,
   };
   obj = { selected: featureId === featureId1 };
-  obj.trailing = closure_6(item(5703).FormRadio, obj);
-  return closure_6(item(5619).TableRow, obj);
+  obj.trailing = closure_6(item(5739).FormRadio, obj);
+  return closure_6(item(5655).TableRow, obj);
 });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/bug_reporter/native/components/BugReporterFeatureActionSheet.tsx");

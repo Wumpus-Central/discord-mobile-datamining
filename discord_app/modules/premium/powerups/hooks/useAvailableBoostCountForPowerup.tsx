@@ -4,7 +4,7 @@ import GuildStore from "../../../../stores/GuildStore.tsx";
 import GuildPowerupsStore from "../GuildPowerupsStore.tsx";
 
 const require = fn;
-const GuildPowerupsConstants = fn(4464);
+const GuildPowerupsConstants = fn(4495);
 ({
   GuildPowerupType: metroRequire,
   POWERUPS_INCLUDED_IN_LEVEL: closure_7,

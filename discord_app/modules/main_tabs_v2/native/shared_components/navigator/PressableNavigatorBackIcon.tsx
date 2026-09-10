@@ -11,7 +11,7 @@ get_ActivityIndicator = fn(17);
 ({ View: closure_4, Image: hasOwnProperty } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(4574);
+const createStyles = fn(4605);
 let closure_11 = createStyles.createStyles(() => {
   let obj = { maskWrapper: null, maskStroke: null, actionButtonPressable: null, actionButtonIcon: null };
   const rect = {
@@ -40,7 +40,7 @@ const result = size.fileFinishedImporting(
 export const PressableNavigatorBackIcon = noop.forwardRef((navigation, ref) => {
   navigation = navigation.navigation;
   const onPress = navigation.onPress;
-  const merged = Object.assign(navigation, Object.assign({ navigation: 0, onPress: 0 }));
+  const merged = Object.assign(navigation, Object.assign({ navigation: 0, onPress: 0, badgeCutoutColor: 0 }));
   let stateFromStores;
   const tmp2 = closure_11();
   let obj = navigation(stateFromStores[9]);
@@ -76,8 +76,13 @@ export const PressableNavigatorBackIcon = noop.forwardRef((navigation, ref) => {
     }
   }, items1);
   let obj2 = navigation(stateFromStores[10]);
-  let backgroundColor = obj2.useGradientValue(navigation(stateFromStores[10]).GradientPercentage.START);
-  if (null == backgroundColor) {
+  const token = obj2.useToken(navigation.badgeCutoutColor);
+  let obj3 = navigation(stateFromStores[11]);
+  let backgroundColor = token;
+  if (token == null) {
+    backgroundColor = obj3.useGradientValue(navigation(stateFromStores[11]).GradientPercentage.START);
+  }
+  if (backgroundColor == null) {
     backgroundColor = tmp2.maskStroke.backgroundColor;
   }
   const items2 = [navigation, onPress];
@@ -94,28 +99,28 @@ export const PressableNavigatorBackIcon = noop.forwardRef((navigation, ref) => {
   const merged1 = Object.assign(merged);
   obj.accessibilityRole = "button";
   if (stateFromStores > 0) {
-    const intl2 = tmp3(tmp4[13]).intl;
+    const intl2 = tmp3(tmp4[14]).intl;
     obj = { mentionCount: stateFromStores };
-    let formatToPlainStringResult = intl2.formatToPlainString(tmp3(tmp4[13]).t.vxFYaM, obj);
+    let formatToPlainStringResult = intl2.formatToPlainString(tmp3(tmp4[14]).t.vxFYaM, obj);
   } else {
-    const intl = tmp3(tmp4[13]).intl;
-    formatToPlainStringResult = intl.string(tmp3(tmp4[13]).t["13/7kX"]);
+    const intl = tmp3(tmp4[14]).intl;
+    formatToPlainStringResult = intl.string(tmp3(tmp4[14]).t["13/7kX"]);
   }
   obj.accessibilityLabel = formatToPlainStringResult;
   obj.onPress = callback;
   obj.style = tmp2.actionButtonPressable;
-  obj1 = { source: tmp9(tmp4[14]), style: { tintColor: tmp2.actionButtonIcon.tintColor } };
+  obj1 = { source: tmp10(tmp4[15]), style: { tintColor: tmp2.actionButtonIcon.tintColor } };
   const items3 = [closure_9(closure_5, obj1)];
-  let tmp8Result = null;
+  let tmp9Result = null;
   if (stateFromStores > 0) {
     obj2 = { style: tmp2.maskWrapper, children: null };
-    const obj3 = { value: stateFromStores, maxValue: 99, backgroundColor, unread: false, style: memo };
-    obj2.children = closure_9(tmp9(tmp4[15]), obj3);
-    tmp8Result = closure_9(closure_4, obj2);
+    obj3 = { value: stateFromStores, maxValue: 99, backgroundColor, unread: false, style: memo };
+    obj2.children = closure_9(tmp10(tmp4[16]), obj3);
+    tmp9Result = closure_9(closure_4, obj2);
   }
   const obj4 = { children: null };
-  items3[1] = tmp8Result;
+  items3[1] = tmp9Result;
   obj.children = closure_10(closure_4, { children: items3 });
-  obj4.children = closure_9(navigation(stateFromStores[12]).PressableOpacity, obj);
-  return closure_9(onPress(stateFromStores[11]), obj4);
+  obj4.children = closure_9(navigation(stateFromStores[13]).PressableOpacity, obj);
+  return closure_9(onPress(stateFromStores[12]), obj4);
 });

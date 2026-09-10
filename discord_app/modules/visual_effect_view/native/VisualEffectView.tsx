@@ -9,7 +9,7 @@ const VisualEffectViewAndroidDefault = VisualEffectViewAndroid;
 
 require = fn;
 const View = fn(17).View;
-let closure_4 = fn(4980).useVisualEffectViewOverrides;
+let closure_4 = fn(5016).useVisualEffectViewOverrides;
 const jsx = fn(21).jsx;
 const PlatformUtils = fn(1115);
 let closure_6 = PlatformUtils.isAndroid();

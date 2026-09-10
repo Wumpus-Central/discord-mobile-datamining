@@ -25,7 +25,7 @@ export default noop.forwardRef((arg0, arg1) => {
         value = PixelRatio.get();
         const result = x * value;
         const result1 = y * value;
-        const Commands = ref(9647).Commands;
+        const Commands = ref(9685).Commands;
         Commands.zoomTo(tmp.current, result / num - result, result1 / num - result1, num, flag);
       }
     },
@@ -39,7 +39,7 @@ export default noop.forwardRef((arg0, arg1) => {
         flag = true;
       }
       if (null != ref.current) {
-        const Commands = ref(9647).Commands;
+        const Commands = ref(9685).Commands;
         Commands.unzoom(tmp.current, flag);
       }
     },

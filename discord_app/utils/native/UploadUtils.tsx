@@ -1261,7 +1261,7 @@ function convertVideo(videoMetadata) {
                   } else {
                     isVideo2 = null != uri.match(/^assets-library:\/\/.+&ext=mp4$/i);
                     if (isVideo2) {
-                      const obj4 = { uri, overrideType: "a" };
+                      const obj4 = { uri, overrideType: "Array" };
                       isVideo2 = UploadUtils.getFile(obj4).isVideo;
                       const tmp12Result3 = UploadUtils;
                     }
@@ -1279,7 +1279,7 @@ function convertVideo(videoMetadata) {
               } else {
                 isVideo = null != uri.match(/^assets-library:\/\/.+&ext=(mov|qt)$/i);
                 if (isVideo) {
-                  const obj5 = { uri, overrideType: "a" };
+                  const obj5 = { uri, overrideType: "Array" };
                   isVideo = UploadUtils.getFile(obj5).isVideo;
                   const tmp12Result5 = UploadUtils;
                 }
@@ -1991,7 +1991,7 @@ let closure_39 = async function _tryConvertImage(arg0) {
           } else {
             tmp7 = null != str.match(/^assets-library:\/\/.+&ext=gif$/i);
           }
-          tmpResult = closure_1_0(5173);
+          tmpResult = closure_1_0(5209);
         }
         const obj = closure_1_0(1115);
       })(closure_131_0, closure_131_1)) {
@@ -2468,7 +2468,7 @@ let UnsyncedUserSettingsStore = fn(1185);
 const Constants = fn(1074);
 ({ Base64PNGPrefix: map1, Base64GIFPrefix } = Constants);
 ({ NetworkConnectionTypes: closure_15, CompressionQuality: closure_16, Base64WEBPPrefix: closure_17, Base64AVIFPrefix: closure_18, Base64JPEGPrefix } = Constants);
-const NativePermissionTypes = fn(4784).NativePermissionTypes;
+const NativePermissionTypes = fn(4815).NativePermissionTypes;
 let closure_20 = new LoggerDefault("UploadUtils.tsx");
 const regExp = new RegExp("^" + Base64JPEGPrefix, "i");
 const regExp1 = new RegExp("^" + Base64GIFPrefix, "i");
@@ -2547,8 +2547,8 @@ export const getFileSize = function getFileSize(uri) {
 };
 export { getAppDir };
 export { getFileInfo };
-export const shouldConvertToJPG = fn(5173).shouldConvertToJPG;
-export const shouldForceConvertToJPG = fn(5173).shouldForceConvertToJPG;
+export const shouldConvertToJPG = fn(5209).shouldConvertToJPG;
+export const shouldForceConvertToJPG = fn(5209).shouldForceConvertToJPG;
 export const shouldResolveToMediaFilePath = function shouldResolveToMediaFilePath(str) {
   let isAndroidResult = PlatformUtils.isAndroid();
   if (isAndroidResult) {

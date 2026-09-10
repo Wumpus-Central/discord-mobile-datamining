@@ -21,14 +21,14 @@ import showMediaKeyboardActionSheet from "../../../../media_keyboard/native/show
 import AppLauncherContext from "../../AppLauncherContext.tsx";
 import ApplicationCommandOptionValueParser from "../../../../chat_input/native/ApplicationCommandOptionValueParser.tsx";
 import AppLauncherNativeUtils from "../../AppLauncherNativeUtils.tsx";
-import _modDef12144 from "../../../../../../_runtime/metro/12144__.js";
-import _modDef12145 from "../../../../../../_runtime/metro/12145__.js";
+import _modDef12184 from "../../../../../../_runtime/metro/12184__.js";
+import _modDef12185 from "../../../../../../_runtime/metro/12185__.js";
 import AppLauncherCommandViewHeader from "AppLauncherCommandViewHeader.tsx";
 import ApplicationCommandValidationUtils from "../../../../application_commands/ApplicationCommandValidationUtils.tsx";
 import application_commands_ApplicationCommandValidationUtils from "../../../../application_commands/native/ApplicationCommandValidationUtils.tsx";
 import CommandOptionViewDefault from "CommandOptionView.tsx";
-import _modDef12223 from "../../../../../../_runtime/metro/12223__.js";
-import _modDef12224 from "../../../../../../_runtime/metro/12224__.js";
+import _modDef12263 from "../../../../../../_runtime/metro/12263__.js";
+import _modDef12264 from "../../../../../../_runtime/metro/12264__.js";
 import asyncGeneratorStep from "../../../../../../_runtime/00005_asyncGeneratorStep.js";
 import _slicedToArray from "../../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
@@ -59,9 +59,9 @@ function AppLauncherCommandViewFooter(arg0) {
       let obj1 = { translateX: null };
       const obj9 = timing;
       const fn = function e() {
-        const obj = closure_1_0(4310);
-        return closure_1_0(4310).runOnJS(closure_1_0(4542).triggerHapticFeedback)(
-          closure_1_0(4542).HapticFeedbackTypes.IMPACT_LIGHT,
+        const obj = closure_1_0(4341);
+        return closure_1_0(4341).runOnJS(closure_1_0(4573).triggerHapticFeedback)(
+          closure_1_0(4573).HapticFeedbackTypes.IMPACT_LIGHT,
         );
       };
       const obj2 = {
@@ -1537,8 +1537,8 @@ function NotFoundState(onPress) {
   obj = { style: tmp.emptyStateContainer, children: null };
   obj = {
     style: tmp.emptyState,
-    lightSource: _modDef12223,
-    darkSource: _modDef12224,
+    lightSource: _modDef12263,
+    darkSource: _modDef12264,
     title: null,
     body: null,
     children: null,
@@ -1583,8 +1583,8 @@ function NoPermsState(command) {
   const items1 = [__initData(React5, obj)];
   const obj3 = {
     style: tmp.emptyState,
-    lightSource: _modDef12144,
-    darkSource: _modDef12145,
+    lightSource: _modDef12184,
+    darkSource: _modDef12185,
     title: null,
     body: null,
     children: null,
@@ -1611,7 +1611,7 @@ function NoPermsState(command) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: closure_7, ActivityIndicator: closure_8, ScrollView: closure_9 } = get_ActivityIndicator);
-const ApplicationCommandIndexStore = fn(9322);
+const ApplicationCommandIndexStore = fn(9359);
 ({ useContextIndexState: closure_11, useUserIndexState: closure_12 } = ApplicationCommandIndexStore);
 const AppLauncherNativeConstants = fn(1482);
 ({
@@ -1624,7 +1624,7 @@ const Constants = fn(1074);
 const MediaKeyboardTarget = fn(1607).MediaKeyboardTarget;
 const jsxProd = fn(21);
 ({ jsx: closure_20, jsxs: closure_21, Fragment: closure_22 } = jsxProd);
-fn(4574);
+fn(4605);
 let createStyles = {
   container: null,
   optionsContainer: null,
@@ -1649,7 +1649,7 @@ let createStyles = {
 createStyles = { height: "100%", backgroundColor: nativeDefault.colors.MOBILE_KEYBOARD_PANEL_BACKGROUND };
 createStyles.container = createStyles;
 createStyles.optionsContainer = {
-  paddingTop: fn(12184).EXPANDED_HEADER_TOTAL_CONSUMED_SPACE_IN_PARENT + nativeDefault.space.PX_4,
+  paddingTop: fn(12224).EXPANDED_HEADER_TOTAL_CONSUMED_SPACE_IN_PARENT + nativeDefault.space.PX_4,
   paddingHorizontal: DEFAULT_CONTENT_PADDING,
   paddingBottom: DEFAULT_CONTENT_PADDING,
   backgroundColor: nativeDefault.colors.MOBILE_KEYBOARD_PANEL_BACKGROUND,
@@ -1670,7 +1670,7 @@ createStyles.submitButton = { flex: 1, overflow: "hidden" };
 createStyles.optionalOptionsSectionTitle = { marginTop: 36 };
 createStyles.optionalOptionList = { marginTop: 12 };
 let obj1 = {
-  paddingTop: fn(12184).EXPANDED_HEADER_TOTAL_CONSUMED_SPACE_IN_PARENT + nativeDefault.space.PX_4,
+  paddingTop: fn(12224).EXPANDED_HEADER_TOTAL_CONSUMED_SPACE_IN_PARENT + nativeDefault.space.PX_4,
   paddingHorizontal: DEFAULT_CONTENT_PADDING,
   paddingBottom: DEFAULT_CONTENT_PADDING,
   backgroundColor: nativeDefault.colors.MOBILE_KEYBOARD_PANEL_BACKGROUND,
@@ -1703,11 +1703,11 @@ let obj3 = {
   borderRadius: nativeDefault.radii.lg,
 };
 createStyles.emptyStateContainer = {
-  paddingTop: fn(12184).EXPANDED_HEADER_TOTAL_CONSUMED_SPACE_IN_PARENT + nativeDefault.space.PX_4,
+  paddingTop: fn(12224).EXPANDED_HEADER_TOTAL_CONSUMED_SPACE_IN_PARENT + nativeDefault.space.PX_4,
   flex: 1,
 };
 createStyles.failureStateButtonWrapper = { marginTop: 24, alignSelf: "center" };
-let obj4 = { paddingTop: fn(12184).EXPANDED_HEADER_TOTAL_CONSUMED_SPACE_IN_PARENT + nativeDefault.space.PX_4, flex: 1 };
+let obj4 = { paddingTop: fn(12224).EXPANDED_HEADER_TOTAL_CONSUMED_SPACE_IN_PARENT + nativeDefault.space.PX_4, flex: 1 };
 createStyles.failureStateButtonPill = {
   borderRadius: nativeDefault.radii.xxl,
   paddingHorizontal: 12,

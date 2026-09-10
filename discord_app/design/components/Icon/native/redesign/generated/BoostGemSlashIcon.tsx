@@ -1,7 +1,7 @@
 // discord_app/design/components/Icon/native/redesign/generated/BoostGemSlashIcon.tsx
 import nativeDefault from "../../../../../../../discord_common/js/packages/tokens/native.tsx";
 import BaseIconImage from "../../BaseIconImage.tsx";
-import _mod12615 from "../../../../../../../_runtime/metro/12615__.js";
+import _mod12655 from "../../../../../../../_runtime/metro/12655__.js";
 import noop from "../../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -17,7 +17,7 @@ export const BoostGemSlashIcon = function BoostGemSlashIcon(isTierUnlocked) {
   const merged = Object.assign(isTierUnlocked, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
   return jsx(BaseIconImage.BaseIconImage, {
-    source: _mod12615,
+    source: _mod12655,
     color: INTERACTIVE_ICON_DEFAULT,
     style: isTierUnlocked.style,
   });

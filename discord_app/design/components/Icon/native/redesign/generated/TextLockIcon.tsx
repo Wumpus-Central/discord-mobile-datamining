@@ -1,7 +1,7 @@
 // discord_app/design/components/Icon/native/redesign/generated/TextLockIcon.tsx
 import nativeDefault from "../../../../../../../discord_common/js/packages/tokens/native.tsx";
 import BaseIconImage from "../../BaseIconImage.tsx";
-import _mod5068 from "../../../../../../../_runtime/metro/05068__.js";
+import _mod5104 from "../../../../../../../_runtime/metro/05104__.js";
 import noop from "../../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -16,5 +16,5 @@ export const TextLockIcon = function TextLockIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod5068, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod5104, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 };

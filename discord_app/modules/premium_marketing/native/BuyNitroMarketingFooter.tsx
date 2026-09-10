@@ -1,7 +1,7 @@
 // discord_app/modules/premium_marketing/native/BuyNitroMarketingFooter.tsx
 import jsxProd from "../../../../_runtime/react/00021_jsxProd.js";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import LegacyBaseButton from "../../../../_runtime/06669_LegacyBaseButton.js";
+import LegacyBaseButton from "../../../../_runtime/06705_LegacyBaseButton.js";
 import AnalyticsLocationDefault from "../../app_analytics/AnalyticsLocation.tsx";
 import BuyNitroPurchaseButtonDefault from "components/purchase_button/BuyNitroPurchaseButton.tsx";
 import get_ActivityIndicator from "../../../../_runtime/metro/00017__.js";

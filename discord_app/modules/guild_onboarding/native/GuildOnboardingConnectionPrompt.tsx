@@ -16,12 +16,12 @@ import GuildOnboardingPromptsStore from "../GuildOnboardingPromptsStore.tsx";
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, ScrollView: hasOwnProperty } = get_ActivityIndicator);
-const OnboardingConnectionType = fn(7115).OnboardingConnectionType;
-let closure_12 = fn(7111).GuildOnboardingModalStates;
+const OnboardingConnectionType = fn(7153).OnboardingConnectionType;
+let closure_12 = fn(7149).GuildOnboardingModalStates;
 const AnalyticEvents = fn(1074).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
-fn(4574);
+fn(4605);
 let createStyles = {
   flex: { flex: 1 },
   container: null,
@@ -37,7 +37,7 @@ createStyles = {
   display: "flex",
   flex: 1,
   flexGrow: 1,
-  marginTop: fn(5696).NAV_BAR_HEIGHT,
+  marginTop: fn(5732).NAV_BAR_HEIGHT,
   marginBottom: nativeDefault.space.PX_16,
   backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER,
 };

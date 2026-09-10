@@ -20,8 +20,8 @@ roundToNearestPixel.__workletHash = 9602449563120;
 roundToNearestPixel.__initData = {
   code: "function roundToNearestPixel_QuestDockUtilsTsx1(position){const{PIXEL_DENSITY}=this.__closure;return Math.round(position*PIXEL_DENSITY)/PIXEL_DENSITY;}",
 };
-function getQuestDockExpandedHeightLimits(windowHeight, top, minExpandedContentHeight) {
-  return { minHeight: QUEST_DOCK_COLLAPSED_HEIGHT, maxHeight: Math.min(minExpandedContentHeight, windowHeight - top) };
+function getQuestDockExpandedHeightLimits(height, top, expandedHeight) {
+  return { minHeight: QUEST_DOCK_COLLAPSED_HEIGHT, maxHeight: Math.min(expandedHeight, height - top) };
 }
 getQuestDockExpandedHeightLimits.__closure = { QUEST_DOCK_COLLAPSED_HEIGHT };
 getQuestDockExpandedHeightLimits.__workletHash = 880847803554;

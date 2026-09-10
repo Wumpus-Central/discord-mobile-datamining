@@ -116,15 +116,15 @@ function buildPowerupListings(type, arr, gameServerEnabled) {
   }
   return orderPowerupListings(items);
 }
-const GuildPowerupsConstants = fn(4464);
+const GuildPowerupsConstants = fn(4495);
 const GuildPowerupType = GuildPowerupsConstants.GuildPowerupType;
 const PERK_SKU_BADGES = GuildPowerupsConstants.PERK_SKU_BADGES;
 const POWERUP_GROUP_TO_SKU_IDS = { guildTagsBadgePacks: null };
 let items = [
-  fn(4467).GUILD_TAGS_BADGE_PACK_CREEPY_CRAWLIES_POWERUP_SKU_ID,
-  fn(4467).GUILD_TAGS_BADGE_PACK_PETS_POWERUP_SKU_ID,
-  fn(4467).GUILD_TAGS_BADGE_PACK_PLANT_POWERUP_SKU_ID,
-  fn(4467).GUILD_TAGS_BADGE_PACK_FLEX_POWERUP_SKU_ID,
+  fn(4498).GUILD_TAGS_BADGE_PACK_CREEPY_CRAWLIES_POWERUP_SKU_ID,
+  fn(4498).GUILD_TAGS_BADGE_PACK_PETS_POWERUP_SKU_ID,
+  fn(4498).GUILD_TAGS_BADGE_PACK_PLANT_POWERUP_SKU_ID,
+  fn(4498).GUILD_TAGS_BADGE_PACK_FLEX_POWERUP_SKU_ID,
 ];
 POWERUP_GROUP_TO_SKU_IDS.guildTagsBadgePacks = items;
 const entries = Object.entries(POWERUP_GROUP_TO_SKU_IDS);

@@ -2,15 +2,15 @@
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import useToken from "../../../../design/tokens/native/useToken.tsx";
 import native from "../../../../../discord_common/js/packages/design/native.tsx";
-import _modDef4522 from "../../../../../_runtime/metro/04522__.js";
+import _modDef4553 from "../../../../../_runtime/metro/04553__.js";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import Stack_Stack from "../../../../design/components/Stack/native/Stack.native.tsx";
 import components_Button_Button from "../../../../design/components/Button/native/Button.native.tsx";
-import LinearGradientDefault from "../../../../../_runtime/05001_LinearGradient.js";
-import _modDef5627 from "../../../../../_runtime/metro/05627__.js";
+import LinearGradientDefault from "../../../../../_runtime/05037_LinearGradient.js";
+import _modDef5663 from "../../../../../_runtime/metro/05663__.js";
 import TableRowGroup from "../../../../design/components/TableRow/native/TableRowGroup.native.tsx";
-import _modDef7066 from "../../../../../_runtime/metro/07066__.js";
-import _modDef7395 from "../../../../../_runtime/metro/07395__.js";
+import _modDef7104 from "../../../../../_runtime/metro/07104__.js";
+import _modDef7433 from "../../../../../_runtime/metro/07433__.js";
 import RowButton from "../../../../design/components/TableRow/native/RowButton.native.tsx";
 import native2 from "../../../../design/components/experimental/native.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
@@ -60,7 +60,7 @@ export default function UserSettingsDesignSystemExperimentalButtons() {
   obj3.children = hasOwnProperty(native2.HeaderButton, {
     onPress() {},
     text: "Channel Name",
-    icon: _modDef5627,
+    icon: _modDef5663,
     iconPosition: "end",
     accessibilityHint: "double-tap for more options",
     iconOpticalOffsetMargin: -6,
@@ -77,7 +77,7 @@ export default function UserSettingsDesignSystemExperimentalButtons() {
   const obj5 = {
     onPress() {},
     text: "Channel Name",
-    icon: _modDef5627,
+    icon: _modDef5663,
     iconPosition: "end",
     accessibilityHint: "double-tap for more options",
     iconOpticalOffsetMargin: -6,
@@ -87,7 +87,7 @@ export default function UserSettingsDesignSystemExperimentalButtons() {
       onPress() {},
       size: "lg",
       text: "Search",
-      icon: _modDef7066,
+      icon: _modDef7104,
       isRound: true,
     }),
   ];
@@ -95,14 +95,14 @@ export default function UserSettingsDesignSystemExperimentalButtons() {
     onPress() {},
     size: "lg",
     text: "Search",
-    icon: _modDef7066,
+    icon: _modDef7104,
     isRound: true,
   };
   items1[1] = hasOwnProperty(native2.InputButton, {
     onPress() {},
     size: "lg",
     text: "http://discord.com/xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
-    icon: _modDef4522,
+    icon: _modDef4553,
     iconPosition: "end",
     accessibilityLabel: "Copy, http://discord.com/xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
   });
@@ -154,7 +154,7 @@ export default function UserSettingsDesignSystemExperimentalButtons() {
     onPress() {},
     size: "lg",
     text: "http://discord.com/xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
-    icon: _modDef4522,
+    icon: _modDef4553,
     iconPosition: "end",
     accessibilityLabel: "Copy, http://discord.com/xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
   };
@@ -193,7 +193,7 @@ export default function UserSettingsDesignSystemExperimentalButtons() {
   };
   const tmp3 = LinearGradientDefault;
   obj20.children = hasOwnProperty(RowButton.RowButton, {
-    icon: _modDef7395,
+    icon: _modDef7433,
     label: "Row Button",
     subLabel: "With a blur background",
     experimental_withBlurBackground: true,
@@ -202,7 +202,7 @@ export default function UserSettingsDesignSystemExperimentalButtons() {
   obj19.children = hasOwnProperty(tmp3, obj20);
   items[5] = hasOwnProperty(native.ThemeContextProvider, obj19);
   const obj21 = {
-    icon: _modDef7395,
+    icon: _modDef7433,
     label: "Row Button",
     subLabel: "With a blur background",
     experimental_withBlurBackground: true,
@@ -226,7 +226,7 @@ export default function UserSettingsDesignSystemExperimentalButtons() {
     children: hasOwnProperty(React3, { style: { padding: 48 } }),
   };
   items3[1] = hasOwnProperty(native2.CollapsibleFloatingActionButton, {
-    icon: _modDef7395,
+    icon: _modDef7433,
     onPress() {},
     positionBottom: 32,
     text: "Floating Action Button",

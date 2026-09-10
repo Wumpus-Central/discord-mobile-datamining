@@ -7,7 +7,7 @@ import ChannelStore from "../../../../stores/ChannelStore.tsx";
 require = fn;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4574);
+const createStyles = fn(4605);
 let closure_6 = createStyles.createStyles({
   container: { alignItems: "center", flexDirection: "row" },
   content: { marginStart: 8, flexGrow: 1 },
@@ -40,7 +40,7 @@ export default function FormChannelPicker(channelId) {
       }
       obj.selectedChannelId = id;
       obj.onChannelSelected = onChange;
-      obj.openLazy(asyncRequireImpl(17791, dependencyMap.paths), "ChannelSelectorActionSheet", obj);
+      obj.openLazy(asyncRequireImpl(17850, dependencyMap.paths), "ChannelSelectorActionSheet", obj);
     },
     children: null,
   };
@@ -72,7 +72,7 @@ export default function FormChannelPicker(channelId) {
   const tmpResult = require("TouchableHitBox");
   items3[2] = closure_4(channelId(stateFromStores[15]).Icon, {
     size: channelId(stateFromStores[15]).Icon.Sizes.MEDIUM,
-    source: require("../../../../../_runtime/metro/09971__.js"),
+    source: require("../../../../../_runtime/metro/10009__.js"),
   });
   obj.children = items3;
   return closure_5(tmpResult, obj);

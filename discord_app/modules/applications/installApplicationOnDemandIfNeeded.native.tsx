@@ -113,7 +113,7 @@ let closure_6 = async function _installApplicationOnDemandIfNeeded(arg0) {
         }
         const promise = new Promise((arg0) => {
           const clientId = arg0;
-          let obj = closure_1_0(4439);
+          let obj = closure_1_0(4470);
           obj.dismissKeyboard();
           obj = {
             clientId,
@@ -133,7 +133,7 @@ let closure_6 = async function _installApplicationOnDemandIfNeeded(arg0) {
               }
             },
           };
-          closure_1_0(9605).openOAuth2Modal(obj);
+          closure_1_0(9643).openOAuth2Modal(obj);
         });
         c4 = 3;
         const obj6 = { value: promise, done: true };

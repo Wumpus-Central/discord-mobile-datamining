@@ -4,7 +4,7 @@ import ApplicationDirectoryActionCreatorsAll from "../../global_discovery_apps/A
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
-const CommandListSortOrder = fn(12165).CommandListSortOrder;
+const CommandListSortOrder = fn(12205).CommandListSortOrder;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/app_launcher/hooks/useSortedSectionCommands.tsx");
 

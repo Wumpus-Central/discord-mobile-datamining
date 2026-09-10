@@ -95,7 +95,7 @@ const jsxProd = fn(21);
 const PX_16 = nativeDefault.space.PX_16;
 const PX_12 = nativeDefault.space.PX_12;
 const data = Array.from({ length: 3 }, (arg0, arg1) => arg1);
-fn(4574);
+fn(4605);
 let createStyles = {
   container: null,
   header: null,
@@ -146,11 +146,11 @@ export default function GameProfileSimilarGames(trackAction) {
     obj = { variant: "heading-sm/semibold", color: "mobile-text-heading-primary", children: null };
     const intl = trackAction(1114).intl;
     obj.children = intl.string(trackAction(1114).t["6rLyQB"]);
-    obj.children = closure_7(trackAction(4570).Text, obj);
+    obj.children = closure_7(trackAction(4601).Text, obj);
     const items = [closure_7(closure_6, obj)];
     const obj1 = {
       horizontal: true,
-      renderScrollComponent: tmp2(8753),
+      renderScrollComponent: tmp2(8790),
       data,
       renderItem() {
         return React5(LoadingCard, { cardWidth });
@@ -160,7 +160,7 @@ export default function GameProfileSimilarGames(trackAction) {
       ListHeaderComponent: ListPadding,
       ListFooterComponent: ListPadding,
     };
-    items[1] = closure_7(trackAction(8906).FlashList, obj1);
+    items[1] = closure_7(trackAction(8943).FlashList, obj1);
     obj.children = items;
     let tmp7 = closure_8(closure_6, obj);
   } else {
@@ -171,11 +171,11 @@ export default function GameProfileSimilarGames(trackAction) {
       const obj4 = { variant: "heading-sm/semibold", color: "mobile-text-heading-primary", children: null };
       const intl2 = trackAction(1114).intl;
       obj4.children = intl2.string(trackAction(1114).t["6rLyQB"]);
-      obj3.children = closure_7(trackAction(4570).Text, obj4);
+      obj3.children = closure_7(trackAction(4601).Text, obj4);
       const items1 = [closure_7(closure_6, obj3)];
       const obj5 = {
         horizontal: true,
-        renderScrollComponent: tmp2(8753),
+        renderScrollComponent: tmp2(8790),
         data: similarGames,
         renderItem(game) {
           return React5(SimilarGameCard, { game: game.item, trackAction, cardWidth });
@@ -187,7 +187,7 @@ export default function GameProfileSimilarGames(trackAction) {
         decelerationRate: "fast",
         snapToInterval: result + tmp5,
       };
-      items1[1] = closure_7(trackAction(8906).FlashList, obj5);
+      items1[1] = closure_7(trackAction(8943).FlashList, obj5);
       obj2.children = items1;
       tmp7 = closure_8(closure_6, obj2);
     }

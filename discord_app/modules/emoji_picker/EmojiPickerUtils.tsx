@@ -14,7 +14,7 @@ import SortedGuildStore from "../../stores/SortedGuildStore.tsx";
 import UserStore from "../../stores/UserStore.tsx";
 
 require = fn;
-const EmojiPickerConstants = fn(5477);
+const EmojiPickerConstants = fn(5513);
 ({ EmojiCategories: closure_8, EmojiCategoryTypes: closure_9, EmojiSubCategory: c10 } = EmojiPickerConstants);
 const Constants = fn(1074);
 ({

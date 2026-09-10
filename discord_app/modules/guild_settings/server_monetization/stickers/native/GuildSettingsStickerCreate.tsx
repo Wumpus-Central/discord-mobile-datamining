@@ -25,7 +25,7 @@ const EmojiConstants = fn(1374);
 const MAX_STICKER_FILE_SIZE = fn(1938).MAX_STICKER_FILE_SIZE;
 const jsxProd = fn(21);
 ({ jsx: closure_15, Fragment: closure_16, jsxs: closure_17 } = jsxProd);
-fn(4574);
+fn(4605);
 let obj = {
   container: null,
   title: null,
@@ -482,21 +482,21 @@ export default noop.forwardRef((stickerId, arg1) => {
     let obj3 = { variant: "heading-md/semibold", style: tmp.title, children: null };
     const intl = stickerId(1114).intl;
     obj3.children = intl.string(stickerId(1114).t["9N2OWD"]);
-    const items2 = [onPressEmoji(stickerId(4570).Text, obj3), , ,];
+    const items2 = [onPressEmoji(stickerId(4601).Text, obj3), , ,];
     let obj4 = { variant: "text-sm/medium", color: "text-muted", style: tmp.description, children: null };
     const intl2 = stickerId(1114).intl;
     let obj5 = { fileSize: null };
-    let obj8 = stickerId(4471);
+    let obj8 = stickerId(4502);
     obj5.fileSize = obj8.formatKbSize(first1, { useKibibytes: true });
     obj4.children = intl2.format(stickerId(1114).t.hxLviw, obj5);
-    items2[1] = onPressEmoji(stickerId(4570).Text, obj4);
+    items2[1] = onPressEmoji(stickerId(4601).Text, obj4);
     let obj6 = { variant: "text-sm/medium", color: "text-muted", style: tmp.help, children: null };
     const intl3 = stickerId(1114).intl;
     const obj7 = { articleUrl: null };
     let tmp14Result = HelpdeskUtilsDefault;
     obj7.articleUrl = tmp14Result.getArticleURL(uri.STICKERS_UPLOAD);
     obj6.children = intl3.format(stickerId(1114).t.UBj0aX, obj7);
-    items2[2] = onPressEmoji(stickerId(4570).Text, obj6);
+    items2[2] = onPressEmoji(stickerId(4601).Text, obj6);
     obj8 = { text: null, onPress: null, variant: null };
     const intl4 = stickerId(1114).intl;
     obj8.text = intl4.string(stickerId(1114).t.O1REe1);
@@ -507,7 +507,7 @@ export default noop.forwardRef((stickerId, arg1) => {
     }
     const obj9 = { children: null };
     obj8.variant = str;
-    items2[3] = onPressEmoji(stickerId(4989).Button, obj8);
+    items2[3] = onPressEmoji(stickerId(5025).Button, obj8);
     obj9.children = items2;
     tmp23Result = tmp23(user, obj9);
   }
@@ -516,7 +516,7 @@ export default noop.forwardRef((stickerId, arg1) => {
   const obj11 = { variant: "text-sm/semibold", color: "text-subtle", style: tmp.stickerPreviewLabel, children: null };
   const intl5 = stickerId(1114).intl;
   obj11.children = intl5.string(stickerId(1114).t.gjdiKE);
-  const items4 = [onPressEmoji(stickerId(4570).Text, obj11), , , , , ,];
+  const items4 = [onPressEmoji(stickerId(4601).Text, obj11), , , , , ,];
   const obj12 = {
     style: tmp.stickerPreview,
     disabled: null != tmp16Result,
@@ -539,14 +539,14 @@ export default noop.forwardRef((stickerId, arg1) => {
     obj14.style = tmp.stickerPreviewImage;
     tmp32Result = tmp32(c6, obj14);
   } else {
-    tmp32Result = tmp32(tmp31(17615).StickerPlusIcon, { size: "lg" });
+    tmp32Result = tmp32(tmp31(17674).StickerPlusIcon, { size: "lg" });
   }
   obj12.children = tmp32Result;
-  items4[1] = onPressEmoji(stickerId(5137).PressableHighlight, obj12);
+  items4[1] = onPressEmoji(stickerId(5173).PressableHighlight, obj12);
   const obj16 = { variant: "text-sm/semibold", color: "text-subtle", style: tmp.stickerPreviewLabel, children: null };
   const intl7 = tmp31(1114).intl;
   obj16.children = intl7.string(stickerId(1114).t["3BQmiC"]);
-  items4[2] = onPressEmoji(stickerId(4570).Text, obj16);
+  items4[2] = onPressEmoji(stickerId(4601).Text, obj16);
   const obj17 = {
     style: tmp.emojiPreview,
     onPress() {
@@ -573,7 +573,7 @@ export default noop.forwardRef((stickerId, arg1) => {
     tmp32Result = tmp32(EmojiDefault, obj18);
     const tmp14Result1 = EmojiDefault;
   } else {
-    tmp32Result = tmp32(tmp31(8790).ReactionIcon, { size: "md", color: "text-subtle" });
+    tmp32Result = tmp32(tmp31(8827).ReactionIcon, { size: "md", color: "text-subtle" });
   }
   const items5 = [tmp32Result];
   if (null != first1) {
@@ -583,13 +583,13 @@ export default noop.forwardRef((stickerId, arg1) => {
     const intl8 = tmp31(1114).intl;
     combined = intl8.string(tmp31(1114).t.QTK0TJ);
   }
-  items5[1] = onPressEmoji(stickerId(4570).Text, {
+  items5[1] = onPressEmoji(stickerId(4601).Text, {
     variant: "text-md/semibold",
     color: "input-placeholder-text-default",
     children: combined,
   });
   obj17.children = items5;
-  items4[3] = closure_17(stickerId(5137).PressableHighlight, obj17);
+  items4[3] = closure_17(stickerId(5173).PressableHighlight, obj17);
   const obj20 = {
     ref: ref1,
     label: null,
@@ -618,7 +618,7 @@ export default noop.forwardRef((stickerId, arg1) => {
       current2.scrollToEnd({ animated: true });
     }
   };
-  items4[4] = onPressEmoji(stickerId(6620).TextInput, obj20);
+  items4[4] = onPressEmoji(stickerId(6656).TextInput, obj20);
   const obj21 = { ref: ref2, maxLength: 100, label: null, placeholder: null, onChange: null, onFocus: null };
   const intl11 = tmp31(1114).intl;
   obj21.label = intl11.string(stickerId(1114).t.uGccej);
@@ -626,7 +626,7 @@ export default noop.forwardRef((stickerId, arg1) => {
   obj21.placeholder = intl12.string(stickerId(1114).t.zwR0fa);
   obj21.onChange = tmp8;
   obj21.onFocus = onFocus;
-  items4[5] = onPressEmoji(stickerId(7099).TextArea, obj21);
+  items4[5] = onPressEmoji(stickerId(7137).TextArea, obj21);
   const obj22 = {
     onPress: function handleSave() {
       const self = this;
@@ -651,9 +651,9 @@ export default noop.forwardRef((stickerId, arg1) => {
   }
   obj22.variant = str3;
   obj22.disabled = !hasUnsavedChanges(false);
-  items4[6] = onPressEmoji(stickerId(4989).Button, obj22);
+  items4[6] = onPressEmoji(stickerId(5025).Button, obj22);
   obj10.children = items4;
-  items3[1] = closure_17(stickerId(4987).Stack, obj10);
+  items3[1] = closure_17(stickerId(5023).Stack, obj10);
   obj1.children = items3;
   return closure_17(c7, obj1);
 });

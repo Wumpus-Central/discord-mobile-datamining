@@ -17,12 +17,12 @@ class HeaderButton {
 }
 const jsx = fn(21).jsx;
 const React3 = "heading-md/bold";
-const diff = fn(4994).SMALL_BUTTON_HEIGHT - 2 * fn(4994).BUTTON_BORDER_WIDTH;
-const diff1 = diff - fn(4570).TextStyleSheet["heading-md/bold"].lineHeight;
-fn(4574);
+const diff = fn(5030).SMALL_BUTTON_HEIGHT - 2 * fn(5030).BUTTON_BORDER_WIDTH;
+const diff1 = diff - fn(4601).TextStyleSheet["heading-md/bold"].lineHeight;
+fn(4605);
 const createStyles = { pill: { paddingVertical: diff1 / 2 } };
 const React4 = createStyles.createStyles(createStyles);
-HeaderButton.Icon = fn(4990).BaseTextButton.Icon;
+HeaderButton.Icon = fn(5026).BaseTextButton.Icon;
 const size = fn(2);
 const result = size.fileFinishedImporting("design/components/experimental/Button/native/HeaderButton.native.tsx");
 

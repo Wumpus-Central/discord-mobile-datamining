@@ -14,7 +14,7 @@ const View = fn(17).View;
 const createChannelRecord = fn(1961).createChannelRecord;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-fn(4574);
+fn(4605);
 let createStyles = { selectorGroup: { flexDirection: "column", gap: 8 }, select: null, label: null, error: null };
 createStyles = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, borderRadius: nativeDefault.radii.xs };
 createStyles.select = createStyles;
@@ -52,7 +52,7 @@ export default function WebhookGuildChannelSelector(selectedGuildId) {
       const channels = first.channels;
       obj.items = channels.map((id) => {
         const obj = {
-          label: selectedGuildId(4727).computeChannelName(closure_1_7(id), closure_1_9, closure_1_8),
+          label: selectedGuildId(4758).computeChannelName(closure_1_7(id), closure_1_9, closure_1_8),
           value: id.id,
         };
         return obj;
@@ -62,8 +62,8 @@ export default function WebhookGuildChannelSelector(selectedGuildId) {
         selectedChannelId(onChannelChange[10]).hideActionSheet(WebhookGuildChannelSelector);
       };
       obj.selectedItem = selectedChannelId;
-      obj.openLazy(asyncRequireImpl(9458, dependencyMap.paths), WebhookGuildChannelSelector, obj);
-      const tmp7 = asyncRequireImpl(9458, dependencyMap.paths);
+      obj.openLazy(asyncRequireImpl(9496, dependencyMap.paths), WebhookGuildChannelSelector, obj);
+      const tmp7 = asyncRequireImpl(9496, dependencyMap.paths);
     }
   }, items);
   const effect = noop.useEffect(() => {

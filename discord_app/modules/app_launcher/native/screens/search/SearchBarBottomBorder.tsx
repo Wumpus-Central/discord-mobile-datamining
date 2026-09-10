@@ -6,7 +6,7 @@ import noop from "../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const jsx = fn(21).jsx;
-fn(4574);
+fn(4605);
 let createStyles = { border: null };
 createStyles = { borderBottomColor: nativeDefault.colors.BORDER_SUBTLE, borderBottomWidth: 1 };
 createStyles.border = createStyles;
@@ -22,7 +22,7 @@ export const usePinnedSearchBarBottomBorder = function usePinnedSearchBarBottomB
   if (triggerScrollHeight === undefined) {
     triggerScrollHeight = 1;
   }
-  let obj = triggerScrollHeight(4310);
+  let obj = triggerScrollHeight(4341);
   const sharedValue = obj.useSharedValue(0);
   const items = [key, sharedValue];
   const effect = noop.useEffect(() => {
@@ -32,7 +32,7 @@ export const usePinnedSearchBarBottomBorder = function usePinnedSearchBarBottomB
   const callback = noop.useCallback((offset) => {
     const result = sharedValue.set(offset.offset);
   }, items1);
-  let obj1 = triggerScrollHeight(4310);
+  let obj1 = triggerScrollHeight(4341);
   const fn = function u() {
     let obj = spring;
     let num = 0;
@@ -43,10 +43,10 @@ export const usePinnedSearchBarBottomBorder = function usePinnedSearchBarBottomB
     return obj;
   };
   obj = {
-    withSpring: triggerScrollHeight(4988).withSpring,
+    withSpring: triggerScrollHeight(5024).withSpring,
     scrollPosition: sharedValue,
     triggerScrollHeight,
-    springStandard: triggerScrollHeight(4992).springStandard,
+    springStandard: triggerScrollHeight(5028).springStandard,
   };
   fn.__closure = obj;
   fn.__workletHash = 5466161440826;
@@ -56,6 +56,6 @@ export const usePinnedSearchBarBottomBorder = function usePinnedSearchBarBottomB
   obj1 = { style: null };
   const items2 = [closure_5().border, animatedStyle];
   obj1.style = items2;
-  obj.bottomBorderComponent = jsx(sharedValue(4310).View, { style: null }, key);
+  obj.bottomBorderComponent = jsx(sharedValue(4341).View, { style: null }, key);
   return obj;
 };

@@ -10,12 +10,12 @@ import UserStore from "../../../../../stores/UserStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-const HappeningNowConstants = fn(15326);
+const HappeningNowConstants = fn(15375);
 ({ HAPPENING_NOW_CONTENT_HEIGHT, HappeningNowCardTrackingType: closure_7 } = HappeningNowConstants);
 const AnalyticEvents = fn(1074).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-fn(4574);
+fn(4605);
 const createStyles = {
   content: { flexShrink: 1, gap: 2 },
   cardImage: { height: HAPPENING_NOW_CONTENT_HEIGHT, minWidth: HAPPENING_NOW_CONTENT_HEIGHT, marginRight: 12 },
@@ -129,12 +129,12 @@ export default function HappeningNowCardEmbeddedActivity(guildId) {
     const items1 = [userId];
     obj.highlighted_user_ids = items1;
     obj.track(AnalyticEvents.ACTIVITY_CARD_CLICKED, obj);
-    asyncRequireImpl(9568, dependencyMap.paths).then((result) => {
+    asyncRequireImpl(9606, dependencyMap.paths).then((result) => {
       if (null != channelId) {
         tmp(tmp2, true);
       }
     });
-    const promise = asyncRequireImpl(9568, dependencyMap.paths);
+    const promise = asyncRequireImpl(9606, dependencyMap.paths);
   }, items3);
   context = obj3.useContext(tmp2(tmp3[16]).ViewableHappeningNowCardKeysContext);
   obj3.useRef(cardKey);

@@ -6,7 +6,7 @@ get_ActivityIndicator = fn(17);
 ({ StyleSheet, View: closure_1 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: c2, jsxs: c3 } = jsxProd);
-const createStyles = fn(4574);
+const createStyles = fn(4605);
 let obj = { divider: null };
 obj = {
   marginLeft: 0,

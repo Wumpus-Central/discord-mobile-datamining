@@ -1,7 +1,7 @@
 // discord_app/modules/emojis/UnicodeEmojis.tsx
 import _modDef12 from "../../../_runtime/metro/00012__.js";
 import EmojiTypes from "EmojiTypes.tsx";
-import _mod14010 from "../../../_runtime/metro/14010__.js";
+import _mod14059 from "../../../_runtime/metro/14059__.js";
 import defaultImageSrcGenerator from "../../../node_modules/.pnpm/@discordapp+twemoji@16.0.1/node_modules/@discordapp/twemoji/dist/twemoji.npm.js";
 
 require = fn;
@@ -40,10 +40,10 @@ function findInlineEmojisFromSurrogates(text, arg1) {
           if (tmp3 === closure_13) {
             text = `${tmp3}`;
             let str3 = "";
-            let tmp18 = require("../../../_runtime/metro/04228__.js").surrogateToEmoji[`${tmp3}`];
+            let tmp18 = require("../../../_runtime/metro/04259__.js").surrogateToEmoji[`${tmp3}`];
             let tmp19 = null;
             if (null != tmp18) {
-              tmp19 = require("../../../_runtime/metro/04228__.js").emojis[tmp18];
+              tmp19 = require("../../../_runtime/metro/04259__.js").emojis[tmp18];
             }
             let first;
             if (tmp19 != null) {
@@ -70,10 +70,10 @@ function findInlineEmojisFromSurrogates(text, arg1) {
           } else if (re15.test(tmp3)) {
             sum = str + tmp3;
           } else {
-            let tmp12 = require("../../../_runtime/metro/04228__.js").surrogateToEmoji[str];
+            let tmp12 = require("../../../_runtime/metro/04259__.js").surrogateToEmoji[str];
             let tmp13 = null;
             if (null != tmp12) {
-              tmp13 = require("../../../_runtime/metro/04228__.js").emojis[tmp12];
+              tmp13 = require("../../../_runtime/metro/04259__.js").emojis[tmp12];
             }
             let first1;
             if (tmp13 != null) {
@@ -107,10 +107,10 @@ function findInlineEmojisFromSurrogates(text, arg1) {
   if (!tmp23) {
     return items1;
   } else {
-    const tmp26 = require("../../../_runtime/metro/04228__.js").surrogateToEmoji[str2];
+    const tmp26 = require("../../../_runtime/metro/04259__.js").surrogateToEmoji[str2];
     let tmp27 = null;
     if (null != tmp26) {
-      tmp27 = require("../../../_runtime/metro/04228__.js").emojis[tmp26];
+      tmp27 = require("../../../_runtime/metro/04259__.js").emojis[tmp26];
     }
     let first2;
     if (tmp27 != null) {
@@ -276,10 +276,10 @@ Object.defineProperty(prototype, "name", {
     const self = this;
     if (this.hasDiversity) {
       if (null != global) {
-        const tmp6 = require("../../../_runtime/metro/04228__.js").surrogateToEmoji[global];
+        const tmp6 = require("../../../_runtime/metro/04259__.js").surrogateToEmoji[global];
         let tmp7 = null;
         if (null != tmp6) {
-          tmp7 = require("../../../_runtime/metro/04228__.js").emojis[tmp6];
+          tmp7 = require("../../../_runtime/metro/04259__.js").emojis[tmp6];
         }
         let first;
         if (tmp7 != null) {
@@ -331,13 +331,13 @@ export default {
     global = tmp;
   },
   getCategories() {
-    return Object.keys(require("../../../_runtime/metro/04228__.js").emojisByCategory);
+    return Object.keys(require("../../../_runtime/metro/04259__.js").emojisByCategory);
   },
   getByName(arg0) {
-    const tmp3 = require("../../../_runtime/metro/04228__.js").nameToEmoji[arg0];
+    const tmp3 = require("../../../_runtime/metro/04259__.js").nameToEmoji[arg0];
     let tmp4 = null;
     if (null != tmp3) {
-      tmp4 = require("../../../_runtime/metro/04228__.js").emojis[tmp3];
+      tmp4 = require("../../../_runtime/metro/04259__.js").emojis[tmp3];
     }
     let tmp5 = null;
     if (null != tmp4) {
@@ -354,8 +354,8 @@ export default {
   getByCategory(name) {
     value = map.get(name);
     if (null == value) {
-      const tmp4 = require("../../../_runtime/metro/04228__.js").emojisByCategory[name];
-      const emojis = require("../../../_runtime/metro/04228__.js").emojis;
+      const tmp4 = require("../../../_runtime/metro/04259__.js").emojisByCategory[name];
+      const emojis = require("../../../_runtime/metro/04259__.js").emojis;
       const result = require("EmojiUtils").filterUnsupportedEmojis(emojis.slice(tmp4[0], tmp4[1]));
       const mapped = result.map(parseRawEmojiObject);
       const result1 = map.set(name, mapped);
@@ -373,10 +373,10 @@ export default {
       if (arg0 === undefined) {
         str = "";
       }
-      const tmp3 = require("../../../_runtime/metro/04228__.js").nameToEmoji[arg1];
+      const tmp3 = require("../../../_runtime/metro/04259__.js").nameToEmoji[arg1];
       let tmp4 = null;
       if (null != tmp3) {
-        tmp4 = require("../../../_runtime/metro/04228__.js").emojis[tmp3];
+        tmp4 = require("../../../_runtime/metro/04259__.js").emojis[tmp3];
       }
       let surrogates;
       if (tmp4 != null) {
@@ -415,10 +415,10 @@ export default {
     if (arg1 === undefined) {
       str = "";
     }
-    const tmp3 = require("../../../_runtime/metro/04228__.js").nameToEmoji[emojiName];
+    const tmp3 = require("../../../_runtime/metro/04259__.js").nameToEmoji[emojiName];
     let tmp4 = null;
     if (null != tmp3) {
-      tmp4 = require("../../../_runtime/metro/04228__.js").emojis[tmp3];
+      tmp4 = require("../../../_runtime/metro/04259__.js").emojis[tmp3];
     }
     let surrogates;
     if (tmp4 != null) {
@@ -438,10 +438,10 @@ export default {
     if (arg2 === undefined) {
       str = "";
     }
-    const tmp3 = require("../../../_runtime/metro/04228__.js").surrogateToEmoji[name];
+    const tmp3 = require("../../../_runtime/metro/04259__.js").surrogateToEmoji[name];
     let tmp4 = null;
     if (null != tmp3) {
-      tmp4 = require("../../../_runtime/metro/04228__.js").emojis[tmp3];
+      tmp4 = require("../../../_runtime/metro/04259__.js").emojis[tmp3];
     }
     let first;
     if (tmp4 != null) {
@@ -469,7 +469,7 @@ export default {
     hasOwnProperty = Object.prototype.hasOwnProperty;
     const call = hasOwnProperty.call;
     if (typeof call === "unknown" ? hasOwnProperty(key10009) : call(tmp3, key10009)) {
-      str = _mod14010[key10009];
+      str = _mod14059[key10009];
     }
     let combined = str;
     if (flag) {
@@ -480,10 +480,10 @@ export default {
   },
   convertSurrogateToBase(surrogates) {
     const reduced = items.reduce((acc, item) => acc.replace(item, ""), surrogates);
-    const tmp4 = require("../../../_runtime/metro/04228__.js").surrogateToEmoji[reduced];
+    const tmp4 = require("../../../_runtime/metro/04259__.js").surrogateToEmoji[reduced];
     let tmp5 = null;
     if (null != tmp4) {
-      tmp5 = require("../../../_runtime/metro/04228__.js").emojis[tmp4];
+      tmp5 = require("../../../_runtime/metro/04259__.js").emojis[tmp4];
     }
     let str;
     if (tmp5 != null) {
@@ -492,10 +492,10 @@ export default {
     if (str == null) {
       str = "";
     }
-    const tmp6 = require("../../../_runtime/metro/04228__.js").nameToEmoji[str];
+    const tmp6 = require("../../../_runtime/metro/04259__.js").nameToEmoji[str];
     let tmp7 = null;
     if (null != tmp6) {
-      tmp7 = require("../../../_runtime/metro/04228__.js").emojis[tmp6];
+      tmp7 = require("../../../_runtime/metro/04259__.js").emojis[tmp6];
     }
     let tmp8 = null;
     if (null != tmp7) {
@@ -521,8 +521,8 @@ export default {
       continue;
     }
   },
-  numDiversitySprites: fn(4228).numDiversitySprites,
-  numNonDiversitySprites: fn(4228).numNonDiversitySprites,
+  numDiversitySprites: fn(4259).numDiversitySprites,
+  numNonDiversitySprites: fn(4259).numNonDiversitySprites,
   EMOJI_NAME_RE: /^:([^\s:]+?(?:::skin-tone-\d)?):/,
   EMOJI_NAME_AND_DIVERSITY_RE: tmp3,
   EMOJI_SHORTCUT_RE:
@@ -530,7 +530,7 @@ export default {
   hasSurrogates(match) {
     return _modDef12
       .toArray(match)
-      .some((item) => null != require("../../../_runtime/metro/04228__.js").surrogateToEmoji[item]);
+      .some((item) => null != require("../../../_runtime/metro/04259__.js").surrogateToEmoji[item]);
   },
 };
 export const DIVERSITY_SURROGATES = items;

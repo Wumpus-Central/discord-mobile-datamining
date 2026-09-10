@@ -2,7 +2,7 @@
 import KeyboardManagerUtils from "../../../../../utils/native/KeyboardManagerUtils.tsx";
 import mergeProps from "../../../../../design/utils/native/mergeProps.native.tsx";
 import useKeyboardIsOpen from "../../../../keyboard/native/useKeyboardIsOpen.tsx";
-import SearchBarDefault from "SearchBar.tsx";
+import layout_SearchBarDefault from "SearchBar.tsx";
 import SearchFilterSuggestionsDefault from "autocomplete/SearchFilterSuggestions.tsx";
 import SearchFilterButtonDefault from "autocomplete/SearchFilterButton.tsx";
 import noop from "../../../../../../_runtime/metro/00019__.js";
@@ -11,7 +11,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4574);
+const createStyles = fn(4605);
 let closure_7 = createStyles.createStyles({
   header: { flexDirection: "row", alignItems: "center", paddingLeft: 16, zIndex: 10 },
   headerWithBackButton: { paddingLeft: 0 },
@@ -62,7 +62,7 @@ export default noop.memo(
     items1[1] = headerWithBackButton;
     const items2 = [backButton, ,];
     obj = { style: tmp.headerSearch, children: null };
-    const items3 = [closure_5(SearchBarDefault, { ref: memo, searchContext, setSuggestionsDismissed })];
+    const items3 = [closure_5(layout_SearchBarDefault, { ref: memo, searchContext, setSuggestionsDismissed })];
     obj = { style: tmp.suggestionsAnchor, children: null };
     const obj1 = {
       searchContext,

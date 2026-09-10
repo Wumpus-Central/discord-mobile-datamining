@@ -98,7 +98,7 @@ function getQuestDeliveryDataForPlacement(questPlacementFromQuestContent, adCont
     }
   }
 }
-const QuestConstants = fn(5458);
+const QuestConstants = fn(5494);
 ({
   DismissibleQuestContentFlags: closure_7,
   BILLABLE_PLACEMENTS: closure_8,
@@ -107,14 +107,14 @@ const QuestConstants = fn(5458);
 } = QuestConstants);
 let c11 = 2592000000;
 let tags = {};
-tags[fn(5461).QuestContent.QUEST_BAR] = fn(5461).AdPlacement.DESKTOP_ACCOUNT_PANEL_AREA;
-tags[fn(5461).QuestContent.QUEST_BAR_V2] = fn(5461).AdPlacement.DESKTOP_ACCOUNT_PANEL_AREA;
-tags[fn(5461).QuestContent.QUEST_BAR_MOBILE] = fn(5461).AdPlacement.MOBILE_HOME_DOCK_AREA;
-tags[fn(5461).QuestContent.QUEST_HOME_HERO] = fn(5461).AdPlacement.QUEST_HOME_BANNER_DESKTOP;
-tags[fn(5461).QuestContent.QUEST_HOME_HERO_SHELF] = fn(5461).AdPlacement.QUEST_HOME_BANNER_DESKTOP;
-tags[fn(5461).QuestContent.QUEST_HOME_MOBILE_CAROUSEL] = fn(5461).AdPlacement.QUEST_HOME_MOBILE_CAROUSEL;
-tags[fn(5461).QuestContent.VIDEO_MODAL_MOBILE] = fn(5461).AdPlacement.VIDEO_MODAL_MOBILE;
-let items = [fn(5461).AdPlacement.QUEST_HOME_MOBILE_CAROUSEL, fn(5461).AdPlacement.VIDEO_MODAL_MOBILE];
+tags[fn(5497).QuestContent.QUEST_BAR] = fn(5497).AdPlacement.DESKTOP_ACCOUNT_PANEL_AREA;
+tags[fn(5497).QuestContent.QUEST_BAR_V2] = fn(5497).AdPlacement.DESKTOP_ACCOUNT_PANEL_AREA;
+tags[fn(5497).QuestContent.QUEST_BAR_MOBILE] = fn(5497).AdPlacement.MOBILE_HOME_DOCK_AREA;
+tags[fn(5497).QuestContent.QUEST_HOME_HERO] = fn(5497).AdPlacement.QUEST_HOME_BANNER_DESKTOP;
+tags[fn(5497).QuestContent.QUEST_HOME_HERO_SHELF] = fn(5497).AdPlacement.QUEST_HOME_BANNER_DESKTOP;
+tags[fn(5497).QuestContent.QUEST_HOME_MOBILE_CAROUSEL] = fn(5497).AdPlacement.QUEST_HOME_MOBILE_CAROUSEL;
+tags[fn(5497).QuestContent.VIDEO_MODAL_MOBILE] = fn(5497).AdPlacement.VIDEO_MODAL_MOBILE;
+let items = [fn(5497).AdPlacement.QUEST_HOME_MOBILE_CAROUSEL, fn(5497).AdPlacement.VIDEO_MODAL_MOBILE];
 const set = new Set(items);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/quests/utils/QuestDataUtils.tsx");

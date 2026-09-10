@@ -17,13 +17,13 @@ const result = size.fileFinishedImporting(
 
 export const useBottomSheetFlashListBottomViewabilityInset = function useBottomSheetFlashListBottomViewabilityInset() {
   let obj = bottomVisibilityInsetRef;
-  const context = bottomVisibilityInsetRef.useContext(bottomSheetPosition(11247).AppLauncherContext);
+  const context = bottomVisibilityInsetRef.useContext(bottomSheetPosition(11287).AppLauncherContext);
   bottomSheetPosition = undefined;
   if (context != null) {
     bottomSheetPosition = context.bottomSheetPosition;
   }
   const flashListRef = obj.useRef(null);
-  const diff = flashListRef(1477)().height - flashListRef(11388)().maximum;
+  const diff = flashListRef(1477)().height - flashListRef(11428)().maximum;
   dependencyMap = diff;
   bottomVisibilityInsetRef = obj.useRef(9999);
   const memo = obj.useMemo(
@@ -56,12 +56,12 @@ export const useBottomSheetFlashListBottomViewabilityInset = function useBottomS
   };
   obj = {
     distanceBetweenExpandedScreenTopAndSheetTop: diff,
-    runOnJS: tmp4(4310).runOnJS,
+    runOnJS: tmp4(4341).runOnJS,
     handleBottomViewabilityInsetDebounced: memo,
   };
   fn2.__closure = obj;
   fn2.__workletHash = 6025307858098;
   fn2.__initData = __initData;
-  const animatedReaction = bottomSheetPosition(4310).useAnimatedReaction(fn, fn2);
+  const animatedReaction = bottomSheetPosition(4341).useAnimatedReaction(fn, fn2);
   return { flashListRef, bottomVisibilityInsetRef };
 };

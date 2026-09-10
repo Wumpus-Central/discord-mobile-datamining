@@ -146,10 +146,10 @@ function GuildDirectoryNicknameUpsell(arg0) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: metroRequire, ScrollView: closure_7 } = get_ActivityIndicator);
-const GuildPrompts = fn(12681).GuildPrompts;
+const GuildPrompts = fn(12721).GuildPrompts;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-fn(4574);
+fn(4605);
 let createStyles = {
   container: null,
   guildIcon: null,
@@ -161,7 +161,7 @@ let createStyles = {
   redesignGrowSpacing: null,
   redesignButtonContainer: null,
 };
-createStyles = { flex: 1, flexGrow: 2, marginTop: fn(5696).NAV_BAR_HEIGHT };
+createStyles = { flex: 1, flexGrow: 2, marginTop: fn(5732).NAV_BAR_HEIGHT };
 createStyles.container = createStyles;
 createStyles.guildIcon = { alignSelf: "center", marginTop: 16 };
 createStyles.title = { marginBottom: 8, textAlign: "center" };

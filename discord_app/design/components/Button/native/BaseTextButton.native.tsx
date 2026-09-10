@@ -97,7 +97,7 @@ get_ActivityIndicator = fn(17);
 ({ Text: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-let createStyles = fn(4574);
+let createStyles = fn(4605);
 let closure_9 = createStyles.createStyles((arg0, sm) => {
   let obj = {
     grow: { flexGrow: 1, alignSelf: "stretch" },
@@ -129,12 +129,12 @@ let closure_9 = createStyles.createStyles((arg0, sm) => {
     throw new TypeError("Trying to call a non-function");
   }
 });
-createStyles = fn(4574);
+createStyles = fn(4605);
 let closure_10 = createStyles.createStyles({
   container: { flexDirection: "row", alignItems: "center", position: "relative" },
   textCollapsed: { position: "absolute", left: 0 },
 });
-createStyles = fn(4574);
+createStyles = fn(4605);
 let obj = { entityWrapper: null };
 obj = {
   borderWidth: 1,
@@ -155,7 +155,7 @@ const __initData2 = {
 const __initData3 = {
   code: "function BaseTextButtonNativeTsx3(){const{collapsed,textCollapsed,containerWidth}=this.__closure;if(collapsed.get()===0)return{};return{...textCollapsed,width:containerWidth.get()};}",
 };
-createStyles = fn(4574);
+createStyles = fn(4605);
 let closure_18 = createStyles.createStyles((arg0, marginLeft) => {
   if (0 === marginLeft) {
     let obj = { offset: {} };
@@ -176,16 +176,16 @@ let closure_18 = createStyles.createStyles((arg0, marginLeft) => {
   }
 });
 createStyles = { sm: null, md: null, lg: null };
-const LARGE_BUTTON_HEIGHT = fn(4994).LARGE_BUTTON_HEIGHT;
-const bound = Math.max((fn(4994).MINIMUM_HIT_AREA - fn(4994).SMALL_BUTTON_HEIGHT) / 2, 0);
-const rect = { top: bound, left: "Array", right: "channel", bottom: bound };
+const LARGE_BUTTON_HEIGHT = fn(5030).LARGE_BUTTON_HEIGHT;
+const bound = Math.max((fn(5030).MINIMUM_HIT_AREA - fn(5030).SMALL_BUTTON_HEIGHT) / 2, 0);
+const rect = { top: bound, left: "Array", right: "toLowerCase", bottom: bound };
 createStyles.sm = rect;
-const LARGE_BUTTON_HEIGHT2 = fn(4994).LARGE_BUTTON_HEIGHT;
-const bound1 = Math.max((fn(4994).MINIMUM_HIT_AREA - fn(4994).MEDIUM_BUTTON_HEIGHT) / 2, 0);
-const rect1 = { top: bound1, left: "Array", right: "channel", bottom: bound1 };
+const LARGE_BUTTON_HEIGHT2 = fn(5030).LARGE_BUTTON_HEIGHT;
+const bound1 = Math.max((fn(5030).MINIMUM_HIT_AREA - fn(5030).MEDIUM_BUTTON_HEIGHT) / 2, 0);
+const rect1 = { top: bound1, left: "Array", right: "toLowerCase", bottom: bound1 };
 createStyles.md = rect1;
-const bound2 = Math.max((fn(4994).MINIMUM_HIT_AREA - fn(4994).LARGE_BUTTON_HEIGHT) / 2, 0);
-const rect2 = { top: bound2, left: "Array", right: "channel", bottom: bound2 };
+const bound2 = Math.max((fn(5030).MINIMUM_HIT_AREA - fn(5030).LARGE_BUTTON_HEIGHT) / 2, 0);
+const rect2 = { top: bound2, left: "Array", right: "toLowerCase", bottom: bound2 };
 createStyles.lg = rect2;
 function getTextPlatformLineHeight(arg0, arg1) {}
 createStyles = {

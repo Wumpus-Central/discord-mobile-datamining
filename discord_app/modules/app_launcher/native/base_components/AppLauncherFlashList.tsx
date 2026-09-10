@@ -6,7 +6,7 @@ require = fn;
 const ScrollView = fn(17).ScrollView;
 const jsx = fn(21).jsx;
 let forwardRefResult = noop.forwardRef((simultaneousHandlers, ref) => {
-  let obj = simultaneousHandlers(11247);
+  let obj = simultaneousHandlers(11287);
   const items = [simultaneousHandlers.simultaneousHandlers];
   let memo = noop.useMemo(() => {
     if (null == simultaneousHandlers) {
@@ -28,7 +28,7 @@ let forwardRefResult = noop.forwardRef((simultaneousHandlers, ref) => {
   }, items);
   if (
     obj.useAppLauncherContext().entrypoint ===
-    simultaneousHandlers.simultaneousHandlers(9441).AppLauncherEntrypoint.VOICE
+    simultaneousHandlers.simultaneousHandlers(9479).AppLauncherEntrypoint.VOICE
   ) {
     obj = {
       renderScrollComponent: memo,
@@ -66,7 +66,7 @@ let forwardRefResult = noop.forwardRef((simultaneousHandlers, ref) => {
       animatedProps: obj2.animatedProps,
     } = simultaneousHandlers);
     obj.ref = ref;
-    let tmp5 = jsx(tmp(8906).AnimatedFlashList, {
+    let tmp5 = jsx(tmp(8943).AnimatedFlashList, {
       renderScrollComponent: memo,
       ListHeaderComponent: null,
       onScroll: null,
@@ -124,7 +124,7 @@ let forwardRefResult = noop.forwardRef((simultaneousHandlers, ref) => {
       viewabilityConfigCallbackPairs: obj3.viewabilityConfigCallbackPairs,
     } = simultaneousHandlers);
     obj.ref = ref;
-    tmp5 = jsx(tmp(8906).BottomSheetFlashList, {
+    tmp5 = jsx(tmp(8943).BottomSheetFlashList, {
       ListHeaderComponent: null,
       onScroll: null,
       contentContainerStyle: null,

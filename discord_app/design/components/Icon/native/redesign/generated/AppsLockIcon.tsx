@@ -1,7 +1,7 @@
 // discord_app/design/components/Icon/native/redesign/generated/AppsLockIcon.tsx
 import nativeDefault from "../../../../../../../discord_common/js/packages/tokens/native.tsx";
 import BaseIconImage from "../../BaseIconImage.tsx";
-import _mod5083 from "../../../../../../../_runtime/metro/05083__.js";
+import _mod5119 from "../../../../../../../_runtime/metro/05119__.js";
 import noop from "../../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -16,5 +16,5 @@ export const AppsLockIcon = function AppsLockIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod5083, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod5119, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 };

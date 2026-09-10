@@ -43,8 +43,8 @@ function findWordSpan(text, selectionStart, selectionEnd) {
     return obj;
   }
 }
-const LoadState = fn(5473).LoadState;
-const EMOJI_SENTINEL = fn(5014).EMOJI_SENTINEL;
+const LoadState = fn(5509).LoadState;
+const EMOJI_SENTINEL = fn(5050).EMOJI_SENTINEL;
 const EmojiIntention = fn(1374).EmojiIntention;
 const re9 = /(\S+)\s$/;
 let closure_10 = { unlockedEmojis: [], lockedEmojis: [], queryStart: 0, queryEnd: 0 };

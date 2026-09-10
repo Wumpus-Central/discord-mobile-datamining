@@ -2,7 +2,7 @@
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../intl/index.native.tsx";
 import AnalyticsUtilsDefault from "../../../utils/AnalyticsUtils.tsx";
-import _modDef3430 from "../intl/SlayerStorefront.messages.js";
+import _modDef3460 from "../intl/SlayerStorefront.messages.js";
 import ReanimatedRexport from "../../reanimated/ReanimatedRexport.tsx";
 import UserUtilsDefault from "../../../utils/UserUtils.tsx";
 import HapticUtils from "../../haptics/HapticUtils.native.tsx";
@@ -331,12 +331,12 @@ function PurchaseSuccessModalBase(sku) {
 }
 get_ActivityIndicator = fn(17);
 ({ Image: metroRequire, ScrollView: closure_7, View: closure_8 } = get_ActivityIndicator);
-const numDays = fn(7243).SOCIAL_LAYER_DAYS_TO_CLAIM_ITEM;
+const numDays = fn(7281).SOCIAL_LAYER_DAYS_TO_CLAIM_ITEM;
 const Constants = fn(1074);
 ({ AnalyticEvents: closure_12, HorizontalGradient: map1, VerticalGradient: closure_14 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_15, jsxs: closure_16 } = jsxProd);
-fn(4574);
+fn(4605);
 let createStyles = {
   root: null,
   backdropImage: null,
@@ -424,7 +424,7 @@ createStyles.finePrint = {
   marginBottom: nativeDefault.space.PX_12,
 };
 let closure_17 = createStyles.createStyles(createStyles);
-createStyles = fn(4574);
+createStyles = fn(4605);
 let obj13 = { linkAccountIcon: null };
 let obj12 = {
   textAlign: "center",
@@ -630,7 +630,7 @@ export const SocialLayerStorefrontProductSelfPurchaseSuccessModal =
             str = "";
           }
           obj = { applicationName: str };
-          formatToPlainStringResult = formatToPlainString(_modDef3430.eNNnIG, obj);
+          formatToPlainStringResult = formatToPlainString(_modDef3460.eNNnIG, obj);
         }
       }
       return formatToPlainStringResult;

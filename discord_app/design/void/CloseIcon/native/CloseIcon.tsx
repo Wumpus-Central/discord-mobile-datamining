@@ -1,5 +1,5 @@
 // discord_app/design/void/CloseIcon/native/CloseIcon.tsx
-import inlineStyles from "../../../../../_runtime/08484_inlineStyles.js";
+import inlineStyles from "../../../../../_runtime/08521_inlineStyles.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;

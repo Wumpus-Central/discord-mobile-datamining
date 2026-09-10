@@ -155,15 +155,15 @@ let closure_21 = async function _handleRegistrationSubmit(arg0) {
   }
   return value;
 };
-const usePromoEmailConsentStore = fn(6608).usePromoEmailConsentStore;
-const RegistrationUIStore = fn(15979);
+const usePromoEmailConsentStore = fn(6644).usePromoEmailConsentStore;
+const RegistrationUIStore = fn(16028);
 ({
   setRegistrationErrors: metroRequire,
   setSubmitting: closure_7,
   useRegistrationUIStore: closure_8,
   clearRegistrationErrorMessage: closure_9,
 } = RegistrationUIStore);
-const RegistrationConstants = fn(15980);
+const RegistrationConstants = fn(16029);
 ({
   authStateToRegisterTransitionStep: c10,
   RegisterTransitionSteps: closure_11,
@@ -373,7 +373,7 @@ export const getAllAuthScreens = function getAllAuthScreens() {
     headerTitle,
     render(arg0, arg1) {
       closure_0 = arg1;
-      return closure_15(closure_1(7062), {
+      return closure_15(closure_1(7100), {
         onClose() {
           return closure_0.pop();
         },

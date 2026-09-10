@@ -8,7 +8,7 @@ import TrackedHTTPUtilsDefault from "../utils/TrackedHTTPUtils.tsx";
 import SurveyStore from "../stores/SurveyStore.tsx";
 
 require = fn;
-const SURVEY_REFETCH_INTERVAL = fn(4765).SURVEY_REFETCH_INTERVAL;
+const SURVEY_REFETCH_INTERVAL = fn(4796).SURVEY_REFETCH_INTERVAL;
 const Constants = fn(1074);
 ({ AnalyticEvents: hasOwnProperty, NoticeTypes: metroRequire, Endpoints: closure_7 } = Constants);
 const size = fn(2);

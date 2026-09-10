@@ -29,7 +29,7 @@ function LoggedEvent(arg0) {
   let tmp6Result = dependencyMap;
   let obj = {
     arrow: !tmp2,
-    icon: closure_8(fingerprint(10416).AnalyticsIcon, {}),
+    icon: closure_8(fingerprint(10454).AnalyticsIcon, {}),
     label: event,
     subLabel: null,
     onPress: null,
@@ -53,7 +53,7 @@ function LoggedEvent(arg0) {
   };
   obj.start = start;
   obj.end = end;
-  let items = [closure_8(fingerprint(5619).TableRow, obj)];
+  let items = [closure_8(fingerprint(5655).TableRow, obj)];
   if (!tmp2) {
     obj = { collapsable: false, children: null };
     items[1] = tmp2;
@@ -64,15 +64,15 @@ function LoggedEvent(arg0) {
     let obj1 = { style: map.commonPropertiesContainer, children: null };
     const obj2 = { name: "Timestamp (local)", children: null };
     const obj3 = { variant: "text-sm/semibold", color: "mobile-text-heading-primary", children: null };
-    let obj4 = map(4166)(timestamp);
+    let obj4 = map(4196)(timestamp);
     obj3.children = obj4.calendar();
-    obj2.children = closure_8(CopyIcon(4570).Text, obj3);
+    obj2.children = closure_8(CopyIcon(4601).Text, obj3);
     let items1 = [closure_8(CommonProperty, obj2), ,];
     tmp6Result = null != user;
     if (tmp6Result) {
       obj4 = { name: "User ", children: null };
       const obj5 = { user };
-      obj4.children = closure_8(tmp10(9835), obj5);
+      obj4.children = closure_8(tmp10(9873), obj5);
       tmp6Result = closure_8(CommonProperty, obj4);
     }
     items1[1] = tmp6Result;
@@ -90,15 +90,15 @@ function LoggedEvent(arg0) {
       const items2 = [map.monospace, { marginRight: 4 }];
       obj7.style = items2;
       obj7.children = fingerprint;
-      const items3 = [closure_8(CopyIcon(4570).Text, obj7)];
-      CopyIcon = CopyIcon(4521).CopyIcon;
+      const items3 = [closure_8(CopyIcon(4601).Text, obj7)];
+      CopyIcon = CopyIcon(4552).CopyIcon;
       tmp6Result = closure_8(CopyIcon, { size: "sm" });
       items3[1] = tmp6Result;
       obj6.children = items3;
-      let tmp6Result1 = closure_9(CopyIcon(5137).PressableOpacity, obj6);
+      let tmp6Result1 = closure_9(CopyIcon(5173).PressableOpacity, obj6);
     } else {
       const obj8 = { variant: "text-sm/medium", color: "text-muted", style: map.monospace, children: "null" };
-      tmp6Result1 = closure_8(CopyIcon(4570).Text, obj8);
+      tmp6Result1 = closure_8(CopyIcon(4601).Text, obj8);
     }
     const obj9 = { name: "Fingerprint", children: tmp6Result1 };
     items1[2] = closure_8(CommonProperty, obj9);
@@ -146,7 +146,7 @@ const View = fn(17).View;
 const Fonts = fn(1074).Fonts;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-fn(4574);
+fn(4605);
 let createStyles = {
   analyticsContainer: null,
   contentContainer: null,
@@ -222,48 +222,48 @@ export default function DevToolsAnalyticsScreen() {
   obj = { title: "Actions", hasIcons: true, children: null };
   const str2 = str.toLowerCase();
   const items2 = [
-    closure_8(trimmed(7214).TableSwitchRow, {
-      icon: closure_8(trimmed(12181).ArrowsUpDownIcon, {}),
+    closure_8(trimmed(7252).TableSwitchRow, {
+      icon: closure_8(trimmed(12221).ArrowsUpDownIcon, {}),
       label: "Reverse Events",
       value: first,
       onValueChange: tmp5[1],
     }),
   ];
   const obj1 = {
-    icon: closure_8(trimmed(12181).ArrowsUpDownIcon, {}),
+    icon: closure_8(trimmed(12221).ArrowsUpDownIcon, {}),
     label: "Reverse Events",
     value: first,
     onValueChange: tmp5[1],
   };
-  items2[1] = closure_8(trimmed(5619).TableRow, {
+  items2[1] = closure_8(trimmed(5655).TableRow, {
     arrow: true,
     variant: "danger",
-    icon: closure_8(trimmed(4532).TrashIcon, { color: "text-feedback-critical" }),
+    icon: closure_8(trimmed(4563).TrashIcon, { color: "text-feedback-critical" }),
     label: "Clear Analytics Log",
-    onPress: trimmed(15607).clearAnalyticsLog,
+    onPress: trimmed(15656).clearAnalyticsLog,
   });
   obj.children = items2;
-  const items3 = [closure_9(trimmed(5701).TableRowGroup, obj), ,];
+  const items3 = [closure_9(trimmed(5737).TableRowGroup, obj), ,];
   const obj2 = {
     arrow: true,
     variant: "danger",
-    icon: closure_8(trimmed(4532).TrashIcon, { color: "text-feedback-critical" }),
+    icon: closure_8(trimmed(4563).TrashIcon, { color: "text-feedback-critical" }),
     label: "Clear Analytics Log",
-    onPress: trimmed(15607).clearAnalyticsLog,
+    onPress: trimmed(15656).clearAnalyticsLog,
   };
   items3[1] = closure_8(View, {
     style: tmp.searchFieldContainer,
-    children: closure_8(trimmed(7064).SearchField, { placeholder: "Search by event name", onChange: tmp8 }),
+    children: closure_8(trimmed(7102).SearchField, { placeholder: "Search by event name", onChange: tmp8 }),
   });
   if (0 === loggedEvents.length) {
-    let tmp11Result = closure_8(tmp2(5619).TableRow, { label: "No events logged." });
+    let tmp11Result = closure_8(tmp2(5655).TableRow, { label: "No events logged." });
   } else {
     tmp11Result = null;
     if (0 === found.length) {
       const obj4 = { label: null };
       const _HermesInternal = HermesInternal;
       obj4.label = 'No events match "' + str + '"';
-      tmp11Result = closure_8(tmp2(5619).TableRow, obj4);
+      tmp11Result = closure_8(tmp2(5655).TableRow, obj4);
     }
   }
   const obj5 = {
@@ -274,13 +274,13 @@ export default function DevToolsAnalyticsScreen() {
     renderItem: null,
   };
   const obj6 = { spacing: 16, children: null };
-  items3[2] = closure_8(trimmed(5701).TableRowGroup, {
+  items3[2] = closure_8(trimmed(5737).TableRowGroup, {
     title: "Analytics Events",
     hasIcons: false,
     children: tmp11Result,
   });
   obj6.children = items3;
-  obj5.ListHeaderComponent = closure_9(trimmed(4987).Stack, obj6);
+  obj5.ListHeaderComponent = closure_9(trimmed(5023).Stack, obj6);
   obj5.contentContainerStyle = tmp.contentContainer;
   obj5.extraData = stateFromStores;
   obj5.data = reversed;
@@ -295,6 +295,6 @@ export default function DevToolsAnalyticsScreen() {
       fingerprint: item.fingerprint,
     });
   };
-  obj.children = closure_8(trimmed(8906).FlashList, obj5);
+  obj.children = closure_8(trimmed(8943).FlashList, obj5);
   return closure_8(View, obj);
 }

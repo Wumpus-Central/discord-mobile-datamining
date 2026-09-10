@@ -8,7 +8,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-fn(4574);
+fn(4605);
 let createStyles = { wrapper: { position: "relative" }, circle: { position: "absolute" }, progressCircle: null };
 createStyles = { color: nativeDefault.colors.BACKGROUND_BRAND };
 createStyles.progressCircle = createStyles;

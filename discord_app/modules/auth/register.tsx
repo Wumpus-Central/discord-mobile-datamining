@@ -2,7 +2,7 @@
 import DispatcherDefault from "../../Dispatcher.tsx";
 import AnalyticsUtilsDefault from "../../utils/AnalyticsUtils.tsx";
 import discord_common_AnalyticsUtils from "../../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx";
-import _modDef4166 from "../../../_runtime/metro/04166__.js";
+import _modDef4196 from "../../../_runtime/metro/04196__.js";
 import APIErrorDefault from "../../errors/APIError.tsx";
 import TrackedHTTPUtilsDefault from "../../utils/TrackedHTTPUtils.tsx";
 import SharedCaptchaUtils from "../captcha/SharedCaptchaUtils.tsx";
@@ -215,7 +215,7 @@ function registerFull(giftCodeSKUId) {
     let tmp4Result = AnalyticsUtilsDefault;
     obj = { source: constants5.REGISTER, action: constants4.AGE_GATE_SUBMITTED };
     tmp4Result.track(constants.AGE_GATE_ACTION, obj);
-    const diffResult = _modDef4166().diff(birthday, "years");
+    const diffResult = _modDef4196().diff(birthday, "years");
     if (diffResult >= 13) {
       if (diffResult < 13) {
         let str3 = "23+";
@@ -233,7 +233,7 @@ function registerFull(giftCodeSKUId) {
       obj = { age_bucket: str };
       tmp4Result.track(constants.USER_AGE_SUBMITTED, obj);
     }
-    const obj11 = _modDef4166();
+    const obj11 = _modDef4196();
   }
   const request = { url: constants3.REGISTER, body: null, trackedActionData: null, rejectWithError: false };
   const user = {
@@ -338,7 +338,7 @@ function registerFull(giftCodeSKUId) {
     },
   );
 }
-const ParentalConsentStore = fn(15991);
+const ParentalConsentStore = fn(16040);
 const Constants = fn(1074);
 ({ AnalyticEvents: metroRequire, AnalyticsSections: closure_7, Endpoints: closure_8 } = Constants);
 const AgeGateConstants = fn(1098);

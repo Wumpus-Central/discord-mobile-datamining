@@ -12,7 +12,7 @@ import noop from "../../../../../../_runtime/metro/00019__.js";
 require = fn;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire, Fragment: closure_7 } = jsxProd);
-fn(4574);
+fn(4605);
 let createStyles = { card: null };
 createStyles = { padding: 0, paddingRight: nativeDefault.space.PX_40, overflow: "hidden" };
 createStyles.card = createStyles;

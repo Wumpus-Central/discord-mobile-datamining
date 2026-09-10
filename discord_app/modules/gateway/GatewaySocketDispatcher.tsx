@@ -9,7 +9,7 @@ import ActionBatcherDefault from "ActionBatcher.tsx";
 import _slicedToArray from "../../../_runtime/metro/00032__.js";
 
 require = fn;
-let closure_4 = fn(13666).DISPATCHER_IDEAL_TIME_LIMIT_MS;
+let closure_4 = fn(13715).DISPATCHER_IDEAL_TIME_LIMIT_MS;
 let closure_5 = new LoggerDefault("GatewaySocket");
 const set = new Set(["INITIAL_GUILD", "READY"]);
 const set1 = new Set(["READY", "INITIAL_GUILD"]);
@@ -329,7 +329,7 @@ prototype["dispatchMultiple"] = function dispatchMultiple(items, arg1) {
       if (closure_5.length > 0) {
         let telemetry = self.scheduler.telemetry;
         telemetry.measure(
-          tmp21(13669).WorkSchedulerTelemetryMeasurement.COUNT_DISPATCHES_LEFT_AFTER_YIELD,
+          tmp21(13718).WorkSchedulerTelemetryMeasurement.COUNT_DISPATCHES_LEFT_AFTER_YIELD,
           closure_5.length,
         );
         const queue = self.queue;

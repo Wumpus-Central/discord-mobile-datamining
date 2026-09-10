@@ -3,14 +3,14 @@ import nativeDefault from "../../../../discord_common/js/packages/tokens/native.
 import util from "../../../intl/index.native.tsx";
 import native from "../../../design/void/native.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
-import _modDef10684 from "../../../../_runtime/metro/10684__.js";
+import _modDef10722 from "../../../../_runtime/metro/10722__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-fn(4574);
+fn(4605);
 let createStyles = {
   container: { marginBottom: 4, marginHorizontal: 24, alignItems: "center", flexDirection: "row" },
   imageContainer: null,
@@ -40,7 +40,7 @@ export const ForYouUnreadClearedState = function ForYouUnreadClearedState() {
   let obj = { style: tmp.container, children: null };
   obj = { style: tmp.imageContainer };
   const items = [React4(View, obj), ,];
-  obj = { source: _modDef10684, style: tmp.icon, color: tmp.icon.color };
+  obj = { source: _modDef10722, style: tmp.icon, color: tmp.icon.color };
   items[1] = React4(native.Icon, obj);
   const obj1 = { children: null };
   const obj2 = {

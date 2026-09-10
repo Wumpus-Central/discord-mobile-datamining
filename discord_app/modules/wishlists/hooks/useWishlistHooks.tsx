@@ -109,7 +109,7 @@ function useFetchWishlist(wishlistId) {
   return obj;
 }
 let useEffect = fn(19).useEffect;
-const getWishlistSkuIds = fn(8811).getWishlistSkuIds;
+const getWishlistSkuIds = fn(8848).getWishlistSkuIds;
 const WishlistFetchSource = { USER_PROFILE: "user_profile" };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/wishlists/hooks/useWishlistHooks.tsx");

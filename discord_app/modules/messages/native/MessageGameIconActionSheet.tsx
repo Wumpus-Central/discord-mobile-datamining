@@ -9,7 +9,7 @@ const View = fn(17).View;
 const HelpdeskArticles = fn(1074).HelpdeskArticles;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-let createStyles = fn(4574);
+let createStyles = fn(4605);
 const PlatformUtils = fn(1115);
 let num = 0;
 if (PlatformUtils.isAndroid()) {
@@ -59,7 +59,7 @@ export default function MessageGameIconActionSheet(applicationId) {
       color: "text-muted",
       children: applicationId.messageTimestamp,
     };
-    const items2 = [closure_6(tmp2(4570).Text, obj5)];
+    const items2 = [closure_6(tmp2(4601).Text, obj5)];
     const obj6 = { variant: "text-sm/medium", children: null };
     const intl = tmp2(1114).intl;
     const obj7 = { applicationName: stateFromStores.name };
@@ -68,13 +68,13 @@ export default function MessageGameIconActionSheet(applicationId) {
     const obj8 = { helpdeskArticle: HelpdeskUtilsDefault.getArticleURL(HelpdeskArticles.SOCIAL_LAYER_CONNECTIONS) };
     items3[2] = intl2.format(tmp2(1114).t.BPDKoA, obj8);
     obj6.children = items3;
-    items2[1] = closure_7(tmp2(4570).Text, obj6);
+    items2[1] = closure_7(tmp2(4601).Text, obj6);
     obj4.children = items2;
     items1[1] = closure_7(View, obj4);
     obj.children = items1;
     obj.children = closure_7(View, obj);
     obj2.children = closure_6(View, obj);
-    tmp5Result = closure_6(tmp2(7164).BottomSheet, obj2);
+    tmp5Result = closure_6(tmp2(7202).BottomSheet, obj2);
   }
   return tmp5Result;
 }

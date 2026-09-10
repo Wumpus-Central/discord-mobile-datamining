@@ -4,14 +4,14 @@ import LinkingDefault from "../../lib/native/Linking.tsx";
 import Text_Text from "../../design/components/Text/native/Text.tsx";
 import AlertActionCreatorsDefault from "../../actions/AlertActionCreators.tsx";
 import components_Button_Button from "../../design/components/Button/native/Button.native.tsx";
-import _modDef9576 from "../../../_runtime/metro/09576__.js";
+import _modDef9614 from "../../../_runtime/metro/09614__.js";
 import noop from "../../../_runtime/metro/00019__.js";
 
 require = fn;
 function ConfirmActivityGateContent(activityName) {
   const tmp = closure_8();
   let obj = { style: tmp.alertContainer, children: null };
-  obj = { source: _modDef9576, style: tmp.announcementBirb };
+  obj = { source: _modDef9614, style: tmp.announcementBirb };
   const items = [timestampProducer(React3, obj), , ,];
   obj = { style: tmp.alertEyebrowText, variant: "eyebrow", children: null };
   const intl = util.intl;
@@ -48,7 +48,7 @@ get_ActivityIndicator = fn(17);
 const PRIVATE_APPS_HELP_ARTICLE = fn(1920).PRIVATE_APPS_HELP_ARTICLE;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4574);
+const createStyles = fn(4605);
 let closure_8 = createStyles.createStyles({
   alertContainer: { display: "flex", alignItems: "center", padding: 8 },
   alertEyebrowText: { marginTop: 40, textAlign: "center" },

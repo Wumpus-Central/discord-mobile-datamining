@@ -43,10 +43,10 @@ let closure_8 = async function _fetchAndUpdateSavedMessages() {
   closure_128_1 = results.map((message) => {
     let messageRecord = null;
     if (null != message.message) {
-      let obj = closure_1_0(4797);
+      let obj = closure_1_0(4828);
       messageRecord = obj.createMessageRecord(message.message);
     }
-    obj = { message: messageRecord, saveData: closure_1_0(7874).savedMessageDataToClient(message.save_data) };
+    obj = { message: messageRecord, saveData: closure_1_0(7911).savedMessageDataToClient(message.save_data) };
     return obj;
   });
   obj10 = { type: "SAVED_MESSAGES_UPDATE", savedMessages: closure_128_1 };

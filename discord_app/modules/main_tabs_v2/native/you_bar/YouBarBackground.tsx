@@ -4,8 +4,8 @@ import _modDef672 from "../../../../../_runtime/metro/00672__.js";
 import useToken from "../../../../design/tokens/native/useToken.tsx";
 import ReanimatedRexportDefault from "../../../reanimated/ReanimatedRexport.tsx";
 import spring from "../../../../design/animation/reanimated/spring/spring.tsx";
-import LinearGradientDefault from "../../../../../_runtime/05001_LinearGradient.js";
-import _modDef5678 from "../../../../../_runtime/metro/05678__.js";
+import LinearGradientDefault from "../../../../../_runtime/05037_LinearGradient.js";
+import _modDef5714 from "../../../../../_runtime/metro/05714__.js";
 import useQuestDockAnimatedBorderRadiusDefault from "../../../quests/native/QuestDock/useQuestDockAnimatedBorderRadius.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
@@ -55,7 +55,7 @@ function YouBarMaskedBackground(barWidth) {
       backgroundColor: "black",
     },
   };
-  const tmp3 = _modDef5678;
+  const tmp3 = _modDef5714;
   const tmp4 = LinearGradientDefault;
   const obj9 = _modDef672("#000000");
   const items1 = [_modDef672("#000000").alpha(0).hex(), "#000000"];
@@ -114,12 +114,12 @@ function YouBarAnimatedBackground(arg0) {
   return closure_6(ReanimatedRexportDefault.View, obj);
 }
 const View = fn(17).View;
-const YouBarConstants = fn(15128);
+const YouBarConstants = fn(15177);
 const YOU_BAR_HEIGHT = YouBarConstants.YOU_BAR_HEIGHT;
 const YOU_BAR_SPRING_CONFIG = YouBarConstants.YOU_BAR_SPRING_CONFIG;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4574);
+const createStyles = fn(4605);
 let obj = { youRowFloating: null };
 obj = {
   borderWidth: 1,

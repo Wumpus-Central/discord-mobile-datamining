@@ -411,7 +411,7 @@ export const useFormattedMessagePreview = function useFormattedMessagePreview(me
     }
     return user;
   });
-  tmpResult = tmp(4807);
+  tmpResult = tmp(4838);
   obj = {
     message,
     channel,

@@ -7,7 +7,7 @@ import AccessibilityStore from "../../../a11y/AccessibilityStore.tsx";
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(4574);
+const createStyles = fn(4605);
 let closure_7 = createStyles.createStyles({ content: { width: "100%" } });
 const __initData = {
   code: "function FadeOutLottieAnimationTsx1(){const{isAnimationComplete,isFadeOut,withTiming,runOnJS,setIsFadeOut}=this.__closure;if(!isAnimationComplete){return{opacity:1};}if(isFadeOut){return{opacity:withTiming(0,{duration:300},'respect-motion-settings',function(finished){if(finished)runOnJS(setIsFadeOut)(false);})};}return{opacity:0};}",
@@ -35,7 +35,7 @@ export default function FadeOutLottieAnimation(onComplete) {
   const effect = setIsFadeOut.useEffect(() => {
     closure_2(false);
   }, []);
-  onComplete(4310);
+  onComplete(4341);
   class T {
     constructor() {
       if (closure_1) {
@@ -78,8 +78,8 @@ export default function FadeOutLottieAnimation(onComplete) {
   obj = {
     isAnimationComplete,
     isFadeOut: first1,
-    withTiming: onComplete(4575).withTiming,
-    runOnJS: onComplete(4310).runOnJS,
+    withTiming: onComplete(4606).withTiming,
+    runOnJS: onComplete(4341).runOnJS,
     setIsFadeOut: tmp7,
   };
   T.__closure = obj;
@@ -100,9 +100,9 @@ export default function FadeOutLottieAnimation(onComplete) {
       closure_2(true);
     };
     const merged1 = Object.assign(merged);
-    obj.children = jsx(isAnimationComplete(5543), { style: tmp2.content, speed: null, onAnimationFinish: null });
-    let tmp14Result = jsx(isAnimationComplete(4310).View, { style: tmp12, children: null });
-    const tmp16 = isAnimationComplete(5543);
+    obj.children = jsx(isAnimationComplete(5579), { style: tmp2.content, speed: null, onAnimationFinish: null });
+    let tmp14Result = jsx(isAnimationComplete(4341).View, { style: tmp12, children: null });
+    const tmp16 = isAnimationComplete(5579);
   } else {
     tmp14Result = null;
   }

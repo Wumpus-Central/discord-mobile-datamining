@@ -14,7 +14,6 @@ import ProfileEffectRecord from "records/ProfileEffectRecord.tsx";
 import ProfileFrameRecord from "records/ProfileFrameRecord.tsx";
 import CollectiblesProductUtils from "utils/CollectiblesProductUtils.tsx";
 import ShopAssetConfigRecord from "records/ShopAssetConfigRecord.tsx";
-import XboxGamePassPerksExperiment from "../partner_perks/xbox/game_pass_perks/XboxGamePassPerksExperiment.tsx";
 import CollectiblesShopConstants from "CollectiblesShopConstants.tsx";
 import Constants from "../../Constants.tsx";
 import size from "../../../_runtime/metro/00002__.js";
@@ -154,18 +153,14 @@ export const getShopDiscountSource = function getShopDiscountSource(currentUser)
       if (hasItem) {
         let NITRO = obj.NITRO;
       } else {
-        NITRO = null;
-        if (tmp4Result.getIsXboxGamePassPerksEnabled("getShopDiscountSource")) {
-          let hasItem1;
-          if (perkSource != null) {
-            hasItem1 = perkSource.includes(user.PerkSource.SOURCE_THIRDPARTY_CROISSANT);
-          }
-          NITRO = null;
-          if (hasItem1) {
-            NITRO = obj.THIRDPARTY;
-          }
+        let hasItem1;
+        if (perkSource != null) {
+          hasItem1 = perkSource.includes(user.PerkSource.SOURCE_THIRDPARTY_CROISSANT);
         }
-        tmp4Result = XboxGamePassPerksExperiment;
+        NITRO = null;
+        if (hasItem1) {
+          NITRO = obj.THIRDPARTY;
+        }
       }
       return NITRO;
     }

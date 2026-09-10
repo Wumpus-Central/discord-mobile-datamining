@@ -23,9 +23,9 @@ import GuildSettingsRoleCreateModalActionCreatorsDefault from "GuildSettingsRole
 import GuildSettingsRolesUtils from "../GuildSettingsRolesUtils.tsx";
 import actions_GuildActionCreators from "../../../../actions/native/GuildActionCreators.tsx";
 import GuildSettingsModalRolesActionCreatorsDefault from "../GuildSettingsModalRolesActionCreators.tsx";
-import _modDef17653 from "../../../../../_runtime/metro/17653__.js";
-import _modDef17654 from "../../../../../_runtime/metro/17654__.js";
-import _modDef17655 from "../../../../../_runtime/metro/17655__.js";
+import _modDef17712 from "../../../../../_runtime/metro/17712__.js";
+import _modDef17713 from "../../../../../_runtime/metro/17713__.js";
+import _modDef17714 from "../../../../../_runtime/metro/17714__.js";
 import GuildSettingsRoleItemDefault from "GuildSettingsRoleItem.tsx";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
@@ -43,7 +43,7 @@ require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: metroRequire, StyleSheet } = get_ActivityIndicator);
 const isEveryoneRole = fn(2016).isEveryoneRole;
-let closure_16 = fn(17639).GuildSettingsRoleEditSections;
+let closure_16 = fn(17698).GuildSettingsRoleEditSections;
 const Constants = fn(1074);
 ({
   GuildSettingsSections: closure_17,
@@ -54,7 +54,7 @@ const Constants = fn(1074);
 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_21, jsxs: closure_22, Fragment: closure_23 } = jsxProd);
-fn(4574);
+fn(4605);
 let createStyles = {
   container: { flex: 1 },
   scrollContainer: { paddingHorizontal: 12 },
@@ -194,7 +194,7 @@ export default function ConnectedGuildSettingsModalRoles(guildId) {
   currentUserId = stateFromStoresObject.currentUserId;
   highestRole = stateFromStoresObject.highestRole;
   closure_129_0 = ref;
-  let obj4 = guildId(17640);
+  let obj4 = guildId(17699);
   const guildSettingsRolesManagerState = obj4.useGuildSettingsRolesManagerState(
     (roleJustCreated) => roleJustCreated.roleJustCreated,
   );
@@ -476,16 +476,16 @@ export default function ConnectedGuildSettingsModalRoles(guildId) {
     let tmp4 = dependencyMap;
     if (closure_3) {
       if (isThemeDarkResult) {
-        tmp4 = 17652;
+        tmp4 = 17711;
         let tmp3Result = importDefault(tmp4);
       } else {
-        tmp3Result = _modDef17653;
+        tmp3Result = _modDef17712;
       }
     } else {
       if (isThemeDarkResult) {
-        tmp3Result = _modDef17654;
+        tmp3Result = _modDef17713;
       } else {
-        tmp3Result = _modDef17655;
+        tmp3Result = _modDef17714;
       }
       if (hasRoles) {
         const items = [closure_1.subheaderContainer];
@@ -594,7 +594,7 @@ export default function ConnectedGuildSettingsModalRoles(guildId) {
       return hasRoles(callback2, {});
     } else {
       role = role.role;
-      navigation(4217);
+      navigation(4248);
       const diff = roleData.length - 1;
       const obj = {
         sorting,
@@ -642,7 +642,7 @@ export default function ConnectedGuildSettingsModalRoles(guildId) {
         };
       }
       obj.onMoveDown = fn2;
-      return hasRoles(closure_1(17656), obj, role.id);
+      return hasRoles(closure_1(17715), obj, role.id);
     }
   }, items19);
   const items20 = [callback2, callback6, callback5, hasRoles, sorting, navigation];
@@ -654,7 +654,7 @@ export default function ConnectedGuildSettingsModalRoles(guildId) {
         const obj = { onPress: onPress2, text: null };
         const intl = guildId(1114).intl;
         obj.text = intl.string(guildId(1114).t["ETE/oC"]);
-        return hasRoles(guildId(7391).HeaderActionButton, obj);
+        return hasRoles(guildId(7429).HeaderActionButton, obj);
       };
     }
     let obj = { headerLeft: fn, headerRight: null, headerTitle: null };
@@ -663,14 +663,14 @@ export default function ConnectedGuildSettingsModalRoles(guildId) {
         const obj = { onPress: onPress3, text: null };
         const intl = guildId(1114).intl;
         obj.text = intl.string(guildId(1114).t["R3BPH+"]);
-        return hasRoles(guildId(7391).HeaderActionButton, obj);
+        return hasRoles(guildId(7429).HeaderActionButton, obj);
       };
     } else if (hasRoles) {
       fn2 = () => {
-        const obj = { onPress, source: closure_1(12803), accessibilityLabel: null };
+        const obj = { onPress, source: closure_1(12843), accessibilityLabel: null };
         const intl = guildId(1114).intl;
         obj.accessibilityLabel = intl.string(guildId(1114).t.JZZjQK);
-        return hasRoles(guildId(7391).HeaderActionButton, obj);
+        return hasRoles(guildId(7429).HeaderActionButton, obj);
       };
     }
     obj.headerRight = fn2;
@@ -717,7 +717,7 @@ export default function ConnectedGuildSettingsModalRoles(guildId) {
   if (!tmp25) {
     obj = { style: tmp.searchWrapper, children: null };
     obj = { size: "md", onChange: callback1 };
-    obj.children = hasRoles(tmp3(7064).SearchField, obj);
+    obj.children = hasRoles(tmp3(7102).SearchField, obj);
     tmp44 = hasRoles(guildEveryoneRole, obj);
   }
   const items24 = [tmp44, , ,];
@@ -727,13 +727,13 @@ export default function ConnectedGuildSettingsModalRoles(guildId) {
     let tmp47Result = null;
     if (!hasRoles) {
       obj1 = { leading: null, label: null };
-      obj2 = { style: tmp.emptyRolesIcon, size: tmp3(1178).Icon.Sizes.LARGE, source: tmp6(9786) };
+      obj2 = { style: tmp.emptyRolesIcon, size: tmp3(1178).Icon.Sizes.LARGE, source: tmp6(9824) };
       obj1.leading = tmp47(tmp3(1178).Icon, obj2);
       obj3 = { variant: "text-md/semibold", color: "interactive-text-default", children: null };
       let intl = tmp3(1114).intl;
       obj3.children = intl.string(tmp3(1114).t.nZfHsf);
-      obj1.label = tmp47(tmp3(4570).Text, obj3);
-      tmp47Result = tmp47(tmp3(8626).FormRow, obj1);
+      obj1.label = tmp47(tmp3(4601).Text, obj3);
+      tmp47Result = tmp47(tmp3(8663).FormRow, obj1);
     }
     obj4 = { children: null };
     items25[1] = tmp47Result;
@@ -799,7 +799,7 @@ export default function ConnectedGuildSettingsModalRoles(guildId) {
   obj6.renderRow = callback11;
   obj5.children = hasRoles(SortableListViewDefault, obj6);
   items24[2] = hasRoles(guildEveryoneRole, obj5);
-  items24[3] = hasRoles(guildId(7054).NavScrim, {});
+  items24[3] = hasRoles(guildId(7092).NavScrim, {});
   obj8.children = items24;
   return closure_22(callback2, obj8);
 }

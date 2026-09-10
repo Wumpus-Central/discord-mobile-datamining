@@ -1,7 +1,7 @@
 // discord_app/design/components/Icon/native/redesign/generated/ArrowsUpDownIcon.tsx
 import nativeDefault from "../../../../../../../discord_common/js/packages/tokens/native.tsx";
 import BaseIconImage from "../../BaseIconImage.tsx";
-import _mod12182 from "../../../../../../../_runtime/metro/12182__.js";
+import _mod12222 from "../../../../../../../_runtime/metro/12222__.js";
 import noop from "../../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -16,5 +16,5 @@ export const ArrowsUpDownIcon = function ArrowsUpDownIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod12182, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod12222, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 };

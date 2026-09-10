@@ -170,11 +170,11 @@ function ChannelContent(arg0) {
   return React5(View, obj);
 }
 const View = fn(17).View;
-const SUBTITLE_OPACITY_NORMAL = fn(10150).SUBTITLE_OPACITY_NORMAL;
-const UnreadSetting = fn(4756).UnreadSetting;
+const SUBTITLE_OPACITY_NORMAL = fn(10188).SUBTITLE_OPACITY_NORMAL;
+const UnreadSetting = fn(4787).UnreadSetting;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-let createStyles = fn(4574);
+let createStyles = fn(4605);
 let PlatformUtils = fn(1115);
 let num = -1;
 if (PlatformUtils.isIOS()) {

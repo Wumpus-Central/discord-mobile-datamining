@@ -1,6 +1,6 @@
 // discord_app/modules/vibegrations/lib/VibegrationsTimelineTree.tsx
 import util from "../../../intl/index.native.tsx";
-import _modDef3560 from "../intl/VibegrationsUntranslated.messages.js";
+import _modDef3590 from "../intl/VibegrationsUntranslated.messages.js";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 
 require = fn;
@@ -414,21 +414,21 @@ function isTurnWorkFrame(task_id) {
   return tmp;
 }
 let obj = {
-  assembling: _modDef3560["9G3ZmA"],
-  installing_deps: _modDef3560.VZuRug,
-  building: _modDef3560["s+ylXP"],
-  bundling: _modDef3560.rEQlMx,
-  committing: _modDef3560.Yvyw1H,
-  built: _modDef3560.hOcVAj,
-  build_error: _modDef3560["6L9Vwt"],
-  healthchecking: _modDef3560.sz8yAj,
-  awaiting_auth: _modDef3560["orD+xo"],
-  healthcheck_passed: _modDef3560["x+sqTG"],
-  healthcheck_failed: _modDef3560.FUWbq1,
-  deploying: _modDef3560.wcXX8Z,
-  preview_ready: _modDef3560["78YNh7"],
-  working: _modDef3560.nv6pUM,
-  error: _modDef3560.j3hBoA,
+  assembling: _modDef3590["9G3ZmA"],
+  installing_deps: _modDef3590.VZuRug,
+  building: _modDef3590["s+ylXP"],
+  bundling: _modDef3590.rEQlMx,
+  committing: _modDef3590.Yvyw1H,
+  built: _modDef3590.hOcVAj,
+  build_error: _modDef3590["6L9Vwt"],
+  healthchecking: _modDef3590.sz8yAj,
+  awaiting_auth: _modDef3590["orD+xo"],
+  healthcheck_passed: _modDef3590["x+sqTG"],
+  healthcheck_failed: _modDef3590.FUWbq1,
+  deploying: _modDef3590.wcXX8Z,
+  preview_ready: _modDef3590["78YNh7"],
+  working: _modDef3590.nv6pUM,
+  error: _modDef3590.j3hBoA,
 };
 let size = fn(2);
 let result = size.fileFinishedImporting("modules/vibegrations/lib/VibegrationsTimelineTree.tsx");
@@ -445,26 +445,26 @@ export const describeNode = function describeNode(labelText) {
   }
   const intl = util.intl;
   if (nv6pUM == null) {
-    nv6pUM = _modDef3560.nv6pUM;
+    nv6pUM = _modDef3590.nv6pUM;
   }
   return intl.string(nv6pUM);
 };
 export const describeTaskStatus = function describeTaskStatus(status) {
   if ("running" === status) {
     const intl5 = util.intl;
-    return intl5.string(_modDef3560["fW7T+d"]);
+    return intl5.string(_modDef3590["fW7T+d"]);
   } else if ("done" === status) {
     const intl4 = util.intl;
-    return intl4.string(_modDef3560.X3c4hc);
+    return intl4.string(_modDef3590.X3c4hc);
   } else if ("failed" === status) {
     const intl3 = util.intl;
-    return intl3.string(_modDef3560.LK4Wsd);
+    return intl3.string(_modDef3590.LK4Wsd);
   } else if ("cancelled" === status) {
     const intl2 = util.intl;
-    return intl2.string(_modDef3560.msWvKA);
+    return intl2.string(_modDef3590.msWvKA);
   } else if ("incomplete" === status) {
     const intl = util.intl;
-    return intl.string(_modDef3560.esfcU6);
+    return intl.string(_modDef3590.esfcU6);
   }
 };
 export { buildTimelineTree };

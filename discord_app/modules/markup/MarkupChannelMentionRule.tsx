@@ -2,7 +2,7 @@
 import util from "../../intl/index.native.tsx";
 import AvatarUtilsDefault from "../../utils/AvatarUtils.tsx";
 import StringUtils from "../../utils/StringUtils.tsx";
-import _modDef4270 from "../../../_runtime/metro/04270__.js";
+import _modDef4301 from "../../../_runtime/metro/04301__.js";
 import ChannelUtils from "../../utils/ChannelUtils.tsx";
 import useChannelName from "../channel/useChannelName.tsx";
 import LinkUtils from "../links/LinkUtils.tsx";
@@ -162,7 +162,7 @@ function parseChannel(channel, messageId, guildIdFromChannelId, combined1) {
           obj.content = items3;
           let obj6 = obj;
         } else if (null != combined1) {
-          const obj4 = { type: "link", content: null, target: null, title: "call" };
+          const obj4 = { type: "link", content: null, target: null, title: "sa" };
           const obj5 = { type: "text", content: combined1 };
           const items4 = [obj5];
           obj4.content = items4;
@@ -342,7 +342,7 @@ obj = {
 };
 obj.channelMention = obj;
 obj = {
-  order: _modDef4270.defaultRules.url.order - 0.5,
+  order: _modDef4301.defaultRules.url.order - 0.5,
   requiredFirstCharacters: ["h"],
   match(arg0) {
     const CHANNEL_OR_MESSAGES_URL_RE = LinkUtils.CHANNEL_OR_MESSAGES_URL_RE;
@@ -366,7 +366,7 @@ obj = {
   parse(arg0, arg1, channelId) {
     [tmp, tmp2, tmp3, tmp4] = arg0;
     if (null == tmp3) {
-      let obj = { type: "link", content: null, target: null, title: "call" };
+      let obj = { type: "link", content: null, target: null, title: "sa" };
       obj = { type: "text", content: tmp };
       const items = [obj];
       obj.content = items;
@@ -395,7 +395,7 @@ obj = {
 };
 obj.channelOrMessageUrl = obj;
 obj.mediaPostLink = {
-  order: _modDef4270.defaultRules.url.order - 0.5,
+  order: _modDef4301.defaultRules.url.order - 0.5,
   requiredFirstCharacters: ["h"],
   match(arg0) {
     const MEDIA_POST_URL_RE = LinkUtils.MEDIA_POST_URL_RE;
@@ -434,7 +434,7 @@ obj.mediaPostLink = {
         }
       }
     }
-    const obj = { type: "link", content: null, target: tmp, title: "call" };
+    const obj = { type: "link", content: null, target: tmp, title: "sa" };
     const items = [{ type: "text", content: tmp }];
     obj.content = items;
     return obj;

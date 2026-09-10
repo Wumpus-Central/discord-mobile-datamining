@@ -3,8 +3,8 @@ import nativeDefault from "../../../../discord_common/js/packages/tokens/native.
 import util from "../../../intl/index.native.tsx";
 import native from "../../../design/void/native.tsx";
 import Pressables from "../../../design/void/Pressables/native/Pressables.tsx";
-import _modDef17566 from "../../../../_runtime/metro/17566__.js";
-import _modDef17567 from "../../../../_runtime/metro/17567__.js";
+import _modDef17625 from "../../../../_runtime/metro/17625__.js";
+import _modDef17626 from "../../../../_runtime/metro/17626__.js";
 import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
@@ -19,7 +19,7 @@ get_ActivityIndicator = fn(17);
 const UPLOAD_MEDIUM_SIZE = fn(1074).UPLOAD_MEDIUM_SIZE;
 const jsxProd = fn(21);
 ({ jsx: closure_9, Fragment: c10, jsxs: closure_11 } = jsxProd);
-fn(4574);
+fn(4605);
 let createStyles = {
   assetWrapper: { width: "100%", alignItems: "center" },
   asset: null,
@@ -161,13 +161,13 @@ prototype["render"] = function render() {
   obj.disabled = disabled;
   let tmp9 = source;
   if (null == source) {
-    tmp9 = _modDef17566;
+    tmp9 = _modDef17625;
   }
   obj = { source: tmp9, style: tmp.asset, children: null };
   let tmp5Result = null;
   if (!disabled) {
     obj = { style: tmp.uploadIconWrapper, children: null };
-    const obj1 = { style: tmp.uploadIcon, source: _modDef17567 };
+    const obj1 = { style: tmp.uploadIcon, source: _modDef17626 };
     obj.children = React7(hasOwnProperty, obj1);
     tmp5Result = React7(React4, obj);
   }
@@ -189,7 +189,7 @@ prototype["render"] = function render() {
   children[1] = tmp5Result;
   return closure_1_11(closure_1_10, { children });
 };
-AssetChooser.contextType = fn(4284).ThemeContext;
+AssetChooser.contextType = fn(4315).ThemeContext;
 size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_settings/native/AssetChooser.tsx");
 

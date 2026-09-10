@@ -6,9 +6,9 @@ import AutomaticLifecycleManager from "../../lib/AutomaticLifecycleManager.tsx";
 let require = fn;
 const Constants = fn(1074);
 ({ AnalyticsObjects: closure_4, StatusTypes: hasOwnProperty } = Constants);
-const timeout = new fn(4461).Timeout();
-const timeout1 = new fn(4461).Timeout();
-const timeout2 = new fn(4461).Timeout();
+const timeout = new fn(4492).Timeout();
+const timeout1 = new fn(4492).Timeout();
+const timeout2 = new fn(4492).Timeout();
 let prototype = function CustomStatusManager() {
   const applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
   require = applyArgumentsResult;
@@ -150,9 +150,9 @@ let prototype = function CustomStatusManager() {
             true,
           );
         } else {
-          applyArgumentsResult(10122).setFocusMode(false);
+          applyArgumentsResult(10160).setFocusMode(false);
           timeout1.stop();
-          const tmpResult = applyArgumentsResult(10122);
+          const tmpResult = applyArgumentsResult(10160);
         }
       }
     }

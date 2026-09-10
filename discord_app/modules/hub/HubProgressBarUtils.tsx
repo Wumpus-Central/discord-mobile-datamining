@@ -7,7 +7,7 @@ import UserSettingsProtoStore from "../user_settings/UserSettingsProtoStore.tsx"
 import ConnectedAccountsStore from "../../stores/ConnectedAccountsStore.tsx";
 
 require = fn;
-const HUB_PROGRESS_STEP_ORDER = fn(9863).HUB_PROGRESS_STEP_ORDER;
+const HUB_PROGRESS_STEP_ORDER = fn(9901).HUB_PROGRESS_STEP_ORDER;
 const PlatformTypes = fn(1074).PlatformTypes;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/hub/HubProgressBarUtils.tsx");

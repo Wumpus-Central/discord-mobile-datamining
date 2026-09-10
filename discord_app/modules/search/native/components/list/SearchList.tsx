@@ -1,7 +1,7 @@
 // discord_app/modules/search/native/components/list/SearchList.tsx
 import util from "../../../../../intl/index.native.tsx";
 import useSafeAreaInsetsDefault from "../../../../safe_area/useSafeAreaInsets.native.tsx";
-import _mod8906 from "../../../../../../discord_common/js/packages/flash-list/index.js";
+import _mod8943 from "../../../../../../discord_common/js/packages/flash-list/index.js";
 import pages_ErrorScreenDefault from "../tabs/pages/ErrorScreen.tsx";
 import MediaGridPlaceholderDefault from "../tabs/pages/placeholders/MediaGridPlaceholder.tsx";
 import DMRowDefault from "rows/DMRow.tsx";
@@ -181,11 +181,11 @@ function renderItem(item) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, StyleSheet: hasOwnProperty } = get_ActivityIndicator);
-const SearchConstants = fn(7892);
+const SearchConstants = fn(7930);
 ({ SearchHistoryItemTypes: metroRequire, SearchListItemTypes: closure_7 } = SearchConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(4574);
+const createStyles = fn(4605);
 let closure_10 = createStyles.createStyles({ container: { flex: 1 } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/search/native/components/list/SearchList.tsx");
@@ -254,7 +254,7 @@ export default noop.memo(function SearchList(arg0) {
   obj1.ListFooterComponent = ListFooterComponent;
   obj1.ItemSeparatorComponent = ItemSeparatorComponent;
   obj1.numColumns = numColumns;
-  items[1] = React6(_mod8906.AnimatedFlashList, obj1);
+  items[1] = React6(_mod8943.AnimatedFlashList, obj1);
   obj.children = items;
   return React7(React4, obj);
 });

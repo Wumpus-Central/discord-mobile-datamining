@@ -63,7 +63,7 @@ export const createEmptyEditInfo = function createEmptyEditInfo() {
     cleanupFuncs: [],
     errorCallbacks: [],
     loaded: false,
-    loading: "channel",
+    loading: "paddingHorizontal",
     triggeredMigrations: true,
     offlineEditDataVersion: true,
   };

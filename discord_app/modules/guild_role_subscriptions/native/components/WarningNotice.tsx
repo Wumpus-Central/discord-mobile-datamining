@@ -3,14 +3,14 @@ import nativeDefault from "../../../../../discord_common/js/packages/tokens/nati
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import components_Button_Button from "../../../../design/components/Button/native/Button.native.tsx";
 import FastImageDefault from "../../../../components_native/common/FastImage.tsx";
-import _modDef5611 from "../../../../../_runtime/metro/05611__.js";
+import _modDef5647 from "../../../../../_runtime/metro/05647__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-fn(4574);
+fn(4605);
 let createStyles = {
   container: null,
   horizontalContainer: null,
@@ -48,7 +48,7 @@ export default function WarningNotice(arg0) {
   ({ container: arr[1], containerYellow: arr[2] } = tmp);
   obj.style = items;
   obj = { style: tmp.horizontalContainer, children: null };
-  obj = { style: tmp.alertIcon, source: _modDef5611 };
+  obj = { style: tmp.alertIcon, source: _modDef5647 };
   const items1 = [React4(FastImageDefault, obj)];
   const obj1 = { style: null, variant: "text-sm/medium", color: "interactive-text-active", children: notice };
   const items2 = [,];

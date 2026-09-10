@@ -6,7 +6,7 @@ import GuildMemberStore from "../../stores/GuildMemberStore.tsx";
 const require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-fn(4574);
+fn(4605);
 let createStyles = {
   container: { flexDirection: "row" },
   names: { marginStart: 4, paddingRight: 1 },

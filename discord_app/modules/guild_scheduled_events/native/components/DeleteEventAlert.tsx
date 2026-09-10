@@ -5,7 +5,7 @@ import GuildScheduledEventStore from "../../GuildScheduledEventStore.tsx";
 
 const require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(4574);
+const createStyles = fn(4605);
 let closure_6 = createStyles.createStyles({ contentText: { textAlign: "center" } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_scheduled_events/native/components/DeleteEventAlert.tsx");
@@ -40,7 +40,7 @@ export default function DeleteEventAlert(eventException) {
             return obj;
           } else {
             closure_0 = tmp4;
-            const obj8 = v1(9735);
+            const obj8 = v1(9773);
             if (GuildScheduledEventStore) {
               v1 = 2;
               dependencyMap = 1;
@@ -74,7 +74,7 @@ export default function DeleteEventAlert(eventException) {
             obj = { value, done: true };
             return obj;
           }
-          obj1 = v1(4541);
+          obj1 = v1(4572);
           obj1.hideActionSheet();
           dependencyMap = 3;
           return { value: "HermesInternal", done: null };

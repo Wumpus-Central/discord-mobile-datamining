@@ -4,7 +4,7 @@ import guild_channels_ChannelSubtitle from "../../../../../main_tabs_v2/native/s
 import noop from "../../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-let closure_4 = fn(7892).CHANNEL_LIST_SEARCH_LAYOUT;
+let closure_4 = fn(7930).CHANNEL_LIST_SEARCH_LAYOUT;
 const jsx = fn(21).jsx;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/search/native/components/list/rows/GuildTextChannelRow.tsx");

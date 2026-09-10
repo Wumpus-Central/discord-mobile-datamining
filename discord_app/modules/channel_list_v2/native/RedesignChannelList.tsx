@@ -2,6 +2,7 @@
 import ChannelListState from "../../guild_sidebar/ChannelListState.tsx";
 import roundToNearestPixelDefault from "../../voice_panel/native/utils/roundToNearestPixel.tsx";
 import TTIFirstContentfulPaint from "../../tti_analytics/native/TTIFirstContentfulPaint.tsx";
+import useHomeDrawerGesture from "../../home_drawer/native/useHomeDrawerGesture.tsx";
 import RedesignGuildHeaderDefault from "RedesignGuildHeader.tsx";
 import registerSidebarVisibilityMethods from "../../guilds_bar/native/utils/registerSidebarVisibilityMethods.tsx";
 import ChannelsUnreadBarsDefault from "unread_bars/ChannelsUnreadBars.tsx";
@@ -73,9 +74,9 @@ function ChannelsWrapper(selectedGuildId) {
           obj.guild = stateFromStores;
           obj.selectedChannelId = selectedChannelId;
           obj.selectedVoiceChannelId = stateFromStores1;
-          return closure_14(tmp2(16304).default, obj);
+          return closure_14(tmp2(16353).default, obj);
         } else {
-          tmp2Result = tmp2(10326);
+          tmp2Result = tmp2(10364);
           if (tmp2Result.shouldNSFWGateGuild(selectedGuildId)) {
             obj1 = { style: merged.style, guildId: selectedGuildId };
             let tmp6Result = closure_14(NsfwGateGuildSidebarDefault, obj1);
@@ -466,17 +467,18 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/channel_list_v2/native/RedesignChannelList.tsx");
 
 export default noop.memo((arg0) => {
-  let obj = { children: null };
-  obj = {};
+  const obj = {};
+  const doesLandOnHomeDrawer = obj.useDoesLandOnHomeDrawer();
   const merged = Object.assign(arg0);
-  const items = [
-    closure_1_14(ChannelsWrapper, obj),
-    closure_1_14(TTIFirstContentfulPaint.TTIFirstContentfulPaint, {
+  const children = [closure_1_14(ChannelsWrapper, obj)];
+  let tmp6Result = null;
+  if (!doesLandOnHomeDrawer) {
+    tmp6Result = closure_1_14(TTIFirstContentfulPaint.TTIFirstContentfulPaint, {
       label: "channel-list",
       checkFocusedScreen: "guilds",
-    }),
-  ];
-  obj.children = items;
-  return __initData(value2, obj);
+    });
+  }
+  children[1] = tmp6Result;
+  return __initData(value2, { children });
 });
 export const ChannelList = memoResult;

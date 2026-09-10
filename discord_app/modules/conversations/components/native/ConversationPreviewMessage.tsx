@@ -17,7 +17,7 @@ const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
 let container = new RowGeneratorDefault();
 container.setOptions({ renderReplies: false, renderReactions: false });
-fn(4574);
+fn(4605);
 container = { container: null, header: null, authorRow: null, headerTimestamp: null };
 container = { gap: nativeDefault.space.PX_4 };
 container.container = container;

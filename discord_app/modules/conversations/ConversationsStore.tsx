@@ -260,7 +260,7 @@ function evictChannel(arg0) {
   }
   return hasItem;
 }
-const ConversationConstants = fn(7612);
+const ConversationConstants = fn(7649);
 ({
   CONVERSATION_COLORS: closure_9,
   CONVERSATION_FEEDBACK_RATINGS_CACHE_MAX: c10,
@@ -292,8 +292,8 @@ prototype["initialize"] = function initialize() {
 prototype["hasChannelData"] = function hasChannelData(id) {
   return navigation.has(id);
 };
-prototype["getChannelConversations"] = function getChannelConversations(_handleEndReached) {
-  const peekResult = navigation.peek(_handleEndReached);
+prototype["getChannelConversations"] = function getChannelConversations(id) {
+  const peekResult = navigation.peek(id);
   let conversations = null;
   if (null != peekResult) {
     conversations = peekResult.conversations;
@@ -350,14 +350,14 @@ prototype["getConversationMetadata"] = function getConversationMetadata(channelI
   }
   return value;
 };
-prototype["getEdgeMarker"] = function getEdgeMarker(_handleEndReached, after) {
-  const peekResult = navigation.peek(_handleEndReached);
+prototype["getEdgeMarker"] = function getEdgeMarker(id, after) {
+  const peekResult = navigation.peek(id);
   if (null == peekResult) {
     return null;
   }
 };
-prototype["isPendingFetch"] = function isPendingFetch(_handleEndReached) {
-  return map.has(_handleEndReached);
+prototype["isPendingFetch"] = function isPendingFetch(id) {
+  return map.has(id);
 };
 prototype["isListFetchPending"] = function isListFetchPending(arg0, arg1) {
   value = map.get(arg0);
@@ -543,7 +543,7 @@ obj = {
     ({ channelId, rawConversations, direction, anchor, isJump, fullyHydrated } = requestKey);
     let set;
     if (removePendingListFetch(channelId, requestKey.requestKey)) {
-      const mapped = rawConversations.map(set(7613).mapConversation);
+      const mapped = rawConversations.map(set(7650).mapConversation);
       const found = mapped.filter(set(1369).isNotNullish);
       const peekResult = navigation.peek(channelId);
       if (isJump) {

@@ -613,11 +613,11 @@ let closure_38 = async function _init(_payload) {
         promise = new Promise((arg0) => {
           closure_0 = arg0;
           closure_0(paths[42])(paths[52], paths.paths).then((result) => result.default.loadCacheAsync(closure_2_4(closure_2_0(paths[53]).computeInitialNavigationState(), 1)[0], async () => {
-            closure_0(14466).updateSaturation(closure_0(4566).default.saturation);
-            obj = closure_0(14466);
-            closure_0(16998).updateVisualRefresh(true);
-            const obj2 = closure_0(16998);
-            closure_0(16999).updateTheme(closure_0(1183).default.theme);
+            closure_0(14515).updateSaturation(closure_0(4597).default.saturation);
+            obj = closure_0(14515);
+            closure_0(17057).updateVisualRefresh(true);
+            const obj2 = closure_0(17057);
+            closure_0(17058).updateTheme(closure_0(1183).default.theme);
             closure_1_0();
           }));
         });
@@ -763,14 +763,14 @@ function initializeTokenStorage() {
   global();
   const tmp12 = null != TokenManagerAll.getToken();
 }
-const module_17263 = fn(17263);
-const superagentPatch = fn(17313);
+const module_17322 = fn(17322);
+const superagentPatch = fn(17372);
 get_ActivityIndicator = fn(17);
 ({ AppState: metroRequire, NativeEventEmitter: closure_7, Linking: closure_8, LogBox: closure_9, NativeModules: c10 } = get_ActivityIndicator);
-const logThirdPartyImportsDone = fn(17333);
+const logThirdPartyImportsDone = fn(17392);
 let closure_11 = fn(2026).subscribeToIntlLoadingSuccess;
-const AnalyticsTrackingStore = fn(7474);
-const ManagerRegistry = fn(17334);
+const AnalyticsTrackingStore = fn(7512);
+const ManagerRegistry = fn(17393);
 const Constants = fn(1074);
 ({ AppStates: closure_14, AnalyticEvents: closure_15, FIRST_RUN_DATE_KEY: closure_16, TOKEN_KEY: closure_17, STORAGE_SECURE_KEYS: closure_18, Platforms: closure_19 } = Constants);
 const loadImports = TTITrackerDefault.loadImports;
@@ -778,7 +778,7 @@ loadImports.recordEnd();
 let closure_20 = new LoggerDefault("index.native.tsx");
 let c21 = false;
 let c25 = null;
-const future = new fn(9325).Future();
+const future = new fn(9362).Future();
 let obj = { None: 0, [0]: "None", HeadlessRan: 1, [1]: "HeadlessRan", Full: 2, [2]: "Full" };
 const None = obj.None;
 let promise = new Promise((arg0) => {

@@ -8,7 +8,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const jsx = fn(21).jsx;
-fn(4574);
+fn(4605);
 let createStyles = { formRow: null };
 createStyles = {
   flexDirection: "row",
@@ -64,7 +64,7 @@ export default function AppLauncherSelectOptionFormRow(arg0) {
   }
   obj.subLabel = fn;
   const tmp2 = closure_4();
-  obj.trailing = jsx(native.Icon, { source: unselectedSubLabel(7156), size: native.IconSizes.SMALL_20 });
+  obj.trailing = jsx(native.Icon, { source: unselectedSubLabel(7194), size: native.IconSizes.SMALL_20 });
   const merged1 = Object.assign(merged);
   return jsx(Form.FormRow, { variant: str, color: null, lineClamp: 1, children: null });
 }

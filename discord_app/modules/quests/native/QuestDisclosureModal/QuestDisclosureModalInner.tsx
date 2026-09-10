@@ -65,22 +65,22 @@ export default function QuestDisclosureModalInner(isTargetedDisclosure) {
   const setting = DropsOptedOut.useSetting();
   let obj = { icon: null, text: null };
   if (setting) {
-    obj.icon = closure_6(tmp2(9318).ServerIcon, { size: "xs" });
+    obj.icon = closure_6(tmp2(9355).ServerIcon, { size: "xs" });
     const intl4 = tmp2(1114).intl;
     obj.text = intl4.string(tmp2(1114).t["2bL0wT"]);
     let items = [obj];
     let tmp6 = closure_6;
     items1 = items;
   } else {
-    obj.icon = closure_6(tmp2(8918).GlobeEarthIcon, { size: "xs" });
+    obj.icon = closure_6(tmp2(8955).GlobeEarthIcon, { size: "xs" });
     const intl = tmp2(1114).intl;
     obj.text = intl.string(tmp2(1114).t.xQSdPv);
     items1 = [obj, ,];
-    obj = { icon: closure_6(tmp2(11856).UserIcon, { size: "xs" }), text: null };
+    obj = { icon: closure_6(tmp2(11896).UserIcon, { size: "xs" }), text: null };
     const intl2 = tmp2(1114).intl;
     obj.text = intl2.string(tmp2(1114).t.mYt7hQ);
     items1[1] = obj;
-    obj = { icon: closure_6(tmp2(9255).GameControllerIcon, { size: "xs" }), text: null };
+    obj = { icon: closure_6(tmp2(9292).GameControllerIcon, { size: "xs" }), text: null };
     const intl3 = tmp2(1114).intl;
     obj.text = intl3.string(tmp2(1114).t.XAsWxQ);
     items1[2] = obj;
@@ -127,7 +127,7 @@ export default function QuestDisclosureModalInner(isTargetedDisclosure) {
         return React5(React4, obj, index);
       }),
     };
-    isTargetedDisclosure = tmp6(tmp2(5621).Card, obj4);
+    isTargetedDisclosure = tmp6(tmp2(5657).Card, obj4);
   }
   items2[2] = isTargetedDisclosure;
   const obj5 = { variant: "text-md/medium", color: "mobile-text-heading-primary", children: null };

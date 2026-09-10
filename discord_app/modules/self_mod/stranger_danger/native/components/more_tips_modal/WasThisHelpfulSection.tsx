@@ -2,7 +2,7 @@
 import nativeDefault from "../../../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../../../intl/index.native.tsx";
 import ToastActionCreatorsDefault from "../../../../../toast/native/ToastActionCreators.tsx";
-import _modDef9433 from "../../../../../../../_runtime/metro/09433__.js";
+import _modDef9471 from "../../../../../../../_runtime/metro/09471__.js";
 import ShieldIcon from "../../../../../../design/components/Icon/native/redesign/generated/ShieldIcon.tsx";
 import SafetyWarningUtils from "../../../../shared/SafetyWarningUtils.tsx";
 import ChannelSafetyWarningsActionCreators from "../../../../ChannelSafetyWarningsActionCreators.tsx";
@@ -12,8 +12,8 @@ import ChannelSafetyWarningsStore from "../../../../ChannelSafetyWarningsStore.t
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ Pressable: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-let closure_7 = fn(10947).SafetyWarningFeedbackTypes;
-const Constants = fn(11395);
+let closure_7 = fn(10987).SafetyWarningFeedbackTypes;
+const Constants = fn(11435);
 ({
   DOWNVOTE_FEEDBACK_CONFIRMATION_TOAST_KEY: closure_8,
   TOAST_SHIELD_ICON_COLOR: closure_9,
@@ -22,7 +22,7 @@ const Constants = fn(11395);
 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
-fn(4574);
+fn(4605);
 let createStyles = {
   container: { flexDirection: "column", alignItems: "center" },
   buttonsContainer: null,
@@ -107,7 +107,7 @@ export default function WasThisHelpfulSection(channelId) {
     };
     const intl = util.intl;
     obj.content = intl.string(util.t["gd/Yqs"]);
-    obj.icon = _modDef9433;
+    obj.icon = _modDef9471;
     obj.IconComponent = ShieldIcon.ShieldIcon;
     obj.iconColor = iconColor;
     obj.containerStyle = toastContainer.toastContainer;

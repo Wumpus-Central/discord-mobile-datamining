@@ -407,7 +407,7 @@ let prototype = function NativeNotificationsManager() {
             let obj5 = { value, done: true };
             return obj5;
           }
-          obj1 = applyArgumentsResult(8231);
+          obj1 = applyArgumentsResult(8268);
           c7 = 6;
           logger = 1;
           const obj6 = { value: obj1.removeFile(closure_131_0, closure_131_2), done: false };

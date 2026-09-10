@@ -14,16 +14,16 @@ require = fn;
 get_ActivityIndicator = fn(17);
 const StyleSheet = get_ActivityIndicator.StyleSheet;
 const View = get_ActivityIndicator.View;
-const ChannelDetailsStore = fn(7890);
+const ChannelDetailsStore = fn(7928);
 ({ getIsChannelDetailsSearchActive: closure_7, setIsChannelDetailsSearchActive: closure_8 } = ChannelDetailsStore);
-const MIDNIGHT_BORDER_WIDTH = fn(7878).MIDNIGHT_BORDER_WIDTH;
+const MIDNIGHT_BORDER_WIDTH = fn(7915).MIDNIGHT_BORDER_WIDTH;
 const Constants = fn(1074);
 ({ AnalyticEvents: c10, ComponentActions: closure_11, ThemeTypes: closure_12 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
 let closure_15 = new LoggerDefault("SwipeForMemberListWrapper");
 let context = noop.createContext(undefined);
-fn(4574);
+fn(4605);
 let obj = {
   memberListPreview: null,
   content: null,
@@ -436,18 +436,20 @@ export default function _default(channelId) {
   const animatedStyle = gesture(gesture2[13]).useAnimatedStyle(le);
   obj1 = { gesture: memo1, children: null };
   obj2 = {
-    style,
     onAccessibilityEscape() {
       if (gesture2) {
         navigation.goBack();
       }
     },
+    style,
     children: null,
   };
   obj3 = {
-    style: tmp.content,
-    accessibilityElementsHidden: derivedStateFromSharedValue,
+    navigationKey: channelId,
+    definition: tmp12(tmp3[30]).CHANNEL_NAVIGATION_TTI,
+    accessibilityElementsHidden: derivedStateFromSharedValue || undefined,
     importantForAccessibility: null,
+    style: null,
     children: null,
   };
   let str;
@@ -455,12 +457,13 @@ export default function _default(channelId) {
     str = "no-hide-descendants";
   }
   obj3.importantForAccessibility = str;
+  obj3.style = tmp.content;
   const items14 = [
     children,
-    callback2(gesture(gesture2[29]).MainTabsContentScrim, { translateX: derivedValue1, maxWidth }),
+    callback2(gesture(gesture2[31]).MainTabsContentScrim, { translateX: derivedValue1, maxWidth }),
   ];
   obj3.children = items14;
-  const items15 = [callback3(disallowGesture2, obj3)];
+  const items15 = [callback3(gesture(gesture2[29]).NavTTISurfaceProvider, obj3)];
   const items16 = [mainTabsChannelScreenStyles, tmp.memberListContainer, ,];
   let midnightBorder;
   if (tmp4 === derivedStateFromSharedValue.MIDNIGHT) {
@@ -481,11 +484,11 @@ export default function _default(channelId) {
   };
   items16[3] = prop;
   const items17 = [
-    callback2(derivedValue(gesture2[30]), { absolute: true, withOverlay: true, overlayOpacity: 0.5 }),
+    callback2(derivedValue(gesture2[32]), { absolute: true, withOverlay: true, overlayOpacity: 0.5 }),
     ,
   ];
   obj5 = {
-    children: tmp35(tmp2(tmp3[32]), {
+    children: tmp35(tmp2(tmp3[34]), {
       isShowing: derivedStateFromSharedValue,
       channelId: tmp5[0],
       isSearchLocked: false,
@@ -494,7 +497,7 @@ export default function _default(channelId) {
       onChannelDeleted: callback3,
     }),
   };
-  items17[1] = callback2(gesture(gesture2[31]).LayerScope, obj5);
+  items17[1] = callback2(gesture(gesture2[33]).LayerScope, obj5);
   const obj6 = { style: null, children: callback2(disallowGesture2, { style: tmp.memberListPreview }) };
   const items18 = [gesture3.absoluteFill, animatedStyle];
   obj6.style = items18;

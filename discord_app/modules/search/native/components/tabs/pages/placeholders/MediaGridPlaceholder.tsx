@@ -11,7 +11,7 @@ import noop from "../../../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-const SearchConstants = fn(7892);
+const SearchConstants = fn(7930);
 ({
   MEDIA_NUM_COLUMNS: hasOwnProperty,
   MEDIA_ITEM_GAP_WIDTH: metroRequire,
@@ -20,7 +20,7 @@ const SearchConstants = fn(7892);
 } = SearchConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-fn(4574);
+fn(4605);
 let createStyles = {
   container: { zIndex: 1, position: "absolute", width: "100%" },
   recentsContainer: { position: "relative", paddingHorizontal: SEARCH_LIST_HORIZONTAL_PADDING },
@@ -126,5 +126,5 @@ export const RecentsMediaGridPlaceholder = function RecentsMediaGridPlaceholder(
     }),
   ];
   obj.children = items4;
-  return closure_8(numRows(4310).View, obj);
+  return closure_8(numRows(4341).View, obj);
 };

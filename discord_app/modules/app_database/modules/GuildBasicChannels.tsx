@@ -295,7 +295,7 @@ prototype["handlePostConnectionOpen"] = function handlePostConnectionOpen() {
                             closure_129_1 = closure_3;
                             closure_2_15.warn("couldn't optimstically write basic_channel:", closure_129_1);
                             c6 = 3;
-                            const obj2 = { value: { v: "disabled" }, done: true };
+                            const obj2 = { value: { v: "Array" }, done: true };
                             return obj2;
                           } else if (2 === tmp7) {
                             if (arg0 === 1) {

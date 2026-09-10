@@ -26,10 +26,10 @@ function RestrictedAccountRedirect() {
 }
 const View = fn(17).View;
 const AnalyticsSections = fn(1074).AnalyticsSections;
-const SafetySettingsNoticeType = fn(8427).SafetySettingsNoticeType;
+const SafetySettingsNoticeType = fn(8464).SafetySettingsNoticeType;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(4574);
+const createStyles = fn(4605);
 let obj = { header: null };
 obj = { paddingTop: nativeDefault.space.PX_24, gap: nativeDefault.space.PX_24 };
 obj.header = obj;

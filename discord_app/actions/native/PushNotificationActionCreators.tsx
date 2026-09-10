@@ -14,7 +14,7 @@ import AuthenticationStore from "../../stores/AuthenticationStore.tsx";
 require = fn;
 function getOrRefreshPushSyncToken() {
   const self = this;
-  const apply = closure_16.apply;
+  const apply = closure_17.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
   } else {
@@ -22,7 +22,7 @@ function getOrRefreshPushSyncToken() {
   }
   return applyArgumentsResult;
 }
-let closure_16 = async function _getOrRefreshPushSyncToken(arg0) {
+let closure_17 = async function _getOrRefreshPushSyncToken(arg0) {
   let pushSyncToken = arg0;
   c5 = 0;
   c6 = 0;
@@ -82,7 +82,7 @@ let closure_16 = async function _getOrRefreshPushSyncToken(arg0) {
         } else if (1 === tmp8) {
           c4 = 0;
           closure_129_2 = closure_3;
-          obj3 = closure_130_1(closure_130_3[8]);
+          obj3 = closure_130_1(closure_130_3[9]);
           obj3.captureException(closure_129_2);
           c6 = 3;
           return { value: null, done: true };
@@ -97,7 +97,7 @@ let closure_16 = async function _getOrRefreshPushSyncToken(arg0) {
         } else {
           token2 = value.body.token;
           c4 = 0;
-          obj = closure_130_2(closure_130_3[9]);
+          obj = closure_130_2(closure_130_3[10]);
           obj.updatePushSyncToken(closure_129_0.id, token2);
           c6 = 3;
           const obj6 = { value: token2, done: true };
@@ -117,12 +117,13 @@ let closure_16 = async function _getOrRefreshPushSyncToken(arg0) {
 };
 const Constants = fn(1074);
 ({ DEVICE_TOKEN: closure_7, DEVICE_VOIP_TOKEN: closure_8, Endpoints: closure_9 } = Constants);
-const PushNotificationConstants = fn(6610);
+const MAX_PUSH_SYNC_ACCOUNTS = fn(12484).MAX_PUSH_SYNC_ACCOUNTS;
+const PushNotificationConstants = fn(6646);
 ({
-  BUNDLE_ID: c10,
-  DEVICE_PUSH_VOIP_PROVIDER: closure_11,
-  getDevicePushProvider: closure_12,
-  IS_QUEST_RELEASE: map1,
+  BUNDLE_ID: closure_11,
+  DEVICE_PUSH_VOIP_PROVIDER: closure_12,
+  getDevicePushProvider: map1,
+  IS_QUEST_RELEASE: closure_14,
 } = PushNotificationConstants);
 const logger = new LoggerDefault("PushNotificationActionCreators");
 const size = fn(2);
@@ -157,14 +158,14 @@ export default {
         rejectWithError: false,
       };
       if (flag) {
-        let tmp8 = closure_1_11;
+        let tmp8 = closure_1_12;
       } else {
-        tmp8 = closure_1_12();
+        tmp8 = map1();
       }
       obj = { provider: tmp8, token, bypass_server_throttling_supported: null, bundle_id: null };
       let isAndroidResult = PlatformUtils.isAndroid();
       if (isAndroidResult) {
-        isAndroidResult = !map1;
+        isAndroidResult = !closure_1_14;
       }
       obj.bypass_server_throttling_supported = isAndroidResult;
       obj.bundle_id = bundle_id;
@@ -195,7 +196,8 @@ export default {
         }
         return num;
       });
-      await Promise.all(sorted.map(closure_1_15));
+      const substr = sorted.slice(0, MAX_PUSH_SYNC_ACCOUNTS);
+      await Promise.all(substr.map(closure_1_16));
       if (1 === tmp5) {
         if (arg0 === 1) {
           dependencyMap = 3;
@@ -211,9 +213,9 @@ export default {
               const HTTP = tmp2(1272).HTTP;
               const request = { url: constants.DEVICES_SYNC, body: null, rejectWithError: false };
               if (closure_129_1) {
-                let tmp9 = closure_1_11;
+                let tmp9 = closure_1_12;
               } else {
-                tmp9 = closure_1_12();
+                tmp9 = closure_1_13();
               }
               const obj3 = {
                 provider: tmp9,
@@ -225,7 +227,7 @@ export default {
               obj2 = tmp2(1115);
               let isAndroidResult = obj2.isAndroid();
               if (isAndroidResult) {
-                isAndroidResult = !closure_1_13;
+                isAndroidResult = !closure_1_14;
               }
               obj3.bypass_server_throttling_supported = isAndroidResult;
               obj3.bundle_id = bundle_id;
@@ -243,8 +245,8 @@ export default {
       } else if (arg0 !== 2) {
         closure_128_2 = value;
         if (closure_128_2.body.invalid_push_sync_tokens.length > 0) {
-          const result = v2(12447).invalidatePushSyncTokens(closure_128_2.body.invalid_push_sync_tokens);
-          v2(12447);
+          const result = v2(12487).invalidatePushSyncTokens(closure_128_2.body.invalid_push_sync_tokens);
+          v2(12487);
         }
       }
       return value;
@@ -253,7 +255,7 @@ export default {
   unregisterDevice(token) {
     logger.log("Unregistering push notification token: " + token);
     const request = { url: constants.DEVICES, body: null, trackedActionData: null, rejectWithError: false };
-    let obj = { provider: closure_1_12(), token };
+    let obj = { provider: map1(), token };
     request.body = obj;
     obj = { event: discord_common_AnalyticsUtils.NetworkActionNames.USER_UNREGISTER_DEVICE_TOKEN };
     request.trackedActionData = obj;

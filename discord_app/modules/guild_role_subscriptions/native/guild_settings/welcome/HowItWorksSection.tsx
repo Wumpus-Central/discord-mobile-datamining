@@ -4,9 +4,9 @@ import util from "../../../../../intl/index.native.tsx";
 import native from "../../../../../design/void/native.tsx";
 import Text_Text from "../../../../../design/components/Text/native/Text.tsx";
 import FastImageDefault from "../../../../../components_native/common/FastImage.tsx";
-import _modDef17731 from "../../../../../../_runtime/metro/17731__.js";
-import _modDef17732 from "../../../../../../_runtime/metro/17732__.js";
-import _modDef17733 from "../../../../../../_runtime/metro/17733__.js";
+import _modDef17790 from "../../../../../../_runtime/metro/17790__.js";
+import _modDef17791 from "../../../../../../_runtime/metro/17791__.js";
+import _modDef17792 from "../../../../../../_runtime/metro/17792__.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -42,7 +42,7 @@ function HowItWorksCard(iconSource) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-fn(4574);
+fn(4605);
 let createStyles = {
   container: { flex: 1 },
   horizontalContainer: { flex: 1, flexDirection: "row" },
@@ -96,19 +96,19 @@ export default function HowItWorksSection() {
   obj = { cardNumber: 1, description: null, iconSource: null };
   const intl = util.intl;
   obj.description = intl.string(util.t.lT0ZNS);
-  obj.iconSource = _modDef17731;
+  obj.iconSource = _modDef17790;
   const items = [React4(HowItWorksCard, obj), React4(native.Spacer, { size: 12 })];
   const obj1 = { cardNumber: 2, description: null, iconSource: null };
   const intl2 = util.intl;
   obj1.description = intl2.string(util.t.ihN2Wb);
-  obj1.iconSource = _modDef17732;
+  obj1.iconSource = _modDef17791;
   items[2] = React4(HowItWorksCard, obj1);
   obj.children = items;
   const items1 = [hasOwnProperty(View, obj)];
   const obj2 = { cardNumber: 3, description: null, iconSource: null };
   const intl3 = util.intl;
   obj2.description = intl3.string(util.t.c8krDQ);
-  obj2.iconSource = _modDef17733;
+  obj2.iconSource = _modDef17792;
   items1[1] = React4(HowItWorksCard, obj2);
   obj.children = items1;
   return hasOwnProperty(View, obj);

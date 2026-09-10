@@ -17,14 +17,14 @@ export const openDisableCommunication = function openDisableCommunication(userId
   const user = UserStore.getUser(userId.userId);
   if (null != user) {
     const obj = { guildId, user, cancelButtonCallback };
-    obj.pushLazy(asyncRequireImpl(11871, dependencyMap.paths), obj);
+    obj.pushLazy(asyncRequireImpl(11911, dependencyMap.paths), obj);
   }
 };
 export const openEnableCommunication = function openEnableCommunication(arg0) {
   ({ guildId: require, userId: importDefault, cancelButtonCallback: dependencyMap } = arg0);
   let obj = {
     importer() {
-      return asyncRequireImpl(11874, dependencyMap.paths).then((result) => {
+      return asyncRequireImpl(11914, dependencyMap.paths).then((result) => {
         closure_0 = result.default;
         return (arg0) => {
           const obj = {};

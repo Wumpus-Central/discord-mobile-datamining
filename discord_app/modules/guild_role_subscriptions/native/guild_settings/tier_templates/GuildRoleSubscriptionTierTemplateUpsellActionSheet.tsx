@@ -19,7 +19,7 @@ const ContentDismissActionType = fn(1954).ContentDismissActionType;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
 const src = { videoURI: "https://cdn.discordapp.com/assets/server-subscription-tier-template/upsell.mov" };
-fn(4574);
+fn(4605);
 let createStyles = {
   container: null,
   videoContainer: null,
@@ -86,7 +86,7 @@ export default function GuildRoleSubscriptionTierTemplateUpsellActionSheet(arg0)
     paused: stateFromStores,
     ariaHidden: true,
   };
-  obj1.children = closure_10(markAsDismissed(8335), size);
+  obj1.children = closure_10(markAsDismissed(8372), size);
   const items2 = [closure_10(View, obj1), ,];
   const obj2 = { style: tmp.info, children: null };
   const obj3 = {

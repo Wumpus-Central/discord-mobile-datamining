@@ -1,7 +1,7 @@
 // discord_app/design/components/Icon/native/redesign/generated/BoostTier3Icon.tsx
 import nativeDefault from "../../../../../../../discord_common/js/packages/tokens/native.tsx";
 import BaseIconImage from "../../BaseIconImage.tsx";
-import _mod13553 from "../../../../../../../_runtime/metro/13553__.js";
+import _mod13602 from "../../../../../../../_runtime/metro/13602__.js";
 import noop from "../../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -16,5 +16,5 @@ export const BoostTier3Icon = function BoostTier3Icon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod13553, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod13602, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 };

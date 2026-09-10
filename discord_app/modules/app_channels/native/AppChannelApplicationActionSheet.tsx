@@ -12,7 +12,7 @@ const result = size.fileFinishedImporting("modules/app_channels/native/AppChanne
 export default function AppChannelApplicationActionSheet(arg0) {
   ({ selectedApplicationId, onChange } = arg0);
   ({ guildId, channelId } = arg0);
-  let obj = onChange(9775);
+  let obj = onChange(9813);
   const options = obj.useAppChannelApplicationOptions(guildId, channelId, selectedApplicationId).options;
   const items = [onChange];
   const callback = noop.useCallback((arg0) => {
@@ -23,7 +23,7 @@ export default function AppChannelApplicationActionSheet(arg0) {
   obj = { title: null };
   const intl = onChange(1114).intl;
   obj.title = intl.string(onChange(1114).t.F2FMFR);
-  obj.header = jsx(onChange(7163).BottomSheetTitleHeader, { title: null });
+  obj.header = jsx(onChange(7201).BottomSheetTitleHeader, { title: null });
   const obj1 = { accessibilityLabel: null, value: null, onChange: null, hasIcons: true, children: null };
   const intl2 = onChange(1114).intl;
   obj1.accessibilityLabel = intl2.string(onChange(1114).t.F2FMFR);
@@ -35,7 +35,7 @@ export default function AppChannelApplicationActionSheet(arg0) {
   obj1.children = options.map((item) => {
     ({ application, status } = item);
     return jsx(
-      onChange(5702).TableRadioRow,
+      onChange(5738).TableRadioRow,
       {
         value: application.id,
         label: application.name,
@@ -46,13 +46,13 @@ export default function AppChannelApplicationActionSheet(arg0) {
       application.id,
     );
   });
-  obj.children = jsx(onChange(5699).TableRadioGroup, {
+  obj.children = jsx(onChange(5735).TableRadioGroup, {
     accessibilityLabel: null,
     value: null,
     onChange: null,
     hasIcons: true,
     children: null,
   });
-  return jsx(onChange(7211).ActionSheet, { title: null });
+  return jsx(onChange(7249).ActionSheet, { title: null });
 }
 export const APP_CHANNEL_APPLICATION_ACTION_SHEET_KEY = "AppChannelApplicationActionSheet";

@@ -1,6 +1,6 @@
 // discord_app/modules/guild_profile/native/GuildProfileUtils.tsx
 import AvatarUtilsDefault from "../../../utils/AvatarUtils.tsx";
-import tinycolorDefault from "../../../../_runtime/07566_tinycolor.js";
+import tinycolorDefault from "../../../../_runtime/07604_tinycolor.js";
 import useAvatarColor from "../../avatar/useAvatarColor.tsx";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import AccessibilityStore from "../../a11y/AccessibilityStore.tsx";

@@ -1,12 +1,12 @@
 // discord_app/intl/native/migration.tsx
 import nativeDefault from "../../../discord_common/js/packages/tokens/native.tsx";
 import LinkingDefault from "../../lib/native/Linking.tsx";
-import _modDef4270 from "../../../_runtime/metro/04270__.js";
+import _modDef4301 from "../../../_runtime/metro/04301__.js";
 import noop from "../../../_runtime/metro/00019__.js";
 
 const require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(4574);
+const createStyles = fn(4605);
 let closure_5 = createStyles.createStyles((arg0) => {
   const link = { color: nativeDefault.colors.TEXT_LINK, textDecorationLine: null };
   let str = "none";
@@ -24,7 +24,7 @@ export const IntlLink = function IntlLink(children) {
   if (typeof target === "string") {
     let fn = () => {
       const obj = LinkingDefault;
-      return obj.openURL(_modDef4270.sanitizeUrl(target));
+      return obj.openURL(_modDef4301.sanitizeUrl(target));
     };
   } else {
     fn = target;
@@ -36,12 +36,12 @@ export const IntlLink = function IntlLink(children) {
     }
   }
   const tmp = target;
-  const tmp3 = closure_5(noop.useContext(target(4294).AccessibilityPreferencesContext).alwaysShowLinkDecorations);
+  const tmp3 = closure_5(noop.useContext(target(4325).AccessibilityPreferencesContext).alwaysShowLinkDecorations);
   return jsx(tmp(1178).LegacyText, {
     accessible: true,
     accessibilityRole: "link",
     onPress: fn,
-    style: closure_5(noop.useContext(target(4294).AccessibilityPreferencesContext).alwaysShowLinkDecorations).link,
+    style: closure_5(noop.useContext(target(4325).AccessibilityPreferencesContext).alwaysShowLinkDecorations).link,
     children: children.children,
   });
 };

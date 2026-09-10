@@ -22,7 +22,7 @@ import ChannelStore from "../../stores/ChannelStore.tsx";
 import GuildRoleStore from "../../stores/GuildRoleStore.tsx";
 import GuildStore from "../../stores/GuildStore.tsx";
 import UserStore from "../../stores/UserStore.tsx";
-import t from "../../../_runtime/metro/04270__.js";
+import t from "../../../_runtime/metro/04301__.js";
 import combineMarkupRules from "combineMarkupRules.tsx";
 import "module_12";
 import apply from "../../../_runtime/metro/00012__.js";
@@ -37,7 +37,7 @@ function parseLink(arg0) {
   if (null == punycodeLinkResult) {
     obj = { type: "text", content: arg0[1] };
   } else {
-    obj = { type: "link", content: null, target: null, title: "call" };
+    obj = { type: "link", content: null, target: null, title: "sa" };
     const obj1 = { type: "text", content: punycodeLinkResult.displayTarget };
     const items = [obj1];
     obj.content = items;
@@ -195,8 +195,8 @@ function hydrateUserMention(everyoneOrHere, channelId) {
 }
 const Constants = fn(1074);
 ({ ID_REGEX: closure_9, MARKDOWN_SPOILER_REGEXP: c10, MARKDOWN_STATIC_ROUTE_NAME_REGEXP: closure_11 } = Constants);
-const SUB_COMMAND_KEY_SEPARATOR = fn(5013).SUB_COMMAND_KEY_SEPARATOR;
-const GAME_MENTION_RAW_RE = fn(5014).GAME_MENTION_RAW_RE;
+const SUB_COMMAND_KEY_SEPARATOR = fn(5049).SUB_COMMAND_KEY_SEPARATOR;
+const GAME_MENTION_RAW_RE = fn(5050).GAME_MENTION_RAW_RE;
 const re14 = /^( *>>> +([\s\S]*))|^( *>(?!>>) +[^\n]*(\n *>(?!>>) +[^\n]*)*\n?)/;
 const re15 = /^$|\n *$/;
 const re16 = /^ *>>> ?/;

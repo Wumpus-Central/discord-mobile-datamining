@@ -4,6 +4,7 @@ import nativeDefault from "../../../../../discord_common/js/packages/tokens/nati
 import util from "../../../../intl/index.native.tsx";
 import native from "../../../../../discord_common/js/packages/design/native.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
+import useTypeConsolidationTextTransform from "../../../design/useTypeConsolidationTextTransform.tsx";
 import OrbsIcon from "../../../../design/components/Icon/native/redesign/generated/OrbsIcon.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import AccessibilityStore from "../../../a11y/AccessibilityStore.tsx";
@@ -12,7 +13,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4574);
+const createStyles = fn(4605);
 let closure_7 = createStyles.createStyles(() => {
   let obj = { container: null, headerLabel: null, orbRow: null, rive: null, orbAmount: null };
   obj = { flex: 1, alignItems: "center", justifyContent: "center", gap: nativeDefault.space.PX_4 };
@@ -34,9 +35,11 @@ const result = size.fileFinishedImporting("modules/quests/native/BountiesModal/B
 export const BountiesScrollRecapFooter = function BountiesScrollRecapFooter(orbAmount) {
   orbAmount = orbAmount.orbAmount;
   const tmp = closure_7();
+  let obj = useTypeConsolidationTextTransform;
+  const typeConsolidationEyebrow = obj.useTypeConsolidationEyebrow("BountiesScrollRecapFooter", "text-xs/bold");
   const intl = util.intl;
   const stringResult = intl.string(util.t.d6Rrn6);
-  let obj = {
+  obj = {
     style: tmp.container,
     pointerEvents: "none",
     accessible: true,
@@ -45,15 +48,22 @@ export const BountiesScrollRecapFooter = function BountiesScrollRecapFooter(orbA
     children: null,
   };
   obj = {
-    variant: "text-xs/bold",
+    variant: typeConsolidationEyebrow.variant,
     color: "text-brand",
-    style: tmp.headerLabel,
+    style: null,
     accessible: false,
     children: stringResult,
   };
-  const items = [hasOwnProperty(Text_Text.Text, obj)];
-  obj = { style: tmp.orbRow, accessible: false, importantForAccessibility: "no-hide-descendants", children: null };
-  const items1 = [
+  const items = [tmp.headerLabel, typeConsolidationEyebrow.style];
+  obj.style = items;
+  const items1 = [hasOwnProperty(Text_Text.Text, obj)];
+  const obj1 = {
+    style: tmp.orbRow,
+    accessible: false,
+    importantForAccessibility: "no-hide-descendants",
+    children: null,
+  };
+  const items2 = [
     hasOwnProperty(OrbsIcon.OrbsIcon, { size: "sm", color: "icon-strong", accessible: false }),
     hasOwnProperty(Text_Text.Text, {
       variant: "display-sm",
@@ -63,9 +73,9 @@ export const BountiesScrollRecapFooter = function BountiesScrollRecapFooter(orbA
       children: "+" + orbAmount,
     }),
   ];
+  obj1.children = items2;
+  items1[1] = timestampProducer(View, obj1);
   obj.children = items1;
-  items[1] = timestampProducer(View, obj);
-  obj.children = items;
   return timestampProducer(View, obj);
 };
 export const BountiesScrollRecapFooterGradient = function BountiesScrollRecapFooterGradient() {

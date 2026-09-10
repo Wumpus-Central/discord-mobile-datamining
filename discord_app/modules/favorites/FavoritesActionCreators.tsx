@@ -377,7 +377,7 @@ let closure_28 = async function _addFavoriteChannelsToParent(arg0) {
                       let tmp43 = closure_2_18(favoriteChannels.favoriteChannels);
                       let tmp46 = closure_2_19(favoriteChannels.favoriteChannels, tmp7);
                       flag = true;
-                      let obj3 = closure_0(10265);
+                      let obj3 = closure_0(10303);
                       let type;
                       if (tmp31 != null) {
                         type = tmp31.type;
@@ -401,7 +401,7 @@ let closure_28 = async function _addFavoriteChannelsToParent(arg0) {
                     if (flag) {
                       let BoolValue = closure_0(1218).BoolValue;
                       favoriteChannels.guildVisible = BoolValue.create({ value: true });
-                      let obj4 = closure_0(10265);
+                      let obj4 = closure_0(10303);
                       let str = "auto";
                       let result1 = obj4.trackFavoritesGuildVisibilitySettingToggled("auto", true);
                     }
@@ -564,7 +564,7 @@ let closure_31 = async function _addFavoriteCategory(arg0) {
                   obj = { limit: tmp5, canUpsell: false };
                   let tmp6 = obj;
                 } else {
-                  const favoritesAccess = closure_0(10256).getFavoritesAccess();
+                  const favoritesAccess = closure_0(10294).getFavoritesAccess();
                   const favoriteLimit = favoritesAccess.favoriteLimit;
                   tmp6 = null;
                   if (favoriteLimit > 0) {
@@ -583,14 +583,14 @@ let closure_31 = async function _addFavoriteCategory(arg0) {
                       }
                     }
                   }
-                  const tmpResult = closure_0(10256);
+                  const tmpResult = closure_0(10294);
                 }
                 if (null != tmp6) {
                   const limit = tmp6.limit;
                   if (tmp6.canUpsell) {
-                    closure_1(10259)(limit);
+                    closure_1(10297)(limit);
                   } else {
-                    tmp4Result = closure_1(4918);
+                    tmp4Result = closure_1(4949);
                     const obj1 = { title: null, body: null };
                     const intl = closure_0(1114).intl;
                     obj1.title = intl.string(closure_0(1114).t["+XYXtZ"]);
@@ -862,7 +862,7 @@ export const setFavoritesAutoAddJoinedThreads = function setFavoritesAutoAddJoin
               str = createFavoriteCategory;
               tmp8 = createFavoriteCategory(favoriteChannels, closure_2_11);
             } else if (!tmp11.canUpsell) {
-              tmp7Result = tmp7(4918);
+              tmp7Result = tmp7(4949);
               let obj = { title: null, body: null };
               const intl = util.intl;
               obj.title = intl.string(util.t["+XYXtZ"]);
@@ -871,7 +871,7 @@ export const setFavoritesAutoAddJoinedThreads = function setFavoritesAutoAddJoin
               obj.body = intl2.formatToPlainString(util.t.JaIyFi, obj);
               tmp7Result.show(obj);
             }
-            str = tmp7(10259)(favoritesAccess);
+            str = tmp7(10297)(favoritesAccess);
             obj5 = _modDef12;
           }
         }

@@ -14,7 +14,7 @@ import ObjectIcon from "../../../../../design/components/Icon/native/redesign/ge
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const EmojiCategories = fn(5477).EmojiCategories;
+const EmojiCategories = fn(5513).EmojiCategories;
 const jsx = fn(21).jsx;
 const size = fn(2);
 const result = size.fileFinishedImporting(

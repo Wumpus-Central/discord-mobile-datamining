@@ -97,7 +97,7 @@ class GiftBackgroundSelect {
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, Fragment: metroRequire, jsxs: closure_7 } = jsxProd);
 let closure_8 = ReanimatedRexport.createAnimatedComponent(fn(17).ScrollView);
-const createStyles = fn(4574);
+const createStyles = fn(4605);
 let obj = { scrollView: null, contentContainer: null };
 obj = { flex: 1, marginTop: nativeDefault.space.PX_24 };
 obj.scrollView = obj;

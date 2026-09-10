@@ -4,11 +4,11 @@ import native from "../../../../design/void/native.tsx";
 import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import FastImageDefault from "../../../../components_native/common/FastImage.tsx";
 import ScrollHandlingActionSheetDefault from "ScrollHandlingActionSheet.tsx";
-import _modDef8625 from "../../../../../_runtime/metro/08625__.js";
-import _modDef8647 from "../../../../../_runtime/metro/08647__.js";
-import _modDef8648 from "../../../../../_runtime/metro/08648__.js";
-import _modDef8649 from "../../../../../_runtime/metro/08649__.js";
-import _modDef8650 from "../../../../../_runtime/metro/08650__.js";
+import _modDef8662 from "../../../../../_runtime/metro/08662__.js";
+import _modDef8684 from "../../../../../_runtime/metro/08684__.js";
+import _modDef8685 from "../../../../../_runtime/metro/08685__.js";
+import _modDef8686 from "../../../../../_runtime/metro/08686__.js";
+import _modDef8687 from "../../../../../_runtime/metro/08687__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import StageInstanceStore from "../../StageInstanceStore.tsx";
 
@@ -24,11 +24,11 @@ function BulletIcon(source) {
   return React5(View, obj);
 }
 const View = fn(17).View;
-let closure_5 = fn(5428).STAGE_AUDIENCE_NOTICE_SHEET_KEY;
+let closure_5 = fn(5464).STAGE_AUDIENCE_NOTICE_SHEET_KEY;
 const constants = fn(1963).GuildScheduledEventPrivacyLevel;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-fn(4574);
+fn(4605);
 let createStyles = {
   container: { padding: 16 },
   header: { alignItems: "center", paddingVertical: 16 },
@@ -74,7 +74,7 @@ export default function StageAudienceNotificationSheet(channelId) {
   obj = { style: tmp.header, children: null };
   const obj1 = { source: null, style: null };
   const tmp8 = ScrollHandlingActionSheetDefault;
-  obj1.source = _modDef8625;
+  obj1.source = _modDef8662;
   obj1.style = tmp.headerImage;
   const items1 = [closure_7(FastImageDefault, obj1), ,];
   const obj2 = {
@@ -86,41 +86,41 @@ export default function StageAudienceNotificationSheet(channelId) {
   };
   const intl = tmp2(1114).intl;
   obj2.children = intl.string(channelId(1114).t.UVuXCs);
-  items1[1] = closure_7(channelId(4570).Text, obj2);
+  items1[1] = closure_7(channelId(4601).Text, obj2);
   const obj3 = { style: tmp.headerBulletList, children: null };
   const obj4 = { leading: null, label: null };
-  obj4.leading = closure_7(BulletIcon, { source: _modDef8647 });
+  obj4.leading = closure_7(BulletIcon, { source: _modDef8684 });
   const obj6 = { style: tmp.headerBullet, variant: "text-md/medium", color: "text-default", children: null };
   const intl2 = tmp2(1114).intl;
   obj6.children = intl2.string(channelId(1114).t.sBDfo6);
-  obj4.label = closure_7(channelId(4570).Text, obj6);
-  const items2 = [closure_7(channelId(8626).FormRow, obj4), , ,];
+  obj4.label = closure_7(channelId(4601).Text, obj6);
+  const items2 = [closure_7(channelId(8663).FormRow, obj4), , ,];
   const obj7 = { leading: null, label: null };
-  const obj5 = { source: _modDef8647 };
-  obj7.leading = closure_7(BulletIcon, { source: _modDef8648 });
+  const obj5 = { source: _modDef8684 };
+  obj7.leading = closure_7(BulletIcon, { source: _modDef8685 });
   const obj9 = { style: tmp.headerBullet, variant: "text-md/medium", color: "text-default", children: null };
   const intl3 = tmp2(1114).intl;
   obj9.children = intl3.string(channelId(1114).t.x58YtH);
-  obj7.label = closure_7(channelId(4570).Text, obj9);
-  items2[1] = closure_7(channelId(8626).FormRow, obj7);
+  obj7.label = closure_7(channelId(4601).Text, obj9);
+  items2[1] = closure_7(channelId(8663).FormRow, obj7);
   const obj10 = { leading: null, label: null };
-  const obj8 = { source: _modDef8648 };
-  obj10.leading = closure_7(BulletIcon, { source: _modDef8649 });
+  const obj8 = { source: _modDef8685 };
+  obj10.leading = closure_7(BulletIcon, { source: _modDef8686 });
   const obj12 = { style: tmp.headerBullet, variant: "text-md/medium", color: "text-default", children: null };
   const intl4 = tmp2(1114).intl;
   obj12.children = intl4.string(channelId(1114).t.XtVqla);
-  obj10.label = closure_7(channelId(4570).Text, obj12);
-  items2[2] = closure_7(channelId(8626).FormRow, obj10);
+  obj10.label = closure_7(channelId(4601).Text, obj12);
+  items2[2] = closure_7(channelId(8663).FormRow, obj10);
   let tmp6Result = null;
   if (privacy_level === constants.PUBLIC) {
     const obj13 = { leading: null, label: null };
-    const obj14 = { source: _modDef8650 };
+    const obj14 = { source: _modDef8687 };
     obj13.leading = closure_7(BulletIcon, obj14);
     const obj15 = { style: tmp.headerBullet, variant: "text-md/medium", color: "text-default", children: null };
     const intl6 = tmp2(1114).intl;
     obj15.children = intl6.string(tmp2(1114).t.nDsbJg);
-    obj13.label = closure_7(tmp2(4570).Text, obj15);
-    tmp6Result = closure_7(tmp2(8626).FormRow, obj13);
+    obj13.label = closure_7(tmp2(4601).Text, obj15);
+    tmp6Result = closure_7(tmp2(8663).FormRow, obj13);
   }
   const obj16 = { children: null };
   items2[3] = tmp6Result;
@@ -133,7 +133,7 @@ export default function StageAudienceNotificationSheet(channelId) {
   const intl5 = tmp2(1114).intl;
   obj18.text = intl5.string(channelId(1114).t.obLqZ8);
   obj18.onPress = handleDismiss;
-  obj17.children = closure_7(channelId(4989).Button, obj18);
+  obj17.children = closure_7(channelId(5025).Button, obj18);
   items3[1] = closure_7(View, obj17);
   obj.children = items3;
   obj16.children = closure_8(View, obj);

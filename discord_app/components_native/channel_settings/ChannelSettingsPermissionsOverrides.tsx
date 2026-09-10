@@ -25,7 +25,7 @@ const Constants = fn(1074);
 ({ PermissionOverrideType: closure_16, HelpdeskArticles: closure_17, Permissions: closure_18 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_19, Fragment: closure_20, jsxs: closure_21 } = jsxProd);
-fn(4574);
+fn(4605);
 let createStyles = { container: null, containerContent: null, section: null };
 createStyles = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER };
 createStyles.container = createStyles;
@@ -185,7 +185,7 @@ export default function ChannelSettingsPermissionsOverrides(fromCreate) {
             const intl4 = closure_0(tmp5[27]).intl;
             obj4.confirmText = intl4.string(closure_0(tmp5[27]).t.psXQHP);
             obj4.onConfirm = function onConfirm() {
-              const obj = closure_1_1(4268);
+              const obj = closure_1_1(4299);
               obj.openURL(closure_1_1(2024).getArticleURL(constants.PERMISSIONS_LOCKOUT));
             };
             id(tmp5[26]).show(obj4);
@@ -310,7 +310,7 @@ export default function ChannelSettingsPermissionsOverrides(fromCreate) {
           };
           const intl = closure_0(1114).intl;
           obj.label = intl.string(closure_0(1114).t.i4jeWR);
-          return closure_2_19(closure_0(7877).HeaderTextButton, obj);
+          return closure_2_19(closure_0(7914).HeaderTextButton, obj);
         },
       };
       navigation.setOptions(obj);
@@ -331,7 +331,7 @@ export default function ChannelSettingsPermissionsOverrides(fromCreate) {
   const tmp13 = closure_19(require("Text/Text").Text, obj);
   if (fromCreate.type === constants.MEMBER) {
     obj = { userId: id, guildId: stateFromStores.guild_id, start: true, end: true, trailing: tmp13 };
-    let tmp12Result = closure_19(id(10974), obj);
+    let tmp12Result = closure_19(id(11014), obj);
   } else {
     const role = GuildRoleStore.getRole(stateFromStores.guild_id, id);
     let str;
@@ -342,7 +342,7 @@ export default function ChannelSettingsPermissionsOverrides(fromCreate) {
       str = "";
     }
     obj1 = { end: true, label: str, start: true, trailing: tmp13 };
-    tmp12Result = closure_19(tmp2(5619).TableRow, obj1);
+    tmp12Result = closure_19(tmp2(5655).TableRow, obj1);
   }
   obj2 = { style: tmp.container, contentContainerStyle: null, children: null };
   const items5 = [tmp.containerContent, { paddingBottom: tmp.containerContent.paddingBottom + id(1611)().bottom }];
@@ -374,15 +374,15 @@ export default function ChannelSettingsPermissionsOverrides(fromCreate) {
         ({ title, flag } = description);
         const tmp = closure_8(flag);
         let obj = { variant: "text-xs/medium", color: "text-subtle", children: null };
-        let obj1 = closure_1_0(16874);
+        let obj1 = closure_1_0(16931);
         obj.children = obj1.renderDescription(description.description);
-        const items = [closure_1_19(closure_1_0(4570).Text, obj)];
+        const items = [closure_1_19(closure_1_0(4601).Text, obj)];
         let tmp5Result = null;
         if (false !== tmp) {
           tmp5Result = null;
           if ("" !== tmp) {
             obj = { variant: "text-xs/medium", color: "text-feedback-critical", children: tmp };
-            tmp5Result = closure_1_19(closure_1_0(4570).Text, obj);
+            tmp5Result = closure_1_19(closure_1_0(4601).Text, obj);
           }
         }
         items[1] = tmp5Result;
@@ -402,8 +402,8 @@ export default function ChannelSettingsPermissionsOverrides(fromCreate) {
         obj1.onValueChange = function onValueChange(arg0) {
           closure_2_7(flag, arg0);
         };
-        obj.trailing = closure_1_19(id(16875), obj1);
-        return closure_1_19(closure_1_0(5619).TableRow, obj, "row-" + index);
+        obj.trailing = closure_1_19(id(16932), obj1);
+        return closure_1_19(closure_1_0(5655).TableRow, obj, "row-" + index);
       }),
     };
     obj.children = closure_2_19(TableRowGroup.TableRowGroup, obj);

@@ -3,7 +3,7 @@ import memoizeDefault from "../../../_runtime/00595_memoize.js";
 import DurationsDefault from "../../utils/Durations.tsx";
 import ThreadConstants from "ThreadConstants.tsx";
 import util from "../../intl/index.native.tsx";
-import _modDef4166 from "../../../_runtime/metro/04166__.js";
+import _modDef4196 from "../../../_runtime/metro/04196__.js";
 import size from "../../../_runtime/metro/00002__.js";
 
 function getAutoArchiveOptions() {
@@ -49,8 +49,8 @@ export const getAutoArchiveDurationText = function getAutoArchiveDurationText(ar
     label = found.label;
   }
   if (label == null) {
-    label = _modDef4166.duration(arg0, "minutes").humanize();
-    const durationResult = _modDef4166.duration(arg0, "minutes");
+    label = _modDef4196.duration(arg0, "minutes").humanize();
+    const durationResult = _modDef4196.duration(arg0, "minutes");
   }
   return label;
 };

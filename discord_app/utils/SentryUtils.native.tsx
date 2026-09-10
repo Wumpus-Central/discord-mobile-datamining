@@ -205,13 +205,7 @@ export default {
                 if (str != null) {
                   formatted = str.toLowerCase();
                 }
-                let obj = {
-                  type: "y",
-                  event_id: timestamp.event_id,
-                  timestamp: result,
-                  level: formatted,
-                  tags: -10.665,
-                };
+                let obj = { type: "y", event_id: timestamp.event_id, timestamp: result, level: formatted, tags: "hcl" };
                 const origin = timestamp.origin;
                 let tmp3 = typeof origin === "string";
                 if (typeof origin === "string") {

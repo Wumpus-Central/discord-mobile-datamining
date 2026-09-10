@@ -4,7 +4,7 @@ import Text_Text from "../../../../../../design/components/Text/native/Text.tsx"
 import components_Button_Button from "../../../../../../design/components/Button/native/Button.native.tsx";
 import common_SafeAreaView from "../../../../../../components_native/common/SafeAreaView.tsx";
 import TwoWayLinkStyles from "../TwoWayLinkStyles.tsx";
-import _modDef9296 from "../../../../../../../discord_assets/assets/connections/console_setup_confirmation.png.js";
+import _modDef9333 from "../../../../../../../discord_assets/assets/connections/console_setup_confirmation.png.js";
 import noop from "../../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -12,7 +12,7 @@ get_ActivityIndicator = fn(17);
 ({ Image: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4574);
+const createStyles = fn(4605);
 let closure_8 = createStyles.createStyles({ image: { width: 124, height: 160, marginBottom: 24 } });
 const size = fn(2);
 const result = size.fileFinishedImporting(
@@ -26,7 +26,7 @@ export const PlayStationLinkSuccess = function PlayStationLinkSuccess(onClose) {
   obj = { style: twoWayLinkStyles.content, children: null };
   const tmp = closure_8();
   const items = [
-    timestampProducer(React4, { source: noop.useMemo(() => ({ uri: _modDef9296 }), []), style: closure_8().image }),
+    timestampProducer(React4, { source: noop.useMemo(() => ({ uri: _modDef9333 }), []), style: closure_8().image }),
     ,
   ];
   const obj2 = {

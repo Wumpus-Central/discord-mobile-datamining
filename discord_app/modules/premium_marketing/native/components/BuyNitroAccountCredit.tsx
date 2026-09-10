@@ -11,7 +11,7 @@ import EntitlementStore from "../../../../stores/game_store/EntitlementStore.tsx
 require = fn;
 let closure_6 = fn(1373).PREMIUM_SUBSCRIPTION_APPLICATION;
 const jsx = fn(21).jsx;
-const createStyles = fn(4574);
+const createStyles = fn(4605);
 let obj = { creditList: null };
 obj = { borderRadius: nativeDefault.modules.mobile.TABLE_ROW_BORDER_RADIUS };
 obj.creditList = obj;

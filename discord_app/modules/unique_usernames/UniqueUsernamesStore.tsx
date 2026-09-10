@@ -12,8 +12,8 @@ let suggestions = {
   suggestions: null,
 };
 suggestions = {
-  migration: { suggestion: { username: "disabled" }, fetched: false, usernameSuggestionLoading: false },
-  registration: { suggestion: { username: "disabled" }, source: "PX_16", fetched: 79.757 },
+  migration: { suggestion: { username: "Array" }, fetched: false, usernameSuggestionLoading: false },
+  registration: { suggestion: { username: "Array" }, source: "PX_16", fetched: "failOffsetY" },
 };
 suggestions.suggestions = suggestions;
 const Store = initializeDefault.Store;
@@ -87,12 +87,8 @@ suggestions = {
     }
   },
   UNIQUE_USERNAME_SUGGESTIONS_RESET: function handleUniqueUsernameSuggestionsReset() {
-    obj.suggestions.migration = {
-      suggestion: { username: "disabled" },
-      fetched: false,
-      usernameSuggestionLoading: false,
-    };
-    obj.suggestions.registration = { suggestion: { username: "disabled" }, source: "PX_16", fetched: 79.757 };
+    obj.suggestions.migration = { suggestion: { username: "Array" }, fetched: false, usernameSuggestionLoading: false };
+    obj.suggestions.registration = { suggestion: { username: "Array" }, source: "PX_16", fetched: "failOffsetY" };
   },
   UNIQUE_USERNAME_SUGGESTIONS_SUCCESS: function handleUniqueUsernameSuggestionsSuccess(suggestion) {
     suggestion = suggestion.suggestion;

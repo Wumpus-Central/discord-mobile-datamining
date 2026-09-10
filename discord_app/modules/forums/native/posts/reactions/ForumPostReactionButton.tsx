@@ -177,7 +177,7 @@ class ReactionButton {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsxs: hasOwnProperty, jsx: metroRequire } = jsxProd);
-fn(4574);
+fn(4605);
 let createStyles = { container: null, selected: null, textEmoji: null, imageEmoji: null, countContainer: null };
 createStyles = {
   display: "flex",

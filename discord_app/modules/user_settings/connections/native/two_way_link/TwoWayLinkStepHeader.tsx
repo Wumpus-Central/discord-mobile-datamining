@@ -1,6 +1,7 @@
 // discord_app/modules/user_settings/connections/native/two_way_link/TwoWayLinkStepHeader.tsx
 import util from "../../../../../intl/index.native.tsx";
 import Text_Text from "../../../../../design/components/Text/native/Text.tsx";
+import useTypeConsolidationTextTransform from "../../../../design/useTypeConsolidationTextTransform.tsx";
 import TwoWayLinkStyles from "TwoWayLinkStyles.tsx";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
@@ -15,13 +16,19 @@ export const TwoWayLinkStepHeader = function TwoWayLinkStepHeader(arg0) {
   ({ idx, total } = arg0);
   let obj = TwoWayLinkStyles;
   const twoWayLinkStyles = obj.useTwoWayLinkStyles();
-  obj = { variant: "text-xs/bold", color: "text-default", style: twoWayLinkStyles.stepHeader, children: null };
+  const typeConsolidationEyebrow = useTypeConsolidationTextTransform.useTypeConsolidationEyebrow(
+    "TwoWayLinkStepHeader",
+    "text-xs/bold",
+  );
+  obj = { variant: typeConsolidationEyebrow.variant, color: "text-default", style: null, children: null };
+  const items = [twoWayLinkStyles.stepHeader, typeConsolidationEyebrow.style];
+  obj.style = items;
   const intl = util.intl;
   obj.children = intl.format(util.t.fHz6eR, { number: idx, total });
   return jsx(Text_Text.Text, {
-    variant: "text-xs/bold",
+    variant: typeConsolidationEyebrow.variant,
     color: "text-default",
-    style: twoWayLinkStyles.stepHeader,
+    style: null,
     children: null,
   });
 };

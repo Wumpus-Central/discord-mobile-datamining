@@ -14,7 +14,7 @@ export default function UnsupportedFeatureModal(onDismiss) {
   obj = { Unsupported: null };
   obj = {
     title: onDismiss.title,
-    headerLeft: onDismiss(5638).getHeaderCloseButton(() => {
+    headerLeft: onDismiss(5674).getHeaderCloseButton(() => {
       let arr = ModalActionCreatorsDefault;
       arr = arr.pop();
       if (onDismiss != null) {
@@ -26,7 +26,7 @@ export default function UnsupportedFeatureModal(onDismiss) {
       obj = { variant: "text-lg/normal", color: "text-default", children: null };
       const intl = onDismiss(1114).intl;
       obj.children = intl.string(onDismiss(1114).t.I22zuX);
-      obj.children = jsx(onDismiss(4570).Text, { variant: "text-lg/normal", color: "text-default", children: null });
+      obj.children = jsx(onDismiss(4601).Text, { variant: "text-lg/normal", color: "text-default", children: null });
       return (
         <View variant="text-lg/normal" color="text-default">
           {null}
@@ -36,9 +36,9 @@ export default function UnsupportedFeatureModal(onDismiss) {
   };
   obj.Unsupported = obj;
   obj.screens = obj;
-  return jsx(onDismiss(7014).Navigator, {
+  return jsx(onDismiss(7052).Navigator, {
     title: onDismiss.title,
-    headerLeft: onDismiss(5638).getHeaderCloseButton(() => {
+    headerLeft: onDismiss(5674).getHeaderCloseButton(() => {
       let arr = ModalActionCreatorsDefault;
       arr = arr.pop();
       if (onDismiss != null) {
@@ -50,7 +50,7 @@ export default function UnsupportedFeatureModal(onDismiss) {
       obj = { variant: "text-lg/normal", color: "text-default", children: null };
       const intl = onDismiss(1114).intl;
       obj.children = intl.string(onDismiss(1114).t.I22zuX);
-      obj.children = jsx(onDismiss(4570).Text, { variant: "text-lg/normal", color: "text-default", children: null });
+      obj.children = jsx(onDismiss(4601).Text, { variant: "text-lg/normal", color: "text-default", children: null });
       return (
         <View variant="text-lg/normal" color="text-default">
           {null}

@@ -7,12 +7,12 @@ import noop from "../../../../../../../_runtime/metro/00019__.js";
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ Image: hasOwnProperty, View: metroRequire, Linking: closure_7, Pressable: closure_8 } = get_ActivityIndicator);
-const XboxLinkModalScenes = fn(9251).XboxLinkModalScenes;
-const GameConsoleConstants = fn(9265);
+const XboxLinkModalScenes = fn(9288).XboxLinkModalScenes;
+const GameConsoleConstants = fn(9302);
 ({ XBOX_ANDROID_APP_LINK: c10, XBOX_IOS_APP_LINK: closure_11, XBOX_URL_BASE: closure_12 } = GameConsoleConstants);
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
-fn(4574);
+fn(4605);
 let createStyles = {
   image: { width: 58, height: 85, marginBottom: 24 },
   getApp: null,
@@ -83,7 +83,7 @@ export default function XboxLinkDiscordSuccess() {
   const callback1 = noop.useCallback(() => {
     navigation.push(XboxLinkModalScenes.EDUCATION);
   }, items1);
-  obj1.source = require("../../../../../../../_runtime/metro/09473__.js");
+  obj1.source = require("../../../../../../../_runtime/metro/09511__.js");
   obj1.style = tmp.image;
   const items2 = [closure_13(closure_5, obj1), , ,];
   const obj2 = {
@@ -103,7 +103,7 @@ export default function XboxLinkDiscordSuccess() {
   const obj5 = {
     style: tmp.appLogoBox,
     children: closure_13(closure_5, {
-      source: require("../../../../../../../_runtime/metro/09474__.js"),
+      source: require("../../../../../../../_runtime/metro/09512__.js"),
       style: tmp.appLogo,
     }),
   };

@@ -5,7 +5,7 @@ import noop from "../../../../_runtime/metro/00019__.js";
 
 const ScrollView = fn(17).ScrollView;
 const jsx = fn(21).jsx;
-fn(4574);
+fn(4605);
 let createStyles = { guildFeedBackground: null };
 createStyles = { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH };
 createStyles.guildFeedBackground = createStyles;

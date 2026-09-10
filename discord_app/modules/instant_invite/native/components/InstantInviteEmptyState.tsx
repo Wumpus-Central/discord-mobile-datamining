@@ -2,7 +2,7 @@
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import FreeFormTextInputDefault from "../../../../design/void/Form/native/FreeFormTextInput.tsx";
 import InstantInviteUtilsDefault from "../../../../utils/InstantInviteUtils.tsx";
-import _modDef9886 from "../../../../../_runtime/metro/09886__.js";
+import _modDef9924 from "../../../../../_runtime/metro/09924__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import CreateInviteModalStore from "../../../../stores/CreateInviteModalStore.tsx";
 
@@ -10,7 +10,7 @@ const require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-fn(4574);
+fn(4605);
 const createStyles = {
   container: { padding: 16 },
   emptyStateContainer: { padding: 0, marginBottom: 16 },
@@ -47,7 +47,7 @@ export default function _default(link) {
     containerStyle: tmp.emptyStateContainer,
     imageStyle: tmp.emptyStateArt,
     titleStyle: tmp.emptyStateTitle,
-    source: _modDef9886,
+    source: _modDef9924,
     title: null,
     body: null,
   };
@@ -78,8 +78,8 @@ export default function _default(link) {
   obj3.accessibilityLabel = intl3.string(stateFromStores(1114).t["3D5yo/"]);
   obj3.onPress = onPressSettings;
   obj3.style = tmp.settingsButton;
-  obj3.children = closure_5(stateFromStores(7394).SettingsIcon, {});
-  items2[1] = closure_5(stateFromStores(5137).PressableOpacity, obj3);
+  obj3.children = closure_5(stateFromStores(7432).SettingsIcon, {});
+  items2[1] = closure_5(stateFromStores(5173).PressableOpacity, obj3);
   obj1.children = items2;
   items1[1] = closure_6(View, obj1);
   const obj4 = { style: tmp.expireCaption, variant: "text-xs/medium", color: "text-muted", children: null };
@@ -90,7 +90,7 @@ export default function _default(link) {
     const intl5 = tmp2(1114).intl;
     obj5.text = intl5.string(tmp2(1114).t.Ej3B3Y);
     obj5.onPress = onShare;
-    items1[3] = closure_5(tmp2(4989).Button, obj5);
+    items1[3] = closure_5(tmp2(5025).Button, obj5);
     obj.children = items1;
     return closure_6(View, obj);
   } else {

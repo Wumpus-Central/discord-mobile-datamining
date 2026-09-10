@@ -13,7 +13,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_7, Fragment: closure_8, jsxs: closure_9 } = jsxProd);
-let obj = { Badge: BadgesAll.NewGameBadge, predicate: fn(8161).isEntryNew };
+let obj = { Badge: BadgesAll.NewGameBadge, predicate: fn(8198).isEntryNew };
 let items = [obj, , , ,];
 obj = {
   Badge: BadgesAll.StreakBadge,
@@ -52,7 +52,7 @@ items[4] = {
     return true === utils.isEntryMarathon(entry);
   },
 };
-const createICYMIStyles = fn(16486);
+const createICYMIStyles = fn(16535);
 let closure_11 = createICYMIStyles.createICYMIStyles((gap) => {
   let obj = { card: null, cardInnerContainer: null, image: null, gameName: null, badges: null };
   obj = {
@@ -150,7 +150,7 @@ export default function GamingLikeEntryRow(content) {
   }, items2);
   const items3 = [content];
   const callback1 = noop.useCallback(() => {
-    asyncRequireImpl(16536, dependencyMap.paths).then((GameShareModal) => {
+    asyncRequireImpl(16585, dependencyMap.paths).then((GameShareModal) => {
       GameShareModal = GameShareModal.GameShareModal;
       if (null != GameShareModal) {
         let obj = author_id(openReplyActionSheet[19]);

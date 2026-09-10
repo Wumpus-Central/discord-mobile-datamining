@@ -428,7 +428,8 @@ export { buildCommand };
 export const buildApplicationCommands = function buildApplicationCommands(uniqByResult, useKeyedPermissions) {
   return _modDef12.flatMap(uniqByResult, (id) => {
     _modDef38(null != id.id, "Missing command id");
-    return buildSubCommands({ rootCommand: id, command: id, applicationId: id.application_id, subCommandPath: "Array", useKeyedPermissions });
+    const obj = { rootCommand: id, command: id, applicationId: id.application_id, subCommandPath: "Array", useKeyedPermissions };
+    return buildSubCommands(obj);
   });
 };
 export const applicationPermissionsList = function applicationPermissionsList(arr) {

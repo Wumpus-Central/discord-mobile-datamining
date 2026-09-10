@@ -7,5 +7,5 @@ const result = size.fileFinishedImporting("modules/favorites/native/modal/openFa
 
 export default function openFavoritesGuildCategorySettingsModal(categoryId) {
   const obj = { categoryId };
-  obj.pushLazy(asyncRequireImpl(16145, dependencyMap.paths), obj);
+  obj.pushLazy(asyncRequireImpl(16194, dependencyMap.paths), obj);
 }

@@ -1,26 +1,26 @@
 // discord_app/modules/quests/native/QuestDock/QuestDockBlurredHeaderPlaceholder.tsx
-import thumbHashToRGBA from "../../../../../_runtime/15224_thumbHashToRGBA.js";
+import thumbHashToRGBA from "../../../../../_runtime/15273_thumbHashToRGBA.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ StyleSheet, View: closure_4 } = get_ActivityIndicator);
-const QuestDockMode = fn(5458).QuestDockMode;
-const QuestDockConstants = fn(15125);
-({ QUEST_DOCK_EXPANDED_HEIGHT, QUEST_DOCK_UNENROLLED_HEADER_INSET_EXPANDED } = QuestDockConstants);
+const QuestDockMode = fn(5494).QuestDockMode;
+const QuestDockConstants = fn(15174);
+({ QUEST_DOCK_LANDSCAPE_MEDIA_EXPANDED_HEIGHT, QUEST_DOCK_UNENROLLED_HEADER_INSET_EXPANDED } = QuestDockConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_7, Fragment: closure_8, jsxs: closure_9 } = jsxProd);
-fn(4574);
+fn(4605);
 let obj = { image: null, overlay: null };
 obj = {};
 const merged = Object.assign(StyleSheet.absoluteFillObject);
-obj.height = QUEST_DOCK_EXPANDED_HEIGHT;
+obj.height = QUEST_DOCK_LANDSCAPE_MEDIA_EXPANDED_HEIGHT;
 obj.top = -QUEST_DOCK_UNENROLLED_HEADER_INSET_EXPANDED;
 obj.image = obj;
 const createStyles = {};
 const merged1 = Object.assign(StyleSheet.absoluteFillObject);
 createStyles.backgroundColor = "rgba(38, 39, 50, 0.3)";
-createStyles.height = QUEST_DOCK_EXPANDED_HEIGHT;
+createStyles.height = QUEST_DOCK_LANDSCAPE_MEDIA_EXPANDED_HEIGHT;
 obj.overlay = createStyles;
 let closure_10 = createStyles.createStyles(obj);
 const __initData = {

@@ -63,9 +63,9 @@ function ModeratorActionRow(isDestructive) {
 const GUILD_VOCAL_CHANNELS_KEY = fn(2012).GUILD_VOCAL_CHANNELS_KEY;
 const Constants = fn(1074);
 ({ GuildFeatures: closure_12, Permissions: map1 } = Constants);
-let GuildMemberFlags = fn(4200).GuildMemberFlags;
+let GuildMemberFlags = fn(4230).GuildMemberFlags;
 const jsx = fn(21).jsx;
-fn(4574);
+fn(4605);
 let createStyles = { cardContainer: { paddingBottom: 0 }, refreshCardTitle: null };
 createStyles = { marginBottom: nativeDefault.space.PX_8 };
 createStyles.refreshCardTitle = createStyles;
@@ -355,7 +355,7 @@ export default function UserProfileModeratorActions(user) {
           obj.onSelect = function onSelect(id) {
             return guildId(showUserProfile[34]).setChannel(id2.id, id.id, id.id);
           };
-          obj.openLazy(asyncRequireImpl(11362, dependencyMap.paths), "ChannelPicker", obj, "stack");
+          obj.openLazy(asyncRequireImpl(11402, dependencyMap.paths), "ChannelPicker", obj, "stack");
         };
         items7.push(
           <ModeratorActionRow
@@ -402,11 +402,11 @@ export default function UserProfileModeratorActions(user) {
               dependencyMap();
             },
             onRemove() {
-              let arr = guildId(4777);
+              let arr = guildId(4808);
               arr = arr.pop();
             },
           };
-          obj.pushLazy(asyncRequireImpl(11867, dependencyMap.paths), obj);
+          obj.pushLazy(asyncRequireImpl(11907, dependencyMap.paths), obj);
         };
         items7.push(<ModeratorActionRow key="manage" label={null} icon={null} onPress={null} />);
       }

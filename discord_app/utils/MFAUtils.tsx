@@ -2,7 +2,7 @@
 import _mod17 from "../../_runtime/metro/00017__.js";
 import SentryUtilsDefault from "SentryUtils.native.tsx";
 import MetaQuestUtils from "../modules/device/MetaQuestUtils.android.tsx";
-import encodeDefault from "../../_runtime/06966_encode.js";
+import encodeDefault from "../../_runtime/07002_encode.js";
 import size from "../../_runtime/metro/00002__.js";
 
 let _crypto;

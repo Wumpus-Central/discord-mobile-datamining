@@ -26,8 +26,8 @@ MediaViewerAnalytics = {
   channelType: "isArray",
   numMediaItems: "Array",
   hasMediaOptions: "call",
-  source: null,
-  incrementableActions: null,
+  source: "$ZodDate",
+  incrementableActions: "CHANNEL_CALL_POPOUT",
 };
 const values = Object.values(MediaViewerAnalytics);
 MediaViewerAnalytics.incrementableActions = Object.fromEntries(

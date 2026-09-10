@@ -389,13 +389,13 @@ function QuestHomeBountiesCarousel(bounties) {
   return closure_9(closure_5, obj);
 }
 const View = fn(17).View;
-const constants = fn(5458).BountyCarouselEmptyStateReason;
+const constants = fn(5494).BountyCarouselEmptyStateReason;
 const ContentDismissActionType = fn(1954).ContentDismissActionType;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
 const PX_16 = nativeDefault.space.PX_16;
-let closure_13 = fn(15098).CARD_WIDTH + PX_16;
-const createStyles = fn(4574);
+let closure_13 = fn(15147).CARD_WIDTH + PX_16;
+const createStyles = fn(4605);
 let closure_14 = createStyles.createStyles(() => {
   let obj = { container: null, listContentContainer: null, emptyState: null, emptyStateText: null };
   obj = { marginBottom: nativeDefault.space.PX_48 };
@@ -427,7 +427,7 @@ export default noop.memo(function QuestHomeBounties(shopCarouselConfig) {
   if (showOrbShopPlaceholderCarousel === undefined) {
     showOrbShopPlaceholderCarousel = false;
   }
-  let obj = first(11515);
+  let obj = first(11555);
   const questHomeBounties = obj.useQuestHomeBounties().questHomeBounties;
   const tmp3 = closure_14();
   first = undefined;
@@ -439,7 +439,7 @@ export default noop.memo(function QuestHomeBounties(shopCarouselConfig) {
   } else {
     items1 = [];
   }
-  let tmpResult = tmp(7402);
+  let tmpResult = tmp(7440);
   const tmp4 = _slicedToArray(tmpResult.useSelectedDismissibleContent(items1), 2);
   first = tmp4[0];
   importDefault = tmp6;
@@ -483,9 +483,9 @@ export default noop.memo(function QuestHomeBounties(shopCarouselConfig) {
         let tmp14 = "none" !== placement && obtainableOrbRewards > 0;
         if (tmp14) {
           tmp14 =
-            orbShopProducts.length >= tmp(15099).MIN_PRODUCTS_FOR_ORB_SHOP_CAROUSEL || showOrbShopPlaceholderCarousel;
+            orbShopProducts.length >= tmp(15148).MIN_PRODUCTS_FOR_ORB_SHOP_CAROUSEL || showOrbShopPlaceholderCarousel;
           const tmp15 =
-            orbShopProducts.length >= tmp(15099).MIN_PRODUCTS_FOR_ORB_SHOP_CAROUSEL || showOrbShopPlaceholderCarousel;
+            orbShopProducts.length >= tmp(15148).MIN_PRODUCTS_FOR_ORB_SHOP_CAROUSEL || showOrbShopPlaceholderCarousel;
         }
         if (!tmp14) {
           obj = { style: tmp3.container, children: null };

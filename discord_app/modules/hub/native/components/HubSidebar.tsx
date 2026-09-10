@@ -34,8 +34,8 @@ function HubItem(arg0) {
     channelInfo: null,
   };
   const tmp = closure_9();
-  obj.name = React5(tmp5(12409).BaseChannelName, { name: label, mode: DEFAULT });
-  obj.icon = React5(tmp5(12409).BaseChannelIcon, { mode: DEFAULT, IconComponent });
+  obj.name = React5(tmp5(12449).BaseChannelName, { name: label, mode: DEFAULT });
+  obj.icon = React5(tmp5(12449).BaseChannelIcon, { mode: DEFAULT, IconComponent });
   let tmp6Result = null;
   if (null != unreadCount) {
     obj = { value: unreadCount };
@@ -48,10 +48,10 @@ const View = fn(17).View;
 const InstantInviteSources = fn(1074).InstantInviteSources;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-fn(4574);
+fn(4605);
 let createStyles = { container: null, row: null };
 createStyles = {
-  marginVertical: fn(10150).CHANNEL_MARGIN_VERTICAL,
+  marginVertical: fn(10188).CHANNEL_MARGIN_VERTICAL,
   marginHorizontal: 8,
   borderRadius: nativeDefault.radii.md,
 };
@@ -79,7 +79,7 @@ export default function HubSidebar(guild) {
     }
     return tmp2;
   });
-  guild(16245);
+  guild(16294);
   let tmp9Result = null;
   if (null != stateFromStores) {
     let row = null;
@@ -88,10 +88,10 @@ export default function HubSidebar(guild) {
     }
     obj = { style: row, children: null };
     obj = { guild };
-    const items4 = [closure_7(stateFromStores(16246), obj), , ,];
+    const items4 = [closure_7(stateFromStores(16295), obj), , ,];
     obj1 = {
       active: stateFromStores1,
-      IconComponent: tmp(15626).CompassIcon,
+      IconComponent: tmp(15675).CompassIcon,
       label: null,
       handleItemClick: null,
       unreadCount: null,
@@ -103,7 +103,7 @@ export default function HubSidebar(guild) {
     };
     obj1.unreadCount = tmp7;
     items4[1] = closure_7(HubItem, obj1);
-    obj2 = { IconComponent: tmp(12783).PlusMediumIcon, label: null, handleItemClick: null };
+    obj2 = { IconComponent: tmp(12823).PlusMediumIcon, label: null, handleItemClick: null };
     const intl2 = tmp(1114).intl;
     obj2.label = intl2.string(tmp(1114).t.emRpdS);
     obj2.handleItemClick = function handleItemClick() {
@@ -115,7 +115,7 @@ export default function HubSidebar(guild) {
       return obj.open(obj);
     };
     items4[2] = closure_7(HubItem, obj2);
-    const obj3 = { IconComponent: tmp(4511).UserPlusIcon, label: null, handleItemClick: null };
+    const obj3 = { IconComponent: tmp(4542).UserPlusIcon, label: null, handleItemClick: null };
     const intl3 = tmp(1114).intl;
     obj3.label = intl3.string(tmp(1114).t.MJQOuJ);
     obj3.handleItemClick = function handleItemClick() {

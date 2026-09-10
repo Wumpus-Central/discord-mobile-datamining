@@ -7,6 +7,7 @@ import QuestDockVideoBackgroundDefault from "QuestDockVideoBackground.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
+const expandedHeight = fn(15174).QUEST_DOCK_LANDSCAPE_MEDIA_EXPANDED_HEIGHT;
 const jsx = fn(21).jsx;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/quests/native/QuestDock/QuestDockUnenrolledBackground.tsx");
@@ -17,7 +18,7 @@ export default noop.memo(function QuestDockUnenrolledBackground() {
   const questDockHeroAsset = QuestHooks.useQuestDockHeroAsset(questDockQuest);
   ({ videoAsset, staticUrl } = questDockHeroAsset);
   const token = useToken.useToken(nativeDefault.colors.CARD_BACKGROUND_DEFAULT);
-  obj = { imageUrl: staticUrl, videoUrl: null, videoMimetype: null, gradientBaseColor: null };
+  obj = { expandedHeight, imageUrl: staticUrl, videoUrl: null, videoMimetype: null, gradientBaseColor: null };
   let url;
   if (videoAsset != null) {
     url = videoAsset.url;
@@ -33,6 +34,7 @@ export default noop.memo(function QuestDockUnenrolledBackground() {
   obj.videoMimetype = mimetype;
   obj.gradientBaseColor = token;
   return jsx(QuestDockVideoBackgroundDefault, {
+    expandedHeight,
     imageUrl: staticUrl,
     videoUrl: null,
     videoMimetype: null,

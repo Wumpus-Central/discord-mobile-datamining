@@ -24,7 +24,7 @@ const Constants = fn(1074);
 ({ AnalyticEvents: closure_12, HelpdeskArticles: map1 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
-fn(4574);
+fn(4605);
 let createStyles = {
   container: null,
   content: null,
@@ -101,7 +101,7 @@ export default function GuildRoleConnectionsScreen(guildId) {
   const onCloseModal = guildId.onCloseModal;
   let tmp = closure_16();
   dependencyMap = tmp;
-  _slicedToArray = onCloseModal(4509)();
+  _slicedToArray = onCloseModal(4540)();
   let obj = guildId(504);
   let items = [GuildRoleStore];
   const stateFromStores = obj.useStateFromStores(items, () => GuildRoleStore.getSortedRoles(guildId));
@@ -143,7 +143,7 @@ export default function GuildRoleConnectionsScreen(guildId) {
     const intl = tmp4(1114).intl;
     obj2 = { helpdeskArticleUrl: tmp2(2024).getArticleURL(constants2.CONNECTION_DETAILS) };
     obj1.children = intl.format(tmp4(1114).t["Y+TsEV"], obj2);
-    const items5 = [closure_14(tmp4(4570).Text, obj1)];
+    const items5 = [closure_14(tmp4(4601).Text, obj1)];
     let obj3 = {
       style: tmp.verifiedRoles,
       children: found.map((children) => {
@@ -243,13 +243,13 @@ export default function GuildRoleConnectionsScreen(guildId) {
                 },
               };
               obj4.openLazy(
-                asyncRequireImpl(11603, dependencyMap.paths),
+                asyncRequireImpl(11643, dependencyMap.paths),
                 "LeaveConnectionRoleActionSheet-" + tmp.id,
                 obj,
               );
-              const tmp20 = asyncRequireImpl(11603, dependencyMap.paths);
+              const tmp20 = asyncRequireImpl(11643, dependencyMap.paths);
             } else {
-              const tmp9 = asyncRequireImpl(11593, dependencyMap.paths);
+              const tmp9 = asyncRequireImpl(11633, dependencyMap.paths);
               obj = { role: tmp, guildId, onCloseModal };
               obj.openLazy(
                 tmp9,

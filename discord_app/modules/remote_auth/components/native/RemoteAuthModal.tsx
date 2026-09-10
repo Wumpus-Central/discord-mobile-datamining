@@ -11,11 +11,11 @@ import components_Button_Button from "../../../../design/components/Button/nativ
 import ButtonGroup from "../../../../design/components/ButtonGroup/native/ButtonGroup.native.tsx";
 import ActivityIndicator_ActivityIndicator from "../../../../design/components/ActivityIndicator/native/ActivityIndicator.native.tsx";
 import DeprecatedLayoutAnimation from "../../../animations/native/DeprecatedLayoutAnimation.tsx";
-import _modDef13888 from "../../../../../_runtime/metro/13888__.js";
-import _modDef13890 from "../../../../../_runtime/metro/13890__.js";
-import _modDef13891 from "../../../../../_runtime/metro/13891__.js";
-import _modDef13892 from "../../../../../_runtime/metro/13892__.js";
-import _modDef13893 from "../../../../../_runtime/metro/13893__.js";
+import _modDef13937 from "../../../../../_runtime/metro/13937__.js";
+import _modDef13939 from "../../../../../_runtime/metro/13939__.js";
+import _modDef13940 from "../../../../../_runtime/metro/13940__.js";
+import _modDef13941 from "../../../../../_runtime/metro/13941__.js";
+import _modDef13942 from "../../../../../_runtime/metro/13942__.js";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
@@ -40,11 +40,11 @@ function RemoteAuthBody(remoteAuthFingerprint) {
       .then((body) => {
         dependencyMap(body.body.handshake_token);
         closure_1_1(constants.LOADED);
-        const result = remoteAuthFingerprint(5595).DeprecatedLayoutAnimation();
+        const result = remoteAuthFingerprint(5631).DeprecatedLayoutAnimation();
       })
       .catch(() => {
         closure_1_1(constants.NOT_FOUND);
-        const result = remoteAuthFingerprint(5595).DeprecatedLayoutAnimation();
+        const result = remoteAuthFingerprint(5631).DeprecatedLayoutAnimation();
       });
   }, items);
   if (constants.LOADING === tmp3) {
@@ -92,7 +92,7 @@ function RemoteAuthLogin(arg0) {
     tmp10 = !tmp5;
   }
   obj = { children: null };
-  obj = { source: _modDef13891, style: tmp.mainImage };
+  obj = { source: _modDef13940, style: tmp.mainImage };
   const items = [closure_9(closure_6, obj), , ,];
   const obj1 = { variant: "heading-md/extrabold", children: null };
   const intl = util.intl;
@@ -155,7 +155,7 @@ function RemoteAuthLogin(arg0) {
 function RemoteAuthLoginSucceeded() {
   const tmp = closure_12();
   let obj = { children: null };
-  obj = { source: _modDef13892, style: tmp.mainImage };
+  obj = { source: _modDef13941, style: tmp.mainImage };
   const items = [React7(timestampProducer, obj), , ,];
   obj = { variant: "heading-xl/extrabold", children: null };
   const intl = util.intl;
@@ -178,7 +178,7 @@ function RemoteAuthLoginSucceeded() {
 function RemoteAuthNotFound() {
   const tmp = closure_12();
   let obj = { children: null };
-  obj = { source: _modDef13893, style: tmp.mainImage };
+  obj = { source: _modDef13942, style: tmp.mainImage };
   const items = [React7(timestampProducer, obj), , ,];
   obj = { variant: "heading-xl/extrabold", children: null };
   const intl = util.intl;
@@ -209,7 +209,7 @@ get_ActivityIndicator = fn(17);
 const Endpoints = fn(1074).Endpoints;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10, Fragment: closure_11 } = jsxProd);
-fn(4574);
+fn(4605);
 let createStyles = {
   background: { width: "100%", height: "100%" },
   container: { flex: 1, alignItems: "stretch", alignContent: "center" },
@@ -266,9 +266,9 @@ let result = size.fileFinishedImporting("modules/remote_auth/components/native/R
 
 export default function RemoteAuth(arg0) {
   const tmp = closure_12();
-  let obj = { source: _modDef13890, imageStyle: null, style: null, children: null };
+  let obj = { source: _modDef13939, imageStyle: null, style: null, children: null };
   ({ imageStyle: obj.imageStyle, background: obj.style } = tmp);
-  obj = { style: null, source: _modDef13888 };
+  obj = { style: null, source: _modDef13937 };
   const items = [tmp.logo, { marginTop: useSafeAreaInsetsDefault().top }];
   obj.style = items;
   const items1 = [React7(timestampProducer, obj)];

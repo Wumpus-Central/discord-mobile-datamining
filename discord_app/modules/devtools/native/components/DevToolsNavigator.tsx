@@ -10,7 +10,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty, Fragment: metroRequire } = jsxProd);
-const NativeStackNavigator = fn(7927);
+const NativeStackNavigator = fn(7965);
 const Navigator = NativeStackNavigator.createNativeStackNavigator();
 let closure_8 = noop.memo((screenKey) => {
   let str = screenKey.screenKey;
@@ -47,7 +47,7 @@ let closure_8 = noop.memo((screenKey) => {
         return {
           headerTitle() {
             let obj = { style: { flexDirection: "row" }, children: null };
-            const items = [closure_1_4(closure_1_0(9465).HammerIcon, { size: "sm" })];
+            const items = [closure_1_4(closure_1_0(9503).HammerIcon, { size: "sm" })];
             obj = {
               style: null,
               variant: "heading-md/semibold",
@@ -56,7 +56,7 @@ let closure_8 = noop.memo((screenKey) => {
             };
             obj = { marginLeft: closure_1_1(576).space.PX_8 };
             obj.style = obj;
-            items[1] = closure_1_4(closure_1_0(4570).Text, obj);
+            items[1] = closure_1_4(closure_1_0(4601).Text, obj);
             obj.children = items;
             return closure_1_5(closure_1_3, obj);
           },
@@ -66,8 +66,8 @@ let closure_8 = noop.memo((screenKey) => {
     }),
     ,
   ];
-  let merged = Object.assign(tmp(15611).DevToolsScreens);
-  let merged1 = Object.assign(tmp(15611).PerformanceTestingScreens);
+  let merged = Object.assign(tmp(15660).DevToolsScreens);
+  let merged1 = Object.assign(tmp(15660).PerformanceTestingScreens);
   const entries = Object.entries({});
   items1[1] = entries.map((item) => {
     [tmp] = item;
@@ -90,7 +90,7 @@ let closure_8 = noop.memo((screenKey) => {
       return {
         headerTitle() {
           let obj = { style: { flexDirection: "row" }, children: null };
-          const items = [closure_1_4(closure_1_0(9465).HammerIcon, { size: "sm" })];
+          const items = [closure_1_4(closure_1_0(9503).HammerIcon, { size: "sm" })];
           obj = {
             style: null,
             variant: "heading-md/semibold",
@@ -99,7 +99,7 @@ let closure_8 = noop.memo((screenKey) => {
           };
           obj = { marginLeft: closure_1_1(576).space.PX_8 };
           obj.style = obj;
-          items[1] = closure_1_4(closure_1_0(4570).Text, obj);
+          items[1] = closure_1_4(closure_1_0(4601).Text, obj);
           obj.children = items;
           return closure_1_5(closure_1_3, obj);
         },

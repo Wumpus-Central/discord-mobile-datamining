@@ -2,7 +2,8 @@
 import util from "../../../../intl/index.native.tsx";
 import GlobalUtils from "../../../../utils/GlobalUtils.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
-import _modDef7006 from "../../../../../_runtime/metro/07006__.js";
+import useTypeConsolidationTextTransform from "../../../design/useTypeConsolidationTextTransform.tsx";
+import _modDef7044 from "../../../../../_runtime/metro/07044__.js";
 import common_SafeAreaView from "../../../../components_native/common/SafeAreaView.tsx";
 import HeaderActionButton from "../../../../design/components/Navigator/native/HeaderActionButton.native.tsx";
 import EditGuildEventUtils from "../../utils/EditGuildEventUtils.tsx";
@@ -13,7 +14,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4574);
+const createStyles = fn(4605);
 let closure_7 = createStyles.createStyles({
   header: {
     flexDirection: "row",
@@ -34,6 +35,8 @@ const result = size.fileFinishedImporting(
 export default function EditGuildEventModalNavbar(screen) {
   screen = screen.screen;
   const tmp = closure_7();
+  let obj = useTypeConsolidationTextTransform;
+  const typeConsolidationEyebrow = obj.useTypeConsolidationEyebrow("EditGuildEventModalNavbar", "text-xs/bold");
   if (EditGuildEventUtils.EditGuildEventScreens.CHANNEL_SELECTOR === screen) {
     let items = [1, 3];
   } else if (EditGuildEventUtils.EditGuildEventScreens.DETAILS === screen) {
@@ -44,20 +47,22 @@ export default function EditGuildEventModalNavbar(screen) {
     GlobalUtils.assertNever(screen);
     const tmp2Result = GlobalUtils;
   }
-  [tmp6, tmp7] = _slicedToArray(items, 2);
-  let obj = { top: true, style: tmp.header, children: null };
+  [tmp7, tmp8] = _slicedToArray(items, 2);
+  obj = { top: true, style: tmp.header, children: null };
   obj = { style: tmp.buttonContainer };
   const items1 = [hasOwnProperty(View, obj), ,];
-  const obj1 = { style: tmp.headerTitle, variant: "text-xs/bold", color: "text-default", children: null };
+  const obj1 = { style: null, variant: typeConsolidationEyebrow.variant, color: "text-default", children: null };
+  const items2 = [tmp.headerTitle, typeConsolidationEyebrow.style];
+  obj1.style = items2;
   const intl = util.intl;
-  obj1.children = intl.format(util.t["42HaFY"], { step: tmp6, total: tmp7 });
+  obj1.children = intl.format(util.t["42HaFY"], { step: tmp7, total: tmp8 });
   items1[1] = hasOwnProperty(Text_Text.Text, obj1);
   const obj2 = { style: tmp.buttonContainer, children: null };
   const obj3 = { accessibilityLabel: null, onPress: null, source: null, style: null };
   const intl2 = util.intl;
   obj3.accessibilityLabel = intl2.string(util.t.cpT0Cq);
   obj3.onPress = screen.onClose;
-  obj3.source = _modDef7006;
+  obj3.source = _modDef7044;
   obj3.style = tmp.rightButton;
   obj2.children = hasOwnProperty(HeaderActionButton.HeaderActionButton, obj3);
   items1[2] = hasOwnProperty(View, obj2);

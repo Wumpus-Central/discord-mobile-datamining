@@ -11,7 +11,7 @@ const View = fn(17).View;
 const EmojiIntention = fn(1374).EmojiIntention;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-fn(4574);
+fn(4605);
 let createStyles = { container: null, hasError: null, stringOptionInput: null, expressionButton: null };
 createStyles = {
   width: "100%",
@@ -58,7 +58,7 @@ export default function AppLauncherTextInputOption(guildId) {
   );
   value = tmp2[0];
   noop = tmp2[1];
-  let obj = onChangeText(11247);
+  let obj = onChangeText(11287);
   noop.useRef({ start: 0, end: 0 });
   const ref = noop.useRef(null);
   let tmp14Result = option.type === onChangeText(1894).ApplicationCommandOptionType.STRING;
@@ -111,17 +111,17 @@ export default function AppLauncherTextInputOption(guildId) {
       const result = TopEmojisUtils.maybeFetchTopEmojisByGuild(guildId);
     }
   }, items2);
-  let obj1 = onChangeText(12199);
+  let obj1 = onChangeText(12239);
   const animationDelayedAutoFocus = obj1.useAnimationDelayedAutoFocus(autoFocus, () => {
     const current = ref.current;
     if (current != null) {
       current.focus();
     }
   });
-  if (obj.useAppLauncherContext().entrypoint === onChangeText(9441).AppLauncherEntrypoint.VOICE) {
+  if (obj.useAppLauncherContext().entrypoint === onChangeText(9479).AppLauncherEntrypoint.VOICE) {
     let TextInput = tmp4(1178).TextInput;
   } else {
-    TextInput = guildId(12203);
+    TextInput = guildId(12243);
   }
   const items3 = [tmp.container, ,];
   if (hasError) {
@@ -188,7 +188,7 @@ export default function AppLauncherTextInputOption(guildId) {
         const result1 = openEmojiPickerActionSheet.openEmojiPickerActionSheet(obj);
       },
     };
-    tmp14Result = tmp14(guildId(12204), obj1);
+    tmp14Result = tmp14(guildId(12244), obj1);
   }
   items4[1] = tmp14Result;
   obj.children = items4;

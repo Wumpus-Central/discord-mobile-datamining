@@ -11,11 +11,11 @@ import BadgeDirectoryStore from "../../../badges/BadgeDirectoryStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-let closure_7 = fn(8218).getSingleRequirementThreshold;
+let closure_7 = fn(8255).getSingleRequirementThreshold;
 const AnalyticEvents = fn(1074).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-fn(4574);
+fn(4605);
 let createStyles = {
   container: null,
   headerContainer: null,
@@ -51,7 +51,7 @@ export default function GiftingBadgeInfoActionSheet() {
   _require = tmp;
   let obj = require("initialize");
   let items = [BadgeDirectoryStore];
-  const stateFromStores = obj.useStateFromStores(items, () => badgeById.getBadgeById(closure_0(8210).BadgeId.GIFTING));
+  const stateFromStores = obj.useStateFromStores(items, () => badgeById.getBadgeById(closure_0(8247).BadgeId.GIFTING));
   let obj1 = require("initialize");
   const items1 = [AccessibilityStore];
   importDefault = obj1.useStateFromStores(items1, () => useReducedMotion.useReducedMotion);

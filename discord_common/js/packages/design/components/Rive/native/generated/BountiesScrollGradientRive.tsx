@@ -1,7 +1,7 @@
 // discord_common/js/packages/design/components/Rive/native/generated/BountiesScrollGradientRive.tsx
 import BaseRive from "../BaseRive.tsx";
 import RiveErrorBoundary from "../RiveErrorBoundary.tsx";
-import _modDef4363 from "../../../../../../../../discord_assets/assets/mana/rive/native/BountiesScrollGradient.riv.js";
+import _modDef4394 from "../../../../../../../../discord_assets/assets/mana/rive/native/BountiesScrollGradient.riv.js";
 import _objectWithoutProperties from "../../../../../../../../_runtime/metro/00109__objectWithoutProperties.js";
 import noop from "../../../../../../../../_runtime/metro/00019__.js";
 
@@ -25,7 +25,7 @@ let closure_8 = noop.forwardRef(function BountiesScrollGradientRiveInner(default
   const merged = Object.assign(tmp2);
   return jsx(BaseRive.BaseRive, {
     ref,
-    src: _modDef4363,
+    src: _modDef4394,
     artboard: str,
     artboardProperties,
     artboardViewModelInstances,

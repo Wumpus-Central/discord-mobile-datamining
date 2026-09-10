@@ -4,7 +4,7 @@ import useSafeAreaInsetsDefault from "../../../../modules/safe_area/useSafeAreaI
 import Text_Text from "../../Text/native/Text.tsx";
 import HeaderDebugOverlayDefault from "../../../../modules/devtools/design_toggles/HeaderDebugOverlay.native.tsx";
 import ArrowLargeLeftIcon from "../../Icon/native/redesign/generated/ArrowLargeLeftIcon.tsx";
-import _mod5645 from "../../../../../_runtime/metro/05645__.js";
+import _mod5681 from "../../../../../_runtime/metro/05681__.js";
 import XSmallIcon from "../../Icon/native/redesign/generated/XSmallIcon.tsx";
 import NavigatorConstants from "NavigatorConstants.native.tsx";
 import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
@@ -48,12 +48,12 @@ function CloseButton(onPress) {
     return timestampProducer(XSmallIcon.XSmallIcon, obj);
   };
   obj.accessibilityLabel = stringResult;
-  return closure_6(require("../../../../../_runtime/metro/05645__.js").HeaderBackButton, obj);
+  return closure_6(require("../../../../../_runtime/metro/05681__.js").HeaderBackButton, obj);
 }
 function CustomHeaderBackButton(onPress) {
   onPress = onPress.onPress;
   const merged = Object.assign(onPress, Object.assign({ onPress: 0 }));
-  let obj = onPress(5644);
+  let obj = onPress(5680);
   obj.useNavigatorBackPressHandler(() => {
     if (null != onPress) {
       tmp();
@@ -67,7 +67,7 @@ function CustomHeaderBackButton(onPress) {
   obj.backImage = function backImage() {
     return closure_1_6(HeaderBackImage, {});
   };
-  return closure_6(onPress(5645).HeaderBackButton, obj);
+  return closure_6(onPress(5681).HeaderBackButton, obj);
 }
 function HeaderTextButton(text) {
   text = text.text;
@@ -89,13 +89,13 @@ function HeaderTextButton(text) {
     tmp5 = text;
   }
   obj.accessibilityLabel = tmp5;
-  return timestampProducer(_mod5645.HeaderBackButton, obj);
+  return timestampProducer(_mod5681.HeaderBackButton, obj);
 }
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, ActivityIndicator: hasOwnProperty } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-fn(4574);
+fn(4605);
 let createStyles = {
   fauxHeaderWrapper: null,
   headerTitle: null,
@@ -109,7 +109,7 @@ let createStyles = {
 createStyles = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, overflow: "hidden" };
 createStyles.fauxHeaderWrapper = createStyles;
 let obj1 = {};
-let merged = Object.assign(fn(4570).TextStyleSheet["redesign/heading-18/bold"]);
+let merged = Object.assign(fn(4601).TextStyleSheet["redesign/heading-18/bold"]);
 obj1.color = nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY;
 createStyles.headerTitle = obj1;
 createStyles.headerBackTitleStyle = {

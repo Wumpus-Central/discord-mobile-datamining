@@ -48,12 +48,12 @@ function _toPropertyKey(obj) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: closure_7, ScrollView: closure_8, SectionList: closure_9 } = get_ActivityIndicator);
-const ChannelPermissionsConstants = fn(8429);
+const ChannelPermissionsConstants = fn(8466);
 ({ RowType: map1, MEMBER_REQUEST_COUNT: closure_14 } = ChannelPermissionsConstants);
 const Permissions = fn(1085).Permissions;
 const jsxProd = fn(21);
 ({ jsx: closure_16, Fragment: closure_17, jsxs: closure_18 } = jsxProd);
-fn(4574);
+fn(4605);
 let createStyles = {
   inputContainer: null,
   inputDescContainer: null,
@@ -185,12 +185,12 @@ export default function AddMembersBody(pendingAdditions) {
     }
   }, items4);
   if (inActionSheet) {
-    let BottomSheetScrollView = guild(6641).BottomSheetScrollView;
+    let BottomSheetScrollView = guild(6677).BottomSheetScrollView;
   } else {
     BottomSheetScrollView = c8;
   }
   if (inActionSheet) {
-    let BottomSheetSectionList = guild(6641).BottomSheetSectionList;
+    let BottomSheetSectionList = guild(6677).BottomSheetSectionList;
   } else {
     BottomSheetSectionList = closure_9;
   }
@@ -218,13 +218,13 @@ export default function AddMembersBody(pendingAdditions) {
       return first(dependencyMap, items.map(_toPropertyKey));
     });
   };
-  obj2.children = closure_16(pendingAdditions(9787), obj3);
+  obj2.children = closure_16(pendingAdditions(9825), obj3);
   const items5 = [closure_16(closure_7, obj2), , ,];
   let tmp27Result = null;
   if (null != inputDesc) {
     obj4 = { style: tmp3.inputDescContainer, children: null };
     const obj5 = { style: tmp3.inputDescText, variant: "text-xs/medium", color: "text-default", children: inputDesc };
-    obj4.children = closure_16(guild(4570).Text, obj5);
+    obj4.children = closure_16(guild(4601).Text, obj5);
     tmp27Result = closure_16(tmp28, obj4);
   }
   items5[1] = tmp27Result;
@@ -241,7 +241,7 @@ export default function AddMembersBody(pendingAdditions) {
     if (0 === items2.length) {
       if (0 === membersRows.length) {
         const obj8 = { children: null };
-        const obj9 = { Illustration: guild(9792).NoResultsAlt, style: null, bodyStyle: null, body: null };
+        const obj9 = { Illustration: guild(9830).NoResultsAlt, style: null, bodyStyle: null, body: null };
         ({ emptyState: obj21.style, emptyStateText: obj21.bodyStyle } = tmp3);
         const intl5 = guild(1114).intl;
         const obj10 = { query: str };
@@ -262,10 +262,10 @@ export default function AddMembersBody(pendingAdditions) {
     sections: null,
     keyboardShouldPersistTaps: "always",
   };
-  const tmp4Result = pendingAdditions(9787);
+  const tmp4Result = pendingAdditions(9825);
   obj12.contentContainerStyle = {
     paddingHorizontal: pendingAdditions(576).space.PX_16,
-    paddingBottom: pendingAdditions(576).space.PX_16 + pendingAdditions(6995)(obj).insets.bottom,
+    paddingBottom: pendingAdditions(576).space.PX_16 + pendingAdditions(7033)(obj).insets.bottom,
   };
   obj12.renderItem = function renderItem(item) {
     item = item.item;
@@ -368,6 +368,6 @@ export default function AddMembersBody(pendingAdditions) {
   tmp27Result = closure_16(BottomSheetSectionList, obj12);
   const obj13 = {
     paddingHorizontal: pendingAdditions(576).space.PX_16,
-    paddingBottom: pendingAdditions(576).space.PX_16 + pendingAdditions(6995)(obj).insets.bottom,
+    paddingBottom: pendingAdditions(576).space.PX_16 + pendingAdditions(7033)(obj).insets.bottom,
   };
 }

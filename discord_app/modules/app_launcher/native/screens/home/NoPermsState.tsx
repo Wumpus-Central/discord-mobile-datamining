@@ -13,7 +13,7 @@ get_ActivityIndicator = fn(17);
 ({ View: c3, Image: closure_4 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-fn(4574);
+fn(4605);
 let createStyles = { container: null, textContainer: null, image: null };
 createStyles = {
   paddingVertical: 16,
@@ -36,7 +36,7 @@ const result = size.fileFinishedImporting("modules/app_launcher/native/screens/h
 export default function EmptyState() {
   const tmp = closure_7();
   let obj = shared;
-  const tmp4Result = importDefault(obj.isThemeLight(useThemeDefault()) ? 12144 : 12145);
+  const tmp4Result = importDefault(obj.isThemeLight(useThemeDefault()) ? 12184 : 12185);
   const logAppLauncherEmptyStateView = AppLauncherNativeUtils.useLogAppLauncherEmptyStateView(
     AppLauncherTypes.AppLauncherEmptyStateType.HOME_NO_PERMISSIONS,
   );

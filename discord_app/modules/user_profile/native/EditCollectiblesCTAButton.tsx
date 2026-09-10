@@ -14,7 +14,7 @@ require = fn;
 let closure_5 = fn(1076).CollectiblesMobileShopScreen;
 let closure_6 = fn(1607).MEDIA_PICKER_SEND_BUTTON_SPRING;
 const jsx = fn(21).jsx;
-const createStyles = fn(4574);
+const createStyles = fn(4605);
 let closure_8 = createStyles.createStyles({
   buttonRowContainer: {
     flexGrow: 0,

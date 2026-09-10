@@ -30,7 +30,7 @@ export default function useGetGameForAppId(applicationId) {
   return obj;
 }
 export const useGetGamesForAppIds = function useGetGamesForAppIds(stateFromStoresArray) {
-  const tmp = memo(7182)(stateFromStoresArray);
+  const tmp = memo(7220)(stateFromStoresArray);
   _require = tmp;
   const items = [tmp];
   memo = noop.useMemo(() => {

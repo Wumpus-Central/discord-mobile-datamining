@@ -61,7 +61,7 @@ get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, ScrollView: metroRequire } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-fn(4574);
+fn(4605);
 let createStyles = { wrap: null, contentContainer: null };
 createStyles = {
   backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW,
@@ -94,7 +94,7 @@ let items = [
     description: "Shows safety warning for inappropriate conversations",
     show() {
       return ModalActionCreatorsDefault.pushLazy(
-        asyncRequireImpl(15755, dependencyMap.paths),
+        asyncRequireImpl(15804, dependencyMap.paths),
         {
           warningId: "test-warning-123",
           warningType: "inappropriate_conversation",
@@ -124,20 +124,20 @@ export default function DevToolsActionSheetsScreen() {
   }, items);
   obj = { spacing: 16, children: null };
   obj = { children: null };
-  const items1 = [closure_7(selectedType(4570).Text, { variant: "heading-lg/medium", children: "Action Sheets" })];
+  const items1 = [closure_7(selectedType(4601).Text, { variant: "heading-lg/medium", children: "Action Sheets" })];
   const obj1 = {
     description: "Tap an option to launch the action sheet immediately",
     hasIcons: false,
-    children: closure_7(selectedType(5619).TableRow, {
+    children: closure_7(selectedType(5655).TableRow, {
       label: found.label,
       subLabel: found.description,
       arrow: true,
       onPress: callback,
     }),
   };
-  items1[1] = closure_7(selectedType(5701).TableRowGroup, obj1);
+  items1[1] = closure_7(selectedType(5737).TableRowGroup, obj1);
   obj.children = items1;
-  obj.children = closure_8(selectedType(5621).Card, obj);
-  obj.children = closure_7(selectedType(4987).Stack, obj);
+  obj.children = closure_8(selectedType(5657).Card, obj);
+  obj.children = closure_7(selectedType(5023).Stack, obj);
   return closure_7(closure_6, obj);
 }

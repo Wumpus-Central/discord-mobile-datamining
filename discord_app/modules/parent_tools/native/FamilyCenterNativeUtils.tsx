@@ -6,7 +6,7 @@ import FamilyCenterActionCreatorsDefault from "../FamilyCenterActionCreators.tsx
 import FamilyCenterPendingConnectionStore from "../FamilyCenterPendingConnectionStore.tsx";
 
 require = fn;
-const FamilyCenterConstants = fn(7552);
+const FamilyCenterConstants = fn(7590);
 ({ FAMILY_CENTER_LINK_REQUEST_REGEX: closure_4, FamilyCenterAction: hasOwnProperty } = FamilyCenterConstants);
 const AnalyticEvents = fn(1074).AnalyticEvents;
 let c7 = "family-center-request-modal";
@@ -23,7 +23,7 @@ export const handleFamilyCenterQRCodeScan = function handleFamilyCenterQRCodeSca
     obj.track(AnalyticEvents.FAMILY_CENTER_ACTION, obj);
     FamilyCenterActionCreatorsDefault.setPendingConnection(match[1], match[2]);
     obj = { userId: match[1], linkCode: match[2] };
-    ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(11945, dependencyMap.paths), obj, c7);
+    ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(11985, dependencyMap.paths), obj, c7);
   }
 };
 export const resumeFamilyCenterConnection = function resumeFamilyCenterConnection() {
@@ -34,7 +34,7 @@ export const resumeFamilyCenterConnection = function resumeFamilyCenterConnectio
     obj.popWithKey(c7);
     obj = { userId: null, linkCode: null };
     ({ teenId: obj3.userId, linkCode: obj3.linkCode } = pendingConnection);
-    ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(11945, dependencyMap.paths), obj, c7);
+    ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(11985, dependencyMap.paths), obj, c7);
     flag = true;
   }
   return flag;

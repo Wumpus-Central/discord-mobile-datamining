@@ -6,6 +6,7 @@ import GuildRecordUtils from "../../../../utils/GuildRecordUtils.tsx";
 import ColorUtils from "../../../../utils/ColorUtils.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import GuildIconDefault from "../../../guild/native/GuildIcon.tsx";
+import useTypeConsolidationTextTransform from "../../../design/useTypeConsolidationTextTransform.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import AccessibilityStore from "../../../a11y/AccessibilityStore.tsx";
 
@@ -13,7 +14,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-fn(4574);
+fn(4605);
 let createStyles = {
   container: { alignSelf: "stretch", marginHorizontal: 16, marginBottom: 16 },
   borderColor: null,
@@ -40,25 +41,30 @@ const result = size.fileFinishedImporting(
 export default function GuildDiscoveryPreviewElement(guild) {
   guild = guild.guild;
   const tmp = closure_7();
-  let obj = initialize;
+  let obj = useTypeConsolidationTextTransform;
+  const typeConsolidationEyebrow = obj.useTypeConsolidationEyebrow("InAppReportsGuildDiscoveryPreview", "text-xs/bold");
+  let obj1 = initialize;
   const items = [AccessibilityStore];
-  const stateFromStores = obj.useStateFromStores(items, () => useReducedMotion.useReducedMotion);
+  const stateFromStores = obj1.useStateFromStores(items, () => useReducedMotion.useReducedMotion);
+  let obj2 = ColorUtils;
   obj = { style: tmp.container, children: null };
-  obj = { style: tmp.title, accessibilityRole: "header", variant: "text-xs/bold", children: null };
+  obj = { style: null, accessibilityRole: "header", variant: typeConsolidationEyebrow.variant, children: null };
+  const items1 = [tmp.title, typeConsolidationEyebrow.style];
+  obj.style = items1;
   const intl = util.intl;
   obj.children = intl.string(util.t.nTe4HC);
-  const items1 = [hasOwnProperty(Text_Text.Text, obj)];
-  const obj1 = { style: null, children: null };
-  const items2 = [tmp.itemContainer, { borderColor: obj1.hexWithOpacity(tmp.borderColor.color, 0.08) }];
-  obj1.style = items2;
-  const obj2 = { style: tmp.guildInfo, children: null };
+  const items2 = [hasOwnProperty(Text_Text.Text, obj)];
+  obj1 = { style: null, children: null };
+  const items3 = [tmp.itemContainer, { borderColor: obj2.hexWithOpacity(tmp.borderColor.color, 0.08) }];
+  obj1.style = items3;
+  obj2 = { style: tmp.guildInfo, children: null };
   const obj3 = { style: tmp.guildIcon, guild: null, animate: null };
-  const hexWithOpacityResult = obj1.hexWithOpacity(tmp.borderColor.color, 0.08);
-  const tmp4 = GuildIconDefault;
+  const hexWithOpacityResult = obj2.hexWithOpacity(tmp.borderColor.color, 0.08);
+  const tmp5 = GuildIconDefault;
   obj3.guild = GuildRecordUtils.fromClientDiscoverableGuild(guild);
   obj3.animate = !stateFromStores;
-  const items3 = [
-    hasOwnProperty(tmp4, obj3),
+  const items4 = [
+    hasOwnProperty(tmp5, obj3),
     hasOwnProperty(Text_Text.Text, {
       style: tmp.guildName,
       variant: "text-sm/medium",
@@ -66,9 +72,9 @@ export default function GuildDiscoveryPreviewElement(guild) {
       children: guild.name,
     }),
   ];
-  obj2.children = items3;
+  obj2.children = items4;
   obj1.children = timestampProducer(View, obj2);
-  items1[1] = hasOwnProperty(View, obj1);
-  obj.children = items1;
+  items2[1] = hasOwnProperty(View, obj1);
+  obj.children = items2;
   return timestampProducer(View, obj);
 }

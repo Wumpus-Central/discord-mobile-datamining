@@ -32,13 +32,13 @@ function QuestHomeHeaderRight(isVirtualCurrencyEnabled) {
   isVirtualCurrencyEnabled = isVirtualCurrencyEnabled.isVirtualCurrencyEnabled;
   const merged = Object.assign(isVirtualCurrencyEnabled, Object.assign({ isVirtualCurrencyEnabled: 0 }));
   let balance;
-  let obj = balance(8883);
+  let obj = balance(8920);
   balance = obj.useFetchVirtualCurrencyBalance().balance;
   [][0] = balance;
   obj = { style: closure_10().headerRightContainer, children: null };
   if (isVirtualCurrencyEnabled) {
     obj = { balance, onPress: tmp5 };
-    isVirtualCurrencyEnabled = closure_8(balance(11122).BalanceWidgetPillButton, obj);
+    isVirtualCurrencyEnabled = closure_8(balance(11162).BalanceWidgetPillButton, obj);
   }
   let items = [isVirtualCurrencyEnabled];
   const merged1 = Object.assign(merged);
@@ -75,7 +75,7 @@ function FiltersButton(setSelectedSortMethod) {
       initialSortMethod: selectedSortMethod,
       initialFilters: selectedFilters,
     };
-    obj.openLazy(asyncRequireImpl(15027, dependencyMap.paths), "QuestHomeSortingFilteringBottomSheet", obj);
+    obj.openLazy(asyncRequireImpl(15076, dependencyMap.paths), "QuestHomeSortingFilteringBottomSheet", obj);
   }, items);
   let obj = {
     icon: closure_8(setSelectedSortMethod(tmp3[21]).FiltersHorizontalIcon, {
@@ -93,12 +93,12 @@ function FiltersButton(setSelectedSortMethod) {
   return closure_8(setSelectedSortMethod(tmp3[20]).BaseIconButton, obj);
 }
 const View = fn(17).View;
-const QuestHomeSortMethods = fn(5458).QuestHomeSortMethods;
+const QuestHomeSortMethods = fn(5494).QuestHomeSortMethods;
 const AnalyticEvents = fn(1074).AnalyticEvents;
 let closure_7 = fn(1076).CollectiblesMobileShopScreen;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-fn(4574);
+fn(4605);
 let createStyles = { headerTitleContainer: null, headerTitle: null, headerRightContainer: null };
 createStyles = {
   width: "100%",

@@ -3,7 +3,7 @@ import PremiumBundledPlansUtils from "../PremiumBundledPlansUtils.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const useNativeCheckoutStore = fn(7438).useNativeCheckoutStore;
+const useNativeCheckoutStore = fn(7476).useNativeCheckoutStore;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/native/hooks/useCheckoutPlanPriceString.tsx");
 

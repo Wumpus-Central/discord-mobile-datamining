@@ -10,8 +10,8 @@ import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-let closure_6 = fn(8440).AGE_VERIFICATION_MODAL_KEY;
-const AgeVerificationIncodeWebViewConstants = fn(8442);
+let closure_6 = fn(8477).AGE_VERIFICATION_MODAL_KEY;
+const AgeVerificationIncodeWebViewConstants = fn(8479);
 ({
   AgeVerificationIncodeResultStatus: closure_7,
   buildIncodeFallbackSessionInjection: closure_8,
@@ -20,7 +20,7 @@ const AgeVerificationIncodeWebViewConstants = fn(8442);
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
 let closure_12 = new LoggerDefault("AgeVerificationWebViewScreen");
-fn(4574);
+fn(4605);
 let createStyles = { container: null, loadingOverlay: null, webView: null };
 createStyles = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST };
 createStyles.container = createStyles;

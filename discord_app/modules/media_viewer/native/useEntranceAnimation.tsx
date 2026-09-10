@@ -48,9 +48,9 @@ export const useEntranceAnimation = function useEntranceAnimation(entranceAnimat
       ReactBatchUpdates.batchUpdates(() => state.setState({ isComplete: false }));
       const obj3 = timing;
       const fn = function t() {
-        closure_0(4310).runOnJS(setUseEntranceAnimationState)({ isComplete: true });
-        obj = closure_0(4310);
-        closure_0(4310).runOnJS(incrementLoads)();
+        closure_0(4341).runOnJS(setUseEntranceAnimationState)({ isComplete: true });
+        obj = closure_0(4341);
+        closure_0(4341).runOnJS(incrementLoads)();
       };
       obj = { runOnJS: ReanimatedRexport.runOnJS, setUseEntranceAnimationState, incrementLoads };
       fn.__closure = obj;

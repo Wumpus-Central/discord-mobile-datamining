@@ -6,8 +6,8 @@ import BottomSheetTitleHeader from "../../../../design/components/Sheet/native/B
 import ActionSheet from "../../../../design/components/Sheet/native/ActionSheet.native.tsx";
 import Form from "../../../../design/void/Form/native/index.tsx";
 import ChannelActionSheetUtils from "../../../channel/native/ChannelActionSheetUtils.tsx";
-import _modDef12809 from "../../../../../_runtime/metro/12809__.js";
-import _modDef16132 from "../../../../../_runtime/metro/16132__.js";
+import _modDef12849 from "../../../../../_runtime/metro/12849__.js";
+import _modDef16181 from "../../../../../_runtime/metro/16181__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -15,7 +15,7 @@ const View = fn(17).View;
 const StaticChannelRoute = fn(1964).StaticChannelRoute;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-fn(4574);
+fn(4605);
 const createStyles = { headerIcon: null };
 let size = { marginRight: 16, tintColor: nativeDefault.colors.CHANNEL_ICON, width: 20, height: 20 };
 createStyles.headerIcon = size;
@@ -31,14 +31,14 @@ export default function GuildRoleSubscriptionsChannelLongPressActionSheet(arg0) 
   obj = { leading: null, title: null };
   obj = { style: closure_7().headerIcon, children: null };
   const tmp = closure_7();
-  obj.children = closure_5(native.Icon, { disableColor: true, source: _modDef12809 });
+  obj.children = closure_5(native.Icon, { disableColor: true, source: _modDef12849 });
   obj.leading = closure_5(View, obj);
   const intl = util.intl;
   obj.title = intl.string(util.t["KzCF/6"]);
   const items = [closure_5(BottomSheetTitleHeader.BottomSheetTitleHeader, obj)];
   const obj2 = { leading: null, label: null, onPress: null };
-  const obj1 = { disableColor: true, source: _modDef12809 };
-  obj2.leading = closure_5(native.Icon, { source: _modDef16132 });
+  const obj1 = { disableColor: true, source: _modDef12849 };
+  obj2.leading = closure_5(native.Icon, { source: _modDef16181 });
   const obj4 = { text: null };
   const intl2 = util.intl;
   obj4.text = intl2.string(util.t.WqhZss);

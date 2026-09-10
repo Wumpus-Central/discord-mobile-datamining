@@ -26,7 +26,7 @@ function SourceIcon(toastText) {
     children: null,
   };
   obj = { color: nativeDefault.colors.INTERACTIVE_ICON_DEFAULT, size: "md" };
-  obj.children = closure_5(toastText(8807).HeartIcon, obj);
+  obj.children = closure_5(toastText(8844).HeartIcon, obj);
   return closure_5(closure_3, obj);
 }
 get_ActivityIndicator = fn(17);
@@ -34,7 +34,7 @@ get_ActivityIndicator = fn(17);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, Fragment: metroRequire, jsxs: closure_7 } = jsxProd);
 const rect = { position: "absolute", top: nativeDefault.space.PX_8, right: nativeDefault.space.PX_8 };
-fn(4574);
+fn(4605);
 let obj = {
   card: null,
   overlayContainer: null,

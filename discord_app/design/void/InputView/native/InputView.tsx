@@ -41,7 +41,7 @@ get_ActivityIndicator = fn(17);
 const Fonts = fn(1074).Fonts;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-fn(4574);
+fn(4605);
 let createStyles = {
   disabled: { opacity: 0.5 },
   topContainer: { minHeight: 16, alignItems: "center", flexDirection: "row", marginBottom: 5, flexWrap: "wrap" },
@@ -68,7 +68,7 @@ createStyles.inputView = {
   paddingTop: 0,
   textAlignVertical: "top",
   flex: 1,
-  color: fn(5455).DARK_PRIMARY_100_LIGHT_PRIMARY_500,
+  color: fn(5491).DARK_PRIMARY_100_LIGHT_PRIMARY_500,
 };
 createStyles.inputViewBorder = { marginTop: 8, height: 2 };
 let obj2 = {
@@ -77,7 +77,7 @@ let obj2 = {
   paddingTop: 0,
   textAlignVertical: "top",
   flex: 1,
-  color: fn(5455).DARK_PRIMARY_100_LIGHT_PRIMARY_500,
+  color: fn(5491).DARK_PRIMARY_100_LIGHT_PRIMARY_500,
 };
 createStyles.inputViewBorderActive = { backgroundColor: nativeDefault.unsafe_rawColors.TRANSPARENT };
 createStyles.inputContainer = { flexDirection: "row", alignItems: "center", position: "relative" };
@@ -86,9 +86,9 @@ let obj3 = { backgroundColor: nativeDefault.unsafe_rawColors.TRANSPARENT };
 createStyles.charactersLength = {
   alignSelf: "flex-end",
   fontFamily: Fonts.CODE_BOLD,
-  color: fn(5455).DARK_PRIMARY_400_LIGHT_PRIMARY_300,
+  color: fn(5491).DARK_PRIMARY_400_LIGHT_PRIMARY_300,
 };
-let obj4 = { alignSelf: "flex-end", fontFamily: Fonts.CODE_BOLD, color: fn(5455).DARK_PRIMARY_400_LIGHT_PRIMARY_300 };
+let obj4 = { alignSelf: "flex-end", fontFamily: Fonts.CODE_BOLD, color: fn(5491).DARK_PRIMARY_400_LIGHT_PRIMARY_300 };
 createStyles.closeIcon = { tintColor: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT };
 createStyles.clearButton = { position: "absolute", right: 6 };
 let obj5 = { tintColor: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT };
@@ -489,7 +489,7 @@ prototype["render"] = function render() {
   obj.children = closure_1_10(hasOwnProperty, obj);
   return React7(React5, obj);
 };
-InputView.contextType = fn(4284).ThemeContext;
+InputView.contextType = fn(4315).ThemeContext;
 InputView.defaultProps = {
   showBorder: true,
   value: "",

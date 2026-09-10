@@ -8,7 +8,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const jsx = fn(21).jsx;
-fn(4574);
+fn(4605);
 let createStyles = {
   actionBarCTAContainer: { marginVertical: 4 },
   iconStyle: null,
@@ -42,7 +42,7 @@ export const ScheduleEventPrompt = function ScheduleEventPrompt(isLive) {
         const obj = { channel };
         const result = obj.openCreateOrEditGuildEventModal(closure_1_0, obj);
       },
-      iconSource: channel(9815),
+      iconSource: channel(9853),
       iconStyle: null,
       iconContainerStyle: null,
       completed: null,
@@ -61,7 +61,7 @@ export const ScheduleEventPrompt = function ScheduleEventPrompt(isLive) {
         const obj = { channel };
         const result = obj.openCreateOrEditGuildEventModal(closure_1_0, obj);
       },
-      iconSource: channel(9815),
+      iconSource: channel(9853),
       iconStyle: null,
       iconContainerStyle: null,
       completed: null,
@@ -77,7 +77,7 @@ export const StartEventPrompt = function StartEventPrompt(event) {
   ({ channel, isLive } = event);
   const tmp = closure_4();
   ({ name, scheduled_start_time } = event);
-  let obj = event(9703);
+  let obj = event(9741);
   let tmp4 = null;
   if (obj.useManageResourcePermissions(channel).canManageGuildEvent(event)) {
     obj = {
@@ -85,7 +85,7 @@ export const StartEventPrompt = function StartEventPrompt(event) {
       onPress() {
         const result = GuildScheduledEventModalActionCreators.openStartGuildEventModal(event, recurrenceId);
       },
-      iconSource: recurrenceId(9815),
+      iconSource: recurrenceId(9853),
       iconStyle: tmp.iconStyle,
       iconContainerStyle: null,
       completed: null,
@@ -100,10 +100,10 @@ export const StartEventPrompt = function StartEventPrompt(event) {
     obj = { eventName: name };
     obj.title = intl.formatToPlainString(tmp2(1114).t["1vGXqM"], obj);
     const intl2 = tmp2(1114).intl;
-    const obj1 = { startTime: tmp2(4255).calendarFormat(recurrenceId(4166)(scheduled_start_time)) };
+    const obj1 = { startTime: tmp2(4286).calendarFormat(recurrenceId(4196)(scheduled_start_time)) };
     obj.subtitle = intl2.formatToPlainString(tmp2(1114).t.PTebCR, obj1);
-    tmp4 = jsx(tmp2(8626).FormCTA, { eventName: name });
-    const tmp2Result = tmp2(4255);
+    tmp4 = jsx(tmp2(8663).FormCTA, { eventName: name });
+    const tmp2Result = tmp2(4286);
   }
   return tmp4;
 };

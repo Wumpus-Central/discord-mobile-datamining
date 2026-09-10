@@ -8,8 +8,8 @@ import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const DraftType = fn(4915).DraftType;
-const MessageSendLocation = fn(4567).MessageSendLocation;
+const DraftType = fn(4946).DraftType;
+const MessageSendLocation = fn(4598).MessageSendLocation;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/threads/native/useCreateThread.tsx");
 
@@ -24,7 +24,7 @@ export default function useCreateThread(arg0) {
     useDefaultThreadName,
   } = arg0);
   const analyticsLocations = useAnalyticsLocationsDefault().analyticsLocations;
-  analyticsLocations(9337);
+  analyticsLocations(9374);
   let obj = {
     parentChannel,
     parentMessageId,
@@ -57,7 +57,7 @@ export const useCreateForumPost = function useCreateForumPost(parentChannel) {
   const threadSettings = parentChannel.threadSettings;
   let analyticsLocations;
   ({ appliedTags, onThreadCreated } = parentChannel);
-  analyticsLocations = analyticsLocations(7176)().analyticsLocations;
+  analyticsLocations = analyticsLocations(7214)().analyticsLocations;
   _require = asyncGeneratorStep(async (arg0) => {
     const guildId = arg0;
     c2 = 0;
@@ -65,16 +65,16 @@ export const useCreateForumPost = function useCreateForumPost(parentChannel) {
     return (async (arg0) => {
       analyticsLocations = tmp4;
       closure_129_0 = guildId;
-      const obj7 = new analyticsLocations(7853)();
+      const obj7 = new analyticsLocations(7890)();
       closure_129_1 = obj7;
-      const kestrelConfig = guildId(5193).getKestrelConfig({ location: "native.useCreateForumPost" });
-      const maxFileSizeResult = guildId(5148).maxFileSize(guildId.getGuildId());
+      const kestrelConfig = guildId(5229).getKestrelConfig({ location: "native.useCreateForumPost" });
+      const maxFileSizeResult = guildId(5184).maxFileSize(guildId.getGuildId());
       closure_129_2 = maxFileSizeResult;
-      const effectiveKestrelLimit = guildId(5193).getEffectiveKestrelLimit(kestrelConfig, maxFileSizeResult);
+      const effectiveKestrelLimit = guildId(5229).getEffectiveKestrelLimit(kestrelConfig, maxFileSizeResult);
       obj7.on("progress", (currentSize) => {
         if (currentSize.currentSize > closure_1_3) {
           analyticsLocations.cancel();
-          analyticsLocations(9339);
+          analyticsLocations(9376);
           let obj = {
             channelId: uploads.id,
             uploads,
@@ -83,8 +83,8 @@ export const useCreateForumPost = function useCreateForumPost(parentChannel) {
           };
           obj.setUploads(obj);
           obj = { file: currentSize, maxSize: tmp, baseMaxSize, guildId: uploads.getGuildId(), analyticsLocations };
-          analyticsLocations(9342)(obj);
-          const tmp10 = analyticsLocations(9342);
+          analyticsLocations(9380)(obj);
+          const tmp10 = analyticsLocations(9380);
         }
       });
       await obj7.uploadFiles(guildId);

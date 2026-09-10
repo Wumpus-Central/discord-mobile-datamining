@@ -5,7 +5,7 @@ import noop from "../../../../_runtime/metro/00019__.js";
 import AdUserStore from "../native/AdUserStore.tsx";
 
 require = fn;
-const DEFAULT_TIMEOUT_MS = fn(7745).DEFAULT_TIMEOUT_MS;
+const DEFAULT_TIMEOUT_MS = fn(7782).DEFAULT_TIMEOUT_MS;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/ads/utils/AdDataUtils.android.tsx");
 

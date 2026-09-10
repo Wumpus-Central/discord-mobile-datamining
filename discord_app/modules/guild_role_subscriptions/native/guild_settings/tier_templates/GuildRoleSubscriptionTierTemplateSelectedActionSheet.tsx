@@ -8,7 +8,7 @@ const View = fn(17).View;
 const ContentDismissActionType = fn(1954).ContentDismissActionType;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-fn(4574);
+fn(4605);
 let createStyles = { container: null, button: null };
 createStyles = { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, padding: 24 };
 createStyles.container = createStyles;
@@ -35,7 +35,7 @@ export default function GuildRoleSubscriptionTierTemplateSelectedActionSheet(mar
   const intl = markAsDismissed(1114).intl;
   obj1.children = intl.string(markAsDismissed(1114).t.Y0PTc0);
   const items = [
-    closure_5(markAsDismissed(4570).Text, obj1),
+    closure_5(markAsDismissed(4601).Text, obj1),
     closure_5(markAsDismissed(1178).Spacer, { size: 12 }),
     ,
     ,
@@ -43,7 +43,7 @@ export default function GuildRoleSubscriptionTierTemplateSelectedActionSheet(mar
   const obj2 = { variant: "text-sm/normal", color: "text-default", children: null };
   const intl2 = markAsDismissed(1114).intl;
   obj2.children = intl2.string(markAsDismissed(1114).t["YSI/1/"]);
-  items[2] = closure_5(markAsDismissed(4570).Text, obj2);
+  items[2] = closure_5(markAsDismissed(4601).Text, obj2);
   items[3] = closure_5(markAsDismissed(1178).Spacer, { size: 48 });
   const obj3 = { text: null, pillStyle: null, onPress: null, grow: true };
   const intl3 = markAsDismissed(1114).intl;
@@ -52,9 +52,9 @@ export default function GuildRoleSubscriptionTierTemplateSelectedActionSheet(mar
   obj3.onPress = function onPress() {
     return markAsDismissed(ContentDismissActionType.UNKNOWN);
   };
-  items[4] = closure_5(markAsDismissed(4990).BaseTextButton, obj3);
+  items[4] = closure_5(markAsDismissed(5026).BaseTextButton, obj3);
   obj.children = items;
-  obj.children = closure_6(markAsDismissed(6641).BottomSheetScrollView, obj);
+  obj.children = closure_6(markAsDismissed(6677).BottomSheetScrollView, obj);
   obj.children = closure_5(View, obj);
-  return closure_5(markAsDismissed(7164).BottomSheet, obj);
+  return closure_5(markAsDismissed(7202).BottomSheet, obj);
 }

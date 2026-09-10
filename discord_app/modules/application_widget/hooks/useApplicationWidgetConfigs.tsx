@@ -5,7 +5,7 @@ import noop from "../../../../_runtime/metro/00019__.js";
 import ApplicationWidgetConfigStore from "../ApplicationWidgetConfigStore.tsx";
 
 require = fn;
-const FetchState = fn(9058).FetchState;
+const FetchState = fn(9095).FetchState;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/application_widget/hooks/useApplicationWidgetConfigs.tsx");
 

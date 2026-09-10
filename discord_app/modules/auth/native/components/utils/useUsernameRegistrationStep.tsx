@@ -8,8 +8,8 @@ import noop from "../../../../../../_runtime/metro/00019__.js";
 import UniqueUsernamesStore from "../../../../unique_usernames/UniqueUsernamesStore.tsx";
 
 require = fn;
-const useRegistrationUIStore = fn(15979).useRegistrationUIStore;
-const RegistrationConstants = fn(15980);
+const useRegistrationUIStore = fn(16028).useRegistrationUIStore;
+const RegistrationConstants = fn(16029);
 ({ authStateToRegisterTransitionStep: closure_7, RegistrationTransitionActionTypes: closure_8 } =
   RegistrationConstants);
 const size = fn(2);

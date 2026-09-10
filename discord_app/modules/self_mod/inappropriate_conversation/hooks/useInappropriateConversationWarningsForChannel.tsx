@@ -2,7 +2,7 @@
 import ChannelSafetyWarningsStore from "../../ChannelSafetyWarningsStore.tsx";
 
 const require = fn;
-const SafetyWarningTypes = fn(10947).SafetyWarningTypes;
+const SafetyWarningTypes = fn(10987).SafetyWarningTypes;
 const size = fn(2);
 const result = size.fileFinishedImporting(
   "modules/self_mod/inappropriate_conversation/hooks/useInappropriateConversationWarningsForChannel.tsx",

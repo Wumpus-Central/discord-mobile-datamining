@@ -11,7 +11,7 @@ let result = size.fileFinishedImporting("modules/user_profile/hooks/usePendingAv
 export default function usePendingAvatarSettings(isTryItOut) {
   isTryItOut = isTryItOut.isTryItOut;
   const guildId = isTryItOut.guildId;
-  const tmp2 = guildId(8189)(isTryItOut.analyticsLocations);
+  const tmp2 = guildId(8226)(isTryItOut.analyticsLocations);
   dependencyMap = tmp2;
   let obj = isTryItOut(563);
   const items = [UserProfileSettingsStore];
@@ -59,11 +59,11 @@ export default function usePendingAvatarSettings(isTryItOut) {
     setPendingAvatarDecoration: null,
   };
   if (isTryItOut) {
-    setTryItOutAvatar = tmp3(8193).setTryItOutAvatar;
+    setTryItOutAvatar = tmp3(8230).setTryItOutAvatar;
   }
   obj.setPendingAvatar = setTryItOutAvatar;
   if (isTryItOut) {
-    setTryItOutAvatarDecoration = tmp3(8193).setTryItOutAvatarDecoration;
+    setTryItOutAvatarDecoration = tmp3(8230).setTryItOutAvatarDecoration;
   }
   obj.setPendingAvatarDecoration = setTryItOutAvatarDecoration;
   return obj;

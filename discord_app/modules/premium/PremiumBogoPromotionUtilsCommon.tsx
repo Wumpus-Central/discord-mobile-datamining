@@ -1,7 +1,7 @@
 // discord_app/modules/premium/PremiumBogoPromotionUtilsCommon.tsx
 import useStateFromStores from "../../../discord_common/js/packages/flux/useStateFromStores.tsx";
 import PlatformUtils from "../../utils/PlatformUtils.tsx";
-import _modDef4166 from "../../../_runtime/metro/04166__.js";
+import _modDef4196 from "../../../_runtime/metro/04196__.js";
 import PremiumUtilsDefault from "../../utils/PremiumUtils.tsx";
 import shared_PlatformUtils from "../../../discord_common/js/shared/lib/PlatformUtils.tsx";
 import BlockedPaymentsCountryExperiment from "../billing/experiments/BlockedPaymentsCountryExperiment.tsx";
@@ -27,11 +27,11 @@ function isUserEligibleBasedOnCurrentOrPreviousSubs(experimentEnabled) {
         const endedAt = mostRecentSubscription.endedAt;
         if (null != endedAt) {
           if (mostRecentSubscription.hasPremiumAtLeast(closure_1_10.TIER_2)) {
-            const obj = _modDef4166();
+            const obj = _modDef4196();
             if (subtractResult.isBefore(endedAt)) {
               return false;
             }
-            subtractResult = _modDef4166().subtract(10, "days");
+            subtractResult = _modDef4196().subtract(10, "days");
           }
         }
       }
@@ -41,11 +41,11 @@ function isUserEligibleBasedOnCurrentOrPreviousSubs(experimentEnabled) {
         const endedAt2 = previousPremiumSubscription.endedAt;
         if (null != endedAt2) {
           if (previousPremiumSubscription.hasPremiumAtLeast(closure_1_10.TIER_2)) {
-            const obj3 = _modDef4166();
+            const obj3 = _modDef4196();
             if (subtractResult1.isBefore(endedAt2)) {
               return false;
             }
-            subtractResult1 = _modDef4166().subtract(10, "days");
+            subtractResult1 = _modDef4196().subtract(10, "days");
           }
         }
       }

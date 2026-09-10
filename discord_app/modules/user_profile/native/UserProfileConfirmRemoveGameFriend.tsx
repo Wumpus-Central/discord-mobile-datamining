@@ -32,12 +32,12 @@ export default function UserProfileConfirmRemoveGameFriend(gameName) {
   const intl3 = userId(1114).intl;
   obj.text = intl3.string(userId(1114).t.RLcE6x);
   obj.onPress = callback;
-  const items1 = [closure_4(userId(4924).AlertActionButton, obj, "confirm-remove")];
+  const items1 = [closure_4(userId(4955).AlertActionButton, obj, "confirm-remove")];
   const obj1 = { variant: "secondary", text: null };
   const intl4 = userId(1114).intl;
   obj1.text = intl4.string(userId(1114).t["eN6+rI"]);
-  items1[1] = closure_4(userId(4924).AlertActionButton, obj1, "nevermind");
+  items1[1] = closure_4(userId(4955).AlertActionButton, obj1, "nevermind");
   obj.children = items1;
-  obj.actions = closure_5(userId(4924).AlertActions, obj);
-  return closure_4(userId(4924).AlertModal, obj);
+  obj.actions = closure_5(userId(4955).AlertActions, obj);
+  return closure_4(userId(4955).AlertModal, obj);
 }

@@ -5,7 +5,7 @@ import noop from "../../../../_runtime/metro/00019__.js";
 import subscribeToKeyboardUIStore from "../../keyboard/native/subscribeToKeyboardUIStore.tsx";
 
 require = fn;
-const VoiceMessagesUIStore = fn(11990);
+const VoiceMessagesUIStore = fn(12030);
 ({
   hideVoiceMessagesTooltip: closure_4,
   showVoiceMessagesTooltip: hasOwnProperty,

@@ -7,7 +7,7 @@ import _objectWithoutProperties from "../../../../_runtime/metro/00109__objectWi
 require = fn;
 let closure_3 = ["_state", "_version"];
 const Store = fn(506).Store;
-let closure_6 = { _state: "Array", _version: "PX_16" };
+let closure_6 = { _state: "call", _version: "accessibilityLabel" };
 let c7 = null;
 let PersistedStore;
 class PersistedStore extends r10016 {

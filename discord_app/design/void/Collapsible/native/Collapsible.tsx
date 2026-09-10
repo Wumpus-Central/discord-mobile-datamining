@@ -9,7 +9,7 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
 const EXPAND_SPRING = { stiffness: 150, overshootClamping: true };
-fn(4574);
+fn(4605);
 let createStyles = { collapsible: { position: "relative", overflow: "hidden" }, collapsibleContent: null };
 createStyles = { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH };
 createStyles.collapsibleContent = createStyles;

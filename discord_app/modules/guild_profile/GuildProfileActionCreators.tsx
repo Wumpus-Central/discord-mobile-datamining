@@ -18,7 +18,7 @@ let closure_10 = async function _fetchGuildTopGames() {
   { url: React7.GUILD_TOP_GAMES(closure_0), rejectWithError: require("HTTPUtils").rejectWithMigratedError() };
   return closure_130_0(closure_130_2[7]).buildTopGamesFromServer(closure_129_0.body.top_games);
 };
-const GuildProfileFetchStatus = fn(9097).GuildProfileFetchStatus;
+const GuildProfileFetchStatus = fn(9134).GuildProfileFetchStatus;
 const Constants = fn(1074);
 ({ AnalyticEvents: closure_8, Endpoints: closure_9 } = Constants);
 const size = fn(2);

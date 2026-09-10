@@ -22,24 +22,24 @@ const result = size.fileFinishedImporting("modules/stage_channels/StageChannelAc
 
 export const openStageChannelSettings = function openStageChannelSettings(channel) {
   const obj = { channel };
-  obj.openLazy(asyncRequireImpl(8425, dependencyMap.paths), hasOwnProperty, obj);
+  obj.openLazy(asyncRequireImpl(8462, dependencyMap.paths), hasOwnProperty, obj);
 };
 export function openEndGuildEventConfirmationModal() {}
 export const openStageChannelAudienceNoticeModal = function openStageChannelAudienceNoticeModal(channelId) {
   const obj = { channelId };
-  obj.openLazy(asyncRequireImpl(8623, dependencyMap.paths), React4, obj);
+  obj.openLazy(asyncRequireImpl(8660, dependencyMap.paths), React4, obj);
 };
 export const openStageBlockedUsersSheet = function openStageBlockedUsersSheet(channel, onAccept) {
   const obj = { channel, onAccept };
-  obj.openLazy(asyncRequireImpl(8651, dependencyMap.paths), timestampProducer, obj);
+  obj.openLazy(asyncRequireImpl(8688, dependencyMap.paths), timestampProducer, obj);
 };
 export const openStageSettingsSheet = function openStageSettingsSheet(channelId, onOpenRTCDebugOverlay) {
   const obj = { channelId, onOpenRTCDebugOverlay };
-  obj.openLazy(asyncRequireImpl(8654, dependencyMap.paths), React5, obj);
+  obj.openLazy(asyncRequireImpl(8691, dependencyMap.paths), React5, obj);
 };
 export const openEndStageModal = function openEndStageModal(channel) {
   const obj = { channel };
-  obj.openLazy(asyncRequireImpl(9113, dependencyMap.paths), React6, obj);
+  obj.openLazy(asyncRequireImpl(9150, dependencyMap.paths), React6, obj);
 };
 export const openStageChannel = function openStageChannel(isGuildStageVoice) {
   if (isGuildStageVoice.isGuildStageVoice()) {
@@ -52,11 +52,11 @@ export const openStageChannel = function openStageChannel(isGuildStageVoice) {
       const obj2 = ModalActionCreatorsDefault;
       tmpResult = PrivateChannelCallUtils;
       obj2.pushLazy(
-        asyncRequireImpl(9498, dependencyMap.paths),
+        asyncRequireImpl(9536, dependencyMap.paths),
         obj,
         tmpResult.getVoiceChannelKey(isGuildStageVoice.id),
       );
-      const tmp4 = asyncRequireImpl(9498, dependencyMap.paths);
+      const tmp4 = asyncRequireImpl(9536, dependencyMap.paths);
     }
   }
 };
@@ -83,8 +83,8 @@ export const navigateToStage = function navigateToStage(id, arg1) {
       obj = { channel: id };
       const obj2 = ModalActionCreatorsDefault;
       tmp3Result = PrivateChannelCallUtils;
-      obj2.pushLazy(asyncRequireImpl(9498, dependencyMap.paths), obj, tmp3Result.getVoiceChannelKey(id.id));
-      const tmp6 = asyncRequireImpl(9498, dependencyMap.paths);
+      obj2.pushLazy(asyncRequireImpl(9536, dependencyMap.paths), obj, tmp3Result.getVoiceChannelKey(id.id));
+      const tmp6 = asyncRequireImpl(9536, dependencyMap.paths);
     }
   }
 };

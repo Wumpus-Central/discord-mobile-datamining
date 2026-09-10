@@ -4,7 +4,7 @@ import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 const require = fn;
-let closure_5 = fn(5599).ExpressionSourceGuildRecord;
+let closure_5 = fn(5635).ExpressionSourceGuildRecord;
 const GuildRecord = fn(1975);
 ({ getGuildIconSource: metroRequire, getGuildAcronym: closure_7 } = GuildRecord);
 const Fonts = fn(1074).Fonts;
@@ -51,7 +51,7 @@ obj = {
   [obj.XLARGE]: 64,
   [obj.XXLARGE]: 80,
 };
-fn(4574);
+fn(4605);
 let obj1 = { guildIcon: { justifyContent: "center", alignItems: "center", overflow: "hidden" } };
 obj1[obj.XXXSMALL] = { width: 10, height: 10, borderRadius: 3.3333333333333335 };
 obj1[obj.XXSMALL_12] = { width: 12, height: 12, borderRadius: 4 };

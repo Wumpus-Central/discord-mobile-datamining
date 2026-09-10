@@ -8,7 +8,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-fn(4574);
+fn(4605);
 let createStyles = { wrapper: null, buttonWrapper: null, spacer: null, iconColor: null };
 createStyles = {
   display: "flex",

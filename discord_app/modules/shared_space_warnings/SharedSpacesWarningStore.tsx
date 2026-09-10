@@ -1,12 +1,12 @@
 // discord_app/modules/shared_space_warnings/SharedSpacesWarningStore.tsx
 import 00560__ from "../../../_runtime/metro/00560__.js";
-import "module_4444";
-import 04444__ from "../../../_runtime/metro/04444__.js";
+import "module_4475";
+import 04475__ from "../../../_runtime/metro/04475__.js";
 import size from "../../../_runtime/metro/00002__.js";
 
 let useSharedSpacesWarningStore = { name: "shared-spaces-warning-storage", storage: null };
-useSharedSpacesWarningStore.storage = module_4444.createJSONStorage(() => require("LocalStorageWrapper"));
-useSharedSpacesWarningStore = module_560.create(module_4444.persist(() => ({ channelDismissTimestamps: {}, userDismissTimestamps: {}, globalDismissTimestamp: null, queuedWarning: false }), useSharedSpacesWarningStore));
+useSharedSpacesWarningStore.storage = module_4475.createJSONStorage(() => require("LocalStorageWrapper"));
+useSharedSpacesWarningStore = module_560.create(module_4475.persist(() => ({ channelDismissTimestamps: {}, userDismissTimestamps: {}, globalDismissTimestamp: null, queuedWarning: false }), useSharedSpacesWarningStore));
 const result = size.fileFinishedImporting("modules/shared_space_warnings/SharedSpacesWarningStore.tsx");
 
 export { useSharedSpacesWarningStore };

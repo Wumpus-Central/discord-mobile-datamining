@@ -203,7 +203,7 @@ let StaticGuildEventIndexes = {
     return "" + channel_id + "-" + obj.EVENT_UPCOMING;
   },
 };
-const secondaryIndexMap = new fn(4208).SecondaryIndexMap(function scheduledEventIndex(status) {
+const secondaryIndexMap = new fn(4239).SecondaryIndexMap(function scheduledEventIndex(status) {
   ({ guild_id, entity_id, channel_id } = status);
   const items = [guild_id];
   if (null != entity_id) {

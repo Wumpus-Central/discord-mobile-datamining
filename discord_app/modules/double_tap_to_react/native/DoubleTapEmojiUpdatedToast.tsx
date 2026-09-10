@@ -63,7 +63,7 @@ function ToastText(emoji) {
 }
 const EMOJI_URL_BASE_SIZE = fn(1374).EMOJI_URL_BASE_SIZE;
 const jsx = fn(21).jsx;
-fn(4574);
+fn(4605);
 let createStyles = { toastEmoji: null, toastEmojiCustom: null, toastEmojiText: null, toastText: null };
 createStyles = { marginLeft: nativeDefault.space.PX_8, marginVertical: nativeDefault.space.PX_8 };
 createStyles.toastEmoji = createStyles;
@@ -90,9 +90,9 @@ const result = size.fileFinishedImporting("modules/double_tap_to_react/native/Do
 export { ToastEmoji };
 export const showDoubleTapEmojiUpdatedToast = function showDoubleTapEmojiUpdatedToast(emoji) {
   emoji = emoji.emoji;
-  let obj = emoji(4976);
+  let obj = emoji(5012);
   if (obj.getIsScreenReaderEnabled()) {
-    const AccessibilityAnnouncer = tmp(4285).AccessibilityAnnouncer;
+    const AccessibilityAnnouncer = tmp(4316).AccessibilityAnnouncer;
     const intl = tmp(1114).intl;
     obj = { emojiName: emoji.name };
     AccessibilityAnnouncer.announce(intl.formatToPlainString(tmp(1114).t.nKY0Fl, obj));

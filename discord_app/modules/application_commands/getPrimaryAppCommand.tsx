@@ -101,7 +101,7 @@ function queryForPrimaryAppCommand(withAffinitySuggestions, id) {
   };
   return ApplicationCommandIndexStore.query(withAffinitySuggestions, obj, obj).commands[0];
 }
-let ApplicationCommandIndexStore = fn(9322);
+let ApplicationCommandIndexStore = fn(9359);
 ({ getOrFetchApplicationCommandIndexForTarget: hasOwnProperty, useQueryState: metroRequire } =
   ApplicationCommandIndexStore);
 let c8 = "no primary app command for application";

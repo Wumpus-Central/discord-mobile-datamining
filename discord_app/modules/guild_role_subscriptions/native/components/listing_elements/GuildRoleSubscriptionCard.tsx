@@ -1,6 +1,7 @@
 // discord_app/modules/guild_role_subscriptions/native/components/listing_elements/GuildRoleSubscriptionCard.tsx
 import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
 import Text_Text from "../../../../../design/components/Text/native/Text.tsx";
+import useTypeConsolidationTextTransform from "../../../../design/useTypeConsolidationTextTransform.tsx";
 import GuildRoleSubscriptionListingEditStateUtilsAll from "../../../edit_state/GuildRoleSubscriptionListingEditStateUtils.tsx";
 import GuildRoleSubscriptionEmojiGalleryDefault from "GuildRoleSubscriptionEmojiGallery.tsx";
 import GuildRoleSubscriptionBenefitRow from "GuildRoleSubscriptionBenefitRow.tsx";
@@ -11,8 +12,14 @@ require = fn;
 class SectionTitle {
   constructor(arg0) {
     tmp = closure_9();
-    obj = { variant: "text-xs/bold", color: "text-default", style: tmp.sectionTitle, children: global.children };
-    return jsx(closure_0(closure_3[6]).Text, obj);
+    obj = closure_0(closure_3[6]);
+    typeConsolidationEyebrow = obj.useTypeConsolidationEyebrow("GuildRoleSubscriptionCard", "text-xs/bold");
+    obj = { variant: typeConsolidationEyebrow.variant, color: "text-default", style: null, children: global.children };
+    items = [,];
+    items[0] = tmp.sectionTitle;
+    items[1] = typeConsolidationEyebrow.style;
+    obj.style = items;
+    return jsx(closure_0(closure_3[7]).Text, obj);
   }
 }
 class Separator {
@@ -24,7 +31,7 @@ class Separator {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, Fragment: closure_7, jsxs: closure_8 } = jsxProd);
-fn(4574);
+fn(4605);
 const createStyles = { sectionTitle: { textTransform: "uppercase" }, separator: null };
 let size = { width: "100%", height: 1, backgroundColor: nativeDefault.colors.BORDER_SUBTLE, marginVertical: 24 };
 createStyles.separator = size;
@@ -59,7 +66,7 @@ export const Content = function Content(arg0) {
   const items = [
     closure_6(SectionTitle, obj1),
     closure_6(guildId(1178).Spacer, { size: 8 }),
-    closure_6(guildId(15270).GuildRoleSubscriptionMemberPreview, { guildId, role }),
+    closure_6(guildId(15319).GuildRoleSubscriptionMemberPreview, { guildId, role }),
   ];
   obj.children = items;
   const items1 = [closure_8(closure_7, obj), , ,];
@@ -95,7 +102,7 @@ export const Content = function Content(arg0) {
         timestampProducer(GuildRoleSubscriptionBenefitRow.ChannelBenefitRow, { benefit, guildId }, benefit.ref_id),
       ),
     };
-    items4[2] = closure_6(guildId(10378).GappedList, obj9);
+    items4[2] = closure_6(guildId(10416).GappedList, obj9);
     obj6.children = items4;
     tmp4Result = closure_8(closure_7, obj6);
   }
@@ -114,11 +121,11 @@ export const Content = function Content(arg0) {
         timestampProducer(GuildRoleSubscriptionBenefitRow.IntangibleBenefitRow, { benefit, guildId }, index),
       ),
     };
-    items5[2] = closure_6(guildId(10378).GappedList, obj13);
+    items5[2] = closure_6(guildId(10416).GappedList, obj13);
     obj10.children = items5;
     tmp4Result1 = closure_8(closure_7, obj10);
   }
   items1[3] = tmp4Result1;
   obj.children = items1;
-  return closure_8(guildId(10378).GappedList, obj);
+  return closure_8(guildId(10416).GappedList, obj);
 };

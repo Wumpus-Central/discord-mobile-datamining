@@ -835,9 +835,9 @@ export default function transformStats(mediaEngineConnectionId, str, id, arg3) {
           decryptMissingKeyCount: null,
           decryptInvalidNonceCount: null,
         };
-        let obj2 = id(4692);
+        let obj2 = id(4723);
         codec.sinkWant = obj2.formatSinkWantStat(id, audio.ssrc, false);
-        codec.sinkWantAsInt = id(4692).formatSinkWantAsInt(id, audio.ssrc);
+        codec.sinkWantAsInt = id(4723).formatSinkWantAsInt(id, audio.ssrc);
         codec = { id: null, name: null };
         ({ codecPayloadType: obj4.id, codecName: obj4.name } = audio);
         codec.codec = codec;
@@ -923,7 +923,7 @@ export default function transformStats(mediaEngineConnectionId, str, id, arg3) {
         }
         const merged = Object.assign(obj2);
         codec = arr.push(codec);
-        const obj3 = id(4692);
+        const obj3 = id(4723);
       }
     });
   }

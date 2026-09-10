@@ -1,7 +1,7 @@
 // discord_app/design/components/Icon/native/redesign/generated/ObjectIcon.tsx
 import nativeDefault from "../../../../../../../discord_common/js/packages/tokens/native.tsx";
 import BaseIconImage from "../../BaseIconImage.tsx";
-import _mod10389 from "../../../../../../../_runtime/metro/10389__.js";
+import _mod10427 from "../../../../../../../_runtime/metro/10427__.js";
 import noop from "../../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -16,5 +16,5 @@ export const ObjectIcon = function ObjectIcon(color) {
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod10389, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod10427, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 };

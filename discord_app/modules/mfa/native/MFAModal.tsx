@@ -124,7 +124,7 @@ class MFAModal {
       obj.headerRight = headerRight;
       obj.render = function render(arg0) {
         const merged = Object.assign(arg0);
-        return closure_1_6(closure_1_1(15701), {});
+        return closure_1_6(closure_1_1(15750), {});
       };
       obj[MfaStepsTypes.MfaScreens.SELECT] = obj;
       const obj1 = {};
@@ -154,7 +154,7 @@ class MFAModal {
       obj1.headerRight = tmp12;
       obj1.render = function render(arg0) {
         const merged = Object.assign(arg0);
-        return closure_1_6(closure_1_1(15702), {});
+        return closure_1_6(closure_1_1(15751), {});
       };
       obj[MfaStepsTypes.MfaScreens.WEBAUTHN] = obj1;
       const obj2 = {};
@@ -184,7 +184,7 @@ class MFAModal {
       obj2.headerRight = tmp20;
       obj2.render = function render(arg0) {
         const merged = Object.assign(arg0);
-        return closure_1_6(closure_1_1(15707), {});
+        return closure_1_6(closure_1_1(15756), {});
       };
       obj[MfaStepsTypes.MfaScreens.TOTP] = obj2;
       obj3 = {};
@@ -214,7 +214,7 @@ class MFAModal {
       obj3.headerRight = tmp28;
       obj3.render = function render(arg0) {
         const merged = Object.assign(arg0);
-        return closure_1_6(closure_1_1(15710), {});
+        return closure_1_6(closure_1_1(15759), {});
       };
       obj[MfaStepsTypes.MfaScreens.BACKUP] = obj3;
       const obj4 = {};
@@ -244,7 +244,7 @@ class MFAModal {
       obj4.headerRight = tmp36;
       obj4.render = function render(arg0) {
         const merged = Object.assign(arg0);
-        return closure_1_6(closure_1_1(15711), {});
+        return closure_1_6(closure_1_1(15760), {});
       };
       obj[MfaStepsTypes.MfaScreens.SMS] = obj4;
       const obj5 = {};
@@ -274,7 +274,7 @@ class MFAModal {
       obj5.headerRight = tmp44;
       obj5.render = function render(arg0) {
         const merged = Object.assign(arg0);
-        return closure_1_6(closure_1_1(15712), {});
+        return closure_1_6(closure_1_1(15761), {});
       };
       obj[MfaStepsTypes.MfaScreens.PASSWORD] = obj5;
       return obj;

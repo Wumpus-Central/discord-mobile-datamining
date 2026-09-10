@@ -2,7 +2,7 @@
 import getFrontierTuningConfigIfEligibleDefault from "getFrontierTuningConfigIfEligible.tsx";
 import UserStore from "../../../stores/UserStore.tsx";
 
-const StreamSettingsConstants = fn(4621);
+const StreamSettingsConstants = fn(4652);
 ({ ApplicationStreamFPS: c3, ApplicationStreamResolutions: closure_4 } = StreamSettingsConstants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/go_live/utils/getReportedPresetResolution.tsx");

@@ -14,7 +14,7 @@ export default function useResettingValue(arg0, arg1) {
   const tmp = _slicedToArray(closure_4(arg0), 2);
   dependencyMap = tmp[1];
   const tmp2 = useInitialValueDefault(() => {
-    const timeout = new closure_0(4461).Timeout();
+    const timeout = new closure_0(4492).Timeout();
     return timeout;
   });
   _slicedToArray = tmp2;

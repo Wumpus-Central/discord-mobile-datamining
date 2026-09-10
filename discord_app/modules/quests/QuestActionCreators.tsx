@@ -332,8 +332,8 @@ let closure_18 = async function _fetchCurrentQuests() {
         } else if (arg0 !== 2) {
           closure_129_1 = value;
           quests2 = closure_129_1.body.quests;
-          const found = quests2.filter((item) => closure_1_0(7724).isQuestWithKnownConfigVersion(item));
-          closure_129_3 = found.map((item) => closure_1_0(7724).questWithUserStatusFromServer(item));
+          const found = quests2.filter((item) => closure_1_0(7761).isQuestWithKnownConfigVersion(item));
+          closure_129_3 = found.map((item) => closure_1_0(7761).questWithUserStatusFromServer(item));
           closure_129_4 = closure_129_1.body.quest_enrollment_blocked_until;
           closure_129_5 = closure_129_1.body.quest_access_suspended_until;
           closure_129_6 = closure_129_3.filter((userStatus) => {
@@ -359,7 +359,7 @@ let closure_18 = async function _fetchCurrentQuests() {
           obj4.data = obj5;
           closure_130_1(closure_130_2[16]).addBreadcrumb(obj4);
           const excluded_quests = closure_129_1.body.excluded_quests;
-          closure_129_13 = excluded_quests.map((item) => closure_1_0(7724).excludedQuestFromServer(item));
+          closure_129_13 = excluded_quests.map((item) => closure_1_0(7761).excludedQuestFromServer(item));
           const obj9 = closure_130_1(closure_130_2[16]);
           const obj6 = { type: "QUESTS_FETCH_CURRENT_QUESTS_SUCCESS", quests: closure_129_6, excludedQuests: closure_129_13, questEnrollmentBlockedUntil: closure_129_4, questAccessSuspendedUntil: closure_129_5 };
           closure_130_1(closure_130_2[11]).dispatch(obj6);
@@ -1578,7 +1578,7 @@ let closure_30 = async function _fetchEarnedQuestToDeliver(arg0) {
                 if (content != null) {
                   value = content.get(item);
                 }
-                return !closure_0(7713).earnedDecisionIsValid(value);
+                return !closure_0(7750).earnedDecisionIsValid(value);
               });
               closure_132_2 = found;
               if (0 !== found.length) {
@@ -1651,7 +1651,7 @@ let closure_30 = async function _fetchEarnedQuestToDeliver(arg0) {
                 if (obj.isQuestWithKnownConfigVersion(tmp)) {
                   tmp2 = tmp;
                 }
-                obj = closure_0(7724);
+                obj = closure_0(7761);
               }
               items[1] = tmp2;
               return items;
@@ -2397,9 +2397,9 @@ let closure_37 = async function _fetchQuestHomeHeroPreview(arg0) {
     }
   }
 };
-const getVisibleGuildIdsMethod = fn(11227).getVisibleGuildIdsMethod;
-const FetchStatus = fn(7719).FetchStatus;
-const ORBS_INTRO_QUEST_ID = fn(5458).ORBS_INTRO_QUEST_ID;
+const getVisibleGuildIdsMethod = fn(11267).getVisibleGuildIdsMethod;
+const FetchStatus = fn(7756).FetchStatus;
+const ORBS_INTRO_QUEST_ID = fn(5494).ORBS_INTRO_QUEST_ID;
 const Constants = fn(1074);
 ({ AnalyticEvents: map1, Endpoints: closure_14 } = Constants);
 const QuestEnrollmentResultType = { SUCCESS: "success", CAPTCHA_FAILED: "captcha_failed", UNKNOWN_ERROR: "unknown_error", PREVIOUS_IN_FLIGHT_REQUEST: "previous_in_flight_request" };

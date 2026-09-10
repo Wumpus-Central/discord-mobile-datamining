@@ -48,8 +48,8 @@ let AnalyticsUtils = {
   getLaunchSignature() {
     return AnalyticsUtils2.launchSignature;
   },
-  scheduleWhenIdle: fn(7486).requestSafeIdleCallback,
-  sendUnloadRequest: fn(7487).sendUnloadRequest,
+  scheduleWhenIdle: fn(7524).requestSafeIdleCallback,
+  sendUnloadRequest: fn(7525).sendUnloadRequest,
 };
 const items = [AuthenticationStore];
 AnalyticsUtils.waitFor = items;

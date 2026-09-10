@@ -32,7 +32,7 @@ function AdTopicRow(adTopic) {
     const items = [...set];
     AdTopicOptOuts2.updateSetting(items);
   };
-  return closure_5(adTopic(7214).TableSwitchRow, obj);
+  return closure_5(adTopic(7252).TableSwitchRow, obj);
 }
 const View = fn(17).View;
 const HelpdeskArticles = fn(1074).HelpdeskArticles;
@@ -42,7 +42,7 @@ let content = {};
 content[fn(1187).AdTopic.REAL_MONEY_GAMING] = _modDef2070.pmIitA;
 const keys = Object.keys(content);
 let closure_8 = keys.map(Number);
-const createStyles = fn(4574);
+const createStyles = fn(4605);
 content = { content: null };
 content = {
   paddingHorizontal: nativeDefault.space.PX_16,
@@ -60,7 +60,7 @@ export default function ManageSponsoredContentScreen() {
   let obj = { style: closure_10().content, children: null };
   obj = { hasIcons: false, description: null };
   const intl = util.intl;
-  obj = { helpdeskArticle: HelpdeskUtilsDefault.getArticleURL(HelpdeskArticles.QUESTS_PRIVACY_CONTROLS) };
+  obj = { helpdeskArticle: HelpdeskUtilsDefault.getArticleURL(HelpdeskArticles.MANAGE_SPONSORED_CONTENT) };
   obj.description = intl.format(_modDef2070["z/MfaY"], obj);
   const items = [hasOwnProperty(TableRowGroup.TableRowGroup, obj)];
   const obj1 = { hasIcons: false, title: null, children: null };

@@ -9,7 +9,7 @@ get_ActivityIndicator = fn(17);
 ({ StyleSheet, View: c3 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-fn(4574);
+fn(4605);
 let obj = { wrapper: null, border: null };
 obj = {};
 const merged = Object.assign(StyleSheet.absoluteFillObject);

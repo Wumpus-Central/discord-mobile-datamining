@@ -6,10 +6,10 @@ import noop from "../../../../_runtime/metro/00019__.js";
 
 const require = fn;
 const View = fn(17).View;
-const useScreenRecordingStore = fn(15965).useScreenRecordingStore;
+const useScreenRecordingStore = fn(16014).useScreenRecordingStore;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-fn(4574);
+fn(4605);
 let createStyles = { container: null, closeButton: null, buttonContainer: null };
 createStyles = {
   justifyContent: "center",
@@ -134,5 +134,5 @@ export default function ScreenRecordingActionSheet() {
   if (tmp3) {
     children = tmp11;
   }
-  return closure_5(tmp9(7211).ActionSheet, { children });
+  return closure_5(tmp9(7249).ActionSheet, { children });
 }

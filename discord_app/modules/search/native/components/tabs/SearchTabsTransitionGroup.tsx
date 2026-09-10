@@ -3,7 +3,7 @@ import native from "../../../../../../discord_common/js/packages/design/native.t
 import ReanimatedRexport from "../../../../reanimated/ReanimatedRexport.tsx";
 import spring from "../../../../../design/animation/reanimated/spring/spring.tsx";
 import springPresets from "../../../../../design/animation/reanimated/spring/springPresets.tsx";
-import Tabs from "../../../../../design/components/Tabs/native/Tabs.native.tsx";
+import Tabs_Tabs from "../../../../../design/components/Tabs/native/Tabs.native.tsx";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -78,11 +78,11 @@ function AnimatedTabs(state) {
     if (!state) {
       if (toLocaleString > 1000) {
         const _HermesInternal = HermesInternal;
-        let combined = "(" + Tabs.defaultCountFormatter(1000) + "+)";
+        let combined = "(" + Tabs_Tabs.defaultCountFormatter(1000) + "+)";
       }
       return combined;
     }
-    combined = "(" + Tabs.defaultCountFormatter(toLocaleString) + ")";
+    combined = "(" + Tabs_Tabs.defaultCountFormatter(toLocaleString) + ")";
   }, items1);
   context = sharedValue.useContext(tmp(tmp2[8]).SwipeForMemberListContext);
   const fn2 = function h() {

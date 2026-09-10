@@ -8,12 +8,12 @@ import noop from "../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-let EmojiCategoryTypes = fn(5477).EmojiCategoryTypes;
+let EmojiCategoryTypes = fn(5513).EmojiCategoryTypes;
 const Constants = fn(1074);
 ({ CATEGORY_ICON_RIPPLE_CONFIG: closure_7, CATEGORY_ICON_SIZE, NODE_SIZE } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-fn(4574);
+fn(4605);
 let obj = { itemInner: null, fadedItem: null, activeItem: null, guildItem: null, lockContainer: null, lock: null };
 let size = {
   justifyContent: "center",

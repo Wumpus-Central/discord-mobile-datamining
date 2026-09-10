@@ -10,7 +10,7 @@ const View = fn(17).View;
 const PremiumTypes = fn(1373).PremiumTypes;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7, Fragment: closure_8 } = jsxProd);
-fn(4574);
+fn(4605);
 let createStyles = {
   container: null,
   list: null,
@@ -55,7 +55,7 @@ export default function BuyNitroMarketing(onPaymentDismiss) {
   let obj3 = applicationId(onPaymentDismiss[9]);
   let tmp7;
   if (null != initialTier) {
-    obj = { tier: initialTier, productId: "a" };
+    obj = { tier: initialTier, productId: "Array" };
     tmp7 = obj;
   }
   buyNitroPlanSelection = obj3.useBuyNitroPlanSelection(tmp7);

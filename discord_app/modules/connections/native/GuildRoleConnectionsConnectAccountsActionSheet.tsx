@@ -24,9 +24,9 @@ import getConnectionsRolesDefault from "../../channel/getConnectionsRoles.tsx";
 import GuildActionCreatorsDefault from "../../../actions/GuildActionCreators.tsx";
 import openUserSettings from "../../user_settings/core/native/openUserSettings.tsx";
 import BotTagDefault from "../../applications/native/BotTag.tsx";
-import _modDef11285 from "../../../../_runtime/metro/11285__.js";
-import _modDef11595 from "../../../../_runtime/metro/11595__.js";
-import _modDef11596 from "../../../../_runtime/metro/11596__.js";
+import _modDef11325 from "../../../../_runtime/metro/11325__.js";
+import _modDef11635 from "../../../../_runtime/metro/11635__.js";
+import _modDef11636 from "../../../../_runtime/metro/11636__.js";
 import OfficialConnectionIconDefault from "OfficialConnectionIcon.tsx";
 import ConnectionsRoleActionCreators from "../ConnectionsRoleActionCreators.tsx";
 import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
@@ -406,7 +406,7 @@ function ConnectionsChecks(eligibilityStatesGroups) {
     }
   }, items3);
   let tmp3 = _slicedToArray(noop.useState(0), 2);
-  roleColor = eligibilityStatesGroups(4275).useToken(nativeDefault.unsafe_rawColors.GREEN_330);
+  roleColor = eligibilityStatesGroups(4306).useToken(nativeDefault.unsafe_rawColors.GREEN_330);
   obj = { children: null };
   const keys = Object.keys(memo1);
   const sorted = keys.sort((arg0, arg1) => {
@@ -462,7 +462,7 @@ function ConnectionsChecks(eligibilityStatesGroups) {
     if (null != bot) {
       tmp11 = new closure_11(application.bot);
     }
-    const officialApplicationIds = eligibilityStatesGroups(5421).officialApplicationIds;
+    const officialApplicationIds = eligibilityStatesGroups(5457).officialApplicationIds;
     let str;
     if (application != null) {
       str = application.id;
@@ -486,24 +486,24 @@ function ConnectionsChecks(eligibilityStatesGroups) {
       tmp20 = tmp19 <= c8;
     }
     if (tmp3) {
-      obj = { source: _modDef11595, style: closure_5.connectionsChecksGroupCheckmark };
+      obj = { source: _modDef11635, style: closure_5.connectionsChecksGroupCheckmark };
       let tmp22Result = closure_1_29(tmp15(1178).Icon, obj);
       let tmp24 = closure_1_29;
     } else if (tmp20) {
       const obj1 = { variant: "text-sm/semibold", color: "text-brand", children: null };
       const intl2 = tmp15(1114).intl;
       obj1.children = intl2.string(tmp15(1114).t["5911Lb"]);
-      tmp22Result = closure_1_29(tmp15(4570).Text, obj1);
+      tmp22Result = closure_1_29(tmp15(4601).Text, obj1);
       tmp24 = closure_1_29;
     } else if (tmp8) {
-      const obj2 = { source: _modDef11596, style: closure_5.connectionsChecksGroupCaret };
+      const obj2 = { source: _modDef11636, style: closure_5.connectionsChecksGroupCaret };
       tmp22Result = closure_1_29(tmp15(1178).Icon, obj2);
       tmp24 = closure_1_29;
     } else {
       const obj3 = { variant: "text-md/medium", color: "text-muted", children: null };
       const intl = tmp15(1114).intl;
       obj3.children = intl.string(tmp15(1114).t.cEts68);
-      tmp22Result = closure_1_29(tmp15(4570).Text, obj3);
+      tmp22Result = closure_1_29(tmp15(4601).Text, obj3);
       tmp24 = closure_1_29;
     }
     let type1;
@@ -578,7 +578,7 @@ function ConnectionsChecks(eligibilityStatesGroups) {
         const obj8 = { variant: "text-xs/normal", color: "text-overlay-light", children: null };
         const intl4 = tmp15(1114).intl;
         obj8.children = intl4.string(tmp15(1114).t.UB3hKo);
-        obj7.children = tmp24(tmp15(4570).Text, obj8);
+        obj7.children = tmp24(tmp15(4601).Text, obj8);
         tmp24Result = tmp24(c8, obj7);
       }
     }
@@ -609,7 +609,7 @@ function ConnectionsChecks(eligibilityStatesGroups) {
       name = name1;
     }
     const items2 = [
-      tmp24(eligibilityStatesGroups(4570).Text, {
+      tmp24(eligibilityStatesGroups(4601).Text, {
         variant: "text-md/medium",
         color: "mobile-text-heading-primary",
         children: name,
@@ -621,13 +621,13 @@ function ConnectionsChecks(eligibilityStatesGroups) {
       const obj13 = {
         onPress() {
           _modDef38(null != stringResult, "tooltip is null");
-          const obj = { key: "CONNECTIONS_STEAM_TOOLTIP", icon: _modDef11285, content: stringResult };
+          const obj = { key: "CONNECTIONS_STEAM_TOOLTIP", icon: _modDef11325, content: stringResult };
           obj.open(obj);
         },
         children: null,
       };
       const obj14 = {
-        source: _modDef11285,
+        source: _modDef11325,
         size: tmp15(1178).Icon.Sizes.SMALL_20,
         style: closure_5.connectionsChecksGroupTextNameInfoIcon,
       };
@@ -691,7 +691,7 @@ function ConnectedUserAccountOptions(account) {
       _undefined(enabled);
       ConnectedAccountsActionCreatorsDefault.setFriendSync(account.type, account.id, enabled);
     };
-    tmp12 = closure_29(account(8626).FormSwitchRow, obj);
+    tmp12 = closure_29(account(8663).FormSwitchRow, obj);
   }
   let tmp15;
   if (set2.has(account.type)) {
@@ -704,7 +704,7 @@ function ConnectedUserAccountOptions(account) {
       closure_4(show_activity);
       ConnectedAccountsActionCreatorsDefault.setShowActivity(account.type, account.id, show_activity);
     };
-    tmp15 = closure_29(account(8626).FormSwitchRow, obj);
+    tmp15 = closure_29(account(8663).FormSwitchRow, obj);
   }
   let tmp18;
   if (true === value.hasMetadata) {
@@ -723,7 +723,7 @@ function ConnectedUserAccountOptions(account) {
       }
       const result = ConnectedAccountsActionCreatorsDefault.setMetadataVisibility(type, id, num);
     };
-    tmp18 = closure_29(account(8626).FormSwitchRow, obj2);
+    tmp18 = closure_29(account(8663).FormSwitchRow, obj2);
   }
   const obj3 = { style: tmp.accountConnectedPrivacyOptionsContainer, children: null };
   const obj4 = { label: null, value: null, onValueChange: null };
@@ -740,13 +740,13 @@ function ConnectedUserAccountOptions(account) {
     }
     ConnectedAccountsActionCreatorsDefault.setVisibility(type, id, num);
   };
-  const items = [closure_29(account(8626).FormSwitchRow, obj4), tmp18, tmp15, tmp12];
+  const items = [closure_29(account(8663).FormSwitchRow, obj4), tmp18, tmp15, tmp12];
   obj3.children = items;
   return closure_30(closure_8, obj3);
 }
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: metroRequire, Pressable: closure_7, View: closure_8 } = get_ActivityIndicator);
-let Constants = fn(5422);
+let Constants = fn(5458);
 ({
   MetadataFields: closure_17,
   OperatorTypes: closure_18,
@@ -766,7 +766,7 @@ Constants = fn(1074);
 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_29, jsxs: closure_30, Fragment: items } = jsxProd);
-fn(4574);
+fn(4605);
 let createStyles = {
   container: { padding: 12 },
   connectionsChecksGroups: { marginTop: 16, flexDirection: "column" },
@@ -1262,7 +1262,7 @@ class GuildRoleConnectionsConnectAccountsActionSheet {
                 if (closure_1 != null) {
                   prop = closure_1.role_connections_verification_url;
                 }
-                closure_1(4541);
+                closure_1(4572);
                 let obj = { default: closure_1_40 };
                 const resolved = Promise.resolve(obj);
                 obj = {
@@ -1275,7 +1275,7 @@ class GuildRoleConnectionsConnectAccountsActionSheet {
                 };
                 let tmp7 = null;
                 const guildRoleConnectionsConnectAccountsActionSheetKey = platformType(
-                  11600,
+                  11640,
                 ).makeGuildRoleConnectionsConnectAccountsActionSheetKey(role.id);
                 if (null != platformType) {
                   tmp7 = id;
@@ -1284,7 +1284,7 @@ class GuildRoleConnectionsConnectAccountsActionSheet {
                 obj.overrideUrl = { overrideUrl: prop }.overrideUrl;
                 obj.onCloseModal = onCloseModal;
                 obj.openLazy(resolved, guildRoleConnectionsConnectAccountsActionSheetKey, obj);
-                const obj3 = platformType(11600);
+                const obj3 = platformType(11640);
               },
               overrideUrl: null,
             };

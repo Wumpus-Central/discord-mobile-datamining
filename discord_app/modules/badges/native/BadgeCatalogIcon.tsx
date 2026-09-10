@@ -64,8 +64,8 @@ export default function BadgeCatalogIcon(style) {
     if (url === complex_icon_animated_url) {
       let xml = tmp4.xml;
     } else {
-      xml = complex_icon_animated_url(11223).getCachedSvgXml(complex_icon_animated_url);
-      const obj6 = complex_icon_animated_url(11223);
+      xml = complex_icon_animated_url(11263).getCachedSvgXml(complex_icon_animated_url);
+      const obj6 = complex_icon_animated_url(11263);
     }
     obj = { style: items1, "aria-hidden": true, children: null };
     let tmp15Result = null;
@@ -73,7 +73,7 @@ export default function BadgeCatalogIcon(style) {
       size = { xml, width: null, height: null };
       size.width = size;
       size.height = size;
-      tmp15Result = jsx(complex_icon_animated_url(8484).SvgXml, { xml, width: null, height: null });
+      tmp15Result = jsx(complex_icon_animated_url(8521).SvgXml, { xml, width: null, height: null });
     }
     obj.children = tmp15Result;
     return (
@@ -93,7 +93,7 @@ export default function BadgeCatalogIcon(style) {
       const size1 = { width: size, height: size };
       obj2.style = size1;
       obj2.onError = tmp7;
-      obj.children = jsx(isMatch(5601), { source: null, style: null, onError: null });
+      obj.children = jsx(isMatch(5637), { source: null, style: null, onError: null });
     }
     return <View {...obj} />;
   }

@@ -22,7 +22,7 @@ function MessageContent(arg0) {
   c3 = undefined;
   c4 = undefined;
   let roleStyle;
-  let obj = message(7325);
+  let obj = message(7363);
   items = [message.author.id];
   const subscribeGuildMembers = obj.useSubscribeGuildMembers({ [thread.guild_id]: items }, "ThreadBrowserRowSubtext");
   let obj1 = message(504);
@@ -41,9 +41,9 @@ function MessageContent(arg0) {
   ({ nick: c2, colorString: c3, colorStrings: c4 } = useMessageAuthorDefault(message));
   let tmp4 = useMessageAuthorDefault(message);
   const extractTimestampResult = SnowflakeUtilsDefault.extractTimestamp(message.id);
-  const timestampString = message(7795).getTimestampString(extractTimestampResult);
-  const obj5 = message(7795);
-  const timestampAccessibilityLabel = message(7795).getTimestampAccessibilityLabel(extractTimestampResult);
+  const timestampString = message(7832).getTimestampString(extractTimestampResult);
+  const obj5 = message(7832);
+  const timestampAccessibilityLabel = message(7832).getTimestampAccessibilityLabel(extractTimestampResult);
   roleStyle = useHasEnhancedRoleColorsDefault(thread.guild_id, stateFromStores.id);
   obj = {
     user: stateFromStores,
@@ -91,7 +91,7 @@ function MessageContent(arg0) {
     },
   };
   obj.children = intl.format(message(1114).t.M79KAH, obj1);
-  obj.children = closure_9(message(4570).Text, obj);
+  obj.children = closure_9(message(4601).Text, obj);
   return closure_9(SubstringRow, obj);
 }
 function SubstringRow(arg0) {
@@ -178,7 +178,7 @@ const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10, Fragment: closure_11 } = jsxProd);
 let items = [,];
 ({ CHANNEL_NAME_CHANGE: arr[0], THREAD_STARTER_MESSAGE: arr[1] } = fn(1074).MessageTypes);
-const createStyles = fn(4574);
+const createStyles = fn(4605);
 let obj = {
   row: { flexDirection: "row" },
   subtextContent: { lineHeight: 18, flexShrink: 1 },
@@ -306,7 +306,7 @@ export const ThreadSubtext = function ThreadSubtext(thread) {
   items = [ThreadMessageStore];
   const items1 = [id];
   const stateFromStores = obj.useStateFromStores(items, () => ThreadMessageStore.getMostRecentMessage(id), items1);
-  const lastMessageTimestamp = id(7795).useLastMessageTimestamp(thread);
+  const lastMessageTimestamp = id(7832).useLastMessageTimestamp(thread);
   if (null != stateFromStores) {
     if (!items.includes(stateFromStores.type)) {
       if (!thread.isArchivedThread()) {
@@ -315,9 +315,9 @@ export const ThreadSubtext = function ThreadSubtext(thread) {
       }
     }
   }
-  let tmpResult = tmp(7795);
+  let tmpResult = tmp(7832);
   const timestampString = tmpResult.getTimestampString(lastMessageTimestamp);
-  tmpResult = tmp(7795);
+  tmpResult = tmp(7832);
   obj = {
     thread,
     timestamp: timestampString,

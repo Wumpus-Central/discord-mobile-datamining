@@ -51,12 +51,12 @@ function VariantOverflowOption(isSelected) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-let createStyles = fn(4574);
+let createStyles = fn(4605);
 let obj = { variantsContainer: null };
 obj = { display: "flex", flexDirection: "row", alignItems: "center", paddingStart: nativeDefault.space.PX_4 };
 obj.variantsContainer = obj;
 let closure_6 = createStyles.createStyles(obj);
-createStyles = fn(4574);
+createStyles = fn(4605);
 let closure_7 = createStyles.createStyles((arg0) => {
   let obj = { variantOption: null, variantOptionInner: null, variantOverflowInner: null };
   const size = {
@@ -96,7 +96,7 @@ const result = size.fileFinishedImporting("modules/collectibles/native/Collectib
 export default noop.memo(function CardProductVariants(product) {
   product = product.product;
   let defaultVariantIndex;
-  let obj = defaultVariantIndex(8798);
+  let obj = defaultVariantIndex(8835);
   defaultVariantIndex = obj.useDefaultVariantIndex(product);
   const tmp = closure_6();
   if (obj2.getIsVariantProduct(product)) {
@@ -132,5 +132,5 @@ export default noop.memo(function CardProductVariants(product) {
   } else {
     return null;
   }
-  obj2 = defaultVariantIndex(7567);
+  obj2 = defaultVariantIndex(7605);
 });

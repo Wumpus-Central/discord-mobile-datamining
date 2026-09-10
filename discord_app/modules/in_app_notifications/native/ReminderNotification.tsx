@@ -39,7 +39,7 @@ function NotificationBody(channel) {
   let obj1 = channel(504);
   const items1 = [ChannelStore];
   const stateFromStores1 = obj1.useStateFromStores(items1, () => ChannelStore.getChannel(channel.parent_id));
-  let obj2 = channel(10126);
+  let obj2 = channel(10164);
   const hasPreviewableMedia = obj2.useHasPreviewableMedia(message);
   const tmp6 = channel.type === channel(1094).ChannelTypes.DM;
   let num = 1;
@@ -47,7 +47,7 @@ function NotificationBody(channel) {
     num = closure_8;
   }
   let tmp10 = null;
-  const messagePreviewTextVariant = channel(10126).getMessagePreviewTextVariant();
+  const messagePreviewTextVariant = channel(10164).getMessagePreviewTextVariant();
   if (!tmp6) {
     obj = { channel, parentChannel: stateFromStores1, guild: stateFromStores, author: null };
     tmp10 = closure_10(MessageNotificationHeaderDefault, obj);
@@ -59,12 +59,12 @@ function NotificationBody(channel) {
         channel,
         message,
         color: "text-default",
-        layout: tmp(7893).ChannelListLayoutTypes.COZY,
+        layout: tmp(7931).ChannelListLayoutTypes.COZY,
         variant: messagePreviewTextVariant,
         muted: false,
         lineClamp: num,
       };
-      let tmp14 = closure_10(tmp(10141).ChannelRowPreview, obj);
+      let tmp14 = closure_10(tmp(10179).ChannelRowPreview, obj);
     }
     obj1 = { children: null };
     items2[1] = tmp14;
@@ -73,10 +73,10 @@ function NotificationBody(channel) {
   }
   obj2 = { message, lineClamp: num, showMessageAuthor: true, maxHeight };
   tmp14 = closure_10(MessagePreviewTextDefault, obj2);
-  const tmpResult = channel(10126);
+  const tmpResult = channel(10164);
 }
 const View = fn(17).View;
-const InAppNotificationConstants = fn(10127);
+const InAppNotificationConstants = fn(10165);
 ({
   IN_APP_NOTIFICATION_MAX_HEIGHT: closure_7,
   NOTIFICATION_PREVIEW_LINE_CLAMP: closure_8,
@@ -85,7 +85,7 @@ const InAppNotificationConstants = fn(10127);
 const AnalyticEvents = fn(1074).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11, Fragment: closure_12 } = jsxProd);
-const createStyles = fn(4574);
+const createStyles = fn(4605);
 let cutout = {
   cutoutIconContainer: { position: "absolute", right: 0, bottom: 0 },
   avatarContainer: { position: "relative" },
@@ -137,5 +137,5 @@ export default noop.memo(function ReminderNotification(notification) {
     rightAccessory: closure_10(closure_16, { message }),
     children: closure_10(NotificationBody, { channel, message }),
   };
-  return closure_10(notification(10202).NotificationPressable, obj);
+  return closure_10(notification(10240).NotificationPressable, obj);
 });

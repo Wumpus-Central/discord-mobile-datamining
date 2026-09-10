@@ -1,5 +1,5 @@
 // discord_app/design/components/Sheet/native/useBottomSheetKeyboardHandling.tsx
-import BottomSheetModal from "../../../../../_runtime/06641_BottomSheetModal.js";
+import BottomSheetModal from "../../../../../_runtime/06677_BottomSheetModal.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;

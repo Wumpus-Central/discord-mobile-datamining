@@ -150,8 +150,8 @@ function renderUnreadIndicator(arg0, sharedId, transitionState, cleanUp) {
     arg0,
   );
 }
-const IOS_POINTER_STYLE = fn(4998).IOS_POINTER_STYLE;
-const GuildsBarConstants = fn(16318);
+const IOS_POINTER_STYLE = fn(5034).IOS_POINTER_STYLE;
+const GuildsBarConstants = fn(16364);
 ({
   GUILD_ITEM_HIT_SLOP: hasOwnProperty,
   GUILD_ITEM_INSET_LEFT: metroRequire,
@@ -161,7 +161,7 @@ const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 let closure_10 = { mass: 0.8, damping: 100, stiffness: 150 };
 const BAR_SPRING_PHYSICS = { mass: 0.25, damping: 100, stiffness: 200 };
-let createStyles = fn(4574);
+let createStyles = fn(4605);
 let closure_12 = createStyles.createStyles(() => {
   let num = arg0;
   if (arg0 === undefined) {
@@ -197,7 +197,7 @@ let closure_12 = createStyles.createStyles(() => {
   obj.expandedChildrenWrapper = rect;
   return obj;
 });
-createStyles = fn(4574);
+createStyles = fn(4605);
 let closure_13 = createStyles.createStyles((arg0, arg1, width, height) => {
   const obj = { pressableWrapper: null, itemShape: null, itemShapeSelected: null };
   const size = {
@@ -400,7 +400,7 @@ export default function GuildsBarAnimatedItemWrapper(id) {
         let AccessibilityAnnouncer = require;
         const intl = util.intl;
         const t = util.t;
-        AccessibilityAnnouncer = AccessibilityAnnouncer(4285).AccessibilityAnnouncer;
+        AccessibilityAnnouncer = AccessibilityAnnouncer(4316).AccessibilityAnnouncer;
         AccessibilityAnnouncer.announce(intl.string(expanded ? t.CUnsOR : t.jsudFd));
         ref.current = expanded;
         const stringResult = intl.string(expanded ? t.CUnsOR : t.jsudFd);

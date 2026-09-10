@@ -20,7 +20,7 @@ const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, Fragment: metroRequire, jsxs: closure_7 } = jsxProd);
 const start = { x: 0, y: 0 };
 const end = { x: 1, y: 0 };
-fn(4574);
+fn(4605);
 let createStyles = { fullGradientContainer: null, fullGradient: null, fullGradientContent: null };
 createStyles = {
   borderRadius: nativeDefault.radii.round,
@@ -70,7 +70,7 @@ export const QuestOrbMultiplierPerkPill = function QuestOrbMultiplierPerkPill(qu
   const token3 = obj7.useToken(orbMultiplierEligibility(576).colors.BACKGROUND_BRAND);
   const questOrbRewardMultiplier = hooks_QuestHooks.useQuestOrbRewardMultiplier(questId.questId);
   const result = QuestOrbMultiplierUtils.shouldReceiveQuestOrbMultiplier(orbMultiplierEligibility);
-  const tmp13 = orbMultiplierEligibility === QuestOrbMultiplierUtils.QuestOrbMultiplierEligibilityType.CREPE;
+  const tmp13 = orbMultiplierEligibility === QuestOrbMultiplierUtils.QuestOrbMultiplierEligibilityType.XBOX_GAME_PASS;
   closure_6 = tmp13;
   const items1 = [tmp13, token2, token3, isThemeDarkResult];
   if (null == questOrbRewardMultiplier) {
@@ -117,7 +117,7 @@ export const QuestOrbMultiplierPerkPill = function QuestOrbMultiplierPerkPill(qu
     obj4.style = items3;
     if (!tmp13) {
       obj6 = { style: tmp.fullGradient, colors: items, start, end };
-      tmp21Result = tmp21(orbMultiplierEligibility(5001), obj6);
+      tmp21Result = tmp21(orbMultiplierEligibility(5037), obj6);
     }
     const items4 = [tmp21Result];
     obj7 = { style: tmp.fullGradientContent, children: closure_7(closure_6, obj1) };

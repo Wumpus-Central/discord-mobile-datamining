@@ -14,8 +14,8 @@ function openGuildEventDetails(arg0) {
     const tmp2Result = ScheduleUtils;
   }
   obj.recurrenceId = recurrenceId;
-  obj.openLazy(asyncRequireImpl(9822, dependencyMap.paths), closure_5, obj, "stack");
-  const tmp3 = asyncRequireImpl(9822, dependencyMap.paths);
+  obj.openLazy(asyncRequireImpl(9860, dependencyMap.paths), closure_5, obj, "stack");
+  const tmp3 = asyncRequireImpl(9860, dependencyMap.paths);
 }
 let closure_7 = async function _transitionToEventDetailsFromInvite(arg0) {
   if (c5 === 2) {
@@ -76,7 +76,7 @@ let closure_7 = async function _transitionToEventDetailsFromInvite(arg0) {
   }
 };
 let closure_4 = fn(1963).EXPLICIT_END_EVENT_SHEET_KEY;
-let closure_5 = fn(9731).GUILD_EVENT_INFO_ACTION_SHEET_KEY;
+let closure_5 = fn(9769).GUILD_EVENT_INFO_ACTION_SHEET_KEY;
 const size = fn(2);
 const result = size.fileFinishedImporting(
   "modules/guild_scheduled_events/GuildScheduledEventModalActionCreators.native.tsx",
@@ -95,5 +95,5 @@ export const transitionToEventDetailsFromInvite = function transitionToEventDeta
 };
 export const openEndEventModal = function openEndEventModal(channel) {
   const obj = { channel };
-  obj.openLazy(asyncRequireImpl(9837, dependencyMap.paths), closure_4, obj);
+  obj.openLazy(asyncRequireImpl(9875, dependencyMap.paths), closure_4, obj);
 };

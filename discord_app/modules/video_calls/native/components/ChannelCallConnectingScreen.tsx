@@ -4,14 +4,14 @@ import MetaQuestUtils from "../../../device/MetaQuestUtils.android.tsx";
 import useThemeDefault from "../../../../hooks/useTheme.tsx";
 import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import SelectedChannelActionCreatorsDefault from "../../../../actions/SelectedChannelActionCreators.tsx";
-import BottomSheetModal from "../../../../../_runtime/06641_BottomSheetModal.js";
+import BottomSheetModal from "../../../../../_runtime/06677_BottomSheetModal.js";
 import Sheet_BottomSheet from "../../../../design/components/Sheet/native/BottomSheet.native.tsx";
 import AudioActionCreatorsDefault from "../../../../actions/AudioActionCreators.tsx";
 import beginConsoleTransfer from "../../../game_console/native/beginConsoleTransfer.tsx";
 import instant_invite_InstantInviteUtils from "../../../instant_invite/native/InstantInviteUtils.tsx";
 import UserSettingsVoiceDefault from "../../../user_settings/voice/native/UserSettingsVoice.tsx";
 import VoiceChatHeaderIconDefault from "../../../voice_chat/native/components/VoiceChatHeaderIcon.tsx";
-import _modDef10033 from "../../../../../_runtime/metro/10033__.js";
+import _modDef10071 from "../../../../../_runtime/metro/10071__.js";
 import ChannelCallMicButton from "ChannelCallMicButton.tsx";
 import coercePlatformTypeToConsoleType from "../../../game_console/coercePlatformTypeToConsoleType.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
@@ -138,12 +138,12 @@ function JoinVoiceButton(channel) {
   return closure_12(channel(stateFromStores1[33]).LabeledActionButton, obj);
 }
 const View = fn(17).View;
-const resetFocus = fn(9499).resetFocus;
+const resetFocus = fn(9537).resetFocus;
 const InstantInviteSources = fn(1074).InstantInviteSources;
 const Permissions = fn(1085).Permissions;
 const jsxProd = fn(21);
 ({ jsx: closure_12, Fragment: map1, jsxs: closure_14 } = jsxProd);
-fn(4574);
+fn(4605);
 let createStyles = { spacer: { width: 8 }, actionBarContainer: null };
 createStyles = {
   paddingHorizontal: 12,
@@ -151,7 +151,7 @@ createStyles = {
   justifyContent: "center",
   alignItems: "flex-start",
   flexDirection: "row",
-  height: fn(9528).CALL_ACTION_BAR_HEIGHT,
+  height: fn(9566).CALL_ACTION_BAR_HEIGHT,
 };
 createStyles.actionBarContainer = createStyles;
 let closure_15 = createStyles.createStyles(createStyles);
@@ -165,7 +165,7 @@ export const showVoiceSettingsActionSheet = function showVoiceSettingsActionShee
 export const ChannelCallConnectingHeader = function ChannelCallConnectingHeader(channel) {
   channel = channel.channel;
   const tmp = closure_15();
-  let obj = channel(9969);
+  let obj = channel(10007);
   const isVoiceChannelLocked = obj.useIsVoiceChannelLocked(channel);
   let fn = null;
   if (PermissionStore.can(Permissions.CREATE_INSTANT_INVITE, channel)) {
@@ -180,7 +180,7 @@ export const ChannelCallConnectingHeader = function ChannelCallConnectingHeader(
   const items = [closure_12(View, { style: { width: 4 } }), , ,];
   let tmp9Result = null;
   if (null != fn) {
-    obj = { source: _modDef10033, onPress: fn, accessibilityLabel: null };
+    obj = { source: _modDef10071, onPress: fn, accessibilityLabel: null };
     const intl = tmp5(1114).intl;
     obj = { channelName: tmp4 };
     obj.accessibilityLabel = intl.formatToPlainString(tmp5(1114).t["dHHb/2"], obj);

@@ -13,6 +13,7 @@ import GuildRoleUtils from "../utils/GuildRoleUtils.tsx";
 import useCommunicationDisabledNoticeStore from "../modules/guild_communication_disabled/useCommunicationDisabledNoticeStore.tsx";
 import GuildMemberConstants from "../modules/guild_member/GuildMemberConstants.tsx";
 import CommunicationDisabledUtils from "../modules/guild_communication_disabled/CommunicationDisabledUtils.tsx";
+import GuildLeaderboardTypes from "../modules/guild_space/gaming_leaderboard/GuildLeaderboardTypes.tsx";
 import embeddedActivityLocationUtils from "../modules/activities/utils/embeddedActivityLocationUtils.tsx";
 import ImpersonateStore from "../modules/impersonate/ImpersonateStore.tsx";
 import AuthenticationStore from "AuthenticationStore.tsx";
@@ -90,9 +91,9 @@ function computeDerivedMemberState(unsafeMutableRoles, roles) {
       colorString: null,
       colorStrings: null,
       colorRoleId: "call",
-      hoistRoleId: "memo",
-      iconRoleId: "fileFinishedImporting",
-      highestRoleId: "accessible",
+      hoistRoleId: "header",
+      iconRoleId: "rejectWithError",
+      highestRoleId: "Array",
     };
   } else {
     const iter = roles[Symbol.iterator]();
@@ -211,6 +212,7 @@ function createMember(guildRoles) {
     flags,
     collectibles,
     displayNameStyles,
+    gamingLeaderboardData,
   } = guildRoles);
   const tmp3 = computeDerivedMemberState(guildRoles.guildRoles, roles);
   obj = {
@@ -235,6 +237,7 @@ function createMember(guildRoles) {
     flags,
     collectibles,
     displayNameStyles,
+    gamingLeaderboardData,
   };
   let keys = dependencyMap;
   let num = obj.flags;
@@ -333,37 +336,39 @@ function handleGuildMemberUpdate(arg0) {
         flags: null,
         collectibles: null,
         displayNameStyles: null,
+        gamingLeaderboardData: null,
       };
       let prop;
-      if (tmp13[user.id] != null) {
-        prop = tmp35.fullProfileLoadedTimestamp;
+      if (tmp14[user.id] != null) {
+        prop = tmp36.fullProfileLoadedTimestamp;
       }
       obj.fullProfileLoadedTimestamp = prop;
       obj.flags = tmp10;
       obj.collectibles = tmp11;
       obj.displayNameStyles = tmp12;
-      tmp13[user.id] = createMember(obj);
-      if (null != tmp13[user.id].communicationDisabledUntil) {
-        let tmp32Result = CommunicationDisabledUtils;
-        if (tmp32Result.isMemberCommunicationDisabled(tmp15)) {
+      obj.gamingLeaderboardData = tmp13;
+      tmp14[user.id] = createMember(obj);
+      if (null != tmp14[user.id].communicationDisabledUntil) {
+        let tmp33Result = CommunicationDisabledUtils;
+        if (tmp33Result.isMemberCommunicationDisabled(tmp16)) {
           const items = [];
           items[constants.GUILD] = guildId;
-          items[constants.USER] = tmp15.userId;
+          items[constants.USER] = tmp16.userId;
           const joined = items.join("-");
-          let result = dependencyMap3[joined] !== tmp15.communicationDisabledUntil;
+          let result = dependencyMap3[joined] !== tmp16.communicationDisabledUntil;
           if (result) {
-            tmp32Result = CommunicationDisabledUtils;
-            result = tmp32Result.isMemberCommunicationDisabled(tmp15);
+            tmp33Result = CommunicationDisabledUtils;
+            result = tmp33Result.isMemberCommunicationDisabled(tmp16);
           }
           if (result) {
-            dependencyMap3[joined] = tmp15.communicationDisabledUntil;
+            dependencyMap3[joined] = tmp16.communicationDisabledUntil;
             const sum = sum1 + 1;
             sum1 = sum;
             closure_19[joined] = sum;
           }
         }
       }
-      removeCommunicationDisabled(guildId, tmp13[user.id].userId);
+      removeCommunicationDisabled(guildId, tmp14[user.id].userId);
     }
   }
 }
@@ -397,6 +402,7 @@ function batchUpdateGuildMembers(guildId, members) {
           unusualDMActivityUntil: null,
           collectibles: null,
           displayNameStyles: null,
+          gamingLeaderboardData: null,
         };
         ({
           roles: obj.roles,
@@ -424,9 +430,12 @@ function batchUpdateGuildMembers(guildId, members) {
         obj.collectibles = tmp5Result.parseServerUserCollectibles(user.collectibles);
         tmp5Result = DisplayNameStylesUtils;
         obj.displayNameStyles = tmp5Result.parseServerDisplayNameStyles(user.display_name_styles);
+        obj.gamingLeaderboardData = GuildLeaderboardTypes.parseServerMemberGamingLeaderboardData(
+          user.member_gaming_leaderboard_data,
+        );
         dependencyMap[user.user.id] = createMember(obj);
         if (null != dependencyMap[user.user.id].communicationDisabledUntil) {
-          if (tmp5Result1.isMemberCommunicationDisabled(tmp9)) {
+          if (tmp5Result2.isMemberCommunicationDisabled(tmp9)) {
             const items = [];
             items[constants.GUILD] = guildId;
             items[constants.USER] = tmp9.userId;
@@ -434,7 +443,7 @@ function batchUpdateGuildMembers(guildId, members) {
             let result = closure_15[joined] !== tmp9.communicationDisabledUntil;
             if (result) {
               result = CommunicationDisabledUtils.isMemberCommunicationDisabled(tmp9);
-              const tmp5Result2 = CommunicationDisabledUtils;
+              const tmp5Result3 = CommunicationDisabledUtils;
             }
             if (result) {
               closure_15[joined] = tmp9.communicationDisabledUntil;
@@ -443,9 +452,10 @@ function batchUpdateGuildMembers(guildId, members) {
               closure_19[joined] = sum;
             }
           }
-          tmp5Result1 = CommunicationDisabledUtils;
+          tmp5Result2 = CommunicationDisabledUtils;
         }
         removeCommunicationDisabled(guildId, dependencyMap[user.user.id].userId);
+        const tmp5Result1 = GuildLeaderboardTypes;
       });
       closure_18 = closure_18 + 1;
       flag = true;
@@ -490,6 +500,7 @@ function buildMembers(guild) {
         unusualDMActivityUntil: null,
         collectibles: null,
         displayNameStyles: null,
+        gamingLeaderboardData: null,
       };
       let tmp7 = id2;
       obj.avatarDecoration = getAvatarDecorationFromServerMember(nextResult);
@@ -519,6 +530,8 @@ function buildMembers(guild) {
       obj.collectibles = obj2.parseServerUserCollectibles(tmp6.collectibles);
       let obj3 = DisplayNameStylesUtils;
       obj.displayNameStyles = obj3.parseServerDisplayNameStyles(tmp6.display_name_styles);
+      let obj4 = GuildLeaderboardTypes;
+      obj.gamingLeaderboardData = obj4.parseServerMemberGamingLeaderboardData(tmp6.member_gaming_leaderboard_data);
       let tmp10Result = createMember(obj);
       tmp25[tmp7] = tmp10Result;
       let tmp23 = trackCommunicationDisabled(id, tmp10Result);
@@ -567,6 +580,7 @@ function handleGuildRoleUpdateOrDelete(guildId) {
               fullProfileLoadedTimestamp: null,
               collectibles: null,
               displayNameStyles: null,
+              gamingLeaderboardData: null,
             };
             obj.nick = tmp7.nick;
             obj.guildId = guildId.guildId;
@@ -584,7 +598,11 @@ function handleGuildRoleUpdateOrDelete(guildId) {
               prop = tmp7.fullProfileLoadedTimestamp;
             }
             obj.fullProfileLoadedTimestamp = prop;
-            ({ collectibles: obj.collectibles, displayNameStyles: obj.displayNameStyles } = tmp7);
+            ({
+              collectibles: obj.collectibles,
+              displayNameStyles: obj.displayNameStyles,
+              gamingLeaderboardData: obj.gamingLeaderboardData,
+            } = tmp7);
             tmp[tmp5] = createMember(obj);
             let tmp22 = trackCommunicationDisabled(guildId.guildId, tmp[tmp5]);
           }
@@ -622,6 +640,7 @@ function handleImpersonateUpdate(guildId) {
         flags: null,
         collectibles: null,
         displayNameStyles: null,
+        gamingLeaderboardData: null,
       };
       ({ avatar: obj.avatar, avatarDecoration: obj.avatarDecoration } = tmp[id]);
       obj.guildRoles = GuildRoleStore.getUnsafeMutableRoles(guild.id);
@@ -635,6 +654,7 @@ function handleImpersonateUpdate(guildId) {
         flags: obj.flags,
         collectibles: obj.collectibles,
         displayNameStyles: obj.displayNameStyles,
+        gamingLeaderboardData: obj.gamingLeaderboardData,
       } = tmp[id]);
       tmp[id] = createMember(obj);
     }
@@ -1180,6 +1200,7 @@ obj = {
           fullProfileLoadedTimestamp: null,
           collectibles: null,
           displayNameStyles: null,
+          gamingLeaderboardData: null,
         };
         ({ nick: obj7.nick, avatar: obj7.avatar, avatarDecoration: obj7.avatarDecoration } = tmp3);
         obj.guildRoles = GuildRoleStore.getUnsafeMutableRoles(guild.id);
@@ -1196,6 +1217,7 @@ obj = {
           fullProfileLoadedTimestamp: obj7.fullProfileLoadedTimestamp,
           collectibles: obj7.collectibles,
           displayNameStyles: obj7.displayNameStyles,
+          gamingLeaderboardData: obj7.gamingLeaderboardData,
         } = tmp3);
         tmp2[id] = createMember(obj);
         const unionResult1 = tmp4Result.union(removed, removedRoleIds);
@@ -1237,7 +1259,7 @@ obj = {
   THREAD_MEMBER_LIST_UPDATE: function handleThreadMemberListUpdate(arg0) {
     ({ guildId, members } = arg0);
     const mapped = members.map((member) => member.member);
-    const found = mapped.filter(guildId(guild[15]).isNotNullish);
+    const found = mapped.filter(guildId(guild[16]).isNotNullish);
     guild = undefined;
     closure_1 = tmp;
     if (null == obj[guildId]) {
@@ -1267,6 +1289,7 @@ obj = {
             unusualDMActivityUntil: null,
             collectibles: null,
             displayNameStyles: null,
+            gamingLeaderboardData: null,
           };
           ({
             roles: obj.roles,
@@ -1294,9 +1317,12 @@ obj = {
           obj.collectibles = tmp5Result.parseServerUserCollectibles(user.collectibles);
           tmp5Result = DisplayNameStylesUtils;
           obj.displayNameStyles = tmp5Result.parseServerDisplayNameStyles(user.display_name_styles);
+          obj.gamingLeaderboardData = GuildLeaderboardTypes.parseServerMemberGamingLeaderboardData(
+            user.member_gaming_leaderboard_data,
+          );
           dependencyMap[user.user.id] = createMember(obj);
           if (null != dependencyMap[user.user.id].communicationDisabledUntil) {
-            if (tmp5Result1.isMemberCommunicationDisabled(tmp9)) {
+            if (tmp5Result2.isMemberCommunicationDisabled(tmp9)) {
               const items = [];
               items[constants.GUILD] = guildId;
               items[constants.USER] = tmp9.userId;
@@ -1304,7 +1330,7 @@ obj = {
               let result = closure_15[joined] !== tmp9.communicationDisabledUntil;
               if (result) {
                 result = CommunicationDisabledUtils.isMemberCommunicationDisabled(tmp9);
-                const tmp5Result2 = CommunicationDisabledUtils;
+                const tmp5Result3 = CommunicationDisabledUtils;
               }
               if (result) {
                 closure_15[joined] = tmp9.communicationDisabledUntil;
@@ -1313,9 +1339,10 @@ obj = {
                 closure_19[joined] = sum;
               }
             }
-            tmp5Result1 = CommunicationDisabledUtils;
+            tmp5Result2 = CommunicationDisabledUtils;
           }
           removeCommunicationDisabled(guildId, dependencyMap[user.user.id].userId);
+          const tmp5Result1 = GuildLeaderboardTypes;
         });
         closure_18 = closure_18 + 1;
         flag = true;
@@ -1327,7 +1354,7 @@ obj = {
     let flag = null != addedMembers;
     if (flag) {
       const mapped = addedMembers.map((member) => member.member);
-      const found = mapped.filter(guildId(guild[15]).isNotNullish);
+      const found = mapped.filter(guildId(guild[16]).isNotNullish);
       guild = undefined;
       closure_1 = tmp4;
       if (null == obj[guildId]) {
@@ -1357,6 +1384,7 @@ obj = {
               unusualDMActivityUntil: null,
               collectibles: null,
               displayNameStyles: null,
+              gamingLeaderboardData: null,
             };
             ({
               roles: obj.roles,
@@ -1384,9 +1412,12 @@ obj = {
             obj.collectibles = tmp5Result.parseServerUserCollectibles(user.collectibles);
             tmp5Result = DisplayNameStylesUtils;
             obj.displayNameStyles = tmp5Result.parseServerDisplayNameStyles(user.display_name_styles);
+            obj.gamingLeaderboardData = GuildLeaderboardTypes.parseServerMemberGamingLeaderboardData(
+              user.member_gaming_leaderboard_data,
+            );
             dependencyMap[user.user.id] = createMember(obj);
             if (null != dependencyMap[user.user.id].communicationDisabledUntil) {
-              if (tmp5Result1.isMemberCommunicationDisabled(tmp9)) {
+              if (tmp5Result2.isMemberCommunicationDisabled(tmp9)) {
                 const items = [];
                 items[constants.GUILD] = guildId;
                 items[constants.USER] = tmp9.userId;
@@ -1394,7 +1425,7 @@ obj = {
                 let result = closure_15[joined] !== tmp9.communicationDisabledUntil;
                 if (result) {
                   result = CommunicationDisabledUtils.isMemberCommunicationDisabled(tmp9);
-                  const tmp5Result2 = CommunicationDisabledUtils;
+                  const tmp5Result3 = CommunicationDisabledUtils;
                 }
                 if (result) {
                   closure_15[joined] = tmp9.communicationDisabledUntil;
@@ -1403,9 +1434,10 @@ obj = {
                   closure_19[joined] = sum;
                 }
               }
-              tmp5Result1 = CommunicationDisabledUtils;
+              tmp5Result2 = CommunicationDisabledUtils;
             }
             removeCommunicationDisabled(guildId, dependencyMap[user.user.id].userId);
+            const tmp5Result1 = GuildLeaderboardTypes;
           });
           closure_18 = closure_18 + 1;
           flag3 = true;
@@ -1445,6 +1477,7 @@ obj = {
             unusualDMActivityUntil: null,
             collectibles: null,
             displayNameStyles: null,
+            gamingLeaderboardData: null,
           };
           ({
             roles: obj.roles,
@@ -1472,9 +1505,12 @@ obj = {
           obj.collectibles = tmp5Result.parseServerUserCollectibles(user.collectibles);
           tmp5Result = DisplayNameStylesUtils;
           obj.displayNameStyles = tmp5Result.parseServerDisplayNameStyles(user.display_name_styles);
+          obj.gamingLeaderboardData = GuildLeaderboardTypes.parseServerMemberGamingLeaderboardData(
+            user.member_gaming_leaderboard_data,
+          );
           dependencyMap[user.user.id] = createMember(obj);
           if (null != dependencyMap[user.user.id].communicationDisabledUntil) {
-            if (tmp5Result1.isMemberCommunicationDisabled(tmp9)) {
+            if (tmp5Result2.isMemberCommunicationDisabled(tmp9)) {
               const items = [];
               items[constants.GUILD] = guildId;
               items[constants.USER] = tmp9.userId;
@@ -1482,7 +1518,7 @@ obj = {
               let result = closure_15[joined] !== tmp9.communicationDisabledUntil;
               if (result) {
                 result = CommunicationDisabledUtils.isMemberCommunicationDisabled(tmp9);
-                const tmp5Result2 = CommunicationDisabledUtils;
+                const tmp5Result3 = CommunicationDisabledUtils;
               }
               if (result) {
                 closure_15[joined] = tmp9.communicationDisabledUntil;
@@ -1491,9 +1527,10 @@ obj = {
                 closure_19[joined] = sum;
               }
             }
-            tmp5Result1 = CommunicationDisabledUtils;
+            tmp5Result2 = CommunicationDisabledUtils;
           }
           removeCommunicationDisabled(guildId, dependencyMap[user.user.id].userId);
+          const tmp5Result1 = GuildLeaderboardTypes;
         });
         closure_18 = closure_18 + 1;
         flag = true;
@@ -1564,6 +1601,7 @@ obj = {
             unusualDMActivityUntil: null,
             collectibles: null,
             displayNameStyles: null,
+            gamingLeaderboardData: null,
           };
           ({
             roles: obj.roles,
@@ -1591,9 +1629,12 @@ obj = {
           obj.collectibles = tmp5Result.parseServerUserCollectibles(user.collectibles);
           tmp5Result = DisplayNameStylesUtils;
           obj.displayNameStyles = tmp5Result.parseServerDisplayNameStyles(user.display_name_styles);
+          obj.gamingLeaderboardData = GuildLeaderboardTypes.parseServerMemberGamingLeaderboardData(
+            user.member_gaming_leaderboard_data,
+          );
           dependencyMap[user.user.id] = createMember(obj);
           if (null != dependencyMap[user.user.id].communicationDisabledUntil) {
-            if (tmp5Result1.isMemberCommunicationDisabled(tmp9)) {
+            if (tmp5Result2.isMemberCommunicationDisabled(tmp9)) {
               const items = [];
               items[constants.GUILD] = guildId;
               items[constants.USER] = tmp9.userId;
@@ -1601,7 +1642,7 @@ obj = {
               let result = closure_15[joined] !== tmp9.communicationDisabledUntil;
               if (result) {
                 result = CommunicationDisabledUtils.isMemberCommunicationDisabled(tmp9);
-                const tmp5Result2 = CommunicationDisabledUtils;
+                const tmp5Result3 = CommunicationDisabledUtils;
               }
               if (result) {
                 closure_15[joined] = tmp9.communicationDisabledUntil;
@@ -1610,9 +1651,10 @@ obj = {
                 closure_19[joined] = sum;
               }
             }
-            tmp5Result1 = CommunicationDisabledUtils;
+            tmp5Result2 = CommunicationDisabledUtils;
           }
           removeCommunicationDisabled(guildId, dependencyMap[user.user.id].userId);
+          const tmp5Result1 = GuildLeaderboardTypes;
         });
         closure_18 = closure_18 + 1;
         flag = true;
@@ -1708,6 +1750,7 @@ obj = {
           fullProfileLoadedTimestamp: null,
           collectibles: null,
           displayNameStyles: null,
+          gamingLeaderboardData: null,
         };
         ({
           roles: obj2.roles,
@@ -1722,6 +1765,9 @@ obj = {
         obj.fullProfileLoadedTimestamp = Date.now();
         obj.collectibles = mappers.parseServerUserCollectibles(guildMember.collectibles);
         obj.displayNameStyles = DisplayNameStylesUtils.parseServerDisplayNameStyles(guildMember.display_name_styles);
+        obj.gamingLeaderboardData = GuildLeaderboardTypes.parseServerMemberGamingLeaderboardData(
+          guildMember.member_gaming_leaderboard_data,
+        );
         tmp[guildMember.user.id] = createMember(obj);
         if (null != tmp[guildMember.user.id].communicationDisabledUntil) {
           let tmp18Result = CommunicationDisabledUtils;
@@ -1782,6 +1828,7 @@ obj = {
               unusualDMActivityUntil: null,
               collectibles: null,
               displayNameStyles: null,
+              gamingLeaderboardData: null,
             };
             ({
               roles: obj.roles,
@@ -1809,9 +1856,12 @@ obj = {
             obj.collectibles = tmp5Result.parseServerUserCollectibles(user.collectibles);
             tmp5Result = DisplayNameStylesUtils;
             obj.displayNameStyles = tmp5Result.parseServerDisplayNameStyles(user.display_name_styles);
+            obj.gamingLeaderboardData = GuildLeaderboardTypes.parseServerMemberGamingLeaderboardData(
+              user.member_gaming_leaderboard_data,
+            );
             dependencyMap[user.user.id] = createMember(obj);
             if (null != dependencyMap[user.user.id].communicationDisabledUntil) {
-              if (tmp5Result1.isMemberCommunicationDisabled(tmp9)) {
+              if (tmp5Result2.isMemberCommunicationDisabled(tmp9)) {
                 const items = [];
                 items[constants.GUILD] = guildId;
                 items[constants.USER] = tmp9.userId;
@@ -1819,7 +1869,7 @@ obj = {
                 let result = closure_15[joined] !== tmp9.communicationDisabledUntil;
                 if (result) {
                   result = CommunicationDisabledUtils.isMemberCommunicationDisabled(tmp9);
-                  const tmp5Result2 = CommunicationDisabledUtils;
+                  const tmp5Result3 = CommunicationDisabledUtils;
                 }
                 if (result) {
                   closure_15[joined] = tmp9.communicationDisabledUntil;
@@ -1828,9 +1878,10 @@ obj = {
                   closure_19[joined] = sum;
                 }
               }
-              tmp5Result1 = CommunicationDisabledUtils;
+              tmp5Result2 = CommunicationDisabledUtils;
             }
             removeCommunicationDisabled(guildId, dependencyMap[user.user.id].userId);
+            const tmp5Result1 = GuildLeaderboardTypes;
           });
           closure_18 = closure_18 + 1;
           flag3 = true;
@@ -1920,6 +1971,7 @@ obj = {
             unusualDMActivityUntil: null,
             collectibles: null,
             displayNameStyles: null,
+            gamingLeaderboardData: null,
           };
           ({
             roles: obj.roles,
@@ -1947,9 +1999,12 @@ obj = {
           obj.collectibles = tmp5Result.parseServerUserCollectibles(user.collectibles);
           tmp5Result = DisplayNameStylesUtils;
           obj.displayNameStyles = tmp5Result.parseServerDisplayNameStyles(user.display_name_styles);
+          obj.gamingLeaderboardData = GuildLeaderboardTypes.parseServerMemberGamingLeaderboardData(
+            user.member_gaming_leaderboard_data,
+          );
           dependencyMap[user.user.id] = createMember(obj);
           if (null != dependencyMap[user.user.id].communicationDisabledUntil) {
-            if (tmp5Result1.isMemberCommunicationDisabled(tmp9)) {
+            if (tmp5Result2.isMemberCommunicationDisabled(tmp9)) {
               const items = [];
               items[constants.GUILD] = guildId;
               items[constants.USER] = tmp9.userId;
@@ -1957,7 +2012,7 @@ obj = {
               let result = closure_15[joined] !== tmp9.communicationDisabledUntil;
               if (result) {
                 result = CommunicationDisabledUtils.isMemberCommunicationDisabled(tmp9);
-                const tmp5Result2 = CommunicationDisabledUtils;
+                const tmp5Result3 = CommunicationDisabledUtils;
               }
               if (result) {
                 closure_15[joined] = tmp9.communicationDisabledUntil;
@@ -1966,9 +2021,10 @@ obj = {
                 closure_19[joined] = sum;
               }
             }
-            tmp5Result1 = CommunicationDisabledUtils;
+            tmp5Result2 = CommunicationDisabledUtils;
           }
           removeCommunicationDisabled(guildId, dependencyMap[user.user.id].userId);
+          const tmp5Result1 = GuildLeaderboardTypes;
         });
         closure_18 = closure_18 + 1;
         flag = true;

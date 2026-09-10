@@ -22,9 +22,9 @@ export default function ContentInventoryEntryRow(content) {
     return null;
   } else {
     const content_type = content.content_type;
-    if (tmp(8156).ContentInventoryEntryType.TOP_GAME !== content_type) {
-      if (tmp(8156).ContentInventoryEntryType.PLAYED_GAME !== content_type) {
-        if (tmp(8156).ContentInventoryEntryType.CUSTOM_STATUS === content_type) {
+    if (tmp(8193).ContentInventoryEntryType.TOP_GAME !== content_type) {
+      if (tmp(8193).ContentInventoryEntryType.PLAYED_GAME !== content_type) {
+        if (tmp(8193).ContentInventoryEntryType.CUSTOM_STATUS === content_type) {
           obj = { content, renderForScreenshot: flag, visible: null };
           if (flag2 == null) {
             flag2 = false;

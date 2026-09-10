@@ -1,6 +1,6 @@
 // discord_app/modules/user_profile/native/UserProfileFixedBackground.tsx
 import native from "../../../../discord_common/js/packages/design/native.tsx";
-import LinearGradientDefault from "../../../../_runtime/05001_LinearGradient.js";
+import LinearGradientDefault from "../../../../_runtime/05037_LinearGradient.js";
 import useUserProfileColors from "../hooks/native/useUserProfileColors.tsx";
 import useUserProfileGradientColors from "../hooks/native/useUserProfileGradientColors.tsx";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";

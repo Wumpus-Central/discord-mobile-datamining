@@ -12,10 +12,10 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 require = fn;
 const View = fn(17).View;
 const VerticalGradient = fn(1074).VerticalGradient;
-let closure_6 = fn(7165).ACTION_SHEET_MINIMUM_BOTTOM_PADDING;
+let closure_6 = fn(7203).ACTION_SHEET_MINIMUM_BOTTOM_PADDING;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8, Fragment: closure_9 } = jsxProd);
-fn(4574);
+fn(4605);
 let createStyles = {
   container: null,
   containerWithHeader: null,
@@ -169,7 +169,7 @@ export const AppStoreOverlayFooter = function AppStoreOverlayFooter(arg0) {
   ({ onInstallPress, onLayout } = arg0);
   const tmp = closure_10();
   const bottom = token(1611)().bottom;
-  let obj = bottom(4275);
+  let obj = bottom(4306);
   token = obj.useToken(token(576).colors.MOBILE_ACTIONSHEET_BACKGROUND);
   let items = [token];
   const items1 = [bottom];
@@ -187,13 +187,13 @@ export const AppStoreOverlayFooter = function AppStoreOverlayFooter(arg0) {
     start: VerticalGradient.START,
     end: VerticalGradient.END,
   };
-  const items2 = [closure_7(token(5001), obj)];
+  const items2 = [closure_7(token(5037), obj)];
   const obj1 = { style: memo1, children: null };
   const obj2 = { size: "lg", text: null, onPress: null };
   const intl = bottom(1114).intl;
   obj2.text = intl.string(bottom(1114).t.lwQdjB);
   obj2.onPress = onInstallPress;
-  obj1.children = closure_7(bottom(4989).Button, obj2);
+  obj1.children = closure_7(bottom(5025).Button, obj2);
   items2[1] = closure_7(View, obj1);
   obj.children = items2;
   return closure_8(View, obj);

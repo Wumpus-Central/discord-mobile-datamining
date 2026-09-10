@@ -852,7 +852,7 @@ let closure_23 = async function _removeReaction(arg0) {
                     if (burst != null) {
                       burst = burst.burst;
                     }
-                    const AccessibilityAnnouncer = channelId(4425).AccessibilityAnnouncer;
+                    const AccessibilityAnnouncer = channelId(4456).AccessibilityAnnouncer;
                     intl = channelId(1114).intl;
                     if (!burst) {
                       const obj4 = { name: tmp2.name };
